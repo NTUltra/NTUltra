@@ -382,7 +382,7 @@ function scrRaces() {
 	//race_back[27] = "MORE DAMAGE OR SOMETHING";
 	race_lock[27] = "KILL THE INVERTED THRONE"
 	race_have[27] = 0
-	race_swep[27] = 1
+	race_swep[27] = 443
 	race_bskin[27] = 0
 	race_cskin[27] = 0
 	race_bskin_lock[27] = "NUTHIN"

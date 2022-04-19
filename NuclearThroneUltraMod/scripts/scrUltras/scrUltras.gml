@@ -524,7 +524,24 @@ function scrUltras() {
 	    ultra_text[104] = "INCREASED SPRINT SPEED#IMMUNE TO CONTACT DAMAGE#WHILE SPRINTING"
 	    ultra_tips[104] = "fast old man"
 		*/
-	maxultra = 104;
+	//HANDS
+	ultra_name[105] = "IRRADIATED"
+	ultra_text[105] = "THE CLOSER YOU ARE TO AN ENEMY#THE MORE DAMAGE YOU DEAL"
+	ultra_tips[105] = "delicacy"
+    
+	ultra_name[106] = "ENVIROMENTAL HAZARD"
+	ultra_text[106] = "WALLS CONTAIN RADS AND SWARMS"
+	ultra_tips[106] = "I am here to heal you"
+    
+	ultra_name[107] = "MANY HANDS"
+	ultra_text[107] = "INCREASE ABILITY DAMAGE#CAN HAVE TWO HANDS OUT AT A TIME"
+	ultra_tips[107] = "doctor necromancer"
+    
+	ultra_name[108] = "DELICATE HANDS"
+	ultra_text[108] = "ALLOWS YOUR HANDS TO COLLECT#RADS PICKUPS AND WEAPONS"
+	ultra_tips[108] = "sleeping enemies don't react#for a moment"
+	
+	maxultra = 108;
 
 	dir = 0
 	repeat(maxultra+1)

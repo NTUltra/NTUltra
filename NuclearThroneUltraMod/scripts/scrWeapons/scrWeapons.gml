@@ -4892,7 +4892,7 @@ function scrWeapons() {
 	wep_name[443] = "RUSTY SAWED-OFF SHOTGUN"
 	wep_type[443] = 2
 	wep_auto[443] = 0
-	wep_load[443] = 30//28
+	wep_load[443] = 28//28
 	wep_cost[443] = 2
 	wep_sprt[443] = sprRustySawnOffShotgun
 	wep_area[443] = -1

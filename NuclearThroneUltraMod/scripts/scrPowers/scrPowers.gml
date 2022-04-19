@@ -7,51 +7,47 @@ function scrPowers() {
 		if race == 27 && !instance_exists(Hand)//Hands
 		{
 			var grabbed = false;
+			var grabRange = 40;
+			var d1 = 999;
+			var d2 = 999;
+			var d3 = 999;
+			var tar = -1;
+			var resulttar = -1;
 			if instance_exists(chestprop)
 			{
-				var tar = instance_nearest(mouse_x,mouse_y,chestprop);
-				debug("grab that shit",point_distance(mouse_x,mouse_y,tar.x,tar.y));
-				if point_distance(mouse_x,mouse_y,tar.x,tar.y) < 40
+				tar = instance_nearest(mouse_x,mouse_y,chestprop);
+				d1 = point_distance(mouse_x,mouse_y,tar.x,tar.y)
+				if d1 < grabRange
 				{
-					grabbed = true;
-					debug("INITIATE GRAB");
-					with instance_create(x,y,Hand)
-					{
-						team = other.team;
-						creator = other.id;
-						target = tar;
-						lerpCalcBack = lerpCalc/target.size;
-					}
+					resulttar = tar;
 				}
 			}
-			if !grabbed && instance_exists(RadChest)
+			if instance_exists(RadChest)
 			{
-				var tar = instance_nearest(mouse_x,mouse_y,RadChest);
-				if point_distance(mouse_x,mouse_y,tar.x,tar.y) < 40
+				tar = instance_nearest(mouse_x,mouse_y,RadChest);
+				d2 = point_distance(mouse_x,mouse_y,tar.x,tar.y) 
+				if d2 < grabRange && d2 < d1
 				{
-					grabbed = true;
-					with instance_create(x,y,Hand)
-					{
-						team = other.team;
-						creator = other.id;
-						target = tar;
-						lerpCalcBack = lerpCalc/target.size;
-					}
+					resulttar = tar;
 				}
 			}
-			if !grabbed && instance_exists(enemy)
+			if instance_exists(enemy)
 			{
-				var tar = instance_nearest(mouse_x,mouse_y,enemy);
-				if tar.team != 0 && tar.team != team && point_distance(mouse_x,mouse_y,tar.x,tar.y) < 40
+				tar = instance_nearest(mouse_x,mouse_y,enemy);
+				d3 = point_distance(mouse_x,mouse_y,tar.x,tar.y);
+				if (tar.team != 0 && tar.team != team && d3 < grabRange && d3 < d2 && d3 < d1)
 				{
-					grabbed = true;
-					with instance_create(x,y,Hand)
-					{
-						team = other.team;
-						creator = other.id;
-						target = tar;
-						lerpCalcBack = lerpCalc/target.size;
-					}
+					resulttar = tar;
+				}
+			}
+			if resulttar > -1 && instance_exists(resulttar)
+			{
+				with instance_create(x,y,Hand)
+				{
+					team = other.team;
+					creator = other.id;
+					target = resulttar;
+					lerpCalcBack = lerpCalc/target.size;
 				}
 			}
 		}
