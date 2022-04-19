@@ -3,6 +3,58 @@ function scrPowers() {
 	/////SHIT PRESSED////////
 	if KeyCont.key_spec[p] = 1
 	{
+		debug("instance_exists(Hand) ",instance_exists(Hand));
+		if race == 27 && !instance_exists(Hand)//Hands
+		{
+			var grabbed = false;
+			if instance_exists(chestprop)
+			{
+				var tar = instance_nearest(mouse_x,mouse_y,chestprop);
+				debug("grab that shit",point_distance(mouse_x,mouse_y,tar.x,tar.y));
+				if point_distance(mouse_x,mouse_y,tar.x,tar.y) < 40
+				{
+					grabbed = true;
+					debug("INITIATE GRAB");
+					with instance_create(x,y,Hand)
+					{
+						team = other.team;
+						creator = other.id;
+						target = tar;
+						lerpCalcBack = lerpCalc/target.size;
+					}
+				}
+			}
+			if !grabbed && instance_exists(RadChest)
+			{
+				var tar = instance_nearest(mouse_x,mouse_y,RadChest);
+				if point_distance(mouse_x,mouse_y,tar.x,tar.y) < 40
+				{
+					grabbed = true;
+					with instance_create(x,y,Hand)
+					{
+						team = other.team;
+						creator = other.id;
+						target = tar;
+						lerpCalcBack = lerpCalc/target.size;
+					}
+				}
+			}
+			if !grabbed && instance_exists(enemy)
+			{
+				var tar = instance_nearest(mouse_x,mouse_y,enemy);
+				if tar.team != 0 && tar.team != team && point_distance(mouse_x,mouse_y,tar.x,tar.y) < 40
+				{
+					grabbed = true;
+					with instance_create(x,y,Hand)
+					{
+						team = other.team;
+						creator = other.id;
+						target = tar;
+						lerpCalcBack = lerpCalc/target.size;
+					}
+				}
+			}
+		}
 	if race = 26//Good O'l Humphry
 	{
 		var t1 = wep_type[wep];

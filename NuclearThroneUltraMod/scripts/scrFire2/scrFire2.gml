@@ -6817,5 +6817,45 @@ function scrFire2() {
 
 	break;
 	
+	//FLAME SMG
+	case 442:
+
+	snd_play_fire(sndPistol)
+	with instance_create(x,y,Shell)
+	motion_add(point_direction(x,y,mouse_x,mouse_y)+other.right*100+random(60)-30,2+random(2))
+
+	with instance_create(x,y,Bullet1Flame)
+	{motion_add(point_direction(x,y,mouse_x,mouse_y)+(random(32)-16)*other.accuracy,15)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(6,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(6,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 2
+
+	break;
+	
+	
+	//RUSTY SAWED-OFF SHOTGUN
+	case 443:
+
+	snd_play_fire(sndSawedOffShotgun)
+
+	repeat(18)
+	{
+	with instance_create(x,y,Bullet2)
+	{motion_add(point_direction(x,y,mouse_x,mouse_y)+(random(80)-40)*other.accuracy,7+random(5))
+	image_angle = direction
+	team = other.team}
+	}
+
+	BackCont.viewx2 += lengthdir_x(12,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(12,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+	BackCont.shake += 11
+	wkick = 7
+
+	break;
+	
 	}//end of switch part 2!
 }

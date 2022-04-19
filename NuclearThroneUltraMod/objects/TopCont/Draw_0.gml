@@ -331,7 +331,10 @@ if(point_distance(x,y,Player.x,Player.y)<100)
 */
 /*mask testwith Wall
 draw_sprite_ext(sprWall1Bot,-1,x,y,1,1,0,c_black,0.2)*/
-
+with Hand
+{
+	draw_self();	
+}
 
 scrDrawBloom()
 

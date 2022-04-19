@@ -265,7 +265,7 @@ function scrFire() {
 	repeat(14)
 	{
 	with instance_create(x,y,Bullet2)
-	{motion_add(point_direction(x,y,mouse_x,mouse_y)+(random(50)-30)*other.accuracy,12+random(6))
+	{motion_add(point_direction(x,y,mouse_x,mouse_y)+(random(50)-25)*other.accuracy,12+random(6))
 	image_angle = direction
 	team = other.team}
 	}
@@ -2470,7 +2470,7 @@ function scrFire() {
 	//SHORTGUN
 	case 107:
 
-	snd_play_fire(sndShotgun)
+	snd_play_fire(sndSawedOffShotgun)
 
 	repeat(22)
 	{

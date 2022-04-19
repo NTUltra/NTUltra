@@ -200,7 +200,9 @@ break;
 case 26:
 char[26].sprite_index=sprMutant26Idle
 break;
-
+case 27:
+char[27].sprite_index=sprMutant27Idle
+break;
 }
 with char[dir]
 {
@@ -383,6 +385,16 @@ char[26].spr_menu = sprHumphryMenuSelected
 char[26].spr_to = sprHumphryMenuSelect
 char[26].spr_from = sprHumphryMenuDeselect
 char[26].spr_slct = sprHumphryMenu}
+
+if UberCont.race_have[26] = 1{
+char[27].x = 64;
+char[27].y = 16;
+char[27].image_speed = 0.3;//Humphry is a slow man
+char[27].sprite_index = sprMutant27Idle
+char[27].spr_menu = sprHumphryMenuSelected
+char[27].spr_to = sprHumphryMenuSelect
+char[27].spr_from = sprHumphryMenuDeselect
+char[27].spr_slct = sprHumphryMenu}
 
 logoin = 240
 extra = 0

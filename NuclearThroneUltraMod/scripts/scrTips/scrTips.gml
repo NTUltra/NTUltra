@@ -3,7 +3,7 @@ function scrTips() {
 
 	if !instance_exists(Player)
 	tiptype = 0
-
+	tip = "";
 	if tiptype = 0
 	{
 	//RANDOM
@@ -291,6 +291,11 @@ function scrTips() {
 	tip = choose("Rusty old soldier","Grandpa","When Humphry pulls out a gun","The real deal","Old and experienced"
 	,"Any projectile in one shot#counts as one hit","When one of multiple projectiles#fire in one shot/burst#hits an enemy it counts as a hit"
 	,"Out of the fallout shelter","focus and discipline","experience","shrink and slow projectiles","active costs unequiped weapon type ammo")
+	
+	if Player.race = 27//HANDS
+	tip = choose("look ma! no face","don't get too touchy","proto","the only inverted mutant","pull my finger","hand from the other side",
+	"let's give each other a helping hand","reach out","what is on the other side?","GET OVER HERE!")
+	
 	}
 
 	//WEAPONS

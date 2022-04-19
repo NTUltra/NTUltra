@@ -14,8 +14,16 @@ y = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-36
 if num>13
 {
 //yy=58;
-y = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24
-x = __view_get( e__VW.XView, 0 )+8+22*(num-13);
+	if num == 27
+	{
+		x = __view_get( e__VW.XView, 0 ) + 8
+	}
+	else
+	{
+		x = __view_get( e__VW.XView, 0 )+8+22*(num-13);
+	}
+	y = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24
+
 }
 else
 {

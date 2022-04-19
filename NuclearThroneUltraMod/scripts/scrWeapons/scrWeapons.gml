@@ -4877,6 +4877,28 @@ function scrWeapons() {
 	wep_text[441] = "infinite pierce"
 	wep_swap[441] = sndSwapBow
 	wep_rad[441] = 0;
+	
+	wep_name[442] = "FLAME SMG"
+	wep_type[442] = 1
+	wep_auto[442] = 1
+	wep_load[442] = 3
+	wep_cost[442] = 1
+	wep_sprt[442] = sprSmg
+	wep_area[442] = 6
+	wep_text[442] = ""
+	wep_swap[442] = sndSwapPistol
+	wep_rad[442] = 0;
+	
+	wep_name[443] = "RUSTY SAWED-OFF SHOTGUN"
+	wep_type[443] = 2
+	wep_auto[443] = 0
+	wep_load[443] = 30//28
+	wep_cost[443] = 2
+	wep_sprt[443] = sprRustySawnOffShotgun
+	wep_area[443] = -1
+	wep_text[443] = "thats what she said"
+	wep_swap[443] = sndSwapShotgun
+	wep_rad[443] = 0;
 
 
 	maxwep = array_length(wep_name)-1;
