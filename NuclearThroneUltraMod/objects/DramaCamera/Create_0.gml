@@ -187,7 +187,7 @@ if Player.area = 114
 //with instance_create(x,y,Drama)
 name = "BUSH BOX"
 if random(70)<1
-	name = choose("BIG BUSH BOX BOSS","BUSH CUBE","BIG BUSH","BUSHY BOX","PLANT","MISSING FLOWERS","IT'S THE BUSH BOX BOSS","S Q U A R E");
+	name = choose("BIG BUSH BOX BOSS","BUSH CUBE","BIG BAD BUSH BOX","BIG BUSH","BIG AGRASSIN","BUSHY BOX","PLANT","MISSING FLOWERS","IT'S THE BUSH BOX BOSS","S Q U A R E");
 }
 if Player.area = 5
 {
