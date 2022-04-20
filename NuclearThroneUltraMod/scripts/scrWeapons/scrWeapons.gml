@@ -4774,7 +4774,7 @@ function scrWeapons() {
 	wep_load[432] = 34
 	wep_cost[432] = 2
 	wep_sprt[432] = sprChunkyBladeGun
-	wep_area[432] = 12
+	wep_area[432] = 13
 	wep_text[432] = "grand blade"
 	wep_swap[432] = sndSwapBow
 	wep_rad[432] = 0;
@@ -4896,11 +4896,33 @@ function scrWeapons() {
 	wep_cost[443] = 2
 	wep_sprt[443] = sprRustySawnOffShotgun
 	wep_area[443] = -1
-	wep_text[443] = "thats what she said"
+	wep_text[443] = ""
 	wep_swap[443] = sndSwapShotgun
 	wep_rad[443] = 0;
+	/*
+	wep_name[444] = "DRILL GUN"
+	wep_type[444] = 4
+	wep_auto[444] = 0
+	wep_load[444] = 24//28
+	wep_cost[444] = 2
+	wep_sprt[444] = sprRustySawnOffShotgun
+	wep_area[444] = 9
+	wep_text[444] = "it drills"
+	wep_swap[444] = sndSwapShotgun
+	wep_rad[444] = 0;
+	
+	wep_name[352] = "SUPER ELEMENTAL GUN"
+	wep_type[352] = 4
+	wep_auto[352] = 1
+	wep_load[352] = 16//12
+	wep_cost[352] = 3//2
+	wep_sprt[352] = sprElementalGun
+	wep_area[352] = 20//15
+	wep_text[352] = "the four ultra elements"
+	wep_swap[352] = sndSwapDragon
+	wep_rad[352] = 0;
 
-
+*/
 	maxwep = array_length(wep_name)-1;
 
 	//0 = melee 1 = bullets 2 = shells 3 = bolts 4 = explosives 5 = energy

@@ -15,8 +15,9 @@ if instance_number(Floor) > goal && (UberCont.opt_gamemode != 25 || instance_exi
 		}
 		else if (Player.area == 118 && Player.subarea == 3)
 		{
-			instance_create(x+16,y+16,Carpet);
-			instance_create(x,y,NuclearThrone1);
+			with instance_create(x+16,y+16,Carpet)
+				sprite_index = sprInvertedCarpet;
+			instance_create(x,y,InvertedNuclearThrone1);
 		}
 		else if Player.race=22
 		{

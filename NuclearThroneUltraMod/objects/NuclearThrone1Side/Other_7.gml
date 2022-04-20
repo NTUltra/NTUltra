@@ -4,16 +4,16 @@ if sprite_index == spr_hurt
 	if isLeft
 	{
 		if disable
-			spr_hurt = sprNothingLeftDeactivatedHurt;
+			spr_hurt = spr_left_deactivated_hurt;
 		else
-			spr_hurt = sprNothingLeftHurt;
+			spr_hurt = spr_left_hurt;
 	}
 	else
 	{
 		if disable
-			spr_hurt = sprNothingRightDeactivatedHurt;
+			spr_hurt = spr_right_deactivated_hurt;
 		else
-			spr_hurt = sprNothingRightHurt;	
+			spr_hurt = spr_right_hurt;	
 	}
 	sprite_index = spr_idle;
 }

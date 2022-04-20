@@ -6,9 +6,9 @@ with MusCont
 	audio_sound_gain(song,max(0,sqrt(UberCont.opt_musvol)),0);
 }
 debug("ACTIVATE");
-sprite_index = sprNothingActivate;
-spr_idle = sprNothingActivate;
-spr_hurt = sprNothingActivate;
+sprite_index = spr_activate;
+spr_idle = spr_activate;
+spr_hurt = spr_activate;
 my_health = maxhealth;
 //mask_index = mskNothingActive;
 image_index = 1;
@@ -28,8 +28,21 @@ repeat(8)
 snd_play_2d(sndNothingStart);
 snd_play_2d(sndNothingBeamStart);
 snd_loop(sndNothingBeamLoop);
-with instance_create(x,y+24,ThroneBeam)
+if isInverted
 {
-	depth = other.depth - 1;
-	team = other.team;
+	with instance_create(x,y+20,ThroneBeam)
+	{
+		depth = other.depth - 1;
+		team = other.team;
+		alarm[1] = 1;
+		angleDir = choose(1,-1);
+	}
+}
+else
+{
+	with instance_create(x,y+20,ThroneBeam)
+	{
+		depth = other.depth - 1;
+		team = other.team;
+	}
 }

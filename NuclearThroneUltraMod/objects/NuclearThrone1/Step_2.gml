@@ -29,26 +29,26 @@ else if active
 		if sprite_index == spr_hurt
 		{
 			if disable
-				spr_hurt = sprNothingMiddleDeactivatedHurt;
+				spr_hurt = spr_deactivated_hurt;
 			else
-				spr_hurt = sprNothingMiddleHurt;
+				spr_hurt = spr_middle_hurt;
 			sprite_index = spr_hurt;
 		}
 		with rightSide
 		{
 			if disable
-				spr_hurt = sprNothingRightDeactivatedHurtLink;
+				spr_hurt = spr_right_deactivated_hurt_link;
 			else
-				spr_hurt = sprNothingRightHurtLink;
+				spr_hurt = spr_right_hurt_link;
 			sprite_index = spr_hurt;
 			image_index = 0;
 		}
 		with leftSide
 		{
 			if disable
-				spr_hurt = sprNothingLeftDeactivatedHurtLink;
+				spr_hurt = spr_left_deactivated_hurt_link;
 			else
-				spr_hurt = sprNothingLeftHurtLink;
+				spr_hurt = spr_left_hurt_link;
 			sprite_index = spr_hurt;
 			image_index = 0;
 		}

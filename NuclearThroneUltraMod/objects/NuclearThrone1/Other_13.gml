@@ -4,9 +4,9 @@ image_speed = 0.5;
 prevImageIndex = 1;
 image_index = 1;
 
-sprite_index = sprNothingMiddle;
-spr_idle = sprNothingMiddle;
-spr_hurt = sprNothingMiddleHurt;
+sprite_index = spr_middle;
+spr_idle = spr_middle;
+spr_hurt = spr_middle_hurt;
 mask_index = mskNothingMiddle;
 image_speed = 0.4;
 with leftSide

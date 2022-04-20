@@ -1,5 +1,5 @@
 /// @description El chunko libre
-if sprite_index == sprNothingActivate && image_speed > 0
+if sprite_index == spr_activate && image_speed > 0
 {
 	imageIndex += 0.5;
 	my_health = maxhealth;
@@ -29,10 +29,10 @@ if !active
 	{
 		immune = true;
 		intro = true;
-		spr_idle = sprNothingOff;
-		spr_hurt = sprNothingOff;
+		spr_idle = spr_off;
+		spr_hurt = spr_off;
 		snd_hurt = sndNothingHurtHigh;
-		sprite_index = sprNothingOff;
+		sprite_index = spr_off;
 		with MusCont
 		{
 			audio_stop_sound(song);	
@@ -50,7 +50,7 @@ if !active
 }
 else
 {
-	if walk > 0
+	if walk > 0 || isInverted
 	{
 		walk --;
 		vspeed += walkDir*3;

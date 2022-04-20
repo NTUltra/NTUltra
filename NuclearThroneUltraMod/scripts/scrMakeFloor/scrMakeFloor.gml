@@ -573,10 +573,10 @@ function scrMakeFloor() {
 	direction += trn
 	if ((area=7||area=108) && subarea=3) || area=104
 		direction=0;
-	else if area == 9 && subarea == 3
+	else if ((area == 9 || area == 118) && subarea == 3)
 		direction = 90;
-	else if area == 118 && subarea == 3
-		direction = 270;
+	//else if area == 118 && subarea == 3
+	//	direction = 270;
 
 
 	if abs(trn) = 90 and (area = 6 || area = 112) and random(2) < 1

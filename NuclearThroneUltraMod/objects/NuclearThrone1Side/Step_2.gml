@@ -14,16 +14,16 @@ if (my_health < prevhealth)
 		if (isLeft)
 		{
 			if disable
-				spr_hurt = sprNothingLeftDeactivatedHurt;
+				spr_hurt = spr_left_deactivated_hurt;
 			else
-				spr_hurt = sprNothingLeftHurt;
+				spr_hurt = spr_left_hurt;
 		}
 		else
 		{
 			if disable
-				spr_hurt = sprNothingRightDeactivatedHurt;
+				spr_hurt = spr_right_deactivated_hurt;
 			else
-				spr_hurt = sprNothingRightHurt;
+				spr_hurt = spr_right_hurt;
 		}
 		//Use correct sprite index
 		sprite_index = spr_hurt;
@@ -42,20 +42,20 @@ if (my_health < prevhealth)
 			my_health -= dmgTaken*0.2;
 			prevhealth = my_health;
 		}*/
-		sprite_index = sprNothingMiddleHurtLink;
+		sprite_index = spr_middle_hurt_link;
 		if disable
-			spr_hurt = sprNothingMiddleDeactivatedHurtLink;
+			spr_hurt = spr_middle_deactivated_hurt_link;
 		else
-			spr_hurt = sprNothingMiddleHurtLink;
+			spr_hurt = spr_middle_hurt_link;
 		image_index = 0;
 		if other.id == leftSide
 		{
 			with rightSide
 			{
 				if disable
-					spr_hurt = sprNothingRightDeactivatedHurtLink;
+					spr_hurt = spr_right_deactivated_hurt_link;
 				else
-					spr_hurt = sprNothingRightHurtLink;
+					spr_hurt = spr_right_hurt_link;
 				sprite_index = spr_hurt;
 				image_index = 0;
 			}
@@ -65,9 +65,9 @@ if (my_health < prevhealth)
 			with leftSide
 			{
 				if disable
-					spr_hurt = sprNothingLeftDeactivatedHurtLink;
+					spr_hurt = spr_left_deactivated_hurt_link;
 				else
-					spr_hurt = sprNothingLeftHurtLink;
+					spr_hurt = spr_left_hurt_link;
 				sprite_index = spr_hurt;
 				image_index = 0;
 			}	

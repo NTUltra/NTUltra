@@ -11,6 +11,12 @@ alarm[10] = 0;
 spr_idle = sprNothingLeft;
 spr_hurt = sprNothingLeftHurt;
 snd_hurt = sndNothingHurtHigh;
+spr_leg = sprNothingLeg;
+spr_left_deactivated_hurt = sprNothingLeftDeactivatedHurt;
+spr_left_hurt = sprNothingLeftHurt;
+spr_right_deactivated_hurt = sprNothingRightDeactivatedHurt;
+spr_right_hurt = sprNothingRightHurt;
+
 owner = -1;
 xOffset = 0;
 isLeft = true;

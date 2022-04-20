@@ -12,7 +12,9 @@ if Player.area = 3 and Player.subarea = 3
 }
 
 if Player.area = 106 and Player.subarea = 3
+{
 instance_create(instance_furthest(Player.x,Player.y,Floor).x+16, instance_furthest(Player.x,Player.y,Floor).y+16,BecomeInvertedScrapBoss)
+}
 
 if Player.area = 114 and Player.subarea = 2
 {

@@ -1,5 +1,6 @@
-
-var hit = collision_line_point(x,y,x,y+10000,Wall,false,false)
+var xx = x + lengthdir_x(10000,image_angle - 90);
+var yy = y + lengthdir_y(10000,image_angle - 90);
+var hit = collision_line_point(x,y,xx,yy,Wall,false,false)
 if hit[0] != noone{
 	xEnd = hit[1];
 	yEnd = hit[2];

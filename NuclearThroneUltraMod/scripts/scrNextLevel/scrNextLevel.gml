@@ -29,7 +29,7 @@ function scrNextLevel() {
 	}
 	else if subarea = 1 || area = 105 || area = 106 || area = 107 || area = 101 || area = 110 || area = 111 || area = 112 || area = 103 || area = 109 || area = 113 || area == 114 || area = 108 || area == 115 || area == 117 || area == 118
 	{
-		if area == 118 && subarea > 1
+		if area == 118 && subarea > 2
 		{
 			area = 9;
 			subarea = 3;

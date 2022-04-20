@@ -1,5 +1,5 @@
 /// @description xxx
-if sprite_index == sprNothingDeath
+if sprite_index == spr_death
 {
 	image_speed = 0;
 	if !instance_exists(SurvivalWave)

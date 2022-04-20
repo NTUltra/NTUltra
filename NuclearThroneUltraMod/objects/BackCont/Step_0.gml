@@ -36,7 +36,7 @@ viewx = (((Tangle.x+Player.x*1.5)/2.5-vw)*(viewdist-1)+(mouse_x-vw))/viewdist
 viewy = (((Tangle.y+Player.y*1.5)/2.5-vh)*(viewdist-1)+(mouse_y-vh))/viewdist
 }
 }
-if Player.area == 9 && Player.subarea == 3
+if instance_exists(NuclearThrone1)
 {
 	viewy -= 24;
 	if instance_exists(NuclearThrone1)

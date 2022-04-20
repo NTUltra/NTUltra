@@ -527,19 +527,19 @@ function scrUltras() {
 	//HANDS
 	ultra_name[105] = "IRRADIATED"
 	ultra_text[105] = "THE CLOSER YOU ARE TO AN ENEMY#THE MORE DAMAGE YOU DEAL"
-	ultra_tips[105] = "delicacy"
+	ultra_tips[105] = "let me touch you"
     
 	ultra_name[106] = "ENVIROMENTAL HAZARD"
-	ultra_text[106] = "WALLS CONTAIN RADS AND SWARMS"
-	ultra_tips[106] = "I am here to heal you"
+	ultra_text[106] = "WALLS CONTAIN RADS AND SWARMS#PUNCH PROJECTILES OUT OF EXISTENCE"
+	ultra_tips[106] = "hit it really hard!"
     
 	ultra_name[107] = "MANY HANDS"
 	ultra_text[107] = "INCREASE ABILITY DAMAGE#CAN HAVE TWO HANDS OUT AT A TIME"
-	ultra_tips[107] = "doctor necromancer"
+	ultra_tips[107] = "i can count to 15 now"
     
 	ultra_name[108] = "DELICATE HANDS"
 	ultra_text[108] = "ALLOWS YOUR HANDS TO COLLECT#RADS PICKUPS AND WEAPONS"
-	ultra_tips[108] = "sleeping enemies don't react#for a moment"
+	ultra_tips[108] = "i shouldn't be level 10 to pick up ammo"
 	
 	maxultra = 108;
 
