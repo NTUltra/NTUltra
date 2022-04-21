@@ -4576,7 +4576,7 @@ function scrWeapons() {
 	wep_load[414] = 12
 	wep_cost[414] = 2
 	wep_sprt[414] = sprBubbler
-	wep_area[414] = 5
+	wep_area[414] = 7
 	wep_text[414] = "pop goes the bubble"
 	wep_swap[414] = sndSwapExplosive
 	wep_rad[414] = 0;
