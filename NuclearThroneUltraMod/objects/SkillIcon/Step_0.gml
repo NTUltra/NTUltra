@@ -127,7 +127,7 @@ else if skill = 18//last wish
 	}
 if Player.race = 22
 {
-	rogueammo = rogueammomax;	
+	Player.rogueammo = Player.rogueammomax;
 }
 
 with Player

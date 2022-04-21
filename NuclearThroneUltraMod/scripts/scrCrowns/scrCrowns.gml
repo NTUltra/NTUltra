@@ -31,7 +31,7 @@ function scrCrowns() {
 	crown_tips[5] = "guns are your friend"
 
 	crown_name[6] = "[CROWN OF HATRED]"//THIS ONE SUCKS
-	crown_text[6] = "LOSE HEALTH & GAIN RADITION OVER TIME"
+	crown_text[6] = "LOSE HEALTH & GAIN RADIATION OVER TIME"
 	crown_used[6] = 0
 	crown_tips[6] = "something is wrong"
 
