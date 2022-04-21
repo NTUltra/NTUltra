@@ -23,13 +23,13 @@ if target > 0 && instance_exists(target)
 		alarm[2] = 4;
 		sprite_index = sprHandClosing;
 		image_index = 0;
-		snd_play(sndSnowBotSlideStart);
+		snd_play(sndHandThrowGrab);
 		with target
 		{
 			if team != 0
 			{
 				snd_play(snd_hurt, hurt_pitch_variation,true);
-				my_health -= other.dmg;
+				my_health -= other.dmg*3;
 				sprite_index = spr_hurt;
 				image_index = 0;
 			}

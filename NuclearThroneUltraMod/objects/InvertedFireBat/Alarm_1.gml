@@ -20,7 +20,7 @@ direction = point_direction(x,y,target.x,target.y)+180
     with instance_create(x,y,EnemyLightningBall)
     {
     image_angle=random(360);
-    motion_add(other.direction+180+(random(16)-8),3)
+    motion_add(other.direction+180+(random(16)-8),2.5)
     team = other.team}
 speed*=0.4;
 image_index = 0
