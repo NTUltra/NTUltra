@@ -1,5 +1,30 @@
+if (my_health <= 0 && lifes > 0 && fakeded < 1)
+{
+	debug("DEAD");
+	scrDrop(100,0);
+	scrRaddrop(raddrop);
+	sprite_index = spr_dead;
+	image_index = 0;
+	my_health = maxhealth;
+	fakeded = 80 + random(200);
+	alarm[1] = fakeded + 10;
+	alarm[2] = 0;
+	alarm[4] = 0;
+	mask_index = mskPickupThroughWall;
+	speed = 0;
+	lifes--;
+	if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(InvertedAssassinBoss) == 1
+		with MusCont
+		{
+			audio_stop_sound(song);
+			song = musBossWin
+			snd_play_2d(song)
+			audio_sound_gain(song,max(0,sqrt(UberCont.opt_musvol)),0);
+		}
+}
+if fakeded > 0
+	exit;
 event_inherited()
-
 
 if (alarm[4] < 0) {
 	aggression += 1;
@@ -179,3 +204,5 @@ if alarm[2] > 0 && alarm[2] < 20
 		motion_add(dir,1);
 	}
 }
+
+

@@ -43,6 +43,7 @@ spr_middle_deactivated_hurt_link = sprNothingMiddleDeactivatedHurtLink
 raddrop = 500;
 disable = false;
 firstEntry = false;
+imageIndex = 0;
 prevImageIndex = 0;
 cantrishot = true;
 
@@ -116,8 +117,9 @@ fireTriShot = false;
 bigballs = false;
 
 aTime = 40;
-aTime -= min(GetPlayerLoops()*2,10);
+loops = GetPlayerLoops()
+aTime -= min(loops*2,10);
 difficultyStep = 0;
 snd_loop(sndBecomeNothingIdle);
-
+foreverBeam = false;
 xStart = x;

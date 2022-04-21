@@ -1,11 +1,27 @@
 /// @description anim handle
-if sprite_index == sprThroneFlameEnd
+if isInverted
 {
-	if !instance_exists(NuclearThrone1)
+	if sprite_index == sprInvertedThroneFlameEnd
 	{
-		instance_destroy();	
+		if !instance_exists(NuclearThrone1)
+		{
+			instance_destroy();	
+		}
+		visible = false;
 	}
-	visible = false;
+	if sprite_index == sprInvertedThroneFlameStart
+		sprite_index = sprInvertedThroneFlameIdle;
 }
-if sprite_index == sprThroneFlameStart
-	sprite_index = sprThroneFlameIdle;
+else
+{
+	if sprite_index == sprThroneFlameEnd
+	{
+		if !instance_exists(NuclearThrone1)
+		{
+			instance_destroy();	
+		}
+		visible = false;
+	}
+	if sprite_index == sprThroneFlameStart
+		sprite_index = sprThroneFlameIdle;
+}

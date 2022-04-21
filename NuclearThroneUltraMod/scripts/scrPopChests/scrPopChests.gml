@@ -37,7 +37,7 @@ function scrPopChests() {
 			}
 			return;
 		}
-		if (Player.area == 9 && Player.subarea == 3)
+		if ( (Player.area == 9 || Player.area == 118) && Player.subarea == 3)
 		{
 			with RadChest
 				instance_destroy(id,false);
@@ -225,7 +225,13 @@ function scrPopChests() {
 	instance_destroy(id,false);
 	}
 	}
-
+	if instance_exists(Player) && Player.race == 25
+	{
+		with RadChest
+		{
+			instance_destroy(id,false);	
+		}
+	}
 
 	with HealthChest
 	{

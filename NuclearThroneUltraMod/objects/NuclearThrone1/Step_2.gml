@@ -8,9 +8,9 @@ x = xStart;
 vspeed *= 0.1;
 if walk <= 0 && speed > 1
 	speed = 1;
-if instance_exists(ThroneBeam)
+if instance_exists(ThroneBeam) && !isInverted
 {
-	y = beamY;	
+	y = beamY;
 }
 if (intro && image_speed > 0)
 {

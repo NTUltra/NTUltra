@@ -112,7 +112,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprAssassinBossDead","path":"sprites/sprAssassinBossDead/sprAssassinBossDead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprAssassinBossDead",
     "tags": [],
     "resourceType": "GMSequence",
   },

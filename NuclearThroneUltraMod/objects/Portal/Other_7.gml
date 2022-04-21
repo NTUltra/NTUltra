@@ -10,11 +10,17 @@ sprite_index = sprPortalInverted
 if type = 3
 sprite_index = sprProtoPortal
 }
+if sprite_index = sprPinkPortalSpawn
+{
+	sprite_index = sprPinkPortal
+	if type = 3
+	sprite_index = sprProtoPortal
+}
 if sprite_index == sprBigPortalSpawn
 {
 	sprite_index = sprBigPortal;	
 }
-if sprite_index = sprPortalDisappear or sprite_index = sprProtoPortalDisappear or sprite_index = sprPortalInvertedDisappear || sprite_index = sprBigPortalDisappear
+if sprite_index = sprPortalDisappear or sprite_index = sprProtoPortalDisappear or sprite_index = sprPortalInvertedDisappear || sprite_index = sprBigPortalDisappear || sprite_index == sprPinkPortalDisappear
 {
 	var canRestart = false;
 	with Player

@@ -30,7 +30,7 @@ if target > 0
 	{
 		//below me
 		walk = alarm[1]-2;
-		walkDir = 1;
+		walkDir = 0.9;
 		if target.y - y > 280
 			walkDir += 0.4;
 		fireTriShot = false;
@@ -53,5 +53,20 @@ if target > 0
 	{
 		fireTriShot = false;
 		event_user(2);
+	}
+	if isInverted
+	{
+		walk = alarm[1];
+		if walkDir == 0
+			walkDir = 0.8;
+	}
+}
+else if instance_exists(ThroneBeam)
+{
+	snd_play_2d(sndNothingBeamEnd);
+	audio_stop_sound(sndNothingBeamLoop);
+	with ThroneBeam
+	{
+		event_user(0);
 	}
 }

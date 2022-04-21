@@ -5,7 +5,7 @@ image_xscale = -1
 else
 image_xscale = 1
 
-if sprite_index = sprPortal or sprite_index = sprProtoPortal or sprite_index = sprPortalInverted || sprite_index = sprBigPortal
+if sprite_index = sprPortal or sprite_index = sprProtoPortal or sprite_index = sprPortalInverted || sprite_index = sprBigPortal || sprite_index == sprPinkPortal
 {
 with WepPickup
 {
@@ -67,7 +67,7 @@ Player.alarm[3]=10;
 if endgame < 100
 {
 endgame -= 1
-if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or sprite_index = sprPortalInverted ||  sprite_index = sprBigPortal)
+if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or sprite_index = sprPortalInverted ||  sprite_index = sprBigPortal || sprite_index == sprPinkPortal)
 {
 	image_index = 0
 	if type = 1
@@ -78,6 +78,8 @@ if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or
 	}
 	if type = 3
 	sprite_index = sprProtoPortalDisappear
+	else if isPink
+		sprite_index = sprPinkPortalDisappear;
 	if type = 4
 	sprite_index = sprBigPortalDisappear;
 	with Player
@@ -91,7 +93,7 @@ if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or
 if !instance_exists(Player)
 {
 endgame = -1
-if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or sprite_index = sprPortalInverted ||  sprite_index = sprBigPortal)
+if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or sprite_index = sprPortalInverted ||  sprite_index = sprBigPortal || sprite_index == sprPinkPortal)
 {
 image_index = 0
 if type = 1
@@ -102,6 +104,8 @@ if inverted
 }
 if type = 3
 	sprite_index = sprProtoPortalDisappear
+	else if isPink
+		sprite_index = sprPinkPortalDisappear;
 if type = 4
 	sprite_index = sprBigPortalDisappear;
 }

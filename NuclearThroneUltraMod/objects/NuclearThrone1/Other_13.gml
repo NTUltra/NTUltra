@@ -23,7 +23,10 @@ with rightSide
 }
 with ThroneFlame
 {
-	sprite_index = sprThroneFlameStart;
+	if isInverted
+		sprite_index = sprInvertedThroneFlameStart;
+	else
+		sprite_index = sprThroneFlameStart;
 	image_index = 0;
 	visible = true;
 	//yOffset -= 26;

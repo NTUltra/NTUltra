@@ -6,16 +6,23 @@ meleedamage = 0;
 raddrop = 0;
 // Inherit the parent event
 event_inherited();
+isInverted = false;
 alarm[1] = 0;
 alarm[10] = 0;
 spr_idle = sprNothingLeft;
 spr_hurt = sprNothingLeftHurt;
 snd_hurt = sndNothingHurtHigh;
 spr_leg = sprNothingLeg;
+spr_left_deactivated = sprNothingLeftDeactivated;
 spr_left_deactivated_hurt = sprNothingLeftDeactivatedHurt;
 spr_left_hurt = sprNothingLeftHurt;
+spr_left_hurt_link = sprNothingLeftHurtLink;
+spr_left_deactivated_hurt_link = sprNothingLeftDeactivatedHurtLink;
+spr_right_deactivated = sprNothingRightDeactivated;
 spr_right_deactivated_hurt = sprNothingRightDeactivatedHurt;
 spr_right_hurt = sprNothingRightHurt;
+spr_right_hurt_link = sprNothingRightHurtLink;
+spr_right_deactivated_hurt_link = sprNothingRightDeactivatedHurtLink;
 
 owner = -1;
 xOffset = 0;

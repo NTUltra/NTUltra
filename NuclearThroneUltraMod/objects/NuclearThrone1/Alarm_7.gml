@@ -14,7 +14,11 @@ my_health = maxhealth;
 image_index = 1;
 imageIndex = 1;
 with instance_create(x,y,ThronePipes)
+{
+	if other.isInverted
+		sprite_index = sprInvertedNothingPipes;
 	depth = other.depth + 3;
+}
 alarm[2] = 90;
 beamY = y;
 repeat(8)
@@ -35,7 +39,20 @@ if isInverted
 		depth = other.depth - 1;
 		team = other.team;
 		alarm[1] = 1;
-		angleDir = choose(1,-1);
+		angleDir = 1;
+		sprBeam = sprInvertedNothingBeam;
+		sprBeamHit = sprInvertedNothingBeamHit;
+		sprite_index = sprInvertedNothingBeamStretch;
+	}
+	with instance_create(x,y+20,ThroneBeam)
+	{
+		depth = other.depth - 1;
+		team = other.team;
+		alarm[1] = 1;
+		angleDir = -1;
+		sprBeam = sprInvertedNothingBeam;
+		sprBeamHit = sprInvertedNothingBeamHit;
+		sprite_index = sprInvertedNothingBeamStretch;
 	}
 }
 else

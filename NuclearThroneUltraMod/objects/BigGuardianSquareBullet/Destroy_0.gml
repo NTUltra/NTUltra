@@ -3,7 +3,7 @@ snd_play(sndBigBallExplo);
 instance_create(x,y,WallBreak);
 with instance_create(x,y,ScorpionBulletHit)
 {
-	sprite_index = sprGuardianBulletHit;
+	sprite_index = other.hitSprite;
 }
 var canSpawn = true;
 with Portal
@@ -24,10 +24,10 @@ if canSpawn
 		repeat(4 + loops)
 		{
 			if owner > -1 && instance_exists(owner)
-				with instance_create(x+lengthdir_x(offset,angle),y+lengthdir_y(offset,angle),GuardianBulletSpawn)
+				with instance_create(x+lengthdir_x(offset,angle),y+lengthdir_y(offset,angle),projectileToSpawn)
 				{
 					typ = 3;
-					sprite_index = sprGuardianSquareBulletSpawn;
+					sprite_index = other.projectileToSpawnSprite;
 					motion_add(angle,pspd);
 					image_angle = direction
 					team = other.team

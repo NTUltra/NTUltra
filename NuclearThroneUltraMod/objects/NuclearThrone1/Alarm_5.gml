@@ -8,10 +8,33 @@ if isInverted
 {
 	with instance_create(x,y+20,ThroneBeam)
 	{
+		if other.foreverBeam
+		{
+			angleRate *= 1.5;
+			angleMax *= 1.5;
+		}
 		depth = other.depth - 1;
 		team = other.team;
 		alarm[1] = 1;
-		angleDir = choose(1,-1);
+		angleDir = 1
+		sprBeam = sprInvertedNothingBeam;
+		sprBeamHit = sprInvertedNothingBeamHit;
+		sprite_index = sprInvertedNothingBeamStretch;
+	}
+	with instance_create(x,y+20,ThroneBeam)
+	{
+		if other.foreverBeam
+		{
+			angleRate *= 1.5;
+			angleMax *= 1.5;
+		}
+		depth = other.depth - 1;
+		team = other.team;
+		alarm[1] = 1;
+		angleDir = -1
+		sprBeam = sprInvertedNothingBeam;
+		sprBeamHit = sprInvertedNothingBeamHit;
+		sprite_index = sprInvertedNothingBeamStretch;
 	}
 }
 else

@@ -72,7 +72,7 @@ if (Player.loops > 0 && Player.area == 112 && Player.subarea == 1)
 //instance_create(instance_furthest(Player.x,Player.y,Floor).x+16, instance_furthest(Player.x,Player.y,Floor).y+16,BecomeScrapBoss)
 //instance_create(instance_furthest(Player.x,Player.y,Floor).x+16, instance_furthest(Player.x,Player.y,Floor).y+16,LilHunter)
 
-if (Player.race=22 && Player.area!=100 && Player.area!=104 && !(Player.area == 9 && Player.subarea == 3))
+if (Player.race=22 && Player.area!=100 && Player.area!=104 && !( (Player.area == 9 || Player.area == 118) && Player.subarea == 3))
 {
 
 var ammoWant = 1+Player.skill_got[23]+Player.skill_got[5];
@@ -214,7 +214,7 @@ instance_create(instance_nearest(Player.x,Player.y,Floor).x+16, instance_nearest
 }
 
 
-if !(Player.area == 9 && Player.subarea == 3 || ((Player.area == 6 || Player.area == 112) && Player.subarea == 2) || UberCont.opt_gamemode == 25 || UberCont.opt_gamemode == 8
+if !(( (Player.area == 9 || Player.area == 118) && Player.subarea == 3) || ((Player.area == 6 || Player.area == 112) && Player.subarea == 2) || UberCont.opt_gamemode == 25 || UberCont.opt_gamemode == 8
 || Player.area == 100)
 {
 	//safe corridors pls

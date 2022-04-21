@@ -68,6 +68,7 @@ if target > 0
 			alarm[0]+=15*a;
 			a++;
 		}
+		debug("spawned!");
 		instance_destroy()
 	}
 }

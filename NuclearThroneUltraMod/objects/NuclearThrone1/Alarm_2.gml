@@ -4,4 +4,6 @@ snd_play_2d(sndNothingBeamEnd);
 audio_stop_sound(sndNothingBeamLoop);
 
 with ThroneBeam
-	instance_destroy();
+{
+	event_user(0);
+}

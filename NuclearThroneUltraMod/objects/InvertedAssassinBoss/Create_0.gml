@@ -1,5 +1,5 @@
-raddrop = 40
-maxhealth = 170
+raddrop = 50
+maxhealth = 165
 meleedamage = 0
 size = 1
 bloodempty=0
@@ -7,16 +7,17 @@ aggression = 0
 
 event_inherited()
 
-if instance_exists(Player){
-my_health=round( (1+(Player.loops*0.2))*my_health )//bandit loop 1: 1.1*4= 5(rounded up)
-maxhealth=my_health;
-}
 
 spr_idle = sprInvertedAssassinBossSit
 spr_walk = sprInvertedAssassinBossDash
 spr_hurt = sprInvertedAssassinBossHurt
 spr_dead = sprInvertedAssassinBossDead
 spr_stunned = sprInvertedAssassinBossStunned
+spr_fake = sprInvertedAssassinBossDeadFake;
+spr_respawn = sprInvertedAssassinBossRespawn;
+fakeded = 0;
+var loops = GetPlayerLoops();
+lifes = 1//min(3,loops-1);
 
 snd_hurt = sndAssassinHit
 snd_dead = sndAssassinDie

@@ -88,7 +88,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprPortalSpawn","path":"sprites/sprPortalSpawn/sprPortalSpawn.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprPortalSpawn",
     "tags": [],
     "resourceType": "GMSequence",
   },

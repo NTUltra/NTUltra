@@ -450,7 +450,7 @@ function scrPopulate() {
 		}
     }
 
-    if !(Player.area == 9 && Player.subarea == 3) {
+    if !((Player.area == 118 || Player.area == 9) && Player.subarea == 3) {
         if Player.area < 5 {
             with WeaponChest
             instance_create(x, y, Bandit)

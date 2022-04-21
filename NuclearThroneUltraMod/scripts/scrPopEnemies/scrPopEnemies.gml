@@ -529,10 +529,10 @@ function scrPopEnemies() {
 			if styleb = 1 //b style
 	        {
 	            if random(4) < 1 {
-	                instance_create(x + 12 + random(8), y + 12 + random(8), choose(LavaBallEnemy, FireWorm, FireWorm, FireWorm, LavaBallEnemy, Salamander,SuperFireBaller))
+	                instance_create(x + 12 + random(8), y + 12 + random(8), choose(LavaBallEnemy, FireWorm, FireWorm, LavaBallEnemy, Salamander,SuperFireBaller))
 	            }
 	            else if random(7) < 1
-	            instance_create(x + 16, y + 16, choose(FireBat, Thief, FireWorm, FireBat, Bandit, BanditSquare, FireBat, FireWorm,FireBaller))
+	            instance_create(x + 16, y + 16, choose(FireBat, Thief, FireWorm, FireBat, Bandit, BanditSquare, FireBat, FireBaller))
 				else if instance_number(enemy) < 1
 				{
 					instance_create(x + 16, y + 16,LavaBallEnemy);
@@ -541,7 +541,7 @@ function scrPopEnemies() {
 	        {
 	            if random(5) < 1 {
 	                repeat(1+irandom(2))
-						instance_create(x + 12 + random(8), y + 12 + random(8), choose(FireBat, LavaBallEnemy, LavaBallEnemy, FireWorm, FireBat, Salamander, Bandit, BanditSquare,FireBaller))
+						instance_create(x + 12 + random(8), y + 12 + random(8), choose(FireBat, LavaBallEnemy, LavaBallEnemy, FireBat, Salamander, Bandit, BanditSquare,FireBaller))
 	            }
 	            else if random(2) < 1
 					instance_create(x + 16, y + 16, choose(FireBat, FireBat, LavaBallEnemy, FireBat, FireBat, FireWorm, Salamander,SuperFireBaller))

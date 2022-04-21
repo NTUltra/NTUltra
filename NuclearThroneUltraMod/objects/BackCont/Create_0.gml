@@ -29,6 +29,11 @@ verticalVans = false;
 ///@description deside how manny vans
 if instance_exists(Player)
 {
+	if ((Player.area == 9 || Player.area == 118) && Player.subarea == 3)
+	{
+		//No popo no
+		alarm[1] = 0;
+	}
 	wantVanAmount = GetPlayerLoops();
 	vanDelay = max(60,vanDelay - ((wantVanAmount-1)*60));
 	if ( (Player.area == 6 || Player.area == 112) && Player.subarea ==  2 )

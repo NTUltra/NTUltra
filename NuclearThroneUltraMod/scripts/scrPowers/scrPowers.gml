@@ -3,7 +3,6 @@ function scrPowers() {
 	/////SHIT PRESSED////////
 	if KeyCont.key_spec[p] = 1
 	{
-		debug("instance_exists(Hand) ",instance_exists(Hand));
 		if race == 27 && !instance_exists(Hand)//Hands
 		{
 			var grabbed = false;
