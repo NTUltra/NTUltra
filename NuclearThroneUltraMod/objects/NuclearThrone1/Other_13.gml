@@ -1,9 +1,4 @@
 /// @description Become active
-snd_play_2d(sndNothingRise);
-image_speed = 0.5;
-prevImageIndex = 1;
-image_index = 1;
-
 sprite_index = spr_middle;
 spr_idle = spr_middle;
 spr_hurt = spr_middle_hurt;

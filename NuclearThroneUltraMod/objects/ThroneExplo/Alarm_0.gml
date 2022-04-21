@@ -12,6 +12,7 @@ snd_play_2d(sndNothingDeath2);
 alarm[2] = 0;
 alarm[1] = 0;
 sprite_index = spr_death;
+image_index = 0;
 
 scrDrop(100,100);
 scrDrop(100,10);

@@ -17,13 +17,13 @@ with other
         frozen=true;
             with instance_create(x,y,FrozenEnemy)
             {
-            //image_speed=0;
-            image_xscale=other.size*choose(1,-1);
-            image_yscale=other.size;
-            xx=other.x
-            yy=other.y
-            debrisAmount=choose(1,2);
-			owner=other.id;
+				var s = min(2,other.size)
+				image_xscale=s*choose(1,-1);
+				image_yscale=s;
+	            xx=other.x
+	            yy=other.y
+	            debrisAmount=choose(1,2);
+				owner=other.id;
             }
         alarm[11]+=20;
 		if alarm[1] > 0

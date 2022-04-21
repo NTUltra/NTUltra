@@ -3,5 +3,6 @@
 // Inherit the parent event
 event_inherited();
 snd_play(sndExplosion);
-instance_create(x,y,PurpleExplosion);
+with instance_create(x,y,PurpleExplosion)
+	team = other.team;
 

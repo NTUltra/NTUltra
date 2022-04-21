@@ -11,12 +11,12 @@ if alarm[11]<1&&my_health>0{
 frozen=true;
     with instance_create(x,y,FrozenEnemy)
     {
-    //image_speed=0;
-    image_xscale=other.size*choose(1,-1);
-    image_yscale=other.size;
-    xx=other.x
-    yy=other.y
-	owner = other.id;
+		var s = min(2,other.size)
+	    image_xscale=s*choose(1,-1);
+	    image_yscale=s;
+	    xx=other.x
+	    yy=other.y
+		owner = other.id;
     }
 alarm[11]+= other.freezetime;
 if alarm[1] > 0

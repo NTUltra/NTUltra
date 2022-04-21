@@ -47,6 +47,8 @@ imageIndex = 0;
 prevImageIndex = 0;
 cantrishot = true;
 
+riseStep = false;
+
 event_inherited()
 walk = 0;
 alarm[1] = 0;

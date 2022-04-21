@@ -8,6 +8,7 @@ if (sprite_index == spr_switch_on)
 if (sprite_index == spr_activate)
 {
 	image_index = image_number -1;
+	image_speed = 0;
 	meleedamage = 10;
 }
 if active && ! intro{

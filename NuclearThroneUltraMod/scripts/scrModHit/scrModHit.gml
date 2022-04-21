@@ -95,9 +95,9 @@ function scrModHit() {
 								frozen=true;
 					            with instance_create(x,y,FrozenEnemy)
 					            {
-						            //image_speed=0;
-						            image_xscale=other.size*choose(1,-1);
-						            image_yscale=other.size;
+						            var s = min(2,other.size)
+								    image_xscale=s*choose(1,-1);
+								    image_yscale=s;
 						            xx=other.x
 						            yy=other.y
 						            debrisAmount=4;
