@@ -19,7 +19,7 @@ Sleep(200)
 scrBusinessHogGoldChest();
 instance_create(x,y,ChesireCatExplosion);
 
-
+scrDefeatedRequiredBoss(secretChallengeBosses.chesireCat);
 scrDrop(100,0)
 scrDrop(20,0)
 scrDrop(50,40)

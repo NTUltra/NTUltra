@@ -85,6 +85,7 @@ if place_meeting(x,y,Wall) || place_meeting(x,y,hitme)
 {
     with instance_create(x,y,Laser)
     {
+		//flame = other.flame;
 		//if !collision_line(xx-4,yy,xx+4,yy,Wall,false,false)
 			//image_angle = other.image_angle*-1//180-other.image_angle;
 		//else

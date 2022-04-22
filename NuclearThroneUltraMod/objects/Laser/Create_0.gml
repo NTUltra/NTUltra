@@ -24,3 +24,4 @@ startImg = sprLaserStart;
 endImg = sprLaserEnd;
 isUltra = false;
 canBeMoved = false;
+//flame = false;

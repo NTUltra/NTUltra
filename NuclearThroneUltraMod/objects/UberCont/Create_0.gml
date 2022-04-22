@@ -114,3 +114,13 @@ hadBossIntro = false;
 snd_wallbreak = sndWallBreak;
 
 crownVaultChallenge = 0;
+
+enum secretChallengeBosses {
+	bigVulture,
+	bigFish,
+	bushBox,
+	chesireCat,
+	bigAssassin,
+	hyperCrystal
+}
+killedBoss = [];

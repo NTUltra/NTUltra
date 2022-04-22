@@ -1,6 +1,6 @@
 scrDrop(30,0)
 scrDrop(100,0)
-
+scrDefeatedRequiredBoss(secretChallengeBosses.bigAssassin);
 scrBusinessHogGoldChest();
 event_inherited()
 

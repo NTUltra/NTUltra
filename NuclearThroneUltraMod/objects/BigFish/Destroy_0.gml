@@ -1,5 +1,6 @@
 scrDrop(100,100)
 scrDrop(20,0)
+scrDefeatedRequiredBoss(secretChallengeBosses.bigFish);
 if !isOneWeaponOnlyModes()
 {
 	with instance_create(x-8,y,WepPickup)

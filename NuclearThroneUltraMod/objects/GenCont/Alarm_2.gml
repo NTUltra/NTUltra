@@ -160,6 +160,9 @@ if Player.area = 100
 			}
 			//instance_create(xx,yy,SurvivalWave);
 			var oy = yy;
+			var mido = 1;
+			if ztop
+				mido = 0;
 			for (var ix = 0; ix < 30; ix++) {
 				yy = oy;
 				for (var iy = 0; iy < 10; iy++) {
@@ -168,7 +171,7 @@ if Player.area = 100
 						//Generate a floppydisc on the floor
 						if ((ix > 0 && ix < 9 && iy > 4 && iy < 9)
 						|| (ix > 2 && ix < 8 && iy < 3 && !(ix == 4 && iy == 1)
-						) || ix > 10 && (iy == 5 || iy == 6))
+						) || ((ix > 10 && ix < 27) && (iy == 5-mido || iy == 6-mido)))
 						{
 							sprite_index = sprFloor100C;
 							styleb = 1;
@@ -183,6 +186,13 @@ if Player.area = 100
 						instance_create(xx,yy,TorchKiller);	
 					}
 						//Statues
+						if ix == 28 && iy == 6-mido
+						{
+							/*if ztop
+								instance_create(xx+16,yy,BecomeBallBoss);
+							else*/
+								instance_create(xx+16,yy+32,BecomeBallBoss);
+						}
 						if  iy == 2
 						{
 							if ix == 11

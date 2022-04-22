@@ -3,7 +3,7 @@ scrDrop(80,0)
 
 scrBusinessHogGoldChest();
 event_inherited()
-
+scrDefeatedRequiredBoss(secretChallengeBosses.bigAssassin);
 with Corpse
 {
 //Big Assassins corpse doesnt move
