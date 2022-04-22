@@ -124,3 +124,7 @@ enum secretChallengeBosses {
 	hyperCrystal
 }
 killedBoss = [];
+collectedRewards = [];
+defaultRewards = 6;
+enableReroll = true;
+rewardsLeft = defaultRewards;

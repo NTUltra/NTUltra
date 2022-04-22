@@ -45,7 +45,7 @@ else if skill = 3
 }
 else if skill = 4 && Player.race=25//rabitpaw
 {
-Player.betterrabbitpaw+=0.12;
+	Player.betterrabbitpaw+=0.12;
 }
 else if skill = 5 && Player.race=2
 {
@@ -83,9 +83,9 @@ Player.typ_amax[5] = 55+Player.skill_got[10]*44
 }
 else if skill = 13 && Player.race = 25//Long arms
 {
-Player.bettermelee+=0.4;
-if Player.ultra_got[97]
-Player.bettermelee=1.1;
+	Player.bettermelee+=0.4;
+	if Player.ultra_got[97]
+		Player.bettermelee=1.1;
 }
 else if skill= 16 && Player.race = 25//recycle gland
 {

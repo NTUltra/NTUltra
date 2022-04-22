@@ -143,6 +143,45 @@ if Player.area = 100
 				}
 				xx += xstep;
 			}
+			//Reroll station
+			if (instance_exists(Player) && Player.level > 1 && UberCont.enableReroll)
+			{
+				xx = x;
+				yy = y;
+				repeat(9)
+				{
+					if (!place_meeting(xx,yy,Floor))
+					{
+						with instance_create(xx,yy,Floor)
+						{
+							styleb = 1;
+							sprite_index = sprFloor100C;
+						}
+					}
+					yy += ystep;
+				}
+				var s = 5;
+				xx -= xstep * 2;
+				var oy = yy;
+				for (var ix = 0; ix < s; ix++) {
+					yy = oy;
+					for (var iy = 0; iy < s; iy++) {
+						instance_create(xx,yy,TorchKiller);
+					    with instance_create(xx,yy,Floor)
+						{
+							styleb = 0;	
+						}
+						if ((ix == s-1 || ix == 0) && (iy == s-1 || iy == 0))
+							instance_create(xx+16,yy+16,Torch);
+						else if (ix == 2 && iy == 2)
+							instance_create(xx+16,yy+16,RerollStation);
+						yy += ystep;
+					}
+					xx += xstep;
+				}
+			}
+			
+			//Statue room
 			xstep *= -1;
 			xx = x;
 			yy = y;
@@ -160,9 +199,6 @@ if Player.area = 100
 			}
 			//instance_create(xx,yy,SurvivalWave);
 			var oy = yy;
-			var mido = 1;
-			if ztop
-				mido = 0;
 			for (var ix = 0; ix < 30; ix++) {
 				yy = oy;
 				for (var iy = 0; iy < 10; iy++) {
@@ -171,7 +207,7 @@ if Player.area = 100
 						//Generate a floppydisc on the floor
 						if ((ix > 0 && ix < 9 && iy > 4 && iy < 9)
 						|| (ix > 2 && ix < 8 && iy < 3 && !(ix == 4 && iy == 1)
-						) || ((ix > 10 && ix < 27) && (iy == 5-mido || iy == 6-mido)))
+						) || ((ix > 10 && ix < 27) && (iy == 4 || iy == 5)))
 						{
 							sprite_index = sprFloor100C;
 							styleb = 1;
@@ -186,7 +222,7 @@ if Player.area = 100
 						instance_create(xx,yy,TorchKiller);	
 					}
 						//Statues
-						if ix == 28 && iy == 6-mido
+						if ix == 28 && iy == 5
 						{
 							/*if ztop
 								instance_create(xx+16,yy,BecomeBallBoss);

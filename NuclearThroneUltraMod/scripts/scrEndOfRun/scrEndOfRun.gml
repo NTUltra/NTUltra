@@ -1,7 +1,12 @@
 ///scrEndOfRun();
-// /@description
+// /@description reset some important variables
 ///@param
 function scrEndOfRun(){
-	UberCont.crownVaultChallenge = 0;
-	UberCont.killedBoss = [];
+	with UberCont
+	{
+		crownVaultChallenge = 0;
+		killedBoss = [];
+		rewardsLeft = defaultRewards;
+		enableReroll = false;
+	}
 }

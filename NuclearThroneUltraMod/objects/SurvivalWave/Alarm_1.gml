@@ -12,7 +12,7 @@ if UberCont.opt_gamemode != 25
 		}
 		with WepPickup
 		{
-			motion_add(point_direction(other.centerX,other.centerY,x,y),5);
+			motion_add(point_direction(other.centerX,other.centerY,x,y),8);
 		}
 		var w = 4;
 		var h = 5;

@@ -2,6 +2,7 @@
 alarm[1] = actTime + random(actTime)
 scrTarget()
 if target > 0 {
+	scrDrop(2,0);
 	var ran = random(100);
 	if ran > 90
 	{

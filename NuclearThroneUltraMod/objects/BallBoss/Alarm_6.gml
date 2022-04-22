@@ -13,3 +13,5 @@ repeat(am)
 	}
 	ang += angStep;
 }
+
+scrDrop(10,0);

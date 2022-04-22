@@ -1,16 +1,16 @@
 {
   "spriteId": {
-    "name": "sprBossHolderInactive",
-    "path": "sprites/sprBossHolderInactive/sprBossHolderInactive.yy",
+    "name": "sprBossHolder",
+    "path": "sprites/sprBossHolder/sprBossHolder.yy",
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
-  "persistent": false,
-  "parentObjectId": {
-    "name": "BossReward",
-    "path": "objects/BossReward/BossReward.yy",
+  "spriteMaskId": {
+    "name": "mskWepPickup",
+    "path": "sprites/mskWepPickup/mskWepPickup.yy",
   },
+  "persistent": false,
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -25,6 +25,8 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":73,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -33,7 +35,7 @@
     "path": "folders/Objects/CrownVault.yy",
   },
   "resourceVersion": "1.0",
-  "name": "BigAssassinBossReward",
+  "name": "RerollStation",
   "tags": [],
   "resourceType": "GMObject",
 }

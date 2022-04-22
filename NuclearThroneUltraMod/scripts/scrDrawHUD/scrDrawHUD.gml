@@ -738,6 +738,21 @@ function scrDrawHUD() {
 	}
 	}
 
+	with RerollStation
+	{
+		if place_meeting(x,y,Player) && active
+		{
+			draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-8)
+
+			draw_set_color(c_black)
+			draw_text(x,y-40,string_hash_to_newline(string(name)))
+			draw_text(x+1,y-40,string_hash_to_newline(string(name)))
+			draw_text(x+1,y-41,string_hash_to_newline(string(name)))
+			draw_set_color(c_white)
+			draw_text(x,y-41,string_hash_to_newline(string(name)))
+			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+		}
+	}
 	//SHROOM
 	with BigMushroom
 	{

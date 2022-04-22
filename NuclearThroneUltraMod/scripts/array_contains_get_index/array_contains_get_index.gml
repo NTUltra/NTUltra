@@ -1,14 +1,13 @@
-///array_contains();
+///array_contains_get_index();
 // /@description
 ///@param
-///@param
-function array_contains(array, containId){
+function array_contains_get_index(array,containId){
 	var al = array_length(array);
 	for (var i = 0; i < al; i++) {
 	    if (array[i] == containId)
 		{
-			return true;
+			return i;
 		}
 	}
-	return false;
+	return -1;
 }
