@@ -16,8 +16,11 @@ if spr_idle == sprBigVultureSkullOpen
 		//	my_health = 0
 		spr_idle = sprBigVultureSkull;
 		spr_hurt = sprBigVultureSkullHurt;
-		with instance_create(x,y,Portal) 
+		with instance_create(x,y,Portal)
+		{
 			type = 1
+			pullstrength = 3;
+		}
 
 	}
 }

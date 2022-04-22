@@ -3,7 +3,7 @@ instance_create(x,y,WallBreak);
 with instance_create(x,y,SmallExplosion)
 {
 team=other.team;
-dmg=1;
+dmg=3;
 if instance_exists(Player) && Player.crown == 3//crown of death
 {
 	var dir = random(360);

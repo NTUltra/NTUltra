@@ -108,8 +108,12 @@ if Player.area = 100
 			if Player.x > x
 				xstep = -32;
 			var ystep = 32;
+			var ztop = true;
 			if Player.y > y
+			{
 				ystep = -32;
+				ztop = false;
+			}
 			repeat(12)
 			{
 				if (!place_meeting(xx,yy,Floor))
@@ -135,6 +139,207 @@ if Player.area = 100
 					{
 						instance_create(xx,yy,SurvivalArenaStarter);
 					}
+					yy += ystep;
+				}
+				xx += xstep;
+			}
+			xstep *= -1;
+			xx = x;
+			yy = y;
+			repeat(12)
+			{
+				if (!place_meeting(xx,yy,Floor))
+				{
+					with instance_create(xx,yy,Floor)
+					{
+						styleb = 1;
+						sprite_index = sprFloor100C;
+					}
+				}
+				xx += xstep;
+			}
+			//instance_create(xx,yy,SurvivalWave);
+			var oy = yy;
+			for (var ix = 0; ix < 30; ix++) {
+				yy = oy;
+				for (var iy = 0; iy < 10; iy++) {
+				    with instance_create(xx,yy,Floor)
+					{
+						//Generate a floppydisc on the floor
+						if ((ix > 0 && ix < 9 && iy > 4 && iy < 9)
+						|| (ix > 2 && ix < 8 && iy < 3 && !(ix == 4 && iy == 1)
+						) || ix > 10 && (iy == 5 || iy == 6))
+						{
+							sprite_index = sprFloor100C;
+							styleb = 1;
+						}
+						else
+						{
+							styleb = 0;	
+						}
+					}
+					if ix > 9
+					{
+						instance_create(xx,yy,TorchKiller);	
+					}
+						//Statues
+						if  iy == 2
+						{
+							if ix == 11
+							{
+								if ztop
+									instance_create(xx+16,yy,Torch);
+								else
+									instance_create(xx+16,yy+16,Torch);
+							}
+							if ix == 13
+							{
+								if ztop
+									instance_create(xx+16,yy,Torch);
+								else
+									instance_create(xx+16,yy+16,Torch);
+							}
+						}
+						if ix == 12 && iy == 3 {
+							instance_create(xx+16,yy+16,BigVultureBossReward);
+						}
+						if ix == 12 && iy == 1
+						{
+							instance_create(xx+16,yy+16,BigVultureStatue);
+						}
+						
+						if  iy == 2
+						{
+							if ix == 16
+							{
+								
+								if ztop
+									instance_create(xx+16,yy,Torch);
+								else
+									instance_create(xx+16,yy+16,Torch);
+							}
+							if ix == 18
+							{
+								if ztop
+									instance_create(xx+16,yy,Torch);
+								else
+									instance_create(xx+16,yy+16,Torch);
+							}
+						}
+						if ix == 17 && iy == 3 {
+							instance_create(xx+16,yy+16,BushBoxBossReward);
+						}
+						if ix == 17 && iy == 1
+						{
+							instance_create(xx+16,yy+16,BushBoxStatue);
+						}
+						
+						
+						if  iy == 2
+						{
+							if ix == 21
+							{
+								
+								if ztop
+									instance_create(xx+16,yy,Torch);
+								else
+									instance_create(xx+16,yy+16,Torch);
+							}
+							if ix == 23
+							{
+								if ztop
+									instance_create(xx+16,yy,Torch);
+								else
+									instance_create(xx+16,yy+16,Torch);
+							}
+						}
+						if ix == 22 && iy == 3 {
+							instance_create(xx+16,yy+16,HyperCrystalBossReward);
+						}
+						if ix == 22 && iy == 1
+						{
+							instance_create(xx+16,yy+16,HyperCrystalStatue);
+						}
+						
+						if  iy == 7
+						{
+							if ix == 11
+							{
+								
+								if !ztop
+									instance_create(xx+16,yy,Torch);
+								else
+									instance_create(xx+16,yy+16,Torch);
+							}
+							if ix == 13
+							{
+								if !ztop
+									instance_create(xx+16,yy,Torch);
+								else
+									instance_create(xx+16,yy+16,Torch);
+							}
+						}
+						if ix == 12 && iy == 6 {
+							instance_create(xx+16,yy+16,BigFishBossReward);
+						}
+						if ix == 12 && iy == 8
+						{
+							instance_create(xx+16,yy+16,BigFishStatue);
+						}
+						
+						if  iy == 7
+						{
+							if ix == 16
+							{
+								
+								if !ztop
+									instance_create(xx+16,yy,Torch);
+								else
+									instance_create(xx+16,yy+16,Torch);
+							}
+							if ix == 18
+							{
+								if !ztop
+									instance_create(xx+16,yy,Torch);
+								else
+									instance_create(xx+16,yy+16,Torch);
+							}
+						}
+						if ix == 17 && iy == 6 {
+							instance_create(xx+16,yy+16,ChesireCatBossReward);
+						}
+						if ix == 17 && iy == 8
+						{
+							instance_create(xx+16,yy+16,ChesireCatStatue);
+						}
+						
+						if  iy == 7
+						{
+							if ix == 21
+							{
+								
+								if !ztop
+									instance_create(xx+16,yy,Torch);
+								else
+									instance_create(xx+16,yy+16,Torch);
+							}
+							if ix == 23
+							{
+								if !ztop
+									instance_create(xx+16,yy,Torch);
+								else
+									instance_create(xx+16,yy+16,Torch);
+							}
+						}
+						if ix == 22 && iy == 6 {
+							instance_create(xx+16,yy+16,BigAssassinBossReward);
+						}
+						if ix == 22 && iy == 8
+						{
+							instance_create(xx+16,yy+16,BigAssassinStatue);
+						}
+						
+		
 					yy += ystep;
 				}
 				xx += xstep;

@@ -22,7 +22,10 @@ if KeyCont.key_pick[other.p] = 1
 				subarea = 1;
 			}
 		}
-		with instance_create(x,y,Portal) 
+		with instance_create(x,y,Portal)
+		{
 			type = 1
+			pullstrength = 3;
+		}
 	}
 }

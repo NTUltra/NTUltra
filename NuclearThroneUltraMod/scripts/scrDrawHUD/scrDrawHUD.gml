@@ -836,11 +836,11 @@ function scrDrawHUD() {
 		draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-7)
 
 		draw_set_color(c_black)
-		draw_text(x,y-30,string_hash_to_newline(string(name)))
-		draw_text(x+1,y-30,string_hash_to_newline(string(name)))
-		draw_text(x+1,y-31,string_hash_to_newline(string(name)))
+		draw_text(x,y-48,string_hash_to_newline(string(name)))
+		draw_text(x+1,y-48,string_hash_to_newline(string(name)))
+		draw_text(x+1,y-49,string_hash_to_newline(string(name)))
 		draw_set_color(c_white)
-		draw_text(x,y-31,string_hash_to_newline(string(name)))
+		draw_text(x,y-49,string_hash_to_newline(string(name)))
 		//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 		}
 	}

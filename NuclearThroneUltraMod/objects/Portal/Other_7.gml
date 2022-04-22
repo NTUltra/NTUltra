@@ -1,5 +1,6 @@
 if sprite_index = sprPortalSpawn
 {
+	image_speed = 0.4;
 //instance_create(x,y,PortalShock);
 if type = 1
 {
@@ -12,6 +13,7 @@ sprite_index = sprProtoPortal
 }
 if sprite_index = sprPinkPortalSpawn
 {
+	image_speed = 0.4;
 	sprite_index = sprPinkPortal
 	if type = 3
 	sprite_index = sprProtoPortal

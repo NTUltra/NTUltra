@@ -1,3 +1,2 @@
-with (other) {
-instance_destroy();
-}
+speed *= 0.8;
+alarm[1] = 1;

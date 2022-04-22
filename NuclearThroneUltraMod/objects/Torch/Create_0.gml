@@ -9,4 +9,4 @@ event_inherited()
 
 
 snd_hurt = sndHitRock
-
+shadowYoffset = 2;

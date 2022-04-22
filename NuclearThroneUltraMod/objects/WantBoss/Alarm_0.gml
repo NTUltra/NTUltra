@@ -5,7 +5,7 @@ if instance_exists(Player)
 {
 	target = Player;	
 }
-if target > 0
+if target > 0 && instance_exists(target)
 {
 	with Wall
 	{

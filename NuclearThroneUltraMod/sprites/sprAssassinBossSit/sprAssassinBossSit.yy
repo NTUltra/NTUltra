@@ -96,7 +96,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprAssassinBossSit","path":"sprites/sprAssassinBossSit/sprAssassinBossSit.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprAssassinBossSit",
     "tags": [],
     "resourceType": "GMSequence",
   },

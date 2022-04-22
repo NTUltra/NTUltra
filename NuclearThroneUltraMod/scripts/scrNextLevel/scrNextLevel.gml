@@ -170,7 +170,7 @@ function scrNextLevel() {
 	        else//Skip one palace
 	        {
 	        area=9;
-	        subarea=2;
+	        subarea=1;
 			inverted=false
 	        }
         

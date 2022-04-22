@@ -1,4 +1,4 @@
-image_speed = 0.4
+image_speed = 0.8
 type=1;
 inverted=false;//is this an inverted portal?
 

@@ -10,7 +10,7 @@ direction = point_direction(x,y,target.x,target.y)+random(60)-30
 }
 else
 {
-if my_health < maxhealth and random(3) < 1
+if my_health < maxhealth and random(3) < 1 && instance_number(BigMaggotBurrowInverted) < 3
 {
 image_index = 0
 snd_play(sndBigMaggotBurrow,0,true)

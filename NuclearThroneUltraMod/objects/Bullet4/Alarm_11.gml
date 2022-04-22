@@ -7,7 +7,7 @@ if um == ultramods.bulletShotgun
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = other.speed;
+		speed = other.speed+4;
 		team = other.team;
 		alarm[11] = 0;
 	}
@@ -27,10 +27,11 @@ if um == ultramods.bulletShotgun
 		image_yscale += 0.2;
 		scrCopyWeaponMod(other);
 		isog = false;
-		image_angle = other.direction-7;
+		image_angle = other.direction-5;
 		team = other.team
 		event_perform(ev_alarm,0);
 	}
+	/*
 	with instance_create(x,y,Laser)
 	{
 		image_yscale += 0.2;
@@ -39,13 +40,13 @@ if um == ultramods.bulletShotgun
 		image_angle = other.direction;
 		team = other.team
 		event_perform(ev_alarm,0);
-	}
+	}*/
 	with instance_create(x,y,Laser)
 	{
 		image_yscale += 0.2;
 		scrCopyWeaponMod(other);
 		isog = false;
-		image_angle = other.direction+7;
+		image_angle = other.direction+5;
 		team = other.team
 		event_perform(ev_alarm,0);
 	}

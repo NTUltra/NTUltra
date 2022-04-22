@@ -1,4 +1,4 @@
-if other.team != team and other.team != 0 &&  other.my_health > 0
+if other.team != team  &&  other.my_health > 0
 {
 	if !instance_exists(target) || other.id != target.id
 	{

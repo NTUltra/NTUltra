@@ -42,7 +42,8 @@ event_inherited()
 
 if oasis && !instance_exists(SurvivalWave)
 {
-instance_create(x,y,Portal);
+	if instance_exists(Player) && Player.oasis = false
+		instance_create(x,y,Portal);
 with Player
 oasis=true;
 }

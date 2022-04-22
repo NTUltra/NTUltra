@@ -14,7 +14,9 @@ instance_destroy()
 var  maxHpIncrease = 2;
 with other {
 	//OVERHEAL
-	my_health += other.num;
+	var overheal = my_health + other.num - maxhealth;
+	my_health += other.num-overheal;
+	my_health += overheal * 0.5;
 	/*
 	if my_health + other.num <= maxhealth
 		my_health += other.num

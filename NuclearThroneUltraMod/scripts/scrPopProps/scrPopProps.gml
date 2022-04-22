@@ -206,7 +206,7 @@ function scrPopProps() {
 	else
 	instance_create(x+16,y+16,Mushroom);
 	}
-	if spawnarea = 100 && !place_meeting(x,y,Wall)
+	if spawnarea = 100 && !place_meeting(x,y,Wall) && !place_meeting(x,y,TorchKiller)
 	instance_create(x+16,y+16,Torch)
 	if spawnarea = 116 && !place_meeting(x,y,Wall)
 	instance_create(x+16,y+16,OldTorch)

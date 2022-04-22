@@ -3640,10 +3640,10 @@ function scrWeapons() {
 	wep_name[330] = "DOOM PISTOL"
 	wep_type[330] = 4
 	wep_auto[330] = 0
-	wep_load[330] = 9
+	wep_load[330] = 11
 	wep_cost[330] = 1
 	wep_sprt[330] = sprDoomPistol
-	wep_area[330] = 4
+	wep_area[330] = 6
 	wep_text[330] = "cute bots of doom"
 	wep_swap[330] = sndSwapExplosive
 	wep_rad[330] = 0;
@@ -3651,10 +3651,10 @@ function scrWeapons() {
 	wep_name[331] = "DOOM RIFLE"
 	wep_type[331] = 4
 	wep_auto[331] = 0
-	wep_load[331] = 15
+	wep_load[331] = 16
 	wep_cost[331] = 2
 	wep_sprt[331] = sprDoomRifle
-	wep_area[331] = 7
+	wep_area[331] = 8
 	wep_text[331] = "doombots are cool"
 	wep_swap[331] = sndSwapExplosive
 	wep_rad[331] = 0;
@@ -3977,7 +3977,7 @@ function scrWeapons() {
 	wep_load[360] = 25
 	wep_cost[360] = 0
 	wep_sprt[360] = sprFlail
-	wep_area[360] = 9
+	wep_area[360] = 10
 	wep_text[360] = "nuclearvenia"
 	wep_swap[360] = sndSwapSword
 	wep_rad[360] = 0;
@@ -4147,7 +4147,7 @@ function scrWeapons() {
 	wep_load[375] = 10
 	wep_cost[375] = 1
 	wep_sprt[375] = sprInversionMagnet
-	wep_area[375] = 30
+	wep_area[375] = -1
 	wep_text[375] = "100% inversion"
 	wep_swap[375] = sndSwapSword
 	wep_rad[375] = 0;
@@ -4543,7 +4543,7 @@ function scrWeapons() {
 	wep_load[411] = 24
 	wep_cost[411] = 3
 	wep_sprt[411] = sprKrakenYoyoGun
-	wep_area[411] = 8
+	wep_area[411] = 9
 	wep_text[411] = ""
 	wep_swap[411] = sndSwapDragon
 	wep_rad[411] = 0;
@@ -4573,7 +4573,7 @@ function scrWeapons() {
 	wep_name[414] = "BUBBLER"
 	wep_type[414] = 4
 	wep_auto[414] = 0
-	wep_load[414] = 12
+	wep_load[414] = 15
 	wep_cost[414] = 2
 	wep_sprt[414] = sprBubbler
 	wep_area[414] = 7
@@ -4730,7 +4730,7 @@ function scrWeapons() {
 	wep_load[428] = 7
 	wep_cost[428] = 1
 	wep_sprt[428] = sprExplosiveWazerRifle
-	wep_area[428] = 15
+	wep_area[428] = 17
 	wep_text[428] = "excavate"
 	wep_swap[428] = sndSwapEnergy
 	wep_rad[428] = 0;

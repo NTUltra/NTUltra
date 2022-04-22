@@ -237,7 +237,10 @@ fogscroll += 0.5
 if fogscroll > 480
 fogscroll -= 480
 
-
+with Statue
+{
+	draw_self();
+}
 with Notice{draw_self();}
 with EuphoriaShield{draw_self();}
 with EnemyBullet1Square

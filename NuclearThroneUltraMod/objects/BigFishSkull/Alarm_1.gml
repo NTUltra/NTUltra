@@ -4,8 +4,11 @@ oasisskip=-1;
 with BanditBoss
 oasis=false;
 
-with WantBoss
-instance_destroy();
+with WantBoss //THIS IS THE BIG BLOCKCOCK soflock
+{
+	if oasis
+		instance_destroy();
+}
 
 spr_idle = sprBigFishSkull
 spr_hurt = sprBigFishSkullHurt

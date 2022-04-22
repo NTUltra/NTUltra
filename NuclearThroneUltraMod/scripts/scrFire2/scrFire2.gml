@@ -752,7 +752,7 @@ function scrFire2() {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,point_direction(x,y,mouse_x,mouse_y)),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,point_direction(x,y,mouse_x,mouse_y)),EnergySlash)
 	{
-	dmg=22;//25 for normal
+	dmg=23;//25 for normal
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -1992,7 +1992,7 @@ function scrFire2() {
 	{image_angle = point_direction(x,y,mouse_x,mouse_y)+(random(8)-4)*other.accuracy
 	team = other.team
 	event_perform(ev_alarm,0)
-	laserhit=6;
+	laserhit=5;
 	sprite_index=sprBouncingLaser;
 	image_yscale -= 0.1}
 
@@ -4288,7 +4288,7 @@ function scrFire2() {
 	{image_angle = point_direction(x,y,mouse_x,mouse_y)+(random(30)-15)*other.accuracy
 	creator=other.id;
 	team = other.team
-	ammo = 15
+	ammo = 16
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)
@@ -4314,7 +4314,7 @@ function scrFire2() {
 	with instance_create(x,y,Lightning)
 	{image_angle = point_direction(x,y,mouse_x,mouse_y)+(random(6)-3)*other.accuracy
 	team = other.team
-	ammo = 15
+	ammo = 16
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)
@@ -5925,7 +5925,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x(len,aimDir+90),y+lengthdir_y(len,aimDir+90),Laser)
 	{image_angle = aimDir+(random(2)-1)*other.accuracy
 	team = other.team
-	laserhit=5;
+	laserhit=4;
 	sprite_index=sprBouncingLaser;
 	image_yscale -= 0.1
 	event_perform(ev_alarm,0)
@@ -5933,7 +5933,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x(len,aimDir-90),y+lengthdir_y(len,aimDir-90),Laser)
 	{image_angle = aimDir+(random(2)-1)*other.accuracy
 	team = other.team
-	laserhit=5;
+	laserhit=4;
 	sprite_index=sprBouncingLaser;
 	image_yscale -= 0.1
 	event_perform(ev_alarm,0)

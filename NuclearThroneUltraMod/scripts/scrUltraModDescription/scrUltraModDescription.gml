@@ -75,7 +75,7 @@ function scrUltraModDescription(um){
 			umn = @"SWAPS
 			LASERS <WITH> BOLTS
 			BOUNCER LASERS <WITH> BOUNCER BOLTS
-			HEAVY BOLTS <WITH> HEAVY BOLTS"
+			MEGA LASERS <WITH> HEAVY BOLTS"
 		break
 		case ultramods.seekerMissile:
 			umn = @"SWAPS
@@ -85,15 +85,13 @@ function scrUltraModDescription(um){
 			umn = @"SWAPS
 			SHOTGUN PELLETS <WITH> SPLINTERS
 			SLUGS <WITH> BOLTS
-			HEAVY SLUGS <WITH> HEAVY BOLTS
-			ULTRA SPLINTER <WITH> ULTRA PELLET"
+			HEAVY SLUGS <WITH> HEAVY BOLTS"
 		break;
 		case ultramods.splinterBullet:
 			umn = @"SWAPS
 			SPLINTERS <WITH> BULLETS
 			ULTRA SPLINTERS <WITH> ULTRA BULLETS"
 		break;
-	
 	
 		case ultramods.bulletPlasma:
 			umn = @"SWAPS

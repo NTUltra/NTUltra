@@ -23,12 +23,12 @@ with other
 			other.dmg = 3;
 	}
 
-		if !(sprite_index = spr_hurt and immune = 1)
+		if (sprite_index != spr_hurt)
 		{
-			snd_play(snd_hurt, hurt_pitch_variation)
 
 			if immune = 1
 			{
+				snd_play(snd_hurt, hurt_pitch_variation)
 				alarm[4]=50;
 				if my_health > immunelimit
 				{

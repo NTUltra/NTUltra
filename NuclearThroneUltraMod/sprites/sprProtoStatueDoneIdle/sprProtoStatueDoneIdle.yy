@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprProtoStatueDoneIdle","path":"sprites/sprProtoStatueDoneIdle/sprProtoStatueDoneIdle.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprProtoStatueDoneIdle",
     "tags": [],
     "resourceType": "GMSequence",
   },
