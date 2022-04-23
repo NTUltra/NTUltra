@@ -127,4 +127,6 @@ killedBoss = [];
 collectedRewards = [];
 defaultRewards = 6;
 enableReroll = true;
+radUp = false;
 rewardsLeft = defaultRewards;
+levelIncrease = 0;

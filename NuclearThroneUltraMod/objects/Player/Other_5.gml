@@ -280,10 +280,10 @@ looping=false;
             
         if loops=2&&UberCont.opt_gamemode != 15//not no mutations gamemode
         {
-        if ultra_got[15]
-        maxlevel=13;
-        else
-        maxlevel=11;
+	        if ultra_got[15]
+				maxlevel = 13 + UberCont.levelIncrease;
+	        else
+				maxlevel = 11 + UberCont.levelIncrease;
         
         skillsChosen=0;
         }

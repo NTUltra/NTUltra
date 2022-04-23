@@ -8,18 +8,18 @@ switch(UberCont.array_length(collectedRewards))
 		name += "GAIN 1 MAX HP";
 	break;
 	case 1:
-		name += "UNLOCK THE MUTATION REROLL STATION#AVAILABLE NEXT VAUL VISIT";
+		name += "INCREASE THE VALUE OF RADIATION BY 15%";
 	break;
 	case 2:
 		name += "GAIN ONE LIFE";
 	break;
 	case 3:
-		name += "INCREASE THE VALUE OF RADIATION";
-	break;
-	case 4:
 		name += "GAIN 1 MAX HP";
 	break;
+	case 4:
+		name += "UNLOCK THE MUTATION REROLL STATION#AVAILABLE NEXT VAUL VISIT";
+	break;
 	case 5:
-		name += "INCREASE YOUR IFRAMES BY 25%";
+		name += "INCREASE YOUR MAX LEVEL BY ONE";
 	break;
 }

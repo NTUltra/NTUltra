@@ -4,5 +4,5 @@
 event_inherited();
 
 if scrCanHandoutBossReward(secretChallengeBosses.bigVulture) {
-	event_user(0);	
+	event_user(0);
 }
