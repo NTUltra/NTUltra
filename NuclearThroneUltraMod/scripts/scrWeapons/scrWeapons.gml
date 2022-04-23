@@ -4683,7 +4683,7 @@ function scrWeapons() {
 	wep_name[424] = "WAZER RIFLE"
 	wep_type[424] = 5
 	wep_auto[424] = 1
-	wep_load[424] = 9
+	wep_load[424] = 8
 	wep_cost[424] = 1
 	wep_sprt[424] = sprWazerRifle
 	wep_area[424] = 13
@@ -4727,7 +4727,7 @@ function scrWeapons() {
 	wep_name[428] = "EXPLOSION WAZER RIFLE"
 	wep_type[428] = 4
 	wep_auto[428] = 1
-	wep_load[428] = 7
+	wep_load[428] = 6
 	wep_cost[428] = 1
 	wep_sprt[428] = sprExplosiveWazerRifle
 	wep_area[428] = 17

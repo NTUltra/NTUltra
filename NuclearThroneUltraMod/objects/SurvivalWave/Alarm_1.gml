@@ -40,6 +40,11 @@ if UberCont.opt_gamemode != 25
 			else
 			sprite_index = sprFloor100;
 		}
+		with projectile
+		{
+			if team != 2
+				instance_destroy();
+		}
 		with FloorExplo
 		{
 			sprite_index = sprFloor100Explo;	

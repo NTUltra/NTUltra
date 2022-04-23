@@ -4,7 +4,7 @@
     "path": "sprites/mskFrogQueen/mskFrogQueen.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {

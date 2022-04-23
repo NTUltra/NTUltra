@@ -463,9 +463,9 @@ if race = 23
             if ( ( loops & 1 ) == 1 ) {
             area=1
             // it's odd
-            } else{
+            /*} else{
             // it's even go inverted
-            area=105
+            area=105*/
             } 
         }
         else

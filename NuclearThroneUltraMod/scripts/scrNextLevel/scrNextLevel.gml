@@ -36,7 +36,7 @@ function scrNextLevel() {
 			inverted = false;
 			exit;
 		}
-	    if area = 113 && subarea > 1//banditland
+	    if area = 113// && subarea > 1//banditland
 	    {
 	        area = 8//chesire cat
 	        subarea=3;

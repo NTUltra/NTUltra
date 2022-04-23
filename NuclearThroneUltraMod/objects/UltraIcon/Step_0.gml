@@ -85,10 +85,10 @@ scrUnlockGameMode(5,"FOR TAKING THIS ULTRA");
 
 if skill==14
 {//Melting Ultra B detachment
-Player.maxhealth /= 2
+Player.maxhealth *= 0.5
 
 if (Player.my_health> Player.maxhealth){
-Player.my_health = Player.maxhealth;}
+Player.my_health = max(Player.my_health*0.5,Player.maxhealth)}
 
 Player.skillpoints+=4;//amounth of mutations
 //Player.skillsChosen=0;//no ultras pls

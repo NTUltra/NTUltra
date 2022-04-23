@@ -20,22 +20,43 @@ if target > 0 && instance_exists(target)
 		touchpointY = y;
 		lerpTime = 1;
 		debug("lerpTime",lerpTime);
-		alarm[2] = 4;
+		if !push
+			alarm[2] = 4;
+		else
+		{
+			alarm[2] = 1;
+			lerpCalcBack = lerpCalc;
+		}
 		sprite_index = sprHandClosing;
 		image_index = 0;
 		snd_play(sndHandThrowGrab);
+		if push
+		{
+			pushDirection = point_direction(creator.x,creator.y,target.x,target.y);
+			pushStartX = target.x;
+			pushStartY = target.y;
+			pushX = target.x + lengthdir_x(pushStrength/max(1,target.size),pushDirection);
+			pushY = target.y + lengthdir_y(pushStrength/max(1,target.size),pushDirection);
+		}
 		with target
 		{
 			if team != 0
 			{
 				snd_play(snd_hurt, hurt_pitch_variation,true);
 				my_health -= other.dmg*3;
+				if alarm[1] > 1
+					alarm[1] += 5;
 				sprite_index = spr_hurt;
 				image_index = 0;
 			}
 			if size > 2
 			{
-				other.target = -1;	
+				other.target = -1;
+			}
+			if other.push
+			{
+				direction = other.pushDirection;
+				speed = 12/max(1,size);
 			}
 		}
 	}

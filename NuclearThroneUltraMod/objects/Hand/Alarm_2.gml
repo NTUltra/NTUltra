@@ -18,8 +18,19 @@ if target > 0 && instance_exists(target)
 {
 	with target
 	{
-		x = other.x;
-		y = other.y;
+		if other.push
+		{
+			direction = other.pushDirection;
+			x = lerp(other.pushX,other.pushStartX,other.lerpTime);
+			y = lerp(other.pushY,other.pushStartY,other.lerpTime);
+			//Break wall todo from enemy vollision mask
+			instance_create(x,y,WallBreak);
+		}
+		else
+		{
+			x = other.x;
+			y = other.y;
+		}
 	}
 }
 else

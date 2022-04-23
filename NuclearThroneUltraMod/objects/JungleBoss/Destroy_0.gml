@@ -1,6 +1,7 @@
 scrDrop(100,50)
 scrDrop(10,0)
 event_inherited();
+scrBusinessHogGoldChest();
 scrDefeatedRequiredBoss(secretChallengeBosses.bigVulture);
 scrEndBossMusic();
 repeat(30)
