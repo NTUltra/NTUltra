@@ -613,22 +613,21 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 
 
 	//crown of hatred
-	if crown = 6
+	if crown == 6
 	{
 	decay -= 1
 	if decay <= 0 and my_health > 1 && alarm[3]<1
 	{
 	Sleep(30)
-	my_health -= 1
+	my_health -= 1;
+	exception = true;
 
 
 	sprite_index = spr_hurt
 	image_index = 0
 	snd_play(snd_hurt, hurt_pitch_variation)
 
-	repeat(12)
-	{with instance_create(x,y,Rad)
-	motion_add(random(360),2+random(4))}
+	scrRaddrop(16)//used to be 12
 
 	decay = 300
 	}
@@ -764,7 +763,7 @@ if reload > 0
 	        //Ultra c one with the gun
 	        if wep_type[wep] != 0 && !scrMeleeWeapons()//if wep_type[wep]==0 // You are holding a melee weapon
 	        {
-	        reload -=0.64;
+	        reload -= 0.4;
 	        }
 	    }
 
@@ -984,12 +983,12 @@ if (ultra_got[42]==1)//HUNTER ULTRA B Homing projectiles
 	homeBoost += 4;
 if skill_got[19] == 1
 {
-	homeBoost += 1.5;
+	homeBoost += 1.2;
 	if race == 25
 		homeBoost += 0.2;
 }
 ///homing projectiles mod
-var modHomeBoost = 0.5;
+var modHomeBoost = 0.6;
 if skill_got[30] == 1
 	modHomeBoost += 0.34;
 

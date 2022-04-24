@@ -6,22 +6,12 @@ with Player
 
 		if string_copy(wep_name[wep],0,5) = "ULTRA"
 		{
-		repeat(12)//16 is one ultra lazerpistol ammo
-		{
-			with instance_create(x,y,Rad)
-			{motion_add(random(360),random(2)+3)
-			repeat(speed)
-			speed *= 0.9}
-		}
-
-		scrUnlockCSkin(8,"FOR EATING AN ULTRA WEAPON",0);
-
+			scrRaddrop(12);
+			scrUnlockCSkin(8,"FOR EATING AN ULTRA WEAPON",0);
 		}
 		else if string_copy(wep_name[wep],0,5) = "HYPER" || wep = 131//heavy hyper shit
 		{
-
-		scrUnlockBSkin(8,"FOR EATING A HYPER WEAPON",0);
-
+			scrUnlockBSkin(8,"FOR EATING A HYPER WEAPON",0);
 		}
 
 		if string_copy(wep_name[wep],0,4) = "GOLD"
@@ -160,7 +150,7 @@ with Player
 				{
 					image_angle = langle;
 					team = 2
-					ammo = 12+random(6)//60
+					ammo = 12+random(6)+(other.skill_got[5]*4)//60
 					///if Player.ultra_got[59]=1 
 					///ammo+=4;
 					event_perform(ev_alarm,0)

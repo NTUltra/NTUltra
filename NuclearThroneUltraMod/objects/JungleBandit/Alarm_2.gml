@@ -8,7 +8,7 @@ if gonnashoot > 0 {
 		gonnashoot = 0;
 		exit;
 	}
-	
+	scrTarget();
 	if target > 0{
 		gunangle = point_direction(xprevious, yprevious, target.xprevious, target.yprevious)
 		if point_distance(target.x, target.y, x, y) > 200 || collision_line(x, y, target.x, target.y, Wall, 0, 0) >= 0 {

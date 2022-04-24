@@ -3,8 +3,10 @@ alarm[1] = 1;
 target = -1;
 creator = -1;
 lerpTime = 0;
+lerpSpeed = 16;//Range of instant speed of hand
 lerpCalc = 0.16;
 lerpCalcBack = 0.16;
+lerpDistance = 1;
 dmg = 2;
 image_speed = 0.4;
 snd_play_2d(sndHandThrow);
@@ -18,10 +20,6 @@ pushX = 0;
 pushY = 0;
 pushStartX = 0;
 pushStartY = 0;
-pushStrength = 96;
-if instance_exists(Player) && Player.skill_got[5] || true
-{
-	dmg = 4;
-	push = true;
-	lerpCalcBack = 0.18;
-}
+pushStrength = 108;
+pushSpeed = 18;
+

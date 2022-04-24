@@ -103,7 +103,7 @@ if crown!=4//not crown of haste
 Player.rushcrownlevels=0;
 
 //CROWN OF DECAY
-if crown = 6
+if crown == 6
 Player.decay = 300
 
 //CROWN OF REINCARNATION

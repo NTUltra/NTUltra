@@ -4,7 +4,6 @@ if !instance_exists(creator)
 	instance_destroy();
 	exit;
 }
-debug("back: ",lerpTime);
 sprite_index = sprHandClose;
 x = lerp(creator.x,touchpointX,lerpTime);
 y = lerp(creator.y,touchpointY,lerpTime);
@@ -20,16 +19,33 @@ if target > 0 && instance_exists(target)
 	{
 		if other.push
 		{
+			speed = other.pushSpeed/max(1,(size*0.5));
 			direction = other.pushDirection;
+			var msk = mask_index;
+			mask_index = mskPickupThroughWall;
 			x = lerp(other.pushX,other.pushStartX,other.lerpTime);
 			y = lerp(other.pushY,other.pushStartY,other.lerpTime);
-			//Break wall todo from enemy vollision mask
-			instance_create(x,y,WallBreak);
+			mask_index = msk;
+			var walls = ds_list_create();
+			var al = instance_place_list(x,y,Wall,walls,false)
+			for (var j = 0; j < al; j++) {
+				with walls[| j]
+				{
+					instance_destroy(id,false);
+					instance_create(x,y,FloorExplo);
+				}
+			}
+			ds_list_destroy(walls);
+			instance_create(x+hspeed,y+vspeed,WallBreak);
 		}
 		else
 		{
 			x = other.x;
 			y = other.y;
+		}
+		if my_health <= 0
+		{
+			other.target = -1;	
 		}
 	}
 }

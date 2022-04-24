@@ -1,4 +1,4 @@
-/// @description xxxInit
+/// @description Init
 
 // Inherit the parent event
 event_inherited();
@@ -20,6 +20,6 @@ acc = 0.8;
 tellTime = 25;
 laserDuration = 65;
 laserOffsetMax = 40;
-maxRange = 240;
+maxRange = 220;
 maxRange += min(GetPlayerLoops()*20,400);
 isInverted = true;

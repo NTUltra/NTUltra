@@ -1,5 +1,6 @@
 room_speed=30*UberCont.opt_loading;
 holdExplainUltraModTimer = 0;
+holdExplainWepModTimer = 0;
 if UberCont.opt_loading == 4
 	room_speed = 999999;
 

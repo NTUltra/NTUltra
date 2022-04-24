@@ -1971,7 +1971,7 @@ function scrFire2() {
 	event_perform(ev_alarm,0)
 	laserhit=4;
 	sprite_index=sprBouncingLaser;
-	image_yscale -= 0.1}
+	image_yscale -= 0.12}
 
 	BackCont.viewx2 += lengthdir_x(3,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(3,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
@@ -1994,7 +1994,7 @@ function scrFire2() {
 	event_perform(ev_alarm,0)
 	laserhit=5;
 	sprite_index=sprBouncingLaser;
-	image_yscale -= 0.1}
+	image_yscale -= 0.12}
 
 	BackCont.viewx2 += lengthdir_x(3,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(3,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
@@ -2424,7 +2424,7 @@ function scrFire2() {
 	{
 		sprite_index=sprGoldenSlash
 		ang = other.ang
-		dmg = 8
+		dmg = 9
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -5927,7 +5927,7 @@ function scrFire2() {
 	team = other.team
 	laserhit=4;
 	sprite_index=sprBouncingLaser;
-	image_yscale -= 0.1
+	image_yscale -= 0.12
 	event_perform(ev_alarm,0)
 	}
 	with instance_create(x+lengthdir_x(len,aimDir-90),y+lengthdir_y(len,aimDir-90),Laser)
@@ -5935,7 +5935,7 @@ function scrFire2() {
 	team = other.team
 	laserhit=4;
 	sprite_index=sprBouncingLaser;
-	image_yscale -= 0.1
+	image_yscale -= 0.12
 	event_perform(ev_alarm,0)
 	}
 

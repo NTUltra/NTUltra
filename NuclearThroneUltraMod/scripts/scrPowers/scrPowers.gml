@@ -5,13 +5,13 @@ function scrPowers() {
 	{
 		if race == 27 && !instance_exists(Hand)//Hands
 		{
-			var grabbed = false;
 			var grabRange = 40;
 			var d1 = 999;
 			var d2 = 999;
 			var d3 = 999;
 			var tar = -1;
 			var resulttar = -1;
+			var grabbedEnemy = false;
 			if instance_exists(chestprop)
 			{
 				tar = instance_nearest(mouse_x,mouse_y,chestprop);
@@ -36,17 +36,34 @@ function scrPowers() {
 				d3 = point_distance(mouse_x,mouse_y,tar.x,tar.y);
 				if (tar.team != 0 && tar.team != team && d3 < grabRange && d3 < d2 && d3 < d1)
 				{
+					grabbedEnemy = true;
 					resulttar = tar;
 				}
 			}
 			if resulttar > -1 && instance_exists(resulttar)
 			{
+				BackCont.viewx2 += lengthdir_x(10,point_direction(x,y,resulttar.x,resulttar.y))*UberCont.opt_shake
+				BackCont.viewy2 += lengthdir_y(10,point_direction(x,y,resulttar.x,resulttar.y))*UberCont.opt_shake
+				BackCont.shake += 5;
 				with instance_create(x,y,Hand)
 				{
 					team = other.team;
 					creator = other.id;
 					target = resulttar;
-					lerpCalcBack = lerpCalc/target.size;
+					lerpDistance = point_distance(x,y,target.x,target.y);
+					if other.skill_got[5] && grabbedEnemy
+					{
+						push = true;
+						dmg += 2;
+						lerpDistance += 8;
+						lerpCalc = min(1,lerpSpeed/lerpDistance);//Consistent speed
+						lerpCalcBack = lerpCalc;
+					}
+					else
+					{
+						lerpCalc = min(1,lerpSpeed/lerpDistance);//Consistent speed
+						lerpCalcBack = lerpCalc/target.size;
+					}
 				}
 			}
 		}

@@ -365,32 +365,82 @@ function scrDrawHUD() {
 	var xx = __view_get( e__VW.XView, 0 )+2;
 	var yy = __view_get( e__VW.YView, 0 )+42;
 	var xs = 10;
+	var noHover = true;
 	if Player.wepmod1 != 0
 	{
 		draw_sprite(sprModHUD,Player.wepmod1,xx,yy);
 		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
-			scrDrawHelp(scrWepModName(Player.wepmod1));
+		{
+			noHover = false;
+			holdExplainWepModTimer++;
+			if holdExplainWepModTimer > 30
+			{
+				scrDrawHelp(scrWepModName(Player.wepmod1)
+				+ "\n" + scrWepModDescription(Player.wepmod1));
+			}
+			else
+			{
+				scrDrawHelp(scrWepModName(Player.wepmod1));
+			}
+		}
 	}
 	xx += xs;
 	if Player.wepmod2 != 0
 	{
 		draw_sprite(sprModHUD,Player.wepmod2,xx,yy);
 		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
-			scrDrawHelp(scrWepModName(Player.wepmod2));
+		{
+			noHover = false;
+			if holdExplainWepModTimer > 30
+			{
+				scrDrawHelp(scrWepModName(Player.wepmod2)
+				+ "\n" + scrWepModDescription(Player.wepmod2));
+			}
+			else
+			{
+				scrDrawHelp(scrWepModName(Player.wepmod2));
+			}
+		}
 	}
 	xx += xs;
 	if Player.wepmod3 != 0
 	{
 		draw_sprite(sprModHUD,Player.wepmod3,xx,yy);
 		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
-			scrDrawHelp(scrWepModName(Player.wepmod3));
+		{
+			noHover = false;
+			if holdExplainWepModTimer > 30
+			{
+				scrDrawHelp(scrWepModName(Player.wepmod3)
+				+ "\n" + scrWepModDescription(Player.wepmod3));
+			}
+			else
+			{
+				scrDrawHelp(scrWepModName(Player.wepmod3));
+			}
+		}
 	}
 	xx += xs;
 	if Player.wepmod4 != 0
 	{
 		draw_sprite(sprModHUD,Player.wepmod4,xx,yy);
 		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
-			scrDrawHelp(scrWepModName(Player.wepmod4));
+		{
+			noHover = false;
+			if holdExplainWepModTimer > 30
+			{
+				scrDrawHelp(scrWepModName(Player.wepmod4)
+				+ "\n" + scrWepModDescription(Player.wepmod4));
+			}
+			else
+			{
+				scrDrawHelp(scrWepModName(Player.wepmod4));
+			}
+		}
+	}
+	if noHover
+	{
+		holdExplainWepModTimer = 0;
 	}
 	if Player.wep_type[Player.wep] != 0
 	{
@@ -888,6 +938,22 @@ function scrDrawHUD() {
 			draw_set_color(c_white)
 			draw_text(x+16,y-1,string_hash_to_newline(string(name)))
 			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+			holdExplainTimer ++;
+			//Ultra mod destription
+			if holdExplainTimer > 30
+			{
+				var yy = y + 16;
+				draw_set_color(c_black)
+				draw_text(x+16,yy,string_hash_to_newline(string(moddescription)))
+				draw_text(x+17,yy,string_hash_to_newline(string(moddescription)))
+				draw_text(x+17,yy-1,string_hash_to_newline(string(moddescription)))
+				draw_set_color(c_white)
+				draw_text(x+16,yy-1,string_hash_to_newline(string(moddescription)))
+			}
+		}
+		else
+		{
+			holdExplainTimer = 0;	
 		}
 	}
 	with UltraMod

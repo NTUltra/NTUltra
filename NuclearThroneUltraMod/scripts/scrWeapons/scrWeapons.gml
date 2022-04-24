@@ -1586,7 +1586,7 @@ function scrWeapons() {
 	wep_load[143] = 15
 	wep_cost[143] = 2
 	wep_sprt[143] = sprLineNader
-	wep_area[143] = 8
+	wep_area[143] = 10
 	wep_text[143] = "dangerous bliss"
 	wep_swap[143] = sndSwapExplosive
 	wep_rad[143] = 0;
@@ -1608,7 +1608,7 @@ function scrWeapons() {
 	wep_load[145] = 15
 	wep_cost[145] = 2
 	wep_sprt[145] = sprLineFire
-	wep_area[145] = 9
+	wep_area[145] = 8
 	wep_text[145] = "don't get in the line of fire"
 	wep_swap[145] = sndSwapFlame
 	wep_rad[145] = 0;
@@ -3776,7 +3776,7 @@ function scrWeapons() {
 	wep_load[342] = 13
 	wep_cost[342] = 4
 	wep_sprt[342] = sprKrakenIonCannon
-	wep_area[342] = 10
+	wep_area[342] = 11
 	wep_text[342] = "sharknado"
 	wep_swap[342] = sndSwapDragon
 	wep_rad[342] = 0;
@@ -4243,7 +4243,7 @@ function scrWeapons() {
 	wep_name[384] = "MINI PLASMA GUN"
 	wep_type[384] = 5
 	wep_auto[384] = 0
-	wep_load[384] = 12
+	wep_load[384] = 9
 	wep_cost[384] = 1
 	wep_sprt[384] = sprMiniPlasmaGun
 	wep_area[384] = 2
@@ -4389,7 +4389,7 @@ function scrWeapons() {
 	wep_load[397] = 24
 	wep_cost[397] = 2
 	wep_sprt[397] = sprSwarmBomb
-	wep_area[397] = 8
+	wep_area[397] = 12
 	wep_text[397] = "bee hive"
 	wep_swap[397] = sndSwapBow
 	wep_rad[397] = 0;
@@ -4565,7 +4565,7 @@ function scrWeapons() {
 	wep_load[413] = 20
 	wep_cost[413] = 2
 	wep_sprt[413] = sprLeacherBow
-	wep_area[413] = 8
+	wep_area[413] = 10
 	wep_text[413] = "vampire"
 	wep_swap[413] = sndSwapBow
 	wep_rad[413] = 0;
@@ -4653,7 +4653,7 @@ function scrWeapons() {
 	wep_load[421] = 20
 	wep_cost[421] = 8
 	wep_sprt[421] = sprSpinnerYoyoDisperseGun
-	wep_area[421] = 12
+	wep_area[421] = 16
 	wep_text[421] = "once upon a time there was a yoyo that never returned"
 	wep_swap[421] = sndSwapBow
 	wep_rad[421] = 0;
@@ -4899,6 +4899,17 @@ function scrWeapons() {
 	wep_text[443] = ""
 	wep_swap[443] = sndSwapShotgun
 	wep_rad[443] = 0;
+	
+	wep_name[1] = "GOLDEN HAND CANNON"
+	wep_type[1] = 1
+	wep_auto[1] = 0
+	wep_load[1] = 20
+	wep_cost[1] = 3
+	wep_sprt[1] = sprRevolver
+	wep_area[1] = -1
+	wep_text[1] = "trusty old revolver"
+	wep_swap[1] = sndSwapPistol
+	wep_rad[1] = 0;
 	/*
 	wep_name[444] = "DRILL GUN"
 	wep_type[444] = 4

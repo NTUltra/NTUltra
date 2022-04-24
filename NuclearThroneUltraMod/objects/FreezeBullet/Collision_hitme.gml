@@ -18,7 +18,7 @@ frozen=true;
 	    yy=other.y
 		owner = other.id;
     }
-alarm[11]+= other.freezetime;
+alarm[11]+= other.freezetime+1;
 if alarm[1] > 0
 	alarm[1] += other.freezetime;
 }

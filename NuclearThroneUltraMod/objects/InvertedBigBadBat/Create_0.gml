@@ -9,7 +9,7 @@ EnemyHealthAdjustments();
 spr_idle = sprInvertedBigBadBatIdle
 spr_walk = sprInvertedBigBadBatIdle
 spr_hurt = sprInvertedBigBadBatHurt
-spr_dead = sprInvertedBigBadBatHurt
+spr_dead = sprInvertedBigBadBatDead
 spr_fire = sprInvertedBigBadBatFire
 actTime = 12;
 spinAttackDuration = 60;

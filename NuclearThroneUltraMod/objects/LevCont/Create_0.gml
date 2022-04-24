@@ -2,6 +2,7 @@ pick = 0
 canmove = 1
 skillscroll = 0;
 holdExplainUltraModTimer = 0;
+holdExplainWepModTimer = 0;
 __view_set( e__VW.XView, 0, 0 )
 __view_set( e__VW.YView, 0, 0 )
 wave = 0

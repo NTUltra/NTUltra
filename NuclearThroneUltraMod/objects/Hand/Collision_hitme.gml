@@ -11,6 +11,7 @@ if other.team != team  &&  other.my_health > 0
 			motion_add(other.image_angle,6)
 		}
 		instance_create(x,y,Dust)
+		BackCont.shake += 1;
 	}
 }
 

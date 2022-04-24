@@ -1,4 +1,6 @@
-snd_play(sndFlare)
+snd_play(sndExplosion)
+instance_create(x,y,Explosion);
+
 ang = random(360)
 with instance_create(x+lengthdir_x(4,ang),y+lengthdir_y(2,ang),DoomGrenade)
 {

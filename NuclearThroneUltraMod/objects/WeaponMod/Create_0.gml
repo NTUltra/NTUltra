@@ -25,7 +25,8 @@ wepmod4=0;
 
 
 modname = scrWepModName(wepmod);
-
+moddescription = scrWepModDescription(wepmod);
+holdExplainTimer = 0;
 name="##MODIFY WEAPON#"+modname;
 
 

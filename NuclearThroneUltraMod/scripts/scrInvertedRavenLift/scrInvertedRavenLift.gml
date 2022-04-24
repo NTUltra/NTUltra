@@ -32,6 +32,7 @@ function scrInvertedRavenLift() {
 	        //if (tries >= 0 && point_distance(x, y, targetx, targety) > 16) {
 	            image_index = 0;
 	            nofly = 50;
+				alarm[2] = 0;
 	            instance_change(InvertedRavenFly, false);
 	        //}
 	    }

@@ -5,8 +5,8 @@ if other.team != team and other.my_health > 0
 	if other.sprite_index != other.spr_hurt
 	{
 			BackCont.shake += 2
-			image_xscale-=0.32;
-			image_yscale-=0.32;
+			image_xscale-=0.3;
+			image_yscale-=0.3;
 			Sleep(4);
 			with other
 			{
