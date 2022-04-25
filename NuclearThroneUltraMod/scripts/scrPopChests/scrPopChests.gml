@@ -123,6 +123,14 @@ function scrPopChests() {
 		{
 			healthChestGol += choose(0,0,0,0,0,1);
 		}
+		if Player.race=4 && Player.my_health <= Player.maxhealth*0.5 and random(2) < 1
+		{
+			healthChestGol += 1;
+		}
+		else if Player.race!=4 && Player.my_health < round(6/2) and random(2) < 1
+		{
+			healthChestGol += 1;
+		}
 		wepChestGol = gol;
 	
 		if Player.crown == 15//CROWN OF CHOICE
@@ -148,26 +156,26 @@ function scrPopChests() {
 	if instance_exists(WeaponChest)
 	{
 		totalWepsChests = instance_number(WeaponChest);
-		do {with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,WeaponChest) instance_destroy()}
+		do {with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,WeaponChest) instance_destroy(id,false)}
 	until instance_number(WeaponChest) <= wepChestGol
 	}
 	if instance_exists(RadChest)
 	{
 		totalRadChests = instance_number(RadChest);
-		do {with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,RadChest) instance_destroy()}
+		do {with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,RadChest) instance_destroy(id,false)}
 	until instance_number(RadChest) <= gol
 	}
 	if instance_exists(AmmoChest)
 	{
 		totalAmmoChests = instance_number(AmmoChest)
-		do {with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,AmmoChest) instance_destroy()}
+		do {with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,AmmoChest) instance_destroy(id,false)}
 	until instance_number(AmmoChest) <= gol
 	}
 	if instance_exists(HealthChest)
 	{
 		totalHealthChests = instance_number(HealthChest)
 		do {
-		with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,HealthChest) instance_destroy()}
+		with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,HealthChest) instance_destroy(id,false)}
 	until instance_number(HealthChest) <= healthChestGol
 	}
 	if (totalWepsChests < wepChestGol)

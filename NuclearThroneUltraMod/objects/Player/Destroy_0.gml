@@ -349,13 +349,11 @@ else
 			useSeed = false;
 			opt_gamemode = 0;
 			canRestart = true;
-			canDoChallenge = true;
 		}
 		if (opt_gamemode == 26)
 		{
 			scrSaveEncrypted();
 			useSeed = false;
-			canDoChallenge = true;
 			opt_gamemode = 0;
 		}
 		

@@ -1,5 +1,5 @@
 /// @description Start wave
-if KeyCont.key_pick[other.p] = 1 && UberCont.canDoChallenge
+if KeyCont.key_pick[other.p] = 1
 {
 	KeyCont.key_pick[Player.p] = 2;
 	with SurvivalWave

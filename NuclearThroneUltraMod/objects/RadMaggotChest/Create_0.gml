@@ -14,7 +14,7 @@ spr_dead = sprRadChestMaggotDead
 snd_hurt = sndHitFlesh
 
 my_health = maxhealth
-
+/*
 if instance_exists(Player)
 {
 if Player.my_health < Player.maxhealth/2 and random(2) < 1
@@ -23,4 +23,4 @@ instance_destroy()
 instance_create(x,y,HealthChest)
 }
 }
-
+*/

@@ -74,7 +74,6 @@ window_set_fullscreen(opt_fulscrn)
 if !opt_fulscrn
 	window_set_size(640*2,480*2);
 canRestart = true;
-canDoChallenge = true;
 
 enum ultramods {
 	nothing,
@@ -176,7 +175,6 @@ encrypted_run_data = {
 	cwepmod3: 0,
 	cwepmod4: 0,
 	gamemode: 0,
-	canDoChallenge: canDoChallenge,
 	killedBoss: [],
 	collectedRewards: [],
 	enableReroll: true,
@@ -212,5 +210,6 @@ encrypted_run_data = {
 	heavyheart: 0,
 	freeArmourStrike: false,
 	armour: -1,
-	maxarmour: -1
+	maxarmour: -1,
+	crownVaultChallenge: 2
 };
