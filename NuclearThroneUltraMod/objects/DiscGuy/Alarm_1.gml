@@ -1,4 +1,4 @@
-alarm[1] = 10+random(15)
+alarm[1] = 8+random(12)
 
 if instance_exists(Player)
 {
@@ -13,7 +13,7 @@ if target > 0
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 1
 {
-if random(6) < 1+UberCont.loops && point_distance(x,y,target.x,target.y)<250//minimum range
+if random(5) < 1+UberCont.loops && point_distance(x,y,target.x,target.y)<250//minimum range
 {
 direction = point_direction(x,y,target.x,target.y)+180
 
@@ -32,12 +32,12 @@ alarm[1] = 20;
 }
 else if random(9)<1{
 direction = point_direction(x,y,target.x,target.y)+random(20)-10
-walk=16+random(22);
+walk=10+random(12);
 alarm[1]=walk;
 }
 else if random(4)<1{
 direction=random(360);
-walk=15+random(20);
+walk=10+random(20);
 alarm[1]=walk;
 }
 else{

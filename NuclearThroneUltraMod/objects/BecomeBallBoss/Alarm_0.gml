@@ -5,7 +5,8 @@ with BallBossWave
 }
 with Statue
 {
-	image_speed = 0.4;	
+	image_index = 0;
+	image_speed = 0.2;
 }
 if audio_is_playing(sndSheepLoop)
 	audio_stop_sound(sndSheepLoop);

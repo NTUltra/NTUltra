@@ -199,7 +199,7 @@ if Player.area = 100
 			}
 			//instance_create(xx,yy,SurvivalWave);
 			var oy = yy;
-			for (var ix = 0; ix < 30; ix++) {
+			for (var ix = 0; ix < 32; ix++) {
 				yy = oy;
 				for (var iy = 0; iy < 10; iy++) {
 				    with instance_create(xx,yy,Floor)

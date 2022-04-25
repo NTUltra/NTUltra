@@ -1,6 +1,6 @@
 event_inherited()
 
-motion_add(direction,0.8)
+motion_add(targetDirection,0.8)
 
 if speed > maxSpeed
 speed = maxSpeed
@@ -13,36 +13,48 @@ if alarm[4] < 1
 	image_angle += spinRate;
 if array_length(myLasers) > 0
 {
-	with myLasers[0]
+	if instance_exists(myLasers[0])
 	{
-		alarm[0] += 1;
-		x = other.x;
-		y = other.y;
-		image_angle = other.image_angle;
-	}
-	if array_length(myLasers) > 1
-	{
-		with myLasers[1]
+		with myLasers[0]
 		{
 			alarm[0] += 1;
 			x = other.x;
 			y = other.y;
-			image_angle = other.image_angle+180;
+			image_angle = other.image_angle;
 		}
 	}
+	else
+	{
+		event_perform(ev_alarm,3);
+	}
+	if array_length(myLasers) > 1
+	{
+		if instance_exists(myLasers[1])
+		{
+			with myLasers[1]
+			{
+				alarm[0] += 1;
+				x = other.x;
+				y = other.y;
+				image_angle = other.image_angle+180;
+			}
+		}
+		else
+		{
+			event_perform(ev_alarm,3);
+		}
+	}
+}
+if myShield != -1 && instance_exists(myShield)
+{
+	myShield.x = x + lengthdir_x(shieldDistance,image_angle+90);
+	myShield.y = y + lengthdir_y(shieldDistance,image_angle+90);
+	myShield.image_angle = image_angle;
 }
 if alarm[2] > 0 || alarm[3] > 0
 	speed = 0;
 	
 if alarm[5] > 0
 {
-	/*
-	scrTarget();
-	if target > 0
-	{
-		gunangle = point_direction(x,y,target.xprevious,target.yprevious);
-	}
-	else
-		alarm[5] = 0;*/
-		speed = 0;
+	speed = 0;
 }

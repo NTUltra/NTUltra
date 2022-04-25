@@ -13,11 +13,18 @@ song = musReflection;
 with BossReward
 {
 	var xx = x - 8;
+	var msk = mask_index;
+	mask_index = mskWall;
 	repeat(9)
 	{
+		while place_meeting(xx,y,Player)
+		{
+			Player.y++;	
+		}
 		instance_create(xx,y,Wall);
 		xx += 16;
 	}
+	mask_index = msk;
 }
 with MusCont
 {
@@ -348,5 +355,7 @@ wave[i] = {
 i++
 //Start it
 waveLength = array_length(wave);
+alarm[1] = 1;
+exit;
 alarm[3] = 5;//Tell time is the difference between these two numbers
 alarm[0] = 20;

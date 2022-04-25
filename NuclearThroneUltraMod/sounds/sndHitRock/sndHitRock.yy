@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndHitRock",
-  "duration": 0.0,
+  "duration": 0.385533,
   "parent": {
     "name": "Enviroment",
     "path": "folders/Sounds/Enviroment.yy",

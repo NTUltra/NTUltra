@@ -1,6 +1,6 @@
 /// @description Wazer
 snd_play(sndWazerStart);
-if array_length(myLasers) < 1
+if array_length(myLasers) < 1 || !instance_exists(myLasers[0])
 {
 	myLasers[0] = instance_create(x,y,EnemyWazer);
 	with myLasers[0] {
@@ -13,7 +13,7 @@ if array_length(myLasers) < 1
 		image_angle = other.image_angle;
 	}
 }
-else
+else if array_length(myLasers) < 2 || !instance_exists(myLasers[1])
 {
 	myLasers[1] = instance_create(x,y,EnemyWazer);
 	with myLasers[1] {

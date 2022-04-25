@@ -925,7 +925,7 @@ function scrDrawHUD() {
 	}
 	with BecomeBallBoss
 	{
-		if place_meeting(x,y,Player)
+		if available && place_meeting(x,y,Player)
 		{
 			if canStart
 				draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-12)

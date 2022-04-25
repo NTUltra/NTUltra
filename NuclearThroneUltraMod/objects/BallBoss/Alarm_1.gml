@@ -36,12 +36,16 @@ else if random(10) < 1 {
 }
 if !reachHalfHealth && my_health < maxhealth * 0.65
 {
+	snd_play(sndBallBossHalfHP,0,false,false,3,false,false,1,false);
 	reachHalfHealth = true;
 	maxSpeed += 0.5;
 	spinRate += 0.3;
 	actTime --;
 	amountOfSpinBulletProjectiles += 2;
 	event_user(0);
+	myShield = instance_create(x,y,BallBossShield);
+	myShield.x = x + lengthdir_x(shieldDistance,image_angle+90);
+	myShield.y = y + lengthdir_y(shieldDistance,image_angle+90);
 	for (var i = 0; i < amountOfProjectiles; i++) {
 		with myCompanions[i]
 		{
@@ -53,6 +57,7 @@ if !reachHalfHealth && my_health < maxhealth * 0.65
 }
 else if !reachLowHealth && my_health < maxhealth * 0.24
 {
+	snd_play(sndBallBossLowHP,0,false,false,3,false,false,1,false);
 	actTime -= 2;
 	reachLowHealth = true;
 	maxSpeed += 0.75;
@@ -69,3 +74,9 @@ else if !reachLowHealth && my_health < maxhealth * 0.24
 		}
 	}
 }
+if point_distance(x,y,anchorX,anchorY) > 200
+{
+	targetDirection = point_direction(x,y,anchorX,anchorY)
+	motion_add(targetDirection,1);
+}
+	
