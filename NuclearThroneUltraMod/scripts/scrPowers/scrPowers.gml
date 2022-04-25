@@ -553,9 +553,18 @@ function scrPowers() {
 	    else if ( ammo[wep_type[wep]]-round(typ_ammo[wep_type[wep]] * (2-skill_got[5]) )>=0 && my_health<maxhealth )
 	    {
 	    ammo[wep_type[wep]]-=round(typ_ammo[wep_type[wep]] * (2-skill_got[5]) );//2.5?
-    
-	    dir = instance_create(x,y,PopupText)
-	    dir.mytext = "-"+string(round(other.typ_ammo[wep_type[other.wep]] * (2-skill_got[5]) ))+" "+string(other.typ_name[wep_type[other.wep]])
+		if UberCont.opt_ammoicon
+		{
+			dir = instance_create(x,y,PopupText)
+			dir.sprt = sprAmmoIconsPickup
+			dir.ii = wep_type[wep]-1;
+			dir.mytext = "-"+string(round(typ_ammo[wep_type[wep]] * (2-skill_got[5]) ));
+		}
+		else
+		{
+			dir = instance_create(x,y,PopupText)
+			dir.mytext = "-"+string(round(typ_ammo[wep_type[wep]] * (2-skill_got[5]) ))+" "+string(other.typ_name[wep_type[other.wep]])
+		}
 	    //if other.ammo[type] = other.typ_amax[type]
 	    //dir.mytext = "MAX "+string(other.typ_name[type])
     
@@ -576,11 +585,21 @@ function scrPowers() {
 	        if my_health > maxhealth
 	        my_health = maxhealth
         
-        
-	        dir = instance_create(x,y,PopupText)
-	        dir.mytext = "+"+string(num)+" HP"
-	        if my_health = maxhealth
-	        dir.mytext = "MAX HP";
+	        if UberCont.opt_ammoicon
+			{
+				dir = instance_create(x,y,PopupText)
+				dir.sprt = sprHPIconPickup;
+				dir.mytext = "+"+string(num)
+				if my_health = maxhealth
+					dir.mytext = "MAX";
+			}
+			else
+			{
+				dir = instance_create(x,y,PopupText)
+				dir.mytext = "+"+string(num)+" HP"
+				if my_health = maxhealth
+					dir.mytext = "MAX HP";
+			}
 	         //instance_create(x,y,HPPickup);
 	         Sleep(40)
 	    }
@@ -588,6 +607,7 @@ function scrPowers() {
 	    {
 	    snd_play_2d(sndEmpty);
 	    dir = instance_create(x,y,PopupText);
+		dir.theColour = c_red;
 	    dir.mytext = "NOT ENOUGH AMMO";
 	    }
 	}
@@ -595,6 +615,7 @@ function scrPowers() {
 	{
 	snd_play_2d(sndEmpty);
 	    dir = instance_create(x,y,PopupText);
+		dir.theColour = c_red;
 	    dir.mytext = "THIS DOESN'T USE AMMO";
 	}
 
@@ -1626,7 +1647,7 @@ function scrPowers() {
 	scrEmpty()
 
 
-	if can_shoot = 1 and ammo[wep_type[wep]] >= wep_cost[wep]
+	if can_shoot = 1 and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)
 	{
 	if wep_auto[wep] = 0 and KeyCont.key_spec[p] = 1
 	{

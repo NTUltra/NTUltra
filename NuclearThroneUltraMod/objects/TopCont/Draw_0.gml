@@ -184,8 +184,10 @@ draw_sprite(topspr,topindex,x,y-8)
 
 with CrownPickup
 {
-draw_sprite_ext(sprCrownLight,0,x,y+16,1,1,0,c_white,0.2)
-draw_sprite_ext(sprCrownLight,1,x,min(y,__view_get( e__VW.YView, 0 ))-16,1,(__view_get( e__VW.YView, 0 )-y)/32,0,c_white,0.2)
+//draw_sprite_ext(sprCrownLight,0,x,y+16,1,1,0,c_white,0.2)
+//draw_sprite_ext(sprCrownLight,1,x,min(y,__view_get( e__VW.YView, 0 ))-16,1,(__view_get( e__VW.YView, 0 )-y)/32,0,c_white,0.2)
+draw_sprite_ext(sprCrownLight,0,x,y+32,1,1,0,c_white,0.2)
+draw_sprite_ext(sprCrownLight,1,x,y,1,100,5,c_white,0.2)
 }
 
 with Player

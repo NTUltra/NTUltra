@@ -2498,6 +2498,7 @@
     {"id":{"name":"sprTrapFire","path":"sprites/sprTrapFire/sprTrapFire.yy",},"order":188,},
     {"id":{"name":"sprIceFlame","path":"sprites/sprIceFlame/sprIceFlame.yy",},"order":189,},
     {"id":{"name":"sprSentryGun","path":"sprites/sprSentryGun/sprSentryGun.yy",},"order":190,},
+    {"id":{"name":"sprCrownLightWhite","path":"sprites/sprCrownLightWhite/sprCrownLightWhite.yy",},"order":26,},
     {"id":{"name":"sprGrenade","path":"sprites/sprGrenade/sprGrenade.yy",},"order":191,},
     {"id":{"name":"sndBecomeNothingIdle","path":"sounds/sndBecomeNothingIdle/sndBecomeNothingIdle.yy",},"order":31,},
     {"id":{"name":"sprSplitNade","path":"sprites/sprSplitNade/sprSplitNade.yy",},"order":192,},

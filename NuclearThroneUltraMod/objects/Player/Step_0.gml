@@ -552,7 +552,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 	else{
 	IsShielding=false;
 	}
-	if( (!(IsShielding)||(ultra_got[7]==1))&&(flying=0) && (UberCont.opt_gamemode!=12||instance_exists(Marker)) ){
+	if( (!(IsShielding)||(ultra_got[7]==1)) && (UberCont.opt_gamemode!=12||instance_exists(Marker)) ){
 	if race = 7{//Roids always auto fire
 	wep_auto[wep] = 1 wep_auto[bwep] = 1}
 
@@ -588,7 +588,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		}
 	}
 
-	if can_shoot = 1 and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
+	if can_shoot = 1 and flying == 0 and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 	{
 	if wep_auto[wep] = 0 and clicked = 1
 	{
@@ -1374,7 +1374,7 @@ if race=18
 
     flying--;
     if flying<1
-    mask_index=mskPlayer;
+		mask_index=mskPlayer;
     }
     
      var ground = instance_nearest(x,y,Floor);

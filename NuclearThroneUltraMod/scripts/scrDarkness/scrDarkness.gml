@@ -95,7 +95,11 @@ function scrDarkness() {	if darkness = 1
 	with Corpse
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),max(0,100-image_index*40),0)
 	with CrownPickup
-	draw_rectangle(x-16-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),x+16-__view_get( e__VW.XView, 0 ),min(y,__view_get( e__VW.YView, 0 ))-__view_get( e__VW.YView, 0 ),0)
+	{
+		draw_sprite_ext(sprCrownLightWhite,0,x,y+32,1,1,0,c_white,1)
+		draw_sprite_ext(sprCrownLightWhite,1,x,y,1,100,5,c_white,1)
+	//draw_rectangle(x-16-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),x+16-__view_get( e__VW.XView, 0 ),min(y,__view_get( e__VW.YView, 0 ))-__view_get( e__VW.YView, 0 ),0)
+	}
 	with Morph
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),30+random(3),0)
 	with Sheep
@@ -104,7 +108,11 @@ function scrDarkness() {	if darkness = 1
 	draw_set_color(c_black)
 
 	with CrownPickup
-	draw_rectangle(x-16-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),x+16-__view_get( e__VW.XView, 0 ),min(y,__view_get( e__VW.YView, 0 ))-__view_get( e__VW.YView, 0 ),0)
+	{
+		//draw_sprite_ext(sprCrownLight,0,x,y+32,1,1,0,c_white,1)
+		//draw_sprite_ext(sprCrownLight,1,x,y,1,y+16,5,c_white,1)
+	//draw_rectangle(x-16-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),x+16-__view_get( e__VW.XView, 0 ),min(y,__view_get( e__VW.YView, 0 ))-__view_get( e__VW.YView, 0 ),0)
+	}
 	with Player
 	{
 	if race = 3

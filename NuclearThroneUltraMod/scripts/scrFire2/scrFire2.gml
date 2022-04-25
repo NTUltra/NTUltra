@@ -6008,6 +6008,7 @@ function scrFire2() {
 	//BUBBLER
 	case 414:
 		snd_play(sndClusterOpen);
+		BackCont.shake += 5;
 		snd_play(choose(sndWater1,sndWater2),0.1,true);
 		var len = 70;
 		var am = 8;
@@ -6031,6 +6032,7 @@ function scrFire2() {
 	//BLOOD BUBBLER
 	case 415:
 		snd_play(sndClusterOpen);
+		BackCont.shake += 5;
 		snd_play(choose(sndWater1,sndWater2),0.1,true);
 		var len = 48;
 		var am = 8;

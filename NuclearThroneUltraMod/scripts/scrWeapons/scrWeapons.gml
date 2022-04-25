@@ -4664,7 +4664,7 @@ function scrWeapons() {
 	wep_load[422] = 13
 	wep_cost[422] = 0
 	wep_sprt[422] = sprSuperLance
-	wep_area[422] = 13
+	wep_area[422] = 16
 	wep_text[422] = "mine is longer"
 	wep_swap[422] = sndSwapSword
 	wep_rad[422] = 0;
