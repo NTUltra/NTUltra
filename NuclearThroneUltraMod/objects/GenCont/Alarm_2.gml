@@ -116,15 +116,15 @@ if Player.area = 100
 			}
 			repeat(12)
 			{
+				xx += xstep;
 				if (!place_meeting(xx,yy,Floor))
 				{
 					with instance_create(xx,yy,Floor)
 					{
 						styleb = 1;
-						sprite_index = sprFloor100C;
+						sprite_index = sprFloor100D;
 					}
 				}
-				xx += xstep;
 			}
 			instance_create(xx,yy,SurvivalWave);
 			var oy = yy;
@@ -224,9 +224,9 @@ if Player.area = 100
 						//Statues
 						if ix == 28 && iy == 5
 						{
-							/*if ztop
+							if ztop
 								instance_create(xx+16,yy,BecomeBallBoss);
-							else*/
+							else
 								instance_create(xx+16,yy+32,BecomeBallBoss);
 						}
 						if  iy == 2

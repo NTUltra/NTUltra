@@ -25,7 +25,6 @@ function scrNextLevel() {
 	lastsubarea = subarea;
 	if area < 100
 	{
-		inverted = false;
 		lastarea = area
 	}
 	else if subarea = 1 || area = 105 || area = 106 || area = 107 || area = 101 || area = 110 || area = 111 || area = 112 || area = 103 || area = 109 || area = 113 || area == 114 || area = 108 || area == 115 || area == 117 || area == 118
@@ -41,6 +40,7 @@ function scrNextLevel() {
 	    {
 	        area = 8//chesire cat
 	        subarea=3;
+			inverted=false;
 	        exit;
 	    }
 		//Jungle
@@ -51,11 +51,13 @@ function scrNextLevel() {
 			{
 				area = 115;
 				subarea = 1;
+				inverted=false;
 			}
 			else
 			{
 				area = 4;
 				subarea = 1;
+				inverted=false;
 			}
 			exit;
 		}
@@ -64,16 +66,19 @@ function scrNextLevel() {
 			//To jungle
 			area = 114
 			subarea = 0;
+			inverted=false;
 		}
 	    if area = 103 && subarea > 0//YV mansion
 	    {
 	        area = 3
 	        subarea = 2;
+			inverted=false;
 	    }
 		if area == 102//Pizza to oasis boss
 		{
 			area = 101;
 			subarea = 2;
+			inverted=false;
 		}
 	    if area = 105//bring to scrapyard inv desert or pizza
 	    {
@@ -182,7 +187,6 @@ function scrNextLevel() {
 		    area=103;
 		    subarea=1;
 		    lastarea=3;
-    
 		    inverted=false;
 	    exit;
 	    }
@@ -229,6 +233,7 @@ function scrNextLevel() {
 		    area=7;
 		    subarea=1;
 		    oasis=false
+			inverted=false;
 	    exit;
 	    }
 	    hard+=1;
@@ -238,6 +243,7 @@ function scrNextLevel() {
 		{
 			area = 4;
 			subarea = 2;
+			inverted=false;
 			exit;
 		}
 

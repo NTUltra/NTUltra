@@ -8,7 +8,8 @@ if place_meeting(x,y,Player) && ! used
 		if i > maxskill
 			i = 0;
 		with Player {
-			while (skill_got[i] != 1 || i == 27)//Ignore patience
+			while (skill_got[i] != 1 || i == 27 //Ignore patience
+			|| (i == 18 && skeletonlives < 1))//Ignore last wish if you lost your lives
 			{
 				i++;
 				if i > maxskill

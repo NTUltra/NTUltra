@@ -30,10 +30,10 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 			var dangle = random(1)*360;
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			with instance_create(f.x + 16,f.y + 16,BallBoss)
-				curse = 1;
+			//instance_create(f.x + 16,f.y + 16,BallBoss)
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "BallBoss";
+			thing.mytext = "SAVED RUN";
+			scrSaveRun();
 		}
 		if keyboard_check_pressed(ord("C")) {
 			var dangle = random(1)*360;

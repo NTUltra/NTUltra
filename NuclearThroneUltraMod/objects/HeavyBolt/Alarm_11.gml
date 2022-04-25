@@ -11,6 +11,8 @@ if um == ultramods.plasmaBolt
 	}
 	with instance_create(x,y,PlasmaBig)
 	{
+		balls = 6;
+		ballstep = 360/balls;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;

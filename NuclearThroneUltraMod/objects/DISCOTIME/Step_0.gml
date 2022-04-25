@@ -5,6 +5,10 @@ if instance_exists(Player) && Player.wep == 396
 	{
 		room_speed = 35;
 		audio_resume_sound(sndChubbyEmuSong);
+		if !audio_is_playing(sndChubbyEmuSong)
+		{
+			snd_loop(sndChubbyEmuSong);
+		}
 		with MusCont
 		{
 			audio_pause_sound(song);

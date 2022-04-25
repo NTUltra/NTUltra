@@ -5,6 +5,7 @@ if UberCont.opt_loading == 4
 	room_speed = 999999;
 
 SetSeed();
+
 instance_create(10000,10000,FloorMaker)
 instance_create(0,0,TopCont)
 wave = 0
@@ -12,7 +13,10 @@ skillscroll = 0;
 
 if instance_exists(Player)
 {
-
+if !UberCont.useSeed && Player.area == 100
+{
+	UberCont.savedSeed = random_get_seed();
+}
 with Player {
 
 

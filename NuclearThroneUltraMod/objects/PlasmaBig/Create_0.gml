@@ -23,6 +23,7 @@ image_speed = 0.5
 Sleep(10)
 originalDirection=point_direction(x,y,mouse_x,mouse_y);
 resetSpeed=false;
-
+balls = 10;
+ballstep = 360/10;
 /* */
 /*  */

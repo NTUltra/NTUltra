@@ -3,7 +3,7 @@ if speed > 1 and other.team != team
 
 	with other
 	{
-		if other.sprite_index != other.spr_hurt
+		if sprite_index != spr_hurt
 		{
 			my_health -= other.dmg
 			sprite_index = spr_hurt

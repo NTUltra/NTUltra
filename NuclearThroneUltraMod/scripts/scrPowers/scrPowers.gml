@@ -57,12 +57,12 @@ function scrPowers() {
 						dmg += 2;
 						lerpDistance += 8;
 						lerpCalc = min(1,lerpSpeed/lerpDistance);//Consistent speed
-						lerpCalcBack = lerpCalc;
+						lerpCalcBack = lerpCalc*0.8;
 					}
 					else
 					{
 						lerpCalc = min(1,lerpSpeed/lerpDistance);//Consistent speed
-						lerpCalcBack = lerpCalc/target.size;
+						lerpCalcBack = (lerpCalc/target.size)*0.8;
 					}
 				}
 			}

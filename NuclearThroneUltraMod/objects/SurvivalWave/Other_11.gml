@@ -8,8 +8,17 @@ if instance_exists(SurvivalArenaStarter)
 }
 with prop
 {
-	instance_destroy(id,false);
-	instance_create(x,y,SurvivalPortal);
+	if point_distance(x,y,other.x,other.y) < 400
+	{
+		instance_destroy(id,false);
+		instance_create(x,y,SurvivalPortal);
+	}
+}
+if UberCont.crownVaultChallenge > 2
+{
+	snd_play(sndUltraGrenadeSuck);
+	alarm[1] = 1;
+	exit;
 }
 snd_play_2d(sndCrownCurses);
 song = musReflection;
@@ -41,6 +50,7 @@ if instance_exists(TopCont)
 var i = 0;
 switch (UberCont.crownVaultChallenge)
 {
+	#region challenge 1
 	case 0:
 		repeat(4)
 		{
@@ -198,11 +208,56 @@ switch (UberCont.crownVaultChallenge)
 			yy: centerY+32
 		};
 		i++;
+		repeat(8)
+		{
+			wave[i] = {
+				obj: Freak,
+				time: 2,
+			};
+			i++;
+		};
+		repeat(4)
+		{
+			wave[i] = {
+				obj: RhinoFreak,
+				time: 2,
+			};
+			i++;
+		};
+		repeat(2)
+		{
+			wave[i] = {
+				obj: ExploFreak,
+				time: 2,
+			};
+			i++;
+		};
+		repeat(2)
+		{
+			wave[i] = {
+				obj: Necromancer,
+				time: 2,
+			};
+			i++;
+		};
 		wave[i] = {
-			obj: AssassinBoss,
-			time: 240,
+			obj: Technomancer,
+			time: 90,
 			xx: centerX,
 			yy: centerY
+		};
+		i++;
+		repeat(3)
+		{
+			wave[i] = {
+				obj: Freak,
+				time: 8,
+			};
+			i++;
+		};
+		wave[i] = {
+			obj: Freak,
+			time: 180,
 		};
 		i++;
 		wave[i] = {
@@ -227,6 +282,8 @@ switch (UberCont.crownVaultChallenge)
 		};
 		
 	break;
+	#endregion
+	#region challenge 2
 	case 1:
 		
 		repeat(4)
@@ -237,6 +294,19 @@ switch (UberCont.crownVaultChallenge)
 			};
 			i++;
 		};
+		repeat(4)
+		{
+			wave[i] = {
+				obj: SquareBat,
+				time: 2,
+			};
+			i++;
+		};
+		wave[i] = {
+			obj: SquareBat,
+			time: 30,
+		};
+		i++;
 		wave[i] = {
 			obj: BigBadBat,
 			time: 390,
@@ -253,7 +323,7 @@ switch (UberCont.crownVaultChallenge)
 		repeat(4)
 		{
 			wave[i] = {
-				obj: SavannaBandit,
+				obj: Freak,
 				time: 22,
 			};
 			i++;
@@ -261,7 +331,7 @@ switch (UberCont.crownVaultChallenge)
 		repeat(4)
 		{
 			wave[i] = {
-				obj: SnowTank,
+				obj: RhinoFreak,
 				time: 40,
 			};
 			i++;
@@ -270,34 +340,42 @@ switch (UberCont.crownVaultChallenge)
 		repeat(3)
 		{
 			wave[i] = {
-				obj: Hyena,
+				obj: Freak,
 				time: 2,
 			};
 			i++;
 		};
 		wave[i] = {
-			obj: Vulture,
+			obj: SnowTank,
 			time: 140,
 		};
 		i++;
+		
 		wave[i] = {
-			obj: BigVulture,
-			time: 60,
+			obj: HealthChest,
+			time: 40,
 			xx: centerX,
-			yy: centerY
+			yy: centerY+32
+		};
+		i++
+		wave[i] = {
+			obj: BigMachine,
+			time: 60,
+			xx: centerX-64,
+			yy: centerY-128
 		};
 		i++;
 		wave[i] = {
-			obj: BigVulture,
-			time: 250,
-			xx: centerX,
-			yy: centerY
+			obj: BigMachine,
+			time: 300,
+			xx: centerX+64,
+			yy: centerY-128
 		};
 		i++;
 		repeat(4)
 		{
 			wave[i] = {
-				obj: Vulture,
+				obj: Freak,
 				time: 10,
 			};
 			i++;
@@ -305,41 +383,20 @@ switch (UberCont.crownVaultChallenge)
 		repeat(4)
 		{
 			wave[i] = {
-				obj: SavannaBandit,
+				obj: Turret,
 				time: 15,
 			};
 			i++;
 		}
 		wave[i] = {
-			obj: GoldScorpion,
+			obj: GoldSnowTank,
 			time: 110,
 			xx: centerX,
 			yy: centerY
 		};
 		i++;
 		wave[i] = {
-			obj: HealthChest,
-			time: 40,
-			xx: centerX,
-			yy: centerY+32
-		};
-		wave[i] = {
-			obj: GoldSnowTank,
-			time: 180,
-			xx: centerX,
-			yy: centerY
-		};
-		
-		repeat(4)
-		{
-			wave[i] = {
-				obj: Raven,
-				time: 2,
-			};
-			i++;
-		};
-		wave[i] = {
-			obj: Raven,
+			obj: Wolf,
 			time: 60,
 		};
 		i++;
@@ -374,13 +431,152 @@ switch (UberCont.crownVaultChallenge)
 			i++;
 		};
 	break;
+	#endregion
+	#region challenge 3
+	case 2:
+		
+		repeat(16)
+		{
+			wave[i] = {
+				obj: Exploder,
+				time: 2,
+			};
+			i++;
+		};
+		wave[i] = {
+			obj: Rat,
+			time: 200,
+		};
+		i++;
+		repeat(4)
+		{
+			wave[i] = {
+				obj: Rat,
+				time: 14,
+			};
+			i++;
+		};
+		repeat(4)
+		{
+			wave[i] = {
+				obj: Wolf,
+				time: 22,
+			};
+			i++;
+		};
+		repeat(4)
+		{
+			wave[i] = {
+				obj: Ratking,
+				time: 40,
+			};
+			i++;
+		};
+		wave[i] = {
+			obj: SnowTank,
+			time: 140,
+		};
+		wave[i] = {
+			obj: BallMom,
+			time: 270,
+		};
+		repeat(4)
+		{
+			wave[i] = {
+				obj: Exploder,
+				time: 2,
+			};
+			i++;
+		};
+		wave[i] = {
+			obj: Rat,
+			time: 140,
+		};
+		i++;
+		repeat(4)
+		{
+			wave[i] = {
+				obj: DiscGuy,
+				time: 10,
+			};
+			i++;
+		}
+		repeat(4)
+		{
+			wave[i] = {
+				obj: SnowTank,
+				time: 15,
+			};
+			i++;
+		}
+		wave[i] = {
+			obj: GoldSnowTank,
+			time: 110,
+			xx: centerX,
+			yy: centerY
+		};
+		i++;
+		wave[i] = {
+			obj: HealthChest,
+			time: 40,
+			xx: centerX,
+			yy: centerY+32
+		};
+		wave[i] = {
+			obj: Wolf,
+			time: 180,
+			xx: centerX,
+			yy: centerY
+		};
+		
+		repeat(4)
+		{
+			wave[i] = {
+				obj: SnowBot,
+				time: 2,
+			};
+			i++;
+		};
+		wave[i] = {
+			obj: Wolf,
+			time: 60,
+		};
+		i++;
+		repeat(4)
+		{
+			wave[i] = {
+				obj: DiscGuy,
+				time: 6,
+			};
+			i++;
+		};
+		wave[i] = {
+			obj: VanSpawn,
+			time: 30,
+			xx: centerX-128,
+			yy: centerY-64
+		};
+		i++;
+		wave[i] = {
+			obj: VanSpawn,
+			time: 30,
+			xx: centerX+128,
+			yy: centerY+64
+		};
+		i++;
+		repeat(4)
+		{
+			wave[i] = {
+				obj: DiscGuy,
+				time: 8,
+			};
+			i++;
+		};
+	break;
+	#endregion
 }
 waveLength = array_length(wave);
 UberCont.crownVaultChallenge ++;
-if UberCont.crownVaultChallenge > 1
-{
-	UberCont.crownVaultChallenge = 0;	
-}
 //Start it
 alarm[3] = 5;//Tell time is the difference between these two numbers
 alarm[0] = 20;

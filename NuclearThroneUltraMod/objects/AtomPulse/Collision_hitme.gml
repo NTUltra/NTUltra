@@ -1,4 +1,4 @@
-if other.team != team and other.my_health > 0 and random(2)<1
+if other.team != team and other.my_health > 0 and other.team != 0
 {
 with other
 {

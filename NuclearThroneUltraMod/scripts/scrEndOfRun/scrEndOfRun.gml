@@ -6,7 +6,7 @@ function scrEndOfRun(){
 	{
 		crownVaultChallenge = 0;
 		killedBoss = [];
-		rewardsLeft = defaultRewards;
 		enableReroll = false;
+		maxHpIncrease = 0;
 	}
 }

@@ -7,6 +7,6 @@ their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
 they have a FORCE and can be 0 or DIRECTIONAL */
 
 typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
-dmg = 3;
-/* */
-/*  */
+dmg = 2;
+image_xscale = 0.25;
+image_yscale = 0.25;

@@ -2752,7 +2752,7 @@ function scrWeapons() {
 	wep_load[249] = 10
 	wep_cost[249] = 2
 	wep_sprt[249] = sprHeavySlugger
-	wep_area[249] = 9
+	wep_area[249] = 8
 	wep_text[249] = "such weight"
 	wep_swap[249] = sndSwapShotgun
 	wep_rad[249] = 0;
@@ -3189,10 +3189,10 @@ function scrWeapons() {
 	wep_name[289] = "ULTRA SLUGGER"
 	wep_type[289] = 2
 	wep_auto[289] = 0
-	wep_load[289] = 13//22
+	wep_load[289] = 12//22
 	wep_cost[289] = 2
 	wep_sprt[289] = sprUltraSlugger
-	wep_area[289] = 18
+	wep_area[289] = 19
 	wep_text[289] = "biological slugs"
 	wep_swap[289] = sndSwapShotgun
 	wep_rad[289] = 12;
@@ -4886,7 +4886,7 @@ function scrWeapons() {
 	wep_sprt[442] = sprSmg
 	wep_area[442] = 6
 	wep_text[442] = ""
-	wep_swap[442] = sndSwapPistol
+	wep_swap[442] = sndSwapMachinegun
 	wep_rad[442] = 0;
 	
 	wep_name[443] = "RUSTY SAWED-OFF SHOTGUN"
@@ -4900,16 +4900,83 @@ function scrWeapons() {
 	wep_swap[443] = sndSwapShotgun
 	wep_rad[443] = 0;
 	
-	wep_name[1] = "GOLDEN HAND CANNON"
-	wep_type[1] = 1
-	wep_auto[1] = 0
-	wep_load[1] = 20
-	wep_cost[1] = 3
-	wep_sprt[1] = sprRevolver
-	wep_area[1] = -1
-	wep_text[1] = "trusty old revolver"
-	wep_swap[1] = sndSwapPistol
-	wep_rad[1] = 0;
+	wep_name[444] = "GOLDEN HAND CANNON"
+	wep_type[444] = 1
+	wep_auto[444] = 0
+	wep_load[444] = 12
+	wep_cost[444] = 3
+	wep_sprt[444] = sprRevolver
+	wep_area[444] = -1
+	wep_text[444] = ""
+	wep_swap[444] = sndSwapPistol
+	wep_rad[444] = 0;
+	
+	wep_name[445] = "HAND CANNON"
+	wep_type[445] = 1
+	wep_auto[445] = 0
+	wep_load[445] = 14
+	wep_cost[445] = 3
+	wep_sprt[445] = sprRevolver
+	wep_area[445] = 2
+	wep_text[445] = ""
+	wep_swap[445] = sndSwapPistol
+	wep_rad[445] = 0;
+	
+	wep_name[446] = "AUTO HAND CANNON"
+	wep_type[446] = 1
+	wep_auto[446] = 1
+	wep_load[446] = 3
+	wep_cost[446] = 2
+	wep_sprt[446] = sprRevolver
+	wep_area[446] = 13
+	wep_text[446] = "trusty old revolver"
+	wep_swap[446] = sndSwapPistol
+	wep_rad[446] = 0;
+	
+	wep_name[447] = "AUTO MISSILE LAUNCHER"
+	wep_type[447] = 5
+	wep_auto[447] = 1
+	wep_load[447] = 8
+	wep_cost[447] = 1
+	wep_sprt[447] = sprAutoCrossbow
+	wep_area[447] = 26
+	wep_text[447] = "THIS IS METAL"
+	wep_swap[447] = sndSwapExplosive
+	wep_rad[447] = 0;
+	
+	wep_name[448] = "FAT SMART GUN"
+	wep_type[448] = 1
+	wep_auto[448] = 1
+	wep_load[448] = 3
+	wep_cost[448] = 1
+	wep_sprt[448] = sprSmartGun
+	wep_area[448] = 24
+	wep_text[448] = "big brained"
+	wep_swap[448] = sndSwapMachinegun
+	wep_rad[448] = 0;
+	
+	wep_name[449] = "POP WALL"
+	wep_type[449] = 2
+	wep_auto[449] = 0
+	wep_load[449] = 15
+	wep_cost[449] = 2
+	wep_sprt[449] = sprSkullBreaker
+	wep_area[449] = 11
+	wep_text[449] = "pellets are closer together with higher accuracy"
+	wep_swap[449] = sndSwapShotgun
+	wep_rad[449] = 0;
+	
+	wep_name[450] = "POP LASER"
+	wep_type[450] = 2
+	wep_auto[450] = 0
+	wep_load[450] = 15
+	wep_cost[450] = 3
+	wep_sprt[450] = sprSkullSplitter
+	wep_area[450] = 12
+	wep_text[450] = "more pellets with higher accuracy"
+	wep_swap[450] = sndSwapMachinegun
+	wep_rad[450] = 0;
+	
 	/*
 	wep_name[444] = "DRILL GUN"
 	wep_type[444] = 4

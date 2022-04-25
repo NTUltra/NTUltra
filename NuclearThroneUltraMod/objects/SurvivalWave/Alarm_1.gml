@@ -36,7 +36,7 @@ if UberCont.opt_gamemode != 25
 		with Floor
 		{
 			if styleb
-			sprite_index = sprFloor100C;
+			sprite_index = sprFloor100D;
 			else
 			sprite_index = sprFloor100;
 		}

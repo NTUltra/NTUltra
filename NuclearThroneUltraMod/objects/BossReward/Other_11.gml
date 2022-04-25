@@ -1,5 +1,5 @@
 /// @description Muchas clickas
-switch(UberCont.array_length(collectedRewards))
+switch(array_length(UberCont.collectedRewards))
 {
 	case 0:
 		with Player
@@ -43,3 +43,20 @@ switch(UberCont.array_length(collectedRewards))
 		//name += "INCREASE YOUR IFRAMES BY 25%";
 	break;
 }
+with UberCont
+{
+	collectedRewards[array_length(collectedRewards)] = other.myBoss;
+}
+with BecomeBallBoss
+{
+	event_user(0);	//Update ring
+}
+with BossReward {
+	alarm[0] = 1;//Update rewards
+}
+instance_create(x,y,Flash);
+active = false;
+alarm[0] = 0;
+sprite_index = sprBossHolderDead;
+image_speed = 0.4;
+image_index = 0;

@@ -15,4 +15,4 @@ wepangle = choose(-140, 140)
 wepflip = 1
 gunangle = random(360)
 instance_change(Gator, true)
-alarm[1] = 5 + random(5)
+alarm[1] = max(alarm[1] ,5 + random(5));

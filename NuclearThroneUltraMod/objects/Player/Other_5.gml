@@ -67,6 +67,13 @@ scrNextLevel();//odd
 }
 */
 scrNextLevel();
+if race == 27
+{
+	if scrIsInInvertedArea()
+	{
+		my_health += 3;
+	}
+}
 ///at the end of a level stuff
 
 if patience>0||ultra_got[0]=1
@@ -226,7 +233,6 @@ horrorcharge=origincharge;
 oasis=false;
 
 ///looping!
-debug("now try to loop",area);
 if looping && area != 104
 {
 if scrCheckLoopAll()
@@ -272,6 +278,7 @@ looping=false;
 				targetHealth -= 2;
 			if UberCont.opt_gamemode == 9
 				targetHealth += UberCont.casualModeHPIncrease;
+			targetHealth += UberCont.maxHpIncrease;
             if maxhealth<targetHealth
             {
 	            maxhealth = min(maxhealth + 2,targetHealth);

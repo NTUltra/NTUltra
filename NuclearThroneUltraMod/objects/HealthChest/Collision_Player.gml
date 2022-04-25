@@ -34,6 +34,7 @@ with other {
 			targetHealth += UberCont.casualModeHPIncrease;
 		if skill_got[9] 
 			maxHpIncrease *= 2;
+		targetHealth += UberCont.maxHpIncrease;
 	    if maxhealth<targetHealth
 	    {
 		    maxhealth = min(maxhealth + maxHpIncrease,targetHealth);

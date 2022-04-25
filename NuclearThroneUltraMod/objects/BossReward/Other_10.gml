@@ -1,8 +1,8 @@
 /// @description Activated
 sprite_index = sprBossHolder;
 active = true;
-name = "CHALLENGE TO#";
-switch(UberCont.array_length(collectedRewards))
+name = "";
+switch(array_length(UberCont.collectedRewards))
 {
 	case 0:
 		name += "GAIN 1 MAX HP";
@@ -17,7 +17,7 @@ switch(UberCont.array_length(collectedRewards))
 		name += "GAIN 1 MAX HP";
 	break;
 	case 4:
-		name += "UNLOCK THE MUTATION REROLL STATION#AVAILABLE NEXT VAUL VISIT";
+		name += "UNLOCK THE MUTATION REROLL STATION#AVAILABLE NEXT VAULT VISIT";
 	break;
 	case 5:
 		name += "INCREASE YOUR MAX LEVEL BY ONE";

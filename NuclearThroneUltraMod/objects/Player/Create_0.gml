@@ -139,7 +139,7 @@ maxhealth = 8
 bettermelee = 0;
 betterlaserbrain = 0;
 betterpluto = 0;
-betterrabbitpaw = 0.14;
+betterrabbitpaw = 0.1;
 betterrecyclegland = 0.1;
 betterboltmarrow = 0;
 
@@ -155,8 +155,6 @@ if race == 7 && bskin == 2
 {
 	gunY = 4;
 }
-if race == 25
-	betterrabbitpaw += 0.02;
 //RACE STUFF
 scrLoadRace();
 
@@ -302,7 +300,7 @@ invertedportalcounter = 0;
 invertedportaldelay = 10;
 invertedchance = 8;
 if race == 27
-	invertedchance = 30;
+	invertedchance = 20;
 
 
 oasis = false;

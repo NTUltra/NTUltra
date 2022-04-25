@@ -1,9 +1,21 @@
 /// @description ultramod
-var um = GetPlayerUltramod()/*
+var um = GetPlayerUltramod()
 if um == ultramods.bulletShotgun
 {
 	instance_destroy(id,false);
-	with instance_create(x,y,HeavyBullet)
+	var acc = 1;
+	if instance_exists(Player)
+		acc = Player.accuracy;
+	with instance_create(x,y,FatBullet)
+	{
+		scrCopyWeaponMod(other);
+		direction = other.direction-7*acc;
+		image_angle = direction;
+		speed = other.speed;
+		team = other.team;
+		alarm[11] = 0;
+	}
+	with instance_create(x,y,FatBullet)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;
@@ -12,7 +24,16 @@ if um == ultramods.bulletShotgun
 		team = other.team;
 		alarm[11] = 0;
 	}
-} else */if um == ultramods.shotgunBolt
+	with instance_create(x,y,FatBullet)
+	{
+		scrCopyWeaponMod(other);
+		direction = other.direction+7*acc;
+		image_angle = direction;
+		speed = other.speed;
+		team = other.team;
+		alarm[11] = 0;
+	}
+} else if um == ultramods.shotgunBolt
 {
 	snd_play_fire(sndCrossbow);
 	instance_destroy(id,false);

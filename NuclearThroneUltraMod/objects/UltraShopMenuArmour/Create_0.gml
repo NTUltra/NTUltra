@@ -7,4 +7,4 @@ drawy = y
 
 cost=0.35;
 cost*=ShopWheel.discount;
-txt = "ARMOUR CHEST#RADS: "+string(cost*100)+"%";
+txt = "ARMOUR#RADS: "+string(cost*100)+"%";

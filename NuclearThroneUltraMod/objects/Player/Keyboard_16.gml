@@ -44,4 +44,12 @@ if UberCont.public = 0 {
 	    my_health = 0
 	    with instance_create(x, y, Portal) type = 1
 	}
+	if keyboard_check_pressed(ord("0")) {
+	    scrDefeatedRequiredBoss(secretChallengeBosses.bigVulture);
+		scrDefeatedRequiredBoss(secretChallengeBosses.bigFish);
+		scrDefeatedRequiredBoss(secretChallengeBosses.bigAssassin);
+		scrDefeatedRequiredBoss(secretChallengeBosses.bushBox);
+		scrDefeatedRequiredBoss(secretChallengeBosses.chesireCat);
+		scrDefeatedRequiredBoss(secretChallengeBosses.hyperCrystal);
+	}
 }

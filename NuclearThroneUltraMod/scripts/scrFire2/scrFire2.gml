@@ -5035,7 +5035,7 @@ function scrFire2() {
 
 	break;
 	
-	//SKULL BREAKER
+	//BULLET WALL
 	case 379:
 		snd_play_fire(sndShotgun);
 		snd_play_fire(sndQuadMachinegun);
@@ -6856,6 +6856,215 @@ function scrFire2() {
 	wkick = 7
 
 	break;
+	
+	//GOLDEN HAND CANNON
+	case 444:
+
+	snd_play_fire(sndFlakCannon)
+
+	with instance_create(x,y,Shell)
+	motion_add(point_direction(x,y,mouse_x,mouse_y)+other.right*100+random(50)-25,2+random(2))
+
+	with instance_create(x,y,HandCannonBullet)
+	{motion_add(point_direction(x,y,mouse_x,mouse_y)+(random(8)-4)*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(8,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+	BackCont.shake += 8
+	wkick = 4
+
+	break;
+	
+	//HAND CANNON
+	case 445:
+
+	snd_play_fire(sndFlakCannon)
+
+	with instance_create(x,y,Shell)
+	motion_add(point_direction(x,y,mouse_x,mouse_y)+other.right*100+random(50)-25,2+random(2))
+
+	with instance_create(x,y,HandCannonBullet)
+	{motion_add(point_direction(x,y,mouse_x,mouse_y)+(random(8)-4)*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(7,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(7,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+	BackCont.shake += 7
+	wkick = 3
+
+	break;
+	
+	//AUTO HAND CANNON
+	case 446:
+
+	snd_play_fire(sndFlakCannon)
+
+	with instance_create(x,y,Shell)
+	motion_add(point_direction(x,y,mouse_x,mouse_y)+other.right*100+random(50)-25,2+random(2))
+
+	with instance_create(x,y,HandCannonBullet)
+	{motion_add(point_direction(x,y,mouse_x,mouse_y)+(random(14)-7)*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(6,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(6,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+	BackCont.shake += 6
+	wkick = 3
+
+	break;
+	
+	//AUTO MISSILE LAUNCHER
+	case 447:
+
+	with instance_create(x,y,MissileBurst)
+	{
+	creator = other.id
+	ammo = 2
+	time = 4
+	team = other.team
+	event_perform(ev_alarm,0) 
+	}
+
+	break;
+	
+	//FAT SMART GUN
+	case 448:
+
+	snd_play_fire(sndSmartgun);
+	snd_play_fire(sndHeavyMachinegun);
+	with instance_create(x,y,Shell)
+	motion_add(point_direction(x,y,mouse_x,mouse_y)+other.right*100+random(50)-25,2+random(2))
+
+	with instance_create(x,y,FatBullet)
+	{
+	motion_add(point_direction(x,y,mouse_x,mouse_y)+(random(12)-6)*other.accuracy,14)
+
+	var target;
+	target=instance_nearest(x+lengthdir_x(80,direction),y+lengthdir_y(80,direction),enemy);// nearest in direction of cursor
+
+	if instance_exists(target)
+	{
+	        if!(collision_line(x,y,target.x,target.y,Wall,false,true) )//No walls between player and target?
+	        {
+	            if(direction<point_direction(x,y,target.x,target.y)+30+(30*Player.skill_got[19]))
+	            {
+					direction=point_direction(x,y,target.x,target.y)+(random(12)-6)*other.accuracy;
+					motion_add(point_direction(x,y,mouse_x,mouse_y)+(random(12)-6)*other.accuracy,15)
+	            }
+	       }
+		   else
+		   {
+				motion_add(point_direction(x,y,mouse_x,mouse_y)+(random(12)-6)*other.accuracy,15)   
+		   }
+       
+	}
+	else
+	{
+		motion_add(point_direction(x,y,mouse_x,mouse_y)+(random(12)-6)*other.accuracy,15)	
+	}
+
+	image_angle = direction
+	team = other.team
+
+	}
+
+	BackCont.viewx2 += lengthdir_x(6,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(6,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+	BackCont.shake += 3.5
+	wkick = 4
+
+	break;
+	
+	
+	//POP WALL
+	case 449:
+		snd_play_fire(sndEraser);
+		snd_play_fire(sndQuadMachinegun);
+		var msk = mask_index;
+		mask_index = mskBullet1;
+		var aimDir = point_direction(x,y,mouse_x,mouse_y)+(random(5)-2.5)*accuracy;
+		var len = 6+(accuracy*3);
+		var bx = x;
+		var by = y;
+		var xstep = lengthdir_x(len,aimDir+90);
+		var ystep = lengthdir_y(len,aimDir+90);
+		var count = 0;
+		while (!place_meeting(bx,by,Wall) && count < 500 || count < 1)
+		{
+			instance_create(bx,by,Dust);
+			with instance_create(bx,by,Bullet2)
+			{
+				motion_add(aimDir,14);
+				image_angle = direction
+				team = other.team
+			}
+			bx += xstep;
+			by += ystep;
+			count ++;
+		}
+		var xstep = lengthdir_x(len,aimDir-90);
+		var ystep = lengthdir_y(len,aimDir-90);
+		bx = x + xstep;
+		by = y + ystep;
+		count = 0;
+		while (!place_meeting(bx,by,Wall) && count < 500 || count < 1)
+		{
+			instance_create(bx,by,Dust);
+			with instance_create(bx,by,Bullet2)
+			{
+				motion_add(aimDir,14);
+				image_angle = direction
+				team = other.team
+			}
+			bx += xstep;
+			by += ystep;
+			count ++;
+		}
+		mask_index = msk;
+		BackCont.viewx2 += lengthdir_x(13,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(13,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+		BackCont.shake += 10
+		wkick = 7
+
+	break;
+	
+	//POP LASER
+	case 450:
+		snd_play_fire(sndEraser);
+		snd_play_fire(sndUltraPistol);
+		var msk = mask_index;
+		mask_index = mskBullet1;
+		var aimDir = point_direction(x,y,mouse_x,mouse_y)+(random(7)-3.5)*accuracy;
+		var len = 8+(accuracy*3);
+		var xstep = lengthdir_x(len,aimDir);
+		var ystep = lengthdir_y(len,aimDir);
+		var bx = x;
+		var by = y;
+		var count = 0;
+		while (!place_meeting(bx,by,Wall) && count < 500 || count < 2)
+		{
+			with instance_create(bx,by,Bullet2)
+			{
+				motion_add(aimDir,16);
+				image_angle = direction
+				team = other.team
+			}
+			bx += xstep;
+			by += ystep;
+			count ++;
+		}
+		mask_index = msk;
+		BackCont.viewx2 += lengthdir_x(13,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(13,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+		BackCont.shake += 10
+		wkick = 7
+
+	break;
+
 	
 	}//end of switch part 2!
 }

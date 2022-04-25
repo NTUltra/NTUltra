@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Enemy",
-    "path": "folders/Scripts/Enemy.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scrCanHandoutBossReward",
+  "name": "scrIsInInvertedArea",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -142,6 +142,7 @@ with Player
 			targetHealth -= 2;
 		if UberCont.opt_gamemode == 9
 			targetHealth += UberCont.casualModeHPIncrease;
+		targetHealth += UberCont.maxHpIncrease;
         if maxhealth<targetHealth
         {
 	        maxhealth = targetHealth;
