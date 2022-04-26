@@ -13,5 +13,10 @@ repeat(am)
 	}
 	ang += angStep;
 }
-
-scrDrop(10,0);
+if spinAttackAmmo > 0
+{
+	spinAttackAmmo --;
+	alarm[6] = spinAttackFireRate;
+	alarm[1] += spinAttackFireRate-2;
+}
+scrDrop(12,0);

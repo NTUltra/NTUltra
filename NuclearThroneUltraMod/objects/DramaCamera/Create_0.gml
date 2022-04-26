@@ -65,7 +65,7 @@ if instance_exists(Player) && !instance_exists(SurvivalWave)
 }
 
 
-if UberCont.opt_bossintro=0 || instance_exists(SurvivalWave) || UberCont.hadBossIntro {
+if UberCont.opt_bossintro=0 || (instance_exists(SurvivalWave) && !instance_exists(BallBoss)) || UberCont.hadBossIntro {
 instance_destroy();
 exit;}
 UberCont.hadBossIntro = true;
@@ -76,8 +76,15 @@ widescreen = 0
 
 
 name="BOSS"
-
-if instance_exists(Player)
+if instance_exists(BallBoss)
+{
+	name = "PROTO MIND";
+	if random(100)<1
+	{
+		name = choose("BIG BALL","THE BALL BOSS","PROTO BALL","CIRCLE");	
+	}
+}
+else if instance_exists(Player)
 {
 if Player.area = 1
 {

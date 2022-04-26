@@ -19,7 +19,7 @@ switch(array_length(UberCont.collectedRewards))
 		{
 			skeletonlives += 1;
 		}
-		snd_play(other.snd_crwn);
+		snd_play(other.snd_chst);
 	break;
 	case 3:
 		with Player
@@ -27,11 +27,11 @@ switch(array_length(UberCont.collectedRewards))
 			maxhealth += 1;
 			my_health += 1;
 		}
-		snd_play(other.snd_thrn);
+		snd_play(other.snd_chst);
 	break;
 	case 4:
 		UberCont.enableReroll = true;
-		snd_play(other.snd_valt);
+		snd_play(other.snd_crwn);
 	break;
 	case 5:
 		with Player

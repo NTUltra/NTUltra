@@ -283,8 +283,9 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 	cwepmod3 = wepmod3;
 	cwepmod4 = wepmod4;
 	}
-	else
+	else if wep != 0
 	{
+		
 	with instance_create(x,y,WepPickup)
 	{
 	pickedup=true;
@@ -353,7 +354,7 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 	wepangle = choose(120,-120)*/
 
 	with targetPickup
-	instance_destroy()
+		instance_destroy()
 	}
 	}
 

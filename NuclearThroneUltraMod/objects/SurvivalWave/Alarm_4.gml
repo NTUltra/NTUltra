@@ -17,6 +17,15 @@ if instance_exists(Player)
 		{
 			my_health = 0;
 		}
+		with projectile
+		{
+			if team != 2
+				instance_destroy();
+		}
+		with Player
+		{
+			area = 100;
+		}	
 		alarm[0] = 0;
 		alarm[1] = 0;
 		alarm[3] = 0;
@@ -30,7 +39,7 @@ if instance_exists(Player)
 		with Floor
 		{
 			if styleb
-			sprite_index = sprFloor100D;
+			sprite_index = sprFloor100Ca;
 			else
 			sprite_index = sprFloor100;
 		}

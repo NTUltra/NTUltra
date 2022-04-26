@@ -6,12 +6,12 @@ typ = 2 //0 = normal, 1 = deflectable, 2 = destructable
 dmg = 2;
 target=0;
 
-hits=3;
+hits=2;
 mxSpd = 4;
 if instance_exists(Player){
 if Player.skill_got[21] = 1//bolt marrow
 {
-hits+=choose(1,1,2);
+hits+=1;
 mxSpd +=2;
 if Player.race == 25
 	mxSpd += 0.2;

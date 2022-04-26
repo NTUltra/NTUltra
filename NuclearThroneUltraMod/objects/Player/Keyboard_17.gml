@@ -13,6 +13,14 @@ if UberCont.public = 0 {
         else
             wep = 1
     }
+	
+	if keyboard_check_pressed(ord("T")) {
+
+        with enemy
+		{
+			my_health = 0;	
+		}
+    }
 
     if keyboard_check_pressed(ord("X")) {
 

@@ -3950,9 +3950,9 @@ function scrWeapons() {
 	wep_type[358] = 5
 	wep_auto[358] = 0
 	wep_load[358] = 20
-	wep_cost[358] = 5
+	wep_cost[358] = 3
 	wep_sprt[358] = sprIonTeleporter
-	wep_area[358] = 13
+	wep_area[358] = 10
 	wep_text[358] = "just like atom"
 	wep_swap[358] = sndSwapEnergy
 	wep_rad[358] = 0;

@@ -49,7 +49,7 @@ if myShield != -1 && instance_exists(myShield)
 {
 	myShield.x = x + lengthdir_x(shieldDistance,image_angle+90);
 	myShield.y = y + lengthdir_y(shieldDistance,image_angle+90);
-	myShield.image_angle = image_angle;
+	myShield.image_angle = image_angle+180;
 }
 if alarm[2] > 0 || alarm[3] > 0
 	speed = 0;

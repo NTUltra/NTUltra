@@ -37,14 +37,12 @@ instance_destroy();
 with CrystalShield
 instance_destroy();
 
-with MusCont
-{
-if audio_exists(song)
-audio_stop_sound(song);
-//optimise sound_discard(song)
-//optimise sound_discard(amb)
-//optimise snd_loop(amb)
-}
+if skeletonlives < 1
+	with MusCont
+	{
+	if audio_exists(song)
+	audio_stop_sound(song);
+	}
 
 if ultra_got[40]==1
 {

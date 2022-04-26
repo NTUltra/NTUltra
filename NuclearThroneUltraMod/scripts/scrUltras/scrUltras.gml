@@ -299,7 +299,7 @@ function scrUltras() {
 	    ultra_tips[62] = "tank up"
 	    }
     
-	    ultra_name[63] = "COLD HEARTH"
+	    ultra_name[63] = "COLD HEART"
 	    ultra_text[63] = "ARMOUR STRIKE FREEZES ENEMIES#AND DEALS MORE DAMAGE#WHEN YOU HAVE NO MORE ARMOUR#YOU CAN USE 2HP TO USE AN ARMOUR STRIKE"
 	    ultra_tips[63] = "hearth strike"
     

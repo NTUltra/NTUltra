@@ -8,5 +8,7 @@ function scrEndOfRun(){
 		killedBoss = [];
 		enableReroll = false;
 		maxHpIncrease = 0;
+		canSave = false;
+		useSeed = false;
 	}
 }

@@ -13,13 +13,16 @@ if team != other.team && alarm[0] < 1
 			with instance_create(x,y,Deflect)
 				image_angle = other.direction
 		}
+		sprite_index = sprStatueBossShieldDeflect;
+		image_index = 0;
 	}
-	if other.typ = 2
+	else if other.typ = 2
 	{
+		sprite_index = sprStatueBossShieldDeflect;
+		image_index = 0;
 		with other
 			instance_destroy()
 	}
-	sprite_index = sprStatueBossShieldDeflect;
-	image_index = 0;
+	
 }
 

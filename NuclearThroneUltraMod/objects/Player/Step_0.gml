@@ -33,7 +33,6 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 			//instance_create(f.x + 16,f.y + 16,BallBoss)
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
 			thing.mytext = "SAVED RUN";
-			scrSaveRun();
 		}
 		if keyboard_check_pressed(ord("C")) {
 			var dangle = random(1)*360;

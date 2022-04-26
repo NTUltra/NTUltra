@@ -54,7 +54,7 @@ function scrTips() {
 	),choose(
 	"don't worry about long-term effects","when near a portal you#don't take damage","don't die","nice",
 	"yung cuz definitely exists","venuz patrol","boiling veins does#NOT protect against#blue fire",
-	"should not have done that","","thank you for playing","Some unused mutations are buffed","visit crownvaults twice#for weapon mods","death is near","good luck"
+	"should not have done that","","thank you for playing","Some unused mutations are buffed","visit crownvaults twice#for weapon mods","death is near","good luck","are you ready?"
 	,"you can change the direction#of director projectiles#by clicking after firing")
 	,
 	choose("try new weapons",

@@ -5,6 +5,8 @@ var am = 4;
 var angstep = 360/am;
 var dir = random(360);
 var l = 12;
+with myShield
+	instance_destroy();
 repeat(am)
 {
 	var xx = x + lengthdir_x(l,dir);
@@ -12,39 +14,20 @@ repeat(am)
 	instance_create(xx,yy,Explosion);
 	dir += angstep;
 }
+UberCont.canSave = true;
 with BallBossPlateau
 {
-	var xdir = 32;
-	if other.anchorX > x
-	{
-		xdir = -32;
-	}
-	with instance_nearest(x,y-8,Floor) {
-		var xx = x;
-		var yy = y;
-		repeat(12)
-		{
-			var walls = ds_list_create();
-			var al = instance_place_list(x,y,Wall,walls,false)
-			for (var j = 0; j < al; j++) {
-				with walls[| j]
-				{
-					instance_destroy(id,false);
-					instance_create(x,y,FloorExplo);
-				}
-			}
-			ds_list_destroy(walls);
-			if !place_meeting(xx,yy,Floor)
-			{
-				instance_create(xx,yy,Floor);
-			}
-			if !place_meeting(xx,yy+16,Floor)
-			{
-				instance_create(xx,yy+16,Floor);
-			}
-			xx += xdir;
-		}
-	}
+	instance_create(x,y,SaveStation);
+}
+with MusCont
+{
+	audio_stop_sound(song);
+	song = sndVaultBossWin
+	snd_play_2d(song)
+	audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
+	audio_sound_gain(song,max(0,sqrt(UberCont.opt_musvol)),0);
+	audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
+
 }
 event_inherited()
 

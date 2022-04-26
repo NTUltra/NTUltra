@@ -9,13 +9,13 @@ if instance_exists(BecomeBallBoss)
 }
 if instance_exists(TopCont)
 	TopCont.darkness = 0;
-song = musReflection;
+song = musConfrontingMyself;
 with BossReward
 {
 	var xx = x - 8;
 	var msk = mask_index;
 	mask_index = mskWall;
-	repeat(9)
+	repeat(8)
 	{
 		while place_meeting(xx,y,Player)
 		{

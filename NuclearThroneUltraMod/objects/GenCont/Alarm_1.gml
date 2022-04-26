@@ -78,6 +78,12 @@ else if Player.area = 100 && UberCont.crown_start[Player.race] && Player.crownvi
 	Player.x = CrownPickup.x;
 	Player.y = CrownPickup.y+32;
 }
+if Player.saveLoaded
+{
+	Player.saveLoaded = false;//Next time normal position;
+	Player.x = BallBossPlateau.x;
+	Player.y = BallBossPlateau.y+16;
+}
 Player.drawempty = 30
 Player.drawlowhp = 30
 }

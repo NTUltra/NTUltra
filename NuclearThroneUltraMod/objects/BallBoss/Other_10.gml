@@ -72,4 +72,4 @@ if !diag || reachHalfHealth
 	}
 }
 diag = !diag;
-scrDrop(20,0);
+scrDrop(25,0);

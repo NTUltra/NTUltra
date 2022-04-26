@@ -13,7 +13,7 @@ with BossReward
 	var xx = x - 8;
 	var msk = mask_index;
 	mask_index = mskWall;
-	repeat(9)
+	repeat(8)
 	{
 		while place_meeting(xx,y,Player)
 		{
@@ -23,11 +23,4 @@ with BossReward
 		xx += 16;
 	}
 	mask_index = msk;
-}
-with MusCont
-{
-	if audio_is_playing(song)
-	audio_stop_sound(song);
-	song = mus100
-	snd_loop(song);
 }

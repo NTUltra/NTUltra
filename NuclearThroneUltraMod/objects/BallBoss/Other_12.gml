@@ -25,6 +25,7 @@ repeat(am)
 	}
 	ang += angStep;
 }
-scrDrop(15,0);
-alarm[6] = 20;
-alarm[1] += 18;
+scrDrop(20,0);
+spinAttackAmmo = spinAttackMaxAmmo;
+alarm[6] = spinAttackFireRate;
+alarm[1] += spinAttackFireRate-2;

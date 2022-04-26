@@ -4807,10 +4807,31 @@ function scrFire2() {
 	if curse
 		my_health -= 7;
 	//TOSSING CURSED WEAPONS!?
-	if !yc
+	
+	if race == 7
+	{
+		//wep = 0;
+		clicked = 0;
+		can_shoot = 0;
+		if ultra_got[27]
+		{
+			if bwep == wep
+				bwep = 0;
+			if twep == wep
+				twep = 0;
+		}
+		wep = 0;
 		scrSwapWeps();
-	clicked = 0;
-	bwep = 0
+		//bwep = 0;
+	}
+	else
+	{
+		if !yc
+			scrSwapWeps();
+		clicked = 0;
+		can_shoot = 0;
+		bwep = 0
+	}
 	break;
 	
 	//ULTRA MINIGUN

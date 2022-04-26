@@ -27,20 +27,23 @@ if target > 0 {
 	else if ran > 60
 	{
 		//SPINNNIIIIINGG BULLEETS
-		event_user(2);	
+		event_user(2);
 	}
 
 }
 else if random(10) < 1 {
     motion_add(random(360), 0.9)
 }
-if !reachHalfHealth && my_health < maxhealth * 0.65
+if !reachHalfHealth && my_health < maxhealth * 0.7
 {
 	snd_play(sndBallBossHalfHP,0,false,false,3,false,false,1,false);
+	lineOfFireOffset -= 5;
 	reachHalfHealth = true;
-	maxSpeed += 0.5;
+	maxSpeed += 0.4;
 	spinRate += 0.3;
 	actTime --;
+	spinAttackFireRate -= 4;
+	spinAttackMaxAmmo ++;
 	amountOfSpinBulletProjectiles += 2;
 	event_user(0);
 	myShield = instance_create(x,y,BallBossShield);
@@ -55,15 +58,25 @@ if !reachHalfHealth && my_health < maxhealth * 0.65
 		}
 	}
 }
-else if !reachLowHealth && my_health < maxhealth * 0.24
+else if !reachLowHealth && my_health < maxhealth * 0.3
 {
+	lineOfFireOffset -=5;
 	snd_play(sndBallBossLowHP,0,false,false,3,false,false,1,false);
 	actTime -= 2;
 	reachLowHealth = true;
-	maxSpeed += 0.75;
+	spinAttackFireRate -= 4;
+	spinAttackMaxAmmo ++;
+	maxSpeed += 0.3;
 	spinRate -= 0.2;
 	pSpeed ++;
 	amountOfSpinBulletProjectiles += 2;
+	with MusCont
+	{
+		audio_stop_sound(song);
+		song = musChimera2;
+		snd_loop(song);
+		audio_sound_gain(song, max(0, sqrt(UberCont.opt_musvol*1.1)), 0);
+	}
 	alarm[3] = 1;
 	for (var i = 0; i < amountOfProjectiles; i++) {
 		with myCompanions[i]
@@ -74,8 +87,9 @@ else if !reachLowHealth && my_health < maxhealth * 0.24
 		}
 	}
 }
-if point_distance(x,y,anchorX,anchorY) > 200
+if point_distance(x,y,anchorX,anchorY) > 400
 {
+	debug("TOO FAR FROM CENTER");
 	targetDirection = point_direction(x,y,anchorX,anchorY)
 	motion_add(targetDirection,1);
 }

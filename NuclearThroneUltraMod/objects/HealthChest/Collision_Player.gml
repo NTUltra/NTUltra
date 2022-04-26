@@ -17,6 +17,7 @@ with other {
 	var overheal = my_health + other.num - maxhealth;
 	my_health += other.num-overheal;
 	my_health += overheal * 0.5;
+	other.num = other.num-(overheal*0.5);
 	/*
 	if my_health + other.num <= maxhealth
 		my_health += other.num

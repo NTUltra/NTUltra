@@ -2,6 +2,9 @@
 snd_play(sndWazerStart);
 if array_length(myLasers) < 1 || !instance_exists(myLasers[0])
 {
+	event_user(2);
+	targetDirection = point_direction(x,y,anchorX,anchorY)
+	motion_add(targetDirection,1);
 	myLasers[0] = instance_create(x,y,EnemyWazer);
 	with myLasers[0] {
 		team = other.team;

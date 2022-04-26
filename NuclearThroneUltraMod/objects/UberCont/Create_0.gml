@@ -125,11 +125,12 @@ enum secretChallengeBosses {
 }
 killedBoss = [];
 collectedRewards = [];
-enableReroll = true;
+enableReroll = false;
 radUp = false;
 maxHpIncrease = 0;
 levelIncrease = 0;
 savedSeed = 0;
+canSave = false;
 encrypted_run_data = {
 	area: 100,
 	subarea: 1,
@@ -185,8 +186,10 @@ encrypted_run_data = {
 	horrorEtaken: 0,
 	hogpoints: 0,
 	boostLevel: 0,
-	microseconds: 0,
-	seconds: 0,
+	time_microseconds: 0,
+	time_seconds: 0,
+	time_minutes: 0,
+	time_hours: 0,
 	race: 1,
 	ultimategamble: false,
 	bettermelee: 0,
@@ -211,5 +214,6 @@ encrypted_run_data = {
 	freeArmourStrike: false,
 	armour: -1,
 	maxarmour: -1,
-	crownVaultChallenge: 2
+	crownVaultChallenge: 2,
+	randomlySelected: false
 };

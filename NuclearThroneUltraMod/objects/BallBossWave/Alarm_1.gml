@@ -10,4 +10,11 @@ if instance_number(enemy) <= instance_number(IDPDVan) && !instance_exists(LilHun
 	with BecomeBallBoss {
 		event_user(1);
 	}
+	with projectile
+	{
+		if team != 2
+			instance_destroy();
+	}
+	BackCont.shake += 20;
+	instance_create(x,y,Flash);
 }

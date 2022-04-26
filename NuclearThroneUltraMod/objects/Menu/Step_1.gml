@@ -27,11 +27,14 @@ repeat(racemax+1)
 instance_create(x,y,LoadoutSelect);
 instance_create(x,y,CreditsSelect)
 instance_create(x,y,StatsSelect)
-instance_create(x,y,QuitSelect)
+instance_create(x,y,QuitSelect);
 instance_create(x,y,OptionSelect)
 instance_create(x,y,OptionSelect2)
 instance_create(x,y,UpdateSelect)
 instance_create(x,y,Cheatcode);
+//If savefile found
+with instance_create(x,y,LoadSelect)
+	depth = other.depth - 5;
 exit;
 }
 }
@@ -65,6 +68,8 @@ if KeyCont.key_spec[p] = 1
 		with GameModeUpDown
 		instance_destroy();
 		with QuitSelect
+		instance_destroy()
+		with LoadSelect
 		instance_destroy()
 		logoin = 240
 		mode = 0

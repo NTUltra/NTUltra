@@ -1646,20 +1646,21 @@ function scrPowers() {
 	if ammo[wep_type[wep]] < wep_cost[wep] and KeyCont.key_spec[p] = 1 and wep_type[wep] != 0
 	scrEmpty()
 
-
-	if can_shoot = 1 and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)
-	{
-	if wep_auto[wep] = 0 and KeyCont.key_spec[p] = 1
-	{
-	speed /= 4
-	scrFire()
-	clicked = 0
-	}
-	if wep_auto[wep] = 1
-	scrFire()
-	}
-
-	    scrSwapWeps()
+		if can_shoot = 1 and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)
+		{
+			if wep_auto[wep] = 0 and KeyCont.key_spec[p] = 1
+			{
+			speed /= 4
+			scrFire()
+			clicked = 0
+			}
+			if wep_auto[wep] = 1
+				scrFire()
+		}
+	    scrSwapWeps();
+		
+		if wep == 0 && bwep != 0
+			scrSwapWeps();
 	    if ultra_got[27]=1{//mirror hands
 	    bwep=twep
 	    }
