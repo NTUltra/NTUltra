@@ -18,6 +18,10 @@ if !cursed {
 	        y += lengthdir_y(6, point_direction(x, y, Player.x, Player.y))
 
 	        isGettingSucked = true;
+			if place_meeting(x,y,Player)
+			{
+				event_user(0);	
+			}
 	    }
 	    else
 	        isGettingSucked = false;
@@ -28,8 +32,24 @@ if !cursed {
 	            x += lengthdir_x(6, point_direction(x, y, Implosion.x, Implosion.y))
 	            if Player.ultra_got[12] == 1 || place_free(x, y + lengthdir_y(6, point_direction(x, y, Implosion.x, Implosion.y))) || ((Player.ultra_got[12] == 1) && (KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2))
 	            y += lengthdir_y(6, point_direction(x, y, Implosion.x, Implosion.y))
+				
+				if place_meeting(x,y,Implosion)
+				{
+					event_user(0);	
+				}
 	        }
 	    }
+		else if (Player.ultra_got[108] && instance_exists(Hand) && point_distance(x, y, Hand.x, Hand.y) < 77 + Player.betterpluto)
+		{
+			if place_free(x + lengthdir_x(12, point_direction(x, y, Hand.x, Hand.y)), y)
+				x += lengthdir_x(12, point_direction(x, y, Hand.x, Hand.y))
+            if place_free(x, y + lengthdir_y(12, point_direction(x, y, Hand.x, Hand.y)))
+				y += lengthdir_y(12, point_direction(x, y, Hand.x, Hand.y))
+			if place_meeting(x,y,Hand)
+			{
+				event_user(0);
+			}
+		}
 	}
 } else if supercursed {
 	if instance_exists(Player) {
@@ -38,11 +58,24 @@ if !cursed {
 	        x -= lengthdir_x(1, point_direction(x, y, Player.x, Player.y))
 	        if !place_meeting(x, y + lengthdir_y(2, point_direction(x, y, Player.x, Player.y)), Wall)
 	        y -= lengthdir_y(1, point_direction(x, y, Player.x, Player.y))
+			
+			if place_meeting(x,y,Player)
+			{
+				event_user(0);	
+			}
 		}
 	}
 }
-
-if cursed && random(5) < 1 {
-	with instance_create(x + random(4) - 2, y + random(4) - 2, Curse)
-	depth = 1;
+else//Cursed
+{
+	if place_meeting(x,y,Player)
+	{
+		event_user(0);	
+	} else if (Player.ultra_got[108] && instance_exists(Hand))
+	{
+		if place_meeting(x,y,Hand)
+		{
+			event_user(0);
+		}
+	}
 }

@@ -22,4 +22,4 @@ pushStartX = 0;
 pushStartY = 0;
 pushStrength = 108;
 pushSpeed = 18;
-
+grabbingPickup = false;

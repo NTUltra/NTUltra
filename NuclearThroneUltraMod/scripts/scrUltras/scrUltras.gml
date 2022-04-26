@@ -538,7 +538,7 @@ function scrUltras() {
 	ultra_tips[107] = "i can count to 15 now"
     
 	ultra_name[108] = "DELICATE HANDS"
-	ultra_text[108] = "ALLOWS YOUR HAND TO COLLECT#RADS, PICKUPS AND WEAPONS#HAND IS FASTER#WHILE IN AN INVERTED AREA#THE HAND IS EVEN FASTER AND THE PICKUP RADIUS IS INCREASED"
+	ultra_text[108] = "ALLOWS YOUR HAND TO COLLECT#RADS, PICKUPS AND WEAPONS#HAND IS FASTER#WHILE IN AN INVERTED AREA#THE HAND IS EVEN FASTER"
 	ultra_tips[108] = "i shouldn't be level 10 to pick up ammo"
 	
 	maxultra = 108;

@@ -11,6 +11,11 @@ if instance_exists(Player) && (!cursed) {
             x += lengthdir_x(12, point_direction(x, y, ProtoStatue.x, ProtoStatue.y))
             if place_free(x, y + lengthdir_y(12, point_direction(x, y, ProtoStatue.x, ProtoStatue.y)))
             y += lengthdir_y(12, point_direction(x, y, ProtoStatue.x, ProtoStatue.y))
+			
+			if place_meeting(x,y,ProtoStatue)
+			{
+				event_user(1);	
+			}
         } else if speed = 0 {
             if point_distance(x, y, Player.x, Player.y) < 77 + Player.betterpluto or levelEnded {
                 if place_free(x + lengthdir_x(12, point_direction(x, y, Player.x, Player.y)), y)
@@ -19,9 +24,19 @@ if instance_exists(Player) && (!cursed) {
                 y += lengthdir_y(12, point_direction(x, y, Player.x, Player.y))
 
                 isGettingSucked = true;
+				if place_meeting(x,y,Player)
+				{
+					event_user(0);	
+				}
             }
             else
+			{
                 isGettingSucked = false;
+				if place_meeting(x,y,Player)
+				{
+					event_user(0);	
+				}
+			}
         }
 
     }
@@ -34,6 +49,10 @@ if instance_exists(Player) && (!cursed) {
             y += lengthdir_y(12, point_direction(x, y, Player.x, Player.y))
 
             isGettingSucked = true;
+			if place_meeting(x,y,Player)
+			{
+				event_user(0);	
+			}
         }
         else if instance_exists(Implosion) {
             if point_distance(x, y, Implosion.x, Implosion.y) < 80 or instance_exists(Portal) {
@@ -41,10 +60,31 @@ if instance_exists(Player) && (!cursed) {
                 x += lengthdir_x(12, point_direction(x, y, Implosion.x, Implosion.y))
                 if place_free(x, y + lengthdir_y(12, point_direction(x, y, Implosion.x, Implosion.y)))
                 y += lengthdir_y(12, point_direction(x, y, Implosion.x, Implosion.y))
+				if place_meeting(x,y,Implosion)
+				{
+					event_user(0);
+				}
             }
         }
+		else if (Player.ultra_got[108] && instance_exists(Hand) && point_distance(x, y, Hand.x, Hand.y) < 77 + Player.betterpluto)
+		{
+			if place_free(x + lengthdir_x(12, point_direction(x, y, Hand.x, Hand.y)), y)
+				x += lengthdir_x(12, point_direction(x, y, Hand.x, Hand.y))
+            if place_free(x, y + lengthdir_y(12, point_direction(x, y, Hand.x, Hand.y)))
+				y += lengthdir_y(12, point_direction(x, y, Hand.x, Hand.y))
+			if place_meeting(x,y,Hand)
+			{
+				event_user(0);
+			}
+		}
         else
+		{
             isGettingSucked = false;
+			if place_meeting(x,y,Player)
+			{
+				event_user(0);	
+			}
+		}
     }
 
 

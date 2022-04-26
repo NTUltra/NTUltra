@@ -1,5 +1,4 @@
 /// @description Start Ballboss waves
-debug("Good start!");
 if instance_exists(BecomeBallBoss)
 {
 	centerX = BushBoxStatue.x;

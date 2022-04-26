@@ -33,10 +33,12 @@ if sprite_index == sprAmmo {
 	if cursed {
 		sprite_index = sprCursedAmmo
 		alarm[0] -= 100
+		alarm[3] = 5;
 	}
 
 	if supercursed {
 		sprite_index = sprSuperCursedAmmo
 		alarm[0] -= 40
+		alarm[3] = 5;
 	}
 }

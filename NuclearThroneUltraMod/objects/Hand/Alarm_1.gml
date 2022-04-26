@@ -52,25 +52,32 @@ if target > 0 && instance_exists(target)
 			BackCont.viewy2 += lengthdir_y(6,point_direction(creator.x,creator.y,x,y)+180)*UberCont.opt_shake
 			BackCont.shake += 15;	
 		}
-		with target
+		if grabbingPickup
 		{
-			if team != 0
+			target = -1;
+		}
+		else
+		{
+			with target
 			{
-				snd_play(snd_hurt, hurt_pitch_variation,true);
-				my_health -= other.dmg*2;
-				if alarm[1] > 1
-					alarm[1] += 5;
-				sprite_index = spr_hurt;
-				image_index = 0;
-			}
-			if (size > 2 && !other.push) || size > 3
-			{
-				other.target = -1;
-			}
-			if other.push
-			{
-				direction = other.pushDirection;
-				speed = other.pushSpeed/max(1,(size*0.5));
+				if team != 0
+				{
+					snd_play(snd_hurt, hurt_pitch_variation,true);
+					my_health -= other.dmg*2;
+					if alarm[1] > 1
+						alarm[1] += 5;
+					sprite_index = spr_hurt;
+					image_index = 0;
+				}
+				if (size > 2 && !other.push) || size > 3
+				{
+					other.target = -1;
+				}
+				if other.push
+				{
+					direction = other.pushDirection;
+					speed = other.pushSpeed/max(1,(size*0.5));
+				}
 			}
 		}
 	}
@@ -90,4 +97,3 @@ else
 	alarm[2] = 4;	
 }
 
-debug("aalerpTime",lerpTime);

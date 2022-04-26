@@ -5,6 +5,7 @@ function scrPowers() {
 	{
 		if race == 27 && !instance_exists(Hand)//Hands
 		{
+			var targetPickup = false;
 			var grabRange = 40;
 			var d1 = 999;
 			var d2 = 999;
@@ -40,6 +41,20 @@ function scrPowers() {
 					resulttar = tar;
 				}
 			}
+			if ultra_got[108] && resulttar == -1
+			{
+				//Allow pickups to be picked up
+				if instance_exists(Pickup)
+				{
+					tar = instance_nearest(mouse_x,mouse_y,Pickup);
+					var d4 = point_distance(mouse_x,mouse_y,tar.x,tar.y);
+					if (d4 < grabRange)
+					{
+						resulttar = tar;
+						targetPickup = true;
+					}
+				}
+			}
 			if resulttar > -1 && instance_exists(resulttar)
 			{
 				BackCont.viewx2 += lengthdir_x(10,point_direction(x,y,resulttar.x,resulttar.y))*UberCont.opt_shake
@@ -47,10 +62,36 @@ function scrPowers() {
 				BackCont.shake += 5;
 				with instance_create(x,y,Hand)
 				{
+					grabbingPickup = targetPickup;
 					team = other.team;
 					creator = other.id;
 					target = resulttar;
 					lerpDistance = point_distance(x,y,target.x,target.y);
+					if other.ultra_got[108]
+					{
+						if scrIsInInvertedArea()
+						{
+							if (grabbingPickup)
+							{
+								lerpSpeed *= 4;	
+							}
+							else
+							{
+								lerpSpeed *= 3;
+							}
+						}
+						else
+						{
+							if (grabbingPickup)
+							{
+								lerpSpeed *= 3;	
+							}
+							else
+							{
+								lerpSpeed *= 2;
+							}
+						}
+					}
 					if other.skill_got[5] && grabbedEnemy
 					{
 						push = true;
@@ -59,10 +100,16 @@ function scrPowers() {
 						lerpCalc = min(1,lerpSpeed/lerpDistance);//Consistent speed
 						lerpCalcBack = lerpCalc*0.8;
 					}
-					else
+					else if !grabbingPickup
 					{
 						lerpCalc = min(1,lerpSpeed/lerpDistance);//Consistent speed
 						lerpCalcBack = (lerpCalc/target.size)*0.8;
+					}
+					else//ULTRA D
+					{
+						
+						lerpCalc = min(1,(lerpSpeed)/lerpDistance);
+						lerpCalcBack = lerpCalc;
 					}
 				}
 			}

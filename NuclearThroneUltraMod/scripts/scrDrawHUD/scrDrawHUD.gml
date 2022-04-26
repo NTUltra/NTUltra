@@ -986,7 +986,7 @@ function scrDrawHUD() {
 			//Ultra mod destription
 			if holdExplainTimer > 30
 			{
-				var yy = y + 16;
+				var yy = y + 32;
 				draw_set_color(c_black)
 				draw_text(x+16,yy,string_hash_to_newline(string(moddescription)))
 				draw_text(x+17,yy,string_hash_to_newline(string(moddescription)))
