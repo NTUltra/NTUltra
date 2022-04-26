@@ -23,7 +23,7 @@ scrDrop(200,0)
 
 scrDrop(0,10)
 
-scrBusinessHogGoldChest();
+scrBossKill();
 
 
 //drop oopsgun?

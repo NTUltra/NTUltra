@@ -9,7 +9,7 @@ if alarm[5] >  0
 }
 
 Sleep(200)
-scrBusinessHogGoldChest();
+scrBossKill();
 instance_create(x,y,ChesireCatExplosion);
 scrDefeatedRequiredBoss(secretChallengeBosses.chesireCat);
 scrDrop(100,0)

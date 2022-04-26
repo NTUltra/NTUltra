@@ -555,10 +555,10 @@ function scrWeapons() {
 	wep_name[50] = "FLAMETHROWER"
 	wep_type[50] = 4
 	wep_auto[50] = 1
-	wep_load[50] = 6
+	wep_load[50] = 7
 	wep_cost[50] = 1
 	wep_sprt[50] = sprFlameThrower
-	wep_area[50] = 6
+	wep_area[50] = 5
 	wep_text[50] = "burn burn burn"
 	wep_swap[50] = sndSwapFlame
 	wep_rad[50] = 0;
@@ -1602,7 +1602,7 @@ function scrWeapons() {
 	wep_swap[144] = sndSwapEnergy
 	wep_rad[144] = 0;
 
-	wep_name[145] = "LINE OF FIRE"
+	wep_name[145] = "FIRE LINE"
 	wep_type[145] = 4
 	wep_auto[145] = 0
 	wep_load[145] = 15
@@ -1811,7 +1811,7 @@ function scrWeapons() {
 	wep_swap[163] = sndSwapMachinegun
 	wep_rad[163] = 0;
 
-	wep_name[164] = "LINE OF BLOOD"
+	wep_name[164] = "BLOOD LINE"
 	wep_type[164] = 4
 	wep_auto[164] = 0
 	wep_load[164] = 15
@@ -3046,7 +3046,7 @@ function scrWeapons() {
 	wep_name[276] = "GOLDEN FLAMETHROWER"
 	wep_type[276] = 4
 	wep_auto[276] = 1
-	wep_load[276] = 7
+	wep_load[276] = 8
 	wep_cost[276] = 1
 	wep_sprt[276] = sprGoldenFlameThrower
 	wep_area[276] = 18

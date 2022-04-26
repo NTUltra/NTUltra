@@ -15,7 +15,7 @@ if !isOneWeaponOnlyModes()
 	}
 }
 event_inherited()
-scrBusinessHogGoldChest();
+scrBossKill();
 repeat(5+irandom(6))
 {
 	with instance_create(x,y,RavenFeather)

@@ -13,6 +13,39 @@ draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*2,y,1,bwepright,90+15*right
 
 if wep_type[wep] = 3 and wep != 18
 {
+	if wep == 399 //Wrong direction
+	{
+		
+		lasd = 0
+		var aimDir = point_direction(x,y,mouse_x,mouse_y);
+		var sx = x + lengthdir_x(8,aimDir);
+		var sy = y + lengthdir_y(8,aimDir);
+		lasx = sx
+		lasy = sy
+		aimDir += 90
+		do {lasd += 1 lasx += lengthdir_x(2,aimDir) lasy += lengthdir_y(2,aimDir)}
+		until position_meeting(lasx,lasy,Wall) or lasd > 1000
+		draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,1,aimDir,c_white,1)
+		lasx = sx
+		lasy = sy
+		lasd = 0
+		var aimDir = point_direction(x,y,mouse_x,mouse_y) - 90
+		do {lasd += 1 lasx += lengthdir_x(2,aimDir) lasy += lengthdir_y(2,aimDir)}
+		until position_meeting(lasx,lasy,Wall) or lasd > 1000
+		draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,1,aimDir,c_white,1)
+	}
+	else
+	{
+		lasx = x
+		lasy = y
+		lasd = 0
+		var aimDir = point_direction(x,y,mouse_x,mouse_y)
+		do {lasd += 1 lasx += lengthdir_x(2,aimDir) lasy += lengthdir_y(2,aimDir)}
+		until position_meeting(lasx,lasy,Wall) or lasd > 1000
+	
+		draw_sprite_ext(sprLaserSightPlayer,-1,x,y,point_distance(x,y,lasx,lasy)/2+2,1,point_direction(x,y,mouse_x,mouse_y),c_white,1)
+	}
+	/*
 lasx = x
 lasy = y
 lasd = 0
@@ -20,6 +53,7 @@ do {lasd += 1 lasx += lengthdir_x(2,point_direction(x,y,mouse_x,mouse_y)) lasy +
 until position_meeting(lasx,lasy,Wall) or lasd > 1000
 
 draw_sprite_ext(sprLaserSightPlayer,-1,x,y,point_distance(x,y,lasx,lasy)/2+2,1,point_direction(x,y,mouse_x,mouse_y),c_white,1)
+*/
 }
 
 

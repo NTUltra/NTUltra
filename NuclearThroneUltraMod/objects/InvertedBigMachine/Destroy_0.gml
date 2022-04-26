@@ -9,7 +9,7 @@ if race = 7
 
 }
 
-scrBusinessHogGoldChest();
+scrBossKill();
 
 with instance_create(x,y,BigDogExplo)
 	visible = false;

@@ -1,5 +1,5 @@
 /// @description Cycle through skills
-if place_meeting(x,y,Player) && ! used
+if place_meeting(x,y,Player) && !used
 {
 	if !active
 	{

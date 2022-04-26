@@ -21,7 +21,7 @@ with Player
 scrUnlockCSkin(11,"FOR DEFEATING INVERTED LIL' HUNTER#IN HUNTER ONLY SHOOT WHEN MARKED",12)
 
 }
-scrBusinessHogGoldChest();
+scrBossKill();
 scrDrop(200,0)
 scrDrop(10,2)
 instance_create(x,y,Explosion)

@@ -1,15 +1,48 @@
 instance_create(x,y,CrownPed)
-
+var visits = 0;
+if instance_exists(Player)
+	visits = Player.crownvisits-1;
+if UberCont.canSave
+	visits = 0;
 instance_create(x-16-64,y-16,Floor)
-instance_create(x-16-64,y-16-32,Floor)
+with instance_create(x-16-64,y-16-32,Floor)
+{
+	if visits > 0
+	{
+		sprite_index = sprFloor100UltraStory1;
+		image_index = 0;
+	}
+}
 instance_create(x-16-64,y-16-64,Floor)
-instance_create(x-16-64,y-16+32,Floor)
+with instance_create(x-16-64,y-16+32,Floor)
+{
+	if visits > 4
+	{
+		sprite_index = sprFloor100UltraStory1;
+		image_index = 3;
+	}
+}
 instance_create(x-16-64,y-16+64,Floor)
 
+
 instance_create(x-16+64,y-16,Floor)
-instance_create(x-16+64,y-16-32,Floor)
+with instance_create(x-16+64,y-16-32,Floor)
+{
+	if visits > 1
+	{
+		sprite_index = sprFloor100UltraStory1;
+		image_index = 1;
+	}
+}
 instance_create(x-16+64,y-16-64,Floor)
-instance_create(x-16+64,y-16+32,Floor)
+with instance_create(x-16+64,y-16+32,Floor)
+{
+	if visits > 3
+	{
+		sprite_index = sprFloor100UltraStory1;
+		image_index = 2;
+	}
+}
 instance_create(x-16+64,y-16+64,Floor)
 
 
@@ -18,10 +51,21 @@ instance_create(x-16-32,y-16+64,Floor)
 instance_create(x-16+32,y-16+64,Floor)
 
 
-instance_create(x-16,y-16-64,Floor)
+with instance_create(x-16,y-16-64,Floor)
+{
+	if visits > 6
+	{
+		sprite_index = sprFloor100UltraStory1;
+		image_index = 4;
+	}
+	else if UberCont.canSave && instance_exists(Player)
+	{
+		sprite_index = sprFloor100UltraStory2;
+		image_index = Player.race - 1;
+	}
+}
 instance_create(x-16-32,y-16-64,Floor)
 instance_create(x-16+32,y-16-64,Floor)
-
 
 
 instance_create(x-16,y-16-32,Floor)

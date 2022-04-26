@@ -9,7 +9,7 @@ scrUnlockBSkin(7,"FOR DEFEATING THE BIG MACHINE#ON LOOP AS STEROIDS",0);
 
 }
 
-scrBusinessHogGoldChest();
+scrBossKill();
 
 with instance_create(x,y,BigDogExplo)
 	visible = false;

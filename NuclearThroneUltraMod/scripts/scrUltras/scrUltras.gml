@@ -11,10 +11,10 @@ function scrUltras() {
 	ultra_tips[1] = "that's mine"
 
 	ultra_name[2] = "GUN WARRANT"
-	ultra_text[2] = "INFINITE AMMO THE FIRST 10 SECONDS#OF ENTERING A LEVEL"
+	ultra_text[2] = "INFINITE AMMO THE FIRST 7 SECONDS#OF ENTERING A LEVEL#KILLING A BOSS GIVES#ANOTHER 7 SECONDS OF INFINITE AMMO"
 	ultra_tips[2] = "bringer of order"
 
-	ultra_name[3] = "BROTHERS IN ARMS"
+	ultra_name[3] = "BUDDY COP"
 	ultra_text[3] = "GET A COMPANION"
 	ultra_tips[3] = choose("I missed you partner","partner stays close to you#when you reload#if not it'll go out aggro")
 

@@ -15,7 +15,7 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 
 }
-scrBusinessHogGoldChest();
+scrBossKill();
 scrDrop(200,0)
 scrDrop(10,2)
 instance_create(x,y,Explosion)

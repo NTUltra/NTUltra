@@ -23,5 +23,5 @@ if instance_exists(Player)
 
 scrEnemyDeathEvent();
 scrEndBoss();
-scrBusinessHogGoldChest();
+scrBossKill();
 Sleep(200)

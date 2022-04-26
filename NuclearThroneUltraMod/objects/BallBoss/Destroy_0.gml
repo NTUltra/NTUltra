@@ -1,6 +1,7 @@
 scrDrop(100,0)
 snd_play(sndExplosionXXL);
 instance_create(x,y,GreenExplosion);
+scrBossKill();
 var am = 4;
 var angstep = 360/am;
 var dir = random(360);

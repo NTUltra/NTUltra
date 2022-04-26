@@ -1,7 +1,7 @@
 scrDrop(20,0)
 scrDrop(80,0)
 
-scrBusinessHogGoldChest();
+scrBossKill();
 event_inherited()
 scrDefeatedRequiredBoss(secretChallengeBosses.bigAssassin);
 with Corpse
