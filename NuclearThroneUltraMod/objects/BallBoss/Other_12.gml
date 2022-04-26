@@ -26,6 +26,7 @@ repeat(am)
 	ang += angStep;
 }
 scrDrop(20,0);
+scrRaddrop(4);
 spinAttackAmmo = spinAttackMaxAmmo;
 alarm[6] = spinAttackFireRate;
 alarm[1] += spinAttackFireRate-2;

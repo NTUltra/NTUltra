@@ -24,10 +24,14 @@ if target > 0 {
 		event_user(1);
 		alarm[1] = alarm[5] + actTime;
 	}
-	else if ran > 60
+	else if ran > 60 && (collision_line(x,y,target.x,target.y,Wall,0,0) < 0 || ran < 62)
 	{
 		//SPINNNIIIIINGG BULLEETS
 		event_user(2);
+	}
+	else if ran > 50
+	{
+		scrDrop(10,0);
 	}
 
 }

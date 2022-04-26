@@ -33,8 +33,12 @@ instance_create(x,y,OptionSelect2)
 instance_create(x,y,UpdateSelect)
 instance_create(x,y,Cheatcode);
 //If savefile found
-with instance_create(x,y,LoadSelect)
-	depth = other.depth - 5;
+var fileString ="ntultrarun1.sav";
+if (file_exists(fileString))
+{
+	with instance_create(x,y,LoadSelect)
+		depth = other.depth - 5;
+}
 exit;
 }
 }

@@ -355,7 +355,7 @@ wave[i] = {
 i++
 //Start it
 waveLength = array_length(wave);
-alarm[1] = 1;
-exit;
+//alarm[1] = 1; Skip for debug purposes
+//exit;
 alarm[3] = 5;//Tell time is the difference between these two numbers
 alarm[0] = 20;
