@@ -50,6 +50,17 @@ if !cursed {
 				event_user(0);
 			}
 		}
+		else if instance_exists(YungCuzDupe) && point_distance(x, y, YungCuzDupe.x, YungCuzDupe.y) < 77 + Player.betterpluto
+		{
+			if place_free(x + lengthdir_x(12, point_direction(x, y, YungCuzDupe.x, YungCuzDupe.y)), y)
+				x += lengthdir_x(12, point_direction(x, y, YungCuzDupe.x, YungCuzDupe.y))
+            if place_free(x, y + lengthdir_y(12, point_direction(x, y, YungCuzDupe.x, YungCuzDupe.y)))
+				y += lengthdir_y(12, point_direction(x, y, YungCuzDupe.x, YungCuzDupe.y))
+			if place_meeting(x,y,YungCuzDupe)
+			{
+				event_user(0);
+			}
+		}
 	}
 } else if supercursed {
 	if instance_exists(Player) {
@@ -74,6 +85,13 @@ else//Cursed
 	} else if (Player.ultra_got[108] && instance_exists(Hand))
 	{
 		if place_meeting(x,y,Hand)
+		{
+			event_user(0);
+		}
+	}
+	else if instance_exists(YungCuzDupe)
+	{
+		if place_meeting(x,y,YungCuzDupe)
 		{
 			event_user(0);
 		}

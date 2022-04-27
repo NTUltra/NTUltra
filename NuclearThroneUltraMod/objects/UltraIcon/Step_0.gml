@@ -47,7 +47,7 @@ with Player
 if skill_got[13]//long arms
 {
 
-bettermelee=1.1;
+bettermelee=1.5;
 
 }
 if skill_got[16]//RecycleGland
@@ -56,7 +56,7 @@ betterrecyclegland=0.26;
 }
 if skill_got[17]//LaserBrain
 {
-betterlaserbrain=2.1;
+betterlaserbrain=2;
 }
 if skill_got[21]//bolt marrow
 {

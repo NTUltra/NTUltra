@@ -3,7 +3,7 @@ function scrPowers() {
 	/////SHIT PRESSED////////
 	if KeyCont.key_spec[p] = 1
 	{
-		if race == 27 && !instance_exists(Hand)//Hands
+		if race == 27 && (!instance_exists(Hand) || (ultra_got[107] && instance_number(Hand) < 2 || (scrIsInInvertedArea() && instance_number(Hand) < 2)))//Hands
 		{
 			var targetPickup = false;
 			var grabRange = 40;
@@ -62,6 +62,10 @@ function scrPowers() {
 				BackCont.shake += 5;
 				with instance_create(x,y,Hand)
 				{
+					if other.ultra_got[107]
+					{
+						alarm[3] = 1;//Destroy projectiles
+					}
 					grabbingPickup = targetPickup;
 					team = other.team;
 					creator = other.id;

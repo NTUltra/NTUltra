@@ -4977,6 +4977,62 @@ function scrWeapons() {
 	wep_swap[450] = sndSwapMachinegun
 	wep_rad[450] = 0;
 	
+	wep_name[451] = "JAW CRUSHER"
+	wep_type[451] = 2
+	wep_auto[451] = 0
+	wep_load[451] = 17
+	wep_cost[451] = 2
+	wep_sprt[451] = sprJawbreaker
+	wep_area[451] = 9
+	wep_text[451] = ""
+	wep_swap[451] = sndSwapShotgun
+	wep_rad[451] = 0;
+	
+	wep_name[452] = "JAW OBLITERATOR"
+	wep_type[452] = 2
+	wep_auto[452] = 0
+	wep_load[452] = 12
+	wep_cost[452] = 3
+	wep_sprt[452] = sprJawbreaker
+	wep_area[452] = 18
+	wep_text[452] = "why is the jaw so hated?"
+	wep_swap[452] = sndSwapShotgun
+	wep_rad[452] = 0;
+	
+	wep_name[453] = "DOUBLE MINI PLASMA RIFLE"
+	wep_type[453] = 5
+	wep_auto[453] = 1
+	wep_load[453] = 6
+	wep_cost[453] = 2
+	wep_sprt[453] = sprMiniPlasmaRifle
+	wep_area[453] = 14
+	wep_text[453] = ""
+	wep_swap[453] = sndSwapEnergy
+	wep_rad[453] = 0;
+	
+	wep_name[454] = "FLAME DIRECTOR JAW ERASER"
+	wep_type[454] = 2
+	wep_auto[454] = 0
+	wep_load[454] = 18
+	wep_cost[454] = 4
+	wep_sprt[454] = sprFlameDirectorEraser
+	wep_area[454] = 16//6
+	wep_text[454] = "jaw is erased"
+	wep_swap[454] = sndSwapShotgun
+	wep_rad[454] = 0;
+	
+	wep_name[455] = "SCYTHE"
+	wep_type[455] = 0
+	wep_auto[455] = 0
+	wep_load[455] = 22
+	wep_cost[455] = 0
+	wep_sprt[455] = sprWrench
+	wep_area[455] = 7
+	wep_text[455] = "spin attack!"
+	wep_swap[455] = sndSwapHammer
+	wep_rad[455] = 0;
+
+	
 	/*
 	wep_name[444] = "DRILL GUN"
 	wep_type[444] = 4

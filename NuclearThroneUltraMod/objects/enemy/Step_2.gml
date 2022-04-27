@@ -29,23 +29,28 @@ target=-1;
 
 ///Damage indicator
 
-
-if instance_exists(Player)
+if prevhealth>my_health
 {
-    if (UberCont.opt_dmgindicator && !instance_exists(SpiralCont))
-    {
-		if prevhealth>my_health
+	var dmgTaken = prevhealth-my_health;//Damage increase
+	if instance_exists(Player)
+	{
+		if Player.ultra_got[105]
 		{
-            with instance_create(x+irandom(16)-16,y+irandom(16)-16,PopupText)
-            {
-            theColour=c_orange;
-            mytext=string(other.prevhealth-other.my_health)
-            time = 6
-            alarm[1]=1;
-            blink=false;
-            vspeed = irandom(3)-1
-            hspeed= irandom(3)-1
-            }
-        }
-    }
+			dmgTaken = scrHandsDamageBuff(dmgTaken);
+			my_health = prevhealth - dmgTaken;
+		}
+	    if (UberCont.opt_dmgindicator && !instance_exists(SpiralCont))
+	    {
+	        with instance_create(x+irandom(16)-16,y+irandom(16)-16,PopupText)
+	        {
+	        theColour=c_orange;
+	        mytext=string(dmgTaken)
+	        time = 6
+	        alarm[1]=1;
+	        blink=false;
+	        vspeed = irandom(3)-1
+	        hspeed= irandom(3)-1
+	        }
+	    }
+	}
 }
