@@ -2,13 +2,18 @@
 // /@description
 ///@param
 function scrHandsDamageBuff(dmgTaken){
-	if scrIsInInvertedArea()
+	var dis = point_distance(x,y,Player.x,Player.y);
+	if dis < 128
 	{
-		//Probably add a min in also because division by 0 error
-		return dmgTaken + (dmgTaken/(point_distance(x,y,Player.x,Player.y)*20))*200;
+		//dis *= 2
+		if scrIsInInvertedArea()
+		{
+			return dmgTaken + (dmgTaken/max(40,dis))*60;
+		}
+		else
+		{
+			return dmgTaken + (dmgTaken/max(40,dis))*40;
+		}
 	}
-	else
-	{
-		return dmgTaken + (dmgTaken/(point_distance(x,y,Player.x,Player.y)*20))*200;
-	}
+	return dmgTaken;
 }

@@ -16,25 +16,6 @@ if ( (Player.skill_got[5] = 1) && (Player.race=11) && (other.team=2))//HUNTER TH
     }
 }
 
-if ( (Player.ultra_got[71] == 1) && (other.team==2)) //ANGEL Ultra tranquility
-{
-    
-    if Player.my_health=Player.maxhealth && Player.tranquilitydelay<1
-    {
-    
-    repeat(3+irandom(2) )
-    {with instance_create(x+random(16)-8,y+random(16)-8,Feather)
-    motion_add(random(360),5+random(10) );}
-    
-    my_health-=8;
-    
-    Player.tranquilitydelay=18;
-    }
-    
-       
-    
-}
-
 //HUNTERS A ULTRA
 if ( (Player.race==11)&&(Player.ultra_got[41]==1)   )
 {

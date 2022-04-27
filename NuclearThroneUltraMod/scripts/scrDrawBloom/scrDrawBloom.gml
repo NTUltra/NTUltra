@@ -236,21 +236,52 @@ function scrDrawBloom() {
 	{
 		draw_sprite_ext(bloomSprite,imageIndex,x,y,(Player.sheepPower/10)+1,(Player.sheepPower/10)+1,image_angle,c_white,clamp(alpha*0.3,0.05,0.3));
 	}
-	if ( (Player.race==11)&&(Player.ultra_got[41]==1)   )
-	{
-	    with enemy
-	    {
-	        if(point_distance(x,y,Player.x,Player.y)>100)
-	        {
-	        draw_sprite_ext(sprHunterUltraBMark,-1,x,y,size,size,image_angle,c_green,0.2);
-	        }
-	        else
-	        {
-	        draw_sprite_ext(sprHunterUltraBMark,-1,x,y,size,size,image_angle,c_green,0.05);
-	        }
+		if Player.ultra_got[41]==1
+		{
+		    with enemy
+		    {
+		        if(point_distance(x,y,Player.x,Player.y)>100)
+		        {
+		        draw_sprite_ext(sprHunterUltraBMark,-1,x,y,size,size,image_angle,c_green,0.2);
+		        }
+		        else
+		        {
+		        draw_sprite_ext(sprHunterUltraBMark,-1,x,y,size,size,image_angle,c_green,0.05);
+		        }
         
-	    }
-	}
+		    }
+		}
+		if Player.ultra_got[105]==1
+		{
+			var ab = 1;
+			var xs = 1;
+			var ys = 1;
+			if scrIsInInvertedArea()
+			{
+				ab = 1.3;
+				xs += 0.1;
+				ys += 0.1;
+			}
+			
+		    with enemy
+		    {
+				var d = max(40,point_distance(x,y,Player.x,Player.y))
+				var ixs = xs;
+				var iys = ys;
+		        if(d < 128)
+		        {
+					var a = 0.95 - d*0.007//clamp(32/max(40,d),0.01,0.8);
+					if d == 40
+					{
+						a += 0.1;
+						ixs += 0.1;
+						iys += 0.1;
+					}
+					a *= ab;
+					draw_sprite_ext(sprGammaGuts,-1,x,y,ixs,iys,image_angle,c_white,a);
+		        }
+		    }
+		}
 	}
 
 	with Laser

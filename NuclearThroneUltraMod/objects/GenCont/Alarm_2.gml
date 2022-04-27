@@ -10,7 +10,24 @@ if Player.area = 3 and Player.subarea = 3
 	var nn = instance_nearest(n.x+lengthdir_x(ds,d),n.y+lengthdir_y(ds,d),Floor);
 	instance_create(nn.x+16,nn.y+16,DragonSkull);
 }
-
+if Player.area == 101 and Player.subarea == 3
+{
+	var mindis = 232;
+	var thisMany = 3;
+	if instance_exists(Player)
+	do {
+		with Floor
+		{
+			var xx = x + 16;
+			var yy = y + 16;
+			if !instance_exists(CarVenusOasis) && point_distance(xx,yy,Player.x,Player.y > mindis) && styleb
+			{
+				instance_create(xx,yy,CarVenusOasis);
+			}
+		}
+		mindis -= 32;
+	} until (instance_exists(CarVenusOasis) || mindis < 64)
+}
 if Player.area = 106 and Player.subarea = 3
 {
 instance_create(instance_furthest(Player.x,Player.y,Floor).x+16, instance_furthest(Player.x,Player.y,Floor).y+16,BecomeInvertedScrapBoss)

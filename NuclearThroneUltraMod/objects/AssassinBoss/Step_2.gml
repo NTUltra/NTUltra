@@ -14,7 +14,7 @@ if fakeded > 0
 		EnemyHealthAdjustments();
 		snd_play_2d(sndAssassinGetUp)
 		sprite_index = spr_respawn;
-		if !audio_is_playing(musAssassinBoss)
+		if !audio_is_playing(musAssassinBoss) && !instance_exists(SurvivalWave)
 		{
 			with MusCont
 			{

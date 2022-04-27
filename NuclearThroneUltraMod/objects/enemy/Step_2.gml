@@ -29,7 +29,7 @@ target=-1;
 
 ///Damage indicator
 
-if prevhealth>my_health
+if prevhealth>my_health && !instance_exists(SpiralCont)
 {
 	var dmgTaken = prevhealth-my_health;//Damage increase
 	if instance_exists(Player)
@@ -39,7 +39,20 @@ if prevhealth>my_health
 			dmgTaken = scrHandsDamageBuff(dmgTaken);
 			my_health = prevhealth - dmgTaken;
 		}
-	    if (UberCont.opt_dmgindicator && !instance_exists(SpiralCont))
+		if (Player.ultra_got[71] == 1) //ANGEL Ultra tranquility
+		{
+		    if Player.my_health >= Player.maxhealth
+		    {
+				dmgTaken *= 1.75;
+			    repeat(max(1,ceil(dmgTaken*0.2)))
+			    {
+					with instance_create(x+random(16)-8,y+random(16)-8,Feather)
+						motion_add(random(360),5+random(10) );
+				}
+				my_health = prevhealth - dmgTaken;
+		    }
+		}
+	    if UberCont.opt_dmgindicator
 	    {
 	        with instance_create(x+irandom(16)-16,y+irandom(16)-16,PopupText)
 	        {

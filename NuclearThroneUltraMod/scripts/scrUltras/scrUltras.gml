@@ -334,7 +334,7 @@ function scrUltras() {
 	    ultra_tips[70] = "emo style"
     
 	    ultra_name[71] = "TRANQUILITY"
-	    ultra_text[71] = "WHEN AT FULL HEALTH#YOU DEAL MORE DAMAGE"
+	    ultra_text[71] = "WHEN AT OR ABOVE FULL HEALTH#YOU DEAL 50% MORE DAMAGE"
 	    ultra_tips[71] = "experience tranquility"
     
 	    ultra_name[72] = "ASCENT"
