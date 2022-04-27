@@ -61,7 +61,7 @@ alarm[1]=2;
 
 speed+=12;
 maxspeed = 16;
-direction=point_direction(x,y,mouse_x,mouse_y);
+direction=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 originalDirection = direction;
 resetSpeed = false;
 with instance_create(x,y,PlasmaImpact)

@@ -4,7 +4,7 @@
 //if aimed=false
 //{
 /*aimed=true;
-var Direction=point_direction(x,y,mouse_x,mouse_y);
+var Direction=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 target=instance_nearest(x+lengthdir_x(80,Direction),y+lengthdir_y(80,Direction),enemy);// nearest in direction of cursor
 
 if instance_exists(target)

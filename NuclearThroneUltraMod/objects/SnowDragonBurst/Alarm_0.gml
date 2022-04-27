@@ -12,14 +12,14 @@ y = creator.y
 repeat(2)
 {
 with instance_create(x,y,IceFlame)
-{motion_add(point_direction(x,y,mouse_x,mouse_y)+random(10)-5,10+random(3))
+{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5,10+random(3))
 team = other.team
 move_contact_solid(direction,14)}
 }
 repeat(2)
 {
 with instance_create(x,y,IceFlame)
-{motion_add(point_direction(x,y,mouse_x,mouse_y)+random(10)-5+8,9+random(3))
+{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5+8,9+random(3))
 team = other.team
 move_contact_solid(direction,14)}
 }
@@ -27,14 +27,14 @@ move_contact_solid(direction,14)}
 repeat(2)
 {
 with instance_create(x,y,IceFlame)
-{motion_add(point_direction(x,y,mouse_x,mouse_y)+random(10)-5-8,9+random(3))
+{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5-8,9+random(3))
 team = other.team
 move_contact_solid(direction,14)}
 }
 
 
-BackCont.viewx2 += lengthdir_x(3,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
-BackCont.viewy2 += lengthdir_y(3,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+BackCont.viewx2 += lengthdir_x(3,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+BackCont.viewy2 += lengthdir_y(3,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 BackCont.shake += 1
 wkick = 4}
 

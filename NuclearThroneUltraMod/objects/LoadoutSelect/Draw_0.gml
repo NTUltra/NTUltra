@@ -29,7 +29,7 @@ if (wepmenuopen) {
 		var selected = false;
 		if UberCont.start_wep_have[wepiter,race]=1
 		{
-			if (mouse_x > l && mouse_x < r && mouse_y > t && mouse_y < b)
+			if (UberCont.mouse__x > l && UberCont.mouse__x < r && UberCont.mouse__y > t && UberCont.mouse__y < b)
 			{
 				xx += 1;
 				yy -= 2;
@@ -72,7 +72,7 @@ if (wepmenuopen) {
 	var o = 10;
 	if UberCont.ctot_all_crowns_taken[Menu.race] > 0
 	{
-		if (mouse_x > xx-o && mouse_x < xx+o && mouse_y > yy-o && mouse_y < yy+o)
+		if (UberCont.mouse__x > xx-o && UberCont.mouse__x < xx+o && UberCont.mouse__y > yy-o && UberCont.mouse__y < yy+o)
 		{
 			if mouse_check_button_pressed(mb_left)
 			{

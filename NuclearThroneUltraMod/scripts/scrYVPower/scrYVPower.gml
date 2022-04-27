@@ -68,9 +68,9 @@ function scrYVPower(){
 
 			}
 			reload *= 1.9+Player.skill_got[5]*1.4//added reload time
-			motion_add(point_direction(x,y,mouse_x,mouse_y)+180,4)
-			BackCont.viewx2 += lengthdir_x(8,point_direction(x,y,mouse_x,mouse_y))
-			BackCont.viewy2 += lengthdir_y(8,point_direction(x,y,mouse_x,mouse_y))
+			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180,4)
+			BackCont.viewx2 += lengthdir_x(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y))
+			BackCont.viewy2 += lengthdir_y(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y))
 			BackCont.shake += 1}
 
 

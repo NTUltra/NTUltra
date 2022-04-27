@@ -20,7 +20,7 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 			motion_add(other.image_angle,4)
 			if other.ion=true
 			{
-				instance_create(mouse_x,mouse_y,MeatExplosion)
+				instance_create(UberCont.mouse__x,UberCont.mouse__y,MeatExplosion)
 				
 				with instance_create(x,y,BloodStreak){
 					image_angle = random(360);

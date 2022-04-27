@@ -11,12 +11,12 @@ draw_sprite(sprite_index,/*UberCont.opt_gamemode*/1,x+20,y)
 
 /*draw_sprite(sprite_index,UberCont.opt_fulscrn,x,y)
 
-if mouse_check_button_pressed(mb_left) and mouse_x > x and mouse_x < x+8 and mouse_y > y and mouse_y < y+8
+if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x and UberCont.mouse__x < x+8 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
 {
 if UberCont.opt_freeze > 0
 UberCont.opt_freeze -= 0.1
 }
-if mouse_check_button_pressed(mb_left) and mouse_x > x+10 and mouse_x < x+18 and mouse_y > y and mouse_y < y+8
+if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x+10 and UberCont.mouse__x < x+18 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
 {
 if UberCont.opt_freeze < 4
 UberCont.opt_freeze += 0.1

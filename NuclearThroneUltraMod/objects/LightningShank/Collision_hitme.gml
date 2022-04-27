@@ -14,7 +14,7 @@ else
 snd_play(sndLightning1)
 
 with instance_create(other.x,other.y,Lightning)
-{image_angle = point_direction(x,y,mouse_x,mouse_y)+(random(30)-15)
+{image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(30)-15)
 team = other.team
 ammo = 8
 event_perform(ev_alarm,0)

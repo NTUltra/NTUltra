@@ -15,8 +15,8 @@ function scrPowers() {
 			var grabbedEnemy = false;
 			if instance_exists(chestprop)
 			{
-				tar = instance_nearest(mouse_x,mouse_y,chestprop);
-				d1 = point_distance(mouse_x,mouse_y,tar.x,tar.y)
+				tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,chestprop);
+				d1 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y)
 				if d1 < grabRange
 				{
 					resulttar = tar;
@@ -24,8 +24,8 @@ function scrPowers() {
 			}
 			if instance_exists(RadChest)
 			{
-				tar = instance_nearest(mouse_x,mouse_y,RadChest);
-				d2 = point_distance(mouse_x,mouse_y,tar.x,tar.y) 
+				tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,RadChest);
+				d2 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y) 
 				if d2 < grabRange && d2 < d1
 				{
 					resulttar = tar;
@@ -33,8 +33,8 @@ function scrPowers() {
 			}
 			if instance_exists(enemy)
 			{
-				tar = instance_nearest(mouse_x,mouse_y,enemy);
-				d3 = point_distance(mouse_x,mouse_y,tar.x,tar.y);
+				tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
+				d3 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);
 				if (tar.team != 0 && tar.team != team && d3 < grabRange && d3 < d2 && d3 < d1)
 				{
 					grabbedEnemy = true;
@@ -46,8 +46,8 @@ function scrPowers() {
 				//Allow pickups to be picked up
 				if instance_exists(Pickup)
 				{
-					tar = instance_nearest(mouse_x,mouse_y,Pickup);
-					var d4 = point_distance(mouse_x,mouse_y,tar.x,tar.y);
+					tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,Pickup);
+					var d4 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);
 					if (d4 < grabRange)
 					{
 						resulttar = tar;
@@ -239,7 +239,7 @@ function scrPowers() {
 		audio_stop_sound(sndMutant0Slct)
 		audio_sound_pitch(sndMutant0Slct,random_range(0.6,0.9))
 		audio_play_sound(sndMutant0Slct,90,0)
-		instance_create(mouse_x,mouse_y,Infect);
+		instance_create(UberCont.mouse__x,UberCont.mouse__y,Infect);
 		if skill_got[5]
 		{
 			rad -= 9;
@@ -320,7 +320,7 @@ function scrPowers() {
 	    scrBlankArmour();
     
 	    with instance_create(x,y,ArmourStrike)
-	    {image_angle = point_direction(x,y,mouse_x,mouse_y)
+	    {image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
 	    Originalangle=image_angle;
 	    team = other.team
 	    ammo = 100;
@@ -336,7 +336,7 @@ function scrPowers() {
 	    {
     
 	    with instance_create(x,y,ArmourStrike)
-	    {image_angle = point_direction(x,y,mouse_x,mouse_y)-20
+	    {image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)-20
 	    Originalangle=image_angle;
 	    team = other.team
 	    ammo = 100;
@@ -349,7 +349,7 @@ function scrPowers() {
 	    }}
     
 	    with instance_create(x,y,ArmourStrike)
-	    {image_angle = point_direction(x,y,mouse_x,mouse_y)+20
+	    {image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+20
 	    Originalangle=image_angle;
 	    team = other.team
 	    ammo = 100;
@@ -362,16 +362,16 @@ function scrPowers() {
 	    }}
     
     
-	    BackCont.viewx2 += lengthdir_x(-8,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
-	    BackCont.viewy2 += lengthdir_y(-8,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+	    BackCont.viewx2 += lengthdir_x(-8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+	    BackCont.viewy2 += lengthdir_y(-8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 	    BackCont.shake += 22
 		snd_play_2d(sndVikingArmourStrikeUpg);
 	    }
 		else
 			snd_play_2d(sndVikingArmourStrike);
     
-	    BackCont.viewx2 += lengthdir_x(-6,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
-	    BackCont.viewy2 += lengthdir_y(-6,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+	    BackCont.viewx2 += lengthdir_x(-6,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+	    BackCont.viewy2 += lengthdir_y(-6,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 	    BackCont.shake += 25
 
 	}
@@ -389,7 +389,7 @@ function scrPowers() {
 		if portalstrikesusedthislevel>=8
 		scrUnlockCSkin(22,"FOR USING EIGHT PORTAL STRIKES#IN ONE LEVEL",0);
 
-		with instance_create(mouse_x,mouse_y,PortalStrike)
+		with instance_create(UberCont.mouse__x,UberCont.mouse__y,PortalStrike)
 		{
 		if other.bskin=2
 		sprite_index=sprRogueCStrike
@@ -440,7 +440,7 @@ function scrPowers() {
 	//First rad for game feel
 	rad--;
 
-	    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,mouse_x,mouse_y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,mouse_x,mouse_y)),HorrorBeam)
+	    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
 	    {
 	    bskin=other.bskin
     
@@ -451,9 +451,9 @@ function scrPowers() {
     
 	    originnr=instance_number(HorrorBeam);
     
-	    image_angle = point_direction(x,y,mouse_x,mouse_y)
+	    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
 	    team = other.team
-	    motion_add(point_direction(x,y,mouse_x,mouse_y),6);
+	    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
 	    ammo=50
 	    charge=other.horrorcharge;
 	    event_perform(ev_alarm,0)
@@ -683,19 +683,19 @@ function scrPowers() {
 	if race==15//Atom
 	{
 		var laserscale = 0.1;
-	if ultra_got[60] && point_distance(x,y,mouse_x,mouse_y)<300//Ultra D
+	if ultra_got[60] && point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<300//Ultra D
 	{
 	var tel;
 	tel=false;
 
 	if instance_exists(enemy)
 	{
-	if (point_distance(mouse_x,mouse_y,instance_nearest(x,y,enemy).x,instance_nearest(x,y,enemy).y)<300)
+	if (point_distance(UberCont.mouse__x,UberCont.mouse__y,instance_nearest(x,y,enemy).x,instance_nearest(x,y,enemy).y)<300)
 	{tel=true;}
 	}
 	if instance_exists(Corpse)
 	{
-	if (point_distance(mouse_x,mouse_y,instance_nearest(x,y,Corpse).x,instance_nearest(x,y,Corpse).y)<300)
+	if (point_distance(UberCont.mouse__x,UberCont.mouse__y,instance_nearest(x,y,Corpse).x,instance_nearest(x,y,Corpse).y)<300)
 	{tel=true};
 	}
 
@@ -703,7 +703,7 @@ function scrPowers() {
 	if (tel==true)
 	{
 		
-	    if place_meeting(mouse_x,mouse_y,Floor)
+	    if place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor)
 	    {
 		    if alarm[3]<1
 		    alarm[3]=4;//imunity
@@ -714,10 +714,10 @@ function scrPowers() {
 			    motion_add(random(360),1+random(3))
 			}
     
-		    x=mouse_x;
-		    y=mouse_y;
-		    BackCont.viewx2 += lengthdir_x(20,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
-		    BackCont.viewy2 += lengthdir_y(20,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+		    x=UberCont.mouse__x;
+		    y=UberCont.mouse__y;
+		    BackCont.viewx2 += lengthdir_x(20,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+		    BackCont.viewy2 += lengthdir_y(20,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 		    BackCont.shake += 2    
     
 		    if skill_got[5]//thronebutt
@@ -738,7 +738,7 @@ function scrPowers() {
 				}
 
 			    with instance_create(x,y,Lightning)
-					{image_angle = point_direction(x,y,mouse_x,mouse_y)+(random(360))*other.accuracy
+					{image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(360))*other.accuracy
 					team = other.team
 					ammo = 6
 					event_perform(ev_alarm,0)
@@ -766,8 +766,8 @@ function scrPowers() {
 		    var xx;
 		    var yy;
     
-		    xx=32*(mouse_x div 32);
-		    yy=32*(mouse_y div 32);
+		    xx=32*(UberCont.mouse__x div 32);
+		    yy=32*(UberCont.mouse__y div 32);
     
     
 		    instance_create(xx,yy,FloorExplo);
@@ -782,8 +782,8 @@ function scrPowers() {
     
 		    x=xx;
 		    y=yy;
-		    BackCont.viewx2 += lengthdir_x(20,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
-		    BackCont.viewy2 += lengthdir_y(20,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+		    BackCont.viewx2 += lengthdir_x(20,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+		    BackCont.viewy2 += lengthdir_y(20,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 		    BackCont.shake += 2    
     
 		    if skill_got[5]//thronebutt
@@ -803,7 +803,7 @@ function scrPowers() {
 					event_perform(ev_alarm,0)
 				}
 			    with instance_create(x,y,Lightning)
-				{image_angle = point_direction(x,y,mouse_x,mouse_y)+(random(360))*other.accuracy
+				{image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(360))*other.accuracy
 				team = other.team
 				ammo = 6
 				event_perform(ev_alarm,0)
@@ -819,7 +819,7 @@ function scrPowers() {
 	    }
 	}
 	}
-	else if place_meeting(mouse_x,mouse_y,Floor) and !place_meeting(mouse_x,mouse_y,Wall)//REGULAR
+	else if place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor) and !place_meeting(UberCont.mouse__x,UberCont.mouse__y,Wall)//REGULAR
 	{
 	if alarm[3]<1
 	alarm[3]=4;//imunity
@@ -828,10 +828,10 @@ function scrPowers() {
 	repeat(5){
 	with instance_create(x,y,Smoke)
 	motion_add(random(360),1+random(3))}
-	x = mouse_x
-	y = mouse_y
-	BackCont.viewx2 += lengthdir_x(20,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(20,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+	x = UberCont.mouse__x
+	y = UberCont.mouse__y
+	BackCont.viewx2 += lengthdir_x(20,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(20,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 	BackCont.shake += 2  
   
 	    if skill_got[5]//thronebutt
@@ -855,7 +855,7 @@ function scrPowers() {
 			{
 
 			    with instance_create(x,y,Lightning)
-			{image_angle = point_direction(x,y,mouse_x,mouse_y)+(random(360))*other.accuracy
+			{image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(360))*other.accuracy
 			team = other.team
 			ammo = 9
 			event_perform(ev_alarm,0)
@@ -867,7 +867,7 @@ function scrPowers() {
 			else{
 
 			with instance_create(x,y,Lightning)
-			{image_angle = point_direction(x,y,mouse_x,mouse_y)+(random(360))*other.accuracy
+			{image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(360))*other.accuracy
 			team = other.team
 			ammo = 6
 			event_perform(ev_alarm,0)
@@ -896,7 +896,7 @@ function scrPowers() {
 	    with instance_create(x,y,ThrowWep)
 	    {
 		    team=other.team;
-		    motion_add(point_direction(x,y,mouse_x,mouse_y),16);
+		    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),16);
 		    scrWeapons()
 		    if other.ultra_got[54]=1
 			{
@@ -931,8 +931,8 @@ function scrPowers() {
 		    wepmod4=other.wepmod4;
 		    sprite_index = wep_sprt[wep]
 	    }
-	    BackCont.viewx2 += lengthdir_x(4,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
-	    BackCont.viewy2 += lengthdir_y(4,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+	    BackCont.viewx2 += lengthdir_x(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+	    BackCont.viewy2 += lengthdir_y(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 	    BackCont.shake += 1
 	    scrSwapWeps()
 	    bwep = 0
@@ -1042,7 +1042,7 @@ function scrPowers() {
 			if (wepType != 0 && ammo[wepType] - cost > 0)
 			{
 				ammo[wepType] =  ammo[wepType] - cost;
-				var aimDir = point_direction(mouse_x,mouse_y,x,y);//Opposite of aimdir
+				var aimDir = point_direction(UberCont.mouse__x,UberCont.mouse__y,x,y);//Opposite of aimdir
 				BackCont.viewx2 += lengthdir_x(32,aimDir)*UberCont.opt_shake;
 				BackCont.viewy2 += lengthdir_y(32,aimDir)*UberCont.opt_shake;
 				BackCont.shake += 10;
@@ -1090,7 +1090,7 @@ function scrPowers() {
 	if race = 1
 	{
 		if speed < 0.4
-			direction = point_direction(x,y,mouse_x,mouse_y)
+			direction = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
 		speed = 4
 		if skill_got[2] == 1
 		{
@@ -1252,7 +1252,7 @@ function scrPowers() {
 	}
 
 	with instance_create(x,y,TangleSeed)
-	{motion_add(point_direction(x,y,mouse_x,mouse_y),12)
+	{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),12)
 	image_angle = direction
 	team = other.team}
 	}
@@ -1265,10 +1265,10 @@ function scrPowers() {
 	{
 		if Player.ultra_got[44]=1{//Hunter Ultra D CRACKSHOT
 			if(instance_exists(enemy)){
-				if(point_distance(mouse_x,mouse_y,instance_nearest(mouse_x,mouse_y,enemy).x,instance_nearest(mouse_x,mouse_y,enemy).y) < 48) {
+				if(point_distance(UberCont.mouse__x,UberCont.mouse__y,instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy).x,instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy).y) < 48) {
 					snd_play_2d(sndSniperTarget);
 
-				    with instance_create(mouse_x,mouse_y,Marker) {
+				    with instance_create(UberCont.mouse__x,UberCont.mouse__y,Marker) {
 						target=instance_nearest(x,y,enemy);
 						image_angle=30*(MarkerNr-1);
 			        }
@@ -1297,9 +1297,9 @@ function scrPowers() {
 		    instance_destroy()
 		}
 		else if(instance_exists(enemy)){
-		if(point_distance(mouse_x,mouse_y,instance_nearest(mouse_x,mouse_y,enemy).x,instance_nearest(mouse_x,mouse_y,enemy).y)<48){
+		if(point_distance(UberCont.mouse__x,UberCont.mouse__y,instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy).x,instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy).y)<48){
 		    snd_play_2d(sndSniperTarget);
-		    with instance_create(mouse_x,mouse_y,Marker){
+		    with instance_create(UberCont.mouse__x,UberCont.mouse__y,Marker){
 		    target=instance_nearest(x,y,enemy);
 		        }
 		    }}
@@ -1437,7 +1437,7 @@ function scrPowers() {
 	{
 		rad--;
 
-	    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,mouse_x,mouse_y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,mouse_x,mouse_y)),HorrorBeam)
+	    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
 	    {
 	    bskin=other.bskin
 	    if bskin = 1
@@ -1445,9 +1445,9 @@ function scrPowers() {
     
 	    originnr=instance_number(HorrorBeam);
     
-	    image_angle = point_direction(x,y,mouse_x,mouse_y)
+	    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
 	    team = other.team
-	    motion_add(point_direction(x,y,mouse_x,mouse_y),6);
+	    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
 	    ammo=50
 	    charge=other.horrorcharge;
 	    event_perform(ev_alarm,0)
@@ -1464,7 +1464,7 @@ function scrPowers() {
 
 	}
 
-	with instance_create(x+lengthdir_x(random(horrorcharge*0.6),point_direction(x,y,mouse_x,mouse_y)),y+lengthdir_y(random(horrorcharge*0.6),point_direction(x,y,mouse_x,mouse_y)),HorrorBeam)
+	with instance_create(x+lengthdir_x(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
 	{
 	bskin=other.bskin
 	if bskin = 1
@@ -1472,9 +1472,9 @@ function scrPowers() {
 
 	originnr=instance_number(HorrorBeam);
 
-	image_angle = point_direction(x,y,mouse_x,mouse_y)
+	image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
 	team = other.team
-	motion_add(point_direction(x,y,mouse_x,mouse_y),6);
+	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
 	ammo=50
 	charge=other.horrorcharge;
 	event_perform(ev_alarm,0)
@@ -1493,7 +1493,7 @@ function scrPowers() {
 
 	if random(4)<1
 	{
-	    with instance_create(x+lengthdir_x(random(horrorcharge*0.6),point_direction(x,y,mouse_x,mouse_y)),y+lengthdir_y(random(horrorcharge*0.6),point_direction(x,y,mouse_x,mouse_y)),HorrorBeam)
+	    with instance_create(x+lengthdir_x(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
 	    {
 	    bskin=other.bskin
 	    if bskin = 1
@@ -1501,9 +1501,9 @@ function scrPowers() {
     
 	    originnr=instance_number(HorrorBeam);
     
-	    image_angle = point_direction(x,y,mouse_x,mouse_y)
+	    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
 	    team = other.team
-	    motion_add(point_direction(x,y,mouse_x,mouse_y),6);
+	    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
 	    ammo=50
 	    charge=other.horrorcharge;
 	    event_perform(ev_alarm,0)
@@ -1521,9 +1521,9 @@ function scrPowers() {
 
 
 	if BackCont.viewx2 < 8
-	BackCont.viewx2 = lengthdir_x(8,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+	BackCont.viewx2 = lengthdir_x(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 	if BackCont.viewy2 < 8
-	BackCont.viewy2 = lengthdir_y(8,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+	BackCont.viewy2 = lengthdir_y(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 	BackCont.shake += 0.9
 
 
@@ -1553,9 +1553,9 @@ function scrPowers() {
 			mask_index=mskWall;
 			var xx;
 			var yy;
-			xx=16*(mouse_x div 16);
-			yy=16*(mouse_y div 16);
-			if point_distance(x,y,mouse_x,mouse_y)>16{
+			xx=16*(UberCont.mouse__x div 16);
+			yy=16*(UberCont.mouse__y div 16);
+			if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)>16{
 			    if place_meeting(xx,yy,Floor)&&place_free(xx,yy)&&!place_meeting(xx,yy,projectile)&&!place_meeting(xx,yy,enemy)&&!place_meeting(xx,yy,prop)&&!place_meeting(xx,yy,Sheep)&&!place_meeting(xx,yy,ExplosiveSheep)
 			    {
 
@@ -1838,8 +1838,8 @@ function scrPowers() {
 	    with projectile
 	    if team=other.team && object_index!=Laser && object_index!=MegaLaser
 	    {
-	    x=Player.x+lengthdir_x(8,point_direction(Player.x,Player.y,mouse_x,mouse_y));
-	    y=Player.y+lengthdir_y(8,point_direction(Player.x,Player.y,mouse_x,mouse_y))
+	    x=Player.x+lengthdir_x(8,point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y));
+	    y=Player.y+lengthdir_y(8,point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y))
 	    }    
 
 	    }
@@ -1977,7 +1977,7 @@ function scrPowers() {
 	    
 		ammo=5;
 	    time=2;
-	    dir =point_direction(x,y,mouse_x,mouse_y);
+	    dir =point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
     
 	    if other.skill_got[5]
 	    {

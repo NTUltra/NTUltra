@@ -178,7 +178,7 @@ if isPaused == 0 && !instance_exists(GenCont) && !instance_exists(Menu) && !inst
 }
 
 ///CAPTURE DA MOUSE AIRHORN.WAV
-if isPaused = 0 and opt_mousecp = 1 and window_has_focus()=true && !instance_exists(Menu) && !instance_exists(GenCont) && !instance_exists(LevCont)&& !instance_exists(Vlambeer)//and (mouse_x < view_xview or mouse_y < view_yview or mouse_x > view_xview+view_wview or mouse_y > view_yview+view_hview)
+if isPaused = 0 and opt_mousecp = 1 and window_has_focus()=true && !instance_exists(Menu) && !instance_exists(GenCont) && !instance_exists(LevCont)&& !instance_exists(Vlambeer)//and (UberCont.mouse__x < view_xview or UberCont.mouse__y < view_yview or UberCont.mouse__x > view_xview+view_wview or UberCont.mouse__y > view_yview+view_hview)
 {
 
 var mox=display_mouse_get_x();
@@ -208,6 +208,4 @@ display_mouse_set(mox,moy);
 with option
 	y+=other.optY;
 	
-	
-mouse__x = mouse_x;
-mouse__y = mouse_y;
+

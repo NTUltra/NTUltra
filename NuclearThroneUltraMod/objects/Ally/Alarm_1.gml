@@ -53,7 +53,7 @@ if target > 0
 
 		if instance_exists(Player) and random(5) < 4
 		{
-			motion_add(point_direction(x,y,mouse_x,mouse_y),0.5)//0.8
+			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),0.5)//0.8
 			motion_add(point_direction(x,y,Player.x,Player.y),1)
 		}
 
@@ -72,7 +72,7 @@ if target > 0
 		motion_add(random(360),0.4)
 		if instance_exists(Player)
 		{
-			motion_add(point_direction(x,y,mouse_x,mouse_y),0.5)
+			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),0.5)
 			motion_add(point_direction(x,y,Player.x,Player.y),0.8)
 		}
 		walk = 10+random(5)

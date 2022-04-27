@@ -134,7 +134,7 @@ function scrDrawHUD() {
 		    else if !(dir=79 && Player.race=21){//Horror don't draw skeleton's ultra
 				draw_sprite_ext(sprUltraIconHUD,dir,xx,yy,1,1,0,c_white,1);
 			}
-			if (mouse_x > xx && mouse_x < xx + s && mouse_y > yy && mouse_y < yy + s)
+			if (UberCont.mouse__x > xx && UberCont.mouse__x < xx + s && UberCont.mouse__y > yy && UberCont.mouse__y < yy + s)
 			{
 				scrDrawHelp("["+Player.ultra_name[dir]+"]\n"+Player.ultra_text[dir]);
 			}
@@ -172,7 +172,7 @@ function scrDrawHUD() {
 			draw_sprite_ext(sprSkillIconHUD,dir,xx,yy+1,1,1,0,c_black,1)
 			draw_sprite_ext(sprSkillIconHUD,dir,xx,yy,1,1,0,c_white,1)
 			dix += 1
-			if (mouse_x > xx-s && mouse_x < xx + s && mouse_y > yy-s && mouse_y < yy + s)
+			if (UberCont.mouse__x > xx-s && UberCont.mouse__x < xx + s && UberCont.mouse__y > yy-s && UberCont.mouse__y < yy + s)
 			{
 				var ht;
 				if dir == 28//RAGE
@@ -342,7 +342,7 @@ function scrDrawHUD() {
 		var yy = __view_get( e__VW.YView, 0 )+60
 		var h = 16*0.5;
 		var w = 24*0.5;
-		if (mouse_x > xx-w && mouse_x < xx+w && mouse_y < yy+h && mouse_y > yy-h)
+		if (UberCont.mouse__x > xx-w && UberCont.mouse__x < xx+w && UberCont.mouse__y < yy+h && UberCont.mouse__y > yy-h)
 		{
 			var umn = scrUltraModName(Player.ultramod);
 			holdExplainUltraModTimer++;
@@ -369,7 +369,7 @@ function scrDrawHUD() {
 	if Player.wepmod1 != 0
 	{
 		draw_sprite(sprModHUD,Player.wepmod1,xx,yy);
-		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
+		if (UberCont.mouse__x > xx && UberCont.mouse__x < xx+xs && UberCont.mouse__y < yy+xs && UberCont.mouse__y > yy)
 		{
 			noHover = false;
 			holdExplainWepModTimer++;
@@ -388,7 +388,7 @@ function scrDrawHUD() {
 	if Player.wepmod2 != 0
 	{
 		draw_sprite(sprModHUD,Player.wepmod2,xx,yy);
-		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
+		if (UberCont.mouse__x > xx && UberCont.mouse__x < xx+xs && UberCont.mouse__y < yy+xs && UberCont.mouse__y > yy)
 		{
 			noHover = false;
 			if holdExplainWepModTimer > 30
@@ -406,7 +406,7 @@ function scrDrawHUD() {
 	if Player.wepmod3 != 0
 	{
 		draw_sprite(sprModHUD,Player.wepmod3,xx,yy);
-		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
+		if (UberCont.mouse__x > xx && UberCont.mouse__x < xx+xs && UberCont.mouse__y < yy+xs && UberCont.mouse__y > yy)
 		{
 			noHover = false;
 			if holdExplainWepModTimer > 30
@@ -424,7 +424,7 @@ function scrDrawHUD() {
 	if Player.wepmod4 != 0
 	{
 		draw_sprite(sprModHUD,Player.wepmod4,xx,yy);
-		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
+		if (UberCont.mouse__x > xx && UberCont.mouse__x < xx+xs && UberCont.mouse__y < yy+xs && UberCont.mouse__y > yy)
 		{
 			noHover = false;
 			if holdExplainWepModTimer > 30

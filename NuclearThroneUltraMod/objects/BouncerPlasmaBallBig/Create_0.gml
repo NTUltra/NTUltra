@@ -21,6 +21,6 @@ if instance_exists(Player)
 //friction=0.4;
 image_speed = 0.5
 Sleep(10)
-originalDirection=point_direction(x,y,mouse_x,mouse_y);
+originalDirection=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 resetSpeed=false;
 alarm[1] = 90;

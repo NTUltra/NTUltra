@@ -10,9 +10,9 @@ y = creator.y
 //FIRING
 snd_play(sndLaser,0.1,true)
 
-if place_meeting(mouse_x,mouse_y,Floor)
+if place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor)
 {
-with instance_create(mouse_x,mouse_y,IonImpact)
+with instance_create(UberCont.mouse__x,UberCont.mouse__y,IonImpact)
 {
 team = other.team}
 }

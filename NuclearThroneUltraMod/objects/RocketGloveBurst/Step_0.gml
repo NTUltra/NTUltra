@@ -15,7 +15,7 @@ if instance_exists(Player)
 }
 with creator
 {
-motion_add(point_direction(x,y,mouse_x,mouse_y),1);
+motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),1);
 
 motion_add(direction,other.Speed);
 with RocketSlash

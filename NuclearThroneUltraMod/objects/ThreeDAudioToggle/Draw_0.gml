@@ -1,6 +1,6 @@
 draw_sprite(sprite_index,UberCont.opt_3d_audio,x,y)
 
-if mouse_check_button_pressed(mb_left) and mouse_x > x and mouse_x < x+8 and mouse_y > y and mouse_y < y+8
+if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x and UberCont.mouse__x < x+8 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
 {
 	snd_play_2d(sndClick);
 if UberCont.opt_3d_audio = 0

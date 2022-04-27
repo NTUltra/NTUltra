@@ -61,7 +61,7 @@ y += lengthdir_y(1,point_direction(x,y,other.x,other.y))}}
 repeat(8)
 {
 with instance_create(x,y,Lightning)
-{image_angle = point_direction(x,y,mouse_x,mouse_y)+(random(280)-60)*other.accuracy
+{image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(280)-60)*other.accuracy
 team = other.team
 ammo = 9+random(3)
 event_perform(ev_alarm,0)
@@ -95,7 +95,7 @@ image_angle = other.image_angle
 repeat(3){
     with instance_create(x,y,FishBoost)
     {
-    motion_add( point_direction(x,y,mouse_x,mouse_y)+random(60)-30,2+random(4) );
+    motion_add( point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(60)-30,2+random(4) );
     }}
 
 }
@@ -135,7 +135,7 @@ else if kraken
 
 with instance_create(x,y,FishBoost)
     {
-    motion_add( point_direction(x,y,mouse_x,mouse_y)+random(60)-30,2+random(4) );
+    motion_add( point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(60)-30,2+random(4) );
     }
 
 }

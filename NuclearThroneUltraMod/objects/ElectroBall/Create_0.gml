@@ -15,7 +15,7 @@ if instance_exists(Player)
 if Player.skill_got[17] = 1
 dmg = 6+(Player.betterlaserbrain)
 }
-originalDirection=point_direction(x,y,mouse_x,mouse_y);
+originalDirection=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 direction=originalDirection;
 image_speed = 0.5
 

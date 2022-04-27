@@ -11,7 +11,7 @@ snd_play(choose(sndWater1,sndWater2) );
 
 
 with instance_create(x,y,Tentacle)
-{image_angle = point_direction(x,y,mouse_x,mouse_y)+(random(30)-15)
+{image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(30)-15)
 creator=other.id;
 team = other.team
 ammo = 11
@@ -26,7 +26,7 @@ image_angle = other.image_angle
 repeat(4){
     with instance_create(x,y,FishBoost)
     {
-    motion_add( point_direction(x,y,mouse_x,mouse_y)+random(60)-30,2+random(4) );
+    motion_add( point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(60)-30,2+random(4) );
     }}
 
 }

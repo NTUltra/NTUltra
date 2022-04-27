@@ -8,8 +8,8 @@ function scrRavenLift() {
 	    scrTarget();
 	    if (target > 0 && target.object_index=Player) {
 	        var mp = target.p - 1;
-	        var mx = mouse_x;
-	        var my = mouse_y;
+	        var mx = UberCont.mouse__x;
+	        var my = UberCont.mouse__y;
 	        var tries = 1024;
 	        while (--tries >= 0) {
 	            targetx = x + lengthdir_x(128, point_direction(mx, my, target.x, target.y) + random(50) - 25);

@@ -25,7 +25,7 @@ if instance_exists(Player)
 		var ac = Player.accuracy;
 		with instance_create(x,y,UltraLightning)
 		{
-			image_angle = point_direction(x,y,mouse_x,mouse_y)+(random(30)-15)*ac
+			image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(30)-15)*ac
 			team = 2
 			ammo = 6+random(8)//60
 			///if Player.ultra_got[59]=1 

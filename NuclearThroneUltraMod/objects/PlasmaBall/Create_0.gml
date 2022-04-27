@@ -18,7 +18,7 @@ if Player.skill_got[17] = 1
 dmg = 10+(Player.betterlaserbrain)
 }
 }
-originalDirection=point_direction(x,y,mouse_x,mouse_y);
+originalDirection=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 direction=originalDirection;
 image_speed = 0.5
 Sleep(3)

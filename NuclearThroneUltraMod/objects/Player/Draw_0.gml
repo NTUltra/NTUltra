@@ -1,4 +1,4 @@
-var aimDirection = point_direction(x,y,mouse_x,mouse_y);
+var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 
 if wep_type[wep] = 0
 wepright = wepflip

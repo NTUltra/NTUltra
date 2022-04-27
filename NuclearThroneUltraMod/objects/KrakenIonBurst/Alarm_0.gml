@@ -11,10 +11,10 @@ y = creator.y
 
 snd_play(choose(sndWater1,sndWater2,sndBloodLauncher) ,0.1,true);
 
-if place_meeting(mouse_x,mouse_y,Floor)
+if place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor)
 {
 
-with instance_create(mouse_x,mouse_y,Tentacle)
+with instance_create(UberCont.mouse__x,UberCont.mouse__y,Tentacle)
 {image_angle = random(360);
 ion=true;
 creator=other.id;

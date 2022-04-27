@@ -49,7 +49,7 @@ direction = point_direction(x,y,target.x,target.y)+180
     with instance_create(x,y,MiniFlameCannonBall)
     {
     image_angle=random(360);
-    motion_add(point_direction(x,y,mouse_x,mouse_y)+(random(8)-4),2)
+    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(8)-4),2)
     team = other.team}
 
 image_index = 0

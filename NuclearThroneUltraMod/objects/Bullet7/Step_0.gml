@@ -18,7 +18,7 @@ alarm[1]=2;
 
 
 speed+=12;
-direction=point_direction(x,y,mouse_x,mouse_y);
+direction=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 scrRedirectFx();
 turned=true;
 }

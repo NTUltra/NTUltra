@@ -12,7 +12,7 @@ yy=creator.y;
 
 //FIRING
 //with instance_create(xx,yy,Shell)
-//motion_add(point_direction(x,y,mouse_x,mouse_y)+180+random(50)-25,2+random(2))
+//motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180+random(50)-25,2+random(2))
 
 //repeat(4){
 

@@ -365,14 +365,14 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		}
 	}
 
-	if mouse_x < x
+	if UberCont.mouse__x < x
 	right = -1
-	else if mouse_x > x
+	else if UberCont.mouse__x > x
 	right = 1
 
-	if mouse_y < y
+	if UberCont.mouse__y < y
 	back = 1
-	else if mouse_y > y
+	else if UberCont.mouse__y > y
 	back = -1
 
 	scrPowers()
@@ -825,7 +825,7 @@ if reload > 0
 	repeat(wep_cost[wep])
 	{with instance_create(x,y,Shell)
 	{sprite_index = sprShotShell
-	motion_add(point_direction(x,y,mouse_x,mouse_y)+other.right*100+random(40)-20,2+random(2))}}
+	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+other.right*100+random(40)-20,2+random(2))}}
 
 	wkick = -1
 	if wep = 8
@@ -867,7 +867,7 @@ if wep_type[bwep] = 2
 repeat(wep_cost[bwep])
 {with instance_create(x,y,Shell)
 {sprite_index = sprShotShell
-motion_add(point_direction(x,y,mouse_x,mouse_y)+other.right*100+random(40)-20,2+random(2))}}
+motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+other.right*100+random(40)-20,2+random(2))}}
 if ultra_got[27]
 {
 wkick = -1

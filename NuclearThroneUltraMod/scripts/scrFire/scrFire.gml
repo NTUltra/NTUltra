@@ -103,7 +103,7 @@ function scrFire() {
 		instance_create(x,y,LaserBrainFX);	
 	}
 	
-	var aimDirection = point_direction(x,y,mouse_x,mouse_y);
+	var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 	switch(wep)
 	{
 	//REVOLVER
@@ -1970,8 +1970,8 @@ function scrFire() {
 	snd_play_fire(sndEraser)
 	with instance_create(x,y,EraserBurst)
 	{
-	mox=mouse_x;
-	moy=mouse_y;
+	mox=UberCont.mouse__x;
+	moy=UberCont.mouse__y;
 	creator = other.id
 	ammo = 16
 	time = 1
@@ -1995,8 +1995,8 @@ function scrFire() {
 	snd_play_fire(sndEraser)
 	with instance_create(x,y,EraserBurst)
 	{
-	mox=mouse_x;
-	moy=mouse_y;
+	mox=UberCont.mouse__x;
+	moy=UberCont.mouse__y;
 	creator = other.id
 	ammo = 16
 	time = 1
@@ -3877,8 +3877,8 @@ function scrFire() {
 	snd_play_fire(sndFireShotgun);
 	with instance_create(x,y,FlameEraserBurst)
 	{
-	mox=mouse_x;
-	moy=mouse_y;
+	mox=UberCont.mouse__x;
+	moy=UberCont.mouse__y;
 	creator = other.id
 	ammo = 16
 	time = 1
@@ -3903,8 +3903,8 @@ function scrFire() {
 	snd_play_fire(sndDoubleFireShotgun);
 	with instance_create(x,y,FlameEraserBurst)
 	{
-	mox=mouse_x;
-	moy=mouse_y;
+	mox=UberCont.mouse__x;
+	moy=UberCont.mouse__y;
 	creator = other.id
 	ammo = 16
 	time = 1
@@ -4431,8 +4431,8 @@ function scrFire() {
 	snd_play_fire(sndEraser)
 	with instance_create(x,y,DirectorEraserBurst)
 	{
-	mox=mouse_x;
-	moy=mouse_y;
+	mox=UberCont.mouse__x;
+	moy=UberCont.mouse__y;
 	creator = other.id
 	ammo = 16
 	time = 1
@@ -4455,8 +4455,8 @@ function scrFire() {
 	snd_play_fire(sndFireShotgun);
 	with instance_create(x,y,FlameDirectorEraserBurst)
 	{
-	mox=mouse_x;
-	moy=mouse_y;
+	mox=UberCont.mouse__x;
+	moy=UberCont.mouse__y;
 	creator = other.id
 	ammo = 16
 	time = 1

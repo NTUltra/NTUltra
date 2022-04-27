@@ -10,11 +10,11 @@ y = creator.y
 //FIRING
 snd_play_fire(sndBouncerFire)
 with instance_create(x,y,Shell)
-motion_add(point_direction(x,y,mouse_x,mouse_y)+180+random(50)-25,2+random(2))
+motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180+random(50)-25,2+random(2))
 
 with instance_create(x,y,Bullet3)
 {
-motion_add(point_direction(x,y,mouse_x,mouse_y)+random(12)-6,other.pspeed)
+motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(12)-6,other.pspeed)
 image_angle = direction
 team = other.team
     if (instance_exists(Player))
@@ -28,8 +28,8 @@ team = other.team
     }
 }
 
-BackCont.viewx2 += lengthdir_x(6,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
-BackCont.viewy2 += lengthdir_y(6,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+BackCont.viewx2 += lengthdir_x(6,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+BackCont.viewy2 += lengthdir_y(6,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 BackCont.shake += 3
 creator.wkick = 4}
 

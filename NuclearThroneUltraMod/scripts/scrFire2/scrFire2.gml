@@ -1,5 +1,5 @@
 function scrFire2() {
-	var aimDirection = point_direction(x,y,mouse_x,mouse_y);
+	var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 	//Now if a marker exists aim at that
 	switch(wep)
 	{//here we go again!
@@ -3675,7 +3675,7 @@ function scrFire2() {
 	snd_play_fire(sndRocket)
 	snd_play_fire(sndHyperSlugger)
 
-	with instance_create(mouse_x,mouse_y,Explosion)
+	with instance_create(UberCont.mouse__x,UberCont.mouse__y,Explosion)
 
 
 	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
@@ -4387,8 +4387,8 @@ function scrFire2() {
 	with instance_create(x+ldx,y+ldy,EraserBurst)
 	{
 		projectileAmount = 3;
-		mox=mouse_x + ldx;
-		moy=mouse_y + ldy;
+		mox=UberCont.mouse__x + ldx;
+		moy=UberCont.mouse__y + ldy;
 		creator = other.id
 		ammo = 2
 		time = 1
@@ -4407,8 +4407,8 @@ function scrFire2() {
 	with instance_create(x+ldx,y+ldy,EraserBurst)
 	{
 		projectileAmount = 3;
-		mox=mouse_x + ldx;
-		moy=mouse_y + ldy;
+		mox=UberCont.mouse__x + ldx;
+		moy=UberCont.mouse__y + ldy;
 		creator = other.id
 		ammo = 2
 		time = 1
@@ -4464,7 +4464,7 @@ function scrFire2() {
 	//ION TELEPORTER
 	case 358:
 	
-	if place_meeting(mouse_x,mouse_y,Floor) and not place_meeting(mouse_x, mouse_y, Wall) {
+	if place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor) and not place_meeting(UberCont.mouse__x, UberCont.mouse__y, Wall) {
 		snd_play_fire(sndHyperLightning);
 		if alarm[3]<1
 		alarm[3]=4;//imunity
@@ -4475,8 +4475,8 @@ function scrFire2() {
 			motion_add(random(360),1+random(3))
 		}
     
-		x=mouse_x;
-		y=mouse_y;
+		x=UberCont.mouse__x;
+		y=UberCont.mouse__y;
 		BackCont.viewx2 += lengthdir_x(20,aimDirection+180)*UberCont.opt_shake
 		BackCont.viewy2 += lengthdir_y(20,aimDirection+180)*UberCont.opt_shake
 		BackCont.shake += 2    
@@ -5239,8 +5239,8 @@ function scrFire2() {
 	with instance_create(x+ldx,y+ldy,EraserBurst)
 	{
 		projectileAmount = 3;
-		mox=mouse_x + ldx;
-		moy=mouse_y + ldy;
+		mox=UberCont.mouse__x + ldx;
+		moy=UberCont.mouse__y + ldy;
 		creator = other.id
 		ammo = 2
 		time = 1
@@ -5259,8 +5259,8 @@ function scrFire2() {
 	with instance_create(x+ldx,y+ldy,EraserBurst)
 	{
 		projectileAmount = 3;
-		mox=mouse_x + ldx;
-		moy=mouse_y + ldy;
+		mox=UberCont.mouse__x + ldx;
+		moy=UberCont.mouse__y + ldy;
 		creator = other.id;
 		ammo = 2
 		time = 1
@@ -5421,8 +5421,8 @@ function scrFire2() {
 	}
 	with instance_create(x+ldx,y+ldy,SplinterBurst)
 	{
-		mox=mouse_x + ldx;
-		moy=mouse_y + ldy;
+		mox=UberCont.mouse__x + ldx;
+		moy=UberCont.mouse__y + ldy;
 		creator = other.id
 		ammo = 2
 		time = 1
@@ -5440,8 +5440,8 @@ function scrFire2() {
 	}
 	with instance_create(x+ldx,y+ldy,SplinterBurst)
 	{
-		mox=mouse_x + ldx;
-		moy=mouse_y + ldy;
+		mox=UberCont.mouse__x + ldx;
+		moy=UberCont.mouse__y + ldy;
 		creator = other.id
 		ammo = 2
 		time = 1
@@ -5472,8 +5472,8 @@ function scrFire2() {
 	}
 	with instance_create(x+ldx,y+ldy,SplinterBurst)
 	{
-		mox=mouse_x + ldx;
-		moy=mouse_y + ldy;
+		mox=UberCont.mouse__x + ldx;
+		moy=UberCont.mouse__y + ldy;
 		creator = other.id
 		ammo = 2
 		time = 1
@@ -5491,8 +5491,8 @@ function scrFire2() {
 	}
 	with instance_create(x+ldx,y+ldy,SplinterBurst)
 	{
-		mox=mouse_x + ldx;
-		moy=mouse_y + ldy;
+		mox=UberCont.mouse__x + ldx;
+		moy=UberCont.mouse__y + ldy;
 		creator = other.id
 		ammo = 2
 		time = 1
@@ -6431,8 +6431,8 @@ function scrFire2() {
 	with instance_create(x,y,SplinterBurst2)
 	{
 		accuracy = 12*other.accuracy;
-		mox=mouse_x;
-		moy=mouse_y;
+		mox=UberCont.mouse__x;
+		moy=UberCont.mouse__y;
 		creator = other.id
 		ammo = 13
 		maxammo = ammo;
@@ -7248,8 +7248,8 @@ function scrFire2() {
 	with instance_create(x+ldx,y+ldy,FlameDirectorEraserBurst)
 	{
 		projectileAmount = 3;
-		mox=mouse_x + ldx;
-		moy=mouse_y + ldy;
+		mox=UberCont.mouse__x + ldx;
+		moy=UberCont.mouse__y + ldy;
 		creator = other.id
 		ammo = 16
 		time = 1
@@ -7268,8 +7268,8 @@ function scrFire2() {
 	with instance_create(x+ldx,y+ldy,FlameDirectorEraserBurst)
 	{
 		projectileAmount = 3;
-		mox=mouse_x + ldx;
-		moy=mouse_y + ldy;
+		mox=UberCont.mouse__x + ldx;
+		moy=UberCont.mouse__y + ldy;
 		creator = other.id
 		ammo = 16
 		time = 1

@@ -9,7 +9,7 @@ image_speed = 0
 visible = 1
 
 
-x = __view_get( e__VW.XView, 0 )+8+22*num//-(mouse_x-view_xview)*0.7
+x = __view_get( e__VW.XView, 0 )+8+22*num//-(UberCont.mouse__x-view_xview)*0.7
 y = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-36
 if num>13
 {

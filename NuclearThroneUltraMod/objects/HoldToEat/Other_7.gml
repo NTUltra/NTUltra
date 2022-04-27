@@ -42,7 +42,7 @@ with Player
 			wepmod3 = other.wepmod3;
 			wepmod4 = other.wepmod4;
 			curse = other.curse;
-			motion_add(point_direction(x,y,mouse_x,mouse_y),11);
+			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),11);
 			wep = other.wep
 			spr_idle=wep_sprt[wep];
 
