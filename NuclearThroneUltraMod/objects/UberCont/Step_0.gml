@@ -207,3 +207,7 @@ display_mouse_set(mox,moy);
 }
 with option
 	y+=other.optY;
+	
+	
+mouse__x = mouse_x;
+mouse__y = mouse_y;

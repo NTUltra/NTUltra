@@ -4,8 +4,10 @@ if instance_exists(enemy)
 	{
 		var tx = target.x + (target.hspeed*2);
 		var ty = target.y + (target.vspeed*2);
-		x=tx;
-		y=ty;
+		x = tx;
+		y = ty;
+		debug("position it");
+		/*
 		if instance_exists(Player)
 		{
 			if Player.ultra_got[44] == 0
@@ -14,6 +16,7 @@ if instance_exists(enemy)
 				with BackCont{
 					viewdist-=4;
 				}*/
+				/*
 				var mox,moy;
 				var len,dir;
 				var ox = camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0]) * 0.5);
@@ -35,11 +38,11 @@ if instance_exists(enemy)
 				if moy < window_get_y()
 				moy = window_get_y()+8;
 
-				display_mouse_set(mox,moy);
+				//display_mouse_set(mox,moy);
 
 			}
 		}
-
+*/
 	}
 	else
 	{

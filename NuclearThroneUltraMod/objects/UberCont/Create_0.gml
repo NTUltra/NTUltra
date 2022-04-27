@@ -217,3 +217,7 @@ encrypted_run_data = {
 	crownVaultChallenge: 2,
 	randomlySelected: false
 };
+
+//Aim overwrite
+mouse__x = mouse_x;
+mouse__y = mouse_y;
