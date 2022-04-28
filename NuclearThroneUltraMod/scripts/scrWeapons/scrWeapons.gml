@@ -3533,7 +3533,7 @@ function scrWeapons() {
 	wep_load[320] = 30
 	wep_cost[320] = 12
 	wep_sprt[320] = sprDisperseBazooka
-	wep_area[320] = 16
+	wep_area[320] = 18
 	wep_text[320] = "medicinal herb gun"
 	wep_swap[320] = sndSwapExplosive
 	wep_rad[320] = 0;

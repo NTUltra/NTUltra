@@ -2,7 +2,7 @@ scrDrop(100,50)
 scrDrop(10,0)
 event_inherited();
 scrBossKill();
-scrDefeatedRequiredBoss(secretChallengeBosses.bigVulture);
+scrDefeatedRequiredBoss(secretChallengeBosses.bushBox);
 scrEndBossMusic();
 repeat(30)
 {

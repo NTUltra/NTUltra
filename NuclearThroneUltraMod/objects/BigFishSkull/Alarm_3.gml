@@ -8,7 +8,10 @@ if Player.my_health<Player.maxhealth*0.5&&spr_idle != sprBigFishSkull
 	//oasis=false;
     
 	with WantBoss
-	instance_destroy();
+	{
+		if oasis
+			instance_destroy();
+	}
     
 	if !instance_exists(BanditBoss)
 	{spr_idle = sprBigFishSkull

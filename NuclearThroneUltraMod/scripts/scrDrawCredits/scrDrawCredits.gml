@@ -4,14 +4,43 @@ function scrDrawCredits() {
 
 	if widescreen > 0
 	widescreen -= 8
-
-	thanks = "#ADDITIONAL CODE:#base4/spencers145##QA GODDESS#AgentCucco##SFX AND ART#@larje100##ULTRA MUTATION ART:#@tilde_bee#Lynzkar#skurleton#Lunarshards##MORE ART#NotYourSagittarius###Jodi#@ideaot/jasmine"
-	stxt2 = "####AWESOME MOD PEOPLE:##ADDITIONAL CODE:###QA GODDESS###SFX AND ART###ULTRA MUTATION ART:######MORE ART###OTHER PEOPLE####FOLLOW ON TWITTER<3"
-	txt0 = "#NUCLEAR THRONE#A GAME BY VLAMBEER#MOD BY ERDEPPOL"
-	txt1 = "####DIRECTOR:#JAN WILLEM NIJMAN##PRODUCER:#RAMI ISMAIL##ART & ORIGINAL#CHARACTER DESIGN:#PAUL VEER##MUSIC:#JUKIO KALLIO##SOUND DESIGN:#JOONAS TURNER##PROMOTIONAL ART:#JUSTIN CHAN##VOICE OF MR. VENUZ:#DOSEONE###MODDED BY"
-	txt2 = "####AWESOME MOD PEOPLE:#"+string(thanks)
-	stxt0 = "#NUCLEAR THRONE"
-	stxt1 = "####DIRECTOR:###PRODUCER:###ART & ORIGINAL#CHARACTER DESIGN:###MUSIC:###SOUND DESIGN:###PROMOTIONAL ART:###VOICE OF MR. VENUZ:#####JUUL @Erdeppol"
+	
+	if keyboard_check_pressed(vk_space)
+	{
+		if creditpage=0
+			creditpage=1;
+		else
+			creditpage=0;
+	}
+	
+	if creditpage == 0
+	{
+		if keyboard_check_pressed(ord("D"))
+		{
+			url_open("https://discord.gg/kmp5t2TK6j");
+		}
+		if keyboard_check_pressed(ord("T"))
+		{
+			url_open("https://twitter.com/Erdeppol");
+		}
+		thanks = "#ADDITIONAL ART:#ricottakitten#Guru Jr##OTHER PEOPLE:#Jodi#@ideaot/jasmine###@Erdeppol##NT-UM DISCORD##MUSIC USED:##Larje100#Inverted Sewers#Eric Chevalier#The lava stream#The lava tower"
+		stxt2 = "######ADDITIONAL ART:####OTHER PEOPLE:####PRESS [T] TWITTER##PRESS [D] DISCORD###MUSIC USED:##Larje100##Eric Chevalier"
+		txt0 = "#NUCLEAR THRONE ULTRA#NUCLEAR THRONE BY VLAMBEER##MOD BY ERDEPPOL"
+		txt1 = "######ADDITIONAL CODE:#base4/spencers145##QA GODDESS:#AgentCucco##ART & SFX#@larje100##ULTRA MUTATION ART:#@tilde_bee#Lynzkar#skurleton#Lunarshards###ToaterGhostMary##HUNTER ART#NotYourSagittarius##"
+		txt2 = "#####"+string(thanks)
+		stxt0 = "#NUCLEAR THRONE ULTRA###MOD    ERDEPPOL########################[PRESS SPACE FOR PAGE 2]"
+		stxt1 = "######ADDITIONAL CODE:###QA GODDESS:###ART & SFX###ULTRA MUTATION ART:######CONCEPT ART:###HUNTER ART####"//White text
+	}
+	else
+	{
+		thanks = "###MUSIC USED:##Lena Raine#Jukio-Reflections#Confronting Myself#T4N3 - Namachuukei#68-Game Set#Plume, Fred Leonard#Laurent parisi#Crossing the swamp#David Fenn#Crooked Crow#Reaper's Battle#Christophe Heral#Plant Boss#Christopher Larkin#Nosk#Disasterpeace#Chimera"
+		stxt2 = "######MUSIC USED:##Lena Raine#Jukio##T4N3##Plume, Fred Leonard#Laurent parisi##David Fenn###Christophe Heral##Christopher Larkin##Disasterpeace#"
+		txt0 = "#NUCLEAR THRONE#A GAME BY VLAMBEER##MOD BY ERDEPPOL"
+		txt1 = "######DIRECTOR:#JAN WILLEM NIJMAN##PRODUCER:#RAMI ISMAIL##ART & ORIGINAL#CHARACTER DESIGN:#PAUL VEER##ORIGINAL MUSIC:#JUKIO KALLIO##SOUND DESIGN:#JOONAS TURNER##PROMOTIONAL ART:#JUSTIN CHAN##VOICE OF MR. VENUZ:#DOSEONE#"
+		txt2 = "###"+string(thanks)
+		stxt0 = "#NUCLEAR THRONE###MOD    ERDEPPOL########################[PRESS SPACE FOR PAGE 1]"
+		stxt1 = "######DIRECTOR:###PRODUCER:###ART & ORIGINAL#CHARACTER DESIGN:###ORIGINAL MUSIC:###SOUND DESIGN:###PROMOTIONAL ART:###VOICE OF MR. VENUZ:#####"
+	}
 
 	
 	draw_set_font(fntM)

@@ -11,4 +11,5 @@ function scrCrackShotFire(){
 			scrFire();
 		}
 	}
+	ammo[wep_type[wep]] = max(0,ammo[wep_type[wep]]);
 }

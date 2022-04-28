@@ -40,15 +40,27 @@ if instance_exists(Player) && (!cursed) {
 					event_user(0);
 				}
 			}
-			else if instance_exists(YungCuzDupe) && point_distance(x, y, YungCuzDupe.x, YungCuzDupe.y) < 77 + Player.betterpluto
+			else if instance_exists(YungCuzDupe)
 			{
-				if place_free(x + lengthdir_x(12, point_direction(x, y, YungCuzDupe.x, YungCuzDupe.y)), y)
-					x += lengthdir_x(12, point_direction(x, y, YungCuzDupe.x, YungCuzDupe.y))
-	            if place_free(x, y + lengthdir_y(12, point_direction(x, y, YungCuzDupe.x, YungCuzDupe.y)))
-					y += lengthdir_y(12, point_direction(x, y, YungCuzDupe.x, YungCuzDupe.y))
-				if place_meeting(x,y,YungCuzDupe)
+				var n = instance_nearest(x,y,YungCuzDupe);
+				if point_distance(x, y, n.x, n.y) < 77 + Player.betterpluto
 				{
-					event_user(0);
+					if place_free(x + lengthdir_x(12, point_direction(x, y, n.x, n.y)), y)
+						x += lengthdir_x(12, point_direction(x, y, n.x, n.y))
+		            if place_free(x, y + lengthdir_y(12, point_direction(x, y, n.x, n.y)))
+						y += lengthdir_y(12, point_direction(x, y, n.x, n.y))
+					if place_meeting(x,y,YungCuzDupe)
+					{
+						event_user(0);
+					}
+				}
+				else
+				{
+					isGettingSucked = false;
+					if place_meeting(x,y,Player)
+					{
+						event_user(0);	
+					}
 				}
 			}
             else
@@ -99,15 +111,27 @@ if instance_exists(Player) && (!cursed) {
 				event_user(0);
 			}
 		}
-		else if instance_exists(YungCuzDupe) && point_distance(x, y, YungCuzDupe.x, YungCuzDupe.y) < 77 + Player.betterpluto
-		{
-			if place_free(x + lengthdir_x(12, point_direction(x, y, YungCuzDupe.x, YungCuzDupe.y)), y)
-				x += lengthdir_x(12, point_direction(x, y, YungCuzDupe.x, YungCuzDupe.y))
-            if place_free(x, y + lengthdir_y(12, point_direction(x, y, YungCuzDupe.x, YungCuzDupe.y)))
-				y += lengthdir_y(12, point_direction(x, y, YungCuzDupe.x, YungCuzDupe.y))
-			if place_meeting(x,y,YungCuzDupe)
+		else if instance_exists(YungCuzDupe)
 			{
-				event_user(0);
+			var n = instance_nearest(x,y,YungCuzDupe);
+			if point_distance(x, y, n.x, n.y) < 77 + Player.betterpluto
+			{
+				if place_free(x + lengthdir_x(12, point_direction(x, y, n.x, n.y)), y)
+					x += lengthdir_x(12, point_direction(x, y, n.x, n.y))
+		        if place_free(x, y + lengthdir_y(12, point_direction(x, y, n.x, n.y)))
+					y += lengthdir_y(12, point_direction(x, y, n.x, n.y))
+				if place_meeting(x,y,YungCuzDupe)
+				{
+					event_user(0);
+				}
+			}
+			else
+			{
+				isGettingSucked = false;
+				if place_meeting(x,y,Player)
+				{
+					event_user(0);	
+				}
 			}
 		}
         else

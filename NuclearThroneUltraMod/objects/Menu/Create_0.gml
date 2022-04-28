@@ -1,7 +1,7 @@
 if !instance_exists(Cursor)
 instance_create(0,0,Cursor);
 
-
+creditpage = 0;
 mode = 0
 mouseover = -1;
 image_speed = 0
@@ -285,8 +285,8 @@ char[12].spr_from = sprYungCuzMenuDeselect
 char[12].spr_slct = sprYungCuzMenu}
 
 if UberCont.race_have[13] = 1{//Sheep
-char[13].x = 200;
-char[13].y = 0;
+char[13].x = 198;
+char[13].y = 8;
 char[13].sprite_index = sprSheepMenu
 char[13].spr_menu = sprSheepIdleA
 char[13].spr_to = sprSheepMenuSelect
