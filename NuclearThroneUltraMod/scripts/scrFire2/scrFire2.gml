@@ -6897,7 +6897,7 @@ function scrFire2() {
 	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 8
-	wkick = 4
+	wkick = 5
 
 	break;
 	
@@ -6917,7 +6917,7 @@ function scrFire2() {
 	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 7
-	wkick = 3
+	wkick = 4
 
 	break;
 	

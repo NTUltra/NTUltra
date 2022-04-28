@@ -198,12 +198,12 @@ switch (UberCont.crownVaultChallenge)
 		};
 		wave[i] = {
 				obj: Raven,
-				time: 160,
+				time: 170,
 			};
 			i++;
 		wave[i] = {
 			obj: HealthChest,
-			time: 40,
+			time: 60,
 			xx: centerX,
 			yy: centerY+32
 		};

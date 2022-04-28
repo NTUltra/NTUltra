@@ -1,313 +1,177 @@
 Features
-Snowtanks ballmom and lill hunter now dont explode upon being morphed
-Inverted Big Vulture
-Jungle boss
-Popo and other enemies now fight each other more often (when within range of player and no line of sight)
-Inverted vulcano enemies now use snow instead of fire/blue fire
-Crownvault ultramod challenge now collects corpses left behind
-Cronvault ultramod challenge will now push weapon drops to the edge of the arena
-Rage is now displayed above strong spirit
-Hovering over the rage skill in HUD now shows exactly how much rage you have
-Eating a weapon as robot will now always give you some rads
-All robot ultra now spawns ultralightning when eating a weapon
-Robot Ultra C (extra storage) no increases the amount of rads you get when eating
-Chesire cat no longer shits out enemies instead it fucks you up with a rotating wazer attack
-New firebat art
-removed firebat from crystal caves and replaced with new square bat enemy it also spawns more frequently.
-New splinter storm weapon sprite
-Changed unlock requirement for sheep b-skin
-Super split blades now have a slighlty different sprite
-New secret area
-Toxictraps on loop 2 (inverted) sewers their timing is different from firetraps
-Ultra fire now swaps with new Ultra toxic when using fire<=>toxic ultramod
-Vulcano now has rocks and no longer has cocoons and ugly charred ground sprites
-Vulcano now has inverted versions of the props there
-Ultra mod challenge can now only be done once in daily runs
-Added bouncer bolts they swap for bouncer plasma bouncer rockets, and bouncer lasers in ultra mods no weapon (yet), they will also fire out slugs at higher projectile speed
-Slugger ultramods now work on heavyslugs, When using fatbullet <=> slug it wll spawn two fatbullets in a V shaped direction, a higher accuracy will narrow the V shape. In the case of bolts and heavy slulgs it will spawn heavy bolts ofcourse.
-Replaced heavy bolt <=> nuke heavy bolt <=> mega laser
-Heavy bolt <=> Nuke is now combined in bolt <=> rocket
-Heavy bolt <=> Mega laser is now combined in laser <=> bolt
-with laser <=> heavy bullet it will now transform mega lasers into fat bullets and fat bullets into mega lasers
-Heavy bolts now transform into plasmacannons when using plasma <=> bolt (not the other way around since that is worse)
-Nukes now transform into plasma cannons when using plasma <=> bolt (not the other way around since that is worse)
-It is kinda funny because when the nuke of heavy bolt transforms into a plasmacannon the plasma cannon would then spawn rockets/bolts
-renamed bullet <=> pellet to bullet <=> shotgun
-removed fat bullet <=> slug
-splinter <=> pellet combined in bolt shotgun
-All Plasmaballs now deal damage similar to lightning where enemy iframes get sped up if it cannot deal damage but is trying to
-Plasma impact now also have this iframe skipping logic
-(mini) Plasma impacts (from things like plasmaballs and ion cannons) now get a small damage buff from laser brain and become slightly bigger
-New ultramods 
-Toxic <=> swarm
-Blood explosion <=> Explosion (may regret making this one?)
-Snow <=> swarm
-Morph <=> Fire do people know morph has increased damage with laserbrain?
-Ultramods now have a description
-Amount of big assassin bosses scales half as fast on loop
-Scuba bandits in oasis
-Jellyfish in oasis
-Heavyslugs now also have a close range high damage indication sprite
-Some ultra mutation art by skurleton, skurleton used to do some of the ultra art aswell back in the day! (Humphry B & D Rogue D)
-Horror D ultra mutation art by ricottakitten
-Icons for humphry's new ultra mutation art.
-Now describing the exact percentage for bloodlust and luckyshot in mutation description
-Changed how humphry's damage increase works, it is now a percentage of the amount of damage you dealt. It used to deal a certain amount of damage per hit and it scaled with skill. Now that skill is used as a percentage to increase the damage that is being dealt. So a heavy crossbow bolt will have a greater damage boost than a pop gun pellet. Currently this is set to 1 skill being 1% of dmg dealt. So with 100 skill you will deal exactly double damage, your revolver will deal 6 dmg instead of 3 dmg and your crossbow will deal 40 dmg instead of 20
-Added enemy loop spawns for alternate paths such as oasis and savanna
-Added enemy loop spawns for inverted areas
-Entering oasis remains the same on 1 - 1 but in 1 - 2 it is easier and you have to interact with the skull.
-Added a bunch of crosshairs
-Added some wonderful side-art...
-You can now see weapon tiers and damage indicators without eagle eyes.
-New option to turn off/on the damage indicators (replaces old bloom option)
-YV Ultra D now has additional benefit (Automatic Pop pop)
-Hunter thronebut now also has a percentage based damage increase instead of consistent 5 dmg with a delay. Now it is 150% of damage.
-Now displaying percentages on heavy heart
-In some rare cases the last enemy indicator will now display where a boss is hiding. So if there is no other enemy than an inactive big dog. It would be targeted. But also a big bandit that has not appeared yet.
-Will now show the somewhat hidden benefit of second stomache and alkaline salive when you have either of thsoe mutations
-Euphoria now effects the growspeed of wazers
-Euphoria now effects enemy lasers, it will make them dissapear quicker
-Extra feet description expanded for sheep and fish. It will now explain how it will effect the ability since they are both speed related abilities
-Gamma guts description expanded for crystal to explain that the shield will also deal damage
-Low ammo, not enough ammo and empty all have an icon now similar to all other ammo pickups
-
-
-Balance
-Kraken yoyogun drops later
-Kraken pull less hard on bigger sized enemies and less pull in general
-Gators in savanna
-Vulcano is now three areas and it is alittle harder more enemies, lavaball enemies are tankier. Enemy spawn amount are less random
-lavaball enemies explode into fire consistently
-Purple dragon will now switch to cross fireballs when on loop
-decreased chance purple & Inverted dragon will go under the lava and reduced the time they stay under lava
-Enemy toxic gass will now lose speed upon bouncing against a wall
-When decoy runs out enemies should now immediatly target the player again
-Reduced slowmotion strength on chicken (makes the game also a little smoother)
-Kraken & lightning weapon mod now targets enemies that are nearby but not the one hit and increased the accuracy of the tentacle that spawns
-Lightning weapon mod is now as long as kraken and no longer dissapears quicker
-Reduced delay between sharp teeth activations
-Increased maximum rage
-Drawing rage a little clearer
-Doctor no longer gets increased maximum rage.
-Improved/stronger bolt marrow effect on blades (it now takes into account projectile speed)
-Timer will be paused when in first crownvault when using crown start
-Reduced super sword gun ammo cost by one
-reduced super shank gun ammo cost by one
-reduced energy sword gun ammo cost by one
-reduced energy shank gun ammo cost by one
-reduced super energy sword gun ammo cost by 10
-reduced super energy shank gun ammo cost by 9
-Frost glove now spawns ice flames
-More enemies in frozen city
-Increased chance for healthchests to spawn when using Fish's ultra a (confiscate). They can now also spawn when at full health.
-Frog ally ballguys now deal meleedamage upon hitting an enemy
-Ghost guardians try to stay closer to player now
-Swapped labs and crystal caves and changed enemies to balance the change a little
-Hyper crystal is quicker to react and has more health
-spiders are faster have more hp and slightly less droprate
-freaks are slower have less hp and have a very slightly higher droprate (0.5)
-crystals are quicker to react, have more hp and less chance to drop a weapon
-Turrets have less hp, less projectile speed and can now drop weapons
-Rhino freaks have less hp
-Did the same for inverted counterparts
-reduced technomancer hp
-Increased standard homing of lightning it was very innacurrate without buffs
-Increased general accuracy/homing of ultra lightning it is now higher than regular lightning
-Splinter storm drops later
-Returned maximum rad and rads required to level up back to normal. It was slightly higher to compensate for the longer mainpath. But since the mainpath is shorter now and some enemies drop a little less rads this cahnge can be reverted.
-Increased health inverted rhino freak
-Portals no longer destroy props & sheep
-Path to jungle is now open when you have lives from anywhere not specifically last wish
-Reincarnating or rerolling will now reset last wish's ability to give a life
-Using the frozen flower (to enter jungle with last wish) will now allow last wish to give a life again
-Change unlock requirement for rebel b-skin it requires you to not fire on loop now
-Removed the smalle explosion recently added to line grenade, this was a mistake.
-Made inverted dragon act a little slower
-Vans in big machine fight will now start spawning in loop 2, and will at most spawn 2 vans (this was a bug but I'm cruel)
-Toxic gass, snow and blades when hitting an enemy that has iframes going on will now speed up the iframes similar to fire
-Splitblades will now split into more directions
-Blades now have more freezeframes
-brought ultra blade damage more in line with other blade dmg
-masively reduced initial time it takes for big machine to become exposed and it is no longer random
-Increased amount of splinters splinter shotgun fires
-Crystal Ultra D Vengefull buff it now makes you completly immune to all damage while shielding
-Crystal Ultra C Bunker (shoot while shielded) the shield duration reduction is less now
-Increased how much longer the shield lasts with Crystal thronebutt
-Reduced time enemies are asleep with insomnia by a little bit
-Reduced time newly spawned popo are asleep with insomnia by a little bit (10 frames)
-Gamma guts and other contact damage will now kill a thief before they can steal shit from you
-Gamma guts now halves enemy contact damage
-Frog Potency ultra now also increases the scale of toxic a little bit meaning it would stick around just slightly longer.
-Big machine turrets are now way less random and have decreased projectile speed (no random projectile speed, no random firerate)
-Made assassins react a bit faster so they are just a bit more similar to retail
-Crystal caves are bigger
-Laser crystals telltime reduced by 5 frames (loop it remains the same)
-Cave spiders now deal 4 contact damage instead of 3
-Buffed charge flak cannon (more pellets per charge, higher charge maximum)
-Swarmbomb now spawns less swarmies
-reduced max speed of ghost guardians a little bit
-Enemy spawn on loops now increase more gradually per loop (and the increase starts at loop 1 instead of loop 2)
-No longer spawning less enemies on vulcano bossfight
-Loop in casual mode will give you normal mode pre-loop amount of enemies
-Reduced friction on bolts, should change much, but I did it I guess this goes in the balance section. What a waste of your time reading this one.
-reduced the damage of electroballs a tiny tiny bit
-Reduced the damage of mini plasma by the same tiny tiny amount
-Reduced damage hyperlightning does on impact
-Significantly increased chance for secondary weapon to fire when using YV ultra D
-Line grenade drops an area earlier
-Swarmbolts are a bit slower and bolt marrow increases the speed more eagle eyes increases its homing capacity a little more
-IDPD lasers now deal 2 damage instead of 3 bringing it more inline with other enemy lasers in the game
-very minor reduction to weapon drop chance for weapon drop weapon mod. weapon weapon weapon
-Cardguys now have more consistent fire pattern, and fire slightly more often.
-Made all dragon type weapons more ammo efficient (except two headed dragon since it was already quite efficient)
-Reduced cube guardian suckstrength a little bit
-Big vulture & big vulture now drops an second weapon of elite weapon chest quality
-Big fish now drops a weapon 100% of the times and has no chance for a second one (previoulsy was 5% and 1%)
-Scaling secret exits with loop now. For oasis you have more time on loop it no longer requires you to be above half hp and it allows you to kill more enemies (atleast 35% must be alive in level instead of 60%)
-Big vulture drops more exp
-reduced health of hyenas by a tiny bit and increased their rads a little
-Bullet sword drops one tier later
-Decreased pickup drops weapon mod by 1 % woah
-Bouncer laser weapons drop later
-Ultrabolts now destry more walls
-Buffed spinner yoyos
-Made sheeps charge a little better by deafult and made the thronebutt less required. Reduced power of ultra that also gives better charge. Having all three was kinda insane.
-Made some tweaks to lill hunter less chance that they fly away when near player, Calls in popo more often, Should land as close to player and has a perfect ring of fire upon landing
-made it easier to access oasis on subarea 2 and also easier on loop
-reduced cost of laser bomb launcher by 1 it now costs 3
-Increased range of lightning crystal lightning a little bit
-One less small explosion on doom grenades
-Increased time savanna entrance is open
-Crown vault challenge now spawns normal versions of the enemies instead of inverted version and sped up the challenge a tiny but in some places
-Crown vault challenge now cycles between two different challenges if you do the challenge again. It is consistent which one is first and second. Could add more in future
-Big dog now has some additional health scaling on loop
-Big dog now fires more projectiles on loop 1
-And even more on loop 2
-Increased accuracy of bullet laser
-increased how long heavy slugs keep higher damage and also the buff to this with shotgun shoulders
-The weapon chest on oasis 1 and savanna 1 will now always be elite
-Improved fire damage stacking
-The mini plasma minigun now costs 0.5 ammo woah!
-laser minigun now costs 0.75 ammo
-Some changes to vulcano tiles they are a little darker and more detail in B tiles
-spread of laser wave gun is now effected by accuracy
-laser wave gun now fires double the amount of lasers
-Laser wave gun fire-rate is now reduced and it is fully automatic
-laser wave gun now costs 1 less ammo
-Laser brain is now called energy brain, since it effects all energy weapons not just lasers.
-Removed the vault enterance from desert loop
-Ravens now have a smaller chance to fly away
-Morph-o-laser & Morph-o-rifle now drop one area later
-Increased damage of sheeps hyperdash
-Enemy lasers now last slightly longer
-Last wish will now refill armour to armour maximum
-Last wish now fills rogue's ammo to max
-Last wish now gives doctor max ammo instead of some extra ammo
-Some tweaks to big vulture, react a tiny bit faster, fires shorter, can charge multiple times in a row
-Missile launchers now drop an area later
-Increased fire rate big missile launcher
-Increased speed of enemy discs from the discguy in frozen city (just a tiny bit)
-Boiling veins now protects against blue fire! This rule was quite specific and added some complexity that is now unnecessary.
-Euphoria now makes fire and toxic dissapear a little bit faster. If you are frog toxic will remain the same with.
-Laser bandits now have max range
-Morph-o-rays now deal less damage and deal their damage at a slightly slower rate
-Since eagle eyes lost a little bit of its power now that the HUD elements are always available. I have increased the homing boost that eagle eyes gives a little bit.
-Now after using Hunters crackshot the mouse position will be reset to where you had it when you initilized the shot instead of where it ended up.
-Improved hunter's targeting ability it will now lead shots a little, And the aiming is no longer altered by the player's position on the screen instead it will be consistent.
-Increased length and decreased reload time of lightning pistol a little
-Increased fire rate lightning rifle
-Decreased cube guardian pull/suck strength
-Charge shotgun now fires more pellets per charge
-Crown guardians now have a small delay before they can start reflecting, upon becoming active
-With crown of popo IDPD vans now also drop rads
-Kraken tentacles should no longer pull in stationary vans and other props such as cars
+Inverted Throne
+New character!
+4 New ultras & thronebutt for the new character
+Wonderland is now connected through a pink portal, to indicate that it does not really belong here.
+Euphoria now makes the thronebeam thinner
+Thronebeam now dissapears nicer
+Euphoria now makes enemy wazers thinner
+Reroll station!
+Completing a survival wave or the crown vault challenge will now destroy enemy projectiles remaining in the area
+Crown of hatred no longer removes range and gives more rads from 12 to 16
+Weapon modifiers now also have an explain/description text like ultra mods
+More ultra mod cases for fat bullets and slugs
+New early game weapon hand cannon
+New starting weapon for Business Hog: Golden hand cannon
+Changed crownvault challenges again.
+Added a third crownvault challenge
+Now after completing the third crownvault challenge the ultramods will be available for the rest of the run and you don't need to do the challenge again.
+Crownvault challenge is enabled in daily modes again.
+Ultra slugger now also has a unique close range damage buff sprite, and now also has that logic instead of dealing consistent damage it will deal more up close
+Angel now has input buffering when firing while over a wall. Meaning that you will now fire as soon as you exit the wall if you pressed fire right before exiting the wall.
+Angel's active now also uses icons instead of text for hud popups
+Crownlight is now at an angle
+Optimized pickup code, collisions scripts for particular things that can collect them will now only run when it is actually moving. May not be that big of an performance boost but its something.
+Minor optimization to curse pickup effects
+Minor buff to the flamethrower and golden flamethrower both should be a bit more ammo efficient. Also moved flamethrower down 1 tier
+Renamed fish's brother's in arms ultra to Buddy cop. Fish is a police officer not a soldier right?
+Lore in the crownvault
+Yung cuz's buddies can now pickup rads, ammo and health!
+An additional technomancer now spawns on loop 4 and beyond
+Venuz car has been added to Oasis 1B - 3
+Angel tranquility utlra change, Now is percentage based. 75% damage increse. And works on all types of damage not just projectiles. It now also works when above max health
+Added two new crosshairs
+Reworked Hunter's active ability it is much better to use now. It will not force your aim onto a target instead it will just aim the shot at the target when you fire. This alows you to retarget the marker without having to first unlock it
+Redid crack shot ultra D for Hunter, With the new aiming system all markers can be fired at in a single frame!
+Atom Ultra B Proton, atom will now stop pulsing when there are no enemies left (it will continue again if one spawns)
+Big fish can no longer suck the player through walls. Line of sight is now required for the player to be moved.
+Triple blood gun now costs 2 ammo
+Increased damage of initial slug cannon bullet
+Plasma should stick a little better to enemies
+Only one piece of the throne can now be damaged at a time. Meaning that piercing damage will be less effective, because of this I've reduced the health of the throne.
 
 Weapons
-Ultra Lance
-Chunky blade gun (big blade but has same wall bounce hitbox)
-The director (deflects and destroys all projectiles towards nearby enemies
-Ultra blood rifle (high damage ammo and rad efficient blood rifle, destroys projectiles)
-Ultra toxic thrower
-Box gun
-Box Slugger
-Efficient heavy slugger (a heavy slugger with long range and only 1 ammo cost. but it has very slow firerate)
-Love bubbler (bubbler in hearth shape can heal you (same odds as bloodlust)
-The penetrator (Bolt type weapon that does not slow down and has infinite pierce, everytime it pierces it will increase its damage significantly)
-auto penetrator
+Flame SMG
+Rusty sawed-off shotgun
+Golden hand cannon
+Hand cannon
+auto hand cannon
+auto missile launcher (this one is pretty nutty but drops very late)
+fat smartgun
+Pop wall
+Pop laser
+Jaw crusher
+Jaw Obliterator
+Double mini plasma rifle
+Flame director jaw eraser
+Scythe
+
+Balance
+Chunky blade gun drops one area later
+Reduced spee dof firebat fireballs and lightning balls
+Increased health of lavaball enemies
+reduced amount of enemies that spawn in dragon fight
+Bubbler now spawns two areas later (same as blood bubbler) and has a lower fire rate
+Reduced amount of fire/laser worms in vulcano a little
+Moved doom pistol and rifle up a tier and reduced fire rate of doom pistol
+Moved kraken yoyogun up a tier
+Minor buff to elemental gun (increased range of lightning and kraken a little)
+Decreased bounces of bouncer laser pistol by one
+decreased the effectiveness of bolt marrow on spinner yoyo, they basicly became sticky grenades that dealt damage every frame
+Buffed flame cannon ball it now deals damage every frame and it will be slowed down less meaning it should stick around longer, it will now also not destroy itself after a little while, instead it will slow down and then destroy itself, the timer on this is also increased
+Fixed ultra mod for laser not mentioning mega lasers in the heavy bolt description part
+Reduced damage of swarm bolts
+Overhealing from Big HP chests is now halved (so at full maxHP it will overheal for 2HP with second stomache 4hp
+Increased damage of laser sword slash by one.
+Moved flail up one tier
+Crown of life now overheals for 2HP , dont @me
+Faster portal intro animation
+Ultra bullets will now spawn two ultra lasers instead of 3 when using ultramod laser <=> bullet
+Reduced chance for elite popo spawn slightly
+Wazer rifle and explosion wazer now cost a tiny bit more ammo
+Hypercrystal now has more health
+Disperse bullets are no longer deflectable (the projectile that spawns the other ones)
+fireworms spam shots a little less
+reduced the maxrange of fireworms
+invertd firebat's lightning cannon balls now explode into the same length lightning as it normally spawns
+Crown guardians now have a small chance to drop an item when they fire
+Moved up the kraken ion cannon in tier
+Moved line grenade up two tiers
+Moved line of fire down a tier
+Doomlauncher original grenade now explodes
+Reduced how much firerate weapon smith gains with ULTRA C
+Buffed fire rate mini plasma gun
+Moved swarm bomb up a couple of tiers
+Robot's thronebutt now increases the length of the ultralightning that spawns when eating a weapon post ultra mutation
+Changed freeze effects a little bit instead of completly stopping enemies from using their brain they will think much slower.
+Decreased the homing buff eagle eyes gives a little bit
+increased the homing buff of weapon mods a little bit
+Square bats now stay on the floor a little better
+Golden glove now deals 9 damage
+Some more tweaks to plasma, shrinks slower & pierces a little worse.
+Moved heavy slugger down a tier, its now one tier lower than in retail, I love this gun
+Upped the ultra slugger tier by one and increased fire rate by one frame
+Increased the size of atom's pulse ultra it also lingers longer
+Atom's pulse no longer has a randomness factor to dealing damage or not, decreased the damage a little to compensate
+Atom's pulse will no longer deal damage to props
+Reduced the range of square bandits a little bit
+Super lance now drops later
+Increased health a little inverted wolves
+Increased health a little invertes snowbot
+Increased health inverted snow tank they were barely a tank
+Discguys now act faster and have a higher chance to toss a disc
+Vikings armour strike now no longer cares about iframes, for this reason the damage was decreased, but there was a bug with the damage so it should scale properly now with your level
+Reduced ammo required for ion teleporter and moved it down a couple of tiers
+Picking up rads through implosions will now get the same radboosts as regular pickups do it will now run the same code.
+Reduced damage of blacksword by 2 (not much)
+Reduced damage of blacksword while dead by 20. It is still incredibly high.
+Increased fire rate lightning rifle and lightning shotgun
+Reduced health of big machine and big bad bat (these bosses appear right after another boss on loop so they should be pretty fast to beat and not feel grindy at all) In the case of big machine since this boss now appears earlier in the game it should also be a little easier
+Decreased the size of the lasers that spawn from bullets when using laser swap bullet ultra mod
+Plasma minigun now costs only one ammo and drops a couple of areas later
+(energy) Super sword and (energy) super shank guns all drop later
+Decreased amount of iframes atom gets when teleporting by a one, but it should more consistently apply them.
+Golden scorpions that get killed within a 0.3 second of spawning say in the crownvault challenge or in survival arena, Wont explode into acid streaks
+Super split blade gun now costs 5 ammo and drops later
+Reduced health of the throne a wee bit
+Removed damage reduction on middle part of throne
+Moved the hyper heavy slugger up a couple of tiers
+Lightning laser now drops a little later
+Increased range of flamethrowers
 
 Bugfixes
-Meatexplosions now deal their damage similar to explosions 1 frame ignoring enemy iframes (also collision mask is little bigger)
-Refactored kraken tentacles they should spam less meat explosions and be more consistent
-Shotgun & bouncer mod projectiles will now not go through walls, their hitbox was disabled for a couple of frames so it would not immediatly damage the enemy it spawned on
-Fix chicken focus ultra not correctly applying reload reduction when in slowmotion and not applying the correct amount.
-Now using math to change chicken speed firerate and thronebutt movement speed
-Fixed some cases where weapon mods would display one thing and say another thing (this happened when rerolling to make sure that you dont get the same mod)
-Fix missiles being able to explode for 1 frame when using seeker ultramod
-Fix inverted ballmom not exploding into projectiles
-Enemies that leave the crown vault challenge area will now be killed after the final wave
-leaving the crown vault challenge after the last wave spawns will now no longer win you the challenge
-Fixed rage not being removed
-Big bandit & Big vulture can instantly charge you again
-Humprhy was not getting accuracy boost from skill removed it from description the boost (if it existed) would negate eagle eyes and we cant have that, can we.
-Fixed more sound issues burst weapons (mostly noticable on yung cuz)
-Fixed loadout overlay overlap for Panda and one of the gold starting weapons
-Ultra lightning now gets same benefits from accuracy as regular lightning
-Fixed timer not resetting in vanfan mode and crown start
-Fixed a bug where the cursor could be gone?
-(inverted) Chesire cat deals contact damage again
-Inverted CHesire cat now stops music correctly
-Cube guardian now doesnt drop an insane amount of weapons
-Fixed several cases where melee damage was doubled
-Fixed a bug where vans could spawn in big machine fight and on yv's mansion
-Big dog now makes a better floor for itself using logic from the new loop bosses, should make it so it doesn't spawn inside or very close to walls
-Probably fixed unlock for all mutations mode if that was not fixed before
-Probably fixed yv cskin unlock
-Removed a lot of yank from big machine such as, frost weapons would delay the exposure instead of delaying the shooting
-Big machine no longer destroys some projectiles that you fire at it while in damage reduction mode
-Big machine no longer uses a second object to share damage because that was kinda buggy. Instead it will shift its hitbox now when in vulnerable phase.
-Fix a crash related to bubbler and shielder
-Inverted portals will now consistently pull a little bit
-Inverted portals no longer destroy projectiles
-maggots from a maggot nest now immediatly deal melee damage again
-inverted chesire cat and ghostguardians now give light in the dark
-When leveling rads no longer just get set to 0 but intead will keep anything over the required level. So in the case that you would get 10 rads and you needed only one to level up you would keep the 9 rads that you would have lost otherwise.
-Bloodbulelts are no longer deflectable by shielders
-Portals should no longer destroy player projectiles
-Ghostguardian is now accuratly darker like the other enemies when in a dark place
-Fixed a bug where chesire cat's health would scale more than intended on loop
-Fixed a bug where toxiccannonball and doombots could be deflected. Doombots can not be deflected anymore and toxiccannonball will be destroyed
-Fix square bullets being draw on top of darkness
-Square bullets now give light
-Fixed electroballs ultramods not working
-Fixed a bug where Plant's Ultra that spawns saplings would only spawn the sapling when plant was on the snare upon an enemy death
-Finishing a daily will again reset gamemode to normal
-Fixed loop specific enemies spawning preloop on wonderlands - 3
-Fixed chests spawning in yv's mansion
-Fixed business hog shopmenu having other sprites overlaying the text.
-Fixed weapon mods destroying your weapon in one weapon only gamemodes.
-Fixed obsidian throwing knife in one wep only mode dissapearing after throwing
-Snowtanks now have their pre-explosion sound (again?)
-Fixed collision of discs and blades being stuck in wall bouncing strange (its still quite simple for performance reasons)
-Throne will now start dealing contact damage when the legs come out, similar to retail.
-Gave the throne 50 more HP
-Normal Bandits should no longer spawn in most secret/alternate areas, such as oasis
-Fixed a bug where sheep's charge sound would not stop upon exiting an area
-Enemies that are far away from the crownvault challenge will now die
-Fixed some text allignment cases when generating areas
-Fix golden oops gun crashing the game, hahahaha
-Fixed a bug where palace guardian could be invisible
-Fixed yung cuz losing too much health when using active
-Fix only one wazer being spawned on cuz
-Fixed a bug where sheep would keep high speed without charging
-Fixed a bug where disperse guns would trigger the weapon mods less/not at all on the projectiles they fire
-Fixed a bug where Hunters ultra d crackshot would sometimes not fire at the marker anymore when an enemy that was marked died while having multiple markers out
-Fixed a bug where skeleton could kill itself through strong spirit and/or alkaline saliva
-Fixed last enemy indicator not displaying flying ravens or flying lill hunter
-Fixed last enemy indicator drawing onto IDPD vans
-Fixed IDPD sometimes actively targeting vans, they should still hit them but they should not aim for it.
-Fixed purple dragon dealing no melee/contact damage
-Sheep should not die immediatly after spawning (happened a lot with the morph hammer)
-Fixed a bug where superfireballers and fireballers (those yv mansion monsters) could spawn inside a wall
-Fixed inversion magnet having strange hud sprite, if you look closely when it is on the ground its shine effect is in reverse from all other weapons.
-Inverted portals now really dont destroy enemy projectiles
-Fixed the laser wave gun, it was all kinds of focked
+Fixed inverted big dog spawning inside a wall (probably)
+Fixed a bug where radchests would still spawn when playing as doctor
+Frost effect now has a maximum scale, meaning the ice overlay wont be as ugly on something like the throne
+Fixed some throne intro stuff,
+Fixed throne death corpse
+Fixed inverted wonderland bringing you to throne it was suppose to bring you to 7-2
+Big maggots now have a check so that they don't all burrow underground at the same time. happened often on loop probably relate to scarier face and glass arm cannon, since they tend to burrow when below certain amount of hp.
+Fixed small explosions dealing damage to player through iframes sometimes
+Fixed oasis big bandit sometimes spawning two portals if you kill them fast enough
+Fixed some typos and wrong info in ultra mod descriptions
+Fixed a bug where energy brain would scale enemy wazers
+Fixed melting detachment ultra removing overheal
+Bush box now drops a golden weapon chest when playing as business hog
+IDPD grunts now bounce of walls when rolling
+Fixed inverted vulcano bringing you to banditland twice
+Fixed explo guardians shuffeling around when they are charging
+Loop 2 and even loops will no longer start in inverted desert
+Fixed a crash related to junglebandits firing at you
+Fixed inverted big bad bat using the wrong death animation
+Fixed some cases where entering an inverted portal while also entering another kind of portal would bring you to the correct area, and then skip you ahead if you entered the next area's inverted version and then finished it.
+Fixed swarmbolts dealing damage every frame, they should not swarm around the enemy more like originally
+Fixed robot's ultra auto eat weapon ability spawning hp pickups ontop of the weapons instead of the player
+robot auto eat ultra now gains benefits from eating ultra weapon and also unlocks skins related to eating ultra or hyper weapon
+Robot auto eat weapons left in level now also gives you rads same as eating weapons manually
+Fixed a typo in hog's shop
+Fixed a bug where gators could ignore insomnia
+Crown vault challenge should no longer destroy props over the entire level but only close to the arena
+Fixed a bug that prevented maggot rad cannisters from spawning
+Removed old healthchest code it was causing conflict with new chest spawning system causing an insane amount of healthchests to spawn sometimes
+Fixed a bug where steroids could fire a secondary ultra weapon with using rads
+Fixed steroids being able to fire a secondary ultra weapon when out of rads.
+Fixed steroids secondary weapon not working with infinite ammo mode and still requiring ammo
+The blood bubbler did not shake the screen. this was horrendous and I appologize
+Dieing and respawning now no longer stops the music
+Spinner yoyos can no longer be deflected
+Fixed Viking's armour strike damage not scaling unless you had specifically cold hearth ultra. this also resulted in absolutly insane amounts of damage
+Steroids no longer duplicates secondary weapon upon dieing
+Fixed a bug related to the fucking obsidian throwing knife again biggest regret of my life. Throwing it as steroids would result in your primary weapon being gone and not swapping to your secondary weapon.
+Fixed another bug related to obisidan throwing knife and steroids. Causing empty weapons to be created that could then be picked up
+And another obsidian throwing knife steroids bug where the primary weapon slot could end up empty while the secondary weapon slow had a weapon.
+Fixed steroids obsidian knife, mirror hands. Was infinetly duplicating ofcourse.
+Big rad chunks will now distribute the correct value (10x normal rads) to the proto statue. it used to only give 1 rad
+Swapping to the cluster launcher no longer sounds like a sword sheething
+Fixed inverted explo guardians firing normal explo guardian bullets upon death
+Damage indicator on throne should now show how damage is shared and more accuratly represent the damage dealt

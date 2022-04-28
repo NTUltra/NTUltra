@@ -285,7 +285,7 @@ function scrRaces() {
 	//race_back[20] = "WEAPON CHESTS SOMETIME BECOME#GOLDEN WEAPON CHESTS";
 	race_lock[20] = "FIND AND STEAL#THE MONEY GUN"
 	race_have[20] = 0
-	race_swep[20] = 42//golden shotgun
+	race_swep[20] = 444//golden hand cannon
 	race_bskin[20] = 0
 	race_cskin[20] = 0
 	race_bskin_lock[20] = "REACH AND#BEAT THE THRONE#USING ONLY#GOLD WEAPONS#AS BUSINESS HOG"
