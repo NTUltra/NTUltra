@@ -88,11 +88,11 @@ function scrPowers() {
 						{
 							if (grabbingPickup)
 							{
-								lerpSpeed *= 3;	
+								lerpSpeed *= 2;
 							}
 							else
 							{
-								lerpSpeed *= 2;
+								lerpSpeed *= 1.5;
 							}
 						}
 					}
@@ -705,8 +705,8 @@ function scrPowers() {
 		
 	    if place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor)
 	    {
-		    if alarm[3]<1
-		    alarm[3]=4;//imunity
+		    if alarm[3]<3
+		    alarm[3]=3;//imunity
 		    instance_create(x,y,Teleport);
 		    snd_play_2d(sndHyperLightning);
 		    repeat(5){

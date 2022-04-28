@@ -2,6 +2,6 @@
 // /@description
 ///@param
 function scrPlasmaPush(){
-	x += (xprevious - x)*0.8;
-	y += (yprevious - y)*0.8;
+	x += (xprevious - x)*0.9;
+	y += (yprevious - y)*0.9;
 }

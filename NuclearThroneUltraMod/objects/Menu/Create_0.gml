@@ -386,7 +386,7 @@ char[26].spr_to = sprHumphryMenuSelect
 char[26].spr_from = sprHumphryMenuDeselect
 char[26].spr_slct = sprHumphryMenu}
 
-if UberCont.race_have[26] = 1{
+if UberCont.race_have[27] = 1{
 char[27].x = 196;
 char[27].y = 79;
 char[27].sprite_index = sprHandsMenu

@@ -858,9 +858,9 @@ function scrWeapons() {
 	wep_type[77] = 5
 	wep_auto[77] = 1
 	wep_load[77] = 3
-	wep_cost[77] = 2
+	wep_cost[77] = 1
 	wep_sprt[77] = sprPlasmaMinigun
-	wep_area[77] = 13
+	wep_area[77] = 16
 	wep_text[77] = ""
 	wep_swap[77] = sndSwapEnergy
 	wep_rad[77] = 0;
@@ -904,7 +904,7 @@ function scrWeapons() {
 	wep_load[81] = 35
 	wep_cost[81] = 7
 	wep_sprt[81] = sprSuperSwordGun
-	wep_area[81] = 15
+	wep_area[81] = 18
 	wep_text[81] = "SLASH SLASH SLASH SLASH SLASH"
 	wep_swap[81] = sndSwapSword
 	wep_rad[81] = 0;
@@ -935,7 +935,7 @@ function scrWeapons() {
 	wep_type[84] = 1
 	wep_auto[84] = 1
 	wep_load[84] = 2
-	wep_cost[84] = 3
+	wep_cost[84] = 2
 	wep_sprt[84] = sprTripleBloodGun
 	wep_area[84] = 4
 	wep_text[84] = "fueled by fleshwounds"
@@ -1421,7 +1421,7 @@ function scrWeapons() {
 	wep_load[128] = 50
 	wep_cost[128] = 15
 	wep_sprt[128] = sprSuperEnergySwordGun
-	wep_area[128] = 12
+	wep_area[128] = 22
 	wep_text[128] = "this is nuts"
 	wep_swap[128] = sndSwapEnergy
 	wep_rad[128] = 0;
@@ -2717,9 +2717,9 @@ function scrWeapons() {
 	wep_type[246] = 3
 	wep_auto[246] = 1
 	wep_load[246] = 12
-	wep_cost[246] = 6//4
+	wep_cost[246] = 5//4
 	wep_sprt[246] = sprSuperSplitBladeGun
-	wep_area[246] = 15
+	wep_area[246] = 17
 	wep_text[246] = "very sharp"
 	wep_swap[246] = sndSwapBow
 	wep_rad[246] = 0;
@@ -2807,7 +2807,7 @@ function scrWeapons() {
 	wep_load[254] = 35
 	wep_cost[254] = 7
 	wep_sprt[254] = sprSuperShankGun
-	wep_area[254] = 15
+	wep_area[254] = 17
 	wep_text[254] = "shank them to dead"
 	wep_swap[254] = sndSwapSword
 	wep_rad[254] = 0;
@@ -2829,7 +2829,7 @@ function scrWeapons() {
 	wep_load[256] = 50
 	wep_cost[256] = 14
 	wep_sprt[256] = sprSuperEnergyShankGun
-	wep_area[256] = 11
+	wep_area[256] = 21
 	wep_text[256] = "new meta"
 	wep_swap[256] = sndSwapEnergy
 	wep_rad[256] = 0;
@@ -2873,7 +2873,7 @@ function scrWeapons() {
 	wep_load[260] = 13
 	wep_cost[260] = 3
 	wep_sprt[260] = sprHyperHeavySlugger
-	wep_area[260] = 14
+	wep_area[260] = 18
 	wep_text[260] = "heavy slugger with infinite range!"
 	wep_swap[260] = sndSwapShotgun
 	wep_rad[260] = 0;
@@ -4400,7 +4400,7 @@ function scrWeapons() {
 	wep_load[398] = 8
 	wep_cost[398] = 3
 	wep_sprt[398] = sprLightningLaserGun
-	wep_area[398] = 10
+	wep_area[398] = 11
 	wep_text[398] = ""
 	wep_swap[398] = sndSwapBow
 	wep_rad[398] = 0;
@@ -4457,7 +4457,7 @@ function scrWeapons() {
 	wep_sprt[403] = sprClusterNader
 	wep_area[403] = 6
 	wep_text[403] = ""
-	wep_swap[403] = sndSwapSword
+	wep_swap[403] = sndSwapExplosive
 	wep_rad[403] = 0;
 	
 	wep_name[404] = "MISSILE BOMB"
@@ -4892,7 +4892,7 @@ function scrWeapons() {
 	wep_name[443] = "RUSTY SAWED-OFF SHOTGUN"
 	wep_type[443] = 2
 	wep_auto[443] = 0
-	wep_load[443] = 28//28
+	wep_load[443] = 26//28
 	wep_cost[443] = 2
 	wep_sprt[443] = sprRustySawnOffShotgun
 	wep_area[443] = -1
@@ -4993,7 +4993,7 @@ function scrWeapons() {
 	wep_auto[452] = 0
 	wep_load[452] = 12
 	wep_cost[452] = 3
-	wep_sprt[452] = sprJawbreaker
+	wep_sprt[452] = sprJawObliterator
 	wep_area[452] = 18
 	wep_text[452] = "why is the jaw so hated?"
 	wep_swap[452] = sndSwapShotgun
@@ -5015,7 +5015,7 @@ function scrWeapons() {
 	wep_auto[454] = 0
 	wep_load[454] = 18
 	wep_cost[454] = 4
-	wep_sprt[454] = sprFlameDirectorEraser
+	wep_sprt[454] = sprFlameDirectorJawEraser
 	wep_area[454] = 16//6
 	wep_text[454] = "jaw is erased"
 	wep_swap[454] = sndSwapShotgun
@@ -5026,7 +5026,7 @@ function scrWeapons() {
 	wep_auto[455] = 0
 	wep_load[455] = 22
 	wep_cost[455] = 0
-	wep_sprt[455] = sprWrench
+	wep_sprt[455] = sprScythe
 	wep_area[455] = 7
 	wep_text[455] = "spin attack!"
 	wep_swap[455] = sndSwapHammer

@@ -112,8 +112,8 @@ function scrPopProps() {
 	else if spawnarea = 101 && random(6) < 1 && !place_meeting(x,y,Wall)
 	{
 		var ran = random(100);
-	if ran>90
-	instance_create(x+16,y+16,Coral);
+	if ran>90 && styleb = 0
+	instance_create(x+16,y+16,SunkenCar);
 	else if ran > 80
 	instance_create(x+16,y+16,Anchor);
 	else if ran > 70 and point_distance(x+16,y=16,Player.x,Player.y) > 64

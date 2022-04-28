@@ -1,2 +1,2 @@
 /// @description No longer close range
-dmg = 24;
+dmg = 26;

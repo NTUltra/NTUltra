@@ -7285,13 +7285,13 @@ function scrFire2() {
 	//SCYTHE
 	case 455:
 
-	snd_play_fire(sndHammer)
+	snd_play_fire(choose(sndSword1,sndSword2))
 
 	instance_create(x,y,Dust)
 
 	with instance_create(x+hspeed,y+vspeed,SpinSlash)
 	{
-	dmg = 6
+	dmg = 10
 	speed = other.speed*0.5;
 	direction = other.direction;
 	longarms = 0

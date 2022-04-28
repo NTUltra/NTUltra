@@ -179,9 +179,15 @@ function scrShadows() {
 	with InvertedSuperFireBaller
 	draw_sprite(shd32,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ))
 	with Car
-	draw_sprite(shd32,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ))
+	{
+		if drawShadow
+			draw_sprite(shd32,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ))
+	}
 	with CarVenus
-	draw_sprite(shd32,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ))
+	{
+		if drawShadow
+			draw_sprite(shd32,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ))
+	}
 	with CarVenusFixed
 	draw_sprite(shd32,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ))
 	with CarThrow

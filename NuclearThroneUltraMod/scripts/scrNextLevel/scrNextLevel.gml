@@ -34,7 +34,8 @@ function scrNextLevel() {
 			area = 9;
 			subarea = 3;
 			inverted = false;
-			exit;
+			//LOOP
+			//exit;
 		}
 	    if area = 113// && subarea > 1//banditland
 	    {

@@ -3,7 +3,7 @@ if sprite_index != sprPortalSpawn
 if endgame = 100
 {
 snd_play(sndPortalClose);
-if random(1000) < 1//Culture
+if random(2000) < 1//Culture
 	snd_play_2d(sndYEAH,0,true,false,2,1);
 endgame = 30;
 

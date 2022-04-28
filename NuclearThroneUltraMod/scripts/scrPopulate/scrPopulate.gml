@@ -89,7 +89,14 @@ function scrPopulate() {
 
     //COOL BONES
     with Floor {
-        if spawnarea = 9 {
+		if spawnarea == 101
+		{
+			TopDecals();
+			with TopDecal {
+                sprite_index = sprOasisTopDecal;
+            }
+		}
+        else if spawnarea = 9 {
             if instance_exists(GenCont) {
                 if !place_free(x - 32, y) and!place_free(x - 64, y) and place_free(x, y) and random(5) < 1 {
                     instance_create(x - 64 + 16, y + 16, TopDecal)

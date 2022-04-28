@@ -1,5 +1,5 @@
 maxhealth = 20
-
+drawShadow = true;
 spr_idle = sprCarIdle
 spr_hurt = sprCarHurt
 spr_dead = sprScorchmark

@@ -39,7 +39,7 @@ if instance_exists(Player)
 		with Floor
 		{
 			if styleb
-			sprite_index = sprFloor100Ca;
+			sprite_index = sprFloor100C;
 			else
 			sprite_index = sprFloor100;
 		}

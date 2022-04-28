@@ -1,7 +1,6 @@
 /// @description Move
 
-// Inherit the parent event
-event_inherited();
+
 
 hspeed = 0;
 x = xStart;
@@ -22,35 +21,52 @@ else if active
 {
 	if (my_health < prevhealth)
 	{
-		var dmgTaken = prevhealth - my_health;
-		//Damage reduction on middle part
-		if cantrishot
-			my_health += dmgTaken * 0.5;
-		if sprite_index == spr_hurt
+		var someoneElseTookdamage = false;
+		with NuclearThrone1Side
 		{
-			if disable
-				spr_hurt = spr_deactivated_hurt;
-			else
-				spr_hurt = spr_middle_hurt;
-			sprite_index = spr_hurt;
+			if 	tookDamageThisFrame
+			{
+				someoneElseTookdamage = true;
+			}
 		}
-		with rightSide
+		if !someoneElseTookdamage
 		{
-			if disable
-				spr_hurt = spr_right_deactivated_hurt_link;
-			else
-				spr_hurt = spr_right_hurt_link;
-			sprite_index = spr_hurt;
-			image_index = 0;
+			var dmgTaken = prevhealth - my_health;
+			//Damage reduction on middle part
+			//if cantrishot
+			//	my_health += dmgTaken * 0.5;
+			if sprite_index == spr_hurt
+			{
+				if disable
+					spr_hurt = spr_deactivated_hurt;
+				else
+					spr_hurt = spr_middle_hurt;
+				sprite_index = spr_hurt;
+			}
+			with rightSide
+			{
+				if disable
+					spr_hurt = spr_right_deactivated_hurt_link;
+				else
+					spr_hurt = spr_right_hurt_link;
+				sprite_index = spr_hurt;
+				image_index = 0;
+			}
+			with leftSide
+			{
+				if disable
+					spr_hurt = spr_left_deactivated_hurt_link;
+				else
+					spr_hurt = spr_left_hurt_link;
+				sprite_index = spr_hurt;
+				image_index = 0;
+			}
 		}
-		with leftSide
+		else
 		{
-			if disable
-				spr_hurt = spr_left_deactivated_hurt_link;
-			else
-				spr_hurt = spr_left_hurt_link;
-			sprite_index = spr_hurt;
-			image_index = 0;
+			my_health = prevhealth;	
 		}
 	}
 }
+// Inherit the parent event
+event_inherited();

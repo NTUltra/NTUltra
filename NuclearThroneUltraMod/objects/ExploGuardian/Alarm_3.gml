@@ -5,7 +5,7 @@ var angleStep = 360/amount;
 snd_play(sndExploGuardianFire);
 repeat(amount)
 {
-	with instance_create(x,y,ExploGuardianBullet)
+	with instance_create(x,y,exploBullet)
 	{
 		motion_add(angle,other.projectileSpeed);
 		image_angle = direction

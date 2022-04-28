@@ -44,3 +44,4 @@ gunangle[2] = 330;
 angleI = 0;//random(array_length(gunangle)-1);
 badboyBuff = 1;
 loops = GetPlayerLoops()
+tookDamageThisFrame = false;

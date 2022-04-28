@@ -1,6 +1,5 @@
 x = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5
 y = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.5
-debug("TRY SPAWN");
 if instance_exists(Player)
 {
 	target = Player;	
@@ -68,7 +67,6 @@ if target > 0 && instance_exists(target)
 			alarm[0]+=15*a;
 			a++;
 		}
-		debug("spawned!");
 		instance_destroy()
 	}
 }
