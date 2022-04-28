@@ -3072,7 +3072,7 @@ function scrWeapons() {
 	wep_cost[278] = 0
 	wep_sprt[278] = sprGoldenShovel
 	wep_area[278] = 20//4 originally?
-	wep_text[278] = "dig"
+	wep_text[278] = "gold digger"
 	wep_swap[278] = sndSwapHammer
 	wep_rad[278] = 0;
 
@@ -4883,7 +4883,7 @@ function scrWeapons() {
 	wep_auto[442] = 1
 	wep_load[442] = 3
 	wep_cost[442] = 1
-	wep_sprt[442] = sprSmg
+	wep_sprt[442] = sprFlameSMG
 	wep_area[442] = 6
 	wep_text[442] = ""
 	wep_swap[442] = sndSwapMachinegun
@@ -4905,7 +4905,7 @@ function scrWeapons() {
 	wep_auto[444] = 0
 	wep_load[444] = 12
 	wep_cost[444] = 3
-	wep_sprt[444] = sprRevolver
+	wep_sprt[444] = sprGoldenHandCannon
 	wep_area[444] = -1
 	wep_text[444] = ""
 	wep_swap[444] = sndSwapPistol
@@ -4916,7 +4916,7 @@ function scrWeapons() {
 	wep_auto[445] = 0
 	wep_load[445] = 14
 	wep_cost[445] = 3
-	wep_sprt[445] = sprRevolver
+	wep_sprt[445] = sprHandCannon
 	wep_area[445] = 2
 	wep_text[445] = ""
 	wep_swap[445] = sndSwapPistol
@@ -4927,7 +4927,7 @@ function scrWeapons() {
 	wep_auto[446] = 1
 	wep_load[446] = 3
 	wep_cost[446] = 2
-	wep_sprt[446] = sprRevolver
+	wep_sprt[446] = sprAutoHandCannon
 	wep_area[446] = 13
 	wep_text[446] = "trusty old revolver"
 	wep_swap[446] = sndSwapPistol
@@ -4938,7 +4938,7 @@ function scrWeapons() {
 	wep_auto[447] = 1
 	wep_load[447] = 8
 	wep_cost[447] = 1
-	wep_sprt[447] = sprAutoCrossbow
+	wep_sprt[447] = sprAutoMissileLauncher
 	wep_area[447] = 26
 	wep_text[447] = "THIS IS METAL"
 	wep_swap[447] = sndSwapExplosive
@@ -4949,7 +4949,7 @@ function scrWeapons() {
 	wep_auto[448] = 1
 	wep_load[448] = 3
 	wep_cost[448] = 1
-	wep_sprt[448] = sprSmartGun
+	wep_sprt[448] = sprFatSmartGun
 	wep_area[448] = 24
 	wep_text[448] = "big brained"
 	wep_swap[448] = sndSwapMachinegun
@@ -4960,7 +4960,7 @@ function scrWeapons() {
 	wep_auto[449] = 0
 	wep_load[449] = 15
 	wep_cost[449] = 2
-	wep_sprt[449] = sprSkullBreaker
+	wep_sprt[449] = sprPopWall
 	wep_area[449] = 11
 	wep_text[449] = "pellets are closer together with higher accuracy"
 	wep_swap[449] = sndSwapShotgun
@@ -4971,7 +4971,7 @@ function scrWeapons() {
 	wep_auto[450] = 0
 	wep_load[450] = 15
 	wep_cost[450] = 3
-	wep_sprt[450] = sprSkullSplitter
+	wep_sprt[450] = sprPopLaser
 	wep_area[450] = 12
 	wep_text[450] = "more pellets with higher accuracy"
 	wep_swap[450] = sndSwapMachinegun
@@ -4982,7 +4982,7 @@ function scrWeapons() {
 	wep_auto[451] = 0
 	wep_load[451] = 17
 	wep_cost[451] = 2
-	wep_sprt[451] = sprJawbreaker
+	wep_sprt[451] = sprJawCrusher
 	wep_area[451] = 9
 	wep_text[451] = ""
 	wep_swap[451] = sndSwapShotgun
@@ -5004,7 +5004,7 @@ function scrWeapons() {
 	wep_auto[453] = 1
 	wep_load[453] = 6
 	wep_cost[453] = 2
-	wep_sprt[453] = sprMiniPlasmaRifle
+	wep_sprt[453] = sprDoubleMiniPlasmaRifle
 	wep_area[453] = 14
 	wep_text[453] = ""
 	wep_swap[453] = sndSwapEnergy

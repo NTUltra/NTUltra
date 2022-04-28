@@ -9,7 +9,7 @@ x = lerp(creator.x,touchpointX,lerpTime);
 y = lerp(creator.y,touchpointY,lerpTime);
 image_angle = point_direction(creator.x,creator.y,touchpointX,touchpointY);
 
-if touchpointX > x
+if touchpointX < x
 	image_xscale = -1
 else
 	image_xscale = 1;

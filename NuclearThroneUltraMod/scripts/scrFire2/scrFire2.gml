@@ -6944,7 +6944,7 @@ function scrFire2() {
 	//AUTO MISSILE LAUNCHER
 	case 447:
 
-	with instance_create(x,y,MissileBurst)
+	with instance_create(x,y,MissileBurst3)
 	{
 	creator = other.id
 	ammo = 2

@@ -11,9 +11,6 @@ if speed > 1 and other.team != team
 			motion_add(other.direction,4)
 			other.hits-=1;
 			snd_play(snd_hurt, hurt_pitch_variation)
-			with other{
-				motion_add(direction+180,4);
-			}
 		}
 		else
 		{

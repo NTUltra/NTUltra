@@ -12,7 +12,7 @@ viewdist = 9
 if Player.wep_type[Player.wep] = 3
 viewdist = 8
 
-if(Player.skill_got[19])&&!instance_exists(Marker){//EAGLE EYES
+if(Player.skill_got[19]){//EAGLE EYES
 viewdist-=5;}
 
 //if Player.my_health > 0

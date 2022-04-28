@@ -3,7 +3,7 @@
 instance_destroy()
 exit;
 }*/
-//scrn=0; //for screenshot taking character explain pic
+scrn=0; //for screenshot taking character explain pic
 saveLoaded = false;
 restarted = false;
 hurt_pitch_variation = 0;

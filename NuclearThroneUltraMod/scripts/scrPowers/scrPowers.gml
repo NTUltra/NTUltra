@@ -6,7 +6,7 @@ function scrPowers() {
 		if race == 27 && (!instance_exists(Hand) || (ultra_got[107] && instance_number(Hand) < 2 || (scrIsInInvertedArea() && instance_number(Hand) < 2)))//Hands
 		{
 			var targetPickup = false;
-			var grabRange = 40;
+			var grabRange = 48;//same as hunter mark
 			var d1 = 999;
 			var d2 = 999;
 			var d3 = 999;

@@ -385,7 +385,7 @@ function scrRaces() {
 	race_swep[27] = 443
 	race_bskin[27] = 0
 	race_cskin[27] = 0
-	race_bskin_lock[27] = "NUTHIN"
+	race_bskin_lock[27] = "NOTHING HERE YET"
 	race_cskin_lock[27] = "NOPESKY"
 
 
