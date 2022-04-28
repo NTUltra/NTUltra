@@ -1,3 +1,3 @@
-draw_sprite(sprite_index,image_index,UberCont.mouse__x,UberCont.mouse__y);
+draw_sprite(sprite_index,image_index,mouse_x,mouse_y);
 
 

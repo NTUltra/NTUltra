@@ -592,14 +592,25 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 	if wep_auto[wep] = 0 and clicked = 1
 	{
 
-	    if !scrHunterCrackshot()
+		if ultra_got[44] == 1 && instance_exists(Marker)
+		{
+			scrCrackShotFire();
+		}
+		else
+		{
 			scrFire()
+		}
     
 	clicked = 0
 	}
 		if wep_auto[wep] = 1 and (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
 		{
-		    if !scrHunterCrackshot()
+		    
+			if ultra_got[44] == 1 && instance_exists(Marker)
+			{
+				scrCrackShotFire();
+			}
+			else
 			{
 				scrFire();
 			}

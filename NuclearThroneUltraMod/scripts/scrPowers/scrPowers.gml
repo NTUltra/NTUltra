@@ -1265,10 +1265,11 @@ function scrPowers() {
 	{
 		if Player.ultra_got[44]=1{//Hunter Ultra D CRACKSHOT
 			if(instance_exists(enemy)){
-				if(point_distance(UberCont.mouse__x,UberCont.mouse__y,instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy).x,instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy).y) < 48) {
+				var n = instance_nearest(mouse_x,mouse_y,enemy)
+				if (point_distance(mouse_x,mouse_y,n.x,n.y) < 48) {
 					snd_play_2d(sndSniperTarget);
 
-				    with instance_create(UberCont.mouse__x,UberCont.mouse__y,Marker) {
+				    with instance_create(mouse_x,mouse_y,Marker) {
 						target=instance_nearest(x,y,enemy);
 						image_angle=30*(MarkerNr-1);
 			        }
@@ -1291,19 +1292,21 @@ function scrPowers() {
 		}
 		else
 		{// marker ability
-		if (instance_exists(Marker)){
-
-		    with Marker
-		    instance_destroy()
-		}
-		else if(instance_exists(enemy)){
-		if(point_distance(UberCont.mouse__x,UberCont.mouse__y,instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy).x,instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy).y)<48){
-		    snd_play_2d(sndSniperTarget);
-		    with instance_create(UberCont.mouse__x,UberCont.mouse__y,Marker){
-		    target=instance_nearest(x,y,enemy);
-		        }
-		    }}
-    
+			if (instance_exists(Marker)){
+				with Marker
+					instance_destroy();
+			}
+			if (instance_exists(enemy)){
+			
+				var n = instance_nearest(mouse_x,mouse_y,enemy)
+				if(point_distance(mouse_x,mouse_y,n.x,n.y) < 48)
+				{
+				    snd_play_2d(sndSniperTarget);
+				    with instance_create(mouse_x,mouse_y,Marker) {
+						target=instance_nearest(x,y,enemy);
+				    }
+			    }
+			}
 		}
 	}
 

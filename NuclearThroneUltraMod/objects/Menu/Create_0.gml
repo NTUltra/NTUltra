@@ -387,14 +387,13 @@ char[26].spr_from = sprHumphryMenuDeselect
 char[26].spr_slct = sprHumphryMenu}
 
 if UberCont.race_have[26] = 1{
-char[27].x = 64;
-char[27].y = 16;
-char[27].image_speed = 0.3;//Humphry is a slow man
-char[27].sprite_index = sprMutant27Idle
-char[27].spr_menu = sprHumphryMenuSelected
-char[27].spr_to = sprHumphryMenuSelect
-char[27].spr_from = sprHumphryMenuDeselect
-char[27].spr_slct = sprHumphryMenu}
+char[27].x = 196;
+char[27].y = 79;
+char[27].sprite_index = sprHandsMenu
+char[27].spr_menu = sprHandsMenuSelected
+char[27].spr_to = sprHandsMenuSelect
+char[27].spr_from = sprHandsMenuDeselect
+char[27].spr_slct = sprHandsMenu}
 
 logoin = 240
 extra = 0

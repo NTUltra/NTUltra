@@ -1,9 +1,12 @@
 if instance_exists(Player)
 {
-if Player.x < x
-image_xscale = -1
-else
-image_xscale = 1
+	if Player.visible
+	{
+		if Player.x < x
+		image_xscale = -1
+		else
+		image_xscale = 1
+	}
 
 if sprite_index = sprPortal or sprite_index = sprProtoPortal or sprite_index = sprPortalInverted || sprite_index = sprBigPortal || sprite_index == sprPinkPortal
 {

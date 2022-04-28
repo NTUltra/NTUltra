@@ -204,7 +204,7 @@ function scrUltras() {
 	ultra_tips[43] = "friendly fire?"
 
 	ultra_name[44] = "CRACK SHOT"
-	ultra_text[44] = "PLACE MULTIPLE MARKERS#USING MARKERS REDUCES RELOAD TIME"
+	ultra_text[44] = "PLACE MULTIPLE MARKERS#FIRE AT ALL MARKERS#WITHOUT EXTRA RELOAD TIME"
 	ultra_tips[44] = "gunslinger"
 
 	    //YUNG CUZ 
