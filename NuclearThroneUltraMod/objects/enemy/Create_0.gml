@@ -4,7 +4,6 @@ right = choose(1,-1)
 my_health = maxhealth
 prevhealth=my_health;
 
-
 MorphMe=false;
 frozen=false;
 

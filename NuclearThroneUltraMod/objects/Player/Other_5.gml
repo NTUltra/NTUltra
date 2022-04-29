@@ -107,14 +107,15 @@ if race==10//Rebel pasive
 }
 else if race=12//yung cuz reset max HP
 {
-	if skill_got[1]{//rhino skin
-		maxhealth=12;
-	}
-	else{
-		maxhealth=8;
-	}
-	if skill_got[33]//Glass arm cannon
-		maxhealth-=2;
+	var targetHealth = 8;
+	if skill_got[1] == 1//Rhino skin
+		targetHealth += 4;
+	if skill_got[33] == 1//Glass arm cannon
+		targetHealth -= 2;
+	if UberCont.opt_gamemode == 9
+		targetHealth += UberCont.casualModeHPIncrease;
+	targetHealth += UberCont.maxHpIncrease;
+	maxhealth = targetHealth;
 	
 }
 if ultra_got[40] = 1 || ultra_got[47] {//Rebel Ultra D YUNG CUZ ULTRA C

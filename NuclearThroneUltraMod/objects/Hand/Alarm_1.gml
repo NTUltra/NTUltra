@@ -60,7 +60,7 @@ if target > 0 && instance_exists(target)
 		{
 			with target
 			{
-				if team != 0
+				if team != 0 && team != other.team
 				{
 					snd_play(snd_hurt, hurt_pitch_variation,true);
 					my_health -= other.dmg*2;

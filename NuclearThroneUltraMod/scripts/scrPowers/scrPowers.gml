@@ -44,7 +44,17 @@ function scrPowers() {
 			if ultra_got[108] && resulttar == -1
 			{
 				//Allow pickups to be picked up
-				if instance_exists(Pickup)
+				if instance_exists(WepPickup)
+				{
+					tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,WepPickup);
+					var d4 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);
+					if (d4 < grabRange)
+					{
+						resulttar = tar;
+						//targetPickup = true;
+					}
+				}
+				if instance_exists(Pickup) && resulttar == -1
 				{
 					tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,Pickup);
 					var d4 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);

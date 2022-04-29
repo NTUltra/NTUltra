@@ -34,7 +34,7 @@ instance_destroy();
 }
 else if other.team != 2
 {
-	image_index += 0.3;//iframe skipper
+	image_index += 0.32;//iframe skipper
 }
 x = (x+other.x)/2+random(6)-3
 y = (y+other.y)/2+random(6)-3

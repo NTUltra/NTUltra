@@ -4903,7 +4903,7 @@ function scrWeapons() {
 	wep_name[444] = "GOLDEN HAND CANNON"
 	wep_type[444] = 1
 	wep_auto[444] = 0
-	wep_load[444] = 18
+	wep_load[444] = 16
 	wep_cost[444] = 3
 	wep_sprt[444] = sprGoldenHandCannon
 	wep_area[444] = -1
@@ -4914,7 +4914,7 @@ function scrWeapons() {
 	wep_name[445] = "HAND CANNON"
 	wep_type[445] = 1
 	wep_auto[445] = 0
-	wep_load[445] = 20
+	wep_load[445] = 18
 	wep_cost[445] = 3
 	wep_sprt[445] = sprHandCannon
 	wep_area[445] = 2
