@@ -28,20 +28,20 @@ switch(array_length(UberCont.collectedRewards))
 	case 4:
 		with Player
 		{
-			maxhealth += 2;
-			my_health += 2;
-		}
-		UberCont.maxHpIncrease += 2;
-		snd_play(other.snd_chst);
-	break;
-	case 5:
-		with Player
-		{
 			maxlevel ++;// In room end check it will be set
 			UberCont.levelIncrease += 1;
 		}
 		snd_play(other.snd_thrn);
 		//name += "INCREASE YOUR IFRAMES BY 25%";
+	break;
+	case 5:
+		with Player
+		{
+			maxhealth += 2;
+			my_health += 2;
+		}
+		UberCont.maxHpIncrease += 2;
+		snd_play(other.snd_chst);
 	break;
 }
 with UberCont

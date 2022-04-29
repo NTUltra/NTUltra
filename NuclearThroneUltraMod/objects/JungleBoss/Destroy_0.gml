@@ -15,4 +15,5 @@ repeat(30)
 }
 event_user(0);
 event_user(0);
-instance_create(x,y,PinkSheep);
+if !instance_exists(SurvivalWave)
+	instance_create(x,y,PinkSheep);

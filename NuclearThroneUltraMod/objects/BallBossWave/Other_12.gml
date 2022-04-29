@@ -9,19 +9,29 @@ if instance_exists(BecomeBallBoss)
 if instance_exists(TopCont)
 	TopCont.darkness = 0;
 song = musConfrontingMyself;
+with Floor
+{
+	if !isArenaFloor
+	{
+		instance_create(x+16,y+16,Wall);	
+		instance_create(x,y,Wall);
+		instance_create(x,y+16,Wall);
+		instance_create(x+16,y,Wall);
+	}
+}
 with BossReward
 {
-	var xx = x - 8;
+	var xxx = x - 8;
 	var msk = mask_index;
 	mask_index = mskWall;
 	repeat(8)
 	{
-		while place_meeting(xx,y,Player)
+		while place_meeting(xxx,y,Player)
 		{
 			Player.y++;	
 		}
-		instance_create(xx,y,Wall);
-		xx += 16;
+		instance_create(xxx,y,Wall);
+		xxx += 16;
 	}
 	mask_index = msk;
 }
@@ -108,6 +118,7 @@ wave[i] = {
 	xx: centerX+64,
 	yy: centerY
 };
+i++
 wave[i] = {
 	obj: Vulture,
 	time: 120,
@@ -137,6 +148,13 @@ wave[i] = {
 	yy: BigFishStatue.y
 };
 i++;
+wave[i] = {
+	obj: AmmoChest,
+	time: 100,
+	xx: centerX-64,
+	yy: centerY+64
+};
+i++
 repeat(8)
 {
 	wave[i] = {
@@ -160,6 +178,13 @@ wave[i] = {
 	yy: BigVultureStatue.y
 };
 i++;
+wave[i] = {
+	obj: AmmoChest,
+	time: 100,
+	xx: centerX+64,
+	yy: centerY+64
+};
+i++
 wave[i] = {
 	obj: HealthChest,
 	time: 100,
@@ -197,6 +222,13 @@ wave[i] = {
 };
 i++;
 wave[i] = {
+	obj: AmmoChest,
+	time: 10,
+	xx: centerX+128,
+	yy: centerY
+};
+i++
+wave[i] = {
 	obj: JungleBoss,
 	time: 140,
 	xx: BushBoxStatue.x,
@@ -220,12 +252,26 @@ repeat(6)
 	i++;
 }
 wave[i] = {
+	obj: HealthChest,
+	time: 100,
+	xx: centerX+128,
+	yy: centerY+64
+};
+i++
+wave[i] = {
 	obj: JungleBandit,
 	time: 60,
 	xx: centerX,
 	yy: centerY
 };
 i++;
+wave[i] = {
+	obj: AmmoChest,
+	time: 60,
+	xx: centerX+64,
+	yy: centerY-64
+};
+i++
 repeat(6)
 {
 	wave[i] = {
@@ -272,6 +318,13 @@ repeat(4)
 	};
 	i++;
 }
+wave[i] = {
+	obj: AmmoChest,
+	time: 40,
+	xx: centerX-64,
+	yy: centerY-64
+};
+i++
 repeat(4)
 {
 	wave[i] = {
@@ -311,6 +364,20 @@ repeat(4)
 	i++;
 }
 wave[i] = {
+	obj: AmmoChest,
+	time: 60,
+	xx: centerX+128,
+	yy: centerY-64
+};
+i++
+wave[i] = {
+	obj: AmmoChest,
+	time: 20,
+	xx: centerX-128,
+	yy: centerY+64
+};
+i++
+wave[i] = {
 	obj: CursedHyperCrystal,
 	time: 200,
 	xx: HyperCrystalStatue.x,
@@ -324,6 +391,13 @@ wave[i] = {
 	yy: BigAssassinStatue.y
 };
 i++;
+wave[i] = {
+	obj: AmmoChest,
+	time: 20,
+	xx: centerX-128,
+	yy: centerY-64
+};
+i++
 wave[i] = {
 	obj: Sniper,
 	time: 10,

@@ -18,3 +18,7 @@ if instance_number(enemy) <= instance_number(IDPDVan) && !instance_exists(LilHun
 	BackCont.shake += 20;
 	instance_create(x,y,Flash);
 }
+else
+{
+	alarm[1] = 30;	
+}

@@ -16,5 +16,6 @@ loops = BackCont.loops
 }
 oasis=false;
 tries = 0;
-
+alarm[0] = 120;
 alarm[1] = 60;
+alarm[2] = 1500;//50 seconds

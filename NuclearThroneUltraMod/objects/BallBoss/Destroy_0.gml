@@ -30,5 +30,17 @@ with MusCont
 	audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 
 }
-event_inherited()
-
+event_inherited();
+//Cleare the lockin
+with Floor
+{
+	if !isArenaFloor
+	{
+		var walls = ds_list_create();
+		var al = instance_place_list(x,y,Wall,walls,false)
+		for (var i = 0; i < al; i++) {
+			instance_destroy(walls[| i]);
+		}
+		ds_list_clear(walls);
+	}
+}

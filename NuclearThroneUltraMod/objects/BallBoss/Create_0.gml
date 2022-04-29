@@ -1,7 +1,7 @@
 raddrop = 600
-maxhealth = 1700
+maxhealth = 2300
 meleedamage = 0
-size = 1
+size = 2
 
 event_inherited()
 instance_create(x,y,DramaCamera);
@@ -23,7 +23,7 @@ alarm[2] = 10;
 alarm[3] = 130;
 spinRate = 1.8;
 pSpeed = 3;
-maxSpeed = 2.8;
+maxSpeed = 2.6;
 if instance_exists(Player) && Player.skill_got[12]
 {
 	spinRate -= 0.2;
@@ -51,3 +51,4 @@ anchorY = y;
 spinAttackFireRate = 20;
 spinAttackMaxAmmo = 0;
 spinAttackAmmo = 0;
+friction = 0.5;

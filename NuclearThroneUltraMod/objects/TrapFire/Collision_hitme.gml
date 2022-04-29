@@ -14,10 +14,11 @@ if other.team != team and other.team != 0 && (other.team!=2 || image_index<5/*no
 			immune = 1
 
 			if race=25
-			immunelimit=6;
+				immunelimit=6;
 			
-			if immunelimit>maxhealth
-			immunelimit=maxhealth;
+			if ultra_got[97]//Mutation Doctor Ultra A
+				immunelimit=8;
+			
 		}
 
 		
@@ -32,10 +33,10 @@ if other.team != team and other.team != 0 && (other.team!=2 || image_index<5/*no
 	{
 	if my_health > immunelimit
 	{
-	if my_health-1 < immunelimit
-	my_health = immunelimit
-	else
-	my_health -= 1
+		if my_health-1 < immunelimit
+			my_health = immunelimit
+		else
+			my_health -= 1
 	}
 	}
 	else

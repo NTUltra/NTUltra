@@ -17,9 +17,9 @@ switch(array_length(UberCont.collectedRewards))
 		name += "UNLOCK THE MUTATION REROLL STATION#AVAILABLE NEXT VAULT VISIT";
 	break;
 	case 4:
-		name += "GAIN 2 MAX HP";
+		name += "INCREASE YOUR MAX LEVEL BY ONE";
 	break;
 	case 5:
-		name += "INCREASE YOUR MAX LEVEL BY ONE";
+		name += "GAIN 2 MAX HP";
 	break;
 }

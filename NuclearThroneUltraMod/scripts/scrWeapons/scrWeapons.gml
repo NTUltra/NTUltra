@@ -3629,7 +3629,7 @@ function scrWeapons() {
 	wep_name[329] = "DARK SWORD"
 	wep_type[329] = 0
 	wep_auto[329] = 0
-	wep_load[329] = 26//16 usual
+	wep_load[329] = 28//16 usual
 	wep_cost[329] = 0
 	wep_sprt[329] = sprDarkSword
 	wep_area[329] = -1

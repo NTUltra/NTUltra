@@ -225,6 +225,7 @@ if Player.area = 100
 				{
 					with instance_create(xx,yy,Floor)
 					{
+						//isArenaFloor = true;
 						styleb = 1;
 						sprite_index = sprFloor100C;
 					}
@@ -238,6 +239,7 @@ if Player.area = 100
 				for (var iy = 0; iy < 10; iy++) {
 				    with instance_create(xx,yy,Floor)
 					{
+						isArenaFloor = true;
 						//Generate a floppydisc on the floor
 						if ((ix > 0 && ix < 9 && iy > 4 && iy < 9)
 						|| (ix > 2 && ix < 8 && iy < 3 && !(ix == 4 && iy == 1)
