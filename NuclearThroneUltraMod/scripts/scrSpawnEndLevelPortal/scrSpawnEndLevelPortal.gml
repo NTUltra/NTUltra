@@ -2,7 +2,7 @@
 // /@description
 ///@param
 function scrSpawnEndLevelPortal(){
-	if instance_exists(SurvivalWave)
+	if instance_exists(SurvivalWave) || instance_exists(ThroneExplo)
 	exit;
 	var dir = undefined;
 	if instance_number(enemy) == (instance_number(IDPDVan))

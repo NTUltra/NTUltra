@@ -9,7 +9,7 @@ if target > 0 && instance_exists(target)
 	with Wall
 	{
 		if collision_line(x,y,other.target.x,other.target.y,Wall,true,true) < 0 and point_distance(x,y,other.target.x,other.target.y) > 110 
-		and point_distance(x,y,other.target.x,other.target.y) < 120 and ((!place_free(x-16,y) and !place_free(x+16,y)) or (!place_free(x,y+16) and !place_free(x,y-16))) || instance_number(enemy) < instance_number(IDPDVan) +3
+		and point_distance(x,y,other.target.x,other.target.y) < 180 and ((!place_free(x-16,y) and !place_free(x+16,y)) or (!place_free(x,y+16) and !place_free(x,y-16))) || tries > 20
 		{
 			instance_create(x,y,CanSpawnBoss)
 		}
@@ -70,5 +70,6 @@ if target > 0 && instance_exists(target)
 		instance_destroy()
 	}
 }
+tries++;
 alarm[0] = 5
 

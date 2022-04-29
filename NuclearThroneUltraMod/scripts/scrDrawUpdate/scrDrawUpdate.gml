@@ -14,7 +14,7 @@ function scrDrawUpdate() {
 
 	if updatepage=0
 	{
-	txt0 = @"#UPDATE 27 [0.01]#
+	txt0 = @"#UPDATE 27 [0.03]#
 	
 	* FIXED SOFTLOCK?
 	

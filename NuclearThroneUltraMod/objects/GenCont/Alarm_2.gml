@@ -12,10 +12,8 @@ if Player.area = 3 and Player.subarea = 3
 }
 if Player.area == 101 and Player.subarea == 3
 {
-	debug("SPAWN YVCAR");
 	if instance_exists(SunkenCar)
 	{
-		debug("REPLACE CAR");
 		with instance_furthest(Player.x,Player.y,SunkenCar)
 		{
 			instance_destroy(id,false);
@@ -24,7 +22,6 @@ if Player.area == 101 and Player.subarea == 3
 	}
 	else
 	{
-		debug("NEW YVCAR");
 		var mindis = 96;
 		if instance_exists(Player)
 		do {
@@ -34,12 +31,18 @@ if Player.area == 101 and Player.subarea == 3
 				var yy = y + 16;
 				if !instance_exists(CarVenusOasis) && point_distance(xx,yy,Player.x,Player.y > mindis) && styleb == 0
 				{
-					debug("YESCAR");
 					instance_create(xx,yy,CarVenusOasis);
 				}
 			}
 			mindis -= 32;
 		} until (instance_exists(CarVenusOasis) || mindis < 64)
+	}
+	if !instance_exists(CarVenusOasis)
+	{
+		with instance_furthest(Player.x,Player.y,Floor)
+		{
+			instance_create(x+16,y+16,CarVenusOasis);
+		}
 	}
 }
 if Player.area = 106 and Player.subarea = 3

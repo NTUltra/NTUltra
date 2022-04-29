@@ -1,16 +1,16 @@
 if other.team!=2//other.team != team  &&
 {
-with other
-{
+	with other
+	{
 
-snd_play(snd_hurt, hurt_pitch_variation)
-my_health -= 12
-sprite_index = spr_hurt
-image_index = 0
-motion_add(point_direction(other.x,other.y,x,y),6)
-Sleep(5)
-BackCont.shake += 2
-}
+		snd_play(snd_hurt, hurt_pitch_variation)
+		my_health -= 12
+		sprite_index = spr_hurt
+		image_index = 0
+		motion_add(point_direction(other.x,other.y,x,y),6)
+		Sleep(5)
+		BackCont.shake += 2
+	}
 }
 else if other.team = 2 && instance_exists(Player) && other.team != team
 {

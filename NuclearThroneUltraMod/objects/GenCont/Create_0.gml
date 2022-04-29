@@ -156,7 +156,7 @@ goal = 90
 if Player.area = 107//inverted FrozenCity
 goal=120;
 if Player.area - 101//Oasis
-goal=70;
+goal=90;
 if (Player.area = 6 || Player.area = 112) && Player.subarea=2//LABS BOSS
 goal=1;
 if Player.area - 113//Banditland

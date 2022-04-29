@@ -589,7 +589,7 @@ target=-1;
 ///rage
 if skill_got[28] == 1
 {
-	if tookHit && exception=false//I been hit
+	if tookHit && exception=false && alarm[3] < 1//I been hit
 		rage = 0;
 }
 

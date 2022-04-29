@@ -15,6 +15,6 @@ subarea=BackCont.subarea;
 loops = BackCont.loops
 }
 oasis=false;
-
+tries = 0;
 
 alarm[1] = 60;

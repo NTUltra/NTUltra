@@ -26,7 +26,7 @@ function scrDrawCredits() {
 		thanks = "#ADDITIONAL ART:#ricottakitten#Guru Jr##OTHER PEOPLE:#Jodi#@ideaot/jasmine###@Erdeppol##NT-UM DISCORD##MUSIC USED:##Larje100#Inverted Sewers#Eric Chevalier#The lava stream#The lava tower"
 		stxt2 = "######ADDITIONAL ART:####OTHER PEOPLE:####PRESS [T] TWITTER##PRESS [D] DISCORD###MUSIC USED:##Larje100##Eric Chevalier"
 		txt0 = "#NUCLEAR THRONE ULTRA#NUCLEAR THRONE BY VLAMBEER##MOD BY ERDEPPOL"
-		txt1 = "######ADDITIONAL CODE:#base4/spencers145##QA GODDESS:#AgentCucco##ART & SFX#@larje100##ULTRA MUTATION ART:#@tilde_bee#Lynzkar#skurleton#Lunarshards###ToaterGhostMary##HUNTER ART#NotYourSagittarius##"
+		txt1 = "######ADDITIONAL CODE:#base4/spencers145##QA GODDESS:#AgentCucco##ART & SFX#@larje100##ULTRA MUTATION ART:#@tilde_bee#Lynzkar#skurleton#Lunarshards###ToasterGhostMary##HUNTER ART#NotYourSagittarius##"
 		txt2 = "#####"+string(thanks)
 		stxt0 = "#NUCLEAR THRONE ULTRA###MOD    ERDEPPOL########################[PRESS SPACE FOR PAGE 2]"
 		stxt1 = "######ADDITIONAL CODE:###QA GODDESS:###ART & SFX###ULTRA MUTATION ART:######CONCEPT ART:###HUNTER ART####"//White text

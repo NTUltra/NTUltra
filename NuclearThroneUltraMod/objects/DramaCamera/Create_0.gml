@@ -86,17 +86,21 @@ if instance_exists(BallBoss)
 }
 else if instance_exists(Player)
 {
-if Player.area = 1
+if (Player.area = 1 || ((Player.area == 10 || Player.area == 101) && instance_exists(BanditBoss)))
 {
 //with instance_create(x,y,Drama)
-name = "BIG BANDIT"
+	name = "BIG BANDIT";
+	if random(1000)< 1
+	{
+		name = choose("BIG BITCH","HERE WE GO AGAIN");	
+	}
 }
-if Player.area = 105
+else if Player.area = 105
 {
 //with instance_create(x,y,Drama)
 name = "INVERTED BIG BANDIT"
 }
-if Player.area = 2
+else if Player.area = 2
 {
 	name = "MOM";
 	if random(40)<1
@@ -106,7 +110,7 @@ if Player.area = 2
 		"MISS. FROG#HAPPILY MARRIED","MOMMY BALL","YOUR MOM! HAHA");	
 	}
 }
-if Player.area == 110
+else if Player.area == 110
 {
 	name = "INVERTED MOM";
 	if random(40)<1
@@ -116,27 +120,27 @@ if Player.area == 110
 		"MR. FROG#HAPPILY DIVORCED","DADDY BALL");	
 	}
 }
-if Player.area = 3
+else if Player.area = 3
 {
 //with instance_create(x,y,Drama)
-if Player.subarea = 3
-{
-if random(100)<1
-name = "BIG D."
-else
-name = "BIG DOG"
-}
-else
-{
+	if Player.subarea = 3
+	{
+	if random(100)<1
+	name = "BIG D."
+	else
+	name = "BIG DOG"
+	}
+	else
+	{
 
-if random(100)<1
-name = choose("BIG ASS ASSASSIN","BIG ASS");
-else
-name = "BIG ASSASSIN"
+	if random(100)<1
+	name = choose("BIG ASS ASSASSIN","BIG ASS");
+	else
+	name = "BIG ASSASSIN"
 
+	}
 }
-}
-if Player.area = 106
+else if Player.area = 106
 {
 //with instance_create(x,y,Drama)
 	if Player.subarea = 3
@@ -152,7 +156,7 @@ if Player.area = 106
 		name = choose("THERE SHE IS!","BEST FRIEND","JUST WANT A HUG");
 	}
 }
-if Player.area == 4
+else if Player.area == 4
 {
 //with instance_create(x,y,Drama)
 	if Player.subarea == 1
@@ -168,7 +172,7 @@ if Player.area == 4
 			name = choose("THE BIG BAD BAT","SQUARES!","BATMAN","BIG BAT");	
 	}
 }
-if Player.area = 111
+else if Player.area = 111
 {
 	if Player.subarea == 1
 	{
@@ -183,20 +187,20 @@ if Player.area = 111
 			name = choose("PURPLE BAT","THE BAT OF DEATH");	
 	}
 }
-if Player.area = 115
+else if Player.area = 115
 {
 	name = "CURSED HYPER CRYSTAL";
 	if random(90)<1
 		name = choose("A MISTAKE","PURPLE MENACE");
 }
-if Player.area = 114
+else if Player.area = 114
 {
 //with instance_create(x,y,Drama)
 name = "BUSH BOX"
 if random(70)<1
 	name = choose("BIG BUSH BOX BOSS","BUSH CUBE","BIG BAD BUSH BOX","BIG BUSH","BIG AGRASSIN","BUSHY BOX","PLANT","MISSING FLOWERS","IT'S THE BUSH BOX BOSS","S Q U A R E");
 }
-if Player.area = 5
+else if Player.area = 5
 {
 //with instance_create(x,y,Drama)
 if random(10000)<1
@@ -212,8 +216,7 @@ name= "HENKY!"
 else
 name = "INVERTED LIL HUNTER"
 }
-
-if Player.area = 6 
+else if Player.area = 6 
 {
 	if Player.subarea == 2
 	{
@@ -228,7 +231,7 @@ if Player.area = 6
 			name = choose("TECHROMANCER","LITTLE SHIT");
 	}
 }
-if Player.area = 112
+else if Player.area = 112
 {
 	if Player.subarea == 2
 	{
@@ -244,8 +247,7 @@ if Player.area = 112
 	}
 
 }
-
-if Player.area = 7
+else if Player.area = 7
 {
 //with instance_create(x,y,Drama)
 
@@ -254,7 +256,7 @@ if Player.area = 7
     else
     name = "PURPLE DRAGON"
 }
-if Player.area = 108
+else if Player.area = 108
 {
 //with instance_create(x,y,Drama)
 
@@ -263,7 +265,7 @@ if Player.area = 108
     else
     name = "INVERTED DRAGON"
 }
-if Player.area = 8
+else if Player.area = 8
 {
 //with instance_create(x,y,Drama)
 if Player.subarea=2
@@ -280,28 +282,24 @@ if Player.subarea=2
 
     }
 }
-
-
-if Player.area = 109
+else if Player.area = 109
 {
 name = "INVERTED CHESHIRE CAT"
 }
-
-if Player.area = 101
+else if Player.area = 101
 {
 //with instance_create(x,y,Drama)
 name = "BIG FISH"
 if random(100) < 1
 		name = choose("HEY LOOK#IT'S FISH#FROM NUCLEAR THRONE","O'L BITEY");
 }
-
-if Player.area == 9
+else if Player.area == 9
 {
 	name = "THE NUCLEAR THRONE";
 	if random(200) < 1
 		name = "SON OF A BITCH";
 }
-if Player.area == 10
+else if Player.area == 10
 {
 	if Player.subarea == 3
 	{

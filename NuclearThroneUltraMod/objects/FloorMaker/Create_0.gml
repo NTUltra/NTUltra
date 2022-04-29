@@ -19,6 +19,8 @@ if instance_exists(Player){
 	goal = 50
 	else if Player.area = 100
 	goal = 40
+	else if Player.area = 101
+	goal = 90
 	else if Player.area = 103
 	goal = 130
 	else if Player.area = 102
