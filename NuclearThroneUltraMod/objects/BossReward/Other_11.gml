@@ -4,13 +4,13 @@ switch(array_length(UberCont.collectedRewards))
 	case 0:
 		with Player
 		{
-			maxhealth += 1;
-			my_health += 1;
+			maxhealth += 2;
+			my_health += 2;
 		}
+		UberCont.maxHpIncrease += 2;
 		snd_play(other.snd_chst);
 	break;
 	case 1:
-		//name += "INCREASE THE VALUE OF RADIATION";
 		UberCont.radUp = true;
 		snd_play(other.snd_chst);
 	break;
@@ -22,16 +22,17 @@ switch(array_length(UberCont.collectedRewards))
 		snd_play(other.snd_chst);
 	break;
 	case 3:
-		with Player
-		{
-			maxhealth += 1;
-			my_health += 1;
-		}
-		snd_play(other.snd_chst);
-	break;
-	case 4:
 		UberCont.enableReroll = true;
 		snd_play(other.snd_crwn);
+	break;
+	case 4:
+		with Player
+		{
+			maxhealth += 2;
+			my_health += 2;
+		}
+		UberCont.maxHpIncrease += 2;
+		snd_play(other.snd_chst);
 	break;
 	case 5:
 		with Player

@@ -1,4 +1,6 @@
 //event_inherited()
+size = 1;
+team = 0;
 shadowSprite = shd24;
 friction = 0.4
 image_speed = 0

@@ -7,7 +7,7 @@ if target > 0
 		lerpp = 1;
 	x += ((target.x + lengthdir_x(distanceToTarget,angle))-x)*lerpp;
 	y += ((target.y + lengthdir_y(distanceToTarget,angle))-y)*lerpp;
-	if alarm[6] < 1
+	if alarm[6] < 1 && !place_meeting(x,y,Tangle)
 	angle += rotationSpeed; 
 	if target.x < x
 		right = -1

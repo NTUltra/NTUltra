@@ -1205,7 +1205,7 @@ function scrFire() {
 	with instance_create(x,y,FlameBurst)
 	{
 	creator = other.id
-	ammo = 10
+	ammo = 12
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 

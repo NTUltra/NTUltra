@@ -17,7 +17,8 @@ spr_fake = sprInvertedAssassinBossDeadFake;
 spr_respawn = sprInvertedAssassinBossRespawn;
 fakeded = 0;
 var loops = GetPlayerLoops();
-lifes = 1//min(3,loops-1);
+lifes = min(3,loops-1);
+playedWinSound = false;
 
 snd_hurt = sndAssassinHit
 snd_dead = sndAssassinDie

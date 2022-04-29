@@ -5,7 +5,8 @@ xEnd = hit[1];
 yEnd = hit[2];
 if hit[0] != noone && sprite_index == sprInvertedNothingBeamStretch
 {
-	instance_create(xEnd,yEnd,WallBreak);
+	with instance_create(xEnd,yEnd,WallBreak)
+		executeDestroyEvent = false;
 	alarm[0] = 1;
 }
 image_yscale = (yEnd - y)/sprite_get_height(sprite_index)

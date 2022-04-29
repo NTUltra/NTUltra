@@ -29,7 +29,7 @@ EnemyHealthAdjustments();
 
 team = 1
 target = -1
-
+instance_create(x,y,WallBreak);
 
 snd_hurt = sndGatorHit
 snd_dead = sndGatorDie

@@ -1,6 +1,6 @@
 with other
 {
-instance_destroy()
+instance_destroy(id,other.executeDestroyEvent)
 instance_create(x,y,FloorExplo)
 }
 

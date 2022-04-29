@@ -34,7 +34,7 @@ ang-=10;
 BackCont.viewx2 += lengthdir_x(2,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 BackCont.viewy2 += lengthdir_y(2,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 BackCont.shake += 2
-creator.wkick -= 0.6}
+creator.wkick += 0.6}
 
 
 if ammo <= 0

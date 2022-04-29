@@ -4,7 +4,7 @@ if other.team!=2//other.team != team  &&
 	{
 
 		snd_play(snd_hurt, hurt_pitch_variation)
-		my_health -= 12
+		my_health -= 11
 		sprite_index = spr_hurt
 		image_index = 0
 		motion_add(point_direction(other.x,other.y,x,y),6)

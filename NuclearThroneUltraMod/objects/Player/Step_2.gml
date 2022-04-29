@@ -420,7 +420,7 @@ if tookHit&&my_health!=maxhealth&&alarm[3]<1
 {lag-=1;
 
 
-alarm[3]=15;//before your lag lowers again}
+alarm[3] = max(alarm[3],15);//before your lag lowers again}
 resetPrevHealth = true;
 }
 }
@@ -435,7 +435,7 @@ if tookHit&&my_health!=maxhealth&&alarm[3]<1
 
 
 snd_play(sndHitMetal);
-alarm[3]=5;//before your armour lowers again}
+alarm[3]=max(alarm[3],5);//before your armour lowers again}
 resetPrevHealth = true;
 
 scrBlankArmour();
@@ -448,10 +448,12 @@ armour=maxarmour;
 }
 
 }
-if alarm[3]>0/*|| lag>0 */&&my_health!=maxhealth&& !exception
+if alarm[3]>0/*|| lag>0 *//*&&my_health!=maxhealth*/&& !exception
 {
-if tookHit
-my_health=prevhealth;
+	if tookHit
+	{
+		my_health=prevhealth;
+	}
 }
 
 
@@ -589,7 +591,7 @@ target=-1;
 ///rage
 if skill_got[28] == 1
 {
-	if tookHit && exception=false && alarm[3] < 1//I been hit
+	if my_health < prevhealth && exception=false// && alarm[3] < 1//I been hit
 		rage = 0;
 }
 

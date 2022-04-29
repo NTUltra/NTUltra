@@ -35,7 +35,8 @@ function scrPowers() {
 			{
 				tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
 				d3 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);
-				if (tar.team != 0 && tar.team != team && d3 < grabRange && d3 < d2 && d3 < d1)
+				if ((tar.team != 0 || (skill_got[5] && (tar.object_index == IDPDVan || tar.object_index == IDPDVanVertical)))
+				&& tar.team != team && d3 < grabRange && d3 < d2 && d3 < d1)
 				{
 					grabbedEnemy = true;
 					resulttar = tar;

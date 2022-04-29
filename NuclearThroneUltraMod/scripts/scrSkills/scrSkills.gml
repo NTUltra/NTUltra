@@ -93,6 +93,8 @@ function scrSkills() {
 	{
 	if Player.race=1{
 	skill_tips[5] = "Fish's throne butt is good now!"}
+	else if Player.race=27{
+	skill_tips[5] = "allmighty push!"}
 	else{
 	skill_tips[5] = "sit on the throne"}
 	}else{

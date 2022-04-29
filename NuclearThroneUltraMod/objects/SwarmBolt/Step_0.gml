@@ -1,4 +1,4 @@
-    with instance_create(x,y,BoltTrail)
+with instance_create(x,y,BoltTrail)
 {
 image_angle=other.direction;
 image_xscale=other.speed;

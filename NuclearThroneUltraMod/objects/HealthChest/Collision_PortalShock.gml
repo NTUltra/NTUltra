@@ -2,7 +2,7 @@ repeat(2)
 instance_create(x,y,HPPickup)
 snd_play(sndHealthChest)
 //I show mercy unlike Vlambeer
-var  maxHpIncrease = 2;
+var  mHpI = 2;
 with Player {
 	if race==9 || race=12//Chicken maxhealth & yung cuz regain
 	{
@@ -14,11 +14,11 @@ with Player {
 		if UberCont.opt_gamemode == 9
 			targetHealth += UberCont.casualModeHPIncrease;
 		if skill_got[9] 
-			maxHpIncrease *= 2;
+			mHpI *= 2;
 		targetHealth += UberCont.maxHpIncrease;
 	    if maxhealth<targetHealth
 	    {
-		    maxhealth = min(maxhealth + maxHpIncrease,targetHealth);
+		    maxhealth = min(maxhealth + mHpI,targetHealth);
 	    }
 	}
 }

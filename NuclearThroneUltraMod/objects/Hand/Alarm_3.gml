@@ -6,7 +6,7 @@ if place_meeting(x,y,projectile)
 	for (var j = 0; j < al; j++) {
 		with projectiles[| j]
 		{
-			if typ == 1 || typ == 2
+			if (team != other.team && (typ == 1 || typ == 2))
 			{
 				instance_destroy();	
 			}

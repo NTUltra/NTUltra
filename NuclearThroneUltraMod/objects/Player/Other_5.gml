@@ -71,7 +71,11 @@ if race == 27
 {
 	if scrIsInInvertedArea()
 	{
-		my_health += 3;
+		var am = 2;
+		if ultra_got[106]
+			am *= 2;
+		
+		my_health += am;
 	}
 }
 ///at the end of a level stuff

@@ -37,12 +37,12 @@ else if (sprite_index == spr_disappear)
 		spr_walk = spr_appear;
 		snd_play(snd_appear);
 		image_index = 0;
-	}
+	}/*
 	else
 	{
 		image_speed = 0;
 		visible = false;
-	}
+	}*/
 }
 else if (sprite_index == spr_appear || sprite_index == spr_hurt)
 {

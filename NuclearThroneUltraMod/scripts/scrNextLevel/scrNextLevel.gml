@@ -31,9 +31,12 @@ function scrNextLevel() {
 	{
 		if area == 118 && subarea > 2
 		{
-			area = 9;
-			subarea = 3;
+			area = 1;
+			subarea = 1;
 			inverted = false;
+			looping=true;
+			exit;
+			//Force loop
 			//LOOP
 			//exit;
 		}
@@ -300,7 +303,7 @@ function scrNextLevel() {
 		}
 		else//WE LOOP HERE!
 		{
-		looping=true;
+			looping=true;
 		}
 	}    
 	//TO INVERTED AREAS

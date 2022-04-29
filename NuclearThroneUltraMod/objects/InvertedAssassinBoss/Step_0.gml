@@ -20,6 +20,14 @@ if (my_health <= 0 && lifes > 0 && fakeded < 1)
 			snd_play_2d(song)
 			audio_sound_gain(song,max(0,sqrt(UberCont.opt_musvol)),0);
 		}
+	with Player
+	{
+		if race == 27
+		{
+			snd_play_2d(snd_wrld);
+			other.playedWinSound = true;
+		}
+	}
 }
 if fakeded > 0
 	exit;

@@ -2209,7 +2209,7 @@ function scrFire2() {
 	with instance_create(x,y,FlameBurst)
 	{
 	creator = other.id
-	ammo = 12
+	ammo = 14
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -2612,7 +2612,7 @@ function scrFire2() {
 	BackCont.viewx2 += lengthdir_x(15,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(15,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 3
-	wkick -= 3
+	wkick = 3
 
 	break;
 

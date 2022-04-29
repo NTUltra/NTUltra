@@ -9,7 +9,7 @@ if ( (Player.skill_got[5] = 1) && (Player.race=11) && (other.team=2))//HUNTER TH
 	    {
 		    if other.id=target.id
 		    {
-				other.my_health -= dmgTaken*0.35;
+				other.my_health -= dmgTaken*0.3;
 		    }
 	    }
         

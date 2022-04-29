@@ -11,7 +11,7 @@ instance_create(x,y,HealFX)
 
 instance_destroy()
 
-var  maxHpIncrease = 2;
+var  mHpI = 2;
 with other {
 	//OVERHEAL
 	var overheal = my_health + other.num - maxhealth;
@@ -35,11 +35,11 @@ with other {
 		if UberCont.opt_gamemode == 9
 			targetHealth += UberCont.casualModeHPIncrease;
 		if skill_got[9] 
-			maxHpIncrease *= 2;
+			mHpI *= 2;
 		targetHealth += UberCont.maxHpIncrease;
 	    if maxhealth<targetHealth
 	    {
-		    maxhealth = min(maxhealth + maxHpIncrease,targetHealth);
+		    maxhealth = min(maxhealth + mHpI,targetHealth);
 	    }
 	}
 }
@@ -53,7 +53,7 @@ if UberCont.opt_ammoicon
 	if other.my_health = other.maxhealth
 	dir.mytext = "MAX"
 	else if other.my_health > other.maxhealth
-	dir.mytext = "+"+string(num)+" HP#OVERHEAL!"
+	dir.mytext = "+"+string(ceil(num))+" HP#OVERHEAL!"
 }
 else
 {

@@ -555,7 +555,7 @@ function scrWeapons() {
 	wep_name[50] = "FLAMETHROWER"
 	wep_type[50] = 4
 	wep_auto[50] = 1
-	wep_load[50] = 7
+	wep_load[50] = 9
 	wep_cost[50] = 1
 	wep_sprt[50] = sprFlameThrower
 	wep_area[50] = 5
@@ -1979,10 +1979,10 @@ function scrWeapons() {
 	wep_name[179] = "AUTO FLARE GUN"
 	wep_type[179] = 4
 	wep_auto[179] = 1
-	wep_load[179] = 14
-	wep_cost[179] = 1
+	wep_load[179] = 10
+	wep_cost[179] = 0.5
 	wep_sprt[179] = sprAutoFlareGun
-	wep_area[179] = 9
+	wep_area[179] = 11
 	wep_text[179] = "automatic signalling"
 	wep_swap[179] = sndSwapFlame
 	wep_rad[179] = 0;
@@ -2653,7 +2653,7 @@ function scrWeapons() {
 	wep_load[240] = 6
 	wep_cost[240] = 1
 	wep_sprt[240] = sprSwarmGun
-	wep_area[240] = 11
+	wep_area[240] = 13
 	wep_text[240] = "beeeeeeeeeees!!!"
 	wep_swap[240] = sndSwapBow
 	wep_rad[240] = 0;
@@ -2706,9 +2706,9 @@ function scrWeapons() {
 	wep_type[245] = 5
 	wep_auto[245] = 1
 	wep_load[245] = 3
-	wep_cost[245] = 2
+	wep_cost[245] = 1
 	wep_sprt[245] = sprLightningMinigun
-	wep_area[245] = 16
+	wep_area[245] = 17
 	wep_text[245] = "lightning doesn't hit#the same place twice"
 	wep_swap[245] = sndSwapEnergy
 	wep_rad[245] = 0;
@@ -3046,7 +3046,7 @@ function scrWeapons() {
 	wep_name[276] = "GOLDEN FLAMETHROWER"
 	wep_type[276] = 4
 	wep_auto[276] = 1
-	wep_load[276] = 8
+	wep_load[276] = 10
 	wep_cost[276] = 1
 	wep_sprt[276] = sprGoldenFlameThrower
 	wep_area[276] = 18
@@ -3533,7 +3533,7 @@ function scrWeapons() {
 	wep_load[320] = 30
 	wep_cost[320] = 12
 	wep_sprt[320] = sprDisperseBazooka
-	wep_area[320] = 18
+	wep_area[320] = 17
 	wep_text[320] = "medicinal herb gun"
 	wep_swap[320] = sndSwapExplosive
 	wep_rad[320] = 0;
@@ -3787,7 +3787,7 @@ function scrWeapons() {
 	wep_load[343] = 40
 	wep_cost[343] = 10
 	wep_sprt[343] = sprDimensionGenerator
-	wep_area[343] = 14
+	wep_area[343] = 15
 	wep_text[343] = "the tentacle universe"
 	wep_swap[343] = sndSwapDragon
 	wep_rad[343] = 0;
@@ -4001,7 +4001,7 @@ function scrWeapons() {
 	wep_load[362] = 24
 	wep_cost[362] = 1
 	wep_sprt[362] = sprSplinterBomb
-	wep_area[362] = 4
+	wep_area[362] = 6
 	wep_text[362] = "scrappy"
 	wep_swap[362] = sndSwapBow
 	wep_rad[362] = 0;

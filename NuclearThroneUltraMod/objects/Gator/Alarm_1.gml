@@ -49,6 +49,16 @@ if target > 0 {
         else if hspeed < 0
         right = -1
     }
+	else if instance_exists(Wall)
+	{	
+		var n = instance_nearest(x,y,Wall)
+		if point_distance(x,y,n.x,n.y) < 64
+		{
+			motion_add(point_direction(n.x,n.y,x,y), 0.4)
+	        walk = 20 + random(10)
+	        alarm[1] = walk + 10 + random(30)
+		}
+	}
 }
 else if random(10) < 1 {
     motion_add(random(360), 0.4)

@@ -10,7 +10,11 @@ if fire && !charge
 	speed = 0;
 }
 else if speed < 1
+{
+	spr_idle = spr_normal;
+	spr_hurt = spr_normal_hurt;
 	speed = 1;
+}
 	
 motion_add(direction,2)
 

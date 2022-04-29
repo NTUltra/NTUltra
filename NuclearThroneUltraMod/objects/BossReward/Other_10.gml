@@ -5,7 +5,7 @@ name = "";
 switch(array_length(UberCont.collectedRewards))
 {
 	case 0:
-		name += "GAIN 1 MAX HP";
+		name += "GAIN 2 MAX HP";
 	break;
 	case 1:
 		name += "INCREASE THE VALUE OF RADIATION BY 15%";
@@ -14,10 +14,10 @@ switch(array_length(UberCont.collectedRewards))
 		name += "GAIN ONE LIFE";
 	break;
 	case 3:
-		name += "GAIN 1 MAX HP";
+		name += "UNLOCK THE MUTATION REROLL STATION#AVAILABLE NEXT VAULT VISIT";
 	break;
 	case 4:
-		name += "UNLOCK THE MUTATION REROLL STATION#AVAILABLE NEXT VAULT VISIT";
+		name += "GAIN 2 MAX HP";
 	break;
 	case 5:
 		name += "INCREASE YOUR MAX LEVEL BY ONE";

@@ -60,7 +60,7 @@ if target > 0 && instance_exists(target)
 		{
 			with target
 			{
-				if team != 0 && team != other.team
+				if team != 0 && team != other.team || object_index == IDPDVan || object_index == IDPDVanVertical
 				{
 					snd_play(snd_hurt, hurt_pitch_variation,true);
 					my_health -= other.dmg*2;
