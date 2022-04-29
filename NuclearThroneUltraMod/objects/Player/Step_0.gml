@@ -29,12 +29,12 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		if keyboard_check_pressed(ord("V")) {
 			var dangle = random(1)*360;
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
-			screen_save("explain"+string(scrn)+".png");
-			scrn++;
-			//instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			//instance_create(f.x + 16,f.y + 16,BallBoss)
-			//thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			//thing.mytext = "BALL BOSS";
+			//screen_save("explain"+string(scrn)+".png");
+			//scrn++;
+			instance_create(f.x + 16,f.y + 16,BigWallBreak)
+			instance_create(f.x + 16,f.y + 16,HealthChest)
+			thing = instance_create(f.x + 16,f.y + 16,PopupText);
+			thing.mytext = "HEALTH CHEST";
 		}
 		if keyboard_check_pressed(ord("C")) {
 			var dangle = random(1)*360;

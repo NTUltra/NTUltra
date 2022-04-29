@@ -17,8 +17,8 @@ if Player.ultra_got[97]//Mutation Doctor Ultra A
 immunelimit=8;
 //alarm[4]=120;
 
-if immunelimit>Player.maxhealth
-immunelimit=Player.maxhealth;
+//if immunelimit>Player.maxhealth //THIS AINT RIGHT overheal!
+//	immunelimit=Player.maxhealth;
 }
 
 
@@ -31,9 +31,9 @@ if immune = 1
 	if my_health > immunelimit
 	{
 	if my_health-other.dmg < immunelimit
-	my_health = immunelimit
+		my_health = immunelimit
 	else
-	my_health -= other.dmg
+		my_health -= other.dmg
 	}
 }
 else

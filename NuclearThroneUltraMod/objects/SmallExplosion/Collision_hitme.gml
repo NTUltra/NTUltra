@@ -16,8 +16,6 @@ with other
 			if Player.ultra_got[97]//Mutation Doctor Ultra A
 				immunelimit=8;
 					
-			if immunelimit > Player.maxhealth
-				immunelimit = Player.maxhealth;
 		}
 		if UberCont.opt_gamemode == 9
 			other.dmg = 3;

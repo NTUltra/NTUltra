@@ -240,6 +240,7 @@ oasis=false;
 ///looping!
 if looping && area != 104
 {
+	debug("Looping now");
 if scrCheckLoopAll()
 	scrUnlockCSkin(1,"FOR LOOPING WITH EVERY CHARACTER",0);
 	
@@ -469,7 +470,7 @@ if race = 23
     UberCont.cbst_loop[race] = loops//this doesn't get saved if gamemode is not normal mode
     
     if  UberCont.opt_gamemode!=10
-    {
+    {/*
         if loops>1
         {
             if ( ( loops & 1 ) == 1 ) {
@@ -478,9 +479,9 @@ if race = 23
             /*} else{
             // it's even go inverted
             area=105*/
-            } 
-        }
-        else
+           // } 
+       // }
+       // else
         area=1;
     }
     

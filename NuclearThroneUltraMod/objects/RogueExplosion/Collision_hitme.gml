@@ -27,8 +27,6 @@ else if other.team = 2 && instance_exists(Player) && other.team != team
 				if Player.ultra_got[97]//Mutation Doctor Ultra A
 					immunelimit=8;
 					
-				if immunelimit > Player.maxhealth
-					immunelimit = Player.maxhealth;
 			}
 
 

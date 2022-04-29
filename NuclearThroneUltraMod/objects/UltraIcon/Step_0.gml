@@ -90,6 +90,8 @@ Player.maxhealth *= 0.5
 if (Player.my_health> Player.maxhealth){
 Player.my_health = max(Player.my_health*0.5,Player.maxhealth)}
 
+Player.maxhealth = ceil(Player.maxhealth);
+Player.my_health = ceil(Player.my_health);
 Player.skillpoints+=4;//amounth of mutations
 //Player.skillsChosen=0;//no ultras pls
 
