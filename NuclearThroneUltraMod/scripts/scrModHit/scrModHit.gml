@@ -102,7 +102,7 @@ function scrModHit() {
 						            yy=other.y
 						            debrisAmount=4;
 					            }
-					        alarm[11]+=11;//30 for freezebullets
+					        alarm[11]+=20;
 					        if alarm[1] > 0
 					            alarm[1] += 10;
 					        }

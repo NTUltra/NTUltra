@@ -2296,7 +2296,6 @@
     {"id":{"name":"sprNothingOn","path":"sprites/sprNothingOn/sprNothingOn.yy",},"order":16,},
     {"id":{"name":"sprMissileNade","path":"sprites/sprMissileNade/sprMissileNade.yy",},"order":219,},
     {"id":{"name":"sprBullet8","path":"sprites/sprBullet8/sprBullet8.yy",},"order":27,},
-    {"id":{"name":"Bellie","path":"sprites/Bellie/Bellie.yy",},"order":0,},
     {"id":{"name":"sprBullet2","path":"sprites/sprBullet2/sprBullet2.yy",},"order":28,},
     {"id":{"name":"sprDoubleMiniPlasmaRifle","path":"sprites/sprDoubleMiniPlasmaRifle/sprDoubleMiniPlasmaRifle.yy",},"order":310,},
     {"id":{"name":"sprBullet7","path":"sprites/sprBullet7/sprBullet7.yy",},"order":29,},

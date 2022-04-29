@@ -5,7 +5,10 @@
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskBandit",
+    "path": "sprites/mskBandit/mskBandit.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "enemy",

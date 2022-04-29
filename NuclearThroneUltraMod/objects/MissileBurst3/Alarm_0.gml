@@ -41,7 +41,7 @@ team = other.team}
 */
 with creator{
 motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180,4)
-wkick = 12}
+wkick = 6}
 
 BackCont.viewx2 += lengthdir_x(22,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 BackCont.viewy2 += lengthdir_y(22,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake

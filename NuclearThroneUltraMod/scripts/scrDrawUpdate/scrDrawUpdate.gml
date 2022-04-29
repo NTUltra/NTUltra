@@ -14,7 +14,15 @@ function scrDrawUpdate() {
 
 	if updatepage=0
 	{
-	txt0 = @"#UPDATE 27 [0.06]#
+		if keyboard_check_pressed(ord("D"))
+		{
+			url_open("https://discord.gg/kmp5t2TK6j");
+		}
+		if keyboard_check_pressed(ord("T"))
+		{
+			url_open("https://twitter.com/Erdeppol");
+		}
+	txt0 = @"#UPDATE 27 [0.07]
 	
 	* FIXED SOFTLOCK?
 	
@@ -38,11 +46,21 @@ function scrDrawUpdate() {
 	
 	* MANY GUNS NOW DROP LATER
 	
+	PRESS [T] FOR UPDATES ON TWITTER
+	PRESS [D] TO JOIN THE DISCORD
 	
 	* PRESS [SPACE] FOR PAGE 2"
 	}
 	else
 	{
+		if keyboard_check_pressed(ord("D"))
+		{
+			url_open("https://discord.gg/kmp5t2TK6j");
+		}
+		if keyboard_check_pressed(ord("T"))
+		{
+			url_open("https://twitter.com/Erdeppol");
+		}
 	txt0=@"
 	* NEW WEAPONS
 	
@@ -62,7 +80,11 @@ function scrDrawUpdate() {
 	* CARS IN THE OASIS
 	* SLIGHTLY FASTER PORTALS
 	* LOTS OF BALANCE AND BUGFIXES#
-	MORE INFO ON DISCORD/TWITTER @ERDEPPOL#
+	MORE INFO ON DISCORD/TWITTER @ERDEPPOL
+	
+	PRESS [T] FOR UPDATES ON TWITTER
+	PRESS [D] TO JOIN THE DISCORD
+	
 	* PRESS [SPACE] FOR PAGE 1";
 	}
 
