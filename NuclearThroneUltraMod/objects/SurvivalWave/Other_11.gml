@@ -175,7 +175,7 @@ switch (UberCont.crownVaultChallenge)
 		i++;
 		wave[i] = {
 			obj: ScrapBoss,
-			time: 70,
+			time: 90,
 			xx: centerX,
 			yy: centerY
 		};
@@ -184,7 +184,7 @@ switch (UberCont.crownVaultChallenge)
 		{
 			wave[i] = {
 				obj: Raven,
-				time: 7,
+				time: 8,
 			};
 			i++;
 		};
@@ -192,20 +192,20 @@ switch (UberCont.crownVaultChallenge)
 		{
 			wave[i] = {
 				obj: Sniper,
-				time: 8,
+				time: 9,
 			};
 			i++;
 		};
 		wave[i] = {
 				obj: Raven,
-				time: 170,
+				time: 180,
 			};
 			i++;
 		wave[i] = {
 			obj: HealthChest,
 			time: 60,
 			xx: centerX,
-			yy: centerY+32
+			yy: centerY+48
 		};
 		i++;
 		repeat(8)

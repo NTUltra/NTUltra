@@ -30,6 +30,11 @@ function scrLoadData() {
 	protowepmod2 = ini_read_real("DATA","protowepmod2",0);
 	protowepmod3 = ini_read_real("DATA","protowepmod3",0);
 	protowepmod4 = ini_read_real("DATA","protowepmod4",0);
+	protowep2 = ini_read_real("DATA","protowep2",56);
+	protowepmod12 = ini_read_real("DATA","protowepmod12",0);
+	protowepmod22 = ini_read_real("DATA","protowepmod22",0);
+	protowepmod32 = ini_read_real("DATA","protowepmod32",0);
+	protowepmod42 = ini_read_real("DATA","protowepmod42",0);
 
 	oneweponly298 = ini_read_real("DATA","oneweponly298",0);
 	oneweponly311 =ini_read_real("DATA","oneweponly311",0);

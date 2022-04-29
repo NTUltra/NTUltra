@@ -144,8 +144,27 @@ function scrPopChests() {
 		if Player.area = 100
 		{
 		if instance_exists(Crown){
-		with instance_furthest(Player.x,Player.y,WeaponChest)
-		instance_create(x,y,ProtoChest)}
+			with instance_furthest(Player.x,Player.y,WeaponChest)
+			{
+				if Player.skill_got[23] //OPEN MIND
+				{
+					instance_create(x,y-24,ProtoChest)
+					with instance_create(x,y+24,ProtoChest)
+					{
+						issecond = true;
+						wep = UberCont.protowep2
+						wepmod1=UberCont.protowepmod12
+						wepmod2=UberCont.protowepmod22
+						wepmod3=UberCont.protowepmod32
+						wepmod4=UberCont.protowepmod42
+					}
+				}
+				else
+				{
+					instance_create(x,y,ProtoChest)
+				}
+			}
+		}
 		gol = 0
 		wepChestGol = 0;
 		healthChestGol = 0;
