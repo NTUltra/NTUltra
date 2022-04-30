@@ -9,7 +9,7 @@ sleepRate=8;
 snd_wallhit=sndMeleeWall;
 snd_hit=sndHitWall;
 
-dmg=18//12 in retail
+dmg=20//12 in retail
 
 if instance_exists(Player)
 {

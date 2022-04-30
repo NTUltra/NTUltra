@@ -703,7 +703,7 @@ function scrWeapons() {
 	wep_name[63] = "BLACKHOLE GENERATOR"
 	wep_type[63] = 5
 	wep_auto[63] = 0
-	wep_load[63] = 40
+	wep_load[63] = 44
 	wep_cost[63] = 7
 	wep_sprt[63] = sprBlackholeGenerator
 	wep_area[63] = 14
@@ -3784,7 +3784,7 @@ function scrWeapons() {
 	wep_name[343] = "DIMENSION GENERATOR"
 	wep_type[343] = 4
 	wep_auto[343] = 0
-	wep_load[343] = 40
+	wep_load[343] = 44
 	wep_cost[343] = 10
 	wep_sprt[343] = sprDimensionGenerator
 	wep_area[343] = 15
@@ -4815,7 +4815,7 @@ function scrWeapons() {
 	wep_name[436] = "BOX GUN"
 	wep_type[436] = 2
 	wep_auto[436] = 0
-	wep_load[436] = 20
+	wep_load[436] = 18
 	wep_cost[436] = 2
 	wep_sprt[436] = sprBoxGun
 	wep_area[436] = 9
@@ -4826,7 +4826,7 @@ function scrWeapons() {
 	wep_name[437] = "BOX SLUGGER"
 	wep_type[437] = 2
 	wep_auto[437] = 0
-	wep_load[437] = 60
+	wep_load[437] = 40
 	wep_cost[437] = 2
 	wep_sprt[437] = sprBoxSlugger
 	wep_area[437] = 14

@@ -1,7 +1,7 @@
 if sprite_index = sprRavenLift
 {
 sprite_index = sprRavenFly
-alarm[0] = max(point_distance(x,y,targetx,targety)/6,1)
+alarm[0] = clamp(point_distance(x,y,targetx,targety)/6,1,300)
 }
 else if sprite_index = sprRavenLand
 {

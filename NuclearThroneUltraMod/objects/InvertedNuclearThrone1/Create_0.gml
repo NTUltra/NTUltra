@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 maxhealth = 1500//1700
-raddrop = 800;
+raddrop = 600;
 isInverted = true;
 aTime = 30;
 aTime -= min(GetPlayerLoops()*2,10);
