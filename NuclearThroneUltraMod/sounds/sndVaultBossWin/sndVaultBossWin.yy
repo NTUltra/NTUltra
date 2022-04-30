@@ -8,8 +8,8 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "agsfx",
+    "path": "audiogroups/agsfx",
   },
   "soundFile": "sndVaultBossWin",
   "duration": 10.6069384,

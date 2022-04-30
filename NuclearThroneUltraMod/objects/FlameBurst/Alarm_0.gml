@@ -11,10 +11,13 @@ y = creator.y
 
 repeat(2)
 {
-with instance_create(x,y,Flame)
-{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5,7+random(3))
-team = other.team
-move_contact_solid(direction,14)}
+	with instance_create(x,y,Flame)
+	{
+		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5,7+random(3))
+		team = other.team
+		move_contact_solid(direction,14)
+		scrCopyWeaponMod(other);
+	}
 }
 
 BackCont.viewx2 += lengthdir_x(3,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake

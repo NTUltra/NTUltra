@@ -1259,7 +1259,6 @@ function scrFire2() {
 	with instance_create(x,y,Laser)
 	{image_angle = aimDirection//+(random(2)-1)*other.accuracy
 	team = other.team
-	isUltra=true;
 	event_perform(ev_alarm,0)
 	}
 
@@ -7152,7 +7151,7 @@ function scrFire2() {
 
 	with instance_create(x+ldx,y+ldy,HeavySlug)
 	{
-		motion_add(aimdir,12)
+		motion_add(aimdir,14)
 		image_angle = direction
 		team = other.team
 	}

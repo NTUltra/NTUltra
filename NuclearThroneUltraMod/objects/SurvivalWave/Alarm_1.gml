@@ -55,6 +55,7 @@ if UberCont.opt_gamemode != 25
 			song = mus100
 			snd_loop(song);
 		}
+		alarm[4] = 0;
 	}
 	else
 	{

@@ -15,7 +15,7 @@ if ammo < 1 && alarm[2] < 1 {
 				dx = x + 16
 				dy = y + 16
 			}
-		} until x != dx && y != dy && !place_meeting(dx, dy, Wall) && point_distance(Player.x, Player.y, dx, dy) > 55 || i > 250
+		} until x != dx && y != dy && !place_meeting(dx, dy, Wall) && point_distance(Player.x, Player.y, dx, dy) > 55 && point_distance(Player.x, Player.y, dx, dy) < 350 || i > 250
 
 		if i <= 250 {
 			x = dx

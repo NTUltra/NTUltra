@@ -2937,7 +2937,7 @@ function scrWeapons() {
 	wep_type[266] = 1
 	wep_auto[266] = 1
 	wep_load[266] = 1
-	wep_cost[266] = 4
+	wep_cost[266] = 3
 	wep_sprt[266] = sprHeavyDoubleMinigun
 	wep_area[266] = 20
 	wep_text[266] = "to those who can't hear me I say"
@@ -4400,7 +4400,7 @@ function scrWeapons() {
 	wep_load[398] = 8
 	wep_cost[398] = 3
 	wep_sprt[398] = sprLightningLaserGun
-	wep_area[398] = 11
+	wep_area[398] = 14
 	wep_text[398] = ""
 	wep_swap[398] = sndSwapBow
 	wep_rad[398] = 0;
@@ -4741,7 +4741,7 @@ function scrWeapons() {
 	wep_load[429] = 25
 	wep_cost[429] = 3
 	wep_sprt[429] = sprSplinterStorm
-	wep_area[429] = 14
+	wep_area[429] = 16
 	wep_text[429] = "bouncing splinters"
 	wep_swap[429] = sndSwapBow
 	wep_rad[429] = 0;
@@ -5027,7 +5027,7 @@ function scrWeapons() {
 	wep_load[455] = 22
 	wep_cost[455] = 0
 	wep_sprt[455] = sprScythe
-	wep_area[455] = 7
+	wep_area[455] = 6
 	wep_text[455] = "spin attack!"
 	wep_swap[455] = sndSwapHammer
 	wep_rad[455] = 0;

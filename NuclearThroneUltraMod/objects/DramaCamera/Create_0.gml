@@ -23,32 +23,32 @@ if instance_exists(Player) && !instance_exists(SurvivalWave)
 			song = musBoss2;
 		}
 	}
-    if area = 5 || area = 107
+    else if area = 5 || area = 107
     song = musBoss3;
-    if area = 6 || area = 112
+    else if area = 6 || area = 112
 		song = musBoss7;
-    if area = 7 || area = 108
+    else if area = 7 || area = 108
 		song = musPurpleDragonBoss;
-    if area = 8 || area = 109
+    else if area = 8 || area = 109
 	{
 		if (random(100) <1)
 			song = sndChubbyEmuSong;
 		else
 			song = musBoss6B;
 	}
-	if area = 2 || area == 110
+	if area = 2 || area == 110 || (area == 10 && subarea < 3)
 		song = musBoss5;
-	if area == 4
+	else if area == 4
 		song = musBoss6;
-	if area == 115
+	else if area == 115
 		song = musBoss6B;
-	if area == 111
+	else if area == 111
 		song = choose(musBoss6,musBoss6B);
-    if area = 101
+    else if area = 101
 		song = musBoss1;
-	if area == 10
+	else if area == 10
 		song = musBoss10
-	if area == 114
+	else if area == 114
 		song = musBushBoxBoss;
     snd_loop(song)
     snd_loop(amb)

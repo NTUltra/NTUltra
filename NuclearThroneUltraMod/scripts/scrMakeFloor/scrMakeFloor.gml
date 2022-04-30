@@ -355,7 +355,7 @@ function scrMakeFloor() {
 	if area == 9 || area == 118{
 		if subarea < 2
 		{
-		if random(6) < 1
+		if random(8) < 1
 		{
 			instance_create(x,y,Floor)
 			instance_create(x+32,y,Floor)

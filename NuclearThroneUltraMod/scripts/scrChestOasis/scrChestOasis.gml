@@ -4,7 +4,7 @@ function scrChestOasis() {
 	with Player
 	{
 
-	    if area=1 and subarea<2&&oasisskip!=-1
+	    if area=1 and subarea<2&&oasisskip!=-1 and loops < 1
 	    {
 		    oasisskip-=1;
     

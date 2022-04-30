@@ -8,7 +8,6 @@ spr_idle = sprGatorIdle
 spr_walk = sprGatorWalk
 spr_hurt = sprGatorHurt
 spr_dead = sprGatorDead
-
 //behavior
 walk = 0
 wepangle = choose(-140, 140)

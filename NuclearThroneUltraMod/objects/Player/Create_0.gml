@@ -552,3 +552,5 @@ if UberCont.opt_gamemode == 25 && !instance_exists(SurvivalWave)
 }
 cheatyinfiniteammo = false;
 unkillable = false;
+maxhealth += UberCont.maxHpIncrease;
+my_health = maxhealth;

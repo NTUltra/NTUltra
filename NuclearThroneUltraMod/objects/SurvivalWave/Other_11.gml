@@ -476,10 +476,12 @@ switch (UberCont.crownVaultChallenge)
 			obj: SnowTank,
 			time: 140,
 		};
+		i++
 		wave[i] = {
 			obj: BallMom,
 			time: 270,
 		};
+		i++
 		repeat(4)
 		{
 			wave[i] = {
