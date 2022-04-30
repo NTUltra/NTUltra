@@ -11,6 +11,8 @@ with MusCont {
 			song = mus6;
 		else if Player.area == 110
 			song = musInvertedSewers;
+		else if Player.area == 10
+			song = mus10;
 	}
 	snd_loop(song)
 	audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);

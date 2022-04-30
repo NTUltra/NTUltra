@@ -64,7 +64,6 @@ if other.team != team
     
 	        if sprite_index != spr_hurt
 	        {
-				debug("melee damage:",other.meleedamage);
 		        snd_play(other.snd_melee)
 		        sprite_index = spr_hurt
 		        image_index = 0

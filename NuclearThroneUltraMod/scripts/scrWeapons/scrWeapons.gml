@@ -4664,7 +4664,7 @@ function scrWeapons() {
 	wep_load[422] = 13
 	wep_cost[422] = 0
 	wep_sprt[422] = sprSuperLance
-	wep_area[422] = 16
+	wep_area[422] = 17
 	wep_text[422] = "mine is longer"
 	wep_swap[422] = sndSwapSword
 	wep_rad[422] = 0;
@@ -4937,7 +4937,7 @@ function scrWeapons() {
 	wep_type[447] = 5
 	wep_auto[447] = 1
 	wep_load[447] = 8
-	wep_cost[447] = 1
+	wep_cost[447] = 1.5
 	wep_sprt[447] = sprAutoMissileLauncher
 	wep_area[447] = 26
 	wep_text[447] = "THIS IS METAL"

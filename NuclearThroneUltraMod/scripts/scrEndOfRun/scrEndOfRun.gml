@@ -2,6 +2,7 @@
 // /@description reset some important variables
 ///@param
 function scrEndOfRun(){
+	debug("END OF RUN");
 	with UberCont
 	{
 		crownVaultChallenge = 0;

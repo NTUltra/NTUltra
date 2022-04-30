@@ -1,4 +1,5 @@
 function scrRestart() {
+	scrEndOfRun();
 	with all
 	{
 		if id != UberCont.id and persistent = true
