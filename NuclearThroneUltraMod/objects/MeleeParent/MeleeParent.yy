@@ -1,18 +1,18 @@
 {
   "spriteId": {
-    "name": "sprEnergyShank",
-    "path": "sprites/sprEnergyShank/sprEnergyShank.yy",
+    "name": "sprSlash",
+    "path": "sprites/sprSlash/sprSlash.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": {
-    "name": "mskShank",
-    "path": "sprites/mskShank/mskShank.yy",
+    "name": "mskSlash",
+    "path": "sprites/mskSlash/mskSlash.yy",
   },
   "persistent": false,
   "parentObjectId": {
-    "name": "ShankParent",
-    "path": "objects/ShankParent/ShankParent.yy",
+    "name": "projectile",
+    "path": "objects/projectile/projectile.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -28,7 +28,11 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"hitme","path":"objects/hitme/hitme.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"Wall","path":"objects/Wall/Wall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":11,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":1,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -37,7 +41,7 @@
     "path": "folders/Objects/Projectiles/Melee.yy",
   },
   "resourceVersion": "1.0",
-  "name": "EnergyShank",
+  "name": "MeleeParent",
   "tags": [],
   "resourceType": "GMObject",
 }

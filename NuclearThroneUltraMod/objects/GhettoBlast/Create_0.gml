@@ -8,4 +8,13 @@ friction = 0.1
 sleepRate=15;
 
 alarm[0]=10;
-
+hits += 10;
+is = 0.4;
+if instance_exists(Player)
+{
+	if Player.skill_got[17] = 1
+	{
+		is = max(0.1,0.2-(Player.betterlaserbrain*0.6))
+		hits ++;
+	}
+}

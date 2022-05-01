@@ -9,5 +9,5 @@ sleepRate=15;
 snd_wallhit=sndMeleeWall;
 snd_hit=sndHitWall;
 
-dmg=18;
+dmg=16;
 

@@ -2806,7 +2806,7 @@ function scrFire() {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
-	dmg = 30;
+	dmg = 25;
 	sprite_index=sprUltraSlash;
 	longarms = 0
 	if instance_exists(Player)
@@ -2816,7 +2816,7 @@ function scrFire() {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),Slash)
 	{
-	dmg = 30
+	dmg = 25
 	sprite_index=sprUltraSlash;
 	longarms = 0
 	if instance_exists(Player)
@@ -2826,7 +2826,7 @@ function scrFire() {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),Slash)
 	{
-	dmg = 30
+	dmg = 25
 	sprite_index=sprUltraSlash;
 	longarms = 0
 	if instance_exists(Player)
@@ -3005,11 +3005,6 @@ function scrFire() {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),LightningSlash)
 	{
-	if Player.skill_got[17] = 1
-	{
-	dmg=15+(other.betterlaserbrain*2);
-	}
-	else
 	dmg = 10//shovel is 8
 	longarms = 0
 	if instance_exists(Player)
@@ -3040,10 +3035,7 @@ function scrFire() {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),LightningSlash)
 	{
-	if Player.skill_got[17] = 1
-	dmg=17+(other.betterlaserbrain*2);
-	else
-	dmg = 12//shovel is 8
+	dmg = 11//shovel is 8
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -3052,10 +3044,7 @@ function scrFire() {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),LightningSlash)
 	{
-	if Player.skill_got[17] = 1
-	dmg=17+(other.betterlaserbrain*2);
-	else
-	dmg = 12//shovel is 8
+	dmg = 11//shovel is 8
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -3064,10 +3053,7 @@ function scrFire() {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),LightningSlash)
 	{
-	if Player.skill_got[17] = 1
-	dmg=17+(other.betterlaserbrain*2);
-	else
-	dmg = 12//shovel is 8
+	dmg = 11//shovel is 8
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
