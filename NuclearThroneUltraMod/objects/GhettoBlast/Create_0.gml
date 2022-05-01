@@ -17,4 +17,8 @@ if instance_exists(Player)
 		is = max(0.1,0.2-(Player.betterlaserbrain*0.6))
 		hits ++;
 	}
+	if Player.ultra_got[34]//CHICKEN ninja ultra
+	{
+		is *= 0.5;	
+	}
 }

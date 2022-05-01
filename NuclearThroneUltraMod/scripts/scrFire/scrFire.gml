@@ -4744,14 +4744,20 @@ function scrFire() {
 	if Player.ultra_got[34]==1//Chicken Ultra B ninja
 	{
 	//some melee exceptions
-	if scrMeleeWeapons()
+		if scrMeleeWeapons()
 	    {
-	    with projectile{
-	    if team=2&& typ=0 && ProjectileCanBeMoved(){//if team is Player
-	    //image_speed/=2;}//double the damage
-	    dmg*=1.5;
-	    BackCont.shake += 5}}
-	    }
+			with MeleeParent {
+				if !appliedBoost
+				{
+					appliedBoost = true;
+					dmg *= 1.25;
+					dmg = ceil(dmg);
+					BackCont.shake += 2;
+					image_speed *= 0.5;
+					hits ++;
+				}
+			}
+		}
 	}
 	//YV ultra C 
 	//if firing shotgun add bullet from same cost as shotgun

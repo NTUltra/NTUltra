@@ -19,6 +19,8 @@ Player.crownpoints -= 1
     with Player
     {
         invertedchance = 8;
+		if race == 27
+			invertedchance = 20;
     }
 
 
