@@ -19,6 +19,9 @@ with Floor
 		instance_create(x+16,y,Wall);
 	}
 }
+var openMind = false;
+if instance_exists(Player) && Player.skill_got[23]
+	openMind = true;
 with BossReward
 {
 	var xxx = x - 8;
@@ -119,6 +122,16 @@ wave[i] = {
 	yy: centerY
 };
 i++
+if openMind
+{
+	wave[i] = {
+		obj: AmmoChest,
+		time: 10,
+		xx: centerX+64,
+		yy: centerY+16
+	};
+	i++
+}
 wave[i] = {
 	obj: Vulture,
 	time: 120,
@@ -155,6 +168,16 @@ wave[i] = {
 	yy: centerY+64
 };
 i++
+if openMind
+{
+	wave[i] = {
+		obj: AmmoChest,
+		time: 10,
+		xx: centerX-64,
+		yy: centerY-16
+	};
+	i++
+}
 repeat(8)
 {
 	wave[i] = {
@@ -192,6 +215,16 @@ wave[i] = {
 	yy: centerY
 };
 i++
+if openMind
+{
+	wave[i] = {
+		obj: HealthChest,
+		time: 10,
+		xx: centerX,
+		yy: centerY+16
+	};
+	i++
+}
 wave[i] = {
 	obj: AssassinBoss,
 	time: 140,
@@ -228,6 +261,16 @@ wave[i] = {
 	yy: centerY
 };
 i++
+if openMind
+{
+	wave[i] = {
+		obj: AmmoChest,
+		time: 10,
+		xx: centerX+128,
+		yy: centerY+16
+	};
+	i++
+}
 wave[i] = {
 	obj: JungleBoss,
 	time: 140,
@@ -303,6 +346,16 @@ wave[i] = {
 	yy: centerY
 };
 i++;
+if openMind
+{
+	wave[i] = {
+		obj: AmmoChest,
+		time: 10,
+		xx: centerX,
+		yy: centerY+48
+	};
+	i++
+}
 wave[i] = {
 	obj: HealthChest,
 	time: 100,

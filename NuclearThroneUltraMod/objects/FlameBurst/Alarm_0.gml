@@ -16,7 +16,6 @@ repeat(2)
 		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5,7+random(3))
 		team = other.team
 		move_contact_solid(direction,14)
-		scrCopyWeaponMod(other);
 	}
 }
 

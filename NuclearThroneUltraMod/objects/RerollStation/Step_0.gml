@@ -129,6 +129,10 @@ if place_meeting(x,y,Player) && !used
 					strongspiritused = false;
 					snd_play(sndStrongSpiritLost);
 				break;
+				case 26: //HAMMER HEAD
+					hammerheadtimer = 0;
+					hammerheadcounter = 0;
+				break;
 				case 33: //GLASS ARM CANNON
 					maxhealth += 2;//I guess you could have 3 hp as melting here but thats cool
 				break;

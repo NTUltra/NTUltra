@@ -150,7 +150,9 @@ if crown==12
 {
     with Player
     {
-    invertedchance = 50;
+		invertedchance = 70;
+		if race == 27
+			invertedchance = 90;
     }
 }
 

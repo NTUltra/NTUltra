@@ -7,6 +7,9 @@ function scrDrawBloom() {
 	if instance_exists(Player){
 	with Bullet1
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,(Player.ultra_got[28]*0.3)+ba)//roids ultra d
+	
+	with Bullet1Explosive
+	draw_sprite_ext(sprBullet1,-1,x,y,2,2,image_angle,c_white,(Player.ultra_got[28]*0.3)+ba)//roids ultra d
 
 	with RogueBullet
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,(Player.ultra_got[28]*0.3)+ba)//roids ultra d

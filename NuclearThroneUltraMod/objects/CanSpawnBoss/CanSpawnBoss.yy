@@ -4,7 +4,7 @@
     "path": "sprites/mskBanditBoss/mskBanditBoss.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,

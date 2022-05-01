@@ -7175,7 +7175,7 @@ function scrFire2() {
 	}
 	with instance_create(x+ldx,y+ldy,HeavySlug)
 	{
-		motion_add(aimdir,12)
+		motion_add(aimdir,14)
 		image_angle = direction
 		team = other.team
 	}
@@ -7308,6 +7308,7 @@ function scrFire2() {
 	image_xscale = 1+(longarms*0.12);
 	image_yscale = 1+(longarms*0.12);
 	team = other.team
+	rotation *= sign(other.wepangle);
 	}
 
 	wepangle = -wepangle
@@ -7316,6 +7317,66 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(4,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 6
 	wkick = -5
+
+	break;
+	
+	//SUPER SCYTHE
+	case 456:
+
+	snd_play_fire(choose(sndSword1,sndSword2))
+
+	instance_create(x,y,Dust)
+
+	with instance_create(x+hspeed,y+vspeed,SpinSlash)
+	{
+		dmg = 20
+		speed = other.speed*0.5;
+		direction = other.direction;
+		longarms = 0
+		if instance_exists(Player)
+		longarms = Player.skill_got[13]+other.bettermelee
+		image_angle = direction
+		image_xscale = 1+(longarms*0.12);
+		image_yscale = 1+(longarms*0.12);
+		team = other.team
+		rotation *= sign(other.wepangle);
+	}
+	
+	with instance_create(x+hspeed,y+vspeed,SuperSpinSlash)
+	{
+		dmg = 10
+		speed = other.speed*0.5;
+		direction = other.direction;
+		longarms = 0
+		if instance_exists(Player)
+		longarms = Player.skill_got[13]+other.bettermelee
+		image_angle = direction
+		image_xscale = 1+(longarms*0.12);
+		image_yscale = 1+(longarms*0.12);
+		team = other.team
+		rotation *= sign(other.wepangle);
+	}
+
+	wepangle = -wepangle
+	//motion_add(aimDirection,6)
+	BackCont.viewx2 += lengthdir_x(4,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(4,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 6
+	wkick = -5
+
+	break;
+	
+	//EXPLOSIVE ASSAULT RIFLE
+	case 457:
+
+	with instance_create(x,y,ExplosiveBulletBurst)
+	{
+	creator = other.id
+	ammo = 3
+	time = 2
+	team = other.team
+	event_perform(ev_alarm,0) 
+	}
 
 	break;
 	

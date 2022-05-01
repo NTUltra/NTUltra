@@ -239,6 +239,11 @@ fogscroll += 0.5
 if fogscroll > 480
 fogscroll -= 480
 
+with SpinSlash
+{
+	if visible
+		draw_self();
+}
 with Statue
 {
 	draw_self();

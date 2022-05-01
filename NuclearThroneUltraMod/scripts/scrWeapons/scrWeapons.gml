@@ -1822,7 +1822,7 @@ function scrWeapons() {
 	wep_swap[164] = sndSwapExplosive
 	wep_rad[164] = 0;
 
-	wep_name[165] = "EXPLOSIVE BOW"
+	wep_name[165] = "EXPLOSIVE CROSSBOW"
 	wep_type[165] = 3
 	wep_auto[165] = 0
 	wep_load[165] = 25
@@ -2764,7 +2764,7 @@ function scrWeapons() {
 	wep_cost[250] = 1
 	wep_sprt[250] = sprAutoExploBow
 	wep_area[250] = 7
-	wep_text[250] = "boom boom pow"
+	wep_text[250] = ""
 	wep_swap[250] = sndSwapBow
 	wep_rad[250] = 0;
 
@@ -5005,7 +5005,7 @@ function scrWeapons() {
 	wep_load[453] = 6
 	wep_cost[453] = 2
 	wep_sprt[453] = sprDoubleMiniPlasmaRifle
-	wep_area[453] = 14
+	wep_area[453] = 10
 	wep_text[453] = ""
 	wep_swap[453] = sndSwapEnergy
 	wep_rad[453] = 0;
@@ -5031,6 +5031,28 @@ function scrWeapons() {
 	wep_text[455] = "spin attack!"
 	wep_swap[455] = sndSwapHammer
 	wep_rad[455] = 0;
+	
+	wep_name[456] = "SUPER SCYTHE"
+	wep_type[456] = 0
+	wep_auto[456] = 0
+	wep_load[456] = 18
+	wep_cost[456] = 0
+	wep_sprt[456] = sprSuperScythe
+	wep_area[456] = 18
+	wep_text[456] = "super scythe me"
+	wep_swap[456] = sndSwapHammer
+	wep_rad[456] = 0;
+	
+	wep_name[457] = "EXPLOSIVE ASSAULT RIFLE"
+	wep_type[457] = 1
+	wep_auto[457] = 0
+	wep_load[457] = 11
+	wep_cost[457] = 4
+	wep_sprt[457] = sprExplosiveAssaultRifle
+	wep_area[457] = 7
+	wep_text[457] = "boom boom pow"
+	wep_swap[457] = sndSwapMachinegun
+	wep_rad[457] = 0;
 
 	
 	/*
