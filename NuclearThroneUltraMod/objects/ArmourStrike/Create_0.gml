@@ -21,5 +21,5 @@ if instance_exists(Player)
 	{
 		image_yscale += 2;
 	}
-	dmg *= 1+Player.level*0.25;
+	dmg *= 1+Player.level*0.1;//0.25
 }

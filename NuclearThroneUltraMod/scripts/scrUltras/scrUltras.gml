@@ -376,8 +376,6 @@ function scrUltras() {
 	ultra_tips[76] = "never dead"
 	}
 
-
-
 	    //BUSINESSHOG 
 	    ultra_name[77] = "PROSPERITY"
 	    ultra_text[77] = "ENEMIES DROP MORE RADS#HIGHER RAD MAXIMUM"
