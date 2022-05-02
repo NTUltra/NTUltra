@@ -1,5 +1,5 @@
 loops = GetPlayerLoops();
-maxhealth = 100 * clamp(loops*2,1,5)
+maxhealth = 100 * clamp(loops*3,1,5)
 size = 2
 
 spr_idle = sprBigFishSkullOpen

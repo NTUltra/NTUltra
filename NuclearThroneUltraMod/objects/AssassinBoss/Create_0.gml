@@ -15,7 +15,7 @@ spr_dead = sprAssassinBossDead
 spr_stunned = sprAssassinBossStunned
 spr_fake = sprAssassinBossDeadFake;
 spr_respawn = sprAssassinBossRespawn;
-fakeded = 0;
+fakeded = -1;
 var loops = GetPlayerLoops();
 lifes = min(3,loops-1);
 

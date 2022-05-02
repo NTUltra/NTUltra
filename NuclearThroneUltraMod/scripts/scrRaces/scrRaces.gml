@@ -385,8 +385,8 @@ function scrRaces() {
 	race_swep[27] = 443
 	race_bskin[27] = 0
 	race_cskin[27] = 0
-	race_bskin_lock[27] = "SLAP#THE PURPLE DRAGON#TO DEATH"
-	race_cskin_lock[27] = "SUCKERPUNCH#THREE IDPD VANS#INTO OBLIVION#IN A SINGLE RUN"
+	race_bskin_lock[27] = "SLAP#THE PURPLE DRAGON#TO DEATH#(KILL WITH ACTIVE)"
+	race_cskin_lock[27] = "SUCKERPUNCH#THREE IDPD VANS#INTO OBLIVION#IN A SINGLE RUN#(KILL WITH ACTIVE & THRONEBUTT)"
 
 
 	racemax = 27;

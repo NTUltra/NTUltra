@@ -1452,7 +1452,7 @@ function scrWeapons() {
 	wep_type[131] = 1
 	wep_auto[131] = 0
 	wep_load[131] = 3
-	wep_cost[131] = 8
+	wep_cost[131] = 6
 	wep_sprt[131] = sprHeavyHyperRifle
 	wep_area[131] = 16
 	wep_text[131] = "heavy burden"
@@ -4936,7 +4936,7 @@ function scrWeapons() {
 	wep_type[447] = 5
 	wep_auto[447] = 1
 	wep_load[447] = 8
-	wep_cost[447] = 1.5
+	wep_cost[447] = 2
 	wep_sprt[447] = sprAutoMissileLauncher
 	wep_area[447] = 26
 	wep_text[447] = "THIS IS METAL"
@@ -5034,10 +5034,10 @@ function scrWeapons() {
 	wep_name[456] = "SUPER SCYTHE"
 	wep_type[456] = 0
 	wep_auto[456] = 0
-	wep_load[456] = 18
+	wep_load[456] = 19
 	wep_cost[456] = 0
 	wep_sprt[456] = sprSuperScythe
-	wep_area[456] = 18
+	wep_area[456] = 19
 	wep_text[456] = "super scythe me"
 	wep_swap[456] = sndSwapHammer
 	wep_rad[456] = 0;
@@ -5057,7 +5057,7 @@ function scrWeapons() {
 	wep_type[458] = 5
 	wep_auto[458] = 0
 	wep_load[458] = 27
-	wep_cost[458] = 6
+	wep_cost[458] = 5
 	wep_sprt[458] = sprLaserShovel
 	wep_area[458] = 16
 	wep_text[458] = ""

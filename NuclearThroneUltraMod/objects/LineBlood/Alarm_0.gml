@@ -15,7 +15,7 @@ motion_add(random(360),random(4))
 //instance_create(x,y,Explosion);
 Sleep(20)
 dir = 0
-do {dir += 1 x += lengthdir_x(16,direction) y += lengthdir_y(16,direction)
+do {dir += 1 x += lengthdir_x(24,direction) y += lengthdir_y(24,direction)
 	var randir = random(360);
 	instance_create(x+lengthdir_x(4,randir),y+lengthdir_y(4,randir),MeatExplosion)
 if(random(6)<1){

@@ -53,7 +53,7 @@ function scrPowers() {
 			{
 				tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
 				d3 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);
-				if ((tar.team != 0 || (skill_got[5] && (tar.object_index == IDPDVan || tar.object_index == IDPDVanVertical)))
+				if ((tar.team != 0  && tar.team != team && tar.my_health > 0 || (skill_got[5] && (tar.object_index == IDPDVan || tar.object_index == IDPDVanVertical)))
 				&& tar.team != team && d3 < grabRange && d3 < d2 && d3 < d1 && d3 < d0)
 				{
 					grabbedEnemy = true;
@@ -1331,7 +1331,7 @@ function scrPowers() {
 		if Player.ultra_got[44]=1{//Hunter Ultra D CRACKSHOT
 			if(instance_exists(enemy)){
 				var n = instance_nearest(mouse_x,mouse_y,enemy)
-				if (point_distance(mouse_x,mouse_y,n.x,n.y) < 48) {
+				if (point_distance(mouse_x,mouse_y,n.x,n.y) < 48 && n.team != team && n.my_health > 0) {
 					snd_play_2d(sndSniperTarget);
 
 				    with instance_create(mouse_x,mouse_y,Marker) {
@@ -1364,7 +1364,7 @@ function scrPowers() {
 			if (instance_exists(enemy)){
 			
 				var n = instance_nearest(mouse_x,mouse_y,enemy)
-				if(point_distance(mouse_x,mouse_y,n.x,n.y) < 48)
+				if(point_distance(mouse_x,mouse_y,n.x,n.y) < 48 && n.team != team && n.my_health > 0)
 				{
 				    snd_play_2d(sndSniperTarget);
 				    with instance_create(mouse_x,mouse_y,Marker) {

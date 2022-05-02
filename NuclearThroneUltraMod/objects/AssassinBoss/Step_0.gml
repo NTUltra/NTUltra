@@ -1,11 +1,11 @@
-if (my_health <= 0 && lifes > 0 && fakeded < 1)
+if (my_health <= 0 && lifes > 0 && fakeded < 0)
 {
 	debug("DEAD");
+	depth += 2;
 	scrDrop(100,0);
 	scrRaddrop(raddrop);
 	sprite_index = spr_dead;
 	image_index = 0;
-	my_health = maxhealth;
 	fakeded = 80 + random(200);
 	alarm[1] = fakeded + 10;
 	alarm[2] = 0;
@@ -13,7 +13,13 @@ if (my_health <= 0 && lifes > 0 && fakeded < 1)
 	mask_index = mskPickupThroughWall;
 	speed = 0;
 	lifes--;
-	if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(InvertedAssassinBoss) == 1
+	var aalive = false;
+	with AssassinBoss
+	{
+		if my_health > 0
+			aalive = true;
+	}
+	if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && !aalive
 		with MusCont
 		{
 			audio_stop_sound(song);
@@ -22,7 +28,7 @@ if (my_health <= 0 && lifes > 0 && fakeded < 1)
 			audio_sound_gain(song,max(0,sqrt(UberCont.opt_musvol)),0);
 		}
 }
-if fakeded > 0
+if fakeded >= 0
 	exit;
 event_inherited()
 

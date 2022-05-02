@@ -6,7 +6,7 @@ if fuckyou
 {
 	with instance_create(x,y,PopupText)
 	{
-		mytext = "THERE IT IS! STOP ASKING FOR IT."	
+		mytext = "WHAT!"	
 	}
 
 	instance_create(x,y,RadMaggotChest);

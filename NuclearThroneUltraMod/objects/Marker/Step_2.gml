@@ -1,6 +1,6 @@
 if instance_exists(enemy)
 {
-	if(instance_exists(target))
+	if(instance_exists(target) && target.my_health > 0)
 	{
 		var tx = target.x// + (target.hspeed*2);
 		var ty = target.y// + (target.vspeed*2);
