@@ -72,7 +72,7 @@ if race == 27
 	if scrIsInInvertedArea()
 	{
 		var am = 3;
-		if ultra_got[106] && bskin != 1
+		if ultra_got[106]
 			am = 5;
 		
 		my_health += am;
@@ -501,12 +501,6 @@ if restarted
 if movethislevel==false&&race=15 &&!instance_exists(MenuGen) &&!instance_exists(Menu) &&  !instance_exists(Vlambeer) && !instance_exists(CrownPickup)
 {//ATOM TELEPORT ONLY GAMEMODE UNLOCK
 scrUnlockGameMode(7,"FOR COMPLETING A LEVEL WITHOUT WALKING")
-}
-if race = 11 && bigbanditmarked=true && bigdogmarked=true &&
-lillhuntermarked=true && bigmachinemarked=true &&
-dragonmarked=true && chesirecatmarked=true
-{//HUNTER MARK ONLY GM UNLOCK
-scrUnlockGameMode(12,"FOR KILLING EVERY MAIN BOSS#WHILE MARKING THEM")
 }
 
 //SKINS

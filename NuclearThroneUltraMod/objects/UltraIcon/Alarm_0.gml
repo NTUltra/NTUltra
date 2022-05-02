@@ -4,10 +4,12 @@
 if skill == 76 && Player.ultimategamble=true
 {
 	sprite_index=sprUltimateGamble;
-	image_index=0;
 }
-if skill == 106 && Player.bskin == 1
+else if skill == 106 && Player.bskin == 1
 {
 	sprite_index=sprHotHands;
-	image_index=0;
+}
+else if skill == 106 && Player.bskin == 2
+{
+	sprite_index=sprBoomHands;
 }

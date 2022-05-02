@@ -57,16 +57,3 @@ curse = 0
 sprite_index = wep_sprt[wep]
 }}
 
-if instance_exists(Marker)
-{
-    if place_meeting(x,y,Marker)
-    {
-        with Player
-        {
-        
-        bigdogmarked=true;
-        
-        }
-    }
-}
-

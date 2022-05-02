@@ -531,12 +531,19 @@ function scrUltras() {
 	ultra_text[106] = "WALLS CONTAIN SWARM BOLTS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
 	ultra_tips[106] = "I'm a glass half empty kinda hand"
 	
-	//Secret B skin ultra
 	if instance_exists(Player) && Player.bskin == 1
 	{
-		ultra_name[106] = "HOT HANDS"
-		ultra_text[106] = "FIERY HANDS#MORE FIRE DAMAGE#HOMING FIRE#EVEN MOR FIRE DAMAGE#WHILE IN INVERTED AREAS"
+		//Secret B skin ultra
+		ultra_name[106] = "HOT HANDS!"
+		ultra_text[106] = "FIERY HANDS#MORE FIRE DAMAGE#HOMING FIRE#EVEN MOR FIRE DAMAGE#WHILE IN INVERTED AREAS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
 		ultra_tips[106] = "secret b-skin ultra mutation"
+	}
+	else if instance_exists(Player) && Player.bskin == 2
+	{
+		//Secret C skin ultra
+		ultra_name[106] = "BOOM HANDS!"
+		ultra_text[106] = "EXPLOSIVE HANDS#HAND IS SLOWER#NORMAL HAND SPEED IN INVERTED AREAS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
+		ultra_tips[106] = "secret c-skin ultra mutation"
 	}
 	
 	ultra_name[107] = "MANY HANDS"

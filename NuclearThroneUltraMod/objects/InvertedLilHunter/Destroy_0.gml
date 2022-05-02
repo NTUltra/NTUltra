@@ -75,17 +75,3 @@ type = wep_type[192]
 curse = 0
 sprite_index = wep_sprt[192]
 }}
-
-if instance_exists(Marker)
-{
-    if place_meeting(x,y,Marker)
-    {
-        with Player
-        {
-        
-        lillhuntermarked=true;
-        
-        }
-    }
-}
-

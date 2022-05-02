@@ -1,2 +1,11 @@
 if instance_exists(Player)
-Player.rogueammo--;
+{
+	if (Player.ultra_got[88])
+	{
+		rad -= 80//Also in scrPowers
+	}
+	else
+	{
+		Player.rogueammo--;
+	}
+}

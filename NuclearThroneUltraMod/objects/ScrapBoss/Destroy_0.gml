@@ -76,18 +76,3 @@ curse = 0
 sprite_index = wep_sprt[wep]
 }}
 
-
-with Marker
-        {
-        
-        if other.id=target.id
-        {
-        with Player
-        {
-        bigdogmarked=true;
-        }
-        }
-        
-        }
-
-

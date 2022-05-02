@@ -48,7 +48,7 @@ function scrGameModes() {
 	gamemode_have[11] = 0;
 
 	gamemode[12] = "HUNTER ONLY SHOOT#WHEN MARKED";//
-	gamemode_unlock[12] = "KILL EVERY PRE LOOP MAIN BOSS#WHILE ITS MARKED IN ONE RUN";
+	gamemode_unlock[12] = "KILL A THIEF#WHILE IT IS MARKED";
 	gamemode_have[12] = 0;
 
 	gamemode[13] = "ROCKET GLOVE ONLY#NO WALKING";//

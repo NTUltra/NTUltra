@@ -22,7 +22,7 @@ function scrDrawUpdate() {
 		{
 			url_open("https://twitter.com/Erdeppol");
 		}
-	txt0 = @"#UPDATE 27 [0.12]
+	txt0 = @"#UPDATE 27 [0.13]
 	
 	* FIXED SOFTLOCKS!
 	* INVERTED THRONE

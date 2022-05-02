@@ -48,17 +48,3 @@ curse = 0
 sprite_index = wep_sprt[192]
 }}
 
-
-with Marker
-        {
-        
-        if other.id=target.id
-        {
-        with Player
-        {
-        lillhuntermarked=true;
-        }
-        }
-        
-        }
-

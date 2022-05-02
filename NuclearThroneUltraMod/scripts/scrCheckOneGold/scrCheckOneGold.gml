@@ -21,7 +21,7 @@ function scrCheckOneGold() {
 	racedir++;
 	}
 
-	if thischarhasagoldwep >= racemax
+	if thischarhasagoldwep >= racemax-1
 		return true
 	else
 		return false

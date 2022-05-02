@@ -53,11 +53,14 @@ with UberCont
 //UNDO STUFF
 
 //CROWN OF DESTINY
-if oldcrown = 8 
-Player.skillpoints -= 1
+//if oldcrown = 8 
+//Player.skillpoints -= 1
 //CROWN OF DEATH
 if oldcrown = 3
+{
 Player.maxhealth += 1
+UberCont.maxHpIncrease ++;
+}
 
 //DO STUFF
 
@@ -95,11 +98,11 @@ Player.skillpoints += 1
 Player.skillsChosen -= 1;
 }
 //CROWN OF DEATH
-if crown = 3
+if crown = 3 && Player.maxhealth > 1
 {
 Player.maxhealth -= 1
-if Player.my_health > Player.maxhealth
-Player.my_health = Player.maxhealth}
+UberCont.maxHpIncrease --;
+}
 
 if crown!=4//not crown of haste
 Player.rushcrownlevels=0;

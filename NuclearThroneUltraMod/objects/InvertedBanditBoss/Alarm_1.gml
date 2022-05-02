@@ -24,7 +24,7 @@ alarm[2] = 1
 gunangle = point_direction(x,y,target.x,target.y)
 alarm[1] = 60+random(10)//70+random(5)
 }
-else
+else if !instance_exists(EnemyMissile) && random(3) < 1
 {
 sprite_index=spr_fire;
 snd_play(sndRocket);
@@ -51,7 +51,7 @@ alarm[1] = -1
 chargewait = 0
 }
 }
-else
+else if !instance_exists(EnemyMissile) && random(3) < 1
 {//fire a missile
 sprite_index=spr_fire;
 snd_play(sndRocket);
@@ -115,7 +115,7 @@ alarm[6] = 10//aim again
 gunangle = point_direction(x,y,target.x,target.y)
 alarm[1] = 70+random(5)
 }
-else
+else if !instance_exists(EnemyMissile) && random(3) < 1
 {
 sprite_index=spr_fire;
 snd_play(sndRocket);
@@ -142,7 +142,7 @@ alarm[1] = -1
 chargewait = 0
 }
 }
-else
+else if !instance_exists(EnemyMissile) && random(3) < 1
 {
 sprite_index=spr_fire;
 snd_play(sndRocket);
@@ -208,7 +208,7 @@ alarm[6] = 15//aim again
 gunangle = point_direction(x,y,target.x,target.y)
 alarm[1] = 70+random(5)
 }
-else
+else if !instance_exists(EnemyMissile) && random(3) < 1
 {
 sprite_index=spr_fire;
 snd_play(sndRocket);
@@ -235,7 +235,7 @@ alarm[1] = -1
 chargewait = 0
 }
 }
-else
+else if !instance_exists(EnemyMissile) && random(3) < 1
 {
 sprite_index=spr_fire;
 snd_play(sndRocket);

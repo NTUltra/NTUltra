@@ -11,8 +11,8 @@ speed = 4.5
 else if speed>6
 speed=6;
 
-if speed=0
-alpha=0.1
+if speed < 1
+alpha=0.15
 else
 alpha=(speed*0.2)+0.1//0.25?
 

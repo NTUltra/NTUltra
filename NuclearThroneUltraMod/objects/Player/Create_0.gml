@@ -81,13 +81,6 @@ with UberCont {
     }
 }
 
-bigbanditmarked = false;
-bigdogmarked = false;
-lillhuntermarked = false;
-bigmachinemarked = false;
-dragonmarked = false;
-chesirecatmarked = false;
-
 keyfire = 0
 
 if instance_exists(GenCont)

@@ -44,17 +44,3 @@ instance_create(x,y,Portal);
 with Player
 oasis=true;
 }
-
-if instance_exists(Marker)
-{
-    if place_meeting(x,y,Marker)
-    {
-        with Player
-        {
-        
-        bigbanditmarked=true;
-        
-        }
-    }
-}
-

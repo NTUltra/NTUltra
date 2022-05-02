@@ -7,28 +7,46 @@ function scrPowers() {
 		{
 			var targetPickup = false;
 			var grabRange = 48;//same as hunter mark
+			var d0 = 999;
 			var d1 = 999;
 			var d2 = 999;
 			var d3 = 999;
 			var tar = -1;
 			var resulttar = -1;
 			var grabbedEnemy = false;
+			var slappedProjectile = false;
+			//Ultra target projectiles
+			if ultra_got[107] && instance_exists(projectile)
+			{
+				tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,projectile);
+				if tar.team != other.team
+				{
+					d0 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y)
+					if d0 < grabRange
+					{
+						resulttar = tar;
+						slappedProjectile = true;
+					}
+				}
+			}
 			if instance_exists(chestprop)
 			{
 				tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,chestprop);
 				d1 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y)
-				if d1 < grabRange
+				if d1 < grabRange && d1 < d0
 				{
 					resulttar = tar;
+					slappedProjectile = false;
 				}
 			}
 			if instance_exists(RadChest)
 			{
 				tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,RadChest);
 				d2 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y) 
-				if d2 < grabRange && d2 < d1
+				if d2 < grabRange && d2 < d1 && d2 < d0
 				{
 					resulttar = tar;
+					slappedProjectile = false;
 				}
 			}
 			if instance_exists(enemy)
@@ -36,13 +54,13 @@ function scrPowers() {
 				tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
 				d3 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);
 				if ((tar.team != 0 || (skill_got[5] && (tar.object_index == IDPDVan || tar.object_index == IDPDVanVertical)))
-				&& tar.team != team && d3 < grabRange && d3 < d2 && d3 < d1)
+				&& tar.team != team && d3 < grabRange && d3 < d2 && d3 < d1 && d3 < d0)
 				{
 					grabbedEnemy = true;
 					resulttar = tar;
+					slappedProjectile = false;
 				}
 			}
-			//Ultra target projectiles
 			if ultra_got[108] && resulttar == -1
 			{
 				//Allow pickups to be picked up
@@ -53,7 +71,7 @@ function scrPowers() {
 					if (d4 < grabRange)
 					{
 						resulttar = tar;
-						//targetPickup = true;
+						slappedProjectile = false;
 					}
 				}
 				if instance_exists(Pickup) && resulttar == -1
@@ -64,6 +82,7 @@ function scrPowers() {
 					{
 						resulttar = tar;
 						targetPickup = true;
+						slappedProjectile = false;
 					}
 				}
 			}
@@ -83,6 +102,8 @@ function scrPowers() {
 						sprite_index = sprHandCOpen;
 						spr_close = sprHandCClose;
 						spr_closing = sprHandCClosing;
+						if !scrIsInInvertedArea()
+							lerpSpeed *= 0.75;//Slower hand
 					}
 					else if other.bskin == 1
 					{
@@ -93,6 +114,10 @@ function scrPowers() {
 						{
 							alarm[4] = 1;
 						}
+					}
+					if (other.skill_got[5])
+					{
+						dmg += 2;
 					}
 					grabbingPickup = targetPickup;
 					team = other.team;
@@ -124,10 +149,20 @@ function scrPowers() {
 							}
 						}
 					}
-					if other.skill_got[5] && grabbedEnemy
+					if slappedProjectile
+					{
+						push = false;
+						lerpDistance += 8;
+						lerpCalc = min(1,lerpSpeed/lerpDistance);//Consistent speed
+						lerpCalcBack = lerpCalc;
+						grabbingPickup = true;
+						//PUNCH FIST!
+						sprite_index = spr_close;
+						spr_closing = spr_close;
+					}
+					else if other.skill_got[5] && grabbedEnemy && !grabbingPickup
 					{
 						push = true;
-						dmg += 2;
 						lerpDistance += 8;
 						lerpCalc = min(1,lerpSpeed/lerpDistance);//Consistent speed
 						lerpCalcBack = lerpCalc*0.8;
@@ -142,7 +177,6 @@ function scrPowers() {
 					}
 					else//ULTRA D
 					{
-						
 						lerpCalc = min(1,(lerpSpeed)/lerpDistance);
 						lerpCalcBack = lerpCalc;
 					}
@@ -410,12 +444,12 @@ function scrPowers() {
 
 	if race = 22 //Rogue
 	{
-		var radcost = 80;
+		var radcost = 80;//Cost is also in portal
 		var useRad = ultra_got[88] == 1
 	if rogueammo > 0 || (useRad && rad >= radcost)
 	{
-		if useRad
-			rad -= radcost;
+		//if useRad Ammo taken in portalstrike destroy
+		//	rad -= radcost;
 		portalstrikesusedthislevel++;
 		if portalstrikesusedthislevel>=8
 		scrUnlockCSkin(22,"FOR USING EIGHT PORTAL STRIKES#IN ONE LEVEL",0);
@@ -1999,33 +2033,31 @@ function scrPowers() {
 	}
 	else if race==22 //rogue
 	{
-
-	with PortalStrike
-	{
-	    if alarm[0]<0
-	    {
-		if other.skill_got[5]
-			snd_play_2d(sndPortalStrikeFireTB);
-		else
-			snd_play_2d(sndPortalStrikeFire);
+		with PortalStrike
+		{
+		    if alarm[0]<0
+		    {
+			if other.skill_got[5]
+				snd_play_2d(sndPortalStrikeFireTB);
+			else
+				snd_play_2d(sndPortalStrikeFire);
 	    
-		ammo=5;
-	    time=2;
-	    dir =point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+			ammo=5;
+		    time=2;
+		    dir =point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
     
-	    if other.skill_got[5]
-	    {
-	    ammo=14;
-	    exploPos=-96;
-	    alarm[1]=1;
-	    }
+		    if other.skill_got[5]
+		    {
+		    ammo=14;
+		    exploPos=-96;
+		    alarm[1]=1;
+		    }
     
-	    event_perform(ev_alarm,0)
+		    event_perform(ev_alarm,0)
     
     
-	    }
-	}
-
+		    }
+		}
 	}
 	else if race == 23//FROG
 	{

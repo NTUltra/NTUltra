@@ -65,17 +65,3 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 snd_play(sndBossWin);
 event_inherited()
 
-
-with Marker
-        {
-        
-        if other.id=target.id
-        {
-        with Player
-        {
-        bigmachinemarked=true;
-        }
-        }
-        
-        }
-

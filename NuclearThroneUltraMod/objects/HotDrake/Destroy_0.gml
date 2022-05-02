@@ -36,7 +36,7 @@ if audio_is_playing(sndDragonLoop)
 audio_stop_sound(sndDragonLoop)
 
 //drop Time Thrower?
-if(random(200)<1){
+if(random(500)<1){
 with instance_create(x,y,WepPickup)
 {
 scrWeapons()
@@ -47,19 +47,10 @@ type = wep_type[177]
 curse = 0
 sprite_index = wep_sprt[177]
 }}
-
-
-
-with Marker
-        {
-        
-        if other.id=target.id
-        {
-        with Player
-        {
-        dragonmarked=true;
-        }
-        }
-        
-        }
-
+with Hand
+{
+	if target == other.id || place_meeting(x,y,other.id)
+	{
+		scrUnlockBSkin(27,"FOR WHACKING#A DRAGON#TO DEATH",0);
+	}
+}

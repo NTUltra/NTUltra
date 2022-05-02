@@ -46,16 +46,3 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 
 }
 
-if instance_exists(Marker)
-{
-    if place_meeting(x,y,Marker)
-    {
-        with Player
-        {
-        
-        chesirecatmarked=true;
-        
-        }
-    }
-}
-

@@ -24,13 +24,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"856a4c26-db71-4737-b8df-a8ad6bc7dde1","path":"sprites/sprUltimateGamble/sprUltimateGamble.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"856a4c26-db71-4737-b8df-a8ad6bc7dde1","path":"sprites/sprUltimateGamble/sprUltimateGamble.yy",},"LayerId":{"name":"8fea9336-17fc-4a7b-a616-84f98fb56472","path":"sprites/sprUltimateGamble/sprUltimateGamble.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"856a4c26-db71-4737-b8df-a8ad6bc7dde1","path":"sprites/sprUltimateGamble/sprUltimateGamble.yy",},"LayerId":{"name":"ce55eff5-d180-4705-bb7d-ba577d86d8e6","path":"sprites/sprUltimateGamble/sprUltimateGamble.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprUltimateGamble","path":"sprites/sprUltimateGamble/sprUltimateGamble.yy",},"resourceVersion":"1.0","name":"856a4c26-db71-4737-b8df-a8ad6bc7dde1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"273afcba-3914-49c2-a7ae-86ba892f925b","path":"sprites/sprBoomHands/sprBoomHands.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"273afcba-3914-49c2-a7ae-86ba892f925b","path":"sprites/sprBoomHands/sprBoomHands.yy",},"LayerId":{"name":"8fea9336-17fc-4a7b-a616-84f98fb56472","path":"sprites/sprBoomHands/sprBoomHands.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"273afcba-3914-49c2-a7ae-86ba892f925b","path":"sprites/sprBoomHands/sprBoomHands.yy",},"LayerId":{"name":"ce55eff5-d180-4705-bb7d-ba577d86d8e6","path":"sprites/sprBoomHands/sprBoomHands.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprBoomHands","path":"sprites/sprBoomHands/sprBoomHands.yy",},"resourceVersion":"1.0","name":"273afcba-3914-49c2-a7ae-86ba892f925b","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprUltimateGamble","path":"sprites/sprUltimateGamble/sprUltimateGamble.yy",},
+    "spriteId": {"name":"sprBoomHands","path":"sprites/sprBoomHands/sprBoomHands.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -42,7 +42,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ec1c748e-bd85-4767-8431-bf798fc08298","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"856a4c26-db71-4737-b8df-a8ad6bc7dde1","path":"sprites/sprUltimateGamble/sprUltimateGamble.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1d71be2e-1007-478b-b7fb-7624b067d0b7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"273afcba-3914-49c2-a7ae-86ba892f925b","path":"sprites/sprBoomHands/sprBoomHands.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -59,9 +59,9 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprUltimateGamble","path":"sprites/sprUltimateGamble/sprUltimateGamble.yy",},
+    "parent": {"name":"sprBoomHands","path":"sprites/sprBoomHands/sprBoomHands.yy",},
     "resourceVersion": "1.4",
-    "name": "sprUltimateGamble",
+    "name": "sprBoomHands",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -75,7 +75,7 @@
     "path": "folders/Sprites/Menu.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sprUltimateGamble",
+  "name": "sprBoomHands",
   "tags": [],
   "resourceType": "GMSprite",
 }

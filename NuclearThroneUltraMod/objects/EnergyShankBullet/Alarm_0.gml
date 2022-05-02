@@ -15,7 +15,7 @@ with instance_create(x+lengthdir_x((Player.skill_got[13]+Player.bettermelee)*10,
 {
 direction=random(360)
 ang = direction
-dmg = 7
+dmg = 6
 longarms = 0
 if instance_exists(Player)
 longarms = (Player.skill_got[13]+Player.bettermelee)*3
@@ -29,7 +29,7 @@ with instance_create(x,y,EnergyShank)
 {
 direction=random(360)
 ang = direction
-dmg = 7
+dmg = 6
 longarms = 0
 if instance_exists(Player)
 longarms = (Player.skill_got[13]+Player.bettermelee)*3
@@ -40,5 +40,5 @@ sleepRate=6;
 }}
 
 
-alarm[0]=2;
+alarm[0]=3;
 

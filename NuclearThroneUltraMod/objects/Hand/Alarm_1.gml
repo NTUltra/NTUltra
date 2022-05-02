@@ -53,7 +53,7 @@ if target > 0 && instance_exists(target)
 			BackCont.viewy2 += lengthdir_y(6,point_direction(creator.x,creator.y,x,y)+180)*UberCont.opt_shake
 			BackCont.shake += 15;	
 		}
-		if grabbingPickup
+		if grabbingPickup//or targeting projectile
 		{
 			target = -1;
 		}

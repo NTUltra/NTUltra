@@ -47,17 +47,3 @@ if oasis && !instance_exists(SurvivalWave)
 with Player
 oasis=true;
 }
-
-with Marker
-        {
-        
-        if other.id=target.id
-        {
-        with Player
-        {
-        bigbanditmarked=true;
-        }
-        }
-        
-        }
-

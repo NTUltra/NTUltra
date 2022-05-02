@@ -38,18 +38,3 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 
 }
 
-
-with Marker
-        {
-        
-        if other.id=target.id
-        {
-        with Player
-        {
-        chesirecatmarked=true;
-        }
-        }
-        
-        }
-
-

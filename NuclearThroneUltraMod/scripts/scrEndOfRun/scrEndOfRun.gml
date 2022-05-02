@@ -20,5 +20,6 @@ function scrEndOfRun(){
 		minutesstring="";
 		time_hours=0;
 		txttime="00:00:00:00";
+		vansSlapped = 0;
 	}
 }

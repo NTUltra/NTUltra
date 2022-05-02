@@ -74,12 +74,12 @@ if prevhealth > my_health
 		{
 			if(point_distance(x,y,Player.x,Player.y)<100)
 		    {
-				var damageDeal = dmgTaken * point_distance(x,y,Player.x,Player.y)*0.0011;
+				var damageDeal = dmgTaken * point_distance(x,y,Player.x,Player.y)*0.001;
 				my_health -= damageDeal//point_distance(x,y,Player.x,Player.y)/82;//82;
 		    }
 		    else
 		    {
-				var damageDeal = dmgTaken * point_distance(x,y,Player.x,Player.y)*0.0028;
+				var damageDeal = dmgTaken * point_distance(x,y,Player.x,Player.y)*0.0026;
 				my_health -= damageDeal;//point_distance(x,y,Player.x,Player.y)/29//28;
 		    }
 			dmgTaken += damageDeal;
