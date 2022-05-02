@@ -13,6 +13,7 @@ if um == ultramods.laserBullet
 	with instance_create(x,y,Laser)
 	{
 		//image_yscale+=0.2;
+		image_yscale -= 0.1;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;

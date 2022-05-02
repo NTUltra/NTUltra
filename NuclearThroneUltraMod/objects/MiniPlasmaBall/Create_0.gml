@@ -22,3 +22,4 @@ resetSpeed=false;
 
 alarm[11] = 1;
 alarm[1] = 2;
+ptime = 2;

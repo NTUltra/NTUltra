@@ -38,7 +38,7 @@ else if um == ultramods.laserBullet
 	instance_destroy(id,false);
 	with instance_create(x,y,Laser)
 	{
-		image_yscale -= 0.3;
+		image_yscale -= 0.4;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;
@@ -59,6 +59,7 @@ else if um == ultramods.bulletPlasma
 	with instance_create(x,y,MiniPlasmaBall)
 	{
 		scrCopyWeaponMod(other);
+		ptime = 6;
 		direction = other.direction;
 		image_angle = direction;
 		speed = other.speed;
