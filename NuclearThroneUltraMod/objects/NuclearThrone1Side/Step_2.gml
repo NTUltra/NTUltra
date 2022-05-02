@@ -38,6 +38,7 @@ if (my_health < prevhealth)
 		{
 			//if sprite_index != spr_hurt
 			//{
+				my_health = prevhealth;
 				my_health -= dmgTaken;
 				prevhealth = my_health;//Don't recognize this as dmg
 	/*

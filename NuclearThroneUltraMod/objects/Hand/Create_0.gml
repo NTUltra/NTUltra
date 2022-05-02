@@ -23,3 +23,5 @@ pushStartY = 0;
 pushStrength = 108;
 pushSpeed = 18;
 grabbingPickup = false;
+spr_closing = sprHandClosing;
+spr_close = sprHandClose;

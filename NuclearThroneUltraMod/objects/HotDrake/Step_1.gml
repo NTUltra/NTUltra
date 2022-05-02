@@ -20,4 +20,4 @@ if instance_number(enemy) <= 2&&!instance_exists(GenCont) || instance_exists(Sur
 	}
 }
 
-
+event_inherited();

@@ -12,11 +12,7 @@ motion_add(other.direction,6)
 }
 with instance_create(x,y,BulletHit)
 	sprite_index = sprFreezeFlakHit;
-//RECYCLE GLAND
-if instance_exists(Player){
-if Player.skill_got[16] = 1 and random(3) < 1.2 + Player.betterrecyclegland
-{Player.ammo[1] += 10
-instance_create(x,y,RecycleGland);}}
+scrRecycleGland(10);
 
 }
 

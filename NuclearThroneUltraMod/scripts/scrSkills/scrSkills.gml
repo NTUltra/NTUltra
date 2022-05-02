@@ -8,9 +8,17 @@ function scrSkills() {
 	dir += 1}
 	
 	var isDoctor = false;
-	if instance_exists(Player) && Player.race == 25
+	var isHand = false;
+	if instance_exists(Player)
 	{
-		isDoctor = true;
+		if Player.race == 25
+		{
+			isDoctor = true;
+		}
+		else if Player.race == 27
+		{
+			isHand = true;	
+		}
 	}
 	skill_name[0] = "HEAVY HEART"
 	if isDoctor
@@ -41,6 +49,8 @@ function scrSkills() {
 		else
 		{
 		skill_name[2] = "EXTRA FEET"
+		if isHand
+			skill_name[2] = "EXTRA FINGERS"
 		if Player.race == 1
 		{
 			skill_text[2] = "FASTER ROLL#MORE WALK SPEED#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES DROP ITEMS"
@@ -143,7 +153,7 @@ function scrSkills() {
 	if random(200)<1
 	{
 	skill_name[9] = "SECOND TUMMY"
-	skill_text[9] = "OMNrOMNOMNOM"
+	skill_text[9] = "OMNOMNOMNOM"
 	skill_tips[9] = "omnomnomnom"
 	skill_msnd[9] =  sndMutSecondStomache
 	}
@@ -159,6 +169,11 @@ function scrSkills() {
 		skill_text[9] = "DOUBLE HP FROM MEDKITS & MEDCHESTS"
 	}
 	skill_tips[9] = "stomach rumbles"
+	if isHand
+	{
+		skill_name[9] = "FIRST STOMACH";
+		skill_tips[9] = "get it.. cause a hand has no stomach"
+	}
 	skill_msnd[9] =  sndMutSecondStomache
 	}
 
@@ -168,6 +183,8 @@ function scrSkills() {
 	skill_msnd[10] =  sndMutBackMuscle
 
 	skill_name[11] = "SCARIER FACE"
+	if isHand
+		skill_name[11] = "SCARIER NAIL"
 	skill_text[11] = "18% LESS ENEMY HP"
 	skill_tips[11] = "mirrors will break"
 	skill_msnd[11] =  sndMutScarierFace
@@ -182,7 +199,7 @@ function scrSkills() {
 	skill_msnd[12] =  sndMutEuphoria
 
 	skill_name[13] = "LONG ARMS"
-	skill_text[13] = "+MELEE RANGE"
+	skill_text[13] = "MORE MELEE RANGE"
 	skill_tips[13] = "more reach"
 	skill_msnd[13] =  sndMutLongArms
 
@@ -197,6 +214,8 @@ function scrSkills() {
 
 
 	skill_name[15] = "SHOTGUN SHOULDERS"
+	if isHand
+		skill_name[15] = "SHOTGUN KNUCKLES"
 	skill_text[15] = "SHELLS BOUNCE FURTHER"//#BOUNCER BULLETS CAN BOUNCE#ONE ADDITIONAL TIME" effect is minor no need to tell?
 	skill_tips[15] = choose("shells are friends","shotgun shoulders\nextends close range damage\nfrom shotguns","shotgun shoulders\nincrease bouncer bullets bounces by 1")
 	skill_msnd[15] =  sndMutShotGunShoulders

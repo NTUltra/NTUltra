@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprEnergyShovel","path":"sprites/sprEnergyShovel/sprEnergyShovel.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprEnergyShovel",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -2,8 +2,8 @@ if instance_exists(enemy)
 {
 	if(instance_exists(target))
 	{
-		var tx = target.x + (target.hspeed*2);
-		var ty = target.y + (target.vspeed*2);
+		var tx = target.x// + (target.hspeed*2);
+		var ty = target.y// + (target.vspeed*2);
 		x = tx;
 		y = ty;
 	}

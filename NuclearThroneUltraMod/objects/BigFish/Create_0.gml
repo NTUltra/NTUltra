@@ -2,15 +2,15 @@ raddrop = 60
 maxhealth = 210;//175
 meleedamage = 3
 size = 3
-
-sucking = false;
-
-event_inherited();
-
 if GetPlayerLoops() > 0{
 	maxhealth = 380;
 	my_health = maxhealth;
 }
+sucking = false;
+
+event_inherited();
+
+
 
 spr_idle = sprOasisBossIdle
 spr_walk = sprOasisBossWalk

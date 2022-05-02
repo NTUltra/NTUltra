@@ -14,12 +14,7 @@ snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
 with instance_create(x,y,BulletHit)
 sprite_index=sprUltraBulletHit;
 
-//RECYCLE GLAND
-if instance_exists(Player){
-if Player.skill_got[16] = 1 and random(3) < 2 +Player.betterrecyclegland
-{Player.ammo[1] += 1
-	instance_create(x,y,RecycleGland);
-}}
+scrRecycleGland(1);
 
 }
 

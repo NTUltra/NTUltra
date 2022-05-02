@@ -31,7 +31,7 @@ else if active
 		}
 		if !someoneElseTookdamage
 		{
-			var dmgTaken = prevhealth - my_health;
+			//var dmgTaken = prevhealth - my_health;
 			//Damage reduction on middle part
 			//if cantrishot
 			//	my_health += dmgTaken * 0.5;

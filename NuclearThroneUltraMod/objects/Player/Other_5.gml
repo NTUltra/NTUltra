@@ -71,9 +71,9 @@ if race == 27
 {
 	if scrIsInInvertedArea()
 	{
-		var am = 2;
-		if ultra_got[106]
-			am *= 2;
+		var am = 3;
+		if ultra_got[106] && bskin != 1
+			am = 5;
 		
 		my_health += am;
 	}
@@ -112,6 +112,8 @@ if race==10//Rebel pasive
 else if race=12//yung cuz reset max HP
 {
 	var targetHealth = 8;
+	if UberCont.opt_gamemode == 5
+		targetHealth = 1;
 	if skill_got[1] == 1//Rhino skin
 		targetHealth += 4;
 	if skill_got[33] == 1//Glass arm cannon
@@ -278,10 +280,12 @@ looping=false;
         if race==9//Chicken maxhealth regain on loop
         {
 			var targetHealth = 8;
+			if UberCont.opt_gamemode == 5
+				targetHealth = 1;
 			if skill_got[1] == 1//Rhino skin
 				targetHealth += 4;
 			if skill_got[33] == 1//Glass arm cannon
-				targetHealth -= 2;
+				targetHealth = max(1,targetHealth-2);
 			if UberCont.opt_gamemode == 9
 				targetHealth += UberCont.casualModeHPIncrease;
 			targetHealth += UberCont.maxHpIncrease;

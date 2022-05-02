@@ -329,6 +329,12 @@ function scrLoadRace() {
 	spr_hurt=sprMutant26CHurt;
 	spr_dead=sprMutant26CDead;
 	break;
+	case 27:
+	spr_idle=sprMutant27CIdle;
+	spr_walk=sprMutant27CWalk;
+	spr_hurt=sprMutant27CHurt;
+	spr_dead=sprMutant27CDead;
+	break;
 	}
 
 	}

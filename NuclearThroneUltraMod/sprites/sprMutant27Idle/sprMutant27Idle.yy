@@ -97,7 +97,7 @@
   "nineSlice": null,
   "parent": {
     "name": "hands",
-    "path": "folders/Sprites/Player/hands.yy",
+    "path": "folders/Sprites/Player/Custom/hands.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprMutant27Idle",

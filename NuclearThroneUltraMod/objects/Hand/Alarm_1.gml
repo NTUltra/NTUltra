@@ -21,6 +21,7 @@ if target > 0 && instance_exists(target)
 			
 		touchpointX = x;
 		touchpointY = y;
+		event_user(0);
 		lerpTime = 1;
 		if !push
 			alarm[2] = 4;
@@ -29,7 +30,7 @@ if target > 0 && instance_exists(target)
 			alarm[2] = 1;
 			lerpCalcBack = lerpCalc;
 		}
-		sprite_index = sprHandClosing;
+		sprite_index = spr_closing;
 		image_index = 0;
 		snd_play(sndHandThrowGrab);
 		if push
@@ -92,8 +93,9 @@ else
 	touchpointY = y;
 	lerpTime = 1;
 	lerpCalcBack = lerpCalc;
-	sprite_index = sprHandClosing;
+	sprite_index = spr_closing;
 	image_index = 0;
 	alarm[2] = 4;	
+	event_user(0);
 }
 

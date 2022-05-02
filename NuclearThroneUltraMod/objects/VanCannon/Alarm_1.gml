@@ -2,8 +2,8 @@
 with instance_create(x,y,VanCannonVan)
 {
 	team = other.team;
-	image_angle = other.image_angle;
-	motion_add(image_angle,18);
+	image_angle = other.direction;
+	motion_add(other.direction,18);
 	if hspeed < 0
 		image_yscale = -1;
 }

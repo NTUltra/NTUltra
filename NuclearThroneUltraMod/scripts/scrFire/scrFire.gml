@@ -163,7 +163,7 @@ function scrFire() {
 
 	instance_create(x,y,Dust)
 
-	with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),Slash)
+	with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),WrenchSlash)
 	{
 	dmg = 4
 	longarms = 0
@@ -968,7 +968,7 @@ function scrFire() {
 
 	instance_create(x,y,Dust)
 
-	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),WrenchSlash)
 	{
 	sprite_index=sprGoldenSlash
 	dmg = 4
@@ -1607,7 +1607,8 @@ function scrFire() {
 	case 69:
 
 	snd_play_fire(sndPistol)
-
+	instance_create(x,y,SmallExplosion);
+	snd_play(sndExplosionS);
 	with instance_create(x,y,Shell)
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 

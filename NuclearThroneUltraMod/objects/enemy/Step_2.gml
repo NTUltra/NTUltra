@@ -4,32 +4,32 @@ if alarm[1]<8
 alarm[1]=18;
 
 
-if instance_exists(Player)
-{
-if Player.race!=3 && !(KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2)
-{
-x=xprevious;
-y=yprevious;
+	if instance_exists(Player)
+	{
+		if Player.race!=3 && !(KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2)
+		{
+		x=xprevious;
+		y=yprevious;
 
 
 
-if sprite_index!=spr_hurt && Player.race=24//Elementor's passive
-{
-my_health-=0.5;
-snd_play(snd_hurt, hurt_pitch_variation);
-sprite_index=spr_hurt
-}
+		if sprite_index!=spr_hurt && Player.race=24//Elementor's passive
+		{
+			my_health-=0.5;
+			snd_play(snd_hurt, hurt_pitch_variation);
+			sprite_index=spr_hurt
+		}
 
-}
-speed=0;
-target=-1;
-//image_speed=0;
-}
+		}
+	speed=0;
+	target=-1;
+	//image_speed=0;
+	}
 }
 
 ///Damage indicator
 
-if prevhealth>my_health && !instance_exists(SpiralCont)
+if prevhealth > my_health
 {
 	var dmgTaken = prevhealth-my_health;//Damage increase
 	if instance_exists(Player)
@@ -52,18 +52,52 @@ if prevhealth>my_health && !instance_exists(SpiralCont)
 				my_health = prevhealth - dmgTaken;
 		    }
 		}
-	    if UberCont.opt_dmgindicator
+		if ( (Player.skill_got[5] = 1) && (Player.race=11))//HUNTER THRONEBUTT
+		{
+			var dmgTaken = prevhealth-my_health;
+			if dmgTaken > 0
+		    with Marker
+		    {
+			    if instance_exists(enemy)&&instance_exists(target)
+			    {
+				    if other.id=target.id
+				    {
+						other.my_health -= dmgTaken*0.2;
+				    }
+			    }
+        
+		    }
+		}
+
+		//HUNTERS A ULTRA
+		if (Player.ultra_got[41]==1 )
+		{
+			if(point_distance(x,y,Player.x,Player.y)<100)
+		    {
+				var damageDeal = dmgTaken * point_distance(x,y,Player.x,Player.y)*0.0011;
+				my_health -= damageDeal//point_distance(x,y,Player.x,Player.y)/82;//82;
+		    }
+		    else
+		    {
+				var damageDeal = dmgTaken * point_distance(x,y,Player.x,Player.y)*0.0028;
+				my_health -= damageDeal;//point_distance(x,y,Player.x,Player.y)/29//28;
+		    }
+			dmgTaken += damageDeal;
+		}
+		
+		if UberCont.opt_dmgindicator
 	    {
 	        with instance_create(x+irandom(16)-16,y+irandom(16)-16,PopupText)
 	        {
-	        theColour=c_orange;
-	        mytext=string(dmgTaken)
-	        time = 6
-	        alarm[1]=1;
-	        blink=false;
-	        vspeed = irandom(3)-1
-	        hspeed= irandom(3)-1
+		        theColour=c_orange;
+		        mytext=string(dmgTaken)
+		        time = 6
+		        alarm[1] = 1;
+		        blink=false;
+		        vspeed = irandom(3)-1;
+		        hspeed = irandom(3)-1;
 	        }
 	    }
 	}
+	prevhealth = my_health;
 }

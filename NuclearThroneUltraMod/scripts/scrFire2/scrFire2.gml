@@ -4863,6 +4863,7 @@ function scrFire2() {
 
 	break;
 	
+	//VAN CANNON
 	case 372:
 	
 		snd_play_fire(sndPopgun);
@@ -4870,7 +4871,8 @@ function scrFire2() {
 		
 		with instance_create(x,y,VanCannon)
 		{
-			image_angle = aimDirection+(random(16)-8)*other.accuracy;
+			direction = aimDirection+(random(16)-8)*other.accuracy;
+			image_angle = direction;
 			team = other.team;
 		}
 		BackCont.viewx2 += lengthdir_x(4,aimDirection+180)*UberCont.opt_shake
@@ -7377,6 +7379,76 @@ function scrFire2() {
 	team = other.team
 	event_perform(ev_alarm,0) 
 	}
+
+	break;
+	
+	//LASER SHOVEL
+	case 458:
+
+	if Player.skill_got[17] = 1
+	snd_play_fire(sndLaserSwordUpg)
+	else
+	snd_play_fire(sndLaserSword)
+	instance_create(x,y,Dust)
+
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),EnergySlash)
+	{
+		dmg = 18;
+	longarms = 0
+	if instance_exists(Player)
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection,2+longarms)
+	image_angle = direction
+	team = other.team}
+	
+	if Player.skill_got[17] = 1
+	snd_play_fire(sndLaserUpg)
+	else
+	snd_play_fire(sndLaser)
+	with instance_create(x,y,Laser)
+	{image_angle = aimDirection+(random(2)-1)*other.accuracy
+	team = other.team
+	event_perform(ev_alarm,0)
+	}
+
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection-60*Player.accuracy),EnergySlash)
+	{
+		dmg = 18;
+	longarms = 0
+	if instance_exists(Player)
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection-60,2+longarms)
+	image_angle = direction
+	team = other.team}
+	
+	with instance_create(x,y,Laser)
+	{image_angle = (aimDirection-60*Player.accuracy)+(random(2)-1)*other.accuracy
+	team = other.team
+	event_perform(ev_alarm,0)
+	}
+
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection+60*Player.accuracy),EnergySlash)
+	{
+		dmg = 18;
+	longarms = 0
+	if instance_exists(Player)
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection+60,2+longarms)
+	image_angle = direction
+	team = other.team}
+	
+	with instance_create(x,y,Laser)
+	{image_angle = (aimDirection+60*Player.accuracy)+(random(2)-1)*other.accuracy
+	team = other.team
+	event_perform(ev_alarm,0)
+	}
+
+	wepangle = -wepangle
+	motion_add(aimDirection,7)
+	BackCont.viewx2 += lengthdir_x(26,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(26,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 2
+	wkick = -5
 
 	break;
 	

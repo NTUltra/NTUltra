@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprUltimateGamble","path":"sprites/sprUltimateGamble/sprUltimateGamble.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprUltimateGamble",
     "tags": [],
     "resourceType": "GMSequence",
   },

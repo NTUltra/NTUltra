@@ -14,7 +14,7 @@ instance_destroy()
 var  mHpI = 2;
 with other {
 	//OVERHEAL
-	var overheal = my_health + other.num - maxhealth;
+	var overheal = ceil(my_health + other.num - maxhealth);
 	my_health += other.num-overheal;
 	my_health += overheal * 0.5;
 	my_health = ceil(my_health);
@@ -28,10 +28,12 @@ with other {
 	if race==9 || race=12//Chicken maxhealth regain
 	{
 		var targetHealth = 8;
+		if UberCont.opt_gamemode == 5
+			targetHealth = 1;
 		if skill_got[1] == 1//Rhino skin
 			targetHealth += 4;
 		if skill_got[33]//Glass arm cannon
-			targetHealth -= 2;
+			targetHealth = max(1,targetHealth-2);
 		if UberCont.opt_gamemode == 9
 			targetHealth += UberCont.casualModeHPIncrease;
 		if skill_got[9] 

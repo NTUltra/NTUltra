@@ -4,7 +4,7 @@ if !instance_exists(creator)
 	instance_destroy();
 	exit;
 }
-sprite_index = sprHandClose;
+sprite_index = spr_close;
 x = lerp(creator.x,touchpointX,lerpTime);
 y = lerp(creator.y,touchpointY,lerpTime);
 image_angle = point_direction(creator.x,creator.y,touchpointX,touchpointY);

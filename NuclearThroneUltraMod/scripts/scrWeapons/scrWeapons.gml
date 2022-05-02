@@ -415,7 +415,7 @@ function scrWeapons() {
 	wep_load[37] = 12
 	wep_cost[37] = 1
 	wep_sprt[37] = sprJackHammer
-	wep_area[37] = 5
+	wep_area[37] = 6
 	wep_text[37] = "break some legs"
 	wep_swap[37] = sndSwapMotorized
 	wep_rad[37] = 0;
@@ -1586,7 +1586,7 @@ function scrWeapons() {
 	wep_load[143] = 15
 	wep_cost[143] = 2
 	wep_sprt[143] = sprLineNader
-	wep_area[143] = 10
+	wep_area[143] = 12
 	wep_text[143] = "dangerous bliss"
 	wep_swap[143] = sndSwapExplosive
 	wep_rad[143] = 0;
@@ -3659,7 +3659,6 @@ function scrWeapons() {
 	wep_swap[331] = sndSwapExplosive
 	wep_rad[331] = 0;
 
-
 	wep_name[332] = "ENERGY SHOVEL"
 	wep_type[332] = 5
 	wep_auto[332] = 0
@@ -4192,7 +4191,7 @@ function scrWeapons() {
 	wep_cost[379] = 8
 	wep_sprt[379] = sprSkullBreaker
 	wep_area[379] = 11
-	wep_text[379] = "bullets are closer together with eagle eyes"
+	wep_text[379] = "bullets are closer together#with eagle eyes"
 	wep_swap[379] = sndSwapShotgun
 	wep_rad[379] = 0;
 	
@@ -4962,7 +4961,7 @@ function scrWeapons() {
 	wep_cost[449] = 2
 	wep_sprt[449] = sprPopWall
 	wep_area[449] = 11
-	wep_text[449] = "pellets are closer together with higher accuracy"
+	wep_text[449] = "pellets are closer together#with higher accuracy"
 	wep_swap[449] = sndSwapShotgun
 	wep_rad[449] = 0;
 	
@@ -5054,6 +5053,16 @@ function scrWeapons() {
 	wep_swap[457] = sndSwapMachinegun
 	wep_rad[457] = 0;
 
+	wep_name[458] = "LASER SHOVEL"
+	wep_type[458] = 5
+	wep_auto[458] = 0
+	wep_load[458] = 27
+	wep_cost[458] = 6
+	wep_sprt[458] = sprLaserShovel
+	wep_area[458] = 16
+	wep_text[458] = ""
+	wep_swap[458] = sndSwapEnergy
+	wep_rad[458] = 0;
 	
 	/*
 	wep_name[444] = "DRILL GUN"

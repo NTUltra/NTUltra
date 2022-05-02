@@ -15,9 +15,11 @@ target=enemy;
 Originalangle=image_angle;
 amountofenemies=0;
 dmg = 1;
-if instance_exists(Player) && Player.ultra_got[63]
+if instance_exists(Player)
 {
-	image_yscale += 2;
+	if Player.ultra_got[63]
+	{
+		image_yscale += 2;
+	}
+	dmg *= 1+Player.level*0.25;
 }
-dmg *= 1+Player.level*0.25;
-//dmg is 5.5 * dmg

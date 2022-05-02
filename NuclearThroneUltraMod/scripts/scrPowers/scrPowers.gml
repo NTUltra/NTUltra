@@ -42,6 +42,7 @@ function scrPowers() {
 					resulttar = tar;
 				}
 			}
+			//Ultra target projectiles
 			if ultra_got[108] && resulttar == -1
 			{
 				//Allow pickups to be picked up
@@ -76,6 +77,22 @@ function scrPowers() {
 					if other.ultra_got[107]
 					{
 						alarm[3] = 1;//Destroy projectiles
+					}
+					if other.bskin == 2
+					{
+						sprite_index = sprHandCOpen;
+						spr_close = sprHandCClose;
+						spr_closing = sprHandCClosing;
+					}
+					else if other.bskin == 1
+					{
+						sprite_index = sprHandBOpen;
+						spr_close = sprHandBClose;
+						spr_closing = sprHandBClosing;
+						if other.ultra_got[106]
+						{
+							alarm[4] = 1;
+						}
 					}
 					grabbingPickup = targetPickup;
 					team = other.team;
@@ -114,6 +131,9 @@ function scrPowers() {
 						lerpDistance += 8;
 						lerpCalc = min(1,lerpSpeed/lerpDistance);//Consistent speed
 						lerpCalcBack = lerpCalc*0.8;
+						//PUNCH FIST!
+						sprite_index = spr_close;
+						spr_closing = spr_close;
 					}
 					else if !grabbingPickup
 					{
@@ -392,7 +412,7 @@ function scrPowers() {
 	{
 		var radcost = 80;
 		var useRad = ultra_got[88] == 1
-	if rogueammo > 0 || (useRad && rad > 20)
+	if rogueammo > 0 || (useRad && rad >= radcost)
 	{
 		if useRad
 			rad -= radcost;

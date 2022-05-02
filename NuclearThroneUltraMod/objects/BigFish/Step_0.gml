@@ -31,7 +31,13 @@ function suck() {
 			other.alarm[2]=0;
 		}
 	}
-	
+	if instance_exists(Player)
+	{
+		if Player.x > x
+			right = 1
+		else if Player.x < x
+			right = -1
+	}
 	with BoneFish
 	{
 		if point_distance(x,y,other.x,other.y) < 100

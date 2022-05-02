@@ -1051,28 +1051,28 @@ if (ultra_got[43]==1)//HUNTER ULTRA C Focused projectiles
     {
 	    with projectile
 		{
-		if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) 
-		 and ProjectileCanBeMoved()
-		{
-			var str = 2.0;
-			if place_free(x+lengthdir_x(str,point_direction(x,y,Marker.x,Marker.y)),y)
-		x += lengthdir_x(str,point_direction(x,y,Marker.x,Marker.y))
-		if place_free(x,y+lengthdir_y(str,point_direction(x,y,Marker.x,Marker.y)))
-		y += lengthdir_y(str,point_direction(x,y,Marker.x,Marker.y))
-		
-		}
-		image_angle=direction;
+			if (x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) 
+			 and ProjectileCanBeMoved())
+			{
+				var str = 2.0;
+				if place_free(x+lengthdir_x(str,point_direction(x,y,Marker.x,Marker.y)),y)
+					x += lengthdir_x(str,point_direction(x,y,Marker.x,Marker.y))
+					if place_free(x,y+lengthdir_y(str,point_direction(x,y,Marker.x,Marker.y)))
+						y += lengthdir_y(str,point_direction(x,y,Marker.x,Marker.y))
 
-			if (direction<point_direction(x,y,Marker.x,Marker.y) )
-		    {
-		    direction+=3;
-		    image_angle+=3;
-		    }
-		    else if (direction>point_direction(x,y,Marker.x,Marker.y) )
-		    {
-		    direction-=3;
-		    image_angle-=3;
-		    }
+				image_angle=direction;
+
+				if (direction<point_direction(x,y,Marker.x,Marker.y) )
+			    {
+					direction+=3;
+					image_angle+=3;
+			    }
+			    else if (direction>point_direction(x,y,Marker.x,Marker.y) )
+			    {
+					direction-=3;
+					image_angle-=3;
+			    }
+			}
 		}
     }
 }

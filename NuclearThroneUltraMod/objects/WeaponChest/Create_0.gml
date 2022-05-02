@@ -1,5 +1,4 @@
 curse = 0;
-size = 1;
 mediumchest = 0;
 shadowSprite = shd24;
 if isOneWeaponOnlyModes()

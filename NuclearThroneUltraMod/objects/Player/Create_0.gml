@@ -145,12 +145,12 @@ betterrecyclegland = 0.1;
 betterboltmarrow = 0;
 
 scrRaces()
+bskin = UberCont.skin[race];
 scrSkills()
 scrUltras()
 scrWeapons();
 scrCrowns()
 
-bskin = UberCont.skin[race];
 gunY = 0;
 if race == 7 && bskin == 2
 {

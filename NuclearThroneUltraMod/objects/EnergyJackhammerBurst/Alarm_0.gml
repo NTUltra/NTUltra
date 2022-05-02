@@ -25,7 +25,7 @@ else
 {
     with instance_create(x,y,EnergyShank)
     {
-		dmg = 1;
+		dmg = 4;
     motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(30)-15,3)
     image_angle = direction
     team = other.team}
