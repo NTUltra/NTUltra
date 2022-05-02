@@ -113,7 +113,7 @@ __background_set_colour( make_color_rgb(106,122,175) )
 scrTips()
 
 
-goal = 110//110
+goal = 100//110
 if instance_exists(Player){
 if Player.area = 3 and Player.subarea = 3
 goal = 50

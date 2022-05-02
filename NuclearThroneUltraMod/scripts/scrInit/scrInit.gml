@@ -27,4 +27,10 @@ function scrInit() {
 		secrets: [false,false,false,false,false,false,false,false,false,false],
 	};
 	scrLoadEncrypted();
+	
+	//To those who missed it
+	if scrCheckOneGold()//do all characters have at least one golden weapon
+	{
+		scrUnlockCSkin(6,"FOR UNLOCKING ONE GOLDEN WEAPON#ON ALL CHARACTERS",0);
+	}
 }

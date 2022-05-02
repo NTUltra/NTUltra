@@ -2,7 +2,7 @@ direction = choose(0,90,180,270)
 
 styleb = choose(0,0,0,0,0,0,1)
 
-goal = 110//110
+goal = 100//110
 
 if instance_exists(Player){
 	if Player.crown == 18
