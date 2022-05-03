@@ -2941,7 +2941,7 @@ function scrFire2() {
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
 	with instance_create(x,y,DisperseBullet)
-	{motion_add(aimDirection+(random(12)-6)*other.accuracy,10)
+	{motion_add(aimDirection+(random(12)-6)*other.accuracy,12)
 	image_angle = direction
 	team = other.team
 	time=2;
@@ -2983,7 +2983,7 @@ function scrFire2() {
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
 	with instance_create(x,y,DisperseBullet)
-	{motion_add(aimDirection+(random(12)-6)*other.accuracy,10)
+	{motion_add(aimDirection+(random(12)-6)*other.accuracy,12)
 	image_angle = direction
 	team = other.team
 	time=1;
@@ -4233,7 +4233,7 @@ function scrFire2() {
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
 	with instance_create(x,y,DisperseDisperseBullet)
-	{motion_add(aimDirection+(random(12)-6)*other.accuracy,10)
+	{motion_add(aimDirection+(random(12)-6)*other.accuracy,12)
 	image_angle = direction
 	team = other.team
 	time=2;

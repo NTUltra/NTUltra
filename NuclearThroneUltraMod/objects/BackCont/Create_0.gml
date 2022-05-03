@@ -55,4 +55,4 @@ if instance_exists(Player)
 	//progression
 	alarm[4]=600;//10 seconds
 }
-alarm[6] = 1400;
+alarm[6] = 1000;

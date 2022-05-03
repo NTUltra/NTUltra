@@ -11,6 +11,7 @@ with instance_create(x-16-64,y-16-32,Floor)
 	{
 		sprite_index = sprFloor100UltraStory1;
 		image_index = 0;
+		depth = 8;
 	}
 }
 instance_create(x-16-64,y-16-64,Floor)
@@ -20,6 +21,7 @@ with instance_create(x-16-64,y-16+32,Floor)
 	{
 		sprite_index = sprFloor100UltraStory1;
 		image_index = 3;
+		depth = 8;
 	}
 }
 instance_create(x-16-64,y-16+64,Floor)
@@ -32,6 +34,7 @@ with instance_create(x-16+64,y-16-32,Floor)
 	{
 		sprite_index = sprFloor100UltraStory1;
 		image_index = 1;
+		depth = 8;
 	}
 }
 instance_create(x-16+64,y-16-64,Floor)
@@ -41,6 +44,7 @@ with instance_create(x-16+64,y-16+32,Floor)
 	{
 		sprite_index = sprFloor100UltraStory1;
 		image_index = 2;
+		depth = 8;
 	}
 }
 instance_create(x-16+64,y-16+64,Floor)
@@ -57,11 +61,13 @@ with instance_create(x-16,y-16-64,Floor)
 	{
 		sprite_index = sprFloor100UltraStory1;
 		image_index = 4;
+		depth = 8;
 	}
 	else if UberCont.canSave && instance_exists(Player)
 	{
 		sprite_index = sprFloor100UltraStory2;
 		image_index = Player.race - 1;
+		depth = 8;
 	}
 }
 instance_create(x-16-32,y-16-64,Floor)

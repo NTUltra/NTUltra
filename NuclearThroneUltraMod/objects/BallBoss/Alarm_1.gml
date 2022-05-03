@@ -70,8 +70,8 @@ else if !reachLowHealth && my_health < maxhealth * 0.3
 	reachLowHealth = true;
 	spinAttackFireRate -= 4;
 	spinAttackMaxAmmo ++;
-	maxSpeed += 0.3;
-	spinRate -= 0.2;
+	maxSpeed += 0.25;
+	spinRate -= 0.18;
 	pSpeed ++;
 	amountOfSpinBulletProjectiles += 2;
 	with MusCont

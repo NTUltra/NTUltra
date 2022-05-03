@@ -14,7 +14,7 @@ if instance_exists(Player)
 {
 if Player.skill_got[17] = 1
 {
-dmg = 40+(Player.betterlaserbrain*2)
+dmg = 38+(Player.betterlaserbrain*2)
 nomscale += 0.1;
 }
 }

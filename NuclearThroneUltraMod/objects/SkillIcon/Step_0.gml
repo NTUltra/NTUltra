@@ -98,8 +98,8 @@ else if skill = 17 && Player.race = 25
 {
 Player.betterlaserbrain=1;
 
-if Player.ultra_got[97]
-Player.betterlaserbrain=2.1;
+	if Player.ultra_got[97]
+		Player.betterlaserbrain=2;
 }
 else if skill = 21//bolt marrow
 {
