@@ -13,7 +13,7 @@ if fakeded > 0
 		mask_index = mskBandit;
 		my_health = maxhealth;
 		EnemyHealthAdjustments();
-		alarm[1] =
+		alarm[1] = 60;
 		snd_play_2d(sndAssassinGetUp)
 		sprite_index = spr_respawn;
 		if !audio_is_playing(musAssassinBoss) && !instance_exists(SurvivalWave)
