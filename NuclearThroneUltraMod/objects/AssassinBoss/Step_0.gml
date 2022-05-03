@@ -1,6 +1,5 @@
 if (my_health <= 0 && lifes > 0 && fakeded < 0)
 {
-	debug("DEAD");
 	depth += 2;
 	scrDrop(100,0);
 	scrRaddrop(raddrop);

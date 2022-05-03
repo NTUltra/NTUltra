@@ -140,8 +140,12 @@ betterboltmarrow = 0;
 scrRaces()
 bskin = UberCont.skin[race];
 scrSkills()
-scrUltras()
 scrWeapons();
+//These weps are initialized here for yv's secret ultra
+wep = 0;
+bwep = 0;
+altUltra = false;
+scrUltras()
 scrCrowns()
 
 gunY = 0;
@@ -207,18 +211,8 @@ cwepmod1 = 0;
 cwepmod2 = 0;
 cwepmod3 = 0;
 cwepmod4 = 0;
-/*WEAPON MODS
-mod1[]
-mod2[]
-mod3[]
-0 nothing
-1 toxic
-2 explosive
-3 flame
-4 frost
-5 blood
-6 lightning
-*/
+
+
 
 if race = 17 //GunSmith random wepmod
 {
@@ -370,7 +364,7 @@ prevhealth = maxhealth //health previous step
 
 //default shit
 clicked = 0
-if scrMeleeWeapons()
+if scrMeleeWeapons(wep)
 wepangle = choose(120, -120)
 else
     wepangle = 0

@@ -129,7 +129,11 @@ function scrDrawHUD() {
 			var s = 18;
 			if dir == 76 && Player.ultimategamble == true
 			{
-				draw_sprite_ext(sprUltimateGambleIconHUD,dir,xx,yy,1,1,0,c_white,1);
+				draw_sprite_ext(sprUltimateGambleIconHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 23 && Player.altUltra
+			{
+				draw_sprite_ext(sprYVBlasphemyHUD,0,xx,yy,1,1,0,c_white,1);
 			}
 		    else if !(dir=79 && Player.race=21){//Horror don't draw skeleton's ultra
 				draw_sprite_ext(sprUltraIconHUD,dir,xx,yy,1,1,0,c_white,1);
@@ -348,11 +352,11 @@ function scrDrawHUD() {
 			holdExplainUltraModTimer++;
 			if holdExplainUltraModTimer > 30
 			{
-				scrDrawHelp(umn[0] + " <=> " + umn[1]);
+				scrDrawHelp(umn[0] + " <=> " + umn[1]+"\n"+scrUltraModDescription(Player.ultramod));
 			}
 			else
 			{
-				scrDrawHelp(umn[0] + " <=> " + umn[1]+"\n"+scrUltraModDescription(Player.ultramod));
+				scrDrawHelp(umn[0] + " <=> " + umn[1]);
 			}
 		}
 		else

@@ -1381,7 +1381,7 @@ function scrPowers() {
 	if KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2
 	{
 		//YUNG VENUZ
-		if (race == 6 && ultra_got[24] == 1 && wep_auto[wep] == 1)
+		if (race == 6 && (ultra_got[24] == 1 || (altUltra && ultra_got[23])) && wep_auto[wep] == 1)
 			scrYVPower();
 /*
 	if race = 26//Good O'l Humphry

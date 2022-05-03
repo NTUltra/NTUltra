@@ -4,7 +4,10 @@
 function scrYVPower(){
 	if race = 6 and can_shoot = 1
 	{
-		if !scrMeleeWeapons()//wep_type[wep] != 0&&wep!=239//no melleee allowed sorry and no rocket puncher thing lol I have to update this soon
+		var isMelee = scrMeleeWeapons(wep);
+		if altUltra && ultra_got[23]
+			isMelee = !isMelee;
+		if !isMelee
 		{
 			if ammo[wep_type[wep]] < wep_cost[wep]*(2+Player.skill_got[5]*2) and KeyCont.key_spec[p] = 1 and wep_type[wep] != 0
 			scrEmpty()

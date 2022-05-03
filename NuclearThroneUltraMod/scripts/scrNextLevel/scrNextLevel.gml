@@ -29,17 +29,27 @@ function scrNextLevel() {
 	}
 	else if subarea = 1 || area = 105 || area = 106 || area = 107 || area = 101 || area = 110 || area = 111 || area = 112 || area = 103 || area = 109 || area = 113 || area == 114 || area = 108 || area == 115 || area == 117 || area == 118
 	{
-		if area == 118 && subarea > 2
+		if area == 118
 		{
-			area = 1;
-			subarea = 1;
-			inverted = false;
-			looping=true;
-			exit;
-			//Force loop
-			//LOOP
-			//exit;
+			if inverted && subarea<3
+	        {
+		        //inverted big dog
+		        area = 118
+		        subarea = 3;
+		        inverted=false;
+		        exit;
+	        }
+	        else//inv palace to loop desert
+	        {
+				//LOOP
+		        area=1;
+		        subarea=1;
+				inverted=false
+				looping=true;
+		        exit;
+	        }
 		}
+		
 	    if area = 113// && subarea > 1//banditland
 	    {
 	        area = 8//chesire cat
@@ -343,11 +353,13 @@ function scrNextLevel() {
 
 	if ( area=8 && inverted )//inv wonderland
 	{area=109;
-	lastarea = 109}//in case of crownvault
+	lastarea = 109
+	lastarea=8;}//in case of crownvault
 	
 	if ( area=9 && inverted )//inv wonderland
 	{area=118;
-	lastarea = 118}//in case of crownvault
+	lastarea = 118
+	lastarea=9;}//in case of crownvault
 
 	if ( area=2 && inverted )//inv sewers
 	{area=110;
@@ -358,7 +370,7 @@ function scrNextLevel() {
 	if race=6||race=12{//Yv's Crib? Yun cuz aswell
 	if level>=10
 	{
-	    if /*(ultra_got[21]||ultra_got[22]||ultra_got[23]||ultra_got[24])&&*/(visitedCrib==false)
+	    if (visitedCrib==false)
 	    {
 	    area=104;
 		

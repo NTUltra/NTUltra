@@ -15,8 +15,28 @@ if skill == 2
 {
 	scrUnlockGameMode(29,"FOR TAKING FISH'S ULTRA#GUN WARRANT");	
 }
-
-if skill = 85//ROGUE SUPER PORTAL STRIKE
+else if skill == 23 && Player.race == 6 && scrMeleeWeapons(Player.wep) && scrMeleeWeapons(Player.bwep)
+{
+	with Player
+	{
+		altUltra = true;
+		if bskin == 0//YV secret skin
+		{
+			spr_idle=sprMutant6DIdle;
+			spr_walk=sprMutant6DWalk;
+			spr_hurt=sprMutant6DHurt;
+			spr_dead=sprMutant6DDead;
+		}
+		else if bskin == 1//YV secret skin
+		{
+			spr_idle=sprMutant6EIdle;
+			spr_walk=sprMutant6EWalk;
+			spr_hurt=sprMutant6EHurt;
+			spr_dead=sprMutant6EDead;
+		}
+	}
+}
+else if skill = 85//ROGUE SUPER PORTAL STRIKE
 {
 	Player.rogueammomax=6;
 	Player.rogueammo=6;

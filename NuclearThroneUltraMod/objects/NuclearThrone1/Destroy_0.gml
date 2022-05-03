@@ -20,7 +20,13 @@ if instance_exists(Player)
 		scrUnlockCSkin(23,"FOR BEATING THE THRONE#ON DISC ROOM MODE#AS FROG#WHAT A MADLAD!",19);
 	}
 }
-
+with projectile
+{
+	if team != 2
+	{
+		instance_destroy(id,false);	
+	}
+}
 scrEnemyDeathEvent();
 scrEndBoss();
 scrBossKill();

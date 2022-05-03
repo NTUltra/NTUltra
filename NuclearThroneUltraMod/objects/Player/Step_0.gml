@@ -554,7 +554,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 	IsShielding=false;
 	}
 	if( (!(IsShielding)||(ultra_got[7]==1)) && (UberCont.opt_gamemode!=12||instance_exists(Marker)) ){
-	if race = 7{//Roids always auto fire
+	if race = 7 || (altUltra && ultra_got[23] && scrMeleeWeapons(wep)){//Roids always auto fire
 	wep_auto[wep] = 1 wep_auto[bwep] = 1}
 
 
@@ -767,13 +767,21 @@ if reload > 0
 	if ultra_got[21]//YV ULTRA A
 	{
 		reload -=0.45;
+		breload -=0.01;//Small bonus
+	}
+	if ultra_got[23] && altUltra
+	{
+		if scrMeleeWeapons(wep)
+		{
+			reload -=0.44;
+		}
 	}
 	//Weaponsmith one with the gun fire rate
 
 	    if ultra_got[67]
 	    {
 	        //Ultra c one with the gun
-	        if wep_type[wep] != 0 && !scrMeleeWeapons()//if wep_type[wep]==0 // You are holding a melee weapon
+	        if wep_type[wep] != 0 && !scrMeleeWeapons(wep)//if wep_type[wep]==0 // You are holding a melee weapon
 	        {
 	        reload -= 0.4;
 	        }

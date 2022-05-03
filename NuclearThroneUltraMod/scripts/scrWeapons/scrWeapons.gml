@@ -703,10 +703,10 @@ function scrWeapons() {
 	wep_name[63] = "BLACKHOLE GENERATOR"
 	wep_type[63] = 5
 	wep_auto[63] = 0
-	wep_load[63] = 44
+	wep_load[63] = 46
 	wep_cost[63] = 7
 	wep_sprt[63] = sprBlackholeGenerator
-	wep_area[63] = 14
+	wep_area[63] = 16
 	wep_text[63] = "this thing sucks"
 	wep_swap[63] = sndSwapEnergy
 	wep_rad[63] = 0;
@@ -1069,7 +1069,7 @@ function scrWeapons() {
 	wep_load[96] = 14
 	wep_cost[96] = 5
 	wep_sprt[96] = sprHyperBouncerRifle
-	wep_area[96] = 7
+	wep_area[96] = 9
 	wep_text[96] = "hyper bounce time"
 	wep_swap[96] = sndSwapMachinegun
 	wep_rad[96] = 0;
@@ -3783,10 +3783,10 @@ function scrWeapons() {
 	wep_name[343] = "DIMENSION GENERATOR"
 	wep_type[343] = 4
 	wep_auto[343] = 0
-	wep_load[343] = 44
+	wep_load[343] = 46
 	wep_cost[343] = 10
 	wep_sprt[343] = sprDimensionGenerator
-	wep_area[343] = 15
+	wep_area[343] = 20
 	wep_text[343] = "the tentacle universe"
 	wep_swap[343] = sndSwapDragon
 	wep_rad[343] = 0;
@@ -3872,7 +3872,7 @@ function scrWeapons() {
 	wep_type[351] = 1
 	wep_auto[351] = 1
 	wep_load[351] = 22
-	wep_cost[351] = 30
+	wep_cost[351] = 32
 	wep_sprt[351] = sprBulletDisperseDisperseGun
 	wep_area[351] = 18
 	wep_text[351] = "disperse it all!"
@@ -5103,7 +5103,7 @@ function scrWeapons() {
 	if instance_exists(Player){
 	typ_amax[0] = 1000 typ_amax[1] = 255+Player.skill_got[10]*300 typ_amax[2] = 55+Player.skill_got[10]*44 typ_amax[3] = 55+Player.skill_got[10]*44 typ_amax[4] = 55+Player.skill_got[10]*44 typ_amax[5] = 55+Player.skill_got[10]*44
 	
-		if Player.ultra_got[15] == 1//Power overwhelming
+		if variable_instance_exists(Player,"ultra_got") && Player.ultra_got[15] == 1//Power overwhelming
 		{
 			scrWeaponsAdjustCostPowerOverwhelming();	
 		}

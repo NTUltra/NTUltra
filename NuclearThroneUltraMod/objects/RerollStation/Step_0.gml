@@ -94,6 +94,12 @@ if place_meeting(x,y,Player) && !used
 						rogueammomax = 3;
 						
 					typ_amax[0] = 1000 typ_amax[1] = 255 typ_amax[2] = 55 typ_amax[3] = 55 typ_amax[4] = 55 typ_amax[5] = 55
+					ammo[1] = min(ammo[1],typ_amax[1]);
+					ammo[2] = min(ammo[2],typ_amax[2]);
+					ammo[3] = min(ammo[3],typ_amax[3]);
+					ammo[4] = min(ammo[4],typ_amax[4]);
+					ammo[5] = min(ammo[5],typ_amax[5]);
+					//Cap the ammo
 				break;
 				case 13: //LONG ARMS
 					bettermelee = 0;

@@ -1,4 +1,4 @@
-function scrMeleeWeapons() {
+function scrMeleeWeapons(wep) {
 	with Player
 	{
 	if (wep_type[wep] == 0 || wep == 24 || wep == 36 || wep == 53 

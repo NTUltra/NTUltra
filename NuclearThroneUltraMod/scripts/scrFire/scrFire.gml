@@ -4736,7 +4736,7 @@ function scrFire() {
 
 	if Player.ultra_got[56]==1//PANDA Meditate rapid hands melee firerate
 	{
-		if scrMeleeWeapons()
+		if scrMeleeWeapons(wep)
 	    {
 			reload*=0.6;//0.6;
 	    }
@@ -4745,7 +4745,7 @@ function scrFire() {
 	if Player.ultra_got[34]==1//Chicken Ultra B ninja
 	{
 	//some melee exceptions
-		if scrMeleeWeapons()
+		if scrMeleeWeapons(wep)
 	    {
 			with MeleeParent {
 				if !appliedBoost
@@ -4761,22 +4761,20 @@ function scrFire() {
 		}
 	}
 	//YV ultra C 
-	//if firing shotgun add bullet from same cost as shotgun
+	//if firing a bullet weapon add a small percentage of shotgun ammo
 
-	    if Player.ultra_got[23]//ULTRA C
+	    if !Player.altUltra && Player.ultra_got[23]//ULTRA C
 	    {
-		    if wep_type[wep] == 2 // You are holding a shotgun
-		    {
-			    reload *=0.4;//shotgun speed
-			    //ammo[1] += wep_cost[wep]//bullet magic
-    
-			    if (ammo[1] + wep_cost[wep] >=typ_amax[1])//bullet magic
-			    {
-					ammo[1]=typ_amax[1]//typ_amax[wep_type[bwep]];
-			    }
-			    else
-					ammo[1] += wep_cost[wep];
-		    }
+			if wep_type[wep] == 2 // You are holding a shotgun
+			{
+				reload *=0.38;//shotgun speed
+				//ammo[1] += wep_cost[wep]//bullet magic
+			}
+			else if wep_type[wep] == 1 // You are holding a bullet weapon
+			{
+				ammo[2] += wep_cost[wep] * 0.1;//Ten bullets is 1 shotgun pellet
+				ammo[2] = min(ammo[2],typ_amax[2]);
+			}
 	    }
     
     
@@ -4842,7 +4840,7 @@ function scrFire() {
 	    if Player.ultra_got[67] == 1
 	    {
 		    //Ultra c one with the gun
-		    if !scrMeleeWeapons()
+		    if !scrMeleeWeapons(wep)
 		    {
 		        if wep_cost[wep]>1//if ammo cost is more than 1
 		        ammo[wep_type[wep]]+=1;//return one ammo

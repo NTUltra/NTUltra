@@ -146,7 +146,9 @@ function scrLoadRun(){
 				UberCont.crownVaultChallenge = encryptedRun.crownVaultChallenge;
 				Player.randomlySelected = encryptedRun.randomlySelected;
 				UberCont.canSave = encryptedRun.canSave;
-				Player.saveLoaded = true;//To position to save station
+				Player.saveLoaded = true;//To position to save station,
+				if variable_struct_exists(encryptedRun, "altUltra")
+					Player.altUltra = encryptedRun.altUltra;
 			}
 			with Player
 			{
@@ -155,7 +157,9 @@ function scrLoadRun(){
 					gunY = 4;
 				}
 				//RACE STUFF
-				scrLoadRace();	
+				scrLoadRace();
+				//Some ultras change weapon stats:
+				scrWeapons();
 			}
 			debug("load complete");
 			room_restart();

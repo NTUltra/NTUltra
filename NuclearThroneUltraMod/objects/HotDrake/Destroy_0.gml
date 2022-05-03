@@ -49,7 +49,7 @@ sprite_index = wep_sprt[177]
 }}
 with Hand
 {
-	if target == other.id || place_meeting(x,y,other.id)
+	if target == other.id || place_meeting(x,y,other.id) || point_distance(x,y,other.x,other.y) < 128
 	{
 		scrUnlockBSkin(27,"FOR WHACKING#A DRAGON#TO DEATH",0);
 	}

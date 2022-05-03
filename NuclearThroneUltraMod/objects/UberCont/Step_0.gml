@@ -66,12 +66,14 @@ Cursor.image_index=UberCont.opt_crosshair;
 Cursor.image_index=UberCont.opt_crosshair;}
 
 isPaused = 0
+audio_resume_all();
 }
 //RETURN TO MENU
 if keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4) && !instance_exists(PlayerSpawn)
 {
 	instance_activate_all()
 	isPaused = 0
+	audio_stop_all();
 	if instance_exists(Player)
 	kills=Player.kills
 	with Player
@@ -147,6 +149,7 @@ instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+10+s
 
 
 isPaused = 1
+audio_pause_all();
 }
 }
 }

@@ -115,63 +115,64 @@ scrTips()
 
 goal = 100//110
 if instance_exists(Player){
+var s = clamp(Player.loops*8,0,50);
 if Player.area = 3 and Player.subarea = 3
-goal = 50
+goal = 50+s
 else if Player.area = 100
 goal = 40
 if Player.area = 103
-goal = 130
+goal = 130+s
+//if Player.area = 102
+//goal = 130+s
 if Player.area = 102
-goal = 130
-if Player.area = 102
-goal = 50
+goal = 50+s
 if Player.area = 4
 goal = 120
 if Player.area = 5
-goal = 125
+goal = 125+s
 if Player.area = 7
-goal = 130
+goal = 130+s
 if Player.area = 108 && Player.subarea<2//inverted vulcano
-goal = 160
+goal = 160+s
 else if Player.area = 108 && Player.subarea=2
-goal=130
+goal=130+s
 if Player.area = 104
-goal=150;   
+goal=150+s
 if Player.area = 105//inverted desert
-goal=130;
+goal=130+s
 if Player.area = 106//inverted scrapyard
-goal=120;
-if Player.area = 8
-goal = 130
+goal=120+s
+if Player.area = 8//Wonderland
+goal = 130+s
 if Player.area = 9//Palace
-goal = 130
+goal = 130+s
 if Player.area = 118//Inverted Palace
-goal = 130
+goal = 130+s
 if Player.area = 10//savanna
-goal = 120
+goal = 120+s
 if Player.area = 109//inverted Wonderland
-goal=150;
+goal=130+s
 if Player.area = 3
-goal = 90
+goal = 90+s
 if Player.area = 107//inverted FrozenCity
-goal=120;
+goal=120+s;
 if Player.area - 101//Oasis
-goal=90;
+goal=90+s;
 if (Player.area = 6 || Player.area = 112) && Player.subarea=2//LABS BOSS
 goal=1;
 if Player.area - 113//Banditland
-goal=70;
+goal=70+s;
 if Player.area - 114//jungle
-goal=130;
+goal=130+s;
 if Player.area - 117//Mushroom land
-goal=120;
+goal=120+s;
 
 
 if UberCont.opt_gamemode==6 && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels
-goal=30;
+goal=30+s;
 
 if UberCont.opt_gamemode==20 && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//big levels
-goal=300;
+goal=300+s;
 
 }
 if UberCont.opt_gamemode == 25//Survival Arena

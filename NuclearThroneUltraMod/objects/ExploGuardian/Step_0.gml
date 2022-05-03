@@ -21,5 +21,7 @@ motion_add(direction,2)
 if speed > 4
 speed = 4
 
-if charge
+if charge || fire
+{
 	speed = 0;
+}

@@ -17,7 +17,7 @@ spr_fake = sprAssassinBossDeadFake;
 spr_respawn = sprAssassinBossRespawn;
 fakeded = -1;
 var loops = GetPlayerLoops();
-lifes = min(3,loops-1);
+lifes = min(2,loops-1);
 
 
 snd_hurt = sndAssassinHit
@@ -59,4 +59,4 @@ afterImageMax = 10;
 afterImageDelay = 4;
 afterImageDuration = afterImageDelay;
 alarm[7] = afterImageDelay;
-smackdelayReduction = clamp(0 + ((GetPlayerLoops()-1)*7),0,12);
+smackdelayReduction = clamp(0 + ((GetPlayerLoops()-1)*3),0,10);

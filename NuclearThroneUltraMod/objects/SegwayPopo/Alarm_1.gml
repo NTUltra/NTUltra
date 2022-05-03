@@ -5,16 +5,6 @@ scrRogueTarget()
 else
 scrTarget();
 
-canexplo=true;
-
-if instance_exists(Player)
-{
-if scrMeleeWeapons()==true///Player.wep_type[Player.wep] = 0 || Player.wep = 24 || Player.wep = 36 || Player.wep = 53 || Player.wep=198 || Player.wep=37|| Player.wep=126|| Player.wep=108|| Player.wep=109|| Player.wep=123 || Player.wep = 222|| Player.wep=239//if Player.wep_type[Player.wep]==0 // You are holding a melee weapon
-    {
-    alarm=1+random(3)//go aggro hes got a melee weapon
-    }
-}
-
 
 
 if target > 0

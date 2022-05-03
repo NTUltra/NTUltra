@@ -13,3 +13,7 @@ else if skill == 106 && Player.bskin == 2
 {
 	sprite_index=sprBoomHands;
 }
+else if Player.race == 6 && skill == 23 && scrMeleeWeapons(Player.wep) && scrMeleeWeapons(Player.bwep)
+{
+	sprite_index = sprYvBlasphemy;
+}

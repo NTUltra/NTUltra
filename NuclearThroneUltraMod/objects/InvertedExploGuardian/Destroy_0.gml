@@ -3,5 +3,6 @@ event_inherited()
 
 
 snd_play(sndExplosionL);
-instance_create(x,y,PurpleExplosion);
+with instance_create(x,y,PurpleExplosion)
+	team = other.team
 exploAmount = 16;

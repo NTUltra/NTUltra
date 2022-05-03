@@ -70,3 +70,7 @@ else if active
 }
 // Inherit the parent event
 event_inherited();
+if immune || intro
+{
+	speed = 0;
+}

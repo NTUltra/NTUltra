@@ -132,7 +132,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMutant6BDead","path":"sprites/sprMutant6BDead/sprMutant6BDead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMutant6BDead",
     "tags": [],
     "resourceType": "GMSequence",
   },

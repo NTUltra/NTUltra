@@ -93,7 +93,8 @@ function scrSaveRun() {
 			maxarmour: Player.maxarmour,
 			crownVaultChallenge: UberCont.crownVaultChallenge,
 			randomlySelected: Player.randomlySelected,
-			canSave: UberCont.canSave
+			canSave: UberCont.canSave,
+			altUltra: Player.altUltra
 		};
 		with UberCont
 		{

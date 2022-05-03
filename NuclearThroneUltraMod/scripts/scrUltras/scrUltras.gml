@@ -100,10 +100,19 @@ function scrUltras() {
 	    ultra_tips[22] = "more pop"
     
 	    ultra_name[23] = "MAKE IT RAIN"
-	    ultra_text[23] = "REALLY HIGH SHOTGUN FIRE RATE#USED SHOTGUN AMMO CONVERTS#TO BULLET AMMO"
+	    ultra_text[23] = "REALLY HIGH SHOTGUN FIRE RATE#USED BULLET AMMO#CONVERTS TO SHOTGUN AMMO#(10 BULLET TO 1 SHOTGUN AMMO)"//"REALLY HIGH SHOTGUN FIRE RATE#USED SHOTGUN AMMO CONVERTS#TO BULLET AMMO"
 	    ultra_tips[23] = "shells and bullets <3"
+		if instance_exists(Player)
+		{
+			if scrMeleeWeapons(Player.wep) && scrMeleeWeapons(Player.bwep)
+			{
+				ultra_name[23] = "BLASPHEMY"
+			    ultra_text[23] = "CAN NO LONGER POP POP GUNS#HIGHER MELEE SWING RATE#MELEE IS FULLY AUTOMATIC#CAN POP POP MELEE"
+			    ultra_tips[23] = "why would you forsake us gun god?"
+			}
+		}
     
-	    ultra_name[24] = "IT UR GOD: VEENY"
+	    ultra_name[24] = "VERIFY VENUZ"
 	    ultra_text[24] = "RIGHT CLICK SOMETIMES#ALSO FIRES YOUR SECONDARY WEAPON#CAN POP FULL AUTO YO"
 	    ultra_tips[24] = "blood gamble"
     
@@ -254,7 +263,7 @@ function scrUltras() {
 	    ultra_text[55] = "WHENEVER YOU HIT AN ENEMY#WITH A THROWN WEAPON#THEY DROP EXTRA RESOURCES#WHEN A WEAPON RETURNS#IT FIRES A MASSIVE LASER##CHANCE PORTALS GIVE#YOU A HIGHER TIER WEAPON#THROWS BOUNCE TOWARDS ENEMIES"
 	    ultra_tips[55] = "rise above"
     
-	    ultra_name[56] = "BLASPHEMY"
+	    ultra_name[56] = "CLEANSING"
 	    ultra_text[56] = "MORE MELEE SWING SPEED#YOU NO LONGER#GET RANDOM WEAPONS#AFTER EXITING A PORTAL#THROWS BOUNCE TOWARDS ENEMIES"
 	    ultra_tips[56] = "survival above pacifism"
     
