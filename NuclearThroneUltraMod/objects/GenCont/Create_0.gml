@@ -149,7 +149,7 @@ goal = 130+s
 if Player.area = 118//Inverted Palace
 goal = 130+s
 if Player.area = 10//savanna
-goal = 120+s
+goal = 110+s
 if Player.area = 109//inverted Wonderland
 goal=130+s
 if Player.area = 3
@@ -157,7 +157,7 @@ goal = 90+s
 if Player.area = 107//inverted FrozenCity
 goal=120+s;
 if Player.area - 101//Oasis
-goal=90+s;
+goal=95+s;
 if (Player.area = 6 || Player.area = 112) && Player.subarea=2//LABS BOSS
 goal=1;
 if Player.area - 113//Banditland

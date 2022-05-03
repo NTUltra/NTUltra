@@ -13,7 +13,6 @@ function scrNextLevel() {
 		area = lastarea;
 		if looping
 		{
-			debug("LOOPING",lastarea);
 			room_restart();
 			exit;
 		}
@@ -33,7 +32,7 @@ function scrNextLevel() {
 		{
 			if inverted && subarea<3
 	        {
-		        //inverted big dog
+		        //inverted chesire
 		        area = 118
 		        subarea = 3;
 		        inverted=false;
@@ -149,6 +148,8 @@ function scrNextLevel() {
 	        else//Inv frozen city to wonderland
 	        {
 	        area=8;
+			lastarea = 8;
+			lastsubarea = 2;
 	        subarea=2;
 			inverted=false
 	        exit;
@@ -184,13 +185,15 @@ function scrNextLevel() {
 	        {
 	        area = 109
 	        subarea = 3;
-	        inverted=true;
+	        inverted=false;
 	        exit;
 	        }
 	        else//Skip one palace
 	        {
 	        area=9;
 	        subarea=1;
+			lastarea = 9;
+			lastsubarea = 2;
 			inverted=false
 	        }
         
@@ -216,6 +219,7 @@ function scrNextLevel() {
 			else//Skip one palace
 			{
 				area=9
+				lastarea = 9;
 				subarea=2;
 				inverted=false;
 			}
@@ -235,8 +239,10 @@ function scrNextLevel() {
 	        else//Inv labs to wonderlands 1
 	        {
 				area=8
+				lastarea = 8;
 				subarea=1;
-				inverted=false
+				inverted=false;
+				exit;
 	        }
     
 	    }

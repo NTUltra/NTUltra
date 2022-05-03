@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprSpiral","path":"sprites/sprSpiral/sprSpiral.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprSpiral",
     "tags": [],
     "resourceType": "GMSequence",
   },

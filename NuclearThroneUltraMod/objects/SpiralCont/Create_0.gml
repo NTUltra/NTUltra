@@ -5,17 +5,20 @@ image_angle = random(1000)
 active = 0
 
 type = 1
-//1 = normal 2 = proto 3 = idpd 4= venuz
+//1 = normal 2 = proto 3 = idpd 4= venuz 5 = inv 6 = wonder
 time = 0
 
 if instance_exists(Player)
 {
 if Player.area = 100
 type = 2
+
 if Player.area = 103
 type = 4
-if Player.area = 105|| Player.area = 106
+if scrIsInInvertedArea()
 type=5;
+if Player.area == 8
+type = 6;
 }
 
 

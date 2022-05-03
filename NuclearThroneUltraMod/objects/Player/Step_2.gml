@@ -131,9 +131,9 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 	if targetPickup.pickedup=false
 	weaponspickedup+=1;
 
-	if scrCheckGold(targetPickup.wep)
+	if scrCheckGold(wep_name[targetPickup.wep])
 	{
-	snd_play(sndGoldPickup);
+		snd_play(sndGoldPickup);
 	}
 
 	//GUN GAME
@@ -151,11 +151,11 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 	if targetPickup.wep=329//Dark sword
 	scrUnlockCSkin(9,"FOR TOUCHING DEATH ITSELF",0);
 
-	if scrToxicWeapons(targetPickup.wep) && targetPickup.pickedup=false && race = 23
+	if scrToxicWeapons(targetPickup.wep, wep_name[targetPickup.wep]) && targetPickup.pickedup=false && race = 23
 	{
 	toxicweaponsfound++;
-	if toxicweaponsfound>=3
-	scrUnlockBSkin(23,"BY USING 3 TOXIC WEAPONS#IN ONE RUN AS FROG",0)
+	if toxicweaponsfound>=2
+	scrUnlockBSkin(23,"BY USING 2 DIFFERENT TOXIC WEAPONS#IN ONE RUN AS FROG",0)
 	}
 
 	//some one wep only unlocks that odont really count as unlockables
@@ -339,7 +339,7 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 	{
 		snd_play(sndSwapCursed);
 	}
-	if (scrCheckGold(wep))
+	if (scrCheckGold(wep_name[targetPickup.wep]))
 	{
 		snd_play(sndSwapGold);	
 	}

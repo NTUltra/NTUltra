@@ -374,7 +374,10 @@ function scrDrawBloom() {
 	with IceCannonBall
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with Portal
-	draw_sprite_ext(sprite_index,-1,x,y,2*image_xscale,2*image_yscale,image_angle,c_white,ba)
+	{
+		if visible
+			draw_sprite_ext(sprite_index,-1,x,y,2*image_xscale,2*image_yscale,image_angle,c_white,ba)
+	}
 	with IDPDSpawn
 	draw_sprite_ext(sprite_index,-1,x,y,2*image_xscale,2*image_yscale,image_angle,c_white,ba)
 	with Implosion

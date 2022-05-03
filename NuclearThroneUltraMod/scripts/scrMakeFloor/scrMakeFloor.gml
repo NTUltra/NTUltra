@@ -355,7 +355,7 @@ function scrMakeFloor() {
 	if area == 9 || area == 118{
 		if subarea < 2
 		{
-		if random(8) < 1
+		if random(9) < 1
 		{
 			instance_create(x,y,Floor)
 			instance_create(x+32,y,Floor)
@@ -370,16 +370,37 @@ function scrMakeFloor() {
 			y += lengthdir_y(32,direction)
 		}
 		else {
-			if random(3) < 1
+			instance_create(x,y,Floor)
+			instance_create(x,y+32,Floor)
+			/*
+			if random(2) < 1
 			{
-				instance_create(x,y,Floor)
-				instance_create(x,y+32,Floor)
+				if choose(true,false)
+				{
+					instance_create(x,y,Floor)
+					instance_create(x,y+32,Floor)
+				}
+				else
+				{
+					instance_create(x,y,Floor)
+					instance_create(x,y-32,Floor)
+				}
 			}
 			else
 			{
-				instance_create(x,y,Floor)
-				instance_create(x,y-32,Floor)
-			}
+				if choose(true,false)
+				{
+					instance_create(x+32,y,Floor)
+					instance_create(x,y,Floor)
+					instance_create(x,y+32,Floor)
+				}
+				else
+				{
+					instance_create(x,y,Floor)
+					instance_create(x-32,y,Floor)
+					instance_create(x,y+32,Floor)
+				}
+			}*/
 		}
 		}
 		else
@@ -658,7 +679,7 @@ function scrMakeFloor() {
 			instance_create(x+16,y+16,AmmoChest)
 	   instance_create(x,y,Floor)}
 	   }
-	   if random(7) < 1
+	   if random(9) < 1
 	   instance_create(x,y,FloorMaker)
 	}
 

@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "musConfrontingMyself.ogg",
-  "duration": 193.877563,
+  "duration": 179.7565,
   "parent": {
     "name": "Music & amb",
     "path": "folders/Sounds/Music & amb.yy",

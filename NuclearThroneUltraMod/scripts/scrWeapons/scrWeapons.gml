@@ -1314,7 +1314,7 @@ function scrWeapons() {
 	wep_area[118] = 19//4 originally?
 	wep_text[118] = "dig you to death"
 	wep_swap[118] = sndSwapHammer
-	wep_rad[118] = 14;
+	wep_rad[118] = 15;
 
 	wep_name[119] = "AUTO FLAK CANNON"
 	wep_type[119] = 2
@@ -1613,7 +1613,7 @@ function scrWeapons() {
 	wep_swap[145] = sndSwapFlame
 	wep_rad[145] = 0;
 
-	wep_name[146] = "LINE OF TOXIC"
+	wep_name[146] = "TOXIC LINE"
 	wep_type[146] = 4
 	wep_auto[146] = 0
 	wep_load[146] = 15
@@ -2695,12 +2695,12 @@ function scrWeapons() {
 	wep_type[244] = 5
 	wep_auto[244] = 0
 	wep_load[244] = 50
-	wep_cost[244] = 10
+	wep_cost[244] = 8
 	wep_sprt[244] = sprUltraMegaLaserPistol
 	wep_area[244] = 24
 	wep_text[244] = "the tam gun"
 	wep_swap[244] = sndSwapEnergy
-	wep_rad[244] = 22;
+	wep_rad[244] = 20;
 
 	wep_name[245] = "LIGHTNING MINIGUN"
 	wep_type[245] = 5
@@ -4209,7 +4209,7 @@ function scrWeapons() {
 	wep_name[381] = "MUCHAS PELOTILLA"
 	wep_type[381] = 2
 	wep_auto[381] = 0
-	wep_load[381] = 225
+	wep_load[381] = 230
 	wep_cost[381] = 30
 	wep_sprt[381] = sprMuchasPelotilla
 	wep_area[381] = 18
@@ -4220,7 +4220,7 @@ function scrWeapons() {
 	wep_name[382] = "MUCHAS LASERES"
 	wep_type[382] = 5
 	wep_auto[382] = 0
-	wep_load[382] = 225
+	wep_load[382] = 230
 	wep_cost[382] = 30
 	wep_sprt[382] = sprMuchasLaser
 	wep_area[382] = 18
@@ -4330,7 +4330,7 @@ function scrWeapons() {
 	wep_name[392] = "MUCHAS FUEGO"
 	wep_type[392] = 4
 	wep_auto[392] = 0
-	wep_load[392] = 150
+	wep_load[392] = 200
 	wep_cost[392] = 20
 	wep_sprt[392] = sprMuchasFuego
 	wep_area[392] = 18
@@ -4991,7 +4991,7 @@ function scrWeapons() {
 	wep_type[452] = 2
 	wep_auto[452] = 0
 	wep_load[452] = 12
-	wep_cost[452] = 3
+	wep_cost[452] = 3.5
 	wep_sprt[452] = sprJawObliterator
 	wep_area[452] = 18
 	wep_text[452] = "why is the jaw so hated?"

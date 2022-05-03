@@ -6,6 +6,8 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 	{
 		if sprite_index != spr_hurt
 		{
+			snd_play(snd_hurt, hurt_pitch_variation,true)
+			instance_create(other.x,other.y,FishBoost)
 			if instance_exists(Player)
 			{
 				if Player.race=24//Elementor's passive
@@ -68,8 +70,5 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 			image_index += 0.2;//iframe skipper
 		}
 	}
-
-	snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
-	if random(2)<1
-		instance_create(x,y,FishBoost)
+	
 }

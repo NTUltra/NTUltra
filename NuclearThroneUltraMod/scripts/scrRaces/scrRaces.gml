@@ -330,7 +330,7 @@ function scrRaces() {
 	race_swep[23] = 348//FROG BLASTER
 	race_bskin[23] = 0
 	race_cskin[23] = 0
-	race_bskin_lock[23] = "USE THREE#TOXIC WEAPONS#IN THE SAME RUN#AS FROG"
+	race_bskin_lock[23] = "USE TWO DIFFERENT#TOXIC WEAPONS#IN THE SAME RUN#AS FROG"
 	race_cskin_lock[23] = "REACH AND BEAT#THE THRONE#AS FROG#ON THE GAMEMODE:#DISC ROOM#WITH SETTINGS:#ATLEAST 6 DISCS#ATLEAST 2 DAMAGE"
 
 

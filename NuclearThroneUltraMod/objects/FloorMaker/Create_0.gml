@@ -20,7 +20,7 @@ if instance_exists(Player){
 	else if Player.area = 100
 	goal = 40+s
 	else if Player.area = 101
-	goal = 90+s
+	goal = 95+s
 	else if Player.area = 103
 	goal = 130+s
 	else if Player.area = 102
@@ -44,7 +44,7 @@ if instance_exists(Player){
 	else if Player.area = 10
 	{
 		styleb = choose(0,0,0,0,0,0,1,1)//Slightly higher chance for B tiles
-		goal = 130+s
+		goal = 120+s
 	}
 	else if Player.area == 9 && Player.subarea == 3
 	goal = 350;
