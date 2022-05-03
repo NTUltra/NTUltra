@@ -7,7 +7,6 @@ function scrInvertedRavenLift() {
 	    z = 0;
 	    scrTarget();
 	    if (target > 0 && target.object_index=Player) {
-	        var mp = target.p - 1;
 	        var mx = UberCont.mouse__x;
 	        var my = UberCont.mouse__y;
 	        var tries = 1024;
@@ -29,12 +28,22 @@ function scrInvertedRavenLift() {
 	            }
 	            if (place_free(targetx, targety)) break;
 	        }
-	        //if (tries >= 0 && point_distance(x, y, targetx, targety) > 16) {
+	        if (tries >= 0) {
 	            image_index = 0;
 	            nofly = 50;
 				alarm[2] = 0;
 	            instance_change(InvertedRavenFly, false);
-	        //}
+	        }/*
+			else
+			{
+				var n = instance_nearest(x,y,Floor)
+				image_index = 0;
+	            nofly = 50;a
+				alarm[2] = 0;
+	            instance_change(InvertedRavenFly, false);
+				x = n.x+16;
+				y = n.y+16;
+			}*/
 	    }
 	}
 

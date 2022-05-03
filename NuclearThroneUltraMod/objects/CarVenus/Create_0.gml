@@ -1,4 +1,5 @@
-maxhealth = 25
+var loops = GetPlayerLoops();
+maxhealth = 30 * clamp(loops+1,1,4)
 drawShadow = true;
 spr_idle = sprVenusCar
 spr_hurt = sprVenusCarHurt

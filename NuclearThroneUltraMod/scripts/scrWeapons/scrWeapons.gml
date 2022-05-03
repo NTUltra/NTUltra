@@ -2757,7 +2757,7 @@ function scrWeapons() {
 	wep_swap[249] = sndSwapShotgun
 	wep_rad[249] = 0;
 
-	wep_name[250] = "AUTO EXPLOSIVE BOW"
+	wep_name[250] = "AUTO EXPLOSIVE CROSSBOW"
 	wep_type[250] = 3
 	wep_auto[250] = 1
 	wep_load[250] = 12
@@ -3076,10 +3076,10 @@ function scrWeapons() {
 	wep_swap[278] = sndSwapHammer
 	wep_rad[278] = 0;
 
-	wep_name[279] = "GOLDEN EXPLOSIVE BOW"
+	wep_name[279] = "GOLDEN EXPLOSIVE CROSSBOW"
 	wep_type[279] = 3
 	wep_auto[279] = 0
-	wep_load[279] = 24
+	wep_load[279] = 20
 	wep_cost[279] = 1
 	wep_sprt[279] = sprGoldenExplosiveBow
 	wep_area[279] = 20

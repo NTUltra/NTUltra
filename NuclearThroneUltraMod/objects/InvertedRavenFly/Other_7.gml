@@ -8,6 +8,11 @@ else if sprite_index = sprInvertedRavenLand
 if !place_meeting(x,y,Floor)
 {
 nofly = 0
+//Shuffle clsoer to floor to prevent softlock
+var n = instance_nearest(x,y,Floor)
+var d = point_direction(x,y,n.x+16,n.y+16)
+x += lengthdir_x(3,d);
+y += lengthdir_y(3,d);
 scrInvertedRavenLift()
 
 }

@@ -7417,7 +7417,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection-60,2+longarms)
+	motion_add(aimDirection-60*other.accuracy,2+longarms)
 	image_angle = direction
 	team = other.team}
 	
@@ -7433,7 +7433,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection+60,2+longarms)
+	motion_add(aimDirection+60*other.accuracy,2+longarms)
 	image_angle = direction
 	team = other.team}
 	

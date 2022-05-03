@@ -6,12 +6,11 @@ Wonderland is now connected through a pink portal, to indicate that it does not 
 Euphoria now makes the thronebeam thinner
 Thronebeam now dissapears nicer
 Euphoria now makes enemy wazers thinner
-Reroll station!
+Mutation reroll station!
 Completing a survival wave or the crown vault challenge will now destroy enemy projectiles remaining in the area
 Crown of hatred no longer removes range and gives more rads from 12 to 16
 Weapon modifiers now also have an explain/description text like ultra mods
 More ultra mod cases for fat bullets and slugs
-New early game weapon hand cannon
 New starting weapon for Business Hog: Golden hand cannon
 Changed crownvault challenges again.
 Added a third crownvault challenge
@@ -29,16 +28,35 @@ Lore in the crownvault
 Yung cuz's buddies can now pickup rads, ammo and health!
 An additional technomancer now spawns on loop 4 and beyond
 Venuz car has been added to Oasis 1B - 3
-Angel tranquility utlra change, Now is percentage based. 75% damage increse. And works on all types of damage not just projectiles. It now also works when above max health
+Other cars also added to oasis, many of those sprites were made by Guru Jr.
+Angel tranquility utlra change, Now is percentage based. 75% damage increase. And works on all types of damage not just projectiles. It now also works when above max health
 Added two new crosshairs
 Reworked Hunter's active ability it is much better to use now. It will not force your aim onto a target instead it will just aim the shot at the target when you fire. This alows you to retarget the marker without having to first unlock it
 Redid crack shot ultra D for Hunter, With the new aiming system all markers can be fired at in a single frame!
 Atom Ultra B Proton, atom will now stop pulsing when there are no enemies left (it will continue again if one spawns)
-Big fish can no longer suck the player through walls. Line of sight is now required for the player to be moved.
-Triple blood gun now costs 2 ammo
-Increased damage of initial slug cannon bullet
-Plasma should stick a little better to enemies
-Only one piece of the throne can now be damaged at a time. Meaning that piercing damage will be less effective, because of this I've reduced the health of the throne.
+Updated credits
+Added urls to socials in the credits
+Added urls to update page
+Open mind now spawns a second proto chest in the crownvault!
+Made jock rocket a little brighter so it stands out more and added more colour
+Increased crystal droprate
+Minor damage & swingrate nerf to darksword
+Proto statue/crown vault enterance can now spawn in palace and inverted palace
+Melee damage now stacks and ignores iframes atleast once. It should still deal multiple hits to things like big bandit charging. But what this change means is that shovels with eagle eyes. Would have all slashes deal damage. It also means that yung cuz with melee is now pretty effective, Reduced damage from jackhammer's & ghost weapons accordingly
+The wrench can now fix Yv's car
+Hunter's thronebutt and Ultra A now work on all damage not just projectiles. This is partially to fix some damage calculations
+Rogue can now cancel her portal strike by pressing E (use button) while using it.
+Changed Hunter Only Shoot When marked gamemode unlock. Now requires: Kill a thief while it is marked
+Your level cap increases again on loop 10, like it does on loop 2. Because if you reach loop 10 you are really friggin awesome man.
+Idpd vans can no longer open up pizza sewers
+Added a secret YV ultra
+Two secret skins for YV
+Changed YV Ultra C now instead of shotgun ammo converting to bullets, a percentage of your bullet ammo will be converted to shotgun ammo.  (10 bullet to 1 shotgun ammo). This will synergize better with recycle gland for example. It makes this ultra much more sustainable.
+Most areas now increase in size a little with each loop (caps at loop 6)
+Added in a safety softlock checker
+New ultra mutation art for elementor! made by ricottakitten
+YV car now scales health on loops and starts off with a little more health
+
 
 Weapons
 Flame SMG
@@ -50,15 +68,23 @@ auto missile launcher (this one is pretty nutty but drops very late)
 fat smartgun
 Pop wall
 Pop laser
-Jaw crusher
-Jaw Obliterator
+Jaw crusher (double slugger)
+Jaw Obliterator (double heavy slugger (costs 3.5 ammo)
 Double mini plasma rifle
 Flame director jaw eraser
 Scythe
+Super Scythe
+Explosive Assault Rifle
+Laser shovel
 
 Balance
 Chunky blade gun drops one area later
-Reduced spee dof firebat fireballs and lightning balls
+Big fish can no longer suck the player through walls. Line of sight is now required for the player to be moved.
+Triple blood gun now costs 2 ammo
+Increased damage of initial slug cannon bullet
+Plasma should stick a little better to enemies
+Only one piece of the throne can now be damaged at a time. Meaning that piercing damage will be less effective, because of this I've reduced the health of the throne.
+Reduced speed of firebat fireballs and lightning balls
 Increased health of lavaball enemies
 reduced amount of enemies that spawn in dragon fight
 Bubbler now spawns two areas later (same as blood bubbler) and has a lower fire rate
@@ -123,11 +149,76 @@ Plasma minigun now costs only one ammo and drops a couple of areas later
 Decreased amount of iframes atom gets when teleporting by a one, but it should more consistently apply them.
 Golden scorpions that get killed within a 0.3 second of spawning say in the crownvault challenge or in survival arena, Wont explode into acid streaks
 Super split blade gun now costs 5 ammo and drops later
-Reduced health of the throne a wee bit
 Removed damage reduction on middle part of throne
 Moved the hyper heavy slugger up a couple of tiers
 Lightning laser now drops a little later
 Increased range of flamethrowers
+Reduced impact damage of missiles by 2
+Moved disperse bazooka up two tiers
+Freeze effects last a shorter amount of time and have a longer delay before being able to freeze again
+Reduced range of fireballers
+Reduced contact damage of implosions from dimension generator and blackhole generator.
+Reduced rogue explosion dmg by 1
+Splinter bomb now drops later
+Shooting big machine when it is becoming exposed will no longer delay its exposure but instead it will skip the animation and immediatly make it exposed. There are often times when big machine would just constantly take damage out of the player's control. This would make the fight unnecessarily hard
+Reduced damage of spinner yoyos by 2
+Significantly reduced ice cannon ball but it deals damage through iframes now
+Lightning minigun now drops later and costs only 1 ammo
+Reduced hunter's thronebutt damage boost to 25% instead of 35%
+added a minimum range to grunt's firing at the player and optimized code a tiny bit
+Gators should now avoid walls a little. Sneaky bastards
+Auto flare gun now costs half ammo and is much faster, drops later
+Swarm gun drops later
+Increased droprate of junglebandits
+Less big assassins spawn on loop
+ballmom now brings her correct music on her vacation
+Splinter storm now drops later
+Heavy double minigun now costs 3 ammo instead of 4
+Lightning laser spawns lightning a little further apart.
+Increased distance heavy slugger slightly
+Elite crystal shielders should now teleport to a minimum distance away from the player
+Dimension and wormhole generator have a slightly longer reload time
+Increased fire rate box guns
+Ghettoblaster is now effected by energy brain
+Bloodslash damage is now increased with melting's ultra D (doomed)
+Morphhammer slash now gets buffed by energy brain
+Reduced damage of swordbullet projectile and shankbullet projectiles, and the shanks/slashes they spawn. Also increased the delay for each slash by one frame. This is to compensate for the stacking melee damage, These weapons should end up being almost the same as before maybe even a bit better now
+Removed damage increase on lightning shovel and hammer instead it will deal damage twice
+Reduced the damage of all shovel melee weapons to compensate for melee damage now stacking (feedback on this is much appreciated)
+Increased crown of inversion inversion chance from 70% to 90%
+Explosive bolt now spawns the explosion more at the tip of the bolt
+Chicken ninja Ultra will now work on all melee weapons there were some missing, the way the damage buff is applied is optimizied. The damage buff has been reduced to 25% but melee animation speed is slowed and all melee will get an aditional hit in (stacks with energy brain and energy melee weapons). Because the animation speed is slowed it will also cause the melee to go further thus slightly increasing range
+Jackhammer drops one area later
+Line grenade now drops a little later and the explosions are further apart
+Reduced damage of doomguy contact damage a little
+Less chance inverted big bandit fires a missile and multiple inverted big bandits will not fire a missile if one already exists
+Thief's should be a tiny bit more visible when they are stationary
+Reduced damage of rogue explosions, it is dealing ddamage over multiple frames so this dmg nerf should make it more inline with retail but still a bit better
+Reduced the size of desert areas a little bit
+Increased scaling of health and timer on loop for savanna enterance
+Increased health scaling of oasis enterance on loop
+Increased health and timer scaling for vulcano enterance
+Frozen jungle plant now scales health on loop
+Reduced friction flame director bullets
+Hyper heavy rifle now costs 7 ammo instead of 8
+made inverted palace floor darker
+Purple explosions will no longer friendly fire
+slowed down inverted ghost guardians a tiny bit
+YV Ultra A now adds a very small offhand reload
+Bouncer lasers are a subpixel thinner and bounce one less time (very minor nerf)
+Hyper Bouncer rifle is now tier 9 (used to be tier 7) as the hyper rifle is tier 8. 
+Increased bullet disperse disperse gun cost by 2
+(Mini) Plasma should shrink faster on walls, Should help with lag caused by a ton of plasma.
+I may have buffed muchas laser too much, Reduced its damage to be only slightly above normal laser
+Reduced fire rate of all muchas weapons (a little bit)
+Increased ultra shovel radcost by 1 (with the new stacking melee change the ushov is quite good, this should balance it out a tiny bit along with the damage rduction)
+Explosion from the explosive crossbow will now spawn more at the tip
+Renamed line of toxic to toxic line
+Changed frog's bskin unlock to use 2 diffferent toxic weapons. It always required you to use different weapons but now instead of 3 its 2. This is most likely a temporary change as the weapon pool grows unlocks like these become more and more rng dependant and frustrating.
+Reduced ammo and rad cost of ultra mega laser pistol
+Made savanna areas smaller
+Tweaked palace area generation
+
 
 Bugfixes
 Fixed inverted big dog spawning inside a wall (probably)
@@ -175,3 +266,61 @@ Big rad chunks will now distribute the correct value (10x normal rads) to the pr
 Swapping to the cluster launcher no longer sounds like a sword sheething
 Fixed inverted explo guardians firing normal explo guardian bullets upon death
 Damage indicator on throne should now show how damage is shared and more accuratly represent the damage dealt
+Fixed rage being able to get lost when immune close to portal
+Fixed sometimes small portal spawning instead of big one at thronefight
+Fixed yung cuz not getting the correct amount of maxhealth in casual mode
+Fixed palace guardians being invisible in some cases
+Fixed seeker cannon insane recoil
+Plant's snare now works properly on big bad bat, and its good
+There can now only be one big weapon chest even with open mind
+Fixed chicken slowmotion displaying throne overlay sprites
+Fixed a bug where detachment could cause the player to be at non integer health
+Fixed boiling veins not working correctly with overheal, it would assume your fullhealth is the immune point instead of 5hp.
+Fixed second loop starting in palace.
+Fixed inverted ballmom showing the wrong dead sprite
+Fixed infinity laser pistol with laser bullet ultramod spawning ultra bullets
+Fixed classic route to oasis working on loops, it should only work preloop
+Cursed hyper crystal should not teleport too far away
+Fixed a crash related to dieing while a lavaball enemy was firing at you
+Fixed blood melee only spawning blood explosions when there are no other blood explosions in the area
+Fixed golden shovel dealing much higher damage than the regular shovel
+Explosive bow is now called explosive crossbow, I guess thats a bug?
+Fixed shanks sometimes missing there was a single frame where collision was disabled, how frustrating I apologize for this one.
+Chicken's B ultra Ninja could apply the boost multiple times if you swong your melee fast enough this is fixed. With the new system it would cause animations to completly stop.
+Fixed Hunter ultra A giving you ten times the intended damage boost up close
+Removed path prediction on hunter's marker it looked a bit yanky with knockback
+Fixed a bug where recycle gland could give you over max ammo
+Fixed lasers, lightning and kraken being angled by Hunter's Ultra C focused fire
+Fixed a bug where rogue could portal strike with less ammo than was required
+More fixes to stacking damage on the throne parts multiplying damage dealt to it
+Fix big fish nog getting hp set to 1 or getting hp reduced on loop by scarier face and/or glass arm cannon
+1HP equality now works correctly with chicken or yung cuz regaining max health
+Fixed van cannon not working with hunter's mark it would move in the wrong direction
+Fixed a crash related to Eye's projectile style and the van cannon...
+Fixed crown of death resetting overheal
+Fixed crown of destiny taking a mutation choice, upon changing to another crown
+Fixed weaponmod description on 2 3 4th mods
+Fixed YV C skin unlock (added a check at the start of the game for those who always had the golden weapons but never got the skin, so you don't need to get the trigger the normal way which is to unlock a new gold weapon)
+Rogue's Ultra D will now consume rads when actually using the portal strike not when iniating it.
+Reduced the size of the oasis anchor prop collision box
+Plasma spawned from bullets when using ultra mods now spawn less particles
+YV B skin now floats a little higher...
+Missiles with explosion to blood explosion ultra mod will now explode into blood on the first frame instead of not exploding
+Fixed ultramod description being swapped in the timer, it would appear than when timer ran out it would dissapear, should appear when timer runs out and not initally be there
+Fixed ultra mutation icon being in wrong order
+Throne dieing should clear projectiles better
+renamed IT UR GOD: VEENY to VERYIFY VENUZ. he needs to get verified already. Also this is obviously a bug.
+Renamed Panda ultra Blasphemy to Cleansing
+Insomnia will no longer delay the enabling of the explosion for segway popos
+Fixed crown sometimes being outside of play area,
+Fixed car thrower HUD sprite
+If you die while a portal is closing/opening it will hide itself instead of looping its closing animation
+Inverted palace is no longer called ????
+Fixed many transition screens to inverted areas not actually displaying inverted portal
+Chesire cat should now display damage numbers and take increased damage from damage increasers
+Fixed frog blaster having enemy bullet hit fx
+Fixed frog's B skin unlock not counting a lot of toxic weapons
+Fixed gold weapon pickup and swapping sounds not playing
+Fixed infinite looping  (if you take crownvault every time) wonderland (happened when you came from an inverted area)
+Optimized kraken tentacles some more, shouldn't spawm an insane amount of water bubbles when hitting an enemy
+Fixed ravens
