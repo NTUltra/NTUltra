@@ -40,7 +40,11 @@ if sprite_index = sprPortalDisappear or sprite_index = sprProtoPortalDisappear o
 	}
 	else
 	{
-		endgame = 100;	
+		endgame = 100;
+		if !instance_exists(PlayerSpawn)
+		{
+			visible = false;	
+		}
 	}
 }
 

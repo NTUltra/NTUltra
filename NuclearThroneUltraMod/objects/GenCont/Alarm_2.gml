@@ -516,4 +516,9 @@ else if Player.area != 100
 	Player.x += 16;
 	Player.y -= 32;
 }
+with Crown
+{
+	x = Player.x;
+	y = Player.y;
+}
 

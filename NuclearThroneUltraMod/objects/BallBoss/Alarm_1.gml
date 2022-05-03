@@ -2,7 +2,7 @@
 alarm[1] = actTime + random(actTime)
 scrTarget()
 if target > 0 {
-	scrDrop(2,0);
+	scrDrop(4,0);
 	var ran = random(100);
 	if ran > 90
 	{
@@ -31,7 +31,7 @@ if target > 0 {
 	}
 	else if ran > 50
 	{
-		scrDrop(10,0);
+		scrDrop(20,0);
 	}
 
 }

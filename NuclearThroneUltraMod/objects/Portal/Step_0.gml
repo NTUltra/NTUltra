@@ -117,8 +117,8 @@ if type = 4
 pullstrength+=0.04;
 if inverted
 {
-	if pullstrength>2
-		pullstrength=2;
+	if pullstrength>2.5
+		pullstrength=2.5;
 }
 else
 {

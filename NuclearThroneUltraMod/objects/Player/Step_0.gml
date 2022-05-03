@@ -1319,8 +1319,9 @@ microseconds=0;
 			targetFloor = instance_furthest(Portal.x,Portal.y,Floor);
 		}
     with instance_create(targetFloor.x+16, targetFloor.y+16,Portal)
-    {inverted=true;
-    depth=0;
+    {
+		inverted=true;
+		depth=0;
     }
     
     invertedportalcounter=0;
