@@ -21,6 +21,11 @@ if target > 0 {
             }
             else if random(2) < 1{
                 direction = point_direction(x, y, target.x, target.y) + random(180) - 90
+				var n = instance_nearest(x,y,Wall)
+				if point_distance(x,y,n.x,n.y) < 32
+				{
+					direction = point_direction(n.x,n.y,x,y);
+				}
                 speed = 0.4
                 walk = 10 + random(10)
                 gunangle = point_direction(x, y, target.x, target.y)

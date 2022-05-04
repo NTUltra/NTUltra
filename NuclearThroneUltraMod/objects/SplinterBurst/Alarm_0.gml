@@ -14,7 +14,7 @@ yy=creator.y;
 //with instance_create(xx,yy,Shell)
 //motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180+random(50)-25,2+random(2))
 
-repeat(3){
+repeat(2){
 	with instance_create(x,y,Splinter)//5 splinters
 	{motion_add(point_direction(x,y,other.mox,other.moy)+(random(3)-1.5),20+random(4))
 	image_angle = direction

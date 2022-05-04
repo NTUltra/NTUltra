@@ -2,7 +2,6 @@ function scrCheckAllGold() {
 	with UberCont
 	{
 		var racedir=1;
-
 		repeat(racemax)
 		{
 
@@ -23,10 +22,6 @@ function scrCheckAllGold() {
 				return true;
 
 		}
-
-		return false
 	}
-
-
-
+		return false
 }

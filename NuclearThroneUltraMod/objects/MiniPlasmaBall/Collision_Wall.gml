@@ -25,8 +25,8 @@ else
 if vspeed < 0 and !place_free(x,y+vspeed)
 {do vspeed += friction until place_free(x,y+vspeed) or vspeed >= 0}
 
-image_xscale-=0.18;
-image_yscale-=0.18;
+image_xscale-=0.17;
+image_yscale-=0.17;
 
 instance_create(x,y,Dust)
 

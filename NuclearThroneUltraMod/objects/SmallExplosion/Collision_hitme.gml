@@ -21,7 +21,7 @@ with other
 			other.dmg = 3;
 	}
 
-		if (sprite_index != spr_hurt)
+		if (sprite_index != spr_hurt || object_index != Player)
 		{
 
 			if immune = 1

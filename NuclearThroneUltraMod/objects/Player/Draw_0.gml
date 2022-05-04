@@ -24,14 +24,14 @@ if ( wep_type[wep] = 3||wep==257 ) and (!(IsShielding)||(ultra_got[7]==1)) and w
 		var sy = y + lengthdir_y(8,aimDir);
 		lasx = sx
 		lasy = sy
-		aimDir += 90
+		aimDir += 90*accuracy
 		do {lasd += 1 lasx += lengthdir_x(2,aimDir) lasy += lengthdir_y(2,aimDir)}
 		until position_meeting(lasx,lasy,Wall) or lasd > 1000
 		draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,1,aimDir,c_white,1)
 		lasx = sx
 		lasy = sy
 		lasd = 0
-		var aimDir = aimDirection - 90
+		var aimDir = aimDirection - 90*accuracy
 		do {lasd += 1 lasx += lengthdir_x(2,aimDir) lasy += lengthdir_y(2,aimDir)}
 		until position_meeting(lasx,lasy,Wall) or lasd > 1000
 		draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,1,aimDir,c_white,1)
@@ -81,14 +81,14 @@ if race = 7 and bwep != 0
 			var sy = y-4 + lengthdir_y(8,aimDir);
 			lasx = sx
 			lasy = sy
-			aimDir += 90
+			aimDir += 90*accuracy
 			do {lasd += 1 lasx += lengthdir_x(2,aimDir) lasy += lengthdir_y(2,aimDir)}
 			until position_meeting(lasx,lasy,Wall) or lasd > 1000
 			draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,1,aimDir,c_white,1)
 			lasx = sx
 			lasy = sy
 			lasd = 0
-			var aimDir = aimDirection - 90
+			var aimDir = aimDirection - 90*accuracy
 			do {lasd += 1 lasx += lengthdir_x(2,aimDir) lasy += lengthdir_y(2,aimDir)}
 			until position_meeting(lasx,lasy,Wall) or lasd > 1000
 			draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,1,aimDir,c_white,1)

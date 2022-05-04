@@ -1421,18 +1421,18 @@ function scrFire() {
 
 	snd_play_fire(sndBloodLauncher)
 	repeat(2){
-	with instance_create(x,y,BloodGrenade)
-	{
-	visible=false;
-	sticky = 0
-	motion_add(aimDirection+(random(30)-15)*other.accuracy,12+random(6))
-	image_angle = direction
-	team = other.team
-	with instance_create(x,y,BloodStreak){
-	image_angle = other.direction}
-	alarm[0]=3;
-	//instance_destroy();
-	}
+		with instance_create(x,y,BloodGrenade)
+		{
+		visible=false;
+		sticky = 0
+		motion_add(aimDirection+(random(30)-15)*other.accuracy,12+random(6))
+		image_angle = direction
+		team = other.team
+		with instance_create(x,y,BloodStreak){
+		image_angle = other.direction}
+		alarm[0]=3;
+		//instance_destroy();
+		}
 	}
 
 	BackCont.viewx2 += lengthdir_x(5,aimDirection+180)*UberCont.opt_shake
@@ -2599,8 +2599,17 @@ function scrFire() {
 	case 110:
 
 	snd_play_fire(sndFiretrap)
-	snd_play_fire(sndFlakExplode);
+	snd_play_fire(sndFlare);
+	repeat(3)
+	with instance_create(x,y,Flame)
+	{motion_add(aimDirection+random(10)-5*other.accuracy,2+random(2))
+	team = other.team
+	}
 
+	with instance_create(x,y,Flame)
+	{motion_add(other.image_angle+180+random(10)-5,2+random(2))
+	team = other.team
+	}
 	with instance_create(x,y,MiniFlameCannonBall)
 	{
 	image_angle=random(360);

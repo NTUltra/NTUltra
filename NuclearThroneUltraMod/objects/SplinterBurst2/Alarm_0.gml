@@ -10,7 +10,7 @@ y = creator.y
 //FIRING
 snd_play(sndSplinterMinigun,0.02,true,false,2,false,false,0.7);
 var dir = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + (accuracy * sin(ammo));
-repeat(3)
+repeat(2)
 with instance_create(x,y,StormSplinter)//5 splinters
 {
 	motion_add(dir+random(8)-4,14+random(4))

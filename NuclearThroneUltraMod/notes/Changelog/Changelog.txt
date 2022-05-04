@@ -35,8 +35,7 @@ Reworked Hunter's active ability it is much better to use now. It will not force
 Redid crack shot ultra D for Hunter, With the new aiming system all markers can be fired at in a single frame!
 Atom Ultra B Proton, atom will now stop pulsing when there are no enemies left (it will continue again if one spawns)
 Updated credits
-Added urls to socials in the credits
-Added urls to update page
+Added urls to socials in update page & to credits
 Open mind now spawns a second proto chest in the crownvault!
 Made jock rocket a little brighter so it stands out more and added more colour
 Increased crystal droprate
@@ -56,6 +55,11 @@ Most areas now increase in size a little with each loop (caps at loop 6)
 Added in a safety softlock checker
 New ultra mutation art for elementor! made by ricottakitten
 YV car now scales health on loops and starts off with a little more health
+Using Yung Cuz's Square B-skin will now make you immune to square bullets. (no just kidding thats not true)
+Looped with character is now indicated with a darker outline on the character select, and only when you hover over it.
+Character select now indicated if you have all skins for a character with a second outline that is lighter.
+Character select now indicates if you have all starting weapons and all skins with a character with a third outline.
+Crown used and mutation used green outlines now only display when you hover over it
 
 
 Weapons
@@ -218,6 +222,9 @@ Changed frog's bskin unlock to use 2 diffferent toxic weapons. It always require
 Reduced ammo and rad cost of ultra mega laser pistol
 Made savanna areas smaller
 Tweaked palace area generation
+Golden explosive crossbow no longer spawns tiny explosions but instead has a faster fire rate
+Bouncer plasma now has much better pierce compared to other plasma. also increased the damage (+1)
+Reduced the effectiveness of energy brain on plasma.
 
 
 Bugfixes
@@ -323,4 +330,8 @@ Fixed frog's B skin unlock not counting a lot of toxic weapons
 Fixed gold weapon pickup and swapping sounds not playing
 Fixed infinite looping  (if you take crownvault every time) wonderland (happened when you came from an inverted area)
 Optimized kraken tentacles some more, shouldn't spawm an insane amount of water bubbles when hitting an enemy
-Fixed ravens
+Fixed ravens sometimes infently flying and softlocking the game
+Plasma cannon and super plasma cannon balls now push against enemies
+Fixed plasma and plasma explosions not progressing enemy iframes correctly
+Fixed flame and iceflame not correctly skipping iframes
+Fixed collision hitbox bouncer plasma cannon ball

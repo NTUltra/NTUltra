@@ -49,7 +49,7 @@ function scrDrawCredits() {
 		thanks = "#MUSIC USED:##Plume, Fred Leonard#Laurent parisi#Crossing the swamp#David Fenn#Crooked Crow#Reaper's Battle#Christophe Heral#Plant Boss#Christopher Larkin#Nosk#Disasterpeace#Chimera"
 		stxt2 = "######MUSIC USED:##Plume, Fred Leonard#Laurent parisi##David Fenn###Christophe Heral##Christopher Larkin##Disasterpeace#"
 		txt0 = "#NUCLEAR THRONE ULTRA#NUCLEAR THRONE BY VLAMBEER##MOD BY ERDEPPOL"
-		txt1 = "######AWESOME PEOPLE:#Burino#Turtle Melon#Jodi#@ideaot/jasmine#Chubbyemu#SLEEPCYCLES#Kakujo#YellowAfterlife###@Erdeppol##NT-UM DISCORD"
+		txt1 = "######AWESOME PEOPLE:#Burrinoo#Turtle Melon#Jodi#@ideaot/jasmine#Chubbyemu#SLEEPCYCLES#Kakujo#YellowAfterlife###@Erdeppol##NT-UM DISCORD"
 		txt2 = "#####"+string(thanks)
 		stxt0 = "#NUCLEAR THRONE ULTRA###MOD    ERDEPPOL#####################THANK YOU FOR PLAYING!###[PRESS SPACE FOR PAGE 3]"
 		stxt1 = "######AWESOME PEOPLE:##########PRESS [T] TWITTER##PRESS [D] DISCORD"//White text

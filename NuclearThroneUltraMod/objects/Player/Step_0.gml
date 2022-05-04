@@ -1025,7 +1025,7 @@ if homeBoost > 0
 {
     with projectile
     {
-        if (team == other.team)
+        if (team == other.team && speed > 0)
         {
 	        if ProjectileCanBeMoved()
 	        {
@@ -1059,8 +1059,9 @@ if (ultra_got[43]==1)//HUNTER ULTRA C Focused projectiles
     {
 	    with projectile
 		{
-			if (x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) 
-			 and ProjectileCanBeMoved())
+			//if (x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) 
+			 //and ProjectileCanBeMoved())
+			if speed > 0 && ProjectileCanBeMoved()
 			{
 				var str = 2.0;
 				if place_free(x+lengthdir_x(str,point_direction(x,y,Marker.x,Marker.y)),y)

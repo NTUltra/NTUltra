@@ -2771,7 +2771,7 @@ function scrWeapons() {
 	wep_name[251] = "YOYO GUN"
 	wep_type[251] = 3
 	wep_auto[251] = 1
-	wep_load[251] = 16
+	wep_load[251] = 14
 	wep_cost[251] = 2
 	wep_sprt[251] = sprYoyoGun
 	wep_area[251] = 3
@@ -3467,7 +3467,7 @@ function scrWeapons() {
 	wep_load[314] = 25
 	wep_cost[314] = 0
 	wep_sprt[314] = sprChargeSplinterGun
-	wep_area[314] = 5
+	wep_area[314] = 7
 	wep_text[314] = "hold and hold longer"
 	wep_swap[314] = sndSwapShotgun
 	wep_rad[314] = 0;
@@ -4000,7 +4000,7 @@ function scrWeapons() {
 	wep_load[362] = 24
 	wep_cost[362] = 1
 	wep_sprt[362] = sprSplinterBomb
-	wep_area[362] = 6
+	wep_area[362] = 7
 	wep_text[362] = "scrappy"
 	wep_swap[362] = sndSwapBow
 	wep_rad[362] = 0;
@@ -4011,7 +4011,7 @@ function scrWeapons() {
 	wep_load[363] = 2
 	wep_cost[363] = 1
 	wep_sprt[363] = sprSplinterMinigun
-	wep_area[363] = 7
+	wep_area[363] = 15
 	wep_text[363] = "like a swarm of bees"
 	wep_swap[363] = sndSwapMachinegun
 	wep_rad[363] = 0;
@@ -4031,10 +4031,10 @@ function scrWeapons() {
 	wep_name[365] = "SPLINTER SHOTGUN"
 	wep_type[365] = 3
 	wep_auto[365] = 0
-	wep_load[365] = 25
+	wep_load[365] = 26
 	wep_cost[365] = 2
 	wep_sprt[365] = sprSplinterShotgun
-	wep_area[365] = 7
+	wep_area[365] = 11
 	wep_text[365] = "nailgun"
 	wep_swap[365] = sndSwapBow
 	wep_rad[365] = 0;
@@ -4253,10 +4253,10 @@ function scrWeapons() {
 	wep_name[385] = "SPLINTER BLADE GUN"
 	wep_type[385] = 3
 	wep_auto[385] = 1
-	wep_load[385] = 15
+	wep_load[385] = 20
 	wep_cost[385] = 3
 	wep_sprt[385] = sprSplinterBladeGun
-	wep_area[385] = 8
+	wep_area[385] = 10
 	wep_text[385] = "blades don't hurt you"
 	wep_swap[385] = sndSwapBow
 	wep_rad[385] = 0;
@@ -5037,7 +5037,7 @@ function scrWeapons() {
 	wep_load[456] = 19
 	wep_cost[456] = 0
 	wep_sprt[456] = sprSuperScythe
-	wep_area[456] = 19
+	wep_area[456] = 23
 	wep_text[456] = "super scythe me"
 	wep_swap[456] = sndSwapHammer
 	wep_rad[456] = 0;

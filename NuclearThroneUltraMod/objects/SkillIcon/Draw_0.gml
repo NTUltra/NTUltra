@@ -16,12 +16,13 @@ else
 {
 draw_sprite(sprite_index,skill,x,y)
 draw_sprite_ext(sprite_index,skill,x,y,1,1,0,c_black,0.05)
+/*
 if candrawoutline && UberCont.ctot_skill_taken[skill] > 0
 {
 	var col = make_color_rgb(72,156,8);
 	draw_rectangle_color(x-12,y-16,x+11,y+15,col,col,col,col,true);	
 }
-
+*/
 }
 
 draw_set_font(fntM)

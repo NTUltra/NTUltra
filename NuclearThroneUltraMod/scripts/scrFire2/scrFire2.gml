@@ -908,11 +908,10 @@ function scrFire2() {
 	case 228:
 
 	snd_play_fire(sndSplinterGun)
-	repeat(2){
 	with instance_create(x,y,Splinter)//5 splinters
 	{motion_add(aimDirection+(random(12)-6)*other.accuracy,20+random(4))
 	image_angle = direction
-	team = other.team}}
+	team = other.team}
 	repeat(2)
 	{
 	with instance_create(x,y,Splinter)
@@ -1476,7 +1475,7 @@ function scrFire2() {
 	snd_play_fire(sndDiscgun)
 
 	with instance_create(x,y,Yoyo)
-	{motion_add(aimDirection+(random(10)-5)*other.accuracy,6)
+	{motion_add(aimDirection+(random(10)-5)*other.accuracy,7)
 	image_angle = direction
 	team = other.team}
 
@@ -2260,7 +2259,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
 	sprite_index=sprGoldenSlash;
-	dmg = 9
+	dmg = 8
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2270,7 +2269,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),Slash)
 	{
 	sprite_index=sprGoldenSlash;
-	dmg = 9
+	dmg = 8
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2280,7 +2279,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),Slash)
 	{
 	sprite_index=sprGoldenSlash;
-	dmg = 9
+	dmg = 8
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -5433,7 +5432,7 @@ function scrFire2() {
 		mox=UberCont.mouse__x + ldx;
 		moy=UberCont.mouse__y + ldy;
 		creator = other.id
-		ammo = 2
+		ammo = 1
 		time = 1
 		team = other.team
 		event_perform(ev_alarm,0) 
@@ -5452,7 +5451,7 @@ function scrFire2() {
 		mox=UberCont.mouse__x + ldx;
 		moy=UberCont.mouse__y + ldy;
 		creator = other.id
-		ammo = 2
+		ammo = 1
 		time = 1
 		team = other.team
 		event_perform(ev_alarm,0) 
@@ -5484,7 +5483,7 @@ function scrFire2() {
 		mox=UberCont.mouse__x + ldx;
 		moy=UberCont.mouse__y + ldy;
 		creator = other.id
-		ammo = 2
+		ammo = 1
 		time = 1
 		team = other.team
 		event_perform(ev_alarm,0) 
@@ -5503,7 +5502,7 @@ function scrFire2() {
 		mox=UberCont.mouse__x + ldx;
 		moy=UberCont.mouse__y + ldy;
 		creator = other.id
-		ammo = 2
+		ammo = 1
 		time = 1
 		team = other.team
 		event_perform(ev_alarm,0) 
@@ -5728,12 +5727,12 @@ function scrFire2() {
 		var sx = x + lengthdir_x(8,aimDir);
 		var sy = y + lengthdir_y(8,aimDir);
 		with instance_create(sx,sy,HeavyBolt)
-		{motion_add(aimDir+90,18)
+		{motion_add(aimDir+90*other.accuracy,18)
 		image_angle = direction
 		team = other.team}
 		
 		with instance_create(sx,sy,HeavyBolt)
-		{motion_add(aimDir-90,18)
+		{motion_add(aimDir-90*other.accuracy,18)
 		image_angle = direction
 		team = other.team}
 

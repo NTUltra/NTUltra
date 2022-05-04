@@ -3,7 +3,7 @@ snd_play(sndSplinterGun)
 if instance_exists(Player)  && instance_exists(creator)
 {
 
-repeat(rate*1.4)
+repeat(ceil(rate*1.2))
 {
 with instance_create(x,y,Splinter)
 {motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(6+other.rate)-(3+(other.rate*0.5))*other.creator.accuracy,20+random(4))

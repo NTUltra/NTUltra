@@ -2231,6 +2231,7 @@
     {"id":{"name":"sprLightningShank","path":"sprites/sprLightningShank/sprLightningShank.yy",},"order":11,},
     {"id":{"name":"sprNewGuardianIdle","path":"sprites/sprNewGuardianIdle/sprNewGuardianIdle.yy",},"order":4,},
     {"id":{"name":"sprExplosiveWazerRifle","path":"sprites/sprExplosiveWazerRifle/sprExplosiveWazerRifle.yy",},"order":285,},
+    {"id":{"name":"scrHasAllStartingWeapons","path":"scripts/scrHasAllStartingWeapons/scrHasAllStartingWeapons.yy",},"order":32,},
     {"id":{"name":"mskShank","path":"sprites/mskShank/mskShank.yy",},"order":13,},
     {"id":{"name":"sprSlash","path":"sprites/sprSlash/sprSlash.yy",},"order":15,},
     {"id":{"name":"sprGoldenSlash","path":"sprites/sprGoldenSlash/sprGoldenSlash.yy",},"order":17,},
