@@ -5028,7 +5028,7 @@
     {"id":{"name":"scrDecideCurse","path":"scripts/scrDecideCurse/scrDecideCurse.yy",},"order":21,},
     {"id":{"name":"IDPDLaser","path":"objects/IDPDLaser/IDPDLaser.yy",},"order":74,},
     {"id":{"name":"EnemyBullet4","path":"objects/EnemyBullet4/EnemyBullet4.yy",},"order":75,},
-    {"id":{"name":"Sprite3454","path":"sprites/Sprite3454/Sprite3454.yy",},"order":9,},
+    {"id":{"name":"sprThumbnail","path":"sprites/sprThumbnail/sprThumbnail.yy",},"order":9,},
     {"id":{"name":"sprToxicMushroomGuyWalk","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"order":1,},
     {"id":{"name":"EnemyBullet5","path":"objects/EnemyBullet5/EnemyBullet5.yy",},"order":76,},
     {"id":{"name":"sprSpinSlash","path":"sprites/sprSpinSlash/sprSpinSlash.yy",},"order":67,},

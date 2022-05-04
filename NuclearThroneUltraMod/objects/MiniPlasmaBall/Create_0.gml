@@ -9,11 +9,16 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 //friction=0.4;
 dmg = 3//15
-
+nomscale = 1;
 if instance_exists(Player)
 {
 if Player.skill_got[17] = 1
-dmg = 5+(Player.betterlaserbrain)
+{
+	dmg++
+	nomscale += 0.2;
+	if Player.betterlaserbrain > 0
+		dmg++;
+}
 }
 originalDirection=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 direction=originalDirection;

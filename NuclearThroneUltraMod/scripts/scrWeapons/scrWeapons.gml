@@ -4969,7 +4969,7 @@ function scrWeapons() {
 	wep_type[450] = 2
 	wep_auto[450] = 0
 	wep_load[450] = 15
-	wep_cost[450] = 3
+	wep_cost[450] = 2
 	wep_sprt[450] = sprPopLaser
 	wep_area[450] = 12
 	wep_text[450] = "more pellets with higher accuracy"

@@ -367,7 +367,7 @@ if (wep = 46 || bwep = 46 || cwep == 46) && loops=1
 	}
 }
 //Secret
-if ((wep == 375 || bwep == 375 || cwep == 375) && isValidGamemodeToUnlock(0) && loops == 1)
+if ((wep == 375 || bwep == 375 || cwep == 375) && isValidGamemodeToUnlock(0) && loops == 2)
 {
 	with UberCont
 	{
@@ -375,7 +375,7 @@ if ((wep == 375 || bwep == 375 || cwep == 375) && isValidGamemodeToUnlock(0) && 
 		scrSaveEncrypted();
 		with instance_create(x,y,UnlockPopup)
 		{
-			mytext="UNLOCKED SUPER SECRET#FOR BRINGING#THE INVERSION MAGNET#TO LOOP";
+			mytext="UNLOCKED SUPER SECRET#FOR BRINGING#THE INVERSION MAGNET#TO LOOP 2";
 		}
 	}
 }
