@@ -32,8 +32,8 @@ else if(speed>6)
 
 if(image_xscale<nomscale)
 {
-image_xscale+=0.08;
-image_yscale+=0.08;
+image_xscale+=0.03;
+image_yscale+=0.03;
 }
 else
 {

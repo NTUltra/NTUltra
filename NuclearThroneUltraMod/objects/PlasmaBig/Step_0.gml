@@ -30,8 +30,8 @@ else if(speed>6)
 
 if(image_xscale<nomscale)
 {
-image_xscale+=0.08;
-image_yscale+=0.08;
+image_xscale+=0.03;
+image_yscale+=0.03;
 }
 else
 {
@@ -44,8 +44,8 @@ instance_destroy();
 
 with instance_create(x+random(16)-8,y+random(32)-16,PlasmaFX)
 {
-motion_add(other.direction+random(30)-15,random(2))
-image_xscale+=0.1;
-image_yscale+=0.1;
+	motion_add(other.direction+random(30)-15,random(2))
+	image_xscale+=0.1;
+	image_yscale+=0.1;
 }
 

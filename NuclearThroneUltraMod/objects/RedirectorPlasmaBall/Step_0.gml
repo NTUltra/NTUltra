@@ -29,8 +29,8 @@ else if(speed>maxspeed)
 
 if(image_xscale<nomscale)
 {
-image_xscale+=0.1;
-image_yscale+=0.1;
+image_xscale+=0.032;
+image_yscale+=0.032;
 }
 else
 {
@@ -64,13 +64,16 @@ maxspeed = 16;
 direction=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 originalDirection = direction;
 resetSpeed = false;
+snd_play(sndPlasmaHit,0.1,true)
 with instance_create(x,y,PlasmaImpact)
 {
 	sprite_index = sprRedirectorPlasmaImpact;
 }
 scrRedirectFx();
-image_xscale=1.2;
-image_yscale=1.2;
+
+nomscale += 0.2;
+image_xscale=nomscale
+image_yscale=nomscale
 turned=true;
 }
 }

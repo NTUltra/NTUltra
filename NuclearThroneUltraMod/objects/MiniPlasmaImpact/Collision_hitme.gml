@@ -1,8 +1,8 @@
 if other.team != team
 {
-	if other.sprite_index != other.spr_hurt
+	with other
 	{
-		with other
+		if sprite_index != spr_hurt
 		{
 			snd_play(snd_hurt, hurt_pitch_variation)
 			my_health -= other.dmg
@@ -11,10 +11,10 @@ if other.team != team
 			motion_add(point_direction(other.x,other.y,x,y),2)
 			BackCont.shake += 1
 		}
-	}
-	else
-	{
-		image_index += 0.2;//iframe skipper
+		else
+		{
+			image_index += 0.2;//iframe skipper
+		}
 	}
 }
 
