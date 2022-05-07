@@ -14,7 +14,7 @@ if um == ultramods.bulletShotgun
 	instance_destroy(id,false);
 } else if um == ultramods.shotgunBolt
 {
-	with instance_create(x,y,Splinter)
+	with instance_create(x,y,FlameSplinter)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;

@@ -99,9 +99,9 @@ if race=16
 	if skill_got[5]
 		freeArmourStrike = true;
     armour++;
-	if ultra_got[62]//Viking armour up ultra
-	    armour++;
 }
+if ultra_got[62]//Viking armour up ultra
+	    armour++;
 
 if race==10//Rebel pasive
 {
@@ -270,9 +270,9 @@ looping=false;
     //instance_create(x,y,Crown)
     UberCont.ctot_loop[race] += 1
     loops += 1
-    if (ultra_got[75] == 1)
+    if (ultra_got[73] == 1)
 	{
-		ultra_got[75] = 0;
+		ultra_got[73] = 0;
 		skillpoints ++
 		ultraNow = true;
 		skillsChosen --;

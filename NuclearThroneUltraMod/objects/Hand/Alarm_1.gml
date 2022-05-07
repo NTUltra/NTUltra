@@ -43,8 +43,11 @@ if target > 0 && instance_exists(target)
 			pushDirection = point_direction(creator.x,creator.y,target.x,target.y);
 			pushStartX = target.x;
 			pushStartY = target.y;
-			pushX = target.x + lengthdir_x(pushStrength/max(1,target.size*0.5),pushDirection);
-			pushY = target.y + lengthdir_y(pushStrength/max(1,target.size*0.5),pushDirection);
+			var s = target.size;
+			if s == 4
+				s = 5;
+			pushX = target.x + lengthdir_x(pushStrength/max(1,s*0.5),pushDirection);
+			pushY = target.y + lengthdir_y(pushStrength/max(1,s*0.5),pushDirection);
 		}
 		else
 		{
@@ -70,13 +73,18 @@ if target > 0 && instance_exists(target)
 					sprite_index = spr_hurt;
 					image_index = 0;
 				}
-				if (size > 2 && !other.push) || size > 3
+				if (size > 2 && !other.push) || size > 4
 				{
 					other.target = -1;
 				}
 				if other.push
 				{
 					direction = other.pushDirection;
+					speed = other.pushSpeed/max(1,(size*0.5));
+					if size == 4
+					{
+						speed *= 0.75;
+					}
 					speed = other.pushSpeed/max(1,(size*0.5));
 				}
 			}

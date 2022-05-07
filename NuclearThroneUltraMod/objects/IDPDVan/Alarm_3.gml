@@ -4,6 +4,7 @@ size=2;
 if team != 2
 team=3;
 else*/
+spr_walk = spr_idle;
 team = 0;
 var extra = 0;
 if RogueIDPD

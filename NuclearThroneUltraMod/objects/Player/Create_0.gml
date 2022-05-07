@@ -145,6 +145,7 @@ scrWeapons();
 wep = 0;
 bwep = 0;
 altUltra = false;
+loops = 0;
 scrUltras()
 scrCrowns()
 
@@ -156,7 +157,7 @@ if race == 7 && bskin == 2
 //RACE STUFF
 scrLoadRace();
 
-
+canSecondaryPop = true;
 
 if UberCont.opt_gamemode == 14 //fish companion only
 {
@@ -267,7 +268,7 @@ maxspeed = 4
 
 
 level = 1
-maxlevel = 10
+maxlevel = 10 + UberCont.levelIncrease;
 if UberCont.opt_gamemode == 15 //no mutaitons gamemode
 maxlevel = 1;
 skillsChosen = 0
@@ -275,7 +276,6 @@ skillpoints = 0;
 crownpoints = 0
 
 kills = 0
-loops = 0
 
 //AREA STUFF
 area = 1

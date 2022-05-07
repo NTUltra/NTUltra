@@ -32,7 +32,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 			//screen_save("explain"+string(scrn)+".png");
 			//scrn++;
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			instance_create(f.x + 16,f.y + 16,InvertedAssassinBoss)
+			instance_create(f.x + 16,f.y + 16,HealthChest)
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
 			thing.mytext = "HEALTH CHEST";
 		}
@@ -719,7 +719,7 @@ if (rad > mr)
 	}
 	skillpoints += 1
 	if level > 40
-		skillsChosena --;
+		skillsChosen --;
 	
 
 	}
@@ -764,6 +764,10 @@ if reload > 0
 		reload -= 0.265//0.25
     
 	}
+	if (ultra_got[24])//ULTA D
+	{
+		breload -= 0.6325;
+	}
 	if ultra_got[21]//YV ULTRA A
 	{
 		reload -=0.45;
@@ -801,15 +805,15 @@ if reload > 0
 
 	if skill_got[28] = 1
 	{
-	//rage
-	var rageAccuracy;
-	var reduction = rage*0.0054;
-	reload -= reduction//0.01//0.009 when cap is 100
-	breload -= reduction;
-	creload -= reduction;
+		//rage
+		var rageAccuracy;
+		var reduction = rage*0.0054;
+		reload -= reduction//0.01//0.009 when cap is 100
+		breload -= reduction;
+		creload -= reduction;
 
-	rageAccuracy = rage*0.001//0.0011// caps at 0.10 increase when cap = 100
-	accuracy=standartAccuracy+rageAccuracy;//standartAccuracy will be changed by eagle eyes so this scales with that.
+		rageAccuracy = rage*0.0012//0.0011// caps at 0.10 increase when cap = 100
+		accuracy=standartAccuracy+rageAccuracy;//standartAccuracy will be changed by eagle eyes so this scales with that.
 	}
 
 

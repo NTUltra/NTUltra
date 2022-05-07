@@ -44,30 +44,28 @@ function scrYVPower(){
 			snd_play_2d(sndPopPop)
 
 
-			if Player.ultra_got[24]=1//YV ULTRA D
+			if Player.ultra_got[24]//YV ULTRA D
 			{
 			scrSwapWeps()
-			//I should check if its a melee weapon again but I think its a really cool combo so nah leave the "bug" in
-			if ammo[wep_type[wep]] >= wep_cost[wep]*(2+Player.skill_got[5]*2) and rad>=wep_rad[bwep]*(2+Player.skill_got[5]*2)// Check ammo of our secondary wep
+			if !scrMeleeWeapons(wep)
 			{
-
-			    if (2>random(wep_cost[wep]*0.7) )//the random value less likely when the other weapons cost is a lot
-			    {
-			    repeat(2+Player.skill_got[5]*2)
-			        {
-			        scrFire()
-			        can_shoot = 1}
-			    can_shoot = 0
+				if ammo[wep_type[wep]] >= wep_cost[wep]*(2+Player.skill_got[5]*2) and rad>=wep_rad[wep]*(2+Player.skill_got[5]*2)// Check ammo of our secondary wep
+				{
+					if Player.canSecondaryPop
+					{
+						repeat(2+Player.skill_got[5]*2 + Player.ultra_got[22])
+					    {
+							scrFire()
+							can_shoot = 1
+						}
+						can_shoot = 0
     
-			    reload *= 1.9+Player.skill_got[5]*1.4//added reload time
-			    }
+						reload *= (1.9+Player.skill_got[5])*1.4//added reload time
+					}
+					Player.canSecondaryPop = !Player.canSecondaryPop;	
+				}
 			}
 			scrSwapWeps()
-
-			if Player.skill_got[5] = 1{
-			snd_play_2d(sndPopPopUpg);}
-			else
-			snd_play_2d(sndPopPop)
 
 			}
 			reload *= 1.9+Player.skill_got[5]*1.4//added reload time

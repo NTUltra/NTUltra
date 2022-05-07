@@ -7330,7 +7330,7 @@ function scrFire2() {
 
 	with instance_create(x+hspeed,y+vspeed,SpinSlash)
 	{
-		dmg = 20
+		dmg = 10
 		speed = other.speed*0.5;
 		direction = other.direction;
 		longarms = 0

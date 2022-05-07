@@ -7,7 +7,7 @@ if um == ultramods.bulletShotgun
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = other.speed;
+		speed = other.speed+2;
 		team = other.team;
 		alarm[11] = 0;
 	}
@@ -16,7 +16,7 @@ if um == ultramods.bulletShotgun
 {
 	instance_destroy(id,false);
 	snd_play_fire(sndSplinterGun)
-	with instance_create(x,y,StormSplinter)
+	with instance_create(x,y,FlameSplinter)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;

@@ -113,7 +113,7 @@ function scrUltras() {
 		}
     
 	    ultra_name[24] = "VERIFY VENUZ"
-	    ultra_text[24] = "RIGHT CLICK SOMETIMES#ALSO FIRES YOUR SECONDARY WEAPON#CAN POP FULL AUTO YO"
+	    ultra_text[24] = "EVERY OTHER POP POP ALSO FIRES#YOUR SECONDARY WEAPON#CAN POP FULL AUTO#RELOAD SECONDARY AT HALF SPEED"
 	    ultra_tips[24] = "blood gamble"
     
 	//STEROIDS 
@@ -318,7 +318,7 @@ function scrUltras() {
     
 	//WEAPON SMITH 
 	ultra_name[65] = "WEAPON MODDER"
-	ultra_text[65] = "IN EVERY AREA#A WEAPON MOD SPAWNS#INCREASE HOW OFTEN MODS TRIGGER"
+	ultra_text[65] = "IN EVERY AREA#A WEAPON MOD SPAWNS#INCREASE HOW OFTEN MODS TRIGGER#COMBINING A WEAPON ADDS A MOD TO IT"
 	ultra_tips[65] = "modder"
 
 	ultra_name[66] = "ARMOUR SMITH"
@@ -395,7 +395,14 @@ function scrUltras() {
 	    ultra_tips[78] = "options"
     
 	    ultra_name[79] = "INVESTMENT"
-	    ultra_text[79] = "GAIN NOTHING NOW#IF YOU REACH LOOP 2#YOU CAN CHOOSE TWO RANDOM ULTRAS#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
+		if GetPlayerLoops() > 1
+		{
+			ultra_text[79] = "GAIN NOTHING NOW#IF YOU REACH THE NEXT LOOP#YOU CAN CHOOSE TWO RANDOM ULTRAS#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
+		}
+		else
+		{
+			ultra_text[79] = "GAIN NOTHING NOW#IF YOU REACH LOOP 2#YOU CAN CHOOSE TWO RANDOM ULTRAS#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
+		}
 	    ultra_tips[79] = "are you that good?"
     
 	    ultra_name[80] = "GOLD DIGGER"

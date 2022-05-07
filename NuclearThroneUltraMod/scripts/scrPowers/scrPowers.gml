@@ -618,13 +618,17 @@ function scrPowers() {
 			}
 	    }
     
-	ammo[wep_type[wep]]+=wep_cost[wep]//return ammo
+	var t = wep_type[wep]
+	ammo[t]+=wep_cost[wep]//return ammo
 	rad+=wep_rad[wep]//return rad cost
 	can_shoot=0;
+	//Cap ammo
+	ammo[wep_type[wep]] = min(ammo[wep_type[wep]],typ_amax[t]);
+	rad = min(rad,GetPlayerMaxRad());
 
 	if Player.ultra_got[74]//Meltings Damnation Ultra B
 	{
-	reload*=0.2;//80 procent fire rate boost
+		reload*=0.2;//80 procent fire rate boost
 	}
 
 

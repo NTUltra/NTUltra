@@ -1,6 +1,6 @@
 alarm[0]=30+random(120);
 
-
+depth -= 1;
 COS=100+irandom(100);
 
 image_angle=random(360);

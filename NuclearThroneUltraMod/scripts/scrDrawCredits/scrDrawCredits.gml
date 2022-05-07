@@ -18,8 +18,8 @@ function scrDrawCredits() {
 	if creditpage == 0
 	{
 		
-		thanks = "#ADDITIONAL ART:#ricottakitten#Guru Jr##QA#AgentCucco#pLasma#ToasterGhostMary#Guru Jr#Worm Chase/Wood Man#Mr. G & W jaB#Kaz!#skele##NT-UM WIKI#such a handsome#lass##"
-		stxt2 = "######ADDITIONAL ART:####QA:##########NT-UM WIKI:"
+		thanks = "#ADDITIONAL ART:#ricottakitten#Guru Jr#NotYourSagittarius##QA#AgentCucco#pLasma#ToasterGhostMary#Guru Jr#Worm Chase/Wood Man#Mr. G & W jaB#Kaz!#skele##NT-UM WIKI#such a handsome#lass##"
+		stxt2 = "######ADDITIONAL ART:#####QA:##########NT-UM WIKI:"
 		txt0 = "#NUCLEAR THRONE ULTRA#NUCLEAR THRONE BY VLAMBEER##MOD BY ERDEPPOL"
 		txt1 = "######ADDITIONAL CODE:#base4/spencers145##ART & SFX:#@larje100##ULTRA MUTATION ART:#@tilde_bee#Lynzkar#skurleton#Lunarshards###ToasterGhostMary##HUNTER & CHICKEN C:#NotYourSagittarius##"
 		txt2 = "#####"+string(thanks)
@@ -33,7 +33,7 @@ function scrDrawCredits() {
 		txt0 = "#NUCLEAR THRONE#A GAME BY VLAMBEER##MOD BY ERDEPPOL"
 		txt1 = "######DIRECTOR:#JAN WILLEM NIJMAN##PRODUCER:#RAMI ISMAIL##ART & ORIGINAL#CHARACTER DESIGN:#PAUL VEER##ORIGINAL MUSIC:#JUKIO KALLIO##SOUND DESIGN:#JOONAS TURNER##PROMOTIONAL ART:#JUSTIN CHAN##VOICE OF MR. VENUZ:#DOSEONE#"
 		txt2 = "###"+string(thanks)
-		stxt0 = "#NUCLEAR THRONE###MOD    ERDEPPOL########################[PRESS SPACE FOR PAGE 1]"
+		stxt0 = "#NUCLEAR THRONE###MOD    ERDEPPOL########################[PRESS SPACE FOR PAGE 3]"
 		stxt1 = "######DIRECTOR:###PRODUCER:###ART & ORIGINAL#CHARACTER DESIGN:###ORIGINAL MUSIC:###SOUND DESIGN:###PROMOTIONAL ART:###VOICE OF MR. VENUZ:#####"
 	}
 	else if creditpage == 2
@@ -51,7 +51,7 @@ function scrDrawCredits() {
 		txt0 = "#NUCLEAR THRONE ULTRA#NUCLEAR THRONE BY VLAMBEER##MOD BY ERDEPPOL"
 		txt1 = "######AWESOME PEOPLE:#Burrinoo#Turtle Melon#Jodi#@ideaot/jasmine#Chubbyemu#SLEEPCYCLES#Kakujo#YellowAfterlife###@Erdeppol##NT-UM DISCORD"
 		txt2 = "#####"+string(thanks)
-		stxt0 = "#NUCLEAR THRONE ULTRA###MOD    ERDEPPOL#####################THANK YOU FOR PLAYING!###[PRESS SPACE FOR PAGE 3]"
+		stxt0 = "#NUCLEAR THRONE ULTRA###MOD    ERDEPPOL#####################THANK YOU FOR PLAYING!###[PRESS SPACE FOR PAGE 1]"
 		stxt1 = "######AWESOME PEOPLE:##########PRESS [T] TWITTER##PRESS [D] DISCORD"//White text
 	}
 

@@ -8,7 +8,7 @@ __view_set( e__VW.YView, 0, 0 )
 wave = 0
 
 if UberCont.useSeed && instance_exists(Player)
-	random_set_seed(UberCont.seed+Player.lastarea);
+	random_set_seed(UberCont.seed+Player.lastarea+Player.lastsubarea);
 
 if Player.crownpoints > 0
 {
@@ -169,7 +169,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && Player.skillpoints < 2
 	exit;    
     
     }//end of the ultra code
-    else if Player.ultra_got[75]{//*/ Skelly ultra A redemption patience all da time
+    else if Player.ultra_got[73]{//*/ Skelly ultra A redemption patience all da time
     
     scrSkills()//maybe dont run this when ultra
     //27
@@ -334,7 +334,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && Player.skillpoints < 2
     
     }
     else{
-	    if Player.ultra_got[75]//Melting ultra A patience
+	    if Player.ultra_got[73]//Melting ultra A patience
 	    {
 	    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-96,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
 	    skill = other.skill0
@@ -378,7 +378,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && Player.skillpoints < 2
 	    else  
 	    {
     
-	    if Player.ultra_got[75]//Melting ultra A patience
+	    if Player.ultra_got[73]//Melting ultra A patience
 	    {
 	    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
 	    skill = other.skill0

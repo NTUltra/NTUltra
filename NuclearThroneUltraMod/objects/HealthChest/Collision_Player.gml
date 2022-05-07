@@ -14,10 +14,9 @@ instance_destroy()
 var  mHpI = 2;
 with other {
 	//OVERHEAL
-	var overheal = ceil(my_health + other.num - maxhealth);
+	var overheal = min(my_health,maxhealth) + other.num - maxhealth;
 	my_health += other.num-overheal;
-	my_health += overheal * 0.5;
-	my_health = ceil(my_health);
+	my_health += ceil(overheal * 0.5);
 	other.num = ceil(other.num-(overheal*0.5));
 	/*
 	if my_health + other.num <= maxhealth

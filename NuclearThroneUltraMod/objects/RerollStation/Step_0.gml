@@ -139,6 +139,10 @@ if place_meeting(x,y,Player) && !used
 					hammerheadtimer = 0;
 					hammerheadcounter = 0;
 				break;
+				case 28: //RAGE
+					rage = 0;
+					accuracy=standartAccuracy;
+				break;
 				case 33: //GLASS ARM CANNON
 					maxhealth += 2;//I guess you could have 3 hp as melting here but thats cool
 				break;

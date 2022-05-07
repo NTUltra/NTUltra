@@ -1,5 +1,5 @@
-snd_play(sndMeatExplo)
-snd_play(sndBloodLauncherExplo)
+snd_play(sndMeatExplo,0.1,true)
+snd_play(sndBloodLauncherExplo,0.1,true)
 instance_create(x,y,MeatExplosion);
 
 ang = random(360)

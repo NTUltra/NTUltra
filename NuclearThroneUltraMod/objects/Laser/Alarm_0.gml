@@ -24,18 +24,28 @@ if(instance_exists(Player)){
 				team = other.team
 				alarm[11] = 0;}
 			}
-			else
+			else if laserhit > 0
 			{
 				snd_play_fire(sndBouncerFire);
 				var acc = scrGetPlayerAccuracy();
 				with instance_create(x,y,Bullet3)
-				{motion_add(other.image_angle-(5*acc),16)
+				{motion_add(other.image_angle-(5*acc),14)
 					scrCopyWeaponMod(other);
 				image_angle = direction
 				team = other.team
 				alarm[11] = 0;}
 				with instance_create(x,y,Bullet3)
-				{motion_add(other.image_angle+(5*acc),16)
+				{motion_add(other.image_angle+(5*acc),14)
+					scrCopyWeaponMod(other);
+				image_angle = direction
+				team = other.team
+				alarm[11] = 0;}
+			}
+			else
+			{
+				snd_play_fire(sndHeavyMachinegun);
+				with instance_create(x,y,HeavyBullet)
+				{motion_add(other.image_angle,16)
 					scrCopyWeaponMod(other);
 				image_angle = direction
 				team = other.team

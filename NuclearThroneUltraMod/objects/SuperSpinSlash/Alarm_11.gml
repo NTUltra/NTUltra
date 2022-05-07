@@ -7,6 +7,7 @@ repeat(am)
 {
 	with instance_create(x,y,HeavyBloodBullet)
 	{
+		ceil(other.dmg*0.25);
 		scrCopyWeaponMod(other);
 		direction = ang;
 		image_angle = direction;

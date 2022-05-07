@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprSplinter",
-    "path": "sprites/sprSplinter/sprSplinter.yy",
+    "name": "sprInfuseSplinter",
+    "path": "sprites/sprInfuseSplinter/sprInfuseSplinter.yy",
   },
   "solid": false,
   "visible": true,
@@ -34,6 +34,7 @@
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"hitme","path":"objects/hitme/hitme.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"Wall","path":"objects/Wall/Wall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":11,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

@@ -21,7 +21,7 @@ function scrUltraModDescription(um){
 		break;
 		case ultramods.laserBullet:
 			umn = @"SWAPS
-			LASERS <TO> 3 BULLET
+			LASERS <TO> HEAVY BULLETS
 			BULLETS <TO> LASERS
 			BOUNCER LASERS <TO> 2 BOUNCER BULLETS
 			BOUNCER BULLETS <TO> BOUNCER LASERS
@@ -47,6 +47,7 @@ function scrUltraModDescription(um){
 		break;
 		case ultramods.plasmaBolt:
 			umn = @"SWAPS
+			SPLINTER <WITH> MINI PLASMA
 			PLASMA <WITH> BOLTS
 			BOUNCER PLASMA <WITH> BOUNCER BOLTS
 			HEAVY BOLTS <TO> PLASMA CANNON BALLS"
@@ -89,12 +90,15 @@ function scrUltraModDescription(um){
 			umn = @"SWAPS
 			SHOTGUN PELLETS <WITH> SPLINTERS
 			SLUGS <WITH> BOLTS
-			HEAVY SLUGS <WITH> HEAVY BOLTS"
+			HEAVY SLUGS <WITH> HEAVY BOLTS
+			INFUSE SPLINTER <WITH> INFUSE PELLET
+			INFEST SPLINTER <WITH> INFEST PELLET"
 		break;
 		case ultramods.splinterBullet:
 			umn = @"SWAPS
 			SPLINTERS <WITH> BULLETS
-			ULTRA SPLINTERS <WITH> ULTRA BULLETS"
+			ULTRA SPLINTERS <WITH> ULTRA BULLETS
+			FLAME SPLINTERS <WITH> FLAME BULLETS"
 		break;
 	
 		case ultramods.bulletPlasma:

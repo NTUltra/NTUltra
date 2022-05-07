@@ -12,6 +12,10 @@ if other.team != team and other.my_health > 0 && alarm[3] < 1
 			snd_play(snd_hurt, hurt_pitch_variation)
 			image_index = 0
 		}
+		else
+		{
+			image_index += 0.2;//iframe skipper
+		}
 		motion_add(other.direction,4)
 	}
 	alarm[3] = 3;

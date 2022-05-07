@@ -121,11 +121,11 @@ Player.skillpoints+=4;//amounth of mutations
 if skill==62
 {
 with Player{
-if race==19 || race==24//skelly business hog
-{
-armour=0;
-maxarmour=0;
-}
+	if maxarmour < 1//skelly business hog
+	{
+		armour=0;
+		maxarmour=0;
+	}
 armour+=2;
 maxarmour+=2;
 }
@@ -171,7 +171,7 @@ with Player
 			hard = other.hard;
 			kills = other.kills;
 			subarea=other.subarea;
-			ultra_got[75]=1;//you picked redemption
+			ultra_got[73]=1;//you picked redemption
 			skillpoints=max(0,other.level-2);
 			level=other.level;
 

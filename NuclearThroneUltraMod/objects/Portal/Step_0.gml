@@ -81,7 +81,7 @@ if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or
 	}
 	if type = 3
 	sprite_index = sprProtoPortalDisappear
-	else if isPink
+	else if isPink && !inverted
 		sprite_index = sprPinkPortalDisappear;
 	if type = 4
 	sprite_index = sprBigPortalDisappear;
@@ -93,7 +93,7 @@ if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or
 	}
 }
 }
-if !instance_exists(Player)
+if !instance_exists(Player) && !instance_exists(PlayerSpawn)
 {
 endgame = -1
 if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or sprite_index = sprPortalInverted ||  sprite_index = sprBigPortal || sprite_index == sprPinkPortal)
@@ -107,7 +107,7 @@ if inverted
 }
 if type = 3
 	sprite_index = sprProtoPortalDisappear
-	else if isPink
+	else if isPink && !inverted
 		sprite_index = sprPinkPortalDisappear;
 if type = 4
 	sprite_index = sprBigPortalDisappear;

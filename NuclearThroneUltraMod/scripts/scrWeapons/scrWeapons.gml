@@ -2444,7 +2444,7 @@ function scrWeapons() {
 	wep_load[221] = 20
 	wep_cost[221] = 2
 	wep_sprt[221] = sprDoomLauncher
-	wep_area[221] = 10
+	wep_area[221] = 12
 	wep_text[221] = "let's launch some doom!"
 	wep_swap[221] = sndSwapMotorized
 	wep_rad[221] = 0;
@@ -3643,7 +3643,7 @@ function scrWeapons() {
 	wep_load[330] = 11
 	wep_cost[330] = 1
 	wep_sprt[330] = sprDoomPistol
-	wep_area[330] = 6
+	wep_area[330] = 8
 	wep_text[330] = "cute bots of doom"
 	wep_swap[330] = sndSwapExplosive
 	wep_rad[330] = 0;
@@ -3654,7 +3654,7 @@ function scrWeapons() {
 	wep_load[331] = 16
 	wep_cost[331] = 2
 	wep_sprt[331] = sprDoomRifle
-	wep_area[331] = 8
+	wep_area[331] = 10
 	wep_text[331] = "doombots are cool"
 	wep_swap[331] = sndSwapExplosive
 	wep_rad[331] = 0;
@@ -4933,7 +4933,7 @@ function scrWeapons() {
 	wep_rad[446] = 0;
 	
 	wep_name[447] = "AUTO MISSILE LAUNCHER"
-	wep_type[447] = 5
+	wep_type[447] = 4
 	wep_auto[447] = 1
 	wep_load[447] = 8
 	wep_cost[447] = 2
@@ -5034,10 +5034,10 @@ function scrWeapons() {
 	wep_name[456] = "SUPER SCYTHE"
 	wep_type[456] = 0
 	wep_auto[456] = 0
-	wep_load[456] = 19
+	wep_load[456] = 24
 	wep_cost[456] = 0
 	wep_sprt[456] = sprSuperScythe
-	wep_area[456] = 23
+	wep_area[456] = 22
 	wep_text[456] = "super scythe me"
 	wep_swap[456] = sndSwapHammer
 	wep_rad[456] = 0;

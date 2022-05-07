@@ -29,9 +29,9 @@ function scrLoadRun(){
 			var encryptedRun = json_parse(hashlessString);
 			if is_struct(encryptedRun)
 			{
-				Player.area = encryptedRun.area;
-				BackCont.area = encryptedRun.area;
-				UberCont.area = encryptedRun.area;
+				Player.area = 100//encryptedRun.area;
+				BackCont.area = 100//encryptedRun.area;
+				UberCont.area = 100//encryptedRun.area;
 				Player.subarea = encryptedRun.subarea;
 				BackCont.subarea = encryptedRun.subarea;
 				Player.lastarea = encryptedRun.lastarea;
@@ -145,7 +145,7 @@ function scrLoadRun(){
 				Player.maxarmour = encryptedRun.maxarmour;
 				UberCont.crownVaultChallenge = encryptedRun.crownVaultChallenge;
 				Player.randomlySelected = encryptedRun.randomlySelected;
-				UberCont.canSave = encryptedRun.canSave;
+				UberCont.canSave = true//encryptedRun.canSave;
 				Player.saveLoaded = true;//To position to save station,
 				if variable_struct_exists(encryptedRun, "altUltra")
 					Player.altUltra = encryptedRun.altUltra;
@@ -160,6 +160,7 @@ function scrLoadRun(){
 				scrLoadRace();
 				//Some ultras change weapon stats:
 				scrWeapons();
+				scrWeaponHold();
 			}
 			debug("load complete");
 			room_restart();

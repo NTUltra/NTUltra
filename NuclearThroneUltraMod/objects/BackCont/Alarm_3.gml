@@ -2,10 +2,10 @@
 totalEnemyHealth=0;
 with enemy
 {
-if object_index=IDPDVan
-other.totalEnemyHealth+=floor(my_health*0.1)
-else
-other.totalEnemyHealth=other.totalEnemyHealth+my_health
+	if object_index == IDPDVan ||  object_index == IDPDVanVertical
+		other.totalEnemyHealth+=floor(my_health*0.1)
+	else
+		other.totalEnemyHealth=other.totalEnemyHealth+my_health
 }
 
 //We've reached a new high set this as the maximum hp we found this level.
