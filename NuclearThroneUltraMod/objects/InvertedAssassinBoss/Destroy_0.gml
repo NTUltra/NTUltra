@@ -11,6 +11,7 @@ with Player
 }
 scrBossKill();
 event_inherited()
+if UberCont.area == 106
 scrDefeatedRequiredBoss(secretChallengeBosses.bigAssassin);
 with Corpse
 {

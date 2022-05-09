@@ -35,3 +35,4 @@ maxRange += min(GetPlayerLoops()*20,400);
 lox = 16;//Laser offset X
 instance_create(x,y,BigWallBreak);
 isInverted = false;
+alarm[0] = 1;

@@ -60,3 +60,4 @@ afterImageDelay = 4;
 afterImageDuration = afterImageDelay;
 alarm[7] = afterImageDelay;
 smackdelayReduction = clamp(0 + ((GetPlayerLoops()-1)*3),0,10);
+deflectExhaustion = 0;

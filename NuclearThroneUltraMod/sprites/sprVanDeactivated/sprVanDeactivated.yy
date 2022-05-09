@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprVanDeactivated","path":"sprites/sprVanDeactivated/sprVanDeactivated.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprVanDeactivated",
     "tags": [],
     "resourceType": "GMSequence",
   },

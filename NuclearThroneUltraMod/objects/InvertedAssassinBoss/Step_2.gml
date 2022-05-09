@@ -12,6 +12,8 @@ if fakeded > 0
 		depth -= 2;
 		mask_index = mskBandit;
 		my_health = maxhealth;
+		deflectExhaustion = 0;
+		aggression = 0;
 		EnemyHealthAdjustments();
 		snd_play_2d(sndAssassinGetUp)
 		sprite_index = spr_respawn;

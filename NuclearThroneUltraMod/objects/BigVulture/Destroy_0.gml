@@ -1,6 +1,7 @@
 scrDrop(100,100)
 scrDrop(20,0)
-scrDefeatedRequiredBoss(secretChallengeBosses.bigVulture);
+if UberCont.area == 10
+	scrDefeatedRequiredBoss(secretChallengeBosses.bigVulture);
 if !isOneWeaponOnlyModes()
 {
 	with instance_create(x-8,y,WepPickup)

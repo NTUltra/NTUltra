@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprVanHurt","path":"sprites/sprVanHurt/sprVanHurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprVanHurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -4,7 +4,7 @@ if instance_exists(Player)
 if Player.loops>0
 {//LOOP
 
-alarm[1] = 10+random(15);
+alarm[1] = 8+random(12);
 
 scrTarget()
 if target > 0

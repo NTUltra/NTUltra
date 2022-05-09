@@ -40,3 +40,4 @@ spr_chrg=false;
 spr_fire=false;
 existTime = 0;
 depth -= 1;
+myCorpse = -1;

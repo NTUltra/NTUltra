@@ -8,6 +8,8 @@ function scrSpawnTechnomancer(Whatmancer){
 	{
 		if GetPlayerLoops() > 3
 			thisMany += 1;
+		if GetPlayerLoops() > 5
+			thisMany += 1;
 		do {
 			with Floor
 			{
@@ -43,7 +45,7 @@ function scrSpawnTechnomancer(Whatmancer){
 				var yy = Player.y + lengthdir_y(dis,dir);
 				instance_create(instance_nearest(xx,yy,Floor).x+16, instance_nearest(xx,yy,Floor).y+16,Whatmancer);
 				d += 0.27;
-			} until (instance_number(Whatmancer) == 3)
+			} until (instance_number(Whatmancer) == thisMany)
 		}
 	}
 }

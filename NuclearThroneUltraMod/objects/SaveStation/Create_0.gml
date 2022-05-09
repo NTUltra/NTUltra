@@ -9,3 +9,7 @@ if UberCont.opt_gamemode == 26 || UberCont.opt_gamemode == 27
 {
 	name += "#DAILIES WILL BE LOADED AS NORMAL MODE RUNS"
 }
+if (instance_exists(Player) && UberCont.lastSaveLoop == Player.loops)
+{
+	name = 	"CAN ONLY SAVE ONCE PER LOOP";
+}

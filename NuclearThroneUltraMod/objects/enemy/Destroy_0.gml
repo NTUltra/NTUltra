@@ -4,7 +4,8 @@ if object_index!=SnowTank && object_index!=InvertedSnowTank && object_index!=Gol
 
 	if!(MorphMe){
 
-	with instance_create(x,y,Corpse)
+	myCorpse = instance_create(x,y,Corpse)
+	with myCorpse
 	{
 		size = other.size
 		mask_index = other.mask_index

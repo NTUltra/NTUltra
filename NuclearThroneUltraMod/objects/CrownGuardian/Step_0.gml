@@ -1,7 +1,7 @@
 
 if sprite_index = spr_fire or canfire = 0
 speed = 0
-else
+else if speed > 1
 {
 move_contact_solid(direction,1)
 if instance_exists(projectile) and canfire = 1 && alarm[3] < 1

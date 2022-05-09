@@ -18,10 +18,12 @@ snd_hurt = sndVanHurt
 
 //behavior
 walk = 0
-
+loops = GetPlayerLoops();
 idle=true;
 right = 1;
-acc = 9 + min(16,GetPlayerLoops());
+acc = 9 + min(16,loops);
+
+dropFreaks = false;
 /*
 if instance_exists(Player) && object_index != IDPDVanVertical
 {
@@ -37,4 +39,3 @@ motion_add(180,8);}
 friction=4;
 alarm[3]=45;
 
-ang = random(360);

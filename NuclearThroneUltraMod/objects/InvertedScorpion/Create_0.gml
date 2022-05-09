@@ -25,11 +25,11 @@ alarm[1] = 30+random(90)
 replace=false;
 if instance_exists(Player)
 {
-if random(30) < 1 and Player.subarea > 1
-{
-replace=true;
-instance_destroy()
-instance_create(x,y,InvertedGoldScorpion)
-}
+	if random(30) < 1 + min(26,Player.loops * 3) and (Player.subarea > 1 || Player.loops > 0)
+	{
+		replace=true;
+		instance_destroy()
+		instance_create(x,y,InvertedGoldScorpion)
+	}
 }
 

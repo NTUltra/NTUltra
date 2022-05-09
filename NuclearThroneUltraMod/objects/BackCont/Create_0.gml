@@ -20,6 +20,8 @@ shad = noone;//surface_create(view_wview,view_hview)
 
 alarm[0] = 1
 alarm[1] = 120
+canSpawnPopoThisManyTimes = 2 + GetPlayerLoops();
+spawnedThisManyPopo = 0;
 
 wantVanAmount = 0;
 vanDelay = 270;
@@ -34,7 +36,20 @@ if instance_exists(Player)
 		//No popo no
 		alarm[1] = 0;
 	}
-	wantVanAmount = GetPlayerLoops();
+	wantVanAmount = 0
+	var i = 0;
+	repeat(GetPlayerLoops())
+	{
+		if i < 4
+		{
+			wantVanAmount++;
+		}
+		else if i % 2 == 0//After loop 4 its every other loop another van
+		{
+			wantVanAmount++;
+		}
+		i ++;
+	}
 	vanDelay = max(60,vanDelay - ((wantVanAmount-1)*60));
 	if ( (Player.area == 6 || Player.area == 112) && Player.subarea ==  2 )
 		wantVanAmount = min(GetPlayerLoops()-2,2);

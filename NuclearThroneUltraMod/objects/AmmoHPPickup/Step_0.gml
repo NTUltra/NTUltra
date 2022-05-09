@@ -86,7 +86,7 @@ else//Cursed
 	if place_meeting(x,y,Player)
 	{
 		event_user(0);	
-	} else if (Player.ultra_got[108] && instance_exists(Hand))
+	} else if (instance_exists(Player) && Player.ultra_got[108] && instance_exists(Hand))
 	{
 		if place_meeting(x,y,Hand)
 		{

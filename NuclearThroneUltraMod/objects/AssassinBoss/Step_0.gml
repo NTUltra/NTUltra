@@ -1,4 +1,4 @@
-if (my_health <= 0 && lifes > 0 && fakeded < 0)
+if (my_health <= 0 && lifes > 0 && fakeded < 0 && instance_number(enemy) - instance_number(IDPDVan) - instance_number(InvertedAssassinBoss) > 4)
 {
 	depth += 2;
 	scrDrop(100,0);
@@ -115,7 +115,9 @@ if (alarm[4] < 0) {
 			        team = other.team
 		        }
 		        alarm[0] = 12
-        
+				alarm[5] = 3 + deflectExhaustion;
+				alarm[1] += 0.5;
+				deflectExhaustion += 2;
 		        snd_play(sndAssassinAttack)
 		        wepangle = -wepangle
 		        motion_add(projectiledir,6)

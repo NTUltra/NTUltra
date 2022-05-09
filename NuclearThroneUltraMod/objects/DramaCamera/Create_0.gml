@@ -1,3 +1,8 @@
+if instance_exists(InvaderBossSpawnPortal)
+{
+	instance_destroy();
+	exit;
+}
 if instance_exists(Player) && !instance_exists(SurvivalWave)
 {
     ///

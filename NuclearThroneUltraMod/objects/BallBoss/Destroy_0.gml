@@ -32,15 +32,16 @@ with MusCont
 }
 event_inherited();
 //Cleare the lockin
-with Floor
-{
-	if !isArenaFloor
+if !instance_exists(InvaderBossSpawnPortal)
+	with Floor
 	{
-		var walls = ds_list_create();
-		var al = instance_place_list(x,y,Wall,walls,false)
-		for (var i = 0; i < al; i++) {
-			instance_destroy(walls[| i]);
+		if !isArenaFloor
+		{
+			var walls = ds_list_create();
+			var al = instance_place_list(x,y,Wall,walls,false)
+			for (var i = 0; i < al; i++) {
+				instance_destroy(walls[| i]);
+			}
+			ds_list_clear(walls);
 		}
-		ds_list_clear(walls);
 	}
-}

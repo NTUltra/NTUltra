@@ -199,7 +199,7 @@ function scrModHit() {
 					motion_add(random(360),5.2)
 					image_angle = direction
 					team = 2
-					alarm[0] = 5;
+					alarm[0] = 7;
 				}
 				break;
 
@@ -213,7 +213,7 @@ function scrModHit() {
 						motion_add(random(360),10+random(5))
 						image_angle = direction
 						team = 2
-						alarm[0] = 3;
+						alarm[0] = 5;
 					}
 				}
 				break;

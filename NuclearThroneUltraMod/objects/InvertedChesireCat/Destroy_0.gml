@@ -18,7 +18,7 @@ scrUnlockGameMode(22,"FOR KILLING#THE INVERTED CHESHIRE CAT");
 Sleep(200)
 scrBossKill();
 instance_create(x,y,ChesireCatExplosion);
-
+if UberCont.area == 109
 scrDefeatedRequiredBoss(secretChallengeBosses.chesireCat);
 scrDrop(100,0)
 scrDrop(20,0)

@@ -1,6 +1,7 @@
 function scrSaveRun() {
 	with UberCont
 	{
+		lastSaveLoop = Player.loops;
 		encrypted_run_data = {
 			area: Player.area,
 			subarea: Player.subarea,

@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 
-raddrop = 4
+raddrop = 8
 maxhealth = 24
 my_health = maxhealth;
 EnemyHealthAdjustments();

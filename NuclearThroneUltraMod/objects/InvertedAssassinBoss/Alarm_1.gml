@@ -1,4 +1,7 @@
 alarm[1] = 4+random(5)
+deflectExhaustion -= 2;
+if deflectExhaustion < 0
+	deflectExhaustion = 0;
 scrTarget()
 if target > 0
 {
@@ -11,18 +14,18 @@ if target > 0
 		
 		if point_distance(target.x,target.y,x,y) < 70 && point_distance(target.x,target.y,x,y) > 24 {//SMACK THAT
 			if alarm[5] < 1 {
-				alarm[2]=12-smackdelayReduction
+				alarm[2]=15-smackdelayReduction
 				instance_create(x,y,Notice);
 				instance_create(x+5,y,Notice);
 				instance_create(x-5,y,Notice);
-				alarm[1]=18-smackdelayReduction;
+				alarm[1]=20-smackdelayReduction;
 				speed *= 0.1;
 			} else {
-				alarm[2]=18-smackdelayReduction
+				alarm[2]=20-smackdelayReduction
 				instance_create(x,y,Notice);
 				instance_create(x+5,y,Notice);
 				instance_create(x-5,y,Notice);
-				alarm[1]=32-smackdelayReduction;
+				alarm[1]=34-smackdelayReduction;
 				speed *= 0.1;
 			}
 		}

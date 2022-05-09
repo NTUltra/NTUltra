@@ -1,4 +1,5 @@
 /// @description BOSSES mods secret areas
+scrDecideInvader();
 if Player.area = 3 and Player.subarea = 3
 {
 	var n = instance_furthest(Player.x,Player.y,Floor)
@@ -9,6 +10,10 @@ if Player.area = 3 and Player.subarea = 3
 	var ds = point_distance(n.x,n.y,f.x,f.y)*0.6;
 	var nn = instance_nearest(n.x+lengthdir_x(ds,d),n.y+lengthdir_y(ds,d),Floor);
 	instance_create(nn.x+16,nn.y+16,DragonSkull);
+	if Player.loops > 4
+	{
+		scrSpawnMoreBosses(BecomeScrapBoss,1+clamp(floor((Player.loops-4)*0.5),1,3));
+	}
 }
 if Player.area == 101 and Player.subarea == 3
 {
@@ -17,6 +22,7 @@ if Player.area == 101 and Player.subarea == 3
 		with instance_furthest(Player.x,Player.y,SunkenCar)
 		{
 			instance_destroy(id,false);
+			instance_create(x,y,WallBreak);
 			instance_create(x,y,CarVenusOasis);
 		}
 	}
@@ -31,6 +37,7 @@ if Player.area == 101 and Player.subarea == 3
 				var yy = y + 16;
 				if !instance_exists(CarVenusOasis) && point_distance(xx,yy,Player.x,Player.y > mindis) && styleb == 0
 				{
+					instance_create(xx,yy,WallBreak);
 					instance_create(xx,yy,CarVenusOasis);
 				}
 			}
@@ -47,12 +54,18 @@ if Player.area == 101 and Player.subarea == 3
 }
 if Player.area = 106 and Player.subarea = 3
 {
-instance_create(instance_furthest(Player.x,Player.y,Floor).x+16, instance_furthest(Player.x,Player.y,Floor).y+16,BecomeInvertedScrapBoss)
+	instance_create(instance_furthest(Player.x,Player.y,Floor).x+16, instance_furthest(Player.x,Player.y,Floor).y+16,BecomeInvertedScrapBoss)
+	if Player.loops > 4
+	{
+		scrSpawnMoreBosses(BecomeInvertedScrapBoss,1+clamp(floor((Player.loops-4)*0.5),1,3));
+	}
 }
 
 if Player.area = 114 and Player.subarea = 2
 {
 	scrSpawnBoss(BecomeJungleBoss);
+	if (Player.loops > 4)
+		scrSpawnMoreBosses(BecomeJungleBoss,1+clamp(floor((Player.loops-4)*0.5),1,3));
 }
 
 	if (Player.area = 5 and Player.subarea = 3)
@@ -63,34 +76,44 @@ if Player.area = 114 and Player.subarea = 2
 
 	if (Player.loops>1) && (Player.area = 5 and Player.subarea = 3)
 	{
-	repeat(Player.loops-1)
-	instance_create(instance_furthest(Player.x,Player.y,Floor).x+132, instance_furthest(Player.x,Player.y,Floor).y+32,LilHunter);
+		repeat(clamp(round((Player.loops-1)*0.5),1,3))
+			instance_create(instance_furthest(Player.x,Player.y,Floor).x+132, instance_furthest(Player.x,Player.y,Floor).y+32,LilHunter);
 	}
-	if (Player.loops>2) && (Player.area = 107 and Player.subarea = 3)
+	if (Player.loops>1) && (Player.area = 107 and Player.subarea = 3)
 	{
-	repeat(Player.loops-2)
-	instance_create(instance_furthest(Player.x,Player.y,Floor).x+132, instance_furthest(Player.x,Player.y,Floor).y+32,InvertedLilHunter);
+		repeat(clamp(round((Player.loops-1)*0.5),1,3))
+			instance_create(instance_furthest(Player.x,Player.y,Floor).x+132, instance_furthest(Player.x,Player.y,Floor).y+32,LilHunter);
 	}
 
 if (Player.loops > 0 && ((Player.area == 2 && Player.subarea == 1) ||  Player.area == 10 && Player.subarea == 1))
 {
 	scrSpawnBoss(BallMom);
+	if (Player.loops > 5)
+		scrSpawnMoreBosses(BallMom,1+clamp(floor((Player.loops-4)*0.25),1,2));
 }
 if (Player.loops > 0 && Player.area == 110 && Player.subarea == 1)
 {
 	scrSpawnBoss(InvertedBallMom);
+	if (Player.loops > 5)
+		scrSpawnMoreBosses(InvertedBallMom,1+clamp(floor((Player.loops-4)*0.25),1,2));
 }
 if (Player.loops > 0 && Player.area == 4 && Player.subarea == 1)
 {
 	scrSpawnBoss(HyperCrystal);
+	if (Player.loops > 5)
+		scrSpawnMoreBosses(HyperCrystal,1+clamp(floor((Player.loops-4)*0.25),1,2));
 }
 if (Player.loops > 0 && Player.area == 111 && Player.subarea == 1)
 {
 	scrSpawnBoss(InvertedHyperCrystal);
+	if (Player.loops > 5)
+		scrSpawnMoreBosses(InvertedHyperCrystal,1+clamp(floor((Player.loops-4)*0.25),1,2));
 }
 if (Player.loops > 0 && Player.area == 115 && Player.subarea == 1)
 {
 	scrSpawnBoss(CursedHyperCrystal);
+	if (Player.loops > 5)
+		scrSpawnMoreBosses(CursedHyperCrystal,1+clamp(floor((Player.loops-4)*0.25),1,2));
 }
 if (Player.loops > 0 && Player.area == 6 && Player.subarea == 1)
 {
@@ -101,10 +124,6 @@ if (Player.loops > 0 && Player.area == 112 && Player.subarea == 1)
 	scrSpawnTechnomancer(InvertedTechnomancer);
 }
 
-//Volcano Boss
-//if Player.area = 7 and Player.subarea = 3
-//instance_create(instance_furthest(Player.x,Player.y,Floor).x+16, instance_furthest(Player.x,Player.y,Floor).y+16,BecomeScrapBoss)
-//instance_create(instance_furthest(Player.x,Player.y,Floor).x+16, instance_furthest(Player.x,Player.y,Floor).y+16,LilHunter)
 
 if (Player.race=22 && Player.area!=100 && Player.area!=104 && !( (Player.area == 9 || Player.area == 118) && Player.subarea == 3))
 {
@@ -433,6 +452,7 @@ if Player.area = 100
 else if Player.area > 2 and Player.subarea = 2 && Player.area!=101&&Player.area!=6
 && Player.area!=102 && Player.area!=103 && Player.area!=104 && Player.area != 4 && Player.area != 111
 && Player.area!=112 && Player.area!=113 && Player.area!=114 && Player.area!=115&& Player.area!=116 && UberCont.opt_gamemode != 25
+&& !(Player.area == 9 && Player.loops > 9)
 {
 
 	with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/3+random(128)-64,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/3+random(128)-64,Floor){

@@ -1,12 +1,23 @@
 function scrDrop(itemdrop, weapondrop) {
+	var canHealth = 1;
 	if instance_exists(Player)
 	{
 		var lps = Player.loops;
-		if lps > 0
+		if lps > 1 && Player.crown != 5
 		{
+			lps --;
+			repeat (min(lps,4))
+			{
+				canHealth *= 0.98;
+			}
+		}
+		if lps > 6
+		{
+			lps -= 6;
 			repeat (min(lps,4))
 			{
 				itemdrop *= 0.9;
+				weapondrop *= 0.95;
 			}
 		}
 	if Player.crown = 5//crown of guns
@@ -103,7 +114,7 @@ function scrDrop(itemdrop, weapondrop) {
 	if itemdrop > 0 &&random(100) < itemdrop+2*(need+Player.skill_got[4]*(0.5+Player.betterrabbitpaw) +(Player.ultra_got[39]*instance_number(Ally)*0.6)+(Player.skill_got[28]*(Player.rage*0.0004)) )//0.6 before rabbit paw nerf
 	{//0.3 for each ally Rebel has REBEL ULTRA C?
 
-	if random(Player.maxhealth) > Player.my_health and random(3) < 2 and Player.crown != 2
+	if random(Player.maxhealth) > Player.my_health and random(3) < 2 and Player.crown != 2 and random(1) <= canHealth
 	{
 	instance_create(x+random(4)-2,y+random(4)-2,HPPickup)
 	return true;

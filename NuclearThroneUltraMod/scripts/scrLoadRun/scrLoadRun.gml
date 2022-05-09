@@ -37,6 +37,7 @@ function scrLoadRun(){
 				Player.lastarea = encryptedRun.lastarea;
 				Player.lastsubarea = encryptedRun.lastsubarea;
 				Player.loops = encryptedRun.loops;
+				UberCont.lastSaveLoop = encryptedRun.loops;
 				Player.crown = encryptedRun.crown;
 				GenCont.crown = encryptedRun.crown;
 				Player.ammo[0] = encryptedRun.ammo[0];

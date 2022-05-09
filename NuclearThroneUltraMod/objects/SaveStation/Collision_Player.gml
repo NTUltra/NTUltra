@@ -1,5 +1,5 @@
 /// @description SAVE THE GAME YO
-if active && instance_exists(Player) && Player.my_health > 0
+if active && instance_exists(Player) && Player.my_health > 0 && UberCont.lastSaveLoop != Player.loops
 {
 	if KeyCont.key_pick[other.p] = 1
 	{

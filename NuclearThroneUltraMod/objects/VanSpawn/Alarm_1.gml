@@ -28,6 +28,15 @@ else
 	{
 		with instance_create(x,y,IDPDVanVertical)
 		{
+			if (other.dropFreaks)
+			{
+				dropFreaks = true;
+				spr_idle = sprFreakVanOpen;
+				spr_walk = sprFreakVanDrive;
+				spr_hurt = sprFreakVanHurt;
+				spr_dead = sprFreakVanDead;
+			}
+			
 			right = other.right;
 			if right == 1
 			{
@@ -45,6 +54,15 @@ else
 	{
 		with instance_create(x,y,IDPDVan)
 		{
+			if (other.dropFreaks)
+			{
+				dropFreaks = true;
+				spr_idle = sprFreakVanOpen;
+				spr_walk = sprFreakVanDrive;
+				spr_hurt = sprFreakVanHurt;
+				spr_dead = sprFreakVanDead;
+			}
+			
 			right = other.right;
 			if right == 1
 			{

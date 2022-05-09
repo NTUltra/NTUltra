@@ -1,4 +1,4 @@
-if (my_health <= 0 && lifes > 0 && fakeded < 0)
+if (my_health <= 0 && lifes > 0 && fakeded < 0 && instance_number(enemy) - instance_number(IDPDVan) - instance_number(InvertedAssassinBoss) > 4)
 {
 	scrDrop(100,0);
 	scrRaddrop(raddrop);
@@ -115,7 +115,9 @@ if (alarm[4] < 0) {
 					//var bro = instance_create(x,y,PopupText);
 					//bro.mytext = "BRO UR BUSTIN#MY BALLS HERE"
 				//}
-				
+				alarm[5] = 3 + deflectExhaustion;
+				alarm[1] += 0.5;
+				deflectExhaustion += 2;
 		        with instance_create(x+lengthdir_x(2,projectiledir),y+lengthdir_y(2,projectiledir),AssassinSlash)
 		        {
 			        dmg=5;

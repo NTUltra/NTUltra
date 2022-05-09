@@ -1,5 +1,6 @@
 scrDrop(100,100)
 scrDrop(20,0)
+if UberCont.area == 101
 scrDefeatedRequiredBoss(secretChallengeBosses.bigFish);
 if !isOneWeaponOnlyModes()
 {

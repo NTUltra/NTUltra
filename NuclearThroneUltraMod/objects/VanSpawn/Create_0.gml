@@ -31,3 +31,4 @@ vertical = false;
 right = 1;
 alarm[2] = 1;
 arrowSprite = sprVanPortalDirectionStart;
+dropFreaks = false;

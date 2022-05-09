@@ -34,7 +34,7 @@ repeat(8)
     {
     with instance_create(x,y,EnemyBullet1)
     {
-    motion_add(other.originalgunangle,2+random(5))
+    motion_add(other.originalgunangle,2+random(3))
     image_angle = direction
     team = other.team
     }
@@ -66,7 +66,7 @@ repeat(6)
     {
     with instance_create(x,y,EnemyBullet1)
     {
-    motion_add(other.originalgunangle,2+random(5))
+    motion_add(other.originalgunangle,2+random(3))
     image_angle = direction
     team = other.team
     }
@@ -99,13 +99,13 @@ repeat(6)
     {
     with instance_create(x,y,EnemyBullet1)
     {
-    motion_add(other.originalgunangle,2+random(5))
+    motion_add(other.originalgunangle,2+random(3))
     image_angle = direction
     team = other.team
     }
     }
 
-originalgunangle += 360/4
+originalgunangle += 360/6
 }
 
 }

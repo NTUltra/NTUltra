@@ -48,7 +48,7 @@ if instance_exists(Player)
 			{
 			with instance_create(x+lengthdir_x(24,gunangle),y+lengthdir_y(16,gunangle),EnemyBullet1)
 			{
-			motion_add(other.gunangle,4.5+random(1))
+			motion_add(other.gunangle,4+random(1))
 			image_angle = direction
 			team = other.team
 			}

@@ -19,7 +19,14 @@ if target > 0 && instance_exists(target)
 	{
 		with instance_nearest(target.x,target.y,CanSpawnBoss)
 		{
-			if other.area==4
+			if other.area == 103 && instance_exists(Player) && Player.loops > 4
+			{
+				if Player.loops % 2 == 1
+					instance_create(x,y,BigBadBat);
+				else
+					instance_create(x,y,InvertedBigBadBat);
+			}
+			else if other.area==4
 			{
 				instance_create(x,y,BigBadBat);
 			}

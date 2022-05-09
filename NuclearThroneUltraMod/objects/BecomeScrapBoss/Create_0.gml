@@ -15,12 +15,18 @@ var dix, diy, dir;
 dix = 0
 diy = 0
 if instance_exists(Player)
+{
 dir = instance_furthest(Player.x,Player.y,WeaponChest)
+}
 else
 dir = instance_furthest(x,y,WeaponChest)
-x = round(dir.x/32)*32-16
-y = round(dir.y/32)*32-16
-
+if instance_number(BecomeScrapBoss) == 1 && !instance_exists(InvaderBossSpawnPortal)
+{
+	x = round(dir.x/32)*32-16
+	y = round(dir.y/32)*32-16
+}
+if !instance_exists(InvaderBossSpawnPortal)
+{
 repeat(7)
 {
 repeat(7)
@@ -30,6 +36,7 @@ repeat(7)
 }
 dix = 0
 diy += 1
+}
 }
 
 

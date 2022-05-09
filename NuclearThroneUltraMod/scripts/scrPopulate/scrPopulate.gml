@@ -50,17 +50,17 @@ function scrPopulate() {
                     {
                         if random(4) < 1
 							scrPopEnemies()
-						else if Player.loops > 0
+						else if Player.loops > 0 && random(6) < Player.loops
 							scrPopEnemies()
                     } else
                         scrPopEnemies()
                 }
 				
-                //spawn some more enemies on loop 3 cause you need to die man.
-                if Player.loops > 0 && random(3) < Player.loops
+                //spawn some more enemies on loop 3
+                if Player.loops > 0 && random(6) < Player.loops
 					scrPopEnemies();
 					
-				if Player.loops > 3 && random(6) < Player.loops
+				if Player.loops > 8 && random(20) < Player.loops
 					scrPopEnemies();
 
             }
@@ -76,10 +76,10 @@ function scrPopulate() {
 
 
                     //spawn some more enemies on loop
-                    if Player.loops > 0 && random(3) < Player.loops
+                    if Player.loops > 0 && random(6) < Player.loops
                     scrPopEnemies();
 
-                    if Player.loops > 3 && random(6) < Player.loops
+                    if Player.loops > 9 && random(20) < Player.loops
 					scrPopEnemies();
                 }
             }
@@ -333,48 +333,32 @@ function scrPopulate() {
         if instance_exists(Player) {
             if (spawnarea = 3 && Player.subarea = 3) || (spawnarea = 7 && Player.subarea = 3) //exceptions pls for bosses
             {
-                if instance_number(enemy) < (3 + Player.hard / 1.5) and point_distance(x, y, Player.x, Player.y) > 80 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280) {
+                if instance_number(enemy) < (3 + min(40,Player.hard) * 0.65) and point_distance(x, y, Player.x, Player.y) > 80 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280) {
                     if random(5) < 1
                     scrPopEnemies()
                 }
             } else {
-                if instance_number(enemy) < (3 + Player.hard / 1.5) and point_distance(x, y, Player.x, Player.y) > 210 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280)
+                if instance_number(enemy) < (3 + min(40,Player.hard) * 0.65) and point_distance(x, y, Player.x, Player.y) > 210 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280)
                 scrPopEnemies()
             }
-        } //ded player normal populating senpai
-        else if instance_number(enemy) < (3 + Player.hard / 1.5) and point_distance(x, y, Player.x, Player.y) > 210 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280)
-        scrPopEnemies()
+        }
 
         //CROWN OF BLOOD
         if instance_exists(Player) {
-            if (Player.crown = 7 and random(8 + Player.hard) < Player.hard and point_distance(x, y, Player.x, Player.y) > 210 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280))
-                scrPopEnemies()
-        }
-
-        //CROWN OF MASSACRE
-        /*
-        if instance_exists(Player){
-        if (Player.crown = 15 and random(8+Player.hard) < Player.hard and point_distance(x,y,Player.x,Player.y) > 210 and !place_meeting(x,y,RadChest) and !place_meeting(x,y,AmmoChest) and !place_meeting(x,y,WeaponChest) and ((x+16 != Player.x and y+16 != Player.y) or point_distance(x,y,Player.x,Player.y) > 280))
-
-        repeat(2)
-        scrPopEnemies()
-
-        }*/
-
-        //CROWN OF APOCALYPSE
-        if instance_exists(Player) {
-            if (Player.crown = 17 and random(8 + Player.hard) < Player.hard and point_distance(x, y, Player.x, Player.y) > 64 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 64))
-
-                repeat(4)
-            scrPopEnemies()
+            if (Player.crown = 7 and random(8 + min(40,Player.hard)) < min(30,Player.hard) and point_distance(x, y, Player.x, Player.y) > 210 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280))
+            {
+				scrPopEnemies()
+			}
+				
+            if (Player.crown = 17 and random(8 + min(40,Player.hard)) < min(30,Player.hard) and point_distance(x, y, Player.x, Player.y) > 64 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280))
+            {    
+				repeat(3)
+					scrPopEnemies()
+			}
 
         }
-
-
 
         scrPopProps()
-
-
     }
 
     with NOWALLSHEREPLEASE

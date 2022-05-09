@@ -4,19 +4,39 @@ scrDrop(30,0)
 speed = 0;
 my_health = 0;
 event_inherited()
+if dropFreaks
+{
+	snd_play(sndFreakPopoEnter);
+	repeat(3+irandom(min(4,UberCont.loops-3)))
+    {
+		with instance_create(x+random(4)-2,y+random(4)-2,IDPDFreak)
+	    {
+			scrSleepyPopo()
+		    if instance_exists(Player)
+				motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,6)
+		    else
+				motion_add(random(360),4)
+	    }
+	}
+}
 
 //GAMEMODE UNLOCKABLE NO ELITE POPO
 scrUnlockGameMode(18,"FOR DESTROYING A VAN");
 
 snd_play(sndExplosionL)
+var ang = random(360);
+var angStep = 360/3;
 repeat(3)
 {
-with instance_create(x+lengthdir_x(8,ang),y+lengthdir_y(8,ang),PopoExplosion)
-{
-	if team == 2
-		sprite_index =sprPopoExploRogue;	
-}
-ang+=360/3;
+	with instance_create(x+lengthdir_x(10,ang),y+lengthdir_y(10,ang),PopoExplosion)
+	{
+		if other.team == 2
+		{
+			sprite_index =sprPopoExploRogue;	
+			team = 2;
+		}
+	}
+	ang += angStep;
 }
 
 with Hand
@@ -28,5 +48,23 @@ with Hand
 		{
 			scrUnlockCSkin(27,"FOR WALLOPING#THREE VANS#IN A SINGLE RUN",0);
 		}
+	}
+}
+if loops > 3 {
+	var ang = 0;
+	var am = 8;
+	if loops > 5
+		am = 16;
+	var angStep = 360/am;
+	repeat(am)
+	{
+		with instance_create(x,y,EnemyBullet1Square)
+		{
+			sprite_index = sprIDPDSquareBullet;
+			motion_add(ang,3)
+			image_angle = direction
+			team = other.team
+		}
+		ang += angStep;
 	}
 }

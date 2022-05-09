@@ -1,5 +1,11 @@
 /// @description Spawn popo
 size=2;
+if dropFreaks
+{
+	snd_play(sndFreakPopoEnter);
+	instance_destroy();
+	exit;
+}
 /*
 if team != 2
 team=3;

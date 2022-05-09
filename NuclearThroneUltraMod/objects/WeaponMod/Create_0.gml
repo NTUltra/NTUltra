@@ -12,6 +12,7 @@ if instance_exists(WeaponMod) && instance_number(WeaponMod) > 1
 			{
 				wepmod = scrMods();
 				modname = scrWepModName(wepmod);
+				moddescription = scrWepModDescription(wepmod);
 				name="##MODIFY WEAPON#"+modname;
 			}
 		}

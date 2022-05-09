@@ -30,6 +30,7 @@ spr_back = sprNothingBack;
 spr_activate = sprNothingActivate;
 spr_middle = sprNothingMiddle;
 spr_middle_hurt = sprNothingMiddleHurt;
+spr_deactivated = sprNothingMiddleDeactivated;
 spr_deactivated_hurt = sprNothingMiddleDeactivatedHurt;
 spr_right_hurt_link = sprNothingRightHurtLink;
 spr_right_deactivated_hurt_link = sprNothingRightDeactivatedHurtLink;

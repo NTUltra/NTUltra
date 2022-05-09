@@ -11,6 +11,7 @@ if alarm[5] >  0
 Sleep(200)
 scrBossKill();
 instance_create(x,y,ChesireCatExplosion);
+if UberCont.area == 8
 scrDefeatedRequiredBoss(secretChallengeBosses.chesireCat);
 scrDrop(100,0)
 scrDrop(20,0)

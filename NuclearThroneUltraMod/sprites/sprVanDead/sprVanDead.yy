@@ -72,7 +72,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprVanDead","path":"sprites/sprVanDead/sprVanDead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprVanDead",
     "tags": [],
     "resourceType": "GMSequence",
   },

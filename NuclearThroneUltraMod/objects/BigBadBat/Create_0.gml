@@ -52,4 +52,7 @@ audio_emitter_falloff(emitter, 50, 400, 1);
 
 wkick = 0;
 instance_create(x,y,BigWallBreak);
-instance_create(x,y,DramaCamera);
+if instance_exists(Player) && Player.area != 103
+{
+	instance_create(x,y,DramaCamera);
+}

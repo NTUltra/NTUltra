@@ -34,6 +34,7 @@ instance_create(x,y,KeyCont)
 area=1;
 subarea=1;
 loops=0;
+lastSaveLoop = -1;
 
 
 //window_set_max_height(1440);

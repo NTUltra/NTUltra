@@ -140,7 +140,11 @@ function scrPopChests() {
 			wepChestGol += 2;
 		}
 
-
+		if Player.my_health >= Player.maxhealth
+			healthChestGol --;
+		if Player.my_health >= 30
+			healthChestGol --;
+			
 		if Player.area = 100
 		{
 		if instance_exists(Crown){

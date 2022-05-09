@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprVanDeactivatedHurt","path":"sprites/sprVanDeactivatedHurt/sprVanDeactivatedHurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprVanDeactivatedHurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

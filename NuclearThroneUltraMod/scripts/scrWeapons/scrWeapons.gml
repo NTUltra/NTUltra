@@ -4212,7 +4212,7 @@ function scrWeapons() {
 	wep_load[381] = 230
 	wep_cost[381] = 30
 	wep_sprt[381] = sprMuchasPelotilla
-	wep_area[381] = 18
+	wep_area[381] = 26
 	wep_text[381] = "cest bon"
 	wep_swap[381] = sndSwapShotgun
 	wep_rad[381] = 0;
@@ -4223,7 +4223,7 @@ function scrWeapons() {
 	wep_load[382] = 230
 	wep_cost[382] = 30
 	wep_sprt[382] = sprMuchasLaser
-	wep_area[382] = 18
+	wep_area[382] = 26
 	wep_text[382] = "beau"
 	wep_swap[382] = sndSwapEnergy
 	wep_rad[382] = 0;
@@ -4333,7 +4333,7 @@ function scrWeapons() {
 	wep_load[392] = 200
 	wep_cost[392] = 20
 	wep_sprt[392] = sprMuchasFuego
-	wep_area[392] = 18
+	wep_area[392] = 26
 	wep_text[392] = "en petit peu"
 	wep_swap[392] = sndSwapDragon
 	wep_rad[392] = 0;
@@ -5034,7 +5034,7 @@ function scrWeapons() {
 	wep_name[456] = "SUPER SCYTHE"
 	wep_type[456] = 0
 	wep_auto[456] = 0
-	wep_load[456] = 24
+	wep_load[456] = 26
 	wep_cost[456] = 0
 	wep_sprt[456] = sprSuperScythe
 	wep_area[456] = 22

@@ -22,19 +22,23 @@ if instance_exists(Player)
 dir = instance_furthest(Player.x,Player.y,WeaponChest)
 else
 dir = instance_furthest(x,y,WeaponChest)
-
-x = round(dir.x/32)*32-16
-y = round(dir.y/32)*32-16
-
-repeat(7)
+if instance_number(BecomeInvertedScrapBoss) == 1 && !instance_exists(InvaderBossSpawnPortal)
 {
-repeat(7)
-{
-	instance_create(x-64+dix*32,y-64+diy*32,Floor)
-		dix += 1
+	x = round(dir.x/32)*32-16
+	y = round(dir.y/32)*32-16
 }
-dix = 0
-diy += 1
+if !instance_exists(InvaderBossSpawnPortal)
+{
+	repeat(7)
+	{
+	repeat(7)
+	{
+		instance_create(x-64+dix*32,y-64+diy*32,Floor)
+			dix += 1
+	}
+	dix = 0
+	diy += 1
+	}
 }
 
 scrBossFloor();

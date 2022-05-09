@@ -3,9 +3,12 @@ if meleedamage > 0 && other.sprite_index!=other.spr_hurt
 {
 	with other
 	{
-		my_health -= other.meleedamage;
-		sprite_index = spr_hurt
-		image_index = 0
-		snd_play(snd_hurt, 0.1,true)
+		if object_index != CarVenus && object_index != CarVenusOasis && !variable_instance_exists(id,"name")
+		{
+			my_health -= other.meleedamage;
+			sprite_index = spr_hurt
+			image_index = 0
+			snd_play(snd_hurt, 0.1,true)
+		}
 	}
 }

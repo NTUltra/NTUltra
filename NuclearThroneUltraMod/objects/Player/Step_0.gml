@@ -32,7 +32,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 			//screen_save("explain"+string(scrn)+".png");
 			//scrn++;
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			instance_create(f.x + 16,f.y + 16,HealthChest)
+			instance_create(f.x + 16,f.y + 16,VanSpawn)
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
 			thing.mytext = "HEALTH CHEST";
 		}
@@ -682,8 +682,8 @@ if (rad > mr)
 	rad -= mr;
 	level += 1
 
-	if level=7 && area < 4 && race = 25
-	scrUnlockBSkin(25,"FOR REACHING LEVEL 7#BEFORE THE CRYSTAL CAVES#AS MUTATION DOCTOR",0);
+	if level==7 && loops < 1 && race = 25 && (area < 4 || area == 105 || area == 110 || area == 106 || area == 103 || area == 102 || area == 101 || area == 10)
+		scrUnlockBSkin(25,"FOR REACHING LEVEL 7#BEFORE THE LABS#AS MUTATION DOCTOR",0);
 
 	repeat(level-6)
 	instance_create(x,y,IDPDSpawn)
