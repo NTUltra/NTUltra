@@ -9,5 +9,6 @@ team = 1;
 spr_idle=sprInvertedBigMachineTurret
 spr_fire=sprInvertedBigMachineTurretFire
 proj = EnemyBullet1;
+loops = GetPlayerLoops();
 if loops > 10
 	proj = EnemyBouncerBullet;
