@@ -19,9 +19,11 @@ ang = ogAng + (angStep*0.5);
 repeat(10)
 {
 with instance_create(xprevious,yprevious,EnemyBullet1)
-{motion_add(other.ang,4)
-image_angle = direction
-team = other.team}
+{
+	motion_add(other.ang,4)
+	image_angle = direction
+	team = other.team
+}
 ang += angStep
 }
 if ammo>0

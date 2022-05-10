@@ -1,5 +1,7 @@
 scrDrop(100,100)
 scrDrop(20,0)
+if UberCont.area == 10
+	scrDefeatedRequiredBoss(secretChallengeBosses.bigVulture);
 if !isOneWeaponOnlyModes()
 {
 	with instance_create(x-8,y,WepPickup)
@@ -14,7 +16,7 @@ if !isOneWeaponOnlyModes()
 	}
 }
 event_inherited()
-scrBusinessHogGoldChest();
+scrBossKill();
 repeat(5+irandom(6))
 {
 	with instance_create(x,y,RavenFeather)

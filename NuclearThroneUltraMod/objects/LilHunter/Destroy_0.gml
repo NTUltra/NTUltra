@@ -15,7 +15,7 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 
 }
-scrBusinessHogGoldChest();
+scrBossKill();
 scrDrop(200,0)
 scrDrop(10,2)
 instance_create(x,y,Explosion)
@@ -47,18 +47,4 @@ type = wep_type[192]
 curse = 0
 sprite_index = wep_sprt[192]
 }}
-
-
-with Marker
-        {
-        
-        if other.id=target.id
-        {
-        with Player
-        {
-        lillhuntermarked=true;
-        }
-        }
-        
-        }
 

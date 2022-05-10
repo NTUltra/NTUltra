@@ -37,7 +37,7 @@ if!(collision_line(x,y,target.x,target.y,Wall,false,true) )//No walls in between
 }}
     points=10;
     distance=25+random(30);//distance_to_object(target);
-    Direction=point_direction(x,y,mouse_x,mouse_y)+random(10)-5;
+    Direction=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5;
     repeat(5){
     xx=x;
     yy=y;
@@ -60,7 +60,7 @@ else{
 
     points=10;
     distance=25+random(30);//distance_to_object(target);
-    Direction=point_direction(x,y,mouse_x,mouse_y)+random(10)-5;
+    Direction=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5;
     repeat(5){
     xx=x;
     yy=y;

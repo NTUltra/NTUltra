@@ -1,4 +1,4 @@
-if mouse_x > x and mouse_x < x+48 and mouse_y > y and mouse_y < y+32 and image_index != 6 and mouse_check_button_pressed(mb_left)
+if UberCont.mouse__x > x and UberCont.mouse__x < x+48 and UberCont.mouse__y > y and UberCont.mouse__y < y+32 and image_index != 6 and mouse_check_button_pressed(mb_left)
 {
 with Menu
 {

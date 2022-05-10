@@ -12,6 +12,11 @@ if owner > -1 && instance_exists(owner) && instance_exists(Player)
 				sprite_index = sprBigGuardianSquareBulletSpawn;
 				owner = other.id;
 				team = other.team
+				isInverted = other.isInverted;
+				if isInverted
+					sprite_index = sprInvertedBigGuardianSquareBulletSpawn;
+				else
+					sprite_index = sprBigGuardianSquareBulletSpawn;
 			}
 		}
 		else
@@ -20,6 +25,9 @@ if owner > -1 && instance_exists(owner) && instance_exists(Player)
 			{
 				owner = other.id;
 				team = other.team
+				isInverted = other.isInverted;
+				if isInverted
+					sprite_index = sprInvertedBigGuardianBulletSpawn;
 			}
 		}
 		alarm[2] = (firerate*badboyBuff) * 15

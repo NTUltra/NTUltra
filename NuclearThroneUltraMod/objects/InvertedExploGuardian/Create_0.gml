@@ -18,3 +18,4 @@ spr_dead = sprInvertedExploGuardianDead;
 spr_charge = sprInvertedExploGuardianCharge;
 spr_charge_hurt = sprInvertedExploGuardianChargeHurt;
 spr_fire = sprInvertedExploGuardianFire;
+exploBullet = InvertedExploGuardianBullet;

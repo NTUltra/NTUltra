@@ -1,76 +1,84 @@
 /// @description Transfer damage to main body
 
 // Inherit the parent event
-event_inherited();
 
 hspeed = 0;
 vspeed *= 0.1;
 
 if (my_health < prevhealth)
 {
-	var dmgTaken = prevhealth - my_health;
-	if sprite_index == spr_hurt
+	if tookDamageThisFrame
 	{
-		if (isLeft)
-		{
-			if disable
-				spr_hurt = sprNothingLeftDeactivatedHurt;
-			else
-				spr_hurt = sprNothingLeftHurt;
-		}
-		else
-		{
-			if disable
-				spr_hurt = sprNothingRightDeactivatedHurt;
-			else
-				spr_hurt = sprNothingRightHurt;
-		}
-		//Use correct sprite index
-		sprite_index = spr_hurt;
+		my_health = prevhealth;
 	}
-	with owner
+	else
 	{
-		//if sprite_index != spr_hurt
-		//{
-			my_health -= dmgTaken;
-			prevhealth = my_health;//Don't recognize this as dmg
-/*
-		}
-		else
+		tookDamageThisFrame = true;
+		var dmgTaken = prevhealth - my_health;
+		if sprite_index == spr_hurt
 		{
-			image_index += 0.2;//iframe skipper
-			my_health -= dmgTaken*0.2;
-			prevhealth = my_health;
-		}*/
-		sprite_index = sprNothingMiddleHurtLink;
-		if disable
-			spr_hurt = sprNothingMiddleDeactivatedHurtLink;
-		else
-			spr_hurt = sprNothingMiddleHurtLink;
-		image_index = 0;
-		if other.id == leftSide
-		{
-			with rightSide
+			if (isLeft)
 			{
 				if disable
-					spr_hurt = sprNothingRightDeactivatedHurtLink;
+					spr_hurt = spr_left_deactivated_hurt;
 				else
-					spr_hurt = sprNothingRightHurtLink;
-				sprite_index = spr_hurt;
-				image_index = 0;
+					spr_hurt = spr_left_hurt;
 			}
-		}
-		else
-		{
-			with leftSide
+			else
 			{
 				if disable
-					spr_hurt = sprNothingLeftDeactivatedHurtLink;
+					spr_hurt = spr_right_deactivated_hurt;
 				else
-					spr_hurt = sprNothingLeftHurtLink;
-				sprite_index = spr_hurt;
-				image_index = 0;
-			}	
+					spr_hurt = spr_right_hurt;
+			}
+			//Use correct sprite index
+			sprite_index = spr_hurt;
+		}
+		with owner
+		{
+			//if sprite_index != spr_hurt
+			//{
+				my_health = prevhealth;
+				my_health -= dmgTaken;
+				prevhealth = my_health;//Don't recognize this as dmg
+	/*
+			}
+			else
+			{
+				image_index += 0.2;//iframe skipper
+				my_health -= dmgTaken*0.2;
+				prevhealth = my_health;
+			}*/
+			sprite_index = spr_middle_hurt_link;
+			if disable
+				spr_hurt = spr_middle_deactivated_hurt_link;
+			else
+				spr_hurt = spr_middle_hurt_link;
+			image_index = 0;
+			if other.id == leftSide
+			{
+				with rightSide
+				{
+					if disable
+						spr_hurt = spr_right_deactivated_hurt_link;
+					else
+						spr_hurt = spr_right_hurt_link;
+					sprite_index = spr_hurt;
+					image_index = 0;
+				}
+			}
+			else
+			{
+				with leftSide
+				{
+					if disable
+						spr_hurt = spr_left_deactivated_hurt_link;
+					else
+						spr_hurt = spr_left_hurt_link;
+					sprite_index = spr_hurt;
+					image_index = 0;
+				}	
+			}
 		}
 	}
 }
@@ -92,3 +100,6 @@ if owner > -1 && instance_exists(owner)
 	}
 }
 mask_index = msk;
+
+event_inherited();
+

@@ -138,7 +138,7 @@ room_speed=35;
     if ultra_got[2]=1//fish ultra B gun warrant
     {
     instance_create(x,y,GunWarrant);
-    alarm[2]=300;
+    alarm[2] = 210;
     }
     
     if skill_got[25]//strong spirit
@@ -177,16 +177,26 @@ room_speed=35;
 	    }
     
     }
-    else
+    else if loops < 4
     {
     //making it easier
     with enemy
     {
-    if alarm[1]>0
-    alarm[1]+=45;
+		if alarm[1]>0
+			alarm[1]+=45;
     }
     
     }
+	if loops > 6
+	{
+		with enemy
+		{
+			if alarm[1] > 31
+			{
+				alarm[1] -= 30;
+			}
+		}
+	}
     }
     
     

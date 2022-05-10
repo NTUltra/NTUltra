@@ -31,7 +31,7 @@ else
 var im = 0;
 var joke = "";
 var fh = 10;
-if mouse_check_button(mb_left) and mouse_x > x and mouse_x < x+8 and mouse_y > y and mouse_y < y+8
+if mouse_check_button(mb_left) and UberCont.mouse__x > x and UberCont.mouse__x < x+8 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
 {
 	holdTimer -= 1/room_speed;
 	im = 1;

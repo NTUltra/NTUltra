@@ -63,7 +63,7 @@ function scrDrawGameOver() {
 	crown = 1
 	with all
 	{
-	if id != UberCont.id and persistent = true
+	if id != UberCont.id and persistent = true && id != Cursor.id
 	{
 	persistent = false
 	instance_destroy()

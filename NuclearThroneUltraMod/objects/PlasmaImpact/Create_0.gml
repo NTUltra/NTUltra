@@ -13,8 +13,8 @@ if instance_exists(Player)
 	if Player.skill_got[17] = 1
 	{
 		dmg += 1 
-		image_xscale += 0.15;
-		image_yscale += 0.15;
+		image_xscale += 0.2;
+		image_yscale += 0.2;
 		if Player.betterlaserbrain > 0
 			dmg += 1;
 	}

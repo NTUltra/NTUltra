@@ -4,11 +4,11 @@ function scrYouFire() {
 	//if UberCont.opt_fulscrn=1
 	//len=point_distance(Player.x,Player.y,target.x,target.y)*4
 	//else{
-	len=point_distance(Player.x,Player.y,mouse_x,mouse_y)
+	len=point_distance(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y)
 	len*=(window_get_height())*0.005;
 	//}
 
-	dir=point_direction(Player.x,Player.y,mouse_x,mouse_y);
+	dir=point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y);
 
 	oldmox=(window_get_x()+window_get_width()*0.5)+lengthdir_x(len,dir);
 	oldmoy=(window_get_y()+window_get_height()*0.5)+lengthdir_y(len,dir);

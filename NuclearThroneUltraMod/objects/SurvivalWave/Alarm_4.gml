@@ -17,6 +17,19 @@ if instance_exists(Player)
 		{
 			my_health = 0;
 		}
+		with projectile
+		{
+			if team != 2
+				instance_destroy();
+		}
+		with PopoNade
+		{
+			instance_destroy(id,false)
+		}
+		with Player
+		{
+			area = 100;
+		}	
 		alarm[0] = 0;
 		alarm[1] = 0;
 		alarm[3] = 0;

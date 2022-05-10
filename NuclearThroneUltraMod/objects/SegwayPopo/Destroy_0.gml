@@ -4,7 +4,7 @@ event_inherited()
 
 scrPopoDead();
 
-if canexplo{
+if alarm[3] < 1{
 instance_create(x,y,Explosion);
 snd_play(sndExplosion);}
 

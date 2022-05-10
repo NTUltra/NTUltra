@@ -15,33 +15,36 @@ if my_health <= 0 && !disable
 	var yy = y;
 	var ang = random(360);
 	var angstep = 360/6;
+	var boom = GreenExplosion
+	if isInverted
+		boom = PurpleExplosion
 	repeat(6)
 	{
-		with instance_create(xx,yy,GreenExplosion)
+		xx = x + lengthdir_x(48,ang);
+		xx = y + lengthdir_y(48,ang);
+		ang += angstep;
+		with instance_create(xx,yy,boom)
 		{
 			depth = other.depth - 2;
 			team = other.team;
 		}
-		xx = x + lengthdir_x(48,ang);
-		xx = y + lengthdir_y(48,ang);
-		ang += angstep;
 	}
 	var ang = random(360);
 	repeat(6)
 	{
-		with instance_create(xx,yy,GreenExplosion)
+		xx = x + lengthdir_x(96,ang);
+		xx = y + lengthdir_y(96,ang);
+		ang += angstep;
+		with instance_create(xx,yy,boom)
 		{
 			depth = other.depth - 2;
 			team = other.team;
 		}
-		xx = x + lengthdir_x(96,ang);
-		xx = y + lengthdir_y(96,ang);
-		ang += angstep;
 	}
 	if isLeft
 	{
-		spr_idle = sprNothingLeftDeactivated;
-		spr_hurt = sprNothingLeftDeactivatedHurt;
+		spr_idle = spr_left_deactivated;
+		spr_hurt = spr_left_deactivated_hurt;
 		with NuclearThrone1
 		{
 			aTime = max(aTime-1,1);
@@ -58,8 +61,8 @@ if my_health <= 0 && !disable
 	}
 	else
 	{
-		spr_idle = sprNothingRightDeactivated;
-		spr_hurt = sprNothingRightDeactivatedHurt;
+		spr_idle = spr_right_deactivated;
+		spr_hurt = spr_right_deactivated_hurt;
 		with NuclearThrone1
 		{
 			aTime = max(aTime-1,1);

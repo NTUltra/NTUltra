@@ -11,10 +11,10 @@ function scrUltras() {
 	ultra_tips[1] = "that's mine"
 
 	ultra_name[2] = "GUN WARRANT"
-	ultra_text[2] = "INFINITE AMMO THE FIRST 10 SECONDS#OF ENTERING A LEVEL"
+	ultra_text[2] = "INFINITE AMMO THE FIRST 7 SECONDS#OF ENTERING A LEVEL#KILLING A BOSS GIVES#ANOTHER 7 SECONDS OF INFINITE AMMO"
 	ultra_tips[2] = "bringer of order"
 
-	ultra_name[3] = "BROTHERS IN ARMS"
+	ultra_name[3] = "BUDDY COP"
 	ultra_text[3] = "GET A COMPANION"
 	ultra_tips[3] = choose("I missed you partner","partner stays close to you#when you reload#if not it'll go out aggro")
 
@@ -100,11 +100,20 @@ function scrUltras() {
 	    ultra_tips[22] = "more pop"
     
 	    ultra_name[23] = "MAKE IT RAIN"
-	    ultra_text[23] = "REALLY HIGH SHOTGUN FIRE RATE#USED SHOTGUN AMMO CONVERTS#TO BULLET AMMO"
+	    ultra_text[23] = "REALLY HIGH SHOTGUN FIRE RATE#USED BULLET AMMO#CONVERTS TO SHOTGUN AMMO#(10 BULLET TO 1 SHOTGUN AMMO)"//"REALLY HIGH SHOTGUN FIRE RATE#USED SHOTGUN AMMO CONVERTS#TO BULLET AMMO"
 	    ultra_tips[23] = "shells and bullets <3"
+		if instance_exists(Player)
+		{
+			if scrMeleeWeapons(Player.wep) && scrMeleeWeapons(Player.bwep)
+			{
+				ultra_name[23] = "BLASPHEMY"
+			    ultra_text[23] = "CAN NO LONGER POP POP GUNS#HIGHER MELEE SWING RATE#MELEE IS FULLY AUTOMATIC#CAN POP POP MELEE"
+			    ultra_tips[23] = "why would you forsake us gun god?"
+			}
+		}
     
-	    ultra_name[24] = "IT UR GOD: VEENY"
-	    ultra_text[24] = "RIGHT CLICK SOMETIMES#ALSO FIRES YOUR SECONDARY WEAPON#CAN POP FULL AUTO YO"
+	    ultra_name[24] = "VERIFY VENUZ"
+	    ultra_text[24] = "EVERY OTHER POP POP ALSO FIRES#YOUR SECONDARY WEAPON#CAN POP FULL AUTO#RELOAD SECONDARY AT HALF SPEED"
 	    ultra_tips[24] = "blood gamble"
     
 	//STEROIDS 
@@ -165,7 +174,7 @@ function scrUltras() {
 	ultra_tips[34] = "slice em'"
 
 	ultra_name[35] = "FOCUS"
-	ultra_text[35] = "NORMAL RATE OF FIRE DURING SLOWMOTION"
+	ultra_text[35] = "SLOW MOTION IS MUCH MORE EFFECTIVE#ON ENEMY PROJECTILES#(EVEN MORE EFFECTIVE WITH EUPHORIA)##SLOW MOTION COMPLETLY STOPS#YOUR PROJECTILES"
 	ultra_tips[35] = "so fast"
 
 	ultra_name[36] = "VANISH"
@@ -204,7 +213,7 @@ function scrUltras() {
 	ultra_tips[43] = "friendly fire?"
 
 	ultra_name[44] = "CRACK SHOT"
-	ultra_text[44] = "PLACE MULTIPLE MARKERS#USING MARKERS REDUCES RELOAD TIME"
+	ultra_text[44] = "PLACE MULTIPLE MARKERS#FIRE AT ALL MARKERS#WITHOUT EXTRA RELOAD TIME"
 	ultra_tips[44] = "gunslinger"
 
 	    //YUNG CUZ 
@@ -254,7 +263,7 @@ function scrUltras() {
 	    ultra_text[55] = "WHENEVER YOU HIT AN ENEMY#WITH A THROWN WEAPON#THEY DROP EXTRA RESOURCES#WHEN A WEAPON RETURNS#IT FIRES A MASSIVE LASER##CHANCE PORTALS GIVE#YOU A HIGHER TIER WEAPON#THROWS BOUNCE TOWARDS ENEMIES"
 	    ultra_tips[55] = "rise above"
     
-	    ultra_name[56] = "BLASPHEMY"
+	    ultra_name[56] = "CLEANSING"
 	    ultra_text[56] = "MORE MELEE SWING SPEED#YOU NO LONGER#GET RANDOM WEAPONS#AFTER EXITING A PORTAL#THROWS BOUNCE TOWARDS ENEMIES"
 	    ultra_tips[56] = "survival above pacifism"
     
@@ -299,7 +308,7 @@ function scrUltras() {
 	    ultra_tips[62] = "tank up"
 	    }
     
-	    ultra_name[63] = "COLD HEARTH"
+	    ultra_name[63] = "COLD HEART"
 	    ultra_text[63] = "ARMOUR STRIKE FREEZES ENEMIES#AND DEALS MORE DAMAGE#WHEN YOU HAVE NO MORE ARMOUR#YOU CAN USE 2HP TO USE AN ARMOUR STRIKE"
 	    ultra_tips[63] = "hearth strike"
     
@@ -309,7 +318,7 @@ function scrUltras() {
     
 	//WEAPON SMITH 
 	ultra_name[65] = "WEAPON MODDER"
-	ultra_text[65] = "IN EVERY AREA#A WEAPON MOD SPAWNS#INCREASE HOW OFTEN MODS TRIGGER"
+	ultra_text[65] = "IN EVERY AREA#A WEAPON MOD SPAWNS#INCREASE HOW OFTEN MODS TRIGGER#COMBINING A WEAPON ADDS A MOD TO IT"
 	ultra_tips[65] = "modder"
 
 	ultra_name[66] = "ARMOUR SMITH"
@@ -321,7 +330,7 @@ function scrUltras() {
 	ultra_tips[67] = "new meta"
 
 	ultra_name[68] = "SCRAP FINDER"
-	ultra_text[68] = "WEAPON DROPS GIVE YOU HEALTH, RADS#AND MORE AMMO FOR ALL TYPES#PICKING UP A WEAPON#SPAWNS A LIGHTNING"
+	ultra_text[68] = "WEAPON DROPS GIVE YOU HEALTH, RADS#AND MORE AMMO FOR ALL TYPES#PICKING UP A WEAPON#SPAWNS LIGHTNING"
 	ultra_tips[68] = "recourseful"
 
 	    //ANGEL 
@@ -334,7 +343,7 @@ function scrUltras() {
 	    ultra_tips[70] = "emo style"
     
 	    ultra_name[71] = "TRANQUILITY"
-	    ultra_text[71] = "WHEN AT FULL HEALTH#YOU DEAL MORE DAMAGE"
+	    ultra_text[71] = "WHEN AT OR ABOVE FULL HEALTH#YOU DEAL 50% MORE DAMAGE"
 	    ultra_tips[71] = "experience tranquility"
     
 	    ultra_name[72] = "ASCENT"
@@ -376,8 +385,6 @@ function scrUltras() {
 	ultra_tips[76] = "never dead"
 	}
 
-
-
 	    //BUSINESSHOG 
 	    ultra_name[77] = "PROSPERITY"
 	    ultra_text[77] = "ENEMIES DROP MORE RADS#HIGHER RAD MAXIMUM"
@@ -388,7 +395,14 @@ function scrUltras() {
 	    ultra_tips[78] = "options"
     
 	    ultra_name[79] = "INVESTMENT"
-	    ultra_text[79] = "GAIN NOTHING NOW#IF YOU REACH LOOP 2#YOU CAN CHOOSE TWO RANDOM ULTRAS#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
+		if GetPlayerLoops() > 1
+		{
+			ultra_text[79] = "GAIN NOTHING NOW#IF YOU REACH THE NEXT LOOP#YOU CAN CHOOSE TWO RANDOM ULTRAS#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
+		}
+		else
+		{
+			ultra_text[79] = "GAIN NOTHING NOW#IF YOU REACH LOOP 2#YOU CAN CHOOSE TWO RANDOM ULTRAS#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
+		}
 	    ultra_tips[79] = "are you that good?"
     
 	    ultra_name[80] = "GOLD DIGGER"
@@ -398,7 +412,7 @@ function scrUltras() {
     
 	//HORROR 
 	ultra_name[81] = "STALKER"
-	ultra_text[81] = "ENEMIES EXPLODE INTO RAD BULLETS#DEPENDING ON THE AMOUNT OF RADS THEY DROP"
+	ultra_text[81] = "ENEMIES EXPLODE INTO RAD BULLETS#DEPENDING ON#THE AMOUNT OF RADS THEY DROP"
 	ultra_tips[81] = "stalking and walking"
 
 	ultra_name[82] = "ANOMALY"
@@ -524,7 +538,39 @@ function scrUltras() {
 	    ultra_text[104] = "INCREASED SPRINT SPEED#IMMUNE TO CONTACT DAMAGE#WHILE SPRINTING"
 	    ultra_tips[104] = "fast old man"
 		*/
-	maxultra = 104;
+	//HANDS
+	ultra_name[105] = "IRRADIATED"
+	ultra_text[105] = "ALL DAMAGE YOU DEAL TO AN ENEMY#IS INCREASED DEPENDING ON#HOW CLOSE YOU ARE TO THE ENEMY#DAMAGE BUFF IS HIGHER IN INVERTED AREAS"
+	ultra_tips[105] = "let me touch you"
+    
+	ultra_name[106] = "NEGATIVE ENVIROMENT"
+	ultra_text[106] = "WALLS CONTAIN SWARM BOLTS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
+	ultra_tips[106] = "I'm a glass half empty kinda hand"
+	
+	if instance_exists(Player) && Player.bskin == 1
+	{
+		//Secret B skin ultra
+		ultra_name[106] = "HOT HANDS!"
+		ultra_text[106] = "FIERY HANDS#MORE FIRE DAMAGE#HOMING FIRE#EVEN MOR FIRE DAMAGE#WHILE IN INVERTED AREAS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
+		ultra_tips[106] = "secret b-skin ultra mutation"
+	}
+	else if instance_exists(Player) && Player.bskin == 2
+	{
+		//Secret C skin ultra
+		ultra_name[106] = "BOOM HANDS!"
+		ultra_text[106] = "EXPLOSIVE HANDS#HAND IS SLOWER#NORMAL HAND SPEED IN INVERTED AREAS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
+		ultra_tips[106] = "secret c-skin ultra mutation"
+	}
+	
+	ultra_name[107] = "MANY HANDS"
+	ultra_text[107] = "CAN HAVE TWO HANDS OUT AT A TIME#PUNCH PROJECTILES OUT OF EXISTENCE#YOU CAN HAVE THREE HANDS WHILE#IN AN INVERTED AREA"
+	ultra_tips[107] = "i can count to 15 now"
+    
+	ultra_name[108] = "DELICATE HANDS"
+	ultra_text[108] = "ALLOWS YOUR HAND TO COLLECT#RADS, PICKUPS AND WEAPONS#HAND IS FASTER#THE HAND IS EVEN FASTER#WHILE IN AN INVERTED AREA"
+	ultra_tips[108] = "i shouldn't be level 10 to pick up ammo"
+	
+	maxultra = 108;
 
 	dir = 0
 	repeat(maxultra+1)

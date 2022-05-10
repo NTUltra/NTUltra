@@ -1,4 +1,4 @@
-if KeyCont.key_fire[p] = 1 and (mouse_x < x+22 and mouse_y < y+22 and mouse_x > x-22 and mouse_y > y-22)
+if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y < y+22 and UberCont.mouse__x > x-22 and UberCont.mouse__y > y-22)
 {
 Player.skill_got[skill] = 1
 Player.skillsChosen+=1;
@@ -45,7 +45,7 @@ else if skill = 3
 }
 else if skill = 4 && Player.race=25//rabitpaw
 {
-Player.betterrabbitpaw+=0.12;
+	Player.betterrabbitpaw+=0.12;
 }
 else if skill = 5 && Player.race=2
 {
@@ -83,9 +83,9 @@ Player.typ_amax[5] = 55+Player.skill_got[10]*44
 }
 else if skill = 13 && Player.race = 25//Long arms
 {
-Player.bettermelee+=0.4;
-if Player.ultra_got[97]
-Player.bettermelee=1.1;
+	Player.bettermelee+=0.4;
+	if Player.ultra_got[97]
+		Player.bettermelee=1;
 }
 else if skill= 16 && Player.race = 25//recycle gland
 {
@@ -98,8 +98,8 @@ else if skill = 17 && Player.race = 25
 {
 Player.betterlaserbrain=1;
 
-if Player.ultra_got[97]
-Player.betterlaserbrain=2.1;
+	if Player.ultra_got[97]
+		Player.betterlaserbrain=2;
 }
 else if skill = 21//bolt marrow
 {
@@ -127,7 +127,7 @@ else if skill = 18//last wish
 	}
 if Player.race = 22
 {
-	Player.rogueammo = Player.rogueammomax;	
+	Player.rogueammo = Player.rogueammomax;
 }
 
 with Player
@@ -136,12 +136,15 @@ with Player
 	if race==9 || race==12//Chicken maxhealth regain
     {
 		var targetHealth = 8;
+		if UberCont.opt_gamemode == 5
+			targetHealth = 1;
 		if skill_got[1] == 1//Rhino skin
 			targetHealth += 4;
 		if skill_got[33]//Glass arm cannon
-			targetHealth -= 2;
+			targetHealth = max(1,targetHealth-2);
 		if UberCont.opt_gamemode == 9
 			targetHealth += UberCont.casualModeHPIncrease;
+		targetHealth += UberCont.maxHpIncrease;
         if maxhealth<targetHealth
         {
 	        maxhealth = targetHealth;

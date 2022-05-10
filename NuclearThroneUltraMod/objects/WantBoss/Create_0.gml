@@ -1,6 +1,6 @@
 target = -1
 team = 1;
-enemies = max(4,instance_number(enemy));
+enemies = max(instance_number(enemy),5);
 
 if instance_exists(Player)
 {
@@ -15,6 +15,7 @@ subarea=BackCont.subarea;
 loops = BackCont.loops
 }
 oasis=false;
-
-
+tries = 0;
+alarm[0] = 120;
 alarm[1] = 60;
+alarm[2] = 1800;//50 seconds

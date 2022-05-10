@@ -1,4 +1,4 @@
-if ( KeyCont.key_fire[p] = 1 and (mouse_x < x+22 and mouse_y < y+22 and mouse_x > x-22 and mouse_y > y-22) && (alarm[0]<1) ) || (exceptionclick && (alarm[0]<1))
+if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y < y+22 and UberCont.mouse__x > x-22 and UberCont.mouse__y > y-22) && (alarm[0]<1) ) || (exceptionclick && (alarm[0]<1))
 {
 	if Player.ultra_got[0] == 1
 		Player.horrorEtaken = true;
@@ -15,8 +15,28 @@ if skill == 2
 {
 	scrUnlockGameMode(29,"FOR TAKING FISH'S ULTRA#GUN WARRANT");	
 }
-
-if skill = 85//ROGUE SUPER PORTAL STRIKE
+else if skill == 23 && Player.race == 6 && scrMeleeWeapons(Player.wep) && scrMeleeWeapons(Player.bwep)
+{
+	with Player
+	{
+		altUltra = true;
+		if bskin == 0//YV secret skin
+		{
+			spr_idle=sprMutant6DIdle;
+			spr_walk=sprMutant6DWalk;
+			spr_hurt=sprMutant6DHurt;
+			spr_dead=sprMutant6DDead;
+		}
+		else if bskin == 1//YV secret skin
+		{
+			spr_idle=sprMutant6EIdle;
+			spr_walk=sprMutant6EWalk;
+			spr_hurt=sprMutant6EHurt;
+			spr_dead=sprMutant6EDead;
+		}
+	}
+}
+else if skill = 85//ROGUE SUPER PORTAL STRIKE
 {
 	Player.rogueammomax=6;
 	Player.rogueammo=6;
@@ -36,7 +56,7 @@ else if skill == 15
 	with Player
 	{
 		scrWeaponsAdjustCostPowerOverwhelming();
-		Player.maxlevel += 1;//higher level cap
+		maxlevel += 1;//higher level cap
 	}
 }
 if skill = 97 // MUTATION SMITH WEAPON MUTATOR BETTER WEAPON SPECIFIC MUTATIONS
@@ -47,7 +67,7 @@ with Player
 if skill_got[13]//long arms
 {
 
-bettermelee=1.1;
+bettermelee=1.5;
 
 }
 if skill_got[16]//RecycleGland
@@ -56,7 +76,7 @@ betterrecyclegland=0.26;
 }
 if skill_got[17]//LaserBrain
 {
-betterlaserbrain=2.1;
+betterlaserbrain=2;
 }
 if skill_got[21]//bolt marrow
 {
@@ -85,11 +105,13 @@ scrUnlockGameMode(5,"FOR TAKING THIS ULTRA");
 
 if skill==14
 {//Melting Ultra B detachment
-Player.maxhealth /= 2
+Player.maxhealth *= 0.5
 
 if (Player.my_health> Player.maxhealth){
-Player.my_health = Player.maxhealth;}
+Player.my_health = max(Player.my_health*0.5,Player.maxhealth)}
 
+Player.maxhealth = ceil(Player.maxhealth);
+Player.my_health = ceil(Player.my_health);
 Player.skillpoints+=4;//amounth of mutations
 //Player.skillsChosen=0;//no ultras pls
 
@@ -99,11 +121,11 @@ Player.skillpoints+=4;//amounth of mutations
 if skill==62
 {
 with Player{
-if race==19 || race==24//skelly business hog
-{
-armour=0;
-maxarmour=0;
-}
+	if maxarmour < 1//skelly business hog
+	{
+		armour=0;
+		maxarmour=0;
+	}
 armour+=2;
 maxarmour+=2;
 }
@@ -149,7 +171,7 @@ with Player
 			hard = other.hard;
 			kills = other.kills;
 			subarea=other.subarea;
-			ultra_got[75]=1;//you picked redemption
+			ultra_got[73]=1;//you picked redemption
 			skillpoints=max(0,other.level-2);
 			level=other.level;
 

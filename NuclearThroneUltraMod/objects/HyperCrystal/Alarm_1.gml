@@ -1,5 +1,5 @@
 ///@description AI
-alarm[1] = 15 + random(10)//30+random(10)
+alarm[1] = 14 + random(10)//30+random(10)
 if !halfHP && my_health < maxhealth * 0.6
 {
 	halfHP = true;

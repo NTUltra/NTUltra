@@ -1,7 +1,7 @@
-if !instance_exists(Cursor)
-instance_create(0,0,Cursor);
+//if !instance_exists(Cursor)
+//instance_create(0,0,Cursor);
 
-
+creditpage = 0;
 mode = 0
 mouseover = -1;
 image_speed = 0
@@ -103,7 +103,16 @@ char[17].spr_from = sprWeaponSmithMenuDeselect
 char[17].spr_slct = sprWeaponSmithMenu
 char[17].num = 17
 }
-
+if UberCont.race_have[27]
+{
+	char[27] = instance_create(196,79,CampChar)
+	char[27].sprite_index = sprHandsMenu
+	char[27].spr_menu = sprHandsMenuSelected
+	char[27].spr_to = sprHandsMenuSelect
+	char[27].spr_from = sprHandsMenuDeselect
+	char[27].spr_slct = sprHandsMenu
+	char[27].num = 27
+}
 
 
 BackCont.viewx2 = Campfire.x-__view_get( e__VW.WView, 0 )/2
@@ -115,7 +124,7 @@ var dir;
 dir = 5
 repeat(racemax-4)
 {
-if UberCont.race_have[dir] = 1 && dir !=24 && dir !=20 && dir!=9 && dir !=17
+if UberCont.race_have[dir] = 1 && dir !=24 && dir !=20 && dir!=9 && dir !=17  && dir !=27
 {
 char[dir] = instance_create(64,48,CampChar)
 char[dir].num = dir
@@ -200,7 +209,9 @@ break;
 case 26:
 char[26].sprite_index=sprMutant26Idle
 break;
-
+case 27:
+char[27].sprite_index=sprMutant27Idle
+break;
 }
 with char[dir]
 {
@@ -283,8 +294,8 @@ char[12].spr_from = sprYungCuzMenuDeselect
 char[12].spr_slct = sprYungCuzMenu}
 
 if UberCont.race_have[13] = 1{//Sheep
-char[13].x = 200;
-char[13].y = 0;
+char[13].x = 198;
+char[13].y = 8;
 char[13].sprite_index = sprSheepMenu
 char[13].spr_menu = sprSheepIdleA
 char[13].spr_to = sprSheepMenuSelect
@@ -383,6 +394,7 @@ char[26].spr_menu = sprHumphryMenuSelected
 char[26].spr_to = sprHumphryMenuSelect
 char[26].spr_from = sprHumphryMenuDeselect
 char[26].spr_slct = sprHumphryMenu}
+
 
 logoin = 240
 extra = 0

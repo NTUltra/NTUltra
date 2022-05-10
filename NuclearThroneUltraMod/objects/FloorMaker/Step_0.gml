@@ -8,22 +8,23 @@ if instance_number(Floor) > goal && (UberCont.opt_gamemode != 25 || instance_exi
 		Player.y=y+16;
 		}
 		instance_create(x,y,Floor)
-		if (Player.area == 9 && Player.subarea ==3)
+		if (Player.area == 9 && Player.subarea == 3)
 		{
 			instance_create(x+16,y+16,Carpet);
 			instance_create(x,y,NuclearThrone1);
 		}
 		else if (Player.area == 118 && Player.subarea == 3)
 		{
-			instance_create(x+16,y+16,Carpet);
-			instance_create(x,y,NuclearThrone1);
+			with instance_create(x+16,y+16,Carpet)
+				sprite_index = sprInvertedCarpet;
+			instance_create(x,y,InvertedNuclearThrone1);
 		}
 		else if Player.race=22
 		{
 			if Player.area!=104 && Player.area!=100 && !instance_exists(RogueAmmoChest)
 				instance_create(x+16,y+16,RogueAmmoChest)
 		}
-		else if Player.area!=104 && Player.race!=25 && !(Player.area == 9 && Player.subarea ==3)//Not mutation smith
+		else if Player.area!=104 && Player.race != 25 && !(Player.area == 9 && Player.subarea ==3)&& !(Player.area == 118 && Player.subarea ==3)//Not mutation smith
 		instance_create(x+16,y+16,RadChest)
 		}
 	}
@@ -36,7 +37,7 @@ if UberCont.firstFloorMaker
 {
 	SetSeed();
 	UberCont.firstFloorMaker = false;
-	if instance_exists(Player) && Player.area == 9 && Player.subarea == 3
+	if instance_exists(Player) && (Player.area == 9 || Player.area == 118) && Player.subarea == 3
 	{
 		other.x = 10016;
 		other.y = 10016;

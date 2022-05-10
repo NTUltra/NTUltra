@@ -12,13 +12,13 @@ snd_play_fire(sndNukeFire)
 
 
 with instance_create(x,y,Nuke)
-{motion_add(point_direction(x,y,mouse_x,mouse_y)+(random(4)-2),2)
+{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(4)-2),2)
 image_angle = direction
 team = other.team
 }
 
-BackCont.viewx2 += lengthdir_x(55,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
-BackCont.viewy2 += lengthdir_y(55,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+BackCont.viewx2 += lengthdir_x(55,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+BackCont.viewy2 += lengthdir_y(55,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 BackCont.shake += 12
 creator.wkick = 20
 }

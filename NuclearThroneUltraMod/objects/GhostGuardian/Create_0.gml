@@ -20,7 +20,6 @@ friction = 1.5;
 goForIt = false;
 instance_create(x,y,WallBreak);
 var loops = GetPlayerLoops();
-var i = 0;
 myCompanions = [];
 var amountOfProjectiles = 3;
 amountOfProjectiles += min(loops,4);

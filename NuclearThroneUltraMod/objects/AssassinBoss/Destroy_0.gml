@@ -1,7 +1,8 @@
 scrDrop(30,0)
 scrDrop(100,0)
-
-scrBusinessHogGoldChest();
+if UberCont.area == 3
+scrDefeatedRequiredBoss(secretChallengeBosses.bigAssassin);
+scrBossKill();
 event_inherited()
 
 with Corpse

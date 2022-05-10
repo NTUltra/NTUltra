@@ -14,8 +14,8 @@
   "soundFile": "sndOasisBossTackle.ogg",
   "duration": 0.440875,
   "parent": {
-    "name": "Boss",
-    "path": "folders/Sounds/Enemies/Boss.yy",
+    "name": "OassisBoss",
+    "path": "folders/Sounds/Enemies/Boss/OassisBoss.yy",
   },
   "resourceVersion": "1.0",
   "name": "sndOasisBossTackle",

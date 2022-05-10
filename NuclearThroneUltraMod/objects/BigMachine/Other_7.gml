@@ -5,7 +5,7 @@ spr_idle=sprBigMachineIdle;
 spr_walk=sprBigMachineIdle;
 }
 
-if sprite_index=sprBigMachineBecomeExposed
+if sprite_index=sprBigMachineBecomeExposed || (sprite_index == sprBigMachineHurt && spr_idle == sprBigMachineBecomeExposed)
 {
 image_index=0;
 spr_idle=sprBigMachineExposed;

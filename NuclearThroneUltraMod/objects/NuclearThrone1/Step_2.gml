@@ -1,16 +1,15 @@
 /// @description Move
 
-// Inherit the parent event
-event_inherited();
+
 
 hspeed = 0;
 x = xStart;
 vspeed *= 0.1;
 if walk <= 0 && speed > 1
 	speed = 1;
-if instance_exists(ThroneBeam)
+if instance_exists(ThroneBeam) && !isInverted
 {
-	y = beamY;	
+	y = beamY;
 }
 if (intro && image_speed > 0)
 {
@@ -22,35 +21,56 @@ else if active
 {
 	if (my_health < prevhealth)
 	{
-		var dmgTaken = prevhealth - my_health;
-		//Damage reduction on middle part
-		if cantrishot
-			my_health += dmgTaken * 0.5;
-		if sprite_index == spr_hurt
+		var someoneElseTookdamage = false;
+		with NuclearThrone1Side
 		{
-			if disable
-				spr_hurt = sprNothingMiddleDeactivatedHurt;
-			else
-				spr_hurt = sprNothingMiddleHurt;
-			sprite_index = spr_hurt;
+			if 	tookDamageThisFrame
+			{
+				someoneElseTookdamage = true;
+			}
 		}
-		with rightSide
+		if !someoneElseTookdamage
 		{
-			if disable
-				spr_hurt = sprNothingRightDeactivatedHurtLink;
-			else
-				spr_hurt = sprNothingRightHurtLink;
-			sprite_index = spr_hurt;
-			image_index = 0;
+			//var dmgTaken = prevhealth - my_health;
+			//Damage reduction on middle part
+			//if cantrishot
+			//	my_health += dmgTaken * 0.5;
+			if sprite_index == spr_hurt
+			{
+				if disable
+					spr_hurt = spr_deactivated_hurt;
+				else
+					spr_hurt = spr_middle_hurt;
+				sprite_index = spr_hurt;
+			}
+			with rightSide
+			{
+				if disable
+					spr_hurt = spr_right_deactivated_hurt_link;
+				else
+					spr_hurt = spr_right_hurt_link;
+				sprite_index = spr_hurt;
+				image_index = 0;
+			}
+			with leftSide
+			{
+				if disable
+					spr_hurt = spr_left_deactivated_hurt_link;
+				else
+					spr_hurt = spr_left_hurt_link;
+				sprite_index = spr_hurt;
+				image_index = 0;
+			}
 		}
-		with leftSide
+		else
 		{
-			if disable
-				spr_hurt = sprNothingLeftDeactivatedHurtLink;
-			else
-				spr_hurt = sprNothingLeftHurtLink;
-			sprite_index = spr_hurt;
-			image_index = 0;
+			my_health = prevhealth;	
 		}
 	}
+}
+// Inherit the parent event
+event_inherited();
+if immune || intro
+{
+	speed = 0;
 }

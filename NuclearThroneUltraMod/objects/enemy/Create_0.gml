@@ -4,7 +4,6 @@ right = choose(1,-1)
 my_health = maxhealth
 prevhealth=my_health;
 
-
 MorphMe=false;
 frozen=false;
 
@@ -41,3 +40,4 @@ spr_chrg=false;
 spr_fire=false;
 existTime = 0;
 depth -= 1;
+myCorpse = -1;

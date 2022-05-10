@@ -9,14 +9,14 @@ sleepRate=8;
 snd_wallhit=sndMeleeWall;
 snd_hit=sndHitWall;
 
-dmg=22//12 in retail
+dmg=20//12 in retail
 
 if instance_exists(Player)
 {
 
 if Player.my_health <= 0
 {
-	dmg=140//80 in retail wUT DE FUK ERDEPPOL U CRAZY MDRFKER
+	dmg=100//80 in retail wUT DE FUK ERDEPPOL U CRAZY MDRFKER
 	sprite_index=sprMegaDarkSwordSlash;
 	mask_index=mskMegaDarkSwordSlash;
 }

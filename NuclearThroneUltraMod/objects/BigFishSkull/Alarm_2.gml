@@ -9,7 +9,10 @@ if instance_exists(Player)
 	    //oasis=false;
     
 	    with WantBoss
-	    instance_destroy();
+		{
+			if oasis
+				instance_destroy();
+		}
     
 	    if !instance_exists(BanditBoss)
 	    {spr_idle = sprBigFishSkull
@@ -22,11 +25,12 @@ if instance_exists(Player)
     with Player
     oasisskip=-1;
     
-    //with BanditBoss
-    //oasis=false;
     
     with WantBoss
-    instance_destroy();
+	{
+		if oasis
+			instance_destroy();
+	}
     
     if !instance_exists(BanditBoss)
     {spr_idle = sprBigFishSkull

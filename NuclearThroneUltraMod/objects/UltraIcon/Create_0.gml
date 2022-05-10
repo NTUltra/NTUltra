@@ -1,7 +1,7 @@
 scrUltras()
 p = 0
 alarm[0]=1;
-
+image_speed = 0;
 //Skeleton's random ultra decision
 skill1=1;
 skill2=1;

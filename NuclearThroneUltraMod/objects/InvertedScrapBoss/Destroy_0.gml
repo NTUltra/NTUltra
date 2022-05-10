@@ -17,7 +17,7 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 }
 
 scrDrop(0,100)
-scrBusinessHogGoldChest();
+scrBossKill();
 Sleep(50)
 with instance_create(x,y,BigDogExplo)
 	sprite_index = sprInvertedBigDogExplode;
@@ -56,17 +56,4 @@ type = wep_type[wep]
 curse = 0
 sprite_index = wep_sprt[wep]
 }}
-
-if instance_exists(Marker)
-{
-    if place_meeting(x,y,Marker)
-    {
-        with Player
-        {
-        
-        bigdogmarked=true;
-        
-        }
-    }
-}
 

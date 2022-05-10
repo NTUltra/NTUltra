@@ -29,11 +29,12 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		if keyboard_check_pressed(ord("V")) {
 			var dangle = random(1)*360;
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
+			//screen_save("explain"+string(scrn)+".png");
+			//scrn++;
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			with instance_create(f.x + 16,f.y + 16,WeaponChest)
-				curse = 1;
+			instance_create(f.x + 16,f.y + 16,VanSpawn)
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "CURSED CHEST";
+			thing.mytext = "VAN";
 		}
 		if keyboard_check_pressed(ord("C")) {
 			var dangle = random(1)*360;
@@ -366,14 +367,14 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		}
 	}
 
-	if mouse_x < x
+	if UberCont.mouse__x < x
 	right = -1
-	else if mouse_x > x
+	else if UberCont.mouse__x > x
 	right = 1
 
-	if mouse_y < y
+	if UberCont.mouse__y < y
 	back = 1
-	else if mouse_y > y
+	else if UberCont.mouse__y > y
 	back = -1
 
 	scrPowers()
@@ -552,8 +553,8 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 	else{
 	IsShielding=false;
 	}
-	if( (!(IsShielding)||(ultra_got[7]==1))&&(flying=0) && (UberCont.opt_gamemode!=12||instance_exists(Marker)) ){
-	if race = 7{//Roids always auto fire
+	if( (!(IsShielding)||(ultra_got[7]==1)) && (UberCont.opt_gamemode!=12||instance_exists(Marker)) ){
+	if race = 7 || (altUltra && ultra_got[23] && scrMeleeWeapons(wep)){//Roids always auto fire
 	wep_auto[wep] = 1 wep_auto[bwep] = 1}
 
 
@@ -588,19 +589,30 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		}
 	}
 
-	if can_shoot = 1 and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
+	if can_shoot = 1 and flying == 0 and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 	{
 	if wep_auto[wep] = 0 and clicked = 1
 	{
 
-	    if !scrHunterCrackshot()
+		if ultra_got[44] == 1 && instance_exists(Marker)
+		{
+			scrCrackShotFire();
+		}
+		else
+		{
 			scrFire()
+		}
     
 	clicked = 0
 	}
 		if wep_auto[wep] = 1 and (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
 		{
-		    if !scrHunterCrackshot()
+		    
+			if ultra_got[44] == 1 && instance_exists(Marker)
+			{
+				scrCrackShotFire();
+			}
+			else
 			{
 				scrFire();
 			}
@@ -613,22 +625,21 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 
 
 	//crown of hatred
-	if crown = 6
+	if crown == 6
 	{
 	decay -= 1
 	if decay <= 0 and my_health > 1 && alarm[3]<1
 	{
 	Sleep(30)
-	my_health -= 1
+	my_health -= 1;
+	exception = true;
 
 
 	sprite_index = spr_hurt
 	image_index = 0
 	snd_play(snd_hurt, hurt_pitch_variation)
 
-	repeat(12)
-	{with instance_create(x,y,Rad)
-	motion_add(random(360),2+random(4))}
+	scrRaddrop(16)//used to be 12
 
 	decay = 300
 	}
@@ -671,8 +682,8 @@ if (rad > mr)
 	rad -= mr;
 	level += 1
 
-	if level=7 && area < 4 && race = 25
-	scrUnlockBSkin(25,"FOR REACHING LEVEL 7#BEFORE THE CRYSTAL CAVES#AS MUTATION DOCTOR",0);
+	if level==7 && loops < 1 && race = 25 && (area < 4 || area == 105 || area == 110 || area == 106 || area == 103 || area == 102 || area == 101 || area == 10)
+		scrUnlockBSkin(25,"FOR REACHING LEVEL 7#BEFORE THE LABS#AS MUTATION DOCTOR",0);
 
 	repeat(level-6)
 	instance_create(x,y,IDPDSpawn)
@@ -708,7 +719,7 @@ if (rad > mr)
 	}
 	skillpoints += 1
 	if level > 40
-		skillsChosena --;
+		skillsChosen --;
 	
 
 	}
@@ -753,18 +764,30 @@ if reload > 0
 		reload -= 0.265//0.25
     
 	}
+	if (ultra_got[24])//ULTA D
+	{
+		breload -= 0.6325;
+	}
 	if ultra_got[21]//YV ULTRA A
 	{
 		reload -=0.45;
+		breload -=0.01;//Small bonus
+	}
+	if ultra_got[23] && altUltra
+	{
+		if scrMeleeWeapons(wep)
+		{
+			reload -=0.44;
+		}
 	}
 	//Weaponsmith one with the gun fire rate
 
 	    if ultra_got[67]
 	    {
 	        //Ultra c one with the gun
-	        if wep_type[wep] != 0 && !scrMeleeWeapons()//if wep_type[wep]==0 // You are holding a melee weapon
+	        if wep_type[wep] != 0 && !scrMeleeWeapons(wep)//if wep_type[wep]==0 // You are holding a melee weapon
 	        {
-	        reload -=0.64;
+	        reload -= 0.4;
 	        }
 	    }
 
@@ -773,7 +796,7 @@ if reload > 0
 		accuracy=standartAccuracy;
 	}
 	
-	if race=9 && ultra_got[35]{
+	if race=9 && skill_got[5]{
 		if KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2 && !(instance_exists(GenCont))
 		{
 			reload -= 0.25; // 1 - (30 / room_speed)
@@ -782,15 +805,15 @@ if reload > 0
 
 	if skill_got[28] = 1
 	{
-	//rage
-	var rageAccuracy;
-	var reduction = rage*0.0054;
-	reload -= reduction//0.01//0.009 when cap is 100
-	breload -= reduction;
-	creload -= reduction;
+		//rage
+		var rageAccuracy;
+		var reduction = rage*0.0054;
+		reload -= reduction//0.01//0.009 when cap is 100
+		breload -= reduction;
+		creload -= reduction;
 
-	rageAccuracy = rage*0.001//0.0011// caps at 0.10 increase when cap = 100
-	accuracy=standartAccuracy+rageAccuracy;//standartAccuracy will be changed by eagle eyes so this scales with that.
+		rageAccuracy = rage*0.0012//0.0011// caps at 0.10 increase when cap = 100
+		accuracy=standartAccuracy+rageAccuracy;//standartAccuracy will be changed by eagle eyes so this scales with that.
 	}
 
 
@@ -827,7 +850,7 @@ if reload > 0
 	repeat(wep_cost[wep])
 	{with instance_create(x,y,Shell)
 	{sprite_index = sprShotShell
-	motion_add(point_direction(x,y,mouse_x,mouse_y)+other.right*100+random(40)-20,2+random(2))}}
+	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+other.right*100+random(40)-20,2+random(2))}}
 
 	wkick = -1
 	if wep = 8
@@ -869,7 +892,7 @@ if wep_type[bwep] = 2
 repeat(wep_cost[bwep])
 {with instance_create(x,y,Shell)
 {sprite_index = sprShotShell
-motion_add(point_direction(x,y,mouse_x,mouse_y)+other.right*100+random(40)-20,2+random(2))}}
+motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+other.right*100+random(40)-20,2+random(2))}}
 if ultra_got[27]
 {
 wkick = -1
@@ -984,12 +1007,12 @@ if (ultra_got[42]==1)//HUNTER ULTRA B Homing projectiles
 	homeBoost += 4;
 if skill_got[19] == 1
 {
-	homeBoost += 1.5;
+	homeBoost += 1.2;
 	if race == 25
 		homeBoost += 0.2;
 }
 ///homing projectiles mod
-var modHomeBoost = 0.5;
+var modHomeBoost = 0.6;
 if skill_got[30] == 1
 	modHomeBoost += 0.34;
 
@@ -1006,7 +1029,7 @@ if homeBoost > 0
 {
     with projectile
     {
-        if (team == other.team)
+        if (team == other.team && speed > 0)
         {
 	        if ProjectileCanBeMoved()
 	        {
@@ -1040,28 +1063,29 @@ if (ultra_got[43]==1)//HUNTER ULTRA C Focused projectiles
     {
 	    with projectile
 		{
-		if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) 
-		 and ProjectileCanBeMoved()
-		{
-			var str = 2.0;
-			if place_free(x+lengthdir_x(str,point_direction(x,y,Marker.x,Marker.y)),y)
-		x += lengthdir_x(str,point_direction(x,y,Marker.x,Marker.y))
-		if place_free(x,y+lengthdir_y(str,point_direction(x,y,Marker.x,Marker.y)))
-		y += lengthdir_y(str,point_direction(x,y,Marker.x,Marker.y))
-		
-		}
-		image_angle=direction;
+			//if (x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) 
+			 //and ProjectileCanBeMoved())
+			if speed > 0 && ProjectileCanBeMoved()
+			{
+				var str = 2.0;
+				if place_free(x+lengthdir_x(str,point_direction(x,y,Marker.x,Marker.y)),y)
+					x += lengthdir_x(str,point_direction(x,y,Marker.x,Marker.y))
+					if place_free(x,y+lengthdir_y(str,point_direction(x,y,Marker.x,Marker.y)))
+						y += lengthdir_y(str,point_direction(x,y,Marker.x,Marker.y))
 
-			if (direction<point_direction(x,y,Marker.x,Marker.y) )
-		    {
-		    direction+=3;
-		    image_angle+=3;
-		    }
-		    else if (direction>point_direction(x,y,Marker.x,Marker.y) )
-		    {
-		    direction-=3;
-		    image_angle-=3;
-		    }
+				image_angle=direction;
+
+				if (direction<point_direction(x,y,Marker.x,Marker.y) )
+			    {
+					direction+=3;
+					image_angle+=3;
+			    }
+			    else if (direction>point_direction(x,y,Marker.x,Marker.y) )
+			    {
+					direction-=3;
+					image_angle-=3;
+			    }
+			}
 		}
     }
 }
@@ -1300,8 +1324,9 @@ microseconds=0;
 			targetFloor = instance_furthest(Portal.x,Portal.y,Floor);
 		}
     with instance_create(targetFloor.x+16, targetFloor.y+16,Portal)
-    {inverted=true;
-    depth=0;
+    {
+		inverted=true;
+		depth=0;
     }
     
     invertedportalcounter=0;
@@ -1349,18 +1374,6 @@ moy = window_get_y()+8;
 
 display_mouse_set(mox,moy);
 
-//the weirdest aim assist
-with projectile
-{
-if team=other.team&&instance_exists(enemy)&&instance_exists(Wall)//player projectile
-{
-var homehere = instance_nearest(x,y,enemy);
-if collision_line(x,y,homehere.x,homehere.y,Wall,0,0) < 0&&speed>1
-motion_add(point_direction(x,y,homehere.x,homehere.y),0.07);
-
-}
-}
-
 }
 
 /* */
@@ -1375,7 +1388,7 @@ if race=18
 
     flying--;
     if flying<1
-    mask_index=mskPlayer;
+		mask_index=mskPlayer;
     }
     
      var ground = instance_nearest(x,y,Floor);

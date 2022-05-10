@@ -153,5 +153,5 @@ right = -1
 }
 
 if walk > 0
-motion_add(point_direction(mouse_x,mouse_y,x,y),0.3)
+motion_add(point_direction(UberCont.mouse__x,UberCont.mouse__y,x,y),0.3)
 

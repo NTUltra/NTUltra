@@ -7,12 +7,13 @@ motion_add(random(360),1+random(2))
 }
 
 ang = random(360)
-repeat(20)
+var angstep = 360/10
+repeat(10)
 {
-with instance_create(x,y,Dust)
-motion_add(other.ang,6)
+	with instance_create(x,y,Dust)
+		motion_add(other.ang,6)
 
-ang += 360/20
+	ang += angstep
 }
 
 

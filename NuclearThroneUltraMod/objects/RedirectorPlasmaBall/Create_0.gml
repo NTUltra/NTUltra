@@ -14,11 +14,11 @@ if instance_exists(Player)
 {
 if Player.skill_got[17] = 1
 {
-dmg = 13+(Player.betterlaserbrain*2)
+dmg = 10+(Player.betterlaserbrain)
 nomscale += 0.1;
 }
 }
-originalDirection=point_direction(x,y,mouse_x,mouse_y);
+originalDirection=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 direction=originalDirection;
 image_speed = 0.5
 Sleep(3)

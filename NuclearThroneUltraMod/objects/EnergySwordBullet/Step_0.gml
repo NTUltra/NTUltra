@@ -14,8 +14,8 @@ dir = instance_nearest(x,y,enemy)
     y = dir.y-vspeed
     speed-=0.4;//this so it isn't OP against bosses and big targets
     }
-/*x += lengthdir_x(8,point_direction(x,y,mouse_x,mouse_y))
-y += lengthdir_y(8,point_direction(x,y,mouse_x,mouse_y))*/
+/*x += lengthdir_x(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y))
+y += lengthdir_y(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y))*/
 }}
 
 /* */

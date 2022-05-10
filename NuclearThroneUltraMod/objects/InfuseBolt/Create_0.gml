@@ -12,3 +12,5 @@ dmg = 7;
 dealtDamage = false;
 
 hitTime = 10;
+
+alarm[11] = 1;

@@ -1,4 +1,4 @@
-
+event_inherited();
 if instance_exists(Player)
 {
 if Player.loops>1&&speed>4.7

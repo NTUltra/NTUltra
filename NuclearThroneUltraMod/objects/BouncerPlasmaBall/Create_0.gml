@@ -8,7 +8,7 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 
 typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 //friction=0.4;
-dmg = 6
+dmg = 7
 nomscale = 1;
 if instance_exists(Player)
 {
@@ -18,7 +18,7 @@ dmg = 9+(Player.betterlaserbrain)
 nomscale += 0.2;
 }
 }
-originalDirection=point_direction(x,y,mouse_x,mouse_y);
+originalDirection=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 direction=originalDirection;
 image_speed = 0.5
 Sleep(3)

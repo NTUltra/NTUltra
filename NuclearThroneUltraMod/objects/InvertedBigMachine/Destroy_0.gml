@@ -9,7 +9,7 @@ if race = 7
 
 }
 
-scrBusinessHogGoldChest();
+scrBossKill();
 
 with instance_create(x,y,BigDogExplo)
 	visible = false;
@@ -62,19 +62,6 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 }
 snd_play(sndBossWin);
-
-if instance_exists(Marker)
-{
-    if place_meeting(x,y,Marker)
-    {
-        with Player
-        {
-        
-        bigmachinemarked=true;
-        
-        }
-    }
-}
 
 event_inherited()
 

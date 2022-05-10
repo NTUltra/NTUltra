@@ -1,8 +1,8 @@
 if my_health <= 0
 instance_destroy()
 
-if mouse_x < x
+if UberCont.mouse__x < x
 right = -1
-else if mouse_x > x
+else if UberCont.mouse__x > x
 right = 1
 

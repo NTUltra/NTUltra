@@ -14,8 +14,8 @@
   "soundFile": "sndOasisBossFire",
   "duration": 1.605375,
   "parent": {
-    "name": "Boss",
-    "path": "folders/Sounds/Enemies/Boss.yy",
+    "name": "OassisBoss",
+    "path": "folders/Sounds/Enemies/Boss/OassisBoss.yy",
   },
   "resourceVersion": "1.0",
   "name": "sndOasisBossFire",

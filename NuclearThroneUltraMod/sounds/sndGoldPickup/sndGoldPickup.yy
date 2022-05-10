@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndGoldPickup",
-  "duration": 0.0,
+  "duration": 0.812031,
   "parent": {
     "name": "Weapons",
     "path": "folders/Sounds/Weapons.yy",

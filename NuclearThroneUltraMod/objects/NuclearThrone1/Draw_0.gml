@@ -2,15 +2,15 @@
 if (active)
 {
 	if sprite_index == spr_hurt
-		draw_sprite(sprNothingBackHurt,image_index,x,y);
+		draw_sprite(spr_back_hurt,image_index,x,y);
 	else
-		draw_sprite(sprNothingBack,0,x,y);
+		draw_sprite(spr_back,0,x,y);
 	draw_sprite(sprite_index,0,x,y);
 	//draw_sprite_ext(mask_index,image_index,x,y,image_xscale,image_yscale,image_angle,c_white,0.6);
 }
-else if sprite_index == sprNothingActivate
+else if sprite_index == spr_activate
 {
-	draw_sprite(sprNothingActivate,imageIndex,x,y);	
+	draw_sprite(spr_activate,imageIndex,x,y);	
 }
 else
 {

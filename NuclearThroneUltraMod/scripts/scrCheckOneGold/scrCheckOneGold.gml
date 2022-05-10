@@ -15,12 +15,13 @@ function scrCheckOneGold() {
 		{
 			if start_wep_have[wepdir,racedir]=1
 				gotthisone++;
+			wepdir++;
 		}
 		if gotthisone>0
 			thischarhasagoldwep++;
 	racedir++;
 	}
-
+	debug(thischarhasagoldwep);
 	if thischarhasagoldwep >= racemax
 		return true
 	else

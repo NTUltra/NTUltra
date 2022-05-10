@@ -1,8 +1,8 @@
 event_inherited();
-typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
+typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 
 image_speed=1;
-dmg = 12;
+dmg = 10;
 owner = -1;
 length = 1;
 maxlength = 132;

@@ -11,8 +11,8 @@ if accuracycharge<2
 accuracycharge=2;
 if instance_exists(enemy)
 {
-var enem = instance_nearest(mouse_x,mouse_y,enemy);
-if ultraD && point_distance(mouse_x,mouse_y,enem.x,enem.y)<128
+var enem = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
+if ultraD && point_distance(UberCont.mouse__x,UberCont.mouse__y,enem.x,enem.y)<128
 {
 direction=point_direction(x,y,enem.x,enem.y);
 image_angle=direction;
@@ -25,8 +25,8 @@ direction = image_angle+(random(accuracycharge*4)-(accuracycharge*2))//30 15
 speed = 4
 //if instance_exists(target)
 //{
-if point_distance(x,y,mouse_x,mouse_y) < 120
-motion_add(point_direction(x,y,mouse_x,mouse_y),1)
+if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y) < 120
+motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),1)
 //}
 image_angle = direction
 speed = 0

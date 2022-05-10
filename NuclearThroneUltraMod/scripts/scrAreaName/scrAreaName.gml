@@ -80,6 +80,9 @@ function scrAreaName(area,subarea,loops){
 				txt = "4_"+string(subarea);
 				upsideDown = true;
 			break;
+			case 118: //Inverted Palace
+				txt = "7_"+string(subarea);
+			break;
 		}
 	}
 	if loops>0

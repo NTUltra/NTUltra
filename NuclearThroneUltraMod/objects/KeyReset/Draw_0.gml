@@ -4,7 +4,7 @@ var txt;
 txt="RESET KEYS";
 draw_text_colour(x-string_width(string_hash_to_newline(txt))*0.5,y-16,string_hash_to_newline(txt),c_white,c_white,c_white,c_white,1);
 
-if mouse_check_button_pressed(mb_left) and mouse_x > x and mouse_x < x+8 and mouse_y > y and mouse_y < y+8
+if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x and UberCont.mouse__x < x+8 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
 {
 	snd_play_2d(sndClick);
 UberCont.opt_up=87//W

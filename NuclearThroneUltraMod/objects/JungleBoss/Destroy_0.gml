@@ -1,6 +1,9 @@
 scrDrop(100,50)
 scrDrop(10,0)
-event_inherited()
+event_inherited();
+scrBossKill();
+if UberCont.area == 114
+scrDefeatedRequiredBoss(secretChallengeBosses.bushBox);
 scrEndBossMusic();
 repeat(30)
 {
@@ -13,4 +16,5 @@ repeat(30)
 }
 event_user(0);
 event_user(0);
-instance_create(x,y,PinkSheep);
+if !instance_exists(SurvivalWave) && !instance_exists(InvaderBossSpawnPortal) && instance_number(JungleBoss) == 1
+	instance_create(x,y,PinkSheep);

@@ -95,14 +95,14 @@ function scrModHit() {
 								frozen=true;
 					            with instance_create(x,y,FrozenEnemy)
 					            {
-						            //image_speed=0;
-						            image_xscale=other.size*choose(1,-1);
-						            image_yscale=other.size;
+						            var s = min(2,other.size)
+								    image_xscale=s*choose(1,-1);
+								    image_yscale=s;
 						            xx=other.x
 						            yy=other.y
 						            debrisAmount=4;
 					            }
-					        alarm[11]+=10;//30 for freezebullets
+					        alarm[11]+=20;
 					        if alarm[1] > 0
 					            alarm[1] += 10;
 					        }
@@ -199,7 +199,7 @@ function scrModHit() {
 					motion_add(random(360),5.2)
 					image_angle = direction
 					team = 2
-					alarm[0] = 5;
+					alarm[0] = 7;
 				}
 				break;
 
@@ -213,7 +213,7 @@ function scrModHit() {
 						motion_add(random(360),10+random(5))
 						image_angle = direction
 						team = 2
-						alarm[0] = 3;
+						alarm[0] = 5;
 					}
 				}
 				break;

@@ -1,4 +1,4 @@
-if KeyCont.key_fire[p] = 1 and (mouse_x < x+16 and mouse_y < y+16 and mouse_x > x-16 and mouse_y > y-16)
+if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+16 and UberCont.mouse__y < y+15 and UberCont.mouse__x > x-16 and UberCont.mouse__y > y-15)
 {
     with UberCont///UNLOCK CROWN
     {
@@ -19,6 +19,8 @@ Player.crownpoints -= 1
     with Player
     {
         invertedchance = 8;
+		if race == 27
+			invertedchance = 20;
     }
 
 
@@ -51,11 +53,14 @@ with UberCont
 //UNDO STUFF
 
 //CROWN OF DESTINY
-if oldcrown = 8 
-Player.skillpoints -= 1
+//if oldcrown = 8 
+//Player.skillpoints -= 1
 //CROWN OF DEATH
 if oldcrown = 3
+{
 Player.maxhealth += 1
+UberCont.maxHpIncrease ++;
+}
 
 //DO STUFF
 
@@ -73,7 +78,7 @@ if crown == 2
 		if my_health >= maxhealth
 		{
 			my_health = max(my_health,maxhealth);
-			my_health += 3;
+			my_health += 2;
 		}
 		else
 		{
@@ -93,17 +98,17 @@ Player.skillpoints += 1
 Player.skillsChosen -= 1;
 }
 //CROWN OF DEATH
-if crown = 3
+if crown = 3 && Player.maxhealth > 1
 {
 Player.maxhealth -= 1
-if Player.my_health > Player.maxhealth
-Player.my_health = Player.maxhealth}
+UberCont.maxHpIncrease --;
+}
 
 if crown!=4//not crown of haste
 Player.rushcrownlevels=0;
 
 //CROWN OF DECAY
-if crown = 6
+if crown == 6
 Player.decay = 300
 
 //CROWN OF REINCARNATION
@@ -150,7 +155,9 @@ if crown==12
 {
     with Player
     {
-    invertedchance = 50;
+		invertedchance = 70;
+		if race == 27
+			invertedchance = 90;
     }
 }
 

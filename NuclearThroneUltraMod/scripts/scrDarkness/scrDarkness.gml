@@ -45,6 +45,17 @@ function scrDarkness() {	if darkness = 1
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),90,0)
 	with GhostGuardian
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),48,0)
+	with BallBoss
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),100,0)
+	with BecomeBallBoss
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),100,0)
+	with BigFish
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),100,0)
+	with BigVulture
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),100,0)
+	with JungleBoss
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),120,0)
+	
 	
 	with Torch
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),90+random(4),0)
@@ -84,16 +95,24 @@ function scrDarkness() {	if darkness = 1
 	with Corpse
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),max(0,100-image_index*40),0)
 	with CrownPickup
-	draw_rectangle(x-16-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),x+16-__view_get( e__VW.XView, 0 ),min(y,__view_get( e__VW.YView, 0 ))-__view_get( e__VW.YView, 0 ),0)
+	{
+		draw_sprite_ext(sprCrownLightWhite,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 )+32,1,1,0,c_white,0.2)
+		draw_sprite_ext(sprCrownLightWhite,1,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),1,100,5,c_white,0.2)
+		//draw_rectangle(x-16-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),x+16-__view_get( e__VW.XView, 0 ),min(y,__view_get( e__VW.YView, 0 ))-__view_get( e__VW.YView, 0 ),0)
+	}
 	with Morph
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),30+random(3),0)
 	with Sheep
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),90+random(4),0)
 
 	draw_set_color(c_black)
-
+/*
 	with CrownPickup
-	draw_rectangle(x-16-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),x+16-__view_get( e__VW.XView, 0 ),min(y,__view_get( e__VW.YView, 0 ))-__view_get( e__VW.YView, 0 ),0)
+	{
+		draw_sprite_ext(sprCrownLightWhite,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 )+32,1,1,0,c_white,1)
+		draw_sprite_ext(sprCrownLightWhite,1,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),1,y+16,5,c_white,1)
+		//draw_rectangle(x-16-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),x+16-__view_get( e__VW.XView, 0 ),min(y,__view_get( e__VW.YView, 0 ))-__view_get( e__VW.YView, 0 ),0)
+	}*/
 	with Player
 	{
 	if race = 3
@@ -123,6 +142,12 @@ function scrDarkness() {	if darkness = 1
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),20+random(3),0)
 	with CrownPickup
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),20,0)
+	with BecomeBallBoss
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),40,0)
+	with BallBoss
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),40,0)
+	with Statue
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),40,0)
 	//with Corpse
 	//draw_circle(x-view_xview,y-view_yview,max(0,80-image_index*40),0)
 	surface_reset_target()

@@ -12,7 +12,7 @@ snd_play_fire(sndWaveGun)
 
 with instance_create(x,y,Bullet5)
 {
-motion_add(point_direction(x,y,mouse_x,mouse_y)+random(4)-2+sin(other.ammo/2)*16,15)
+motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(4)-2+sin(other.ammo/2)*16,15)
 image_angle = direction
 team = other.team
 if (instance_exists(Player))
@@ -26,7 +26,7 @@ if (instance_exists(Player))
 }
 with instance_create(x,y,Bullet5)
 {
-motion_add(point_direction(x,y,mouse_x,mouse_y)+random(4)-2-sin(other.ammo/2)*16,15)
+motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(4)-2-sin(other.ammo/2)*16,15)
 image_angle = direction
 team = other.team
 if (instance_exists(Player))
@@ -39,8 +39,8 @@ if (instance_exists(Player))
     }
 }
 
-BackCont.viewx2 += lengthdir_x(2,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
-BackCont.viewy2 += lengthdir_y(2,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+BackCont.viewx2 += lengthdir_x(2,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+BackCont.viewy2 += lengthdir_y(2,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 BackCont.shake += 2
 creator.wkick = 7}
 

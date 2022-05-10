@@ -14,7 +14,10 @@ if spr_idle == sprHotDrakeSkullIdleOpen
 		spr_idle = sprHotDrakeSkullIdleClosed;
 		spr_hurt = sprHotDrakeSkullHurtClosed;
 		with instance_create(x,y,Portal)
-			type = 1
+		{
+			type = 1;
+			pullstrength = 3;
+		}
 	
 	}
 }

@@ -1,10 +1,15 @@
-
-var hit = collision_line_point(x,y,x,y+10000,Wall,false,false)
-if hit[0] != noone{
-	xEnd = hit[1];
-	yEnd = hit[2];
+var xx = x + lengthdir_x(10000,image_angle-90);
+var yy = y + lengthdir_y(10000,image_angle-90);
+var hit = collision_line_point(x,y,xx,yy,Wall,false,false)
+xEnd = hit[1];
+yEnd = hit[2];
+if hit[0] != noone && sprite_index == sprInvertedNothingBeamStretch
+{
+	with instance_create(xEnd,yEnd,WallBreak)
+		canSpawnSwarm = false;
+	alarm[0] = 1;
 }
-image_yscale = (yEnd - y)/sprite_height
+image_yscale = (yEnd - y)/sprite_get_height(sprite_index)
 /*
 var dir;
 dir = 0

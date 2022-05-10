@@ -17,7 +17,7 @@ with instance_create(x,y,SmallGrenade)
 {
 if other.isGold
 	sprite_index = sprSmallGoldGrenade
-motion_add(point_direction(x,y,mouse_x,mouse_y)+(random(12)-6)*other.creator.accuracy,other.projectileSpeed+random(3))//speed=10
+motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(12)-6)*other.creator.accuracy,other.projectileSpeed+random(3))//speed=10
 image_angle = direction
 team = other.team
 //alarm[0] = 14//shorter fuse original 40 regular naddes 60
@@ -34,8 +34,8 @@ team = other.team
 //}
 
 
-BackCont.viewx2 += lengthdir_x(10,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
-BackCont.viewy2 += lengthdir_y(10,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+BackCont.viewx2 += lengthdir_x(10,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+BackCont.viewy2 += lengthdir_y(10,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 BackCont.shake += 3
 creator.wkick = 6}
 

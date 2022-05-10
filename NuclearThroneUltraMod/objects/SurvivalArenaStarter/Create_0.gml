@@ -1,22 +1,6 @@
 /// @description Init
 image_speed = 0;
 var dis = 48;
-if (UberCont.opt_gamemode == 26 || UberCont.opt_gamemode == 27)
-{
-	if UberCont.canDoChallenge
-	{
-		name = "CAN ONLY DO CHALLENGE ONCE\nIN DAILY\nSO SORRY";
-		exit;
-	}
-	else
-	{
-		UberCont.canDoChallenge = false;
-	}
-}
-else
-{
-	UberCont.canDoChallenge = true;
-}
 if (UberCont.opt_gamemode == 25)
 {
 	if instance_exists(Player)
@@ -38,6 +22,8 @@ if (UberCont.opt_gamemode == 25)
 else
 {
 	name = "TAKE THE CHALLENGE#FOR AN ULTRA MOD?";
+	if UberCont.crownVaultChallenge > 2
+		name = "OPEN ULTRA MODS";
 	instance_create(x - dis,y - dis,Torch);
 	instance_create(x + dis,y - dis,Torch);
 	instance_create(x + dis,y + dis,Torch);

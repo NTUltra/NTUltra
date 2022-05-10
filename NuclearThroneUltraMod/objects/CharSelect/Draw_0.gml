@@ -9,13 +9,21 @@ image_speed = 0
 visible = 1
 
 
-x = __view_get( e__VW.XView, 0 )+8+22*num//-(mouse_x-view_xview)*0.7
+x = __view_get( e__VW.XView, 0 )+8+22*num//-(UberCont.mouse__x-view_xview)*0.7
 y = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-36
 if num>13
 {
 //yy=58;
-y = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24
-x = __view_get( e__VW.XView, 0 )+8+22*(num-13);
+	if num == 27
+	{
+		x = __view_get( e__VW.XView, 0 ) + 8
+	}
+	else
+	{
+		x = __view_get( e__VW.XView, 0 )+8+22*(num-13);
+	}
+	y = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24
+
 }
 else
 {
@@ -43,19 +51,43 @@ else
     
     if Menu.mouseover != image_index
 	{
+		/*
 		draw_sprite_ext(sprite_index,-1,x,yyy,1,1,0,c_black,0.3)
-		//var col = make_color_rgb(72,253,8); normal dark
-		var col = make_color_rgb(72,156,8);// darker
-		//var col = make_color_rgb(34,76,7); // darkest
+		var colll = make_color_rgb(72,253,8);// normal dark
+		var coll = make_color_rgb(72,156,8);// darker
+		var col = make_color_rgb(34,76,7); // darkest
 		if UberCont.ctot_loop[num]>0
 			draw_rectangle_color(x,yyy,x+15,yyy+23,col,col,col,col,true);
+		if UberCont.race_bskin[num] && UberCont.race_cskin[num]
+		{
+			draw_rectangle_color(x-1,yyy-1,x+16,yyy+24,coll,coll,coll,coll,true);
+			if scrHasAllStartingWeapons(num) && UberCont.ctot_all_crowns_taken[num] > 0
+				draw_rectangle_color(x-2,yyy-2,x+17,yyy+25,colll,colll,colll,colll,true);
+		}
+		*/
 		depth = normalDepth - 1;
 	}
 	else
 	{
-		var col = make_color_rgb(72,253,8);
+		/*
+		var coll = make_color_rgb(72,253,8);
+		var col = make_color_rgb(72,156,8);
 		if UberCont.ctot_loop[num]>0
 			draw_rectangle_color(x,yyy,x+15,yyy+23,col,col,col,col,true);
+		if UberCont.race_bskin[num] && UberCont.race_cskin[num]
+			draw_rectangle_color(x-1,yyy-1,x+16,yyy+24,coll,coll,coll,coll,true);
+			*/
+		var colll = make_color_rgb(72,253,8);// normal dark
+		var coll = make_color_rgb(72,156,8);// darker
+		var col = make_color_rgb(34,76,7); // darkest
+		if UberCont.ctot_loop[num]>0
+			draw_rectangle_color(x,yyy,x+15,yyy+23,col,col,col,col,true);
+		if UberCont.race_bskin[num] && UberCont.race_cskin[num]
+		{
+			draw_rectangle_color(x-1,yyy-1,x+16,yyy+24,coll,coll,coll,coll,true);
+			if scrHasAllStartingWeapons(num) && UberCont.ctot_all_crowns_taken[num] > 0
+				draw_rectangle_color(x-2,yyy-2,x+17,yyy+25,colll,colll,colll,colll,true);
+		}
 		depth = normalDepth - 5;
 	}
     

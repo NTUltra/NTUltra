@@ -12,7 +12,7 @@ snd_play(sndLaser)
 if instance_exists(creator)
 {
 with instance_create(x,y,Laser)
-{image_angle = point_direction(x,y,mouse_x,mouse_y)+(random(2)-1)*other.creator.accuracy
+{image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(2)-1)*other.creator.accuracy
 image_yscale=0.2+other.rate*0.2
 team = other.team
 event_perform(ev_alarm,0)
@@ -28,14 +28,14 @@ if Player.skill_got[17] = 1
 image_yscale = 1.75
 }
 
-BackCont.viewx2 += lengthdir_x(3,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
-BackCont.viewy2 += lengthdir_y(3,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+BackCont.viewx2 += lengthdir_x(3,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+BackCont.viewy2 += lengthdir_y(3,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 BackCont.shake += 2
 wkick = 2*/
 
 
-BackCont.viewx2 += lengthdir_x(1+rate,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
-BackCont.viewy2 += lengthdir_y(1+rate,point_direction(x,y,mouse_x,mouse_y)+180)*UberCont.opt_shake
+BackCont.viewx2 += lengthdir_x(1+rate,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+BackCont.viewy2 += lengthdir_y(1+rate,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 
 if rate>10
 rate=10;

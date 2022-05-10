@@ -22,7 +22,7 @@ wallbounce+=5;
 
 typ = 1
 alarm[0]=1;
-
+dmg = 1;
 
 //friction = 0.6
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable

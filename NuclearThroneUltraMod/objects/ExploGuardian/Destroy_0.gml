@@ -7,7 +7,7 @@ if (charge || fire)
 	var angleStep = 360/amount;
 	repeat(amount)
 	{
-		with instance_create(x,y,ExploGuardianBullet)
+		with instance_create(x,y,exploBullet)
 		{
 			motion_add(angle,other.projectileSpeed/3);
 			image_angle = direction

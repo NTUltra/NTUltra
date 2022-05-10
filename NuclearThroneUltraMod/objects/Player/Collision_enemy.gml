@@ -1,6 +1,7 @@
 motion_add(point_direction(other.x,other.y,x,y),other.size*0.5)
 if other.team != team
 {
+	var actuallyDead = false;
 	if other.team != 0//Dealing the damage with gamma guts
 	{
 		var contactDmg = 0;
@@ -24,6 +25,15 @@ if other.team != team
 			with other
 			{
 				my_health -= contactDmg//dmg dealt by gamma guts
+				if other.ultra_got[105] && other.skill_got[8]
+				{
+					//Predict if its dead with the damage buff here.
+					var dmgTaken = scrHandsDamageBuff(contactDmg);
+					if my_health - dmgTaken <= 0
+					{
+						actuallyDead = true;	
+					}
+				}
 				sprite_index = spr_hurt
 				image_index = 0
 				motion_add(point_direction(other.x,other.y,x,y),3)
@@ -35,9 +45,9 @@ if other.team != team
 				    instance_create(x,y-16,Notice);
 				    }}}
 			}
-			if (other.my_health <= 0 && skill_got[8])//gamma guts kill?
+			if (other.my_health <= 0 && skill_got[8] || actuallyDead)//gamma guts kill?
 			{
-				snd_play(sndGammaGutsKill);
+				snd_play(sndGammaGutsKill,0,true);
 				instance_create(x,y,GammaGutsBlast);
 			}
 		}
@@ -46,7 +56,7 @@ if other.team != team
 	if other.meleedamage > 0 && other.existTime > 25 && meleeimmunity<1 && alarm[3] < 1//is it a melee enemy?
 	{
 	meleeimmunity=14;
-	    if (other.my_health<=0)
+	    if (other.my_health<=0 || actuallyDead)
 	    {
 	    }
 	    else {//if !(KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2){//Ultra D Humphry no contact damage
@@ -54,7 +64,6 @@ if other.team != team
     
 	        if sprite_index != spr_hurt
 	        {
-				debug("melee damage:",other.meleedamage);
 		        snd_play(other.snd_melee)
 		        sprite_index = spr_hurt
 		        image_index = 0

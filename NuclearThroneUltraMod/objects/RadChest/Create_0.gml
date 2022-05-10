@@ -32,7 +32,7 @@ hurt_pitch_variation = 0;
 
 
 my_health = maxhealth
-
+/*
 if Player.race=4 && Player.my_health <= Player.maxhealth*0.5 and random(2) < 1//melting
 {
 instance_destroy(id,false)
@@ -43,9 +43,9 @@ else if Player.race!=4 && Player.my_health < round(6/2) and random(2) < 1 || ( P
 instance_destroy(id,false)
 instance_create(x,y,HealthChest)
 }
+*/
 
-
-if instance_nearest(x-16,y-16,Floor).styleb = 1 and ( Player.area = 1 and Player.area = 105 ) and random(3) < 1
+if instance_nearest(x-16,y-16,Floor).styleb = 1 and ( Player.area = 1 || Player.area = 105 ) and random(3) < 1
 instance_change(RadMaggotChest,true)
 }
 

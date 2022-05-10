@@ -13,6 +13,14 @@ if UberCont.public = 0 {
         else
             wep = 1
     }
+	
+	if keyboard_check_pressed(ord("T")) {
+
+        with enemy
+		{
+			my_health = 0;	
+		}
+    }
 
     if keyboard_check_pressed(ord("X")) {
 
@@ -67,7 +75,7 @@ if UberCont.public = 0 {
 
     if keyboard_check_pressed(ord("3")) {
         area = 3
-        subarea = 2
+        subarea = 0
         inverted = false;
         with enemy
         my_health = 0
@@ -112,7 +120,7 @@ if UberCont.public = 0 {
     }
 
     if keyboard_check_pressed(ord("9")) {
-        area = 118
+        area = 9
         subarea = 0
         with enemy
         my_health = 0

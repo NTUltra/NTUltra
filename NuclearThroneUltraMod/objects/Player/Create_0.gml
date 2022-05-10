@@ -4,6 +4,7 @@ instance_destroy()
 exit;
 }*/
 //scrn=0; //for screenshot taking character explain pic
+saveLoaded = false;
 restarted = false;
 hurt_pitch_variation = 0;
 //3D audio
@@ -80,13 +81,6 @@ with UberCont {
     }
 }
 
-bigbanditmarked = false;
-bigdogmarked = false;
-lillhuntermarked = false;
-bigmachinemarked = false;
-dragonmarked = false;
-chesirecatmarked = false;
-
 keyfire = 0
 
 if instance_exists(GenCont)
@@ -139,28 +133,31 @@ maxhealth = 8
 bettermelee = 0;
 betterlaserbrain = 0;
 betterpluto = 0;
-betterrabbitpaw = 0.14;
+betterrabbitpaw = 0.1;
 betterrecyclegland = 0.1;
 betterboltmarrow = 0;
 
 scrRaces()
+bskin = UberCont.skin[race];
 scrSkills()
-scrUltras()
 scrWeapons();
+//These weps are initialized here for yv's secret ultra
+wep = 0;
+bwep = 0;
+altUltra = false;
+loops = 0;
+scrUltras()
 scrCrowns()
 
-bskin = UberCont.skin[race];
 gunY = 0;
 if race == 7 && bskin == 2
 {
 	gunY = 4;
 }
-if race == 25
-	betterrabbitpaw += 0.02;
 //RACE STUFF
 scrLoadRace();
 
-
+canSecondaryPop = true;
 
 if UberCont.opt_gamemode == 14 //fish companion only
 {
@@ -215,18 +212,8 @@ cwepmod1 = 0;
 cwepmod2 = 0;
 cwepmod3 = 0;
 cwepmod4 = 0;
-/*WEAPON MODS
-mod1[]
-mod2[]
-mod3[]
-0 nothing
-1 toxic
-2 explosive
-3 flame
-4 frost
-5 blood
-6 lightning
-*/
+
+
 
 if race = 17 //GunSmith random wepmod
 {
@@ -281,7 +268,7 @@ maxspeed = 4
 
 
 level = 1
-maxlevel = 10
+maxlevel = 10 + UberCont.levelIncrease;
 if UberCont.opt_gamemode == 15 //no mutaitons gamemode
 maxlevel = 1;
 skillsChosen = 0
@@ -289,7 +276,6 @@ skillpoints = 0;
 crownpoints = 0
 
 kills = 0
-loops = 0
 
 //AREA STUFF
 area = 1
@@ -301,6 +287,8 @@ inverted = false; //for when entering inverted portals
 invertedportalcounter = 0;
 invertedportaldelay = 10;
 invertedchance = 8;
+if race == 27
+	invertedchance = 20;
 
 
 oasis = false;
@@ -376,7 +364,7 @@ prevhealth = maxhealth //health previous step
 
 //default shit
 clicked = 0
-if scrMeleeWeapons()
+if scrMeleeWeapons(wep)
 wepangle = choose(120, -120)
 else
     wepangle = 0
@@ -551,3 +539,5 @@ if UberCont.opt_gamemode == 25 && !instance_exists(SurvivalWave)
 }
 cheatyinfiniteammo = false;
 unkillable = false;
+maxhealth += UberCont.maxHpIncrease;
+my_health = maxhealth;

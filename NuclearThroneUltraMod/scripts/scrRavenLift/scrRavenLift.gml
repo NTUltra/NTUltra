@@ -1,15 +1,14 @@
 /// @description  scrRavenLift()
 function scrRavenLift() {
 	var dir;
-	if (nofly <= 0) {
+	if (nofly <= 0 && sprite_index != spr_hurt) {
 	    repeat (6) with (instance_create(x + random(16) - 8, y + random(16), Dust)) motion_add(random(360), 3 + random(1));
 	    if (x > __view_get( e__VW.XView, 0 ) && y > __view_get( e__VW.YView, 0 ) && x < __view_get( e__VW.XView, 0 ) + __view_get( e__VW.WView, 0 ) && y < __view_get( e__VW.YView, 0 ) + __view_get( e__VW.HView, 0 )) snd_play(sndRavenLift);
 	    z = 0;
 	    scrTarget();
 	    if (target > 0 && target.object_index=Player) {
-	        var mp = target.p - 1;
-	        var mx = mouse_x;
-	        var my = mouse_y;
+	        var mx = UberCont.mouse__x;
+	        var my = UberCont.mouse__y;
 	        var tries = 1024;
 	        while (--tries >= 0) {
 	            targetx = x + lengthdir_x(128, point_direction(mx, my, target.x, target.y) + random(50) - 25);
@@ -29,11 +28,22 @@ function scrRavenLift() {
 	            }
 	            if (place_free(targetx, targety)) break;
 	        }
-	        //if (tries >= 0 && point_distance(x, y, targetx, targety) > 16) {
+	        if (tries >= 0) {
 	            image_index = 0;
 	            nofly = 50;
+				alarm[2] = 0;
 	            instance_change(RavenFly, false);
-	        //}
+	        }/*
+			else
+			{
+				var n = instance_nearest(x,y,Floor)
+				image_index = 0;
+	            nofly = 50;
+				alarm[2] = 0;
+	            instance_change(RavenFly, false);
+				x = n.x+16;
+				y = n.y+16;
+			}*/
 	    }
 	}
 

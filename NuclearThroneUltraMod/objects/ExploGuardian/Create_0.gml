@@ -30,7 +30,7 @@ friction = 2;
 instance_create(x,y,BigWallBreak);
 projectileSpeed = 10;
 projectileSpeed += min(GetPlayerLoops(),3);
-tellTime = 50;
+tellTime = 30;
 var loops = min(GetPlayerLoops(),3)
 tellTime -= 5*loops;
 direction = random(360);

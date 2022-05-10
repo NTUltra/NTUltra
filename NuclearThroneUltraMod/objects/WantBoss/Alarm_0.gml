@@ -1,5 +1,6 @@
 x = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5
 y = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.5
+alarm[1] = 0;
 if instance_exists(Player)
 {
 	target = Player;	
@@ -9,7 +10,7 @@ if target > 0 && instance_exists(target)
 	with Wall
 	{
 		if collision_line(x,y,other.target.x,other.target.y,Wall,true,true) < 0 and point_distance(x,y,other.target.x,other.target.y) > 110 
-		and point_distance(x,y,other.target.x,other.target.y) < 120 and ((!place_free(x-16,y) and !place_free(x+16,y)) or (!place_free(x,y+16) and !place_free(x,y-16))) || instance_number(enemy) < instance_number(IDPDVan) +3
+		and point_distance(x,y,other.target.x,other.target.y) < 180 and ((!place_free(x-16,y) and !place_free(x+16,y)) or (!place_free(x,y+16) and !place_free(x,y-16))) || other.tries > 20
 		{
 			instance_create(x,y,CanSpawnBoss)
 		}
@@ -18,7 +19,14 @@ if target > 0 && instance_exists(target)
 	{
 		with instance_nearest(target.x,target.y,CanSpawnBoss)
 		{
-			if other.area==4
+			if other.area == 103 && instance_exists(Player) && Player.loops > 4
+			{
+				if Player.loops % 2 == 1
+					instance_create(x,y,BigBadBat);
+				else
+					instance_create(x,y,InvertedBigBadBat);
+			}
+			else if other.area==4
 			{
 				instance_create(x,y,BigBadBat);
 			}
@@ -70,5 +78,6 @@ if target > 0 && instance_exists(target)
 		instance_destroy()
 	}
 }
+tries++;
 alarm[0] = 5
 

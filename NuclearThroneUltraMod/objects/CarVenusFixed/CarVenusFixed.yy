@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprVenusCarFixed",
-    "path": "sprites/sprVenusCarFixed/sprVenusCarFixed.yy",
+    "name": "sprVenusCarFix",
+    "path": "sprites/sprVenusCarFix/sprVenusCarFix.yy",
   },
   "solid": false,
   "visible": true,

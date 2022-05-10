@@ -23,7 +23,7 @@ scrDrop(200,0)
 
 scrDrop(0,10)
 
-scrBusinessHogGoldChest();
+scrBossKill();
 
 
 //drop oopsgun?
@@ -42,21 +42,8 @@ event_inherited()
 
 if oasis && !instance_exists(SurvivalWave)
 {
-instance_create(x,y,Portal);
+	if instance_exists(Player) && Player.oasis = false
+		instance_create(x,y,Portal);
 with Player
 oasis=true;
 }
-
-with Marker
-        {
-        
-        if other.id=target.id
-        {
-        with Player
-        {
-        bigbanditmarked=true;
-        }
-        }
-        
-        }
-

@@ -1,5 +1,5 @@
 raddrop = 50
-maxhealth = 400
+maxhealth = 380
 meleedamage = 5
 size = 6;
 
@@ -35,7 +35,7 @@ fireOffset = 40;
 laserDuration = 80;
 laserOffset = 36;
 myLasers = [];
-ticksBeforeSpiral = 3;
+ticksBeforeSpiral = 2;
 image_xscale = 1;
 actTime = 14;
 scrTarget();
@@ -52,4 +52,7 @@ audio_emitter_falloff(emitter, 50, 400, 1);
 
 wkick = 0;
 instance_create(x,y,BigWallBreak);
-instance_create(x,y,DramaCamera);
+if instance_exists(Player) && Player.area != 103
+{
+	instance_create(x,y,DramaCamera);
+}

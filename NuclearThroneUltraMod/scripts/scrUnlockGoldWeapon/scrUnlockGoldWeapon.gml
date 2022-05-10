@@ -10,11 +10,6 @@ function scrUnlockGoldWeapon(target) {
 					scrUnlockBSkin(6,"FOR UNLOCKING ALL GOLDEN WEAPONS#ON ONE CHARACTER",0);
 				}
     
-			    if scrCheckOneGold()//do all characters have at least one golden weapon
-				{
-					scrUnlockCSkin(6,"FOR UNLOCKING ONE GOLDEN WEAPON#ON ALL CHARACTERS",0);
-				}
-				
 				var goldIndex = scrCheckStartingWepUnlocked(target,other.race)
 			    if target != 298 && target != 349 && goldIndex > -1//No golden frog pistol and no golden oops gun
 			    {
@@ -25,6 +20,11 @@ function scrUnlockGoldWeapon(target) {
 					scrSave();
 
 			    }
+				
+				if scrCheckOneGold()//do all characters have at least one golden weapon
+				{
+					scrUnlockCSkin(6,"FOR UNLOCKING ONE GOLDEN WEAPON#ON ALL CHARACTERS",0);
+				}
 		    }
 		}
 	}

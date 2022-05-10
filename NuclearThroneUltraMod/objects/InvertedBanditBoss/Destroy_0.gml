@@ -20,7 +20,7 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 }
 repeat(2)
 scrDrop(200,0)
-scrBusinessHogGoldChest();
+scrBossKill();
 //drop golden oopsgun?
 if instance_exists(Player)
 {
@@ -44,17 +44,3 @@ instance_create(x,y,Portal);
 with Player
 oasis=true;
 }
-
-if instance_exists(Marker)
-{
-    if place_meeting(x,y,Marker)
-    {
-        with Player
-        {
-        
-        bigbanditmarked=true;
-        
-        }
-    }
-}
-

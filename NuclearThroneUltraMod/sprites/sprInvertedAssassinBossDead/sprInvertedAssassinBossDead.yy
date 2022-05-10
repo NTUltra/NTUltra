@@ -96,7 +96,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprInvertedAssassinBossDead","path":"sprites/sprInvertedAssassinBossDead/sprInvertedAssassinBossDead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprInvertedAssassinBossDead",
     "tags": [],
     "resourceType": "GMSequence",
   },

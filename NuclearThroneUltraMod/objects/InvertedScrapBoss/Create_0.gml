@@ -1,7 +1,7 @@
 raddrop = 120
 maxhealth = 300
 if GetPlayerLoops() > 0
-	maxhealth = 370;
+	maxhealth = 410;
 meleedamage = 0
 size = 3
 
@@ -10,10 +10,6 @@ maxhealth=290;
 
 event_inherited()
 
-if instance_exists(Player){
-my_health=round( (1+(Player.loops*0.4))*my_health )//bandit loop 1: 1.1*4= 5(rounded up)
-maxhealth=my_health;
-}
 
 spr_idle = sprInvertedScrapBossIdle
 spr_walk = sprInvertedScrapBossWalk
@@ -65,7 +61,7 @@ if instance_exists(Player)
 {
 with InvertedRaven
 {
-scrRavenLift()
+scrInvertedRavenLift()
 }
 }
 

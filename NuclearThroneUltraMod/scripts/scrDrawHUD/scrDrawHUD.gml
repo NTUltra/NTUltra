@@ -129,23 +129,33 @@ function scrDrawHUD() {
 			var s = 18;
 			if dir == 76 && Player.ultimategamble == true
 			{
-				draw_sprite_ext(sprUltimateGambleIconHUD,dir,xx,yy,1,1,0,c_white,1);
+				draw_sprite_ext(sprUltimateGambleIconHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 23 && Player.altUltra
+			{
+				draw_sprite_ext(sprYVBlasphemyHUD,0,xx,yy,1,1,0,c_white,1);
 			}
 		    else if !(dir=79 && Player.race=21){//Horror don't draw skeleton's ultra
 				draw_sprite_ext(sprUltraIconHUD,dir,xx,yy,1,1,0,c_white,1);
 			}
 			if (mouse_x > xx && mouse_x < xx + s && mouse_y > yy && mouse_y < yy + s)
 			{
-				scrDrawHelp("["+Player.ultra_name[dir]+"]\n"+Player.ultra_text[dir]);
+				holdExplainMutation ++;
+				if holdExplainMutation > 10
+					holdExplainMutation = 10;
+					
+				if holdExplainMutation >= 10
+					scrDrawHelp("["+Player.ultra_name[dir]+"]\n"+Player.ultra_text[dir]);
 			}
 			dix+=1
+			
 	    }
 	dir+=1;
 	}
 	//SKILL ICONS
 	dix = 0;
 	dir = 0;
-	if Player.level > 14
+	if Player.level > 13 - (max(-1,Player.maxarmour-1))
 	{
 		var cdir = 0;
 		var fs = 0;
@@ -179,14 +189,21 @@ function scrDrawHUD() {
 					ht = "["+Player.skill_name[dir]+"] ["+string(Player.rage)+"/350]\n"+Player.skill_text[dir];//MAX RAGE
 				else
 					ht = "["+Player.skill_name[dir]+"]\n"+Player.skill_text[dir];
-				scrDrawHelp(ht);
+				
+				if holdExplainMutation >= 10
+					scrDrawHelp(ht);
+				
+				holdExplainMutation ++;
+				if holdExplainMutation > 10
+					holdExplainMutation = 10;
 			}
 		}
 		dir += 1
 		if dir > Player.maxskill
 			dir = 0;
 	}
-
+	if holdExplainMutation > 0
+		holdExplainMutation --;
 
 	//TERTIARY WEAPON
 	if Player.race=8{//robotos
@@ -348,11 +365,11 @@ function scrDrawHUD() {
 			holdExplainUltraModTimer++;
 			if holdExplainUltraModTimer > 30
 			{
-				scrDrawHelp(umn[0] + " <=> " + umn[1]);
+				scrDrawHelp(umn[0] + " <=> " + umn[1]+"\n"+scrUltraModDescription(Player.ultramod));
 			}
 			else
 			{
-				scrDrawHelp(umn[0] + " <=> " + umn[1]+"\n"+scrUltraModDescription(Player.ultramod));
+				scrDrawHelp(umn[0] + " <=> " + umn[1]);
 			}
 		}
 		else
@@ -365,32 +382,85 @@ function scrDrawHUD() {
 	var xx = __view_get( e__VW.XView, 0 )+2;
 	var yy = __view_get( e__VW.YView, 0 )+42;
 	var xs = 10;
+	var noHover = true;
 	if Player.wepmod1 != 0
 	{
 		draw_sprite(sprModHUD,Player.wepmod1,xx,yy);
 		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
-			scrDrawHelp(scrWepModName(Player.wepmod1));
+		{
+			noHover = false;
+			holdExplainWepModTimer++;
+			if holdExplainWepModTimer > 30
+			{
+				scrDrawHelp(scrWepModName(Player.wepmod1)
+				+ "\n" + scrWepModDescription(Player.wepmod1));
+			}
+			else
+			{
+				scrDrawHelp(scrWepModName(Player.wepmod1));
+			}
+		}
 	}
 	xx += xs;
 	if Player.wepmod2 != 0
 	{
 		draw_sprite(sprModHUD,Player.wepmod2,xx,yy);
 		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
-			scrDrawHelp(scrWepModName(Player.wepmod2));
+		{
+			noHover = false;
+			holdExplainWepModTimer++;
+			if holdExplainWepModTimer > 30
+			{
+				scrDrawHelp(scrWepModName(Player.wepmod2)
+				+ "\n" + scrWepModDescription(Player.wepmod2));
+			}
+			else
+			{
+				scrDrawHelp(scrWepModName(Player.wepmod2));
+			}
+		}
 	}
 	xx += xs;
 	if Player.wepmod3 != 0
 	{
 		draw_sprite(sprModHUD,Player.wepmod3,xx,yy);
 		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
-			scrDrawHelp(scrWepModName(Player.wepmod3));
+		{
+			noHover = false;
+			holdExplainWepModTimer++;
+			if holdExplainWepModTimer > 30
+			{
+				scrDrawHelp(scrWepModName(Player.wepmod3)
+				+ "\n" + scrWepModDescription(Player.wepmod3));
+			}
+			else
+			{
+				scrDrawHelp(scrWepModName(Player.wepmod3));
+			}
+		}
 	}
 	xx += xs;
 	if Player.wepmod4 != 0
 	{
 		draw_sprite(sprModHUD,Player.wepmod4,xx,yy);
 		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
-			scrDrawHelp(scrWepModName(Player.wepmod4));
+		{
+			noHover = false;
+			holdExplainWepModTimer++;
+			if holdExplainWepModTimer > 30
+			{
+				scrDrawHelp(scrWepModName(Player.wepmod4)
+				+ "\n" + scrWepModDescription(Player.wepmod4));
+			}
+			else
+			{
+				scrDrawHelp(scrWepModName(Player.wepmod4));
+			}
+		}
+	}
+	if noHover
+	{
+		holdExplainWepModTimer = 0;
 	}
 	if Player.wep_type[Player.wep] != 0
 	{
@@ -738,6 +808,21 @@ function scrDrawHUD() {
 	}
 	}
 
+	with RerollStation
+	{
+		if place_meeting(x,y,Player) && active
+		{
+			draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-8)
+
+			draw_set_color(c_black)
+			draw_text(x,y-40,string_hash_to_newline(string(name)))
+			draw_text(x+1,y-40,string_hash_to_newline(string(name)))
+			draw_text(x+1,y-41,string_hash_to_newline(string(name)))
+			draw_set_color(c_white)
+			draw_text(x,y-41,string_hash_to_newline(string(name)))
+			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+		}
+	}
 	//SHROOM
 	with BigMushroom
 	{
@@ -836,12 +921,56 @@ function scrDrawHUD() {
 		draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-7)
 
 		draw_set_color(c_black)
-		draw_text(x,y-30,string_hash_to_newline(string(name)))
-		draw_text(x+1,y-30,string_hash_to_newline(string(name)))
-		draw_text(x+1,y-31,string_hash_to_newline(string(name)))
+		draw_text(x,y-48,string_hash_to_newline(string(name)))
+		draw_text(x+1,y-48,string_hash_to_newline(string(name)))
+		draw_text(x+1,y-49,string_hash_to_newline(string(name)))
 		draw_set_color(c_white)
-		draw_text(x,y-31,string_hash_to_newline(string(name)))
+		draw_text(x,y-49,string_hash_to_newline(string(name)))
 		//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+		}
+	}
+	with BossReward
+	{
+		if active && place_meeting(x,y,Player)
+		{
+			draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-12)
+			draw_set_color(c_black)
+			draw_text(x,y-42,string_hash_to_newline(string(name)))
+			draw_text(x+1,y-42,string_hash_to_newline(string(name)))
+			draw_text(x+1,y-43,string_hash_to_newline(string(name)))
+			draw_set_color(c_white)
+			draw_text(x,y-43,string_hash_to_newline(string(name)))
+			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+		}
+	}
+	with SaveStation
+	{
+		if active && place_meeting(x,y,Player)
+		{
+			draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-12)
+			draw_set_color(c_black)
+			draw_text(x,y-45,string_hash_to_newline(string(name)))
+			draw_text(x+1,y-45,string_hash_to_newline(string(name)))
+			draw_text(x+1,y-46,string_hash_to_newline(string(name)))
+			draw_set_color(c_white)
+			draw_text(x,y-46,string_hash_to_newline(string(name)))
+			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+		}
+	}
+	with BecomeBallBoss
+	{
+		if available && place_meeting(x,y,Player)
+		{
+			if canStart
+				draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-12)
+
+			draw_set_color(c_black)
+			draw_text(x,y-42,string_hash_to_newline(string(name)))
+			draw_text(x+1,y-42,string_hash_to_newline(string(name)))
+			draw_text(x+1,y-43,string_hash_to_newline(string(name)))
+			draw_set_color(c_white)
+			draw_text(x,y-43,string_hash_to_newline(string(name)))
+			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 		}
 	}
 	with JungleFrozenPlant
@@ -873,6 +1002,22 @@ function scrDrawHUD() {
 			draw_set_color(c_white)
 			draw_text(x+16,y-1,string_hash_to_newline(string(name)))
 			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+			holdExplainTimer ++;
+			//Ultra mod destription
+			if holdExplainTimer > 30
+			{
+				var yy = y + 32;
+				draw_set_color(c_black)
+				draw_text(x+16,yy,string_hash_to_newline(string(moddescription)))
+				draw_text(x+17,yy,string_hash_to_newline(string(moddescription)))
+				draw_text(x+17,yy-1,string_hash_to_newline(string(moddescription)))
+				draw_set_color(c_white)
+				draw_text(x+16,yy-1,string_hash_to_newline(string(moddescription)))
+			}
+		}
+		else
+		{
+			holdExplainTimer = 0;	
 		}
 	}
 	with UltraMod

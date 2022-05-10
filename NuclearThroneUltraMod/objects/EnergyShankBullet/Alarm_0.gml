@@ -11,11 +11,11 @@ else
 instance_create(x,y,Dust)
 
 if instance_exists(Player){
-with instance_create(x+lengthdir_x((Player.skill_got[13]+Player.bettermelee)*10,point_direction(x,y,mouse_x,mouse_y)),y+lengthdir_y((Player.skill_got[13]+Player.bettermelee)*10,point_direction(x,y,mouse_x,mouse_y)),EnergyShank)
+with instance_create(x+lengthdir_x((Player.skill_got[13]+Player.bettermelee)*10,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y((Player.skill_got[13]+Player.bettermelee)*10,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),EnergyShank)
 {
 direction=random(360)
 ang = direction
-dmg = 7
+dmg = 6
 longarms = 0
 if instance_exists(Player)
 longarms = (Player.skill_got[13]+Player.bettermelee)*3
@@ -29,7 +29,7 @@ with instance_create(x,y,EnergyShank)
 {
 direction=random(360)
 ang = direction
-dmg = 7
+dmg = 6
 longarms = 0
 if instance_exists(Player)
 longarms = (Player.skill_got[13]+Player.bettermelee)*3
@@ -40,5 +40,5 @@ sleepRate=6;
 }}
 
 
-alarm[0]=2;
+alarm[0]=3;
 

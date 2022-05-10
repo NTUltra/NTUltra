@@ -18,3 +18,5 @@ if instance_number(enemy) <= 2&&!instance_exists(GenCont) || instance_exists(Sur
 		instance_create(x,y,DramaCamera);
 	}
 }
+
+event_inherited();

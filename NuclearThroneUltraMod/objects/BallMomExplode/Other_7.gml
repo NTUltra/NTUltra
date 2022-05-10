@@ -28,7 +28,7 @@ else if sprite_index == sprInvertedFrogQueenDying
 	Sleep(50);
 	instance_create(x,y,GreenExplosion);
 	instance_create(x,y,BigWallBreak);
-	sprite_index = sprFrogQueenDead;
+	sprite_index = sprInvertedFrogQueenDead;
 	image_index = 0;
 	snd_play(sndBallMamaDead2);
 	var ang = random(360);

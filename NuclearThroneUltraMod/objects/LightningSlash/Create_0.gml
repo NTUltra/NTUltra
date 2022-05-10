@@ -10,13 +10,15 @@ sleepRate=20;
 snd_wallhit=sndMeleeWall;
 snd_hit=sndLightning1;
 
-if instance_exists(Player){
-if Player.skill_got[17] = 1
+if instance_exists(Player)
 {
-snd_hit=sndLightning3
-image_speed = 0.2-(Player.betterlaserbrain*0.6)
+	if Player.skill_got[17] = 1
+	{
+		image_speed = max(0.1,0.2-(Player.betterlaserbrain*0.6))
+		hits ++;
+		snd_hit=sndLightning3
+		shk++;
+	}
+	else
+		snd_hit=sndLightning1
 }
-else
-snd_hit=sndLightning1
-}
-

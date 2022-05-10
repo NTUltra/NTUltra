@@ -36,5 +36,5 @@ walk = 0
 alarm[1] = 30+random(90)
 wkick = 0
 alarm[0] = 6;
-snd_play(sndSheep);
+snd_play(sndSheep,0.1,true);
 

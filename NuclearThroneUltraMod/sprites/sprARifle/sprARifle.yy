@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprARifle","path":"sprites/sprARifle/sprARifle.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprARifle",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -36,7 +36,7 @@ function scrAimAssistLaser(originalDirection){
 	}
 	if aimAssist > 0 && instance_exists(enemy)
 	{
-		var t = instance_nearest(mouse_x,mouse_y,enemy);
+		var t = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
 		if (collision_line(x,y,t.x,t.y,Wall,false,true) < 0)
 		{
 			var wantD = point_direction(x,y,t.x,t.y);

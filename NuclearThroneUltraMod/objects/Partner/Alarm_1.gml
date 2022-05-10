@@ -37,7 +37,7 @@ motion_add(point_direction(x,y,target.x,target.y),0.8)
 mp_potential_step(target.x,target.y,1,false)
 //if instance_exists(Player) and random(4) < 3
 //{
-//motion_add(point_direction(x,y,mouse_x,mouse_y),0.8)
+//motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),0.8)
 //motion_add(point_direction(x,y,Player.x,Player.y),1)
 //}
 
@@ -68,7 +68,7 @@ alarm[3]=20;
 }
 /*if instance_exists(Player)
 {
-motion_add(point_direction(x,y,mouse_x,mouse_y),0.8)
+motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),0.8)
 motion_add(point_direction(x,y,Player.x,Player.y),1)
 }*/
 walk = 2+random(2)

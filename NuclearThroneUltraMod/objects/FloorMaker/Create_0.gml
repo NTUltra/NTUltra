@@ -2,7 +2,7 @@ direction = choose(0,90,180,270)
 
 styleb = choose(0,0,0,0,0,0,1)
 
-goal = 110//110
+goal = 100//110
 
 if instance_exists(Player){
 	if Player.crown == 18
@@ -10,39 +10,41 @@ if instance_exists(Player){
 		//Crown of opposite onto crown of disco
 		styleb = choose(1,1,1,1,1,1,0)
 	}
-	
+	var s = clamp(Player.loops*8,0,50);
 	if Player.area = 3 and Player.subarea = 3
-	goal = 150//50
+	goal = 150+s//50
 	else if Player.area = 4
-	goal = 120
+	goal = 120+s
 	else if (Player.area = 7||Player.area=108) and Player.subarea == 3
-	goal = 50
+	goal = 50+s
 	else if Player.area = 100
-	goal = 40
+	goal = 40+s
+	else if Player.area = 101
+	goal = 95+s
 	else if Player.area = 103
-	goal = 130
+	goal = 130+s
 	else if Player.area = 102
-	goal = 50
+	goal = 50+s
 	else if Player.area = 104
 	goal = 10
 	else if Player.area = 105
-	goal = 145
+	goal = 145+s
 	else if Player.area = 106
-	goal = 120
+	goal = 120+s
 	else if Player.area = 114
-	goal = 125
+	goal = 125+s
 	else if Player.area = 117
-	goal = 130
+	goal = 130+s
 	else if (Player.area = 6||Player.area=112) && Player.subarea=2//LABS BOSS
 	goal=1;
 	else if Player.area = 9 && Player.subarea < 2
-	goal = 130
+	goal = 130+s
 	else if Player.area = 118 && Player.subarea < 2
-	goal = 130
+	goal = 130+s
 	else if Player.area = 10
 	{
 		styleb = choose(0,0,0,0,0,0,1,1)//Slightly higher chance for B tiles
-		goal = 130
+		goal = 120+s
 	}
 	else if Player.area == 9 && Player.subarea == 3
 	goal = 350;
@@ -51,7 +53,7 @@ if instance_exists(Player){
 
 	if UberCont.opt_gamemode==6//small levels
 	{
-	goal=30;
+	goal=30+s;
 		if Player.area == 9 && Player.subarea == 3
 			goal = 290;
 	}

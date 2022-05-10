@@ -24,7 +24,7 @@ if distance_to_object(enemy) < 48
 dir = instance_nearest(x,y,enemy)
 motion_add(point_direction(dir.x,dir.y,x,y),2)
 }
-motion_add(point_direction(x,y,mouse_x,mouse_y),1)
+motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),1)
 if instance_exists(Player)
 motion_add(Player.direction,1)
 }

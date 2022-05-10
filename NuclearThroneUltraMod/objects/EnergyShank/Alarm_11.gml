@@ -14,6 +14,7 @@ with instance_create(xx,yy,MeatExplosion)
 }
 with instance_create(x,y,HeavyBloodBullet)
 {
+	ceil(other.dmg*0.25);
 	scrCopyWeaponMod(other);
 	direction = other.direction;
 	image_angle = direction;

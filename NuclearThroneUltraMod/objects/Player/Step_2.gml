@@ -131,9 +131,9 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 	if targetPickup.pickedup=false
 	weaponspickedup+=1;
 
-	if scrCheckGold(targetPickup.wep)
+	if scrCheckGold(wep_name[targetPickup.wep])
 	{
-	snd_play(sndGoldPickup);
+		snd_play(sndGoldPickup);
 	}
 
 	//GUN GAME
@@ -151,11 +151,11 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 	if targetPickup.wep=329//Dark sword
 	scrUnlockCSkin(9,"FOR TOUCHING DEATH ITSELF",0);
 
-	if scrToxicWeapons(targetPickup.wep) && targetPickup.pickedup=false && race = 23
+	if scrToxicWeapons(targetPickup.wep, wep_name[targetPickup.wep]) && targetPickup.pickedup=false && race = 23
 	{
 	toxicweaponsfound++;
-	if toxicweaponsfound>=3
-	scrUnlockBSkin(23,"BY USING 3 TOXIC WEAPONS#IN ONE RUN AS FROG",0)
+	if toxicweaponsfound>=2
+	scrUnlockBSkin(23,"BY USING 2 DIFFERENT TOXIC WEAPONS#IN ONE RUN AS FROG",0)
 	}
 
 	//some one wep only unlocks that odont really count as unlockables
@@ -283,8 +283,9 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 	cwepmod3 = wepmod3;
 	cwepmod4 = wepmod4;
 	}
-	else
+	else if wep != 0
 	{
+		
 	with instance_create(x,y,WepPickup)
 	{
 	pickedup=true;
@@ -338,7 +339,7 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 	{
 		snd_play(sndSwapCursed);
 	}
-	if (scrCheckGold(wep))
+	if (scrCheckGold(wep_name[targetPickup.wep]))
 	{
 		snd_play(sndSwapGold);	
 	}
@@ -353,7 +354,7 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 	wepangle = choose(120,-120)*/
 
 	with targetPickup
-	instance_destroy()
+		instance_destroy()
 	}
 	}
 
@@ -419,7 +420,7 @@ if tookHit&&my_health!=maxhealth&&alarm[3]<1
 {lag-=1;
 
 
-alarm[3]=15;//before your lag lowers again}
+alarm[3] = max(alarm[3],15);//before your lag lowers again}
 resetPrevHealth = true;
 }
 }
@@ -434,7 +435,7 @@ if tookHit&&my_health!=maxhealth&&alarm[3]<1
 
 
 snd_play(sndHitMetal);
-alarm[3]=5;//before your armour lowers again}
+alarm[3]=max(alarm[3],5);//before your armour lowers again}
 resetPrevHealth = true;
 
 scrBlankArmour();
@@ -447,10 +448,12 @@ armour=maxarmour;
 }
 
 }
-if alarm[3]>0/*|| lag>0 */&&my_health!=maxhealth&& !exception
+if alarm[3]>0/*|| lag>0 *//*&&my_health!=maxhealth*/&& !exception
 {
-if tookHit
-my_health=prevhealth;
+	if tookHit
+	{
+		my_health=prevhealth;
+	}
 }
 
 
@@ -588,7 +591,7 @@ target=-1;
 ///rage
 if skill_got[28] == 1
 {
-	if tookHit && exception=false//I been hit
+	if my_health < prevhealth && exception=false// && alarm[3] < 1//I been hit
 		rage = 0;
 }
 

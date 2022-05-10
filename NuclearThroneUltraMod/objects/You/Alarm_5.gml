@@ -10,7 +10,7 @@ if target > 0
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {
 if instance_exists(Player)
-if scrMeleeWeapons() && random(2)<1
+if scrMeleeWeapons(Player.wep) && random(2)<1
 {
 motion_add(point_direction(x,y,target.x,target.y),2)
 walk = 8+random(3);

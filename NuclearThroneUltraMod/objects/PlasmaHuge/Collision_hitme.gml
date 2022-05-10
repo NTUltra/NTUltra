@@ -1,11 +1,12 @@
 if other.team != team and other.my_health > 0
 {
+	scrPlasmaPush();
 	if other.sprite_index != other.spr_hurt
 	{
 		Sleep(50)
 		BackCont.shake += 6
-		image_xscale-=0.2;
-		image_yscale-=0.2;
+		image_xscale-=0.35;
+		image_yscale-=0.35;
 		with other
 		{
 			my_health -= other.dmg
@@ -17,7 +18,7 @@ if other.team != team and other.my_health > 0
 	}
 	else
 	{
-		image_index += 0.2;//iframe skipper
+		other.image_index += 0.2;//iframe skipper
 	}
 }
 

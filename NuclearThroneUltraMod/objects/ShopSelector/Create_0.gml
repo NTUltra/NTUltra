@@ -1,3 +1,3 @@
-x=mouse_x;
-y=mouse_y;
+x=UberCont.mouse__x;
+y=UberCont.mouse__y;
 

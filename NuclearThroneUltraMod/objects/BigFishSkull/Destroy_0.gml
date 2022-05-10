@@ -28,4 +28,7 @@ if spr_idle == sprBigFishSkullOpen
 }
 
 with WantBoss
-instance_destroy();
+{
+	if oasis
+		instance_destroy();
+}

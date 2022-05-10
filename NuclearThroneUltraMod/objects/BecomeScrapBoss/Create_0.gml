@@ -14,10 +14,18 @@ image_speed = 0.4
 var dix, diy, dir;
 dix = 0
 diy = 0
+var loops = 0;
+if instance_exists(Player)
+{
+	loops = Player.loops;
+dir = instance_furthest(Player.x,Player.y,WeaponChest)
+}
+else
 dir = instance_furthest(x,y,WeaponChest)
-x = round(dir.x/32)*32-16
-y = round(dir.y/32)*32-16
-
+if loops < 1 && !instance_exists(InvaderBossSpawnPortal) 
+{
+	x = round(dir.x/32)*32-16
+	y = round(dir.y/32)*32-16
 repeat(7)
 {
 repeat(7)
@@ -27,6 +35,7 @@ repeat(7)
 }
 dix = 0
 diy += 1
+}
 }
 
 
@@ -44,4 +53,12 @@ instance_create(x,y,BigWallBreak);
 timer = 0
 
 
-
+instance_create(x,y,BigWallBreak);
+instance_create(x-48,y-48,BigWallBreak);
+instance_create(x+48,y+48,BigWallBreak);
+instance_create(x-48,y+48,BigWallBreak);
+instance_create(x+48,y-48,BigWallBreak);
+instance_create(x+48,y,BigWallBreak);
+instance_create(x-48,y,BigWallBreak);
+instance_create(x,y+48,BigWallBreak);
+instance_create(x,y-48,BigWallBreak);

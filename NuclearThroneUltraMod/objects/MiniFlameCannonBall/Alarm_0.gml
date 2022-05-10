@@ -28,7 +28,6 @@ BackCont.shake += 2
 	move_contact_solid(direction,10)
 	}
 
-
 	with instance_create(x,y,Flame)
 	{motion_add(other.image_angle+180+random(10)-5,2+random(2))
 	team = other.team

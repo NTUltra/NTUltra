@@ -6,7 +6,7 @@ if target > 0
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {
-if random(3) < 1 && point_distance(x,y,target.x,target.y)<200
+if random(3) < 1 && point_distance(x,y,target.x,target.y)<180
 {
 direction = point_direction(x,y,target.x,target.y)+180
 with instance_create(x,y,EnemyBullet1)

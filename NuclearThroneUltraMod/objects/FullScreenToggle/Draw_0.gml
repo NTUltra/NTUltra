@@ -1,5 +1,5 @@
 draw_sprite(sprite_index,UberCont.opt_fulscrn,x,y)
-if mouse_x > x and mouse_x < x+8 and mouse_y > y and mouse_y < y+8
+if UberCont.mouse__x > x and UberCont.mouse__x < x+8 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
 {
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_left);

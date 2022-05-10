@@ -72,7 +72,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprVanOpenIdle","path":"sprites/sprVanOpenIdle/sprVanOpenIdle.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprVanOpenIdle",
     "tags": [],
     "resourceType": "GMSequence",
   },

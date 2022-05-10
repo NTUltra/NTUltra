@@ -1,6 +1,8 @@
 scrDrop(50,50)
 
 event_inherited()
+if UberCont.area == 4
+scrDefeatedRequiredBoss(secretChallengeBosses.hyperCrystal);
 if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(object_index) == 1
 with MusCont {
 	audio_stop_sound(song)

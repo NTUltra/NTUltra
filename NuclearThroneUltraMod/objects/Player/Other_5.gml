@@ -67,6 +67,17 @@ scrNextLevel();//odd
 }
 */
 scrNextLevel();
+if race == 27
+{
+	if scrIsInInvertedArea()
+	{
+		var am = 3;
+		if ultra_got[106]
+			am = 5;
+		
+		my_health += am;
+	}
+}
 ///at the end of a level stuff
 
 if patience>0||ultra_got[0]=1
@@ -88,9 +99,9 @@ if race=16
 	if skill_got[5]
 		freeArmourStrike = true;
     armour++;
-	if ultra_got[62]//Viking armour up ultra
-	    armour++;
 }
+if ultra_got[62]//Viking armour up ultra
+	    armour++;
 
 if race==10//Rebel pasive
 {
@@ -100,14 +111,17 @@ if race==10//Rebel pasive
 }
 else if race=12//yung cuz reset max HP
 {
-	if skill_got[1]{//rhino skin
-		maxhealth=12;
-	}
-	else{
-		maxhealth=8;
-	}
-	if skill_got[33]//Glass arm cannon
-		maxhealth-=2;
+	var targetHealth = 8;
+	if UberCont.opt_gamemode == 5
+		targetHealth = 1;
+	if skill_got[1] == 1//Rhino skin
+		targetHealth += 4;
+	if skill_got[33] == 1//Glass arm cannon
+		targetHealth -= 2;
+	if UberCont.opt_gamemode == 9
+		targetHealth += UberCont.casualModeHPIncrease;
+	targetHealth += UberCont.maxHpIncrease;
+	maxhealth = targetHealth;
 	
 }
 if ultra_got[40] = 1 || ultra_got[47] {//Rebel Ultra D YUNG CUZ ULTRA C
@@ -120,7 +134,7 @@ if crown = 2
 	if my_health >= maxhealth
 	{
 		my_health = max(my_health,maxhealth);
-		my_health += 1;
+		my_health += 2;
 	}
 	else
 	{
@@ -226,9 +240,9 @@ horrorcharge=origincharge;
 oasis=false;
 
 ///looping!
-debug("now try to loop",area);
 if looping && area != 104
 {
+	debug("Looping now");
 if scrCheckLoopAll()
 	scrUnlockCSkin(1,"FOR LOOPING WITH EVERY CHARACTER",0);
 	
@@ -256,9 +270,9 @@ looping=false;
     //instance_create(x,y,Crown)
     UberCont.ctot_loop[race] += 1
     loops += 1
-    if (ultra_got[75] == 1)
+    if (ultra_got[73] == 1)
 	{
-		ultra_got[75] = 0;
+		ultra_got[73] = 0;
 		skillpoints ++
 		ultraNow = true;
 		skillsChosen --;
@@ -266,27 +280,31 @@ looping=false;
         if race==9//Chicken maxhealth regain on loop
         {
 			var targetHealth = 8;
+			if UberCont.opt_gamemode == 5
+				targetHealth = 1;
 			if skill_got[1] == 1//Rhino skin
 				targetHealth += 4;
 			if skill_got[33] == 1//Glass arm cannon
-				targetHealth -= 2;
+				targetHealth = max(1,targetHealth-2);
 			if UberCont.opt_gamemode == 9
 				targetHealth += UberCont.casualModeHPIncrease;
+			targetHealth += UberCont.maxHpIncrease;
             if maxhealth<targetHealth
             {
 	            maxhealth = min(maxhealth + 2,targetHealth);
             }
         }
             
-        if loops=2&&UberCont.opt_gamemode != 15//not no mutations gamemode
+        if loops == 2 && UberCont.opt_gamemode != 15//not no mutations gamemode
         {
-        if ultra_got[15]
-        maxlevel=13;
-        else
-        maxlevel=11;
-        
-        skillsChosen=0;
+			UberCont.levelIncrease ++;
+			maxlevel++;
         }
+		else if loops = 10 && UberCont.opt_gamemode != 15
+        {
+			UberCont.levelIncrease ++;
+			maxlevel++;
+		}
     
     
     //uncurse some shit
@@ -342,7 +360,7 @@ if (wep = 46 || bwep = 46 || cwep == 46) && loops=1
 	}
 }
 //Secret
-if ((wep == 375 || bwep == 375 || cwep == 375) && isValidGamemodeToUnlock(0) && loops == 1)
+if ((wep == 375 || bwep == 375 || cwep == 375) && isValidGamemodeToUnlock(0) && loops == 2)
 {
 	with UberCont
 	{
@@ -350,7 +368,7 @@ if ((wep == 375 || bwep == 375 || cwep == 375) && isValidGamemodeToUnlock(0) && 
 		scrSaveEncrypted();
 		with instance_create(x,y,UnlockPopup)
 		{
-			mytext="UNLOCKED SUPER SECRET#FOR BRINGING#THE INVERSION MAGNET#TO LOOP";
+			mytext="UNLOCKED SUPER SECRET#FOR BRINGING#THE INVERSION MAGNET#TO LOOP 2";
 		}
 	}
 }
@@ -457,18 +475,18 @@ if race = 23
     UberCont.cbst_loop[race] = loops//this doesn't get saved if gamemode is not normal mode
     
     if  UberCont.opt_gamemode!=10
-    {
+    {/*
         if loops>1
         {
             if ( ( loops & 1 ) == 1 ) {
             area=1
             // it's odd
-            } else{
+            /*} else{
             // it's even go inverted
-            area=105
-            } 
-        }
-        else
+            area=105*/
+           // } 
+       // }
+       // else
         area=1;
     }
     
@@ -484,12 +502,6 @@ if restarted
 if movethislevel==false&&race=15 &&!instance_exists(MenuGen) &&!instance_exists(Menu) &&  !instance_exists(Vlambeer) && !instance_exists(CrownPickup)
 {//ATOM TELEPORT ONLY GAMEMODE UNLOCK
 scrUnlockGameMode(7,"FOR COMPLETING A LEVEL WITHOUT WALKING")
-}
-if race = 11 && bigbanditmarked=true && bigdogmarked=true &&
-lillhuntermarked=true && bigmachinemarked=true &&
-dragonmarked=true && chesirecatmarked=true
-{//HUNTER MARK ONLY GM UNLOCK
-scrUnlockGameMode(12,"FOR KILLING EVERY MAIN BOSS#WHILE MARKING THEM")
 }
 
 //SKINS

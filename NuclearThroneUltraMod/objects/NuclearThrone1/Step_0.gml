@@ -1,5 +1,5 @@
 /// @description El chunko libre
-if sprite_index == sprNothingActivate && image_speed > 0
+if sprite_index == spr_activate && image_speed > 0
 {
 	imageIndex += 0.5;
 	my_health = maxhealth;
@@ -29,10 +29,11 @@ if !active
 	{
 		immune = true;
 		intro = true;
-		spr_idle = sprNothingOff;
-		spr_hurt = sprNothingOff;
+		spr_idle = spr_off;
+		spr_hurt = spr_off;
 		snd_hurt = sndNothingHurtHigh;
-		sprite_index = sprNothingOff;
+		sprite_index = spr_off;
+		image_index = 0;
 		with MusCont
 		{
 			audio_stop_sound(song);	
@@ -43,7 +44,10 @@ if !active
 		{
 			yOffset -= 10;
 			image_index = 0;
-			sprite_index = sprThroneFlameEnd;
+			if isInverted
+				sprite_index = sprInvertedThroneFlameEnd;
+			else
+				sprite_index = sprThroneFlameEnd;
 		}
 		alarm[0] = 30;//Become active time
 	}
@@ -54,7 +58,8 @@ else
 	{
 		walk --;
 		vspeed += walkDir*3;
-		
+		if isInverted && vspeed > 0 && loops < 1
+			vspeed *= 0.83;
 		if speed > 5
 		speed = 5;
 	}
@@ -84,6 +89,12 @@ if my_health < maxhealth*0.2 && difficultyStep < 2
 		firerate = max(firerate - 1, 1);
 		maxAmmo = max(maxAmmo - 2, 3);
 	}
+	if isInverted
+	{
+		foreverBeam = true;
+		if !instance_exists(ThroneBeam)
+			event_user(0);
+	}
 }
 if (my_health <= 0)
 {
@@ -92,10 +103,11 @@ if (my_health <= 0)
 	{
 		instance_destroy();	
 	}
+	audio_stop_sound(sndNothingBeamLoop);
+	snd_play_2d(sndNothingBeamEnd);
 	with ThroneBeam
 	{
-		snd_play_2d(sndNothingBeamEnd);
-		instance_destroy();	
+		event_user(0);
 	}
 	instance_destroy();
 	
@@ -104,4 +116,35 @@ if !firstEntry && alarm[1] < 15
 {
 	firstEntry = true;
 	snd_play_2d(sndBecomeNothingStartup);
+}
+if isInverted
+{
+	var msk = mask_index;
+	mask_index = mskInvertedNothingFuckWall;
+	var hitWalls = ds_list_create();
+	var amountOfWalls = instance_place_list(x,y+140,Wall,hitWalls,false);
+	if amountOfWalls > 0
+	{
+		var freeze = UberCont.opt_freeze;
+		UberCont.opt_freeze *= 0.2;
+		var shake = UberCont.opt_shake;
+		UberCont.opt_shake *= 0.01;
+		if walkDir > 0
+			walkDir = 0.7;
+		while(amountOfWalls > 0)
+		{
+			for (var i = 0; i < amountOfWalls; i++) {
+				with hitWalls[| i] {
+					instance_destroy();
+					instance_create(x,y,FloorExplo);
+				}
+			}
+			ds_list_clear(hitWalls);
+			amountOfWalls = instance_place_list(x,y+140,Wall,hitWalls,false);
+		}
+		UberCont.opt_freeze = freeze;
+		UberCont.opt_shake = shake;
+	}
+	ds_list_destroy(hitWalls);
+	mask_index = msk;
 }

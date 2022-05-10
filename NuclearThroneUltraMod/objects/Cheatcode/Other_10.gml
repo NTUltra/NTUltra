@@ -7,7 +7,7 @@ if (hundredPercentI) >= array_length(hundredPercent)
 	{
 	var dir=0;
 
-	repeat(racemax+1)
+	repeat(racemax)//+1
 	{
 		race_have[dir]=1
 		

@@ -53,7 +53,7 @@ function scrWepModName(wm){
 	return "[MORPH]"
 	break;
 	case 17:
-	return "[PICKUP DROP]"
+	return "[ITEM DROP]"
 	break;
 	case 18:
 	return "[WEAPON DROP]"

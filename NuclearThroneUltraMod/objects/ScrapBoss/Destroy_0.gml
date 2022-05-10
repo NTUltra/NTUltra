@@ -16,6 +16,7 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 }
 //Allow access to vulcano?
+	if !instance_exists(BecomeScrapBoss) && instance_number(ScrapBoss) == 1
 	with Player
 	{
 		if my_health >= round(maxhealth*0.5)
@@ -37,7 +38,7 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 	}
 scrDrop(0,100)
 scrDrop(0,50)
-scrBusinessHogGoldChest();
+scrBossKill();
 Sleep(50)
 instance_create(x,y,BigDogExplo)
 event_inherited()
@@ -64,7 +65,7 @@ img += 1
 }
 
 //drop IDKWID?
-if(random(200)<1){
+if(random(1000)<1){
 with instance_create(x,y,WepPickup)
 {
 scrWeapons()
@@ -75,19 +76,4 @@ type = wep_type[wep]
 curse = 0
 sprite_index = wep_sprt[wep]
 }}
-
-
-with Marker
-        {
-        
-        if other.id=target.id
-        {
-        with Player
-        {
-        bigdogmarked=true;
-        }
-        }
-        
-        }
-
 

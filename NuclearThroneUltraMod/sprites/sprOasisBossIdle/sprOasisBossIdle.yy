@@ -88,7 +88,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprOasisBossIdle","path":"sprites/sprOasisBossIdle/sprOasisBossIdle.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprOasisBossIdle",
     "tags": [],
     "resourceType": "GMSequence",
   },

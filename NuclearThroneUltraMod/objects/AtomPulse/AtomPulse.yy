@@ -5,7 +5,10 @@
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskAtomUltraWave",
+    "path": "sprites/mskAtomUltraWave/mskAtomUltraWave.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "projectile",

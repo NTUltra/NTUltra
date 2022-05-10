@@ -1,5 +1,5 @@
-/// @description xxx
-snd_play(sndMeatExplo);
+/// @description Nasty splosion
+snd_play(sndMeatExplo,0.1,true);
 instance_create(x,y,MeatExplosion);
 snd_play(sndTermite,0.3,true)
 var ang = random(360);

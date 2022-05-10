@@ -64,7 +64,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprScrapDecal","path":"sprites/sprScrapDecal/sprScrapDecal.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprScrapDecal",
     "tags": [],
     "resourceType": "GMSequence",
   },

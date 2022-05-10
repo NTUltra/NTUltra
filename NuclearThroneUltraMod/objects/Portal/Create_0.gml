@@ -1,11 +1,11 @@
-image_speed = 0.4
+image_speed = 0.8
 type=1;
 inverted=false;//is this an inverted portal?
 
 endgame = 100
 
 snd_play(sndPortalOpen)
-snd_play(sndPortalAppear);
+snd_play_2d(sndPortalAppear);
 snd_loop(sndPortalLoop)
 
 
@@ -57,4 +57,9 @@ if ( (currentarea=105 || currentarea=106|| currentarea=107 || currentarea = 108 
 }
 alarm[2] = 2;
 pullstrength=1;
-
+isPink = false;
+if currentarea  == 8 || (currentarea == 7 && currentsubarea == 3)
+{
+	isPink = true;
+	sprite_index = sprPinkPortalSpawn;	
+}

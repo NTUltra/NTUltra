@@ -13,7 +13,7 @@ if other.team != team
 		}
 		else
 		{
-			image_index += 0.2;//iframe skipper
+			other.image_index += 0.2;//iframe skipper
 		}
 	}
 }

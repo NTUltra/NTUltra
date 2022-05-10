@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndAngelHit",
-  "duration": 0.0,
+  "duration": 1.0,
   "parent": {
     "name": "Player",
     "path": "folders/Sounds/Player.yy",

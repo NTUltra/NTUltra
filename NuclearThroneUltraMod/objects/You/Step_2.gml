@@ -17,14 +17,14 @@ if sprite_index = spr_hurt
 {if image_index > 2
 sprite_index = spr_idle}
 
-/*if mouse_x < x
+/*if UberCont.mouse__x < x
 right = -1
-else if mouse_x > x
+else if UberCont.mouse__x > x
 right = 1
 
-if mouse_y < y
+if UberCont.mouse__y < y
 back = 1
-else if mouse_y > y
+else if UberCont.mouse__y > y
 back = -1*/
 
 //if (KeyCont.key_fire[Player.p] = 1 or Player.keyfire = 1) and wep_auto[wep] = 0 and ((wep_type[wep] = 0 or wep_type[wep] = 1) or can_shoot = 1) and reload < 15

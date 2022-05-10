@@ -17,7 +17,7 @@ Player.area = 100;
 //Close up the survival arena
 with Floor
 {
-	if sprite_index == sprFloor100C
+	if sprite_index == sprFloor100D
 	{
 		instance_destroy(id,false);
 		instance_create(x,y,Wall)
@@ -40,7 +40,10 @@ if instance_exists(GuardianStatue)
 else if !instance_exists(CrownGuardian)
 {
 	with instance_create(x,y,Portal)
+	{
 		type = 3
+		pullstrength = 3;
+	}
 }
 snd_play(Player.snd_crwn)
 

@@ -4,8 +4,8 @@ if other.team != team and other.my_health > 0
 	if other.sprite_index != other.spr_hurt
 	{
 			BackCont.shake += 2
-			image_xscale-=0.26;
-			image_yscale-=0.26;
+			image_xscale-=0.3;
+			image_yscale-=0.3;
 			with other
 			{
 
@@ -19,7 +19,7 @@ if other.team != team and other.my_health > 0
 	}
 	else
 	{
-		image_index += 0.2;//iframe skipper
+		other.image_index += 0.2;//iframe skipper
 	}
 }
 

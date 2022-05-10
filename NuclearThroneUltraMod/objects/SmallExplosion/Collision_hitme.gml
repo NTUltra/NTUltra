@@ -16,19 +16,17 @@ with other
 			if Player.ultra_got[97]//Mutation Doctor Ultra A
 				immunelimit=8;
 					
-			if immunelimit > Player.maxhealth
-				immunelimit = Player.maxhealth;
 		}
 		if UberCont.opt_gamemode == 9
 			other.dmg = 3;
 	}
 
-		if !(sprite_index = spr_hurt and immune = 1)
+		if (sprite_index != spr_hurt || object_index != Player)
 		{
-			snd_play(snd_hurt, hurt_pitch_variation)
 
 			if immune = 1
 			{
+				snd_play(snd_hurt, hurt_pitch_variation)
 				alarm[4]=50;
 				if my_health > immunelimit
 				{

@@ -8,7 +8,7 @@ button = 2
 else
 button = 0
 //y+34 moet 24
-if button = 1 and mouse_x > x and mouse_x < x+20 and mouse_y > y and mouse_y < y+24 and image_index != racemax+1 and image_speed = 0 && UberCont.race_have[num]==1
+if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+20 and UberCont.mouse__y > y and UberCont.mouse__y < y+24 and image_index != racemax+1 and image_speed = 0 && UberCont.race_have[num]==1
 {
     if Menu.race = num
     {
@@ -96,6 +96,9 @@ if button = 1 and mouse_x > x and mouse_x < x+20 and mouse_y > y and mouse_y < y
     break;
     case 26:
     snd_cnfm=sndMutant26Cnfm;
+    break;
+	case 27:
+    snd_cnfm=sndMutant27Cnfm;
     break;
     
     }
@@ -225,6 +228,9 @@ if button = 1 and mouse_x > x and mouse_x < x+20 and mouse_y > y and mouse_y < y
     break;
     case 26:
     snd_slct=sndMutant26Slct;
+    break;
+	case 27:
+    snd_slct=sndMutant27Slct;
     break;
     
     }

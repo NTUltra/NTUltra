@@ -10,10 +10,10 @@ y = creator.y
 //FIRING
 snd_play(sndToxicBoltGas,0.1,true);
 
-if place_meeting(mouse_x,mouse_y,Floor)
+if place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor)
 {
 repeat(3)
-with instance_create(mouse_x,mouse_y,ToxicThrowerGas)
+with instance_create(UberCont.mouse__x,UberCont.mouse__y,ToxicThrowerGas)
 {
 motion_add(random(360),0.1+random(1))}
 

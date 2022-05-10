@@ -1,5 +1,7 @@
 scrDrop(100,100)
 scrDrop(20,0)
+if UberCont.area == 101
+scrDefeatedRequiredBoss(secretChallengeBosses.bigFish);
 if !isOneWeaponOnlyModes()
 {
 	with instance_create(x-8,y,WepPickup)
@@ -23,7 +25,7 @@ with instance_create(x,y,Dust)
 {motion_add(random(360),1+random(5))
 }
 }
-scrBusinessHogGoldChest();
+scrBossKill();
 if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(BigFish) == 1
 with MusCont
 {

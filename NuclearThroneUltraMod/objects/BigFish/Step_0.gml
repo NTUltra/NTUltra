@@ -17,10 +17,13 @@ function suck() {
 	{
 		if point_distance(x,y,other.x,other.y) < 240
 		{
-			if place_free(x+lengthdir_x(other.suckstrength,point_direction(x,y,other.x,other.y)),y)
-			x += lengthdir_x(other.suckstrength,point_direction(x,y,other.x,other.y))
-			if place_free(x,y+lengthdir_y(other.suckstrength,point_direction(x,y,other.x,other.y)))
-			y += lengthdir_y(other.suckstrength,point_direction(x,y,other.x,other.y))
+			if collision_line(x,y,other.x,other.y, Wall, 0, 0) < 0
+			{
+				if place_free(x+lengthdir_x(other.suckstrength,point_direction(x,y,other.x,other.y)),y)
+					x += lengthdir_x(other.suckstrength,point_direction(x,y,other.x,other.y))
+				if place_free(x,y+lengthdir_y(other.suckstrength,point_direction(x,y,other.x,other.y)))
+					y += lengthdir_y(other.suckstrength,point_direction(x,y,other.x,other.y))
+			}
 		}
 		else 
 		{
@@ -28,7 +31,13 @@ function suck() {
 			other.alarm[2]=0;
 		}
 	}
-	
+	if instance_exists(Player)
+	{
+		if Player.x > x
+			right = 1
+		else if Player.x < x
+			right = -1
+	}
 	with BoneFish
 	{
 		if point_distance(x,y,other.x,other.y) < 100

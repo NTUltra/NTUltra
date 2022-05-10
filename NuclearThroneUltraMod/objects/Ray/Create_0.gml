@@ -8,7 +8,7 @@ event_inherited();
 
 typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 explosive=1;
-direction=point_direction(x,y,mouse_x,mouse_y);
+direction=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 x=Player.x+lengthdir_x(16,direction);
 y=Player.y+lengthdir_y(16,direction);
 xx=x;

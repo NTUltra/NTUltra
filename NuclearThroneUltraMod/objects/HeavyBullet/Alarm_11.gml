@@ -12,8 +12,8 @@ if um == ultramods.laserBullet
 	instance_destroy(id,false);
 	with instance_create(x,y,Laser)
 	{
-		image_yscale+=0.2;
-		isUltra = true;
+		//image_yscale+=0.2;
+		image_yscale -= 0.1;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;
@@ -23,6 +23,25 @@ if um == ultramods.laserBullet
 } else if um == ultramods.bulletShotgun
 {
 	with instance_create(x,y,Slug)
+	{
+		scrCopyWeaponMod(other);
+		direction = other.direction;
+		image_angle = direction;
+		speed = other.speed;
+		team = other.team;
+		alarm[11] = 0;
+	}
+	instance_destroy(id,false);
+} else if um == ultramods.bulletPlasma
+{
+	with Player
+	{
+		if skill_got[17] = 1
+			snd_play_fire(sndPlasmaBigUpg)
+		else
+			snd_play_fire(sndPlasmaBig)
+	}
+	with instance_create(x,y,PlasmaBall)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;

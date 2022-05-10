@@ -9,7 +9,7 @@ scrUnlockBSkin(7,"FOR DEFEATING THE BIG MACHINE#ON LOOP AS STEROIDS",0);
 
 }
 
-scrBusinessHogGoldChest();
+scrBossKill();
 
 with instance_create(x,y,BigDogExplo)
 	visible = false;
@@ -64,18 +64,4 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 }
 snd_play(sndBossWin);
 event_inherited()
-
-
-with Marker
-        {
-        
-        if other.id=target.id
-        {
-        with Player
-        {
-        bigmachinemarked=true;
-        }
-        }
-        
-        }
 

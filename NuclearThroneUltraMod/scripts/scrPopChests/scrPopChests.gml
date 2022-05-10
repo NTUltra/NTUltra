@@ -37,7 +37,7 @@ function scrPopChests() {
 			}
 			return;
 		}
-		if (Player.area == 9 && Player.subarea == 3)
+		if ( (Player.area == 9 || Player.area == 118) && Player.subarea == 3)
 		{
 			with RadChest
 				instance_destroy(id,false);
@@ -123,6 +123,14 @@ function scrPopChests() {
 		{
 			healthChestGol += choose(0,0,0,0,0,1);
 		}
+		if Player.race=4 && Player.my_health <= Player.maxhealth*0.5 and random(2) < 1
+		{
+			healthChestGol += 1;
+		}
+		else if Player.race!=4 && Player.my_health < round(6/2) and random(2) < 1
+		{
+			healthChestGol += 1;
+		}
 		wepChestGol = gol;
 	
 		if Player.crown == 15//CROWN OF CHOICE
@@ -132,12 +140,35 @@ function scrPopChests() {
 			wepChestGol += 2;
 		}
 
-
+		if Player.my_health >= Player.maxhealth
+			healthChestGol --;
+		if Player.my_health >= 30
+			healthChestGol --;
+			
 		if Player.area = 100
 		{
 		if instance_exists(Crown){
-		with instance_furthest(Player.x,Player.y,WeaponChest)
-		instance_create(x,y,ProtoChest)}
+			with instance_furthest(Player.x,Player.y,WeaponChest)
+			{
+				if Player.skill_got[23] //OPEN MIND
+				{
+					instance_create(x,y-24,ProtoChest)
+					with instance_create(x,y+24,ProtoChest)
+					{
+						issecond = true;
+						wep = UberCont.protowep2
+						wepmod1=UberCont.protowepmod12
+						wepmod2=UberCont.protowepmod22
+						wepmod3=UberCont.protowepmod32
+						wepmod4=UberCont.protowepmod42
+					}
+				}
+				else
+				{
+					instance_create(x,y,ProtoChest)
+				}
+			}
+		}
 		gol = 0
 		wepChestGol = 0;
 		healthChestGol = 0;
@@ -148,26 +179,26 @@ function scrPopChests() {
 	if instance_exists(WeaponChest)
 	{
 		totalWepsChests = instance_number(WeaponChest);
-		do {with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,WeaponChest) instance_destroy()}
+		do {with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,WeaponChest) instance_destroy(id,false)}
 	until instance_number(WeaponChest) <= wepChestGol
 	}
 	if instance_exists(RadChest)
 	{
 		totalRadChests = instance_number(RadChest);
-		do {with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,RadChest) instance_destroy()}
+		do {with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,RadChest) instance_destroy(id,false)}
 	until instance_number(RadChest) <= gol
 	}
 	if instance_exists(AmmoChest)
 	{
 		totalAmmoChests = instance_number(AmmoChest)
-		do {with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,AmmoChest) instance_destroy()}
+		do {with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,AmmoChest) instance_destroy(id,false)}
 	until instance_number(AmmoChest) <= gol
 	}
 	if instance_exists(HealthChest)
 	{
 		totalHealthChests = instance_number(HealthChest)
 		do {
-		with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,HealthChest) instance_destroy()}
+		with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,HealthChest) instance_destroy(id,false)}
 	until instance_number(HealthChest) <= healthChestGol
 	}
 	if (totalWepsChests < wepChestGol)
@@ -225,7 +256,13 @@ function scrPopChests() {
 	instance_destroy(id,false);
 	}
 	}
-
+	if instance_exists(Player) && Player.race == 25
+	{
+		with RadChest
+		{
+			instance_destroy(id,false);	
+		}
+	}
 
 	with HealthChest
 	{

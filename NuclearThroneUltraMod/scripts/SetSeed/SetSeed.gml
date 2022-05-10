@@ -6,7 +6,7 @@ function SetSeed(){
 	{
 		if (useSeed)
 		{
-			random_set_seed(seed)
+			random_set_seed(seed+loops)
 		}
 	}
 }

@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "IDPD",
-    "path": "folders/Sprites/Enemies/IDPD.yy",
+    "name": "IDPDFreak",
+    "path": "folders/Sprites/Enemies/IDPD/IDPDFreak.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprPopoFreakGun",

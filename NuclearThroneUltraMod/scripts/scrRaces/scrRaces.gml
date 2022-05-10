@@ -71,7 +71,7 @@ function scrRaces() {
 	race_name[5] = "[PLANT]"
 	race_pass[5] = "IS FASTER"
 	race_acti[5] = "SNARE GROWTH"
-	race_butt[5] = "SNARE FINISHES ENEMIES#UNDER 35% HP"
+	race_butt[5] = "SNARE FINISHES ENEMIES#UNDER 30% HP"
 	//race_back[5] = "ENEMIES KILLED WHILE SNARED GIVE MORE DROPS THIS IS AN ULTRA ";
 	race_lock[5] = "KILL 100 ENEMIES TO UNLOCK"
 	race_have[5] = 0
@@ -127,7 +127,7 @@ function scrRaces() {
 	race_name[9] = "[CHICKEN]"
 	race_pass[9] = "HARD TO KILL"
 	race_acti[9] = "SLOW MOTION"
-	race_butt[9] = "NORMAL MOVEMENT SPEED#DURING SLOWMOTION"//"NORMAL RATE OF FIRE#DURING SLOW MOTION"
+	race_butt[9] = "NORMAL MOVEMENT SPEED#AND NORMAL FIRERATE#DURING SLOWMOTION"//"NORMAL RATE OF FIRE#DURING SLOW MOTION"
 	//race_back[9] = "NORMAL RATE OF FIRE#DURING SLOW MOTION (this IS AN ULTRA MAKE CHANGE)";
 	race_lock[9] = "OPEN A BIG HP CHEST"
 	race_have[9] = 0
@@ -155,7 +155,7 @@ function scrRaces() {
 	race_name[11] = "[HUNTER]"
 	race_pass[11] = "HIGHER PROJECTILE VELOCITY#HIGHER ACCURACY"
 	race_acti[11] = "MARK"
-	race_butt[11] = "MARKED ENEMIES#TAKE 35% MORE DAMAGE"
+	race_butt[11] = "MARKED ENEMIES#TAKE 20% MORE DAMAGE"
 	//race_back[11] = "MARKED ENEMIES THAT DIE#HAVE A HIGHER DROPRATE(this is an ultra?) MARKED ENEMIES THAT DIE#DECREATE RELOAD";
 	race_lock[11] = "DEFLECT A SNIPER SHOT#INTO THE SNIPER"
 	race_have[11] = 0
@@ -285,7 +285,7 @@ function scrRaces() {
 	//race_back[20] = "WEAPON CHESTS SOMETIME BECOME#GOLDEN WEAPON CHESTS";
 	race_lock[20] = "FIND AND STEAL#THE MONEY GUN"
 	race_have[20] = 0
-	race_swep[20] = 42//golden shotgun
+	race_swep[20] = 444//golden hand cannon
 	race_bskin[20] = 0
 	race_cskin[20] = 0
 	race_bskin_lock[20] = "REACH AND#BEAT THE THRONE#USING ONLY#GOLD WEAPONS#AS BUSINESS HOG"
@@ -330,7 +330,7 @@ function scrRaces() {
 	race_swep[23] = 348//FROG BLASTER
 	race_bskin[23] = 0
 	race_cskin[23] = 0
-	race_bskin_lock[23] = "USE THREE#TOXIC WEAPONS#IN THE SAME RUN#AS FROG"
+	race_bskin_lock[23] = "USE TWO DIFFERENT#TOXIC WEAPONS#IN THE SAME RUN#AS FROG"
 	race_cskin_lock[23] = "REACH AND BEAT#THE THRONE#AS FROG#ON THE GAMEMODE:#DISC ROOM#WITH SETTINGS:#ATLEAST 6 DISCS#ATLEAST 2 DAMAGE"
 
 
@@ -358,7 +358,7 @@ function scrRaces() {
 	race_swep[25] = 1
 	race_bskin[25] = 0
 	race_cskin[25] = 0
-	race_bskin_lock[25] = "REACH LEVEL 7#BEFORE THE#CRYSTAL CAVES#AS DOCTOR"
+	race_bskin_lock[25] = "REACH LEVEL 7#BEFORE THE LABS#WHILE USING#THE MAIN PATH#AS DOCTOR"
 	race_cskin_lock[25] = "PROFESSIONAL#SELFCARE"
 
 
@@ -374,23 +374,20 @@ function scrRaces() {
 	race_cskin[26] = 0
 	race_bskin_lock[26] = "COMPLETE A#MAIN AREA#AFTER THE SCRAPYARD#WITHOUT MISSING#AS GOOD OL'HUMPHRY"
 	race_cskin_lock[26] = "REACH 100 SKILL"
-	/*
-	race_name[27] = "[HANDS]"//RUSTY GRANDPA SOLDIER
-	race_pass[27] = "HIGHER CHANCE FOR#INVERTED PORTALS TO APPEAR"
-	race_acti[27] = "PULL IN CHESTS & ENEMIES"//"SLOW AND SHRINK#ENEMY PROJECTILES#AT THE COST OF#UNEQUIPED AMMO"//DISCIPLINE those bullets
-	race_butt[27] = "PUSH ENEMIES INSTEAD"
+	
+	race_name[27] = "[HANDS]"
+	race_pass[27] = "HIGHER CHANCE FOR#INVERTED PORTALS TO APPEAR#INVERTED PORTALS#(OVER) HEAL 2HP"
+	race_acti[27] = "PULL IN CHESTS & ENEMIES"
+	race_butt[27] = "PUSH ENEMIES INSTEAD#YOUR HAND DEALS MORE DAMAGE"
 	//race_back[27] = "MORE DAMAGE OR SOMETHING";
 	race_lock[27] = "KILL THE INVERTED THRONE"
 	race_have[27] = 0
-	race_swep[27] = 1
+	race_swep[27] = 443
 	race_bskin[27] = 0
 	race_cskin[27] = 0
-	race_bskin_lock[27] = "NUTHIN"
-	race_cskin_lock[27] = "NOPESKY"
-*/
-
-	racemax = 26;
+	race_bskin_lock[27] = "SLAP#THE PURPLE DRAGON#TO DEATH#(KILL WITH ACTIVE)"
+	race_cskin_lock[27] = "SUCKERPUNCH#THREE IDPD VANS#INTO OBLIVION#IN A SINGLE RUN#(KILL WITH ACTIVE & THRONEBUTT)"
 
 
-
+	racemax = 27;
 }

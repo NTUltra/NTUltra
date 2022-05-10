@@ -1,5 +1,35 @@
+if (my_health <= 0 && lifes > 0 && fakeded < 0 && instance_number(enemy) - instance_number(IDPDVan) - instance_number(InvertedAssassinBoss) > 4)
+{
+	depth += 2;
+	scrDrop(100,0);
+	scrRaddrop(raddrop);
+	sprite_index = spr_dead;
+	image_index = 0;
+	fakeded = 80 + random(200);
+	alarm[1] = fakeded + 10;
+	alarm[2] = 0;
+	alarm[4] = 0;
+	mask_index = mskPickupThroughWall;
+	speed = 0;
+	lifes--;
+	var aalive = false;
+	with AssassinBoss
+	{
+		if my_health > 0
+			aalive = true;
+	}
+	if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && !aalive
+		with MusCont
+		{
+			audio_stop_sound(song);
+			song = musBossWin
+			snd_play_2d(song)
+			audio_sound_gain(song,max(0,sqrt(UberCont.opt_musvol)),0);
+		}
+}
+if fakeded >= 0
+	exit;
 event_inherited()
-
 
 if (alarm[4] < 0) {
 	aggression += 1;
@@ -30,13 +60,13 @@ if (alarm[4] < 0) {
 	}
 
 	//hes firing at me!
-	if point_distance(x,y,mouse_x,mouse_y)<60 && aggression <= 180 && alarm[2] < 1 {
+	if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<60 && aggression <= 180 && alarm[2] < 1 {
 		if mouse_check_button_pressed(mb_left) and target > 0
 		{
 			if point_distance(x,y,target.x,target.y) < 64
 			direction = point_direction(x,y,target.x,target.y)
 			else
-			direction = point_direction(target.x+lengthdir_x(point_distance(x,y,target.x,target.y)*0.95,point_direction(x,y,mouse_x,mouse_y)),target.y+lengthdir_y(point_distance(x,y,target.x,target.y)*0.95,point_direction(x,y,mouse_x,mouse_y)),x,y)+random(60)-30
+			direction = point_direction(target.x+lengthdir_x(point_distance(x,y,target.x,target.y)*0.95,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),target.y+lengthdir_y(point_distance(x,y,target.x,target.y)*0.95,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),x,y)+random(60)-30
 			dodge = 3;
 			walk = 4;
 			sprite_index = spr_walk;
@@ -85,7 +115,9 @@ if (alarm[4] < 0) {
 			        team = other.team
 		        }
 		        alarm[0] = 12
-        
+				alarm[5] = 3 + deflectExhaustion;
+				alarm[1] += 0.5;
+				deflectExhaustion += 2;
 		        snd_play(sndAssassinAttack)
 		        wepangle = -wepangle
 		        motion_add(projectiledir,6)
@@ -179,3 +211,5 @@ if alarm[2] > 0 && alarm[2] < 20
 		motion_add(dir,1);
 	}
 }
+
+

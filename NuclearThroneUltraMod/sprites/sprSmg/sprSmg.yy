@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprSmg","path":"sprites/sprSmg/sprSmg.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprSmg",
     "tags": [],
     "resourceType": "GMSequence",
   },

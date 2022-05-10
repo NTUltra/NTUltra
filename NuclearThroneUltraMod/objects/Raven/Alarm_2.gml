@@ -1,3 +1,4 @@
+///@description Get prevhealth
 if ammo > 0
 {
 snd_play(sndEnemyFire)

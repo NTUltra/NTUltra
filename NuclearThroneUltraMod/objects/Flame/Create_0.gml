@@ -13,18 +13,24 @@ friction = 0.15
 image_angle = random(360)
 alarm[2] = 1
 dmg=2;
-home=false;
 
 if instance_exists(Player)
 {
-if Player.race=24
-dmg=3
+	if Player.race=24
+		dmg ++;
 
-if Player.ultra_got[95]
-{
-home=true;
-dmg=4;
-}
+	if Player.ultra_got[95]
+	{
+		alarm[1] = 1;
+		dmg++;
+	}
+	if (Player.bskin == 1 && Player.ultra_got[106])
+	{
+		alarm[1] = 1;
+		dmg ++;
+		if scrIsInInvertedArea()
+			dmg ++;
+	}
 
 }
 alarm[11] = 1;

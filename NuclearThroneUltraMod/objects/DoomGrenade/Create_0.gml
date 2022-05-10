@@ -26,4 +26,4 @@ alarm[1] = 2+random(10)
 
 alarm[0]=120+random(120);
 
-dmg = 15;
+dmg = 10;

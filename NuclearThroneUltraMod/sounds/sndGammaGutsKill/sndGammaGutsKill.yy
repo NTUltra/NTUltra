@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndGammaGutsKill",
-  "duration": 0.0,
+  "duration": 1.518687,
   "parent": {
     "name": "Player",
     "path": "folders/Sounds/Player.yy",

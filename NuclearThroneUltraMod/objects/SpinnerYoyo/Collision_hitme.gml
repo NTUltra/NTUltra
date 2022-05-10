@@ -1,5 +1,6 @@
 if other.team != team
-{with other
+{
+	with other
 	{
 		if sprite_index != spr_hurt
 		{

@@ -13,7 +13,6 @@ function scrNextLevel() {
 		area = lastarea;
 		if looping
 		{
-			debug("LOOPING",lastarea);
 			room_restart();
 			exit;
 		}
@@ -29,17 +28,32 @@ function scrNextLevel() {
 	}
 	else if subarea = 1 || area = 105 || area = 106 || area = 107 || area = 101 || area = 110 || area = 111 || area = 112 || area = 103 || area = 109 || area = 113 || area == 114 || area = 108 || area == 115 || area == 117 || area == 118
 	{
-		if area == 118 && subarea > 1
+		if area == 118
 		{
-			area = 9;
-			subarea = 3;
-			inverted = false;
-			exit;
+			if inverted && subarea<3
+	        {
+		        //inverted chesire
+		        area = 118
+		        subarea = 3;
+		        inverted=false;
+		        exit;
+	        }
+	        else//inv palace to loop desert
+	        {
+				//LOOP
+		        area=1;
+		        subarea=1;
+				inverted=false
+				looping=true;
+		        exit;
+	        }
 		}
-	    if area = 113 && subarea > 1//banditland
+		
+	    if area = 113// && subarea > 1//banditland
 	    {
 	        area = 8//chesire cat
 	        subarea=3;
+			inverted=false;
 	        exit;
 	    }
 		//Jungle
@@ -50,11 +64,13 @@ function scrNextLevel() {
 			{
 				area = 115;
 				subarea = 1;
+				inverted=false;
 			}
 			else
 			{
 				area = 4;
 				subarea = 1;
+				inverted=false;
 			}
 			exit;
 		}
@@ -63,16 +79,19 @@ function scrNextLevel() {
 			//To jungle
 			area = 114
 			subarea = 0;
+			inverted=false;
 		}
 	    if area = 103 && subarea > 0//YV mansion
 	    {
 	        area = 3
 	        subarea = 2;
+			inverted=false;
 	    }
 		if area == 102//Pizza to oasis boss
 		{
 			area = 101;
 			subarea = 2;
+			inverted=false;
 		}
 	    if area = 105//bring to scrapyard inv desert or pizza
 	    {
@@ -129,6 +148,8 @@ function scrNextLevel() {
 	        else//Inv frozen city to wonderland
 	        {
 	        area=8;
+			lastarea = 8;
+			lastsubarea = 2;
 	        subarea=2;
 			inverted=false
 	        exit;
@@ -164,13 +185,15 @@ function scrNextLevel() {
 	        {
 	        area = 109
 	        subarea = 3;
-	        inverted=true;
+	        inverted=false;
 	        exit;
 	        }
 	        else//Skip one palace
 	        {
 	        area=9;
-	        subarea=2;
+	        subarea=1;
+			lastarea = 9;
+			lastsubarea = 2;
 			inverted=false
 	        }
         
@@ -181,7 +204,6 @@ function scrNextLevel() {
 		    area=103;
 		    subarea=1;
 		    lastarea=3;
-    
 		    inverted=false;
 	    exit;
 	    }
@@ -197,6 +219,7 @@ function scrNextLevel() {
 			else//Skip one palace
 			{
 				area=9
+				lastarea = 9;
 				subarea=2;
 				inverted=false;
 			}
@@ -216,8 +239,10 @@ function scrNextLevel() {
 	        else//Inv labs to wonderlands 1
 	        {
 				area=8
+				lastarea = 8;
 				subarea=1;
-				inverted=false
+				inverted=false;
+				exit;
 	        }
     
 	    }
@@ -228,6 +253,7 @@ function scrNextLevel() {
 		    area=7;
 		    subarea=1;
 		    oasis=false
+			inverted=false;
 	    exit;
 	    }
 	    hard+=1;
@@ -237,6 +263,7 @@ function scrNextLevel() {
 		{
 			area = 4;
 			subarea = 2;
+			inverted=false;
 			exit;
 		}
 
@@ -292,7 +319,7 @@ function scrNextLevel() {
 		}
 		else//WE LOOP HERE!
 		{
-		looping=true;
+			looping=true;
 		}
 	}    
 	//TO INVERTED AREAS
@@ -332,11 +359,13 @@ function scrNextLevel() {
 
 	if ( area=8 && inverted )//inv wonderland
 	{area=109;
-	lastarea = 109}//in case of crownvault
+	lastarea = 109
+	lastarea=8;}//in case of crownvault
 	
 	if ( area=9 && inverted )//inv wonderland
 	{area=118;
-	lastarea = 118}//in case of crownvault
+	lastarea = 118
+	lastarea=9;}//in case of crownvault
 
 	if ( area=2 && inverted )//inv sewers
 	{area=110;
@@ -345,18 +374,18 @@ function scrNextLevel() {
 
 
 	if race=6||race=12{//Yv's Crib? Yun cuz aswell
-	if level>=10
-	{
-	    if /*(ultra_got[21]||ultra_got[22]||ultra_got[23]||ultra_got[24])&&*/(visitedCrib==false)
-	    {
-	    area=104;
+		if level>=10
+		{
+		    if (visitedCrib==false)
+		    {
+		    area=104;
 		
-		debug("lastsubarea ",lastsubarea);
-	    visitedCrib=true;
-	    hard -= 1;
-		debug("GO CRIB");
-	    }
-	}
+			debug("lastsubarea ",lastsubarea);
+		    visitedCrib=true;
+		    hard -= 1;
+			debug("GO CRIB");
+		    }
+		}
 	}
 
 	if (area=105 || area=106|| area=107 || area = 108 || area = 109 | area = 110 || area = 111 || area = 112)&&subarea<2//inverted curse

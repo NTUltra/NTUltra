@@ -10,7 +10,7 @@ with instance_create(x,y,Corpse)
 size = 1
 mask_index = mskPlayer
 motion_add(other.direction,other.speed)
-sprite_index = sprLilHunterDead
+sprite_index = sprInvertedLilHunterDead
 image_xscale = choose(1,-1)
 
 if instance_exists(Player)

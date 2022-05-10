@@ -25,15 +25,15 @@ if instance_exists(Player)
 else if(speed>12)
 {speed=12;}
 
-if(image_xscale<1)
+if(image_xscale<nomscale)
 {
-image_xscale+=0.05;
-image_yscale+=0.05;
+image_xscale+=0.03;
+image_yscale+=0.03;
 }
 else
 {
-image_xscale=1;
-image_yscale=1;
+image_xscale=nomscale;
+image_yscale=nomscale;
 }
 if( (collision_point(x+lengthdir_x(4,originalDirection+20),y+lengthdir_y(4,originalDirection+20),Wall,false,true))&&(collision_point(x+lengthdir_x(4,originalDirection-20),y+lengthdir_y(4,originalDirection-20),Wall,false,true)) ){
 instance_destroy();

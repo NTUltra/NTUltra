@@ -6,8 +6,8 @@
   "solid": false,
   "visible": true,
   "spriteMaskId": {
-    "name": "mskPlasmaBallBig",
-    "path": "sprites/mskPlasmaBallBig/mskPlasmaBallBig.yy",
+    "name": "mskBouncerPlasmaBall",
+    "path": "sprites/mskBouncerPlasmaBall/mskBouncerPlasmaBall.yy",
   },
   "persistent": false,
   "parentObjectId": {

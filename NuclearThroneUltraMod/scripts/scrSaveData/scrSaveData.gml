@@ -34,6 +34,11 @@ function scrSaveData() {
 	ini_write_real("DATA","protowepmod2",protowepmod2);
 	ini_write_real("DATA","protowepmod3",protowepmod3);
 	ini_write_real("DATA","protowepmod4",protowepmod4);
+	ini_write_real("DATA","protowep2",protowep2);
+	ini_write_real("DATA","protowepmod12",protowepmod12);
+	ini_write_real("DATA","protowepmod22",protowepmod22);
+	ini_write_real("DATA","protowepmod32",protowepmod32);
+	ini_write_real("DATA","protowepmod42",protowepmod42);
 
 	ini_write_real("DATA","oneweponly298",oneweponly298);
 	ini_write_real("DATA","oneweponly311",oneweponly311);

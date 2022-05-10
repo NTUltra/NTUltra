@@ -9,9 +9,10 @@ if alarm[5] >  0
 }
 
 Sleep(200)
-scrBusinessHogGoldChest();
+scrBossKill();
 instance_create(x,y,ChesireCatExplosion);
-
+if UberCont.area == 8
+scrDefeatedRequiredBoss(secretChallengeBosses.chesireCat);
 scrDrop(100,0)
 scrDrop(20,0)
 scrDrop(50,40)
@@ -37,19 +38,4 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 
 }
-
-
-with Marker
-        {
-        
-        if other.id=target.id
-        {
-        with Player
-        {
-        chesirecatmarked=true;
-        }
-        }
-        
-        }
-
 

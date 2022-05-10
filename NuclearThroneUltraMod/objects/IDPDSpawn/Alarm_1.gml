@@ -1,6 +1,22 @@
 
 if instance_exists(Player)
 {
+	if Player.loops > 3 && random(3) < 1
+	{
+		snd_play(sndFreakPopoEnter);
+		repeat(2)
+		{
+			with instance_create(x+random(4)-2,y+random(4)-2,IDPDFreak)
+			{
+				scrSleepyPopo();
+				if instance_exists(Player)
+					motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,4)
+				else
+					motion_add(random(360),4)
+			}
+		}
+		exit;
+	}
 //ElITES ON LOOP
 if random(4)<1+min(Player.loops-1,2) &&Player.loops>0//elite
 {

@@ -3,6 +3,10 @@
 var spawnedVan = false;
 if instance_exists(Player)
 {
+	var getFreaky = false;
+	if Player.loops > 2
+		getFreaky = wantVanAmount - Player.subarea % 3 == 0;
+	
 	if (verticalVans && wantVanAmount % 2 == 0) //EVEN
 	{
 		var xx = Player.x + random_range(-48,48);
@@ -11,7 +15,10 @@ if instance_exists(Player)
 		if instance_exists(spawnfloor)
 		{
 			with instance_create(spawnfloor.x + 16,spawnfloor.y + 16,VanSpawn)
+			{
 				vertical = true;
+				dropFreaks = getFreaky;
+			}
 			spawnedVan = true;
 			wantVanAmount --;
 		}
@@ -23,7 +30,10 @@ if instance_exists(Player)
 		var spawnfloor = instance_nearest(xx,yy,Floor);
 		if instance_exists(spawnfloor)
 		{
-			instance_create(spawnfloor.x + 16,spawnfloor.y + 16,VanSpawn);
+			with instance_create(spawnfloor.x + 16,spawnfloor.y + 16,VanSpawn)
+			{
+				dropFreaks = getFreaky;
+			}
 			spawnedVan = true;
 			wantVanAmount --;
 		}

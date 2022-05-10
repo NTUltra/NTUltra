@@ -1,6 +1,6 @@
 maxhealth = 14
 size = 1
-
+event_inherited()
 var img;
 img = choose(1,2,3)
 
@@ -20,7 +20,6 @@ spr_idle = sprInvertedVulcanoRock3
 spr_hurt = sprInvertedVulcanoRock3Hurt
 spr_dead = sprInvertedVulcanoRock3Dead}
 
-event_inherited()
 
 move_contact_solid(random(360),random(12))
 if !place_free(x,y+12)

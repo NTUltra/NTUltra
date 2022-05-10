@@ -314,3 +314,5 @@ if(instance_exists(Player))
 }
 }
 depth = 8;
+isArenaFloor = true;
+canSpawnSwarm = true;

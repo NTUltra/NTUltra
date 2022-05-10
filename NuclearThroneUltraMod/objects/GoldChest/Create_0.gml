@@ -1,6 +1,8 @@
 scrWeapons()
 wep = scrDecideWepGold()
 aditionalwep = 0;
+size = 1;
+team = 0;
 while (wep == 315)
 {
 	aditionalwep = 315;

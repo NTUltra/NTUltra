@@ -13,8 +13,8 @@ function scrRavenLift_old() {
 	{
 
 	do {
-	targetx = x+lengthdir_x(128,point_direction(mouse_x,mouse_y,target.x,target.y)+random(50)-25)
-	targety = y+lengthdir_y(128,point_direction(mouse_x,mouse_y,target.x,target.y)+random(50)-25)
+	targetx = x+lengthdir_x(128,point_direction(UberCont.mouse__x,UberCont.mouse__y,target.x,target.y)+random(50)-25)
+	targety = y+lengthdir_y(128,point_direction(UberCont.mouse__x,UberCont.mouse__y,target.x,target.y)+random(50)-25)
 
 	var dir;
 	dir = instance_nearest(targetx,targety,Floor)

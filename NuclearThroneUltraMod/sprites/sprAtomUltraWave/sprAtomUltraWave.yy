@@ -1,6 +1,6 @@
 {
-  "bboxMode": 1,
-  "collisionKind": 2,
+  "bboxMode": 0,
+  "collisionKind": 1,
   "type": 0,
   "origin": 4,
   "preMultiplyAlpha": false,
@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 17,
+  "bbox_right": 31,
   "bbox_top": 0,
-  "bbox_bottom": 17,
+  "bbox_bottom": 31,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 18,
-  "height": 18,
+  "width": 32,
+  "height": 32,
   "textureGroupId": {
     "name": "PlayerCharacter",
     "path": "texturegroups/PlayerCharacter",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f3868903-2fb2-4799-ad68-95a97f26734a","path":"sprites/sprAtomUltraWave/sprAtomUltraWave.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f3868903-2fb2-4799-ad68-95a97f26734a","path":"sprites/sprAtomUltraWave/sprAtomUltraWave.yy",},"LayerId":{"name":"3804fd01-8deb-4cd4-b129-6e4b0be63f62","path":"sprites/sprAtomUltraWave/sprAtomUltraWave.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprAtomUltraWave","path":"sprites/sprAtomUltraWave/sprAtomUltraWave.yy",},"resourceVersion":"1.0","name":"f3868903-2fb2-4799-ad68-95a97f26734a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"999929a3-1dcd-4c16-a1e3-da7af9e66551","path":"sprites/sprAtomUltraWave/sprAtomUltraWave.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"999929a3-1dcd-4c16-a1e3-da7af9e66551","path":"sprites/sprAtomUltraWave/sprAtomUltraWave.yy",},"LayerId":{"name":"3804fd01-8deb-4cd4-b129-6e4b0be63f62","path":"sprites/sprAtomUltraWave/sprAtomUltraWave.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprAtomUltraWave","path":"sprites/sprAtomUltraWave/sprAtomUltraWave.yy",},"resourceVersion":"1.0","name":"999929a3-1dcd-4c16-a1e3-da7af9e66551","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sprAtomUltraWave","path":"sprites/sprAtomUltraWave/sprAtomUltraWave.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"18049718-f617-4de2-b37b-ac73fafd2e12","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f3868903-2fb2-4799-ad68-95a97f26734a","path":"sprites/sprAtomUltraWave/sprAtomUltraWave.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3123fdb0-459d-4668-96ae-1c08d751ffd7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"999929a3-1dcd-4c16-a1e3-da7af9e66551","path":"sprites/sprAtomUltraWave/sprAtomUltraWave.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,13 +54,13 @@
     "backdropHeight": 1080,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 9,
-    "yorigin": 9,
+    "xorigin": 16,
+    "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprAtomUltraWave","path":"sprites/sprAtomUltraWave/sprAtomUltraWave.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprAtomUltraWave",
     "tags": [],
     "resourceType": "GMSequence",
   },

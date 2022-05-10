@@ -1,0 +1,65 @@
+///scrWepModName();
+// /@description
+///@param wepmod
+function scrWepModDescription(wm){
+	switch (wm)
+	{
+	case 1:
+	return "HITS OCCASIONALLY SPAWN TOXIC GASS"
+	break;
+	case 2:
+	return "HITS OCCASIONALLY SPAWN EXPLOSIONS"
+	break;
+	case 3:
+	return "HITS OCCASIONALLY SPAWN FIRE"
+	break;
+	case 4:
+	return "HITS OCCASIONALLY FREEZE ENEMIES"
+	break;
+	case 5:
+	return "HITS OCCASIONALLY SPAWN BLOOD EXPLOSIONS"
+	break;
+	case 6:
+	return "HITS OCCASIONALLY SPAWN LIGHTNING"
+	break;
+	case 7:
+	return "HITS OCCASIONALLY SPAWN TENTACLES"
+	break;
+	case 8:
+	return "HITS OCCASIONALLY SPAWN A SWARM BOLT"
+	break;
+	case 9:
+	return "HITS OCCASIONALLY SPAWN A BOUNCER BULLET"
+	break;
+	case 10:
+	return "HITS OCCASIONALLY SPAWN THREE PELLETS"
+	break;
+	case 11:
+	return "INCREASE PROJECTILE SPEED\nDOES NOTHING ON LASERS/LIGHTNING/KRAKEN"
+	break;
+	case 12:
+	return "INCREASE RELOAD SPEED"
+	break;
+	case 13:
+	return "INCREASE PROJECTILE HOMING\nMAKES LASERS AND LIGHTNING/KRAKEN MORE ACCURATE"
+	break;
+	case 14:
+	return "HITS OCCASIONALLY INFUSE RADS\nINTO AN ENEMY"
+	break;
+	case 15:
+	return "HITS OCCASIONALLY SPAWN THREE SPLINTERS"
+	break;
+	case 16:
+	return "HITS OCCASIONALLY SPAWN MORPH\nDEALING DAMAGE\nIF ENEMY IS KILLED\nIT MORPHS INTO A SHEEP"
+	break;
+	case 17:
+	return "HITS OCCASIONALLY SPAWN ITEM DROPS"
+	break;
+	case 18:
+	return "HITS OCCASIONALLY SPAWN WEAPON DROPS"
+	break;
+	default:
+	return "UNKNOWN MOD?\nIF YOU SEE THIS SOMETHING IS WRONG\nPLS REPORT @ERDEPPOL"
+	break;
+	}
+}

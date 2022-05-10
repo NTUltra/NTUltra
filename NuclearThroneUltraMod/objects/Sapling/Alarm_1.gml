@@ -30,7 +30,7 @@ speed = 0.5
 
 if instance_exists(Player) and random(4) < 3
 {
-motion_add(point_direction(x,y,mouse_x,mouse_y),0.8)
+motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),0.8)
 motion_add(point_direction(x,y,Player.x,Player.y),1)
 }
 
@@ -43,7 +43,7 @@ else if random(4) < 3
 motion_add(random(360),0.4)
 if instance_exists(Player)
 {
-motion_add(point_direction(x,y,mouse_x,mouse_y),0.8)
+motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),0.8)
 motion_add(point_direction(x,y,Player.x,Player.y),1)
 }
 walk = 10+random(10)

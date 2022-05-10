@@ -7,3 +7,4 @@ if Player.skill_got[3]
 	isGettingSucked = false;
 	
 cursed = false;
+size = 1;

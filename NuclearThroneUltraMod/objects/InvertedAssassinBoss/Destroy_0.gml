@@ -1,9 +1,18 @@
 scrDrop(20,0)
-scrDrop(80,0)
-
-scrBusinessHogGoldChest();
+scrDrop(100,0)
+if !playedWinSound
+with Player
+{
+	if race == 27
+	{
+		snd_play_2d(snd_wrld);
+		other.playedWinSound = true;
+	}
+}
+scrBossKill();
 event_inherited()
-
+if UberCont.area == 106
+scrDefeatedRequiredBoss(secretChallengeBosses.bigAssassin);
 with Corpse
 {
 //Big Assassins corpse doesnt move

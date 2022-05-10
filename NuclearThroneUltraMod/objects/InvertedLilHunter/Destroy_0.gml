@@ -21,7 +21,7 @@ with Player
 scrUnlockCSkin(11,"FOR DEFEATING INVERTED LIL' HUNTER#IN HUNTER ONLY SHOOT WHEN MARKED",12)
 
 }
-scrBusinessHogGoldChest();
+scrBossKill();
 scrDrop(200,0)
 scrDrop(10,2)
 instance_create(x,y,Explosion)
@@ -75,17 +75,3 @@ type = wep_type[192]
 curse = 0
 sprite_index = wep_sprt[192]
 }}
-
-if instance_exists(Marker)
-{
-    if place_meeting(x,y,Marker)
-    {
-        with Player
-        {
-        
-        lillhuntermarked=true;
-        
-        }
-    }
-}
-

@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"mskBloodBullet","path":"sprites/mskBloodBullet/mskBloodBullet.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "mskBloodBullet",
     "tags": [],
     "resourceType": "GMSequence",
   },

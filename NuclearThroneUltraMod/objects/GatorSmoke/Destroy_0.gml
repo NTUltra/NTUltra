@@ -21,6 +21,5 @@ speed *= 0.9}
 
 if object_index!=GatorSmoke
 event_inherited();
-
 /* */
 /*  */

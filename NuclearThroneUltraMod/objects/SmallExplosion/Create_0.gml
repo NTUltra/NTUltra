@@ -25,7 +25,7 @@ if Player.ultra_got[57]//atom bomb
 {
 instance_create(x+random(32)-16,y+random(32)-16,ExplosionStop);}}
 
-dmg=5;
+dmg=4;
 
 HumphryHit=0;//unassigned 0=miss 1=hit 2=dont count as either
 Humphry=false;//gets assigned true when playing as humphry and firing

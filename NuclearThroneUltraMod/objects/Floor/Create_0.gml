@@ -266,3 +266,4 @@ instance_create(x+32,y-32,Top)
 instance_create(x,y+32,Top)
 instance_create(x,y-32,Top)
 */
+isArenaFloor = false;

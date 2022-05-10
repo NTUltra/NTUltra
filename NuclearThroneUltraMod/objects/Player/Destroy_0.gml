@@ -37,14 +37,12 @@ instance_destroy();
 with CrystalShield
 instance_destroy();
 
-with MusCont
-{
-if audio_exists(song)
-audio_stop_sound(song);
-//optimise sound_discard(song)
-//optimise sound_discard(amb)
-//optimise snd_loop(amb)
-}
+if skeletonlives < 1
+	with MusCont
+	{
+	if audio_exists(song)
+	audio_stop_sound(song);
+	}
 
 if ultra_got[40]==1
 {
@@ -349,13 +347,11 @@ else
 			useSeed = false;
 			opt_gamemode = 0;
 			canRestart = true;
-			canDoChallenge = true;
 		}
 		if (opt_gamemode == 26)
 		{
 			scrSaveEncrypted();
 			useSeed = false;
-			canDoChallenge = true;
 			opt_gamemode = 0;
 		}
 		

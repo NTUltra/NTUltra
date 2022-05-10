@@ -12,7 +12,7 @@ if UberCont.opt_gamemode != 25
 		}
 		with WepPickup
 		{
-			motion_add(point_direction(other.centerX,other.centerY,x,y),5);
+			motion_add(point_direction(other.centerX,other.centerY,x,y),8);
 		}
 		var w = 4;
 		var h = 5;
@@ -36,9 +36,18 @@ if UberCont.opt_gamemode != 25
 		with Floor
 		{
 			if styleb
-			sprite_index = sprFloor100C;
+			sprite_index = sprFloor100D;
 			else
 			sprite_index = sprFloor100;
+		}
+		with projectile
+		{
+			if team != 2
+				instance_destroy();
+		}
+		with PopoNade
+		{
+			instance_destroy(id,false)
 		}
 		with FloorExplo
 		{
@@ -50,6 +59,7 @@ if UberCont.opt_gamemode != 25
 			song = mus100
 			snd_loop(song);
 		}
+		alarm[4] = 0;
 	}
 	else
 	{

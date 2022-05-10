@@ -3,7 +3,7 @@ function scrTips() {
 
 	if !instance_exists(Player)
 	tiptype = 0
-
+	tip = "";
 	if tiptype = 0
 	{
 	//RANDOM
@@ -54,7 +54,7 @@ function scrTips() {
 	),choose(
 	"don't worry about long-term effects","when near a portal you#don't take damage","don't die","nice",
 	"yung cuz definitely exists","venuz patrol","boiling veins does#NOT protect against#blue fire",
-	"should not have done that","","thank you for playing","Some unused mutations are buffed","visit crownvaults twice#for weapon mods","death is near","good luck"
+	"should not have done that","","thank you for playing","Some unused mutations are buffed","visit crownvaults twice#for weapon mods","death is near","good luck","are you ready?"
 	,"you can change the direction#of director projectiles#by clicking after firing")
 	,
 	choose("try new weapons",
@@ -95,7 +95,7 @@ function scrTips() {
 	if Player.area = 2
 	tip = choose("don't drink the water","the sewers stink","don't touch the frogs","don't eat the rat meat","danger","water dripping","sludge everywhere")
 	if Player.area = 3
-	tip = choose("shoot robots on sight","there used to be trees here","look up","rust everywhere","the sound of birds","don't cross the streams","climb over cars")
+	tip = choose("shoot robots on sight","there used to be trees here","look up","rust everywhere","the sound of birds","don't cross the streams","climb over cars","thiefs can steal ammo","thiefs can steal weapons")
 	if Player.area = 4
 	tip = choose("oh no","good luck","spiderwebs everywhere","reflections on the walls","skin is crawling","almost halfway there")
 	if Player.area = 5
@@ -104,7 +104,7 @@ function scrTips() {
 	tip = choose("beep boop","nerds","don't push any buttons","randa")
 	if Player.area = 100
 	tip = choose("aw yes","take a crown to uncurse your weapon","there is value here","visit this place atleast twice","let's hope its not toxic again",
-	"old torches","you can get 3 mods#on a single weapon","mods stack","take a crown to unlock$crown start for this character")
+	"old torches","you can get 3 mods#on a single weapon","mods stack","take a crown to unlock#crown start for this character","most weapon mods benefit from#weapon specific mutations")
 	if Player.area = 102
 	tip = choose("hunger...","it smells nice here","wait for it....")
 	if Player.area = 103
@@ -207,7 +207,7 @@ function scrTips() {
 	tip = choose("remember the training","focus","go","never surrender","amateur hour is over","again","in cold shadows")
 
 	if Player.race = 10
-	tip = choose("forget the old days","change is coming","a new generation","it will get better","spawning new allies heals old ones","allies take damage over time")
+	tip = choose("forget the old days","change is coming","a new generation","it will get better","spawning new allies heals old ones","allies take damage over time","making babies hurts","whre do these allies come from?")
 
 	if Player.race = 11//hunter
 	tip = choose("never miss",
@@ -290,7 +290,13 @@ function scrTips() {
 	if Player.race = 26//GOOD OL' HUMPHRY
 	tip = choose("Rusty old soldier","Grandpa","When Humphry pulls out a gun","The real deal","Old and experienced"
 	,"Any projectile in one shot#counts as one hit","When one of multiple projectiles#fire in one shot/burst#hits an enemy it counts as a hit"
-	,"Out of the fallout shelter","focus and discipline","experience","shrink and slow projectiles","active costs unequiped weapon type ammo")
+	,"Out of the fallout shelter","focus and discipline","experience","shrink and slow projectiles","active costs unequiped weapon type ammo",
+	"with years of experience#humphry has mastered the art#of shrinking bullets")
+	
+	if Player.race = 27//HANDS
+	tip = choose("look ma! no face","don't get too touchy","proto","the only inverted mutant","pull my finger","hand from the other side",
+	"let's give each other a helping hand","reach out","what is on the other side?","GET OVER HERE!","walking backwards","strong handshake")
+	
 	}
 
 	//WEAPONS

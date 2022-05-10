@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndShielderDeflect",
-  "duration": 0.0,
+  "duration": 1.047281,
   "parent": {
     "name": "Shielder",
     "path": "folders/Sounds/IDPD sounds/Shielder.yy",

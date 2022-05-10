@@ -4,7 +4,7 @@ instance_create(x,y,Smoke)
 if speed > 5.2
 speed = 5.2
 
-motion_add(point_direction(x,y,mouse_x,mouse_y),0.4)
+motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),0.4)
 motion_add(direction,0.1)
 
 BackCont.shake+=10;

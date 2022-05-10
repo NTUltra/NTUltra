@@ -20,7 +20,7 @@ UberCont.cwep[race]=UberCont.start_wep[wep];
 UberCont.selected_start_wep[race] = wep;
 }
 
-if race != 0 && mouse_x > __view_get( e__VW.XView, 0 )+300-10 and mouse_x < __view_get( e__VW.XView, 0 )+300+12 and mouse_y > __view_get( e__VW.YView, 0 )+arrowOpenerY-12 and mouse_y < __view_get( e__VW.YView, 0 )+arrowOpenerY+10
+if race != 0 && UberCont.mouse__x > __view_get( e__VW.XView, 0 )+300-10 and UberCont.mouse__x < __view_get( e__VW.XView, 0 )+300+12 and UberCont.mouse__y > __view_get( e__VW.YView, 0 )+arrowOpenerY-12 and UberCont.mouse__y < __view_get( e__VW.YView, 0 )+arrowOpenerY+10
 {
     wepopenscale=1.5;
     
@@ -85,7 +85,7 @@ if wepmenuopen
 */
 //SKIN-------------------------------------------______________________
 
-if race != 0 && mouse_x > sx-24 and mouse_x < sx and mouse_y > __view_get( e__VW.YView, 0 )+60-12 and mouse_y < __view_get( e__VW.YView, 0 )+60+12
+if race != 0 && UberCont.mouse__x > sx-24 and UberCont.mouse__x < sx and UberCont.mouse__y > __view_get( e__VW.YView, 0 )+60-12 and UberCont.mouse__y < __view_get( e__VW.YView, 0 )+60+12
 {
 	scale=1.4;
 

@@ -4,6 +4,7 @@ if loops > 0 && spr_idle = sprBigFishSkullOpen
 	if KeyCont.key_pick[other.p] = 1
 	{
 		KeyCont.key_pick[Player.p] = 2;
+		snd_play(sndOasisHorn);
 		/*
 		snd_play(other.snd_thrn);
 

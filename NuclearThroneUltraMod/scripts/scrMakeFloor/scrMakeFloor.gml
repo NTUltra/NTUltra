@@ -355,7 +355,7 @@ function scrMakeFloor() {
 	if area == 9 || area == 118{
 		if subarea < 2
 		{
-		if random(5) < 2
+		if random(9) < 1
 		{
 			instance_create(x,y,Floor)
 			instance_create(x+32,y,Floor)
@@ -370,16 +370,37 @@ function scrMakeFloor() {
 			y += lengthdir_y(32,direction)
 		}
 		else {
-			if random(3) < 1
+			instance_create(x,y,Floor)
+			instance_create(x,y+32,Floor)
+			/*
+			if random(2) < 1
 			{
-				instance_create(x,y,Floor)
-				instance_create(x,y+32,Floor)
+				if choose(true,false)
+				{
+					instance_create(x,y,Floor)
+					instance_create(x,y+32,Floor)
+				}
+				else
+				{
+					instance_create(x,y,Floor)
+					instance_create(x,y-32,Floor)
+				}
 			}
 			else
 			{
-				instance_create(x,y,Floor)
-				instance_create(x,y-32,Floor)
-			}
+				if choose(true,false)
+				{
+					instance_create(x+32,y,Floor)
+					instance_create(x,y,Floor)
+					instance_create(x,y+32,Floor)
+				}
+				else
+				{
+					instance_create(x,y,Floor)
+					instance_create(x-32,y,Floor)
+					instance_create(x,y+32,Floor)
+				}
+			}*/
 		}
 		}
 		else
@@ -411,7 +432,7 @@ function scrMakeFloor() {
 	
 	//jungle
 	if area = 114{
-		if random(6) < 1
+		if random(7) < 1
 		{
 			instance_create(x,y,Floor)
 			instance_create(x+32,y,Floor)
@@ -573,10 +594,10 @@ function scrMakeFloor() {
 	direction += trn
 	if ((area=7||area=108) && subarea=3) || area=104
 		direction=0;
-	else if area == 9 && subarea == 3
+	else if ((area == 9 || area == 118) && subarea == 3)
 		direction = 90;
-	else if area == 118 && subarea == 3
-		direction = 270;
+	//else if area == 118 && subarea == 3
+	//	direction = 270;
 
 
 	if abs(trn) = 90 and (area = 6 || area = 112) and random(2) < 1
@@ -616,8 +637,8 @@ function scrMakeFloor() {
 
 	//instance_create(x,y,Floor)
 
-	if (trn = 180 or (abs(trn) = 90 and (area = 3 || area = 106 || (area == 9 && !subarea == 3)
-	|| (area == 118 && !subarea == 3)))) and point_distance(x,y,10016,10016) > 48 and area != 104{
+	if (trn = 180 or (abs(trn) = 90 and (area = 3 || area = 106 || (area == 9 && subarea != 3)
+	|| (area == 118 && subarea != 3)))) and point_distance(x,y,10016,10016) > 48 and area != 104{
 	instance_create(x,y,Floor)
 	instance_create(x+16,y+16,WeaponChest)}
 
@@ -658,7 +679,7 @@ function scrMakeFloor() {
 			instance_create(x+16,y+16,AmmoChest)
 	   instance_create(x,y,Floor)}
 	   }
-	   if random(7) < 1
+	   if random(9) < 1
 	   instance_create(x,y,FloorMaker)
 	}
 

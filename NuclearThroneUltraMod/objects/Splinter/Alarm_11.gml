@@ -3,6 +3,7 @@ var um = GetPlayerUltramod()
 if um == ultramods.splinterBullet
 {
 	instance_destroy(id,false);
+	snd_play_fire(sndPopgun);
 	with instance_create(x,y,Bullet1)
 	{
 		scrCopyWeaponMod(other);
@@ -20,7 +21,7 @@ if um == ultramods.splinterBullet
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = other.speed;
+		speed = other.speed + 4;
 		team = other.team;
 		alarm[11] = 0;
 	}
@@ -46,4 +47,25 @@ if um == ultramods.splinterBullet
 		alarm[11] = 0;
 	}
 	instance_destroy(id,false);
+}
+else if um == ultramods.plasmaBolt
+{
+	instance_destroy(id,false);
+	with Player
+	{
+		if skill_got[17] = 1
+			snd_play_fire(sndPlasmaMinigunUpg)
+		else
+			snd_play_fire(sndPlasmaMinigun)	
+	}
+	with instance_create(x,y,MiniPlasmaBall)
+	{
+		scrCopyWeaponMod(other);
+		ptime = 6;
+		direction = other.direction;
+		image_angle = direction;
+		speed = other.speed;
+		team = other.team;
+		alarm[11] = 0;
+	}
 }

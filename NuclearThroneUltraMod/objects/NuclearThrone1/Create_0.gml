@@ -13,6 +13,7 @@ x += 16;
 y += 16;
 y += 64;
 maxhealth = 1700//retail has 1500 but the parts take 100 health each away upon destruction
+isInverted = false;
 size = 8;
 friction = 6;
 meleedamage = 0;
@@ -22,11 +23,32 @@ intro = false;
 spr_idle = sprNothingOn;
 spr_hurt = sprNothingOff;
 spr_dead = sprNothingDeath;
+
+spr_switch_on = sprNothingSwitchOn;
+spr_back_hurt = sprNothingBackHurt;
+spr_back = sprNothingBack;
+spr_activate = sprNothingActivate;
+spr_middle = sprNothingMiddle;
+spr_middle_hurt = sprNothingMiddleHurt;
+spr_deactivated = sprNothingMiddleDeactivated;
+spr_deactivated_hurt = sprNothingMiddleDeactivatedHurt;
+spr_right_hurt_link = sprNothingRightHurtLink;
+spr_right_deactivated_hurt_link = sprNothingRightDeactivatedHurtLink;
+spr_left_hurt_link = sprNothingLeftHurtLink;
+spr_left_deactivated_hurt_link = sprNothingLeftDeactivatedHurtLink;
+spr_on = sprNothingOn
+spr_off = sprNothingOff;
+spr_middle_hurt_link = sprNothingMiddleHurtLink;
+spr_middle_deactivated_hurt_link = sprNothingMiddleDeactivatedHurtLink
+
 raddrop = 500;
 disable = false;
 firstEntry = false;
+imageIndex = 0;
 prevImageIndex = 0;
 cantrishot = true;
+
+riseStep = false;
 
 event_inherited()
 walk = 0;
@@ -98,8 +120,9 @@ fireTriShot = false;
 bigballs = false;
 
 aTime = 40;
-aTime -= min(GetPlayerLoops()*2,10);
+loops = GetPlayerLoops()
+aTime -= min(loops*2,10);
 difficultyStep = 0;
 snd_loop(sndBecomeNothingIdle);
-
+foreverBeam = false;
 xStart = x;

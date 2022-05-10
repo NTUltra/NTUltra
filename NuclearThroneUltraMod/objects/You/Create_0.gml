@@ -8,8 +8,8 @@ HumphryTBcount=0;
 HumphrySkill=0;
 HumphryShotCount=0;
 
-oldmox=mouse_x;
-oldmoy=mouse_y;
+oldmox=UberCont.mouse__x;
+oldmoy=UberCont.mouse__y;
 
 hardshell=true;
 p=0;

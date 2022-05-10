@@ -1,4 +1,3 @@
-action_set_cursor(-1, 0);
 if instance_exists(Player)
 {
 	instance_destroy()
@@ -28,5 +27,4 @@ else
 	snd_play(sndVlambeer)
 	instance_create(x,y,MenuGen)
 }
-
-
+randomize();

@@ -28,6 +28,6 @@ if instance_exists(Player)
     y=Player.y+64-random(64);
     }
 }
-
-TopCont.darkness = 1;
+if !instance_exists(SurvivalWave)
+	TopCont.darkness = 1;
 

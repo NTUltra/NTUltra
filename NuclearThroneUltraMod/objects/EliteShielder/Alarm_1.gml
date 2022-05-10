@@ -29,45 +29,47 @@ alarm[1] = 32
 else if random(4) < 1
 {
 //SHIELD
-
 canshield=false;
-var dir = 0;
-do
-{
-var NewPos = instance_nearest(target.x+random(96)-48,target.y+random(96)-48,Floor)
-x=NewPos.x+16;
-y=NewPos.y+16;
+		var i = 0;
+		do {
+			i++
+			var angle = random(360)
+			var length = 5 + random(75)
+			var dx = lengthdir_x(length, angle)
+			var dy = lengthdir_y(length, angle)
+			
+			with instance_nearest(x + dx, y + dy, Floor) {
+				dx = x + 16
+				dy = y + 16
+			}
+		} until x != dx && y != dy && !place_meeting(dx, dy, Wall) && point_distance(Player.x, Player.y, dx, dy) > 55 && point_distance(Player.x, Player.y, dx, dy) < 250 || i > 250
 
-dir++;
-
-with instance_create(x,y,PopoShield)
-{
-team=other.team;
-sprite_index=sprEliteShielderShieldAppear;
-alarm[0]=50;//shorter shielding time 60 for the normal shielder
-if place_meeting(x,y,Wall)
-{
-other.canshield=false;
-instance_destroy();
-}
-else
-other.canshield=true;
-}
-
-}
-until(canshield==true||dir>200)
-
-if dir>100||canshield=false
-exit;
-
-
-snd_play(sndEliteShielderShield);
-Shielding=true;
-xx=x;
-yy=y;
-alarm[1] = 55
-speed = 0
-walk = 0
+		if i <= 250 {
+			x = dx
+			y = dy
+		
+			with instance_create(x,y,PopoShield)
+			{
+			team=other.team;
+			sprite_index=sprEliteShielderShieldAppear;
+			alarm[0]=50;//shorter shielding time 60 for the normal shielder
+			if place_meeting(x,y,Wall)
+			{
+			other.canshield=false;
+			instance_destroy();
+			}
+			else
+			other.canshield=true;
+			}
+			
+			snd_play(sndEliteShielderShield);
+			Shielding=true;
+			xx=x;
+			yy=y;
+			alarm[1] = 55
+			speed = 0
+			walk = 0
+		}
 }
 else
 {//JUST WALK YOU KNOW

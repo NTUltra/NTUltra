@@ -14,4 +14,3 @@ ownerAngle = 0;
 distance = 32;
 ownerAngleRotationSpeed = 4;
 rotationDirection = 1;
-depth = -12;

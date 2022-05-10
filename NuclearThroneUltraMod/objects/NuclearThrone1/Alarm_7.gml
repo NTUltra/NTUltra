@@ -5,16 +5,19 @@ with MusCont
 	snd_loop(song);
 	audio_sound_gain(song,max(0,sqrt(UberCont.opt_musvol)),0);
 }
-debug("ACTIVATE");
-sprite_index = sprNothingActivate;
-spr_idle = sprNothingActivate;
-spr_hurt = sprNothingActivate;
+sprite_index = spr_activate;
+spr_idle = spr_activate;
+spr_hurt = spr_activate;
 my_health = maxhealth;
 //mask_index = mskNothingActive;
 image_index = 1;
 imageIndex = 1;
 with instance_create(x,y,ThronePipes)
+{
+	if other.isInverted
+		sprite_index = sprInvertedNothingPipes;
 	depth = other.depth + 3;
+}
 alarm[2] = 90;
 beamY = y;
 repeat(8)
@@ -28,8 +31,34 @@ repeat(8)
 snd_play_2d(sndNothingStart);
 snd_play_2d(sndNothingBeamStart);
 snd_loop(sndNothingBeamLoop);
-with instance_create(x,y+24,ThroneBeam)
+if isInverted
 {
-	depth = other.depth - 1;
-	team = other.team;
+	with instance_create(x,y+20,ThroneBeam)
+	{
+		depth = other.depth - 1;
+		team = other.team;
+		alarm[1] = 1;
+		angleDir = 1;
+		sprBeam = sprInvertedNothingBeam;
+		sprBeamHit = sprInvertedNothingBeamHit;
+		sprite_index = sprInvertedNothingBeamStretch;
+	}
+	with instance_create(x,y+20,ThroneBeam)
+	{
+		depth = other.depth - 1;
+		team = other.team;
+		alarm[1] = 1;
+		angleDir = -1;
+		sprBeam = sprInvertedNothingBeam;
+		sprBeamHit = sprInvertedNothingBeamHit;
+		sprite_index = sprInvertedNothingBeamStretch;
+	}
+}
+else
+{
+	with instance_create(x,y+20,ThroneBeam)
+	{
+		depth = other.depth - 1;
+		team = other.team;
+	}
 }

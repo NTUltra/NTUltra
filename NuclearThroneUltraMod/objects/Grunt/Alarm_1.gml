@@ -11,10 +11,11 @@ if target > 0 and roll = 0
 {
 if instance_exists(Player) && target==Player.id
 {
+	var d = point_distance(target.x,target.y,x,y)
     if random(my_health/2+2+target.can_shoot*3) < 1 and freeze > 40
     {
     //ROLL
-    if point_distance(x,y,target.x,target.y) > 150
+    if d > 150
     direction = point_direction(x,y,target.x,target.y)+random(60)-30
     else
     direction = point_direction(x,y,target.x,target.y)+(70+random(60))*choose(1,-1)
@@ -35,7 +36,7 @@ if instance_exists(Player) && target==Player.id
     lastx = target.x
     lasty = target.y
     //SEE PLAYER AND FAR ENOUGH AND NOT SHOUTING "FREEZE MOTHERFUCKER"
-    if random(2) < 1 and freeze > 40 && point_distance(target.x,target.y,x,y) < 156
+    if random(2) < 1 and freeze > 40 && d < 156 && d > 32
     {
     //FIRE
     snd_play(sndGruntFire)
@@ -52,7 +53,7 @@ if instance_exists(Player) && target==Player.id
     else
     {
     //DONT FIRE
-    if point_distance(x,y,target.x,target.y) > 48
+    if d > 48
     direction = point_direction(x,y,target.x,target.y)+random(50)-25
     else
     direction = point_direction(x,y,target.x,target.y)+180+random(50)-25
@@ -77,7 +78,7 @@ if instance_exists(Player) && target==Player.id
     else if hspeed < 0
     right = -1
     }
-    else if random(5+instance_number(PopoNade)*3) < 1 and grenades > 0 and freeze > 40 && point_distance(target.x,target.y,x,y) < 200
+    else if random(5+instance_number(PopoNade)*3) < 1 and grenades > 0 and freeze > 40 && d < 200
 	and ((point_distance(lastx,lasty,target.x,target.y) < 96 and point_distance(x,y,lastx,lasty) > 64)or random(12) < 1)
     {
     //GRENADE

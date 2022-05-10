@@ -11,14 +11,14 @@ if alarm[11]<1&&my_health>0{
 frozen=true;
     with instance_create(x,y,FrozenEnemy)
     {
-    //image_speed=0;
-    image_xscale=other.size*choose(1,-1);
-    image_yscale=other.size;
-    xx=other.x
-    yy=other.y
-	owner = other.id;
+		var s = min(2,other.size)
+	    image_xscale=s*choose(1,-1);
+	    image_yscale=s;
+	    xx=other.x
+	    yy=other.y
+		owner = other.id;
     }
-alarm[11]+= other.freezetime;
+alarm[11]+= other.freezetime+10;
 if alarm[1] > 0
 	alarm[1] += other.freezetime;
 }
@@ -31,11 +31,7 @@ snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
 with instance_create(x,y,BulletHit)
 	sprite_index = sprFreezeBulletHit;
 
-//RECYCLE GLAND
-if instance_exists(Player){
-if Player.skill_got[16] = 1 and random(3) < 2 +Player.betterrecyclegland
-{Player.ammo[1] += 2
-instance_create(x,y,RecycleGland);}}
+scrRecycleGland(2);
 
 }
 else if other.team != team and other.my_health > 0

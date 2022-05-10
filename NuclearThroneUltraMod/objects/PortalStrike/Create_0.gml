@@ -9,4 +9,3 @@ dir=image_angle;
 
 exploPos=-64;
 upgraded=false;
-

@@ -28,10 +28,17 @@ else
 		
 	}
 	
-	if instance_exists(Floor) && !place_meeting(x,y,Floor) || place_meeting(x,y,Wall)
+	if instance_exists(Floor) && !collision_point(x,y,Floor,false,false) || place_meeting(x,y,Wall)
 	{
 		var nearest = instance_nearest(x,y,Floor);
-		var dir = point_direction(x,y,nearest.x,nearest.y);
+		var nx = nearest.x + 16;
+		var ny = nearest.y + 16;
+		if nearest.object_index == FloorExplo
+		{
+			nx = nearest.x + 8;
+			ny = nearest.y + 8;
+		}
+		var dir = point_direction(x,y,nx,ny);
 		motion_add(dir,0.8);
 	}
 }

@@ -2,7 +2,7 @@
 // /@description
 ///@param
 function scrSpawnEndLevelPortal(){
-	if instance_exists(SurvivalWave)
+	if instance_exists(SurvivalWave) || instance_exists(ThroneExplo)
 	exit;
 	var dir = undefined;
 	if instance_number(enemy) == (instance_number(IDPDVan))
@@ -40,7 +40,7 @@ function scrSpawnEndLevelPortal(){
 						}
 			        }
 			    }//can only spawn 1 portal in inverted worlds
-			    else if Player.area!=105 && Player.area!=110 && Player.area!=106 && Player.area!=111 && Player.area!=107 && Player.area!=112 && Player.area!=108 && Player.area!=109
+			    else if !scrIsInInvertedArea()
 			    {
 			        with Portal
 			        {

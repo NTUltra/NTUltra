@@ -1,5 +1,6 @@
 scrDrop(100,50)
-scrDrop(10,0)
+scrDrop(100,0)
+scrDrop(80,0)
 event_inherited()
 scrEndBossMusic();
 snd_play(sndExplosionL);

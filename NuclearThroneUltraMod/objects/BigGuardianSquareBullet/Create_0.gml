@@ -4,3 +4,7 @@
 event_inherited();
 dmg = 10;
 typ = 3;
+projectileToSpawn = GuardianBulletSpawn;
+projectileToSpawnSprite = sprGuardianSquareBulletSpawn;
+hitSprite = sprGuardianBulletHit;
+

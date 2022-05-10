@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndStatueDead",
-  "duration": 0.0,
+  "duration": 4.202676,
   "parent": {
     "name": "Enviroment",
     "path": "folders/Sounds/Enviroment.yy",

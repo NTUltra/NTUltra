@@ -31,6 +31,8 @@ with Player//Data to keep
 	visible=true;
 	snd_play(snd_wrld, 0, false, false);
 	wep = 0;
+	bwep = 0;
+	cwep = 0;
 	myShield = instance_create(x,y,EuphoriaShield)
 	with myShield
 	{

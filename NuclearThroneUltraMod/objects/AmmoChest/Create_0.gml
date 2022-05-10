@@ -9,7 +9,7 @@ if instance_exists(Player)
 		exit;
 	}
 }
-else if UberCont.opt_gamemode != 25 && random(4) < 1
+else if !instance_exists(SurvivalWave) && random(4) < 1
 {
 	instance_destroy(id,false);
 	instance_create(x,y,AmmoChestMystery);

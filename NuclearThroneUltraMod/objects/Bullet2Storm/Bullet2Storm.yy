@@ -1,0 +1,43 @@
+{
+  "spriteId": {
+    "name": "sprBullet2StormHighDmg",
+    "path": "sprites/sprBullet2StormHighDmg/sprBullet2StormHighDmg.yy",
+  },
+  "solid": false,
+  "visible": true,
+  "spriteMaskId": {
+    "name": "mskBullet2",
+    "path": "sprites/mskBullet2/mskBullet2.yy",
+  },
+  "persistent": false,
+  "parentObjectId": {
+    "name": "Bullet2",
+    "path": "objects/Bullet2/Bullet2.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsGroup": 1,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"Wall","path":"objects/Wall/Wall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":1,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
+  "properties": [],
+  "overriddenProperties": [],
+  "parent": {
+    "name": "Projectiles",
+    "path": "folders/Objects/Projectiles.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "Bullet2Storm",
+  "tags": [],
+  "resourceType": "GMObject",
+}

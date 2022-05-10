@@ -8,9 +8,17 @@ function scrSkills() {
 	dir += 1}
 	
 	var isDoctor = false;
-	if instance_exists(Player) && Player.race == 25
+	var isHand = false;
+	if instance_exists(Player)
 	{
-		isDoctor = true;
+		if Player.race == 25
+		{
+			isDoctor = true;
+		}
+		else if Player.race == 27
+		{
+			isHand = true;	
+		}
 	}
 	skill_name[0] = "HEAVY HEART"
 	if isDoctor
@@ -41,6 +49,8 @@ function scrSkills() {
 		else
 		{
 		skill_name[2] = "EXTRA FEET"
+		if isHand
+			skill_name[2] = "EXTRA FINGERS"
 		if Player.race == 1
 		{
 			skill_text[2] = "FASTER ROLL#MORE WALK SPEED#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES DROP ITEMS"
@@ -93,6 +103,8 @@ function scrSkills() {
 	{
 	if Player.race=1{
 	skill_tips[5] = "Fish's throne butt is good now!"}
+	else if Player.race=27{
+	skill_tips[5] = "allmighty push!"}
 	else{
 	skill_tips[5] = "sit on the throne"}
 	}else{
@@ -124,7 +136,7 @@ function scrSkills() {
 		}
 		if Player.race == 2//CRYSTAL
 		{
-			skill_text[8] = "#ENEMIES TOUCHING YOU$OR YOUR SHIELD#TAKE DAMAGE#DONT TAKE DAMAGE FROM#ENEMIES THAT YOU KILL USING GAMMA GUTS#YOU TAKE 50% LESS ENEMY CONTACT DAMAGE"
+			skill_text[8] = "#ENEMIES TOUCHING YOU OR YOUR SHIELD#TAKE DAMAGE#DONT TAKE DAMAGE FROM#ENEMIES THAT YOU KILL USING GAMMA GUTS#YOU TAKE 50% LESS ENEMY CONTACT DAMAGE"
 		}
 		else
 		{
@@ -141,7 +153,7 @@ function scrSkills() {
 	if random(200)<1
 	{
 	skill_name[9] = "SECOND TUMMY"
-	skill_text[9] = "OMNrOMNOMNOM"
+	skill_text[9] = "OMNOMNOMNOM"
 	skill_tips[9] = "omnomnomnom"
 	skill_msnd[9] =  sndMutSecondStomache
 	}
@@ -157,6 +169,11 @@ function scrSkills() {
 		skill_text[9] = "DOUBLE HP FROM MEDKITS & MEDCHESTS"
 	}
 	skill_tips[9] = "stomach rumbles"
+	if isHand
+	{
+		skill_name[9] = "FIRST STOMACH";
+		skill_tips[9] = "get it.. cause a hand has no stomach"
+	}
 	skill_msnd[9] =  sndMutSecondStomache
 	}
 
@@ -166,6 +183,8 @@ function scrSkills() {
 	skill_msnd[10] =  sndMutBackMuscle
 
 	skill_name[11] = "SCARIER FACE"
+	if isHand
+		skill_name[11] = "SCARIER NAIL"
 	skill_text[11] = "18% LESS ENEMY HP"
 	skill_tips[11] = "mirrors will break"
 	skill_msnd[11] =  sndMutScarierFace
@@ -180,7 +199,7 @@ function scrSkills() {
 	skill_msnd[12] =  sndMutEuphoria
 
 	skill_name[13] = "LONG ARMS"
-	skill_text[13] = "+MELEE RANGE"
+	skill_text[13] = "MORE MELEE RANGE"
 	skill_tips[13] = "more reach"
 	skill_msnd[13] =  sndMutLongArms
 
@@ -195,6 +214,8 @@ function scrSkills() {
 
 
 	skill_name[15] = "SHOTGUN SHOULDERS"
+	if isHand
+		skill_name[15] = "SHOTGUN KNUCKLES"
 	skill_text[15] = "SHELLS BOUNCE FURTHER"//#BOUNCER BULLETS CAN BOUNCE#ONE ADDITIONAL TIME" effect is minor no need to tell?
 	skill_tips[15] = choose("shells are friends","shotgun shoulders\nextends close range damage\nfrom shotguns","shotgun shoulders\nincrease bouncer bullets bounces by 1")
 	skill_msnd[15] =  sndMutShotGunShoulders
@@ -231,7 +252,7 @@ function scrSkills() {
 	}
 
 	skill_name[19] = "EAGLE EYES"
-	if random(100) < 1
+	if random(300) < 1
 		skill_text[19] = "BETTER ACCURACY#SMALL AIM ASSIST/HOMING#SEE CONTENT OF WEAPON CHESTS#SEE FURTHER#SHOW WEAPON TIER#SHOW DAMAGE INDICATORS#INCREASE LUCK#MORE DAMAGE#FASTER FIRE RATE#GET ULTRA MUTATION#INSTANTLY LOOP#INCREASE MAX LEVEL BY 5#MORE RAD DROPS#EVERY KILL OVERHEALS FOR 6HP#GET TWO ULTRA MUTATIONS#FROM ANOTHER CHARACTER#SIT ON THE THRONE#EVERY ENEMY MORPHS INTO A CHICKEN#THE CHICKEN WILL DROP#A HIGH TIER WEAPON#GET QUAD SPC#IT COSTS 2 AMMO#AIRHORN.WAV EVERYTIME YOU SHOOT"
 	else
 		skill_text[19] = "BETTER ACCURACY#SMALL AIM ASSIST/HOMING#SEE CONTENT OF WEAPON CHESTS#SEE FURTHER";
@@ -283,7 +304,7 @@ function scrSkills() {
 
 	skill_name[26] = "HAMMER HEAD"
 	skill_text[26] = "BREAK THROUGH SOME WALLS#FIND RESOURCES IN WALLS"
-	skill_tips[26] = "hello welcome to my minecraft let's play"
+	skill_tips[26] = "hello welcome to my#minecraft let's play"
 	skill_msnd[26] =  sndMutHammerHead
 
 	skill_name[27] = "PATIENCE"

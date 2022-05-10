@@ -6,6 +6,8 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 	{
 		if sprite_index != spr_hurt
 		{
+			snd_play(snd_hurt, hurt_pitch_variation,true)
+			instance_create(other.x,other.y,FishBoost)
 			if instance_exists(Player)
 			{
 				if Player.race=24//Elementor's passive
@@ -20,7 +22,7 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 			motion_add(other.image_angle,4)
 			if other.ion=true
 			{
-				instance_create(mouse_x,mouse_y,MeatExplosion)
+				instance_create(UberCont.mouse__x,UberCont.mouse__y,MeatExplosion)
 				
 				with instance_create(x,y,BloodStreak){
 					image_angle = random(360);
@@ -55,8 +57,8 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 			}
 			if instance_exists(other.creator) && team != 0 {
 				direction = point_direction(x,y,other.creator.x,other.creator.y);
-				motion_add(direction,1/s);
-				mp_potential_step(other.creator.x,other.creator.y,2/s,false)
+				motion_add(direction,2/s);
+				//mp_potential_step(other.creator.x,other.creator.y,2/s,false)
 				if place_meeting(x,y,Wall)
 				{	x = xprevious;
 					y = yprevious;	
@@ -68,8 +70,5 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 			image_index += 0.2;//iframe skipper
 		}
 	}
-
-	snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
-	if random(2)<1
-		instance_create(x,y,FishBoost)
+	
 }

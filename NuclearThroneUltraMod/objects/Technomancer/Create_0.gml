@@ -1,7 +1,7 @@
 raddrop = 50
 maxhealth = 420//450
 meleedamage = 0
-size = 1
+size = 3
 
 event_inherited()
 
@@ -23,7 +23,7 @@ snd_dead = sndTechnomancerDestroy;
 //behavior
 walk = 0
 gunangle = random(360)
-alarm[1] = 30+random(90)
+alarm[1] = 30+random(60)
 wkick = 0
 imageIndex = 0;
 turretToSpawn = Turret;

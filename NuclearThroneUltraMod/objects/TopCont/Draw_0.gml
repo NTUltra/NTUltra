@@ -184,25 +184,27 @@ draw_sprite(topspr,topindex,x,y-8)
 
 with CrownPickup
 {
-draw_sprite_ext(sprCrownLight,0,x,y+16,1,1,0,c_white,0.2)
-draw_sprite_ext(sprCrownLight,1,x,min(y,__view_get( e__VW.YView, 0 ))-16,1,(__view_get( e__VW.YView, 0 )-y)/32,0,c_white,0.2)
+//draw_sprite_ext(sprCrownLight,0,x,y+16,1,1,0,c_white,0.2)
+//draw_sprite_ext(sprCrownLight,1,x,min(y,__view_get( e__VW.YView, 0 ))-16,1,(__view_get( e__VW.YView, 0 )-y)/32,0,c_white,0.2)
+draw_sprite_ext(sprCrownLight,0,x,y+32,1,1,0,c_white,0.2)
+draw_sprite_ext(sprCrownLight,1,x,y,1,100,5,c_white,0.2)
 }
 
 with Player
 {
-if (KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2) and race = 9
-{
-draw_set_alpha(0.5)
-draw_set_color(c_black)
-draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ),0)
-draw_set_alpha(1)
-with hitme
-{if point_distance(x,y,other.x,other.y) < 96
-event_perform(ev_draw,0)}
-with projectile
-{if point_distance(x,y,other.x,other.y) < 96
-event_perform(ev_draw,0)}
-}
+	if (KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2) and race = 9
+	{
+	draw_set_alpha(0.5)
+	draw_set_color(c_black)
+	draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ),0)
+	draw_set_alpha(1)
+	with hitme
+	{if visible && point_distance(x,y,other.x,other.y) < 96
+	event_perform(ev_draw,0)}
+	with projectile
+	{if point_distance(x,y,other.x,other.y) < 96
+	event_perform(ev_draw,0)}
+	}
 if race=18
 event_perform(ev_draw,0);//on top of all things cause I'm an angel!
 
@@ -237,7 +239,15 @@ fogscroll += 0.5
 if fogscroll > 480
 fogscroll -= 480
 
-
+with SpinSlash
+{
+	if visible
+		draw_self();
+}
+with Statue
+{
+	draw_self();
+}
 with Notice{draw_self();}
 with EuphoriaShield{draw_self();}
 with EnemyBullet1Square
@@ -254,6 +264,9 @@ with ChesireCat{
 if visible{
 draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1);
 }
+}
+with BigBadBat {
+	draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1)
 }
 
 with InvertedChesireCatTail{
@@ -334,7 +347,10 @@ if(point_distance(x,y,Player.x,Player.y)<100)
 */
 /*mask testwith Wall
 draw_sprite_ext(sprWall1Bot,-1,x,y,1,1,0,c_black,0.2)*/
-
+with Hand
+{
+	draw_self();	
+}
 
 scrDrawBloom()
 
