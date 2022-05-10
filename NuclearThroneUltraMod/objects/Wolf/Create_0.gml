@@ -26,3 +26,8 @@ close = 0
 walk = 30
 
 hurt_pitch_variation = 0.1
+getFrosty = false;
+if GetPlayerLoops() > 3
+{
+	getFrosty = true;
+}

@@ -34,4 +34,4 @@ instance_create(x,y,GoldSnowTank)
 }
 }
 
-isLoop = GetPlayerLoops() > 0
+isLoop = GetPlayerLoops() > 1

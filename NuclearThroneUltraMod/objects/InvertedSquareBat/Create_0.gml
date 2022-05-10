@@ -16,3 +16,4 @@ circleDistance = 70;
 projectileSpeed = 4.1;
 projectileSpeedCircle = 3.1;
 rotationSpeed = choose(4,-4);
+explo = PurpleExplosion;

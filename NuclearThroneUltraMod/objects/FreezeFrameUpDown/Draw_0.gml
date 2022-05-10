@@ -31,9 +31,7 @@ else if UberCont.opt_freeze>2
 draw_text(x+20,y,string_hash_to_newline("CHEATING"))
 else if UberCont.opt_freeze >1
 draw_text(x+20,y,string_hash_to_newline("U SURE?"))
-else if UberCont.opt_freeze <0.1
-draw_text(x+20,y,string_hash_to_newline("HATE THESE?"))
-else if UberCont.opt_freeze <0.3
+else if UberCont.opt_freeze <0.3 && UberCont.opt_freeze > 0
 draw_text(x+20,y,string_hash_to_newline("I AGREE"))
 }
 

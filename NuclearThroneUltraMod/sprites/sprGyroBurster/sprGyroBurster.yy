@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprGyroBurster","path":"sprites/sprGyroBurster/sprGyroBurster.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprGyroBurster",
     "tags": [],
     "resourceType": "GMSequence",
   },

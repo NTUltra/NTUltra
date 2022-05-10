@@ -28,3 +28,4 @@ projectileSpeed = 4;
 projectileSpeedCircle = 3;
 lp = 0.118;
 maxSpeed = 3;
+explo = GreenExplosion;

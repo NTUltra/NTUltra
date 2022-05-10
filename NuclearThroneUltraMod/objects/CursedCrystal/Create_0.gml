@@ -25,3 +25,4 @@ alarm[1] = 30+random(90)
 alarm[3] = 5;
 alarm[4] = 30;
 
+loops = GetPlayerLoops();

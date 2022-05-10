@@ -24,3 +24,5 @@ ammo = 5;
 maxammo = 5;
 
 alarm[2] = 1;
+
+loops = GetPlayerLoops();

@@ -361,7 +361,7 @@ function scrPopEnemies() {
     if spawnarea = 5 {
 		if loops > 0 {
 			if random(12) < 2
-			instance_create(x + 16, y + 16, choose(ExploGuardian, GuardianDog, CubeGuardian, Necromancer))
+			instance_create(x + 16, y + 16, choose(ExploGuardian, GuardianDog, CubeGuardian, Necromancer,SnowTank))
 			else if random(4) > 3
 			instance_create(x + 16, y + 16, choose(SnowBot, SnowBot, SnowBot, SnowTank, Wolf, Wolf, DiscGuy, BanditSquare))
 			else if instance_number(enemy) < 1
@@ -383,7 +383,7 @@ function scrPopEnemies() {
 		
 		if loops > 0 {
 			if random(12) < 2
-			instance_create(x + 16, y + 16, choose(InvertedExploGuardian, InvertedGuardianDog, InvertedCubeGuardian, InvertedNecromancer))
+			instance_create(x + 16, y + 16, choose(InvertedExploGuardian, InvertedGuardianDog, InvertedCubeGuardian, InvertedNecromancer,InvertedSnowTank))
 			else if random(4) > 3
 			instance_create(x + 16, y + 16, choose(InvertedSnowBot, InvertedSnowBot, InvertedSnowBot, InvertedSnowTank, InvertedWolf, InvertedWolf, InvertedDiscGuy, BanditSquare))
 			else if instance_number(enemy) < 1

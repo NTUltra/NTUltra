@@ -16,8 +16,8 @@ ang+=12;
 with instance_create(x,y,Shell)
 motion_add(other.ang*100+random(50)-25,2+random(2))
 
-with instance_create(x,y+16,Bullet1)
-{motion_add(other.ang+(random(8)-4),16)
+with instance_create(x,y+16,proj)
+{motion_add(other.ang+(random(8)-4),other.pSpeed)
 image_angle = direction
 team = other.team
 
@@ -30,8 +30,8 @@ var a = ang + 180;
 with instance_create(x,y,Shell)
 motion_add(a*100+random(50)-25,2+random(2))
 
-with instance_create(x,y+16,Bullet1)
-{motion_add(a+(random(8)-4),16)
+with instance_create(x,y+16,proj)
+{motion_add(a+(random(8)-4),other.pSpeed)
 image_angle = direction
 team = other.team
 

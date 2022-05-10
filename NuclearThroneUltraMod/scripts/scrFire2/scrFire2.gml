@@ -7459,16 +7459,16 @@ function scrFire2() {
 	var am = 24;
 	var angStep = 360/am;
 	angStep *= accuracy;
-	var ang = aimDirection - (angStep * (am*0.5));
+	var angg = aimDirection - (angStep * (am*0.5));
 	repeat(am)
 	{
 		with instance_create(x,y,Splinter)//5 splinters
 		{
-			motion_add(ang+(random(6)-3)*other.accuracy,20);
+			motion_add(angg+(random(6)-3)*other.accuracy,20);
 			image_angle = direction
 			team = other.team
 		}
-		ang += angStep
+		angg += angStep
 	}
 	angStep *= 0.5;
 	with instance_create(x,y,Splinter)//5 splinters
@@ -7499,16 +7499,16 @@ function scrFire2() {
 	var am = 14;
 	var angStep = 360/am;
 	angStep *= accuracy;
-	var ang = aimDirection - (angStep * (am*0.5));
+	var angg = aimDirection - (angStep * (am*0.5));
 	repeat(am)
 	{
 		with instance_create(x,y,Bullet3)//5 splinters
 		{
-			motion_add(ang+(random(8)-4)*other.accuracy,5.5);
+			motion_add(angg+(random(8)-4)*other.accuracy,5.5);
 			image_angle = direction
 			team = other.team
 		}
-		ang += angStep
+		angg += angStep
 	}
 	angStep *= 0.5;
 	with instance_create(x,y,Bullet3)//5 splinters
@@ -7528,6 +7528,57 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(5,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 8
 	wkick -= 4
+
+	break;
+	
+	//GYRO INCINERATOR
+	case 461:
+
+	snd_play_fire(sndFlamerStart);
+	snd_play_fire(sndHeavyNader)
+
+	snd_play_fire(sndGyroBurst)
+
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+	with instance_create(x,y,GyroIncineratorBurst)
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,4)
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 14
+	wkick = 4
+
+	break;
+	
+	//flame SPLINTER GUN
+	case 462:
+
+	snd_play_fire(sndFlamerStart);
+	snd_play_fire(sndSplinterGun)
+
+	with instance_create(x,y,FlameSplinter)//5 splinters
+	{motion_add(aimDirection+(random(6)-3)*other.accuracy,20+random(4))
+	image_angle = direction
+	team = other.team}
+	repeat(2)
+	{
+	with instance_create(x,y,FlameSplinter)
+	{motion_add(aimDirection+(random(20)-10)*other.accuracy,20+random(4))
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,FlameSplinter)
+	{motion_add(aimDirection+(random(10)-5)*other.accuracy,20+random(4))
+	image_angle = direction
+	team = other.team}
+	}
+
+	BackCont.viewx2 += lengthdir_x(15,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(15,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3
+	wkick -= 3
 
 	break;
 	

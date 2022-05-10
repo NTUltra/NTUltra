@@ -20,4 +20,6 @@ gunangle = random(360)
 alarm[1] = 60+random(90)
 gonnafire = 0
 wkick = 0
-
+proj = EnemyBullet4;
+if GetPlayerLoops() > 11
+proj = EnemyBullet1Square;

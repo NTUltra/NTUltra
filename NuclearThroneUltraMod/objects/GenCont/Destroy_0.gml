@@ -177,7 +177,7 @@ room_speed=35;
 	    }
     
     }
-    else if loops < 4
+    else if loops < 5
     {
     //making it easier
     with enemy
@@ -187,13 +187,13 @@ room_speed=35;
     }
     
     }
-	if loops > 6
+	if loops > 8
 	{
 		with enemy
 		{
-			if alarm[1] > 31
+			if alarm[1] > 11
 			{
-				alarm[1] -= 30;
+				alarm[1] -= 10;
 			}
 		}
 	}

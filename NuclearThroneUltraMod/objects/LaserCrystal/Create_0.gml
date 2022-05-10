@@ -22,3 +22,5 @@ ammo = 4
 gunangle = random(360)
 alarm[1] = 30+random(90)
 
+loops = GetPlayerLoops();
+

@@ -20,4 +20,9 @@ maxAmmo = 3;
 ammo = maxAmmo;
 alarm[1] = 30+random(90)
 maxSpeed = 2.5;
-
+loops = GetPlayerLoops();
+length = 6;
+if loops > 0
+	length ++;
+if loops > 2
+	length ++;

@@ -759,9 +759,7 @@ function scrFire() {
 
 	//SPLINTER GUN
 	case 30:
-
 	snd_play_fire(sndSplinterGun)
-
 	with instance_create(x,y,Splinter)//5 splinters
 	{motion_add(aimDirection+(random(6)-3)*other.accuracy,20+random(4))
 	image_angle = direction

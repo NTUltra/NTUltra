@@ -17,10 +17,19 @@ if oooimgonnashoot {
 	}
 	
 	ammo -= 1;
-	snd_play(sndEnemyFire)
     wkick = 4
 	gunangle = point_direction(x, y, target.x, target.y) + random(40) - 20
-    with instance_create(x, y, EnemyBullet1) {
+	var proj = EnemyBullet1;
+	if loops > 3
+	{
+		snd_play(sndBouncerFire);
+		proj = EnemyBouncerBullet;
+	}
+	else
+	{
+		snd_play(sndEnemyFire);
+	}
+    with instance_create(x, y, proj) {
         motion_add(other.gunangle + random(20) - 10, 3.5)
         image_angle = direction
         team = other.team

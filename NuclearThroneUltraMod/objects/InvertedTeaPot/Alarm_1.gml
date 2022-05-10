@@ -20,7 +20,10 @@ snd_play(sndNukeFire)
 
 
 with instance_create(x,y,TeaPotNuke)
+{
 motion_add(other.direction+180,6)
+team = other.team;
+}
 
 alarm[1] = 20+random(20);
 //walk = alarm[1]+20;

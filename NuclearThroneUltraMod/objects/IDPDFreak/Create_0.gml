@@ -38,7 +38,7 @@ bulletGap = 0.73;
 if loops > 8
 {
 	nadeSpeed = 4;
-	projectileSpeed = 4.8;
+	projectileSpeed = 4.3;
 	actTime = 6;
 	fireRate = 1;
 	actDelayOnFire = 0.5;
@@ -52,7 +52,7 @@ if loops > 8
 else if loops > 6
 {
 	nadeSpeed = 3.5;
-	projectileSpeed = 4.5;
+	projectileSpeed = 4.2;
 	actTime = 7;
 	fireRate = 2;
 	actDelayOnFire = 2;
@@ -64,7 +64,7 @@ else if loops > 6
 else if loops > 4
 {
 	nadeSpeed = 3;
-	projectileSpeed = 4.3;
+	projectileSpeed = 4.1;
 	actTime = 8;
 	fireRate = 1;
 	actDelayOnFire = 1;

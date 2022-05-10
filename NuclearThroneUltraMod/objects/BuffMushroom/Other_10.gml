@@ -8,8 +8,17 @@ if target > 0 && instance_exists(target)
 	var odis = fireOffset;
 	var xx = x + lengthdir_x(odis,dir+90);
 	var yy = y + lengthdir_y(odis,dir+90);
-	snd_play(sndEnemyFire,0.1,true);
-	with instance_create(xx,yy,EnemyBullet1)
+	var proj = EnemyBullet1;
+	if loops > 2
+	{
+		snd_play(sndBouncerFire,0.1,true)
+		proj = EnemyBouncerBullet;	
+	}
+	else
+	{
+		snd_play(sndEnemyFire,0.1,true);
+	}
+	with instance_create(xx,yy,proj)
 	{
 		motion_add(dir,other.pSpeed)
 		image_angle = direction
@@ -17,7 +26,7 @@ if target > 0 && instance_exists(target)
 	}
 	xx = x + lengthdir_x(odis,dir-90);
 	yy = y + lengthdir_y(odis,dir-90);
-	with instance_create(xx,yy,EnemyBullet1)
+	with instance_create(xx,yy,proj)
 	{
 		motion_add(dir,other.pSpeed)
 		image_angle = direction

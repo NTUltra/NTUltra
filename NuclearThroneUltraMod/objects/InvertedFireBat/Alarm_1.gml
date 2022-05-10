@@ -17,6 +17,15 @@ if random(14) < 1
 {
 snd_play(sndFlare);
 direction = point_direction(x,y,target.x,target.y)+180
+if nukeIt
+{
+	snd_play(sndNukeFire)
+	with instance_create(x,y,TeaPotNuke)
+	{
+		team = other.team;	
+	}
+}
+
     with instance_create(x,y,EnemyLightningBall)
     {
     image_angle=random(360);

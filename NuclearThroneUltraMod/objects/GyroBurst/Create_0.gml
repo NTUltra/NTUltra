@@ -13,3 +13,5 @@ reload=10;
 
 timeinwall=0;
 
+proj = Bullet1;
+pSpeed = 16;

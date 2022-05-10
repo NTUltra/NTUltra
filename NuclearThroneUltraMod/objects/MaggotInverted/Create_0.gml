@@ -13,3 +13,4 @@ spr_dead = sprMaggotDeadInvert
 //behavior
 alarm[1] = 10+random(10)
 
+loops = GetPlayerLoops();

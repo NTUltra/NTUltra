@@ -1,36 +1,32 @@
-//SHOULD PROBABLY NOT USE ROOM size but instead viewport
-var wratio = window_get_width()/room_width;
-var hratio = window_get_height()/room_height;
-var lplusratio = wratio/hratio;
-if (lplusratio > 1) {
-	var newwidth = room_width * lplusratio;
-	var excesswidth = newwidth - room_width;
-	
-	var tilex = -64;
-	var tiley = -64;
+/// @description Sideart
+var ww = window_get_width();
+var wh = window_get_height()
+var s = ww/display_get_gui_width();
+s = min(s,wh/display_get_gui_height());
+var excesswidth = (ww - (view_get_wport(0)*s))*0.5
+var step = 64*s;
+if (excesswidth > 0) {
+	var tilex = excesswidth-step;
+	var tiley = -step;
 
 	do {
-		if (tiley > 240) {
-			tilex -= 64;
+		tiley += step;
+		if (tiley >= wh && tilex > 0) {
+			tilex -= step;
 			tiley = 0;
-		} else {
-			tiley += 64;
 		}
-		
-		draw_sprite(sprSideArt, opt_sideart, tilex, tiley);
-	} until (tilex + 64 < -excesswidth/2);
+		draw_sprite_ext(sprSideArt, opt_sideart, tilex, tiley,s,s,0,c_white,1);
+	} until (tiley > wh);
 	
-	tilex = room_width;
-	tiley = -64;
+	tilex = ww-excesswidth;
+	tiley = -step;
 
 	do {
-		if (tiley > 240) {
-			tilex += 64;
+		tiley += step;
+		if (tiley >= wh && tilex < ww) {
+			tilex += step;
 			tiley = 0;
-		} else {
-			tiley += 64;
 		}
-		
-		draw_sprite(sprSideArt, opt_sideart, tilex, tiley);
-	} until (tilex - 64 > room_width + excesswidth/2);
+		draw_sprite_ext(sprSideArt, opt_sideart, tilex, tiley,s,s,0,c_white,1);
+	} until (tiley > wh);
 }

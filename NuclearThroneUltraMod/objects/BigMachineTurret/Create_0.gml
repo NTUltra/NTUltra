@@ -8,4 +8,7 @@ wkick=0;
 
 spr_idle=sprBigMachineTurret
 spr_fire=sprBigMachineTurretFire
-
+loops = GetPlayerLoops();
+proj = EnemyBullet1;
+if loops > 10
+	proj = EnemyBouncerBullet;

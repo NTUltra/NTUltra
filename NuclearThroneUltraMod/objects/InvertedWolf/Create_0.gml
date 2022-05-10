@@ -28,3 +28,8 @@ close = 0
 
 walk = 30
 
+getFrosty = false;
+if GetPlayerLoops() > 3
+{
+	getFrosty = true;
+}

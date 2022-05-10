@@ -21,3 +21,6 @@ alarm[1] = 10+random(10)
 if instance_exists(Player)
 motion_add(point_direction(Player.x,Player.y,x,y),1)
 
+nukeIt = false;
+if GetPlayerLoops() > 12
+	nukeIt = true;

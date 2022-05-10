@@ -1,10 +1,10 @@
 /// @description loop shooting
 
-with instance_create(x,y,EnemyBullet1)
+with instance_create(x,y,proj)
 {
-motion_add(other.direction+random(20)-10,3)
-image_angle = direction
-team = other.team
+	motion_add(other.direction+random(20)-10,3)
+	image_angle = direction
+	team = other.team
 }
 
 

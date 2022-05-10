@@ -8,4 +8,6 @@ wkick=0;
 team = 1;
 spr_idle=sprInvertedBigMachineTurret
 spr_fire=sprInvertedBigMachineTurretFire
-
+proj = EnemyBullet1;
+if loops > 10
+	proj = EnemyBouncerBullet;

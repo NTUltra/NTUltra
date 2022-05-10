@@ -31,4 +31,4 @@ if instance_exists(Player)
 	}
 }
 
-isLoop = GetPlayerLoops() > 0
+fireLaser = GetPlayerLoops() > 3

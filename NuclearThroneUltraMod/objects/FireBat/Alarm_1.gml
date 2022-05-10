@@ -17,11 +17,20 @@ if random(20) < 1 && point_distance(target.x,target.y,x,y)<164
 {
 snd_play(sndFlare);
 direction = point_direction(x,y,target.x,target.y)+180
+if nukeIt
+{
+	snd_play(sndNukeFire)
+	with instance_create(x,y,TeaPotNuke)
+	{
+		team = other.team;	
+	}
+}
     with instance_create(x,y,MiniFlameCannonBall)
     {
-    image_angle=random(360);
-    motion_add(other.direction+180+(random(16)-8),2.5)
-    team = other.team}
+	    image_angle=random(360);
+	    motion_add(other.direction+180+(random(16)-8),2.5)
+	    team = other.team
+	}
 speed*=0.4;
 image_index = 0
 sprite_index = spr_fire

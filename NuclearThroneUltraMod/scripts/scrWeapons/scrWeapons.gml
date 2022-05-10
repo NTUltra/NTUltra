@@ -1781,8 +1781,8 @@ function scrWeapons() {
 	wep_name[161] = "SUPER FLAME ERASER"
 	wep_type[161] = 2
 	wep_auto[161] = 0
-	wep_load[161] = 60
-	wep_cost[161] = 12
+	wep_load[161] = 50
+	wep_cost[161] = 10
 	wep_sprt[161] = sprSuperFlameEraser
 	wep_area[161] = 16//14 SUPER ERASER
 	wep_text[161] = "vaporize"
@@ -5085,6 +5085,28 @@ function scrWeapons() {
 	wep_text[460] = "don't text and drive"
 	wep_swap[460] = sndSwapShotgun
 	wep_rad[460] = 0;
+	
+	wep_name[461] = "GYRO INCINERATOR"
+	wep_type[461] = 1
+	wep_auto[461] = 0
+	wep_load[461] = 45
+	wep_cost[461] = 26
+	wep_sprt[461] = sprGyroIncinerator
+	wep_area[461] = 22
+	wep_text[461] = ""
+	wep_swap[461] = sndSwapPistol
+	wep_rad[461] = 0;
+	
+	wep_name[462] = "FLAME SPLINTER GUN"
+	wep_type[462] = 3
+	wep_auto[462] = 0
+	wep_load[462] = 20
+	wep_cost[462] = 2
+	wep_sprt[462] = sprFlameSplinterGun
+	wep_area[462] = 7
+	wep_text[462] = "hot nails"
+	wep_swap[462] = sndSwapBow
+	wep_rad[462] = 0;
 	
 	/*
 	wep_name[444] = "DRILL GUN"

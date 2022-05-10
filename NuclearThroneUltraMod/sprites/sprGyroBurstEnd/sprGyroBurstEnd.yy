@@ -104,7 +104,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprGyroBurstEnd","path":"sprites/sprGyroBurstEnd/sprGyroBurstEnd.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprGyroBurstEnd",
     "tags": [],
     "resourceType": "GMSequence",
   },

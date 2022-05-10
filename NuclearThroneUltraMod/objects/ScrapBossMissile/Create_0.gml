@@ -15,7 +15,10 @@ scrTarget()
 
 if instance_exists(Player)
 {
-if Player.loops>0
-alarm[0] = 30+random(60);
+	if Player.loops>0
+		alarm[0] = 30+random(60);
+	proj = EnemyBullet1;
+	if Player.loops > 9
+		proj = EnemyBouncerBullet
 }
 

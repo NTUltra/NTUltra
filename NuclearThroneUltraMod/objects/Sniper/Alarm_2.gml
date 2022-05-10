@@ -1,16 +1,16 @@
 snd_play(sndSniperFire)
 wkick = 7
-with instance_create(x,y,EnemyBullet4)
+with instance_create(x,y,proj)
 {motion_add(other.gunangle+4,16)
 team = other.team
 image_angle = direction
 firedbysniper=true;}
-with instance_create(x,y,EnemyBullet4)
+with instance_create(x,y,proj)
 {motion_add(other.gunangle-4,16)
 team = other.team
 image_angle = direction
 firedbysniper=true;}
-with instance_create(x,y,EnemyBullet4)
+with instance_create(x,y,proj)
 {motion_add(other.gunangle,16)
 team = other.team
 image_angle = direction

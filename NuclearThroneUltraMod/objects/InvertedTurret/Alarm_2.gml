@@ -16,7 +16,9 @@ if target > 0
 snd_play(sndTurretFire,0.1,true);
 sprite_index = spr_fire;
 image_index = 0;
-with instance_create(x,y,EnemyBullet1)
+
+snd_play(sndTurretFire,0.1,true);
+with instance_create(x,y,proj)
 {
 	motion_add(other.gunangle,other.projectileSpeed)
 	image_angle = direction

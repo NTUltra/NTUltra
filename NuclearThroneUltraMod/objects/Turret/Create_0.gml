@@ -31,3 +31,8 @@ if GetPlayerLoops() > 0
 	trackingStrength = 0.7;
 	projectileSpeed = 8;
 }
+proj = EnemyBullet1
+if GetPlayerLoops() > 6
+{
+	proj = EnemyBullet5;
+}

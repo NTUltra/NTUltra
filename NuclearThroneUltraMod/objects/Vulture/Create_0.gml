@@ -31,3 +31,11 @@ corpseTarget = -1;
 projectileSpeed = 5.1;
 projectileSpeed += clamp(GetPlayerLoops()*0.5,0,2);
 alarm[2] = 1;
+
+gunSpr = sprVultureGun;
+fuckyou = false;
+if GetPlayerLoops() > 9
+{
+	gunSpr = sprVultureBazooka;
+	fuckyou = true;
+}
