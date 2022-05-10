@@ -31,15 +31,3 @@ image_index=0;
 
 
 }
-/*
-if place_meeting(x,y,Cursor)
-{
-image_index=1;
-KeyCont.key_fire[Player.p] = 1
-instance_create(Player.x,Player.y,AmmoPickup);
-}
-else
-image_index=0;
-
-/* */
-/*  */

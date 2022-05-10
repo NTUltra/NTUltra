@@ -56,12 +56,19 @@ if loops > 3 {
 	if loops > 5
 		am = 16;
 	var angStep = 360/am;
+	var ps = 3;
+	if loops > 7
+		ps = 3.5;
+	if loops > 8
+		ps = 4;
+	if loops > 9
+		ps = 4.5;
 	repeat(am)
 	{
 		with instance_create(x,y,EnemyBullet1Square)
 		{
 			sprite_index = sprIDPDSquareBullet;
-			motion_add(ang,3)
+			motion_add(ang,ps);
 			image_angle = direction
 			team = other.team
 		}

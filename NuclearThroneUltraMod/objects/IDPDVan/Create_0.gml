@@ -5,7 +5,7 @@ size = 4
 RogueIDPD=false;
 scrCrownOfPopoRad(8);
 event_inherited()
-
+depth  = 0;
 team=0;
 spr_idle = sprVanOpen
 spr_walk = sprVanDrive

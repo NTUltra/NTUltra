@@ -59,12 +59,12 @@ instance_activate_all()
 
 //with TopCont
 //bloomAlpha=UberCont.opt_bloom;
-
+/*
 if(instance_exists(Marker)){
 Cursor.image_index=UberCont.opt_crosshair;
 }else{
 Cursor.image_index=UberCont.opt_crosshair;}
-
+*/
 isPaused = 0
 audio_resume_all();
 }
@@ -122,10 +122,6 @@ instance_activate_object(BackCont);
 instance_activate_object(MusCont);
 //instance_activate_object(TopCont);//hmm?
 instance_activate_object(Cursor);
-with Cursor{
-sprite_index=sprCrosshair;
-image_index=UberCont.opt_crosshair;}
-//instance_create(x,y,Cursor);
 optY = 24;
 instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+8,__view_get( e__VW.YView, 0 )+32+optY,MusVolSlider)
 instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+8,__view_get( e__VW.YView, 0 )+40+optY,SfxVolSlider)

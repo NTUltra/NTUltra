@@ -16,6 +16,7 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 }
 //Allow access to vulcano?
+	if !instance_exists(BecomeScrapBoss) && instance_number(ScrapBoss) == 1
 	with Player
 	{
 		if my_health >= round(maxhealth*0.5)

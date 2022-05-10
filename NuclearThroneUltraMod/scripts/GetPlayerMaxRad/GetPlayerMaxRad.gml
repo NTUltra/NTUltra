@@ -8,7 +8,7 @@ function GetPlayerMaxRad(){
 	}
 	if (level < boostLevel)
 	{
-		multiplier *= 0.45;
+		multiplier *= 0.3;//0.45;
 		return level*multiplier;
 	}
 	return (level*multiplier)+(300*ultra_got[77])+(600*ultra_got[83]);

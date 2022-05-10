@@ -1,4 +1,4 @@
-if team != other.team && image_index>10
+if team != other.team && image_index>11 && other.alarm[11] < 1
 {
 if other.typ =1
 {

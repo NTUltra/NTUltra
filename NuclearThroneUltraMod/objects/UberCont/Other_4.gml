@@ -23,10 +23,10 @@ else if area == 114 || area == 117
 	snd_wallbreak = sndWallBreakJungle;
 else if area == 2
 
-
+/*
 if !instance_exists(Cursor)
 instance_create(0,0,Cursor);
-
+*/
 firstFloorMaker = true;
 seedOffset = 0;
 

@@ -45,6 +45,10 @@ if UberCont.opt_gamemode != 25
 			if team != 2
 				instance_destroy();
 		}
+		with PopoNade
+		{
+			instance_destroy(id,false)
+		}
 		with FloorExplo
 		{
 			sprite_index = sprFloor100Explo;	

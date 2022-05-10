@@ -16,16 +16,33 @@ function scrPowers() {
 			var grabbedEnemy = false;
 			var slappedProjectile = false;
 			//Ultra target projectiles
-			if ultra_got[107] && instance_exists(projectile)
+			if ultra_got[107]
 			{
-				tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,projectile);
-				if tar.team != other.team
+				if instance_exists(projectile)
 				{
-					d0 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y)
-					if d0 < grabRange
+					tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,projectile);
+					if tar.team != other.team
 					{
-						resulttar = tar;
-						slappedProjectile = true;
+						d0 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y)
+						if d0 < grabRange
+						{
+							resulttar = tar;
+							slappedProjectile = true;
+						}
+					}
+				}
+				if instance_exists(PopoNade)
+				{
+					var tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,PopoNade);
+					if tar.team != other.team
+					{
+						var dp = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y)
+						if dp < grabRange && dp < d0
+						{
+							d0 = dp;
+							resulttar = tar;
+							slappedProjectile = true;
+						}
 					}
 				}
 			}
@@ -229,6 +246,10 @@ function scrPowers() {
 						instance_destroy();	
 					}
 				}
+			}
+			with PopoNade
+			{
+				instance_destroy(id,false);	
 			}
 			if (effective)
 			{
@@ -1660,99 +1681,95 @@ function scrPowers() {
 	//CHICKEN
 	if race = 9 && !(instance_exists(GenCont))
 	{
-	room_speed=24;//15
+		room_speed=24;//15
 
-	if instance_exists(Decoy)//CHICKEN VANISH
-	{
-	instance_create(x+irandom(8)-4,y+irandom(8)-4,Smoke);
-	}
-
-	if skill_got[5]==1//THRONEBUTT
-	{//Normal movement speed
-		//spr_walk = sprMutant9Thronebutt;
-
-
-		if my_health > 0
+		if (ultra_got[35])
 		{
-		if bskin=1
-		spr_walk = sprMutant9BThronebutt;
-		else if bskin=2
-		spr_walk = sprMutant9CThronebutt;
-		else
-		spr_walk=sprMutant9Thronebutt;
-		}
-
-
-		if skill_got[2]==1//extra feet
-		{
-			//normal : 4.5
-		maxspeed=5.625//6.3;//6.5// 4.5
+			var pslow = 0.5;
+			if skill_got[12]
+				pslow = 0.6;
+			with projectile
+			{
+				if team == other.team
+				{
+					x -= hspeed;
+					y -= vspeed;
+					speed += friction;
+				}
+				else
+				{
+					x -= hspeed*pslow;
+					y -= vspeed*pslow;
+				}
+			}
+			with MeleeParent
+			{
+				image_speed *= 4;
+			}
 		}
 		else
 		{
-			// normal : 4
-		maxspeed=5//5.8;//6//normal 4   4*(30/room_speed)
+			with projectile
+			{
+				x -= hspeed*0.1;
+				y -= vspeed*0.1;
+			}
 		}
-		//friction = 0.45 normal
-		//image_speed = 0.4 normal
-		image_speed=0.5////0.7;
-		friction = 0.5625//0.90;
 
-		if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
-		hspeed -= 0.75
-		if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
-		hspeed += 0.75
-		if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
-		vspeed -= 0.75
-		if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
-		vspeed += 0.75
-	}
-	else
-	{
-	    if speed>maxspeed-0.5//make chicken a lill slower in slow mo when no thronebutt
-	    {
-	    speed-=0.5;
-	    }
-	}
+		if instance_exists(Decoy)//CHICKEN VANISH
+		{
+			instance_create(x+irandom(8)-4,y+irandom(8)-4,Smoke);
+		}
+		if skill_got[5]==1//THRONEBUTT
+		{//Normal movement speed
+			//spr_walk = sprMutant9Thronebutt;
 
 
-	if !audio_is_playing(sndChickenLoop) {snd_play_2d(sndChickenStart) snd_loop(sndChickenLoop)}
-	/*
-	if reload > 0 and skill_got[5] = 0
-	reload += 0.5
-	speed *= 0.3
-	image_index -= image_speed*0.7
+			if my_health > 0
+			{
+			if bskin=1
+			spr_walk = sprMutant9BThronebutt;
+			else if bskin=2
+			spr_walk = sprMutant9CThronebutt;
+			else
+			spr_walk=sprMutant9Thronebutt;
+			}
 
-	with enemy
-	{
-	if point_distance(x,y,other.x,other.y) < 96
-	{
-	speed *= 0.5
-	image_index -= image_speed*0.5
-	}
-	}
-	with projectile
-	{
-	if point_distance(x,y,other.x,other.y) < 96
-	{x -= hspeed*0.6
-	y -= vspeed*0.6}
-	}
 
-	with RainDrop
-	{
-	if point_distance(x+addx,y-addy,other.x,other.y) < 96{
-	addx += 10
-	addy += 10}
-	}
+			if skill_got[2]==1//extra feet
+			{
+				//normal : 4.5
+			maxspeed=5.625//6.3;//6.5// 4.5
+			}
+			else
+			{
+				// normal : 4
+			maxspeed=5//5.8;//6//normal 4   4*(30/room_speed)
+			}
+			//friction = 0.45 normal
+			//image_speed = 0.4 normal
+			image_speed=0.5////0.7;
+			friction = 0.5625//0.90;
 
-	with SnowFlake
-	{
-	if point_distance(x+addx,y-addy,other.x,other.y) < 96{
-	addx += sin(wave/5)*0.7
-	addy += (1-sin(wave/3)/2)*0.7
-	wave -= 0.2*0.7}
-	}
-	*/
+			if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+			hspeed -= 0.75
+			if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+			hspeed += 0.75
+			if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+			vspeed -= 0.75
+			if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+			vspeed += 0.75
+		}
+		else
+		{
+		    if speed>maxspeed-0.5//make chicken a lill slower in slow mo when no thronebutt
+		    {
+		    speed-=0.5;
+		    }
+		}
+
+
+		if !audio_is_playing(sndChickenLoop) {snd_play_2d(sndChickenStart) snd_loop(sndChickenLoop)}
 
 	}
 
@@ -1899,6 +1916,13 @@ function scrPowers() {
 	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)))
 	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))}}
 	with projectile
+	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) and team != 2 and object_index != EnemyLaser
+	{if place_free(x+lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,Player.x,Player.y)+180),y)
+	x += lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,Player.x,Player.y)+180)
+	if place_free(x,y+lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,Player.x,Player.y)+180))
+	y += lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,Player.x,Player.y)+180)}}
+	
+	with PopoNade
 	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) and team != 2 and object_index != EnemyLaser
 	{if place_free(x+lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,Player.x,Player.y)+180),y)
 	x += lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,Player.x,Player.y)+180)

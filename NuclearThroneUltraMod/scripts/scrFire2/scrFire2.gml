@@ -7451,5 +7451,85 @@ function scrFire2() {
 
 	break;
 	
+	//SPLINTER CRASH
+	case 459:
+
+	snd_play_fire(sndSplinterGun)
+
+	var am = 24;
+	var angStep = 360/am;
+	angStep *= accuracy;
+	var ang = aimDirection - (angStep * (am*0.5));
+	repeat(am)
+	{
+		with instance_create(x,y,Splinter)//5 splinters
+		{
+			motion_add(ang+(random(6)-3)*other.accuracy,20);
+			image_angle = direction
+			team = other.team
+		}
+		ang += angStep
+	}
+	angStep *= 0.5;
+	with instance_create(x,y,Splinter)//5 splinters
+	{
+		motion_add(aimDirection+angStep+(random(6)-3)*other.accuracy,21);
+		image_angle = direction
+		team = other.team
+	}
+	with instance_create(x,y,Splinter)//5 splinters
+	{
+		motion_add(aimDirection-angStep+(random(6)-3)*other.accuracy,21);
+		image_angle = direction
+		team = other.team
+	}
+
+	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 6
+	wkick -= 4
+
+	break;
+	
+	//BOUNCER CRASH
+	case 460:
+
+	snd_play_fire(sndBouncerShotgun)
+
+	var am = 14;
+	var angStep = 360/am;
+	angStep *= accuracy;
+	var ang = aimDirection - (angStep * (am*0.5));
+	repeat(am)
+	{
+		with instance_create(x,y,Bullet3)//5 splinters
+		{
+			motion_add(ang+(random(8)-4)*other.accuracy,5.5);
+			image_angle = direction
+			team = other.team
+		}
+		ang += angStep
+	}
+	angStep *= 0.5;
+	with instance_create(x,y,Bullet3)//5 splinters
+	{
+		motion_add(aimDirection+angStep+(random(8)-4)*other.accuracy,6);
+		image_angle = direction
+		team = other.team
+	}
+	with instance_create(x,y,Bullet3)//5 splinters
+	{
+		motion_add(aimDirection-angStep+(random(8)-4)*other.accuracy,6);
+		image_angle = direction
+		team = other.team
+	}
+
+	BackCont.viewx2 += lengthdir_x(5,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(5,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 8
+	wkick -= 4
+
+	break;
+	
 	}//end of switch part 2!
 }

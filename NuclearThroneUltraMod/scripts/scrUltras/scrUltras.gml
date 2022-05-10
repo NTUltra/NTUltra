@@ -174,7 +174,7 @@ function scrUltras() {
 	ultra_tips[34] = "slice em'"
 
 	ultra_name[35] = "FOCUS"
-	ultra_text[35] = "NORMAL RATE OF FIRE DURING SLOWMOTION"
+	ultra_text[35] = "SLOW MOTION IS MUCH MORE EFFECTIVE#ON ENEMY PROJECTILES#(EVEN MORE EFFECTIVE WITH EUPHORIA)##SLOW MOTION COMPLETLY STOPS#YOUR PROJECTILES"
 	ultra_tips[35] = "so fast"
 
 	ultra_name[36] = "VANISH"

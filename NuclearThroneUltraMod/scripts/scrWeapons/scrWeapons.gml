@@ -335,7 +335,7 @@ function scrWeapons() {
 	wep_name[30] = "SPLINTER GUN"
 	wep_type[30] = 3
 	wep_auto[30] = 0
-	wep_load[30] = 17
+	wep_load[30] = 18
 	wep_cost[30] = 1
 	wep_sprt[30] = sprSplinterGun
 	wep_area[30] = 4
@@ -3016,7 +3016,7 @@ function scrWeapons() {
 	wep_load[273] = 45
 	wep_cost[273] = 22
 	wep_sprt[273] = sprGyroBurster
-	wep_area[273] = 11
+	wep_area[273] = 14
 	wep_text[273] = "bwbwpebffpwefnowobfo"
 	wep_swap[273] = sndSwapPistol
 	wep_rad[273] = 0;
@@ -5063,6 +5063,28 @@ function scrWeapons() {
 	wep_text[458] = ""
 	wep_swap[458] = sndSwapEnergy
 	wep_rad[458] = 0;
+	
+	wep_name[459] = "SPLINTER CRASH"
+	wep_type[459] = 3
+	wep_auto[459] = 0
+	wep_load[459] = 17
+	wep_cost[459] = 2
+	wep_sprt[459] = sprSplinterCrash
+	wep_area[459] = 7
+	wep_text[459] = "crash test"
+	wep_swap[459] = sndSwapBow
+	wep_rad[459] = 0;
+	
+	wep_name[460] = "BOUNCER CRASH"
+	wep_type[460] = 1
+	wep_auto[460] = 1
+	wep_load[460] = 20
+	wep_cost[460] = 8
+	wep_sprt[460] = sprBouncerCrash
+	wep_area[460] = 7
+	wep_text[460] = "don't text and drive"
+	wep_swap[460] = sndSwapShotgun
+	wep_rad[460] = 0;
 	
 	/*
 	wep_name[444] = "DRILL GUN"

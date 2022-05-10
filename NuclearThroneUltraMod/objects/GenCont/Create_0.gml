@@ -2,6 +2,7 @@ room_speed=30*UberCont.opt_loading;
 debug("new gencont");
 holdExplainUltraModTimer = 0;
 holdExplainWepModTimer = 0;
+holdExplainMutation = 0;
 if UberCont.opt_loading == 4
 	room_speed = 999999;
 

@@ -17,7 +17,7 @@ if RogueIDPD
 	extra = 1;
     repeat(3+irandom(min(4,UberCont.loops))+extra)
     {
-if random(4) < min(2,UberCont.loops-1) //elite
+if random(5) < min(2,UberCont.loops-1) //elite
 {
 
     var dir = choose(1,1,1,1,1,2,2,3,3,3);//1,1,2,3,4

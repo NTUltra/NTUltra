@@ -27,6 +27,10 @@ with projectile
 		instance_destroy(id,false);	
 	}
 }
+with PopoNade
+{
+	instance_destroy(id,false)
+}
 scrEnemyDeathEvent();
 scrEndBoss();
 scrBossKill();

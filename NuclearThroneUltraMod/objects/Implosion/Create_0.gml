@@ -1,3 +1,4 @@
+event_inherited();
 friction = 0.09;
 kraken=false;
 image_speed = 0.4

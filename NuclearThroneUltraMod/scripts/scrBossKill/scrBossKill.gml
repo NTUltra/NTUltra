@@ -22,7 +22,7 @@ function scrBossKill() {
 					image_index = 0;
 				}
 			}
-			alarm[2] += 210;
+			Player.alarm[2] += 210;
 		}
 
 	}

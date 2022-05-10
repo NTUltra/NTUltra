@@ -18,7 +18,8 @@ if instance_exists(Player) && Player.ultra_got[106]
 	else if (Player.bskin == 2)
 	{
 		snd_play(sndIDPDNadeExplo,0.1,true);
-		with instance_create(x+lengthdir_x(24,image_angle),y+lengthdir_y(24,image_angle),RogueExplosion) {
+		var d = point_direction(creator.x,creator.y,touchpointX,touchpointY);
+		with instance_create(x+lengthdir_x(24,d),y+lengthdir_y(24,d),RogueExplosion) {
 			sprite_index=sprRogueExplosion;
 		}
 	}

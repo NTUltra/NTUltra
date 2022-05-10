@@ -1,4 +1,4 @@
-/// @description  scrRavenLift()
+/// @description  scrInvertedRavenLift()
 function scrInvertedRavenLift() {
 	var dir;
 	if (nofly <= 0 && sprite_index != spr_hurt) {

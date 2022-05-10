@@ -1,16 +1,12 @@
 raddrop = 85
 maxhealth = 320//300
 if GetPlayerLoops() > 0
-	maxhealth = 400;
+	maxhealth = 450;
 meleedamage = 0
 size = 3
 
 event_inherited()
 
-if instance_exists(Player){
-my_health=round( (1+(Player.loops*0.6))*my_health )//bandit loop 1: 1.1*4= 5(rounded up)
-maxhealth=my_health;
-}
 
 spr_idle = sprScrapBossIdle
 spr_walk = sprScrapBossWalk

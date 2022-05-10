@@ -295,17 +295,10 @@ looping=false;
             }
         }
             
-        if loops = 2 && UberCont.opt_gamemode != 15//not no mutations gamemode
+        if loops == 2 && UberCont.opt_gamemode != 15//not no mutations gamemode
         {
 			UberCont.levelIncrease ++;
 			maxlevel++;
-			/*
-	        if ultra_got[15]
-				maxlevel = 13 + UberCont.levelIncrease;
-	        else
-				maxlevel = 11 + UberCont.levelIncrease;
-			*/
-			//skillsChosen = 0;
         }
 		else if loops = 10 && UberCont.opt_gamemode != 15
         {

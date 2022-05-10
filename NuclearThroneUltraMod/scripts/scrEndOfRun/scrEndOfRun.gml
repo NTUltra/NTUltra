@@ -22,5 +22,6 @@ function scrEndOfRun(){
 		txttime="00:00:00:00";
 		vansSlapped = 0;
 		lastSaveLoop = -1;
+		levelIncrease = 0;
 	}
 }

@@ -15,6 +15,10 @@ if instance_number(enemy) <= instance_number(IDPDVan) && !instance_exists(LilHun
 		if team != 2
 			instance_destroy();
 	}
+	with PopoNade
+	{
+		instance_destroy(id,false)
+	}
 	BackCont.shake += 20;
 	instance_create(x,y,Flash);
 }

@@ -40,8 +40,13 @@ if target > 0 && instance_exists(target)
 		}
 		else
 		{
-			x = other.x;
-			y = other.y;
+			if alarm[11] > 0
+				other.target = -1;
+			else
+			{
+				x = other.x;
+				y = other.y;
+			}
 		}
 		if my_health <= 0
 		{

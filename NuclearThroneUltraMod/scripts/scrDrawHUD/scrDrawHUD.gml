@@ -140,16 +140,22 @@ function scrDrawHUD() {
 			}
 			if (mouse_x > xx && mouse_x < xx + s && mouse_y > yy && mouse_y < yy + s)
 			{
-				scrDrawHelp("["+Player.ultra_name[dir]+"]\n"+Player.ultra_text[dir]);
+				holdExplainMutation ++;
+				if holdExplainMutation > 10
+					holdExplainMutation = 10;
+					
+				if holdExplainMutation >= 10
+					scrDrawHelp("["+Player.ultra_name[dir]+"]\n"+Player.ultra_text[dir]);
 			}
 			dix+=1
+			
 	    }
 	dir+=1;
 	}
 	//SKILL ICONS
 	dix = 0;
 	dir = 0;
-	if Player.level > 14
+	if Player.level > 13 - (max(-1,Player.maxarmour-1))
 	{
 		var cdir = 0;
 		var fs = 0;
@@ -183,14 +189,21 @@ function scrDrawHUD() {
 					ht = "["+Player.skill_name[dir]+"] ["+string(Player.rage)+"/350]\n"+Player.skill_text[dir];//MAX RAGE
 				else
 					ht = "["+Player.skill_name[dir]+"]\n"+Player.skill_text[dir];
-				scrDrawHelp(ht);
+				
+				if holdExplainMutation >= 10
+					scrDrawHelp(ht);
+				
+				holdExplainMutation ++;
+				if holdExplainMutation > 10
+					holdExplainMutation = 10;
 			}
 		}
 		dir += 1
 		if dir > Player.maxskill
 			dir = 0;
 	}
-
+	if holdExplainMutation > 0
+		holdExplainMutation --;
 
 	//TERTIARY WEAPON
 	if Player.race=8{//robotos

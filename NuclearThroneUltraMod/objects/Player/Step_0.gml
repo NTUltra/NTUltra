@@ -34,7 +34,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
 			instance_create(f.x + 16,f.y + 16,VanSpawn)
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "HEALTH CHEST";
+			thing.mytext = "VAN";
 		}
 		if keyboard_check_pressed(ord("C")) {
 			var dangle = random(1)*360;
@@ -796,7 +796,7 @@ if reload > 0
 		accuracy=standartAccuracy;
 	}
 	
-	if race=9 && ultra_got[35]{
+	if race=9 && skill_got[5]{
 		if KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2 && !(instance_exists(GenCont))
 		{
 			reload -= 0.25; // 1 - (30 / room_speed)
@@ -1373,18 +1373,6 @@ if moy < window_get_y()
 moy = window_get_y()+8;
 
 display_mouse_set(mox,moy);
-
-//the weirdest aim assist
-with projectile
-{
-if team=other.team&&instance_exists(enemy)&&instance_exists(Wall)//player projectile
-{
-var homehere = instance_nearest(x,y,enemy);
-if collision_line(x,y,homehere.x,homehere.y,Wall,0,0) < 0&&speed>1
-motion_add(point_direction(x,y,homehere.x,homehere.y),0.07);
-
-}
-}
 
 }
 

@@ -374,18 +374,18 @@ function scrNextLevel() {
 
 
 	if race=6||race=12{//Yv's Crib? Yun cuz aswell
-	if level>=10
-	{
-	    if (visitedCrib==false)
-	    {
-	    area=104;
+		if level>=10
+		{
+		    if (visitedCrib==false)
+		    {
+		    area=104;
 		
-		debug("lastsubarea ",lastsubarea);
-	    visitedCrib=true;
-	    hard -= 1;
-		debug("GO CRIB");
-	    }
-	}
+			debug("lastsubarea ",lastsubarea);
+		    visitedCrib=true;
+		    hard -= 1;
+			debug("GO CRIB");
+		    }
+		}
 	}
 
 	if (area=105 || area=106|| area=107 || area = 108 || area = 109 | area = 110 || area = 111 || area = 112)&&subarea<2//inverted curse

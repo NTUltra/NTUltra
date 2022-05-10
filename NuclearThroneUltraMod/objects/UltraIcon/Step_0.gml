@@ -56,7 +56,7 @@ else if skill == 15
 	with Player
 	{
 		scrWeaponsAdjustCostPowerOverwhelming();
-		Player.maxlevel += 1;//higher level cap
+		maxlevel += 1;//higher level cap
 	}
 }
 if skill = 97 // MUTATION SMITH WEAPON MUTATOR BETTER WEAPON SPECIFIC MUTATIONS

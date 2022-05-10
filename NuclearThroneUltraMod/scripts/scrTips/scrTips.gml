@@ -95,7 +95,7 @@ function scrTips() {
 	if Player.area = 2
 	tip = choose("don't drink the water","the sewers stink","don't touch the frogs","don't eat the rat meat","danger","water dripping","sludge everywhere")
 	if Player.area = 3
-	tip = choose("shoot robots on sight","there used to be trees here","look up","rust everywhere","the sound of birds","don't cross the streams","climb over cars")
+	tip = choose("shoot robots on sight","there used to be trees here","look up","rust everywhere","the sound of birds","don't cross the streams","climb over cars","thiefs can steal ammo","thiefs can steal weapons")
 	if Player.area = 4
 	tip = choose("oh no","good luck","spiderwebs everywhere","reflections on the walls","skin is crawling","almost halfway there")
 	if Player.area = 5

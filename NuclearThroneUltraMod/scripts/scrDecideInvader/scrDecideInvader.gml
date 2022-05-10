@@ -65,13 +65,13 @@ function scrDecideInvader(){
 			else if area == 8 && subarea == 1//Wonderland 5C - 1
 			{
 				if (loops % 3 == 2)
-					scrSpawnInvaderBoss(1,HyperCrystal,sprFloor2,sprFloor2B,sprFloor2Explo);
+					scrSpawnInvaderBoss(1,HyperCrystal,sprFloor4,sprFloor4,sprFloor4Explo);
 				else if (loops % 3 == 0)
-					scrSpawnInvaderBoss(1,InvertedHyperCrystal,sprFloor106,sprFloor106B,sprFloor106Explo);
+					scrSpawnInvaderBoss(1,InvertedHyperCrystal,sprFloor111,sprFloor111,sprFloor111Explo);
 				else //mod == 1
-					scrSpawnInvaderBoss(1,CursedHyperCrystal,sprFloor115,sprFloor115B,sprFloor115Explo);
+					scrSpawnInvaderBoss(1,CursedHyperCrystal,sprFloor115,sprFloor115,sprFloor115Explo);
 			}
-			else if loops > 9 && area == 9 && subarea == 2//Palace 7 - 2 replaces proto statue at loop 10
+			else if loops > 9 && (area == 9 || area == 118) && subarea == 2//Palace 7 - 2 replaces proto statue at loop 10
 			{
 				scrSpawnInvaderBoss(clamp(floor((loops - 9)*0.25),1,3),BallBoss,sprFloor100,sprFloor100C,sprFloor100Explo);//EVEN
 			}

@@ -4,6 +4,7 @@ skillscroll = 0;
 skillscrollmax = 0;
 holdExplainUltraModTimer = 0;
 holdExplainWepModTimer = 0;
+holdExplainMutation = 0;
 if instance_exists(Player)
 {
 	if Player.crown == 19
@@ -11,7 +12,7 @@ if instance_exists(Player)
 		darkness = 1
 		alarm[2] = 2;
 	}
-	else if Player.area == 115 || round(Player.area*0.5) = Player.area*0.5 && Player.area != 10 &&Player.area!=118
+	else if Player.area == 115 || round(Player.area*0.5) = Player.area*0.5 && Player.area != 10 &&Player.area!=118 &&Player.area!=106
 	&& Player.area != 114 && UberCont.opt_gamemode != 25 && Player.area!=104&&Player.area!=8&&Player.area!=108
 		darkness = 1
 		

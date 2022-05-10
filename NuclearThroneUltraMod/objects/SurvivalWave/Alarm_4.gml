@@ -22,6 +22,10 @@ if instance_exists(Player)
 			if team != 2
 				instance_destroy();
 		}
+		with PopoNade
+		{
+			instance_destroy(id,false)
+		}
 		with Player
 		{
 			area = 100;

@@ -1,6 +1,6 @@
 /// @description ultramod
 var um = GetPlayerUltramod()
-if um == ultramods.bloodExplosionExplosion
+if um == ultramods.bloodMelee
 {
 	UberCont.ultramodSwap = false;
 	snd_play(sndHammer,0.1,true);
@@ -24,7 +24,7 @@ if um == ultramods.bloodExplosionExplosion
 	}
 	UberCont.ultramodSwap = true;
 	instance_destroy(id,false);
-}else if um == ultramods.bloodMelee
+}else if um == ultramods.bloodExplosionExplosion
 {
 	UberCont.ultramodSwap = false;
 	if !audio_is_playing(sndExplosion)
