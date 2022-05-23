@@ -1,7 +1,16 @@
 scrDrop(41,5)
 
 event_inherited()
-
-snd_play(sndExplosion,0,true);
-instance_create(x,y,Explosion);
+var ang = random(360);
+var am = 6;
+var angStep = 360/am;
+repeat(am)
+{
+	with instance_create(x,y,Dust)
+	{
+		motion_add(ang,1);	
+	}
+	ang+=angStep;
+}
+instance_create(x,y,WallBreak);
 

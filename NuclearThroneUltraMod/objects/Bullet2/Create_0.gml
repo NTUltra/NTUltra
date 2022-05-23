@@ -6,6 +6,7 @@ if instance_exists(Player)
 {
 if Player.skill_got[15] = 1
 {
+	friction = 0.5
 wallbounce = 8
 alarm[1]+=3;
 

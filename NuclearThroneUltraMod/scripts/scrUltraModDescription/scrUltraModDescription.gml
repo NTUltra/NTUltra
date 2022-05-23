@@ -112,9 +112,9 @@ function scrUltraModDescription(um){
 			umn = @"SWAPS
 			SPLINTERS <WITH> ELECTRO"
 		break;
-		case ultramods.bladeGrenade:
+		case ultramods.lightningPellet:
 			umn = @"SWAPS
-			BLADES <WITH> GRENADES"
+			LIGHTNING <WITH> TOXIC"
 		break;
 		
 		case ultramods.toxicSwarm:
@@ -132,6 +132,11 @@ function scrUltraModDescription(um){
 		case ultramods.morphFire:
 			umn = @"SWAPS
 			MORPH <WITH> FIRE"
+		break;
+		
+		case ultramods.bladeGrenade:
+			umn = @"SWAPS
+			BLADES <WITH> GRENADES"
 		break;
 		
 		default:

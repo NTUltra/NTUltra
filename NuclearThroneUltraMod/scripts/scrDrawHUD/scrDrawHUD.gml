@@ -140,10 +140,9 @@ function scrDrawHUD() {
 			}
 			if (mouse_x > xx && mouse_x < xx + s && mouse_y > yy && mouse_y < yy + s)
 			{
-				holdExplainMutation ++;
+				holdExplainMutation += 2;
 				if holdExplainMutation > 10
 					holdExplainMutation = 10;
-					
 				if holdExplainMutation >= 10
 					scrDrawHelp("["+Player.ultra_name[dir]+"]\n"+Player.ultra_text[dir]);
 			}
@@ -190,10 +189,10 @@ function scrDrawHUD() {
 				else
 					ht = "["+Player.skill_name[dir]+"]\n"+Player.skill_text[dir];
 				
+				holdExplainMutation +=2;
 				if holdExplainMutation >= 10
 					scrDrawHelp(ht);
 				
-				holdExplainMutation ++;
 				if holdExplainMutation > 10
 					holdExplainMutation = 10;
 			}

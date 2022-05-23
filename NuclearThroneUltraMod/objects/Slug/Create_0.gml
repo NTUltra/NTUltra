@@ -7,7 +7,7 @@ if instance_exists(Player)
 if Player.skill_got[15] = 1
 {
 wallbounce = 8
-
+friction = 0.7
 if Player.race=25
 {
 wallbounce = 9;

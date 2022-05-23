@@ -5,7 +5,7 @@ with instance_create(x,y,BoltTrail)
 	image_xscale=other.speed;
 }
 
-if instance_exists(enemy) and instance_exists(Player)
+if instance_exists(enemy) and instance_exists(Player) and alarm[2] < 1
 {
 
 if speed > 0 and Player.skill_got[21] = 1

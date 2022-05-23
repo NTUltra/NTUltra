@@ -144,6 +144,8 @@ function scrDrawBloom() {
 
 	with FlakBullet
 	draw_sprite_ext(sprite_index,1,x,y,2,2,image_angle,c_white,ba)
+	with ExplosiveFlakBullet
+	draw_sprite_ext(sprFlakBullet,1,x,y,2,2,image_angle,c_white,ba)
 	with SlugCannonBullet
 	draw_sprite_ext(sprite_index,1,x,y,2,2,image_angle,c_white,ba)
 	with UltraFlakBullet

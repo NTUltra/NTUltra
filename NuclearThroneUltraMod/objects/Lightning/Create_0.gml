@@ -30,4 +30,5 @@ image_speed-=0.1;
 }
 
 isog = true;
+canUltraMod = true;
 canBeMoved = false;

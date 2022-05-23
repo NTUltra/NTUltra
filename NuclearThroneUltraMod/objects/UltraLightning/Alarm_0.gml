@@ -1,34 +1,34 @@
 if isog && GetPlayerUltramod() == ultramods.lightningKraken
+{
+	snd_play(choose(sndWater1,sndWater2),0.1,true);
+	with instance_create(x,y,Tentacle)
 	{
-		snd_play(choose(sndWater1,sndWater2),0.1,true);
-		with instance_create(x,y,Tentacle)
-		{image_angle = other.image_angle;
-			ultra = true;
-			sprite_index=sprUltraTentacle;
-			scrCopyWeaponMod(other);
-			dmg=18;
-			creator = Player.id;	
-			team = other.team
-			ammo = other.ammo
-			isog = false;
-			alarm[0] = 1;
-			visible = 0
-			with instance_create(x,y,LightningSpawn)
-			{
-			sprite_index=sprTentacleSpawn
-			image_angle = other.image_angle
-			}
-		repeat(3){
-		    with instance_create(x,y,FishBoost)
-		    {
-		    motion_add(image_angle+random(60)-30,2+random(4) );
-		    }}
-
+		image_angle = other.image_angle;
+		ultra = true;
+		sprite_index=sprUltraTentacle;
+		scrCopyWeaponMod(other);
+		dmg = 18;
+		creator = Player.id;
+		team = other.team
+		ammo = other.ammo
+		isog = false;
+		alarm[0] = 1;
+		visible = 0
+		with instance_create(x,y,LightningSpawn)
+		{
+		sprite_index=sprTentacleSpawn
+		image_angle = other.image_angle
 		}
-		
-		instance_destroy(id,false);
-		exit;
+	repeat(3){
+		with instance_create(x,y,FishBoost)
+		{
+		motion_add(image_angle+random(60)-30,2+random(4) );
+		}}
 	}
+		
+	instance_destroy(id,false);
+	exit;
+}
 	isog = false;
 
 if instance_exists(Player)
@@ -107,6 +107,6 @@ else event_perform(ev_alarm,0);
 }
 else
 {
-instance_create(x+lengthdir_x(image_xscale/2,image_angle),y+lengthdir_y(image_xscale/2,image_angle),LightningHit)
+	instance_create(x+lengthdir_x(image_xscale/2,image_angle),y+lengthdir_y(image_xscale/2,image_angle),LightningHit)
 }
 

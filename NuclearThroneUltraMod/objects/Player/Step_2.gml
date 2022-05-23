@@ -286,7 +286,7 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 	else if wep != 0
 	{
 		
-	with instance_create(x,y,WepPickup)
+	with instance_create(targetPickup.x,targetPickup.y,WepPickup)
 	{
 	pickedup=true;
 	scrWeapons()

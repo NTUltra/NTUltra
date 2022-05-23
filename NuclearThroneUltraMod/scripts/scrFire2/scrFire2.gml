@@ -7582,5 +7582,97 @@ function scrFire2() {
 
 	break;
 	
+	//FLUGGER
+	case 463:
+
+	snd_play_fire(sndSlugger)
+
+	with instance_create(x,y,Flug)
+	{motion_add(aimDirection+(random(10)-5)*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 12
+	wkick = 8
+
+	break;
+	
+	//GATLING FLUGGER
+	case 464:
+
+	snd_play_fire(sndSlugger)
+
+	with instance_create(x,y,Flug)
+	{motion_add(aimDirection+(random(12)-6)*other.accuracy,18)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 10
+	wkick = 8
+
+	break;
+	
+	//CUBER
+	case 465:
+
+	snd_play_fire(sndCuber)
+
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+	with instance_create(x,y,PlayerHeavySquareBullet)
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,14)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 2
+
+	break;
+	
+	//CUBER RIFLE
+	case 466:
+
+	snd_play_fire(sndCuber)
+
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+	with instance_create(x,y,PlayerHeavySquareBullet)
+	{motion_add(aimDirection+(random(12)-6)*other.accuracy,14)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3
+	wkick = 2
+
+	break;
+	
+	//BOOM BOOM CANNON
+	case 467:
+
+	snd_play_fire(sndFlakCannon);
+
+	with instance_create(x,y,ExplosiveFlakBullet)
+	{
+	motion_add(aimDirection+(random(10)-5)*other.accuracy,11+random(2))
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(32,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(32,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 7
+
+	break;
+	
 	}//end of switch part 2!
 }

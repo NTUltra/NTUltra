@@ -1,4 +1,4 @@
-if speed > 0 and other.my_health > 0 and other.team != team
+if speed > 0 and other.my_health > 0 and other.team != team and alarm[2] < 1
 {
 instance_destroy()
 

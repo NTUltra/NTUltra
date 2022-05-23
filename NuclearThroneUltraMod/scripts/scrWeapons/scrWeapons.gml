@@ -4575,7 +4575,7 @@ function scrWeapons() {
 	wep_load[414] = 15
 	wep_cost[414] = 2
 	wep_sprt[414] = sprBubbler
-	wep_area[414] = 7
+	wep_area[414] = 9
 	wep_text[414] = "pop goes the bubble"
 	wep_swap[414] = sndSwapExplosive
 	wep_rad[414] = 0;
@@ -4586,7 +4586,7 @@ function scrWeapons() {
 	wep_load[415] = 12
 	wep_cost[415] = 2
 	wep_sprt[415] = sprBloodBubbler
-	wep_area[415] = 7
+	wep_area[415] = 8
 	wep_text[415] = "boiling blood"
 	wep_swap[415] = sndSwapExplosive
 	wep_rad[415] = 0;
@@ -4947,7 +4947,7 @@ function scrWeapons() {
 	wep_type[448] = 1
 	wep_auto[448] = 1
 	wep_load[448] = 3
-	wep_cost[448] = 1
+	wep_cost[448] = 4
 	wep_sprt[448] = sprFatSmartGun
 	wep_area[448] = 24
 	wep_text[448] = "big brained"
@@ -5107,6 +5107,72 @@ function scrWeapons() {
 	wep_text[462] = "hot nails"
 	wep_swap[462] = sndSwapBow
 	wep_rad[462] = 0;
+	
+	wep_name[463] = "FLUGGER"
+	wep_type[463] = 2
+	wep_auto[463] = 0
+	wep_load[463] = 18//22
+	wep_cost[463] = 1
+	wep_sprt[463] = sprSlugger
+	wep_area[463] = 6
+	wep_text[463] = "shotgun shoulders spawns more#pellets upon pierce"
+	wep_swap[463] = sndSwapShotgun
+	wep_rad[463] = 0;
+	
+	wep_name[464] = "GATLING FLUGGER"
+	wep_type[464] = 2
+	wep_auto[464] = 1
+	wep_load[464] = 8
+	wep_cost[464] = 1
+	wep_sprt[464] = sprGatlingSlugger
+	wep_area[464] = 16
+	wep_text[464] = "time to gatle"
+	wep_swap[464] = sndSwapShotgun
+	wep_rad[464] = 0;
+	
+	wep_name[465] = "HEAVY CUBER REVOLVER"
+	wep_type[465] = 1
+	wep_auto[465] = 0
+	wep_load[465] = 6
+	wep_cost[465] = 3
+	wep_sprt[465] = sprCuberRevolver
+	wep_area[465] = 22
+	wep_text[465] = "phase through walls"
+	wep_swap[465] = sndSwapPistol
+	wep_rad[465] = 0;
+	
+	wep_name[466] = "HEAVY CUBER RIFLE"
+	wep_type[466] = 1
+	wep_auto[466] = 1
+	wep_load[466] = 3
+	wep_cost[466] = 3
+	wep_sprt[466] = sprCuberRifle
+	wep_area[466] = 25
+	wep_text[466] = "square bullets"
+	wep_swap[466] = sndSwapPistol
+	wep_rad[466] = 0;
+	
+	wep_name[467] = "BOOM BOOM CANNON"
+	wep_type[467] = 4
+	wep_auto[467] = 0
+	wep_load[467] = 26
+	wep_cost[467] = 2
+	wep_sprt[467] = sprFlakCannon
+	wep_area[467] = 15
+	wep_text[467] = "10/10"
+	wep_swap[467] = sndSwapExplosive
+	wep_rad[467] = 0;
+	
+	wep_name[70] = "ULTRA MORPH-O-RAY"
+	wep_type[70] = 5
+	wep_auto[70] = 1
+	wep_load[70] = 9
+	wep_cost[70] = 1
+	wep_sprt[70] = sprMorphORay
+	wep_area[70] = 22
+	wep_text[70] = "Eagle eyes also increases#MORPH-O-RAY's range"
+	wep_swap[70] = sndSwapEnergy
+	wep_rad[70] = 0;
 	
 	/*
 	wep_name[444] = "DRILL GUN"

@@ -232,14 +232,15 @@ function scrModHit() {
 
 				case 15://SPLINTER
 
-				snd_play(sndSplinterMinigun,0.05,true)
+				snd_play(sndSplinterMinigun,0.05,true,false,2,false,false,0.7);
 				repeat(3)
 				{
 					with instance_create(other.x,other.y,Splinter)//5 splinters
 					{
 						motion_add(random(360),20+random(4))
 						image_angle = direction
-						team = other.team
+						team = 2;
+						alarm[2] = 2;
 					}
 				}
 
