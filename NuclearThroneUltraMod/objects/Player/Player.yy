@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": false,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskPlayer",
     "path": "sprites/mskPlayer/mskPlayer.yy",

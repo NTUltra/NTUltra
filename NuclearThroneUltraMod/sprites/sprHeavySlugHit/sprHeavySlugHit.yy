@@ -72,7 +72,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprHeavySlugHit","path":"sprites/sprHeavySlugHit/sprHeavySlugHit.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprHeavySlugHit",
     "tags": [],
     "resourceType": "GMSequence",
   },

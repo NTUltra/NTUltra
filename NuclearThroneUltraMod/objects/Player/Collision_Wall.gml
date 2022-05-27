@@ -2,19 +2,18 @@
 if UberCont.opt_gamemode=4
 my_health=0;
 
-//if race!=18
-//{
-if /*(roll = 0)||(roll==1&&skill_got[5] == 1)&&*/other.object_index!=VikingWall&&race!=23{
+if race!=18
+{
+	if /*(roll = 0)||(roll==1&&skill_got[5] == 1)&&*/other.object_index!=VikingWall{
 
-move_contact_solid(direction,max(1,min(maxspeed,speed)))
-if !place_free(x+hspeed,y){hspeed *= 0.5
-if !place_free(x+hspeed,y) hspeed = 0}
-if !place_free(x,y+vspeed){vspeed *= 0.5
-if !place_free(x,y+vspeed)vspeed = 0}
+	move_contact_solid(direction,max(1,min(maxspeed,speed)))
+	if !place_free(x+hspeed,y){hspeed *= 0.5
+	if !place_free(x+hspeed,y) hspeed = 0}
+	if !place_free(x,y+vspeed){vspeed *= 0.5
+	if !place_free(x,y+vspeed)vspeed = 0}
 
-//}
-//else {move_bounce_solid(false);}
-
+	}
+	//else {move_bounce_solid(false);}
 }
 
 
@@ -31,30 +30,3 @@ flying=2;//4
 mask_index=mskPickupThroughWall;
 }
 
-/*
-var olddir oldspeed;
-olddir = direction
-oldspeed = speed
-move_bounce_solid(true)
-
-if roll = 0
-{
-motion_add(olddir,speed)
-speed = oldspeed
-
-if hspeed > 0 and !place_free(x+hspeed,y)
-{do hspeed -= friction until place_free(x+hspeed,y) or hspeed <= 0}
-else
-if hspeed < 0 and !place_free(x+hspeed,y)
-{do hspeed += friction until place_free(x+hspeed,y) or hspeed >= 0}
-
-if vspeed > 0 and !place_free(x,y+vspeed)
-{do vspeed -= friction until place_free(x,y+vspeed) or vspeed <= 0}
-else
-if vspeed < 0 and !place_free(x,y+vspeed)
-{do vspeed += friction until place_free(x,y+vspeed) or vspeed >= 0}
-
-}
-
-/* */
-/*  */

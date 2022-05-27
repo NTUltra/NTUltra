@@ -18,4 +18,5 @@ if instance_exists(Player)
 		}
 	}
 }
-dmg = 90;//heavy slug = 70 / 60 dmg
+dmg = 80;//heavy slug = 70 / 60 dmg
+alarm[11] = 1;

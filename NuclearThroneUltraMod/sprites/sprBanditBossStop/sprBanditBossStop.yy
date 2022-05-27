@@ -64,7 +64,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprBanditBossStop","path":"sprites/sprBanditBossStop/sprBanditBossStop.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprBanditBossStop",
     "tags": [],
     "resourceType": "GMSequence",
   },

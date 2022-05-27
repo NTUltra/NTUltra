@@ -7681,13 +7681,122 @@ function scrFire2() {
 	instance_create(x,y,MorphSound)
 	with instance_create(x,y,UltraRay)
 	{
+		team = other.team;
 	creator = other.id
 	ammo = 5
 	time = 3
 	team = other.team
-	event_perform(ev_alarm,0) 
 	explosive=2;
 	}
+
+	break;
+	
+	//TOXIC-O-RAY
+	case 469:
+
+	if !instance_exists(MorphSound)
+	{
+		instance_create(x,y,MorphSound)
+		snd_play(sndToxicBoltGas);
+	}
+	with instance_create(x,y,ToxicRay)
+	{
+		creator = other.id
+		ammo = 13
+		time = 1
+		team = other.team
+	}
+
+	break;
+	
+	//SNOW LINE
+	case 470:
+
+	snd_play_fire(sndFrostShot1)
+	snd_play_fire(sndHyperLauncher)
+	with instance_create(x,y,LineSnow)
+	{
+	direction = aimDirection+(random(2)-1)*other.accuracy
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 8
+	wkick = 8
+
+	break;
+	
+	//MUCHAS NIEVE
+	case 471:
+	Sleep(40);
+	snd_play_fire(sndFrostShot1);
+	snd_play_fire(sndDragonStop);
+	snd_play_fire(sndRocket);
+	snd_play_fire(sndRocketFly);
+	var aimDir = aimDirection+(random(12)-6)*accuracy;
+	var r = right;
+	var t = team;
+	with Floor
+	{
+		with instance_create(x+16,y+16,IceFlame)
+		{
+			motion_add(0,4)
+			//image_angle = direction
+			team = t
+		}
+		with instance_create(x+16,y+16,IceFlame)
+		{
+			motion_add(120,4)
+			//image_angle = direction
+			team = t
+		}
+		with instance_create(x+16,y+16,IceFlame)
+		{
+			motion_add(240,4)
+			//image_angle = direction
+			team = t
+		}
+	}
+	BackCont.viewx2 += lengthdir_x(9,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(9,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 12
+	wkick = 10
+
+	break;
+	
+	//ULTRA HEAVY SLUGGER
+	case 472:
+
+	snd_play_fire(sndHeavySlugger);
+	snd_play_fire(sndUltraShotgun);
+
+	with instance_create(x,y,UltraHeavySlug)
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,13)//16
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(20,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(20,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 22
+	wkick = 12
+	motion_add(aimDirection+180,4)
+	break;
+	
+	//ULTRA BAZOOKA
+	case 473:
+
+	snd_play_fire(sndNukeFire);
+
+	with instance_create(x,y,UltraRocket)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+	motion_add(aimDirection+180,2)
+	BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 10
 
 	break;
 	

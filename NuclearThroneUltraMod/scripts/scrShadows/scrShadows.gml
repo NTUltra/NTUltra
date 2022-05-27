@@ -32,6 +32,10 @@ function scrShadows() {
 	{
 		draw_sprite(shadowSprite,0,x-__view_get( e__VW.XView, 0 )+shadowXoffset,y-__view_get( e__VW.YView, 0 )+shadowYoffset)
 	}
+	with GoldTotem
+	{
+		draw_sprite(shd24,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 )+2)
+	}
 	with SurvivalArenaStarter
 	{
 		draw_sprite(shd24,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ))
@@ -341,7 +345,7 @@ function scrShadows() {
 	with Grunt
 	draw_sprite(shd24,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ))
 	with IDPDFreak
-	draw_sprite(shd24,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ))
+	draw_sprite(shd24,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 )+2)
 	with BuffPopo
 	draw_sprite(shd24,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ))
 	with Inspector

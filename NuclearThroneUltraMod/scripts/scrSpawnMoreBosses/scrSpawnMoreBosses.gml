@@ -3,7 +3,6 @@
 ///@param
 function scrSpawnMoreBosses(theBoss,thisMany){
 	var mindis = 232;
-	debug("I want this many doggos extra: ",thisMany);
 	//more dogs
 	do {
 		with Floor

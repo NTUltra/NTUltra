@@ -19,7 +19,7 @@ if (target > 0)
 ammo --;
 if ammo > 0
 {
-	alarm[2] = 2;
-	alarm[1] += 5;
+	alarm[2] = firerate;
+	alarm[1] += firerate+3;
 	speed --;
 }

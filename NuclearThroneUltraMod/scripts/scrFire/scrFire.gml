@@ -1628,6 +1628,7 @@ function scrFire() {
 	instance_create(x,y,MorphSound)
 	with instance_create(x,y,Ray)
 	{
+		team = other.team;
 	creator = other.id
 	ammo = 5
 	time = 3
@@ -1704,7 +1705,6 @@ function scrFire() {
 	ammo = 5
 	time = 3
 	team = other.team
-	event_perform(ev_alarm,0)
 	explosive=3;
 	}
 
@@ -2285,11 +2285,11 @@ function scrFire() {
 	instance_create(x,y,MorphSound)
 	with instance_create(x,y,Ray)
 	{
+		team = other.team;
 	creator = other.id
 	ammo = 3
 	time = 3
 	team = other.team
-	event_perform(ev_alarm,0) 
 	explosive=2;
 	}
 

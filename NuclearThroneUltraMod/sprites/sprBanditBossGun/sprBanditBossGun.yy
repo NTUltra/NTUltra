@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprBanditBossGun","path":"sprites/sprBanditBossGun/sprBanditBossGun.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprBanditBossGun",
     "tags": [],
     "resourceType": "GMSequence",
   },

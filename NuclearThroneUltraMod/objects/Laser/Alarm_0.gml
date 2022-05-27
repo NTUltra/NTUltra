@@ -61,10 +61,17 @@ if(instance_exists(Player)){
 		}
 		else if um == ultramods.laserBolt
 		{
-			snd_play_fire(sndCrossbow);
 			var thebolt = Bolt;
 			if laserhit > 0
 				thebolt = BouncerBolt;
+			if isUltra
+			{
+				snd_play_fire(sndUltraCrossbow);
+			}
+			else
+			{
+				snd_play_fire(sndCrossbow);	
+			}
 			with instance_create(x,y,thebolt)
 			{motion_add(other.image_angle,24)
 				scrCopyWeaponMod(other);

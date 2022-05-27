@@ -10,6 +10,7 @@ typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 
 dmg = 34
 nomscale = 1;
+balls = 4;
 if instance_exists(Player)
 {
 if Player.skill_got[17] = 1

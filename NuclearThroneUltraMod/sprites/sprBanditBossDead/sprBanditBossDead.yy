@@ -92,7 +92,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprBanditBossDead","path":"sprites/sprBanditBossDead/sprBanditBossDead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprBanditBossDead",
     "tags": [],
     "resourceType": "GMSequence",
   },

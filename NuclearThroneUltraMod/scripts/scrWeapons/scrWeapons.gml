@@ -3189,10 +3189,10 @@ function scrWeapons() {
 	wep_name[289] = "ULTRA SLUGGER"
 	wep_type[289] = 2
 	wep_auto[289] = 0
-	wep_load[289] = 12//22
+	wep_load[289] = 17//22
 	wep_cost[289] = 2
 	wep_sprt[289] = sprUltraSlugger
-	wep_area[289] = 19
+	wep_area[289] = 25
 	wep_text[289] = "biological slugs"
 	wep_swap[289] = sndSwapShotgun
 	wep_rad[289] = 12;
@@ -4009,9 +4009,9 @@ function scrWeapons() {
 	wep_type[363] = 1
 	wep_auto[363] = 1
 	wep_load[363] = 2
-	wep_cost[363] = 1
+	wep_cost[363] = 1.25
 	wep_sprt[363] = sprSplinterMinigun
-	wep_area[363] = 15
+	wep_area[363] = 16
 	wep_text[363] = "like a swarm of bees"
 	wep_swap[363] = sndSwapMachinegun
 	wep_rad[363] = 0;
@@ -4740,7 +4740,7 @@ function scrWeapons() {
 	wep_load[429] = 25
 	wep_cost[429] = 3
 	wep_sprt[429] = sprSplinterStorm
-	wep_area[429] = 16
+	wep_area[429] = 19
 	wep_text[429] = "bouncing splinters"
 	wep_swap[429] = sndSwapBow
 	wep_rad[429] = 0;
@@ -5034,7 +5034,7 @@ function scrWeapons() {
 	wep_name[456] = "SUPER SCYTHE"
 	wep_type[456] = 0
 	wep_auto[456] = 0
-	wep_load[456] = 26
+	wep_load[456] = 30
 	wep_cost[456] = 0
 	wep_sprt[456] = sprSuperScythe
 	wep_area[456] = 22
@@ -5112,7 +5112,7 @@ function scrWeapons() {
 	wep_type[463] = 2
 	wep_auto[463] = 0
 	wep_load[463] = 18//22
-	wep_cost[463] = 1
+	wep_cost[463] = 1.5
 	wep_sprt[463] = sprSlugger
 	wep_area[463] = 6
 	wep_text[463] = "shotgun shoulders spawns more#pellets upon pierce"
@@ -5123,7 +5123,7 @@ function scrWeapons() {
 	wep_type[464] = 2
 	wep_auto[464] = 1
 	wep_load[464] = 8
-	wep_cost[464] = 1
+	wep_cost[464] = 1.5
 	wep_sprt[464] = sprGatlingSlugger
 	wep_area[464] = 16
 	wep_text[464] = "time to gatle"
@@ -5172,7 +5172,62 @@ function scrWeapons() {
 	wep_area[468] = 22
 	wep_text[468] = ""
 	wep_swap[468] = sndSwapEnergy
-	wep_rad[468] = 4;
+	wep_rad[468] = 6;
+	
+	wep_name[469] = "TOXIC-O-RAY"
+	wep_type[469] = 5
+	wep_auto[469] = 1
+	wep_load[469] = 12
+	wep_cost[469] = 1
+	wep_sprt[469] = sprExplosiveMorphORay
+	wep_area[469] = 10
+	wep_text[469] = "stinky sheep"
+	wep_swap[469] = sndSwapEnergy
+	wep_rad[469] = 0;
+	
+	wep_name[470] = "SNOW LINE"
+	wep_type[470] = 4
+	wep_auto[470] = 0
+	wep_load[470] = 17
+	wep_cost[470] = 2.5
+	wep_sprt[470] = sprLineFire
+	wep_area[470] = 10
+	wep_text[470] = "don't get in the line of fire"
+	wep_swap[470] = sndSwapFlame
+	wep_rad[470] = 0;
+	
+	wep_name[471] = "MUCHAS NIEVE"
+	wep_type[471] = 4
+	wep_auto[471] = 0
+	wep_load[471] = 210
+	wep_cost[471] = 20
+	wep_sprt[471] = sprMuchasFuego
+	wep_area[471] = 30
+	wep_text[471] = "je ne parle pas de francais"
+	wep_swap[471] = sndSwapDragon
+	wep_rad[471] = 0;
+	
+	wep_name[472] = "ULTRA HEAVY SLUGGER"
+	wep_type[472] = 2
+	wep_auto[472] = 0
+	wep_load[472] = 10
+	wep_cost[472] = 2
+	wep_sprt[472] = sprHeavySlugger
+	wep_area[472] = 35
+	wep_text[472] = "supermassive"
+	wep_swap[472] = sndSwapShotgun
+	wep_rad[472] = 14;
+	
+	wep_name[473] = "ULTRA BAZOOKA"
+	wep_type[473] = 4
+	wep_auto[473] = 0
+	wep_load[473] = 25
+	wep_cost[473] = 2
+	wep_sprt[473] = sprBazooka
+	wep_area[473] = 25
+	wep_text[473] = ""
+	wep_swap[473] = sndSwapExplosive
+	wep_rad[473] = 12;
 	
 	/*
 	wep_name[444] = "DRILL GUN"

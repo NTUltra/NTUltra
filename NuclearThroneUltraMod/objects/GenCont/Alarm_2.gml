@@ -1,5 +1,16 @@
 /// @description BOSSES mods secret areas
 scrDecideInvader();
+var spawnarea =  Player.area;
+var subarea =  Player.subarea;
+if ( !(spawnarea == 9 && subarea == 3) && !(spawnarea == 6 && subarea == 2)
+	&& spawnarea != 100 && spawnarea != 104)
+{
+	var tots = clamp(round(GetPlayerLoops()*0.5) - 3,0,8);
+	debug("totems: ",tots);
+	scrSpawnBoss(GoldTotem);
+	if tots > 1
+		scrSpawnMoreBosses(GoldTotem,tots);
+}
 if Player.area = 3 and Player.subarea = 3
 {
 	var n = instance_furthest(Player.x,Player.y,Floor)

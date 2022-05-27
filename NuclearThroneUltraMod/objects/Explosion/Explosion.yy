@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskExplosion",
     "path": "sprites/mskExplosion/mskExplosion.yy",

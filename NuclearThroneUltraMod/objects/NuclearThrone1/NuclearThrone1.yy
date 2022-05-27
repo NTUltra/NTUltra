@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskNothingInactive",
     "path": "sprites/mskNothingInactive/mskNothingInactive.yy",

@@ -64,7 +64,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprBanditBossFire","path":"sprites/sprBanditBossFire/sprBanditBossFire.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprBanditBossFire",
     "tags": [],
     "resourceType": "GMSequence",
   },

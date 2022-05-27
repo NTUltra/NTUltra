@@ -295,7 +295,10 @@ with BigBadBat
 {
 	draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1)	
 }
-
+with HealFX
+{
+	draw_self();
+}
 if instance_exists(Player){
 if Player.ultra_got[44]=1&&instance_exists(Marker){
 if Player.skill_got[5]=1{

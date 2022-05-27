@@ -5,6 +5,7 @@
   },
   "solid": true,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskWall",
     "path": "sprites/mskWall/mskWall.yy",

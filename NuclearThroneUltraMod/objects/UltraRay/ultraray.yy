@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprRayBullet",
-    "path": "sprites/sprRayBullet/sprRayBullet.yy",
+    "name": "sprUltraRayBullet",
+    "path": "sprites/sprUltraRayBullet/sprUltraRayBullet.yy",
   },
   "solid": false,
   "visible": true,

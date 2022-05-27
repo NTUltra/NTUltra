@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprHeavySlugDisappear","path":"sprites/sprHeavySlugDisappear/sprHeavySlugDisappear.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprHeavySlugDisappear",
     "tags": [],
     "resourceType": "GMSequence",
   },

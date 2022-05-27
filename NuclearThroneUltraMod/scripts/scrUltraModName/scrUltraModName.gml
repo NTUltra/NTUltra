@@ -74,10 +74,6 @@ function scrUltraModName(um){
 			umn[0] = "SPLINTER";
 			umn[1] = "ELECTRO";
 		break;
-		case ultramods.lightningPellet:
-			umn[0] = "LIGHTNING";
-			umn[1] = "TOXIC";
-		break;
 		
 		
 		case ultramods.toxicSwarm:
@@ -95,6 +91,10 @@ function scrUltraModName(um){
 		case ultramods.morphFire:
 			umn[0] = "MORPH";
 			umn[1] = "FIRE";
+		break;
+		case ultramods.lightningPellet:
+			umn[0] = "LIGHTNING";
+			umn[1] = "SHOTGUN PELLET";
 		break;
 		
 		case ultramods.bladeGrenade:

@@ -1,0 +1,6 @@
+/// @description xxx
+owner = noone;
+buffList = [];
+image_xscale = 0.1;
+image_yscale = 0.1;
+scaleIncrease = 0.1;

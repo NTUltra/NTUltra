@@ -1,5 +1,5 @@
 //PRE LOOP
-alarm[1] = 6+random(6)
+alarm[1] = actTime+random(actTime)
 
 scrTarget()
 run = 0;

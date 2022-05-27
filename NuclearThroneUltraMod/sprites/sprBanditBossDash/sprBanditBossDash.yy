@@ -64,7 +64,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprBanditBossDash","path":"sprites/sprBanditBossDash/sprBanditBossDash.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprBanditBossDash",
     "tags": [],
     "resourceType": "GMSequence",
   },

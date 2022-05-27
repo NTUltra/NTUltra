@@ -7,8 +7,8 @@ else
 snd_play(sndPlasmaBigExplode)
 }
 ang = random(360)
-var angstep = 360/4;
-repeat(4)
+var angstep = 360/balls;
+repeat(balls)
 {
 with instance_create(xprevious,yprevious,PlasmaBig)
 {motion_add(other.ang,2)

@@ -64,7 +64,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprBanditBossTell","path":"sprites/sprBanditBossTell/sprBanditBossTell.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprBanditBossTell",
     "tags": [],
     "resourceType": "GMSequence",
   },

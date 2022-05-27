@@ -1,10 +1,26 @@
 if(instance_exists(creator)){
-x=creator.x+lengthdir_x(16,direction);
-y=creator.y+lengthdir_y(16,direction);
-direction=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
-image_angle=direction;
-target=instance_nearest(x+lengthdir_x(80,direction),y+lengthdir_y(80,direction),enemy);
-if(instance_exists(target) ){
-Direction=point_direction(x,y,target.x,target.y);}
+	x = creator.x+lengthdir_x(15,direction);
+	y = creator.y+lengthdir_y(15,direction);
+	var mx = UberCont.mouse__x;
+	var my = UberCont.mouse__y;
+	direction = point_direction(x,y,mx,my);
+	var xx = x + lengthdir_x(range,direction);
+	var yy = y + lengthdir_y(range,direction);
+	//Lock on
+	if instance_exists(enemy)
+	{
+		var n = instance_nearest(mx,my,enemy);
+		if (n.team != team && point_distance(x,y,n.x,n.y) < range)
+		{
+			if point_distance(mx,my,n.x,n.y) < detectRange && collision_line(x,y,n.x,n.y,Wall,0,0) < 0
+			{
+				direction = point_direction(x,y,n.x,n.y);
+				xx = n.x;
+				yy = n.y;
+			}
+		}
+	}
+	image_angle = direction;
+	hit = collision_line_point(x,y,xx,yy,Wall,false,false);
 }
 

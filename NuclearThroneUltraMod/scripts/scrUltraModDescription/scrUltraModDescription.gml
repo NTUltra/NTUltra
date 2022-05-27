@@ -17,7 +17,8 @@ function scrUltraModDescription(um){
 			HEAVY BULLETS <TO> SLUGS
 			SLUGS <TO> THREE FAT BULLETS
 			FAT BULLET <WITH> SLUGS
-			HEAVY SLUGS <TO> THREE HEAVY BULLETS"
+			HEAVY SLUGS <TO> THREE HEAVY BULLETS
+			ULTRA SLUGS <TO> 4 ULTRA BULLETS"
 		break;
 		case ultramods.laserBullet:
 			umn = @"SWAPS
@@ -50,13 +51,15 @@ function scrUltraModDescription(um){
 			SPLINTER <WITH> MINI PLASMA
 			PLASMA <WITH> BOLTS
 			BOUNCER PLASMA <WITH> BOUNCER BOLTS
-			HEAVY BOLTS <TO> PLASMA CANNON BALLS"
+			HEAVY BOLTS <TO> PLASMA CANNON BALLS
+			ULTRA BOLTS <TO> SUPER PLASMA CANNON BALLS"
 		break;
 		case ultramods.plasmaRocket:
 			umn = @"SWAPS
 			PLASMA <WITH> ROCKETS
 			BOUNCER PLASMA <WITH> BOUNCER ROCKETS
-			NUKES <TO> PLASMA CANNON BALLS"
+			NUKES <TO> PLASMA CANNON BALLS
+			ULTRA ROCKETS <TO> SUPER PLASMA CANNON BALLS"
 		break;
 		case ultramods.bloodMelee:
 			umn = @"SWAPS
@@ -74,13 +77,15 @@ function scrUltraModDescription(um){
 			umn = @"SWAPS
 			ROCKETS <WITH> BOLTS
 			BOUNCER PLASMA <WITH> BOUNCER ROCKETS
-			NUKES <TO> PLASMA CANNON BALLS"
+			NUKES <TO> HEAVY BOLT & 2 SPLINTERS
+			ULTRA ROCKETS <TO> ULTRA BOLTS & 2 SPLINTERS"
 		break;
 		case ultramods.laserBolt:
 			umn = @"SWAPS
 			LASERS <WITH> BOLTS
 			BOUNCER LASERS <WITH> BOUNCER BOLTS
-			MEGA LASERS <WITH> HEAVY BOLTS"
+			MEGA LASERS <WITH> HEAVY BOLTS
+			ULTRA BOLTS <TO> 3 ULTRA LASERS"
 		break
 		case ultramods.seekerMissile:
 			umn = @"SWAPS
@@ -92,7 +97,8 @@ function scrUltraModDescription(um){
 			SLUGS <WITH> BOLTS
 			HEAVY SLUGS <WITH> HEAVY BOLTS
 			INFUSE SPLINTER <WITH> INFUSE PELLET
-			INFEST SPLINTER <WITH> INFEST PELLET"
+			INFEST SPLINTER <WITH> INFEST PELLET
+			ULTRA SLUGS <TO> ULTRA BOLT & 2 SPLINTERS"
 		break;
 		case ultramods.splinterBullet:
 			umn = @"SWAPS
@@ -112,10 +118,6 @@ function scrUltraModDescription(um){
 			umn = @"SWAPS
 			SPLINTERS <WITH> ELECTRO"
 		break;
-		case ultramods.lightningPellet:
-			umn = @"SWAPS
-			LIGHTNING <WITH> TOXIC"
-		break;
 		
 		case ultramods.toxicSwarm:
 			umn = @"SWAPS
@@ -131,7 +133,12 @@ function scrUltraModDescription(um){
 		break;
 		case ultramods.morphFire:
 			umn = @"SWAPS
-			MORPH <WITH> FIRE"
+			MORPH <WITH> FIRE
+			ULTRA MORPH <WITH> ULTRA FIRE"
+		break;
+		case ultramods.lightningPellet:
+			umn = @"SWAPS
+			LIGHTNING <WITH> SHOTGUN PELLET"
 		break;
 		
 		case ultramods.bladeGrenade:
@@ -140,8 +147,7 @@ function scrUltraModDescription(um){
 		break;
 		
 		default:
-			umn[0] = "UNKNOWN";
-			umn[1] = "ULTRA MOD";
+			umn = "UNKNOWN";
 		break;
 	}
 	return umn;
