@@ -77,4 +77,8 @@ if Player.area = 8 && Player.subarea < 2 && ( instance_exists(Sheep)||instance_e
 {
 	Player.banditland=true;
 }
+with other
+{
+	alarm[3] = max(alarm[3],3);	
+}
 

@@ -12,10 +12,20 @@ if(instance_exists(target))
 {
 if(instance_exists(Player)){
 
-    if (point_distance(x,y,target.x,target.y) < 120+(60*Player.skill_got[19])&& Direction>direction-30-(30*Player.skill_got[19])&&Direction<direction+30+(30*Player.skill_got[19]) )
+    if (point_distance(x,y,target.x,target.y) < range+(60*Player.skill_got[19])&& Direction>direction-30-(30*Player.skill_got[19])&&Direction<direction+30+(30*Player.skill_got[19]) )
     {
-        if!(collision_line(x,y,target.x,target.y,Wall,false,true) )//No walls between player and target?
+        if isUltra || !(collision_line(x,y,target.x,target.y,Wall,false,true) )//No walls between player and target?
         {
+			if isUltra
+			{
+				with instance_create(target.x,target.y,UltraMorph)
+				{
+					scrCopyWeaponMod(other);
+					scrCanHumphry(); 
+				}
+			}
+			else
+			{
             if(explosive==2)
             {
             with instance_create(target.x,target.y,Morph)
@@ -30,6 +40,7 @@ if(instance_exists(Player)){
 				scrCopyWeaponMod(other);
 				scrCanHumphry(); 
 			}}
+			}
         }
             
     }}

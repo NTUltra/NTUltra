@@ -7,10 +7,14 @@ if wallsdestroyed<1{
     speed = 0
     move_contact_solid(direction,16)
     instance_create(x,y,Dust)
-    
     }
 }
 else{
+	x = xprevious;
+	y = yprevious;
+	with instance_create(x,y,SmallWallBreak) {
+		image_angle = other.image_angle;	
+	}
 	with other
 	{
 		instance_destroy();

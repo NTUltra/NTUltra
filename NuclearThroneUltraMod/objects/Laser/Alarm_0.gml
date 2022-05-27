@@ -23,6 +23,8 @@ if(instance_exists(Player)){
 				image_angle = direction
 				team = other.team
 				alarm[11] = 0;}
+				instance_destroy(id,false);
+			exit;
 			}
 			else if laserhit > 0
 			{
@@ -40,6 +42,8 @@ if(instance_exists(Player)){
 				image_angle = direction
 				team = other.team
 				alarm[11] = 0;}
+				instance_destroy(id,false);
+			exit;
 			}
 			else
 			{

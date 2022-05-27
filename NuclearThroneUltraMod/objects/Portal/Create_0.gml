@@ -58,7 +58,7 @@ if ( (currentarea=105 || currentarea=106|| currentarea=107 || currentarea = 108 
 alarm[2] = 2;
 pullstrength=1;
 isPink = false;
-if currentarea  == 8 || (currentarea == 7 && currentsubarea == 3)
+if !inverted && currentarea  == 8 || (currentarea == 7 && currentsubarea == 3)
 {
 	isPink = true;
 	sprite_index = sprPinkPortalSpawn;	

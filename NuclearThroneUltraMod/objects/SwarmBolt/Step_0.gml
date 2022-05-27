@@ -27,7 +27,7 @@ motion_add(point_direction(x,y,WALL.x,WALL.y)+180,point_distance(x,y,WALL.x,WALL
 //else if alarm[0]<1
 //target=instance_nearest(x,y,enemy);
 
-if target!=0
+if target!=0 && target.team != 2
 motion_add(point_direction(x,y,target.x,target.y),2+Player.skill_got[21]+Player.skill_got[19]);
 }
 motion_add(direction,3);//the force that pulls it away from the direction?

@@ -225,6 +225,7 @@ else if skill == 33 //GLASS ARM CANNON
 		if Player.my_health > Player.maxhealth
 			Player.my_health -= 2
 	}
+	Player.exception = true;
 	//Dont die on me friend
 	Player.maxhealth = max(Player.maxhealth, 1);
 	Player.my_health = max(Player.my_health, 1);

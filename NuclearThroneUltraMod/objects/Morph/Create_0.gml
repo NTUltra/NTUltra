@@ -23,6 +23,14 @@ if UberCont.ultramodSwap
 		}
 	}
 }
+repeat(2)
+{
+	with instance_create(x,y,ImpactFX)
+	{
+		motion_add(random(360),0.5);
+		sprite_index = sprMorphFX;
+	}
+}
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1

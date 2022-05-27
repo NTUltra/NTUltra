@@ -70,6 +70,10 @@ if UberCont.opt_gamemode != 25
 		}
 		alarm[1] = 60;
 	}
+	with Player
+	{
+		area = 100;
+	}
 }
 else
 {

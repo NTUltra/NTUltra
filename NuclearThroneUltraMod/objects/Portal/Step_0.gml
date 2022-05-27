@@ -35,36 +35,40 @@ with WepPickup
 	}
 }
 
-with Player
-{
-if point_distance(x,y,Portal.x,Portal.y) < 44 and collision_line(x,y,Portal.x,Portal.y,Wall,0,0) < 0
-{
-if place_free(x+lengthdir_x(other.pullstrength,point_direction(x,y,Portal.x,Portal.y)),y)
-x += lengthdir_x(other.pullstrength,point_direction(x,y,Portal.x,Portal.y))
-if place_free(x,y+lengthdir_y(other.pullstrength,point_direction(x,y,Portal.x,Portal.y)))
-y += lengthdir_y(other.pullstrength,point_direction(x,y,Portal.x,Portal.y))
-angle -= 30*right
-sprite_index = spr_hurt
-depth = -9
-image_index = 1
-}
-else if point_distance(x,y,Portal.x,Portal.y) < 96 and collision_line(x,y,Portal.x,Portal.y,Wall,0,0) < 0
-{
-if place_free(x+lengthdir_x(other.pullstrength*0.6,point_direction(x,y,Portal.x,Portal.y)),y)
-x += lengthdir_x(other.pullstrength*0.6,point_direction(x,y,Portal.x,Portal.y))
-if place_free(x,y+lengthdir_y(other.pullstrength*0.6,point_direction(x,y,Portal.x,Portal.y)))
-y += lengthdir_y(other.pullstrength*0.6,point_direction(x,y,Portal.x,Portal.y))
-angle -= 30*right
-sprite_index = spr_hurt
-depth = -9
-image_index = 1
-}
-else if roll = 0
-angle = 0
-}
+	with Player
+	{
+		var pt = instance_nearest(x,y,Portal);
+		if pt == other.id
+		{
+			if point_distance(x,y,pt.x,pt.y) < 44 and collision_line(x,y,pt.x,pt.y,Wall,0,0) < 0
+			{
+				if place_free(x+lengthdir_x(other.pullstrength,point_direction(x,y,pt.x,pt.y)),y)
+					x += lengthdir_x(other.pullstrength,point_direction(x,y,pt.x,pt.y))
+				if place_free(x,y+lengthdir_y(other.pullstrength,point_direction(x,y,pt.x,pt.y)))
+					y += lengthdir_y(other.pullstrength,point_direction(x,y,pt.x,pt.y))
+				angle -= 30*right
+				sprite_index = spr_hurt
+				depth = -9
+				image_index = 1
+			}
+			else if point_distance(x,y,pt.x,pt.y) < 96 and collision_line(x,y,pt.x,pt.y,Wall,0,0) < 0
+			{
+				if place_free(x+lengthdir_x(other.pullstrength*0.6,point_direction(x,y,pt.x,pt.y)),y)
+					x += lengthdir_x(other.pullstrength*0.6,point_direction(x,y,pt.x,pt.y))
+				if place_free(x,y+lengthdir_y(other.pullstrength*0.6,point_direction(x,y,pt.x,pt.y)))
+					y += lengthdir_y(other.pullstrength*0.6,point_direction(x,y,pt.x,pt.y))
+				angle -= 30*right
+				sprite_index = spr_hurt
+				depth = -9
+				image_index = 1
+			}
+			else if roll = 0
+				angle = 0
+		}
+	}
 }
 if point_distance(x,y,Player.x,Player.y)<64
-Player.alarm[3]=10;
+	Player.alarm[3]=10;
 }
 
 if endgame < 100

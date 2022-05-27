@@ -3,6 +3,7 @@ if (my_health <= 0 && lifes > 0 && fakeded < 0 && instance_number(enemy) - insta
 	scrDrop(100,0);
 	scrRaddrop(raddrop);
 	sprite_index = spr_dead;
+	team = 2;
 	image_index = 0;
 	depth += 2;
 	fakeded = 80 + random(200);

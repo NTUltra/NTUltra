@@ -64,7 +64,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprUltraShopMenuMediumAmmoChest","path":"sprites/sprUltraShopMenuMediumAmmoChest/sprUltraShopMenuMediumAmmoChest.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprUltraShopMenuMediumAmmoChest",
     "tags": [],
     "resourceType": "GMSequence",
   },

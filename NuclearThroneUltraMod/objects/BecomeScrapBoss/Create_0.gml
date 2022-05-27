@@ -15,13 +15,18 @@ var dix, diy, dir;
 dix = 0
 diy = 0
 var loops = 0;
-if instance_exists(Player)
+if instance_exists(WeaponChest)
 {
-	loops = Player.loops;
-dir = instance_furthest(Player.x,Player.y,WeaponChest)
+	if instance_exists(Player)
+	{
+		loops = Player.loops;
+	dir = instance_furthest(Player.x,Player.y,WeaponChest)
+	}
+	else
+	dir = instance_furthest(x,y,WeaponChest)
 }
-else
-dir = instance_furthest(x,y,WeaponChest)
+else 
+dir = id;
 if loops < 1 && !instance_exists(InvaderBossSpawnPortal) 
 {
 	x = round(dir.x/32)*32-16

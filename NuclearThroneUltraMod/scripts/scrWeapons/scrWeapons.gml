@@ -5163,16 +5163,16 @@ function scrWeapons() {
 	wep_swap[467] = sndSwapExplosive
 	wep_rad[467] = 0;
 	
-	wep_name[70] = "ULTRA MORPH-O-RAY"
-	wep_type[70] = 5
-	wep_auto[70] = 1
-	wep_load[70] = 9
-	wep_cost[70] = 1
-	wep_sprt[70] = sprMorphORay
-	wep_area[70] = 22
-	wep_text[70] = "Eagle eyes also increases#MORPH-O-RAY's range"
-	wep_swap[70] = sndSwapEnergy
-	wep_rad[70] = 0;
+	wep_name[468] = "ULTRA MORPH-O-RAY"
+	wep_type[468] = 5
+	wep_auto[468] = 1
+	wep_load[468] = 9
+	wep_cost[468] = 1
+	wep_sprt[468] = sprMorphORay
+	wep_area[468] = 22
+	wep_text[468] = ""
+	wep_swap[468] = sndSwapEnergy
+	wep_rad[468] = 4;
 	
 	/*
 	wep_name[444] = "DRILL GUN"

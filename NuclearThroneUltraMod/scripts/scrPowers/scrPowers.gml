@@ -3,7 +3,7 @@ function scrPowers() {
 	/////SHIT PRESSED////////
 	if KeyCont.key_spec[p] = 1
 	{
-		if race == 27 && (!instance_exists(Hand) || (ultra_got[107] && instance_number(Hand) < 2 || (scrIsInInvertedArea() && instance_number(Hand) < 2)))//Hands
+		if race == 27 && (!instance_exists(Hand) || (ultra_got[107] && instance_exists(Hand) && instance_number(Hand) < 2 || (scrIsInInvertedArea() && instance_number(Hand) < 2)))//Hands
 		{
 			var targetPickup = false;
 			var grabRange = 48;//same as hunter mark
@@ -467,7 +467,7 @@ function scrPowers() {
 	{
 		var radcost = 80;//Cost is also in portal
 		var useRad = ultra_got[88] == 1
-	if rogueammo > 0 || (useRad && rad >= radcost)
+	if rogueammo > instance_number(PortalStrike) || (useRad && rad >= radcost*(1+instance_number(PortalStrike)))
 	{
 		//if useRad Ammo taken in portalstrike destroy
 		//	rad -= radcost;

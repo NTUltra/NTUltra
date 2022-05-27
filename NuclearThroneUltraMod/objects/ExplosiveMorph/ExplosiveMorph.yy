@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprMorph",
-    "path": "sprites/sprMorph/sprMorph.yy",
+    "name": "sprExplosiveMorph",
+    "path": "sprites/sprExplosiveMorph/sprExplosiveMorph.yy",
   },
   "solid": false,
   "visible": true,

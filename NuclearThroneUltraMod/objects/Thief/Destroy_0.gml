@@ -31,7 +31,7 @@ scrUnlockGameMode(3,"FOR KILLING A THIEF");
 
 with Marker
 {
-	if target == other.id
+	if target == other.id || point_distance(x,y,other.x,other.y) < 128
 	{
 		scrUnlockGameMode(12,"FOR KILLING A THIEF#WHILE IT IS MARKED")	
 	}

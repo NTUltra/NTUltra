@@ -6,6 +6,8 @@ with Player
 }
 var drawx = x;
 var drawy = y-52;
+if instance_exists(Player) && Player.ultra_got[78]
+	drawy -= 18;
 draw_set_color(c_dkgray)
 
 draw_set_font(fntM)

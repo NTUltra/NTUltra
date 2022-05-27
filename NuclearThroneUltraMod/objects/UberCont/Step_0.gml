@@ -24,7 +24,9 @@ var ranChar = false;
 if race = 0 || UberCont.opt_gamemode == 23
 {
 	ranChar = true;
-	do race = ceil(random(racemax)) until race_have[race] = 1
+	do race = 1+irandom(racemax-1) until race_have[race] = 1
+	
+	debug("random: ",race);
 }
 if crown = 0
 crown = ceil(irandom(crownmax))

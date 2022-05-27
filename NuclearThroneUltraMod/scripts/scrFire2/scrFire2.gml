@@ -7674,5 +7674,22 @@ function scrFire2() {
 
 	break;
 	
+	//ULTRA MORPH-O-RAY
+	case 468:
+
+	if !instance_exists(MorphSound)
+	instance_create(x,y,MorphSound)
+	with instance_create(x,y,UltraRay)
+	{
+	creator = other.id
+	ammo = 5
+	time = 3
+	team = other.team
+	event_perform(ev_alarm,0) 
+	explosive=2;
+	}
+
+	break;
+	
 	}//end of switch part 2!
 }

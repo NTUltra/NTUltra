@@ -21,3 +21,12 @@ image_blend = make_color_rgb(244,145,255);
 
 image_angle = random(360);
 rot = random_range(20,-20);
+
+repeat(2)
+{
+	with instance_create(x,y,ImpactFX)
+	{
+		motion_add(random(360),0.5);
+		sprite_index = sprMorphFX;
+	}
+}

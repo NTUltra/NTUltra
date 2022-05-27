@@ -112,7 +112,7 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+20 and UberCon
     if race = 0 || UberCont.opt_gamemode = 23
     {
 		ranChar = true;
-		do race = ceil(random(racemax)) until UberCont.race_have[race] = 1
+		do race = 1+irandom(racemax-1) until UberCont.race_have[race] = 1
 	}
     if crown = 0
     crown = ceil(random(crownmax))

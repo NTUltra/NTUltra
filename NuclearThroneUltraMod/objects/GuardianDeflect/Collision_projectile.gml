@@ -1,4 +1,4 @@
-if team != other.team
+if team != other.team && other.alarm[11] < 1
 {
 
 if other.typ =1

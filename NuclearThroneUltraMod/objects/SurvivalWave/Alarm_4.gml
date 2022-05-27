@@ -29,7 +29,7 @@ if instance_exists(Player)
 		with Player
 		{
 			area = 100;
-		}	
+		}
 		alarm[0] = 0;
 		alarm[1] = 0;
 		alarm[3] = 0;

@@ -336,17 +336,18 @@ maxspeed = 4.5
 if race = 7 //roids secondary weapon
 {
     if UberCont.opt_gamemode = 1 { //one weapon only game mode yo
-        if UberCont.opt_gm1wep = 0
-        bwep = irandom(maxwep);
+		debug("UberCont.opt_gm1wep: ", UberCont.opt_gm1wep);
+        if UberCont.opt_gm1wep - 1 == 0
+			bwep = irandom(maxwep);
         else
             bwep = UberCont.opt_gm1wep
     }
     else {
-        bwep = UberCont.cwep[race]
+        bwep = wep
     } //start with another golden weapon instead of a revolver
 
     if UberCont.opt_gamemode = 13
-    bwep = 239; //rocketglove
+		bwep = 239; //rocketglove
 
     accuracy = 1.8
 }

@@ -21,6 +21,8 @@ if spr_idle == sprBigVultureSkullOpen
 			type = 1
 			pullstrength = 3;
 		}
-
+	}
+	with BigFishSkull {
+		my_health = 0;	
 	}
 }

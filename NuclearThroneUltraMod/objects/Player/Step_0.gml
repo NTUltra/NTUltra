@@ -377,7 +377,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 	else if UberCont.mouse__y > y
 	back = -1
 
-	scrPowers()
+		scrPowers();
 	}
 	else
 	{

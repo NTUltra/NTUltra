@@ -21,7 +21,7 @@ if um == ultramods.bulletShotgun
 	{
 		scrCopyWeaponMod(other);
 		isog = false;
-		image_yscale -= 0.1;
+		image_yscale -= 0.12;
 		image_angle = other.direction;
 		team = other.team
 		event_perform(ev_alarm,0);

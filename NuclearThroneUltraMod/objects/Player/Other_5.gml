@@ -4,7 +4,7 @@ if UberCont.opt_gamemode == 23 && !instance_exists(Menu) && instance_number(Play
 	var iWillBecome = 0;
 	do 
 	{
-		iWillBecome = ceil(random(racemax));
+		iWillBecome = 1+irandom(racemax-1);
 	} until (UberCont.race_have[iWillBecome] = 1 && iWillBecome != 0);
 	instance_destroy(id,false);
 	with instance_create(x,y,RaceCopier)

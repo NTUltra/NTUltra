@@ -6,8 +6,8 @@
   "solid": false,
   "visible": true,
   "spriteMaskId": {
-    "name": "mskUltraShopMenuMediumWepChest",
-    "path": "sprites/mskUltraShopMenuMediumWepChest/mskUltraShopMenuMediumWepChest.yy",
+    "name": "mskUltraShopMenuMediumAmmoChest",
+    "path": "sprites/mskUltraShopMenuMediumAmmoChest/mskUltraShopMenuMediumAmmoChest.yy",
   },
   "persistent": false,
   "parentObjectId": {

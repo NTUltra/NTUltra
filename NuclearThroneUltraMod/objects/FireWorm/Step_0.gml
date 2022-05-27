@@ -50,6 +50,7 @@ if alarm[2] > 0
 		{
 			event_perform(ev_alarm,0);	
 		}
+		sprite_index = spr_idle;
 	}
 }
 else

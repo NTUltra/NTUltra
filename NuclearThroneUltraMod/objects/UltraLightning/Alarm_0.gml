@@ -1,4 +1,7 @@
-if isog && GetPlayerUltramod() == ultramods.lightningKraken
+var ultraMod = -1
+if canUltraMod
+	ultraMod = GetPlayerUltramod();
+if isog && ultraMod == ultramods.lightningKraken
 {
 	snd_play(choose(sndWater1,sndWater2),0.1,true);
 	with instance_create(x,y,Tentacle)
@@ -76,12 +79,12 @@ image_xscale = -point_distance(x,y,oldx,oldy)/2
 
 ammo -= 1;
 
-if !place_free(x,y)
+if place_meeting(x,y,Wall)//!place_free(x,y)
 {
 x = xprevious
 y = yprevious
 direction += 180}
-
+var odd = ammo % 2 == 0
 if ammo > 0
 {
 //if ammo>20
@@ -92,21 +95,52 @@ image_index += 0.4/ammo//indexammo
 with instance_create(x,y,UltraLightning)
 {
 	isog = other.isog;
+	canUltraMod = other.canUltraMod;
 	scrCopyWeaponMod(other);
-direction = other.direction
-image_angle = direction
-ammo = other.ammo;
-team = other.team
-image_index = other.image_index
-if ammo=20
-alarm[0]=1;
-else if ammo=40
-alarm[0]=1;
-else event_perform(ev_alarm,0);
+	direction = other.direction
+	image_angle = direction
+	ammo = other.ammo;
+	team = other.team
+	image_index = other.image_index
+	if ultraMod == ultramods.lightningPellet && odd
+		alarm[0]=1;
+	else if ammo=20
+	alarm[0]=1;
+	else if ammo=40
+	alarm[0]=1;
+	else event_perform(ev_alarm,0);
 }
 }
-else
+else if ultraMod != ultramods.lightningPellet
 {
 	instance_create(x+lengthdir_x(image_xscale/2,image_angle),y+lengthdir_y(image_xscale/2,image_angle),LightningHit)
 }
 
+if ultraMod == ultramods.lightningPellet && alarm[0] < 1
+{
+	if isog
+	{
+		snd_play(sndPopgun,0.1,true);
+	}
+	with instance_create(x,y,Bullet5)
+	{
+		direction = other.direction;
+		if odd
+			direction += 90;
+		else
+			direction -= 90;
+		image_angle = direction;
+		speed = 8;
+		team = other.team;
+		alarm[11] = 0;
+	}
+	with instance_create(x,y,Bullet5)
+	{
+		direction = other.direction;
+		image_angle = direction;
+		speed = 8;
+		team = other.team;
+		alarm[11] = 0;
+	}
+	instance_destroy(id,false);	
+}

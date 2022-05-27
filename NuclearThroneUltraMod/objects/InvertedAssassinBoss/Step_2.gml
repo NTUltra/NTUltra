@@ -11,6 +11,7 @@ if fakeded > 0
 		fakeded = -1;
 		depth -= 2;
 		mask_index = mskBandit;
+		team = 1;
 		my_health = maxhealth;
 		deflectExhaustion = 0;
 		aggression = 0;
