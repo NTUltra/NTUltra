@@ -76,7 +76,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprLaserCrystalIdle","path":"sprites/sprLaserCrystalIdle/sprLaserCrystalIdle.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprLaserCrystalIdle",
     "tags": [],
     "resourceType": "GMSequence",
   },
