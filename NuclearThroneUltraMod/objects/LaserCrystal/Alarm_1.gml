@@ -1,11 +1,6 @@
 ///@description AI
-alarm[1] = 14+random(12)//30 + 10
+alarm[1] = actTime+random(actTime)//30 + 10
 
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1] = 10+random(10);
-}
 
 scrTarget()
 if target > 0
@@ -14,22 +9,18 @@ if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and point_distance(x,y,tar
 {
 if point_distance(x,y,target.x,target.y) > 64
 {
-ammo = 4
-alarm[2] = 25
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[2] = 20
-}
-snd_play(sndLaserCrystalCharge)
-gunangle = point_direction(x,y,target.x,target.y)
-sprite_index = spr_fire
-alarm[1] = 90+random(10)
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1] = 60+random(30);
-}
+	event_user(0);
+	ammo = maxAmmo
+	alarm[2] = tellTime
+	snd_play(sndLaserCrystalCharge)
+	gunangle = point_direction(x,y,target.x,target.y)
+	sprite_index = spr_fire
+	alarm[1] = 90+random(10)
+	if instance_exists(Player)
+	{
+	if Player.loops>0
+	alarm[1] = 60+random(30);
+	}
 
 }
 else

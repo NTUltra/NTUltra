@@ -32,7 +32,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 			//screen_save("explain"+string(scrn)+".png");
 			//scrn++;
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			instance_create(f.x + 16,f.y + 16,GoldJungleFly)
+			instance_create(f.x + 16,f.y + 16,InvertedGoldTeapot)
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
 			thing.mytext = "VAN";
 		}

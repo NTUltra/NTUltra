@@ -3,17 +3,21 @@ scrDrop(40,0)
 
 
 snd_play(sndNukeExplosion)
-ang = random(360)
-repeat(6)
+var ang = random(360);
+var am = 6;
+var angStep = 360/am;
+repeat(am)
 {
-instance_create(x+lengthdir_x(11,ang),y+lengthdir_y(11,ang),Explosion)
-ang += 360/8
+	with instance_create(x+lengthdir_x(16,ang),y+lengthdir_y(16,ang),Explosion)
+		team = other.team
+	ang += angStep;
 }
-
-repeat(3)
+ang = random(360);
+am = 3;
+angStep = 360/am;
+repeat(am)
 {
-instance_create(x+lengthdir_x(7,ang),y+lengthdir_y(7,ang),SmallExplosion)
-ang += 360/3
+	with instance_create(x+lengthdir_x(7,ang),y+lengthdir_y(7,ang),SmallExplosion)
+		team = other.team
+ang += angStep;
 }
-
-

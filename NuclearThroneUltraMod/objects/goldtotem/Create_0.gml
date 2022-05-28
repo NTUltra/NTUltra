@@ -5,8 +5,8 @@ size = 2
 
 event_inherited()
 
-spr_idle = sprGoldTotemIdle
-spr_walk = sprGoldTotemIdle
+spr_idle = sprGoldTotem
+spr_walk = sprGoldTotem
 spr_hurt = sprGoldTotemHurt
 spr_dead = sprGoldTotemDead
 

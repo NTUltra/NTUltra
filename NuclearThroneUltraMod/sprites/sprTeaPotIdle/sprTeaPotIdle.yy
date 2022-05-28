@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprTeaPotIdle","path":"sprites/sprTeaPotIdle/sprTeaPotIdle.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprTeaPotIdle",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -4,7 +4,7 @@ if ammo > 0
 {
 ammo -= 1
 alarm[2] = 4+irandom(3);
-snd_play(sndLightning1)
+snd_play(sndLightning1,0.1)
 sprite_index = spr_fire
     /*with instance_create(x,y,Lightning)
     {image_angle = other.gunangle+random(6)-3
@@ -28,6 +28,3 @@ else
 sprite_index = spr_idle
 }
 }
-
-/* */
-/*  */

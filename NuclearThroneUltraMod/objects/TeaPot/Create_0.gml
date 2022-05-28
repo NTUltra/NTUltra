@@ -21,3 +21,6 @@ alarm[1] = 60+random(60)
 if instance_exists(Player)
 motion_add(point_direction(Player.x,Player.y,x,y),1)
 
+actTime = 20;
+if GetPlayerLoops() > 0
+	actTime -= 5;

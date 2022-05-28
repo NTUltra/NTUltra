@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskFireBat",
     "path": "sprites/mskFireBat/mskFireBat.yy",

@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprTeaPotNukeHurt","path":"sprites/sprTeaPotNukeHurt/sprTeaPotNukeHurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprTeaPotNukeHurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

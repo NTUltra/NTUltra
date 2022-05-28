@@ -1,0 +1,19 @@
+/// @description Init
+
+// Inherit the parent event
+event_inherited();
+
+meleedamage = 40
+raddrop = 40
+maxhealth = 190//65
+EnemyHealthAdjustments();
+spr_idle = sprGoldCrystalIdle
+spr_walk = sprGoldCrystalIdle
+spr_hurt = sprGoldCrystalHurt
+spr_dead = sprGoldCrystalDead
+spr_fire = sprGoldCrystalFire
+
+snd_hurt = sndGoldCrystalHit
+
+tellTime -= 10;
+maxAmmo = 6;

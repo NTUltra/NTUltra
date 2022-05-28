@@ -1,14 +1,14 @@
 {
   "spriteId": {
-    "name": "sprGoldTotemIdle",
-    "path": "sprites/sprGoldTotemIdle/sprGoldTotemIdle.yy",
+    "name": "sprGoldTotem",
+    "path": "sprites/sprGoldTotem/sprGoldTotem.yy",
   },
   "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": {
-    "name": "mskBandit",
-    "path": "sprites/mskBandit/mskBandit.yy",
+    "name": "mskGoldTotem",
+    "path": "sprites/mskGoldTotem/mskGoldTotem.yy",
   },
   "persistent": false,
   "parentObjectId": {

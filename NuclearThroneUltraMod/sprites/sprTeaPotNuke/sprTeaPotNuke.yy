@@ -88,7 +88,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprTeaPotNuke","path":"sprites/sprTeaPotNuke/sprTeaPotNuke.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprTeaPotNuke",
     "tags": [],
     "resourceType": "GMSequence",
   },
