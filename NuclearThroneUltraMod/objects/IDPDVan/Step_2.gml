@@ -1,3 +1,4 @@
+event_inherited();
 if alarm[3]>5
 {
     if right=1

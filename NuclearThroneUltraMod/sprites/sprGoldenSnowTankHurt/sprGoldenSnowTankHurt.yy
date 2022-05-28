@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprGoldenSnowTankHurt","path":"sprites/sprGoldenSnowTankHurt/sprGoldenSnowTankHurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprGoldenSnowTankHurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

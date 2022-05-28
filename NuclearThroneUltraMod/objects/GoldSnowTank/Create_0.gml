@@ -22,3 +22,4 @@ wave = 0
 
 isLoop = GetPlayerLoops() > 1
 fireLaser = GetPlayerLoops() > 4
+maxSpeed = 1.5;

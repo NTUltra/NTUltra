@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprGoldenRocket","path":"sprites/sprGoldenRocket/sprGoldenRocket.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprGoldenRocket",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -88,7 +88,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprGoldenSnowTankWalk","path":"sprites/sprGoldenSnowTankWalk/sprGoldenSnowTankWalk.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprGoldenSnowTankWalk",
     "tags": [],
     "resourceType": "GMSequence",
   },

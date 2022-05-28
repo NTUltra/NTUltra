@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprGoldenSnowTankDead","path":"sprites/sprGoldenSnowTankDead/sprGoldenSnowTankDead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprGoldenSnowTankDead",
     "tags": [],
     "resourceType": "GMSequence",
   },

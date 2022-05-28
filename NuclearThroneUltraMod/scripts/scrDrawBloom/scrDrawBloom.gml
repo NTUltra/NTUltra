@@ -6,7 +6,7 @@ function scrDrawBloom() {
 	draw_set_blend_mode(bm_add)
 	if instance_exists(Player){
 	with Bullet1
-	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,(Player.ultra_got[28]*0.3)+ba)//roids ultra d
+	draw_sprite_ext(sprite_index,-1,x,y,image_xscale*2,image_yscale*2,image_angle,c_white,(Player.ultra_got[28]*0.3)+ba)//roids ultra d
 	
 	with Bullet1Explosive
 	draw_sprite_ext(sprBullet1,-1,x,y,2,2,image_angle,c_white,(Player.ultra_got[28]*0.3)+ba)//roids ultra d

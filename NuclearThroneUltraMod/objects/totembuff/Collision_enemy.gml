@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description Buff it
 if !array_contains(buffList,other.id)
 {
 	buffList[array_length(buffList)] = other.id;
@@ -11,6 +11,7 @@ if !array_contains(buffList,other.id)
 		if !totemBuffed {
 			my_health += maxhealth;
 			maxhealth *= 2;
+			raddrop *= 1.5;
 			totemBuffed = true;
 		} else {
 			my_health += maxhealth*0.25;

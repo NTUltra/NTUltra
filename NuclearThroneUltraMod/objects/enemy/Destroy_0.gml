@@ -42,3 +42,8 @@ if object_index!=SnowTank && object_index!=InvertedSnowTank && object_index!=Gol
 Sleep(15+size*15)
 //Mutations
 scrEnemyDeathEvent();
+
+if totemBuffed
+{
+	scrDrop(10,0);	
+}

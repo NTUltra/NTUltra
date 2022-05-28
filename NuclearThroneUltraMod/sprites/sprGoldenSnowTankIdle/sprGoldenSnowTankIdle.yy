@@ -72,7 +72,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprGoldenSnowTankIdle","path":"sprites/sprGoldenSnowTankIdle/sprGoldenSnowTankIdle.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprGoldenSnowTankIdle",
     "tags": [],
     "resourceType": "GMSequence",
   },

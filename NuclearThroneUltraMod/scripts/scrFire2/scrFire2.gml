@@ -7800,5 +7800,57 @@ function scrFire2() {
 
 	break;
 	
+	//FRAZER
+	case 474:
+
+	with instance_create(x,y,Frazer)
+	{
+		owner = other.id;
+		team = other.team;
+		event_perform(ev_alarm,0);
+		alarm[1] = 20;
+	}
+
+	break;
+	
+	//ACCELERATOR
+	case 475:
+
+	snd_play_fire(sndHeavyRevolver)
+
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+	with instance_create(x,y,DistanceScaleBullet)
+	{motion_add(aimDirection+(random(6)-3)*other.accuracy,3)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 6
+	wkick = 3
+
+	break;
+	
+	//AUTO ACCELERATOR
+	case 476:
+
+	snd_play_fire(sndHeavyMachinegun)
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(80)-40,3+random(2))
+
+	with instance_create(x,y,DistanceScaleBullet)
+	{motion_add(aimDirection+(random(12)-6)*other.accuracy,3)
+	image_angle = direction
+	team = other.team}
+	motion_add(aimDirection+180,0.6)
+	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 6
+	wkick = 4.5
+
+	break;
+	
 	}//end of switch part 2!
 }

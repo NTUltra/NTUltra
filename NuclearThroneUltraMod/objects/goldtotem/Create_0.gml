@@ -2,7 +2,7 @@ raddrop = 40
 maxhealth = 100
 meleedamage = 0
 size = 2
-
+prevhealth = 100;
 event_inherited()
 
 spr_idle = sprGoldTotem

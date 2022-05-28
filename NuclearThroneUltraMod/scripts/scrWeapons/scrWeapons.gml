@@ -5199,8 +5199,8 @@ function scrWeapons() {
 	wep_name[471] = "MUCHAS NIEVE"
 	wep_type[471] = 4
 	wep_auto[471] = 0
-	wep_load[471] = 210
-	wep_cost[471] = 20
+	wep_load[471] = 250
+	wep_cost[471] = 25
 	wep_sprt[471] = sprMuchasFuego
 	wep_area[471] = 30
 	wep_text[471] = "je ne parle pas de francais"
@@ -5228,6 +5228,39 @@ function scrWeapons() {
 	wep_text[473] = ""
 	wep_swap[473] = sndSwapExplosive
 	wep_rad[473] = 12;
+	
+	wep_name[474] = "FRAZER"
+	wep_type[474] = 4
+	wep_auto[474] = 1
+	wep_load[474] = 18
+	wep_cost[474] = 1
+	wep_sprt[474] = sprFlameThrower
+	wep_area[474] = 13
+	wep_text[474] = "frost flame"
+	wep_swap[474] = sndSwapFlame
+	wep_rad[474] = 0;
+	
+	wep_name[475] = "ACCELERATOR"
+	wep_type[475] = 1
+	wep_auto[475] = 0
+	wep_load[475] = 6
+	wep_cost[475] = 2
+	wep_sprt[475] = sprRevolver
+	wep_area[475] = 7
+	wep_text[475] = "damage increases as bullet exists longer"
+	wep_swap[475] = sndSwapPistol
+	wep_rad[475] = 0;
+	
+	wep_name[476] = "AUTO ACCELERATOR"
+	wep_type[476] = 1
+	wep_auto[476] = 1
+	wep_load[476] = 3
+	wep_cost[476] = 2
+	wep_sprt[476] = sprRevolver
+	wep_area[476] = 18
+	wep_text[476] = "damage increases as bullet exists longer"
+	wep_swap[476] = sndSwapPistol
+	wep_rad[476] = 0;
 	
 	/*
 	wep_name[444] = "DRILL GUN"
