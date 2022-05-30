@@ -12,3 +12,5 @@ image_xscale = choose(1,-1)
 shadowSprite = shd24;
 shadowYoffset = 0;
 shadowXoffset = 0;
+myCorpse = -1;
+totemBuffed = false;

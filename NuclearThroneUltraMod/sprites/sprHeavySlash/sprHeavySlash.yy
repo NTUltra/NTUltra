@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprHeavySlash","path":"sprites/sprHeavySlash/sprHeavySlash.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprHeavySlash",
     "tags": [],
     "resourceType": "GMSequence",
   },

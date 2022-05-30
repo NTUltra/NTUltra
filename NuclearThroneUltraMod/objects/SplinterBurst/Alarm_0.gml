@@ -16,7 +16,7 @@ yy=creator.y;
 
 repeat(2){
 	with instance_create(x,y,Splinter)//5 splinters
-	{motion_add(point_direction(x,y,other.mox,other.moy)+(random(3)-1.5),20+random(4))
+	{motion_add(point_direction(x,y,other.mox,other.moy)+(random(3)-1.5)*Player.accuracy,20+random(4))
 	image_angle = direction
 	team = other.team
 		if Player.race=11

@@ -511,7 +511,7 @@ function scrWeapons() {
 	wep_name[46] = "CHICKEN SWORD"
 	wep_type[46] = 0
 	wep_auto[46] = 0
-	wep_load[46] = 16//18 usual
+	wep_load[46] = 15//18 usual
 	wep_cost[46] = 0
 	wep_sprt[46] = sprSword
 	wep_area[46] = -1
@@ -1696,7 +1696,7 @@ function scrWeapons() {
 	wep_load[153] = 2
 	wep_cost[153] = 2
 	wep_sprt[153] = sprIncinerator
-	wep_area[153] = 15////
+	wep_area[153] = 15
 	wep_text[153] = "firestarter"
 	wep_swap[153] = sndSwapFlame
 	wep_rad[153] = 0;
@@ -2210,7 +2210,7 @@ function scrWeapons() {
 	wep_name[200] = "PANDA STICK"
 	wep_type[200] = 0
 	wep_auto[200] = 0
-	wep_load[200] = 13//18 usual new chicken 16
+	wep_load[200] = 12//18 usual new chicken 16
 	wep_cost[200] = 0
 	wep_sprt[200] = sprStick
 	wep_area[200] = -1
@@ -3956,7 +3956,6 @@ function scrWeapons() {
 	wep_swap[358] = sndSwapEnergy
 	wep_rad[358] = 0;
 	
-	
 	wep_name[359] = "LASER BOMB LAUNCHER"
 	wep_type[359] = 4
 	wep_auto[359] = 0
@@ -3968,8 +3967,6 @@ function scrWeapons() {
 	wep_swap[359] = sndSwapExplosive
 	wep_rad[359] = 0;
 	
-	
-	
 	wep_name[360] = "FLAIL"
 	wep_type[360] = 0
 	wep_auto[360] = 0
@@ -3980,8 +3977,6 @@ function scrWeapons() {
 	wep_text[360] = "nuclearvenia"
 	wep_swap[360] = sndSwapSword
 	wep_rad[360] = 0;
-	
-
 	
 	wep_name[361] = "REWIRER"
 	wep_type[361] = 5
@@ -5175,14 +5170,14 @@ function scrWeapons() {
 	wep_rad[468] = 6;
 	
 	wep_name[469] = "TOXIC-O-RAY"
-	wep_type[469] = 5
+	wep_type[469] = 4
 	wep_auto[469] = 1
 	wep_load[469] = 12
 	wep_cost[469] = 1
 	wep_sprt[469] = sprExplosiveMorphORay
 	wep_area[469] = 10
 	wep_text[469] = "stinky sheep"
-	wep_swap[469] = sndSwapEnergy
+	wep_swap[469] = sndSwapExplosive
 	wep_rad[469] = 0;
 	
 	wep_name[470] = "SNOW LINE"
@@ -5262,30 +5257,270 @@ function scrWeapons() {
 	wep_swap[476] = sndSwapPistol
 	wep_rad[476] = 0;
 	
-	/*
-	wep_name[444] = "DRILL GUN"
-	wep_type[444] = 4
-	wep_auto[444] = 0
-	wep_load[444] = 24//28
-	wep_cost[444] = 2
-	wep_sprt[444] = sprRustySawnOffShotgun
-	wep_area[444] = 9
-	wep_text[444] = "it drills"
-	wep_swap[444] = sndSwapShotgun
-	wep_rad[444] = 0;
+	wep_name[477] = "HEAVY SLEDGEHAMMER"
+	wep_type[477] = 0
+	wep_auto[477] = 0
+	wep_load[477] = 69//NOICE
+	wep_cost[477] = 0
+	wep_sprt[477] = sprHammer
+	wep_area[477] = 4
+	wep_text[477] = "THATS A LOTTA DAMAGE!"
+	wep_swap[477] = sndSwapHammer
+	wep_rad[477] = 0;
 	
-	wep_name[352] = "SUPER ELEMENTAL GUN"
-	wep_type[352] = 4
-	wep_auto[352] = 1
-	wep_load[352] = 16//12
-	wep_cost[352] = 3//2
-	wep_sprt[352] = sprElementalGun
-	wep_area[352] = 20//15
-	wep_text[352] = "the four ultra elements"
-	wep_swap[352] = sndSwapDragon
-	wep_rad[352] = 0;
-
-*/
+	wep_name[478] = "ULTRA LOLLIPOP"
+	wep_type[478] = 0
+	wep_auto[478] = 0
+	wep_load[478] = 32
+	wep_cost[478] = 0
+	wep_sprt[478] = sprLollipop
+	wep_area[478] = 26
+	wep_text[478] = "lime flavour"
+	wep_swap[478] = sndSwapHammer
+	wep_rad[478] = 15;
+	
+	wep_name[479] = "FROST SWORD GUN"
+	wep_type[479] = 3
+	wep_auto[479] = 1
+	wep_load[479] = 16
+	wep_cost[479] = 2.5
+	wep_sprt[479] = sprSwordGun
+	wep_area[479] = 10
+	wep_text[479] = "add homing!"
+	wep_swap[479] = sndSwapSword
+	wep_rad[479] = 0;
+	
+	wep_name[480] = "SCYTHE GUN"
+	wep_type[480] = 3
+	wep_auto[480] = 1
+	wep_load[480] = 14
+	wep_cost[480] = 3
+	wep_sprt[480] = sprSwordGun
+	wep_area[480] = 12
+	wep_text[480] = "spin spin spin"
+	wep_swap[480] = sndSwapSword
+	wep_rad[480] = 0;
+	
+	wep_name[481] = "EXPLOSION FLAIL"
+	wep_type[481] = 0
+	wep_auto[481] = 0
+	wep_load[481] = 30
+	wep_cost[481] = 0
+	wep_sprt[481] = sprFlail
+	wep_area[481] = 12
+	wep_text[481] = ""
+	wep_swap[481] = sndSwapSword
+	wep_rad[481] = 0;
+	
+	wep_name[482] = "BOOM-O-RAY"
+	wep_type[482] = 4
+	wep_auto[482] = 1
+	wep_load[482] = 7
+	wep_cost[482] = 1
+	wep_sprt[482] = sprExplosiveMorphORay
+	wep_area[482] = 10
+	wep_text[482] = "stinky sheep"
+	wep_swap[482] = sndSwapExplosive
+	wep_rad[482] = 0;
+	
+	wep_name[483] = "DISPERSE GRENADE GUN"
+	wep_type[483] = 4
+	wep_auto[483] = 1
+	wep_load[483] = 30
+	wep_cost[483] = 6
+	wep_sprt[483] = sprDisperseBazooka
+	wep_area[483] = 17
+	wep_text[483] = "grass cannon"
+	wep_swap[483] = sndSwapExplosive
+	wep_rad[483] = 0;
+	
+	wep_name[484] = "GHOST DAGGER"
+	wep_type[484] = 0
+	wep_auto[484] = 0
+	wep_load[484] = 12
+	wep_cost[484] = 0
+	wep_sprt[484] = sprGhostBlade
+	wep_area[484] = 13
+	wep_text[484] = "ghastly"
+	wep_swap[484] = sndSwapSword
+	wep_rad[484] = 0;
+	
+	wep_name[485] = "POTSHOT"
+	wep_type[485] = 1
+	wep_auto[485] = 0
+	wep_load[485] = 13
+	wep_cost[485] = 4
+	wep_sprt[485] = sprARifle
+	wep_area[485] = 5
+	wep_text[485] = "melting pot"
+	wep_swap[485] = sndSwapMachinegun
+	wep_rad[485] = 0;
+	
+	wep_name[486] = "LIGHTNING JACKHAMMER"
+	wep_type[486] = 5
+	wep_auto[486] = 1
+	wep_load[486] = 4
+	wep_cost[486] = 1
+	wep_sprt[486] = sprEnergyJackHammer
+	wep_area[486] = 14
+	wep_text[486] = "lightning strikes five times"
+	wep_swap[486] = sndSwapMotorized
+	wep_rad[486] = 0;
+	
+	wep_name[487] = "ULTRA JACKHAMMER"
+	wep_type[487] = 5
+	wep_auto[487] = 1
+	wep_load[487] = 5
+	wep_cost[487] = 1
+	wep_sprt[487] = sprEnergyJackHammer
+	wep_area[487] = 22
+	wep_text[487] = ""
+	wep_swap[487] = sndSwapMotorized
+	wep_rad[487] = 4;
+	
+	wep_name[488] = "SHLOGGER"
+	wep_type[488] = 2
+	wep_auto[488] = 0
+	wep_load[488] = 22
+	wep_cost[488] = 4
+	wep_sprt[488] = sprShotgun
+	wep_area[488] = 11
+	wep_text[488] = "shotgun slugger"
+	wep_swap[488] = sndSwapShotgun
+	wep_rad[488] = 0;
+	
+	wep_name[489] = "LIGHTNING YOYO GUN"
+	wep_type[489] = 5
+	wep_auto[489] = 1
+	wep_load[489] = 26
+	wep_cost[489] = 3
+	wep_sprt[489] = sprKrakenYoyoGun
+	wep_area[489] = 7
+	wep_text[489] = ""
+	wep_swap[489] = sndSwapEnergy
+	wep_rad[489] = 0;
+	
+	wep_name[490] = "HEAVY POP GUN"
+	wep_type[490] = 1
+	wep_auto[490] = 1
+	wep_load[490] = 2
+	wep_cost[490] = 2
+	wep_sprt[490] = sprPopGun
+	wep_area[490] = 8
+	wep_text[490] = "bounces increase speed"
+	wep_swap[490] = sndSwapMachinegun
+	wep_rad[490] = 0;
+	
+	wep_name[491] = "HEAVY POP RIFLE"
+	wep_type[491] = 1
+	wep_auto[491] = 1
+	wep_load[491] = 9
+	wep_cost[491] = 4
+	wep_sprt[491] = sprPopRifle
+	wep_area[491] = 9
+	wep_text[491] = "faster pellets"
+	wep_swap[491] = sndSwapMachinegun
+	wep_rad[491] = 0;
+	
+	wep_name[492] = "SPIKED CLUB"
+	wep_type[492] = 0
+	wep_auto[492] = 0
+	wep_load[492] = 24
+	wep_cost[492] = 0
+	wep_sprt[492] = sprWrench
+	wep_area[492] = 6
+	wep_text[492] = "staple in some braincells"
+	wep_swap[492] = sndSwapHammer
+	wep_rad[492] = 0;
+	
+	wep_name[493] = "HEAVY SHOTGUN"
+	wep_type[493] = 2
+	wep_auto[493] = 0
+	wep_load[493] = 18
+	wep_cost[493] = 2.5
+	wep_sprt[493] = sprShotgun
+	wep_area[493] = 13
+	wep_text[493] = ""
+	wep_swap[493] = sndSwapShotgun
+	wep_rad[493] = 0;
+	
+	wep_name[494] = "ULTRA GRENADE LAUNCHER"
+	wep_type[494] = 4
+	wep_auto[494] = 1
+	wep_load[494] = 16
+	wep_cost[494] = 1
+	wep_sprt[494] = sprUltraNader
+	wep_area[494] = 22
+	wep_text[494] = "suck"
+	wep_swap[494] = sndSwapExplosive
+	wep_rad[494] = 19;
+	
+	wep_name[495] = "SHEEP ON A STICK"
+	wep_type[495] = 5
+	wep_auto[495] = 0
+	wep_load[495] = 18
+	wep_cost[495] = 1
+	wep_sprt[495] = sprMorphHammer
+	wep_area[495] = 11
+	wep_text[495] = "strange hobbies"
+	wep_swap[495] = sndSwapEnergy
+	wep_rad[495] = 0;
+	
+	wep_name[496] = "HEAVY AUTO SHOTGUN"
+	wep_type[496] = 2
+	wep_auto[496] = 1
+	wep_load[496] = 4
+	wep_cost[496] = 2.5
+	wep_sprt[496] = sprAutoShotgun
+	wep_area[496] = 23
+	wep_text[496] = ""
+	wep_swap[496] = sndSwapShotgun
+	wep_rad[496] = 0;
+	
+	wep_name[497] = "SUPER SPLINTER GUN"
+	wep_type[497] = 3
+	wep_auto[497] = 0
+	wep_load[497] = 39//42 normally
+	wep_cost[497] = 2
+	wep_sprt[497] = sprSuperSplinterGun
+	wep_area[497] = 8
+	wep_text[497] = "this will hurt even more"
+	wep_swap[497] = sndSwapBow
+	wep_rad[497] = 0;
+	
+	wep_name[498] = "DEVASTATOR"
+	wep_type[498] = 5
+	wep_auto[498] = 0
+	wep_load[498] = 55//60 normally
+	wep_cost[498] = 8
+	wep_sprt[498] = sprDevastator
+	wep_area[498] = 15
+	wep_text[498] = "a devestating development"
+	wep_swap[498] = sndSwapEnergy
+	wep_rad[498] = 0;
+	
+	wep_name[499] = "ANNIHILATOR"
+	wep_type[499] = 4
+	wep_auto[499] = 0
+	wep_load[499] = 50//60 normally
+	wep_cost[499] = 8
+	wep_sprt[499] = sprDevastator
+	wep_area[499] = 15
+	wep_text[499] = "annihilate them!"
+	wep_swap[499] = sndSwapExplosive
+	wep_rad[499] = 0;
+	
+	wep_name[500] = "LIGHTNING CANNON"
+	wep_type[500] = 5
+	wep_auto[500] = 0
+	wep_load[500] = 34//1.13 seconds
+	wep_cost[500] = 8
+	wep_sprt[500] = sprLightningCannon
+	wep_area[500] = 15
+	wep_text[500] = "a devestating development"
+	wep_swap[500] = sndSwapEnergy
+	wep_rad[500] = 0;
+	
 	maxwep = array_length(wep_name)-1;
 
 	//0 = melee 1 = bullets 2 = shells 3 = bolts 4 = explosives 5 = energy

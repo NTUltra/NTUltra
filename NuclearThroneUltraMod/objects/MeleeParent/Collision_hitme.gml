@@ -3,6 +3,7 @@ if other.team != team && (!inArray || other.sprite_index != other.spr_hurt)
 {
 	if !inArray
 		hitEntities[array_length(hitEntities)] = other.id;
+	event_user(0);
 	with other
 	{
 		snd_play(snd_hurt, hurt_pitch_variation)

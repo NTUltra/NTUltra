@@ -2471,7 +2471,7 @@ function scrFire() {
 
 	snd_play_fire(sndSawedOffShotgun)
 
-	repeat(22)
+	repeat(21)
 	{
 	with instance_create(x,y,Bullet2)
 	{motion_add(aimDirection+(random(80)-40)*other.accuracy,6+random(6))
@@ -4954,7 +4954,7 @@ function scrFire() {
 
 
 	if wep!=1 && wep!=39 && wep!=56//revolver and golden revolver and rusty revolver
-	onlyusemerevolver=false;
+		onlyusemerevolver=false;
 
 	if race=26
 	{

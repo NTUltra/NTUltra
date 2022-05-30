@@ -3,7 +3,7 @@ var acc = 1;
 if instance_exists(Player)
 	acc = Player.accuracy*0.5;
 var toSpawn = HeavyBloodBullet;
-if (sprite_index == sprUltraSlash)
+if (sprite_index == sprUltraSlash || sprite_index == sprUltraBigSlash)
 {
 	toSpawn = UltraBloodBullet;
 }
