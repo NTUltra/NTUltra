@@ -13,3 +13,4 @@ spr_fire = sprInvertedGoldTeaPotFire;
 
 snd_hurt = sndGoldTankHurt;
 actTime -= 10;
+alarm[0] = 0;

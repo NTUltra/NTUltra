@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskHyperCrystal",
     "path": "sprites/mskHyperCrystal/mskHyperCrystal.yy",

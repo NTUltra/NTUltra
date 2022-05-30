@@ -4,7 +4,7 @@
 function scrCanBecomeGold(){
 	if instance_exists(Player)
 	{
-		if random(30) < 1 + min(26,Player.loops * 3)
+		if random(30) < 1 + min(24,Player.loops * 3)
 		{
 			return true;
 		}

@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprSniperWalk","path":"sprites/sprSniperWalk/sprSniperWalk.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprSniperWalk",
     "tags": [],
     "resourceType": "GMSequence",
   },

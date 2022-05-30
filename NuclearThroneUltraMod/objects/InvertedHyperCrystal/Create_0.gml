@@ -6,6 +6,8 @@ raddrop = 160
 maxhealth = 750
 easyCrystalLoss = false;
 normalCrystal = LightningCrystal;
+goldNormalCrystal = InvertedGoldCrystal;
+goldAltCrystal = InvertedGoldCrystal;
 
 spr_idle = sprInvertedHyperCrystalIdle
 spr_walk = sprInvertedHyperCrystalIdle

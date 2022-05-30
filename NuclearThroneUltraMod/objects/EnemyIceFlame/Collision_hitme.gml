@@ -24,7 +24,7 @@ if other.team != team && (image_index<5)
 						my_health = immunelimit
 					else
 					{
-						my_health -= 1
+						my_health -= 2
 						other.dealtDamage = true;
 						snd_play(snd_hurt, hurt_pitch_variation)
 						instance_create(x,y,FrozenPlayer);
@@ -34,11 +34,6 @@ if other.team != team && (image_index<5)
 						image_index = 0
 					}
 				}
-			}
-			else
-			{
-				Sleep(10)
-				BackCont.shake += 3
 			}
 		}
 	}

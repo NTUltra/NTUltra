@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprSniperGun","path":"sprites/sprSniperGun/sprSniperGun.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprSniperGun",
     "tags": [],
     "resourceType": "GMSequence",
   },

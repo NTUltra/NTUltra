@@ -1,4 +1,4 @@
-raddrop = 13
+raddrop = 10
 maxhealth = 4
 meleedamage = 0
 size = 1
@@ -16,7 +16,7 @@ spr_dead = sprInvertedSniperDead
 
 
 snd_hurt = sndSniperHit
-
+alarm[0] = 1;
 //behavior
 walk = 0
 gunangle = random(360)

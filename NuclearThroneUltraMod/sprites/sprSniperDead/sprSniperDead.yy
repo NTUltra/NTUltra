@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprSniperDead","path":"sprites/sprSniperDead/sprSniperDead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprSniperDead",
     "tags": [],
     "resourceType": "GMSequence",
   },

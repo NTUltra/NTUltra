@@ -7,7 +7,7 @@ if UberCont.loops>1
 maxhealth=53;
 
 event_inherited()
-
+alarm[0] = 1;
 spr_idle = sprInvertedTeaPotIdle
 spr_walk = sprInvertedTeaPotWalk
 spr_hurt = sprInvertedTeaPotHurt

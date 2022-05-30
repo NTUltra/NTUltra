@@ -4,7 +4,7 @@ meleedamage = 0
 size = 2
 
 event_inherited()
-
+alarm[0] = 1;
 spr_idle = sprTeaPotIdle
 spr_walk = sprTeaPotWalk
 spr_hurt = sprTeaPotHurt

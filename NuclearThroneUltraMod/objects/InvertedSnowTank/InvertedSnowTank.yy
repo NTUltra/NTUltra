@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskSnowTank",
     "path": "sprites/mskSnowTank/mskSnowTank.yy",

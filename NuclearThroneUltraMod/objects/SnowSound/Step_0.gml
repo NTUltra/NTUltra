@@ -1,4 +1,4 @@
-if instance_exists(SnowBurst)//remove this later when beam gets a unique sound
+if instance_exists(SnowBurst) || instance_exists(Frazer)//remove this later when beam gets a unique sound
 timeout = 0
 else
 {

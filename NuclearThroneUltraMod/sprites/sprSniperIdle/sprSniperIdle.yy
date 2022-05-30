@@ -72,7 +72,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprSniperIdle","path":"sprites/sprSniperIdle/sprSniperIdle.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprSniperIdle",
     "tags": [],
     "resourceType": "GMSequence",
   },

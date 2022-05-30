@@ -7,7 +7,8 @@ function EnemyHealthAdjustments(){
 		maxhealth*= 1 + (clamp(Player.loops-1,0,10)*0.15);//0.15
 		if Player.crown == 10
 			maxhealth *= 1.05;//Very minor crown of difficulty
-
+		
+		my_health = maxhealth;
 		//var hpReduction = 0;
 		if Player.skill_got[11] = 1//Scarier face
 		{

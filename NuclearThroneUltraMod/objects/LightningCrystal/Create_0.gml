@@ -19,5 +19,5 @@ snd_dead = sndLaserCrystalDeath
 ammo = 4
 gunangle = random(360)
 alarm[1] = 30+random(90)
-
+alarm[0] = 1;
 loops = GetPlayerLoops();

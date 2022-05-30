@@ -5,6 +5,7 @@ event_inherited();
 
 isCursed = true;
 normalCrystal = CursedCrystal;
+goldNormalCrystal = CursedCrystal;
 
 spr_idle = sprCursedHyperCrystalIdle
 spr_walk = sprCursedHyperCrystalIdle

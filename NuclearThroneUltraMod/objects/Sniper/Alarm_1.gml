@@ -1,10 +1,5 @@
-alarm[1] = 20+random(10)
+alarm[1] = actTime+random(10)
 
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1] = 10+random(10);
-}
 
 scrTarget()
 if gonnafire = 0
@@ -19,18 +14,8 @@ if random(3) < 2
 {
 snd_play(sndSniperTarget)
 walk = 0
-alarm[1] = 40
-alarm[2] = 30
-
-if instance_exists(Player)
-{
-    if Player.loops>0
-    {
-    alarm[1] = 30;
-    alarm[2] = 20;
-    }
-}
-
+alarm[1] = tellTime+10;
+alarm[2] = tellTime;
 gonnafire = 1
 }
 else

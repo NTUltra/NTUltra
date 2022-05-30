@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+alarm[0] = 0;
 meleedamage = 40
 raddrop = 40
 maxhealth = 190//65

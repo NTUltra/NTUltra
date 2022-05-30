@@ -6,6 +6,7 @@ event_inherited();
 alarm[0] = 0;
 raddrop = 30
 maxhealth = 120
+my_health = maxhealth;
 EnemyHealthAdjustments();
 meleedamage = 2
 

@@ -14,11 +14,17 @@ repeat(ammo)
 	}
 	else if random(35) < 1//random 30
 	{
-		crystal = instance_create(x,y,altCrystal);
+		if (random(30) < min(15,loops*2))
+			crystal = instance_create(x,y,goldAltCrystal);
+		else
+			crystal = instance_create(x,y,altCrystal);
 	}
 	else
 	{
-		crystal = instance_create(x,y,normalCrystal);
+		if (random(40) < min(15,loops*2))
+			crystal = instance_create(x,y,goldAltCrystal);
+		else
+			crystal = instance_create(x,y,goldNormalCrystal);
 	}
 	if crystal != noone
 	{

@@ -10,8 +10,6 @@ spr_walk = sprSniperWalk
 spr_hurt = sprSniperHurt
 spr_dead = sprSniperDead
 
-
-
 snd_hurt = sndSniperHit
 
 //behavior
@@ -21,5 +19,14 @@ alarm[1] = 60+random(90)
 gonnafire = 0
 wkick = 0
 proj = EnemyBullet4;
-if GetPlayerLoops() > 11
+loops = GetPlayerLoops();
+if loops > 11
 proj = EnemyBullet1Square;
+tellTime = 30
+actTime = 20;
+if loops > 0
+{
+	tellTime = 20;
+	actTime = 10;
+}
+alarm[0] = 1;

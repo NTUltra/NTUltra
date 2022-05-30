@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprSniperHurt","path":"sprites/sprSniperHurt/sprSniperHurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprSniperHurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

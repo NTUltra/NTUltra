@@ -19,7 +19,8 @@ snd_dead = sndHyperCrystalDead
 
 
 //behavior
-ammo = 4 + min(4,GetPlayerLoops());
+loops = GetPlayerLoops();
+ammo = 4 + min(4,loops);
 angleStep = 360/ammo;
 gunangle = random(360)
 maxspeed = 1;
@@ -29,6 +30,8 @@ maxCrystalDis = 100;
 myCrystals = ds_list_create();
 normalCrystal = LaserCrystal;
 altCrystal = LightningCrystal;
+goldNormalCrystal = LaserCrystal;
+goldAltCrystal = LightningCrystal;
 isCursed = false;
 easyCrystalLoss = true;
 scrBossFloor();

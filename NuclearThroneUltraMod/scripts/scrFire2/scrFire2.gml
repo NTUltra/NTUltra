@@ -7802,7 +7802,8 @@ function scrFire2() {
 	
 	//FRAZER
 	case 474:
-
+	if !instance_exists(SnowSound)
+		instance_create(x,y,SnowSound)
 	with instance_create(x,y,Frazer)
 	{
 		owner = other.id;

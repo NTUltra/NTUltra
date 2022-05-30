@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+alarm[0] = 0;
 raddrop = 30
 maxhealth = 60
 my_health = maxhealth;
