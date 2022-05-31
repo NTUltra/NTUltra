@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprNecromancerHurt","path":"sprites/sprNecromancerHurt/sprNecromancerHurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprNecromancerHurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

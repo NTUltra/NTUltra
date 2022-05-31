@@ -19,5 +19,7 @@ if !array_contains(buffList,other.id)
 		}
 		if alarm[1] > 10
 			alarm[1] -= 10;
+		if alarm[1] > 5
+			alarm[1] -= 5;
 	}
 }

@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndPartyHorn",
-  "duration": 0.0,
+  "duration": 1.685375,
   "parent": {
     "name": "Weapons",
     "path": "folders/Sounds/Weapons.yy",

@@ -2,7 +2,7 @@ raddrop = 1
 maxhealth = 6//7
 meleedamage = 3
 size = 1
-
+droprate = 9;
 event_inherited()
 
 spr_idle = sprFreak1Idle

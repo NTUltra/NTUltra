@@ -21,3 +21,5 @@ prevangle = image_angle;
 alarm[2] = 2;
 hit = [];
 owner = -1;
+startSpr = sprWazerStart;
+endSpr = sprWazerEnd;

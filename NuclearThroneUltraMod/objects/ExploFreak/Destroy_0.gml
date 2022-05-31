@@ -1,4 +1,4 @@
-scrDrop(70,0)
+scrDrop(droprate,0)
 instance_create(x,y,Explosion)
 
 event_inherited()

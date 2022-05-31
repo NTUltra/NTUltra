@@ -51,8 +51,8 @@ if area = 1 && instance_exists(WepPickup)
 {
 with WepPickup
 {
-if wep = 46
-other.canblacksword=true
+	if wep = 46 && !persistent
+		other.canblacksword=true
 }
 }
 ///next level what procedure
@@ -403,6 +403,24 @@ if (wep = 312 || bwep = 312|| cwep == 312) && loops=1
 
 }
 
+//DROP GIANT PANDA STICK
+if (wep = 200 || bwep = 200|| cwep == 200) && loops=1
+{
+
+	with instance_create(x,y,WepPickup)
+	{
+		persistent=true;
+		scrWeapons()
+		wep = 512
+		name = wep_name[wep]
+		ammo = 0
+		type = wep_type[wep]
+		curse = 0
+		sprite_index = wep_sprt[wep]
+	}
+
+}
+
 //DROP BLACK SWORD
 if loops=1 && canblacksword
 {
@@ -436,18 +454,19 @@ type = wep_type[wep]
 curse = 0
 sprite_index = wep_sprt[wep]
 }}
-if loops=2{
-with instance_create(x,y,WepPickup)
-{
-persistent=true;
-scrWeapons()
-wep =263
-name = wep_name[wep]
-ammo = 0
-type = wep_type[wep]
-curse = 0
-sprite_index = wep_sprt[wep]
-}}
+if loops=2 && (wep = 231 || bwep = 231|| cwep == 231){
+	with instance_create(x,y,WepPickup)
+	{
+	persistent=true;
+	scrWeapons()
+	wep =263
+	name = wep_name[wep]
+	ammo = 0
+	type = wep_type[wep]
+	curse = 0
+	sprite_index = wep_sprt[wep]
+	}
+}
 
 }
 

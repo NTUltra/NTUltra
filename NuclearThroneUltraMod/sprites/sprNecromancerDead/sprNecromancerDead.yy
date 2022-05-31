@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprNecromancerDead","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprNecromancerDead",
     "tags": [],
     "resourceType": "GMSequence",
   },

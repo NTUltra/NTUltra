@@ -1,10 +1,4 @@
-alarm[1] = 15+random(10)//10 5
-
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1] = 5+random(10);
-}
+alarm[1] = actTime+random(actTime)//10 5
 
 scrTarget()
 if target > 0
@@ -12,43 +6,51 @@ if target > 0
 //PLAYER EXISTS
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(5) < 4
 {//SEE PLAYER & FLEE
-if random(3) < 2
-{
-motion_add(point_direction(target.x,target.y,x,y)+random(80)-40,0.4)
-walk = 40+random(10)
-alarm[1] = walk
-gunangle = direction
-if hspeed > 0
-right = 1
-else if hspeed < 0
-right = -1
-}
-else
-{
-//REVIVE
+	if random(3) < 2
+	{
+	motion_add(point_direction(target.x,target.y,x,y)+random(80)-40,0.4)
+	walk = actTime*3+random(10)
+	alarm[1] = walk
+	gunangle = direction
+	if hspeed > 0
+	right = 1
+	else if hspeed < 0
+	right = -1
+	}
+	else
+	{
+	//REVIVE
 
-if instance_exists(Corpse)
-{
-crp = instance_nearest(x,y,Corpse)
-if collision_line(x,y,crp.x,crp.y,Wall,0,0) < 0
-{
-wkick = 5
-gunangle = point_direction(x,y,crp.x,crp.y)
-with crp
-{
-//instance_create(x,y,ReviveFX)
-//instance_change(Freak,true)
-var nearestFloor = instance_nearest(x,y,Floor);
-with instance_create(nearestFloor.x+16+random(16)-8,nearestFloor.y+16+random(16)-8,ReviveArea)
-{
-	owner = other.id;	
-}
-}
-snd_play(sndNecromancerRevive)
-alarm[1] = 20+random(20)
-}
-}
-}
+	if instance_exists(Corpse)
+	{
+		crp = instance_nearest(x,y,Corpse)
+		if collision_line(x,y,crp.x,crp.y,Wall,0,0) < 0
+		{
+			wkick = 5
+			gunangle = point_direction(x,y,crp.x,crp.y)
+			with crp
+			{
+			//instance_create(x,y,ReviveFX)
+			//instance_change(Freak,true)
+			var nearestFloor = instance_nearest(x,y,Floor);
+			with instance_create(nearestFloor.x+16+random(16)-8,nearestFloor.y+16+random(16)-8,other.reviveArea)
+			{
+				owner = other.id;	
+			}
+			}
+			snd_play(sndNecromancerRevive)
+			alarm[1] = actTime*2+random(actTime*2)
+		}
+		else
+		{
+		event_user(0);	
+		}
+	}
+	else
+	{
+	event_user(0);	
+	}
+	}
 }
 else
 {
@@ -67,7 +69,7 @@ gunangle = point_direction(x,y,crp.x,crp.y)
 with crp
 {
 var nearestFloor = instance_nearest(x,y,Floor);
-with instance_create(nearestFloor.x+16+random(16)-8,nearestFloor.y+16+random(16)-8,ReviveArea)
+with instance_create(nearestFloor.x+16+random(16)-8,nearestFloor.y+16+random(16)-8,other.reviveArea)
 {
 	owner = other.id;	
 }
@@ -75,6 +77,10 @@ with instance_create(nearestFloor.x+16+random(16)-8,nearestFloor.y+16+random(16)
 snd_play(sndNecromancerRevive)
 }
 alarm[1] = 15+random(5)
+}
+else
+{
+event_user(0);	
 }
 }
 
@@ -91,6 +97,10 @@ if hspeed > 0
 right = 1
 else if hspeed < 0
 right = -1
+}
+else
+{
+	event_user(0);	
 }
 }
 }

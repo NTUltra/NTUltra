@@ -4532,7 +4532,7 @@ function scrWeapons() {
 	wep_rad[410] = 0;
 	
 	wep_name[411] = "KRAKEN YOYO GUN"
-	wep_type[411] = 3
+	wep_type[411] = 4
 	wep_auto[411] = 1
 	wep_load[411] = 24
 	wep_cost[411] = 3
@@ -5164,7 +5164,7 @@ function scrWeapons() {
 	wep_load[468] = 9
 	wep_cost[468] = 1
 	wep_sprt[468] = sprMorphORay
-	wep_area[468] = 22
+	wep_area[468] = 25
 	wep_text[468] = ""
 	wep_swap[468] = sndSwapEnergy
 	wep_rad[468] = 6;
@@ -5319,7 +5319,7 @@ function scrWeapons() {
 	wep_cost[482] = 1
 	wep_sprt[482] = sprExplosiveMorphORay
 	wep_area[482] = 10
-	wep_text[482] = "stinky sheep"
+	wep_text[482] = "the ray of stank"
 	wep_swap[482] = sndSwapExplosive
 	wep_rad[482] = 0;
 	
@@ -5395,7 +5395,7 @@ function scrWeapons() {
 	wep_load[489] = 26
 	wep_cost[489] = 3
 	wep_sprt[489] = sprKrakenYoyoGun
-	wep_area[489] = 7
+	wep_area[489] = 8
 	wep_text[489] = ""
 	wep_swap[489] = sndSwapEnergy
 	wep_rad[489] = 0;
@@ -5553,6 +5553,105 @@ function scrWeapons() {
 	wep_text[503] = "hold for more power"
 	wep_swap[503] = sndSwapBow
 	wep_rad[503] = 12;//12
+	
+	wep_name[504] = "ULTRA WAZER RIFLE"
+	wep_type[504] = 5
+	wep_auto[504] = 1
+	wep_load[504] = 7
+	wep_cost[504] = 1
+	wep_sprt[504] = sprWazerRifle
+	wep_area[504] = 25
+	wep_text[504] = "wobbly bobbly"
+	wep_swap[504] = sndSwapEnergy
+	wep_rad[504] = 4;
+	
+	wep_name[505] = "FROST-O-RAY"
+	wep_type[505] = 4
+	wep_auto[505] = 1
+	wep_load[505] = 9
+	wep_cost[505] = 1
+	wep_sprt[505] = sprExplosiveMorphORay
+	wep_area[505] = 13
+	wep_text[505] = "breezy"
+	wep_swap[505] = sndSwapExplosive
+	wep_rad[505] = 0;
+	
+	wep_name[506] = "ULTRA SWORD GUN"
+	wep_type[506] = 3
+	wep_auto[506] = 1
+	wep_load[506] = 10
+	wep_cost[506] = 2
+	wep_sprt[506] = sprSwordGun
+	wep_area[506] = 23
+	wep_text[506] = "we have gone too far!"
+	wep_swap[506] = sndSwapSword
+	wep_rad[506] = 10;
+	
+	wep_name[507] = "ULTRA SWORD"
+	wep_type[507] = 0
+	wep_auto[507] = 0
+	wep_load[507] = 9
+	wep_cost[507] = 0
+	wep_sprt[507] = sprEnergySword
+	wep_area[507] = 22
+	wep_text[507] = "meta slayer"
+	wep_swap[507] = sndSwapEnergy
+	wep_rad[507] = 12;
+	
+	wep_name[508] = "LASER YOYO GUN"
+	wep_type[508] = 5
+	wep_auto[508] = 1
+	wep_load[508] = 26
+	wep_cost[508] = 3
+	wep_sprt[508] = sprKrakenYoyoGun
+	wep_area[508] = 9
+	wep_text[508] = "lightshow yo yo"
+	wep_swap[508] = sndSwapEnergy
+	wep_rad[508] = 0;
+	
+	wep_name[509] = "EXPLOSIVE BLADE GUN"
+	wep_type[509] = 4
+	wep_auto[509] = 1
+	wep_load[509] = 14
+	wep_cost[509] = 1.5
+	wep_sprt[509] = sprBladeGun
+	wep_area[509] = 13
+	wep_text[509] = "handle with care"
+	wep_swap[509] = sndSwapBow
+	wep_rad[509] = 0;
+	
+	wep_name[510] = "ULTRA ASSAULT SHOTGUN"
+	wep_type[510] = 2
+	wep_auto[510] = 0
+	wep_load[510] = 30//36
+	wep_cost[510] = 7
+	wep_sprt[510] = sprUltraShotgun
+	wep_area[510] = 26
+	wep_text[510] = ""
+	wep_swap[510] = sndSwapShotgun
+	wep_rad[510] = 35;//14*3 = 42
+	
+	wep_name[511] = "SUPER DISC GUN"
+	wep_type[511] = 3
+	wep_auto[511] = 1
+	wep_load[511] = 12
+	wep_cost[511] = 3
+	wep_sprt[511] = sprSuperDiscGun
+	wep_area[511] = -1
+	wep_text[511] = "mistakes were made"
+	wep_swap[511] = sndSwapShotgun
+	wep_rad[511] = 0;//retail 14
+	
+	wep_name[512] = "GIANT PANDA STICK"
+	wep_type[512] = 0
+	wep_auto[512] = 0
+	wep_load[512] = 11;
+	wep_cost[512] = 0
+	wep_sprt[512] = sprGiantPandaStick
+	wep_area[512] = -1
+	wep_text[512] = "big stick"
+	wep_swap[512] = sndSwapHammer
+	wep_rad[512] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 

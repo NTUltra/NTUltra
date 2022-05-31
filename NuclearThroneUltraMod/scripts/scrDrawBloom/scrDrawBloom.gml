@@ -310,9 +310,9 @@ function scrDrawBloom() {
 	}
 	with PlayerWazer
 	{
-		draw_sprite_ext(sprWazerStart,-1,x,y,1,2,image_angle,c_white,ba);
+		draw_sprite_ext(startSpr,-1,x,y,1,2,image_angle,c_white,ba);
 		draw_sprite_ext(sprite_index,-1,x,y,image_xscale,2,image_angle,c_white,ba)
-		draw_sprite_ext(sprWazerEnd,-1,
+		draw_sprite_ext(endSpr,-1,
 		x+lengthdir_x(image_xscale,image_angle),
 		y+lengthdir_y(image_xscale,image_angle),1,2,image_angle,c_white,ba);
 	}

@@ -1,4 +1,4 @@
-scrDrop(60,0)
+scrDrop(droprate,0)
 
 snd_play(sndExplosionL)
 ang = random(360)
@@ -9,14 +9,24 @@ instance_create(x+lengthdir_x(16,ang+240),y+lengthdir_y(8,ang+240),SmallExplosio
 
 instance_create(x,y,Explosion);
 
-repeat(8)
+snd_play(sndLightning1,0.1)
+var ang = random(360);
+var am = 6;
+var angStep = 360/am;
+var l = min(6,4+GetPlayerLoops());
+repeat(am)
 {
-	with instance_create(x,y,TrapFire)
-	{motion_add(random(360),1+random(2))
-	team = other.team
-	move_contact_solid(direction,6)
-	image_speed=0.5+random(0.2);
-	sprite_index= sprFireLilHunter;}
+	with instance_create(x,y,Lightning)
+	{
+		image_angle = ang;
+		team = other.team
+		ammo = l;
+		event_perform(ev_alarm,0)
+		visible = 0
+		with instance_create(x,y,LightningSpawn)
+		image_angle = other.image_angle
+	}
+	ang += angStep;
 }
 
 event_inherited()

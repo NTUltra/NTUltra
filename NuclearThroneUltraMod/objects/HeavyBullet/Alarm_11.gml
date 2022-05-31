@@ -22,7 +22,7 @@ if um == ultramods.laserBullet
 	}
 } else if um == ultramods.bulletShotgun
 {
-	with instance_create(x,y,Slug)
+	with instance_create(x,y,Bullet2Heavy)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;

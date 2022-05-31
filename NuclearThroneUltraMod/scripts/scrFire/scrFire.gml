@@ -2807,7 +2807,6 @@ function scrFire() {
 	//ULTRA SHOVEL
 	case 118:
 
-
 	snd_play_fire(sndUltraShovel)
 
 	instance_create(x,y,Dust)

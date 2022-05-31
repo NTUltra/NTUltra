@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprStick","path":"sprites/sprStick/sprStick.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprStick",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -19,5 +19,14 @@ seed[5] = vk_right;
 seed[6] = vk_down;
 seed[7] = vk_left;
 seedI = 0;
+disableSecret1[0] = vk_up;
+disableSecret1[1] = vk_up;
+disableSecret1[2] = vk_up;
+disableSecret1[3] = vk_up;
+disableSecret1[4] = vk_down;
+disableSecret1[5] = vk_down;
+disableSecret1[6] = vk_down;
+disableSecret1[7] = vk_down;
+disableSecret1I = 0;
 
 //event_user(2);

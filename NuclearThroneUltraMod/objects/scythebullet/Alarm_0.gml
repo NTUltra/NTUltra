@@ -1,4 +1,4 @@
-/// @description FrostSlash
+/// @description SpinSlash
 snd_play(choose(sndSword1,sndSword2),0.2,true)
 instance_create(x,y,Dust)
 

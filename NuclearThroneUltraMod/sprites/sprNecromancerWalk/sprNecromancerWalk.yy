@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprNecromancerWalk","path":"sprites/sprNecromancerWalk/sprNecromancerWalk.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprNecromancerWalk",
     "tags": [],
     "resourceType": "GMSequence",
   },
