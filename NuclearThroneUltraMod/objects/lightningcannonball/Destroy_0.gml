@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 snd_play(sndLightningCannonEnd,0.1,true)
-var am = 6;
+var am = 8;
 var ang = direction;
 var angStep = 360/am;
 repeat(am)
@@ -13,7 +13,7 @@ repeat(am)
 		image_angle = ang
 		accuracy=0;
 		team = other.team
-		ammo = 14;
+		ammo = 16;
 		event_perform(ev_alarm,0)
 		visible = 0
 		with instance_create(x,y,LightningSpawn)

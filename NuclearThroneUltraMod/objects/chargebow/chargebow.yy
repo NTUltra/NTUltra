@@ -1,17 +1,14 @@
 {
-  "spriteId": {
-    "name": "mskWallBreak",
-    "path": "sprites/mskWallBreak/mskWallBreak.yy",
-  },
+  "spriteId": null,
   "solid": false,
-  "visible": false,
+  "visible": true,
   "managed": true,
-  "spriteMaskId": {
-    "name": "mskWallBreak",
-    "path": "sprites/mskWallBreak/mskWallBreak.yy",
-  },
+  "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "projectile",
+    "path": "objects/projectile/projectile.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 0,
@@ -26,18 +23,18 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"Wall","path":"objects/Wall/Wall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"TopDecal","path":"objects/TopDecal/TopDecal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Projectiles",
-    "path": "folders/Objects/Projectiles.yy",
+    "name": "Charge",
+    "path": "folders/Objects/Projectiles/Charge.yy",
   },
   "resourceVersion": "1.0",
-  "name": "WallBreak",
+  "name": "ChargeBow",
   "tags": [],
   "resourceType": "GMObject",
 }

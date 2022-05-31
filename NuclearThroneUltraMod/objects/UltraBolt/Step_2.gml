@@ -3,6 +3,8 @@
 image_angle=other.direction;
 image_xscale=other.speed;
 theColour=c_lime;
+image_yscale = other.trailScale;
+depth = other.depth + 1;
 }
 
 if instance_exists(enemy) and instance_exists(Player)
@@ -19,6 +21,8 @@ with instance_create(x,y,BoltTrail)
 image_angle=point_direction(x,y,other.dir.x-other.hspeed,other.dir.y-other.vspeed)+180;
 image_xscale=point_distance(x,y,other.dir.x-other.hspeed,other.dir.y-other.vspeed);
 theColour=c_lime;
+image_yscale = other.trailScale;
+depth = other.depth + 1;
 }  
     
     x = dir.x-hspeed

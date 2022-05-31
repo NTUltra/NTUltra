@@ -1,19 +1,13 @@
 {
-  "spriteId": {
-    "name": "mskWallBreakSmall",
-    "path": "sprites/mskWallBreakSmall/mskWallBreakSmall.yy",
-  },
+  "spriteId": null,
   "solid": false,
-  "visible": false,
+  "visible": true,
   "managed": true,
-  "spriteMaskId": {
-    "name": "mskWallBreakSmall",
-    "path": "sprites/mskWallBreakSmall/mskWallBreakSmall.yy",
-  },
+  "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "WallBreak",
-    "path": "objects/WallBreak/WallBreak.yy",
+    "name": "ChargeBow",
+    "path": "objects/ChargeBow/ChargeBow.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -27,15 +21,18 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Projectiles",
-    "path": "folders/Objects/Projectiles.yy",
+    "name": "Charge",
+    "path": "folders/Objects/Projectiles/Charge.yy",
   },
   "resourceVersion": "1.0",
-  "name": "SmallWallBreak",
+  "name": "UltraChargeBow",
   "tags": [],
   "resourceType": "GMObject",
 }

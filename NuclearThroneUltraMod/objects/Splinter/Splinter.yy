@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskSplinter",
     "path": "sprites/mskSplinter/mskSplinter.yy",

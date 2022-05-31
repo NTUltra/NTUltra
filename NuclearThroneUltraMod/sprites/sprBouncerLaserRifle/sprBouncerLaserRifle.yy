@@ -93,8 +93,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "UltraWeapons",
-    "path": "folders/Sprites/Weapons/Custom/UltraWeapons.yy",
+    "name": "Custom",
+    "path": "folders/Sprites/Weapons/Custom.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprBouncerLaserRifle",

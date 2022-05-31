@@ -2,10 +2,11 @@
 
 // Inherit the parent event
 event_inherited();
+image_speed = 0.4;
 typ = 2;
 alarm[0] = 1;
 dmg = 40;
-friction = 0.2;
+friction = 0.1;
 if instance_exists(Player) && Player.skill_got[17] = 1
 	friction -= 0.05;
 emitter = audio_emitter_create();

@@ -15,4 +15,4 @@ with instance_create(x,y,Lightning)
 		image_angle = other.image_angle
 }
 alarm[0] = 1+irandom(1);
-BackCont.shake += 4
+BackCont.shake += 3

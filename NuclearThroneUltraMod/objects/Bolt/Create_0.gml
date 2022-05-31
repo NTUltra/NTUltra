@@ -6,3 +6,4 @@ dmg = 20;
 boltStick = BoltStick;
 hitEntities = [];
 alarm[11] = 1;
+trailScale = 1;

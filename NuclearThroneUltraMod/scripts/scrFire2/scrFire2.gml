@@ -6852,7 +6852,7 @@ function scrFire2() {
 	//FLAME SMG
 	case 442:
 
-	snd_play_fire(sndPistol)
+	snd_play_fire(sndFlameRevolver)
 	with instance_create(x,y,Shell)
 	motion_add(aimDirection+other.right*100+random(60)-30,2+random(2))
 
@@ -8289,7 +8289,6 @@ function scrFire2() {
 	BackCont.viewx2 += lengthdir_x(15,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(15,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 3
-	wkick -= 3
 
 	break;
 	
@@ -8343,16 +8342,64 @@ function scrFire2() {
 		snd_play_fire(sndLightningCannon)
 
 	with instance_create(x,y,LightningCannonBall)
-	{motion_add(aimDirection+(random(10)-5)*other.accuracy,8)
+	{motion_add(aimDirection+(random(10)-5)*other.accuracy,6)
 	image_angle = direction
 	team = other.team}
 
 	BackCont.viewx2 += lengthdir_x(15,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(15,aimDirection+180)*UberCont.opt_shake
-	BackCont.shake += 8
+	BackCont.shake += 7
 	wkick = 5
 
 	break
+	
+	//REVOLVER
+	case 501:
+
+	snd_play_fire(sndFlameRevolver)
+
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+	with instance_create(x,y,Bullet1Flame)
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,14)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(6.5,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(6.5,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 5
+	wkick = 2
+
+	break;
+	
+	//BOW
+	case 502:
+
+	with instance_create(x,y,ChargeBow)
+	{
+		maxcharge=3;//maxrate
+		creator = other.id
+		chargetime = 6;
+		team = other.team
+		event_perform(ev_alarm,0)
+	}
+
+	break;
+	
+	//ULTRA BOW
+	case 503:
+
+	with instance_create(x,y,UltraChargeBow)
+	{
+		maxcharge=3;//maxrate
+		creator = other.id
+		chargetime = 5;
+		team = other.team
+		event_perform(ev_alarm,0)
+	}
+
+	break;
 	
 	}//end of switch part 2!
 }

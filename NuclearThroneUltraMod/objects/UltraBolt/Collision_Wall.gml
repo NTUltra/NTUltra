@@ -12,7 +12,8 @@ if wallsdestroyed<1{
 else{
 	x = xprevious;
 	y = yprevious;
-	with instance_create(x,y,SmallWallBreak) {
+	speed = clamp(speed,12,18);
+	with instance_create(x+hspeed,y+vspeed,BoltWallBreak) {
 		image_angle = other.image_angle;	
 	}
 	with other

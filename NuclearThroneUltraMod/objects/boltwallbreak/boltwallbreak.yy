@@ -1,14 +1,14 @@
 {
   "spriteId": {
-    "name": "mskWallBreakSmall",
-    "path": "sprites/mskWallBreakSmall/mskWallBreakSmall.yy",
+    "name": "mskBoltWallBreak",
+    "path": "sprites/mskBoltWallBreak/mskBoltWallBreak.yy",
   },
   "solid": false,
   "visible": false,
   "managed": true,
   "spriteMaskId": {
-    "name": "mskWallBreakSmall",
-    "path": "sprites/mskWallBreakSmall/mskWallBreakSmall.yy",
+    "name": "mskBoltWallBreak",
+    "path": "sprites/mskBoltWallBreak/mskBoltWallBreak.yy",
   },
   "persistent": false,
   "parentObjectId": {
@@ -35,7 +35,7 @@
     "path": "folders/Objects/Projectiles.yy",
   },
   "resourceVersion": "1.0",
-  "name": "SmallWallBreak",
+  "name": "BoltWallBreak",
   "tags": [],
   "resourceType": "GMObject",
 }

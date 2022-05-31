@@ -16,7 +16,7 @@ if instance_exists(creator)
 	with creator
 	{
 		motion_add(d+180,1);
-		wkick -= 6
+		wkick = 5
 	}
 	BackCont.viewx2 += lengthdir_x(15,d+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(15,d+180)*UberCont.opt_shake

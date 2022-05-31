@@ -4038,9 +4038,9 @@ function scrWeapons() {
 	wep_type[366] = 1
 	wep_auto[366] = 0
 	wep_load[366] = 6
-	wep_cost[366] = 1
+	wep_cost[366] = 1.5
 	wep_sprt[366] = sprBouncerRevolver
-	wep_area[366] = 1
+	wep_area[366] = 2
 	wep_text[366] = "hey how you doing"
 	wep_swap[366] = sndSwapPistol
 	wep_rad[366] = 0;
@@ -5520,6 +5520,39 @@ function scrWeapons() {
 	wep_text[500] = "a devestating development"
 	wep_swap[500] = sndSwapEnergy
 	wep_rad[500] = 0;
+	
+	wep_name[501] = "FLAME REVOLVER"
+	wep_type[501] = 1
+	wep_auto[501] = 0
+	wep_load[501] = 6
+	wep_cost[501] = 1.5
+	wep_sprt[501] = sprRevolver
+	wep_area[501] = 2
+	wep_text[501] = "one and a half bullet cost"
+	wep_swap[501] = sndSwapPistol
+	wep_rad[501] = 0;
+	
+	wep_name[502] = "BOW"
+	wep_type[502] = 3
+	wep_auto[502] = 0
+	wep_load[502] = 20
+	wep_cost[502] = 1
+	wep_sprt[502] = sprBow
+	wep_area[502] = 3
+	wep_text[502] = "hold fire to charge#and deal more damage"
+	wep_swap[502] = sndSwapBow
+	wep_rad[502] = 0;
+	
+	wep_name[503] = "ULTRA BOW"
+	wep_type[503] = 3
+	wep_auto[503] = 0
+	wep_load[503] = 13//17
+	wep_cost[503] = 1
+	wep_sprt[503] = sprUltraBow
+	wep_area[503] = 19
+	wep_text[503] = "hold for more power"
+	wep_swap[503] = sndSwapBow
+	wep_rad[503] = 12;//12
 	
 	maxwep = array_length(wep_name)-1;
 
