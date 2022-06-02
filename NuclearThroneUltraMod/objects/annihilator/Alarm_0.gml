@@ -13,4 +13,4 @@ with instance_create(xx,yy,MeatExplosion)
 
 with instance_create(x,y,BloodStreak)
 image_angle = random(360);
-BackCont.shake += 1;
+BackCont.shake += 3;

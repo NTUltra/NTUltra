@@ -84,6 +84,7 @@ if patience>0||ultra_got[0]=1
 {
 skillpoints+=patience;
 skillsChosen-=patience;
+debug("patience fuck");
 patience=0;
 }
 
@@ -185,7 +186,7 @@ if race=14//PANDA
 		    prevwep=wep;
         
 		    //handling golden weapons
-		    if string_copy(wep_name[prevwep],0,4) = "GOLD"&&loops<1
+		    if scrCheckGold(wep_name[prevwep])
 			{
 				prevwep=9//minigun tier 6
 				scrUnlockBSkin(14,"FOR CONVERTING A GOLDEN WEAPON",0)

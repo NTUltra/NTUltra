@@ -4226,6 +4226,7 @@
     {"id":{"name":"sndMutant27Wrld","path":"sounds/sndMutant27Wrld/sndMutant27Wrld.yy",},"order":10,},
     {"id":{"name":"sndBallBossWake","path":"sounds/sndBallBossWake/sndBallBossWake.yy",},"order":3,},
     {"id":{"name":"sprMuchasLaser","path":"sprites/sprMuchasLaser/sprMuchasLaser.yy",},"order":246,},
+    {"id":{"name":"FrostRaySound","path":"objects/FrostRaySound/FrostRaySound.yy",},"order":129,},
     {"id":{"name":"sndSnowTankAim","path":"sounds/sndSnowTankAim/sndSnowTankAim.yy",},"order":28,},
     {"id":{"name":"sndSnowTankHurt","path":"sounds/sndSnowTankHurt/sndSnowTankHurt.yy",},"order":29,},
     {"id":{"name":"sndSnowTankCooldown","path":"sounds/sndSnowTankCooldown/sndSnowTankCooldown.yy",},"order":30,},

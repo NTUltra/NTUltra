@@ -114,14 +114,29 @@ Player.decay = 300
 //CROWN OF REINCARNATION
 if crown==11
 {
-
-with Player
-{
-skeletonlives=0;
-var boost = level;
-instance_destroy();
-}
-scrUnlockGameMode(25,"FOR GETTING RESURRECTED");
+	with Player
+	{
+		skeletonlives=0;
+		reincarnate = true;
+		var boost = level;
+		var pw = wep;
+		var bw = bwep;
+		var cw = cwep;
+		//MODIFIERS!
+		var wp1 = wepmod1;
+		var wp2 = wepmod2;
+		var wp3 = wepmod3;
+		//BMODIFIERS!
+		var wb1 = bwepmod1;
+		var wb2 = bwepmod2;
+		var wb3 = bwepmod3;
+		//CMODIFIERS!
+		var wc1 = cwepmod1;
+		var wc2 = cwepmod2;
+		var wc3 = cwepmod3;
+		instance_destroy();
+	}
+	scrUnlockGameMode(25,"FOR GETTING RESURRECTED");
 with WepPickup
 instance_destroy();
 
@@ -142,6 +157,31 @@ with Player//Data to keep
 	kills = other.kills;
 	subarea=other.subarea;
 	boostLevel = boost;
+	
+	wep = pw;
+	bwep = bw;
+	cwep = cw;
+	
+	wepmod1 = wp1;
+	wepmod2 = wp2;
+	wepmod3 = wp3;
+	
+	bwepmod1 = wb1;
+	bwepmod2 = wb2;
+	bwepmod3 = wb3;
+	
+	cwepmod1 = wc1;
+	cwepmod2 = wc2;
+	cwepmod3 = wc3;
+	
+	//give the ammos
+	ammo[1] = typ_amax[1];
+	ammo[2] = typ_amax[2];
+	ammo[3] = typ_amax[3];
+	ammo[4] = typ_amax[4];
+	ammo[5] = typ_amax[5];
+	
+	scrWeaponHold();
 	//event_perform(ev_other,ev_room_end);
 }
 /*with instance_create(x,y,GenCont)

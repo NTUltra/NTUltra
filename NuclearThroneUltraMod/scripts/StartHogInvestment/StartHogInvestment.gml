@@ -2,7 +2,7 @@
 // /@description
 ///@param
 function StartHogInvestment(){
-	if ultra_got[79]&&loops>=2 && !usedHogInvestment
+	if ultra_got[79] && loops >= 2 && !usedHogInvestment
 	{
 		usedHogInvestment = true;
 		//skillsChosen=10;

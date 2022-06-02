@@ -474,10 +474,10 @@ else {
 
 RadMony = false;
 if race == 6 || race == 20 {
-    if random(100) < 10
+    if random(100) < 1
     RadMony = true; //this will be a small chance
 }
-
+reincarnate = false;
 friction = 0.45
 image_speed = 0.4
 alarm[6] = 1000 //run a security if outside level

@@ -10,4 +10,4 @@ with instance_create(xx,yy,PlasmaImpact)
 	team = other.team;
 	scrCanHumphry();
 }
-BackCont.shake += 2;
+BackCont.shake += 3;

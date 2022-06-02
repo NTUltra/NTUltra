@@ -9,7 +9,8 @@ event_inherited()
 //motion_add(direction,0.8)
 if walk > 0
 {
-motion_add(point_direction(x,y,target.x,target.y),0.04);
+	if target > -1 && instance_exists(target)
+		motion_add(point_direction(x,y,target.x,target.y),0.04);
 walk -= 1
 motion_add(direction,1.2)
 }
@@ -82,8 +83,8 @@ move_contact_solid(direction,0.4)
 dodge -= 1
 }
 
-if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<60&&mask_index!=mskPickupThroughWall&&sprite_index!=spr_fire&&sprite_index!=sprChesireCatLaser && instance_exists(Floor)&&target>0{
-if mouse_check_button_pressed(mb_left) and target > 0 && point_distance(x,y,instance_nearest(x,y,Floor).x,instance_nearest(x,y,Floor).y)<32
+if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<60&&mask_index!=mskPickupThroughWall&&sprite_index!=spr_fire&&sprite_index!=sprChesireCatLaser && instance_exists(Floor)&&target>0 && instance_exists(target){
+if mouse_check_button_pressed(mb_left) && point_distance(x,y,instance_nearest(x,y,Floor).x,instance_nearest(x,y,Floor).y)<32
 {
 //if point_distance(x,y,target.x,target.y) < 64
 //direction = point_direction(x,y,target.x,target.y)

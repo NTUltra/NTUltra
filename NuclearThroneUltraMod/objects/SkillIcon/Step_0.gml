@@ -3,7 +3,7 @@ if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y <
 Player.skill_got[skill] = 1
 Player.skillsChosen+=1;
 Player.skillpoints -= 1
-
+debug("add one skill");
 if skill = 0//heavy heart
 {
 //Unlock Elementor

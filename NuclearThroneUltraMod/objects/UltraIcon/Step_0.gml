@@ -218,70 +218,80 @@ if skill == 76//skelly ultra D
 {
     if Player.ultimategamble==false//skeleton lives
     {
-    with Player
-    {
-    skeletonlives+=3;
-    ultimategamble=false;
-	maxspeed += 0.4;//Normal speed
-	accuracy = 1;//Normal accuracy
-	standartAccuracy = accuracy;
-		if skill_got[19] //eagle eyes
-		{
-			scrApplyEagleEyes();
-		}
-    }
+	    with Player
+	    {
+	    skeletonlives+=3;
+	    ultimategamble=false;
+		maxspeed += 0.4;//Normal speed
+		accuracy = 1;//Normal accuracy
+		standartAccuracy = accuracy;
+			if skill_got[19] //eagle eyes
+			{
+				scrApplyEagleEyes();
+			}
+	    }
     
     }
     else//ULTIMATE GAMBLE
     {
-    if random(4+Player.skill_got[5])<1//Better odds with thronebutt
+    if true || random(4+Player.skill_got[5])<1//Better odds with thronebutt
     {//you will die now
     
-    with GenCont
-    race=Player.race;
+		with GenCont
+			race=Player.race;
     
-    with Player
-    {
-		instance_destroy();
-		with instance_create(x,y,Player)//Data to keep
-		{
-		bskin = other.bskin
-		race = other.race
-		crown = other.crown
-		lastarea = other.lastarea;
-		area = other.area//other.lastarea;
-		loops = other.loops;
-		hard = other.hard;
-		kills = other.kills;
-		subarea=other.subarea;
-		boostLevel = other.level;
+	    with Player
+	    {
+			reincarnate = true;
+			instance_destroy();
+			with instance_create(x,y,Player)//Data to keep
+			{
+				bskin = other.bskin
+				race = other.race
+				crown = other.crown
+				lastarea = other.lastarea;
+				area = other.area//other.lastarea;
+				loops = other.loops;
+				hard = other.hard;
+				kills = other.kills;
+				subarea=other.subarea;
+				boostLevel = other.level;
+				
+				//skeletonlives=other.skeletonlives;
 
-		skeletonlives=other.skeletonlives;
+				wep=other.wep
+				bwep=other.bwep
+				cwep = other.cwep;
 
-		wep=other.wep
-		bwep=other.bwep
+				wepmod1=other.wepmod1
+				wepmod2=other.wepmod2
+				wepmod3=other.wepmod3
+				wepmod4=other.wepmod4
 
-		wepmod1=other.wepmod1
-		wepmod2=other.wepmod2
-		wepmod3=other.wepmod3
-		wepmod4=other.wepmod4
+				bwepmod1=other.bwepmod1
+				bwepmod2=other.bwepmod2
+				bwepmod3=other.bwepmod3
+				bwepmod4=other.bwepmod4
+		
+				cwepmod1=other.cwepmod1
+				cwepmod2=other.cwepmod2
+				cwepmod3=other.cwepmod3
+				cwepmod4=other.cwepmod4
 
-		bwepmod1=other.bwepmod1
-		bwepmod2=other.bwepmod2
-		bwepmod3=other.bwepmod3
-		bwepmod4=other.bwepmod4
-
-		//give the ammos
-		ammo[1] = typ_amax[1];
-		ammo[2] = typ_amax[2];
-		ammo[3] = typ_amax[3];
-		ammo[4] = typ_amax[4];
-		ammo[5] = typ_amax[5];
-		//event_perform(ev_other,ev_room_end);
+				//give the ammos
+				ammo[1] = typ_amax[1];
+				ammo[2] = typ_amax[2];
+				ammo[3] = typ_amax[3];
+				ammo[4] = typ_amax[4];
+				ammo[5] = typ_amax[5];
+				
+				snd_play_2d(snd_dead,0,true);
+				scrWeaponHold();
+				//event_perform(ev_other,ev_room_end);
+			}
 		}
-	}
-    with Corpse
-    instance_destroy();
+	    with Corpse
+			instance_destroy();
     }
     else//pick out ultras
     {

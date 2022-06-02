@@ -1,15 +1,9 @@
 {
-  "spriteId": {
-    "name": "sprCrownSelect",
-    "path": "sprites/sprCrownSelect/sprCrownSelect.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": {
-    "name": "mskIcon",
-    "path": "sprites/mskIcon/mskIcon.yy",
-  },
+  "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,
@@ -27,16 +21,15 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Menu",
-    "path": "folders/Objects/Menu.yy",
+    "name": "Bursts",
+    "path": "folders/Objects/Player/Ability/Bursts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "CrownIcon",
+  "name": "FrostRaySound",
   "tags": [],
   "resourceType": "GMObject",
 }

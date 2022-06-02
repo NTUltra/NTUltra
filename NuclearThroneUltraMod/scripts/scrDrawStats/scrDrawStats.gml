@@ -117,7 +117,6 @@ function scrDrawStats() {
 			dir ++;
 		}
 	}
-	totUltras = 1000;
 	if totUltras > 999
 	{
 		totUltras = string(totUltras);

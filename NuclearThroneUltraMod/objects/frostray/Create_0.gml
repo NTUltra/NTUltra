@@ -4,5 +4,5 @@
 event_inherited();
 range += 32;
 lineWidth = 2;//No energy brain scaling
-lineColour = make_color_rgb(108,195,4);
-bloomColour = make_color_rgb(55,255,50);
+lineColour = make_color_rgb(0,255,255);
+bloomColour = make_color_rgb(153,255,255);

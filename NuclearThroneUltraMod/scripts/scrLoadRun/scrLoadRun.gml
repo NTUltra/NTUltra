@@ -112,6 +112,10 @@ function scrLoadRun(){
 				UberCont.seed = encryptedRun.seed;
 				Player.horrorEtaken = encryptedRun.horrorEtaken;
 				Player.hogpoints = encryptedRun.hogpoints;
+				if variable_struct_exists(encryptedRun, "usedHogInvestment")
+					Player.usedHogInvestment = encryptedRun.usedHogInvestment;
+				else
+					Player.usedHogInvestment = true;
 				Player.boostLevel = encryptedRun.boostLevel;
 				UberCont.time_microseconds = encryptedRun.time_microseconds;
 				UberCont.time_seconds = encryptedRun.time_seconds;

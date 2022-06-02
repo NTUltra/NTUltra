@@ -7616,7 +7616,7 @@ function scrFire2() {
 
 	break;
 	
-	//CUBER
+	//HEAVY CUBER
 	case 465:
 
 	snd_play_fire(sndCuber)
@@ -7636,7 +7636,7 @@ function scrFire2() {
 
 	break;
 	
-	//CUBER RIFLE
+	//HEAVY CUBER RIFLE
 	case 466:
 
 	snd_play_fire(sndCuber)
@@ -7683,7 +7683,7 @@ function scrFire2() {
 	{
 		team = other.team;
 	creator = other.id
-	ammo = 5
+	ammo = 4
 	time = 3
 	team = other.team
 	explosive=2;
@@ -8234,10 +8234,10 @@ function scrFire2() {
 	{
 		if Player.skill_got[17] = 1//laserbrain
 		{
-		dmg=7+(other.betterlaserbrain*2)
+		dmg=8+(other.betterlaserbrain*2)
 		}
 		else
-		dmg = 5
+		dmg = 6
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -8438,10 +8438,9 @@ function scrFire2() {
 	//FROST-O-RAY
 	case 505:
 
-	if !instance_exists(MorphSound)
+	if !instance_exists(FrostRaySound)
 	{
-		instance_create(x,y,MorphSound)
-		snd_play(sndFrostShot2,0.1);
+		instance_create(x,y,FrostRaySound)
 	}
 	with instance_create(x,y,FrostRay)
 	{
@@ -8508,7 +8507,7 @@ function scrFire2() {
 	snd_play_fire(sndDiscgun)
 
 	with instance_create(x,y,LaserYoyo)
-	{motion_add(aimDirection+(random(10)-5)*other.accuracy,9)
+	{motion_add(aimDirection+(random(10)-5)*other.accuracy,8)
 	image_angle = direction
 	team = other.team}
 

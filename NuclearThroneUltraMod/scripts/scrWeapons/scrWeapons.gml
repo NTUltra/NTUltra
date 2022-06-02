@@ -3005,7 +3005,7 @@ function scrWeapons() {
 	wep_load[272] = 30
 	wep_cost[272] = 0
 	wep_sprt[272] = sprGhostBlade
-	wep_area[272] = 13
+	wep_area[272] = 15
 	wep_text[272] = "spooky"
 	wep_swap[272] = sndSwapSword
 	wep_rad[272] = 0;
@@ -3038,7 +3038,7 @@ function scrWeapons() {
 	wep_load[275] = 44
 	wep_cost[275] = 0
 	wep_sprt[275] = sprGhostShovel
-	wep_area[275] = 16//4 originally?
+	wep_area[275] = 17
 	wep_text[275] = "digging up graves"
 	wep_swap[275] = sndSwapHammer
 	wep_rad[275] = 0;
@@ -3863,7 +3863,7 @@ function scrWeapons() {
 	wep_load[350] = 16//23 dead glove
 	wep_cost[350] = 2
 	wep_sprt[350] = sprHyperGlove
-	wep_area[350] = 7
+	wep_area[350] = 8
 	wep_text[350] = "this is the 350th weapon!"
 	wep_swap[350] = sndSwapHammer
 	wep_rad[350] = 0;
@@ -4535,9 +4535,9 @@ function scrWeapons() {
 	wep_type[411] = 4
 	wep_auto[411] = 1
 	wep_load[411] = 24
-	wep_cost[411] = 3
+	wep_cost[411] = 3.5
 	wep_sprt[411] = sprKrakenYoyoGun
-	wep_area[411] = 9
+	wep_area[411] = 10
 	wep_text[411] = ""
 	wep_swap[411] = sndSwapDragon
 	wep_rad[411] = 0;
@@ -5161,7 +5161,7 @@ function scrWeapons() {
 	wep_name[468] = "ULTRA MORPH-O-RAY"
 	wep_type[468] = 5
 	wep_auto[468] = 1
-	wep_load[468] = 9
+	wep_load[468] = 8
 	wep_cost[468] = 1
 	wep_sprt[468] = sprMorphORay
 	wep_area[468] = 25
@@ -5340,7 +5340,7 @@ function scrWeapons() {
 	wep_load[484] = 12
 	wep_cost[484] = 0
 	wep_sprt[484] = sprGhostBlade
-	wep_area[484] = 13
+	wep_area[484] = 15
 	wep_text[484] = "ghastly"
 	wep_swap[484] = sndSwapSword
 	wep_rad[484] = 0;
@@ -5395,7 +5395,7 @@ function scrWeapons() {
 	wep_load[489] = 26
 	wep_cost[489] = 3
 	wep_sprt[489] = sprKrakenYoyoGun
-	wep_area[489] = 8
+	wep_area[489] = 9
 	wep_text[489] = ""
 	wep_swap[489] = sndSwapEnergy
 	wep_rad[489] = 0;
@@ -5458,7 +5458,7 @@ function scrWeapons() {
 	wep_name[495] = "SHEEP ON A STICK"
 	wep_type[495] = 5
 	wep_auto[495] = 0
-	wep_load[495] = 18
+	wep_load[495] = 14
 	wep_cost[495] = 1
 	wep_sprt[495] = sprMorphHammer
 	wep_area[495] = 11
@@ -5645,7 +5645,7 @@ function scrWeapons() {
 	wep_name[512] = "GIANT PANDA STICK"
 	wep_type[512] = 0
 	wep_auto[512] = 0
-	wep_load[512] = 11;
+	wep_load[512] = 13;
 	wep_cost[512] = 0
 	wep_sprt[512] = sprGiantPandaStick
 	wep_area[512] = -1

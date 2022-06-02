@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskIcon",
     "path": "sprites/mskIcon/mskIcon.yy",

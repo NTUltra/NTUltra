@@ -121,6 +121,7 @@ my_health = 0}}
 
 
 snd_play(snd_dead)
+if !reincarnate
 with instance_create(x,y,WepPickupForOneWepOnly)
 {
 scrWeapons()
@@ -136,7 +137,7 @@ motion_add(random(360),2)
 speed *= 0.8
 }
 
-if bwep > 0
+if bwep > 0 && !reincarnate
 {
 with instance_create(x,y,WepPickup)
 {
@@ -144,6 +145,23 @@ scrWeapons()
 wep = other.bwep
 ammo = 50
 curse = other.bcurse
+name = wep_name[wep]
+type = wep_type[wep]
+sprite_index = wep_sprt[wep]
+motion_add(other.direction,other.speed)
+speed += max(0,-other.my_health/5)
+motion_add(random(360),2)
+speed *= 0.8
+}
+}
+if cwep > 0 && !reincarnate
+{
+with instance_create(x,y,WepPickup)
+{
+scrWeapons()
+wep = other.cwep
+ammo = 50
+curse = other.ccurse
 name = wep_name[wep]
 type = wep_type[wep]
 sprite_index = wep_sprt[wep]
@@ -166,7 +184,7 @@ instance_create(x,y,BigDogExplo);
 
 
 
-if skeletonlives>0
+if skeletonlives>0 && !reincarnate
 {
 instance_create(x,y,WallBreak);
 
@@ -225,7 +243,7 @@ alarm[2] = 3;
 }
 
 }
-else
+else if !reincarnate
 {
 	scrEndOfRun();
 	//Horror and atom bskin drop rads

@@ -63,3 +63,8 @@ if !inverted && currentarea  == 8 || (currentarea == 7 && currentsubarea == 3)
 	isPink = true;
 	sprite_index = sprPinkPortalSpawn;	
 }
+if (instance_exists(CrownPed) && !inverted)
+{
+	x = CrownPed.x;
+	y = CrownPed.y;
+}

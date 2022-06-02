@@ -65,27 +65,23 @@ motion_add(random(360),random(5));
     image_angle = other.image_angle}
     
 }
-
-            with instance_create(x,y,WepPickupForOneWepOnly)
-            {
-	            pickedup=true;
-	            depth=-9;
-	            image_angle=other.image_angle;
-	            scrWeapons()
-	            oneweponly=false;//drop it in one wep only gmode
-	            wep=other.wep
-	            name = wep_name[wep]
-	            ammo = 0
-	            type = wep_type[wep]
-	            curse = other.curse
-	            wepmod1=other.wepmod1;
-	            wepmod2=other.wepmod2;
-	            wepmod3=other.wepmod3;
-	            wepmod4=other.wepmod4;
-	            sprite_index = wep_sprt[wep]
+myWeaponPickup = instance_create(x,y,WepPickupForOneWepOnly);
+with myWeaponPickup
+{
+	pickedup=true;
+	depth=-9;
+	image_angle=other.image_angle;
+	scrWeapons()
+	oneweponly=false;//drop it in one wep only gmode
+	wep=other.wep
+	name = wep_name[wep]
+	ammo = 0
+	type = wep_type[wep]
+	curse = other.curse
+	wepmod1=other.wepmod1;
+	wepmod2=other.wepmod2;
+	wepmod3=other.wepmod3;
+	wepmod4=other.wepmod4;
+	sprite_index = wep_sprt[wep]
             
-            //show_message("IN PICKUP: "+string(wepmod1)+string(wepmod2)+string(wepmod3) );
-            }
-
-/* */
-/*  */
+}

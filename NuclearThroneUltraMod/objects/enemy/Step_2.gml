@@ -56,17 +56,22 @@ if prevhealth > my_health
 		{
 			var dmgTaken = prevhealth-my_health;
 			if dmgTaken > 0
-		    with Marker
-		    {
-			    if instance_exists(enemy)&&instance_exists(target)
+			{
+				var resultDmgTaken = dmgTaken;
+			    with Marker
 			    {
-				    if other.id=target.id
+				    if instance_exists(enemy)&&instance_exists(target)
 				    {
-						other.my_health -= dmgTaken*0.2;
+					    if other.id=target.id
+					    {
+							other.my_health -= dmgTaken*0.2;
+							resultDmgTaken += (dmgTaken*0.2);
+					    }
 				    }
-			    }
         
-		    }
+			    }
+				dmgTaken = resultDmgTaken;
+			}
 		}
 
 		//HUNTERS A ULTRA
