@@ -14,7 +14,6 @@ if instance_exists(Player)
 {
 if Player.skill_got[17] = 1{
 image_yscale = 5.5+(Player.betterlaserbrain*0.5)
-dmg=2.3
 }
 }
 

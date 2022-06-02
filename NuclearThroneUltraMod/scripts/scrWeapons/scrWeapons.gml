@@ -2691,16 +2691,16 @@ function scrWeapons() {
 	wep_swap[243] = sndSwapBow
 	wep_rad[243] = 0;
 
-	wep_name[244] = "ULTRA MEGA LASER PISTOL"
+	wep_name[244] = "SUPER ULTRA MEGA LASER PISTOL"
 	wep_type[244] = 5
 	wep_auto[244] = 0
 	wep_load[244] = 50
 	wep_cost[244] = 8
 	wep_sprt[244] = sprUltraMegaLaserPistol
-	wep_area[244] = 24
+	wep_area[244] = 26
 	wep_text[244] = "the tam gun"
 	wep_swap[244] = sndSwapEnergy
-	wep_rad[244] = 20;
+	wep_rad[244] = 21;
 
 	wep_name[245] = "LIGHTNING MINIGUN"
 	wep_type[245] = 5
@@ -5422,12 +5422,12 @@ function scrWeapons() {
 	wep_swap[491] = sndSwapMachinegun
 	wep_rad[491] = 0;
 	
-	wep_name[492] = "SPIKED CLUB"
+	wep_name[492] = "SPLINTER MACE"
 	wep_type[492] = 0
 	wep_auto[492] = 0
 	wep_load[492] = 24
 	wep_cost[492] = 0
-	wep_sprt[492] = sprWrench
+	wep_sprt[492] = sprSpikeMace
 	wep_area[492] = 6
 	wep_text[492] = "staple in some braincells"
 	wep_swap[492] = sndSwapHammer
@@ -5460,7 +5460,7 @@ function scrWeapons() {
 	wep_auto[495] = 0
 	wep_load[495] = 14
 	wep_cost[495] = 1
-	wep_sprt[495] = sprMorphHammer
+	wep_sprt[495] = sprSheepOnStick
 	wep_area[495] = 11
 	wep_text[495] = "strange hobbies"
 	wep_swap[495] = sndSwapEnergy
@@ -5652,6 +5652,61 @@ function scrWeapons() {
 	wep_text[512] = "big stick"
 	wep_swap[512] = sndSwapHammer
 	wep_rad[512] = 0;
+	
+	wep_name[513] = "ULTRA MEGA LASER PISTOL"
+	wep_type[513] = 5
+	wep_auto[513] = 0
+	wep_load[513] = 8
+	wep_cost[513] = 3.5
+	wep_sprt[513] = sprLaserGun
+	wep_area[513] = 21
+	wep_text[513] = "wall obliterator"
+	wep_swap[513] = sndSwapEnergy
+	wep_rad[513] = 14;
+	
+	wep_name[514] = "HEAVY SHOVEL"
+	wep_type[514] = 0
+	wep_auto[514] = 0
+	wep_load[514] = 45
+	wep_cost[514] = 0
+	wep_sprt[514] = sprShovel
+	wep_area[514] = 8//4 originally?
+	wep_text[514] = ""
+	wep_swap[514] = sndSwapHammer
+	wep_rad[514] = 0;
+	
+	wep_name[515] = "SUPER FLUGGER"
+	wep_type[515] = 2
+	wep_auto[515] = 0
+	wep_load[515] = 38
+	wep_cost[515] = 7
+	wep_sprt[515] = sprSuperSlugger
+	wep_area[515] = 16
+	wep_text[515] = "ffffffffffffffffffffffffffffffffffffffffff"
+	wep_swap[515] = sndSwapShotgun
+	wep_rad[515] = 0;
+	
+	wep_name[516] = "SUPER PENETRATOR"
+	wep_type[516] = 3
+	wep_auto[516] = 0
+	wep_load[516] = 33
+	wep_cost[516] = 8
+	wep_sprt[516] = sprSuperCrossbow
+	wep_area[516] = 14
+	wep_text[516] = "really hard penetration!"
+	wep_swap[516] = sndSwapBow
+	wep_rad[516] = 0;
+	
+	wep_name[517] = "CLUB"
+	wep_type[517] = 0
+	wep_auto[517] = 0
+	wep_load[517] = 17
+	wep_cost[517] = 0
+	wep_sprt[517] = sprClub
+	wep_area[517] = 3
+	wep_text[517] = "welcome to the club"
+	wep_swap[517] = sndSwapHammer
+	wep_rad[517] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 

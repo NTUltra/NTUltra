@@ -1,13 +1,14 @@
 {
   "spriteId": {
-    "name": "sprSlash",
-    "path": "sprites/sprSlash/sprSlash.yy",
+    "name": "sprBigPandaSlash",
+    "path": "sprites/sprBigPandaSlash/sprBigPandaSlash.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
-    "name": "mskSlash",
-    "path": "sprites/mskSlash/mskSlash.yy",
+    "name": "mskBigPandaSlash",
+    "path": "sprites/mskBigPandaSlash/mskBigPandaSlash.yy",
   },
   "persistent": false,
   "parentObjectId": {
