@@ -2255,7 +2255,7 @@ function scrWeapons() {
 	wep_type[204] = 3
 	wep_auto[204] = 0
 	wep_load[204] = 33
-	wep_cost[204] = 3
+	wep_cost[204] = 4
 	wep_sprt[204] = sprSplinterSeekerCrossbow
 	wep_area[204] = 8
 	wep_text[204] = "ultimate hybrid"
@@ -5671,7 +5671,7 @@ function scrWeapons() {
 	wep_cost[514] = 0
 	wep_sprt[514] = sprShovel
 	wep_area[514] = 8//4 originally?
-	wep_text[514] = ""
+	wep_text[514] = "so heavy and it still can't dig through walls"
 	wep_swap[514] = sndSwapHammer
 	wep_rad[514] = 0;
 	
@@ -5700,13 +5700,68 @@ function scrWeapons() {
 	wep_name[517] = "CLUB"
 	wep_type[517] = 0
 	wep_auto[517] = 0
-	wep_load[517] = 17
+	wep_load[517] = 25
 	wep_cost[517] = 0
 	wep_sprt[517] = sprClub
 	wep_area[517] = 3
 	wep_text[517] = "welcome to the club"
 	wep_swap[517] = sndSwapHammer
 	wep_rad[517] = 0;
+	
+	wep_name[518] = "SEEKER MACHINEGUN"
+	wep_type[518] = 1
+	wep_auto[518] = 1
+	wep_load[518] = 4
+	wep_cost[518] = 4
+	wep_sprt[518] = sprTripleMachinegun
+	wep_area[518] = 8
+	wep_text[518] = "auto seeking"
+	wep_swap[518] = sndSwapMachinegun
+	wep_rad[518] = 0;
+	
+	wep_name[519] = "DOUBLE SEEKER MACHINEGUN"
+	wep_type[519] = 1
+	wep_auto[519] = 1
+	wep_load[519] = 3
+	wep_cost[519] = 7
+	wep_sprt[519] = sprTripleMachinegun
+	wep_area[519] = 15
+	wep_text[519] = "seek and destroy"
+	wep_swap[519] = sndSwapMachinegun
+	wep_rad[519] = 0;
+	
+	wep_name[520] = "BULLET CRASH"
+	wep_type[520] = 1
+	wep_auto[520] = 1
+	wep_load[520] = 3
+	wep_cost[520] = 6
+	wep_sprt[520] = sprTripleMachinegun
+	wep_area[520] = 9
+	wep_text[520] = "ohno we crashed"
+	wep_swap[520] = sndSwapMachinegun
+	wep_rad[520] = 0;
+	
+	wep_name[521] = "SUPER CHUNKY BLADE GUN"
+	wep_type[521] = 3
+	wep_auto[521] = 1
+	wep_load[521] = 50
+	wep_cost[521] = 8
+	wep_sprt[521] = sprChunkyBladeGun
+	wep_area[521] = 24
+	wep_text[521] = "majestic blades"
+	wep_swap[521] = sndSwapBow
+	wep_rad[521] = 0;
+	
+	wep_name[522] = "SWARM MINIGUN"
+	wep_type[522] = 1
+	wep_auto[522] = 1
+	wep_load[522] = 1
+	wep_cost[522] = 1.5
+	wep_sprt[522] = sprMinigun
+	wep_area[522] = 12
+	wep_text[522] = "brrrrppppbeeeeeees"
+	wep_swap[522] = sndSwapMachinegun
+	wep_rad[522] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 

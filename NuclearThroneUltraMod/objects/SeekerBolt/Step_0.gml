@@ -31,7 +31,8 @@ motion_add(point_direction(x,y,target.x,target.y),1.2+Player.skill_got[21]);
 }
 motion_add(direction,0.8);
 if speed>6+Player.skill_got[21]
-speed=6+Player.skill_got[21];
+	speed = max(6+Player.skill_got[21],speed*0.7);
+	//speed=6+Player.skill_got[21];
 
 image_angle=direction;
 

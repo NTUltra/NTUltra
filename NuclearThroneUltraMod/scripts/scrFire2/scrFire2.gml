@@ -7487,7 +7487,7 @@ function scrFire2() {
 	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 6
-	wkick -= 4
+	wkick += 4
 
 	break;
 	
@@ -7527,7 +7527,7 @@ function scrFire2() {
 	BackCont.viewx2 += lengthdir_x(5,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(5,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 8
-	wkick -= 4
+	wkick += 4
 
 	break;
 	
@@ -7549,7 +7549,7 @@ function scrFire2() {
 	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 14
-	wkick = 4
+	wkick = 6
 
 	break;
 	
@@ -8767,7 +8767,7 @@ function scrFire2() {
 
 	with instance_create(x+lengthdir_x(-1+(Player.skill_got[13]+bettermelee)*20,ang),y+lengthdir_y(-1+(Player.skill_got[13]+bettermelee)*20,ang),BigPandaSlash)
 	{
-		dmg = 2;
+		dmg = 3;
 		ang = other.ang
 		longarms = 0
 		if instance_exists(Player)
@@ -8780,8 +8780,147 @@ function scrFire2() {
 	wepangle = -wepangle
 	BackCont.viewx2 += lengthdir_x(13,ang)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(13,ang)*UberCont.opt_shake
+	BackCont.shake += 5
+	wkick = -7
+
+	break;
+	
+	//SEEKER MACHINEGUN
+	case 518:
+
+	snd_play_fire(sndSeekerPistol)
+	var xx = x + lengthdir_x(4,aimDirection);
+	var yy = y + lengthdir_y(4,aimDirection);
+	with instance_create(xx,yy,SeekerBolt)
+	{motion_add(aimDirection+(random(20)-10)*other.accuracy,3+random(3))
+	image_angle = direction
+	team = other.team}
+	/*
+	with instance_create(x,y,SeekerBolt)
+	{motion_add(aimDirection+(random(20)-10)+20*other.accuracy,2+random(3))
+	image_angle = direction
+	team = other.team}*/
+
+
+	BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 4
+
+	break;
+	
+	//SEEKER MACHINEGUN
+	case 519:
+
+	snd_play_fire(sndSeekerShotgun)
+	var xx = x + lengthdir_x(4,aimDirection);
+	var yy = y + lengthdir_y(4,aimDirection);
+	with instance_create(xx,yy,SeekerBolt)
+	{motion_add(aimDirection+(random(20)-30)*other.accuracy,7)
+	image_angle = direction
+	team = other.team}
+	with instance_create(xx,yy,SeekerBolt)
+	{motion_add(aimDirection+(random(20)+10)*other.accuracy,7)
+	image_angle = direction
+	team = other.team}
+
+
+	BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 5
+	wkick = 5
+
+	break;
+	
+	//BULLET CRASH
+	case 520:
+
+	snd_play_fire(sndTripleMachinegun)
+
+	var am = 16;
+	var angStep = 360/am;
+	angStep *= accuracy;
+	var angg = aimDirection - (angStep * (am*0.5));
+	repeat(am)
+	{
+		with instance_create(x,y,Bullet1)
+		{
+			motion_add(angg+(random(8)-4)*other.accuracy,15);
+			image_angle = direction
+			team = other.team
+		}
+		angg += angStep
+	}
+	angStep *= 0.5;
+	with instance_create(x,y,Bullet1)
+	{
+		motion_add(aimDirection+angStep+(random(8)-4)*other.accuracy,16);
+		image_angle = direction
+		team = other.team
+	}
+	with instance_create(x,y,Bullet1)
+	{
+		motion_add(aimDirection-angStep+(random(8)-4)*other.accuracy,16);
+		image_angle = direction
+		team = other.team
+	}
+
+	BackCont.viewx2 += lengthdir_x(5,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(5,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 3
-	wkick = -6
+	wkick += 4
+
+	break;
+	
+	//SUPER CHUNKY BLADE GUN
+	case 521:
+
+	snd_play_fire(sndSuperDiscGun)
+
+	motion_add(aimDirection+180,3)
+
+	with instance_create(x,y,ChunkyBlade)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,6)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,ChunkyBlade)
+	{motion_add(aimDirection+10*other.accuracy+(random(4)-2)*other.accuracy,6)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,ChunkyBlade)
+	{motion_add(aimDirection+20*other.accuracy+(random(4)-2)*other.accuracy,6)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,ChunkyBlade)
+	{motion_add(aimDirection-10*other.accuracy+(random(4)-2)*other.accuracy,6)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,ChunkyBlade)
+	{motion_add(aimDirection-20*other.accuracy+(random(4)-2)*other.accuracy,6)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 12
+	wkick = 8
+
+	break;
+	
+	//MINIGUN
+	case 522:
+
+	snd_play(sndSwarmRapid,0.2,true,false,1,false,false,0.7);
+
+	with instance_create(x,y,SwarmBolt)
+	{motion_add(aimDirection+(random(26)-13)*other.accuracy,7)
+	image_angle = direction
+	team = other.team}
+	motion_add(aimDirection+180,0.3)
+	BackCont.viewx2 += lengthdir_x(5,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(5,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3
+	wkick = 3.5
 
 	break;
 	

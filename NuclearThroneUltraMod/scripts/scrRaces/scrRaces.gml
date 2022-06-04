@@ -177,7 +177,7 @@ function scrRaces() {
 	race_bskin[12] = 0
 	race_cskin[12] = 0
 	race_bskin_lock[12] = "GO TO THE CRIB"
-	race_cskin_lock[12] = "AS YUNG CUZ#COMPLETE 3 AREAS#IN A ROW#WITHOUT HAVING#MORE THAN 1 MAX HP#FOR 5 SECONDS";
+	race_cskin_lock[12] = "AS YUNG CUZ#COMPLETE 3 AREAS#IN A ROW#WITHOUT HAVING#MORE THAN 1 MAX HP";
 
 
 	race_name[13] = "[SHEEP]"

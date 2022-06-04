@@ -112,6 +112,14 @@ if race==10//Rebel pasive
 }
 else if race=12//yung cuz reset max HP
 {
+	if maxhealth < 2
+	{
+		yungCuzCskin ++;	
+	}
+	else
+	{
+		yungCuzCskin = 0;	
+	}
 	var targetHealth = 8;
 	if UberCont.opt_gamemode == 5
 		targetHealth = 1;

@@ -10,9 +10,9 @@ snd_play_fire(sndJackHammer)
 snd_play_fire(choose(sndSpark1,sndSpark2));
 //FIRING
 if instance_exists(Player){
-    with instance_create(x+lengthdir_x((Player.skill_got[13]+Player.bettermelee)*10,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y((Player.skill_got[13]+Player.bettermelee)*10,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),UltraShank)
+    with instance_create(x+lengthdir_x((Player.skill_got[13]+Player.bettermelee)*10,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y((Player.skill_got[13]+Player.bettermelee)*10,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),UltraLanceShank)
     {
-    dmg = 8;
+    dmg = 7;
     if instance_exists(Player){
     Player.longarms = 0
     Player.longarms = (Player.skill_got[13]+Player.bettermelee)*3
@@ -24,9 +24,9 @@ if instance_exists(Player){
 }
 else
 {
-    with instance_create(x,y,UltraShank)
+    with instance_create(x,y,UltraLanceShank)
     {
-		dmg = 8;
+		dmg = 7;
     motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(30)-15,3)
     image_angle = direction
     team = other.team}

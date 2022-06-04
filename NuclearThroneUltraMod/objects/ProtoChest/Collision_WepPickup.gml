@@ -1,6 +1,6 @@
 if instance_exists(Player)
 {
-if point_distance(x,y,Player.x,Player.y) > 32
+if wep == 0 && point_distance(x,y,Player.x,Player.y) > 32
 {
 sprite_index = sprProtoChest
 wep = other.wep

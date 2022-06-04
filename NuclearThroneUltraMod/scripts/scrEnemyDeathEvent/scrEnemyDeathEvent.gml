@@ -59,9 +59,6 @@ function scrEnemyDeathEvent(){
 			if crown = 7
 			other.raddrop=round(other.raddrop*0.65);
 
-			if crown = 15
-			other.raddrop=round(other.raddrop*0.19);
-
 			if Player.crown = 17
 			other.raddrop=max(choose(0,1),floor(other.raddrop*0.06));
 			

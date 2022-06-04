@@ -127,7 +127,15 @@ function scrDrawHUD() {
 			var xx =__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-12-16*dix;
 			var yy =__view_get( e__VW.YView, 0 )+20;
 			var s = 18;
-			if dir == 76 && Player.ultimategamble == true
+			if dir == 106 && Player.bskin == 1
+			{
+				draw_sprite_ext(sprHothandsHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 106 && Player.bskin == 2
+			{
+				draw_sprite_ext(sprExplosiveHandsHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 76 && Player.ultimategamble == true
 			{
 				draw_sprite_ext(sprUltimateGambleIconHUD,0,xx,yy,1,1,0,c_white,1);
 			}
