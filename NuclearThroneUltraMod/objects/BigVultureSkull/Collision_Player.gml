@@ -23,6 +23,7 @@ if spr_idle == sprBigVultureSkullOpen
 		}
 	}
 	with BigFishSkull {
-		my_health = 0;	
+		spr_idle = sprBigFishSkull;
+		my_health = 0;
 	}
 }

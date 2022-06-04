@@ -1,6 +1,7 @@
 var ultraMod = -1
 if canUltraMod
 	ultraMod = GetPlayerUltramod();
+
 if isog && ultraMod == ultramods.lightningKraken
 {
 	snd_play(choose(sndWater1,sndWater2),0.1,true);
@@ -33,10 +34,12 @@ if isog && ultraMod == ultramods.lightningKraken
 	exit;
 }
 	isog = false;
-
+instance_create(x,y,SmallWallBreak);
+var simpleAccuracy = 1;
 if instance_exists(Player)
 {
-	accuracy += Player.accuracy*5;
+	simpleAccuracy = Player.accuracy;
+	accuracy += Player.accuracy*4;
 	if Player.skill_got[19] == 1
 	{accuracy-=3;}
 	if Player.ultra_got[43]&&instance_exists(Marker)//hunter focused fire
@@ -63,27 +66,32 @@ dir = instance_nearest(x+lengthdir_x(80,direction),y+lengthdir_y(80,direction),t
 var oldx, oldy;
 oldx = x
 oldy = y
-direction = image_angle+(random(15)-7)//30 15
+direction = image_angle+(random(15)-7)*simpleAccuracy//30 15
 speed = 4
 if instance_exists(target)
 {
-if point_distance(x,y,dir.x,dir.y) < 160-accuracy
-	motion_add(point_direction(x,y,dir.x,dir.y),1.8-(accuracy*0.045))
+if point_distance(x,y,dir.x,dir.y) < 165-accuracy*2
+	motion_add(point_direction(x,y,dir.x,dir.y),2.2-(accuracy*0.05))
 }
 image_angle = direction
 speed = 0
 
-move_contact_solid(direction,8+random(4))//8 r 4
+//move_contact_solid(direction,8+random(4))//8 r 4
+var l = 8 + random(4);
+x += lengthdir_x(l,direction);
+y += lengthdir_y(l,direction);
+
 speed = 0
 image_xscale = -point_distance(x,y,oldx,oldy)/2
 
 ammo -= 1;
-
+/*
 if place_meeting(x,y,Wall)//!place_free(x,y)
 {
 x = xprevious
 y = yprevious
-direction += 180}
+//direction += 180
+}*/
 var odd = ammo % 2 == 0
 if ammo > 0
 {

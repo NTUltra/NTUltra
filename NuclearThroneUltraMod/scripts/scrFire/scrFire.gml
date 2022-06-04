@@ -2885,7 +2885,7 @@ function scrFire() {
 	with instance_create(x,y,UltraLightning)
 	{image_angle = aimDirection+(random(6)-3)*other.accuracy
 	team = other.team
-	ammo = 60//60
+	ammo = 48//60
 	///if Player.ultra_got[59]=1 
 	///ammo+=4;
 	event_perform(ev_alarm,0)

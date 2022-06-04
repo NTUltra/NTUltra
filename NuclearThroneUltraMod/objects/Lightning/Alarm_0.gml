@@ -1,4 +1,5 @@
 var ultraMod = -1
+var simpleAccuracy = 1;
 if instance_exists(Player){
 if team == 2
 {
@@ -43,6 +44,7 @@ if team == 2
 		exit;
 	}
 	isog = false;
+	simpleAccuracy = Player.accuracy;
 accuracy += Player.accuracy*2;
 if Player.skill_got[19] == 1
 {accuracy-=3;}
@@ -80,12 +82,12 @@ dir = instance_nearest(x+lengthdir_x(80,direction),y+lengthdir_y(80,direction),t
 var oldx, oldy;
 oldx = x
 oldy = y
-direction = image_angle+(random(accuracy)-(accuracy*0.5))//30-15   24-12
+direction = image_angle+((random(branch)-branch*0.5)*simpleAccuracy)//30-15   24-12
 speed = 4
 if instance_exists(target)
 {
-if point_distance(x,y,dir.x,dir.y) < 144-accuracy
-	motion_add(point_direction(x,y,dir.x,dir.y),1.3-(accuracy*0.045))
+if point_distance(x,y,dir.x,dir.y) < 150-accuracy*2
+	motion_add(point_direction(x,y,dir.x,dir.y),1.5-(accuracy*0.04))
 }
 image_angle = direction
 speed = 0
@@ -98,8 +100,8 @@ ammo -= 1
 var odd = ammo % 2 == 0
 if place_meeting(x,y,Wall)//!place_free(x,y)
 {
-	x = xprevious
-	y = yprevious
+	//x = xprevious
+	//y = yprevious
 	direction += 180
 }
 
@@ -109,6 +111,7 @@ if ammo > 0
 	with instance_create(x,y,Lightning)
 	{
 		isog = other.isog;
+		branch = other.branch;
 		canUltraMod = other.canUltraMod;
 		scrCopyWeaponMod(other);
 		accuracy=other.accuracy;

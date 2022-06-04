@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprSlugger","path":"sprites/sprSlugger/sprSlugger.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprSlugger",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -8924,5 +8924,60 @@ function scrFire2() {
 
 	break;
 	
+	//LIGHTNING STRIKER
+	case 523:
+
+	with instance_create(x,y,LightningBurst)
+	{
+	creator = other.id
+	ammo = 3
+	time = 4
+	team = other.team
+	event_perform(ev_alarm,0) 
+	}
+
+	break;
+	
+	//ULTRA LIGHTNING STRIKER
+	case 524:
+
+	with instance_create(x,y,UltraLightningBurst)
+	{
+	creator = other.id
+	ammo = 4
+	time = 3
+	team = other.team
+	event_perform(ev_alarm,0) 
+	}
+
+	break;
+	
+	//MUCHAS RAYOS
+	case 525:
+	Sleep(50);
+	snd_play_fire(sndLightningCannonUpg);
+	var aimDir = aimDirection+(random(12)-6)*accuracy;
+	var r = right;
+	var t = team;
+	with Floor
+	{
+		with instance_create(x,y,Lightning)
+		{image_angle = random(360);
+			accuracy = 60;
+			branch = 120;
+		team = 2
+		ammo = 24;
+		event_perform(ev_alarm,0)
+		visible = 0
+		with instance_create(x,y,LightningSpawn)
+		image_angle = other.image_angle}
+	}
+	BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 14
+	wkick = 10
+
+	break;
+	
 	}//end of switch part 2!
 }

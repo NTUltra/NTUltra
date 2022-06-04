@@ -1597,7 +1597,7 @@ function scrWeapons() {
 	wep_load[144] = 24
 	wep_cost[144] = 3
 	wep_sprt[144] = sprLightningHyperRifle
-	wep_area[144] = 15
+	wep_area[144] = 17
 	wep_text[144] = "thunder lightning ever so frightning"//payama sam reference!
 	wep_swap[144] = sndSwapEnergy
 	wep_rad[144] = 0;
@@ -2269,7 +2269,7 @@ function scrWeapons() {
 	wep_cost[205] = 4
 	wep_sprt[205] = sprPlasmaShotGun
 	wep_area[205] = 8
-	wep_text[205] = "je ne parle pas français"
+	wep_text[205] = ""
 	wep_swap[205] = sndSwapEnergy
 	wep_rad[205] = 0;
 
@@ -5108,7 +5108,7 @@ function scrWeapons() {
 	wep_auto[463] = 0
 	wep_load[463] = 18//22
 	wep_cost[463] = 1.5
-	wep_sprt[463] = sprSlugger
+	wep_sprt[463] = sprFlugger
 	wep_area[463] = 6
 	wep_text[463] = "shotgun shoulders spawns more#pellets upon pierce"
 	wep_swap[463] = sndSwapShotgun
@@ -5119,7 +5119,7 @@ function scrWeapons() {
 	wep_auto[464] = 1
 	wep_load[464] = 8
 	wep_cost[464] = 1.5
-	wep_sprt[464] = sprGatlingSlugger
+	wep_sprt[464] = sprGatlingFlugger
 	wep_area[464] = 16
 	wep_text[464] = "time to gatle"
 	wep_swap[464] = sndSwapShotgun
@@ -5762,6 +5762,39 @@ function scrWeapons() {
 	wep_text[522] = "brrrrppppbeeeeeees"
 	wep_swap[522] = sndSwapMachinegun
 	wep_rad[522] = 0;
+	
+	wep_name[523] = "LIGHTNING STRIKER"
+	wep_type[523] = 5
+	wep_auto[523] = 0
+	wep_load[523] = 40
+	wep_cost[523] = 4
+	wep_sprt[523] = sprLightningRifle
+	wep_area[523] = 11
+	wep_text[523] = "lightning strikes thrice"
+	wep_swap[523] = sndSwapEnergy
+	wep_rad[523] = 0;
+	
+	wep_name[524] = "ULTRA LIGHTNING STRIKER"
+	wep_type[524] = 5
+	wep_auto[524] = 0
+	wep_load[524] = 44
+	wep_cost[524] = 9
+	wep_sprt[524] = sprLightningRifle
+	wep_area[524] = 11
+	wep_text[524] = "green green green green"
+	wep_swap[524] = sndSwapEnergy
+	wep_rad[524] = 50;
+	
+	wep_name[525] = "MUCHAS RAYOS"
+	wep_type[525] = 5
+	wep_auto[525] = 0
+	wep_load[525] = 250
+	wep_cost[525] = 45
+	wep_sprt[525] = sprMuchasLaser
+	wep_area[525] = 30
+	wep_text[525] = "avec moi"
+	wep_swap[525] = sndSwapEnergy
+	wep_rad[525] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 

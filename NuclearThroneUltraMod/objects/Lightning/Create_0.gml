@@ -8,8 +8,8 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 
 typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflects
 
-accuracy=24;
-
+accuracy=20;
+branch = 20;
 image_speed = 0.4
 target=enemy;
 dmg=4;

@@ -1,0 +1,39 @@
+ammo -= 1
+
+alarm[0] = time
+
+
+if instance_exists(creator)
+{
+	x = creator.x
+	y = creator.y
+	//FIRING
+	var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+	
+	if Player.skill_got[17] = 1
+	snd_play_fire(choose(sndLightning2,sndLightning3))
+	else
+	snd_play_fire(sndLightning1)
+
+	snd_play_fire(sndUltraLaser);
+
+	with instance_create(x,y,UltraLightning)
+	{image_angle = aimDirection+(random(6)-3)*Player.accuracy
+	team = other.team
+	ammo = other.lightningAmmo
+	event_perform(ev_alarm,0)
+	visible = 0
+	with instance_create(x,y,LightningSpawn)
+	image_angle = other.image_angle}
+	
+	lightningAmmo += lightningAmmoChange;
+
+	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 10
+	creator.wkick = 10
+}
+
+if ammo <= 0
+instance_destroy()
+
