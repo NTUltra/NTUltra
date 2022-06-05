@@ -4,7 +4,7 @@ with other
 {
 if sprite_index!=spr_hurt
 {
-my_health -= 2
+my_health -= 3
 sprite_index = spr_hurt
 image_index = 0
 motion_add(other.image_angle,4)

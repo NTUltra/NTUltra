@@ -2,7 +2,7 @@ raddrop = 8
 maxhealth = 12
 meleedamage = 0
 size = 1
-bloodempty=0;
+//bloodempty=0;
 
 event_inherited()
 

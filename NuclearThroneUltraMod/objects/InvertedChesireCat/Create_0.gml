@@ -1,5 +1,5 @@
 raddrop = 150
-maxhealth = 580
+maxhealth = 570
 meleedamage = 3
 size = 3
 
@@ -39,8 +39,23 @@ dodge=0;
 friction = 0.8;
 
 myWazers = [];
-wazerDuration = 100;
+wazerDuration = 99;
 wazerRotation = 0;
 wazerDirection = 0;
 wazerOffset = 90;
 tellTime = 14;
+
+loops = GetPlayerLoops();
+startLoop = 3;
+ca = 7 + min(7+(loops-startLoop)*2,12);
+cang = random(360);
+caspd = min(6,4+((loops-startLoop)*0.5));
+if loops > startLoop
+{
+	alarm[6] = 200;
+	if instance_exists(Player)
+	{
+		if Player.skill_got[29]	//Insomnia
+			alarm[6] += 100;
+	}
+}

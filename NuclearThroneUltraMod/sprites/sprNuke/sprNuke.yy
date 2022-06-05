@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprNuke","path":"sprites/sprNuke/sprNuke.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprNuke",
     "tags": [],
     "resourceType": "GMSequence",
   },

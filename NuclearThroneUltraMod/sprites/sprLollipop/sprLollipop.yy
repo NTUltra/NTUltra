@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprLollipop","path":"sprites/sprLollipop/sprLollipop.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprLollipop",
     "tags": [],
     "resourceType": "GMSequence",
   },

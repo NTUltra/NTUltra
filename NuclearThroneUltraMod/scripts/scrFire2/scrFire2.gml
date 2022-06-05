@@ -218,7 +218,7 @@ function scrFire2() {
 	//PANDA STICK
 	case 200:
 
-	snd_play_fire(sndHammer)
+	snd_play_fire(sndWrench)
 
 	instance_create(x,y,Dust)
 
@@ -582,7 +582,7 @@ function scrFire2() {
 	//VIKING AXE
 	case 215:
 
-	snd_play_fire(sndHammer)
+	snd_play_fire(sndWrench)
 
 	instance_create(x,y,Dust)
 
@@ -848,9 +848,9 @@ function scrFire2() {
 	case 225:
 
 	if Player.skill_got[17] = 1
-	snd_play_fire(sndPlasmaUpg)
+	snd_play_fire(sndGoldPlasmaUpg)
 	else
-	snd_play_fire(sndPlasma)
+	snd_play_fire(sndGoldPlasma);
 
 	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),PlasmaBall)
 	{motion_add(aimDirection+(random(8)-4)*other.accuracy,4)
@@ -870,7 +870,7 @@ function scrFire2() {
 	//GOLDEN SLUGGER
 	case 226:
 
-	snd_play_fire(sndSlugger)
+	snd_play_fire(sndGoldSlugger)
 
 	with instance_create(x,y,Slug)
 	{motion_add(aimDirection+(random(10)-5)*other.accuracy,17)
@@ -907,7 +907,7 @@ function scrFire2() {
 	//GOLDEN SPLINTER GUN
 	case 228:
 
-	snd_play_fire(sndSplinterGun)
+	snd_play_fire(sndGoldSplinterGun)
 	with instance_create(x,y,Splinter)//5 splinters
 	{motion_add(aimDirection+(random(12)-6)*other.accuracy,20+random(4))
 	image_angle = direction
@@ -935,12 +935,13 @@ function scrFire2() {
 	//GOLDEN BAZOOKA
 	case 229:
 
-	snd_play_fire(sndRocket)
+	snd_play_fire(sndGoldRocket)
 
 	with instance_create(x,y,Rocket)
 	{motion_add(aimDirection+(random(4)-2)*other.accuracy,2)
 	image_angle = direction
 	team = other.team
+	snd = sndGoldRocketFly;
 	sprite_index=sprGoldenRocket;}
 
 	BackCont.viewx2 += lengthdir_x(31,aimDirection+180)*UberCont.opt_shake
@@ -954,7 +955,7 @@ function scrFire2() {
 	//GOLDEN SCREWDRIVER
 	case 230:
 
-	snd_play_fire(sndScrewdriver)
+	snd_play_fire(sndGoldScrewdriver)
 
 	instance_create(x,y,Dust)
 
@@ -5521,7 +5522,7 @@ function scrFire2() {
 	snd_play_fire(sndDragonStart);
 	snd_play_fire(sndDragonStop);
 	snd_play_fire(sndRocket);
-	snd_play_fire(sndRocketFly);
+	snd_play_fire(sndRocket);
 	var aimDir = aimDirection+(random(12)-6)*accuracy;
 	var r = right;
 	var t = team;
@@ -7733,7 +7734,7 @@ function scrFire2() {
 	snd_play_fire(sndFrostShot1);
 	snd_play_fire(sndDragonStop);
 	snd_play_fire(sndRocket);
-	snd_play_fire(sndRocketFly);
+	snd_play_fire(sndGoldRocketFly);
 	var aimDir = aimDirection+(random(12)-6)*accuracy;
 	var r = right;
 	var t = team;
@@ -8976,6 +8977,118 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 14
 	wkick = 10
+
+	break;
+	
+	//INFINITY JACKHAMMER
+	case 526:
+
+	with instance_create(x,y,SawBurst)
+	{
+	creator = other.id
+	ammo = 12
+	time = 1
+	team = other.team
+	event_perform(ev_alarm,0) 
+	}
+
+	break;
+	
+	//GOLDEN NUKE LAUNCHER
+	case 527:
+
+	snd_play_fire(sndGoldNukeFire);
+
+	with instance_create(x,y,Nuke)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,2)
+		sprite_index = sprGoldNuke;
+		snd = sndGoldRocketFly;
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(41,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(41,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 10
+	wkick = 11
+
+	break;
+	
+	//SHOVEL CRASH
+	case 528:
+
+	snd_play_fire(sndUltraShovel)
+
+	instance_create(x,y,Dust)
+	//6 slashes
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
+	{
+		dmg = 16
+		sprite_index = sprVeryHeavySlash
+		longarms = 0
+		if instance_exists(Player)
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection,2+longarms)
+		image_angle = direction
+		team = other.team
+	}
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),Slash)
+	{
+		dmg = 12
+		sprite_index = sprHeavySlash
+		longarms = 0
+		if instance_exists(Player)
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection+60*other.accuracy,2+longarms)
+		image_angle = direction
+		team = other.team
+	}
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),Slash)
+	{
+		dmg = 12
+		sprite_index = sprHeavySlash
+		longarms = 0
+		if instance_exists(Player)
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection-60*other.accuracy,2+longarms)
+		image_angle = direction
+		team = other.team
+	}
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),Slash)
+	{
+		dmg = 8
+		longarms = 0
+		if instance_exists(Player)
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection-120*other.accuracy,2+longarms)
+		image_angle = direction
+		team = other.team
+	}
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),Slash)
+	{
+		dmg = 8
+		longarms = 0
+		if instance_exists(Player)
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection+120*other.accuracy,2+longarms)
+		image_angle = direction
+		team = other.team
+	}
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),BigPandaSlash)
+	{
+		dmg = 6;
+		longarms = 0
+		if instance_exists(Player)
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection+choose(180*other.accuracy,-180*other.accuracy),2+longarms)
+		image_angle = direction
+		team = other.team
+	}
+
+	wepangle = -wepangle
+	BackCont.viewx2 += lengthdir_x(24,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(24,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 10
+	wkick = -5
 
 	break;
 	

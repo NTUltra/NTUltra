@@ -13,6 +13,7 @@ function scrUnlockGoldWeapon(target) {
 				var goldIndex = scrCheckStartingWepUnlocked(target,other.race)
 			    if target != 298 && target != 349 && goldIndex > -1//No golden frog pistol and no golden oops gun
 			    {
+					snd_play(sndGoldUnlock,0,true);
 					//Unlock the gun!
 					start_wep_have[goldIndex,other.race]=1;
 					with instance_create(x,y,UnlockPopup)

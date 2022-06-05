@@ -159,7 +159,7 @@ function scrFire() {
 	//WRENCH
 	case 3:
 
-	snd_play_fire(sndHammer)
+	snd_play_fire(sndWrench)
 
 	instance_create(x,y,Dust)
 
@@ -962,7 +962,7 @@ function scrFire() {
 	//GOLDEN WRENCH
 	case 40:
 
-	snd_play_fire(sndHammer)
+	snd_play_fire(sndGoldWrench)
 
 	instance_create(x,y,Dust)
 
@@ -1010,7 +1010,7 @@ function scrFire() {
 	//GOLDEN SHOTGUN
 	case 42:
 
-	snd_play_fire(sndShotgun)
+	snd_play_fire(sndGoldShotgun)
 
 	repeat(8)
 	{
@@ -1032,7 +1032,7 @@ function scrFire() {
 	//GOLDEN CROSSBOW
 	case 43:
 
-	snd_play_fire(sndCrossbow)
+	snd_play_fire(sndGoldCrossbow)
 
 	with instance_create(x,y,Bolt)
 	{motion_add(aimDirection,24)
@@ -1050,7 +1050,7 @@ function scrFire() {
 	//GOLDEN NADER
 	case 44:
 
-	snd_play_fire(sndGrenade)
+	snd_play_fire(sndGoldGrenade)
 
 	with instance_create(x,y,Grenade)
 	{
@@ -1071,9 +1071,9 @@ function scrFire() {
 	case 45:
 
 	if Player.skill_got[17] = 1
-	snd_play_fire(sndLaserUpg)
+	snd_play_fire(sndGoldLaserUpg)
 	else
-	snd_play_fire(sndLaser)
+	snd_play_fire(sndGoldLaser);
 	with instance_create(x,y,Laser)
 	{image_angle = aimDirection
 	team = other.team

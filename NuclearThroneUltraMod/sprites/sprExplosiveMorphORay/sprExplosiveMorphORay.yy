@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprExplosiveMorphORay","path":"sprites/sprExplosiveMorphORay/sprExplosiveMorphORay.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprExplosiveMorphORay",
     "tags": [],
     "resourceType": "GMSequence",
   },

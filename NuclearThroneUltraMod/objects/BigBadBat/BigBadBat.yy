@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskBigBadBat",
     "path": "sprites/mskBigBadBat/mskBigBadBat.yy",

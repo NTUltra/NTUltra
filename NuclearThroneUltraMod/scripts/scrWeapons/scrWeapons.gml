@@ -4634,9 +4634,9 @@ function scrWeapons() {
 	wep_type[420] = 3
 	wep_auto[420] = 1
 	wep_load[420] = 25
-	wep_cost[420] = 4
+	wep_cost[420] = 5
 	wep_sprt[420] = sprSuperSpinnerYoyoGun
-	wep_area[420] = 8
+	wep_area[420] = 11
 	wep_text[420] = "super dizzy"
 	wep_swap[420] = sndSwapBow
 	wep_rad[420] = 0;
@@ -5029,7 +5029,7 @@ function scrWeapons() {
 	wep_name[456] = "SUPER SCYTHE"
 	wep_type[456] = 0
 	wep_auto[456] = 0
-	wep_load[456] = 30
+	wep_load[456] = 28
 	wep_cost[456] = 0
 	wep_sprt[456] = sprSuperScythe
 	wep_area[456] = 22
@@ -5130,7 +5130,7 @@ function scrWeapons() {
 	wep_auto[465] = 0
 	wep_load[465] = 6
 	wep_cost[465] = 3
-	wep_sprt[465] = sprCuberRevolver
+	wep_sprt[465] = sprHeavyCuberRevolver
 	wep_area[465] = 22
 	wep_text[465] = "phase through walls"
 	wep_swap[465] = sndSwapPistol
@@ -5141,7 +5141,7 @@ function scrWeapons() {
 	wep_auto[466] = 1
 	wep_load[466] = 3
 	wep_cost[466] = 3
-	wep_sprt[466] = sprCuberRifle
+	wep_sprt[466] = sprHeavyCuberRifle
 	wep_area[466] = 25
 	wep_text[466] = "square bullets"
 	wep_swap[466] = sndSwapPistol
@@ -5152,7 +5152,7 @@ function scrWeapons() {
 	wep_auto[467] = 0
 	wep_load[467] = 26
 	wep_cost[467] = 2
-	wep_sprt[467] = sprFlakCannon
+	wep_sprt[467] = sprBoomBoomCannon
 	wep_area[467] = 15
 	wep_text[467] = "10/10"
 	wep_swap[467] = sndSwapExplosive
@@ -5163,7 +5163,7 @@ function scrWeapons() {
 	wep_auto[468] = 1
 	wep_load[468] = 8
 	wep_cost[468] = 1
-	wep_sprt[468] = sprMorphORay
+	wep_sprt[468] = sprUltraMorphORay
 	wep_area[468] = 25
 	wep_text[468] = ""
 	wep_swap[468] = sndSwapEnergy
@@ -5174,7 +5174,7 @@ function scrWeapons() {
 	wep_auto[469] = 1
 	wep_load[469] = 12
 	wep_cost[469] = 1
-	wep_sprt[469] = sprExplosiveMorphORay
+	wep_sprt[469] = sprToxicORay
 	wep_area[469] = 10
 	wep_text[469] = "stinky sheep"
 	wep_swap[469] = sndSwapExplosive
@@ -5185,7 +5185,7 @@ function scrWeapons() {
 	wep_auto[470] = 0
 	wep_load[470] = 17
 	wep_cost[470] = 2.5
-	wep_sprt[470] = sprLineFire
+	wep_sprt[470] = sprLineFrost
 	wep_area[470] = 10
 	wep_text[470] = "don't get in the line of fire"
 	wep_swap[470] = sndSwapFlame
@@ -5196,7 +5196,7 @@ function scrWeapons() {
 	wep_auto[471] = 0
 	wep_load[471] = 250
 	wep_cost[471] = 25
-	wep_sprt[471] = sprMuchasFuego
+	wep_sprt[471] = sprMuchasNieve
 	wep_area[471] = 30
 	wep_text[471] = "je ne parle pas de francais"
 	wep_swap[471] = sndSwapDragon
@@ -5253,7 +5253,7 @@ function scrWeapons() {
 	wep_cost[476] = 2
 	wep_sprt[476] = sprRevolver
 	wep_area[476] = 18
-	wep_text[476] = "damage increases as bullet exists longer"
+	wep_text[476] = "higher damage to enemies further away"
 	wep_swap[476] = sndSwapPistol
 	wep_rad[476] = 0;
 	
@@ -5273,7 +5273,7 @@ function scrWeapons() {
 	wep_auto[478] = 0
 	wep_load[478] = 32
 	wep_cost[478] = 0
-	wep_sprt[478] = sprLollipop
+	wep_sprt[478] = sprUltraLollipop
 	wep_area[478] = 26
 	wep_text[478] = "lime flavour"
 	wep_swap[478] = sndSwapHammer
@@ -5778,7 +5778,7 @@ function scrWeapons() {
 	wep_type[524] = 5
 	wep_auto[524] = 0
 	wep_load[524] = 44
-	wep_cost[524] = 9
+	wep_cost[524] = 8
 	wep_sprt[524] = sprLightningRifle
 	wep_area[524] = 11
 	wep_text[524] = "green green green green"
@@ -5789,12 +5789,45 @@ function scrWeapons() {
 	wep_type[525] = 5
 	wep_auto[525] = 0
 	wep_load[525] = 250
-	wep_cost[525] = 45
+	wep_cost[525] = 42
 	wep_sprt[525] = sprMuchasLaser
 	wep_area[525] = 30
 	wep_text[525] = "avec moi"
 	wep_swap[525] = sndSwapEnergy
 	wep_rad[525] = 0;
+	
+	wep_name[526] = "INFINITY JACKHAMMER"
+	wep_type[526] = 4
+	wep_auto[526] = 1
+	wep_load[526] = 12
+	wep_cost[526] = 0
+	wep_sprt[526] = sprJackHammer
+	wep_area[526] = 19
+	wep_text[526] = "never stop hammer time"
+	wep_swap[526] = sndSwapMotorized
+	wep_rad[526] = 0;
+	
+	wep_name[527] = "GOLDEN NUKE LAUNCHER"
+	wep_type[527] = 4
+	wep_auto[527] = 0
+	wep_load[527] = 45
+	wep_cost[527] = 3
+	wep_sprt[527] = sprGoldNukeLauncher
+	wep_area[527] = 20
+	wep_text[527] = "luxury apocalypse starter"
+	wep_swap[527] = sndSwapExplosive
+	wep_rad[527] = 0;
+	
+	wep_name[528] = "SHOVEL CRASH"
+	wep_type[528] = 0
+	wep_auto[528] = 0
+	wep_load[528] = 60
+	wep_cost[528] = 0
+	wep_sprt[528] = sprShovel
+	wep_area[528] = 14//4 originally?
+	wep_text[528] = "beautifull flower"
+	wep_swap[528] = sndSwapHammer
+	wep_rad[528] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 

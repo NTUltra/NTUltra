@@ -41,7 +41,7 @@ with NuclearThrone1Side
 	my_health = maxhealth;
 	EnemyHealthAdjustments();	
 }
-alarm[1] = 40;
+alarm[1] = 30;
 //insomnia start slower
 if instance_exists(Player)
 {

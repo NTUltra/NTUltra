@@ -5,7 +5,6 @@ active = 0
 typ = 2 //0 = nothing, 1 = deflectable, 2 = destructable
 
 snd = sndRocketFly
-snd_play(snd)
-
+alarm[0] = 1;
 alarm[11] = 1;
 dmg = 20;

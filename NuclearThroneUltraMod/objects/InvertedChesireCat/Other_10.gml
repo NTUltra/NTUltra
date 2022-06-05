@@ -8,8 +8,9 @@ snd_play(sndBigBanditMeleeHit);
     var pa = 9;
 	var atkAngle = 60;
 	var angleStep = atkAngle / pa;
-	var spd = 0.8;
-	var speedIncrement = 0.52;
+	var l = min(0.5,GetPlayerLoops()*0.1)
+	var spd = 0.8 + l;
+	var speedIncrement = 0.52 + l*0.5;
 	var leftRight = 1;
     repeat(pa)
 	{

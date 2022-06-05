@@ -23,7 +23,7 @@ if instance_exists(Player)
     motion_add(point_direction(Player.x,Player.y,x,y),5)
     }
     }
-    
+    /*
     if Player.ultra_got[19]//plant leacher ultra C
     {
     if bloodempty=0{//I still have blood in me please try to get it out of me
@@ -67,7 +67,7 @@ if instance_exists(Player)
             dir += 120
             }
         }
-    }}
+    }}*/
 }
 }
 

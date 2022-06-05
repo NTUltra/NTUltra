@@ -3,9 +3,11 @@ if ammo > 0
 	if ammo = 12
 	{
 		snd_play(sndGoldTankPreShoot)
+		snd_play(sndGoldRocket);
 		with instance_create(x,y,JockRocket)
 		{
 			sprite_index=sprGoldenRocket;
+			snd = sndGoldRocketFly;
 			motion_add(other.gunangle+random(20)-10,1)
 			image_angle = direction
 			team = other.team

@@ -44,7 +44,8 @@ function scrUltraModDescription(um){
 		break;
 		case ultramods.shotgunElectro:
 			umn = @"SWAPS
-			SHOTGUN PELLETS <WITH> ELECTRO BALLS"
+			SHOTGUN PELLETS <WITH> ELECTRO BALLS
+			HEAVY SLUGS <WITH> ELECTRO CANNON BALLS"
 		break;
 		case ultramods.plasmaBolt:
 			umn = @"SWAPS

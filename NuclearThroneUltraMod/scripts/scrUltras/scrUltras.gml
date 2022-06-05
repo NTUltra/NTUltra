@@ -81,11 +81,15 @@ function scrUltras() {
 	ultra_name[18] = "KILLER"
 	ultra_text[18] = "ENEMIES KILLED ON SNARE#SPAWN SAPLINGS"
 	ultra_tips[18] = "aggression!"
-
+/*
 	ultra_name[19] = "LEACHER"
 	ultra_text[19] = "ENEMIES STUCK ON SNARE#SOMETIMES HEAL YOU#ENEMIES KILLED ON SNARE#HAVE A CHANCE TO DROP ADDITIONAL ITEMS"
 	ultra_tips[19] = "nutritious"
-
+*/
+	ultra_name[19] = "APEX PREDATOR"
+	ultra_text[19] = "REPLACE SNARE WITH SPRINT#KILLING ENEMIES HAS A CHANCE#TO MAKE YOU IMMUNE FOR A SHORT DURATION#MOVING FASTER#INCREASES THE CHANCE#EFFECT CAN STACK WITH MULTIPLE KILLS"
+	ultra_tips[19] = "nutritious"
+	
 	ultra_name[20] = "STEREO SNARES"
 	ultra_text[20] = "SPAWN TWO SNARES#SNARES DESTROY PROJECTILES"
 	ultra_tips[20] = "better then original stereo snares"
@@ -239,7 +243,7 @@ function scrUltras() {
 	ultra_tips[49] = "the fluffy blur"
 
 	ultra_name[50] = "JUST A SHEEP"
-	ultra_text[50] = "ENEMIES DONT ATTACK UNTILL#MULTIPLE ENEMIES HAVE DIED"
+	ultra_text[50] = "ENEMIES DON'T ATTACK UNTIL#MULTIPLE ENEMIES HAVE DIED"
 	ultra_tips[50] = "they're stoopid"
 
 	ultra_name[51] = "IMPENETRABLE"

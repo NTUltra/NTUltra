@@ -1324,7 +1324,7 @@ function scrPowers() {
 	}
 
 	//PLANT
-	if race = 5
+	if race = 5 && !ultra_got[19]
 	{
 	    if ultra_got[20]{//STEREO SNARES
 	    with Tangle
@@ -1408,9 +1408,9 @@ function scrPowers() {
 		//YUNG VENUZ
 		if (race == 6 && (ultra_got[24] == 1 || (altUltra && ultra_got[23])) && wep_auto[wep] == 1)
 			scrYVPower();
-/*
-	if race = 26//Good O'l Humphry
-	{
+
+	if ultra_got[19]//Plant sprint
+	{/*
 	if ultra_got[104]
 	{
 	with instance_create(x+lengthdir_x(random(4),random(360)),y+lengthdir_y(random(4),random(360)),Smoke)
@@ -1418,27 +1418,29 @@ function scrPowers() {
 	team = other.team}
 	}
 	else
-	{
-	with instance_create(x+lengthdir_x(random(4),random(360)),y+lengthdir_y(random(4),random(360)),Dust)
-	{motion_add(other.direction+180+random(40)-20,0.1+random(2))
-	team = other.team}
+	{*/
+		with instance_create(x+lengthdir_x(random(4),random(360)),y+lengthdir_y(random(4),random(360)),Dust)
+		{motion_add(other.direction+180+random(40)-20,0.1+random(2))
+		team = other.team}
+		//}
+
+		if skill_got[2]==1//extra feet
+		{
+			maxspeed = 6.5;
+			//maxspeed=5.7;
+			//if ultra_got[104]
+			//	maxspeed=7.7
+		}
+		else
+		{
+			maxspeed = 6;
+		//maxspeed=5.2;
+		//if ultra_got[104]
+		//maxspeed=7.2
+		}
+		image_speed=0.6;
 	}
 
-	if skill_got[2]==1//extra feet
-	{
-	maxspeed=5.7;
-	if ultra_got[104]
-	maxspeed=7.7
-	}
-	else
-	{
-	maxspeed=5.2;
-	if ultra_got[104]
-	maxspeed=7.2
-	}
-	image_speed=0.25;
-	}
-*/
 	if race = 23 //Frog
 	{
 
@@ -2105,22 +2107,22 @@ function scrPowers() {
 
 	toxicamount=0;
 
-	}/*
-	else if race = 26//humphry
+	}
+	else if ultra_got[19]//Plant Sprint
 	{
 
 	if skill_got[2]==1//extra feet
 	{
-	maxspeed=4.5;
+		maxspeed=5;
 	}
 	else
 	{
-	maxspeed=4;
+		maxspeed=4.5;
 	}
 
 	image_speed=0.4;
 
-	}*/
+	}
 	else if race==13 
 	{
 	if KeyCont.key_spec[p] != 1 && KeyCont.key_spec[p] != 2 || !instance_exists(SheepStorm)//Sheep reset speed

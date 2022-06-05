@@ -45,7 +45,8 @@ curse = 0
 sprite_index = wep_sprt[264]
 }}
 }
-
+if instance_number(BigMachine) < 2 && !instance_exists(SurvivalWave) && !instance_exists(WantBoss)
+{
 with MusCont
 {
 audio_stop_sound(song)
@@ -63,5 +64,6 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 }
 snd_play(sndBossWin);
+}
 event_inherited()
 

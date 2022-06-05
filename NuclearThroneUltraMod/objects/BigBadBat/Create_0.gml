@@ -1,5 +1,5 @@
 raddrop = 50
-maxhealth = 380
+maxhealth = 370
 meleedamage = 5
 size = 6;
 
@@ -17,7 +17,7 @@ snd_melee = sndGoldScorpionMelee;
 
 //behavior
 alarm[1] = 30;
-rotationSpeed = choose(2,-2);
+rotationSpeed = choose(1.8,-1.8);
 speedUp = 4;
 minDistanceToTarget = 90;
 maxDistanceToTarget = 132;
@@ -41,6 +41,14 @@ actTime = 14;
 scrTarget();
 angle = random(360);
 loops = GetPlayerLoops();
+if loops > 2
+{
+	rotationSpeed *= 1.1;
+}
+if loops > 4
+{
+	rotationSpeed *= 1.1;
+}
 if target > 0
 	angle = point_direction(target.x,target.y,x,y);
 

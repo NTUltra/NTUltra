@@ -13,7 +13,12 @@ if place_meeting(x,y,ShopSelector)
 image_index=1;
 if KeyCont.key_spec[Player.p] != 1 && KeyCont.key_spec[Player.p] != 2
 {
-    if (HogSpend())
+	if instance_exists(TemporaryBuff)
+	{
+		with instance_create(x,y,PopupText)
+			mytext = "CAN'T STACK BUFF";
+	}
+    else if (HogSpend())
 	{
 	    with instance_create(Player.x,Player.y,TemporaryBuff)
 	    {

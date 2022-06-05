@@ -2,7 +2,7 @@ raddrop = 10
 maxhealth = 5
 meleedamage = 0
 size = 1
-bloodempty=0
+//bloodempty=0
 
 if UberCont.loops>1
 maxhealth=5;

@@ -1,5 +1,5 @@
 image_index = 0
-bloodempty=0
+//bloodempty=0
 
 raddrop = 12
 maxhealth = 12

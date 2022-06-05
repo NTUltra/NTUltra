@@ -22,8 +22,8 @@ EnemyHealthAdjustments();
 
 if instance_exists(Player)
 {
-	if Player.ultra_got[19]{//plant leacher
-	bloodempty=0}
+	//if Player.ultra_got[19]{//plant leacher
+	//bloodempty=0}
 
 	if Player.crown = 13
 	raddrop=0;

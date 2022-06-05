@@ -99,7 +99,7 @@ function scrTips() {
 	if Player.area = 4
 	tip = choose("oh no","good luck","spiderwebs everywhere","reflections on the walls","skin is crawling","almost halfway there")
 	if Player.area = 5
-	tip = choose("wear a scarf","they used to have electricity","miss the sun","civilization","walk softly","there is no yeti")
+	tip = choose("wear a scarf","they used to have electricity","miss the sun","civilization","walk softly",choose("cold potatoes","there is a pink sheep nearby","there is no yeti","there is no yeti","there is no yeti","lill hunter is a bitch"))
 	if Player.area = 6
 	tip = choose("beep boop","nerds","don't push any buttons","randa")
 	if Player.area = 100

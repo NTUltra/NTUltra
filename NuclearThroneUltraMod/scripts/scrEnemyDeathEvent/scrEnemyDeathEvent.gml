@@ -18,6 +18,7 @@ function scrEnemyDeathEvent(){
 		}
 		scrLuckyShot();
 		BloodLust();
+		ApexPredator();
 		var isdoc = Player.race == 25;
 		
 		

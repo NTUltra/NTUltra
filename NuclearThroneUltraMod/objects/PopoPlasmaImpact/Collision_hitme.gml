@@ -9,7 +9,7 @@ my_health -= 4//10
 sprite_index = spr_hurt
 image_index = 0
 motion_add(point_direction(other.x,other.y,x,y),2)
-Sleep(100)
+Sleep(10)
 BackCont.shake += 2
 }
 }

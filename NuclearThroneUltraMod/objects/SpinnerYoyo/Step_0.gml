@@ -11,10 +11,10 @@ if instance_exists(Player) and instance_exists(enemy)
 	var dir = instance_nearest(x,y,enemy)
 	var home = 4;
 	if Player.skill_got[21] == 1
-		home += 30 + Player.betterboltmarrow;
+		home += 20 + Player.betterboltmarrow;
 	if Player.skill_got[19] == 1//Eagle eyes
 	{
-		home += 12;
+		home += 10;
 		if Player.race == 25
 			home += 4;
 	}

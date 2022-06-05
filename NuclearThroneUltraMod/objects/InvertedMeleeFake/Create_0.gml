@@ -1,6 +1,6 @@
 image_index = 0
 
-bloodempty=0
+//bloodempty=0
 raddrop = 15
 maxhealth = 8
 meleedamage = 1

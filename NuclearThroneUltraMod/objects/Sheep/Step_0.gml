@@ -50,7 +50,6 @@ idle=true;}
 //}
 //}
 
-scrTarget()
 
 if walk > 0
 {
