@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprGhostBlade","path":"sprites/sprGhostBlade/sprGhostBlade.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprGhostBlade",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -5207,7 +5207,7 @@ function scrWeapons() {
 	wep_auto[472] = 0
 	wep_load[472] = 10
 	wep_cost[472] = 2
-	wep_sprt[472] = sprHeavySlugger
+	wep_sprt[472] = sprUltraHeavySlugger
 	wep_area[472] = 35
 	wep_text[472] = "supermassive"
 	wep_swap[472] = sndSwapShotgun
@@ -5218,7 +5218,7 @@ function scrWeapons() {
 	wep_auto[473] = 0
 	wep_load[473] = 25
 	wep_cost[473] = 2
-	wep_sprt[473] = sprBazooka
+	wep_sprt[473] = sprUltraBazooka
 	wep_area[473] = 25
 	wep_text[473] = ""
 	wep_swap[473] = sndSwapExplosive
@@ -5229,7 +5229,7 @@ function scrWeapons() {
 	wep_auto[474] = 1
 	wep_load[474] = 18
 	wep_cost[474] = 1
-	wep_sprt[474] = sprFlameThrower
+	wep_sprt[474] = sprFrazer
 	wep_area[474] = 13
 	wep_text[474] = "frost flame"
 	wep_swap[474] = sndSwapFlame
@@ -5240,7 +5240,7 @@ function scrWeapons() {
 	wep_auto[475] = 0
 	wep_load[475] = 6
 	wep_cost[475] = 2
-	wep_sprt[475] = sprRevolver
+	wep_sprt[475] = sprAccelerator
 	wep_area[475] = 7
 	wep_text[475] = "damage increases as bullet exists longer"
 	wep_swap[475] = sndSwapPistol
@@ -5251,7 +5251,7 @@ function scrWeapons() {
 	wep_auto[476] = 1
 	wep_load[476] = 3
 	wep_cost[476] = 2
-	wep_sprt[476] = sprRevolver
+	wep_sprt[476] = sprAutoAccelerator
 	wep_area[476] = 18
 	wep_text[476] = "higher damage to enemies further away"
 	wep_swap[476] = sndSwapPistol
@@ -5262,7 +5262,7 @@ function scrWeapons() {
 	wep_auto[477] = 0
 	wep_load[477] = 69//NOICE
 	wep_cost[477] = 0
-	wep_sprt[477] = sprHammer
+	wep_sprt[477] = sprHeavySledgeHammer
 	wep_area[477] = 4
 	wep_text[477] = "THATS A LOTTA DAMAGE!"
 	wep_swap[477] = sndSwapHammer
@@ -5284,7 +5284,7 @@ function scrWeapons() {
 	wep_auto[479] = 1
 	wep_load[479] = 16
 	wep_cost[479] = 2.5
-	wep_sprt[479] = sprSwordGun
+	wep_sprt[479] = sprFrostSwordGun
 	wep_area[479] = 10
 	wep_text[479] = "add homing!"
 	wep_swap[479] = sndSwapSword
@@ -5295,7 +5295,7 @@ function scrWeapons() {
 	wep_auto[480] = 1
 	wep_load[480] = 14
 	wep_cost[480] = 3
-	wep_sprt[480] = sprSwordGun
+	wep_sprt[480] = sprScytheGun
 	wep_area[480] = 12
 	wep_text[480] = "spin spin spin"
 	wep_swap[480] = sndSwapSword
@@ -5306,7 +5306,7 @@ function scrWeapons() {
 	wep_auto[481] = 0
 	wep_load[481] = 30
 	wep_cost[481] = 0
-	wep_sprt[481] = sprFlail
+	wep_sprt[481] = sprExplosionFlail
 	wep_area[481] = 12
 	wep_text[481] = ""
 	wep_swap[481] = sndSwapSword
@@ -5317,18 +5317,18 @@ function scrWeapons() {
 	wep_auto[482] = 1
 	wep_load[482] = 7
 	wep_cost[482] = 1
-	wep_sprt[482] = sprExplosiveMorphORay
+	wep_sprt[482] = sprBoomORay
 	wep_area[482] = 10
-	wep_text[482] = "the ray of stank"
+	wep_text[482] = "the ray of dank"
 	wep_swap[482] = sndSwapExplosive
 	wep_rad[482] = 0;
 	
-	wep_name[483] = "DISPERSE GRENADE GUN"
+	wep_name[483] = "DISPERSE GRENADE LAUNCHER"
 	wep_type[483] = 4
 	wep_auto[483] = 1
 	wep_load[483] = 30
 	wep_cost[483] = 6
-	wep_sprt[483] = sprDisperseBazooka
+	wep_sprt[483] = sprDisperseNader
 	wep_area[483] = 17
 	wep_text[483] = "grass cannon"
 	wep_swap[483] = sndSwapExplosive
@@ -5339,7 +5339,7 @@ function scrWeapons() {
 	wep_auto[484] = 0
 	wep_load[484] = 12
 	wep_cost[484] = 0
-	wep_sprt[484] = sprGhostBlade
+	wep_sprt[484] = sprGhostDagger
 	wep_area[484] = 15
 	wep_text[484] = "ghastly"
 	wep_swap[484] = sndSwapSword
@@ -5350,7 +5350,7 @@ function scrWeapons() {
 	wep_auto[485] = 0
 	wep_load[485] = 13
 	wep_cost[485] = 4
-	wep_sprt[485] = sprARifle
+	wep_sprt[485] = sprPotShot
 	wep_area[485] = 5
 	wep_text[485] = "melting pot"
 	wep_swap[485] = sndSwapMachinegun
@@ -5361,7 +5361,7 @@ function scrWeapons() {
 	wep_auto[486] = 1
 	wep_load[486] = 4
 	wep_cost[486] = 1
-	wep_sprt[486] = sprEnergyJackHammer
+	wep_sprt[486] = sprLightningJackHammer
 	wep_area[486] = 14
 	wep_text[486] = "lightning strikes five times"
 	wep_swap[486] = sndSwapMotorized
@@ -5372,8 +5372,8 @@ function scrWeapons() {
 	wep_auto[487] = 1
 	wep_load[487] = 5
 	wep_cost[487] = 1
-	wep_sprt[487] = sprEnergyJackHammer
-	wep_area[487] = 22
+	wep_sprt[487] = sprUltraJackHammer
+	wep_area[487] = 24
 	wep_text[487] = ""
 	wep_swap[487] = sndSwapMotorized
 	wep_rad[487] = 4;
@@ -5383,7 +5383,7 @@ function scrWeapons() {
 	wep_auto[488] = 0
 	wep_load[488] = 22
 	wep_cost[488] = 4
-	wep_sprt[488] = sprShotgun
+	wep_sprt[488] = sprShlogger
 	wep_area[488] = 11
 	wep_text[488] = "shotgun slugger"
 	wep_swap[488] = sndSwapShotgun
@@ -5394,7 +5394,7 @@ function scrWeapons() {
 	wep_auto[489] = 1
 	wep_load[489] = 26
 	wep_cost[489] = 3
-	wep_sprt[489] = sprKrakenYoyoGun
+	wep_sprt[489] = sprLightningYoyoGun
 	wep_area[489] = 9
 	wep_text[489] = ""
 	wep_swap[489] = sndSwapEnergy
@@ -5671,7 +5671,7 @@ function scrWeapons() {
 	wep_cost[514] = 0
 	wep_sprt[514] = sprShovel
 	wep_area[514] = 8//4 originally?
-	wep_text[514] = "so heavy and it still can't dig through walls"
+	wep_text[514] = "it can dig!"
 	wep_swap[514] = sndSwapHammer
 	wep_rad[514] = 0;
 	
@@ -5828,6 +5828,17 @@ function scrWeapons() {
 	wep_text[528] = "beautifull flower"
 	wep_swap[528] = sndSwapHammer
 	wep_rad[528] = 0;
+	
+	wep_name[529] = "LIGHTNING CRASH"
+	wep_type[529] = 5
+	wep_auto[529] = 0
+	wep_load[529] = 23
+	wep_cost[529] = 5
+	wep_sprt[529] = sprSplinterCrash
+	wep_area[529] = 13
+	wep_text[529] = "crash test"
+	wep_swap[529] = sndSwapBow
+	wep_rad[529] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 

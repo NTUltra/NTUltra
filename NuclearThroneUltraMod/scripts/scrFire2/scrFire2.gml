@@ -8644,7 +8644,7 @@ function scrFire2() {
 
 	instance_create(x,y,Dust)
 
-	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 	{
 	dmg = 12
 	sprite_index=sprHeavySlash;
@@ -8654,7 +8654,7 @@ function scrFire2() {
 	motion_add(aimDirection,2+longarms)
 	image_angle = direction
 	team = other.team}
-	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),Slash)
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),EnergyHammerSlash)
 	{
 	dmg = 12
 	sprite_index=sprHeavySlash;
@@ -8664,7 +8664,7 @@ function scrFire2() {
 	motion_add(aimDirection+60*other.accuracy,2+longarms)
 	image_angle = direction
 	team = other.team}
-	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),Slash)
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),EnergyHammerSlash)
 	{
 	dmg = 12
 	sprite_index=sprHeavySlash;
@@ -9089,6 +9089,64 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(24,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 10
 	wkick = -5
+
+	break;
+	
+	//LIGHTNING CRASH
+	case 529:
+	if Player.skill_got[17] = 1
+		snd_play_fire(sndLightningCannonUpg)
+	else
+		snd_play_fire(sndLightningCannon)
+
+	var am = 24;
+	var angStep = 360/am;
+	angStep *= accuracy;
+	var angg = aimDirection - (angStep * (am*0.5));
+	repeat(am)
+	{
+		with instance_create(x,y,Lightning)
+		{image_angle = angg;
+			accuracy = 60;
+			branch = 120;
+			team = other.team
+			ammo = 24;
+		event_perform(ev_alarm,0)
+		visible = 0
+		with instance_create(x,y,LightningSpawn)
+		image_angle = other.image_angle}
+		angg += angStep
+	}
+	angStep *= 0.5;
+	with instance_create(x,y,Lightning)
+	{
+		image_angle = aimDirection+angStep+(random(6)-3)*other.accuracy;
+		accuracy += 10;
+		branch = 60;
+		team = other.team
+		ammo = 24;
+		event_perform(ev_alarm,0)
+		visible = 0
+		with instance_create(x,y,LightningSpawn)
+			image_angle = other.image_angle
+	}
+	with instance_create(x,y,Lightning)
+	{
+		image_angle = aimDirection-angStep+(random(6)-3)*other.accuracy;
+		accuracy += 10;
+		branch = 60;
+		team = other.team
+		ammo = 24;
+		event_perform(ev_alarm,0)
+		visible = 0
+		with instance_create(x,y,LightningSpawn)
+			image_angle = other.image_angle
+	}
+
+	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 8
+	wkick += 4
 
 	break;
 	

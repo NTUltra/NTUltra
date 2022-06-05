@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprBulletDisperseMachinegun","path":"sprites/sprBulletDisperseMachinegun/sprBulletDisperseMachinegun.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprBulletDisperseMachinegun",
     "tags": [],
     "resourceType": "GMSequence",
   },
