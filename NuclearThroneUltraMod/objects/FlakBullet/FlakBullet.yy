@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskFlakBullet",
     "path": "sprites/mskFlakBullet/mskFlakBullet.yy",

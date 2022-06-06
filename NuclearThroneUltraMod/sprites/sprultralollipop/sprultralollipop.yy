@@ -93,8 +93,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Custom",
-    "path": "folders/Sprites/Weapons/Custom.yy",
+    "name": "UltraWeapons",
+    "path": "folders/Sprites/Weapons/Custom/UltraWeapons.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprUltraLollipop",

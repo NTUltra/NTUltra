@@ -42,5 +42,5 @@ else
 		motion_add(dir,0.8);
 	}
 }
-if speed > maxSpeed
+if speed > maxSpeed && my_health > 0
 	speed = maxSpeed

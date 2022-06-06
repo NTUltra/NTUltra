@@ -952,8 +952,16 @@ ang += 360/14
 else
 canrebel = 1
 }
+if wep == 531//Coffee makes you faster
+{
+	maxspeed += 1;	
+}
 if speed > maxspeed
-speed = maxspeed
+	speed = maxspeed
+if wep == 531
+{
+	maxspeed -= 1;
+}
 
 if roll = 1
 {

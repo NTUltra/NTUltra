@@ -14,7 +14,7 @@ snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
 with instance_create(x,y,BulletHit)
 sprite_index=sprUltraBulletHit;
 
-scrRecycleGland(1);
+scrRecycleGland(2);
 
 }
 

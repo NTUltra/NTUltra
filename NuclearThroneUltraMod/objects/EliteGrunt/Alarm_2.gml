@@ -6,7 +6,11 @@ motion_add(other.gunangle+random(20)-10,7.8)
 image_angle = direction
 team = other.team
 if team == 2
-	sprite_index = sprIDPDBulletRogue}
+{
+	sprite_index = sprIDPDBulletRogue;
+	RecycleGlandType();
+}
+	}
 
 ammo--;
 if ammo>0

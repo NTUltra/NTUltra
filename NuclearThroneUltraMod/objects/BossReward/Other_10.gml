@@ -5,7 +5,7 @@ name = "";
 switch(array_length(UberCont.collectedRewards))
 {
 	case 0:
-		name += "GAIN 2 MAX HP";
+		name += "GAIN 1 MAX HP";
 	break;
 	case 1:
 		name += "INCREASE THE VALUE OF RADIATION BY 15%";
@@ -20,6 +20,6 @@ switch(array_length(UberCont.collectedRewards))
 		name += "INCREASE YOUR MAX LEVEL BY ONE";
 	break;
 	case 5:
-		name += "GAIN 2 MAX HP";
+		name += "GAIN 1 MAX HP";
 	break;
 }

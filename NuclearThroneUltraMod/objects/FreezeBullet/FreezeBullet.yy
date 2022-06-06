@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskFreezeBullet",
     "path": "sprites/mskFreezeBullet/mskFreezeBullet.yy",

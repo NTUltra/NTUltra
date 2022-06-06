@@ -1,6 +1,7 @@
 event_inherited();
 friction = 0.4
 typ = 1 
+ShotgunShouldersType();
 lines = 4;
 alarm[0] = 6;
 dmg = 5;

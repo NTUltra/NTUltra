@@ -22,7 +22,7 @@ else
 bfire = !bfire;
 if team == 2
 {
-	with instance_create(x,y,Bullet3){
+	with instance_create(x,y,Bullet3) {
 		motion_add(other.gunangle+random(20)-10,6)
 		image_angle = direction
 		team = other.team

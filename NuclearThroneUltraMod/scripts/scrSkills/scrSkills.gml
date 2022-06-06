@@ -9,6 +9,7 @@ function scrSkills() {
 	
 	var isDoctor = false;
 	var isHand = false;
+	var betterWepSpecific = false;
 	if instance_exists(Player)
 	{
 		if Player.race == 25
@@ -18,6 +19,10 @@ function scrSkills() {
 		else if Player.race == 27
 		{
 			isHand = true;	
+		}
+		if instance_exists(Player) && variable_instance_exists(Player,"ultra_got") && Player.ultra_got[97]
+		{
+			betterWepSpecific = true;	
 		}
 	}
 	skill_name[0] = "HEAVY HEART"
@@ -209,6 +214,8 @@ function scrSkills() {
 		skill_text[14] = "NO DAMAGE FROM#EXPLOSIONS, FIRE, FROST AND LAVA#WHEN UNDER 6HP"
 	else
 		skill_text[14] = "NO DAMAGE FROM#EXPLOSIONS, FIRE, FROST AND LAVA#WHEN UNDER 5HP"
+	if betterWepSpecific
+		skill_text[14] = "NO DAMAGE FROM#EXPLOSIONS, FIRE, FROST AND LAVA#WHEN UNDER 8HP"
 	skill_tips[14] = "temperature is rising";
 	skill_msnd[14] =  sndMutBoilingVeins
 
@@ -216,12 +223,17 @@ function scrSkills() {
 	skill_name[15] = "SHOTGUN SHOULDERS"
 	if isHand
 		skill_name[15] = "SHOTGUN KNUCKLES"
-	skill_text[15] = "SHELLS BOUNCE FURTHER"//#BOUNCER BULLETS CAN BOUNCE#ONE ADDITIONAL TIME" effect is minor no need to tell?
+	skill_text[15] = "SHELLS BOUNCE FURTHER#SHELLS CAN'T BE DEFLECTED BY ENEMIES"//#BOUNCER BULLETS CAN BOUNCE#ONE ADDITIONAL TIME" effect is minor no need to tell?
 	skill_tips[15] = choose("shells are friends","shotgun shoulders\nextends close range damage\nfrom shotguns","shotgun shoulders\nincrease bouncer bullets bounces by 1")
 	skill_msnd[15] =  sndMutShotGunShoulders
 
 	skill_name[16] = "RECYCLE GLAND"
-	skill_text[16] = "MOST HIT BULLETS BECOME AMMO"
+	if isDoctor
+		skill_text[16] = "70% OF HIT BULLETS BECOME AMMO#BULLETS CAN'T BE DEFLECTED BY ENEMIES"
+	else
+		skill_text[16] = "67% OF HIT BULLETS BECOME AMMO#BULLETS CAN'T BE DEFLECTED BY ENEMIES"
+	if betterWepSpecific
+		skill_text[16] = "75% OF HIT BULLETS BECOME AMMO#BULLETS CAN'T BE DEFLECTED BY ENEMIES"
 	skill_tips[16] = "no need to aim"
 	skill_msnd[16] =  sndMutRecycleGland
 

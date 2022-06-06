@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskCardGuy",
     "path": "sprites/mskCardGuy/mskCardGuy.yy",

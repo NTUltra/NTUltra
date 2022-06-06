@@ -27,5 +27,5 @@ alarm[1] += 2;
 dmg=3;
 
 typ = 1
-
+ShotgunShouldersType();
 alarm[11] = 1;

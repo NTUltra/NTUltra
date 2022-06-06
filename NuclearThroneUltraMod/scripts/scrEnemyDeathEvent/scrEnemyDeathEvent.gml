@@ -55,7 +55,7 @@ function scrEnemyDeathEvent(){
 			if ultra_got[15]//POWER OVERWHELMING! melting c ultra
 			other.raddrop +=2;
 			if ultra_got[77]//business hog prosperity
-			other.raddrop+=1;
+				other.raddrop+=1;
 
 			if crown = 7
 			other.raddrop=round(other.raddrop*0.65);

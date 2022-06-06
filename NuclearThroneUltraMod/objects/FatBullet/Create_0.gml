@@ -7,7 +7,7 @@ their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
 they have a FORCE and can be 0 or DIRECTIONAL */
 dmg=5;//9
 typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
-
+RecycleGlandType();
 hits=5;
 
 alarm[11] = 1;

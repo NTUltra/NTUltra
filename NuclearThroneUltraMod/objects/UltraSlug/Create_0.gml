@@ -4,6 +4,8 @@ friction = 0.5//0.8
 wallbounce = 4
 
 typ = 1
+ShotgunShouldersType();
+
 alarm[1] = 4;
 if instance_exists(Player)
 {

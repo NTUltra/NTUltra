@@ -23,5 +23,5 @@ wallbounce+=5;
 }
 
 typ = 1
-
+ShotgunShouldersType();
 alarm[11] = 1;

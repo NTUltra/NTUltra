@@ -19,7 +19,7 @@ wallbounce+=5;
 }
 }
 typ = 1 
-
+ShotgunShouldersType();
 turned=false;
 
 alarm[0]=2;

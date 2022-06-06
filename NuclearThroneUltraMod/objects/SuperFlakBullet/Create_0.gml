@@ -1,6 +1,7 @@
 event_inherited();
 friction = 0.4
 typ = 1 
+ShotgunShouldersType();
 dmg = 50;
 alarm[1] = 2;
 if instance_exists(Player)

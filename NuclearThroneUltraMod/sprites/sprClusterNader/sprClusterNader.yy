@@ -74,7 +74,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Remade",
-    "path": "folders/Sprites/Weapons/Custom/Remade.yy",
+    "path": "folders/Sprites/Weapons/Existing/Remade.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprClusterNader",

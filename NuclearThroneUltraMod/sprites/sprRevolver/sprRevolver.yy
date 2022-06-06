@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprRevolver","path":"sprites/sprRevolver/sprRevolver.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprRevolver",
     "tags": [],
     "resourceType": "GMSequence",
   },

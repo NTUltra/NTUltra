@@ -8646,8 +8646,8 @@ function scrFire2() {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 	{
-	dmg = 12
-	sprite_index=sprHeavySlash;
+	dmg = 14
+	sprite_index=sprVeryHeavySlash;
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -8656,8 +8656,8 @@ function scrFire2() {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),EnergyHammerSlash)
 	{
-	dmg = 12
-	sprite_index=sprHeavySlash;
+	dmg = 14
+	sprite_index=sprVeryHeavySlash;
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -8666,8 +8666,8 @@ function scrFire2() {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),EnergyHammerSlash)
 	{
-	dmg = 12
-	sprite_index=sprHeavySlash;
+	dmg = 14
+	sprite_index=sprVeryHeavySlash;
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -8866,10 +8866,10 @@ function scrFire2() {
 		team = other.team
 	}
 
-	BackCont.viewx2 += lengthdir_x(5,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(5,aimDirection+180)*UberCont.opt_shake
-	BackCont.shake += 3
-	wkick += 4
+	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 5
+	wkick = 4
 
 	break;
 	
@@ -9147,6 +9147,48 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 8
 	wkick += 4
+
+	break;
+	
+	//ULTRA HEAVY REVOLVER
+	case 530:
+	snd_play_fire(sndHeavyMachinegun)
+	snd_play_fire(sndUltraPistol)
+
+	repeat(2){
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+	}
+
+	with instance_create(x,y,Bullet4Heavy)
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 5
+	wkick = 3
+
+
+	break;
+	
+	//COFFEE CANNON
+	case 531:
+
+	snd_play_fire(sndHeavyMachinegun)
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(80)-40,3+random(2))
+
+	with instance_create(x,y+4,CoffeeBullet)
+	{motion_add(aimDirection+(random(26)-13)*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+	motion_add(direction,4);
+	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 7
+	wkick = 6
 
 	break;
 	

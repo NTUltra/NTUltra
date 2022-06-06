@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprUltraMegaLaserPistol","path":"sprites/sprUltraMegaLaserPistol/sprUltraMegaLaserPistol.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprUltraMegaLaserPistol",
     "tags": [],
     "resourceType": "GMSequence",
   },

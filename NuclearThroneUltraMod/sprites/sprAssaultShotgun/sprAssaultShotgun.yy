@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprAssaultShotgun","path":"sprites/sprAssaultShotgun/sprAssaultShotgun.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprAssaultShotgun",
     "tags": [],
     "resourceType": "GMSequence",
   },

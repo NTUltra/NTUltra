@@ -4,10 +4,10 @@ switch(array_length(UberCont.collectedRewards))
 	case 0:
 		with Player
 		{
-			maxhealth += 2;
-			my_health += 2;
+			maxhealth += 1;
+			my_health += 1;
 		}
-		UberCont.maxHpIncrease += 2;
+		UberCont.maxHpIncrease += 1;
 		snd_play(other.snd_chst);
 	break;
 	case 1:
@@ -37,10 +37,10 @@ switch(array_length(UberCont.collectedRewards))
 	case 5:
 		with Player
 		{
-			maxhealth += 2;
-			my_health += 2;
+			maxhealth += 1;
+			my_health += 1;
 		}
-		UberCont.maxHpIncrease += 2;
+		UberCont.maxHpIncrease += 1;
 		snd_play(other.snd_chst);
 	break;
 }

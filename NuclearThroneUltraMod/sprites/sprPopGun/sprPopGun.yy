@@ -88,7 +88,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprPopGun","path":"sprites/sprPopGun/sprPopGun.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprPopGun",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -98,7 +98,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Remade",
-    "path": "folders/Sprites/Weapons/Custom/Remade.yy",
+    "path": "folders/Sprites/Weapons/Existing/Remade.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprPopGun",

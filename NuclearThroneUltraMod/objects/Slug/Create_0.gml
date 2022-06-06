@@ -22,6 +22,8 @@ wallbounce+=5;
 }
 
 typ = 1 
+ShotgunShouldersType();
+
 dmg = 24;
 alarm[1] = 4;
 if instance_exists(Player)

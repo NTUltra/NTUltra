@@ -8,7 +8,7 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 freezetime=10;
 dmg=4;//normal bullet is 3 dmg
 typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
-
+RecycleGlandType();
 if instance_exists(Player)
 {
 

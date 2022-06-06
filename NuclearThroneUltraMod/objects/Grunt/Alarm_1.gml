@@ -46,7 +46,11 @@ if instance_exists(Player) && target==Player.id
     image_angle = direction
     team = other.team
 	if team == 2
-		sprite_index = sprIDPDBulletRogue}
+	{
+		sprite_index = sprIDPDBulletRogue
+		RecycleGlandType();
+	}
+	}
     
     alarm[1] = 3+random(2)
     }

@@ -68,7 +68,7 @@
             {"id":"ed107d76-0659-4580-8678-3792f42eae16","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"532649dc-37be-4d1b-ab30-455af4858f07","path":"sprites/sprSeekerShotgun/sprSeekerShotgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "lockOrigin": false,
     "showBackdrop": true,
     "showBackdropImage": false,
@@ -94,7 +94,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Remade",
-    "path": "folders/Sprites/Weapons/Custom/Remade.yy",
+    "path": "folders/Sprites/Weapons/Existing/Remade.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprSeekerShotgun",

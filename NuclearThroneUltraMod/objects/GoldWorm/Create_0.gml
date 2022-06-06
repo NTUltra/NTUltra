@@ -7,7 +7,7 @@ raddrop = 30
 maxhealth = 60
 my_health = maxhealth;
 EnemyHealthAdjustments();
-
+maxRange = 250;
 spr_idle = sprGoldWormIdle
 spr_walk = sprGoldWormIdle
 spr_hurt = sprGoldWormHurt
