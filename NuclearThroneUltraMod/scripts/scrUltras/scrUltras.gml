@@ -108,7 +108,7 @@ function scrUltras() {
 	    ultra_tips[23] = "shells and bullets <3"
 		if instance_exists(Player)
 		{
-			if scrMeleeWeapons(Player.wep) && scrMeleeWeapons(Player.bwep)
+			if (scrMeleeWeapons(Player.wep) || Player.wep == 0) && (scrMeleeWeapons(Player.bwep) || Player.bwep == 0)
 			{
 				ultra_name[23] = "BLASPHEMY"
 			    ultra_text[23] = "CAN NO LONGER POP POP GUNS#HIGHER MELEE SWING RATE#MELEE IS FULLY AUTOMATIC#CAN POP POP MELEE"

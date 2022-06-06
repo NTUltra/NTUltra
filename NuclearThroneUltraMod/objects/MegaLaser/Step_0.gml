@@ -4,3 +4,4 @@ instance_destroy()
 if img<7
 img += 0.5
 
+BackCont.shake ++;

@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprSwarmGun","path":"sprites/sprSwarmGun/sprSwarmGun.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprSwarmGun",
     "tags": [],
     "resourceType": "GMSequence",
   },

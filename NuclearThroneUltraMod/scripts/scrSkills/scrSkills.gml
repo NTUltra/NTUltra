@@ -272,7 +272,7 @@ function scrSkills() {
 	skill_msnd[19] =  sndMutEagleEyes
 
 	skill_name[20] = "IMPACT WRISTS"
-	skill_text[20] = "CORPSES FLY & HIT HARDER"
+	skill_text[20] = "CORPSES FLY & HIT HARDER#FAST CORPSES CAN DESTROY WALLS"
 	skill_tips[20] = "see them fly"
 	skill_msnd[20] =  sndMutImpactWrists
 

@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprLightningRifle","path":"sprites/sprLightningRifle/sprLightningRifle.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprLightningRifle",
     "tags": [],
     "resourceType": "GMSequence",
   },

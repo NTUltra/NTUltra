@@ -17,29 +17,44 @@ if object_index!=SnowTank && object_index!=InvertedSnowTank && object_index!=Gol
 		sprite_index = other.spr_dead
 		image_xscale = other.right
 
+		
+		if speed > 17
+			speed = 17
 		if instance_exists(Player)
 		{
+			var impactWrist = false;
 			if Player.ultra_got[52] == 1
 				speed += 4;
 			if Player.skill_got[20] == 1
 			{
-				speed += 9.3
+				impactWrist = true;
+				alarm[0] = 2;
+				speed = max(speed+9,10)//9.3
 				if Player.race=25
 					speed+=1.25;
-				
-				if speed > 18
-					speed = 18
 			}
+			else if speed > 17
+			speed = 17
+			if size > 0
+			{
+				if impactWrist
+				{
+					speed /= (size*0.3);
+				}
+				else
+					speed /= size*0.8;
+			}
+			
+			if Player.skill_got[20] == 1 && speed > 19
+				speed = 19
 		}
-		if speed > 18
-			speed = 18
-		if size > 0
-			speed /= size
+		else if size > 0
+			speed /= size*0.8
 	}
 	snd_play(snd_dead, 0.1,true);
 }
 
-Sleep(15+size*15)
+Sleep(15+size*10)
 //Mutations
 scrEnemyDeathEvent();
 
