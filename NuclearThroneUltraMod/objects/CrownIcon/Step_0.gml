@@ -111,8 +111,9 @@ Player.rushcrownlevels=0;
 if crown == 6
 Player.decay = 300
 
+
 //CROWN OF REINCARNATION
-if crown==11
+if crown==11 && Player.crownvisits > 0
 {
 	with Player
 	{

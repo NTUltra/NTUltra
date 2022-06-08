@@ -8,7 +8,7 @@ sprite_index = spr_fire
 
             with instance_create(x/*-8*/,y,TrapFire)
             {
-            motion_add(other.gunangle+random(4)-2,9)
+            motion_add(other.gunangle+random(4)-2,8)
             team = other.team
             ignoreHitme=true;
             }

@@ -15,7 +15,7 @@ if instance_exists(Player) {
 			dx = x + 16
 			dy = y + 16
 		}
-	} until x != dx && y != dy && point_distance(Player.x, Player.y, dx, dy) > maxCrystalDis || i > mt
+	} until x != dx && y != dy && (point_distance(Player.x, Player.y, dx, dy) > maxCrystalDis && point_distance(Player.x, Player.y, dx, dy) < 300) || i > mt
 	if i <= mt {
 		repeat(24)
 		with instance_create(x,y,Curse) {
@@ -35,6 +35,7 @@ if instance_exists(Player) {
 		{
 			for (var i = 0; i < amountOfWalls; i++) {
 				with hitWalls[| i] {
+					instance_create(x,y,SmallWallBreak);
 					instance_destroy();
 					instance_create(x,y,FloorExplo);
 				}

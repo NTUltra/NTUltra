@@ -102,7 +102,7 @@ with Player
 		snd_play_2d(sndRobotEat)
 
 		scrRaddrop(r);
-		breload = 0
+		breload = min(breload,0)
 		instance_create(x,y,Smoke)
 
 		//ROBOT Ultra B Regurgitate

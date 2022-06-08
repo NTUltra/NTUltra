@@ -40,6 +40,7 @@ if UberCont.opt_gamemode != 25
 			else
 			sprite_index = sprFloor100;
 		}
+		UberCont.crownVaultChallenge ++;
 		with projectile
 		{
 			if team != 2

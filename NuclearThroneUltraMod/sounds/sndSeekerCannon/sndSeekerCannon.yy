@@ -11,8 +11,8 @@
     "name": "agsfx",
     "path": "audiogroups/agsfx",
   },
-  "soundFile": "sndSeekerCannon",
-  "duration": 0.129188,
+  "soundFile": "sndseekercannon.ogg",
+  "duration": 1.694688,
   "parent": {
     "name": "Bolts",
     "path": "folders/Sounds/Weapons/Bolts.yy",

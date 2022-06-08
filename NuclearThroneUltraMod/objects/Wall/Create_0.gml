@@ -217,4 +217,4 @@ w = 24
 h = 24
 
 checked = false;
-alarm[1] = 3;
+alarm[1] = 4;

@@ -1,11 +1,5 @@
 scrTarget()
-alarm[1] = 8+random(20)
-
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1] = 10+random(10);
-}
+alarm[1] = actTime+random(actTime);
 
 if target > 0
 {
@@ -49,8 +43,8 @@ if target > 0
 		if noCorpse &&  random(4) < 1
 		{
 			motion_add(random(360),0.4)
-			walk = 10+random(15)
-			alarm[1] = walk+10+random(30)
+			walk = actTime+random(actTime+5)
+			alarm[1] = walk+actTime;
 		}
 	}
 }
@@ -65,15 +59,15 @@ else
 			noCorpse = false;
 			direction = point_direction(x,y,corpseTarget.x,corpseTarget.y);
 			motion_add(direction,4.5);
-			walk = 20;
+			walk = actTime+5;
 			alarm[1] += walk;
 		}
 	}
 	if noCorpse && random(10) < 1
 	{
-	motion_add(random(360),0.4)
-	walk = 10+random(15)
-	alarm[1] = walk+10+random(30)
+		motion_add(random(360),0.4)
+		walk = 10+random(15)
+		alarm[1] = walk+10+random(30)
 	}
 }
 

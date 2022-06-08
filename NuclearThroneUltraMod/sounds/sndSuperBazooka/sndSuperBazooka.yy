@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndSuperBazooka",
-  "duration": 0.0,
+  "duration": 2.75075,
   "parent": {
     "name": "Shell",
     "path": "folders/Sounds/Weapons/Shell.yy",

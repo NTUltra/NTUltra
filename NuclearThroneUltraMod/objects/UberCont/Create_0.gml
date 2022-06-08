@@ -2,7 +2,7 @@
 //VERSION STUFF ETC.
 win8 = 1;
 version = 000//23 is final probably
-public = 1//1 is no cheats and release
+public = 0//1 is no cheats and release
 defaultPublic = public;
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
@@ -198,7 +198,7 @@ encrypted_run_data = {
 	bettermelee: 0,
 	betterlaserbrain: 0,
 	betterpluto: 0,
-	betterrabbitpaw: 0.14,
+	betterrabbitpaw: 0.1,
 	betterrecyclegland: 0.1,
 	betterboltmarrow: 0,
 	bskin: 0,

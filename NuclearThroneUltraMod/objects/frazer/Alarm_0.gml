@@ -1,4 +1,6 @@
 /// @description Move it
+if instance_exists(owner)
+{
 x = owner.x;
 y = owner.y;
 var dir = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
@@ -40,3 +42,8 @@ for (var i = 0; i < al; i++)
 	yy += lengthdir_y(step,dir);
 }
 alarm[0] = 1;
+}
+else
+{
+	instance_destroy();	
+}

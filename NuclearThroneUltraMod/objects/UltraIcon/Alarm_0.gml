@@ -1,6 +1,10 @@
 //delay before you can chose
 
 //skeleton's hidden ultra
+if skill == 4 && Player.bskin == 2
+{
+	sprite_index = sprFishCanGun;	
+}
 if skill == 76 && Player.ultimategamble=true
 {
 	sprite_index=sprUltimateGamble;

@@ -279,7 +279,7 @@ function scrTips() {
 	tip = choose("Wait for me","Don't hold it up","Keep going","Let it all out","Gas is good","Bloated","Restless","Let's go","Can't wait")
 
 	if Player.race = 24//ELEMENTOR
-	tip = choose("The elements will destroy you","The avatar","Meditating","Floaty","Very down to earth","SOLID! play!",
+	tip = choose("The elements will destroy you","The avatar","meditating","Floaty","Very down to earth","SOLID! play!",
 	"Floating guns","No hands required","Your walls do not stop against lasers","Walls can get destroyed#when enemies get very close"
 	,"Elementor can fly over lava","Elementor moves normally over all terrain")//"You can only place walls#against other walls","Create walls from other walls",
 

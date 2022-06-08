@@ -61,9 +61,9 @@ scrDrawOptions2()
 }
 }
 if UberCont.encrypted_data.secrets[0] == true
-draw_set_color(c_fuchsia)
+	draw_set_color(c_fuchsia)
 else
-draw_set_color(c_black);
+	draw_set_color(c_black);
 
 //widescreen bars side art
 draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+widescreen,0)

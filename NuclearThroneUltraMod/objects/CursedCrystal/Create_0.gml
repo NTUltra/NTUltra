@@ -26,3 +26,4 @@ alarm[3] = 5;
 alarm[4] = 30;
 
 loops = GetPlayerLoops();
+droprate = 12;

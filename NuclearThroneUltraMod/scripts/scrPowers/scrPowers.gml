@@ -389,16 +389,16 @@ function scrPowers() {
     
 	}
 
-	if race = 16 && armour>0 ||(ultra_got[63]&&my_health>2&& alarm[3]<1)||freeArmourStrike//Viking
+	if race = 16 && ((armour > 0 && !ultra_got[63]) || (ultra_got[63] && my_health > 2) || freeArmourStrike)//Viking
 	{
 	    //63
 		if freeArmourStrike
 		{
 			freeArmourStrike = false;
 		}
-	    else if armour>0
+	    else if armour>0 && !ultra_got[63]
 	        armour--;
-	    else if ultra_got[63]=1
+	    else if ultra_got[63]
 	    {
 	        my_health-=2;
 	        exception=true

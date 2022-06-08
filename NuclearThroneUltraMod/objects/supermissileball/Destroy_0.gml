@@ -1,0 +1,16 @@
+snd_play(sndNukeExplosion,0.1,true)
+event_inherited()
+instance_create(x,y,Explosion);
+Sleep(10)
+instance_create(x+hspeed,y+vspeed,WallBreak);
+var am = 4;
+var ang = fireRotation;
+var angStep = 360/am;
+repeat(am)
+{
+	with instance_create(x,y,MissileBall)
+	{motion_add(ang,10)
+	image_angle = direction
+	team = other.team}
+	ang += angStep;
+}

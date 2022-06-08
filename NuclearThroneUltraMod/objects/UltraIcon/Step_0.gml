@@ -15,6 +15,13 @@ if skill == 2
 {
 	scrUnlockGameMode(29,"FOR TAKING FISH'S ULTRA#GUN WARRANT");	
 }
+else if Player.bskin == 2 && skill == 4
+{
+	with Player
+	{
+		scrWeaponAdjustCostFishCanGun();
+	}	
+}
 else if skill == 23 && Player.race == 6 && scrMeleeWeapons(Player.wep) && scrMeleeWeapons(Player.bwep)
 {
 	with Player

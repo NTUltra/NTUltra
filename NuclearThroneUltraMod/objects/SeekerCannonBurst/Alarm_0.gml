@@ -10,7 +10,7 @@ if instance_exists(creator)
 x = creator.x
 y = creator.y
 //FIRING
-snd_play_fire(sndSeekerCannon);
+snd_play(sndSeekerWave,0.1,true,false,1,false,false,0.6);
 
 
 with instance_create(x,y,SeekerBolt)

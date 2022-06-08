@@ -19,8 +19,15 @@ function scrUltras() {
 	ultra_tips[3] = choose("I missed you partner","partner stays close to you#when you reload#if not it'll go out aggro")
 
 	ultra_name[4] = "FISH CAN ROLL"
-	ultra_text[4] = "INCREASED FIRE RATE#DEPENDING ON YOUR SPEED#MUCH MORE EFFECTIVE WHEN ROLLING"
+	ultra_text[4] = "INCREASED PRIMARY FIRE RATE#DEPENDING ON YOUR SPEED#MUCH MORE EFFECTIVE WHEN ROLLING"
 	ultra_tips[4] = "is waterboost a thing now?"
+	
+	if instance_exists(Player) && Player.bskin == 2
+	{
+		ultra_name[4] = "FISH CAN GUN"
+		ultra_text[4] = "THE MORE AMMO YOU HAVE#THE HIGHER YOUR FIRERATE#REDUCE AMMO COST BY 20%#DOES NOT HAVE AN EFFECT ON MELEE"
+		ultra_tips[4] = "loaded and goated"
+	}
 
 	    //CRYSTAL 
 	    ultra_name[5] = "FORTRESS"
@@ -29,7 +36,7 @@ function scrUltras() {
     
 	    ultra_name[6] = "JUGGERNAUT"
 	    ultra_text[6] = "MOVE WHILE SHIELDED"
-	    ultra_tips[6] = "miss the crab legs"
+	    ultra_tips[6] = "crab legs"
     
 	    ultra_name[7] = "BUNKER"
 	    ultra_text[7] = "SHORTER SHIELD#SHOOT WHILE SHIELDED"
@@ -87,7 +94,7 @@ function scrUltras() {
 	ultra_tips[19] = "nutritious"
 */
 	ultra_name[19] = "APEX PREDATOR"
-	ultra_text[19] = "REPLACE SNARE WITH SPRINT#KILLING ENEMIES HAS A CHANCE#TO MAKE YOU IMMUNE FOR A SHORT DURATION#MOVING FASTER#INCREASES THE CHANCE#EFFECT CAN STACK WITH MULTIPLE KILLS"
+	ultra_text[19] = "REPLACE SNARE WITH SPRINT#KILLING ENEMIES HAS A CHANCE#TO MAKE YOU IMMUNE FOR A SHORT DURATION#MOVING FASTER#INCREASES THE CHANCE#EFFECT CAN STACK WITH MULTIPLE KILLS#THRONEBUTT INCREASES INCREASES THE DURATION"
 	ultra_tips[19] = "nutritious"
 	
 	ultra_name[20] = "STEREO SNARES"
@@ -96,8 +103,8 @@ function scrUltras() {
 
 	    //Y.V. YUNG VENUZ YV
 	    ultra_name[21] = "IM A GUN GOD"
-	    ultra_text[21] = "HIGHER RATE OF FIRE"
-	    ultra_tips[21] = "+40% higher rate of fire"
+	    ultra_text[21] = "41% HIGHER RATE OF FIRE#RELOAD SECONDARY AT 10% SPEED"
+	    ultra_tips[21] = "+41% higher rate of fire"
     
 	    ultra_name[22] = "BACK 2 BIZNIZ"
 	    ultra_text[22] = "FREE POP POP UPGRADE"
@@ -111,13 +118,13 @@ function scrUltras() {
 			if (scrMeleeWeapons(Player.wep) || Player.wep == 0) && (scrMeleeWeapons(Player.bwep) || Player.bwep == 0)
 			{
 				ultra_name[23] = "BLASPHEMY"
-			    ultra_text[23] = "CAN NO LONGER POP POP GUNS#HIGHER MELEE SWING RATE#MELEE IS FULLY AUTOMATIC#CAN POP POP MELEE"
+			    ultra_text[23] = "CAN NO LONGER POP POP GUNS#44% HIGHER MELEE SWING RATE#MELEE IS FULLY AUTOMATIC#CAN POP POP MELEE"
 			    ultra_tips[23] = "why would you forsake us gun god?"
 			}
 		}
     
 	    ultra_name[24] = "VERIFY VENUZ"
-	    ultra_text[24] = "EVERY OTHER POP POP ALSO FIRES#YOUR SECONDARY WEAPON#CAN POP FULL AUTO#RELOAD SECONDARY AT HALF SPEED"
+	    ultra_text[24] = "EVERY OTHER POP POP ALSO FIRES#YOUR SECONDARY WEAPON#CAN POP FULL AUTO#RELOAD SECONDARY AT 50% SPEED"
 	    ultra_tips[24] = "blood gamble"
     
 	//STEROIDS 
@@ -313,11 +320,11 @@ function scrUltras() {
 	    }
     
 	    ultra_name[63] = "COLD HEART"
-	    ultra_text[63] = "ARMOUR STRIKE FREEZES ENEMIES#AND DEALS MORE DAMAGE#WHEN YOU HAVE NO MORE ARMOUR#YOU CAN USE 2HP TO USE AN ARMOUR STRIKE"
+	    ultra_text[63] = "USE 2HP INSTEAD OF ARMOUR TO ARMOUR STRIKE#ARMOUR STRIKE FREEZES ENEMIES#WHILE YOU HAVE ARMOUR#INCREASE PRIMARY FIRERATE BY 30%"//"ARMOUR STRIKE FREEZES ENEMIES#AND DEALS MORE DAMAGE#WHEN YOU HAVE NO MORE ARMOUR#YOU CAN USE 2HP TO USE AN ARMOUR STRIKE"
 	    ultra_tips[63] = "hearth strike"
     
 	    ultra_name[64] = "BLANK ARMOUR"
-	    ultra_text[64] = "WHENEVER YOU LOSE A PIECE OF ARMOUR#YOU CLEAR ALL PROJECTILES#AND DEAL A MASSIVE AMOUNT OF DAMAGE#TO ALL ENEMIES ON SCREEN"
+	    ultra_text[64] = "WHENEVER YOU LOSE ARMOUR#YOU CLEAR ALL PROJECTILES#AND DEAL A MASSIVE AMOUNT OF DAMAGE#TO ALL ENEMIES ON SCREEN"
 	    ultra_tips[64] = "rogue is jelous"
     
 	//WEAPON SMITH 

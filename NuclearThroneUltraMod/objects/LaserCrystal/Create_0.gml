@@ -32,6 +32,6 @@ if loops > 0
 	tellTime -= 5;
 	actTime = 9;
 }
-
+droprate = 20;
 
 alarm[0] = 1;

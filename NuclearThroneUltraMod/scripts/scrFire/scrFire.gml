@@ -5,7 +5,8 @@ function scrFire() {
 
 	IDKWID=false;
 	can_shoot = 0
-	reload = wep_load[wep]
+	reload = min(reload + wep_load[wep],wep_load[wep]);
+	queueshot = max(queueshot-1,0);
 	if (Player.alarm[2]<1)//alarm = Fish Ultra B
 	{
 		ammo[wep_type[wep]] -= wep_cost[wep]
@@ -14,11 +15,14 @@ function scrFire() {
 
 	if Player.ultra_got[4]//FISH ULTRA D rolling is good
 	{
-	    reload-=speed*0.25
-	    if roll=1
-	    {
-	    reload*=0.4
-	    }
+		if Player.bskin != 2
+		{
+		    reload-=speed*0.25
+		    if roll=1
+		    {
+				reload*=0.4
+		    }
+		}
 	}
 
 	// ROIDS THRONEBUTT

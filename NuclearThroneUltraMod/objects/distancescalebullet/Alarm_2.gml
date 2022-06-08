@@ -6,4 +6,4 @@ image_yscale = image_xscale;
 dmg += 2;
 speed = min(speed*1.5,18);
 instance_create(x,y,Smoke);
-snd_play(sndNadeAlmost);
+snd_play(sndNadeAlmost,0.1,true,true,1,false,false,0.6);

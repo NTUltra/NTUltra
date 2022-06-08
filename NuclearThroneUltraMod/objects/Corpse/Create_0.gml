@@ -4,7 +4,7 @@ dmg = 1;
 impactWristed = false;
 if instance_exists(Player){
 	if Player.ultra_got[52] == 1{
-		friction=0.24;
+		friction=0.26;
 	}
 	if Player.skill_got[20] {
 		dmg = 2;

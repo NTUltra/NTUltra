@@ -7,7 +7,7 @@ spr_hurt = sprProtoStatueDoneHurt
 image_index = 0
 spr_idle = sprProtoStatueDone
 sprite_index = spr_idle
-	my_health = max(1,my_health-26);
+	my_health = max(1,my_health-24);
 }
 else if rad > 0 and spr_idle != sprProtoStatueDone and spr_idle != sprProtoStatueDoneIdle
 {

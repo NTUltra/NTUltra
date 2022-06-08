@@ -20,6 +20,16 @@ function scrEnemyDeathEvent(){
 		BloodLust();
 		ApexPredator();
 		var isdoc = Player.race == 25;
+		if Player.skill_got[34] //FLEXIBLE ELBOWS
+		{
+			if Player.breload <= 0 || Player.creload <= 0
+			{
+				if isdoc
+					scrDrop(7,0);
+				else
+					scrDrop(6,0);
+			}
+		}
 		
 		
 		if Player.race == 17
@@ -68,9 +78,9 @@ function scrEnemyDeathEvent(){
 			{
 				if isdoc
 				{
-					reload *=0.565;
-					breload *=0.565;
-					creload *=0.565;
+					reload *=0.55;
+					breload *=0.55;
+					creload *=0.55;
 				}
 				else
 				{

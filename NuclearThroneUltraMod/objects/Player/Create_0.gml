@@ -133,17 +133,17 @@ maxhealth = 8
 bettermelee = 0;
 betterlaserbrain = 0;
 betterpluto = 0;
-betterrabbitpaw = 0.1;
+betterrabbitpaw = 0.0;
 betterrecyclegland = 0.1;
 betterboltmarrow = 0;
 
 scrRaces()
 bskin = UberCont.skin[race];
-scrSkills()
-scrWeapons();
-//These weps are initialized here for yv's secret ultra
 wep = 0;
 bwep = 0;
+cwep = 0;
+scrSkills()
+scrWeapons();
 altUltra = false;
 loops = 0;
 scrUltras()
@@ -196,7 +196,12 @@ ccurse = 0
 reload = 0
 creload = 0
 breload = 0
-
+prevreload = 0;
+prevbreload = 0;
+prevcreload = 0;
+queueshot = 0;
+bqueueshot = 0;
+cqueueshot = 0;
 //MODIFIERS!
 wepmod1 = 0;
 wepmod2 = 0;
@@ -296,6 +301,7 @@ oasisskip = -1;
 
 
 crownvisits = 0
+reincarnate = false;
 if UberCont.crown_start[race] && !instance_exists(PlayerSpawn){
     area = 100;
     hard = -1;
@@ -477,7 +483,6 @@ if race == 6 || race == 20 {
     if random(100) < 1
     RadMony = true; //this will be a small chance
 }
-reincarnate = false;
 friction = 0.45
 image_speed = 0.4
 alarm[6] = 1000 //run a security if outside level

@@ -14,3 +14,7 @@ if myFloor != noone
 	ReplaceWithFloor(myFloor.x+40,myFloor.y+8,myFloor.x+32,myFloor.y)
 
 }
+else
+{
+	instance_create(x,y,WallBreak);	
+}

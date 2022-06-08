@@ -32,7 +32,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 			//screen_save("explain"+string(scrn)+".png");
 			//scrn++;
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			instance_create(f.x + 16,f.y + 16,VanSpawn)
+			instance_create(f.x + 16,f.y + 16,GoldHyena)
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
 			thing.mytext = "VAN";
 		}
@@ -687,8 +687,9 @@ if (rad > mr)
 
 	repeat(level-6)
 	instance_create(x,y,IDPDSpawn)
-
-		if level == 10
+	
+	debug("skillChosen: ",skillsChosen);
+		if level == 10 && skillsChosen > 7
 		{
 			snd_play_2d(sndExplosionXXL);
 			instance_create(x,y,LevelUpUltra);
@@ -732,186 +733,294 @@ if (rad > mr)
 }
 
 //reload stuff
-if (reload > 0 || breload > 0 || creload > 0)
+var lowa = 0;
+var lowb = 0;
+var lowc = 0;
+if skill_got[35]
 {
-	if skill_got[22] = 1
-	{
-	//nerves of steel g  STRESS
-	var reduction = 0;
-		if race = 25
-		{
-			reduction = (1-(my_health/maxhealth))*0.62
-		}
-		else
-		{
-			reduction = (1-(my_health/maxhealth))*0.68//*1//0.35 the original has 80% boost
-		}
-		if UberCont.opt_gamemode == 24//SHARP STRESS GAMEMODE
-			reduction *= level;
-		reduction = max(reduction,0);
-		reload -= reduction
-		breload -= reduction;
-		creload -= reduction;
-	}	
+	lowa = wep_load[wep]*-2;
+	lowb = wep_load[bwep]*-2;
+	lowc = wep_load[cwep]*-2;
 }
-
-if reload > 0
+//Can't reload while in loading shit, will automatically reload
+if (!instance_exists(LevCont) && !instance_exists(GenCont))
 {
-	reload -= 1
+	if reload > lowa
+	{
+		reload -= 1
 	
-	if race = 6
-	{//YV fire rate boost
-		reload -= 0.265//0.25
+		if race = 6
+		{//YV fire rate boost
+			reload -= 0.25//0.25
     
-	}
-	if (ultra_got[24])//ULTA D
-	{
-		breload -= 0.6325;
-	}
-	if ultra_got[21]//YV ULTRA A
-	{
-		reload -=0.45;
-		breload -=0.01;//Small bonus
-	}
-	if ultra_got[23] && altUltra
-	{
-		if scrMeleeWeapons(wep)
-		{
-			reload -=0.44;
 		}
-	}
-	//Weaponsmith one with the gun fire rate
+		if ultra_got[21]//YV ULTRA A
+		{
+			reload -=0.41;
+		}
+		if ultra_got[23] && altUltra
+		{
+			if scrMeleeWeapons(wep)
+			{
+				reload -=0.44;
+			}
+		}
+		//Weaponsmith one with the gun fire rate
 
-	    if ultra_got[67]
-	    {
-	        //Ultra c one with the gun
-	        if wep_type[wep] != 0 && !scrMeleeWeapons(wep)//if wep_type[wep]==0 // You are holding a melee weapon
-	        {
-	        reload -= 0.4;
-	        }
-	    }
+		    if ultra_got[67]
+		    {
+		        //Ultra c one with the gun
+		        if wep_type[wep] != 0 && !scrMeleeWeapons(wep)//if wep_type[wep]==0 // You are holding a melee weapon
+		        {
+		        reload -= 0.4;
+		        }
+		    }
 
-	if race=25
-	{
-		accuracy=standartAccuracy;
-	}
+		if race=25
+		{
+			accuracy=standartAccuracy;
+		}
 	
-	if race=9 && skill_got[5]{
-		if KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2 && !(instance_exists(GenCont))
+		if race=9 && skill_got[5]{
+			if KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2 && !(instance_exists(GenCont))
+			{
+				reload -= 0.25; // 1 - (30 / room_speed)
+			}
+		}
+
+
+		if ultra_got[102]//Humphry Ultra B Rapid facial hair growth
 		{
-			reload -= 0.25; // 1 - (30 / room_speed)
+			reload -= HumphrySkill*0.0058//0.0055//0.01//0.009 when cap is 100
+		}
+		if (ultra_got[63] && armour > 0)//VIKING COLD HEART
+		{
+			reload -= 0.3;
+		}
+	
+
+		if reload <= 0 && !can_shoot
+		{
+			can_shoot = 1
+		
+			if ammo[wep_type[wep]] < wep_cost[wep] and wep_type[wep] != 0
+				scrEmpty()
+
+			wepflip = -wepflip
+
+			if wep_type[wep] = 0
+			snd_play(sndMeleeFlip,0,true)
+			if wep_type[wep] = 3
+			snd_play(sndCrossReload,0,true)
+			if wep_type[wep] = 4
+			snd_play(sndNadeReload,0,true,false,2,false,false,0.6)
+			if string_copy(wep_name[wep],0,6) = "PLASMA"
+			{
+			if skill_got[17] = 1
+			snd_play(sndPlasmaReloadUpg,0,true)
+			else
+			snd_play(sndPlasmaReload,0,true)
+			}
+			if wep_type[wep] = 2
+			{
+			repeat(wep_cost[wep])
+			{with instance_create(x,y,Shell)
+			{sprite_index = sprShotShell
+			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+other.right*100+random(40)-20,2+random(2))}}
+
+			wkick = -1
+			if wep = 8
+			wkick = -2
+			snd_play(sndShotReload,0,true)
+			}
 		}
 	}
-
-	if skill_got[28] = 1
+	if (reload > lowa || breload > lowb || creload > lowc)
 	{
-		//rage
-		var rageAccuracy;
-		var reduction = rage*0.0054;
-		reload -= reduction//0.01//0.009 when cap is 100
-		breload -= reduction;
-		creload -= reduction;
+		if race == 7
+			breload -= 1
+		if breload <= 0 && !bcan_shoot
+		{
+			bcan_shoot = 1
 
-		rageAccuracy = rage*0.0012//0.0011// caps at 0.10 increase when cap = 100
-		accuracy=standartAccuracy+rageAccuracy;//standartAccuracy will be changed by eagle eyes so this scales with that.
+			if ultra_got[27]{
+				var roidsWepangle;//damage control
+				roidsWepangle=bwepangle;//steroids melee shit
+				scrSwapWeps();
+
+			}
+			if ultra_got[27]=0 && wep_type[bwep]=0//mirror hands the weird melee bug fix yo!
+				bwepflip = -bwepflip
+
+
+			if ammo[wep_type[bwep]] < wep_cost[bwep] and wep_type[bwep] != 0
+				scrEmptyB()
+
+			if wep_type[bwep] = 0 //&& ultra_got[27]=0//mirror hands melee bug fix part 2
+				snd_play(sndMeleeFlip,0,true)
+			if wep_type[bwep] = 3
+				snd_play(sndCrossReload,0,true)
+			if wep_type[wep] = 4
+				snd_play(sndNadeReload,0,true,false,2,false,false,0.6)
+			if wep_type[bwep] = 2
+			{
+			repeat(wep_cost[bwep])
+			{with instance_create(x,y,Shell)
+			{sprite_index = sprShotShell
+			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+other.right*100+random(40)-20,2+random(2))}}
+			if ultra_got[27]
+			{
+			wkick = -1
+			if wep = 8
+			wkick = -2
+			}
+			else{
+			bwkick = -1
+			if bwep = 8
+			bwkick = -2}
+			snd_play(sndShotReload,0,true)
+			}
+			if ultra_got[27]{
+				scrSwapWeps();
+				bwepangle=roidsWepangle;//what a mess
+			}
+		}
+	
+		if skill_got[22] = 1
+		{
+			//nerves of steel g  STRESS
+			var reduction = 0;
+			if race = 25
+			{
+				reduction = (1-(my_health/maxhealth))*0.62
+			}
+			else
+			{
+				reduction = (1-(my_health/maxhealth))*0.68//*1//0.35 the original has 80% boost
+			}
+			if UberCont.opt_gamemode == 24//SHARP STRESS GAMEMODE
+				reduction *= level;
+			reduction = max(reduction,0);
+			reload -= reduction
+			breload -= reduction*0.5;
+			creload -= reduction*0.5;
+		}
+		if bskin == 2 && ultra_got[4]//FISH CAN GUN secret ultra
+		{
+			var t = wep_type[wep];
+			var m = 1.2;
+			var at = (ammo[t]/typ_amax[t])*m;
+			debug(at);
+			if t != 0
+				reload -= at;
+			m = 0.5;
+			t = wep_type[bwep];
+			if t != 0
+				at = ammo[t]/typ_amax[t]*m;
+			breload -= at;
+			t = wep_type[cwep];
+			at = ammo[t]/typ_amax[t]*m;
+			if t != 0
+				creload -= at;
+		
+		}
+		if ultra_got[24]// YV ultra D
+		{
+			breload -= 0.6325;
+		}
+		if ultra_got[21]//YV ULTRA A
+		{
+			breload -=0.1;//Small bonus
+		}
+		if skill_got[28] = 1
+		{
+			//rage
+			var rageAccuracy;
+			var reduction = rage*0.0054;
+			reload -= reduction//0.01//0.009 when cap is 100
+			breload -= reduction*0.5;
+			creload -= reduction*0.5;
+
+			rageAccuracy = rage*0.0012//0.0011// caps at 0.10 increase when cap = 100
+			accuracy=standartAccuracy+rageAccuracy;//standartAccuracy will be changed by eagle eyes so this scales with that.
+		}
+		if skill_got[34]//FLEXIBLE ELBOWS
+		{
+			if race == 25
+			{
+				breload -= 0.2;
+				creload -= 0.2;
+			}
+			else
+			{
+				breload -= 0.15;
+				creload -= 0.15;
+			}
+			if breload > lowb || creload > lowc
+			{
+				reload -= 0.3;
+			}
+		}
+		if skill_got[35]//PUFFY CHEEKS
+		{
+			var crm = 0.6;
+			if race == 25//Doctor puffy cheeks
+				crm = 0.5;
+	
+			var cr = (prevreload - reload)*crm;
+			if cr > 0 && reload < 0
+			{
+				reload = min(reload+cr,0)
+			}
+			cr = (prevbreload - breload)*crm;
+			if cr > 0 && breload < 0
+			{
+				breload = min(breload+cr,0)
+			}
+			cr = (prevcreload - creload)*crm;
+			if cr > 0 && creload < 0
+			{
+				creload = min(creload+cr,0)
+			}
+		}
 	}
-
-
-	if ultra_got[102]//Humphry Ultra B Rapid facial hair growth
+	//PUFFY CHEEKS
+	if skill_got[35]
 	{
-	reload -= HumphrySkill*0.0058//0.0055//0.01//0.009 when cap is 100
-	}
-
-
-	if reload <= 0
-	{
-	can_shoot = 1
-
-	if ammo[wep_type[wep]] < wep_cost[wep] and wep_type[wep] != 0
-	scrEmpty()
-
-	wepflip = -wepflip
-
-	if wep_type[wep] = 0
-	snd_play(sndMeleeFlip,0,true)
-	if wep_type[wep] = 3
-	snd_play(sndCrossReload,0,true)
-	if wep_type[wep] = 4
-	snd_play(sndNadeReload,0,true,false,2,false,false,0.6)
-	if string_copy(wep_name[wep],0,6) = "PLASMA"
-	{
-	if skill_got[17] = 1
-	snd_play(sndPlasmaReloadUpg,0,true)
-	else
-	snd_play(sndPlasmaReload,0,true)
-	}
-	if wep_type[wep] = 2
-	{
-	repeat(wep_cost[wep])
-	{with instance_create(x,y,Shell)
-	{sprite_index = sprShotShell
-	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+other.right*100+random(40)-20,2+random(2))}}
-
-	wkick = -1
-	if wep = 8
-	wkick = -2
-	snd_play(sndShotReload,0,true)
-	}
+		if reload <= lowa*0.5 && queueshot < 1
+		{
+			queueshot++;
+			scrPlayReloadSound(wep);
+		} else if reload <= lowa && queueshot < 2
+		{
+			queueshot++;
+			scrPlayReloadSound(wep);
+		}
+	
+		if breload <= lowb*0.5 && bqueueshot < 1
+		{
+			bqueueshot++;
+			scrPlayReloadSound(bwep);
+		} else if breload <= lowb && bqueueshot < 2
+		{
+			bqueueshot++;
+			scrPlayReloadSound(bwep);
+		}
+	
+		if creload <= lowc*0.5 && cqueueshot < 1
+		{
+			cqueueshot++;
+			scrPlayReloadSound(cwep);
+		} else if creload <= lowc && cqueueshot < 2
+		{
+			cqueueshot++;
+			scrPlayReloadSound(cwep);
+		}
 	}
 }
-if race = 7 and breload > 0//steroids
-{
-
-
-breload -= 1
-if breload <= 0
-{
-bcan_shoot = 1
-
-if ultra_got[27]{
-var roidsWepangle;//damage control
-roidsWepangle=bwepangle;//steroids melee shit
-scrSwapWeps();
-
-}
-if ultra_got[27]=0 && wep_type[bwep]=0//mirror hands the weird melee bug fix yo!
-bwepflip = -bwepflip
-
-
-if ammo[wep_type[bwep]] < wep_cost[bwep] and wep_type[bwep] != 0
-scrEmptyB()
-
-if wep_type[bwep] = 0 //&& ultra_got[27]=0//mirror hands melee bug fix part 2
-snd_play(sndMeleeFlip,0,true)
-if wep_type[bwep] = 3
-snd_play(sndCrossReload,0,true)
-if wep_type[wep] = 4
-	snd_play(sndNadeReload,0,true,false,2,false,false,0.6)
-if wep_type[bwep] = 2
-{
-repeat(wep_cost[bwep])
-{with instance_create(x,y,Shell)
-{sprite_index = sprShotShell
-motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+other.right*100+random(40)-20,2+random(2))}}
-if ultra_got[27]
-{
-wkick = -1
-if wep = 8
-wkick = -2
-}
-else{
-bwkick = -1
-if bwep = 8
-bwkick = -2}
-snd_play(sndShotReload,0,true)
-}
-    if ultra_got[27]{
-    scrSwapWeps();
-    bwepangle=roidsWepangle;//what a mess
-        }
-}
-}
-
+prevreload = reload;
+prevbreload = breload;
+prevcreload = creload;
 
 if lsthealth < my_health
 {
@@ -1005,9 +1114,15 @@ speed+=1;
 
 
 if reload > 0
-can_shoot = 0
+	can_shoot = 0
 else
-can_shoot = 1
+	can_shoot = 1
+
+//cap reloads
+reload = max(reload,lowa);
+breload = max(breload,lowb);
+creload = max(creload,lowc);
+
 
 var homeBoost = 0;
 

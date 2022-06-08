@@ -28,7 +28,7 @@ else if other.my_health < (dmg*0.5) and !array_contains(hitEntities,other.id)// 
 	hitEntities[array_length(hitEntities)] = other.id;
 	with other
 	{
-		my_health -= (other.dmg*0.5)
+		my_health -= other.dmg;
 		sprite_index = spr_hurt
 		image_index = 0
 		motion_add(other.direction,6)

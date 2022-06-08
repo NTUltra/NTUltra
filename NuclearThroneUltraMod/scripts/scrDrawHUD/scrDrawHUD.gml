@@ -1,7 +1,6 @@
 function scrDrawHUD() {
 	if UberCont.opt_gamemode!=3{//NO HUD gamemode
 
-
 	draw_set_font(fntM)
 	draw_set_halign(fa_center)
 	draw_set_valign(fa_top)
@@ -127,7 +126,11 @@ function scrDrawHUD() {
 			var xx =__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-12-16*dix;
 			var yy =__view_get( e__VW.YView, 0 )+20;
 			var s = 18;
-			if dir == 106 && Player.bskin == 1
+			if dir == 14 && Player.bskin == 2
+			{
+				draw_sprite_ext(sprFishCanGunHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 106 && Player.bskin == 1
 			{
 				draw_sprite_ext(sprHothandsHUD,0,xx,yy,1,1,0,c_white,1);
 			}
@@ -212,6 +215,7 @@ function scrDrawHUD() {
 	if holdExplainMutation > 0
 		holdExplainMutation --;
 
+	var puffColour = make_colour_rgb(250,171,0);
 	//TERTIARY WEAPON
 	if Player.race=8{//robotos
 	if Player.cwep != 0 && Player.ultra_got[31]//robot ultra c
@@ -230,17 +234,35 @@ function scrDrawHUD() {
 	col=make_colour_rgb(223,201,134);//gold
 	else if (scrCheckUltra(Player.wep_name[Player.cwep]))
 	col=make_colour_rgb(72,253,8);//ultra baby
-	if round(Player.area/2) = Player.area/2 or col = c_white or Player.ccurse==1 or instance_exists(GenCont) or instance_exists(LevCont)
-	{//42 more to -->
+	
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+110,__view_get( e__VW.YView, 0 )+16,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+112,__view_get( e__VW.YView, 0 )+16,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+15,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+17,col,1)
+
+	var wwep = Player.cwep;
+	var pcc = Player.cqueueshot;
+	var pci = 0;
+	var pcsw = min(wid*0.5,(sprite_get_width(spr)-sprite_get_xoffset(spr))*0.5);
+	if Player.creload < 0 && Player.wep_load[wwep] != 0
+	{
+		pci = Player.creload/Player.wep_load[wwep]
+		pci = 1+pci;
+		pci = pci-floor(pci)
 	}
-
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+110,__view_get( e__VW.YView, 0 )+16,c_black,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[Player.cwep],Player.creload/Player.wep_load[Player.cwep])),14,__view_get( e__VW.XView, 0 )+110,__view_get( e__VW.YView, 0 )+16,c_white,0.5)
-
+	if Player.creload > 0
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[Player.cwep],Player.creload/Player.wep_load[Player.cwep])),14,__view_get( e__VW.XView, 0 )+110,__view_get( e__VW.YView, 0 )+16,c_white,0.5)
+	else
+	{
+		if pcc == 2
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+110,__view_get( e__VW.YView, 0 )+16,puffColour,0.9)
+		else if pcc == 1
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,pcsw,14,__view_get( e__VW.XView, 0 )+110,__view_get( e__VW.YView, 0 )+16,puffColour,0.9)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.creload[wwep],pci)),14,__view_get( e__VW.XView, 0 )+110,__view_get( e__VW.YView, 0 )+16,c_white,0.4)
+	}
+	
+	
 	if Player.wep_type[Player.cwep] != 0
 	{
 	draw_set_halign(fa_left)
@@ -287,18 +309,34 @@ function scrDrawHUD() {
 	else if (scrCheckUltra(Player.wep_name[Player.bwep]))
 	col=make_colour_rgb(72,253,8);//ultra baby
 
-	if round(Player.area/2) = Player.area/2 or col = c_white or Player.bcurse==1 or instance_exists(GenCont) or instance_exists(LevCont)
-	{
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+67,__view_get( e__VW.YView, 0 )+16,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+69,__view_get( e__VW.YView, 0 )+16,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+15,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+17,col,1)
+
+	var wwep = Player.bwep;
+	var pcc = Player.bqueueshot;
+	var pci = 0;
+	var pcsw = min(wid*0.5,(sprite_get_width(spr)-sprite_get_xoffset(spr))*0.5);
+	if Player.breload < 0 && Player.wep_load[wwep] != 0
+	{
+		pci = Player.breload/Player.wep_load[wwep]
+		pci = 1+pci;
+		pci = pci-floor(pci)
+	}
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,c_black,1)
+	if Player.breload > 0
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[wwep],Player.breload/Player.wep_load[wwep])),14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,c_white,0.5)
+	else
+	{
+		if pcc == 2
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,puffColour,0.9)
+		else if pcc == 1
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,pcsw,14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,puffColour,0.9)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[wwep],pci)),14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,c_white,0.4)
 	}
 
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,c_black,1)
 
-
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[Player.bwep],Player.breload/Player.wep_load[Player.bwep])),14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,c_white,0.5)
 
 	if Player.wep_type[Player.bwep] != 0
 	{
@@ -347,9 +385,28 @@ function scrDrawHUD() {
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+17,wepcolour,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+15,wepcolour,1)
 
+	var wwep = Player.wep;
+	var pcc = Player.queueshot;
+	var pci = 0;
+	var pcsw = min(wid*0.5,(sprite_get_width(spr)-sprite_get_xoffset(spr))*0.5);
+	if Player.reload < 0 && Player.wep_load[wwep] != 0
+	{
+		pci = Player.reload/Player.wep_load[wwep]
+		pci = 1+pci;
+		pci = pci-floor(pci)
+	}
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16,c_black,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[Player.wep],Player.reload/Player.wep_load[Player.wep])),14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16,c_white,0.5)
-
+	if Player.reload > 0
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[wwep],Player.reload/Player.wep_load[wwep])),14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16,c_white,0.6)
+	else
+	{
+		if pcc == 2
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16,puffColour,0.9)
+		else if pcc == 1
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,pcsw,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16,puffColour,0.9)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[wwep],pci)),14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16,c_white,0.4)
+	}
+	
 	//Debug
 	/*
 	if UberCont.public = 0 && instance_exists(Player)

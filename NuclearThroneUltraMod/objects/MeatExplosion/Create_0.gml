@@ -12,6 +12,12 @@ if UberCont.ultramodSwap
 		visible = false;
 		alarm[11] = 1;
 	}
+	else if um == ultramods.bloodMelee
+	{
+		mask_index = mskPickupThroughWall;
+		visible = false;
+		alarm[11] = 1;
+	}
 }
 else
 {

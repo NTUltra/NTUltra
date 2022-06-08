@@ -57,7 +57,7 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 			}
 			if instance_exists(other.creator) && team != 0 {
 				direction = point_direction(x,y,other.creator.x,other.creator.y);
-				motion_add(direction,2/s);
+				motion_add(direction,3/s);
 				//mp_potential_step(other.creator.x,other.creator.y,2/s,false)
 				if place_meeting(x,y,Wall)
 				{	x = xprevious;

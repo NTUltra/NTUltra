@@ -578,9 +578,6 @@ switch (UberCont.crownVaultChallenge)
 	#endregion
 }
 waveLength = array_length(wave);
-UberCont.crownVaultChallenge ++;
-alarm[1] = 1;
-exit;
 //Start it
 alarm[3] = 5;//Tell time is the difference between these two numbers
 alarm[0] = 20;

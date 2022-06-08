@@ -1,7 +1,7 @@
 ///GetPlayerMaxRad();
 // /@description Gets maximum rads player can have need to run in player for access to variables
 function GetPlayerMaxRad(){
-	var multiplier = 50;
+	var multiplier = 70;
 	if (UberCont.opt_gamemode == 22)//Slow leveling
 	{
 		multiplier *= 1.75;

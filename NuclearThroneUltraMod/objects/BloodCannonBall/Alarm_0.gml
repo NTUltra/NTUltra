@@ -1,5 +1,5 @@
 alarm[0]=6;
-image_angle+=10;
+image_angle+=15;
 
 snd_play(sndMeatExplo)
 snd_play(sndBloodLauncherExplo)

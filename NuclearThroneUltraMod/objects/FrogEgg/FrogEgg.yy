@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskPickupThroughWall",
     "path": "sprites/mskPickupThroughWall/mskPickupThroughWall.yy",

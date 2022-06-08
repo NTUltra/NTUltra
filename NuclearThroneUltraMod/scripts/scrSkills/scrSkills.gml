@@ -1,5 +1,5 @@
 function scrSkills() {
-	maxskill = 33;
+	maxskill = 35;
 
 
 	dir = 0
@@ -35,10 +35,9 @@ function scrSkills() {
 
 	skill_name[1] = "RHINO SKIN"
 	if isDoctor
-	skill_text[1] = "+5 MAX HP"
+		skill_text[1] = "+5 MAX HP"
 	else
-	skill_text[1] = "+4 MAX HP"
-	skill_text[1] = "+4 MAX HP"
+		skill_text[1] = "+4 MAX HP"
 	skill_tips[1] = "thick skin"
 	skill_msnd[1] =  sndMutRhinoSkin
 
@@ -96,7 +95,9 @@ function scrSkills() {
 	}
 
 	skill_name[4] = "RABBIT PAW"
-	skill_text[4] = "MORE AMMO AND HEALTH DROPS"
+	skill_text[4] = "50% MORE AMMO AND HEALTH DROPS"
+	if isDoctor
+		skill_text[4] = "60% MORE AMMO AND HEALTH DROPS"
 	skill_tips[4] = "feeling lucky"
 	skill_msnd[4] =  sndMutRabbitPaw
 
@@ -288,7 +289,7 @@ function scrSkills() {
 	}
 	else
 	{
-		skill_text[22] = "WHENEVER YOU TAKE DAMAGE#DEAL DAMAGE TO ALL ENEMIES ON SCREEN#HIGHER RATE OF FIRE#AS HP GETS LOWER"
+		skill_text[22] = "WHENEVER YOU TAKE DAMAGE#DEAL DAMAGE TO ALL ENEMIES ON SCREEN#RELOAD YOUR WEAPONS#AS HP GETS LOWER"
 	}
 	skill_tips[22] = "ultimate low health hybrid"
 	skill_msnd[22] =  sndMutSharpStress
@@ -302,7 +303,9 @@ function scrSkills() {
 	skill_name[24] = "TRIGGER PRINGELS"
 	else
 	skill_name[24] = "TRIGGER FINGERS"
-	skill_text[24] = "KILLS LOWER YOUR RELOAD TIME"
+	skill_text[24] = "EACH KILL#RELOADS YOUR WEAPONS#BY 50% OF REMAINING RELOAD"
+	if isDoctor
+		skill_text[24] = "EACH KILL#RELOADS YOUR WEAPONS#BY 55% OF REMAINING RELOAD"
 	skill_tips[24] = "keep killing"
 	skill_msnd[24] =  sndMutTriggerfingers
 
@@ -329,7 +332,7 @@ function scrSkills() {
 
 
 	skill_name[28] = "RAGE"
-	skill_text[28] = "EACH KILL INCREASES YOUR#FIRE RATE, DROPRATE#AND DECREASES ACCURACY SLIGHTLY#RESETS EACH TIME YOU GET HIT"
+	skill_text[28] = "EACH KILL INCREASES:#DROPRATE, ALL WEAPON RELOAD SPEED#AND DECREASES ACCURACY SLIGHTLY##RESETS EACH TIME YOU GET HIT"
 	skill_tips[28] = "dodge to kill"
 	skill_msnd[28] =  sndMutRage
 
@@ -396,6 +399,23 @@ function scrSkills() {
 		}
 	}
 	
+	skill_name[34] = "FLEXIBLE ELBOWS"
+	skill_text[34] = "RELOAD YOUR SECONDARY AT 15% SPEED##WHEN YOUR SECONDARY IS FULLY RELOADED:#EVERY ENEMY HAS A 6% CHANCE#TO DROP AN ADDITIONAL ITEM##IF YOUR SECONDARY IS NOT RELOADED:#INCREASE PRIMARY FIRERATE BY 30%"
+	if isDoctor
+		skill_text[34] = "RELOAD YOUR SECONDARY AT 20% SPEED##WHEN YOUR SECONDARY IS FULLY RELOADED:#EVERY ENEMY HAS A 7% CHANCE#TO DROP AN ADDITIONAL ITEM##IF YOUR SECONDARY IS NOT RELOADED:#INCREASE PRIMARY FIRERATE BY 30%"
+	if instance_exists(Player) && Player.cwep != 0
+		skill_text[34] = "RELOAD YOUR OFFHAND WEAPONS#AT 15% SPEED##WHEN ONE OF YOUR#OFFHAND WEAPONS IS FULLY RELOADED:#EVERY ENEMY HAS A 6% CHANCE#TO DROP AN ADDITIONAL ITEM##IF ONE OF YOUR#OFFHAND WEAPONS IS NOT RELOADED:#INCREASE PRIMARY FIRERATE BY 30%"
+	skill_tips[34] = "flexible elbows help with looting and shooting"
+	skill_msnd[34] =  sndMut
+	
+	
+	skill_name[35] = "PUFFY CHEEKS"
+	skill_text[35] = "YOU CAN PREEMPTIVELY RELOAD#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 40% RELOAD SPEED"
+	if isDoctor
+		skill_text[35] = "YOU CAN PREEMPTIVELY RELOAD#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 50% RELOAD SPEED"
+	skill_tips[35] = "big round cheeks"
+	skill_msnd[35] =  sndMut
+	
 	/*
 	skill_name[33] = "THRONE BACK"
 	skill_text[33] = "UPGRADES YOUR PASSIVE ABILITY"
@@ -405,10 +425,10 @@ function scrSkills() {
 	skill_msnd[33] =  sndMutThronebutt
 	*/
 	
-	skill_name[34] = "NOTHING"
-	skill_text[34] = "THERE ARE NO MORE MUTATIONS LEFT!"
-	skill_tips[34] = ""
-	skill_msnd[34] =  sndPartyHorn
+	skill_name[36] = "NOTHING"
+	skill_text[36] = "THERE ARE NO MORE MUTATIONS LEFT!"
+	skill_tips[36] = ""
+	skill_msnd[36] =  sndPartyHorn
 
 
 }

@@ -327,7 +327,7 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 	wepmod3 = targetPickup.wepmod3
 	wepmod4 = targetPickup.wepmod4
 	can_shoot = 1
-	reload = 0
+	reload = min(reload,0)
 
 
 	if wep=298//golden oops gun
@@ -430,7 +430,7 @@ if race=16 || race = 17 || race = 19 || race = 20 || race = 21//Viking and Gunsm
 if armour>0
 {
 
-if tookHit&&my_health!=maxhealth&&alarm[3]<1
+if tookHit&&my_health!=maxhealth&&alarm[3]<1&&!exception
 {armour-=1;
 
 

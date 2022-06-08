@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskSalamander",
     "path": "sprites/mskSalamander/mskSalamander.yy",

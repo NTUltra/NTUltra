@@ -9,7 +9,7 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 accuracy=10;
 ion=false;
 typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflects
-dmg=5;
+dmg=4;
 image_speed = 0.3
 target=enemy;
 

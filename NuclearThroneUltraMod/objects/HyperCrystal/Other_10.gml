@@ -32,6 +32,7 @@ repeat(ammo)
 		{
 			depth = other.depth + 1;
 			alarm[1] *= 0.5;
+			droprate = 80;
 		}
 		ds_list_add(myCrystals,crystal);
 	}

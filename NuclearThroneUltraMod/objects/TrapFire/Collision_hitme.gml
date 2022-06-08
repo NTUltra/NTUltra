@@ -33,14 +33,14 @@ if other.team != team and other.team != 0 && (other.team!=2 || image_index<5/*no
 	{
 	if my_health > immunelimit
 	{
-		if my_health-1 < immunelimit
+		if my_health-2 < immunelimit
 			my_health = immunelimit
 		else
-			my_health -= 1
+			my_health -= 2
 	}
 	}
 	else
-	my_health -= 1
+	my_health -= 2
 
 	sprite_index = spr_hurt
 	image_index = 0

@@ -83,7 +83,6 @@ sprite_index=sprPortal;
 creator=other.id;
 team = other.team
 ammo = 14+random(14)
-dmg=9;//5 is lowest
 event_perform(ev_alarm,0)
 visible = 0
 with instance_create(x,y,LightningSpawn)
@@ -92,11 +91,10 @@ sprite_index=sprTentacleSpawn
 image_angle = other.image_angle
 }
 
-repeat(3){
     with instance_create(x,y,FishBoost)
     {
     motion_add( point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(60)-30,2+random(4) );
-    }}
+    }
 
 }
 

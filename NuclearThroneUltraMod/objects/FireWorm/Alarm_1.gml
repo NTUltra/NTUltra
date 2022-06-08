@@ -10,7 +10,7 @@ if target > 0 {
                 
 				event_user(0);
             }
-			else if ran < 1.5
+			else if dis < maxRange && ran < 1.5
 			{
 				event_user(1);	
 			}

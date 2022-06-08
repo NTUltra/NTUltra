@@ -10,6 +10,6 @@ if team == 2
 }
 else
 {
-	scrDrop(50,0);
+	scrDrop(60,0);
 }
 event_inherited();

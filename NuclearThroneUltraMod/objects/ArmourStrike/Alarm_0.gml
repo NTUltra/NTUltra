@@ -26,7 +26,7 @@ speed = 4
 //if instance_exists(target)
 //{
 //if point_distance(x,y,target.x,target.y) < 240//120
-motion_add(dir,1)
+motion_add(dir,0.9)
 //}
 image_angle = direction
 speed = 0

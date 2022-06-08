@@ -1,6 +1,6 @@
 function scrSwapWeps() {
 	//SWAP DA WEPS
-	var twep, treload, twkick, twepflip, twepangle, tcan_shoot, tcurse,twepmod1,twepmod2,twepmod3,twepmod4;//temporary wep
+	var twep, treload, tqueueshot, twkick, twepflip, twepangle, tcan_shoot, tcurse,twepmod1,twepmod2,twepmod3,twepmod4;//temporary wep
 
 	if ultra_got[31] && cwep!=0//robots third weapon robot is cool very cool
 	{
@@ -11,6 +11,7 @@ function scrSwapWeps() {
 	twepflip=wepflip
 	twepangle=wepangle
 	treload=reload
+	tqueueshot=queueshot
 	twep=wep
 	//TMODIFIERS!
 	twepmod1=wepmod1;
@@ -27,6 +28,7 @@ function scrSwapWeps() {
 	wepflip=bwepflip
 	wepangle=bwepangle
 	reload=breload
+	queueshot=bqueueshot
 	wep=bwep
 	//MODIFIERS!
 	wepmod1=bwepmod1;
@@ -42,6 +44,7 @@ function scrSwapWeps() {
 	bwepflip=cwepflip
 	bwepangle=cwepangle
 	breload=creload
+	bqueueshot=cqueueshot
 	bwep=cwep
 	//BMODIFIERS!
 	bwepmod1=cwepmod1;
@@ -57,6 +60,7 @@ function scrSwapWeps() {
 	cwepflip=twepflip
 	cwepangle=twepangle
 	creload=treload
+	cqueueshot=tqueueshot
 	cwep=twep
 	//CMODIFIERS!
 	cwepmod1=twepmod1;
@@ -70,6 +74,7 @@ function scrSwapWeps() {
 	twep = wep
 	tcurse = curse
 	treload = reload
+	tqueueshot=queueshot
 	twkick = wkick
 	twepflip = wepflip
 	twepangle = wepangle 
@@ -83,6 +88,7 @@ function scrSwapWeps() {
 	wep = bwep
 	curse = bcurse
 	reload = breload
+	queueshot=bqueueshot
 	wkick = bwkick
 	wepflip = bwepflip
 	wepangle = bwepangle
@@ -99,6 +105,7 @@ function scrSwapWeps() {
 	bwepflip = twepflip
 	bwepangle = twepangle
 	breload = treload
+	bqueueshot=tqueueshot
 	bwep = twep
 	//BMODIFIERS
 	bwepmod1=twepmod1;
