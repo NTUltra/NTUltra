@@ -12,3 +12,6 @@ image_speed = 0.5
 friction = 0;
 alarm[1] = 1;
 fireRotation = 0;
+wallstick = 3;
+alarm[2] = 5;
+fireRate = 4;

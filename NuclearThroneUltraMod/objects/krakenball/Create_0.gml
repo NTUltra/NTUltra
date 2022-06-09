@@ -7,9 +7,12 @@ their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
 they have a FORCE and can be 0 or DIRECTIONAL */
 image_speed = 0.4;
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
-dmg = 10;
+dmg = 4;
 image_speed = 0.5
 friction = 0;
 alarm[1] = 1;
 fireRotation = 0;
 snd_loop(sndBloodCannonLoop);
+rotateSpeed = choose(-30,30);
+wallstick = 3;
+alarm[2] = 5;

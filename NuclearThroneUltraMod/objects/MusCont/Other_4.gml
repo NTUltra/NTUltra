@@ -4,7 +4,6 @@ if instance_exists(Player)
 	area = Player.area;
 	alarm[0] = 0;
 }
-debug("area: ",area);
 if UberCont.opt_gamemode == 25 && area != 0
 {
     audio_stop_sound(song);

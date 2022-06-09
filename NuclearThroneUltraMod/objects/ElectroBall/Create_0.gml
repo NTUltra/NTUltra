@@ -23,5 +23,5 @@ image_speed = 0.5
 resetSpeed=false;
 alarm[1]=1;
 alarm[0]=1;
-
+electroDelay = 6;
 alarm[11] = 1;

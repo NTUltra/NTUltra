@@ -29,7 +29,7 @@
     "path": "folders/Objects/Player/Ability/Bursts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "SeekerCannonBurst",
+  "name": "SeekerWaveBurst",
   "tags": [],
   "resourceType": "GMObject",
 }

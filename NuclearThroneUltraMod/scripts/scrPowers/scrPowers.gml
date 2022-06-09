@@ -649,7 +649,7 @@ function scrPowers() {
 
 	if Player.ultra_got[74]//Meltings Damnation Ultra B
 	{
-		reload*=0.2;//80 procent fire rate boost
+		reload -= wep_load[wep]*0.8;//80 procent fire rate boost
 	}
 
 

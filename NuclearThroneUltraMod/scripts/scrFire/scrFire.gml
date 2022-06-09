@@ -15,12 +15,12 @@ function scrFire() {
 
 	if Player.ultra_got[4]//FISH ULTRA D rolling is good
 	{
-		if Player.bskin != 2
+		if reload > 0 && Player.bskin != 2
 		{
 		    reload-=speed*0.25
 		    if roll=1
 		    {
-				reload*=0.4
+				reload -= wep_load[wep]*0.6
 		    }
 		}
 	}
@@ -4746,9 +4746,9 @@ function scrFire() {
 
 	if Player.ultra_got[56]==1//PANDA Meditate rapid hands melee firerate
 	{
-		if scrMeleeWeapons(wep)
+		if  reload > 0 && scrMeleeWeapons(wep)
 	    {
-			reload*=0.6;//0.6;
+			reload -= wep_load[wep]*0.4;//0.6;
 	    }
 	}
 
@@ -4777,7 +4777,7 @@ function scrFire() {
 	    {
 			if wep_type[wep] == 2 // You are holding a shotgun
 			{
-				reload *=0.38;//shotgun speed
+				reload -= wep_load[wep]*0.62;//shotgun speed
 				//ammo[1] += wep_cost[wep]//bullet magic
 			}
 			else if wep_type[wep] == 1 // You are holding a bullet weapon
@@ -4855,9 +4855,9 @@ function scrFire() {
 		        if wep_cost[wep]>1//if ammo cost is more than 1
 		        ammo[wep_type[wep]]+=1;//return one ammo
 		    }
-		    else//thats a melee weapon!
+		    else if reload > 0//thats a melee weapon!
 		    {
-				reload*=2
+				reload += wep_load[wep];
 		    }
 	    }
     
@@ -4934,25 +4934,26 @@ function scrFire() {
 	fired=true;
 
 	}
-	var reloadBoost = 0.82;
+	var reloadBoost = 0.18;
 	if Player.skill_got[30] == 1
-		reloadBoost = 0.74;
+		reloadBoost = 0.26;
 	
 	if wepmod1==12
-		reload*=reloadBoost
+		reload -= wep_load[wep]*reloadBoost
 	
 	if wepmod2==12
-	reload*=reloadBoost
+		reload -= wep_load[wep]*reloadBoost
 
 	if wepmod3==12
-	reload*=reloadBoost
+		reload -= wep_load[wep]*reloadBoost
 
 	if wepmod4==12
-	reload*=reloadBoost
+		reload -= wep_load[wep]*reloadBoost
+		
 	if Player.ultra_got[80] == 1//business hog gold digger
 	{
 		if scrCheckGold(wep_name[wep])//string_copy(wep_name[wep],0,4) = "GOLD"&&loops<1
-		reload*=0.4;
+		reload -= wep_load[wep]*0.6;
 	}
 
 

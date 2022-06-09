@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndMut",
-  "duration": 0.0,
+  "duration": 1.962585,
   "parent": {
     "name": "Mutations",
     "path": "folders/Sounds/Mutations.yy",

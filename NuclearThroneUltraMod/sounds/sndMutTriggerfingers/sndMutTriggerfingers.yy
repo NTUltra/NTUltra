@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndMutTriggerfingers",
-  "duration": 0.0,
+  "duration": 2.364063,
   "parent": {
     "name": "Mutations",
     "path": "folders/Sounds/Mutations.yy",

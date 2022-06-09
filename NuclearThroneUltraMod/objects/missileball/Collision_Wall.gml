@@ -1,7 +1,16 @@
-/*instance_destroy()
-instance_create(x,y,Dust)
-if !sound_isplaying(sndHitWall)
-snd_play(sndHitWall)
-*/
-instance_destroy();
-instance_create(x,y,Dust)
+
+if alarm[2] < 1
+{
+	if wallstick > 0
+	{
+		x = xprevious;
+		y = yprevious;
+		wallstick--;
+		alarm[2] = 2;
+	}
+	else
+	{
+		instance_destroy();
+		instance_create(x,y,Dust)
+	}
+}

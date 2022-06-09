@@ -21,7 +21,17 @@ if UberCont.ultramodSwap
 		alarm[11] = 1;
 	}
 }
-if instance_exists(Player) && Player.ultra_got[34]
+if instance_exists(Player) 
 {
-	hits ++;
+	//Long arms
+	if Player.skill_got[13]
+	{
+		image_xscale += 0.1;
+		image_yscale += 0.1;	
+	}
+	if Player.ultra_got[34]
+	{
+		
+		hits ++;
+	}
 }

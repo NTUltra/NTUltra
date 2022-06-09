@@ -25,7 +25,7 @@ function scrUltras() {
 	if instance_exists(Player) && Player.bskin == 2
 	{
 		ultra_name[4] = "FISH CAN GUN"
-		ultra_text[4] = "THE MORE AMMO YOU HAVE#THE HIGHER YOUR FIRERATE#REDUCE AMMO COST BY 20%#DOES NOT HAVE AN EFFECT ON MELEE"
+		ultra_text[4] = "THE MORE AMMO YOU HAVE#THE HIGHER YOUR FIRERATE#REDUCE AMMO/RAD COST BY 20%#DOES NOT HAVE AN EFFECT ON MELEE"
 		ultra_tips[4] = "loaded and goated"
 	}
 

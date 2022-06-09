@@ -252,7 +252,7 @@ function scrDrawHUD() {
 	}
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+110,__view_get( e__VW.YView, 0 )+16,c_black,1)
 	if Player.creload > 0
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[Player.cwep],Player.creload/Player.wep_load[Player.cwep])),14,__view_get( e__VW.XView, 0 )+110,__view_get( e__VW.YView, 0 )+16,c_white,0.5)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[Player.cwep],Player.creload/Player.wep_load[Player.cwep])),14,__view_get( e__VW.XView, 0 )+110,__view_get( e__VW.YView, 0 )+16,c_white,0.7)
 	else
 	{
 		if pcc == 2
@@ -326,7 +326,7 @@ function scrDrawHUD() {
 	}
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,c_black,1)
 	if Player.breload > 0
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[wwep],Player.breload/Player.wep_load[wwep])),14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,c_white,0.5)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[wwep],Player.breload/Player.wep_load[wwep])),14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,c_white,0.7)
 	else
 	{
 		if pcc == 2
@@ -408,13 +408,15 @@ function scrDrawHUD() {
 	}
 	
 	//Debug
-	/*
+	
 	if UberCont.public = 0 && instance_exists(Player)
 	{
 		var xx = __view_get( e__VW.XView, 0 )+14
 		var yy = __view_get( e__VW.YView, 0 )+60
-		draw_text(xx+32,yy,string(Player.area)+ " - "+string(Player.subarea)+"\nhard: "+string(Player.hard));
-	}*/
+		draw_text(xx+32,yy,"reload: "+string(Player.reload));
+		draw_text(xx+32,yy,"\nbreload: "+string(Player.breload));
+
+	}
 
 	//Ultramod
 	if Player.ultramod != 0

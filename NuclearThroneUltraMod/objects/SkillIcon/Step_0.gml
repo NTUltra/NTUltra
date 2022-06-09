@@ -1,4 +1,4 @@
-if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y < y+22 and UberCont.mouse__x > x-22 and UberCont.mouse__y > y-22)
+if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+20 and UberCont.mouse__y < y+20 and UberCont.mouse__x > x-20 and UberCont.mouse__y > y-20)
 {
 Player.skill_got[skill] = 1
 Player.skillsChosen+=1;

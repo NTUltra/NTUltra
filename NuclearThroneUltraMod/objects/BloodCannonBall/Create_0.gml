@@ -16,6 +16,7 @@ if instance_exists(Player){
 		dmg=30;
 }
 alarm[1]=140;
+if !audio_is_playing(sndBloodCannonLoop)
 snd_loop(sndBloodCannonLoop);
 
 /* */

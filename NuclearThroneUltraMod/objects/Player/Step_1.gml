@@ -12,10 +12,3 @@ if ultra_got[11]=1{//Eyes Ultra C brainwashed enemies targeting closes enemies
     }
     }
 }
-
-/*if race=18{
-prevhspeed=hspeed;
-prevvspeed=vspeed;}
-
-/* */
-/*  */

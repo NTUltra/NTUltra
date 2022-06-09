@@ -27,9 +27,9 @@ if sprite_index = sprPortalDisappear or sprite_index = sprProtoPortalDisappear o
 	var canRestart = false;
 	with Player
 	{
-	reload = min(reload,0)
-	breload = min(breload,0)
-	creload = min(creload,0)
+		reload = min(reload,0)
+		breload = min(breload,0)
+		creload = min(creload,0)
 	if my_health >= 0
 		canRestart = true;
 	}

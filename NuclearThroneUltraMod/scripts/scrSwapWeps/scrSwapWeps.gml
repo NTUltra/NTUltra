@@ -67,7 +67,10 @@ function scrSwapWeps() {
 	cwepmod2=twepmod2;
 	cwepmod3=twepmod3;
 	cwepmod4=twepmod4;
-
+	
+	prevreload = reload;
+	prevbreload = breload;
+	prevcreload = creload;
 	}
 	else//regular swapping
 	{
@@ -112,13 +115,17 @@ function scrSwapWeps() {
 	bwepmod2=twepmod2;
 	bwepmod3=twepmod3;
 	bwepmod4=twepmod4;
+	
+	prevreload = reload;
+	prevbreload = breload;
+	prevcreload = creload;
 	}
 	clicked = 0
 
 	if reload > 0
-	can_shoot = 0
+		can_shoot = 0
 	else
-	can_shoot = 1
+		can_shoot = 1
 
 
 	scrWeaponHold();

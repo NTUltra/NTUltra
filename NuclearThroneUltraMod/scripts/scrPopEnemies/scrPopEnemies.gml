@@ -770,21 +770,32 @@ function scrPopEnemies() {
         if instance_exists(Player) {
 			if loops > 0
 			{
-				if styleb = 1 {
-	                if random(3) < 1
-	                instance_create(x + 16, y + 16, choose(InvertedCardGuy, InvertedCardGuy2, InvertedGuardianDog, InvertedCardGuy, InvertedCardGuy2, ExplosiveSheep, InvertedTeaPot, Hyena,Hyena,InvertedTeaPot,InvertedCubeGuardian))
-	            }
-	            else {
-	                if random(8) < 1
-	                instance_create(x + 16, y + 16, choose(InvertedTeaPot, ExplosiveSheep, InvertedTeaPot, InvertedTeaPot, InvertedTeaPot, InvertedCardGuy, InvertedCardGuy2,InvertedGuardianDog,Hyena,Hyena))
-	                else if random(4) < 2.5 {
-	                    instance_create(x + 16, y + 16, choose(InvertedTeaPot, InvertedCardGuy, InvertedCardGuy, InvertedCardGuy, InvertedCardGuy2, InvertedCardGuy2, InvertedCardGuy2, Sheep,Hyena,Hyena,InvertedGuardianDog,InvertedCubeGuardian))
-	                }
-					else if instance_number(enemy) < 1
-					{
-						instance_create(x + 16, y + 16,InvertedCardGuy);
-					}
-	            }
+				var normals = true;
+				if Player.subarea = 3 && Player.area = 109 //WE LOVE BOSSES! in case loop make sure irght area
+		        {
+		            if !instance_exists(InvertedChesireCat) {
+		                instance_create(x + 16, y + 16, InvertedChesireCat);
+		            }
+					normals = choose(true,true,false);
+		        }
+				if normals
+				{
+					if styleb = 1 {
+		                if random(3) < 1
+		                instance_create(x + 16, y + 16, choose(InvertedCardGuy, InvertedCardGuy2, InvertedGuardianDog, InvertedCardGuy, InvertedCardGuy2, ExplosiveSheep, InvertedTeaPot, Hyena,Hyena,InvertedTeaPot,InvertedCubeGuardian))
+		            }
+		            else {
+		                if random(8) < 1
+		                instance_create(x + 16, y + 16, choose(InvertedTeaPot, ExplosiveSheep, InvertedTeaPot, InvertedTeaPot, InvertedTeaPot, InvertedCardGuy, InvertedCardGuy2,InvertedGuardianDog,Hyena,Hyena))
+		                else if random(4) < 2.5 {
+		                    instance_create(x + 16, y + 16, choose(InvertedTeaPot, InvertedCardGuy, InvertedCardGuy, InvertedCardGuy, InvertedCardGuy2, InvertedCardGuy2, InvertedCardGuy2, Sheep,Hyena,Hyena,InvertedGuardianDog,InvertedCubeGuardian))
+		                }
+						else if instance_number(enemy) < 1
+						{
+							instance_create(x + 16, y + 16,InvertedCardGuy);
+						}
+		            }
+				}
 			}
 			else
 			{

@@ -654,8 +654,25 @@ if KeyCont.key_swap[p] = 1 and bwep != 0
 
 	if ultra_got[27]//ROIDS MIRROR HANDS
 	{
-		reload *= 0.4;
-		breload *= 0.4;
+		if reload < 0
+		{
+			var pci = reload/wep_load[wep];
+			pci = 1+pci;
+			pci = pci-floor(pci);//Percentage of load that would be the reload
+			debug("reduce by: ",reload*pci*m);
+			reload -= reload*pci*m;
+		}
+		else
+			reload *= 0.4;
+		if breload < 0
+		{
+			var pci = breload/wep_load[bwep];
+			pci = 1+pci;
+			pci = pci-floor(pci);//Percentage of load that would be the reload
+			breload -= breload*pci*m;
+		}
+		else
+			breload *= 0.4;
 	}
 	snd_play(wep_swap[wep])
 	if (curse)
@@ -688,7 +705,6 @@ if (rad > mr)
 	repeat(level-6)
 	instance_create(x,y,IDPDSpawn)
 	
-	debug("skillChosen: ",skillsChosen);
 		if level == 10 && skillsChosen > 7
 		{
 			snd_play_2d(sndExplosionXXL);
@@ -752,7 +768,6 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 		if race = 6
 		{//YV fire rate boost
 			reload -= 0.25//0.25
-    
 		}
 		if ultra_got[21]//YV ULTRA A
 		{
@@ -833,6 +848,13 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 			wkick = -2
 			snd_play(sndShotReload,0,true)
 			}
+		}
+	}
+	if skill_got[34]//FLEXIBLE ELBOWS
+	{
+		if (breload <= 0 || bwep == 0 || (ultra_got[32] && (creload <= 0 || cwep == 0)))
+		{
+			reload -= 0.3;
 		}
 	}
 	if (reload > lowa || breload > lowb || creload > lowc)
@@ -955,10 +977,6 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 			{
 				breload -= 0.15;
 				creload -= 0.15;
-			}
-			if breload > lowb || creload > lowc
-			{
-				reload -= 0.3;
 			}
 		}
 		if skill_got[35]//PUFFY CHEEKS
@@ -1365,55 +1383,60 @@ if typ!=0&&object_index!=Flame&&object_index!=TrapFire&&object_index!=HotDrakeFl
 
 }
 
-/* */
-///extra feet dodging bonus
 
+///extra feet dodging bonus
 if skill_got[2]
 {
-	if instance_exists(projectile)&&extrafeetalarm<1{
-	    if point_distance(x,y,projectile.x,projectile.y)<31//a close projectile is spotted
-	    {
-	        with projectile
-	        {
-		        if point_distance(x,y,other.x,other.y)<30
-				{//use close projectile
-		            if team!=other.team//NOT FROM PLAYA!? O_O
-		            {                     
-		            other.extrafeetalarm=20;//after this time we check if you've dodged this
-		            other.extrafeetdodged=true;
-		            // change a variable here so that you cannot spawn even more items yo?
-		            }
-		        }
+	if extrafeetalarm>0
+		extrafeetalarm--;
+
+	if extrafeetalarm == 1 && extrafeetdodged
+	{
+		if race=25
+		{
+			with instance_create(x+10,y+5,RedirectFX)
+			{
+				sprite_index = sprExtraFeetCloseDodge;	
 			}
-	    }
+			if scrDrop(80,0)
+				snd_play(sndExtraFeetDodge);
+			else
+				snd_play(sndExtraFeetDodgeFail);
+		}
+		else
+		{
+			with instance_create(x+10,y+5,RedirectFX)
+			{
+				sprite_index = sprExtraFeetCloseDodge;	
+			}
+			if scrDrop(75,0)
+				snd_play(sndExtraFeetDodge);
+			else
+				snd_play(sndExtraFeetDodgeFail);
+		}
+	}
+	if instance_exists(projectile) && alarm[3] < 1
+	{
+		if extrafeetalarm < 1 
+		{
+		    if point_distance(x,y,projectile.x,projectile.y)<32//a close projectile is spotted
+		    {
+		        with projectile
+		        {
+			        if point_distance(x,y,other.x,other.y)<31 //&& !place_meeting(x,y,other) && !place_meeting(x+hspeed,y+vspeed,other)
+					{//use close projectile
+			            if team!=other.team//NOT FROM PLAYA!? O_O
+			            {                     
+							other.extrafeetalarm=13;//after this time we check if you've dodged this
+							other.extrafeetdodged=true;
+			            // change a variable here so that you cannot spawn even more items yo?
+			            }
+			        }
+				}
+		    }
+		}
 	}
 }
-
-
-if extrafeetalarm>0
-extrafeetalarm--;
-
-if extrafeetalarm==1 && extrafeetdodged
-{
-if race=25
-{
-with instance_create(x+10,y+5,RedirectFX)
-{
-	sprite_index = sprExtraFeetCloseDodge;	
-}
-scrDrop(65,0);
-}
-else
-{
-with instance_create(x+10,y+5,RedirectFX)
-{
-	sprite_index = sprExtraFeetCloseDodge;	
-}
-scrDrop(60,0);
-}
-
-}
-
 
 
 /* */

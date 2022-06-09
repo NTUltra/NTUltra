@@ -6,7 +6,10 @@
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskNuke",
+    "path": "sprites/mskNuke/mskNuke.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "projectile",

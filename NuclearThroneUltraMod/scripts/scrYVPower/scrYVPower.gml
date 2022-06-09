@@ -46,29 +46,27 @@ function scrYVPower(){
 
 			if Player.ultra_got[24]//YV ULTRA D
 			{
-			scrSwapWeps()
-			if !scrMeleeWeapons(wep)
-			{
-				if ammo[wep_type[wep]] >= wep_cost[wep]*(2+Player.skill_got[5]*2) and rad>=wep_rad[wep]*(2+Player.skill_got[5]*2)// Check ammo of our secondary wep
+				scrSwapWeps()
+				if !scrMeleeWeapons(wep)
 				{
-					if Player.canSecondaryPop
+					if ammo[wep_type[wep]] >= wep_cost[wep]*(2+Player.skill_got[5]*2) and rad>=wep_rad[wep]*(2+Player.skill_got[5]*2)// Check ammo of our secondary wep
 					{
-						repeat(2+Player.skill_got[5]*2 + Player.ultra_got[22])
-					    {
-							scrFire()
-							can_shoot = 1
+						if Player.canSecondaryPop
+						{
+							repeat(2+Player.skill_got[5]*2 + Player.ultra_got[22])
+						    {
+								scrFire()
+								can_shoot = 1
+							}
+							can_shoot = 0
+							reload += wep_load[wep]*(0.95+(Player.skill_got[5]*1.7))//added reload time
 						}
-						can_shoot = 0
-    
-						reload *= (1.9+Player.skill_got[5])*1.4//added reload time
+						Player.canSecondaryPop = !Player.canSecondaryPop;	
 					}
-					Player.canSecondaryPop = !Player.canSecondaryPop;	
 				}
+				scrSwapWeps()
 			}
-			scrSwapWeps()
-
-			}
-			reload *= 1.9+Player.skill_got[5]*1.4//added reload time
+			reload += wep_load[wep]*(0.9+(Player.skill_got[5]*1.7))//added reload time
 			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180,4)
 			BackCont.viewx2 += lengthdir_x(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y))
 			BackCont.viewy2 += lengthdir_y(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y))

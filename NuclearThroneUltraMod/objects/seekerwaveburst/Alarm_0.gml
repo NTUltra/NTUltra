@@ -10,7 +10,7 @@ if instance_exists(creator)
 x = creator.x
 y = creator.y
 //FIRING
-snd_play(sndSeekerWave,0.1,true,false,1,false,false,0.6);
+snd_play(sndSeekerWave,0.1,true,false,1,false,false,0.5);
 
 
 with instance_create(x,y,SeekerBolt)
@@ -26,9 +26,9 @@ left=true
 
 
 if left
-ang+=10;
+ang+=15;
 else
-ang-=10;
+ang-=15;
 
 
 BackCont.viewx2 += lengthdir_x(2,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake

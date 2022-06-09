@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprBoltStick","path":"sprites/sprBoltStick/sprBoltStick.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprBoltStick",
     "tags": [],
     "resourceType": "GMSequence",
   },

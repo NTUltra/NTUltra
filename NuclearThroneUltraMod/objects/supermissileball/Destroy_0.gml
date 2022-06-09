@@ -1,8 +1,8 @@
-snd_play(sndNukeExplosion,0.1,true)
 event_inherited()
-instance_create(x,y,Explosion);
-Sleep(10)
-instance_create(x+hspeed,y+vspeed,WallBreak);
+snd_play(sndNukeExplosion,0.1,true)
+Sleep(20)
+BackCont.shake += 10;
+instance_create(x+hspeed,y+vspeed,BigWallBreak);
 var am = 4;
 var ang = fireRotation;
 var angStep = 360/am;

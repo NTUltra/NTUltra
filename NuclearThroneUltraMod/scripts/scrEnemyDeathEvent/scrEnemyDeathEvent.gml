@@ -20,14 +20,27 @@ function scrEnemyDeathEvent(){
 		BloodLust();
 		ApexPredator();
 		var isdoc = Player.race == 25;
-		if Player.skill_got[34] //FLEXIBLE ELBOWS
+		with Player
 		{
-			if Player.breload <= 0 || Player.creload <= 0
+			if skill_got[34] //FLEXIBLE ELBOWS
 			{
-				if isdoc
-					scrDrop(7,0);
-				else
-					scrDrop(6,0);
+				var lowb = 0;
+				var lowc = 0;
+				if skill_got[35]//PUFFY CHEEKS
+				{
+					lowb = wep_load[bwep]*-2;
+					lowc = wep_load[cwep]*-2;
+				}
+				if bwep == 0 || breload >= lowb || (ultra_got[32] && (creload <= lowc || cwep == 0))
+				{
+					with other
+					{
+						if isdoc
+							scrDrop(12,0);
+						else
+							scrDrop(10,0);
+					}
+				}
 			}
 		}
 		
@@ -76,17 +89,46 @@ function scrEnemyDeathEvent(){
 			//TRIGGER FINGERS
 			if skill_got[24]
 			{
+				var m = 0.4;
 				if isdoc
 				{
-					reload *=0.55;
-					breload *=0.55;
-					creload *=0.55;
+					m = 0.45;
+				}
+				if reload < 0
+				{
+					var pci = reload/wep_load[wep];
+					pci = 1+pci;
+					pci = pci-floor(pci);//Percentage of load that would be the reload
+					debug("reduce by: ",reload*pci*m);
+					reload -= reload*pci*m;
 				}
 				else
 				{
-					reload *=0.6//40%
-					breload *=0.6//40%
-					creload *=0.6//40%
+					reload *= m;
+				}
+				if breload < 0
+				{
+					var pci = breload/wep_load[bwep];
+					pci = 1+pci;
+					pci = pci-floor(pci);//Percentage of load that would be the reload
+					debug("reduce by: ",breload*pci*m);
+					breload += breload*pci*m;
+				}
+				else
+				{
+					breload *= m;
+				}
+				if creload < 0
+				{
+					var pci = creload/wep_load[cwep];
+					pci = 1+pci;
+					pci = pci-floor(pci);//Percentage of load that would be the reload
+					debug("reduce by: ",creload*pci*m);
+					creload -= creload*pci*m;
+				}
+				else
+				{
+					creload *= m;
 				}
 				triggerfinger=1;//Shine weapon when trigger fingers is working
 			}

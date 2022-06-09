@@ -1,5 +1,6 @@
 /// @description Missiles!
-alarm[1] = 3;
+alarm[1] = fireRate;
+fireRate++;
 snd_play_fire(sndRocket);
 with instance_create(x,y,Missile)
 {motion_add(other.fireRotation,4)

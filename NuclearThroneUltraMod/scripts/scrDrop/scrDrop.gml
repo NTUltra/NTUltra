@@ -141,4 +141,5 @@ function scrDrop(itemdrop, weapondrop) {
 		return true;
 	}
 	}
+	return false;
 }

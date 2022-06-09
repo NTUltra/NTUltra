@@ -1,5 +1,5 @@
 motion_add(point_direction(other.x,other.y,x,y),0.5)
-
+/*
 if other.team != team and other.my_health > 0 and size > other.size and meleedamage > 0
 {
 with other
@@ -9,4 +9,4 @@ sprite_index = spr_hurt
 image_index = 0
 }
 }
-
+*/

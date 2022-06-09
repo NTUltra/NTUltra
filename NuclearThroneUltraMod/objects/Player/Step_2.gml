@@ -328,7 +328,20 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 	wepmod4 = targetPickup.wepmod4
 	can_shoot = 1
 	reload = min(reload,0)
-
+	queueshot = 0;
+	if skill_got[35]
+	{
+		var lowa = wep_load[wep]*-2;
+		if reload <= lowa*0.5 && queueshot < 1
+		{
+			queueshot++;
+			scrPlayReloadSound(wep);
+		} else if reload <= lowa && queueshot < 2
+		{
+			queueshot++;
+			scrPlayReloadSound(wep);
+		}
+	}
 
 	if wep=298//golden oops gun
 	game_end();
@@ -368,6 +381,14 @@ else
 var tookHit = false;
 if my_health < prevhealth
 	tookHit = true;
+//Extra feet consider failed dodge
+if skill_got[2] && tookHit && !exception
+{
+	extrafeetalarm = 20;
+	extrafeetdodged = false;
+	debug("got hit by enemy");
+}
+
 ///tough shell
 var damageReduced = 0;
 if (skill_got[31])

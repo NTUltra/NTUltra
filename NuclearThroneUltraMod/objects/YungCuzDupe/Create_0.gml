@@ -26,6 +26,10 @@ nearWall = false;
 scrWeapons()
 //scrCrowns()
 
+//extra feet items
+extrafeetalarm = 0;
+extrafeetdodged = false;
+
 race=Player.race;
 
 if Player.bskin=0
@@ -66,6 +70,9 @@ reload = 0//Player.reload
 breload = 0//Player.breload
 team = Player.team
 size = Player.size
+queueshot = 0;
+bqueueshot = 0;
+cqueueshot = 0;
 
 
 accuracy = Player.accuracy

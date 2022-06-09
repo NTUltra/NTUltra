@@ -36,5 +36,5 @@ sprite_index=sprElectroBall;
 }
 else
 sprite_index=sprElectroBall;
-alarm[1]=6;
+alarm[1]=electroDelay;
 

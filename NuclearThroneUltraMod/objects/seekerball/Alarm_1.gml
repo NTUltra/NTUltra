@@ -1,5 +1,5 @@
 /// @description Seekers!
-alarm[1] = 3;
+alarm[1] = 6;
 snd_play_fire(sndSeekerPistol);
 with instance_create(x,y,SeekerBolt)
 {motion_add(other.fireRotation,7)

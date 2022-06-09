@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndGyroBurst",
-  "duration": 0.0,
+  "duration": 10.213878,
   "parent": {
     "name": "Bullet",
     "path": "folders/Sounds/Weapons/Bullet.yy",

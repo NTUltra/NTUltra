@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description Increase dmg
 
 // Inherit the parent event
 event_inherited();

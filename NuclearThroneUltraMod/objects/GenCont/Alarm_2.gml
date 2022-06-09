@@ -158,11 +158,17 @@ if Player.area = 100
 	with instance_furthest(Player.x,Player.y,Floor)
 	{
 		instance_create(x+16,y+16,CrownPickup)
-	    if Player.crownvisits>1{
-	    instance_create(x-32,y-64,WeaponMod)
-	    with instance_create(x+64,y-64,WeaponMod)
-	    image_xscale=-1;
+	    if Player.crownvisits > 1{
+		    instance_create(x-32,y-64,WeaponMod)
+		    with instance_create(x+64,y-64,WeaponMod)
+				image_xscale=-1;
 	    }
+		if Player.skill_got[30]
+		{
+			instance_create(x-32,y+64,WeaponMod)
+		    with instance_create(x+64,y+64,WeaponMod)
+				image_xscale=-1;	
+		}
 		if Player.loops > 0
 		{
 			var xx = x;

@@ -2189,7 +2189,7 @@ function scrWeapons() {
 	wep_type[198] = 5
 	wep_auto[198] = 0
 	wep_load[198] = 24
-	wep_cost[198] = 2
+	wep_cost[198] = 1
 	wep_sprt[198] = sprMorphHammer
 	wep_area[198] = 10
 	wep_text[198] = "peacekeeper"
@@ -5887,7 +5887,7 @@ function scrWeapons() {
 	wep_name[534] = "SUPER GYRO BURSTER"
 	wep_type[534] = 1
 	wep_auto[534] = 0
-	wep_load[534] = 150
+	wep_load[534] = 160
 	wep_cost[534] = 120
 	wep_sprt[534] = sprGyroBurster
 	wep_area[534] = 30
@@ -5972,38 +5972,38 @@ function scrWeapons() {
 	wep_swap[541] = sndSwapEnergy
 	wep_rad[541] = 0;
 	
-	wep_name[540] = "MISSILE CANNON"
-	wep_type[540] = 4
-	wep_auto[540] = 0
-	wep_load[540] = 55
-	wep_cost[540] = 9
-	wep_sprt[540] = sprPlasmaCannon
-	wep_area[540] = 14
-	wep_text[540] = "true boom"
-	wep_swap[540] = sndSwapEnergy
-	wep_rad[540] = 0;
-	
-	wep_name[541] = "SUPER MISSILE CANNON"
-	wep_type[541] = 4
-	wep_auto[541] = 0
-	wep_load[541] = 400
-	wep_cost[541] = 26
-	wep_sprt[541] = sprSuperPlasmaCannon
-	wep_area[541] = 21
-	wep_text[541] = "SMC!"
-	wep_swap[541] = sndSwapEnergy
-	wep_rad[541] = 0;
-	
 	wep_name[542] = "KRAKEN CANNON"
 	wep_type[542] = 4
 	wep_auto[542] = 0
-	wep_load[542] = 50
+	wep_load[542] = 54
 	wep_cost[542] = 8
 	wep_sprt[542] = sprPlasmaCannon
-	wep_area[542] = 14
-	wep_text[542] = "true boom"
+	wep_area[542] = 13
+	wep_text[542] = "Release the kraken!"
 	wep_swap[542] = sndSwapEnergy
 	wep_rad[542] = 0;
+	
+	wep_name[543] = "SUPER KRAKEN CANNON"
+	wep_type[543] = 4
+	wep_auto[543] = 0
+	wep_load[543] = 380
+	wep_cost[543] = 25
+	wep_sprt[543] = sprSuperPlasmaCannon
+	wep_area[543] = 21
+	wep_text[543] = "SMC!"
+	wep_swap[543] = sndSwapEnergy
+	wep_rad[543] = 0;
+	
+	wep_name[544] = "BOWLING BALL LAUNCHER"
+	wep_type[544] = 3
+	wep_auto[544] = 0
+	wep_load[544] = 45
+	wep_cost[544] = 3
+	wep_sprt[544] = sprPlasmaCannon
+	wep_area[544] = 13
+	wep_text[544] = "oke dude very funny"
+	wep_swap[544] = sndSwapEnergy
+	wep_rad[544] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 

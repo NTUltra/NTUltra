@@ -160,10 +160,10 @@ function scrFire2() {
 	{
 	if Player.skill_got[17] = 1//laserbrain
 	{
-	dmg=8+(other.betterlaserbrain*2)
+	dmg=12+(other.betterlaserbrain*2)
 	}
 	else
-	dmg = 6//rench4//sledge16
+	dmg = 10//rench4//sledge16
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2599,16 +2599,16 @@ function scrFire2() {
 
 	break;
 
-	//SEEKER CANON
+	//SEEKER WAVE GUN
 	case 292:
 
 	snd_play_fire(sndSeekerPistol)
 
 
-	with instance_create(x,y,SeekerCannonBurst)
+	with instance_create(x,y,SeekerWaveBurst)
 	{
 	creator = other.id
-	ammo = 30
+	ammo = 20
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -3510,7 +3510,7 @@ function scrFire2() {
 	else
 	{
 		snd_play_fire(sndBlackSwordMega)
-		reload *= 0.75;
+		reload -= wep_load[wep]*0.25;
 	}
 
 	instance_create(x,y,Dust)
@@ -3548,7 +3548,7 @@ function scrFire2() {
 	{
 		snd_play_fire(sndBloodCannonLoop);
 		snd_play_fire(sndBlackSwordMega);
-		reload *= 0.75;
+		reload -= wep_load[wep]*0.25;
 	}
 
 	instance_create(x,y,Dust)
@@ -9360,7 +9360,6 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 8
 	wkick = 8
-	resetSpeed=false;
 
 	break;
 	
@@ -9379,7 +9378,6 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(16,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 12
 	wkick = 10
-	resetSpeed=false;
 
 	break;
 	
@@ -9391,7 +9389,7 @@ function scrFire2() {
 	with instance_create(x,y,SuperBloodCannonBall)
 	{
 	image_angle=random(360);
-	motion_add(aimDirection+(random(8)-4)*other.accuracy,3)
+	motion_add(aimDirection+(random(8)-4)*other.accuracy,4)
 	team = other.team}
 
 	motion_add(aimDirection+180,2)
@@ -9439,7 +9437,6 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 12
 	wkick = 8
-	resetSpeed=false;
 
 	break;
 	
@@ -9458,7 +9455,6 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(16,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 12
 	wkick = 10
-	resetSpeed=false;
 
 	break;
 	
@@ -9478,9 +9474,44 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 12
 	wkick = 8
-	resetSpeed=false;
 
 	break;
 	
+	//SUPER KRAKEN CANNON
+	case 543:
+
+	snd_play_fire(sndSuperBazooka)
+
+	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),SuperKrakenBall)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,6)
+	image_angle = direction
+	team = other.team}
+
+	motion_add(aimDirection+180,6)
+	BackCont.viewx2 += lengthdir_x(16,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(16,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 12
+	wkick = 10
+
+	break;
+	
+	//BOWLING BALL LAUNCHER
+	case 544:
+
+	snd_play_fire(sndNukeFire)
+
+	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),BowlingBall)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,16)
+	image_angle = direction
+	team = other.team
+	fireRotation = direction;}
+
+	motion_add(aimDirection+180,6)
+	BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 12
+	wkick = 8
+
+	break;
 	}//end of switch part 2!
 }

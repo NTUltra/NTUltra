@@ -166,7 +166,7 @@ function scrTips() {
 	tip = choose("last day before retirement","duty calls","it's ok to eat","gills on your neck","like kevin costner")
 
 	if Player.race = 2
-	tip = choose("crystal can handle this","family","crystal does not like cheese#actually we've been lieing all these years#crystal does like cheese!")
+	tip = choose("crystal can handle this","family","crystal does not like cheese","crystal is hard","crystal is tough","crystal rocks")
 
 	if Player.race = 3
 	tip = choose("eyes sees everything","don't blink","all these thoughts","eyes can't speak","telekinesis pushes bullets away")

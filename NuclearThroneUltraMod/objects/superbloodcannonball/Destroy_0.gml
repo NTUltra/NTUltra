@@ -23,7 +23,7 @@ audio_stop_sound(sndBloodCannonLoop)
 
 Sleep(10)
 instance_create(x+hspeed,y+vspeed,WallBreak);
-var am = 5;
+var am = 4;
 var ang = direction+180;
 var angStep = 360/am;
 repeat(am)

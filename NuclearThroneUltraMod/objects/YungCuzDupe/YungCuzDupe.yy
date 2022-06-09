@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskAlly",
     "path": "sprites/mskAlly/mskAlly.yy",

@@ -1,6 +1,6 @@
 /// @description reduce player ammo
 if maxcharge>0&&instance_exists(Player)
-alarm[1] = costtime+Player.reload*0.2;
+alarm[1] = costtime+max(0,Player.reload*0.2);
 
 if instance_exists(creator)
 {
