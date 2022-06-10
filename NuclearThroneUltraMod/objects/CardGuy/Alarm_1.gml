@@ -1,10 +1,5 @@
-alarm[1] = 10+random(10)
+alarm[1] = actTime+random(actTime)
 
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1] = 7+random(7);
-}
 
 scrTarget()
 if target > 0

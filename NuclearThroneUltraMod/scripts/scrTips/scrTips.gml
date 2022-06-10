@@ -63,7 +63,7 @@ function scrTips() {
 	"humphry can't run",
 	"atom can teleport",
 	"fish can walk",
-	"git gut!",
+	"git gud!",
 	"don't trust fortune cookies",
 	"picking up a weapon#resets your reload time",
 	"gloves and kraken weapons#give you invincibility frames",

@@ -1560,7 +1560,7 @@ function scrWeapons() {
 
 	wep_name[141] = "BULLET SHOTGUN"
 	wep_type[141] = 1
-	wep_auto[141] = 1
+	wep_auto[141] = 0
 	wep_load[141] = 20
 	wep_cost[141] = 6
 	wep_sprt[141] = sprBulletShotgun
@@ -1571,7 +1571,7 @@ function scrWeapons() {
 
 	wep_name[142] = "BLOOD BULLET SHOTGUN"
 	wep_type[142] = 1
-	wep_auto[142] = 1
+	wep_auto[142] = 0
 	wep_load[142] = 16
 	wep_cost[142] = 5
 	wep_sprt[142] = sprBloodBulletShotgun
@@ -3111,7 +3111,7 @@ function scrWeapons() {
 
 	wep_name[282] = "GOLDEN BULLET SHOTGUN"
 	wep_type[282] = 1
-	wep_auto[282] = 1
+	wep_auto[282] = 0
 	wep_load[282] = 18
 	wep_cost[282] = 6
 	wep_sprt[282] = sprGoldenBulletShotgun
@@ -5878,7 +5878,7 @@ function scrWeapons() {
 	wep_auto[533] = 0
 	wep_load[533] = 38
 	wep_cost[533] = 6
-	wep_sprt[533] = sprSuperSlugger
+	wep_sprt[533] = sprSuperHeavySlugger
 	wep_area[533] = 29
 	wep_text[533] = "lets go dude"
 	wep_swap[533] = sndSwapShotgun
@@ -5889,9 +5889,9 @@ function scrWeapons() {
 	wep_auto[534] = 0
 	wep_load[534] = 160
 	wep_cost[534] = 120
-	wep_sprt[534] = sprGyroBurster
+	wep_sprt[534] = sprSuperGyroBurster
 	wep_area[534] = 30
-	wep_text[534] = "bullets for days"
+	wep_text[534] = "bullets for months"
 	wep_swap[534] = sndSwapPistol
 	wep_rad[534] = 0;
 	
@@ -5900,7 +5900,7 @@ function scrWeapons() {
 	wep_auto[535] = 0
 	wep_load[535] = 20
 	wep_cost[535] = 2
-	wep_sprt[535] = sprSplinterCrash
+	wep_sprt[535] = sprLaserCrash
 	wep_area[535] = 7
 	wep_text[535] = "crash blast"
 	wep_swap[535] = sndSwapBow
@@ -5941,7 +5941,7 @@ function scrWeapons() {
 	
 	wep_name[539] = "HEAVY BLOOD BULLET SHOTGUN"
 	wep_type[539] = 1
-	wep_auto[539] = 1
+	wep_auto[539] = 0
 	wep_load[539] = 22
 	wep_cost[539] = 10
 	wep_sprt[539] = sprBloodBulletShotgun

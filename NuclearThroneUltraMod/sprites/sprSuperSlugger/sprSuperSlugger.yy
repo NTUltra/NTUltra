@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprSuperSlugger","path":"sprites/sprSuperSlugger/sprSuperSlugger.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprSuperSlugger",
     "tags": [],
     "resourceType": "GMSequence",
   },

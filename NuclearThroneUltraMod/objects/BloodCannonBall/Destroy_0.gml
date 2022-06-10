@@ -17,6 +17,7 @@ image_angle = other.ang+120
 with instance_create(x,y,BloodStreak)
 image_angle = other.ang+240
 if !audio_is_playing(sndBloodCannonEnd)
-snd_play(sndBloodCannonEnd);
+	snd_play(sndBloodCannonEnd);
+	
 audio_stop_sound(sndBloodCannonLoop)
 

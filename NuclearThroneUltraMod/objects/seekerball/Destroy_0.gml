@@ -1,5 +1,5 @@
 event_inherited()
-if object_index != SuperSeekerBall)
+if object_index != SuperSeekerBall
 {
 	snd_play(sndSeekerShotgun,0.1,true)
 	Sleep(10)

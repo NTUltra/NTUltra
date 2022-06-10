@@ -100,7 +100,7 @@ function scrEnemyDeathEvent(){
 					pci = 1+pci;
 					pci = pci-floor(pci);//Percentage of load that would be the reload
 					debug("reduce by: ",reload*pci*m);
-					reload -= reload*pci*m;
+					reload += reload*pci*m;
 				}
 				else
 				{
@@ -124,7 +124,7 @@ function scrEnemyDeathEvent(){
 					pci = 1+pci;
 					pci = pci-floor(pci);//Percentage of load that would be the reload
 					debug("reduce by: ",creload*pci*m);
-					creload -= creload*pci*m;
+					creload += creload*pci*m;
 				}
 				else
 				{

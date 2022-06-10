@@ -1,2 +1,2 @@
-motion_add(point_direction(other.x,other.y,x,y)+1,1)
+motion_add(point_direction(other.x,other.y,x,y)+180,1)
 

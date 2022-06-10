@@ -777,7 +777,7 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 		{
 			if scrMeleeWeapons(wep)
 			{
-				reload -=0.44;
+				reload -=0.43;
 			}
 		}
 		//Weaponsmith one with the gun fire rate
@@ -960,10 +960,10 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 			var rageAccuracy;
 			var reduction = rage*0.0054;
 			reload -= reduction//0.01//0.009 when cap is 100
-			breload -= reduction*0.5;
-			creload -= reduction*0.5;
+			breload -= reduction*0.4;
+			creload -= reduction*0.4;
 
-			rageAccuracy = rage*0.0012//0.0011// caps at 0.10 increase when cap = 100
+			rageAccuracy = rage*0.0013//0.0011// caps at 0.10 increase when cap = 100
 			accuracy=standartAccuracy+rageAccuracy;//standartAccuracy will be changed by eagle eyes so this scales with that.
 		}
 		if skill_got[34]//FLEXIBLE ELBOWS

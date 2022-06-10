@@ -118,7 +118,7 @@ function scrUltras() {
 			if (scrMeleeWeapons(Player.wep) || Player.wep == 0) && (scrMeleeWeapons(Player.bwep) || Player.bwep == 0)
 			{
 				ultra_name[23] = "BLASPHEMY"
-			    ultra_text[23] = "CAN NO LONGER POP POP GUNS#44% HIGHER MELEE SWING RATE#MELEE IS FULLY AUTOMATIC#CAN POP POP MELEE"
+			    ultra_text[23] = "CAN NO LONGER POP POP GUNS#43% HIGHER MELEE SWING RATE#MELEE IS FULLY AUTOMATIC#CAN POP POP MELEE"
 			    ultra_tips[23] = "why would you forsake us gun god?"
 			}
 		}
@@ -275,7 +275,7 @@ function scrUltras() {
 	    ultra_tips[55] = "rise above"
     
 	    ultra_name[56] = "CLEANSING"
-	    ultra_text[56] = "MORE MELEE SWING SPEED#YOU NO LONGER#GET RANDOM WEAPONS#AFTER EXITING A PORTAL#THROWS BOUNCE TOWARDS ENEMIES"
+	    ultra_text[56] = "MORE MELEE SWING RATE#YOU NO LONGER#GET RANDOM WEAPONS#AFTER EXITING A PORTAL#THROWS BOUNCE TOWARDS ENEMIES"
 	    ultra_tips[56] = "survival above pacifism"
     
 	//ATOM 
@@ -367,7 +367,7 @@ function scrUltras() {
 	ultra_tips[73] = "specific taste in mutations"
 
 	ultra_name[74] = "DAMNATION"
-	ultra_text[74] = "FIRING A WEAPON WITH BLOOD GAMBLE#WILL REDUCE ITS RELOADING TIME"//by 80%
+	ultra_text[74] = "FIRING A WEAPON WITH BLOOD GAMBLE#WILL REDUCE ITS RELOAD TIME"//by 80%
 	ultra_tips[74] = "damn son!"
 
 	ultra_name[75] = "THE BIG GAMBLE"

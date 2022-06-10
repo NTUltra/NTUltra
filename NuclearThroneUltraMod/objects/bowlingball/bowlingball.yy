@@ -6,10 +6,7 @@
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": {
-    "name": "mskSeekerCannonBolt",
-    "path": "sprites/mskSeekerCannonBolt/mskSeekerCannonBolt.yy",
-  },
+  "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
     "name": "projectile",

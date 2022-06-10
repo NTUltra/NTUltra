@@ -17,11 +17,15 @@ spr_dead = sprCardGuyDead
 walk = 0
 gunangle = random(360)
 alarm[1] = 90+random(90)
+actTime = 12;
 
 if instance_exists(Player)
 {
 if Player.loops>0
+{
 alarm[1] = 60+random(60);
+actTime = 8;
+}
 }
 
 
