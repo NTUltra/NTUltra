@@ -250,16 +250,19 @@ function scrDrawHUD() {
 		pci = 1+pci;
 		pci = pci-floor(pci)
 	}
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+110,__view_get( e__VW.YView, 0 )+16,c_black,1)
 	if Player.creload > 0
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[Player.cwep],Player.creload/Player.wep_load[Player.cwep])),14,__view_get( e__VW.XView, 0 )+110,__view_get( e__VW.YView, 0 )+16,c_white,0.7)
+	{
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,c_black,1)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[Player.cwep],Player.creload/Player.wep_load[Player.cwep])),14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,c_white,0.7)
+	}
 	else
 	{
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,c_dkgray,1)
 		if pcc == 2
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+110,__view_get( e__VW.YView, 0 )+16,puffColour,0.9)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,puffColour,0.9)
 		else if pcc == 1
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,pcsw,14,__view_get( e__VW.XView, 0 )+110,__view_get( e__VW.YView, 0 )+16,puffColour,0.9)
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.creload[wwep],pci)),14,__view_get( e__VW.XView, 0 )+110,__view_get( e__VW.YView, 0 )+16,c_white,0.4)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,pcsw,14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,puffColour,0.9)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[wwep],pci)),14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,c_white,0.4)
 	}
 	
 	
@@ -324,11 +327,14 @@ function scrDrawHUD() {
 		pci = 1+pci;
 		pci = pci-floor(pci)
 	}
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,c_black,1)
 	if Player.breload > 0
+	{
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,c_black,1)
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[wwep],Player.breload/Player.wep_load[wwep])),14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,c_white,0.7)
+	}
 	else
 	{
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,c_dkgray,1)
 		if pcc == 2
 			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,puffColour,0.9)
 		else if pcc == 1
@@ -395,11 +401,14 @@ function scrDrawHUD() {
 		pci = 1+pci;
 		pci = pci-floor(pci)
 	}
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16,c_black,1)
 	if Player.reload > 0
+	{
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16,c_black,1)
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[wwep],Player.reload/Player.wep_load[wwep])),14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16,c_white,0.6)
+	}
 	else
 	{
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16,c_dkgray,1)
 		if pcc == 2
 			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16,puffColour,0.9)
 		else if pcc == 1
@@ -408,16 +417,16 @@ function scrDrawHUD() {
 	}
 	
 	//Debug
-	
+	/*
 	if UberCont.public = 0 && instance_exists(Player)
 	{
 		var xx = __view_get( e__VW.XView, 0 )+14
 		var yy = __view_get( e__VW.YView, 0 )+60
 		draw_text(xx+32,yy,"reload: "+string(Player.reload));
 		draw_text(xx+32,yy,"\nbreload: "+string(Player.breload));
-
 	}
-
+	*/
+	
 	//Ultramod
 	if Player.ultramod != 0
 	{
@@ -1058,7 +1067,7 @@ function scrDrawHUD() {
 
 	with WeaponMod
 	{
-		if place_meeting(x,y,Player)
+		if place_meeting(x,y,Player) && Player.wep != 0
 		{
 			draw_sprite(sprEPickup,UberCont.opt_gamepad,x+8,y)
 

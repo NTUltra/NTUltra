@@ -29,14 +29,16 @@ if place_meeting(x,y,Player)
 	if !active
 	{
 		active = true;
+		name="##MODIFY WEAPON#"+modname;
+		moddescription = scrWepModDescription(wepmod);
 		var hasPowerCraving = Player.skill_got[30];
-		if (wepmod1==0)
+		if (Player.wepmod1==0)
 		{ replaceModNr = 0;}
-		else if (wepmod2==0)
+		else if (Player.wepmod2==0)
 		{ replaceModNr = 0;}
-		else if (wepmod3==0)
+		else if (Player.wepmod3==0)
 		{ replaceModNr = 0;}
-		else if hasPowerCraving&&wepmod4==0//power craving
+		else if hasPowerCraving && Player.wepmod4==0//power craving
 		{
 		    replaceModNr = 0;
 		}
@@ -45,14 +47,82 @@ if place_meeting(x,y,Player)
 			replaceModNr ++;
 			if replaceModNr > 3 + hasPowerCraving
 			{
-				replaceModNr = 1;	
+				replaceModNr = 1;
+			}
+			switch (replaceModNr)
+			{
+				case 1:
+					name += "#REPLACE MOD 1 "+scrWepModName(Player.wepmod1);
+					moddescription = "##"+moddescription;
+				break;
+				case 2:
+					name += "#REPLACE MOD 2 "+scrWepModName(Player.wepmod2);
+					moddescription = "##"+moddescription;
+				break;
+				case 3:
+					name += "#REPLACE MOD 3 "+scrWepModName(Player.wepmod3);
+					moddescription = "##"+moddescription;
+				break;
+				case 4:
+					name += "#REPLACE MOD 4 "+scrWepModName(Player.wepmod4);
+					moddescription = "##"+moddescription;
+				break;
 			}
 		}
 	}
 
-
 	if KeyCont.key_pick[Player.p] = 1 && Player.maxhealth > 0
 	{
+		KeyCont.key_pick[Player.p] = 2;
+		//get your weapon mod 
+		if Player.wep !=0 {
+			with Player 
+			{
+				//unlock weapon smith
+				scrUnlockCharacter(17,"FOR MODDING A WEAPON")
+
+				///store the data into this object
+				other.wep=wep;
+				other.name=wep_name[wep];
+				other.type=wep_type[wep]
+				other.curse=curse;
+				other.wepmod1=wepmod1;
+				other.wepmod2=wepmod2;
+				other.wepmod3=wepmod3;
+				other.wepmod4=wepmod4;
+
+				snd_play(snd_thrn);
+
+			    Sleep(100);
+			    //BackCont.viewx2 += lengthdir_x(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+			    //BackCont.viewy2 += lengthdir_y(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+			    BackCont.shake += 10
+    
+    
+			    if cwep != 0{//robot 3 weps A B C
+					scrSwapWeps()// B C A
+					cwep=0; // B C x
+				}
+				else{
+					scrSwapWeps()
+					bwep = 0
+				}
+		}
+		//show_message("RECEIVED: "+string(wepmod1)+string(wepmod2)+string(wepmod3) );
+
+
+		alarm[0]=120;
+		image_speed=0.4;
+		mask_index=mskPickupThroughWall;
+
+		with WeaponMod
+		{
+			image_speed=0.4;
+			mask_index=mskPickupThroughWall;}
+
+			repeat(4)
+			instance_create(x,y,Smoke)
+		}
 	}
 }
 else

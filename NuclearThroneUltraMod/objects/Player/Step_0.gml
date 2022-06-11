@@ -853,9 +853,13 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 	}
 	if skill_got[34]//FLEXIBLE ELBOWS
 	{
-		if (breload <= 0 || bwep == 0 || (ultra_got[32] && (creload <= 0 || cwep == 0)))
+		if (breload <= 0 || bwep == 0)
 		{
-			reload -= 0.3;
+			reload -= 0.29;
+		}
+		if (ultra_got[32] && (creload <= 0 || cwep == 0))
+		{
+			reload -= 0.28;
 		}
 	}
 	if (reload > lowa || breload > lowb || creload > lowc)

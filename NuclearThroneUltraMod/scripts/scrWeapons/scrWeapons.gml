@@ -2342,7 +2342,7 @@ function scrWeapons() {
 	wep_name[212] = "SUPER ION CANNON"
 	wep_type[212] = 5
 	wep_auto[212] = 0
-	wep_load[212] = 24
+	wep_load[212] = 35
 	wep_cost[212] = 10
 	wep_sprt[212] = sprSuperIonCannon
 	wep_area[212] = 16
