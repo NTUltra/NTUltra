@@ -9513,5 +9513,63 @@ function scrFire2() {
 	wkick = 8
 
 	break;
+	
+	//SUPER LIGHTNING CROSSBOW
+	case 545:
+
+	snd_play_fire(sndSuperCrossbow)
+
+	with instance_create(x,y,LightningBolt)
+	{motion_add(aimDirection,24)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,LightningBolt)
+	{motion_add(aimDirection+5*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,LightningBolt)
+	{motion_add(aimDirection-5*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,LightningBolt)
+	{motion_add(aimDirection+10*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,LightningBolt)
+	{motion_add(aimDirection-10*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+
+	motion_add(aimDirection+180,1)
+
+	BackCont.viewx2 += lengthdir_x(60,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(60,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 15
+	wkick = 8
+
+	break;
+	
+	//SPLIT SEEKER PISTOL
+	case 546:
+
+	snd_play_fire(sndSeekerPistol)
+
+
+	with instance_create(x,y,SplitSeekerBolt)
+	{motion_add(aimDirection+(random(20)-10)-10*other.accuracy,2+random(3))
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,SplitSeekerBolt)
+	{motion_add(aimDirection+(random(20)-10)+10*other.accuracy,2+random(3))
+	image_angle = direction
+	team = other.team}
+
+
+	BackCont.viewx2 += lengthdir_x(15,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(15,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3
+	wkick -= 3
+
+	break;
 	}//end of switch part 2!
 }

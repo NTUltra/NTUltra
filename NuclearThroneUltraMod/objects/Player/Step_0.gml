@@ -705,8 +705,9 @@ if (rad > mr)
 	repeat(level-6)
 	instance_create(x,y,IDPDSpawn)
 	
-		if level == 10 && skillsChosen > 7
+		if level == 10 && !reachedUltra
 		{
+			reachedUltra = true;
 			snd_play_2d(sndExplosionXXL);
 			instance_create(x,y,LevelUpUltra);
 			BackCont.shake += 20;

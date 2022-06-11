@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprBloodCannon","path":"sprites/sprBloodCannon/sprBloodCannon.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprBloodCannon",
     "tags": [],
     "resourceType": "GMSequence",
   },

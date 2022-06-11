@@ -58,7 +58,13 @@ function scrLoadRun(){
 				Player.typ_amax[3] = encryptedRun.maxammo[3];
 				Player.typ_amax[4] = encryptedRun.maxammo[4];
 				Player.typ_amax[5] = encryptedRun.maxammo[5];
+				var targetLength = array_length(Player.skill_got);
 				Player.skill_got = encryptedRun.skill_got;
+				debug(targetLength);
+				while (array_length(Player.skill_got) < targetLength)
+				{
+					Player.skill_got[array_length(Player.skill_got)] = 0;
+				}
 				Player.ultra_got = encryptedRun.ultra_got;
 				Player.maxhealth = encryptedRun.maxhp;
 				Player.my_health = encryptedRun.hp;
@@ -154,6 +160,10 @@ function scrLoadRun(){
 				Player.saveLoaded = true;//To position to save station,
 				if variable_struct_exists(encryptedRun, "altUltra")
 					Player.altUltra = encryptedRun.altUltra;
+				if variable_struct_exists(encryptedRun, "reachedUltra")
+					Player.reachedUltra = encryptedRun.reachedUltra;
+				else
+					Player.reachedUltra = true;
 			}
 			with Player
 			{

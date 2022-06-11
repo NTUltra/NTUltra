@@ -6,7 +6,10 @@
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskSeeker",
+    "path": "sprites/mskSeeker/mskSeeker.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "projectile",

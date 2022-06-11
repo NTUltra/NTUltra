@@ -11,6 +11,7 @@ image_speed=0.4;
 alarm[0]=4;
 image_angle=random(360);
 dmg = 20;
+ang = random(360);
 if instance_exists(Player){
 	if Player.ultra_got[16]//Melting doomed
 		dmg=30;

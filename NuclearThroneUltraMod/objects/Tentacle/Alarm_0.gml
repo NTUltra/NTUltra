@@ -60,7 +60,7 @@ accuracy=0;
 
 direction = image_angle+(random(accuracy)-(accuracy*0.5))//30 - 15
 speed = 4
-if instance_exists(target)
+if instance_exists(target) && dir.team != team
 {
 if point_distance(x,y,dir.x,dir.y) < 170-accuracy//120
 motion_add(point_direction(x,y,dir.x,dir.y),1.6-(accuracy*0.05))//1

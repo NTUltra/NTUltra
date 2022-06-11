@@ -64,7 +64,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprSeeker","path":"sprites/sprSeeker/sprSeeker.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprSeeker",
     "tags": [],
     "resourceType": "GMSequence",
   },

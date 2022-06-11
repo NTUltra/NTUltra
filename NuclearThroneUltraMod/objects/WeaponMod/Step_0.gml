@@ -24,3 +24,38 @@ motion_add(random(360),random(3));
 
 wave+=0.4;
 
+if place_meeting(x,y,Player)
+{
+	if !active
+	{
+		active = true;
+		var hasPowerCraving = Player.skill_got[30];
+		if (wepmod1==0)
+		{ replaceModNr = 0;}
+		else if (wepmod2==0)
+		{ replaceModNr = 0;}
+		else if (wepmod3==0)
+		{ replaceModNr = 0;}
+		else if hasPowerCraving&&wepmod4==0//power craving
+		{
+		    replaceModNr = 0;
+		}
+		else
+		{
+			replaceModNr ++;
+			if replaceModNr > 3 + hasPowerCraving
+			{
+				replaceModNr = 1;	
+			}
+		}
+	}
+
+
+	if KeyCont.key_pick[Player.p] = 1 && Player.maxhealth > 0
+	{
+	}
+}
+else
+{
+	active = false;	
+}

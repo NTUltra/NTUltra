@@ -1,0 +1,43 @@
+{
+  "spriteId": {
+    "name": "sprPlasmaBall",
+    "path": "sprites/sprPlasmaBall/sprPlasmaBall.yy",
+  },
+  "solid": false,
+  "visible": true,
+  "managed": true,
+  "spriteMaskId": {
+    "name": "mskPlasmaBall",
+    "path": "sprites/mskPlasmaBall/mskPlasmaBall.yy",
+  },
+  "persistent": false,
+  "parentObjectId": {
+    "name": "PlasmaBall",
+    "path": "objects/PlasmaBall/PlasmaBall.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 0,
+  "physicsGroup": 0,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
+  "properties": [],
+  "overriddenProperties": [],
+  "parent": {
+    "name": "Projectiles",
+    "path": "folders/Objects/Projectiles.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "PlasmaBallExplosive",
+  "tags": [],
+  "resourceType": "GMObject",
+}

@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprDiscGun","path":"sprites/sprDiscGun/sprDiscGun.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprDiscGun",
     "tags": [],
     "resourceType": "GMSequence",
   },

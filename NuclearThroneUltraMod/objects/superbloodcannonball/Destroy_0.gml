@@ -1,4 +1,5 @@
-ang = random(360)
+event_inherited();
+var ang = random(360)
 with instance_create(x+lengthdir_x(32,ang),y+lengthdir_y(24,ang),MeatExplosion)
 scrCanHumphry();
 with instance_create(x+lengthdir_x(32,ang+100),y+lengthdir_y(24,ang+100),MeatExplosion)
@@ -7,15 +8,16 @@ with instance_create(x+lengthdir_x(32,ang+200),y+lengthdir_y(24,ang+200),MeatExp
 scrCanHumphry();
 with instance_create(x+lengthdir_x(32,ang+290),y+lengthdir_y(24,ang+290),MeatExplosion)
 scrCanHumphry();
+ang = random(360)
 
 with instance_create(x,y,BloodStreak)
-image_angle = other.ang
+image_angle = ang
 
 with instance_create(x,y,BloodStreak)
-image_angle = other.ang+120
+image_angle = ang+120
 
 with instance_create(x,y,BloodStreak)
-image_angle = other.ang+240
+image_angle = ang+240
 
 snd_play(sndBloodCannonEnd);
 audio_stop_sound(sndBloodCannonLoop)
@@ -24,7 +26,7 @@ audio_stop_sound(sndBloodCannonLoop)
 Sleep(10)
 instance_create(x+hspeed,y+vspeed,WallBreak);
 var am = 4;
-var ang = direction+180;
+ang = direction+180;
 var angStep = 360/am;
 repeat(am)
 {

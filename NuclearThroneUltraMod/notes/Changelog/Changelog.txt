@@ -184,5 +184,5 @@ new Inverted Golden Snipers (loop 1+) (line of frostflame faster lower health mo
 Golden Necromancers (loop 1+) Can spawn freaks or explo freaks, fire cubes bullets at the player. and has a lot of health, revive spawns Lightning
 Inverted golden necromancer (loop 1+)
 New heavy pellets are compatible with ultra mods
-A lot of ultra mutation art created by Seymour Shlong
+A lot of ultra mutation art created by Seymour Schlong
 Ultra lightning can now break walls, Ultra lightning is now better at targeting enemies, and will deal 10 damage instead of 12

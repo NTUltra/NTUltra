@@ -23,11 +23,11 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 			if other.ion=true
 			{
 				instance_create(UberCont.mouse__x,UberCont.mouse__y,MeatExplosion)
-				
+				/*
 				with instance_create(x,y,BloodStreak){
 					image_angle = random(360);
 					}
-
+				*/
 			}
 			else
 			{
@@ -42,11 +42,11 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 					var xx = x+lengthdir_x(dis,dir);
 					var yy = y+lengthdir_y(dis,dir);
 					instance_create(xx,yy,MeatExplosion)
-					
+					/*
 					with instance_create(xx,yy,BloodStreak){
 						image_angle = random(360);
 						}
-
+					*/
 				    repeat(2){
 					    with instance_create(x,y,FishBoost)
 					    {

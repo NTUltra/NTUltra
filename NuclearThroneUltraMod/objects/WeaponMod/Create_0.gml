@@ -34,3 +34,5 @@ name="##MODIFY WEAPON#"+modname;
 wave=random(100);
 
 myWeaponPickup = noone;
+replaceModNr = 0;
+active = false;

@@ -22,7 +22,8 @@ WALL=instance_nearest(x,y,Wall);
 if point_distance(x,y,WALL.x,WALL.y)<40
 motion_add(point_direction(x,y,WALL.x,WALL.y)+180,point_distance(x,y,WALL.x,WALL.y)*0.05+Player.skill_got[19]*0.01);//move away from wall
 }
-
+if target.team != team
+	target = 0;
 //}
 //else if alarm[0]<1
 //target=instance_nearest(x,y,enemy);

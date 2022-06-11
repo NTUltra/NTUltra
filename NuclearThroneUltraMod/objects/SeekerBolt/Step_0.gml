@@ -29,7 +29,7 @@ if point_distance(x,y,WALL.x,WALL.y)<32 && (ee || bm)
 //else if alarm[0]<1
 //target=instance_nearest(x,y,enemy);
 
-if target!=0 && target.team != 2
+if target!=0 && target.team != team
 motion_add(point_direction(x,y,target.x,target.y),1.2+bm+ee);
 }
 motion_add(direction,0.8);

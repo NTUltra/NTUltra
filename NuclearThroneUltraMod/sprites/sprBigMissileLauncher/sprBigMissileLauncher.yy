@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprBigMissileLauncher","path":"sprites/sprBigMissileLauncher/sprBigMissileLauncher.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprBigMissileLauncher",
     "tags": [],
     "resourceType": "GMSequence",
   },

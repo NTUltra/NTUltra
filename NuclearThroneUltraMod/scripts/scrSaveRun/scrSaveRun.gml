@@ -95,7 +95,8 @@ function scrSaveRun() {
 			crownVaultChallenge: UberCont.crownVaultChallenge,
 			randomlySelected: Player.randomlySelected,
 			canSave: UberCont.canSave,
-			altUltra: Player.altUltra
+			altUltra: Player.altUltra,
+			reachedUltra: Player.reachedUltra
 		};
 		with UberCont
 		{

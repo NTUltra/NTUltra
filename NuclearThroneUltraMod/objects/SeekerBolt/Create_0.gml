@@ -6,7 +6,6 @@ typ = 2 //0 = normal, 1 = deflectable, 2 = destructable
 
 target=0;
 
-hits=1;
 dmg = 9;
 ee = false
 bm = false;

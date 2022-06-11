@@ -1,7 +1,7 @@
 /// @description Lightning!
 alarm[0] = 6;
 
-snd_play(sndLightning1);
+snd_play(sndLightning1,0.1,true);
 //snd_play(sndBloodLauncher);
 
 snd_play(choose(sndSpark1,sndSpark2) );

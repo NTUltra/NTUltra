@@ -296,7 +296,7 @@ function scrSkills() {
 
 	skill_name[23] = "OPEN MIND"
 	skill_text[23] = "EXTRA CHESTS SPAWN"
-	skill_tips[23] = "open mind also increases rad cannisters"
+	skill_tips[23] = "open mind also increases rad canisters"
 	skill_msnd[23] =  sndMutOpenMind
 
 	if random(800)<1

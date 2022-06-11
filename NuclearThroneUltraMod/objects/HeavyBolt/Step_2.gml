@@ -10,7 +10,7 @@ if instance_exists(enemy) and instance_exists(Player)
 if speed > 0 and Player.skill_got[21] = 1
 {
 dir = instance_nearest(x,y,enemy)
-    if point_distance(x,y,dir.x,dir.y) < 24 +Player.betterboltmarrow && dir.team!=2
+    if point_distance(x,y,dir.x,dir.y) < 24 +Player.betterboltmarrow && dir.team != team
     {
 
 with instance_create(x,y,BoltTrail)

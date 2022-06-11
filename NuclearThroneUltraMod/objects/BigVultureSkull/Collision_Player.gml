@@ -24,6 +24,6 @@ if spr_idle == sprBigVultureSkullOpen
 	}
 	with BigFishSkull {
 		spr_idle = sprBigFishSkull;
-		my_health = 0;
+		sprite_index = sprBigFishSkull;
 	}
 }

@@ -1,6 +1,5 @@
 //preventing players from pirating
 /*
-check destination: /Content
 if (!file_exists("amb106.ogg")||
 !file_exists("amb0.ogg")||
 !file_exists("amb0b.ogg")||
@@ -58,10 +57,9 @@ if (!file_exists("amb106.ogg")||
 !file_exists("musThemeP.ogg")
 )
 {
-show_error("\n\nFiles missing!\nPlace .exe and data.win into your ->UPDATED<- Nuclear Throne local folder\n\n"+
-"make sure you save your original data.win somewhere\n"+
-"when you want to play the original nuclear throne\n"+
-"you can then place the old data.win into the folder again.\n\n",true);
+show_error("\n\nFiles missing!\nPlace .exe and data.win into your Nuclear Throne local folder\n\n"+
+"make sure it is located next to the music files\n"+
+"\n\n",true);
 game_end();
 exit;
 }

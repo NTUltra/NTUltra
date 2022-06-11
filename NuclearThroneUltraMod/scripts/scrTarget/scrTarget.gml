@@ -10,16 +10,16 @@ function scrTarget() {
 			{
 				target = Decoy;
 			} else if Player.ultra_got[11]=1{//eyes ultra c brainwash
-			    if instance_exists(enemy) && instance_number(enemy) > 1
+			    if instance_exists(enemy) && instance_number(enemy) > 2
 			    {
-			        if random(100)<27+(Player.skill_got[5]*9)//chance to get brainwashed
+			        if random(100)<28+(Player.skill_got[5]*10)//chance to get brainwashed
 			        {//thronebutt adds 10%
-			        target=instance_nearest_notme(x,y,enemy);
-			        team=4+irandom(10);
+				        target=instance_nearest_notme(x,y,enemy);
+				        team = 5+irandom(10);
 			        }
 			        else{
-			        target = instance_nearest(x,y,Player)
-			        team=1;//what if popo?
+						target = instance_nearest(x,y,Player)
+						team=1;//what if popo?
 			        }
 			    }
 			}

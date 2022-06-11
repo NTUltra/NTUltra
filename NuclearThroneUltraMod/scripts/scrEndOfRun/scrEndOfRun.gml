@@ -12,7 +12,7 @@ function scrEndOfRun(){
 		maxHpIncrease = 0;
 		canSave = false;
 		useSeed = false;
-		/*
+		
 		time_microseconds=0;
 		microseconds=""//string for microseconds
 		time_seconds=0;
@@ -20,7 +20,7 @@ function scrEndOfRun(){
 		time_minutes=0;
 		minutesstring="";
 		time_hours=0;
-		txttime="00:00:00:00";*/
+		txttime="00:00:00:00";
 		vansSlapped = 0;
 		lastSaveLoop = -1;
 		levelIncrease = 0;

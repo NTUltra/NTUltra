@@ -27,7 +27,7 @@ function scrTips() {
 	"there is a cheatcode#to unlock everything",
 	"square bullets are immune to melee",
 	/*these are rare*/ choose("no","bob and weave","airhorn.wav","danger zone","no sex jokes","in and about"
-	,"the purple dragon","golden frog anyone?","Y.V. mony rad","the flying cat head","myth of time","sheeps are a thing","feedback is much apreciated","follow @erdeppol","sorry bout bugs","I love you!",
+	,"the purple dragon","golden frog anyone?","Y.V. mony rad","the flying cat head","myth of time","sheeps are a thing","feedback is much appreciated","follow @erdeppol","sorry bout bugs","I love you!",
 	"be nice#get bitches")
 	),choose(
 	"the I.D.P.D. is looking for you",
@@ -139,7 +139,7 @@ function scrTips() {
 	if Player.area = 110
 	tip = choose("not sure what the smell is","blue toxic?","glitchy","things are going wrong")
 	if Player.area = 111
-	tip = choose("not cursed caves","green & blue","caves part 2","weird","odd","spinach caves","brocolli")
+	tip = choose("not cursed caves","green & blue","caves part 2","weird","odd","spinach caves","brocoli")
 	if Player.area = 112
 	tip = choose("buttons","balls","labs are now inverted")
 	if Player.area = 113
@@ -230,7 +230,7 @@ function scrTips() {
 
 	if Player.race = 13//sheep
 	tip = choose("BAAHHH","farmville","don't mess with me"
-	,"BAAAA","BAHHH","moo?","silence of the lamb","just a sheep","peacefull"
+	,"BAAAA","BAHHH","moo?","silence of the lamb","just a sheep","peaceful"
 	,"shaun the sheep","sheeps don't harm people","shawarma","charge allows you#to move through#some projectiles",
 	"charge increases damage#the longer you charge it","while charging#at high speed#you don't take#contact damage","you are immune#while charging#at high speed",
 	"extra feet and gamma guts#buff your charge","eat grass"
@@ -253,7 +253,7 @@ function scrTips() {
 	,"rock hard","plunder","time travel?","armour strike damage scales#depending on your level","armour strike damage is more#when you are a higher level","3030")
 
 	if Player.race = 17//WEAPONSMITH
-	tip = choose("anvil","you keep the weapon mods#of the weapon you area holding#when upgrading","you upgrade one of your#two weapons at random",
+	tip = choose("anvil","you keep the weapon mods#of the weapon you are holding#when upgrading","you upgrade one of your#two weapons at random",
 	"the weapon that gets upgraded#is chosen randomly","weaponsmith is a smoker","hide your face","liver damage","no trousers","fat and strong","weaponsmith is a metalhead")
 
 	if Player.race = 18//ANGEL
@@ -269,7 +269,7 @@ function scrTips() {
 
 	if Player.race = 21//HORROR
 	tip = choose("Enemies absorb the beam's rads",
-	"Horror's beam destroyss projectiles","Horror's beam powers up over time","Power","The horror","In the zone",
+	"Horror's beam destroys projectiles","Horror's beam powers up over time","Power","The horror","In the zone",
 	"Radiation is everywhere","Green puppy","The beam homes in on your crosshair")
 
 	if Player.race = 22//ROGUE
@@ -290,7 +290,7 @@ function scrTips() {
 	if Player.race = 26//GOOD OL' HUMPHRY
 	tip = choose("Rusty old soldier","Grandpa","When Humphry pulls out a gun","The real deal","Old and experienced"
 	,"Any projectile in one shot#counts as one hit","When one of multiple projectiles#fire in one shot/burst#hits an enemy it counts as a hit"
-	,"Out of the fallout shelter","focus and discipline","experience","shrink and slow projectiles","active costs unequiped weapon type ammo",
+	,"Out of the fallout shelter","focus and discipline","experience","shrink and slow projectiles","active costs unequipped weapon type ammo",
 	"with years of experience#humphry has mastered the art#of shrinking bullets")
 	
 	if Player.race = 27//HANDS

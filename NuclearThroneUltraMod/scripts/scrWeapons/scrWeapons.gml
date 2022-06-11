@@ -343,7 +343,7 @@ function scrWeapons() {
 	wep_swap[30] = sndSwapBow
 	wep_rad[30] = 0;
 
-	wep_name[31] = "TOXIC BOW"
+	wep_name[31] = "TOXIC CROSSBOW"
 	wep_type[31] = 3
 	wep_auto[31] = 0
 	wep_load[31] = 29
@@ -2059,7 +2059,7 @@ function scrWeapons() {
 	wep_load[186] = 10
 	wep_cost[186] = 1
 	wep_sprt[186] = sprAutoSeekerPistol
-	wep_area[186] = 8
+	wep_area[186] = 9
 	wep_text[186] = "good o'l automatic"
 	wep_swap[186] = sndSwapBow
 	wep_rad[186] = 0;
@@ -2168,7 +2168,7 @@ function scrWeapons() {
 	wep_auto[196] = 0
 	wep_load[196] = 30
 	wep_cost[196] = 3
-	wep_sprt[196] = sprKrakenCannon
+	wep_sprt[196] = sprKrakenLauncher
 	wep_area[196] = 11
 	wep_text[196] = "release the kraken"
 	wep_swap[196] = sndSwapDragon
@@ -2364,7 +2364,7 @@ function scrWeapons() {
 	wep_name[214] = "VIKING GREAT AXE"
 	wep_type[214] = 0
 	wep_auto[214] = 0
-	wep_load[214] = 34
+	wep_load[214] = 35
 	wep_cost[214] = 0
 	wep_sprt[214] = sprVikingAxe
 	wep_area[214] = -1
@@ -2375,7 +2375,7 @@ function scrWeapons() {
 	wep_name[215] = "VIKING AXE"
 	wep_type[215] = 0
 	wep_auto[215] = 0
-	wep_load[215] = 28
+	wep_load[215] = 32
 	wep_cost[215] = 0
 	wep_sprt[215] = sprVikingSmallAxe
 	wep_area[215] = -1
@@ -2595,8 +2595,8 @@ function scrWeapons() {
 	wep_name[235] = "SUPER HEAVY CROSSBOW"
 	wep_type[235] = 3
 	wep_auto[235] = 0
-	wep_load[235] = 60//34
-	wep_cost[235] = 10
+	wep_load[235] = 62//34
+	wep_cost[235] = 9
 	wep_sprt[235] = sprSuperHeavyCrossbow
 	wep_area[235] = 20
 	wep_text[235] = "5 heavy bolts per shot"
@@ -2837,7 +2837,7 @@ function scrWeapons() {
 	wep_name[257] = "LIGHTNING CROSSBOW"
 	wep_type[257] = 3
 	wep_auto[257] = 0
-	wep_load[257] = 17
+	wep_load[257] = 22
 	wep_cost[257] = 2
 	wep_sprt[257] = sprLightningCrossbow
 	wep_area[257] = 5
@@ -3014,7 +3014,7 @@ function scrWeapons() {
 	wep_type[273] = 1
 	wep_auto[273] = 0
 	wep_load[273] = 45
-	wep_cost[273] = 22
+	wep_cost[273] = 24
 	wep_sprt[273] = sprGyroBurster
 	wep_area[273] = 14
 	wep_text[273] = "bwbwpebffpwefnowobfo"
@@ -3494,7 +3494,7 @@ function scrWeapons() {
 	wep_swap[316] = sndSwapPistol
 	wep_rad[316] = 0;
 
-	wep_name[317] = "AUTO TOXIC BOW"
+	wep_name[317] = "AUTO TOXIC CROSSBOW"
 	wep_type[317] = 3
 	wep_auto[317] = 1
 	wep_load[317] = 8
@@ -3505,7 +3505,7 @@ function scrWeapons() {
 	wep_swap[317] = sndSwapBow
 	wep_rad[317] = 0;
 
-	wep_name[318] = "SUPER TOXIC BOW"
+	wep_name[318] = "SUPER TOXIC CROSSBOW"
 	wep_type[318] = 3
 	wep_auto[318] = 0
 	wep_load[318] = 34
@@ -5877,7 +5877,7 @@ function scrWeapons() {
 	wep_type[533] = 2
 	wep_auto[533] = 0
 	wep_load[533] = 38
-	wep_cost[533] = 6
+	wep_cost[533] = 10
 	wep_sprt[533] = sprSuperHeavySlugger
 	wep_area[533] = 29
 	wep_text[533] = "lets go dude"
@@ -5911,9 +5911,9 @@ function scrWeapons() {
 	wep_auto[536] = 0
 	wep_load[536] = 48
 	wep_cost[536] = 8
-	wep_sprt[536] = sprPlasmaCannon
+	wep_sprt[536] = sprSeekerCannon
 	wep_area[536] = 12
-	wep_text[536] = "fun fun fun"
+	wep_text[536] = "seek and deploy"
 	wep_swap[536] = sndSwapEnergy
 	wep_rad[536] = 0;
 	
@@ -5922,7 +5922,7 @@ function scrWeapons() {
 	wep_auto[537] = 0
 	wep_load[537] = 350
 	wep_cost[537] = 24
-	wep_sprt[537] = sprSuperPlasmaCannon
+	wep_sprt[537] = sprSuperSeekerCannon
 	wep_area[537] = 18
 	wep_text[537] = "SSC!"
 	wep_swap[537] = sndSwapEnergy
@@ -5933,7 +5933,7 @@ function scrWeapons() {
 	wep_auto[538] = 0
 	wep_load[538] = 350
 	wep_cost[538] = 24
-	wep_sprt[538] = sprSuperPlasmaCannon
+	wep_sprt[538] = sprSuperBloodCannon
 	wep_area[538] = 19
 	wep_text[538] = "SBC!"
 	wep_swap[538] = sndSwapEnergy
@@ -5944,7 +5944,7 @@ function scrWeapons() {
 	wep_auto[539] = 0
 	wep_load[539] = 22
 	wep_cost[539] = 10
-	wep_sprt[539] = sprBloodBulletShotgun
+	wep_sprt[539] = sprHeavyBloodBulletShotgun
 	wep_area[539] = 7
 	wep_text[539] = "aorta"
 	wep_swap[539] = sndSwapShotgun
@@ -5955,9 +5955,9 @@ function scrWeapons() {
 	wep_auto[540] = 0
 	wep_load[540] = 55
 	wep_cost[540] = 9
-	wep_sprt[540] = sprPlasmaCannon
+	wep_sprt[540] = sprMissileCannon
 	wep_area[540] = 14
-	wep_text[540] = "true boom"
+	wep_text[540] = "RIP YA A NEW ONE"
 	wep_swap[540] = sndSwapEnergy
 	wep_rad[540] = 0;
 	
@@ -5966,9 +5966,9 @@ function scrWeapons() {
 	wep_auto[541] = 0
 	wep_load[541] = 400
 	wep_cost[541] = 26
-	wep_sprt[541] = sprSuperPlasmaCannon
+	wep_sprt[541] = sprSuperMissileCannon
 	wep_area[541] = 21
-	wep_text[541] = "SMC!"
+	wep_text[541] = "the world eater"
 	wep_swap[541] = sndSwapEnergy
 	wep_rad[541] = 0;
 	
@@ -5977,9 +5977,9 @@ function scrWeapons() {
 	wep_auto[542] = 0
 	wep_load[542] = 54
 	wep_cost[542] = 8
-	wep_sprt[542] = sprPlasmaCannon
+	wep_sprt[542] = sprKrakenCannon
 	wep_area[542] = 13
-	wep_text[542] = "Release the kraken!"
+	wep_text[542] = "from the depths it came"
 	wep_swap[542] = sndSwapEnergy
 	wep_rad[542] = 0;
 	
@@ -5988,9 +5988,9 @@ function scrWeapons() {
 	wep_auto[543] = 0
 	wep_load[543] = 380
 	wep_cost[543] = 25
-	wep_sprt[543] = sprSuperPlasmaCannon
+	wep_sprt[543] = sprSuperKrakenCannon
 	wep_area[543] = 21
-	wep_text[543] = "SMC!"
+	wep_text[543] = "mother of all kraken!"
 	wep_swap[543] = sndSwapEnergy
 	wep_rad[543] = 0;
 	
@@ -5999,11 +5999,33 @@ function scrWeapons() {
 	wep_auto[544] = 0
 	wep_load[544] = 45
 	wep_cost[544] = 3
-	wep_sprt[544] = sprPlasmaCannon
+	wep_sprt[544] = sprBowlingBallLauncher
 	wep_area[544] = 13
 	wep_text[544] = "oke dude very funny"
 	wep_swap[544] = sndSwapEnergy
 	wep_rad[544] = 0;
+	
+	wep_name[545] = "SUPER LIGHTNING CROSSBOW"
+	wep_type[545] = 3
+	wep_auto[545] = 0
+	wep_load[545] = 38
+	wep_cost[545] = 6
+	wep_sprt[545] = sprSuperLightningCrossbow
+	wep_area[545] = 11
+	wep_text[545] = ""
+	wep_swap[545] = sndSwapBow
+	wep_rad[545] = 0;
+	
+	wep_name[546] = "SPLIT SEEKER PISTOL"
+	wep_type[546] = 3
+	wep_auto[546] = 0
+	wep_load[546] = 26
+	wep_cost[546] = 2
+	wep_sprt[546] = sprSplitSeekerPistol
+	wep_area[546] = 8
+	wep_text[546] = "got ya now"
+	wep_swap[546] = sndSwapBow
+	wep_rad[546] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 

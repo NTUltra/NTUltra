@@ -5,7 +5,13 @@ function scrSpawnEndLevelPortal(){
 	if instance_exists(SurvivalWave) || instance_exists(ThroneExplo)
 	exit;
 	var dir = undefined;
-	if instance_number(enemy) == (instance_number(IDPDVan))
+	var numEn = 0;
+	with enemy
+	{
+		if team != 2
+			numEn ++;
+	}
+	if numEn == (instance_number(IDPDVan))
 	{
 		if instance_number(becomenemy) = 0 and !instance_exists(Menu) and !instance_exists(RadMaggotChest) and !instance_exists(BecomeScrapBoss) and !instance_exists(BecomeJungleBoss) and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(UltraIcon)
 		{

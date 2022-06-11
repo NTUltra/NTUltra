@@ -389,7 +389,7 @@ function scrPowers() {
     
 	}
 
-	if race = 16 && ((armour > 0 && !ultra_got[63]) || (ultra_got[63] && my_health > 2) || freeArmourStrike)//Viking
+	if race = 16 && ((armour > 0 && !ultra_got[63]) || (ultra_got[63] && my_health > 3) || freeArmourStrike)//Viking
 	{
 	    //63
 		if freeArmourStrike
@@ -400,7 +400,7 @@ function scrPowers() {
 	        armour--;
 	    else if ultra_got[63]
 	    {
-	        my_health-=2;
+	        my_health -= 3;
 	        exception=true
 	    }
 	    scrBlankArmour();
@@ -451,10 +451,10 @@ function scrPowers() {
 	    BackCont.viewx2 += lengthdir_x(-8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 	    BackCont.viewy2 += lengthdir_y(-8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 	    BackCont.shake += 22
-		snd_play_2d(sndVikingArmourStrikeUpg);
+		snd_play_2d(sndVikingArmourStrikeUpg,0,true);
 	    }
 		else
-			snd_play_2d(sndVikingArmourStrike);
+			snd_play_2d(sndVikingArmourStrike,0,true);
     
 	    BackCont.viewx2 += lengthdir_x(-6,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 	    BackCont.viewy2 += lengthdir_y(-6,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake

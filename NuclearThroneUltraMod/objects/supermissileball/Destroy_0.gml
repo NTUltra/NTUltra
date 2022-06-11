@@ -2,6 +2,7 @@ event_inherited()
 snd_play(sndNukeExplosion,0.1,true)
 Sleep(20)
 BackCont.shake += 10;
+instance_create(x,y,Explosion);
 instance_create(x+hspeed,y+vspeed,BigWallBreak);
 var am = 4;
 var ang = fireRotation;

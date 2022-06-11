@@ -5,7 +5,7 @@ if object_index != SuperMissileBall
 	instance_create(x,y,Explosion);
 	Sleep(10)
 	instance_create(x+hspeed,y+vspeed,WallBreak);
-	var am = 4;
+	var am = 5;
 	var ang = fireRotation;
 	var angStep = 360/am;
 	repeat(am)

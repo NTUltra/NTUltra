@@ -156,3 +156,6 @@ MorphMe=false;
 frozen=false;
 prevhealth=my_health;
 
+queueshot = 0;
+bqueueshot = 0;
+cqueueshot = 0;

@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndSeekerPistol",
-  "duration": 0.0,
+  "duration": 0.383656,
   "parent": {
     "name": "Bolts",
     "path": "folders/Sounds/Weapons/Bolts.yy",

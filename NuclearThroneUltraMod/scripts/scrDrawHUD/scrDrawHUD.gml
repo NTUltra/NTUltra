@@ -1013,7 +1013,8 @@ function scrDrawHUD() {
 	{
 		if active && place_meeting(x,y,Player)
 		{
-			draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-12)
+			if Player.my_health > 0 && UberCont.lastSaveLoop != Player.loops
+				draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-12)
 			draw_set_color(c_black)
 			draw_text(x,y-45,string_hash_to_newline(string(name)))
 			draw_text(x+1,y-45,string_hash_to_newline(string(name)))

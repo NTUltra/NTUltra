@@ -1,4 +1,4 @@
-ang = random(360)
+var ang = random(360)
 with instance_create(x+lengthdir_x(32,ang),y+lengthdir_y(24,ang),MeatExplosion)
 scrCanHumphry();
 with instance_create(x+lengthdir_x(32,ang+100),y+lengthdir_y(24,ang+100),MeatExplosion)
@@ -9,13 +9,13 @@ with instance_create(x+lengthdir_x(32,ang+290),y+lengthdir_y(24,ang+290),MeatExp
 scrCanHumphry();
 
 with instance_create(x,y,BloodStreak)
-image_angle = other.ang
+image_angle = ang
 
 with instance_create(x,y,BloodStreak)
-image_angle = other.ang+120
+image_angle = ang+120
 
 with instance_create(x,y,BloodStreak)
-image_angle = other.ang+240
+image_angle = ang+240
 if !audio_is_playing(sndBloodCannonEnd)
 	snd_play(sndBloodCannonEnd);
 	
