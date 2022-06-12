@@ -4826,7 +4826,6 @@
     {"id":{"name":"sprBushBoxStatue","path":"sprites/sprBushBoxStatue/sprBushBoxStatue.yy",},"order":4,},
     {"id":{"name":"sndNothingFootstep","path":"sounds/sndNothingFootstep/sndNothingFootstep.yy",},"order":20,},
     {"id":{"name":"scrDecideWep","path":"scripts/scrDecideWep/scrDecideWep.yy",},"order":19,},
-    {"id":{"name":"scrDecideWepElite","path":"scripts/scrDecideWepElite/scrDecideWepElite.yy",},"order":20,},
     {"id":{"name":"scrDecideWepGold","path":"scripts/scrDecideWepGold/scrDecideWepGold.yy",},"order":21,},
     {"id":{"name":"sprRedirectorPlasmaEffect","path":"sprites/sprRedirectorPlasmaEffect/sprRedirectorPlasmaEffect.yy",},"order":234,},
     {"id":{"name":"scrDrop","path":"scripts/scrDrop/scrDrop.yy",},"order":22,},

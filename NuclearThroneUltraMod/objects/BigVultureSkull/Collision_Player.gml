@@ -21,9 +21,10 @@ if spr_idle == sprBigVultureSkullOpen
 			type = 1
 			pullstrength = 3;
 		}
+		with BigFishSkull {
+			spr_idle = sprBigFishSkull;
+			sprite_index = sprBigFishSkull;
+		}
 	}
-	with BigFishSkull {
-		spr_idle = sprBigFishSkull;
-		sprite_index = sprBigFishSkull;
-	}
+	
 }

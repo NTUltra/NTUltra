@@ -1279,11 +1279,14 @@ function scrPowers() {
 			}
 			instance_create(x,y,MeltSplat)
 			if Player.skill_got[5] = 1 || size>1
-			{ang = random(360)
-			instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
-			instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
-			instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)}
-			instance_create(x,y,MeatExplosion)
+			{
+				ang = random(360)
+				instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
+				instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
+				instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
+			}
+			else
+				instance_create(x,y,MeatExplosion)
 			}
 		}
 		
@@ -1304,11 +1307,14 @@ function scrPowers() {
 			}
 			instance_create(x,y,MeltSplat)//Scorchmark
 			if Player.skill_got[5] = 1
-			{ang = random(360)
-			instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
-			instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
-			instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)}
-			instance_create(x,y,MeatExplosion)
+			{
+				ang = random(360)
+				instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
+				instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
+				instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
+			}
+			else
+				instance_create(x,y,MeatExplosion)
 			}
 			} 
 		}

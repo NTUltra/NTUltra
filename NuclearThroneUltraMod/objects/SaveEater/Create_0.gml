@@ -6,18 +6,27 @@ alarm[1] = 3;
 with UberCont
 {
 	var saveFileString;
-	saveFileString="ntultra"+string(version)+".sav";
-	debug("DELETE");
-	if ( file_exists(saveFileString) )
+	var v = 0;
+	while (v <= version)
 	{
-		var deleted = file_delete(saveFileString);
-		debug("delete ",deleted);
+		saveFileString="ntultra"+string(v)+".sav";
+		if ( file_exists(saveFileString) )
+		{
+			var deleted = file_delete(saveFileString);
+			debug("delete ",deleted);
 		}
-	var saveFile ="ntultraencrypted"+string(version)+".sav";
-	if (file_exists(saveFile))
-	{	
-		var deleted = file_delete(saveFile);
-		debug("delete 2 ",deleted);
+		v++
+	}
+	v = 0;
+	while (v <= encryptedVersion)
+	{
+		var saveFile ="ntultraencrypted"+string(v)+".sav";
+		if (file_exists(saveFile))
+		{	
+			var deleted = file_delete(saveFile);
+			debug("delete 2 ",deleted);
+		}
+		v++
 	}
 	persistent = false;
 }

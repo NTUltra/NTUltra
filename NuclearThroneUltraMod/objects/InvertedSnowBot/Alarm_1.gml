@@ -7,7 +7,7 @@ sprite_index = spr_idle
 if target > 0
 {
 //CHARGE ATTACK
-if point_distance(x,y,target.x,target.y) < 140 and random(2) < 1
+if point_distance(x,y,target.x,target.y) < 150 and random(2) < 1
 {
 snd_play(sndSnowBotSlideLoop)
 snd_play(sndSnowBotSlideStart)

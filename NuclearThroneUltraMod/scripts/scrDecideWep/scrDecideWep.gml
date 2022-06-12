@@ -1,4 +1,4 @@
-function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepAreaParam = 0) {
+function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepAreaParam = 0, rerolls = 0) {
 	var wepTier = wepTierParam;
 	var maxTries = maxTriesParam;
 	var cursed = cursedParam;
@@ -6,11 +6,10 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 	if instance_exists(Player)
 	{
 		if UberCont.opt_gamemode=2{
-		if Player.loops>0
-		wep=choose(24,79,12,11,234,236,197,127,128);//E Sword, SPC, SuCros, Auto crossy, heavy auto, super heavy auto, dubble super plasma cannon,Eswordgun,SEswordgun
-		else
-		wep=choose(24,79,12,11);//E Sword, SPC, SuCros, Auto crossy
-
+			if Player.loops>0
+				wep=choose(24,79,12,11,234,236,197,127,128);//E Sword, SPC, SuCros, Auto crossy, heavy auto, super heavy auto, dubble super plasma cannon,Eswordgun,SEswordgun
+			else
+				wep=choose(24,79,12,11);//E Sword, SPC, SuCros, Auto crossy
 		}
 		else {
 			var maxAreaGoodEnough = irandom_range(7,12);
@@ -33,7 +32,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			}
 			else if instance_exists(Player)
 			{
-				if (wepTier == 21 || wepTier == 24 || wepTier == 30) && UberCont.start_wep_have_all[Player.race]//THE GOLDEN TIER(s)
+				if (wepTier == 21 || wepTier == 24 || wepTier == 30) && UberCont.start_wep_have_all[Player.race] && UberCont.opt_gamemode != 31//THE GOLDEN TIER(s)
 				{
 					return scrDecideWepGold();	
 				}
@@ -59,9 +58,28 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 				wep = maxValidTierWep;
 			}
 		}
+		if UberCont.opt_gamemode == 31//Only melee
+		{
+			while !scrMeleeWeapons(wep)
+			{
+				var tier = wepTierParam - 1;
+				var another = rerolls + 1;
+				if another > 100
+				{
+					tier-= 1;
+					another = 0;
+				}
+				if tier < 1
+					wep = 27;
+				else
+				{
+					scrDecideWep(wepTierParam, maxTriesParam, cursedParam, minWepAreaParam, another);
+				}
+			}
+		}
 		while (wep == 402 && Player.crown != 5)//Rolled gun gun? you must have crown of guns
 		{
-			scrDecideWep(wepTierParam, maxTriesParam, cursedParam, minWepAreaParam);	
+			scrDecideWep(wepTierParam, maxTriesParam, cursedParam, minWepAreaParam);
 		}
 	}
 	else

@@ -2,7 +2,7 @@
 // /@description
 ///@param
 function scrLoadEncrypted(){
-	var fileString ="ntultraencrypted"+string(version)+".sav";
+	var fileString ="ntultraencrypted"+string(encryptedVersion)+".sav";
 	if (file_exists(fileString))
 	{
 		var file = file_text_open_read(fileString);

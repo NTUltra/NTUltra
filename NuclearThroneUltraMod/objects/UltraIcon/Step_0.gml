@@ -112,16 +112,19 @@ scrUnlockGameMode(5,"FOR TAKING THIS ULTRA");
 
 if skill==14
 {//Melting Ultra B detachment
-Player.maxhealth *= 0.5
+	if Player.maxhealth > 1
+	{
+		Player.maxhealth *= 0.5
 
-if (Player.my_health> Player.maxhealth){
-Player.my_health = max(Player.my_health*0.5,Player.maxhealth)}
+		if (Player.my_health > Player.maxhealth){
+			Player.my_health = max(Player.my_health*0.5,Player.maxhealth)}
 
-Player.maxhealth = ceil(Player.maxhealth);
-Player.my_health = ceil(Player.my_health);
-Player.skillpoints+=4;//amounth of mutations
-//Player.skillsChosen=0;//no ultras pls
-
+		Player.maxhealth = ceil(Player.maxhealth);
+		Player.my_health = ceil(Player.my_health);
+		Player.exception = true;
+	}
+	Player.skillpoints += 4;//amounth of mutations
+	//Player.skillsChosen=0;//no ultras pls
 }
 
 //ARMOUR UP viking
@@ -501,9 +504,21 @@ race = Player.race
 
 snd_play_2d(sndMut);
 instance_destroy();
-with UberCont
-{
-	ctot_ultra_taken[other.skill] += 1;
-	scrSave();//Don't necesserily have to save here
-}
+	with UberCont
+	{
+		ctot_ultra_taken[other.skill] += 1;
+		var difTaken = 0;
+		for (var i = 0; i < maxultra + 1; i++) {
+		    // code here
+			if (ctot_ultra_taken[i] > 0)
+			{
+				difTaken ++;	
+			}
+		}
+		if difTaken > 9
+		{
+			scrUnlockGameMode(30,"FOR TAKING#20 DIFFERENT#ULTRA MUTATIONS");	
+		}
+		scrSave();//Don't necesserily have to save here
+	}
 }

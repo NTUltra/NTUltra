@@ -32,7 +32,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 			//screen_save("explain"+string(scrn)+".png");
 			//scrn++;
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			instance_create(f.x + 16,f.y + 16,GoldHyena)
+			instance_create(f.x + 16,f.y + 16,VanSpawn)
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
 			thing.mytext = "VAN";
 		}
@@ -1473,6 +1473,15 @@ microseconds=0;
 		else
 		{
 			targetFloor = instance_furthest(Portal.x,Portal.y,Floor);
+		}
+		var tries = 200;
+		while ((collision_point(targetFloor.x+16,targetFloor.y+16,prop,true,false) || collision_point(x+16,y+16,Player,false,false)) && tries > 0)
+		{
+			tries--;
+			with targetFloor
+			{
+				targetFloor = instance_nearest(x+irandom_range(128,-128),y+irandom_range(128,-128),Floor);
+			}
 		}
     with instance_create(targetFloor.x+16, targetFloor.y+16,Portal)
     {

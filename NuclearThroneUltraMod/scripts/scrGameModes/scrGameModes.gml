@@ -119,21 +119,19 @@ function scrGameModes() {
 	gamemode_unlock[29] = "TAKE FISH'S ULTRA#GUN WARRANT";
 	gamemode_have[29] = 0;
 	
+	gamemode[30] = "ULTRA MUTATION#START";
+	gamemode_unlock[30] = "TAKE 20 DIFFERENT#UTLRA MUTATIONS";
+	gamemode_have[30] = 0;
+	
+	gamemode[31] = "MELEE ONLY";
+	//gamemode_description[31] = "YOU ONLY GET MELEE WEAPONS#START WITH LONG ARMS";
+	gamemode_unlock[31] = "HAVE 3 MELEE WEAPONS EQUIPED AT ONCE";
+	gamemode_have[31] = 0;
+	
 	/*
 	gamemode[23] = "SEEDED";
 	gamemode_description[23] = "YOU ONLY GET MELEE WEAPONS#ALWAYS GET LONG ARMS";
 	gamemode_unlock[23] = "USE SNARE AGAINST A WALL RAPIDLY";
-	gamemode_have[23] = 0;*/
-	
-	/*
-	gamemode[23] = "MELEE ONLY";
-	gamemode_description[23] = "YOU ONLY GET MELEE WEAPONS#ALWAYS GET LONG ARMS";
-	gamemode_unlock[23] = "HAVE 3 MELEE WEAPONS EQUIPED AT ONCE";
-	gamemode_have[23] = 0;*/
-
-	/*
-	gamemode[23] = "MASTERLUIGI452'S#10X MUTATIONS"; I don't think I'll ever make this theres too many mutations
-	gamemode_unlock[23] = "INFECT AN ENEMY";
 	gamemode_have[23] = 0;*/
 
 	gamemodeOrder[0] = 0;
@@ -153,20 +151,21 @@ function scrGameModes() {
 	gamemodeOrder[14] = 7;
 	gamemodeOrder[15] = 14;
 	gamemodeOrder[16] = 15;
-	gamemodeOrder[17] = 16;
+	gamemodeOrder[17] = 29;
 	gamemodeOrder[18] = 19;
-	gamemodeOrder[19] = 18;
+	gamemodeOrder[19] = 16;
 	gamemodeOrder[20] = 21;
 	gamemodeOrder[21] = 22;
 	gamemodeOrder[22] = 25;
 	gamemodeOrder[23] = 23;
 	gamemodeOrder[24] = 24;
-	gamemodeOrder[25] = 28;
-	gamemodeOrder[26] = 29;
-	gamemodeOrder[27] = 17;
-	gamemodeOrder[28] = 26;
-	gamemodeOrder[29] = 27;
-
+	gamemodeOrder[25] = 18;
+	gamemodeOrder[26] = 31;
+	gamemodeOrder[27] = 30;
+	gamemodeOrder[28] = 28;
+	gamemodeOrder[29] = 17;
+	gamemodeOrder[30] = 26;
+	gamemodeOrder[31] = 27;
 
 
 

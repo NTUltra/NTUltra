@@ -276,12 +276,13 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 	bwepmod4 = wepmod4;
 	}
 	else if cwep = 0 && ultra_got[31]//robot ultra third wep
-	{ccurse = curse
-	cwep = wep
-	cwepmod1 = wepmod1;
-	cwepmod2 = wepmod2;
-	cwepmod3 = wepmod3;
-	cwepmod4 = wepmod4;
+	{
+		ccurse = curse
+		cwep = wep
+		cwepmod1 = wepmod1;
+		cwepmod2 = wepmod2;
+		cwepmod3 = wepmod3;
+		cwepmod4 = wepmod4;
 	}
 	else if wep != 0
 	{
@@ -359,16 +360,15 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 	dir = instance_create(x,y,PopupText)
 	dir.mytext = string(wep_name[wep])+"!"
 
-	scrWeaponHold();
-	/*
-	if wep_type[wep] != 0 and wep != 24 and wep != 36 and wep != 53 && wep!=198 && wep!=222 && wep!=223//some melee exceptions
-	wepangle = 0
-	else if wepangle = 0
-	wepangle = choose(120,-120)*/
-
-	with targetPickup
-		instance_destroy()
-	}
+		//Done picking up
+		scrWeaponHold();
+		with targetPickup
+			instance_destroy()
+		}
+		if ( wep != 0 && bwep != 0 && cwep != 0 && scrMeleeWeapons(wep) && scrMeleeWeapons(bwep) && scrMeleeWeapons(cwep))
+		{
+			scrUnlockGameMode(31,"FOR HOLDING#THREE MELEE WEAPONS");
+		}
 	}
 
 

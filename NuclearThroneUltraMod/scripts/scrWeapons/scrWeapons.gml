@@ -5029,7 +5029,7 @@ function scrWeapons() {
 	wep_name[456] = "SUPER SCYTHE"
 	wep_type[456] = 0
 	wep_auto[456] = 0
-	wep_load[456] = 28
+	wep_load[456] = 34
 	wep_cost[456] = 0
 	wep_sprt[456] = sprSuperScythe
 	wep_area[456] = 22
@@ -5065,7 +5065,7 @@ function scrWeapons() {
 	wep_load[459] = 20
 	wep_cost[459] = 2
 	wep_sprt[459] = sprSplinterCrash
-	wep_area[459] = 7
+	wep_area[459] = 8
 	wep_text[459] = "crash test"
 	wep_swap[459] = sndSwapBow
 	wep_rad[459] = 0;
@@ -5901,7 +5901,7 @@ function scrWeapons() {
 	wep_load[535] = 20
 	wep_cost[535] = 2
 	wep_sprt[535] = sprLaserCrash
-	wep_area[535] = 7
+	wep_area[535] = 9
 	wep_text[535] = "crash blast"
 	wep_swap[535] = sndSwapBow
 	wep_rad[535] = 0;

@@ -19,6 +19,8 @@ else if (gamemodeOrder[gamemodenr] == 27)
 {
 	if (array_length(UberCont.encrypted_data.ctot_dailies_score_seed) > 0)
 	{
+		debug(UberCont.encrypted_data.ctot_dailies_score_seed[array_length(UberCont.encrypted_data.ctot_dailies_score_seed)-1]);
+		debug(UberCont.todaysSeed);
 		dailyDone = UberCont.encrypted_data.ctot_dailies_score_seed[array_length(UberCont.encrypted_data.ctot_dailies_score_seed)-1] == UberCont.todaysSeed
 	}
 	if !dailyDone

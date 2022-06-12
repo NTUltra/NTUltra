@@ -4,7 +4,7 @@ meleedamage = 0
 sprite_index = spr_idle
 if target > 0
 {
-if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(2) < 1 and point_distance(x,y,target.x,target.y) < 200
+if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(2) < 1 and point_distance(x,y,target.x,target.y) < 190
 {
 
 gunangle = point_direction(x,y,target.x,target.y)+random(8)-4

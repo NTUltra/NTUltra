@@ -188,7 +188,17 @@ if UberCont.opt_gamemode = 13
 
 if UberCont.opt_gamemode == 14 //fish companion only no wep
 	wep = 0;
-
+if UberCont.opt_gamemode == 31
+{
+	if wep != 0 && !scrMeleeWeapons(wep)
+	{
+		wep = 27//Default to screwdriver
+	}
+	if bwep != 0 && !scrMeleeWeapons(bwep)
+	{
+		bwep = 27//Default to screwdriver
+	}
+}
 bwep = 0
 cwep = 0 //roids specific
 curse = 0
@@ -282,6 +292,16 @@ skillpoints = 0;
 crownpoints = 0
 
 kills = 0
+
+if UberCont.opt_gamemode == 30//Ultra mutation start
+{
+	skillsChosen = 8;
+	skillpoints = 1;
+}
+else if UberCont.opt_gamemode == 31//Melee only
+{
+	skill_got[13] = 1;
+}
 
 //AREA STUFF
 area = 1

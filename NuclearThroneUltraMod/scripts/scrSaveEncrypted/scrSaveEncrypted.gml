@@ -2,7 +2,7 @@ function scrSaveEncrypted() {
 	var saveString = json_stringify(encrypted_data);
 	var hash = sha1_string_utf8(saveString);
 	saveString += "#" + hash + "#";
-	var saveFile ="ntultraencrypted"+string(version)+".sav";
+	var saveFile ="ntultraencrypted"+string(encryptedVersion)+".sav";
 	/*
 	if (file_exists(saveFile))
 	{
