@@ -93,6 +93,10 @@ can_shoot = 1
 bcan_shoot = 1//Player.bcan_shoot
 right = 1
 wepright = 1
+
+queueshot = 0;
+bqueueshot = 0;
+cqueueshot = 0;
 }
 else
 instance_destroy();

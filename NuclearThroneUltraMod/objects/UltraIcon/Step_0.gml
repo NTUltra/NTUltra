@@ -515,7 +515,7 @@ instance_destroy();
 				difTaken ++;	
 			}
 		}
-		if difTaken > 9
+		if difTaken > 19
 		{
 			scrUnlockGameMode(30,"FOR TAKING#20 DIFFERENT#ULTRA MUTATIONS");	
 		}

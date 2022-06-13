@@ -4358,10 +4358,10 @@ function scrWeapons() {
 	wep_name[395] = "ELECTRO CANNON"
 	wep_type[395] = 5
 	wep_auto[395] = 1
-	wep_load[395] = 20
+	wep_load[395] = 22
 	wep_cost[395] = 6
 	wep_sprt[395] = sprElectroCannon
-	wep_area[395] = 10
+	wep_area[395] = 11
 	wep_text[395] = "state of the art gunnery"
 	wep_swap[395] = sndSwapEnergy
 	wep_rad[395] = 0;
@@ -5700,7 +5700,7 @@ function scrWeapons() {
 	wep_name[517] = "CLUB"
 	wep_type[517] = 0
 	wep_auto[517] = 0
-	wep_load[517] = 25
+	wep_load[517] = 26
 	wep_cost[517] = 0
 	wep_sprt[517] = sprClub
 	wep_area[517] = 3
@@ -6000,7 +6000,7 @@ function scrWeapons() {
 	wep_load[544] = 45
 	wep_cost[544] = 3
 	wep_sprt[544] = sprBowlingBallLauncher
-	wep_area[544] = 13
+	wep_area[544] = 18
 	wep_text[544] = "oke dude very funny"
 	wep_swap[544] = sndSwapEnergy
 	wep_rad[544] = 0;

@@ -248,6 +248,7 @@ function scrDrawHUD() {
 	var pcc = Player.cqueueshot;
 	var pci = 0;
 	var pcsw = min(wid*0.5,(sprite_get_width(spr)-sprite_get_xoffset(spr))*0.5);
+	var fillw = min(wid,2+sprite_get_width(spr));
 	if Player.creload < 0 && Player.wep_load[wwep] != 0
 	{
 		pci = Player.creload/Player.wep_load[wwep]
@@ -257,7 +258,7 @@ function scrDrawHUD() {
 	if Player.creload > 0
 	{
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,c_black,1)
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[Player.cwep],1-(Player.creload/Player.wep_load[Player.cwep]))),14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(Player.wep_load[Player.cwep],1-(Player.creload/Player.wep_load[Player.cwep]))),14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
 	}
 	else if Player.creload != 0
 	{
@@ -267,11 +268,11 @@ function scrDrawHUD() {
 		else if pcc == 1
 		{
 			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,pcsw,14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,puffColour,puffA)
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(Player.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
 		}
 		else
 		{
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(Player.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
 		}
 	}
 	else
@@ -335,6 +336,7 @@ function scrDrawHUD() {
 	var pcc = Player.bqueueshot;
 	var pci = 0;
 	var pcsw = min(wid*0.5,(sprite_get_width(spr)-sprite_get_xoffset(spr))*0.5);
+	var fillw = min(wid,2+sprite_get_width(spr));
 	if Player.breload < 0 && Player.wep_load[wwep] != 0
 	{
 		pci = Player.breload/Player.wep_load[wwep]
@@ -344,7 +346,7 @@ function scrDrawHUD() {
 	if Player.breload > 0
 	{
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,c_black,1)
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[wwep],1-(Player.breload/Player.wep_load[wwep]))),14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(Player.wep_load[wwep],1-(Player.breload/Player.wep_load[wwep]))),14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
 	}
 	else if Player.breload != 0
 	{
@@ -356,11 +358,11 @@ function scrDrawHUD() {
 		else if pcc == 1
 		{
 			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,pcsw,14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,puffColour,puffA)
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(Player.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
 		}
 		else
 		{
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)	
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(Player.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)	
 		}
 	}
 	else
@@ -425,16 +427,35 @@ function scrDrawHUD() {
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+22,__view_get( e__VW.YView, 0 )+16,wepcolour,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+26,__view_get( e__VW.YView, 0 )+16,wepcolour,1)
 	*/
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+25,__view_get( e__VW.YView, 0 )+16,wepcolour,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,wepcolour,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+17,wepcolour,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+15,wepcolour,1)
+	
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16+1,c_black,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+22,__view_get( e__VW.YView, 0 )+16+1,c_black,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+17+1,c_black,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+15+1,c_black,1)
+	
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+25,__view_get( e__VW.YView, 0 )+16+1,c_black,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16+1,c_black,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+17+1,c_black,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+15+1,c_black,1)
+	
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+25,__view_get( e__VW.YView, 0 )+16,c_black,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,c_black,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+17,c_black,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+15,c_black,1)
+	
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16,wepcolour,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+22,__view_get( e__VW.YView, 0 )+16,wepcolour,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+17,wepcolour,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+15,wepcolour,1)
+	
+	
 	
 
 	var wwep = Player.wep;
 	var pcc = Player.queueshot;
 	var pci = 0;
 	var pcsw = min(wid*0.5,(sprite_get_width(spr)-sprite_get_xoffset(spr))*0.5);
+	var fillw = min(wid,2+sprite_get_width(spr));
 	if Player.reload < 0 && Player.wep_load[wwep] != 0
 	{
 		pci = Player.reload/Player.wep_load[wwep]
@@ -443,28 +464,28 @@ function scrDrawHUD() {
 	}
 	if Player.reload > 0
 	{
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16,c_black,1)
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[wwep],1-(Player.reload/Player.wep_load[wwep]))),14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,c_black,1)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(Player.wep_load[wwep],1-(Player.reload/Player.wep_load[wwep]))),14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
 	}
 	else if Player.reload != 0
 	{
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16,loadedColour,1)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,loadedColour,1)
 		if pcc == 1
 		{
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,pcsw,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16,puffColour,puffA)
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,pcsw,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,puffColour,puffA)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(Player.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
 		}
 		else if pcc == 2
 		{
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16,puffColour,1)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,puffColour,1)
 		} else
 		{
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,wid*min(Player.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)	
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(Player.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)	
 		}
 	}
 	else
 	{
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16,loadedColour,1)	
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,loadedColour,1)	
 	}
 	
 	//Debug
@@ -506,7 +527,7 @@ function scrDrawHUD() {
 	}
 	//WEAPON MODS!
 	var xx = __view_get( e__VW.XView, 0 )+2;
-	var yy = __view_get( e__VW.YView, 0 )+42;
+	var yy = __view_get( e__VW.YView, 0 )+43;
 	var xs = 10;
 	var noHover = true;
 	if Player.wepmod1 != 0
@@ -679,7 +700,7 @@ function scrDrawHUD() {
 
 
 	var ammoheight;
-	ammoheight=30;//34
+	ammoheight=31;//34
 
 
 	//AMMO ICONS

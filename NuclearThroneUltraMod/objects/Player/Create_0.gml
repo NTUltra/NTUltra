@@ -295,7 +295,7 @@ kills = 0
 
 if UberCont.opt_gamemode == 30//Ultra mutation start
 {
-	skillsChosen = 8;
+	skillsChosen = 10;
 	skillpoints = 1;
 }
 else if UberCont.opt_gamemode == 31//Melee only

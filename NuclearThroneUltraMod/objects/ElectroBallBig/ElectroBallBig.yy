@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskMiniPlasmaBall",
     "path": "sprites/mskMiniPlasmaBall/mskMiniPlasmaBall.yy",
