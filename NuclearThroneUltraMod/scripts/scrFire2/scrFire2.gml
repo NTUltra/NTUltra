@@ -2336,7 +2336,7 @@ function scrFire2() {
 
 	snd_play_fire(sndShotgun)
 
-	repeat(21)
+	repeat(20)
 	{
 	with instance_create(x,y,Bullet2)
 	{motion_add(aimDirection+(random(80)-40)*other.accuracy,6+random(7))
@@ -9571,5 +9571,98 @@ function scrFire2() {
 	wkick -= 3
 
 	break;
+	
+	//BLOOD SHORTGUN
+	case 547:
+
+	snd_play_fire(sndSawedOffShotgun)
+
+	repeat(20)
+	{
+	with instance_create(x,y,BloodBullet)
+	{motion_add(aimDirection+(random(80)-40)*other.accuracy,5+random(6))
+	image_angle = direction
+	team = other.team}
+	}
+
+	BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 8
+	wkick = 7
+
+	break;
+	
+	//BLOOD HAMMER
+	case 548:
+
+	snd_play_fire(sndBloodHammer)
+
+	instance_create(x,y,Dust)
+
+	with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),BloodSlashRetail)
+	{
+		owner = other.id;
+	longarms = 0
+	if instance_exists(Player)
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection,2+longarms)
+	image_angle = direction
+	team = other.team}
+
+	wepangle = -wepangle
+	motion_add(aimDirection,6)
+	BackCont.viewx2 += lengthdir_x(13,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(13,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = -4
+
+	break;
+	
+	//HEAVY BLOOD HAMMER
+	case 549:
+
+	snd_play_fire(sndBloodHammer)
+
+	instance_create(x,y,Dust)
+
+	with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),HeavyBloodSlash)
+	{
+		owner = other.id;
+	longarms = 0
+	if instance_exists(Player)
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection,2+longarms)
+	image_angle = direction
+	team = other.team}
+
+	wepangle = -wepangle
+	motion_add(aimDirection,6)
+	BackCont.viewx2 += lengthdir_x(15,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(15,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 6
+	wkick = -5
+
+	break;
+	
+	//MINIGUN
+	case 550:
+
+	snd_play_fire(sndMinigun)
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(80)-40,3+random(2))
+
+	with instance_create(x,y,Bullet1Explosive)
+	{motion_add(aimDirection+(random(26)-13)*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+	motion_add(aimDirection+180,0.6)
+	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 4
+
+	break;
+	
+	
 	}//end of switch part 2!
 }

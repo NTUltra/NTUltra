@@ -120,12 +120,12 @@ function scrGameModes() {
 	gamemode_have[29] = 0;
 	
 	gamemode[30] = "ULTRA MUTATION#START";
-	gamemode_unlock[30] = "TAKE 20 DIFFERENT#UTLRA MUTATIONS";
+	gamemode_unlock[30] = "TAKE 20 DIFFERENT#ULTRA MUTATIONS";
 	gamemode_have[30] = 0;
 	
 	gamemode[31] = "MELEE ONLY";
 	//gamemode_description[31] = "YOU ONLY GET MELEE WEAPONS#START WITH LONG ARMS";
-	gamemode_unlock[31] = "HAVE 3 MELEE WEAPONS EQUIPED AT ONCE";
+	gamemode_unlock[31] = "HAVE 3 MELEE WEAPONS EQUIPPED AT ONCE";
 	gamemode_have[31] = 0;
 	
 	/*

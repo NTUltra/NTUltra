@@ -1,6 +1,7 @@
 /// @description start of the room
 //if area=104
 //visitedCrib=true
+swapChar = false;
 restarted = false;
 if !instance_exists(PlayerAlarms)
 	instance_create(x,y,PlayerAlarms);

@@ -320,7 +320,7 @@ if race == 27
 oasis = false;
 oasisskip = -1;
 
-
+swapChar = false;
 crownvisits = 0
 reincarnate = false;
 if UberCont.crown_start[race] && !instance_exists(PlayerSpawn){

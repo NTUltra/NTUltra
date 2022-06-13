@@ -22,7 +22,7 @@ function scrDrawUpdate() {
 		{
 			url_open("https://twitter.com/Erdeppol");
 		}
-	txt0 = @"#UPDATE 28 [0.08]
+	txt0 = @"#UPDATE 28 [0.09]
 	
 	* 84 NEW WEAPONS
 	

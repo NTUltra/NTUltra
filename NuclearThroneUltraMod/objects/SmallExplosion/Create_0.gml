@@ -1,24 +1,30 @@
 event_inherited();
 image_speed = 1;
-
-repeat(3)
+var um = GetPlayerUltramod()
+if um == ultramods.bloodExplosionExplosion && UberCont.ultramodSwap
 {
-with instance_create(x,y,Smoke)
-motion_add(random(360),1+random(2))
+	mask_index = mskPickupThroughWall;
+	visible = false;
+	alarm[11] = 1;
 }
-
-ang = random(360)
-repeat(5)
+else
 {
-with instance_create(x,y,Dust)
-motion_add(other.ang,6)
+	repeat(3)
+	{
+	with instance_create(x,y,Smoke)
+	motion_add(random(360),1+random(2))
+	}
 
-ang += 360/20
+	ang = random(360)
+	repeat(5)
+	{
+	with instance_create(x,y,Dust)
+	motion_add(other.ang,6)
+
+	ang += 360/20
+	}
+	BackCont.shake += 2;
 }
-
-
-BackCont.shake += 2;
-
 team = -1
 if instance_exists(Player){
 if Player.ultra_got[57]//atom bomb

@@ -1,3 +1,4 @@
+/// @description Atom neutron fire explosion
 repeat(irandom(2))
 {
     with instance_create(x,y,Flame)

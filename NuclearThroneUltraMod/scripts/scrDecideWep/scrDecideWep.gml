@@ -1,4 +1,4 @@
-function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepAreaParam = 0, rerolls = 0) {
+function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepAreaParam = 0) {
 	var wepTier = wepTierParam;
 	var maxTries = maxTriesParam;
 	var cursed = cursedParam;
@@ -41,6 +41,9 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			var maxValidTierWep = 0;
 			do {
 				wep=irandom(maxwep-1)+1;
+				debug(wep_area[wep]);
+				debug(Player.hard+wepTier);
+				//Non melee has been excluded, but not every tier has multiple melees so do some shit
 				if wep_area[wep]  <= Player.hard+wepTier && wep_area[wep] > wep_area[maxValidTierWep]
 				{
 					maxValidTierWep = wep;
@@ -56,25 +59,6 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			if (wep_area[maxValidTierWep] > wep_area[wep])
 			{
 				wep = maxValidTierWep;
-			}
-		}
-		if UberCont.opt_gamemode == 31//Only melee
-		{
-			while !scrMeleeWeapons(wep)
-			{
-				var tier = wepTierParam - 1;
-				var another = rerolls + 1;
-				if another > 100
-				{
-					tier-= 1;
-					another = 0;
-				}
-				if tier < 1
-					wep = 27;
-				else
-				{
-					scrDecideWep(wepTierParam, maxTriesParam, cursedParam, minWepAreaParam, another);
-				}
 			}
 		}
 		while (wep == 402 && Player.crown != 5)//Rolled gun gun? you must have crown of guns

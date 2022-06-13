@@ -1,23 +1,33 @@
 //this is an extra explosion
 image_speed = 0.4
 
-repeat(10)
+var um = GetPlayerUltramod()
+if um == ultramods.bloodExplosionExplosion && UberCont.ultramodSwap
 {
-with instance_create(x,y,Smoke)
-motion_add(random(360),1+random(2))
+	mask_index = mskPickupThroughWall;
+	visible = false;
+	alarm[11] = 1;
 }
-
-ang = random(360)
-repeat(20)
+else
 {
-with instance_create(x,y,Dust)
-motion_add(other.ang,6)
+	//seperate mask for players
+	myExplosionMask = instance_create(x,y,ExplosionMask);
+	with myExplosionMask {
+		owner = other.id;
+	}
+	with instance_create(x,y,Smoke)
+	motion_add(random(360),1+random(2))
 
-ang += 360/20
+	ang = random(360)
+	var angstep = 360/4
+	repeat(4)
+	{
+	with instance_create(x,y,Dust)
+	motion_add(other.ang,6)
+	ang += angstep;
+	}
+	BackCont.shake += 7
 }
-
-
-BackCont.shake += 7
 
 team = -1
 

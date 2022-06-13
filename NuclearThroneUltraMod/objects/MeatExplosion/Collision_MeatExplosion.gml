@@ -1,3 +1,5 @@
-x += lengthdir_x(8,point_direction(other.x,other.y,x,y))
-y += lengthdir_y(8,point_direction(other.x,other.y,x,y))
-
+if id > other.id
+{
+	x += lengthdir_x(2,point_direction(other.x,other.y,x,y))
+	y += lengthdir_y(2,point_direction(other.x,other.y,x,y))
+}

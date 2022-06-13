@@ -1,51 +1,7 @@
 /// @description Black sword? and UNLOCKABLES
-if UberCont.opt_gamemode == 23 && !instance_exists(Menu) && instance_number(Player) == 1//Random character!
-{
-	var iWillBecome = 0;
-	do 
-	{
-		iWillBecome = 1+irandom(racemax-1);
-	} until (UberCont.race_have[iWillBecome] = 1 && iWillBecome != 0);
-	instance_destroy(id,false);
-	with instance_create(x,y,RaceCopier)
-	{
-		race = iWillBecome;
-	}
-	with instance_create(x,y,Player)
-	{
-		//Copy it all!
-		ultimategamble=other.ultimategamble;
-		skeletonlives=other.skeletonlives
-		race = iWillBecome;
-		crown = other.crown
-		lastarea = other.lastarea;
-		area = other.area
-		subarea=other.subarea;
-		loops = other.loops;
-		hard = other.hard;
-		kills = other.kills;
-		subarea=other.subarea;
-		level = other.level;
-		rad = other.rad;
-		visible=true;
-		snd_play(snd_wrld, 0, false, false);
-		wep = other.wep;
-		bwep = other.bwep;
-		cwep = other.cwep;
-		ammo = other.ammo;
-		curse=other.curse;
-	    bcurse=other.bcurse;
-	    ccurse=other.ccurse;
-		var dir = 0;
-		repeat(maxskill+1)
-		{skill_got[dir] = other.skill_got[dir]
-		dir += 1}
-		dir = 0
-		repeat(maxultra+1)
-		{ultra_got[dir] = other.ultra_got[dir]
-		dir += 1}
-	}
-}
+if swapChar
+	exit;
+
 
 if area = 1 && instance_exists(WepPickup)
 {
@@ -66,6 +22,8 @@ else
 scrNextLevel();//odd
 }
 */
+debug("NEXT AREA", instance_number(Player));
+debug("race copier: ",instance_exists(RaceCopier));
 scrNextLevel();
 if race == 27
 {
@@ -564,3 +522,56 @@ if rushcrownlevels=5
 scrUnlockCSkin(15,"FOR COMPLETING 5 AREAS IN A ROW#USING CROWN OF HASTE AS ATOM",0);
 
 	StartHogInvestment();
+
+if UberCont.opt_gamemode == 23 && !instance_exists(Menu) && instance_number(Player) == 1//Random character!
+{
+	var iWillBecome = 0;
+	do 
+	{
+		iWillBecome = 1+irandom(racemax-1);
+	} until (UberCont.race_have[iWillBecome] = 1 && iWillBecome != 0);
+	with instance_create(x,y,RaceCopier)
+	{
+		race = iWillBecome;
+	}
+	with instance_create(x,y,Player)
+	{
+		//Copy it all!
+		ultimategamble=other.ultimategamble;
+		skeletonlives=other.skeletonlives
+		race = iWillBecome;
+		crown = other.crown
+		lastarea = other.lastarea;
+		area = other.area
+		subarea=other.subarea;
+		loops = other.loops;
+		hard = other.hard;
+		kills = other.kills;
+		subarea=other.subarea;
+		level = other.level;
+		rad = other.rad;
+		visible=true;
+		snd_play(snd_wrld, 0, false, false);
+		wep = other.wep;
+		bwep = other.bwep;
+		cwep = other.cwep;
+		ammo = other.ammo;
+		curse=other.curse;
+	    bcurse=other.bcurse;
+	    ccurse=other.ccurse;
+		skill_got = other.skill_got;
+		ultra_got = other.ultra_got;
+		swapChar = true;
+		scrWeaponHold();
+		/*
+		var dir = 0;
+		repeat(maxskill+1)
+		{skill_got[dir] = other.skill_got[dir]
+		dir += 1}
+		dir = 0
+		repeat(maxultra+1)
+		{ultra_got[dir] = other.ultra_got[dir]
+		dir += 1}*/
+	}
+	instance_destroy(id,false);
+}

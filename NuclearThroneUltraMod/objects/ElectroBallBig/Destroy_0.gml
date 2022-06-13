@@ -1,8 +1,8 @@
 event_inherited()
 instance_create(x,y,WallBreak);
 var ang = direction;
-var angStep = 360/10;
-repeat(10)
+var angStep = 360/8;
+repeat(8)
 {
 	with instance_create(x,y,ElectroBall)
 	{

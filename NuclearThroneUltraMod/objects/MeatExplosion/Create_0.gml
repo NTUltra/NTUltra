@@ -11,6 +11,11 @@ if UberCont.ultramodSwap
 		mask_index = mskPickupThroughWall;
 		visible = false;
 		alarm[11] = 1;
+		if instance_exists(Player) && Player.ultra_got[57]
+		{
+			//FIERY EXPLOSIONS
+			alarm[1]=9;
+		}
 	}
 	else if um == ultramods.bloodMelee
 	{

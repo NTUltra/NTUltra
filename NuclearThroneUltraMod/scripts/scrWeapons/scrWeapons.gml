@@ -1187,8 +1187,8 @@ function scrWeapons() {
 	wep_name[107] = "SHORTGUN"
 	wep_type[107] = 2
 	wep_auto[107] = 0
-	wep_load[107] = 12
-	wep_cost[107] = 1
+	wep_load[107] = 13
+	wep_cost[107] = 1.5
 	wep_sprt[107] = sprShortgun
 	wep_area[107] = 0
 	wep_text[107] = "thats what she said"
@@ -3101,8 +3101,8 @@ function scrWeapons() {
 	wep_name[281] = "GOLDEN SHORTGUN"
 	wep_type[281] = 2
 	wep_auto[281] = 0
-	wep_load[281] = 10
-	wep_cost[281] = 1
+	wep_load[281] = 11
+	wep_cost[281] = 1.5
 	wep_sprt[281] = sprGoldenShortgun
 	wep_area[281] = 17
 	wep_text[281] = "no golden sex jokes"
@@ -5700,7 +5700,7 @@ function scrWeapons() {
 	wep_name[517] = "CLUB"
 	wep_type[517] = 0
 	wep_auto[517] = 0
-	wep_load[517] = 26
+	wep_load[517] = 27
 	wep_cost[517] = 0
 	wep_sprt[517] = sprClub
 	wep_area[517] = 3
@@ -6027,7 +6027,62 @@ function scrWeapons() {
 	wep_swap[546] = sndSwapBow
 	wep_rad[546] = 0;
 	
+	wep_name[547] = "BLOOD SHORTGUN"
+	wep_type[547] = 4
+	wep_auto[547] = 0
+	wep_load[547] = 12
+	wep_cost[547] = 15
+	wep_sprt[547] = sprBloodShortgun
+	wep_area[547] = 0
+	wep_text[547] = "blech"
+	wep_swap[547] = sndSwapShotgun
+	wep_rad[547] = 0;
+	
+	wep_name[548] = "BLOOD HAMMER"
+	wep_type[548] = 0
+	wep_auto[548] = 1
+	wep_load[548] = 19
+	wep_cost[548] = 0
+	wep_sprt[548] = sprBloodHammer
+	wep_area[548] = 10
+	wep_text[548] = "don't miss"
+	wep_swap[548] = sndSwapExplosive
+	wep_rad[548] = 0;
+	
+	wep_name[549] = "HEAVY BLOOD HAMMER"
+	wep_type[549] = 0
+	wep_auto[549] = 1
+	wep_load[549] = 18
+	wep_cost[549] = 0
+	wep_sprt[549] = sprBloodHammer
+	wep_area[549] = 24
+	wep_text[549] = "this hurts you more#than it hurts me"
+	wep_swap[549] = sndSwapExplosive
+	wep_rad[549] = 0;
+	
+	wep_name[550] = "EXPLOSIVE MINIGUN"
+	wep_type[550] = 1
+	wep_auto[550] = 1
+	wep_load[550] = 1
+	wep_cost[550] = 1.5
+	wep_sprt[550] = sprMinigun
+	wep_area[550] = 15
+	wep_text[550] = "drilling and grilling"
+	wep_swap[550] = sndSwapMachinegun
+	wep_rad[550] = 0;
+	
 	maxwep = array_length(wep_name)-1;
+
+	//Only melee
+	if (UberCont.opt_gamemode == 31)// && !instance_exists(MenuGen))
+	{
+		for (var wi = 0; wi < maxwep; wi++) {
+			if !scrMeleeWeapons(wi)
+			{
+				 wep_area[wi] = -1;
+			}
+		}
+	}
 
 	//0 = melee 1 = bullets 2 = shells 3 = bolts 4 = explosives 5 = energy
 	typ_ammo[0] = 333 typ_ammo[1] = 32 typ_ammo[2] = 8 typ_ammo[3] = 8 typ_ammo[4] = 6 typ_ammo[5] = 10
