@@ -1496,8 +1496,10 @@ microseconds=0;
 		{
 			targetFloor = instance_furthest(Portal.x,Portal.y,Floor);
 		}
-		var tries = 200;
-		while ((collision_point(targetFloor.x+16,targetFloor.y+16,prop,true,false) || collision_point(x+16,y+16,Player,false,false)) && tries > 0)
+		var tries = 400;
+		var msk = mask_index;
+		mask_index = mskWallBreak;
+		while ((place_meeting(targetFloor.x+16,targetFloor.y+16,prop) || place_meeting(x+16,y+16,Player)) && tries > 0)
 		{
 			tries--;
 			with targetFloor
@@ -1505,6 +1507,7 @@ microseconds=0;
 				targetFloor = instance_nearest(x+irandom_range(128,-128),y+irandom_range(128,-128),Floor);
 			}
 		}
+		mask_index = msk;
     with instance_create(targetFloor.x+16, targetFloor.y+16,Portal)
     {
 		inverted=true;

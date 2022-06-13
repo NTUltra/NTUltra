@@ -11,6 +11,7 @@ if crown = 0
 	usedRandom = true;
 	crown = ceil(irandom(crownmax-1)+1)
 }
+
 oldcrown = Player.crown
 Player.crown = crown
 Player.crownpoints -= 1
@@ -201,7 +202,21 @@ if crown==12
 			invertedchance = 90;
     }
 }
-
+//Crown of popo
+if oldcrown == 16
+{
+	with BackCont
+	{
+		wantVanAmount --;	
+	}
+}
+if crown == 16
+{
+	with BackCont
+	{
+		wantVanAmount++;
+	}
+}
 with CrownIcon
 instance_destroy()
 

@@ -6028,7 +6028,7 @@ function scrWeapons() {
 	wep_rad[546] = 0;
 	
 	wep_name[547] = "BLOOD SHORTGUN"
-	wep_type[547] = 4
+	wep_type[547] = 1
 	wep_auto[547] = 0
 	wep_load[547] = 12
 	wep_cost[547] = 15
@@ -6054,7 +6054,7 @@ function scrWeapons() {
 	wep_auto[549] = 1
 	wep_load[549] = 18
 	wep_cost[549] = 0
-	wep_sprt[549] = sprBloodHammer
+	wep_sprt[549] = sprHeavyBloodHammer
 	wep_area[549] = 24
 	wep_text[549] = "this hurts you more#than it hurts me"
 	wep_swap[549] = sndSwapExplosive
@@ -6065,8 +6065,8 @@ function scrWeapons() {
 	wep_auto[550] = 1
 	wep_load[550] = 1
 	wep_cost[550] = 1.5
-	wep_sprt[550] = sprMinigun
-	wep_area[550] = 15
+	wep_sprt[550] = sprExplosiveMinigun
+	wep_area[550] = 22
 	wep_text[550] = "drilling and grilling"
 	wep_swap[550] = sndSwapMachinegun
 	wep_rad[550] = 0;

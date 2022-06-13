@@ -7,11 +7,19 @@ if !hitEnemy && owner != -1 && instance_exists(owner)
 {
 	with owner
 	{
-		my_health -= 2;
-		snd_play(sndBloodHurt);
-		instance_create(x,y,MeatExplosion);
-		snd_play(snd_hurt);
-		image_index = 0;
-		sprite_index = spr_hurt;
+		if alarm[3] < 1 && my_health > 1
+		{
+			my_health -= 2;
+			snd_play(sndBloodHurt);
+			var ang = other.image_angle;
+			repeat(3)
+			{
+				instance_create(x+lengthdir_x(6,ang),y+lengthdir_y(6,ang),MeatExplosion);
+				ang += 120;
+			}
+			snd_play(snd_hurt);
+			image_index = 0;
+			sprite_index = spr_hurt;
+		}
 	}
 }

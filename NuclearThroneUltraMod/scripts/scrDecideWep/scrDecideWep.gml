@@ -39,22 +39,46 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			}
 			var triesForSpecificTier = 0;
 			var maxValidTierWep = 0;
-			do {
-				wep=irandom(maxwep-1)+1;
-				debug(wep_area[wep]);
-				debug(Player.hard+wepTier);
+			if UberCont.opt_gamemode == 31//Only melee
+			{
+				var tries = 0;
+				var tooBad = 0;
+				do {
+					wep=irandom(maxwep-1)+1;
 				//Non melee has been excluded, but not every tier has multiple melees so do some shit
 				if wep_area[wep]  <= Player.hard+wepTier && wep_area[wep] > wep_area[maxValidTierWep]
 				{
 					maxValidTierWep = wep;
 				}
 				triesForSpecificTier++;
+					if tries > 1000
+					{
+						triesForSpecificTier = 0;
+						tooBad --;
+					}
+				}
+				until (
+					(wep_area[wep] == Player.hard+wepTier-tooBad || triesForSpecificTier > maxTries || wep_area[wep] >= maxAreaGoodEnough)
+					&& wep_area[wep] >= minWepArea && wep_area[wep] <= Player.hard+wepTier
+				)
 			}
-			until (
-			(wep_area[wep] == Player.hard+wepTier || triesForSpecificTier > maxTries || wep_area[wep] >= maxAreaGoodEnough)
-			&& wep_area[wep] >= minWepArea && wep_area[wep] <= Player.hard+wepTier
-			&& ( (wep != Player.wep and wep != Player.bwep) || Player.race == 7/*roids can dual wield*/) 
-			)
+			else
+			{
+				do {
+					wep=irandom(maxwep-1)+1;
+					//Non melee has been excluded, but not every tier has multiple melees so do some shit
+					if wep_area[wep]  <= Player.hard+wepTier && wep_area[wep] > wep_area[maxValidTierWep]
+					{
+						maxValidTierWep = wep;
+					}
+					triesForSpecificTier++;
+				}
+				until (
+				(wep_area[wep] == Player.hard+wepTier || triesForSpecificTier > maxTries || wep_area[wep] >= maxAreaGoodEnough)
+				&& wep_area[wep] >= minWepArea && wep_area[wep] <= Player.hard+wepTier
+				&& ( (wep != Player.wep and wep != Player.bwep) || Player.race == 7/*roids can dual wield*/) 
+				)
+			}
 			//Found a higher option than our result? Take that one
 			if (wep_area[maxValidTierWep] > wep_area[wep])
 			{
