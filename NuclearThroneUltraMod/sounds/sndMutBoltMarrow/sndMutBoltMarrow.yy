@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndMutBoltMarrow",
-  "duration": 0.0,
+  "duration": 1.988821,
   "parent": {
     "name": "Mutations",
     "path": "folders/Sounds/Mutations.yy",

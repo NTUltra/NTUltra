@@ -7,7 +7,15 @@ holdExplainMutation = 0;
 __view_set( e__VW.XView, 0, 0 )
 __view_set( e__VW.YView, 0, 0 )
 wave = 0
-
+if UberCont.opt_gamemode == 32 {
+	//No alkaline and no strong spirit
+	// One hit wonder
+	with Player
+	{
+		skill_got[25] = 1;
+		skill_got[32] = 1;
+	}
+}
 if UberCont.useSeed && instance_exists(Player)
 	random_set_seed(UberCont.seed+Player.lastarea+Player.lastsubarea);
 
@@ -392,20 +400,29 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && Player.skillpoints < 2
     }
     if instance_exists(Player)//EXTRA WINGS JOKE!
     {
-    if Player.race=18 || Player.race=24
-    with SkillIcon
-    {
-        if skill=2//extra feet
-        {
-        sprite_index=sprExtraWings;
-        image_index=0;
-        }
-    }
-    if (UberCont.opt_gamemode == 24)
-	{
-		with SkillIcon
-			skill = 22;//SHARPSTRESS	
-	}
+	    if Player.race=18 || Player.race=24
+	    with SkillIcon
+	    {
+	        if skill=2//extra feet
+	        {
+	        sprite_index=sprExtraWings;
+	        image_index=0;
+	        }
+	    }
+	    if (UberCont.opt_gamemode == 24)
+		{
+			with SkillIcon
+				skill = 22;//SHARPSTRESS	
+		}
     }
 }
 image_speed = 0.4;
+if UberCont.opt_gamemode == 32 {
+	//No alkaline and no strong spirit
+	// One hit wonder
+	with Player
+	{
+		skill_got[25] = 0;
+		skill_got[32] = 0;
+	}
+}

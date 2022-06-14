@@ -318,7 +318,7 @@ function scrSkills() {
 	skill_msnd[25] =  sndMutStrongSpirit
 
 	skill_name[26] = "HAMMER HEAD"
-	skill_text[26] = "BREAK THROUGH SOME WALLS#FIND RESOURCES IN WALLS"
+	skill_text[26] = "BREAK THROUGH SOME WALLS#FIND RESOURCES IN ANY WALL"
 	skill_tips[26] = "hello welcome to my#minecraft let's play"
 	skill_msnd[26] =  sndMutHammerHead
 
@@ -406,7 +406,7 @@ function scrSkills() {
 	if instance_exists(Player) && Player.cwep != 0
 		skill_text[34] = "RELOAD YOUR OFFHAND WEAPONS#AT 15% SPEED##IF ANY OF YOUR#OFFHAND WEAPONS IS RELOADED:#INCREASE PRIMARY FIRERATE BY 30%##IF NOT:#EVERY ENEMY HAS A 10% CHANCE#TO DROP AN ADDITIONAL ITEM"
 	skill_tips[34] = "looting and shooting"
-	skill_msnd[34] =  sndMut
+	skill_msnd[34] =  sndMutFlexibleElbows
 	
 	
 	skill_name[35] = "PUFFY CHEEKS"
@@ -414,7 +414,7 @@ function scrSkills() {
 	if isDoctor
 		skill_text[35] = "YOU CAN PREEMPTIVELY RELOAD#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 50% RELOAD SPEED"
 	skill_tips[35] = "big round cheeks"
-	skill_msnd[35] =  sndMut
+	skill_msnd[35] =  sndMutPuffyCheeks
 	
 	/*
 	skill_name[33] = "THRONE BACK"

@@ -7,10 +7,10 @@ function scrSkillLeft(sk5 = 0, sk4, sk3, sk2, sk1) {
     
 	    repeat(maxskill)
 	    {
-	    if Player.skill_got[dirskill]=0 && dirskill!=sk4&&dirskill!=sk3&&dirskill!=sk2&&dirskill!=sk1&&dirskill!=sk5//skill is not already selected skill
-	    return true
+		    if Player.skill_got[dirskill]=0 && dirskill!=sk4&&dirskill!=sk3&&dirskill!=sk2&&dirskill!=sk1&&dirskill!=sk5//skill is not already selected skill
+				return true
     
-	    dirskill++;
+		    dirskill++;
 	    }
     
 	    return false

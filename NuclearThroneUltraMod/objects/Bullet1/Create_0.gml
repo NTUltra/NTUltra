@@ -11,3 +11,4 @@ RecycleGlandType();
 norecycle=false;
 dmg = 3;
 alarm[11] = 1;
+cost = 1;

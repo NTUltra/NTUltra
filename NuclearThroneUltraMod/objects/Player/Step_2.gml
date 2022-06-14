@@ -380,7 +380,19 @@ else
 
 var tookHit = false;
 if my_health < prevhealth
+{
 	tookHit = true;
+	//Insakill
+	if !exception && alarm[3] < 1
+	{
+		noHit = 0;
+		if UberCont.opt_gamemode == 32
+		{
+			my_health = 0;
+			prevhealth = 0;
+		}
+	}
+}
 //Extra feet consider failed dodge
 if skill_got[2] && tookHit && !exception
 {

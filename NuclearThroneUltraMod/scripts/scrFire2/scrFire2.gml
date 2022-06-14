@@ -9663,6 +9663,299 @@ function scrFire2() {
 
 	break;
 	
+	//O
+	case 551:
+
+	snd_play_fire(sndOFire)
+
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+	with instance_create(x,y,BulletO)
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,14)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 12
+	wkick = 4
+
+	break;
+	
+	//SUPER WRONG DIRECTION
+	case 552:
+
+	snd_play_fire(sndSuperCrossbow)
+	
+	with instance_create(x,y,HeavyBolt)
+	{motion_add(aimDirection+180,24)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,HeavyBolt)
+	{motion_add(aimDirection-157.5*other.accuracy,18)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,HeavyBolt)
+	{motion_add(aimDirection+157.5*other.accuracy,18)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,HeavyBolt)
+	{motion_add(aimDirection-135*other.accuracy,18)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,HeavyBolt)
+	{motion_add(aimDirection+135*other.accuracy,18)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,HeavyBolt)
+	{motion_add(aimDirection+112.5*other.accuracy,18)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,HeavyBolt)
+	{motion_add(aimDirection-112.5*other.accuracy,18)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,HeavyBolt)
+	{motion_add(aimDirection+90*other.accuracy,18)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,HeavyBolt)
+	{motion_add(aimDirection-90*other.accuracy,18)
+	image_angle = direction
+	team = other.team}
+
+	motion_add(aimDirection,2)
+
+	BackCont.viewx2 += lengthdir_x(60,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(60,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 16
+	wkick = 8
+
+	break;
+	
+	//BULLET SHOVEL
+	case 553:
+
+	snd_play_fire(choose(sndSword1,sndSword2))
+
+	instance_create(x,y,Dust)
+
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
+	{
+	dmg = 8
+	longarms = 0
+	if instance_exists(Player)
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection,2+longarms)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),Slash)
+	{
+	dmg = 8
+	longarms = 0
+	if instance_exists(Player)
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection+60*other.accuracy,2+longarms)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),Slash)
+	{
+	dmg = 8
+	longarms = 0
+	if instance_exists(Player)
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection-60*other.accuracy,2+longarms)
+	image_angle = direction
+	team = other.team}
+
+
+	with instance_create(x,y,Burst)
+	{
+		creator = other.id
+		ammo = 4
+		time = 2
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+	with instance_create(x,y,Burst)
+	{
+		aimOffset = 60*Player.accuracy;
+		creator = other.id
+		ammo = 4
+		time = 2
+		team = other.team
+		event_perform(ev_alarm,0)
+	}
+	with instance_create(x,y,Burst)
+	{
+		aimOffset = -60*Player.accuracy;
+		creator = other.id
+		ammo = 4
+		time = 2
+		team = other.team
+		event_perform(ev_alarm,0)
+	}
+
+
+	wepangle = -wepangle
+	motion_add(aimDirection,6)
+	BackCont.viewx2 += lengthdir_x(14,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(14,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 3
+	wkick = -5
+
+	break;
+	
+	//TRIPLE ASSAULT RIFLE
+	case 554:
+
+	with instance_create(x,y,Burst)
+	{
+		aimOffset = -15*Player.accuracy;
+		creator = other.id
+		ammo = 3
+		time = 2
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+	with instance_create(x,y,Burst)
+	{
+		creator = other.id
+		ammo = 3
+		time = 2
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+	with instance_create(x,y,Burst)
+	{
+		aimOffset = 15*Player.accuracy;
+		creator = other.id
+		ammo = 3
+		time = 2
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+
+	break;
+	
+	//ASSAULT RIFLE
+	case 555:
+
+	with instance_create(x,y,Shell)
+		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180+random(50)-25,2+random(2))
+	if !instance_exists(SnakeBurst)
+		snd_play_fire(sndScorpionFireStart);
+	with instance_create(x,y,SnakeBurst)
+	{
+	creator = other.id
+	ammo = 7
+	time = 2
+	team = other.team
+	event_perform(ev_alarm,0) 
+	}
+
+	break;
+	
+	//ELIMINATOR
+	case 556:
+
+	snd_play_fire(sndSuperSplinterGun)
+
+	with instance_create(x,y,Eliminator)
+	{motion_add(aimDirection+(random(6)-3)*other.accuracy,16)
+	image_angle = direction
+	speed = 12;
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 5
+	wkick = 4
+
+	break
+	
+	//HEAVY DOUBLE SHOTGUN
+	case 557:
+
+	snd_play_fire(sndSuperSlugger)
+	snd_play_fire(sndDoubleShotgun)
+
+	repeat(14)
+	{
+	with instance_create(x,y,Bullet2Heavy)
+	{motion_add(aimDirection+(random(50)-25)*other.accuracy,14+random(6))
+	image_angle = direction
+	team = other.team}
+	}
+
+	motion_add(aimDirection+180,4)
+
+	BackCont.viewx2 += lengthdir_x(17,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(17,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 18
+	wkick = 8
+
+	break;
+	
+	//DOUBLE ACCELERATOR
+	case 558:
+
+	snd_play_fire(sndHeavyRevolver)
+	
+	repeat(2)
+	with instance_create(x,y,Shell)
+		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+	
+	var aimdir = aimDirection+(random(10)-5*accuracy);
+	var offset = 8 * accuracy;
+	var ldx = lengthdir_x(offset,aimdir+90);
+	var ldy = lengthdir_y(offset,aimdir+90);
+	var cldx = x+lengthdir_x(offset+6,aimdir+90);
+	var cldy = y+lengthdir_y(offset+6,aimdir+90);
+	snd_play_fire(sndEraser)
+	if (collision_line(x,y,cldx,cldy,Wall,false,false) > 0)
+	{
+		ldx = 0;
+		ldy = 0;
+	}
+	with instance_create(x+ldx,y+ldy,DistanceScaleBullet)
+	{motion_add(aimDirection+(random(6)-3)*other.accuracy,3)
+	image_angle = direction
+	team = other.team}
+	ldx = lengthdir_x(offset,aimdir-90);
+	ldy = lengthdir_y(offset,aimdir-90);
+	cldx = x+lengthdir_x(offset+6,aimdir-90);
+	cldy = y+lengthdir_y(offset+6,aimdir-90);
+	if (collision_line(x,y,cldx,cldy,Wall,false,false) > 0)
+	{
+		ldx = 0;
+		ldy = 0;
+	}
+	with instance_create(x+ldx,y+ldy,DistanceScaleBullet)
+	{motion_add(aimDirection+(random(6)-3)*other.accuracy,3)
+	image_angle = direction
+	team = other.team}
+	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 8
+	wkick = 4
+
+	break;
+
+	//ASSAULT SLUGGER
+	case 559:
+
+	with instance_create(x,y,FlugBurst)
+	{
+	creator = other.id
+	ammo = 3
+	time = 3
+	team = other.team
+	event_perform(ev_alarm,0) 
+	}
+
+	break;
 	
 	}//end of switch part 2!
 }

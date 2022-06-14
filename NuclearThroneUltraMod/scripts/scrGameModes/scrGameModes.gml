@@ -128,6 +128,10 @@ function scrGameModes() {
 	gamemode_unlock[31] = "HAVE 3 MELEE WEAPONS EQUIPPED AT ONCE";
 	gamemode_have[31] = 0;
 	
+	gamemode[32] = "ONE HIT WONDER";
+	gamemode_unlock[32] = "TAKE NO DAMAGE#4 AREAS IN A ROW";
+	gamemode_have[32] = 0;
+	
 	/*
 	gamemode[23] = "SEEDED";
 	gamemode_description[23] = "YOU ONLY GET MELEE WEAPONS#ALWAYS GET LONG ARMS";
@@ -151,7 +155,7 @@ function scrGameModes() {
 	gamemodeOrder[14] = 7;
 	gamemodeOrder[15] = 14;
 	gamemodeOrder[16] = 15;
-	gamemodeOrder[17] = 29;
+	gamemodeOrder[17] = 30;
 	gamemodeOrder[18] = 19;
 	gamemodeOrder[19] = 16;
 	gamemodeOrder[20] = 21;
@@ -160,12 +164,13 @@ function scrGameModes() {
 	gamemodeOrder[23] = 23;
 	gamemodeOrder[24] = 24;
 	gamemodeOrder[25] = 18;
-	gamemodeOrder[26] = 31;
-	gamemodeOrder[27] = 30;
+	gamemodeOrder[26] = 32;
+	gamemodeOrder[27] = 31;
 	gamemodeOrder[28] = 28;
-	gamemodeOrder[29] = 17;
-	gamemodeOrder[30] = 26;
-	gamemodeOrder[31] = 27;
+	gamemodeOrder[29] = 32;
+	gamemodeOrder[30] = 17;
+	gamemodeOrder[31] = 26;
+	gamemodeOrder[32] = 27;
 
 
 

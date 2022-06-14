@@ -15,7 +15,7 @@ draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*2,y,1,bwepright,90+15*right
 
 if ( wep_type[wep] = 3||wep==257 ) and (!(IsShielding)||(ultra_got[7]==1)) and wep != 18
 {
-	if wep == 399 //Wrong direction
+	if wep == 399 || wep == 552 //Wrong direction
 	{
 		
 		lasd = 0
@@ -35,6 +35,16 @@ if ( wep_type[wep] = 3||wep==257 ) and (!(IsShielding)||(ultra_got[7]==1)) and w
 		do {lasd += 1 lasx += lengthdir_x(2,aimDir) lasy += lengthdir_y(2,aimDir)}
 		until position_meeting(lasx,lasy,Wall) or lasd > 1000
 		draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,1,aimDir,c_white,1)
+		if wep == 552
+		{
+			lasx = sx
+			lasy = sy
+			lasd = 0
+			var aimDir = aimDirection + 180
+			do {lasd += 1 lasx += lengthdir_x(2,aimDir) lasy += lengthdir_y(2,aimDir)}
+			until position_meeting(lasx,lasy,Wall) or lasd > 1000
+			draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,1,aimDir,c_white,1)
+		}
 	}
 	else
 	{
@@ -73,7 +83,7 @@ if race = 7 and bwep != 0
 {
 	if wep_type[bwep] = 3 and bwep != 18
 	{
-		if bwep == 399 //Wrong direction
+		if bwep == 399 || wep == 552//Wrong direction
 		{
 			lasd = 0
 			var aimDir = aimDirection;
@@ -92,6 +102,16 @@ if race = 7 and bwep != 0
 			do {lasd += 1 lasx += lengthdir_x(2,aimDir) lasy += lengthdir_y(2,aimDir)}
 			until position_meeting(lasx,lasy,Wall) or lasd > 1000
 			draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,1,aimDir,c_white,1)
+			if wep == 552
+			{
+				lasx = sx
+				lasy = sy
+				lasd = 0
+				var aimDir = aimDirection + 180
+				do {lasd += 1 lasx += lengthdir_x(2,aimDir) lasy += lengthdir_y(2,aimDir)}
+				until position_meeting(lasx,lasy,Wall) or lasd > 1000
+				draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,1,aimDir,c_white,1)
+			}
 		}
 		else
 		{

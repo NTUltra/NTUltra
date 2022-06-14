@@ -659,7 +659,6 @@ if KeyCont.key_swap[p] = 1 and bwep != 0
 			var pci = reload/wep_load[wep];
 			pci = 1+pci;
 			pci = pci-floor(pci);//Percentage of load that would be the reload
-			debug("reduce by: ",reload*pci*m);
 			reload -= reload*pci*m;
 		}
 		else

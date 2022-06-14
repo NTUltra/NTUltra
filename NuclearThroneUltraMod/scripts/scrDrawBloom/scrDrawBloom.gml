@@ -31,6 +31,9 @@ function scrDrawBloom() {
 	
 	with BouncerFlakBullet
 	draw_sprite_ext(sprite_index,1,x,y,2,2,image_angle,c_white,(Player.ultra_got[28]*0.3)+ba)//roids ultra d
+	
+	with OExplosion
+	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,(Player.ultra_got[28]*0.3)+ba)//roids ultra d
 	}
 	with PlutoFX
 	draw_sprite_ext(sprite_index,-1,x,y,image_xscale,image_yscale,image_angle,c_white,ba)

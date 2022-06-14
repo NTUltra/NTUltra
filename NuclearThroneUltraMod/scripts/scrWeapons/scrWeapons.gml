@@ -6071,6 +6071,106 @@ function scrWeapons() {
 	wep_swap[550] = sndSwapMachinegun
 	wep_rad[550] = 0;
 	
+	wep_name[551] = "O"
+	wep_type[551] = 1
+	wep_auto[551] = 1
+	wep_load[551] = 6
+	wep_cost[551] = 8
+	wep_sprt[551] = sprOGun
+	wep_area[551] = 29
+	wep_text[551] = "O"
+	wep_swap[551] = sndSwapPistol
+	wep_rad[551] = 0;
+	
+	wep_name[552] = "SUPER WRONG DIRECTION"
+	wep_type[552] = 3
+	wep_auto[552] = 0
+	wep_load[552] = 60
+	wep_cost[552] = 5
+	wep_sprt[552] = sprSuperWrongDirection
+	wep_area[552] = 18
+	wep_text[552] = "lost completly"
+	wep_swap[552] = sndSwapBow
+	wep_rad[552] = 0;
+	
+	wep_name[553] = "BULLET SHOVEL"
+	wep_type[553] = 1
+	wep_auto[553] = 0
+	wep_load[553] = 22
+	wep_cost[553] = 15
+	wep_sprt[553] = sprBulletSword
+	wep_area[553] = 15
+	wep_text[553] = ""
+	wep_swap[553] = sndSwapSword
+	wep_rad[553] = 0;
+	
+	wep_name[554] = "TRIPLE ASSAULT RIFLE"
+	wep_type[554] = 1
+	wep_auto[554] = 0
+	wep_load[554] = 11
+	wep_cost[554] = 9
+	wep_sprt[554] = sprARifle
+	wep_area[554] = 6
+	wep_text[554] = ""
+	wep_swap[554] = sndSwapMachinegun
+	wep_rad[554] = 0;
+	
+	wep_name[555] = "SNAKE GUN"
+	wep_type[555] = 1
+	wep_auto[555] = 1
+	wep_load[555] = 10
+	wep_cost[555] = 4
+	wep_sprt[555] = sprARifle
+	wep_area[555] = 5
+	wep_text[555] = "ssssssssssssssssssssssssss"
+	wep_swap[555] = sndSwapMachinegun
+	wep_rad[555] = 0;
+	
+	wep_name[556] = "ELIMINATOR"
+	wep_type[556] = 3
+	wep_auto[556] = 0
+	wep_load[556] = 60
+	wep_cost[556] = 8
+	wep_sprt[556] = sprDevastator
+	wep_area[556] = 15
+	wep_text[556] = "eliminate! eliminate!"
+	wep_swap[556] = sndSwapEnergy
+	wep_rad[556] = 0;
+	
+	wep_name[557] = "HEAVY DOUBLE SHOTGUN"
+	wep_type[557] = 2
+	wep_auto[557] = 0
+	wep_load[557] = 28
+	wep_cost[557] = 5
+	wep_sprt[557] = sprDoubleHeavyShotgun
+	wep_area[557] = 16
+	wep_text[557] = ""
+	wep_swap[557] = sndSwapShotgun
+	wep_rad[557] = 0;
+	
+	wep_name[558] = "DOUBLE ACCELERATOR"
+	wep_type[558] = 1
+	wep_auto[558] = 0
+	wep_load[558] = 5
+	wep_cost[558] = 4
+	wep_sprt[558] = sprAccelerator
+	wep_area[558] = 13
+	wep_text[558] = "increases damage overtime"
+	wep_swap[558] = sndSwapPistol
+	wep_rad[558] = 0;
+	
+	wep_name[559] = "ASSAULT FLUGGER"
+	wep_type[559] = 2
+	wep_auto[559] = 0
+	wep_load[559] = 35//18*3
+	wep_cost[559] = 4.5
+	wep_sprt[559] = sprFlugger
+	wep_area[559] = 11
+	wep_text[559] = "pierces!"
+	wep_swap[559] = sndSwapShotgun
+	wep_rad[559] = 0;
+	
+	
 	maxwep = array_length(wep_name)-1;
 
 	//Only melee

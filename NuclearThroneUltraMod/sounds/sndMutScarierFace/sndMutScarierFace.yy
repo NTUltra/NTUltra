@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndMutScarierFace",
-  "duration": 0.0,
+  "duration": 1.976009,
   "parent": {
     "name": "Mutations",
     "path": "folders/Sounds/Mutations.yy",

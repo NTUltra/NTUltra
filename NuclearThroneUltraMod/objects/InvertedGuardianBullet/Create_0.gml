@@ -5,5 +5,5 @@ event_inherited();
 
 offset = 1;
 angle = 90;
-time = 0;
+time = 1;
 tdir = 0.1;

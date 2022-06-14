@@ -2,17 +2,20 @@
 
 // Inherit the parent event
 event_inherited();
-snd_play(sndDevastatorExplo,0.1,true)
-repeat(4)
+if object_index == Devastator
 {
-	var l = random_range(16,48);
-	var d = random(360);
-	var xx = xprevious+lengthdir_x(l,d);
-	var yy = yprevious+lengthdir_y(l,d);
-	with instance_create(xx,yy,PlasmaImpact)
+	snd_play(sndDevastatorExplo,0.1,true)
+	repeat(4)
 	{
-		team = other.team;
-		scrCanHumphry();
+		var l = random_range(16,48);
+		var d = random(360);
+		var xx = xprevious+lengthdir_x(l,d);
+		var yy = yprevious+lengthdir_y(l,d);
+		with instance_create(xx,yy,PlasmaImpact)
+		{
+			team = other.team;
+			scrCanHumphry();
+		}
 	}
+	BackCont.shake += 4;
 }
-BackCont.shake += 4;

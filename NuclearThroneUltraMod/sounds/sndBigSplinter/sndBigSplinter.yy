@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndBigSplinter",
-  "duration": 0.0,
+  "duration": 0.426687,
   "parent": {
     "name": "Bolts",
     "path": "folders/Sounds/Weapons/Bolts.yy",

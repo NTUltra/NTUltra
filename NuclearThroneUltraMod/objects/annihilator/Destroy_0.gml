@@ -1,4 +1,5 @@
 /// @description Big boom
+event_inherited();
 // Inherit the parent event
 with instance_create(x,y,HumphryProjectile)
 {team=2

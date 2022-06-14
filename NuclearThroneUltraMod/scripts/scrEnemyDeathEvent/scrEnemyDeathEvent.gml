@@ -106,7 +106,6 @@ function scrEnemyDeathEvent(){
 					var pci = reload/wep_load[wep];
 					pci = 1+pci;
 					pci = pci-floor(pci);//Percentage of load that would be the reload
-					debug("reduce by: ",reload*pci*m);
 					reload += reload*pci*m;
 				}
 				else
@@ -118,7 +117,6 @@ function scrEnemyDeathEvent(){
 					var pci = breload/wep_load[bwep];
 					pci = 1+pci;
 					pci = pci-floor(pci);//Percentage of load that would be the reload
-					debug("reduce by: ",breload*pci*m);
 					breload += breload*pci*m;
 				}
 				else
@@ -130,7 +128,6 @@ function scrEnemyDeathEvent(){
 					var pci = creload/wep_load[cwep];
 					pci = 1+pci;
 					pci = pci-floor(pci);//Percentage of load that would be the reload
-					debug("reduce by: ",creload*pci*m);
 					creload += creload*pci*m;
 				}
 				else

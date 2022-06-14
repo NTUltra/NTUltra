@@ -11,8 +11,8 @@
     "name": "agsfx",
     "path": "audiogroups/agsfx",
   },
-  "soundFile": "sndScorpionFire",
-  "duration": 0.182358,
+  "soundFile": "sndscorpionfire.wav",
+  "duration": 0.182375,
   "parent": {
     "name": "Regular",
     "path": "folders/Sounds/Enemies/Regular.yy",

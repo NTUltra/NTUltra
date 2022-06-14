@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskFloorExplo",
     "path": "sprites/mskFloorExplo/mskFloorExplo.yy",

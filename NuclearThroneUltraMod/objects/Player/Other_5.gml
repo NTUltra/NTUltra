@@ -22,8 +22,6 @@ else
 scrNextLevel();//odd
 }
 */
-debug("NEXT AREA", instance_number(Player));
-debug("race copier: ",instance_exists(RaceCopier));
 scrNextLevel();
 if race == 27
 {
@@ -101,7 +99,7 @@ if crown = 2
 	if my_health >= maxhealth
 	{
 		my_health = max(my_health,maxhealth);
-		my_health += 2;
+		my_health += 1;
 	}
 	else
 	{
@@ -484,10 +482,14 @@ subarea = 1
 if restarted
 	exit;
 	
-
+noHit ++;
+if noHit > 3
+{
+	scrUnlockGameMode(32,"FOR COMPLETING FOUR AREAS#IN A ROW WITHOUT#TAKING A HIT")
+}
 if movethislevel==false&&race=15 &&!instance_exists(MenuGen) &&!instance_exists(Menu) &&  !instance_exists(Vlambeer) && !instance_exists(CrownPickup)
 {//ATOM TELEPORT ONLY GAMEMODE UNLOCK
-scrUnlockGameMode(7,"FOR COMPLETING A LEVEL WITHOUT WALKING")
+scrUnlockGameMode(7,"FOR COMPLETING AN AREA WITHOUT WALKING")
 }
 
 //SKINS
