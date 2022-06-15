@@ -9957,5 +9957,56 @@ function scrFire2() {
 
 	break;
 	
+	//SPEAR LAUNCHER
+	case 560:
+
+	snd_play_fire(sndSpear)
+
+	with instance_create(x,y,Spear)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,20)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3
+	wkick = 4
+
+	break;
+	
+	//SPLINTER SPEAR LAUNCHER
+	case 561:
+
+	snd_play_fire(sndHeavySpear)
+
+	with instance_create(x,y,SplinterSpear)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,22)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(34,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(34,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 4
+
+	break;
+	
+	//AUTO SPEAR LAUNCHER
+	case 562:
+
+	snd_play_fire(sndHeavySpear)
+
+	with instance_create(x,y,Spear)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3
+	wkick = 4
+
+	break;
+	
 	}//end of switch part 2!
 }

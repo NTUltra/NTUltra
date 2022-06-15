@@ -783,7 +783,7 @@ function scrWeapons() {
 	wep_load[70] = 9
 	wep_cost[70] = 1
 	wep_sprt[70] = sprMorphORay
-	wep_area[70] = 7
+	wep_area[70] = 8
 	wep_text[70] = "Eagle eyes also increases#MORPH-O-RAY's range"
 	wep_swap[70] = sndSwapEnergy
 	wep_rad[70] = 0;
@@ -6075,7 +6075,7 @@ function scrWeapons() {
 	wep_type[551] = 1
 	wep_auto[551] = 1
 	wep_load[551] = 6
-	wep_cost[551] = 8
+	wep_cost[551] = 7
 	wep_sprt[551] = sprOGun
 	wep_area[551] = 29
 	wep_text[551] = "O"
@@ -6153,7 +6153,7 @@ function scrWeapons() {
 	wep_auto[558] = 0
 	wep_load[558] = 5
 	wep_cost[558] = 4
-	wep_sprt[558] = sprAccelerator
+	wep_sprt[558] = sprDoubleAccelerator
 	wep_area[558] = 13
 	wep_text[558] = "increases damage overtime"
 	wep_swap[558] = sndSwapPistol
@@ -6164,11 +6164,44 @@ function scrWeapons() {
 	wep_auto[559] = 0
 	wep_load[559] = 35//18*3
 	wep_cost[559] = 4.5
-	wep_sprt[559] = sprFlugger
+	wep_sprt[559] = sprAssaultFlugger
 	wep_area[559] = 11
 	wep_text[559] = "pierces!"
 	wep_swap[559] = sndSwapShotgun
 	wep_rad[559] = 0;
+	
+	wep_name[560] = "SPEAR LAUNCHER"
+	wep_type[560] = 3
+	wep_auto[560] = 0
+	wep_load[560] = 30
+	wep_cost[560] = 1
+	wep_sprt[560] = sprSpearLauncher
+	wep_area[560] = 2
+	wep_text[560] = "one of the oldest weapons"
+	wep_swap[560] = sndSwapBow
+	wep_rad[560] = 0;
+	
+	wep_name[561] = "SPLINTER SPEAR LAUNCHER"
+	wep_type[561] = 3
+	wep_auto[561] = 0
+	wep_load[561] = 25
+	wep_cost[561] = 3
+	wep_sprt[561] = sprSplinterSpearLauncher
+	wep_area[561] = 7
+	wep_text[561] = "spear that splinters"
+	wep_swap[561] = sndSwapBow
+	wep_rad[561] = 0;
+	
+	wep_name[562] = "AUTO SPEAR LAUNCHER"
+	wep_type[562] = 3
+	wep_auto[562] = 1
+	wep_load[562] = 9
+	wep_cost[562] = 1
+	wep_sprt[562] = sprAutoSpearLauncher
+	wep_area[562] = 8
+	wep_text[562] = "no longer primitive"
+	wep_swap[562] = sndSwapBow
+	wep_rad[562] = 0;
 	
 	
 	maxwep = array_length(wep_name)-1;

@@ -1,6 +1,6 @@
 //UNLOCK EASY MODE
 if area=1 && subarea=1 && loops=0 && my_health <= 0
-scrUnlockGameMode(9,"FOR DIEING ON 1-1#YOU DID THAT ON PURPOSE")
+scrUnlockGameMode(9,"FOR DYING ON 1-1#YOU DID THAT ON PURPOSE")
 
 if scrCheckLoopAll()
 	scrUnlockCSkin(1,"FOR LOOPING WITH EVERY CHARACTER",0);
@@ -382,7 +382,7 @@ else if !reincarnate
 	scrUnlockCharacter(4,"FOR DYING");//MELTING
 
 	if race = 4 && area = 6//SKELETON
-	scrUnlockCharacter(19,"FOR DIEING IN THE LABS AS MELTING");
+	scrUnlockCharacter(19,"FOR DYING IN THE LABS AS MELTING");
 
 	if UberCont.ctot_kill[race]>=100//UNLOCK PLANT
 	scrUnlockCharacter(5,"FOR GETTING OVER 100 KILLS");

@@ -20,7 +20,7 @@ with myCorpse
 			with instance_create(x,y,Lightning)
 			{
 				image_angle = ang;
-				team = other.team
+				team = 4;
 				ammo = l;
 				event_perform(ev_alarm,0)
 				visible = 0

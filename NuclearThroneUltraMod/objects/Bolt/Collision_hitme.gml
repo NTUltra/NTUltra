@@ -33,7 +33,6 @@ else if other.my_health < (dmg*0.5) and !array_contains(hitEntities,other.id)// 
 		image_index = 0
 		motion_add(other.direction,6)
 	}
-alarm[1]=4
 }
 }
 

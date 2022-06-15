@@ -25,6 +25,8 @@ function scrDarkness() {	if darkness = 1
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),140+random(4),0)
 	with Explosion
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),160+random(4),0)
+	with OExplosion
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),160+random(4),0)
 	with SmallExplosion
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),64+random(4),0)
 	with ChesireCat

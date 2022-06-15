@@ -24,7 +24,7 @@ function scrDrawUpdate() {
 		}
 	txt0 = @"#UPDATE 28 [0.09]
 	
-	* 89 NEW WEAPONS
+	* 100 NEW WEAPONS!
 	
 	* NEW ULTRA MUTATION ART
 	BY SEYMOUR SCHLONG
