@@ -19,7 +19,8 @@ originalDirection=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 direction=originalDirection;
 image_speed = 0.5
 
-
+sprInactive = sprElectroBallBig;
+sprActive = sprElectroBallBigActive;
 resetSpeed=false;
 alarm[1]=1;
 alarm[0]=1;

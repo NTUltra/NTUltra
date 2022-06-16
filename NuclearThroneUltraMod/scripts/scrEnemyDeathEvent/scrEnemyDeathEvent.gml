@@ -36,16 +36,16 @@ function scrEnemyDeathEvent(){
 					with other
 					{
 						if isdoc
-							scrDrop(12,0);
+							scrDrop(17,0);
 						else
-							scrDrop(10,0);
+							scrDrop(15,0);
 					}
 				}
 				if (ultra_got[32] && (creload <= lowc || cwep == 0))
 				{
 					with other
 					{
-						scrDrop(10,0);
+						scrDrop(15,0);
 					}
 				}
 			}

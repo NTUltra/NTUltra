@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": false,
+  "managed": true,
   "spriteMaskId": {
     "name": "sprSelectMask",
     "path": "sprites/sprSelectMask/sprSelectMask.yy",

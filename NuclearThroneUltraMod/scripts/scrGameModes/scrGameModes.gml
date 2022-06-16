@@ -164,7 +164,7 @@ function scrGameModes() {
 	gamemodeOrder[23] = 23;
 	gamemodeOrder[24] = 24;
 	gamemodeOrder[25] = 18;
-	gamemodeOrder[26] = 32;
+	gamemodeOrder[26] = 29;
 	gamemodeOrder[27] = 31;
 	gamemodeOrder[28] = 28;
 	gamemodeOrder[29] = 32;

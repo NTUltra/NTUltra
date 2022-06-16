@@ -5,7 +5,7 @@ if UberCont.mouse__x > x-16 and UberCont.mouse__x < x+16 and UberCont.mouse__y >
 {
 draw_sprite(sprSkillSelected,-1,x,y)
 draw_sprite(sprite_index,skill,x+2,y-2)
-if candrawoutline && UberCont.ctot_skill_taken[skill] > 0
+if candrawoutline && UberCont.ctot_skill_taken[skill] > 0 && !UberCont.gamemode_have[28]
 {
 	var col = make_color_rgb(72,156,8);
 	draw_rectangle_color(x-12,y-17,x+12,y+15,col,col,col,col,true);	

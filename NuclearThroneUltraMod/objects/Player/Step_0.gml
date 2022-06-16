@@ -974,13 +974,13 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 		{
 			if race == 25
 			{
-				breload -= 0.2;
-				creload -= 0.2;
+				breload -= 0.25;
+				creload -= 0.25;
 			}
 			else
 			{
-				breload -= 0.15;
-				creload -= 0.15;
+				breload -= 0.2;
+				creload -= 0.2;
 			}
 		}
 		if skill_got[35]//PUFFY CHEEKS
@@ -1498,7 +1498,7 @@ microseconds=0;
 		var tries = 400;
 		var msk = mask_index;
 		mask_index = mskWallBreak;
-		while ((place_meeting(targetFloor.x+16,targetFloor.y+16,prop) || place_meeting(x+16,y+16,Player)) && tries > 0)
+		while ((place_meeting(targetFloor.x+16,targetFloor.y+16,prop) || place_meeting(targetFloor.x+16,targetFloor.y+16,chestprop) || place_meeting(x+16,y+16,Player)) && tries > 0)
 		{
 			tries--;
 			with targetFloor

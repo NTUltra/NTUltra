@@ -9839,7 +9839,7 @@ function scrFire2() {
 
 	break;
 	
-	//ASSAULT RIFLE
+	//SNAKE GUN
 	case 555:
 
 	with instance_create(x,y,Shell)
@@ -10006,6 +10006,34 @@ function scrFire2() {
 	BackCont.shake += 3
 	wkick = 4
 
+	break;
+	
+	//SUPER ELECTRO CANNON
+	case 563:
+		if Player.skill_got[17] = 1
+		snd_play_fire(sndPlasmaBigUpg)
+		else
+		snd_play_fire(sndPlasmaBig)
+
+
+		with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),ElectroBallHuge)
+		{
+		motion_add(aimDirection+(random(8)-4)*other.accuracy,1.8)
+		image_angle = direction
+		team=other.team;
+
+		with instance_create(x,y,ElectroBallSpawn)
+		{motion_add(aimDirection+(random(8)-4),1)
+		image_angle = direction}
+
+		}
+
+		Sleep(10);
+		motion_add(aimDirection+180,6)
+		BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 12
+		wkick = 7
 	break;
 	
 	}//end of switch part 2!

@@ -25,7 +25,7 @@ function scrUltras() {
 	if instance_exists(Player) && Player.bskin == 2
 	{
 		ultra_name[4] = "FISH CAN GUN"
-		ultra_text[4] = "THE MORE AMMO YOU HAVE#THE HIGHER YOUR FIRERATE#REDUCE AMMO/RAD COST BY 20%#DOES NOT HAVE AN EFFECT ON MELEE"
+		ultra_text[4] = "THE MORE AMMO YOU HAVE#THE HIGHER YOUR FIRERATE#REDUCE AMMO/RAD COST BY 15%#DOES NOT HAVE AN EFFECT ON MELEE"
 		ultra_tips[4] = "loaded and goated"
 	}
 
@@ -379,7 +379,7 @@ function scrUltras() {
 	    if Player.ultimategamble==true
 	    {
 	    ultra_name[76] = "THE ULTIMATE GAMBLE"
-	    ultra_text[76] = "50% CHANCE TO DIE OR TO GET#THREE RANDOM ULTRA MUTATIONS#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
+	    ultra_text[76] = "50% CHANCE TO DIE OR TO GET#TWO RANDOM ULTRA MUTATIONS#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
 	    ultra_tips[76] = "that went well!"
 	    }
 	    else

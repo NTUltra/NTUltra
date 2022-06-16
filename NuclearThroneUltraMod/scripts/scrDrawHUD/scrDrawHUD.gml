@@ -218,8 +218,8 @@ function scrDrawHUD() {
 	var puffColour = make_colour_rgb(250,171,0);//make_colour_rgb(178,122,0);
 	var puffA = 0.8
 	var loadColour = c_white//make_colour_rgb(255,225,200);//make_colour_rgb(255,174,0);
-	var loadA = 0.4;
-	var loadedColour = make_colour_rgb(102,69,0);//make_colour_rgb(127,87,0);
+	var loadA = 0.35;
+	var loadedColour = c_gray//make_colour_rgb(102,69,0);//make_colour_rgb(127,87,0);
 	//TERTIARY WEAPON
 	if Player.race=8{//robotos
 	if Player.cwep != 0 && Player.ultra_got[31]//robot ultra c

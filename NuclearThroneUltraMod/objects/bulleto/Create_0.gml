@@ -12,4 +12,4 @@ norecycle=false;
 dmg = 10;
 alarm[11] = 1;
 rotation = choose(30,-30);
-cost = 8;
+cost = 6;

@@ -80,12 +80,27 @@ else
 		var colll = make_color_rgb(72,253,8);// normal dark
 		var coll = make_color_rgb(72,156,8);// darker
 		var col = make_color_rgb(34,76,7); // darkest
+		//var gold = make_color_rgb(223,201,134);
+		var didLoop = false;
+		var gotSkins = false;
+		var gotGunsCrown = false;
 		if UberCont.ctot_loop[num]>0
-			draw_rectangle_color(x,yyy,x+15,yyy+23,col,col,col,col,true);
+			didLoop = true;
 		if UberCont.race_bskin[num] && UberCont.race_cskin[num]
+			gotSkins = true;
+		if scrHasAllStartingWeapons(num) && UberCont.ctot_all_crowns_taken[num] > 0
+			gotGunsCrown = true;
+		if didLoop && gotSkins && gotGunsCrown
 		{
-			draw_rectangle_color(x-1,yyy-1,x+16,yyy+24,coll,coll,coll,coll,true);
-			if scrHasAllStartingWeapons(num) && UberCont.ctot_all_crowns_taken[num] > 0
+			draw_sprite(sprCharSelectCompleted,0,x,y);
+			//draw_rectangle_color(x,yyy,x+15,yyy+23,gold,gold,gold,gold,true);
+		} else
+		{
+			if didLoop
+				draw_rectangle_color(x,yyy,x+15,yyy+23,col,col,col,col,true);
+			if gotSkins
+				draw_rectangle_color(x-1,yyy-1,x+16,yyy+24,coll,coll,coll,coll,true);
+			if gotGunsCrown
 				draw_rectangle_color(x-2,yyy-2,x+17,yyy+25,colll,colll,colll,colll,true);
 		}
 		depth = normalDepth - 5;

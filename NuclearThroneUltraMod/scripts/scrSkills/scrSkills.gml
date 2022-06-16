@@ -357,27 +357,27 @@ function scrSkills() {
 	skill_name[32] = "ALKALINE SALIVA"
 	if isDoctor
 	{
-		if instance_exists(Player) && Player.skill_got[9]
+		if instance_exists(Player) && Player.skill_got[9] == 1
 		{
 			skill_text[32] = "FIRST HIT YOU TAKE IN AN AREA#WHILE BELOW MAX HP#HEALS YOU INSTEAD (125%)#DOUBLE HEALING WITH SECOND STOMACH"
 		}
 		else
 		{
 			skill_text[32] = "FIRST HIT YOU TAKE IN AN AREA#WHILE BELOW MAX HP#HEALS YOU INSTEAD (125%)";
-			if instance_exists(Player) && Player.skill_got[32]
+			if instance_exists(Player) && Player.skill_got[32] == 1
 				skill_text[9] = "4, SOMETIMES 5 HP# FROM MEDKITS#DOUBLE HP FROM MEDCHESTS#AND ALKALINE SALIVA"
 		}
 	}
 	else
 	{
-		if instance_exists(Player) && Player.skill_got[9]
+		if instance_exists(Player) && Player.skill_got[9] == 1
 		{
 			skill_text[32] = "FIRST HIT YOU TAKE IN AN AREA#WHILE BELOW MAX HP#HEALS YOU INSTEAD#DOUBLE HEALING WITH SECOND STOMACH";
 		}
 		else
 		{
 			skill_text[32] = "FIRST HIT YOU TAKE IN AN AREA#WHILE BELOW MAX HP#HEALS YOU INSTEAD"
-			if instance_exists(Player) && Player.skill_got[32]
+			if instance_exists(Player) && Player.skill_got[32] == 1 && UberCont.opt_gamemode != 32
 				skill_text[9] = "DOUBLE HP FROM MEDKITS, MEDCHESTS#AND ALKALINE SALIVA"
 		}
 	}
@@ -400,11 +400,11 @@ function scrSkills() {
 	}
 	
 	skill_name[34] = "FLEXIBLE ELBOWS"
-	skill_text[34] = "RELOAD YOUR SECONDARY AT 15% SPEED##IF YOUR SECONDARY IS RELOADED:#INCREASE PRIMARY FIRERATE BY 30%##IF NOT:#EVERY ENEMY HAS A 10% CHANCE#TO DROP AN ADDITIONAL ITEM"
+	skill_text[34] = "RELOAD YOUR SECONDARY AT 20% SPEED##IF YOUR SECONDARY IS RELOADED:#INCREASE PRIMARY FIRERATE BY 30%##IF NOT:#EVERY ENEMY HAS A 15% CHANCE#TO DROP AN ADDITIONAL ITEM"
 	if isDoctor
-		skill_text[34] = "RELOAD YOUR SECONDARY AT 20% SPEED##IF YOUR SECONDARY IS RELOADED:#INCREASE PRIMARY FIRERATE BY 30%##IF NOT:#EVERY ENEMY HAS A 12% CHANCE#TO DROP AN ADDITIONAL ITEM"
+		skill_text[34] = "RELOAD YOUR SECONDARY AT 25% SPEED##IF YOUR SECONDARY IS RELOADED:#INCREASE PRIMARY FIRERATE BY 30%##IF NOT:#EVERY ENEMY HAS A 17% CHANCE#TO DROP AN ADDITIONAL ITEM"
 	if instance_exists(Player) && Player.cwep != 0
-		skill_text[34] = "RELOAD YOUR OFFHAND WEAPONS#AT 15% SPEED##IF ANY OF YOUR#OFFHAND WEAPONS IS RELOADED:#INCREASE PRIMARY FIRERATE BY 30%##IF NOT:#EVERY ENEMY HAS A 10% CHANCE#TO DROP AN ADDITIONAL ITEM"
+		skill_text[34] = "RELOAD YOUR OFFHAND WEAPONS#AT 20% SPEED##IF ANY OF YOUR#OFFHAND WEAPONS IS RELOADED:#INCREASE PRIMARY FIRERATE BY 30%##IF NOT:#EVERY ENEMY HAS A 15% CHANCE#TO DROP AN ADDITIONAL ITEM"
 	skill_tips[34] = "looting and shooting"
 	skill_msnd[34] =  sndMutFlexibleElbows
 	

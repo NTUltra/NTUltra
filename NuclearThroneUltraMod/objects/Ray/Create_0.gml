@@ -25,4 +25,4 @@ lineWidth = 2;
 bloomColour = make_color_rgb(255,50,255);
 if Player.skill_got[17]
 	lineWidth = 3;
-alarm[0] = 1;
+alarm[0] = 2;

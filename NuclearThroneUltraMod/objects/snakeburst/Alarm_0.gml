@@ -12,6 +12,7 @@ snd_play_fire(sndScorpionFire)
 
 with instance_create(x,y,BulletSnake)
 {
+	offset*= other.creator.accuracy;
 	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(6)-3,11)
 	image_angle = direction
 	team = other.team
@@ -26,9 +27,9 @@ with instance_create(x,y,BulletSnake)
     }
 }
 
-BackCont.viewx2 += lengthdir_x(5,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-BackCont.viewy2 += lengthdir_y(5,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-BackCont.shake += 2
+BackCont.viewx2 += lengthdir_x(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+BackCont.viewy2 += lengthdir_y(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+BackCont.shake += 1.5
 creator.wkick = 4}
 
 

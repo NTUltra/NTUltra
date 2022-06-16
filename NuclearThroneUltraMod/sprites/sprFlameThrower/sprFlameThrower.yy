@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprFlameThrower","path":"sprites/sprFlameThrower/sprFlameThrower.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprFlameThrower",
     "tags": [],
     "resourceType": "GMSequence",
   },

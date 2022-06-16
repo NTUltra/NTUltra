@@ -9,7 +9,7 @@ if instance_exists(Player) && !instance_exists(AmmoChest)
 	var t = Player.wep_type[wep];
 	var ammo = Player.ammo[t];
 	var cost = Player.wep_cost[wep];
-	var bwep = Player.wep;
+	var bwep = Player.bwep;
 	var bt = Player.wep_type[bwep];
 	var bammo = Player.ammo[bt];
 	var bcost = Player.wep_cost[bwep];

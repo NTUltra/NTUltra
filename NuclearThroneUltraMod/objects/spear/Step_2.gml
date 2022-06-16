@@ -29,9 +29,9 @@ if instance_exists(enemy) and instance_exists(Player)
 if speed < 3
 {
 	speed = 0
-	instance_create(x,y,Dust)
 	if alarm[2]<1
 	{
+		instance_create(x,y,Dust)
 		alarm[2]=10+random(20);//delay before destroying
 	}
 }

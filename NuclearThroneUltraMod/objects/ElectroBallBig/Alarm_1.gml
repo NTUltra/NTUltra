@@ -8,7 +8,7 @@ if target>0 && instance_number(ElectroBall)>1 && instance_exists(target)
 { 
 	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 	{
-	sprite_index=sprElectroBallBigActive;
+	sprite_index=sprActive;
 
 		if !audio_is_playing(sndSpark1)&&!audio_is_playing(sndSpark2)
 		snd_play(choose(sndSpark1,sndSpark2))
@@ -29,12 +29,12 @@ if target>0 && instance_number(ElectroBall)>1 && instance_exists(target)
 
 	}
 	else
-	sprite_index=sprElectroBallBig;
+	sprite_index=sprInactive;
 }
 else
-sprite_index=sprElectroBallBig;
+sprite_index=sprInactive;
 }
 else
-sprite_index=sprElectroBallBig;
+sprite_index=sprInactive;
 alarm[1]=6;
 

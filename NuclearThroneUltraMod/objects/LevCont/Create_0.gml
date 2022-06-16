@@ -7,15 +7,7 @@ holdExplainMutation = 0;
 __view_set( e__VW.XView, 0, 0 )
 __view_set( e__VW.YView, 0, 0 )
 wave = 0
-if UberCont.opt_gamemode == 32 {
-	//No alkaline and no strong spirit
-	// One hit wonder
-	with Player
-	{
-		skill_got[25] = 1;
-		skill_got[32] = 1;
-	}
-}
+
 if UberCont.useSeed && instance_exists(Player)
 	random_set_seed(UberCont.seed+Player.lastarea+Player.lastsubarea);
 
@@ -226,8 +218,26 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && Player.skillpoints < 2
     skill5=maxskill+1
     
     }
-    else{//*/
-    
+    else{
+	//Get a regular mutation
+    if UberCont.opt_gamemode == 32 {
+		//No alkaline and no strong spirit
+		// One hit wonder
+		with Player
+		{
+			skill_got[25] = 1;
+			skill_got[32] = 1;
+			if race != 10 && race != 12 && race != 18 && race != 19
+			{
+				//not Rebel yung cuz, angel and skeleton
+				//Disable rhino skin, bloodlust second stomach and tough shell
+				skill_got[1] = 1;
+				skill_got[7] = 1;
+				skill_got[9] = 1;
+				skill_got[31] = 1;
+			}
+		}
+	}
     scrSkills()//maybe dont run this when ultra
     
     if scrSkillLeft(0,0,0,0) 
@@ -418,11 +428,21 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && Player.skillpoints < 2
 }
 image_speed = 0.4;
 if UberCont.opt_gamemode == 32 {
-	//No alkaline and no strong spirit
+	debug("And remove");
 	// One hit wonder
 	with Player
 	{
+		//No alkaline and no strong spirit
+		strongspirit = false;
+		strongspiritused = false;
 		skill_got[25] = 0;
 		skill_got[32] = 0;
+		if race != 10 && race != 12 && race != 18 && race != 19
+		{
+			skill_got[1] = 0;
+			skill_got[7] = 0;
+			skill_got[9] = 0;
+			skill_got[31] = 0;
+		}
 	}
 }
