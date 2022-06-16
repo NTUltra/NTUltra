@@ -5733,8 +5733,8 @@ function scrWeapons() {
 	wep_name[520] = "BULLET CRASH"
 	wep_type[520] = 1
 	wep_auto[520] = 1
-	wep_load[520] = 3
-	wep_cost[520] = 6
+	wep_load[520] = 4
+	wep_cost[520] = 7
 	wep_sprt[520] = sprBulletCrash
 	wep_area[520] = 9
 	wep_text[520] = "ohno we crashed"

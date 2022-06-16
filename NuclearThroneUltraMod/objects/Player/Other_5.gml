@@ -481,11 +481,14 @@ subarea = 1
 
 if restarted
 	exit;
-	
-noHit ++;
-if noHit > 3
+
+if area != 100 && area != 103
 {
-	scrUnlockGameMode(32,"FOR COMPLETING FOUR AREAS#IN A ROW WITHOUT#TAKING A HIT")
+	noHit ++;
+	if noHit > 5
+	{
+		scrUnlockGameMode(32,"FOR COMPLETING FIVE AREAS#IN A ROW WITHOUT#TAKING A HIT")
+	}
 }
 if movethislevel==false&&race=15 &&!instance_exists(MenuGen) &&!instance_exists(Menu) &&  !instance_exists(Vlambeer) && !instance_exists(CrownPickup)
 {//ATOM TELEPORT ONLY GAMEMODE UNLOCK

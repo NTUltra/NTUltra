@@ -129,7 +129,7 @@ function scrGameModes() {
 	gamemode_have[31] = 0;
 	
 	gamemode[32] = "ONE HIT WONDER";
-	gamemode_unlock[32] = "TAKE NO DAMAGE#4 AREAS IN A ROW";
+	gamemode_unlock[32] = "TAKE NO DAMAGE#5 AREAS IN A ROW";
 	gamemode_have[32] = 0;
 	
 	/*

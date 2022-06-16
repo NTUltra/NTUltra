@@ -192,7 +192,7 @@ function scrEnemyDeathEvent(){
 			if instance_exists(Player)
 			{
 				if Player.ultra_got[16]
-					Player.meltingd=object_index;
+					Player.meltingd = object_index;
 			}
 			snd_play(sndLastEnemy,0,true)
 		}
