@@ -55,9 +55,12 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 					}
 				}
 			}
-			if instance_exists(other.creator) && team != 0 {
+			if instance_exists(other.creator) && team != 0 && s < 6 {
 				direction = point_direction(x,y,other.creator.x,other.creator.y);
-				motion_add(direction,4/s);
+				var theS = 8/s;
+				motion_add(direction,theS*0.75);
+				x += lengthdir_x(theS,direction);
+				y += lengthdir_y(theS,direction);
 				//mp_potential_step(other.creator.x,other.creator.y,2/s,false)
 				if place_meeting(x,y,Wall)
 				{	x = xprevious;
