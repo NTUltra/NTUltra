@@ -51,6 +51,10 @@ if instance_exists(Player)
 		{
 			sprite_index = sprFloor100Explo;	
 		}
+		with Player
+		{
+			area = 100;
+		}
 	}
 	else
 	{

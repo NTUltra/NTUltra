@@ -8,3 +8,4 @@ offy = random(2)-1
 
 typ = 1 
 
+gotHit = false;

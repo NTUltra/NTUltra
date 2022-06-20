@@ -40,7 +40,6 @@ if patience>0||ultra_got[0]=1
 {
 skillpoints+=patience;
 skillsChosen-=patience;
-debug("patience fuck");
 patience=0;
 }
 

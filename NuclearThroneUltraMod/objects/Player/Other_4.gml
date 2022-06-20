@@ -96,7 +96,7 @@ if skeletonlives=4
 scrUnlockBSkin(19,"FOR HAVING FOUR LIVES",0);
 
 if freezeframe400=true && race = 19 && area=7
-scrUnlockCSkin(19,"FOR REACHING THE VOLCANO#ON 400% SCREENSHAKE#AS SKELETON",0);
+scrUnlockCSkin(19,"FOR REACHING THE VULCANO#ON 400% SCREENSHAKE#AS SKELETON",0);
 
 
 

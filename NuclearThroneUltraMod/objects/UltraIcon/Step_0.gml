@@ -1,6 +1,6 @@
 if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y < y+22 and UberCont.mouse__x > x-22 and UberCont.mouse__y > y-22) && (alarm[0]<1) ) || (exceptionclick && (alarm[0]<1))
 {
-	if Player.ultra_got[0] == 1
+	if Player.ultra_got[0] == 1 && (skill < 29 || skill > 32)
 		Player.horrorEtaken = true;
 var regularprocedure=true;
 Player.ultra_got[skill] = 1
@@ -8,7 +8,9 @@ Player.skillpoints -= 1
 
 if skill = 0
 {
-Player.patience+=1;
+Player.patience += 1;
+Player.skillpoints ++;
+Player.skillsChosen -= 1;
 }
 
 if skill == 2

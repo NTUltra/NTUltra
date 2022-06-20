@@ -170,7 +170,7 @@ goal=120+s;
 
 
 if UberCont.opt_gamemode==6 && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels
-goal=30+s;
+goal=70+s;
 
 if UberCont.opt_gamemode==20 && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//big levels
 goal=300+s;

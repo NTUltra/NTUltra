@@ -11,3 +11,4 @@ typ = 1
 sticky = 0;
 alarm[11] = 1;
 canExplodeBlade = false;
+gotHit = false;

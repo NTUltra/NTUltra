@@ -7,7 +7,7 @@ holdExplainMutation = 0;
 __view_set( e__VW.XView, 0, 0 )
 __view_set( e__VW.YView, 0, 0 )
 wave = 0
-
+debug("chosenskillsL ",Player.skillsChosen);
 if UberCont.useSeed && instance_exists(Player)
 	random_set_seed(UberCont.seed+Player.lastarea+Player.lastsubarea);
 
@@ -46,9 +46,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && Player.skillpoints < 2
 
 	if Player.ultra_got[0]=1 && !Player.horrorEtaken//&&(Player.skillsChosen>7)
 	{
-
-	scrUltraEHorror();
-  
+		scrUltraEHorror();
 	}
 	else
 	{
@@ -221,10 +219,11 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && Player.skillpoints < 2
     else{
 	//Get a regular mutation
     if UberCont.opt_gamemode == 32 {
-		//No alkaline and no strong spirit
+		//No alkaline boiling veins and no strong spirit
 		// One hit wonder
 		with Player
 		{
+			skill_got[14] = 1;
 			skill_got[25] = 1;
 			skill_got[32] = 1;
 			if race != 10 && race != 12 && race != 18 && race != 19
@@ -234,6 +233,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && Player.skillpoints < 2
 				skill_got[1] = 1;
 				skill_got[7] = 1;
 				skill_got[9] = 1;
+				skill_got[22] = 1;
 				skill_got[31] = 1;
 			}
 		}
@@ -435,6 +435,7 @@ if UberCont.opt_gamemode == 32 {
 		//No alkaline and no strong spirit
 		strongspirit = false;
 		strongspiritused = false;
+		skill_got[14] = 0;
 		skill_got[25] = 0;
 		skill_got[32] = 0;
 		if race != 10 && race != 12 && race != 18 && race != 19
@@ -442,6 +443,7 @@ if UberCont.opt_gamemode == 32 {
 			skill_got[1] = 0;
 			skill_got[7] = 0;
 			skill_got[9] = 0;
+			skill_got[22] = 0;
 			skill_got[31] = 0;
 		}
 	}

@@ -5,7 +5,7 @@ alarm[0] = clamp(point_distance(x,y,targetx,targety)/6,1,300)
 }
 else if sprite_index = sprInvertedRavenLand
 {
-if !place_meeting(x,y,Floor)
+if !place_meeting(x,y,Floor) || place_meeting(x,y,Wall)
 {
 nofly = 0
 //Shuffle clsoer to floor to prevent softlock

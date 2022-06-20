@@ -2,12 +2,24 @@
 switch(array_length(UberCont.collectedRewards))
 {
 	case 0:
-		with Player
+		//One hit wonder
+		if UberCont.opt_gamemode == 32
 		{
-			maxhealth += 1;
-			my_health += 1;
+			with Player
+			{
+				skillpoints ++;
+				skillsChosen--;
+			}
 		}
-		UberCont.maxHpIncrease += 1;
+		else
+		{
+			with Player
+			{
+				maxhealth += 1;
+				my_health += 1;
+			}
+			UberCont.maxHpIncrease += 1
+		}
 		snd_play(other.snd_chst);
 	break;
 	case 1:
@@ -35,12 +47,25 @@ switch(array_length(UberCont.collectedRewards))
 		//name += "INCREASE YOUR IFRAMES BY 25%";
 	break;
 	case 5:
-		with Player
+		//One hit wonder
+		if UberCont.opt_gamemode == 32
 		{
-			maxhealth += 1;
-			my_health += 1;
+			with Player
+			{
+				skillpoints ++;
+				skillsChosen --;
+				ultraNow = true;
+			}
 		}
-		UberCont.maxHpIncrease += 1;
+		else
+		{
+			with Player
+			{
+				maxhealth += 1;
+				my_health += 1;
+			}
+			UberCont.maxHpIncrease += 1;
+		}
 		snd_play(other.snd_chst);
 	break;
 }
@@ -61,3 +86,4 @@ alarm[0] = 0;
 sprite_index = sprBossHolderDead;
 image_speed = 0.4;
 image_index = 0;
+debug("COLLECTED REWARDS:",array_length(UberCont.collectedRewards)	);

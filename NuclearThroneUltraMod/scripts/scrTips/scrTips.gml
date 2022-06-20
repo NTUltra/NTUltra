@@ -115,7 +115,7 @@ function scrTips() {
 	if Player.area = 105
 	tip = choose("inverted","another dimension","same world","mystery","blue","wormhole","what is this place","blueberry","im blue da ba dee!","interdimensional travel","this is not the wastelands?!","SHORTCUT!")
 	if Player.area = 7
-	tip = choose("inferno","hell","its getting hot in here", "volcano", "hot", "heat", "lava", "magma","lava damages over time",
+	tip = choose("inferno","hell","its getting hot in here", "vulcano", "hot", "heat", "lava", "magma","lava damages over time",
 	"boiling veins protects you#against lava","don't stand#too long in lava","hot feet","tomato sauce","do not run away from a dragon fight!","do not flee from thy dragon")
 	if Player.area = 8
 	tip = choose("sweet","wonderland","evil cards","play your cards right","teapots of doom","cotton candy floors","do not eat the mushrooms","I'm not even a fan of#alice in wonderland")
@@ -131,13 +131,13 @@ function scrTips() {
 	if Player.area = 107
 	tip = choose("black snow?","looks like shit","mud?","explosions everywhere!","should not have come here","the greed is real","do you want to die?","inverted demons","chocolate city")
 	if Player.area = 101
-	tip = choose("water","hold your breath","big fish here","you should come here more often")
+	tip = choose("water","hold your breath","big fish here","you should come here more often","ocean man!","swimming")
 	if Player.area = 108
-	tip = choose("true hell","frozen volcano","ice cold")
+	tip = choose("true hell","frozen vulcano","ice cold")
 	if Player.area = 109
 	tip = choose("this place is very deadly","don't get nuked","try not to burn","don't blow up","why are you here","your run ends now")
 	if Player.area = 110
-	tip = choose("not sure what the smell is","blue toxic?","glitchy","things are going wrong")
+	tip = choose("not sure what the smell is","blue toxic?","glitchy","things are going wrong","get out of here")
 	if Player.area = 111
 	tip = choose("not cursed caves","green & blue","caves part 2","weird","odd","spinach caves","brocoli")
 	if Player.area = 112
@@ -145,13 +145,13 @@ function scrTips() {
 	if Player.area = 113
 	tip = choose("welcome to banditland","bandits with erasers","laserbandits","when the night falls","tonight bandit party","be afraid of the bandit")
 	if Player.area = 114
-	tip = choose("jungle","ugga bugga","wet grass")
+	tip = choose("jungle","ugga bugga","wet grass","green")
 	if Player.area = 115
 	tip = choose("cheese caves","cursed caves","gouda")//Fun fact I used to live in Gouda
 	if Player.area = 116
 	tip = choose("survival arena","when starting a wave#chests and weapon drops get destroyed")
 	if Player.area = 117
-	tip = choose("mushrooms with guns","mushroom land","infected mushrooms")
+	tip = choose("mushrooms with guns","mushroom land","infected mushrooms","don't eat the mushrooms")
 	}
 
 

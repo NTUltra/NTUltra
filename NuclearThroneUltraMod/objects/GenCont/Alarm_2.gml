@@ -485,10 +485,17 @@ else if Player.area > 2 and Player.subarea = 2 && Player.area!=101&&Player.area!
 	}
 }
 
-if Player.area=1 && Player.subarea<3
+if Player.area=1
 {
-with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/3+random(128)-64,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/3+random(128)-64,Floor)
-instance_create(x+16,y+16,BigFishSkull)
+	if Player.subarea == 1 && Player.loops < 2
+	{
+		instance_create(0,0,RetailOasis);	
+	}
+	if Player.subarea == 2
+	{
+		with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/3+random(128)-64,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/3+random(128)-64,Floor)
+			instance_create(x+16,y+16,BigFishSkull)
+	}
 }
 
 

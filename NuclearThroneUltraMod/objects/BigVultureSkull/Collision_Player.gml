@@ -11,7 +11,7 @@ if spr_idle == sprBigVultureSkullOpen
 			area = 10
 			subarea = 0
 		}
-
+		mask_index = mskPickupThroughWall;
 		//with enemy
 		//	my_health = 0
 		spr_idle = sprBigVultureSkull;

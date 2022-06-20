@@ -255,20 +255,13 @@ room_speed=35;
 			}
 		}
 	}
-	
-	with WepPickup
-    {
-	    //if persistent = true
-	    //{
-		    persistent = false
-		    x = Player.x
-		    y = Player.y
-		    motion_add(random(360),1.5+random(1))
-	    //}
-    }
 }
 
-
+with WepPickup
+{
+	x = Player.x
+	y = Player.y
+}
 
 with PlayerAlarms//Recheck alarms for certain skills
 	event_user(0);

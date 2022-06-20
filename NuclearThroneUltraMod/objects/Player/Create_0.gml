@@ -303,7 +303,18 @@ else if UberCont.opt_gamemode == 31//Melee only
 {
 	skill_got[13] = 1;
 }
-
+if UberCont.opt_gamemode == 32//One hit wonder
+{
+	if array_length(UberCont.collectedRewards) > 0
+	{
+		skillpoints ++;
+	}
+	if array_length(UberCont.collectedRewards) > 5
+	{
+		ultraNow = true;
+		skillpoints ++;
+	}
+}
 //AREA STUFF
 area = 1
 subarea = 0
@@ -393,15 +404,13 @@ prevhealth = maxhealth //health previous step
 
 //default shit
 clicked = 0
-if scrMeleeWeapons(wep)
-wepangle = choose(120, -120)
-else
-    wepangle = 0
+
 wepflip = 1
 angle = 0
 wkick = 0
 bwkick = 0
 cwkick = 0
+wepangle = 0;
 bwepangle = 0
 cwepangle = 0
 bwepflip = 1
@@ -569,3 +578,6 @@ cheatyinfiniteammo = false;
 unkillable = false;
 maxhealth += UberCont.maxHpIncrease;
 my_health = maxhealth;
+scrWeaponHold();
+if wep == bwep
+	scrSwapWeps();

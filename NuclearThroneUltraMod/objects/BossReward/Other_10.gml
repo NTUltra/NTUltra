@@ -5,7 +5,11 @@ name = "";
 switch(array_length(UberCont.collectedRewards))
 {
 	case 0:
-		name += "GAIN 1 MAX HP";
+	//One hit wonder
+		if UberCont.opt_gamemode == 32
+			name += "GAIN ONE MUTATION";
+		else
+			name += "GAIN 1 MAX HP";
 	break;
 	case 1:
 		name += "INCREASE THE VALUE OF RADIATION BY 15%";
@@ -20,6 +24,9 @@ switch(array_length(UberCont.collectedRewards))
 		name += "INCREASE YOUR MAX LEVEL BY ONE";
 	break;
 	case 5:
-		name += "GAIN 1 MAX HP";
+		if UberCont.opt_gamemode == 32
+			name += "GAIN ONE ULTRA MUTATION";
+		else
+			name += "GAIN 1 MAX HP";
 	break;
 }

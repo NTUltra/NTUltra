@@ -544,14 +544,14 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 
 	if !(instance_exists(CrystalShield))
 	{
-	IsShielding=false;
+		IsShielding=false;
 	}
 	else if (CrystalShield.sprite_index!=sprShieldDisappear)
 	{
-	IsShielding=true;
+		IsShielding=true;
 	}
 	else{
-	IsShielding=false;
+		IsShielding=false;
 	}
 	if( (!(IsShielding)||(ultra_got[7]==1)) && (UberCont.opt_gamemode!=12||instance_exists(Marker)) ){
 	if race = 7 || (altUltra && ultra_got[23] && scrMeleeWeapons(wep)){//Roids always auto fire
@@ -591,20 +591,20 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 
 	if can_shoot = 1 and flying == 0 and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 	{
-	if wep_auto[wep] = 0 and clicked = 1
-	{
+		if wep_auto[wep] = 0 and clicked = 1
+		{
 
-		if ultra_got[44] == 1 && instance_exists(Marker)
-		{
-			scrCrackShotFire();
-		}
-		else
-		{
-			scrFire()
-		}
+			if ultra_got[44] == 1 && instance_exists(Marker)
+			{
+				scrCrackShotFire();
+			}
+			else
+			{
+				scrFire()
+			}
     
-	clicked = 0
-	}
+		clicked = 0
+		}
 		if wep_auto[wep] = 1 and (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
 		{
 		    
@@ -618,8 +618,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 			}
 		}
 	}
-
-	}
+}
 
 	
 
@@ -1040,7 +1039,7 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 		}
 	}
 	//Can we fire again? Two times in a frame? Or even more if you go negative reload
-	if wep_auto[wep] = 1 and (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
+	if (!IsShielding || ultra_got[7]==1) and wep_auto[wep] = 1 and (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
 	{
 		while can_shoot = 1 and flying == 0 and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 		{

@@ -2848,7 +2848,7 @@ function scrWeapons() {
 	wep_name[258] = "SHOTGUN RIFLE"
 	wep_type[258] = 2
 	wep_auto[258] = 0
-	wep_load[258] = 18
+	wep_load[258] = 17
 	wep_cost[258] = 1
 	wep_sprt[258] = sprShotgunRifle1
 	wep_area[258] = 4
@@ -3305,7 +3305,7 @@ function scrWeapons() {
 	wep_area[299] = 20
 	wep_text[299] = "ultra wave fun"
 	wep_swap[299] = sndSwapShotgun
-	wep_rad[299] = 20;
+	wep_rad[299] = 16;
 
 	wep_name[300] = "LASER WAVE GUN"
 	wep_type[300] = 5
@@ -4718,7 +4718,7 @@ function scrWeapons() {
 	wep_swap[427] = sndSwapMachinegun
 	wep_rad[427] = 6;
 	
-	wep_name[428] = "EXPLOSION WAZER RIFLE"
+	wep_name[428] = "EXPLOSIVE WAZER RIFLE"
 	wep_type[428] = 4
 	wep_auto[428] = 1
 	wep_load[428] = 6
@@ -5029,7 +5029,7 @@ function scrWeapons() {
 	wep_name[456] = "SUPER SCYTHE"
 	wep_type[456] = 0
 	wep_auto[456] = 0
-	wep_load[456] = 34
+	wep_load[456] = 35
 	wep_cost[456] = 0
 	wep_sprt[456] = sprSuperScythe
 	wep_area[456] = 22
@@ -5747,7 +5747,7 @@ function scrWeapons() {
 	wep_load[521] = 50
 	wep_cost[521] = 8
 	wep_sprt[521] = sprSuperChunkyBladeGun
-	wep_area[521] = 24
+	wep_area[521] = 23
 	wep_text[521] = "majestic blades"
 	wep_swap[521] = sndSwapBow
 	wep_rad[521] = 0;
@@ -6214,6 +6214,38 @@ function scrWeapons() {
 	wep_swap[563] = sndSwapEnergy
 	wep_rad[563] = 0;
 	
+	wep_name[564] = "TOXIC ASSAULT RIFLE"
+	wep_type[564] = 1
+	wep_auto[564] = 0
+	wep_load[564] = 11
+	wep_cost[564] = 4
+	wep_sprt[564] = sprToxicAssaultRifle
+	wep_area[564] = 4
+	wep_text[564] = "stanky stanky stanky"
+	wep_swap[564] = sndSwapMachinegun
+	wep_rad[564] = 0;
+	
+	wep_name[565] = "TOXIC MINIGUN"
+	wep_type[565] = 1
+	wep_auto[565] = 1
+	wep_load[565] = 1
+	wep_cost[565] = 1.5
+	wep_sprt[565] = sprToxicMinigun
+	wep_area[565] = 13
+	wep_text[565] = "drilling and grilling"
+	wep_swap[565] = sndSwapMachinegun
+	wep_rad[565] = 0;
+
+	wep_name[566] = "TOXIC WAZER RIFLE"
+	wep_type[566] = 5
+	wep_auto[566] = 1
+	wep_load[566] = 7
+	wep_cost[566] = 1
+	wep_sprt[566] = sprToxicWazerRifle
+	wep_area[566] = 15
+	wep_text[566] = "gazer"
+	wep_swap[566] = sndSwapEnergy
+	wep_rad[566] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 

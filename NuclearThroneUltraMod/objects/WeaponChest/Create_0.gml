@@ -15,10 +15,15 @@ sprite_index = sprCursedWeaponChest
 
 if instance_exists(Player)
 {
-if (Player.ultra_got[25]==1)
+	if (Player.ultra_got[25]==1)
     {
     mediumchest=1;
     }
+	if Player.crown == 99//Crown of love
+	{
+		instance_destroy(id,false);
+		instance_create(x,y,AmmoChest);
+	}
 }
 
 scrWeapons()
@@ -40,4 +45,3 @@ wep=scrDecideWep(0, 10, curse)
 		wep = 0;
 		curse = 0;
 	}
-

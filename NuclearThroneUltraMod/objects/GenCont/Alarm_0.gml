@@ -25,14 +25,14 @@ if !instance_exists(Player)
 instance_create(10016,10016,Player)
 else
 {
-with Player
-{
-depth = -2
-visible = 1
-x = 10016
-y = 10016
-angle = 0
-}
+	with Player
+	{
+	depth = -2
+	visible = 1
+	x = 10016
+	y = 10016
+	angle = 0
+	}
 }
 
 
@@ -44,6 +44,11 @@ with Crown
 {
 x = Player.x
 y = Player.y
+}
+with WepPickup
+{
+	x = Player.x
+	y = Player.y
 }
 SetSeed();
 if Player.area!=104

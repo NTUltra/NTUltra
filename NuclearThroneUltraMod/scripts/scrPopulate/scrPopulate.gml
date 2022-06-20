@@ -62,7 +62,7 @@ function scrPopulate() {
 					
 				if Player.loops > 8 && random(20) < Player.loops
 					scrPopEnemies();
-
+				
             }
             else {
                 if UberCont.opt_gamemode = 9 //easy mode
@@ -355,7 +355,14 @@ function scrPopulate() {
 				repeat(3)
 					scrPopEnemies()
 			}
-
+			if UberCont.opt_gamemode == 6//Claustrophobia
+			{
+				if point_distance(x, y, Player.x, Player.y) > 110 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280)
+				{
+					//repeat(2)
+						scrPopEnemies();
+				}
+			}
         }
 
         scrPopProps()

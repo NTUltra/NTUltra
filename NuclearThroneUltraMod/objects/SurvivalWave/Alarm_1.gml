@@ -61,6 +61,10 @@ if UberCont.opt_gamemode != 25
 			snd_loop(song);
 		}
 		alarm[4] = 0;
+		with Player
+		{
+			area = 100;
+		}
 	}
 	else
 	{
@@ -70,10 +74,6 @@ if UberCont.opt_gamemode != 25
 				my_health = 0;
 		}
 		alarm[1] = 60;
-	}
-	with Player
-	{
-		area = 100;
 	}
 }
 else

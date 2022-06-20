@@ -42,7 +42,7 @@ if instance_exists(Player) && target==Player.id
     snd_play(sndGruntFire)
     wkick = 4
     with instance_create(x,y,IDPDBullet){
-    motion_add(other.gunangle+random(6)-3,8)
+    motion_add(other.gunangle+random(6)-3,7.9)
     image_angle = direction
     team = other.team
 	if team == 2

@@ -6401,7 +6401,7 @@ function scrFire2() {
 
 	break;
 	
-	//EXPLOSION WAZER
+	//EXPLOSIVE WAZER RIFLE
 	case 428:
 	var exists = false;
 	with PlayerExplosionWazer
@@ -9644,7 +9644,7 @@ function scrFire2() {
 
 	break;
 	
-	//MINIGUN
+	//EXPLOSIVE MINIGUN
 	case 550:
 
 	snd_play_fire(sndMinigun)
@@ -10034,6 +10034,72 @@ function scrFire2() {
 		BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
 		BackCont.shake += 12
 		wkick = 7
+	break;
+	
+	//TOXIC ASSAULT RIFLE
+	case 564:
+
+	with instance_create(x,y,ToxicBulletBurst)
+	{
+	creator = other.id
+	ammo = 3
+	time = 2
+	team = other.team
+	event_perform(ev_alarm,0) 
+	}
+
+	break;
+	
+	//TOXIC MINIGUN
+	case 565:
+
+	snd_play_fire(sndMinigun)
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(80)-40,3+random(2))
+
+	with instance_create(x,y,Bullet1Toxic)
+	{motion_add(aimDirection+(random(26)-13)*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+	motion_add(aimDirection+180,0.6)
+	BackCont.viewx2 += lengthdir_x(6.5,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(6.5,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 4
+
+	break;
+	
+	//TOXIC WAZER RIFLE
+	case 566:
+	var exists = false;
+	with PlayerToxicWazer
+	{
+		if owner == other.id
+			exists = true;
+	}
+	if !exists
+	{
+		snd_play_2d(sndWazerStart,0,true);
+		with instance_create(x,y,PlayerToxicWazer)
+		{
+			owner = other.id;
+			team = other.team;
+			mywep = other.wep
+			alarm[0] = 1 + other.wep_load[mywep];
+			owner = other.id;
+			camKick = 5;
+			camShake = 3;
+			wkick = 4;
+		}
+	}
+	else
+	{
+		with PlayerToxicWazer
+		{
+			if owner == other.id
+				alarm[0] = 1 + other.wep_load[other.wep];
+		}
+	}
 	break;
 	
 	}//end of switch part 2!

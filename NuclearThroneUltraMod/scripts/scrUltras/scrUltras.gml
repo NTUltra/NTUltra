@@ -2,7 +2,7 @@ function scrUltras() {
 	// ULTRAS
 
 	ultra_name[0] = "TOTAL FORECALL"
-	ultra_text[0] = "CHOOSE AN ULTRA MUTATION#FROM ANOTHER CHARACTER NEXT LEVEL#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)#GET OFFERED PATIENCE WITH EVERY CHOICE"
+	ultra_text[0] = "CHOOSE AN ULTRA MUTATION#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)#GET OFFERED PATIENCE WITH EVERY CHOICE"
 	ultra_tips[0] = "adapting"
 
 	//FISH

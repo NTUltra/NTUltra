@@ -275,7 +275,7 @@ function scrRaces() {
 	race_bskin[19] = 0
 	race_cskin[19] = 0
 	race_bskin_lock[19] = "HAVE FOUR LIVES"
-	race_cskin_lock[19] = "REACH THE VOLCANO#ON 400% FREEZEFRAMES"
+	race_cskin_lock[19] = "REACH THE VULCANO#ON 400% FREEZEFRAMES#AS SKELETON"
 
 
 	race_name[20] = "[BUSINESS HOG]"
