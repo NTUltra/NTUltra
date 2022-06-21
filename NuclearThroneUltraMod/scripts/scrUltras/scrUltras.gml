@@ -586,7 +586,7 @@ function scrUltras() {
 	ultra_tips[109] = "challenge run"
 
 	dir = 0
-	repeat(maxultra+1)
+	repeat(maxultra+2)
 	{ultra_got[dir] = 0
 	dir += 1}
 

@@ -118,9 +118,8 @@ function scrDrawHUD() {
 	    }
 	}
 	dix ++
-	repeat(Player.maxultra)
+	repeat(Player.maxultra+1)//+1 because secret trash
 	{
-
 	    if Player.ultra_got[dir]
 	    {
 			var xx =__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-12-16*dix;
