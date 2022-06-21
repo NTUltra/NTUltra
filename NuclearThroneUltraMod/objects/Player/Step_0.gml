@@ -17,7 +17,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 
 
 	if race == 23 && ultra_got[92] == 0
-	speed=maxspeed;
+	speed = clamp(speed,maxspeed*0.8,maxspeed);
 
 	if alarm[4]>0//boiling veins
 	{

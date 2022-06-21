@@ -22,12 +22,12 @@ function scrDrawUpdate() {
 		{
 			url_open("https://twitter.com/Erdeppol");
 		}
-	txt0 = @"#UPDATE 28 BETA [0.12]
+	txt0 = @"#UPDATE 28 BETA [0.13]
 	
 	* 104 NEW WEAPONS!
 	
-	* NEW ULTRA MUTATION ART
-	BY SEYMOUR SCHLONG
+	* ALL ULTRA MUTATION ART!
+	MANY BY SEYMOUR SCHLONG
 	
 	* BUFFED IMPACT WRISTS
 	* BUFFED RECYCLE GLAND

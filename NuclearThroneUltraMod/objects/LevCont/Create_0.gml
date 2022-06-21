@@ -37,7 +37,7 @@ if Player.hogpoints > 1// && Player.area=105 && Player.subarea=1
     
     exit;
 }
-else if (Player.skillsChosen>7 || (Player.ultra_got[0] && Player.skillpoints < 2 && !Player.horrorEtaken
+else if (Player.skillsChosen>7 || (Player.ultra_got[0] &&/* Player.skillpoints < 2 && */!Player.horrorEtaken
 || Player.ultraNow))&&(Player.ultra_got[75]==0)//ULTRA! Player.level>9 not skelly redemption ultra a Player.skillsChosen>7
 {
 	Player.ultraNow = false;

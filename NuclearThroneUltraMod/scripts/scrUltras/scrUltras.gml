@@ -323,7 +323,7 @@ function scrUltras() {
     
 	    ultra_name[64] = "BLANK ARMOUR"
 	    ultra_text[64] = "WHENEVER YOU LOSE ARMOUR#YOU CLEAR ALL PROJECTILES#AND DEAL A MASSIVE AMOUNT OF DAMAGE#TO ALL ENEMIES ON SCREEN"
-	    ultra_tips[64] = "rogue is jelous"
+	    ultra_tips[64] = "come at me bro"
     
 	//WEAPON SMITH 
 	ultra_name[65] = "WEAPON MODDER"
@@ -474,7 +474,7 @@ function scrUltras() {
 	    {
 	    if Player.race=19||Player.race=20||Player.race=21{//skeleton hog and horror
 	    ultra_name[92] = "POTENCY"
-	    ultra_text[92] = "MORE GAS DAMAGE"
+	    ultra_text[92] = "MORE TOXIC GAS DAMAGE"
 	    ultra_tips[92] = "why'd you want to be gassy?"
 	    }
 	    else{
@@ -573,7 +573,7 @@ function scrUltras() {
 	
 	ultra_name[107] = "MANY HANDS"
 	ultra_text[107] = "CAN HAVE TWO HANDS OUT AT A TIME#PUNCH PROJECTILES OUT OF EXISTENCE#YOU CAN HAVE THREE HANDS WHILE#IN AN INVERTED AREA"
-	ultra_tips[107] = "i can count to 15 now"
+	ultra_tips[107] = "consecutive normal punches"
     
 	ultra_name[108] = "DELICATE HANDS"
 	ultra_text[108] = "ALLOWS YOUR HAND TO COLLECT#RADS, PICKUPS AND WEAPONS#HAND IS FASTER#THE HAND IS EVEN FASTER#WHILE IN AN INVERTED AREA"

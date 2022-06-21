@@ -217,7 +217,7 @@ function scrPopChests() {
 	{
 		gol = 0;
 	}
-		
+	debug("radchests: ",totalRadChests);
 	if (totalRadChests < gol)
 	{
 		scrCreateMissingChest(RadChest,gol);	

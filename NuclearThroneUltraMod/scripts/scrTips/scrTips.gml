@@ -49,6 +49,7 @@ function scrTips() {
 	"there are other worlds out there",
 	/*more rares*/choose("try not to get mad","be kind","the original idea for#the name trashtalk#came from lars in a stream#he made a lot of the sounds#in ultra mod",
 	"maybe you should play better","if you ever get stuck#outside a level#walk far away#from the level to get teleported back","use wasd to move","don't get baited by items","ask and ye shall receive","you smell that?","sick build bro","what does your gun tell you?","don't get baited by items"
+	,"frog is voiced by#Jukio Kallio"
 	,"thematically inconsistent!","if you reach loop 2#your level cap increases by 1","skeleton has#a fifth ultra mutation","don't be afraid to pick up new weapons",choose("28 EGGS FOR BREAKFAST","shit on my tits","never pick hanzo","microtransactions","if you are seeing this#you are fucking aswesome")/*super rare*/
 	)
 	),choose(
@@ -276,7 +277,7 @@ function scrTips() {
 	tip = choose("Keep moving","Never look back","Never slow down","They're getting closer","Never stop","Another world lost")
 
 	if Player.race = 23//FROG
-	tip = choose("Wait for me","Don't hold it up","Keep going","Let it all out","Gas is good","Bloated","Restless","Let's go","Can't wait")
+	tip = choose("Wait for me","Don't hold it up","Keep going","Let it all out","Gas is good","Bloated","Restless","Let's go","Can't wait","frog likes to sing")
 
 	if Player.race = 24//ELEMENTOR
 	tip = choose("The elements will destroy you","The avatar","meditating","Floaty","Very down to earth","SOLID! play!",
