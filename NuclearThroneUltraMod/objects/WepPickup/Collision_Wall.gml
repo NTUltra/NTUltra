@@ -1,6 +1,6 @@
 
 if instance_exists(Player){
-if Player.ultra_got[12]==0
+	if Player.ultra_got[12]==0
     {
 		var isNearPortal = false;
 		if instance_exists(Portal)
@@ -18,7 +18,16 @@ if Player.ultra_got[12]==0
 		if !isNearPortal
 		{
 			move_bounce_solid(true)
-			move_outside_solid(point_direction(other.x+8,other.y+8,x,y),2)	
+			if instance_exists(Floor)
+			{
+				var f = instance_nearest(x,y,Floor);
+				var o = 16;
+				if f.object_index == FloorExplo
+					o = 8;
+				var d = point_direction(x,y,f.x+o,f.y+o);
+				move_outside_solid(d,2)
+				//move_outside_solid(point_direction(other.x+8,other.y+8,x,y),2)
+			}
 		}
     }
     else

@@ -16,10 +16,6 @@ if aditionalwep != 315 && instance_exists(Player) && Player.area == 103
 		aditionalwep = 315;
 	}
 }
-if instance_exists(Player)
-{if random(4) < Player.nochest
-instance_change(BigWeaponChest,true)
-}
 event_inherited()
 curse = 0
 

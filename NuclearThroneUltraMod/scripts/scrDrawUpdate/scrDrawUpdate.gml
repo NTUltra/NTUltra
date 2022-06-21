@@ -22,7 +22,7 @@ function scrDrawUpdate() {
 		{
 			url_open("https://twitter.com/Erdeppol");
 		}
-	txt0 = @"#UPDATE 28 BETA [0.11]
+	txt0 = @"#UPDATE 28 BETA [0.12]
 	
 	* 104 NEW WEAPONS!
 	
@@ -40,6 +40,7 @@ function scrDrawUpdate() {
 	* NEW PLANT ULTRA C
 	* NEW SECRET FISH ULTRA
 	* CHANGED VIKING ULTRA C
+	* ROBOT ULTRA BUFFS
 	* NEW GOLDEN ENEMIES
 	
 	* NEW MUTATIONS
@@ -53,7 +54,6 @@ function scrDrawUpdate() {
 	
 	PRESS [T] FOR UPDATES ON TWITTER
 	PRESS [D] TO JOIN THE DISCORD
-	
 	
 	* PRESS [SPACE] FOR PAGE 2"
 	}
@@ -72,7 +72,6 @@ function scrDrawUpdate() {
 	* MORE ULTRA MOD CASES COVERED
 	
 	* NEW GOLDEN ENEMIES
-	
 	GOLD JUNGLE FLY (LOOP 2+)
 	GOLDEN CRYSTALS
 	INVERTED GOLDEN CRYSTALS
@@ -90,6 +89,7 @@ function scrDrawUpdate() {
 	* NEW GAMEMODES
 	MELEE ONLY
 	ULTRA MUTATION START
+	ONE HIT WONDER
 	
 	* LOTS OF BALANCE AND BUGFIXES
 	

@@ -98,7 +98,7 @@ if crown = 2
 	if my_health >= maxhealth
 	{
 		my_health = max(my_health,maxhealth);
-		my_health += 1;
+		my_health += 2;
 	}
 	else
 	{
@@ -203,9 +203,30 @@ horrorcharge=origincharge;
 }
 oasis=false;
 
-///looping!
+///looping! ---------------------------
 if looping && area != 104
 {
+	my_health = maxhealth;
+	ammo[1] += 200;
+	ammo[2] += 20;
+	ammo[3] += 20;
+	ammo[4] += 20;
+	ammo[5] += 20;
+	if ammo[1] > typ_amax[1]
+		ammo[1] = typ_amax[1];
+
+	if ammo[2] > typ_amax[2]
+		ammo[2] = typ_amax[2];
+
+	if ammo[3] > typ_amax[3]
+		ammo[3] = typ_amax[3];
+
+	if ammo[4] > typ_amax[4]
+		ammo[4] = typ_amax[4];
+
+	if ammo[5] > typ_amax[5]
+		ammo[5] = typ_amax[5];
+	
 	debug("Looping now");
 if scrCheckLoopAll()
 	scrUnlockCSkin(1,"FOR LOOPING WITH EVERY CHARACTER",0);

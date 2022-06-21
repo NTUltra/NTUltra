@@ -4,8 +4,8 @@ if instance_number(Floor) > goal && (UberCont.opt_gamemode != 25 || instance_exi
 	{
 		if instance_exists(Player){
 		if (Player.area == 3 and Player.subarea == 3){//#safe spawns 4 big dog
-		Player.x=x+16;
-		Player.y=y+16;
+			Player.x=x+16;
+			Player.y=y+16;
 		}
 		instance_create(x,y,Floor)
 		if (Player.area == 9 && Player.subarea == 3)
@@ -43,6 +43,12 @@ if UberCont.firstFloorMaker
 		other.y = 10016;
 		Player.x = other.x;
 		Player.y = other.y;
+		with WepPickup
+		{
+			x = Player.x;
+			y = Player.y-200;
+			speed = 0;
+		}
 		direction = 90;
 	}
 }

@@ -56,6 +56,10 @@ function scrEnemyDeathEvent(){
 		{
 			scrDrop(0,3);
 		}
+		if Player.ultra_got[29]//Refined taste
+		{
+			scrDrop(0,5);	
+		}
 		with Player
 		{
 			kills ++;

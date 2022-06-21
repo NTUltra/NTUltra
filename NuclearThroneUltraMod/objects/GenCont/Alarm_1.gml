@@ -91,7 +91,6 @@ with WepPickup
 {
 	//if persistent = true
 	//{
-		persistent = false
 		x = Player.x
 		y = Player.y
 		motion_add(random(360),1.5+random(1))

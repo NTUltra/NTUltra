@@ -398,7 +398,6 @@ if skill_got[2] && tookHit && !exception
 {
 	extrafeetalarm = 20;
 	extrafeetdodged = false;
-	debug("got hit by enemy");
 }
 
 ///tough shell

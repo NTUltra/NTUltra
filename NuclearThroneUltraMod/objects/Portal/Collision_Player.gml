@@ -8,58 +8,100 @@ if random(2000) < 1//Culture
 endgame = 30;
 
 //ROBOT
-    if Player.race = 8
-    {
+if Player.race = 8
+{
 	    if (Player.race == 8 && (Player.ultra_got[29]==1||Player.ultra_got[30]==1||Player.ultra_got[31]==1||Player.ultra_got[32]==1))
 	    {
 	    with WepPickup
 	    {
-	    if curse != 1&&persistent==false
-	    {
-			if string_copy(name,0,5) = "ULTRA"
-			{
-				scrRaddrop(12);
-				scrUnlockCSkin(8,"FOR EATING AN ULTRA WEAPON",0);
-			}
-			else if string_copy(name,0,5) = "HYPER" || wep = 131//heavy hyper shit
-			{
-				scrUnlockBSkin(8,"FOR EATING A HYPER WEAPON",0);
-			}
-		    else if string_copy(name,0,4) = "GOLD"
-		    {repeat(4)
-		    {if random(Player.maxhealth) > Player.my_health and Player.crown != 2
+		    if curse != 1&&persistent==false
+		    {
+				if string_copy(name,0,5) = "ULTRA"
+				{
+					scrRaddrop(12);
+					scrUnlockCSkin(8,"FOR EATING AN ULTRA WEAPON",0);
+				}
+				else if string_copy(name,0,5) = "HYPER" || wep = 131//heavy hyper shit
+				{
+					scrUnlockBSkin(8,"FOR EATING A HYPER WEAPON",0);
+				}
+			    else if string_copy(name,0,4) = "GOLD"
+			    {repeat(4)
+			    {if random(Player.maxhealth) > Player.my_health and Player.crown != 2
+			    instance_create(Player.x,Player.y,HPPickup)
+			    else
+			    instance_create(Player.x,Player.y,AmmoPickup)}
+				}
+		    with instance_create(Player.x,Player.y,RobotEat)
+		    image_xscale = Player.right
+    
+		    if random(Player.maxhealth) > Player.my_health and Player.crown != 2
 		    instance_create(Player.x,Player.y,HPPickup)
 		    else
-		    instance_create(Player.x,Player.y,AmmoPickup)}
+		    instance_create(Player.x,Player.y,AmmoPickup)
+    
+		    if Player.skill_got[5] = 1
+		    {
+		    snd_play(sndRobotEatUpg)
+		    instance_create(Player.x,Player.y,AmmoPickup)
+		    }
+		    else
+		    snd_play(sndRobotEat)
+			with Player
+			{
+				var r = 5;
+				if skill_got[5]
+				{
+					r += 2;	
+				}
+				if ultra_got[29] || ultra_got[30] || ultra_got[31] || ultra_got[32]
+					r += 2;
+					scrRaddrop(r);
+				if ultra_got[31]
+				{
+					scrRaddrop(14);
+				}
+				//ROBOT Ultra B Regurgitate
+				if ultra_got[30]==1
+				{
+					if random(100) < 50 + (skill_got[23]*10)//original 43% chance
+					{
+						snd_play_2d(sndRegurgitate);
+					    var dir;
+					    dir=random(100);
+					    {
+					        if dir>77
+					        {
+								instance_create(x,y,AmmoChest);
+					        }
+					        else if dir>52
+					        {
+								instance_create(x,y,HealthChest);
+					        }
+					        else if dir>27
+					        {
+								instance_create(x,y,RadChest);
+					        }
+							else if dir<=0.2//slightly higher chance for weapon chest cus robot luv weps
+					        {
+								instance_create(x,y,GiantGoldenWeaponChest);
+					        }
+							else if dir<=1//slightly higher chance for weapon chest cus robot luv weps
+					        {
+								instance_create(x,y,GoldChest);
+					        }
+					        else// if dir<=27//slightly higher chance for weapon chest cus robot luv weps
+					        {
+								instance_create(x,y,WeaponChest);
+					        }
+							
+					    }
+					}
+				}
 			}
-	    with instance_create(Player.x,Player.y,RobotEat)
-	    image_xscale = Player.right
-    
-	    if random(Player.maxhealth) > Player.my_health and Player.crown != 2
-	    instance_create(Player.x,Player.y,HPPickup)
-	    else
-	    instance_create(Player.x,Player.y,AmmoPickup)
-    
-	    if Player.skill_got[5] = 1
-	    {
-	    snd_play(sndRobotEatUpg)
-	    instance_create(Player.x,Player.y,AmmoPickup)
-	    }
-	    else
-	    snd_play(sndRobotEat)
-		var r = 5;
-		if Player.skill_got[5]
-		{
-			r += 2;	
-		}
-		scrRaddrop(r);
-		if Player.ultra_got[31]
-		{
-			scrRaddrop(14);
-		}
 		
-	    instance_destroy();
-	    }
+		    instance_destroy();
+		    }
 	    }
 	    instance_create(Player.x,Player.y,Smoke)
 	    }

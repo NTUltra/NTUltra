@@ -145,23 +145,26 @@ if (alarm[4] < 0) {
 		{
 			with instance_nearest(target.x + (random(2) - 1) * (random(32)+80),target.y + (random(2) - 1) * (random(32)+80),Floor)
 			{
+				var o = 16;
+				if object_index == FloorExplo
+					o = 8;
 				with other {
-					if place_meeting(other.x + 16, other.y + 16, Wall) {
+					if place_meeting(other.x + o, other.y + o, Wall) {
 						continue;
 					}
 				}
 				var assx = other.x;
 				var assy = other.y;
 				
-				if point_distance(x + 16, y + 16,other.target.x,other.target.y) <= 64
+				if point_distance(x + o, y + o,other.target.x,other.target.y) <= 64
 				continue;
 				
-				other.x = x+16;
-				other.y = y+16;
+				other.x = x+o;
+				other.y = y+o;
 				other.alarm[5] = 15;
 				with instance_create(assx,assy,AssassinTeleport) {
-					self.assx = other.x+16;
-					self.assy = other.y+16;
+					self.assx = other.x+o;
+					self.assy = other.y+o;
 					c1 = make_color_hsv(123,9,92);
 					c2 = make_color_hsv(123,21,83);
 				}

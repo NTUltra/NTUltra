@@ -100,7 +100,8 @@ with Player
 		}
 		else
 		snd_play_2d(sndRobotEat)
-
+		if ultra_got[29] || ultra_got[30] || ultra_got[31] || ultra_got[32]
+			r += 2;
 		scrRaddrop(r);
 		breload = min(breload,0)
 		instance_create(x,y,Smoke)
@@ -109,9 +110,9 @@ with Player
 		if ultra_got[30]==1
 		{
 			hasUltra = true;
-		    if random(100)<55//original 43% chance
+		    if random(100) < 50 + (skill_got[23]*10)//original 43% chance
 		    {
-		    snd_play_2d(sndRegurgitate);
+				snd_play_2d(sndRegurgitate);
 		        var dir;
 		        dir=random(100);
 		        {

@@ -1,3 +1,0 @@
-x=xstart;
-y=ystart;
-

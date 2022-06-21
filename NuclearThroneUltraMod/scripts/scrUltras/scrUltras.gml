@@ -1,6 +1,6 @@
 function scrUltras() {
+	var isOtherCharacter = false;
 	// ULTRAS
-
 	ultra_name[0] = "TOTAL FORECALL"
 	ultra_text[0] = "CHOOSE AN ULTRA MUTATION#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)#GET OFFERED PATIENCE WITH EVERY CHOICE"
 	ultra_tips[0] = "adapting"
@@ -145,30 +145,28 @@ function scrUltras() {
 	ultra_tips[28] = "<3 bullets"
 
 	    //ROBOT 
-	    if instance_exists(Player)
-	    {
-	    if Player.race=19||Player.race=20||Player.race=21{//skeleton hog and horror
+		if instance_exists(Player) && Player.race != 8
+			isOtherCharacter = true;
+			
 	    ultra_name[29] = "REFINED TASTE"
-	    ultra_text[29] = "ONLY HIGH TIER WEAPON DROPS"
+		if isOtherCharacter
+			ultra_text[29] = "ONLY HIGH TIER WEAPON DROPS#EVERY ENEMY HAS A 5% CHANCE#TO DROP A WEAPON"
+		else
+			ultra_text[29] = "ONLY HIGH TIER WEAPON DROPS#EVERY ENEMY HAS A 5% CHANCE#TO DROP A WEAPON##AUTO EAT WEAPONS LEFT IN THE LEVEL"
 	    ultra_tips[29] = "delicacy"
-	    }
-	    else{
-	    ultra_name[29] = "REFINED TASTE"
-	    ultra_text[29] = "ONLY HIGH TIER WEAPON DROPS##AUTO EAT WEAPONS LEFT IN THE LEVEL"
-	    ultra_tips[29] = "delicacy"
-	    }
-	    }
-	    else{
-	    ultra_name[29] = "REFINED TASTE"
-	    ultra_text[29] = "ONLY HIGH TIER WEAPON DROPS##AUTO EAT WEAPONS LEFT IN THE LEVEL"
-	    ultra_tips[29] = "delicacy"
-	    }
+		
 	    ultra_name[30] = "REGURGITATE"
-	    ultra_text[30] = "EATING WEAPONS HAS A CHANCE#TO DROP CHESTS##AUTO EAT WEAPONS LEFT IN THE LEVEL"
+		if instance_exists(Player) && !isOtherCharacter && Player.skill_got[23]//Has open mind
+			ultra_text[30] = "EATING WEAPONS HAS A 70% CHANCE#TO DROP CHESTS##AUTO EAT WEAPONS LEFT IN THE LEVEL";
+		else
+			ultra_text[30] = "EATING WEAPONS HAS A 60% CHANCE#TO DROP CHESTS##AUTO EAT WEAPONS LEFT IN THE LEVEL"
 	    ultra_tips[30] = "2% more chance for weapon chests"
     
 	    ultra_name[31] = "EXTRA STORAGE"
-	    ultra_text[31] = "YOU CAN CARRY THREE WEAPONS#EATING WEAPONS GIVES MORE RADS##AUTO EAT WEAPONS LEFT IN THE LEVEL"
+		if isOtherCharacter
+			ultra_text[31] = "YOU CAN CARRY THREE WEAPONS"
+		else
+			ultra_text[31] = "YOU CAN CARRY THREE WEAPONS#EATING WEAPONS GIVES MORE RADS##AUTO EAT WEAPONS LEFT IN THE LEVEL"
 	    ultra_tips[31] = "can't choose"
     
 	    ultra_name[32] = "MULTI FUNCTIONAL"

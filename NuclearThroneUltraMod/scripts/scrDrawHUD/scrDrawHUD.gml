@@ -221,7 +221,6 @@ function scrDrawHUD() {
 	var loadA = 0.35;
 	var loadedColour = c_gray//make_colour_rgb(102,69,0);//make_colour_rgb(127,87,0);
 	//TERTIARY WEAPON
-	if Player.race=8{//robotos
 	if Player.cwep != 0 && Player.ultra_got[31]//robot ultra c
 	{
 	var spr, col, wid;
@@ -304,7 +303,7 @@ function scrDrawHUD() {
 	draw_set_color(c_dkgray)
 	draw_text(__view_get( e__VW.XView, 0 )+130,__view_get( e__VW.YView, 0 )+21,cAmmo)
 	}
-	}}
+	}
 
 
 	//SECONDARY WEAPON

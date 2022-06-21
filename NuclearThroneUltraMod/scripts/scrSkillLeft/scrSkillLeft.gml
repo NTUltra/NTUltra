@@ -1,7 +1,6 @@
 function scrSkillLeft(sk5 = 0, sk4, sk3, sk2, sk1) {
 	//Run in LevCont
 	//Checks if there are still skills that you haven't taken.
-	debug("check it");
 	    //freespot = false
 	    var dirskill=1
     

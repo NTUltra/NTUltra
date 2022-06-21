@@ -1,2 +1,2 @@
 /// @description Init
-image_speed = 0.9//0.82;
+image_speed = 1//0.82;

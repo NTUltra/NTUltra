@@ -126,6 +126,11 @@ if skill==14
 		Player.exception = true;
 	}
 	Player.skillpoints += 4;//amounth of mutations
+	Player.skillsChosen -= 4;
+	if UberCont.opt_gamemode == 30 && Player.level == 1
+	{
+		Player.skillsChosen = -4;	
+	}
 	//Player.skillsChosen=0;//no ultras pls
 }
 

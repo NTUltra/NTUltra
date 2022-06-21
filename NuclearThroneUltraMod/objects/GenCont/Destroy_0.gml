@@ -259,8 +259,18 @@ room_speed=35;
 
 with WepPickup
 {
+	persistent = false;
 	x = Player.x
 	y = Player.y
+	if instance_exists(Floor) && !collision_point(x,y,Floor,false,false)
+	{
+		var f = instance_nearest(x,y,Floor)
+		var o = 16;
+		if f.object_index == FloorExplo
+			o = 8;
+		x = f.x+o;
+		y = f.y+o;
+	}
 }
 
 with PlayerAlarms//Recheck alarms for certain skills

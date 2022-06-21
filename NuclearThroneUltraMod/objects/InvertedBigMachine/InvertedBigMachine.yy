@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskBigMachine",
     "path": "sprites/mskBigMachine/mskBigMachine.yy",

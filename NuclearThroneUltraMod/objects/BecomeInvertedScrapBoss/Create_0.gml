@@ -1,17 +1,17 @@
 image_index = 0
-
+event_inherited()
+/*
 size = 3
 maxhealth = 40
 target = -1
 meleedamage=0;
-raddrop=0;
+raddrop=0;*/
 spr_idle = sprInvertedScrapBossSleep
 spr_walk = sprInvertedScrapBossSleep
 spr_hurt = sprInvertedScrapBossSleepHurt
 spr_dead = sprInvertedScrapBossDead
 
-event_inherited()
-
+/*
 image_speed = 0.4
 
 
@@ -62,6 +62,6 @@ instance_create(x,y-48,BigWallBreak);
 timer = 0
 
 friction=100;
-
+*/
 
 

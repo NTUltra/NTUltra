@@ -6173,7 +6173,7 @@ function scrWeapons() {
 	wep_name[560] = "SPEAR LAUNCHER"
 	wep_type[560] = 3
 	wep_auto[560] = 0
-	wep_load[560] = 30
+	wep_load[560] = 32
 	wep_cost[560] = 1
 	wep_sprt[560] = sprSpearLauncher
 	wep_area[560] = 2
@@ -6232,7 +6232,7 @@ function scrWeapons() {
 	wep_cost[565] = 1.5
 	wep_sprt[565] = sprToxicMinigun
 	wep_area[565] = 13
-	wep_text[565] = "drilling and grilling"
+	wep_text[565] = "beware the stank"
 	wep_swap[565] = sndSwapMachinegun
 	wep_rad[565] = 0;
 
