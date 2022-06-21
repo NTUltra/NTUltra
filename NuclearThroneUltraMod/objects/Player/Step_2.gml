@@ -386,7 +386,7 @@ if my_health < prevhealth
 	if !exception && alarm[3] < 1
 	{
 		noHit = 0;
-		if UberCont.opt_gamemode == 32
+		if UberCont.opt_gamemode == 32 || ultra_got[109]
 		{
 			my_health = 0;
 			prevhealth = 0;

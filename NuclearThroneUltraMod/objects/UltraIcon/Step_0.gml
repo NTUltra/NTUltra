@@ -495,6 +495,8 @@ race = Player.race
 
 snd_play_2d(sndMut);
 instance_destroy();
+
+	if skill <= UberCont.maxultra
 	with UberCont
 	{
 		ctot_ultra_taken[other.skill] += 1;

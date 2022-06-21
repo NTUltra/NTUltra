@@ -580,6 +580,10 @@ function scrUltras() {
 	ultra_tips[108] = "i shouldn't be level 10 to pick up ammo"
 	
 	maxultra = 108;
+	
+	ultra_name[109] = "TRASH"
+	ultra_text[109] = "DIE WHENEVER YOU TAKE DAMAGE"
+	ultra_tips[109] = "challenge run"
 
 	dir = 0
 	repeat(maxultra+1)
