@@ -935,7 +935,6 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 			var t = wep_type[wep];
 			var m = 1.2;
 			var at = (ammo[t]/typ_amax[t])*m;
-			debug(at);
 			if t != 0
 				reload -= at;
 			m = 0.5;

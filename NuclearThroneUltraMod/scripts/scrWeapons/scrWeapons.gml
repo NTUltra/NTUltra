@@ -6247,6 +6247,17 @@ function scrWeapons() {
 	wep_swap[566] = sndSwapEnergy
 	wep_rad[566] = 0;
 	
+	wep_name[567] = "GOLDEN BOW"
+	wep_type[567] = 3
+	wep_auto[567] = 0
+	wep_load[567] = 18
+	wep_cost[567] = 1
+	wep_sprt[567] = sprGoldenBow
+	wep_area[567] = 17
+	wep_text[567] = "shiny classic"
+	wep_swap[567] = sndSwapBow
+	wep_rad[567] = 0;
+	
 	maxwep = array_length(wep_name)-1;
 
 	//Only melee

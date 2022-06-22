@@ -1,5 +1,4 @@
 instance_destroy();
-debug("end me");
 with UnlockPopup
 {
 	if id != other.id

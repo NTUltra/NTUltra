@@ -130,7 +130,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] &&/* Player.skillpoints <
 		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+72,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
 		    skill = other.skill4
 			
-			if Player.wep == 0 && Player.bwep == 0
+			if Player.wep == 0 && Player.bwep == 0 && UberCont.opt_gamemode != 14//not fish only partner
 			with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+120,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
 		    skill = 109
 		    }

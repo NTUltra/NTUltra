@@ -1453,7 +1453,7 @@ function scrFire2() {
 	break;
 
 
-	//AUTO EXPLOSIVE BOW
+	//AUTO EXPLOSIVE CROSSBOW
 	case 250:
 
 	snd_play_fire(sndCrossbow)
@@ -2298,7 +2298,7 @@ function scrFire2() {
 
 	break;
 
-	//GOLDEN EXPLOSIVE BOW
+	//GOLDEN EXPLOSIVE CROSSBOW
 	case 279:
 
 	snd_play_fire(sndCrossbow)
@@ -10100,6 +10100,21 @@ function scrFire2() {
 				alarm[0] = 1 + other.wep_load[other.wep];
 		}
 	}
+	break;
+	
+	//GOLDEN BOW
+	case 567:
+
+	with instance_create(x,y,ChargeBow)
+	{
+		boltSprite = sprGoldBolt;
+		maxcharge=3;//maxrate
+		creator = other.id
+		chargetime = 5;//6
+		team = other.team
+		event_perform(ev_alarm,0)
+	}
+
 	break;
 	
 	}//end of switch part 2!

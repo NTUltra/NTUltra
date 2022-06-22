@@ -20,6 +20,7 @@ if instance_exists(Player)
 	Sleep(5*rate);
 	with instance_create(x,y,Bolt)
 	{
+		sprite_index=other.boltSprite;
 		motion_add(d+(random(4)-2)*Player.accuracy,10+(other.rate*5))
 		dmg = 5 + (other.rate*5);
 		image_angle = direction

@@ -4646,6 +4646,7 @@
     {"id":{"name":"sndMutBloodlust","path":"sounds/sndMutBloodlust/sndMutBloodlust.yy",},"order":15,},
     {"id":{"name":"sndMutImpactWrists","path":"sounds/sndMutImpactWrists/sndMutImpactWrists.yy",},"order":16,},
     {"id":{"name":"sndMutHeavyHeart","path":"sounds/sndMutHeavyHeart/sndMutHeavyHeart.yy",},"order":17,},
+    {"id":{"name":"sprGoldenBow","path":"sprites/sprGoldenBow/sprGoldenBow.yy",},"order":401,},
     {"id":{"name":"sndMutBackMuscle","path":"sounds/sndMutBackMuscle/sndMutBackMuscle.yy",},"order":18,},
     {"id":{"name":"sprAnnihilator","path":"sprites/sprAnnihilator/sprAnnihilator.yy",},"order":349,},
     {"id":{"name":"sndMutSharpStress","path":"sounds/sndMutSharpStress/sndMutSharpStress.yy",},"order":19,},

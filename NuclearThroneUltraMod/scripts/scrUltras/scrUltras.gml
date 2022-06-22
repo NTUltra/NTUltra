@@ -560,7 +560,7 @@ function scrUltras() {
 	{
 		//Secret B skin ultra
 		ultra_name[106] = "HOT HANDS!"
-		ultra_text[106] = "FIERY HANDS#MORE FIRE DAMAGE#HOMING FIRE#EVEN MOR FIRE DAMAGE#WHILE IN INVERTED AREAS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
+		ultra_text[106] = "FIERY HANDS#MORE FIRE DAMAGE#HOMING FIRE#EVEN MORE FIRE DAMAGE#WHILE IN INVERTED AREAS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
 		ultra_tips[106] = "secret b-skin ultra mutation"
 	}
 	else if instance_exists(Player) && Player.bskin == 2
