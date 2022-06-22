@@ -9,6 +9,10 @@ if instance_exists(enemy)
 	}
 	else
 	{
+		if target.object_index == Thief
+		{
+			scrUnlockGameMode(12,"FOR KILLING A THIEF#WHILE IT IS MARKED")	
+		}
 		instance_destroy();
 	}
 }

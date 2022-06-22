@@ -32,7 +32,7 @@ if (hundredPercentI) >= array_length(hundredPercent)
 
 	repeat(maxgamemode+1)
 	{
-		gamemode_have[dir]=1
+		//gamemode_have[dir]=1
 		dir++
 	}
 
