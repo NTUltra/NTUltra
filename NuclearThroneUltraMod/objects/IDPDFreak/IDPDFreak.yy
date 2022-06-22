@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskPopoFreak",
     "path": "sprites/mskPopoFreak/mskPopoFreak.yy",

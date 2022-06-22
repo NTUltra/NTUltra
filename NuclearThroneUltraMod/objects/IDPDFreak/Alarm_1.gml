@@ -27,9 +27,10 @@ if target > 0 {
 
         }
         else {
-            direction = point_direction(target.x, target.y, x, y) + random(20) - 10
+            direction = point_direction(x, y,target.x, target.y) + random(20) - 10
             speed = max(speed,0.8);
-            walk = 30 + random(10)
+            walk = 20 + random(10)
+			alarm[1] += 2;
             gunangle = point_direction(x, y, target.x, target.y)
         }
 
@@ -39,7 +40,7 @@ if target > 0 {
         right = 1
     }
 	else if random (3) < 1  || point_distance(target.x, target.y, x, y) > 300{
-        direction = point_direction(target.x, target.y, x, y) + random(20) - 10
+        direction = point_direction(x, y, target.x, target.y) + random(20) - 10
         speed = max(speed,1);
         walk = 30 + random(10)
         gunangle = point_direction(x, y, target.x, target.y)

@@ -7,6 +7,7 @@ if um == ultramods.bloodMelee
 	with instance_create(x,y,UltraLanceShank)
 	{
 		scrCopyWeaponMod(other);
+		dmg -= 2;
 		direction = other.direction;
 		image_angle = direction;
 		speed = other.speed;

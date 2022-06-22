@@ -93,10 +93,11 @@ if crown == 2
 	*/
 }
 //CROWN OF DESTINY
-if crown = 8 
+if crown = 8 && !Player.tookDestiny
 {
-Player.skillpoints += 1
-Player.skillsChosen -= 1;
+	Player.skillpoints += 1
+	Player.skillsChosen -= 1;
+	Player.tookDestiny = true;
 }
 //CROWN OF DEATH
 if crown = 3 && Player.maxhealth > 1
@@ -234,5 +235,9 @@ race = Player.race
 }
 
 snd_play_2d(sndSkillPick)
+with Crown
+{
+	scrCrownAnimation(other.crown);	
+}
 }
 

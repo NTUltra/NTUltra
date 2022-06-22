@@ -399,7 +399,7 @@ char[26].spr_slct = sprHumphryMenu}
 logoin = 240
 extra = 0
 
-alarm[0] = 20
+
 
 
 thanks = "#MOD REVIVAL#STARTED BY:#base4/spencers145#ADDITIONAL CODE:#base4/spencers145##QA GODDESS#AgentCucco##SFX AND ART#@larje100##ULTRA MUTATION ART:#@tilde_bee#Lynzkar#skurleton#Lunarshards##MORE ART#NotYourSagittarius##@ideaot/jasmine"
@@ -410,8 +410,6 @@ txt2 = "####AWESOME MOD PEOPLE:#"+string(thanks)
 stxt0 = "#NUCLEAR THRONE"
 stxt1 = "####DIRECTOR:###PRODUCER:###ART & ORIGINAL#CHARACTER DESIGN:###MUSIC:###SOUND DESIGN:###PROMOTIONAL ART:###VOICE OF MR. VENUZ:#####JUUL @Erdeppol"
 
-//Lunarshards
-alarm[1] = 20
 
 img = 0
 

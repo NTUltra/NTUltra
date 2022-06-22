@@ -454,7 +454,21 @@ if loops=2 && (wep = 231 || bwep = 231|| cwep == 231){
 }
 
 }
-
+//Drop ultra sawed off
+if loops == 1 && wep == 443 || bwep == 443 || cwep == 443
+{
+	with instance_create(x,y,WepPickup)
+	{
+		persistent=true;
+		scrWeapons()
+		wep = 568
+		name = wep_name[wep]
+		ammo = 0
+		type = wep_type[wep]
+		curse = 0
+		sprite_index = wep_sprt[wep]
+	}
+}
 //GOLDEN FROG PISTOL
 if race = 23
 {

@@ -1,7 +1,9 @@
+if !visible
+	exit;
 if mode = 0
 {
 //TITLE SCREEN
-if KeyCont.key_fire[p] = 1
+if KeyCont.key_fire[p] = 1 && !instance_exists(Vlambeer)
 {
 mode = 1
 with MusCont

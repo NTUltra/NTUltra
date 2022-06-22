@@ -1,3 +1,5 @@
+if !instance_exists(Menu) || Menu.widescreen < 50 || !instance_exists(BackCont)
+	exit;
 if visible && KeyCont.key_fire[p] = 1 and OptionSelect.selected = 0 and OptionSelect2.selected = 0 and StatsSelect.selected = 0 and CreditsSelect.selected = 0
 {
 if button = 0

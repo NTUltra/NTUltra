@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprCrown1Idle",
-    "path": "sprites/sprCrown1Idle/sprCrown1Idle.yy",
+    "name": "sprCrown0Idle",
+    "path": "sprites/sprCrown0Idle/sprCrown0Idle.yy",
   },
   "solid": false,
   "visible": true,

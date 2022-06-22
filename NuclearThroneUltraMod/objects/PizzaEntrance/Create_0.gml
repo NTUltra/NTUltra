@@ -7,3 +7,4 @@ instance_change(Wind,false)
 
 alarm[0]=120;
 
+name = "PIZZA TIME?"

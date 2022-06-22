@@ -26,5 +26,6 @@ else
 	mode = 0
 	snd_play(sndVlambeer)
 	instance_create(x,y,MenuGen)
+	instance_create(64,96,Menu)
 }
 randomize();

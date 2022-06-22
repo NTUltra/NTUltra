@@ -96,7 +96,8 @@ function scrSaveRun() {
 			randomlySelected: Player.randomlySelected,
 			canSave: UberCont.canSave,
 			altUltra: Player.altUltra,
-			reachedUltra: Player.reachedUltra
+			reachedUltra: Player.reachedUltra,
+			tookDestiny: Player.tookDestiny,
 		};
 		with UberCont
 		{

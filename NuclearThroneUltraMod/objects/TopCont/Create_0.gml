@@ -5,6 +5,7 @@ skillscrollmax = 0;
 holdExplainUltraModTimer = 0;
 holdExplainWepModTimer = 0;
 holdExplainMutation = 0;
+holdExplainGamemode = 0;
 if instance_exists(Player)
 {
 	if Player.crown == 19

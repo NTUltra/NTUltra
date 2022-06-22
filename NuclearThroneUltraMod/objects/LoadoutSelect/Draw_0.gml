@@ -78,20 +78,20 @@ if (wepmenuopen) {
 			{
 				UberCont.crown_start[Menu.race] = !UberCont.crown_start[Menu.race];
 			}
-			draw_sprite_ext(sprCrown1Idle,0,xx,yy,2.5,2.5,0,c_white,1);
+			draw_sprite_ext(sprCrown0Idle,0,xx,yy,2.5,2.5,0,c_white,1);
 		}
 		else if (UberCont.crown_start[Menu.race])
 		{
 			shader_set(shdDrawWhite);
-			draw_sprite_ext(sprCrown1Idle,0,xx+1,yy+1,2,2,0,c_white,1);
-			draw_sprite_ext(sprCrown1Idle,0,xx+1,yy-1,2,2,0,c_white,1);
-			draw_sprite_ext(sprCrown1Idle,0,xx-1,yy-1,2,2,0,c_white,1);
-			draw_sprite_ext(sprCrown1Idle,0,xx-1,yy+1,2,2,0,c_white,1);
+			draw_sprite_ext(sprCrown0Idle,0,xx+1,yy+1,2,2,0,c_white,1);
+			draw_sprite_ext(sprCrown0Idle,0,xx+1,yy-1,2,2,0,c_white,1);
+			draw_sprite_ext(sprCrown0Idle,0,xx-1,yy-1,2,2,0,c_white,1);
+			draw_sprite_ext(sprCrown0Idle,0,xx-1,yy+1,2,2,0,c_white,1);
 			shader_reset();
-			draw_sprite_ext(sprCrown1Idle,0,xx,yy,2,2,0,c_white,1);
+			draw_sprite_ext(sprCrown0Idle,0,xx,yy,2,2,0,c_white,1);
 		}
 		else
-			draw_sprite_ext(sprCrown1Idle,0,xx,yy,2,2,0,make_colour_rgb(150, 150, 150),1);
+			draw_sprite_ext(sprCrown0Idle,0,xx,yy,2,2,0,make_colour_rgb(150, 150, 150),1);
 	}
 	else
 	{
@@ -166,7 +166,7 @@ else
 	draw_sprite(sprMutationSplat,3,xx+24,yy+44);
 	var scl = 1.5;
 	if (UberCont.crown_start[Menu.race])
-		draw_sprite_ext(sprCrown1Idle,0,xx,yy,scl,scl,0,c_white,1);
+		draw_sprite_ext(sprCrown0Idle,0,xx,yy,scl,scl,0,c_white,1);
 	var spr = wep_sprt[UberCont.start_wep[wep]];
 	var sprw = (sprite_get_xoffset(spr)*scl) - (sprite_get_width(spr)*scl);
 	draw_sprite_ext(spr,0,xx+sprw-8,yy,scl,scl,0,c_white,1);

@@ -1,6 +1,6 @@
 event_inherited();
 image_speed = 0;
-
+dmg = 12;
 typ = 0 //0 = nothing, 1 = deflectable, 2 = destructable, 3 = deflectable
 
 walled = 0

@@ -75,22 +75,24 @@ function scrDrawHUD() {
 		draw_sprite(spr,Player.rogueammo,__view_get( e__VW.XView, 0 )+116,__view_get( e__VW.YView, 0 )+11)
 	}
 
-
-
-	//CROWNS
-
-	draw_set_halign(fa_left)
-
-	if Player.crown > 1 and !instance_exists(LevCont)
+	//GAMEMODES
+	if UberCont.opt_gamemode != 0 && !instance_exists(LevCont)
 	{
-	draw_set_color(c_black)
-	draw_text(__view_get( e__VW.XView, 0 )+1,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-string_height(string_hash_to_newline("C"))-2,string_hash_to_newline(string(Player.crown_name[Player.crown]))/*+"#"+string(Player.crown_text[Player.crown])*/)
-	draw_text(__view_get( e__VW.XView, 0 )+1,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-string_height(string_hash_to_newline("C"))-2+1,string_hash_to_newline(string(Player.crown_name[Player.crown]))/*+"#"+string(Player.crown_text[Player.crown])*/)
-	draw_text(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-string_height(string_hash_to_newline("C"))-2+1,string_hash_to_newline(string(Player.crown_name[Player.crown]))/*+"#"+string(Player.crown_text[Player.crown])*/)
-	draw_set_color(c_white)
-	draw_text(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-string_height(string_hash_to_newline("C"))-2,string_hash_to_newline(string(Player.crown_name[Player.crown]))/*+"#"+string(Player.crown_text[Player.crown])*/)
-	draw_set_valign(fa_top)
+		var xx = __view_get( e__VW.XView, 0 );
+		var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 );
+		var s = 18;
+		if (mouse_x > xx && mouse_x < xx + s && mouse_y < yy && mouse_y > yy - s)
+		{
+			holdExplainGamemode += 2;
+			if holdExplainGamemode > 10
+				holdExplainGamemode = 10;
+			if holdExplainGamemode >= 10
+				scrDrawHelp("["+UberCont.gamemode[UberCont.opt_gamemode]+"]");
+		}
+		draw_sprite(sprGamemodeHUD,0,__view_get( e__VW.XView, 0 )+4,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-2);	
 	}
+	if holdExplainGamemode > 0 
+		holdExplainGamemode --;
 
 	//HEALTH TEXT
 	draw_set_halign(fa_center)
@@ -1011,6 +1013,21 @@ function scrDrawHUD() {
 			draw_text(x+1,y-31,string_hash_to_newline(string(name)))
 			draw_set_color(c_white)
 			draw_text(x,y-31,string_hash_to_newline(string(name)))
+			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+		}
+	}
+	with PizzaEntrance
+	{
+		if place_meeting(x,y,Player) && image_index == 1
+		{
+			draw_sprite(sprEPickup,UberCont.opt_gamepad,x+16,y-7)
+
+			draw_set_color(c_black)
+			draw_text(x+28,y-30,string_hash_to_newline(string(name)))
+			draw_text(x+29,y-30,string_hash_to_newline(string(name)))
+			draw_text(x+29,y-31,string_hash_to_newline(string(name)))
+			draw_set_color(c_white)
+			draw_text(x+28,y-31,string_hash_to_newline(string(name)))
 			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 		}
 	}

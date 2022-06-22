@@ -9,6 +9,7 @@ function scrTips() {
 	//RANDOM
 	tip = choose(choose(
 	"HP will only drop when damaged",
+	"Check out the Ultra mod wiki!",
 	"When you respawn#you level up faster",
 	"explosives can destroy walls",
 	"melee weapons can deflect bullets",
@@ -239,7 +240,8 @@ function scrTips() {
 
 	if Player.race = 14//panda
 	tip = choose("never let go of your bamboo","kawaii as fuck","rng","portal magic","what is a panda doing here",
-	"don't want to be here","help me","if only hotline miami had a panda","panda used to be a pacifist"
+	"don't want to be here","help me","if only hotline miami had a panda","panda used to be a pacifist",
+	"throw weapons to#conserve ammo","throw damage scales#with your level",
 	,"fight to survive","manage your weapons!","killing is no fun","panda is unpredictable with weapons"
 	,"you can see your new weapon#while a level is generating","throw weapons#in a portal to keep them",
 	"if you like a weapon#you can throw it into a portal#to keep it"
@@ -296,7 +298,8 @@ function scrTips() {
 	
 	if Player.race = 27//HANDS
 	tip = choose("look ma! no face","don't get too touchy","proto","the only inverted mutant","pull my finger","hand from the other side",
-	"let's give each other a helping hand","reach out","what is on the other side?","GET OVER HERE!","walking backwards","strong handshake")
+	"let's give each other a helping hand","reach out","what is on the other side?","GET OVER HERE!","walking backwards","strong handshake",
+	"you can grab through walls","your hand break walls","you can grab chests","some enemies are to heavy#to grab")
 	
 	}
 

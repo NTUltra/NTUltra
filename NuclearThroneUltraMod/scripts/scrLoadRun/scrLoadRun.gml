@@ -164,6 +164,10 @@ function scrLoadRun(){
 					Player.reachedUltra = encryptedRun.reachedUltra;
 				else
 					Player.reachedUltra = true;
+				if variable_struct_exists(encryptedRun, "tookDestiny")
+					Player.tookDestiny = encryptedRun.tookDestiny;
+				else
+					Player.tookDestiny = true;
 			}
 			with Player
 			{

@@ -697,7 +697,7 @@ function scrFire2() {
 	{
 	motion_add(aimDirection+(random(12)-6)*other.accuracy,6+random(4))
 
-	dmg = 11//4 wrench
+	dmg = 12//4 wrench
 
 	if instance_exists(Player)
 	{
@@ -10114,6 +10114,26 @@ function scrFire2() {
 		team = other.team
 		event_perform(ev_alarm,0)
 	}
+
+	break;
+	
+	//ULTRA SAWED-OFF SHOTGUN
+	case 568:
+	snd_play_fire(sndUltraShotgun)
+	snd_play_fire(sndSawedOffShotgun)
+
+	repeat(18)
+	{
+	with instance_create(x,y,Bullet5)
+	{motion_add(aimDirection+(random(80)-40)*other.accuracy,8+random(6))//7 5
+	image_angle = direction
+	team = other.team}
+	}
+
+	BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 14
+	wkick = 7
 
 	break;
 	

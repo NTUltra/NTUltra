@@ -32,7 +32,7 @@ instance_destroy()
 instance_create(x,y,KeyCont)
 
 //this is for the menu
-area=1;
+area=0;
 subarea=1;
 loops=0;
 lastSaveLoop = -1;
@@ -114,7 +114,7 @@ ultramodSwap = true;
 casualModeHPIncrease = 2;
 
 hadBossIntro = false;
-snd_wallbreak = sndWallBreak;
+snd_wallbreak = sndSilence;//sndWallBreak;
 
 
 

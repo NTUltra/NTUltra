@@ -80,6 +80,14 @@ function scrPopChests() {
 					instance_create(x,y,RadChest);	
 				}
 			}
+			if Player.ultra_got[88] == 1
+			{
+				with RogueAmmoChest
+				{
+					instance_destroy(id,false);
+					instance_create(x,y,RadChest);	
+				}
+			}
 			return;
 		}
 		if Player.ultra_got[88] == 1
@@ -217,10 +225,9 @@ function scrPopChests() {
 	{
 		gol = 0;
 	}
-	debug("radchests: ",totalRadChests);
 	if (totalRadChests < gol)
 	{
-		scrCreateMissingChest(RadChest,gol);	
+		scrCreateMissingChest(RadChest,gol);
 	}
 	if (totalHealthChests < healthChestGol)
 	{

@@ -112,6 +112,10 @@ if place_meeting(x,y,Player)
 
 
 		alarm[0]=120;
+		if Player.race == 17
+			alarm[0] = 60;
+		if Player.skill_got[30]
+			alarm[0] -= 30;
 		image_speed=0.4;
 		mask_index=mskPickupThroughWall;
 

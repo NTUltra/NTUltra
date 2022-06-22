@@ -1,5 +1,5 @@
-spr_idle = sprCrown1Idle
-spr_walk = sprCrown1Walk
+spr_idle = sprCrown0Idle
+spr_walk = sprCrown0Walk
 newThing = 1
 targetx = Player.x
 targety = Player.y

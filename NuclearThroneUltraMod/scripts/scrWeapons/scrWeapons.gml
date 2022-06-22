@@ -6258,6 +6258,17 @@ function scrWeapons() {
 	wep_swap[567] = sndSwapBow
 	wep_rad[567] = 0;
 	
+	wep_name[568] = "ULTRA SAWED-OFF SHOTGUN"
+	wep_type[568] = 2
+	wep_auto[568] = 0
+	wep_load[568] = 20//26
+	wep_cost[568] = 2.5
+	wep_sprt[568] = sprUltraSawnOffShotgun
+	wep_area[568] = -1
+	wep_text[568] = ""
+	wep_swap[568] = sndSwapShotgun
+	wep_rad[568] = 13;
+	
 	maxwep = array_length(wep_name)-1;
 
 	//Only melee

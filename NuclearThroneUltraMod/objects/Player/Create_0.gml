@@ -15,6 +15,7 @@ audio_falloff_set_model(audio_falloff_linear_distance);
 yungCuzCskin = 0;
 randomlySelected = false;
 ultraNow = false;
+tookDestiny = false;
 //show_message("hi")
 //if joystick_exists(0) joy = 0 else joy = 0
 meleeimmunity = 0;

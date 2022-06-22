@@ -501,23 +501,25 @@ if race = 25
 multiplier*=1.25//Sharp teeth's damage!
 if UberCont.opt_gamemode == 24 //SHARP STRESS GAMEMODE
 	multiplier *= level;
+snd_play_2d(sndSharpTeeth);
 with enemy{
-if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-{
-//if sprite_index!=spr_hurt{
-snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
-Sleep(10)
-my_health -= other.sharpteeth*multiplier//Sharp teeth's damage!
-sprite_index = spr_hurt
-image_index = 0
-motion_add(other.direction,6)
+	if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+	{
+	//if sprite_index!=spr_hurt{
+	snd_play(snd_hurt, hurt_pitch_variation,true)
+	Sleep(10)
+	my_health -= other.sharpteeth*multiplier//Sharp teeth's damage!
+	sprite_index = spr_hurt
+	image_index = 0
+	motion_add(other.direction,6)
 
 
 
-with instance_create(x,y,SharpTeeth)
-owner=other.id;
-//}
-}}
+	with instance_create(x,y,SharpTeeth)
+	owner=other.id;
+	//}
+	}
+}
 
 }
 }
