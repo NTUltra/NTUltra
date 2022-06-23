@@ -1,7 +1,23 @@
 function scrDrop(itemdrop, weapondrop) {
 	var canHealth = 1;
+	var dropRateBuff = 0;
 	if instance_exists(Player)
 	{
+		dropRateBuff = 1 + Player.skill_got[4]*(0.45+Player.betterrabbitpaw) 
+		+ (Player.ultra_got[39]*instance_number(Ally)*0.6)
+		+ (Player.skill_got[28]*(Player.rage*0.0004))
+		if Player.crown == 21 //Crown of risk
+		{
+			if Player.my_health >= floor(Player.maxhealth)
+			{
+				dropRateBuff += 0.7;
+			}
+			else
+			{
+				dropRateBuff -= 0.5;
+			}
+		}
+		
 		var lps = Player.loops;
 		if lps > 1 && Player.crown != 5
 		{
@@ -89,29 +105,29 @@ function scrDrop(itemdrop, weapondrop) {
 
 
 	if (Player.ultra_got[1]==1)//FISH ULTRA A Confiscate
+	{
+	    if (random(100) < 12*dropRateBuff)//rage=0.001
 	    {
-	        if (random(100) < 10+(Player.skill_got[4]*0.5)+(Player.skill_got[28]*(Player.rage*0.0004)) )//rage=0.001
-	        {
-	        if (random(Player.maxhealth) > Player.my_health || random(100) < 5) and random(3) < 2 and Player.crown != 2
+		    if (random(Player.maxhealth) > Player.my_health || random(100) < 5) and random(3) < 2 and Player.crown != 2
 			{
-	        instance_create(x+random(4)-2,y+random(4)-2,HealthChest)
-			return true;
+		    instance_create(x+random(4)-2,y+random(4)-2,HealthChest)
+			//return true;
 			}
-	        else if Player.crown != 5
+		    else if Player.crown != 5
 			{
-	        instance_create(x+random(4)-2,y+random(4)-2,AmmoChest)
-			return true;
+		    instance_create(x+random(4)-2,y+random(4)-2,AmmoChest)
+			//return true;
 			}
-	        exit;
-	        }
-	        else if random(100) < 10*(Player.skill_got[4]*0.6)+(Player.skill_got[28]*(Player.rage*0.0004)) //rage=0.001
-	        {
-	        instance_create(x+random(4)-2,y+random(4)-2,WeaponChest);
-			return true;
-	        }
+			//return false;
 	    }
+	    else if random(100) < 12*dropRateBuff
+	    {
+			instance_create(x+random(4)-2,y+random(4)-2,WeaponChest);
+			//return true;
+	    }
+	}
 	//drop items (10 + 2) * (0.75 + 0.5)
-	if itemdrop > 0 && random(100) < itemdrop*(need+Player.skill_got[4]*(0.5+Player.betterrabbitpaw) +(Player.ultra_got[39]*instance_number(Ally)*0.6)+(Player.skill_got[28]*(Player.rage*0.0004)) )//0.6 before rabbit paw nerf
+	if itemdrop > 0 && random(100) < itemdrop*dropRateBuff
 	{//0.3 for each ally Rebel has REBEL ULTRA C?
 
 		if random(Player.maxhealth) > Player.my_health and random(3) < 2 and Player.crown != 2 and random(1) <= canHealth
@@ -125,7 +141,7 @@ function scrDrop(itemdrop, weapondrop) {
 		return true;
 		}
 	}
-	else if random(100) < weapondrop*(1+Player.skill_got[4]*(0.5+Player.betterrabbitpaw) +(Player.ultra_got[39]*instance_number(Ally)*0.6)+(Player.skill_got[28]*(Player.rage*0.0004)) )//rage=0.001
+	else if random(100) < weapondrop*dropRateBuff
 	{
 		//drop weps
 		with instance_create(x+random(4)-2,y+random(4)-2,WepPickup)

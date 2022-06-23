@@ -107,8 +107,31 @@ function scrCrowns() {
 	crown_text[19] = "EVERY AREA IS DARK#ENEMIES CAN HIT EACH OTHER"
 	crown_used[19] = 0
 	crown_tips[19] = "friendly fire"
+	
+	crown_name[20] = "[CROWN OF PROTECTION]"
+	if instance_exists(Player) && Player.skill_got[9]
+		crown_text[20] = "WEAPON DROPS (OVER) HEAL 2HP#INSTEAD OF GIVING AMMO";
+	else
+		crown_text[20] = "WEAPON DROPS (OVER) HEAL 1HP#INSTEAD OF GIVING AMMO"
+	crown_used[20] = 0
+	crown_tips[20] = "stay safe"//Always use protection..  that joke is too predictable
+	
+	crown_name[21] = "[CROWN OF RISK]"
+	crown_text[21] = "70% HIGHER DROPRATE#WHEN ABOVE 50% MAX HP#50% LOWER DROPRATE#WHEN BELOW 50% MAX HP"
+	crown_used[21] = 0
+	crown_tips[21] = "a risk worth taking"
+	
+	crown_name[22] = "[CROWN OF LUCK]"
+	crown_text[22] = "START EACH AREA WITH 1 HP#25% CHANCE ANY ENEMY#SPAWNS IN WITH 10% HP"
+	crown_used[22] = 0
+	crown_tips[22] = "crown of 1hp equality"
+	
+	crown_name[23] = "[CROWN OF SPEED]"
+	crown_text[23] = "ALL PROJECTILES ARE FASTER#YOU MOVE SLIGHTLY FASTER"
+	crown_used[23] = 0
+	crown_tips[23] = "gotta go fast"
 
-	crownmax = 19
+	crownmax = 23
 
 
 

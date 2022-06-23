@@ -88,7 +88,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprGammaGuts","path":"sprites/sprGammaGuts/sprGammaGuts.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprGammaGuts",
     "tags": [],
     "resourceType": "GMSequence",
   },

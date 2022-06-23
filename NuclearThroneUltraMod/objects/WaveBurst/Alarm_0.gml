@@ -18,10 +18,9 @@ team = other.team
 if (instance_exists(Player))
     {
     
-    if Player.race=11
-    {
-    speed*=1.18;
-    }
+
+    speed*=Player.pSpeedBoost
+
     }
 }
 with instance_create(x,y,Bullet2)
@@ -32,10 +31,9 @@ team = other.team
 if (instance_exists(Player))
     {
     
-    if Player.race=11
-    {
-    speed*=1.18;
-    }
+
+    speed*=Player.pSpeedBoost
+
     }
 }
 

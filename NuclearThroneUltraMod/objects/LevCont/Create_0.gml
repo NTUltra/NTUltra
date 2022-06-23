@@ -8,7 +8,6 @@ holdExplainGamemode = 0;
 __view_set( e__VW.XView, 0, 0 )
 __view_set( e__VW.YView, 0, 0 )
 wave = 0
-debug("chosenskillsL ",Player.skillsChosen);
 if UberCont.useSeed && instance_exists(Player)
 	random_set_seed(UberCont.seed+Player.lastarea+Player.lastsubarea);
 
@@ -18,12 +17,12 @@ scrCrowns()
 dir = 0
 repeat(crownmax+1)
 {
-if dir<10
-{with instance_create(__view_get( e__VW.XView, 0 )+18+dir*32,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-50,CrownIcon)//24
+if dir<12
+{with instance_create(__view_get( e__VW.XView, 0 )+14+dir*26.5,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-50,CrownIcon)//24
 crown = other.dir
 }
 else
-{with instance_create(__view_get( e__VW.XView, 0 )+18+(dir-10)*32,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-16,CrownIcon)//24
+{with instance_create(__view_get( e__VW.XView, 0 )+14+(dir-12)*26.5,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-16,CrownIcon)//24
 crown = other.dir
 }
 dir += 1}

@@ -27,11 +27,9 @@ if (instance_exists(Player))
     team = other.team
     
         
-        if Player.race=11//HUNTER
-        {
+
         if team=2
-        speed*=1.12;//just a slight nerf because this thing is insane with hunter
-        }
+        speed*=max(1,Player.pSpeedBoost-0.4)
         
     
     

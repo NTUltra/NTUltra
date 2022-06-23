@@ -47,6 +47,7 @@ with Floor{
 if point_distance(x+16,y+16,other.x,other.y) < 34
 sprite_index = sprFloor100}
 
-
+with instance_place(x,y,prop)
+	instance_destroy(id,false);
 //alarm[0] = 300;
 

@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskMiniPlasmaImpact",
     "path": "sprites/mskMiniPlasmaImpact/mskMiniPlasmaImpact.yy",

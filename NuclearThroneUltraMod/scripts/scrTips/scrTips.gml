@@ -106,7 +106,8 @@ function scrTips() {
 	tip = choose("beep boop","nerds","don't push any buttons","randa")
 	if Player.area = 100
 	tip = choose("aw yes","take a crown to uncurse your weapon","there is value here","visit this place atleast twice","let's hope its not toxic again",
-	"old torches","you can get 3 mods#on a single weapon","mods stack","take a crown to unlock#crown start for this character","most weapon mods benefit from#weapon specific mutations")
+	"old torches","you can get 3 mods#on a single weapon","mods stack","take a crown to unlock#crown start for this character","most weapon mods benefit from#weapon specific mutations",
+	"power craving spawns more mods")
 	if Player.area = 102
 	tip = choose("hunger...","it smells nice here","wait for it....")
 	if Player.area = 103
@@ -299,7 +300,7 @@ function scrTips() {
 	if Player.race = 27//HANDS
 	tip = choose("look ma! no face","don't get too touchy","proto","the only inverted mutant","pull my finger","hand from the other side",
 	"let's give each other a helping hand","reach out","what is on the other side?","GET OVER HERE!","walking backwards","strong handshake",
-	"you can grab through walls","your hand break walls","you can grab chests","some enemies are to heavy#to grab")
+	"you can grab through walls","your hand break walls","you can grab chests","some enemies are to heavy#to grab","your active gets +1 damage#when your each level ultra")
 	
 	}
 

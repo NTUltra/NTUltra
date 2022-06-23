@@ -27,11 +27,10 @@ if instance_exists(creator)
 			motion_add(d+(random(30)-15)*Player.accuracy,20+random(4))
 			image_angle = direction
 			team = other.team
-			if Player.race=11
-		    {
+			
 		    if team=2
-		    speed*=1.18;
-		    }
+		    speed*=Player.pSpeedBoost
+		    
 		}
 	}
 }

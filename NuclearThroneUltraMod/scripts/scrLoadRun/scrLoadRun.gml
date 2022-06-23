@@ -168,6 +168,10 @@ function scrLoadRun(){
 					Player.tookDestiny = encryptedRun.tookDestiny;
 				else
 					Player.tookDestiny = true;
+				if variable_struct_exists(encryptedRun, "pSpeedBoost")
+					Player.pSpeedBoost = encryptedRun.pSpeedBoost;
+				else
+					Player.pSpeedBoost = true;
 			}
 			with Player
 			{

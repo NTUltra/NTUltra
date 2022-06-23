@@ -111,7 +111,11 @@ if crown = 2
 	my_health = max(maxhealth,my_health + overheal);
 	*/
 }
-
+if crown == 22//Crown of luck
+{
+	my_health = 1;
+	prevhealth = 1;
+}
 //NOCHEST SHIT
 if (instance_exists(WeaponChest) or instance_exists(BigWeaponChest) && area != 100 && !restarted)// and !(area = 1 and subarea = 1)
 {

@@ -638,7 +638,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 	image_index = 0
 	snd_play(snd_hurt, hurt_pitch_variation)
 
-	scrRaddrop(16)//used to be 12
+	scrRaddrop(20)//used to be 12
 
 	decay = 300
 	}

@@ -136,6 +136,8 @@ function scrPowers() {
 					{
 						dmg += 2;
 					}
+					if other.ultra_got[105] || other.ultra_got[106] || other.ultra_got[107] || other.ultra_got[107]
+						dmg ++;
 					grabbingPickup = targetPickup;
 					team = other.team;
 					creator = other.id;

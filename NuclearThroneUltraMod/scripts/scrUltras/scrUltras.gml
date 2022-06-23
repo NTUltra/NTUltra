@@ -339,7 +339,7 @@ function scrUltras() {
 	ultra_tips[67] = "new meta"
 
 	ultra_name[68] = "SCRAP FINDER"
-	ultra_text[68] = "WEAPON DROPS GIVE YOU HEALTH, RADS#AND MORE AMMO FOR ALL TYPES#PICKING UP A WEAPON#SPAWNS LIGHTNING"
+	ultra_text[68] = "ALL WEAPON DROPS GIVE YOU HEALTH, RADS#AND MORE AMMO FOR ALL TYPES#PICKING UP A WEAPON#SPAWNS LIGHTNING"
 	ultra_tips[68] = "recourseful"
 
 	    //ANGEL 

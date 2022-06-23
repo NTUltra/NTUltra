@@ -6,6 +6,11 @@ function ApplyEuphoria(){
 	{
 		if team != Player.team
 		{
+			if Player.crown == 23//Crown of speed
+			{
+				speed += 0.35;
+				speed *= 1.22;
+			}
 			if Player.skill_got[12] = 1
 				speed = speed*0.75
 			if UberCont.opt_gamemode == 9

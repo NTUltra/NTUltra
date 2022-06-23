@@ -4736,13 +4736,10 @@ function scrFire() {
 	wep=75;
 	}
 
-	if race=11//HUNTER Projectile speed
-	{
 	with projectile{
-	if team=2
-	speed*=1.18;
+		if team=2
+			speed *= Player.pSpeedBoost;
 	    }
-	}
 
 	if Player.ultra_got[56]==1//PANDA Meditate rapid hands melee firerate
 	{
@@ -4901,6 +4898,16 @@ function scrFire() {
 						Mod4=other.wepmod4;
 						speedBoost = 1.15;
 						spda = 3.9;
+					}
+					if Player.race == 11
+					{
+						speed *= 1.1;
+						speedAdd += 2;
+					}
+					if Player.crown == 23//Crown of speed
+					{
+						speed *= 1.12;
+						speedAdd += 4;
 					}
 				    //Projectile speed mod
 				    if Mod1==11

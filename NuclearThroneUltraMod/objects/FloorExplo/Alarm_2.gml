@@ -36,11 +36,21 @@ if instance_exists(Player) && Player.skill_got[26]
 	y += 8;
 	if !scrDrop(0.1,0.06)
 	{
-		if random(100) < 1
-		+ (Player.skill_got[4]*0.5)
-		+ Player.betterrabbitpaw
+		var dropRateBuff = Player.skill_got[4]*(0.45+Player.betterrabbitpaw) 
 		+ (Player.ultra_got[39]*instance_number(Ally)*0.6)
 		+ (Player.skill_got[28]*(Player.rage*0.0004))
+		if Player.crown == 21 //Crown of risk
+		{
+			if Player.my_health >= Player.maxhealth
+			{
+				dropRateBuff += 0.6;
+			}
+			else
+			{
+				dropRateBuff -= 0.4;
+			}
+		}
+		if random(100) < 1 + dropRateBuff
 		{
 			instance_create(x,y,Rad);
 		}

@@ -153,6 +153,9 @@ scrUltras()
 scrCrowns()
 
 gunY = 0;
+pSpeedBoost = 1;
+if race == 11
+	pSpeedBoost = 1.18;
 if race == 7 && bskin == 2
 {
 	gunY = 4;

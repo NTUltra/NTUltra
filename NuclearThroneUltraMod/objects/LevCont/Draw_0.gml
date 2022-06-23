@@ -5,8 +5,14 @@ scrDrawHUD()
 draw_set_font(fntM)
 draw_set_halign(fa_center)
 draw_set_valign(fa_bottom)
-
-
+//Higher border
+draw_set_colour(c_black);
+draw_rectangle(__view_get( e__VW.XView, 0 ),
+__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ),
+__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),
+__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-67,
+false);
+draw_set_colour(c_white);
 if Player.crownpoints = 0
 {
 var txt;

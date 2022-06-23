@@ -1,14 +1,14 @@
 if instance_exists(Player)
 {if point_distance(x,y,Player.x,Player.y) > 96 
 {
-if speed > 3
-speed = 3
+if speed > maxspeed+1
+speed = maxspeed+1
 mp_potential_step(targetx,targety,1,false)
 }
-else if speed > 2
-speed = 2
-}else if speed > 2
-speed = 2
+else if speed > maxspeed
+speed = maxspeed
+}else if speed > maxspeed
+speed = maxspeed
 
 
 friction = 0.2

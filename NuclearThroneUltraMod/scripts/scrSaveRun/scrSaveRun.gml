@@ -98,6 +98,7 @@ function scrSaveRun() {
 			altUltra: Player.altUltra,
 			reachedUltra: Player.reachedUltra,
 			tookDestiny: Player.tookDestiny,
+			pSpeedBoost: Player.pSpeedBoost,
 		};
 		with UberCont
 		{

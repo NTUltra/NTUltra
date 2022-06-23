@@ -19,12 +19,11 @@ with instance_create(x,y,BulletSnake)
     if (instance_exists(Player))
     {
     
-    if Player.race=11//HUNTER Projectile speed
-    {
+
 	    if team=2
-			speed*=1.18;
-	    }
-    }
+			speed*=Player.pSpeedBoost
+	}
+    
 }
 
 BackCont.viewx2 += lengthdir_x(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake

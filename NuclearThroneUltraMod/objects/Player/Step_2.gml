@@ -14,90 +14,118 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 		scrUnlockGoldWeapon(targetPickup.wep);
 	}
 	//first get ammo
-	if ultra_got[68]=0
+	if targetPickup.ammo > 0 and (wep_type[targetPickup.wep] != 0 || ultra_got[68])
 	{
-	    if targetPickup.ammo > 0 and wep_type[targetPickup.wep] != 0
-	    {
-		    ammo[wep_type[targetPickup.wep]] += typ_ammo[targetPickup.wep_type[targetPickup.wep]]*2
-		    if ammo[wep_type[targetPickup.wep]] > typ_amax[targetPickup.wep_type[targetPickup.wep]]
+		ammoMultiple = 2;
+		if ultra_got[68]
+		{
+			ammoMultiple = 4;
+			if wep_type[targetPickup.wep] == 0
+				ammoMultiple = 0;
+			var allammotypes=5;
+			repeat(5)
+			{
+				ammo[allammotypes] += typ_ammo[allammotypes]
+				if ammo[allammotypes] > typ_amax[allammotypes]
+					ammo[allammotypes] = typ_amax[allammotypes]
+				if (UberCont.opt_ammoicon)
+				{
+					dir = instance_create(x,y,PopupText);
+					dir.sprt = sprAmmoIconsPickup
+					dir.ii = allammotypes-1;
+					dir.mytext = "+"+string(typ_ammo[allammotypes]);
+					if ammo[allammotypes] = typ_amax[allammotypes]
+						dir.mytext = "MAX";
+				}
+				else
+				{
+					dir = instance_create(x,y,PopupText)
+					dir.mytext = "+"+string(typ_ammo[allammotypes])+" "+string(typ_name[allammotypes])
+					if ammo[allammotypes] = typ_amax[allammotypes]
+						dir.mytext = "MAX "+string(typ_name[allammotypes])
+				}
+				allammotypes--;
+			}
+			snd_play(sndAmmoPickup);
+			var num = 3;
+			if skill_got[9]//Second stomache
+				num = 6;
+			if my_health < maxhealth
+				my_health += clamp(my_health+num,my_health,maxhealth);
+			if UberCont.opt_ammoicon
+			{
+				dir = instance_create(x,y,PopupText)
+				dir.sprt = sprHPIconPickup;
+				dir.mytext = "+"+string(num)
+				if my_health = maxhealth
+					dir.mytext = "MAX"
+				else if my_health > maxhealth
+					dir.mytext = "OVER MAX"
+			}
+			else
+			{
+				dir = instance_create(x,y,PopupText)
+				dir.mytext = "+"+string(num)+" HP"
+				if my_health = maxhealth
+					dir.mytext = "MAX HP"
+				else if my_health > maxhealth
+					dir.mytext = "OVER MAX HP"
+			}
+			instance_create(x,y,HealFX);
+			snd_play(sndHealthPickup);
+			
+			scrRaddrop(60);
+		}
+		if crown == 20 && ammoMultiple > 0//Crown of protection
+		{
+			ammoMultiple -= 2;
+			my_health += 1;
+			var num = 1;
+			if skill_got[9]//Second stomache
+				num = 2;
+			if UberCont.opt_ammoicon
+			{
+				dir = instance_create(x,y,PopupText)
+				dir.sprt = sprHPIconPickup;
+				dir.mytext = "+"+string(num)
+				if my_health > maxhealth
+					dir.mytext += "#OVERHEAL!"
+			}
+			else
+			{
+				dir = instance_create(x,y,PopupText)
+				dir.mytext = "+"+string(num)+" HP"
+				if my_health > maxhealth
+					dir.mytext += "#OVERHEAL!"
+			}
+			instance_create(x,y,HealFX);
+			snd_play(sndHealthPickup,0,true);
+		}
+			
+		if ammoMultiple > 0{
+			ammo[wep_type[targetPickup.wep]] += typ_ammo[targetPickup.wep_type[targetPickup.wep]]*ammoMultiple
+			if ammo[wep_type[targetPickup.wep]] > typ_amax[targetPickup.wep_type[targetPickup.wep]]
 				ammo[wep_type[targetPickup.wep]] = typ_amax[targetPickup.wep_type[targetPickup.wep]]
-    
+			snd_play(sndAmmoPickup,0,true);
 			if (UberCont.opt_ammoicon)
 			{
 				dir = instance_create(x,y,PopupText);
 				dir.sprt = sprAmmoIconsPickup
 				dir.ii = targetPickup.wep_type[targetPickup.wep]-1;
-			    dir.mytext = "+"+string(typ_ammo[wep_type[targetPickup.wep]]*2);
-			    if ammo[wep_type[targetPickup.wep]] = typ_amax[targetPickup.wep_type[targetPickup.wep]]
-			    dir.mytext = "MAX";
+				dir.mytext = "+"+string(typ_ammo[wep_type[targetPickup.wep]]*ammoMultiple);
+				if ammo[wep_type[targetPickup.wep]] = typ_amax[targetPickup.wep_type[targetPickup.wep]]
+				dir.mytext = "MAX";
 			}
 			else
 			{
-			    dir = instance_create(x,y,PopupText)
-			    dir.mytext = "+"+string(typ_ammo[wep_type[targetPickup.wep]]*2)+" "+string(typ_name[wep_type[targetPickup.wep]])
-			    if ammo[wep_type[targetPickup.wep]] = typ_amax[targetPickup.wep_type[targetPickup.wep]]
-			    dir.mytext = "MAX "+string(typ_name[wep_type[targetPickup.wep]])
+				dir = instance_create(x,y,PopupText)
+				dir.mytext = "+"+string(typ_ammo[wep_type[targetPickup.wep]]*ammoMultiple)+" "+string(typ_name[wep_type[targetPickup.wep]])
+				if ammo[wep_type[targetPickup.wep]] = typ_amax[targetPickup.wep_type[targetPickup.wep]]
+				dir.mytext = "MAX "+string(typ_name[wep_type[targetPickup.wep]])
 			}
-			
-		    targetPickup.ammo = 0
-	    }
+		}
+		targetPickup.ammo = 0
 	}
-	else
-	{
-
-	    if targetPickup.ammo > 0 and wep_type[targetPickup.wep] != 0
-	    {
-	    ammo[wep_type[targetPickup.wep]] += typ_ammo[targetPickup.wep_type[targetPickup.wep]]*3
-	    if ammo[wep_type[targetPickup.wep]] > typ_amax[targetPickup.wep_type[targetPickup.wep]]
-	    ammo[wep_type[targetPickup.wep]] = typ_amax[targetPickup.wep_type[targetPickup.wep]]
-    
-	    var allammotypes=5;
-	    repeat(5)
-	    {
-	    ammo[allammotypes] += typ_ammo[allammotypes]
-	    if ammo[allammotypes] > typ_amax[allammotypes]
-	    ammo[allammotypes] = typ_amax[allammotypes]
-	    allammotypes--;
-	    }
-    
-    
-	    dir = instance_create(x,y,PopupText)
-	    dir.mytext = "+"+string(typ_ammo[wep_type[targetPickup.wep]]*4)+" "+string(typ_name[wep_type[targetPickup.wep]])
-	    if ammo[wep_type[targetPickup.wep]] = typ_amax[targetPickup.wep_type[targetPickup.wep]]
-	    dir.mytext = "MAX "+string(typ_name[wep_type[targetPickup.wep]])
-	    targetPickup.ammo = 0
-    
-    
-	    repeat(2)
-	    instance_create(x,y,HPPickup)
-    
-	var raddrop = 60;//robot 40
-    
-	    do {if raddrop > 15
-	{raddrop -= 10
-	with instance_create(x,y,BigRad)
-	{motion_add(other.direction,other.speed)
-	motion_add(random(360),random(60/2)+3)
-	repeat(speed)
-	speed *= 0.9}}
-	}
-	until raddrop <= 15
-
-	repeat(raddrop)
-	{
-	with instance_create(x,y,Rad)
-	{motion_add(other.direction,other.speed)
-	motion_add(random(360),random(15/2)+3)
-	repeat(speed)
-	speed *= 0.9}
-	}
-    
-	    }
-    
-    
-
-	}
-
 
 	if KeyCont.key_pick[p] = 1 && targetPickup.visible == true
 	{

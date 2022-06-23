@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskPlasmaBallBig",
     "path": "sprites/mskPlasmaBallBig/mskPlasmaBallBig.yy",

@@ -23,11 +23,10 @@ case 4:
 	    if (instance_exists(Player))
 	    {
     
-	    if Player.race=11//HUNTER Projectile speed
-	    {
+
 	    if team=2
-	    speed*=1.18;
-	    }
+	    speed*=Player.pSpeedBoost
+	    
 	    }
 	}
 break;
@@ -44,11 +43,10 @@ case 3:
 	    if (instance_exists(Player))
 	    {
     
-	    if Player.race=11
-	    {
+
 	    if team=2
-	    speed*=1.18;
-	    }
+	    speed*=Player.pSpeedBoost
+	    
 	    }
 	}
 break;
@@ -65,11 +63,10 @@ case 2:
 	    if (instance_exists(Player))
 	    {
     
-	    if Player.race=11
-	    {
+	    
 	    if team=2
-	    speed*=1.18;
-	    }
+	    speed*=Player.pSpeedBoost
+	    
 	    }
 	}
 break;
@@ -86,11 +83,8 @@ case 1:
 	    if (instance_exists(Player))
 	    {
     
-	    if Player.race=11//HUNTER Projectile speed
-	    {
-	    if team=2
-	    speed*=1.18;
-	    }
+			if team=2
+				speed*=Player.pSpeedBoost;
 	    }
 	}
 break;
@@ -107,12 +101,11 @@ case 0:
 	    if (instance_exists(Player))
 	    {
     
-	    if Player.race=11//HUNTER Projectile speed
-	    {
+
 	    if team=2
-	    speed*=1.18;
+	    speed*=Player.pSpeedBoost
 	    }
-	    }
+	    
 	}
 break;
 }

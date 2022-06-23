@@ -9,6 +9,6 @@ image_speed = 0.4
 
 alarm[1] = 30+random(90)
 alarm[0] = 10+random(10)
-
+maxspeed = 2;
 walk = 0
 

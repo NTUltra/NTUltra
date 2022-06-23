@@ -22,12 +22,10 @@ image_angle = direction
 team = other.team
     if (instance_exists(Player))
     {
-    
-    if Player.race=11
-    {
+
     if team=2
-    speed*=1.18;
-    }
+    speed*=Player.pSpeedBoost
+ 
     }
 }
 }

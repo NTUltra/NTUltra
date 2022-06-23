@@ -12,6 +12,9 @@ if instance_exists(Player)
 		maxspd += modBoost;
 	if Player.wepmod4 == 11
 		maxspd += modBoost;
+	if Player.crown == 23//Crown of speed
+		maxspd += 5;
+	
 }
 with creator
 {

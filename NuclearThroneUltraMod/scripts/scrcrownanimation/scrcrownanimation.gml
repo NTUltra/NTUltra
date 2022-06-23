@@ -4,6 +4,7 @@
 function scrCrownAnimation(takenCrown){
 	spr_idle = sprCrown0Idle
 	spr_walk = sprCrown0Walk
+	maxspeed = 2;
 	switch (takenCrown)
 	{
 		case 2://Life
@@ -77,6 +78,23 @@ function scrCrownAnimation(takenCrown){
 		case 19://Blindness
 			spr_idle = sprCrown18Idle
 			spr_walk = sprCrown18Walk
+		break;
+		case 20://Protection
+			spr_idle = sprCrown19Idle
+			spr_walk = sprCrown19Walk
+		break;
+		case 21://Risk
+			spr_idle = sprCrown20Idle
+			spr_walk = sprCrown20Walk
+		break;
+		case 22://Luck
+			spr_idle = sprCrown21Idle
+			spr_walk = sprCrown21Walk
+		break;
+		case 23://Speed
+			spr_idle = sprCrown22Idle
+			spr_walk = sprCrown22Walk
+			maxspeed = 3;
 		break;
 		
 	}

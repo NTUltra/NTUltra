@@ -19,11 +19,9 @@ repeat(2){
 	{motion_add(point_direction(x,y,other.mox,other.moy)+(random(3)-1.5)*Player.accuracy,20+random(4))
 	image_angle = direction
 	team = other.team
-		if Player.race=11
-	    {
+
 	    if team=2
-	    speed*=1.18;
-	    }
+	    speed*=Player.pSpeedBoost
 	}
 }
 }

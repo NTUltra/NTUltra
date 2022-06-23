@@ -21,11 +21,9 @@ team = other.team
     {
     
     
-    if Player.race=11//HUNTER Projectile speed
-    {
+
     if team=2
-    speed*=1.18;
-    }
+    speed*=Player.pSpeedBoost
     }
 }
 

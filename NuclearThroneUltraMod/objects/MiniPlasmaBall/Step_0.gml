@@ -21,6 +21,10 @@ if instance_exists(Player)
     }
     else if(speed>12)
     {speed=12;}
+	if Player.crown == 23//Crown of speed
+	{
+		speed += 2;	
+	}
 }
 else if(speed>12)
 {speed=12;}

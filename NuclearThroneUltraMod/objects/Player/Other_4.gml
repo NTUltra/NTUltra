@@ -89,7 +89,7 @@ scrUnlockBSkin(12,"FOR GOING INTO DA CRIB",0);
 if area = 113
 scrUnlockCSkin(10,"FOR DISCOVERING BANDITLAND",0);
 
-if armour=5 && race =16
+if armour >= 5 && race =16
 scrUnlockBSkin(16,"FOR GETTING THE MAXIMUM AMOUNT#OF ARMOUR POSSIBLE AS VIKING",0);
 
 if skeletonlives=4

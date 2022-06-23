@@ -54,7 +54,7 @@ if UberCont.opt_ammoicon
 	if other.my_health = other.maxhealth
 	dir.mytext = "MAX"
 	else if other.my_health > other.maxhealth
-	dir.mytext = "+"+string(ceil(num))+" HP#OVERHEAL!"
+	dir.mytext = "+"+string(ceil(num))+"#OVERHEAL!"
 }
 else
 {

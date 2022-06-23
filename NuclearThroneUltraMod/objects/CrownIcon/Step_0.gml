@@ -1,4 +1,4 @@
-if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+16 and UberCont.mouse__y < y+15 and UberCont.mouse__x > x-16 and UberCont.mouse__y > y-15)
+if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+14 and UberCont.mouse__y < y+16 and UberCont.mouse__x > x-14 and UberCont.mouse__y > y-16)
 {
     with UberCont///UNLOCK CROWN
     {
@@ -218,6 +218,18 @@ if crown == 16
 		wantVanAmount++;
 	}
 }
+if oldcrown == 23
+{
+	//Crown of speed
+	Player.pSpeedBoost -= 0.12;
+	Player.maxspeed -= 0.25;
+}
+if crown == 23
+{
+	//Crown of speed
+	Player.pSpeedBoost += 0.12;
+	Player.maxspeed += 0.25;
+}
 with CrownIcon
 instance_destroy()
 
@@ -234,7 +246,7 @@ with instance_create(x,y,GenCont)
 race = Player.race
 }
 
-snd_play_2d(sndSkillPick)
+snd_play_2d(sndCrownRandom)
 with Crown
 {
 	scrCrownAnimation(other.crown);	
