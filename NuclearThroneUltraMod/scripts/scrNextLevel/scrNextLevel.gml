@@ -256,7 +256,10 @@ function scrNextLevel() {
 			inverted=false;
 	    exit;
 	    }
-	    hard+=1;
+		if crown == 24
+			hard -= 1;
+		else
+			hard += 1;
 		
 		//Cursed caves to caves 2
 		if area == 115
@@ -380,24 +383,36 @@ function scrNextLevel() {
 		    {
 		    area=104;
 		
-			debug("lastsubarea ",lastsubarea);
 		    visitedCrib=true;
-		    hard -= 1;
-			debug("GO CRIB");
+			if crown == 24
+				hard += 1;
+			else
+				hard -= 1;
 		    }
 		}
 	}
 
 	if (area=105 || area=106|| area=107 || area = 108 || area = 109 | area = 110 || area = 111 || area = 112)&&subarea<2//inverted curse
 	{
-		hard+=1.5
+		if crown == 24
+			hard -= 1.5;
+		else
+			hard += 1.5;
 	}
 	else if area == 10 && subarea < 2
-		hard += 2
+	{
+		if crown == 24
+			hard -= 2;
+		else
+			hard += 2;
+	}
 	else if (!(area = 7 && subarea == 1) && !(area = 5 && subarea == 1) && !(area = 4 && subarea == 1))//Labs 1 and Vulcano 1 don't increase hard
-		hard += 1
+	{
+		if crown == 24
+			hard -= 1;
+		else
+			hard += 1;
+	}
 
-
-
-
+	hard = max(0,hard);
 }

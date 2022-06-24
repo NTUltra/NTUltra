@@ -64,7 +64,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprHorrorBullet","path":"sprites/sprHorrorBullet/sprHorrorBullet.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprHorrorBullet",
     "tags": [],
     "resourceType": "GMSequence",
   },

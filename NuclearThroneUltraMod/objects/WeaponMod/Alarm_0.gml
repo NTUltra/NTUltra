@@ -40,7 +40,7 @@ if curse=1//ITS CURSED YOU WOT!? LETS FIGHT!
 snd_play(sndStatueDead);
 
 //YOU?
-if Player.loops > 0 && instance_exists(Floor) && random(200)<1
+if instance_exists(Player) && Player.loops > 0 && instance_exists(Floor) && random(200)<1
 {
 	var rd = random(360)
 	var xx = x+lengthdir_x(96,rd);

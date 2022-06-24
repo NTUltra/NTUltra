@@ -1,2 +1,2 @@
 /// @description sequence reset seed
-seedI = 0;
+customSideArtI = 0;

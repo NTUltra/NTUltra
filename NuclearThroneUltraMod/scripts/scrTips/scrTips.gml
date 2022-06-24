@@ -107,7 +107,7 @@ function scrTips() {
 	if Player.area = 100
 	tip = choose("aw yes","take a crown to uncurse your weapon","there is value here","visit this place atleast twice","let's hope its not toxic again",
 	"old torches","you can get 3 mods#on a single weapon","mods stack","take a crown to unlock#crown start for this character","most weapon mods benefit from#weapon specific mutations",
-	"power craving spawns more mods")
+	"power craving spawns more mods","open mind can spawn two proto chests","weapon mods can be rerolled#when you have 3")
 	if Player.area = 102
 	tip = choose("hunger...","it smells nice here","wait for it....")
 	if Player.area = 103
@@ -265,7 +265,7 @@ function scrTips() {
 	"I believe I can fly","don't serve gorillaman","angel can fly over lava","grow your wings")
 
 	if Player.race = 19//SKELETON
-	tip = choose("hard","dusty","dry","nothing...","bones","blood gamble chance#depends on ammo cost")
+	tip = choose("hard","dusty","dry","nothing...","bones","blood gamble chance#depends on ammo cost","survive","do not give up")
 
 	if Player.race = 20//BUSINESS HOG
 	tip = choose("post apocalyptic capitalism","delusional capitalist","mutated money","Making Nuclear Throne great again"

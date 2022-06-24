@@ -10,6 +10,8 @@ function scrLoadOptions() {
 	opt_fulscrn = ini_read_real("OPTIONS","fulscrn",1);
 	opt_crosshair = ini_read_real("OPTIONS","crosshair",0);
 	opt_sideart = ini_read_real("OPTIONS","sideart",0);
+	opt_custom_sideart = ini_read_string("OPTIONS","customsideart",0);
+	customSideArt = sprite_add(opt_custom_sideart,0,false,false,0,0);
 	opt_dmgindicator = ini_read_real("OPTIONS","dmgindicator",0);
 	opt_camera_follow = ini_read_real("OPTIONS","camerafollowaim",1);
 	opt_hud_des = ini_read_real("OPTIONS","huddes",1);

@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskRad",
     "path": "sprites/mskRad/mskRad.yy",

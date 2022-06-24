@@ -8,6 +8,15 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 
 typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 bskin=0;
-
-/* */
-/*  */
+dmg = 3;
+if instance_exists(Player)
+{
+	if Player.bskin == 1
+	{
+		sprite_index = sprHorrorBBullet;
+	}
+	else if Player.bskin == 2
+	{
+		sprite_index = sprHorrorCBullet;
+	}
+}

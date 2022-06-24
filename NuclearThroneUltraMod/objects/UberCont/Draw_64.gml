@@ -5,6 +5,12 @@ var s = ww/display_get_gui_width();
 s = min(s,wh/display_get_gui_height());
 var excesswidth = (ww - (view_get_wport(0)*s))*0.5
 var step = 64*s;
+if UberCont.opt_sideart == sprite_get_number(sprSideArt) && sprite_exists(UberCont.customSideArt)
+{
+	var sw = 64*s
+	var ws = sw/sprite_get_width(UberCont.customSideArt);
+	var hs = sw/sprite_get_height(UberCont.customSideArt);
+}
 if (excesswidth > 0) {
 	var tilex = excesswidth-step;
 	var tiley = -step;
@@ -15,7 +21,12 @@ if (excesswidth > 0) {
 			tilex -= step;
 			tiley = 0;
 		}
-		draw_sprite_ext(sprSideArt, opt_sideart, tilex, tiley,s,s,0,c_white,1);
+		if UberCont.opt_sideart == sprite_get_number(sprSideArt) && sprite_exists(UberCont.customSideArt)
+		{
+			draw_sprite_ext(UberCont.customSideArt, 0, tilex, tiley,ws,hs,0,c_white,1);
+		}
+		else
+			draw_sprite_ext(sprSideArt, opt_sideart, tilex, tiley,s,s,0,c_white,1);
 	} until (tiley > wh);
 	
 	tilex = ww-excesswidth;
@@ -27,6 +38,11 @@ if (excesswidth > 0) {
 			tilex += step;
 			tiley = 0;
 		}
-		draw_sprite_ext(sprSideArt, opt_sideart, tilex, tiley,s,s,0,c_white,1);
+		if UberCont.opt_sideart == sprite_get_number(sprSideArt) && sprite_exists(UberCont.customSideArt)
+		{
+			draw_sprite_ext(UberCont.customSideArt, 0, tilex, tiley,ws,hs,0,c_white,1);
+		}
+		else
+			draw_sprite_ext(sprSideArt, opt_sideart, tilex, tiley,s,s,0,c_white,1);
 	} until (tiley > wh);
 }

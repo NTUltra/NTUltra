@@ -96,6 +96,11 @@ function scrCrownAnimation(takenCrown){
 			spr_walk = sprCrown22Walk
 			maxspeed = 3;
 		break;
+		case 24://Sloth
+			spr_idle = sprCrown23Idle
+			spr_walk = sprCrown23Walk
+			maxspeed = 1;
+		break;
 		
 	}
 }

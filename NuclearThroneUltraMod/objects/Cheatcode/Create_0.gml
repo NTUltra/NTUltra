@@ -28,5 +28,15 @@ disableSecret1[5] = vk_down;
 disableSecret1[6] = vk_down;
 disableSecret1[7] = vk_down;
 disableSecret1I = 0;
-
+/*
+customSideArt[0] = vk_left;
+customSideArt[1] = vk_right;
+customSideArt[2] = vk_left;
+customSideArt[3] = vk_right;
+customSideArt[4] = vk_left;
+customSideArt[5] = vk_right;
+customSideArt[6] = vk_left;
+customSideArt[7] = vk_right;
+customSideArtI = 0;
+*/
 //event_user(2);

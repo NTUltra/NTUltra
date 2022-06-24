@@ -4,6 +4,11 @@ scrDrop(30,0)
 speed = 0;
 my_health = 0;
 event_inherited()
+with BackCont
+{
+	if alarm[2] > 60
+	alarm[2] -= 30;
+}
 if dropFreaks
 {
 	snd_play(sndFreakPopoEnter);

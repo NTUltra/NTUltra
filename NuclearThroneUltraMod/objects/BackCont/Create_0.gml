@@ -24,8 +24,8 @@ canSpawnPopoThisManyTimes = 2 + GetPlayerLoops();
 spawnedThisManyPopo = 0;
 
 wantVanAmount = 0;
-vanDelay = 270;
-vanDelayRandom = 50;
+vanDelay = 280;
+vanDelayRandom = 60;
 verticalVans = false;
 
 ///@description deside how manny vans
@@ -40,17 +40,18 @@ if instance_exists(Player)
 	var i = 0;
 	repeat(GetPlayerLoops())
 	{
-		if i < 4
+		if i < 3
 		{
 			wantVanAmount++;
 		}
-		else if i % 2 == 0//After loop 4 its every other loop another van
+		else if i % 2 == 0//After loop 3 its every other loop another van
 		{
+			//Starting with no extra van on loop 4
 			wantVanAmount++;
 		}
 		i ++;
 	}
-	vanDelay = max(60,vanDelay - ((wantVanAmount-1)*60));
+	vanDelay = max(100,vanDelay - ((wantVanAmount-1)*40));
 	if ( (Player.area == 6 || Player.area == 112) && Player.subarea ==  2 )
 		wantVanAmount = min(GetPlayerLoops()-2,2);
 	if wantVanAmount > 2

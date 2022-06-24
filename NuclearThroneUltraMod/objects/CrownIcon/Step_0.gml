@@ -9,7 +9,7 @@ var usedRandom = false;
 if crown = 0
 {
 	usedRandom = true;
-	crown = ceil(irandom(crownmax-1)+1)
+	crown = ceil(irandom(crownmax)+1)//Includes 24 crown of sloth
 }
 
 oldcrown = Player.crown
@@ -229,6 +229,18 @@ if crown == 23
 	//Crown of speed
 	Player.pSpeedBoost += 0.12;
 	Player.maxspeed += 0.25;
+}
+if oldcrown == 24
+{
+	//Crown of sloth
+	Player.pSpeedBoost += 0.12;
+	Player.maxspeed += 0.25;
+}
+if crown == 24
+{
+	//Crown of sloth
+	Player.pSpeedBoost -= 0.12;
+	Player.maxspeed -= 0.25;
 }
 with CrownIcon
 instance_destroy()

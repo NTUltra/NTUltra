@@ -2,5 +2,5 @@
 
 // Inherit the parent event
 event_inherited();
-dmg = 7;
+dmg = 8;
 hits += 1;

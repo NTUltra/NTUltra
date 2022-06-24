@@ -3761,7 +3761,7 @@ function scrWeapons() {
 	wep_name[341] = "ULTRA KRAKEN LAUNCHER"
 	wep_type[341] = 4
 	wep_auto[341] = 0
-	wep_load[341] = 40
+	wep_load[341] = 42
 	wep_cost[341] = 7
 	wep_sprt[341] = sprUltraKrakenCannon
 	wep_area[341] = 25
@@ -5547,7 +5547,7 @@ function scrWeapons() {
 	wep_type[503] = 3
 	wep_auto[503] = 0
 	wep_load[503] = 13//17
-	wep_cost[503] = 1
+	wep_cost[503] = 1.5
 	wep_sprt[503] = sprUltraBow
 	wep_area[503] = 19
 	wep_text[503] = "hold for more power"
@@ -5581,7 +5581,7 @@ function scrWeapons() {
 	wep_auto[506] = 1
 	wep_load[506] = 10
 	wep_cost[506] = 2
-	wep_sprt[506] = sprSwordGun
+	wep_sprt[506] = sprUltraSwordGun
 	wep_area[506] = 23
 	wep_text[506] = "we have gone too far!"
 	wep_swap[506] = sndSwapSword
@@ -5592,7 +5592,7 @@ function scrWeapons() {
 	wep_auto[507] = 0
 	wep_load[507] = 9
 	wep_cost[507] = 0
-	wep_sprt[507] = sprUltraSwordGun
+	wep_sprt[507] = sprUltraSword
 	wep_area[507] = 22
 	wep_text[507] = "meta slayer"
 	wep_swap[507] = sndSwapEnergy
@@ -5921,7 +5921,7 @@ function scrWeapons() {
 	wep_type[537] = 3
 	wep_auto[537] = 0
 	wep_load[537] = 350
-	wep_cost[537] = 24
+	wep_cost[537] = 22
 	wep_sprt[537] = sprSuperSeekerCannon
 	wep_area[537] = 18
 	wep_text[537] = "SSC!"
@@ -5932,7 +5932,7 @@ function scrWeapons() {
 	wep_type[538] = 4
 	wep_auto[538] = 0
 	wep_load[538] = 350
-	wep_cost[538] = 24
+	wep_cost[538] = 23
 	wep_sprt[538] = sprSuperBloodCannon
 	wep_area[538] = 19
 	wep_text[538] = "SBC!"
@@ -5954,7 +5954,7 @@ function scrWeapons() {
 	wep_type[540] = 4
 	wep_auto[540] = 0
 	wep_load[540] = 55
-	wep_cost[540] = 9
+	wep_cost[540] = 8
 	wep_sprt[540] = sprMissileCannon
 	wep_area[540] = 14
 	wep_text[540] = "RIP YA A NEW ONE"

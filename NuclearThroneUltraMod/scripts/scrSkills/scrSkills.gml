@@ -95,9 +95,9 @@ function scrSkills() {
 	}
 
 	skill_name[4] = "RABBIT PAW"
-	skill_text[4] = "50% MORE AMMO AND HEALTH DROPS"
+	skill_text[4] = "45% MORE AMMO AND HEALTH DROPS"
 	if isDoctor
-		skill_text[4] = "60% MORE AMMO AND HEALTH DROPS"
+		skill_text[4] = "55% MORE AMMO AND HEALTH DROPS"
 	skill_tips[4] = "feeling lucky"
 	skill_msnd[4] =  sndMutRabbitPaw
 
@@ -232,9 +232,9 @@ function scrSkills() {
 	if isDoctor
 		skill_text[16] = "70% OF HIT BULLETS BECOME AMMO#BULLETS CAN'T BE DEFLECTED BY ENEMIES"
 	else
-		skill_text[16] = "67% OF HIT BULLETS BECOME AMMO#BULLETS CAN'T BE DEFLECTED BY ENEMIES"
+		skill_text[16] = "65% OF HIT BULLETS BECOME AMMO#BULLETS CAN'T BE DEFLECTED BY ENEMIES"
 	if betterWepSpecific
-		skill_text[16] = "75% OF HIT BULLETS BECOME AMMO#BULLETS CAN'T BE DEFLECTED BY ENEMIES"
+		skill_text[16] = "80% OF HIT BULLETS BECOME AMMO#BULLETS CAN'T BE DEFLECTED BY ENEMIES"
 	skill_tips[16] = "no need to aim"
 	skill_msnd[16] =  sndMutRecycleGland
 

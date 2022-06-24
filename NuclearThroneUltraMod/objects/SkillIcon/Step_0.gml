@@ -88,9 +88,9 @@ else if skill = 13 && Player.race = 25//Long arms
 }
 else if skill= 16 && Player.race = 25//recycle gland
 {
-	Player.betterrecyclegland=0.12;
+	Player.betterrecyclegland = 5;
 	if Player.ultra_got[97]
-		Player.betterrecyclegland=0.26;
+		Player.betterrecyclegland = 15;
 
 }
 else if skill = 17 && Player.race = 25

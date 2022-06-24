@@ -10,6 +10,7 @@ with Player//Data to keep
 {
 	alarm[3]=300;//immunity
 	//bskin=other.bskin;
+	ultramod = other.ultramod;
 	ultimategamble=true;
 	skeletonlives=other.skeletonlives;
 	race = other.race
@@ -21,6 +22,7 @@ with Player//Data to keep
 	kills = other.kills;
 	subarea=other.subarea;
 	boostLevel = other.level;
+	rad = round(GetPlayerMaxRad()*0.6);
 	ammo[1] = typ_ammo[1] * 3
     ammo[2] = typ_ammo[2] * 3
     ammo[3] = typ_ammo[3] * 3

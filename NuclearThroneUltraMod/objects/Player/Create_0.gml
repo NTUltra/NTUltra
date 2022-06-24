@@ -137,7 +137,7 @@ bettermelee = 0;
 betterlaserbrain = 0;
 betterpluto = 0;
 betterrabbitpaw = 0.0;
-betterrecyclegland = 0.1;
+betterrecyclegland = 0;
 betterboltmarrow = 0;
 
 scrRaces()

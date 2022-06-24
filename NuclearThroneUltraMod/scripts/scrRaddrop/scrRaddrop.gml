@@ -3,22 +3,23 @@ function scrRaddrop(amountOfRads = raddrop) {
 
 	if instance_exists(Player)
 	{
-	if Player.ultra_got[81]//Horror Stalker
-	{
-	repeat(amountOfRads*0.7)//0.6 in real game
-	{
-
-	with instance_create(x,y,HorrorBullet)
-	{
-	motion_add(random(360),8)
-	image_angle = direction
-	team = Player.team
-	bskin=Player.bskin}
-
-	}
-
-	}
-
+		if Player.ultra_got[81]//Horror Stalker
+		{
+			var am = ceil(amountOfRads*0.8);//0.6 in real game
+			var angstep = 360/am;
+			var ang = random(360);
+			repeat(am)
+			{
+				with instance_create(x,y,HorrorBullet)
+				{
+				motion_add(ang,8)
+				image_angle = direction
+				team = Player.team
+				bskin=Player.bskin
+				}
+				ang += angstep;
+			}
+		}
 	}
 
 

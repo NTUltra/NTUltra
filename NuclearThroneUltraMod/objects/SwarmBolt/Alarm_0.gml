@@ -6,6 +6,8 @@ if instance_exists(Player)
 		modBoost += 0.2;
 	if Player.crown == 23//Crown of speed
 		mxSpd += 0.4;
+	if Player.crown == 24//Crown of sloth
+		mxSpd -= 0.4;
 }
 if Mod1 == 11
 	mxSpd += modBoost;

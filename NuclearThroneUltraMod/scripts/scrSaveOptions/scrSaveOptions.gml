@@ -10,6 +10,7 @@ function scrSaveOptions() {
 	ini_write_real("OPTIONS","fulscrn",opt_fulscrn);
 	ini_write_real("OPTIONS","crosshair",opt_crosshair);
 	ini_write_real("OPTIONS","sideart",opt_sideart);
+	ini_write_string("OPTIONS","customsideart",opt_custom_sideart);
 	ini_write_real("OPTIONS","dmgindicator",opt_dmgindicator);
 	ini_write_real("OPTIONS","camerafollowaim",opt_camera_follow);
 	ini_write_real("OPTIONS","huddes",opt_hud_des);

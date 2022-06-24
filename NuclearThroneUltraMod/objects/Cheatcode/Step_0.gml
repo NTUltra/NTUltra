@@ -27,6 +27,16 @@ if (keyboard_check_pressed(vk_up))
 	{
 		disableSecret1I = 0;	
 	}
+	/*
+	if (customSideArt[customSideArtI] == vk_up)
+	{
+		event_user(4);
+	}
+	else
+	{
+		customSideArtI = 0;
+	}
+	*/
 }
 else if (keyboard_check_pressed(vk_down))
 {
@@ -56,6 +66,16 @@ else if (keyboard_check_pressed(vk_down))
 	{
 		disableSecret1I = 0;	
 	}
+	/*
+	if (customSideArt[customSideArtI] == vk_down)
+	{
+		event_user(4);
+	}
+	else
+	{
+		customSideArtI = 0;
+	}
+	*/
 }
 else if (keyboard_check_pressed(vk_left))
 {
@@ -85,6 +105,16 @@ else if (keyboard_check_pressed(vk_left))
 	{
 		disableSecret1I = 0;	
 	}
+	/*
+	if (customSideArt[customSideArtI] == vk_left)
+	{
+		event_user(4);
+	}
+	else
+	{
+		customSideArtI = 0;
+	}
+	*/
 }
 else if (keyboard_check_pressed(vk_right))
 {
@@ -114,4 +144,14 @@ else if (keyboard_check_pressed(vk_right))
 	{
 		disableSecret1I = 0;	
 	}
+	/*
+	if (customSideArt[customSideArtI] == vk_right)
+	{
+		event_user(4);
+	}
+	else
+	{
+		customSideArtI = 0;
+	}
+	*/
 }

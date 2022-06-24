@@ -4736,10 +4736,6 @@ function scrFire() {
 	wep=75;
 	}
 
-	with projectile{
-		if team=2
-			speed *= Player.pSpeedBoost;
-	    }
 
 	if Player.ultra_got[56]==1//PANDA Meditate rapid hands melee firerate
 	{
@@ -4889,25 +4885,31 @@ function scrFire() {
 				Mod3=other.wepmod3;
 				if !hadSpeedApplied && speed > 0
 				{
+					speed *= other.pSpeedBoost;
 					hadSpeedApplied = true;
 					var speedBoost = 1.11;
 					var spda = 2.4;
 					var speedAdd = 0;
-					if Player.skill_got[30] == 1
+					if other.skill_got[30] == 1
 					{
 						Mod4=other.wepmod4;
 						speedBoost = 1.15;
 						spda = 3.9;
 					}
-					if Player.race == 11
+					if other.race == 11
 					{
 						speed *= 1.1;
 						speedAdd += 2;
 					}
-					if Player.crown == 23//Crown of speed
+					if other.crown == 23//Crown of speed
 					{
 						speed *= 1.12;
 						speedAdd += 4;
+					}
+					if other.crown == 24//Crown of sloth
+					{
+						speed *= 0.92;
+						speedAdd = max(0,speedAdd-1);
 					}
 				    //Projectile speed mod
 				    if Mod1==11
@@ -4931,7 +4933,7 @@ function scrFire() {
 						speedAdd += spda;
 				    }
 					speed += speedAdd;
-					speed = min(speed,40);
+					speed = clamp(speed,0.5,40);
 				}
 			}
 		}   

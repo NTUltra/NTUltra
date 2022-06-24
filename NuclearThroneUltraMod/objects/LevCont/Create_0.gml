@@ -18,8 +18,13 @@ dir = 0
 repeat(crownmax+1)
 {
 if dir<12
-{with instance_create(__view_get( e__VW.XView, 0 )+14+dir*26.5,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-50,CrownIcon)//24
-crown = other.dir
+{
+	with instance_create(__view_get( e__VW.XView, 0 )+14+dir*26.5,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-50,CrownIcon)//24
+	{
+		crown = other.dir
+		if crown == 8 && Player.tookDestiny//Crown of sloth secret
+			crown = 24;
+	}
 }
 else
 {with instance_create(__view_get( e__VW.XView, 0 )+14+(dir-12)*26.5,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-16,CrownIcon)//24

@@ -120,7 +120,7 @@ function scrPowers() {
 						spr_close = sprHandCClose;
 						spr_closing = sprHandCClosing;
 						if !scrIsInInvertedArea()
-							lerpSpeed *= 0.75;//Slower hand
+							lerpSpeed *= 0.85;//Slower hand
 					}
 					else if other.bskin == 1
 					{
@@ -533,9 +533,9 @@ function scrPowers() {
 	    bskin=other.bskin
     
 	    if bskin = 1
-	    sprite_index=sprHorrorBeamB;
+			sprite_index=sprHorrorBeamB;
 	    else if bskin = 2
-	    sprite_index=sprHorrorBeamC;
+			sprite_index=sprHorrorBeamC;
     
 	    originnr=instance_number(HorrorBeam);
     
@@ -548,13 +548,13 @@ function scrPowers() {
 	    rad=1;
 	        with instance_create(x,y,LightningSpawn)
 	        {
-	        if other.bskin=1
-	        sprite_index=sprHorrorBeamSpawnB
-	        else if other.bskin=2
-	        sprite_index=sprHorrorBeamSpawnC
-	        else
-	        sprite_index=sprHorrorBeamSpawn
-	        image_angle = other.image_angle
+		        if other.bskin=1
+					sprite_index=sprHorrorBeamSpawnB
+		        else if other.bskin=2
+					sprite_index=sprHorrorBeamSpawnC
+		        else
+					sprite_index=sprHorrorBeamSpawn
+				image_angle = other.image_angle
 	        }
 	    }
 	rad = max(rad,0);
@@ -1544,7 +1544,9 @@ function scrPowers() {
 	    {
 	    bskin=other.bskin
 	    if bskin = 1
-	    sprite_index=sprHorrorBeamB;
+			sprite_index=sprHorrorBeamB;
+		else if bskin = 2
+			sprite_index=sprHorrorBeamC;
     
 	    originnr=instance_number(HorrorBeam);
     
@@ -1558,9 +1560,11 @@ function scrPowers() {
 	        with instance_create(x,y,LightningSpawn)
 	        {
 	        if other.bskin=1
-	        sprite_index=sprHorrorBeamSpawnB
+				sprite_index=sprHorrorBeamSpawnB
+			else if other.bskin=2
+				sprite_index=sprHorrorBeamSpawnC
 	        else
-	        sprite_index=sprHorrorBeamSpawn
+				sprite_index=sprHorrorBeamSpawn
 	        image_angle = other.image_angle
 	        }
 	    }
@@ -1571,7 +1575,9 @@ function scrPowers() {
 	{
 	bskin=other.bskin
 	if bskin = 1
-	sprite_index=sprHorrorBeamB;
+		sprite_index=sprHorrorBeamB;
+	else if bskin = 2
+		sprite_index=sprHorrorBeamC;
 
 	originnr=instance_number(HorrorBeam);
 
@@ -1585,9 +1591,11 @@ function scrPowers() {
 	    with instance_create(x,y,LightningSpawn)
 	    {
 	    if other.bskin=1
-	    sprite_index=sprHorrorBeamSpawnB
+			sprite_index=sprHorrorBeamSpawnB
+		else if other.bskin=2
+			sprite_index=sprHorrorBeamSpawnC
 	    else
-	    sprite_index=sprHorrorBeamSpawn
+			sprite_index=sprHorrorBeamSpawn
 	    image_angle = other.image_angle
 	    }
 	}
@@ -1600,7 +1608,9 @@ function scrPowers() {
 	    {
 	    bskin=other.bskin
 	    if bskin = 1
-	    sprite_index=sprHorrorBeamB;
+			sprite_index=sprHorrorBeamB;
+		else if bskin = 2
+			sprite_index=sprHorrorBeamC;
     
 	    originnr=instance_number(HorrorBeam);
     
@@ -1614,9 +1624,11 @@ function scrPowers() {
 	        with instance_create(x,y,LightningSpawn)
 	        {
 	        if other.bskin=1
-	        sprite_index=sprHorrorBeamSpawnB
+				sprite_index=sprHorrorBeamSpawnB
+			else if other.bskin=2
+				sprite_index=sprHorrorBeamSpawnC
 	        else
-	        sprite_index=sprHorrorBeamSpawn
+				sprite_index=sprHorrorBeamSpawn
 	        image_angle = other.image_angle
 	        }
 	    }

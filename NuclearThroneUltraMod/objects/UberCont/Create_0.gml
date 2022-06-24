@@ -135,6 +135,8 @@ maxHpIncrease = 0;
 levelIncrease = 0;
 savedSeed = 0;
 canSave = false;
+encrypted_run_data = {}
+/*
 encrypted_run_data = {
 	area: 100,
 	subarea: 1,
@@ -221,7 +223,7 @@ encrypted_run_data = {
 	crownVaultChallenge: 2,
 	randomlySelected: false
 };
-
+*/
 //Aim overwrite
 mouse__x = mouse_x;
 mouse__y = mouse_y;

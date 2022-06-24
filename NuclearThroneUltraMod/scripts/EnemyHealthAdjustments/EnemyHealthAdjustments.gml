@@ -4,7 +4,7 @@
 function EnemyHealthAdjustments(){
 	if instance_exists(Player)
 	{
-		maxhealth*= 1 + (clamp(Player.loops-1,0,10)*0.15);//0.15
+		maxhealth*= 1 + (clamp(Player.loops-1,0,10)*0.125);//0.15
 		if Player.crown == 10
 			maxhealth *= 1.05;//Very minor crown of difficulty
 		

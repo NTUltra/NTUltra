@@ -224,6 +224,7 @@ instance_destroy();
 with instance_create(x,y,PlayerSpawn)//Data to keep
 {
 //alarm[3]=300;//immunity
+ultramod = other.ultramod;
 ultimategamble=true;
 skeletonlives=other.skeletonlives-1;
 race = other.race

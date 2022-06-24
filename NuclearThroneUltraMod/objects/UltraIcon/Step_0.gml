@@ -81,7 +81,7 @@ bettermelee=1.5;
 }
 if skill_got[16]//RecycleGland
 {
-betterrecyclegland=0.26;
+betterrecyclegland=15;
 }
 if skill_got[17]//LaserBrain
 {

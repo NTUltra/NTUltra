@@ -16,7 +16,7 @@ if (hundredPercentI) >= array_length(hundredPercent)
 		//Crownstart unlock
 		var cir = 0;
 		ctot_all_crowns_taken[dir] = 0;
-		repeat(crownmax+1)
+		repeat(crownmax+2)
 		{
 			ctot_crown_taken[dir,cir] = 1;
 			if (cir > 1)
@@ -32,7 +32,7 @@ if (hundredPercentI) >= array_length(hundredPercent)
 
 	repeat(maxgamemode+1)
 	{
-		//gamemode_have[dir]=1
+		gamemode_have[dir]=1
 		dir++
 	}
 

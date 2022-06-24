@@ -22,7 +22,7 @@ if instance_exists(Player)
 	with instance_create(x,y,UltraBolt)
 	{
 		motion_add(d+(random(4)-2)*Player.accuracy,10+(other.rate*5))
-		dmg = 20 + (other.rate*5);
+		dmg = 25 + (other.rate*10);
 		wallsdestroyed=5+(other.rate*4);
 		image_angle = direction
 		team = other.team

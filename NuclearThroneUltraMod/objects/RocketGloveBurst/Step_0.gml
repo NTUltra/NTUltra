@@ -14,6 +14,8 @@ if instance_exists(Player)
 		maxspd += modBoost;
 	if Player.crown == 23//Crown of speed
 		maxspd += 5;
+	if Player.crown == 24//Crown of sloth
+		maxspd -= 4;
 	
 }
 with creator

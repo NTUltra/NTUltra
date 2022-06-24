@@ -10,7 +10,7 @@ typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflects
 
 image_speed = 0.4
 target=enemy;
-dmg=10//12
+dmg=11
 accuracy=24;
 if instance_exists(Player){
 if Player.skill_got[17] = 1{

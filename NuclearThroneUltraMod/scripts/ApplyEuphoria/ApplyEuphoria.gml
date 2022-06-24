@@ -12,7 +12,14 @@ function ApplyEuphoria(){
 				speed *= 1.22;
 			}
 			if Player.skill_got[12] = 1
+			{
 				speed = speed*0.75
+			}
+			if Player.crown == 24//Crown of sloth
+			{
+				speed = max(0,speed-0.1);
+				speed *= 0.82;
+			}
 			if UberCont.opt_gamemode == 9
 			{
 				//Easy mode adjustments

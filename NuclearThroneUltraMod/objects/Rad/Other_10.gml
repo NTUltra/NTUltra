@@ -4,9 +4,11 @@ if instance_exists(Player)
 	instance_destroy()
 	Player.rad += 1
 	if Player.crown == 4
-	Player.rad += 0.18;
+		Player.rad += 0.18;
 	if UberCont.radUp
-	Player.rad += 0.15;
+		Player.rad += 0.15;
+	if Player.ultra_got[83]
+		Player.rad += 0.20;
 	snd_play_2d(sndRadPickup,0.05,true);
 
 	if Player.skill_got[3]//Pluto

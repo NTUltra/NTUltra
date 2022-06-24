@@ -21,7 +21,7 @@ function scrLoadStats() {
 	cbst_loop[dir] = ini_read_real("STATS","cbstloop"+string(dir),0);
 	var cir = 0;
 	ctot_all_crowns_taken[dir] = 0;
-	repeat(crownmax+1)
+	repeat(crownmax+2)
 	{
 		ctot_crown_taken[dir,cir] = ini_read_real("STATS","ctotcrownstaken"+string(dir)+"-"+string(cir),0);
 		if (cir > 1)
