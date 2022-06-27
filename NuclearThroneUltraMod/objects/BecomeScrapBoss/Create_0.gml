@@ -4,6 +4,7 @@ size = 3
 maxhealth = 40
 target = -1
 spr_idle = sprScrapBossSleep
+spr_walk = sprScrapBossSleep
 spr_hurt = sprScrapBossSleepHurt
 spr_dead = sprScrapBossDead
 

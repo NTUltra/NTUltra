@@ -1020,7 +1020,10 @@ function scrDrawHUD() {
 	{
 		if place_meeting(x,y,Player) && image_index == 1
 		{
-			draw_sprite(sprEPickup,UberCont.opt_gamepad,x+16,y-7)
+			if !wentIn
+			{
+				draw_sprite(sprEPickup,UberCont.opt_gamepad,x+16,y-7)
+			}
 
 			draw_set_color(c_black)
 			draw_text(x+28,y-30,string_hash_to_newline(string(name)))

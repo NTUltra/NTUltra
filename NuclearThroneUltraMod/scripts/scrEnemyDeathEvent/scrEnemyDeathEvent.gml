@@ -31,21 +31,29 @@ function scrEnemyDeathEvent(){
 					lowb = wep_load[bwep]*-2;
 					lowc = wep_load[cwep]*-2;
 				}
+				var dropped = false;
 				if bwep == 0 || breload >= lowb
 				{
 					with other
 					{
 						if isdoc
-							scrDrop(17,0);
+							dropped = scrDrop(17,0);
 						else
-							scrDrop(15,0);
+							dropped = scrDrop(15,0);
 					}
 				}
 				if (ultra_got[32] && (creload <= lowc || cwep == 0))
 				{
 					with other
 					{
-						scrDrop(15,0);
+						dropped = scrDrop(15,0);
+					}
+				}
+				if dropped {
+					with instance_create(other.x,other.y,RedirectFX)
+					{
+						snd_play(sndFlexibleElbowsDrop,0.1,true);
+						sprite_index = choose(sprFlexibleElbowsDrop1,sprFlexibleElbowsDrop2);
 					}
 				}
 			}

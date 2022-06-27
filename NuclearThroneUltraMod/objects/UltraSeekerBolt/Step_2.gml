@@ -4,7 +4,7 @@ image_angle=other.direction;
 image_xscale=other.speed;
 theColour=c_lime;
 }
-
+//Inherit or something?!TODO
 if !instance_exists(Player)
 {instance_destroy();exit;}
 

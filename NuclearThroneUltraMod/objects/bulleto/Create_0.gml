@@ -10,6 +10,6 @@ typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 RecycleGlandType();
 norecycle=false;
 dmg = 10;
-alarm[11] = 1;
+alarm[11] = 0;
 rotation = choose(30,-30);
 cost = 6;

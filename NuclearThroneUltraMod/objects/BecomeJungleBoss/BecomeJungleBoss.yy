@@ -5,14 +5,15 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskBushBox",
     "path": "sprites/mskBushBox/mskBushBox.yy",
   },
   "persistent": false,
   "parentObjectId": {
-    "name": "prop",
-    "path": "objects/prop/prop.yy",
+    "name": "enemy",
+    "path": "objects/enemy/enemy.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
