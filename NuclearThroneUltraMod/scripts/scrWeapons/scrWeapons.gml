@@ -5535,7 +5535,7 @@ function scrWeapons() {
 	wep_name[502] = "BOW"
 	wep_type[502] = 3
 	wep_auto[502] = 0
-	wep_load[502] = 20
+	wep_load[502] = 21
 	wep_cost[502] = 1
 	wep_sprt[502] = sprBow
 	wep_area[502] = 3
@@ -6173,7 +6173,7 @@ function scrWeapons() {
 	wep_name[560] = "SPEAR LAUNCHER"
 	wep_type[560] = 3
 	wep_auto[560] = 0
-	wep_load[560] = 32
+	wep_load[560] = 33
 	wep_cost[560] = 1
 	wep_sprt[560] = sprSpearLauncher
 	wep_area[560] = 2
@@ -6250,7 +6250,7 @@ function scrWeapons() {
 	wep_name[567] = "GOLDEN BOW"
 	wep_type[567] = 3
 	wep_auto[567] = 0
-	wep_load[567] = 18
+	wep_load[567] = 19
 	wep_cost[567] = 1
 	wep_sprt[567] = sprGoldenBow
 	wep_area[567] = 17
@@ -6268,6 +6268,28 @@ function scrWeapons() {
 	wep_text[568] = ""
 	wep_swap[568] = sndSwapShotgun
 	wep_rad[568] = 13;
+	
+	wep_name[569] = "SPLASMA CANNON"
+	wep_type[569] = 5
+	wep_auto[569] = 0
+	wep_load[569] = 50
+	wep_cost[569] = 12
+	wep_sprt[569] = sprPlasmaCannon
+	wep_area[569] = 15
+	wep_text[569] = "spiraling plasma gun"
+	wep_swap[569] = sndSwapEnergy
+	wep_rad[569] = 0;
+	
+	wep_name[570] = "SPLASMA GUN"
+	wep_type[570] = 5
+	wep_auto[570] = 1
+	wep_load[570] = 22
+	wep_cost[570] = 3
+	wep_sprt[570] = sprPlasmaGun
+	wep_area[570] = 8
+	wep_text[570] = "disperse plasma gun"
+	wep_swap[570] = sndSwapEnergy
+	wep_rad[570] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 

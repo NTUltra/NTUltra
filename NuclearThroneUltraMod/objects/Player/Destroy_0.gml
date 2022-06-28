@@ -122,54 +122,66 @@ my_health = 0}}
 
 snd_play(snd_dead)
 if !reincarnate
-with instance_create(x,y,WepPickupForOneWepOnly)
-{
-scrWeapons()
-wep = other.wep
-ammo = 50
-curse = other.curse
-name = wep_name[wep]
-type = wep_type[wep]
-sprite_index = wep_sprt[wep]
-motion_add(other.direction,other.speed)
-speed += max(0,-other.my_health/5)
-motion_add(random(360),2)
-speed *= 0.8
-}
+	with instance_create(x,y,WepPickupForOneWepOnly)
+	{
+		scrWeapons()
+		wep = other.wep
+		ammo = 50
+		curse = other.curse
+		name = wep_name[wep]
+		type = wep_type[wep]
+		sprite_index = wep_sprt[wep]
+		motion_add(other.direction,other.speed)
+		speed += max(0,-other.my_health/5)
+		motion_add(random(360),2)
+		speed *= 0.8
+		wepmod1 = other.wepmod1;
+		wepmod2 = other.wepmod2;
+		wepmod3 = other.wepmod3;
+		wepmod4 = other.wepmod4;
+	}
 
 if bwep > 0 && !reincarnate
 {
-with instance_create(x,y,WepPickup)
-{
-scrWeapons()
-wep = other.bwep
-ammo = 50
-curse = other.bcurse
-name = wep_name[wep]
-type = wep_type[wep]
-sprite_index = wep_sprt[wep]
-motion_add(other.direction,other.speed)
-speed += max(0,-other.my_health/5)
-motion_add(random(360),2)
-speed *= 0.8
-}
+	with instance_create(x,y,WepPickup)
+	{
+		scrWeapons()
+		wep = other.bwep
+		ammo = 50
+		curse = other.bcurse
+		name = wep_name[wep]
+		type = wep_type[wep]
+		sprite_index = wep_sprt[wep]
+		motion_add(other.direction,other.speed)
+		speed += max(0,-other.my_health/5)
+		motion_add(random(360),2)
+		speed *= 0.8
+		wepmod1 = other.bwepmod1;
+		wepmod2 = other.bwepmod2;
+		wepmod3 = other.bwepmod3;
+		wepmod4 = other.bwepmod4;
+	}
 }
 if cwep > 0 && !reincarnate
 {
-with instance_create(x,y,WepPickup)
-{
-scrWeapons()
-wep = other.cwep
-ammo = 50
-curse = other.ccurse
-name = wep_name[wep]
-type = wep_type[wep]
-sprite_index = wep_sprt[wep]
-motion_add(other.direction,other.speed)
-speed += max(0,-other.my_health/5)
-motion_add(random(360),2)
-speed *= 0.8
-}
+	with instance_create(x,y,WepPickup)
+	{
+		scrWeapons()
+		wep = other.cwep
+		ammo = 50
+		curse = other.ccurse
+		name = wep_name[wep]
+		type = wep_type[wep]
+		sprite_index = wep_sprt[wep]
+		motion_add(other.direction,other.speed)
+		speed += max(0,-other.my_health/5)
+		motion_add(random(360),2)
+		speed *= 0.8
+		wepmod1 = other.cwepmod1;
+		wepmod2 = other.cwepmod2;
+		wepmod3 = other.cwepmod3;
+		wepmod4 = other.cwepmod4;
+	}
 }
 
 if race=15

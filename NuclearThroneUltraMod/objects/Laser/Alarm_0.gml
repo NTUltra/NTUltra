@@ -104,15 +104,15 @@ if laserhit>0// && random(3)<1
 //if ( place_meeting(x+8,y-4,Wall) ||place_meeting(x-8,y-4,Wall) ) && ( place_meeting(x+8,y+4,Wall) ||place_meeting(x-8,y+4,Wall) )
 if place_meeting(x,y,Wall) || place_meeting(x,y,hitme)
 {
-    with instance_create(x,y,Laser)
+    with instance_create(x+lengthdir_x(4,image_angle+180),y+lengthdir_x(4,image_angle+180),Laser)
     {
 		//flame = other.flame;
-		//if !collision_line(xx-4,yy,xx+4,yy,Wall,false,false)
-			//image_angle = other.image_angle*-1//180-other.image_angle;
-		//else
+		if !collision_line(x,y,x+lengthdir_x(4,image_angle),lengthdir_y(4,image_angle),Wall,false,false)
+			image_angle = other.image_angle*-1//180-other.image_angle;
+		else
 			image_angle = 180-other.image_angle;
-		x += lengthdir_x(4,image_angle);
-		y += lengthdir_y(4,image_angle);
+		
+		/*
 		if collision_point(x,y,Wall,false,false)
 		{
 			x -= lengthdir_x(4,image_angle);
@@ -128,7 +128,7 @@ if place_meeting(x,y,Wall) || place_meeting(x,y,hitme)
 			image_angle = other.image_angle*-1
 			x += lengthdir_x(4,image_angle);
 			y += lengthdir_y(4,image_angle);
-		}
+		}*/
 	    team = other.team
 		sprite_index=sprBouncingLaser;
 	    laserhit=other.laserhit-1;

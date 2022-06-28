@@ -88,10 +88,10 @@ with myWeaponPickup
 	ammo = 0
 	type = wep_type[wep]
 	curse = other.curse
-	wepmod1=other.wepmod1;
-	wepmod2=other.wepmod2;
-	wepmod3=other.wepmod3;
-	wepmod4=other.wepmod4;
+	wepmod1 = other.wepmod1;
+	wepmod2 = other.wepmod2;
+	wepmod3 = other.wepmod3;
+	wepmod4 = other.wepmod4;
 	sprite_index = wep_sprt[wep]
             
 }

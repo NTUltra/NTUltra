@@ -10137,5 +10137,50 @@ function scrFire2() {
 
 	break;
 	
+	//SPLASMA CANNON
+	case 569:
+
+	if Player.skill_got[17] = 1
+	snd_play_fire(sndPlasmaBigUpg)
+	else
+	snd_play_fire(sndPlasmaBig)
+
+	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),SplasmaBig)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,8)
+	image_angle = direction
+	team = other.team}
+
+	motion_add(aimDirection+180,6)
+	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 8
+	wkick = 10
+	resetSpeed=false;
+
+	break;
+	
+	//SPLASMA GUN
+	case 570:
+
+	if Player.skill_got[17] = 1
+	snd_play_fire(sndPlasmaUpg)
+	else
+	snd_play_fire(sndPlasma)
+
+	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),SplasmaBall)
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,8)
+		sdelay = 4;
+	image_angle = direction
+	team = other.team}
+
+	motion_add(aimDirection+180,1.3)
+	BackCont.viewx2 += lengthdir_x(3,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(3,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3
+	wkick = 5
+	resetSpeed=false;
+
+	break;
+	
 	}//end of switch part 2!
 }

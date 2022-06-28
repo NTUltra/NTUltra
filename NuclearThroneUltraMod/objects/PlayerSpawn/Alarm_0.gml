@@ -1,3 +1,4 @@
+/// @description Respawn
 with Player
 {instance_destroy();}
 
@@ -14,7 +15,6 @@ with Corpse
 snd_play(sndStatueCharge);
 with Player//Data to keep
 {
-	alarm[3]=300;//immunity
 	//bskin=other.bskin;
 	ultramod = other.ultramod;
 	ultimategamble=true;
@@ -28,7 +28,7 @@ with Player//Data to keep
 	kills = other.kills;
 	subarea=other.subarea;
 	boostLevel = other.level;
-	rad = round(GetPlayerMaxRad()*0.6);
+	alarm[3]=max(300,31*boostLevel);//immunity
 	ammo[1] = typ_ammo[1] * 3
     ammo[2] = typ_ammo[2] * 3
     ammo[3] = typ_ammo[3] * 3
@@ -46,6 +46,23 @@ with Player//Data to keep
 	{
 		owner = other.id
 		image_speed=0.2;
+	}
+	if !instance_exists(GunWarrant)
+		instance_create(x,y,GunWarrant);
+	else
+	{
+		with GunWarrant
+		{
+			sprite_index = sprGunWarrantStart;
+			image_index = 0;
+		}
+	}
+	//Infinite ammo
+	alarm[2] = alarm[3];
+	with instance_create(x,y,RespawnLightning)
+	{
+		amount = other.boostLevel-1;
+		debug("amount: ",amount);
 	}
 }
 scrUnlockGameMode(25,"FOR GETTING RESURRECTED");

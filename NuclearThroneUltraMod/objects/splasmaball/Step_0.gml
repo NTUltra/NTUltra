@@ -1,12 +1,14 @@
+/// @description Spirals
 
 if(image_xscale<0.5)
 {instance_destroy();}
-if resetSpeed{
-speed=0;
-motion_add(originalDirection,7)
-resetSpeed=false;
-friction=0;}
-
+if abs(angleDir > 1)
+{
+	direction += angleDir;
+	angleDir -= 0.5*sign(angleDir);
+}
+speed+=2;
+image_angle = direction;
 if instance_exists(Player)
 {
     if Player.race=11
@@ -31,7 +33,8 @@ if instance_exists(Player)
 else if(speed>maxspeed)
 {speed=maxspeed;}
 
-
+if speed < 2
+	instance_destroy();
 
 if(image_xscale<nomscale)
 {
@@ -43,8 +46,6 @@ else
 image_xscale=nomscale;
 image_yscale=nomscale;
 }
-if speed < 2
-	instance_destroy();
 
 with instance_create(x+random(8)-4,y+random(16)-8,PlasmaFX)
 {

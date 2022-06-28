@@ -21,14 +21,10 @@ var WALL;
 WALL=instance_nearest(x,y,Wall);
 if point_distance(x,y,WALL.x,WALL.y)<32 && (ee || bm)
 {
-	debug("move from wall speed: ",(100+(ee*20)+(bm*20))/point_distance(x,y,WALL.x,WALL.y));
 	motion_add(point_direction(x,y,WALL.x,WALL.y)+180,(100+(ee*20)+(bm*20))/point_distance(x,y,WALL.x,WALL.y));//move away from wall
 }
 }
 
-//}
-//else if alarm[0]<1
-//target=instance_nearest(x,y,enemy);
 
 if target!=0 && target.team != team
 motion_add(point_direction(x,y,target.x,target.y),acc+bm+ee);
