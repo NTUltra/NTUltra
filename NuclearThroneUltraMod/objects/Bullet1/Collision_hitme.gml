@@ -9,7 +9,7 @@ if Player.ultra_got[28]//roids ultra d
 {my_health -=2;}}
 sprite_index = spr_hurt
 image_index = 0
-motion_add(other.direction,7)
+motion_add(other.direction,6)
 }
 instance_create(x,y,BulletHit)
 

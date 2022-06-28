@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndChickenHeadlessLoop",
-  "duration": 0.0,
+  "duration": 5.102018,
   "parent": {
     "name": "Player",
     "path": "folders/Sounds/Player.yy",

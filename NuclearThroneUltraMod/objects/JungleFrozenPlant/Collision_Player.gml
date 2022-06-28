@@ -1,5 +1,5 @@
 /// @description Go to jungle or back to frozen city
-if KeyCont.key_pick[other.p] = 1
+if KeyCont.key_pick[other.p] = 1 && !used
 {
 	if other.skill_got[18] && UberCont.lastwishused
 	{
@@ -9,6 +9,7 @@ if KeyCont.key_pick[other.p] = 1
 	}
 	if blood >= bloodNeeded
 	{
+		used = true;
 		KeyCont.key_pick[Player.p] = 2;
 		with other
 		{

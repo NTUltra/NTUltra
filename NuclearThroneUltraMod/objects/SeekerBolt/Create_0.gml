@@ -3,7 +3,7 @@ friction=0.2;
 //friction = 0.6
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable
 
-
+theColour = c_white;
 target=0;
 
 dmg = 9;
@@ -23,6 +23,6 @@ if instance_exists(Player){
 alarm[0]=4
 
 }
-
-
+maxspeed = 6;
+acc = 1.2;
 alarm[11] = 1;

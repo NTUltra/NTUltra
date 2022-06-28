@@ -5,6 +5,12 @@ if (myCorpse == -1 || !instance_exists(myCorpse))
 	myCorpse = id;
 instance_create(myCorpse.x,myCorpse.y,Player);
 instance_destroy(myCorpse);
+if race == 9//Delete chicken head
+with Corpse
+{
+	if sprite_index == sprMutant9HeadIdle || sprite_index == sprMutant9BHeadIdle
+		instance_destroy();
+}
 snd_play(sndStatueCharge);
 with Player//Data to keep
 {

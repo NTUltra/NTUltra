@@ -469,77 +469,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 	instance_destroy()}
 	}
 
-	if my_health <= 0
-	{
-	if race = 9 and bleed < 150
-	{
-	if bleed = 0
-	{
-	maxhealth-=2;
-	if maxhealth<0
-	{maxhealth=0}
-
-	snd_play(sndChickenLoseHead)
-	snd_loop(sndChickenHeadlessLoop)
-	repeat(12){
-	with instance_create(x,y,BloodStreak){
-	motion_add(random(360),2+random(3))
-	image_angle = direction}}
-
-
-
-	if bskin=2
-	{
-	spr_idle = sprMutant9CHeadlessIdle
-	spr_hurt = sprMutant9CHeadlessHurt
-	spr_walk = sprMutant9CHeadlessWalk
-	}
-	else{
-	spr_idle = sprMutant9HeadlessIdle
-	spr_hurt = sprMutant9HeadlessHurt
-	spr_walk = sprMutant9HeadlessWalk
-	}
-
-
-	with instance_create(x,y,Corpse)
-	{
-	size = 1
-	mask_index = other.mask_index
-	motion_add(other.direction,other.speed)
-	speed += max(0,-other.my_health/5)
-	if other.bskin=2
-	sprite_index = mskPickupThroughWall;//invisible basicly
-	else if other.bskin=1
-	sprite_index = sprMutant9BHeadIdle;
-	else
-	sprite_index = sprMutant9HeadIdle;
-	image_xscale = other.right
-	if speed > 16
-	speed = 16
-	}
-
-	Sleep(60)
-	}
-
-	if random(12) < 1{
-	with instance_create(x,y-4,BloodStreak){
-	motion_add(45+random(90),2+random(3))
-	image_angle = direction}}
-
-	if bleed > 100
-	{
-	with instance_create(x,y,BloodStreak){
-	motion_add(random(360),2+random(3))
-	image_angle = direction}
-	}
-
-	bleed += 1
-	}
-	else
-	instance_destroy()
-	my_health = 0
-	}
-
+	
 	//SHOOTING!! AWW YEAH
 
 	if !(instance_exists(CrystalShield))
@@ -1510,6 +1440,8 @@ microseconds=0;
     with instance_create(targetFloor.x+16, targetFloor.y+16,Portal)
     {
 		inverted=true;
+		isPink = false;
+		sprite_index = sprPortalSpawn;
 		depth=0;
     }
     

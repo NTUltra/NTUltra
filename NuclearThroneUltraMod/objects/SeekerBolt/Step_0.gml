@@ -2,6 +2,7 @@ with instance_create(x,y,BoltTrail)
 {
 image_angle=other.direction;
 image_xscale=other.speed;
+theColour=other.theColour;
 }
 var ee = false;
 var bm = false;
@@ -30,11 +31,11 @@ if point_distance(x,y,WALL.x,WALL.y)<32 && (ee || bm)
 //target=instance_nearest(x,y,enemy);
 
 if target!=0 && target.team != team
-motion_add(point_direction(x,y,target.x,target.y),1.2+bm+ee);
+motion_add(point_direction(x,y,target.x,target.y),acc+bm+ee);
 }
 motion_add(direction,0.8);
-if speed>6+bm+ee
-	speed = max(6+bm+ee,speed*0.7);
+if speed>maxspeed+bm+ee
+	speed = max(maxspeed+bm+ee,speed*0.7);
 	//speed=6+bm;
 
 image_angle=direction;

@@ -2038,7 +2038,7 @@ function scrWeapons() {
 	wep_cost[184] = 1
 	wep_sprt[184] = sprSeekerPistol
 	wep_area[184] = 6
-	wep_text[184] = "eagle eyes makes them cleverer"
+	wep_text[184] = "eagle eyes makes seekers cleverer"
 	wep_swap[184] = sndSwapBow
 	wep_rad[184] = 0;
 
@@ -2049,7 +2049,7 @@ function scrWeapons() {
 	wep_cost[185] = 3
 	wep_sprt[185] = sprSeekerShotgun
 	wep_area[185] = 8
-	wep_text[185] = "bolt marrow makes them faster"
+	wep_text[185] = "bolt marrow makes seekers faster"
 	wep_swap[185] = sndSwapBow
 	wep_rad[185] = 0;
 
@@ -2060,7 +2060,7 @@ function scrWeapons() {
 	wep_cost[186] = 1
 	wep_sprt[186] = sprAutoSeekerPistol
 	wep_area[186] = 9
-	wep_text[186] = "good o'l automatic"
+	wep_text[186] = "eagle eyes + bolt marrow#allows seekers to bounce off walls"
 	wep_swap[186] = sndSwapBow
 	wep_rad[186] = 0;
 
@@ -2203,9 +2203,9 @@ function scrWeapons() {
 	wep_cost[199] = 2
 	wep_sprt[199] = sprUltraSeekerPistol
 	wep_area[199] = 19
-	wep_text[199] = "I see green"
+	wep_text[199] = "ultra seekers can destroy projectiles"
 	wep_swap[199] = sndSwapBow
-	wep_rad[199] = 20;
+	wep_rad[199] = 19;
 
 	wep_name[200] = "PANDA STICK"
 	wep_type[200] = 0
@@ -5700,7 +5700,7 @@ function scrWeapons() {
 	wep_name[517] = "CLUB"
 	wep_type[517] = 0
 	wep_auto[517] = 0
-	wep_load[517] = 27
+	wep_load[517] = 31
 	wep_cost[517] = 0
 	wep_sprt[517] = sprClub
 	wep_area[517] = 3

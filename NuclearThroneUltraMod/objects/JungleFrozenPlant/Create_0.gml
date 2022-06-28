@@ -32,4 +32,4 @@ if (instance_exists(Player))
 }
 instance_create(x,y,WallBreak);
 alarm[0] = 300;
-fuckyou = true;
+used = false;

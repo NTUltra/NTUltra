@@ -6,8 +6,8 @@ if owner > -1 && instance_exists(owner)
 }
 else
 {
-	snd_play(sndMeatExplo)
-	snd_play(sndBloodLauncherExplo)
+	snd_play(sndMeatExplo,0,true)
+	snd_play(sndBloodLauncherExplo,0,true)
 	instance_create(x,y,MeatExplosion);
 
 	var ang = random(360)
