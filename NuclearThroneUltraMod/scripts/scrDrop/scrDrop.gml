@@ -38,8 +38,8 @@ function scrDrop(itemdrop, weapondrop) {
 		}
 	if Player.crown = 5//crown of guns
 	{
-		weapondrop*=1.3;
-		weapondrop+=8;
+		weapondrop*=1.4;
+		weapondrop+=9;
 	}
 	else if Player.crown == 15 //Crown of choice
 	{
@@ -141,7 +141,7 @@ function scrDrop(itemdrop, weapondrop) {
 		return true;
 		}
 	}
-	else if random(100) < weapondrop*dropRateBuff
+	else if random(100) < weapondrop*(dropRateBuff * 0.5)
 	{
 		//drop weps
 		with instance_create(x+random(4)-2,y+random(4)-2,WepPickup)
