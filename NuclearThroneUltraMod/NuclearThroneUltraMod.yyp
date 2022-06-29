@@ -2537,6 +2537,7 @@
     {"id":{"name":"sprBullet6","path":"sprites/sprBullet6/sprBullet6.yy",},"order":37,},
     {"id":{"name":"sprBullet6Disappear","path":"sprites/sprBullet6Disappear/sprBullet6Disappear.yy",},"order":38,},
     {"id":{"name":"sprUltraBullet","path":"sprites/sprUltraBullet/sprUltraBullet.yy",},"order":39,},
+    {"id":{"name":"sprHeavySuperShotgun","path":"sprites/sprHeavySuperShotgun/sprHeavySuperShotgun.yy",},"order":404,},
     {"id":{"name":"sprUltraBulletHit","path":"sprites/sprUltraBulletHit/sprUltraBulletHit.yy",},"order":40,},
     {"id":{"name":"sprBulletHit","path":"sprites/sprBulletHit/sprBulletHit.yy",},"order":41,},
     {"id":{"name":"sprSlugHit","path":"sprites/sprSlugHit/sprSlugHit.yy",},"order":42,},

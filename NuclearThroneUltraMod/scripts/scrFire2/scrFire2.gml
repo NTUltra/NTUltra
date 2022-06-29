@@ -10182,5 +10182,28 @@ function scrFire2() {
 
 	break;
 	
+	//HEAVY DOUBLE SHOTGUN
+	case 571:
+
+	snd_play_fire(sndSuperSlugger)
+	snd_play_fire(sndDoubleShotgun)
+
+	repeat(56)
+	{
+	with instance_create(x,y,Bullet2Heavy)
+	{motion_add(aimDirection+(random(80)-40)*other.accuracy,14+random(14))
+	image_angle = direction
+	team = other.team}
+	}
+
+	motion_add(aimDirection+180,8)
+
+	BackCont.viewx2 += lengthdir_x(25,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(25,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 25
+	wkick = 9
+
+	break;
+	
 	}//end of switch part 2!
 }
