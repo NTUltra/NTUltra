@@ -139,7 +139,7 @@ function scrLoadRun(){
 				Player.ultimategamble = encryptedRun.ultimategamble;
 				Player.bettermelee = encryptedRun.bettermelee;
 				Player.betterlaserbrain = encryptedRun.betterlaserbrain;
-				Player.betterpluto = encryptedRun.betterpluto;
+				Player.betterpluto = max(Player.betterpluto,encryptedRun.betterpluto);
 				Player.betterrabbitpaw = encryptedRun.betterrabbitpaw;
 				Player.betterrecyclegland = encryptedRun.betterrecyclegland;
 				Player.betterboltmarrow = encryptedRun.betterboltmarrow;

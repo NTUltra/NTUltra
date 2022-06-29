@@ -6321,9 +6321,12 @@ function scrWeapons() {
 			{
 				scrWeaponsAdjustCostPowerOverwhelming();
 			}
-			if Player.bskin = 2 && Player.ultra_got[4]//FISH can Gun ultra
+			if Player.ultra_got[4]//FISH can Gun ultra
 			{
-				scrWeaponAdjustCostFishCanGun();
+				if Player.bskin = 2
+					scrWeaponAdjustCost(85);
+				else
+					scrWeaponAdjustCost(95);
 			}
 		}
 	}

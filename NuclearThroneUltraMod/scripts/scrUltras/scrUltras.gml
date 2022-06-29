@@ -7,7 +7,9 @@ function scrUltras() {
 
 	//FISH
 	ultra_name[1] = "CONFISCATE"
-	ultra_text[1] = "ENEMIES SOMETIMES DROP CHESTS"
+	ultra_text[1] = "ENEMIES SOMETIMES DROP CHESTS#(EFFECTED BY DROPRATE)"
+	if instance_exists(Player) && Player.skill_got[23]
+		ultra_text[1] = "ENEMIES SOMETIMES DROP CHESTS#(EFFECTED BY DROPRATE)#OPEN MIND INCREASES#CHANCE BY 25%"
 	ultra_tips[1] = "that's mine"
 
 	ultra_name[2] = "GUN WARRANT"
@@ -15,17 +17,17 @@ function scrUltras() {
 	ultra_tips[2] = "bringer of order"
 
 	ultra_name[3] = "BUDDY COP"
-	ultra_text[3] = "GET A COMPANION"
-	ultra_tips[3] = choose("I missed you partner","partner stays close to you#when you reload#if not it'll go out aggro")
+	ultra_text[3] = "GET A PARTNER"
+	ultra_tips[3] = choose("I missed you partner","partner stays close to you#when you reload#if not it'll go out aggro","partner actively body blocks projectiles")
 
 	ultra_name[4] = "FISH CAN ROLL"
-	ultra_text[4] = "INCREASED PRIMARY FIRE RATE#DEPENDING ON YOUR SPEED#MUCH MORE EFFECTIVE WHEN ROLLING"
+	ultra_text[4] = "REDUCE AMMO/RAD COST BY 5%#INCREASED PRIMARY FIRE RATE#DEPENDING ON YOUR SPEED#MUCH MORE EFFECTIVE WHEN ROLLING"
 	ultra_tips[4] = "is waterboost a thing now?"
 	
 	if instance_exists(Player) && Player.bskin == 2
 	{
 		ultra_name[4] = "FISH CAN GUN"
-		ultra_text[4] = "THE MORE AMMO YOU HAVE#THE HIGHER YOUR FIRERATE#REDUCE AMMO/RAD COST BY 15%#DOES NOT HAVE AN EFFECT ON MELEE"
+		ultra_text[4] = "REDUCE AMMO/RAD COST BY 15%#THE MORE AMMO YOU HAVE#THE HIGHER YOUR FIRERATE#DOES NOT HAVE AN EFFECT ON MELEE"
 		ultra_tips[4] = "loaded and goated"
 	}
 
@@ -290,8 +292,8 @@ function scrUltras() {
 	ultra_tips[59] = "that is electrifying!"
 
 	ultra_name[60] = "ANTI MATTER"
-	ultra_text[60] = "TELEPORT INTO WALLS"
-	ultra_tips[60] = "who needs hammerhead"
+	ultra_text[60] = "TELEPORT INTO WALLS#FADED PICKUPS TRANSFROM INTO#(FRIENDLY) ULTRA LIGHTNING AND RADS"
+	ultra_tips[60] = "phase"
 
 	    //VIKING 
 	    ultra_name[61] = "MEGA ARMOUR STRIKE"

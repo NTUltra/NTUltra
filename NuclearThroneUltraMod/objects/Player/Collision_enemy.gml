@@ -15,7 +15,7 @@ if other.team != team
 		}
 		if race == 15 //Atom
 		{
-			contactDmg += 2;
+			contactDmg += 2+min(4,loops);
 			if ultra_got[58]
 				contactDmg += 6;
 		}

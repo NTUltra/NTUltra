@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description Init
 if instance_exists(Player)
 if Player.skill_got[3]
 	{

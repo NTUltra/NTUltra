@@ -141,10 +141,54 @@ Sped up eating weapons and smithing weapons
 Displaying Robot Ultra B percentages
 Robot's ultras now all increase the rad amount you get from eating weapons by 2. This is still much more for ultra C. The amount is kinda negligable so it is not mentioned (2 rads).
 Open mind now adds a 10% chance to Robot's Ultra B
-Robot ultra A now also adds the ability: Every enemy has a 5% chance to drop a weapon. (This is basically an additional weapon in a lot of cases)
+Robot ultra A now also adds the ability: Every enemy has a 5% chance to drop a weapon.
 Golden weapon chests can no longer transform into big weapon chests
 Lowered projectile speed of golden bouncer smg (still higher than bouncer smg)
 Frog now moves at a minimum of 80% of the max speed instead of moving at max speed constantly.
+Increased ghetto blast damage by 1
+Increased chance of getting toxic mod on non frog characters
+When reaching level ultra as hands your hand/active will get +1 dmg.
+Weapon Smith Ultra D (Scrap finder) now gives its benefits when finding melee weapons
+Fish confiscate ultra, When a weapon drops it no longer negates the normal item drop, you can now receive both.
+Crown of hatred now gives you 20 rads instead of 16
+Inverted portals have less pull strength
+Respawning after dieing will now keep your ultra mod
+Respawning after dieing will now grant you some rads so you can fire ultra weapons
+Horror ultra A stalker now spawns more projectiles and the pattern they spawn in is more consistent increased damage of the projectiles from 1 to 3
+Added the benefit increase radiation value by 20% to Horror Ultra C meltdown.
+Frog's Ultra A (distance) now spawns much more gass on rads and the gass spreads more
+Changed recycle gland percentages
+normal 65%
+doctor 70%
+doctor + ultra 80%
+Increased damage ultra lightning to 11
+Hands secret C skin Ultra moves hand faster (it is still slower than normal but not as much)
+Decreased enemy health scaling on loop
+Increased the delay between idpd vans
+Now when you destroy a van it will cause the next van to spawn in a second earlier (if the delay had more than two seconds left).
+The amount of van increase will now start increasing every other loop from loop 4 onwards instead of loop 5.
+meaning loop 1 - 3 will add one van each loop. On loop 4 + it will add one van every other loop. 
+so loop 4 will have 3 vans, 
+loop 5 will have 4 vans,
+loop 6 will have 4 vans 
+loop 7 will have 5 vans
+etc. etc.
+(The IDPD are important loop challenge but with the addition of different loop challenged (harder enemy ai, boss invasions, totems, golden enemies, more traps). All of those different challenges fill a similar role to the idpd but do it in a more varried way. Because the idpd are constantly the same in each area making them less prominent should be a good change.
+Leacher's tick damage is now 4 instead of 5
+Respawning now grants infinite ammo and massive firerate buff for a short duration
+bullet/pop wall/laser are now tier 14 instead of 15
+Increased crown of guns droprate increase
+Changed crown of guns droprate so that itemdrops that would be ammodrops will be another roll for a healthdrop.
+Fish's thronebutt now increases the ammo pickup value by more than before. Normal to Fish Passive to Fish Thronebutt:
+Bullets 32 - 40 - 48
+Shells 8 - 10 - 12
+Bolts 7 - 9 - 11
+Explosives 6 - 8 - 10
+Energy 10 - 13 - 15
+Having low health will now also increase your droprate it a little more, It was already increasing the odds of you getting a healthdrop specifically. But before that you still needed to be able to get an pickup drop, which was only increased by mutations and your ammo.
+Open mind will now increase confiscate droprate change by 25% (this additional bonus will be displayed in the description of the mutation if you have either open mind or confiscate)
+Fish can Roll (fish ultra A) now reduced all ammo/rad cost of weapons by 5%
+Atom's passive contact damage now scales per loop adding 1 extra damage per loop up untill 6 damage (loop 4)
 
 BUGS
 Fixed a bug where you could quickly use another portalstrike for free while another portal strike was going on, and it would set your ammo to -1
@@ -256,6 +300,22 @@ Fixed inverted big machine not opening up
 Fixed inverted big dog spawning in walls
 Fixed a bug where detachment (melting ultra B) would count towards getting another ultra mutation
 Fixed weapons sometimes not being taken to the throne room
+Fixed a bug where if you spammed onto a character while the game was starting you would enter a void.
+Fixed a bug where IDPD freaks would run away from the player instead of towards.
+Fixed a bug where crown of destiny would always give you a free mutation
+Weapon Smith Ultra D (Scrap finder): Now has proper HUD indication of all the benefits you get.
+Fixed a bug where high charge horror beam would not use correct C skin colour
+Fixed a crash related to dieing while modding a weapon
+Fixed extremely rare cases where walls could spawn in places causing enemies to be locked off
+Fixed a bug where quickly tapping use on the frozen plant would bring you to the crystal caves instead of the jungle
+Fixed a bug where chicken would duplicate their head when they died and respawned
+Fixed wonderland portal to inverted world not being inverted
+Fixed a bug where dieing would drop your weapons without your weapon mods.
+Props and enemies that spawn inside a wall will now destroy that wall
+Fixed percentages on rabbit paw
+Fixed and refactored some droprate stuff.
+Fixed plutonium hunger being nearly infinite range
+
 
 WEAPONS
 Flugger (A slugger that has infinite pierce and goes much further but deals less damage), Upon piercing it will spawn two pellets, With shotgun shoulders it will spawn three pellets on hit and ofcourse bouncer more. The initial damage is higher up close and drops off later (damage buff stays longer with shotgun shoulders).
@@ -350,6 +410,10 @@ Super Electro Cannon
 Toxic Assault Rifle
 Toxic Minigun
 Toxic Wazer Rifle
+Golden bow (unlockable starting weapon) has a higher firerate than the regular bow and charges faster (but not by much)
+Ultra Sawed-Off shotgun (loop with rusty sawed-off shotgun (hands))
+Splasma Cannon (plasma cannon spawning spiraling plasma)
+Splasma Gun (Plasma gun spawning spiraling mini plasma)
 
 FEATURES
 New ultra mod replacing blade to grenade, Lighting to pellets
@@ -443,5 +507,56 @@ Looping now resets your health to maxhealth and gives you some ammo for all type
 Added Robot's Ultra C (extra storage (carry three weapons)) to the random ultras pool.
 Robot's Ultra B now has a 0.2% chance to drop a giant golden weapon chest and a 0.8% chance to drop a gold weapon chest
 Business hog ultra mutation art (B ultra)
+New hidden ultra 'trash'
 All remaining ultra mutation art is now done! A lot of them are done by Seymour Schlong
 Horror total forecall ultra will now always show you an ultra mutation so if you somehow managed to level up several times your normal mutation choices will be ultra choices untill you choose one then it will switch back to normal mutation choices.
+You can now skip through the first few screens and logos allowing you to start even faster.
+Crowns now have unique sprites depending on the crown you take. (Most of the new ones are created by Seymour Schnlong)
+New HUD element replacing the bottom crown text, now used to display a little icon if you are in a gamemode that is not normal mode. If you hover over it you will get the text telling you what gamemode you are in.
+Weapon smith now mods weapons much much faster
+Power craving now makes you mod weapons faster. (It stacks with weapon smiths new tiny passive)
+Sharpteeth sfx
+The pizza sewers entrance will now ask you nicely if you actually want to enter it (after you blew up the entrance).
+Added some new crosshair
+Custom sideart! Just switch to option 16 in the sideart options. And tick the box to load in your custom images
+Horror stalker ultra now spawns bullets in the colour of the horror skin you are using
+Fish's partner now works with ultra mods. It will act as a bullet in ultra mod swapping. However the damage numbers have been adjusted since a partner bullet does 4 damage and a normal bulllet will deal 3 damage. For this reason when it swaps to a pellet (which normall does 3-2 damage) the pellet will deal 4-3 damage. Lasers will be a little thicker than a normal bullet laser. and splinters will not have their damage reduced. Swapping the projectile type will lose the ally damage buff from rebel's ultra.
+Rebel ally bullets will now work with ultramods, These act exactly the same as normal bullets
+Lives are now permanent and will regenerate over 3 loops. This means lastwish can no longer regain its original ability of giving you a life (previously done by taking the frozen jungle plant). Now if you take lastwish again, it will regain part of your existing life. If you reroll last wish it will remove 1 part of your life but it will no longer remove the entire life. Rerolling a partial life will prioritize lives that are not full/active.
+New addition to Atom Ultra D (Anti matter - teleport into walls)
+Faded pickups transform into friendly ultra lightning and rads
+
+
+New crowns:
+
+Crown of protection:
+Weapon Drops (over) Heal 1HP, Instead of giving ammo
+Is increased to 2HP with second stomache.
+In combination with Weapon Smith Ultra D (Scrap finder): You will still get the additional ammo from this ultra, but the initial amount of ammo is gone, so ithe negative part of this crown will be offset.
+
+Crown of Risk
+70% higher droprate when above 50% max hp
+50% lower droprate when below 50% max hp
+(increases droprate like rabbitpaw does, so also droprate for confiscate (Fish ultra))
+Slightly different from retail as in retail the droprate buff only applies when at max hp and the buff is only 50%.
+Crown will glow when you are above 50% max hp.
+
+Crown of Luck
+Start each area with 1HP 20% chance any enemy spawns in with 10% hp.
+This HP reduction stacks with glass arm cannon and scarier face.
+This crown works on bosses
+The chance for higher hp enemies to get the hp reduction is slightly smaller. (anything below 100 hp is 25 in 100. And as an example for a high hp target: 300hp it will be 25 in 106.
+Unlike crown of life your health will not be immediatly adjusted upon picking this.
+
+Crown of speed
+Higher projectile speed (for enemy and your projectiles)
+You move a little faster.
+(The little crown that follows you is faster than any other crown)
+
+Crown of Sloth
+Slower projectile speed (for enemy and your projectiles)
+You move slightly slower, 
+each area decreases the difficulty and weapon tier instead of increasing it.
+This crown is hidden.
+To unlock it you need to have taken crown of destiny, it will replace the crown of destiny.
+This is the slowest moving crown

@@ -4,7 +4,7 @@ var spawnedVan = false;
 if instance_exists(Player)
 {
 	var getFreaky = false;
-	if Player.loops > 1
+	if Player.loops > 2
 		getFreaky = wantVanAmount - Player.subarea % 3 == 0;
 	
 	if (verticalVans && wantVanAmount % 2 == 0) //EVEN

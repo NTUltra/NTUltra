@@ -3,7 +3,7 @@
     "name": "sprTrap",
     "path": "sprites/sprTrap/sprTrap.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,

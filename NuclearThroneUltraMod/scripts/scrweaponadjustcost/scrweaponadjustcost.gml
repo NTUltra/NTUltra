@@ -1,8 +1,7 @@
-///scrWeaponAdjustCostFishCanGun();
+///scrWeaponAdjustCost();
 // /@description
 ///@param
-function scrWeaponAdjustCostFishCanGun(){
-	var costReduction = 0.85;
+function scrWeaponAdjustCost(costReduction){
 	for (var i = 0; i < maxwep; i++) {
 		if wep_type[i] != 0
 		{

@@ -23,15 +23,15 @@ if instance_exists(WeaponChest)
 	if instance_exists(Player)
 	{
 		loops = Player.loops;
-	dir = instance_furthest(Player.x,Player.y,WeaponChest)
+		dir = instance_furthest(Player.x,Player.y,WeaponChest)
 	}
 	else
-	dir = instance_furthest(x,y,WeaponChest)
+		dir = instance_furthest(x,y,WeaponChest)
 }
 else 
 dir = id;
 
-if loops < 1 && !instance_exists(InvaderBossSpawnPortal) 
+if loops < 2 && !instance_exists(InvaderBossSpawnPortal) 
 {
 	x = round(dir.x/32)*32-16
 	y = round(dir.y/32)*32-16

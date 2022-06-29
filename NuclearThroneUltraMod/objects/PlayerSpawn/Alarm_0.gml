@@ -61,6 +61,10 @@ with Player//Data to keep
 	}
 	//Infinite ammo
 	alarm[2] = alarm[3];
+	with instance_create(x,y,RespawnBuff)
+	{
+		alarm[0] = other.alarm[3];	
+	}
 	with instance_create(x,y,RespawnLightning)
 	{
 		amount = other.boostLevel-1;

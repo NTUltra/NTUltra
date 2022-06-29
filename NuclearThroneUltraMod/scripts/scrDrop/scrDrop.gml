@@ -103,25 +103,32 @@ function scrDrop(itemdrop, weapondrop) {
 		need += 0.75
 	else if Player.ammo[Player.wep_type[Player.bwep]] > Player.typ_amax[Player.wep_type[Player.bwep]]*(0.6-(Player.skill_got[10]*0.1))
 		need += 0.1 else need += 0.5
-
+	if random(Player.maxhealth) > Player.my_health
+		need += 0.1;
 
 	if (Player.ultra_got[1]==1)//FISH ULTRA A Confiscate
 	{
-	    if (random(100) < itemdrop * (need + dropRateBuff))//rage=0.001
+		var confDroprate = dropRateBuff
+		if Player.skill_got[23]//Open mind
+		{
+			dropRateBuff += 0.25;	
+		}
+		confDroprate *= 0.33;
+	    if (itemdrop > 0 && random(110) < (itemdrop*0.5) * ((need*0.25) + confDroprate))//rage=0.001
 	    {
-		    if (random(Player.maxhealth) > Player.my_health || random(100) < 5) and random(3) < 2 and Player.crown != 2
+		    if ( Player.crown != 2 && random(Player.maxhealth) > Player.my_health || random(100) < 10) and random(3) < 2 and random(1) <= canHealth
 			{
-		    instance_create(x+random(4)-2,y+random(4)-2,HealthChest)
+				instance_create(x+random(4)-2,y+random(4)-2,HealthChest)
 			//return true;
 			}
 		    else if Player.crown != 5
 			{
-		    instance_create(x+random(4)-2,y+random(4)-2,AmmoChest)
+				instance_create(x+random(4)-2,y+random(4)-2,AmmoChest)
 			//return true;
 			}
 			//return false;
 	    }
-	    else if random(100) < ((itemdrop*0.5)+weapondrop) * dropRateBuff
+	    else if random(110) < ((itemdrop*0.1)+weapondrop*0.75) * confDroprate
 	    {
 			instance_create(x+random(4)-2,y+random(4)-2,WeaponChest);
 			//return true;

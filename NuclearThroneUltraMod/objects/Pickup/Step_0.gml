@@ -1,3 +1,4 @@
+var extraRange = 20;
 if instance_exists(Player) && (!cursed) {
 	var levelEnded = false;
 	with Portal
@@ -17,7 +18,7 @@ if instance_exists(Player) && (!cursed) {
 				event_user(1);	
 			}
         } else if speed = 0 {
-            if point_distance(x, y, Player.x, Player.y) < 77 + Player.betterpluto or levelEnded {
+            if point_distance(x, y, Player.x, Player.y) < extraRange + Player.betterpluto or levelEnded {
                 if place_free(x + lengthdir_x(12, point_direction(x, y, Player.x, Player.y)), y)
                 x += lengthdir_x(12, point_direction(x, y, Player.x, Player.y))
                 if place_free(x, y + lengthdir_y(12, point_direction(x, y, Player.x, Player.y)))
@@ -29,7 +30,7 @@ if instance_exists(Player) && (!cursed) {
 					event_user(0);	
 				}
             }
-			else if (Player.ultra_got[108] && instance_exists(Hand) && point_distance(x, y, Hand.x, Hand.y) < 77 + Player.betterpluto)
+			else if (Player.ultra_got[108] && instance_exists(Hand) && point_distance(x, y, Hand.x, Hand.y) < extraRange + Player.betterpluto)
 			{
 				if place_free(x + lengthdir_x(12, point_direction(x, y, Hand.x, Hand.y)), y)
 					x += lengthdir_x(12, point_direction(x, y, Hand.x, Hand.y))
@@ -43,7 +44,7 @@ if instance_exists(Player) && (!cursed) {
 			else if instance_exists(YungCuzDupe)
 			{
 				var n = instance_nearest(x,y,YungCuzDupe);
-				if point_distance(x, y, n.x, n.y) < 77 + Player.betterpluto
+				if point_distance(x, y, n.x, n.y) < extraRange + Player.betterpluto
 				{
 					if place_free(x + lengthdir_x(12, point_direction(x, y, n.x, n.y)), y)
 						x += lengthdir_x(12, point_direction(x, y, n.x, n.y))
@@ -76,7 +77,7 @@ if instance_exists(Player) && (!cursed) {
     }
     else if speed = 0 {
 		
-        if point_distance(x, y, Player.x, Player.y) < 77 + Player.betterpluto or levelEnded {
+        if point_distance(x, y, Player.x, Player.y) < extraRange + Player.betterpluto or levelEnded {
             if place_free(x + lengthdir_x(12, point_direction(x, y, Player.x, Player.y)), y)
             x += lengthdir_x(12, point_direction(x, y, Player.x, Player.y))
             if place_free(x, y + lengthdir_y(12, point_direction(x, y, Player.x, Player.y)))
@@ -100,7 +101,7 @@ if instance_exists(Player) && (!cursed) {
 				}
             }
         }
-		else if (Player.ultra_got[108] && instance_exists(Hand) && point_distance(x, y, Hand.x, Hand.y) < 77 + Player.betterpluto)
+		else if (Player.ultra_got[108] && instance_exists(Hand) && point_distance(x, y, Hand.x, Hand.y) < extraRange + Player.betterpluto)
 		{
 			if place_free(x + lengthdir_x(12, point_direction(x, y, Hand.x, Hand.y)), y)
 				x += lengthdir_x(12, point_direction(x, y, Hand.x, Hand.y))
@@ -114,7 +115,7 @@ if instance_exists(Player) && (!cursed) {
 		else if instance_exists(YungCuzDupe)
 			{
 			var n = instance_nearest(x,y,YungCuzDupe);
-			if point_distance(x, y, n.x, n.y) < 77 + Player.betterpluto
+			if point_distance(x, y, n.x, n.y) < extraRange + Player.betterpluto
 			{
 				if place_free(x + lengthdir_x(12, point_direction(x, y, n.x, n.y)), y)
 					x += lengthdir_x(12, point_direction(x, y, n.x, n.y))

@@ -10,8 +10,11 @@ function scrSkills() {
 	var isDoctor = false;
 	var isHand = false;
 	var betterWepSpecific = false;
+	var canCheckUltra = false;
 	if instance_exists(Player)
 	{
+		if variable_instance_exists(Player,"ultra_got")
+			canCheckUltra = true;
 		if Player.race == 25
 		{
 			isDoctor = true;
@@ -20,7 +23,7 @@ function scrSkills() {
 		{
 			isHand = true;	
 		}
-		if instance_exists(Player) && variable_instance_exists(Player,"ultra_got") && Player.ultra_got[97]
+		if canCheckUltra && Player.ultra_got[97]
 		{
 			betterWepSpecific = true;	
 		}
@@ -296,6 +299,8 @@ function scrSkills() {
 
 	skill_name[23] = "OPEN MIND"
 	skill_text[23] = "EXTRA CHESTS SPAWN"
+	if canCheckUltra && Player.ultra_got[1]
+		skill_text[23] = "EXTRA CHESTS SPAWN#INCREASE CONFISCATE CHANCE#BY 25%"
 	skill_tips[23] = "open mind also increases rad canisters"
 	skill_msnd[23] =  sndMutOpenMind
 
