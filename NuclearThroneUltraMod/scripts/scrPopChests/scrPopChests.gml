@@ -233,7 +233,9 @@ function scrPopChests() {
 	{
 		scrCreateMissingChest(HealthChest,healthChestGol);	
 	}
-	
+	//Ultra chest
+	if instance_exists(Player) && Player.loops > 1 && Player.level >= 10 && (Player.subarea == 1 || (Player.subarea == 2 && Player.skill_got[23]))
+		scrCreateMissingChest(UltraChest,1);
 	with ChestOpen
 	instance_destroy()
 	if instance_exists(Player)

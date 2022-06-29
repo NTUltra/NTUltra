@@ -128,8 +128,6 @@ if Player.skill_got[1]//rhino skin
 maxhealth=12;
 if Player.skill_got[33]//GLASS ARM CANNON
 maxhealth-=2;
-if Player.ultra_got[45]//ultra git yer back
-maxhealth-=2;
 
 my_health = maxhealth
 prevhealth = maxhealth//lasthealth

@@ -10188,7 +10188,7 @@ function scrFire2() {
 	snd_play_fire(sndSuperSlugger)
 	snd_play_fire(sndDoubleShotgun)
 
-	repeat(56)
+	repeat(60)
 	{
 	with instance_create(x,y,Bullet2Heavy)
 	{motion_add(aimDirection+(random(80)-40)*other.accuracy,14+random(14))

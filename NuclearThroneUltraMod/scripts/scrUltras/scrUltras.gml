@@ -229,7 +229,7 @@ function scrUltras() {
 
 	    //YUNG CUZ 
 	    ultra_name[45] = "GIT YER BAK"
-	    ultra_text[45] = "SHOTS FIRED BY BUDDIES#DON'T COST AMMO/RADS#-2 BUDDY HP"//-2max hp??
+	    ultra_text[45] = "SHOTS FIRED BY BUDDIES#DON'T COST AMMO/RADS"//-2max hp??
 	    ultra_tips[45] = "like one"
     
 	    ultra_name[46] = "MLG SQUAD"

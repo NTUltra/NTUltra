@@ -6295,7 +6295,7 @@ function scrWeapons() {
 	wep_type[571] = 2
 	wep_auto[571] = 0
 	wep_load[571] = 120
-	wep_cost[571] = 25
+	wep_cost[571] = 24
 	wep_sprt[571] = sprHeavySuperShotgun
 	wep_area[571] = 23
 	wep_text[571] = "sooo many pellets"

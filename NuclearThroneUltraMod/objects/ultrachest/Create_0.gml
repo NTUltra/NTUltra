@@ -28,10 +28,17 @@ var i = 0;
 var newWep = 0;
 repeat(wepAmount)
 {
+	var tries = 0;//Prevent infinite loop eventhough I dont think its possible
 	do {
-		newWep = scrDecideWep(0, 10, 0);
-	} until (!array_contains(weps,newWep))
+		newWep = scrDecideWep(0, 20, 0);
+		tries ++;
+	} until (!array_contains(weps,newWep) || tries > 5000)
 	weps[i] = newWep;
 	i++;
 }
-name = "25% RADS TO OPEN";
+currentVisibleWep = 0;
+if instance_exists(Player) && Player.skill_got[19]
+	alarm[1] = 30;
+actionName = "% RADS TO OPEN"
+name = actionName;
+explainTimer = 0;

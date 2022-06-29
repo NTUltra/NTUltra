@@ -232,7 +232,7 @@ function scrRaces() {
 	race_swep[16] = 215//MDRFKIN AXE BITCHES
 	race_bskin[16] = 0
 	race_cskin[16] = 0
-	race_bskin_lock[16] = "COMPLETE A LEVEL WITH#THE MAXIMUM AMOUNT#OF ARMOUR POSSIBLE#AS VIKING"
+	race_bskin_lock[16] = "COMPLETE A LEVEL#WITH THE MAX AMOUNT#OF ARMOUR POSSIBLE#AS VIKING"
 	race_cskin_lock[16] = "KILL 8 ENEMIES#IN ONE ARMOUR STRIKE"
 
 

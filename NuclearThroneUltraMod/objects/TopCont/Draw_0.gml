@@ -124,6 +124,10 @@ draw_sprite(topspr,topindex,x,y-8)
 //Eagle eyes chest content
 if(instance_exists(Player)){
 if(Player.skill_got[19]){
+	with UltraChest
+	{
+		draw_sprite_ext(wep_sprt[weps[currentVisibleWep]],0,x-7,y-14,1,1,0,c_white,0.75);	
+	}
 with WeaponChest
 {
 	if(sprite_index!=sprWeaponChestBig){

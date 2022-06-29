@@ -1,20 +1,84 @@
 /// @description Open the chest
 if !instance_exists(GenCont)
 {
-	var mr = 9999;
-	
+	var cost = 310//50% on level 10
+	if Player.skill_got[23]//Open mind
+		cost = 248//40%
+	var mr = 620;
+	with Player
+		mr = GetPlayerMaxRad();
+	name = string((cost/mr)*100)+actionName;
 	if KeyCont.key_pick[Player.p] = 1 && Player.maxhealth > 0
 	{
-		
-		with Player
-			mr = floor(GetPlayerMaxRad()*0.25);
-		if Player.rad >= mr
+		KeyCont.key_pick[Player.p] = 2;
+		if Player.rad >= cost
 		{
-			Player.rad -= mr;
+			Player.rad -= cost;
+			snd_play(sndThunder);
+			with instance_create(x,y,UltraLightning)
+			{
+				image_angle = 180-30
+				team = 2
+				ammo = 5
+				event_perform(ev_alarm,0)
+				visible = 0
+				with instance_create(x,y,LightningSpawn)
+					image_angle = other.image_angle
+			}
+			with instance_create(x,y,UltraLightning)
+			{
+				image_angle = 180
+				team = 2
+				ammo = 7
+				event_perform(ev_alarm,0)
+				visible = 0
+				with instance_create(x,y,LightningSpawn)
+					image_angle = other.image_angle
+			}
+			with instance_create(x,y,UltraLightning)
+			{
+				image_angle = 180+30
+				team = 2
+				ammo = 5
+				event_perform(ev_alarm,0)
+				visible = 0
+				with instance_create(x,y,LightningSpawn)
+					image_angle = other.image_angle
+			}
+			with instance_create(x,y,UltraLightning)
+			{
+				image_angle = -30
+				team = 2
+				ammo = 5
+				event_perform(ev_alarm,0)
+				visible = 0
+				with instance_create(x,y,LightningSpawn)
+					image_angle = other.image_angle
+			}
+			with instance_create(x,y,UltraLightning)
+			{
+				image_angle = 0
+				team = 2
+				ammo = 7
+				event_perform(ev_alarm,0)
+				visible = 0
+				with instance_create(x,y,LightningSpawn)
+					image_angle = other.image_angle
+			}
+			with instance_create(x,y,UltraLightning)
+			{
+				image_angle = 30
+				team = 2
+				ammo = 5
+				event_perform(ev_alarm,0)
+				visible = 0
+				with instance_create(x,y,LightningSpawn)
+					image_angle = other.image_angle
+			}
 			snd_play(sndUltraGrenadeSuck);
-			KeyCont.key_pick[Player.p] = 2;
 			Player.nochest = 0;
 			snd_play(Player.snd_chst)
+			BackCont.shake += 20;
 			if !oneweponly
 			{
 				var al = array_length(weps);
@@ -35,6 +99,31 @@ if !instance_exists(GenCont)
 				snd_play(sndBigWeaponChest)
 			}
 			snd_play(sndAmmoChest);
+			if other.wep_type[other.wep] = 0 or other.ammo[other.wep_type[other.wep]] = other.typ_amax[other.wep_type[other.wep]]
+				type = choose(1,2,3,4,5)
+			else
+				type = other.wep_type[other.wep]
+
+			other.ammo[type] += other.typ_ammo[type]*2
+			if other.ammo[type] > other.typ_amax[type]
+				other.ammo[type] = other.typ_amax[type]
+
+			if (UberCont.opt_ammoicon)
+			{
+				dir = instance_create(x,y,PopupText)
+				dir.sprt = sprAmmoIconsPickup
+				dir.ii = type-1;
+				dir.mytext = "+"+string(other.typ_ammo[type]*2)
+				if other.ammo[type] = other.typ_amax[type]
+				dir.mytext = "MAX"
+			}
+			else
+			{
+				dir = instance_create(x,y,PopupText)
+				dir.mytext = "+"+string(other.typ_ammo[type]*2)+" "+string(other.typ_name[type])
+				if other.ammo[type] = other.typ_amax[type]
+				dir.mytext = "MAX "+string(other.typ_name[type])
+			}
 			instance_destroy();
 			instance_create(x,y,HPPickup);
 		}

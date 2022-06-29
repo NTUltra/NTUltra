@@ -531,6 +531,8 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 			else
 			{
 				scrFire()
+				with YungCuzDupe
+					event_user(0);
 			}
     
 		clicked = 0
@@ -545,6 +547,8 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 			else
 			{
 				scrFire();
+				with YungCuzDupe
+					event_user(0);
 			}
 		}
 	}
@@ -981,6 +985,8 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 			else
 			{
 				scrFire();
+				with YungCuzDupe
+					event_user(0);
 			}
 			if reload > 0
 				can_shoot = 0;

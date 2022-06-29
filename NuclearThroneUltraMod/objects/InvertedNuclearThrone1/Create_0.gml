@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-maxhealth = 1600//1700
+maxhealth = 1700//1700
 raddrop = 600;
 isInverted = true;
 aTime = 30;

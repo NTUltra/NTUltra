@@ -27,13 +27,13 @@ if UberCont.mouse__y < y
 back = 1
 else if UberCont.mouse__y > y
 back = -1
-
+/*
 if (KeyCont.key_fire[Player.p] = 1 or Player.keyfire = 1) and wep_auto[wep] = 0 and ((wep_type[wep] = 0 or wep_type[wep] = 1) or can_shoot = 1) and reload < 15
 clicked = 1
 
 if can_shoot = 1 and Player.ammo[wep_type[wep]] >= wep_cost[wep] and Player.rad>=wep_rad[wep]
-
-{if wep_auto[wep] = 0 and clicked = 1
+{
+if wep_auto[wep] = 0 and clicked = 1
 {
     
     scrFire()
@@ -59,13 +59,13 @@ if wep_auto[wep] = 1 and (KeyCont.key_fire[Player.p] = 1 or KeyCont.key_fire[Pla
     scrFire()
     if Player.ultra_got[45]=0
     {
-    Player.ammo[wep_type[wep]] -= wep_cost[wep]
-    Player.rad -= wep_rad[wep]
+		Player.ammo[wep_type[wep]] -= wep_cost[wep]
+		Player.rad -= wep_rad[wep]
     }
 }
 }
 else{clicked=0}
-
+*/
 
 
 if Player.area = 5 and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(FloorMaker)
