@@ -95,9 +95,9 @@ function scrSkills() {
 	}
 
 	skill_name[4] = "RABBIT PAW"
-	skill_text[4] = "45% MORE AMMO AND HEALTH DROPS"
+	skill_text[4] = "45% MORE AMMO AND HEALTH DROPS#10% MORE WEAPONDROPS"
 	if isDoctor
-		skill_text[4] = "55% MORE AMMO AND HEALTH DROPS"
+		skill_text[4] = "50% MORE AMMO AND HEALTH DROPS#10% MORE WEAPONDROPS"
 	skill_tips[4] = "feeling lucky"
 	skill_msnd[4] =  sndMutRabbitPaw
 
