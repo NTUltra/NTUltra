@@ -127,7 +127,7 @@ function scrDrop(itemdrop, weapondrop) {
 	    }
 	}
 	//drop items (10 + 2) * (0.75 + 0.5)
-	if itemdrop > 0 && random(100) < itemdrop*dropRateBuff
+	if itemdrop > 0 && random(100) < itemdrop*(need+dropRateBuff)
 	{//0.3 for each ally Rebel has REBEL ULTRA C?
 
 		if random(Player.maxhealth) > Player.my_health and random(3) < 2 and Player.crown != 2 and random(1) <= canHealth
