@@ -128,7 +128,8 @@ else
 
 skillsChosen = 0; //To check for ultra mutation (always last)
 
-skeletonlives = 0;
+skeletonlives = 0
+livesRegain = [];
 
 ultimategamble = false;
 

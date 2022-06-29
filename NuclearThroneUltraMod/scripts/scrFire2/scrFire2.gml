@@ -5293,7 +5293,7 @@ function scrFire2() {
 	else
 	snd_play_fire(sndPlasmaMinigunUpg)
 
-	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),MiniPlasmaBall)
+	with instance_create(x+lengthdir_x(6,aimDirection),y+lengthdir_y(6,aimDirection),MiniPlasmaBall)
 	{motion_add(aimDirection+(random(10)-5)*other.accuracy,2)
 	image_angle = direction
 	team = other.team}
@@ -5331,7 +5331,7 @@ function scrFire2() {
 	else
 	snd_play_fire(sndPlasma)
 
-	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),BouncerPlasmaBall)
+	with instance_create(x+lengthdir_x(6,aimDirection),y+lengthdir_y(6,aimDirection),BouncerPlasmaBall)
 	{motion_add(aimDirection+(random(8)-4)*other.accuracy,4)
 	image_angle = direction
 	team = other.team}
@@ -5352,7 +5352,7 @@ function scrFire2() {
 	else
 	snd_play_fire(sndPlasma)
 
-	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),BouncerPlasmaBall)
+	with instance_create(x+lengthdir_x(6,aimDirection),y+lengthdir_y(6,aimDirection),BouncerPlasmaBall)
 	{motion_add(aimDirection+(random(10)-5)*other.accuracy,4)
 	image_angle = direction
 	team = other.team}
@@ -5374,7 +5374,7 @@ function scrFire2() {
 	else
 	snd_play_fire(sndPlasmaBig)
 
-	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),BouncerPlasmaBallBig)
+	with instance_create(x+lengthdir_x(6,aimDirection),y+lengthdir_y(6,aimDirection),BouncerPlasmaBallBig)
 	{motion_add(aimDirection+(random(4)-2)*other.accuracy,4)
 	image_angle = direction
 	team = other.team}
@@ -5931,7 +5931,7 @@ function scrFire2() {
 	else
 	snd_play_fire(sndPlasma)
 
-	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),RedirectorPlasmaBall)
+	with instance_create(x+lengthdir_x(6,aimDirection),y+lengthdir_y(6,aimDirection),RedirectorPlasmaBall)
 	{motion_add(aimDirection+(random(8)-4)*other.accuracy,3)
 	image_angle = direction
 	team = other.team}
@@ -7209,7 +7209,7 @@ function scrFire2() {
 		ldx = 0;
 		ldy = 0;
 	}
-	with instance_create(x+lengthdir_x(8,aimdir)+ldx,y+lengthdir_y(8,aimdir)+ldy,MiniPlasmaBall)
+	with instance_create(x+lengthdir_x(6,aimdir)+ldx,y+lengthdir_y(6,aimdir)+ldy,MiniPlasmaBall)
 	{
 		motion_add(aimdir,2)
 		image_angle = direction
@@ -7224,7 +7224,7 @@ function scrFire2() {
 		ldx = 0;
 		ldy = 0;
 	}
-	with instance_create(x+lengthdir_x(8,aimdir)+ldx,y+lengthdir_y(8,aimdir)+ldy,MiniPlasmaBall)
+	with instance_create(x+lengthdir_x(6,aimdir)+ldx,y+lengthdir_y(6,aimdir)+ldy,MiniPlasmaBall)
 	{
 		motion_add(aimdir,2)
 		image_angle = direction
@@ -10145,7 +10145,7 @@ function scrFire2() {
 	else
 	snd_play_fire(sndPlasmaBig)
 
-	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),SplasmaBig)
+	with instance_create(x,y,SplasmaBig)
 	{motion_add(aimDirection+(random(4)-2)*other.accuracy,8)
 	image_angle = direction
 	team = other.team}
@@ -10167,7 +10167,7 @@ function scrFire2() {
 	else
 	snd_play_fire(sndPlasma)
 
-	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),SplasmaBall)
+	with instance_create(x,y,SplasmaBall)
 	{motion_add(aimDirection+(random(8)-4)*other.accuracy,8)
 		sdelay = 4;
 	image_angle = direction

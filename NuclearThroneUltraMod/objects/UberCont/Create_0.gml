@@ -3,7 +3,7 @@
 win8 = 1;
 version = 000//23 is final probably
 encryptedVersion = 001;
-public = 0 //1 is no cheats and release
+public = 1 //1 is no cheats and release
 defaultPublic = public;
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
@@ -20,6 +20,7 @@ unlocked=69;
 
 //DEFAULT STUFF
 race = 0
+racepick = 0;
 isPaused = 0
 alarm[0] = 30
 	//Init variable that we load
@@ -36,7 +37,7 @@ area=0;
 subarea=1;
 loops=0;
 lastSaveLoop = -1;
-
+loadedRun = false;
 
 //window_set_max_height(1440);
 //window_set_max_width(1920);

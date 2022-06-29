@@ -22,7 +22,7 @@ function scrDrawUpdate() {
 		{
 			url_open("https://twitter.com/Erdeppol");
 		}
-	txt0 = @"#UPDATE 28 BETA [0.15]
+	txt0 = @"#UPDATE 28 BETA [0.162]
 	
 	* 108 NEW WEAPONS!
 	* ALL ULTRA MUTATION ART!

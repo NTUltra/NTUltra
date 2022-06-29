@@ -236,9 +236,23 @@ instance_destroy();
 with instance_create(x,y,PlayerSpawn)//Data to keep
 {
 //alarm[3]=300;//immunity
+lastsubarea = other.lastsubarea;
 ultramod = other.ultramod;
 ultimategamble=true;
-skeletonlives=other.skeletonlives-1;
+skeletonlives = other.skeletonlives-1;
+var si= 0;
+livesRegain = other.livesRegain;
+var al = array_length(livesRegain);
+var tookLife = false;
+repeat(al)
+{
+	if !tookLife && livesRegain[si] > 2
+	{
+		livesRegain[si] = 0;
+		tookLife = true;
+	}
+	si++;
+}
 race = other.race
 crown = other.crown
 lastarea = other.lastarea;

@@ -4182,7 +4182,7 @@ function scrWeapons() {
 	wep_name[379] = "BULLET WALL"
 	wep_type[379] = 1
 	wep_auto[379] = 0
-	wep_load[379] = 15
+	wep_load[379] = 14
 	wep_cost[379] = 8
 	wep_sprt[379] = sprSkullBreaker
 	wep_area[379] = 11
@@ -4193,7 +4193,7 @@ function scrWeapons() {
 	wep_name[380] = "BULLET LASER"
 	wep_type[380] = 1
 	wep_auto[380] = 0
-	wep_load[380] = 15
+	wep_load[380] = 14
 	wep_cost[380] = 12
 	wep_sprt[380] = sprSkullSplitter
 	wep_area[380] = 12
@@ -4952,7 +4952,7 @@ function scrWeapons() {
 	wep_name[449] = "POP WALL"
 	wep_type[449] = 2
 	wep_auto[449] = 0
-	wep_load[449] = 15
+	wep_load[449] = 14
 	wep_cost[449] = 2
 	wep_sprt[449] = sprPopWall
 	wep_area[449] = 11
@@ -4963,7 +4963,7 @@ function scrWeapons() {
 	wep_name[450] = "POP LASER"
 	wep_type[450] = 2
 	wep_auto[450] = 0
-	wep_load[450] = 15
+	wep_load[450] = 14
 	wep_cost[450] = 2
 	wep_sprt[450] = sprPopLaser
 	wep_area[450] = 12
@@ -6273,10 +6273,10 @@ function scrWeapons() {
 	wep_type[569] = 5
 	wep_auto[569] = 0
 	wep_load[569] = 50
-	wep_cost[569] = 12
-	wep_sprt[569] = sprPlasmaCannon
-	wep_area[569] = 15
-	wep_text[569] = "spiraling plasma gun"
+	wep_cost[569] = 13
+	wep_sprt[569] = sprSplasmaCannon
+	wep_area[569] = 16
+	wep_text[569] = "disperse plasma gun"
 	wep_swap[569] = sndSwapEnergy
 	wep_rad[569] = 0;
 	
@@ -6285,9 +6285,9 @@ function scrWeapons() {
 	wep_auto[570] = 1
 	wep_load[570] = 22
 	wep_cost[570] = 3
-	wep_sprt[570] = sprPlasmaGun
+	wep_sprt[570] = sprSplasmaGun
 	wep_area[570] = 8
-	wep_text[570] = "disperse plasma gun"
+	wep_text[570] = "spiraling plasma gun"
 	wep_swap[570] = sndSwapEnergy
 	wep_rad[570] = 0;
 	

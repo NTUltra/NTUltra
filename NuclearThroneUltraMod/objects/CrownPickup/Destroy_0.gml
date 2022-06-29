@@ -7,6 +7,6 @@ if instance_exists(Player)
 	if Player.crownvisits == 0
 		Player.subarea=0;
 	else
-	Player.subarea = 2
+		Player.subarea = 2
 }
 

@@ -16,9 +16,11 @@ snd_play(sndStatueCharge);
 with Player//Data to keep
 {
 	//bskin=other.bskin;
+	lastsubarea = other.lastsubarea;
 	ultramod = other.ultramod;
 	ultimategamble=true;
 	skeletonlives=other.skeletonlives;
+	livesRegain = other.livesRegain;
 	race = other.race
 	crown = other.crown
 	lastarea = other.lastarea;

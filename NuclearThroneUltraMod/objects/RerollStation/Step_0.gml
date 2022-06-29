@@ -111,9 +111,49 @@ if place_meeting(x,y,Player) && !used
 					betterlaserbrain = 0;
 				break;
 				case 18: //LAST WISH
-					lastwishused=false;
-					if skeletonlives > 0
+					var al = array_length(livesRegain);
+					var tookPartialLife = false;
+					//Prioritize taking lifes that are not full/active
+					for (var i = 0; i < al; i++) {
+					    if !tookPartialLife && livesRegain[i] > 0 && livesRegain[i] < 3
+						{
+							livesRegain[i] -= 1;
+							tookPartialLife = true;
+						}
+					}
+					//Could not find a partial life now take a full one
+					if !tookPartialLife
+					{
+						for (var i = 0; i < al; i++) {
+						    if !tookPartialLife && livesRegain[i] > 0
+							{
+								livesRegain[i] -= 1;
+								tookPartialLife = true;
+							}
+						}
+					}
+					/*if skeletonlives > 0
 						skeletonlives --;
+					//Take lowest life
+					var originalRegain = livesRegain;
+					var al = array_length(livesRegain);
+					var lowestLife = 2;
+					var lifeToTake = 0;
+					for (var i = 0; i < al; i++) {
+					    if livesRegain[i] > lowestLife
+						{
+							lowestLife = livesRegain[i];
+							lifeToTake = i;
+						}
+					}
+					livesRegain = [];
+					//Copy over lifes except for the lowest
+					for (var i = 0; i < al; i++) {
+					    if i != lifeToTake
+						{
+							livesRegain[array_length(livesRegain)] = originalRegain[i];
+						}
+					}*/
 				break;
 				case 19: //EAGLE EYES
 					if race == 25

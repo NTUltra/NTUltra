@@ -1,4 +1,5 @@
 function scrRestart() {
+	var loadedRun = UberCont.loadedRun
 	scrEndOfRun();
 	with all
 	{
@@ -15,5 +16,8 @@ function scrRestart() {
 	}
 	with SurvivalWave
 		instance_destroy();
-	room_goto(romGame)
+	if loadedRun
+		scrLoadRun();
+	else
+		room_goto(romGame)
 }

@@ -1112,6 +1112,8 @@ if skill_got[19] == 1
 var modHomeBoost = 0.6;
 if skill_got[30] == 1
 	modHomeBoost += 0.34;
+if ultra_got[65]
+	modHomeBoost += 0.4;
 
 if wepmod1 == 13
 	homeBoost += modHomeBoost;

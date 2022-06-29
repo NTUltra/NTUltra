@@ -6,6 +6,7 @@ function scrLoadRun(){
 	if (file_exists(fileString))
 	{
 		UberCont.race = 1
+		UberCont.loadedRun = true;
 	    with instance_create(x,y,GenCont)
 	    {race = 1
 	    crown = 2}
@@ -177,6 +178,17 @@ function scrLoadRun(){
 					Player.pSpeedBoost = encryptedRun.pSpeedBoost;
 				else
 					Player.pSpeedBoost = true;
+				if variable_struct_exists(encryptedRun, "livesRegain")
+					Player.livesRegain = encryptedRun.livesRegain;
+				else
+				{
+					var i = 0;
+					repeat(Player.skeletonlives)
+					{
+						Player.livesRegain[i] = 3;
+						i++;
+					}
+				}
 			}
 			with Player
 			{

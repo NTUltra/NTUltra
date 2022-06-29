@@ -846,7 +846,7 @@ function scrFire() {
 	else
 	snd_play_fire(sndPlasma)
 
-	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),PlasmaBall)
+	with instance_create(x+lengthdir_x(6,aimDirection),y+lengthdir_y(6,aimDirection),PlasmaBall)
 	{motion_add(aimDirection+(random(8)-4)*other.accuracy,2)
 	image_angle = direction
 	team = other.team}
@@ -1756,7 +1756,7 @@ function scrFire() {
 	else
 	snd_play_fire(sndPlasma)
 
-	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),PlasmaBall)
+	with instance_create(x+lengthdir_x(6,aimDirection),y+lengthdir_y(6,aimDirection),PlasmaBall)
 	{motion_add(aimDirection+(random(10)-5)*other.accuracy,2)
 	image_angle = direction
 	team = other.team}
@@ -1779,7 +1779,7 @@ function scrFire() {
 	else
 	snd_play_fire(sndPlasmaMinigunUpg)
 
-	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),PlasmaBall)
+	with instance_create(x+lengthdir_x(6,aimDirection),y+lengthdir_y(6,aimDirection),PlasmaBall)
 	{motion_add(aimDirection+(random(16)-8)*other.accuracy,2)
 	image_angle = direction
 	team = other.team}
@@ -4892,9 +4892,14 @@ function scrFire() {
 					var speedAdd = 0;
 					if other.skill_got[30] == 1
 					{
-						Mod4=other.wepmod4;
+						Mod4 = other.wepmod4;
 						speedBoost = 1.15;
-						spda = 3.9;
+						spda = 3.4;
+					}
+					if other.ultra_got[65]
+					{
+						speedBoost += 0.1;
+						spda += 1.8;
 					}
 					if other.race == 11
 					{
@@ -4946,6 +4951,8 @@ function scrFire() {
 	var reloadBoost = 0.18;
 	if Player.skill_got[30] == 1
 		reloadBoost = 0.26;
+	if Player.ultra_got[65]
+		reloadBoost += 0.06;
 	
 	if wepmod1==12
 		reload -= wep_load[wep]*reloadBoost

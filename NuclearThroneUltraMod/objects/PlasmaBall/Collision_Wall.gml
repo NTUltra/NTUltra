@@ -31,7 +31,6 @@ image_yscale-=0.17;
 instance_create(x,y,Dust)
 
 
-
 resetSpeed=true;
 
 /* */

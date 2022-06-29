@@ -26,16 +26,23 @@ function scrModHit() {
 	*/
 	if instance_exists(Player) && Player.moddelay < 1
 	{
+		var r = 1;
 		with Player
 		{
 		    if skill_got[30]//power craving
 				moddelay=16;
 		    else
 				moddelay=26;
-			if ultra_got[65] == 1//Weapon smith Ultra A
-				moddelay -= 10;
+			if ultra_got[65] == 1
+			{
+				moddelay -= 4;
+				r = 2;
+			}
+			/*if ultra_got[65] == 1//Weapon smith Ultra A
+				moddelay -= 10;*/
     
 	    }
+		repeat(r)
 		with other {//PROJECTILE
 
 			var newfrost = true;

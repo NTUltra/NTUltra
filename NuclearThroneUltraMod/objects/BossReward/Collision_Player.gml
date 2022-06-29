@@ -5,6 +5,5 @@ if active
 	{
 		KeyCont.key_pick[Player.p] = 2;
 		event_user(1)
-
 	}
 }

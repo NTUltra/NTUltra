@@ -30,6 +30,7 @@ switch(array_length(UberCont.collectedRewards))
 		with Player
 		{
 			skeletonlives += 1;
+			livesRegain[array_length(livesRegain)] = 3;
 		}
 		snd_play(other.snd_chst);
 	break;

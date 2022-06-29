@@ -18,12 +18,11 @@ UberCont.opt_sideart += 1
 else
 UberCont.opt_sideart = 0;
 }
-
-x=round(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+10+string_width(string_hash_to_newline("00")))
-y=round(__view_get( e__VW.YView, 0 )+88+8)
 if UberCont.opt_sideart == sprite_get_number(sprSideArt)
 {
-	draw_text(x+17,y+8,"CUSTOM");
+	draw_set_valign(fa_top);
+	draw_set_halign(fa_left);
+	draw_text(x+17,y,"CUSTOM");
 	var s = 8;
 	var xx = x+66;
 	draw_sprite(sprToggle,0,xx,y);
@@ -39,3 +38,5 @@ if UberCont.opt_sideart == sprite_get_number(sprSideArt)
 		}
 	}
 }
+x=round(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+10+string_width(string_hash_to_newline("00")))
+y=round(__view_get( e__VW.YView, 0 )+88+8)

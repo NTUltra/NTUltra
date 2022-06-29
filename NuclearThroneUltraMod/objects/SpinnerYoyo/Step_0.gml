@@ -26,6 +26,8 @@ if instance_exists(Player) and instance_exists(enemy)
 		if Player.race == 25
 			modBoost += 2;
 	}
+	if Player.ultra_got[65]
+		modBoost += 5;
 	if Mod1 == 13
 		home += modBoost;
 	if Mod2 == 13

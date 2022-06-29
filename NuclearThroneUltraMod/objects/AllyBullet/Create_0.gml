@@ -7,4 +7,4 @@ if Player.ultra_got[40]
 if Player.ultra_got[28]//Roids ultra
 	dmg += 2;
 }
-
+alarm[11] = 1;

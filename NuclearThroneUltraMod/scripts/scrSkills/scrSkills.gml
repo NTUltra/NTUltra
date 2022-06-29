@@ -257,9 +257,9 @@ function scrSkills() {
 	{
 	skill_name[18] = "LAST WISH"
 	if isDoctor
-		skill_text[18] = "GET FULL HEALTH AND FULL AMMO"
+		skill_text[18] = "GET FULL HEALTH AND FULL AMMO#REGAIN ONE PART OF YOUR LIFE"
 	else
-		skill_text[18] = "GET FULL HEALTH AND SOME AMMO"
+		skill_text[18] = "GET FULL HEALTH AND SOME AMMO#REGAIN ONE PART OF YOUR LIFE"
 	skill_tips[18] = "listen"
 	skill_msnd[18] =  sndMutLastWish
 	}

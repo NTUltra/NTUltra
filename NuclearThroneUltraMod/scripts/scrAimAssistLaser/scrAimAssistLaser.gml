@@ -24,7 +24,9 @@ function scrAimAssistLaser(originalDirection){
 			aimAssist += 60;
 		}
 		if skill_got[30] == 1
-			modBoost = 11;
+			modBoost = 9;
+		if ultra_got[65]
+			modBoost += 11;
 		if wepmod1 == 13
 			aimAssist += modBoost;
 		if wepmod2 == 13

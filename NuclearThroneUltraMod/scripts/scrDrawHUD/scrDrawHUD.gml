@@ -111,12 +111,13 @@ function scrDrawHUD() {
 	//ULTRA ICON
 	dir=1;
 	dix=0;
-	if Player.skeletonlives>0
+	var totalLives = array_length(Player.livesRegain);
+	if totalLives > 0
 	{
-	    repeat(Player.skeletonlives)
+	    repeat(totalLives)
 	    {
 			dix++;
-			draw_sprite_ext(sprExtraLivesHud,1,__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-16*dix,__view_get( e__VW.YView, 0 )+36,1,1,0,c_white,1);
+			draw_sprite_ext(sprExtraLivesHud,Player.livesRegain[dix-1],__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-16*dix,__view_get( e__VW.YView, 0 )+36,1,1,0,c_white,1);
 	    }
 	}
 	dix ++

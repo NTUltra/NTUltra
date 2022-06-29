@@ -237,11 +237,18 @@ if skill == 76//skelly ultra D
     {
 	    with Player
 	    {
-	    skeletonlives+=3;
-	    ultimategamble=false;
-		maxspeed += 0.4;//Normal speed
-		accuracy = 1;//Normal accuracy
-		standartAccuracy = accuracy;
+			var currentLives = array_length(livesRegain);
+			var si = currentLives;
+		    skeletonlives += 3;
+			repeat(3)
+			{
+				livesRegain[si] = 3;
+				si++;
+			}
+		    ultimategamble=false;
+			maxspeed += 0.4;//Normal speed
+			accuracy = 1;//Normal accuracy
+			standartAccuracy = accuracy;
 			if skill_got[19] //eagle eyes
 			{
 				scrApplyEagleEyes();

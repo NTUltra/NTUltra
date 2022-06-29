@@ -5,8 +5,10 @@ function scrPopulate() {
 	
     //setting area and spawning some enemies
     with Floor {
+	if object_index != FloorExplo
+	{
         subarea = Player.subarea;
-        spawnarea = Player.area
+        spawnarea = Player.area;
         /*
             if Player.area = 1 spawnarea = 1
             if Player.area = 2 spawnarea = 2
@@ -85,10 +87,14 @@ function scrPopulate() {
             }
 
         }
+	}
     }
 
     //COOL BONES
     with Floor {
+	if object_index != FloorExplo
+	{
+		
 		if spawnarea == 101
 		{
 			TopDecals();
@@ -324,12 +330,15 @@ function scrPopulate() {
 					sprite_index = sprInvertedVulcanoBones
 			}
         }
+	}
     }
 
 
     //making sure there are enough enemies and spawning props/lil walls
 
     with Floor {
+	if object_index != FloorExplo
+	{
         if instance_exists(Player) {
             if (spawnarea = 3 && Player.subarea = 3) || (spawnarea = 7 && Player.subarea = 3) //exceptions pls for bosses
             {
@@ -366,6 +375,7 @@ function scrPopulate() {
         }
 
         scrPopProps()
+	}
     }
 
     with NOWALLSHEREPLEASE

@@ -5,6 +5,7 @@ function scrEndOfRun(){
 	debug("END OF RUN");
 	with UberCont
 	{
+		loadedRun = false;
 		crownVaultChallenge = 0;
 		killedBoss = [];
 		collectedRewards = [];

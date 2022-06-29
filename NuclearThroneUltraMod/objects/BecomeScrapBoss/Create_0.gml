@@ -1,7 +1,9 @@
 image_index = 0
 
 size = 3
+raddrop = 0;
 maxhealth = 40
+meleedamage = 0;
 target = -1
 spr_idle = sprScrapBossSleep
 spr_walk = sprScrapBossSleep
@@ -28,6 +30,7 @@ if instance_exists(WeaponChest)
 }
 else 
 dir = id;
+
 if loops < 1 && !instance_exists(InvaderBossSpawnPortal) 
 {
 	x = round(dir.x/32)*32-16
@@ -43,8 +46,7 @@ dix = 0
 diy += 1
 }
 }
-
-
+friction = 100;
 with Wall
 {
 if place_meeting(x,y,other)

@@ -231,6 +231,8 @@ if looping && area != 104
 	if ammo[5] > typ_amax[5]
 		ammo[5] = typ_amax[5];
 	
+	scrRegainOneLifePart();
+	
 	debug("Looping now");
 if scrCheckLoopAll()
 	scrUnlockCSkin(1,"FOR LOOPING WITH EVERY CHARACTER",0);

@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskWepPickup",
     "path": "sprites/mskWepPickup/mskWepPickup.yy",

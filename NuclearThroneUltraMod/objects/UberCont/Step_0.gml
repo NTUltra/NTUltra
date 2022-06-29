@@ -26,7 +26,6 @@ if race = 0 || UberCont.opt_gamemode == 23
 	ranChar = true;
 	do race = 1+irandom(racemax-1) until race_have[race] = 1
 	
-	debug("random: ",race);
 }
 if crown = 0
 crown = ceil(irandom(crownmax))
@@ -44,7 +43,11 @@ with Player
 	restarted = true;	
 }
 debug("BIG CHUNK RESTART");
-room_restart()
+var loadedRun = UberCont.loadedRun;
+if loadedRun
+	scrLoadRun();
+else
+	room_restart()
 exit;
 }
 instance_activate_object(KeyCont)

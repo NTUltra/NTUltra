@@ -541,7 +541,7 @@ if Player.area == 102
 //Gun Smiths weapon modder ultra
 if Player.ultra_got[65] && Player.area !=100
 {
-instance_create(instance_nearest(Player.x,Player.y,Floor).x+16, instance_nearest(Player.x,Player.y,Floor).y+16,WeaponMod);
+	instance_create(instance_nearest(Player.x,Player.y,Floor).x+16, instance_nearest(Player.x,Player.y,Floor).y+16,WeaponMod);
 }
 
 

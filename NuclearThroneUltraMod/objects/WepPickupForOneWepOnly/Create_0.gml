@@ -34,10 +34,10 @@ mod3[]
 wepmod1=0;
 if instance_exists(Player)
 {
-if Player.skill_got[30]//power craving
-{
-wepmod1=scrMods();
-}
+	if Player.skill_got[30]//power craving
+	{
+		wepmod1 = scrMods();
+	}
 }
 wepmod2=0;
 wepmod3=0;

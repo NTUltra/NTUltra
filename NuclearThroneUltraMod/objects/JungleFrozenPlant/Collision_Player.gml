@@ -1,12 +1,6 @@
 /// @description Go to jungle or back to frozen city
 if KeyCont.key_pick[other.p] = 1 && !used
 {
-	if other.skill_got[18] && UberCont.lastwishused
-	{
-		UberCont.lastwishused = false;
-		dir= instance_create(x,y-8,PopupText)
-		dir.mytext = "LAST WISH#CAN GIVE A LIFE AGAIN!";
-	}
 	if blood >= bloodNeeded
 	{
 		used = true;

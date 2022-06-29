@@ -39,17 +39,17 @@ if object_index!=SnowTank && object_index!=InvertedSnowTank && object_index!=Gol
 			{
 				if impactWrist
 				{
-					speed /= (size*0.3);
+					speed /= (size*0.32);
 				}
 				else
-					speed /= size*0.8;
+					speed /= size*0.82;
 			}
 			
 			if Player.skill_got[20] == 1 && speed > 19
 				speed = 19
 		}
 		else if size > 0
-			speed /= size*0.8
+			speed /= size*0.82
 	}
 	snd_play(snd_dead, 0.1,true);
 }

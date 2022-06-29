@@ -23,6 +23,7 @@ function scrSaveRun() {
 			rage: Player.rage,
 			humphryskill: Player.HumphrySkill,
 			skeletonlives: Player.skeletonlives,
+			livesRegain: Player.livesRegain,
 			patience: Player.patience,
 			skillpoints: Player.skillpoints,
 			level: Player.level,

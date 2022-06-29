@@ -177,7 +177,20 @@ Player.curse = 0
 Player.bcurse = 0
 
 if UberCont.lastwishused=false
-Player.skeletonlives+=1;
+{
+	UberCont.lastwishused = true;
+	with Player
+	{
+		lastwishused = true;
+		skeletonlives += 1;
+		livesRegain[array_length(livesRegain)] = 3;
+	}
+}
+else
+{
+	//Regain one part of life
+	scrRegainOneLifePart();
+}
 
 }
 else if skill = 5 && Player.race = 1//thronebut for fish

@@ -17,9 +17,8 @@ else
 if vspeed < 0 and !place_free(x,y+vspeed)
 {do vspeed = min(vspeed+1,0) until place_free(x,y+vspeed) or vspeed >= 0}
 
-image_xscale-=0.3;
-image_yscale-=0.3;
+image_xscale-=0.26;
+image_yscale-=0.26;
 
 instance_create(x,y,Dust)
-
 speed = 1;

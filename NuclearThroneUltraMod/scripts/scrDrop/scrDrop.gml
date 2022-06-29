@@ -92,15 +92,15 @@ function scrDrop(itemdrop, weapondrop) {
 
 	need = 0
 
-	if Player.ammo[Player.wep_type[Player.wep]] < Player.typ_amax[Player.wep_type[Player.wep]]*0.2-(Player.skill_got[10]*0.05)
+	if Player.ammo[Player.wep_type[Player.wep]] < Player.typ_amax[Player.wep_type[Player.wep]]*(0.2-(Player.skill_got[10]*0.04))
 		need += 0.75
-	else if Player.ammo[Player.wep_type[Player.wep]] > Player.typ_amax[Player.wep_type[Player.wep]]*0.6-(Player.skill_got[10]*0.1)
+	else if Player.ammo[Player.wep_type[Player.wep]] > Player.typ_amax[Player.wep_type[Player.wep]]*(0.6-(Player.skill_got[10]*0.1))
 		need += 0.1 else need += 0.5
 
 	if Player.bwep = 0 need += 0.5
-	else if Player.ammo[Player.wep_type[Player.bwep]] < Player.typ_amax[Player.wep_type[Player.bwep]]*0.2-(Player.skill_got[10]*0.05)
+	else if Player.ammo[Player.wep_type[Player.bwep]] < Player.typ_amax[Player.wep_type[Player.bwep]]*(0.2-(Player.skill_got[10]*0.04))
 		need += 0.75
-	else if Player.ammo[Player.wep_type[Player.bwep]] > Player.typ_amax[Player.wep_type[Player.bwep]]*0.6-(Player.skill_got[10]*0.1)
+	else if Player.ammo[Player.wep_type[Player.bwep]] > Player.typ_amax[Player.wep_type[Player.bwep]]*(0.6-(Player.skill_got[10]*0.1))
 		need += 0.1 else need += 0.5
 
 
