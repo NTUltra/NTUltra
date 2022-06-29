@@ -4,7 +4,7 @@ if instance_exists(owner)
 x = owner.x;
 y = owner.y;
 var dir = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
-var len = 164;
+var len = 200;
 var hit = collision_line_point(x,y,x+lengthdir_x(len,dir),y+lengthdir_y(len,dir),Wall,false,false);
 var dis = point_distance(x,y,hit[1],hit[2]);
 var step = 8;

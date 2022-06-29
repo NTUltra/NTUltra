@@ -32,9 +32,9 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 			//screen_save("explain"+string(scrn)+".png");
 			//scrn++;
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			instance_create(f.x + 16,f.y + 16,VanSpawn)
+			instance_create(f.x + 16,f.y + 16,UltraChest)
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "VAN";
+			thing.mytext = "UltraChest";
 		}
 		if keyboard_check_pressed(ord("C")) {
 			var dangle = random(1)*360;

@@ -1,7 +1,7 @@
 event_inherited();
 friction = 0.2;
 typ = 2;
-dmg = 18;
+dmg = 17;
 amountOfPellets = 2;
 if instance_exists(Player)
 {

@@ -31,7 +31,7 @@ if instance_exists(WeaponChest)
 else 
 dir = id;
 
-if loops < 2 && !instance_exists(InvaderBossSpawnPortal) 
+if !instance_exists(InvaderBossSpawnPortal) && instance_number(object_index) == 1
 {
 	x = round(dir.x/32)*32-16
 	y = round(dir.y/32)*32-16

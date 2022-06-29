@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprAmmoChest","path":"sprites/sprAmmoChest/sprAmmoChest.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprAmmoChest",
     "tags": [],
     "resourceType": "GMSequence",
   },

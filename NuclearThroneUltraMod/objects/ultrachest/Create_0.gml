@@ -1,0 +1,37 @@
+mediumchest = 0;
+shadowSprite = shd24;
+if isOneWeaponOnlyModes()
+	oneweponly = true;
+else
+	oneweponly = false;
+
+event_inherited()
+
+/*
+if instance_exists(Player)
+{
+	if (Player.ultra_got[25]==1)
+    {
+    mediumchest=1;
+    }
+	if Player.crown == 99//Crown of love
+	{
+		instance_destroy(id,false);
+		instance_create(x,y,AmmoChest);
+	}
+}*/
+
+scrWeapons()
+var wepAmount = 8;
+weps = [];
+var i = 0;
+var newWep = 0;
+repeat(wepAmount)
+{
+	do {
+		newWep = scrDecideWep(0, 10, 0);
+	} until (!array_contains(weps,newWep))
+	weps[i] = newWep;
+	i++;
+}
+name = "25% RADS TO OPEN";

@@ -55,7 +55,7 @@ function scrTips() {
 	)
 	),choose(
 	"don't worry about long-term effects","when near a portal you#don't take damage","don't die","nice",
-	"yung cuz definitely exists","venuz patrol","boiling veins does#NOT protect against#blue fire",
+	"yung cuz definitely exists","venuz patrol",
 	"should not have done that","","thank you for playing","Some unused mutations are buffed","visit crownvaults twice#for weapon mods","death is near","good luck","are you ready?"
 	,"you can change the direction#of director projectiles#by clicking after firing")
 	,
@@ -250,7 +250,7 @@ function scrTips() {
 
 	if Player.race = 15//Atom
 	tip = choose("molecules","don't touch each other","elite being","not an accurate#representation of reality","science bitch!","balance of the universe"
-	,"from the other side","inverted mutant","higher chance for inverted worlds","purple balls","split the atom","atoms for peace","Entropy")
+	,"from the other side","inverted mutant","higher chance for inverted worlds","purple balls","split the atom","atoms for peace","Entropy","she blinded me with science","don't touch me")
 
 	if Player.race = 16//Viking
 	tip = choose("the ship that brought you here","the sea","ocean fire","hate pirates","you've come from far","water dragon","tough!"

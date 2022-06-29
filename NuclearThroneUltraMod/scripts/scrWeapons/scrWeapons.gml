@@ -3563,7 +3563,7 @@ function scrWeapons() {
 	wep_name[323] = "THUNDER KRAKEN"
 	wep_type[323] = 5
 	wep_auto[323] = 0
-	wep_load[323] = 26
+	wep_load[323] = 25
 	wep_cost[323] = 2
 	wep_sprt[323] = sprThunderCrack
 	wep_area[323] = 9
@@ -4251,7 +4251,7 @@ function scrWeapons() {
 	wep_load[385] = 20
 	wep_cost[385] = 3
 	wep_sprt[385] = sprSplinterBladeGun
-	wep_area[385] = 10
+	wep_area[385] = 14
 	wep_text[385] = "blades don't hurt you"
 	wep_swap[385] = sndSwapBow
 	wep_rad[385] = 0;
@@ -5712,7 +5712,7 @@ function scrWeapons() {
 	wep_type[518] = 1
 	wep_auto[518] = 1
 	wep_load[518] = 4
-	wep_cost[518] = 4
+	wep_cost[518] = 3
 	wep_sprt[518] = sprSeekerMachinegun
 	wep_area[518] = 8
 	wep_text[518] = "auto seeking"
@@ -5723,7 +5723,7 @@ function scrWeapons() {
 	wep_type[519] = 1
 	wep_auto[519] = 1
 	wep_load[519] = 3
-	wep_cost[519] = 7
+	wep_cost[519] = 6
 	wep_sprt[519] = sprDoubleSeekerMachinegun
 	wep_area[519] = 15
 	wep_text[519] = "seek and destroy"
@@ -6174,7 +6174,7 @@ function scrWeapons() {
 	wep_type[560] = 3
 	wep_auto[560] = 0
 	wep_load[560] = 33
-	wep_cost[560] = 1
+	wep_cost[560] = 1.5
 	wep_sprt[560] = sprSpearLauncher
 	wep_area[560] = 2
 	wep_text[560] = "one of the oldest weapons"
@@ -6185,7 +6185,7 @@ function scrWeapons() {
 	wep_type[561] = 3
 	wep_auto[561] = 0
 	wep_load[561] = 25
-	wep_cost[561] = 3
+	wep_cost[561] = 2
 	wep_sprt[561] = sprSplinterSpearLauncher
 	wep_area[561] = 7
 	wep_text[561] = "spear that splinters"
@@ -6196,7 +6196,7 @@ function scrWeapons() {
 	wep_type[562] = 3
 	wep_auto[562] = 1
 	wep_load[562] = 9
-	wep_cost[562] = 1
+	wep_cost[562] = 1.5
 	wep_sprt[562] = sprAutoSpearLauncher
 	wep_area[562] = 8
 	wep_text[562] = "no longer primitive"

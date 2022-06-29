@@ -61,8 +61,9 @@ function scrDrop(itemdrop, weapondrop) {
 
 	if Player.crown = 13//no rads higher droprate crown
 	{
-	weapondrop *= 1.22;
-	itemdrop *=1.22;
+		weapondrop *= 1.3;
+		itemdrop *= 1.3;
+		dropRateBuff += 0.3;
 	}
 
 	if UberCont.opt_gamemode=2{

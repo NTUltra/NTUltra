@@ -1,6 +1,6 @@
 event_inherited();
 typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
-
+RecycleGlandType();
 
 friction=0.1;
 image_speed=0.4;

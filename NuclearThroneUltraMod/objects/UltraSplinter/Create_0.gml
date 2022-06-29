@@ -1,6 +1,6 @@
 event_inherited();
-friction = 0.3
-dmg=13//4 normal splinter
+friction = 0;
+dmg=14//4 normal splinter
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable
-
+canBounce = true;
 alarm[11] = 1;
