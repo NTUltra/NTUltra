@@ -2,6 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
+dmg ++;
 maxspeed = 16;
 alarm[1] = 2;
 angleDir = 0;

@@ -6305,18 +6305,16 @@ function scrWeapons() {
 	}
 
 	//0 = melee 1 = bullets 2 = shells 3 = bolts 4 = explosives 5 = energy
-	typ_ammo[0] = 333 typ_ammo[1] = 32 typ_ammo[2] = 8 typ_ammo[3] = 8 typ_ammo[4] = 6 typ_ammo[5] = 10
-
-	if instance_exists(Player){ if Player.race = 1{
-	typ_ammo[1] = 40 typ_ammo[2] = 10 typ_ammo[3] = 9 typ_ammo[4] = 8 typ_ammo[5] = 13}
-	if Player.skill_got[5]{//fish's new thronebutt
-	typ_ammo[1] = 45 typ_ammo[2] = 12 typ_ammo[3] = 10 typ_ammo[4] = 9 typ_ammo[5] = 15
-	}
-	}
+	typ_ammo[0] = 333 typ_ammo[1] = 32 typ_ammo[2] = 8 typ_ammo[3] = 7 typ_ammo[4] = 6 typ_ammo[5] = 10
 
 	if instance_exists(Player){
-	typ_amax[0] = 1000 typ_amax[1] = 255+Player.skill_got[10]*300 typ_amax[2] = 55+Player.skill_got[10]*44 typ_amax[3] = 55+Player.skill_got[10]*44 typ_amax[4] = 55+Player.skill_got[10]*44 typ_amax[5] = 55+Player.skill_got[10]*44
-	
+		if Player.race = 1 {
+			typ_ammo[1] = 40 typ_ammo[2] = 10 typ_ammo[3] = 9 typ_ammo[4] = 8 typ_ammo[5] = 13
+			if Player.skill_got[5] {//fish's new thronebutt
+				typ_ammo[1] = 48 typ_ammo[2] = 12 typ_ammo[3] = 11 typ_ammo[4] = 10 typ_ammo[5] = 15
+			}
+		}
+		typ_amax[0] = 1000 typ_amax[1] = 255+Player.skill_got[10]*300 typ_amax[2] = 55+Player.skill_got[10]*44 typ_amax[3] = 55+Player.skill_got[10]*44 typ_amax[4] = 55+Player.skill_got[10]*44 typ_amax[5] = 55+Player.skill_got[10]*44
 		if variable_instance_exists(Player,"ultra_got")
 		{
 			if Player.ultra_got[15] == 1//Power overwhelming

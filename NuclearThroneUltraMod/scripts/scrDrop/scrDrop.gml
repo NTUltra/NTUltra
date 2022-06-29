@@ -3,7 +3,7 @@ function scrDrop(itemdrop, weapondrop) {
 	var dropRateBuff = 0;
 	if instance_exists(Player)
 	{
-		dropRateBuff = 1 + Player.skill_got[4]*(0.45+Player.betterrabbitpaw) 
+		dropRateBuff = 1 + Player.skill_got[4]*(0.45+Player.betterrabbitpaw)
 		+ (Player.ultra_got[39]*instance_number(Ally)*0.6)
 		+ (Player.skill_got[28]*(Player.rage*0.0004))
 		if Player.crown == 21 //Crown of risk
@@ -66,28 +66,29 @@ function scrDrop(itemdrop, weapondrop) {
 	}
 
 	if UberCont.opt_gamemode=2{
-	weapondrop+=100
-	itemdrop+=100}
+		weapondrop+=100
+		itemdrop+=100
+	}
 
 	if instance_exists(Player)
 	{
-	if Player.loops>0
-	itemdrop*=0.9;
+		if Player.loops>0
+			itemdrop*=0.9;
 
-	if Player.loops>1
-	itemdrop*=0.9;
+		if Player.loops>1
+			itemdrop*=0.9;
 
-	if Player.loops>2
-	itemdrop*=0.8;
+		if Player.loops>2
+			itemdrop*=0.8;
 
-	if Player.loops>3
-	itemdrop*=0.8;
+		if Player.loops>3
+			itemdrop*=0.8;
 	}
 
 	if instance_exists(TemporaryBuff)
 	{
-	itemdrop*=2;
-	weapondrop*=2;
+		itemdrop*=2;
+		weapondrop*=2;
 	}
 
 	need = 0
@@ -106,7 +107,7 @@ function scrDrop(itemdrop, weapondrop) {
 
 	if (Player.ultra_got[1]==1)//FISH ULTRA A Confiscate
 	{
-	    if (random(100) < 12*dropRateBuff)//rage=0.001
+	    if (random(100) < itemdrop * (need + dropRateBuff))//rage=0.001
 	    {
 		    if (random(Player.maxhealth) > Player.my_health || random(100) < 5) and random(3) < 2 and Player.crown != 2
 			{
@@ -120,28 +121,39 @@ function scrDrop(itemdrop, weapondrop) {
 			}
 			//return false;
 	    }
-	    else if random(100) < 12*dropRateBuff
+	    else if random(100) < ((itemdrop*0.5)+weapondrop) * dropRateBuff
 	    {
 			instance_create(x+random(4)-2,y+random(4)-2,WeaponChest);
 			//return true;
 	    }
 	}
 	//drop items (10 + 2) * (0.75 + 0.5)
-	if itemdrop > 0 && random(100) < itemdrop*(need+dropRateBuff)
+	if itemdrop > 0 && random(105) < itemdrop * (need + dropRateBuff)
 	{//0.3 for each ally Rebel has REBEL ULTRA C?
 
 		if random(Player.maxhealth) > Player.my_health and random(3) < 2 and Player.crown != 2 and random(1) <= canHealth
 		{
-		instance_create(x+random(4)-2,y+random(4)-2,HPPickup)
-		return true;
+			instance_create(x+random(4)-2,y+random(4)-2,HPPickup)
+			return true;
 		}
-		else if Player.crown != 5
+		else
 		{
-		instance_create(x+random(4)-2,y+random(4)-2,AmmoPickup)
-		return true;
+			if Player.crown == 5//Crown of guns roll again for healthdrop
+			{
+				if random(Player.maxhealth) > Player.my_health and random(3) < 2 and Player.crown != 2 and random(1) <= canHealth
+				{
+					instance_create(x+random(4)-2,y+random(4)-2,HPPickup)
+					return true;
+				}
+			}
+			else
+			{
+				instance_create(x+random(4)-2,y+random(4)-2,AmmoPickup)
+				return true;
+			}
 		}
 	}
-	else if random(100) < weapondrop*(dropRateBuff * 0.25)
+	else if random(105) < weapondrop*(dropRateBuff * 0.25)
 	{
 		//drop weps
 		with instance_create(x+random(4)-2,y+random(4)-2,WepPickup)
