@@ -129,7 +129,7 @@ function scrTips() {
 	if Player.area = 10
 	tip = choose("dry grass","savanna","they eat each other","they attack together","bring a good strating weapon");
 	if Player.area = 106
-	tip = choose("inverted darkness","back to the other dimension","pls explain","inverted world are a benefit","oh no, the question marks!","good luck getting through this"
+	tip = choose("inverted darkness","back to the other dimension","pls explain","inverted world are a benefit","visit inverted world on loop","good luck getting through this"
 	,"white ravens")
 	if Player.area = 107
 	tip = choose("black snow?","looks like shit","mud?","explosions everywhere!","should not have come here","the greed is real","do you want to die?","inverted demons","chocolate city")

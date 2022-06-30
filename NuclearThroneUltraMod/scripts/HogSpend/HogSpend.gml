@@ -15,8 +15,12 @@ function HogSpend(){
 	}
 	else
 	{
+		snd_play(sndUltraEmpty,0.05,true);
 		with instance_create(x,y,PopupText)
+		{
 			mytext = "NOT ENOUGH RADS";
+			theColour=c_red;
+		}
 	}
 	return false;
 }

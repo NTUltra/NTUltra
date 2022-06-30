@@ -6,4 +6,4 @@ drawx = x
 drawy = y
 cost=0.25;
 cost*=ShopWheel.discount;
-txt = "HP PICKUP#RADS: "+string(cost*100)+"%";
+txt = "HP PICKUP#RADS: "+string(round(cost*100))+"%";

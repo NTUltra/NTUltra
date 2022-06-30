@@ -63,5 +63,4 @@ sprite_index = spr_idle}
 
 }
 
-scrTarget()
-
+scrTarget();

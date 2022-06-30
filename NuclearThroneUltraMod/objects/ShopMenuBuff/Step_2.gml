@@ -16,7 +16,10 @@ if KeyCont.key_spec[Player.p] != 1 && KeyCont.key_spec[Player.p] != 2
 	if instance_exists(TemporaryBuff)
 	{
 		with instance_create(x,y,PopupText)
+		{
 			mytext = "CAN'T STACK BUFF";
+			theColour=c_red;
+		}
 	}
     else if (HogSpend())
 	{

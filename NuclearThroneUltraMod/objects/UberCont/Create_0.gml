@@ -237,3 +237,6 @@ if !instance_exists(Cursor)
 {
 	instance_create(x,y,Cursor);	
 }
+canSpawnInversionShards = false;
+collectedInversionShards = 0;
+collectedInversionShardReward = false;

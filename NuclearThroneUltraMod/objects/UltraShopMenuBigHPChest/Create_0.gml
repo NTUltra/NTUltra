@@ -7,4 +7,4 @@ drawy = y
 
 cost=0.65;
 cost*=ShopWheel.discount;
-txt = "BIG HP CHEST#RADS: "+string(cost*100)+"%";
+txt = "BIG HP CHEST#RADS: "+string(round(cost*100))+"%";

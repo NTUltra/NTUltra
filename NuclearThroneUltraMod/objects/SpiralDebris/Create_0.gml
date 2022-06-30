@@ -70,13 +70,12 @@ sprite_index = sprFreak1Hurt
 if Player.area = 102
 sprite_index = sprSlice
 
-if random(10) < 1
+if random(100) < 1
 {
 	sprite_index = sprSkillIcon
 	image_index = 22;
 }
 
-image_index = 1
 rotspeed = (10+random(20))*choose(1,-1)
 
 }

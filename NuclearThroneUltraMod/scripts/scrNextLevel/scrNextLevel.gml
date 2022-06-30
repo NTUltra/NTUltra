@@ -171,7 +171,7 @@ function scrNextLevel() {
 	        else//Inverted vulcano bring to banditland
 	        {
 	        area=113;
-	        subarea=1;
+	        subarea=2;
 			inverted=false
 	        exit;
 	        }

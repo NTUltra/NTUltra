@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskUltraShopMenuInverted",
     "path": "sprites/mskUltraShopMenuInverted/mskUltraShopMenuInverted.yy",

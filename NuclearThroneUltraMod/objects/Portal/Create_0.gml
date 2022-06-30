@@ -4,9 +4,7 @@ inverted=false;//is this an inverted portal?
 
 endgame = 100
 
-snd_play(sndPortalOpen)
-snd_play_2d(sndPortalAppear);
-snd_loop(sndPortalLoop)
+alarm[0] = 1;
 
 
 var chance = 1;

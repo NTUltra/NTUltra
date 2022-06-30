@@ -5211,7 +5211,7 @@ function scrWeapons() {
 	wep_area[472] = 35
 	wep_text[472] = "supermassive"
 	wep_swap[472] = sndSwapShotgun
-	wep_rad[472] = 12;
+	wep_rad[472] = 10;
 	
 	wep_name[473] = "ULTRA BAZOOKA"
 	wep_type[473] = 4

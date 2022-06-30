@@ -5,6 +5,6 @@ instance_create(x,y,ShopSelector);
 drawx = x
 drawy = y
 
-cost=0.70;
+cost=0.50;
 cost*=ShopWheel.discount;
-txt = "DAMAGE ON SCREEN#RADS: "+string(cost*100)+"%";
+txt = "DAMAGE ON SCREEN#RADS: "+string(round(cost*100))+"%";

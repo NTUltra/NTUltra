@@ -7,4 +7,4 @@ drawy = y
 
 cost=0.85;
 cost*=ShopWheel.discount;
-txt = "TEMPORARY BUFF#RADS: "+string(cost*100)+"%";
+txt = "TEMPORARY BUFF#RADS: "+string(round(cost*100))+"%";

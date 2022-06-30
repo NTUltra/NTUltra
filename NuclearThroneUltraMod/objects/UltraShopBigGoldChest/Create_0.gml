@@ -5,6 +5,6 @@ instance_create(x,y,ShopSelector);
 drawx = x
 drawy = y
 
-cost=1;
+cost=0.9;
 cost*=ShopWheel.discount;
-txt = "GIANT GOLDEN WEAPON CHEST#RADS: "+string(cost*100)+"%";
+txt = "GIANT GOLDEN WEAPON CHEST#RADS: "+string(round(cost*100))+"%";

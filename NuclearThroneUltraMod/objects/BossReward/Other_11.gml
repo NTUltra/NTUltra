@@ -87,4 +87,3 @@ alarm[0] = 0;
 sprite_index = sprBossHolderDead;
 image_speed = 0.4;
 image_index = 0;
-debug("COLLECTED REWARDS:",array_length(UberCont.collectedRewards)	);

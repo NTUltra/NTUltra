@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndAtomCrown",
-  "duration": 0.0,
+  "duration": 2.0,
   "parent": {
     "name": "Energy",
     "path": "folders/Sounds/Weapons/Energy.yy",

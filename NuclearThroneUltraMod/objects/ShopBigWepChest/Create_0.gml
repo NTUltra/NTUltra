@@ -6,7 +6,7 @@ drawx = x
 drawy = y
 
 
-cost=0.75;
+cost=0.7;
 cost*=ShopWheel.discount;
-txt = "BIG WEAPON CHEST#RADS: "+string(cost*100)+"%";
+txt = "BIG WEAPON CHEST#RADS: "+string(round(cost*100))+"%";
 

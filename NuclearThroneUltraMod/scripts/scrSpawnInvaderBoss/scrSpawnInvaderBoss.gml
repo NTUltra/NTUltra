@@ -10,7 +10,7 @@ function scrSpawnInvaderBoss(thisMany,whatBoss,thisFloorA,thisFloorB,thisFloorE,
 			{
 				var xx = x + 16;
 				var yy = y + 16;
-				if !instance_exists(InvaderBossSpawnPortal) && point_distance(xx,yy,Player.x,Player.y > mindis)
+				if !instance_exists(InvaderBossSpawnPortal) && point_distance(xx,yy,Player.x,Player.y) > mindis
 				{
 					with instance_create(xx,yy,InvaderBossSpawnPortal)
 					{
@@ -27,7 +27,7 @@ function scrSpawnInvaderBoss(thisMany,whatBoss,thisFloorA,thisFloorB,thisFloorE,
 					if instance_number(InvaderBossSpawnPortal) == thisMany
 						continue;
 					var n = instance_nearest(xx,yy,InvaderBossSpawnPortal);
-					if point_distance(xx,yy,n.x,n.y) > mindis && point_distance(xx,yy,Player.x,Player.y > mindis)
+					if point_distance(xx,yy,n.x,n.y) > mindis && point_distance(xx,yy,Player.x,Player.y) > mindis
 					{
 						with instance_create(xx,yy,InvaderBossSpawnPortal)
 						{

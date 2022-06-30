@@ -15,7 +15,8 @@ if KeyCont.key_spec[Player.p] != 1 && KeyCont.key_spec[Player.p] != 2
 {
     if (HogSpend())
 	{
-    instance_create(Player.x,Player.y,WeaponChest);
+		Player.nochest = 0;
+		instance_create(Player.x,Player.y,WeaponChest);
     }
 
 }

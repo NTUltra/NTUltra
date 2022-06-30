@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskUltraShopMenuGiantGoldenChest",
     "path": "sprites/mskUltraShopMenuGiantGoldenChest/mskUltraShopMenuGiantGoldenChest.yy",

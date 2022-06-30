@@ -664,7 +664,7 @@ function scrDrawHUD() {
 	{
 		rads = floor((rad/GetPlayerMaxRad())*100);
 	}
-	txt = "RADS: "+string(rads)+"%";
+	txt = "RADS: "+string(rads))+"%";
 	draw_set_halign(fa_left)
 	draw_set_color(c_black)
 	draw_text(__view_get( e__VW.XView, 0 )+1,__view_get( e__VW.YView, 0 )+51,string_hash_to_newline(string(txt)))
@@ -999,6 +999,36 @@ function scrDrawHUD() {
 			draw_text(x+1,y-31,string_hash_to_newline(string(name)))
 			draw_set_color(c_white)
 			draw_text(x,y-31,string_hash_to_newline(string(name)))
+			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+		}
+	}
+	with InversionShard
+	{
+		if place_meeting(x,y,Player) && !collected
+		{
+			draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-10)
+
+			draw_set_color(c_black)
+			draw_text(x,y-33,string_hash_to_newline(string(name)))
+			draw_text(x+1,y-33,string_hash_to_newline(string(name)))
+			draw_text(x+1,y-34,string_hash_to_newline(string(name)))
+			draw_set_color(c_white)
+			draw_text(x,y-34,string_hash_to_newline(string(name)))
+			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+		}
+	}
+	with InversionShardReward
+	{
+		if place_meeting(x,y,Player) && !UberCont.collectedInversionShardReward
+		{
+			draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-10)
+
+			draw_set_color(c_black)
+			draw_text(x,y-33,string_hash_to_newline(string(name)))
+			draw_text(x+1,y-33,string_hash_to_newline(string(name)))
+			draw_text(x+1,y-34,string_hash_to_newline(string(name)))
+			draw_set_color(c_white)
+			draw_text(x,y-34,string_hash_to_newline(string(name)))
 			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 		}
 	}

@@ -1,9 +1,11 @@
 /// @description Open the chest
 if !instance_exists(GenCont)
 {
-	var cost = 310//50% on level 10
+	var cost = 310;//50% on level 10
 	if Player.skill_got[23]//Open mind
-		cost = 248//40%
+		cost -= 62;//248//40%
+	if Player.race == 20
+		cost -= 62;
 	var mr = 620;
 	with Player
 		mr = GetPlayerMaxRad();

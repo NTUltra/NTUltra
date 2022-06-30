@@ -16,7 +16,7 @@ motion_add(random(360),random(3))
 }
 instance_create(x,y,ExploderExplo)
 if !instance_exists(GenCont)
-snd_play(sndEXPChest)
+snd_play(sndEXPChest,0,true)
 Sleep(1)
 
 

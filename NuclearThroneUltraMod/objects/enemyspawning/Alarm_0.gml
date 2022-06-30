@@ -26,6 +26,7 @@ else
 				amountOfWalls = instance_place_list(x,y+140,Wall,hitWalls,false);
 			}
 		}
+		ds_list_destroy(hitWalls);
 	}
 	instance_destroy();
 }

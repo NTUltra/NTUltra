@@ -234,8 +234,39 @@ function scrPopChests() {
 		scrCreateMissingChest(HealthChest,healthChestGol);	
 	}
 	//Ultra chest
-	if instance_exists(Player) && Player.loops > 1 && Player.level >= 10 && (Player.subarea == 1 || (Player.subarea == 2 && Player.skill_got[23]))
-		scrCreateMissingChest(UltraChest,1);
+	if instance_exists(Player)
+	{
+		if Player.loops > 1 && Player.level >= 10 && (Player.subarea == 1 || (Player.subarea == 2 && Player.skill_got[23]))
+			scrCreateMissingChest(UltraChest,1);
+		if UberCont.canSpawnInversionShards && scrIsInInvertedArea() && UberCont.canSpawnInversionShards && Player.area != 100 && Player.area != 104
+		{
+			var mindis = 64
+			do {
+				with Floor
+				{
+					var o = 16;
+					if object_index == FloorExplo
+						o = 8;
+					var xx = x + o;
+					var yy = y + o;
+					var n = instance_nearest(x,y,chestprop);
+					var n2 = instance_nearest(x,y,WeaponMod);
+					var n3 = instance_nearest(x,y,ProtoStatue);
+					var n4 = instance_nearest(x,y,RadChest);
+					if !instance_exists(InversionShard) && point_distance(xx,yy,Player.x,Player.y) > mindis
+					&& (!instance_exists(n) || n == noone || point_distance(xx,yy,n.x,n.y) > mindis)
+					&& (!instance_exists(n2) || n2 == noone || point_distance(xx,yy,n2.x,n2.y) > mindis)
+					&& (!instance_exists(n3) || n3 == noone || point_distance(xx,yy,n3.x,n3.y) > mindis)
+					&& (!instance_exists(n4) || n4 == noone || point_distance(xx,yy,n4.x,n4.y) > mindis)
+					{
+						instance_create(xx,yy,InversionShard);
+					}
+				}
+				mindis -= 32;
+			} until (instance_exists(InversionShard) || mindis < 64)
+		}
+	}
+	
 	with ChestOpen
 	instance_destroy()
 	if instance_exists(Player)

@@ -189,6 +189,12 @@ function scrLoadRun(){
 						i++;
 					}
 				}
+				if variable_struct_exists(encryptedRun, "canSpawnInversionShards")
+					UberCont.canSpawnInversionShards = encryptedRun.canSpawnInversionShards;
+				if variable_struct_exists(encryptedRun, "canSpawnInversionShards")
+					UberCont.collectedInversionShards = encryptedRun.collectedInversionShards;
+				if variable_struct_exists(encryptedRun, "canSpawnInversionShards")
+					UberCont.collectedInversionShardReward = encryptedRun.collectedInversionShardReward;
 			}
 			with Player
 			{

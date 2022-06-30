@@ -50,7 +50,7 @@ room_speed=35;
     oasisskip+=1;}
     else oasisskip=-1;
     
-	if (random(100)<invertedchance || wep == 375 || bwep == 375 || cwep == 375)//Inversion magnet
+	if (random(100)<invertedchance+min(10,loops) || wep == 375 || bwep == 375 || cwep == 375)//Inversion magnet
 	{
 	    if ( (area=1&&subarea<3)  )
 	    {

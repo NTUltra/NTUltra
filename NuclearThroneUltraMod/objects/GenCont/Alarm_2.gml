@@ -255,8 +255,10 @@ if Player.area = 100
 			xstep *= -1;
 			xx = x;
 			yy = y;
+			var pathI = 0;
 			repeat(12)
 			{
+				pathI ++;
 				if (!place_meeting(xx,yy,Floor))
 				{
 					with instance_create(xx,yy,Floor)
@@ -265,6 +267,45 @@ if Player.area = 100
 						styleb = 1;
 						sprite_index = sprFloor100C;
 					}
+				}
+				if pathI == 6 && UberCont.collectedInversionShards > 0 && UberCont.collectedInversionShardReward == false
+				{
+					var currentyy = yy;
+					var currentxx = xx;
+					repeat(9)
+					{
+						if (!place_meeting(xx,yy,Floor))
+						{
+							with instance_create(xx,yy,Floor)
+							{
+								styleb = 1;
+								sprite_index = sprFloor100C;
+							}
+						}
+						yy += ystep;
+					}
+					//Inversion Shard room
+					var s = 5;
+					xx -= xstep * 2;
+					var oy = yy;
+					for (var ix = 0; ix < s; ix++) {
+						yy = oy;
+						for (var iy = 0; iy < s; iy++) {
+							instance_create(xx,yy,TorchKiller);
+						    with instance_create(xx,yy,Floor)
+							{
+								styleb = 0;	
+							}
+							if ((ix == s-1 || ix == 0) && (iy == s-1 || iy == 0))
+								instance_create(xx+16,yy+16,Torch);
+							else if (ix == 2 && iy == 2)
+								instance_create(xx+16,yy+16,InversionShardReward);
+							yy += ystep;
+						}
+						xx += xstep;
+					}
+					yy = currentyy;
+					xx = currentxx;
 				}
 				xx += xstep;
 			}

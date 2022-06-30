@@ -63,6 +63,7 @@ function scrSaveRun() {
 			seed: UberCont.savedSeed,
 			horrorEtaken: Player.horrorEtaken,
 			hogpoints: Player.hogpoints,
+			usedHogInvestment: Player.usedHogInvestment,
 			boostLevel: Player.boostLevel,
 			time_microseconds: UberCont.time_microseconds,
 			time_seconds: UberCont.time_seconds,
@@ -100,6 +101,9 @@ function scrSaveRun() {
 			reachedUltra: Player.reachedUltra,
 			tookDestiny: Player.tookDestiny,
 			pSpeedBoost: Player.pSpeedBoost,
+			canSpawnInversionShards: UberCont.canSpawnInversionShards,
+			collectedInversionShards: UberCont.collectedInversionShards,
+			collectedInversionShardReward: UberCont.collectedInversionShardReward,
 		};
 		with UberCont
 		{

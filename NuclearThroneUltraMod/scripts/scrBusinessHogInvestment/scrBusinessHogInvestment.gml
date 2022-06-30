@@ -51,7 +51,8 @@ function scrBusinessHogInvestment() {
 	}   
 
 
-	Player.hogpoints-=1
+	Player.hogpoints -= 1;
+	Player.skillpoints -= 1;
 /*
 	if Player.hogpoints > 1 || Player.skillpoints > 0
 	{

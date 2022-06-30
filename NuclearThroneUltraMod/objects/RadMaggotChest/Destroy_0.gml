@@ -9,7 +9,7 @@ with instance_create(x,y,Smoke)
 motion_add(random(360),random(3))
 }
 instance_create(x,y,ExploderExplo)
-snd_play(sndEXPChest)
+snd_play(sndEXPChest,0,true)
 
 event_inherited()
 
