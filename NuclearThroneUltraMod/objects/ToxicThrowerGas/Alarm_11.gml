@@ -7,7 +7,8 @@ if um == ultramods.toxicFire
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = other.speed;
+		speed = other.speed*2;
+		friction *= 0.75;
 		team = 2;
 		alarm[11] = 0;
 	}
