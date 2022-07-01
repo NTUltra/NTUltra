@@ -7,4 +7,4 @@ team = 1
 ignoreHitme=false;
 dealtDamage = false;
 alarm[2] = 1
-friction = 0.02;
+friction = 0.022;
