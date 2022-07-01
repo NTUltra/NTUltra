@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskShopAmmoChest",
     "path": "sprites/mskShopAmmoChest/mskShopAmmoChest.yy",

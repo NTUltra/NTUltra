@@ -25,7 +25,7 @@ if instance_exists(Player)
     instance_create(x,y,UltraShopMenuArmour);
     instance_create(x,y,UltraShopMenuBigHPChest);
     instance_create(x,y,UltraShopMenuInstantReload);
-    instance_create(x,y,UltraShopMenuMediumAmmoChest);
+    instance_create(x,y,UltraShopMenuInfiniteAmmo);
     instance_create(x,y,UltraShopMenuDamage);
     instance_create(x,y,UltraShopMenuInvulnerability);
     instance_create(x,y,UltraShopMenuInverted);

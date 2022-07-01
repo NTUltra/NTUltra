@@ -20,9 +20,12 @@ if Player.betterboltmarrow > 0
 friction+=0.1;
 }
 if Player.skill_got[19]//eagle eyes
-hits+=1;
+{
+mxSpd+=1;
+friction+=0.05;
+}
 
 alarm[0]=6
 }
-
+alarm[1] = 150;
 alarm[11] = 1;
