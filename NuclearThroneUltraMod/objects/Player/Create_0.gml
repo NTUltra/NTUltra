@@ -507,11 +507,9 @@ else {
 //sheep
 sheepPower = 0;
 sheepPowerToHaveEffect = 3.7;
+justAsheep = false;
 if race = 13 {
     justAsheep = true;
-}
-else {
-    justAsheep = false;
 }
 
 RadMony = false;

@@ -3959,7 +3959,7 @@ function scrWeapons() {
 	wep_name[359] = "LASER BOMB LAUNCHER"
 	wep_type[359] = 4
 	wep_auto[359] = 0
-	wep_load[359] = 25
+	wep_load[359] = 26
 	wep_cost[359] = 3
 	wep_sprt[359] = sprLaserBombLauncher
 	wep_area[359] = 11
@@ -3982,7 +3982,7 @@ function scrWeapons() {
 	wep_type[361] = 5
 	wep_auto[361] = 0
 	wep_load[361] = 10
-	wep_cost[361] = 3
+	wep_cost[361] = 2.5
 	wep_sprt[361] = sprRewirer
 	wep_area[361] = 12
 	wep_text[361] = "connect the dots"
@@ -6173,7 +6173,7 @@ function scrWeapons() {
 	wep_name[560] = "SPEAR LAUNCHER"
 	wep_type[560] = 3
 	wep_auto[560] = 0
-	wep_load[560] = 33
+	wep_load[560] = 34
 	wep_cost[560] = 1.5
 	wep_sprt[560] = sprSpearLauncher
 	wep_area[560] = 2
@@ -6184,7 +6184,7 @@ function scrWeapons() {
 	wep_name[561] = "SPLINTER SPEAR LAUNCHER"
 	wep_type[561] = 3
 	wep_auto[561] = 0
-	wep_load[561] = 25
+	wep_load[561] = 26
 	wep_cost[561] = 2
 	wep_sprt[561] = sprSplinterSpearLauncher
 	wep_area[561] = 7
@@ -6198,7 +6198,7 @@ function scrWeapons() {
 	wep_load[562] = 9
 	wep_cost[562] = 1.5
 	wep_sprt[562] = sprAutoSpearLauncher
-	wep_area[562] = 8
+	wep_area[562] = 10
 	wep_text[562] = "no longer primitive"
 	wep_swap[562] = sndSwapBow
 	wep_rad[562] = 0;
@@ -6301,6 +6301,28 @@ function scrWeapons() {
 	wep_text[571] = "sooo many pellets"
 	wep_swap[571] = sndSwapShotgun
 	wep_rad[571] = 0;
+	
+	wep_name[572] = "TRIPLE HEAVY ASSAULT RIFLE"
+	wep_type[572] = 1
+	wep_auto[572] = 0
+	wep_load[572] = 11
+	wep_cost[572] = 15//18
+	wep_sprt[572] = sprTripleHeavyAssaultRifle
+	wep_area[572] = 23
+	wep_text[572] = "some discount on these bullets"
+	wep_swap[572] = sndSwapMachinegun
+	wep_rad[572] = 0;
+	
+	wep_name[573] = choose("FIRE BOMB LAUNCHER","HEAVY FLARE GUN","HEAVY FIRE GRENADE LAUNCHER");
+	wep_type[573] = 4
+	wep_auto[573] = 0
+	wep_load[573] = 26
+	wep_cost[573] = 3
+	wep_sprt[573] = sprFireBombLauncher
+	wep_area[573] = 11
+	wep_text[573] = "goes by many names"
+	wep_swap[573] = sndSwapExplosive
+	wep_rad[573] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 

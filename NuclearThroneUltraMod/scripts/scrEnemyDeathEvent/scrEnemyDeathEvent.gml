@@ -74,6 +74,9 @@ function scrEnemyDeathEvent(){
 		with Player
 		{
 			kills ++;
+			var t = 0;
+			
+
 			//Sheep Ultra B Just A Sheep
 			if ultra_got[50]==1
 			{
@@ -82,14 +85,32 @@ function scrEnemyDeathEvent(){
 				    justAsheep=false;
 				    instance_create(x-5,y-16,Notice);
 				    instance_create(x+5,y-16,Notice);
+					if skill_got[29]//Insomnia
+						t = 200;
 				}
 			}
 			else if (justAsheep && instance_number(enemy) < BackCont.enemiesInStartLevel*0.9) {
 				justAsheep = false;
 				instance_create(x-5,y-16,Notice);
 				instance_create(x+5,y-16,Notice);
+				if skill_got[29]//Insomnia
+					t = 200;
 			}
-			
+			if t > 0
+			{
+				with enemy
+				{
+					if alarm[1]>0
+					{
+						alarm[1]+=t;
+						with instance_create(x,y,Snooze)
+						{
+							owner = other.id;
+							yoffset = other.sprite_height*0.5 - 4;
+						}
+					}
+				}
+			}
 			//RADS
 			if race = 4 && other.raddrop!=0
 				other.raddrop += 1

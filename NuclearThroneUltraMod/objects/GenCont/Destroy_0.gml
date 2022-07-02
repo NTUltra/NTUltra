@@ -163,19 +163,33 @@ room_speed=35;
 	    {
 			t = 230;
 	    }
-	    with enemy
-	    {
-		    if alarm[1]>0
-			{
-		    alarm[1]+=t;
-				with instance_create(x,y,Snooze)
+		if justAsheep
+		{
+			/*
+			insomniaEnemyList = [];
+			with enemy {
+				if alarm[1]>0
 				{
-					owner = other.id;
-					yoffset = other.sprite_height*0.5 - 4;
+					other.insomniaEnemyList[array_length(other.insomniaEnemyList)] = id;
 				}
-			}
-	    }
-    
+			}*/
+		}
+		else
+		{
+		    with enemy
+		    {
+			    if alarm[1]>0
+				{
+					alarm[1]+=t;
+					with instance_create(x,y,Snooze)
+					{
+						owner = other.id;
+						yoffset = other.sprite_height*0.5 - 4;
+					}
+				}
+		    }
+		}
+		//Store this list of enemies to put to sleep when sheep passive is done
     }
     else if loops < 5
     {

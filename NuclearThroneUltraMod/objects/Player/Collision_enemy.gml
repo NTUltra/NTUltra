@@ -43,6 +43,7 @@ if other.team != team
 				    if Player.justAsheep
 				    {Player.justAsheep=false;
 				    instance_create(x,y-16,Notice);
+					//NOW IF INSOMNIA GIVE ALL THE BADBOYS SOME TIME AGAIN put em too sleep
 				    }}}
 			}
 			if (other.my_health <= 0 && skill_got[8] || actuallyDead)//gamma guts kill?
@@ -53,7 +54,7 @@ if other.team != team
 		}
 	}
 
-	if other.meleedamage > 0 && other.existTime > 25 && meleeimmunity<1 && alarm[3] < 1//is it a melee enemy?
+	if other.meleedamage > 0 && other.existTime > 25 && !justAsheep && meleeimmunity<1 && alarm[3] < 1//is it a melee enemy?
 	{
 	meleeimmunity=14;
 	    if (other.my_health<=0 || actuallyDead)

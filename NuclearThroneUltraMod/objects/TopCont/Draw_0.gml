@@ -319,9 +319,9 @@ if Player.ultra_got[11]=1{
     with enemy//brainwashed enemy
     {
     //draw_text(x,y,string(team));
-        if  team>=4
+        if  team>=5
         {
-        draw_sprite_ext(sprMindPower,Player.wave,x,y,right,1,0,c_white,1)
+			draw_sprite_ext(sprMindPower,Player.wave,x,y,right,1,0,c_white,1)
         //draw_text(x,y,"I am a fool")
         //draw_text(target.x,target.y,"target")
         }
@@ -340,7 +340,13 @@ if Player.ultra_got[11]=1{
                 
     }*/
 }
-
+if Player.justAsheep
+{
+	with enemy {
+		if point_distance(x,y,Player.x,Player.y) < 96
+			draw_sprite_ext(sprJustASheep,Player.wave,x,y,1,1,0,c_white,1)
+	}
+}
 }
 /* This is Hunter's ultra a damage boost
 with enemy{

@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprHeavyNade","path":"sprites/sprHeavyNade/sprHeavyNade.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprHeavyNade",
     "tags": [],
     "resourceType": "GMSequence",
   },

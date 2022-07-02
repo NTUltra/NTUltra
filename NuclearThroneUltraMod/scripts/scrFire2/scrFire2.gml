@@ -10205,5 +10205,56 @@ function scrFire2() {
 
 	break;
 	
+	//TRIPLE HEAVY ASSAULT RIFLE
+	case 572:
+
+	with instance_create(x,y,HeavyBurst)
+	{
+		aimOffset = -15*Player.accuracy;
+		creator = other.id
+		ammo = 3
+		time = 2
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+	with instance_create(x,y,HeavyBurst)
+	{
+		creator = other.id
+		ammo = 3
+		time = 2
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+	with instance_create(x,y,HeavyBurst)
+	{
+		aimOffset = 15*Player.accuracy;
+		creator = other.id
+		ammo = 3
+		time = 2
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+
+	break;
+	
+	//FIRE BOMB LAUNCHER
+	case 573:
+
+	snd_play_fire(sndHeavyNader)
+
+	with instance_create(x,y,FireBomb)
+	{
+	sticky = 0
+	motion_add(aimDirection+(random(8)-4)*other.accuracy,10)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 5
+	wkick = 7
+
+	break;
+	
 	}//end of switch part 2!
 }
