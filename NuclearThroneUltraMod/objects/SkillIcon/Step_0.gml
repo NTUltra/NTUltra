@@ -39,7 +39,7 @@ else if skill = 3
 	}
 	else
 	{
-		Player.betterpluto = 80;	
+		Player.betterpluto = 82;	
 	}
 }
 else if skill = 4 && Player.race=25//rabitpaw

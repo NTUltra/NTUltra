@@ -74,7 +74,7 @@ isPaused = 0
 audio_resume_all();
 }
 //RETURN TO MENU
-if keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4) && !instance_exists(PlayerSpawn)
+if (keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4)) && !instance_exists(PlayerSpawn)
 {
 	instance_activate_all()
 	isPaused = 0

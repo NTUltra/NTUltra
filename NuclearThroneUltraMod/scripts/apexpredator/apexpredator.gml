@@ -14,14 +14,14 @@ function ApexPredator(){
 					{
 						owner = other.id;
 					}
-					alarm[3] += 20;
+					alarm[3] += 23;
 				}
 				else if alarm[3] < 50
 				{
-					alarm[3] += 10;
+					alarm[3] += 15;
 				}
 				if skill_got[5]
-					alarm[3] += 10;
+					alarm[3] += 14;
 			}
 		}
 	}

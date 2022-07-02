@@ -792,22 +792,19 @@ function scrPowers() {
 		var laserscale = 0.1;
 	if ultra_got[60] && point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<300//Ultra D
 	{
-	var tel;
-	tel=false;
-
-	if instance_exists(enemy)
+	var d = 99999;
+	var mx = UberCont.mouse__x;
+	var my = UberCont.mouse__y;
+	with Floor
 	{
-	if (point_distance(UberCont.mouse__x,UberCont.mouse__y,instance_nearest(x,y,enemy).x,instance_nearest(x,y,enemy).y)<300)
-	{tel=true;}
+		if object_index != FloorExplo
+		{
+			var nd = point_distance(x,y,mx,my)
+			if nd < d
+				d = nd
+		}
 	}
-	if instance_exists(Corpse)
-	{
-	if (point_distance(UberCont.mouse__x,UberCont.mouse__y,instance_nearest(x,y,Corpse).x,instance_nearest(x,y,Corpse).y)<300)
-	{tel=true};
-	}
-
-
-	if (tel==true)
+	if (d < 300)
 	{
 		
 	    if place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor)
