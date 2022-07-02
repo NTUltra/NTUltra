@@ -45,7 +45,7 @@ function scrUltras() {
 	    ultra_tips[7] = "the iron fist"
     
 	    ultra_name[8] = "VENGEFUL"
-	    ultra_text[8] = "REFLECTED PROJECTILES#HOME IN ON ENEMIES#INVULNERABLE TO ALL DAMAGE#WHILE SHIELDING"
+	    ultra_text[8] = "DEFLECTED PROJECTILES#HOME IN ON ENEMIES#INVULNERABLE TO ALL DAMAGE#WHILE SHIELDING"
 	    ultra_tips[8] = "homing effects wear of#when you're not shielding"
 
 	//EYES 
@@ -254,7 +254,7 @@ function scrUltras() {
 	ultra_tips[50] = "they're stoopid"
 
 	ultra_name[51] = "IMPENETRABLE"
-	ultra_text[51] = "BETTER CHARGE!#CHARGING REFLECTS ENEMY PROJECTILES"
+	ultra_text[51] = "BETTER CHARGE!#CHARGING DEFLECTS ENEMY PROJECTILES"
 	ultra_tips[51] = "what a beast"
 
 	ultra_name[52] = "FLUFFY"//this is actually insane with impact wrists
@@ -351,7 +351,7 @@ function scrUltras() {
 	    ultra_tips[69] = "guardian"
     
 	    ultra_name[70] = "DESCENT"
-	    ultra_text[70] = "YOUR ACTIVE CHANGES INTO#GET AMMO FOR YOUR PRIMARY#AT THE COST OF HEALTH#THRONEBUTT DOUBLES THE AMMO"
+	    ultra_text[70] = "INSTEAD OF HEALING YOUR ACTIVE#GIVES AMMO FOR YOUR PRIMARY#AT THE COST OF HEALTH#THRONEBUTT DOUBLES THE AMMO"
 	    ultra_tips[70] = "emo style"
     
 	    ultra_name[71] = "TRANQUILITY"
@@ -359,7 +359,7 @@ function scrUltras() {
 	    ultra_tips[71] = "experience tranquility"
     
 	    ultra_name[72] = "ASCENT"
-	    ultra_text[72] = "YOU CAN FLY OVER WALLS FOREVER"
+	    ultra_text[72] = "YOU CAN FLY OVER WALLS FOREVER#ALSO DEFLECT ON YOUR RETICLE"
 	    ultra_tips[72] = "all you need is air"
     
 	//SKELETON 

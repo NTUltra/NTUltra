@@ -53,7 +53,7 @@ function scrDrawCharSelect() {
 
 	draw_set_color(c_black)
 	draw_set_alpha(0.8)
-	draw_rectangle(drawx-string_width(string_hash_to_newline(txt2))/2-2,drawy-17-string_height(string_hash_to_newline(txt2)),drawx+extra+string_width(string_hash_to_newline(txt2))/2+2,drawy-12,0)
+	draw_rectangle(drawx-string_width(string_hash_to_newline(txt2))/2-2-32,drawy-17-string_height(string_hash_to_newline(txt2)),drawx+extra+string_width(string_hash_to_newline(txt2))/2+2,drawy-12,0)
 	draw_set_alpha(1)
 
 	if mouseover = -1

@@ -248,6 +248,10 @@ function scrDrawBloom() {
 		{
 			draw_sprite_ext(sprGammaGuts,other.wave,x,y,2.3,2.6,image_angle,c_white,ba+0.02)
 		}
+		with AngelActive
+		{
+			draw_sprite_ext(sprGammaGuts,other.wave,x,y,1.8,1.8,image_angle,c_white,ba+0.02)
+		}
 	}
 		if crown == 21 && my_health >= floor(maxhealth*0.5)//Crown of risk
 		with Crown
@@ -255,7 +259,11 @@ function scrDrawBloom() {
 			draw_sprite_ext(sprRiskActive,other.wave,x,y,1.1,1.1,image_angle,c_white,ba+0.1)
 		}
 	}
-	
+	with DeflectMelee
+	{
+		draw_sprite_ext(sprite_index,-1,x,y,image_xscale,image_yscale,
+		image_angle,c_white,image_alpha+ba)
+	}
 	with GammaGutsBlast
 	{
 		draw_sprite_ext(sprite_index,-1,x,y,1.1,1.1,image_angle,c_white,ba)

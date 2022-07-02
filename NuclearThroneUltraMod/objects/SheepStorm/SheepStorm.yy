@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskSheepDash",
     "path": "sprites/mskSheepDash/mskSheepDash.yy",

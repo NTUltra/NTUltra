@@ -19,12 +19,27 @@ if team != other.team
 	else if (Player.ultra_got[51]=1){
 	    //deflect
 		BackCont.shake += 1;
-	    if other.typ=1{
-	    other.direction = point_direction(x,y,other.x,other.y)
-	    other.image_angle = other.direction
-		other.speed += 1;
-	    with instance_create(other.x,other.y,Deflect)
-	    image_angle = other.direction}
+	    if other.typ=1
+		{
+			with other
+			{
+				snd_play(sndRicochet,0.1,true);
+				event_user(15);
+				if instance_exists(enemy)
+				{
+					var n = instance_nearest(x,y,enemy)
+					direction = point_direction(x,y,n.x,n.y);
+				}
+				else
+					direction = point_direction(other.x,other.y,x,y);
+				speed *= 2;
+			    image_angle = other.direction
+				speed += 1;
+			
+			    with instance_create(x,y,Deflect)
+					image_angle = other.direction
+			}
+		}
 	    else if other.typ=2
 	    {
 	    with other

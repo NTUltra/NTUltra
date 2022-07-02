@@ -262,7 +262,8 @@ function scrTips() {
 
 	if Player.race = 18//ANGEL
 	tip = choose("ascend","the wall is not the enemy","fly over cars","you fly normally over all terrains","rogue guardian","you don't get pushed off of props",
-	"I believe I can fly","don't serve gorillaman","angel can fly over lava","grow your wings")
+	"I believe I can fly","don't serve gorillaman","angel can fly over lava","grow your wings","you can deflect melee damage","you can deflect contact damage","active costs less when#at or above full health",
+	"deflect can deal#gamma guts damage","you are immune while deflecting")
 
 	if Player.race = 19//SKELETON
 	tip = choose("hard","dusty","dry","nothing...","bones","blood gamble chance#depends on ammo cost","survive","do not give up")

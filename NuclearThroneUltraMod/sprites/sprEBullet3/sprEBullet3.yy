@@ -64,7 +64,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprEBullet3","path":"sprites/sprEBullet3/sprEBullet3.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprEBullet3",
     "tags": [],
     "resourceType": "GMSequence",
   },

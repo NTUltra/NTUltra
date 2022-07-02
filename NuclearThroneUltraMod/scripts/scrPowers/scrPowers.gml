@@ -662,105 +662,120 @@ function scrPowers() {
 	{
 	    if wep_type[wep] != 0
 	    {
-	    if ultra_got[70]//ULTRA B DECENT
-	    {
-	    if ( my_health-2>0 && ammo[wep_type[wep]] < typ_amax[wep_type[wep]]) && alarm[3]<1
-	    {
-	    var extra=0;
-	    if Player.crown = 4
-	    extra += 1
+		    if ultra_got[70]//ULTRA B DECENT
+		    {
+			    if ( my_health-2>0 && ammo[wep_type[wep]] < typ_amax[wep_type[wep]]) && alarm[3]<1
+			    {
+				    var extra=0;
+				    if Player.crown = 4
+				    extra += 1
     
-	    ammo[wep_type[wep]] += round((typ_ammo[wep_type[wep]]* (1.5+skill_got[5]) +extra))
+				    ammo[wep_type[wep]] += round((typ_ammo[wep_type[wep]]* (1.5+skill_got[5]) +extra))
 
-	    if ammo[wep_type[wep]] > typ_amax[wep_type[wep]]
-	    ammo[wep_type[wep]] = typ_amax[wep_type[wep]]
+				    if ammo[wep_type[wep]] > typ_amax[wep_type[wep]]
+				    ammo[wep_type[wep]] = typ_amax[wep_type[wep]]
     
     
-	    dir = instance_create(x,y,PopupText)
-	    dir.mytext = "+"+string( round((typ_ammo[wep_type[wep]]* (1.5+skill_got[5]) +extra )) )+" "+string(typ_name[wep_type[wep]]) 
-	    if ammo[wep_type[wep]] = typ_amax[wep_type[wep]]
-	    dir.mytext = "MAX "+string(typ_name[wep_type[wep]])
+				    dir = instance_create(x,y,PopupText)
+				    dir.mytext = "+"+string( round((typ_ammo[wep_type[wep]]* (1.5+skill_got[5]) +extra )) )+" "+string(typ_name[wep_type[wep]]) 
+				    if ammo[wep_type[wep]] = typ_amax[wep_type[wep]]
+				    dir.mytext = "MAX "+string(typ_name[wep_type[wep]])
     
     
-	    my_health -= 2-skill_got[5];
+				    my_health -= 2-skill_got[5];
     
-	    //for rage and euphoria
-	    exception=true;
-	    if alarm[7]<1
-	    alarm[7]=12;//reset the exception in 12 steps
+				    //for rage and euphoria
+				    exception=true;
+				    if alarm[7]<1
+				    alarm[7]=12;//reset the exception in 12 steps
     
-	    snd_play_2d(snd_hurt, hurt_pitch_variation)
-	    Sleep(40)
-	    }
-	    }
-	    else if ( ammo[wep_type[wep]]-round(typ_ammo[wep_type[wep]] * (2-skill_got[5]) )>=0 && my_health<maxhealth )
-	    {
-	    ammo[wep_type[wep]]-=round(typ_ammo[wep_type[wep]] * (2-skill_got[5]) );//2.5?
-		if UberCont.opt_ammoicon
-		{
-			dir = instance_create(x,y,PopupText)
-			dir.sprt = sprAmmoIconsPickup
-			dir.ii = wep_type[wep]-1;
-			dir.mytext = "-"+string(round(typ_ammo[wep_type[wep]] * (2-skill_got[5]) ));
+				    snd_play_2d(snd_hurt, hurt_pitch_variation)
+				    Sleep(40)
+					instance_create(x,y,AngelActive);
+					if ultra_got[72] {//Angel ascent
+						instance_create(x,y,AngelActiveMouse);	
+					}
+			    }
+		    }
+			else
+			{
+				var multiply = 1.75;
+				if skill_got[5]
+					multiply -= 0.5;
+				if my_health >= maxhealth
+					multiply -= 1.25;
+				multiply = max(0.2,multiply);
+				var cost = round(typ_ammo[wep_type[wep]]*multiply);
+			    if ammo[wep_type[wep]]-cost >= 0
+			    {
+					instance_create(x,y,AngelActive);
+					if ultra_got[72] {//Angel ascent
+						instance_create(x,y,AngelActiveMouse);	
+					}
+				    ammo[wep_type[wep]]-= cost//2.5?
+					if UberCont.opt_ammoicon
+					{
+						dir = instance_create(x,y,PopupText)
+						dir.sprt = sprAmmoIconsPickup
+						dir.ii = wep_type[wep]-1;
+						dir.theColour = c_red;
+						dir.mytext = "-"+string(cost);
+					}
+					else
+					{
+						dir = instance_create(x,y,PopupText)
+						dir.theColour = c_red;
+						dir.mytext = "-"+string(cost)+" "+string(other.typ_name[wep_type[other.wep]])
+					}
+			        var num = 2
+			        if Player.skill_got[9] = 1//secund tummy
+			        num = 4
+        
+			        instance_create(x,y,HealFX)
+        
+			        //RUSH CROWN
+			        if Player.crown = 4
+			        num += 1
+        
+			        snd_play_2d(sndHealthPickup)
+			        my_health += num
+			        if my_health > maxhealth
+			        my_health = maxhealth
+        
+			        if UberCont.opt_ammoicon
+					{
+						dir = instance_create(x,y,PopupText)
+						dir.sprt = sprHPIconPickup;
+						dir.mytext = "+"+string(num)
+						if my_health = maxhealth
+							dir.mytext = "MAX";
+					}
+					else
+					{
+						dir = instance_create(x,y,PopupText)
+						dir.mytext = "+"+string(num)+" HP"
+						if my_health = maxhealth
+							dir.mytext = "MAX HP";
+					}
+			         //instance_create(x,y,HPPickup);
+			         Sleep(40)
+			    }
+			    else
+			    {
+				    snd_play_2d(sndEmpty);
+				    dir = instance_create(x,y,PopupText);
+					dir.theColour = c_red;
+				    dir.mytext = "NOT ENOUGH AMMO";
+			    }
+			}
 		}
 		else
 		{
-			dir = instance_create(x,y,PopupText)
-			dir.mytext = "-"+string(round(typ_ammo[wep_type[wep]] * (2-skill_got[5]) ))+" "+string(other.typ_name[wep_type[other.wep]])
+			snd_play_2d(sndEmpty);
+		    dir = instance_create(x,y,PopupText);
+			dir.theColour = c_red;
+		    dir.mytext = "THIS DOESN'T USE AMMO";
 		}
-	    //if other.ammo[type] = other.typ_amax[type]
-	    //dir.mytext = "MAX "+string(other.typ_name[type])
-    
-    
-    
-	        var num = 2
-	        if Player.skill_got[9] = 1//secund tummy
-	        num = 4
-        
-	        instance_create(x,y,HealFX)
-        
-	        //RUSH CROWN
-	        if Player.crown = 4
-	        num += 1
-        
-	        snd_play_2d(sndHealthPickup)
-	        my_health += num
-	        if my_health > maxhealth
-	        my_health = maxhealth
-        
-	        if UberCont.opt_ammoicon
-			{
-				dir = instance_create(x,y,PopupText)
-				dir.sprt = sprHPIconPickup;
-				dir.mytext = "+"+string(num)
-				if my_health = maxhealth
-					dir.mytext = "MAX";
-			}
-			else
-			{
-				dir = instance_create(x,y,PopupText)
-				dir.mytext = "+"+string(num)+" HP"
-				if my_health = maxhealth
-					dir.mytext = "MAX HP";
-			}
-	         //instance_create(x,y,HPPickup);
-	         Sleep(40)
-	    }
-	    else if my_health<maxhealth
-	    {
-	    snd_play_2d(sndEmpty);
-	    dir = instance_create(x,y,PopupText);
-		dir.theColour = c_red;
-	    dir.mytext = "NOT ENOUGH AMMO";
-	    }
-	}
-	else
-	{
-	snd_play_2d(sndEmpty);
-	    dir = instance_create(x,y,PopupText);
-		dir.theColour = c_red;
-	    dir.mytext = "THIS DOESN'T USE AMMO";
-	}
 
 	}
 

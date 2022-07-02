@@ -1,0 +1,39 @@
+if team != other.team && instance_exists(Player)
+{
+	if other.typ = 1
+	{
+		Sleep(5);
+		other.team = team
+		with other
+		{
+			if instance_exists(enemy)
+			{
+				var n = instance_nearest(x,y,enemy)
+				direction = point_direction(x,y,n.x,n.y);
+			}
+			else
+				direction = point_direction(x,y,other.x,other.y);
+			speed += 1;
+			speed *= 2;
+			image_angle = direction;
+			with instance_create(x,y,Deflect)
+			{
+				image_angle = other.direction
+				sprite_index=sprGuardianDeflect;
+			}
+			snd_play(sndRicochet,0.1,true);
+			event_user(15);
+		}
+		
+		if Player.area=100 && instance_exists(CrownGuardian)
+		{
+			scrUnlockCSkin(18,"FOR REFLECTING A PROJECTILE#THAT IS REFLECTED BY A CROWN GUARDIAN#AS ANGEL",0);
+		}
+	}
+	else if other.typ = 2
+	{
+		with other
+			instance_destroy()
+	}
+}
+

@@ -8,10 +8,24 @@ if team != other.team
 if other.typ =1
 {
 other.team = team
-other.direction = image_angle
-other.image_angle = other.direction
-with instance_create(other.x,other.y,Deflect)
-image_angle = other.direction
+with other
+{
+	event_user(15);
+	if instance_exists(enemy)
+	{
+		var n = instance_nearest(x,y,enemy)
+		direction = point_direction(x,y,n.x,n.y);
+	}
+	else
+		direction = other.image_angle
+		
+	image_angle = direction
+	speed *= 2;
+	snd_play(sndRicochet,0.1,true);
+	with instance_create(x,y,Deflect)
+		image_angle = other.direction
+}
+
 }
 if other.typ = 2
 {
