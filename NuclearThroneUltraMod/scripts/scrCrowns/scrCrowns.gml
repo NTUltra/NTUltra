@@ -117,7 +117,7 @@ function scrCrowns() {
 	crown_tips[20] = "stay safe"//Always use protection..  that joke is too predictable
 	
 	crown_name[21] = "[CROWN OF RISK]"
-	crown_text[21] = "70% HIGHER DROPRATE#WHEN ABOVE 50% MAX HP#50% LOWER DROPRATE#WHEN BELOW 50% MAX HP"
+	crown_text[21] = "70% HIGHER DROPRATE#WHEN ABOVE 75% MAX HP#50% LOWER DROPRATE#WHEN BELOW 75% MAX HP"
 	crown_used[21] = 0
 	crown_tips[21] = "a risk worth taking"
 	

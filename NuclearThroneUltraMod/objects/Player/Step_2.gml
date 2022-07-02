@@ -645,10 +645,6 @@ if(my_health<=0 && maxhealth>0)
 
 }
 
-if justAsheep=true{
-with enemy{
-target=-1;
-}}
 
 ///rage
 if skill_got[28] == 1

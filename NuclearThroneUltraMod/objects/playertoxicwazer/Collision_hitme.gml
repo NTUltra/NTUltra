@@ -13,8 +13,7 @@ if other.team != team and other.my_health > 0
 		{
 			other.alarm[4] = 3;
 			snd_play(sndToxicBoltGas,0,true);
-			with instance_create(x,y,ToxicThrowerGas)
-				scrCanHumphry();
+			instance_create(x,y,ToxicThrowerGas)
 		}
 	}
 }

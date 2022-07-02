@@ -1,6 +1,15 @@
 var area;
+phaseable = false;
+alarm[2] = 210;
+blink = 15;
 if instance_exists(Player)
 { 
+	if Player.ultra_got[93]
+	{
+		phaseable = true;
+		solid = false;
+		alarm[1] = 1;
+	}
 area = Player.area
 //if Player.skill_got[5]//thronebutt deflect
 myWall = instance_create(x,y,ElementorWallDeflect);
@@ -174,6 +183,18 @@ outspr=sprWall116Out;
 sprite_index=sprWall116Bot;
 break;
 
+case 117:
+topspr=sprWall117Top;
+outspr=sprWall117Out;
+sprite_index=sprWall117Bot;
+break;
+
+case 118:
+topspr=sprWall118Top;
+outspr=sprWall118Out;
+sprite_index=sprWall118Bot;
+break;
+
 default:
 topspr=sprWall0Top;
 outspr=sprWall0Out;
@@ -200,6 +221,3 @@ l = 0
 r = 0
 w = 24//24
 h = 24//24
-
-vikingwall=false;
-

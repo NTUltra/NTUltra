@@ -8,7 +8,7 @@ function scrDrop(itemdrop, weapondrop) {
 		+ (Player.skill_got[28]*(Player.rage*0.0004))
 		if Player.crown == 21 //Crown of risk
 		{
-			if Player.my_health >= floor(Player.maxhealth*0.5)
+			if Player.my_health >= floor(Player.maxhealth*0.75)
 			{
 				dropRateBuff += 0.7;
 			}

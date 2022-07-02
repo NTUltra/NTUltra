@@ -78,11 +78,11 @@ function scrEnemyDeathEvent(){
 			
 
 			//Sheep Ultra B Just A Sheep
-			if ultra_got[50]==1
+			if ultra_got[50] == 1
 			{
 				if justAsheep && instance_number(enemy) < BackCont.enemiesInStartLevel*0.7//if70% left enemies will notice you
 				{
-				    justAsheep=false;
+				    justAsheep = false;
 				    instance_create(x-5,y-16,Notice);
 				    instance_create(x+5,y-16,Notice);
 					if skill_got[29]//Insomnia

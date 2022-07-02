@@ -19,7 +19,7 @@ if isInverted
 repeat(am)
 {
 	with instance_create(x,y,spawn)
-	{motion_add(ang,3+random(1))
+	{motion_add(ang,1.75+random(1))
 	team = other.team
 	}
 	ang += angStep;

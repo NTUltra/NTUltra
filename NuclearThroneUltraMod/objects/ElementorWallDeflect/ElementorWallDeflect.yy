@@ -1,7 +1,11 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "mskWallDeflect",
+    "path": "sprites/mskWallDeflect/mskWallDeflect.yy",
+  },
   "solid": false,
-  "visible": true,
+  "visible": false,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskWallDeflect",
     "path": "sprites/mskWallDeflect/mskWallDeflect.yy",

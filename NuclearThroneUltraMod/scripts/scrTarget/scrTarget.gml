@@ -35,10 +35,7 @@ function scrTarget() {
 							target = nearest;
 					}
 				}
-				if target == Player && Player.justAsheep
-				{
-					target = -1;
-				}
+				
 			}
 		}
 		else if Player.race==12{
@@ -55,6 +52,10 @@ function scrTarget() {
 					}
 			    }
 		    } 
+		}
+		if target == Player.id && Player.justAsheep
+		{
+			target = -1;
 		}
 	}
 	else

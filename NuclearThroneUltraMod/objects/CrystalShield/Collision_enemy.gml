@@ -23,12 +23,6 @@ with Player
 		if meleedamage == 0
 			motion_add(point_direction(other.x,other.y,x,y),6)
     
-	        if Player.race==13 && Player.ultra_got[50]==0{//Sheep passive
-	        if other.team=Player.team{
-	        if Player.justAsheep
-	        {Player.justAsheep=false;
-	        instance_create(x,y-16,Notice);
-	        }}}
 	    }
 	    if (enem.my_health<=0)//gamma guts kill?
 	    {

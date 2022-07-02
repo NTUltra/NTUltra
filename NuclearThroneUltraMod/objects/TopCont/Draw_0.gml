@@ -6,16 +6,12 @@ draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_ang
 
 with Wall
 {
-
-
-draw_sprite_part_ext(outspr,outindex,l,r,w,h,x-4+l,y-12+r,1,1,c_white,1)//this draws white lines WHAT
-
+	draw_sprite_part_ext(outspr,outindex,l,r,w,h,x-4+l,y-12+r,1,1,c_white,1)//this draws white lines WHAT
 }
 with VikingWall
 {
-
-
-draw_sprite_part_ext(outspr,outindex,l,r,w,h,x-4+l,y-12+r,1,1,c_gray,1)//this draws white lines WHAT
+	if visible
+		draw_sprite_part_ext(outspr,outindex,l,r,w,h,x-4+l,y-12+r,1,1,c_gray,1)//this draws white lines WHAT
 }
 
 /*with Wall

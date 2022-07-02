@@ -6,9 +6,9 @@ if other.team != team && other.team!=2
 		snd_play(snd_hurt, hurt_pitch_variation)
 
 		if instance_exists(Player)
-		my_health -= other.dmg+Player.ultra_got[57]*5//atom ultra
+			my_health -= other.dmg+Player.ultra_got[57]*5//atom ultra
 		else
-		my_health-=other.dmg;
+			my_health-=other.dmg;
 
 		sprite_index = spr_hurt
 		image_index = 0

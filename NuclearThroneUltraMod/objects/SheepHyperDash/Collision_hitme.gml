@@ -5,6 +5,8 @@ with other
 {
     if team != other.team && object_index!=Car
     {
+		if other.team!=0
+			scrSheepHit();
 		my_health-=other.dmg;
 	    sprite_index = spr_hurt;
 	    image_index = 0

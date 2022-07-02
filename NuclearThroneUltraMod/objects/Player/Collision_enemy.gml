@@ -37,14 +37,7 @@ if other.team != team
 				sprite_index = spr_hurt
 				image_index = 0
 				motion_add(point_direction(other.x,other.y,x,y),3)
-    
-				    if Player.race==13 && Player.ultra_got[50]==0{//Sheep passive
-				    if other.team=Player.team{
-				    if Player.justAsheep
-				    {Player.justAsheep=false;
-				    instance_create(x,y-16,Notice);
-					//NOW IF INSOMNIA GIVE ALL THE BADBOYS SOME TIME AGAIN put em too sleep
-				    }}}
+				scrSheepHit();
 			}
 			if (other.my_health <= 0 && skill_got[8] || actuallyDead)//gamma guts kill?
 			{

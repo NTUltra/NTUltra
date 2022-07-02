@@ -758,7 +758,7 @@ function scrWeapons() {
 	wep_name[68] = "AUTO GRENADE LAUNCHER"
 	wep_type[68] = 4
 	wep_auto[68] = 1
-	wep_load[68] = 10
+	wep_load[68] = 9
 	wep_cost[68] = 1
 	wep_sprt[68] = sprAutoNader
 	wep_area[68] = 7

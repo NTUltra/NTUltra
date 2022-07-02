@@ -1,11 +1,4 @@
 if(instance_exists(Player)){
-    if Player.race==13 && Player.ultra_got[50]==0{//Sheep passive
-    if other.team=Player.team{
-    if Player.justAsheep
-    {Player.justAsheep=false;
-    instance_create(x,y-16,Notice);
-    }}}
-    
     
     
 	if other.team = Player.team || other.object_index=Disc || other.object_index=ToxicThrowerGas
@@ -13,6 +6,7 @@ if(instance_exists(Player)){
 		//WEAPON MODS!
 		scrModHit();
 		scrHumphryHit();
+		scrSheepHit();
 		//Sedatives
 		if Player.ultra_got[100] && team != other.team
 		{

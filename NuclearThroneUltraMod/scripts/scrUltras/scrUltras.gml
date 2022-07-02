@@ -246,7 +246,7 @@ function scrUltras() {
     
 	//SHEEP 
 	ultra_name[49] = "UNSTOPPABLE"
-	ultra_text[49] = "CHANGE CHARGE TO A POWERFULL HYPERDASH#THAT COSTS AMMO TO USE#EXTRA FEET INCREASES RANGE#GAMMA GUTS INCREASES DAMAGE#THRONEBUTT INCREASES BOTH"
+	ultra_text[49] = "CHANGE CHARGE TO A POWERFULL HYPERDASH#THAT COSTS RADS TO USE#EXTRA FEET INCREASES RANGE#GAMMA GUTS INCREASES DAMAGE#THRONEBUTT INCREASES BOTH"
 	ultra_tips[49] = "the fluffy blur"
 
 	ultra_name[50] = "JUST A SHEEP"
@@ -495,7 +495,7 @@ function scrUltras() {
 
 	    //Elementor 
 	    ultra_name[93] = "EARTHBENDER"
-	    ultra_text[93] = "YOUR PROJECTILES PHASE THROUGH#YOUR WALLS"
+	    ultra_text[93] = "YOU AND YOUR PROJECTILES#PHASE THROUGH YOUR WALLS"
 	    ultra_tips[93] = "get to cover!"
     
 	    ultra_name[94] = "ICE COLD"

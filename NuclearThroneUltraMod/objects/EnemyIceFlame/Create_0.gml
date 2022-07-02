@@ -1,4 +1,5 @@
 event_inherited();
+friction = 0.1;
 image_speed = 0.3;
 image_angle = random(360)
 rotation = random_range(5,-5);

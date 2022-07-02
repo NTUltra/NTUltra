@@ -1,5 +1,5 @@
 event_inherited();
-alarm[0]=9;
+alarm[0]=10;
 
 typ=0;
 

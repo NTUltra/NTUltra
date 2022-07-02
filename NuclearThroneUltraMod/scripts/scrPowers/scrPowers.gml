@@ -1141,22 +1141,31 @@ function scrPowers() {
 		if (ultra_got[49] && !instance_exists(SheepHyperDash))
 		{
 			var takePercentage = 0.1;//10%
-			var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
-			var cost = typ_amax[wepType]*takePercentage;
-			if (wepType != 0 && ammo[wepType] - cost > 0)
+			//var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
+			//var cost = typ_amax[wepType]*takePercentage;
+			var cost = 31;//5% on level 10
+			if (rad >= cost)//(wepType != 0 && ammo[wepType] - cost > 0)
 			{
-				ammo[wepType] =  ammo[wepType] - cost;
+				//ammo[wepType] =  ammo[wepType] - cost;
+				rad -= cost;
 				var aimDir = point_direction(UberCont.mouse__x,UberCont.mouse__y,x,y);//Opposite of aimdir
 				BackCont.viewx2 += lengthdir_x(32,aimDir)*UberCont.opt_shake;
 				BackCont.viewy2 += lengthdir_y(32,aimDir)*UberCont.opt_shake;
 				BackCont.shake += 10;
 				snd_play_2d(sndSheepHyperDash);
 				instance_create(x,y,SheepHyperDash);
-				Sleep(5);
+				Sleep(10);
 			}
 			else
 			{
-				snd_play_2d(snd_lowa,0,true,false,10);
+				//snd_play_2d(snd_lowa,0,true,false,10);
+				if !audio_is_playing(sndUltraEmpty)
+						snd_play(sndUltraEmpty)
+				with instance_create(x,y,PopupText)
+				{
+					mytext = "NOT ENOUGH RADS"
+					theColour=c_red;
+				}
 				BackCont.shake += 5;
 			}
 		}
@@ -1683,7 +1692,8 @@ function scrPowers() {
 			xx=16*(UberCont.mouse__x div 16);
 			yy=16*(UberCont.mouse__y div 16);
 			if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)>16{
-			    if place_meeting(xx,yy,Floor)&&place_free(xx,yy)&&!place_meeting(xx,yy,projectile)&&!place_meeting(xx,yy,enemy)&&!place_meeting(xx,yy,prop)&&!place_meeting(xx,yy,Sheep)&&!place_meeting(xx,yy,ExplosiveSheep)
+			    if place_meeting(xx,yy,Floor)&&place_free(xx,yy)&&/*!place_meeting(xx,yy,projectile)&&*/
+				!place_meeting(xx,yy,hitme)&&!place_meeting(xx,yy,VikingWall)//&&!place_meeting(xx,yy,prop)&&!place_meeting(xx,yy,Sheep)&&!place_meeting(xx,yy,ExplosiveSheep)
 			    {
 
 			    //if place_meeting(xx+16,yy,Wall)||place_meeting(xx-16,yy,Wall)||place_meeting(xx,yy-16,Wall)||place_meeting(xx,yy+16,Wall)

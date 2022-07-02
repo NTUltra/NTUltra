@@ -35,16 +35,16 @@ else if skill = 3
 {
 	if Player.race=25//Plutonium hunger
 	{
-		Player.betterpluto = 90;
+		Player.betterpluto = 98;
 	}
 	else
 	{
-		Player.betterpluto = 82;	
+		Player.betterpluto = 88;	
 	}
 }
 else if skill = 4 && Player.race=25//rabitpaw
 {
-	Player.betterrabbitpaw+=0.5;
+	Player.betterrabbitpaw+=0.05;
 }
 else if skill = 5 && Player.race=2
 {

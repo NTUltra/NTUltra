@@ -739,7 +739,7 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 
 		if ultra_got[102]//Humphry Ultra B Rapid facial hair growth
 		{
-			reload -= HumphrySkill*0.0058//0.0055//0.01//0.009 when cap is 100
+			reload -= HumphrySkill*0.0062//0.0055//0.01//0.009 when cap is 100
 		}
 		if (ultra_got[63] && armour > 0)//VIKING COLD HEART
 		{

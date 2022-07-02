@@ -45,13 +45,9 @@ with other
 	}
     }
     }
-    if other.team!=0
+    if other.team!=0 && team != other.team
     {
-    if Player.race==13 && Player.ultra_got[50]==0{//Sheep passive
-    if Player.justAsheep
-    {Player.justAsheep=false;
-    instance_create(x,y-16,Notice);
-    }}
+	    scrSheepHit();
     }
 }}
 

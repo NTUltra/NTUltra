@@ -1,6 +1,6 @@
 raddrop = 150
 maxhealth = 900//750
-meleedamage = 400
+meleedamage = 200
 size = 4
 
 
