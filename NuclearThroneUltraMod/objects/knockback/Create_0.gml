@@ -1,6 +1,6 @@
 /// @description xxx
 target = -1;
-pushStrength = 60;
+pushStrength = 58;
 pushSpeed = 12;
 lerpTime = 1;
 lerpCalc = 0.17;

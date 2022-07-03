@@ -13,12 +13,16 @@ if ammo > 0
 		with instance_create(x,y,EnemyLaser)
 		{
 			image_angle = other.gunangle+sin(other.wave)*20;
+			image_yscale -= 0.25;
+			laserDecrease += 0.1;
 			team = other.team;
 			event_perform(ev_alarm,0)
 		}
 		with instance_create(x,y,EnemyLaser)
 		{
 			image_angle = other.gunangle-sin(other.wave)*20;
+			image_yscale -= 0.25;
+			laserDecrease += 0.1;
 			team = other.team
 			event_perform(ev_alarm,0)
 		}

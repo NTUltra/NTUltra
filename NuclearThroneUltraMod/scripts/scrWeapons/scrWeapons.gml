@@ -6412,6 +6412,17 @@ function scrWeapons() {
 	wep_swap[581] = sndSwapExplosive
 	wep_rad[581] = 0;
 	
+	wep_name[582] = "ULTRA TRIPLE HEAVY MACHINEGUN"
+	wep_type[582] = 1
+	wep_auto[582] = 1
+	wep_load[582] = 4
+	wep_cost[582] = 7//9
+	wep_sprt[582] = sprUltraTripleHeavyMachinegun
+	wep_area[582] = 32
+	wep_text[582] = "triple machinegun, so much fun"
+	wep_swap[582] = sndSwapMachinegun
+	wep_rad[582] = 13;//21
+	
 	maxwep = array_length(wep_name)-1;
 
 	//Only melee

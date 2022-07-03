@@ -1045,8 +1045,13 @@ if wep == 531//Coffee makes you faster
 {
 	maxspeed += 1;	
 }
+var outofcombat = instance_number(enemy) <= instance_number(IDPDVan) && !instance_exists(becomenemy)
+if outofcombat
+	maxspeed += 1;
 if speed > maxspeed
 	speed = maxspeed
+if outofcombat
+	maxspeed -= 1;
 if wep == 531
 {
 	maxspeed -= 1;

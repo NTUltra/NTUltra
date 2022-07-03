@@ -4156,6 +4156,7 @@
     {"id":{"name":"sndMaggotSpawnDie","path":"sounds/sndMaggotSpawnDie/sndMaggotSpawnDie.yy",},"order":68,},
     {"id":{"name":"sndMaggotSpawnIdle","path":"sounds/sndMaggotSpawnIdle/sndMaggotSpawnIdle.yy",},"order":69,},
     {"id":{"name":"sprPenetrator","path":"sprites/sprPenetrator/sprPenetrator.yy",},"order":298,},
+    {"id":{"name":"sprUltraTripleHeavyMachinegun","path":"sprites/sprUltraTripleHeavyMachinegun/sprUltraTripleHeavyMachinegun.yy",},"order":415,},
     {"id":{"name":"sprVenusCarOasisHurt","path":"sprites/sprVenusCarOasisHurt/sprVenusCarOasisHurt.yy",},"order":25,},
     {"id":{"name":"sndBigMaggotBite","path":"sounds/sndBigMaggotBite/sndBigMaggotBite.yy",},"order":70,},
     {"id":{"name":"sprNuclearPillar","path":"sprites/sprNuclearPillar/sprNuclearPillar.yy",},"order":4,},

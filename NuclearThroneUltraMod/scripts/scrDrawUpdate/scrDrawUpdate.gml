@@ -22,9 +22,9 @@ function scrDrawUpdate() {
 		{
 			url_open("https://twitter.com/Erdeppol");
 		}
-	txt0 = @"#UPDATE 28 BETA [0.18]
+	txt0 = @"#UPDATE 28 [0.01]
 	
-	* 108 NEW WEAPONS!
+	* 120 NEW WEAPONS!
 	* ALL ULTRA MUTATION ART!
 	MANY BY SEYMOUR SCHLONG
 	* BUFFED IMPACT WRISTS

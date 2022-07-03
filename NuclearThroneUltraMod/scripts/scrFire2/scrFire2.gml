@@ -9165,7 +9165,9 @@ function scrFire2() {
 	{motion_add(aimDirection+(random(8)-4)*other.accuracy,16)
 	image_angle = direction
 	team = other.team}
-
+	
+	motion_add(aimDirection+180,2)
+	
 	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 5
@@ -10491,6 +10493,38 @@ function scrFire2() {
 	BackCont.shake += 3
 	wkick = 6
 
+	break;
+	
+	//ULTRA HEAVY TRIPLE MACHINEGUN
+	case 582:
+
+	snd_play_fire(sndTripleMachinegun)
+	snd_play_fire(sndHeavyMachinegun)
+	snd_play_fire(sndUltraShotgun)
+	
+	repeat(3)
+	{
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(70)-35,2+random(2))
+	}
+
+	with instance_create(x,y,Bullet4Heavy)
+	{motion_add(aimDirection+(random(6)-3)*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,Bullet4Heavy)
+	{motion_add(aimDirection+15*other.accuracy+(random(6)-3)*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,Bullet4Heavy)
+	{motion_add(aimDirection-15*other.accuracy+(random(6)-3)*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+	motion_add(aimDirection+180,4)
+	BackCont.viewx2 += lengthdir_x(15,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(15,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 8
+	wkick = 8
 	break;
 	
 	}//end of switch part 2!
