@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndVanWarning",
-  "duration": 0.0,
+  "duration": 2.613344,
   "parent": {
     "name": "Elite",
     "path": "folders/Sounds/IDPD sounds/Elite.yy",

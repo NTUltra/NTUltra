@@ -4248,10 +4248,10 @@ function scrWeapons() {
 	wep_name[385] = "SPLINTER BLADE GUN"
 	wep_type[385] = 3
 	wep_auto[385] = 1
-	wep_load[385] = 20
-	wep_cost[385] = 3
+	wep_load[385] = 22
+	wep_cost[385] = 3.5
 	wep_sprt[385] = sprSplinterBladeGun
-	wep_area[385] = 14
+	wep_area[385] = 16
 	wep_text[385] = "blades don't hurt you"
 	wep_swap[385] = sndSwapBow
 	wep_rad[385] = 0;
@@ -4760,7 +4760,7 @@ function scrWeapons() {
 	wep_area[431] = 19
 	wep_text[431] = ""
 	wep_swap[431] = sndSwapSword
-	wep_rad[431] = 9;
+	wep_rad[431] = 8;
 	
 	wep_name[432] = "CHUNKY BLADE GUN"
 	wep_type[432] = 3
@@ -4977,7 +4977,7 @@ function scrWeapons() {
 	wep_load[451] = 17
 	wep_cost[451] = 2
 	wep_sprt[451] = sprJawCrusher
-	wep_area[451] = 9
+	wep_area[451] = 8
 	wep_text[451] = ""
 	wep_swap[451] = sndSwapShotgun
 	wep_rad[451] = 0;
@@ -4988,7 +4988,7 @@ function scrWeapons() {
 	wep_load[452] = 12
 	wep_cost[452] = 3.5
 	wep_sprt[452] = sprJawObliterator
-	wep_area[452] = 18
+	wep_area[452] = 17
 	wep_text[452] = "why is the jaw so hated?"
 	wep_swap[452] = sndSwapShotgun
 	wep_rad[452] = 0;
@@ -5585,18 +5585,18 @@ function scrWeapons() {
 	wep_area[506] = 23
 	wep_text[506] = "we have gone too far!"
 	wep_swap[506] = sndSwapSword
-	wep_rad[506] = 10;
+	wep_rad[506] = 12;
 	
 	wep_name[507] = "ULTRA SWORD"
 	wep_type[507] = 0
 	wep_auto[507] = 0
-	wep_load[507] = 9
+	wep_load[507] = 10
 	wep_cost[507] = 0
 	wep_sprt[507] = sprUltraSword
 	wep_area[507] = 22
 	wep_text[507] = "meta slayer"
 	wep_swap[507] = sndSwapEnergy
-	wep_rad[507] = 12;
+	wep_rad[507] = 9;
 	
 	wep_name[508] = "LASER YOYO GUN"
 	wep_type[508] = 5
@@ -5879,7 +5879,7 @@ function scrWeapons() {
 	wep_load[533] = 38
 	wep_cost[533] = 10
 	wep_sprt[533] = sprSuperHeavySlugger
-	wep_area[533] = 29
+	wep_area[533] = 30
 	wep_text[533] = "lets go dude"
 	wep_swap[533] = sndSwapShotgun
 	wep_rad[533] = 0;
@@ -6323,6 +6323,94 @@ function scrWeapons() {
 	wep_text[573] = "goes by many names"
 	wep_swap[573] = sndSwapExplosive
 	wep_rad[573] = 0;
+	
+	wep_name[574] = "EVERYTHING LINE"
+	wep_type[574] = 4
+	wep_auto[574] = 0
+	wep_load[574] = 40
+	wep_cost[574] = 8
+	wep_sprt[574] = sprLineEverything
+	wep_area[574] = 29
+	wep_text[574] = "don't get in the line of fire"
+	wep_swap[574] = sndSwapFlame
+	wep_rad[574] = 0;
+	
+	wep_name[575] = "HEAVY POP BLADE GUN"
+	wep_type[575] = 3
+	wep_auto[575] = 1
+	wep_load[575] = 20
+	wep_cost[575] = 3.5
+	wep_sprt[575] = sprHeavyPopBladegun
+	wep_area[575] = 16
+	wep_text[575] = "blades don't hurt you"
+	wep_swap[575] = sndSwapBow
+	wep_rad[575] = 0;
+	
+	wep_name[576] = "SUPER BOW"
+	wep_type[576] = 3
+	wep_auto[576] = 0
+	wep_load[576] = 30
+	wep_cost[576] = 5
+	wep_sprt[576] = sprSuperBow
+	wep_area[576] = 9
+	wep_text[576] = "hold for power"
+	wep_swap[576] = sndSwapBow
+	wep_rad[576] = 0;
+	
+	wep_name[577] = "HEAVY BULLET SWORD"
+	wep_type[577] = 1
+	wep_auto[577] = 0
+	wep_load[577] = 14
+	wep_cost[577] = 8
+	wep_sprt[577] = sprHeavyBulletSword
+	wep_area[577] = 22
+	wep_text[577] = "heavy metal and guns"
+	wep_swap[577] = sndSwapSword
+	wep_rad[577] = 0;
+	
+	wep_name[578] = "AUTO SPLINTER SPEAR LAUNCHER"
+	wep_type[578] = 3
+	wep_auto[578] = 1
+	wep_load[578] = 11
+	wep_cost[578] = 2
+	wep_sprt[578] = sprAutoSplinterSpearLauncher
+	wep_area[578] = 12
+	wep_text[578] = ""
+	wep_swap[578] = sndSwapBow
+	wep_rad[578] = 0;
+	
+	wep_name[579] = "TRIPLE VAN CANNON"
+	wep_type[579] = 4
+	wep_auto[579] = 0
+	wep_load[579] = 150
+	wep_cost[579] = 24
+	wep_sprt[579] = sprTripleVanCannon
+	wep_area[579] = 31
+	wep_text[579] = "popo super power"
+	wep_swap[579] = sndSwapExplosive
+	wep_rad[579] = 0;
+	
+	wep_name[580] = "TOXIC LAUNCHER"
+	wep_type[580] = 4
+	wep_auto[580] = 0
+	wep_load[580] = 17
+	wep_cost[580] = 1
+	wep_sprt[580] = sprToxicLauncher
+	wep_area[580] = 5
+	wep_text[580] = "I used to hate this gun"
+	wep_swap[580] = sndSwapExplosive
+	wep_rad[580] = 0;
+	
+	wep_name[581] = "HEAVY TOXIC LAUNCHER"
+	wep_type[581] = 4
+	wep_auto[581] = 0
+	wep_load[581] = 26
+	wep_cost[581] = 2
+	wep_sprt[581] = sprHeavyToxicLauncher
+	wep_area[581] = 9
+	wep_text[581] = ""
+	wep_swap[581] = sndSwapExplosive
+	wep_rad[581] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 

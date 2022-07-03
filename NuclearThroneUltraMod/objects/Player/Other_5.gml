@@ -488,7 +488,7 @@ if loops == 1 && wep == 443 || bwep == 443 || cwep == 443
 if race = 23
 {
 
-	if loops=1{
+	if loops = 1 && wep == 348 || bwep == 348 || cwep == 348 {
 		with instance_create(x,y,WepPickup)
 		{
 			persistent=true;

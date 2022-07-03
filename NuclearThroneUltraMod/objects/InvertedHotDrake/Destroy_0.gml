@@ -22,7 +22,10 @@ scrDrop(50,90)
 scrDrop(50,10)
 
 event_inherited()
-
+with myCorpse
+{
+	speed *= 0.25;	
+}
 repeat(50){//flame wall of death baby yes 
 with instance_create(x,y+96,EnemyIceFlame)
     {

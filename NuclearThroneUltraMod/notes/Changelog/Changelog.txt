@@ -1,4 +1,178 @@
-BALANCE
+*FEATURES*
+New ultra mod replacing blade to grenade, Lighting to pellets
+Ultra flame can now swap to ultra morph when using the ultramod
+Ultra slugger now is compatible with ultra mods (bullet <=> shotgun shotgun<=> bolt)
+Ultra bolts are now compatible with ultra mods
+Ultra mod rocket bolt for nuke now also spawns two splinters
+Starting from loop 7 there will be new gold totems. These totems double the maximum health and increase the raddrop & itemdroprate from enemies within range. And will continuesly maxheal enemies for 25% of their health, it will also make the enemies near it more aggressive. An additional one spawns every other loop. (these totems have a high droprate and drop a lot of rads)
+New Gold jungle flies, they will only appear on loop 2+ and the chance increases each loop, Explode in gass fires gass and more maggots. Also deals more melee damage has more health and is faster. (drops more rads and items, lower chance to spawn compared to other gold enemies) Ranged weapons should be pretty gut against this.
+New Golden Crystals,
+New Inverted Golden crystals
+New Golden Teapot
+New Inverted Golden Teapot
+New Inverted Golden Snow tanks
+New Golden Snipers (loop 1 +) (explode into lightning upon death fire lines of fire)
+new Inverted Golden Snipers (loop 1+) (line of frostflame faster lower health more rads)
+Golden Necromancers (loop 1+) Can spawn freaks or explo freaks, fire cubes bullets at the player. and has a lot of health, revive spawns Lightning
+Inverted golden necromancer (loop 1+)
+New heavy pellets are compatible with ultra mods
+Ultra lightning can now break walls, Ultra lightning is now better at targeting enemies, and will deal 10 damage instead of 12
+Shotgun > electro ultra now has added swap heavy slugs to electro cannon balls
+New Plant Ultra C (Apex predator)
+Added gold unlock sound
+added gold weapon sounds
+Recycle Gland now shows percentages, and this percentage changes for doctor and doctor's better wep mut ultra (though this percentage is not entirely accurate guns such as disperse machinegun have a little lower chance to return bullets)
+Boiling veins with Doctor's Ultra A will now show that the thresshold moved up to 8hp
+Shotgun shoulders now has the added benefit of making your shotgun pellets, slugs shells etc etc. not deflectable by enemies.
+Recycle Gland now has the added benefit where it makes your bullets not deflectable by enemies (this includes ally bullets)
+Going through a couple of enemies to make knockback and impact wrist have a better effect on some enemies.
+Rabbit paw now shows percentages
+Changed Rage HUD icon
+Trigger fingers now shows percentages
+YV's fire rate boosting ultras now show percentages
+Two new mutations
+
+Flexible Elbows:
+Increase secondary fire rate,
+If secondary is reloaded:
+Increase primary firerate
+If not:
+Enemies can drop additional items
+Puffy Cheeks:
+Can preemptively reload up to two shots.
+
+If you have both puffy cheeks and flexible elbows, you get both flexible elbows buffs. So if your secondary is normally reloaded, you get the primary firerate buff. And if it is still loading in extra shots you also get the additional drops.
+For robot's three weapons ultra. It will concider any offhand weapon. So you are likely to have both buffs there aswell. When one of the weapons is fully reloaded you get the primary firerate buff. When one of them is not fully reloaded you get additional drops. These effects stack for each offhand weapon! So if both your secondary and tertiary weapon is reloaded you get a 60% primary firerate boost. And enemies can drop even more items if both weapons are not reloaded!
+
+Rage now mentions all weapons as it reloads your offhand weapons aswell
+Fish can roll ultra now mentions it boost primary firerate
+Changed Viking Ultra C, now boosts firerate when you have armour and no longer consumes armour when using armour strike, instead only use health
+New secret fish ultra
+Swapped fish b and c skins
+Optimized some code/performance stuff
+Extra feet close dodges now work on yung cuz's buddies
+Refactored somewhat hidden mechanic where if you have 0 ammo in both non melee weapons, an ammochest could respawn. Now it will check if you have not enough ammo to fire the weapon, it will now also check if there are no other ammo chests left.
+Toxic lightning and explosive bolts are now included in the ultra mod program. They will swap with toxic slugs, toxic rockets or explosive plasma etc. (there is no gun that fires those projectiles normally)
+Seeker bolts now stick into enemies fun cruel fun
+New Blood pistol sprite & new Kraken pistol sprite
+You can now choose what exact weapon mod you want to replace when you have max weapon mods
+The 100% cheatcode now unlock Hands!
+New gamemodes
+
+Melee only
+Start with a melee weapon and with long arms, Only melee weapons drop
+Unlock: Wield 3 melee weapons at the same time
+
+Ultra mutation start
+Start with an ultra mutation (of your choice)
+You can get an extra ultra mutation once you reach level 10.
+Unlock: take 20 different ultra mutations (if you've already done this, it will unlock once you take your an ultra mutation)
+
+New gamemode One hit wonder:
+Unlock requirement: Beat 4 areas without taking damage
+(in this gamemode alkaline salive, strong spirit and boiling veins are all disabled, unlockables are enabled)
+(rhino skin, tough shell, sharpstress, bloodlust and second stomache are disabled for all characters except rebel, yung cuz, and skeleton as they can use health as a resource)
+The boss bounty rewards for +1 max HP are replaced with different rewards.
+
+Changed weapon HUD
+Ultra mod explosion <=> blood explosion
+Small explosions will now be swapped to blood explosions
+Atom's extra explosions will now also swap to blood explosions
+When using Atom's explosion ultra and swapping explosions to blood the converted explosions will retain their fire effect
+
+With hammerhead you now have a small chance to find resources in any wall you break (not just walls you break with hammerhead). This makes it so that hammerhead has synergies with wall breaking weapons instead of anti-synergy. This chance gets buffed with anything that upgrades your droprate (rabbit paw, rage rebel ultra)
+Hands ultra Irradiated and Negative environment are now both included in the random ultra pool
+
+Green outline on mutations will now dissapear when you have unlocked the all mutations gamemode
+Golden border on characters you have 100%  (looped, skins unlocked, crown start unlocked all gold weapons unlocked)
+Oasis skull entrance is now only available in 1-2, retail path is still available on 1-1
+Looping now resets your health to maxhealth and gives you some ammo for all types.
+Added Robot's Ultra C (extra storage (carry three weapons)) to the random ultras pool.
+Robot's Ultra B now has a 0.2% chance to drop a giant golden weapon chest and a 0.8% chance to drop a gold weapon chest
+Business hog ultra mutation art (B ultra)
+New hidden ultra 'trash'
+All remaining ultra mutation art is now done! A lot of them are done by Seymour Schlong
+Horror total forecall ultra will now always show you an ultra mutation so if you somehow managed to level up several times your normal mutation choices will be ultra choices untill you choose one then it will switch back to normal mutation choices.
+You can now skip through the first few screens and logos allowing you to start even faster.
+Crowns now have unique sprites depending on the crown you take. (Most of the new ones are created by Seymour Schnlong)
+New HUD element replacing the bottom crown text, now used to display a little icon if you are in a gamemode that is not normal mode. If you hover over it you will get the text telling you what gamemode you are in.
+Weapon smith now mods weapons much much faster
+Power craving now makes you mod weapons faster. (It stacks with weapon smiths new tiny passive)
+Sharpteeth sfx
+The pizza sewers entrance will now ask you nicely if you actually want to enter it (after you blew up the entrance).
+Added some new crosshair
+Custom sideart! Just switch to option 16 in the sideart options. And tick the box to load in your custom images
+Horror stalker ultra now spawns bullets in the colour of the horror skin you are using
+Fish's partner now works with ultra mods. It will act as a bullet in ultra mod swapping. However the damage numbers have been adjusted since a partner bullet does 4 damage and a normal bulllet will deal 3 damage. For this reason when it swaps to a pellet (which normall does 3-2 damage) the pellet will deal 4-3 damage. Lasers will be a little thicker than a normal bullet laser. and splinters will not have their damage reduced. Swapping the projectile type will lose the ally damage buff from rebel's ultra.
+Rebel ally bullets will now work with ultramods, These act exactly the same as normal bullets
+Lives are now permanent and will regenerate over 3 loops. This means lastwish can no longer regain its original ability of giving you a life (previously done by taking the frozen jungle plant). Now if you take lastwish again, it will regain part of your existing life. If you reroll last wish it will remove 1 part of your life but it will no longer remove the entire life. Rerolling a partial life will prioritize lives that are not full/active.
+Portal spawning sounds should now be more noticable and be limited in how far they play away from the player so they can always be heard.
+New inverted portal sound
+Chance for inverted portals now increases by 1% every loop (up to loop 10)
+
+New addition to Atom Ultra D (Anti matter - teleport into walls)
+Faded pickups transform into friendly ultra lightning and rads
+
+New ultra chests:
+The main purpose of this chests is to help you find the lategame weapon you want.
+These chests cost 620 rads (which is 50% of level 10 maxrad) 
+For this cost you get 5 weapons (which should be high tier by this point),The selection of weapons here will be existing of only unique weapons so no duplicates.
+It will give you ammo for all your weapons
+You also get 1 hp drop
+These chests only spawn in the first subarea, and on loop 2+ You also have to be atleast level 10/ultra
+Open mind will allows these chests to spawn on subarea 2 aswell and open mind gives you a 10% discount.
+Eagle eyes will show you what weapons are inside and will scroll through all the weapons inside displaying them one by one.
+Business hog also gets a 10% discount on this chest and this discount stacks with open mind.
+
+
+New crowns:
+
+Crown of protection:
+Weapon Drops (over) Heal 1HP, Instead of giving ammo
+Is increased to 2HP with second stomache.
+In combination with Weapon Smith Ultra D (Scrap finder): You will still get the additional ammo from this ultra, but the initial amount of ammo is gone, so ithe negative part of this crown will be offset.
+
+Crown of Risk
+70% higher droprate when above 75% max hp
+50% lower droprate when below 75% max hp
+(increases droprate like rabbitpaw does, so also droprate for confiscate (Fish ultra))
+Slightly different from retail as in retail the droprate buff only applies when at max hp and the buff is to droprate is now higher.
+Crown will glow when you are above 75% max hp.
+
+Crown of Luck
+Start each area with 1HP 20% chance any enemy spawns in with 10% hp.
+This HP reduction stacks with glass arm cannon and scarier face.
+This crown works on bosses
+The chance for higher hp enemies to get the hp reduction is slightly smaller. (anything below 100 hp is 25 in 100. And as an example for a high hp target: 300hp it will be 25 in 106.
+Unlike crown of life your health will not be immediatly adjusted upon picking this.
+
+Crown of speed
+Higher projectile speed (for enemy and your projectiles)
+You move a little faster.
+(The little crown that follows you is faster than any other crown)
+
+Crown of Sloth
+Slower projectile speed (for enemy and your projectiles)
+You move slightly slower, 
+each area decreases the difficulty and weapon tier instead of increasing it.
+This crown is hidden.
+To unlock it you need to have taken crown of destiny, it will replace the crown of destiny.
+This is the slowest moving crown
+
+Most enemy projectiles that are deflectable now have a corresponding deflected sprite (normal bullets will change from red colour to yellow)
+
+Angel new addition to active: 
+Deflect:
+This deflect makes you immune temporarily and deflects all types of damage including contact/melee damage!
+Ofcourse it still adheres to the projectiles rule so green projectiles get destroyed and squares still hurt.
+The active still heals you and the cost remains the same. If you use your active while at or above full health you will pay significantly less, and even less when having thronebutt.
+If you use gamma guts the deflect will increase the gamma guts range for its duration.
+If you spam the active the duration of the deflect will stack so no time will be lost.
+Angel's Ultra D (Ascent (fly over walls forever) Now has the added benefit:
+Also deflect at your reticle, Meaning you will deflect on your character and on your "mouse" aim (like an ion cannon)
+
+
+*BALANCE*
 Buff mushrooms no longer explode upon death
 increased tier of bubblers
 Shotgun shoulders will now lower the friction on pellets and slugs
@@ -179,18 +353,202 @@ Respawning now grants infinite ammo and massive firerate buff for a short durati
 bullet/pop wall/laser are now tier 14 instead of 15
 Increased crown of guns droprate increase
 Changed crown of guns droprate so that itemdrops that would be ammodrops will be another roll for a healthdrop.
+
 Fish's thronebutt now increases the ammo pickup value by more than before. Normal to Fish Passive to Fish Thronebutt:
 Bullets 32 - 40 - 48
 Shells 8 - 10 - 12
 Bolts 7 - 9 - 11
 Explosives 6 - 8 - 10
 Energy 10 - 13 - 15
+
 Having low health will now also increase your droprate it a little more, It was already increasing the odds of you getting a healthdrop specifically. But before that you still needed to be able to get an pickup drop, which was only increased by mutations and your ammo.
 Open mind will now increase confiscate droprate change by 25% (this additional bonus will be displayed in the description of the mutation if you have either open mind or confiscate)
-Fish can Roll (fish ultra A) now reduced all ammo/rad cost of weapons by 5%
+Fish can Roll (fish ultra D) now reduced all ammo/rad cost of weapons by 5%
 Atom's passive contact damage now scales per loop adding 1 extra damage per loop up untill 6 damage (loop 4)
+ultra splinters now deal 1 more damage and can bounce of wals once
+Removed 2hp debuff on yung cuz's buddies Ultra A
+Increased health of throne and even more so on inverted throne
 
-BUGS
+Rebalanced some hog shop items:
+
+Inverted portal -10% now 90%
+Giant golden weapon chest -10% now 90%
+Damage on screen  20% now 50%
+Big weapon chest -10% now 65%
+Ammo chest - 5% now 25%
+Weapon chest -5% now 25%
+For Hog's Ultra B (Quantity (more shop items))
+Replaced medium weapon chest with Instant reload your weapons, This new item will reload all your weapons for 5%.
+This will pre-emtively reload your puffy cheeks guns aswell.
+Temp invulnerability +5% now 25%
+Temporary invulnerability (4 seconds) can now properly be stacked
+Replaced medium ammo chest with temporary infinite ammo
+cost 35% (time can stack) lasts for 4 seconds
+
+Swarmbolts now have a lifetime ( 5 seconds ) and skip more iframes this is mostly to prevent some lag.
+Eagle eyes no longer increases how many hits swarmbolts can deal and instead increases their maxspeed and turnspeed.
+Changed euphoria shield visuals a little so that the player is a little bit more visible during its animation.
+Fire from toxic -> fire ultramod should spread more easily now
+Panda weapon throw deflect ultra, sheep charge deflect utltra, elementor wall deflect and angel deflect ultra now have the enemy projectiles aim somewhat back at enemies and speed up those projectiles.
+Angels active now costs slightly less ammo by default, the thronebutt keeps the same cost
+Crystal can now deflect popo grenades with the shield
+Angel's deflect ultra now deflects popo grenades
+Simplified active explain text for angel and weapon smith this is so they fit better on one line with the icon and is similar to every other character.
+Rewirer now costs 0.5 less ammo
+Sheep's Hyperdash now costs rads instead of ammo (5% rads on level 10)
+Increased morph hammer damage
+Hyper crystal deals 200 melee damage instead of 400
+Crown of death now works on green explosions and small explosions
+Additional explosions on crown of death now spawn in a consistent pattern
+Atom Ultra A (Proton) now also brings fire to small explosions
+Buffed Humphry Ultra B a little (skill buffs firerate)
+Enemy iceflames now have some friction
+Reduced how far the fire spreads from fireworms when they die
+Enemy lasers now get blocked by elementor walls
+Elementor Ultra A (earthbender) Now has the added benefit: You can phase through your walls (not just your projectiles)
+So walls wont be destroyed when you walk into them.
+Elementor walls will now decay and be destroyed after some time (7 seconds)
+Elementor walls will now block enemy wazers
+Rogue's explosions (from portal strike and blast armour) will no longer hurt and kill the friendly popo
+The van exploding where the friendly popo came from those explosions will also not hurt the friendly popo.
+Minor firerate buff to laser and splinter crash firerate
+Vans will now only start their countdown when sheep's passive has ended.
+Vans intro countdown will now be increased and the delay between vans will also be increased if you have insomnia
+Normal idpd spawns now only start when sheep's passive has ended.
+Normal idpd spawns will start slower if you have insomnia
+Moved the flame splinter gun up 1 tiers, after a bug fix this gun was pretty decent.
+Kraken pistol is now tier 3 instead of 2
+Big guardian bullets (those big bois at the throne fight) now have a 5% chance to drop an additional item
+Moved jaw crusher and jaw obliterator down a tier
+Golden frog pistol will now only drop for frog when looping with the frog pistol
+moved splinter blade gun up 2 tiers
+Ultra lance +1 dmg radcost -1
+
+
+WEAPONS
+Flugger (A slugger that has infinite pierce and goes much further but deals less damage), Upon piercing it will spawn two pellets, With shotgun shoulders it will spawn three pellets on hit and ofcourse bouncer more. The initial damage is higher up close and drops off later (damage buff stays longer with shotgun shoulders).
+Gatling flugger
+Heavy cuber revolver (higher dmg cuber)
+Heavy cuber rifle
+Boom Boom cannon (explosive flak cannon)
+Ultra Morph-O-Ray
+Toxic-O-Ray (doesn't morph but instead farts the enemy to death)
+Snow line (costs 2.5 ammo)
+Muchas Nieve
+Ultra Heavy Slugger (one of the highest single target DPS in the game (can't be deflected, goes through shields, gains more speed from wall bounces))
+Ultra Bazooka
+Frazer (kinda like a frostflame laser)
+ACCELERATOR (New bullet weapon where the bullets scale in damage as they exist longer so you'd want to stay at a distance from the enemy you are trying to hit)
+AUTO ACCELERATOR
+Heavy Sledgehammer (like sledgehammer but much slower and much more damage, can break walls)
+Ultra lollipop (lime flavour)
+Frost Sword Gun
+Scythe Gun
+Explosion Flail
+Boom-O-Ray
+Disperse Grenade Gun (doesn't cost as much ammo as the other disperse guns)
+Potshot (burst fires bullet pellet, flame pellet, frost bullet flame bullet
+Lightning jackhammer
+Ultra jackhammer
+Shlogger (shotgun slugger)
+Lightning Yoyo Gun (can spawn earlier than kraken yoyo gun
+Heavy pop gun (pellets that deal damage similar to heavy bullets, pellets gain more speed when bouncing, and they have less friction compared to regular pellets)
+Heavy pop rifle
+Splinter mace (early game splinter melee weapon)
+Heavy shotgun
+Ultra Grenade launcher (is a little cheaper on the rads compared to retail, the pierce damage will also ignore iframes, and it will not suck the player in)
+Super Splinter gun (fires slightly faster compared to retail)
+Devastator (little quicker firerate than retail)
+Annihilator (blood devastator)
+Lightning Cannon
+Flame Revolver (early game weapon cost 1.5 bullet ammo)
+Bow (charge crossbow) (toxic bow and other bow named weapons are now called crossbow, which is kinda what they were anyway)
+Ultra Bow
+Ultra Wazer Rifle
+Frost-o-ray
+Ultra sword gun (slashes aren't as random and they will actively target the nearest enemy, high damage)
+Ultra Sword (comparable to ultra shovel but much faster more damage (unless you stack the shovel slashes), one swing obviously and costs less rads)
+Laser yoyo gun
+Explosive blade gun (costs 1.5 ammo)
+Ultra assault shotgun (3 burst, fires one less pellet per shot, some rad and ammo cost reduction and slightly faster (compared to if you just multiplied the numbers by 3)
+Super disc gun (costs 2 less ammo compared to retail) (very small chance to drop from Cursed Hyper Crystal)
+Ultra mega laser pistol (Giant high dmg dealing fast fire rate laser that breaks walls) (renamed existing to ultra super laser pistol)
+Heavy Shovel
+Club (early game melee weapon large slash more damage than wrench slower than wrench one tier higher)
+Seeker machinegun (seeker weapon that uses bullet ammo)
+Double seeker machinegun
+Lightning striker (assault lightning rifle, where the bursts of lightning gets longer each shot)
+Ultra Lightning Striker
+Golden Nuke launcher (is added to the golden weapon collection and is unlocked same way as any other not hardmode exclusive or something)
+Shovel Crash (360 shovel with different kinds of slashes all around you)
+Lightning Crash
+Ultra heavy revolver, (more dmg than ultra revolver, more cost rad and ammo, little bit slower, massive knockback, breaks walls)
+Coffee cannon (Tosses coffee mugs at enemies speeds up the decision making of enemies it hits, splits into bullets (coffee mug shards), you move faster while holding this)
+Super bouncer bazooka
+Super heavy slugger
+Super Gyro burster
+Seeker Cannon (renamed existing one seeker wave gun and changed it's sprite)
+Super seeker cannon
+super blood cannon
+heavy blood bullet shotgun
+missile cannon
+Super missile cannon
+Kraken cannon (changed existing kraken cannon names to kraken launcher)
+Super Kraken Cannon
+Bowling ball launcher
+Super lightning crossbow
+Split seeker pistol
+Blood shortgun
+Blood hammer (dmg increased with melting doomed ultra (not the dmg dealt to you)) Can damage you but cannot kill you
+Heavy blood hammer (bigger slash, can hit multiple times more dmg also deals more dmg to you if you miss) Can damage you but cannot kill you
+Explosive minigun
+O
+Super wrong direction
+bullet shovel
+triple assault rifle
+snake gun
+eliminator (splinter devastator, works with bolt marrow)
+Heavy Double Shotgun
+Double accelerator
+Assault Flugger
+Spear launcher (very similar to crossbow but much less pierce and more damage)
+Splinter Spear launcher (spear splits into 3 splinter upon hit) higher firerate and projectile speed
+Auto Spear launcher (even higher projectile speed and firerate) No splitting into splinter
+Super Electro Cannon
+Toxic Assault Rifle
+Toxic Minigun
+Toxic Wazer Rifle
+Golden bow (unlockable starting weapon) has a higher firerate than the regular bow and charges faster (but not by much)
+Ultra Sawed-Off shotgun (loop with rusty sawed-off shotgun (hands))
+Splasma Cannon (plasma cannon spawning spiraling plasma)
+Splasma Gun (Plasma gun spawning spiraling mini plasma)
+Super heavy shotgun (fires a metric shit ton of heavy pellets, costs a lot of ammo has a very low firerate)
+Triple heavy assault rifle
+Fire bomb launcher/ Heavy flare gun/ Heavy fire grenade launcher (gun has three different names)
+Everything line (toxic, fire, explosion, blood, snow)
+Heavy pop blade gun
+Super bow
+Heavy bullet sword
+Auto splinter spear launcher
+Triple van cannon
+Toxic launcher
+Heavy toxic launcher
+Ghost dagger
+Heavy auto shotgun
+Sheep on a stick (morph lance)
+Infinity Jackhammer
+Muchas rayos
+Swarm minigun
+Super chunky blade gun
+bullet crash
+super penetrator
+super flugger
+giant panda stick
+Heavy blood bullet shotgun
+Laser crash
+toxic wazer rifle
+
+*BUGS*
 Fixed a bug where you could quickly use another portalstrike for free while another portal strike was going on, and it would set your ammo to -1
 Fixed a rare crash caused be enemies retargeting
 Fixed a rare hands ultra C crash
@@ -315,248 +673,11 @@ Props and enemies that spawn inside a wall will now destroy that wall
 Fixed percentages on rabbit paw
 Fixed and refactored some droprate stuff.
 Fixed plutonium hunger being nearly infinite range
-
-
-WEAPONS
-Flugger (A slugger that has infinite pierce and goes much further but deals less damage), Upon piercing it will spawn two pellets, With shotgun shoulders it will spawn three pellets on hit and ofcourse bouncer more. The initial damage is higher up close and drops off later (damage buff stays longer with shotgun shoulders).
-Gatling flugger
-Heavy cuber revolver (higher dmg cuber)
-Heavy cuber rifle
-Boom Boom cannon (explosive flak cannon)
-Ultra Morph-O-Ray
-Toxic-O-Ray (doesn't morph but instead farts the enemy to death)
-Snow line (costs 2.5 ammo)
-Muchas Nieve!
-Ultra Heavy Slugger (one of the highest single target DPS in the game (can't be deflected, goes through shields, gains more speed from wall bounces))
-Ultra Bazooka
-Frazer (kinda like a frostflame laser)
-ACCELERATOR (New bullet weapon where the bullets scale in damage as they exist longer so you'd want to stay at a distance from the enemy you are trying to hit)
-AUTO ACCELERATOR
-Heavy Sledgehammer (like sledgehammer but much slower and much more damage, can break walls)
-Ultra lollipop (lime flavour)
-Frost Sword Gun
-Scythe Gun
-Explosion Flail
-Boom-O-Ray
-Disperse Grenade Gun (doesn't cost as much ammo as the other disperse guns)
-Potshot (burst fires bullet pellet, flame pellet, frost bullet flame bullet
-Lightning jackhammer
-Ultra jackhammer
-Shlogger (shotgun slugger)
-Lightning Yoyo Gun (can spawn earlier than kraken yoyo gun
-Heavy pop gun (pellets that deal damage similar to heavy bullets, pellets gain more speed when bouncing, and they have less friction compared to regular pellets)
-Heavy pop rifle
-Spiked Club (early game splinter melee weapon)
-Heavy shotgun
-Ultra Grenade launcher (is a little cheaper on the rads compared to retail, the pierce damage will also ignore iframes, and it will not suck the player in)
-Super Splinter gun (fires slightly faster compared to retail)
-Devastator (little quicker firerate than retail)
-Annihilator (blood devastator)
-Lightning Cannon
-Flame Revolver (early game weapon cost 1.5 bullet ammo)
-Bow (charge crossbow) (toxic bow and other bow named weapons are now called crossbow, which is kinda what they were anyway)
-Ultra Bow
-Ultra Wazer Rifle
-Frost-o-ray
-Ultra sword gun (slashes aren't as random and they will actively target the nearest enemy, high damage)
-Ultra Sword (comparable to ultra shovel but much faster more damage (unless you stack the shovel slashes), one swing obviously and costs less rads)
-Laser yoyo gun
-Explosive blade gun (costs 1.5 ammo)
-Ultra assault shotgun (3 burst, fires one less pellet per shot, some rad and ammo cost reduction and slightly faster (compared to if you just multiplied the numbers by 3)
-Super disc gun (costs 2 less ammo compared to retail) (very small chance to drop from Cursed Hyper Crystal)
-Ultra mega laser pistol (Giant high dmg dealing fast fire rate laser that breaks walls) (renamed existing to ultra super laser pistol)
-Heavy Shovel
-Club (early game melee weapon large slash more damage than wrench slower than wrench one tier higher)
-Seeker machinegun (seeker weapon that uses bullet ammo)
-Double seeker machinegun
-Lightning striker (assault lightning rifle, where the bursts of lightning gets longer each shot)
-Ultra Lightning Striker
-Golden Nuke launcher (is added to the golden weapon collection and is unlocked same way as any other not hardmode exclusive or something)
-Shovel Crash (360 shovel with different kinds of slashes all around you)
-Lightning Crash
-Ultra heavy revolver, (more dmg than ultra revolver, more cost rad and ammo, little bit slower, massive knockback, breaks walls)
-Coffee cannon (Tosses coffee mugs at enemies speeds up the decision making of enemies it hits, splits into bullets (coffee mug shards), you move faster while holding this)
-Super bouncer bazooka
-Super heavy slugger
-Super Gyro burster
-Seeker Cannon (renamed existing one seeker wave gun and changed it's sprite)
-Super seeker cannon
-super blood cannon
-heavy blood bullet shotgun
-missile cannon
-Super missile cannon
-Kraken cannon (changed existing kraken cannon names to kraken launcher)
-Super Kraken Cannon
-Bowling ball launcher
-Super lightning crossbow
-Split seeker pistol
-Blood shortgun
-Blood hammer (dmg increased with melting doomed ultra (not the dmg dealt to you)) Can damage you but cannot kill you
-Heavy blood hammer (bigger slash, can hit multiple times more dmg also deals more dmg to you if you miss) Can damage you but cannot kill you
-Explosive minigun
-O
-Super wrong direction
-bullet shovel
-triple assault rifle
-snake gun
-eliminator (splinter devastator, works with bolt marrow)
-Heavy Double Shotgun
-Double accelerator
-Assault Flugger
-Spear launcher (very similar to crossbow but much less pierce and more damage)
-Splinter Spear launcher (spear splits into 3 splinter upon hit) higher firerate and projectile speed
-Auto Spear launcher (even higher projectile speed and firerate) No splitting into splinter
-Super Electro Cannon
-Toxic Assault Rifle
-Toxic Minigun
-Toxic Wazer Rifle
-Golden bow (unlockable starting weapon) has a higher firerate than the regular bow and charges faster (but not by much)
-Ultra Sawed-Off shotgun (loop with rusty sawed-off shotgun (hands))
-Splasma Cannon (plasma cannon spawning spiraling plasma)
-Splasma Gun (Plasma gun spawning spiraling mini plasma)
-
-FEATURES
-New ultra mod replacing blade to grenade, Lighting to pellets
-Ultra flame can now swap to ultra morph when using the ultramod
-Ultra slugger now is compatible with ultra mods (bullet <=> shotgun shotgun<=> bolt)
-Ultra bolts are now compatible with ultra mods
-Ultra mod rocket bolt for nuke now also spawns two splinters
-Starting from loop 7 there will be new gold totems. These totems double the maximum health and increase the raddrop & itemdroprate from enemies within range. And will continuesly maxheal enemies for 25% of their health, it will also make the enemies near it more aggressive. An additional one spawns every other loop. (these totems have a high droprate and drop a lot of rads)
-New Gold jungle flies, they will only appear on loop 2+ and the chance increases each loop, Explode in gass fires gass and more maggots. Also deals more melee damage has more health and is faster. (drops more rads and items, lower chance to spawn compared to other gold enemies) Ranged weapons should be pretty gut against this.
-New Golden Crystals,
-New Inverted Golden crystals
-New Golden Teapot
-New Inverted Golden Teapot
-New Inverted Golden Snow tanks
-New Golden Snipers (loop 1 +) (explode into lightning upon death fire lines of fire)
-new Inverted Golden Snipers (loop 1+) (line of frostflame faster lower health more rads)
-Golden Necromancers (loop 1+) Can spawn freaks or explo freaks, fire cubes bullets at the player. and has a lot of health, revive spawns Lightning
-Inverted golden necromancer (loop 1+)
-New heavy pellets are compatible with ultra mods
-Ultra lightning can now break walls, Ultra lightning is now better at targeting enemies, and will deal 10 damage instead of 12
-Shotgun > electro ultra now has added swap heavy slugs to electro cannon balls
-New Plant Ultra C (Apex predator)
-Added gold unlock sound
-added gold weapon sounds
-Recycle Gland now shows percentages, and this percentage changes for doctor and doctor's better wep mut ultra (though this percentage is not entirely accurate guns such as disperse machinegun have a little lower chance to return bullets)
-Boiling veins with Doctor's Ultra A will now show that the thresshold moved up to 8hp
-Shotgun shoulders now has the added benefit of making your shotgun pellets, slugs shells etc etc. not deflectable by enemies.
-Recycle Gland now has the added benefit where it makes your bullets not deflectable by enemies (this includes ally bullets)
-Going through a couple of enemies to make knockback and impact wrist have a better effect on some enemies.
-Rabbit paw now shows percentages
-Changed Rage HUD icon
-Trigger fingers now shows percentages
-YV's fire rate boosting ultras now show percentages
-Two new mutations
-
-Flexible Elbows:
-Increase secondary fire rate,
-If secondary is reloaded:
-Increase primary firerate
-If not:
-Enemies can drop additional items
-Puffy Cheeks:
-Can preemptively reload up to two shots.
-
-If you have both puffy cheeks and flexible elbows, you get both flexible elbows buffs. So if your secondary is normally reloaded, you get the primary firerate buff. And if it is still loading in extra shots you also get the additional drops.
-For robot's three weapons ultra. It will concider any offhand weapon. So you are likely to have both buffs there aswell. When one of the weapons is fully reloaded you get the primary firerate buff. When one of them is not fully reloaded you get additional drops. These effects stack for each offhand weapon! So if both your secondary and tertiary weapon is reloaded you get a 60% primary firerate boost. And enemies can drop even more items if both weapons are not reloaded!
-
-Rage now mentions all weapons as it reloads your offhand weapons aswell
-Fish can roll ultra now mentions it boost primary firerate
-Changed Viking Ultra C, now boosts firerate when you have armour and no longer consumes armour when using armour strike, instead only use health
-New secret fish ultra
-Swapped fish b and c skins
-Optimized some code/performance stuff
-Extra feet close dodges now work on yung cuz's buddies
-Refactored somewhat hidden mechanic where if you have 0 ammo in both non melee weapons, an ammochest could respawn. Now it will check if you have not enough ammo to fire the weapon, it will now also check if there are no other ammo chests left.
-Toxic lightning and explosive bolts are now included in the ultra mod program. They will swap with toxic slugs, toxic rockets or explosive plasma etc. (there is no gun that fires those projectiles normally)
-Seeker bolts now stick into enemies fun cruel fun
-New Blood pistol sprite & new Kraken pistol sprite
-You can now choose what exact weapon mod you want to replace when you have max weapon mods
-The 100% cheatcode now unlock Hands!
-New gamemodes
-
-Melee only
-Start with a melee weapon and with long arms, Only melee weapons drop
-Unlock: Wield 3 melee weapons at the same time
-
-Ultra mutation start
-Start with an ultra mutation (of your choice)
-You can get an extra ultra mutation once you reach level 10.
-Unlock: take 20 different ultra mutations (if you've already done this, it will unlock once you take your an ultra mutation)
-
-New gamemode One hit wonder:
-Unlock requirement: Beat 4 areas without taking damage
-(in this gamemode alkaline salive, strong spirit and boiling veins are all disabled, unlockables are enabled)
-(rhino skin, tough shell, sharpstress, bloodlust and second stomache are disabled for all characters except rebel, yung cuz, and skeleton as they can use health as a resource)
-The boss bounty rewards for +1 max HP are replaced with different rewards.
-
-Changed weapon HUD
-Ultra mod explosion <=> blood explosion
-Small explosions will now be swapped to blood explosions
-Atom's extra explosions will now also swap to blood explosions
-When using Atom's explosion ultra and swapping explosions to blood the converted explosions will retain their fire effect
-
-With hammerhead you now have a small chance to find resources in any wall you break (not just walls you break with hammerhead). This makes it so that hammerhead has synergies with wall breaking weapons instead of anti-synergy. This chance gets buffed with anything that upgrades your droprate (rabbit paw, rage rebel ultra)
-Hands ultra Irradiated and Negative environment are now both included in the random ultra pool
-
-Green outline on mutations will now dissapear when you have unlocked the all mutations gamemode
-Golden border on characters you have 100%  (looped, skins unlocked, crown start unlocked all gold weapons unlocked)
-Oasis skull entrance is now only available in 1-2, retail path is still available on 1-1
-Looping now resets your health to maxhealth and gives you some ammo for all types.
-Added Robot's Ultra C (extra storage (carry three weapons)) to the random ultras pool.
-Robot's Ultra B now has a 0.2% chance to drop a giant golden weapon chest and a 0.8% chance to drop a gold weapon chest
-Business hog ultra mutation art (B ultra)
-New hidden ultra 'trash'
-All remaining ultra mutation art is now done! A lot of them are done by Seymour Schlong
-Horror total forecall ultra will now always show you an ultra mutation so if you somehow managed to level up several times your normal mutation choices will be ultra choices untill you choose one then it will switch back to normal mutation choices.
-You can now skip through the first few screens and logos allowing you to start even faster.
-Crowns now have unique sprites depending on the crown you take. (Most of the new ones are created by Seymour Schnlong)
-New HUD element replacing the bottom crown text, now used to display a little icon if you are in a gamemode that is not normal mode. If you hover over it you will get the text telling you what gamemode you are in.
-Weapon smith now mods weapons much much faster
-Power craving now makes you mod weapons faster. (It stacks with weapon smiths new tiny passive)
-Sharpteeth sfx
-The pizza sewers entrance will now ask you nicely if you actually want to enter it (after you blew up the entrance).
-Added some new crosshair
-Custom sideart! Just switch to option 16 in the sideart options. And tick the box to load in your custom images
-Horror stalker ultra now spawns bullets in the colour of the horror skin you are using
-Fish's partner now works with ultra mods. It will act as a bullet in ultra mod swapping. However the damage numbers have been adjusted since a partner bullet does 4 damage and a normal bulllet will deal 3 damage. For this reason when it swaps to a pellet (which normall does 3-2 damage) the pellet will deal 4-3 damage. Lasers will be a little thicker than a normal bullet laser. and splinters will not have their damage reduced. Swapping the projectile type will lose the ally damage buff from rebel's ultra.
-Rebel ally bullets will now work with ultramods, These act exactly the same as normal bullets
-Lives are now permanent and will regenerate over 3 loops. This means lastwish can no longer regain its original ability of giving you a life (previously done by taking the frozen jungle plant). Now if you take lastwish again, it will regain part of your existing life. If you reroll last wish it will remove 1 part of your life but it will no longer remove the entire life. Rerolling a partial life will prioritize lives that are not full/active.
-New addition to Atom Ultra D (Anti matter - teleport into walls)
-Faded pickups transform into friendly ultra lightning and rads
-
-
-New crowns:
-
-Crown of protection:
-Weapon Drops (over) Heal 1HP, Instead of giving ammo
-Is increased to 2HP with second stomache.
-In combination with Weapon Smith Ultra D (Scrap finder): You will still get the additional ammo from this ultra, but the initial amount of ammo is gone, so ithe negative part of this crown will be offset.
-
-Crown of Risk
-70% higher droprate when above 50% max hp
-50% lower droprate when below 50% max hp
-(increases droprate like rabbitpaw does, so also droprate for confiscate (Fish ultra))
-Slightly different from retail as in retail the droprate buff only applies when at max hp and the buff is only 50%.
-Crown will glow when you are above 50% max hp.
-
-Crown of Luck
-Start each area with 1HP 20% chance any enemy spawns in with 10% hp.
-This HP reduction stacks with glass arm cannon and scarier face.
-This crown works on bosses
-The chance for higher hp enemies to get the hp reduction is slightly smaller. (anything below 100 hp is 25 in 100. And as an example for a high hp target: 300hp it will be 25 in 106.
-Unlike crown of life your health will not be immediatly adjusted upon picking this.
-
-Crown of speed
-Higher projectile speed (for enemy and your projectiles)
-You move a little faster.
-(The little crown that follows you is faster than any other crown)
-
-Crown of Sloth
-Slower projectile speed (for enemy and your projectiles)
-You move slightly slower, 
-each area decreases the difficulty and weapon tier instead of increasing it.
-This crown is hidden.
-To unlock it you need to have taken crown of destiny, it will replace the crown of destiny.
-This is the slowest moving crown
+Fixed ammo chests sometimes being converted to mystery chests in crownvault
+Banditland should now be only one subarea instead of 2 when coming from inverted vulcano
+Fixed atom Anti Matter (ultra D) sometimes making teleport unavailable
+Fixed some cases where elementor's walls would not take the correct area specific sprites.
+Lightning and kraken and pretty much every projectile should now be able to phase through the wall correctly (elemntor ultra A (earthbender))
+Optimized some wallbreaking code
+Fixed a bug where friendly idpd van could contact damage the player
+Fixed a bug that caused the flame splinters to often miss their target

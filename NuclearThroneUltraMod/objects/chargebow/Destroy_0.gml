@@ -2,7 +2,7 @@
 if instance_exists(Player)
 {
 
-	snd_play(sndCrossbow)
+	snd_play_fire(sndCrossbow)
 	var d = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 	var maxcharged = false;
 	if rate >= maxcharge-1
@@ -21,7 +21,7 @@ if instance_exists(Player)
 	with instance_create(x,y,Bolt)
 	{
 		sprite_index=other.boltSprite;
-		motion_add(d+(random(4)-2)*Player.accuracy,10+(other.rate*5))
+		motion_add(d+(other.bowOffset+(random(4)-2))*Player.accuracy,10+(other.rate*5))
 		dmg = 5 + (other.rate*5);
 		image_angle = direction
 		team = other.team

@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskUltraLanceSlash",
     "path": "sprites/mskUltraLanceSlash/mskUltraLanceSlash.yy",

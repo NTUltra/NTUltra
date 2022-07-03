@@ -6,7 +6,7 @@ if instance_exists(creator)
 	//FIRING
 	if (KeyCont.key_fire[Player.p] == 1 or KeyCont.key_fire[Player.p] == 2 or Player.keyfire == 1 or Player.clicked == 1 or KeyCont.key_spec[Player.p] == 1 or KeyCont.key_spec[Player.p] == 2)
 	{
-		snd_play(sndSwapBow,0,false,false,3,false,false,0.8,false,id,1+(rate/maxcharge));
+		snd_play(sndSwapBow,0,true,false,3,false,false,0.6,false,id,1+(rate/maxcharge));
 		BackCont.shake+=3+rate;
 		rate++;
 		Sleep(5*rate);

@@ -4,7 +4,8 @@ alarm[0] = 15
 snd_play(sndAssassinAttack)
 wepangle = -wepangle
 motion_add(gunangle,6)
-if target > 0
+scrTarget();
+if target > 0 && instance_exists(target)
 {
 	gunangle = point_direction(x,y,target.x,target.y)
 

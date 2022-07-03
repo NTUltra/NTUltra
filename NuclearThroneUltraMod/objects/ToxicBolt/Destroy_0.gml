@@ -3,4 +3,3 @@ with instance_create(x,y,ToxicThrowerGas)
 scrCanHumphry();
 
 snd_play(sndToxicBoltGas);
-

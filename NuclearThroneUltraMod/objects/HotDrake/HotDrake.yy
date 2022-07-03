@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskHotDrake",
     "path": "sprites/mskHotDrake/mskHotDrake.yy",

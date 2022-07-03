@@ -18,6 +18,7 @@ if um == ultramods.toxicFire
 	with instance_create(x,y,SwarmBolt)
 	{
 		scrCopyWeaponMod(other);
+		hits -= 1;
 		direction = other.direction;
 		image_angle = direction;
 		speed = other.speed;

@@ -9997,7 +9997,7 @@ function scrFire2() {
 	snd_play_fire(sndHeavySpear)
 
 	with instance_create(x,y,Spear)
-	{motion_add(aimDirection+(random(4)-2)*other.accuracy,24)
+	{motion_add(aimDirection+(random(12)-16)*other.accuracy,24)
 	image_angle = direction
 	team = other.team}
 
@@ -10253,6 +10253,243 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 5
 	wkick = 7
+
+	break;
+	
+	//EVERYTHING LINE
+	case 574:
+
+	snd_play_fire(sndFrostShot1)
+	snd_play_fire(sndBloodLauncher)
+	snd_play_fire(sndHyperLauncher)
+	with instance_create(x,y,LineSnow)
+	{
+	direction = aimDirection-(40+(random(2)-1))*other.accuracy
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,LineGrenade)
+	{
+	direction = aimDirection-(20+(random(2)-1))*other.accuracy
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,LineBlood)
+	{
+	direction = aimDirection+(random(2)-1)*other.accuracy
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,LineToxic)
+	{
+	direction = aimDirection+(20+(random(2)-1))*other.accuracy
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,LineFire)
+	{
+	direction = aimDirection+(40+(random(2)-1))*other.accuracy
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 8
+	wkick = 8
+
+	break;
+	
+	//HEAVY POP BLADE GUN
+	case 575:
+
+	snd_play_fire(sndDiscgun)
+
+	with instance_create(x,y,BladeHeavyPopShooter)
+	{motion_add(aimDirection+(random(10)-5)*other.accuracy,10)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 7
+	wkick = 4
+
+	break;
+	
+	//SUPER BOW
+	case 576:
+
+	with instance_create(x,y,ChargeBow)
+	{
+		maxcharge=3;//maxrate
+		creator = other.id
+		chargetime = 7;
+		team = other.team
+		event_perform(ev_alarm,0)
+	}
+	with instance_create(x,y,ChargeBow)
+	{
+		bowOffset = 5;
+		maxcharge=3;//maxrate
+		creator = other.id
+		chargetime = 7;
+		team = other.team
+		event_perform(ev_alarm,0)
+	}
+	with instance_create(x,y,ChargeBow)
+	{
+		bowOffset = -5;
+		maxcharge=3;//maxrate
+		creator = other.id
+		chargetime = 7;
+		team = other.team
+		event_perform(ev_alarm,0)
+	}
+	with instance_create(x,y,ChargeBow)
+	{
+		bowOffset = 10;
+		maxcharge=3;//maxrate
+		creator = other.id
+		chargetime = 7;
+		team = other.team
+		event_perform(ev_alarm,0)
+	}
+	with instance_create(x,y,ChargeBow)
+	{
+		bowOffset = -10;
+		maxcharge=3;//maxrate
+		creator = other.id
+		chargetime = 7;
+		team = other.team
+		event_perform(ev_alarm,0)
+	}
+
+	break;
+	
+	//HEAVY BULLET SWORD
+	case 577:
+
+	snd_play_fire(choose(sndSword1,sndSword2))
+
+	instance_create(x,y,Dust)
+
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
+	{
+		sprite_index = sprHeavySlash;
+	dmg = 16
+	longarms = 0
+	if instance_exists(Player)
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection,2+longarms)
+	image_angle = direction
+	team = other.team}
+
+
+	with instance_create(x,y,HeavyBurst)
+	{
+	creator = other.id
+	ammo = 3
+	time = 2
+	team = other.team
+	event_perform(ev_alarm,0) 
+	}
+
+
+	wepangle = -wepangle
+	motion_add(aimDirection,6)
+	BackCont.viewx2 += lengthdir_x(14,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(14,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 3
+	wkick = -5
+
+	break;
+	
+	//AUTO SPLINTER SPEAR LAUNCHER
+	case 578:
+
+	snd_play_fire(sndHeavySpear)
+
+	with instance_create(x,y,SplinterSpear)
+	{motion_add(aimDirection+(random(12)-16)*other.accuracy,23)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 4
+
+	break;
+	
+	//TRIPLE VAN CANNON
+	case 579:
+	
+		snd_play_fire(sndPopgun);
+		snd_play_fire(sndPlasmaHit);
+		
+		with instance_create(x,y,VanCannon)
+		{
+			direction = aimDirection+(random(16)-8)*other.accuracy;
+			image_angle = direction;
+			team = other.team;
+		}
+		var offset = 40 + accuracy*10;
+		var ldx = lengthdir_x(offset,aimDirection+90);
+		var ldy = lengthdir_y(offset,aimDirection+90);
+		with instance_create(x+ldx,y+ldy,VanCannon)
+		{
+			direction = aimDirection+(random(16)-8)*other.accuracy;
+			image_angle = direction;
+			team = other.team;
+		}
+		ldx = lengthdir_x(offset,aimDirection-90);
+		ldy = lengthdir_y(offset,aimDirection-90);
+		if audio_is_playing(sndVanWarning)
+				audio_stop_sound(sndVanWarning);
+		with instance_create(x+ldx,y+ldy,VanCannon)
+		{
+			direction = aimDirection+(random(16)-8)*other.accuracy;
+			image_angle = direction;
+			team = other.team;
+		}
+		BackCont.viewx2 += lengthdir_x(20,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(20,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 50
+		wkick = 10
+	break;
+	
+	//TOXIC LAUNCHER
+	case 580:
+
+	snd_play_fire(sndToxicLauncher)
+
+	with instance_create(x,y,ToxicGrenade)
+	{
+	sticky = 1
+	motion_add(aimDirection+(random(6)-3)*other.accuracy,11)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 2
+	wkick = 5
+
+	break;
+	
+	//HEAVY TOXIC LAUNCHER
+	case 581:
+
+	snd_play_fire(sndHeavyNader);
+	snd_play_fire(sndToxicLauncher);
+
+	with instance_create(x,y,HeavyToxicGrenade)
+	{
+	sticky = 1
+	motion_add(aimDirection+(random(6)-3)*other.accuracy,10)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(16,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(16,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3
+	wkick = 6
 
 	break;
 	
