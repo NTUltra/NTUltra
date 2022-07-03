@@ -1,5 +1,8 @@
 if canBounce
-move_bounce_solid(false)
+{
+	move_bounce_solid(false)
+	canBounce = false;
+}
 else if speed != 0
 {
 snd_play(sndBoltHitWall,0.1,true,true,1,false,true,0.76)

@@ -19,7 +19,7 @@ shad = noone;//surface_create(view_wview,view_hview)
 
 
 alarm[0] = 1
-alarm[1] = 120
+alarm[1] = 130
 canSpawnPopoThisManyTimes = 2 + GetPlayerLoops();
 spawnedThisManyPopo = 0;
 
@@ -52,6 +52,11 @@ if instance_exists(Player)
 		i ++;
 	}
 	vanDelay = max(100,vanDelay - ((wantVanAmount-1)*40));
+	if Player.skill_got[29]//Insomnia
+	{
+		vanDelay *= 1.25;
+		alarm[1] += 180;
+	}
 	if ( (Player.area == 6 || Player.area == 112) && Player.subarea ==  2 )
 		wantVanAmount = min(GetPlayerLoops()-2,2);
 	if wantVanAmount > 2

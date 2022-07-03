@@ -5,4 +5,3 @@ event_inherited();
 snd_play(sndExplosion);
 with instance_create(x,y,PurpleExplosion)
 	team = other.team;
-

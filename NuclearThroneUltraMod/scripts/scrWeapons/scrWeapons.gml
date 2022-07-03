@@ -3731,7 +3731,7 @@ function scrWeapons() {
 	wep_load[338] = 12//10
 	wep_cost[338] = 1
 	wep_sprt[338] = sprKrakenPistol
-	wep_area[338] = 2
+	wep_area[338] = 3
 	wep_text[338] = "kraken gives you iframes"
 	wep_swap[338] = sndSwapDragon
 	wep_rad[338] = 0;
@@ -5098,7 +5098,7 @@ function scrWeapons() {
 	wep_load[462] = 20
 	wep_cost[462] = 2
 	wep_sprt[462] = sprFlameSplinterGun
-	wep_area[462] = 7
+	wep_area[462] = 8
 	wep_text[462] = "hot nails"
 	wep_swap[462] = sndSwapBow
 	wep_rad[462] = 0;
@@ -5766,7 +5766,7 @@ function scrWeapons() {
 	wep_name[523] = "LIGHTNING STRIKER"
 	wep_type[523] = 5
 	wep_auto[523] = 0
-	wep_load[523] = 40
+	wep_load[523] = 38
 	wep_cost[523] = 4
 	wep_sprt[523] = sprLightningStriker
 	wep_area[523] = 11
@@ -5777,7 +5777,7 @@ function scrWeapons() {
 	wep_name[524] = "ULTRA LIGHTNING STRIKER"
 	wep_type[524] = 5
 	wep_auto[524] = 0
-	wep_load[524] = 44
+	wep_load[524] = 40
 	wep_cost[524] = 8
 	wep_sprt[524] = sprUltraLightningStriker
 	wep_area[524] = 23

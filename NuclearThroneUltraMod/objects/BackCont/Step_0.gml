@@ -2,6 +2,14 @@ var vw = __view_get( e__VW.WView, 0 )*0.5;
 var vh = __view_get( e__VW.HView, 0 )*0.5;
 if instance_exists(Player)
 {
+	//Only start spawning vans and popo when no longer a sheep
+	if Player.justAsheep 
+	{
+		if alarm[2] > 0
+			alarm[2] += 1;
+		if alarm[1] > 0
+			alarm[1] ++;
+	}
 if !instance_exists(GenCont)
 {
 viewdist = 9

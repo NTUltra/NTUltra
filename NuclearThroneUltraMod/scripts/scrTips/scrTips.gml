@@ -37,6 +37,7 @@ function scrTips() {
 	"pick your mutations wisely",
 	"if only you could talk to the monsters",
 	"steroids can dual wield",
+	"ammo chests always give#ammo for your primary weapon",
 	//"always wear dry socks",
 	"one fast firing weapon#one strong weapon",
 	"energy weapons use lots of ammo",
@@ -236,7 +237,8 @@ function scrTips() {
 	,"BAAAA","BAHHH","moo?","silence of the lamb","just a sheep","peaceful"
 	,"shaun the sheep","sheeps don't harm people","shawarma","charge allows you#to move through#some projectiles",
 	"charge increases damage#the longer you charge it","while charging#at high speed#you don't take#contact damage","you are immune#while charging#at high speed",
-	"extra feet and gamma guts#buff your charge","eat grass"
+	"extra feet and gamma guts#buff your charge","eat grass","popo won't come for you#while passive is active","you don't take contact damage#while passive is active"
+	,"insomnia goes in effect#after your passive"
 	)
 
 	if Player.race = 14//panda
