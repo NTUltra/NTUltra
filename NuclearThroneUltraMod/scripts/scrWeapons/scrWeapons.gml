@@ -6416,12 +6416,12 @@ function scrWeapons() {
 	wep_type[582] = 1
 	wep_auto[582] = 1
 	wep_load[582] = 4
-	wep_cost[582] = 7//9
+	wep_cost[582] = 8//9
 	wep_sprt[582] = sprUltraTripleHeavyMachinegun
 	wep_area[582] = 32
 	wep_text[582] = "triple machinegun, so much fun"
 	wep_swap[582] = sndSwapMachinegun
-	wep_rad[582] = 13;//21
+	wep_rad[582] = 12;//21
 	
 	maxwep = array_length(wep_name)-1;
 

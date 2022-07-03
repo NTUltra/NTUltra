@@ -14,7 +14,7 @@ repeat(am)
 {
 	with instance_create(x,y,ToxicThrowerGas)
 	{
-		motion_add(0.5,ang);
+		motion_add(1,ang);
 		scrCanHumphry();
 	}
 	ang += angstep;

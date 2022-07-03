@@ -35,9 +35,9 @@ function scrEndBoss() {
 
 			repeat(racemax)
 			{
-			if besttime > cbst_time[dir]
-			bestofall=false;
-			dir++;
+				if besttime > cbst_time[dir]
+					bestofall=false;
+				dir++;
 			}
 
 			txttime = string(time_hours)+":"+minutesstring+":"+secondsstring+":"+microseconds;
@@ -45,26 +45,26 @@ function scrEndBoss() {
 		    if bestofall
 		    {
     
-		    cbst_time[Player.race] = besttime;
+			    cbst_time[Player.race] = besttime;
     
-		    with instance_create(x,y,UnlockPopup)
-		    {
-				mytext="BEST TIME YET!!! "+other.race_name[Player.race]+"#"+other.txttime
-		    }
+			    with instance_create(x,y,UnlockPopup)
+			    {
+					mytext="BEST TIME YET!!! "+other.race_name[Player.race]+"#"+other.txttime
+			    }
     
-		    scrSave();
+			    scrSave();
 		    }
 		    else if besttime < cbst_time[Player.race]
 		    {
     
-		    cbst_time[Player.race]= besttime;
+			    cbst_time[Player.race]= besttime;
     
-		    with instance_create(x,y,UnlockPopup)
-		    {
-		    mytext="BEST TIME FOR "+other.race_name[Player.race]+"#"+other.txttime
-		    }
+			    with instance_create(x,y,UnlockPopup)
+			    {
+			    mytext="BEST TIME FOR "+other.race_name[Player.race]+"#"+other.txttime
+			    }
     
-		    scrSave();
+			    scrSave();
 		    }
     
 		}

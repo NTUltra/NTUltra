@@ -9999,7 +9999,7 @@ function scrFire2() {
 	snd_play_fire(sndHeavySpear)
 
 	with instance_create(x,y,Spear)
-	{motion_add(aimDirection+(random(12)-16)*other.accuracy,24)
+	{motion_add(aimDirection+(random(12)-6)*other.accuracy,24)
 	image_angle = direction
 	team = other.team}
 
@@ -10408,7 +10408,7 @@ function scrFire2() {
 	snd_play_fire(sndHeavySpear)
 
 	with instance_create(x,y,SplinterSpear)
-	{motion_add(aimDirection+(random(12)-16)*other.accuracy,23)
+	{motion_add(aimDirection+(random(12)-6)*other.accuracy,23)
 	image_angle = direction
 	team = other.team}
 

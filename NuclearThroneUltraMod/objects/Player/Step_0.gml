@@ -1367,7 +1367,7 @@ if skill_got[2]
 			{
 				sprite_index = sprExtraFeetCloseDodge;	
 			}
-			if scrDrop(80,0)
+			if scrDrop(80,5)
 				snd_play(sndExtraFeetDodge);
 			else
 				snd_play(sndExtraFeetDodgeFail);
@@ -1378,7 +1378,7 @@ if skill_got[2]
 			{
 				sprite_index = sprExtraFeetCloseDodge;	
 			}
-			if scrDrop(75,0)
+			if scrDrop(75,4)
 				snd_play(sndExtraFeetDodge);
 			else
 				snd_play(sndExtraFeetDodgeFail);

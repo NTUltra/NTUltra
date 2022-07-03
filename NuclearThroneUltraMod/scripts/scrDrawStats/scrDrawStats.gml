@@ -23,43 +23,43 @@ function scrDrawStats() {
 
 	repeat(UberCont.racemax)
 	{
-	kills += UberCont.ctot_kill[dir]
-	deaths += UberCont.ctot_dead[dir]
-	loops += UberCont.ctot_loop[dir]
+		kills += UberCont.ctot_kill[dir]
+		deaths += UberCont.ctot_dead[dir]
+		loops += UberCont.ctot_loop[dir]
 
-	if UberCont.cbst_kill[dir] > bkills && dir != 0{
-	bkills = UberCont.cbst_kill[dir]
-	rkills = dir}
+		if UberCont.cbst_kill[dir] > bkills && dir != 0{
+		bkills = UberCont.cbst_kill[dir]
+		rkills = dir}
 
-	if UberCont.cbst_diff[dir] > bdiff && dir != 0{
-	bdiff = UberCont.cbst_diff[dir]
-	rdiff = dir}
+		if UberCont.cbst_diff[dir] > bdiff && dir != 0{
+		bdiff = UberCont.cbst_diff[dir]
+		rdiff = dir}
 
-	if UberCont.cbst_loop[dir] > bloop && dir != 0{
-	bloop = UberCont.cbst_loop[dir]
-	rloop = dir}
+		if UberCont.cbst_loop[dir] > bloop && dir != 0{
+		bloop = UberCont.cbst_loop[dir]
+		rloop = dir}
 	
-	wallkill = UberCont.ctot_walls_destroyed;
-	//if UberCont.cbst_time[UberCont.dir] = 999999999
-	//besttimestring="NO TIME YET"
-	//else
-	//{
+		wallkill = UberCont.ctot_walls_destroyed;
+		//if UberCont.cbst_time[UberCont.dir] = 999999999
+		//besttimestring="NO TIME YET"
+		//else
+		//{
+		
+		if UberCont.cbst_time[dir] < btime && dir != 0 {
+			btime = UberCont.cbst_time[dir];
+			rtime = dir
+		}
 
-	if UberCont.cbst_time[dir] < btime && dir != 0{
-	btime = scrTime(UberCont.cbst_time[dir],false)
-	rtime = dir
+		//besttimestring = UberCont.cbst_time[UberCont.race]
+		//}
+
+		dir += 1
 	}
-
-	//besttimestring = UberCont.cbst_time[UberCont.race]
-	//}
-
-
-	dir += 1
-	}
-
-	if btime = 999999999
-	btime="NO TIME YET"
-
+	
+	if btime == 999999999
+		btime="NO TIME YET"
+	else
+		btime = scrTime(btime,false);
 	race_name[0]="RANDOM"
 	
 	var skillstats  = "";
@@ -126,13 +126,17 @@ function scrDrawStats() {
 	{
 		totUltras = string(totUltras)+"#";	
 	}
-	
+	var raceTime = UberCont.cbst_time[Menu.race];
+	if raceTime == 999999999
+		raceTime = "NO TIME YET"
+	else
+		raceTime = string(scrTime(raceTime,false));
 	txt0 = "#STATISTICS"
-	txt1 = "####TOTAL#TIME#KILLS#DEATHS#LOOPS#WALLS DESTROYED##BEST#TIME#KILLS#DIFFICULTY#LOOPS##"+string(race_name[Menu.race])+"#BEST KILLS#TOTAL KILLS#DEATHS#LOOPS";
+	txt1 = "####TOTAL#TIME#KILLS#DEATHS#LOOPS#WALLS DESTROYED##BEST#TIME#KILLS#DIFFICULTY#LOOPS##"+string(race_name[Menu.race])+"#BEST KILLS#TOTAL KILLS#DEATHS#LOOPS#BEST TIME";
 	var txt1b = "#"+skillnames+"#MUTATIONS TAKEN###" + ultranames+"#ULTRAS TAKEN";
 	txt2 = "#####"+string(time)+"#"+string(kills)+"#"+string(deaths)+"#"+string(loops)+"#"+string(wallkill)+"###"+string(btime)+" "+string(race_name[rtime])+"#"+string(bkills)+" "+string(race_name[rkills])+"#"+string(bdiff)+
 	" "+string(race_name[rdiff])+"#"+string(bloop)+" "+string(race_name[rloop])
-	+"###"+string(UberCont.cbst_kill[Menu.race])+"#"+string(UberCont.ctot_kill[Menu.race])+"#"+string(UberCont.ctot_dead[Menu.race])+"#"+string(UberCont.ctot_loop[Menu.race])
+	+"###"+string(UberCont.cbst_kill[Menu.race])+"#"+string(UberCont.ctot_kill[Menu.race])+"#"+string(UberCont.ctot_dead[Menu.race])+"#"+string(UberCont.ctot_loop[Menu.race])+"#"+raceTime
 	var txt2b = "#"+skillstats+"#"+totSkills
 	+"##"+ultrastats + "#"+ totUltras;
 	stxt0 = "#STATISTICS"
