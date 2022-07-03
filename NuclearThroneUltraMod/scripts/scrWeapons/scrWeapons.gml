@@ -5062,7 +5062,7 @@ function scrWeapons() {
 	wep_name[459] = "SPLINTER CRASH"
 	wep_type[459] = 3
 	wep_auto[459] = 0
-	wep_load[459] = 20
+	wep_load[459] = 18
 	wep_cost[459] = 2
 	wep_sprt[459] = sprSplinterCrash
 	wep_area[459] = 8
@@ -5898,7 +5898,7 @@ function scrWeapons() {
 	wep_name[535] = "LASER CRASH"
 	wep_type[535] = 5
 	wep_auto[535] = 0
-	wep_load[535] = 20
+	wep_load[535] = 18
 	wep_cost[535] = 2
 	wep_sprt[535] = sprLaserCrash
 	wep_area[535] = 9

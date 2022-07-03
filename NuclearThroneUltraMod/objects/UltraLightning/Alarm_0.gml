@@ -109,13 +109,13 @@ with instance_create(x,y,UltraLightning)
 	image_angle = direction
 	ammo = other.ammo;
 	team = other.team
-	image_index = other.image_index
+	image_index = other.image_index*0.5
 	if ultraMod == ultramods.lightningPellet && odd
 		alarm[0]=1;
 	else if ammo=20
-	alarm[0]=1;
-	else if ammo=40
-	alarm[0]=1;
+		alarm[0]=1;
+	else if ammo > 40
+		alarm[0]=1;
 	else event_perform(ev_alarm,0);
 }
 }

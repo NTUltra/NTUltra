@@ -70,17 +70,14 @@ with Player
 		with instance_create(x,y,RobotEat)
 		image_xscale = Player.right
 
-		if random(maxhealth) > my_health and Player.crown != 2
-		instance_create(x,y,HPPickup)
-		else
-		instance_create(x,y,AmmoPickup)
+		
 
 		if curse = 1
 		{
-		curse = 0
-		my_health -= 7
-		repeat(10)
-		instance_create(x+random(16)-8,y+random(16)-8,Curse)
+			curse = 0
+			my_health -= 7
+			repeat(10)
+				instance_create(x+random(16)-8,y+random(16)-8,Curse)
 		}
 
 
@@ -95,11 +92,20 @@ with Player
 		if skill_got[5] = 1
 		{
 			snd_play_2d(sndRobotEatUpg)
-			r += 2;
-			instance_create(x,y,AmmoPickup)
+			r += 4;
+			if my_health < maxhealth
+				instance_create(x,y,HPPickup);
+			else
+				instance_create(x,y,AmmoPickup);
 		}
 		else
-		snd_play_2d(sndRobotEat)
+			snd_play_2d(sndRobotEat);
+			
+		if random(maxhealth) > my_health and Player.crown != 2
+			instance_create(x,y,HPPickup)
+		else
+			instance_create(x,y,AmmoPickup)
+		
 		if ultra_got[29] || ultra_got[30] || ultra_got[31] || ultra_got[32]
 			r += 2;
 		scrRaddrop(r);
@@ -151,10 +157,9 @@ with Player
 				{
 					image_angle = langle;
 					team = 2
-					ammo = 12+random(6)+(other.skill_got[5]*4)//60
-					///if Player.ultra_got[59]=1 
-					///ammo+=4;
-					event_perform(ev_alarm,0)
+					ammo = 12+random(6)+(other.skill_got[5]*10)//60
+					alarm[0] = 1;
+					//event_perform(ev_alarm,0);
 					visible = 0
 					with instance_create(x,y,LightningSpawn)
 					image_angle = other.image_angle

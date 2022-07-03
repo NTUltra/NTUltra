@@ -101,12 +101,13 @@ if !instance_exists(GenCont)
 				snd_play(sndBigWeaponChest)
 			}
 			snd_play(sndAmmoChest);
+			//Give primary ammo
 			if other.wep_type[other.wep] = 0 or other.ammo[other.wep_type[other.wep]] = other.typ_amax[other.wep_type[other.wep]]
 				type = choose(1,2,3,4,5)
 			else
 				type = other.wep_type[other.wep]
 
-			other.ammo[type] += other.typ_ammo[type]*2
+			other.ammo[type] += other.typ_ammo[type]*3
 			if other.ammo[type] > other.typ_amax[type]
 				other.ammo[type] = other.typ_amax[type]
 
@@ -125,6 +126,61 @@ if !instance_exists(GenCont)
 				dir.mytext = "+"+string(other.typ_ammo[type]*2)+" "+string(other.typ_name[type])
 				if other.ammo[type] = other.typ_amax[type]
 				dir.mytext = "MAX "+string(other.typ_name[type])
+			}
+			//Give secondary ammo
+			if other.wep_type[other.bwep] = 0 or other.ammo[other.wep_type[other.bwep]] = other.typ_amax[other.wep_type[other.bwep]]
+				type = choose(1,2,3,4,5)
+			else
+				type = other.wep_type[other.bwep]
+
+			other.ammo[type] += other.typ_ammo[type]*3
+			if other.ammo[type] > other.typ_amax[type]
+				other.ammo[type] = other.typ_amax[type]
+
+			if (UberCont.opt_ammoicon)
+			{
+				dir = instance_create(x,y,PopupText)
+				dir.sprt = sprAmmoIconsPickup
+				dir.ii = type-1;
+				dir.mytext = "+"+string(other.typ_ammo[type]*2)
+				if other.ammo[type] = other.typ_amax[type]
+				dir.mytext = "MAX"
+			}
+			else
+			{
+				dir = instance_create(x,y,PopupText)
+				dir.mytext = "+"+string(other.typ_ammo[type]*2)+" "+string(other.typ_name[type])
+				if other.ammo[type] = other.typ_amax[type]
+				dir.mytext = "MAX "+string(other.typ_name[type])
+			}
+			//Give tertiary
+			if other.ultra_got[31]
+			{
+				if other.wep_type[other.cwep] = 0 or other.ammo[other.wep_type[other.cwep]] = other.typ_amax[other.wep_type[other.cwep]]
+					type = choose(1,2,3,4,5)
+				else
+					type = other.wep_type[other.cwep]
+
+				other.ammo[type] += other.typ_ammo[type]*3
+				if other.ammo[type] > other.typ_amax[type]
+					other.ammo[type] = other.typ_amax[type]
+
+				if (UberCont.opt_ammoicon)
+				{
+					dir = instance_create(x,y,PopupText)
+					dir.sprt = sprAmmoIconsPickup
+					dir.ii = type-1;
+					dir.mytext = "+"+string(other.typ_ammo[type]*2)
+					if other.ammo[type] = other.typ_amax[type]
+					dir.mytext = "MAX"
+				}
+				else
+				{
+					dir = instance_create(x,y,PopupText)
+					dir.mytext = "+"+string(other.typ_ammo[type]*2)+" "+string(other.typ_name[type])
+					if other.ammo[type] = other.typ_amax[type]
+					dir.mytext = "MAX "+string(other.typ_name[type])
+				}
 			}
 			instance_destroy();
 			instance_create(x,y,HPPickup);

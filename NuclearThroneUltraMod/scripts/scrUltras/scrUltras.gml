@@ -79,7 +79,7 @@ function scrUltras() {
 	    ultra_tips[15] = "ultra ultra ultra ultra"
     
 	    ultra_name[16] = "DOOMED"
-	    ultra_text[16] = "THE TYPE OF ENEMY THAT DIES LAST IN AN AREA#IS DEAD IN THE NEXT AREA#MORE BLOOD DAMAGE"
+	    ultra_text[16] = "THE TYPE OF ENEMY THAT DIES#LAST IN AN AREA#IS DEAD IN THE NEXT AREA#MORE BLOOD DAMAGE"
 	    ultra_tips[16] = "blood sweat and tears"
     
 	//PLANT 
@@ -452,7 +452,7 @@ function scrUltras() {
 	    ultra_tips[86] = "options"
     
 	    ultra_name[87] = "NEW CAPTAIN"
-	    ultra_text[87] = "AT THE START OF A LEVEL#SUMMON A GROUP OF IDPD#THAT FIGHT FOR YOU#PICKING UP PORTAL STRIKE AMMO#TRIGGERS BLAST ARMOUR"
+	    ultra_text[87] = "AT THE START OF AN AREA#SUMMON A GROUP OF IDPD#THAT FIGHT FOR YOU#PICKING UP PORTAL STRIKE AMMO#TRIGGERS BLAST ARMOUR"
 	    ultra_tips[87] = "rogue leader"
     
 	    ultra_name[88] = "ULTRA POPO"

@@ -31,9 +31,12 @@ scrUnlockGameMode(18,"FOR DESTROYING A VAN");
 snd_play(sndExplosionL)
 var ang = random(360);
 var angStep = 360/3;
+var explo = PopoExplosion;
+if team == 2
+	explo = RogueExplosion;
 repeat(3)
 {
-	with instance_create(x+lengthdir_x(10,ang),y+lengthdir_y(10,ang),PopoExplosion)
+	with instance_create(x+lengthdir_x(10,ang),y+lengthdir_y(10,ang),explo)
 	{
 		if other.team == 2
 		{

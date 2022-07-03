@@ -530,7 +530,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 			}
 			else
 			{
-				scrFire()
+				scrFire();
 				with YungCuzDupe
 					event_user(0);
 			}

@@ -35,24 +35,29 @@ if Player.race = 8
 		    with instance_create(Player.x,Player.y,RobotEat)
 		    image_xscale = Player.right
     
-		    if random(Player.maxhealth) > Player.my_health and Player.crown != 2
-		    instance_create(Player.x,Player.y,HPPickup)
-		    else
-		    instance_create(Player.x,Player.y,AmmoPickup)
+		    
     
 		    if Player.skill_got[5] = 1
 		    {
-		    snd_play(sndRobotEatUpg)
-		    instance_create(Player.x,Player.y,AmmoPickup)
+				snd_play(sndRobotEatUpg)
+				if Player.my_health < Player.maxhealth
+					instance_create(Player.x,Player.y,HPPickup);
+				else
+					instance_create(Player.x,Player.y,AmmoPickup);
 		    }
 		    else
-		    snd_play(sndRobotEat)
+				snd_play(sndRobotEat);
+			
+			if random(Player.maxhealth) > Player.my_health and Player.crown != 2
+				instance_create(Player.x,Player.y,HPPickup)
+		    else
+				instance_create(Player.x,Player.y,AmmoPickup)
 			with Player
 			{
 				var r = 5;
 				if skill_got[5]
 				{
-					r += 2;	
+					r += 4;	
 				}
 				if ultra_got[29] || ultra_got[30] || ultra_got[31] || ultra_got[32]
 					r += 2;

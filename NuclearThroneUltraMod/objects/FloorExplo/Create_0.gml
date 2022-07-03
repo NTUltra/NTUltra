@@ -108,61 +108,11 @@ sprite_index=sprFloor0Explo;
 break;
 }
 
-
-//Create the walls around it
-if !place_meeting(x-16,y,Floor)
-instance_create(x-16,y,Wall)
-
-
-if !place_meeting(x+16,y,Floor)
-instance_create(x+16,y,Wall)
-
-
-if !place_meeting(x,y+16,Floor)
-instance_create(x,y+16,Wall)
-
-
-if !place_meeting(x,y-16,Floor)
-instance_create(x,y-16,Wall)
-
-
-if !place_meeting(x-16,y+16,Floor)
-instance_create(x-16,y+16,Wall)
-
-
-if !place_meeting(x+16,y-16,Floor)
-instance_create(x+16,y-16,Wall)
-
-
-if !place_meeting(x+16,y+16,Floor)
-instance_create(x+16,y+16,Wall)
-
-
-if !place_meeting(x-16,y-16,Floor)
-instance_create(x-16,y-16,Wall)
-
+alarm[3] = 1;
 
 //Sleep(1) fk off
 image_speed = 0
 image_index = choose(1,2,3,4)
-
-if !place_meeting(x-32,y,Floor) && !place_meeting(x-32,y,Wall)
-	instance_create(x-32,y,Top)
-if !place_meeting(x,y-32,Floor) && !place_meeting(x,y-32,Wall)
-	instance_create(x,y-32,Top)
-if !place_meeting(x,y+32,Floor) && !place_meeting(x,y+32,Wall)
-	instance_create(x,y+32,Top)
-if !place_meeting(x+32,y,Floor) && !place_meeting(x+32,y,Wall)
-	instance_create(x+32,y,Top)
-	
-if !place_meeting(x-32,y-32,Floor) && !place_meeting(x-32,y-32,Wall)
-	instance_create(x-32,y-32,Top)
-if !place_meeting(x+32,y-32,Floor) && !place_meeting(x+32,y-32,Wall)
-	instance_create(x+32,y-32,Top)
-if !place_meeting(x-32,y+32,Floor) && !place_meeting(x-32,y+32,Wall)
-	instance_create(x-32,y+32,Top)
-if !place_meeting(x+32,y+32,Floor) && !place_meeting(x+32,y+32,Wall)
-	instance_create(x+32,y+32,Top)
 
 /*
 i=0;
@@ -255,7 +205,7 @@ i++;
 
 alarm[2] = 1;
 
-
+/*
 with Wall
 {
 if !place_meeting(x,y+16,Floor)
@@ -263,7 +213,7 @@ visible = 0
 else
 visible = 1
 }
-
+*/
 /*
 with Wall
 {

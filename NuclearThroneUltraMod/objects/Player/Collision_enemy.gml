@@ -1,5 +1,5 @@
 motion_add(point_direction(other.x,other.y,x,y),other.size*0.5)
-if other.team != team
+if other.team != team && team != 0
 {
 	var actuallyDead = false;
 	if other.team != 0//Dealing the damage with gamma guts
@@ -49,7 +49,7 @@ if other.team != team
 
 	if other.meleedamage > 0 && other.existTime > 25 && !justAsheep && meleeimmunity<1 && alarm[3] < 1//is it a melee enemy?
 	{
-	meleeimmunity=14;
+		meleeimmunity=14;
 	    if (other.my_health<=0 || actuallyDead)
 	    {
 	    }
