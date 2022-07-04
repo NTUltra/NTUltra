@@ -1,4 +1,4 @@
-var extraRange = 28;
+var extraRange = 32;
 if instance_exists(Player) && (!cursed) {
 	var levelEnded = false;
 	with Portal

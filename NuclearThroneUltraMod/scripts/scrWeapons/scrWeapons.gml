@@ -3984,7 +3984,7 @@ function scrWeapons() {
 	wep_load[361] = 10
 	wep_cost[361] = 2.5
 	wep_sprt[361] = sprRewirer
-	wep_area[361] = 12
+	wep_area[361] = 13
 	wep_text[361] = "connect the dots"
 	wep_swap[361] = sndSwapBow
 	wep_rad[361] = 0;
