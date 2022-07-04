@@ -24,14 +24,15 @@ if UberCont.ultramodSwap
 		alarm[11] = 1;
 	}
 }
-else
+if visible
 {
 	dir = random(360)
-	repeat(5)
+	var step = 360/3;
+	repeat(3)
 	{
 	with instance_create(x,y,Smoke)
 	motion_add(other.dir,3+random(1))
-	dir += 360/6
+	dir += step;
 	}
 	if instance_exists(Player)
 	{
@@ -39,7 +40,7 @@ else
 			dmg=6;
 	}
 	snd_play(sndMeatExplo,0.1,true)
-	BackCont.shake += 6
+	BackCont.shake += 4
 }
 team = 2
 

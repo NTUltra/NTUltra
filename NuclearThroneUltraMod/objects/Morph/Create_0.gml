@@ -15,20 +15,20 @@ if UberCont.ultramodSwap
 		visible = false;
 		alarm[11] = 1;
 	}
-	else
-	{
-		repeat(3)
+}
+if visible
+{
+	repeat(3)
 		with(instance_create(x,y,Smoke)){
 		image_blend = make_color_rgb(244,145,255);
-		}
 	}
-}
-repeat(2)
-{
-	with instance_create(x,y,ImpactFX)
+	repeat(2)
 	{
-		motion_add(random(360),0.5);
-		sprite_index = sprMorphFX;
+		with instance_create(x,y,ImpactFX)
+		{
+			motion_add(random(360),0.5);
+			sprite_index = sprMorphFX;
+		}
 	}
 }
 if instance_exists(Player)
