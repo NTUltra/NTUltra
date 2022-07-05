@@ -22,9 +22,9 @@ else if skill == 4
 	with Player
 	{
 		if bskin == 2
-			scrWeaponAdjustCost(85);
+			scrWeaponAdjustCost(0.85);
 		else
-			scrWeaponAdjustCost(95);
+			scrWeaponAdjustCost(0.95);
 	}	
 }
 else if skill == 23 && Player.race == 6 && scrMeleeWeapons(Player.wep) && scrMeleeWeapons(Player.bwep)

@@ -6456,9 +6456,9 @@ function scrWeapons() {
 			if Player.ultra_got[4]//FISH can Gun ultra
 			{
 				if Player.bskin = 2
-					scrWeaponAdjustCost(85);
+					scrWeaponAdjustCost(0.85);
 				else
-					scrWeaponAdjustCost(95);
+					scrWeaponAdjustCost(0.95);
 			}
 		}
 	}
