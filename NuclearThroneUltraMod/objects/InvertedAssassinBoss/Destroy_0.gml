@@ -1,5 +1,8 @@
+if dropItem
+{
 scrDrop(20,0)
 scrDrop(100,0)
+}
 if !playedWinSound
 with Player
 {

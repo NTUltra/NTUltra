@@ -6,7 +6,8 @@ if target > 0
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {
-if point_distance(target.x,target.y,x,y) > 96
+var dis = point_distance(target.x,target.y,x,y);
+if dis > 95 && dis < 200
 {
 gunangle = point_direction(x,y,target.x,target.y)
 if random(8-ammo) < 1 and ammo > 0

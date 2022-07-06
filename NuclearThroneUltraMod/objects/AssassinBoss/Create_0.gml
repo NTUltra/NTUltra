@@ -3,7 +3,7 @@ maxhealth = 190
 meleedamage = 0
 size = 1
 //bloodempty=0
-
+dropItem = true;
 
 event_inherited()
 

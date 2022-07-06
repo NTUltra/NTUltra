@@ -35,8 +35,10 @@ loops = GetPlayerLoops()
 lifes = clamp(1 + (loops - 3),1,3);
 maxWalkSpeed = 3;
 bulletGap = 0.73;
+nadeAmount = 1;
 if loops > 8
 {
+	nadeAmount = 3;
 	nadeSpeed = 4;
 	projectileSpeed = 4.3;
 	actTime = 6;
@@ -51,6 +53,7 @@ if loops > 8
 }
 else if loops > 6
 {
+	nadeAmount = 3;
 	nadeSpeed = 3.5;
 	projectileSpeed = 4.2;
 	actTime = 7;
@@ -63,6 +66,7 @@ else if loops > 6
 }
 else if loops > 4
 {
+	nadeAmount = 3;
 	nadeSpeed = 3;
 	projectileSpeed = 4.1;
 	actTime = 8;
@@ -77,6 +81,7 @@ else if loops > 4
 }
 else if loops > 3
 {
+	
 	nadeSpeed = 2;
 	projectileSpeed = 4;
 	actTime = 9;

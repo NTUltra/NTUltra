@@ -1046,6 +1046,13 @@ if wep == 531//Coffee makes you faster
 	maxspeed += 1;	
 }
 var outofcombat = instance_number(enemy) <= instance_number(IDPDVan) && !instance_exists(becomenemy)
+if instance_exists(SurvivalWave)
+{
+	with SurvivalWave {
+		if alarm[0] > 0
+			outofcombat = false;
+	}
+}
 if outofcombat
 	maxspeed += 1;
 if speed > maxspeed
@@ -1359,7 +1366,7 @@ if skill_got[2]
 	if extrafeetalarm>0
 		extrafeetalarm--;
 
-	if extrafeetalarm == 1 && extrafeetdodged
+	if extrafeetalarm == 7 && extrafeetdodged
 	{
 		if race=25
 		{
@@ -1371,6 +1378,12 @@ if skill_got[2]
 				snd_play(sndExtraFeetDodge);
 			else
 				snd_play(sndExtraFeetDodgeFail);
+				
+			repeat(3)
+				with instance_create(x,y,Rad)
+				{
+					motion_add(random(360),4)
+				}
 		}
 		else
 		{
@@ -1382,27 +1395,34 @@ if skill_got[2]
 				snd_play(sndExtraFeetDodge);
 			else
 				snd_play(sndExtraFeetDodgeFail);
+				
+			repeat(3)
+				with instance_create(x,y,Rad)
+				{
+					motion_add(random(360),4)
+				}
 		}
 	}
 	if instance_exists(projectile) && alarm[3] < 1
 	{
-		if extrafeetalarm < 1 
+		if extrafeetalarm < 1
 		{
-		    if point_distance(x,y,projectile.x,projectile.y)<32//a close projectile is spotted
-		    {
-		        with projectile
-		        {
-			        if point_distance(x,y,other.x,other.y)<31 //&& !place_meeting(x,y,other) && !place_meeting(x+hspeed,y+vspeed,other)
-					{//use close projectile
-			            if team!=other.team//NOT FROM PLAYA!? O_O
-			            {                     
-							other.extrafeetalarm=13;//after this time we check if you've dodged this
-							other.extrafeetdodged=true;
-			            // change a variable here so that you cannot spawn even more items yo?
-			            }
+			var msk = mask_index;
+			mask_index = mskPlayerDodge;
+			var projectiles = ds_list_create();
+			var al = instance_place_list(xprevious,yprevious,projectile,projectiles,false)
+			for (var j = 0; j < al; j++) {
+				with projectiles[| j]
+				{
+					if team!=other.team//NOT FROM PLAYA!? O_O
+			        {                     
+						other.extrafeetalarm=19;//after some time we check if you've dodged this
+						other.extrafeetdodged=true;
 			        }
 				}
-		    }
+			}
+			ds_list_destroy(projectiles);
+			mask_index = msk;
 		}
 	}
 }

@@ -399,8 +399,7 @@ function scrPopulate() {
 	
 	//spawn SEWER FISH boss
     if (Player.area = 2 || Player.area == 110) and Player.subarea = 1 {
-        repeat(Player.loops - 2)
-			instance_create(x, y, WantBoss)
+		instance_create(x, y, WantBoss)
     }
 
     //spawn INVERTED desert boss
@@ -410,13 +409,13 @@ function scrPopulate() {
     }
 	//Big vulture
 	if Player.area = 10 and Player.subarea = 3 {
-        repeat(Player.loops + 1)
+        repeat(ceil(max(1,Player.loops*0.5)))
         instance_create(x, y, WantBoss)
     }
 
     //spawn OASIS boss
     if Player.area = 101 and Player.subarea == 3 {
-        repeat(Player.loops + 1)
+        repeat(ceil(max(1,Player.loops*0.5)))
         instance_create(x, y, WantBoss)
     }
 

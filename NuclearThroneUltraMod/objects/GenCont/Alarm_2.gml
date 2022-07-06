@@ -87,12 +87,12 @@ if Player.area = 114 and Player.subarea = 2
 
 	if (Player.loops>1) && (Player.area = 5 and Player.subarea = 3)
 	{
-		repeat(clamp(floor((Player.loops-1)*0.5),1,3))
+		repeat(clamp(floor((Player.loops-1)*0.25),1,3))
 			instance_create(instance_furthest(Player.x,Player.y,Floor).x+132, instance_furthest(Player.x,Player.y,Floor).y+32,LilHunter);
 	}
 	if (Player.loops>1) && (Player.area = 107 and Player.subarea = 3)
 	{
-		repeat(clamp(floor((Player.loops-1)*0.5),1,3))
+		repeat(clamp(floor((Player.loops-1)*0.25),1,3))
 			instance_create(instance_furthest(Player.x,Player.y,Floor).x+132, instance_furthest(Player.x,Player.y,Floor).y+32,InvertedLilHunter);
 	}
 

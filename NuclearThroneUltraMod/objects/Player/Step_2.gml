@@ -424,7 +424,7 @@ if my_health < prevhealth
 //Extra feet consider failed dodge
 if skill_got[2] && tookHit && !exception
 {
-	extrafeetalarm = 20;
+	extrafeetalarm = 26;
 	extrafeetdodged = false;
 }
 
@@ -602,9 +602,9 @@ if (tookHit)
 		{
 			resetPrevHealth = true;
 			if race=25
-				alarm[3]=34;
+				alarm[3]=30;
 			else
-				alarm[3]=30;//duration
+				alarm[3]=26;//duration
 			myShield = instance_create(x,y,EuphoriaShield);
 			with myShield
 			{

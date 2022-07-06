@@ -1,5 +1,8 @@
+if dropItem
+{
 scrDrop(30,0)
 scrDrop(100,0)
+}
 if UberCont.area == 3
 scrDefeatedRequiredBoss(secretChallengeBosses.bigAssassin);
 scrBossKill();

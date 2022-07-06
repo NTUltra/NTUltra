@@ -31,6 +31,12 @@ if fakeded > 0
 			}
 		}
 	}
+	if instance_number(enemy) - instance_number(IDPDVan) - instance_number(InvertedAssassinBoss) <= 4
+	{
+		raddrop = 0;
+		dropItem = false;
+		instance_destroy();
+	}
 }
 else
 {

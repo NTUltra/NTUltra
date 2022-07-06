@@ -1,5 +1,9 @@
-var extraRange = 32;
+var extraRange = 38;
 if instance_exists(Player) && (!cursed) {
+	if Player.skill_got[3]
+	{
+		extraRange += 26;
+	}
 	var levelEnded = false;
 	with Portal
 	{
@@ -23,7 +27,7 @@ if instance_exists(Player) && (!cursed) {
                 x += lengthdir_x(12, point_direction(x, y, Player.x, Player.y))
                 if place_free(x, y + lengthdir_y(12, point_direction(x, y, Player.x, Player.y)))
                 y += lengthdir_y(12, point_direction(x, y, Player.x, Player.y))
-
+				
                 isGettingSucked = true;
 				if place_meeting(x,y,Player)
 				{

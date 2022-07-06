@@ -66,7 +66,7 @@ if place_meeting(x,y,Player) && !used
 						maxspeed -= 0.5;
 				break;
 				case 3: //PLUTONIUM HUNGER
-					betterpluto = 0;
+					betterpluto = 39;
 				break;
 				case 4: //RABBIT PAW
 					betterrabbitpaw = 0;

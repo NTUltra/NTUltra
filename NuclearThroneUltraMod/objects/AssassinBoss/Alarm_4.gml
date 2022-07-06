@@ -6,7 +6,7 @@ with instance_nearest(instance_furthest(x+random(120)-60,y+random(120)-60,Floor)
 	if object_index == FloorExplo
 		o = 8;
 	with other {
-		if point_distance(x + 16,y + 16,target.x,target.y) <= 64 || place_meeting(other.x + 16, other.y + 16, Wall) {
+		if point_distance(x + o,y + o,target.x,target.y) <= 64 || place_meeting(other.x + o, other.y + o, Wall) {
 			alarm[1] = 1;
 			alarm[2] = 0;
 			exit;

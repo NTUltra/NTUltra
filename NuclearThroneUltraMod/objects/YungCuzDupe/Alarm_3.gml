@@ -4,3 +4,6 @@ my_health=round(my_health);
 if myShield > 0
 with myShield
 	instance_destroy();
+	
+extrafeetalarm = 26;
+extrafeetdodged = false;

@@ -9,7 +9,7 @@ function scrCheckStartingWepUnlocked(argument0, char) {
 			if start_wep_have[dir,char]==0
 			{
 			    //if that weapon is the one I am targeting
-			    if start_wep[dir]=argument0
+			    if start_wep[dir]==argument0
 			    {
 					return dir;
 			    }

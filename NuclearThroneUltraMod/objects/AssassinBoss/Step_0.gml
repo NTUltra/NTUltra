@@ -7,6 +7,7 @@ if (my_health <= 0 && lifes > 0 && fakeded < 0 && instance_number(enemy) - insta
 	team = 2;
 	image_index = 0;
 	fakeded = 80 + random(200);
+	dodge = 0;
 	alarm[1] = fakeded + 10;
 	alarm[2] = 0;
 	alarm[4] = 0;

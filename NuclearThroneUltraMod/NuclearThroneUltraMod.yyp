@@ -3571,6 +3571,7 @@
     {"id":{"name":"sprUltraCrossbow","path":"sprites/sprUltraCrossbow/sprUltraCrossbow.yy",},"order":9,},
     {"id":{"name":"sprUltraSplinterGun","path":"sprites/sprUltraSplinterGun/sprUltraSplinterGun.yy",},"order":10,},
     {"id":{"name":"sprUltraLaserGun","path":"sprites/sprUltraLaserGun/sprUltraLaserGun.yy",},"order":11,},
+    {"id":{"name":"mskPlayerDodge","path":"sprites/mskPlayerDodge/mskPlayerDodge.yy",},"order":29,},
     {"id":{"name":"sprUltraShellHighDmg","path":"sprites/sprUltraShellHighDmg/sprUltraShellHighDmg.yy",},"order":323,},
     {"id":{"name":"RocketExplosive","path":"objects/RocketExplosive/RocketExplosive.yy",},"order":279,},
     {"id":{"name":"sprUltraShotgun","path":"sprites/sprUltraShotgun/sprUltraShotgun.yy",},"order":12,},

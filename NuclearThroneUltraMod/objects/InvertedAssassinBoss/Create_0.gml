@@ -2,6 +2,7 @@ raddrop = 60
 maxhealth = 165
 meleedamage = 0
 size = 1
+dropItem = true;
 //bloodempty=0
 aggression = 0
 

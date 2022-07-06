@@ -6,13 +6,13 @@ function scrHasAllStartingWeapons(charI){
 	with UberCont
 	{
 		var wepdir = 0;
-		repeat(maxstartwep)
+		repeat(maxstartwep + 1)
 		{
-			if start_wep_have[wepdir,charI]=1
+			if start_wep_have[wepdir,charI] == 1
 				gotthisone++;
 			wepdir++;
 		}
-		if gotthisone >= maxstartwep
+		if gotthisone > maxstartwep
 			return true;
 	}
 	return false;

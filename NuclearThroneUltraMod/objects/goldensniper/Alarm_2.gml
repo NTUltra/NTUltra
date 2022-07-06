@@ -6,6 +6,7 @@ with instance_create(x,y,EnemyLineFire)
 	direction = other.gunangle
 	image_angle = direction
 	team = other.team
+	maxRange = 300;
 }
 alarm[1] = 20+random(5)
 gonnafire = 0

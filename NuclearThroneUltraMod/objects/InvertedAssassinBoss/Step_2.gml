@@ -4,6 +4,12 @@
 if fakeded > 0
 {
 	fakeded --;
+	if instance_number(enemy) - instance_number(IDPDVan) - instance_number(InvertedAssassinBoss) <= 4
+	{
+		raddrop = 0;
+		dropItem = false;
+		instance_destroy();
+	}
 	if sprite_index != spr_fake
 		sprite_index = spr_dead;
 	if fakeded <= 0

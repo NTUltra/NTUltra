@@ -13,7 +13,7 @@ ignoreHitme=true;}
 
 
 }
-until dir > 100 or place_meeting(x,y,Wall)
+until dir > maxRange or place_meeting(x,y,Wall)
 alarm[1] = 2
 
 //speed = 4

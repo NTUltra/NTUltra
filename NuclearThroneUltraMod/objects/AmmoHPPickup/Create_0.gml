@@ -20,3 +20,6 @@ image_speed = 0
 event_inherited();
 
 supercursed = false;
+as = 6;
+if instance_exists(Player) && Player.skill_got[3]
+	as = 8;

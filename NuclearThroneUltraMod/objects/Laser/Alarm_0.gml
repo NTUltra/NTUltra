@@ -129,6 +129,7 @@ if place_meeting(x,y,Wall) || place_meeting(x,y,hitme)
 			x += lengthdir_x(4,image_angle);
 			y += lengthdir_y(4,image_angle);
 		}*/
+		isog = false;
 	    team = other.team
 		sprite_index=sprBouncingLaser;
 	    laserhit=other.laserhit-1;

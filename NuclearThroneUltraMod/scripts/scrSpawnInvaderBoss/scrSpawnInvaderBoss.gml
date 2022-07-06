@@ -3,7 +3,7 @@
 ///@param
 function scrSpawnInvaderBoss(thisMany,whatBoss,thisFloorA,thisFloorB,thisFloorE,xOffset = 0,yOffset = 0){
 	var mindis = 200//232;
-	if instance_exists(Player)
+	if instance_exists(Player) && instance_exists(Floor)
 	{
 		do {
 			with Floor
@@ -44,7 +44,7 @@ function scrSpawnInvaderBoss(thisMany,whatBoss,thisFloorA,thisFloorB,thisFloorE,
 			mindis -= 32;
 		} until (instance_number(InvaderBossSpawnPortal) == thisMany || mindis < 64)
 	
-		if instance_number(InvaderBossSpawnPortal) < thisMany
+		if !instance_exists(InvaderBossSpawnPortal) || instance_number(InvaderBossSpawnPortal) < thisMany
 		{
 			var d = 0;
 			do 

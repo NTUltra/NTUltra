@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskVulture",
     "path": "sprites/mskVulture/mskVulture.yy",

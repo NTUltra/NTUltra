@@ -31,7 +31,7 @@ verticalVans = false;
 ///@description deside how manny vans
 if instance_exists(Player)
 {
-	if ((Player.area == 9 || Player.area == 118) && Player.subarea == 3)
+	if ((Player.area == 9 || Player.area == 118) && Player.subarea == 3 || Player.area == 104)
 	{
 		//No popo no
 		alarm[1] = 0;
