@@ -52,17 +52,17 @@ function scrPopulate() {
                     {
                         if random(4) < 1
 							scrPopEnemies()
-						else if Player.loops > 0 && random(6) < Player.loops
+						else if Player.loops > 0 && random(10) < Player.loops
 							scrPopEnemies()
                     } else
                         scrPopEnemies()
                 }
 				
                 //spawn some more enemies on loop 3
-                if Player.loops > 0 && random(6) < Player.loops
+                if Player.loops > 0 && random(10) < Player.loops
 					scrPopEnemies();
 					
-				if Player.loops > 8 && random(20) < Player.loops
+				if Player.loops > 8 && random(20) < Player.loops - 8
 					scrPopEnemies();
 				
             }
@@ -78,10 +78,10 @@ function scrPopulate() {
 
 
                     //spawn some more enemies on loop
-                    if Player.loops > 0 && random(6) < Player.loops
+                    if Player.loops > 0 && random(15) < Player.loops
                     scrPopEnemies();
 
-                    if Player.loops > 9 && random(20) < Player.loops
+                    if Player.loops > 9 && random(20) < Player.loops - 9
 					scrPopEnemies();
                 }
             }

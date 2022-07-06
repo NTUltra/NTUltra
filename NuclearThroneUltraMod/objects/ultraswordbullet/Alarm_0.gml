@@ -18,7 +18,7 @@ with instance_create(x+lengthdir_x((Player.skill_got[13]+Player.bettermelee)*10,
 	sprite_index=sprUltraSlash;
 direction=dir
 ang = direction
-dmg = 10
+dmg = 12
 longarms = 0
 if instance_exists(Player)
 longarms = (Player.skill_got[13]+Player.bettermelee)*3
@@ -34,7 +34,7 @@ with instance_create(x,y,Slash)
 	sprite_index=sprUltraSlash;
 direction=dir
 ang = direction
-dmg = 10
+dmg = 12
 longarms = 0
 if instance_exists(Player)
 longarms = (Player.skill_got[13]+Player.bettermelee)*3

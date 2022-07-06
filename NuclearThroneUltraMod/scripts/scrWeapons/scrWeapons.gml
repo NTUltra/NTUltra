@@ -613,7 +613,7 @@ function scrWeapons() {
 	wep_name[55] = "LASER CANNON"
 	wep_type[55] = 5
 	wep_auto[55] = 1
-	wep_load[55] = 32
+	wep_load[55] = 30//32 originally
 	wep_cost[55] = 3
 	wep_sprt[55] = sprLaserCannon
 	wep_area[55] = 7
@@ -1594,7 +1594,7 @@ function scrWeapons() {
 	wep_name[144] = "HYPER LIGHTNING LAUNCHER"
 	wep_type[144] = 5
 	wep_auto[144] = 0
-	wep_load[144] = 24
+	wep_load[144] = 22
 	wep_cost[144] = 3
 	wep_sprt[144] = sprLightningHyperRifle
 	wep_area[144] = 17
@@ -3728,7 +3728,7 @@ function scrWeapons() {
 	wep_name[338] = "KRAKEN PISTOL"
 	wep_type[338] = 4
 	wep_auto[338] = 0
-	wep_load[338] = 12//10
+	wep_load[338] = 13//10
 	wep_cost[338] = 1
 	wep_sprt[338] = sprKrakenPistol
 	wep_area[338] = 3
@@ -6077,7 +6077,7 @@ function scrWeapons() {
 	wep_load[551] = 6
 	wep_cost[551] = 6
 	wep_sprt[551] = sprOGun
-	wep_area[551] = 29
+	wep_area[551] = 27
 	wep_text[551] = "O"
 	wep_swap[551] = sndSwapPistol
 	wep_rad[551] = 0;
@@ -6173,7 +6173,7 @@ function scrWeapons() {
 	wep_name[560] = "SPEAR LAUNCHER"
 	wep_type[560] = 3
 	wep_auto[560] = 0
-	wep_load[560] = 34
+	wep_load[560] = 33
 	wep_cost[560] = 1.5
 	wep_sprt[560] = sprSpearLauncher
 	wep_area[560] = 2
@@ -6422,6 +6422,29 @@ function scrWeapons() {
 	wep_text[582] = "triple machinegun, so much fun"
 	wep_swap[582] = sndSwapMachinegun
 	wep_rad[582] = 12;//21
+
+	wep_name[583] = "O O O"
+	wep_type[583] = 1
+	wep_auto[583] = 1
+	wep_load[583] = 4
+	wep_cost[583] = 16
+	wep_sprt[583] = sprOOOGun
+	wep_area[583] = 30
+	wep_text[583] = "O O O"
+	wep_swap[583] = sndSwapMachinegun
+	wep_rad[583] = 0;
+	
+	wep_name[584] = "SUPER LASER CANNON"
+	wep_type[584] = 5
+	wep_auto[584] = 1
+	wep_load[584] = 25//32 originally
+	wep_cost[584] = 6
+	wep_sprt[584] = sprSuperLaserCannon
+	wep_area[584] = 21
+	wep_text[584] = "ohyea super laser cannon!"
+	wep_swap[584] = sndSwapEnergy
+	wep_rad[584] = 0;
+	
 	
 	maxwep = array_length(wep_name)-1;
 

@@ -8837,7 +8837,7 @@ function scrFire2() {
 	//BULLET CRASH
 	case 520:
 
-	snd_play_fire(sndTripleMachinegun)
+	snd_play_fire(sndQuadMachinegun)
 
 	var am = 16;
 	var angStep = 360/am;
@@ -10525,6 +10525,56 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(15,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 8
 	wkick = 8
+	break;
+	
+	//O O O
+	case 583:
+
+	snd_play_fire(sndTripleMachinegun)
+	snd_play_fire(sndOFire)
+	
+	repeat(3)
+	{
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(70)-35,2+random(2))
+	}
+
+	with instance_create(x,y,BulletO)
+	{motion_add(aimDirection+(random(6)-3)*other.accuracy,14)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,BulletO)
+	{motion_add(aimDirection+15*other.accuracy+(random(6)-3)*other.accuracy,14)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,BulletO)
+	{motion_add(aimDirection-15*other.accuracy+(random(6)-3)*other.accuracy,14)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(18,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(18,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 16
+	wkick = 6
+	break;
+	
+	//SUPER LASER CANNON
+	case 584:
+
+	if Player.skill_got[17] = 1
+	snd_play_fire(sndLaserUpg)
+	else
+	snd_play_fire(sndLaser)
+
+	with instance_create(x,y,SuperLaserCannon)
+	{
+	creator = other.id
+	ammo = 8+(Player.skill_got[17]+other.betterlaserbrain)*2
+	time = 1
+	team = other.team
+	alarm[0] = 10//15 originally
+	}
+
 	break;
 	
 	}//end of switch part 2!

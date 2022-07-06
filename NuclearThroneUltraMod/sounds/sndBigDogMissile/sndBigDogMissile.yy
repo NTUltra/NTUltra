@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndBigDogMissile",
-  "duration": 0.0,
+  "duration": 1.23424,
   "parent": {
     "name": "Regular",
     "path": "folders/Sounds/Enemies/Regular.yy",

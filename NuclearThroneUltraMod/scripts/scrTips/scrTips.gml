@@ -272,7 +272,8 @@ function scrTips() {
 
 	if Player.race = 20//BUSINESS HOG
 	tip = choose("post apocalyptic capitalism","delusional capitalist","mutated money","Making Nuclear Throne great again"
-	,"Gad dang hippies","dollar dollar bill y'all","pay to win","games as a service","NFT (nuclear fucking throne)")
+	,"Gad dang hippies","dollar dollar bill y'all","pay to win","games as a service","NFT (nuclear fucking throne)","please provide your creditcard information"
+	,"your guns are stored#in the blockchain")
 
 	if Player.race = 21//HORROR
 	tip = choose("Enemies absorb the beam's rads",

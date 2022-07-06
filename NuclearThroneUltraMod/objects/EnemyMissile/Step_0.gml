@@ -7,7 +7,7 @@ target=Player
 if target!=0
 {
 
-motion_add(point_direction(x,y,target.x,target.y),0.6);
+motion_add(point_direction(x,y,target.x,target.y),0.5);
 
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 target=instance_nearest(x,y,Player);

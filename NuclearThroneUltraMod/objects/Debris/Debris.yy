@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskDebris",
     "path": "sprites/mskDebris/mskDebris.yy",

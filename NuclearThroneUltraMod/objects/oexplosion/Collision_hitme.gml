@@ -11,6 +11,7 @@ if other.team != team
 			motion_add(point_direction(other.x,other.y,x,y),4)
 			Sleep(10)
 			BackCont.shake += 2
+			scrRecycleGland(2);
 		//}
 	}
 }

@@ -28,6 +28,7 @@ if UberCont.opt_sideart == sprite_get_number(sprSideArt)
 	draw_sprite(sprToggle,0,xx,y);
 	if mouse_check_button_pressed(mb_left) && UberCont.mouse__x > xx and UberCont.mouse__x < xx+s and UberCont.mouse__y > y and UberCont.mouse__y < y+s
 	{
+		snd_play_2d(sndClick);
 		//load in a file
 		var sideArtFilePath = get_open_filename(".png", "sideart");
 		with UberCont

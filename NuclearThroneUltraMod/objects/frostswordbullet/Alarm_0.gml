@@ -33,5 +33,5 @@ team = other.team
 sleepRate=6;
 }
 }
-alarm[0]=5;
+alarm[0]=4;
 

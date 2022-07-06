@@ -3,6 +3,9 @@ if UberCont.mouse__x > x and UberCont.mouse__x < x+8 and UberCont.mouse__y > y a
 {
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_left);
+	var yy = y;
+	if UberCont.opt_crosshair == sprite_get_number(sprCrosshair)
+		yy = y-8;
 	draw_text(x+12,y,string_hash_to_newline("HOTKEY: F5"))
 	if mouse_check_button_pressed(mb_left)
 	{

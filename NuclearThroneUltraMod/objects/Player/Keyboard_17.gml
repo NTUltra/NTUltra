@@ -105,7 +105,7 @@ if UberCont.public = 0 {
     }
     if keyboard_check_pressed(ord("7")) {
         area = 7
-        subarea = 0
+        subarea = 2
         inverted = false;
         with enemy
         my_health = 0

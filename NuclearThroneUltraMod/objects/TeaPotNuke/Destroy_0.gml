@@ -1,6 +1,7 @@
 event_inherited()
 scrDrop(40,0)
-
+with myCorpse
+	speed = 0;
 
 snd_play(sndNukeExplosion)
 var ang = random(360);

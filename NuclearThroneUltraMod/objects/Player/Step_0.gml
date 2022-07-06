@@ -1265,11 +1265,11 @@ if area=7&&race!=18&&race!=24&&skill_got[14]==0//angel & elementor boiling veins
 
     if collision_point(x,y,FloorLava,0,1) || collision_point(x,y,FloorExplo,0,1)
     {
-    if alarm[4]<=0
-    alarm[4]=4;
+	    if alarm[4]<=0
+			alarm[4]=4;
     
-    hotfloor+=1;
-        if hotfloor>43//time before crisping
+		hotfloor+=1;
+        if hotfloor>39//time before crisping
         {
         with instance_create(x,y,TrapFire){//burn!
         team=1;}
@@ -1281,10 +1281,10 @@ if area=7&&race!=18&&race!=24&&skill_got[14]==0//angel & elementor boiling veins
         
         }
     }
-else
-{
-hotfloor=0;//calm da fuk down
-}
+	else
+	{
+	hotfloor=0;//calm da fuk down
+	}
 
 }
 if area=108&&race!=18&&race!=24//angel & elementor don't bother with this stuff

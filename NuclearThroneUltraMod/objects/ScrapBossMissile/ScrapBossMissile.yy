@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskScrapBossMissile",
     "path": "sprites/mskScrapBossMissile/mskScrapBossMissile.yy",

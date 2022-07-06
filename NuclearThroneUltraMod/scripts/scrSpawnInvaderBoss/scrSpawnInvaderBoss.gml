@@ -22,7 +22,7 @@ function scrSpawnInvaderBoss(thisMany,whatBoss,thisFloorA,thisFloorB,thisFloorE,
 						floorE = thisFloorE;
 					}
 				}
-				else
+				else if instance_exists(InvaderBossSpawnPortal)
 				{
 					if instance_number(InvaderBossSpawnPortal) == thisMany
 						continue;

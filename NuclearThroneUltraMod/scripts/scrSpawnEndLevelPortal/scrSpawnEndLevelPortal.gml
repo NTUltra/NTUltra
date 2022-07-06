@@ -11,9 +11,10 @@ function scrSpawnEndLevelPortal(){
 		if team != 2
 			numEn ++;
 	}
-	if numEn == (instance_number(IDPDVan))
+	if numEn == 0 || (instance_exists(IDPDVan) && numEn == instance_number(IDPDVan))
 	{
-		if instance_number(becomenemy) = 0 and !instance_exists(Menu) and !instance_exists(RadMaggotChest) and !instance_exists(BecomeScrapBoss) and !instance_exists(BecomeJungleBoss) and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(UltraIcon)
+		if (!instance_exists(becomenemy) and 
+		!instance_exists(Menu) and !instance_exists(RadMaggotChest) and !instance_exists(BecomeScrapBoss) and !instance_exists(BecomeJungleBoss) and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(UltraIcon))
 		{
 			if instance_exists(Player)
 			{
@@ -43,7 +44,7 @@ function scrSpawnEndLevelPortal(){
 							with UltraChest
 							{
 								instance_destroy();
-								scrRaddrop(40);
+								scrRaddrop(75);
 							}
 					        instance_create(dir.x+16,dir.y+16,WallBreak);
         
@@ -95,16 +96,10 @@ function scrSpawnEndLevelPortal(){
 		    {
 		        if !instance_exists(CrownPickup)
 		        {
-					if instance_exists(Portal)
-					{
-						dir = instance_furthest(Portal.x,Portal.y,Floor);
-					}
-					else
-					{
-						dir = instance_nearest(x-16,y-16,Floor);
-					}
+					
+					dir = instance_nearest(x-16,y-16,Floor);
 			        with instance_create(dir.x+16,dir.y+16,Portal)
-			        type = 1
+						type = 1
 					
 					//UNLOCK GAME MODE CLAUSTROFOBIA
 					with Player

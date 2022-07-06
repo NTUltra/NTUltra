@@ -15,10 +15,15 @@ target=enemy;
 
 if instance_exists(Player)
 {
-if Player.skill_got[19]==1
-{
-accuracy=5;
-}
+	if Player.skill_got[19]==1
+	{
+	accuracy=5;
+	}
+	if Player.race=24//Elementor's passive
+	{
+		dmg += 1;
+		accuracy -= 2;
+	}
 }
 ultra = false;
 isog = true;

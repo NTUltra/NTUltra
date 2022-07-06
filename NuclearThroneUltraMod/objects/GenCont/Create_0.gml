@@ -132,11 +132,17 @@ goal = 120
 if Player.area = 5
 goal = 125+s
 if Player.area = 7
+{
 goal = 130+s
-if Player.area = 108 && Player.subarea<2//inverted vulcano
-goal = 160+s
-else if Player.area = 108 && Player.subarea=2
-goal=130+s
+	if Player.subarea == 3
+		goal = 10;
+}
+if Player.area = 108 && Player.subarea<3//inverted vulcano
+	goal = 140+s
+else if Player.area = 108 && Player.subarea==3
+{
+	goal = 10;
+}
 if Player.area = 104
 goal=150+s
 if Player.area = 105//inverted desert

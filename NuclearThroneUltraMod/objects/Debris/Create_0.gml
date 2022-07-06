@@ -1,8 +1,13 @@
 var area;
+if instance_exists(SpiralCont) || instance_exists(GenCont)
+{
+	instance_destroy();
+	exit;
+}
 if instance_exists(Player) area = Player.area
-else area = BackCont.area
+	else area = BackCont.area
 if area=104
-area=103
+	area=103
 friction = 0.2
 switch(area)
 {

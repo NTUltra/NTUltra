@@ -8,15 +8,7 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 		{
 			snd_play(snd_hurt, hurt_pitch_variation,true)
 			instance_create(other.x,other.y,FishBoost)
-			if instance_exists(Player)
-			{
-				if Player.race=24//Elementor's passive
-					my_health -= other.dmg+1;
-				else
-					my_health -= other.dmg
-			}
-			else
-				my_health -= other.dmg//lightning does 6 dmg normal tentacle does 3
+			my_health -= other.dmg//lightning does 6 dmg normal tentacle does 3
 			sprite_index = spr_hurt
 			image_index = 0
 			motion_add(other.image_angle,4)
@@ -41,7 +33,9 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 					var dis = point_distance(x,y,hit.x,hit.y)*0.5;
 					var xx = x+lengthdir_x(dis,dir);
 					var yy = y+lengthdir_y(dis,dir);
-					instance_create(xx,yy,MeatExplosion)
+					with instance_create(xx,yy,MeatExplosion) {
+						dmg -= 1;	
+					}
 					/*
 					with instance_create(xx,yy,BloodStreak){
 						image_angle = random(360);
@@ -57,10 +51,12 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 			}
 			if instance_exists(other.creator) && team != 0 && s < 6 {
 				direction = point_direction(x,y,other.creator.x,other.creator.y);
-				var theS = 8/s;
+				var theS = 9/s;
 				motion_add(direction,theS*0.75);
 				x += lengthdir_x(theS,direction);
 				y += lengthdir_y(theS,direction);
+				if alarm[1] > 1
+					alarm[1] ++;
 				//mp_potential_step(other.creator.x,other.creator.y,2/s,false)
 				if place_meeting(x,y,Wall)
 				{	x = xprevious;

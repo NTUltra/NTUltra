@@ -1313,7 +1313,7 @@ function scrFire() {
 	ammo = 5+(Player.skill_got[17]+other.betterlaserbrain)*2
 	time = 1
 	team = other.team
-	alarm[0] = 15
+	alarm[0] = 13//15 originally
 	}
 
 	break;
