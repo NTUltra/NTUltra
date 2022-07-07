@@ -19,12 +19,12 @@ if (instance_exists(Player))
 {
 	if Player.area == 114 //In jungle
 	{
-		name = "TO FROZEN CITY"	;
+		name = "TO FROZEN CITY";
 		bloodNeeded = 0;
 	}
-	if Player.race == 4//Melting require a little less blood
+	else if Player.race == 4//Melting require a little less blood
 	{
-		bloodNeeded = 2;	
+		bloodNeeded = 2;
 	} else if Player.race == 19//Skeleton also less HP so less blood needed
 	{
 		bloodNeeded = 3;

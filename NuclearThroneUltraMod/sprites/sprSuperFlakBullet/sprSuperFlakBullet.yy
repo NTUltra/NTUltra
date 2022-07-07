@@ -64,7 +64,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprSuperFlakBullet","path":"sprites/sprSuperFlakBullet/sprSuperFlakBullet.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprSuperFlakBullet",
     "tags": [],
     "resourceType": "GMSequence",
   },

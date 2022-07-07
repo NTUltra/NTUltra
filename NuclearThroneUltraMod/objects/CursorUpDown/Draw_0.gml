@@ -29,8 +29,10 @@ draw_set_valign(fa_top);
 draw_set_halign(fa_left);
 if UberCont.opt_crosshair == sprite_get_number(sprCrosshair)
 {
+	draw_text_colour(x+17,y-7,"REVERT [F6]\nCUSTOM",c_black,c_black,c_black,c_black,1);
+	draw_text_colour(x+18,y-7,"REVERT [F6]\nCUSTOM",c_black,c_black,c_black,c_black,1);
+	draw_text_colour(x+18,y-8,"REVERT [F6]\nCUSTOM",c_black,c_black,c_black,c_black,1);
 	draw_text(x+17,y-8,"REVERT [F6]\nCUSTOM");
-	
 	draw_sprite(sprToggle,0,xx,y);
 	if mouse_check_button_pressed(mb_left) && UberCont.mouse__x > xx and UberCont.mouse__x < xx+s and UberCont.mouse__y > y and UberCont.mouse__y < y+s
 	{
@@ -41,7 +43,7 @@ if UberCont.opt_crosshair == sprite_get_number(sprCrosshair)
 		{
 			UberCont.opt_custom_crosshair = cursorFilePath;
 			UberCont.customCrosshair = sprite_add(cursorFilePath,0,true,false,0,0);
-			if sprite_exists(UberCont.customSideArt)
+			if sprite_exists(UberCont.customCrosshair)
 			{
 				var w = sprite_get_width(UberCont.customCrosshair);
 				var h = sprite_get_height(UberCont.customCrosshair);
@@ -54,16 +56,30 @@ if UberCont.opt_crosshair == sprite_get_number(sprCrosshair)
 					var s = UberCont.opt_crosshair_scale;
 					var sw = sprite_get_width(sprite_index);
 					var sh = sprite_get_height(sprite_index);
-					if sw > s || sh > s
-					{
-						scale = s/max(sw,sh);
-					}
+					scale = s/max(sw,sh);
+				}
+			}
+			else
+			{
+				UberCont.opt_crosshair = 0;
+				with Cursor
+				{
+					sprite_index = sprCrosshair
+					image_index = 0;
+					var s = UberCont.opt_crosshair_scale;
+					var sw = sprite_get_width(sprite_index);
+					var sh = sprite_get_height(sprite_index);
+					scale = s/max(sw,sh);	
 				}
 			}
 		}
 	}
 }
+draw_text_colour(x+77,y,"SCALE\n     "+string(UberCont.opt_crosshair_scale),c_black,c_black,c_black,c_black,1);
+draw_text_colour(x+77,y+1,"SCALE\n     "+string(UberCont.opt_crosshair_scale),c_black,c_black,c_black,c_black,1);
+draw_text_colour(x+76,y+1,"SCALE\n     "+string(UberCont.opt_crosshair_scale),c_black,c_black,c_black,c_black,1);
 draw_text(x+76,y,"SCALE\n     "+string(UberCont.opt_crosshair_scale));
+
 xx+=51;
 draw_sprite(sprite_index,0,xx,y);
 if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > xx+10 and UberCont.mouse__x < xx+18 and UberCont.mouse__y > y and UberCont.mouse__y < y+8

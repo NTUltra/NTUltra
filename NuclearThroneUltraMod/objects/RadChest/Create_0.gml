@@ -2,7 +2,7 @@ friction = 0.4
 
 
 team = 0
-size = 2
+size = 1;
 
 maxhealth = 4
 event_inherited();

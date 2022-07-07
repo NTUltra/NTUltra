@@ -3,9 +3,9 @@ if instance_exists(Player)
 
 var num = 1;
 if Player.crown = 4
-num += 1
+	num += 1
 if Player.ultra_got[85]=1//ROGUE SUPER PORTAL STRIKE ULTRA
-num*=2;
+	num*=2;
 
 Player.rogueammo+=num;
 if Player.rogueammo > Player.rogueammomax

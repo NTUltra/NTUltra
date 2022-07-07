@@ -1,4 +1,4 @@
-snd_play(sndGrenade)
+snd_play_fire(sndGrenade)
 if instance_exists(Player) && instance_exists(creator)
 {
 with instance_create(x,y,FlakBullet)

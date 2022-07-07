@@ -1,11 +1,8 @@
-alarm[1] = 8+random(8)
+alarm[1] = 9+random(8)
 
-if instance_exists(Player)
-{
-if Player.loops>1
-alarm[1]=7+random(10)
+if loops > 1
+	alarm[1]=7+random(10)
 
-}
 
 drama=true;
 if sprite_index != spr_hurt

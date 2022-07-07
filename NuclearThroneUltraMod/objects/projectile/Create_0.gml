@@ -10,6 +10,11 @@ Humphry=false;//gets assigned true when playing as humphry and firing
 HumphryNr=0;
 canBeMoved = true;
 typ = 0;
+if UberCont.opt_gamemode == 33//All Deflector
+{
+	hasBeenDeflected = false;
+	alarm[7] = 1;
+}
 /*WEAPON MODS
 mod1[]
 mod2[]

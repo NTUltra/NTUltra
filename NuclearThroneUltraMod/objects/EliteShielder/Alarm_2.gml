@@ -1,14 +1,12 @@
 if ammo>0
 {
 
-if random(2)<1&&target>0
+if random(2)<1 && target > -1 && instance_exists(target)
 {
+	if team == 2
+		scrRogueTarget();
 
-if team=2
-scrRogueTarget()
-
-gunangle = point_direction(x,y,target.x,target.y)
-
+	gunangle = point_direction(x,y,target.x,target.y);
 }
 
 snd_play(sndEliteShielderFire)

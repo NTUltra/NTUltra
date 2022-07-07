@@ -391,14 +391,18 @@ function scrPopulate() {
     }
 	
 	if Player.area = 4 and Player.subarea = 2 {
-        instance_create(x, y, WantBoss)
+        instance_create(x, y, WantBoss)//Big bad bat
+		if Player.loops > 11
+			instance_create(x, y, WantBoss)
     }
 	if Player.area = 111 and Player.subarea = 2 {
-        instance_create(x, y, WantBoss)
+        instance_create(x, y, WantBoss)//Inverted big bad
+		if Player.loops > 11
+			instance_create(x, y, WantBoss)
     }
 	
 	//spawn SEWER FISH boss
-    if (Player.area = 2 || Player.area == 110) and Player.subarea = 1 {
+    if (Player.area = 2 || Player.area == 110) and Player.subarea = 1 and Player.loops > 1 {
 		instance_create(x, y, WantBoss)
     }
 

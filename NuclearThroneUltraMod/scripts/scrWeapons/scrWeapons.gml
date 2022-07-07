@@ -3280,7 +3280,7 @@ function scrWeapons() {
 	wep_load[297] = 24
 	wep_cost[297] = 3.5
 	wep_sprt[297] = sprUltraFlakCannon
-	wep_area[297] = 21
+	wep_area[297] = 20
 	wep_text[297] = "green ball of green pellets"
 	wep_swap[297] = sndSwapExplosive
 	wep_rad[297] = 20;//14ultrashotgun
@@ -5208,7 +5208,7 @@ function scrWeapons() {
 	wep_load[472] = 8
 	wep_cost[472] = 2
 	wep_sprt[472] = sprUltraHeavySlugger
-	wep_area[472] = 35
+	wep_area[472] = 25
 	wep_text[472] = "supermassive"
 	wep_swap[472] = sndSwapShotgun
 	wep_rad[472] = 10;
@@ -5347,7 +5347,7 @@ function scrWeapons() {
 	
 	wep_name[485] = "POTSHOT"
 	wep_type[485] = 1
-	wep_auto[485] = 0
+	wep_auto[485] = 1
 	wep_load[485] = 13
 	wep_cost[485] = 4
 	wep_sprt[485] = sprPotShot
@@ -5629,7 +5629,7 @@ function scrWeapons() {
 	wep_area[510] = 26
 	wep_text[510] = ""
 	wep_swap[510] = sndSwapShotgun
-	wep_rad[510] = 35;//14*3 = 42
+	wep_rad[510] = 25;//14*3 = 42
 	
 	wep_name[511] = "SUPER DISC GUN"
 	wep_type[511] = 3
@@ -6418,7 +6418,7 @@ function scrWeapons() {
 	wep_load[582] = 4
 	wep_cost[582] = 8//9
 	wep_sprt[582] = sprUltraTripleHeavyMachinegun
-	wep_area[582] = 32
+	wep_area[582] = 31
 	wep_text[582] = "triple machinegun, so much fun"
 	wep_swap[582] = sndSwapMachinegun
 	wep_rad[582] = 12;//21
@@ -6458,7 +6458,6 @@ function scrWeapons() {
 			}
 		}
 	}
-
 	//0 = melee 1 = bullets 2 = shells 3 = bolts 4 = explosives 5 = energy
 	typ_ammo[0] = 333 typ_ammo[1] = 32 typ_ammo[2] = 8 typ_ammo[3] = 7 typ_ammo[4] = 6 typ_ammo[5] = 10
 
@@ -6492,9 +6491,15 @@ function scrWeapons() {
 
 	
 	highest_wep_tier = 0;
+	var highestTierWeapon = 0;
 	for (var i = 0; i < maxwep+1; i++) {
 	    // code here
 		if wep_area[i] > highest_wep_tier
+		{
 			highest_wep_tier = wep_area[i];
+			highestTierWeapon = i;
+		}
 	}
+	debug("The highest tier weapon is: ",highestTierWeapon);
+	
 }

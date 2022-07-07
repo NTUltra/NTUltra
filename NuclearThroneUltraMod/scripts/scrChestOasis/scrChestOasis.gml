@@ -1,5 +1,5 @@
 function scrChestOasis() {
-	if !instance_exists(GenCont)
+	if !instance_exists(GenCont) && !instance_exists(HardModeChest)
 	{
 	with Player
 	{

@@ -11,13 +11,13 @@ UberCont.skin[race]=0;
 
 //standard weapon
 if wep = 0
-UberCont.start_wep[0]=race_swep[Menu.race];
+	UberCont.start_wep[0] = race_swep[Menu.race];
 
 //Set the starting weapon
-if UberCont.start_wep_have[wep,race]=1
+if UberCont.start_wep_have[wep,race] == 1
 {
-UberCont.cwep[race]=UberCont.start_wep[wep];
-UberCont.selected_start_wep[race] = wep;
+	UberCont.cwep[race]=UberCont.start_wep[wep];
+	UberCont.selected_start_wep[race] = wep;
 }
 
 if race != 0 && UberCont.mouse__x > __view_get( e__VW.XView, 0 )+300-10 and UberCont.mouse__x < __view_get( e__VW.XView, 0 )+300+12 and UberCont.mouse__y > __view_get( e__VW.YView, 0 )+arrowOpenerY-12 and UberCont.mouse__y < __view_get( e__VW.YView, 0 )+arrowOpenerY+10

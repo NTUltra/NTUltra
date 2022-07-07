@@ -21,7 +21,6 @@ function scrCheckOneGold() {
 			thischarhasagoldwep++;
 	racedir++;
 	}
-	debug(thischarhasagoldwep);
 	if thischarhasagoldwep >= racemax
 		return true
 	else

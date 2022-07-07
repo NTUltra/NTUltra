@@ -24,7 +24,8 @@ repeat(1+Player.ultra_got[25]){//ROIDS ULTRA A DOUBLE WEPS
 if !oneweponly
 {
 	snd_play(sndBigWeaponChest)
-	snd_play(Player.snd_chst)
+	if !audio_is_playing(Player.snd_chst)
+		snd_play(Player.snd_chst)
 }
 else
 {

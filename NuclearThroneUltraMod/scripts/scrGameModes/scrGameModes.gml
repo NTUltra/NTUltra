@@ -132,6 +132,14 @@ function scrGameModes() {
 	gamemode_unlock[32] = "TAKE NO DAMAGE#5 AREAS IN A ROW";
 	gamemode_have[32] = 0;
 	
+	gamemode[33] = "ALL DEFLECTOR";
+	gamemode_unlock[33] = "REACH THE JUNGLE#IN THE GAMEMODE: ONE HIT WONDER";
+	gamemode_have[33] = 0;
+	
+	gamemode[34] = "HARD MODE";
+	gamemode_unlock[34] = "KILL THE THRONE IN THE GAMEMODE:#SURVIVAL ARENA";
+	gamemode_have[34] = 0;
+	
 	/*
 	gamemode[23] = "SEEDED";
 	gamemode_description[23] = "YOU ONLY GET MELEE WEAPONS#ALWAYS GET LONG ARMS";
@@ -168,10 +176,11 @@ function scrGameModes() {
 	gamemodeOrder[27] = 31;
 	gamemodeOrder[28] = 28;
 	gamemodeOrder[29] = 32;
-	gamemodeOrder[30] = 17;
-	gamemodeOrder[31] = 26;
-	gamemodeOrder[32] = 27;
-
+	gamemodeOrder[30] = 33;
+	gamemodeOrder[31] = 34;
+	gamemodeOrder[32] = 17;
+	gamemodeOrder[33] = 26;
+	gamemodeOrder[34] = 27;
 
 
 	maxgamemode = array_length(gamemodeOrder) - 1;

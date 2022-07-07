@@ -4,7 +4,11 @@ meleedamage = 0
 size = 1
 
 event_inherited()
-
+if UberCont.opt_gamemode == 34//HARD MODE
+{
+	instance_destroy(id,false);
+	instance_create(x,y,UltraBandit);
+}
 if UberCont.encrypted_data.secrets[1] == true
 {
 	spr_idle = sprPinkBanditIdle

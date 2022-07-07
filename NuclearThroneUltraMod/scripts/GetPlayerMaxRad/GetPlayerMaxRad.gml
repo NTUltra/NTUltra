@@ -6,6 +6,10 @@ function GetPlayerMaxRad(){
 	{
 		multiplier *= 1.75;
 	}
+	else if UberCont.opt_gamemode == 34//HARD MODE
+	{
+		multiplier *= 1.25;
+	}
 	if (level < boostLevel)
 	{
 		multiplier *= 0.2;//0.45;

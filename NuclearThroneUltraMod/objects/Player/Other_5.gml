@@ -539,6 +539,10 @@ if area != 100 && area != 103
 		scrUnlockGameMode(32,"FOR COMPLETING FIVE AREAS#IN A ROW WITHOUT#TAKING A HIT")
 	}
 }
+if UberCont.opt_gamemode == 32 && area == 114
+{
+	scrUnlockGameMode(33,"FOR REACHING THE JUNGLE#ON GAMEMODE: ONE HIT WONDER")
+}
 if movethislevel==false&&race=15 &&!instance_exists(MenuGen) &&!instance_exists(Menu) &&  !instance_exists(Vlambeer) && !instance_exists(CrownPickup)
 {//ATOM TELEPORT ONLY GAMEMODE UNLOCK
 scrUnlockGameMode(7,"FOR COMPLETING AN AREA WITHOUT WALKING")

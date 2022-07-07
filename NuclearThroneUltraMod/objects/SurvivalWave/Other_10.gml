@@ -81,7 +81,7 @@ switch (waveNumber)
 				sprite_index = sprFloor3;
 		}
 	break;
-	case 4:
+	case 6:
 		song = mus4;
 		Player.area = 4;
 		with Floor
@@ -103,7 +103,7 @@ switch (waveNumber)
 				sprite_index = sprFloor5;
 		}
 	break;
-	case 6:
+	case 4:
 		song = mus6;
 		with Floor
 		{
@@ -773,8 +773,8 @@ repeat(1+loops)
 			};
 		break;
 		#endregion
-		#region wave 4 caves
-		case 4:
+		#region wave 6 caves
+		case 6:
 			repeat(5)
 			{
 				wave[i] = {
@@ -790,12 +790,27 @@ repeat(1+loops)
 			i++;
 			wave[i] = {
 					obj: LaserCrystal,
-					time: 190
+					time: 120
 				};
-				i++;
+			i++;
+			wave[i] = {
+				obj: SquareBat,
+				time: 10
+			};
+			i++;
+			wave[i] = {
+				obj: SquareBat,
+				time: 10
+			};
+			i++;
 			wave[i] = {
 				obj: FireBat,
-				time: 40
+				time: 20
+			};
+			i++;
+			wave[i] = {
+				obj: SquareBat,
+				time: 50
 			};
 			i++;
 			repeat(3)
@@ -863,6 +878,14 @@ repeat(1+loops)
 				time: 60
 			};
 			i++;
+			repeat(4)
+			{
+				wave[i] = {
+					obj: SquareBat,
+					time: 10
+				};
+				i++;
+			}
 			repeat(3)
 			{
 				wave[i] = {
@@ -879,7 +902,7 @@ repeat(1+loops)
 			};
 			i++;
 			wave[i] = {
-				obj: EliteWeaponChest,
+				obj: AmmoChest,
 				time: 10,
 				xx: centerX,
 				yy: centerY+32
@@ -894,8 +917,8 @@ repeat(1+loops)
 				i++;
 			}
 			wave[i] = {
-				obj: LightningCrystal,
-				time: 170
+				obj: GoldCrystal,
+				time: 120
 			};
 			i++;
 			repeat(3)
@@ -906,6 +929,11 @@ repeat(1+loops)
 				};
 				i++;
 			}
+			wave[i] = {
+				obj: GoldCrystal,
+				time: 60
+			};
+			i++;
 			repeat(6)
 			{
 				wave[i] = {
@@ -922,16 +950,29 @@ repeat(1+loops)
 			repeat(3)
 			{
 				wave[i] = {
-					obj: LaserCrystal,
-					time: 2
+					obj: GoldCrystal,
+					time: 4
 				};
 				i++;
 			}
 			wave[i] = {
 				obj: LightningCrystal,
-				time: 10
+				time: 120
 			};
 			i++;
+			wave[i] = {
+				obj: BigBadBat,
+				time: 30
+			};
+			i++;
+			repeat(3)
+			{
+				wave[i] = {
+					obj: LaserCrystal,
+					time: 30
+				};
+				i++;
+			}
 		break;
 		#endregion
 		#region wave 5 frozen city
@@ -1168,35 +1209,35 @@ repeat(1+loops)
 			i++;
 		break;
 		#endregion
-		#region wave 6 labs
-		case 6:
-			repeat(8)
+		#region wave 4 labs
+		case 4:
+			repeat(6)
 			{
 				wave[i] = {
 					obj: Freak,
-					time: 2
+					time: 4
 				};
 				i++;
 			}
 			wave[i] = {
 				obj: RhinoFreak,
-				time: 2,
+				time: 4,
 				xx: centerX,
 				yy: centerY
 			};
 			i++;
 			wave[i] = {
 				obj: Necromancer,
-				time: 60,
+				time: 120,
 				xx: centerX,
 				yy: centerY
 			};
 			i++;
-			repeat(8)
+			repeat(6)
 			{
 				wave[i] = {
 					obj: Freak,
-					time: 2
+					time: 4
 				};
 				i++;
 			}
@@ -1207,11 +1248,11 @@ repeat(1+loops)
 			i++;
 			wave[i] = {
 				obj: RhinoFreak,
-				time: 20
+				time: 70
 			};
 			i++;
 			wave[i] = {
-				obj: Necromancer,
+				obj: GoldNecromancer,
 				time: 120,
 				xx: centerX,
 				yy: centerY
@@ -1221,7 +1262,7 @@ repeat(1+loops)
 			{
 				wave[i] = {
 					obj: Turret,
-					time: 2
+					time: 4
 				};
 				i++;
 			}
@@ -1232,9 +1273,23 @@ repeat(1+loops)
 			i++;
 			wave[i] = {
 				obj: Necromancer,
-				time: 90,
+				time: 60,
 				xx: centerX,
 				yy: centerY
+			};
+			i++;
+			wave[i] = {
+				obj: GoldNecromancer,
+				time: 30,
+				xx: centerX,
+				yy: centerY
+			};
+			i++;
+			wave[i] = {
+				obj: HealthChest,
+				time: 60,
+				xx: centerX,
+				yy: centerY-24
 			};
 			i++;
 			wave[i] = {
@@ -1244,11 +1299,11 @@ repeat(1+loops)
 				yy: centerY
 			};
 			i++;
-			repeat(20)
+			repeat(15)
 			{
 				wave[i] = {
 					obj: Freak,
-					time: 1
+					time: 4
 				};
 				i++;
 			}
@@ -1261,7 +1316,7 @@ repeat(1+loops)
 				i++;
 			}
 			wave[i] = {
-				obj: Necromancer,
+				obj: GoldNecromancer,
 				time: 200,
 				xx: centerX,
 				yy: centerY
@@ -1277,7 +1332,14 @@ repeat(1+loops)
 			}
 			wave[i] = {
 				obj: ExploFreak,
-				time: 1
+				time: 5
+			};
+			i++;
+			wave[i] = {
+				obj: EliteWeaponChest,
+				time: 5,
+				xx: centerX,
+				yy: centerY+24
 			};
 			i++;
 			wave[i] = {
@@ -1376,7 +1438,7 @@ repeat(1+loops)
 			{
 				wave[i] = {
 					obj: RhinoFreak,
-					time: 1
+					time: 10
 				};
 				i++;
 			}
@@ -1423,6 +1485,11 @@ repeat(1+loops)
 			}
 			wave[i] = {
 				obj: Bandit,
+				time: 20,
+			};
+			i++;
+			wave[i] = {
+				obj: FireWorm,
 				time: 4,
 			};
 			i++;
@@ -1460,12 +1527,25 @@ repeat(1+loops)
 			};
 			i++;
 			wave[i] = {
+				obj: FireWorm,
+				time: 40,
+			};
+			i++;
+			wave[i] = {
 				obj: AmmoChest,
 				time: 40,
 				xx: centerX,
 				yy: centerY + 32
 			};
 			i++;
+			repeat(4)
+			{
+				wave[i] = {
+					obj: FireWorm,
+					time: 10,
+				};
+				i++;
+			}
 			wave[i] = {
 				obj: Thief,
 				time: 30,
@@ -1493,7 +1573,7 @@ repeat(1+loops)
 				i++;
 			}
 			wave[i] = {
-				obj: Salamander,
+				obj: GoldWorm,
 				time: 160,
 			};
 			i++;
@@ -1545,7 +1625,7 @@ repeat(1+loops)
 			};
 			i++
 			wave[i] = {
-				obj: FireBat,
+				obj: FireWorm,
 				time: 40
 			};
 			i++
@@ -1575,7 +1655,7 @@ repeat(1+loops)
 			};
 			i++
 			wave[i] = {
-				obj: SuperFireBaller,
+				obj: GoldWorm,
 				time: 30
 			};
 			i++
@@ -1694,7 +1774,7 @@ repeat(1+loops)
 				i++;
 			}
 			wave[i] = {
-				obj: TeaPot,
+				obj: GoldTeapot,
 				time: 180,
 				xx: centerX,
 				yy: centerY
@@ -1727,6 +1807,11 @@ repeat(1+loops)
 				time: 90
 			};
 			i++;
+			wave[i] = {
+					obj: GoldTeapot,
+					time: 40
+				};
+				i++;
 			repeat(4)
 			{
 				wave[i] = {
@@ -1765,6 +1850,11 @@ repeat(1+loops)
 			wave[i] = {
 				obj: ChesireCat,
 				time: 190
+			};
+			i++;
+			wave[i] = {
+				obj: GoldTeapot,
+				time: 10
 			};
 			i++;
 			wave[i] = {
@@ -1855,13 +1945,6 @@ repeat(1+loops)
 				obj: GhostGuardian,
 				time: 190,
 				xx: centerX-256,
-				yy: centerY
-			};
-			i++;
-			wave[i] = {
-				obj: CubeGuardian,
-				time: 30,
-				xx: centerX+256,
 				yy: centerY
 			};
 			i++;
@@ -2237,8 +2320,8 @@ repeat(1+loops)
 			};
 			i++;
 			wave[i] = {
-				obj: Hyena,
-				time: 2,
+				obj: GoldHyena,
+				time: 10,
 			};
 			i++;
 			wave[i] = {
@@ -2312,6 +2395,11 @@ repeat(1+loops)
 				yy: centerY-16
 			};
 			i++;
+			wave[i] = {
+				obj: GoldHyena,
+				time: 20,
+			};
+			i++;
 			repeat(4)
 			{
 				wave[i] = {
@@ -2340,6 +2428,11 @@ repeat(1+loops)
 				time: 10,
 				xx: centerX+16,
 				yy: centerY
+			};
+			i++;
+			wave[i] = {
+				obj: GoldHyena,
+				time: 30,
 			};
 			i++;
 			repeat(4)
@@ -2375,10 +2468,22 @@ repeat(1+loops)
 			{
 				wave[i] = {
 				obj: Hyena,
-				time: 2,
+				time: 4,
 				};
 				i++;
 			}
+			wave[i] = {
+				obj: SavannaBandit,
+				time: 50,
+				xx: centerX,
+				yy: centerY-16
+			};
+			i++;
+			wave[i] = {
+				obj: GoldHyena,
+				time: 20,
+			};
+			i++;
 			
 		break;
 		#endregion

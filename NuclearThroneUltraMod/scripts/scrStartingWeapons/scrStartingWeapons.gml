@@ -41,9 +41,6 @@ function scrStartingWeapons() {
 	start_wep_have[1,dir]=0
 	start_wep_have[2,dir]=0
 	start_wep_have[3,dir]=0
-	if dir == 20
-	start_wep_have[4,dir]=1
-	else
 	start_wep_have[4,dir]=0
 	start_wep_have[5,dir]=0
 	start_wep_have[6,dir]=0

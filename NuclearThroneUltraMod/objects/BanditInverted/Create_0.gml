@@ -8,7 +8,11 @@ meleedamage = 0
 size = 1
 
 event_inherited()
-
+if UberCont.opt_gamemode == 34//HARD MODE
+{
+	instance_destroy(id,false);
+	instance_create(x,y,UltraBandit);
+}
 spr_idle = sprBanditInvertIdle
 spr_walk = sprBanditInvertWalk
 spr_hurt = sprBanditInvertHurt

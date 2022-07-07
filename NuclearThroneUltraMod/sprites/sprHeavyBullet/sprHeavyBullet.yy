@@ -64,7 +64,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprHeavyBullet","path":"sprites/sprHeavyBullet/sprHeavyBullet.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprHeavyBullet",
     "tags": [],
     "resourceType": "GMSequence",
   },

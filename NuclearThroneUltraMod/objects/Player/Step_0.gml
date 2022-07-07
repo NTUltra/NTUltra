@@ -697,7 +697,7 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 	if reload > lowa
 	{
 		reload -= 1
-	
+		
 		if race = 6
 		{//YV fire rate boost
 			reload -= 0.25//0.25
@@ -796,6 +796,12 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 	}
 	if (reload > lowa || breload > lowb || creload > lowc)
 	{
+		if UberCont.opt_gamemode == 34//HARD MODE
+		{
+			reload -= 0.1;
+			breload -= 0.1;
+			creload -= 0.1;
+		}	
 		if race == 7
 			breload -= 1
 		if breload <= 0 && !bcan_shoot

@@ -45,7 +45,6 @@ startLoop = 3;
 ca = 6 + min(6+(loops-startLoop)*2,12);
 cang = random(360);
 caspd = min(5,3+((loops-startLoop)*0.5));
-debug(loops);
 if loops >= startLoop
 {
 	alarm[6] = 200;

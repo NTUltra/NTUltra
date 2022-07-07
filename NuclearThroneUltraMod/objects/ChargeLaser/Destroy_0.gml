@@ -3,11 +3,11 @@ if instance_exists(Player)
 {
 if Player.skill_got[17] = 1
 {
-snd_play(sndLaserUpg)
+snd_play_fire(sndLaserUpg)
 rate+=6+(Player.betterlaserbrain*2);
 }
 else
-snd_play(sndLaser)
+snd_play_fire(sndLaser)
 
 if instance_exists(creator)
 {

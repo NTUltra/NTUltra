@@ -326,6 +326,12 @@ subarea = 0
 lastarea = 1
 lastsubarea = 1;
 hard = 0
+if UberCont.opt_gamemode == 34//HARD MODE
+{
+	hard = 3;
+	if !instance_exists(PlayerSpawn)
+		instance_create(x,y,HardModeChest);
+}
 inverted = false; //for when entering inverted portals
 invertedportalcounter = 0;
 invertedportaldelay = 10;
@@ -340,9 +346,13 @@ oasisskip = -1;
 swapChar = false;
 crownvisits = 0
 reincarnate = false;
+if UberCont.opt_gamemode = 21 { //loop start
+    hard = 18
+    loops = 1;
+}
 if UberCont.crown_start[race] && !instance_exists(PlayerSpawn){
     area = 100;
-    hard = -1;
+    hard -= 1;
     crownvisits = -1;
 	instance_create(0,0,PauseTimer);
 }
@@ -351,10 +361,6 @@ if UberCont.opt_gamemode == 25 {
     area = 116;
 }
 
-if UberCont.opt_gamemode = 21 { //loop start
-    hard = 18
-    loops = 1;
-}
 
 
 

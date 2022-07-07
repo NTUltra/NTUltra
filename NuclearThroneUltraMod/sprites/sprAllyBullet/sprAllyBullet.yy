@@ -64,7 +64,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprAllyBullet","path":"sprites/sprAllyBullet/sprAllyBullet.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprAllyBullet",
     "tags": [],
     "resourceType": "GMSequence",
   },

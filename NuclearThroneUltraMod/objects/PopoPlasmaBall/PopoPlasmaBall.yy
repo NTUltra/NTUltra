@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskPopoPlasma",
     "path": "sprites/mskPopoPlasma/mskPopoPlasma.yy",

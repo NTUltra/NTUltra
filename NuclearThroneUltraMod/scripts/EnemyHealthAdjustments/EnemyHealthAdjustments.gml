@@ -4,7 +4,9 @@
 function EnemyHealthAdjustments(){
 	if instance_exists(Player)
 	{
-		maxhealth*= 1 + (clamp(Player.loops-1,0,8)*0.12);//0.15
+		maxhealth*= 1 + (clamp(Player.loops-1,0,7)*0.1);//0.15
+		if UberCont.opt_gamemode == 34
+			maxhealth *= 1.1;
 		if Player.crown == 10
 			maxhealth *= 1.05;//Very minor crown of difficulty
 		

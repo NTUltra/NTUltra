@@ -64,7 +64,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprFatBullet","path":"sprites/sprFatBullet/sprFatBullet.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprFatBullet",
     "tags": [],
     "resourceType": "GMSequence",
   },

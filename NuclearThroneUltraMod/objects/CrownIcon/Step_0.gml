@@ -1,4 +1,4 @@
-if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+14 and UberCont.mouse__y < y+16 and UberCont.mouse__x > x-14 and UberCont.mouse__y > y-16)
+if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+10 and UberCont.mouse__y < y+16 and UberCont.mouse__x > x-10 and UberCont.mouse__y > y-16)
 {
     with UberCont///UNLOCK CROWN
     {

@@ -155,7 +155,19 @@ room_speed=35;
     {justAsheep=true;}
     BackCont.enemiesInStartLevel=instance_number(enemy);
     
-    
+    if UberCont.opt_gamemode == 34 && area == 1//HARD MODE
+	{
+		var t = 30;
+		if subarea == 1 && loops < 1
+			t = 120;
+		with enemy
+		{
+			if alarm[1]>0
+			{
+				alarm[1] += t;
+			}
+		}
+	}
     if skill_got[29]//insomnia
     {
 		var t = 200;
@@ -193,12 +205,12 @@ room_speed=35;
     }
     else if loops < 5
     {
-    //making it easier
-    with enemy
-    {
-		if alarm[1]>0
-			alarm[1]+=45;
-    }
+	    //making it easier
+	    with enemy
+	    {
+			if alarm[1]>0
+				alarm[1]+=50;
+	    }
     
     }
 	if loops > 8

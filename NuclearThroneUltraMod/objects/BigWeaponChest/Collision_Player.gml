@@ -37,7 +37,8 @@ sprite_index = wep_sprt[wep]
 
 
 snd_play(sndBigWeaponChest)
-snd_play(Player.snd_chst)
+if !audio_is_playing(Player.snd_chst)
+	snd_play(Player.snd_chst)
 instance_destroy()
 }
 

@@ -21,7 +21,10 @@ instance_create(x,y,HealFX)
 //RUSH CROWN
 if Player.crown = 4
 num += 1
-
+if UberCont.opt_gamemode == 34//HARD MODE
+{
+	num = round(num*0.5);	
+}
 snd_play(sndHealthPickup)
 instance_destroy()
 if Player.my_health + num <= Player.maxhealth

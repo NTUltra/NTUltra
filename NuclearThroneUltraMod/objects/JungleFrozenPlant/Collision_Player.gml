@@ -16,6 +16,7 @@ if KeyCont.key_pick[other.p] = 1 && !used
 			else
 			{
 				area = 114;
+				subarea = 1;
 				/*
 				if subarea == 2
 					subarea = 2;
@@ -33,7 +34,6 @@ if KeyCont.key_pick[other.p] = 1 && !used
 			pullstrength = 3;
 		}
 
-		instance_change(Wind,false)
 	}
 	else
 	{

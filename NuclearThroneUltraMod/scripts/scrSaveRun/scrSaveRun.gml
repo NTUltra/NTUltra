@@ -104,6 +104,7 @@ function scrSaveRun() {
 			canSpawnInversionShards: UberCont.canSpawnInversionShards,
 			collectedInversionShards: UberCont.collectedInversionShards,
 			collectedInversionShardReward: UberCont.collectedInversionShardReward,
+			inverted: Player.inverted,
 		};
 		with UberCont
 		{

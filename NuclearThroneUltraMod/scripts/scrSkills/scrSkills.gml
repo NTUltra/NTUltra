@@ -343,6 +343,8 @@ function scrSkills() {
 
 	skill_name[29] = "INSOMNIA"
 	skill_text[29] = "ENEMIES DON'T ATTACK YOU#FOR A COUPLE OF SECONDS#AT THE START OF EACH AREA"
+	if UberCont.opt_gamemode == 25
+		skill_text[29] = "ENEMIES DON'T ATTACK YOU#FOR A COUPLE OF SECONDS#WHEN THEY SPAWN IN"
 	skill_tips[29] = "sleep"
 	skill_msnd[29] =  sndInsomnia
 

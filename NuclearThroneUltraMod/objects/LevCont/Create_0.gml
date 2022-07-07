@@ -242,7 +242,6 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] &&/* Player.skillpoints <
 				skill_got[1] = 1;
 				skill_got[7] = 1;
 				skill_got[9] = 1;
-				skill_got[22] = 1;
 				skill_got[31] = 1;
 			}
 		}
@@ -437,7 +436,6 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] &&/* Player.skillpoints <
 }
 image_speed = 0.4;
 if UberCont.opt_gamemode == 32 {
-	debug("And remove");
 	// One hit wonder
 	with Player
 	{
@@ -452,7 +450,6 @@ if UberCont.opt_gamemode == 32 {
 			skill_got[1] = 0;
 			skill_got[7] = 0;
 			skill_got[9] = 0;
-			skill_got[22] = 0;
 			skill_got[31] = 0;
 		}
 	}

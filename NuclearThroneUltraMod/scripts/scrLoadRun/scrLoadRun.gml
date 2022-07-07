@@ -195,6 +195,8 @@ function scrLoadRun(){
 					UberCont.collectedInversionShards = encryptedRun.collectedInversionShards;
 				if variable_struct_exists(encryptedRun, "canSpawnInversionShards")
 					UberCont.collectedInversionShardReward = encryptedRun.collectedInversionShardReward;
+				if variable_struct_exists(encryptedRun, "inverted")
+					Player.inverted = encryptedRun.inverted;
 			}
 			with Player
 			{

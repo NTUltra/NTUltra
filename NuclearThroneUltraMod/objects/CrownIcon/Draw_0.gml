@@ -1,7 +1,7 @@
 draw_set_color(c_dkgray)
 //draw_rectangle(x-12,y-16,x+12,y+16,0)
 
-if UberCont.mouse__x > x-14 and UberCont.mouse__x < x+14 and UberCont.mouse__y > y-16 and UberCont.mouse__y < y+16
+if UberCont.mouse__x > x-10 and UberCont.mouse__x < x+10 and UberCont.mouse__y > y-16 and UberCont.mouse__y < y+16
 {
 draw_sprite(sprSkillSelected,-1,x,y)
 draw_sprite(sprite_index,crown,x+2,y-2)
@@ -22,7 +22,7 @@ draw_set_valign(fa_bottom)
 draw_set_halign(fa_right)
 
 txt2 = string(crown_name[crown])+"#"+string(crown_text[crown])
-if UberCont.mouse__x > x-14 and UberCont.mouse__x < x+14 and UberCont.mouse__y > y-16 and UberCont.mouse__y < y+16
+if UberCont.mouse__x > x-10 and UberCont.mouse__x < x+10 and UberCont.mouse__y > y-16 and UberCont.mouse__y < y+16
 {
 
 drawx = x

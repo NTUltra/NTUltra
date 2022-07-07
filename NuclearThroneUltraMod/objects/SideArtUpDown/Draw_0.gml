@@ -22,6 +22,9 @@ if UberCont.opt_sideart == sprite_get_number(sprSideArt)
 {
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_left);
+	draw_text_colour(x+17,y+1,"CUSTOM",c_black,c_black,c_black,c_black,1);
+	draw_text_colour(x+18,y,"CUSTOM",c_black,c_black,c_black,c_black,1);
+	draw_text_colour(x+18,y+1,"CUSTOM",c_black,c_black,c_black,c_black,1);
 	draw_text(x+17,y,"CUSTOM");
 	var s = 8;
 	var xx = x+66;

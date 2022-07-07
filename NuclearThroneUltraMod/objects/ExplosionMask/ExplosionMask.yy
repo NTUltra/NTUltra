@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": false,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskExplosion4Player",
     "path": "sprites/mskExplosion4Player/mskExplosion4Player.yy",
