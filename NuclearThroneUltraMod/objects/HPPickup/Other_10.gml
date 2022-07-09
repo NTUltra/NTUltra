@@ -28,9 +28,9 @@ if UberCont.opt_gamemode == 34//HARD MODE
 snd_play(sndHealthPickup)
 instance_destroy()
 if Player.my_health + num <= Player.maxhealth
-Player.my_health += num
+	Player.my_health += num
 else// if Player.crown != 2
-Player.my_health = max(Player.my_health,Player.maxhealth);
+	Player.my_health = max(Player.my_health,Player.maxhealth);
 
 if UberCont.opt_ammoicon
 {

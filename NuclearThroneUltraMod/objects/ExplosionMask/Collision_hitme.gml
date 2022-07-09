@@ -11,10 +11,10 @@ if Player.skill_got[14] = 1{
 immune = 1
 
 if Player.race=25//Mutation smith
-immunelimit=6;
+	immunelimit=6;
 
 if Player.ultra_got[97]//Mutation Doctor Ultra A
-immunelimit=8;
+	immunelimit=8;
 //alarm[4]=120;
 
 //if immunelimit>Player.maxhealth //THIS AINT RIGHT overheal!
@@ -30,10 +30,10 @@ if immune = 1
 	alarm[4]=50;
 	if my_health > immunelimit
 	{
-	if my_health-other.dmg < immunelimit
-		my_health = immunelimit
-	else
-		my_health -= other.dmg
+		if my_health-other.dmg < immunelimit
+			my_health = immunelimit
+		else
+			my_health -= other.dmg
 	}
 }
 else

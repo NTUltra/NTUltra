@@ -3,6 +3,7 @@
 //visitedCrib=true
 swapChar = false;
 restarted = false;
+blastArmourPower = 3;
 if !instance_exists(PlayerAlarms)
 	instance_create(x,y,PlayerAlarms);
 

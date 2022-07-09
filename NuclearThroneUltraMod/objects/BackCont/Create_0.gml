@@ -20,7 +20,10 @@ shad = noone;//surface_create(view_wview,view_hview)
 
 alarm[0] = 1
 alarm[1] = 130
-canSpawnPopoThisManyTimes = 2 + GetPlayerLoops();
+loops = GetPlayerLoops()
+if UberCont.opt_gamemode == 34//HARD MODE
+	loops ++;
+canSpawnPopoThisManyTimes = 2 + loops;
 spawnedThisManyPopo = 0;
 
 wantVanAmount = 0;
@@ -38,7 +41,7 @@ if instance_exists(Player)
 	}
 	wantVanAmount = 0
 	var i = 0;
-	repeat(GetPlayerLoops())
+	repeat(loops)
 	{
 		if i < 3
 		{
@@ -60,6 +63,7 @@ if instance_exists(Player)
 	if ( (Player.area == 6 || Player.area == 112) && Player.subarea ==  2 )
 		wantVanAmount = min(GetPlayerLoops()-2,2);
 	if wantVanAmount > 2
+		verticalVans = true;
 		verticalVans = true;
 	if Player.crown == 16 //CROWN OF POPO
 		wantVanAmount ++;

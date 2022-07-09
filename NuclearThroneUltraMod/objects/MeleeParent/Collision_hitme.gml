@@ -11,7 +11,7 @@ if other.team != team && (!inArray || other.sprite_index != other.spr_hurt)
 		sprite_index = spr_hurt
 		image_index = 0
 		motion_add(other.direction,8)
-		Sleep(other.sleepRate+size*10)
+		
 	}
 	BackCont.shake += shk;
 	alarm[1] = hitDelay;

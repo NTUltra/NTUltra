@@ -7,7 +7,7 @@ typ = 0 //0 = nothing, 1 = deflectable, 2 = destructable, 3 = deflectable
 
 walled = 0
 friction = 0.1
-sleepRate=20;
+
 dmg = 30;
 alarm[11] = 0;//Is already blood
 if instance_exists(Player) && Player.ultra_got[16]

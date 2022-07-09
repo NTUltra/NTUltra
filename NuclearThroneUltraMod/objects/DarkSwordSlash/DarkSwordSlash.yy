@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskMegaSlash",
     "path": "sprites/mskMegaSlash/mskMegaSlash.yy",

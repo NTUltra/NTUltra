@@ -55,6 +55,8 @@ if instance_exists(Player)
 		{
 			area = 100;
 		}
+		if instance_exists(TopCont)
+			TopCont.darkness = 1;
 	}
 	else
 	{

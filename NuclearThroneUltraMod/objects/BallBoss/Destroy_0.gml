@@ -15,11 +15,7 @@ repeat(am)
 	instance_create(xx,yy,Explosion);
 	dir += angstep;
 }
-UberCont.canSave = true;
-with BallBossPlateau
-{
-	instance_create(x,y,SaveStation);
-}
+
 with MusCont
 {
 	audio_stop_sound(song);
@@ -33,6 +29,12 @@ with MusCont
 event_inherited();
 //Cleare the lockin
 if !instance_exists(InvaderBossSpawnPortal)
+{
+	UberCont.canSave = true;
+	with BallBossPlateau
+	{
+		instance_create(x,y,SaveStation);
+	}
 	with Floor
 	{
 		if !isArenaFloor
@@ -45,3 +47,4 @@ if !instance_exists(InvaderBossSpawnPortal)
 			ds_list_clear(walls);
 		}
 	}
+}

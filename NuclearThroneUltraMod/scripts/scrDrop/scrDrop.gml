@@ -17,7 +17,6 @@ function scrDrop(itemdrop, weapondrop) {
 				dropRateBuff -= 0.5;
 			}
 		}
-		
 		var lps = Player.loops;
 		if lps > 1 && Player.crown != 5
 		{
@@ -92,6 +91,13 @@ function scrDrop(itemdrop, weapondrop) {
 		weapondrop*=2;
 	}
 
+	if Player.ultra_got[85]
+	{
+		if random(Player.rogueammomax) > Player.rogueammo && random(150) < itemdrop * dropRateBuff
+		{
+			instance_create(x+random(4)-2,y+random(4)-2,RoguePickup);
+		}
+	}
 	need = 0
 
 	if Player.ammo[Player.wep_type[Player.wep]] < Player.typ_amax[Player.wep_type[Player.wep]]*(0.2-(Player.skill_got[10]*0.04))

@@ -7,7 +7,7 @@ hitDelay = 7;
 hitEntities = [];
 walled = 0
 friction = 0.1
-sleepRate=15;
+
 snd_wallhit=sndMeleeWall;
 snd_hit=sndHitWall;
 shk = 5;

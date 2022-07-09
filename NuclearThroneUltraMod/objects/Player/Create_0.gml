@@ -32,6 +32,7 @@ BackCont.alarm[4] = 10;
 canblacksword = false;
 firedthislevel = false;
 fired = false;
+poppop = false;
 rushcrownlevels = 0;
 portalstrikesusedthislevel = 0;
 toxicweaponsfound = 0;
@@ -48,6 +49,8 @@ p = 0
 banditland = false;
 
 strongspiritregained = 0;
+blastArmourDelay = 0;
+blastArmourPower = 3;
 
 microseconds = 0;
 seconds = 0;

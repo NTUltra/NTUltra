@@ -195,7 +195,11 @@ if UberCont.opt_gamemode=4
 instance_create(x,y,BigDogExplo);
 
 
-
+//Crown of death
+if crown == 3
+{
+	instance_create(x,y,CrownOfDeathBoom);
+}
 if skeletonlives>0 && !reincarnate
 {
 instance_create(x,y,WallBreak);
@@ -254,7 +258,7 @@ repeat(al)
 	si++;
 }
 race = other.race
-crown = other.crown
+crown = 1//other.crown
 lastarea = other.lastarea;
 area = other.area//other.lastarea;
 loops = other.loops;

@@ -26,7 +26,7 @@ snd_play(sndRogueCanister);
 with other
 {
 	if ultra_got[85] == 1 || ultra_got[86] == 1 || ultra_got[87] == 1
-	event_user(0);
+		event_user(0);
 }
 
 instance_destroy()

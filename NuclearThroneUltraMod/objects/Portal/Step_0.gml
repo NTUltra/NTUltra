@@ -68,7 +68,7 @@ with WepPickup
 	}
 }
 var d = 64;
-if inverted
+if inverted || type == 3
 	d = 48;
 if point_distance(x,y,Player.x,Player.y)<d
 	Player.alarm[3]=10;

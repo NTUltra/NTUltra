@@ -6,8 +6,11 @@ size = 1
 event_inherited()
 if UberCont.opt_gamemode == 34//HARD MODE
 {
-	instance_destroy(id,false);
-	instance_create(x,y,UltraBandit);
+	if (!(instance_exists(Player) && Player.area == 1 && Player.loops < 1) || random(3) < 1)
+	{
+		instance_destroy(id,false);
+		instance_create(x,y,UltraBandit);
+	}
 }
 if UberCont.encrypted_data.secrets[1] == true
 {

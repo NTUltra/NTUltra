@@ -4,6 +4,7 @@
 function scrYVPower(){
 	if race = 6 and can_shoot = 1
 	{
+		poppop = true;
 		var isMelee = scrMeleeWeapons(wep);
 		if altUltra && ultra_got[23]
 			isMelee = !isMelee;
@@ -78,5 +79,6 @@ function scrYVPower(){
 		{
 			snd_play_2d(sndMutant6No);	
 		}
+		poppop = false;
 	}
 }

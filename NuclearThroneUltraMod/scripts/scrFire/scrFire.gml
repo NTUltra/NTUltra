@@ -4878,18 +4878,23 @@ function scrFire() {
 	if object_index = Player {
 		with projectile
 		{
-			if team=other.team//player projectile
+			if team == other.team//player projectile
 			{
 				Mod1=other.wepmod1;
 				Mod2=other.wepmod2;
 				Mod3=other.wepmod3;
-				if !hadSpeedApplied && speed > 0
+				if !hadSpeedApplied && canBeMoved//speed > 0
 				{
 					speed *= other.pSpeedBoost;
 					hadSpeedApplied = true;
 					var speedBoost = 1.11;
 					var spda = 2.4;
 					var speedAdd = 0;
+					if other.poppop
+					{
+						speed += 2;
+						speed *= 1.2;
+					}
 					if other.skill_got[30] == 1
 					{
 						Mod4 = other.wepmod4;

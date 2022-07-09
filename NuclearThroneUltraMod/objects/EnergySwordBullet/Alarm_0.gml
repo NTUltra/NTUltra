@@ -22,7 +22,7 @@ longarms = (Player.skill_got[13]+Player.bettermelee)*3
 image_angle = direction
 motion_add(ang,2+longarms)
 team = other.team
-sleepRate=6;
+
 }
 }else{
 with instance_create(x,y,EnergySlash)
@@ -36,7 +36,7 @@ longarms = (Player.skill_got[13]+Player.bettermelee)*3
 image_angle = direction
 motion_add(ang,2+longarms)
 team = other.team
-sleepRate=6;
+
 }}
 
 

@@ -65,6 +65,8 @@ if UberCont.opt_gamemode != 25
 		{
 			area = 100;
 		}
+		if instance_exists(TopCont)
+			TopCont.darkness = 1;
 	}
 	else
 	{

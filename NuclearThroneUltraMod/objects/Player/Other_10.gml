@@ -1,31 +1,31 @@
 /// @description ROGUE BLAST ARMOUR
 with instance_create(x,y,RogueExplosion)
 {team=2;}
-
+blastArmourDelay = 10;
 if ultra_got[86]//SUPER BLAST ARMOUR
 {
+	if blastArmourPower > 12
+		snd_play(sndExplosionXL);
+	else if blastArmourPower > 6
+		snd_play(sndExplosionL);
+	with instance_create(x,y,RogueSuperBlastArmour)
+	{
+		randir=random(360);
+		rings = other.blastArmourPower/3;
+		dmg = 0;
+		if rings - 12 > 0
+		{
+			//To prevent super laggy games limit the ringsize and instead increase dmg
+			dmg += rings - 12;
+			rings = 12;
 
-
-var randir=random(360);
-repeat(3)
-{
-
-with instance_create(x+lengthdir_x(16,randir),y+lengthdir_y(16,randir),RogueExplosion)
-{team=2;}
-
-randir+=360/3;
-}
-
-randir=random(360);
-repeat(3)
-{
-
-with instance_create(x+lengthdir_x(32,randir),y+lengthdir_y(32,randir),RogueExplosion)
-{team=2;}
-
-randir+=360/3;
-}
-
+		}
+		ring = 1;
+		dis = 24;
+		disPlus = 25;
+		event_perform(ev_alarm,0);
+	}
+	blastArmourPower += 1;
 }
 if ultra_got[88] == 1
 {

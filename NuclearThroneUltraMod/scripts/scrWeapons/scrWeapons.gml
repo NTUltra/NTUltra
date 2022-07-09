@@ -6107,8 +6107,8 @@ function scrWeapons() {
 	wep_name[554] = "TRIPLE ASSAULT RIFLE"
 	wep_type[554] = 1
 	wep_auto[554] = 0
-	wep_load[554] = 11
-	wep_cost[554] = 9
+	wep_load[554] = 10
+	wep_cost[554] = 8
 	wep_sprt[554] = sprTripleAssaultRifle
 	wep_area[554] = 6
 	wep_text[554] = ""
@@ -6491,15 +6491,15 @@ function scrWeapons() {
 
 	
 	highest_wep_tier = 0;
-	var highestTierWeapon = 0;
+	// var highestTierWeapon = 0;
 	for (var i = 0; i < maxwep+1; i++) {
 	    // code here
 		if wep_area[i] > highest_wep_tier
 		{
 			highest_wep_tier = wep_area[i];
-			highestTierWeapon = i;
+			// highestTierWeapon = i;
 		}
 	}
-	debug("The highest tier weapon is: ",highestTierWeapon);
+	// debug("The highest tier weapon is: ",highestTierWeapon);
 	
 }
