@@ -74,7 +74,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Loadout",
-    "path": "folders/Sprites/Menu/Loadout.yy",
+    "path": "folders/Sprites/Enemies/Menu/Loadout.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprLoadOutArrow",

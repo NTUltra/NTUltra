@@ -543,7 +543,7 @@ function scrUltras() {
 	    ultra_tips[103] = "strong skillet"
         
 		ultra_name[104] = "DISCIPLINE"
-	    ultra_text[104] = "ACTIVE CAN SHRINK PROJECTILES#INTO NOTHINGNESS"
+	    ultra_text[104] = "ACTIVE CAN SHRINK PROJECTILES#INTO NOTHINGNESS#ACTIVE STUNS ENEMIES FOR LONGER"
 	    ultra_tips[104] = "discipline those projectiles!"
 		/*
 	    ultra_name[104] = "FRUITS OF LABOR"

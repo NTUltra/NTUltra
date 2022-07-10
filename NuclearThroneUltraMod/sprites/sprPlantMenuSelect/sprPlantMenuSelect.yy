@@ -78,7 +78,7 @@
   "nineSlice": null,
   "parent": {
     "name": "MenuChar",
-    "path": "folders/Sprites/Menu/MenuChar.yy",
+    "path": "folders/Sprites/Enemies/Menu/MenuChar.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprPlantMenuSelect",

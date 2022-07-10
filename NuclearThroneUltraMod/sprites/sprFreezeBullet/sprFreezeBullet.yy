@@ -64,7 +64,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprFreezeBullet","path":"sprites/sprFreezeBullet/sprFreezeBullet.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprFreezeBullet",
     "tags": [],
     "resourceType": "GMSequence",
   },

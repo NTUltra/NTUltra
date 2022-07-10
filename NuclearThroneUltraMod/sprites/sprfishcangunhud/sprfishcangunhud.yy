@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"c48cc265-20b9-46cd-894a-5a8b60ce9e08","path":"sprites/sprFishCanGunHUD/sprFishCanGunHUD.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c48cc265-20b9-46cd-894a-5a8b60ce9e08","path":"sprites/sprFishCanGunHUD/sprFishCanGunHUD.yy",},"LayerId":{"name":"3494acab-9171-45fc-a567-3d21eead4554","path":"sprites/sprFishCanGunHUD/sprFishCanGunHUD.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"c48cc265-20b9-46cd-894a-5a8b60ce9e08","path":"sprites/sprFishCanGunHUD/sprFishCanGunHUD.yy",},"LayerId":{"name":"feed3ae1-63a2-451a-b772-b045d730f913","path":"sprites/sprFishCanGunHUD/sprFishCanGunHUD.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"c48cc265-20b9-46cd-894a-5a8b60ce9e08","path":"sprites/sprFishCanGunHUD/sprFishCanGunHUD.yy",},"LayerId":{"name":"3494acab-9171-45fc-a567-3d21eead4554","path":"sprites/sprFishCanGunHUD/sprFishCanGunHUD.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sprFishCanGunHUD","path":"sprites/sprFishCanGunHUD/sprFishCanGunHUD.yy",},"resourceVersion":"1.0","name":"c48cc265-20b9-46cd-894a-5a8b60ce9e08","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -72,7 +72,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Menu",
-    "path": "folders/Sprites/Menu.yy",
+    "path": "folders/Sprites/Enemies/Menu.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprFishCanGunHUD",

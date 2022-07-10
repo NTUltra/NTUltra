@@ -617,7 +617,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Menu",
-    "path": "folders/Sprites/Menu.yy",
+    "path": "folders/Sprites/Enemies/Menu.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprUltraIcon",

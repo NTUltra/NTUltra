@@ -227,12 +227,13 @@ function scrPowers() {
 		else
 		{
 			var effective = false;
+			var buffActive = ultra_got[104] * 0.6;
 			with projectile
 			{
 				if (team!= other.team
 				&& x > other.x - 170 && x < other.x + 170 && y > other.y - 130 && y < other.y + 130)
 				{
-					if (image_xscale > 0.15 + (other.ultra_got[104]*0.6) && image_yscale > 0.2 && speed > 1)
+					if (image_xscale > 0.15 + buffActive && image_yscale > 0.2 && speed > 1)
 					{
 						image_xscale *= 0.75;
 						image_yscale *= 0.75;
@@ -243,9 +244,48 @@ function scrPowers() {
 						effective = true;
 						with instance_create(x,y,Notice)
 						{
+							image_speed = 0.4;
 							sprite_index = sprHumphryDestroyProjectile;	
 						}
 						instance_destroy();	
+					}
+				}
+			}
+			var duration = 10;
+			var confspr = sprEnemyConfusion;
+			if ultra_got[104]
+			{
+				duration += 12;
+				confspr = sprEnemyUltraConfusion;
+			}
+			
+			with enemy
+			{
+				effective = true;
+				speed = 0;
+				if alarm[1] > 0
+				{
+					alarm[11] += duration
+					alarm[1] += duration;
+				}
+				if instance_exists(myConfusion)
+				{
+					with myConfusion
+					{
+						alarm[0] += duration;
+						image_speed = 0.4;
+						image_index = 0;
+					}
+				}
+				else
+				{
+					myConfusion = instance_create(x,y-8,HumphryConfuse)
+					with myConfusion {
+						myEnemy = other.id;
+						image_xscale = choose(1,-1);
+						image_speed = 0.4;
+						sprite_index = confspr;
+						alarm[0] = duration;
 					}
 				}
 			}

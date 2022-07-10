@@ -162,7 +162,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Logo",
-    "path": "folders/Sprites/Menu/Logo.yy",
+    "path": "folders/Sprites/Enemies/Menu/Logo.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprLogo",

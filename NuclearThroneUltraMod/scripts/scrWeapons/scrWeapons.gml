@@ -3698,7 +3698,7 @@ function scrWeapons() {
 	wep_load[335] = 3
 	wep_cost[335] = 2
 	wep_sprt[335] = sprFrostSMG
-	wep_area[335] = 6
+	wep_area[335] = 5
 	wep_text[335] = "cold sub"
 	wep_swap[335] = sndSwapPistol
 	wep_rad[335] = 0;
@@ -4878,7 +4878,7 @@ function scrWeapons() {
 	wep_load[442] = 3
 	wep_cost[442] = 1
 	wep_sprt[442] = sprFlameSMG
-	wep_area[442] = 6
+	wep_area[442] = 5
 	wep_text[442] = ""
 	wep_swap[442] = sndSwapMachinegun
 	wep_rad[442] = 0;
@@ -6371,10 +6371,10 @@ function scrWeapons() {
 	wep_name[578] = "AUTO SPLINTER SPEAR LAUNCHER"
 	wep_type[578] = 3
 	wep_auto[578] = 1
-	wep_load[578] = 11
+	wep_load[578] = 12
 	wep_cost[578] = 2
 	wep_sprt[578] = sprAutoSplinterSpearLauncher
-	wep_area[578] = 12
+	wep_area[578] = 14
 	wep_text[578] = ""
 	wep_swap[578] = sndSwapBow
 	wep_rad[578] = 0;

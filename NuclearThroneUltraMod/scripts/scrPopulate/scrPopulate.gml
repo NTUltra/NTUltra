@@ -65,6 +65,19 @@ function scrPopulate() {
 				if Player.loops > 8 && random(20) < Player.loops - 8
 					scrPopEnemies();
 				
+				if UberCont.opt_gamemode == 34
+				{
+					var ran = random(100);
+					if ran < 10
+					{
+						scrPopEnemies();
+					}
+					else if ran < 15
+					{
+						instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraBandit);
+					}
+				}
+				
             }
             else {
                 if UberCont.opt_gamemode = 9 //easy mode
@@ -75,7 +88,19 @@ function scrPopulate() {
 						scrPopEnemies()
                 } else { //normal procedure
                     scrPopEnemies()
-
+					
+					if UberCont.opt_gamemode == 34 && spawnarea != 100 && spawnarea != 104
+					{
+						var ran = random(100);
+						if ran < 10
+						{
+							scrPopEnemies();
+						}
+						else if ran < 15
+						{
+							instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraBandit);
+						}
+					}
 
                     //spawn some more enemies on loop
                     if Player.loops > 0 && random(15) < Player.loops
