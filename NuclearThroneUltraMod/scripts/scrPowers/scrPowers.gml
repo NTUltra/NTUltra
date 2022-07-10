@@ -1241,18 +1241,23 @@ function scrPowers() {
 	snd_play_2d(sndSpawnAlly)
 	with Ally
 	{
-	instance_create(x,y,HealFX)
-	alarm[2] = 120
+		instance_create(x,y,HealFX)
+		alarm[2] = 120;
+		with Portal
+		{
+			if type == 1
+			{
+				other.alarm[2] = 1;
+			}
+		}
 
-	if instance_exists(Player)
-	{
-	if Player.ultra_got[37]==1//Rebel Ultra A Personal Guard
-	maxhealth=30;
-	else
-	maxhealth = 12;
-	}
-
-
+		if instance_exists(Player)
+		{
+		if Player.ultra_got[37]==1//Rebel Ultra A Personal Guard
+		maxhealth=30;
+		else
+		maxhealth = 12;
+		}
 	}
 	if Player.ultra_got[38]==1//Rebel Ultra B Riot
 	{

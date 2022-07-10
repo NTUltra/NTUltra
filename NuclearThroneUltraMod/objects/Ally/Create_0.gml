@@ -2,22 +2,36 @@ raddrop = 4
 
 hurt_pitch_variation = 0;
 
+gun = sprBanditGun;
+spr_idle = sprAllyAppear
+spr_walk = sprAllyWalk
+spr_hurt = sprAllyHurt
+spr_dead = sprAllyDead
+
 if instance_exists(Player)
 {
-if Player.ultra_got[37]==1//Rebel Ultra A Personal Guard
-maxhealth=30;
-else
-maxhealth = 12;
-
+	if Player.skill_got[5]
+		gun = sprBetterAllyGun
+	if Player.ultra_got[37]==1//Rebel Ultra A Personal Guard
+		maxhealth=30;
+	else
+		maxhealth = 12;
+	if Player.ultra_got[39]
+		alarm[3] = 30;
+	if Player.bskin == 2
+	{
+		sprite_index = sprAllyCAppear;
+		spr_idle = sprAllyCAppear
+		spr_walk = sprAllyCWalk
+		spr_hurt = sprAllyCHurt
+		spr_dead = sprAllyCDead
+	}
 }
 
 meleedamage = 0
 size = 1
 
-spr_idle = sprAllyAppear
-spr_walk = sprAllyWalk
-spr_hurt = sprAllyHurt
-spr_dead = sprAllyDead
+
 
 image_speed = 0.4
 friction = 0.4
@@ -38,17 +52,22 @@ gunangle = random(360)
 alarm[1] = 24*1.4
 alarm[0] = 24*1.4//intro animation which is cool af
 wkick = 0
-
 alarm[2] = 120
+with Portal
+{
+	if type == 1
+	{
+		other.alarm[2] = 5;
+	}
+}
 
 name=choose(
-choose("George","Bill","Jack","Henry","Good O'l Humphry","Bertha","Daniel","Willem","Bob","Weave","Issabell","Tom","Tami","Alex","Alexandra","Luther"),
-choose("Susan","Mark","Hugh","Tina","Marcia","Gloria","Kelly","Becky","Tim","Ray","Stewie","Peter","Phillip","Jane","Doris","Jason"),
-choose("Donna","Josh","Frank","Samuel","Sarah","Kim","Julie","Nicole","Brian","Bruce","Rebecca","Micheal","Carl","Eugene","Walter","Brenda"),
-choose("Lars","Mary","Jeremy","Paul","Randy","Kevin","Martin","Jessica","Harold",/*rares*/choose("Big Tam","Chubbyemu","Kakujo","Tit","Kuntala","Bob Weaver","Jezus","God","Waifu","A dirty casual","Juul")/*rare*/,"Heather","Joe","Barbara","Cheryl","Amy","Loki")
-,choose("Johan","Laura","Gertrude","Pierce","Noel","Cora","Rex","Ann","Hilary","Elisa","Jerry","Helen","Daphne","Shanon","Curt","Jeff")
-,choose("Carlos","Britta","Geoff","Dom","Matt","Matthew","Anna","Smith","Lucius","Britanny","Anita","Doug","Colin","Fernando","David","Shel")
+"George","Bill","Jack","Henry","Bertha","Daniel","Willem","Bob","Weave","Issabell","Tom","Tami","Alex","Alexandra","Luther","Casandra",
+"Susan","Mark","Hugh","Tina","Marcia","Gloria","Kelly","Becky","Tim","Ray","Stewie","Peter","Phillip","Jane","Doris","Jason",
+"Donna","Josh","Frank","Samuel","Sarah","Kim","Julie","Nicole","Brian","Bruce","Rebecca","Micheal","Carl","Eugene","Walter","Brenda",
+"Lars","Mary","Jeremy","Paul","Randy","Kevin","Martin","Jessica","Harold","Stimpy","Dopey",
+/*rares*/choose("Big Tam","Chubbyemu","Kakujo","Tit","Kuntala","Bob Weaver","Jezus","God","Waifu","A dirty casual","Juul","TurtleMelon","Burrino","Worm Chase","Good O'l Humphry","Y.V. follower","Prophet","Little shit","Chad","Mr. Toiletpaper","<3","Please don't let me die")/*rare*/
+,"Heather","Joe","Barbara","Cheryl","Amy","Loki","Hughie","Iskal","Jasmine","Annie","Britta","Abed","Sheldon","Curtis","Geofrey","Emanuel",
+"Johan","Laura","Gertrude","Pierce","Noel","Cora","Rex","Ann","Hilary","Elisa","Jerry","Helen","Daphne","Shanon","Curt","Jeff","Seymour",
+"Carlos","Britta","Geoff","Dom","Matt","Matthew","Anna","Smith","Lucius","Britanny","Anita","Doug","Colin","Fernando","David","Shel","Spencer"
 );
-
-/* */
-/*  */

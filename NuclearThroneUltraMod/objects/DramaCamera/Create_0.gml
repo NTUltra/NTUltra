@@ -97,13 +97,17 @@ if (Player.area = 1 || ((Player.area == 10 || Player.area == 101) && instance_ex
 	name = "BIG BANDIT";
 	if random(1000)< 1
 	{
-		name = choose("BIG BITCH","HERE WE GO AGAIN");	
+		name = choose("BIG BITCH","HERE WE GO AGAIN","REBEL'S BROTHER","BIG DAD");	
 	}
 }
 else if Player.area = 105
 {
 //with instance_create(x,y,Drama)
 name = "INVERTED BIG BANDIT"
+	if random(1000)< 1
+	{
+		name = choose("BIG FUCK","SHITBAG","MISTER ASS","VARIETY STREAMER");
+	}
 }
 else if Player.area = 2
 {
@@ -209,7 +213,7 @@ else if Player.area = 5
 {
 //with instance_create(x,y,Drama)
 if random(10000)<1
-name= "GEORGE!"
+name= choose("FUNNY FUCK","GEORGE!")
 else
 name = "LIL HUNTER"
 }
@@ -248,7 +252,7 @@ else if Player.area = 112
 	{
 		name = "INVERTED TECHNOMANCER";
 		if random(80) < 1
-			name = choose("");
+			name = choose("NERD");
 	}
 
 }
@@ -316,7 +320,7 @@ else if Player.area == 10
 	{
 		name = "MOM ON VACATION";
 		if random(100) < 1
-			name = choose("WE NOT SKIPPING THIS FIGHT","BALL MOM ON VACATION","MOMMY IN THE SUN");
+			name = choose("WE NOT SKIPPING THIS FIGHT","BALL MOM ON VACATION","MOMMY IN THE SUN","BIKINI");
 	}
 }
 

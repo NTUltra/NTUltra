@@ -201,13 +201,13 @@ function scrUltras() {
 	    ultra_text[38] = "SPAWN TWO ALLIES INSTEAD OF ONE"
 	    ultra_tips[38] = "more is better"
     
-	    ultra_name[39] = "EVERONE GET IN HERE"
-	    ultra_text[39] = "ALLIES CAST LASERS TOWARDS EACH OTHER#THE MORE ALLIES YOU HAVE#THE HIGHER YOUR DROP RATE IS#ALLIES HAVE A SIGNIFICANT#INCREASE IN DROPRATE"
+	    ultra_name[39] = "EVERONE IS CONNECTED"
+	    ultra_text[39] = "ALLIES CAST LASERS TOWARDS EACH OTHER#THE MORE ALLIES YOU HAVE#THE HIGHER YOUR DROP RATE IS#ALIES DROP MORE RESOURCES#WHEN THEY DIE"
 	    ultra_tips[39] = "hurt stone"
     
 	    ultra_name[40] = "DEFENSE"
 	    ultra_text[40] = "PORTALS HEAL ALL YOUR HEALTH#WHENEVER YOU TAKE DAMAGE YOU#SPAWN DEFENSIVE BULLETS#MORE ALLY BULLET DAMAGE"
-	    ultra_tips[40] = "two passives?"
+	    ultra_tips[40] = "this was rebel's old passive"
     
 
 	//HUNTER 

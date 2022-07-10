@@ -3,7 +3,10 @@ typ = 2 //0 = nothing, 1 = deflectable, 2 = destructable
 dmg = 3
 if instance_exists(Player){
 if Player.ultra_got[40]
-	dmg=4;
+{
+	dmg = 4;
+	sprite_index = sprAllyBulletStrong;
+}
 if Player.ultra_got[28]//Roids ultra
 	dmg += 2;
 }

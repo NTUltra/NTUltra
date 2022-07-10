@@ -76,7 +76,7 @@ speed = 5.5
 
 if(alarm[0]>0)
 {
-	sprite_index=sprAllyAppear;
+	sprite_index=spr_idle;
 }
 
 

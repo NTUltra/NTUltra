@@ -1023,29 +1023,28 @@ lsthealth -= 0.5
 }
 if  ultra_got[40]=1//Ultra D
 {
-if lsthealth > my_health
-{
-if canrebel = 1
-{
-canrebel = 0
-//REBEL DEFENCE PASSIVE
-ang = random(360)
-{
-repeat(14)
-{
-with instance_create(x,y,AllyBullet)
-{
-motion_add(other.ang,5)
-image_angle = direction
-team = other.team
-}
-ang += 360/14
-}
-}
-}
-}
-else
-canrebel = 1
+	if lsthealth > my_health
+	{
+		if canrebel = 1
+		{
+			canrebel = 0
+			//REBEL DEFENCE PASSIVE
+			ang = random(360)
+			var angstep = 360/14;
+			repeat(14)
+			{
+				with instance_create(x,y,AllyBullet)
+				{
+					motion_add(other.ang,6)
+					image_angle = direction
+					team = other.team
+				}
+				ang += angstep;
+			}
+		}
+	}
+	else
+		canrebel = 1
 }
 if wep == 531//Coffee makes you faster
 {

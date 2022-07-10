@@ -4,7 +4,7 @@ function scrDrop(itemdrop, weapondrop) {
 	if instance_exists(Player)
 	{
 		dropRateBuff = 1 + Player.skill_got[4]*(0.45+Player.betterrabbitpaw)
-		+ (Player.ultra_got[39]*instance_number(Ally)*0.6)
+		+ (Player.ultra_got[39]*instance_number(Ally)*0.25)//used to be 0.6
 		+ (Player.skill_got[28]*(Player.rage*0.0004))
 		if Player.crown == 21 //Crown of risk
 		{

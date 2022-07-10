@@ -148,8 +148,10 @@ room_speed=35;
     isAlkaline = true;
     if ultra_got[37]==1//Personal Guard REBEL ULTRA A
     {
-    repeat(2)
-    instance_create(x,y,Ally);
+		with instance_create(x,y,Ally)
+			name = "Guard Bob";
+		with instance_create(x,y,Ally)
+			name = "Guard Weave";
     }
     if race=13
     {justAsheep=true;}

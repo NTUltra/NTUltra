@@ -1,45 +1,76 @@
 scrDrop(3,0)
 if instance_exists(Player)
 {
-if Player.ultra_got[39]//everyone get in here
-scrDrop(70,0.5);
+	
+	if Player.ultra_got[39]//everyone is connected
+	{
+		scrDrop(70,2);
+		raddrop += 8;
+	}
+	//REBEL DEFENCE PASSIVE
+	if Player.ultra_got[40] || Player.ultra_got[39] || Player.ultra_got[38] || Player.ultra_got[37]
+	{
+		ang = random(360)
+		var angstep = 360/6;
+		repeat(6)
+		{
+			with instance_create(x,y,AllyBullet)
+			{
+				motion_add(other.ang,5)
+				image_angle = direction
+				team = other.team
+			}
+			ang += angstep;
+		}
+	}
 }
+
 
 with instance_create(x,y,Corpse)
 {
-size = other.size
-mask_index = other.mask_index
-motion_add(other.direction,other.speed)
-speed += max(0,-other.my_health/5)
-sprite_index = other.spr_dead
-image_xscale = other.right
+	size = other.size
+	mask_index = other.mask_index
+	if other.speed > 0
+	{
+		motion_add(other.direction,other.speed)
+		speed += max(0,-other.my_health/5)
+	}
+	sprite_index = other.spr_dead
+	image_xscale = other.right
 
-if speed > 16
-speed = 16
-if size > 0
-speed /= size
+		
+	if speed > 17
+		speed = 17
+	if instance_exists(Player)
+	{
+		var impactWrist = false;
+		if Player.ultra_got[52] == 1
+			speed += 4;
+		if Player.skill_got[20] == 1
+		{
+			impactWrist = true;
+			alarm[0] = 2;
+			speed = max(speed+8.9,9.8)//9.3
+			if Player.race=25
+				speed+=1.25;
+		}
+		else if speed > 17
+		speed = 17
+		if size > 0
+		{
+			if impactWrist
+			{
+				speed /= (size*0.32);
+			}
+			else
+				speed /= size*0.82;
+		}
+			
+		if Player.skill_got[20] == 1 && speed > 19
+			speed = 19
+	}
+	else if size > 0
+		speed /= size*0.82
 }
-
 snd_play(snd_dead)
-
-Sleep(10+size*15)
-
-do {if raddrop > 15
-{raddrop -= 10
-with instance_create(x,y,BigRad)
-{motion_add(other.direction,other.speed)
-motion_add(random(360),random(other.raddrop/2)+2)
-repeat(speed)
-speed *= 0.9}}
-}
-until raddrop <= 15
-
-repeat(raddrop)
-{
-with instance_create(x,y,Rad)
-{motion_add(other.direction,other.speed)
-motion_add(random(360),random(other.raddrop/2)+2)
-repeat(speed)
-speed *= 0.9}
-}
-
+scrRaddrop(raddrop);
