@@ -1,6 +1,6 @@
 /// @description Init
 wave = 0;
-depth = 8
+depth = 9
 if UberCont.collectedInversionShards > 2
 	name = "INCREASE YOUR MAX LEVEL BY ONE";
 else

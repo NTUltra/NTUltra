@@ -16,6 +16,7 @@ snd_play(sndStatueCharge);
 with Player//Data to keep
 {
 	//bskin=other.bskin;
+	inverted = other.inverted;
 	lastsubarea = other.lastsubarea;
 	ultramod = other.ultramod;
 	ultimategamble=true;

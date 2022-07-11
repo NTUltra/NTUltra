@@ -439,34 +439,34 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 
 	if bleed > 0 and my_health > 0
 	{
-	audio_stop_sound(sndChickenHeadlessLoop)
-	snd_play(sndChickenRegenHead)
-	bleed = 0
-	if bskin=2
-	{
-	spr_idle = sprMutant9CIdle
-	spr_hurt = sprMutant9CHurt
-	spr_walk = sprMutant9CWalk
-	}
-	else if bskin=1
-	{
-	spr_idle = sprMutant9BIdle
-	spr_hurt = sprMutant9BHurt
-	spr_walk = sprMutant9BWalk
-	}
-	else
-	{
-	spr_idle = sprMutant9Idle
-	spr_hurt = sprMutant9Hurt
-	spr_walk = sprMutant9Walk}
-	with Corpse{
-	if other.bskin=2
-	sprite_index = mskPickupThroughWall;//invisible basicly
-	else if other.bskin=1
-	sprite_index = sprMutant9BHeadIdle
-	else
-	sprite_index = sprMutant9HeadIdle
-	instance_destroy()}
+		audio_stop_sound(sndChickenHeadlessLoop)
+		snd_play(sndChickenRegenHead)
+		bleed = 0
+		if bskin=2
+		{
+		spr_idle = sprMutant9CIdle
+		spr_hurt = sprMutant9CHurt
+		spr_walk = sprMutant9CWalk
+		}
+		else if bskin=1
+		{
+		spr_idle = sprMutant9BIdle
+		spr_hurt = sprMutant9BHurt
+		spr_walk = sprMutant9BWalk
+		}
+		else
+		{
+		spr_idle = sprMutant9Idle
+		spr_hurt = sprMutant9Hurt
+		spr_walk = sprMutant9Walk}
+		with Corpse{
+		if other.bskin=2
+		sprite_index = mskPickupThroughWall;//invisible basicly
+		else if other.bskin=1
+		sprite_index = sprMutant9BHeadIdle
+		else
+		sprite_index = sprMutant9HeadIdle
+		instance_destroy()}
 	}
 
 	
@@ -1050,7 +1050,7 @@ if wep == 531//Coffee makes you faster
 {
 	maxspeed += 1;	
 }
-var outofcombat = instance_number(enemy) <= instance_number(IDPDVan) && !instance_exists(becomenemy)
+var outofcombat = (!instance_exists(enemy) || instance_number(enemy) <= instance_number(IDPDVan)) && !instance_exists(becomenemy)
 if instance_exists(SurvivalWave)
 {
 	with SurvivalWave {
@@ -1133,6 +1133,20 @@ if skill_got[19] == 1
 }
 ///homing projectiles mod
 var modHomeBoost = 0.6;
+if race == 7//Steroids
+{
+	homeBoost = max(0,homeBoost-0.4);
+	modHomeBoost -= 0.2;
+	if bwepmod1 == 13
+	homeBoost += modHomeBoost;
+	if bwepmod2 == 13
+		homeBoost += modHomeBoost;
+	if bwepmod3 == 13
+		homeBoost += modHomeBoost;
+	if bwepmod4 == 13
+		homeBoost += modHomeBoost;
+}
+
 if skill_got[30] == 1
 	modHomeBoost += 0.34;
 if ultra_got[65]
@@ -1366,7 +1380,7 @@ if typ!=0&&object_index!=Flame&&object_index!=TrapFire&&object_index!=HotDrakeFl
 
 
 ///extra feet dodging bonus
-if skill_got[2]
+if skill_got[2] && !instance_exists(GenCont) && !instance_exists(LevCont)
 {
 	if extrafeetalarm>0
 		extrafeetalarm--;
@@ -1675,7 +1689,7 @@ moddelay--;
 ///Rogue  heat
 if (RogueHeat==true)
 {
-    if ( instance_number(enemy) < BackCont.enemiesInStartLevel * 0.8 )
+    if ( instance_exists(enemy) && instance_number(enemy) < BackCont.enemiesInStartLevel * 0.8 )
     {
     instance_create(x,y,IDPDSpawn);
     RogueHeat=false

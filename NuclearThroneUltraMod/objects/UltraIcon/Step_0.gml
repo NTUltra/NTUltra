@@ -283,7 +283,7 @@ if skill == 76//skelly ultra D
 				kills = other.kills;
 				subarea=other.subarea;
 				boostLevel = other.level;
-				
+				lastwishused = false;
 				//skeletonlives=other.skeletonlives;
 
 				wep=other.wep

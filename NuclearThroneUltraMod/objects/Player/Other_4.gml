@@ -4,6 +4,9 @@
 swapChar = false;
 restarted = false;
 blastArmourPower = 3;
+//extra feet items
+extrafeetalarm = 0;
+extrafeetdodged = false;
 if !instance_exists(PlayerAlarms)
 	instance_create(x,y,PlayerAlarms);
 

@@ -26,7 +26,7 @@ wave+=0.4;
 
 if place_meeting(x,y,Player)
 {
-	if !active
+	if !active || KeyCont.key_swap[Player.p] = 1
 	{
 		active = true;
 		name="##MODIFY WEAPON#"+modname;
@@ -44,7 +44,10 @@ if place_meeting(x,y,Player)
 		}
 		else
 		{
-			replaceModNr ++;
+			if KeyCont.key_swap[Player.p] == 1
+				replaceModNr = 0;
+				
+				replaceModNr ++;
 			if replaceModNr > 3 + hasPowerCraving
 			{
 				replaceModNr = 1;

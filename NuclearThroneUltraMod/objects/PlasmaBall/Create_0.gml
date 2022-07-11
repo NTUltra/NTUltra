@@ -10,6 +10,8 @@ typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 //friction=0.4;
 dmg = 7
 nomscale = 1;
+maxspeed = 7;
+
 if instance_exists(Player)
 {
 if Player.skill_got[17] = 1
@@ -17,6 +19,8 @@ if Player.skill_got[17] = 1
 	nomscale += 0.4;
 dmg = 9+(Player.betterlaserbrain)
 }
+if Player.crown == 24//Crown of sloth
+	maxspeed -= 1.5;
 }
 originalDirection=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 direction=originalDirection;
@@ -25,4 +29,3 @@ Sleep(3)
 resetSpeed=false;
 
 alarm[11] = 1;
-maxspeed = 7;

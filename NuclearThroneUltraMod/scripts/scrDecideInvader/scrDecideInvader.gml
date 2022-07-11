@@ -7,6 +7,8 @@ function scrDecideInvader(){
 		var area = Player.area;
 		var subarea = Player.subarea;
 		var loops = Player.loops;
+		if UberCont.opt_gamemode == 34//Hard mode
+			loops += 4;
 		if loops > 4
 		{
 			if area == 101 && subarea == 1//Oasis 1B - 1

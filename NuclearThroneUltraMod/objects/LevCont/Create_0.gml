@@ -9,7 +9,7 @@ __view_set( e__VW.XView, 0, 0 )
 __view_set( e__VW.YView, 0, 0 )
 wave = 0
 if UberCont.useSeed && instance_exists(Player)
-	random_set_seed(UberCont.seed+Player.lastarea+Player.lastsubarea);
+	random_set_seed(UberCont.seed+Player.lastarea+Player.lastsubarea+Player.skillpoints);
 
 if Player.crownpoints > 0
 {

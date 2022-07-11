@@ -3,25 +3,39 @@ var cursorNumber = UberCont.opt_crosshair;
 
 if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x and UberCont.mouse__x < x+8 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
 {
-snd_play_2d(sndClick);
-if cursorNumber>0
-cursorNumber-=1;
-else
-cursorNumber=sprite_get_number(sprCrosshair);
-Cursor.sprite_index = sprCrosshair;
-Cursor.image_index=cursorNumber;
-UberCont.opt_crosshair=cursorNumber;
+	snd_play_2d(sndClick);
+	if cursorNumber>0
+	cursorNumber-=1;
+	else
+	cursorNumber=sprite_get_number(sprCrosshair);
+	Cursor.sprite_index = sprCrosshair;
+	Cursor.image_index=cursorNumber;
+	UberCont.opt_crosshair=cursorNumber;
+	with Cursor
+	{
+		var s = UberCont.opt_crosshair_scale;
+		var sw = sprite_get_width(sprite_index);
+		var sh = sprite_get_height(sprite_index);
+		scale = s/max(sw,sh);
+	}
 }
 else if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x+10 and UberCont.mouse__x < x+18 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
 {
-snd_play_2d(sndClick);
-if cursorNumber < sprite_get_number(sprCrosshair)
-cursorNumber += 1
-else
-cursorNumber=0;
-Cursor.sprite_index = sprCrosshair;
-Cursor.image_index=cursorNumber;
-UberCont.opt_crosshair=cursorNumber;
+	snd_play_2d(sndClick);
+	if cursorNumber < sprite_get_number(sprCrosshair)
+	cursorNumber += 1
+	else
+	cursorNumber=0;
+	Cursor.sprite_index = sprCrosshair;
+	Cursor.image_index=cursorNumber;
+	UberCont.opt_crosshair=cursorNumber;
+	with Cursor
+	{
+		var s = UberCont.opt_crosshair_scale;
+		var sw = sprite_get_width(sprite_index);
+		var sh = sprite_get_height(sprite_index);
+		scale = s/max(sw,sh);
+	}
 }
 var s = 8;
 var xx = x+66;
@@ -42,7 +56,7 @@ if UberCont.opt_crosshair == sprite_get_number(sprCrosshair)
 		with UberCont
 		{
 			UberCont.opt_custom_crosshair = cursorFilePath;
-			UberCont.customCrosshair = sprite_add(cursorFilePath,0,true,false,0,0);
+			UberCont.customCrosshair = sprite_add(cursorFilePath,0,false,false,0,0);
 			if sprite_exists(UberCont.customCrosshair)
 			{
 				var w = sprite_get_width(UberCont.customCrosshair);

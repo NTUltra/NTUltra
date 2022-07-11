@@ -7,9 +7,12 @@ else
 {
 	with Player
 	{
-		instance_create(x,y,BigWeaponChest);
-		instance_create(x,y,EliteWeaponChest);
-		instance_create(x,y,HealthChest);
+		if area == 1 && subarea == 1 && loops == 0
+		{
+			instance_create(x,y,BigWeaponChest);
+			instance_create(x,y,EliteWeaponChest);
+			instance_create(x,y,HealthChest);
+		}
 	}
 	alarm[1] = 30;
 }

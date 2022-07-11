@@ -10,7 +10,9 @@ function scrFire() {
 	if (Player.alarm[2]<1)//alarm = Fish Ultra B
 	{
 		ammo[wep_type[wep]] -= wep_cost[wep]
+		ammo[wep_type[wep]] = max(0,ammo[wep_type[wep]]);
 		rad-=wep_rad[wep]
+		rad = max(rad,0);
 	}
 
 	if Player.ultra_got[4]//FISH ULTRA D rolling is good
@@ -4883,6 +4885,7 @@ function scrFire() {
 				Mod1=other.wepmod1;
 				Mod2=other.wepmod2;
 				Mod3=other.wepmod3;
+				Mod4=other.wepmod4;
 				if !hadSpeedApplied && canBeMoved//speed > 0
 				{
 					speed *= other.pSpeedBoost;
@@ -4897,7 +4900,6 @@ function scrFire() {
 					}
 					if other.skill_got[30] == 1
 					{
-						Mod4 = other.wepmod4;
 						speedBoost = 1.15;
 						spda = 3.4;
 					}

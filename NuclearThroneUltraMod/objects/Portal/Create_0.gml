@@ -2,6 +2,8 @@ image_speed = 0.8
 type=1;
 inverted=false;//is this an inverted portal?
 
+closedTheVault = false;
+
 endgame = 100
 
 alarm[0] = 1;
@@ -22,14 +24,14 @@ if instance_exists(Player)
 //chance=2;
 
 
-currentarea=Player.area;
-currentsubarea=Player.subarea;
+	currentarea=Player.area;
+	currentsubarea=Player.subarea;
 
 }
 else
 {
-currentarea=BackCont.area;
-currentsubarea=BackCont.subarea;
+	currentarea=BackCont.area;
+	currentsubarea=BackCont.subarea;
 }
 
 
@@ -49,6 +51,10 @@ if ( (currentarea=105 || currentarea=106|| currentarea=107 || currentarea = 108 
 	if instance_exists(Player)
 	{
 		Player.inverted=true;
+	}
+	else if instance_exists(PlayerSpawn)
+	{
+		PlayerSpawn.inverted = true;	
 	}
 	with Corpse
 	canspawnportal=false;

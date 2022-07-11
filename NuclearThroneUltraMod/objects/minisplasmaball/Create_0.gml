@@ -10,6 +10,8 @@ typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 //friction=0.4;
 dmg = 3//15
 nomscale = 1;
+maxspeed = 16;
+
 if instance_exists(Player)
 {
 if Player.skill_got[17] = 1
@@ -19,6 +21,8 @@ if Player.skill_got[17] = 1
 	if Player.betterlaserbrain > 0
 		dmg++;
 }
+	if Player.crown == 24//Crown of sloth
+		maxspeed -= 4;
 }
 image_speed = 0.5
 resetSpeed=false;
@@ -26,5 +30,4 @@ resetSpeed=false;
 alarm[11] = 1;
 alarm[1] = 3;
 ptime = 3;
-maxspeed = 16;
 angleDir = 30;

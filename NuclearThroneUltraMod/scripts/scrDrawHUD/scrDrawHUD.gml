@@ -833,7 +833,7 @@ function scrDrawHUD() {
 	}
 	else if !instance_exists(GenCont) && !instance_exists(PlayerSpawn)
 	{
-	scrDrawGameOver()
+		scrDrawGameOver()
 	}
 
 

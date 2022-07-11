@@ -25,9 +25,9 @@ if instance_exists(Player)
 	{
 		speed += 2;	
 	}
-	if Player.crown == 24//Crown of sloth
+	if Player.crown == 24 && speed > 10//Crown of sloth
 	{
-		speed -= 2;	
+		speed = 10;
 	}
 }
 else if(speed>12)

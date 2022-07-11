@@ -72,7 +72,8 @@ if target > 0 && instance_exists(target)
 		var a = 1;
 		with WantBoss
 		{
-			alarm[0]+=15*a;
+			if alarm[0] < 60
+				alarm[0]+=15*a;
 			a++;
 		}
 		instance_destroy()

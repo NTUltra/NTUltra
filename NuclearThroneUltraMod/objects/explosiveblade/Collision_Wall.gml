@@ -1,7 +1,7 @@
 /// @description BOOM
 move_bounce_solid(true)
 
-if dist > 40
+if dist > 60
 {
 instance_create(x,y,DiscDisappear)
 instance_destroy()

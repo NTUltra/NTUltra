@@ -15,13 +15,15 @@ instance_destroy()
 
 if instance_exists(Player) && instance_exists(enemy)
 {
-	var n =instance_nearest(x,y,enemy)
-	var dir=point_direction(x,y,n.x,n.y)
-	motion_add(dir,0.05);
-	if Player.race=23&&Player.skill_got[5]=1
+	var n = instance_nearest(x,y,enemy)
+	if n != noone
 	{
-	motion_add(dir,0.12);
+		var dir=point_direction(x,y,n.x,n.y)
+		motion_add(dir,0.05);
+		if Player.race=23&&Player.skill_got[5]=1
+		{
+			motion_add(dir,0.12);
+		}
 	}
-
 }
 

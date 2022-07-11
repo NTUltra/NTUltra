@@ -154,6 +154,7 @@ with Player//Data to keep
 	race = other.race
 	crown = other.crown
 	lastarea = other.lastarea;
+	lastwishused = false;
 	area = other.area//other.lastarea;
 	loops = other.loops;
 	hard = other.hard;

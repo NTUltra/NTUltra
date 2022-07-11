@@ -120,9 +120,29 @@ with other
 inverted=true//take me to the inverted universe
 }
 
-if Player.area = 8 && Player.subarea < 2 && ( instance_exists(Sheep)||instance_exists(ExplosiveSheep) )
+if Player.area == 8 && Player.subarea < 2 && ( instance_exists(Sheep)||instance_exists(ExplosiveSheep) )
 {
 	Player.banditland=true;
+}
+if instance_exists(CrownPed) && !closedTheVault
+{
+	//Close up the survival arena
+	with Floor
+	{
+		if sprite_index == sprFloor100D
+		{
+			instance_destroy(id,false);
+			var ar = Player.area;
+			Player.area = 100;
+			instance_create(x,y,Wall)
+			instance_create(x+16,y,Wall);
+			instance_create(x+16,y+16,Wall);
+			instance_create(x+16,y+16,Wall);
+			instance_create(x,y+16,Wall);
+			Player.area = ar;
+		}
+	}
+	closedTheVault = true;
 }
 with other
 {

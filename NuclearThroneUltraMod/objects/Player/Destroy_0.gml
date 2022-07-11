@@ -267,6 +267,7 @@ kills = other.kills;
 subarea=other.subarea;
 myCorpse = playerCorpse;
 level = other.level;
+inverted = other.inverted;
 alarm[0]=60;
 alarm[1] = 5;
 alarm[2] = 3;

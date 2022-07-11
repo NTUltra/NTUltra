@@ -742,8 +742,8 @@ if my_health <= 0
 		motion_add(random(360),2+random(3))
 		image_angle = direction}
 		}
-
-		bleed += 1
+		if !instance_exists(LevCont) && !instance_exists(GenCont) && !place_meeting(x,y,Portal) && !instance_exists(SpiralCont)
+			bleed += 1;
 	}
 	else
 		instance_destroy();

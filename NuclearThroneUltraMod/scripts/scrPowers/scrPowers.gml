@@ -330,10 +330,12 @@ function scrPowers() {
 	{
 	//snd_play_2d(sndNecromancerRevive)
 	        //audio_stop_sound(sndBouncerHitWall)
-        
+        var numberOfEnems = 0;
+		if instance_exists(IDPDVan)
+			numberOfEnems = instance_number(IDPDVan);
 	    with Corpse
 	    {
-	    if image_speed = 0 and (instance_number(enemy) > 0 or instance_exists(Portal)) and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+			if image_speed = 0 and (instance_number(enemy) > numberOfEnems or instance_exists(Portal)) and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 	        {
         
 	        if !audio_is_playing(sndNecromancerRevive)
@@ -1328,10 +1330,12 @@ function scrPowers() {
 	{
 		var killedIt = false;
 		
-		
+		var numberOfEnems = 0;
+		if instance_exists(IDPDVan)
+			numberOfEnems = instance_number(IDPDVan);
 		with Corpse
 		{
-			if image_speed = 0 and (instance_number(enemy) > 0 or instance_exists(Portal)) and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+			if image_speed = 0 and (instance_number(enemy) > numberOfEnems or instance_exists(Portal)) and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 			{
 				
 			if !killedIt

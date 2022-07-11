@@ -14,19 +14,6 @@ Player.bcurse = 0
 Player.ccurse = 0
 var ar = Player.area;
 Player.area = 100;
-//Close up the survival arena
-with Floor
-{
-	if sprite_index == sprFloor100D
-	{
-		instance_destroy(id,false);
-		instance_create(x,y,Wall)
-		instance_create(x+16,y,Wall);
-		instance_create(x+16,y+16,Wall);
-		instance_create(x+16,y+16,Wall);
-		instance_create(x,y+16,Wall);
-	}
-}
 Player.area = ar;
 	with SurvivalWave
 		instance_destroy();

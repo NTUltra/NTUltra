@@ -7,7 +7,7 @@ if sprite_index = spr_hurt
 sprite_index = spr_idle}
 
 
-if my_health <= 0 && alarm[0] < 1
+if my_health <= 0 && alarm[0] < 1 && !instance_exists(SpiralCont) && !instance_exists(GenCont)
 instance_destroy()
 
 speed = 0

@@ -485,7 +485,7 @@ function scrMakeFloor() {
 	
 	if UberCont.opt_gamemode == 8
 		instance_destroy();
-	if UberCont.opt_gamemode == 25 && !instance_exists(Vlambeer)//Survival Arena
+	if UberCont.opt_gamemode == 25 && !instance_exists(Vlambeer) && !instance_exists(MenuGen) && area != 0//Survival Arena
 	{
 		//instance_create(x,y,Floor)
 		x = 0;

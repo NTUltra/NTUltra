@@ -10,9 +10,9 @@ if immune
 {
 	my_health = maxhealth;
 	sprite_index = spr_idle;
+	speed = 0;
 	if !active && !intro
 	{
-		speed = 0;
 		if instance_exists(Player)
 		if (Player.y < y + 128) 
 		{
@@ -60,8 +60,6 @@ else
 		vspeed += walkDir*3;
 		if isInverted && vspeed > 0 && loops < 1
 			vspeed *= 0.83;
-		if speed > 5
-		speed = 5;
 	}
 }
 if my_health < maxhealth*0.6 && difficultyStep < 1
@@ -148,3 +146,5 @@ if isInverted
 	ds_list_destroy(hitWalls);
 	mask_index = msk;
 }
+if speed > 5
+	speed = 5;

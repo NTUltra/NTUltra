@@ -18,11 +18,23 @@ if instance_exists(Player) && !endPieceSpawned
 		instance_create(x+32*xx,y,Floor);//BOSS VULCANO/////////////////////////////<------------
 		if (area==7||area=108)
 		{
+			//Second entrance to the dragon fight
 			if xx == 9
 			{
 				for(yy=0;yy<10;yy+=1){
 					instance_create(x+32*-xx,y+32*yy,Floor);
 				}
+				//Make sure it is connected
+				var cx = 0;
+				var msk = mask_index;
+				mask_index = mskFloor;
+				repeat(9)
+				{
+					if !place_meeting(x+32*-cx,y+32,Floor)
+						instance_create(x+32*-cx,y+32,Floor);
+					cx++;
+				}
+				mask_index = msk;
 			}
 			instance_create(x+32*-xx,y+320,Floor);
 		}

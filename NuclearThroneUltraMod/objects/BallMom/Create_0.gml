@@ -21,11 +21,11 @@ alarm[1] = 40+random(40)
 
 if instance_exists(Player)
 motion_add(point_direction(Player.x,Player.y,x,y)+180,1)
-
+existTime = -60;
 close = 0
 active = false;
-theSpeed = 0.5 + max(0,(GetPlayerLoops()-1)*0.25);
-maxSpeed = 1 + max(0,(GetPlayerLoops()*0.5));
+theSpeed = 0.5 + clamp((GetPlayerLoops()-1)*0.25,0,1.5);
+maxSpeed = 1 + clamp((GetPlayerLoops()*0.5),0,3);
 halfway = false;
 almostDead = false;
 sndtaunt = 0

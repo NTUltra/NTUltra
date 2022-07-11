@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskFrogQueen",
     "path": "sprites/mskFrogQueen/mskFrogQueen.yy",

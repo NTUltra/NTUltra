@@ -357,7 +357,6 @@ function scrNextLevel() {
 
 	if ( area=7 && inverted )//inv vulcano
 	{area=108;
-	subarea=1;
 	lastarea=7;}//in case of crownvault
 
 	if ( area=8 && inverted )//inv wonderland
