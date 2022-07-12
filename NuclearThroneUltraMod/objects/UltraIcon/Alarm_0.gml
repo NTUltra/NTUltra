@@ -1,5 +1,6 @@
 //delay before you can chose
-
+if skill == 82 && UberCont.opt_gamemode == 25
+	instance_destroy();
 //skeleton's hidden ultra
 if skill == 4 && Player.bskin == 2
 {

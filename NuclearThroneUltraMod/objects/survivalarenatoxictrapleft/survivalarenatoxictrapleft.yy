@@ -1,15 +1,9 @@
 {
-  "spriteId": {
-    "name": "sprBigGuardianBulletSpawn",
-    "path": "sprites/sprBigGuardianBulletSpawn/sprBigGuardianBulletSpawn.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": {
-    "name": "mskBigGuardianBullet",
-    "path": "sprites/mskBigGuardianBullet/mskBigGuardianBullet.yy",
-  },
+  "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,
@@ -26,16 +20,16 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "PalaceProjectiles",
-    "path": "folders/Objects/Projectiles/PalaceProjectiles.yy",
+    "name": "Enemies",
+    "path": "folders/Objects/Enemies.yy",
   },
   "resourceVersion": "1.0",
-  "name": "BigGuardianBulletSpawn",
+  "name": "SurvivalArenaToxicTrapLeft",
   "tags": [],
   "resourceType": "GMObject",
 }

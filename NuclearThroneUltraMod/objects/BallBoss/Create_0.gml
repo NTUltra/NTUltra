@@ -1,5 +1,5 @@
 raddrop = 600
-maxhealth = 2500
+maxhealth = 2800//2500
 meleedamage = 0
 size = 2
 
@@ -52,3 +52,12 @@ spinAttackFireRate = 20;
 spinAttackMaxAmmo = 0;
 spinAttackAmmo = 0;
 friction = 0.5;
+if UberCont.opt_gamemode == 34//HARD MODE
+{
+	maxhealth += 200;
+	maxSpeed += 0.2;
+	spinRate += 0.2;
+	spinAttackMaxAmmo ++;
+	pSpeed += 0.4;
+	amountOfSpinBulletProjectiles += 1;
+}

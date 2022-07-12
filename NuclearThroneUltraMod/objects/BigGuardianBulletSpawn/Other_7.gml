@@ -15,7 +15,8 @@ if typ == 2
 			team = other.team;
 			x += lengthdir_x(8, dir);
 			y += lengthdir_y(8, dir);
-			motion_add(dir,2.8+random(1.6)+addspeed);
+			motion_add(dir,3.1+random(1.6)+addspeed);
+			friction -= 0.01;
 		}
 	}
 	else
@@ -36,11 +37,12 @@ else
 	{
 		with instance_create(x,y,InvertedBigGuardianSquareBullet)
 		{	
+			friction -= 0.01;
 			owner = other.owner;
 			team = other.team;
 			x += lengthdir_x(8, dir);
 			y += lengthdir_y(8, dir);
-			motion_add(dir,3.4+random(1.6)+addspeed);
+			motion_add(dir,3.6+random(1.6)+addspeed);
 		}
 	}
 	else

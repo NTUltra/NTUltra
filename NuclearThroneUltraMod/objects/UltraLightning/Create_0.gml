@@ -10,16 +10,22 @@ typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflects
 
 image_speed = 0.4
 target=enemy;
-dmg=11
+dmg = 11
 accuracy=24;
-if instance_exists(Player){
-if Player.skill_got[17] = 1{
-image_speed = 0.3-(Player.betterlaserbrain*0.06)}
-
-if Player.ultra_got[59]=1//atom electron ultra
+iframeskip = 0.6;
+if instance_exists(Player)
 {
-image_speed-=0.1;
-}
+	if Player.skill_got[17] = 1{
+		image_speed = 0.25-(Player.betterlaserbrain*0.06)
+		iframeskip = 0.8;
+		dmg ++;
+	}
+
+	if Player.ultra_got[59]=1//atom electron ultra
+	{
+		image_speed-=0.1;
+		dmg += 2;
+	}
 
 }
 isog = true;

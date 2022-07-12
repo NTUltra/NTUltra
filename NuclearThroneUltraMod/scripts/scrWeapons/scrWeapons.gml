@@ -635,10 +635,10 @@ function scrWeapons() {
 	wep_name[57] = "LIGHTNING PISTOL"
 	wep_type[57] = 5
 	wep_auto[57] = 0
-	wep_load[57] = 9
+	wep_load[57] = 8
 	wep_cost[57] = 1
 	wep_sprt[57] = sprLightningPistol
-	wep_area[57] = 7
+	wep_area[57] = 6
 	wep_text[57] = "thunder"
 	wep_swap[57] = sndSwapEnergy
 	wep_rad[57] = 0;
@@ -646,7 +646,7 @@ function scrWeapons() {
 	wep_name[58] = "LIGHTNING RIFLE"
 	wep_type[58] = 5
 	wep_auto[58] = 0
-	wep_load[58] = 24
+	wep_load[58] = 23
 	wep_cost[58] = 2
 	wep_sprt[58] = sprLightningRifle
 	wep_area[58] = 9
@@ -978,7 +978,7 @@ function scrWeapons() {
 	wep_name[88] = "SPLINTER PISTOL"
 	wep_type[88] = 3
 	wep_auto[88] = 0
-	wep_load[88] = 10
+	wep_load[88] = 9
 	wep_cost[88] = 1
 	wep_sprt[88] = sprSplinterPistol
 	wep_area[88] = 6
@@ -1121,7 +1121,7 @@ function scrWeapons() {
 	wep_name[101] = "LIGHTNING SMG"
 	wep_type[101] = 5
 	wep_auto[101] = 1
-	wep_load[101] = 7//0.23sec?
+	wep_load[101] = 6//0.23sec?
 	wep_cost[101] = 1
 	wep_sprt[101] = sprLightningSMG
 	wep_area[101] = 12

@@ -194,15 +194,14 @@ switch (waveNumber)
 				sprite_index = sprFloor103;
 		}
 	break;
-	case 15://inv cave
-		song = mus104;
-		Player.area = 111;
+	case 15://inv lab
+		song = mus106b
 		with Floor
 		{
 			if styleb
-				sprite_index = sprFloor111B;
+				sprite_index = sprFloor106B;
 			else
-				sprite_index = sprFloor111;
+				sprite_index = sprFloor106;
 		}
 	break;
 	case 16://inv frozen
@@ -226,14 +225,15 @@ switch (waveNumber)
 				sprite_index = sprFloor114;
 		}
 	break;
-	case 18://inv lab
-		song = mus106b;
+	case 18://inv cave
+		song = mus104;
+		Player.area = 111;
 		with Floor
 		{
 			if styleb
-				sprite_index = sprFloor106B;
+				sprite_index = sprFloor111B;
 			else
-				sprite_index = sprFloor106;
+				sprite_index = sprFloor111;
 		}
 	break;
 	case 19://inv oasis
@@ -944,25 +944,41 @@ repeat(1+loops)
 			}
 			wave[i] = {
 				obj: FireBat,
-				time: 80
+				time: 90
 			};
 			i++;
-			repeat(3)
+			wave[i] = {
+				obj: AmmoChest,
+				time: 60,
+				xx: centerX-32,
+				yy: centerY
+			};
+			i++;
+			repeat(4)
 			{
 				wave[i] = {
 					obj: GoldCrystal,
-					time: 4
+					time: 8
 				};
 				i++;
 			}
 			wave[i] = {
+				obj: HealthChest,
+				time: 60,
+				xx: centerX,
+				yy: centerY-32
+			};
+			i++;
+			wave[i] = {
 				obj: LightningCrystal,
-				time: 120
+				time: 240,
+				xx: centerX,
+				yy: centerY
 			};
 			i++;
 			wave[i] = {
 				obj: BigBadBat,
-				time: 30
+				time: 90
 			};
 			i++;
 			repeat(3)
@@ -2487,13 +2503,286 @@ repeat(1+loops)
 			
 		break;
 		#endregion
-		#region next
-		/*
 		#region wave 12 Inverted sewers
 		case 12:
+			wave[i] = {
+				obj: SurvivalArenaToxicTrapRight,
+				time: 20,
+				xx: centerX+160,
+				yy: centerY
+			};
+			i++
+			wave[i] = {
+				obj: SurvivalArenaToxicTrapLeft,
+				time: 30,
+				xx: centerX-176,
+				yy: centerY
+			};
+			i++
+			repeat(20)
+			{
+				wave[i] = {
+					obj: InvertedRat,
+					time: 6
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: InvertedFastRat,
+				time: 30
+			};
+			i++;
+			wave[i] = {
+				obj: InvertedRatking,
+				time: 70
+			};
+			i++;
+			wave[i] = {
+					obj: InvertedExploder,
+					time: 10,
+				};
+			i++;
+			repeat(3)
+			{
+				wave[i] = {
+					obj: InvertedGator,
+					time: 10
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: InvertedRatking,
+				time: 90
+			};
+			i++;
+			wave[i] = {
+				obj: InvertedGator,
+				time: 10
+			};
+			i++;
+			wave[i] = {
+				obj: AmmoChest,
+				time: 90,
+				xx: centerX,
+				yy: centerY+32
+			};
+			i++;
+			wave[i] = {
+				obj: InvertedGator,
+				time: 10
+			};
+			i++;
+			repeat(4)
+			{
+				wave[i] = {
+					obj: InvertedRatking,
+					time: 10,
+					xx: centerX,
+					yy: centerY
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: SuperFrog,
+				time: 120,
+				xx: centerX,
+				yy: centerY
+			};
+			i++;
+			repeat(3)
+			{
+				wave[i] = {
+					obj: BanditInverted,
+					time: 15,
+				};
+				i++;
+			}
+			repeat(3)
+			{
+				wave[i] = {
+					obj: Exploder,
+					time: 15,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: HealthChest,
+				time: 180,
+				xx: centerX,
+				yy: centerY-32
+			};
+			i++;
+			wave[i] = {
+				obj: BallMom,
+				time: 90,
+				xx: centerX,
+				yy: centerY
+			};
+			i++
+			repeat(4)
+			{
+				wave[i] = {
+					obj: ToxicBarrel,
+					time: 2,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: Wall,
+				time: 1,
+				xx: centerX+96,
+				yy: centerY
+			};
+			i++
+			wave[i] = {
+				obj: Wall,
+				time: 1,
+				xx: centerX-96,
+				yy: centerY
+			};
+			i++
+			wave[i] = {
+				obj: Wall,
+				time: 1,
+				xx: centerX+96,
+				yy: centerY+64
+			};
+			i++
+			wave[i] = {
+				obj: Wall,
+				time: 1,
+				xx: centerX-96,
+				yy: centerY+64
+			};
+			i++
+			wave[i] = {
+				obj: Wall,
+				time: 1,
+				xx: centerX+96,
+				yy: centerY-64
+			};
+			i++
+			wave[i] = {
+				obj: Wall,
+				time: 1,
+				xx: centerX-96,
+				yy: centerY-64
+			};
+			i++
+			wave[i] = {
+				obj: Wall,
+				time: 1,
+				xx: centerX,
+				yy: centerY-96
+			};
+			i++
+			wave[i] = {
+				obj: Wall,
+				time: 60,
+				xx: centerX,
+				yy: centerY+96
+			};
+			i++
+			repeat(14)
+			{
+				wave[i] = {
+					obj: InvertedRat,
+					time: 2,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: ToxicBarrel,
+				time: 160,
+				xx: centerX,
+				yy: centerY
+			};
+			i++;
+			wave[i] = {
+					obj: InvertedSuperFrog,
+					time: 200,
+				};
+			i++;
+			repeat(4)
+			{
+				wave[i] = {
+					obj: InvertedExploder,
+					time: 2,
+				};
+				i++;
+			}
+			repeat(4)
+			{
+				wave[i] = {
+					obj: ToxicBarrel,
+					time: 2,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: InvertedGator,
+				time: 200,
+			};
+			i++;
+			wave[i] = {
+				obj: InvertedBallMom,
+				time: 120,
+				xx: centerX,
+				yy: centerY
+			};
+			i++;
+			repeat(3)
+			{
+				wave[i] = {
+					obj: ToxicBarrel,
+					time: 2,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: ToxicBarrel,
+				time: 30,
+			};
+			i++;
+			wave[i] = {
+				obj: Wall,
+				time: 1,
+				xx: centerX+96,
+				yy: centerY
+			};
+			i++
+			wave[i] = {
+				obj: Wall,
+				time: 1,
+				xx: centerX-96,
+				yy: centerY
+			};
+			i++
+			wave[i] = {
+				obj: Wall,
+				time: 1,
+				xx: centerX,
+				yy: centerY-96
+			};
+			i++
+			wave[i] = {
+				obj: Wall,
+				time: 60,
+				xx: centerX,
+				yy: centerY+96
+			};
+			i++
+			wave[i] = {
+				obj: InvertedSuperFrog,
+				time: 60,
+				xx: centerX,
+				yy: centerY
+			};
+			i++;
 		break;
 		#endregion
-		
+		#region next
+		/*
 		#region wave 13 Inverted scrapyard
 		case 13:
 		break;
@@ -2504,7 +2793,7 @@ repeat(1+loops)
 		break;
 		#endregion
 				
-		#region wave 15 Inverted caves
+		#region wave 15 Inverted labs
 		case 15:
 		break;
 		#endregion
@@ -2519,7 +2808,7 @@ repeat(1+loops)
 		break;
 		#endregion
 				
-		#region wave 18 Inverted Labs
+		#region wave 18 Inverted caves
 		case 18:
 		break;
 		#endregion
@@ -2534,7 +2823,7 @@ repeat(1+loops)
 		break;
 		#endregion
 				
-		#region wave 1 Cursed caves
+		#region wave 21 Cursed caves
 		case 21:
 		break;
 		#endregion

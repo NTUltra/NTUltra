@@ -280,7 +280,7 @@ function scrUltras() {
     
 	//ATOM 
 	ultra_name[57] = "NEUTRON"
-	ultra_text[57] = "BIGGER FIERY EXPLOSIONS#EXPLOSIONS DEAL MORE DAMAGE#AGAINST ENEMIES#EXPLOSIVE WEAPONS COST LESS AMMO"
+	ultra_text[57] = "BIGGER FIERY EXPLOSIONS#EXPLOSIONS DEAL MORE DAMAGE#AGAINST ENEMIES#EXPLOSIVE WEAPONS COST 20% LESS AMMO"
 	ultra_tips[57] = "NUCLEAR BOMB!"
 
 	ultra_name[58] = "PROTON"
@@ -288,7 +288,7 @@ function scrUltras() {
 	ultra_tips[58] = "always positive"
 
 	ultra_name[59] = "ELECTRON"
-	ultra_text[59] = "ENERGY WEAPONS COST LESS AMMO#LIGHTNING DOES MORE DAMAGE#AND TRAVELS FURTHER"
+	ultra_text[59] = "ENERGY WEAPONS COST 20% LESS AMMO#LIGHTNING DOES MORE DAMAGE#AND TRAVELS FURTHER"
 	ultra_tips[59] = "that is electrifying!"
 
 	ultra_name[60] = "ANTI MATTER"

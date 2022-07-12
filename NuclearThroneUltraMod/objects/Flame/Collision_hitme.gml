@@ -34,7 +34,7 @@ if other.team != team and other.my_health > 0 && (other.team!=2 || image_index<5
 	}
 	else if other.team != 2
 	{
-		other.image_index += 0.2;//iframe skipper
+		other.image_index += 0.6;//iframe skipper
 	}
 	x = (x+other.x)/2+random(6)-3
 	y = (y+other.y)/2+random(6)-3

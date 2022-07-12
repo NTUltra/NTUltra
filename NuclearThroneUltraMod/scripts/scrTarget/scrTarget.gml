@@ -18,7 +18,7 @@ function scrTarget() {
 						if instance_exists(nearest) && nearest != noone && nearest.team != team && nearest.team != 0
 						{
 							target = nearest;
-				        team = 5 + irandom(10);
+							team = 5 + irandom(10);
 						}
 			        }
 			        else{
@@ -34,7 +34,7 @@ function scrTarget() {
 				{
 					if instance_exists(enemy) && instance_number(enemy) > 2
 					{
-						var nearest = 	instance_nearest_notme(x,y,enemy)
+						var nearest = instance_nearest_notme(x,y,enemy)
 						if instance_exists(nearest) && nearest != noone && nearest.team != team && nearest.team != 0
 							target = nearest;
 					}

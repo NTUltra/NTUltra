@@ -26,12 +26,11 @@ if instance_exists(Player)
 	//Long arms
 	if Player.skill_got[13]
 	{
-		image_xscale += 0.1;
-		image_yscale += 0.1;	
+		image_xscale += 0.18;//0.1;
+		image_yscale += 0.18;//0.1;	
 	}
 	if Player.ultra_got[34]
 	{
-		
 		hits ++;
 	}
 }

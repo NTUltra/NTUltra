@@ -81,3 +81,7 @@ if instance_exists(Player)
 	alarm[4]=600;//10 seconds
 }
 alarm[6] = 1000;
+if instance_exists(SurvivalArenaStarter)
+{
+	alarm[7] = 1;
+}

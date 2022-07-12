@@ -98,10 +98,10 @@ image_xscale = -point_distance(x,y,oldx,oldy)/2
 
 ammo -= 1
 var odd = ammo % 2 == 0
-if place_meeting(x,y,Wall)//!place_free(x,y)
+if !place_free(x,y)
 {
-	//x = xprevious
-	//y = yprevious
+	x = xprevious
+	y = yprevious
 	direction += 180
 }
 
@@ -120,7 +120,7 @@ if ammo > 0
 		ammo = other.ammo
 		team = other.team
 		image_index = other.image_index
-		if ultraMod == ultramods.lightningPellet && odd
+		if ammo % 5 == 0
 			alarm[0] = 1;
 		else
 			event_perform(ev_alarm,0)

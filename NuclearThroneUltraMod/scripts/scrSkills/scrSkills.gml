@@ -208,7 +208,7 @@ function scrSkills() {
 	skill_msnd[12] =  sndMutEuphoria
 
 	skill_name[13] = "LONG ARMS"
-	skill_text[13] = "MORE MELEE RANGE"
+	skill_text[13] = "MORE MELEE RANGE AND SIZE"
 	skill_tips[13] = "more reach"
 	skill_msnd[13] =  sndMutLongArms
 

@@ -38,7 +38,7 @@ if target > 0 {
 else if random(10) < 1 {
     motion_add(random(360), 0.9)
 }
-if !reachHalfHealth && my_health < maxhealth * 0.7
+if !reachHalfHealth && my_health < maxhealth * 0.74
 {
 	snd_play(sndBallBossHalfHP,0,false,false,3,false,false,1,false);
 	lineOfFireOffset -= 5;
@@ -62,7 +62,7 @@ if !reachHalfHealth && my_health < maxhealth * 0.7
 		}
 	}
 }
-else if !reachLowHealth && my_health < maxhealth * 0.3
+else if !reachLowHealth && my_health < maxhealth * 0.32
 {
 	lineOfFireOffset -=5;
 	snd_play(sndBallBossLowHP,0,false,false,3,false,false,1,false);
@@ -93,7 +93,6 @@ else if !reachLowHealth && my_health < maxhealth * 0.3
 }
 if point_distance(x,y,anchorX,anchorY) > 400
 {
-	debug("TOO FAR FROM CENTER");
 	targetDirection = point_direction(x,y,anchorX,anchorY)
 	motion_add(targetDirection,1);
 }

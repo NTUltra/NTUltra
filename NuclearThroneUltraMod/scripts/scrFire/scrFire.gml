@@ -739,7 +739,7 @@ function scrFire() {
 	BackCont.shake += 2
 	wkick = 6
 
-	motion_add(aimDirection+180,0.6)
+	motion_add(aimDirection+180,0.5)
 
 	break;
 
@@ -1354,7 +1354,7 @@ function scrFire() {
 	with instance_create(x,y,Lightning)
 	{image_angle = aimDirection+(random(20)-10)*other.accuracy
 	team = other.team
-	ammo = 15
+	ammo = 16
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)
@@ -1379,7 +1379,7 @@ function scrFire() {
 	with instance_create(x,y,Lightning)
 	{image_angle = aimDirection+(random(6)-3)*other.accuracy
 	team = other.team
-	ammo = 30
+	ammo = 32
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)
@@ -1406,7 +1406,7 @@ function scrFire() {
 	with instance_create(x,y,Lightning)
 	{image_angle = aimDirection+(random(60)-30)*other.accuracy
 	team = other.team
-	ammo = 9+random(3)
+	ammo = 11+random(4)
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)
@@ -4814,30 +4814,31 @@ function scrFire() {
 
 	//Atom utlra electron
 
-	if Player.ultra_got[59]=1
+	if Player.ultra_got[59]//ATOM ELECTRON
 	{
-	with Lightning
-	ammo+=4;
-	//with UltraLightning we just do this in the actual fire thing
-	//ammo+=4;
-
-	if wep_type[wep]==5//energy wep
-	{
-	if wep_cost[wep]>1//if ammo cost is more than 1
-	ammo[wep_type[wep]]+=1;//return one ammo
-	}
+		with Lightning
+		{
+			ammo *= 1.25;
+			ammo = ceil(ammo+6);
+		}
+		//with UltraLightning we just do this in the actual fire thing
+		//ammo+=4;
+		if wep_type[wep] == 5//energy wep
+		{
+			ammo[wep_type[wep]] += wep_cost[wep]*0.20;//return one ammo
+		}
 	} 
 
-	if Player.ultra_got[57]=1
+	if Player.ultra_got[57]//ATOM NEUTRON
 	{
 
-	if wep_type[wep]==4//splosive wep
-	{
+		if wep_type[wep]==4//splosive wep
+		{
+			ammo[wep_type[wep]] += wep_cost[wep]*0.20;//return one ammo
+			if wep_cost[wep]>1//if ammo cost is more than 1
+				ammo[wep_type[wep]]+=1;//return one ammo
 
-	if wep_cost[wep]>1//if ammo cost is more than 1
-	ammo[wep_type[wep]]+=1;//return one ammo
-
-	}
+		}
 	} 
 
 
@@ -4911,7 +4912,7 @@ function scrFire() {
 					if other.race == 11
 					{
 						speed *= 1.1;
-						speedAdd += 2;
+						speedAdd += 1.5;
 					}
 					if other.crown == 23//Crown of speed
 					{
@@ -4945,7 +4946,7 @@ function scrFire() {
 						speedAdd += spda;
 				    }
 					speed += speedAdd;
-					speed = clamp(speed,0.5,40);
+					speed = clamp(speed,0.5,35);
 				}
 			}
 		}   

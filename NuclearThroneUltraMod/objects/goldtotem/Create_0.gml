@@ -19,3 +19,4 @@ walk = 0
 alarm[1] = 30+random(90)
 actTime = 90;
 
+alarm[0] = 2;
