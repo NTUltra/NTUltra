@@ -13,11 +13,14 @@ else*/
 spr_walk = spr_idle;
 team = 0;
 var extra = 0;
+var loops = UberCont.loops
+if UberCont.opt_gamemode == 34 && instance_exists(Player) && Player.area > 1 && Player.loops != 1// HARD MODE
+	loops += 2;
 if RogueIDPD
 	extra = 1;
-    repeat(3+irandom(min(4,UberCont.loops))+extra)
+    repeat(3+irandom(min(4,loops))+extra)
     {
-if random(5) < min(2,UberCont.loops-1) //elite
+if random(5) < min(2,loops-1) //elite
 {
 
     var dir = choose(1,1,1,1,1,2,2,3,3,3);//1,1,2,3,4

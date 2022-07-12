@@ -6,6 +6,8 @@ function BloodLust(){
 	var chance = 7.7
 	if Player.race == 25
 		chance = 7.89;
+	if UberCont.opt_gamemode == 34//HARD MODE
+		chance -= 0.5;
     if Player.skill_got[7] = 1 and random(100) <  chance//7.69% chance
     {
     	snd_play_2d(sndBloodlustProc,0,true);

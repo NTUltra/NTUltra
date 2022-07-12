@@ -15,10 +15,11 @@ if instance_exists(Player) and instance_exists(enemy)
 
 if dist>distrange
 {
+	friction = 0.1;
 	if instance_exists(Player)
 	{//return to player
 		motion_add(point_direction(x,y,Player.x,Player.y),0.8);
-		if dist>10
+		if point_distance(x,y,Player.x,Player.y) < 10
 		{
 			instance_destroy();
 			instance_create(x,y,DiscDisappear)

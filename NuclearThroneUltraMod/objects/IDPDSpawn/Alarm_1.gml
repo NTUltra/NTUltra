@@ -17,8 +17,11 @@ if instance_exists(Player)
 		}
 		exit;
 	}
+	var loops = UberCont.loops
+	if UberCont.opt_gamemode == 34  && Player.area > 1 && Player.loops != 1// HARD MODE
+		loops += 2;
 //ElITES ON LOOP
-if random(4)<1+min(Player.loops-1,2) &&Player.loops>0//elite
+if random(4)<1+min(loops-1,2) && loops>0//elite
 {
 
     var dir = choose(1,1,1,1,1,2,2,3,3,3,4,4);//1,1,2,3,4

@@ -233,7 +233,7 @@ function scrRaces() {
 	race_bskin[16] = 0
 	race_cskin[16] = 0
 	race_bskin_lock[16] = "COMPLETE A LEVEL#WITH THE MAX AMOUNT#OF ARMOUR POSSIBLE#AS VIKING"
-	race_cskin_lock[16] = "KILL 8 ENEMIES#IN ONE ARMOUR STRIKE"
+	race_cskin_lock[16] = "KILL 16 ENEMIES#IN ONE ARMOUR STRIKE"
 
 
 	race_name[17] = "[WEAPONSMITH]"

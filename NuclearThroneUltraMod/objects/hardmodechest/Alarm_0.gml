@@ -7,7 +7,7 @@ else
 {
 	with Player
 	{
-		if area == 1 && subarea == 1 && loops == 0
+		if loops == 0
 		{
 			instance_create(x,y,BigWeaponChest);
 			instance_create(x,y,EliteWeaponChest);

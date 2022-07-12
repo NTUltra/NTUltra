@@ -1,6 +1,6 @@
 move_bounce_solid(false)
 
-if dist > 40
+if dist > 50
 {
 instance_create(x,y,DiscDisappear)
 
@@ -10,7 +10,8 @@ else
 {
 snd_play(sndDiscBounce)
 with instance_create(x,y,DiscBounce)
-image_angle = other.image_angle}
+image_angle = other.image_angle
+}
 
 
 

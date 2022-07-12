@@ -49,8 +49,7 @@ function scrTips() {
 	"kraken pulls enemies towards you",
 	"doing alright",
 	"there are other worlds out there",
-	/*more rares*/choose("try not to get mad","be kind","the original idea for#the name trashtalk#came from lars in a stream#he made a lot of the sounds#in ultra mod",
-	"maybe you should play better","if you ever get stuck#outside a level#walk far away#from the level to get teleported back","use wasd to move","don't get baited by items","ask and ye shall receive","you smell that?","sick build bro","what does your gun tell you?","don't get baited by items"
+	/*more rares*/choose("be kind","the original idea for#the name trashtalk#came from lars in a stream#he made a lot of the sounds#in ultra mod","if you ever get stuck#outside a level#walk far away#from the level to get teleported back","use wasd to move","don't get baited by items","ask and ye shall receive","you smell that?","sick build bro","what does your gun tell you?","don't get baited by items"
 	,"frog is voiced by#Jukio Kallio"
 	,"thematically inconsistent!","if you reach loop 2#your level cap increases by 1","skeleton has#a fifth ultra mutation","don't be afraid to pick up new weapons",choose("28 EGGS FOR BREAKFAST","shit on my tits","never pick hanzo","microtransactions","if you are seeing this#you are fucking aswesome")/*super rare*/
 	)
@@ -260,7 +259,7 @@ function scrTips() {
 
 	if Player.race = 17//WEAPONSMITH
 	tip = choose("anvil","you keep the weapon mods#of the weapon you are holding#when upgrading","you upgrade one of your#two weapons at random",
-	"the weapon that gets upgraded#is chosen randomly","weaponsmith is a smoker","hide your face","liver damage","no trousers","fat and strong","weaponsmith is a metalhead")
+	"the weapon that gets upgraded#is chosen randomly","weaponsmith is a smoker","hide your face","liver damage","no trousers","weaponsmith is a metalhead")
 
 	if Player.race = 18//ANGEL
 	tip = choose("ascend","the wall is not the enemy","fly over cars","you fly normally over all terrains","rogue guardian","you don't get pushed off of props",

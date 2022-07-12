@@ -3,7 +3,7 @@ function scrDrop(itemdrop, weapondrop) {
 	var dropRateBuff = 0;
 	if instance_exists(Player)
 	{
-		dropRateBuff = 1 + Player.skill_got[4]*(0.45+Player.betterrabbitpaw)
+		dropRateBuff = 1 + Player.skill_got[4]*(0.44+Player.betterrabbitpaw)
 		+ (Player.ultra_got[39]*instance_number(Ally)*0.25)//used to be 0.6
 		+ (Player.skill_got[28]*(Player.rage*0.0004))
 		if Player.crown == 21 //Crown of risk
@@ -16,6 +16,12 @@ function scrDrop(itemdrop, weapondrop) {
 			{
 				dropRateBuff -= 0.5;
 			}
+		}
+		if UberCont.opt_gamemode == 34 //HARD MODE
+		{
+			if itemdrop < 100
+				itemdrop *= 0.87;
+			weapondrop *= 1.09
 		}
 		var lps = Player.loops;
 		if lps > 1 && Player.crown != 5
@@ -142,7 +148,7 @@ function scrDrop(itemdrop, weapondrop) {
 	    }
 	}
 	//drop items (10 + 2) * (0.75 + 0.5)
-	if itemdrop > 0 && random(105) < itemdrop * (need + dropRateBuff)
+	if itemdrop > 0 && random(110) < itemdrop * (need + dropRateBuff)
 	{//0.3 for each ally Rebel has REBEL ULTRA C?
 
 		if random(Player.maxhealth) > Player.my_health and random(3) < 2 and Player.crown != 2 and random(1) <= canHealth

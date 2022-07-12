@@ -35,7 +35,7 @@ if other.my_health<1// && other.sprite_index!=other.spr_hurt
 {
 amountofenemies++;
 with ArmourStrike
-amountofenemies=other.amountofenemies
+	amountofenemies=other.amountofenemies
 }
 
 

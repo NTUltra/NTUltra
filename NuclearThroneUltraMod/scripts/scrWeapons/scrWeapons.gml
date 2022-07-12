@@ -2364,7 +2364,7 @@ function scrWeapons() {
 	wep_name[214] = "VIKING GREAT AXE"
 	wep_type[214] = 0
 	wep_auto[214] = 0
-	wep_load[214] = 35
+	wep_load[214] = 33
 	wep_cost[214] = 0
 	wep_sprt[214] = sprVikingAxe
 	wep_area[214] = -1
@@ -4391,10 +4391,10 @@ function scrWeapons() {
 	wep_name[398] = "LIGHTNING LASER"//Tiny balls that explode into lightning on impact move fast fire fast
 	wep_type[398] = 5
 	wep_auto[398] = 0
-	wep_load[398] = 8
+	wep_load[398] = 10
 	wep_cost[398] = 3
 	wep_sprt[398] = sprLightningLaserGun
-	wep_area[398] = 14
+	wep_area[398] = 15
 	wep_text[398] = ""
 	wep_swap[398] = sndSwapBow
 	wep_rad[398] = 0;

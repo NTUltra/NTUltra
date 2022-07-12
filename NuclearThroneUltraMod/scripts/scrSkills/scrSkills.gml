@@ -130,9 +130,17 @@ function scrSkills() {
 
 	skill_name[7] = "BLOODLUST"
 	if isDoctor
+	{
 		skill_text[7] = "7.9% CHANCE KILLS REGENERATE HP"
+		if UberCont.opt_gamemode == 34//HARD MODE
+			skill_text[7] = "7.4% CHANCE KILLS REGENERATE HP"
+	}
 	else
+	{
 		skill_text[7] = "7.7% CHANCE KILLS REGENERATE HP"
+		if UberCont.opt_gamemode == 34//HARD MODE
+			skill_text[7] = "7.2% CHANCE KILLS REGENERATE HP"
+	}
 	skill_tips[7] = "drink blood"
 	skill_msnd[7] =  sndMutBloodlust
 
@@ -172,10 +180,14 @@ function scrSkills() {
 	if (isDoctor)
 	{
 		skill_text[9] = "4, SOMETIMES 5 HP# FROM MEDKITS#DOUBLE HP FROM MEDCHESTS"
+		if UberCont.opt_gamemode == 34 //HARD MODE
+			skill_text[9] = "3, SOMETIMES 4 HP FROM MEDKITS#DOUBLE HP FROM MEDCHESTS"
 	}
 	else
 	{
 		skill_text[9] = "DOUBLE HP FROM MEDKITS & MEDCHESTS"
+		if UberCont.opt_gamemode == 34 //HARD MODE
+			skill_text[9] = "3 HP FROM MEDKITS#DOUBLE HP FROM MEDCHESTS"
 	}
 	skill_tips[9] = "stomach rumbles"
 	if isHand

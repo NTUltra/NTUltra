@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskBouncerBullet",
     "path": "sprites/mskBouncerBullet/mskBouncerBullet.yy",
