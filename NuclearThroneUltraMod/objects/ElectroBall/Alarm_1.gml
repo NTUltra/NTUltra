@@ -4,7 +4,7 @@ if instance_exists(ElectroBall)
 
 target = instance_nearest_notme(x,y,ElectroBall)
 
-if target>0 && instance_number(ElectroBall)>1 && instance_exists(target)
+if target != noone && target>0 && instance_number(ElectroBall)>1 && instance_exists(target)
 { 
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {

@@ -1025,7 +1025,7 @@ function scrWeapons() {
 	wep_load[92] = 9
 	wep_cost[92] = 1
 	wep_sprt[92] = sprBeamShotgun
-	wep_area[92] = 10
+	wep_area[92] = 11
 	wep_text[92] = "drawer"
 	wep_swap[92] = sndSwapShotgun
 	wep_rad[92] = 0;
@@ -3717,7 +3717,7 @@ function scrWeapons() {
 	wep_name[337] = "MINI LIGHTNING PISTOL"
 	wep_type[337] = 5
 	wep_auto[337] = 0
-	wep_load[337] = 8
+	wep_load[337] = 10
 	wep_cost[337] = 1
 	wep_sprt[337] = sprMiniLightningPistol
 	wep_area[337] = 1

@@ -13,18 +13,21 @@ target=enemy;
 dmg = 11
 accuracy=24;
 iframeskip = 0.6;
+fork = 7;
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1{
-		image_speed = 0.25-(Player.betterlaserbrain*0.06)
+		image_speed = 0.3-(Player.betterlaserbrain*0.06)
 		iframeskip = 0.8;
 		dmg ++;
+		fork--;
 	}
 
 	if Player.ultra_got[59]=1//atom electron ultra
 	{
 		image_speed-=0.1;
 		dmg += 2;
+		fork -= 2;
 	}
 
 }

@@ -60,6 +60,6 @@ with GenCont
 alarm[2] = 2
 
 with MenuGen
-alarm[1] = 3
+alarm[1] = 3;
 }
 

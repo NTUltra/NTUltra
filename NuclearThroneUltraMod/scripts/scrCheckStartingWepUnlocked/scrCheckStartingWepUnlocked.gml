@@ -1,4 +1,4 @@
-function scrCheckStartingWepUnlocked(argument0, char) {
+function scrCheckStartingWepUnlocked(selectedWeapon, char) {
 	with UberCont
 	{
 		//run this in ubercont object
@@ -6,10 +6,10 @@ function scrCheckStartingWepUnlocked(argument0, char) {
 		repeat(maxstartwep+1)
 		{
 			//you have not unlocked this weapon?
-			if start_wep_have[dir,char]==0
+			if start_wep_have[dir,char] == 0
 			{
 			    //if that weapon is the one I am targeting
-			    if start_wep[dir]==argument0
+			    if start_wep[dir] == selectedWeapon
 			    {
 					return dir;
 			    }

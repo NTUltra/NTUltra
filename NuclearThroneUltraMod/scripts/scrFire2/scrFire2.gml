@@ -7865,7 +7865,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 	{
 	sprite_index=sprVeryHeavySlash;
-	dmg = 30//shovel is 8
+	dmg = 35//shovel is 8
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -8966,9 +8966,9 @@ function scrFire2() {
 		with instance_create(x,y,Lightning)
 		{image_angle = random(360);
 			accuracy = 60;
-			branch = 120;
+			branch = 100;
 		team = 2
-		ammo = 24;
+		ammo = 8;//24
 		event_perform(ev_alarm,0)
 		visible = 0
 		with instance_create(x,y,LightningSpawn)
@@ -9108,10 +9108,10 @@ function scrFire2() {
 	{
 		with instance_create(x,y,Lightning)
 		{image_angle = angg;
-			accuracy = 60;
-			branch = 120;
+			accuracy = 40;
+			branch = 100;
 			team = other.team
-			ammo = 24;
+			ammo = 16;
 		event_perform(ev_alarm,0)
 		visible = 0
 		with instance_create(x,y,LightningSpawn)

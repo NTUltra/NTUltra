@@ -8,9 +8,10 @@ with Player
 
 	with instance_create(x,y,UltraLightning)
 	{
+		fork = 3;
 		image_angle = random(360);
 		team = 2
-		ammo = 4+random(6)//60
+		ammo = 4+irandom(6)//60
 		///if Player.ultra_got[59]=1 
 		///ammo+=4;
 		event_perform(ev_alarm,0)

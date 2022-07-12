@@ -100,24 +100,38 @@ if ammo > 0
 //else
 //{var indexammo = ammo;}
 image_index += 0.4/ammo//indexammo
-with instance_create(x,y,UltraLightning)
-{
-	isog = other.isog;
-	canUltraMod = other.canUltraMod;
-	scrCopyWeaponMod(other);
-	direction = other.direction
-	image_angle = direction
-	ammo = other.ammo;
-	team = other.team
-	image_index = other.image_index*0.5
-	if ammo % 5 == 0//ultraMod == ultramods.lightningPellet && odd
-		alarm[0]=1;
-	/*else if ammo=20
-		alarm[0]=1;
-	else if ammo > 40
-		alarm[0]=1;*/
-	else event_perform(ev_alarm,0);
-}
+	with instance_create(x,y,UltraLightning)
+	{
+		isog = other.isog;
+		fork = other.fork;
+		canUltraMod = other.canUltraMod;
+		scrCopyWeaponMod(other);
+		direction = other.direction
+		image_angle = direction
+		ammo = other.ammo;
+		team = other.team
+		image_index = other.image_index*0.5
+		if ammo % 5 == 0//ultraMod == ultramods.lightningPellet && odd
+			alarm[0]=1;
+		else event_perform(ev_alarm,0);
+	}
+	if round(ammo) % fork == 0//Forking lightning
+	{
+		with instance_create(x,y,UltraLightning)
+		{
+			isog = other.isog;
+			fork = other.fork;
+			canUltraMod = other.canUltraMod;
+			scrCopyWeaponMod(other);
+			accuracy = 5+(other.accuracy*3);
+			direction = other.direction+choose(110,-110)
+			image_angle = direction
+			ammo = clamp(ceil(other.ammo*0.15),2,16);
+			team = other.team
+			image_index = other.image_index
+			event_perform(ev_alarm,0)
+		}
+	}
 }
 else if ultraMod != ultramods.lightningPellet
 {

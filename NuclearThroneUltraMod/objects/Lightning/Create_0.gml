@@ -14,10 +14,12 @@ image_speed = 0.4
 target=enemy;
 dmg = 5;
 iframeskip = 0.6;
+fork = 6;
 if instance_exists(Player){
 	if Player.skill_got[17] = 1{
-		image_speed = 0.25-(Player.betterlaserbrain*0.06)
+		image_speed = 0.3-(Player.betterlaserbrain*0.06)
 		dmg ++;
+		fork --;
 	}
 
 	if Player.skill_got[19]==1
@@ -29,6 +31,7 @@ if instance_exists(Player){
 	{
 		image_speed-=0.1;
 		dmg += 2;
+		fork -= 2;
 	}
 
 }

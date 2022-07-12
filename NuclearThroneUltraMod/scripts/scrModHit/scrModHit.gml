@@ -135,11 +135,13 @@ function scrModHit() {
 				break;
 
 				case 6://ELECTROCUTION!
-				snd_play(choose(sndSpark1,sndSpark2),0,true);
-				var nearest = instance_nearest_notme(x,y,enemy);
+					snd_play(choose(sndSpark1,sndSpark2),0,true);
+					var nearest = noone;
+					if instance_exists(enemy) && instance_number(enemy) > 1
+						nearest = instance_nearest_notme(x,y,enemy);
 					with instance_create(other.x,other.y,Lightning)
 					{
-						if nearest
+						if nearest != noone && instance_exists(nearest)
 							image_angle = point_direction(x,y,nearest.x,nearest.y)+random(14)-7;//Instance nearest not me?
 						else
 							image_angle = random(360);
@@ -159,10 +161,12 @@ function scrModHit() {
 				snd_play(choose(sndWater1,sndWater2),0,true);
 
 				with other {
-					var nearest = instance_nearest_notme(x,y,enemy);
+					var nearest = noone;
+					if instance_exists(enemy) && instance_number(enemy) > 1
+						nearest = instance_nearest_notme(x,y,enemy);
 					with instance_create(x,y,Tentacle)
 					{
-						if nearest
+						if nearest != noone && instance_exists(nearest)
 							image_angle = point_direction(x,y,nearest.x,nearest.y)+random(14)-7;//Instance nearest not me?
 						else
 							image_angle = random(360);

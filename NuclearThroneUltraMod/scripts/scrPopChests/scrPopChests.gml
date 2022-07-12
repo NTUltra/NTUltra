@@ -1,4 +1,6 @@
 function scrPopChests() {
+	if instance_exists(Vlambeer) || instance_exists(MenuGen)
+		return;
 	//Special cases:
 	if UberCont.opt_gamemode == 25
 	{

@@ -3642,6 +3642,7 @@
     {"id":{"name":"sprAutoToxicBow","path":"sprites/sprAutoToxicBow/sprAutoToxicBow.yy",},"order":222,},
     {"id":{"name":"sprSuperToxicBow","path":"sprites/sprSuperToxicBow/sprSuperToxicBow.yy",},"order":223,},
     {"id":{"name":"sprDisperseBazooka","path":"sprites/sprDisperseBazooka/sprDisperseBazooka.yy",},"order":225,},
+    {"id":{"name":"scrLegacyWeaponStart","path":"scripts/scrLegacyWeaponStart/scrLegacyWeaponStart.yy",},"order":14,},
     {"id":{"name":"sprHyperInfuser","path":"sprites/sprHyperInfuser/sprHyperInfuser.yy",},"order":226,},
     {"id":{"name":"sprLightningScrewDriver","path":"sprites/sprLightningScrewDriver/sprLightningScrewDriver.yy",},"order":227,},
     {"id":{"name":"sprEnergyShovel","path":"sprites/sprEnergyShovel/sprEnergyShovel.yy",},"order":228,},

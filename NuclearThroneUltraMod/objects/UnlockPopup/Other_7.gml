@@ -1,3 +1,4 @@
+/*
 if iAmFirst
 	with UnlockPopup
 	{
@@ -8,6 +9,8 @@ if iAmFirst
 			image_speed = 0;
 		}
 	}
+	
+*/
 image_speed=0;
 image_index=3;
 drawtext=true;

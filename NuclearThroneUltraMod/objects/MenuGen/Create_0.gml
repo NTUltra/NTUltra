@@ -1,5 +1,6 @@
 instance_create(0,0,BackCont)
 instance_create(0,0,TopCont)
+depth = TopCont.depth - 1;
 //randomize();
 dix = 32
 diy = 32

@@ -10,11 +10,10 @@ with Player
 	{
 		with instance_create(x,y,UltraLightning)
 		{
+			fork -= 4;
 			image_angle = langle;
 			team = 2
-			ammo = 12+random(6)//60
-			///if Player.ultra_got[59]=1 
-			///ammo+=4;
+			ammo = 12+irandom(6)//60
 			event_perform(ev_alarm,0)
 			visible = 0
 			with instance_create(x,y,LightningSpawn)

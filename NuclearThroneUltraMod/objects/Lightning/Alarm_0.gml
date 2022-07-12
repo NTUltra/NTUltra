@@ -112,6 +112,7 @@ if ammo > 0
 	{
 		isog = other.isog;
 		branch = other.branch;
+		fork = other.fork;
 		canUltraMod = other.canUltraMod;
 		scrCopyWeaponMod(other);
 		accuracy=other.accuracy;
@@ -124,6 +125,24 @@ if ammo > 0
 			alarm[0] = 1;
 		else
 			event_perform(ev_alarm,0)
+	}
+	if round(ammo) % fork == 0//Forking lightning
+	{
+		with instance_create(x,y,Lightning)
+		{
+			isog = other.isog;
+			fork = other.fork;
+			branch = clamp(other.branch*2.5,70,200);
+			canUltraMod = other.canUltraMod;
+			scrCopyWeaponMod(other);
+			accuracy=other.accuracy*2;
+			direction = other.direction+choose(110,-110)
+			image_angle = direction
+			ammo = clamp(ceil(other.ammo*0.34),2,16);
+			team = other.team
+			image_index = other.image_index
+			event_perform(ev_alarm,0)
+		}
 	}
 }
 else if ultraMod != ultramods.lightningPellet

@@ -1,5 +1,5 @@
-moved down ultra assault shotgun a couple of tiers
-moved down ultra heavy slugger a couple of tiers
+Moved down ultra assault shotgun a couple of tiers
+Moved down ultra heavy slugger a couple of tiers
 Moved down ultra triple machinegun two tiers
 Added sharpstress back into the pool of mutations for one hit wonder gamemode
 Fixed and optimized rogue portalstrike mini ammo chests (would come from portalstrike cannisters that were opened by portals)
@@ -53,6 +53,41 @@ Boss invasions will now start on loop 1 in hard mode
 Chicken's bleed timer no longer increases while she is in a portal
 Capped ballmoms speed scaling
 Ballmom now requires an additional two second before it can deal melee damage to you ( am not 100% sure if ballmom would actually spawn on top of you but I'm guessing because she can move so fast she would reach you before you actually fully spawned in)
+Splinter pistol now fires 1 frame faster
+The big balls/squares on the inverted throne are now faster. (Since the throne runs at you almost constantly the balls have to travel further for the items to reach you)
+Reduced projectile speed boost for hunter slightly
+Lowered maximum projectile speed overall to prevent some clipping.
+When you use crown of sloth and you have a very low difficulty the amount of enemies will still act as if you have a higher difficulty. This "backup difficulty" will scale with loop.
+Almost doubled long arms melee scaling!
+Long arms now mentions that it scales aswell
+Lightning damage now stacks much better + 200%
+iFrame skipper / damage stacking now also applied to ultra lightning
+Increased health ballboss
+Ballboss goes to their next phases a little earlier (in health comparison)
+BallBoss is now harder in hard mode
+Lightning pistol now drops earlier
+increased fire rate lightning smg
+mini lightning pistol now has more range
+Increased accuracy of lightning a tiny bit
+Lightning pistol now has more range
+Lightning rifle now has more range and fires a tiny bit faster
+Increased range of lightning shotgun
+Increased damage of lightning it now deals 5 damage instead of 4. (This will result in lightning dealing usually a total of 15 - 20 damage, in retail this is 7 or 14)
+Lightning now forks! (energy brain increases how often forks a little)
+Atom's Electron ultra increases forking by much more
+Energy brain is now more effective on lightning causing the lightning to last even logner and will now increase the damage by 1
+Atom's electron ultra is now much more effective making lightning much much longer and increasing damage by 2
+Atom's electron ultra ammo reduction on energy weapons is now much more effective previously it did not work on anything that costed 1 or less ammo. And it would only return one ammo on anything else. Now it will return 20% ammo
+Reduced recoil on laser minigun
+Made some minor changes to lightning causing it to spawn in a little slower, this is to prevent a rare infinite loop crash that has been haunting me for 6 years. The effect will not be very noticable
+Increased effectiveness of flames damage stacking, this change also allows for Atoms electron ultra to increase lightning length much more
+Atom's Neutron ultra now also returns ammo in percentages, meaning it is no logner required for your explosive weapon to cost more than 1 ammo and it can return more than 1 ammo aswell, it will be based on cost.
+Made some tweaks to the end of the crystal caves wave in survival arena you fucking noobs (jk it was too much of a difficulty spike <3).
+Survival Arena now has a reroll station at the end of the palace wave
+Anomaly is now disabled in survival arena (it didn't do anything)
+Added a new inverted sewers wave in survival arena (ballmom galore)
+Removed out of combat speedboost from gamemode survival arena
+Increased damage by 5 for heavy sledgehammer
 
 
 Fixed a bug where the weapons you unlocked were actuall unlocked for the wrong character
@@ -83,12 +118,4 @@ Fixed a bug where killing enemies so fucking hard and fast that it could crash t
 Fixed a bug where homing mod on steroid's secondary weapon would not apply.
 Maybe fixed another case where enemy targeting fails?
 Fixed a bug where extra feet could trigger its item drops while you are in a portal
-
-todo:
-survival arena vans can spawn before you start the wave
-Ultramod/reroll at loop in survival arena
-one small change to caves wwave
-lower reaction time of ultra bandits & range a little
-inverted throne big balls should go further or something so you can get item drops
-ultra hard proto mind
-
+Fixed a bug where popo could spawn before a survival arena wave was started

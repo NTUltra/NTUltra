@@ -24,7 +24,7 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 			else
 			{
 				with other.creator{
-					if object_index=Player{
+					if object_index==Player && instance_exists(Player){
 						Player.alarm[3]=max(10,Player.alarm[3]);
 					}
 					snd_play(sndMeatExplo,0,true)
@@ -66,7 +66,7 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 		}
 		else
 		{
-			image_index += 0.2;//iframe skipper
+			image_index += 0.4;//iframe skipper
 		}
 	}
 	

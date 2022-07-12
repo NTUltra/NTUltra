@@ -1,19 +1,20 @@
 function scrSaveData() {
-	var dir; dir = 1
+	var dir; dir = 1;
 	repeat(racemax){
-	ini_write_real("DATA","selected_start_wep"+string(dir),selected_start_wep[dir]);
-	ini_write_real("DATA","race_have"+string(dir),race_have[dir]);
-	ini_write_real("DATA","bskin"+string(dir),race_bskin[dir]);
-	ini_write_real("DATA","cskin"+string(dir),race_cskin[dir]);
-	ini_write_real("DATA","skin"+string(dir),skin[dir]);
-	ini_write_real("DATA","crown_start"+string(dir),crown_start[dir]);
-	var wepdir = 0;
-	repeat(maxstartwep+1)
-	{
-	ini_write_real("DATA","start_wep_have"+string(wepdir)+string(dir),start_wep_have[wepdir,dir]);
-	wepdir++;
+		ini_write_real("DATA","selected_start_wep"+string(dir),selected_start_wep[dir]);
+		ini_write_real("DATA","race_have"+string(dir),race_have[dir]);
+		ini_write_real("DATA","bskin"+string(dir),race_bskin[dir]);
+		ini_write_real("DATA","cskin"+string(dir),race_cskin[dir]);
+		ini_write_real("DATA","skin"+string(dir),skin[dir]);
+		ini_write_real("DATA","crown_start"+string(dir),crown_start[dir]);
+		var wepdir = 0;
+		repeat(maxstartwep+1)
+		{
+			ini_write_real("DATA","start_wep_have"+string(wepdir)+"-"+string(dir),start_wep_have[wepdir,dir]);
+			wepdir++;
+		}
+		dir += 1;
 	}
-	dir += 1;}
 
 	dir=0
 	repeat(crownmax+2)

@@ -10,7 +10,6 @@ if (hundredPercentI) >= array_length(hundredPercent)
 	repeat(racemax+1)
 	{
 		race_have[dir]=1
-		
 		race_bskin[dir]=1
 		race_cskin[dir]=1
 		//Crownstart unlock
@@ -43,8 +42,7 @@ if (hundredPercentI) >= array_length(hundredPercent)
 		var dir = 1;
 		repeat(maxstartwep)
 		{
-			//start_wep_have[dir,racedir]=1
-
+			start_wep_have[dir,racedir]=1
 			dir++;
 		}
 	racedir++;

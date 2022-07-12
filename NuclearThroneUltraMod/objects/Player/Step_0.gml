@@ -32,9 +32,9 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 			//screen_save("explain"+string(scrn)+".png");
 			//scrn++;
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			instance_create(f.x + 16,f.y + 16,UltraChest)
+			instance_create(f.x + 16,f.y + 16,GoldChest)
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "UltraChest";
+			thing.mytext = "GOLD CHEST";
 		}
 		if keyboard_check_pressed(ord("C")) {
 			var dangle = random(1)*360;
@@ -1050,7 +1050,7 @@ if wep == 531//Coffee makes you faster
 {
 	maxspeed += 1;	
 }
-var outofcombat = (!instance_exists(enemy) || instance_number(enemy) <= instance_number(IDPDVan)) && !instance_exists(becomenemy)
+var outofcombat = (!instance_exists(enemy) || instance_number(enemy) <= instance_number(IDPDVan)) && !instance_exists(becomenemy) && UberCont.opt_gamemode != 25//Not survival arena
 if instance_exists(SurvivalWave)
 {
 	with SurvivalWave {

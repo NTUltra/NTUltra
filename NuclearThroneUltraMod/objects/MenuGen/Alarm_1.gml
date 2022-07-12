@@ -13,7 +13,7 @@ if !position_meeting(x,y+32,Floor) instance_create(x,y+32,Wall)
 if !position_meeting(x+16,y+32,Floor) instance_create(x+16,y+32,Wall)
 if !position_meeting(x+32,y+32,Floor) instance_create(x+32,y+32,Wall)
 }
-
+room_speed = 30;
 spawnarea = 0
 with Floor
 {

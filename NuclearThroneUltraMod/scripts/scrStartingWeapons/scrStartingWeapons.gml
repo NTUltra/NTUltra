@@ -34,7 +34,7 @@ function scrStartingWeapons() {
 
 	var dir=1;
 
-	repeat(racemax)
+	repeat(racemax+1)
 	{
 
 	start_wep_have[0,dir]=1
