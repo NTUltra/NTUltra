@@ -72,3 +72,4 @@ instance_create(x + 64,y - 64,BigWallBreak);
 
 //Reset stuff
 image_angle = 90;
+instance_destroy();

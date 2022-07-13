@@ -20,7 +20,10 @@ scrDrop(0,100)
 scrBossKill();
 Sleep(50)
 with instance_create(x,y,BigDogExplo)
+{
 	sprite_index = sprInvertedBigDogExplode;
+	spr_dead = other.spr_dead;
+}
 event_inherited()
 
 with instance_nearest(x,y,Corpse)

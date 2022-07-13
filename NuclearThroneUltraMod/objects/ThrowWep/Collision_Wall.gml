@@ -5,6 +5,7 @@ if instance_exists(Player)
 {
 	if Player.ultra_got[53] == 1 || Player.ultra_got[54] == 1 || Player.ultra_got[55] == 1 || Player.ultra_got[56] == 1
 	{
+		//BOUNCE
 		if instance_exists(enemy)
 		{
 			var nearest = instance_nearest(x,y,enemy);

@@ -40,29 +40,14 @@ scrDrop(0,100)
 scrDrop(0,50)
 scrBossKill();
 Sleep(50)
-instance_create(x,y,BigDogExplo)
+with instance_create(x,y,BigDogExplo)
+{
+	spr_dead = other.spr_dead;
+}
 event_inherited()
 
 with instance_nearest(x,y,Corpse)
 instance_destroy()
-
-img = 0
-repeat(6)
-{
-with instance_create(x,y,ScrapBossCorpse)
-{
-size = other.size-1
-motion_add(random(360),5)
-motion_add(other.direction,other.speed)
-speed += max(0,-other.my_health/5)
-sprite_index = other.spr_dead
-image_index = other.img
-image_xscale = other.right
-if speed > 16
-speed = 16
-}
-img += 1
-}
 
 //drop IDKWID?
 if(random(1000)<1){

@@ -21,11 +21,13 @@ if UberCont.ultramodSwap
 		alarm[11] = 1;
 	}
 }
+wallPierce = 1;
 if instance_exists(Player) 
 {
 	//Long arms
 	if Player.skill_got[13]
 	{
+		wallPierce = 0.25;
 		image_xscale += 0.18;//0.1;
 		image_yscale += 0.18;//0.1;	
 	}
