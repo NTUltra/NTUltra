@@ -2903,7 +2903,7 @@ function scrWeapons() {
 	wep_name[263] = "ELECTRIC GUITAR"
 	wep_type[263] = 0
 	wep_auto[263] = 0
-	wep_load[263] = 13
+	wep_load[263] = 12
 	wep_cost[263] = 0
 	wep_sprt[263] = sprElectricGuitar
 	wep_area[263] = -1
@@ -6444,6 +6444,39 @@ function scrWeapons() {
 	wep_text[584] = "ohyea super laser cannon!"
 	wep_swap[584] = sndSwapEnergy
 	wep_rad[584] = 0;
+	
+	wep_name[585] = "AUTO GRENADE RIFLE"
+	wep_type[585] = 4
+	wep_auto[585] = 1
+	wep_load[585] = 3
+	wep_cost[585] = 1
+	wep_sprt[585] = sprAutoGrenadeRifle
+	wep_area[585] = 14
+	wep_text[585] = "mini nade spam"
+	wep_swap[585] = sndSwapExplosive
+	wep_rad[585] = 0;
+	
+	wep_name[586] = "SUPER CLUSTER GRENADE LAUNCHER"
+	wep_type[586] = 4
+	wep_auto[586] = 0
+	wep_load[586] = 40//11
+	wep_cost[586] = 3
+	wep_sprt[586] = sprSuperClusterNader
+	wep_area[586] = 9
+	wep_text[586] = ""
+	wep_swap[586] = sndSwapExplosive
+	wep_rad[586] = 0;
+	
+	wep_name[587] = "RADIATION GENERATOR"
+	wep_type[587] = 5
+	wep_auto[587] = 0
+	wep_load[587] = 15//13
+	wep_cost[587] = 20
+	wep_sprt[587] = sprRadiationGenerator
+	wep_area[587] = 8
+	wep_text[587] = "RAD!"
+	wep_swap[587] = sndSwapExplosive
+	wep_rad[587] = -5;
 	
 	
 	maxwep = array_length(wep_name)-1;

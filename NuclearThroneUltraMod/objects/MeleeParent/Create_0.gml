@@ -36,3 +36,4 @@ if instance_exists(Player)
 		hits ++;
 	}
 }
+knockback = 7;

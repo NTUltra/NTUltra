@@ -10,7 +10,7 @@ if other.team != team && (!inArray || other.sprite_index != other.spr_hurt)
 		my_health -= other.dmg
 		sprite_index = spr_hurt
 		image_index = 0
-		motion_add(other.direction,8)
+		motion_add(other.direction,other.knockback)
 		
 	}
 	BackCont.shake += shk;

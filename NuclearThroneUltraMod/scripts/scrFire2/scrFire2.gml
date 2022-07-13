@@ -612,7 +612,7 @@ function scrFire2() {
 
 	snd_play_fire(sndGrenadeShotgun)
 
-	repeat(4)
+	repeat(5)
 	{
 	with instance_create(x,y,SmallGrenade)
 	{motion_add(aimDirection+(random(40)-20)*other.accuracy,9+random(3))//speed=10
@@ -635,7 +635,7 @@ function scrFire2() {
 
 	snd_play_fire(sndGrenadeShotgun)
 
-	repeat(3)
+	repeat(4)
 	{
 	with instance_create(x,y,SmallGrenade)
 	{motion_add(aimDirection+(random(40)-20)*other.accuracy,9+random(3))//speed=10
@@ -1808,7 +1808,7 @@ function scrFire2() {
 
 	break;
 
-	//ELECTRICGUITAR
+	//ELECTRIC GUITAR
 	case 263:
 
 	snd_play_fire(sndGuitar)
@@ -1825,7 +1825,7 @@ function scrFire2() {
 	snd_wallhit=sndGuitarHitWall;
 	snd_hit=sndGuitarHit;
 	ang = other.ang
-	dmg = 22//26
+	dmg = 23//26
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -5031,7 +5031,7 @@ function scrFire2() {
 	var aimDir = aimDirection;
 	with instance_create(x+lengthdir_x(0.2+(Player.skill_got[13]+bettermelee)*20,aimDir),y+lengthdir_y(0.2+(Player.skill_got[13]+bettermelee)*20,aimDir),ExplosiveSlash)
 	{
-		dmg = 8
+		dmg = 10
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -7865,7 +7865,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 	{
 	sprite_index=sprVeryHeavySlash;
-	dmg = 35//shovel is 8
+	dmg = 40//shovel is 8
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -10575,6 +10575,57 @@ function scrFire2() {
 	alarm[0] = 10//15 originally
 	}
 
+	break;
+	
+	//AUTO GRENADE RIFLE
+	case 585:
+
+	snd_play_fire(sndGrenadeRifle);
+
+	with instance_create(x,y,SmallGrenadeBurst)
+	{
+	creator = other.id
+	projectileSpeed = 12;
+	ammo = 3
+	time = 1
+	team = other.team
+	event_perform(ev_alarm,0) 
+	}
+
+	break;
+	
+	//SUPER CLUSTER LAUNCHER
+	case 586:
+	snd_play_fire(sndHeavyNader);
+	snd_play_fire(sndClusterLauncher);
+
+	with instance_create(x,y,SuperClusterGrenade)
+	{
+	sticky = 0;
+	motion_add(aimDirection+(random(6)-3)*other.accuracy,13)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(18,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(18,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 8
+	wkick = 5
+
+	break;
+	
+	//RADIATION GENERATOR
+	case 587:
+		snd_play_fire(sndRadMod);
+		snd_play_fire(sndUltraGrenade);
+		with instance_create(x,y,BigRad)
+		{
+			motion_add(aimDirection+(random(30)-15)*other.accuracy,5)
+		}
+		repeat(12)
+			with instance_create(x,y,Rad)
+			{
+				motion_add(aimDirection+(random(30)-15)*other.accuracy,4+random(4))
+			}
 	break;
 	
 	}//end of switch part 2!

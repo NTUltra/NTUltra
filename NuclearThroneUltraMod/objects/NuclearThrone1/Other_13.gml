@@ -56,3 +56,7 @@ if instance_exists(Player)
 		}
 	}
 }
+if UberCont.opt_gamemode == 34
+{
+	alarm[8] = alarm[1] + 60;	
+}

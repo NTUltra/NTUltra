@@ -33,7 +33,7 @@ function scrUltras() {
 
 	    //CRYSTAL 
 	    ultra_name[5] = "FORTRESS"
-	    ultra_text[5] = "+6 HP"
+	    ultra_text[5] = "+6 MAX HP"
 	    ultra_tips[5] = "indestructable"
     
 	    ultra_name[6] = "JUGGERNAUT"
@@ -41,7 +41,7 @@ function scrUltras() {
 	    ultra_tips[6] = "crab legs"
     
 	    ultra_name[7] = "BUNKER"
-	    ultra_text[7] = "SHORTER SHIELD#SHOOT WHILE SHIELDED"
+	    ultra_text[7] = "SHORTER SHIELD#SHOOT WHILE SHIELDED#WHILE STATIONARY INCREASE FIRERATE"
 	    ultra_tips[7] = "the iron fist"
     
 	    ultra_name[8] = "VENGEFUL"

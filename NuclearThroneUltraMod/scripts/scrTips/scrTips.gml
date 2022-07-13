@@ -163,22 +163,24 @@ function scrTips() {
 	//CHARACTER BASED
 
 	if Player.race = 0
-	tip = choose("random shifts shapes","clearly the most powerful","never the same","shapeless","passive: anything","active: anything","noone compares")
+	tip = choose("random shifts shapes","clearly the most powerful","never the same","shapeless","passive: anything","active: anything","noone compares","random...")
 
 	if Player.race = 1
-	tip = choose("last day before retirement","duty calls","it's ok to eat","gills on your neck","like kevin costner")
+	tip = choose("last day before retirement","duty calls","it's ok to eat","gills on your neck","like kevin costner","rolling...","fish can play guitar")
 
 	if Player.race = 2
 	tip = choose("crystal can handle this","family","crystal does not like cheese","crystal is hard","crystal is tough","crystal rocks")
 
 	if Player.race = 3
-	tip = choose("eyes sees everything","don't blink","all these thoughts","eyes can't speak","telekinesis pushes bullets away")
+	tip = choose("eyes sees everything","don't blink","all these thoughts","eyes can't speak","telekinesis pushes bullets away","telekinesis pulls in enemies")
 
 	if Player.race = 4
-	tip = choose("it's so cold out here","melting is tired","everything hurts","cough")
+	tip = choose("it's so cold out here","melting is tired","everything hurts","cough","fragile but strong")
 
 	if Player.race = 5
-	tip = choose("kill kill kill","death death death","blood blood blood","no mercy","photosynthesizing...","plant can hold RMB to see further")
+	tip = choose("kill kill kill","death death death","blood blood blood","slay slay slay","fast fast fast","go go go","shoot shoot shoot","murder murder murder",
+	"eat eat eat","apex predator","annihilate eliminate destroy","all shall die","plant is fast","no mercy","photosynthesizing...","plant can hold RMB to see further"
+	,"trap the enemy")
 
 	if Player.race = 6
 	tip = choose("yung venuz is so cool",
@@ -207,7 +209,7 @@ function scrTips() {
 	tip = choose("6b 69 6c 6c#61 6c 6c#68 75 6d 61 6e 73","72 6f 62 6f 74","3c 33","74 61 73 74 79","guns for breakfast","I'm afraid I can't let you do that","don't forget to eat weapons")
 
 	if Player.race = 9
-	tip = choose("remember the training","focus","go","never surrender","amateur hour is over","again","in cold shadows")
+	tip = choose("remember the training","focus","go","never surrender","amateur hour is over","again","in cold shadows","slow down time","hyper fast reactions","chicken used to slow down time#in retail","can't throw weapons")
 
 	if Player.race = 10
 	tip = choose("forget the old days","change is coming","a new generation","it will get better","spawning new allies heals old ones","allies take damage over time","making babies hurts","whre do these allies come from?")
@@ -228,8 +230,8 @@ function scrTips() {
 	if Player.race = 12//yung cuz
 	tip = choose("always in the shadow","yung cuz is so cool","the better shape",
 	"not immortal","how to kill a god","waka waka","buddies cost#half your MAX HP","noscope","golden tv"
-	,"mlg","prodigy","up n cmin","buddies return to you#when you stand still","\\#yc",
-	"you have to get good","Buddies copy most mutations")
+	,"mlg","prodigy","up n cmin","buddies return to you#when you stand still","\u0023yc",
+	"you have to get good","Buddies copy most mutations","yc is a god gamer")
 
 	if Player.race = 13//sheep
 	tip = choose("BAAHHH","farmville","don't mess with me"
@@ -267,20 +269,20 @@ function scrTips() {
 	"deflect can deal#gamma guts damage","you are immune while deflecting")
 
 	if Player.race = 19//SKELETON
-	tip = choose("hard","dusty","dry","nothing...","bones","blood gamble chance#depends on ammo cost","survive","do not give up")
+	tip = choose("hard","dusty","dry","nothing...","bones","blood gamble chance#depends on ammo cost","survive","do not give up","keep going","the body has 69 bones")
 
 	if Player.race = 20//BUSINESS HOG
 	tip = choose("post apocalyptic capitalism","delusional capitalist","mutated money","Making Nuclear Throne great again"
 	,"Gad dang hippies","dollar dollar bill y'all","pay to win","games as a service","NFT (nuclear fucking throne)","please provide your creditcard information"
-	,"your guns are stored#in the blockchain")
+	,"your guns are stored#in the blockchain","stealing","scheming")
 
 	if Player.race = 21//HORROR
-	tip = choose("Enemies absorb the beam's rads",
+	tip = choose("Enemies absorb the beam's rads","horrifying","pure energy",
 	"Horror's beam destroys projectiles","Horror's beam powers up over time","Power","The horror","In the zone",
 	"Radiation is everywhere","Green puppy","The beam homes in on your crosshair")
 
 	if Player.race = 22//ROGUE
-	tip = choose("Keep moving","Never look back","Never slow down","They're getting closer","Never stop","Another world lost")
+	tip = choose("Keep moving","Never look back","Never slow down","They're getting closer","Never stop","Another world lost","gone rogue")
 
 	if Player.race = 23//FROG
 	tip = choose("Wait for me","Don't hold it up","Keep going","Let it all out","Gas is good","Bloated","Restless","Let's go","Can't wait","frog likes to sing")
@@ -298,12 +300,13 @@ function scrTips() {
 	tip = choose("Rusty old soldier","Grandpa","When Humphry pulls out a gun","The real deal","Old and experienced"
 	,"Any projectile in one shot#counts as one hit","When one of multiple projectiles#fire in one shot/burst#hits an enemy it counts as a hit"
 	,"Out of the fallout shelter","focus and discipline","experience","shrink and slow projectiles","active costs unequipped weapon type ammo",
-	"with years of experience#humphry has mastered the art#of shrinking bullets")
+	"with years of experience#humphry has mastered the art#of shrinking bullets","good o'l humphry was the first mutant","one and only mutant#without side effects","super soldier"
+	,"immortal soldier","warzone control uses#unequipped ammo","warzone control stuns enemies")
 	
 	if Player.race = 27//HANDS
 	tip = choose("look ma! no face","don't get too touchy","proto","the only inverted mutant","pull my finger","hand from the other side",
 	"let's give each other a helping hand","reach out","what is on the other side?","GET OVER HERE!","walking backwards","strong handshake",
-	"you can grab through walls","your hand break walls","you can grab chests","some enemies are to heavy#to grab","your active gets +1 damage#when your each level ultra")
+	"you can grab through walls","your hand break walls","you can grab chests","some enemies are to heavy#to grab","your active gets +1 damage#when you reach level ultra")
 	
 	}
 

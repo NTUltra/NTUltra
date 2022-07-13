@@ -5,7 +5,7 @@ repeat(6)
 {
 	with instance_create(x,y,ScrapBossCorpse)
 	{
-	size = other.size-1
+	size = 2;
 	motion_add(random(360),5)
 	motion_add(other.direction,other.speed)
 	speed += max(0,-other.my_health/5)

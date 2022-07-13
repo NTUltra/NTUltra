@@ -22,8 +22,8 @@ function scrDrawUpdate() {
 		{
 			url_open("https://twitter.com/Erdeppol");
 		}
-	txt0 = @"#UPDATE 28 [0.05]
-	* 122 NEW WEAPONS!
+	txt0 = @"#UPDATE 28 [0.06]
+	* 125 NEW WEAPONS!
 	* ALL ULTRA MUTATION ART!
 	MANY BY SEYMOUR SCHLONG
 	* FORKING LIGHTNING!

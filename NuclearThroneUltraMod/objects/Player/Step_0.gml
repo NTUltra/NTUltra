@@ -801,7 +801,13 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 			reload -= 0.1;
 			breload -= 0.1;
 			creload -= 0.1;
-		}	
+		}
+		if ultra_got[7] && speed < 2//BUNKER
+		{
+			reload -= (0.45-speed*0.05);
+			breload -= 0.1;
+			creload -= 0.1;
+		}
 		if race == 7
 			breload -= 1
 		if breload <= 0 && !bcan_shoot

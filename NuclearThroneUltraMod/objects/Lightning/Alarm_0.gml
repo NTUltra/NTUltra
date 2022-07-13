@@ -132,11 +132,11 @@ if ammo > 0
 		{
 			isog = other.isog;
 			fork = other.fork;
-			branch = clamp(other.branch*2.5,70,200);
+			branch = clamp(other.branch*2.5,80,200);
 			canUltraMod = other.canUltraMod;
 			scrCopyWeaponMod(other);
 			accuracy=other.accuracy*2;
-			direction = other.direction+choose(110,-110)
+			direction = other.direction+choose(80+random(30),-80+random(-30))
 			image_angle = direction
 			ammo = clamp(ceil(other.ammo*0.34),2,16);
 			team = other.team

@@ -124,7 +124,7 @@ image_index += 0.4/ammo//indexammo
 			canUltraMod = other.canUltraMod;
 			scrCopyWeaponMod(other);
 			accuracy = 5+(other.accuracy*3);
-			direction = other.direction+choose(110,-110)
+			direction = other.direction+choose(80+random(30),-80+random(-30))
 			image_angle = direction
 			ammo = clamp(ceil(other.ammo*0.15),2,16);
 			team = other.team

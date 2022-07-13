@@ -48,10 +48,10 @@ function scrSkills() {
 	{
 		if Player.race=18 || Player.race = 24
 		{
-		skill_name[2] = "EXTRA WINGS"
-		skill_text[2] = "MORE SPEED#CLOSE DODGES SOMETIMES DROP ITEMS"
-		skill_tips[2] = "fly forever"
-		skill_msnd[2] =  sndMutExtraFeet
+			skill_name[2] = "EXTRA WINGS"
+			skill_text[2] = "MORE SPEED#CLOSE DODGES SOMETIMES DROP ITEMS"
+			skill_tips[2] = "fly forever"
+			skill_msnd[2] =  sndMutExtraFeet
 		}
 		else
 		{
@@ -65,13 +65,15 @@ function scrSkills() {
 		else if Player.race == 13
 		{
 			
-			skill_text[2] = "FASTER CHARGE#MORE CHARGE CONTROL#MORE WALK SPEED,#WALK NORMAL ON ALL TERRAINCLOSE DODGES SOMETIMES DROP RESOURCES"
+			skill_text[2] = "FASTER CHARGE#MORE CHARGE CONTROL#MORE WALK SPEED,#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES DROP RESOURCES"
 		}
 		else
 		{
 			skill_text[2] = "MORE SPEED,#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES DROP RESOURCES"
+			if random(10000)<1
+				skill_text[2] = "BE FAST#YOU CAN'T BE SUCKED";
 		}
-		skill_tips[2] = "run forever"
+		skill_tips[2] = choose("run forever","run forever","run forever","you can't be displaced#when you have extra feet");
 		skill_msnd[2] =  sndMutExtraFeet
 		}
 	}
@@ -108,16 +110,14 @@ function scrSkills() {
 	skill_text[5] = "UPGRADES YOUR SPECIAL ABILITY"
 	if instance_exists(Player)
 	skill_text[5] = string(Player.race_name[Player.race])+" "+string(Player.race_butt[Player.race])
+	skill_tips[5] = "sit on the throne"
 	if instance_exists(Player)
 	{
 	if Player.race=1{
 	skill_tips[5] = "Fish's throne butt is good now!"}
 	else if Player.race=27{
 	skill_tips[5] = "allmighty push!"}
-	else{
-	skill_tips[5] = "sit on the throne"}
-	}else{
-	skill_tips[5] = "sit on the throne"}
+	}
 	skill_msnd[5] =  sndMutThronebutt
 
 	skill_name[6] = "LUCKY SHOT"

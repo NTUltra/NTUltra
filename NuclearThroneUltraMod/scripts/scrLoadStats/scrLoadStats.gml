@@ -49,5 +49,4 @@ function scrLoadStats() {
 
 
 	tot_time = real(string_digits(ini_read_real("STATS","tottime",0)));
-	debug("tot time: ",tot_time);
 }

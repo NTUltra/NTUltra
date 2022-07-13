@@ -24,11 +24,18 @@ freeze += 3
 
 if control = 1 && instance_exists(target)
 {
-with target
-{if point_distance(x,y,other.x,other.y) < 240
-{if place_free(x+lengthdir_x(1,point_direction(x,y,other.x,other.y)),y)
-x += lengthdir_x(1,point_direction(x,y,other.x,other.y))
-if place_free(x,y+lengthdir_y(1,point_direction(x,y,other.x,other.y)))
-y += lengthdir_y(1,point_direction(x,y,other.x,other.y))}}
+	with target
+	{
+		if object_index != Player || !skill_got[2]
+		{
+			if point_distance(x,y,other.x,other.y) < 220
+			{
+				if place_free(x+lengthdir_x(1,point_direction(x,y,other.x,other.y)),y)
+					x += lengthdir_x(1,point_direction(x,y,other.x,other.y))
+				if place_free(x,y+lengthdir_y(1,point_direction(x,y,other.x,other.y)))
+					y += lengthdir_y(1,point_direction(x,y,other.x,other.y))
+			}
+		}
+	}
 }
 
