@@ -8,7 +8,7 @@ repeat(6)
 	size = 2;
 	motion_add(random(360),5)
 	motion_add(other.direction,other.speed)
-	speed += max(0,-other.my_health/5)
+	speed += 4 + random(6)
 	sprite_index = other.spr_dead
 	image_index = img
 	image_xscale = other.image_xscale
