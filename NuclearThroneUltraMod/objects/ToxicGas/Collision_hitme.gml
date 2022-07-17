@@ -17,7 +17,7 @@ if other.team != team && other.team != 2 && other.id != owner
 		}
 		else
 		{
-			image_index += 0.2;//iframe skipper
+			scrIframeSkipper(0.2);
 		}
 	}
 }

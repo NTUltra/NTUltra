@@ -135,8 +135,8 @@ function scrUltras() {
 	ultra_tips[25] = "big wep chests drop two duplicates"
 
 	ultra_name[26] = "GET LOADED"
-	ultra_text[26] = "AMMO CHESTS INCLUDE ALL AMMO TYPES#AMMO PICKUPS ALWAYS#GIVE YOU AMMO FOR YOUR PRIMARY"
-	ultra_tips[26] = "you should really try open mind"
+	ultra_text[26] = "AMMO CHESTS INCLUDE ALL AMMO TYPES#YOU CAN CARRY#AN INFINITE AMOUNT OF AMMO!#AMMO ABOVE MAX DECREASES OVER TIME##THE MORE TOTAL AMMO YOU HAVE#THE MORE KNOCKBACK YOU DEAL"
+	ultra_tips[26] = "infinite strength"
 
 	ultra_name[27] = "MIRROR HANDS"
 	ultra_text[27] = "RIGHT CLICK FIRES YOUR PRIMARY#SWAPPING RELOADS YOUR WEAPONS"

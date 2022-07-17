@@ -36,19 +36,9 @@ if (my_health < prevhealth)
 		}
 		with owner
 		{
-			//if sprite_index != spr_hurt
-			//{
-				my_health = prevhealth;
-				my_health -= dmgTaken;
-				prevhealth = my_health;//Don't recognize this as dmg
-	/*
-			}
-			else
-			{
-				image_index += 0.2;//iframe skipper
-				my_health -= dmgTaken*0.2;
-				prevhealth = my_health;
-			}*/
+			my_health = prevhealth;
+			my_health -= dmgTaken;
+			prevhealth = my_health;//Don't recognize this as dmg
 			sprite_index = spr_middle_hurt_link;
 			if disable
 				spr_hurt = spr_middle_deactivated_hurt_link;

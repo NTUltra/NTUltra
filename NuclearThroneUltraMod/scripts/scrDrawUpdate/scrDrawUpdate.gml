@@ -22,8 +22,8 @@ function scrDrawUpdate() {
 		{
 			url_open("https://twitter.com/Erdeppol");
 		}
-	txt0 = @"#UPDATE 28 [0.061]
-	* 125 NEW WEAPONS!
+	txt0 = @"#UPDATE 28 [0.07]
+	* 126 NEW WEAPONS!
 	* ALL ULTRA MUTATION ART!
 	MANY BY SEYMOUR SCHLONG
 	* FORKING LIGHTNING!
@@ -37,6 +37,7 @@ function scrDrawUpdate() {
 	* NEW PLANT ULTRA C
 	* NEW SECRET FISH ULTRA
 	* CHANGED VIKING ULTRA C
+	* CHANGED STEROIDS ULTRA B
 	* ROBOT ULTRA BUFFS
 	* NEW GOLDEN ENEMIES
 	* NEW MUTATIONS
@@ -48,7 +49,6 @@ function scrDrawUpdate() {
 	
 	PRESS [T] FOR UPDATES ON TWITTER
 	PRESS [D] TO JOIN THE DISCORD
-	
 	* PRESS [SPACE] FOR PAGE 2"
 	}
 	else

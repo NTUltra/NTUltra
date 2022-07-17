@@ -36,7 +36,7 @@ else
 {
 if Player.hogpoints > 1// && Player.area=105 && Player.subarea=1
 {
-	scrUnlockCSkin(20,"FOR SUCCESFULLY USING THE INVESTMENT ULTRA",0);
+	scrUnlockCSkin(20,"FOR SUCCESFULLY USING#THE INVESTMENT ULTRA",0);
     scrUltras()
     scrBusinessHogInvestment();
     

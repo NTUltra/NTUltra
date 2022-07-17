@@ -14,7 +14,7 @@ if speed > 1 and other.team != team
 		}
 		else
 		{
-			image_index += 0.8;//iframe skipper
+			scrIframeSkipper(0.8);
 		}
     }
 

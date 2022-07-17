@@ -4792,7 +4792,7 @@ function scrFire2() {
 	//OBSIDIAN THROWING KNIFE
 	case 370:
 	snd_play_fire(sndEnemySlash);
-	var yc = object_index == YungCuzDupe || object_index == RobotTurret;
+	var yc = object_index != Player;
 	with instance_create(x,y,ThrowWepNoReturn)
 	{
 		team=other.team;
@@ -10626,6 +10626,50 @@ function scrFire2() {
 			{
 				motion_add(aimDirection+(random(30)-15)*other.accuracy,4+random(4))
 			}
+	break;
+	
+	//SHOTGUN LANCE
+	case 588:
+
+	snd_play_fire(sndShotgun)
+	snd_play_fire(choose(sndSword1,sndSword2))
+
+	instance_create(x,y,Dust)
+
+	with instance_create(x+lengthdir_x(5+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(5+((Player.skill_got[13]+bettermelee)*20),aimDirection),LanceShank)
+	{
+	longarms = 0
+	dmg = 10;
+	if instance_exists(Player)
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection,4+longarms)
+	image_angle = direction
+	team = other.team}
+	
+
+	repeat(4)
+	{
+		with instance_create(x,y,Bullet2)
+		{motion_add(aimDirection+(random(20)-30)*other.accuracy,13+random(6))
+		image_angle = direction
+		team = other.team}
+	}
+	
+	repeat(4)
+	{
+		with instance_create(x,y,Bullet2)
+		{motion_add(aimDirection+(random(20)+10)*other.accuracy,13+random(6))
+		image_angle = direction
+		team = other.team}
+	}
+
+	wepangle = -wepangle
+	motion_add(aimDirection,8)
+	BackCont.viewx2 += lengthdir_x(16,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(16,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 2
+	wkick = -6
+
 	break;
 	
 	}//end of switch part 2!

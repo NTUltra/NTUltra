@@ -81,8 +81,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "UnsortedProp",
-    "path": "folders/Sprites/Enviroment/UnsortedProp.yy",
+    "name": "Menu",
+    "path": "folders/Sprites/Enemies/Menu.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprEnergyIconBG",

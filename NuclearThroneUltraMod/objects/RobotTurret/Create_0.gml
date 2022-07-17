@@ -1,13 +1,14 @@
-maxhealth = 40
-my_health = maxhealth
+maxhealth = 400
+my_health = maxhealth;
 meleedamage = 0
 size = 1
+event_inherited();
 scrWeapons();
 
 hurt_pitch_variation = 0.1;
 
 raddrop=28;
-
+alarm[1] = 5;
 snd_hurt = sndHitMetal
 
 //behavior
@@ -16,7 +17,7 @@ gunangle = random(360)
 //alarm[0] = 20
 wkick = 0
 
-friction = 0.4
+friction = 0.4;
 
 right = choose(1,-1)
 

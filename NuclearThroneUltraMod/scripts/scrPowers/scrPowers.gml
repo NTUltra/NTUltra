@@ -206,10 +206,10 @@ function scrPowers() {
 	{
 		var t1 = wep_type[wep];
 		var t2 = wep_type[bwep];
-		var al = 5;//weapon types total
+		var al = 6;//weapon types total
 		var takePercentage = 0.015//1.5%%//0.0075;//0.75%
 		var insufficientFunds = true;
-		for (var i = 0; i < al; i++) {
+		for (var i = 1; i < al; i++) {
 			if (i != t1 && i != t2)
 			{
 				if (ammo[i] > 1 && ammo[i] - typ_amax[i]*takePercentage > 0)

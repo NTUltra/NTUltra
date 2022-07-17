@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description Init
 target = -1;
 pushStrength = 58;
 pushSpeed = 12;

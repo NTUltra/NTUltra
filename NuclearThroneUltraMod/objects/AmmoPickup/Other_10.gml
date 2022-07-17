@@ -65,11 +65,11 @@ else
 	type = pt
 
 //Roids get loaded ultra
-if ( Player.ultra_got[26] && Player.wep!=0 )
-type = pt;
+//if ( Player.ultra_got[26] && Player.wep!=0 )
+//type = pt;
 
-if type == 0
-type = choose(1,2,3,4,5)
+if type == 0 || Player.ammo[type] > Player.typ_amax[type]
+type = choose(1,2,3,4,5);
 
 extra = 0
 //RUSH CROWN
@@ -92,8 +92,8 @@ gain_multiplier += 0.5
 
 Player.ammo[type] += floor((Player.typ_ammo[type]+extra) * gain_multiplier)
 
-if Player.ammo[type] > Player.typ_amax[type]
-Player.ammo[type] = Player.typ_amax[type]
+if Player.ammo[type] > Player.typ_amax[type] && !Player.ultra_got[26]
+	Player.ammo[type] = Player.typ_amax[type]
 
 if (UberCont.opt_ammoicon)
 {
@@ -101,16 +101,17 @@ if (UberCont.opt_ammoicon)
 	dir.sprt = sprAmmoIconsPickup
 	dir.ii = type-1;
 	dir.mytext = "+"+string(floor((Player.typ_ammo[type]+extra) * gain_multiplier))//+string(Player.typ_name[type])
-	if Player.ammo[type] = Player.typ_amax[type]
-	dir.mytext = "MAX"//+string(Player.typ_name[type])
+	if Player.ammo[type] == Player.typ_amax[type]
+		dir.mytext = "MAX"//+string(Player.typ_name[type])
+	
 	snd_play(sndAmmoPickup)
 }
 else
 {
 	dir = instance_create(x,y,PopupText)
 	dir.mytext = "+"+string(floor((Player.typ_ammo[type]+extra) * gain_multiplier))+" "+string(Player.typ_name[type])
-	if Player.ammo[type] = Player.typ_amax[type]
-	dir.mytext = "MAX "+string(Player.typ_name[type])
+	if Player.ammo[type] == Player.typ_amax[type]
+		dir.mytext = "MAX "+string(Player.typ_name[type])
 
 	snd_play(sndAmmoPickup)
 }

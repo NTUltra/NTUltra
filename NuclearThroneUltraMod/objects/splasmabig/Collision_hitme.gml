@@ -19,7 +19,8 @@ if other.team != team and other.my_health > 0
 	}
 	else
 	{
-		other.image_index += 0.25;//iframe skipper
+		with other
+			scrIframeSkipper(0.2);
 	}
 }
 

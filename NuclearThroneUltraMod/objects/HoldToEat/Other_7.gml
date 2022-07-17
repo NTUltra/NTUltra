@@ -48,21 +48,17 @@ with Player
 
 			if wep_type[wep]=0
 			{//melee
-			wepammo=7+irandom(5)
-			wepcost=1;
+				//wepammo=7+irandom(5);
+				wepammo=12+irandom(8);
+				wepcost=1;
 			}
 			else
 			{
-			wepammo=round(typ_ammo[wep_type[wep]]*1.6);//if wepcost is more than 3x wepcost???
-			wepcost=wep_cost[wep]
-			if wepcost>wepammo//If its like a doubel spcs fire it once
-				wepammo=wepcost;
+				wepcost=max(0.1,wep_cost[wep])
+				wepammo=round(max(typ_ammo[wep_type[wep]]*3,wepcost*2));
 			}
-
-			reload=wep_load[wep];
-
-
-			alarm[0]=reload
+			reload=wep_load[wep]*0.5;
+			alarm[0]=clamp(reload*0.5,5,60);
 		}
 
 		}

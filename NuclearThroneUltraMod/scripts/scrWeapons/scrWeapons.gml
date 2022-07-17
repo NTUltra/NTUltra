@@ -658,10 +658,10 @@ function scrWeapons() {
 	wep_name[59] = "LIGHTNING SHOTGUN"
 	wep_type[59] = 5
 	wep_auto[59] = 0
-	wep_load[59] = 20
+	wep_load[59] = 22
 	wep_cost[59] = 2
 	wep_sprt[59] = sprLightningShotgun
-	wep_area[59] = 9
+	wep_area[59] = 10
 	wep_text[59] = "hurricane"
 	wep_swap[59] = sndSwapEnergy
 	wep_rad[59] = 0;
@@ -1594,7 +1594,7 @@ function scrWeapons() {
 	wep_name[144] = "HYPER LIGHTNING LAUNCHER"
 	wep_type[144] = 5
 	wep_auto[144] = 0
-	wep_load[144] = 22
+	wep_load[144] = 24
 	wep_cost[144] = 3
 	wep_sprt[144] = sprLightningHyperRifle
 	wep_area[144] = 17
@@ -6477,6 +6477,17 @@ function scrWeapons() {
 	wep_text[587] = "RAD!"
 	wep_swap[587] = sndSwapExplosive
 	wep_rad[587] = -5;
+	
+	wep_name[588] = "SHOTGUN LANCE"
+	wep_type[588] = 2
+	wep_auto[588] = 0
+	wep_load[588] = 20
+	wep_cost[588] = 1.5
+	wep_sprt[588] = sprShotgunLance
+	wep_area[588] = 7
+	wep_text[588] = "what kind of person would design this weapon"
+	wep_swap[588] = sndSwapSword
+	wep_rad[588] = 0;
 	
 	
 	maxwep = array_length(wep_name)-1;

@@ -104,7 +104,7 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 			
 		if ammoMultiple > 0{
 			ammo[wep_type[targetPickup.wep]] += typ_ammo[targetPickup.wep_type[targetPickup.wep]]*ammoMultiple
-			if ammo[wep_type[targetPickup.wep]] > typ_amax[targetPickup.wep_type[targetPickup.wep]]
+			if ammo[wep_type[targetPickup.wep]] > typ_amax[targetPickup.wep_type[targetPickup.wep]] && !ultra_got[26]
 				ammo[wep_type[targetPickup.wep]] = typ_amax[targetPickup.wep_type[targetPickup.wep]]
 			snd_play(sndAmmoPickup,0,true);
 			if (UberCont.opt_ammoicon)
@@ -113,15 +113,15 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 				dir.sprt = sprAmmoIconsPickup
 				dir.ii = targetPickup.wep_type[targetPickup.wep]-1;
 				dir.mytext = "+"+string(typ_ammo[wep_type[targetPickup.wep]]*ammoMultiple);
-				if ammo[wep_type[targetPickup.wep]] = typ_amax[targetPickup.wep_type[targetPickup.wep]]
-				dir.mytext = "MAX";
+				if ammo[wep_type[targetPickup.wep]] == typ_amax[targetPickup.wep_type[targetPickup.wep]]
+					dir.mytext = "MAX";
 			}
 			else
 			{
 				dir = instance_create(x,y,PopupText)
 				dir.mytext = "+"+string(typ_ammo[wep_type[targetPickup.wep]]*ammoMultiple)+" "+string(typ_name[wep_type[targetPickup.wep]])
-				if ammo[wep_type[targetPickup.wep]] = typ_amax[targetPickup.wep_type[targetPickup.wep]]
-				dir.mytext = "MAX "+string(typ_name[wep_type[targetPickup.wep]])
+				if ammo[wep_type[targetPickup.wep]] == typ_amax[targetPickup.wep_type[targetPickup.wep]]
+					dir.mytext = "MAX "+string(typ_name[wep_type[targetPickup.wep]])
 			}
 		}
 		targetPickup.ammo = 0
@@ -327,6 +327,7 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 	wepmod2=other.wepmod2;
 	wepmod3=other.wepmod3;
 	wepmod4=other.wepmod4;
+	//alarm[0] = 0; Can't heavy heart this? Let's try it this out first it seems fun
 	/*WEAPON MODS
 	mod1[]
 	mod2[]

@@ -15,7 +15,7 @@ if instance_exists(Player){
 }
 
 canspawnportal = true;
-alarm[0] = 50;
+alarm[0] = 60;
 with Corpse
 {
 	other.alarm[0] += sign(alarm[0]);	

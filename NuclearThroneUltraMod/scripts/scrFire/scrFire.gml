@@ -56,17 +56,17 @@ function scrFire() {
 	        if random(100)<((wep_cost[bwep]/typ_ammo[wep_type[bwep]])*0.69)*100
 			{
     
-			    type=round(typ_ammo[wep_type[bwep]]/2);
-			    if (ammo[wep_type[bwep]] + type >=typ_amax[wep_type[bwep]])
+			    var wantAmmo = round(typ_ammo[wep_type[bwep]]/2);
+			    if (ammo[wep_type[bwep]] + wantAmmo >=typ_amax[wep_type[bwep]] && !ultra_got[26])
 			    {
-					ammo[wep_type[bwep]]=typ_amax[wep_type[bwep]];
+					ammo[wep_type[bwep]] = typ_amax[wep_type[bwep]];
 			    }
 			    else
-					ammo[wep_type[bwep]] += type;
+					ammo[wep_type[bwep]] += wantAmmo;
     
 				dir = instance_create(x,y,PopupText)
-				dir.mytext = "+"+string(other.type)+" "+string(other.typ_name[wep_type[bwep]])
-				if other.type = other.typ_amax[wep_type[bwep]]
+				dir.mytext = "+"+string(wantAmmo)+" "+string(other.typ_name[wep_type[bwep]])
+				if ammo[wep_type[bwep]] == typ_amax[wep_type[bwep]]
 					dir.mytext = "MAX "+string(other.typ_name[wep_type[bwep]])
 			}
 
@@ -76,17 +76,17 @@ function scrFire() {
 		    if random(100)<((wep_cost[bwep]/typ_ammo[wep_type[bwep]])*0.5)*100
 			{
     
-			    type=round(typ_ammo[wep_type[bwep]]/2)
-			    if (ammo[wep_type[bwep]] + type >=typ_amax[wep_type[bwep]])
+			    var wantAmmo = round(typ_ammo[wep_type[bwep]]/2)
+			    if (ammo[wep_type[bwep]] + wantAmmo >= typ_amax[wep_type[bwep]] && !ultra_got[26])
 			    {
-					ammo[wep_type[bwep]]=typ_amax[wep_type[bwep]];
+					ammo[wep_type[bwep]] = typ_amax[wep_type[bwep]];
 			    }
 			    else
-					ammo[wep_type[bwep]] += type;
+					ammo[wep_type[bwep]] += wantAmmo;
     
 				dir = instance_create(x,y,PopupText)
-				dir.mytext = "+"+string(other.type)+" "+string(other.typ_name[wep_type[bwep]])
-				if other.type = other.typ_amax[wep_type[bwep]]
+				dir.mytext = "+"+string(wantAmmo)+" "+string(other.typ_name[wep_type[bwep]])
+				if ammo[wep_type[bwep]] == other.typ_amax[wep_type[bwep]]
 					dir.mytext = "MAX "+string(other.typ_name[wep_type[bwep]])
 
 		    }

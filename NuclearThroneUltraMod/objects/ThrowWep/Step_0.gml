@@ -23,31 +23,17 @@ if instance_exists(Player)
 			}
 		}	
 	}
-    if speed<stopSpeed && alarm[0]<1
+    if speed<stopSpeed
     {
-        instance_destroy()
-        /*
-        if Player.skill_got[5]=0
-        {
-        theWepPickup = instance_create(x,y,WepPickup)
-            with theWepPickup
-            {
-            image_angle=other.image_angle;
-            scrWeapons()
-            wep=other.wep
-            name = wep_name[wep]
-            ammo = 0
-            type = wep_type[wep]
-            curse = other.curse
-            wepmod1=other.wepmod1;
-            wepmod2=other.wepmod2;
-            wepmod3=other.wepmod3;
-            wepmod4=other.wepmod4;
-            sprite_index = wep_sprt[wep]
-            }
-        }*/
+		if alarm[0] < 1
+			instance_destroy();
+		if canHeavyHeart
+		{
+			canHeavyHeart = false;
+			with scrDropHeavyHeart()
+			{
+				alarm[0] = min(alarm[0],other.alarm[0]);
+			}
+		}
     }
 }
-
-/* */
-/*  */

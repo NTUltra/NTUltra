@@ -131,13 +131,8 @@ function scrPopChests() {
 		exit;}
 	
 		if(Player.skill_got[23]){//OPEN MIND
-
-		if Player.race=25
-		gol=choose(3,3,3,2,2,2);
-		else
-		gol = choose(3,3,2,2,2,2);
-
-		healthChestGol += choose(0,0,0,0,0,1);
+			gol = 2;
+			healthChestGol += choose(0,0,0,0,0,1);
 		}
 		if Player.race == 4 //YUNG CUZ
 		{
@@ -145,11 +140,17 @@ function scrPopChests() {
 		}
 		
 		wepChestGol = gol;
+		if(Player.skill_got[23]){//OPEN MIND
+			if Player.race=25
+				wepChestGol += choose(1,1,0,0,0,0);
+			else
+				wepChestGol += choose(1,0,0,0,0,0);
+		}
 	
 		if Player.crown == 15//CROWN OF CHOICE
 		{
 			gol += 1;
-			healthChestGol += choose(0,0,0,0,0,0,1);
+			healthChestGol += choose(0,0,0,0,0,1);
 			wepChestGol += 2;
 		}
 

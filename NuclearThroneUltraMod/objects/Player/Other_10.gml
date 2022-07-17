@@ -13,7 +13,7 @@ if ultra_got[86]//SUPER BLAST ARMOUR
 		randir=random(360);
 		rings = other.blastArmourPower/3;
 		dmg = 0;
-		if rings - 12 > 0
+		if rings > 12
 		{
 			//To prevent super laggy games limit the ringsize and instead increase dmg
 			dmg += rings - 12;

@@ -37,6 +37,9 @@ if place_meeting(x,y,Player) && !used
 			{heavyheart--;}
 			switch (other.skillIndex)
 			{
+				case 0: //HEAVY HEART
+					heavyheart = 0;
+				break;
 				case 1: //RHINO SKIN
 					if race == 25
 					{

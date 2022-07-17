@@ -26,7 +26,7 @@ with other
 	}
 	else
 	{
-		image_index += other.iframeskip;//iframe skipper
+		scrIframeSkipper(other.iframeskip);
 	}
 }
 

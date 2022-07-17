@@ -66,7 +66,7 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 		}
 		else
 		{
-			image_index += 0.4;//iframe skipper
+			scrIframeSkipper(0.13);
 		}
 	}
 	

@@ -39,7 +39,7 @@ if (other.team != 2 && (size >= other.size-1 or impactWrist) and speed > 2)
 		if impactWristed
 		{
 			with other
-				image_index += 0.2;//iframe skipper
+				scrIframeSkipper(0.2);
 		}
 	}
 }

@@ -715,7 +715,7 @@ function scrDrawHUD() {
 	else if Player.wep_type[Player.bwep] = 1
 	{img = 1}
 	draw_sprite(sprBulletIconBG,img,__view_get( e__VW.XView, 0 )+2,__view_get( e__VW.YView, 0 )+ammoheight)
-	draw_sprite(sprBulletIcon,7-round((Player.ammo[1]/Player.typ_amax[1])*7),__view_get( e__VW.XView, 0 )+2,__view_get( e__VW.YView, 0 )+ammoheight)//36
+	draw_sprite(sprBulletIcon,clamp(7-ceil((Player.ammo[1]/Player.typ_amax[1])*7),-1,7)+1,__view_get( e__VW.XView, 0 )+2,__view_get( e__VW.YView, 0 )+ammoheight)//36
 
 	img = 0
 	if (Player.race == 26 && instance_exists(HumphryDiscipline) && Player.wep_type[Player.wep] != 2 && Player.wep_type[Player.bwep] != 2)
@@ -727,7 +727,7 @@ function scrDrawHUD() {
 	else if Player.wep_type[Player.bwep] = 2
 	{img = 1}
 	draw_sprite(sprShotIconBG,img,__view_get( e__VW.XView, 0 )+12,__view_get( e__VW.YView, 0 )+ammoheight)
-	draw_sprite(sprShotIcon,7-round((Player.ammo[2]/Player.typ_amax[2])*7),__view_get( e__VW.XView, 0 )+12,__view_get( e__VW.YView, 0 )+ammoheight)
+	draw_sprite(sprShotIcon,clamp(7-ceil((Player.ammo[2]/Player.typ_amax[2])*7),-1,7)+1,__view_get( e__VW.XView, 0 )+12,__view_get( e__VW.YView, 0 )+ammoheight)
 
 	img = 0
 	if (Player.race == 26 && instance_exists(HumphryDiscipline) && Player.wep_type[Player.wep] != 3 && Player.wep_type[Player.bwep] != 3)
@@ -739,7 +739,7 @@ function scrDrawHUD() {
 	else if Player.wep_type[Player.bwep] = 3
 	{img = 1}
 	draw_sprite(sprBoltIconBG,img,__view_get( e__VW.XView, 0 )+22,__view_get( e__VW.YView, 0 )+ammoheight)
-	draw_sprite(sprBoltIcon,7-round((Player.ammo[3]/Player.typ_amax[3])*7),__view_get( e__VW.XView, 0 )+22,__view_get( e__VW.YView, 0 )+ammoheight)
+	draw_sprite(sprBoltIcon,clamp(7-ceil((Player.ammo[3]/Player.typ_amax[3])*7),-1,7)+1,__view_get( e__VW.XView, 0 )+22,__view_get( e__VW.YView, 0 )+ammoheight)
 
 	img = 0
 	if (Player.race == 26 && instance_exists(HumphryDiscipline) && Player.wep_type[Player.wep] != 4 && Player.wep_type[Player.bwep] != 4)
@@ -751,7 +751,7 @@ function scrDrawHUD() {
 	else if Player.wep_type[Player.bwep] = 4 
 	{img = 1}
 	draw_sprite(sprExploIconBG,img,__view_get( e__VW.XView, 0 )+32,__view_get( e__VW.YView, 0 )+ammoheight)
-	draw_sprite(sprExploIcon,7-round((Player.ammo[4]/Player.typ_amax[4])*7),__view_get( e__VW.XView, 0 )+32,__view_get( e__VW.YView, 0 )+ammoheight)
+	draw_sprite(sprExploIcon,clamp(7-ceil((Player.ammo[4]/Player.typ_amax[4])*7),-1,7)+1,__view_get( e__VW.XView, 0 )+32,__view_get( e__VW.YView, 0 )+ammoheight)
 
 	img = 0
 	if (Player.race == 26 && instance_exists(HumphryDiscipline) && Player.wep_type[Player.wep] != 5 && Player.wep_type[Player.bwep] != 5)
@@ -763,7 +763,7 @@ function scrDrawHUD() {
 	else if Player.wep_type[Player.bwep] = 5 
 	{img = 1}
 	draw_sprite(sprEnergyIconBG,img,__view_get( e__VW.XView, 0 )+42,__view_get( e__VW.YView, 0 )+ammoheight)
-	draw_sprite(sprEnergyIcon,7-round((Player.ammo[5]/Player.typ_amax[5])*7),__view_get( e__VW.XView, 0 )+42,__view_get( e__VW.YView, 0 )+ammoheight)
+	draw_sprite(sprEnergyIcon,clamp(7-ceil((Player.ammo[5]/Player.typ_amax[5])*7),-1,7)+1,__view_get( e__VW.XView, 0 )+42,__view_get( e__VW.YView, 0 )+ammoheight)
 
 	//LOW AMMO WARNING
 
@@ -859,19 +859,19 @@ function scrDrawHUD() {
 	draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-7)
 	if type = 1{
 	draw_sprite(sprBulletIconBG,2,x+7,y-21)
-	draw_sprite(sprBulletIcon,7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),x+7,y-21)}
+	draw_sprite(sprBulletIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
 	if type = 2{
 	draw_sprite(sprShotIconBG,2,x+7,y-21)
-	draw_sprite(sprShotIcon,7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),x+7,y-21)}
+	draw_sprite(sprShotIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
 	if type = 3{
 	draw_sprite(sprBoltIconBG,2,x+7,y-21)
-	draw_sprite(sprBoltIcon,7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),x+7,y-21)}
+	draw_sprite(sprBoltIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
 	if type = 4{
 	draw_sprite(sprExploIconBG,2,x+7,y-21)
-	draw_sprite(sprExploIcon,7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),x+7,y-21)}
+	draw_sprite(sprExploIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
 	if type = 5{
 	draw_sprite(sprEnergyIconBG,2,x+7,y-21)
-	draw_sprite(sprEnergyIcon,7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),x+7,y-21)}
+	draw_sprite(sprEnergyIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
 
 //wep_area[Player.wep]
 /*
@@ -1058,11 +1058,11 @@ function scrDrawHUD() {
 			}
 
 			draw_set_color(c_black)
-			draw_text(x+28,y-30,string_hash_to_newline(string(name)))
-			draw_text(x+29,y-30,string_hash_to_newline(string(name)))
-			draw_text(x+29,y-31,string_hash_to_newline(string(name)))
+			draw_text(x+16,y-30,string_hash_to_newline(string(name)))
+			draw_text(x+17,y-30,string_hash_to_newline(string(name)))
+			draw_text(x+17,y-31,string_hash_to_newline(string(name)))
 			draw_set_color(c_white)
-			draw_text(x+28,y-31,string_hash_to_newline(string(name)))
+			draw_text(x+16,y-31,string_hash_to_newline(string(name)))
 			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 		}
 	}

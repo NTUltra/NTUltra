@@ -14,7 +14,7 @@ if other.team != team and other.my_health > 0 && alarm[3] < 1
 		}
 		else
 		{
-			image_index += 0.2;//iframe skipper
+			scrIframeSkipper(0.2);
 		}
 		motion_add(other.direction,4)
 	}

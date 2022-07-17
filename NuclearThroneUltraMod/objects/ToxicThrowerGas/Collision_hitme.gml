@@ -16,7 +16,7 @@ if other.team != team && other.team !=2
 	    }
 		else
 		{
-			image_index += 0.2;//iframe skipper
+			scrIframeSkipper(0.075);
 		}
     }
 }//player got hit

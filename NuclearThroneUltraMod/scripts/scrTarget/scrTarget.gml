@@ -87,6 +87,21 @@ function scrTarget() {
 			    }
 		    } 
 		}
+		else if Player.ultra_got[32] && target == Player.id {
+			if instance_exists(Turret){//Robot's turret
+			    with enemy
+			    {
+				    if point_distance(x,y,Player.x,Player.y) < point_distance(x,y,instance_nearest(x,y,Turret).x,instance_nearest(x,y,Turret).y)
+				    {
+						target = instance_nearest(x,y,Turret)
+					}
+				    else
+					{
+						target = instance_nearest(x,y,Turret)
+					}
+			    }
+		    } 
+		}
 		if target == Player.id && Player.justAsheep
 		{
 			target = -1;

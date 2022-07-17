@@ -39,8 +39,8 @@ function scrLuckyShot(){
 		cwepammo,cwepammo)
     
 	    Player.ammo[type] += round(Player.typ_ammo[type]*0.5)
-	    if Player.ammo[type] > Player.typ_amax[type]
-	    Player.ammo[type] = Player.typ_amax[type]
+	    if Player.ammo[type] > Player.typ_amax[type] && !Player.ultra_got[26]
+			Player.ammo[type] = Player.typ_amax[type]
     
 		if (UberCont.opt_ammoicon)
 		{
@@ -48,14 +48,14 @@ function scrLuckyShot(){
 			dir.sprt = sprAmmoIconsPickup
 			dir.ii = type-1;
 		    dir.mytext = "+"+string(round(Player.typ_ammo[type]*0.5));
-		    if Player.ammo[type] = Player.typ_amax[type]
+		    if Player.ammo[type] == Player.typ_amax[type]
 				dir.mytext = "MAX";
 		}
 		else
 		{
 		    dir = instance_create(x,y,PopupText)
 		    dir.mytext = "+"+string(round(Player.typ_ammo[type]/2))+" "+string(Player.typ_name[type])
-		    if Player.ammo[type] = Player.typ_amax[type]
+		    if Player.ammo[type] == Player.typ_amax[type]
 				dir.mytext = "MAX "+string(Player.typ_name[type])
 		}
     }

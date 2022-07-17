@@ -593,3 +593,21 @@ my_health = maxhealth;
 scrWeaponHold();
 if wep == bwep
 	scrSwapWeps();
+
+
+//TEST HAVE ALL MUTS FROG GOD
+/*
+var i = 0
+repeat(maxskill+1)
+{skill_got[i] = 1
+i += 1}
+i = 0
+repeat(maxultra+2)
+{
+	if i != 86
+	{
+		ultra_got[i] = 1
+		i += 1
+	}
+}
+*/

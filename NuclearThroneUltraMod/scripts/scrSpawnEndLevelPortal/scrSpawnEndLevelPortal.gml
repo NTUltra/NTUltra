@@ -4,7 +4,7 @@
 function scrSpawnEndLevelPortal(){
 	if instance_exists(SurvivalWave) || instance_exists(ThroneExplo)
 	exit;
-	var dir = undefined;
+	var dir = noone;
 	var numEn = 0;
 	with enemy
 	{
@@ -30,7 +30,7 @@ function scrSpawnEndLevelPortal(){
 						{
 							dir = instance_nearest(x-16,y-16,Floor)
 						}
-						if dir != undefined
+						if dir != noone
 						{
 					        with instance_create(dir.x+16,dir.y+16,Portal)
 								type = 1

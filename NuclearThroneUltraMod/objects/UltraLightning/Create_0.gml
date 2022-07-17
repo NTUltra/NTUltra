@@ -12,13 +12,14 @@ image_speed = 0.4
 target=enemy;
 dmg = 11
 accuracy=24;
-iframeskip = 0.6;
+iframeskip = 0.14;
 fork = 7;
+branch = 15;
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1{
 		image_speed = 0.3-(Player.betterlaserbrain*0.06)
-		iframeskip = 0.8;
+		iframeskip += 0.01;
 		dmg ++;
 		fork--;
 	}

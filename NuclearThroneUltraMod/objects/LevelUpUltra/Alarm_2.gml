@@ -10,7 +10,7 @@ with Player
 	{
 		with instance_create(x,y,UltraLightning)
 		{
-			fork -= 4;
+			fork -= 3;
 			image_angle = langle;
 			team = 2
 			ammo = 12+irandom(6)//60

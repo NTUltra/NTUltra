@@ -49,7 +49,7 @@ if other.team != team and other.my_health > 0 && speed>1
         }
 		else if Player.ultra_got[53] == 1 || Player.ultra_got[54] || Player.ultra_got[55] || Player.ultra_got[56] == 1
 		{
-			speed *= 1.2;//EXTRA SPEED
+			speed *= 1.1;//EXTRA SPEED
 			if instance_exists(enemy) && instance_number(enemy) > 1
 			{
 				with other

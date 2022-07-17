@@ -11,3 +11,4 @@ dmg = 50;
 stopSpeed = 1;
 pierce = true;
 stopSpeed = 0.5;
+canHeavyHeart = false;

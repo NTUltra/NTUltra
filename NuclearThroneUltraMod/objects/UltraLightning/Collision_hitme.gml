@@ -17,7 +17,7 @@ if other.team != team and other.my_health > 0
 		}
 		else
 		{
-			image_index += other.iframeskip;//iframe skipper
+			scrIframeSkipper(other.iframeskip);
 		}
 	}
 	snd_play(other.snd_hurt, other.hurt_pitch_variation,true)

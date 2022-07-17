@@ -2,7 +2,7 @@ event_inherited();
 friction = 0.6
 
 wallbounce = 0
-alarm[1]=4;
+alarm[1]=5;
 if instance_exists(Player)
 {
 if Player.race==24

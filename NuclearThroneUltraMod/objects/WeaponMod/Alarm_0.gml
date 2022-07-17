@@ -78,6 +78,7 @@ motion_add(random(360),random(5));
 myWeaponPickup = instance_create(x,y,WepPickupForOneWepOnly);
 with myWeaponPickup
 {
+	persistent = true;
 	pickedup=true;
 	depth=-9;
 	image_angle=other.image_angle;

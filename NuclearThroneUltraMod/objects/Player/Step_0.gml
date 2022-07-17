@@ -298,10 +298,9 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		if (keyboard_check_pressed(ord("G")))
 		    {
 			var dangle = random(1)*360;
-		    with instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,WeaponChest)
-			curse = 1;
+		    instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,AmmoChest)
 			thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,PopupText);
-			thing.mytext = "WEAPON CHEST!";
+			thing.mytext = "AMMO CHEST!";
 		    }
 		if (keyboard_check_pressed(ord("I")))
 		    {
@@ -592,7 +591,7 @@ if KeyCont.key_swap[p] = 1 and bwep != 0
 			var pci = reload/wep_load[wep];
 			pci = 1+pci;
 			pci = pci-floor(pci);//Percentage of load that would be the reload
-			reload -= reload*pci*m;
+			reload -= reload*pci;
 		}
 		else
 			reload *= 0.4;
@@ -601,7 +600,7 @@ if KeyCont.key_swap[p] = 1 and bwep != 0
 			var pci = breload/wep_load[bwep];
 			pci = 1+pci;
 			pci = pci-floor(pci);//Percentage of load that would be the reload
-			breload -= breload*pci*m;
+			breload -= breload*pci;
 		}
 		else
 			breload *= 0.4;

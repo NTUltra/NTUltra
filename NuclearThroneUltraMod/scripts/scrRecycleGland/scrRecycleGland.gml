@@ -8,7 +8,8 @@ function scrRecycleGland(ammoIncrease){
 		{
 			Player.ammo[1] += ammoIncrease
 			instance_create(x,y,RecycleGland);
-			Player.ammo[1] = min(Player.ammo[1],Player.typ_amax[1]);
+			if !Player.ultra_got[26]
+				Player.ammo[1] = min(Player.ammo[1],Player.typ_amax[1]);
 		}
 	}
 }

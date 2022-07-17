@@ -60,6 +60,14 @@ function scrEnemyDeathEvent(){
 					}
 				}
 			}
+			//Heavy heart
+			if skill_got[0]
+			{
+				if isdoc
+					scrDrop(0,4);
+				else
+					scrDrop(0,2.5);
+			}
 		}
 		
 		

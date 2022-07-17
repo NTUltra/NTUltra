@@ -21,10 +21,9 @@ typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 
 
 
-theWepPickup=0;
 alarm[0]=80;
 pierce = false;
-
+canHeavyHeart = false;
 if instance_exists(Player)
 {
 	if Player.skill_got[5] =1//thronebutt
@@ -32,6 +31,8 @@ if instance_exists(Player)
 	
 	if Player.ultra_got[53] == 1
 		pierce = true;
+	if Player.skill_got[0]//HeavyHeart
+		canHeavyHeart = true;
 	var multiplier;
 	multiplier=1;
 

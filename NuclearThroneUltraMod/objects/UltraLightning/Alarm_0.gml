@@ -66,7 +66,7 @@ dir = instance_nearest(x+lengthdir_x(80,direction),y+lengthdir_y(80,direction),t
 var oldx, oldy;
 oldx = x
 oldy = y
-direction = image_angle+(random(15)-7)*simpleAccuracy//30 15
+direction = image_angle+(random(branch)-branch*0.5)*simpleAccuracy//30 15
 speed = 4
 if instance_exists(target)
 {
@@ -99,37 +99,42 @@ if ammo > 0
 //{var indexammo = 20;}
 //else
 //{var indexammo = ammo;}
-image_index += 0.4/ammo//indexammo
-	with instance_create(x,y,UltraLightning)
+	if ammo > 0
 	{
-		isog = other.isog;
-		fork = other.fork;
-		canUltraMod = other.canUltraMod;
-		scrCopyWeaponMod(other);
-		direction = other.direction
-		image_angle = direction
-		ammo = other.ammo;
-		team = other.team
-		image_index = other.image_index*0.5
-		if ammo % 5 == 0//ultraMod == ultramods.lightningPellet && odd
-			alarm[0]=1;
-		else event_perform(ev_alarm,0);
-	}
-	if round(ammo) % fork == 0//Forking lightning
-	{
+		image_index += 0.4/ammo//indexammo
 		with instance_create(x,y,UltraLightning)
 		{
 			isog = other.isog;
+			branch = other.branch;
 			fork = other.fork;
 			canUltraMod = other.canUltraMod;
 			scrCopyWeaponMod(other);
-			accuracy = 5+(other.accuracy*3);
-			direction = other.direction+choose(80+random(30),-80+random(-30))
+			direction = other.direction
 			image_angle = direction
-			ammo = clamp(ceil(other.ammo*0.15),2,16);
+			ammo = other.ammo;
 			team = other.team
-			image_index = other.image_index
-			event_perform(ev_alarm,0)
+			image_index = other.image_index*0.5
+			if ammo % 5 == 0//ultraMod == ultramods.lightningPellet && odd
+				alarm[0]=1;
+			else event_perform(ev_alarm,0);
+		}
+		if round(ammo) % fork == 0//Forking lightning
+		{
+			with instance_create(x,y,UltraLightning)
+			{
+				isog = other.isog;
+				branch = clamp(other.branch*2.5,80,200);
+				fork = other.fork;
+				canUltraMod = other.canUltraMod;
+				scrCopyWeaponMod(other);
+				accuracy = 5+(other.accuracy*3);
+				direction = other.direction+choose(80+random(30),-80+random(-30))
+				image_angle = direction
+				ammo = clamp(ceil(other.ammo*0.15),2,16);
+				team = other.team
+				image_index = other.image_index
+				event_perform(ev_alarm,0)
+			}
 		}
 	}
 }
