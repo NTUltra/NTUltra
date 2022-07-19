@@ -22,9 +22,11 @@ function scrLoadEncrypted(){
 					var olddata = encrypted_data;
 					encrypted_data = {
 						ctot_dailies_score_seed: olddata.ctot_dailies_score_seed,
+						daily_score_dates: olddata.daily_score_dates,
 						ctot_dailies_score_score: olddata.ctot_dailies_score_score,
 						dailies_score_day: olddata.dailies_score_day,
 						ctot_dailies_race_seed: olddata.ctot_dailies_race_seed,
+						daily_race_dates: olddata.daily_race_dates,
 						ctot_dailies_race_time: olddata.ctot_dailies_race_time,
 						dailies_race_day: olddata.dailies_race_day,
 						secrets: [false,false,false,false,false,false,false,false,false,false],

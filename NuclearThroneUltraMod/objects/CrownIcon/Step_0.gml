@@ -121,7 +121,7 @@ if crown==11 && Player.crownvisits > 0
 	{
 		skeletonlives=0;
 		reincarnate = true;
-		var boost = level;
+		var boost = max(boostLevel, level);
 		var pw = wep;
 		var bw = bwep;
 		var cw = cwep;

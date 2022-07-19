@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskBigMaggot",
     "path": "sprites/mskBigMaggot/mskBigMaggot.yy",

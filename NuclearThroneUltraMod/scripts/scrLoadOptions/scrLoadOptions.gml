@@ -32,7 +32,7 @@ function scrLoadOptions() {
 	opt_mousecp = ini_read_real("OPTIONS","mousecp",0);
 	opt_freeze = ini_read_real("OPTIONS","freeze",0.5);
 	opt_loading = ini_read_real("OPTIONS","loading",3.5);
-	opt_bossintro = ini_read_real("OPTIONS","bossintro",1);
+	opt_bossintro = ini_read_real("OPTIONS","bossintro",0);
 	opt_timer = ini_read_real("OPTIONS","timer",0);
 	opt_gamemode = ini_read_real("OPTIONS","gamemode",0);
 

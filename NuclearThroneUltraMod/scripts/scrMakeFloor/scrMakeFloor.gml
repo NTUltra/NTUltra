@@ -353,7 +353,7 @@ function scrMakeFloor() {
 	}
 	//Palace
 	if area == 9 || area == 118{
-		if subarea < 2
+		if subarea < 3
 		{
 		if random(9) < 1
 		{
@@ -679,8 +679,8 @@ function scrMakeFloor() {
 			instance_create(x+16,y+16,AmmoChest)
 	   instance_create(x,y,Floor)}
 	   }
-	   if random(9) < 1
-	   instance_create(x,y,FloorMaker)
+	   if instance_exists(Floor) && instance_number(Floor) > 100 && random(9) < 1
+		instance_create(x,y,FloorMaker)
 	}
 
 	if area = 2 or area = 110

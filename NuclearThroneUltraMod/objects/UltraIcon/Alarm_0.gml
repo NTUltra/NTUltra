@@ -6,6 +6,10 @@ if skill == 4 && Player.bskin == 2
 {
 	sprite_index = sprFishCanGun;	
 }
+if skill == 29 && Player.spr_idle == sprMutant8DIdle
+{
+	sprite_index = sprExclusiveTaste	
+}
 if skill == 76 && Player.ultimategamble=true
 {
 	sprite_index=sprUltimateGamble;

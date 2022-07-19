@@ -34,6 +34,22 @@ if other.team != team && team != 0
 						actuallyDead = true;	
 					}
 				}
+				if other.ultra_got[29] && other.altUltra && other.bwep == 0
+				{
+					var dmgTaken = contactDmg * 1.25;
+					if my_health - dmgTaken <= 0
+					{
+						actuallyDead = true;	
+					}
+				}
+				if other.ultra_got[71] && other.my_health >= other.maxhealth
+			    {
+					var dmgTaken = contactDmg * 1.75;
+					if my_health - dmgTaken <= 0
+					{
+						actuallyDead = true;	
+					}
+				}
 				sprite_index = spr_hurt
 				image_index = 0
 				motion_add(point_direction(other.x,other.y,x,y),3)

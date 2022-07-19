@@ -101,7 +101,10 @@ if place_meeting(x,y,Player)
 			    //BackCont.viewy2 += lengthdir_y(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 			    BackCont.shake += 10
     
-    
+				if ultra_got[29] && altUltra && bwep != 0//ROBOT EXCLUSIVE TASTE
+				{
+					maxhealth += 4;
+				}
 			    if cwep != 0{//robot 3 weps A B C
 					scrSwapWeps()// B C A
 					cwep=0; // B C x

@@ -12,7 +12,7 @@ if angleleft
 gunangle -= 30;
 else
 gunangle += 30;
-alarm[1] = 64+random(20)
+alarm[1] = 66+random(20)
 snd_play(sndSalamanderCharge)
 walk=0;
 }

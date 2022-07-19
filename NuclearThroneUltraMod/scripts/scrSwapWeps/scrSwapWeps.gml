@@ -1,7 +1,6 @@
 function scrSwapWeps() {
 	//SWAP DA WEPS
 	var twep, treload, tqueueshot, twkick, twepflip, twepangle, tcan_shoot, tcurse,twepmod1,twepmod2,twepmod3,twepmod4;//temporary wep
-
 	if ultra_got[31] && cwep!=0//robots third weapon robot is cool very cool
 	{
 	//save primary in temporary A B C A

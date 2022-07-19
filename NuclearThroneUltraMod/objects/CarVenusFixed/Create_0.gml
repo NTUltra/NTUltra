@@ -7,7 +7,7 @@ spr_dead = sprScorchmark
 size = 1
 
 event_inherited()
-
+canMoveOver = true;
 
 snd_hurt = sndHitMetal
 

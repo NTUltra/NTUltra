@@ -296,12 +296,17 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 
 	snd_play(sndWeaponPickup)
 	if bwep = 0
-	{bcurse = curse
-	bwep = wep
-	bwepmod1 = wepmod1;
-	bwepmod2 = wepmod2;
-	bwepmod3 = wepmod3;
-	bwepmod4 = wepmod4;
+	{
+		bcurse = curse
+		if ultra_got[29] && altUltra && bwep == 0 && wep != 0//ROBOT EXCLUSIVE TASTE
+		{
+			maxhealth -= 4;
+		}
+		bwep = wep
+		bwepmod1 = wepmod1;
+		bwepmod2 = wepmod2;
+		bwepmod3 = wepmod3;
+		bwepmod4 = wepmod4;
 	}
 	else if cwep = 0 && ultra_got[31]//robot ultra third wep
 	{

@@ -44,10 +44,11 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			{
 				var tries = 0;
 				var tooBad = 0;
+				var h = max(1,Player.hard);
 				do {
 					wep=irandom(maxwep-1)+1;
 				//Non melee has been excluded, but not every tier has multiple melees so do some shit
-				if wep_area[wep]  <= Player.hard+wepTier && wep_area[wep] > wep_area[maxValidTierWep]
+				if wep_area[wep]  <= h + wepTier && wep_area[wep] > wep_area[maxValidTierWep]
 				{
 					maxValidTierWep = wep;
 				}
@@ -59,8 +60,8 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 					}
 				}
 				until (
-					(wep_area[wep] == Player.hard+wepTier-tooBad || triesForSpecificTier > maxTries || wep_area[wep] >= maxAreaGoodEnough)
-					&& wep_area[wep] >= minWepArea && wep_area[wep] <= Player.hard+wepTier
+					(wep_area[wep] == h + wepTier-tooBad || triesForSpecificTier > maxTries || wep_area[wep] >= maxAreaGoodEnough)
+					&& wep_area[wep] >= minWepArea && wep_area[wep] <= h + wepTier
 				)
 			}
 			else

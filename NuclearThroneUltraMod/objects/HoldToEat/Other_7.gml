@@ -75,7 +75,11 @@ with Player
 			repeat(10)
 				instance_create(x+random(16)-8,y+random(16)-8,Curse)
 		}
-
+		
+		if ultra_got[29] && altUltra && bwep != 0//ROBOT EXCLUSIVE TASTE
+		{
+			maxhealth += 4;
+		}
 
 		if ultra_got[31]&&cwep!=0{//robot 3 weps A B C
 		scrSwapWeps()// B C A

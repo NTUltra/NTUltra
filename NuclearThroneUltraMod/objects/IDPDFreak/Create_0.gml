@@ -32,7 +32,7 @@ nadeSpeed = 1;
 fireRate = 4;
 actDelayOnFire = 4;
 loops = GetPlayerLoops()
-lifes = clamp(1 + (loops - 3),1,3);
+lifes = clamp(1 + (loops - 3),1,2);
 maxWalkSpeed = 3;
 bulletGap = 0.73;
 nadeAmount = 1;
@@ -40,7 +40,7 @@ if loops > 8
 {
 	nadeAmount = 3;
 	nadeSpeed = 4;
-	projectileSpeed = 4.3;
+	projectileSpeed = 4;
 	actTime = 6;
 	fireRate = 1;
 	actDelayOnFire = 0.5;
@@ -55,7 +55,7 @@ else if loops > 6
 {
 	nadeAmount = 3;
 	nadeSpeed = 3.5;
-	projectileSpeed = 4.2;
+	projectileSpeed = 3.8;
 	actTime = 7;
 	fireRate = 2;
 	actDelayOnFire = 2;
@@ -68,7 +68,7 @@ else if loops > 4
 {
 	nadeAmount = 3;
 	nadeSpeed = 3;
-	projectileSpeed = 4.1;
+	projectileSpeed = 3.7;
 	actTime = 8;
 	fireRate = 1;
 	actDelayOnFire = 1;
@@ -83,7 +83,7 @@ else if loops > 3
 {
 	
 	nadeSpeed = 2;
-	projectileSpeed = 4;
+	projectileSpeed = 3.6;
 	actTime = 9;
 	maxAmmo = 5;
 	bulletMaxOffset = 34;

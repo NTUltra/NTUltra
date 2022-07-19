@@ -17,6 +17,7 @@ if spr_idle == sprHotDrakeSkullIdleOpen
 		{
 			type = 1;
 			pullstrength = 3;
+			alarm[1] = 1;
 		}
 	
 	}

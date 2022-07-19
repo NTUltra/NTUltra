@@ -2,9 +2,9 @@
 dailyDone = false;
 if (gamemodeOrder[gamemodenr] == 26)
 {
-	if (array_length(UberCont.encrypted_data.ctot_dailies_race_seed) > 0)
+	if (array_length(UberCont.encrypted_data.daily_race_dates) > 0)
 	{
-		dailyDone = UberCont.encrypted_data.ctot_dailies_race_seed[array_length(UberCont.encrypted_data.ctot_dailies_race_seed)-1] == UberCont.todaysSeed
+		dailyDone = UberCont.encrypted_data.daily_race_dates[array_length(UberCont.encrypted_data.daily_race_dates)-1] == UberCont.today
 	}
 	if !dailyDone
 	with UberCont
@@ -17,11 +17,12 @@ if (gamemodeOrder[gamemodenr] == 26)
 }
 else if (gamemodeOrder[gamemodenr] == 27)
 {
-	if (array_length(UberCont.encrypted_data.ctot_dailies_score_seed) > 0)
+	if (array_length(UberCont.encrypted_data.daily_score_dates) > 0)
 	{
-		debug(UberCont.encrypted_data.ctot_dailies_score_seed[array_length(UberCont.encrypted_data.ctot_dailies_score_seed)-1]);
-		debug(UberCont.todaysSeed);
-		dailyDone = UberCont.encrypted_data.ctot_dailies_score_seed[array_length(UberCont.encrypted_data.ctot_dailies_score_seed)-1] == UberCont.todaysSeed
+		debug("DAILY SCORE SEED");
+		debug(UberCont.encrypted_data.daily_score_dates[array_length(UberCont.encrypted_data.daily_score_dates)-1]);
+		debug(UberCont.today);
+		dailyDone = UberCont.encrypted_data.daily_score_dates[array_length(UberCont.encrypted_data.daily_score_dates)-1] == UberCont.today
 	}
 	if !dailyDone
 	with UberCont

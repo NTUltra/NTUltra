@@ -9,7 +9,7 @@ spr_dead = sprBigFishSkullDead
 
 event_inherited()
 shadowSprite = shd32;
-
+canMoveOver = true;
 snd_hurt = sndHitRock
 alarm[1]=830 * clamp(loops*1.3,1,4)//33 sec 900
 if instance_exists(Player) && Player.subarea != 1

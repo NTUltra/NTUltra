@@ -67,7 +67,7 @@ if (wepmenuopen) {
         wepx += 8 + spritewidth
         wepiter++;
     } until (wepiter = UberCont.maxstartwep+1)
-	var xx = __view_get( e__VW.XView, 0 )+300;
+	var xx = __view_get( e__VW.XView, 0 )+302;
 	var yy = __view_get( e__VW.YView, 0 )+170;
 	var o = 10;
 	if UberCont.ctot_all_crowns_taken[Menu.race] > 0

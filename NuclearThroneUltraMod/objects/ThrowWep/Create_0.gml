@@ -39,10 +39,10 @@ if instance_exists(Player)
 	multiplier=(Player.ultra_got[53]*0.2)+1;//Ultra A
 	multiplier+=Player.skill_got[5]*0.2;
 
-	dmg=(13+2*Player.level)*multiplier
+	dmg=(11+2*Player.level)*multiplier
 }
 else
-	dmg=13;//22
+	dmg=11;//22
 
 dontteleport=false;
 returnFX = true;

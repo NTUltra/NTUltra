@@ -32,7 +32,7 @@ function scrEnemyDeathEvent(){
 					lowc = wep_load[cwep]*-2;
 				}
 				var dropped = false;
-				if bwep == 0 || breload >= lowb
+				if bwep == 0 || breload > lowb
 				{
 					with other
 					{
@@ -42,7 +42,7 @@ function scrEnemyDeathEvent(){
 							dropped = scrDrop(10,0);
 					}
 				}
-				if (ultra_got[32] && (creload <= lowc || cwep == 0))
+				if (ultra_got[32] && (creload > lowc || cwep == 0))
 				{
 					with other
 					{

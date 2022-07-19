@@ -1,3 +1,3 @@
-if race != 18//Angel can fly over props
-motion_add(point_direction(other.x,other.y,x,y),1)
+if race != 18 && !other.canMoveOver//Angel can fly over props
+	motion_add(point_direction(other.x,other.y,x,y),1)
 

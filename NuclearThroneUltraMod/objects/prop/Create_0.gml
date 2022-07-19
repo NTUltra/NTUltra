@@ -4,6 +4,7 @@ my_health = maxhealth
 raddrop=0;
 existTime = 0;
 team = 0
+canMoveOver = false;
 
 snd_hurt = sndHitPlant
 hurt_pitch_variation = 0;

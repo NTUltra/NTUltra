@@ -26,6 +26,7 @@ if KeyCont.key_pick[other.p] = 1
 		{
 			type = 1
 			pullstrength = 3;
+			alarm[1] = 1;
 		}
 	}
 }

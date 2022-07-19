@@ -48,6 +48,17 @@ else if skill == 23 && Player.race == 6 && scrMeleeWeapons(Player.wep) && scrMel
 		}
 	}
 }
+else if skill == 29 && Player.spr_idle == sprMutant8DIdle
+{
+	with Player
+	{
+		altUltra = true;
+		if bwep == 0//ROBOT EXCLUSIVE TASTE
+		{
+			maxhealth += 4;
+		}
+	}
+}
 else if skill = 85//ROGUE SUPER PORTAL STRIKE
 {
 	Player.rogueammomax=6;
@@ -282,7 +293,7 @@ if skill == 76//skelly ultra D
 				hard = other.hard;
 				kills = other.kills;
 				subarea=other.subarea;
-				boostLevel = other.level;
+				boostLevel = max(other.boostLevel,other.level);
 				lastwishused = false;
 				//skeletonlives=other.skeletonlives;
 
@@ -435,7 +446,7 @@ regularprocedure=false;
 /*
 1CONFISCATE
 2GUNWARRANT
-3BROTHERS IN ARMS
+3BUDDY COP
 5 FORTRESS
 11BRAINSTYLE
 14DETACHMENT

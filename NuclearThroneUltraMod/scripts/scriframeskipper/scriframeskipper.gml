@@ -1,6 +1,6 @@
 ///scrIframeSkipper();
 // /@description run in the enemy that is hit
-///@param how many frames to skip
+///@param frames
 function scrIframeSkipper(skipFrame){
 	image_index += skipFrame;//iframe skipper
 	if image_index > 2

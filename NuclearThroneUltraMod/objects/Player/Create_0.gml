@@ -5,6 +5,7 @@ exit;
 }*/
 //scrn=0; //for screenshot taking character explain pic
 saveLoaded = false;
+outOfCombat = false;
 restarted = false;
 hurt_pitch_variation = 0;
 reachedUltra = false;
@@ -73,6 +74,7 @@ with UberCont {
         canRestart = false;
         var al = array_length(encrypted_data.ctot_dailies_race_seed);
         encrypted_data.ctot_dailies_race_seed[al] = seed;
+		encrypted_data.daily_race_dates[al] = UberCont.today;
         encrypted_data.ctot_dailies_race_time[al] = -1;
         encrypted_data.dailies_race_day[al] = today;
 		scrSaveEncrypted();
@@ -81,6 +83,7 @@ with UberCont {
         canRestart = false;
         var al = array_length(encrypted_data.ctot_dailies_race_seed);
         encrypted_data.ctot_dailies_score_seed[al] = seed;
+		encrypted_data.daily_score_dates[al] = UberCont.today;
         encrypted_data.ctot_dailies_score_score[al] = 0;
         encrypted_data.dailies_score_day[al] = today;
 		scrSaveEncrypted();
@@ -153,6 +156,8 @@ scrSkills()
 scrWeapons();
 altUltra = false;
 loops = 0;
+//RACE STUFF
+scrLoadRace();
 scrUltras()
 scrCrowns()
 
@@ -164,8 +169,6 @@ if race == 7 && bskin == 2
 {
 	gunY = 4;
 }
-//RACE STUFF
-scrLoadRace();
 
 canSecondaryPop = true;
 

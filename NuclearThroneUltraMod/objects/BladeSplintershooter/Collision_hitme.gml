@@ -13,7 +13,6 @@ if other.team != team
 		}
 		else
 		{
-			with other
 			scrIframeSkipper(0.2);
 		}
 	}

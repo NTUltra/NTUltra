@@ -8,6 +8,7 @@ spr_dead = sprMushroomStatueDead;
 name = "SACRIFICE WEAPON MODS"
 
 event_inherited()
+canMoveOver = true;
 snd_hurt = sndHitRock;
 instance_create(x,y,WallBreak);
 instance_create(x,y+16,WallBreak);

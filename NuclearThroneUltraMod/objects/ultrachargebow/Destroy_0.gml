@@ -21,6 +21,8 @@ if instance_exists(Player)
 	Sleep(7*rate);
 	with instance_create(x,y,UltraBolt)
 	{
+		scrCopyWeaponMod(other);
+		scrCanHumphry();
 		motion_add(d+(random(4)-2)*Player.accuracy,10+(other.rate*5))
 		dmg = 25 + (other.rate*10);
 		wallsdestroyed=5+(other.rate*4);

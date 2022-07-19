@@ -14,3 +14,4 @@ event_perform(ev_alarm,0)
 BackCont.shake += 2
 wkick = 9
 
+alarm[1] += 3;

@@ -39,6 +39,11 @@ if prevhealth > my_health
 			dmgTaken = scrHandsDamageBuff(dmgTaken);
 			my_health = prevhealth - dmgTaken;
 		}
+		if Player.ultra_got[29] && Player.altUltra && Player.bwep == 0
+		{
+			dmgTaken = dmgTaken*1.25;
+			my_health = prevhealth - dmgTaken;
+		}
 		if (Player.ultra_got[71] == 1) //ANGEL Ultra tranquility
 		{
 		    if Player.my_health >= Player.maxhealth

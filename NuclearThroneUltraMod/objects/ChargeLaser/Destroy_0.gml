@@ -15,8 +15,10 @@ with instance_create(x,y,Laser)
 {image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(2)-1)*other.creator.accuracy
 image_yscale=0.2+other.rate*0.2
 team = other.team
+scrCopyWeaponMod(other);
+scrCanHumphry();
 event_perform(ev_alarm,0)
-scrCanHumphry();}
+}
 }
 
 /*

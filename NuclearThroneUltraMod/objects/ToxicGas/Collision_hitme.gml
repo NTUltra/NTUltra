@@ -1,5 +1,4 @@
-/*
-if other.team != team && other.team != 2 && other.id != owner
+if other.team != team && other.team != 2
 {
 	//Hit enemy
 	with other
@@ -12,16 +11,15 @@ if other.team != team && other.team != 2 && other.id != owner
 			my_health -= other.dmg
 			sprite_index = spr_hurt
 			image_index = 0
-			Sleep(10)
 			BackCont.shake += 1
 		}
 		else
 		{
-			scrIframeSkipper(0.2);
+			scrIframeSkipper(0.075);
 		}
 	}
 }
-else */if other.team = 2 && other.team!=team && image_xscale>0.22 && alarm[11] < 1
+else if other.team = 2 && other.team!=team && image_xscale>0.22 && alarm[11] < 1
 {
 	//Hit player
     with other

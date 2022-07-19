@@ -24,7 +24,7 @@ with other
 //0 = melee 1 = bullets 2 = shells 3 = bolts 4 = explosives 5 = energy
 //typ_ammo[0] = 333 typ_ammo[1] = 32 typ_ammo[2] = 8 typ_ammo[3] = 8 typ_ammo[4] = 6 typ_ammo[5] = 10
 
-	if Player.loops>0&&random(3)<1
+	if loops>0&&random(3)<1
 	{
 		if cwep!=0 && other.wep == 0
 		{
@@ -58,7 +58,11 @@ with other
 		    dir.mytext = "WEAPON STOLEN!";
 			dir.theColour=c_red;
 			Sleep(100);
-		    bwep=0;
+			if ultra_got[29] && altUltra//ROBOT EXCLUSIVE TASTE
+			{
+				maxhealth += 4;
+			}
+		    bwep = 0;
 		}
 
 	}
@@ -153,7 +157,11 @@ with other
 	    dir.mytext = "WEAPON STOLEN!"
 	    dir.theColour=c_red;
 		Sleep(100);
-	    bwep=0;
+		if ultra_got[29] && altUltra//ROBOT EXCLUSIVE TASTE
+		{
+			maxhealth += 4;
+		}
+	    bwep = 0;
 	    }
     }
 }

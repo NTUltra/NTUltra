@@ -2089,11 +2089,11 @@ function scrFire() {
 	repeat(2)//4 splinters
 	{
 	with instance_create(x,y,Splinter)
-	{motion_add(aimDirection+(random(20)-10)*other.accuracy,20+random(4))
+	{motion_add(aimDirection+(random(16)-8)*other.accuracy,20+random(4))
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Splinter)
-	{motion_add(aimDirection+(random(10)-5)*other.accuracy,20+random(4))
+	{motion_add(aimDirection+(random(9)-4.5)*other.accuracy,20+random(4))
 	image_angle = direction
 	team = other.team}
 	}
@@ -2536,7 +2536,7 @@ function scrFire() {
 	y += lengthdir_y(1,ang+180)
 	xprevious = x;
 	yprevious = y;
-	alarm[3]=4;//imunity
+	alarm[3]=max(4,alarm[3]);//imunity
 	//wepangle = -wepangle
 	BackCont.viewx2 += lengthdir_x(8,ang)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,ang)*UberCont.opt_shake
@@ -2590,7 +2590,7 @@ function scrFire() {
 	xprevious = x;
 	yprevious = y;
 
-	alarm[3]=4;//imunity
+	alarm[3]=max(4,alarm[3]);//imunity
 	BackCont.viewx2 += lengthdir_x(8,ang)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,ang)*UberCont.opt_shake
 	BackCont.shake += 4
@@ -2997,7 +2997,7 @@ function scrFire() {
 	xprevious = x;
 	yprevious = y;
 
-	alarm[3]=4;//imunity
+	alarm[3]=max(4,alarm[3]);//imunity
 	BackCont.viewx2 += lengthdir_x(8,ang)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,ang)*UberCont.opt_shake
 	BackCont.shake += 4
@@ -4781,7 +4781,12 @@ function scrFire() {
 				ammo[2] = min(ammo[2],typ_amax[2]);
 			}
 	    }
-    
+		if Player.ultra_got[29] && Player.altUltra && Player.bwep == 0
+		{
+			ammo[wep_type[wep]] += wep_cost[wep]*0.1;
+			reload -= wep_load[wep]*0.15;
+			rad += max(0,wep_rad[wep]*0.1);
+		}
     
 	    if Player.ultra_got[96]//ULTRA D ELEMENTOR THUNDER BOMB
 	    {
@@ -4892,7 +4897,7 @@ function scrFire() {
 					speed *= other.pSpeedBoost;
 					hadSpeedApplied = true;
 					var speedBoost = 1.11;
-					var spda = 2.4;
+					var spda = 2;
 					var speedAdd = 0;
 					if other.poppop
 					{
@@ -4902,7 +4907,7 @@ function scrFire() {
 					if other.skill_got[30] == 1
 					{
 						speedBoost = 1.15;
-						spda = 3.4;
+						spda = 3;
 					}
 					if other.ultra_got[65]
 					{
@@ -4956,11 +4961,11 @@ function scrFire() {
 	fired=true;
 
 	}
-	var reloadBoost = 0.18;
+	var reloadBoost = 0.1;
 	if Player.skill_got[30] == 1
-		reloadBoost = 0.26;
+		reloadBoost = 0.18;
 	if Player.ultra_got[65]
-		reloadBoost += 0.06;
+		reloadBoost += 0.05;
 	
 	if wepmod1==12
 		reload -= wep_load[wep]*reloadBoost

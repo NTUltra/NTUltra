@@ -14,7 +14,7 @@ snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
 with instance_create(x,y,BulletHit)
 sprite_index=sprHeavyBulletHit;
 
-scrRecycleGland(4);
+scrRecycleGland(3);
 
 if other.team!=0
 hits--;

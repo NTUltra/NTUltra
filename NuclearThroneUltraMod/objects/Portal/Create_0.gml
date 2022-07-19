@@ -1,4 +1,4 @@
-image_speed = 0.8
+image_speed = 0;
 type=1;
 inverted=false;//is this an inverted portal?
 
@@ -6,9 +6,11 @@ closedTheVault = false;
 
 endgame = 100
 
-alarm[0] = 1;
-
-
+alarm[1] = 20;//Delay before opening
+if UberCont.opt_gamemode == 34//HARD MODE
+	alarm[1] = 1;
+else if UberCont.opt_gamemode == 9//CASUAL MODE
+	alarm[1] = 50;
 var chance = 1;
 
 
@@ -37,14 +39,6 @@ else
 
 
 
-instance_create(x,y,WallBreak)
-instance_create(x+16,y+16,WallBreak)
-instance_create(x-16,y-16,WallBreak)
-
-instance_create(x-16,y+16,WallBreak)
-instance_create(x+16,y-16,WallBreak)
-
-
 if ( (currentarea=105 || currentarea=106|| currentarea=107 || currentarea = 108 || currentarea = 109 || currentarea = 112) && currentsubarea < 2 && random(5) < chance )//inverted bosses
 {
 	inverted=true;
@@ -59,8 +53,8 @@ if ( (currentarea=105 || currentarea=106|| currentarea=107 || currentarea = 108 
 	with Corpse
 	canspawnportal=false;
 }
-alarm[2] = 2;
 pullstrength=1;
+pullRange = 96
 isPink = false;
 if !inverted && (currentarea  == 8 || (currentarea == 7 && currentsubarea == 3)) || (currentarea == 112 && currentsubarea == 2)
 {

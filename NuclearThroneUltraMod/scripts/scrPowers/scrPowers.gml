@@ -901,7 +901,7 @@ function scrPowers() {
 	    else
 	    {
 		    if alarm[3]<1
-		    alarm[3]=4;//imunity
+		    alarm[3]=3;//imunity
 			
 		    instance_create(x,y,Teleport);
 		    snd_play_2d(sndHyperLightning);
@@ -968,7 +968,7 @@ function scrPowers() {
 	else if place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor) and !place_meeting(UberCont.mouse__x,UberCont.mouse__y,Wall)//REGULAR
 	{
 	if alarm[3]<1
-	alarm[3]=4;//imunity
+	alarm[3]=max(4,alarm[3]);//imunity
 	instance_create(x,y,Teleport);
 	snd_play_2d(sndHyperLightning);
 	repeat(5){

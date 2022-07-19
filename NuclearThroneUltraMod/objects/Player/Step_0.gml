@@ -1055,19 +1055,19 @@ if wep == 531//Coffee makes you faster
 {
 	maxspeed += 1;	
 }
-var outofcombat = (!instance_exists(enemy) || instance_number(enemy) <= instance_number(IDPDVan)) && !instance_exists(becomenemy) && UberCont.opt_gamemode != 25//Not survival arena
+outOfCombat = (!instance_exists(enemy) || instance_number(enemy) <= instance_number(IDPDVan)) && !instance_exists(becomenemy) && UberCont.opt_gamemode != 25//Not survival arena
 if instance_exists(SurvivalWave)
 {
 	with SurvivalWave {
 		if alarm[0] > 0
-			outofcombat = false;
+			outOfCombat = false;
 	}
 }
-if outofcombat
+if outOfCombat
 	maxspeed += 1;
 if speed > maxspeed
 	speed = maxspeed
-if outofcombat
+if outOfCombat
 	maxspeed -= 1;
 if wep == 531
 {
@@ -1745,12 +1745,12 @@ if hammerheadcounter > 0
 				if (hammerheadcounter > 0)
 				{
 					snd_play(sndHammerHeadProc);
-					scrDrop(1,0.5);
+					scrDrop(4,2);
 				}
 				else
 				{
 					snd_play(sndHammerHeadEnd);
-					scrDrop(20,10);
+					scrDrop(35,12);
 					nearWall = false;
 					debrisAmount += 2;
 					debrisMultiply += 2;

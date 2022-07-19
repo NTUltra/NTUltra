@@ -58,10 +58,10 @@ draw_set_color(c_white)
 draw_text_ext(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2,theText,s,w)
 draw_set_color(c_gray)
 
-if instance_exists(Player) && Player.race=14&&Player.ultra_got[56]=0
+if instance_exists(Player) && Player.race==14 && !Player.ultra_got[56] && Player.wep != 0
 {
 
-draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/1.4,string_hash_to_newline("PRIMARY: "+string(Player.wep_name[Player.wep])) );
+	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/1.4,string_hash_to_newline("PRIMARY: "+string(Player.wep_name[Player.wep])) );
 
 //draw_text(view_xview+view_wview/2,view_yview+view_hview/1.3,"SECONDARY: "+string(Player.wep_name[Player.bwep]) );
 

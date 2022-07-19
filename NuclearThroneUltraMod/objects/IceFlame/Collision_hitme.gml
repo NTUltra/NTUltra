@@ -34,8 +34,8 @@ if other.team != team and other.my_health > 0
 		with other
 			scrIframeSkipper(0.075);
 	}
-x = (x+other.x)/2+random(6)-3
-y = (y+other.y)/2+random(6)-3
-speed *= 0.8
+	x += (other.x-x)*0.2+random(6)-3
+	y += (other.y-y)*0.2+random(6)-3
+	speed *= 0.8
 }
 

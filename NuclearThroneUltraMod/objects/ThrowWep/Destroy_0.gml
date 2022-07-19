@@ -22,7 +22,7 @@ with Player
     
 	    exit;
     }
-    else if bwep=0 &&other.dontteleport==false
+    else if bwep == 0 &&other.dontteleport==false
     {
 	    bwep=other.wep;
 	    bcurse = other.curse

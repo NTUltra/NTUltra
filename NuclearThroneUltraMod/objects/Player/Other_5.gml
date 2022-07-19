@@ -144,7 +144,11 @@ if crown == 15
 	{
 		if bcurse == 0
 		{
-			bwep = 0;	
+			if ultra_got[29] && altUltra && bwep != 0//ROBOT EXCLUSIVE TASTE
+			{
+				maxhealth += 4;
+			}
+			bwep = 0;
 		}
 	}
 }
@@ -607,6 +611,7 @@ if UberCont.opt_gamemode == 23 && !instance_exists(Menu) && instance_number(Play
 		kills = other.kills;
 		subarea=other.subarea;
 		level = other.level;
+		boostLevel = other.boostLevel;
 		rad = other.rad;
 		visible=true;
 		snd_play(snd_wrld, 0, false, false);

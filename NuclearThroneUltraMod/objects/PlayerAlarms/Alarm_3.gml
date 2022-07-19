@@ -1,4 +1,5 @@
-/// @description xxx
+/// @description Ammo drain
+if !instance_exists(GenCont) && !instance_exists(LevCont)
 with Player
 {
 	var al = 6;//weapon types total
@@ -10,7 +11,6 @@ with Player
 			else
 				ammo[i] -= 1;
 		}
-			
 	}
 }
-alarm[3] = 9;
+alarm[3] = 8;

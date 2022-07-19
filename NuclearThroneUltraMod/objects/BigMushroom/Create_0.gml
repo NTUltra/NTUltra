@@ -6,7 +6,7 @@ spr_hurt = sprBigMushroomHurt
 spr_dead = sprBigMushroomDead
 
 event_inherited()
-
+canMoveOver = true;
 move_contact_solid(random(360),random(12))
 if !place_free(x,y+12)
 move_contact_solid(random(90)+45,random(12))

@@ -1,5 +1,5 @@
-scrDrop(50,1)
-scrDrop(30,0)
+scrDrop(50,2)
+scrDrop(35,0)
 scrDrop(30,0)
 speed = 0;
 my_health = 0;

@@ -239,7 +239,8 @@ function scrFire2() {
 	team = other.team}
 
 	wepangle = -wepangle
-	speed = -speed*0.5
+	x += sign(hspeed);
+	y += sign(vspeed);
 	BackCont.viewx2 += lengthdir_x(6,ang)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(6,ang)*UberCont.opt_shake
 	BackCont.shake += 1
@@ -2464,7 +2465,7 @@ function scrFire2() {
 	xprevious = x;
 	yprevious = y;
 	
-	alarm[3]=4;//imunity
+	alarm[3]=max(4,alarm[3]);//imunity
 	BackCont.viewx2 += lengthdir_x(8,ang)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,ang)*UberCont.opt_shake
 	BackCont.shake += 5
@@ -2590,7 +2591,7 @@ function scrFire2() {
 	xprevious = x;
 	yprevious = y;
 
-	alarm[3]=4;//imunity
+	alarm[3]=max(4,alarm[3]);//imunity
 	//wepangle = -wepangle
 	BackCont.viewx2 += lengthdir_x(8,aimDir)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,aimDir)*UberCont.opt_shake
@@ -2823,7 +2824,7 @@ function scrFire2() {
 	y += lengthdir_y(1,ang+180)
 	xprevious = x;
 	yprevious = y;
-	alarm[3]=4;//imunity
+	alarm[3]=max(4,alarm[3]);//imunity
 	BackCont.viewx2 += lengthdir_x(8,ang)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,ang)*UberCont.opt_shake
 	BackCont.shake += 8
@@ -4218,7 +4219,7 @@ function scrFire2() {
 	y += lengthdir_y(1,ang+180)
 	xprevious = x;
 	yprevious = y;
-	alarm[3]=4;//imunity
+	alarm[3]=max(4,alarm[3]);//imunity
 	BackCont.viewx2 += lengthdir_x(8,ang)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,ang)*UberCont.opt_shake
 	BackCont.shake += 4
@@ -4476,7 +4477,7 @@ function scrFire2() {
 	if place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor) and not place_meeting(UberCont.mouse__x, UberCont.mouse__y, Wall) {
 		snd_play_fire(sndHyperLightning);
 		if alarm[3]<1
-		alarm[3]=4;//imunity
+		alarm[3]=max(4,alarm[3]);//imunity
 		instance_create(x,y,Teleport);
 		snd_play_fire(sndHyperLightning);
 		repeat(5){
@@ -4816,7 +4817,10 @@ function scrFire2() {
 	if curse
 		my_health -= 7;
 	//TOSSING CURSED WEAPONS!?
-	
+	if ultra_got[29] && altUltra && bwep != 0//ROBOT EXCLUSIVE TASTE
+	{
+		maxhealth += 4;
+	}
 	if race == 7
 	{
 		//wep = 0;
@@ -10669,6 +10673,43 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(16,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 2
 	wkick = -6
+
+	break;
+	
+	//GOLDEN KRAKEN PISTOL
+	case 589:
+
+	snd_play_fire(sndRoll);
+	snd_play_fire(sndBloodLauncher);
+
+	snd_play_fire(choose(sndWater1,sndWater2) );
+
+
+	with instance_create(x,y,Tentacle)
+	{image_angle = aimDirection+(random(30)-15)*other.accuracy
+	creator=other.id;
+	team = other.team
+	ammo = 9
+	event_perform(ev_alarm,0)
+	visible = 0
+	with instance_create(x,y,LightningSpawn)
+	{
+	sprite_index=sprTentacleSpawn
+	image_angle = other.image_angle
+	}
+
+	repeat(6){
+	    with instance_create(x,y,FishBoost)
+	    {
+	    motion_add( aimDirection+random(60)-30,2+random(4) );
+	    }}
+
+	}
+
+	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 5
+	wkick = 5
 
 	break;
 	

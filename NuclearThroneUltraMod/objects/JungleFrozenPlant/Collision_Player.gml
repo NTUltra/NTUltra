@@ -32,6 +32,7 @@ if KeyCont.key_pick[other.p] = 1 && !used
 		{
 			type = 1;
 			pullstrength = 3;
+			alarm[1] = 1;
 		}
 
 	}

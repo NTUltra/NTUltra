@@ -4,12 +4,12 @@ if HumphryHit=0
     {
         if team=2 || other.object_index=Disc || other.object_index=ToxicGas || other.object_index=ToxicThrowerGas
         {
-            if HumphryNr=other.HumphryNr
+            if HumphryNr==other.HumphryNr
             {
                 if HumphryHit = 1
                 {
                     with other
-                    instance_destroy();
+						instance_destroy();
                     exit;
                 }
             }
@@ -31,13 +31,16 @@ if HumphryHit=0
     }
 with Player
 {
-missedthislevel=true;
-HumphryLoss = true;
-HumphryTBcount=0;
-HumphrySkill--;
+	if !outOfCombat
+	{
+		missedthislevel=true;
+		HumphryLoss = true;
+		HumphryTBcount=0;
+		HumphrySkill--;
 
-with projectile
-HumphryHit=2;
+		with projectile
+			HumphryHit=2;
+	}
 
 }
 

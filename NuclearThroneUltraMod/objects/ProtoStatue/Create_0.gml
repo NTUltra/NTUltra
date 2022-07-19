@@ -6,7 +6,11 @@ if instance_exists(Player)
 	close=false;
 	///crown of natural selection no rads more items
 	if Player.crown==13
-	rad=40
+		rad=40;
+	if Player.crown == 17
+		rad = 20;
+	if Player.loops > 0
+		maxhealth += 40;
 }
 else
 {
@@ -16,10 +20,10 @@ else
 spr_idle = sprProtoStatueIdle
 spr_hurt = sprProtoStatueHurt
 spr_dead = sprProtoStatueDoneDie
-
+alarm[1] = 1;
 
 event_inherited()
-
+canMoveOver = true;
 team=1;
 
 snd_hurt = sndStatueHurt

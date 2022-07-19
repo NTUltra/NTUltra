@@ -2,8 +2,8 @@
 //VERSION STUFF ETC.
 win8 = 1;
 version = 000//23 is final probably
-encryptedVersion = 001;
-public = 1 //1 is no cheats and release
+encryptedVersion = 002;
+public = 0 //1 is no cheats and release
 defaultPublic = public;
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
@@ -56,6 +56,7 @@ kills = 0;
 hard = 0;
 
 var todaysSeedName = current_day+current_month+current_year;
+debug("today: ",todaysSeedName);
 var byteSeed = 0;
 var byteSize = string_byte_length(todaysSeedName);
 for (var i = 0; i < byteSize; i++) {

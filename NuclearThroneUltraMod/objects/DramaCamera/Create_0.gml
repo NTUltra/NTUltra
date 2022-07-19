@@ -1,4 +1,4 @@
-if instance_exists(InvaderBossSpawnPortal)
+if instance_exists(InvaderBossSpawnPortal) || instance_exists(BossInvasionNoName)
 {
 	instance_destroy();
 	exit;
@@ -155,13 +155,13 @@ else if Player.area = 106
 	if Player.subarea = 3
 	{
 	name = "INVERTED BIG DOG"
-	if random(90)<1
+	if random(200)<1
 		name = choose("I.B.B","INVERTED SCRAP BOSS","IMAGINE MUTATING INTO THIS THING");
 	}
 	else
 	{
 	name = "INVERTED BIG ASSASSIN"
-	if random(90)<1
+	if random(120)<1
 		name = choose("THERE SHE IS!","BEST FRIEND","JUST WANT A HUG");
 	}
 }

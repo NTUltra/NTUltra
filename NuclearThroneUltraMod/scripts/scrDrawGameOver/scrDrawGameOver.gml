@@ -38,6 +38,7 @@ function scrDrawGameOver() {
 	
 	if (UberCont.opt_gamemode == 8)
 	{
+		txt = "";
 		gameover += "##TIME SURVIVED: " + VanFan.txttime;
 	}
 	

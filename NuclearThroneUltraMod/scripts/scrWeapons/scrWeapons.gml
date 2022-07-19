@@ -2081,7 +2081,7 @@ function scrWeapons() {
 	wep_load[188] = 13
 	wep_cost[188] = 1
 	wep_sprt[188] = sprGrenadePistol
-	wep_area[188] = 0
+	wep_area[188] = 1
 	wep_text[188] = "tiny"
 	wep_swap[188] = sndSwapExplosive
 	wep_rad[188] = 0;
@@ -3002,7 +3002,7 @@ function scrWeapons() {
 	wep_name[272] = "GHOST BLADE"
 	wep_type[272] = 0
 	wep_auto[272] = 0
-	wep_load[272] = 30
+	wep_load[272] = 33
 	wep_cost[272] = 0
 	wep_sprt[272] = sprGhostBlade
 	wep_area[272] = 15
@@ -3014,7 +3014,7 @@ function scrWeapons() {
 	wep_type[273] = 1
 	wep_auto[273] = 0
 	wep_load[273] = 45
-	wep_cost[273] = 24
+	wep_cost[273] = 25
 	wep_sprt[273] = sprGyroBurster
 	wep_area[273] = 14
 	wep_text[273] = "bwbwpebffpwefnowobfo"
@@ -3035,7 +3035,7 @@ function scrWeapons() {
 	wep_name[275] = "GHOST SHOVEL"
 	wep_type[275] = 0
 	wep_auto[275] = 0
-	wep_load[275] = 44
+	wep_load[275] = 45
 	wep_cost[275] = 0
 	wep_sprt[275] = sprGhostShovel
 	wep_area[275] = 17
@@ -3728,11 +3728,11 @@ function scrWeapons() {
 	wep_name[338] = "KRAKEN PISTOL"
 	wep_type[338] = 4
 	wep_auto[338] = 0
-	wep_load[338] = 13//10
+	wep_load[338] = 14//10
 	wep_cost[338] = 1
 	wep_sprt[338] = sprKrakenPistol
 	wep_area[338] = 3
-	wep_text[338] = "kraken gives you iframes"
+	wep_text[338] = "unleash the baby kraken"
 	wep_swap[338] = sndSwapDragon
 	wep_rad[338] = 0;
 
@@ -3772,7 +3772,7 @@ function scrWeapons() {
 	wep_name[342] = "KRAKEN ION CANNON"
 	wep_type[342] = 4
 	wep_auto[342] = 1
-	wep_load[342] = 13
+	wep_load[342] = 26
 	wep_cost[342] = 4
 	wep_sprt[342] = sprKrakenIonCannon
 	wep_area[342] = 11
@@ -4117,7 +4117,7 @@ function scrWeapons() {
 	wep_load[373] = 8
 	wep_cost[373] = 0
 	wep_sprt[373] = sprVanPusher
-	wep_area[373] = -1
+	wep_area[373] = -2
 	wep_text[373] = "push away da popo"
 	wep_swap[373] = sndSwapEnergy
 	wep_rad[373] = 0;
@@ -4369,8 +4369,8 @@ function scrWeapons() {
 	wep_name[396] = "DISCO GUN"//fIRES A DISCO	BALL that emites lightning and THAT EXPLOSED INTO A LASER SHOW
 	wep_type[396] = 5
 	wep_auto[396] = 0
-	wep_load[396] = 180
-	wep_cost[396] = 25
+	wep_load[396] = 170
+	wep_cost[396] = 24
 	wep_sprt[396] = sprDiscoGun
 	wep_area[396] = 16
 	wep_text[396] = "BRING YOUR OWN PARTY!"
@@ -4655,10 +4655,10 @@ function scrWeapons() {
 	wep_name[422] = "SUPER LANCE"
 	wep_type[422] = 0
 	wep_auto[422] = 0
-	wep_load[422] = 14
+	wep_load[422] = 17
 	wep_cost[422] = 0
 	wep_sprt[422] = sprSuperLance
-	wep_area[422] = 18
+	wep_area[422] = 19
 	wep_text[422] = "mine is longer"
 	wep_swap[422] = sndSwapSword
 	wep_rad[422] = 0;
@@ -5084,7 +5084,7 @@ function scrWeapons() {
 	wep_name[461] = "GYRO INCINERATOR"
 	wep_type[461] = 1
 	wep_auto[461] = 0
-	wep_load[461] = 45
+	wep_load[461] = 46
 	wep_cost[461] = 26
 	wep_sprt[461] = sprGyroIncinerator
 	wep_area[461] = 22
@@ -5733,7 +5733,7 @@ function scrWeapons() {
 	wep_name[520] = "BULLET CRASH"
 	wep_type[520] = 1
 	wep_auto[520] = 1
-	wep_load[520] = 4
+	wep_load[520] = 5
 	wep_cost[520] = 7
 	wep_sprt[520] = sprBulletCrash
 	wep_area[520] = 9
@@ -5887,8 +5887,8 @@ function scrWeapons() {
 	wep_name[534] = "SUPER GYRO BURSTER"
 	wep_type[534] = 1
 	wep_auto[534] = 0
-	wep_load[534] = 160
-	wep_cost[534] = 120
+	wep_load[534] = 170
+	wep_cost[534] = 124
 	wep_sprt[534] = sprSuperGyroBurster
 	wep_area[534] = 30
 	wep_text[534] = "bullets for months"
@@ -6488,6 +6488,17 @@ function scrWeapons() {
 	wep_text[588] = "what kind of person would design this weapon"
 	wep_swap[588] = sndSwapSword
 	wep_rad[588] = 0;
+	
+	wep_name[589] = "GOLDEN KRAKEN PISTOL"
+	wep_type[589] = 4
+	wep_auto[589] = 0
+	wep_load[589] = 13
+	wep_cost[589] = 1
+	wep_sprt[589] = sprGoldenKrakenPistol
+	wep_area[589] = 18
+	wep_text[589] = "trustworthy kraken"
+	wep_swap[589] = sndSwapDragon
+	wep_rad[589] = 0;
 	
 	
 	maxwep = array_length(wep_name)-1;

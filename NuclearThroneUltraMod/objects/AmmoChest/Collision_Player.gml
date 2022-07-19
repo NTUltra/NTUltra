@@ -98,8 +98,8 @@ if mediumchest==0{
 }
 else{//ROIDS ULTRA B
 var i;
-i=1;
-repeat(4)
+i=0;
+repeat(5)
 {
 
 i+=1;

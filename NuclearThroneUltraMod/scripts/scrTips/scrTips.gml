@@ -1,5 +1,5 @@
 function scrTips() {
-	tiptype = choose(0,0,0,0,0,0,0,1,1,1,2,2,3,4,5,choose(0,6,0,0,1,1,2,2,3,4,5,6,6,6))
+	tiptype = choose(0,0,0,0,0,0,0,1,1,1,2,2,3,4,5,choose(0,6,0,0,1,1,2,2,3,4,5,6,6,6,7,7))
 
 	if !instance_exists(Player)
 	tiptype = 0
@@ -331,7 +331,7 @@ function scrTips() {
 
 	//CROWNS
 	if tiptype = 5
-	tip = Player.crown_tips[Player.crown]
+		tip = Player.crown_tips[Player.crown]
 
 	//ULTRAS
 	if tiptype = 6 
@@ -348,9 +348,12 @@ function scrTips() {
 	    tip=""
 	}
 
+	///GAMEMODE
+	if tiptype == 7
+		tip = UberCont.gamemode_tip[UberCont.opt_gamemode];
+		
 	if tip = ""
 	scrTips()
 
-
-
+	tip = string(tip);
 }

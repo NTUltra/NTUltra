@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description Get rid of projectiles
 if instance_exists(Player)
 {
 	if !inverted || Player.area > 99

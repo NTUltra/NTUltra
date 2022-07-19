@@ -1,7 +1,7 @@
 meleedamage = 0
 size = 1
 scrWeapons();
-event_inherited();
+owner = -1;
 
 //behavior
 //gunangle = random(360)
@@ -89,5 +89,3 @@ cqueueshot = 0;
 }
 else
 instance_destroy();
-
-owner = -1;

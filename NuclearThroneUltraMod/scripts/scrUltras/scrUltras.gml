@@ -149,20 +149,28 @@ function scrUltras() {
 	    //ROBOT 
 		if instance_exists(Player) && Player.race != 8
 			isOtherCharacter = true;
-			
-	    ultra_name[29] = "REFINED TASTE"
-		if isOtherCharacter
-			ultra_text[29] = "ONLY HIGH TIER WEAPON DROPS#EVERY ENEMY HAS A 5% CHANCE#TO DROP A WEAPON"
+		if instance_exists(Player) && Player.spr_idle == sprMutant8DIdle
+		{
+			ultra_name[29] = "EXCLUSIVE TASTE"
+			ultra_text[29] = "HOLDING ONLY ONE WEAPON WILL#WILL INCREASE DAMAGE DEALT TO ENEMIES BY 25%#RETURN 10% AMMO UPON FIRING#+15% FIRERATE AND +4 MAX HP##AUTO EAT WEAPONS LEFT IN THE LEVEL";
+		    ultra_tips[29] = "gold tastes good"
+		}
 		else
-			ultra_text[29] = "ONLY HIGH TIER WEAPON DROPS#EVERY ENEMY HAS A 5% CHANCE#TO DROP A WEAPON##AUTO EAT WEAPONS LEFT IN THE LEVEL"
-	    ultra_tips[29] = "delicacy"
+		{
+			ultra_name[29] = "REFINED TASTE"
+			if isOtherCharacter
+				ultra_text[29] = "ONLY HIGH TIER WEAPON DROPS#EVERY ENEMY HAS A 5% CHANCE#TO DROP A WEAPON"
+			else
+				ultra_text[29] = "ONLY HIGH TIER WEAPON DROPS#EVERY ENEMY HAS A 5% CHANCE#TO DROP A WEAPON##AUTO EAT WEAPONS LEFT IN THE LEVEL"
+		    ultra_tips[29] = "delicacy"
+		}
 		
-	    ultra_name[30] = "REGURGITATE"
+		ultra_name[30] = "REGURGITATE"
 		if instance_exists(Player) && !isOtherCharacter && Player.skill_got[23]//Has open mind
 			ultra_text[30] = "EATING WEAPONS HAS A 70% CHANCE#TO DROP CHESTS##AUTO EAT WEAPONS LEFT IN THE LEVEL";
 		else
 			ultra_text[30] = "EATING WEAPONS HAS A 60% CHANCE#TO DROP CHESTS##AUTO EAT WEAPONS LEFT IN THE LEVEL"
-	    ultra_tips[30] = "2% more chance for weapon chests"
+		ultra_tips[30] = "2% more chance for weapon chests"
     
 	    ultra_name[31] = "EXTRA STORAGE"
 		if isOtherCharacter
@@ -331,6 +339,8 @@ function scrUltras() {
 	ultra_name[65] = "WEAPON MODDER"
 	//ultra_text[65] = "IN EVERY AREA#A WEAPON MOD SPAWNS#INCREASE HOW OFTEN MODS TRIGGER#COMBINING A WEAPON ADDS A MOD TO IT"
 	ultra_text[65] = "IN EVERY AREA#A WEAPON MOD SPAWNS#DOUBLE WEAPONMOD EFFECTIVENESS#COMBINING A WEAPON ADDS A MOD TO IT"
+	if instance_exists(Player) && Player.race != 17
+		ultra_text[65] = "IN EVERY AREA#A WEAPON MOD SPAWNS#DOUBLE WEAPONMOD EFFECTIVENESS"
 	ultra_tips[65] = "modder"
 
 	ultra_name[66] = "ARMOUR SMITH"

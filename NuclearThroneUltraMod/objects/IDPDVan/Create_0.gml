@@ -12,7 +12,7 @@ spr_walk = sprVanDrive
 spr_hurt = sprVanHurt
 spr_dead = sprVanDead
 
-existTime = 43;
+existTime = 21;
 
 snd_hurt = sndVanHurt
 

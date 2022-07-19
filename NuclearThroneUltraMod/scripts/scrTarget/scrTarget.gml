@@ -30,12 +30,13 @@ function scrTarget() {
 			else {
 				target = instance_nearest(x,y,Player);
 				//Popo and enemies target each other?
-				if point_distance(x,y,target.x,target.y) < 300 && instance_exists(Wall) && collision_line(x,y,target.x,target.y,Wall,false,false) < 0
+				var distanceToPlayer = point_distance(x,y,target.x,target.y);
+				if distanceToPlayer < 300 && instance_exists(Wall) && collision_line(x,y,target.x,target.y,Wall,false,false) < 0
 				{
 					if instance_exists(enemy) && instance_number(enemy) > 2
 					{
 						var nearest = instance_nearest_notme(x,y,enemy)
-						if instance_exists(nearest) && nearest != noone && nearest.team != team && nearest.team != 0
+						if instance_exists(nearest) && nearest != noone && nearest.team != team && nearest.team != 0 && point_distance(x,y,nearest.x,nearest.y) < distanceToPlayer
 							target = nearest;
 					}
 				}

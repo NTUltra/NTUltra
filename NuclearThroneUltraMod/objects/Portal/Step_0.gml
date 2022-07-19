@@ -1,3 +1,9 @@
+var d = 64;
+if inverted || type == 3
+{
+	d = 44;
+	pullRange = 70;
+}	
 if instance_exists(Player)
 {
 	if Player.visible
@@ -40,7 +46,7 @@ with WepPickup
 		var pt = instance_nearest(x,y,Portal);
 		if pt == other.id
 		{
-			if point_distance(x,y,pt.x,pt.y) < 44 and collision_line(x,y,pt.x,pt.y,Wall,0,0) < 0
+			if point_distance(x,y,pt.x,pt.y) < other.pullRange*0.45 and collision_line(x,y,pt.x,pt.y,Wall,0,0) < 0
 			{
 				if place_free(x+lengthdir_x(other.pullstrength,point_direction(x,y,pt.x,pt.y)),y)
 					x += lengthdir_x(other.pullstrength,point_direction(x,y,pt.x,pt.y))
@@ -51,7 +57,7 @@ with WepPickup
 				depth = -9
 				image_index = 1
 			}
-			else if point_distance(x,y,pt.x,pt.y) < 96 and collision_line(x,y,pt.x,pt.y,Wall,0,0) < 0
+			else if point_distance(x,y,pt.x,pt.y) < other.pullRange and collision_line(x,y,pt.x,pt.y,Wall,0,0) < 0
 			{
 				if place_free(x+lengthdir_x(other.pullstrength*0.6,point_direction(x,y,pt.x,pt.y)),y)
 					x += lengthdir_x(other.pullstrength*0.6,point_direction(x,y,pt.x,pt.y))
@@ -67,9 +73,7 @@ with WepPickup
 		}
 	}
 }
-var d = 64;
-if inverted || type == 3
-	d = 48;
+
 if point_distance(x,y,Player.x,Player.y)<d
 	Player.alarm[3]=10;
 }
