@@ -3665,7 +3665,7 @@ function scrWeapons() {
 	wep_load[332] = 24
 	wep_cost[332] = 5
 	wep_sprt[332] = sprEnergyShovel
-	wep_area[332] = 12
+	wep_area[332] = 14
 	wep_text[332] = "energetic digging"
 	wep_swap[332] = sndSwapEnergy
 	wep_rad[332] = 0;
@@ -3676,7 +3676,7 @@ function scrWeapons() {
 	wep_load[333] = 1
 	wep_cost[333] = 0.5
 	wep_sprt[333] = sprHyperGatlingBazooka
-	wep_area[333] = 10
+	wep_area[333] = 12
 	wep_text[333] = "bazooka minigun"
 	wep_swap[333] = sndSwapExplosive
 	wep_rad[333] = 0;

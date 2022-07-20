@@ -10,7 +10,7 @@ image_angle += rotspeed*speed
 //instance_create(x+random(8)-4,y+random(8)-4,Curse)
 if instance_exists(Player)
 {
-	if returnFX && speed < 3 && alarm[0] < 4
+	if returnFX && speed < 3 && alarm[0] < 4 && Player.bwep == 0
 	{
 		returnFX = false;
 		if instance_exists(Player) && !dontteleport
