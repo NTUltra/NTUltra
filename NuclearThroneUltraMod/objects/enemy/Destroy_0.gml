@@ -29,7 +29,7 @@ if object_index!=SnowTank && object_index!=InvertedSnowTank && object_index!=Gol
 			{
 				impactWrist = true;
 				alarm[0] = 2;
-				speed = max(speed+8.9,9.8)//9.3
+				speed = max(speed+8.7,9.5)//9.3
 				if Player.race=25
 					speed+=1.25;
 			}
@@ -60,5 +60,5 @@ scrEnemyDeathEvent();
 
 if totemBuffed
 {
-	scrDrop(10,0);	
+	scrDrop(10,1);	
 }

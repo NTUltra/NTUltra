@@ -5,7 +5,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 	var minWepArea = minWepAreaParam;
 	if instance_exists(Player)
 	{
-		if UberCont.opt_gamemode=2{
+		if UberCont.opt_gamemode == 2 {
 			if Player.loops>0
 				wep=choose(24,79,12,11,234,236,197,127,128);//E Sword, SPC, SuCros, Auto crossy, heavy auto, super heavy auto, dubble super plasma cannon,Eswordgun,SEswordgun
 			else
@@ -18,7 +18,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 				wepTier += 1
 				maxTries += 2;
 			}
-			if Player.ultra_got[29]==1
+			if !Player.altUltra && Player.ultra_got[29]==1//Refined taste
 			{
 				minWepArea = min(6,Player.hard+wepTier);
 				maxTries += 10;
@@ -46,7 +46,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 				var tooBad = 0;
 				var h = max(1,Player.hard);
 				do {
-					wep=irandom(maxwep-1)+1;
+					wep = irandom(maxwep-1)+1;
 				//Non melee has been excluded, but not every tier has multiple melees so do some shit
 				if wep_area[wep]  <= h + wepTier && wep_area[wep] > wep_area[maxValidTierWep]
 				{
@@ -67,8 +67,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			else
 			{
 				do {
-					wep=irandom(maxwep-1)+1;
-					//Non melee has been excluded, but not every tier has multiple melees so do some shit
+					wep = irandom(maxwep-1)+1;
 					if wep_area[wep]  <= Player.hard+wepTier && wep_area[wep] > wep_area[maxValidTierWep]
 					{
 						maxValidTierWep = wep;
@@ -82,7 +81,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 				)
 			}
 			//Found a higher option than our result? Take that one
-			if (wep_area[maxValidTierWep] > wep_area[wep])
+			if (wep_area[maxValidTierWep] > wep_area[wep] && ( (wep != Player.wep and wep != Player.bwep) || Player.race == 7/*roids can dual wield*/))
 			{
 				wep = maxValidTierWep;
 			}

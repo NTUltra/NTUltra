@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMutant21Dead","path":"sprites/sprMutant21Dead/sprMutant21Dead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMutant21Dead",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -45,7 +45,7 @@ if race == 27
 }
 ///at the end of a level stuff
 
-if patience>0||ultra_got[0]=1
+if patience>0||(ultra_got[0]=1 && !altUltra)
 {
 skillpoints+=patience;
 skillsChosen-=patience;

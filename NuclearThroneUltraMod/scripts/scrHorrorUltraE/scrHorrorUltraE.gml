@@ -2,7 +2,7 @@ function scrHorrorUltraE() {
 	with Player
 	{
 
-	if ultra_got[0]
+	if ultra_got[0] && !altUltra
 	{
 	var i = 0;
 	var j = false;

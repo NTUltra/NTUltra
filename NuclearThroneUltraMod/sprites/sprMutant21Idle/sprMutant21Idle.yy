@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMutant21Idle","path":"sprites/sprMutant21Idle/sprMutant21Idle.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMutant21Idle",
     "tags": [],
     "resourceType": "GMSequence",
   },

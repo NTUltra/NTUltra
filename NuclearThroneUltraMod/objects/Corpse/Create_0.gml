@@ -1,11 +1,11 @@
-friction = 0.41
+friction = 0.415
 image_speed = 0.4
 depth = 7;
 dmg = 1;
 impactWristed = false;
 if instance_exists(Player){
 	if Player.ultra_got[52] == 1{
-		friction=0.26;
+		friction=0.28;
 	}
 	if Player.skill_got[20] {
 		dmg = 2;

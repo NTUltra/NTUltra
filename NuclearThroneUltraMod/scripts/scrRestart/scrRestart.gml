@@ -13,7 +13,8 @@ function scrRestart() {
 	
 	with Player
 	{
-		restarted = true;	
+		restarted = true;
+		skeletonlives = 0;
 	}
 	with SurvivalWave
 		instance_destroy();

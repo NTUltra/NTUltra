@@ -756,3 +756,18 @@ if my_health <= 0
 		
 	my_health = 0
 }
+
+if crown == 23//Crown of speed
+{
+	with enemy
+	{
+		speed *= 1.2;	
+	}
+}
+else if crown == 24//Crown of sloth
+{
+	with enemy
+	{
+		speed *= 0.9;	
+	}
+}

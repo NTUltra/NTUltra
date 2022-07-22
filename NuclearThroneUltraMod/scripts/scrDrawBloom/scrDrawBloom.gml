@@ -45,6 +45,8 @@ function scrDrawBloom() {
 
 	with MorphSlash//the only melee with bloom cause I can
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
+	with HorrorMoney
+	draw_sprite_ext(sprite_index,-1,x,y,1.5,1.5,image_angle,c_white,ba)
 	with PartnerBullet
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with Partner

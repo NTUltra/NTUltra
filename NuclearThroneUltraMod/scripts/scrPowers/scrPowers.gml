@@ -558,49 +558,64 @@ function scrPowers() {
 
 	if race = 21//horror
 	{
+		if ultra_got[0] && altUltra
+		{
+			cash = 100;
+			if cash <= 0
+			{
+				snd_play_2d(sndHorrorEmpty);
+				scrEmptyRad();//TODO TELL EM ITS CASH
+			}
+			else
+			{
+				snd_play_2d(sndHorrorCashFlowStart);
+			}
+		}
+		else
+		{
+			if rad<=0
+			{
+				snd_play_2d(sndHorrorEmpty);
+				scrEmptyRad();
+			}
+			else
+			{
 
-	if rad<=0
-	{
-		snd_play_2d(sndHorrorEmpty);
-		scrEmptyRad();
-	}
-	else
-	{
+				//First rad for game feel
+				rad--;
 
-	//First rad for game feel
-	rad--;
-
-	    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
-	    {
-	    bskin=other.bskin
+			    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
+			    {
+			    bskin=other.bskin
     
-	    if bskin = 1
-			sprite_index=sprHorrorBeamB;
-	    else if bskin = 2
-			sprite_index=sprHorrorBeamC;
+			    if bskin = 1
+					sprite_index=sprHorrorBeamB;
+			    else if bskin = 2
+					sprite_index=sprHorrorBeamC;
     
-	    originnr=instance_number(HorrorBeam);
+			    originnr=instance_number(HorrorBeam);
     
-	    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
-	    team = other.team
-	    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
-	    ammo=50
-	    charge=other.horrorcharge;
-	    event_perform(ev_alarm,0)
-	    rad=1;
-	        with instance_create(x,y,LightningSpawn)
-	        {
-		        if other.bskin=1
-					sprite_index=sprHorrorBeamSpawnB
-		        else if other.bskin=2
-					sprite_index=sprHorrorBeamSpawnC
-		        else
-					sprite_index=sprHorrorBeamSpawn
-				image_angle = other.image_angle
-	        }
-	    }
-	rad = max(rad,0);
-	}
+			    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
+			    team = other.team
+			    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
+			    ammo=50
+			    charge=other.horrorcharge;
+			    event_perform(ev_alarm,0)
+			    rad=1;
+			        with instance_create(x,y,LightningSpawn)
+			        {
+				        if other.bskin=1
+							sprite_index=sprHorrorBeamSpawnB
+				        else if other.bskin=2
+							sprite_index=sprHorrorBeamSpawnC
+				        else
+							sprite_index=sprHorrorBeamSpawn
+						image_angle = other.image_angle
+			        }
+			    }
+				rad = max(rad,0);
+			}
+		}
 
 	}
 
@@ -1550,176 +1565,259 @@ function scrPowers() {
 	if race == 21 //&& random(2)<1// && !instance_exists(HorrorBeam)
 	{
 
+		if ultra_got[0] && altUltra
+		{
+			if cash > 0
+			{
+				if horrorcharge=origincharge
+					snd_play_2d(sndHorrorCashFlowStart);
+					//snd_play_2d(sndHorrorBeam);
 
+				if horrorcharge<maxcharge
+					horrorcharge+=0.2+(skill_got[5]*0.3);
 
-	if rad>0
-	{
+				if skill_got[5]
+				{
+					horrorhealtime++;
 
-	if horrorcharge=origincharge
-	snd_play_2d(sndHorrorBeam);
-
-	if horrorcharge<maxcharge
-	horrorcharge+=0.2+(skill_got[5]*0.3);
-
-	if skill_got[5]
-	{
-	horrorhealtime++;
-
-	    if horrorhealtime>115
-	    {
-	    if my_health<maxhealth
-	    {
-	        my_health++;
+				    if horrorhealtime>115
+				    {
+					    if my_health<maxhealth
+					    {
+					        my_health++;
         
         
-	        with instance_create(x,y,HealFX)
-	        sprite_index=sprHorrorTB;
+					        with instance_create(x,y,HealFX)
+								sprite_index=sprHorrorTB;
         
-	        if my_health>=maxhealth
-	        {
-	        with instance_create(x,y,PopupText)
-	        mytext = "MAX HP"
-	        }
-	        else
-	        {
-	            with instance_create(x,y,PopupText)
-	            mytext = "+1"+" HP"
-            
-	        }    
-	    }
-        
-	    horrorhealtime=0;
-	    }
+					        if UberCont.opt_ammoicon
+							{
+								dir = instance_create(x,y,PopupText)
+								dir.sprt = sprHPIconPickup;
+								dir.mytext = "+1"
+								if Player.my_health = Player.maxhealth
+									dir.mytext = "MAX"
+								else if Player.my_health > Player.maxhealth
+									dir.mytext = "OVER MAX"
+							}
+							else
+							{
+								dir = instance_create(x,y,PopupText)
+								dir.mytext = "+1 HP";
+								if Player.my_health = Player.maxhealth
+									dir.mytext = "MAX HP"
+								else if Player.my_health > Player.maxhealth
+									dir.mytext = "OVER MAX HP"
+							}
+					    }
+						horrorhealtime=0;
+				    }
+					if !(audio_is_playing(sndHorrorCashFlowTB))
+						snd_loop(sndHorrorCashFlowTB);
+				}
+				else if !(audio_is_playing(sndHorrorCashFlow))
+					snd_loop(sndHorrorCashFlow);
+				
+				var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+				var r = 1
+				if horrorcharge > 12
+					r = 2;
+				repeat(r)
+				with instance_create(x,y,HorrorMoney)
+				{
+					charge=other.horrorcharge;
+					motion_add(aimDirection+(random(charge*5)-charge*2.5),8+(charge*0.5))
+					image_angle = direction
+					team = other.team
+				}
+				var s = max(1,horrorcharge*0.5);
+				debug("charge: ",horrorcharge);
+				BackCont.viewx2 += lengthdir_x(s,aimDirection+180)*UberCont.opt_shake
+				BackCont.viewy2 += lengthdir_y(s,aimDirection+180)*UberCont.opt_shake
+				BackCont.shake += s;
+			}
+		}
+		else if rad>0
+		{
 
-	if !(audio_is_playing(sndHorrorLoopTB))
-	snd_loop(sndHorrorLoopTB);
+		if horrorcharge=origincharge
+			snd_play_2d(sndHorrorBeam);
+
+		if horrorcharge<maxcharge
+			horrorcharge+=0.2+(skill_got[5]*0.3);
+
+		if skill_got[5]
+		{
+			horrorhealtime++;
+
+		    if horrorhealtime>115
+		    {
+			    if my_health<maxhealth
+			    {
+			        my_health++;
+        
+        
+			        with instance_create(x,y,HealFX)
+			        sprite_index=sprHorrorTB;
+        
+					if UberCont.opt_ammoicon
+					{
+						dir = instance_create(x,y,PopupText)
+						dir.sprt = sprHPIconPickup;
+						dir.mytext = "+1"
+						if Player.my_health = Player.maxhealth
+							dir.mytext = "MAX"
+						else if Player.my_health > Player.maxhealth
+							dir.mytext = "OVER MAX"
+					}
+					else
+					{
+						dir = instance_create(x,y,PopupText)
+						dir.mytext = "+1 HP";
+						if Player.my_health = Player.maxhealth
+							dir.mytext = "MAX HP"
+						else if Player.my_health > Player.maxhealth
+							dir.mytext = "OVER MAX HP"
+					}
+			    }
+        
+			    horrorhealtime=0;
+		    }
+
+		if !(audio_is_playing(sndHorrorLoopTB))
+		snd_loop(sndHorrorLoopTB);
 
     
-	}
-	else if !(audio_is_playing(sndHorrorLoop))
-	snd_loop(sndHorrorLoop);
+		}
+		else if !(audio_is_playing(sndHorrorLoop))
+			snd_loop(sndHorrorLoop);
 
-	if (horrorcharge>7||random(7)<horrorcharge||horrorcharge=origincharge)
-	{
+		if (horrorcharge>7||random(7)<horrorcharge||horrorcharge=origincharge)
+		{
 
-	// this makes the beam more efficient
-	//if random(3)<2
-	rad--;
-
-	if horrorcharge>12&&random(2)<1
-	{
+		// this makes the beam more efficient
+		//if random(3)<2
 		rad--;
 
-	    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
-	    {
-	    bskin=other.bskin
-	    if bskin = 1
+		if horrorcharge>12&&random(2)<1
+		{
+			rad--;
+
+		    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
+		    {
+		    bskin=other.bskin
+		    if bskin = 1
+				sprite_index=sprHorrorBeamB;
+			else if bskin = 2
+				sprite_index=sprHorrorBeamC;
+    
+		    originnr=instance_number(HorrorBeam);
+    
+		    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
+		    team = other.team
+		    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
+		    ammo=50
+		    charge=other.horrorcharge;
+		    event_perform(ev_alarm,0)
+		    rad=1;
+		        with instance_create(x,y,LightningSpawn)
+		        {
+		        if other.bskin=1
+					sprite_index=sprHorrorBeamSpawnB
+				else if other.bskin=2
+					sprite_index=sprHorrorBeamSpawnC
+		        else
+					sprite_index=sprHorrorBeamSpawn
+		        image_angle = other.image_angle
+		        }
+		    }
+
+		}
+
+		with instance_create(x+lengthdir_x(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
+		{
+		bskin=other.bskin
+		if bskin = 1
 			sprite_index=sprHorrorBeamB;
 		else if bskin = 2
 			sprite_index=sprHorrorBeamC;
-    
-	    originnr=instance_number(HorrorBeam);
-    
-	    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
-	    team = other.team
-	    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
-	    ammo=50
-	    charge=other.horrorcharge;
-	    event_perform(ev_alarm,0)
-	    rad=1;
-	        with instance_create(x,y,LightningSpawn)
-	        {
-	        if other.bskin=1
+
+		originnr=instance_number(HorrorBeam);
+
+		image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
+		team = other.team
+		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
+		ammo=50
+		charge=other.horrorcharge;
+		rad=1;
+		event_perform(ev_alarm,0)
+		    with instance_create(x,y,LightningSpawn)
+		    {
+		    if other.bskin=1
 				sprite_index=sprHorrorBeamSpawnB
 			else if other.bskin=2
 				sprite_index=sprHorrorBeamSpawnC
-	        else
+		    else
 				sprite_index=sprHorrorBeamSpawn
-	        image_angle = other.image_angle
-	        }
-	    }
+		    image_angle = other.image_angle
+		    }
+		}
 
-	}
+		}
 
-	with instance_create(x+lengthdir_x(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
-	{
-	bskin=other.bskin
-	if bskin = 1
-		sprite_index=sprHorrorBeamB;
-	else if bskin = 2
-		sprite_index=sprHorrorBeamC;
-
-	originnr=instance_number(HorrorBeam);
-
-	image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
-	team = other.team
-	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
-	ammo=50
-	charge=other.horrorcharge;
-	event_perform(ev_alarm,0)
-	rad=1;
-	    with instance_create(x,y,LightningSpawn)
-	    {
-	    if other.bskin=1
-			sprite_index=sprHorrorBeamSpawnB
-		else if other.bskin=2
-			sprite_index=sprHorrorBeamSpawnC
-	    else
-			sprite_index=sprHorrorBeamSpawn
-	    image_angle = other.image_angle
-	    }
-	}
-
-	}
-
-	if random(4)<1
-	{
-	    with instance_create(x+lengthdir_x(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
-	    {
-	    bskin=other.bskin
-	    if bskin = 1
-			sprite_index=sprHorrorBeamB;
-		else if bskin = 2
-			sprite_index=sprHorrorBeamC;
+		if random(4)<1
+		{
+		    with instance_create(x+lengthdir_x(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
+		    {
+		    bskin=other.bskin
+		    if bskin = 1
+				sprite_index=sprHorrorBeamB;
+			else if bskin = 2
+				sprite_index=sprHorrorBeamC;
     
-	    originnr=instance_number(HorrorBeam);
+		    originnr=instance_number(HorrorBeam);
     
-	    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
-	    team = other.team
-	    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
-	    ammo=50
-	    charge=other.horrorcharge;
-	    event_perform(ev_alarm,0)
-	    rad=1;
-	        with instance_create(x,y,LightningSpawn)
-	        {
-	        if other.bskin=1
-				sprite_index=sprHorrorBeamSpawnB
-			else if other.bskin=2
-				sprite_index=sprHorrorBeamSpawnC
-	        else
-				sprite_index=sprHorrorBeamSpawn
-	        image_angle = other.image_angle
-	        }
-	    }
-	}
+		    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
+		    team = other.team
+		    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
+		    ammo=50
+		    charge=other.horrorcharge;
+			rad=1;
+		    event_perform(ev_alarm,0)
+		        with instance_create(x,y,LightningSpawn)
+		        {
+		        if other.bskin=1
+					sprite_index=sprHorrorBeamSpawnB
+				else if other.bskin=2
+					sprite_index=sprHorrorBeamSpawnC
+		        else
+					sprite_index=sprHorrorBeamSpawn
+		        image_angle = other.image_angle
+		        }
+		    }
+		}
 
 
-	if BackCont.viewx2 < 8
-	BackCont.viewx2 = lengthdir_x(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-	if BackCont.viewy2 < 8
-	BackCont.viewy2 = lengthdir_y(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-	BackCont.shake += 0.9
+		if BackCont.viewx2 < 8
+		BackCont.viewx2 = lengthdir_x(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+		if BackCont.viewy2 < 8
+		BackCont.viewy2 = lengthdir_y(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+		BackCont.shake += 0.9
 
 
-	}
-	else if audio_is_playing(sndHorrorLoop)||audio_is_playing(sndHorrorLoopTB)
-	{
-	audio_stop_sound(sndHorrorLoop);
-	audio_stop_sound(sndHorrorLoopTB);
-	snd_play_2d(sndHorrorEmpty);
-	}
-	rad = max(rad,0);
+		}
+		else if audio_is_playing(sndHorrorLoop)||audio_is_playing(sndHorrorLoopTB)
+		{
+			audio_stop_sound(sndHorrorLoop);
+			audio_stop_sound(sndHorrorLoopTB);
+			snd_play_2d(sndHorrorEmpty);
+		} else if (audio_is_playing(sndHorrorCashFlow) || audio_is_playing(sndHorrorCashFlowTB))
+		{
+			audio_stop_sound(sndHorrorCashFlow);
+			audio_stop_sound(sndHorrorCashFlowTB);
+			snd_play_2d(sndHorrorEmpty);
+		}
+		rad = max(rad,0);
 	}
 
 
@@ -2151,6 +2249,12 @@ function scrPowers() {
 	audio_stop_sound(sndHorrorLoopTB);
 	audio_stop_sound(sndHorrorLoop);
 	horrorcharge=origincharge;
+	if ((audio_is_playing(sndHorrorCashFlow) || audio_is_playing(sndHorrorCashFlowTB))  && ultra_got[0] && altUltra)
+	{
+		audio_stop_sound(sndHorrorCashFlow);
+		audio_stop_sound(sndHorrorCashFlowTB);
+		snd_play_2d(sndHorrorCashFlowEnd);
+	}
 	}
 	else if race==22 //rogue
 	{

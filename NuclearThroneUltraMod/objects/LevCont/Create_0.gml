@@ -22,6 +22,8 @@ if dir<12
 	with instance_create(__view_get( e__VW.XView, 0 )+14+dir*26.5,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-50,CrownIcon)//24
 	{
 		crown = other.dir
+		if crown == 0//Crown of freedom secret
+			crown = 25;
 		if crown == 8 && Player.tookDestiny//Crown of sloth secret
 			crown = 24;
 	}
@@ -42,14 +44,14 @@ if Player.hogpoints > 1// && Player.area=105 && Player.subarea=1
     
     exit;
 }
-else if (Player.skillsChosen>7 || (Player.ultra_got[0] &&/* Player.skillpoints < 2 && */!Player.horrorEtaken
+else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !Player.horrorEtaken
 || Player.ultraNow))&&(Player.ultra_got[75]==0)//ULTRA! Player.level>9 not skelly redemption ultra a Player.skillsChosen>7
 {
 	Player.ultraNow = false;
 	//UNLOCK MUTATION DOCTOR/SMITH
 	scrUnlockCharacter(25,"FOR GETTING AN ULTRA MUTATION");
 
-	if Player.ultra_got[0]=1 && !Player.horrorEtaken//&&(Player.skillsChosen>7)
+	if Player.ultra_got[0]=1 && !Player.altUltra && !Player.horrorEtaken//&&(Player.skillsChosen>7)
 	{
 		scrUltraEHorror();
 	}
@@ -63,7 +65,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] &&/* Player.skillpoints <
 	    //}
 	    if Player.ultra_got[skill1] + Player.ultra_got[skill2] + Player.ultra_got[skill3] + Player.ultra_got[skill4] > 3
 		{
-			if ((Player.race == 21 && Player.ultra_got[0] == 1) || Player.race != 21)
+			if ((Player.race == 21 && Player.ultra_got[0] == 1 && !Player.altUltra) || Player.race != 21)
 			{
 				instance_create(x,y,LevCont);
 				instance_destroy();
@@ -135,7 +137,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] &&/* Player.skillpoints <
 		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+72,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
 		    skill = other.skill4
 			
-			if Player.wep == 0 && Player.bwep == 0 && UberCont.opt_gamemode != 14//not fish only partner
+			if Player.wep == 0 && Player.bwep == 0 && Player.race != 14 && UberCont.opt_gamemode != 14//not fish only partner and not panda
 			with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+120,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
 		    skill = 109
 		    }

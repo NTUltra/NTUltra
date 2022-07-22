@@ -52,7 +52,6 @@ function scrFire2() {
 	with instance_create(x,y,Tentacle)
 	{image_angle = aimDirection+(random(40)-20)*other.accuracy
 	creator=other.id;
-	dmg=6//+irandom(4);
 	team = other.team
 	ammo = 16
 	event_perform(ev_alarm,0)

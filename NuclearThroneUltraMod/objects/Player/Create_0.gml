@@ -439,6 +439,8 @@ decay = 600
 crownrad = 0
 
 rad = 0
+cash = 0;
+maxCash = 500;
 can_shoot = 1
 bcan_shoot = 0
 ccan_shoot = 0

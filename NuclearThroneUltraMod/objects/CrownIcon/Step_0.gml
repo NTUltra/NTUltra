@@ -249,7 +249,7 @@ instance_destroy()
 with LevCont
 instance_destroy()
 
-if Player.crownpoints > 0 or Player.skillpoints > 0//&& Player.ultra_got[0]=0
+if Player.crownpoints > 0 or Player.skillpoints > 0
 {
 instance_create(x,y,LevCont)
 }

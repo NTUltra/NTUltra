@@ -14,7 +14,10 @@ kills=Player.kills
 hard = Player.hard;
 }
 with Player
-instance_destroy()
+{
+	skeletonlives = 0;
+	instance_destroy()
+}
 snd_play(sndMutant0Cnfm, 0, false, false)
 race = UberCont.racepick
 crown = 1
@@ -40,7 +43,8 @@ instance_create(x,y,Player)
 with Player
 {
 	randomlySelected = ranChar;
-	restarted = true;	
+	restarted = true;
+	skeletonlives = 0;
 }
 debug("BIG CHUNK RESTART");
 var loadedRun = UberCont.loadedRun;
@@ -82,7 +86,10 @@ if (keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4)) && !in
 	if instance_exists(Player)
 	kills=Player.kills
 	with Player
-	instance_destroy()
+	{
+		skeletonlives = 0;
+		instance_destroy()
+	}
 	scrRestart()
 	debug("RETURN TO MENU PAUSED");
 	draw_texture_flush();//free texture memory

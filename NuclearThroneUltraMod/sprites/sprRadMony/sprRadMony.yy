@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprRadMony","path":"sprites/sprRadMony/sprRadMony.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprRadMony",
     "tags": [],
     "resourceType": "GMSequence",
   },

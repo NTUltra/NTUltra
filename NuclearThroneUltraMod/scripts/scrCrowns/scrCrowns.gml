@@ -127,15 +127,21 @@ function scrCrowns() {
 	crown_tips[22] = "crown of 1hp equality"
 	
 	crown_name[23] = "[CROWN OF SPEED]"
-	crown_text[23] = "ALL PROJECTILES ARE FASTER#YOU MOVE SLIGHTLY FASTER"
+	crown_text[23] = "ALL PROJECTILES ARE FASTER#EVERYONE MOVES SLIGHTLY FASTER"
 	crown_used[23] = 0
 	crown_tips[23] = "gotta go fast"
 	
 	//Secret crown of destiny
 	crown_name[24] = "[CROWN OF SLOTH]"
-	crown_text[24] = "ALL PROJECTILES ARE SLOWER#YOU MOVE SLIGHTLY SLOWER#EACH AREA THE DIFFICULTY#AND WEAPON TIER DECREASES#INSTEAD OF INCREASES"
+	crown_text[24] = "ALL PROJECTILES ARE SLOWER#EVERYONE MOVES SLIGHTLY SLOWER#EACH AREA THE DIFFICULTY#AND WEAPON TIER DECREASES#INSTEAD OF INCREASES"
 	crown_used[24] = 0
 	crown_tips[24] = "slow it down there buddy"
+	
+	//Secret crown two ultra weapons
+	crown_name[25] = "[CROWN OF FREEDOM]"
+	crown_text[25] = "WALLS DON'T EXIST"
+	crown_used[25] = 0
+	crown_tips[25] = "freedom!"
 
 	crownmax = 23
 

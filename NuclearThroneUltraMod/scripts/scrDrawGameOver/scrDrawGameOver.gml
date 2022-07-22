@@ -93,7 +93,8 @@ function scrDrawGameOver() {
 	with Player
 	{
 		randomlySelected = ranChar;
-		restarted = true;	
+		restarted = true;
+		skeletonlives = 0;
 	}
 	debug("GAMEOVER RESTART");
 	

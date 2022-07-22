@@ -21,3 +21,6 @@ gunangle = random(360)
 alarm[1] = 80
 
 hurt_pitch_variation = 0.1
+loops = GetPlayerLoops();
+acc = 1.05 + clamp(loops*0.1,0,0.3);
+maxChargeSpeed = 6.8 + clamp(loops*0.2,0,3);

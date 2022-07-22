@@ -75,7 +75,7 @@ function scrEnemyDeathEvent(){
 		{
 			scrDrop(0,3);
 		}
-		if Player.ultra_got[29]//Refined taste
+		if Player.ultra_got[29] && !Player.altUltra//Refined taste
 		{
 			scrDrop(0,5);	
 		}

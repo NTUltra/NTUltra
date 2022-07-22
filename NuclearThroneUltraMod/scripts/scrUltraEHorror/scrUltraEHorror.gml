@@ -33,7 +33,7 @@ function scrUltraEHorror() {
 	{
 
 	//HORROR ULTRA E
-	if Player.ultra_got[0]
+	if Player.ultra_got[0] && !Player.altUltra
 	{
 	    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-112,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
 	    skill = 27//patience
@@ -66,7 +66,7 @@ function scrUltraEHorror() {
 	if Player.race=21
 	{
 	//HORROR ULTRA E
-	if Player.ultra_got[0]
+	if Player.ultra_got[0] && !Player.altUltra
 	{
 	    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-32,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
 	    skill = 27//patience

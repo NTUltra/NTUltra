@@ -1,6 +1,6 @@
 if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y < y+22 and UberCont.mouse__x > x-22 and UberCont.mouse__y > y-22) && (alarm[0]<1) ) || (exceptionclick && (alarm[0]<1))
 {
-	if Player.ultra_got[0] == 1 && (skill < 29 || skill > 32)
+	if Player.ultra_got[0] == 1 && !Player.altUltra && (skill < 29 || skill > 32)
 		Player.horrorEtaken = true;
 var regularprocedure=true;
 Player.ultra_got[skill] = 1
@@ -8,9 +8,23 @@ Player.skillpoints -= 1
 
 if skill = 0
 {
-Player.patience += 1;
-Player.skillpoints ++;
-Player.skillsChosen -= 1;
+	if scrCheckGold(Player.wep_name[Player.wep]) && scrCheckGold(Player.wep_name[Player.bwep])
+	{
+		with Player
+		{
+			altUltra = true;
+			spr_idle=sprMutant21DIdle;
+			spr_walk=sprMutant21DWalk;
+			spr_hurt=sprMutant21DHurt;
+			spr_dead=sprMutant21DDead;
+		}
+	}
+	else
+	{
+		Player.patience += 1;
+		Player.skillpoints ++;
+		Player.skillsChosen -= 1;
+	}
 }
 
 if skill == 2
@@ -380,7 +394,7 @@ if Player.crown!=8
 {
 
 //HORROR ULTRA E
-if Player.ultra_got[0]
+if Player.ultra_got[0] && !Player.altUltra
 {
     with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-112,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
     skill = 27//patience
@@ -407,7 +421,7 @@ else
 if Player.race=21
 {
 //HORROR ULTRA E
-if Player.ultra_got[0]
+if Player.ultra_got[0] && !Player.altUltra
 {
     with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-32,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
     skill = 27//patience

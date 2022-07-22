@@ -36,7 +36,7 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 				{
 					with other.creator {
 						with Tentacle
-							alarm[1] = 10;
+							alarm[1] = 15;
 						snd_play(sndMeatExplo,0,true)
 						snd_play(sndBloodLauncherExplo,0.1,true)
 						var dir = point_direction(x,y,hit.x,hit.y);

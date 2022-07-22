@@ -4,6 +4,14 @@ function scrUltras() {
 	ultra_name[0] = "TOTAL FORECALL"
 	ultra_text[0] = "CHOOSE AN ULTRA MUTATION#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)#GET OFFERED PATIENCE WITH EVERY CHOICE"
 	ultra_tips[0] = "adapting"
+	
+	if instance_exists(Player) && scrCheckGold(Player.wep_name[Player.wep]) && scrCheckGold(Player.wep_name[Player.bwep])
+	{
+		ultra_name[0] = "CASH FLOW"
+		ultra_text[0] = "REPLACE BEAM WITH CASH FLOW#CASH FLOW USES CASH INSTEAD OF RADS#GET 100 CASH EVERY AREA#CASH MAXIMUM IS 500#KILLS GENERATE CASH#(UPGRADES TO BEAM STILL APPLY)"
+		ultra_tips[0] = "golden dog"
+	}
+	
 
 	//FISH
 	ultra_name[1] = "CONFISCATE"

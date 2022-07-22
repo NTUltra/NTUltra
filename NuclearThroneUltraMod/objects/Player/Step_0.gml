@@ -1707,18 +1707,19 @@ if crown = 18//Crown of disco
 {
 	with enemy
 	{
-		if alarm[1]>8
+		if alarm[1]>8 && alarm[1] < 30
 			alarm[1]=8;
 	}
 }
-if crown == 10 //Crown of difficulty
+else if crown == 10 //Crown of difficulty
 {
 	with enemy
 	{
-		if alarm[1] > 1 && alarm[1] < 10
-			alarm[1] = 1;
+		if alarm[1] > 2 && alarm[1] < 15
+			alarm[1] -= 1;
+		speed *= 1.1;
 	}
-}	
+}
 wave += 0.4;//Looping animations
 
 //Hammer head
