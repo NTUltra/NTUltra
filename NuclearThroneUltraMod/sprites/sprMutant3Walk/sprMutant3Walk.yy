@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMutant3Walk","path":"sprites/sprMutant3Walk/sprMutant3Walk.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMutant3Walk",
     "tags": [],
     "resourceType": "GMSequence",
   },

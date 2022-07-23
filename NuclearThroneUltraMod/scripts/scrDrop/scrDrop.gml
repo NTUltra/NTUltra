@@ -120,7 +120,7 @@ function scrDrop(itemdrop, weapondrop) {
 	else if Player.ammo[Player.wep_type[Player.bwep]] > Player.typ_amax[Player.wep_type[Player.bwep]]*(0.6-(Player.skill_got[10]*0.1))
 		need += 0.08 else need += 0.36
 	if random(Player.maxhealth) > Player.my_health
-		need += 0.09;
+		need += 0.08;
 
 	if (Player.ultra_got[1]==1)//FISH ULTRA A Confiscate
 	{

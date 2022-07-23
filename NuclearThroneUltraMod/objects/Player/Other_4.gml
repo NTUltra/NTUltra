@@ -15,6 +15,8 @@ if ultra_got[0] && altUltra
 	else 
 		inDebt = false;
 }
+if ultra_got[13] && altUltra && !instance_exists(DeathStare)
+	instance_create(x,y,DeathStare);
 if !instance_exists(PlayerAlarms)
 	instance_create(x,y,PlayerAlarms);
 

@@ -58,7 +58,8 @@ microseconds = 0;
 seconds = 0;
 movethislevel = false;
 secretlevelcount = 0;
-
+acceleration = 3;
+flipDir = 1;
 weaponspickedup = 0;
 freezeframe400 = true;
 screenshake400 = true;

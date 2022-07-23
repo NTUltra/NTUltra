@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprEyesC","path":"sprites/sprEyesC/sprEyesC.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprEyesC",
     "tags": [],
     "resourceType": "GMSequence",
   },

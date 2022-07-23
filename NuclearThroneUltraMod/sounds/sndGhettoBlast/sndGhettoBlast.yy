@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndGhettoBlast",
-  "duration": 0.0,
+  "duration": 1.571202,
   "parent": {
     "name": "Energy",
     "path": "folders/Sounds/Weapons/Energy.yy",

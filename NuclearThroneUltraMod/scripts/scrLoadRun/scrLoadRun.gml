@@ -215,6 +215,10 @@ function scrLoadRun(){
 				//Some ultras change weapon stats:
 				scrWeapons();
 				scrWeaponHold();
+				//Some alt ultras need different descriptions
+				var ug = ultra_got;
+				scrUltras();
+				ultra_got = ug;
 			}
 			debug("load complete");
 			room_restart();

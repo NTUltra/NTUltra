@@ -136,7 +136,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMutant3CIdle","path":"sprites/sprMutant3CIdle/sprMutant3CIdle.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMutant3CIdle",
     "tags": [],
     "resourceType": "GMSequence",
   },

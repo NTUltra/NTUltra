@@ -28,7 +28,7 @@ viewdist-=5;}
 viewx = ((Player.x-vw)*(viewdist-1)+(UberCont.mouse__x-vw))/viewdist
 viewy = ((Player.y-vh)*(viewdist-1)+(UberCont.mouse__y-vh))/viewdist
 //}
-if (instance_exists(Tangle) or instance_exists(TangleSeed)) and mouse_check_button(mb_right) && Player.ultra_got[20]=0//stereo snares confusion
+if (instance_exists(Tangle) or instance_exists(TangleSeed)) and mouse_check_button(mb_right) && Player.ultra_got[20]=0 && !Player.altUltra//stereo snares confusion
 {
 if instance_exists(TangleSeed)
 {

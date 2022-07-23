@@ -1388,7 +1388,7 @@ function scrPowers() {
 		}
 		
 		
-		if ultra_got[13]{
+		if ultra_got[13] && !altUltra{
 			with enemy{
 			if maxhealth<=5 and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 			{//melting ultra a brain capacity
@@ -1429,7 +1429,7 @@ function scrPowers() {
 	//PLANT
 	if race = 5 && !ultra_got[19]
 	{
-	    if ultra_got[20]{//STEREO SNARES
+	    if ultra_got[20] && !Player.altUltra{//STEREO SNARES
 	    with Tangle
 	    {if instance_number(Tangle)>1
 	    instance_destroy();}
@@ -2003,7 +2003,7 @@ function scrPowers() {
 	{
 	if ultra_got[27]=0
 	scrSwapWeps()
-	else{
+	else if !altUltra{
 	twep=bwep;
 	bwep=wep;
 	scrSwapWeps();
@@ -2026,7 +2026,7 @@ function scrPowers() {
 		
 		if wep == 0 && bwep != 0
 			scrSwapWeps();
-	    if ultra_got[27]=1{//mirror hands
+	    if ultra_got[27]=1 && !altUltra{//mirror hands
 	    bwep=twep
 	    }
     
@@ -2039,46 +2039,66 @@ function scrPowers() {
 	if !audio_is_playing(sndEyesLoop) snd_loop(sndEyesLoop)
 
 	if !sound_isplaying(sndEyesLoopUpg) and Player.skill_got[5] =1 snd_loop(sndEyesLoopUpg)
-
+	var px = Player.x;
+	var py = Player.y;
+	var od = 180;
+	if altUltra && ultra_got[9]
+	{
+		px = mouse_x;
+		py = mouse_y;
+		od = 0;
+		if !instance_exists(EyesCrosshair)
+		{
+			instance_create(mouse_x,mouse_y,EyesCrosshair);	
+		}
+		else
+		{
+			with EyesCrosshair
+			{
+				x = mouse_x;
+				y = mouse_y;
+			}
+		}
+	}
 	with enemy
 	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)),y)
-	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))
-	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)))
-	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))}}
+	{if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
+	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
+	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
+	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))}}
 	with Sheep
 	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)),y)
-	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))
-	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)))
-	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))}}
+	{if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
+	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
+	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
+	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))}}
 	with ExplosiveSheep
 	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)),y)
-	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))
-	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)))
-	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))}}
+	{if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
+	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
+	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
+	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))}}
 
 	with chestprop
 	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)),y)
-	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))
-	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)))
-	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))}}
-	with AmmoHPPickup
+	{if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
+	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
+	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
+	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))}}
+	with Pickup
 	{
 		if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 		{
 
 		if Player.ultra_got[12]==1{//Ultra D don't care about the walls +increase speed
-		x += lengthdir_x(2+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))//shouldnt it be more efficient
-		y += lengthdir_y(2+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))//if I do this cehck outside of the with
+		x += lengthdir_x(2+Player.skill_got[5],point_direction(x,y,px,py))//shouldnt it be more efficient
+		y += lengthdir_y(2+Player.skill_got[5],point_direction(x,y,px,py))//if I do this cehck outside of the with
 		}
 		else{
-		if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)),y)
-		x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))
-		if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)))
-		y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))
+		if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
+		x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
+		if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
+		y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))
 		}
 
 		}
@@ -2089,31 +2109,31 @@ function scrPowers() {
 	{
 
 	if Player.ultra_got[12]==1{//Ultra D don't care about the walls
-	x += lengthdir_x(2+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))
-	y += lengthdir_y(2+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))
+	x += lengthdir_x(2+Player.skill_got[5],point_direction(x,y,px,py))
+	y += lengthdir_y(2+Player.skill_got[5],point_direction(x,y,px,py))
 	}
 	else{
-	if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)),y)
-	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))
-	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)))
-	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))
+	if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
+	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
+	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
+	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))
 	}
 
 	}}
-
+/*	got a proper parent now
 	with Rad
 	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 	{
 
 	if Player.ultra_got[12]==1{//Ultra D don't care about the walls
-	x += lengthdir_x(2+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))
-	y += lengthdir_y(2+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))
+	x += lengthdir_x(2+Player.skill_got[5],point_direction(x,y,px,py))
+	y += lengthdir_y(2+Player.skill_got[5],point_direction(x,y,px,py))
 	}
 	else{
-	if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)),y)
-	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))
-	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)))
-	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))
+	if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
+	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
+	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
+	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))
 	}
 
 	with BigRad
@@ -2121,46 +2141,47 @@ function scrPowers() {
 	{
 
 	if Player.ultra_got[12]==1{//Ultra D don't care about the walls
-	x += lengthdir_x(2+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))
-	y += lengthdir_y(2+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))
+	x += lengthdir_x(2+Player.skill_got[5],point_direction(x,y,px,py))
+	y += lengthdir_y(2+Player.skill_got[5],point_direction(x,y,px,py))
 	}
 	else{
-	if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)),y)
-	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))
-	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)))
-	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))
+	if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
+	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
+	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
+	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))
 	}
 
 	}}
 
-	}}
+	}}*/
 	with RadChest
 	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)),y)
-	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))
-	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)))
-	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y))}}
+	{if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
+	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
+	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
+	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))}}
 	with projectile
-	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) and team != 2 and object_index != EnemyLaser
-	{if place_free(x+lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,Player.x,Player.y)+180),y)
-	x += lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,Player.x,Player.y)+180)
-	if place_free(x,y+lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,Player.x,Player.y)+180))
-	y += lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,Player.x,Player.y)+180)}}
+	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) and team != 2 and canBeMoved
+	{if place_free(x+lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od),y)
+	x += lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od)
+	if place_free(x,y+lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od))
+	y += lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od)}}
 	
 	with PopoNade
-	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) and team != 2 and object_index != EnemyLaser
-	{if place_free(x+lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,Player.x,Player.y)+180),y)
-	x += lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,Player.x,Player.y)+180)
-	if place_free(x,y+lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,Player.x,Player.y)+180))
-	y += lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,Player.x,Player.y)+180)}}
+	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) and team != 2 and canBeMoved
+	{if place_free(x+lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od),y)
+	x += lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od)
+	if place_free(x,y+lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od))
+	y += lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od)}}
 
 
-	if ultra_got[9]=1{//eyes Projectile Style ULTRA A
+	if ultra_got[9] == 1 && !altUltra{//eyes Projectile Style ULTRA A
 	    with projectile
-	    if team=other.team && object_index!=Laser && object_index!=MegaLaser
+	    if team=other.team && canBeMoved
 	    {
-	    x=Player.x+lengthdir_x(8,point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y));
-	    y=Player.y+lengthdir_y(8,point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y))
+			x=Player.x+lengthdir_x(8,point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y));
+			y=Player.y+lengthdir_y(8,point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y));
+			speed += friction;
 	    }    
 
 	    }

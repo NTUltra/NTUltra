@@ -72,7 +72,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMutant3Idle","path":"sprites/sprMutant3Idle/sprMutant3Idle.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMutant3Idle",
     "tags": [],
     "resourceType": "GMSequence",
   },

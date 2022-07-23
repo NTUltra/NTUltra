@@ -67,6 +67,13 @@ function scrUltras() {
 	ultra_name[9] = "PROJECTILE STYLE"
 	ultra_text[9] = "HOLD YOUR PROJECTILES#STRONGER PROJECTILE PUSH"
 	ultra_tips[9] = "need more cannons"
+	
+	if instance_exists(Player) && (Player.altUltra || (scrHasEyesMutations() && instance_exists(UltraIcon)))
+	{
+		ultra_name[9] = "STRANGE STYLE"
+		ultra_text[9] = "TELEKINESIS PULLS EVERYTHING TOWARDS YOUR CROSSHAIR#STRONGER PROJECTILE PUSH"
+		ultra_tips[9] = "something strange"
+	}
 
 	ultra_name[10] = "MONSTER STYLE"
 	ultra_text[10] = "WHEN NOT USING ACTIVE#PUSH ENEMIES AWAY"
@@ -84,6 +91,13 @@ function scrUltras() {
 	    ultra_name[13] = "BRAIN CAPACITY"
 	    ultra_text[13] = "BLOW UP LOW HP ENEMIES"// originally doesn't work with scarier face
 	    ultra_tips[13] = "5hp == death"
+		
+		if instance_exists(Player) && (Player.altUltra || (Player.maxhealth == 1 && UberCont.opt_gamemode != 5 && instance_exists(UltraIcon)))
+		{
+			ultra_name[13] = "DEATH STARE"
+			ultra_text[13] = "LOOKING AT ENEMIES SLOWLY KILLS THEM#ENEMIES ARE SCARED OF YOU"
+			ultra_tips[13] = "the face of death"
+		}
     
 	    ultra_name[14] = "DETACHMENT"
 	    ultra_text[14] = "LOSE HALF YOUR HEALTH#GET 4 MORE MUTATIONS"//originally 3
@@ -96,6 +110,7 @@ function scrUltras() {
 	    ultra_name[16] = "DOOMED"
 	    ultra_text[16] = "THE TYPE OF ENEMY THAT DIES#LAST IN AN AREA#IS DEAD IN THE NEXT AREA#MORE BLOOD DAMAGE"
 	    ultra_tips[16] = "blood sweat and tears"
+		
     
 	//PLANT 
 	ultra_name[17] = "TRAPPER"
@@ -117,6 +132,18 @@ function scrUltras() {
 	ultra_name[20] = "STEREO SNARES"
 	ultra_text[20] = "SPAWN TWO SNARES#SNARES DESTROY PROJECTILES"
 	ultra_tips[20] = "better then original stereo snares"
+	
+	if instance_exists(Player)
+	{
+		if (Player.altUltra || (instance_exists(UltraIcon) && (Player.crown == 23 && Player.skill_got[2])))
+		{
+			//EXTRA FEET OR CROWN OF SPEED
+			ultra_name[20] = "SONIC SPEED"
+			ultra_text[20] = "YOU CAN MOVE EXTREMELY FAST!#ACCELERATING OR DECCELERATING QUICKLY#CREATES A SONIC BOOM"
+			ultra_tips[20] = "SONIC BOOM!"
+		}
+	}
+	
 
 	    //Y.V. YUNG VENUZ YV
 	    ultra_name[21] = "IM A GUN GOD"
@@ -156,6 +183,16 @@ function scrUltras() {
 	ultra_name[27] = "MIRROR HANDS"
 	ultra_text[27] = "RIGHT CLICK FIRES YOUR PRIMARY#SWAPPING RELOADS YOUR WEAPONS"
 	ultra_tips[27] = "auto pop pop"
+	if instance_exists(Player)
+	{
+		if (Player.altUltra || (instance_exists(UltraIcon) && (Player.wep == Player.bwep)))
+		{
+			//Need to update alt ultra description in ultraIcon
+			ultra_name[27] = "PUNCHSWAP"
+			ultra_text[27] = "SWAPPING MAKES YOU SWING#WITH YOUR WEAPON#SWINGS DEFLECT PROJECTILES#AND DEAL DAMAGE"
+			ultra_tips[27] = "GET KNOCKED OUT"
+		}
+	}
 
 	ultra_name[28] = "STRONG FIRE"
 	ultra_text[28] = "MORE BULLET DAMAGE"

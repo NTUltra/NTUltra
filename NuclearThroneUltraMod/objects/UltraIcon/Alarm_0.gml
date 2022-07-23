@@ -13,6 +13,22 @@ else if skill == 6 && (Player.curse || Player.bcurse)
 {
 	sprite_index = sprCrystalCursedUltra;
 }
+else if skill == 9 && scrHasEyesMutations()
+{
+	sprite_index = sprEyesStrangeStyle;
+}
+else if skill == 13 && Player.maxhealth == 1
+{
+	sprite_index = sprDeathStare;
+}
+else if skill == 20 && Player.crown == 23 && Player.skill_got[2]
+{
+	sprite_index = sprPlantSonicSpeed;
+}
+else if skill == 27 && (Player.wep == Player.bwep)
+{
+	sprite_index = sprSteroidsPunchSwap;
+}
 else if skill == 29 && Player.spr_idle == sprMutant8DIdle
 {
 	sprite_index = sprExclusiveTaste	

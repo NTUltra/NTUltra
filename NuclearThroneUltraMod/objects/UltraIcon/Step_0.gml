@@ -1,6 +1,5 @@
 if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y < y+22 and UberCont.mouse__x > x-22 and UberCont.mouse__y > y-22) && (alarm[0]<1) ) || (exceptionclick && (alarm[0]<1))
 {
-debug("Player.horrorEtaken ",Player.horrorEtaken);
 	if Player.ultra_got[0] == 1 && !Player.altUltra && (skill < 29 || skill > 32)
 		Player.horrorEtaken = true;
 var regularprocedure=true;
@@ -31,7 +30,55 @@ if skill = 0
 		Player.skillsChosen -= 1;
 	}
 }
-if skill == 106//Hands secret ultras
+else if skill == 9 // Strange style
+{
+	if scrHasEyesMutations()
+	{
+		with Player {
+			altUltra = true;
+			ultra_name[9] = "STRANGE STYLE"
+			ultra_text[9] = "STRONGER TELEKINESIS#TELEKINESIS PULLS EVERYTHING TOWARDS YOUR CROSSHAIR"
+			ultra_tips[9] = "something strange"
+			if bskin == 1
+			{
+				spr_idle=sprMutant3DIdle;
+				spr_walk=sprMutant3DWalk;
+				spr_hurt=sprMutant3DHurt;
+				spr_dead=sprMutant3DDead;
+			}
+			else if bskin == 2
+			{
+				spr_idle=sprMutant3EIdle;
+				spr_walk=sprMutant3EWalk;
+				spr_hurt=sprMutant3EHurt;
+				spr_dead=sprMutant3EDead;
+			}
+			else
+			{
+				spr_idle=sprMutant3FIdle;
+				spr_walk=sprMutant3FWalk;
+				spr_hurt=sprMutant3FHurt;
+				spr_dead=sprMutant3FDead;
+			}
+		}
+	}
+}
+else if skill == 13 && Player.maxhealth == 1
+{
+	with Player {
+		altUltra = true;
+		instance_create(x,y,DeathStare);
+	}
+}
+else if skill == 20 && Player.crown == 23 && Player.skill_got[2]
+{
+	with Player
+	{
+		altUltra = true;
+		maxspeed += 6;
+	}
+}
+else if skill == 106//Hands secret ultras
 {
 	with Player
 	{
@@ -96,6 +143,16 @@ else if skill == 23 && Player.race == 6 && scrMeleeWeapons(Player.wep) && scrMel
 			spr_hurt=sprMutant6EHurt;
 			spr_dead=sprMutant6EDead;
 		}
+	}
+}
+else if skill == 27 && (Player.wep == Player.bwep)
+{
+	with Player
+	{
+		altUltra = true;
+		ultra_name[27] = "PUNCHSWAP"
+		ultra_text[27] = "SWAPPING MAKES YOU SWING WITH YOUR WEAPON#SWINGS DEFLECT PROJECTILES AND DEALS DAMAGE"
+		ultra_tips[27] = "GET KNOCKED OUT"
 	}
 }
 else if skill == 29 && Player.spr_idle == sprMutant8DIdle

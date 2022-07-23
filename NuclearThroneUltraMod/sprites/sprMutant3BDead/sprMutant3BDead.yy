@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMutant3BDead","path":"sprites/sprMutant3BDead/sprMutant3BDead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMutant3BDead",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -4825,7 +4825,7 @@ function scrFire2() {
 		//wep = 0;
 		clicked = 0;
 		can_shoot = 0;
-		if ultra_got[27]
+		if ultra_got[27] && !altUltra
 		{
 			if bwep == wep
 				bwep = 0;

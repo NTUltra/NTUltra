@@ -72,7 +72,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMutant3BIdle","path":"sprites/sprMutant3BIdle/sprMutant3BIdle.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMutant3BIdle",
     "tags": [],
     "resourceType": "GMSequence",
   },

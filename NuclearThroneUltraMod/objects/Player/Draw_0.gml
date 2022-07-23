@@ -65,7 +65,7 @@ draw_sprite_ext(wep_sprt[cwep],triggerfinger,x-right,y-2,image_xscale,bwepright,
 
 }
 //DUAL WIELDING
-if ultra_got[27]=1//copy primary
+if ultra_got[27]=1 && !altUltra//copy primary
 {
 
 //first draw secondary on back of roids
@@ -131,7 +131,7 @@ if race = 7 and bwep != 0
 
 }
 
-if ultra_got[27]=1//copy primary
+if ultra_got[27]=1 && !altUltra//copy primary
 {
 bwep=twep;//and return weapon
 }

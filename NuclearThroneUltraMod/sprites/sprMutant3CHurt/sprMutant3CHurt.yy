@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMutant3CHurt","path":"sprites/sprMutant3CHurt/sprMutant3CHurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMutant3CHurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

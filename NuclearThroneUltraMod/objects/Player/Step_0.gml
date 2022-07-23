@@ -6,15 +6,103 @@ if unkillable
 if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 {
 	if roll = 0
-	{if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
-	hspeed -= 3
-	if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
-	hspeed += 3
-	if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
-	vspeed -= 3
-	if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
-	vspeed += 3
-
+	{
+		var previousSpeed = max(1,speed);
+		if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+		{
+			hspeed -= acceleration
+		}
+		if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+		{
+			hspeed += acceleration
+		}
+		if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+		{
+			vspeed -= acceleration
+		}
+		if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+		{
+			vspeed += acceleration
+		}
+		if ultra_got[20] && altUltra
+		{
+			var moving = false;
+			var extraacc = 1.5;
+			var braking = 0.4;
+			if speed > 5.2
+				speed -= 3.5;
+			var multi = 0;//Diagonal movement is faster acceleration otherwise
+			if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+			{
+				if hspeed > 0
+					hspeed *= braking;
+				hspeed -= extraacc
+				multi += extraacc;
+				moving = true;
+			}
+			if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+			{
+				if hspeed < 0
+					hspeed *= braking;
+				hspeed += extraacc
+				multi += extraacc;
+				moving = true;
+			}
+			if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+			{
+				if vspeed > 0
+					vspeed *= braking;
+				vspeed -= extraacc
+				multi += extraacc;
+				moving = true;
+			}
+			if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+			{
+				if vspeed < 0
+					vspeed *= braking;
+				vspeed += extraacc
+				multi += extraacc;
+				moving = true;
+			}
+			speed -= max(0,multi-extraacc);
+			if !moving
+			{
+				speed *= 0.4;
+			}
+			var msk = mask_index;
+			if (!place_meeting(x+hspeed,y+vspeed,Wall) && abs(speed - previousSpeed) > 4)
+			{
+				snd_play(sndGhettoBlast);
+				with instance_create(x+lengthdir_x(16,direction),y+lengthdir_y(16,direction),PlantSonicBoom)
+				{
+					motion_add(other.direction+180,other.speed+3)
+					image_angle = direction
+					team = other.team
+				}
+				with instance_create(x,y,PlantSonicBoom)
+				{
+					sprite_index = sprSpinSlash;
+					mask_index = mskSpinSlash;
+					image_angle = direction
+					team = other.team
+				}
+				with instance_create(x+lengthdir_x(16,direction+180),y+lengthdir_y(16,direction+180),PlantSonicBoom)
+				{
+					motion_add(other.direction,other.speed+3)
+					image_angle = direction
+					team = other.team
+				}
+			}
+			mask_index = msk;
+			if speed > maxspeed
+			{
+				if !instance_exists(PlantCharge)
+				{
+					snd_play(sndSheepLoopStart);
+					instance_create(x,y,PlantCharge);	
+				}
+			}
+		}
 
 	if race == 23 && ultra_got[92] == 0
 	speed = clamp(speed,maxspeed*0.8,maxspeed);
@@ -600,27 +688,46 @@ if KeyCont.key_swap[p] = 1 and bwep != 0
 {
 	instance_create(x,y,WepSwap)
 	scrSwapWeps()
-
-	if ultra_got[27]//ROIDS MIRROR HANDS
-	{
-		if reload < 0
+	if ultra_got[27]{
+		if altUltra
 		{
-			var pci = reload/wep_load[wep];
-			pci = 1+pci;
-			pci = pci-floor(pci);//Percentage of load that would be the reload
-			reload -= reload*pci;
+			if !instance_exists(RoidsSuperSwap) && bwep != 0
+			{
+				snd_play(sndPunchSwap,0.1,true);
+				var aim = point_direction(x,y,mouse_x,mouse_y);
+				with instance_create(x+lengthdir_x(8,aim+180),y+lengthdir_y(8,aim+180),RoidsSuperSwap)
+				{
+					wepSpr = other.wep_sprt[other.bwep];
+					motion_add(aim,1+(other.skill_got[13]*2))
+					image_angle = aim;
+					team = other.team
+					angle = image_angle-(60 * other.flipDir);
+					rot = 25 * other.flipDir;
+				}
+				flipDir *= -1;
+			}
 		}
-		else
-			reload *= 0.4;
-		if breload < 0
+		else //ROIDS MIRROR HANDS
 		{
-			var pci = breload/wep_load[bwep];
-			pci = 1+pci;
-			pci = pci-floor(pci);//Percentage of load that would be the reload
-			breload -= breload*pci;
+			if reload < 0
+			{
+				var pci = reload/wep_load[wep];
+				pci = 1+pci;
+				pci = pci-floor(pci);//Percentage of load that would be the reload
+				reload -= reload*pci;
+			}
+			else
+				reload *= 0.4;
+			if breload < 0
+			{
+				var pci = breload/wep_load[bwep];
+				pci = 1+pci;
+				pci = pci-floor(pci);//Percentage of load that would be the reload
+				breload -= breload*pci;
+			}
+			else
+				breload *= 0.4;
 		}
-		else
-			breload *= 0.4;
 	}
 	snd_play(wep_swap[wep])
 	if (curse)
@@ -631,7 +738,7 @@ if KeyCont.key_swap[p] = 1 and bwep != 0
 	{
 		snd_play(sndSwapGold);	
 	}
-	if ultra_got[27]
+	if ultra_got[27] && !altUltra
 	{
 	bwepangle=wepangle;
 	}
@@ -841,13 +948,13 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 		{
 			bcan_shoot = 1
 
-			if ultra_got[27]{
+			if ultra_got[27] && !altUltra{
 				var roidsWepangle;//damage control
 				roidsWepangle=bwepangle;//steroids melee shit
 				scrSwapWeps();
 
 			}
-			if ultra_got[27]=0 && wep_type[bwep]=0//mirror hands the weird melee bug fix yo!
+			if (ultra_got[27]=0 || altUltra) && wep_type[bwep]=0//mirror hands the weird melee bug fix yo!
 				bwepflip = -bwepflip
 
 
@@ -866,7 +973,7 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 			{with instance_create(x,y,Shell)
 			{sprite_index = sprShotShell
 			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+other.right*100+random(40)-20,2+random(2))}}
-			if ultra_got[27]
+			if ultra_got[27] && !altUltra
 			{
 			wkick = -1
 			if wep = 8
@@ -878,7 +985,7 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 			bwkick = -2}
 			snd_play(sndShotReload,0,true)
 			}
-			if ultra_got[27]{
+			if ultra_got[27] && !altUltra{
 				scrSwapWeps();
 				bwepangle=roidsWepangle;//what a mess
 			}
