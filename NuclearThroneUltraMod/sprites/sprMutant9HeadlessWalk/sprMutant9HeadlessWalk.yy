@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMutant9HeadlessWalk","path":"sprites/sprMutant9HeadlessWalk/sprMutant9HeadlessWalk.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMutant9HeadlessWalk",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -22,6 +22,10 @@ function scrEnemyDeathEvent(){
 		var isdoc = Player.race == 25;
 		with Player
 		{
+			if ultra_got[0] && altUltra
+			{
+				cash = min(cash + 1,maxCash);
+			}
 			if skill_got[34] //FLEXIBLE ELBOWS
 			{
 				var lowb = 0;

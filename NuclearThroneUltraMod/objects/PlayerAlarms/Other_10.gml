@@ -6,4 +6,8 @@ if instance_exists(Player)
 		alarm[2] = stressLowCheck;
 	if Player.ultra_got[26] //GET LOADED
 		alarm[3] = 60;
+	if Player.crown == 25//Crown of freedom
+	{
+		alarm[4] = 30;
+	}
 }

@@ -1,19 +1,31 @@
 //delay before you can chose
 if skill == 82 && UberCont.opt_gamemode == 25
 	instance_destroy();
-if skill == 0 && scrCheckGold(Player.wep_name[Player.wep]) && scrCheckGold(Player.wep_name[Player.bwep])
+if skill == 0 && (scrCheckGold(Player.wep_name[Player.wep]) || scrCheckGold(Player.wep_name[Player.bwep]))
 {
 	sprite_index = sprCashFlow;	
 }
-if skill == 4 && Player.bskin == 2
+else if skill == 4 && Player.bskin == 2
 {
 	sprite_index = sprFishCanGun;	
 }
-if skill == 29 && Player.spr_idle == sprMutant8DIdle
+else if skill == 6 && (Player.curse || Player.bcurse)
+{
+	sprite_index = sprCrystalCursedUltra;
+}
+else if skill == 29 && Player.spr_idle == sprMutant8DIdle
 {
 	sprite_index = sprExclusiveTaste	
 }
-if skill == 76 && Player.ultimategamble=true
+else if skill == 35 && Player.crown == 12//Crown of inversion
+{
+	sprite_index = sprReverseFocus;	
+}
+else if skill == 39 && (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep]))
+{
+	sprite_index = sprBigRebel;	
+}
+else if skill == 76 && Player.ultimategamble=true
 {
 	sprite_index=sprUltimateGamble;
 }

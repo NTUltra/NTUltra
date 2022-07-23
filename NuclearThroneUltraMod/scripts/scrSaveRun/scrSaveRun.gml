@@ -105,6 +105,10 @@ function scrSaveRun() {
 			collectedInversionShards: UberCont.collectedInversionShards,
 			collectedInversionShardReward: UberCont.collectedInversionShardReward,
 			inverted: Player.inverted,
+			cash: Player.cash,
+			lstCash: Player.lstCash,
+			maxCash: Player.maxCash,
+			canHeal: Player.canHeal,
 		};
 		with UberCont
 		{

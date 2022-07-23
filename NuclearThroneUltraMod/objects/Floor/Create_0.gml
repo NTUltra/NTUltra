@@ -237,7 +237,6 @@ sprite_index=sprFloor0;
 break;
 }
 }
-
 if !place_meeting(x-32,y,Floor) && !place_meeting(x-32,y,Wall)
 	instance_create(x-32,y,Top)
 if !place_meeting(x,y-32,Floor) && !place_meeting(x,y-32,Wall)
@@ -255,7 +254,7 @@ if !place_meeting(x-32,y+32,Floor) && !place_meeting(x-32,y+32,Wall)
 	instance_create(x-32,y+32,Top)
 if !place_meeting(x+32,y+32,Floor) && !place_meeting(x+32,y+32,Wall)
 	instance_create(x+32,y+32,Top)
-	
+
 /*
 instance_create(x-32,y,Top)
 instance_create(x+32,y,Top)

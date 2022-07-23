@@ -1,6 +1,6 @@
 if instance_exists(Player)
 {
-if Player.ultra_got[6]=1{
+if Player.ultra_got[6]=1 && !Player.altUltra{
 
 if x!=xprevious||y!=yprevious
 {

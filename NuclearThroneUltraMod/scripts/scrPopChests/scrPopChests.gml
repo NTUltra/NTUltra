@@ -187,6 +187,8 @@ function scrPopChests() {
 		wepChestGol = 0;
 		healthChestGol = 0;
 		}
+		if !Player.canHeal
+			healthChestGol = 0;
 	
 	}
 	var totalWepsChests=0,totalRadChests=0,totalAmmoChests=0,totalHealthChests=0;

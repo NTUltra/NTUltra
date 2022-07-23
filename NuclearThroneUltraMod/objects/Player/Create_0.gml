@@ -9,6 +9,7 @@ outOfCombat = false;
 restarted = false;
 hurt_pitch_variation = 0;
 reachedUltra = false;
+canHeal = true;
 noHit = 0;
 //3D audio
 audio_listener_orientation(0, 0, -1, 0, 1, 0);
@@ -158,6 +159,9 @@ altUltra = false;
 loops = 0;
 //RACE STUFF
 scrLoadRace();
+curse = 0
+bcurse = 0
+ccurse = 0
 scrUltras()
 scrCrowns()
 
@@ -213,9 +217,6 @@ if UberCont.opt_gamemode == 31
 }
 bwep = 0
 cwep = 0 //roids specific
-curse = 0
-bcurse = 0
-ccurse = 0
 reload = 0
 creload = 0
 breload = 0
@@ -417,6 +418,10 @@ standartAccuracy = accuracy;
 
 my_health = maxhealth
 lsthealth = maxhealth //lasthealth
+maxCash = 500;
+cash = maxCash;
+lstCash = maxCash;
+inDebt = false;
 prevhealth = maxhealth //health previous step
 
 //default shit
@@ -439,8 +444,7 @@ decay = 600
 crownrad = 0
 
 rad = 0
-cash = 0;
-maxCash = 500;
+
 can_shoot = 1
 bcan_shoot = 0
 ccan_shoot = 0

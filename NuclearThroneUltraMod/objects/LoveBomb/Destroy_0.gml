@@ -1,7 +1,7 @@
 /// @description Deliver some love
 with instance_create(x,y,LoveExplosion)
 	scrCanHumphry();
-if instance_exists(Player) && random(100) < 7.7//7.69% chance
+if instance_exists(Player) && Player.canHeal && random(100) < 7.7//7.69% chance
 {
 	with instance_create(Player.x,Player.y-8,HealFX)
 	{

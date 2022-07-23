@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMutant9Hurt","path":"sprites/sprMutant9Hurt/sprMutant9Hurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMutant9Hurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

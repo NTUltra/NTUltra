@@ -560,11 +560,15 @@ function scrPowers() {
 	{
 		if ultra_got[0] && altUltra
 		{
-			cash = 100;
-			if cash <= 0
+			if cash <= 0 && !inDebt
 			{
 				snd_play_2d(sndHorrorEmpty);
-				scrEmptyRad();//TODO TELL EM ITS CASH
+				with instance_create(x,y,PopupText)
+				{
+					mytext = "NOT ENOUGH CASH"
+					theColour=c_red;
+				}
+				BackCont.shake += 5;
 			}
 			else
 			{
@@ -1280,58 +1284,64 @@ function scrPowers() {
 	}
 
 	//REBEL
-	if race = 10 and my_health > 2 || (race = 10 && !(instance_exists(Ally)) && my_health > 1) && alarm[3]<1
-	{canrebel = 1
-
-	if !(instance_exists(Ally))
-	{my_health -=1;}
-	else{my_health -= 2;
-	}
-	exception=true;
-	if alarm[7]<1
-	alarm[7]=12;//reset the exception in two steps
-
-
-	if skill_got[5] = 1
-	snd_play_2d(sndSpawnSuperAlly)
-	else
-	snd_play_2d(sndSpawnAlly)
-	with Ally
+	var ammoRebel = false;
+	if altUltra && Player.ultra_got[39]
+		ammoRebel = true;
+	if race = 10 and (!ammoRebel && (my_health > 2 || (race = 10 && !(instance_exists(Ally)) && my_health > 1) && alarm[3]<1)) || (ammoRebel && ammo[wep_type[wep]] >= typ_ammo[wep_type[wep]]*1.5)
 	{
-		instance_create(x,y,HealFX)
-		alarm[2] = 120;
-		with Portal
+		canrebel = 1
+		if ammoRebel
 		{
-			if type == 1
+			ammo[wep_type[wep]] -= typ_ammo[wep_type[wep]]*1.5
+		}
+		else
+		{
+			if !(instance_exists(Ally))
+			{my_health -=1;}
+			else{my_health -= 2;
+			}
+			exception=true;
+			if alarm[7]<1
+			alarm[7]=12;//reset the exception in two steps
+			
+			sprite_index = spr_hurt
+			image_index = 0
+			
+			snd_play_2d(snd_hurt, hurt_pitch_variation)
+		}
+
+		if skill_got[5] = 1
+		snd_play_2d(sndSpawnSuperAlly)
+		else
+		snd_play_2d(sndSpawnAlly)
+		with Ally
+		{
+			instance_create(x,y,HealFX)
+			alarm[2] = 120;
+			with Portal
 			{
-				other.alarm[2] = 1;
+				if type == 1 && !inverted
+				{
+					other.alarm[2] = 1;
+				}
+			}
+
+			if instance_exists(Player)
+			{
+			if Player.ultra_got[37]==1//Rebel Ultra A Personal Guard
+			maxhealth=30;
+			else
+			maxhealth = 12;
 			}
 		}
-
-		if instance_exists(Player)
+		if Player.ultra_got[38]==1//Rebel Ultra B Riot
 		{
-		if Player.ultra_got[37]==1//Rebel Ultra A Personal Guard
-		maxhealth=30;
-		else
-		maxhealth = 12;
+		instance_create(x,y,Ally);
 		}
-	}
-	if Player.ultra_got[38]==1//Rebel Ultra B Riot
-	{
-	instance_create(x,y,Ally);
-	}
-	instance_create(x,y,Ally)
+		instance_create(x,y,Ally)
 
-	sprite_index = spr_hurt
-	image_index = 0
-
-
-
-	snd_play_2d(snd_hurt, hurt_pitch_variation)
-	Sleep(40)
-	instance_create(x,y,Dust)
-
-
+		Sleep(40)
+		instance_create(x,y,Dust)
 	}
 
 	//CRYSTAL
@@ -1567,8 +1577,9 @@ function scrPowers() {
 
 		if ultra_got[0] && altUltra
 		{
-			if cash > 0
+			if !inDebt || cash > 0
 			{
+				cash --;
 				if horrorcharge=origincharge
 					snd_play_2d(sndHorrorCashFlowStart);
 					//snd_play_2d(sndHorrorBeam);
@@ -1626,12 +1637,11 @@ function scrPowers() {
 				with instance_create(x,y,HorrorMoney)
 				{
 					charge=other.horrorcharge;
-					motion_add(aimDirection+(random(charge*5)-charge*2.5),8+(charge*0.5))
+					motion_add(aimDirection+(random(charge*4)-charge*2),10+(charge*0.5))
 					image_angle = direction
 					team = other.team
 				}
-				var s = max(1,horrorcharge*0.5);
-				debug("charge: ",horrorcharge);
+				var s = max(2,horrorcharge*0.25);
 				BackCont.viewx2 += lengthdir_x(s,aimDirection+180)*UberCont.opt_shake
 				BackCont.viewy2 += lengthdir_y(s,aimDirection+180)*UberCont.opt_shake
 				BackCont.shake += s;
@@ -1811,11 +1821,6 @@ function scrPowers() {
 			audio_stop_sound(sndHorrorLoop);
 			audio_stop_sound(sndHorrorLoopTB);
 			snd_play_2d(sndHorrorEmpty);
-		} else if (audio_is_playing(sndHorrorCashFlow) || audio_is_playing(sndHorrorCashFlowTB))
-		{
-			audio_stop_sound(sndHorrorCashFlow);
-			audio_stop_sound(sndHorrorCashFlowTB);
-			snd_play_2d(sndHorrorEmpty);
 		}
 		rad = max(rad,0);
 	}
@@ -1876,26 +1881,47 @@ function scrPowers() {
 
 		if (ultra_got[35])
 		{
-			var pslow = 0.5;
-			if skill_got[12]
-				pslow = 0.6;
-			with projectile
+			if altUltra
 			{
-				if team == other.team
+				var pslow = 2;
+				with projectile
 				{
-					x -= hspeed;
-					y -= vspeed;
-					speed += friction;
+					x -= hspeed*pslow;
+					y -= vspeed*pslow;
 				}
-				else
+				with MeleeParent
+				{
+					image_speed *= 4;
+				}
+				with enemy
 				{
 					x -= hspeed*pslow;
 					y -= vspeed*pslow;
 				}
 			}
-			with MeleeParent
+			else
 			{
-				image_speed *= 4;
+				var pslow = 0.5;
+				if skill_got[12]
+					pslow = 0.6;
+				with projectile
+				{
+					if team == other.team
+					{
+						x -= hspeed;
+						y -= vspeed;
+						speed += friction;
+					}
+					else
+					{
+						x -= hspeed*pslow;
+						y -= vspeed*pslow;
+					}
+				}
+				with MeleeParent
+				{
+					image_speed *= 4;
+				}
 			}
 		}
 		else
@@ -1919,11 +1945,19 @@ function scrPowers() {
 			if my_health > 0
 			{
 			if bskin=1
+			{
 			spr_walk = sprMutant9BThronebutt;
+			if altUltra
+				spr_walk=sprMutant9EThronebutt;
+			}
 			else if bskin=2
 			spr_walk = sprMutant9CThronebutt;
 			else
+			{
 			spr_walk=sprMutant9Thronebutt;
+			if altUltra
+				spr_walk=sprMutant9DThronebutt;
+			}
 			}
 
 
@@ -2183,11 +2217,19 @@ function scrPowers() {
 	if my_health > 0
 	{
 	if bskin=1
+	{
 	spr_walk = sprMutant9BWalk;
+	if altUltra
+		spr_walk = sprMutant9EWalk;
+	}
 	else if bskin=2
 	spr_walk = sprMutant9CWalk;
 	else
+	{
 	spr_walk = sprMutant9Walk;
+	if altUltra
+		spr_walk = sprMutant9DWalk;
+	}
 	}
 	if skill_got[5]//THRONEBUTT
 	{
@@ -2249,12 +2291,12 @@ function scrPowers() {
 	audio_stop_sound(sndHorrorLoopTB);
 	audio_stop_sound(sndHorrorLoop);
 	horrorcharge=origincharge;
-	if ((audio_is_playing(sndHorrorCashFlow) || audio_is_playing(sndHorrorCashFlowTB))  && ultra_got[0] && altUltra)
-	{
-		audio_stop_sound(sndHorrorCashFlow);
-		audio_stop_sound(sndHorrorCashFlowTB);
-		snd_play_2d(sndHorrorCashFlowEnd);
-	}
+		if ((audio_is_playing(sndHorrorCashFlow) || audio_is_playing(sndHorrorCashFlowTB)) && ultra_got[0] && altUltra)
+		{
+			audio_stop_sound(sndHorrorCashFlow);
+			audio_stop_sound(sndHorrorCashFlowTB);
+			snd_play_2d(sndHorrorCashFlowEnd);
+		}
 	}
 	else if race==22 //rogue
 	{

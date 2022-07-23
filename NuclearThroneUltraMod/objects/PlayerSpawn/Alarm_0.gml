@@ -9,7 +9,7 @@ instance_destroy(myCorpse);
 if race == 9//Delete chicken head
 with Corpse
 {
-	if sprite_index == sprMutant9HeadIdle || sprite_index == sprMutant9BHeadIdle
+	if sprite_index == sprMutant9HeadIdle || sprite_index == sprMutant9BHeadIdle || sprite_index == sprMutant9DHeadIdle || sprite_index == sprMutant9EHeadIdle
 		instance_destroy();
 }
 snd_play(sndStatueCharge);

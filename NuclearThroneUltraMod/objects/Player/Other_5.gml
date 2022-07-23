@@ -32,7 +32,7 @@ else
 {
 	UberCont.canSpawnInversionShards = false;
 }
-if race == 27
+if race == 27 && canHeal
 {
 	if scrIsInInvertedArea()
 	{
@@ -68,7 +68,7 @@ if race=16
 if ultra_got[62]//Viking armour up ultra
 	    armour++;
 
-if race==10//Rebel pasive
+if race==10 && canHeal//Rebel pasive
 {
 	//(maxhealth-my_health)/2
 	if my_health<maxhealth
@@ -97,12 +97,12 @@ else if race=12//yung cuz reset max HP
 	maxhealth = targetHealth;
 	
 }
-if ultra_got[40] = 1 || ultra_got[47] {//Rebel Ultra D YUNG CUZ ULTRA C
+if ultra_got[40] = 1 || ultra_got[47] && canHeal{//Rebel Ultra D YUNG CUZ ULTRA C
 	my_health=max(my_health,maxhealth);
 }
 
 //CROWN OF LIFE
-if crown = 2
+if crown = 2 && canHeal
 {
 	if my_health >= maxhealth
 	{
@@ -216,6 +216,8 @@ if race==21
 {
 audio_stop_sound(sndHorrorLoopTB);
 audio_stop_sound(sndHorrorLoop);
+audio_stop_sound(sndHorrorCashFlow);
+audio_stop_sound(sndHorrorCashFlowTB);
 horrorcharge=origincharge;
 }
 oasis=false;
@@ -224,6 +226,7 @@ oasis=false;
 if looping && area != 104
 {
 	my_health = maxhealth;
+	prevhealth = my_health;
 	ammo[1] += 200;
 	ammo[2] += 20;
 	ammo[3] += 20;

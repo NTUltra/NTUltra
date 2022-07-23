@@ -72,7 +72,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMutant9HeadlessIdle","path":"sprites/sprMutant9HeadlessIdle/sprMutant9HeadlessIdle.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMutant9HeadlessIdle",
     "tags": [],
     "resourceType": "GMSequence",
   },

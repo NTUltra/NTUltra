@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMutant9BThronebutt","path":"sprites/sprMutant9BThronebutt/sprMutant9BThronebutt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMutant9BThronebutt",
     "tags": [],
     "resourceType": "GMSequence",
   },

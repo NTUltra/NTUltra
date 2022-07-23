@@ -298,9 +298,10 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		if (keyboard_check_pressed(ord("G")))
 		    {
 			var dangle = random(1)*360;
-		    instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,AmmoChest)
+		    with instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,WeaponChest)
+				curse = 1;
 			thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,PopupText);
-			thing.mytext = "AMMO CHEST!";
+			thing.mytext = "CURSE WEAPON CHEST!";
 		    }
 		if (keyboard_check_pressed(ord("I")))
 		    {
@@ -452,20 +453,36 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		spr_idle = sprMutant9BIdle
 		spr_hurt = sprMutant9BHurt
 		spr_walk = sprMutant9BWalk
+			if altUltra {
+				spr_idle = sprMutant9EIdle
+				spr_hurt = sprMutant9EHurt
+				spr_walk = sprMutant9EWalk
+			}
 		}
 		else
 		{
-		spr_idle = sprMutant9Idle
-		spr_hurt = sprMutant9Hurt
-		spr_walk = sprMutant9Walk}
+			spr_idle = sprMutant9Idle
+			spr_hurt = sprMutant9Hurt
+			spr_walk = sprMutant9Walk
+			if altUltra {
+				spr_idle = sprMutant9DIdle
+				spr_hurt = sprMutant9DHurt
+				spr_walk = sprMutant9DWalk
+			}
+		}
+		/*
 		with Corpse{
 		if other.bskin=2
 		sprite_index = mskPickupThroughWall;//invisible basicly
 		else if other.bskin=1
-		sprite_index = sprMutant9BHeadIdle
+		{
+			sprite_index = sprMutant9BHeadIdle
+		}
 		else
-		sprite_index = sprMutant9HeadIdle
-		instance_destroy()}
+		{
+			sprite_index = sprMutant9HeadIdle
+		}
+		instance_destroy()}*/
 	}
 
 	
@@ -696,7 +713,18 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 	if reload > lowa
 	{
 		reload -= 1
-		
+		if curse {
+			reload -= 0.05;	
+		}
+		if ultra_got[29] && !altUltra
+		{
+			var t = wep_area[wep];
+			if t < 1
+				t = 19;
+			t *= 0.01;
+			reload -= t;
+			
+		}
 		if race = 6
 		{//YV fire rate boost
 			reload -= 0.25//0.25
@@ -1012,11 +1040,18 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 prevreload = reload;
 prevbreload = breload;
 prevcreload = creload;
-
+if lstCash < cash
+{
+	lstCash += 1;
+}
 if lsthealth < my_health
 {
 drawlowhp = 20
 lsthealth += 1
+}
+else if lstCash > cash
+{
+	lstCash -= 0.5;	
 }
 if sprite_index != spr_hurt and lsthealth > my_health
 {

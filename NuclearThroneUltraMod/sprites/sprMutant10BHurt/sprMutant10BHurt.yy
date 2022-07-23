@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMutant10BHurt","path":"sprites/sprMutant10BHurt/sprMutant10BHurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMutant10BHurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

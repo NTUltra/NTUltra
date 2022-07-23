@@ -4,8 +4,23 @@ if (place_meeting(x,y,FloorExplo))
 	exit;
 }
 var area;
-if instance_exists(Player) area = Player.area
-else area = BackCont.area
+if instance_exists(Player) 
+{
+	area = Player.area
+	if Player.crown != 25
+	{
+		alarm[2] = 1;
+		alarm[3] = 1;
+		alarm[0] = 1;
+	}
+}
+else 
+{
+	area = BackCont.area
+	alarm[2] = 1;
+	alarm[3] = 1;
+	alarm[0] = 1;
+}
 if area==104
 area=103;
 if (UberCont.opt_gamemode == 25 && area != 7 && !instance_exists(Vlambeer))
@@ -108,145 +123,10 @@ sprite_index=sprFloor0Explo;
 break;
 }
 
-alarm[3] = 1;
-
 //Sleep(1) fk off
 image_speed = 0
 image_index = choose(1,2,3,4)
 
-/*
-i=0;
-repeat(8)
-{
-wall[i] = 0;
-i++;
-}
-
-
-if !place_meeting(x-16,y,Floor)
-wall[0] =  instance_create(x-16,y,Wall).id
-
-
-if !place_meeting(x+16,y,Floor)
-wall[1] = instance_create(x+16,y,Wall).id
-
-
-if !place_meeting(x,y+16,Floor)
-wall[2] = instance_create(x,y+16,Wall).id
-
-
-if !place_meeting(x,y-16,Floor)
-wall[3] = instance_create(x,y-16,Wall).id
-
-
-if !place_meeting(x-16,y+16,Floor)
-wall[4] = instance_create(x-16,y+16,Wall).id
-
-
-if !place_meeting(x+16,y-16,Floor)
-wall[5] = instance_create(x+16,y-16,Wall).id
-
-
-if !place_meeting(x+16,y+16,Floor)
-wall[6] = instance_create(x+16,y+16,Wall).id
-
-
-if !place_meeting(x-16,y-16,Floor)
-wall[7] = instance_create(x-16,y-16,Wall).id
-
-
-i=0;
-repeat(8)
-{
-with wall[i]
-{
-if !place_meeting(x,y+16,Floor)
-visible = 0
-else
-visible = 1
-}
-i++;
-}
-
-i=0;
-repeat(8)
-{
-with wall[i]
-{
-if point_distance(x,y,other.x,other.y)<32
-{
-
-if place_free(x-16,y)
-l = 0
-else
-l = 4
-
-if place_free(x+16,y)
-w = 24-l
-else
-w = 20-l
-
-if place_free(x,y-16)
-r = 0
-else
-r = 4
-
-if place_free(x,y+16)
-h = 24-r
-else
-h = 20-r
-}
-
-}
-
-i++;
-}
-//*/
-
-alarm[2] = 1;
-
-/*
-with Wall
-{
-if !place_meeting(x,y+16,Floor)
-visible = 0
-else
-visible = 1
-}
-*/
-/*
-with Wall
-{
-if point_distance(x,y,other.x,other.y)<32
-{
-
-if place_free(x-16,y)
-l = 0
-else
-l = 4
-
-if place_free(x+16,y)
-w = 24-l
-else
-w = 20-l
-
-if place_free(x,y-16)
-r = 0
-else
-r = 4
-
-if place_free(x,y+16)
-h = 24-r
-else
-h = 20-r
-
-}
-
-}
-*/
-
-//*/
-alarm[0]=1;
 
 
 BackCont.shake += 1

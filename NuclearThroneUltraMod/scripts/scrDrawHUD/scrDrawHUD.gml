@@ -107,9 +107,38 @@ function scrDrawHUD() {
 	}
 	var wepcolour = c_white;
 	
+	//CASH BAR
+	if Player.ultra_got[0] && Player.altUltra
+	{
+		var xx =__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-16-16;
+		var yy =__view_get( e__VW.YView, 0 )+40;
+		var w = 28;
+		draw_sprite(sprCashBar,0,xx-2,yy-3)
+		if Player.cash > 0{
+		draw_sprite_ext(sprCashBarFill,2,xx,yy,clamp(w*(Player.lstCash/Player.maxCash),0,w),1,0,c_white,1)
+		draw_sprite_ext(sprCashBarFill,1,xx,yy,clamp(w*(Player.lstCash/Player.maxCash),0,w),1,0,c_white,1)
+
+		if (Player.lstCash < Player.cash) and !instance_exists(GenCont) and !instance_exists(LevCont)
+			draw_sprite_ext(sprCashBarFill,0,xx,yy,clamp(w*(Player.lstCash/Player.maxCash),0,w),1,0,c_white,1)
+		}
+		draw_set_font(fntM)
+		if Player.lstCash >= Player.cash or sin(wave) > 0 or instance_exists(GenCont) or instance_exists(LevCont)
+		{
+			draw_set_color(c_black)
+			xx += 14;
+			//yy += 8;
+			draw_text(xx,yy+1,string(Player.cash))
+			draw_text(xx+1,yy+1,string(Player.cash))
+			draw_text(xx+1,yy,string(Player.cash))
+			draw_set_color(c_white)
+			if Player.cash < 0
+				draw_set_color(c_red);
+			draw_text(xx,yy,string(Player.cash))
+		}
 	
+	}
 	//ULTRA ICON
-	dir=1;
+	dir=0;
 	dix=0;
 	var totalLives = array_length(Player.livesRegain);
 	if totalLives > 0
@@ -121,16 +150,36 @@ function scrDrawHUD() {
 	    }
 	}
 	dix ++
-	repeat(Player.maxultra+1)//+1 because secret trash
+	repeat(Player.maxultra+2)//+1 because secret trash + 1BECAUSE HORROR EXTRA
 	{
 	    if Player.ultra_got[dir]
 	    {
 			var xx =__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-12-16*dix;
 			var yy =__view_get( e__VW.YView, 0 )+20;
 			var s = 18;
-			if dir == 4 && Player.bskin == 2
+			if dir == 0 && Player.altUltra
+			{
+				draw_sprite_ext(sprCashFlowHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 4 && Player.bskin == 2
 			{
 				draw_sprite_ext(sprFishCanGunHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 6 && Player.altUltra
+			{
+				draw_sprite_ext(sprCrystalCursedUltraHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 29 && Player.spr_idle == sprMutant8DIdle
+			{
+				draw_sprite_ext(sprExclusiveTasteHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 35 && Player.altUltra
+			{
+				draw_sprite_ext(sprReverseFocusHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 39 && Player.altUltra
+			{
+				draw_sprite_ext(sprBigRebelHUD,0,xx,yy,1,1,0,c_white,1);
 			}
 			else if dir == 106 && Player.bskin == 1
 			{

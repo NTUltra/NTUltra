@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMutant9Dead","path":"sprites/sprMutant9Dead/sprMutant9Dead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMutant9Dead",
     "tags": [],
     "resourceType": "GMSequence",
   },

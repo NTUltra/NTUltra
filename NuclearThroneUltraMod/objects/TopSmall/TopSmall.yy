@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": false,
+  "managed": true,
   "spriteMaskId": {
     "name": "sprTopSmall",
     "path": "sprites/sprTopSmall/sprTopSmall.yy",

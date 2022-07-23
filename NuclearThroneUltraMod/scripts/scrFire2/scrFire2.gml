@@ -6785,7 +6785,7 @@ function scrFire2() {
 				motion_add(aimDir,2);
 			}
 		//Heal chance
-		if random(100) < 7.7//7.69% chance
+		if Player.canHeal && random(100) < 7.7//7.69% chance
 		{
 			with instance_create(x,y-8,HealFX)
 			{

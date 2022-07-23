@@ -726,9 +726,17 @@ if my_health <= 0
 		if other.bskin=2
 		sprite_index = mskPickupThroughWall;//invisible basicly
 		else if other.bskin=1
-		sprite_index = sprMutant9BHeadIdle;
+		{
+			sprite_index = sprMutant9BHeadIdle;
+			if other.altUltra
+				sprite_index = sprMutant9EHeadIdle;
+		}
 		else
-		sprite_index = sprMutant9HeadIdle;
+		{
+			sprite_index = sprMutant9HeadIdle;
+			if other.altUltra
+				sprite_index = sprMutant9DHeadIdle;
+		}
 		image_xscale = other.right
 		if speed > 16
 		speed = 16
@@ -769,5 +777,12 @@ else if crown == 24//Crown of sloth
 	with enemy
 	{
 		speed *= 0.9;	
+	}
+}
+if (!canHeal)
+{
+	if my_health > prevhealth
+	{
+		my_health = prevhealth;	
 	}
 }

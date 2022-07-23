@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMutant9HeadlessHurt","path":"sprites/sprMutant9HeadlessHurt/sprMutant9HeadlessHurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMutant9HeadlessHurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

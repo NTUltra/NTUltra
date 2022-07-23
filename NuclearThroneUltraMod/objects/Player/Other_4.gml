@@ -7,6 +7,14 @@ blastArmourPower = 3;
 //extra feet items
 extrafeetalarm = 0;
 extrafeetdodged = false;
+if ultra_got[0] && altUltra
+{
+	cash = min(cash + 100,maxCash);
+	if cash <= 0
+		inDebt = true;
+	else 
+		inDebt = false;
+}
 if !instance_exists(PlayerAlarms)
 	instance_create(x,y,PlayerAlarms);
 
@@ -134,17 +142,38 @@ if race=10//rebel hoody
 {
     if bskin=1&&area=5||area=108//cold
     {
-    spr_idle=sprMutant10DIdle;
-    spr_walk=sprMutant10DWalk;
-    spr_hurt=sprMutant10DHurt;
-    spr_dead=sprMutant10DDead;
+		if altUltra
+		{
+			spr_idle=sprMutant10HIdle;
+		    spr_walk=sprMutant10HWalk;
+		    spr_hurt=sprMutant10HHurt;
+		    spr_dead=sprMutant10HDead;
+		}
+		else
+		{
+		    spr_idle=sprMutant10DIdle;
+		    spr_walk=sprMutant10DWalk;
+		    spr_hurt=sprMutant10DHurt;
+		    spr_dead=sprMutant10DDead;
+		}
     }
     else if bskin=1
     {
-    spr_idle=sprMutant10BIdle;
-    spr_walk=sprMutant10BWalk;
-    spr_hurt=sprMutant10BHurt;
-    spr_dead=sprMutant10BDead;
+	    
+		if altUltra
+		{
+			spr_idle=sprMutant10FIdle;
+		    spr_walk=sprMutant10FWalk;
+		    spr_hurt=sprMutant10FHurt;
+		    spr_dead=sprMutant10FDead;
+		}
+		else
+		{
+			spr_idle=sprMutant10BIdle;
+		    spr_walk=sprMutant10BWalk;
+		    spr_hurt=sprMutant10BHurt;
+		    spr_dead=sprMutant10BDead;
+		}
     }
 }
 if race=22//ROGUE

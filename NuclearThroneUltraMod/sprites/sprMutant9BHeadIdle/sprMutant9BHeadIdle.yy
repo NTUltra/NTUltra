@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMutant9BHeadIdle","path":"sprites/sprMutant9BHeadIdle/sprMutant9BHeadIdle.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMutant9BHeadIdle",
     "tags": [],
     "resourceType": "GMSequence",
   },

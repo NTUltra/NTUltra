@@ -38,7 +38,8 @@ function scrSpawnSurvivalWaveReward(){
 			instance_create(x-64,y+96,WeaponMod);
 		break;
 		case 10:
-			instance_create(x,y+96,RerollStation);
+			if instance_exists(Player) && Player.level > 1
+				instance_create(x,y+96,RerollStation);
 		break;
 	}
 }

@@ -5,11 +5,11 @@ function scrUltras() {
 	ultra_text[0] = "CHOOSE AN ULTRA MUTATION#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)#GET OFFERED PATIENCE WITH EVERY CHOICE"
 	ultra_tips[0] = "adapting"
 	
-	if instance_exists(Player) && scrCheckGold(Player.wep_name[Player.wep]) && scrCheckGold(Player.wep_name[Player.bwep])
+	if (instance_exists(Player) && (Player.altUltra || (scrCheckGold(Player.wep_name[Player.wep]) || scrCheckGold(Player.wep_name[Player.bwep]))))
 	{
 		ultra_name[0] = "CASH FLOW"
-		ultra_text[0] = "REPLACE BEAM WITH CASH FLOW#CASH FLOW USES CASH INSTEAD OF RADS#GET 100 CASH EVERY AREA#CASH MAXIMUM IS 500#KILLS GENERATE CASH#(UPGRADES TO BEAM STILL APPLY)"
-		ultra_tips[0] = "golden dog"
+		ultra_text[0] = "REPLACE BEAM WITH CASH FLOW#CASH FLOW USES CASH INSTEAD OF RADS#GET 100 CASH EVERY AREA#CASH MAXIMUM IS 500#KILLS GENERATE CASH#(UPGRADES TO BEAM STILL APPLY)##YOU CAN KEEP USING ACTIVE#EVEN WHILE IN DEBT#BUT ACTIVE WILL BE LOCKED UNTILL#OUT OF DEBT AT THE START OF AN AREA"
+		ultra_tips[0] = "C.R.E.A.M."
 	}
 	
 
@@ -47,6 +47,13 @@ function scrUltras() {
 	    ultra_name[6] = "JUGGERNAUT"
 	    ultra_text[6] = "MOVE WHILE SHIELDED"
 	    ultra_tips[6] = "crab legs"
+		
+		if (instance_exists(Player) && (Player.altUltra || ((Player.curse || Player.bcurse) && instance_exists(UltraIcon))))
+		{
+			ultra_name[6] = "CURSED"
+		    ultra_text[6] = "TELEPORT AFTER SHIELDING#SHIELDING FIRES LASERS"
+		    ultra_tips[6] = "cursed crystal"
+		}
     
 	    ultra_name[7] = "BUNKER"
 	    ultra_text[7] = "SHORTER SHIELD#SHOOT WHILE SHIELDED#WHILE STATIONARY INCREASE FIRERATE"
@@ -125,7 +132,7 @@ function scrUltras() {
 	    ultra_tips[23] = "shells and bullets <3"
 		if instance_exists(Player)
 		{
-			if (scrMeleeWeapons(Player.wep) || Player.wep == 0) && (scrMeleeWeapons(Player.bwep) || Player.bwep == 0)
+			if (Player.altUltra || (instance_exists(UltraIcon) && (scrMeleeWeapons(Player.wep) || Player.wep == 0) && (scrMeleeWeapons(Player.bwep) || Player.bwep == 0)))
 			{
 				ultra_name[23] = "BLASPHEMY"
 			    ultra_text[23] = "CAN NO LONGER POP POP GUNS#43% HIGHER MELEE SWING RATE#MELEE IS FULLY AUTOMATIC#CAN POP POP MELEE"
@@ -167,9 +174,9 @@ function scrUltras() {
 		{
 			ultra_name[29] = "REFINED TASTE"
 			if isOtherCharacter
-				ultra_text[29] = "ONLY HIGH TIER WEAPON DROPS#EVERY ENEMY HAS A 5% CHANCE#TO DROP A WEAPON"
+				ultra_text[29] = "ONLY HIGH TIER WEAPON DROPS#EVERY ENEMY HAS A 5% CHANCE#TO DROP A WEAPON#INCREASE FIRERATE BASED ON WEAPON TIER"
 			else
-				ultra_text[29] = "ONLY HIGH TIER WEAPON DROPS#EVERY ENEMY HAS A 5% CHANCE#TO DROP A WEAPON##AUTO EAT WEAPONS LEFT IN THE LEVEL"
+				ultra_text[29] = "ONLY HIGH TIER WEAPON DROPS#EVERY ENEMY HAS A 5% CHANCE#TO DROP A WEAPON#INCREASE FIRERATE BASED ON WEAPON TIER##AUTO EAT WEAPONS LEFT IN THE LEVEL"
 		    ultra_tips[29] = "delicacy"
 		}
 		
@@ -203,6 +210,13 @@ function scrUltras() {
 	ultra_name[35] = "FOCUS"
 	ultra_text[35] = "SLOW MOTION IS MUCH MORE EFFECTIVE#ON ENEMY PROJECTILES#(EVEN MORE EFFECTIVE WITH EUPHORIA)##SLOW MOTION COMPLETLY STOPS#YOUR PROJECTILES"
 	ultra_tips[35] = "so fast"
+	
+	if instance_exists(Player) && ((Player.crown == 12 && instance_exists(UltraIcon)) || Player.altUltra)
+	{
+		ultra_name[35] = "SUCOF"
+		ultra_text[35] = "EMIT SESREVER EVICA"//ACTIVE REVERSES TIME
+		ultra_tips[35] = "reverse time"
+	}
 
 	ultra_name[36] = "VANISH"
 	ultra_text[36] = "WHEN IN SLOW MOTION#YOU VANISH AND DROP A DECOY#WHEN VANISHED ENEMIES WON'T TARGET YOU"
@@ -220,7 +234,14 @@ function scrUltras() {
 	    ultra_name[39] = "EVERONE IS CONNECTED"
 	    ultra_text[39] = "ALLIES CAST LASERS TOWARDS EACH OTHER#THE MORE ALLIES YOU HAVE#THE HIGHER YOUR DROP RATE IS#ALIES DROP MORE RESOURCES#WHEN THEY DIE"
 	    ultra_tips[39] = "hurt stone"
-    
+		
+		if instance_exists(Player) && (Player.altUltra || (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep]) && instance_exists(UltraIcon)))
+		{
+			ultra_name[39] = "BIG REBEL"
+		    ultra_text[39] = "+40 MAX HP!#YOU CAN'T HEAL#EVERY LOOP RESET HP TO FULL#ALLIES COST AMMO"
+		    ultra_tips[39] = "she is a maniac!"
+		}
+		
 	    ultra_name[40] = "DEFENSE"
 	    ultra_text[40] = "PORTALS HEAL ALL YOUR HEALTH#WHENEVER YOU TAKE DAMAGE YOU#SPAWN DEFENSIVE BULLETS#MORE ALLY BULLET DAMAGE"
 	    ultra_tips[40] = "this was rebel's old passive"

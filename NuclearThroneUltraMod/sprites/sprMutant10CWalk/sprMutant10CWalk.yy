@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMutant10CWalk","path":"sprites/sprMutant10CWalk/sprMutant10CWalk.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMutant10CWalk",
     "tags": [],
     "resourceType": "GMSequence",
   },

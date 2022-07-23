@@ -15,99 +15,192 @@ skillscroll = 0;
 
 if instance_exists(Player)
 {
-if !UberCont.useSeed && Player.area == 100
-{
-	UberCont.savedSeed = random_get_seed();
-}
-with Player {
+	if !UberCont.useSeed && Player.area == 100
+	{
+		UberCont.savedSeed = random_get_seed();
+	}
+	with Player {
 
 
     
-x = 10016
-y = 10016
-}
+	x = 10016
+	y = 10016
+	}
+	if Player.crown == 25
+	{
+		switch (Player.area)
+		{
+			case 0:
+			case 113:
+				__background_set_colour( make_color_rgb(106,122,175) )
+			break;
+			case 1:
+				__background_set_colour( make_color_rgb(234,164,77) )
+			break;
+			case 2:
+				__background_set_colour( make_color_rgb(64,47,43) )
+			break;
+			case 3:
+				__background_set_colour( make_color_rgb(56,31,31) )
+			break;
+			case 4:
+				__background_set_colour( make_color_rgb(46,37,55) )
+			break;
+			case 5:
+				__background_set_colour( make_color_rgb(115,123,125) )
+			break;
+			case 6:
+				__background_set_colour( make_color_rgb(9,7,13) )
+			break;
+			case 7:
+				__background_set_colour( make_color_rgb(62,16,0) )
+			break;
+			case 8:
+				__background_set_colour( make_color_rgb(183,144,180) )
+			break;
+			case 9:
+				__background_set_colour( make_color_rgb(15,11,19) )
+			break;
+			case 10:
+				__background_set_colour( make_color_rgb(140,123,84) )
+			break;
+			case 100:
+				__background_set_colour( make_color_rgb(27,21,16) )
+			break;
+			case 101:
+				__background_set_colour( make_color_rgb(0,36,25) )
+			break;
+			case 102:
+				__background_set_colour( make_color_rgb(24,10,41) )
+			break;
+			case 103:
+			case 104:
+				__background_set_colour( make_color_rgb(60,22,24) )
+			break;
+			case 105:
+				__background_set_colour( make_color_rgb(19,82,159) )
+			break;
+			case 106:
+				__background_set_colour( make_color_rgb(74,112,117) )
+			break;
+			case 107:
+				__background_set_colour( make_color_rgb(157,150,149) )
+			break;
+			case 108:
+				__background_set_colour( make_color_rgb(0,255,255) )
+			break;
+			case 109:
+				__background_set_colour( make_color_rgb(37,83,35) )
+			break;
+			case 110:
+				__background_set_colour( make_color_rgb(214,231,234) )
+			break;
+			case 111:
+				__background_set_colour( make_color_rgb(74,102,40) )
+			break;
+			case 112:
+				__background_set_colour( make_color_rgb(24,51,26) )
+			break;
+			case 114:
+				__background_set_colour( make_color_rgb(35,22,13) )
+			break;
+			case 115:
+				__background_set_colour( make_color_rgb(46,37,55) )
+			break;
+			case 116:
+				__background_set_colour( make_color_rgb(30,25,21) )
+			break;
+			case 117:
+				__background_set_colour( make_color_rgb(38,34,22) )
+			break;
+			case 118:
+				__background_set_colour( make_color_rgb(37,50,51) )
+			break;
+		}
+	}
+	else
+	{
+		//SWITCH CASE!
+		if Player.area = 0 || Player.area=113//menu Banditland
+		__background_set_colour( make_color_rgb(106,122,175) )
+		else if Player.area = 1//desert
+		__background_set_colour( make_color_rgb(175,143,106) )
+		else if Player.area = 2//sewers
+		__background_set_colour( make_color_rgb(76,89,70) )
+		else if Player.area = 110//inverted sewers
+		__background_set_colour( make_color_rgb(197,186,201) )
+		else if Player.area = 3//scrapyard
+		__background_set_colour( make_color_rgb(138,150,158) )
+		else if Player.area = 4//cave
+		__background_set_colour( make_color_rgb(129,82,188) )
+		else if Player.area = 5//frozen city
+		__background_set_colour( make_color_rgb(180,189,197) )
+		else if Player.area = 6//labs
+		__background_set_colour( make_color_rgb(9,28,32) )
+		else if Player.area = 100//crownvault
+		__background_set_colour( make_color_rgb(67,53,35) )//make_color_rgb(67,53,35) )
+		else if Player.area = 102//pizza sewers
+		__background_set_colour( make_color_rgb(160,75,99) )
+		else if Player.area = 103//yv mansion
+		__background_set_colour( make_color_rgb(238,240,242) )
+		else if Player.area = 7//VULCANO
+		{
+		__background_set_colour( make_color_rgb(55,35,35) )
 
-//SWITCH CASE!
-if Player.area = 0 || Player.area=113//menu Banditland
-__background_set_colour( make_color_rgb(106,122,175) )
-else if Player.area = 1//desert
-__background_set_colour( make_color_rgb(175,143,106) )
-else if Player.area = 2//sewers
-__background_set_colour( make_color_rgb(76,89,70) )
-else if Player.area = 110//inverted sewers
-__background_set_colour( make_color_rgb(197,186,201) )
-else if Player.area = 3//scrapyard
-__background_set_colour( make_color_rgb(138,150,158) )
-else if Player.area = 4//cave
-__background_set_colour( make_color_rgb(129,82,188) )
-else if Player.area = 5//frozen city
-__background_set_colour( make_color_rgb(180,189,197) )
-else if Player.area = 6//labs
-__background_set_colour( make_color_rgb(9,28,32) )
-else if Player.area = 100//crownvault
-__background_set_colour( make_color_rgb(67,53,35) )//make_color_rgb(67,53,35) )
-else if Player.area = 102//pizza sewers
-__background_set_colour( make_color_rgb(160,75,99) )
-else if Player.area = 103//yv mansion
-__background_set_colour( make_color_rgb(238,240,242) )
-else if Player.area = 7//VULCANO
-{
-__background_set_colour( make_color_rgb(55,35,35) )
+		//saving memory
+		draw_texture_flush();
 
-//saving memory
-draw_texture_flush();
+		draw_sprite(sprFloor7,0,0,0);
+		draw_sprite(sprFloor7B,0,0,0);
+		draw_sprite(sprFloorLava,0,0,0);
+		draw_sprite(sprFloor7Explo,0,0,0);
+		draw_sprite(sprWall7Trans,0,0,0);
+		draw_sprite(sprWall7Top,0,0,0);
+		draw_sprite(sprWall7Out,0,0,0);
+		draw_sprite(sprWall7Bot,0,0,0);
+		draw_sprite(sprDebris7,0,0,0);
+		draw_sprite(sprLavaBubble2,0,0,0);
+		draw_sprite(sprLavaBubble,0,0,0);
 
-draw_sprite(sprFloor7,0,0,0);
-draw_sprite(sprFloor7B,0,0,0);
-draw_sprite(sprFloorLava,0,0,0);
-draw_sprite(sprFloor7Explo,0,0,0);
-draw_sprite(sprWall7Trans,0,0,0);
-draw_sprite(sprWall7Top,0,0,0);
-draw_sprite(sprWall7Out,0,0,0);
-draw_sprite(sprWall7Bot,0,0,0);
-draw_sprite(sprDebris7,0,0,0);
-draw_sprite(sprLavaBubble2,0,0,0);
-draw_sprite(sprLavaBubble,0,0,0);
-
-}
-else if Player.area = 104//YV's Crib
-__background_set_colour( make_color_rgb(238,240,242) )
-else if Player.area = 105//Inverted Desert
-__background_set_colour( make_color_rgb(80,112,149) )
-else if Player.area = 8//Candyland
-__background_set_colour( make_color_rgb(162,111,220) )
-else if Player.area = 9//Palace
-__background_set_colour( make_color_rgb(97,29,36) )
-else if Player.area = 10//savanna
-__background_set_colour( make_color_rgb(160,95,61) )
-else if Player.area = 106//Inverted scrapyard
-__background_set_colour( make_color_rgb(194,176,163) )
-else if Player.area = 107//Inverted Frozen City
-__background_set_colour( make_color_rgb(75,66,58) )
-else if Player.area = 101//Oasis
-__background_set_colour( make_color_rgb(81,209,200) )
-else if Player.area = 108//Inverted Vulcano
-__background_set_colour( make_color_rgb(220,240,240) )
-else if Player.area = 109//Inverted wonderland
-__background_set_colour( make_color_rgb(65,111,35) )
-else if Player.area = 111//inverted caves
-__background_set_colour( make_color_rgb(138,186,79) )
-else if Player.area = 112//inverted labs
-__background_set_colour( make_color_rgb(246,228,224) )
-else if Player.area = 114//Jungle bungle wungle fungle fuck ass
-__background_set_colour( make_color_rgb(42,144,12) )
-else if Player.area = 115//cheese cave
-__background_set_colour( make_color_rgb(255,156,35) )
-else if Player.area = 116//SURVIVAL ARENA
-__background_set_colour( make_color_rgb(43,35,23) )
-else if Player.area = 117//MUSHROOM
-__background_set_colour( make_color_rgb(75,79,31) )
-else if Player.area = 118//Inverted Palace
-__background_set_colour( make_color_rgb(142,204,204) )
+		}
+		else if Player.area = 104//YV's Crib
+		__background_set_colour( make_color_rgb(238,240,242) )
+		else if Player.area = 105//Inverted Desert
+		__background_set_colour( make_color_rgb(80,112,149) )
+		else if Player.area = 8//Candyland
+		__background_set_colour( make_color_rgb(162,111,220) )
+		else if Player.area = 9//Palace
+		__background_set_colour( make_color_rgb(97,29,36) )
+		else if Player.area = 10//savanna
+		__background_set_colour( make_color_rgb(160,95,61) )
+		else if Player.area = 106//Inverted scrapyard
+		__background_set_colour( make_color_rgb(194,176,163) )
+		else if Player.area = 107//Inverted Frozen City
+		__background_set_colour( make_color_rgb(75,66,58) )
+		else if Player.area = 101//Oasis
+		__background_set_colour( make_color_rgb(81,209,200) )
+		else if Player.area = 108//Inverted Vulcano
+		__background_set_colour( make_color_rgb(220,240,240) )
+		else if Player.area = 109//Inverted wonderland
+		__background_set_colour( make_color_rgb(65,111,35) )
+		else if Player.area = 111//inverted caves
+		__background_set_colour( make_color_rgb(138,186,79) )
+		else if Player.area = 112//inverted labs
+		__background_set_colour( make_color_rgb(246,228,224) )
+		else if Player.area = 114//Jungle bungle wungle fungle fuck ass
+		__background_set_colour( make_color_rgb(42,144,12) )
+		else if Player.area = 115//cheese cave
+		__background_set_colour( make_color_rgb(255,156,35) )
+		else if Player.area = 116//SURVIVAL ARENA
+		__background_set_colour( make_color_rgb(43,35,23) )
+		else if Player.area = 117//MUSHROOM
+		__background_set_colour( make_color_rgb(75,79,31) )
+		else if Player.area = 118//Inverted Palace
+		__background_set_colour( make_color_rgb(142,204,204) )
+	}
 }
 else
-__background_set_colour( make_color_rgb(106,122,175) )
-
+	__background_set_colour( make_color_rgb(106,122,175) )
 
 
 

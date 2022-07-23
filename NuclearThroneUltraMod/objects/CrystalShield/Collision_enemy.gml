@@ -6,7 +6,7 @@ with Player
 {
 	if skill_got[8] = 1//Dealing the damage with gamma guts
 	{
-	snd_play(sndGammaGutsProc);
+	snd_play(sndGammaGutsProc,0,true);
 		with enem
 	    {
 			/* Normal amount is actually insane

@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMutant10DIdle","path":"sprites/sprMutant10DIdle/sprMutant10DIdle.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMutant10DIdle",
     "tags": [],
     "resourceType": "GMSequence",
   },

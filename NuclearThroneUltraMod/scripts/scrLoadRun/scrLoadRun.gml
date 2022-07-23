@@ -195,8 +195,14 @@ function scrLoadRun(){
 					UberCont.collectedInversionShards = encryptedRun.collectedInversionShards;
 				if variable_struct_exists(encryptedRun, "canSpawnInversionShards")
 					UberCont.collectedInversionShardReward = encryptedRun.collectedInversionShardReward;
-				if variable_struct_exists(encryptedRun, "inverted")
-					Player.inverted = encryptedRun.inverted;
+				if variable_struct_exists(encryptedRun, "cash")
+					Player.cash = encryptedRun.cash;
+				if variable_struct_exists(encryptedRun, "lstCash")
+					Player.lstCash = encryptedRun.lstCash;
+				if variable_struct_exists(encryptedRun, "maxCash")
+					Player.maxCash = encryptedRun.maxCash;
+				if variable_struct_exists(encryptedRun, "canHeal")
+					Player.canHeal = encryptedRun.canHeal;
 			}
 			with Player
 			{

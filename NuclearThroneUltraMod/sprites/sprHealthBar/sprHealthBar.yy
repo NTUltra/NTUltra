@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprHealthBar","path":"sprites/sprHealthBar/sprHealthBar.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprHealthBar",
     "tags": [],
     "resourceType": "GMSequence",
   },

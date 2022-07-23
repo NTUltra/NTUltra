@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprHealthFill","path":"sprites/sprHealthFill/sprHealthFill.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprHealthFill",
     "tags": [],
     "resourceType": "GMSequence",
   },

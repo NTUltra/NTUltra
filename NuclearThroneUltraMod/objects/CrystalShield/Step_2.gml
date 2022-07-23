@@ -1,4 +1,4 @@
-if Player.ultra_got[6]=1{
+if Player.ultra_got[6]=1 && !Player.altUltra{
 Player.x = x;
 Player.y = y;
 }

@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": false,
+  "managed": true,
   "spriteMaskId": {
     "name": "sprTop",
     "path": "sprites/sprTop/sprTop.yy",

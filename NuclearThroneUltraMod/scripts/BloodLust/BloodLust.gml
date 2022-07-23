@@ -8,7 +8,7 @@ function BloodLust(){
 		chance = 7.89;
 	if UberCont.opt_gamemode == 34//HARD MODE
 		chance -= 0.5;
-    if Player.skill_got[7] = 1 and random(100) <  chance//7.69% chance
+    if Player.skill_got[7] = 1 and Player.canHeal and random(100) <  chance//7.69% chance
     {
     	snd_play_2d(sndBloodlustProc,0,true);
 	    with instance_create(Player.x,Player.y-8,HealFX)

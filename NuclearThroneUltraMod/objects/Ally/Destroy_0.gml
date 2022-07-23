@@ -2,7 +2,7 @@ scrDrop(3,0)
 if instance_exists(Player)
 {
 	
-	if Player.ultra_got[39]//everyone is connected
+	if Player.ultra_got[39] && !Player.altUltra//everyone is connected
 	{
 		scrDrop(70,2);
 		raddrop += 8;

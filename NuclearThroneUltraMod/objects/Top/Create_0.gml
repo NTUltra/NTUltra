@@ -1,5 +1,12 @@
 var area;
-if instance_exists(Player) area = Player.area
+if instance_exists(Player) {
+	area = Player.area
+	if Player.crown == 25
+	{	
+		instance_destroy(id,false);
+		exit;
+	}
+}
 else area = BackCont.area
 if area==104
 area=103;

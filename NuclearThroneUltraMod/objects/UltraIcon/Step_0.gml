@@ -1,5 +1,6 @@
 if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y < y+22 and UberCont.mouse__x > x-22 and UberCont.mouse__y > y-22) && (alarm[0]<1) ) || (exceptionclick && (alarm[0]<1))
 {
+debug("Player.horrorEtaken ",Player.horrorEtaken);
 	if Player.ultra_got[0] == 1 && !Player.altUltra && (skill < 29 || skill > 32)
 		Player.horrorEtaken = true;
 var regularprocedure=true;
@@ -13,6 +14,10 @@ if skill = 0
 		with Player
 		{
 			altUltra = true;
+			ultra_name[0] = "CASH FLOW"
+			ultra_text[0] = "REPLACE BEAM WITH CASH FLOW#CASH FLOW USES CASH INSTEAD OF RADS#GET 100 CASH EVERY AREA#CASH MAXIMUM IS 500#KILLS GENERATE CASH#(UPGRADES TO BEAM STILL APPLY)"
+			ultra_tips[0] = "C.R.E.A.M."
+			cash = maxCash;
 			spr_idle=sprMutant21DIdle;
 			spr_walk=sprMutant21DWalk;
 			spr_hurt=sprMutant21DHurt;
@@ -26,7 +31,26 @@ if skill = 0
 		Player.skillsChosen -= 1;
 	}
 }
-
+if skill == 106//Hands secret ultras
+{
+	with Player
+	{
+		if bskin == 1
+		{
+			//Secret B skin ultra
+			ultra_name[106] = "HOT HANDS!"
+			ultra_text[106] = "FIERY HANDS#MORE FIRE DAMAGE#HOMING FIRE#EVEN MORE FIRE DAMAGE#WHILE IN INVERTED AREAS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
+			ultra_tips[106] = "secret b-skin ultra mutation"
+		}
+		else if bskin == 2
+		{
+			//Secret C skin ultra
+			ultra_name[106] = "BOOM HANDS!"
+			ultra_text[106] = "EXPLOSIVE HANDS#HAND IS SLOWER#NORMAL HAND SPEED IN INVERTED AREAS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
+			ultra_tips[106] = "secret c-skin ultra mutation"
+		}	
+	}
+}
 if skill == 2
 {
 	scrUnlockGameMode(29,"FOR TAKING FISH'S ULTRA#GUN WARRANT");	
@@ -41,11 +65,23 @@ else if skill == 4
 			scrWeaponAdjustCost(0.95);
 	}	
 }
+else if skill == 6 && (Player.curse || Player.bcurse)
+{
+	with Player {
+		altUltra = true;
+		ultra_name[6] = "CURSED"
+		ultra_text[6] = "TELEPORT AFTER SHIELDING#SHIELDING FIRES LASERS"
+		ultra_tips[6] = "cursed crystal"
+	}
+}
 else if skill == 23 && Player.race == 6 && scrMeleeWeapons(Player.wep) && scrMeleeWeapons(Player.bwep)
 {
 	with Player
 	{
 		altUltra = true;
+		ultra_name[23] = "BLASPHEMY"
+		ultra_text[23] = "CAN NO LONGER POP POP GUNS#43% HIGHER MELEE SWING RATE#MELEE IS FULLY AUTOMATIC#CAN POP POP MELEE"
+		ultra_tips[23] = "why would you forsake us gun god?"
 		if bskin == 0//YV secret skin
 		{
 			spr_idle=sprMutant6DIdle;
@@ -67,9 +103,69 @@ else if skill == 29 && Player.spr_idle == sprMutant8DIdle
 	with Player
 	{
 		altUltra = true;
+		ultra_name[29] = "EXCLUSIVE TASTE"
+		ultra_text[29] = "HOLDING ONLY ONE WEAPON WILL:#INCREASE DAMAGE DEALT TO ENEMIES BY 25%#RETURN 10% AMMO UPON FIRING#+15% FIRERATE AND +4 MAX HP##AUTO EAT WEAPONS LEFT IN THE LEVEL";
+		ultra_tips[29] = "gold tastes good"
 		if bwep == 0//ROBOT EXCLUSIVE TASTE
 		{
 			maxhealth += 4;
+		}
+	}
+}
+else if skill == 35 && Player.crown == 12//CHICKEN REVERSE TIME
+{
+	with Player
+	{
+		altUltra = true;
+		ultra_name[35] = "SUCOF"
+		ultra_text[35] = "EMIT SESREVER EVICA"//ACTIVE REVERSES TIME
+		ultra_tips[35] = "reverse time"
+		if bskin == 0
+		{
+			spr_idle=sprMutant9DIdle;
+			spr_walk=sprMutant9DWalk;
+			spr_hurt=sprMutant9DHurt;
+			spr_dead=sprMutant9DDead;
+		}
+		else if bskin == 1
+		{
+			spr_idle=sprMutant9EIdle;
+			spr_walk=sprMutant9EWalk;
+			spr_hurt=sprMutant9EHurt;
+			spr_dead=sprMutant9DDead;
+		}
+	}
+}
+else if skill == 39 && scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep])
+{
+	with Player {
+		altUltra = true;
+		maxhealth += 40;
+		my_health += 40;
+		prevhealth = my_health;
+		ultra_name[39] = "BIG REBEL"
+		ultra_text[39] = "+40 MAX HP!#YOU CAN'T HEAL#EVERY LOOP RESET HP TO FULL#ALLIES COST AMMO"
+		ultra_tips[39] = "she is a maniac!"
+		canHeal = false;
+		if bskin == 0
+		{
+			spr_idle=sprMutant10EIdle;
+			spr_walk=sprMutant10EWalk;
+			spr_hurt=sprMutant10EHurt;
+			spr_dead=sprMutant10EDead;
+		}
+		else if bskin == 1
+		{
+			spr_idle=sprMutant10FIdle;
+			spr_walk=sprMutant10FWalk;
+			spr_hurt=sprMutant10FHurt;
+			spr_dead=sprMutant10FDead;
+		} else if bskin == 2
+		{
+			spr_idle=sprMutant10GIdle;
+			spr_walk=sprMutant10GWalk;
+			spr_hurt=sprMutant10GHurt;
+			spr_dead=sprMutant10GDead;
 		}
 	}
 }
@@ -96,7 +192,7 @@ else if skill == 15
 		maxlevel += 1;//higher level cap
 	}
 }
-if skill = 97 // MUTATION SMITH WEAPON MUTATOR BETTER WEAPON SPECIFIC MUTATIONS
+else if skill = 97 // MUTATION SMITH WEAPON MUTATOR BETTER WEAPON SPECIFIC MUTATIONS
 {
 
 with Player
@@ -122,25 +218,20 @@ betterboltmarrow = 10;
 }
 
 }
-
-
-if skill = 5//CRYSTAL FORTRESS ULTRA A
+else if skill = 5//CRYSTAL FORTRESS ULTRA A
 {
 Player.maxhealth += 6
 Player.my_health += 6
 }
-
-if skill==3//FISH COMPANION ONLY PARTNER ONLY ULTRA GAMEMODE UNLOCK
+else if skill==3//FISH COMPANION ONLY PARTNER ONLY ULTRA GAMEMODE UNLOCK
 {
 scrUnlockGameMode(14,"FOR TAKING THIS ULTRA");
 }
-
-if skill==13//Melting Ultra A Brain capacity UNLOCK GAMEMODE 1HP EQUALITY
+else if skill==13//Melting Ultra A Brain capacity UNLOCK GAMEMODE 1HP EQUALITY
 {
 scrUnlockGameMode(5,"FOR TAKING THIS ULTRA");
 }
-
-if skill==14
+else if skill==14
 {//Melting Ultra B detachment
 	if Player.maxhealth > 1
 	{
@@ -161,10 +252,10 @@ if skill==14
 	}
 	//Player.skillsChosen=0;//no ultras pls
 }
-
-//ARMOUR UP viking
-if skill==62
+else if skill==62
 {
+	//ARMOUR UP viking
+
 with Player{
 	if maxarmour < 1//skelly business hog
 	{
@@ -175,17 +266,15 @@ armour+=2;
 maxarmour+=2;
 }
 }
-
-//Gunsmith armoursmith
-if skill==66
+else if skill==66
 {
+	//Gunsmith armoursmith
     with Player{
     maxarmour=2;
     armour=2;
     }
 }
-
-if skill==78//business hog more options armour
+else if skill==78//business hog more options armour
 {
     with Player
     {
@@ -193,9 +282,7 @@ if skill==78//business hog more options armour
     armour=0;
     }
 }
-
-
-if skill == 73//REDEMPTION Skeleton Ultra A
+else if skill == 73//REDEMPTION Skeleton Ultra A
 {
 
 with GenCont
@@ -257,9 +344,7 @@ with Corpse
 instance_destroy();
 
 }
-
-
-if skill == 76//skelly ultra D
+else if skill == 76//skelly ultra D
 {
     if Player.ultimategamble==false//skeleton lives
     {

@@ -16,15 +16,34 @@ if instance_exists(Player)
 		maxhealth=30;
 	else
 		maxhealth = 12;
-	if Player.ultra_got[39]
+	if Player.ultra_got[39] && !Player.altUltra
 		alarm[3] = 30;
 	if Player.bskin == 2
 	{
-		sprite_index = sprAllyCAppear;
-		spr_idle = sprAllyCAppear
-		spr_walk = sprAllyCWalk
-		spr_hurt = sprAllyCHurt
-		spr_dead = sprAllyCDead
+		if Player.altUltra
+		{
+			sprite_index = sprAllyGAppear;
+			spr_idle = sprAllyGAppear
+			spr_walk = sprAllyGWalk
+			spr_hurt = sprAllyGHurt
+			spr_dead = sprAllyGDead
+		}
+		else
+		{
+			sprite_index = sprAllyCAppear;
+			spr_idle = sprAllyCAppear
+			spr_walk = sprAllyCWalk
+			spr_hurt = sprAllyCHurt
+			spr_dead = sprAllyCDead
+		}
+	}
+	else if Player.altUltra
+	{
+		sprite_index = sprAllyEAppear;
+		spr_idle = sprAllyEAppear
+		spr_walk = sprAllyEWalk
+		spr_hurt = sprAllyEHurt
+		spr_dead = sprAllyEDead
 	}
 }
 
@@ -55,7 +74,7 @@ wkick = 0
 alarm[2] = 120
 with Portal
 {
-	if type == 1
+	if type == 1 && !inverted
 	{
 		other.alarm[2] = 5;
 	}

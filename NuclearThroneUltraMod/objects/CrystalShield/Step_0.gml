@@ -1,5 +1,5 @@
 if instance_exists(Player){
-if Player.ultra_got[6]=1{
+if Player.ultra_got[6]=1 && !Player.altUltra{
 if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
 hspeed -= 3
 if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
@@ -37,14 +37,75 @@ if time > 220 and sprite_index != spr_disappear
 sprite_index = spr_disappear
 image_speed = 0.6
 image_index = 0
+	if Player.altUltra && Player.ultra_got[6]
+	{
+		var canTeleport = false;
+		with Player {
+			if !place_meeting(mouse_x,mouse_y,Wall) && place_meeting(mouse_x,mouse_y,Floor)
+			{
+				canTeleport = true
+				x = mouse_x;
+				y = mouse_y;
+				snd_play_2d(sndCrystalTeleport);
+			}
+		}
+		if (canTeleport)
+		{
+			x = mouse_x;
+			y = mouse_y;
+		}
+	
+		var dir = 0;
+		var dirStep = 90;
+		repeat(4)
+		{
+			with instance_create(x,y,Laser)
+			{
+				image_angle = dir
+				team = other.team
+				event_perform(ev_alarm,0)
+			}
+		dir += dirStep;
+		}
+	}
 }
 if KeyCont.key_spec[p] = 3
 {
-sprite_index = spr_disappear
-image_speed = 0.6
-image_index = 0
+	sprite_index = spr_disappear
+	image_speed = 0.6
+	image_index = 0
+	if Player.altUltra && Player.ultra_got[6] 
+	{
+		var canTeleport = false;
+		with Player {
+			if !place_meeting(mouse_x,mouse_y,Wall) && place_meeting(mouse_x,mouse_y,Floor)
+			{
+				canTeleport = true
+				x = mouse_x;
+				y = mouse_y;
+				snd_play_2d(sndCrystalTeleport);
+			}
+		}
+		if (canTeleport)
+		{
+			x = mouse_x;
+			y = mouse_y;
+		}
+		var dir = 0;
+		var dirStep = 90;
+		repeat(4)
+		{
+			with instance_create(x,y,Laser)
+			{
+				image_angle = dir
+				team = other.team
+				event_perform(ev_alarm,0)
+			}
+		dir += dirStep;
+		}
+	}
 }}
-if Player.ultra_got[6]=1{
+if Player.ultra_got[6]=1 && !Player.altUltra{
 mask_index=mskMovingShield;
 
 if place_meeting(x+hspeed,y+vspeed,Wall){
