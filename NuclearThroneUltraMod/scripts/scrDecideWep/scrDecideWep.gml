@@ -20,8 +20,9 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			}
 			if !Player.altUltra && Player.ultra_got[29]==1//Refined taste
 			{
-				minWepArea = min(6,Player.hard+wepTier);
-				maxTries += 10;
+				minWepArea = min(7,Player.hard+wepTier);
+				wepTier ++;
+				maxTries += 20;
 			}
 			
 			if (cursed) {
