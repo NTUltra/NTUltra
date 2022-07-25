@@ -3,7 +3,7 @@ if instance_exists(Player)
 {
 	if Player.loops > 3 && random(3) < 1
 	{
-		snd_play(sndFreakPopoEnter);
+		snd_play(sndFreakPopoEnter,0,true);
 		repeat(2)
 		{
 			with instance_create(x+random(4)-2,y+random(4)-2,IDPDFreak)

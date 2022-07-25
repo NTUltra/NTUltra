@@ -1,6 +1,6 @@
 if speed > 1 and other.team != team
 {
-
+	
 	with other
 	{
 		if sprite_index != spr_hurt
@@ -10,13 +10,14 @@ if speed > 1 and other.team != team
 			image_index = 1;
 			motion_add(other.direction,4)
 			other.hits-=1;
-			snd_play(snd_hurt, hurt_pitch_variation)
+			snd_play(snd_hurt, hurt_pitch_variation,true)
 		}
 		else
 		{
 			scrIframeSkipper(0.8);
 		}
     }
-
+	if hits<1
+		instance_destroy();
 }
 

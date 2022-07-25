@@ -137,7 +137,7 @@ function scrGameModes() {
 	gamemode[27] = "DAILY SCORE";
 	gamemode_unlock[27] = "i dunno";
 	gamemode_have[27] = 1;
-	gamemode_tip[0] = "DAILY SCORE";
+	gamemode_tip[27] = "DAILY SCORE";
 	
 	gamemode[28] = "ALL MUTATION#CHOICES";
 	gamemode_unlock[28] = "TAKE EVERY REGULAR MUTATION#ATLEAST ONCE";

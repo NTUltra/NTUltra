@@ -1,5 +1,6 @@
 /// @description areas regular
 function scrNextLevel() {
+	var prevHard = hard;
 	if UberCont.opt_gamemode == 25//Survival
 	{
 		area = 116;
@@ -412,6 +413,9 @@ function scrNextLevel() {
 		else
 			hard += 1;
 	}
-
+	if loops > 0 && hard - prevHard > 0
+	{
+		hard -= 0.5;
+	}
 	hard = max(0,hard);
 }

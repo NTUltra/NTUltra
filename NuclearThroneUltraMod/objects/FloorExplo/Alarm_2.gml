@@ -1,34 +1,44 @@
 /// @description Create the walls around it
+var wall = Wall;
+if instance_exists(ThroneIISpiral)
+{
+	wall = WallHitMe;
+	sprite_index = sprFloor0Explo;
+	with instance_create(x,y,BackFloorSmall)
+	{
+		depth = other.depth + 4;
+	}
+}
 if !place_meeting(x-16,y,Floor)
-instance_create(x-16,y,Wall)
+instance_create(x-16,y,wall)
 
 
 if !place_meeting(x+16,y,Floor)
-instance_create(x+16,y,Wall)
+instance_create(x+16,y,wall)
 
 
 if !place_meeting(x,y+16,Floor)
-instance_create(x,y+16,Wall)
+instance_create(x,y+16,wall)
 
 
 if !place_meeting(x,y-16,Floor)
-instance_create(x,y-16,Wall)
+instance_create(x,y-16,wall)
 
 
 if !place_meeting(x-16,y+16,Floor)
-instance_create(x-16,y+16,Wall)
+instance_create(x-16,y+16,wall)
 
 
 if !place_meeting(x+16,y-16,Floor)
-instance_create(x+16,y-16,Wall)
+instance_create(x+16,y-16,wall)
 
 
 if !place_meeting(x+16,y+16,Floor)
-instance_create(x+16,y+16,Wall)
+instance_create(x+16,y+16,wall)
 
 
 if !place_meeting(x-16,y-16,Floor)
-instance_create(x-16,y-16,Wall)
+instance_create(x-16,y-16,wall)
 
 if instance_exists(Player) && Player.skill_got[26]
 {

@@ -871,7 +871,7 @@ function scrPowers() {
 	    if place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor)
 	    {
 		    if alarm[3]<3
-		    alarm[3]=3;//imunity
+				alarm[3]=3;//imunity
 		    instance_create(x,y,Teleport);
 		    snd_play_2d(sndHyperLightning);
 		    repeat(5){
@@ -935,9 +935,7 @@ function scrPowers() {
 		    yy=32*(UberCont.mouse__y div 32);
     
     
-		    instance_create(xx,yy,FloorExplo);
-    
-    
+		    instance_create(xx,yy,FloorExplo)
 		    instance_create(xx,yy,WallBreak);
     
     
@@ -1844,7 +1842,7 @@ function scrPowers() {
 			xx=16*(UberCont.mouse__x div 16);
 			yy=16*(UberCont.mouse__y div 16);
 			if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)>16{
-			    if place_meeting(xx,yy,Floor)&&place_free(xx,yy)&&/*!place_meeting(xx,yy,projectile)&&*/
+			    if place_meeting(xx,yy,Floor)&&!place_meeting(xx,yy,Wall)&&/*!place_meeting(xx,yy,projectile)&&*/
 				!place_meeting(xx,yy,hitme)&&!place_meeting(xx,yy,VikingWall)//&&!place_meeting(xx,yy,prop)&&!place_meeting(xx,yy,Sheep)&&!place_meeting(xx,yy,ExplosiveSheep)
 			    {
 
@@ -2062,28 +2060,28 @@ function scrPowers() {
 	}
 	with enemy
 	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
+	{if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
 	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
+	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
 	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))}}
 	with Sheep
 	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
+	{if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
 	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
+	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
 	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))}}
 	with ExplosiveSheep
 	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
+	{if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
 	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
+	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
 	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))}}
 
 	with chestprop
 	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
+	{if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
 	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
+	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
 	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))}}
 	with Pickup
 	{
@@ -2095,9 +2093,9 @@ function scrPowers() {
 		y += lengthdir_y(2+Player.skill_got[5],point_direction(x,y,px,py))//if I do this cehck outside of the with
 		}
 		else{
-		if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
+		if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
 		x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-		if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
+		if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
 		y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))
 		}
 
@@ -2113,9 +2111,9 @@ function scrPowers() {
 	y += lengthdir_y(2+Player.skill_got[5],point_direction(x,y,px,py))
 	}
 	else{
-	if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
+	if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
 	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
+	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
 	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))
 	}
 
@@ -2130,9 +2128,9 @@ function scrPowers() {
 	y += lengthdir_y(2+Player.skill_got[5],point_direction(x,y,px,py))
 	}
 	else{
-	if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
+	if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
 	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
+	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
 	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))
 	}
 
@@ -2145,9 +2143,9 @@ function scrPowers() {
 	y += lengthdir_y(2+Player.skill_got[5],point_direction(x,y,px,py))
 	}
 	else{
-	if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
+	if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
 	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
+	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
 	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))
 	}
 
@@ -2156,22 +2154,22 @@ function scrPowers() {
 	}}*/
 	with RadChest
 	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
+	{if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
 	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
+	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
 	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))}}
 	with projectile
 	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) and team != 2 and canBeMoved
-	{if place_free(x+lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od),y)
+	{if !place_meeting(x+lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od),y,Wall)
 	x += lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od)
-	if place_free(x,y+lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od))
+	if !place_meeting(x,y+lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od),Wall)
 	y += lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od)}}
 	
 	with PopoNade
 	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) and team != 2 and canBeMoved
-	{if place_free(x+lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od),y)
+	{if !place_meeting(x+lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od),y,Wall)
 	x += lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od)
-	if place_free(x,y+lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od))
+	if !place_meeting(x,y+lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od),Wall)
 	y += lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od)}}
 
 
@@ -2290,9 +2288,9 @@ function scrPowers() {
 	//Eyes Monster style Ultra B
 	with enemy
 	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) and team != 2 and object_index != EnemyLaser
-	{if place_free(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)+180),y)
+	{if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)+180),y,Wall)
 	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)+180)
-	if place_free(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)+180))
+	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)+180),Wall)
 	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)+180)}}
 
 

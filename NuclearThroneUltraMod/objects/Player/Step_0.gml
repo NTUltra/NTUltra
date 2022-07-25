@@ -70,7 +70,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 				speed *= 0.4;
 			}
 			var msk = mask_index;
-			if (!place_meeting(x+hspeed,y+vspeed,Wall) && abs(speed - previousSpeed) > 4)
+			if (!place_meeting(x+hspeed,y+vspeed,WallHitMe) && abs(speed - previousSpeed) > 4)
 			{
 				snd_play(sndGhettoBlast);
 				with instance_create(x+lengthdir_x(16,direction),y+lengthdir_y(16,direction),PlantSonicBoom)
@@ -385,11 +385,10 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		    }
 		if (keyboard_check_pressed(ord("G")))
 		    {
-			var dangle = random(1)*360;
-		    with instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,WeaponChest)
-				curse = 1;
-			thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,PopupText);
-			thing.mytext = "CURSE WEAPON CHEST!";
+				var dangle = random(1)*360;
+				thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,PopupText);
+				thing.mytext = "THRONE II";
+				scrTurnIntoPortalArea();
 		    }
 		if (keyboard_check_pressed(ord("I")))
 		    {
@@ -623,7 +622,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		}
 	}
 
-	if can_shoot = 1 and flying == 0 and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
+	if can_shoot = 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 	{
 		if wep_auto[wep] = 0 and clicked = 1
 		{
@@ -1122,7 +1121,7 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 	and (UberCont.opt_gamemode!=12||instance_exists(Marker))
 	and wep_auto[wep] = 1 and (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
 	{
-		while can_shoot = 1 and flying == 0 and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
+		while can_shoot = 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 		{
 			if ultra_got[44] == 1 && instance_exists(Marker)
 			{
@@ -1223,7 +1222,7 @@ speed = 6.3*max(1,(skill_got[2]*1.3))//xtra feet rolling
 	{
 		var msk = mask_index;
 		mask_index = mskPlayer;
-		if place_meeting(x,y,Wall)
+		if place_meeting(x,y,WallHitMe)
 		{
 			x = xprevious;
 			y = yprevious;
@@ -1695,7 +1694,7 @@ display_mouse_set(mox,moy);
 ///Angel flying through walls
 if race=18
 {
-    if instance_exists(Floor) && instance_exists(Wall)
+    if instance_exists(Floor) && instance_exists(WallHitMe)
     {
     if flying>0
     {
@@ -1707,7 +1706,7 @@ if race=18
     }
     
      var ground = instance_nearest(x,y,Floor);
-     var wall = instance_nearest(x,y,Wall);
+     var wall = instance_nearest(x,y,WallHitMe);
      
         if !place_meeting(x,y,Floor)&&point_distance(x,y,wall.x,wall.y)>16&&point_distance(x,y,ground.x,ground.y)>28//OUT OF BOUNDS
         {
@@ -1719,7 +1718,7 @@ if race=18
         
     }
     //GET HURT when flying too long unless acent ultra D
-    if ( ( !place_meeting(x,y,Floor) || flying>0 || mask_index=mskPickupThroughWall || place_meeting(x,y,Wall) )  && !instance_exists(GenCont) && !instance_exists(LevCont) && ultra_got[72]==0 )//NOT ASCND ULTRA
+    if ( ( !place_meeting(x,y,Floor) || flying>0 || mask_index=mskPickupThroughWall || place_meeting(x,y,WallHitMe) )  && !instance_exists(GenCont) && !instance_exists(LevCont) && ultra_got[72]==0 )//NOT ASCND ULTRA
     {
     //var wall = instance_nearest(x,y,Wall);
     var ground = instance_nearest(x,y,Floor);

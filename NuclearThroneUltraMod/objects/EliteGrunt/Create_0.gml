@@ -14,7 +14,7 @@ spr_dead = sprEliteGruntDead
 
 snd_hurt = sndEliteGruntHurt
 snd_dead = sndEliteGruntDead
-snd_play(sndEliteGruntEnter)
+snd_play(sndEliteGruntEnter,0.01,true)
 
 
 team = 3

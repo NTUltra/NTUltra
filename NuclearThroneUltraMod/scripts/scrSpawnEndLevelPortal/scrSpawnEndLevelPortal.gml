@@ -32,6 +32,12 @@ function scrSpawnEndLevelPortal(){
 						}
 						if dir != noone
 						{
+							if instance_exists(Player) && Player.area == 119
+							{
+								instance_create(dir.x+16,dir.y+16,Throne2);//TODO BECOME THRONE
+								scrTurnIntoPortalArea();
+								exit;
+							}
 					        with instance_create(dir.x+16,dir.y+16,Portal)
 								type = 1
 						

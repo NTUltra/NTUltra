@@ -167,7 +167,7 @@ audio_pause_all();
 if isPaused == 0 && !instance_exists(GenCont) && !instance_exists(Menu) && !instance_exists(Vlambeer) &&
 (instance_exists(Player) || instance_exists(PlayerSpawn) && !instance_exists(PauseTimer)) && !instance_exists(PauseTimer)
 {
-	time_microseconds+=02;
+	time_microseconds+=03;
 
 	if time_microseconds>=60
 	{

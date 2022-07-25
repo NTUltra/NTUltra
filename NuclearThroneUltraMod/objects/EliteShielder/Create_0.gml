@@ -13,7 +13,7 @@ male=choose(true,false);
 
 snd_hurt = sndEliteShielderHurt
 snd_dead = sndEliteShielderDead
-snd_play(sndEliteShielderEnter);
+snd_play(sndEliteShielderEnter,0.01,true);
 
 
 team = 3

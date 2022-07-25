@@ -16,7 +16,7 @@ spr_dead = sprEliteInspectorDead
 
 snd_hurt = sndEliteInspectorHurt
 snd_dead = sndEliteInspectorDead
-snd_play(sndEliteInspectorEnter);
+snd_play(sndEliteInspectorEnter,0.01,true);
 
 
 team = 3

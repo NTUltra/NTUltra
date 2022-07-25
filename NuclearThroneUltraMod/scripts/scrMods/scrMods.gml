@@ -1,6 +1,6 @@
 function scrMods() {
 	//List of mods here
-	var notToxi = 6;
+	var notToxi = 4;
 	if instance_exists(Player) && Player.race == 23//Frog is oke with toxic!
 	notToxi = -1;
 	var choice;

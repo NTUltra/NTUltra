@@ -373,12 +373,12 @@ draw_surface(dark,__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ))
 draw_set_blend_mode(bm_normal)}
 
 
-if !instance_exists(MenuGen)
+if !instance_exists(MenuGen) && !instance_exists(ThroneIISpiral)
 {
-with Spiral
-{
-draw_sprite_ext(sprite_index,-1,__view_get( e__VW.XView, 0 )+x,__view_get( e__VW.YView, 0 )+y,image_xscale,image_yscale,image_angle,c_white,1)
-draw_sprite_ext(sprite_index,-1,__view_get( e__VW.XView, 0 )+x,__view_get( e__VW.YView, 0 )+y,image_xscale,image_yscale,image_angle,c_black,0.8-image_xscale)
-}
+	with Spiral
+	{
+		draw_sprite_ext(sprite_index,-1,__view_get( e__VW.XView, 0 )+x,__view_get( e__VW.YView, 0 )+y,image_xscale,image_yscale,image_angle,c_white,1)
+		draw_sprite_ext(sprite_index,-1,__view_get( e__VW.XView, 0 )+x,__view_get( e__VW.YView, 0 )+y,image_xscale,image_yscale,image_angle,c_black,0.8-image_xscale)
+	}
 //scrDrawHUD()
 }

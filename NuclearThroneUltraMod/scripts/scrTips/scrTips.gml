@@ -93,7 +93,7 @@ function scrTips() {
 	if Player.area = 0
 	tip = choose("it's dark here","your friends were here")
 	if Player.area = 1
-	tip = choose("welcome to the future","the wasteland calls you","scorching sun","watch out for maggots","let's do this","dust surrounds you","the wind hurts")
+	tip = choose("welcome to the future","the wasteland calls you","scorching sun","watch out for maggots","let's do this","dust surrounds you","the wind hurts","use the skulls to go to a different area")
 	if Player.area = 2
 	tip = choose("don't drink the water","the sewers stink","don't touch the frogs","don't eat the rat meat","danger","water dripping","sludge everywhere","frog loves to sing")
 	if Player.area = 3

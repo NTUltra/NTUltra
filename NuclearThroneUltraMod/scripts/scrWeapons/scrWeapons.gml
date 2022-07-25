@@ -825,7 +825,7 @@ function scrWeapons() {
 	wep_type[74] = 1
 	wep_auto[74] = 1
 	wep_load[74] = 2
-	wep_cost[74] = 2
+	wep_cost[74] = 3
 	wep_sprt[74] = sprTriplePopGun
 	wep_area[74] = 4
 	wep_text[74] = "rapid fire!"

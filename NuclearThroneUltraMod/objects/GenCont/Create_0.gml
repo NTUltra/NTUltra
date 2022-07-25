@@ -32,6 +32,7 @@ if instance_exists(Player)
 		{
 			case 0:
 			case 113:
+			case 119:
 				__background_set_colour( make_color_rgb(106,122,175) )
 			break;
 			case 1:
@@ -121,7 +122,7 @@ if instance_exists(Player)
 	else
 	{
 		//SWITCH CASE!
-		if Player.area = 0 || Player.area=113//menu Banditland
+		if Player.area = 0 || Player.area == 113 || Player.area == 119//menu Banditland
 		__background_set_colour( make_color_rgb(106,122,175) )
 		else if Player.area = 1//desert
 		__background_set_colour( make_color_rgb(175,143,106) )
@@ -256,16 +257,18 @@ if Player.area = 3
 goal = 90+s
 if Player.area = 107//inverted FrozenCity
 goal=120+s;
-if Player.area - 101//Oasis
+if Player.area == 101//Oasis
 goal=95+s;
 if (Player.area = 6 || Player.area = 112) && Player.subarea=2//LABS BOSS
 goal=1;
-if Player.area - 113//Banditland
+if Player.area == 113//Banditland
 goal=70+s;
-if Player.area - 114//jungle
+if Player.area == 114//jungle
 goal=130+s;
-if Player.area - 117//Mushroom land
+if Player.area == 117//Mushroom land
 goal=120+s;
+if Player.area == 119
+goal = 50;
 
 
 if UberCont.opt_gamemode==6 && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels

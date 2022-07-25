@@ -17,13 +17,13 @@ if male
 {
 snd_hurt = sndInspectorHurtM
 snd_dead = sndInspectorDeadM
-snd_play(sndInspectorStartM);
+snd_play(sndInspectorStartM,0.01,true);
 }
 else
 {
 snd_hurt = sndInspectorHurtM
 snd_dead = sndInspectorDeadF
-snd_play(sndInspectorStartF);
+snd_play(sndInspectorStartF,0.01,true);
 }
 
 team = 3

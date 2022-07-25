@@ -72,7 +72,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprProtoPortal","path":"sprites/sprProtoPortal/sprProtoPortal.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprProtoPortal",
     "tags": [],
     "resourceType": "GMSequence",
   },

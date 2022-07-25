@@ -18,15 +18,15 @@ if race!=18
 
 
 if !instance_exists(GenCont)&&race!=18{
-if collision_point(x+random(4)-2,y+random(4)-2,Wall,false,true)//this may be a little intense
+if collision_point(x+random(4)-2,y+random(4)-2,WallHitMe,false,true)//this may be a little intense
 {
 with other
 {instance_destroy();
 instance_create(x,y,FloorExplo);}
 }}
-else if race=18
+else if race == 18
 {
-flying=2;//4
-mask_index=mskPickupThroughWall;
+	flying=2;//4
+	mask_index=mskPickupThroughWall;
 }
 

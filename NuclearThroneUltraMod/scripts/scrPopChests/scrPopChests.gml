@@ -183,9 +183,15 @@ function scrPopChests() {
 				}
 			}
 		}
-		gol = 0
-		wepChestGol = 0;
-		healthChestGol = 0;
+			gol = 0
+			wepChestGol = 0;
+			healthChestGol = 0;
+		}
+		if Player.area == 119
+		{
+			gol = 0
+			wepChestGol = 0;
+			healthChestGol = 0;
 		}
 		if !Player.canHeal
 			healthChestGol = 0;

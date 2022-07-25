@@ -669,7 +669,7 @@ if rollIframe > 0
 {
 	rollIframe --;
 	mask_index = mskPlayer;
-	if place_meeting(x,y,Wall)
+	if place_meeting(x,y,WallHitMe)
 	{
 		move_outside_solid(direction+180,8);
 		move_contact_solid(direction,max(1,min(maxspeed,speed)))

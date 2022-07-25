@@ -11,7 +11,10 @@
     "path": "sprites/mskWall/mskWall.yy",
   },
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "WallHitMe",
+    "path": "objects/WallHitMe/WallHitMe.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 0,

@@ -1008,6 +1008,11 @@ function scrPopEnemies() {
 	        }
 		}
     }
+	if spawnarea == 119
+	{
+		if !instance_exists(IDPDSpawn) || (instance_number(IDPDSpawn) < clamp(loops + 1,2,4))
+			instance_create(x,y,IDPDSpawn);	
+	}
 	if spawnarea == 118 && subarea != 3 {//Inverted palace
 		if loops > 0 {
 			if styleb = 1 && random(7) < 2 {

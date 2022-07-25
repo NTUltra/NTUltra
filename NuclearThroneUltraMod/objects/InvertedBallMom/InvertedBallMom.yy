@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -29,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "NuclearThrone",
-    "path": "folders/Objects/Enemies/Boss/NuclearThrone.yy",
+    "name": "Boss",
+    "path": "folders/Objects/Enemies/Boss.yy",
   },
   "resourceVersion": "1.0",
   "name": "InvertedBallMom",

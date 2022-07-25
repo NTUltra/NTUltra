@@ -15,13 +15,13 @@ if male
 {
 snd_hurt = sndShielderHurtM
 snd_dead = sndShielderDeadM
-snd_play(sndGruntEnterM)
+snd_play(sndGruntEnterM,0.01,true)
 }
 else
 {
 snd_hurt = sndGruntHurtF
 snd_dead = sndGruntDeadF
-snd_play(sndGruntEnterF)
+snd_play(sndGruntEnterF,0.01,true)
 }
 
 team = 3
