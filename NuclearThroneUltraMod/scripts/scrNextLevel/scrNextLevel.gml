@@ -280,6 +280,10 @@ function scrNextLevel() {
 	{
 		//WE LOOP HERE!
 		inverted = false;
+		if area == 120
+			UberCont.extraVan = -1;
+		else
+			UberCont.extraVan = 0;
 		looping=true;
 	}
 	if ( subarea < 3 and area != 2 and area != 105 and area != 106

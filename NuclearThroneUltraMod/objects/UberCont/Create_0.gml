@@ -154,3 +154,4 @@ if !instance_exists(Cursor)
 canSpawnInversionShards = false;
 collectedInversionShards = 0;
 collectedInversionShardReward = false;
+extraVan = 0;

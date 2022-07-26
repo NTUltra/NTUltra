@@ -203,6 +203,8 @@ function scrLoadRun(){
 					Player.maxCash = encryptedRun.maxCash;
 				if variable_struct_exists(encryptedRun, "canHeal")
 					Player.canHeal = encryptedRun.canHeal;
+				if variable_struct_exists(encryptedRun, "extraVan")
+					UberCont.extraVan = encryptedRun.extraVan;
 			}
 			with Player
 			{

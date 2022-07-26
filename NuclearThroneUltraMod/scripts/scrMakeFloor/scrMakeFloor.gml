@@ -429,7 +429,7 @@ function scrMakeFloor() {
 	} 
 	
 	//savanna
-	if area = 10{ if random(5) < 2
+	if area = 10 || area == 121{ if random(5) < 2
 	{instance_create(x,y,Floor)
 	instance_create(x+32,y,Floor)
 	instance_create(x-32,y,Floor)
@@ -655,7 +655,7 @@ function scrMakeFloor() {
 
 
 	//BRANCHES
-	if area = 1 || area = 105 || area = 101 || area == 10 || area == 114
+	if area = 1 || area = 105 || area = 101 || area == 10 || area == 114 || area == 121
 	{
 	if random(19+instance_number(FloorMaker)) > 20
 	{

@@ -48,11 +48,9 @@ crossPspeed =  6;
 fireRate = 10;
 lp = 0.05;//0.2
 pSpeedAccurate = 4;
-fireOffset = 40;
 image_xscale = 1;
 actTime = 20;
 scrTarget();
-angle = random(360);
 loops = GetPlayerLoops();
 if loops > 2
 {
@@ -80,7 +78,8 @@ if loops > 5
 
 if target > 0
 	angle = point_direction(target.x,target.y,x,y);
-	
+else
+	angle = random(360);
 crossAngleStep = 360/crossAmount;
 //get into position
 alarm[6] = 60;

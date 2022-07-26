@@ -54,7 +54,6 @@ if instance_exists(Player)
 		}
 		i ++;
 	}
-	vanDelay = max(100,vanDelay - ((wantVanAmount-1)*40));
 	if Player.skill_got[29]//Insomnia
 	{
 		vanDelay *= 1.25;
@@ -67,6 +66,9 @@ if instance_exists(Player)
 		verticalVans = true;
 	if Player.crown == 16 //CROWN OF POPO
 		wantVanAmount ++;
+	wantVanAmount += UberCont.extraVan;
+	
+	vanDelay = max(100,vanDelay - ((wantVanAmount-1)*40));
 	if Player.crown==10//crown of difficulty
 	{
 		vanDelay*=0.7;

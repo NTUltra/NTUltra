@@ -120,6 +120,9 @@ if instance_exists(Player)
 			case 120:
 				__background_set_colour( make_color_rgb(35,33,32) )
 			break;
+			case 121:
+				__background_set_colour( make_color_rgb(140,123,84) )
+			break;
 		}
 	}
 	else
@@ -201,7 +204,7 @@ if instance_exists(Player)
 		__background_set_colour( make_color_rgb(75,79,31) )
 		else if Player.area = 118//Inverted Palace
 		__background_set_colour( make_color_rgb(142,204,204) )
-		else if Player.area == 119//Inverted throne 2
+		else if Player.area == 120//Inverted throne 2
 		__background_set_colour( make_color_rgb(76,68,61) )
 	}
 }
@@ -254,7 +257,7 @@ if Player.area = 9//Palace
 goal = 130+s
 if Player.area = 118//Inverted Palace
 goal = 130+s
-if Player.area = 10//savanna
+if Player.area = 10 || Player.area == 121//savanna
 goal = 110+s
 if Player.area = 109//inverted Wonderland
 goal=130+s

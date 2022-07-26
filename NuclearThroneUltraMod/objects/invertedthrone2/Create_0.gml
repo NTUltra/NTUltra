@@ -1,15 +1,19 @@
-/// @description Init and adjust
+/// @description Init
 
 // Inherit the parent event
 event_inherited();
-maxhealth = 860
+maxhealth = 860;
 EnemyHealthAdjustments();
+
+spr_idle = sprNothing2Idle
+spr_walk = sprNothing2Idle
+spr_hurt = sprNothing2Hurt
+spr_dead = sprNothing2Death
+
 isInverted = true;
+actTime -= 5;
 rotationSpeed *= 1.1;
 crossAmount ++;
-actTime -= 5;
-
-spr_idle = sprInvertedNothing2Idle
-spr_walk = sprInvertedNothing2Idle
-spr_hurt = sprInvertedNothing2Hurt
-spr_dead = sprInvertedNothing2Death
+fireRate -= 1
+maxAmmo ++;
+crossAngleStep = 360/crossAmount;

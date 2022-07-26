@@ -109,6 +109,7 @@ function scrSaveRun() {
 			lstCash: Player.lstCash,
 			maxCash: Player.maxCash,
 			canHeal: Player.canHeal,
+			extraVan: UberCont.extraVan,
 		};
 		with UberCont
 		{

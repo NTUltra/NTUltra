@@ -118,6 +118,18 @@ break;
 case 118:
 sprite_index=sprFloor118Explo;
 break;
+case 120:
+sprite_index=sprFloor120Explo;
+break;
+case 121:
+sprite_index=sprFloor121Explo;
+break;
+case 122:
+sprite_index=sprFloor122Explo;
+break;
+case 123:
+sprite_index=sprFloor123Explo;
+break;
 default:
 sprite_index=sprFloor0Explo;
 break;

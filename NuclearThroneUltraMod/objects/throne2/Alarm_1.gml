@@ -23,7 +23,7 @@ if target > 0 {
 	else if ran > 40
 	{
 		//Accurate shot
-		if loops > 2 || UberCont.opt_gamemode == 34
+		if loops > 2 || UberCont.opt_gamemode == 34 || isInverted
 			event_user(2);
 	}
 	else if ran > 10
