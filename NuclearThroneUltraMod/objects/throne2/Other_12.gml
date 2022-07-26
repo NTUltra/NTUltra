@@ -2,17 +2,23 @@
 scrTarget();
 if target > 0
 {
-	sprite_index = spr_fire;
 	var dir = point_direction(x,y,target.x,target.y);
-	audio_play_sound_on(emitter,sndSuperSlugger,false,4);
-	with instance_create(x,y,EnemyBullet1Square)
+	if isInverted
+	with instance_create(x,y,InvertedGuardianBulletSpawn)
 	{
+		typ = 3;
 		motion_add(dir,other.pSpeedAccurate)
-		image_angle = direction
+		sprite_index = sprGuardianSquareBulletSpawn;
+		owner = other.id;
 		team = other.team
 	}
-	alarm[2] = max(sprite_get_number(spr_fire)/image_speed,alarm[2]);
-	instance_create(x,y,BigWallBreak);
-	if place_meeting(x,y,Floor)
-		scrDrop(7,0);
+	else
+	with instance_create(x,y,GuardianBulletSpawn)
+	{
+		typ = 3;
+		motion_add(dir,other.pSpeedAccurate)
+		sprite_index = sprGuardianSquareBulletSpawn;
+		owner = other.id;
+		team = other.team
+	}
 }

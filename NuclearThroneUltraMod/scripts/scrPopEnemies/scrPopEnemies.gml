@@ -1008,7 +1008,7 @@ function scrPopEnemies() {
 	        }
 		}
     }
-	if spawnarea == 119
+	if spawnarea == 119 || spawnarea == 120
 	{
 		if !instance_exists(IDPDSpawn) || (instance_number(IDPDSpawn) < clamp(loops + 1,2,4))
 			instance_create(x,y,IDPDSpawn);	

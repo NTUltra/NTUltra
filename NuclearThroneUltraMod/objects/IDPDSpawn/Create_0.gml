@@ -1,12 +1,12 @@
 if instance_exists(Player) && instance_exists(Floor)
 {
 
-if Player.area=100 || (Player.area == 9 && Player.subarea == 3)
+if Player.area != 119 && (Player.area=100 || (Player.area == 9 && Player.subarea == 3))
 {
 instance_destroy()
 exit;
 }
-
+var tries = 100;
 do {
 x = Player.x
 y = Player.y
@@ -14,8 +14,9 @@ ang = random(360)
 x = Player.x+lengthdir_x(96+random(96),ang) y = Player.y+lengthdir_y(96+random(96),ang)
 dir = instance_nearest(x,y,Floor)
 x = dir.x+16; y = dir.y+16;
+tries--;
 }
-until point_distance(x,y,Player.x,Player.y) > 64 and place_free(x,y)
+until point_distance(x,y,Player.x,Player.y) > 64 and place_free(x,y) or tries < 0
 
 }
 

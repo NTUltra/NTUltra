@@ -7,6 +7,10 @@ if sprite_index == spr_death
 	with instance_create(x,y,Portal)
 	{
 		type = 4
+		image_speed = 0.4;
+		depth = min(other.depth - 1,2);
+		alarm[1] = 0;
 		sprite_index = sprBigPortalSpawn;
+		visible = true;
 	}
 }

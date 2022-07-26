@@ -7,12 +7,26 @@ if instance_exists(Player)
 }
 if target > 0 && instance_exists(target)
 {
-	with Wall
+	if !instance_exists(Wall)
 	{
-		if collision_line(x,y,other.target.x,other.target.y,Wall,true,true) < 0 and point_distance(x,y,other.target.x,other.target.y) > 110 
-		and point_distance(x,y,other.target.x,other.target.y) < 180 and ((!place_free(x-16,y) and !place_free(x+16,y)) or (!place_free(x,y+16) and !place_free(x,y-16))) || other.tries > 20
+		with Floor
 		{
-			instance_create(x,y,CanSpawnBoss)
+			if collision_line(x,y,other.target.x,other.target.y,Wall,true,true) < 0 and point_distance(x,y,other.target.x,other.target.y) > 110 
+			and point_distance(x,y,other.target.x,other.target.y) < 180 and ((!place_free(x-16,y) and !place_free(x+16,y)) or (!place_free(x,y+16) and !place_free(x,y-16))) || other.tries > 20
+			{
+				instance_create(x,y,CanSpawnBoss)
+			}
+		}
+	}
+	else
+	{
+		with Wall
+		{
+			if collision_line(x,y,other.target.x,other.target.y,Wall,true,true) < 0 and point_distance(x,y,other.target.x,other.target.y) > 110 
+			and point_distance(x,y,other.target.x,other.target.y) < 180 and ((!place_free(x-16,y) and !place_free(x+16,y)) or (!place_free(x,y+16) and !place_free(x,y-16))) || other.tries > 20
+			{
+				instance_create(x,y,CanSpawnBoss)
+			}
 		}
 	}
 	if instance_exists(CanSpawnBoss)

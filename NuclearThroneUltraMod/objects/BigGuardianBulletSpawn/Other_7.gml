@@ -5,6 +5,11 @@ snd_play(sndBigBallFire);
 var addspeed = point_distance(x,y,target.xprevious,target.yprevious)*0.0153;
 debug(addspeed);
 addspeed = min(addspeed,20);
+if isThrone2
+{
+	dir += choose(random_range(20,50),random_range(-20,-50));
+	addspeed *= 0.9;
+}
 if typ == 2
 {
 	if isInverted

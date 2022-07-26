@@ -32,11 +32,20 @@ function scrSpawnEndLevelPortal(){
 						}
 						if dir != noone
 						{
-							if instance_exists(Player) && Player.area == 119
+							if instance_exists(Player)
 							{
-								instance_create(dir.x+16,dir.y+16,Throne2);//TODO BECOME THRONE
-								scrTurnIntoPortalArea();
-								exit;
+								if Player.area == 119
+								{
+									instance_create(dir.x+16,dir.y+16,BecomeThrone2);
+									scrTurnIntoPortalArea();
+									exit;
+								}
+								else if Player.area == 120
+								{
+									instance_create(dir.x+16,dir.y+16,BecomeInvertedThrone2);
+									scrTurnIntoPortalArea(true);
+									exit;
+								}
 							}
 					        with instance_create(dir.x+16,dir.y+16,Portal)
 								type = 1

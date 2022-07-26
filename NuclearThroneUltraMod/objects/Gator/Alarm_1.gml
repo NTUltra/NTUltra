@@ -22,7 +22,7 @@ if target > 0 {
             else if random(2) < 1{
                 direction = point_direction(x, y, target.x, target.y) + random(180) - 90
 				var n = instance_nearest(x,y,Wall)
-				if point_distance(x,y,n.x,n.y) < 32
+				if n != noone && point_distance(x,y,n.x,n.y) < 32
 				{
 					direction = point_direction(n.x,n.y,x,y);
 				}
@@ -57,7 +57,7 @@ if target > 0 {
 	else if instance_exists(Wall)
 	{	
 		var n = instance_nearest(x,y,Wall)
-		if point_distance(x,y,n.x,n.y) < 64
+		if n != noone && point_distance(x,y,n.x,n.y) < 64
 		{
 			motion_add(point_direction(n.x,n.y,x,y), 0.4)
 	        walk = 20 + random(10)

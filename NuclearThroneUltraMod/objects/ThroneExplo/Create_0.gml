@@ -4,3 +4,5 @@ alarm[2] = 1;
 image_speed = 0.4;
 explo = GreenExplosion;
 spr_death = sprNothingDeath;
+snd_death = sndNothingDeath2;
+rr = 0;

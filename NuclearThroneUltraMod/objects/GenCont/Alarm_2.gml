@@ -602,6 +602,10 @@ else if Player.area != 100
 	Player.x += 16;
 	Player.y -= 32;
 }
+if (Player.area == 119 || Player.area == 120) && !instance_exists(IDPDSpawn)
+{
+	instance_create(Player.x,Player.y,IDPDSpawn);
+}
 with Crown
 {
 	x = Player.x;

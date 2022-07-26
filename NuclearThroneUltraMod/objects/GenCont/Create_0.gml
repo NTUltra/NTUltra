@@ -117,6 +117,9 @@ if instance_exists(Player)
 			case 118:
 				__background_set_colour( make_color_rgb(37,50,51) )
 			break;
+			case 120:
+				__background_set_colour( make_color_rgb(35,33,32) )
+			break;
 		}
 	}
 	else
@@ -198,6 +201,8 @@ if instance_exists(Player)
 		__background_set_colour( make_color_rgb(75,79,31) )
 		else if Player.area = 118//Inverted Palace
 		__background_set_colour( make_color_rgb(142,204,204) )
+		else if Player.area == 119//Inverted throne 2
+		__background_set_colour( make_color_rgb(76,68,61) )
 	}
 }
 else
@@ -267,8 +272,8 @@ if Player.area == 114//jungle
 goal=130+s;
 if Player.area == 117//Mushroom land
 goal=120+s;
-if Player.area == 119
-goal = 50;
+if Player.area == 119 || Player.area == 120
+goal = 60;
 
 
 if UberCont.opt_gamemode==6 && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels

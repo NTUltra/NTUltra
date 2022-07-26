@@ -9,10 +9,11 @@ if instance_exists(Floor)
 with enemy
 {
 	var n = instance_nearest(x,y,Floor)
-	if n != noone && point_distance(x,y,n.x,n.y) > 200
+	if n != noone && point_distance(x,y,n.x,n.y) > 140//200
 	{
 		direction = point_direction(x,y,n.x,n.y);
 		speed += 1;
+		walk += 20;
 	}
 }
 alarm[4] = 60;

@@ -75,7 +75,7 @@ if my_health < maxhealth*0.6 && difficultyStep < 1
 		maxAmmo = max(maxAmmo - 2, 3);
 	}
 }
-if my_health < maxhealth*0.2 && difficultyStep < 2
+if my_health < maxhealth*0.3 && difficultyStep < 2
 {
 	difficultyStep ++;
 	snd_play_2d(sndNothingLowHP);

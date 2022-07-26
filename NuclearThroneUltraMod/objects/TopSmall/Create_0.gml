@@ -18,6 +18,7 @@ else
 switch (area)
 {
 case 0:
+case 119:
 sprite_index=sprWall0Trans;
 break;
 case 1:
@@ -100,6 +101,9 @@ sprite_index=sprWall117Trans;
 break;
 case 118:
 sprite_index=sprWall118Trans;
+break;
+case 120:
+sprite_index=sprWall120Trans;
 break;
 default:
 sprite_index=sprWall0Trans;

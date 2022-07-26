@@ -8,7 +8,10 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "becomenemy",
+    "path": "objects/becomenemy/becomenemy.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 0,

@@ -25,6 +25,7 @@ else
 switch (area)
 {
 case 0:
+case 119:
 topspr=sprWall0Top;
 outspr=sprWall0Out;
 sprite_index=sprWall0Bot;
@@ -196,6 +197,12 @@ case 118:
 topspr=sprWall118Top;
 outspr=sprWall118Out;
 sprite_index=sprWall118Bot;
+break;
+
+case 120:
+topspr=sprWall120Top;
+outspr=sprWall120Out;
+sprite_index=sprWall120Bot;
 break;
 
 

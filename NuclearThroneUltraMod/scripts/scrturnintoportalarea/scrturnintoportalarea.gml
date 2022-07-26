@@ -1,7 +1,7 @@
 ///scrTurnIntoPortalArea();
 // /@description
 ///@param
-function scrTurnIntoPortalArea(){
+function scrTurnIntoPortalArea(shouldBeInverted = false){
 	with Top
 	{
 		instance_destroy(id,false);	
@@ -29,6 +29,19 @@ function scrTurnIntoPortalArea(){
 	}
 	alarm[4] = 60;//Projectiles out side of view destroy
 	var deepestDepths = 100;
+	var sprExplo = sprFloor0Explo;
+	var spr = sprFloor0;
+	var sprb = sprBackFloor;
+	var sprb2 = sprBackFloor2;
+	var sprs = sprBackFloorSmall;
+	if shouldBeInverted
+	{
+		sprExplo = sprFloor120Explo;
+		spr = sprFloor120;
+		sprb = sprInvertedBackFloor;
+		sprb2 = sprInvertedBackFloor2;
+		sprs = sprInvertedBackFloorSmall;
+	}
 	if instance_exists(Floor)
 	{
 		var targetDepth = Floor.y + 1000;
@@ -41,17 +54,20 @@ function scrTurnIntoPortalArea(){
 							
 			if object_index == FloorExplo
 			{
-				sprite_index = sprFloor0Explo;
+				sprite_index = sprExplo;
 				with instance_create(x,y,BackFloorSmall)
 				{
 					depth = d + 1;
+					sprite_index = sprs;
 				}
 			}
 			else
 			{
-				sprite_index = sprFloor0;
+				sprite_index = spr;
 				with instance_create(x,y,BackFloor)
 				{
+					sprite_index = sprb;
+					sprBack2 = sprb2;
 					depth = d + 1;
 				}
 			}

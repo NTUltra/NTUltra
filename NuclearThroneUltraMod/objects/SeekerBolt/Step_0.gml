@@ -17,12 +17,15 @@ if collision_line(x,y,instance_nearest(x,y,enemy).x,instance_nearest(x,y,enemy).
 else
 {
 target=0
-var WALL;
-WALL=instance_nearest(x,y,Wall);
-if point_distance(x,y,WALL.x,WALL.y)<32 && (ee || bm)
-{
-	motion_add(point_direction(x,y,WALL.x,WALL.y)+180,(100+(ee*20)+(bm*20))/point_distance(x,y,WALL.x,WALL.y));//move away from wall
-}
+if instance_exists(Wall)
+	{
+		var WALL;
+		WALL=instance_nearest(x,y,Wall);
+		if WALL != noone && point_distance(x,y,WALL.x,WALL.y)<32 && (ee || bm)
+		{
+			motion_add(point_direction(x,y,WALL.x,WALL.y)+180,(100+(ee*20)+(bm*20))/point_distance(x,y,WALL.x,WALL.y));//move away from wall
+		}
+	}
 }
 
 

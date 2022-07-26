@@ -3,7 +3,7 @@ friction = 0.4
 right = choose(1,-1)
 my_health = maxhealth
 prevhealth=my_health;
-
+walk = 0;
 MorphMe=false;
 frozen=false;
 

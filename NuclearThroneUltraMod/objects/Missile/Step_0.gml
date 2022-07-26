@@ -10,10 +10,13 @@ target=instance_nearest(x,y,enemy);
 else
 {
 target=0
-var WALL;
-WALL=instance_nearest(x,y,Wall);
-if point_distance(x,y,WALL.x,WALL.y)<32
-motion_add(point_direction(x,y,WALL.x,WALL.y)+180,point_distance(x,y,WALL.x,WALL.y)*0.02);//move away from wall
+if instance_exists(Wall)
+	{
+	var WALL;
+	WALL=instance_nearest(x,y,Wall);
+	if WALL != noone &&  point_distance(x,y,WALL.x,WALL.y)<32
+	motion_add(point_direction(x,y,WALL.x,WALL.y)+180,point_distance(x,y,WALL.x,WALL.y)*0.02);//move away from wall
+	}
 }
 
 }

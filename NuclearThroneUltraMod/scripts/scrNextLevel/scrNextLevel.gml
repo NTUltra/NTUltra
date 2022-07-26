@@ -39,14 +39,18 @@ function scrNextLevel() {
 		        inverted=false;
 		        exit;
 	        }
-	        else//inv palace to loop desert
+	        else//inv palace to throne 2
 	        {
+				area=120;
+		        subarea=0;
+				exit;
+				/*
 				//LOOP
 		        area=1;
 		        subarea=1;
 				inverted=false
 				looping=true;
-		        exit;
+		        exit;*/
 	        }
 		}
 		
@@ -272,6 +276,12 @@ function scrNextLevel() {
 		}
 
 	}
+	else if area == 119 || area == 120
+	{
+		//WE LOOP HERE!
+		inverted = false;
+		looping=true;
+	}
 	if ( subarea < 3 and area != 2 and area != 105 and area != 106
 	&& !(area = 6 && subarea > 1)//Labs has 2 areas
 	&& !(area = 4 && subarea > 1) //Caves has 2 areas
@@ -321,9 +331,9 @@ function scrNextLevel() {
 			area = 117;
 			subarea = 1;
 		}
-		else//WE LOOP HERE!
+		else if area == 9
 		{
-			looping=true;
+			area = 119;	
 		}
 	}    
 	//TO INVERTED AREAS
