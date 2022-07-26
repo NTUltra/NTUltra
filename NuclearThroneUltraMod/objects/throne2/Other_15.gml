@@ -2,7 +2,14 @@
 speed = 0;
 var ang = 0;
 if target > -1 && instance_exists(target) && crossAmmo == crossMaxAmmo
+{
 	ang = point_direction(x,y,target.x,target.y);
+	crossAmmo--;
+	alarm[4] = 5;
+	alarm[1] += 5;
+	//To make sure the thing is completly stationary so we dont get any stray bullets and to provide dodge time
+	exit;
+}
 var pspd = crossPspeed;
 if loops > random(3)
 {

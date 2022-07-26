@@ -27,6 +27,9 @@ speed = 0;
 alarm[1] = 30+random(90)
 wkick = 0
 
+actTime = 20;
+eatTime = 20;
+maxSpeed = 3;
 corpseTarget = -1;
 projectileSpeed = 5.1;
 projectileSpeed += clamp(GetPlayerLoops()*0.5,0,2);

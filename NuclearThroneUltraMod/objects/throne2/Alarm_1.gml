@@ -1,5 +1,10 @@
 ///@description AI
 alarm[1] = actTime + random(actTime);
+if collision_point(x,y,Floor,false,false)
+{
+	alarm[1] = 4
+	exit;
+}	
 scrTarget()
 if target > 0 {
 	var ran = random(100);
@@ -20,11 +25,13 @@ if target > 0 {
 		ammo = maxAmmo;
 		event_user(1);
 	}
-	else if ran > 40
+	else if ran > 30
 	{
 		//Accurate shot
 		if loops > 2 || UberCont.opt_gamemode == 34 || isInverted
 			event_user(2);
+		else
+			alarm[1] = max(1,alarm[1] - 5);
 	}
 	else if ran > 10
 	{

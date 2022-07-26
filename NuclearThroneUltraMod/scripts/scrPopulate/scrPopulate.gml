@@ -255,6 +255,25 @@ function scrPopulate() {
             sprite_index = sprSavannaTopDecal;
 
         }
+		else if spawnarea == 121 {
+            if !place_free(x - 32, y) and!place_free(x + 32, y) and place_free(x, y) {
+                instance_create(x, y, Bones)
+                instance_create(x, y + 16, Bones)
+                with instance_create(x + 32, y, Bones)
+                image_xscale = -1
+                with instance_create(x + 32, y + 16, Bones)
+                image_xscale = -1
+
+                with Bones
+                sprite_index = sprInvertedSavannaBones;
+            }
+
+
+            TopDecals();
+            with TopDecal
+            sprite_index = sprInvertedSavannaTopDecal;
+
+        }
         if spawnarea = 3 || spawnarea = 106 {
             if !place_free(x - 32, y) and!place_free(x + 32, y) and place_free(x, y) {
                 if random(7) < 1

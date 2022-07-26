@@ -7,7 +7,7 @@ debug(addspeed);
 addspeed = min(addspeed,20);
 if isThrone2
 {
-	dir += choose(random_range(20,50),random_range(-20,-50));
+	dir += choose(random_range(30,60),random_range(-30,-60));
 	addspeed *= 0.9;
 }
 if typ == 2

@@ -13,6 +13,7 @@ spr_idle = sprSavannaBanditIdle
 spr_walk = sprSavannaBanditWalk
 spr_hurt = sprSavannaBanditHurt
 spr_dead = sprSavannaBanditDead
+spr_gun = sprSavannaBanditGun;
 
 snd_hurt = sndBanditHit
 snd_dead = sndBanditDie

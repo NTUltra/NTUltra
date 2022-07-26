@@ -81,8 +81,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Bandit",
-    "path": "folders/Sprites/Enemies/Bandit.yy",
+    "name": "SavannaBandit",
+    "path": "folders/Sprites/Enemies/Bandit/SavannaBandit.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprSavannaBanditIdle",

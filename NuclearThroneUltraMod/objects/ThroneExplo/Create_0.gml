@@ -6,3 +6,4 @@ explo = GreenExplosion;
 spr_death = sprNothingDeath;
 snd_death = sndNothingDeath2;
 rr = 0;
+alarm[3] = 2;//Just to be sure

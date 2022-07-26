@@ -1,7 +1,7 @@
 /// @description Spawn projectiles
 scrTarget();
 var dir = point_direction(x,y,target.xprevious,target.yprevious);
-dir += choose(random_range(20,50),random_range(-20,-50));
+dir += choose(random_range(30,60),random_range(-30,-60));
 snd_play(sndBigBallFire);
 var addspeed = point_distance(x,y,target.xprevious,target.yprevious)*0.0153;
 debug(addspeed);

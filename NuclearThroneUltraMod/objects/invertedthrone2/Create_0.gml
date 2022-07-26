@@ -6,10 +6,10 @@ raddrop = 80
 maxhealth = 880;
 EnemyHealthAdjustments();
 
-spr_idle = sprNothing2Idle
-spr_walk = sprNothing2Idle
-spr_hurt = sprNothing2Hurt
-spr_dead = sprNothing2Death
+spr_idle = sprInvertedNothing2Idle
+spr_walk = sprInvertedNothing2Idle
+spr_hurt = sprInvertedNothing2Hurt
+spr_dead = sprInvertedNothing2Death
 
 isInverted = true;
 actTime -= 5;

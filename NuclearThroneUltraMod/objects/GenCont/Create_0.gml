@@ -121,7 +121,7 @@ if instance_exists(Player)
 				__background_set_colour( make_color_rgb(35,33,32) )
 			break;
 			case 121:
-				__background_set_colour( make_color_rgb(140,123,84) )
+				__background_set_colour( make_color_rgb(81,96,135) )
 			break;
 		}
 	}
@@ -206,6 +206,8 @@ if instance_exists(Player)
 		__background_set_colour( make_color_rgb(142,204,204) )
 		else if Player.area == 120//Inverted throne 2
 		__background_set_colour( make_color_rgb(76,68,61) )
+		else if Player.area == 121//Inverted Savanna
+		__background_set_colour( make_color_rgb(71,153,82) )
 	}
 }
 else

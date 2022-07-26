@@ -28,7 +28,28 @@ function scrNextLevel() {
 		lastarea = area
 	}
 	else if subarea = 1 || area = 105 || area = 106 || area = 107 || area = 101 || area = 110 || area = 111 || area = 112 || area = 103 || area = 109 || area = 113 || area == 114 || area = 108 || area == 115 || area == 117 || area == 118
+	|| area == 121
 	{
+		//Inverted savanna
+		if area = 121//bring to mushroom
+	    {
+			//TODO
+	        if inverted && area == 121 &&subarea<3
+	        {
+	        //inverted big bandit
+	        area = 121
+	        subarea=3;
+	        inverted=false;
+	        exit;
+	        }
+	        else
+	        {
+	        area = 117
+	        subarea = 0
+			inverted=false
+	        exit;
+	        }
+	    }
 		if area == 118
 		{
 			if inverted && subarea<3
@@ -388,6 +409,12 @@ function scrNextLevel() {
 	{area=110;
 	subarea=1;
 	lastarea=3;}
+	
+	if ( area==10 && inverted )//inv Savanna
+	{area=121;
+	lastarea=121;
+	hard ++;
+	}
 
 
 	if race=6||race=12{//Yv's Crib? Yun cuz aswell
@@ -406,7 +433,7 @@ function scrNextLevel() {
 		}
 	}
 
-	if (area=105 || area=106|| area=107 || area = 108 || area = 109 | area = 110 || area = 111 || area = 112)&&subarea<2//inverted curse
+	if (area=105 || area=106|| area=107 || area = 108 || area = 109 | area = 110 || area = 111 || area = 112 || area == 121)&&subarea<2//inverted curse
 	{
 		if crown == 24
 			hard -= 1.5;

@@ -11,7 +11,7 @@ if target > 0
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {
-if point_distance(target.x,target.y,x,y) > 48 and point_distance(target.x,target.y,x,y) < 164
+if point_distance(target.x,target.y,x,y) > 48 and point_distance(target.x,target.y,x,y) < 150
 {
 if random(2) < 1
 {

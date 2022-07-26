@@ -1,6 +1,6 @@
 ///@description AI
 //HEAL FROM CORPSES!
-alarm[1] = 20 + random(10)
+alarm[1] = actTime + random(10)
 
 scrTarget()
 if target > 0 {
@@ -11,26 +11,7 @@ if target > 0 {
 			var xx = target.x + (target.hspeed*2)
 			var yy = target.y + (target.vspeed*2)
 			gunangle = point_direction(x, y, xx, yy);
-			if (fuckyou)
-			{
-				snd_play(sndRocket);
-				with instance_create(x,y,JockRocket)
-				{
-					motion_add(other.gunangle,other.projectileSpeed)
-					team = other.team
-					image_angle = direction
-				}
-			}
-			else
-			{
-				snd_play(sndSnowTankShoot);
-				with instance_create(x,y,EnemyBullet5)
-				{
-					motion_add(other.gunangle,other.projectileSpeed)
-					team = other.team
-					image_angle = direction
-				}
-			}
+			event_user(0);
 			alarm[1] += 10;
         }
         else {

@@ -18,7 +18,7 @@ function scrPopProps() {
 		
 	myx = x+choose(0,16)
 	myy = y+choose(0,16)
-	if !place_meeting(myx,myy,hitme) && !place_meeting(myx,myy,chestprop) && !place_meeting(x,y,NOWALLSHEREPLEASE)
+	if !place_meeting(myx,myy,hitme) && !place_meeting(myx,myy,chestprop) && !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(myx,myy,prop)
 		instance_create(myx,myy,Wall)
 	instance_create(x,y,NOWALLSHEREPLEASE)
 	}//random(5)< 1
@@ -29,7 +29,7 @@ function scrPopProps() {
 	myx = x+choose(0,16)
 	myy = y+choose(0,16)
 
-	if !place_meeting(myx,myy,hitme) && !place_meeting(myx,myy,chestprop) && !place_meeting(x,y,NOWALLSHEREPLEASE)
+	if !place_meeting(myx,myy,hitme) && !place_meeting(myx,myy,chestprop) && !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(myx,myy,prop)
 		instance_create(myx,myy,Wall)
 	instance_create(x,y,NOWALLSHEREPLEASE)
 	}//random(5)< 1
@@ -39,8 +39,8 @@ function scrPopProps() {
 	{
 	myx = x+choose(0,16)
 	myy = y+choose(0,16)
-
-	instance_create(myx,myy,Wall)
+	if !place_meeting(myx,myy,hitme) && !place_meeting(myx,myy,chestprop) && !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(myx,myy,prop)
+		instance_create(myx,myy,Wall)
 	instance_create(x,y,NOWALLSHEREPLEASE)
 	if random(15) < 1 and point_distance(myx,myy,Player.x,Player.y) > 128 and spawnarea = 3 && Player.subarea != 3
 	instance_create(myx,myy,Trap)

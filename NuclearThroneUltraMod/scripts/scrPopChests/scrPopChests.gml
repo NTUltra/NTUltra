@@ -187,7 +187,7 @@ function scrPopChests() {
 			wepChestGol = 0;
 			healthChestGol = 0;
 		}
-		if Player.area == 119
+		if Player.area == 119 || Player.area = 120
 		{
 			gol = 0
 			wepChestGol = 0;

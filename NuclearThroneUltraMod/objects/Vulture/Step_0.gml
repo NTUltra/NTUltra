@@ -13,8 +13,8 @@ walk -= 1
 motion_add(direction,0.8)
 }
 
-if speed > 3
-speed = 3
+if speed > maxSpeed
+speed = maxSpeed
 
 if corpseTarget > -1 && instance_exists(corpseTarget) && alarm[2] < 1
 {
@@ -22,7 +22,7 @@ if corpseTarget > -1 && instance_exists(corpseTarget) && alarm[2] < 1
 	{
 		walk = 0;
 		speed = 0;
-		alarm[1] += 20;
+		alarm[1] += eatTime;
 		sprite_index = spr_eat;
 		image_index = 0;
 		alarm[2] = 15;

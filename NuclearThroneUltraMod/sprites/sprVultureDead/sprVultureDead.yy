@@ -93,8 +93,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Savanna",
-    "path": "folders/Sprites/Enemies/Savanna.yy",
+    "name": "Vulture",
+    "path": "folders/Sprites/Enemies/Savanna/Vulture.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprVultureDead",
