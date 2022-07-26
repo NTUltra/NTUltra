@@ -1,5 +1,5 @@
 raddrop = 70
-maxhealth = 900
+maxhealth = 920
 if UberCont.opt_gamemode == 34
 	maxhealth += 50;
 meleedamage = 10
@@ -51,7 +51,10 @@ pSpeedAccurate = 4;
 image_xscale = 1;
 actTime = 20;
 scrTarget();
+onFloorFail = 0;
 loops = GetPlayerLoops();
+if instance_exists(Player) && Player.area == 100
+	loops = 0;
 if loops > 2
 {
 	rotationSpeed *= 1.1;
@@ -93,6 +96,19 @@ tauntdelay = 0
 instance_create(x,y,BigWallBreak);
 if instance_exists(Player)
 {
-	instance_create(x,y,DramaCamera);
+	if Player.area == 120 || Player.area == 121
+		instance_create(x,y,DramaCamera);
+	else
+	{
+		with MusCont
+		{
+			audio_stop_sound(song);
+			song = musChimera2;
+			snd_loop(song)
+			audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
+		    audio_sound_gain(song,max(0,sqrt(UberCont.opt_musvol)),0);
+		    audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
+		}
+	}
 }
 // isHard = false; Hard mode to skip loop?

@@ -24,7 +24,7 @@ scrNextLevel();//odd
 */
 var cameFromOuterSpace = area == 100 || area == 104 || scrIsInInvertedArea();
 scrNextLevel();
-if loops > 0 && !cameFromOuterSpace && UberCont.collectedInversionShards < 3 && scrIsInInvertedArea()
+if UberCont.killedInvertedThrone2 && !cameFromOuterSpace && UberCont.collectedInversionShards < 3 && scrIsInInvertedArea()
 {
 	UberCont.canSpawnInversionShards = true;
 }

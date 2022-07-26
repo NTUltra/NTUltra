@@ -97,3 +97,16 @@ do ang2 = choose(0,90,180,270) until ang1 != ang2
 instance_create(x+lengthdir_x(128,ang1),y+lengthdir_y(128,ang1),GuardianStatue)
 instance_create(x+lengthdir_x(128,ang2),y+lengthdir_y(128,ang2),GuardianStatue)}
 
+if Player.loops > 3 && !UberCont.hasFoughtInvadingThrone
+{
+	instance_create(x,y,BigWallBreak);
+	instance_create(x,y+32,BigWallBreak);
+	instance_create(x+32,y+32,BigWallBreak);
+	instance_create(x+32,y,BigWallBreak);
+	instance_create(x+32,y-32,BigWallBreak);
+	
+	instance_create(x,y-32,BigWallBreak);
+	instance_create(x-32,y-32,BigWallBreak);
+	instance_create(x-32,y,BigWallBreak);
+	instance_create(x-32,y+32,BigWallBreak);
+}

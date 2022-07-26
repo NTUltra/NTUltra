@@ -19,7 +19,17 @@ Player.area = ar;
 		instance_destroy();
 	with SurvivalArenaStarter
 		instance_destroy();
-if instance_exists(GuardianStatue)
+	with SaveStation
+		instance_destroy();
+	with BecomeBallBoss
+		instance_destroy();
+if Player.loops > 3 && !UberCont.hasFoughtInvadingThrone
+{
+	UberCont.hasFoughtInvadingThrone = true;
+	scrTurnIntoPortalArea();
+	instance_create(x,y,BecomeThrone2);
+}
+else if instance_exists(GuardianStatue)
 {
 	with instance_nearest(x,y,GuardianStatue)
 		my_health = 0

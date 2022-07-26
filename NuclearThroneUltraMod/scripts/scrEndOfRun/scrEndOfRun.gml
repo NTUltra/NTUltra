@@ -16,6 +16,9 @@ function scrEndOfRun(){
 		canSpawnInversionShards = false;
 		collectedInversionShards = 0;
 		collectedInversionShardReward = false;
+		killedInvertedThrone2 = false;
+		extraVan = 0;
+		hasFoughtInvadingThrone = false;
 		
 		time_microseconds=0;
 		microseconds=""//string for microseconds

@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 raddrop = 80
-maxhealth = 880;
+maxhealth = 900;
 EnemyHealthAdjustments();
 
 spr_idle = sprInvertedNothing2Idle

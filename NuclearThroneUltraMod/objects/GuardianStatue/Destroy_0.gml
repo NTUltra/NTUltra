@@ -1,6 +1,6 @@
 if my_health < maxhealth
 {
-
+if !instance_exists(BecomeThrone2) && !instance_exists(Throne2)
 with MusCont
 {
 audio_stop_all()

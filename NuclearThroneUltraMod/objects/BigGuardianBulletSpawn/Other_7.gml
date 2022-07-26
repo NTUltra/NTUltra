@@ -3,11 +3,10 @@ scrTarget();
 var dir = point_direction(x,y,target.xprevious,target.yprevious);
 snd_play(sndBigBallFire);
 var addspeed = point_distance(x,y,target.xprevious,target.yprevious)*0.0153;
-debug(addspeed);
 addspeed = min(addspeed,20);
 if isThrone2
 {
-	dir += choose(random_range(30,60),random_range(-30,-60));
+	dir += choose(random_range(25,55),random_range(-25,-55));
 	addspeed *= 0.9;
 }
 if typ == 2

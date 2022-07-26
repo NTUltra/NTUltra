@@ -155,4 +155,5 @@ canSpawnInversionShards = false;
 collectedInversionShards = 0;
 collectedInversionShardReward = false;
 extraVan = 0;
+killedInvertedThrone2 = false;
 hasFoughtInvadingThrone = false;

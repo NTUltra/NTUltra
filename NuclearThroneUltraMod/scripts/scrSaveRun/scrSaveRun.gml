@@ -110,6 +110,8 @@ function scrSaveRun() {
 			maxCash: Player.maxCash,
 			canHeal: Player.canHeal,
 			extraVan: UberCont.extraVan,
+			killedInvertedThrone2: UberCont.killedInvertedThrone2,
+			hasFoughtInvadingThrone: UberCont.hasFoughtInvadingThrone,
 		};
 		with UberCont
 		{

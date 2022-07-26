@@ -6,7 +6,7 @@ if target > 0 && crossAmmo < 1
 	x += ((target.x + lengthdir_x(distanceToTarget,angle))-x)*lerpp;
 	y += ((target.y + lengthdir_y(distanceToTarget,angle))-y)*lerpp;
 	if alarm[6] < 1 && !place_meeting(x,y,Tangle) && alarm[11] < 1
-	angle += rotationSpeed; 
+		angle += rotationSpeed; 
 	if target.x < x
 		right = -1
 	else if target.x > x

@@ -1,6 +1,6 @@
 event_inherited()
 
-if instance_number(CrownGuardian)<=1
+if instance_number(CrownGuardian)<=1 && !instance_exists(BecomeThrone2) && !instance_exists(Throne2)
 {
 with MusCont
 {

@@ -1,4 +1,5 @@
 var d = 64;
+var t = type
 if inverted || type == 3
 {
 	d = 44;
@@ -18,7 +19,7 @@ if sprite_index = sprPortal or sprite_index = sprProtoPortal or sprite_index = s
 {
 with WepPickup
 {
-	if point_distance(x,y,Portal.x,Portal.y) < 96 and collision_line(x,y,Portal.x,Portal.y,Wall,0,0) < 0
+	if (point_distance(x,y,Portal.x,Portal.y) < 96 || t == 4) and collision_line(x,y,Portal.x,Portal.y,Wall,0,0) < 0
 	{
 		//if place_free(x+lengthdir_x(other.pullstrength,point_direction(x,y,Portal.x,Portal.y)),y)
 			x += lengthdir_x(other.pullstrength,point_direction(x,y,Portal.x,Portal.y))
@@ -46,7 +47,7 @@ with WepPickup
 		var pt = instance_nearest(x,y,Portal);
 		if pt == other.id
 		{
-			if point_distance(x,y,pt.x,pt.y) < other.pullRange*0.45 and collision_line(x,y,pt.x,pt.y,Wall,0,0) < 0
+			if (point_distance(x,y,pt.x,pt.y) < other.pullRange*0.45 || t == 4) and collision_line(x,y,pt.x,pt.y,Wall,0,0) < 0
 			{
 				if place_free(x+lengthdir_x(other.pullstrength,point_direction(x,y,pt.x,pt.y)),y)
 					x += lengthdir_x(other.pullstrength,point_direction(x,y,pt.x,pt.y))
@@ -57,7 +58,7 @@ with WepPickup
 				depth = -9
 				image_index = 1
 			}
-			else if point_distance(x,y,pt.x,pt.y) < other.pullRange and collision_line(x,y,pt.x,pt.y,Wall,0,0) < 0
+			else if (point_distance(x,y,pt.x,pt.y) < other.pullRange || t == 4) and collision_line(x,y,pt.x,pt.y,Wall,0,0) < 0
 			{
 				if place_free(x+lengthdir_x(other.pullstrength*0.6,point_direction(x,y,pt.x,pt.y)),y)
 					x += lengthdir_x(other.pullstrength*0.6,point_direction(x,y,pt.x,pt.y))
@@ -128,11 +129,13 @@ if type = 4
 pullstrength+=0.04;
 if inverted
 {
-	if pullstrength>2.25
+	if pullstrength>2.25 && type != 4
 		pullstrength=2.25;
 }
 else
 {
-	if pullstrength>4.5
+	if pullstrength>4.5 && type != 4
 		pullstrength=4.5;
 }
+if pullstrength > 10
+	pullstrength = 10;

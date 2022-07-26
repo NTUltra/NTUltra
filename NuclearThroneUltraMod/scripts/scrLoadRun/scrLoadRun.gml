@@ -205,6 +205,10 @@ function scrLoadRun(){
 					Player.canHeal = encryptedRun.canHeal;
 				if variable_struct_exists(encryptedRun, "extraVan")
 					UberCont.extraVan = encryptedRun.extraVan;
+				if variable_struct_exists(encryptedRun, "killedInvertedThrone2")
+					UberCont.killedInvertedThrone2 = encryptedRun.killedInvertedThrone2;
+				if variable_struct_exists(encryptedRun, "hasFoughtInvadingThrone")
+					UberCont.hasFoughtInvadingThrone = encryptedRun.hasFoughtInvadingThrone;
 			}
 			with Player
 			{
