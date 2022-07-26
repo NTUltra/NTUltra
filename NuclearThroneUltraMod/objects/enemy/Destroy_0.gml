@@ -29,7 +29,7 @@ if object_index!=SnowTank && object_index!=InvertedSnowTank && object_index!=Gol
 			{
 				impactWrist = true;
 				alarm[0] = 2;
-				speed = max(speed+8.7,9.5)//9.3
+				speed = max(speed+8.5,9.3)//9.3
 				if Player.race=25
 					speed+=1.25;
 			}
@@ -39,7 +39,7 @@ if object_index!=SnowTank && object_index!=InvertedSnowTank && object_index!=Gol
 			{
 				if impactWrist
 				{
-					speed /= (size*0.32);
+					speed /= (size*0.33);
 				}
 				else
 					speed /= size*0.82;

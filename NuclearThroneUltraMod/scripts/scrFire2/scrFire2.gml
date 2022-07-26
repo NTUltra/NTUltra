@@ -4816,7 +4816,7 @@ function scrFire2() {
 	if curse
 		my_health -= 7;
 	//TOSSING CURSED WEAPONS!?
-	if ultra_got[29] && altUltra && bwep != 0//ROBOT EXCLUSIVE TASTE
+	if object_index == Player && ultra_got[29] && altUltra && bwep != 0//ROBOT EXCLUSIVE TASTE
 	{
 		maxhealth += 4;
 	}
@@ -6785,7 +6785,7 @@ function scrFire2() {
 				motion_add(aimDir,2);
 			}
 		//Heal chance
-		if Player.canHeal && random(100) < 7.7//7.69% chance
+		if Player.canHeal && object_index == Player && random(100) < 7.7//7.69% chance
 		{
 			with instance_create(x,y-8,HealFX)
 			{

@@ -67,6 +67,9 @@ else if skill == 13 && Player.maxhealth == 1
 {
 	with Player {
 		altUltra = true;
+		ultra_name[13] = "DEATH STARE"
+		ultra_text[13] = "LOOKING AT ENEMIES SLOWLY KILLS THEM#ENEMIES ARE SCARED OF YOU"
+		ultra_tips[13] = "the face of death"
 		instance_create(x,y,DeathStare);
 	}
 }
@@ -75,6 +78,9 @@ else if skill == 20 && Player.crown == 23 && Player.skill_got[2]
 	with Player
 	{
 		altUltra = true;
+		ultra_name[20] = "SONIC SPEED"
+		ultra_text[20] = "YOU CAN MOVE EXTREMELY FAST!#ACCELERATING OR DECCELERATING QUICKLY#CREATES A SONIC BOOM"
+		ultra_tips[20] = "SONIC BOOM!"
 		maxspeed += 6;
 	}
 }
@@ -193,7 +199,7 @@ else if skill == 35 && Player.crown == 12//CHICKEN REVERSE TIME
 		}
 	}
 }
-else if skill == 39 && scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep])
+else if skill == 39 && (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep]))
 {
 	with Player {
 		altUltra = true;
@@ -234,6 +240,22 @@ else if skill = 85//ROGUE SUPER PORTAL STRIKE
 	{
 		Player.rogueammomax=8;
 		Player.rogueammo=8;
+	}
+}
+else if skill == 87 && Player.skeletonlives > 0
+{
+	with Player
+	{
+		altUltra = true;
+		ultra_name[87] = "IMMORTAL POLICE"
+		ultra_text[87] = "REPLACE PORTAL STRIKE WITH REVIVE#REVIVE USES PORTAL STRIKE AMMO#LOWER MAXIMUM PORTALSTRIKE AMMO BY 1#THRONEBUTT REVIVES YOU AT FULL HP#INSTEAD OF 1HP#PICKING UP PORTAL STRIKE AMMO#TRIGGERS BLAST ARMOUR"
+		ultra_tips[87] = "rogue freak"
+		rogueammomax --;
+		rogueammo = min(rogueammomax,rogueammo);
+		spr_idle=sprMutant22DIdle;
+		spr_walk=sprMutant22DWalk;
+		spr_hurt=sprMutant22DHurt;
+		spr_dead=sprMutant22DDead;
 	}
 }
 else if skill == 88 //ROGUE ULTRA POPO

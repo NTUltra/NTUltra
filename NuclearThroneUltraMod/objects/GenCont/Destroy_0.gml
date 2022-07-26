@@ -25,7 +25,7 @@ if Player.crown=18//DISCOOOO CROWN
 room_speed=35;
     with Player{
     
-    if ultra_got[87]//Rogue new captain ultra summon rogue idpd
+    if ultra_got[87] && !altUltra//Rogue new captain ultra summon rogue idpd
     {
     with BackCont
     alarm[5]=10+random(120);

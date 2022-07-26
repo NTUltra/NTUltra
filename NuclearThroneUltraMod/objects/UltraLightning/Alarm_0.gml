@@ -92,7 +92,6 @@ x = xprevious
 y = yprevious
 //direction += 180
 }*/
-var odd = ammo % 2 == 0
 if ammo > 0
 {
 //if ammo>20
@@ -149,6 +148,10 @@ if ultraMod == ultramods.lightningPellet && alarm[0] < 1
 	{
 		snd_play(sndPopgun,0.1,true);
 	}
+	var odd = false;
+	if ammo > 0
+		odd = ammo % 2 == 0
+	
 	with instance_create(x,y,Bullet5)
 	{
 		direction = other.direction;

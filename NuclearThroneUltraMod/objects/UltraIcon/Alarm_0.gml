@@ -45,6 +45,10 @@ else if skill == 76 && Player.ultimategamble=true
 {
 	sprite_index=sprUltimateGamble;
 }
+else if skill == 87 && Player.skeletonlives > 0
+{
+	sprite_index = sprFreakRogue;
+}
 else if skill == 106 && Player.bskin == 1
 {
 	sprite_index=sprHotHands;

@@ -70,7 +70,11 @@ function scrDrawHUD() {
 		else if Player.skill_got[10]
 		{
 			spr = sprRogueAmmoHUDPlus;
+			if Player.ultra_got[87] && Player.altUltra
+				spr = sprFreakRogueAmmoHUDPlus;
 		}
+		else if Player.ultra_got[87] && Player.altUltra
+			spr = sprFreakRogueAmmoHUD;
 		draw_sprite(spr,0,__view_get( e__VW.XView, 0 )+116,__view_get( e__VW.YView, 0 )+11)
 		draw_sprite(spr,Player.rogueammo,__view_get( e__VW.XView, 0 )+116,__view_get( e__VW.YView, 0 )+11)
 	}
@@ -169,6 +173,22 @@ function scrDrawHUD() {
 			{
 				draw_sprite_ext(sprCrystalCursedUltraHUD,0,xx,yy,1,1,0,c_white,1);
 			}
+			else if dir == 9 && Player.altUltra
+			{
+				draw_sprite_ext(sprEyesStrangeStyleHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 13 && Player.altUltra
+			{
+				draw_sprite_ext(sprDeathStareHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 20 && Player.altUltra
+			{
+				draw_sprite_ext(sprPlantSonicSpeedHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 27 && Player.altUltra
+			{
+				draw_sprite_ext(sprSteroidsPunchSwap,0,xx,yy,1,1,0,c_white,1);
+			}
 			else if dir == 29 && Player.spr_idle == sprMutant8DIdle
 			{
 				draw_sprite_ext(sprExclusiveTasteHUD,0,xx,yy,1,1,0,c_white,1);
@@ -196,6 +216,10 @@ function scrDrawHUD() {
 			else if dir == 23 && Player.altUltra
 			{
 				draw_sprite_ext(sprYVBlasphemyHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 87 && Player.altUltra
+			{
+				draw_sprite_ext(sprFreakRogueHUD,0,xx,yy,1,1,0,c_white,1);
 			}
 		    else if !(dir=79 && Player.race=21){//Horror don't draw skeleton's ultra
 				draw_sprite_ext(sprUltraIconHUD,dir,xx,yy,1,1,0,c_white,1);

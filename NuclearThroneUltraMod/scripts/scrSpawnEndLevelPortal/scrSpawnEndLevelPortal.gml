@@ -59,7 +59,7 @@ function scrSpawnEndLevelPortal(){
 							with UltraChest
 							{
 								instance_destroy();
-								scrRaddrop(75);
+								scrRaddrop(50);
 							}
 					        instance_create(dir.x+16,dir.y+16,WallBreak);
         
@@ -92,13 +92,13 @@ function scrSpawnEndLevelPortal(){
 						with UltraChest
 						{
 							instance_destroy();
-							scrRaddrop(40);
+							scrRaddrop(50);
 						}
 						//UNLOCK GAME MODE CLAUSTROFOBIA
 						with Player
 						{
 							if seconds<11 && ( my_health>0 || bleed>0 )
-								scrUnlockGameMode(6,"FOR COMPLETING A LEVEL#IN UNDER 10 SECONDS")
+								scrUnlockGameMode(6,"FOR COMPLETING AN AREA#IN UNDER 10 SECONDS")
 						}
         
 				        instance_create(dir.x+16,dir.y+16,WallBreak);

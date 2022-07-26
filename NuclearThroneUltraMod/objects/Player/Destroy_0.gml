@@ -36,8 +36,12 @@ instance_destroy();
 
 with CrystalShield
 instance_destroy();
-
-if skeletonlives < 1
+var actualLives = skeletonlives;
+if ultra_got[87] && altUltra
+{
+	actualLives += rogueammo;
+}
+if actualLives < 1
 	with MusCont
 	{
 	if audio_exists(song)
@@ -121,7 +125,7 @@ my_health = 0}}
 
 
 snd_play(snd_dead)
-if !reincarnate
+if !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 	with instance_create(x,y,WepPickupForOneWepOnly)
 	{
 		scrWeapons()
@@ -141,7 +145,7 @@ if !reincarnate
 		wepmod4 = other.wepmod4;
 	}
 
-if bwep > 0 && !reincarnate
+if bwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 {
 	with instance_create(x,y,WepPickup)
 	{
@@ -162,7 +166,7 @@ if bwep > 0 && !reincarnate
 		wepmod4 = other.bwepmod4;
 	}
 }
-if cwep > 0 && !reincarnate
+if cwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 {
 	with instance_create(x,y,WepPickup)
 	{
@@ -200,7 +204,7 @@ if crown == 3
 {
 	instance_create(x,y,CrownOfDeathBoom);
 }
-if skeletonlives>0 && !reincarnate
+if actualLives>0 && !reincarnate
 {
 instance_create(x,y,WallBreak);
 
@@ -268,10 +272,95 @@ subarea=other.subarea;
 myCorpse = playerCorpse;
 level = max(other.boostLevel,other.level);
 inverted = other.inverted;
-alarm[0]=60;
-alarm[1] = 5;
-alarm[2] = 3;
-//event_perform(ev_other,ev_room_end);
+
+	if other.ultra_got[87] && other.altUltra && other.rogueammo > 0
+	{
+		skeletonlives += 1;
+		freakRespawn = true;
+		skill_got = other.skill_got;
+		ultra_got = other.ultra_got;
+		level = other.level;
+		rad = other.rad;
+		ammo = other.ammo;
+		altUltra = other.altUltra;
+		rogueammo = other.rogueammo-1;
+		rogueammomax = other.rogueammomax;
+		typ_ammo = other.typ_ammo;
+		wep_name = other.wep_name;
+		wep_type = other.wep_type;
+		wep_auto = other.wep_auto;
+		wep_load = other.wep_load;
+		wep_cost = other.wep_cost;
+		wep_sprt = other.wep_sprt;
+		wep_area = other.wep_area;
+		wep_text = other.wep_text;
+		wep_swap = other.wep_swap;
+		wep_rad	 = other.wep_rad;
+		typ_amax = other.typ_amax;
+		maxhealth = other.maxhealth;
+		HumphrySkill = other.HumphrySkill;
+		ultimategamble = other.ultimategamble;
+		bettermelee = other.bettermelee;;
+		betterlaserbrain = other.betterlaserbrain;
+		betterpluto = other.betterpluto;
+		betterrabbitpaw = other.betterrabbitpaw;
+		betterrecyclegland = other.betterrecyclegland;
+		betterboltmarrow = other.betterboltmarrow;
+		accuracy = other.accuracy;
+		standartAccuracy = other.standartAccuracy;
+		invertedchance = other.invertedchance;
+		crownvisits = other.crownvisits;
+		hard = other.hard;
+		maxspeed = other.maxspeed;
+		hammerheadcounter = other.hammerheadcounter;
+		lag = other.lag;
+		hardshell = other.hardshell;
+		visitedCrib = other.visitedCrib;
+		meltingd = other.meltingd;
+		heavyheart = other.heavyheart;
+		freeArmourStrike = other.freeArmourStrike;
+		armour = other.armour;
+		maxarmour = other.maxarmour;
+		randomlySelected = other.randomlySelected;
+		reachedUltra = other.reachedUltra;
+		tookDestiny = other.tookDestiny;
+		pSpeedBoost = other.pSpeedBoost;
+		inverted = other.inverted;
+		cash = other.cash;
+		lstCash = other.lstCash;
+		maxCash = other.maxCash;
+		canHeal = other.canHeal;
+		horrorEtaken = other.horrorEtaken;
+		hogpoints = other.hogpoints;
+		usedHogInvestment = other.usedHogInvestment;
+		raddrop = other.raddrop;
+		ultramod = other.ultramod;
+		skillsChosen = other.skillsChosen;
+		livesRegain = other.livesRegain;
+		patience = other.patience;
+		skillpoints = other.skillpoints;
+		rage = other.rage;
+		strongspirit = other.strongspirit;
+		strongspiritused = other.strongspiritused;
+		isAlkaline = other.isAlkaline;
+		crown = other.crown;
+		wep = other.wep;
+		bwep = other.wep;
+		cwep = other.cwep;
+		bskin = other.bskin;
+		spr_idle=other.spr_idle;
+		spr_walk=other.spr_walk;
+		spr_hurt=other.spr_hurt;
+		spr_dead=other.spr_dead;
+		instance_create(x,y,ReviveRogue);
+		alarm[0] = 30;
+	}
+	else
+	{
+		alarm[0]=60;
+		alarm[1] = 5;
+		alarm[2] = 3;
+	}
 }
 
 }

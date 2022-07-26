@@ -55,6 +55,8 @@ if instance_exists(Player) && !instance_exists(SurvivalWave)
 		song = musBoss10
 	else if area == 114
 		song = musBushBoxBoss;
+	else if area == 119 || area == 120
+		song = musBoss4B;
     snd_loop(song)
     snd_loop(amb)
     //audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
@@ -322,6 +324,18 @@ else if Player.area == 10
 		if random(100) < 1
 			name = choose("WE NOT SKIPPING THIS FIGHT","BALL MOM ON VACATION","MOMMY IN THE SUN","BIKINI");
 	}
+}
+else if Player.area == 119
+{
+	name = "THRONE II";
+	if random(400) < 1
+		name = choose("IT'S TIME","FIGHT ME","CTHULHU","BULLET HELL");
+}
+else if Player.area == 120
+{
+	name = "INVERTED THRONE II";
+	if random(400) < 1
+		name = choose("THRONE III","END OF THE ROAD","TICKET TO 1 LESS VAN");
 }
 
 }

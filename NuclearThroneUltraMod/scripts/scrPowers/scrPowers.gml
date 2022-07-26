@@ -507,7 +507,7 @@ function scrPowers() {
 	}
 
 
-	if race = 22 //Rogue
+	if race = 22 && !altUltra //Rogue
 	{
 		var radcost = 80;//Cost is also in portal
 		var useRad = ultra_got[88] == 1

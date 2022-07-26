@@ -4369,8 +4369,8 @@ function scrWeapons() {
 	wep_name[396] = "DISCO GUN"//fIRES A DISCO	BALL that emites lightning and THAT EXPLOSED INTO A LASER SHOW
 	wep_type[396] = 5
 	wep_auto[396] = 0
-	wep_load[396] = 170
-	wep_cost[396] = 24
+	wep_load[396] = 175
+	wep_cost[396] = 25
 	wep_sprt[396] = sprDiscoGun
 	wep_area[396] = 16
 	wep_text[396] = "BRING YOUR OWN PARTY!"
@@ -4395,7 +4395,7 @@ function scrWeapons() {
 	wep_cost[398] = 3
 	wep_sprt[398] = sprLightningLaserGun
 	wep_area[398] = 15
-	wep_text[398] = ""
+	wep_text[398] = "lightning or laser? why not both!"
 	wep_swap[398] = sndSwapBow
 	wep_rad[398] = 0;
 	

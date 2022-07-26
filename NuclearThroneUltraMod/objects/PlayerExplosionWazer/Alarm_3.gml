@@ -1,5 +1,5 @@
 /// @description Explosion
-if point_distance(x,y,hit[1],hit[2]) > 16
+if array_length(hit) > 1 && point_distance(x,y,hit[1],hit[2]) > 16
 {
 	if !audio_is_playing(sndExplosionS)
 		snd_play(sndExplosionS,0.11,true);

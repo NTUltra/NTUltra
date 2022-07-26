@@ -529,10 +529,19 @@ function scrUltras() {
     
 	    ultra_name[87] = "NEW CAPTAIN"
 	    ultra_text[87] = "AT THE START OF AN AREA#SUMMON A GROUP OF IDPD#THAT FIGHT FOR YOU#PICKING UP PORTAL STRIKE AMMO#TRIGGERS BLAST ARMOUR"
+		if instance_exists(Player) && Player.race != 22
+			ultra_text[87] = "AT THE START OF AN AREA#SUMMON A GROUP OF IDPD#THAT FIGHT FOR YOU";
 	    ultra_tips[87] = "rogue leader"
+		
+		if instance_exists(Player) && (Player.altUltra || (Player.skeletonlives > 0) && instance_exists(UltraIcon))
+		{
+			ultra_name[87] = "IMMORTAL POLICE"
+		    ultra_text[87] = "REPLACE PORTAL STRIKE WITH REVIVE#REVIVE USES PORTAL STRIKE AMMO#LOWER MAXIMUM PORTALSTRIKE AMMO BY 1#THRONEBUTT REVIVES YOU AT FULL HP#INSTEAD OF 1HP#PICKING UP PORTAL STRIKE AMMO#TRIGGERS BLAST ARMOUR"
+		    ultra_tips[87] = "rogue freak"
+		}
     
 	    ultra_name[88] = "ULTRA POPO"
-	    ultra_text[88] = "ULTRA WEAPONS COST LESS RADS#PORTAL STRIKE COSTS RADS INSTEAD#REPLACE PORTAL STRIKE AMMO CHESTS#WITH RAD CHESTS#BLAST ARMOUR PRODUCES RADS#RADS SPAWN ULTRA LIGHTNING"//This sucks lets change it
+	    ultra_text[88] = "ULTRA WEAPONS COST LESS RADS#PORTAL STRIKE COSTS RADS INSTEAD#REPLACE PORTAL STRIKE AMMO CHESTS#WITH RAD CHESTS#BLAST ARMOUR PRODUCES RADS#RADS SPAWN ULTRA LIGHTNING"
 	    ultra_tips[88] = "I can do that better"
     
     
