@@ -1,6 +1,6 @@
 if rad > 25 and spr_idle = sprProtoStatueCharge
 {
-snd_play(sndStatueCharge)
+snd_play(sndStatueCharge,0.1,true)
 repeat(2)
 instance_create(x,y,IDPDSpawn)
 spr_hurt = sprProtoStatueDoneHurt

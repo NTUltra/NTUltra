@@ -557,19 +557,11 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 				spr_walk = sprMutant9DWalk
 			}
 		}
-		/*
-		with Corpse{
-		if other.bskin=2
-		sprite_index = mskPickupThroughWall;//invisible basicly
-		else if other.bskin=1
-		{
-			sprite_index = sprMutant9BHeadIdle
+		
+		with Corpse {
+			if sprite_index == sprMutant9HeadIdle || sprite_index == sprMutant9BHeadIdle || sprite_index == sprMutant9DHeadIdle || sprite_index == sprMutant9EHeadIdle
+				instance_destroy();
 		}
-		else
-		{
-			sprite_index = sprMutant9HeadIdle
-		}
-		instance_destroy()}*/
 	}
 
 	

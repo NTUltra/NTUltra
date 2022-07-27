@@ -72,7 +72,7 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 		}
 		else
 		{
-			scrIframeSkipper(0.13);
+			scrIframeSkipper(0.11);
 			with Tentacle
 				alarm[1] -= 0.1;
 		}

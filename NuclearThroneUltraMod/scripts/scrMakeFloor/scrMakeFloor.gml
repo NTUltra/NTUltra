@@ -16,7 +16,7 @@ function scrMakeFloor() {
 	instance_create(x,y+32,Floor)
 	}else instance_create(x,y,Floor)}
 
-	if area=101 { if random(2) < 1.4
+	if area=101 || area == 122{ if random(2) < 1.4
 	{instance_create(x,y,Floor)
 	instance_create(x+32,y,Floor)
 	instance_create(x+32,y+32,Floor)
@@ -655,7 +655,7 @@ function scrMakeFloor() {
 
 
 	//BRANCHES
-	if area = 1 || area = 105 || area = 101 || area == 10 || area == 114 || area == 121
+	if area = 1 || area = 105 || area = 101 || area == 10 || area == 114 || area == 121 || area == 122
 	{
 	if random(19+instance_number(FloorMaker)) > 20
 	{

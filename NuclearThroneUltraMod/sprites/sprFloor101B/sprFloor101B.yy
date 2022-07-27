@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprFloor101B","path":"sprites/sprFloor101B/sprFloor101B.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprFloor101B",
     "tags": [],
     "resourceType": "GMSequence",
   },

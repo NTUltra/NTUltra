@@ -1502,7 +1502,28 @@ function scrPowers() {
 	}
 
 	}
-	
+	////////KEY RELEASE////////
+	if KeyCont.key_spec[p] == 3
+	{
+		if race == 23
+		{
+			audio_stop_sound(sndFrogLoop) 
+			audio_stop_sound(sndFrogLoopButt)
+			if toxicamount > 10
+			{
+				if skill_got[5]=1
+				{
+					snd_play_2d(sndFrogEndButt);
+					snd_play_2d(sndFrogGasReleaseButt);
+				}
+				else
+				{
+					snd_play_2d(sndFrogEnd);
+					snd_play_2d(sndFrogGasRelease);
+				}
+			}
+		}	
+	}
 	////////SHIT HELD////////
 	if KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2
 	{
@@ -1566,6 +1587,11 @@ function scrPowers() {
     
     
 	    }
+		else
+		{
+			audio_stop_sound(sndFrogLoop);
+			audio_stop_sound(sndFrogLoopButt);
+		}
 	}
 
 
@@ -2266,23 +2292,6 @@ function scrPowers() {
 	}
 
 	}
-	else if audio_is_playing(sndFrogLoop) || audio_is_playing(sndFrogLoopButt)
-	{//FROG
-	audio_stop_sound(sndFrogLoop) 
-	audio_stop_sound(sndFrogLoopButt)
-
-	if skill_got[5]=1
-	{
-	snd_play_2d(sndFrogEndButt);
-	snd_play_2d(sndFrogGasReleaseButt);
-	}
-	else
-	{
-	snd_play_2d(sndFrogEnd);
-	snd_play_2d(sndFrogGasRelease);
-	}
-
-	}
 	else if ultra_got[10]=1{
 
 	//Eyes Monster style Ultra B
@@ -2348,21 +2357,20 @@ function scrPowers() {
 	else if race == 23//FROG
 	{
 
-	if ultra_got[90]//intimacy
-	toxicamount++
+		if ultra_got[90]//intimacy
+			toxicamount++
 
-	repeat(toxicamount)
-	{
-
-		with instance_create(x,y,ToxicThrowerGas)
+		repeat(toxicamount)
 		{
-			motion_add(random(360),1.3+random(2)+(other.skill_got[5]*2));
-			dmg += 1;
+
+			with instance_create(x,y,ToxicThrowerGas)
+			{
+				motion_add(random(360),1.3+random(2)+(other.skill_got[5]*2));
+				dmg += 1;
+			}
 		}
-	}
 
-	toxicamount=0;
-
+		toxicamount=0;
 	}
 	else if ultra_got[19]//Plant Sprint
 	{
@@ -2403,4 +2411,5 @@ function scrPowers() {
 		lockoutElementor = false;	
 	}
 	}
+	
 }

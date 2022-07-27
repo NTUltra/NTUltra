@@ -1407,6 +1407,7 @@ function scrFire() {
 	{image_angle = aimDirection+(random(60)-30)*other.accuracy
 	team = other.team
 	ammo = 11+random(4)
+	iframeskip -= 0.02;
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)

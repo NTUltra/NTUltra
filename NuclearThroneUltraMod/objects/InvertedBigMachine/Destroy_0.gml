@@ -32,7 +32,7 @@ with LabTrap
 instance_destroy();
 
 //drop broken ster gun??
-if(random(50)<1){//2
+if(random(100)<1){//2
 with instance_create(x,y,WepPickup)
 {
 scrWeapons()

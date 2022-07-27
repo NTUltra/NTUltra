@@ -205,6 +205,24 @@ function scrPopEnemies() {
 		}
 
     }
+	if spawnarea == 122 //Inverted oasis
+    {
+		if loops > 0
+		{
+			if random(10) < 1
+				instance_create(x + 16, y + 16, choose(Crab, Crab, Jock))
+	        else
+	            instance_create(x + 16, y + 16, choose(BoneFish, BoneFish, BoneFish, BoneFish, JellyFish, ScubaBandit, Turtle, InvertedGator, InvertedSpider, ScubaBandit, Crab))
+		}
+		else
+		{
+	        if random(10) < 1
+				instance_create(x + 16, y + 16, choose(Crab, Crab))
+	        else
+	            instance_create(x + 16, y + 16, choose(BoneFish, BoneFish, BoneFish, BoneFish, JellyFish, ScubaBandit, ScubaBandit, Crab))
+		}
+
+    }
 
     if spawnarea = 105 //inverted desert
     {

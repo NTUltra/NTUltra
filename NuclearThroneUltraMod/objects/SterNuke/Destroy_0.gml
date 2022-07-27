@@ -8,6 +8,3 @@ with instance_create(x+lengthdir_x(12,ang),y+lengthdir_y(12,ang),Explosion)
 scrCanHumphry();
 ang += 360/8
 }
-
-room_speed=30;
-

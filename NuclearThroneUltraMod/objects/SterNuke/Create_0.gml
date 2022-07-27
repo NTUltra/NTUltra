@@ -9,3 +9,4 @@ snd_play(snd)
 
 room_speed=60;
 
+alarm[2] = 1;

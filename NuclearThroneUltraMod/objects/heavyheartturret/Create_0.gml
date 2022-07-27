@@ -7,7 +7,8 @@ owner = -1;
 //gunangle = random(360)
 //alarm[0] = 20
 wkick = 0
-
+maxhealth = 10;
+my_health = maxhealth;
 friction = 0.4
 
 right = choose(1,-1)

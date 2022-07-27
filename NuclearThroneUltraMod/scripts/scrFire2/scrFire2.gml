@@ -1366,6 +1366,7 @@ function scrFire2() {
 
 	with instance_create(x,y,Lightning)
 	{image_angle = aimDirection+(random(26)-13)*other.accuracy
+		iframeskip -= 0.02;
 	team = other.team
 	ammo = 26
 	event_perform(ev_alarm,0)
@@ -9111,6 +9112,7 @@ function scrFire2() {
 	{
 		with instance_create(x,y,Lightning)
 		{image_angle = angg;
+			iframeskip -= 0.02;
 			accuracy = 40;
 			branch = 100;
 			team = other.team

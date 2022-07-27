@@ -33,7 +33,7 @@ instance_destroy();
 //drop broken ster gun??
 if instance_exists(Player)
 {
-if(random(50)<1&&Player.loops<1){//2
+if(random(100)<1&&Player.loops<1){//2
 with instance_create(x,y,WepPickup)
 {
 scrWeapons()

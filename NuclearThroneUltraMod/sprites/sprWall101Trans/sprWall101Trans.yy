@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprWall101Trans","path":"sprites/sprWall101Trans/sprWall101Trans.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprWall101Trans",
     "tags": [],
     "resourceType": "GMSequence",
   },

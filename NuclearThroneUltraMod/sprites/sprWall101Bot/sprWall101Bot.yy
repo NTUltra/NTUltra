@@ -72,7 +72,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprWall101Bot","path":"sprites/sprWall101Bot/sprWall101Bot.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprWall101Bot",
     "tags": [],
     "resourceType": "GMSequence",
   },

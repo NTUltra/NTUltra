@@ -19,7 +19,7 @@ if instance_exists(Player){
 	goal = 50+s
 	else if Player.area = 100
 	goal = 40+s
-	else if Player.area = 101
+	else if Player.area = 101 || Player.area == 122
 	goal = 95+s
 	else if Player.area = 103
 	goal = 130+s

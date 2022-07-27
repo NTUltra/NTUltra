@@ -72,7 +72,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprFloor101","path":"sprites/sprFloor101/sprFloor101.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprFloor101",
     "tags": [],
     "resourceType": "GMSequence",
   },

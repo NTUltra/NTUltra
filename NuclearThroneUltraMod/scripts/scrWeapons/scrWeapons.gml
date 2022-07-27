@@ -659,7 +659,7 @@ function scrWeapons() {
 	wep_type[59] = 5
 	wep_auto[59] = 0
 	wep_load[59] = 22
-	wep_cost[59] = 2
+	wep_cost[59] = 3
 	wep_sprt[59] = sprLightningShotgun
 	wep_area[59] = 10
 	wep_text[59] = "hurricane"
@@ -2706,7 +2706,7 @@ function scrWeapons() {
 	wep_type[245] = 5
 	wep_auto[245] = 1
 	wep_load[245] = 3
-	wep_cost[245] = 1
+	wep_cost[245] = 1.5
 	wep_sprt[245] = sprLightningMinigun
 	wep_area[245] = 17
 	wep_text[245] = "lightning doesn't hit#the same place twice"
@@ -3541,7 +3541,7 @@ function scrWeapons() {
 	wep_name[321] = "LIGHTNING SCREWDRIVER"
 	wep_type[321] = 0
 	wep_auto[321] = 0
-	wep_load[321] = 9
+	wep_load[321] = 10
 	wep_cost[321] = 0
 	wep_sprt[321] = sprLightningScrewDriver
 	wep_area[321] = 7
@@ -5084,7 +5084,7 @@ function scrWeapons() {
 	wep_name[461] = "GYRO INCINERATOR"
 	wep_type[461] = 1
 	wep_auto[461] = 0
-	wep_load[461] = 46
+	wep_load[461] = 50
 	wep_cost[461] = 26
 	wep_sprt[461] = sprGyroIncinerator
 	wep_area[461] = 22
@@ -5392,7 +5392,7 @@ function scrWeapons() {
 	wep_name[489] = "LIGHTNING YOYO GUN"
 	wep_type[489] = 5
 	wep_auto[489] = 1
-	wep_load[489] = 26
+	wep_load[489] = 30
 	wep_cost[489] = 3
 	wep_sprt[489] = sprLightningYoyoGun
 	wep_area[489] = 10
@@ -5601,7 +5601,7 @@ function scrWeapons() {
 	wep_name[508] = "LASER YOYO GUN"
 	wep_type[508] = 5
 	wep_auto[508] = 1
-	wep_load[508] = 28
+	wep_load[508] = 30
 	wep_cost[508] = 3
 	wep_sprt[508] = sprLaserYoyoGun
 	wep_area[508] = 9

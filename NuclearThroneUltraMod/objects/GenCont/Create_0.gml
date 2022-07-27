@@ -267,7 +267,7 @@ if Player.area = 3
 goal = 90+s
 if Player.area = 107//inverted FrozenCity
 goal=120+s;
-if Player.area == 101//Oasis
+if Player.area == 101 || Player.area == 122//Oasis
 goal=95+s;
 if (Player.area = 6 || Player.area = 112) && Player.subarea=2//LABS BOSS
 goal=1;

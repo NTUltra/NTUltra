@@ -72,7 +72,6 @@ function scrKeyContStep() {
 	else if key_spec[p] !=2 key_spec[p] = 1}
 	else{if key_spec[p] = 3 key_spec[p] = 0
 	else if key_spec[p] !=0 key_spec[p] = 3}
-
 	//swap
 	if keyboard_check(vk_space) or mouse_wheel_up() or mouse_wheel_down() or mouse_check_button(mb_middle) or keyboard_check(vk_space) or keyboard_check(UberCont.opt_swap)
 	or gamepad_button_check(p,gp_face4){
