@@ -48,9 +48,13 @@ if target > 0 && instance_exists(target)
 			{
 				instance_create(x,y,InvertedBigBadBat);
 			}
-			else if other.area==10
+			else if other.area == 10
 			{
 				instance_create(x,y,BigVulture);
+			}
+			else if other.area == 121
+			{
+				instance_create(x,y,InvertedBigVulture);
 			}
 			else if other.area=105//inverted desert temp savanna boss
 			{

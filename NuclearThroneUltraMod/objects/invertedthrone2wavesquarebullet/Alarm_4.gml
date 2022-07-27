@@ -2,7 +2,6 @@
 x = lerp(xstart,desX,desTime);
 y = lerp(ystart,desY,desTime);
 desTime += destAcc;
-debug("dt: ", desTime);
 if desTime < 1
 	alarm[4] = 1;
 else

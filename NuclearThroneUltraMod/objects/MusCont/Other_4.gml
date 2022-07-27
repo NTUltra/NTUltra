@@ -237,7 +237,7 @@ if oldarea != area || area == 0 or !audio_is_playing(song) or audio_is_playing(m
         amb = amb105
     }
 	
-	if area = 10 //savanna
+	if area == 10 || area == 121 //savanna
     {
         song = mus10
 

@@ -457,9 +457,9 @@ function scrPopulate() {
         instance_create(x, y, WantBoss)
     }
 	//Big vulture
-	if Player.area = 10 and Player.subarea = 3 {
+	if ( (Player.area == 10 || Player.area == 121) and Player.subarea = 3 ) {
         repeat(ceil(max(1,Player.loops*0.5)))
-        instance_create(x, y, WantBoss)
+			instance_create(x, y, WantBoss)
     }
 
     //spawn OASIS boss

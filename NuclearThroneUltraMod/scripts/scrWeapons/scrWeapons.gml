@@ -5601,7 +5601,7 @@ function scrWeapons() {
 	wep_name[508] = "LASER YOYO GUN"
 	wep_type[508] = 5
 	wep_auto[508] = 1
-	wep_load[508] = 26
+	wep_load[508] = 28
 	wep_cost[508] = 3
 	wep_sprt[508] = sprLaserYoyoGun
 	wep_area[508] = 9
