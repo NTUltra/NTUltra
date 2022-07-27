@@ -1,11 +1,6 @@
 ///@description AI
-alarm[1] = 10+random(10)//30 + 10
+alarm[1] = actTime+random(actTime)//30 + 10
 
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1] = 6+random(6);
-}
 
 scrTarget()
 if target > 0
@@ -15,12 +10,7 @@ if /*collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and */point_distance(x,y
 if point_distance(x,y,target.x,target.y) < 96
 {
 ammo = maxAmmo
-alarm[2] = 20
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[2] = 15
-}
+alarm[2] = tellTime
 snd_play(sndLaserCrystalCharge)
 sprite_index = spr_fire
 alarm[1] = 80+random(10)

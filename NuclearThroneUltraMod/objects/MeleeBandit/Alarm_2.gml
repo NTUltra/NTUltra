@@ -3,7 +3,8 @@ alarm[0] = 20
 snd_play(sndAssassinAttack)
 wepangle = -wepangle
 motion_add(gunangle,6)
-gunangle = point_direction(x,y,target.x,target.y)
+if target > -1 && instance_exists(target)
+	gunangle = point_direction(x,y,target.x,target.y)
 
 with instance_create(x,y,EnemySlash)
 {

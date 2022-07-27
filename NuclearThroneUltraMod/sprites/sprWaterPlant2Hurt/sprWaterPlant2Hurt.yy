@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprWaterPlant2Hurt","path":"sprites/sprWaterPlant2Hurt/sprWaterPlant2Hurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprWaterPlant2Hurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

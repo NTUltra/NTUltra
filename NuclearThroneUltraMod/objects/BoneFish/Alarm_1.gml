@@ -1,11 +1,6 @@
 scrTarget()
-alarm[1] = 20+random(10)
+alarm[1] = actTime+random(10)
 
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1] = 8+random(10);
-}
 
 maxspeed = 4
 if target > 0

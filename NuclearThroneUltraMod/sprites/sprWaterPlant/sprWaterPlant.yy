@@ -96,7 +96,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprWaterPlant","path":"sprites/sprWaterPlant/sprWaterPlant.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprWaterPlant",
     "tags": [],
     "resourceType": "GMSequence",
   },

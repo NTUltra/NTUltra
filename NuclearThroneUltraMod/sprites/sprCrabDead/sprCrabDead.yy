@@ -96,7 +96,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprCrabDead","path":"sprites/sprCrabDead/sprCrabDead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprCrabDead",
     "tags": [],
     "resourceType": "GMSequence",
   },

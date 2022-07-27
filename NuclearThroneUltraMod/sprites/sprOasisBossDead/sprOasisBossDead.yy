@@ -100,7 +100,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprOasisBossDead","path":"sprites/sprOasisBossDead/sprOasisBossDead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprOasisBossDead",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -88,7 +88,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprWaterPlantDead","path":"sprites/sprWaterPlantDead/sprWaterPlantDead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprWaterPlantDead",
     "tags": [],
     "resourceType": "GMSequence",
   },

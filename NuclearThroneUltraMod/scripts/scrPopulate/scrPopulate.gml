@@ -124,8 +124,21 @@ function scrPopulate() {
 		if spawnarea == 101
 		{
 			TopDecals();
+			 GenBones();
+            with Bones
+				sprite_index = sprCoral;
 			with TopDecal {
                 sprite_index = sprOasisTopDecal;
+            }
+		}
+		else if spawnarea == 122
+		{
+			TopDecals();
+			GenBones();
+            with Bones
+				sprite_index = sprCoral;
+			with TopDecal {
+                sprite_index = sprCoral;
             }
 		}
         else if spawnarea = 9 {
@@ -463,7 +476,7 @@ function scrPopulate() {
     }
 
     //spawn OASIS boss
-    if Player.area = 101 and Player.subarea == 3 {
+    if (Player.area = 101 || Player.area == 122) and Player.subarea == 3 {
         repeat(ceil(max(1,Player.loops*0.5)))
         instance_create(x, y, WantBoss)
     }

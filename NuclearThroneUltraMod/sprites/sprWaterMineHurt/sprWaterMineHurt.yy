@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprWaterMineHurt","path":"sprites/sprWaterMineHurt/sprWaterMineHurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprWaterMineHurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

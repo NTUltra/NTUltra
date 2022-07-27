@@ -15,4 +15,4 @@ shadowYoffset = 0;
 shadowXoffset = 0;
 myCorpse = -1;
 totemBuffed = false;
-alarm[0] = 10;
+alarm[0] = 15;

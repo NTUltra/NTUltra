@@ -4,6 +4,7 @@ if speed > 1
 else
 	with instance_position(x,y,Wall)
 	{
+		other.alarm[0] = 2;
 		instance_destroy();
 		instance_create(x,y,FloorExplo);
 	}

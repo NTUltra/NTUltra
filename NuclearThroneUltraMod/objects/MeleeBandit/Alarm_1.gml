@@ -1,8 +1,8 @@
-alarm[1] = 7+random(5)//10+5
+alarm[1] = 5+random(4)//10+5
 if instance_exists(Player)
 {
 	if Player.loops>0
-	alarm[1] = 1+random(5);
+	alarm[1] = 2+random(3);
 }
 scrTarget()
 if target > 0
@@ -12,11 +12,11 @@ if target > 0
 		if point_distance(target.x,target.y,x,y) < 64
 		{
 		walk = 2;
-		alarm[2]=12//the delay that everyone wants
+		alarm[2]=11//the delay that everyone wants
 		instance_create(x-5,y,Notice);
 		instance_create(x,y,Notice);
 		instance_create(x+5,y,Notice);
-		alarm[1]=18;
+		alarm[1]=17;
 
 		if instance_exists(Player)
 		{

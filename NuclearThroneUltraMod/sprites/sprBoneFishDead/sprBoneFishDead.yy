@@ -100,7 +100,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprBoneFishDead","path":"sprites/sprBoneFishDead/sprBoneFishDead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprBoneFishDead",
     "tags": [],
     "resourceType": "GMSequence",
   },

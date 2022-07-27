@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprCrabWalk","path":"sprites/sprCrabWalk/sprCrabWalk.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprCrabWalk",
     "tags": [],
     "resourceType": "GMSequence",
   },

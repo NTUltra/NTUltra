@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprAnchor","path":"sprites/sprAnchor/sprAnchor.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprAnchor",
     "tags": [],
     "resourceType": "GMSequence",
   },

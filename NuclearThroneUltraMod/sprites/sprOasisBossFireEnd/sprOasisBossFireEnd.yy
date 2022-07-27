@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprOasisBossFireEnd","path":"sprites/sprOasisBossFireEnd/sprOasisBossFireEnd.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprOasisBossFireEnd",
     "tags": [],
     "resourceType": "GMSequence",
   },

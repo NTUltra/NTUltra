@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprBoneFishHurt","path":"sprites/sprBoneFishHurt/sprBoneFishHurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprBoneFishHurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

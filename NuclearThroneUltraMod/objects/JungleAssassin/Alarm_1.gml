@@ -1,8 +1,8 @@
-alarm[1] = 3+random(4)
+alarm[1] = 3+random(3)
 if instance_exists(Player)
 {
 	if Player.loops>0
-	alarm[1] = 1+random(5);
+	alarm[1] = 1+random(3);
 }
 scrTarget()
 if target > 0

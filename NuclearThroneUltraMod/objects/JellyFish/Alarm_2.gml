@@ -13,7 +13,7 @@ if ammo > 0
 	alarm[2] = 2
 	sprite_index = spr_fire
 	var ang = random(360);
-	var am = 12;
+	var am = 6;
 	var angStep = 360/am;
 	var l = length;
 	repeat(am)

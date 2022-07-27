@@ -42,8 +42,8 @@ function scrPopProps() {
 	if !place_meeting(myx,myy,hitme) && !place_meeting(myx,myy,chestprop) && !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(myx,myy,prop)
 		instance_create(myx,myy,Wall)
 	instance_create(x,y,NOWALLSHEREPLEASE)
-	if random(15) < 1 and point_distance(myx,myy,Player.x,Player.y) > 128 and spawnarea = 3 && Player.subarea != 3
-	instance_create(myx,myy,Trap)
+	if random(15) < 1 and point_distance(myx,myy,Player.x,Player.y) > 128 and (spawnarea = 3 || spawnarea == 121) && Player.subarea != 3
+		instance_create(myx,myy,Trap)
 	
 	if random(15) < 1 and point_distance(myx,myy,Player.x,Player.y) > 128 and (spawnarea = 2 || spawnarea == 110) && Player.loops > 1
 	instance_create(myx,myy,ToxicTrap)
@@ -119,7 +119,7 @@ function scrPopProps() {
 		instance_create(x+16,y+16,Anchor);
 		else if ran > 70 and point_distance(x+16,y=16,Player.x,Player.y) > 64
 		instance_create(x+16,y+16,WaterMine)
-		else if ran > 60
+		else if ran > 65
 		instance_create(x+16,y+16,OasisBarrel)
 		else
 		instance_create(x+16,y+16,WaterPlant)
@@ -127,16 +127,16 @@ function scrPopProps() {
 	else if spawnarea = 122 && random(6) < 1 && !place_meeting(x,y,Wall)
 	{
 		var ran = random(100);
-		if ran>90 && styleb = 0
-		instance_create(x+16,y+16,SunkenCar);
-		else if ran > 80
-		instance_create(x+16,y+16,Anchor);
-		else if ran > 70 and point_distance(x+16,y=16,Player.x,Player.y) > 64
+		//if ran>90 && styleb = 0
+		//instance_create(x+16,y+16,SunkenCar);
+		if ran > 90
+		instance_create(x+16,y+16,InvertedAnchor);
+		else if ran > 80 and point_distance(x+16,y=16,Player.x,Player.y) > 64
 		instance_create(x+16,y+16,InvertedWaterMine)
-		else if ran > 60
-		instance_create(x+16,y+16,OasisBarrel)
+		else if ran > 65
+		instance_create(x+16,y+16,InvertedOasisBarrel)
 		else
-		instance_create(x+16,y+16,WaterPlant)
+		instance_create(x+16,y+16,InvertedWaterPlant)
 	}
 	else if random(12) < 1
 	{

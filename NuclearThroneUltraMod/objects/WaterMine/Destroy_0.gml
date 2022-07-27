@@ -8,4 +8,4 @@ motion_add(random(360),3)
 if object_index == WaterMine
 	instance_create(x,y,WaterMineExplo);
 else
-	instance_create(x,y,InvertedWaterMineExplo);
+	instance_create(x,y-8,InvertedWaterMineExplo);

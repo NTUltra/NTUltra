@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprAnchorDead","path":"sprites/sprAnchorDead/sprAnchorDead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprAnchorDead",
     "tags": [],
     "resourceType": "GMSequence",
   },

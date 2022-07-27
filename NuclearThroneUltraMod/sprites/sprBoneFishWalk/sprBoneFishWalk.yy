@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprBoneFishWalk","path":"sprites/sprBoneFishWalk/sprBoneFishWalk.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprBoneFishWalk",
     "tags": [],
     "resourceType": "GMSequence",
   },

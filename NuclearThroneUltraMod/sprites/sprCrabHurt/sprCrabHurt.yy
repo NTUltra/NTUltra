@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprCrabHurt","path":"sprites/sprCrabHurt/sprCrabHurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprCrabHurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

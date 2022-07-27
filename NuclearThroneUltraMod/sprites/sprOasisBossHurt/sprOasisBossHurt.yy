@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprOasisBossHurt","path":"sprites/sprOasisBossHurt/sprOasisBossHurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprOasisBossHurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

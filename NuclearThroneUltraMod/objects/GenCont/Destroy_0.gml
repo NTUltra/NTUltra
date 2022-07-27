@@ -58,6 +58,18 @@ room_speed=35;
 	    invertedportaldelay=45+random(100);
 	    //area=105
 	    }
+		else if ( (area==10&&subarea<3)  )
+	    {
+	    invertedportalcounter=1;
+	    invertedportaldelay=45+random(100);
+	    //area=107
+	    }
+		else if ( (area==101&&subarea<3)  )
+	    {
+	    invertedportalcounter=1;
+	    invertedportaldelay=45+random(100);
+	    //area=107
+	    }
 	    else if ( area=2  )
 	    {
 	    invertedportalcounter=1;
@@ -106,6 +118,7 @@ room_speed=35;
 	    invertedportaldelay=45+random(100);
 	    //area=107
 	    }
+		
 	}
 
     
@@ -127,7 +140,8 @@ room_speed=35;
     }
     if ultra_got[3]//FISH's PARTNER
     {
-    instance_create(x,y,Partner);
+		if !instance_exists(Partner)
+			instance_create(x,y,Partner);
     }
 
     if ultra_got[48]//Yung Cuz Ultra D

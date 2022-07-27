@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprWaterMine","path":"sprites/sprWaterMine/sprWaterMine.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprWaterMine",
     "tags": [],
     "resourceType": "GMSequence",
   },

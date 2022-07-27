@@ -1,13 +1,12 @@
-alarm[1] = 20+random(10)
+alarm[1] = actTime+random(10)
 scrTarget()
 if target > 0
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(2) < 1 && point_distance(target.x,target.y,x,y)<120
 {
-ammo = 6
+ammo = maxAmmo
 alarm[2] = 1
 gunangle = point_direction(x,y,target.x,target.y)
-alarm[1] = 20+random(5)
 snd_play(sndScorpionFireStart)
 }
 direction = point_direction(target.x,target.y,x,y)+random(120)-60

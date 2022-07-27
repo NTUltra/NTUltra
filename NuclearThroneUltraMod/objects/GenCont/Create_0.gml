@@ -123,6 +123,9 @@ if instance_exists(Player)
 			case 121:
 				__background_set_colour( make_color_rgb(81,96,135) )
 			break;
+			case 122:
+				__background_set_colour( make_color_rgb(153,56,119) )
+			break;
 		}
 	}
 	else
@@ -208,10 +211,12 @@ if instance_exists(Player)
 		__background_set_colour( make_color_rgb(76,68,61) )
 		else if Player.area == 121//Inverted Savanna
 		__background_set_colour( make_color_rgb(71,153,82) )
+		else if Player.area == 122//Inverted Oasis
+		__background_set_colour( make_color_rgb(229,130,153) )
 	}
 }
 else
-	__background_set_colour( make_color_rgb(106,122,175) )
+	__background_set_colour( make_color_rgb(229,56,153) )
 
 
 

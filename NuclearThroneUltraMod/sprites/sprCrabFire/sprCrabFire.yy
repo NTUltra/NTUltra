@@ -64,7 +64,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprCrabFire","path":"sprites/sprCrabFire/sprCrabFire.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprCrabFire",
     "tags": [],
     "resourceType": "GMSequence",
   },

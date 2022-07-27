@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskJellyFish",
     "path": "sprites/mskJellyFish/mskJellyFish.yy",

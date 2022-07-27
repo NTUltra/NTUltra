@@ -104,7 +104,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprWaterMineDead","path":"sprites/sprWaterMineDead/sprWaterMineDead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprWaterMineDead",
     "tags": [],
     "resourceType": "GMSequence",
   },

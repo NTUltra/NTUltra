@@ -96,7 +96,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprOasisBossWalk","path":"sprites/sprOasisBossWalk/sprOasisBossWalk.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprOasisBossWalk",
     "tags": [],
     "resourceType": "GMSequence",
   },

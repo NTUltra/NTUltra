@@ -64,7 +64,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprOasisBossFire","path":"sprites/sprOasisBossFire/sprOasisBossFire.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprOasisBossFire",
     "tags": [],
     "resourceType": "GMSequence",
   },
