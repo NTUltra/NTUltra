@@ -13,7 +13,7 @@ function scrPopProps() {
 	//walls near the player for safer spawn
 	if random(5)<1  and !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(x,y,hitme) && !place_meeting(x,y,chestprop) && !place_meeting(x,y,prop)
 	&& point_distance(x,y,Player.x,Player.y)<128 and Player.area != 100 and Player.area != 6 and Player.area != 112 and (Player.area !=5 or random(3) < 1) and Player.area != 102 and Player.area != 104 and !(Player.area = 8 && Player.subarea=3)
-	and Player.area != 9 and Player.area != 118 and Player.area != 114 and Player.area != 116
+	and Player.area != 9 and Player.area != 118 and Player.area != 114 and Player.area != 116 and Player.area != 123
 	{
 		
 	myx = x+choose(0,16)
@@ -58,6 +58,8 @@ function scrPopProps() {
 	
 	if random(4) < 1 && spawnarea = 114 && !place_meeting(x,y,Wall)//Jungle
 		instance_create(x+16,y+16,choose(Bush,Bush,Bush,Bush,Bush,Bush,BigFlower))
+	if random(4) < 1 && spawnarea = 123 && !place_meeting(x,y,Wall)// INV Jungle
+		instance_create(x+16,y+16,choose(InvertedBush,InvertedBush,InvertedBush,InvertedBush,InvertedBush,InvertedBush,InvertedBigFlower))
 	if (spawnarea == 9 && subarea != 3)
 	{
 		var mask = mask_index;
@@ -213,6 +215,15 @@ function scrPopProps() {
 		} else if random(5) < 4
 		{
 			instance_create(x+16,y+16,choose(MushroomProp1,MushroomProp2));
+		}
+	}
+	else if spawnarea = 124//INV Mushroomland
+	{
+		if random(8)<1{
+			instance_create(x+16,y+16,InvertedToxicMushroom)
+		} else if random(6) < 5
+		{
+			instance_create(x+16,y+16,choose(InvertedMushroomProp1,InvertedMushroomProp2));
 		}
 	}
 	if spawnarea = 8 && !place_meeting(x,y,Wall){//CUSTOM

@@ -34,7 +34,7 @@ function beginSuck() {
 
 
 
-alarm[1] = 5 + random(15)
+alarm[1] = actTime + random(actTime)
 if sprite_index != spr_hurt
 sprite_index = spr_idle
 scrTarget()
@@ -49,15 +49,15 @@ function healMe(amount) {
 }
 
 if target > 0 && alarm[6] < 1 && alarm[7] < 1 {
-	if point_distance(x,y,target.x,target.y) < 75 && random(2) < 3 {
+	if point_distance(x,y,target.x,target.y) < chargeDis && random(2) < 3 {
 		//BITE TACKLE SHIT YO! DANGER IN THE HOUSE!
 		snd_play(snd_tackle)
 		persistent_direction = point_direction(x, y, target.x, target.y)
-		alarm[1] += 50
+		alarm[1] += chargeTell + 30;
 		alarm[4] = 0
 		alarm[3] = 0
-		alarm[5] = 40
-		alarm[6] = 20
+		alarm[5] = chargeTell + 20;
+		alarm[6] = chargeTell
 	} else if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
 		maxspeed = 3 - 1.5*(my_health/maxhealth)
         if ((random(7) < 1 && point_distance(x, y, Player.x, Player.y) > 100) ) && alarm[2] < 1 && alarm[5] < 1 { //SUCK

@@ -12,7 +12,7 @@ function healMe(amount) {
 
 function suck() {
 	sprite_index=spr_fire;
-	suckstrength+=0.091;
+	suckstrength+=suckAcc;
 	with Player
 	{
 		if point_distance(x,y,other.x,other.y) < 240
@@ -75,7 +75,7 @@ if alarm[7] > 0 {
 	}
 	
 	direction = persistent_direction;
-	motion_add(persistent_direction, 7)
+	motion_add(persistent_direction, chargeSpeed)
 }
 
 if alarm[6] > 0 {

@@ -126,6 +126,12 @@ if instance_exists(Player)
 			case 122:
 				__background_set_colour( make_color_rgb(153,56,119) )
 			break;
+			case 123:
+				__background_set_colour( make_color_rgb(9,25,24) )
+			break;
+			case 124:
+				__background_set_colour( make_color_rgb(37,41,51) )
+			break;
 		}
 	}
 	else
@@ -213,6 +219,10 @@ if instance_exists(Player)
 		__background_set_colour( make_color_rgb(71,153,82) )
 		else if Player.area == 122//Inverted Oasis
 		__background_set_colour( make_color_rgb(229,130,153) )
+		else if Player.area == 123//Inverted Jungle
+		__background_set_colour( make_color_rgb(120,11,142) )
+		else if Player.area == 124//Inverted Mushroom
+		__background_set_colour( make_color_rgb(63,38,76) )
 	}
 }
 else
@@ -278,9 +288,9 @@ if (Player.area = 6 || Player.area = 112) && Player.subarea=2//LABS BOSS
 goal=1;
 if Player.area == 113//Banditland
 goal=70+s;
-if Player.area == 114//jungle
+if Player.area == 114 || Player.area == 123//jungle
 goal=130+s;
-if Player.area == 117//Mushroom land
+if Player.area == 117 || Player.area == 124//Mushroom land
 goal=120+s;
 if Player.area == 119 || Player.area == 120
 goal = 60;

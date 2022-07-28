@@ -1042,9 +1042,74 @@ function scrPopEnemies() {
 	        }
 		}
     }
+	//Inverted Jungle
+	if spawnarea = 123 {
+		if loops > 0
+		{
+			if subarea != 2 || random(2) < 1
+			{
+		        if styleb = 1 && random(2) < 1 {
+		            instance_create(x + 16, y + 16, choose(JungleAssassinFake, JungleAssassinFake, JungleAssassinFake, JungleAssassinFake, JungleAssassinFake, JungleFly,BigMaggot,FireWorm,Maggot,FireWorm))
+		        }
+		        else {
+		            if random(4) < 1
+		            instance_create(x + 16, y + 16, choose(JungleAssassin, JungleBandit, JungleAssassinFake, JungleAssassinFake, JungleAssassinFake, JungleBandit, JungleBandit, FireWorm, Scorpion, BigMaggot, JungleFly,Maggot))
+		            else {
+		                if random(30) < 1 {
+		                    instance_create(x + 16, y + 16, Barrel)
+		                    instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, JungleBandit)
+		                    instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, JungleBandit)
+		                    instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, JungleBandit)
+		                }
+		                else {
+		                    instance_create(x + 16, y + 16, choose(JungleFly, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, Scorpion, BigMaggot, FireWorm, Scorpion,Maggot,FireWorm));
+		                }
+		            }
+		        }
+			}
+		}
+		else if subarea != 2 || random(2) < 1
+		{
+	        if styleb = 1 && random(2) < 1 {
+	            instance_create(x + 16, y + 16, choose(JungleAssassinFake, JungleAssassinFake, JungleAssassinFake, JungleAssassinFake, JungleAssassinFake, JungleFly,MaggotSpawn,MaggotSpawn))
+	        }
+	        else {
+	            if random(4) < 1
+	            instance_create(x + 16, y + 16, choose(JungleAssassin, JungleBandit, JungleAssassinFake, JungleAssassinFake, JungleAssassinFake, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleFly))
+	            else {
+	                if random(30) < 1 {
+	                    instance_create(x + 16, y + 16, Barrel)
+	                    instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, JungleBandit)
+	                    instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, JungleBandit)
+	                    instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, JungleBandit)
+	                }
+	                else {
+	                    instance_create(x + 16, y + 16, choose(JungleFly, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit));
+	                }
+	            }
+	        }
+		}
+    }
 	
 	//MUSHROOM LAND
     if spawnarea = 117 {
+		if loops > 0
+		{
+		    if random(9) < 1
+		    instance_create(x + 16, y + 16, choose(Exploder, BuffMushroom, ToxicMushroomGuy, BuffMushroom, Gator, ToxicMushroomGuy, BanditSquare,Ratking))
+		    else if random(2) < 1
+		        instance_create(x + 16, y + 16, choose(Gator, Rat, ToxicMushroomGuy, BuffMushroom, BuffMushroom, ToxicMushroomGuy, ToxicMushroomGuy, BanditSquare,Exploder,Ratking,Ratking,Rat,Rat,LaserBandit,LaserBandit,Spider,Spider,Spider))
+		}
+		else
+		{
+			if random(9) < 1
+				instance_create(x + 16, y + 16, choose(Exploder, BuffMushroom, ToxicMushroomGuy, BuffMushroom, Gator, ToxicMushroomGuy, BanditSquare))
+		    else if random(2) < 1
+		        instance_create(x + 16, y + 16, choose(Gator, GatorSmoke, ToxicMushroomGuy, BuffMushroom, BuffMushroom, ToxicMushroomGuy, ToxicMushroomGuy, BanditSquare,Exploder))	
+		}
+    }
+	//Inverted Mushroom
+	if spawnarea = 124 {
 		if loops > 0
 		{
 		    if random(9) < 1

@@ -31,9 +31,9 @@ if instance_exists(Player){
 	goal = 145+s
 	else if Player.area = 106
 	goal = 120+s
-	else if Player.area = 114
+	else if Player.area = 114 || Player.area == 123
 	goal = 125+s
-	else if Player.area = 117
+	else if Player.area = 117 || Player.area == 124
 	goal = 130+s
 	else if (Player.area = 6||Player.area=112) && Player.subarea=2//LABS BOSS
 	goal=1;

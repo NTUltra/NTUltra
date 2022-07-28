@@ -441,7 +441,7 @@ function scrMakeFloor() {
 	}}
 	
 	//jungle
-	if area = 114{
+	if area = 114 || area == 123{
 		if random(7) < 1
 		{
 			instance_create(x,y,Floor)
@@ -466,7 +466,7 @@ function scrMakeFloor() {
 	}
 	
 	//Mushroom land
-	if area = 117{
+	if area = 117 || area == 124 {
 		if random(8) < 1
 		{
 			instance_create(x,y,Floor)
@@ -596,9 +596,9 @@ function scrMakeFloor() {
 	trn = choose(0,0,0,0,0,0,0,0,0,0,90,-90,180,180)
 	else if area = 103
 	trn = choose(0,0,0,90,-90,180)
-	else if area == 114
+	else if area == 114 || area == 123
 	trn = choose(0,0,0,0,0,90,-90,180)
-	else if area == 117
+	else if area == 117 || area == 124
 	trn = choose(0,0,0,0,90,-90,180)
 	else if area == 119 || area == 120
 	trn = choose(0,0,90,-90,90,-90,180)
@@ -655,7 +655,7 @@ function scrMakeFloor() {
 
 
 	//BRANCHES
-	if area = 1 || area = 105 || area = 101 || area == 10 || area == 114 || area == 121 || area == 122
+	if area = 1 || area = 105 || area = 101 || area == 10 || area == 114 || area == 121 || area == 122 || area == 123 || area == 124
 	{
 	if random(19+instance_number(FloorMaker)) > 20
 	{

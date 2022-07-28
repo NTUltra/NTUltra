@@ -4,7 +4,6 @@ meleedamage = 3
 size = 3
 if GetPlayerLoops() > 0{
 	maxhealth = 370;
-	my_health = maxhealth;
 }
 sucking = false;
 
@@ -35,9 +34,13 @@ motion_add(point_direction(Player.x,Player.y,x,y),3)
 
 intro=1;
 suckstrength=0;
+suckAcc = 0.091;
 maxspeed=2
 persistent_direction = 0;
-
+actTime = 10;
+chargeSpeed = 7;
+chargeDis = 75;
+chargeTell = 20;
 snd_play(sndOasisBossIntro);    
 
 

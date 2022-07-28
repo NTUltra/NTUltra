@@ -6031,7 +6031,7 @@ function scrWeapons() {
 	wep_type[547] = 1
 	wep_auto[547] = 0
 	wep_load[547] = 12
-	wep_cost[547] = 15
+	wep_cost[547] = 12
 	wep_sprt[547] = sprBloodShortgun
 	wep_area[547] = 0
 	wep_text[547] = "blech"

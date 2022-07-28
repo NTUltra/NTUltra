@@ -33,6 +33,8 @@ function scrDarkness() {	if darkness = 1
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),160+random(4),0)
 	with SmallExplosion
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),64+random(4),0)
+	with InvertedToxicMushroom
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),64,0)
 	with ChesireCat
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),160+random(4),0)
 	with InvertedChesireCat
@@ -136,6 +138,8 @@ function scrDarkness() {	if darkness = 1
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),40+random(6),0)
 	with MeatExplosion
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),40+random(3),0)
+	with InvertedToxicMushroom
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),32,0)
 	with Tangle
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),20+random(3),0)
 	with Crystal

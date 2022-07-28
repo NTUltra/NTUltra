@@ -8,7 +8,11 @@ function scrRaddrop(amountOfRads = raddrop) {
 			var am = ceil(amountOfRads*0.7);//0.6 in real game
 			am = min(am,40);
 			if UberCont.opt_gamemode == 35
+			{
 				am = min(am,14);
+				if instance_number(HorrorBullet) > 100
+					return;
+			}
 			var angstep = 360/am;
 			var ang = random(360);
 			repeat(am)

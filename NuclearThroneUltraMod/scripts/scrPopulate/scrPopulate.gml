@@ -166,14 +166,7 @@ function scrPopulate() {
         }
         else if spawnarea = 114 //Jungle
         {
-            if !place_free(x - 32, y) and!place_free(x + 32, y) and place_free(x, y) {
-                instance_create(x, y, Bones)
-                instance_create(x, y + 16, Bones)
-                with instance_create(x + 32, y, Bones)
-                image_xscale = -1
-                with instance_create(x + 32, y + 16, Bones)
-                image_xscale = -1
-            }
+            GenBones();
             TopDecals();
             with TopDecal {
                 sprite_index = sprJungleTopDecal;
@@ -181,17 +174,21 @@ function scrPopulate() {
             with Bones {
                 sprite_index = sprJungleDecal;
             }
+        }
+		else if spawnarea = 123 //Jungle
+        {
+            GenBones();
+            TopDecals();
+            with TopDecal {
+                sprite_index = sprInvertedJungleTopDecal;
+            }
+            with Bones {
+                sprite_index = sprInvertedJungleDecal;
+            }
         } 
 		else if spawnarea = 117 //Mushroom
         {
-            if !place_free(x - 32, y) and!place_free(x + 32, y) and place_free(x, y) {
-                instance_create(x, y, Bones)
-                instance_create(x, y + 16, Bones)
-                with instance_create(x + 32, y, Bones)
-                image_xscale = -1
-                with instance_create(x + 32, y + 16, Bones)
-                image_xscale = -1
-            }
+            GenBones();
             TopDecals();
             with TopDecal {
                 sprite_index = sprMushroomTopDecal;
@@ -199,7 +196,19 @@ function scrPopulate() {
             with Bones {
                 sprite_index = sprMushroomDecal;
             }
-        } else if spawnarea = 1 || spawnarea = 105 || spawnarea == 113 {
+        }
+		else if spawnarea = 117 //Mushroom
+        {
+            GenBones();
+            TopDecals();
+            with TopDecal {
+                sprite_index = sprInvertedMushroomTopDecal;
+            }
+            with Bones {
+                sprite_index = sprInvertedMushroomDecal;
+            }
+        }
+		else if spawnarea = 1 || spawnarea = 105 || spawnarea == 113 {
             if !place_free(x - 32, y) and!place_free(x + 32, y) and place_free(x, y) {
                 instance_create(x, y, Bones)
                 instance_create(x, y + 16, Bones)
