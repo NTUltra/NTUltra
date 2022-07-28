@@ -117,6 +117,8 @@ if UberCont.opt_gamemode == 7 //ATOM TELEPORT ONLY GM
 race = 15;
 if UberCont.opt_gamemode == 12 //HUNTER MARK SHOT ONLY
 race = 11;
+if UberCont.opt_gamemode == 35
+race = 23
 //if UberCont.opt_gamemode==14//fish companion only
 //race=1;
 
@@ -606,18 +608,19 @@ if wep == bwep
 
 
 //TEST HAVE ALL MUTS FROG GOD
-/*
-var i = 0
-repeat(maxskill+1)
-{skill_got[i] = 1
-i += 1}
-i = 0
-repeat(maxultra+2)
+if UberCont.opt_gamemode == 35
 {
-	if i != 86
+	var i = 0
+	repeat(maxskill+1)
+	{skill_got[i] = 1
+	i += 1}
+	i = 0
+	repeat(maxultra+2)
 	{
+		//if i != 81//SUPER BLAST ARMOUR STALKER
+		//{
 		ultra_got[i] = 1
 		i += 1
+		//}
 	}
 }
-*/

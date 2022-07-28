@@ -19,4 +19,4 @@ maxAmmo = 12;
 firerate = 1;
 actTime = 4;
 acc = 3;
-constAcc = 1;
+constAcc = 1.1;

@@ -84,6 +84,16 @@ else if skill == 20 && Player.crown == 23 && Player.skill_got[2]
 		maxspeed += 6;
 	}
 }
+else if skill == 92 && Player.wep_type[Player.wep] == 3 && Player.wep_type[Player.bwep] == 3
+{
+	with Player
+	{
+		altUltra = true;
+		ultra_name[92] = "SPIKE BALL"
+		ultra_text[92] = "NORMAL CONTROLS#EMIT SPLINTERS INSTEAD OF GASS#ALL SPLINTERS ARE GASSEOUS"
+		ultra_tips[92] = "porkupine"
+	}
+}
 else if skill == 106//Hands secret ultras
 {
 	with Player

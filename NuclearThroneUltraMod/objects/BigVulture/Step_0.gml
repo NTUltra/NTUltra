@@ -33,7 +33,7 @@ if shooting < 1
 				shooting2 = fireRate2;
 				with instance_create(x,y,EnemyBullet5)
 				{
-					motion_add(other.gunangle,other.projectileSpeed*0.65)
+					motion_add(other.gunangle,other.projectileSpeed*0.6)
 					team = other.team
 					image_angle = direction
 				}

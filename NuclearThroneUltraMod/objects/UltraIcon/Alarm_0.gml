@@ -49,6 +49,10 @@ else if skill == 87 && Player.skeletonlives > 0
 {
 	sprite_index = sprFreakRogue;
 }
+else if skill == 92 && Player.wep_type[Player.wep] == 3 && Player.wep_type[Player.bwep] == 3
+{
+	sprite_index = sprSpikedFrog;
+}
 else if skill == 106 && Player.bskin == 1
 {
 	sprite_index=sprHotHands;

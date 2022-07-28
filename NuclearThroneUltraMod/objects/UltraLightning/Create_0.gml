@@ -35,3 +35,4 @@ if instance_exists(Player)
 isog = true;
 canUltraMod = true;
 canBeMoved = false;
+UberCont.recursionCheck ++;

@@ -7,19 +7,19 @@ raddrop = 13
 maxhealth = 7;
 meleedamage = 4;
 EnemyHealthAdjustments();
-maxSpeed = 5;
+maxSpeed = 6;
 actTime = 12;
 healTime = 12;
 if loops > 0
 {
-	maxSpeed = 5.5;
+	maxSpeed = 6.5;
 	actTime = 8;
 }
 if loops > 4
-	maxSpeed = 6;
+	maxSpeed = 7;
 	
-acc = 0.8;
-accCharge = 2;
+acc = 1.2;
+accCharge = 3;
 
 spr_idle = sprInvertedHyenaIdle
 spr_eat = sprInvertedHyenaEat;

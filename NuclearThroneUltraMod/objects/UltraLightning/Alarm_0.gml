@@ -1,3 +1,8 @@
+if UberCont.recursionCheck > 30
+{
+	alarm[0] = 1;
+	exit;
+}
 var ultraMod = -1
 if canUltraMod
 	ultraMod = GetPlayerUltramod();
@@ -34,7 +39,8 @@ if isog && ultraMod == ultramods.lightningKraken
 	exit;
 }
 	isog = false;
-instance_create(x,y,SmallWallBreak);
+//if !instance_exists(SmallWallBreak) || instance_number(SmallWallBreak) < 30
+	instance_create(x,y,SmallWallBreak);
 var simpleAccuracy = 1;
 if instance_exists(Player)
 {
@@ -113,7 +119,7 @@ if ammo > 0
 			ammo = other.ammo;
 			team = other.team
 			image_index = other.image_index*0.5
-			if ammo % 5 == 0//ultraMod == ultramods.lightningPellet && odd
+			if ammo % 4 == 0//ultraMod == ultramods.lightningPellet && odd
 				alarm[0]=1;
 			else event_perform(ev_alarm,0);
 		}

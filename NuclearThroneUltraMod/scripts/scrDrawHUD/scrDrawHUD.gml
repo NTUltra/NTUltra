@@ -221,6 +221,10 @@ function scrDrawHUD() {
 			{
 				draw_sprite_ext(sprFreakRogueHUD,0,xx,yy,1,1,0,c_white,1);
 			}
+			else if dir == 92 && Player.altUltra
+			{
+				draw_sprite_ext(sprSpikedFrogHUD,0,xx,yy,1,1,0,c_white,1);
+			}
 		    else if !(dir=79 && Player.race=21){//Horror don't draw skeleton's ultra
 				draw_sprite_ext(sprUltraIconHUD,dir,xx,yy,1,1,0,c_white,1);
 			}

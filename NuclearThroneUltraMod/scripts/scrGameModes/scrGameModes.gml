@@ -175,6 +175,11 @@ function scrGameModes() {
 	gamemode_have[34] = 0;
 	gamemode_tip[34] = "";
 	
+	gamemode[35] = "GOD FROG";
+	gamemode_unlock[35] = "REACH LOOP 2#ON HARD MODE";
+	gamemode_have[35] = 0;
+	gamemode_tip[35] = "THE GREATEST GOD OF ALL GODS!##FROGOD";
+	
 	/*
 	gamemode[23] = "SEEDED";
 	gamemode_description[23] = "YOU ONLY GET MELEE WEAPONS#ALWAYS GET LONG ARMS";
@@ -198,7 +203,7 @@ function scrGameModes() {
 	gamemodeOrder[14] = 7;
 	gamemodeOrder[15] = 14;
 	gamemodeOrder[16] = 15;
-	gamemodeOrder[17] = 30;
+	gamemodeOrder[17] = 31;
 	gamemodeOrder[18] = 19;
 	gamemodeOrder[19] = 16;
 	gamemodeOrder[20] = 21;
@@ -207,15 +212,16 @@ function scrGameModes() {
 	gamemodeOrder[23] = 23;
 	gamemodeOrder[24] = 24;
 	gamemodeOrder[25] = 18;
-	gamemodeOrder[26] = 29;
-	gamemodeOrder[27] = 31;
-	gamemodeOrder[28] = 28;
-	gamemodeOrder[29] = 32;
-	gamemodeOrder[30] = 33;
-	gamemodeOrder[31] = 34;
+	gamemodeOrder[26] = 30;
+	gamemodeOrder[27] = 32;
+	gamemodeOrder[28] = 29;
+	gamemodeOrder[29] = 33;
+	gamemodeOrder[30] = 34;
+	gamemodeOrder[31] = 35;
 	gamemodeOrder[32] = 17;
 	gamemodeOrder[33] = 26;
-	gamemodeOrder[34] = 27;
+	gamemodeOrder[34] = 28;
+	gamemodeOrder[35] = 27;
 
 
 	maxgamemode = array_length(gamemodeOrder) - 1;

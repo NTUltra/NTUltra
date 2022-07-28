@@ -2,7 +2,6 @@
 
 // Inherit the parent event
 event_inherited();
-existTime = 0;
 //List of move through wall enemies or collision disablers
 if !(instance_exists(Player) && Player.crown == 25)//Crown of freedom
 	alarm[10]=500;

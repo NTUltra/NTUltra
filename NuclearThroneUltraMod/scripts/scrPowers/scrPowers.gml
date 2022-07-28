@@ -31,6 +31,7 @@ function scrPowers() {
 						}
 					}
 				}
+				/*
 				if instance_exists(PopoNade)
 				{
 					var tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,PopoNade);
@@ -44,7 +45,7 @@ function scrPowers() {
 							slappedProjectile = true;
 						}
 					}
-				}
+				}*/
 			}
 			if instance_exists(chestprop)
 			{
@@ -247,7 +248,10 @@ function scrPowers() {
 							image_speed = 0.4;
 							sprite_index = sprHumphryDestroyProjectile;	
 						}
-						instance_destroy();	
+						if object_index == PopoNade
+							instance_destroy(id,false);
+						else
+							instance_destroy();	
 					}
 				}
 			}
@@ -289,10 +293,7 @@ function scrPowers() {
 					}
 				}
 			}
-			with PopoNade
-			{
-				instance_destroy(id,false);	
-			}
+			
 			if (effective)
 			{
 				Sleep(40);
@@ -2191,13 +2192,14 @@ function scrPowers() {
 	if !place_meeting(x,y+lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od),Wall)
 	y += lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od)}}
 	
+	/*
 	with PopoNade
 	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) and team != 2 and canBeMoved
 	{if !place_meeting(x+lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od),y,Wall)
 	x += lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od)
 	if !place_meeting(x,y+lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od),Wall)
 	y += lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od)}}
-
+*/
 
 	if ultra_got[9] == 1 && !altUltra{//eyes Projectile Style ULTRA A
 	    with projectile
@@ -2359,14 +2361,34 @@ function scrPowers() {
 
 		if ultra_got[90]//intimacy
 			toxicamount++
-
-		repeat(toxicamount)
+		if ultra_got[92] && altUltra
 		{
-
-			with instance_create(x,y,ToxicThrowerGas)
+			toxicamount *= 0.6;
+			toxicamount = ceil(toxicamount);
+			if toxicamount > 6
+				snd_play(sndSplinterGun,0.1,true);
+			var ta = random(360);
+			var taStep = 360 / toxicamount;
+			repeat(toxicamount)
 			{
-				motion_add(random(360),1.3+random(2)+(other.skill_got[5]*2));
-				dmg += 1;
+				with instance_create(x,y,Splinter)
+				{
+					motion_add(ta,18)
+					image_angle = direction
+					team = other.team
+				}
+				ta += taStep;
+			}
+		}
+		else
+		{
+			repeat(toxicamount)
+			{
+				with instance_create(x,y,ToxicThrowerGas)
+				{
+					motion_add(random(360),1.3+random(2)+(other.skill_got[5]*2));
+					dmg += 1;
+				}
 			}
 		}
 

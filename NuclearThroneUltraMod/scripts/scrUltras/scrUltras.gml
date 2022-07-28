@@ -557,26 +557,24 @@ function scrUltras() {
 	ultra_name[91] = "MOMMA"
 	ultra_text[91] = "ACTIVE CREATES FRIENDLY BALLGUYS"
 	ultra_tips[91] = "I am the mother now"
+	
+	ultra_name[92] = "POTENCY"
+	ultra_text[92] = "NORMAL CONTROLS#MORE GAS DAMAGE"
+	ultra_tips[92] = "you can gass while moving"
 
 	    if instance_exists(Player)
 	    {
-	    if Player.race=19||Player.race=20||Player.race=21{//skeleton hog and horror
-	    ultra_name[92] = "POTENCY"
-	    ultra_text[92] = "MORE TOXIC GAS DAMAGE"
-	    ultra_tips[92] = "why'd you want to be gassy?"
+		    if Player.race=19||Player.race=20||Player.race=21{//skeleton hog and horror
+			    ultra_name[92] = "POTENCY"
+			    ultra_text[92] = "MORE TOXIC GAS DAMAGE"
+			    ultra_tips[92] = "why'd you want to be gassy?"
+		    }
+		    else if Player.altUltra || (Player.wep_type[Player.wep] == 3 && Player.wep_type[Player.bwep] == 3 && instance_exists(UltraIcon)){
+				ultra_name[92] = "SPIKE BALL"
+				ultra_text[92] = "NORMAL CONTROLS#EMIT SPLINTERS INSTEAD OF GASS#ALL SPLINTERS ARE GASSEOUS"
+				ultra_tips[92] = "porkupine"
+		    }
 	    }
-	    else{
-	    ultra_name[92] = "POTENCY"
-	    ultra_text[92] = "NORMAL CONTROLS#MORE GAS DAMAGE"
-	    ultra_tips[92] = "you can gass while moving"
-	    }
-	    }
-	    else{
-	    ultra_name[92] = "POTENCY"
-	    ultra_text[92] = "NORMAL CONTROLS#MORE GAS DAMAGE"
-	    ultra_tips[92] = "you can gass while moving"
-	    }
-
 
 	    //Elementor 
 	    ultra_name[93] = "EARTHBENDER"

@@ -473,7 +473,7 @@ if (skill_got[31])
 if race=22
 {
 	blastArmourDelay --;
-	if tookHit && blastArmourDelay < 0//&&sprite_index=spr_hurt
+	if tookHit//&&sprite_index=spr_hurt
 	{
 		event_user(0);
 	}

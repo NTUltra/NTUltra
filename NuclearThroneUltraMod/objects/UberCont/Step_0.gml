@@ -1,3 +1,4 @@
+recursionCheck = 0;
 if isPaused = 1
 {
 //QUICK RESTART

@@ -1,4 +1,9 @@
 /// @description ROGUE BLAST ARMOUR
+if blastArmourDelay > 0
+{
+	blastArmourDelay -= 2;
+	exit;
+}
 with instance_create(x,y,RogueExplosion)
 {team=2;}
 blastArmourDelay = 10;

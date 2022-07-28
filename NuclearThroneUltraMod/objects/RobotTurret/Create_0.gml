@@ -4,7 +4,7 @@ meleedamage = 0
 size = 1
 event_inherited();
 scrWeapons();
-
+roll = 0;
 hurt_pitch_variation = 0.1;
 
 raddrop=28;

@@ -15,7 +15,7 @@ if other.team != team && other.team != 2
 		}
 		else
 		{
-			scrIframeSkipper(0.075);
+			scrIframeSkipper(0.07);
 		}
 	}
 }

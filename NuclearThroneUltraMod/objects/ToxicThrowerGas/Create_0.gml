@@ -17,7 +17,7 @@ dmg=3;
 if instance_exists(Player)
 {
 	//FROG POTENCY
-	if Player.ultra_got[92]
+	if Player.ultra_got[92] && !Player.altUltra
 	{
 		dmg=4;
 		image_xscale += 0.1;

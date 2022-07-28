@@ -250,6 +250,10 @@ if looping && area != 104
 	scrRegainOneLifePart();
 	
 	debug("Looping now");
+if loops > 0
+{
+	scrUnlockGameMode(35,"FOR REACHING LOOP 2#ON HARD MODE",34)
+}
 if scrCheckLoopAll()
 	scrUnlockCSkin(1,"FOR LOOPING WITH EVERY CHARACTER",0);
 	

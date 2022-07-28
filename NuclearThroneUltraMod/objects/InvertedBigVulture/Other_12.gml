@@ -3,7 +3,7 @@ scrTarget()
 if target > 0
 {
 	//Leads shot!
-	var ran = irandom_range(24,27);
+	var ran = irandom_range(27,30);
 	var hspd = max(abs(target.hspeed),2.5);
 	var vspd = max(abs(target.vspeed),2.5);
 	var dir = point_direction(x,y,target.x,target.y)+90;

@@ -20,7 +20,7 @@ function scrFire() {
 		if reload > 0 && Player.bskin != 2
 		{
 		    reload-=speed*0.25
-		    if roll=1
+		    if Player.roll = 1
 		    {
 				reload -= wep_load[wep]*0.6
 		    }

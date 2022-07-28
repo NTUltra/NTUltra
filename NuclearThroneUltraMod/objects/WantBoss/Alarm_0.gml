@@ -74,7 +74,7 @@ if target > 0 && instance_exists(target)
 			    }
 			    else if other.area=101||other.area=2
 					instance_create(x,y,BigFish);//oasis
-				else if other.area == 122 || area == 110
+				else if other.area == 122 || other.area == 110
 					instance_create(x,y,InvertedBigFish);
 			    else if other.oasis=true
 			    {

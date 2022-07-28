@@ -11,25 +11,38 @@ if target > 0
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {
-if point_distance(target.x,target.y,x,y) > 48 and point_distance(target.x,target.y,x,y) < 150
+if point_distance(target.x,target.y,x,y) > 48 and point_distance(target.x,target.y,x,y) < 130
 {
-if random(2) < 1
-{
-alarm[2]=8;
-instance_create(x,y,Notice);
+	if random(2) < 1
+	{
+		alarm[2]=8;
+		instance_create(x,y,Notice);
 
-alarm[1] = 10+random(5)
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1] = 5+random(8);
-}
-}
-else
-{direction = point_direction(x,y,target.x,target.y)+random(180)-90
-speed = 0.4
-walk = 10+random(10)
-gunangle = point_direction(x,y,target.x,target.y)}
+		alarm[1] = 10+random(5)
+		if instance_exists(Player)
+		{
+		if Player.loops>0
+		alarm[1] = 5+random(8);
+		}
+	}
+	else if random(2) < 1 {
+        direction = point_direction(x, y, target.x, target.y) + random(180) - 90
+		var n = instance_nearest(x,y,Wall)
+		if n != noone && point_distance(x,y,n.x,n.y) < 32
+		{
+			direction = point_direction(n.x,n.y,x,y);
+		}
+        speed = 0.4
+        walk = 10 + random(10)
+        gunangle = point_direction(x, y, target.x, target.y)
+    }
+	else
+	{
+		direction = point_direction(x,y,target.x,target.y)+random(180)-90
+		speed = 0.4
+		walk = 10+random(10)
+		gunangle = point_direction(x,y,target.x,target.y)
+	}
 
 }
 else
