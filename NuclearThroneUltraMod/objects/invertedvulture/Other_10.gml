@@ -4,7 +4,7 @@ if (fuckyou)
 	snd_play(sndRocket);
 	with instance_create(x,y,JockRocket)
 	{
-		motion_add(other.gunangle-30,other.projectileSpeed+2)
+		motion_add(other.gunangle-34,other.projectileSpeed+2)
 		team = other.team
 		image_angle = direction
 	}
@@ -16,7 +16,7 @@ if (fuckyou)
 	}
 	with instance_create(x,y,JockRocket)
 	{
-		motion_add(other.gunangle+30,other.projectileSpeed+2)
+		motion_add(other.gunangle+34,other.projectileSpeed+2)
 		team = other.team
 		image_angle = direction
 	}
@@ -26,7 +26,7 @@ else
 	snd_play(sndSnowTankShoot);
 	with instance_create(x,y,EnemyBullet5)
 	{
-		motion_add(other.gunangle-30,other.projectileSpeed+2)
+		motion_add(other.gunangle-34,other.projectileSpeed+2)
 		team = other.team
 		image_angle = direction
 	}
@@ -38,7 +38,7 @@ else
 	}
 	with instance_create(x,y,EnemyBullet5)
 	{
-		motion_add(other.gunangle+30,other.projectileSpeed+2)
+		motion_add(other.gunangle+34,other.projectileSpeed+2)
 		team = other.team
 		image_angle = direction
 	}

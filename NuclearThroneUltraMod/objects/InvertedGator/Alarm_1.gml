@@ -15,7 +15,7 @@ if point_distance(target.x,target.y,x,y) > 48 and point_distance(target.x,target
 {
 	if random(2) < 1
 	{
-		alarm[2]=8;
+		alarm[2]=9;
 		instance_create(x,y,Notice);
 
 		alarm[1] = 10+random(5)

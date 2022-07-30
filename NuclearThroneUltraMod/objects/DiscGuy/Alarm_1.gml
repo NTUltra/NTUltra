@@ -13,7 +13,7 @@ if target > 0
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 1
 {
-if random(5) < 1+UberCont.loops && point_distance(x,y,target.x,target.y)<250//minimum range
+if random(3) < 1+UberCont.loops && point_distance(x,y,target.x,target.y)<250//minimum range
 {
 direction = point_direction(x,y,target.x,target.y)+180
 
@@ -24,7 +24,7 @@ sprite_index = spr_fire
 snd_play(sndDiscgun)
 
 with instance_create(x,y,EnemyDisc)
-{motion_add(other.direction+180+(random(6)-3),3.2)
+{motion_add(other.direction+180+(random(6)-3),3.5)
 image_angle = direction
 team = other.team}
 walk=4;

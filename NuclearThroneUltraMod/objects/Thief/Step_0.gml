@@ -3,13 +3,13 @@ event_inherited()
 if walk > 0
 {
 walk -= 1
-motion_add(direction,0.8)
+motion_add(direction,acc)
 }
 
-if speed > 4.5 && stolen<1
-speed = 4.5
-else if speed>6
-speed=6;
+if speed > maxSpeed && stolen<1
+speed = maxSpeed
+else if speed>maxRunSpeed
+speed=maxRunSpeed;
 
 if speed < 1
 alpha=0.15

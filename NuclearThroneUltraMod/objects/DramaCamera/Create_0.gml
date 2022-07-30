@@ -211,21 +211,46 @@ name = "BUSH BOX"
 if random(70)<1
 	name = choose("BIG BUSH BOX BOSS","BUSH CUBE","BIG BAD BUSH BOX","BIG BUSH","BIG AGRASSIN","BUSHY BOX","PLANT","MISSING FLOWERS","IT'S THE BUSH BOX BOSS","S Q U A R E");
 }
+else if Player.area = 123
+{
+	//with instance_create(x,y,Drama)
+	name = "INVERTED BUSH BOX"
+	if random(200)<1
+		name = choose("GAY BUSH","PINK BUSH","BUSH BALL");
+}
 else if Player.area = 5
 {
-//with instance_create(x,y,Drama)
-if random(10000)<1
-name= choose("FUNNY FUCK","GEORGE!")
-else
-name = "LIL HUNTER"
+	if Player.subarea > 2
+	{
+		//with instance_create(x,y,Drama)
+		if random(1000)<1
+		name= choose("FUNNY FUCK","GEORGE!")
+		else
+		name = "LIL HUNTER"
+	}
+	else if Player.subarea == 1
+	{
+		name = "BIG DISC";
+		if random(600)<1
+		name= choose("BIG DIC","LARGE STAR","DUMB BOSS");
+	}
 }
 if Player.area = 107
 {
 //with instance_create(x,y,Drama)
-if random(10000)<1
-name= "HENKY!"
-else
-name = "INVERTED LIL HUNTER"
+	if Player.subarea > 2
+	{
+		if random(10000)<1
+		name= "HENKY!"
+		else
+		name = "INVERTED LIL HUNTER";
+	}
+	else if Player.subarea == 1
+	{
+		name = "INVERTED BIG DISC";
+		if random(600)<1
+		name= choose("BROWN DISC","BIG OOPS");
+	}
 }
 else if Player.area = 6 
 {
@@ -317,6 +342,21 @@ else if Player.area == 10
 		name = "BIG VULTURE";
 		if random(100) < 1
 			name = choose("CHARGE BIRD","BIG BIRD","ANGRY BIRD");
+	}
+	else
+	{
+		name = "MOM ON VACATION";
+		if random(100) < 1
+			name = choose("WE NOT SKIPPING THIS FIGHT","BALL MOM ON VACATION","MOMMY IN THE SUN","BIKINI");
+	}
+}
+else if Player.area == 121
+{
+	if Player.subarea == 3
+	{
+		name = "INVERTED BIG VULTURE";
+		if random(200) < 1
+			name = choose("BIG CROW","LARGE RAVEN","PEACOCK");
 	}
 	else
 	{

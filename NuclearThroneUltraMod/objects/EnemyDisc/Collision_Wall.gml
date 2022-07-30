@@ -1,6 +1,6 @@
 move_bounce_solid(false)
 
-if dist > 40
+if dist > 50
 {
 instance_create(x,y,DiscDisappear)
 instance_destroy()

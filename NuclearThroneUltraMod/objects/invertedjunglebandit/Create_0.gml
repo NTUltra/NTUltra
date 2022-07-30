@@ -1,7 +1,7 @@
 
 event_inherited()
 raddrop = 8
-maxhealth = 7
+maxhealth = 6
 spr_idle = sprInvertedJungleBanditIdle
 spr_walk = sprInvertedJungleBanditWalk
 spr_hurt = sprInvertedJungleBanditHurt

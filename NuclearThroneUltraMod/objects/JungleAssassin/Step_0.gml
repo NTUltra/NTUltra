@@ -30,5 +30,5 @@ if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y) < 64 and not alarm[2]
 }
 
 
-if speed > 3
-speed = 3
+if speed > maxSpeed
+speed = maxSpeed

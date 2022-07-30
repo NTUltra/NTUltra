@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprBushBox",
-    "path": "sprites/sprBushBox/sprBushBox.yy",
+    "name": "sprInvertedBushBox",
+    "path": "sprites/sprInvertedBushBox/sprInvertedBushBox.yy",
   },
   "solid": false,
   "visible": true,

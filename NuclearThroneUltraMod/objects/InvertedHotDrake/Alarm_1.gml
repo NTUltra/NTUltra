@@ -14,7 +14,7 @@ alarm[1] = 4+random(5);
     {
     if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
     {
-    if my_health<maxhealth*0.75&&random(30)<1
+    if my_health<maxhealth*0.75&&random(40)<1
     {
 	    sprite_index=spr_vanish
 	    image_index=0;

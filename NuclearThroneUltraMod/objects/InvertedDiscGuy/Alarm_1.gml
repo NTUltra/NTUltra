@@ -8,7 +8,7 @@ if target > 0
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 1
 {
-if random(5) < 1+UberCont.loops && point_distance(x,y,target.x,target.y)<250//minimum range
+if random(3) < 1+UberCont.loops && point_distance(x,y,target.x,target.y)<250//minimum range
 {
 direction = point_direction(x,y,target.x,target.y)+180
 

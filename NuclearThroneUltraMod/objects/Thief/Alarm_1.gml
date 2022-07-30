@@ -1,19 +1,12 @@
 //PRE LOOP
-alarm[1] = 20+random(10)
+alarm[1] = actTime+random(actTime)
 
-
-//LOOP
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1] = 5+random(5);
-}
 
 scrTarget()
 if stolen>0
 {
 
-mp_potential_step(instance_furthest(x,y,Floor).x,instance_furthest(x,y,Floor).y,3,false);
+mp_potential_step(instance_furthest(x,y,Floor).x,instance_furthest(x,y,Floor).y,runawaySpeed,false);
 walk=alarm[1]-random(10);
 stolen--;
 
@@ -86,7 +79,7 @@ right = -1
 }
 else{//make your way around the wall
 motion_add(point_direction(x,y,target.x,target.y),0.8);
-mp_potential_step(target.x,target.y,3,false);
+mp_potential_step(target.x,target.y,runawaySpeed,false);
 walk = 10+random(10)
 gunangle = point_direction(x,y,target.x,target.y)
 }
@@ -94,8 +87,8 @@ gunangle = point_direction(x,y,target.x,target.y)
 else if random(10) < 1
 {
 motion_add(random(360),0.4)
-walk = 20+random(10)
-alarm[1] = walk+10+random(30)
+walk = actTime+random(actTime)
+alarm[1] = walk+actTime+random(actTime)
 gunangle = direction
 if hspeed > 0
 right = 1

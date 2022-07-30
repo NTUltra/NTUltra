@@ -13,7 +13,7 @@ spr_dead = sprInvertedBigVultureDead
 projectileSpeed += 1;
 isInverted = true;
 raddrop = 80
-maxhealth = 140;
+maxhealth = 135;
 EnemyHealthAdjustments()
 maxAmmo = 25;
 fireRate = 1;

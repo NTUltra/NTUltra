@@ -18,7 +18,7 @@ else if  alarm[5] < 1 && alarm[4] < 1 && point_distance(x,y,xstart,ystart) > 300
 	alarm[4]=40
 	//vanishing=0;
 }
-if instance_number(enemy) <= 2&&!instance_exists(GenCont) || instance_exists(SurvivalWave){
+if instance_number(enemy) <= 2&&!instance_exists(GenCont) || instance_exists(SurvivalWave) || (instance_exists(Player) && point_distance(Player.x,Player.y,xstart,ystart) < 100){
 	if awake==false{
 	x=xstart
 	y=ystart

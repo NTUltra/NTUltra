@@ -8,7 +8,7 @@ spr_idle = sprInvertedToxicMushroomGuyIdle
 spr_walk = sprInvertedToxicMushroomGuyWalk
 spr_hurt = sprInvertedToxicMushroomGuyHurt
 spr_dead = sprInvertedToxicMushroomGuyDead
-
+spr_gun = sprInvertedToxicMushroomGuyGun;
 
 //behavior
 walk = 0

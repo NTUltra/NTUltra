@@ -12,3 +12,5 @@ if alarm[3]>5
     }
 }
 
+if hspeed > 3
+	hspeed = 3;

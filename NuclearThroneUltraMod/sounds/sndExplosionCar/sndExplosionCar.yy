@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndExplosionCar",
-  "duration": 0.0,
+  "duration": 4.375011,
   "parent": {
     "name": "Enviroment",
     "path": "folders/Sounds/Enviroment.yy",

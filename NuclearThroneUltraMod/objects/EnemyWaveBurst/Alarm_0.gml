@@ -13,12 +13,12 @@ snd_play(sndShotgun,0.1,true)
 
 with instance_create(x,y,EnemyBullet3)
 {
-motion_add(other.creator.gunangle+random(4)-2+sin(other.ammo/2)*16,15)
+motion_add(other.creator.gunangle+random(4)-2+sin(other.ammo/2)*16,13)
 image_angle = direction
 team = other.team}
 with instance_create(x,y,EnemyBullet3)
 {
-motion_add(other.creator.gunangle+random(4)-2-sin(other.ammo/2)*16,15)
+motion_add(other.creator.gunangle+random(4)-2-sin(other.ammo/2)*16,13)
 image_angle = direction
 team = other.team
 }

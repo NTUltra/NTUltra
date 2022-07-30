@@ -58,13 +58,25 @@ room_speed=35;
 	    invertedportaldelay=45+random(100);
 	    //area=105
 	    }
-		else if ( (area==10&&subarea<3)  )
+		else if ( (area==10&&subarea<3)  )//Inv Savanna
 	    {
 	    invertedportalcounter=1;
 	    invertedportaldelay=45+random(100);
 	    //area=107
 	    }
-		else if ( (area==101&&subarea<3)  )
+		else if ( (area==101&&subarea<3)  )//Inv Oasis
+	    {
+	    invertedportalcounter=1;
+	    invertedportaldelay=45+random(100);
+	    //area=107
+	    }
+		else if ( (area==114&&subarea<2)  )//Inv Jungle
+	    {
+	    invertedportalcounter=1;
+	    invertedportaldelay=45+random(100);
+	    //area=107
+	    }
+		else if ( (area==117&&subarea<2)  )//Inv mushroom
 	    {
 	    invertedportalcounter=1;
 	    invertedportaldelay=45+random(100);

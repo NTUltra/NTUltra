@@ -28,26 +28,73 @@ function scrNextLevel() {
 		lastarea = area
 	}
 	else if subarea = 1 || area = 105 || area = 106 || area = 107 || area = 101 || area = 110 || area = 111 || area = 112 || area = 103 || area = 109 || area = 113 || area == 114 || area = 108 || area == 115 || area == 117 || area == 118
-	|| area == 121
+	|| area == 121 || area == 122 || area == 123 || area == 124
 	{
 		//Inverted savanna
-		if area = 121//bring to mushroom
+		if area = 121//bring to inverted mushroom
 	    {
 			//TODO
 	        if inverted && area == 121 &&subarea<3
 	        {
-	        //inverted big bandit
+	        //inverted big vulture
 	        area = 121
+	        subarea=3;
+	        inverted=true;
+	        exit;
+	        }
+	        else
+	        {
+	        area = 124
+	        subarea = 0
+			inverted=true
+	        exit;
+	        }
+	    }
+		if area == 124//Inv mushroom
+		{
+			//Jungle 2
+			area = 114
+			subarea = 1;
+		}
+		//Inverted Oasis
+		if area = 122//bring to inverted Vulcano 2
+	    {
+			//TODO
+	        if inverted && area == 122 &&subarea<3
+	        {
+	        //inverted big Fish
+	        area = 122
 	        subarea=3;
 	        inverted=false;
 	        exit;
 	        }
 	        else
 	        {
-	        area = 117
-	        subarea = 0
+	        area = 7
+	        subarea = 2
 			inverted=false
 	        exit;
+	        }
+	    }
+		//Inverted Jungle
+		if area = 123//bring to inverted Vulcano 2
+	    {
+			//TODO
+	        if inverted && area == 123 &&subarea<3
+	        {
+		        //inverted big bush box
+		        area = 123
+		        subarea=3;
+		        inverted=false;
+		        exit;
+	        }
+	        else
+	        {
+				//To big bad bat
+		        area = 4
+		        subarea = 2
+				inverted=false
+		        exit;
 	        }
 	    }
 		if area == 118
@@ -415,7 +462,17 @@ function scrNextLevel() {
 	lastarea=121;
 	hard ++;
 	}
-
+	if ( area==117 && inverted )//inv Mushroom
+	{area=124;
+	lastarea=124;
+	subarea = 0;
+	hard ++;
+	}
+	if ( area==101 && inverted )//inv Oasis
+	{area=122;
+	lastarea=122;
+	hard ++;
+	}
 
 	if race=6||race=12{//Yv's Crib? Yun cuz aswell
 		if level>=10

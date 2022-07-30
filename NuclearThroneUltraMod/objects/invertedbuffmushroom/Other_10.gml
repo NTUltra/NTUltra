@@ -14,7 +14,7 @@ if target > 0 && instance_exists(target)
 	{
 		snd_play(sndBouncerFire,0.1,true)
 		proj = EnemyBouncerBullet;
-		pspeed-= 8;
+		pspeed-= 9;
 	}
 	else
 	{

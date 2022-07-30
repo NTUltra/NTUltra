@@ -51,7 +51,10 @@ function scrDecideInvader(){
 			}
 			else if area == 113//Pizza sewers
 			{
-				scrSpawnInvaderBoss(loops - 3,BigVulture,sprFloor10,sprFloor10B,sprFloor10Explo);//EVEN
+				if (loops % 2 == 1)
+					scrSpawnInvaderBoss(loops - 3,BigVulture,sprFloor10,sprFloor10B,sprFloor10Explo);//EVEN
+				else
+					scrSpawnInvaderBoss(loops - 3,InvertedBigVulture,sprFloor121,sprFloor121B,sprFloor121Explo);//EVEN
 			}
 			else if area == 9 && subarea == 1//Palace 7 - 1
 			{
@@ -62,7 +65,10 @@ function scrDecideInvader(){
 			}
 			else if area == 7 && subarea == 1//Vulcano 3C - 1
 			{
-				scrSpawnInvaderBoss(1,JungleBoss,sprFloor114,sprFloor114B,sprFloor114Explo);//EVEN
+				if (loops % 2 == 1)
+					scrSpawnInvaderBoss(1,JungleBoss,sprFloor114,sprFloor114B,sprFloor114Explo);//EVEN
+				else
+					scrSpawnInvaderBoss(1,InvertedJungleBoss,sprFloor123,sprFloor123B,sprFloor123Explo);//EVEN
 			}
 			else if area == 8 && subarea == 1//Wonderland 5C - 1
 			{

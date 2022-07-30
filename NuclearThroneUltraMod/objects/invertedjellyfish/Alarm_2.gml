@@ -14,6 +14,7 @@ if ammo > 0
 	repeat(am)
 	{
 		with instance_create(x,y,ToxicGas) {
+			cantHitTeam = other.team;
 			motion_add(ang,1);	
 		}
 		ang += angStep;

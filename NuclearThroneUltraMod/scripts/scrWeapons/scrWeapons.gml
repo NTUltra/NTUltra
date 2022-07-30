@@ -2144,7 +2144,7 @@ function scrWeapons() {
 	wep_name[194] = "KRAKEN GUN"
 	wep_type[194] = 4
 	wep_auto[194] = 0
-	wep_load[194] = 14//10
+	wep_load[194] = 16//10
 	wep_cost[194] = 2
 	wep_sprt[194] = sprKrakenGun
 	wep_area[194] = 4
@@ -2156,7 +2156,7 @@ function scrWeapons() {
 	wep_type[195] = 4
 	wep_auto[195] = 0
 	wep_load[195] = 25//10
-	wep_cost[195] = 2
+	wep_cost[195] = 2.5
 	wep_sprt[195] = sprBigKrakenGun
 	wep_area[195] = 6
 	wep_text[195] = "hentai gun"
@@ -3728,7 +3728,7 @@ function scrWeapons() {
 	wep_name[338] = "KRAKEN PISTOL"
 	wep_type[338] = 4
 	wep_auto[338] = 0
-	wep_load[338] = 14//10
+	wep_load[338] = 16//10
 	wep_cost[338] = 1
 	wep_sprt[338] = sprKrakenPistol
 	wep_area[338] = 3
@@ -4633,7 +4633,7 @@ function scrWeapons() {
 	wep_name[420] = "SUPER SPINNER YOYO GUN"
 	wep_type[420] = 3
 	wep_auto[420] = 1
-	wep_load[420] = 25
+	wep_load[420] = 26
 	wep_cost[420] = 5
 	wep_sprt[420] = sprSuperSpinnerYoyoGun
 	wep_area[420] = 11
@@ -4644,7 +4644,7 @@ function scrWeapons() {
 	wep_name[421] = "DISPERSE SPINNER YOYO GUN"
 	wep_type[421] = 3
 	wep_auto[421] = 1
-	wep_load[421] = 20
+	wep_load[421] = 22
 	wep_cost[421] = 8
 	wep_sprt[421] = sprSpinnerYoyoDisperseGun
 	wep_area[421] = 16
@@ -6119,7 +6119,7 @@ function scrWeapons() {
 	wep_type[555] = 1
 	wep_auto[555] = 1
 	wep_load[555] = 10
-	wep_cost[555] = 4
+	wep_cost[555] = 5
 	wep_sprt[555] = sprSnakeGun
 	wep_area[555] = 5
 	wep_text[555] = "ssssssssssssssssssssssssss"
@@ -6273,7 +6273,7 @@ function scrWeapons() {
 	wep_type[569] = 5
 	wep_auto[569] = 0
 	wep_load[569] = 50
-	wep_cost[569] = 13
+	wep_cost[569] = 14
 	wep_sprt[569] = sprSplasmaCannon
 	wep_area[569] = 16
 	wep_text[569] = "disperse plasma gun"
@@ -6283,7 +6283,7 @@ function scrWeapons() {
 	wep_name[570] = "SPLASMA GUN"
 	wep_type[570] = 5
 	wep_auto[570] = 1
-	wep_load[570] = 22
+	wep_load[570] = 24
 	wep_cost[570] = 3
 	wep_sprt[570] = sprSplasmaGun
 	wep_area[570] = 8

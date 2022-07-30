@@ -1,5 +1,5 @@
 function scrAsciiChar(argument0) {
-	if      (argument0 ==  32)  return("Spacebar");
+	if (argument0 ==  32)  return("Spacebar");
 
 	else if (argument0 ==  19)  return("PAUSE/BREAK");
 
@@ -13,9 +13,11 @@ function scrAsciiChar(argument0) {
 	else if (argument0 ==  16)  return("Shift");
 	else if (argument0 ==  17)  return("Ctrl");
 	else if (argument0 ==  18)  return("Alt");
-
+	else if (argument0 ==  162)  return("L Ctrl");
+	else if (argument0 ==  163)  return("R Ctrl");
+	
 	else if (argument0 > 47 && argument0 < 91)  return( chr(argument0) ); // [0]-[9], [a]-[z]
-
+	
 	else  return("Unknown Key");
 
 

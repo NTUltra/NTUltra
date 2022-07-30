@@ -119,6 +119,8 @@ function scrShadows() {
 	draw_sprite(shd48c,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 )+6)
 	with BecomeJungleBoss
 	draw_sprite(shdBushBox,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ))
+	with BecomeInvertedJungleBoss
+	draw_sprite(shdBushBox,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ))
 	with JungleBoss
 	draw_sprite(shdBushBox,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ))
 	with BushBoxStatue
@@ -139,6 +141,8 @@ function scrShadows() {
 	draw_sprite(shd24,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 )+8)
 	with BanditBoss
 	draw_sprite(shd48,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ))
+	with BigDisc
+	draw_sprite(shd64B,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ))
 	with InvertedBanditBoss
 	draw_sprite(shd48,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ))
 	with BigVulture

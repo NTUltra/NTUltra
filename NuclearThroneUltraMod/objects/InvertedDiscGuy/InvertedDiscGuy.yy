@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskDiscGuy",
     "path": "sprites/mskDiscGuy/mskDiscGuy.yy",

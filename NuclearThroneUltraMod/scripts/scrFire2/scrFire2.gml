@@ -3767,7 +3767,7 @@ function scrFire2() {
 	{image_angle = aimDirection+(random(30)-15)*other.accuracy
 	creator=other.id;
 	team = other.team
-	ammo = 9
+	ammo = 8
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)
@@ -4826,7 +4826,7 @@ function scrFire2() {
 		//wep = 0;
 		clicked = 0;
 		can_shoot = 0;
-		if ultra_got[27] && !altUltra
+		if object_index == Player && ultra_got[27] && !altUltra
 		{
 			if bwep == wep
 				bwep = 0;
@@ -10690,7 +10690,7 @@ function scrFire2() {
 	{image_angle = aimDirection+(random(30)-15)*other.accuracy
 	creator=other.id;
 	team = other.team
-	ammo = 9
+	ammo = 8
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)

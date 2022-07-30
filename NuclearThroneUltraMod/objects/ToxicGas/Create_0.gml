@@ -12,7 +12,7 @@ growspeed = 0.003+random(0.002)
 team = 0
 typ = 0//2
 dmg = 3;
-
+cantHitTeam = -2;
 if instance_exists(Player)
 {//frog
 	//FROG POTENCY

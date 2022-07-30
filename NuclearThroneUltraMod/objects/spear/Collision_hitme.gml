@@ -24,7 +24,7 @@ if speed > 2 and other.team != team && !array_contains(hitEntities,other.id)
 	{
 		friction += 0.4;
 		speed *= min(1,other.my_health*0.1);
-		speed --;
+		speed -= 1.25;
 		if speed < 0
 			speed = 0;
 		hitEntities[array_length(hitEntities)] = other.id;

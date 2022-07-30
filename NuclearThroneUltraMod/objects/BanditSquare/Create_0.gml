@@ -23,4 +23,13 @@ gunangle = random(360)
 alarm[1] = 30+random(90)
 wkick = 0
 maxDetectRange = 160;
-
+maxSpeed = 3;
+loops = GetPlayerLoops();
+actTime = 15;
+pSpeed = 4;
+if loops > 0
+{
+	actTime = 10;
+	maxDetectRange += 20;
+	pSpeed = 4.5;
+}

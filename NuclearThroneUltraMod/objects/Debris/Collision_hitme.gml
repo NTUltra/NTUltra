@@ -25,9 +25,9 @@ with other
 	            debrisAmount=choose(1,2);
 				owner=other.id;
             }
-        alarm[11]+=20;
+        alarm[11]+=16;
 		if alarm[1] > 0
-				alarm[1] += 20;
+				alarm[1] += 6;
         }
         
         }

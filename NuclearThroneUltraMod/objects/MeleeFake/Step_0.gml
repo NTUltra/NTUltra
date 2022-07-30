@@ -16,7 +16,7 @@ spr_dead = sprMeleeDead
 //behavior
 walk = 0
 gunangle = random(360)
-alarm[1] = 30;
+alarm[1] = 20;
 wepangle = choose(-140,140)
 wepflip = 1
 instance_change(MeleeBandit,false)

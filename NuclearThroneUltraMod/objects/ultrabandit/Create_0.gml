@@ -20,12 +20,21 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(90)
 wkick = 0
-
+maxSpeed = 4;
 pspeed = 4.65;
 loops = GetPlayerLoops()
 if loops > 0
+{
 	pspeed = 5.1;
+	maxSpeed = 4.5;
+}
 if loops > 1
+{
 	pspeed = 5.5;
+	maxSpeed = 5;
+}
 if loops > 2
+{
 	pspeed = 6;
+	maxSpeed = 5.25;
+}

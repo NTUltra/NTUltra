@@ -25,4 +25,12 @@ wepangle = choose(-140,140)
 wepflip = 1
 
 dodge=0;
-
+range = 64;
+tellTime = 7;
+actTime = 3;
+maxSpeed = 3;
+loops = GetPlayerLoops();
+if loops > 0
+{
+	tellTime = 4;
+}

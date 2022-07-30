@@ -1,5 +1,5 @@
 raddrop = 70
-maxhealth = 920
+maxhealth = 930
 if UberCont.opt_gamemode == 34
 	maxhealth += 50;
 meleedamage = 10

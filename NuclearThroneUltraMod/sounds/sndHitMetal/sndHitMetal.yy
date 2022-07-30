@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndHitMetal",
-  "duration": 0.0,
+  "duration": 0.477846,
   "parent": {
     "name": "Enviroment",
     "path": "folders/Sounds/Enviroment.yy",

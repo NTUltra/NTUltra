@@ -2,44 +2,52 @@
 alarm[1] = actTime + random(actTime);
 scrTarget()
 if target > 0 {
-	var dir = point_direction(x,y,target.x,target.y);
-	var dc = dcos(dir);
-	var tright = dc > 0;
-	if dc == 0
-		tright = choose(true,false);
-	var ds = dsin(dir);
-	var tup = ds > 0;
-	if ds == 0
-		tup = choose(true,false);
+	
 	var charged = false;
 	var ran = random(10);
 	if speed <= maxSpeed && ran < 7 || firstTime
 	{
-		firstTime = false;
-		charged = true;
-		speed = 0;
-		if tright
+		var tx = target.x;
+		var ty = target.y;
+		if x > tx
+			var left = true;
+		else if x < tx
+			var left = false;
+		else
+			var left = choose(false,true);
+	
+		if y > ty
+			var up = true;
+		else if y < ty
+			var up = false;
+		else
+			var up = choose(false,true);
+		//Is horizontally closer?
+		if (abs(x - target.x) < abs(y - target.y))
 		{
-			if tup
+			if up
 			{
-				chargeDirection = 45;
+				chargeDirection = 90;
 			}
 			else
 			{
-				chargeDirection = 315;
+				chargeDirection = 270;	
 			}
 		}
 		else
 		{
-			if tup
+			if left
 			{
-				chargeDirection = 135;
+				chargeDirection = 180;	
 			}
 			else
 			{
-				chargeDirection = 225;
+				chargeDirection = 0;
 			}
 		}
+		firstTime = false;
+		charged = true;
+		speed = 0;
 		alarm[3] = tellTime;
 		alarm[1] += tellTime;
 		snd_play(sndJungleAssassinWake);
@@ -73,11 +81,6 @@ if target > 0 {
 	}
 	if ran < 1
 	{
-		scrDrop(10,0);	
+		scrDrop(20,0);	
 	}
-	//cos 45 = 0.7 cos 90 = 0; cos 0 = 0;
-	//cos 135 = -0.7
-	//cos < 0 left  cos > 0 right
-	// sin 45 = 0.7 sin 90 = 1 sin 0 = 0 sin 135 = 0.7  sin 225 = - 0.7
-	// sin > 0 up sin < 0 down
 }

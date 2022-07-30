@@ -9,7 +9,7 @@ function scrMakeFloor() {
 	{
 	area = Player.area
 	subarea=Player.subarea;}
-	if area = 1|| area = 105 || area = 113{ if random(2) < 1
+	if area = 1|| area = 105 || area = 113{ if random(3) < 1
 	{instance_create(x,y,Floor)
 	instance_create(x+32,y,Floor)
 	instance_create(x+32,y+32,Floor)

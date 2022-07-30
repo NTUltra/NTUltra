@@ -13,3 +13,5 @@ if alarm[3]>5
     }
 }
 
+if vspeed > 3
+	vspeed = 3;

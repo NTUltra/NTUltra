@@ -1,6 +1,6 @@
 event_inherited()
 maxhealth = 10;
-raddrop = 10;
+raddrop = 11;
 EnemyHealthAdjustments();
 
 spr_idle = sprInvertedVultureIdle
@@ -9,8 +9,6 @@ spr_walk = sprInvertedVultureWalk
 spr_hurt = sprInvertedVultureHurt
 spr_dead = sprInvertedVultureDead
 
-snd_hurt = sndVultureHurt
-snd_dead = sndVultureDeath
 
 //behavior
 walk = 0

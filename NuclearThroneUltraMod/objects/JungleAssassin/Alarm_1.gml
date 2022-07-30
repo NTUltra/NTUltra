@@ -1,31 +1,17 @@
-alarm[1] = 3+random(3)
-if instance_exists(Player)
-{
-	if Player.loops>0
-	alarm[1] = 1+random(3);
-}
+alarm[1] = actTime+random(actTime)
 scrTarget()
 if target > 0
 {
 	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 	{
-		if point_distance(target.x,target.y,x,y) < 64
+		if point_distance(target.x,target.y,x,y) < range
 		{
 		walk = 2;
-		alarm[2]=7//the delay that everyone wants
+		alarm[2]=tellTime//the delay that everyone wants
 		instance_create(x-5,y,Notice);
 		instance_create(x,y,Notice);
 		instance_create(x+5,y,Notice);
-		alarm[1]=11;
-
-		if instance_exists(Player)
-		{
-		    if Player.loops>0
-		    {
-				alarm[2] = 4;
-				alarm[1] = 5;
-		    }
-		}
+		alarm[1]=tellTime*1.5;
 		}
 		else
 		{
@@ -43,8 +29,8 @@ if target > 0
 else if random(4) < 1
 {
 	motion_add(random(360),0.4)
-	walk = 20+random(10)
-	alarm[1] = walk+10+random(30)
+	walk = actTime * 3;
+	alarm[1] = walk+actTime;
 	gunangle = direction
 	if hspeed > 0
 	right = 1
@@ -55,8 +41,8 @@ else if random(4) < 1
 else if random(10) < 1
 {
 	motion_add(random(360),0.4)
-	walk = 20+random(10)
-	alarm[1] = walk+10+random(30)
+	walk = actTime * 3;
+	alarm[1] = walk+actTime;
 	gunangle = direction
 	if hspeed > 0
 	right = 1

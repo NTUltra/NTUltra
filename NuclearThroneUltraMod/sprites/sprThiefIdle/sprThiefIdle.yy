@@ -72,7 +72,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprThiefIdle","path":"sprites/sprThiefIdle/sprThiefIdle.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprThiefIdle",
     "tags": [],
     "resourceType": "GMSequence",
   },

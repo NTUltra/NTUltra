@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprThiefHurt","path":"sprites/sprThiefHurt/sprThiefHurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprThiefHurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

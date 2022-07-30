@@ -14,7 +14,7 @@ function scrSpawnEndLevelPortal(){
 	if numEn == 0 || (instance_exists(IDPDVan) && numEn == instance_number(IDPDVan))
 	{
 		if (!instance_exists(becomenemy) and 
-		!instance_exists(Menu) and !instance_exists(RadMaggotChest) and !instance_exists(BecomeScrapBoss) and !instance_exists(BecomeJungleBoss) and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(UltraIcon))
+		!instance_exists(Menu) and !instance_exists(RadMaggotChest) and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(UltraIcon))
 		{
 			//if instance_exists(Player)
 			//{

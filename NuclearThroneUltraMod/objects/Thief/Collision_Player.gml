@@ -24,7 +24,7 @@ with other
 //0 = melee 1 = bullets 2 = shells 3 = bolts 4 = explosives 5 = energy
 //typ_ammo[0] = 333 typ_ammo[1] = 32 typ_ammo[2] = 8 typ_ammo[3] = 8 typ_ammo[4] = 6 typ_ammo[5] = 10
 
-	if loops>0&&random(3)<1
+	if (loops>0 || other.isInverted)&&random(3)<other.stealWeaponOdds
 	{
 		if cwep!=0 && other.wep == 0
 		{

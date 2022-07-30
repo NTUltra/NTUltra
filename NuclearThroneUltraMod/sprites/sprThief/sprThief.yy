@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprThief","path":"sprites/sprThief/sprThief.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprThief",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -14,7 +14,7 @@ alarm[1] = 4+random(5);
     {
     if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
     {
-    if my_health<maxhealth*0.75&&random(30)<1
+    if my_health<maxhealth*0.75&&random(40)<1
     {
     sprite_index=spr_vanish
     image_index=0;
@@ -157,7 +157,7 @@ alarm[1] = 4+random(5);
     {
     image_index=0;
     sprite_index=spr_fire;
-    alarm[1]=8;
+    alarm[1]=12;
 
     direction = point_direction(x,y,target.x,target.y)//go to player
     BackCont.shake += 5
@@ -176,7 +176,7 @@ alarm[1] = 4+random(5);
         with instance_create(x,y,MiniFlameCannonBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(22)-11),5+random(5))
+        motion_add(other.direction+(random(22)-11),6+random(5))
         team = other.team}
         }
     }

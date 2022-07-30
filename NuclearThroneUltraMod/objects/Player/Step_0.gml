@@ -388,7 +388,9 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 				var dangle = random(1)*360;
 				thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,PopupText);
 				thing.mytext = "THRONE II";
-				scrTurnIntoPortalArea();
+				//thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,InvertedJungleBoss);
+				thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,BigDisc);
+				//scrTurnIntoPortalArea();
 		    }
 		if (keyboard_check_pressed(ord("I")))
 		    {
@@ -1708,23 +1710,22 @@ if race=18
         //motion_add(direction,1);
         }
         
-    }
-    //GET HURT when flying too long unless acent ultra D
-    if ( ( !place_meeting(x,y,Floor) || flying>0 || mask_index=mskPickupThroughWall || place_meeting(x,y,WallHitMe) )  && !instance_exists(GenCont) && !instance_exists(LevCont) && ultra_got[72]==0 )//NOT ASCND ULTRA
-    {
-    //var wall = instance_nearest(x,y,Wall);
-    var ground = instance_nearest(x,y,Floor);
-    motion_add(point_direction(x,y,ground.x+16,ground.y+16),0.6);
+	    //GET HURT when flying too long unless acent ultra D
+	    if ( ( !place_meeting(x,y,Floor) || flying>0 || mask_index=mskPickupThroughWall || place_meeting(x,y,WallHitMe) )  && !instance_exists(GenCont) && !instance_exists(LevCont) && ultra_got[72]==0 )//NOT ASCND ULTRA
+	    {
+		    //var wall = instance_nearest(x,y,Wall);
+		    var ground = instance_nearest(x,y,Floor);
+		    motion_add(point_direction(x,y,ground.x+16,ground.y+16),0.6);
 
     
-    flyduration++
-    }
-    else
-    {
-    flyduration=0;
-    //flypush=0;
+		    flyduration++
+	    }
+	    else
+	    {
+			flyduration=0;
     
-    }
+	    }
+	}
     if flyduration>flymax
     {my_health--;
     flyduration=20;

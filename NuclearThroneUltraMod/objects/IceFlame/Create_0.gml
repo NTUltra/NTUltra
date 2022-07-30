@@ -12,7 +12,7 @@ image_speed = 0.2+random(0.2)
 friction = 0.15
 image_angle = random(360)
 
-freezetime=6;
+freezetime=3;
 
 dmg=3;
 
