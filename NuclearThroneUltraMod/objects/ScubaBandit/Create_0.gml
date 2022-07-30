@@ -23,4 +23,8 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(90)
 wkick = 0
-
+actTime = 10;
+if GetPlayerLoops > 0
+	actTime = 8;
+acc = 0.8;
+maxSpeed = 3;

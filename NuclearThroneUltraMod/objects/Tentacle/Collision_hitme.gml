@@ -11,7 +11,8 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 			my_health -= other.dmg//lightning does 6 dmg normal tentacle does 3
 			sprite_index = spr_hurt
 			image_index = 0
-			motion_add(other.image_angle,4)if other.alarm[1] < 1
+			//motion_add(other.image_angle,4)
+			if other.alarm[1] < 1
 			{
 				if other.ion=true {
 					with Tentacle

@@ -2442,7 +2442,7 @@ function scrWeapons() {
 	wep_type[221] = 4
 	wep_auto[221] = 0
 	wep_load[221] = 20
-	wep_cost[221] = 2
+	wep_cost[221] = 3
 	wep_sprt[221] = sprDoomLauncher
 	wep_area[221] = 12
 	wep_text[221] = "let's launch some doom!"
@@ -2518,7 +2518,7 @@ function scrWeapons() {
 	wep_name[228] = "GOLDEN SPLINTER GUN"
 	wep_type[228] = 3
 	wep_auto[228] = 0
-	wep_load[228] = 15
+	wep_load[228] = 17
 	wep_cost[228] = 1
 	wep_sprt[228] = sprGoldenSplinterGun
 	wep_area[228] = 19
@@ -3640,8 +3640,8 @@ function scrWeapons() {
 	wep_name[330] = "DOOM PISTOL"
 	wep_type[330] = 4
 	wep_auto[330] = 0
-	wep_load[330] = 11
-	wep_cost[330] = 1
+	wep_load[330] = 14
+	wep_cost[330] = 2
 	wep_sprt[330] = sprDoomPistol
 	wep_area[330] = 8
 	wep_text[330] = "cute bots of doom"
@@ -3651,8 +3651,8 @@ function scrWeapons() {
 	wep_name[331] = "DOOM RIFLE"
 	wep_type[331] = 4
 	wep_auto[331] = 0
-	wep_load[331] = 16
-	wep_cost[331] = 2
+	wep_load[331] = 18
+	wep_cost[331] = 2.5
 	wep_sprt[331] = sprDoomRifle
 	wep_area[331] = 10
 	wep_text[331] = "doombots are cool"
@@ -5524,7 +5524,7 @@ function scrWeapons() {
 	wep_name[501] = "FLAME REVOLVER"
 	wep_type[501] = 1
 	wep_auto[501] = 0
-	wep_load[501] = 6
+	wep_load[501] = 7
 	wep_cost[501] = 1.5
 	wep_sprt[501] = sprFlameRevolver
 	wep_area[501] = 2
@@ -6031,7 +6031,7 @@ function scrWeapons() {
 	wep_type[547] = 1
 	wep_auto[547] = 0
 	wep_load[547] = 12
-	wep_cost[547] = 12
+	wep_cost[547] = 8
 	wep_sprt[547] = sprBloodShortgun
 	wep_area[547] = 0
 	wep_text[547] = "blech"

@@ -3,13 +3,13 @@ scrTarget()
 if target > 0
 {
 walk = 10+random(10)
-if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(3) < 1
+if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and point_distance(x,y,target.x,target.y) < 170 and random(3) < 1
 {
-ammo = choose(4,5,6,7)
+ammo = choose(4,5,6,6)
 alarm[2] = 1
 gunangle = point_direction(x,y,target.x,target.y)
 snd_play(sndRatKingVomit)
-alarm[1] = 10+random(5)
+alarm[1] = 15+random(5)
 walk = 10+random(10)
 }
 direction = point_direction(target.x,target.y,x,y)+random(80)-40

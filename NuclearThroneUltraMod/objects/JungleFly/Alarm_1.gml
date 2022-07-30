@@ -1,4 +1,3 @@
-//PRE LOOP
 alarm[1] = actTime+random(actTime)
 
 scrTarget()
@@ -7,7 +6,6 @@ if target > 0
 {
 	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 	{
-		
 		var pdir =  point_direction(x,y,target.x,target.y);
 		motion_add(pdir,0.8)
 		var dis = point_distance(target.x,target.y,x,y);
@@ -18,7 +16,7 @@ if target > 0
 			direction = pdir+random(20)-10
 			motion_add(direction,2);
 		}
-		else if dis > 64 && dis < 128 && ran >= 95 && alarm[3] < 1
+		else if dis > 64 && dis < 128 && ran >= 95 && alarm[3] < 1 && totalAmmo > 0
 		{
 			direction = pdir+random(180)-90
 			gunangle = pdir

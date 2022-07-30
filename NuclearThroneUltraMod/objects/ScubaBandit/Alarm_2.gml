@@ -1,0 +1,20 @@
+/// @description SnowThrower
+if ammo > 0
+{
+	repeat(2)
+	with instance_create(x/*-8*/,y,EnemyIceFlame)
+	{
+		motion_add(other.direction+random(30)-15,3+random(4))
+		image_angle = direction
+		team = other.team
+		ignoreHitme=true;
+	}
+	alarm[2] = 1;
+	alarm[1] += 1;
+	walk ++;
+}
+else
+{
+	if audio_is_playing(sndSnowBlowerLoop)
+		audio_stop_sound(sndSnowBlowerLoop);	
+}

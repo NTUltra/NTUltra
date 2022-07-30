@@ -1,4 +1,6 @@
 /// @description FLY MAGGOT!
+if totalAmmo < 1
+	exit;
 scrTarget()
 
 snd_play(sndFlyFire);

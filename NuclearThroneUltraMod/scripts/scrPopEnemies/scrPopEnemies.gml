@@ -212,14 +212,14 @@ function scrPopEnemies() {
 			if random(10) < 1
 				instance_create(x + 16, y + 16, choose(InvertedCrab, InvertedCrab, Jock))
 	        else
-	            instance_create(x + 16, y + 16, choose(InvertedBoneFish, InvertedBoneFish, InvertedBoneFish, InvertedBoneFish, InvertedJellyFish, ScubaBandit, Turtle, InvertedGator, InvertedSpider, ScubaBandit, InvertedCrab))
+	            instance_create(x + 16, y + 16, choose(InvertedBoneFish, InvertedBoneFish, InvertedBoneFish, InvertedBoneFish, InvertedJellyFish, InvertedScubaBandit, InvertedExploder, InvertedExploder, InvertedSpider, InvertedScubaBandit, InvertedCrab))
 		}
 		else
 		{
 	        if random(10) < 1
 				instance_create(x + 16, y + 16, choose(InvertedCrab, InvertedCrab))
 	        else
-	            instance_create(x + 16, y + 16, choose(InvertedBoneFish, InvertedBoneFish, InvertedBoneFish, InvertedBoneFish, InvertedJellyFish, ScubaBandit, ScubaBandit, InvertedCrab))
+	            instance_create(x + 16, y + 16, choose(InvertedBoneFish, InvertedBoneFish, InvertedBoneFish, InvertedBoneFish, InvertedJellyFish, InvertedScubaBandit, InvertedScubaBandit, InvertedCrab))
 		}
 
     }
@@ -1112,17 +1112,18 @@ function scrPopEnemies() {
 	if spawnarea = 124 {
 		if loops > 0
 		{
+			//TODO replace exploders with something else since they dont make all that much sense in non toxic enviroment here
 		    if random(9) < 1
-		    instance_create(x + 16, y + 16, choose(Exploder, BuffMushroom, ToxicMushroomGuy, BuffMushroom, Gator, ToxicMushroomGuy, BanditSquare,Ratking))
+		    instance_create(x + 16, y + 16, choose(InvertedRat, InvertedBuffMushroom, InvertedToxicMushroomGuy, InvertedBuffMushroom, InvertedRatking, InvertedToxicMushroomGuy, BanditSquare,InvertedNecromancer))
 		    else if random(2) < 1
-		        instance_create(x + 16, y + 16, choose(Gator, Rat, ToxicMushroomGuy, BuffMushroom, BuffMushroom, ToxicMushroomGuy, ToxicMushroomGuy, BanditSquare,Exploder,Ratking,Ratking,Rat,Rat,LaserBandit,LaserBandit,Spider,Spider,Spider))
+		        instance_create(x + 16, y + 16, choose(InvertedRatking, InvertedDiscGuy, InvertedToxicMushroomGuy, InvertedBuffMushroom, InvertedBuffMushroom, InvertedToxicMushroomGuy, InvertedToxicMushroomGuy, BanditSquare,InvertedRat,InvertedNecromancer,InvertedNecromancer,InvertedDiscGuy,InvertedDiscGuy,LaserBandit,LaserBandit,InvertedSpider,InvertedSpider,InvertedSpider))
 		}
 		else
 		{
 			if random(9) < 1
-				instance_create(x + 16, y + 16, choose(Exploder, BuffMushroom, ToxicMushroomGuy, BuffMushroom, Gator, ToxicMushroomGuy, BanditSquare))
+				instance_create(x + 16, y + 16, choose(InvertedRat, InvertedBuffMushroom, InvertedToxicMushroomGuy, InvertedBuffMushroom, InvertedRatking, InvertedToxicMushroomGuy, BanditSquare))
 		    else if random(2) < 1
-		        instance_create(x + 16, y + 16, choose(Gator, GatorSmoke, ToxicMushroomGuy, BuffMushroom, BuffMushroom, ToxicMushroomGuy, ToxicMushroomGuy, BanditSquare,Exploder))	
+		        instance_create(x + 16, y + 16, choose(InvertedRatking, InvertedToxicMushroomGuy, InvertedBuffMushroom, InvertedBuffMushroom, InvertedToxicMushroomGuy, InvertedToxicMushroomGuy, BanditSquare,InvertedRat))	
 		}
     }
 

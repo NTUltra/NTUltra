@@ -2,8 +2,7 @@ alarm[0]=3+irandom(4);
 image_angle+=10;
 
 BackCont.shake += 0.2
-if !audio_is_playing(sndLightning1) && !audio_is_playing(sndLightning2)
-snd_play(choose(sndLightning2,sndLightning1));
+choose(snd_play(sndSpark1,0.1,true),snd_play(sndSpark2,0.1,true));
 
 
     with instance_create(x,y,Lightning)

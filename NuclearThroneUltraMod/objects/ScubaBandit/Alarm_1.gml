@@ -1,19 +1,12 @@
 ///AI
-alarm[1] = 10 + random(10)
+alarm[1] = actTime + random(actTime)
 
 scrTarget()
 if target > 0 {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
         if point_distance(target.x, target.y, x, y) > 48 {
             if random(3) < 1 {
-                snd_play(sndBouncerPistol)
-                wkick = 4
-					gunangle = point_direction(x, y, target.x, target.y)
-                with instance_create(x, y, EnemyBouncerBullet) {
-                    motion_add(other.gunangle + random(20) - 10, 4)
-                    image_angle = direction
-                    team = other.team
-                }
+                event_user(0);
             }
             else {
                 direction = point_direction(x, y, target.x, target.y) + random(180) - 90

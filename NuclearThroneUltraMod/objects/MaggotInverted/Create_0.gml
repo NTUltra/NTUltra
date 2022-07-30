@@ -14,3 +14,6 @@ spr_dead = sprMaggotDeadInvert
 alarm[1] = 10+random(10)
 
 loops = GetPlayerLoops();
+maxSpeed = 2.5;
+if loops > 0
+	maxSpeed = 3;

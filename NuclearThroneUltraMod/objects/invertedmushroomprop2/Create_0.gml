@@ -1,5 +1,5 @@
 /// @description Init
-maxhealth = 10;
+maxhealth = 4;
 spr_idle = sprInvertedMushroomProp2
 spr_hurt = sprInvertedMushroomProp2Hurt
 spr_dead = sprInvertedMushroomProp2Dead

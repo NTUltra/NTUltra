@@ -10,7 +10,7 @@ if target > 0 {
 			right = -1
         else if target.x > x
 			right = 1
-	        if dis > 48  && dis < 200{
+	        if dis > 48  && dis < detectionRange{
 	            if random(2) < 1 {
 					ammo = maxAmmo;
 					snd_play(sndWaveGun);

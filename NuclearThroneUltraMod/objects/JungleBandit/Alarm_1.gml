@@ -1,5 +1,5 @@
 //PRE LOOP
-alarm[1] = 15 + random(5)
+alarm[1] = actTime + random(actTime)
 
 scrTarget()
 if target > 0 {
@@ -17,7 +17,7 @@ if target > 0 {
 				gonnashoot += 6;
 				
 				if gonnashoot > ammo
-				gonnashoot = ammo;
+					gonnashoot = ammo;
 				
 				direction = point_direction(x, y, target.x, target.y) + random(30) - 195
 	            speed = 0.6

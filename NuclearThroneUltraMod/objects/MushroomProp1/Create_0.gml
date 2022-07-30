@@ -1,4 +1,4 @@
-maxhealth = 20
+maxhealth = 14
 
 spr_idle = sprMushroomProp1
 spr_hurt = sprMushroomProp1Hurt

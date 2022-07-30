@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Bandit",
-    "path": "folders/Sprites/Enemies/Bandit.yy",
+    "name": "JungleEnemy",
+    "path": "folders/Sprites/Enemies/JungleEnemy.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprJungleBanditGun",

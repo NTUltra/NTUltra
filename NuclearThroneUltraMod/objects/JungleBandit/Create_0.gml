@@ -5,6 +5,7 @@ size = 1
 
 event_inherited()
 
+spr_wep = sprJungleBanditGun;
 spr_idle = sprJungleBanditIdle
 spr_walk = sprJungleBanditWalk
 spr_hurt = sprJungleBanditHurt
@@ -23,5 +24,7 @@ ammo = maxAmmo;
 maxAmmo += min(GetPlayerLoops(),4);
 
 gonnashoot = 0
-
+actTime = 10;
 alarm[2] = 1
+maxSpeed = 3.5;
+acc = 0.8;

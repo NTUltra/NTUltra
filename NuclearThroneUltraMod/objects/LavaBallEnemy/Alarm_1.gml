@@ -9,6 +9,7 @@ if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 if random(6) < 1
 {
 direction = point_direction(x,y,target.x,target.y)+180
+snd_play(sndFlare);
 snd_play(sndFiretrap);
 
 speed*=0.4;

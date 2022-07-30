@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskBushBox",
     "path": "sprites/mskBushBox/mskBushBox.yy",

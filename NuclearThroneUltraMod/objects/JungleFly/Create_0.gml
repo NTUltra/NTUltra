@@ -19,6 +19,7 @@ alarm[1] = 20+random(90)
 wkick = 0
 maxAmmo = 6;
 ammo = maxAmmo;
+totalAmmo = maxAmmo * 4;
 firerate = 2;
 maxAmmo += min(GetPlayerLoops(),4);
 run = 0;

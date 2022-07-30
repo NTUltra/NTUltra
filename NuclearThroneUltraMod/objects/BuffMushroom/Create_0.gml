@@ -4,7 +4,8 @@ meleedamage = 3
 size = 2
 
 event_inherited()
-
+detectionRange = 200;
+spr_gun = sprBuffMushroomGun;
 spr_idle = sprBuffMushroomIdle
 spr_walk = sprBuffMushroomWalk
 spr_hurt = sprBuffMushroomHurt

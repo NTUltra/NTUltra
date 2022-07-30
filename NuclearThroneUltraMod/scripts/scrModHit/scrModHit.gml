@@ -27,10 +27,18 @@ function scrModHit() {
 	if instance_exists(Player) && Player.moddelay < 1
 	{
 		var r = 1;
+		var pc = false;
+		var itemRate = 9;
+		var wepRate = 6
 		with Player
 		{
 		    if skill_got[30]//power craving
+			{
 				moddelay=16;
+				wepRate += 1;
+				itemRate += 1;
+				pc = true;
+			}
 		    else
 				moddelay=26;
 			if ultra_got[65] == 1
@@ -263,11 +271,11 @@ function scrModHit() {
 				break;
 	
 				case 17://DROPS
-					scrDrop(9,0);
+					scrDrop(itemRate,0);
 				break;
 	
 				case 18://GUNS
-					scrDrop(0,6);
+					scrDrop(0,wepRate);
 				break;
 
 				}

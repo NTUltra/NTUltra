@@ -39,7 +39,7 @@ else if skill == 35 && Player.crown == 12//Crown of inversion
 }
 else if skill == 39 && (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep]))
 {
-	sprite_index = sprBigRebel;	
+	sprite_index = sprBigRebel;
 }
 else if skill == 76 && Player.ultimategamble=true
 {

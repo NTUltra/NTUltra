@@ -4,15 +4,7 @@ scrTarget()
 if target > 0 {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
         if random(3) < 1  && point_distance(x,y,target.x,target.y) < 200{
-            snd_play(sndToxicBoltGas)
-			gunangle = point_direction(x, y, target.x, target.y)
-			with instance_create(x, y, SmallGassBullet) {
-		        motion_add(other.gunangle, 4)
-		        image_angle = direction
-		        team = other.team
-		    }
-            wkick = 4
-			alarm[1] += 5;
+			event_user(0);
         }
         else {
             direction = point_direction(x, y, target.x, target.y) + random(180) - 90

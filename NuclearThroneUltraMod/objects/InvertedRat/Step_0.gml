@@ -3,7 +3,7 @@ event_inherited()
 if walk > 0
 {
 walk -= 1
-motion_add(direction,2)
+motion_add(direction,1.8)
 }
 
 if hspeed > 0

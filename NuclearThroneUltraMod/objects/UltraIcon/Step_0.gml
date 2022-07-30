@@ -8,7 +8,7 @@ Player.skillpoints -= 1
 
 if skill = 0
 {
-	if scrCheckGold(Player.wep_name[Player.wep]) && scrCheckGold(Player.wep_name[Player.bwep])
+	if scrCheckGold(Player.wep_name[Player.wep]) || scrCheckGold(Player.wep_name[Player.bwep])
 	{
 		with Player
 		{

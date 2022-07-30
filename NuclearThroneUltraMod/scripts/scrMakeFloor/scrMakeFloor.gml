@@ -655,7 +655,7 @@ function scrMakeFloor() {
 
 
 	//BRANCHES
-	if area = 1 || area = 105 || area = 101 || area == 10 || area == 114 || area == 121 || area == 122 || area == 123 || area == 124
+	if area = 1 || area = 105 || area = 101 || area == 10 || area == 114 || area == 121 || area == 122 || area == 123
 	{
 	if random(19+instance_number(FloorMaker)) > 20
 	{
@@ -668,7 +668,7 @@ function scrMakeFloor() {
 	instance_create(x,y,FloorMaker)
 	}
 	//No branch but chest
-	if area == 117
+	if area == 117 || area == 124
 	{
 		if random(19+instance_number(FloorMaker)) > 20
 		{

@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndRatKingVomit",
-  "duration": 0.0,
+  "duration": 2.016009,
   "parent": {
     "name": "Regular",
     "path": "folders/Sounds/Enemies/Regular.yy",

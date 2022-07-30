@@ -28,7 +28,6 @@ if nukeIt
 
     with instance_create(x,y,EnemyLightningBall)
     {
-    image_angle=random(360);
     motion_add(other.direction+180+(random(16)-8),2.5)
     team = other.team}
 speed*=0.4;
@@ -58,7 +57,7 @@ direction = point_direction(x,y,target.x,target.y)+180
     with instance_create(x,y,EnemyLightningBall)
     {
     image_angle=random(360);
-    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(8)-4),2)
+    motion_add(other.direction+(random(8)-4),2)
     team = other.team}
 
 image_index = 0
