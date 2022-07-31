@@ -1,5 +1,6 @@
 /// @description Copy override but dont destory in one wep only
-with (other) {
+wasThrown = false;
+ammo = 0;
 image_angle = random(360)
 image_speed = 0
 friction = 0.4
@@ -44,6 +45,4 @@ wepmod3=0;
 wepmod4=0;
 //name="IF YOU SEE THIS REPORT BUG TO @ERDEPPOL"
 
-/* */
-}
 /*  */

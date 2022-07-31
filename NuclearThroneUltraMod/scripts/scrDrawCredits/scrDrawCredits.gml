@@ -28,8 +28,8 @@ function scrDrawCredits() {
 	}
 	else if creditpage == 1
 	{
-		thanks = "###MUSIC USED:##Larje100#Inverted Sewers##Eric Chevalier#The lava stream#The lava tower#Lena Raine#Confronting Myself#Lena Raine &#Jukio Kalio#Reflections#T4N3#Namachuukei 68-Game#Set (SCC Ver)#"
-		stxt2 = "######MUSIC USED:##Larje100###Eric Chevalier###Lena Raine##Lena Raine &#Jukio Kalio##T4N3##"
+		thanks = "###MUSIC USED:##Larje100#Inverted Sewers##Eric Chevalier#The lava stream#The lava tower#Lena Raine#Confronting Myself#Lena Raine &#Jukio Kalio#Reflections#T4N3#Namachuukei 68-Game#Set (SCC Ver)#Tucker Hux Marray#iwannabethecollector#Under Water (Mix)"
+		stxt2 = "######MUSIC USED:##Larje100###Eric Chevalier###Lena Raine##Lena Raine &#Jukio Kalio##T4N3###Tucker Hux Marray#iwannabethecollector#"
 		txt0 = "#NUCLEAR THRONE#A GAME BY VLAMBEER##MOD BY ERDEPPOL"
 		txt1 = "######DIRECTOR:#JAN WILLEM NIJMAN##PRODUCER:#RAMI ISMAIL##ART & ORIGINAL#CHARACTER DESIGN:#PAUL VEER##ORIGINAL MUSIC:#JUKIO KALLIO##SOUND DESIGN:#JOONAS TURNER##PROMOTIONAL ART:#JUSTIN CHAN##VOICE OF MR. VENUZ:#DOSEONE#"
 		txt2 = "###"+string(thanks)
@@ -83,13 +83,13 @@ function scrDrawCredits() {
 	draw_set_halign(fa_left)
 
 	draw_set_color(c_black)
-	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+8,__view_get( e__VW.YView, 0 )+1,string_hash_to_newline(string(txt2)))
-	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+9,__view_get( e__VW.YView, 0 )+1,string_hash_to_newline(string(txt2)))
-	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+9,__view_get( e__VW.YView, 0 ),string_hash_to_newline(string(txt2)))
+	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+8-8,__view_get( e__VW.YView, 0 )+1,string_hash_to_newline(string(txt2)))
+	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+9-8,__view_get( e__VW.YView, 0 )+1,string_hash_to_newline(string(txt2)))
+	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+9-8,__view_get( e__VW.YView, 0 ),string_hash_to_newline(string(txt2)))
 	draw_set_color(c_gray)
-	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+8,__view_get( e__VW.YView, 0 ),string_hash_to_newline(string(txt2)))
+	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+8-8,__view_get( e__VW.YView, 0 ),string_hash_to_newline(string(txt2)))
 	draw_set_color(c_white)
-	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+8,__view_get( e__VW.YView, 0 ),string_hash_to_newline(string(stxt2)))
+	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+8-8,__view_get( e__VW.YView, 0 ),string_hash_to_newline(string(stxt2)))
 
 
 

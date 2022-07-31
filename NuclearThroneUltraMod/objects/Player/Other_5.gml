@@ -152,8 +152,26 @@ if crown == 15
 		}
 	}
 }
-if race=14//PANDA
+if race == 14//PANDA
 {
+	if ultra_got[56]=0
+    {
+		with WepPickup
+		{
+			if persistent && wasThrown
+			{
+				scrPandaRoll();
+			}
+		}
+        with ThrowWep
+		{
+			if persistent
+			{
+				scrPandaRoll();
+			}
+		}
+    }
+	/*
     if level!=1 && ultra_got[56]=0 && wep_area[wep] != -1
     {
     
@@ -193,7 +211,7 @@ if race=14//PANDA
         //dont start empty handed
         if ( ammo[wep_type[wep]] < typ_ammo[wep_type[wep]]*3 )//if ammo below three times an ammo drop
         {ammo[wep_type[wep]]=typ_ammo[wep_type[wep]]*3;}
-    }
+    }*/
 }
 
 if crown==10

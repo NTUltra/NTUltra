@@ -1,4 +1,5 @@
-with (other) {
+//with (other) {
+wasThrown = false;
 image_angle = random(360)
 image_speed = 0
 friction = 0.4
@@ -54,5 +55,5 @@ wepmod4=0;
 //name="IF YOU SEE THIS REPORT BUG TO @ERDEPPOL"
 
 /* */
-}
+//}
 /*  */

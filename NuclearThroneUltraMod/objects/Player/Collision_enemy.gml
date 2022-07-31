@@ -64,6 +64,7 @@ if other.team != team && team != 0
 	}
 
 	if other.meleedamage > 0 && other.existTime > 25 && !justAsheep && meleeimmunity<1 && alarm[3] < 1//is it a melee enemy?
+	&& collision_line(x,y,other.x,other.y,Wall,false,false) == noone
 	{
 		meleeimmunity=14;
 	    if (other.my_health<=0 || actuallyDead)

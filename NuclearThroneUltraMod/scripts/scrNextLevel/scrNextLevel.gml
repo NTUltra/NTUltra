@@ -55,6 +55,7 @@ function scrNextLevel() {
 			//Jungle 2
 			area = 114
 			subarea = 1;
+			inverted = false;
 		}
 		//Inverted Oasis
 		if area = 122//bring to inverted Vulcano 2

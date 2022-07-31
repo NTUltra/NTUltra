@@ -25,9 +25,8 @@ if other.team != team and other.my_health > 0 && (other.team!=2 || image_index<5
 						scrUnlockBSkin(24,"FOR BURNING AN ENEMY#THAT IS FROZEN AS ELEMENTOR",0);
 				}
 			}
-
+			snd_play(snd_hurt, hurt_pitch_variation,true)
 		}
-		snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
 
 		if team!=2
 			instance_destroy();
@@ -35,7 +34,7 @@ if other.team != team and other.my_health > 0 && (other.team!=2 || image_index<5
 	else if other.team != 2
 	{
 		with other
-			scrIframeSkipper(0.07);
+			scrIframeSkipper(0.05);
 	}
 	x += (other.x-x)*0.2+random(6)-3
 	y += (other.y-y)*0.2+random(6)-3

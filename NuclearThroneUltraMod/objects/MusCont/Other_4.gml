@@ -199,7 +199,7 @@ if oldarea != area || area == 0 or !audio_is_playing(song) or audio_is_playing(m
         amb = amb5;
     }
 
-    if area = 101 //oasis
+    if area = 101 || area == 122//oasis
     {
 
         song = mus101;
@@ -230,7 +230,7 @@ if oldarea != area || area == 0 or !audio_is_playing(song) or audio_is_playing(m
         amb = amb0b
     }
 
-    if area = 114//Jungle bugnle flungle drums yaya
+    if area = 114 || area == 123//Jungle bugnle flungle drums yaya
     {
         song = mus105
 
@@ -251,7 +251,7 @@ if oldarea != area || area == 0 or !audio_is_playing(song) or audio_is_playing(m
         amb = amb104
     }
 	
-	if area = 117//Mushroomland
+	if area = 117 || area == 124//Mushroomland
     {
         song = musMushroomland
 

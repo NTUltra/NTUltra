@@ -19,7 +19,7 @@ frozen=true;
 		owner = other.id;
     }
 alarm[11]+= other.freezetime+15;
-if alarm[1] > 0
+if alarm[1] > 1
 	alarm[1] += other.freezetime;
 }
 sprite_index = spr_hurt

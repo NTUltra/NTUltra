@@ -956,7 +956,7 @@ function scrWeapons() {
 	wep_name[86] = "SUPER ERASER"
 	wep_type[86] = 2
 	wep_auto[86] = 0
-	wep_load[86] = 36
+	wep_load[86] = 40
 	wep_cost[86] = 10
 	wep_sprt[86] = sprSuperEraser
 	wep_area[86] = 14
@@ -1187,7 +1187,7 @@ function scrWeapons() {
 	wep_name[107] = "SHORTGUN"
 	wep_type[107] = 2
 	wep_auto[107] = 0
-	wep_load[107] = 13
+	wep_load[107] = 15
 	wep_cost[107] = 1.5
 	wep_sprt[107] = sprShortgun
 	wep_area[107] = 0
@@ -2002,7 +2002,7 @@ function scrWeapons() {
 	wep_type[181] = 4
 	wep_auto[181] = 1
 	wep_load[181] = 32
-	wep_cost[181] = 2
+	wep_cost[181] = 2.5
 	wep_sprt[181] = sprCarThrower
 	wep_area[181] = 9
 	wep_text[181] = "amputated arm"
@@ -2475,7 +2475,7 @@ function scrWeapons() {
 	wep_type[224] = 4
 	wep_auto[224] = 1
 	wep_load[224] = 30
-	wep_cost[224] = 2
+	wep_cost[224] = 2.5
 	wep_sprt[224] = sprGoldenCarThrower
 	wep_area[224] = 20
 	wep_text[224] = "golden hand"
@@ -3101,7 +3101,7 @@ function scrWeapons() {
 	wep_name[281] = "GOLDEN SHORTGUN"
 	wep_type[281] = 2
 	wep_auto[281] = 0
-	wep_load[281] = 11
+	wep_load[281] = 13
 	wep_cost[281] = 1.5
 	wep_sprt[281] = sprGoldenShortgun
 	wep_area[281] = 17
@@ -4611,7 +4611,7 @@ function scrWeapons() {
 	wep_name[418] = "SUPER SPIRAL YOYO GUN"
 	wep_type[418] = 3
 	wep_auto[418] = 1
-	wep_load[418] = 20
+	wep_load[418] = 26
 	wep_cost[418] = 8
 	wep_sprt[418] = sprSuperSpiralYoyoGun
 	wep_area[418] = 9
@@ -6030,7 +6030,7 @@ function scrWeapons() {
 	wep_name[547] = "BLOOD SHORTGUN"
 	wep_type[547] = 1
 	wep_auto[547] = 0
-	wep_load[547] = 12
+	wep_load[547] = 13
 	wep_cost[547] = 8
 	wep_sprt[547] = sprBloodShortgun
 	wep_area[547] = 0

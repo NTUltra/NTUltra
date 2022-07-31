@@ -1,3 +1,4 @@
+/*
 if other.team != team and other.my_health > 0 && speed>1
 {
 	if instance_exists(Player) && Player.ultra_got[54] == 1

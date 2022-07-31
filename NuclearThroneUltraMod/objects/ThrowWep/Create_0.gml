@@ -46,7 +46,8 @@ else
 
 dontteleport=false;
 returnFX = true;
-
+	
+	ammo = 0;
     wep=0
     curse = 0
     wepmod1=0

@@ -17,7 +17,7 @@ spr_dead = sprInvertedGoldHyenaDead;
 snd_hurt = sndGoldHyenaHurt
 
 actTime -= 5;
-maxSpeed +=1.5;
+maxSpeed +=1.4;
 acc += 0.4;
 accCharge += 1;
 healTime -= 8;

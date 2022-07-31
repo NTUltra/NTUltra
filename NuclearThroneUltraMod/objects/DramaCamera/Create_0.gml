@@ -41,19 +41,21 @@ if instance_exists(Player) && !instance_exists(SurvivalWave)
 		else
 			song = musBoss6B;
 	}
-	if area = 2 || area == 110 || (area == 10 && subarea < 3)
+	if area = 2 || (area == 10 && subarea < 3)
 		song = musBoss5;
+	else if area == 110
+		song = musBoss5B;
 	else if area == 4
 		song = musBoss6;
 	else if area == 115
 		song = musBoss6B;
 	else if area == 111
 		song = choose(musBoss6,musBoss6B);
-    else if area = 101
-		song = musBoss1;
-	else if area == 10
+    else if area = 101 || area == 122
+		song = musOasisBoss;
+	else if area == 10 || area == 121
 		song = musBoss10
-	else if area == 114
+	else if area == 114 || area == 123
 		song = musBushBoxBoss;
 	else if area == 119 || area == 120
 		song = musBoss4B;

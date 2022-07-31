@@ -44,19 +44,19 @@ with Player
 if canHeavyHeart
 {
 	canHeavyHeart = false;
-	 with scrDropHeavyHeart()
-	 {
+		with scrDropHeavyHeart()
+		{
 		alarm[0] = 1;	 
-	 }
+		}
 }
 with instance_create(x,y,WepPickupForOneWepOnly)
 {
+	ammo = other.ammo;
 	oneweponly=false;
 	image_angle=other.image_angle;
 	scrWeapons()
 	wep=other.wep
 	name = wep_name[wep]
-	ammo = 0
 	type = wep_type[wep]
 	curse = other.curse
 	wepmod1=other.wepmod1;
@@ -64,5 +64,7 @@ with instance_create(x,y,WepPickupForOneWepOnly)
 	wepmod3=other.wepmod3;
 	wepmod4=other.wepmod4;
 	persistent=other.persistent;
+	if persistent
+		wasThrown = true;
 	sprite_index = wep_sprt[wep]
 }

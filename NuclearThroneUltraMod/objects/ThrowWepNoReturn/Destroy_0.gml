@@ -2,12 +2,12 @@
 if !thrownByCuz
 with instance_create(x,y,WepPickupForOneWepOnly)
 {
+	ammo = other.ammo;
 	oneweponly=false;
     image_angle=other.direction;
     scrWeapons()
     wep=other.wep
     name = wep_name[wep]
-    ammo = 0
     type = wep_type[wep]
     curse = other.curse
     wepmod1=other.wepmod1;

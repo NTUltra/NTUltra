@@ -1,2 +1,2 @@
-if !instance_exists(Player)
-instance_destroy()
+if !instance_exists(Player) || !persistent
+	instance_destroy()

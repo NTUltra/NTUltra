@@ -1,9 +1,9 @@
-alarm[1] = 20+random(10)//10 5
+alarm[1] = 15+random(10)//10 5
 
 if instance_exists(Player)
 {
 if Player.loops>0
-alarm[1] = 10+random(10);
+alarm[1] = 8+random(8);
 }
 
 scrTarget()
@@ -12,7 +12,7 @@ if target > 0
 //PLAYER EXISTS
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(5) < 4
 {//SEE PLAYER & FLEE
-if random(6) < 2
+if random(6) < 2 && point_distance(x,y,target.x,target.y) < 200
 {
 motion_add(point_direction(target.x,target.y,x,y)+random(80)-40,0.4)
 walk = 40+random(10)
