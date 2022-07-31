@@ -37,19 +37,37 @@ if UberCont.firstFloorMaker
 {
 	SetSeed();
 	UberCont.firstFloorMaker = false;
-	if instance_exists(Player) && (Player.area == 9 || Player.area == 118) && Player.subarea == 3
+	if instance_exists(Player) 
 	{
-		other.x = 10016;
-		other.y = 10016;
-		Player.x = other.x;
-		Player.y = other.y;
-		with WepPickup
+		if (Player.area == 9 || Player.area == 118) && Player.subarea == 3
 		{
-			x = Player.x;
-			y = Player.y-200;
-			speed = 0;
+			other.x = 10016;
+			other.y = 10016;
+			Player.x = other.x;
+			Player.y = other.y;
+			with WepPickup
+			{
+				x = Player.x;
+				y = Player.y-200;
+				speed = 0;
+			}
+			direction = 90;
 		}
-		direction = 90;
+		if Player.ultra_got[66] && Player.altUltra
+		{
+			snd_play(sndWeaponChest);
+			with instance_create(x,y,WepPickup)
+			{
+				scrWeapons()
+				wep = scrDecideWep(0, 8)
+
+				name = wep_name[wep]
+				ammo = 50
+				type = wep_type[wep]
+				curse = 0
+				sprite_index = wep_sprt[wep]
+			}
+		}
 	}
 }
 scrMakeFloor()

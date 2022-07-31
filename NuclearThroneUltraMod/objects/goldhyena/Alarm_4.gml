@@ -14,6 +14,7 @@ point_distance(x,y,target.x,target.y) < 100)
 	repeat(3)
 	with instance_create(x,y,ToxicGas)
 	{
+		cantHitTeam = other.team;
 		depth = other.depth+1;
 		motion_add(ang+random_range(-30,30),dgs);	
 	}
@@ -22,6 +23,7 @@ point_distance(x,y,target.x,target.y) < 100)
 	{
 		with instance_create(x,y,ToxicGas)
 		{
+			cantHitTeam = other.team;
 			depth = other.depth+1;
 			motion_add(angStep,gs);	
 		}

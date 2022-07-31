@@ -43,6 +43,10 @@ if instance_exists(Player)
 	{
 		alarm[0] = 1;
 	}
+	if Player.ultra_got[66] && Player.altUltra
+	{
+		mask_index = mskBigWepPickup;	
+	}
 }
 wepmod2=0;
 wepmod3=0;

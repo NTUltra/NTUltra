@@ -389,7 +389,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 				thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,PopupText);
 				thing.mytext = "THRONE II";
 				//thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,InvertedJungleBoss);
-				thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,BigDisc);
+				thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,InvertedGoldHyena);
 				//scrTurnIntoPortalArea();
 		    }
 		if (keyboard_check_pressed(ord("I")))

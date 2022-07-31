@@ -11,6 +11,7 @@ repeat(am)
 {
 	with instance_create(x,y,ToxicGas)
 	{
+		cantHitTeam = other.team;
 		motion_add(angStep,gs);	
 	}
 	ang += angStep;

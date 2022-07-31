@@ -52,7 +52,7 @@ with Player
         
 	            //snd_play_2d(sndHitMetal);
 	        //}
-	    if ultra_got[66]
+	    if ultra_got[66] && !altUltra
 			armour+=2;
 		
 		//Add a mod to it

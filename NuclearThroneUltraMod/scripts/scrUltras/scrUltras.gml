@@ -412,6 +412,14 @@ function scrUltras() {
 	ultra_name[66] = "ARMOUR SMITH"
 	ultra_text[66] = "WHEN UPGRADING A WEAPON#YOU ALSO GAIN TWO ARMOUR#ARMOUR MAX IS 2"
 	ultra_tips[66] = "craft changer"
+	
+	//EMPY HAND
+	if instance_exists(Player) && (Player.altUltra || (Player.bwep == 0 && instance_exists(UltraIcon)))
+	{
+		ultra_name[66] = "QUICK SWAPPER"
+		ultra_text[66] = "INCREASE WEAPON PICKUP RANGE##YOU DROP WEAPONS AT YOUR FEET##DROPPING A WEAPON#MAKES YOU IMMUNE FOR A SHORT DURATION##PORTALS SPIT OUT A NEW RANDOM WEAPON#UPON ENTERING AN AREA"
+		ultra_tips[66] = "slide swapping!"
+	}
 
 	ultra_name[67] = "ONE WITH THE GUN"
 	ultra_text[67] = "INCREASED FIRE RATE AND#REDUCED AMMO COST#FOR ALL WEAPONS EXCLUDING MELEE#DECREASED MELEE SWING RATE"
@@ -420,6 +428,7 @@ function scrUltras() {
 	ultra_name[68] = "SCRAP FINDER"
 	ultra_text[68] = "ALL WEAPON DROPS GIVE YOU HEALTH, RADS#AND MORE AMMO FOR ALL TYPES#PICKING UP A WEAPON#SPAWNS LIGHTNING"
 	ultra_tips[68] = "recourseful"
+	
 
 	    //ANGEL 
 	    ultra_name[69] = "PROTECTOR"

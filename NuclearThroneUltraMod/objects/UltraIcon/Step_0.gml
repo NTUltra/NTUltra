@@ -357,11 +357,24 @@ maxarmour+=2;
 }
 else if skill==66
 {
-	//Gunsmith armoursmith
-    with Player{
-    maxarmour=2;
-    armour=2;
-    }
+	if Player.bwep == 0
+	{
+		with Player
+		{
+			altUltra = true;
+			ultra_name[66] = "QUICK SWAPPER"
+			ultra_text[66] = "INCREASE WEAPON PICKUP RANGE##YOU DROP WEAPONS AT YOUR FEET##DROPPING A WEAPON#MAKES YOU IMMUNE FOR A SHORT DURATION##PORTALS SPIT OUT A NEW RANDOM WEAPON#UPON ENTERING AN AREA"
+			ultra_tips[66] = "slide swapping!"
+		}
+	}
+	else
+	{
+		//Gunsmith armoursmith
+	    with Player {
+			maxarmour=2;
+			armour=2;
+	    }
+	}
 }
 else if skill==78//business hog more options armour
 {

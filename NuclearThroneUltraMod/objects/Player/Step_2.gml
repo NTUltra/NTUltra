@@ -319,8 +319,24 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 	}
 	else if wep != 0
 	{
+		var tx = targetPickup.x;
+		var ty = targetPickup.y;
 		
-	with instance_create(targetPickup.x,targetPickup.y,WepPickup)
+		if ultra_got[66] && altUltra
+		{
+			tx = x;
+			ty = y;
+			alarm[3] = max(alarm[3],6);
+			if myShield == -1 || !instance_exists(myShield)
+			{
+				myShield = instance_create(x,y,EuphoriaShield);
+				with myShield
+				{
+					owner = other.id;
+				}
+			}
+		}
+	with instance_create(tx,ty,WepPickup)
 	{
 	pickedup=true;
 	scrWeapons()

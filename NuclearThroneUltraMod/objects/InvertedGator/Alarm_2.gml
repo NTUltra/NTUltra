@@ -3,6 +3,7 @@
 snd_play(sndShotgun)
 gunangle = point_direction(x,y,target.x,target.y)
 
+snd_play(sndWaveGun,0.1,true)
 with instance_create(x,y,EnemyWaveBurst)
 {
 creator = other.id

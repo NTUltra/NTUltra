@@ -5,5 +5,6 @@ event_inherited();
 
 if loops > 9
 {
-	instance_create(x,y,ToxicGas);	
+	with instance_create(x,y,ToxicGas)
+		cantHitTeam = other.team;
 }

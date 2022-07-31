@@ -1,6 +1,6 @@
 {
   "bboxMode": 1,
-  "collisionKind": 4,
+  "collisionKind": 2,
   "type": 0,
   "origin": 4,
   "preMultiplyAlpha": false,
@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"mskWepPickup","path":"sprites/mskWepPickup/mskWepPickup.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "mskWepPickup",
     "tags": [],
     "resourceType": "GMSequence",
   },

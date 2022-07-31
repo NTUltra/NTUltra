@@ -41,6 +41,10 @@ else if skill == 39 && (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUl
 {
 	sprite_index = sprBigRebel;
 }
+else if skill == 66 && Player.bwep == 0
+{
+	sprite_index = sprQuickSwapper;
+}
 else if skill == 76 && Player.ultimategamble=true
 {
 	sprite_index=sprUltimateGamble;

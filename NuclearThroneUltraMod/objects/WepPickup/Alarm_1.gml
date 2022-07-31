@@ -1,8 +1,8 @@
 if instance_exists(Player)
 {
-if Player.ultra_got[12]==1
+	if Player.ultra_got[12]==1
     {
-    mask_index=mskWepPickup
+		mask_index=mskWepPickup
     }
 }
 

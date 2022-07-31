@@ -91,7 +91,7 @@ function scrMakeFloor() {
 	} 
 
 
-	if area = 6&& subarea = 2//LABS BOSS
+	if area = 6&& subarea = 2 && !instance_exists(BigMachine)//LABS BOSS
 	{
 	//if(instance_number(Floor)>=goal){
 
@@ -172,7 +172,7 @@ function scrMakeFloor() {
 	    //}
 	}
 
-	if area = 112 && subarea = 2//INVERTED LABS BOSS
+	if area = 112 && subarea = 2 && !instance_exists(InvertedBigMachine)//INVERTED LABS BOSS
 	{
 	//if(instance_number(Floor)>=goal){
 

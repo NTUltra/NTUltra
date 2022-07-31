@@ -201,6 +201,10 @@ function scrDrawHUD() {
 			{
 				draw_sprite_ext(sprBigRebelHUD,0,xx,yy,1,1,0,c_white,1);
 			}
+			else if dir == 66 && Player.altUltra
+			{
+				draw_sprite_ext(sprQuickSwapperHUD,0,xx,yy,1,1,0,c_white,1);
+			}
 			else if dir == 106 && Player.bskin == 1
 			{
 				draw_sprite_ext(sprHothandsHUD,0,xx,yy,1,1,0,c_white,1);
