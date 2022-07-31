@@ -45,6 +45,6 @@ else{
 if !checked
 {
 	alarm[1] = 10;
-	alarm[2] = 20;
+	alarm[2] = 15;
 	checked = true;
 }

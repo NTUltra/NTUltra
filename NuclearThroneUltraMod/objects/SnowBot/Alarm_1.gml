@@ -1,9 +1,9 @@
-alarm[1] = 40
+alarm[1] = 36
 
 if instance_exists(Player)
 {
 if Player.loops>0
-alarm[1] = 20+random(20);
+alarm[1] = 20+random(15);
 }
 
 scrTarget()
@@ -12,7 +12,7 @@ sprite_index = spr_idle
 if target > 0
 {
 //CHARGE ATTACK
-if point_distance(x,y,target.x,target.y) < 120 and random(2) < 1
+if point_distance(x,y,target.x,target.y) < 120 and random(2) < 1.2
 {
 snd_play(sndSnowBotSlideLoop)
 snd_play(sndSnowBotSlideStart)

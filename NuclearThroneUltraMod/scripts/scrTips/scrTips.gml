@@ -25,6 +25,7 @@ function scrTips() {
 	"watch out for dehydration",
 	"crystal can shield",
 	"fear is the mindkiller",
+	"inverted enemies have less  health",
 	"there is a cheatcode#to unlock everything",
 	"square bullets are immune to melee",
 	/*these are rare*/ choose("no","bob and weave","airhorn.wav","danger zone","no sex jokes","in and about"

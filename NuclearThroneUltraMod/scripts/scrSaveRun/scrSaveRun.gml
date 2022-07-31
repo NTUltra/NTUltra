@@ -112,6 +112,8 @@ function scrSaveRun() {
 			extraVan: UberCont.extraVan,
 			killedInvertedThrone2: UberCont.killedInvertedThrone2,
 			hasFoughtInvadingThrone: UberCont.hasFoughtInvadingThrone,
+			revivedCharacters: UberCont.revivedCharacters,
+			beatTheGame: UberCont.beatTheGame,
 		};
 		with UberCont
 		{

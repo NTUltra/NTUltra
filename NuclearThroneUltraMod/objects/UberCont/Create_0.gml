@@ -158,3 +158,5 @@ extraVan = 0;
 killedInvertedThrone2 = false;
 hasFoughtInvadingThrone = false;
 recursionCheck = 0;
+revivedCharacters = [];
+beatTheGame = false;

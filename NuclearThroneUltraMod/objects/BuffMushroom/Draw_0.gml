@@ -1,4 +1,5 @@
-var gunY = 0;draw_sprite_ext(spr_gun,0,
+var gunY = 0;
+draw_sprite_ext(spr_gun,0,
 x+lengthdir_x(-wkick,gunangle),
 y+gunY-4+lengthdir_y(-wkick,gunangle),1,
 -right,gunangle,c_white,1);

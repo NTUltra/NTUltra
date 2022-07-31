@@ -22,7 +22,7 @@ if isInverted
 {
 	with instance_create(x,y,ThroneExplo)
 	{
-		rr = 136;//Smaller explosion
+		rr = 96;//Smaller explosion
 		sprite_index = sprInvertedNothing2Death;
 		snd_death = sndNothing2Dead;
 		explo = PurpleExplosion;
@@ -32,7 +32,7 @@ else
 {
 	with instance_create(x,y,ThroneExplo)
 	{
-		rr = 136;//Smaller explosion
+		rr = 96;//Smaller explosion
 		sprite_index = sprNothing2Death;
 		snd_death = sndNothing2Dead;
 	}

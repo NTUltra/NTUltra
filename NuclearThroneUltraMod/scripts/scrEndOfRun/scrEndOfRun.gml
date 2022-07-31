@@ -19,6 +19,8 @@ function scrEndOfRun(){
 		killedInvertedThrone2 = false;
 		extraVan = 0;
 		hasFoughtInvadingThrone = false;
+		revivedCharacters = [];
+		beatTheGame = false;
 		
 		time_microseconds=0;
 		microseconds=""//string for microseconds

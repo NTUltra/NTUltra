@@ -1,7 +1,9 @@
 raddrop = 70
 maxhealth = 930
+loops = GetPlayerLoops();
 if UberCont.opt_gamemode == 34
 	maxhealth += 50;
+maxhealth += max(0,40*min(12,(loops-1)));
 meleedamage = 10
 size = 6;
 
@@ -52,7 +54,6 @@ image_xscale = 1;
 actTime = 20;
 scrTarget();
 onFloorFail = 0;
-loops = GetPlayerLoops();
 if instance_exists(Player) && Player.area == 100
 	loops = 0;
 if loops > 2

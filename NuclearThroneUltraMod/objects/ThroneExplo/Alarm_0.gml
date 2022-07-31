@@ -40,19 +40,27 @@ if sprite_index == sprNothing2Death || sprite_index == sprInvertedNothing2Death
 		speed = 16
 		}
 	}
-	if !instance_exists(SurvivalWave)
-	with instance_create(x,y,Portal)
+	debug("Still alive: ",instance_number(Friend))
+	if ((!instance_exists(Friend) || instance_number(Friend) < UberCont.racemax-1 || UberCont.beatTheGame) && !instance_exists(SurvivalWave))
 	{
-		type = 4
-		depth = min(other.depth - 1,2);
-		image_speed = 0.4;
-		alarm[1] = 0;
-		sprite_index = sprBigPortalSpawn;
-		visible = true;
+		if !instance_exists(SurvivalWave)
+			with instance_create(x,y,Portal)
+			{
+				type = 4
+				depth = min(other.depth - 1,2);
+				image_speed = 0.4;
+				alarm[1] = 0;
+				sprite_index = sprBigPortalSpawn;
+				visible = true;
+			}
+		with WallHitMe
+		{
+			instance_destroy();	
+		}
 	}
-	with WallHitMe
+	else
 	{
-		instance_destroy();	
+		instance_create(x,y,EndGameThrone);
 	}
 	instance_destroy();
 }

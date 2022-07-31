@@ -1,8 +1,7 @@
 ///scrSpawnMoreBosses();
 // /@description
 ///@param
-function scrSpawnMoreBosses(theBoss,thisMany){
-	var mindis = 232;
+function scrSpawnMoreBosses(theBoss,thisMany, mindis = 232){
 	//more dogs
 	do {
 		with Floor

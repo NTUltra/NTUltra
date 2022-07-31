@@ -13,5 +13,11 @@ if alarm[0] < 70
 	}
 	instance_create(x+random(160-(rr*0.25))-80-(rr*0.125),y+random(200-(rr*0.25))-100-(rr*0.125),explo)
 }
-
+if instance_exists(Player)
+{
+	var dir = point_direction(Player.x,Player.y,x,y);
+	var l = 0.25;
+	x += lengthdir_x(l,dir);
+	y += lengthdir_y(l,dir);
+}
 alarm[2] = 1;

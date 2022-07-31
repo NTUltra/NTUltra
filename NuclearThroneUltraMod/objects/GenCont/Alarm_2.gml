@@ -618,9 +618,30 @@ else if Player.area != 100
 	Player.x += 16;
 	Player.y -= 32;
 }
-if (Player.area == 119 || Player.area == 120) && !instance_exists(IDPDSpawn)
+if (Player.area == 119 || Player.area == 120)
 {
-	instance_create(Player.x,Player.y,IDPDSpawn);
+	if !instance_exists(IDPDSpawn)
+	{
+		instance_create(Player.x,Player.y,IDPDSpawn);
+	}
+	if Player.area == 119 && instance_exists(Floor)
+	{
+		var f1 = instance_furthest(Player.x,Player.y,Floor);
+		var f2 = instance_furthest(f1.x,f1.y,Floor);
+		var fdir = point_direction(f1.x,f1.y,f2.x,f2.y);
+		var fdis = point_distance(f1.x,f1.y,f2.x,f2.y);
+		var ft = instance_nearest(
+			f1.x+lengthdir_x(fdis*0.5,fdir),
+			f1.y+lengthdir_y(fdis*0.5,fdir),
+			Floor)
+		with ft
+			instance_create(x+16,y+16,CampFireOff);
+		
+		scrSpawnBoss(Friend);
+		scrSpawnMoreBosses(Friend,Player.racemax,30);
+		scrEndCharacters();
+	}
+	
 }
 with Crown
 {

@@ -1070,7 +1070,7 @@ function scrDrawHUD() {
 	}
 	with BigVultureSkull
 	{
-		if place_meeting(x,y,Player) && spr_idle == sprBigVultureSkullOpen
+		if spr_idle == sprBigVultureSkullOpen && place_meeting(x,y,Player)
 		{
 			draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-7)
 
@@ -1080,6 +1080,22 @@ function scrDrawHUD() {
 			draw_text(x+1,y-31,string_hash_to_newline(string(name)))
 			draw_set_color(c_white)
 			draw_text(x,y-31,string_hash_to_newline(string(name)))
+			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+		}
+	}
+	with EndGameThrone
+	{
+		if active && place_meeting(x,y,Player)
+		{
+			draw_sprite(sprEPickup,UberCont.opt_gamepad,x-2,y-44)
+
+			draw_set_color(c_black)
+			var yy = 84;
+			draw_text(x-2,y-yy,string_hash_to_newline(string(name)))
+			draw_text(x-2+1,y-yy,string_hash_to_newline(string(name)))
+			draw_text(x-2+1,y-yy-1,string_hash_to_newline(string(name)))
+			draw_set_color(c_white)
+			draw_text(x-2,y-yy-1,string_hash_to_newline(string(name)))
 			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 		}
 	}

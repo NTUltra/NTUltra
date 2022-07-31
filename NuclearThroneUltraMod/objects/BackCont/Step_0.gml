@@ -89,9 +89,9 @@ if instance_exists(Menu)
 }
 else
 {
-	var normalizationSpeed = 0.4 + (instance_number(YungCuzDupe)*0.1);
-viewx2 = viewx2-(viewx2-viewx)*normalizationSpeed;
-viewy2 = viewy2-(viewy2-viewy)*normalizationSpeed;
+	var normalizationSpeed = min(0.98,0.4 + (instance_number(YungCuzDupe)+instance_number(Friend)*0.1));
+	viewx2 = viewx2-(viewx2-viewx)*normalizationSpeed;
+	viewy2 = viewy2-(viewy2-viewy)*normalizationSpeed;
 	if !instance_exists(DramaCamera) && instance_exists(Player)
 	{
 		//Always keep player on the screen
@@ -112,6 +112,10 @@ if UberCont.opt_camera_follow==0
 if instance_exists(YungCuzDupe)
 {
 	shake /= instance_number(YungCuzDupe);
+}
+if instance_exists(Friend)
+{
+	shake /= instance_number(Friend);
 }
 __view_set( e__VW.XView, 0, round(viewx2+(random(shake)-shake/2)*UberCont.opt_shake) );
 __view_set( e__VW.YView, 0, round(viewy2+(random(shake)-shake/2)*UberCont.opt_shake) );

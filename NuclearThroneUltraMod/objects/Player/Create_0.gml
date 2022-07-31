@@ -4,6 +4,7 @@ instance_destroy()
 exit;
 }*/
 //scrn=0; //for screenshot taking character explain pic
+depth = 0;
 saveLoaded = false;
 outOfCombat = false;
 restarted = false;
@@ -393,7 +394,7 @@ if race == 19 //skeleton
 }
 
 if race = 5 //Plant
-maxspeed = 4.5
+	maxspeed = 4.5
 
 if race = 7 //roids secondary weapon
 {

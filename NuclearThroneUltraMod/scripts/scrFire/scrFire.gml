@@ -88,7 +88,6 @@ function scrFire() {
 				dir.mytext = "+"+string(wantAmmo)+" "+string(other.typ_name[wep_type[bwep]])
 				if ammo[wep_type[bwep]] == other.typ_amax[wep_type[bwep]]
 					dir.mytext = "MAX "+string(other.typ_name[wep_type[bwep]])
-
 		    }
 	    }
 

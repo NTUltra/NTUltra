@@ -258,10 +258,17 @@ if oldarea != area || area == 0 or !audio_is_playing(song) or audio_is_playing(m
         amb = amb102
     }
 
-
+	
     snd_loop(song)
     snd_loop(amb)
-
+	
+	if area == 119 || area == 120//Throne 2
+	{
+		audio_stop_sound(song);
+		audio_stop_sound(amb);
+		amb = amb0b;
+		snd_loop(amb);
+	}
 
     //audio_master_gain(max(0, sqrt(UberCont.opt_sfxvol)))
 	audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);

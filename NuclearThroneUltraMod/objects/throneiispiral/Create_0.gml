@@ -8,11 +8,6 @@ type = 1
 //1 = normal 2 = proto 3 = idpd 4= venuz 5 = inv 6 = wonder
 time = 0
 
-if instance_exists(Player)
-{
-}
-
-
 
 repeat(60)//(200)
 {

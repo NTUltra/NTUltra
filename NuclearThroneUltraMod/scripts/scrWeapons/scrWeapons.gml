@@ -52,7 +52,7 @@ function scrWeapons() {
 	wep_load[4] = 5
 	wep_cost[4] = 1
 	wep_sprt[4] = sprMachinegun
-	wep_area[4] = 0
+	wep_area[4] = 1
 	wep_text[4] = ""
 	wep_swap[4] = sndSwapMachinegun
 	wep_rad[4] = 0;
@@ -4534,7 +4534,7 @@ function scrWeapons() {
 	wep_name[411] = "KRAKEN YOYO GUN"
 	wep_type[411] = 4
 	wep_auto[411] = 1
-	wep_load[411] = 24
+	wep_load[411] = 28
 	wep_cost[411] = 3.5
 	wep_sprt[411] = sprKrakenYoyoGun
 	wep_area[411] = 11
@@ -4743,7 +4743,7 @@ function scrWeapons() {
 	wep_name[430] = "SLUG CANNON"
 	wep_type[430] = 2
 	wep_auto[430] = 0
-	wep_load[430] = 30
+	wep_load[430] = 32
 	wep_cost[430] = 4
 	wep_sprt[430] = sprSlugCannon
 	wep_area[430] = 11

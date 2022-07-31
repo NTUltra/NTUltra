@@ -209,6 +209,11 @@ function scrLoadRun(){
 					UberCont.killedInvertedThrone2 = encryptedRun.killedInvertedThrone2;
 				if variable_struct_exists(encryptedRun, "hasFoughtInvadingThrone")
 					UberCont.hasFoughtInvadingThrone = encryptedRun.hasFoughtInvadingThrone;
+				if variable_struct_exists(encryptedRun, "revivedCharacters")
+					UberCont.revivedCharacters = encryptedRun.revivedCharacters;
+				if variable_struct_exists(encryptedRun, "beatTheGame")
+					UberCont.beatTheGame = encryptedRun.beatTheGame;
+					
 			}
 			with Player
 			{
