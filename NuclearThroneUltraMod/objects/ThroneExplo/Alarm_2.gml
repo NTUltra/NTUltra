@@ -9,9 +9,9 @@ if alarm[0] < 70
 {
 	if random(2) < 1
 	{
-	instance_create(x+random(200-(rr*0.25))-100-(rr*0.125),y+random(300-(rr*0.25))-150-(rr*0.125),explo)
+	instance_create(x+random(160-(rr*0.25))-80-(rr*0.125),y+random(200-(rr*0.25))-100-(rr*0.125),explo)
 	}
-	instance_create(x+random(200-(rr*0.25))-100-(rr*0.125),y+random(300-(rr*0.25))-150-(rr*0.125),explo)
+	instance_create(x+random(160-(rr*0.25))-80-(rr*0.125),y+random(200-(rr*0.25))-100-(rr*0.125),explo)
 }
 
 alarm[2] = 1;

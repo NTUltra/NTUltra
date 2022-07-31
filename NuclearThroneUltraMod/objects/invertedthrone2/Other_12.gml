@@ -6,7 +6,7 @@ event_inherited();
 if target > -1 && instance_exists(target) && !instance_exists(InvertedThrone2WaveSquareBullet)
 {
 	var am = 12;
-	var vdis = 64;
+	var vdis = 80;
 	var hdis = 256;
 	var ad = 180;
 	if target.x > x

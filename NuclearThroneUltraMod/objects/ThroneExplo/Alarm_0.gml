@@ -1,10 +1,10 @@
 /// @description Death
 Sleep(100)
 repeat(42)
-instance_create(x+random(200-rr)-100-(rr*0.5),y+random(300-rr)-150-(rr*0.5),explo)
+instance_create(x+random(160-rr)-80-(rr*0.5),y+random(160-rr)-80-(rr*0.5),explo)
 
 repeat(30)
-instance_create(x+random(300-rr)-150-(rr*0.5),y+random(400-rr)-200-(rr*0.5),explo)
+instance_create(x+random(200-rr)-100-(rr*0.5),y+random(200-rr)-100-(rr*0.5),explo)
 
 
 snd_play_2d(snd_death);

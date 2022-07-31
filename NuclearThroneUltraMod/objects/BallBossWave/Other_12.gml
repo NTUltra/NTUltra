@@ -215,6 +215,13 @@ wave[i] = {
 	yy: centerY
 };
 i++
+wave[i] = {
+	obj: BigDisc,
+	time: 170,
+	xx: centerX,
+	yy: centerY
+};
+i++;
 if openMind
 {
 	wave[i] = {

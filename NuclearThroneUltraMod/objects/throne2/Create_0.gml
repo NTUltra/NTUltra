@@ -17,13 +17,13 @@ snd_dead = sndNothing2DeadStart
 snd_melee = sndGoldScorpionMelee;
 
 //behavior
-alarm[1] = 30;
+alarm[1] = 10;
 //insomnia start slower
 if instance_exists(Player)
 {
 	if Player.skill_got[29]//insomnia
 	{
-		alarm[1] += 110;
+		alarm[1] += 60;
 		with instance_create(x,y,Snooze)
 		{
 			owner = other.id;
@@ -57,17 +57,20 @@ if instance_exists(Player) && Player.area == 100
 	loops = 0;
 if loops > 2
 {
+	actTime -= 1;
 	rotationSpeed *= 1.1;
 	fireRate -= 1
 	crossPspeed += 1;
 }
 if loops > 3
 {
+	actTime -= 1;
 	crossAmount ++;
 	pSpeedAccurate += 0.5;
 }
 if loops > 4
 {
+	actTime -= 1;
 	crossAmount ++;
 	rotationSpeed *= 1.1;
 	fireRate -= 2;
@@ -75,7 +78,7 @@ if loops > 4
 }
 if loops > 5
 {
-	actTime -= 5;
+	actTime -= 3;
 	pSpeedAccurate += 0.5;
 }
 

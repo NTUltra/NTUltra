@@ -349,7 +349,11 @@ function scrNextLevel() {
 		//WE LOOP HERE!
 		inverted = false;
 		if area == 120
+		{
 			UberCont.extraVan = -1;
+			with instance_create(x,y,Explainer)
+				name = "ONE LESS VAN THIS LOOP";
+		}
 		else
 			UberCont.extraVan = 0;
 		looping=true;

@@ -30,15 +30,20 @@ function EnemyHealthAdjustments(){
 			//hpReduction += round(maxhealth*0.25)
 			my_health *= 0.75;
 		}
-		if Player.crown == 22 && random(100 + floor(my_health*0.2)) < 25//Crown of luck
-		{
-			my_health = floor(my_health*0.1);	
-		}
-		
 		if UberCont.opt_gamemode = 9//easy mode
 		{
 			//hpReduction += round(maxhealth*0.2);
 			my_health *= 0.8;
+		}
+		if Player.crown == 22 && random(100 + floor(my_health*0.2)) < 25//Crown of luck
+		{
+			my_health = floor(my_health*0.1);
+			with instance_create(x,y,CrownOfLucked)
+			{
+				owner = other.id;
+				depth = other.depth - 1;
+				yoffset = 0;
+			}
 		}
 		//my_health = max(1,maxhealth - hpReduction);
 		my_health = max(1,my_health);
