@@ -624,7 +624,7 @@ if (Player.area == 119 || Player.area == 120)
 	{
 		instance_create(Player.x,Player.y,IDPDSpawn);
 	}
-	if Player.area == 119 && instance_exists(Floor)
+	if instance_exists(Floor)
 	{
 		var f1 = instance_furthest(Player.x,Player.y,Floor);
 		var f2 = instance_furthest(f1.x,f1.y,Floor);
@@ -635,11 +635,21 @@ if (Player.area == 119 || Player.area == 120)
 			f1.y+lengthdir_y(fdis*0.5,fdir),
 			Floor)
 		with ft
-			instance_create(x+16,y+16,CampFireOff);
-		
-		scrSpawnBoss(Friend);
-		scrSpawnMoreBosses(Friend,Player.racemax,30);
-		scrEndCharacters();
+		{
+			if Player.area == 119
+				instance_create(x+16,y+16,CampFireOff);
+			if Player.skill_got[23]//OPEN MIND
+			{
+				instance_create(x+16,y+32+16,HealthChest);
+				instance_create(x+16,y+32+16,WallBreak);
+			}
+		}
+		if Player.area == 119
+		{
+			scrSpawnBoss(Friend);
+			scrSpawnMoreBosses(Friend,Player.racemax,30);
+			scrEndCharacters();
+		}
 	}
 	
 }

@@ -3508,6 +3508,7 @@
     {"id":{"name":"sprGhostShovel","path":"sprites/sprGhostShovel/sprGhostShovel.yy",},"order":10,},
     {"id":{"name":"sprGhostBlade","path":"sprites/sprGhostBlade/sprGhostBlade.yy",},"order":11,},
     {"id":{"name":"sprGyroBurster","path":"sprites/sprGyroBurster/sprGyroBurster.yy",},"order":13,},
+    {"id":{"name":"InvaderInversionSpawnPortal","path":"objects/InvaderInversionSpawnPortal/InvaderInversionSpawnPortal.yy",},"order":6,},
     {"id":{"name":"sprFatRevolver","path":"sprites/sprFatRevolver/sprFatRevolver.yy",},"order":14,},
     {"id":{"name":"sprBulletDisperseGun","path":"sprites/sprBulletDisperseGun/sprBulletDisperseGun.yy",},"order":15,},
     {"id":{"name":"sprTermiteGun","path":"sprites/sprTermiteGun/sprTermiteGun.yy",},"order":16,},

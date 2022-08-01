@@ -4537,7 +4537,7 @@ function scrWeapons() {
 	wep_load[411] = 28
 	wep_cost[411] = 3.5
 	wep_sprt[411] = sprKrakenYoyoGun
-	wep_area[411] = 11
+	wep_area[411] = 12
 	wep_text[411] = ""
 	wep_swap[411] = sndSwapDragon
 	wep_rad[411] = 0;
