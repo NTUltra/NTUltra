@@ -1428,25 +1428,37 @@ function scrPowers() {
 	//PLANT
 	if race = 5 && !ultra_got[19]
 	{
-	    if ultra_got[20] && !Player.altUltra{//STEREO SNARES
-	    with Tangle
-	    {if instance_number(Tangle)>1
-	    instance_destroy();}
-	    with TangleSeed
-	    {if instance_number(Tangle)>1
-	    instance_destroy();}
+		var poppedSeed = false;
+	    if ultra_got[20] && !Player.altUltra
+		{//STEREO SNARES
+		    with Tangle
+		    {
+				if instance_number(Tangle) > 1
+					instance_destroy();
+			}
+		    with TangleSeed
+		    {
+				event_user(0);
+				if instance_number(Tangle) > 1
+				{
+					poppedSeed = true;
+				}
+			}
 	    }
-	else{
-	with Tangle
-	instance_destroy()
-	with TangleSeed
-	instance_destroy()
-	}
-
-	with instance_create(x,y,TangleSeed)
-	{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),12)
-	image_angle = direction
-	team = other.team}
+		else{
+			with Tangle
+				instance_destroy();
+			with TangleSeed
+			{
+				poppedSeed = true;
+				event_user(0);
+			}
+		}
+		if !poppedSeed
+		with instance_create(x,y,TangleSeed)
+		{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),7)
+		image_angle = direction
+		team = other.team}
 	}
 
 	scrYVPower();

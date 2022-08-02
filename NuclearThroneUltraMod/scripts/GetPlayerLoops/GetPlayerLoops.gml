@@ -5,5 +5,5 @@ function GetPlayerLoops(){
 	if instance_exists(Player)
 		return Player.loops
 	
-	return 0;
+	return UberCont.loops;
 }

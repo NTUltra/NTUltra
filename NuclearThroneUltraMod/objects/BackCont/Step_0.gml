@@ -28,21 +28,13 @@ viewdist-=5;}
 viewx = ((Player.x-vw)*(viewdist-1)+(UberCont.mouse__x-vw))/viewdist
 viewy = ((Player.y-vh)*(viewdist-1)+(UberCont.mouse__y-vh))/viewdist
 //}
-if (instance_exists(Tangle) or instance_exists(TangleSeed)) and mouse_check_button(mb_right) && Player.ultra_got[20]=0 && !Player.altUltra//stereo snares confusion
+if instance_exists(Tangle) and KeyCont.key_spec[Player.p] = 2 && Player.ultra_got[20]=0 && !Player.altUltra//stereo snares confusion
 {
-if instance_exists(TangleSeed)
-{
-if point_distance(Player.x,Player.y,TangleSeed.x,TangleSeed.y)>128
-{
-viewx = (((TangleSeed.x+Player.x*2)/3-vw)*(viewdist-1)+(UberCont.mouse__x-vw))/viewdist
-viewy = (((TangleSeed.y+Player.y*2)/3-vh)*(viewdist-1)+(UberCont.mouse__y-vh))/viewdist
-}
-}
-else
-{
-viewx = (((Tangle.x+Player.x*1.5)/2.5-vw)*(viewdist-1)+(UberCont.mouse__x-vw))/viewdist
-viewy = (((Tangle.y+Player.y*1.5)/2.5-vh)*(viewdist-1)+(UberCont.mouse__y-vh))/viewdist
-}
+	if Tangle.image_index > 1
+	{
+		viewx = (((Tangle.x+Player.x*1.5)/2.5-vw)*(viewdist-1)+(UberCont.mouse__x-vw))/viewdist
+		viewy = (((Tangle.y+Player.y*1.5)/2.5-vh)*(viewdist-1)+(UberCont.mouse__y-vh))/viewdist
+	}
 }
 if instance_exists(NuclearThrone1)
 {

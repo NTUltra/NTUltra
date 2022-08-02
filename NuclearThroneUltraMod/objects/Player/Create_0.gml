@@ -364,10 +364,13 @@ if UberCont.opt_gamemode = 21 { //loop start
     loops = 1;
 }
 if UberCont.crown_start[race] && !instance_exists(PlayerSpawn){
-    area = 100;
-    hard -= 1;
-    crownvisits = -1;
-	instance_create(0,0,PauseTimer);
+    //area = 100;
+    //hard -= 1;
+    //crownvisits = -1;
+	//instance_create(0,0,PauseTimer);
+	crownpoints ++;
+	if !instance_exists(Crown)
+		instance_create(x,y,Crown);
 }
 
 if UberCont.opt_gamemode == 25 {

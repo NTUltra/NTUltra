@@ -1,7 +1,10 @@
 /// @description Yoo
 if sprite_index = sprQuickBigPortalSpawn
 {
-	sprite_index = sprInvertedBigPortal;
+	if scrIsInInvertedArea()
+		sprite_index = sprInvertedBigPortal;
+	else
+		sprite_index = sprBigPortal;
 	image_index = 0;
 	depth = 0;
 }
@@ -10,8 +13,13 @@ else if sprite_index = sprInvertedBigPortal && instance_exists(Player)
 	sprite_index = sprInvertedBigPortalDisappear;
 	image_index = 0;
 }
-else if sprite_index = sprInvertedBigPortalDisappear
+else if sprite_index == sprInvertedBigPortalDisappear || sprite_index == sprBigPortalDisappear
 {
 	//instance_destroy();
 	visible = false;
+}
+else if sprite_index == sprBigPortal && instance_exists(Player)
+{
+	sprite_index = sprBigPortalDisappear;
+	image_index = 0;
 }

@@ -72,11 +72,25 @@ if (my_health < prevhealth)
 		}
 	}
 }
-//Ignore collision when moving
-var msk = mask_index;
-mask_index = mskPickupThroughWall;
+
 if owner > -1 && instance_exists(owner)
 {
+	//Apply tangle to base
+	if place_meeting(x,y,Tangle)
+	{
+		with owner
+		{
+			if !place_meeting(x,y,Tangle)
+			{
+				var s = 0.07 + clamp(size*0.01,0,0.07);
+				x = xprevious+hspeed*s;
+				y = yprevious+vspeed*s;
+			}
+		}
+	}
+	//Ignore collision when moving
+	var msk = mask_index;
+	mask_index = mskPickupThroughWall;
 	x = owner.x + xOffset;
 	y = owner.y + yOffset;
 	if owner.walk > 0
@@ -88,8 +102,8 @@ if owner > -1 && instance_exists(owner)
 			snd_play_2d(sndNothingFootstep);
 		}
 	}
+	mask_index = msk;
 }
-mask_index = msk;
 
 event_inherited();
 

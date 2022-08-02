@@ -783,7 +783,7 @@ function scrWeapons() {
 	wep_load[70] = 9
 	wep_cost[70] = 1
 	wep_sprt[70] = sprMorphORay
-	wep_area[70] = 8
+	wep_area[70] = 9
 	wep_text[70] = "Eagle eyes also increases#MORPH-O-RAY's range"
 	wep_swap[70] = sndSwapEnergy
 	wep_rad[70] = 0;
@@ -2298,10 +2298,10 @@ function scrWeapons() {
 	wep_name[208] = "MINI PLASMA SHOTGUN"
 	wep_type[208] = 5
 	wep_auto[208] = 0
-	wep_load[208] = 18
-	wep_cost[208] = 4
+	wep_load[208] = 20
+	wep_cost[208] = 5
 	wep_sprt[208] = sprMiniPlasmaShotgun
-	wep_area[208] = 7
+	wep_area[208] = 6
 	wep_text[208] = "as requested"
 	wep_swap[208] = sndSwapShotgun
 	wep_rad[208] = 0;

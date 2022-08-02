@@ -2,16 +2,9 @@ with other
 {
 if instance_exists(Player)
 {
-    if (Player.ultra_got[17]=1)//Bigger snare
-    {
-    speed=0;
-    x = xprevious+hspeed*0.1
-    y = yprevious+vspeed*0.1
-    }
-    else{
-    x = xprevious+hspeed*0.1
-    y = yprevious+vspeed*0.1
-    }
+    var s = 0.07 + clamp(size*0.01,0,0.07);
+	x = xprevious+hspeed*s;
+	y = yprevious+vspeed*s;
     
     if Player.skill_got[5] = 1
     {

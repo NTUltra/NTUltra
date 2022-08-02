@@ -3,7 +3,7 @@ alarm[1] = actTime + random(actTime);
 if  collision_point(x,y,Floor,false,false) && onFloorFail < 3
 {
 	//Less likely if nearly impossible to throw balls at you when on ground
-	alarm[1] = 3
+	alarm[1] = 2
 	onFloorFail += 1;
 	exit;
 }

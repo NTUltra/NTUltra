@@ -5,6 +5,8 @@ if target > 0 && crossAmmo < 1
 	var lerpp = lp;
 	x += ((target.x + lengthdir_x(distanceToTarget,angle))-x)*lerpp;
 	y += ((target.y + lengthdir_y(distanceToTarget,angle))-y)*lerpp;
+	hspeed = x - xprevious;
+	vspeed = y - yprevious;
 	if alarm[6] < 1 && !place_meeting(x,y,Tangle) && alarm[11] < 1
 		angle += rotationSpeed; 
 	if target.x < x

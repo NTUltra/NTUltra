@@ -114,7 +114,7 @@ function scrUltras() {
     
 	//PLANT 
 	ultra_name[17] = "TRAPPER"
-	ultra_text[17] = "BIG SNARE#SNARE IS MORE EFFECTIVE"
+	ultra_text[17] = "BIG SNARE"
 	ultra_tips[17] = "nowhere to hide"
 
 	ultra_name[18] = "KILLER"

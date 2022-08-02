@@ -469,9 +469,11 @@ function scrPopulate() {
     }
 	
 	//spawn SEWER FISH boss
+	/*
     if (Player.area = 2 || Player.area == 110) and Player.subarea = 1 and Player.loops > 1 {
 		instance_create(x, y, WantBoss)
     }
+	*/
 
     //spawn INVERTED desert boss
     if Player.area = 105 and Player.subarea = 3 {

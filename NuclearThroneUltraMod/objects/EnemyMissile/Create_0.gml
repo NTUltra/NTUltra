@@ -8,7 +8,7 @@ target=0;
 
 alarm[0]=6
 alarm[1] = 2;
-alarm[3] = 300;
+alarm[3] = 230;
 //mask_index=mskPickupThroughWall;
 
 image_speed = 0.4;

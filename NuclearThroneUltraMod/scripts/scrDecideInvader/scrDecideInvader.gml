@@ -8,7 +8,7 @@ function scrDecideInvader(){
 		var subarea = Player.subarea;
 		var loops = Player.loops;
 		if UberCont.opt_gamemode == 34//Hard mode
-			loops += 4;
+			loops += 1;
 		if loops > 1
 		{
 			var am2 = clamp(ceil(loops/4),1,3);//Amount of different spawn locations
@@ -203,9 +203,18 @@ function scrDecideInvader(){
 			if array_length(spawns) > 0
 				scrSpawnInversionInvasion(am2,spawns,fa,fb,fe);
 		}
+		if UberCont.opt_gamemode == 34//Hard mode
+			loops += 3;
 		if loops > 4
 		{
-			if (area == 101 || area == 122) && subarea == 1//Oasis 1B - 1
+			if (area == 2 || area == 110) && subarea == 1//SEWERS
+			{
+				if (loops % 2 == 1)
+					scrSpawnInvaderBoss(clamp(loops - 4,1,2),BigFish,sprFloor101,sprFloor101B,sprFloor101Explo);//ODD
+				else
+					scrSpawnInvaderBoss(clamp(loops - 4,1,2),InvertedBigFish,sprFloor122,sprFloor122B,sprFloor122Explo);//EVEN
+			}
+			else if (area == 101 || area == 122) && subarea == 1//Oasis 1B - 1
 			{
 				if (loops % 2 == 1)
 					scrSpawnInvaderBoss(1,BecomeScrapBoss,sprFloor3,sprFloor3B,sprFloor3Explo);//ODD
@@ -225,9 +234,9 @@ function scrDecideInvader(){
 			else if (area == 117 || area == 124)//Mushroomland 4B -1
 			{
 				if (loops % 2 == 1)
-					scrSpawnInvaderBoss(loops - 2,BanditBoss,sprFloor1,sprFloor1B,sprFloor1Explo);//ODD
+					scrSpawnInvaderBoss(clamp(loops - 4,1,2),BigDisc,sprFloor3,sprFloor3B,sprFloor3Explo);//ODD
 				else
-					scrSpawnInvaderBoss(loops - 2,InvertedBanditBoss,sprFloor105,sprFloor105B,sprFloor105Explo);//EVEN
+					scrSpawnInvaderBoss(clamp(loops - 4,1,2),InvertedBigDisc,sprFloor106,sprFloor106B,sprFloor106Explo);//EVEN
 			}
 			else if (area == 114 || area == 123) && subarea == 1//Jungle 5B - 1
 			{
@@ -239,16 +248,16 @@ function scrDecideInvader(){
 			else if area == 113//Banditland
 			{
 				if (loops % 2 == 1)
-					scrSpawnInvaderBoss(loops - 2,BanditBoss,sprFloor1,sprFloor1B,sprFloor1Explo);//ODD
+					scrSpawnInvaderBoss(clamp(loops - 3,1,3),BanditBoss,sprFloor1,sprFloor1B,sprFloor1Explo);//ODD
 				else
-					scrSpawnInvaderBoss(loops - 2,InvertedBanditBoss,sprFloor105,sprFloor105B,sprFloor105Explo);//EVEN
+					scrSpawnInvaderBoss(clamp(loops - 3,1,3),InvertedBanditBoss,sprFloor105,sprFloor105B,sprFloor105Explo);//EVEN
 			}
 			else if area == 113//Pizza sewers
 			{
 				if (loops % 2 == 1)
-					scrSpawnInvaderBoss(loops - 3,BigVulture,sprFloor10,sprFloor10B,sprFloor10Explo);//EVEN
+					scrSpawnInvaderBoss(clamp(loops - 4,1,2),BigVulture,sprFloor10,sprFloor10B,sprFloor10Explo);//EVEN
 				else
-					scrSpawnInvaderBoss(loops - 3,InvertedBigVulture,sprFloor121,sprFloor121B,sprFloor121Explo);//EVEN
+					scrSpawnInvaderBoss(clamp(loops - 4,1,2),InvertedBigVulture,sprFloor121,sprFloor121B,sprFloor121Explo);//EVEN
 			}
 			else if (area == 9 || area == 118) && subarea == 1//Palace 7 - 1
 			{

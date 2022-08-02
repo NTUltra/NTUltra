@@ -333,7 +333,7 @@ function scrPopEnemies() {
     if spawnarea = 3 {
 		if loops > 0 {
 			if styleb = 1 && random(2) < 1 {
-				instance_create(x + 16, y + 16, choose(MeleeBandit, Thief, Salamander, Salamander, Salamander, Salamander))
+				instance_create(x + 16, y + 16, choose(MeleeBandit, Thief, Salamander, Salamander, Salamander, choose(BuffGator,Salamander)))
 	        }
 	        else {
 				if random(35) < 1
@@ -356,7 +356,7 @@ function scrPopEnemies() {
 	        }
 	        else {
 	            if random(4) < 1
-	            instance_create(x + 16, y + 16, choose(MeleeBandit, Sniper, MeleeFake, Sniper, MeleeFake, Sniper, choose(BuffGator,Sniper), Exploder, Thief))
+	            instance_create(x + 16, y + 16, choose(MeleeBandit, Sniper, MeleeFake, Sniper, MeleeFake, Sniper, Sniper, Exploder, Thief))
 	            else {
 	                if random(10) < 1 {
 	                    if random(8) < 1 instance_create(x + 16, y + 16, Car)
@@ -374,7 +374,7 @@ function scrPopEnemies() {
     if spawnarea = 106 {
 		if loops > 0 {
 			if styleb = 1 && random(2) < 1 {
-				instance_create(x + 16, y + 16, choose(InvertedMeleeBandit, InvertedThief, InvertedSalamander, InvertedSalamander, InvertedSalamander, InvertedSalamander))
+				instance_create(x + 16, y + 16, choose(InvertedMeleeBandit, InvertedThief, InvertedSalamander, InvertedSalamander, InvertedSalamander, choose(InvertedBuffGator,InvertedSalamander)))
 	        }
 	        else {
 				if random(35) < 1
@@ -397,7 +397,7 @@ function scrPopEnemies() {
 	        }
 	        else {
 	            if random(4) < 1
-	            instance_create(x + 16, y + 16, choose(InvertedMeleeFake, InvertedSniper, InvertedMeleeFake, InvertedSniper, InvertedMeleeFake, InvertedSniper, choose(InvertedBuffGator,InvertedSniper), BanditInverted, InvertedThief))
+	            instance_create(x + 16, y + 16, choose(InvertedMeleeFake, InvertedSniper, InvertedMeleeFake, InvertedSniper, InvertedMeleeFake, InvertedSniper, InvertedSniper, BanditInverted, InvertedThief))
 	            else {
 	                if random(10) < 1 {
 	                    if random(8) < 1 instance_create(x + 16, y + 16, Car)

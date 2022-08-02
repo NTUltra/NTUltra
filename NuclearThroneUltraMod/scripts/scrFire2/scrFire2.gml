@@ -435,12 +435,16 @@ function scrFire2() {
 	case 208:
 
 	snd_play_fire(sndPlasma)
-
-	repeat(7)
+	
+	var ang = -40;
+	repeat(5)
 	{
 	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),MiniPlasmaBall)
-	{motion_add(aimDirection+(random(60)-30)*other.accuracy,1+random(6))image_angle = direction
-	team = other.team}
+	{motion_add(aimDirection+(ang*other.accuracy),5)//40-20
+	image_angle = direction
+	team = other.team
+	}
+	ang += 20;
 	}
 
 	BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake

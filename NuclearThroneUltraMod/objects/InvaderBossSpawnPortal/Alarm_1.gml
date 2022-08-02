@@ -4,6 +4,7 @@ if !instance_exists(Player)
 
 	BackCont.shake += 30;
 
+snd_play(sndExplosionL);
 snd_play(sndPortalOld);
 
 image_angle = choose(0,90,180,270);

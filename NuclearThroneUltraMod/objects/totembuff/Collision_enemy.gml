@@ -9,8 +9,8 @@ if !array_contains(buffList,other.id)
 			depth = other.depth - 2;
 		}
 		if !totemBuffed {
-			my_health += maxhealth*0.5;
-			maxhealth *= 1.5;
+			my_health += maxhealth;
+			maxhealth *= 2;
 			raddrop *= 1.5;
 			totemBuffed = true;
 		} else {
