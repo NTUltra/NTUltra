@@ -453,7 +453,7 @@ function scrPopulate() {
 
     //spawn desert boss
     if Player.area = 1 and Player.subarea = 3 {
-        repeat(Player.loops + 1)
+        repeat(clamp(Player.loops + 1,1,6))
         instance_create(x, y, WantBoss)
     }
 	
@@ -475,7 +475,7 @@ function scrPopulate() {
 
     //spawn INVERTED desert boss
     if Player.area = 105 and Player.subarea = 3 {
-        repeat(Player.loops + 1)
+        repeat(clamp(Player.loops + 1,1,6))
         instance_create(x, y, WantBoss)
     }
 	//Big vulture

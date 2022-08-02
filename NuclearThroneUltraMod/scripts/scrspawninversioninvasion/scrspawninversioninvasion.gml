@@ -1,7 +1,7 @@
 ///scrSpawnInversionInvasion();
 // /@description
 ///@param
-function scrSpawnInversionInvasion(thisMany,whatBoss,thisFloorA,thisFloorB,thisFloorE,xOffset = 0,yOffset = 0){
+function scrSpawnInversionInvasion(thisMany,spawnList,thisFloorA,thisFloorB,thisFloorE){
 	var mindis = 140//200//232;
 	if instance_exists(Player) && instance_exists(Floor)
 	{
@@ -14,7 +14,7 @@ function scrSpawnInversionInvasion(thisMany,whatBoss,thisFloorA,thisFloorB,thisF
 				{
 					with instance_create(xx,yy,InvaderInversionSpawnPortal)
 					{
-						whatToSpawn = whatBoss;
+						whatToSpawn = spawnList;
 						floorA = thisFloorA;
 						floorB = thisFloorB;
 						floorE = thisFloorE;
@@ -29,7 +29,7 @@ function scrSpawnInversionInvasion(thisMany,whatBoss,thisFloorA,thisFloorB,thisF
 					{
 						with instance_create(xx,yy,InvaderInversionSpawnPortal)
 						{
-							whatToSpawn = whatBoss;
+							whatToSpawn = spawnList;
 							floorA = thisFloorA;
 							floorB = thisFloorB;
 							floorE = thisFloorE;
@@ -52,7 +52,7 @@ function scrSpawnInversionInvasion(thisMany,whatBoss,thisFloorA,thisFloorB,thisF
 				var yy = Player.y + lengthdir_y(dis,dir);
 				with instance_create(instance_nearest(xx,yy,Floor).x+16, instance_nearest(xx,yy,Floor).y+16,InvaderInversionSpawnPortal)
 				{
-					whatToSpawn = whatBoss;
+					whatToSpawn = spawnList;
 					floorA = thisFloorA;
 					floorB = thisFloorB;
 					floorE = thisFloorE;

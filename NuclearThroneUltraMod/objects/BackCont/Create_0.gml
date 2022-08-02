@@ -24,6 +24,7 @@ loops = GetPlayerLoops()
 if UberCont.opt_gamemode == 34//HARD MODE
 	loops ++;
 canSpawnPopoThisManyTimes = 2 + loops;
+canSpawnPopoThisManyTimes = min(canSpawnPopoThisManyTimes,8);
 spawnedThisManyPopo = 0;
 
 wantVanAmount = 0;
@@ -47,7 +48,7 @@ if instance_exists(Player)
 		{
 			wantVanAmount++;
 		}
-		else if i % 2 == 0//After loop 3 its every other loop another van
+		else if i % 3 == 2//After loop 3 its every other loop another van
 		{
 			//Starting with no extra van on loop 4
 			wantVanAmount++;
@@ -60,14 +61,16 @@ if instance_exists(Player)
 		alarm[1] += 180;
 	}
 	if ( (Player.area == 6 || Player.area == 112) && Player.subarea ==  2 )
-		wantVanAmount = min(GetPlayerLoops()-2,2);
+		wantVanAmount = clamp((GetPlayerLoops()*0.5)-2,0,2);
 	if wantVanAmount > 2
 		verticalVans = true;
-		verticalVans = true;
+	wantVanAmount = min(wantVanAmount,6);
 	if Player.crown == 16 //CROWN OF POPO
+	{
 		wantVanAmount ++;
+		canSpawnPopoThisManyTimes ++;
+	}
 	wantVanAmount += UberCont.extraVan;
-	
 	vanDelay = max(100,vanDelay - ((wantVanAmount-1)*40));
 	if Player.crown==10//crown of difficulty
 	{

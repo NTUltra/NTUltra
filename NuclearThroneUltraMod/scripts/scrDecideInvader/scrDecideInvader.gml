@@ -11,106 +11,197 @@ function scrDecideInvader(){
 			loops += 4;
 		if loops > 1
 		{
-			var am = clamp(loops-1,1,4);
+			var am2 = clamp(ceil(loops/4),1,3);//Amount of different spawn locations
+			var am = clamp(floor(loops/am2),1,4);//Amount of enemies per spawn
 			if Player.crown == 7//Crown of blood
-				am ++;
+				am += 1;
 			else if Player.crown == 17//Crown of apocalypse
 				am += 3;
 			var spawns = [];
+			var fa = sprFloor1;
+			var fb = sprFloor1B;
+			var fe = sprFloor1Explo;
 			//INVERTED INVASIONS!
 			repeat(am)
 			switch (area)
 			{
 				case 1://Desert
 					array_push(spawns,BanditInverted, InvertedScorpion, InvertedBanditSquare, InvertedJungleFly, BigMaggotInverted, InvertedNecromancer);
+					fa = sprFloor105;
+					fb = sprFloor105B;
+					fe = sprFloor105Explo;
 				break
 				case 2://Sewers
 					array_push(spawns,BanditInverted, InvertedRatking, InvertedMeleeBandit, InvertedGator, InvertedRat, InvertedExploder, InvertedJellyFish,InvertedBoneFish);
+					fa = sprFloor110;
+					fb = sprFloor110B;
+					fe = sprFloor110Explo;
 				break
 				case 3://Scrapyard
 					array_push(spawns,BanditInverted, InvertedRaven, InvertedBanditSquare, InvertedSniper, InvertedRaven, InvertedSalamander,choose(InvertedSnowBot,InvertedThief,InvertedMeleeBandit));
+					fa = sprFloor106;
+					fb = sprFloor106B;
+					fe = sprFloor106Explo;
 				break
 				case 4://Caves
 					array_push(spawns,InvertedSpider, InvertedSquareBat, InvertedSpider, LightningCrystal,choose(InvertedFireWorm,InvertedFireBat));
+					fa = sprFloor111;
+					fb = sprFloor111B;
+					fe = sprFloor111Explo;
 				break
 				case 5://Frozen city
 					array_push(spawns,BanditInverted, InvertedDiscGuy, InvertedGhostGuardian, InvertedSnowBot, InvertedWolf, InvertedSnowTank);
+					fa = sprFloor107;
+					fb = sprFloor107B;
+					fe = sprFloor107Explo;
 				break
 				case 6://Labs
 					array_push(spawns,InvertedFreak, InvertedFreak, InvertedExploFreak, InvertedNecromancer, choose(InvertedRatking,InvertedCubeGuardian), InvertedTurret, InvertedRhinoFreak);
+					fa = sprFloor112;
+					fb = sprFloor112B;
+					fe = sprFloor112Explo;
 				break
 				case 7://Vulcano
 					array_push(spawns,InvertedLavaBallEnemy, InvertedFireWorm, choose(InvertedWolf,InvertedScubaBandit), InvertedSalamander, choose(InvertedFireBaller,InvertedSuperFireBaller), InvertedFireBat);
+					fa = sprFloor108;
+					fb = sprFloor108B;
+					fe = sprFloor108Explo;
 				break
 				case 8://Wonderland
 					array_push(spawns,InvertedCardGuy, InvertedCardGuy2, InvertedTeaPot, InvertedMolesarge, InvertedMolefish, choose(InvertedGuardianDog,InvertedSnowTank),Sheep);
+					fa = sprFloor109;
+					fb = sprFloor109B;
+					fe = sprFloor109Explo;
 				break
 				case 9://Palace
 					array_push(spawns,InvertedGuardianDog, InvertedGhostGuardian, InvertedPalaceGuardian, InvertedExploGuardian, InvertedCubeGuardian, choose(InvertedExploFreak, JungleBandit, InvertedBuffMushroom));
+					fa = sprFloor118;
+					fb = sprFloor118B;
+					fe = sprFloor118Explo;
 				break
 				case 10://Savanna
 					array_push(spawns,InvertedSavannaBandit, InvertedVulture, InvertedThief, InvertedHyena, InvertedHyena, choose(InvertedCardGuy,InvertedCardGuy2));
+					fa = sprFloor121;
+					fb = sprFloor121B;
+					fe = sprFloor121Explo;
 				break
 				case 105://Inv Desert
 					array_push(spawns,Bandit, Scorpion, BanditSquare, JungleFly, BigMaggot, Sniper);
+					fa = sprFloor1;
+					fb = sprFloor1B;
+					fe = sprFloor1Explo;
 				break;
 				case 110://Inv Sewers
 					array_push(spawns,Bandit, Ratking, MeleeBandit, Gator, Rat, Exploder, ToxicMushroomGuy);
+					fa = sprFloor2;
+					fb = sprFloor2B;
+					fe = sprFloor2Explo;
 				break
 				case 106://Inv Scrapyard
 					array_push(spawns,Bandit, Raven, BanditSquare, Sniper, Raven, Salamander,choose(SnowBot,Thief,MeleeBandit));
+					fa = sprFloor3;
+					fb = sprFloor3B;
+					fe = sprFloor3Explo;
 				break
 				case 111://Inv Caves
 					array_push(spawns,Spider, SquareBat, Spider, LaserCrystal, choose(RhinoFreak, FireBat));
+					fa = sprFloor4;
+					fb = sprFloor4B;
+					fe = sprFloor4Explo;
 				break
 				case 107://Inv Frozen city
 					array_push(spawns,choose(GuardianDog, CubeGuardian,SnowTank), DiscGuy, choose(ExploGuardian, Necromancer), SnowBot, Wolf, SnowTank);
+					fa = sprFloor5;
+					fb = sprFloor5B;
+					fe = sprFloor5Explo;
 				break
 				case 112://Inv Labs
 					array_push(spawns,Freak, Freak, ExploFreak, Necromancer, choose(LaserCrystal,Ratking), Turret, RhinoFreak);
+					fa = sprFloor6;
+					fb = sprFloor6B;
+					fe = sprFloor6Explo;
 				break
 				case 108://Inv Vulcano
 					array_push(spawns,LavaBallEnemy, FireWorm, FireBat, Salamander, choose(FireBaller,SuperFireBaller), LavaBallEnemy, choose(ExploFreak, Sniper));
+					fa = sprFloor7;
+					fb = sprFloor7B;
+					fe = sprFloor7Explo;
 				break
 				case 109://Inv Wonderland
 					array_push(spawns,CardGuy, CardGuy2, TeaPot, Hyena, InvertedMolefish, choose(GuardianDog,CubeGuardian),Sheep);
+					fa = sprFloor8;
+					fb = sprFloor8B;
+					fe = sprFloor8Explo;
 				break
 				case 118://Inv Palance
 					array_push(spawns,GuardianDog, GhostGuardian, PalaceGuardian, ExploGuardian, CubeGuardian, choose(Sniper, JungleBandit, ExploFreak));
+					fa = sprFloor9;
+					fb = sprFloor9B;
+					fe = sprFloor9Explo;
 				break
 				case 121://Inv Savanna
 					array_push(spawns,SavannaBandit, Vulture, Thief, Hyena, Hyena, choose(FireBat, Scorpion));
+					fa = sprFloor10;
+					fb = sprFloor10B;
+					fe = sprFloor10Explo;
 				break
 				case 101://Oasis
 					array_push(spawns,InvertedCrab, InvertedBoneFish, InvertedBoneFish, InvertedScubaBandit, InvertedJellyFish, ToxicMushroomGuy, choose(InvertedExploder,InvertedExploder,InvertedSpider));
+					fa = sprFloor122;
+					fb = sprFloor122B;
+					fe = sprFloor122Explo;
 				break;
 				case 122://Inv Oasis
 					array_push(spawns,Crab,BoneFish, BoneFish, ScubaBandit, JellyFish, Jock, choose(Gator,Spider,Turtle));
+					fa = sprFloor101;
+					fb = sprFloor101B;
+					fe = sprFloor101Explo;
 				break;
 				case 117://Mushroom land
 					array_push(spawns,InvertedBuffMushroom,InvertedToxicMushroomGuy, InvertedFireBat, InvertedSquareBat, InvertedRatking, LightningCrystal, choose(EraserBandit,InvertedNecromancer));
+					fa = sprFloor124;
+					fb = sprFloor124B;
+					fe = sprFloor124Explo;
 				break;
 				case 124://Inv Mushroom land
 					array_push(spawns,BuffMushroom,ToxicMushroomGuy, Exploder, Gator, Ratking, BanditSquare, choose(LaserBandit,Scorpion,Necromancer));
+					fa = sprFloor117;
+					fb = sprFloor117B;
+					fe = sprFloor117Explo;
 				break;
 				case 114://Jungle
 					array_push(spawns,InvertedJungleBandit, InvertedJungleAssassin, InvertedJungleBandit, InvertedJungleFly, BigMaggotInverted , MaggotInverted, choose(InvertedSniper,InvertedMolefish));
+					fa = sprFloor123;
+					fb = sprFloor123B;
+					fe = sprFloor123Explo;
 				break;
 				case 123://Inv Jungle
 					array_push(spawns,JungleBandit,JungleAssassin, JungleBandit, JungleFly, BigMaggot, Maggot, choose(FireWorm,Spider));
+					fa = sprFloor114;
+					fb = sprFloor114B;
+					fe = sprFloor114Explo;
 				break;
 				case 103://YV Mansion
 					array_push(spawns,InvertedMolefish, InvertedMolesarge, InvertedCardGuy2, InvertedJock, InvertedFireBaller, InvertedSuperFireBaller, InvertedDiscGuy, InvertedHyena);
+					fa = sprFloor125;
+					fb = sprFloor125B;
+					fe = sprFloor125Explo;
 				break;
 				case 125://INV YV Mansion
 					array_push(spawns,Molefish, Molesarge, JellyFish, Jock, FireBaller, SuperFireBaller, GhostGuardian, BuffMushroom);
+					fa = sprFloor103;
+					fb = sprFloor103B;
+					fe = sprFloor103Explo;
 				break;
 				case 115://Cursed caves
 					array_push(spawns,InvertedSpider, Spider, InvertedRaven, Raven, InvertedSquareBat, SquareBat, Rat, InvertedRat, InvertedJungleBandit);
+					fa = sprFloor4;
+					fb = sprFloor111B;
+					fe = sprFloor111Explo;
 				break
 			}
 			if array_length(spawns) > 0
-				scrSpawnInversionInvasion(1,BecomeScrapBoss,sprFloor3,sprFloor3B,sprFloor3Explo);
+				scrSpawnInversionInvasion(am2,spawns,fa,fb,fe);
 		}
 		if loops > 4
 		{

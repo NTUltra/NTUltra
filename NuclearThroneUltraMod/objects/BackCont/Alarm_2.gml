@@ -5,7 +5,7 @@ if instance_exists(Player)
 {
 	var getFreaky = false;
 	if Player.loops > 2
-		getFreaky = wantVanAmount - Player.subarea % 3 == 0;
+		getFreaky = wantVanAmount % 3 == clamp(Player.subarea-1,0,2);
 	
 	if (verticalVans && wantVanAmount % 2 == 0) //EVEN
 	{
