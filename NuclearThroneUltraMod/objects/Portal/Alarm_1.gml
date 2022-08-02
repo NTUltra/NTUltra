@@ -1,6 +1,6 @@
 /// @description Go time
 var goTime = false;
-if type == 3
+if type == 3 || inverted
 {	
 	var numEn = 0;
 	with enemy
@@ -17,7 +17,10 @@ if type == 3
 	{
 		visible = true;
 		image_speed = 0.4;
-		sprite_index = sprProtoPortalDormant;
+		if inverted
+			sprite_index = sprInvertedPortalDormant;
+		else
+			sprite_index = sprProtoPortalDormant;
 		alarm[1] = 30;
 	}
 }

@@ -386,11 +386,9 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		if (keyboard_check_pressed(ord("G")))
 		    {
 				var dangle = random(1)*360;
-				thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,PopupText);
-				thing.mytext = "WARPZONE";
-				thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,BuffGator);
-				thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,InvertedBuffGator);
-				//thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,Friend);
+				//thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,PopupText);
+				//thing.mytext = "WARPZONE";
+				thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,InvertedBigDisc);
 				//scrTurnIntoPortalArea();
 		    }
 		if (keyboard_check_pressed(ord("I")))

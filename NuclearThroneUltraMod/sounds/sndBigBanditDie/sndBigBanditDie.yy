@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndBigBanditDie",
-  "duration": 0.0,
+  "duration": 1.798685,
   "parent": {
     "name": "BigBandit",
     "path": "folders/Sounds/Enemies/Boss/BigBandit.yy",

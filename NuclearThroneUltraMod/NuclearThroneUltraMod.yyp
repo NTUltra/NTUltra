@@ -4748,6 +4748,7 @@
     {"id":{"name":"sndGoldScorpionDead","path":"sounds/sndGoldScorpionDead/sndGoldScorpionDead.yy",},"order":16,},
     {"id":{"name":"sndMutant4Dead","path":"sounds/sndMutant4Dead/sndMutant4Dead.yy",},"order":33,},
     {"id":{"name":"sndMutant4Valt","path":"sounds/sndMutant4Valt/sndMutant4Valt.yy",},"order":34,},
+    {"id":{"name":"sprInvertedPortalDormant","path":"sprites/sprInvertedPortalDormant/sprInvertedPortalDormant.yy",},"order":40,},
     {"id":{"name":"sndMutant4Thrn","path":"sounds/sndMutant4Thrn/sndMutant4Thrn.yy",},"order":35,},
     {"id":{"name":"sndMutant4Wrld","path":"sounds/sndMutant4Wrld/sndMutant4Wrld.yy",},"order":36,},
     {"id":{"name":"sndMutant4Hurt","path":"sounds/sndMutant4Hurt/sndMutant4Hurt.yy",},"order":37,},

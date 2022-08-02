@@ -205,14 +205,14 @@ function scrDecideInvader(){
 		}
 		if loops > 4
 		{
-			if area == 101 && subarea == 1//Oasis 1B - 1
+			if (area == 101 || area == 122) && subarea == 1//Oasis 1B - 1
 			{
 				if (loops % 2 == 1)
 					scrSpawnInvaderBoss(1,BecomeScrapBoss,sprFloor3,sprFloor3B,sprFloor3Explo);//ODD
 				else
 					scrSpawnInvaderBoss(1,BecomeInvertedScrapBoss,sprFloor106,sprFloor106B,sprFloor106Explo);//EVEN
 			}
-			else if area == 103//YV MANSION  3B -1
+			else if (area == 103 || area == 125)//YV MANSION  3B -1
 			{
 				instance_create(x,y,WantBoss);
 				/*
@@ -222,14 +222,14 @@ function scrDecideInvader(){
 					scrSpawnInvaderBoss(1,InvertedBigBadBat,sprFloor111,sprFloor111,sprFloor111Explo);//EVEN
 					*/
 			}
-			else if area == 117//Mushroomland 4B -1
+			else if (area == 117 || area == 124)//Mushroomland 4B -1
 			{
 				if (loops % 2 == 1)
 					scrSpawnInvaderBoss(loops - 2,BanditBoss,sprFloor1,sprFloor1B,sprFloor1Explo);//ODD
 				else
 					scrSpawnInvaderBoss(loops - 2,InvertedBanditBoss,sprFloor105,sprFloor105B,sprFloor105Explo);//EVEN
 			}
-			else if area == 114 && subarea == 1//Jungle 5B - 1
+			else if (area == 114 || area == 123) && subarea == 1//Jungle 5B - 1
 			{
 				if (loops % 2 == 1)
 					scrSpawnInvaderBoss(clamp(loops - 4,1,3),Technomancer,sprFloor6,sprFloor6B,sprFloor6Explo);//ODD
@@ -250,21 +250,21 @@ function scrDecideInvader(){
 				else
 					scrSpawnInvaderBoss(loops - 3,InvertedBigVulture,sprFloor121,sprFloor121B,sprFloor121Explo);//EVEN
 			}
-			else if area == 9 && subarea == 1//Palace 7 - 1
+			else if (area == 9 || area == 118) && subarea == 1//Palace 7 - 1
 			{
 				if (loops % 2 == 1)
 					scrSpawnInvaderBoss(clamp(floor((loops - 4)*0.25),1,2),AssassinBoss,sprFloor3,sprFloor3B,sprFloor3Explo);//ODD
 				else
 					scrSpawnInvaderBoss(clamp(floor((loops - 4)*0.25),1,3),InvertedAssassinBoss,sprFloor106,sprFloor106B,sprFloor106Explo);//EVEN
 			}
-			else if area == 7 && subarea == 1//Vulcano 3C - 1
+			else if (area == 7 || area == 108) && subarea == 1//Vulcano 3C - 1
 			{
 				if (loops % 2 == 1)
 					scrSpawnInvaderBoss(1,JungleBoss,sprFloor114,sprFloor114B,sprFloor114Explo);//EVEN
 				else
 					scrSpawnInvaderBoss(1,InvertedJungleBoss,sprFloor123,sprFloor123B,sprFloor123Explo);//EVEN
 			}
-			else if area == 8 && subarea == 1//Wonderland 5C - 1
+			else if (area == 8 || area == 109) && subarea == 1//Wonderland 5C - 1
 			{
 				if (loops % 3 == 2)
 					scrSpawnInvaderBoss(1,HyperCrystal,sprFloor4,sprFloor4,sprFloor4Explo);
@@ -278,5 +278,6 @@ function scrDecideInvader(){
 				scrSpawnInvaderBoss(clamp(floor((loops - 9)*0.25),1,3),BallBoss,sprFloor100,sprFloor100C,sprFloor100Explo);//EVEN
 			}
 		}
+		//TODO Check inverted areas if possible
 	}
 }

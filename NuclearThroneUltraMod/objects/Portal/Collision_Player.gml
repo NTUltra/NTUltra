@@ -1,4 +1,4 @@
-if sprite_index != sprPortalSpawn && sprite_index != sprProtoPortalDormant
+if sprite_index != sprPortalSpawn && sprite_index != sprProtoPortalDormant && sprite_index != sprInvertedPortalDormant
 {
 if endgame = 100
 {
