@@ -9,6 +9,109 @@ function scrDecideInvader(){
 		var loops = Player.loops;
 		if UberCont.opt_gamemode == 34//Hard mode
 			loops += 4;
+		if loops > 1
+		{
+			var am = clamp(loops-1,1,4);
+			if Player.crown == 7//Crown of blood
+				am ++;
+			else if Player.crown == 17//Crown of apocalypse
+				am += 3;
+			var spawns = [];
+			//INVERTED INVASIONS!
+			repeat(am)
+			switch (area)
+			{
+				case 1://Desert
+					array_push(spawns,BanditInverted, InvertedScorpion, InvertedBanditSquare, InvertedJungleFly, BigMaggotInverted, InvertedNecromancer);
+				break
+				case 2://Sewers
+					array_push(spawns,BanditInverted, InvertedRatking, InvertedMeleeBandit, InvertedGator, InvertedRat, InvertedExploder, InvertedJellyFish,InvertedBoneFish);
+				break
+				case 3://Scrapyard
+					array_push(spawns,BanditInverted, InvertedRaven, InvertedBanditSquare, InvertedSniper, InvertedRaven, InvertedSalamander,choose(InvertedSnowBot,InvertedThief,InvertedMeleeBandit));
+				break
+				case 4://Caves
+					array_push(spawns,InvertedSpider, InvertedSquareBat, InvertedSpider, LightningCrystal,choose(InvertedFireWorm,InvertedFireBat));
+				break
+				case 5://Frozen city
+					array_push(spawns,BanditInverted, InvertedDiscGuy, InvertedGhostGuardian, InvertedSnowBot, InvertedWolf, InvertedSnowTank);
+				break
+				case 6://Labs
+					array_push(spawns,InvertedFreak, InvertedFreak, InvertedExploFreak, InvertedNecromancer, choose(InvertedRatking,InvertedCubeGuardian), InvertedTurret, InvertedRhinoFreak);
+				break
+				case 7://Vulcano
+					array_push(spawns,InvertedLavaBallEnemy, InvertedFireWorm, choose(InvertedWolf,InvertedScubaBandit), InvertedSalamander, choose(InvertedFireBaller,InvertedSuperFireBaller), InvertedFireBat);
+				break
+				case 8://Wonderland
+					array_push(spawns,InvertedCardGuy, InvertedCardGuy2, InvertedTeaPot, InvertedMolesarge, InvertedMolefish, choose(InvertedGuardianDog,InvertedSnowTank),Sheep);
+				break
+				case 9://Palace
+					array_push(spawns,InvertedGuardianDog, InvertedGhostGuardian, InvertedPalaceGuardian, InvertedExploGuardian, InvertedCubeGuardian, choose(InvertedExploFreak, JungleBandit, InvertedBuffMushroom));
+				break
+				case 10://Savanna
+					array_push(spawns,InvertedSavannaBandit, InvertedVulture, InvertedThief, InvertedHyena, InvertedHyena, choose(InvertedCardGuy,InvertedCardGuy2));
+				break
+				case 105://Inv Desert
+					array_push(spawns,Bandit, Scorpion, BanditSquare, JungleFly, BigMaggot, Sniper);
+				break;
+				case 110://Inv Sewers
+					array_push(spawns,Bandit, Ratking, MeleeBandit, Gator, Rat, Exploder, ToxicMushroomGuy);
+				break
+				case 106://Inv Scrapyard
+					array_push(spawns,Bandit, Raven, BanditSquare, Sniper, Raven, Salamander,choose(SnowBot,Thief,MeleeBandit));
+				break
+				case 111://Inv Caves
+					array_push(spawns,Spider, SquareBat, Spider, LaserCrystal, choose(RhinoFreak, FireBat));
+				break
+				case 107://Inv Frozen city
+					array_push(spawns,choose(GuardianDog, CubeGuardian,SnowTank), DiscGuy, choose(ExploGuardian, Necromancer), SnowBot, Wolf, SnowTank);
+				break
+				case 112://Inv Labs
+					array_push(spawns,Freak, Freak, ExploFreak, Necromancer, choose(LaserCrystal,Ratking), Turret, RhinoFreak);
+				break
+				case 108://Inv Vulcano
+					array_push(spawns,LavaBallEnemy, FireWorm, FireBat, Salamander, choose(FireBaller,SuperFireBaller), LavaBallEnemy, choose(ExploFreak, Sniper));
+				break
+				case 109://Inv Wonderland
+					array_push(spawns,CardGuy, CardGuy2, TeaPot, Hyena, InvertedMolefish, choose(GuardianDog,CubeGuardian),Sheep);
+				break
+				case 118://Inv Palance
+					array_push(spawns,GuardianDog, GhostGuardian, PalaceGuardian, ExploGuardian, CubeGuardian, choose(Sniper, JungleBandit, ExploFreak));
+				break
+				case 121://Inv Savanna
+					array_push(spawns,SavannaBandit, Vulture, Thief, Hyena, Hyena, choose(FireBat, Scorpion));
+				break
+				case 101://Oasis
+					array_push(spawns,InvertedCrab, InvertedBoneFish, InvertedBoneFish, InvertedScubaBandit, InvertedJellyFish, ToxicMushroomGuy, choose(InvertedExploder,InvertedExploder,InvertedSpider));
+				break;
+				case 122://Inv Oasis
+					array_push(spawns,Crab,BoneFish, BoneFish, ScubaBandit, JellyFish, Jock, choose(Gator,Spider,Turtle));
+				break;
+				case 117://Mushroom land
+					array_push(spawns,InvertedBuffMushroom,InvertedToxicMushroomGuy, InvertedFireBat, InvertedSquareBat, InvertedRatking, LightningCrystal, choose(EraserBandit,InvertedNecromancer));
+				break;
+				case 124://Inv Mushroom land
+					array_push(spawns,BuffMushroom,ToxicMushroomGuy, Exploder, Gator, Ratking, BanditSquare, choose(LaserBandit,Scorpion,Necromancer));
+				break;
+				case 114://Jungle
+					array_push(spawns,InvertedJungleBandit, InvertedJungleAssassin, InvertedJungleBandit, InvertedJungleFly, BigMaggotInverted , MaggotInverted, choose(InvertedSniper,InvertedMolefish));
+				break;
+				case 123://Inv Jungle
+					array_push(spawns,JungleBandit,JungleAssassin, JungleBandit, JungleFly, BigMaggot, Maggot, choose(FireWorm,Spider));
+				break;
+				case 103://YV Mansion
+					array_push(spawns,InvertedMolefish, InvertedMolesarge, InvertedCardGuy2, InvertedJock, InvertedFireBaller, InvertedSuperFireBaller, InvertedDiscGuy, InvertedHyena);
+				break;
+				case 125://INV YV Mansion
+					array_push(spawns,Molefish, Molesarge, JellyFish, Jock, FireBaller, SuperFireBaller, GhostGuardian, BuffMushroom);
+				break;
+				case 115://Cursed caves
+					array_push(spawns,InvertedSpider, Spider, InvertedRaven, Raven, InvertedSquareBat, SquareBat, Rat, InvertedRat, InvertedJungleBandit);
+				break
+			}
+			if array_length(spawns) > 0
+				scrSpawnInversionInvasion(1,BecomeScrapBoss,sprFloor3,sprFloor3B,sprFloor3Explo);
+		}
 		if loops > 4
 		{
 			if area == 101 && subarea == 1//Oasis 1B - 1

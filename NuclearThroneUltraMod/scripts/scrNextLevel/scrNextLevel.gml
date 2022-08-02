@@ -28,7 +28,7 @@ function scrNextLevel() {
 		lastarea = area
 	}
 	else if subarea = 1 || area = 105 || area = 106 || area = 107 || area = 101 || area = 110 || area = 111 || area = 112 || area = 103 || area = 109 || area = 113 || area == 114 || area = 108 || area == 115 || area == 117 || area == 118
-	|| area == 121 || area == 122 || area == 123 || area == 124
+	|| area == 121 || area == 122 || area == 123 || area == 124 || area == 125
 	{
 		//Inverted savanna
 		if area = 121//bring to inverted mushroom
@@ -38,6 +38,7 @@ function scrNextLevel() {
 	        {
 	        //inverted big vulture
 	        area = 121
+			lastarea = 121;
 	        subarea=3;
 	        inverted=true;
 	        exit;
@@ -45,6 +46,7 @@ function scrNextLevel() {
 	        else
 	        {
 	        area = 124
+			lastarea = 124;
 	        subarea = 0
 			inverted=true
 	        exit;
@@ -54,18 +56,30 @@ function scrNextLevel() {
 		{
 			//Jungle 2
 			area = 114
+			lastarea = 114;
 			subarea = 1;
 			inverted = false;
+			exit;
+		}
+		if area == 125//Inv Mansion
+		{
+			//To Labs
+			area = 6
+			lastarea = 6;
+			subarea = 0;
+			inverted = false;
+			exit;
 		}
 		//Inverted Oasis
 		if area = 122//bring to inverted Vulcano 2
 	    {
 			//TODO
-	        if inverted && area == 122 &&subarea<3
+	        if inverted && area == 122 &&subarea < 3
 	        {
 	        //inverted big Fish
 	        area = 122
 	        subarea=3;
+			lastarea = 122;
 	        inverted=false;
 	        exit;
 	        }
@@ -73,6 +87,7 @@ function scrNextLevel() {
 	        {
 	        area = 7
 	        subarea = 2
+			lastarea = 7;
 			inverted=false
 	        exit;
 	        }
@@ -81,11 +96,11 @@ function scrNextLevel() {
 		if area = 123//bring to inverted Vulcano 2
 	    {
 			//TODO
-	        if inverted && area == 123 &&subarea<3
+	        if inverted && area == 123 &&subarea<2
 	        {
 		        //inverted big bush box
 		        area = 123
-		        subarea=3;
+		        subarea=2;
 		        inverted=false;
 		        exit;
 	        }
@@ -93,6 +108,7 @@ function scrNextLevel() {
 	        {
 				//To big bad bat
 		        area = 4
+				lastarea = 4;
 		        subarea = 2
 				inverted=false
 		        exit;
@@ -105,6 +121,7 @@ function scrNextLevel() {
 		        //inverted chesire
 		        area = 118
 		        subarea = 3;
+				lastarea = 118;
 		        inverted=false;
 		        exit;
 	        }
@@ -126,6 +143,7 @@ function scrNextLevel() {
 	    if area = 113 && subarea > 1//banditland
 	    {
 	        area = 8//chesire cat
+			lastarea = 8;
 	        subarea=3;
 			inverted=false;
 	        exit;
@@ -143,23 +161,22 @@ function scrNextLevel() {
 			else
 			{
 				area = 4;
+				lastarea = 4;
 				subarea = 1;
 				inverted=false;
 			}
 			exit;
 		}
-		if area == 117 && subarea > 0//Mushroom
+		if area == 117 && subarea > 0 && !inverted//Mushroom
 		{
 			//To jungle
 			area = 114
 			subarea = 0;
-			inverted=false;
 		}
-	    if area = 103 && subarea > 0//YV mansion
+	    if area = 103 && subarea > 0 && !inverted//YV mansion
 	    {
 	        area = 3
 	        subarea = 2;
-			inverted=false;
 	    }
 		if area == 102//Pizza to oasis boss
 		{
@@ -202,6 +219,7 @@ function scrNextLevel() {
 	        {
 	        area=7;
 	        subarea=1;
+			lastarea = 7;
 			inverted=false
 	        exit;
 	        }
@@ -246,6 +264,7 @@ function scrNextLevel() {
 	        {
 	        area=113;
 	        subarea=2;
+			lastarea = 8;
 			inverted=false
 	        exit;
 	        }
@@ -472,6 +491,20 @@ function scrNextLevel() {
 	lastarea=124;
 	subarea = 0;
 	hard ++;
+	debug("Go to mushroom");
+	}
+	if ( area==114 && inverted )//inv Mushroom
+	{
+		area=123;
+		lastarea=123;
+		subarea = 1;
+		hard ++;
+	}
+	if ( area == 103 && inverted ) //Iv mansion
+	{
+		area = 125;
+		lastarea = 125;
+		subarea = 0;
 	}
 	if ( area==101 && inverted )//inv Oasis
 	{area=122;

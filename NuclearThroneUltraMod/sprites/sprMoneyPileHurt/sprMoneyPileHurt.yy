@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMoneyPileHurt","path":"sprites/sprMoneyPileHurt/sprMoneyPileHurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMoneyPileHurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

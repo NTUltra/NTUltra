@@ -3,7 +3,7 @@ var um = GetPlayerUltramod()
 if um == ultramods.splinterBullet
 {
 	instance_destroy(id,false);
-	with instance_create(x,y,Bullet1)
+	with instance_create(x,y,Bullet1Infest)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;
@@ -36,7 +36,7 @@ if um == ultramods.splinterBullet
 	with instance_create(x,y,ElectroBallSpawn)
 	{motion_add(other.direction+(random(8)-4),1)
 	image_angle = direction}
-	with instance_create(x,y,ElectroBall)
+	with instance_create(x,y,InfestElectroBall)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;

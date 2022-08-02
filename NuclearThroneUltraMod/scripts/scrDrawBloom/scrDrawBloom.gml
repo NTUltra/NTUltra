@@ -2,7 +2,7 @@ function scrDrawBloom() {
 	var ba = 0.1;
 	//if instance_count>2000 emergancy when there is just too much going on
 	//exit;
-
+	
 	draw_set_blend_mode(bm_add)
 	if instance_exists(Player){
 	with Bullet1
@@ -423,6 +423,13 @@ function scrDrawBloom() {
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with BigRad
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
+	with enemy
+	{
+		if totemBuffed
+		{
+			draw_sprite_ext(sprite_index,image_index,x,y,image_xscale*1.3,image_yscale*1.3,image_angle,c_red,ba);
+		}
+	}
 	draw_set_blend_mode(bm_normal)
 
 	//with HotDrakeLava

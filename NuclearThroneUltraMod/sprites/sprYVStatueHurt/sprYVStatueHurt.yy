@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprYVStatueHurt","path":"sprites/sprYVStatueHurt/sprYVStatueHurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprYVStatueHurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

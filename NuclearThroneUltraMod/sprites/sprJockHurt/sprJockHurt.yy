@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprJockHurt","path":"sprites/sprJockHurt/sprJockHurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprJockHurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

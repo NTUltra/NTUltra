@@ -131,7 +131,7 @@ if (my_health<prevhealth)
 {
 	if Player.skill_got[2]
 	{
-		extrafeetalarm = 26;
+		extrafeetalarm = 30;
 		extrafeetdodged = false;
 	}
 	//Took a hit?

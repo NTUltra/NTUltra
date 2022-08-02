@@ -5,7 +5,7 @@ function healMe(amount) {
 	
     my_health += amount;
     with instance_create(x, y - 16, HealFX)
-    depth = -3;
+		depth = -3;
     if my_health > maxhealth
     my_health = maxhealth;
 }
@@ -52,7 +52,7 @@ function suck() {
 			snd_play(snd_dead, hurt_pitch_variation);
 			instance_destroy();
 			with other {
-				healMe(10);
+				healMe(healAmount);
 			}
 		}
 	}

@@ -238,15 +238,23 @@ function scrPopProps() {
 	instance_create(x+16,y+16,OldTorch)
 	if spawnarea = 103 && !place_meeting(x,y,Wall)
 	{
-	if instance_exists(Player)&&random(6)<1
-	{
-	if point_distance(x,y,Player.x,Player.y)>64
-	instance_create(x+16,y+16,GoldBarrel)
+		if instance_exists(Player)&&random(6)<1
+		{
+			if point_distance(x,y,Player.x,Player.y)>64
+				instance_create(x+16,y+16,GoldBarrel)
+		}
+		else
+			instance_create(x+16,y+16,choose(MoneyPile,MoneyPile,MoneyPile,YVStatue,MoneyPile))
 	}
-	else
-	instance_create(x+16,y+16,choose(MoneyPile,MoneyPile,MoneyPile,YVStatue,MoneyPile))
-
-
+	if spawnarea = 125 && !place_meeting(x,y,Wall)
+	{
+		if instance_exists(Player)&&random(6)<1
+		{
+			if point_distance(x,y,Player.x,Player.y)>64
+				instance_create(x+16,y+16,InvertedGoldBarrel)
+		}
+		else
+			instance_create(x+16,y+16,choose(InvertedMoneyPile,InvertedMoneyPile,InvertedMoneyPile,InvertedYVStatue,InvertedMoneyPile))
 	}
 	if spawnarea = 102 && !place_meeting(x,y,Wall)
 	instance_create(x+16,y+16,PizzaBox)

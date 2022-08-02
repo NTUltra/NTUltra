@@ -6,8 +6,8 @@ if walled = 0
 {
 walled = 1
 snd_play(sndMeleeWall,0.1)
+snd_play(sndExplosion);
 }
-Sleep(5)
 with other
 {
 	if !place_meeting(x,y,FloorExplo)

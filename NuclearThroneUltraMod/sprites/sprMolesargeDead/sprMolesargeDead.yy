@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMolesargeDead","path":"sprites/sprMolesargeDead/sprMolesargeDead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMolesargeDead",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprGoldBarrelDead","path":"sprites/sprGoldBarrelDead/sprGoldBarrelDead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprGoldBarrelDead",
     "tags": [],
     "resourceType": "GMSequence",
   },

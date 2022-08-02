@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprGoldBarrelHurt","path":"sprites/sprGoldBarrelHurt/sprGoldBarrelHurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprGoldBarrelHurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

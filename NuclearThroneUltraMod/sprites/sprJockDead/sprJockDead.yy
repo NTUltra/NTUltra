@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprJockDead","path":"sprites/sprJockDead/sprJockDead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprJockDead",
     "tags": [],
     "resourceType": "GMSequence",
   },

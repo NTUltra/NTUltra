@@ -23,10 +23,10 @@ function beginSuck() {
     sprite_index = spr_fire
 	
 	with BigFish {
-		alarm[5] = 120;
+		alarm[5] = suckTime*1.5;
 	}
 
-    alarm[2] = 75 + random(25);
+    alarm[2] = suckTime + random(25);
     walk = 0 //alarm[2]+20;
     alarm[1] = alarm[2] + 15 + random(15);
 }
@@ -53,13 +53,13 @@ if target > 0 && alarm[6] < 1 && alarm[7] < 1 {
 		//BITE TACKLE SHIT YO! DANGER IN THE HOUSE!
 		snd_play(snd_tackle)
 		persistent_direction = point_direction(x, y, target.x, target.y)
-		alarm[1] += chargeTell + 30;
+		alarm[1] += chargeTell + actTime*2;
 		alarm[4] = 0
 		alarm[3] = 0
-		alarm[5] = chargeTell + 20;
+		alarm[5] = chargeTell + actTime*2;
 		alarm[6] = chargeTell
 	} else if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
-		maxspeed = 3 - 1.5*(my_health/maxhealth)
+		maxspeed = originalMaxspeed + 1 - 1.5*(my_health/maxhealth)
         if ((random(7) < 1 && point_distance(x, y, Player.x, Player.y) > 100) ) && alarm[2] < 1 && alarm[5] < 1 { //SUCK
             beginSuck();
         } else if alarm[2] < 1 {
@@ -106,13 +106,13 @@ if target > 0 && alarm[6] < 1 && alarm[7] < 1 {
 			}
 		}
     } else { //wall in between
-		maxspeed = 4
+		maxspeed = originalMaxspeed + 2
 		direction = point_direction(x, y, target.x, target.y);
 		walk = 10 + random(10);
 		alarm[1] = walk;
 		if my_health < maxhealth //heal cause player is hiding
 	    {
-	        healMe(10);
+	        healMe(healAmount);
 	        repeat(5)
 	        instance_create(x + random(8) - 4, y + random(8) - 4, Dust);
 	        snd_play(sndWater2);
@@ -121,6 +121,6 @@ if target > 0 && alarm[6] < 1 && alarm[7] < 1 {
 } //no target\/
 else if random(5) < 1 {
     motion_add(random(360), 0.8)
-    walk = 20 + random(10)
+    walk = actTime*2 + random(actTime)
     alarm[1] = walk;
 }

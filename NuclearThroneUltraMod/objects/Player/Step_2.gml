@@ -446,7 +446,7 @@ if my_health < prevhealth
 //Extra feet consider failed dodge
 if skill_got[2] && tookHit && !exception
 {
-	extrafeetalarm = 26;
+	extrafeetalarm = 30;
 	extrafeetdodged = false;
 }
 

@@ -11,11 +11,11 @@ if instance_exists(Player) && (!cursed) {
 			levelEnded = true;
 	}
     if instance_exists(ProtoStatue) and speed = 0 {
-        if point_distance(x, y, ProtoStatue.x, ProtoStatue.y) < 180 and(Player.ultra_got[12] == 1 || collision_line(x, y, ProtoStatue.x, ProtoStatue.y, Wall, 0, 0) < 0) {
+        if point_distance(x, y, ProtoStatue.x, ProtoStatue.y) < 180 and(Player.ultra_got[12] == 1 || (collision_line(x, y, ProtoStatue.x, ProtoStatue.y, Wall, 0, 0) < 0 && x != xprevious)) {
             if !place_meeting(x + lengthdir_x(12, point_direction(x, y, ProtoStatue.x, ProtoStatue.y)), y,Wall)
-            x += lengthdir_x(12, point_direction(x, y, ProtoStatue.x, ProtoStatue.y))
+				x += lengthdir_x(12, point_direction(x, y, ProtoStatue.x, ProtoStatue.y))
             if !place_meeting(x, y + lengthdir_y(12, point_direction(x, y, ProtoStatue.x, ProtoStatue.y)),Wall)
-            y += lengthdir_y(12, point_direction(x, y, ProtoStatue.x, ProtoStatue.y))
+				y += lengthdir_y(12, point_direction(x, y, ProtoStatue.x, ProtoStatue.y))
 			
 			if place_meeting(x,y,ProtoStatue)
 			{

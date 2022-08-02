@@ -9,12 +9,12 @@ spr_hurt = sprInvertedBuffMushroomHurt
 spr_dead = sprInvertedBuffMushroomDead
 
 //behavior
-detectionRange = 150;
+detectionRange = 132;
 walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(90)
 wkick = 0
-actTime = 10;
+actTime = 11;
 maxSpeed = 3.5;
 acc = 0.8;
 pSpeed = 12;

@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMolesargeHurt","path":"sprites/sprMolesargeHurt/sprMolesargeHurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMolesargeHurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprJockWalk","path":"sprites/sprJockWalk/sprJockWalk.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprJockWalk",
     "tags": [],
     "resourceType": "GMSequence",
   },

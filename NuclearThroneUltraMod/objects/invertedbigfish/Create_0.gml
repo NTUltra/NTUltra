@@ -3,19 +3,23 @@
 // Inherit the parent event
 event_inherited();
 raddrop = 70;
-maxhealth = 195;//210
+maxhealth = 190;//210
 meleedamage = 3
 size = 3
 if GetPlayerLoops() > 0{
 	maxhealth = 340//370;
 }
+healAmount = 15;
 EnemyHealthAdjustments()
 actTime = 5;
 maxspeed = 3;//2
+suckTime = 50;
+fishFireRate = 2;
+originalMaxspeed = maxspeed;
 chargeSpeed = 9;//7
 chargeDis = 120;
 suckAcc = 0.098;
-chargeTell = 15;
+chargeTell = 17;
 spr_idle = sprInvertedOasisBossIdle
 spr_walk = sprInvertedOasisBossWalk
 spr_hurt = sprInvertedOasisBossHurt

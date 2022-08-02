@@ -38,11 +38,11 @@ if target > 0 && instance_exists(target)
 	if ammo > 0
 	{
 		alarm[2] = fireRate;
-		alarm[1] += fireRate;
+		alarm[1] += fireRate+1;
 	}
 	else
 	{
-		alarm[1] += 10;	
+		alarm[1] += 20;	
 	}
 	if walk > 0
 	{

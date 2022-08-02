@@ -1099,26 +1099,24 @@ function scrFire() {
 
 	instance_create(x,y,Dust)
 
-	ang = aimDirection
-	move_contact_solid(ang,5)
+	move_contact_solid(aimDirection,5)
 
 	instance_create(x,y,Dust)
 
-	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,ang),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,ang),Slash)
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
-	ang = other.ang
 	dmg = 3
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(ang,2+longarms)
+	motion_add(aimDirection,2+longarms)
 	image_angle = direction
 	team = other.team}
 
 	wepangle = -wepangle
 	speed = +speed*0.5;
-	BackCont.viewx2 += lengthdir_x(8,ang)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(8,ang)*UberCont.opt_shake
+	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 1
 	wkick = -6
 
@@ -1208,7 +1206,7 @@ function scrFire() {
 	with instance_create(x,y,FlameBurst)
 	{
 	creator = other.id
-	ammo = 12
+	ammo = 10
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -2500,16 +2498,14 @@ function scrFire() {
 
 	instance_create(x,y,Dust)
 
-	ang = aimDirection
 	var hitWall = false;
-	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,ang),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,ang),Slash)
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
-		ang = other.ang
 		dmg = 8
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(ang,2+longarms)
+		motion_add(aimDirection,2+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -2517,29 +2513,28 @@ function scrFire() {
 	{
 		if !hitWall
 		{
-			hitWall = scrMoveContactSolid(ang,42)
+			hitWall = scrMoveContactSolid(aimDirection,42)
 			instance_create(x,y,Dust)
-			with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,ang),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,ang),Slash)
+			with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 			{
-				ang = other.ang
 				dmg = 8
 				longarms = 0
 				if instance_exists(Player)
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				motion_add(ang,2+longarms)
+				motion_add(aimDirection,2+longarms)
 				image_angle = direction
 				team = other.team
 			}
 		}
 	}
-	x += lengthdir_x(1,ang+180)
-	y += lengthdir_y(1,ang+180)
+	x += lengthdir_x(1,aimDirection+180)
+	y += lengthdir_y(1,aimDirection+180)
 	xprevious = x;
 	yprevious = y;
 	alarm[3]=max(4,alarm[3]);//imunity
 	//wepangle = -wepangle
-	BackCont.viewx2 += lengthdir_x(8,ang)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(8,ang)*UberCont.opt_shake
+	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 4
 	wkick = -12
 
@@ -2553,16 +2548,14 @@ function scrFire() {
 
 	instance_create(x,y,Dust)
 
-	ang = aimDirection
 	var hitWall = false;
-	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,ang),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,ang),BloodSlash)
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),BloodSlash)
 	{
-		ang = other.ang
 		dmg = 4
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(ang,2+longarms)
+		motion_add(aimDirection,2+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -2570,29 +2563,28 @@ function scrFire() {
 	{
 		if !hitWall
 		{
-			hitWall = scrMoveContactSolid(ang,42)
+			hitWall = scrMoveContactSolid(aimDirection,42)
 			instance_create(x,y,Dust)
-			with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,ang),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,ang),BloodSlash)
+			with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),BloodSlash)
 			{
-				ang = other.ang
 				dmg = 4
 				longarms = 0
 				if instance_exists(Player)
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				motion_add(ang,2+longarms)
+				motion_add(aimDirection,2+longarms)
 				image_angle = direction
 				team = other.team
 			}
 		}
 	}
-	x += lengthdir_x(1,ang+180)
-	y += lengthdir_y(1,ang+180)
+	x += lengthdir_x(1,aimDirection+180)
+	y += lengthdir_y(1,aimDirection+180)
 	xprevious = x;
 	yprevious = y;
 
 	alarm[3]=max(4,alarm[3]);//imunity
-	BackCont.viewx2 += lengthdir_x(8,ang)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(8,ang)*UberCont.opt_shake
+	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 4
 	wkick = -12
 
@@ -2954,16 +2946,14 @@ function scrFire() {
 
 	instance_create(x,y,Dust)
 
-	ang = aimDirection
 	var hitWall = false;
-	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,ang),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,ang),FrostSlash)
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),FrostSlash)
 	{
-		ang = other.ang
 		dmg = 12
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(ang,2+longarms)
+		motion_add(aimDirection,2+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -2971,35 +2961,34 @@ function scrFire() {
 	{
 		if !hitWall
 		{
-			hitWall = scrMoveContactSolid(ang,42)
+			hitWall = scrMoveContactSolid(aimDirection,42)
 			instance_create(x,y,Dust)
 			with instance_create(x,y,IceFlame)
 			{
-				motion_add(other.ang,4+random(1))
+				motion_add(other.aimDirection,4+random(1))
 				image_angle = direction
 				team = other.team;
 			}
-			with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,ang),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,ang),FrostSlash)
+			with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),FrostSlash)
 			{
-				ang = other.ang
 				dmg = 12
 				longarms = 0
 				if instance_exists(Player)
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				motion_add(ang,2+longarms)
+				motion_add(aimDirection,2+longarms)
 				image_angle = direction
 				team = other.team
 			}
 		}
 	}
-	x += lengthdir_x(1,ang+180)
-	y += lengthdir_y(1,ang+180)
+	x += lengthdir_x(1,aimDirection+180)
+	y += lengthdir_y(1,aimDirection+180)
 	xprevious = x;
 	yprevious = y;
 
 	alarm[3]=max(4,alarm[3]);//imunity
-	BackCont.viewx2 += lengthdir_x(8,ang)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(8,ang)*UberCont.opt_shake
+	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 4
 	wkick = -12
 

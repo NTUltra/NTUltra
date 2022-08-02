@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMoneyPileDead","path":"sprites/sprMoneyPileDead/sprMoneyPileDead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMoneyPileDead",
     "tags": [],
     "resourceType": "GMSequence",
   },

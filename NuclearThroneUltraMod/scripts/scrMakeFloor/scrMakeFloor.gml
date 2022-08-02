@@ -554,7 +554,7 @@ function scrMakeFloor() {
 	}
 	}else instance_create(x,y,Floor)} 
 
-	if area = 103 {
+	if area = 103 || area == 125{
 	if round(instance_number(Floor)/12) = instance_number(Floor)/12 and instance_number(Floor) != 0
 	{
 	x += lengthdir_x(32,direction)
@@ -594,7 +594,7 @@ function scrMakeFloor() {
 	trn = 0;
 	else if area = 100
 	trn = choose(0,0,0,0,0,0,0,0,0,0,90,-90,180,180)
-	else if area = 103
+	else if area = 103 || area == 125
 	trn = choose(0,0,0,90,-90,180)
 	else if area == 114 || area == 123
 	trn = choose(0,0,0,0,0,90,-90,180)
@@ -796,7 +796,7 @@ function scrMakeFloor() {
 	instance_create(x,y,FloorMaker)
 	}
 
-	if area = 103//yv mansion
+	if area = 103 || area == 125//yv mansion
 	{
 	if random(31+instance_number(FloorMaker)) > 32
 	{

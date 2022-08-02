@@ -1,10 +1,11 @@
 {
   "spriteId": {
-    "name": "sprSplinter",
-    "path": "sprites/sprSplinter/sprSplinter.yy",
+    "name": "sprInfestBolt",
+    "path": "sprites/sprInfestBolt/sprInfestBolt.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskSplinter",
     "path": "sprites/mskSplinter/mskSplinter.yy",

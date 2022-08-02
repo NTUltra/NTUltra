@@ -53,13 +53,12 @@ if oldarea != area || area == 0 or !audio_is_playing(song) or audio_is_playing(m
     repeat(UberCont.racemax)
     deaths += UberCont.ctot_dead[dir]
 
-
-    audio_stop_all();
-
     if (confirmSound) {
         snd_play_2d(confirmSound);
         confirmSound = false;
     }
+	var prevSong = song;
+	var prevAmb = amb;
     if area = 0 {
 
         song = musThemeA;
@@ -258,9 +257,12 @@ if oldarea != area || area == 0 or !audio_is_playing(song) or audio_is_playing(m
         amb = amb102
     }
 
-	
-    snd_loop(song)
-    snd_loop(amb)
+	if song != prevSong || amb != prevAmb
+	{
+	    audio_stop_all();
+	    snd_loop(song);
+	    snd_loop(amb);
+	}
 	
 	if area == 119 || area == 120//Throne 2
 	{

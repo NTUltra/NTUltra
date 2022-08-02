@@ -36,7 +36,7 @@ if other.team != team and other.my_health > 0 && (other.team!=2 || image_index<5
 		with other
 			scrIframeSkipper(0.05);
 	}
-	x += (other.x-x)*0.2+random(6)-3
-	y += (other.y-y)*0.2+random(6)-3
+	x += (other.x-x)*0.25+random(6)-3
+	y += (other.y-y)*0.25+random(6)-3
 	speed *= 0.8
 }

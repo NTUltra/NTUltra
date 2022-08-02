@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskBandit",
     "path": "sprites/mskBandit/mskBandit.yy",
@@ -36,8 +37,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemies",
-    "path": "folders/Objects/Enemies.yy",
+    "name": "Mansion",
+    "path": "folders/Objects/Enemies/Mansion.yy",
   },
   "resourceVersion": "1.0",
   "name": "Molefish",

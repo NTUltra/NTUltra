@@ -402,7 +402,7 @@ function scrWeapons() {
 	wep_type[36] = 5
 	wep_auto[36] = 0
 	wep_load[36] = 24
-	wep_cost[36] = 4
+	wep_cost[36] = 4.5
 	wep_sprt[36] = sprEnergyHammer
 	wep_area[36] = 9
 	wep_text[36] = "break a leg"
@@ -555,7 +555,7 @@ function scrWeapons() {
 	wep_name[50] = "FLAMETHROWER"
 	wep_type[50] = 4
 	wep_auto[50] = 1
-	wep_load[50] = 9
+	wep_load[50] = 8
 	wep_cost[50] = 1
 	wep_sprt[50] = sprFlameThrower
 	wep_area[50] = 5
@@ -2265,8 +2265,8 @@ function scrWeapons() {
 	wep_name[205] = "PLASMA SHOTGUN"
 	wep_type[205] = 5
 	wep_auto[205] = 1
-	wep_load[205] = 28
-	wep_cost[205] = 4
+	wep_load[205] = 30
+	wep_cost[205] = 7
 	wep_sprt[205] = sprPlasmaShotGun
 	wep_area[205] = 8
 	wep_text[205] = ""
@@ -2342,8 +2342,8 @@ function scrWeapons() {
 	wep_name[212] = "SUPER ION CANNON"
 	wep_type[212] = 5
 	wep_auto[212] = 0
-	wep_load[212] = 35
-	wep_cost[212] = 10
+	wep_load[212] = 40
+	wep_cost[212] = 12
 	wep_sprt[212] = sprSuperIonCannon
 	wep_area[212] = 16
 	wep_text[212] = "raining hell"
@@ -3046,7 +3046,7 @@ function scrWeapons() {
 	wep_name[276] = "GOLDEN FLAMETHROWER"
 	wep_type[276] = 4
 	wep_auto[276] = 1
-	wep_load[276] = 10
+	wep_load[276] = 9
 	wep_cost[276] = 1
 	wep_sprt[276] = sprGoldenFlameThrower
 	wep_area[276] = 18
@@ -4205,7 +4205,7 @@ function scrWeapons() {
 	wep_type[381] = 2
 	wep_auto[381] = 0
 	wep_load[381] = 300
-	wep_cost[381] = 35
+	wep_cost[381] = 40
 	wep_sprt[381] = sprMuchasPelotilla
 	wep_area[381] = 26
 	wep_text[381] = "cest bon"
@@ -4216,7 +4216,7 @@ function scrWeapons() {
 	wep_type[382] = 5
 	wep_auto[382] = 0
 	wep_load[382] = 300
-	wep_cost[382] = 35
+	wep_cost[382] = 40
 	wep_sprt[382] = sprMuchasLaser
 	wep_area[382] = 26
 	wep_text[382] = "beau"
@@ -4326,7 +4326,7 @@ function scrWeapons() {
 	wep_type[392] = 4
 	wep_auto[392] = 0
 	wep_load[392] = 300
-	wep_cost[392] = 35
+	wep_cost[392] = 40
 	wep_sprt[392] = sprMuchasFuego
 	wep_area[392] = 26
 	wep_text[392] = "en petit peu"
@@ -4567,7 +4567,7 @@ function scrWeapons() {
 	wep_name[414] = "BUBBLER"
 	wep_type[414] = 4
 	wep_auto[414] = 0
-	wep_load[414] = 15
+	wep_load[414] = 17
 	wep_cost[414] = 2
 	wep_sprt[414] = sprBubbler
 	wep_area[414] = 9
@@ -4578,7 +4578,7 @@ function scrWeapons() {
 	wep_name[415] = "BLOOD BUBBLER"
 	wep_type[415] = 4
 	wep_auto[415] = 0
-	wep_load[415] = 12
+	wep_load[415] = 14
 	wep_cost[415] = 2
 	wep_sprt[415] = sprBloodBubbler
 	wep_area[415] = 8
@@ -4842,7 +4842,7 @@ function scrWeapons() {
 	wep_name[439] = "LOVE BUBBLER"
 	wep_type[439] = 4
 	wep_auto[439] = 0
-	wep_load[439] = 20
+	wep_load[439] = 21
 	wep_cost[439] = 2
 	wep_sprt[439] = sprLoveBubbler
 	wep_area[439] = 10
@@ -4966,7 +4966,7 @@ function scrWeapons() {
 	wep_load[450] = 14
 	wep_cost[450] = 2
 	wep_sprt[450] = sprPopLaser
-	wep_area[450] = 12
+	wep_area[450] = 13
 	wep_text[450] = "more pellets with higher accuracy"
 	wep_swap[450] = sndSwapMachinegun
 	wep_rad[450] = 0;
@@ -5195,7 +5195,7 @@ function scrWeapons() {
 	wep_type[471] = 4
 	wep_auto[471] = 0
 	wep_load[471] = 350
-	wep_cost[471] = 40
+	wep_cost[471] = 45
 	wep_sprt[471] = sprMuchasNieve
 	wep_area[471] = 30
 	wep_text[471] = "je ne parle pas de francais"
@@ -5789,7 +5789,7 @@ function scrWeapons() {
 	wep_type[525] = 5
 	wep_auto[525] = 0
 	wep_load[525] = 330
-	wep_cost[525] = 42
+	wep_cost[525] = 45
 	wep_sprt[525] = sprMuchasRayos
 	wep_area[525] = 30
 	wep_text[525] = "avec moi"
@@ -6500,6 +6500,60 @@ function scrWeapons() {
 	wep_swap[589] = sndSwapDragon
 	wep_rad[589] = 0;
 	
+	wep_name[590] = "TERMITE INJECTOR"
+	wep_type[590] = 0
+	wep_auto[590] = 0
+	wep_load[590] = 20
+	wep_cost[590] = 0
+	wep_sprt[590] = sprTermiteInjector
+	wep_area[590] = 13
+	wep_text[590] = "always clean your sword"
+	wep_swap[590] = sndSwapSword
+	wep_rad[590] = 0;
+	
+	wep_name[591] = "ENERGY LANCE"
+	wep_type[591] = 5
+	wep_auto[591] = 0
+	wep_load[591] = 10
+	wep_cost[591] = 2
+	wep_sprt[591] = sprEnergyLance
+	wep_area[591] = 11
+	wep_text[591] = ""
+	wep_swap[591] = sndSwapEnergy
+	wep_rad[591] = 0;
+	
+	wep_name[592] = "ENERGY SCYTHE"
+	wep_type[592] = 5
+	wep_auto[592] = 0
+	wep_load[592] = 18
+	wep_cost[592] = 2
+	wep_sprt[592] = sprEnergyScythe
+	wep_area[592] = 10
+	wep_text[592] = "energy all around"
+	wep_swap[592] = sndSwapHammer
+	wep_rad[592] = 0;
+	
+	wep_name[593] = "EXPLOSIVE SCREWDRIVER"
+	wep_type[593] = 4
+	wep_auto[593] = 0
+	wep_load[593] = 6
+	wep_cost[593] = 1
+	wep_sprt[593] = sprExplosiveScrewDriver
+	wep_area[593] = 9
+	wep_text[593] = "screwdriver will destroy it"
+	wep_swap[593] = sndSwapEnergy
+	wep_rad[593] = 0;
+	
+	wep_name[594] = "HEAVY CLUB"
+	wep_type[594] = 0
+	wep_auto[594] = 0
+	wep_load[594] = 30
+	wep_cost[594] = 0
+	wep_sprt[594] = sprHeavyClub
+	wep_area[594] = 8
+	wep_text[594] = "stick hit head"
+	wep_swap[594] = sndSwapHammer
+	wep_rad[594] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 

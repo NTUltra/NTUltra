@@ -1,7 +1,8 @@
 /// @description Focking fix
 
 //MAGIC REPAIR
-instance_create(x,y,CarVenusFixed)
+with instance_create(x,y,CarVenusFixed)
+	depth = other.depth-1;
 instance_change(Wind,false)
 
 

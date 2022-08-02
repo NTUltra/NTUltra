@@ -9,7 +9,7 @@ sucking = false;
 
 event_inherited();
 
-
+healAmount = 10;
 
 spr_idle = sprOasisBossIdle
 spr_walk = sprOasisBossWalk
@@ -36,8 +36,11 @@ intro=1;
 suckstrength=0;
 suckAcc = 0.091;
 maxspeed=2
+originalMaxspeed = maxspeed;
 persistent_direction = 0;
 actTime = 10;
+fishFireRate = 4;
+suckTime = 75;
 chargeSpeed = 7;
 chargeDis = 75;
 chargeTell = 20;

@@ -19,7 +19,7 @@ if canDeflect
 	exit;
 var ogx = UberCont.mouse__x;
 var ogy = UberCont.mouse__y;
-var dir = point_direction(x,y,target.x,target.y);
+var dir = point_direction(x,y,target.x+(target.hspeed),target.y+(target.hspeed));
 gunangle = dir;
 var len = 128;
 if scrMeleeWeapons(wep)

@@ -1525,7 +1525,7 @@ if skill_got[2] && !instance_exists(GenCont) && !instance_exists(LevCont)
 	if extrafeetalarm>0
 		extrafeetalarm--;
 
-	if extrafeetalarm == 7 && extrafeetdodged
+	if extrafeetalarm == 11 && extrafeetdodged && alarm[3] < 1
 	{
 		if race=25
 		{
@@ -1575,7 +1575,7 @@ if skill_got[2] && !instance_exists(GenCont) && !instance_exists(LevCont)
 				{
 					if team!=other.team//NOT FROM PLAYA!? O_O
 			        {                     
-						other.extrafeetalarm=19;//after some time we check if you've dodged this
+						other.extrafeetalarm=23;//after some time we check if you've dodged this
 						other.extrafeetdodged=true;
 			        }
 				}

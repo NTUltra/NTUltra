@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprWall103Out","path":"sprites/sprWall103Out/sprWall103Out.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprWall103Out",
     "tags": [],
     "resourceType": "GMSequence",
   },

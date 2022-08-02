@@ -8,7 +8,7 @@ snd_play(sndMeatExplo,0.1,true);
 instance_create(x,y,MeatExplosion);
 snd_play(sndTermite,0.3,true)
 var ang = random(360);
-var am = 3;
+var am = 2;
 var angStep = 360/am;
 repeat(am)
 {

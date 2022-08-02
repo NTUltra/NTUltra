@@ -117,6 +117,9 @@ break;
 case 124:
 sprite_index=sprWall124Trans;
 break;
+case 125:
+sprite_index=sprWall125Trans;
+break;
 default:
 sprite_index=sprWall0Trans;
 break;

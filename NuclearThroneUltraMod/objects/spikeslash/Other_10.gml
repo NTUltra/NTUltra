@@ -1,5 +1,5 @@
 /// @description Splinters on hit
-hitGuy = hitEntities[array_length(hitEntities)-1];
+var hitGuy = hitEntities[array_length(hitEntities)-1];
 with hitGuy
 {
 	snd_play(sndSplinterMinigun,0.05,true,false,2,false,false,0.7);

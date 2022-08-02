@@ -1,16 +1,16 @@
 /// @description Yoo
 if sprite_index = sprQuickBigPortalSpawn
 {
-	sprite_index = sprBigPortal;
+	sprite_index = sprInvertedBigPortal;
 	image_index = 0;
 	depth = 0;
 }
-else if sprite_index = sprBigPortal && instance_exists(Player)
+else if sprite_index = sprInvertedBigPortal && instance_exists(Player)
 {
-	sprite_index = sprBigPortalDisappear;
+	sprite_index = sprInvertedBigPortalDisappear;
 	image_index = 0;
 }
-else if sprite_index = sprBigPortalDisappear
+else if sprite_index = sprInvertedBigPortalDisappear
 {
 	//instance_destroy();
 	visible = false;

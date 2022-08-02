@@ -132,6 +132,9 @@ if instance_exists(Player)
 			case 124:
 				__background_set_colour( make_color_rgb(37,41,51) )
 			break;
+			case 125:
+				__background_set_colour( make_color_rgb(20,44,51) )
+			break;
 		}
 	}
 	else
@@ -223,6 +226,8 @@ if instance_exists(Player)
 		__background_set_colour( make_color_rgb(120,11,142) )
 		else if Player.area == 124//Inverted Mushroom
 		__background_set_colour( make_color_rgb(63,38,76) )
+		else if Player.area == 125//Inverted Mansion
+		__background_set_colour( make_color_rgb(178,149,124) )
 	}
 }
 else
@@ -240,7 +245,7 @@ if Player.area = 3 and Player.subarea = 3
 goal = 50+s
 else if Player.area = 100
 goal = 40
-if Player.area = 103
+if Player.area = 103 || Player.area == 125
 goal = 130+s
 //if Player.area = 102
 //goal = 130+s

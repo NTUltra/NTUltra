@@ -72,7 +72,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprDebris103","path":"sprites/sprDebris103/sprDebris103.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprDebris103",
     "tags": [],
     "resourceType": "GMSequence",
   },

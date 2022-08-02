@@ -72,7 +72,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprWall103Top","path":"sprites/sprWall103Top/sprWall103Top.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprWall103Top",
     "tags": [],
     "resourceType": "GMSequence",
   },

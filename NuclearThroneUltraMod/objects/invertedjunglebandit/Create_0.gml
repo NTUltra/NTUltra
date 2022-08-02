@@ -21,3 +21,4 @@ actTime = 10;
 alarm[2] = 1
 maxSpeed = 4;
 acc = 1;
+isInverted = true;

@@ -6,4 +6,4 @@ with myShield
 {
 	instance_destroy();
 }
-extrafeetalarm = 26;
+extrafeetalarm = 30;

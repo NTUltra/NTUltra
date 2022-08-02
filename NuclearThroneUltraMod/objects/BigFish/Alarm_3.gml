@@ -1,6 +1,6 @@
 /// @description shoot fishies
 
-alarm[3] = 4;
+alarm[3] = fishFireRate;
 
 if instance_exists(Player) {
 	with instance_create(x,y,BoneFish) {

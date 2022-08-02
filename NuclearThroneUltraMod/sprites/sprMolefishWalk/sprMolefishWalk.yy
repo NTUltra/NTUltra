@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMolefishWalk","path":"sprites/sprMolefishWalk/sprMolefishWalk.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMolefishWalk",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -33,8 +33,16 @@ function scrAreaName(area,subarea,loops){
 		txt = "???"
 		switch (area)
 		{
+			case 121://INV Savanna
+				txt = "1C_"+string(subarea);
+				upsideDown = true;
+			break;
 			case 101://Oasis
 				txt = "1B_"+string(subarea);
+			break;
+			case 122://Oasis
+				txt = "1B_"+string(subarea);
+				upsideDown = true;
 			break;
 			case 102://Pizza
 				txt = "2B_"+string(subarea);
@@ -42,11 +50,23 @@ function scrAreaName(area,subarea,loops){
 			case 103://YV MANSION
 				txt = "3B_"+string(subarea);
 			break;
+			case 125://INV YV MANSION
+				txt = "3B_"+string(subarea);
+				upsideDown = true;
+			break;
 			case 117://Mushroom
 				txt = "4C_"+string(subarea);
 			break;
+			case 124://INV Mushroom
+				txt = "4C_"+string(subarea);
+				upsideDown = true;
+			break;
 			case 114://Jungle
 				txt = "5C_"+string(subarea);
+			break;
+			case 123://INV Jungle
+				txt = "5C_"+string(subarea);
+				upsideDown = true;
 			break;
 			case 105: //Inverted desert
 				txt = "1_"+string(subarea);

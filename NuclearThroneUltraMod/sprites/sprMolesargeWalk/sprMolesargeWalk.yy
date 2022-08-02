@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMolesargeWalk","path":"sprites/sprMolesargeWalk/sprMolesargeWalk.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMolesargeWalk",
     "tags": [],
     "resourceType": "GMSequence",
   },

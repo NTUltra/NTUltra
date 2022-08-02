@@ -5,5 +5,5 @@ if myShield > 0
 with myShield
 	instance_destroy();
 	
-extrafeetalarm = 26;
+extrafeetalarm = 30;
 extrafeetdodged = false;

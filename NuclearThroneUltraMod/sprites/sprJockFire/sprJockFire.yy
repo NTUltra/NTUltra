@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprJockFire","path":"sprites/sprJockFire/sprJockFire.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprJockFire",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -2,7 +2,7 @@
 event_inherited()
 if object_index == BuffMushroom
 {
-scrDrop(41,5)
+scrDrop(30,5)
 
 var ang = random(360);
 var am = 6;

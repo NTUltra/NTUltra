@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMolefishHurt","path":"sprites/sprMolefishHurt/sprMolefishHurt.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMolefishHurt",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMolefishDead","path":"sprites/sprMolefishDead/sprMolefishDead.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMolefishDead",
     "tags": [],
     "resourceType": "GMSequence",
   },

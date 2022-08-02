@@ -97,7 +97,7 @@ speed = 0
 image_xscale = -point_distance(x,y,oldx,oldy)/2
 
 ammo -= 1
-if !place_free(x,y)
+if place_meeting(x,y,Wall)
 {
 	x = xprevious
 	y = yprevious

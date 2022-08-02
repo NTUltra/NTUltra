@@ -14,6 +14,6 @@ typ = 0 //0 = nothing, 1 = deflectable, 2 = destructable, 3 = deflectable
 
 walled = 0
 
-dmg=50//original 40
+dmg=45//original 40
 shk = 7;
 

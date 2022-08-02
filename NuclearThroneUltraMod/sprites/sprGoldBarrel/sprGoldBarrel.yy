@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprGoldBarrel","path":"sprites/sprGoldBarrel/sprGoldBarrel.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprGoldBarrel",
     "tags": [],
     "resourceType": "GMSequence",
   },

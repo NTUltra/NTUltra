@@ -72,7 +72,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprFloor103Explo","path":"sprites/sprFloor103Explo/sprFloor103Explo.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprFloor103Explo",
     "tags": [],
     "resourceType": "GMSequence",
   },

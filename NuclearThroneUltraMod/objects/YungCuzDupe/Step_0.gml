@@ -9,7 +9,7 @@ if skill_got[2]
 	if extrafeetalarm>0
 		extrafeetalarm--;
 
-	if extrafeetalarm == 7 && extrafeetdodged
+	if extrafeetalarm == 11 && extrafeetdodged && alarm[3] < 1
 	{
 		with instance_create(x+10,y+5,RedirectFX)
 		{
@@ -38,7 +38,7 @@ if skill_got[2]
 				{
 					if team!=other.team//NOT FROM PLAYA!? O_O
 			        {                     
-						other.extrafeetalarm=19;//after some time we check if you've dodged this
+						other.extrafeetalarm=23;//after some time we check if you've dodged this
 						other.extrafeetdodged=true;
 			        }
 				}
