@@ -1,2 +1,5 @@
 /// @description Deflected change bullet sprite
-sprite_index = sprBullet2;
+if sprite_index == sprEBullet3Disappear
+	sprite_index = sprBullet2Disappear;
+else
+	sprite_index = sprBullet2;

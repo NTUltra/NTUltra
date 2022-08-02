@@ -32,13 +32,13 @@ function scrDecideInvader(){
 					fe = sprFloor105Explo;
 				break
 				case 2://Sewers
-					array_push(spawns,BanditInverted, InvertedRatking, InvertedMeleeBandit, InvertedGator, InvertedRat, InvertedExploder, InvertedJellyFish,InvertedBoneFish);
+					array_push(spawns,InvertedRatking, InvertedMeleeBandit, InvertedGator, InvertedRat, InvertedExploder, InvertedJellyFish,InvertedBoneFish,InvertedBuffGator);
 					fa = sprFloor110;
 					fb = sprFloor110B;
 					fe = sprFloor110Explo;
 				break
 				case 3://Scrapyard
-					array_push(spawns,BanditInverted, InvertedRaven, InvertedBanditSquare, InvertedSniper, InvertedRaven, InvertedSalamander,choose(InvertedSnowBot,InvertedThief,InvertedMeleeBandit));
+					array_push(spawns,BanditInverted, InvertedRaven, InvertedBanditSquare, InvertedSniper, InvertedRaven, InvertedSalamander,choose(InvertedSnowBot,InvertedThief,InvertedMeleeBandit,InvertedBuffGator));
 					fa = sprFloor106;
 					fb = sprFloor106B;
 					fe = sprFloor106Explo;
@@ -92,13 +92,13 @@ function scrDecideInvader(){
 					fe = sprFloor1Explo;
 				break;
 				case 110://Inv Sewers
-					array_push(spawns,Bandit, Ratking, MeleeBandit, Gator, Rat, Exploder, ToxicMushroomGuy);
+					array_push(spawns,Ratking, MeleeBandit, Gator, Rat, Exploder, ToxicMushroomGuy, BuffGator);
 					fa = sprFloor2;
 					fb = sprFloor2B;
 					fe = sprFloor2Explo;
 				break
 				case 106://Inv Scrapyard
-					array_push(spawns,Bandit, Raven, BanditSquare, Sniper, Raven, Salamander,choose(SnowBot,Thief,MeleeBandit));
+					array_push(spawns,Bandit, Raven, BanditSquare, Sniper, Raven, Salamander,choose(SnowBot,Thief,MeleeBandit,BuffGator));
 					fa = sprFloor3;
 					fb = sprFloor3B;
 					fe = sprFloor3Explo;
@@ -158,13 +158,13 @@ function scrDecideInvader(){
 					fe = sprFloor101Explo;
 				break;
 				case 117://Mushroom land
-					array_push(spawns,InvertedBuffMushroom,InvertedToxicMushroomGuy, InvertedFireBat, InvertedSquareBat, InvertedRatking, LightningCrystal, choose(EraserBandit,InvertedNecromancer));
+					array_push(spawns,InvertedBuffMushroom,InvertedToxicMushroomGuy, InvertedFireBat, InvertedSquareBat, InvertedRatking, choose(InvertedBuffGator,LightningCrystal), choose(EraserBandit,InvertedNecromancer));
 					fa = sprFloor124;
 					fb = sprFloor124B;
 					fe = sprFloor124Explo;
 				break;
 				case 124://Inv Mushroom land
-					array_push(spawns,BuffMushroom,ToxicMushroomGuy, Exploder, Gator, Ratking, BanditSquare, choose(LaserBandit,Scorpion,Necromancer));
+					array_push(spawns,BuffMushroom,ToxicMushroomGuy, Exploder, choose(Spider,Gator), Ratking, BuffGator, choose(LaserBandit,Scorpion,Necromancer));
 					fa = sprFloor117;
 					fb = sprFloor117B;
 					fe = sprFloor117Explo;

@@ -1,4 +1,4 @@
-raddrop = 9
+raddrop = 8
 maxhealth = 12
 meleedamage = 0
 size = 1
@@ -23,7 +23,7 @@ alarm[1] = 30+random(90)
 if instance_exists(Player)
 {
 if Player.loops>0
-alarm[1] = 20+random(60);
+alarm[1] -= 10;
 }
 
 wkick = 0

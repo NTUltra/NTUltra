@@ -1,2 +1,2 @@
 /// @description Deflect
-sprite_index = sprFlakBulletDeflected;
+sprite_index = sprEFlak;

@@ -11,8 +11,9 @@ if target > 0 {
         if point_distance(target.x, target.y, x, y) > 48 and point_distance(target.x, target.y, x, y) < 120 {
             if random(2) < 1 {
                 alarm[2] = 16;
-                instance_create(x, y, Notice);
-
+                instance_create(x,y,Notice);
+				instance_create(x+5,y,Notice);
+				instance_create(x-5,y,Notice);
                 alarm[1] = 20 + random(5)
                 if instance_exists(Player) {
                     if Player.loops > 0
