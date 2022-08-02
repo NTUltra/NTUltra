@@ -1,8 +1,19 @@
-if alarm[11]>1//Frozen
+if alarm[11] > 1 && frozen//Frozen
 {
-if alarm[1]<8
-alarm[1]=18;
-
+	/*
+if alarm[1] > 1 && alarm[1] < 3
+{
+	alarm[1]=4;
+	alarm[11] -= 1;
+}*/
+	if alarm[1] < 2
+	{
+		frozen = false
+	}
+	else if alarm[11] < 10
+	{
+		frozen = false;
+	}
 
 	if instance_exists(Player)
 	{
@@ -10,8 +21,6 @@ alarm[1]=18;
 		{
 		x=xprevious;
 		y=yprevious;
-
-
 
 		if sprite_index!=spr_hurt && Player.race=24//Elementor's passive
 		{

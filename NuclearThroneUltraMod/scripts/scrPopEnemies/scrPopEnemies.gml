@@ -1092,7 +1092,7 @@ function scrPopEnemies() {
 		        }
 		        else {
 		            if random(4) < 1
-		            instance_create(x + 16, y + 16, choose(JungleAssassin, JungleBandit, JungleAssassinFake, JungleAssassinFake, JungleAssassinFake, JungleBandit, JungleBandit, FireWorm, Scorpion, BigMaggot, JungleFly,Maggot))
+						instance_create(x + 16, y + 16, choose(JungleAssassin, JungleBandit, JungleAssassinFake, JungleAssassinFake, JungleAssassinFake, JungleBandit, JungleBandit, FireWorm, Scorpion, BigMaggot, JungleFly,Maggot))
 		            else {
 		                if random(30) < 1 {
 							instance_create(x,y,BigWallBreak);

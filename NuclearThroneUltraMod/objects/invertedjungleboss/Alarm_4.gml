@@ -1,6 +1,6 @@
 /// @description End charge
 snd_play(sndEnemyFire)
-var pSpeed = 3;
+var pSpeed = 2.8;
 with instance_create(x,y,EnemyBullet1Square)
 {
 	motion_add(45,pSpeed)
@@ -25,7 +25,7 @@ with instance_create(x,y,EnemyBullet1Square)
 	image_angle = direction
 	team = other.team
 }
-pSpeed = 5;
+pSpeed = 5.2;
 with instance_create(x,y,EnemyBullet1Square)
 {
 	motion_add(0,pSpeed)

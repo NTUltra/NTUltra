@@ -12,7 +12,7 @@ if target > 0 {
         }
         else if point_distance(target.x, target.y, x, y) < 132 {
             //Fire
-            if random(5) < 2 && ammo > 0 {
+            if random(5) < 4 && ammo > 0 {
                 gunangle = point_direction(xprevious, yprevious, target.xprevious, target.yprevious)
 				gonnashoot += 6;
 				
