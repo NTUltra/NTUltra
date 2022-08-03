@@ -5,6 +5,7 @@ if target > 0 && instance_exists(target)
 	wkick = 4
 	var dir = point_direction(x,y,target.x,target.y);
 	gunangle = dir;
+	motion_add(gunangle+180,1);
 	var odis = fireOffset;
 	var xx = x + lengthdir_x(odis,dir+90);
 	var yy = y + lengthdir_y(odis,dir+90);

@@ -658,10 +658,10 @@ function scrWeapons() {
 	wep_name[59] = "LIGHTNING SHOTGUN"
 	wep_type[59] = 5
 	wep_auto[59] = 0
-	wep_load[59] = 22
-	wep_cost[59] = 3
+	wep_load[59] = 25
+	wep_cost[59] = 4
 	wep_sprt[59] = sprLightningShotgun
-	wep_area[59] = 10
+	wep_area[59] = 12
 	wep_text[59] = "hurricane"
 	wep_swap[59] = sndSwapEnergy
 	wep_rad[59] = 0;
@@ -2540,7 +2540,7 @@ function scrWeapons() {
 	wep_name[230] = "GOLDEN SCREWDRIVER"
 	wep_type[230] = 0
 	wep_auto[230] = 0
-	wep_load[230] = 6//11
+	wep_load[230] = 9//11
 	wep_cost[230] = 0
 	wep_sprt[230] = sprGoldenScrewdriver
 	wep_area[230] = 19
@@ -3874,7 +3874,7 @@ function scrWeapons() {
 	wep_load[351] = 22
 	wep_cost[351] = 32
 	wep_sprt[351] = sprBulletDisperseDisperseGun
-	wep_area[351] = 18
+	wep_area[351] = 19
 	wep_text[351] = "disperse it all!"
 	wep_swap[351] = sndSwapPistol
 	wep_rad[351] = 0;
@@ -5206,12 +5206,12 @@ function scrWeapons() {
 	wep_type[472] = 2
 	wep_auto[472] = 0
 	wep_load[472] = 8
-	wep_cost[472] = 2
+	wep_cost[472] = 3
 	wep_sprt[472] = sprUltraHeavySlugger
 	wep_area[472] = 25
 	wep_text[472] = "supermassive"
 	wep_swap[472] = sndSwapShotgun
-	wep_rad[472] = 10;
+	wep_rad[472] = 13;
 	
 	wep_name[473] = "ULTRA BAZOOKA"
 	wep_type[473] = 4

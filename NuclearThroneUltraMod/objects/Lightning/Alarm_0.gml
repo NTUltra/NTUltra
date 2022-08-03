@@ -1,5 +1,5 @@
 var ultraMod = -1
-var simpleAccuracy = 1;
+var simpleAccuracy = 1.5;
 if instance_exists(Player){
 if team == 2
 {
@@ -45,22 +45,22 @@ if team == 2
 	}
 	isog = false;
 	simpleAccuracy = Player.accuracy;
-accuracy += Player.accuracy*2;
-if Player.skill_got[19] == 1
-{accuracy-=3;}
-if Player.ultra_got[43]&&instance_exists(Marker)//hunter focused fire
-{accuracy-=5;}
-if Player.ultra_got[42]//hunter never miss
-{accuracy-=6;}
-var modBoost = 1;
-if Mod1=13
-accuracy-=modBoost;
-if Mod2=13
-accuracy-=modBoost;
-if Mod3=13
-accuracy-=modBoost;
-if Mod4=13
-accuracy-=modBoost;
+	accuracy += Player.accuracy*2;
+	if Player.skill_got[19] == 1
+	{accuracy-=3;}
+	if Player.ultra_got[43]&&instance_exists(Marker)//hunter focused fire
+	{accuracy-=5;}
+	if Player.ultra_got[42]//hunter never miss
+	{accuracy-=6;}
+	var modBoost = 1;
+	if Mod1=13
+	accuracy-=modBoost;
+	if Mod2=13
+	accuracy-=modBoost;
+	if Mod3=13
+	accuracy-=modBoost;
+	if Mod4=13
+	accuracy-=modBoost;
 
 }
 if accuracy<0
@@ -125,7 +125,7 @@ if ammo > 0
 		else
 			event_perform(ev_alarm,0)
 	}
-	if round(ammo) % fork == 0//Forking lightning
+	if team == 2 && round(ammo) % fork == 0//Forking lightning
 	{
 		with instance_create(x,y,Lightning)
 		{

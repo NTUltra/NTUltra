@@ -1,5 +1,5 @@
 event_inherited()
-raddrop = 8;
+raddrop = 9;
 maxhealth = 5;
 EnemyHealthAdjustments();
 spr_idle = sprInvertedSavannaBanditIdle

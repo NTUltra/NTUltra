@@ -204,10 +204,10 @@ room_speed=35;
 	}
     if skill_got[29]//insomnia
     {
-		var t = 200;
+		var t = 180;
 	    if race = 25
 	    {
-			t = 230;
+			t = 220;
 	    }
 		if justAsheep
 		{

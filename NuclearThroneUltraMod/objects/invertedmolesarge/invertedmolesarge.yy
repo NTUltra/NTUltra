@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprMolesargeIdle",
-    "path": "sprites/sprMolesargeIdle/sprMolesargeIdle.yy",
+    "name": "sprInvertedMolesargeIdle",
+    "path": "sprites/sprInvertedMolesargeIdle/sprInvertedMolesargeIdle.yy",
   },
   "solid": false,
   "visible": true,

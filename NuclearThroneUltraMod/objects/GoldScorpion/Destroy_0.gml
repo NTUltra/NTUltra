@@ -14,7 +14,7 @@ image_angle = direction
 dir += 72
 }
 if existTime > 10
-	repeat(50)//60
+	repeat(40)//60
 	{
 		with instance_create(x,y,EnemyBullet2)
 		{

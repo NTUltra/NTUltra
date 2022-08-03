@@ -21,7 +21,7 @@ BackCont.shake += 5
 snd_play_2d(sndVenuz)
 }
 
-if Player.area = 103
+if Player.area = 103 || Player.area == 125
 {
     //Player.area = 3
     //Player.subarea = 2

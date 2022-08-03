@@ -8,13 +8,13 @@ if instance_exists(Player)
     
     if Player.skill_got[5] = 1
     {
-    if my_health <= maxhealth*0.35//Plant thronebutt
-    {
-    with instance_create(x,y,PlantThronebutt)
-    image_angle=random(360);
-    my_health = 0
-    motion_add(point_direction(Player.x,Player.y,x,y),5)
-    }
+	    if my_health <= maxhealth*0.36//Plant thronebutt
+	    {
+		    with instance_create(x,y,PlantThronebutt)
+				image_angle=random(360);
+		    my_health = 0
+		    motion_add(point_direction(Player.x,Player.y,x,y),5)
+	    }
     }
     /*
     if Player.ultra_got[19]//plant leacher ultra C

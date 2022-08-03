@@ -2,6 +2,8 @@
 // /@description
 ///@param
 function scrAreaName(area,subarea,loops){
+	if subarea == 0
+		subarea = 2;
 	var txt = string(area)+"_"+string(subarea)
 	var upsideDown = false;
 	if area == 10

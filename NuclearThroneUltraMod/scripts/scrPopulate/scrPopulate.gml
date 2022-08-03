@@ -60,10 +60,10 @@ function scrPopulate() {
                 }
 				
                 //spawn some more enemies on loop 3
-                if Player.loops > 0 && random(8) < Player.loops
+                if Player.loops > 0 && random(5) < Player.loops
 					scrPopEnemies();
 					
-				if Player.loops > 8 && random(20) < Player.loops - 8
+				if Player.loops > 5 && random(15) < Player.loops - 8
 					scrPopEnemies();
 				
 				if UberCont.opt_gamemode == 34
@@ -104,10 +104,10 @@ function scrPopulate() {
 					}
 
                     //spawn some more enemies on loop
-                    if Player.loops > 0 && random(15) < Player.loops
+                    if Player.loops > 0 && random(10) < Player.loops
                     scrPopEnemies();
 
-                    if Player.loops > 9 && random(20) < Player.loops - 9
+                    if Player.loops > 9 && random(18) < Player.loops - 9
 					scrPopEnemies();
                 }
             }

@@ -499,7 +499,7 @@ if race=22
 ///imunity codes
 if ultra_got[48]&&lag>0
 {
-if tookHit&&my_health!=maxhealth&&alarm[3]<1
+if tookHit&&my_health!=maxhealth&&alarm[3]<1&&!exception
 {lag-=1;
 
 

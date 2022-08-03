@@ -13,7 +13,7 @@ gunangle = point_direction(x,y,target.xprevious,target.yprevious)+random(20)-10
 snd_play(sndMolesargeFire,0.05)
 wkick = 8
 motion_add(gunangle+180,3)
-
+snd_play(sndDiscgun,0.05);
 with instance_create(x,y,EnemyDisc)
 {motion_add(other.gunangle,3.5)
 image_angle = direction

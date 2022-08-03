@@ -21,6 +21,18 @@ function scrDecideInvader(){
 			var fa = sprFloor1;
 			var fb = sprFloor1B;
 			var fe = sprFloor1Explo;
+			//BIG MACHINE
+			if (area == 6 || area == 112)  && subarea == 2
+			{
+				am2 = 1;
+				am = 1;
+			}
+			else if (area == 9 || area == 118) && subarea == 2
+			{
+				//THRONE
+				am2 = 0;
+				am = 0;
+			}
 			//INVERTED INVASIONS!
 			repeat(am)
 			switch (area)
@@ -200,6 +212,7 @@ function scrDecideInvader(){
 					fe = sprFloor111Explo;
 				break
 			}
+			
 			if array_length(spawns) > 0
 				scrSpawnInversionInvasion(am2,spawns,fa,fb,fe);
 		}

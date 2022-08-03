@@ -13,7 +13,7 @@ target=-1;
 if instance_exists(Player)
 {
 if Player.skill_got[17] = 1
-dmg = 4+(Player.betterlaserbrain)
+dmg = 3+(Player.betterlaserbrain)
 }
 originalDirection=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 direction=originalDirection;

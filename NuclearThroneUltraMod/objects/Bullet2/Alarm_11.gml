@@ -40,7 +40,7 @@ if um == ultramods.bulletShotgun
 	with instance_create(x,y,ElectroBall)
 	{
 		dmg--;
-		electroDelay = 12;
+		electroDelay = 14;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;

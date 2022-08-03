@@ -7,6 +7,7 @@ if object_index!=SnowTank && object_index!=InvertedSnowTank && object_index!=Gol
 	myCorpse = instance_create(x,y,Corpse)
 	with myCorpse
 	{
+		depth = other.depth;
 		size = other.size
 		mask_index = other.mask_index
 		if other.speed > 0

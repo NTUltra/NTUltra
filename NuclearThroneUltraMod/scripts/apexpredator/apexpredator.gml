@@ -13,11 +13,11 @@ function ApexPredator(){
 					owner = other.id;
 				}
 			}
-			if alarm[3] < 120
+			if alarm[3] < 90
 			{
 				alarm[3] += 1 + (Player.speed*1.5);
 				if skill_got[5]
-					alarm[3] += 2;
+					alarm[3] += 1;
 				if skill_got[2]
 					alarm[3] += 1;
 			}

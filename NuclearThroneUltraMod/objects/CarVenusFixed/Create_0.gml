@@ -8,7 +8,7 @@ size = 1
 
 event_inherited()
 canMoveOver = true;
-
+instance_create(x,y,WallBreak);
 snd_hurt = sndHitMetal
 
 image_xscale = 1

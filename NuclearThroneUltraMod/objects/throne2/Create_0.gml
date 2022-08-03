@@ -1,5 +1,5 @@
 raddrop = 70
-maxhealth = 930
+maxhealth = 950
 loops = GetPlayerLoops();
 if UberCont.opt_gamemode == 34
 	maxhealth += 50;
@@ -25,7 +25,7 @@ if instance_exists(Player)
 {
 	if Player.skill_got[29]//insomnia
 	{
-		alarm[1] += 60;
+		alarm[1] += 50;
 		with instance_create(x,y,Snooze)
 		{
 			owner = other.id;
@@ -100,7 +100,7 @@ tauntdelay = 0
 instance_create(x,y,BigWallBreak);
 if instance_exists(Player)
 {
-	if Player.area == 120 || Player.area == 121
+	if Player.area == 120 || Player.area == 119
 		instance_create(x,y,DramaCamera);
 	else
 	{

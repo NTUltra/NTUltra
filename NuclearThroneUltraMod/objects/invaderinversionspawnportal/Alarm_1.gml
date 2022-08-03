@@ -14,8 +14,8 @@ for (var i = 0; i < al; i++)
 	{
 		if alarm[1] > 2
 		{
-			alarm[1] *= 0.5;
 			scrSleepyPopo();
+			alarm[1] *= 0.4;
 		}
 		instance_create(x,y,WallBreak);
 	}

@@ -71,7 +71,7 @@ function scrRaces() {
 	race_name[5] = "[PLANT]"
 	race_pass[5] = "IS FASTER"
 	race_acti[5] = "SNARE GROWTH"
-	race_butt[5] = "SNARE FINISHES ENEMIES#UNDER 30% HP"
+	race_butt[5] = "SNARE FINISHES ENEMIES#UNDER 36% HP"
 	//race_back[5] = "ENEMIES KILLED WHILE SNARED GIVE MORE DROPS THIS IS AN ULTRA ";
 	race_lock[5] = "KILL 100 ENEMIES TO UNLOCK"
 	race_have[5] = 0

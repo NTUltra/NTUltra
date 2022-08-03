@@ -1,5 +1,6 @@
 /// @description Explode it
 instance_destroy()
+snd_play(sndPlantPower);
 if instance_exists(Player){
 	if (Player.ultra_got[17])
 	{

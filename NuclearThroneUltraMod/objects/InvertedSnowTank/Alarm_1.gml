@@ -12,7 +12,7 @@ snd_play(sndSnowTankAim)
 scrTarget()
 if target > 0
 gunangle = point_direction(x,y,target.x,target.y)
-alarm[2] = 28
+alarm[2] = 32;
 
 ammo = 32
 }

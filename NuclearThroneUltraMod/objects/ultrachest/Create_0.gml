@@ -30,7 +30,7 @@ repeat(wepAmount)
 {
 	var tries = 0;//Prevent infinite loop eventhough I dont think its possible
 	do {
-		newWep = scrDecideWep(0, 20, 0);
+		newWep = scrDecideWep(-10, 20, 0);
 		tries ++;
 	} until (!array_contains(weps,newWep) || tries > 5000)
 	weps[i] = newWep;

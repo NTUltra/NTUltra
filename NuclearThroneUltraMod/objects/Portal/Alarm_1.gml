@@ -8,7 +8,7 @@ if type == 3 || inverted
 		if team != 2
 			numEn ++;
 	}
-	var atLeast = 10;
+	var atLeast = 5;
 	if numEn < atLeast || (instance_exists(IDPDVan) && numEn < atLeast + instance_number(IDPDVan))
 	{
 		goTime = true;
