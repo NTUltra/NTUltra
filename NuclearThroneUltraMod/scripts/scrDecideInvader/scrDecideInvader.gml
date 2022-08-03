@@ -217,7 +217,7 @@ function scrDecideInvader(){
 				scrSpawnInversionInvasion(am2,spawns,fa,fb,fe);
 		}
 		if UberCont.opt_gamemode == 34//Hard mode
-			loops += 3;
+			loops += 2;
 		if loops > 3
 		{
 			if (area == 2 || area == 110) && subarea == 1//SEWERS

@@ -341,9 +341,12 @@ lastsubarea = 1;
 hard = 0
 if UberCont.opt_gamemode == 34//HARD MODE
 {
-	hard = 3;
+	skillpoints ++;
 	if !instance_exists(PlayerSpawn)
+	{
+		hard = 3;
 		instance_create(x,y,HardModeChest);
+	}
 }
 inverted = false; //for when entering inverted portals
 invertedportalcounter = 0;

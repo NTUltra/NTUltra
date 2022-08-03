@@ -1,5 +1,5 @@
 /// @description Yaa
-if instance_exists(GenCont)
+if instance_exists(GenCont) || instance_exists(LevCont)
 {
 	alarm[0] = 10;
 }

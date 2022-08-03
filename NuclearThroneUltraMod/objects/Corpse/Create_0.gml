@@ -1,6 +1,6 @@
 friction = 0.415
 image_speed = 0.4
-depth = 7;
+depth = 6;
 dmg = 1;
 impactWristed = false;
 if instance_exists(Player){

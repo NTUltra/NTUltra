@@ -5425,7 +5425,7 @@ function scrWeapons() {
 	wep_name[492] = "SPLINTER MACE"
 	wep_type[492] = 0
 	wep_auto[492] = 0
-	wep_load[492] = 24
+	wep_load[492] = 22
 	wep_cost[492] = 0
 	wep_sprt[492] = sprSpikeMace
 	wep_area[492] = 6

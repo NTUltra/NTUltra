@@ -20,8 +20,8 @@ if instance_exists(Player)
 	if Player.ultra_got[92] && !Player.altUltra
 	{
 		dmg=4;
-		image_xscale += 0.1;
-		image_yscale += 0.1;
+		image_xscale += 0.06;
+		image_yscale += 0.06;
 	}
 }
 

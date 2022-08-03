@@ -6,6 +6,7 @@ if owner != -1 && instance_exists(owner) && owner.my_health > 0
 	{
 		with instance_create(x,y,InvertedGuardianSquareBullet) {
 			team = other.team
+			onlyHitPlayerTeam = other.onlyHitPlayerTeam;
 			motion_add(other.direction, other.speed)
 		}
 	}

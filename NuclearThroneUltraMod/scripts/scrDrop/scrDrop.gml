@@ -22,8 +22,8 @@ function scrDrop(itemdrop, weapondrop) {
 		}
 		if UberCont.opt_gamemode == 34 //HARD MODE
 		{
-			if itemdrop < 100
-				itemdrop *= 0.87;
+			itemdrop *= 0.94;
+			canHealth = 0.9;
 			weapondrop *= 1.09
 		}
 		var lps = Player.loops;

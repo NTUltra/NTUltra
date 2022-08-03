@@ -2,8 +2,6 @@
 
 // Inherit the parent event
 event_inherited();
-
-
 offset = 1;
 angle = 90;
 time = 0;

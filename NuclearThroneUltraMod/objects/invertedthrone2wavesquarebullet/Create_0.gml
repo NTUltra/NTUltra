@@ -2,10 +2,12 @@
 
 // Inherit the parent event
 event_inherited();
+onlyHitPlayerTeam = false;
 type = 3;
 dmg = 5;
 image_speed = 0.4;
 alarm[3] = 240;
+spawnDelay = 20;
 offset = 1;
 angle = 90;
 time = 1;
