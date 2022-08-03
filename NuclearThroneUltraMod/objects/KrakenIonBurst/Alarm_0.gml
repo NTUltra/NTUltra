@@ -11,8 +11,6 @@ y = creator.y
 
 snd_play(choose(sndWater1,sndWater2,sndBloodLauncher) ,0.1,true);
 
-if place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor)
-{
 
 with instance_create(UberCont.mouse__x,UberCont.mouse__y,Tentacle)
 {image_angle = random(360);
@@ -37,12 +35,16 @@ image_angle = other.image_angle
 }
 
 
-}
 
 BackCont.shake += 4
 creator.wkick = 6}
 
 
 if ammo <= 0
-instance_destroy()
+{
+	endx = UberCont.mouse__x;
+	endy = UberCont.mouse__y;
+	alarm[2] = 5;
+	alarm[0] = 0;
+}
 

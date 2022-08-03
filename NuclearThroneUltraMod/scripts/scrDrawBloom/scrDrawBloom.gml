@@ -340,6 +340,14 @@ function scrDrawBloom() {
 		draw_set_alpha(1);
 		scale -= 1;
 	}
+	with EnemyIon
+	{
+		scale += 0.5;
+		draw_set_alpha(ba);
+		event_perform(ev_draw,0);
+		draw_set_alpha(1);
+		scale -= 0.5;
+	}
 	with PlayerWazer
 	{
 		draw_sprite_ext(startSpr,-1,x,y,1,2,image_angle,c_white,ba);

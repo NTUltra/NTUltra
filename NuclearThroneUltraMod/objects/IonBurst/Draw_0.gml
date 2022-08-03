@@ -6,9 +6,9 @@ if alarm[2] > 0
 		ys = lerp(0,dis,
 			alarm[2]/5
 		);
-	draw_sprite_ext(sprLaser,-1,endx,endy,ys*0.5,scale,270,c_white,1)
-	draw_sprite_ext(sprIonEnd,-1,endx,endy-ys,1,scale,90,c_white,1)
-	draw_sprite_ext(sprIonEnd,-1,endx,endy,scale,scale,270,c_white,1)
+	draw_sprite_ext(sprLaser,-1,endx,endy,ys*0.5,scale,270,colour,1)
+	draw_sprite_ext(sprIonEnd,-1,endx,endy-ys,1,scale,90,colour,1)
+	draw_sprite_ext(sprIonEnd,-1,endx,endy,scale,scale,270,colour,1)
 }
 else if lp <= 0.2
 {
@@ -20,8 +20,8 @@ else if lp <= 0.2
 			lp/0.2
 		);
 	}
-	draw_sprite_ext(sprLaser,-1,UberCont.mouse__x,yy,1000,scale,270,c_white,1)
-	draw_sprite_ext(sprIonEnd,-1,UberCont.mouse__x,yy,scale,scale,270,c_white,1)
+	draw_sprite_ext(sprLaser,-1,UberCont.mouse__x,yy,1000,scale,270,colour,1)
+	draw_sprite_ext(sprIonEnd,-1,UberCont.mouse__x,yy,scale,scale,270,colour,1)
 }
 else
 {
@@ -33,8 +33,8 @@ else
 			lp
 		);
 	}
-	draw_sprite_ext(sprLaser,-1,x,yy,1000,scale,270,c_white,1)
-	draw_sprite_ext(sprIonEnd,-1,x,yy,scale,scale,270,c_white,1)
+	draw_sprite_ext(sprLaser,-1,x,yy,1000,scale,270,colour,1)
+	draw_sprite_ext(sprIonEnd,-1,x,yy,scale,scale,270,colour,1)
 	if lp > 0.9
-		draw_self();
+		draw_sprite_ext(sprite_index,-1,x,yy,scale*0.6,scale*0.6,image_angle,c_white,1)
 }

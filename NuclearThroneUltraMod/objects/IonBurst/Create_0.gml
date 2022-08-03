@@ -6,3 +6,4 @@ lp = 1;
 endx = x;
 endy = y;
 scale = 1;
+colour = c_white;

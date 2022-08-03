@@ -1,17 +1,15 @@
+/// @description xxx
 dir=random(360);
-
-//lengthdir_x(2+random(8),other.dir)
-
-/*with instance_create(x+lengthdir_x(2+random(8),other.dir),y+lengthdir_y(2+random(8),other.dir),PlasmaFX)
+lp = clamp((alarm[0]-1)/maxTime,0,1)
+if instance_exists(creator)
 {
-motion_add(other.dir+180,2+random(4))
-}*/
+x = creator.x
+y = creator.y
+}
+if lp > 0
+with instance_create(x,y,FishBoost)
+{
+motion_add( random(360),2+random(4) );
+}
 
-
-    with instance_create(x+lengthdir_x(2+random(8),other.dir),y+lengthdir_y(2+random(8),other.dir),FishBoost)
-    {
-    motion_add(other.dir+180,2+random(4))
-    }
-
-/* */
-/*  */
+image_angle += rotate;

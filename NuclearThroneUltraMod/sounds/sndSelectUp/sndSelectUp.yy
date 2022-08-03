@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndSelectUp",
-  "duration": 0.0,
+  "duration": 0.272018,
   "parent": {
     "name": "Menu",
     "path": "folders/Sounds/Menu.yy",

@@ -101,6 +101,15 @@ function scrCrownAnimation(takenCrown){
 			spr_walk = sprCrown23Walk
 			maxspeed = 1;
 		break;
-		
+		case 25://Freedom
+			spr_idle = sprCrown24Idle
+			spr_walk = sprCrown24Walk
+			maxspeed = 1;
+		break;
+		case 26://Energy
+			spr_idle = sprCrown25Idle
+			spr_walk = sprCrown25Walk
+			maxspeed = 1;
+		break;
 	}
 }

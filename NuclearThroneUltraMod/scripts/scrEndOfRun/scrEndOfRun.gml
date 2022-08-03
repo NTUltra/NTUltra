@@ -2,6 +2,10 @@
 // /@description reset some important variables
 ///@param
 function scrEndOfRun(){
+	with Player
+	{
+		audio_stop_sound(snd_dead);	
+	}
 	debug("END OF RUN");
 	with UberCont
 	{
