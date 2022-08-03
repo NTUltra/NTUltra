@@ -39,6 +39,10 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 					return scrDecideWepGold();	
 				}
 			}
+			if Player.hard + wepTier < 0
+			{
+				wepTier = 0;
+			}
 			var triesForSpecificTier = 0;
 			var maxValidTierWep = 0;
 			if UberCont.opt_gamemode == 31//Only melee

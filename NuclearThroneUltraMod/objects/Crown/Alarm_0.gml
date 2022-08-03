@@ -17,11 +17,12 @@ motion_add(random(360),2)
 walk = 5+random(10)
 }
 
-if speed > 0
+if speed > 0 && instance_exists(enemy)
 {
 if distance_to_object(enemy) < 48
 {
-dir = instance_nearest(x,y,enemy)
+var dir = instance_nearest(x,y,enemy)
+if dir != noone
 motion_add(point_direction(dir.x,dir.y,x,y),2)
 }
 motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),1)

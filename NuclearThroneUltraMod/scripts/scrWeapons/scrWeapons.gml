@@ -533,7 +533,7 @@ function scrWeapons() {
 	wep_name[48] = "ION CANNON"
 	wep_type[48] = 5
 	wep_auto[48] = 1
-	wep_load[48] = 14
+	wep_load[48] = 18
 	wep_cost[48] = 4
 	wep_sprt[48] = sprIonCannon
 	wep_area[48] = 8
@@ -2343,7 +2343,7 @@ function scrWeapons() {
 	wep_type[212] = 5
 	wep_auto[212] = 0
 	wep_load[212] = 40
-	wep_cost[212] = 12
+	wep_cost[212] = 15
 	wep_sprt[212] = sprSuperIonCannon
 	wep_area[212] = 16
 	wep_text[212] = "raining hell"

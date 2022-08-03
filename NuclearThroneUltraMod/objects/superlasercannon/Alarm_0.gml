@@ -13,6 +13,14 @@ y = creator.y+lengthdir_y(8,point_direction(creator.x,creator.y,UberCont.mouse__
 snd_play(sndLaser)
 var acc = 1;
 if instance_exists(Player)
+{
+	if Player.skill_got[17] = 1
+		snd_play_fire(sndLaserCannonUpg)
+	else
+		snd_play_fire(sndLaserCannon)
+}
+else
+	snd_play_fire(sndLaserCannon)
 acc = Player.accuracy;
 
 with instance_create(x,y,Laser)

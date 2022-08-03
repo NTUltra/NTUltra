@@ -13,11 +13,11 @@ if instance_exists(creator)
 	//FIRING
 if Player.skill_got[17] = 1
 {
-snd_play_fire(sndLaserUpg);
+snd_play_fire(sndLaserCannonUpg);
 }
 else
 {
-snd_play_fire(sndLaser);
+snd_play_fire(sndLaserCannon);
 }
 
 

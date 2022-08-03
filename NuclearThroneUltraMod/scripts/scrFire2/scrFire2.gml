@@ -517,17 +517,14 @@ function scrFire2() {
 	//SUPER ION CANNON
 	case 212:
 
-	if Player.skill_got[17] = 1
-	snd_play_fire(sndLaserUpg)
-	else
-	snd_play_fire(sndLaser)
+	snd_play_fire(sndLaserCannonCharge);
 	with instance_create(x,y,SuperIonBurst)
 	{
 	creator = other.id
 	ammo = 40
 	time = 1
 	team = other.team
-	alarm[0] = 20
+	alarm[0] = 15
 	}
 
 	BackCont.shake += 12
@@ -1367,7 +1364,7 @@ function scrFire2() {
 
 	with instance_create(x,y,Lightning)
 	{image_angle = aimDirection+(random(26)-13)*other.accuracy
-		iframeskip -= 0.02;
+		iframeskip -= 0.03;
 	team = other.team
 	ammo = 26
 	event_perform(ev_alarm,0)
@@ -10544,11 +10541,8 @@ function scrFire2() {
 	//SUPER LASER CANNON
 	case 584:
 
-	if Player.skill_got[17] = 1
-	snd_play_fire(sndLaserUpg)
-	else
-	snd_play_fire(sndLaser)
-
+	snd_play_fire(sndLaserCannonCharge)
+	
 	with instance_create(x,y,SuperLaserCannon)
 	{
 	creator = other.id

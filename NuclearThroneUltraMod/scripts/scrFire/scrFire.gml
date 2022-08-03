@@ -1142,19 +1142,14 @@ function scrFire() {
 
 	//ION CANNON
 	case 48:
-
-
-	if Player.skill_got[17] = 1
-	snd_play_fire(sndLaserUpg)
-	else
-	snd_play_fire(sndLaser)
+	snd_play_fire(sndLaserCannonCharge);
 	with instance_create(x,y,IonBurst)
 	{
 	creator = other.id
-	ammo = 20
+	ammo = 16
 	time = 1
 	team = other.team
-	alarm[0] = 25
+	alarm[0] = 20
 	}
 
 	BackCont.shake += 6
@@ -1301,10 +1296,7 @@ function scrFire() {
 	//LASER CANNON
 	case 55:
 
-	if Player.skill_got[17] = 1
-	snd_play_fire(sndLaserUpg)
-	else
-	snd_play_fire(sndLaser)
+	snd_play_fire(sndLaserCannonCharge)
 
 	with instance_create(x,y,LaserCannon)
 	{
@@ -1398,13 +1390,13 @@ function scrFire() {
 	else
 	snd_play_fire(choose(sndLightning2,sndLightning3))
 
-	repeat(8)
+	repeat(7)
 	{
 	with instance_create(x,y,Lightning)
 	{image_angle = aimDirection+(random(60)-30)*other.accuracy
 	team = other.team
-	ammo = 11+random(4)
-	iframeskip -= 0.02;
+	ammo = 10+random(5)
+	iframeskip -= 0.03;
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)
@@ -2358,6 +2350,7 @@ function scrFire() {
 
 	with instance_create(x,y,Lightning)
 	{image_angle = aimDirection+(random(20)-15)*other.accuracy
+		iframeskip -= 0.02;
 	team = other.team
 	ammo = 14
 	event_perform(ev_alarm,0)

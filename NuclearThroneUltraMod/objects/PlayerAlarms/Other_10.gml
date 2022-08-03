@@ -10,4 +10,8 @@ if instance_exists(Player)
 	{
 		alarm[4] = 30;
 	}
+	else if Player.crown == 26
+	{
+		alarm[5] = 120;	
+	}
 }

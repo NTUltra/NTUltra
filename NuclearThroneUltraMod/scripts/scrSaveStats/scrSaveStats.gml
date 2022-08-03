@@ -22,7 +22,7 @@ function scrSaveStats() {
 	
 	var cir = 0;
 	ctot_all_crowns_taken[dir] = 0;
-	repeat(crownmax+3)
+	repeat(crownmax+4)
 	{
 		ini_write_real("STATS","ctotcrownstaken"+string(dir)+"-"+string(cir),ctot_crown_taken[dir,cir]);
 		if (cir > 1)

@@ -5,7 +5,6 @@ if instance_exists(Player)
 	if Player.skillpoints > 0 or Player.crownpoints > 0
 	{
 		instance_create(0,0,BackCont)
-		debug("Hey");
 		if random(2000) < 1//Culture
 			snd_play_2d(sndYEAH,0,true,false,2,1);
 		instance_create(x,y,LevCont)

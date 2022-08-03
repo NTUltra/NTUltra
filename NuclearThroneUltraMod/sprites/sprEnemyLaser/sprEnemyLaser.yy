@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprEnemyLaser","path":"sprites/sprEnemyLaser/sprEnemyLaser.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprEnemyLaser",
     "tags": [],
     "resourceType": "GMSequence",
   },

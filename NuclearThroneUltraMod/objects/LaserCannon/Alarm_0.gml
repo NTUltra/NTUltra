@@ -10,7 +10,15 @@ if instance_exists(creator)
 x = creator.x+lengthdir_x(16,point_direction(creator.x,creator.y,UberCont.mouse__x,UberCont.mouse__y))
 y = creator.y+lengthdir_y(16,point_direction(creator.x,creator.y,UberCont.mouse__x,UberCont.mouse__y))
 //FIRING
-snd_play(sndLaser)
+if instance_exists(Player)
+{
+	if Player.skill_got[17] = 1
+		snd_play_fire(sndLaserCannonUpg)
+	else
+		snd_play_fire(sndLaserCannon)
+}
+else
+	snd_play_fire(sndLaserCannon)
 
 
 with instance_create(x,y,Laser)

@@ -260,9 +260,21 @@ race = Player.race
 }
 
 snd_play_2d(sndCrownRandom)
+var c = crown;
 with Crown
-{
-	scrCrownAnimation(other.crown);	
+{	
+	if c == 26
+	{
+		instance_destroy();
+		with instance_create(x,y,CrownGunned)
+		{
+			scrCrownAnimation(c);
+		}
+	}
+	else
+	{
+		scrCrownAnimation(c);
+	}
 }
 }
 

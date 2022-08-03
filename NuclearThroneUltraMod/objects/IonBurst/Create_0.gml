@@ -1,2 +1,8 @@
 dir=random(360);
-
+image_speed = 0.4;
+maxTime = 10;
+alarm[1] = 1;
+lp = 1;
+endx = x;
+endy = y;
+scale = 1;

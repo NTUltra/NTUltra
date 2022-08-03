@@ -137,11 +137,17 @@ function scrCrowns() {
 	crown_used[24] = 0
 	crown_tips[24] = "slow it down there buddy"
 	
-	//Secret crown two ultra weapons
+	//Secret crown two explosive weapons
 	crown_name[25] = "[CROWN OF FREEDOM]"
 	crown_text[25] = "WALLS DON'T EXIST"
 	crown_used[25] = 0
 	crown_tips[25] = "freedom!"
+	
+	//Secret crown two energy weapons
+	crown_name[26] = "[CROWN OF ENERGY]"
+	crown_text[26] = "THE CROWN GETS A LASER PISTOL#AND FIGHTS WITH YOU#CONSTANT ION STRIKES RAIN DOWN UPON YOU"
+	crown_used[26] = 0
+	crown_tips[26] = "just give it a gun and it is fun"
 
 	crownmax = 23
 

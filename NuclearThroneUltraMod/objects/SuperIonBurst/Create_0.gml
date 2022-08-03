@@ -1,2 +1,2 @@
-dir=random(360);
-
+event_inherited();
+scale = 2;

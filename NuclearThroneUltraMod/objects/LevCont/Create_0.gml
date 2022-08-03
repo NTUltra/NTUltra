@@ -22,8 +22,13 @@ if dir<12
 	with instance_create(__view_get( e__VW.XView, 0 )+14+dir*26.5,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-50,CrownIcon)//24
 	{
 		crown = other.dir
-		if crown == 0 && Player.wep_type[Player.wep] == 4 && Player.wep_type[Player.bwep] == 4//Crown of freedom secret 2 explosive weps
-			crown = 25;
+		if crown == 0 
+		{
+			if Player.wep_type[Player.wep] == 4 && Player.wep_type[Player.bwep] == 4//Crown of freedom secret 2 explosive weps
+				crown = 25;
+			else if Player.wep_type[Player.wep] == 5 && Player.wep_type[Player.bwep] == 5//Crown of energy
+				crown = 26;
+		}
 		else if crown == 8 && Player.tookDestiny//Crown of sloth secret
 			crown = 24;
 	}

@@ -485,8 +485,8 @@ repeat(1+loops)
 			};
 			i++;
 			wave[i] = {
-				obj: Gator,
-				time: 10
+				obj: BuffGator,
+				time: 30
 			};
 			i++;
 			wave[i] = {
@@ -557,7 +557,7 @@ repeat(1+loops)
 				};
 				i++;
 			}
-			repeat(4)
+			repeat(3)
 			{
 				wave[i] = {
 					obj: ToxicBarrel,
@@ -565,6 +565,16 @@ repeat(1+loops)
 				};
 				i++;
 			}
+			wave[i] = {
+				obj: ToxicBarrel,
+				time: 90,
+			};
+			i++;
+			wave[i] = {
+					obj: BuffGator,
+					time: 10,
+				};
+			i++;
 		break;
 		#endregion
 		#region wave 3 scrapyard
@@ -2556,8 +2566,8 @@ repeat(1+loops)
 			};
 			i++;
 			wave[i] = {
-				obj: InvertedGator,
-				time: 10
+				obj: InvertedBuffGator,
+				time: 30
 			};
 			i++;
 			wave[i] = {
@@ -2719,6 +2729,11 @@ repeat(1+loops)
 				};
 				i++;
 			}
+			wave[i] = {
+				obj: InvertedBuffGator,
+				time: 60,
+			};
+			i++;
 			wave[i] = {
 				obj: InvertedGator,
 				time: 200,

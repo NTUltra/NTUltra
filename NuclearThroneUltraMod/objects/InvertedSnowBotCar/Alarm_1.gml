@@ -1,4 +1,4 @@
-alarm[1] = 30
+alarm[1] = 25
 scrTarget()
 meleedamage = 0
 sprite_index = spr_idle
