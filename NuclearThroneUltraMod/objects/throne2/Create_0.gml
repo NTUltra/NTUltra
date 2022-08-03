@@ -2,8 +2,8 @@ raddrop = 70
 maxhealth = 950
 loops = GetPlayerLoops();
 if UberCont.opt_gamemode == 34
-	maxhealth += 50;
-maxhealth += max(0,40*min(12,(loops-1)));
+	maxhealth += 60;
+maxhealth += max(0,50*min(12,(loops-1)));
 meleedamage = 10
 size = 6;
 

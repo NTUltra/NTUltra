@@ -2,7 +2,8 @@
 scrDecideInvader();
 var spawnarea =  Player.area;
 var subarea =  Player.subarea;
-if ( !(spawnarea == 9 && subarea == 3) && !(spawnarea == 6 && subarea == 2)
+if ( !((spawnarea == 9 || spawnarea == 118) && subarea == 3) && !((spawnarea == 6 || spawnarea == 112) && subarea == 2)
+	&& !(spawnarea == 119 || spawnarea == 120)
 	&& spawnarea != 100 && spawnarea != 104)
 {
 	var tots = clamp(round(GetPlayerLoops()*0.5) - 3,0,8);
