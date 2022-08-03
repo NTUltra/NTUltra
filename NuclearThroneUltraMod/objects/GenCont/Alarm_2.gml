@@ -6,7 +6,7 @@ if ( !((spawnarea == 9 || spawnarea == 118) && subarea == 3) && !((spawnarea == 
 	&& !(spawnarea == 119 || spawnarea == 120)
 	&& spawnarea != 100 && spawnarea != 104)
 {
-	var tots = clamp(round(GetPlayerLoops()*0.5) - 3,0,8);
+	var tots = clamp(round(GetPlayerLoops()*0.5) - 2,0,6);
 	if UberCont.opt_gamemode == 34//HARD MODE
 		tots ++;
 	if tots > 0
