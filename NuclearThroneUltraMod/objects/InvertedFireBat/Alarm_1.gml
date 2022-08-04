@@ -1,10 +1,5 @@
-alarm[1] = 5+random(15)
+alarm[1] = actTime+random(actTime)
 
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1] = 10+random(12);
-}
 
 if sprite_index != spr_hurt
 sprite_index = spr_idle
@@ -33,7 +28,7 @@ if nukeIt
 speed*=0.4;
 image_index = 0
 sprite_index = spr_fire
-alarm[1] = 23
+alarm[1] = actTime*3
 
 if instance_exists(Player)
 {

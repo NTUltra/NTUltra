@@ -1,10 +1,5 @@
-alarm[1] = 5+random(8)
+alarm[1] = actTime + random(actTime)
 
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1] = 4+random(10);
-}
 
 scrTarget()
 if target > 0
@@ -18,12 +13,7 @@ if point_distance(target.x,target.y,x,y) > 48 and point_distance(target.x,target
 		alarm[2]=9;
 		instance_create(x,y,Notice);
 
-		alarm[1] = 10+random(5)
-		if instance_exists(Player)
-		{
-		if Player.loops>0
-		alarm[1] = 5+random(8);
-		}
+		alarm[1] = actTime*2+random(actTime)
 	}
 	else if random(2) < 1 {
         direction = point_direction(x, y, target.x, target.y) + random(180) - 90
@@ -49,7 +39,7 @@ else
 {
 direction = point_direction(target.x,target.y,x,y)+random(20)-10
 speed = 0.4
-walk = 40+random(10)
+walk = 30+random(10)
 gunangle = point_direction(x,y,target.x,target.y)
 }
 

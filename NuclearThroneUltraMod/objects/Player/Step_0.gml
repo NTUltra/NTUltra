@@ -1532,7 +1532,7 @@ if skill_got[2] && !instance_exists(GenCont) && !instance_exists(LevCont)
 			{
 				sprite_index = sprExtraFeetCloseDodge;	
 			}
-			if scrDrop(80,5)
+			if scrDrop(75,5)
 				snd_play(sndExtraFeetDodge);
 			else
 				snd_play(sndExtraFeetDodgeFail);

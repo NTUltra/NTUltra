@@ -15,7 +15,7 @@ if skill_got[2]
 		{
 			sprite_index = sprExtraFeetCloseDodge;	
 		}
-		if scrDrop(75,4)
+		if scrDrop(70,4)
 			snd_play(sndExtraFeetDodge);
 		else
 			snd_play(sndExtraFeetDodgeFail);

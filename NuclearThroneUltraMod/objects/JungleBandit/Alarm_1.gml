@@ -10,12 +10,15 @@ if target > 0 {
             walk = 10 + random(10)
             gunangle = point_direction(x, y, target.x, target.y)
         }
-        else if point_distance(target.x, target.y, x, y) < 132 {
+        else if point_distance(target.x, target.y, x, y) < 140 {
             //Fire
             if random(5) < 4 && ammo > 0 {
                 gunangle = point_direction(xprevious, yprevious, target.xprevious, target.yprevious)
 				gonnashoot += 6;
-				
+				with JungleBandit
+				{
+					alarm[1] += 2;
+				}
 				if gonnashoot > ammo
 					gonnashoot = ammo;
 				

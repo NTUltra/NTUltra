@@ -24,6 +24,10 @@ alarm[1] = 10+random(10)
 if instance_exists(Player)
 motion_add(point_direction(Player.x,Player.y,x,y),1)
 
+actTime = 8;
 nukeIt = false;
-if GetPlayerLoops() > 12
+loops = GetPlayerLoops();
+if loops > 0
+	actTime = 9;
+if loops > 5
 	nukeIt = true;

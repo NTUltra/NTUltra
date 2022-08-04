@@ -108,7 +108,7 @@ function scrTips() {
 	if Player.area = 100
 	tip = choose("aw yes","take a crown to uncurse your weapon","there is value here","visit this place atleast twice","let's hope its not toxic again",
 	"old torches","you can get 3 mods#on a single weapon","mods stack","take a crown to unlock#crown start for this character","most weapon mods benefit from#weapon specific mutations",
-	"power craving spawns more mods","open mind can spawn two proto chests","weapon mods can be rerolled#when you have 3")
+	"power craving spawns more mods","open mind can spawn two proto chests","weapon mods can be rerolled#when you have 3","when you mod a weapon it will always come through the portal with you even if you leave it")
 	if Player.area = 102
 	tip = choose("hunger...","it smells nice here","wait for it....")
 	if Player.area = 103

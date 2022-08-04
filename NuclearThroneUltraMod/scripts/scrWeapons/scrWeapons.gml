@@ -3685,7 +3685,7 @@ function scrWeapons() {
 	wep_type[334] = 4
 	wep_auto[334] = 0
 	wep_load[334] = 12
-	wep_cost[334] = 1
+	wep_cost[334] = 1.5
 	wep_sprt[334] = sprIonBomb
 	wep_area[334] = 5
 	wep_text[334] = "explosions out of nowhere"

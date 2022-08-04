@@ -19,11 +19,12 @@ snd_dead = sndGatorDie
 walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(90)
-
-if instance_exists(Player)
+actTime = 9;
+loops = GetPlayerLoops();
+if loops > 0
 {
-if Player.loops>0
-alarm[1] -= 10;
+	actTime = 7;
+	alarm[1] -= 10;
 }
 
 wkick = 0

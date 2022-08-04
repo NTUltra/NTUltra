@@ -1,10 +1,5 @@
-alarm[1] = 14+random(15)
+alarm[1] = actTime+random(actTime)
 
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1] = 10+random(12);
-}
 
 if sprite_index != spr_hurt
 sprite_index = spr_idle
@@ -13,7 +8,7 @@ if target > 0
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {
-if random(20) < 1 && point_distance(target.x,target.y,x,y)<164
+if random(20) < 1 && point_distance(target.x,target.y,x,y)<180
 {
 snd_play(sndFlare);
 direction = point_direction(x,y,target.x,target.y)+180
@@ -34,7 +29,7 @@ if nukeIt
 speed*=0.4;
 image_index = 0
 sprite_index = spr_fire
-alarm[1] = 30
+alarm[1] = actTime*3
 
 if instance_exists(Player)
 {

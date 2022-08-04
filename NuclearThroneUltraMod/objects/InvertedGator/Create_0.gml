@@ -23,11 +23,15 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(30)
 
-if instance_exists(Player)
+actTime = 6;
+loops = GetPlayerLoops();
+if loops > 0
 {
-if Player.loops>0
-alarm[1] = 20+random(40);
+	actTime = 4;
+	alarm[1] -= 10;
 }
+
+
 
 wkick = 0
 
