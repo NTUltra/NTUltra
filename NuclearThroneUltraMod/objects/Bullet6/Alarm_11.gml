@@ -27,6 +27,7 @@ if um == ultramods.bulletShotgun
 	instance_destroy(id,false);
 }else if um == ultramods.shotgunElectro
 {
+	/*
 	with Player
 	{
 		if skill_got[17] = 1
@@ -45,6 +46,19 @@ if um == ultramods.bulletShotgun
 		speed = other.speed;
 		team = other.team;
 		alarm[11] = 0;
+	}*/
+	with instance_create(x,y,MiniFlameCannonBall)
+	{
+		sprite_index = sprVeryMiniFlameCannonBall;
+		mask_index = mskBullet2;
+		bloomSprite = sprVeryMiniFlameCannonBallBloom;
+		fireAmount = 1;
+		fireExplosionAmount = 4;
+		alarm[0] = 0;
+		alarm[2] = 1+irandom(2);
+		dmg = other.dmg;
+		motion_add(other.direction,other.speed*0.8)
+		team = other.team
 	}
 	instance_destroy(id,false);
 }

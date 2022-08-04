@@ -13,7 +13,7 @@ branch = 20;
 image_speed = 0.4
 target=enemy;
 dmg = 5;
-iframeskip = 0.11;
+iframeskip = 0.1;
 fork = 6;
 if instance_exists(Player){
 	if Player.skill_got[17] = 1{

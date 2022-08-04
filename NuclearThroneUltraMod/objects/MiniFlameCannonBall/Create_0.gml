@@ -8,10 +8,14 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 image_speed=0.4;
-alarm[0]=5;
+alarm[0]=4;
 image_angle=random(360);
 
 alarm[1]=120;
 snd_loop(sndFlamerLoop);
 dmg = 20;
+fireAmount = 2;
+fireExplosionAmount = 10;
 inverted = false;
+fireDelay = 2;
+bloomSprite = sprMiniFlameCannonBallBloom;

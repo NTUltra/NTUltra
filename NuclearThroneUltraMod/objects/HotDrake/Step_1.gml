@@ -1,8 +1,7 @@
 if awake=false{
 x=xstart+2000;//place outside level
 y=ystart+2000;
-maxhealth = 1000//1250//Big Dog =300
-my_health=maxhealth;
+my_health = maxhealth;
 
 EnemyHealthAdjustments();
 

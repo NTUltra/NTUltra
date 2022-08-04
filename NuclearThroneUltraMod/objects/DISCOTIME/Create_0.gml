@@ -25,3 +25,4 @@ with instance_create(x,y,Flash)
 alarm[0] = audio_sound_length(sndChubbyEmuSong);
 sheep = ds_list_create();
 alarm[1] = 20;
+audio_sound_gain(sndChubbyEmuSong, max(0, sqrt(UberCont.opt_musvol)), 0);

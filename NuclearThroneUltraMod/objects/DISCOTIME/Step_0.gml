@@ -9,6 +9,7 @@ if instance_exists(Player) && Player.wep == 396
 		{
 			snd_loop(sndChubbyEmuSong);
 		}
+		audio_sound_gain(sndChubbyEmuSong, max(0, sqrt(UberCont.opt_musvol)), 0);
 		with MusCont
 		{
 			audio_pause_sound(song);

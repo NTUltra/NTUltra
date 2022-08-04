@@ -71,7 +71,7 @@ if target > 0 && alarm[6] < 1 && alarm[7] < 1 {
 					anyfishsucking = true;
 					
 					if point_distance(other.x, other.y, target.x, target.y) < 160
-					other.walk = other.alarm[1]
+						other.walk = other.alarm[1]
 					var targetdir = point_direction(other.x, other.y, target.x, target.y)
 					var fishdir = point_direction(other.x, other.y, x, y)
 					direction = reverseAngle(getMedianAngle(targetdir, fishdir))
@@ -83,24 +83,26 @@ if target > 0 && alarm[6] < 1 && alarm[7] < 1 {
 				var fish = 0;
 				
 				with BoneFish {
-					if point_distance(other.x, other.y, x, y) < 125 {
+					if point_distance(other.x, other.y, x, y) < 120 {
 						fish++;
 					}
 				}
 				
 				var maxfish = 2
+				if (inverted)
+					maxfish += 10;
 				if instance_exists(Player) {
 					maxfish += Player.loops*5
 				}
 				
-		        if fish < maxfish && (point_distance(x, y, Player.x, Player.y) > 75) {
+		        if fish < maxfish && (point_distance(x, y, Player.x, Player.y) > 60) {
 		            image_index = 0
 		            sprite_index = spr_startfire
-		            alarm[3] = 15;
-		            alarm[4] = 28;
+		            alarm[3] = actTime;
+		            alarm[4] = 14+actTime;
 		        } else {
 		            direction = point_direction(x, y, target.x, target.y)
-		            walk = 10 + random(10);
+		            walk = actTime + random(actTime);
 		            alarm[1] = walk;
 		        }
 			}
@@ -108,7 +110,7 @@ if target > 0 && alarm[6] < 1 && alarm[7] < 1 {
     } else { //wall in between
 		maxspeed = originalMaxspeed + 2
 		direction = point_direction(x, y, target.x, target.y);
-		walk = 10 + random(10);
+		walk = actTime + random(actTime);
 		alarm[1] = walk;
 		if my_health < maxhealth //heal cause player is hiding
 	    {

@@ -6,15 +6,14 @@ if instance_exists(Player){
 		{
 		with instance_create(x,y,TrapFire)
 		{motion_add(random(360),0.2+random(2))
-		team = other.team
-		move_contact_solid(direction,4)}
+		team = other.team}
 		}
 
 	}
 	else{
 		var ang = direction;
 		var angstep = 360/10;
-		repeat(10)
+		repeat(fireExplosionAmount)
 		{
 		with instance_create(x,y,Flame)
 		{motion_add(ang,2+random(2))

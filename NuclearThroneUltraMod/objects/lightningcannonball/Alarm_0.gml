@@ -5,6 +5,7 @@ snd_play(choose(sndSpark1,sndSpark2))
 
 with instance_create(x,y,Lightning)
 {
+	iframeskip -= 0.02;
 	image_angle = random(360);
 	accuracy=0;
 	team = other.team
@@ -14,5 +15,5 @@ with instance_create(x,y,Lightning)
 	with instance_create(x,y,LightningSpawn)
 		image_angle = other.image_angle
 }
-alarm[0] = 1+irandom(1);
+alarm[0] = 2+irandom(1);
 BackCont.shake += 3

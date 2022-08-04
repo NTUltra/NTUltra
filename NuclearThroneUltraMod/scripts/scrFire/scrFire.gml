@@ -2601,7 +2601,6 @@ function scrFire() {
 	}
 	with instance_create(x,y,MiniFlameCannonBall)
 	{
-	image_angle=random(360);
 	motion_add(aimDirection+(random(8)-4)*other.accuracy,3)
 	team = other.team}
 

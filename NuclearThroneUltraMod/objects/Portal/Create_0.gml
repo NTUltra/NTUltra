@@ -1,6 +1,6 @@
 image_speed = 0;
 visible  = false;
-depth = 6;
+depth = 4;
 type=1;
 inverted=false;//is this an inverted portal?
 
@@ -18,7 +18,7 @@ var chance = 1;
 
 if instance_exists(Player)
 {
-	if Player.race=22//Rogue
+	if Player.race=22 && Player.area != 100 && !((Player.area == 9 || Player.area == 118) && Player.subarea == 3)//Rogue
 	{
 		repeat(1+irandom(3))
 			instance_create(x,y,IDPDSpawn);

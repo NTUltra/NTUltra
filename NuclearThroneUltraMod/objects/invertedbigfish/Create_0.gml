@@ -3,15 +3,17 @@
 // Inherit the parent event
 event_inherited();
 raddrop = 70;
-maxhealth = 190;//210
-meleedamage = 3
+maxhealth = 197;//210
+meleedamage = 4
 size = 3
 if GetPlayerLoops() > 0{
-	maxhealth = 340//370;
+	maxhealth = 350//370;
 }
 healAmount = 15;
 EnemyHealthAdjustments()
-actTime = 5;
+inverted = true;
+actTime = 4;
+suckRange = 160;
 maxspeed = 3;//2
 suckTime = 50;
 fishFireRate = 2;

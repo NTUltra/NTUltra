@@ -50,7 +50,7 @@ if prevhealth > my_health
 		}
 		if Player.ultra_got[29] && Player.altUltra && Player.bwep == 0
 		{
-			dmgTaken = dmgTaken*1.25;
+			dmgTaken = dmgTaken*1.20;
 			my_health = prevhealth - dmgTaken;
 		}
 		if (Player.ultra_got[71] == 1) //ANGEL Ultra tranquility

@@ -8,7 +8,7 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 
 typ = 0//2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 
-image_speed = 0.2+random(0.2)
+image_speed = 0.38;
 friction = 0.15
 image_angle = random(360)
 

@@ -40,7 +40,7 @@ function suck() {
 	}
 	with BoneFish
 	{
-		if point_distance(x,y,other.x,other.y) < 100
+		if point_distance(x,y,other.x,other.y) < suckRange
 		{
 			if place_free(x+lengthdir_x(7,point_direction(x,y,other.x,other.y)),y)
 				x += lengthdir_x(other.suckstrength,point_direction(x,y,other.x,other.y))
@@ -60,6 +60,14 @@ function suck() {
 	direction = point_direction(x,y,target.xprevious,target.yprevious)
 	BackCont.shake += 0.5
 	speed=0;
+	if inverted
+	{
+		with instance_create(x,y,ToxicGas)
+		{
+			cantHitTeam = other.team;
+			motion_add(point_direction(x,y,other.x,other.y),other.suckstrength+random(0.5))
+		}
+	}
 	repeat(2) {
 		with instance_create(x+lengthdir_x(16+random(64),direction),y+lengthdir_y(16+random(64),direction),Dust)
 		motion_add(point_direction(x,y,other.x,other.y),other.suckstrength+random(2))

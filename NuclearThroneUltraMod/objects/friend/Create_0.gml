@@ -6,7 +6,6 @@ my_health = maxhealth;
 team = 2;
 image_speed = 0.4;
 hurt_pitch_variation = 0;
-wkick = 0;
 scrWeapons();
 scrUltras();
 scrSkills();

@@ -7,8 +7,6 @@ ammo[3] = 999;
 ammo[4] = 999;
 ammo[5] = 999;
 rad = 999;
-wkick = 0;
-bwkick = 0;
 var canDeflect = false;
 with target
 {

@@ -1,5 +1,5 @@
 raddrop = 60
-maxhealth = 210;//175
+maxhealth = 220;//175
 meleedamage = 3
 size = 3
 if GetPlayerLoops() > 0{
@@ -38,15 +38,15 @@ suckAcc = 0.091;
 maxspeed=2
 originalMaxspeed = maxspeed;
 persistent_direction = 0;
-actTime = 10;
+actTime = 9;
 fishFireRate = 4;
 suckTime = 75;
 chargeSpeed = 7;
 chargeDis = 75;
 chargeTell = 20;
 snd_play(sndOasisBossIntro);    
-
-
+inverted = false;
+suckRange = 100;
 cam=true
 
 with BigFish

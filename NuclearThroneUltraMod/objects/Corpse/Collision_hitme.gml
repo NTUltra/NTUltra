@@ -31,8 +31,7 @@ if (other.team != 2 && (size >= other.size-1 or impactWrist) and speed > 2)
 			motion_add(other.direction,other.speed*0.5)
 			snd_play(snd_hurt, hurt_pitch_variation)
 		}
-		Sleep(2*size)
-		speed *= 0.5
+		speed *= 0.48;
 	}
 	else
 	{

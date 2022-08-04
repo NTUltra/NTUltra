@@ -22,10 +22,10 @@ if instance_exists(enemy) && target>0 && instance_exists(target) && instance_exi
         {
             if(other.direction<point_direction(x,y,target.x,target.y)+60)
                 {
-            other.image_angle=point_direction(x,y,target.x,target.y);
-            other.direction=point_direction(x,y,target.x,target.y);
-            other.speed+=2;
-            //image_angle = other.direction
+		            other.image_angle=point_direction(x,y,target.x,target.y);
+		            other.direction=point_direction(x,y,target.x,target.y);
+		            other.speed+=2;
+		            //image_angle = other.direction
             
                 with instance_create(other.x,other.y,Deflect)
                 {

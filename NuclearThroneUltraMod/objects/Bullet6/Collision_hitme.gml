@@ -15,9 +15,8 @@ motion_add(other.direction,3)
 	scrUnlockBSkin(24,"FOR BURNING AN ENEMY#THAT IS FROZEN AS ELEMENTOR",0);
 	}
 	}
-	
+	snd_play(snd_hurt, hurt_pitch_variation,true)
 }
-snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
 with instance_create(x,y,BulletHit)
 sprite_index = sprBullet6Disappear}
 

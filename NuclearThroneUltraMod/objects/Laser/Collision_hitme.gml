@@ -8,11 +8,7 @@ with other
 	image_index = 0
 	motion_add(other.image_angle,4)
 }
-/*
-if flame && alarm[1] < 1
-{
-	alarm[1] = 6;
-	instance_create(x,y,Flame);
-}*/
-instance_create(x,y,Smoke)}
+
+instance_create(x,y,Smoke)
+}
 

@@ -328,8 +328,15 @@ else if Player.area = 101
 {
 //with instance_create(x,y,Drama)
 name = "BIG FISH"
-if random(100) < 1
+if random(200) < 1
 		name = choose("HEY LOOK#IT'S FISH#FROM NUCLEAR THRONE","O'L BITEY");
+}
+else if Player.area = 121
+{
+//with instance_create(x,y,Drama)
+name = "INVERTED BIG FISH"
+if random(200) < 1
+		name = choose("GASS FISH","THAT'S MISTER#FISH FOR YOU!");
 }
 else if Player.area == 9
 {

@@ -1122,7 +1122,7 @@ function scrWeapons() {
 	wep_type[101] = 5
 	wep_auto[101] = 1
 	wep_load[101] = 6//0.23sec?
-	wep_cost[101] = 1
+	wep_cost[101] = 1.25
 	wep_sprt[101] = sprLightningSMG
 	wep_area[101] = 12
 	wep_text[101] = "tornado"
@@ -2463,10 +2463,10 @@ function scrWeapons() {
 	wep_name[223] = "BULLET SWORD"
 	wep_type[223] = 1
 	wep_auto[223] = 0
-	wep_load[223] = 11
+	wep_load[223] = 12
 	wep_cost[223] = 5
 	wep_sprt[223] = sprBulletSword
-	wep_area[223] = 11
+	wep_area[223] = 12
 	wep_text[223] = "bullet bullet bullet bullet sword sword sword sword"
 	wep_swap[223] = sndSwapSword
 	wep_rad[223] = 0;
@@ -4537,7 +4537,7 @@ function scrWeapons() {
 	wep_load[411] = 28
 	wep_cost[411] = 3.5
 	wep_sprt[411] = sprKrakenYoyoGun
-	wep_area[411] = 12
+	wep_area[411] = 13
 	wep_text[411] = ""
 	wep_swap[411] = sndSwapDragon
 	wep_rad[411] = 0;
@@ -4931,7 +4931,7 @@ function scrWeapons() {
 	wep_type[447] = 4
 	wep_auto[447] = 1
 	wep_load[447] = 8
-	wep_cost[447] = 2
+	wep_cost[447] = 2.5
 	wep_sprt[447] = sprAutoMissileLauncher
 	wep_area[447] = 26
 	wep_text[447] = "THIS IS METAL"
@@ -5395,7 +5395,7 @@ function scrWeapons() {
 	wep_load[489] = 30
 	wep_cost[489] = 3
 	wep_sprt[489] = sprLightningYoyoGun
-	wep_area[489] = 10
+	wep_area[489] = 13
 	wep_text[489] = ""
 	wep_swap[489] = sndSwapEnergy
 	wep_rad[489] = 0;
@@ -5604,7 +5604,7 @@ function scrWeapons() {
 	wep_load[508] = 30
 	wep_cost[508] = 3
 	wep_sprt[508] = sprLaserYoyoGun
-	wep_area[508] = 9
+	wep_area[508] = 12
 	wep_text[508] = "lightshow yo yo"
 	wep_swap[508] = sndSwapEnergy
 	wep_rad[508] = 0;

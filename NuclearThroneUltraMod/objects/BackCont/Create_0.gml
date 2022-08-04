@@ -35,11 +35,6 @@ verticalVans = false;
 ///@description deside how manny vans
 if instance_exists(Player)
 {
-	if ((Player.area == 9 || Player.area == 118) && Player.subarea == 3 || Player.area == 104)
-	{
-		//No popo no
-		alarm[1] = 0;
-	}
 	wantVanAmount = 0
 	var i = 0;
 	repeat(loops)
@@ -84,6 +79,12 @@ if instance_exists(Player)
 	}
 	//progression
 	alarm[4]=600;//10 seconds
+	
+	if ((Player.area == 9 || Player.area == 118) && Player.subarea == 3 || Player.area == 104)
+	{
+		//No popo no
+		alarm[1] = 0;
+	}
 }
 alarm[6] = 1000;
 if instance_exists(SurvivalArenaStarter)

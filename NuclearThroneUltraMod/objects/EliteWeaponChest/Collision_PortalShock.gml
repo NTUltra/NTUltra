@@ -1,3 +1,4 @@
+if !instance_exists(Player){exit;}
 Player.nochest = 0
 
 repeat(1+Player.ultra_got[25]){//ROIDS ULTRA A DOUBLE WEPS

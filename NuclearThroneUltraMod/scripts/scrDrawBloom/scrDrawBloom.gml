@@ -220,7 +220,7 @@ function scrDrawBloom() {
 	with Disc
 	draw_sprite_ext(sprite_index,-1,xprevious,yprevious,1,1,image_angle,c_white,ba)
 	with MiniFlameCannonBall
-	draw_sprite_ext(sprMiniFlameCannonBallBloom,image_index,x,y,2,2,image_angle,c_white,ba)
+	draw_sprite_ext(bloomSprite,image_index,x,y,2,2,image_angle,c_white,ba)
 	with FlameCannonBall
 	draw_sprite_ext(sprFlameCannonBallBloom,image_index,x,y,2,2,image_angle,c_white,ba)
 	with FlameCannonBall

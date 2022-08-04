@@ -72,7 +72,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprBullet6Disappear","path":"sprites/sprBullet6Disappear/sprBullet6Disappear.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprBullet6Disappear",
     "tags": [],
     "resourceType": "GMSequence",
   },

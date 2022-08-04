@@ -1,5 +1,6 @@
-snd_play(sndPlasmaHit,0.1,true)
 event_inherited()
-instance_create(x,y,MiniPlasmaImpact)
-Sleep(1)
-
+if object_index == MiniPlasmaBall
+{
+	snd_play(sndPlasmaHit,0.1,true)
+	instance_create(x,y,MiniPlasmaImpact)
+}

@@ -64,7 +64,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprMiniPlasmaBall","path":"sprites/sprMiniPlasmaBall/sprMiniPlasmaBall.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprMiniPlasmaBall",
     "tags": [],
     "resourceType": "GMSequence",
   },
