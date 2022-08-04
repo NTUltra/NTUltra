@@ -11,13 +11,13 @@ typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflects
 accuracy=18;
 branch = 20;
 image_speed = 0.4
-target=enemy;
+target = noone;
 dmg = 5;
 iframeskip = 0.1;
 fork = 6;
 if instance_exists(Player){
 	if Player.skill_got[17] = 1{
-		image_speed = 0.3-(Player.betterlaserbrain*0.06)
+		image_speed = 0.34-(Player.betterlaserbrain*0.06)
 		dmg ++;
 		fork --;
 		iframeskip += 0.01;

@@ -5,7 +5,7 @@ if spr_idle == sprHotDrakeSkullIdleOpen
 	{
 		KeyCont.key_pick[Player.p] = 2;
 		snd_play(other.snd_thrn);
-
+		mask_index = mskPickupThroughWall;
 		with other
 		{
 			area = 7

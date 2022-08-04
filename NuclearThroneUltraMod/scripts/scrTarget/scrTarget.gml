@@ -112,5 +112,5 @@ function scrTarget() {
 		target = -1;
 		
 	if target < 0 || !instance_exists(target) || target == noone
-		target = -1
+		target = noone
 }

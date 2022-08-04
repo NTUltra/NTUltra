@@ -1101,6 +1101,7 @@
     {"id":{"name":"sprInvertedExploderDead","path":"sprites/sprInvertedExploderDead/sprInvertedExploderDead.yy",},"order":21,},
     {"id":{"name":"sprInvertedExploderIdle","path":"sprites/sprInvertedExploderIdle/sprInvertedExploderIdle.yy",},"order":23,},
     {"id":{"name":"sprInvertedExploderWalk","path":"sprites/sprInvertedExploderWalk/sprInvertedExploderWalk.yy",},"order":25,},
+    {"id":{"name":"mskElectroImpact","path":"sprites/mskElectroImpact/mskElectroImpact.yy",},"order":400,},
     {"id":{"name":"Changelog","path":"notes/Changelog/Changelog.yy",},"order":4,},
     {"id":{"name":"sprFastRatHurt","path":"sprites/sprFastRatHurt/sprFastRatHurt.yy",},"order":1,},
     {"id":{"name":"sprLightningYoyoGun","path":"sprites/sprLightningYoyoGun/sprLightningYoyoGun.yy",},"order":348,},

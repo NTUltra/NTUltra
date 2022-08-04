@@ -6,4 +6,7 @@ with instance_create(x,y,EnemyLightningBall)
     motion_add(other.gunangle,2.8)
     team = other.team
 }
+//Slow down other guys
+with InvertedToxicMushroomGuy
+	alarm[1] += 2;
 alarm[1] += 10;

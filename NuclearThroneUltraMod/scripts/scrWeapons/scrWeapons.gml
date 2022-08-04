@@ -1122,7 +1122,7 @@ function scrWeapons() {
 	wep_type[101] = 5
 	wep_auto[101] = 1
 	wep_load[101] = 6//0.23sec?
-	wep_cost[101] = 1.25
+	wep_cost[101] = 1.5
 	wep_sprt[101] = sprLightningSMG
 	wep_area[101] = 12
 	wep_text[101] = "tornado"
@@ -4078,7 +4078,10 @@ function scrWeapons() {
 	wep_swap[369] = sndSwapSword
 	wep_rad[369] = 3;
 	
-	wep_name[370] = "OBSIDIAN THROWING KNIFE"
+	if random(2000) < 1
+		wep_name[370] = "SHIT KNOIFE"//fuck this thing fuck it hard so buggy trash shit never should've made this biggest regret of my life
+	else
+		wep_name[370] = "OBSIDIAN THROWING KNIFE"
 	wep_type[370] = 0
 	wep_auto[370] = 0
 	wep_load[370] = 6//11
@@ -5810,7 +5813,7 @@ function scrWeapons() {
 	wep_name[527] = "GOLDEN NUKE LAUNCHER"
 	wep_type[527] = 4
 	wep_auto[527] = 0
-	wep_load[527] = 45
+	wep_load[527] = 47
 	wep_cost[527] = 3
 	wep_sprt[527] = sprGoldNukeLauncher
 	wep_area[527] = 20

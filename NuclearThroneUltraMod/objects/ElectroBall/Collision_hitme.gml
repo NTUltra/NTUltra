@@ -1,5 +1,6 @@
-if other.team != team and other.my_health > 0 && alarm[3] < 1
+if other.team != team and other.my_health > 0 && !array_contains(hitEntities,other.id)
 {
+	hitEntities[array_length(hitEntities)] = other.id;
 	BackCont.shake += 2
 	image_xscale-=0.1;
 	image_yscale-=0.1;
@@ -14,10 +15,9 @@ if other.team != team and other.my_health > 0 && alarm[3] < 1
 		}
 		else
 		{
-			scrIframeSkipper(0.2);
+			scrIframeSkipper(0.1);
 		}
 		motion_add(other.direction,4)
 	}
-	alarm[3] = 3;
 }
 

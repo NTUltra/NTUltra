@@ -135,7 +135,7 @@ function scrTips() {
 	if Player.area = 107
 	tip = choose("black snow?","looks like shit","mud?","explosions everywhere!","should not have come here","the greed is real","do you want to die?","inverted demons","chocolate city")
 	if Player.area = 101
-	tip = choose("water","hold your breath","big fish here","you should come here more often","ocean man!","swimming")
+	tip = choose("water","hold your breath","big fish here","you should come here more often","ocean man!","swimming","you can use lightning here")
 	if Player.area = 108
 	tip = choose("true hell","frozen vulcano","ice cold")
 	if Player.area = 109
@@ -156,6 +156,29 @@ function scrTips() {
 	tip = choose("survival arena","when starting a wave#chests and weapon drops get destroyed")
 	if Player.area = 117
 	tip = choose("mushrooms with guns","mushroom land","infected mushrooms","don't eat the mushrooms")
+	if Player.area = 119
+	tip = choose("friends","I will save you all!","never stop","return","loop","throne II","we're here");
+	if Player.area = 120
+	tip = choose("empty","nothingness","void","  "," ... ","it is time","no one here","beating this fight makes one less van spawn next loop","confuse the idpd");
+	if Player.area = 121
+	tip = choose("risk it","fast route","they are fast","colourfull grass","watch yourself out there","inverted savanna")
+	if Player.area = 122
+	tip = choose("stinky water","something is not right","gass under water?","toxic ocean","polder")
+	if Player.area = 123
+	tip = choose("pink and blue jungle","inverted bush box moves straight","inverted jungle","though faster and more aggressive#enemies here have less hp and drop more rads","land of square");
+	if Player.area = 124
+	tip = choose("buff mushrooms hiding in the dark","lots of radiation here","dark mushrooms","lightning mushrooms","inside out mushrooms","don't eat the mushroom","in a shocking turn of events")
+	if Player.area = 125
+	tip = choose("if you hold two melee weapons#as yv while reaching ultra#you can choose a secret ultra","blue gold","who's mansion is this?",
+	"thanks melee god",
+	"maces for fake necklace",
+	"daggers that send textses",
+	"hammers that make breakfast?",
+	"swords that sign breastses",
+	"wrenches that straight festive",
+	"jackhammers with 6 senses",
+	"shovels that hate texas",
+	"axes that wear vests it")
 	}
 
 
@@ -244,7 +267,7 @@ function scrTips() {
 	)
 
 	if Player.race = 14//panda
-	tip = choose("never let go of your bamboo","kawaii as fuck","rng","portal magic","what is a panda doing here",
+	tip = choose("never let go of your bamboo","rng","portal magic","what is a panda doing here",
 	"don't want to be here","help me","if only hotline miami had a panda","panda used to be a pacifist",
 	"throw weapons to#conserve ammo","throw damage scales#with your level",
 	,"fight to survive","manage your weapons!","killing is no fun","panda is unpredictable with weapons"
