@@ -16,4 +16,4 @@ with enemy
 		walk += 20;
 	}
 }
-alarm[4] = 60;
+alarm[4] = 20;

@@ -1,4 +1,4 @@
-if UberCont.recursionCheck > 30
+if UberCont.recursionCheck > 28
 {
 	alarm[0] = 1;
 	exit;

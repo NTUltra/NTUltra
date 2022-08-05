@@ -30,7 +30,7 @@ if ammo > 0
 	{
 		image_angle = other.gunangle
 		team = other.team
-		ammo = 13
+		ammo = 11
 		event_perform(ev_alarm,0)
 		visible = 0
 		with instance_create(x,y,LightningSpawn)
@@ -40,7 +40,7 @@ if ammo > 0
 	{
 		image_angle = other.gunangle+90
 		team = other.team
-		ammo = 13
+		ammo = 11
 		event_perform(ev_alarm,0)
 		visible = 0
 		with instance_create(x,y,LightningSpawn)
@@ -50,7 +50,7 @@ if ammo > 0
 	{
 		image_angle = other.gunangle+180
 		team = other.team
-		ammo = 13
+		ammo = 11
 		event_perform(ev_alarm,0)
 		visible = 0
 		with instance_create(x,y,LightningSpawn)
@@ -60,7 +60,7 @@ if ammo > 0
 	{
 		image_angle = other.gunangle+270
 		team = other.team
-		ammo = 13
+		ammo = 11
 		event_perform(ev_alarm,0)
 		visible = 0
 		with instance_create(x,y,LightningSpawn)
