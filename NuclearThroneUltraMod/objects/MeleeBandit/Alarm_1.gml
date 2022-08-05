@@ -9,7 +9,7 @@ if target > 0
 {
 	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 	{
-		if point_distance(target.x,target.y,x,y) < 64
+		if point_distance(target.x,target.y,x,y) < 66
 		{
 		walk = 2;
 		alarm[2]=11//the delay that everyone wants

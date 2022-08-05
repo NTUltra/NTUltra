@@ -1,4 +1,4 @@
-alarm[1] = 30
+alarm[1] = actTime + random(actTime);
 
 
 scrTarget()
@@ -11,8 +11,8 @@ if point_distance(x,y,target.x,target.y) < 150 and random(2) < 1
 {
 snd_play(sndSnowBotSlideLoop)
 snd_play(sndSnowBotSlideStart)
-walk = 40
-alarm[1] = 30
+walk = actTime*2
+alarm[1] = actTime*2
 gunangle = point_direction(x,y,target.x,target.y)+random(30)-15
 meleedamage = 5
 sprite_index = spr_fire

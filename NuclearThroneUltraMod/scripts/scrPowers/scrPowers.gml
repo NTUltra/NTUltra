@@ -2229,24 +2229,31 @@ function scrPowers() {
 	//SHEEP
 	if race==13 && instance_exists(SheepStorm) && !ultra_got[49]
 	{
-		var powerMax = 10 + (ultra_got[51] * 5) + (skill_got[5] * 2);
-		if sheepPower<powerMax
-		{sheepPower+=0.38;}
+		if speed > 5
+		{
+			var powerMax = 10 + (ultra_got[51] * 5) + (skill_got[5] * 2);
+			if sheepPower<powerMax
+			{sheepPower+=0.38;}
+			else
+			{
+				sheepPower = powerMax;
+			}
+			if (skill_got[5])
+			{
+				sheepPower += 0.06;
+			}
+			if (skill_got[2])
+			{
+				sheepPower += 0.03;	
+			}
+			if (ultra_got[51])
+			{
+				sheepPower += 0.09;
+			}
+		}
 		else
 		{
-			sheepPower = powerMax;
-		}
-		if (skill_got[5])
-		{
-			sheepPower += 0.06;
-		}
-		if (skill_got[2])
-		{
-			sheepPower += 0.03;	
-		}
-		if (ultra_got[51])
-		{
-			sheepPower += 0.09;
+			sheepPower = max(0, sheepPower - 0.4);
 		}
 		//speed=10;
 		var moveBoost = (skill_got[2]*1.4) + (skill_got[5]*1.4) + (ultra_got[5]*2.3);

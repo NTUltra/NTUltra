@@ -9,7 +9,7 @@ if target > -1 && instance_exists(target)
 with instance_create(x,y,EnemySlash)
 {
 image_angle = other.gunangle
-motion_add(other.gunangle+random(10)-5,2)
+motion_add(other.gunangle+random(10)-5,3)
 team = other.team
 }
 alarm[1] = 15+random(10)

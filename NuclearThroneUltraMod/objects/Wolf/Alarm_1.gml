@@ -1,10 +1,4 @@
-alarm[1] = 30+random(20)
-
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1] = 20+random(20);
-}
+alarm[1] = actTime + random(actTime);
 
 walk = alarm[1]
 scrTarget()
@@ -23,7 +17,7 @@ direction = point_direction(x,y,target.x,target.y)
 sprite_index = spr_fire
 image_index = 0
 alarm[2] = 10
-alarm[1] = 30
+alarm[1] = actTime * 3
 
 if instance_exists(Player)
 {

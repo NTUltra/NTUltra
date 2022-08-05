@@ -25,7 +25,7 @@ wepangle = choose(-140,140)
 wepflip = 1
 
 dodge=0;
-range = 64;
+range = 74;
 tellTime = 7;
 actTime = 3;
 maxSpeed = 3;

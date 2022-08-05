@@ -22,18 +22,7 @@ with other
 {
     if object_index!=Car
     {
-		/*
-		var damageBoost = max(1,Player.skill_got[8]*1.3) + frac(Player.skill_got[5] * 1.6);
-    if Player.ultra_got[49]
-    {
-    my_health -= 1.5*sp*damageBoost //2*0=0*P<<NO ULTRA
-    }
-    else
-    {
-    my_health-=sp*0.5*damageBoost;
-    }
-	*/
-	my_health-=sp*other.dmg;
+	my_health-=(sp-1)*other.dmg;
     sprite_index = spr_hurt                                 //2*1=2*p<<ULTRA
     image_index = 0
     motion_add(other.image_angle,sp*3);

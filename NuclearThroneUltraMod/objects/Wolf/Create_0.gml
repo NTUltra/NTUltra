@@ -1,5 +1,5 @@
 raddrop = 6
-maxhealth = 17//20
+maxhealth = 13//20 release is 12
 meleedamage = 2
 size = 1
 
@@ -27,7 +27,11 @@ walk = 30
 
 hurt_pitch_variation = 0.1
 getFrosty = false;
-if GetPlayerLoops() > 3
+loops = GetPlayerLoops();
+if loops > 3
 {
 	getFrosty = true;
 }
+actTime = 18;
+if loops > 0
+	actTime = 10;

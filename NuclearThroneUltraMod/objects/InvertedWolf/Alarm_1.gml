@@ -1,4 +1,4 @@
-alarm[1] = 26+random(26)
+alarm[1] = actTime + random(actTime);
 
 
 walk = alarm[1]
@@ -18,12 +18,7 @@ direction = point_direction(x,y,target.x,target.y)
 sprite_index = spr_fire
 image_index = 0
 alarm[2] = 8
-alarm[1] = 25
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1] = 10+random(10);
-}
+alarm[1] = actTime*3
 
 
 }

@@ -4,7 +4,7 @@ if target > 0
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {
-if point_distance(target.x,target.y,x,y) < 64
+if point_distance(target.x,target.y,x,y) < 72
 {
 alarm[2]=8//the delay that everyone wants
 instance_create(x-5,y,Notice);

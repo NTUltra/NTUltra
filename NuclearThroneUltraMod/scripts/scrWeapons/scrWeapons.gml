@@ -978,7 +978,7 @@ function scrWeapons() {
 	wep_name[88] = "SPLINTER PISTOL"
 	wep_type[88] = 3
 	wep_auto[88] = 0
-	wep_load[88] = 9
+	wep_load[88] = 10
 	wep_cost[88] = 1
 	wep_sprt[88] = sprSplinterPistol
 	wep_area[88] = 6
@@ -2771,7 +2771,7 @@ function scrWeapons() {
 	wep_name[251] = "YOYO GUN"
 	wep_type[251] = 3
 	wep_auto[251] = 1
-	wep_load[251] = 14
+	wep_load[251] = 16
 	wep_cost[251] = 2
 	wep_sprt[251] = sprYoyoGun
 	wep_area[251] = 3
@@ -3541,7 +3541,7 @@ function scrWeapons() {
 	wep_name[321] = "LIGHTNING SCREWDRIVER"
 	wep_type[321] = 0
 	wep_auto[321] = 0
-	wep_load[321] = 10
+	wep_load[321] = 9
 	wep_cost[321] = 0
 	wep_sprt[321] = sprLightningScrewDriver
 	wep_area[321] = 7
@@ -4691,8 +4691,8 @@ function scrWeapons() {
 	wep_name[425] = "HEAVY BLOOD PISTOL"
 	wep_type[425] = 1
 	wep_auto[425] = 0
-	wep_load[425] = 2
-	wep_cost[425] = 1
+	wep_load[425] = 3
+	wep_cost[425] = 1.5
 	wep_sprt[425] = sprHeavyBloodPistol
 	wep_area[425] = 5
 	wep_text[425] = ""
@@ -4702,8 +4702,8 @@ function scrWeapons() {
 	wep_name[426] = "HEAVY BLOOD RIFLE"
 	wep_type[426] = 1
 	wep_auto[426] = 1
-	wep_load[426] = 3
-	wep_cost[426] = 1
+	wep_load[426] = 4
+	wep_cost[426] = 1.5
 	wep_sprt[426] = sprHeavyBloodRifle
 	wep_area[426] = 6
 	wep_text[426] = ""
@@ -4879,7 +4879,7 @@ function scrWeapons() {
 	wep_type[442] = 1
 	wep_auto[442] = 1
 	wep_load[442] = 3
-	wep_cost[442] = 1
+	wep_cost[442] = 1.5
 	wep_sprt[442] = sprFlameSMG
 	wep_area[442] = 5
 	wep_text[442] = ""

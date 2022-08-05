@@ -6,7 +6,7 @@ spr_idle = sprInvertedSquareBatIdle
 spr_walk = sprInvertedSquareBatIdle
 spr_hurt = sprInvertedSquareBatHurt
 spr_dead = sprInvertedSquareBatDead
-raddrop = 6;
+raddrop = 10;
 maxhealth = 15;
 my_health = maxhealth;
 EnemyHealthAdjustments();

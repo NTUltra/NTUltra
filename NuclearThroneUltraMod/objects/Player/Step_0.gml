@@ -592,7 +592,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 	{
 		IsShielding=false;
 	}
-	else if (CrystalShield.sprite_index!=sprShieldDisappear)
+	else if (CrystalShield.sprite_index!=CrystalShield.spr_disappear)
 	{
 		IsShielding=true;
 	}

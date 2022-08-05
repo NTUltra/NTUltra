@@ -23,11 +23,11 @@ alarm[1] = 30+random(90)
 maxspeed = 2.8;
 wkick = 0
 actTime = 10;
-tellTime = 13;
+tellTime = 12;
 range = 132;
 loops = GetPlayerLoops();
 if loops > 0
 {
 	actTime = 8;
-	tellTime = 11;
+	tellTime = 9;
 }

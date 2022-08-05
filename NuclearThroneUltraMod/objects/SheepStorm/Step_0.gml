@@ -62,7 +62,7 @@ if (sp > Player.sheepPowerToHaveEffect)
 	with Player
 	{
 		alarm[3]=2;//imunity
-		meleeimmunity = 9;
+		meleeimmunity = 3;
 	}
 }
 else

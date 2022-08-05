@@ -1,5 +1,5 @@
 raddrop = 9
-maxhealth = 14//20
+maxhealth = 10//20
 meleedamage = 2
 size = 1
 
@@ -29,7 +29,11 @@ close = 0
 walk = 30
 
 getFrosty = false;
-if GetPlayerLoops() > 3
+loops = GetPlayerLoops();
+if loops > 3
 {
 	getFrosty = true;
 }
+actTime = 14;
+if loops > 0
+	actTime = 7;

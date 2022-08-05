@@ -3899,7 +3899,7 @@ function scrFire2() {
 	with instance_create(x,y,KrakenIonBurst)
 	{
 	creator = other.id
-	ammo = 20
+	ammo = 15
 	time = 1
 	team = other.team
 	alarm[0] = 14

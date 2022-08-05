@@ -1,10 +1,5 @@
-alarm[1] = 36
+alarm[1] = actTime + random(actTime);
 
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1] = 20+random(15);
-}
 
 scrTarget()
 meleedamage = 0
@@ -16,8 +11,8 @@ if point_distance(x,y,target.x,target.y) < 120 and random(2) < 1.2
 {
 snd_play(sndSnowBotSlideLoop)
 snd_play(sndSnowBotSlideStart)
-walk = 40
-alarm[1] = 40
+walk = actTime*2
+alarm[1] = actTime*2
 gunangle = point_direction(x,y,target.x,target.y)+random(30)-15
 meleedamage = 4
 sprite_index = spr_fire
