@@ -2335,6 +2335,7 @@
     {"id":{"name":"sprAngelTranquility","path":"sprites/sprAngelTranquility/sprAngelTranquility.yy",},"order":15,},
     {"id":{"name":"sprMorphBullet","path":"sprites/sprMorphBullet/sprMorphBullet.yy",},"order":222,},
     {"id":{"name":"sndOasisBossTackle","path":"sounds/sndOasisBossTackle/sndOasisBossTackle.yy",},"order":6,},
+    {"id":{"name":"sprDeflectedEnemyDisc","path":"sprites/sprDeflectedEnemyDisc/sprDeflectedEnemyDisc.yy",},"order":34,},
     {"id":{"name":"sprVenusCarOasis","path":"sprites/sprVenusCarOasis/sprVenusCarOasis.yy",},"order":24,},
     {"id":{"name":"sprMutant19Dead","path":"sprites/sprMutant19Dead/sprMutant19Dead.yy",},"order":1,},
     {"id":{"name":"CubeGuardian","path":"objects/CubeGuardian/CubeGuardian.yy",},"order":4,},

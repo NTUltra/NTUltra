@@ -51,11 +51,13 @@ fireRate = 10;
 lp = 0.05;//0.2
 pSpeedAccurate = 4;
 image_xscale = 1;
-actTime = 20;
+actTime = 18;
 scrTarget();
 onFloorFail = 0;
 if instance_exists(Player) && Player.area == 100
 	loops = 0;
+if loops > 0
+	actTime -= 3;
 if loops > 2
 {
 	actTime -= 1;
@@ -79,7 +81,7 @@ if loops > 4
 }
 if loops > 5
 {
-	actTime -= 3;
+	actTime -= 3;// thats 9
 	pSpeedAccurate += 0.5;
 }
 

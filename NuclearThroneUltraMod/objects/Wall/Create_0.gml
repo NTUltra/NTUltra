@@ -265,4 +265,4 @@ h = 24
 checked = false;
 //Ordering of walls is all yank so we have to check multiple times
 alarm[1] = 4;
-alarm[2] = 15;
+alarm[2] = 10;

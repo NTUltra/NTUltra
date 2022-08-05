@@ -15,7 +15,7 @@ spr_hurt = sprInvertedNothing2Hurt
 spr_dead = sprInvertedNothing2Death
 
 isInverted = true;
-actTime -= 5;
+actTime -= 5;//min 4
 rotationSpeed *= 1.1;
 crossAmount ++;
 fireRate -= 1

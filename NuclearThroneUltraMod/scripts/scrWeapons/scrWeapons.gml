@@ -1539,10 +1539,10 @@ function scrWeapons() {
 	wep_name[139] = "SPLINTER CROSSBOW"
 	wep_type[139] = 3
 	wep_auto[139] = 0
-	wep_load[139] = 29
+	wep_load[139] = 25
 	wep_cost[139] = 2
 	wep_sprt[139] = sprSplinterCrossbow
-	wep_area[139] = 6
+	wep_area[139] = 5
 	wep_text[139] = "best of both worlds"
 	wep_swap[139] = sndSwapBow
 	wep_rad[139] = 0;
@@ -2763,7 +2763,7 @@ function scrWeapons() {
 	wep_load[250] = 12
 	wep_cost[250] = 1
 	wep_sprt[250] = sprAutoExploBow
-	wep_area[250] = 7
+	wep_area[250] = 8
 	wep_text[250] = ""
 	wep_swap[250] = sndSwapBow
 	wep_rad[250] = 0;

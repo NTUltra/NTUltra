@@ -10,7 +10,7 @@ repeat(5)
 
 	with instance_create(x,y,AcidStreak)
 	{
-	motion_add(other.dir,8)
+	motion_add(dir,8)
 	image_angle = direction
 	}
 	dir += 72;
