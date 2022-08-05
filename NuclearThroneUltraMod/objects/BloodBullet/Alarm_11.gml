@@ -6,6 +6,7 @@ if um == ultramods.bloodMelee
 	snd_play(sndScrewdriver,0.1,true);
 	with instance_create(x,y,Shank)
 	{
+		dmg = other.dmg;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;

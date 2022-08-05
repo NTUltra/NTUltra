@@ -9,7 +9,6 @@ with instance_create(xx,yy,MeatExplosion)
 {
 	direction = other.direction;
 	speed = other.speed;
-	dmg += 2;
 	team = other.team;
 	alarm[11] = 0;
 }
@@ -18,7 +17,6 @@ yy = y + lengthdir_y(48,image_angle);
 with instance_create(xx,yy,MeatExplosion)
 {
 	direction = other.direction;
-	dmg += 2;
 	speed = other.speed;
 	team = other.team;
 	alarm[11] = 0;

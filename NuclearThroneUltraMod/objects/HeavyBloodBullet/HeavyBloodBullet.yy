@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskHeavyBloodBullet",
     "path": "sprites/mskHeavyBloodBullet/mskHeavyBloodBullet.yy",

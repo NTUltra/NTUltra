@@ -6,6 +6,7 @@ if um == ultramods.bloodMelee
 	snd_play(sndHammer,0.1,true);
 	with instance_create(x,y,Slash)
 	{
+		dmg = other.dmg;
 		scrCopyWeaponMod(other);
 		if other.speed > 0
 			direction = other.direction;

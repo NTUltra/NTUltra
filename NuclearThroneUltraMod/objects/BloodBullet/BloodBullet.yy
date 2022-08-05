@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskBloodBullet",
     "path": "sprites/mskBloodBullet/mskBloodBullet.yy",

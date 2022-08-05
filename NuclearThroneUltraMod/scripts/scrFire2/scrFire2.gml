@@ -2042,7 +2042,7 @@ function scrFire2() {
 	motion_add(aimDirection+(random(30)-15)*other.accuracy,3+random(4))
 	}
 
-	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20+26,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20+26,aimDirection),GhostSlash)
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20+24,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20+24,aimDirection),GhostSlash)
 	{
 	longarms = 0
 	if instance_exists(Player)
@@ -2123,9 +2123,9 @@ function scrFire2() {
 	}
 
 
-	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),GhostSlash)
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*19,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*19,aimDirection),GhostSlash)
 	{
-		dmg = 13;
+		dmg = 12;
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2139,9 +2139,9 @@ function scrFire2() {
 	motion_add(aimDirection+70+(random(30)-15)*other.accuracy,3+random(4))
 	}
 
-	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),GhostSlash)
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*14,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*14,aimDirection+60*Player.accuracy),GhostSlash)
 	{
-		dmg = 13;
+		dmg = 12;
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2155,9 +2155,9 @@ function scrFire2() {
 	motion_add(aimDirection-70+(random(30)-15)*other.accuracy,3+random(4))
 	}
 
-	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),GhostSlash)
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*14,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*14,aimDirection-60*Player.accuracy),GhostSlash)
 	{
-		dmg = 13;
+		dmg = 12;
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2166,32 +2166,32 @@ function scrFire2() {
 	team = other.team}
 
 	//longer shovelnessness
-
-	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20+26,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20+26,aimDirection),GhostSlash)
+	var l = 24;
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*19+l,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*19+l,aimDirection),GhostSlash)
 	{
-		dmg = 13;
+		dmg = 12;
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,7+longarms)
+	motion_add(aimDirection,3+longarms)
 	image_angle = direction
 	team = other.team}
-	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15+26,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15+26,aimDirection+60*Player.accuracy),GhostSlash)
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*14+l,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*14+l,aimDirection+60*Player.accuracy),GhostSlash)
 	{
-		dmg = 13;
+		dmg = 12;
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection+60*other.accuracy,7+longarms)
+	motion_add(aimDirection+60*other.accuracy,3+longarms)
 	image_angle = direction
 	team = other.team}
-	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15+26,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15+26,aimDirection-60*Player.accuracy),GhostSlash)
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*14+l,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*14+l,aimDirection-60*Player.accuracy),GhostSlash)
 	{
-		dmg = 13;
+		dmg = 12;
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection-60*other.accuracy,7+longarms)
+	motion_add(aimDirection-60*other.accuracy,3+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -8004,12 +8004,12 @@ function scrFire2() {
 	motion_add(aimDirection+(random(30)-15)*other.accuracy,3+random(4))
 	}
 
-	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20+26,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20+26,aimDirection),GhostShank)
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20+22,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20+22,aimDirection),GhostShank)
 	{
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,7+longarms)
+	motion_add(aimDirection,3+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -10164,7 +10164,7 @@ function scrFire2() {
 
 	break;
 	
-	//HEAVY DOUBLE SHOTGUN
+	//SUPER HEAVY SHOTGUN
 	case 571:
 
 	snd_play_fire(sndSuperSlugger)
