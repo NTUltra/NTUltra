@@ -2235,7 +2235,7 @@ function scrWeapons() {
 	wep_load[202] = 16//10
 	wep_cost[202] = 8//6
 	wep_sprt[202] = sprSuperHotAssaultRifle
-	wep_area[202] = 11//12
+	wep_area[202] = -1;//11//12
 	wep_text[202] = "SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!"
 	wep_swap[202] = sndSwapSuperHot
 	wep_rad[202] = 0;

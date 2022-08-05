@@ -7,3 +7,4 @@ with myShield
 	instance_destroy();
 }
 extrafeetalarm = 30;
+snd_hurt = snd_hurt_actual;

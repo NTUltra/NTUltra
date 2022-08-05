@@ -7,7 +7,7 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 	with SurvivalWave
 		instance_destroy();
 instance_activate_all()
-audio_stop_all();
+//audio_stop_all();
 isPaused = 0
 if instance_exists(Player)
 {
@@ -83,7 +83,7 @@ if (keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4)) && !in
 {
 	instance_activate_all()
 	isPaused = 0
-	audio_stop_all();
+	//audio_stop_all();
 	if instance_exists(Player)
 	kills=Player.kills
 	with Player

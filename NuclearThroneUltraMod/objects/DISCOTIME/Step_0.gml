@@ -28,7 +28,7 @@ if instance_exists(Player) && Player.wep == 396
 }
 else if visible
 {
-	room_speed = 30;
+	room_speed = UberCont.normalGameSpeed;
 	visible = false;
 	audio_pause_sound(sndChubbyEmuSong);
 	with MusCont

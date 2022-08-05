@@ -263,6 +263,10 @@ if oldarea != area || area == 0 or !audio_is_playing(song) or audio_is_playing(m
 	    snd_loop(song);
 	    snd_loop(amb);
 	}
+	if !audio_is_playing(song)
+		snd_loop(song);
+	if !audio_is_playing(amb)
+		snd_loop(amb);
 	
 	if area == 119 || area == 120//Throne 2
 	{

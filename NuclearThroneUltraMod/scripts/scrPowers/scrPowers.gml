@@ -2268,7 +2268,7 @@ function scrPowers() {
 
 	if race = 9 //CHICKEN reset time
 	{
-	room_speed=30;
+	room_speed=UberCont.normalGameSpeed;
 
 	with Decoy//CHICKEN VANISH
 	{instance_destroy();}

@@ -1,4 +1,4 @@
-room_speed=30*UberCont.opt_loading;
+room_speed=UberCont.normalGameSpeed*UberCont.opt_loading;
 holdExplainUltraModTimer = 0;
 holdExplainWepModTimer = 0;
 holdExplainMutation = 0;

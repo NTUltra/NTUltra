@@ -342,6 +342,7 @@ hard = 0
 if UberCont.opt_gamemode == 34//HARD MODE
 {
 	skillpoints ++;
+	skillsChosen --;
 	if !instance_exists(PlayerSpawn)
 	{
 		hard = 3;

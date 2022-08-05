@@ -6,6 +6,8 @@ isGettingSucked = false;
 blink = 30
 alarm[0] = 150+random(30)
 
+if UberCont.opt_gamemode == 34 //HARD MODE
+	alarm[0] -= 30;
 
 //RUSH CROWN
 if instance_exists(Player){
@@ -15,7 +17,7 @@ sprite_index=sprRadMony;
 }
 if Player.crown = 4{ alarm[0] /= 3}
 
-if Player.race = 15{ alarm[0] /= 2}//atom
+if Player.race = 15{ alarm[0] *= 0.6}//atom
 
 
 if Player.ultra_got[89]

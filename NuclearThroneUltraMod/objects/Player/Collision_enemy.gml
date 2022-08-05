@@ -63,41 +63,53 @@ if other.team != team && team != 0
 		}
 	}
 
-	if other.meleedamage > 0 && other.existTime > 25 && !justAsheep && meleeimmunity<1 && alarm[3] < 1//is it a melee enemy?
+	if other.meleedamage > 0 && other.existTime > 25 && !justAsheep//is it a melee enemy?
 	&& collision_line(x,y,other.x,other.y,Wall,false,false) == noone
 	{
-		meleeimmunity=14;
-	    if (other.my_health<=0 || actuallyDead)
-	    {
-	    }
-	    else {//if !(KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2){//Ultra D Humphry no contact damage
-	    //enemy deals damage to the player
+		if meleeimmunity < 1
+		{
+			if  alarm[3] < 1
+			{
+				meleeimmunity=hurtDuration;
+			    if (other.my_health<=0 || actuallyDead)
+			    {
+			    }
+			    else {//if !(KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2){//Ultra D Humphry no contact damage
+			    //enemy deals damage to the player
     
-	        if sprite_index != spr_hurt
-	        {
-		        snd_play(other.snd_melee)
-		        sprite_index = spr_hurt
-		        image_index = 0
-		        snd_play(snd_hurt, hurt_pitch_variation)
-				if skill_got[8]
-					my_health -= ceil(other.meleedamage*0.5);
-				else
-					my_health -= other.meleedamage
-		        motion_add(point_direction(other.x,other.y,x,y)+180,8)
+			        if sprite_index != spr_hurt
+			        {
+				        snd_play(other.snd_melee)
+				        sprite_index = spr_hurt
+				        image_index = 0
+				        snd_play(snd_hurt, hurt_pitch_variation)
+						if skill_got[8]
+							my_health -= ceil(other.meleedamage*0.5);
+						else
+							my_health -= other.meleedamage
+				        motion_add(point_direction(other.x,other.y,x,y)+180,8)
         
-		        with other
-		        move_contact_solid(point_direction(other.x,other.y,x,y)+180,4);
+				        with other
+				        move_contact_solid(point_direction(other.x,other.y,x,y)+180,4);
 				
-				if other.object_index == IDPDVan
-				{
-					if my_health <= 0
-						scrUnlockGameMode(8,"FOR GETTING HIT BY A VAN#I AM SO SORRY");
-					else
-						scrUnlockGameMode(8,"FOR GETTING HIT BY A VAN");
-				}
+						if other.object_index == IDPDVan
+						{
+							if my_health <= 0
+								scrUnlockGameMode(8,"FOR GETTING HIT BY A VAN#I AM SO SORRY");
+							else
+								scrUnlockGameMode(8,"FOR GETTING HIT BY A VAN");
+						}
         
-		        Sleep(100)
-	        }
-	    }
+				        Sleep(100)
+			        }
+			    }
+			}
+			else
+			{
+				snd_play(sndDamageNegate,0.1,true);
+				other.existTime = 5;
+				//Acts as sound delay I guess
+			}
+		}
 	}
 }

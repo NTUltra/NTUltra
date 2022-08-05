@@ -40,7 +40,7 @@ function suck() {
 	}
 	with BoneFish
 	{
-		if point_distance(x,y,other.x,other.y) < suckRange
+		if point_distance(x,y,other.x,other.y) < other.suckRange
 		{
 			if place_free(x+lengthdir_x(7,point_direction(x,y,other.x,other.y)),y)
 				x += lengthdir_x(other.suckstrength,point_direction(x,y,other.x,other.y))

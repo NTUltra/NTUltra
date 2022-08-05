@@ -384,13 +384,33 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 			thing.mytext = "LOOPS++! "+string(loops);
 		    }
 		if (keyboard_check_pressed(ord("G")))
-		    {
-				var dangle = random(1)*360;
-				//thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,PopupText);
-				//thing.mytext = "WARPZONE";
-				thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,InvertedBigDisc);
-				//scrTurnIntoPortalArea();
-		    }
+		{
+			var dangle = random(1)*360;
+			//thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,PopupText);
+			//thing.mytext = "WARPZONE";
+			thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,InvertedBigDisc);
+			//scrTurnIntoPortalArea();
+		}
+		if (keyboard_check_pressed(ord("J")))
+		{
+			var dangle = random(1)*360;
+			thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,PopupText);
+			thing.mytext = "60 FPS TOGGLE";
+			if instance_exists(FPSHACK)
+			{
+				with FPSHACK
+					instance_destroy();
+				with UberCont
+					normalGameSpeed = 30;
+			}
+			else
+			{
+				with UberCont
+					normalGameSpeed = 60;
+				instance_create(x,y,FPSHACK);	
+			}
+			room_speed = UberCont.normalGameSpeed;
+		}
 		if (keyboard_check_pressed(ord("I")))
 		    {
 			var dangle = random(1)*360;
@@ -591,6 +611,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 	{
 		if  ammo[wep_type[wep]] < wep_cost[wep] && wep_type[wep] != 0  && alarm[2] < 1//alarm = Fish Ultra B
 		{
+			/*
 		if wep == 29|| wep==60 || wep==61 || wep==83 || wep==84 || wep==132//|| wep==109//ALL THE BLOOD WEAPONS!
 		{//glove is not included because that shits just to buggy
 		//BLOOD LAUNCHER,Pistol,Shotgun,rifle,triple,bulletshotty
@@ -602,8 +623,8 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		Sleep(40)
 		alarm[3]=0;//remove immunity from bloodglove
 		}
-		else
-		scrEmpty()
+		else*/
+			scrEmpty()
 		}
 		rad = max(rad,0);
 		if rad-wep_rad[wep] < 0 && alarm[2] < 1//alarm = Fish Ultra B
@@ -1152,12 +1173,12 @@ else if lstCash > cash
 {
 	lstCash -= 0.5;	
 }
-if sprite_index != spr_hurt and lsthealth > my_health
+if sprite_index != spr_hurt and lsthealth > my_health && alarm[3] < 1
 {
-if drawlowhp < 30 and my_health <= 4 && !audio_is_playing(snd_lowh)
-snd_play_2d(snd_lowh, 0, true,false,10)
-drawlowhp = 30
-lsthealth -= 0.5
+	//if drawlowhp < 30 and my_health <= 4 && !audio_is_playing(snd_lowh)
+	//	snd_play_2d(snd_lowh, 0, true,false,10)
+	drawlowhp = 30
+	lsthealth -= 0.5
 
 }
 if  ultra_got[40]=1//Ultra D
@@ -1594,7 +1615,7 @@ meleeimmunity--;
 /* */
 ///time and unlock
 
-microseconds+=2;
+microseconds+=3;
 
 if microseconds>60
 {
@@ -1640,7 +1661,7 @@ microseconds=0;
     }
     
     if invertedportalcounter>0
-    invertedportalcounter++;
+		invertedportalcounter++;
 
 
 /* */

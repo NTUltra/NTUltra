@@ -123,8 +123,11 @@ if crown = 3
 my_health = 0}}
 
 
-
-snd_play(snd_dead)
+with PlayerAlarms
+{
+	snd_dead = other.snd_dead;
+	alarm[1] = 5;
+}
 if !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 	with instance_create(x,y,WepPickupForOneWepOnly)
 	{

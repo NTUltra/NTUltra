@@ -531,11 +531,11 @@ armour=maxarmour;
 }
 
 }
-if alarm[3]>0/*|| lag>0 *//*&&my_health!=maxhealth*/&& !exception
+if alarm[3] > 0/*|| lag>0 *//*&&my_health!=maxhealth*/&& !exception
 {
 	if tookHit
 	{
-		my_health=prevhealth;
+		my_health = prevhealth;
 	}
 }
 
@@ -785,7 +785,7 @@ if crown == 23//Crown of speed
 {
 	with enemy
 	{
-		speed *= 1.2;	
+		speed *= 1.2;
 	}
 }
 else if crown == 24//Crown of sloth
@@ -802,3 +802,5 @@ if (!canHeal)
 		my_health = prevhealth;	
 	}
 }
+if alarm[3] > 0
+	snd_hurt = sndDamageNegate;

@@ -5,11 +5,14 @@ alarm[0] = 200+random(30)
 
 atomUltraD = false;
 
+if UberCont.opt_gamemode == 34 //HARD MODE
+	alarm[0] -= 30;
+	
 //RUSH CROWN
 if instance_exists(Player){
 if Player.crown = 4{ alarm[0] /= 3}
 
-if Player.race = 15{ alarm[0] *= 0.5}//atom
+if Player.race = 15{ alarm[0] *= 0.6}//atom
 
 if Player.ultra_got[60]//Anti matter
 	atomUltraD = true;

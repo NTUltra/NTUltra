@@ -9,9 +9,18 @@ else
 	{
 		if loops == 0
 		{
-			instance_create(x,y,BigWeaponChest);
-			instance_create(x,y,EliteWeaponChest);
-			instance_create(x,y,HealthChest);
+			with instance_create(x,y,BigWeaponChest)
+			{
+				event_perform(ev_collision,Player)
+			}
+			with instance_create(x,y,EliteWeaponChest)
+			{
+				event_perform(ev_collision,Player)
+			}
+			with instance_create(x,y,HealthChest)
+			{
+				event_perform(ev_collision,Player)
+			}
 		}
 	}
 	alarm[1] = 30;

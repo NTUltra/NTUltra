@@ -17,7 +17,7 @@ if pa = pam or sa = sam && ran < 3
 	if ran < 1
 	{
 		//Chance to top up weapon that is not full
-		if (pa == pam) && sa < sam
+		if (pa >= pam) && sa < sam
 			type = st;
 		else if (pa < pam) && sa == sam
 			type = pt;

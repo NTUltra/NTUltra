@@ -45,7 +45,7 @@ dmg=6;
 if rage>60
 rage=60;
 
-room_speed=30+rage;
+room_speed=UberCont.normalGameSpeed+rage;
 
 if instance_exists(Player){
 //if theres another bust or you're no longer holding button

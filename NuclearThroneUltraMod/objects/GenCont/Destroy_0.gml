@@ -1,4 +1,4 @@
-room_speed=30;
+room_speed=UberCont.normalGameSpeed;
 if UberCont.opt_gamemode == 8
 {
 	with Floor

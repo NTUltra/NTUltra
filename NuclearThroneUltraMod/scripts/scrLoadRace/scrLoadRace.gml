@@ -825,9 +825,5 @@ function scrLoadRace() {
 	break;
 
 	}
-
-
-
-
-
+	snd_hurt_actual = snd_hurt;
 }

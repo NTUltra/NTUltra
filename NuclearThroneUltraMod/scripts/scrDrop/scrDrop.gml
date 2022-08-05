@@ -22,7 +22,7 @@ function scrDrop(itemdrop, weapondrop) {
 		}
 		if UberCont.opt_gamemode == 34 //HARD MODE
 		{
-			itemdrop *= 0.94;
+			itemdrop *= 0.975;
 			canHealth = 0.9;
 			weapondrop *= 1.09
 		}

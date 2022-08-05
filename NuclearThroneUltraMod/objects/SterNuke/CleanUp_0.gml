@@ -1,2 +1,2 @@
 /// @description Framerate yank
-room_speed=30;
+room_speed=UberCont.normalGameSpeed;

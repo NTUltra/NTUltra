@@ -2,11 +2,10 @@
 // /@description reset some important variables
 ///@param
 function scrEndOfRun(){
-	with Player
+	with PlayerAlarms
 	{
-		audio_stop_sound(snd_dead);	
+		alarm[1] = 0;
 	}
-	debug("END OF RUN");
 	with UberCont
 	{
 		loadedRun = false;

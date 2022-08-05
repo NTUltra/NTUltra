@@ -8,7 +8,7 @@ if !cursed {
 	var levelEnded = false;
 	with Portal
 	{
-		if !inverted
+		if !inverted && alarm[1] < 1
 			levelEnded = true;
 	}
 	if instance_exists(Player) {

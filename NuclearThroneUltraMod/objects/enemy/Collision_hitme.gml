@@ -17,8 +17,8 @@ if !(skill_got[8] = 1)||!(other.my_health==0){//gamma guts immunity!
 }
 }*/
 
-if size <= other.size
-motion_add(point_direction(other.x,other.y,x,y),1)
+if size < other.size
+	motion_add(point_direction(other.x,other.y,x,y),size)
 
 /* */
 /*  */

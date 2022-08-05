@@ -48,7 +48,7 @@ function scrYVPower(){
 			if Player.ultra_got[24]//YV ULTRA D
 			{
 				scrSwapWeps()
-				if !scrMeleeWeapons(wep)
+				if reload <= 0 && !scrMeleeWeapons(wep)
 				{
 					if ammo[wep_type[wep]] >= wep_cost[wep]*(2+Player.skill_got[5]*2) and rad>=wep_rad[wep]*(2+Player.skill_got[5]*2)// Check ammo of our secondary wep
 					{
