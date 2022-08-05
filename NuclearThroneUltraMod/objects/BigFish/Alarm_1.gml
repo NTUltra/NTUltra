@@ -90,7 +90,7 @@ if target > 0 && alarm[6] < 1 && alarm[7] < 1 {
 				
 				var maxfish = 2
 				if (inverted)
-					maxfish += 10;
+					maxfish += 4;
 				if instance_exists(Player) {
 					maxfish += Player.loops*5
 				}

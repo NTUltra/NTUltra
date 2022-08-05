@@ -49,6 +49,8 @@ inverted = false;
 suckRange = 100;
 cam=true
 
+if GetPlayerLoops() > 1
+	fishFireRate = 3;
 with BigFish
 {
 	if id!=other.id

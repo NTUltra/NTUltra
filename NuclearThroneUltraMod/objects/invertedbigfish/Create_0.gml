@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 raddrop = 70;
-maxhealth = 197;//210
+maxhealth = 195;//210
 meleedamage = 4
 size = 3
 if GetPlayerLoops() > 0{
@@ -12,7 +12,7 @@ if GetPlayerLoops() > 0{
 healAmount = 15;
 EnemyHealthAdjustments()
 inverted = true;
-actTime = 4;
+actTime = 6;
 suckRange = 160;
 maxspeed = 3;//2
 suckTime = 50;
