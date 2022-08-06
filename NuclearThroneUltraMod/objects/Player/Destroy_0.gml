@@ -123,10 +123,10 @@ if crown = 3
 my_health = 0}}
 
 
-with PlayerAlarms
+with instance_create(x,y,PlayerDead)
 {
 	snd_dead = other.snd_dead;
-	alarm[1] = 5;
+	alarm[0] = 2;
 }
 if !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 	with instance_create(x,y,WepPickupForOneWepOnly)
@@ -197,9 +197,6 @@ Sleep(20)
 repeat(20)
 instance_create(x+random(50)-25,y+random(50)-25,IonImpact)
 }
-
-if UberCont.opt_gamemode=4
-instance_create(x,y,BigDogExplo);
 
 
 //Crown of death

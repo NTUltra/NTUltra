@@ -1,9 +1,15 @@
 Sleep(100)
-repeat(32)
-instance_create(x+random(32)-16,y+random(32)-16,Explosion)
+repeat(28)
+instance_create(
+x+choose(random_range(-10,-55),random_range(10,55)),
+y+choose(random_range(-10,-55),random_range(10,55)),
+Explosion)
 
-repeat(20)
-instance_create(x+random(32)-16,y+random(32)-16,SmallExplosion)
+repeat(16)
+instance_create(
+x+choose(random_range(-50,-65),random_range(50,65)),
+y+choose(random_range(-50,-65),random_range(50,65)),
+SmallExplosion)
 snd_play(sndExplosionXL)
 
 instance_destroy()

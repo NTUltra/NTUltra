@@ -2,10 +2,6 @@
 // /@description reset some important variables
 ///@param
 function scrEndOfRun(){
-	with PlayerAlarms
-	{
-		alarm[1] = 0;
-	}
 	with UberCont
 	{
 		loadedRun = false;

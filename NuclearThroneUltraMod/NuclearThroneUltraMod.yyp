@@ -4692,6 +4692,7 @@
     {"id":{"name":"sndMutant22IDPD","path":"sounds/sndMutant22IDPD/sndMutant22IDPD.yy",},"order":21,},
     {"id":{"name":"sprNothingLeftHurtLink","path":"sprites/sprNothingLeftHurtLink/sprNothingLeftHurtLink.yy",},"order":2,},
     {"id":{"name":"sndMutant22Hurt","path":"sounds/sndMutant22Hurt/sndMutant22Hurt.yy",},"order":23,},
+    {"id":{"name":"PlayerDead","path":"objects/PlayerDead/PlayerDead.yy",},"order":7,},
     {"id":{"name":"sndMutant22Dead","path":"sounds/sndMutant22Dead/sndMutant22Dead.yy",},"order":25,},
     {"id":{"name":"SeekerBall","path":"objects/SeekerBall/SeekerBall.yy",},"order":266,},
     {"id":{"name":"sndMutant22Crwn","path":"sounds/sndMutant22Crwn/sndMutant22Crwn.yy",},"order":27,},
