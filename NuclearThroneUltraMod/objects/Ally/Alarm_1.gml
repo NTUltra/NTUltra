@@ -8,6 +8,11 @@ else if sprite_index = sprAllyCAppear
 	spr_idle = sprAllyCIdle
 	sprite_index = spr_idle
 }
+else if sprite_index = sprAllyEAppear
+{
+	spr_idle = sprAllyEIdle
+	sprite_index = spr_idle
+}
 alarm[1] = 9+random(5)
 
 

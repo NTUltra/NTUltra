@@ -103,13 +103,13 @@ if Player.area = 123 and Player.subarea = 2
 		repeat(clamp(floor((Player.loops-1)*0.25),1,3))
 			instance_create(instance_furthest(Player.x,Player.y,Floor).x+132, instance_furthest(Player.x,Player.y,Floor).y+32,InvertedLilHunter);
 	}
-if Player.loops > 0 && (Player.area == 5 && Player.subarea == 1)
+if Player.loops > 0 && (Player.area == 5 && Player.subarea == 2)
 {
 	scrSpawnBoss(BigDisc);
 	if (Player.loops > 5)
 		scrSpawnMoreBosses(BigDisc,1+clamp(floor((Player.loops-4)*0.25),1,2));
 }
-if Player.loops > 0 && (Player.area == 107 && Player.subarea == 1)
+if Player.loops > 0 && (Player.area == 107 && Player.subarea == 2)
 {
 	scrSpawnBoss(InvertedBigDisc);
 	if (Player.loops > 5)

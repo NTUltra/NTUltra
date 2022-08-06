@@ -1,6 +1,6 @@
 event_inherited()
 raddrop = 70
-maxhealth = 230;//280
+maxhealth = 270;
 EnemyHealthAdjustments()
 spr_idle = sprInvertedBigDisc
 spr_walk = sprInvertedBigDisc

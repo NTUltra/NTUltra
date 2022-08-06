@@ -10689,7 +10689,8 @@ function scrFire2() {
 	//TERMITE INJECTOR
 	case 590:
 
-	snd_play_fire(sndBloodHammer)
+	snd_play_fire(choose(sndSword1,sndSword2))
+	snd_play(sndMeatExplo);
 
 	instance_create(x,y,Dust)
 

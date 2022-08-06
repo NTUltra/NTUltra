@@ -23,7 +23,7 @@ if instance_exists(ElectroBall)
 				target = other.target;
 				target=other.target;
 				team = other.team
-				ammo = round(point_distance(x,y,tx,ty)*0.12);
+				ammo = max(3,round(point_distance(x,y,tx,ty)*0.12));
 				if ammo>25
 				ammo=25;
 				fork = 99;
