@@ -31,7 +31,3 @@ if speed>6+Player.skill_got[19]
 speed=6+Player.skill_got[19];
 
 image_angle=direction;
-
-if random(2)<1
-instance_create(x,y,Smoke);
-

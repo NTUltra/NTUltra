@@ -59,7 +59,7 @@ if target > 0 && alarm[6] < 1 && alarm[7] < 1 {
 		alarm[5] = chargeTell + actTime*2;
 		alarm[6] = chargeTell
 	} else if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
-		maxspeed = originalMaxspeed + 1 - 1.5*(my_health/maxhealth)
+		maxSpeed = originalMaxspeed + 1 - 1.5*(my_health/maxhealth)
         if ((random(7) < 1 && point_distance(x, y, Player.x, Player.y) > 100) ) && alarm[2] < 1 && alarm[5] < 1 { //SUCK
             beginSuck();
         } else if alarm[2] < 1 {
@@ -108,7 +108,7 @@ if target > 0 && alarm[6] < 1 && alarm[7] < 1 {
 			}
 		}
     } else { //wall in between
-		maxspeed = originalMaxspeed + 2
+		maxSpeed = originalMaxspeed + 2
 		direction = point_direction(x, y, target.x, target.y);
 		walk = actTime + random(actTime);
 		alarm[1] = walk;

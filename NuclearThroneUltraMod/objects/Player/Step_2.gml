@@ -688,7 +688,7 @@ if rollIframe > 0
 	if place_meeting(x,y,WallHitMe)
 	{
 		move_outside_solid(direction+180,8);
-		move_contact_solid(direction,max(1,min(maxspeed,speed)))
+		move_contact_solid(direction,max(1,min(maxSpeed,speed)))
 		if !place_free(x+hspeed,y){hspeed /= 2
 		if !place_free(x+hspeed,y) hspeed = 0}
 		if !place_free(x,y+vspeed){vspeed /= 2

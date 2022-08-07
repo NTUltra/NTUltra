@@ -84,7 +84,7 @@ function scrSaveRun() {
 			invertedchance: Player.invertedchance,
 			crownvisits: Player.crownvisits,
 			hard: Player.hard,
-			maxspeed: Player.maxspeed,
+			maxSpeed: Player.maxSpeed,
 			hammerheadcounter: Player.hammerheadcounter,
 			lag: Player.lag,
 			hardshell: Player.hardshell,

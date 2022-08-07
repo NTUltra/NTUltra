@@ -8,5 +8,5 @@ dmg = 6;
 alarm[0]=6
 
 //mask_index=mskPickupThroughWall;
-
+alarm[1] = 1;
 alarm[11] = 1;

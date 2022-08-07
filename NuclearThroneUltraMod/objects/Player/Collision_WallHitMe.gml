@@ -4,7 +4,7 @@ my_health=0;
 
 if race!=18
 {
-	move_contact_solid(direction,max(1,min(maxspeed,speed)))
+	move_contact_solid(direction,max(1,min(maxSpeed,speed)))
 	var m = 0.5;
 	if !place_free(x+hspeed,y){hspeed *= m
 	if !place_free(x+hspeed,y) hspeed = 0}

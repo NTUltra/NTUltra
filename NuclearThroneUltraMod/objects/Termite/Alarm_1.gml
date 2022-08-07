@@ -17,7 +17,7 @@ if target > 0
 //GOT A TARGET
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and point_distance(x,y,target.x,target.y) < 600
 {
-maxspeed=7;
+maxSpeed=7;
 motion_add(point_direction(x,y,target.x,target.y),3)
 mp_potential_step(target.x,target.y,2,false)
 
@@ -30,7 +30,7 @@ else if target.x > x
 right = 1*/
 }
 else{//CANT SEE TARGET
-maxspeed=4;
+maxSpeed=4;
 if random(4) < 3
 {
 //CANT SEE TARGET

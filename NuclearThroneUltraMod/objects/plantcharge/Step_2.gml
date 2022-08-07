@@ -4,7 +4,7 @@ if instance_exists(Player)
 	x = Player.x;
 	y = Player.y;
 	image_angle = Player.direction;
-	if Player.speed < Player.maxspeed-0.5
+	if Player.speed < Player.maxSpeed-0.5
 	{
 		image_speed = 0.8;
 	}

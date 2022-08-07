@@ -10,7 +10,7 @@ typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 //friction=0.4;
 dmg = 3//15
 nomscale = 1;
-maxspeed = 16;
+maxSpeed = 16;
 
 if instance_exists(Player)
 {
@@ -22,7 +22,7 @@ if Player.skill_got[17] = 1
 		dmg++;
 }
 	if Player.crown == 24//Crown of sloth
-		maxspeed -= 4;
+		maxSpeed -= 4;
 }
 image_speed = 0.5
 resetSpeed=false;

@@ -71,8 +71,8 @@ if ds > 0
 if !attacking
 	motion_add(direction,0.5)
 
-if speed > maxspeed
-speed = maxspeed
+if speed > maxSpeed
+speed = maxSpeed
 
 if !instance_exists(Player) && sndtaunt = 0
 {

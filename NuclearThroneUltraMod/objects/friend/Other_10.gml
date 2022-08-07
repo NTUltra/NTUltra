@@ -24,11 +24,11 @@ if race == 7 && bskin == 2
 }
 if race == 19 //skeleton
 {
-    maxspeed = 3.6;
+    maxSpeed = 3.6;
     accuracy = 1.2;
 }
 else if race = 5 //Plant
-	maxspeed = 4.5;
+	maxSpeed = 4.5;
 else if race = 11//HUNTER
 {
 	accuracy = 0.8;	

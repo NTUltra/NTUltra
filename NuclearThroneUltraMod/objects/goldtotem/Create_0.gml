@@ -17,6 +17,19 @@ friction = 3;
 //behavior
 walk = 0
 alarm[1] = 30+random(90)
+if instance_exists(Player)
+{
+	if Player.skill_got[29]//insomnia
+    {
+		var t = 160;
+		if Player.race = 25
+	    {
+			t = 190;
+	    }
+	}
+	alarm[1] += t;
+}
 actTime = 90;
-
+if UberCont.opt_gamemode == 34//HARD MODE
+	alarm[2] = alarm[1];
 alarm[0] = 2;

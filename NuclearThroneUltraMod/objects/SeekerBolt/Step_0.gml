@@ -33,8 +33,8 @@ if target!=0 && target.team != team
 motion_add(point_direction(x,y,target.x,target.y),acc+bm+ee);
 }
 motion_add(direction,0.8);
-if speed>maxspeed+bm+ee
-	speed = max(maxspeed+bm+ee,speed*0.7);
+if speed>maxSpeed+bm+ee
+	speed = max(maxSpeed+bm+ee,speed*0.7);
 	//speed=6+bm;
 
 image_angle=direction;

@@ -5,7 +5,7 @@ if(image_xscale<0.5)
 {instance_destroy();}
 if resetSpeed{
 speed=0;
-motion_add(originalDirection,maxspeed)
+motion_add(originalDirection,maxSpeed)
 resetSpeed=false;
 friction=0;}
 
@@ -14,20 +14,20 @@ if instance_exists(Player)
     if Player.race=11
     {
     speed+=0.5;
-    if speed>maxspeed+3
+    if speed>maxSpeed+3
     {
-    speed=maxspeed+3;
+    speed=maxSpeed+3;
     }
     }
-    else if(speed>maxspeed)
-    {speed=maxspeed;}
+    else if(speed>maxSpeed)
+    {speed=maxSpeed;}
 	if Player.crown == 23//Crown of speed
 	{
 		speed += 2;	
 	}
 }
-else if(speed>maxspeed)
-{speed=maxspeed;}
+else if(speed>maxSpeed)
+{speed=maxSpeed;}
 
 
 
@@ -64,7 +64,7 @@ alarm[1]=2;
 
 
 speed+=12;
-maxspeed = 16;
+maxSpeed = 16;
 direction=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 originalDirection = direction;
 resetSpeed = false;

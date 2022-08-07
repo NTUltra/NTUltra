@@ -6330,8 +6330,8 @@ function scrWeapons() {
 	wep_name[574] = "EVERYTHING LINE"
 	wep_type[574] = 4
 	wep_auto[574] = 0
-	wep_load[574] = 40
-	wep_cost[574] = 8
+	wep_load[574] = 44
+	wep_cost[574] = 9
 	wep_sprt[574] = sprLineEverything
 	wep_area[574] = 29
 	wep_text[574] = "don't get in the line of fire"

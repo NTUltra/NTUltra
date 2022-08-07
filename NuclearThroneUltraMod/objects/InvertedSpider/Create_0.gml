@@ -18,12 +18,12 @@ snd_hurt = sndHitRock
 //behavior
 walk = 0
 alarm[1] = 30+random(90)
-maxspeed = 4//3
+maxSpeed = 4//3
 
 if instance_exists(Player)
 {
 if Player.loops>0
-maxspeed = 5.2
+maxSpeed = 5.2
 }
 
 dodge=10;

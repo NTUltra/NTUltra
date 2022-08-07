@@ -1,6 +1,6 @@
 image_speed = 0.4;
+maxSpeed = 3;
 my_health = maxhealth
-
 raddrop=0;
 existTime = 0;
 team = 0

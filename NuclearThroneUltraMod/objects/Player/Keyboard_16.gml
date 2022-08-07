@@ -44,6 +44,13 @@ if UberCont.public = 0 {
 	    my_health = 0
 	    with instance_create(x, y, Portal) type = 1
 	}
+	if keyboard_check_pressed(ord("7")) {
+	    area = 100
+	    subarea = 0
+	    with enemy
+	    my_health = 0
+	    with instance_create(x, y, Portal) type = 1
+	}
 	if keyboard_check_pressed(ord("0")) {
 		var thing = instance_create(x + 16,y + 16,PopupText);
 		thing.mytext = "KILLED ALL REQUIRED BOSSES";

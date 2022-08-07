@@ -13,20 +13,20 @@ if instance_exists(Player)
     if Player.race=11
     {
     speed+=0.5;
-    if speed>maxspeed+2
+    if speed>maxSpeed+2
     {
-    speed=maxspeed+2;
+    speed=maxSpeed+2;
     }
     }
-    else if(speed>maxspeed)
-    {speed=maxspeed;}
+    else if(speed>maxSpeed)
+    {speed=maxSpeed;}
 	if Player.crown == 23//Crown of speed
 	{
 		speed += 2;	
 	}
 }
-else if(speed>maxspeed)
-{speed=maxspeed;}
+else if(speed>maxSpeed)
+{speed=maxSpeed;}
 
 if(image_xscale<nomscale)
 {

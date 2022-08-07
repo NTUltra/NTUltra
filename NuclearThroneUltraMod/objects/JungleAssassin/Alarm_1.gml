@@ -4,7 +4,8 @@ if target > 0
 {
 	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 	{
-		if point_distance(target.x,target.y,x,y) < range
+		var dis = point_distance(target.x,target.y,x,y)
+		if dis < range
 		{
 		walk = 2;
 		alarm[2]=tellTime//the delay that everyone wants
@@ -13,7 +14,7 @@ if target > 0
 		instance_create(x+5,y,Notice);
 		alarm[1]=tellTime*1.5;
 		}
-		else
+		else if dis < 200
 		{
 			direction = point_direction(target.x,target.y,x,y)+random(20)-10
 			speed = 0.4

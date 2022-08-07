@@ -1238,11 +1238,11 @@ function scrPowers() {
 		}
 		if skill_got[2]==1//extra feet
 		{
-		maxspeed=8;
+		maxSpeed=8;
 		}
 		else
 		{
-		maxspeed=7;
+		maxSpeed=7;
 		}
 		}
 	}
@@ -1561,17 +1561,17 @@ function scrPowers() {
 
 		if skill_got[2]==1//extra feet
 		{
-			maxspeed = 6.5;
-			//maxspeed=5.7;
+			maxSpeed = 6.5;
+			//maxSpeed=5.7;
 			//if ultra_got[104]
-			//	maxspeed=7.7
+			//	maxSpeed=7.7
 		}
 		else
 		{
-			maxspeed = 6;
-		//maxspeed=5.2;
+			maxSpeed = 6;
+		//maxSpeed=5.2;
 		//if ultra_got[104]
-		//maxspeed=7.2
+		//maxSpeed=7.2
 		}
 		image_speed=0.6;
 	}
@@ -2001,12 +2001,12 @@ function scrPowers() {
 			if skill_got[2]==1//extra feet
 			{
 				//normal : 4.5
-			maxspeed=5.625//6.3;//6.5// 4.5
+			maxSpeed=5.625//6.3;//6.5// 4.5
 			}
 			else
 			{
 				// normal : 4
-			maxspeed=5//5.8;//6//normal 4   4*(30/room_speed)
+			maxSpeed=5//5.8;//6//normal 4   4*(30/room_speed)
 			}
 			//friction = 0.45 normal
 			//image_speed = 0.4 normal
@@ -2024,7 +2024,7 @@ function scrPowers() {
 		}
 		else
 		{
-		    if speed>maxspeed-0.5//make chicken a lill slower in slow mo when no thronebutt
+		    if speed>maxSpeed-0.5//make chicken a lill slower in slow mo when no thronebutt
 		    {
 		    speed-=0.5;
 		    }
@@ -2301,11 +2301,11 @@ function scrPowers() {
 	{
 	        if skill_got[2]==1//extra feet
 	        {
-	        maxspeed = 4.5;
+	        maxSpeed = 4.5;
 	        }
 	        else
 	        {
-	        maxspeed = 4.0;
+	        maxSpeed = 4.0;
 	        }
 	        friction = 0.45
 	        image_speed = 0.4
@@ -2418,11 +2418,11 @@ function scrPowers() {
 
 	if skill_got[2]==1//extra feet
 	{
-		maxspeed=5;
+		maxSpeed=5;
 	}
 	else
 	{
-		maxspeed=4.5;
+		maxSpeed=4.5;
 	}
 
 	image_speed=0.4;
@@ -2439,11 +2439,11 @@ function scrPowers() {
 	sheepPower=0;
 	if skill_got[2]==1//extra feet
 	{
-	maxspeed=4.5;
+	maxSpeed=4.5;
 	}
 	else
 	{
-	maxspeed=4;
+	maxSpeed=4;
 	}
 	}
 	}

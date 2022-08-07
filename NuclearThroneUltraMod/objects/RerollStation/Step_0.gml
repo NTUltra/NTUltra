@@ -64,9 +64,9 @@ if place_meeting(x,y,Player) && !used
 				break;
 				case 2: //EXTRA FEET
 					if race == 25
-						maxspeed -=0.6;
+						maxSpeed -=0.6;
 					else
-						maxspeed -= 0.5;
+						maxSpeed -= 0.5;
 				break;
 				case 3: //PLUTONIUM HUNGER
 					betterpluto = 39;

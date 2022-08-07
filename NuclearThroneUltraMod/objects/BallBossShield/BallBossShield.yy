@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskStatueBossShield",
     "path": "sprites/mskStatueBossShield/mskStatueBossShield.yy",

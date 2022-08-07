@@ -299,7 +299,7 @@ if UberCont.opt_gamemode == 9
 {
 	maxhealth += UberCont.casualModeHPIncrease;
 }
-maxspeed = 4
+maxSpeed = 4
 
 
 level = 1
@@ -396,12 +396,12 @@ maxhealth = 2
 if race == 19 //skeleton
 {
     maxhealth = 4;
-    maxspeed = 3.6
+    maxSpeed = 3.6
     accuracy = 1.2
 }
 
 if race = 5 //Plant
-	maxspeed = 4.5
+	maxSpeed = 4.5
 
 if race = 7 //roids secondary weapon
 {

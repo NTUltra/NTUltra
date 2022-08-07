@@ -8,7 +8,7 @@ dmg = 4;
 image_speed = 1//0.4
 friction = 0.4
 right = choose(1,-1)
-maxspeed=7;
+maxSpeed=7;
 offx = random(2)-1
 offy = random(2)-1
 

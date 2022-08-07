@@ -63,7 +63,7 @@ bcurse = 0;
 existTime = 30;
 
 friction = 0.45
-maxspeed = 4;
+maxSpeed = 4;
 accuracy = 1;
 dodgeOffset = choose(10,-10);
 event_user(0);

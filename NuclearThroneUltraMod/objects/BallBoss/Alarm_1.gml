@@ -33,6 +33,11 @@ if target > 0 {
 	{
 		scrDrop(20,0);
 	}
+	else if ran > 40
+	{
+		//Side attack
+		event_user(3);
+	}
 
 }
 else if random(10) < 1 {
@@ -41,6 +46,7 @@ else if random(10) < 1 {
 if !reachHalfHealth && my_health < maxhealth * 0.74
 {
 	snd_play(sndBallBossHalfHP,0,false,false,3,false,false,1,false);
+	waveSpeed += 0.5;
 	lineOfFireOffset -= 5;
 	reachHalfHealth = true;
 	maxSpeed += 0.4;
@@ -65,6 +71,7 @@ if !reachHalfHealth && my_health < maxhealth * 0.74
 else if !reachLowHealth && my_health < maxhealth * 0.32
 {
 	lineOfFireOffset -=5;
+	waveSpeed += 0.5;
 	snd_play(sndBallBossLowHP,0,false,false,3,false,false,1,false);
 	actTime -= 2;
 	reachLowHealth = true;

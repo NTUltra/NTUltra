@@ -1,6 +1,6 @@
 /// @description end tackle
 
-maxspeed = 3
+maxSpeed = 3
 
 var fish = 0;
 with BoneFish {

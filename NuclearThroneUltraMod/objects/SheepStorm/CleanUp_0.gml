@@ -9,11 +9,11 @@ with Player
 
 if skill_got[2]==1//extra feet
 {
-maxspeed=4.5;
+maxSpeed=4.5;
 }
 else
 {
-maxspeed=4;
+maxSpeed=4;
 }
 
 }

@@ -18,6 +18,10 @@ spr_respawn = sprAssassinBossRespawn;
 fakeded = -1;
 var loops = GetPlayerLoops();
 lifes = min(2,loops-1);
+if instance_exists(SurvivalWave)
+	lifes = max(0,lifes-1);
+if instance_number(AssassinBoss) > 1
+	lifes = max(lifes-1,0);
 
 
 snd_hurt = sndAssassinHit

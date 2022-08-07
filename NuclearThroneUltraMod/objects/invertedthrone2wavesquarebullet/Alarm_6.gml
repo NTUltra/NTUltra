@@ -6,6 +6,6 @@ with instance_create(x,y,InvertedGuardianBulletSpawn)
 	sprite_index = sprInvertedGuardianSquareBulletSpawn;
 	team = other.team;
 	owner = other.id;
-	motion_add(other.aimDirection,3);
+	motion_add(other.aimDirection,other.pSpeed);
 }
 alarm[6] = spawnDelay;

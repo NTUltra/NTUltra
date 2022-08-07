@@ -18,8 +18,8 @@ sprite_index = spr_idle}
 
 if race == 23
 	speed = max(speed,3);
-if speed > maxspeed
-speed = maxspeed
+if speed > maxSpeed
+speed = maxSpeed
 
 var bigPortal = noone;
 with Portal

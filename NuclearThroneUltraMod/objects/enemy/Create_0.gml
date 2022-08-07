@@ -6,7 +6,7 @@ prevhealth=my_health;
 walk = 0;
 MorphMe=false;
 frozen=false;
-
+maxSpeed = 16;
 team = 1
 target = -1
 

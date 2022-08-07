@@ -1,5 +1,7 @@
 raddrop = 600
 maxhealth = 2800//2500
+if instance_exists(InvaderBossSpawnPortal)
+	maxhealth = 1800;
 meleedamage = 0
 size = 2
 
@@ -23,6 +25,7 @@ alarm[2] = 10;
 alarm[3] = 130;
 spinRate = 1.8;
 pSpeed = 3;
+waveSpeed = 3.2;
 maxSpeed = 2.6;
 if instance_exists(Player) && Player.skill_got[12]
 {

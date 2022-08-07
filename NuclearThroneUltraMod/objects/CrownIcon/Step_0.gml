@@ -223,25 +223,25 @@ if oldcrown == 23
 {
 	//Crown of speed
 	Player.pSpeedBoost -= 0.12;
-	Player.maxspeed -= 0.25;
+	Player.maxSpeed -= 0.25;
 }
 if crown == 23
 {
 	//Crown of speed
 	Player.pSpeedBoost += 0.12;
-	Player.maxspeed += 0.25;
+	Player.maxSpeed += 0.25;
 }
 if oldcrown == 24
 {
 	//Crown of sloth
 	Player.pSpeedBoost += 0.12;
-	Player.maxspeed += 0.25;
+	Player.maxSpeed += 0.25;
 }
 if crown == 24
 {
 	//Crown of sloth
 	Player.pSpeedBoost -= 0.12;
-	Player.maxspeed -= 0.25;
+	Player.maxSpeed -= 0.25;
 }
 with CrownIcon
 instance_destroy()

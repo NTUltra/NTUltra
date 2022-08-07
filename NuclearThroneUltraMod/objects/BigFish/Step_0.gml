@@ -105,8 +105,8 @@ right = 1
 else if hspeed < 0
 right = -1
 
-if speed > maxspeed
-speed = maxspeed
+if speed > maxSpeed
+speed = maxSpeed
 
 if target>0
 {
@@ -121,7 +121,7 @@ if target>0
 	} else {
 		suckstrength=0;
 		if sprite_index == spr_hurt && alarm[6] < 1 && alarm[7] < 1 {
-			motion_add(point_direction(x,y,Player.x,Player.y), maxspeed)
+			motion_add(point_direction(x,y,Player.x,Player.y), maxSpeed)
 		}
 	}
 }

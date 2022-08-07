@@ -23,7 +23,7 @@ ammo = maxAmmo;
 alarm[1] = 30+random(90)
 maxSpeed = 2.5;
 loops = GetPlayerLoops();
-length = 5;
+length = 4;
 if loops > 0
 {
 	actTime = 6;
@@ -31,4 +31,6 @@ if loops > 0
 	length ++;
 }
 if loops > 2
+	length ++;
+if loops > 4
 	length ++;

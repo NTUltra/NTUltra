@@ -26,11 +26,11 @@ if KeyCont.key_spec[Player.p] != 1 && KeyCont.key_spec[Player.p] != 2
 	    with instance_create(Player.x,Player.y,TemporaryBuff)
 	    {
 	    maxhp=Player.maxhealth;
-	    maxspeed=Player.maxspeed;
+	    maxSpeed=Player.maxSpeed;
 	    }
 	    Player.maxhealth+=8;
 	    Player.my_health+=8;
-	    Player.maxspeed+=2;
+	    Player.maxSpeed+=2;
     }
 }
 }

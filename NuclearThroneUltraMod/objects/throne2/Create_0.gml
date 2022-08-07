@@ -1,5 +1,5 @@
 raddrop = 70
-maxhealth = 950
+maxhealth = 1000
 loops = GetPlayerLoops();
 if UberCont.opt_gamemode == 34
 	maxhealth += 60;
@@ -51,7 +51,7 @@ fireRate = 10;
 lp = 0.05;//0.2
 pSpeedAccurate = 4;
 image_xscale = 1;
-actTime = 18;
+actTime = 17;
 scrTarget();
 onFloorFail = 0;
 if instance_exists(Player) && Player.area == 100

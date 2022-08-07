@@ -94,7 +94,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 				}
 			}
 			mask_index = msk;
-			if speed > maxspeed
+			if speed > maxSpeed
 			{
 				if !instance_exists(PlantCharge)
 				{
@@ -105,7 +105,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		}
 
 	if race == 23 && ultra_got[92] == 0
-	speed = clamp(speed,maxspeed*0.8,maxspeed);
+	speed = clamp(speed,maxSpeed*0.8,maxSpeed);
 
 	if alarm[4]>0//boiling veins
 	{
@@ -1208,7 +1208,7 @@ if  ultra_got[40]=1//Ultra D
 }
 if wep == 531//Coffee makes you faster
 {
-	maxspeed += 1;	
+	maxSpeed += 1;	
 }
 outOfCombat = (!instance_exists(enemy) || instance_number(enemy) <= instance_number(IDPDVan)) && !instance_exists(becomenemy) && UberCont.opt_gamemode != 25//Not survival arena
 if instance_exists(SurvivalWave)
@@ -1219,14 +1219,14 @@ if instance_exists(SurvivalWave)
 	}
 }
 if outOfCombat
-	maxspeed += 1;
-if speed > maxspeed
-	speed = maxspeed
+	maxSpeed += 1;
+if speed > maxSpeed
+	speed = maxSpeed
 if outOfCombat
-	maxspeed -= 1;
+	maxSpeed -= 1;
 if wep == 531
 {
-	maxspeed -= 1;
+	maxSpeed -= 1;
 }
 
 if roll = 1

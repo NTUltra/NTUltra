@@ -88,7 +88,7 @@ with Player//Data to keep
 		invertedchance = other.invertedchance;
 		crownvisits = other.crownvisits;
 		hard = other.hard;
-		maxspeed = other.maxspeed;
+		maxSpeed = other.maxSpeed;
 		hammerheadcounter = other.hammerheadcounter;
 		lag = other.lag;
 		hardshell = other.hardshell;

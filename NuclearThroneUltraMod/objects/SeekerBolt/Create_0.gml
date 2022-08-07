@@ -23,6 +23,6 @@ if instance_exists(Player){
 alarm[0]=4
 
 }
-maxspeed = 6;
+maxSpeed = 6;
 acc = 1.2;
 alarm[11] = 1;

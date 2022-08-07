@@ -10,6 +10,6 @@ if hspeed > 0
 right = 1
 else if hspeed < 0
 right = -1
-if speed > maxspeed
-speed = maxspeed
+if speed > maxSpeed
+speed = maxSpeed
 

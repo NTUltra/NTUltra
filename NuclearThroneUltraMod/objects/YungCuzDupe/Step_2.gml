@@ -91,8 +91,8 @@ friction = 0.45
 
 
 //Speed
-if speed > Player.maxspeed
-speed = Player.maxspeed
+if speed > Player.maxSpeed
+speed = Player.maxSpeed
 
 /* */
 ///tough shell

@@ -19,6 +19,8 @@ spr_respawn = sprInvertedAssassinBossRespawn;
 fakeded = -1;
 var loops = GetPlayerLoops();
 lifes = min(2,loops-1);
+if instance_number(InvertedAssassinBoss) > 1
+	lifes = max(lifes-1,0);
 playedWinSound = false;
 
 snd_hurt = sndAssassinHit

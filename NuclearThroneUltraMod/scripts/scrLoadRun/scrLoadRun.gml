@@ -150,7 +150,7 @@ function scrLoadRun(){
 				Player.invertedchance = encryptedRun.invertedchance;
 				Player.crownvisits = encryptedRun.crownvisits;
 				Player.hard = encryptedRun.hard;
-				Player.maxspeed = encryptedRun.maxspeed;
+				Player.maxSpeed = encryptedRun.maxSpeed;
 				Player.hammerheadcounter = encryptedRun.hammerheadcounter;
 				Player.lag = encryptedRun.lag;
 				Player.hardshell = encryptedRun.hardshell;

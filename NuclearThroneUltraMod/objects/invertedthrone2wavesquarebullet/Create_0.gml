@@ -20,3 +20,4 @@ desTime = 0;
 aimDirection = 0;
 destAcc = 0.012;
 my_health = 10;//For the bullet spawner
+pSpeed = 3;

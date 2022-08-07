@@ -26,9 +26,9 @@ if skill = 1
 else if skill = 2
 {
 if Player.race=25
-	Player.maxspeed +=0.6;
+	Player.maxSpeed +=0.6;
 else
-	Player.maxspeed += 0.5;
+	Player.maxSpeed += 0.5;
 
 }
 else if skill = 3

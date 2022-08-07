@@ -10,15 +10,15 @@ if dis > 70
 	}
 	else
 	{
-		if speed > maxspeed+1
-			speed = maxspeed+1
+		if speed > maxSpeed+1
+			speed = maxSpeed+1
 		mp_potential_step(targetx,targety,1,false)
 	}
 }
-else if speed > maxspeed
-speed = maxspeed
-}else if speed > maxspeed
-speed = maxspeed
+else if speed > maxSpeed
+speed = maxSpeed
+}else if speed > maxSpeed
+speed = maxSpeed
 
 
 friction = 0.2

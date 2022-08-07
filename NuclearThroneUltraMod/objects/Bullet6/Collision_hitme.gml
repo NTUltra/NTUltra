@@ -6,7 +6,8 @@ my_health -= other.dmg;
 sprite_index = spr_hurt
 image_index = 0
 motion_add(other.direction,3)
-
+if speed > maxSpeed+1
+	speed = maxSpeed+1;
 	if alarm[11]>0//frozen
 	{
 	with Player

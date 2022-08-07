@@ -10,8 +10,8 @@ if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
 vspeed += 3
 
 
-if speed > Player.maxspeed/1.25
-speed = Player.maxspeed/1.25
+if speed > Player.maxSpeed/1.25
+speed = Player.maxSpeed/1.25
 }
 if(sprite_index!=spr_disappear){//exit code as soon as the shield starts to dissapear
 if instance_exists(Player)
@@ -109,7 +109,7 @@ if Player.ultra_got[6]=1 && !Player.altUltra{
 mask_index=mskMovingShield;
 
 if place_meeting(x+hspeed,y+vspeed,Wall){
-	move_contact_solid(direction,max(1,min(Player.maxspeed,speed)))
+	move_contact_solid(direction,max(1,min(Player.maxSpeed,speed)))
 	if !place_free(x+hspeed,y){
 		hspeed *= 0.5
 		//var inwall = place_meeting(x,y,Wall);

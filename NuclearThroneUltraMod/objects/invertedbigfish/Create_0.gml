@@ -14,10 +14,10 @@ EnemyHealthAdjustments()
 inverted = true;
 actTime = 6;
 suckRange = 160;
-maxspeed = 3;//2
+maxSpeed = 3;//2
 suckTime = 50;
 fishFireRate = 2;
-originalMaxspeed = maxspeed;
+originalMaxspeed = maxSpeed;
 chargeSpeed = 9;//7
 chargeDis = 120;
 suckAcc = 0.098;

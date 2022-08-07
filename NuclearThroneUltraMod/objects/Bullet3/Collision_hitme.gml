@@ -10,7 +10,9 @@ if other.team != team and other.my_health > 0 && alarm[0] < 1
 		}
 		sprite_index = spr_hurt
 		image_index = 0
-		motion_add(other.direction,8)
+		motion_add(other.direction,6)
+		if speed > maxSpeed+1
+			speed = maxSpeed+1;
 	}
 	snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
 	instance_create(x,y,BulletHit)

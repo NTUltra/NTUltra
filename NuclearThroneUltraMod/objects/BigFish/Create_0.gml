@@ -35,8 +35,8 @@ motion_add(point_direction(Player.x,Player.y,x,y),3)
 intro=1;
 suckstrength=0;
 suckAcc = 0.091;
-maxspeed=2
-originalMaxspeed = maxspeed;
+maxSpeed=2
+originalMaxspeed = maxSpeed;
 persistent_direction = 0;
 actTime = 9;
 fishFireRate = 4;

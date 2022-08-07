@@ -5,7 +5,9 @@ with other
 my_health -= other.dmg
 sprite_index = spr_hurt
 image_index = 0
-motion_add(other.direction,3)
+motion_add(other.direction,4)
+if speed > maxSpeed+1
+	speed = maxSpeed+1;
 }
 snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
 with instance_create(x,y,BulletHit)

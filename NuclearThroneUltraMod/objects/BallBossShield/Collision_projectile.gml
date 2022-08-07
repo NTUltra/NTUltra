@@ -9,7 +9,7 @@ if team != other.team && alarm[0] < 1
 			direction = point_direction(other.x,other.y,x,y)
 			image_angle = direction
 			speed = max(speed* 0.6,1);
-	
+			event_user(15);
 			with instance_create(x,y,Deflect)
 				image_angle = other.direction
 		}

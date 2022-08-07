@@ -18,6 +18,6 @@ hits+=1;
 alarm[0]=4
 
 }
-maxspeed = 8;
+maxSpeed = 8;
 acc = 2;
 alarm[11] = 0;

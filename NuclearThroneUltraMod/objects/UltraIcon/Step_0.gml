@@ -81,7 +81,7 @@ else if skill == 20 && Player.crown == 23 && Player.skill_got[2]
 		ultra_name[20] = "SONIC SPEED"
 		ultra_text[20] = "YOU CAN MOVE EXTREMELY FAST!#ACCELERATING OR DECCELERATING QUICKLY#CREATES A SONIC BOOM"
 		ultra_tips[20] = "SONIC BOOM!"
-		maxspeed += 6;
+		maxSpeed += 6;
 	}
 }
 else if skill == 92 && Player.wep_type[Player.wep] == 3 && Player.wep_type[Player.bwep] == 3
@@ -435,7 +435,7 @@ with Player
 			ammo[5] = typ_amax[5];
 			//event_perform(ev_other,ev_room_end);
 			
-			maxspeed += 0.4;//Normal speed
+			maxSpeed += 0.4;//Normal speed
 			accuracy = 1;//Normal accuracy
 			standartAccuracy = accuracy;
 		}
@@ -461,7 +461,7 @@ else if skill == 76//skelly ultra D
 				si++;
 			}
 		    ultimategamble=false;
-			maxspeed += 0.4;//Normal speed
+			maxSpeed += 0.4;//Normal speed
 			accuracy = 1;//Normal accuracy
 			standartAccuracy = accuracy;
 			if skill_got[19] //eagle eyes

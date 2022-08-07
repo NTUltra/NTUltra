@@ -14,13 +14,13 @@ if instance_exists(Player)
     if Player.race=11
     {
     speed+=0.5;
-    if speed>maxspeed+3
+    if speed>maxSpeed+3
     {
-    speed=maxspeed+3;
+    speed=maxSpeed+3;
     }
     }
-    else if(speed>maxspeed)
-    {speed=maxspeed;}
+    else if(speed>maxSpeed)
+    {speed=maxSpeed;}
 	if Player.crown == 23//Crown of speed
 	{
 		speed += 2;	
@@ -30,8 +30,8 @@ if instance_exists(Player)
 		speed -= 2;	
 	}
 }
-else if(speed>maxspeed)
-{speed=maxspeed;}
+else if(speed>maxSpeed)
+{speed=maxSpeed;}
 
 if speed < 2
 	instance_destroy();

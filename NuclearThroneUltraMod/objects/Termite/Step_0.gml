@@ -27,6 +27,6 @@ image_xscale=1;
 else
 image_xscale=-1;
 
-if speed>maxspeed
-speed=maxspeed;
+if speed>maxSpeed
+speed=maxSpeed;
 

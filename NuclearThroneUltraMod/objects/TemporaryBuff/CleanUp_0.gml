@@ -2,7 +2,7 @@
 if instance_exists(Player)
 {
 Player.maxhealth=maxhp;
-Player.maxspeed=maxspeed;
+Player.maxSpeed=maxSpeed;
 if Player.my_health>Player.maxhealth
 Player.my_health=Player.maxhealth;
 }

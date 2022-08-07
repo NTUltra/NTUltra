@@ -7,12 +7,12 @@ if Player.loops>0
 alarm[1] = 10+random(10);
 }
 
-maxspeed = 3
+maxSpeed = 3
 if target > 0
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and point_distance(x,y,target.x,target.y) < 96
 {
-maxspeed = 6
+maxSpeed = 6
 direction = point_direction(x,y,target.x,target.y)+random(80)-40
 speed = 0.8
 walk = 15+random(5)

@@ -6,6 +6,6 @@ walk -= 1
 motion_add(direction,0.8)
 }
 
-if speed > maxspeed
-speed = maxspeed
+if speed > maxSpeed
+speed = maxSpeed
 
