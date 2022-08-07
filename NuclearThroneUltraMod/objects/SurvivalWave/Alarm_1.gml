@@ -65,6 +65,10 @@ if UberCont.opt_gamemode != 25
 		{
 			area = 100;
 		}
+		with PlayerSpawn
+		{
+			area = 100;	
+		}
 		if instance_exists(TopCont)
 			TopCont.darkness = 1;
 	}
@@ -74,6 +78,14 @@ if UberCont.opt_gamemode != 25
 		{
 			if (point_distance(other.centerX,other.centerY,x,y) > 400)
 				my_health = 0;
+		}
+		with Player
+		{
+			area = 100;
+		}
+		with PlayerSpawn
+		{
+			area = 100;	
 		}
 		alarm[1] = 60;
 	}

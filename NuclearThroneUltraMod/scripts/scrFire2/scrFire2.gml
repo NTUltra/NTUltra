@@ -3942,7 +3942,6 @@ function scrFire2() {
 	creator=other.id;
 	team = other.team
 	ammo = 7
-	dmg=14;
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)
@@ -3961,7 +3960,6 @@ function scrFire2() {
 	snd_loop(sndBloodCannonLoop);
 	with instance_create(x,y,Implosion)
 	{
-	dmg=12;
 	kraken=true;
 	sticky = 0
 	motion_add(aimDirection+(random(6)-3)*other.accuracy,5)

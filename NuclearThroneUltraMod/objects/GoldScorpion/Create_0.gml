@@ -1,5 +1,5 @@
 raddrop = 30
-maxhealth = 40
+maxhealth = 37
 meleedamage = 5
 size = 2
 

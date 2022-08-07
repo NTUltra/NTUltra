@@ -1258,7 +1258,7 @@ else if (area == 4 || area == 115) and !instance_exists(GenCont) and !instance_e
 {
 //SPIDERWEBS
 if ((instance_nearest(x-16,y-16,Floor).styleb == 1)&&(skill_got[2]==0&&race!=18&&race!=24))//EXTRA FEET TEST
-friction = 2
+friction = 1.8
 else
 friction = 0.45
 }
