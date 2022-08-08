@@ -10,6 +10,9 @@ with projectile
 		instance_destroy(id,false);	
 	}
 }
+with SurvivalArenaStarter {
+	mask_index = mskWepPickup;
+}
 with PopoNade
 {
 	instance_destroy(id,false)

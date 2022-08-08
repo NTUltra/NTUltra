@@ -2230,7 +2230,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
 	sprite_index=sprGoldenHeavySlash
-	dmg = 17//sledge is 16
+	dmg = 24//sledge is 16
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -10869,6 +10869,40 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(10,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 6
 	wkick = -6
+
+	break;
+	
+	//EXPLOSIVE SLUGGER
+	case 597:
+
+	snd_play_fire(sndSlugger)
+
+	with instance_create(x,y,SlugExplosive)
+	{motion_add(aimDirection+(random(14)-7)*other.accuracy,15.5)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 10
+	wkick = 8
+
+	break;
+
+	//EXPLOSIVE GATLING SLUGGER
+	case 598:
+
+	snd_play_fire(sndSlugger)
+
+	with instance_create(x,y,SlugExplosive)
+	{motion_add(aimDirection+(random(16)-8)*other.accuracy,17.5)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 10
+	wkick = 8
 
 	break;
 	

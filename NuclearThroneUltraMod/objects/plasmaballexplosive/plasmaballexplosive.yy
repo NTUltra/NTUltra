@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprPlasmaBall",
-    "path": "sprites/sprPlasmaBall/sprPlasmaBall.yy",
+    "name": "sprExplosivePlasmaBall",
+    "path": "sprites/sprExplosivePlasmaBall/sprExplosivePlasmaBall.yy",
   },
   "solid": false,
   "visible": true,

@@ -2321,7 +2321,7 @@ function scrFire() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
 	sprite_index=sprHeavySlash;
-	dmg = 16//shovel is 8
+	dmg = 24//shovel is 8
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3

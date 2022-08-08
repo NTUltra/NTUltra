@@ -145,6 +145,26 @@ switch (waveNumber)
 		}
 	break;
 	case 10:
+		//Clean up throne 2
+		with BigScorchMark
+		{
+			instance_destroy();
+		}
+		with ThroneIISpiral {
+			instance_destroy();	
+		}
+		with WallHitMe
+		{
+			instance_destroy();
+			instance_create(x,y,Wall);	
+		}
+		with BackFloor {
+			instance_destroy();	
+		}
+		with BackFloorSmall {
+			instance_destroy();	
+		}
+		audio_stop_sound(amb0c);
 		song = mus1b;
 		with Floor
 		{

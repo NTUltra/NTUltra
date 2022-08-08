@@ -17,6 +17,7 @@ if skill = 0
 			ultra_text[0] = "REPLACE BEAM WITH CASH FLOW#CASH FLOW USES CASH INSTEAD OF RADS#GET 100 CASH EVERY AREA#CASH MAXIMUM IS 500#KILLS GENERATE CASH#(UPGRADES TO BEAM STILL APPLY)"
 			ultra_tips[0] = "C.R.E.A.M."
 			cash = maxCash;
+			inDebt = false;
 			spr_idle=sprMutant21DIdle;
 			spr_walk=sprMutant21DWalk;
 			spr_hurt=sprMutant21DHurt;

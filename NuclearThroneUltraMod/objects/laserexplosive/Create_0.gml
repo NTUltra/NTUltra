@@ -1,6 +1,6 @@
-/// @description Toxic spawner
+/// @description Boom spawner
 
 // Inherit the parent event
 event_inherited();
 
-alarm[2] = 5;
+alarm[2] = 3;

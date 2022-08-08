@@ -161,7 +161,7 @@ function scrPopProps() {
 	instance_create(x+16,y+16,Pipe)
 
 	}
-	if spawnarea = 0 || spawnarea = 113 && !place_meeting(x,y,Wall)
+	if spawnarea = 0 || spawnarea = 113 || spawnarea == 119 && !place_meeting(x,y,Wall)
 	instance_create(x+16,y+16,NightCactus)
 	if (spawnarea = 4 || spawnarea == 115) && !place_meeting(x,y,Wall)
 	instance_create(x+16,y+16,choose(Crystal,Crystal,Cocoon))

@@ -15,10 +15,10 @@ if point_distance(target.x,target.y,x,y) > 48 and point_distance(target.x,target
 
 		alarm[1] = actTime*2+random(actTime)
 	}
-	else if random(2) < 1 {
+	else if random(3) < 2 {
         direction = point_direction(x, y, target.x, target.y) + random(180) - 90
 		var n = instance_nearest(x,y,Wall)
-		if n != noone && point_distance(x,y,n.x,n.y) < 32
+		if n != noone && point_distance(x,y,n.x,n.y) < 40
 		{
 			direction = point_direction(n.x,n.y,x,y);
 		}

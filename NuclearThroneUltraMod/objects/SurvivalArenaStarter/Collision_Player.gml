@@ -1,5 +1,13 @@
 /// @description Start wave
-if KeyCont.key_pick[other.p] = 1
+//Surprise attack
+if !jumpScared && UberCont.opt_gamemode == 25 && instance_exists(SurvivalWave) && other.subarea == 10
+{
+	jumpScared = true;
+	mask_index = mskPickupThroughWall;
+	scrTurnIntoPortalArea();
+	instance_create(x,y,BecomeThrone2);
+}
+else if KeyCont.key_pick[other.p] = 1
 {
 	KeyCont.key_pick[Player.p] = 2;
 	with SurvivalWave

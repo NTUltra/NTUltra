@@ -148,7 +148,7 @@ function scrWeapons() {
 	wep_name[13] = "SHOVEL"
 	wep_type[13] = 0
 	wep_auto[13] = 0
-	wep_load[13] = 35
+	wep_load[13] = 34
 	wep_cost[13] = 0
 	wep_sprt[13] = sprShovel
 	wep_area[13] = 3//4 originally?
@@ -3057,7 +3057,7 @@ function scrWeapons() {
 	wep_name[277] = "GOLDEN SLEDGEHAMMER"
 	wep_type[277] = 0
 	wep_auto[277] = 0
-	wep_load[277] = 30
+	wep_load[277] = 32
 	wep_cost[277] = 0
 	wep_sprt[277] = sprGoldHammer
 	wep_area[277] = 20
@@ -6506,7 +6506,7 @@ function scrWeapons() {
 	wep_name[590] = "TERMITE INJECTOR"
 	wep_type[590] = 0
 	wep_auto[590] = 0
-	wep_load[590] = 20
+	wep_load[590] = 19
 	wep_cost[590] = 0
 	wep_sprt[590] = sprTermiteInjector
 	wep_area[590] = 13
@@ -6579,6 +6579,28 @@ function scrWeapons() {
 	wep_text[596] = ""
 	wep_swap[596] = sndSwapSword
 	wep_rad[596] = 0;
+	
+	wep_name[597] = "EXPLOSIVE SLUGGER"
+	wep_type[597] = 4
+	wep_auto[597] = 0
+	wep_load[597] = 19//22
+	wep_cost[597] = 1
+	wep_sprt[597] = sprSlugger
+	wep_area[597] = 6
+	wep_text[597] = "fragger"
+	wep_swap[597] = sndSwapShotgun
+	wep_rad[597] = 0;
+
+	wep_name[598] = "EXPLOSIVE GATLING SLUGGER"
+	wep_type[598] = 4
+	wep_auto[598] = 1
+	wep_load[598] = 7//8
+	wep_cost[598] = 1
+	wep_sprt[598] = sprGatlingSlugger
+	wep_area[598] = 17
+	wep_text[598] = "time to frattle"
+	wep_swap[598] = sndSwapShotgun
+	wep_rad[598] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 

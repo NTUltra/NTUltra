@@ -27,7 +27,6 @@ if instance_exists(enemy) and instance_exists(Player)
 	}
 }
 
-
 if speed<1&&alarm[2]<1
 {
 alarm[3]=2;

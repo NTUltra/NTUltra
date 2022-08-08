@@ -1,5 +1,5 @@
 /// @description AI
-alarm[1] = 20+random(10)
+alarm[1] = 15+random(10)
 if isInverted 
 	alarm[1] -= 5;
 if !almostDead && my_health < 0.25

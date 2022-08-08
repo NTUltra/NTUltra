@@ -56,7 +56,7 @@ else if um == ultramods.bulletPlasma
 		else
 			snd_play_fire(sndPlasmaMinigun)	
 	}
-	with instance_create(x,y,MiniPlasmaBall)
+	with instance_create(x,y,FrostMiniPlasmaBall)
 	{
 		scrCopyWeaponMod(other);
 		ptime = 6;

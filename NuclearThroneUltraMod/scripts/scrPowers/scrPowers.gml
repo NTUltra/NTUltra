@@ -561,7 +561,7 @@ function scrPowers() {
 	{
 		if ultra_got[0] && altUltra
 		{
-			if cash <= 0 && !inDebt
+			if cash <= 0 && inDebt
 			{
 				snd_play_2d(sndHorrorEmpty);
 				with instance_create(x,y,PopupText)
@@ -1674,7 +1674,7 @@ function scrPowers() {
 				with instance_create(x,y,HorrorMoney)
 				{
 					charge=other.horrorcharge;
-					motion_add(aimDirection+(random(charge*4)-charge*2),10+(charge*0.5))
+					motion_add(aimDirection+(random(charge*4)-charge*2),8.5+random(3)+(charge*0.5))
 					image_angle = direction
 					team = other.team
 				}

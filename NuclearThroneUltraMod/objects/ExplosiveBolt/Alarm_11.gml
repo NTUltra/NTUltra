@@ -43,6 +43,7 @@ if um == ultramods.plasmaBolt
 	}
 	with instance_create(x,y,LaserExplosive)
 	{
+		image_yscale += 0.1;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;
@@ -57,7 +58,7 @@ if um == ultramods.plasmaBolt
 	with instance_create(x,y,SlugExplosive)
 	{
 		scrCopyWeaponMod(other);
-		friction = 0.2;
+		friction = 0.1;
 		direction = other.direction;
 		image_angle = direction;
 		speed = other.speed;
