@@ -2957,7 +2957,7 @@ function scrFire() {
 			instance_create(x,y,Dust)
 			with instance_create(x,y,IceFlame)
 			{
-				motion_add(other.aimDirection,4+random(1))
+				motion_add(aimDirection,4+random(1))
 				image_angle = direction
 				team = other.team;
 			}

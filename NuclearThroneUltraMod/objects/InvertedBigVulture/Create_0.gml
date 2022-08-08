@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-raddrop = 150;
+raddrop = 152;
 
 spr_idle = sprInvertedBigVultureIdle;
 spr_walk = sprInvertedBigVultureWalk;
