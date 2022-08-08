@@ -5,7 +5,6 @@ if(instance_exists(Player)){
 	{
 		//WEAPON MODS!
 		scrModHit();
-		scrHumphryHit();
 		scrSheepHit();
 		//Sedatives
 		if Player.ultra_got[100] && team != other.team

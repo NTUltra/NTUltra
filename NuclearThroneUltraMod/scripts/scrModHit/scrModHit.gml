@@ -266,8 +266,7 @@ function scrModHit() {
 				break;
 
 				case 16://MORPH
-				with instance_create(other.x,other.y,Morph)
-					scrCanHumphry();
+					instance_create(other.x,other.y,Morph)
 				break;
 	
 				case 17://DROPS

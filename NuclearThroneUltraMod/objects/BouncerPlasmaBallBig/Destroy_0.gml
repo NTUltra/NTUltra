@@ -11,7 +11,6 @@ repeat(4)
 {
 with instance_create(xprevious,yprevious,BouncerPlasmaBall)
 {motion_add(other.ang,2)
-scrCanHumphry();
 image_angle = direction
 team = other.team}
 ang += 360/4;

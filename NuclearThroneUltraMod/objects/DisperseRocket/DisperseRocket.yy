@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "sprRocket",
     "path": "sprites/sprRocket/sprRocket.yy",

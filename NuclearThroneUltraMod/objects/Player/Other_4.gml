@@ -34,13 +34,11 @@ scrWeaponHold();
 if (area!=100 && area !=104)
 {
 firedthislevel=false;
-missedthislevel=false;
 movethislevel=false;
 }
 else
 {
 firedthislevel=true;
-missedthislevel=true;
 movethislevel=true;
 }
 portalstrikesusedthislevel=0;

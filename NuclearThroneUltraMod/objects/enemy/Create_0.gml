@@ -42,3 +42,4 @@ existTime = 0;
 depth -= 1;
 myCorpse = -1;
 totemBuffed = false;
+myConfusion = noone;

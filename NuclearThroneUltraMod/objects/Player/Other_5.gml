@@ -593,9 +593,6 @@ scrUnlockCSkin(21,"FOR COMPLETING A MAIN AREA ON#USING ONLY THE BEAM",0);
 if ( firedthislevel=false && race = 24 && area <100 && area != 10 && ( area>2 || loops>0 )  )
 scrUnlockCSkin(24,"FOR COMPLETING A MAIN AREA# AFTER THE SEWERS#WITHOUT FIRING AS ELEMENTOR",0);
 
-if ( missedthislevel=false && race = 26 && area <100 && area != 10 && ( area>3 || loops>0 )  )
-scrUnlockBSkin(26,"FOR COMPLETING A MAIN AREA# AFTER THE SCRAPYARD#WITHOUT MISSING AS GOOD O'L HUMPHRY",0);
-
 if (yungCuzCskin > 2)
 {
 	scrUnlockCSkin(12,"FOR COMPLETING 3 LEVELS IN A ROW#WITH 1 MAX HP",0);

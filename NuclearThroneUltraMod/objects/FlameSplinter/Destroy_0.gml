@@ -14,7 +14,6 @@ repeat(am)
 		motion_add(ang,3.5)
 		team = other.team
 		ang += angstep;
-		scrCanHumphry();
 	}
 }
 

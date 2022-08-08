@@ -39,7 +39,6 @@ poppop = false;
 rushcrownlevels = 0;
 portalstrikesusedthislevel = 0;
 toxicweaponsfound = 0;
-missedthislevel = false;
 
 targetPickup = noone; //weapon pickup refrence
 
@@ -520,10 +519,7 @@ rnglevelloop = 0;
 
 heavyheart = 0;
 
-HumphryTBcount = 0;
-HumphryLoss = false;
-HumphrySkill = 0;
-HumphryShotCount = 0;
+humphrySkill = 0;
 
 freeArmourStrike = false;
 if race = 16 {

@@ -19,6 +19,7 @@ walk = 0
 alarm[1] = 30+random(90)
 if instance_exists(Player)
 {
+	var t = 0;
 	if Player.skill_got[29]//insomnia
     {
 		var t = 160;

@@ -1,5 +1,4 @@
 if GetPlayerUltramod() != ultramods.seekerMissile
-	with instance_create(x,y,Explosion)
-		scrCanHumphry();
+	instance_create(x,y,Explosion)
 snd_play(sndExplosionL)
 

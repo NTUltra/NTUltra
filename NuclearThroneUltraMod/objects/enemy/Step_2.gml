@@ -43,6 +43,11 @@ if prevhealth > my_health
 	var dmgTaken = prevhealth-my_health;//Damage increase
 	if instance_exists(Player)
 	{
+		if Player.race == 26//HUMPHRY mr damage
+		{
+			dmgTaken = scrHumphryDamage(dmgTaken);
+			my_health = prevhealth - dmgTaken;
+		}
 		if Player.ultra_got[105]
 		{
 			dmgTaken = scrHandsDamageBuff(dmgTaken);

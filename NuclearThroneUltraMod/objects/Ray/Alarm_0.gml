@@ -13,7 +13,6 @@ if isUltra
 	with instance_create(hit[1],hit[2],UltraMorph)
 	{
 		scrCopyWeaponMod(other);
-		scrCanHumphry(); 
 	}
 }
 else
@@ -23,7 +22,6 @@ else
 		with instance_create(hit[1],hit[2],Morph)
 		{
 			scrCopyWeaponMod(other);
-			scrCanHumphry(); 
 		}
 	}
 	if(explosive==3)
@@ -31,7 +29,6 @@ else
 		with instance_create(hit[1],hit[2],ExplosiveMorph)
 		{
 			scrCopyWeaponMod(other);
-			scrCanHumphry(); 
 		}
 	}
 }

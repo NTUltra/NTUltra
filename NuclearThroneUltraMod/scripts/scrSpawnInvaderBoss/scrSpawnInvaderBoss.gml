@@ -8,9 +8,10 @@ function scrSpawnInvaderBoss(thisMany,whatBoss,thisFloorA,thisFloorB,thisFloorE,
 		do {
 			with Floor
 			{
+				var inv = instance_nearest(x,y,InvaderInversionSpawnPortal);
 				var xx = x + 16;
-				var yy = y + 16;
-				if !instance_exists(InvaderBossSpawnPortal) && point_distance(xx,yy,Player.x,Player.y) > mindis
+				var yy = y + 16;//InvaderInversionSpawnPortal
+				if !instance_exists(InvaderBossSpawnPortal) && point_distance(xx,yy,Player.x,Player.y) > mindis && (inv == noone || point_distance(xx,yy,inv.x,inv.y) > mindis)
 				{
 					with instance_create(xx,yy,InvaderBossSpawnPortal)
 					{
@@ -24,10 +25,12 @@ function scrSpawnInvaderBoss(thisMany,whatBoss,thisFloorA,thisFloorB,thisFloorE,
 				}
 				else if instance_exists(InvaderBossSpawnPortal)
 				{
+					//TODO need to check for specifially boss spawner not inverted
 					if instance_number(InvaderBossSpawnPortal) == thisMany
 						continue;
 					var n = instance_nearest(xx,yy,InvaderBossSpawnPortal);
-					if point_distance(xx,yy,n.x,n.y) > mindis && point_distance(xx,yy,Player.x,Player.y) > mindis
+					var inv = instance_nearest(x,y,InvaderInversionSpawnPortal);
+					if point_distance(xx,yy,n.x,n.y) > mindis && point_distance(xx,yy,Player.x,Player.y) > mindis && (inv == noone || point_distance(xx,yy,inv.x,inv.y) > mindis)
 					{
 						with instance_create(xx,yy,InvaderBossSpawnPortal)
 						{

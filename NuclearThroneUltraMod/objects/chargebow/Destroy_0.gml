@@ -21,7 +21,6 @@ if instance_exists(Player)
 	with instance_create(x,y,Bolt)
 	{
 		scrCopyWeaponMod(other);
-		scrCanHumphry();
 		sprite_index=other.boltSprite;
 		motion_add(d+(other.bowOffset+(random(4)-2))*Player.accuracy,10+(other.rate*5))
 		dmg = 5 + (other.rate*5);

@@ -2,6 +2,14 @@ if sprite_index == sprProtoPortalDormant || sprite_index == sprInvertedPortalDor
 	exit;
 if sprite_index != sprPortalSpawn
 {
+	//in portal don't decrease skill
+if other.race == 26
+{
+	with PlayerAlarms
+	{
+		alarm[6] += 1;	
+	}
+}
 if endgame = 100
 {
 snd_play(sndPortalClose);

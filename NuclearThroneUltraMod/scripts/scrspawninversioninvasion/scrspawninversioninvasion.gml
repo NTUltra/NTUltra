@@ -2,7 +2,7 @@
 // /@description
 ///@param
 function scrSpawnInversionInvasion(thisMany,spawnList,thisFloorA,thisFloorB,thisFloorE){
-	var mindis = 160//200//232;
+	var mindis = 192//200//232;
 	if instance_exists(Player) && instance_exists(Floor)
 	{
 		do {

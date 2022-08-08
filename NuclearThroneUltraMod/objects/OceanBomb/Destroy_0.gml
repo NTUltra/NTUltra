@@ -12,8 +12,7 @@ snd_play(sndRoll);
 snd_play(sndBloodLauncher);
 
 snd_play(choose(sndWater1,sndWater2) );
-with instance_create(x,y,MeatExplosion)
-scrCanHumphry();
+instance_create(x,y,MeatExplosion)
 repeat(amount)
 {
 	with instance_create(x,y,Tentacle)

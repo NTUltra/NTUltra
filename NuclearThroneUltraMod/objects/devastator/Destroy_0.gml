@@ -14,7 +14,6 @@ if object_index == Devastator
 		with instance_create(xx,yy,PlasmaImpact)
 		{
 			team = other.team;
-			scrCanHumphry();
 		}
 	}
 	BackCont.shake += 4;

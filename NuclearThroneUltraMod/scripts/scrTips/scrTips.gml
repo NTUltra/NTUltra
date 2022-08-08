@@ -51,7 +51,7 @@ function scrTips() {
 	"doing alright",
 	"there are other worlds out there",
 	/*more rares*/choose("be kind","the original idea for#the name trashtalk#came from lars in a stream#he made a lot of the sounds#in ultra mod","if you ever get stuck#outside a level#walk far away#from the level to get teleported back","use wasd to move","don't get baited by items","ask and ye shall receive","you smell that?","sick build bro","what does your gun tell you?","don't get baited by items"
-	,"frog is voiced by#Jukio Kallio"
+	,"frog is voiced by#Jukio Kallio","don't be sorry#git gutter"
 	,"thematically inconsistent!","if you reach loop 2#your level cap increases by 1","skeleton has#a fifth ultra mutation","don't be afraid to pick up new weapons",choose("28 EGGS FOR BREAKFAST","shit on my tits","never pick hanzo","microtransactions","if you are seeing this#you are fucking aswesome")/*super rare*/
 	)
 	),choose(
@@ -325,7 +325,7 @@ function scrTips() {
 	,"Any projectile in one shot#counts as one hit","When one of multiple projectiles#fire in one shot/burst#hits an enemy it counts as a hit"
 	,"Out of the fallout shelter","focus and discipline","experience","shrink and slow projectiles","active costs unequipped weapon type ammo",
 	"with years of experience#humphry has mastered the art#of shrinking bullets","good o'l humphry was the first mutant","one and only mutant#without side effects","super soldier"
-	,"immortal soldier","warzone control uses#unequipped ammo","warzone control stuns enemies")
+	,"immortal soldier","warzone control uses#unequipped ammo","warzone control stuns enemies","overkill")
 	
 	if Player.race = 27//HANDS
 	tip = choose("look ma! no face","don't get too touchy","proto","the only inverted mutant","pull my finger","hand from the other side",

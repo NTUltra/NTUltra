@@ -5,9 +5,7 @@ with instance_create(x,y,SmallExplosion)
 	{
 		var dir = random(360);
 		var dis = 8 + random(16);
-		instance_create(x+lengthdir_x(dis,dir),y+lengthdir_y(dis,dir),SmallExplosion);
+		instance_create(x+lengthdir_x(dis,dir),y+lengthdir_y(dis,dir),SmallExplosion)
 	}
 }
-scrCanHumphry();
-
-
+event_inherited();

@@ -3,9 +3,6 @@ snd_play(sndExplosionL);
 image_speed = 0.4;
 step = 16;
 y-=step;
-Humphry=false;//gets assigned true when playing as humphry and firing
-HumphryNr=0;
-HumphryHit=0;
 
 instance_create(x,y+step,Explosion)
 instance_create(x-step,y,Explosion)

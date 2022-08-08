@@ -12,8 +12,8 @@
   },
   "persistent": false,
   "parentObjectId": {
-    "name": "InvaderBossSpawnPortal",
-    "path": "objects/InvaderBossSpawnPortal/InvaderBossSpawnPortal.yy",
+    "name": "becomenemy",
+    "path": "objects/becomenemy/becomenemy.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

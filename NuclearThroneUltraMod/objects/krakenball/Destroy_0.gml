@@ -4,8 +4,7 @@ if object_index != SuperKrakenBall
 {
 	snd_play(sndBloodLauncherExplo,0.1,true)
 	snd_play(sndMeatExplo)
-	with instance_create(x,y,MeatExplosion)
-		scrCanHumphry();
+	instance_create(x,y,MeatExplosion)
 	Sleep(10)
 	instance_create(x+hspeed,y+vspeed,WallBreak);
 	var am = 6;

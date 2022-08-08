@@ -5,19 +5,16 @@ var ang = random(360)
 var angstep = 360/8;
 repeat(8)
 {
-with instance_create(x+lengthdir_x(28,ang),y+lengthdir_y(28,ang),Explosion)
-scrCanHumphry();
+instance_create(x+lengthdir_x(28,ang),y+lengthdir_y(28,ang),Explosion)
 ang += angstep
 }
 
-with instance_create(x,y,Explosion)
-scrCanHumphry();
+instance_create(x,y,Explosion)
 
 ang += angstep*0.5
 repeat(8)
 {
-with instance_create(x+lengthdir_x(52,ang),y+lengthdir_y(52,ang),SmallExplosion)
-scrCanHumphry();
+instance_create(x+lengthdir_x(52,ang),y+lengthdir_y(52,ang),SmallExplosion)
 ang += angstep
 }
 

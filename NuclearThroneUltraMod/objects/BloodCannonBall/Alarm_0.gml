@@ -6,16 +6,13 @@ snd_play(sndBloodLauncherExplo)
 
 ang = random(360)
 
-with instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
-scrCanHumphry();
+instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
 
 if random(3)<1
-with instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
-scrCanHumphry();
+instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
 
 if random(3)<1
-with instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
-scrCanHumphry();
+instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
 
 
 with instance_create(x,y,BloodStreak)

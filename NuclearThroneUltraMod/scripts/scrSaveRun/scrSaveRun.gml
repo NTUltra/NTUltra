@@ -21,7 +21,7 @@ function scrSaveRun() {
 			alkaline: Player.isAlkaline,
 			lastwishused: UberCont.lastwishused,
 			rage: Player.rage,
-			humphryskill: Player.HumphrySkill,
+			humphrySkill: Player.humphrySkill,
 			skeletonlives: Player.skeletonlives,
 			livesRegain: Player.livesRegain,
 			patience: Player.patience,

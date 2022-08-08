@@ -1,4 +1,4 @@
-if size >= other.size-1 and speed > 2 and other.sprite_index != other.spr_hurt
+if size >= other.size-1 and speed > 2 and other.sprite_index != other.spr_hurt && other.existTime > 30
 {
 with other
 {

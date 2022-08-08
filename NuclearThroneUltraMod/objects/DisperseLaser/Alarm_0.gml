@@ -14,7 +14,6 @@ with instance_create(x,y,Laser)
 {image_angle = other.image_angle+90+(random(2)-1)
 team = other.team
 event_perform(ev_alarm,0)
-scrCanHumphry();
 scrCopyWeaponMod(other);
 }
 
@@ -23,7 +22,6 @@ with instance_create(x,y,Laser)
 {image_angle = other.image_angle-90+(random(2)-1)
 team = other.team
 event_perform(ev_alarm,0)
-scrCanHumphry();
 scrCopyWeaponMod(other);
 }
 

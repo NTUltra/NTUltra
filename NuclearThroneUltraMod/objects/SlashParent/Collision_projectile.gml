@@ -1,6 +1,5 @@
 if team != other.team
 {
-
 if other.typ =1
 {
 	other.team = team

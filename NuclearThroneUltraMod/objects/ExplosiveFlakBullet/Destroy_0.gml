@@ -5,7 +5,6 @@ repeat(lines)
 {
 	with instance_create(x,y,ExplosionQueueLine)
 	{
-		scrCanHumphry();
 		theDirection = ang;
 	}
 	ang += angStep;
@@ -20,7 +19,4 @@ repeat(6)
 BackCont.shake += 8
 snd_play(sndFlakExplode);
 snd_play(sndExplosionCar);
-with instance_create(x,y,Explosion)
-{
-	scrCanHumphry();	
-}
+instance_create(x,y,Explosion)

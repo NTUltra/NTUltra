@@ -11,7 +11,6 @@ with instance_create(x,y,Flame)
 {motion_add(ang,random(2)+4)
 team = other.team
 ang += angstep;
-scrCanHumphry();
 
 }}
 

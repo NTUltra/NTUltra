@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskFlameCannonBall",
     "path": "sprites/mskFlameCannonBall/mskFlameCannonBall.yy",

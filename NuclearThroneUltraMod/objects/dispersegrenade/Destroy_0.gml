@@ -1,5 +1,4 @@
 snd_play(sndExplosion)
 
-with instance_create(x,y,Explosion)
-scrCanHumphry();
+instance_create(x,y,Explosion)
 

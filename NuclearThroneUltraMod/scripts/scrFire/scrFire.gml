@@ -4970,16 +4970,6 @@ function scrFire() {
 	if wep!=1 && wep!=39 && wep!=56//revolver and golden revolver and rusty revolver
 		onlyusemerevolver=false;
 
-	if race=26
-	{
-
-	with projectile
-	{
-	Humphry=true;
-	HumphryNr=other.HumphryShotCount;
-	}
-	HumphryShotCount++;
-	}
 
 	if Player.ultra_got[88]//ROGUE ULTRA POPO ULTRA D
 	{

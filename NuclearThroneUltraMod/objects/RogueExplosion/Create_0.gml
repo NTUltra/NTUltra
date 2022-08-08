@@ -21,9 +21,6 @@ BackCont.shake += 7
 
 team = 0
 
-Humphry=false;//gets assigned true when playing as humphry and firing
-HumphryNr=0;
-HumphryHit=0;
 
 if instance_exists(Player)
 {

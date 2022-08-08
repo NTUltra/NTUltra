@@ -1,6 +1,5 @@
 /// @description Explode
 event_inherited()
 
-with instance_create(x,y,Explosion)
-	scrCanHumphry();
+instance_create(x,y,Explosion)
 snd_play(sndExplosion)

@@ -653,11 +653,22 @@ if(my_health<=0 && maxhealth>0)
     strongspirit=false;
     }
     }
-    if ultra_got[103] && HumphrySkill>50 && (skill_got[25]=0||strongspiritused=true)//Humphry Protective mustache C
+    if ultra_got[103] && humphrySkill >= 200 && (skill_got[25]=0||strongspiritused=true)//Humphry Protective mustache C
     {
-    HumphrySkill=0;
+    humphrySkill=0;
+	snd_play_2d(sndProtectiveMustache,0,true);
+	alarm[3] = max(alarm[3],20);
+	if myShield == -1 || !instance_exists(myShield)
+	{
+		myShield = instance_create(x,y,EuphoriaShield);
+		with myShield
+		{
+			owner = other.id;
+		}
+	}
+	with PlayerAlarms
+			alarm[7] = 20;
     my_health=1;
-    HumphryLoss = true;
     alarm[1]=20;//invincibility 
     }
     
@@ -669,11 +680,23 @@ if(my_health<=0 && maxhealth>0)
 }
 
 
-///rage
-if skill_got[28] == 1
+
+if my_health < prevhealth && exception=false// && alarm[3] < 1//I been hit
 {
-	if my_health < prevhealth && exception=false// && alarm[3] < 1//I been hit
+	///rage
+	if skill_got[28] == 1
+	{
 		rage = 0;
+	}
+	if race == 26 && humphrySkill > 0//Humphry
+	{
+		if skill_got[5]
+			humphrySkill *= 0.75;
+		else
+			humphrySkill *= 0.7;
+		with PlayerAlarms
+			alarm[7] = max(alarm[7],10);
+	}
 }
 
 

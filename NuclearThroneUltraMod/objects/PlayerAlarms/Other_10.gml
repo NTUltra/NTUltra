@@ -6,6 +6,21 @@ if instance_exists(Player)
 		alarm[2] = stressLowCheck;
 	if Player.ultra_got[26] //GET LOADED
 		alarm[3] = 60;
+	if Player.race == 26//HUMPHRY
+	{
+		humphryDelay = 8;
+		humphryAmount = 0.95;
+		humphryConstantAmount = 1;
+		if Player.loops > 0
+			humphryDelay --;
+		if Player.skill_got[5]
+		{
+			humphryAmount = 0.96;
+			humphryConstantAmount = 0;
+			humphryDelay += 2;
+		}
+		alarm[6] = 60;
+	}
 	if Player.crown == 25 || instance_exists(ThroneIISpiral)//Crown of freedom
 	{
 		alarm[4] = 30;

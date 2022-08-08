@@ -1,6 +1,5 @@
 with instance_create(x,y,SlashShotgunBurst)
 {
-scrCanHumphry();
 rate=other.rate//for extra speed more bullets per step
 Direction= other.direction
 creator = other.creator

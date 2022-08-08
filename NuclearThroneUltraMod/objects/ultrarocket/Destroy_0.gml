@@ -8,8 +8,7 @@ var am = 3;
 var angStep = 360/am;
 repeat(am)
 {
-	with instance_create(x+lengthdir_x(d,ang),y+lengthdir_y(d,ang),GreenExplosion)
-		scrCanHumphry();
+	instance_create(x+lengthdir_x(d,ang),y+lengthdir_y(d,ang),GreenExplosion)
 	with instance_create(x,y,UltraFlame)
 	{
 		team = other.team;
@@ -29,8 +28,7 @@ ang += angStep * 0.5;
 angStep = 360/am;
 repeat(am)
 {
-	with instance_create(x+lengthdir_x(d,ang),y+lengthdir_y(d,ang),GreenExplosion)
-		scrCanHumphry();
+	instance_create(x+lengthdir_x(d,ang),y+lengthdir_y(d,ang),GreenExplosion)
 	with instance_create(x+lengthdir_x(d,ang),y+lengthdir_y(d,ang),UltraFlame)
 	{
 		team = other.team;

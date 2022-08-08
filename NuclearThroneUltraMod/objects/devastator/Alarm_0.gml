@@ -8,6 +8,5 @@ snd_play(sndPlasmaHit,0.1,false)
 with instance_create(xx,yy,PlasmaImpact)
 {
 	team = other.team;
-	scrCanHumphry();
 }
 BackCont.shake += 3;

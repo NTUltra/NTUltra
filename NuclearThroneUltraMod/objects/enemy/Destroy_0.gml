@@ -39,7 +39,7 @@ if object_index!=SnowTank && object_index!=InvertedSnowTank && object_index!=Gol
 			{
 				if impactWrist
 				{
-					speed /= (size*0.33);
+					speed /= (size*0.35);
 				}
 				else
 					speed /= size*0.82;

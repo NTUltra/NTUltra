@@ -3,10 +3,7 @@ image_speed = 0.4
 
 raddrop = 10
 meleedamage = 0
-HumphryLoss = true;
-HumphryTBcount=0;
-HumphrySkill=0;
-HumphryShotCount=0;
+humphrySkill = 0;
 
 oldmox=UberCont.mouse__x;
 oldmoy=UberCont.mouse__y;

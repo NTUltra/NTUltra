@@ -5,9 +5,6 @@ Mod4=0;
 hadSpeedApplied = false;
 dmg = 0;
 team = 2;
-HumphryHit=0;//unassigned 0=miss 1=hit 2=dont count as either
-Humphry=false;//gets assigned true when playing as humphry and firing
-HumphryNr=0;
 canBeMoved = true;
 typ = 0;
 if UberCont.opt_gamemode == 33//All Deflector

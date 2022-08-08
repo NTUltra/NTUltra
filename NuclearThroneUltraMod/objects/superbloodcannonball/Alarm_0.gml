@@ -5,13 +5,10 @@ event_inherited();
 
 alarm[0]=5;
 ang += 60
-with instance_create(x+lengthdir_x(48,ang),y+lengthdir_y(48,ang),MeatExplosion)
-scrCanHumphry();
+instance_create(x+lengthdir_x(48,ang),y+lengthdir_y(48,ang),MeatExplosion)
 
 if random(3)<1
-with instance_create(x+lengthdir_x(48,ang+120),y+lengthdir_y(48,ang+120),MeatExplosion)
-scrCanHumphry();
+instance_create(x+lengthdir_x(48,ang+120),y+lengthdir_y(48,ang+120),MeatExplosion)
 
 if random(3)<1
-with instance_create(x+lengthdir_x(48,ang+240),y+lengthdir_y(48,ang+240),MeatExplosion)
-scrCanHumphry();
+instance_create(x+lengthdir_x(48,ang+240),y+lengthdir_y(48,ang+240),MeatExplosion)

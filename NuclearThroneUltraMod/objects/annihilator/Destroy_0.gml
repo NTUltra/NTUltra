@@ -1,14 +1,6 @@
 /// @description Big boom
 event_inherited();
 // Inherit the parent event
-with instance_create(x,y,HumphryProjectile)
-{team=2
-HumphryHit=other.HumphryHit;
-HumphryNr=other.HumphryNr;
-mask_index=other.mask_index;
-speed=other.speed;
-direction=other.direction;
-image_angle=other.image_angle;}
 
 snd_play(sndBloodCannonEnd,0.1,true)
 repeat(4)
@@ -20,7 +12,6 @@ repeat(4)
 	with instance_create(xx,yy,MeatExplosion)
 	{
 		team = other.team;
-		scrCanHumphry();
 	}
 }
 var ang = random(360);

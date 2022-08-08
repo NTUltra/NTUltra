@@ -7,8 +7,6 @@ with instance_create(x,y,OExplosion)
 	team = other.team
 	if team != 2
 		sprite_index = sprOExploDeflected;
-	else
-		scrCanHumphry();
 }
 //snd_play(sndExplosionS);
 snd_play(sndO,0.3,true,true);

@@ -11,7 +11,6 @@ repeat(balls)
 {
 	with instance_create(xprevious,yprevious,PlasmaBall)
 	{motion_add(ang,2)
-	scrCanHumphry();
 	image_angle = direction
 	originalDirection=ang;
 	team = other.team}

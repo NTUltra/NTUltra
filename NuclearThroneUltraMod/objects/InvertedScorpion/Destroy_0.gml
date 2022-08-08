@@ -15,4 +15,3 @@ image_angle = direction
 }
 dir += 120
 }
-

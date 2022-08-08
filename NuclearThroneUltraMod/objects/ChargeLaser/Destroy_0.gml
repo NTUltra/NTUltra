@@ -16,7 +16,6 @@ with instance_create(x,y,Laser)
 image_yscale=0.2+other.rate*0.2
 team = other.team
 scrCopyWeaponMod(other);
-scrCanHumphry();
 event_perform(ev_alarm,0)
 }
 }

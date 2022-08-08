@@ -4,6 +4,7 @@ meleedamage = 0
 size = 0
 maxSpeed = 4;
 hurt_pitch_variation = 0.25;
+myConfusion = noone;
 
 idle=true;
 spr_idle = sprSheepIdleA

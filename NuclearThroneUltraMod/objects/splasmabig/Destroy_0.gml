@@ -12,7 +12,6 @@ repeat(balls)
 {
 	with instance_create(xprevious,yprevious,SplasmaBall)
 	{motion_add(ang,2)
-	scrCanHumphry();
 	if bi % 1 == 0
 		angleDir *= -1
 		image_angle = direction

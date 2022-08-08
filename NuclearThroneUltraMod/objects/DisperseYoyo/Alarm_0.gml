@@ -9,7 +9,6 @@ with instance_create(x,y,SpinnerYoyo)
 	tx = x;
 	ty = y;
 	maxlength -= 32;
-	scrCanHumphry();
 	team = other.team;
 	var sins = sin(aimDir);
 	if sins > 0
@@ -36,7 +35,6 @@ with instance_create(x,y,SpinnerYoyo)
 	tx = x;
 	ty = y;
 	maxlength -= 32;
-	scrCanHumphry();
 	team = other.team;
 	var sins = sin(aimDir);
 	if sins > 0

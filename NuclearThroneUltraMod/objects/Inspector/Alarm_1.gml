@@ -33,19 +33,11 @@ lasty = target.y
 //SEE PLAYER AND FAR ENOUGH AND NOT SHOUTING "FREEZE MOTHERFUCKER"
 if random(2) < 1 and freeze > 40
 {
-//FIRE
-snd_play(sndGruntFire)
-
-with instance_create(x,y,PopoSlug)
-{motion_add(other.gunangle+random(12)-6,14)
-image_angle = direction
-team = other.team
-if team == 2
-	sprite_index = sprPopoSlugRogue}
-
-BackCont.shake += 3
-wkick = 8
-alarm[1] = 20+random(10)
+	//FIRE
+	alarm[2] = 2;
+	BackCont.shake += 3
+	wkick = 8
+	alarm[1] = 20+random(10)
 }
 else
 {

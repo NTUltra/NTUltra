@@ -1,12 +1,8 @@
 var ang = random(360)
-with instance_create(x+lengthdir_x(32,ang),y+lengthdir_y(24,ang),MeatExplosion)
-scrCanHumphry();
-with instance_create(x+lengthdir_x(32,ang+100),y+lengthdir_y(24,ang+100),MeatExplosion)
-scrCanHumphry();
-with instance_create(x+lengthdir_x(32,ang+200),y+lengthdir_y(24,ang+200),MeatExplosion)
-scrCanHumphry();
-with instance_create(x+lengthdir_x(32,ang+290),y+lengthdir_y(24,ang+290),MeatExplosion)
-scrCanHumphry();
+instance_create(x+lengthdir_x(32,ang),y+lengthdir_y(24,ang),MeatExplosion)
+instance_create(x+lengthdir_x(32,ang+100),y+lengthdir_y(24,ang+100),MeatExplosion)
+instance_create(x+lengthdir_x(32,ang+200),y+lengthdir_y(24,ang+200),MeatExplosion)
+instance_create(x+lengthdir_x(32,ang+290),y+lengthdir_y(24,ang+290),MeatExplosion)
 
 with instance_create(x,y,BloodStreak)
 image_angle = ang

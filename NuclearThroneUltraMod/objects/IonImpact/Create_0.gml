@@ -7,7 +7,7 @@ team = 2
 repeat(3)
 instance_create(x,y,Smoke)
 
-dmg = 3;
+dmg = 2;
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1
@@ -16,7 +16,11 @@ if instance_exists(Player)
 		image_xscale += 0.2;
 		image_yscale += 0.2;
 		if Player.betterlaserbrain > 0
-			dmg += 1;
+		{
+			image_xscale += Player.betterlaserbrain*0.1;
+			image_yscale += Player.betterlaserbrain*0.1
+		}
+		
 	}
 }
 

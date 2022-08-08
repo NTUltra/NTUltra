@@ -2,7 +2,6 @@
 event_inherited()
 
 repeat(15)
-with instance_create(x,y,ToxicThrowerGas)
-scrCanHumphry();
+instance_create(x,y,ToxicThrowerGas)
 
 snd_play(sndToxicBoltGas);

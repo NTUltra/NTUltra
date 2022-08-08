@@ -8,7 +8,6 @@ snd_play(sndMeatExplo,0.1,false)
 with instance_create(xx,yy,MeatExplosion)
 {
 	team = other.team;
-	scrCanHumphry();
 }
 
 with instance_create(x,y,BloodStreak)

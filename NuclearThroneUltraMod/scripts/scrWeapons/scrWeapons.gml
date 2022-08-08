@@ -1635,14 +1635,14 @@ function scrWeapons() {
 	wep_swap[147] = sndSwapShotgun
 	wep_rad[147] = 0;
 
-	wep_name[148] = "REMOVED PISTOLE"
+	wep_name[148] = "HAND SHOTGUN"
 	wep_type[148] = 2
 	wep_auto[148] = 0
 	wep_load[148] = 30
 	wep_cost[148] = 2
 	wep_sprt[148] = sprPistole
 	wep_area[148] = -1
-	wep_text[148] = "shotgun pistol yo"
+	wep_text[148] = "shotgun pistol"
 	wep_swap[148] = sndSwapPistol
 	wep_rad[148] = 0;
 
@@ -4361,7 +4361,7 @@ function scrWeapons() {
 	wep_name[395] = "ELECTRO CANNON"
 	wep_type[395] = 5
 	wep_auto[395] = 1
-	wep_load[395] = 24
+	wep_load[395] = 37
 	wep_cost[395] = 7
 	wep_sprt[395] = sprElectroCannon
 	wep_area[395] = 13

@@ -2475,7 +2475,7 @@ function scrFire2() {
 	with instance_create(x,y,Flare)
 	{
 	sticky = 0
-	motion_add(aimDirection+(random(14)-7)*other.accuracy,16)
+	motion_add(aimDirection+(random(14)-7)*other.accuracy,13)
 	image_angle = direction
 	team = other.team}
 
@@ -2494,7 +2494,7 @@ function scrFire2() {
 	motion_add(aimDirection+other.right*100+random(60)-30,2+random(2))
 
 	with instance_create(x,y,Bullet1)
-	{motion_add(aimDirection+(random(24)-12)*other.accuracy,16)
+	{motion_add(aimDirection+(random(26)-13)*other.accuracy,16)
 	image_angle = direction
 	team = other.team}
 
@@ -2515,8 +2515,8 @@ function scrFire2() {
 	image_angle = direction
 	team = other.team}
 
-	BackCont.viewx2 += lengthdir_x(15,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(15,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewx2 += lengthdir_x(20,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(20,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 16
 	wkick = 9
 
@@ -4491,8 +4491,7 @@ function scrFire2() {
 				repeat(6)
 				{
 					with instance_create(x,y,PlasmaBall) {
-						motion_add(ang,2)
-						scrCanHumphry();
+						motion_add(ang,2);
 						image_angle = direction
 						originalDirection=ang;
 						team = other.team
@@ -7759,8 +7758,8 @@ function scrFire2() {
 	image_angle = direction
 	team = other.team}
 
-	BackCont.viewx2 += lengthdir_x(20,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(20,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewx2 += lengthdir_x(25,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(25,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 22
 	wkick = 12
 	motion_add(aimDirection+180,4)

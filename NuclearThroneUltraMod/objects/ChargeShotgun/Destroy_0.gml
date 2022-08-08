@@ -7,7 +7,7 @@ with instance_create(x,y,Bullet2)
 {motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(50)-25)*other.creator.accuracy,12+random(6))
 image_angle = direction
 team = other.team
-scrCanHumphry();}
+}
 }
 
 BackCont.viewx2 += lengthdir_x(4+rate,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake

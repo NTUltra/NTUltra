@@ -2,10 +2,7 @@
 snd_play(sndExplosion);
 x += lengthdir_x(stepRange,theDirection);
 y += lengthdir_y(stepRange,theDirection);
-with instance_create(x,y,Explosion)
-{
-	scrCanHumphry();	
-}
+instance_create(x,y,Explosion)
 amount --;
 if amount > 0
 {

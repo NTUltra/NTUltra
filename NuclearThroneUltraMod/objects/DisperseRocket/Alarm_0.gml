@@ -5,7 +5,7 @@ with instance_create(x,y,Rocket)
 image_angle = direction
 team = other.team
 scrCopyWeaponMod(other);
-scrCanHumphry();}
+}
 
 BackCont.viewx2 += lengthdir_x(5,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 BackCont.viewy2 += lengthdir_y(5,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake

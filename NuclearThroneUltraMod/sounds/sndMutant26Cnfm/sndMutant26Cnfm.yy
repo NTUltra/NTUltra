@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndMutant26Cnfm",
-  "duration": 0.0,
+  "duration": 0.745714,
   "parent": {
     "name": "Humphry",
     "path": "folders/Sounds/Player/Humphry.yy",

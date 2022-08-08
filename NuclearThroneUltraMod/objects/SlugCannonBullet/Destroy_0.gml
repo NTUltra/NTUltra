@@ -6,7 +6,6 @@ repeat(bullets)
 	{motion_add(ang,15)
 	image_angle = direction
 	team = other.team
-	scrCanHumphry();
 	scrBoostProjectileSpeed();
 	}
 	ang += angstep;

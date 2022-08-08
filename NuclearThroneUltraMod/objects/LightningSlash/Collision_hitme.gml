@@ -10,7 +10,7 @@ if other.team != team && (!inArray || other.sprite_index != other.spr_hurt)
 	with instance_create(other.x,other.y,Lightning)
 	{image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(30)-15)
 	team = other.team
-	ammo = 10
+	ammo = 10;
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)

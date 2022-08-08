@@ -75,7 +75,7 @@ with Player//Data to keep
 		ammo[4] = clamp(other.ammo[4],ammo[4],typ_amax[4]);
 		ammo[5] = clamp(other.ammo[5],ammo[5],typ_amax[5]);
 		maxhealth = other.maxhealth;
-		HumphrySkill = other.HumphrySkill;
+		humphrySkill = other.humphrySkill;
 		ultimategamble = other.ultimategamble;
 		bettermelee = other.bettermelee;;
 		betterlaserbrain = other.betterlaserbrain;

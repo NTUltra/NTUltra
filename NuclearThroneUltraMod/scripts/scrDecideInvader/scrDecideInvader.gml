@@ -27,7 +27,7 @@ function scrDecideInvader(){
 				am2 = 1;
 				am = 1;
 			}
-			else if (area == 9 || area == 118) && subarea == 2
+			else if (area == 9 || area == 118) && subarea == 3
 			{
 				//THRONE
 				am2 = 0;

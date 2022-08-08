@@ -25,8 +25,3 @@ if UberCont.opt_gamemode == 9
 	dmg = 4;
 else if UberCont.opt_gamemode == 34//HARD MODE
 	dmg = 10;
-
-Humphry=false;//gets assigned true when playing as humphry and firing
-HumphryNr=0;
-HumphryHit=0;
-

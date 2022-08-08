@@ -6,7 +6,7 @@ with instance_create(x,y,FlakBullet)
 {motion_add(random(360),8+random(8))
 image_angle = direction
 team = other.team
-scrCanHumphry();}
+}
 }
 Sleep(35)
 

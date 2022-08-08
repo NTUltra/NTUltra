@@ -886,7 +886,7 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 
 		if ultra_got[102]//Humphry Ultra B Rapid facial hair growth
 		{
-			reload -= HumphrySkill*0.0062//0.0055//0.01//0.009 when cap is 100
+			reload -= humphrySkill*0.001//0.0062//0.01//0.009 when cap is 100
 		}
 		if (ultra_got[63] && armour > 0)//VIKING COLD HEART
 		{
@@ -1788,43 +1788,6 @@ tranquilitydelay=0;
     
 }
 
-
-
-/* */
-///Humphry thronebutt
-if race = 26
-{
-	if HumphryLoss
-	{
-		if skill_got[5]
-		{
-			HumphryTBcount++;
-		    HumphrySkill-= 1.25;
-    
-		    if HumphryTBcount>=8
-		    {
-		    if my_health<maxhealth
-		    {
-			    instance_create(x,y,HealFX)
-    
-			    snd_play(sndHealthPickup);
-    
-			    my_health++;
-		    }
-		    HumphryTBcount=0;
-		    }
-		}
-		else
-		{
-			HumphrySkill-= 2;
-		}
-		if HumphrySkill<1
-	    {
-		    HumphrySkill=0
-		    HumphryLoss = false;
-	    }
-	}
-}
 
 
 /* */

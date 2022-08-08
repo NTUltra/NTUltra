@@ -7,7 +7,7 @@ with instance_create(x,y,Bullet2)
 image_angle = direction
 team = other.team
 scrCopyWeaponMod(other);
-scrCanHumphry();}
+}
 
 
 with instance_create(x,y,Bullet2)
@@ -15,7 +15,7 @@ with instance_create(x,y,Bullet2)
 image_angle = direction
 team = other.team
 scrCopyWeaponMod(other);
-scrCanHumphry();}
+}
 
 BackCont.shake += 2
 

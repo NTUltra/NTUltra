@@ -4,14 +4,11 @@ snd_play(sndExplosionL)
 if !ultramodded
 {
 ang = random(360)
-with instance_create(x+lengthdir_x(12,ang),y+lengthdir_y(12,ang),Explosion)
-scrCanHumphry();
+instance_create(x+lengthdir_x(12,ang),y+lengthdir_y(12,ang),Explosion)
 
-with instance_create(x+lengthdir_x(12,ang+180),y+lengthdir_y(12,ang+180),Explosion)
-scrCanHumphry();
+instance_create(x+lengthdir_x(12,ang+180),y+lengthdir_y(12,ang+180),Explosion)
 }
 else
 {
-	with instance_create(x,y,Explosion)
-		scrCanHumphry();
+	instance_create(x,y,Explosion)
 }

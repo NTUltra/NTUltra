@@ -13,14 +13,15 @@ image_angle = direction
 }
 dir += 72
 }
-
-repeat(60)
+if existTime > 10
 {
-with instance_create(x,y,EnemyBullet2)
-{
-motion_add(random(360),3+random(2))
-image_angle = direction
-team = other.team
+	repeat(50)
+	{
+	with instance_create(x,y,EnemyBullet2)
+	{
+	motion_add(random(360),3+random(2))
+	image_angle = direction
+	team = other.team
+	}
+	}
 }
-}
-

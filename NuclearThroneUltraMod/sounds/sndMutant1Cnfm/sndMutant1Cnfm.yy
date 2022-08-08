@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndMutant1Cnfm",
-  "duration": 0.0,
+  "duration": 0.395011,
   "parent": {
     "name": "Fish",
     "path": "folders/Sounds/Player/Fish.yy",

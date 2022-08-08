@@ -25,10 +25,19 @@ if other.team != team && team != 0
 			with other
 			{
 				my_health -= contactDmg//dmg dealt by gamma guts
+				var dmgTaken = contactDmg
+				if other.race == 26//HUMPHRY mr damage
+				{
+					dmgTaken = scrHumphryDamage(dmgTaken);
+					if my_health - dmgTaken <= 0
+					{
+						actuallyDead = true;	
+					}
+				}
 				if other.ultra_got[105] && other.skill_got[8]
 				{
 					//Predict if its dead with the damage buff here.
-					var dmgTaken = scrHandsDamageBuff(contactDmg);
+					dmgTaken = scrHandsDamageBuff(dmgTaken);
 					if my_health - dmgTaken <= 0
 					{
 						actuallyDead = true;	
@@ -36,7 +45,7 @@ if other.team != team && team != 0
 				}
 				if other.ultra_got[29] && other.altUltra && other.bwep == 0
 				{
-					var dmgTaken = contactDmg * 1.25;
+					dmgTaken = dmgTaken * 1.25;
 					if my_health - dmgTaken <= 0
 					{
 						actuallyDead = true;	
@@ -44,7 +53,7 @@ if other.team != team && team != 0
 				}
 				if other.ultra_got[71] && other.my_health >= other.maxhealth
 			    {
-					var dmgTaken = contactDmg * 1.75;
+					dmgTaken = dmgTaken * 1.75;
 					if my_health - dmgTaken <= 0
 					{
 						actuallyDead = true;	

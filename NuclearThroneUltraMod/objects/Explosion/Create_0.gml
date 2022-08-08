@@ -42,9 +42,6 @@ scrCrownOfDeath();
 
 alarm[0]=3;
 
-Humphry=false;//gets assigned true when playing as humphry and firing
-HumphryNr=0;
-HumphryHit=0;
 
 
 

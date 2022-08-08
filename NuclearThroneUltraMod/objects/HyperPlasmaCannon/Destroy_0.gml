@@ -11,7 +11,6 @@ repeat(10)//PLASMA CANNON 10
 {
 with instance_create(x-lengthdir_x(8,direction),y-lengthdir_y(8,direction),PlasmaBall)
 {motion_add(other.ang,2)
-scrCanHumphry();
 image_angle = direction
 originalDirection=other.ang;
 team = other.team}
