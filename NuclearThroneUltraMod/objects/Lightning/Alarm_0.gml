@@ -177,7 +177,7 @@ if ultraMod == ultramods.lightningPellet && alarm[0] < 1
 		else
 			direction -= 90;
 		image_angle = direction;
-		speed = 8;
+		speed = 7;
 		team = other.team;
 		alarm[11] = 0;
 	}
@@ -185,7 +185,7 @@ if ultraMod == ultramods.lightningPellet && alarm[0] < 1
 	{
 		direction = other.direction;
 		image_angle = direction;
-		speed = 8;
+		speed = 7;
 		team = other.team;
 		alarm[11] = 0;
 	}

@@ -1,6 +1,6 @@
 scrDrop(100,100)
 scrDrop(20,0)
-if UberCont.area == 10 || Player.area == 120
+if UberCont.area == 10 || Player.area == 121
 	scrDefeatedRequiredBoss(secretChallengeBosses.bigVulture);
 if !isOneWeaponOnlyModes()
 {

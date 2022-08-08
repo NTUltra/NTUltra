@@ -36,7 +36,7 @@ if instance_exists(Player) && target==Player.id
     lastx = target.x
     lasty = target.y
     //SEE PLAYER AND FAR ENOUGH AND NOT SHOUTING "FREEZE MOTHERFUCKER"
-    if random(2) < 1 and freeze > 40 && d < 156 && d > 32
+    if random(2) < 1 and freeze > 40 && d < 180 && d > 32
     {
     //FIRE
     snd_play(sndGruntFire)

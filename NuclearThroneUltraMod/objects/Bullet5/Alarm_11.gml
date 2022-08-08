@@ -17,6 +17,7 @@ if um == ultramods.bulletShotgun
 	snd_play(choose(sndSpark1,sndSpark2),0.1,true)
 	with instance_create(x,y,UltraLightning)
 	{
+		dmg -= 3;
 		image_angle = other.direction;
 		team = other.team
 		ammo = 2 + round(other.speed*0.8);

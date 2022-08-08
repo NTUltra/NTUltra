@@ -2,10 +2,12 @@ event_inherited();
 friction = 0.6
 alarm[1]=4;
 wallbounce = 0
+shotgunshouldered = false;
 if instance_exists(Player)
 {
 if Player.skill_got[15] = 1
 {
+	shotgunshouldered = true;
 	friction = 0.5
 wallbounce = 8
 alarm[1]+=3;

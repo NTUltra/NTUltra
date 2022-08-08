@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 raddrop = 80
-maxhealth = 980;
+maxhealth = 1080;
 if UberCont.opt_gamemode == 34
 	maxhealth += 45;
 maxhealth += max(0,40*min(12,(loops-1)));

@@ -10,21 +10,20 @@ speed *= 0.8
 if speed+wallbounce > 18
 speed = 18
 else
-speed += wallbounce
-wallbounce *= 0.9
-if random(2)<1
-instance_create(x,y,Dust)
-
-if instance_exists(Player)
 {
-if Player.skill_got[15] = 1
+speed += wallbounce
+instance_create(x,y,Dust)
+}
+wallbounce *= 0.9
+
+if shotgunshouldered
 {
 dmg=3;
 alarm[1]=3;
 	if sprite_index == sprBullet2
 		sprite_index = sprBullet2HighDmg;
 }
-}
+
 
 
 

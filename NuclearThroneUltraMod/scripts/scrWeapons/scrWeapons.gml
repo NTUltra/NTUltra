@@ -1561,7 +1561,7 @@ function scrWeapons() {
 	wep_name[141] = "BULLET SHOTGUN"
 	wep_type[141] = 1
 	wep_auto[141] = 0
-	wep_load[141] = 20
+	wep_load[141] = 21
 	wep_cost[141] = 6
 	wep_sprt[141] = sprBulletShotgun
 	wep_area[141] = 3
@@ -3112,7 +3112,7 @@ function scrWeapons() {
 	wep_name[282] = "GOLDEN BULLET SHOTGUN"
 	wep_type[282] = 1
 	wep_auto[282] = 0
-	wep_load[282] = 18
+	wep_load[282] = 19
 	wep_cost[282] = 6
 	wep_sprt[282] = sprGoldenBulletShotgun
 	wep_area[282] = 20
@@ -4384,7 +4384,7 @@ function scrWeapons() {
 	wep_type[397] = 3
 	wep_auto[397] = 0
 	wep_load[397] = 24
-	wep_cost[397] = 2
+	wep_cost[397] = 3
 	wep_sprt[397] = sprSwarmBomb
 	wep_area[397] = 12
 	wep_text[397] = "bee hive"

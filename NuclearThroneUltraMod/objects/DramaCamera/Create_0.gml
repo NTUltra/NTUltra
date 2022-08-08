@@ -331,7 +331,7 @@ name = "BIG FISH"
 if random(200) < 1
 		name = choose("HEY LOOK#IT'S FISH#FROM NUCLEAR THRONE","O'L BITEY");
 }
-else if Player.area = 121
+else if Player.area = 122
 {
 //with instance_create(x,y,Drama)
 name = "INVERTED BIG FISH"
@@ -359,7 +359,7 @@ else if Player.area == 10
 			name = choose("WE NOT SKIPPING THIS FIGHT","BALL MOM ON VACATION","MOMMY IN THE SUN","BIKINI");
 	}
 }
-else if Player.area == 122
+else if Player.area == 121
 {
 	if Player.subarea == 3
 	{

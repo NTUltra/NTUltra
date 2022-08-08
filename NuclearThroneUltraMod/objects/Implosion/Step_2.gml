@@ -98,7 +98,7 @@ image_angle = other.image_angle
 
 }
 
-alarm[2]=4;//kraken rate.    
+alarm[2]=6;//kraken rate.    
     }
     else
     {
@@ -120,7 +120,7 @@ alarm[2]=4;//kraken rate.
     image_angle = other.image_angle}
     
 
-alarm[2]=2;//lightning rate.
+alarm[2]=4;//lightning rate.
     }
     
         Sleep(1)

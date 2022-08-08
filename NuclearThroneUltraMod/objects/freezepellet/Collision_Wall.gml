@@ -14,14 +14,11 @@ speed += wallbounce
 wallbounce *= 0.9
 instance_create(x,y,Dust)
 
-if instance_exists(Player)
-{
-	if Player.skill_got[15] = 1
+	if shotgunshouldered
 	{
 	dmg=4;
 	alarm[1]=3;
 	if sprite_index == sprFreezePellet
 		sprite_index = sprFreezePelletHighDamage;
 	}
-}
 

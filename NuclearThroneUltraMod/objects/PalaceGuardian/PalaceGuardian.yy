@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskGuardian",
     "path": "sprites/mskGuardian/mskGuardian.yy",

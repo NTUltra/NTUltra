@@ -2,7 +2,7 @@ raddrop = 1;
 maxhealth = 4;
 meleedamage = 0
 size = 0
-
+maxSpeed = 4;
 hurt_pitch_variation = 0.25;
 
 idle=true;

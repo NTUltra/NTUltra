@@ -5,7 +5,11 @@
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "managed": true,
+  "spriteMaskId": {
+    "name": "mskWepPickup",
+    "path": "sprites/mskWepPickup/mskWepPickup.yy",
+  },
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,
