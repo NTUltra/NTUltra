@@ -1,5 +1,5 @@
 raddrop = 70
-maxhealth = 100
+maxhealth = 1100
 loops = GetPlayerLoops();
 if UberCont.opt_gamemode == 34
 	maxhealth += 60;

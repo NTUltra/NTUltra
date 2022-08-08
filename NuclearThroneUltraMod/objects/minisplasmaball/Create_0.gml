@@ -8,7 +8,7 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 //friction=0.4;
-dmg = 3//15
+dmg = 2
 nomscale = 1;
 maxSpeed = 16;
 

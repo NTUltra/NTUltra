@@ -6,5 +6,6 @@ typ = 2 //0 = nothing, 1 = deflectable, 2 = destructable
 
 snd = sndRocketFly
 alarm[0] = 1;
+ultramodded = true;
 alarm[11] = 1;
 dmg = 20;

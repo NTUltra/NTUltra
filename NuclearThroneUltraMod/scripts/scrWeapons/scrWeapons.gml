@@ -3013,8 +3013,8 @@ function scrWeapons() {
 	wep_name[273] = "GYRO BURSTER"
 	wep_type[273] = 1
 	wep_auto[273] = 0
-	wep_load[273] = 45
-	wep_cost[273] = 25
+	wep_load[273] = 55
+	wep_cost[273] = 26
 	wep_sprt[273] = sprGyroBurster
 	wep_area[273] = 18
 	wep_text[273] = "bwbwpebffpwefnowobfo"
@@ -3497,7 +3497,7 @@ function scrWeapons() {
 	wep_name[317] = "AUTO TOXIC CROSSBOW"
 	wep_type[317] = 3
 	wep_auto[317] = 1
-	wep_load[317] = 8
+	wep_load[317] = 9
 	wep_cost[317] = 1
 	wep_sprt[317] = sprAutoToxicBow
 	wep_area[317] = 7
@@ -5087,8 +5087,8 @@ function scrWeapons() {
 	wep_name[461] = "GYRO INCINERATOR"
 	wep_type[461] = 1
 	wep_auto[461] = 0
-	wep_load[461] = 50
-	wep_cost[461] = 26
+	wep_load[461] = 70
+	wep_cost[461] = 30
 	wep_sprt[461] = sprGyroIncinerator
 	wep_area[461] = 29
 	wep_text[461] = ""
@@ -6558,6 +6558,28 @@ function scrWeapons() {
 	wep_swap[594] = sndSwapHammer
 	wep_rad[594] = 0;
 	
+	wep_name[595] = "AUTO LIGHTNING CROSSBOW"
+	wep_type[595] = 3
+	wep_auto[595] = 1
+	wep_load[595] = 8
+	wep_cost[595] = 2
+	wep_sprt[595] = sprAutoLightningCrossbow
+	wep_area[595] = 14
+	wep_text[595] = "delivering the payload"
+	wep_swap[595] = sndSwapBow
+	wep_rad[595] = 0;
+	
+	wep_name[596] = "PLASMA FLAIL"
+	wep_type[596] = 5
+	wep_auto[596] = 0
+	wep_load[596] = 23
+	wep_cost[596] = 2.5
+	wep_sprt[596] = sprPlasmaFlail
+	wep_area[596] = 15
+	wep_text[596] = ""
+	wep_swap[596] = sndSwapSword
+	wep_rad[596] = 0;
+	
 	maxwep = array_length(wep_name)-1;
 
 	//Only melee
@@ -6635,7 +6657,7 @@ function scrWeapons() {
 		z++;
 	}
 	debug("__________________________________");
-	debug("The highest tier weapon is: ",highestTierWeapon);
-	*/
+	//debug("The highest tier weapon is: ",highestTierWeapon);
+	//*/
 	
 }

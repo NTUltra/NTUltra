@@ -6,7 +6,7 @@ snd_play(sndLightning1,0.1)
 var ang = random(360);
 var am = 12;
 var angStep = 360/am;
-var l = 8;
+var l = 7;
 repeat(am)
 {
 	with instance_create(x,y,Lightning)

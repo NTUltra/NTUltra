@@ -1,4 +1,5 @@
 /// @description ultramod
+ultramodded = false;
 var um = GetPlayerUltramod();
 if um == ultramods.plasmaRocket
 {

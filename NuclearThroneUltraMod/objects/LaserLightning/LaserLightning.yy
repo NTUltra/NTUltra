@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": false,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskLaser",
     "path": "sprites/mskLaser/mskLaser.yy",

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprRocket",
-    "path": "sprites/sprRocket/sprRocket.yy",
+    "name": "sprToxicRocket",
+    "path": "sprites/sprToxicRocket/sprToxicRocket.yy",
   },
   "solid": false,
   "visible": true,

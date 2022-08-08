@@ -76,7 +76,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprSlugDisappear","path":"sprites/sprSlugDisappear/sprSlugDisappear.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprSlugDisappear",
     "tags": [],
     "resourceType": "GMSequence",
   },

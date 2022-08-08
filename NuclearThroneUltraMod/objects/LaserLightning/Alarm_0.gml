@@ -18,7 +18,6 @@ var dis = point_distance(x,y,xstart,ystart);
 image_xscale = dis*0.5
 var xx = xstart;
 var yy = ystart;
-var step = 32;
 var xstep = lengthdir_x(step,image_angle);
 var ystep = lengthdir_y(step,image_angle);
 var traveled = 0;

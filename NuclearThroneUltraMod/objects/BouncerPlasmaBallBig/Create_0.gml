@@ -14,8 +14,8 @@ if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1
 	{
-	dmg = 21+(Player.betterlaserbrain*2)
-	nomscale += 0.1;
+	dmg = 20+(Player.betterlaserbrain*2)
+	nomscale += 0.2;
 	}
 }
 //friction=0.4;

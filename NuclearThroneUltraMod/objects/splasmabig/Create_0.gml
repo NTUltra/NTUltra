@@ -8,15 +8,15 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 
-dmg = 22
+dmg = 21
 nomscale = 1;
 maxSpeed = 16;
 if instance_exists(Player)
 {
 if Player.skill_got[17] = 1
 {
-dmg = 24+(Player.betterlaserbrain)
-nomscale += 0.1;
+dmg = 23+(Player.betterlaserbrain)
+nomscale += 0.2;
 }
 	if Player.crown == 24//Crown of sloth
 		maxSpeed -= 4;

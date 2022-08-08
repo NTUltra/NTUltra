@@ -47,6 +47,7 @@ if um == ultramods.plasmaBolt
 	with instance_create(x,y,Laser)
 	{
 		scrCopyWeaponMod(other);
+		image_yscale -= 0.4;
 		image_angle = other.direction;
 		team = other.team;
 		startImg = sprLightningLaserStart;
@@ -59,6 +60,7 @@ if um == ultramods.plasmaBolt
 	{
 		image_angle = other.direction;
 		team = other.team;
+		step = 48//32 originally
 		event_perform(ev_alarm,0);
 	}
 	instance_destroy(id,false);

@@ -10827,5 +10827,50 @@ function scrFire2() {
 
 	break;
 	
+	//AUTO LIGHTNING CROSSBOW
+	case 595:
+
+	snd_play_fire(sndCrossbow)
+
+	with instance_create(x,y,LightningBolt)
+	{motion_add(aimDirection+(random(12)-6)*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(40,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(40,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 5
+	wkick = 4
+
+	break;
+	
+	//PLASMA FLAIL
+	case 596:
+
+	snd_play_fire(sndFlail)
+	
+	instance_create(x,y,Dust)
+
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),PlasmaFlail)
+	{
+		dmg = 15;
+		longarms = 0
+		if instance_exists(Player)
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection,2+longarms)
+		image_angle = direction
+		image_yscale = other.wepflip;//Line up animation with actual holding of weapon
+		team = other.team
+	}
+
+	wepangle = -wepangle
+	motion_add(aimDirection,2)
+	BackCont.viewx2 += lengthdir_x(10,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(10,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 6
+	wkick = -6
+
+	break;
+	
 	}//end of switch part 2!
 }
