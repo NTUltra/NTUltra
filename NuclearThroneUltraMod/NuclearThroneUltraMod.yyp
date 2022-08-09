@@ -6672,6 +6672,7 @@
     {"id":{"name":"notes","path":"notes/notes/notes.yy",},"order":1,},
     {"id":{"name":"sprHandCannonBulletDeflected","path":"sprites/sprHandCannonBulletDeflected/sprHandCannonBulletDeflected.yy",},"order":363,},
     {"id":{"name":"sprUltraHeavyRevolver","path":"sprites/sprUltraHeavyRevolver/sprUltraHeavyRevolver.yy",},"order":35,},
+    {"id":{"name":"sprSeptupleShortPopGun","path":"sprites/sprSeptupleShortPopGun/sprSeptupleShortPopGun.yy",},"order":433,},
     {"id":{"name":"compatibility_report_260122_2336303630","path":"notes/compatibility_report_260122_2336303630/compatibility_report_260122_2336303630.yy",},"order":3,},
   ],
   "Options": [

@@ -10963,5 +10963,52 @@ function scrFire2() {
 
 	break;
 	
+	//SEPTUPLE SHORT POPGUN
+	case 600:
+
+	snd_play_fire(sndTripleMachinegun)
+	motion_add(aimDirection+180,1)
+	repeat(5)
+	{
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(70)-35,2+random(2))
+	}
+	var ps = 9;//14
+	with instance_create(x,y,Bullet2)
+	{motion_add(aimDirection+(random(6)-3)*other.accuracy,ps+random(2))
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,Bullet2)
+	{motion_add(aimDirection+20*other.accuracy+(random(6)-3)*other.accuracy,ps+random(2))
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,Bullet2)
+	{motion_add(aimDirection-20*other.accuracy+(random(6)-3)*other.accuracy,ps+random(2))
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,Bullet2)
+	{motion_add(aimDirection+10*other.accuracy+(random(6)-3)*other.accuracy,ps+random(2))
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,Bullet2)
+	{motion_add(aimDirection-10*other.accuracy+(random(6)-3)*other.accuracy,ps+random(2))
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,Bullet2)
+	{motion_add(aimDirection+30*other.accuracy+(random(6)-3)*other.accuracy,ps+random(2))
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,Bullet2)
+	{motion_add(aimDirection-30*other.accuracy+(random(6)-3)*other.accuracy,ps+random(2))
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 6
+
+	break;
+	
 	}//end of switch part 2!
 }

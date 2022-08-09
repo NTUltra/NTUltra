@@ -45,7 +45,7 @@ function scrPopulate() {
             exit;
         }
 
-        if random(10 + hard) < hard and point_distance(x, y, Player.x, Player.y) > 160 /*110*/ and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 300) //240
+        if random(10 + hard) < hard and point_distance(x, y, Player.x, Player.y) > 170 /*110*/ and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 300) //240
         {
             if ( ((spawnarea = 3 || spawnarea = 106) && Player.subarea = 3) || ((spawnarea = 5 || spawnarea = 112) && Player.subarea = 3) ) {
                 if random(3) < 1.3 {
@@ -409,7 +409,7 @@ function scrPopulate() {
         if instance_exists(Player) {
             if (spawnarea = 3 && Player.subarea = 3) || (spawnarea = 7 && Player.subarea = 3) //exceptions pls for bosses
             {
-                if instance_number(enemy) < (3 + min(40,hard) * 0.65) and point_distance(x, y, Player.x, Player.y) > 80 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280) {
+                if instance_number(enemy) < (3 + min(40,hard) * 0.65) and point_distance(x, y, Player.x, Player.y) > 100 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280) {
                     if random(5) < 1
                     scrPopEnemies()
                 }
@@ -426,7 +426,7 @@ function scrPopulate() {
 				scrPopEnemies()
 			}
 				
-            if (Player.crown = 17 and random(8 + min(40,hard)) < min(30,hard) and point_distance(x, y, Player.x, Player.y) > 64 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280))
+            if (Player.crown = 17 and random(8 + min(40,hard)) < min(30,hard) and point_distance(x, y, Player.x, Player.y) > 100 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280))
             {    
 				repeat(3)
 					scrPopEnemies()

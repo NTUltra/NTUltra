@@ -1188,7 +1188,7 @@ function scrWeapons() {
 	wep_type[107] = 2
 	wep_auto[107] = 0
 	wep_load[107] = 15
-	wep_cost[107] = 1.5
+	wep_cost[107] = 2
 	wep_sprt[107] = sprShortgun
 	wep_area[107] = 0
 	wep_text[107] = "thats what she said"
@@ -3102,7 +3102,7 @@ function scrWeapons() {
 	wep_type[281] = 2
 	wep_auto[281] = 0
 	wep_load[281] = 13
-	wep_cost[281] = 1.5
+	wep_cost[281] = 2
 	wep_sprt[281] = sprGoldenShortgun
 	wep_area[281] = 17
 	wep_text[281] = "no golden sex jokes"
@@ -6613,6 +6613,17 @@ function scrWeapons() {
 	wep_swap[599] = sndSwapExplosive
 	wep_rad[599] = 0;
 	
+	wep_name[600] = "SEPTUPLE SHORT POPGUN"
+	wep_type[600] = 1
+	wep_auto[600] = 1
+	wep_load[600] = 2
+	wep_cost[600] = 4.75
+	wep_sprt[600] = sprSeptupleShortPopGun
+	wep_area[600] = 13
+	wep_text[600] = "how to increase the range?"
+	wep_swap[600] = sndSwapMachinegun
+	wep_rad[600] = 0;
+	
 	maxwep = array_length(wep_name)-1;
 
 	//Only melee
@@ -6668,7 +6679,7 @@ function scrWeapons() {
 			// highestTierWeapon = i;
 		}
 	}
-	/*
+	
 	//Debug how many weapons there are of each tier
 	var amountPerTier = [];
 	var z = 0;
