@@ -79,7 +79,8 @@ function scrLoadRun(){
 				Player.isAlkaline = encryptedRun.alkaline;
 				UberCont.lastwishused = encryptedRun.lastwishused;
 				Player.rage = encryptedRun.rage;
-				Player.humphrySkill = encryptedRun.humphrySkill;
+				if variable_struct_exists(encryptedRun, "humphrySkill")
+					Player.humphrySkill = encryptedRun.humphrySkill;
 				Player.skeletonlives = encryptedRun.skeletonlives;
 				Player.patience = encryptedRun.patience;
 				Player.skillpoints = encryptedRun.skillpoints;
