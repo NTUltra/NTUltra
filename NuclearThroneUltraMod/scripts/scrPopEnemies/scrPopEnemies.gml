@@ -214,7 +214,7 @@ function scrPopEnemies() {
 		if loops > 0
 		{
 			if random(10) < 1
-				instance_create(x + 16, y + 16, choose(InvertedCrab, InvertedCrab, ToxicMushroomGuy))
+				instance_create(x + 16, y + 16, choose(InvertedCrab, InvertedCrab, InvertedHyena))
 	        else
 	            instance_create(x + 16, y + 16, choose(InvertedBoneFish, InvertedBoneFish, InvertedBoneFish, InvertedBoneFish, InvertedJellyFish, InvertedScubaBandit, InvertedExploder, InvertedExploder, InvertedSpider, InvertedScubaBandit, InvertedCrab))
 		}

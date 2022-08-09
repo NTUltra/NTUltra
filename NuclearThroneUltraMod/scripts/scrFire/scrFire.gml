@@ -1,7 +1,8 @@
 function scrFire() {
 	if !instance_exists(Player)
 	exit;
-	if wep==0{exit;}
+	if wep==0{
+		exit;}
 
 	IDKWID=false;
 	can_shoot = 0

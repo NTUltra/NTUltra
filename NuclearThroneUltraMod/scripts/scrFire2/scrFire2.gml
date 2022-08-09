@@ -4456,7 +4456,7 @@ function scrFire2() {
 	if place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor) and not place_meeting(UberCont.mouse__x, UberCont.mouse__y, Wall) {
 		snd_play_fire(sndHyperLightning);
 		if alarm[3]<1
-		alarm[3]=max(4,alarm[3]);//imunity
+		alarm[3]=max(3,alarm[3]);//imunity
 		instance_create(x,y,Teleport);
 		snd_play_fire(sndHyperLightning);
 		repeat(5){
@@ -7849,7 +7849,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 	{
 	sprite_index=sprVeryHeavySlash;
-	dmg = 40//shovel is 8
+	dmg = 50//shovel is 8
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -8220,10 +8220,10 @@ function scrFire2() {
 	{
 		if Player.skill_got[17] = 1//laserbrain
 		{
-		dmg=8+(other.betterlaserbrain*2)
+		dmg=9+(other.betterlaserbrain)
 		}
 		else
-		dmg = 6
+		dmg = 8
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3

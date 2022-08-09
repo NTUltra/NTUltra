@@ -1,4 +1,5 @@
 /// @description Create the walls around it
+/*
 var wall = Wall;
 if instance_exists(ThroneIISpiral)
 {
@@ -55,4 +56,4 @@ if wall != WallHitMe
 		instance_create(x-32,y+32,Top)
 	if !place_meeting(x+32,y+32,Floor) && !place_meeting(x+32,y+32,wall)
 		instance_create(x+32,y+32,Top)
-}
+}*/

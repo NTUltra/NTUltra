@@ -4,13 +4,15 @@ if team=2
 scrRogueTarget()
 else
 scrTarget();
+if target != noone
+{
+	gunangle = point_direction(x,y,target.x-(target.hspeed*0.25),target.y-(target.vspeed*0.25));
+	if target.x < x
+	    right = -1
+	else if target.x > x
+		right = 1
+}
 
-gunangle = point_direction(x,y,target.x-(target.hspeed*0.25),target.y-(target.vspeed*0.25));
-if target.x < x
-    right = -1
-else if target.x > x
-	right = 1
-	
 if bfire
 {
 	bwkick = 4;

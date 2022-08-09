@@ -251,7 +251,7 @@ function scrUltras() {
 	if instance_exists(Player) && ((Player.crown == 12 && instance_exists(UltraIcon)) || Player.altUltra)
 	{
 		ultra_name[35] = "SUCOF"
-		ultra_text[35] = "EMIT SESREVER EVICA"//ACTIVE REVERSES TIME
+		ultra_text[35] = "EMIT SESREVER EVITCA"//ACTIVE REVERSES TIME
 		ultra_tips[35] = "reverse time"
 	}
 
@@ -345,7 +345,7 @@ function scrUltras() {
 	    ultra_tips[54] = "rngezus"
     
 	    ultra_name[55] = "DONE BEING EXTINCT"
-	    ultra_text[55] = "WHEN A WEAPON RETURNS#IT FIRES A MASSIVE LASER##WHENEVER YOU HIT AN ENEMY#WITH A THROWN WEAPON#THEY DROP EXTRA RESOURCES##CHANCE PORTALS CHANGE#WEAPONS INTO A HIGHER TIER WEAPON##THROWS BOUNCE TOWARDS ENEMIES"
+	    ultra_text[55] = "WHEN A WEAPON RETURNS#IT FIRES A MASSIVE LASER##WHENEVER A THROWN WEAPON HITS#DROP EXTRA RESOURCES##CHANCE PORTALS CHANGE#WEAPONS INTO A HIGHER TIER WEAPON##THROWS BOUNCE TOWARDS ENEMIES"
 	    ultra_tips[55] = "rise above"
     
 	    ultra_name[56] = "CLEANSING"

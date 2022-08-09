@@ -1,9 +1,5 @@
-if place_meeting(x,y,Wall)
+var wall = instance_place(x,y,Wall)
+if wall != noone
 {
-	if other.id > id
-	{
-		instance_destroy(id,false)
-		exit;
-	}
+	instance_destroy(wall,false)
 }
-

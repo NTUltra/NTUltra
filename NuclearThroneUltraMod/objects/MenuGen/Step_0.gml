@@ -18,4 +18,6 @@ with Wall
 {
 	if alarm[1] > 1
 		alarm[1] = 1;
+	if place_meeting(x,y,Floor)
+		instance_destroy();
 }

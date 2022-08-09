@@ -32,7 +32,11 @@ function scrDarkness() {	if darkness = 1
 	with OExplosion
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),160+random(4),0)
 	with SmallExplosion
-	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),64+random(4),0)
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),66+random(4),0)
+	with WeaponMod
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),64,0)
+	with SurvivalArenaStarter
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),64,0)
 	with InvertedToxicMushroom
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),64,0)
 	with InvertedToxicMushroomGuy
@@ -132,6 +136,12 @@ function scrDarkness() {	if darkness = 1
 	}
 	with Explosion
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),110+random(3),0)
+	with SmallExplosion
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),40+random(4),0)
+	with WeaponMod
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),48,0)
+	with SurvivalArenaStarter
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),48,0)
 	with Throne2
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),110+random(8),0)
 	with BecomeThrone2

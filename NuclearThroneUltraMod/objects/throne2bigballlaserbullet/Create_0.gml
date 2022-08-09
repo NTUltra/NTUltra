@@ -2,8 +2,8 @@
 
 // Inherit the parent event
 event_inherited();
-stopSpeed = 0.23;
-friction = 0.105;
+stopSpeed = 0.25;
+friction = 0.106;
 image_angle = 0;
 aimDir = 0;
 target = -1;

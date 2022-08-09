@@ -187,7 +187,7 @@ function scrDrawHUD() {
 			}
 			else if dir == 27 && Player.altUltra
 			{
-				draw_sprite_ext(sprSteroidsPunchSwap,0,xx,yy,1,1,0,c_white,1);
+				draw_sprite_ext(sprSteroidsPunchSwapHUD,0,xx,yy,1,1,0,c_white,1);
 			}
 			else if dir == 29 && Player.spr_idle == sprMutant8DIdle
 			{

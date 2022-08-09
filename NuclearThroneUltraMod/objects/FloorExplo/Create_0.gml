@@ -4,22 +4,27 @@ if (place_meeting(x,y,FloorExplo))
 	exit;
 }
 var area;
+canSpawnSwarm = false
 if instance_exists(Player) 
 {
 	area = Player.area
 	if Player.crown != 25
 	{
-		alarm[2] = 1;
-		alarm[3] = 1;
-		alarm[0] = 1;
+		event_perform(ev_alarm,2);
+		event_perform(ev_alarm,0);
+		//alarm[2] = 1;
+		//alarm[3] = 1;
+		//alarm[0] = 1;
 	}
 }
 else 
 {
 	area = BackCont.area
-	alarm[2] = 1;
-	alarm[3] = 1;
-	alarm[0] = 1;
+	event_perform(ev_alarm,2);
+	event_perform(ev_alarm,0);
+	//alarm[2] = 1;
+	//alarm[3] = 1;
+	//alarm[0] = 1;
 }
 if area==104
 area=103;
@@ -164,3 +169,4 @@ if(instance_exists(Player))
 depth = 8;
 isArenaFloor = true;
 canSpawnSwarm = true;
+event_user(0);

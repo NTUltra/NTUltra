@@ -2210,7 +2210,7 @@ function scrWeapons() {
 	wep_name[200] = "PANDA STICK"
 	wep_type[200] = 0
 	wep_auto[200] = 0
-	wep_load[200] = 11//18 usual new chicken 16
+	wep_load[200] = 10//18 usual new chicken 16
 	wep_cost[200] = 0
 	wep_sprt[200] = sprStick
 	wep_area[200] = -1
@@ -2870,7 +2870,7 @@ function scrWeapons() {
 	wep_name[260] = "HYPER HEAVY SLUGGER"
 	wep_type[260] = 2
 	wep_auto[260] = 0
-	wep_load[260] = 13
+	wep_load[260] = 14
 	wep_cost[260] = 3
 	wep_sprt[260] = sprHyperHeavySlugger
 	wep_area[260] = 18
@@ -4738,7 +4738,7 @@ function scrWeapons() {
 	wep_load[429] = 25
 	wep_cost[429] = 3
 	wep_sprt[429] = sprSplinterStorm
-	wep_area[429] = 20
+	wep_area[429] = 21
 	wep_text[429] = "bouncing splinters"
 	wep_swap[429] = sndSwapBow
 	wep_rad[429] = 0;
@@ -4834,7 +4834,7 @@ function scrWeapons() {
 	wep_name[438] = "EFFICIENT HEAVY SLUGGER"
 	wep_type[438] = 2
 	wep_auto[438] = 0
-	wep_load[438] = 28
+	wep_load[438] = 24
 	wep_cost[438] = 1
 	wep_sprt[438] = sprEfficientHeavySlugger
 	wep_area[438] = 12
@@ -5180,7 +5180,7 @@ function scrWeapons() {
 	wep_sprt[469] = sprToxicORay
 	wep_area[469] = 11
 	wep_text[469] = "stinky sheep"
-	wep_swap[469] = sndSwapExplosive
+	wep_swap[469] = sndSwapExplosive  
 	wep_rad[469] = 0;
 	
 	wep_name[470] = "SNOW LINE"

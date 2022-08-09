@@ -1,7 +1,7 @@
 ///scrCrownOfDeath();
 // /@description
 ///@param
-function scrCrownOfDeath(am = 3,dis = 32){
+function scrCrownOfDeath(am = 3,dis = 38){
 	if Player.crown == 3//Crown of death
 	{
 		var ang = random(360);

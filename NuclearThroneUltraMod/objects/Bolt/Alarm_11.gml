@@ -21,7 +21,7 @@ if um == ultramods.plasmaBolt
 	instance_destroy(id,false);
 } else if um == ultramods.rocketBolt
 {
-	snd_play_fire(sndRocket);
+	snd_play(sndRocket,0,true);
 	with instance_create(x,y,Rocket)
 	{
 		scrCopyWeaponMod(other);

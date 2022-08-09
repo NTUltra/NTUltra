@@ -71,3 +71,23 @@ if instance_exists(Player) && Player.skill_got[26]
 	x -= 8;
 	y -= 8;
 }
+if wall != WallHitMe
+{
+	if !place_meeting(x-32,y,Floor) && !place_meeting(x-32,y,wall)
+		instance_create(x-32,y,Top)
+	if !place_meeting(x,y-32,Floor) && !place_meeting(x,y-32,wall)
+		instance_create(x,y-32,Top)
+	if !place_meeting(x,y+32,Floor) && !place_meeting(x,y+32,wall)
+		instance_create(x,y+32,Top)
+	if !place_meeting(x+32,y,Floor) && !place_meeting(x+32,y,wall)
+		instance_create(x+32,y,Top)
+	
+	if !place_meeting(x-32,y-32,Floor) && !place_meeting(x-32,y-32,wall)
+		instance_create(x-32,y-32,Top)
+	if !place_meeting(x+32,y-32,Floor) && !place_meeting(x+32,y-32,wall)
+		instance_create(x+32,y-32,Top)
+	if !place_meeting(x-32,y+32,Floor) && !place_meeting(x-32,y+32,wall)
+		instance_create(x-32,y+32,Top)
+	if !place_meeting(x+32,y+32,Floor) && !place_meeting(x+32,y+32,wall)
+		instance_create(x+32,y+32,Top)
+}

@@ -158,7 +158,7 @@ function scrDecideInvader(){
 					fe = sprFloor10Explo;
 				break
 				case 101://Oasis
-					array_push(spawns,InvertedCrab, InvertedBoneFish, InvertedBoneFish, InvertedScubaBandit, InvertedJellyFish, ToxicMushroomGuy, choose(InvertedExploder,InvertedExploder,InvertedSpider));
+					array_push(spawns,InvertedCrab, InvertedBoneFish, InvertedBoneFish, InvertedScubaBandit, InvertedJellyFish, InvertedHyena, choose(InvertedExploder,InvertedExploder,InvertedSpider));
 					fa = sprFloor122;
 					fb = sprFloor122B;
 					fe = sprFloor122Explo;

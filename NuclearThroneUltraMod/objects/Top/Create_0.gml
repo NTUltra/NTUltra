@@ -130,4 +130,4 @@ image_speed = 0
 
 visible=false;
 alarm[0]=25;
-
+alarm[1] = 3;

@@ -12,7 +12,8 @@ image_yscale = 1.25
 img = 0
 sprStart = sprPopoLaserStart;
 sprEnd = sprPopoLaserEnd;
-//dir=0;
-
-/* */
-/*  */
+	dmg = 3;
+if UberCont.opt_gamemode == 9//Casual mode
+	dmg = 2;
+if UberCont.opt_gamemode == 34//HARD MODE
+	dmg = 4;

@@ -4,7 +4,7 @@
 event_inherited();
 image_speed = 0.5;
 raddrop = 19;
-maxhealth = 45
+maxhealth = 55
 my_health = maxhealth;
 EnemyHealthAdjustments();
 projectileSpeed += 2;

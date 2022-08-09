@@ -851,6 +851,15 @@ function scrPowers() {
 
 	if race==15//Atom
 	{
+		if instance_exists(PlayerAlarms)
+		{
+			if PlayerAlarms.alarm[8] > 0
+			{
+				PlayerAlarms.hasTriedToTeleport = true;
+				return;	
+			}
+			PlayerAlarms.alarm[8] = 6;
+		}
 		var laserscale = 0.1;
 	if ultra_got[60] && point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<300//Ultra D
 	{
@@ -871,17 +880,20 @@ function scrPowers() {
 		
 	    if place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor)
 	    {
-		    if alarm[3]<3
-				alarm[3]=3;//imunity
+		    if alarm[3]<2
+				alarm[3]=2;//imunity
 		    instance_create(x,y,Teleport);
 		    snd_play_2d(sndHyperLightning);
 		    repeat(5){
 			    with instance_create(x,y,Smoke)
 			    motion_add(random(360),1+random(3))
 			}
-    
+			instance_create(UberCont.mouse__x,UberCont.mouse__y,WallBreak);
+			var msk = mask_index;
+			mask_index = mskPickupThroughWall;
 		    x=UberCont.mouse__x;
 		    y=UberCont.mouse__y;
+			mask_index = msk;
 		    BackCont.viewx2 += lengthdir_x(20,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 		    BackCont.viewy2 += lengthdir_y(20,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 		    BackCont.shake += 2    
@@ -895,7 +907,7 @@ function scrPowers() {
 					snd_play_fire(sndLaserUpg)
 				else
 					snd_play_fire(sndLaser)
-				with instance_create(x,y,Laser)
+				with instance_create(x,y,LaserExplosive)
 				{
 					image_angle = point_direction(x,y,other.xprevious,other.yprevious);
 					image_yscale -= laserscale;
@@ -921,7 +933,7 @@ function scrPowers() {
 	    else
 	    {
 		    if alarm[3]<1
-		    alarm[3]=3;//imunity
+		    alarm[3]=2;//imunity
 			
 		    instance_create(x,y,Teleport);
 		    snd_play_2d(sndHyperLightning);
@@ -1035,7 +1047,7 @@ function scrPowers() {
 					snd_play_fire(sndLaserUpg)
 				else
 					snd_play_fire(sndLaser)
-				with instance_create(x,y,Laser)
+				with instance_create(x,y,LaserExplosive)
 				{
 					image_angle = point_direction(x,y,other.xprevious,other.yprevious);
 					team = other.team
@@ -2063,7 +2075,7 @@ function scrPowers() {
 	}
 
 	//STEROIDS
-	if race = 7 and bwep != 0
+	if race = 7 and bwep != 0 //and wep != 0
 	{
 	if ultra_got[27]=0
 	scrSwapWeps()
@@ -2091,7 +2103,7 @@ function scrPowers() {
 		if wep == 0 && bwep != 0
 			scrSwapWeps();
 	    if ultra_got[27]=1 && !altUltra{//mirror hands
-	    bwep=twep
+			bwep=twep
 	    }
     
     

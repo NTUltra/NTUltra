@@ -10,9 +10,9 @@ rot = (1+random(3))*choose(1,-1)
 growspeed = 0.05+random(0.05)
 
 if instance_exists(Player)
-{if Player.area=101 || Player.area == 121
+{if Player.area=101 || Player.area == 122
 sprite_index=sprBubble;
 }
-else if BackCont.area=101 || BackCont.area == 121
+else if BackCont.area=101 || BackCont.area == 122
 sprite_index=sprBubble;
 

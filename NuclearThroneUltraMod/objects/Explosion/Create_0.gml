@@ -33,7 +33,7 @@ team = -1
 if instance_exists(Player){
 	if Player.ultra_got[57]//atom bomb
 	{
-		instance_create(x+random(32)-16,y+random(32)-16,ExplosionStop);
+		instance_create(x+random(48)-24,y+random(48)-24,ExplosionStop);
 		//FIERY EXPLOSIONS
 		alarm[1]=9;
 	}

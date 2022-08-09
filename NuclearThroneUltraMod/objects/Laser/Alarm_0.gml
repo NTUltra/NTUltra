@@ -2,12 +2,30 @@ if(instance_exists(Player)){
 	if isog
 	{
 		var um = GetPlayerUltramod()
+		var isExplosive = object_index == LaserExplosive;
 		if um == ultramods.laserBullet
 		{
 			with instance_create(x,y,Shell)
 			motion_add(other.image_angle+Player.right*100+random(50)-25,2+random(2))
-			
-			if isUltra
+			if isExplosive
+			{
+				snd_play_fire(sndHeavyMachinegun);
+				var acc = scrGetPlayerAccuracy();
+				with instance_create(x,y,Bullet1Explosive)
+				{motion_add(other.image_angle-(5*acc),14)
+					scrCopyWeaponMod(other);
+				image_angle = direction
+				team = other.team
+				alarm[11] = 0;}
+				with instance_create(x,y,Bullet1Explosive)
+				{motion_add(other.image_angle+(5*acc),14)
+					scrCopyWeaponMod(other);
+				image_angle = direction
+				team = other.team
+				alarm[11] = 0;}
+				instance_destroy(id,false);
+			}
+			else if isUltra
 			{
 				snd_play_fire(sndUltraPistol);
 				var acc = scrGetPlayerAccuracy();
@@ -64,6 +82,8 @@ if(instance_exists(Player)){
 			var thebolt = Bolt;
 			if laserhit > 0
 				thebolt = BouncerBolt;
+			if isExplosive
+				thebolt = ExplosiveBolt;
 			if isUltra
 			{
 				snd_play_fire(sndUltraCrossbow);

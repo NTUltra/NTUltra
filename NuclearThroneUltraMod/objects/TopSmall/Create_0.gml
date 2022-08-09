@@ -127,4 +127,4 @@ break;
 
 image_index = choose(0,1,2,3,4,5,6,7)
 image_speed = 0
-
+alarm[0] = 3;

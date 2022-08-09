@@ -155,7 +155,7 @@ function scrModHit() {
 							image_angle = random(360);
 						accuracy --;
 						team = other.team
-						ammo = 12
+						ammo = 10
 						event_perform(ev_alarm,0)
 						visible = 0
 						with instance_create(x,y,LightningSpawn)
@@ -181,7 +181,7 @@ function scrModHit() {
 						accuracy --;
 						creator=other.id;
 						team = 2//Player.team
-						ammo = 12
+						ammo = 10
 						event_perform(ev_alarm,0)
 						visible = 0
 						with instance_create(x,y,LightningSpawn)

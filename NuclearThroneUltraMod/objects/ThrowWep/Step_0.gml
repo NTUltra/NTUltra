@@ -64,7 +64,7 @@ if speed > 1
 					{
 					    if Player.ultra_got[55] = 1//ULTRA C PANDA
 					    {
-					    scrDrop(30,0.01);
+					    scrDrop(28,0.02);
 					    repeat(4)//16 is one ultra lazerpistol ammo
 					        {
 					        with instance_create(x,y,Rad)

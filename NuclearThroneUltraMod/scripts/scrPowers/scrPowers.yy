@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Player Character.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scrpowers",
+  "name": "scrPowers",
   "tags": [],
   "resourceType": "GMScript",
 }

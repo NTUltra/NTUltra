@@ -9,12 +9,12 @@ y = ty + lengthdir_y(length,oDir);
 if instance_exists(Player) and instance_exists(enemy)
 {
 	var dir = instance_nearest(x,y,enemy)
-	var home = 4;
+	var home = 5;
 	if Player.skill_got[21] == 1
-		home += 20 + Player.betterboltmarrow;
+		home += 18 + Player.betterboltmarrow;
 	if Player.skill_got[19] == 1//Eagle eyes
 	{
-		home += 10;
+		home += 9;
 		if Player.race == 25
 			home += 4;
 	}

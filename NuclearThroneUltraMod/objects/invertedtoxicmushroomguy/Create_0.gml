@@ -15,3 +15,6 @@ walk = 0
 acc = 1;
 maxSpeed = 4;
 actTime = 12;
+l = 4;
+if GetPlayerLoops() > 0
+	l = 5;

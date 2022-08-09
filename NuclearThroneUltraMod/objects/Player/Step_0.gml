@@ -600,11 +600,15 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		IsShielding=false;
 	}
 	if( (!(IsShielding)||(ultra_got[7]==1)) && (UberCont.opt_gamemode!=12||instance_exists(Marker)) ){
-	if race = 7 || (altUltra && ultra_got[23] && scrMeleeWeapons(wep)){//Roids always auto fire
-	wep_auto[wep] = 1 wep_auto[bwep] = 1}
+	if (race == 7 || (altUltra && ultra_got[23] && scrMeleeWeapons(wep))) && wep != 0 {
+		//Roids always auto fire
+		wep_auto[wep] = 1
+		if race == 7 && bwep != 0
+			wep_auto[bwep] = 1
+	}
 
 
-	if (KeyCont.key_fire[p] = 1 or keyfire = 1) and wep_auto[wep] = 0 and ((wep_type[wep] = 0 or wep_type[wep] = 1) or can_shoot = 1) and reload < 7//15 INPUT BUFFERING
+	if (KeyCont.key_fire[p] = 1 or keyfire = 1) and wep_auto[wep] = 0 and ((wep_type[wep] = 0 or wep_type[wep] = 1) or can_shoot = 1) and reload < 8//15 INPUT BUFFERING
 		clicked = 1
 
 	if (KeyCont.key_fire[p] = 1 or keyfire = 1)
