@@ -13,10 +13,12 @@ if instance_exists(Player)
 			if oasis
 				instance_destroy();
 		}
-    
-	    if !instance_exists(BanditBoss)
-	    {spr_idle = sprBigFishSkull
-	    spr_hurt = sprBigFishSkullHurt}
+		snd_play(sndOasisHorn);
+	    //if !instance_exists(BanditBoss)
+	    //{
+		spr_idle = sprBigFishSkull
+	    spr_hurt = sprBigFishSkullHurt
+		//}
     }
 }
     if (instance_number(enemy) < BackCont.enemiesInStartLevel * 0.6)

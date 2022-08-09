@@ -542,7 +542,10 @@ function scrNextLevel() {
 		else
 			hard += 2;
 	}
-	else if (!(area = 7 && subarea == 1) && !(area = 5 && subarea == 1) && !(area = 4 && subarea == 1))//Labs 1 and Vulcano 1 don't increase hard
+	else if (!(area = 7 && subarea == 1) && !(area = 6 && subarea == 1) //Labs 1 and Vulcano 1 don't increase hard
+	&& !(area = 4 && subarea == 1)//Caves 1
+	&& !(area = 9 && subarea == 1)//Palace 1 and 2 don't increase hard
+	&& !(area = 9 && subarea == 2))
 	{
 		if crown == 24
 			hard -= 1;

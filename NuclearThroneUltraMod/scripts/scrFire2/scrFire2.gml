@@ -1274,23 +1274,23 @@ function scrFire2() {
 
 	snd_play_fire(sndSwarm);
 
-	repeat(6){
+	repeat(4){
 	with instance_create(x,y,SwarmBolt)
-	{motion_add(aimDirection+(random(12)-6)-15*other.accuracy,2+random(3))
+	{motion_add(aimDirection+(random(20)-10)-20*other.accuracy,2+random(3))
 	image_angle = direction
 	team = other.team}
 	}
 
-	repeat(6){
+	repeat(4){
 	with instance_create(x,y,SwarmBolt)
-	{motion_add(aimDirection+(random(12)-6)*other.accuracy,2+random(3))
+	{motion_add(aimDirection+(random(20)-10)*other.accuracy,2+random(3))
 	image_angle = direction
 	team = other.team}
 	}
 
-	repeat(6){
+	repeat(4){
 	with instance_create(x,y,SwarmBolt)
-	{motion_add(aimDirection+(random(12)-6)+15*other.accuracy,2+random(3))
+	{motion_add(aimDirection+(random(20)-10)+20*other.accuracy,2+random(3))
 	image_angle = direction
 	team = other.team}
 	}

@@ -16,7 +16,7 @@ spr_dead = sprJungleAssassinDead
 //behavior
 walk = 0
 gunangle = random(360)
-alarm[1] = 5;
+alarm[1] = 8;
 wepangle = choose(-140,140)
 wepflip = 1
 instance_change(JungleAssassin,false)

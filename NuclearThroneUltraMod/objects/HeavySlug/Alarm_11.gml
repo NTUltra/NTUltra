@@ -40,6 +40,8 @@ if um == ultramods.bulletShotgun
 	instance_destroy(id,false);
 	with instance_create(x,y,HeavyBolt)
 	{
+		dmg += 5;
+		piercedmg += 5;
 		scrCopyWeaponMod(other);
 		direction = other.direction
 		image_angle = direction;

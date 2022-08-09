@@ -12,6 +12,7 @@ hurt_pitch_variation = 0;
 reachedUltra = false;
 canHeal = true;
 noHit = 0;
+closedodges = 0;
 //3D audio
 audio_listener_orientation(0, 0, -1, 0, 1, 0);
 audio_falloff_set_model(audio_falloff_linear_distance);

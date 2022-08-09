@@ -1540,7 +1540,7 @@ if typ!=0&&object_index!=Flame&&object_index!=TrapFire&&object_index!=HotDrakeFl
 
 
 ///extra feet dodging bonus
-if skill_got[2] && !instance_exists(GenCont) && !instance_exists(LevCont)
+if skill_got[2] && !instance_exists(GenCont) && !instance_exists(LevCont) && !outOfCombat
 {
 	if extrafeetalarm>0
 		extrafeetalarm--;
@@ -1566,6 +1566,12 @@ if skill_got[2] && !instance_exists(GenCont) && !instance_exists(LevCont)
 		}
 		else
 		{
+			closedodges ++;
+			if closedodges >= 20
+			{
+				closedodges = -999;//Dont need this anymore
+				scrUnlockBSkin(26,"FOR PERFORMING 20 CLOSE DODGES#USING EXTRA FEET#AS HUMPHRY",0);	
+			}
 			with instance_create(x+10,y+5,RedirectFX)
 			{
 				sprite_index = sprExtraFeetCloseDodge;	

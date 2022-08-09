@@ -18,9 +18,9 @@ with other
 			yy=other.y
 			owner=other.id;
 		}
-	alarm[11]+=50;
+	alarm[11]+=20;
 	if alarm[1] > 0
-		alarm[1] += 45;
+		alarm[1] += 15;
 	}
 
 

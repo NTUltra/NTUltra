@@ -3,7 +3,6 @@ with Player
 
 with BanditBoss
 	oasis=false;
-
 with WantBoss //THIS IS THE BIG BLOCKCOCK soflock
 {
 	if oasis

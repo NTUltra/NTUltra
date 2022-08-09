@@ -7,8 +7,8 @@
   "visible": true,
   "managed": true,
   "spriteMaskId": {
-    "name": "mskPlasmaImpact",
-    "path": "sprites/mskPlasmaImpact/mskPlasmaImpact.yy",
+    "name": "mskMorph",
+    "path": "sprites/mskMorph/mskMorph.yy",
   },
   "persistent": false,
   "parentObjectId": {

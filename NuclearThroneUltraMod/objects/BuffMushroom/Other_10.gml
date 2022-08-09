@@ -20,7 +20,7 @@ if target > 0 && instance_exists(target)
 	}
 	with instance_create(xx,yy,proj)
 	{
-		motion_add(dir,other.pSpeed)
+		motion_add(dir+5,other.pSpeed)
 		image_angle = direction
 		team = other.team
 	}
@@ -28,7 +28,7 @@ if target > 0 && instance_exists(target)
 	yy = y + lengthdir_y(odis,dir-90);
 	with instance_create(xx,yy,proj)
 	{
-		motion_add(dir,other.pSpeed)
+		motion_add(dir-5,other.pSpeed)
 		image_angle = direction
 		team = other.team
 	}
@@ -38,6 +38,7 @@ if target > 0 && instance_exists(target)
 		alarm[2] = fireRate;
 		alarm[1] += fireRate;
 	}
+	speed *= 0.8;
 	if walk > 0
 	{
 		walk ++;

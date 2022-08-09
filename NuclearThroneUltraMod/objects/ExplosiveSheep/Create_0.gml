@@ -5,7 +5,7 @@ size = 0
 maxSpeed = 4;
 hurt_pitch_variation = 0.25;
 myConfusion = noone;
-
+existTime = 0;
 idle=true;
 spr_idle = sprSheepIdleA
 spr_walk = sprSheepWalk

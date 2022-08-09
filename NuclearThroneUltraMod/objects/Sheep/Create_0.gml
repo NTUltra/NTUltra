@@ -5,6 +5,7 @@ size = 1
 maxSpeed = 4;
 hurt_pitch_variation = 0.05;
 myConfusion = noone;
+existTime = 0;
 
 idle=true;
 spr_idle = sprSheepIdleA

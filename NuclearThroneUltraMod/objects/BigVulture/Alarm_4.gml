@@ -13,6 +13,6 @@ if random(3) < 1
 }
 else
 {
-	alarm[7] = 8;//Stoptime
-	alarm[1] += 8;
+	alarm[7] = 9;//Stoptime
+	alarm[1] += 9;
 }

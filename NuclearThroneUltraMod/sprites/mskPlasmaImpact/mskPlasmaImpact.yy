@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"mskPlasmaImpact","path":"sprites/mskPlasmaImpact/mskPlasmaImpact.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "mskPlasmaImpact",
     "tags": [],
     "resourceType": "GMSequence",
   },

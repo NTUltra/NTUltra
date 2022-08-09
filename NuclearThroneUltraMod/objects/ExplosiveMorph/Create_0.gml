@@ -5,13 +5,23 @@ BackCont.shake += 1
 typ=0;
 team = 2
 dmg=1;
-alarm[0] = 5;
+alarm[0] = 4;
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1
 	{
 		alarm[0] += Player.betterlaserbrain;
-		dmg += 1;
+		alarm[0] += 2;
+	}
+}
+if UberCont.ultramodSwap
+{
+	var um = GetPlayerUltramod()
+	if um == ultramods.morphFire
+	{
+		mask_index = mskPickupThroughWall;
+		visible = false;
+		alarm[11] = 1;
 	}
 }
 repeat(3)

@@ -1,13 +1,13 @@
 if speed > 0 and other.team != team
 {
 snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
-if other.my_health >= 30
+if other.my_health >= piercedmg
 {
 	instance_destroy()
 
 	with other
 	{
-	my_health -= 50
+	my_health -= other.dmg
 	sprite_index = spr_hurt
 	image_index = 0
 	motion_add(other.direction,10)
@@ -19,11 +19,11 @@ if other.my_health >= 30
 	target = other.target
 	}
 }
-else if other.my_health < 30 and (alarm[1]<1 || other.sprite_index != other.spr_hurt)//other.sprite_index != other.spr_hurt
+else if other.my_health < piercedmg and (alarm[1]<1 || other.sprite_index != other.spr_hurt)//other.sprite_index != other.spr_hurt
 {
 	with other
 	{
-	my_health -= 50
+	my_health -= other.dmg
 	sprite_index = spr_hurt
 	image_index = 0
 	motion_add(other.direction,10)

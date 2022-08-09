@@ -16,10 +16,10 @@ spr_dead = sprInvertedJungleAssassinDead
 //behavior
 walk = 0
 gunangle = random(360)
-alarm[1] = 2;
+alarm[1] = 6;
 wepangle = choose(-140,140)
 wepflip = 1
-instance_change(JungleAssassin,false)
+instance_change(InvertedJungleAssassin,false)
 }
 }
 

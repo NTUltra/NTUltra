@@ -1146,7 +1146,7 @@ function scrWeapons() {
 	wep_load[103] = 6
 	wep_cost[103] = 2
 	wep_sprt[103] = sprFrostMachinegun
-	wep_area[103] = 4
+	wep_area[103] = 5
 	wep_text[103] = "freeze!"
 	wep_swap[103] = sndSwapMachinegun
 	wep_rad[103] = 0;
@@ -2210,7 +2210,7 @@ function scrWeapons() {
 	wep_name[200] = "PANDA STICK"
 	wep_type[200] = 0
 	wep_auto[200] = 0
-	wep_load[200] = 12//18 usual new chicken 16
+	wep_load[200] = 11//18 usual new chicken 16
 	wep_cost[200] = 0
 	wep_sprt[200] = sprStick
 	wep_area[200] = -1
@@ -2496,7 +2496,7 @@ function scrWeapons() {
 	wep_name[226] = "GOLDEN SLUGGER"
 	wep_type[226] = 2
 	wep_auto[226] = 0
-	wep_load[226] = 20
+	wep_load[226] = 21
 	wep_cost[226] = 1
 	wep_sprt[226] = sprGoldenSlugger
 	wep_area[226] = 19
@@ -2686,7 +2686,7 @@ function scrWeapons() {
 	wep_load[243] = 22
 	wep_cost[243] = 4
 	wep_sprt[243] = sprSwarmShotgun
-	wep_area[243] = 10
+	wep_area[243] = 13
 	wep_text[243] = "honeybee"
 	wep_swap[243] = sndSwapBow
 	wep_rad[243] = 0;
@@ -3079,7 +3079,7 @@ function scrWeapons() {
 	wep_name[279] = "GOLDEN EXPLOSIVE CROSSBOW"
 	wep_type[279] = 3
 	wep_auto[279] = 0
-	wep_load[279] = 20
+	wep_load[279] = 23
 	wep_cost[279] = 1
 	wep_sprt[279] = sprGoldenExplosiveBow
 	wep_area[279] = 20
@@ -3156,7 +3156,7 @@ function scrWeapons() {
 	wep_name[286] = "GOLDEN GLOVE"
 	wep_type[286] = 4
 	wep_auto[286] = 0
-	wep_load[286] = 21
+	wep_load[286] = 22
 	wep_cost[286] = 1
 	wep_sprt[286] = sprGoldenGlove
 	wep_area[286] = 18
