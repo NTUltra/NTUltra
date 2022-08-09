@@ -5,6 +5,8 @@ event_inherited();
 
 if !hitEnemy && owner != -1 && instance_exists(owner)
 {
+	with BloodSlashRetail
+		hitEnemy = true;
 	with owner
 	{
 		if alarm[3] < 1 && my_health > 1

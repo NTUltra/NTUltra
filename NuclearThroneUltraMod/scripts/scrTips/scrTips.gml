@@ -30,7 +30,7 @@ function scrTips() {
 	"square bullets are immune to melee",
 	/*these are rare*/ choose("no","bob and weave","airhorn.wav","danger zone","no sex jokes","in and about"
 	,"the purple dragon","golden frog anyone?","Y.V. mony rad","the flying cat head","myth of time","sheeps are a thing","feedback is much appreciated","follow @erdeppol","sorry bout bugs","I love you!",
-	"be nice#get bitches")
+	"be nice#get bitches","fish can dodgeroll to prevent blood hammer self damage")
 	),choose(
 	"the I.D.P.D. is looking for you",
 	"gold weapons don't count towards#your progression percentage",

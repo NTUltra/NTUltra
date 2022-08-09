@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-stopSpeed = 0.22;
+stopSpeed = 0.23;
 friction = 0.105;
 image_angle = 0;
 aimDir = 0;
@@ -12,6 +12,6 @@ projectileToSpawn = ExploGuardianBullet;
 projectileToSpawnSprite = sprGuardianBulletSpawn;
 hitSprite = sprGuardianBulletHit;
 loops = GetPlayerLoops();
-pSpeed = 6.5 + clamp((loops-1)*0.5,0,2);
+pSpeed = 6.8 + clamp((loops-1)*0.5,0,2);
 initialDelay = 10;
 initialDelay -= clamp(loops,0,5);

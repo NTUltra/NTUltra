@@ -3,7 +3,7 @@ image_speed = 0.4
 appliedBoost = false;
 typ = 0 //0 = nothing, 1 = deflectable, 2 = destructable, 3 = deflectable
 hits = 1;
-hitDelay = 7;
+hitDelay = 8;
 hitEntities = [];
 walled = 0
 friction = 0.1

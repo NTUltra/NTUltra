@@ -9,4 +9,4 @@ walled = 0
 friction = 0.1
 knockback += 2;
 dmg = 2;
-hitEnemy = false;
+alarm[2] = 5;

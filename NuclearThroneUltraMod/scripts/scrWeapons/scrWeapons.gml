@@ -2070,7 +2070,7 @@ function scrWeapons() {
 	wep_load[187] = 90
 	wep_cost[187] = 9
 	wep_sprt[187] = sprAssaultSeekerShotgun
-	wep_area[187] = 12
+	wep_area[187] = 13
 	wep_text[187] = "have you tried eagle eyes+bolt marrow?"
 	wep_swap[187] = sndSwapBow
 	wep_rad[187] = 0;
@@ -3662,7 +3662,7 @@ function scrWeapons() {
 	wep_name[332] = "ENERGY SHOVEL"
 	wep_type[332] = 5
 	wep_auto[332] = 0
-	wep_load[332] = 24
+	wep_load[332] = 26
 	wep_cost[332] = 5
 	wep_sprt[332] = sprEnergyShovel
 	wep_area[332] = 14
@@ -6043,7 +6043,7 @@ function scrWeapons() {
 	
 	wep_name[548] = "BLOOD HAMMER"
 	wep_type[548] = 0
-	wep_auto[548] = 1
+	wep_auto[548] = 0
 	wep_load[548] = 19
 	wep_cost[548] = 0
 	wep_sprt[548] = sprBloodHammer
@@ -6054,7 +6054,7 @@ function scrWeapons() {
 	
 	wep_name[549] = "HEAVY BLOOD HAMMER"
 	wep_type[549] = 0
-	wep_auto[549] = 1
+	wep_auto[549] = 0
 	wep_load[549] = 18
 	wep_cost[549] = 0
 	wep_sprt[549] = sprHeavyBloodHammer
@@ -6509,7 +6509,7 @@ function scrWeapons() {
 	wep_load[590] = 19
 	wep_cost[590] = 0
 	wep_sprt[590] = sprTermiteInjector
-	wep_area[590] = 13
+	wep_area[590] = 14
 	wep_text[590] = "always clean your sword"
 	wep_swap[590] = sndSwapSword
 	wep_rad[590] = 0;
@@ -6576,7 +6576,7 @@ function scrWeapons() {
 	wep_cost[596] = 2.5
 	wep_sprt[596] = sprPlasmaFlail
 	wep_area[596] = 15
-	wep_text[596] = ""
+	wep_text[596] = "bubble flail"
 	wep_swap[596] = sndSwapSword
 	wep_rad[596] = 0;
 	
@@ -6585,7 +6585,7 @@ function scrWeapons() {
 	wep_auto[597] = 0
 	wep_load[597] = 19//22
 	wep_cost[597] = 1
-	wep_sprt[597] = sprSlugger
+	wep_sprt[597] = sprExplosiveSlugger
 	wep_area[597] = 6
 	wep_text[597] = "fragger"
 	wep_swap[597] = sndSwapShotgun
@@ -6596,11 +6596,22 @@ function scrWeapons() {
 	wep_auto[598] = 1
 	wep_load[598] = 7//8
 	wep_cost[598] = 1
-	wep_sprt[598] = sprGatlingSlugger
+	wep_sprt[598] = sprExplosiveGatlingSlugger
 	wep_area[598] = 17
 	wep_text[598] = "time to frattle"
 	wep_swap[598] = sndSwapShotgun
 	wep_rad[598] = 0;
+	
+	wep_name[599] = "BLOOD SHOVEL"
+	wep_type[599] = 0
+	wep_auto[599] = 0
+	wep_load[599] = 23//19
+	wep_cost[599] = 0
+	wep_sprt[599] = sprBloodShovel
+	wep_area[599] = 16
+	wep_text[599] = "blood scooper"
+	wep_swap[599] = sndSwapExplosive
+	wep_rad[599] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 

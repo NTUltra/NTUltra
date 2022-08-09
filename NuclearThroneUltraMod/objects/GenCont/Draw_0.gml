@@ -36,7 +36,7 @@ var upsideDown = res[1];
 }
 draw_set_color(c_black)
 var s = string_height("A");
-var w = 330;
+var w = 300;
 if kutgrap
 {
 var theText = string_hash_to_newline(string(text)+"#OBLITERATING... "+string(round((instance_number(Floor)/goal)*100))+"%##"+string_upper(tip));

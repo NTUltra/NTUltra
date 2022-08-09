@@ -8,7 +8,7 @@ with instance_create(x,y,ScorpionBulletHit)
 var canSpawn = true;
 with Portal
 {
-	if type == 1 && !inverted
+	if (type == 1 || type == 4) && !inverted
 		canSpawn = false;
 }
 if canSpawn

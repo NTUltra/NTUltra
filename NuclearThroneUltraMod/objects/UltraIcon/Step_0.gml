@@ -85,6 +85,13 @@ else if skill == 20 && Player.crown == 23 && Player.skill_got[2]
 		maxSpeed += 6;
 	}
 }
+else if skill == 82
+{
+	with BackCont
+	{
+		alarm[3]=60;	
+	}
+}
 else if skill == 92 && Player.wep_type[Player.wep] == 3 && Player.wep_type[Player.bwep] == 3
 {
 	with Player

@@ -31,7 +31,7 @@ if freeze > 10 and point_distance(x,y,target.x,target.y)<120
 {
 //FIRE
 instance_create(x,y,Notice);
-alarm[2] = 23;
+alarm[2] = 20;
 alarm[1] = alarm[2] + 10;
 }
 else if stuck

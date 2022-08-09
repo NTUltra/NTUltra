@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description Ultramod add infest
 
 // Inherit the parent event
 event_inherited();

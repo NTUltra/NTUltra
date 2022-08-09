@@ -3,7 +3,7 @@ event_inherited();
 if walk > 0
 {
 walk -= 1
-motion_add(direction,0.8)
+motion_add(direction,0.6)
 }
 
 if speed = 0
@@ -36,4 +36,22 @@ if bigPortal != noone && collision_line(x,y,bigPortal.x,bigPortal.y,Wall,false,f
 	mp_potential_step(bigPortal.x,bigPortal.y,0.7,false);
 	sprite_index = spr_hurt;
 	image_angle += dodgeOffset*2;
+}
+else if !instance_exists(ThroneExplo)
+{
+	if instance_exists(PopoNade)
+	{
+		var np = instance_nearest(x,y,PopoNade);
+		if np != noone
+		{
+			motion_add(point_direction(x,y,np.x,np.y)+180+dodgeOffset,0.4);
+		}	
+	} else if instance_exists(projectile)
+	{
+		var np = instance_nearest(x,y,projectile);
+		if np != noone && np.team != team && point_distance(x,y,np.x,np.y) < 64
+		{
+			motion_add(point_direction(x,y,np.x,np.y)+180+dodgeOffset,0.8);
+		}
+	}
 }

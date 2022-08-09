@@ -1,6 +1,7 @@
 /// @description Do stuff
 var hitGuy = hitEntities[array_length(hitEntities)-1];
 hitEnemy = true;
+alarm[2] = 0;
 with hitGuy
 {
 	BackCont.shake += 5

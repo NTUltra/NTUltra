@@ -2,6 +2,8 @@ var inArray = array_contains(hitEntities,other.id)
 if other.team != team
 {
 	hitEnemy = true;
+	with BloodSlashRetail
+		hitEnemy = true;
 	if (!inArray || other.sprite_index != other.spr_hurt)
 	{
 		if !inArray
@@ -10,7 +12,8 @@ if other.team != team
 		with other
 		{
 			my_health-=other.dmg;
-			instance_create(x,y,MeatExplosion);
+			if other.alarm[2] < 1
+				instance_create(x,y,MeatExplosion);
 			snd_play(snd_hurt, hurt_pitch_variation)
 			sprite_index = spr_hurt
 			image_index = 0
@@ -18,5 +21,7 @@ if other.team != team
 			
 			BackCont.shake += 5
 		}
+		with BloodSlashRetail
+			alarm[2] = hitDelay;
 	}
 }
