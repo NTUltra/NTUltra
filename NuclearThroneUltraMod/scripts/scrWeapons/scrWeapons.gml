@@ -6679,7 +6679,7 @@ function scrWeapons() {
 			// highestTierWeapon = i;
 		}
 	}
-	
+	/*
 	//Debug how many weapons there are of each tier
 	var amountPerTier = [];
 	var z = 0;
