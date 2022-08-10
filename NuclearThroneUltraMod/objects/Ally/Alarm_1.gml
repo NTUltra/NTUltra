@@ -13,7 +13,7 @@ else if sprite_index = sprAllyEAppear
 	spr_idle = sprAllyEIdle
 	sprite_index = spr_idle
 }
-alarm[1] = 9+random(5)
+alarm[1] = 8+random(5)
 
 
 if !instance_exists(target)
@@ -26,7 +26,7 @@ if (target = -1) || (random(8)<1)
 
 
 
-if target > 0
+if target != noone && target > 0
 {
 
 	//GOT A TARGET
