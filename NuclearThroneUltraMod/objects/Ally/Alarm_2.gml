@@ -1,7 +1,7 @@
 alarm[2] = 40
 with Portal
 {
-	if type == 1
+	if (type == 1 || type == 4) && !inverted
 	{
 		other.alarm[2] = 1;
 	}

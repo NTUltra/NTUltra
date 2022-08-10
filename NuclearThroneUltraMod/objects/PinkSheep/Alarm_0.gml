@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description Teleport
 if instance_exists(Player)
 {
 	x = Player.x;

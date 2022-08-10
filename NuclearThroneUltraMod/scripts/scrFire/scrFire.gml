@@ -2915,13 +2915,33 @@ function scrFire() {
 
 	snd_play_fire(sndFlare)
 
-	repeat(4){
 	with instance_create(x,y,Flare)
 	{
-	sticky = 1
-	motion_add(aimDirection+(random(60)-30)*other.accuracy,9)
-	image_angle = direction
-	team = other.team}
+		sticky = 1
+		motion_add(aimDirection+(30+random(10)-5)*other.accuracy,9)
+		image_angle = direction
+		team = other.team
+	}
+	with instance_create(x,y,Flare)
+	{
+		sticky = 1
+		motion_add(aimDirection+(-30+random(10)-5)*other.accuracy,9)
+		image_angle = direction
+		team = other.team
+	}
+	with instance_create(x,y,Flare)
+	{
+		sticky = 1
+		motion_add(aimDirection+(10+random(10)-5)*other.accuracy,9)
+		image_angle = direction
+		team = other.team
+	}
+	with instance_create(x,y,Flare)
+	{
+		sticky = 1
+		motion_add(aimDirection+(-10+random(10)-5)*other.accuracy,9)
+		image_angle = direction
+		team = other.team
 	}
 
 	BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake

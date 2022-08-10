@@ -6,7 +6,16 @@ if um == ultramods.plasmaBolt
 	with instance_create(x,y,BouncerBolt)
 	{
 		scrCopyWeaponMod(other);
-		direction = other.direction;
+		direction = other.direction+5;
+		image_angle = direction;
+		speed = 18+other.speed;
+		team = other.team;
+		alarm[11] = 0;
+	}
+	with instance_create(x,y,Splinter)
+	{
+		scrCopyWeaponMod(other);
+		direction = other.direction-5;
 		image_angle = direction;
 		speed = 18+other.speed;
 		team = other.team;

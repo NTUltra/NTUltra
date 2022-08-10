@@ -17,4 +17,7 @@ repeat(30)
 event_user(0);
 event_user(0);
 if !instance_exists(SurvivalWave) && !instance_exists(InvaderBossSpawnPortal) && instance_number(JungleBoss) == 1
-	instance_create(x,y,PinkSheep);
+	with instance_create(x,y,PinkSheep)
+	{
+		alarm[0] = 0;
+	}

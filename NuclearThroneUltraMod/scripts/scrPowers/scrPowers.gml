@@ -658,7 +658,7 @@ function scrPowers() {
 					}
 					with instance_create(x,y,SharpTeeth)
 						owner=other.id;
-					snd_play(sndAlkalineProc)
+					snd_play(sndAlkalineProc,0,true)
 					var pt = instance_create(x,y,PopupText)
 					if UberCont.opt_ammoicon
 					{
@@ -1359,7 +1359,7 @@ function scrPowers() {
 			alarm[2] = 120;
 			with Portal
 			{
-				if type == 1 && !inverted
+				if (type == 1 || type == 4) && !inverted
 				{
 					other.alarm[2] = 1;
 				}

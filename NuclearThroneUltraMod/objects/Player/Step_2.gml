@@ -597,7 +597,7 @@ if (tookHit)
 			}
 			with instance_create(x,y,SharpTeeth)
 				owner=other.id;
-			snd_play(sndAlkalineProc);
+			snd_play(sndAlkalineProc,0,true);
 			var pt = instance_create(x,y,PopupText)
 			if UberCont.opt_ammoicon
 			{
@@ -688,7 +688,7 @@ if my_health < prevhealth && exception=false// && alarm[3] < 1//I been hit
 	if skill_got[28] == 1
 	{
 		//rage = 0;
-		rage = max(floor(rage-100),0);
+		rage = max(floor(rage-50),0);
 	}
 	if race == 26 && humphrySkill > 0//Humphry
 	{
