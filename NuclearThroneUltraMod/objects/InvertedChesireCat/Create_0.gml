@@ -37,11 +37,11 @@ dodge=0;
 friction = 0.8;
 
 myWazers = [];
-wazerDuration = 99;
+wazerDuration = 98;
 wazerRotation = 0;
 wazerDirection = 0;
 wazerOffset = 90;
-tellTime = 14;
+tellTime = 12;
 
 loops = GetPlayerLoops();
 startLoop = 3;

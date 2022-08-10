@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskBolt",
     "path": "sprites/mskBolt/mskBolt.yy",

@@ -7,7 +7,7 @@ spr_walk = sprInvertedJungleAssassinWalk
 spr_hurt = sprInvertedJungleAssassinHurt
 spr_dead = sprInvertedJungleAssassinDead
 maxSpeed = 4.5;
-tellTime = 4;
+tellTime = 5;
 actTime = 1;
 range = 80;
 if loops > 0

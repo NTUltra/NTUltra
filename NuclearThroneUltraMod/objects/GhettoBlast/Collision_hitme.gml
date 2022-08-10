@@ -16,7 +16,9 @@ if other.team != team && (!inArray || other.sprite_index != other.spr_hurt)
 			
 			BackCont.shake += 5
 		}
-		motion_add(other.direction,8)
+		motion_add(other.direction,6)
+		if speed > maxSpeed+1
+			speed = maxSpeed+1;
 	}
 	image_speed = is;
 }

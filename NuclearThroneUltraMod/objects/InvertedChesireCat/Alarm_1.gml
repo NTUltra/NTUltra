@@ -143,22 +143,16 @@ if !place_meeting(x,y,Wall)&&place_meeting(x,y,Floor)
     }
     else if random(12)<7//NOT ON LAND
     {
-    walk=14+random(16);
+    walk=6+random(6);
     alarm[1]=walk;
     motion_add(point_direction(x,y,target.x,target.y)+random(90)-45,4)
-    move_contact_solid(direction,3)
     }
-    else if random(14)<1
+	else//quick burp
     {
-    speed*=0.5;
-    alarm[1]=2+random(4);
-    }
-    else
-    {
-    walk=6+random(12);
-    alarm[1]=walk+2+random(6);
-    direction = point_direction(x,y,target.x,target.y)+random(180)-90
-    
+		event_user(0);
+	    walk=6+random(12);
+	    alarm[1]=walk+2+random(6);
+	    direction = point_direction(x,y,target.x,target.y)+random(180)-90
     }
     }
 }

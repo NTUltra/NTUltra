@@ -5,4 +5,5 @@ event_inherited();
 
 sprInactive = sprElectroBallHuge;
 sprActive = sprElectroBallHugeActive;
-dmg += 10;
+dmg += 1;
+dmgReduction = 0;

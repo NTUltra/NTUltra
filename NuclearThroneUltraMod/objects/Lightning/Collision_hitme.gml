@@ -21,6 +21,8 @@ if other.team != team and other.my_health > 0 && other.team!=2
 			sprite_index = spr_hurt
 			image_index = 0
 			motion_add(other.image_angle,4)
+			if speed > maxSpeed+1
+				speed = maxSpeed+1;
 			snd_play(snd_hurt, hurt_pitch_variation,true)
 			instance_create(x,y,Smoke)
 		}
@@ -38,11 +40,11 @@ else if other.team=2 && other.my_health > 0 && other.team!= team
 	{
 		if sprite_index != spr_hurt
 		{
-		my_health -= 3
-		sprite_index = spr_hurt
-		image_index = 0
-		snd_play(snd_hurt, hurt_pitch_variation,true)
-		motion_add(other.image_angle,4)
+			my_health -= 3
+			sprite_index = spr_hurt
+			image_index = 0
+			snd_play(snd_hurt, hurt_pitch_variation,true)
+			motion_add(other.image_angle,4)
 		}
 	}
 	Sleep(4);

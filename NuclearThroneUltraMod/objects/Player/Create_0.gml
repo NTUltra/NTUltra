@@ -372,7 +372,7 @@ if UberCont.crown_start[race] && !instance_exists(PlayerSpawn){
     //hard -= 1;
     //crownvisits = -1;
 	//instance_create(0,0,PauseTimer);
-	crownpoints ++;
+	crownpoints = 1;
 	if !instance_exists(Crown)
 		instance_create(x,y,Crown);
 }

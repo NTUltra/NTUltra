@@ -33,6 +33,7 @@ function scrTips() {
 	"be nice#get bitches","fish can dodgeroll to prevent blood hammer self damage")
 	),choose(
 	"the I.D.P.D. is looking for you",
+	"Visiting inverted areas increases the quality of weapons that drop",
 	"gold weapons don't count towards#your progression percentage",
 	"try hitting grenades for extra range",
 	"pick your mutations wisely",

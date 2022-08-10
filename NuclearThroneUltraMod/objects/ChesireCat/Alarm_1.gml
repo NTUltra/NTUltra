@@ -129,15 +129,15 @@ if dis<240
     var dir = point_direction(x,y,target.x,target.y)+30-random(15);
 	direction = dir;
     motion_add(dir,2);
-    //move_contact_solid(direction,3)
     alarm[1]=4+random(10);
     walk=alarm[1]+random(10);
     }
-    else
-    {
-    walk=6+random(12);
-    alarm[1]=walk+2+random(6);
-	motion_add(point_direction(x,y,target.x,target.y)+random(90)-45,5)
+	else //Burp square!
+	{
+		event_user(3);
+		walk=6+random(12);
+		alarm[1]=walk+2+random(6);
+		motion_add(point_direction(x,y,target.x,target.y)+random(90)-45,5)
     }
     }
 }

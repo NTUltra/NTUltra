@@ -661,7 +661,7 @@ function scrWeapons() {
 	wep_load[59] = 25
 	wep_cost[59] = 4
 	wep_sprt[59] = sprLightningShotgun
-	wep_area[59] = 12
+	wep_area[59] = 14
 	wep_text[59] = "hurricane"
 	wep_swap[59] = sndSwapEnergy
 	wep_rad[59] = 0;
@@ -1022,10 +1022,10 @@ function scrWeapons() {
 	wep_name[92] = "BEAM SHOTGUN"
 	wep_type[92] = 2
 	wep_auto[92] = 1
-	wep_load[92] = 9
+	wep_load[92] = 8
 	wep_cost[92] = 1
 	wep_sprt[92] = sprBeamShotgun
-	wep_area[92] = 11
+	wep_area[92] = 12
 	wep_text[92] = "drawer"
 	wep_swap[92] = sndSwapShotgun
 	wep_rad[92] = 0;
@@ -1054,7 +1054,7 @@ function scrWeapons() {
 
 	wep_name[95] = "BOUNCER ASSAULT RIFLE"
 	wep_type[95] = 1
-	wep_auto[95] = 1
+	wep_auto[95] = 0
 	wep_load[95] = 12
 	wep_cost[95] = 3
 	wep_sprt[95] = sprBouncerAssaultRifle
@@ -2430,7 +2430,7 @@ function scrWeapons() {
 	wep_name[220] = "GHETTO BLASTER"
 	wep_type[220] = 5
 	wep_auto[220] = 0
-	wep_load[220] = 10
+	wep_load[220] = 12
 	wep_cost[220] = 2
 	wep_sprt[220] = sprGhettoBlaster
 	wep_area[220] = 12
@@ -5384,8 +5384,8 @@ function scrWeapons() {
 	wep_name[488] = "SHLOGGER"
 	wep_type[488] = 2
 	wep_auto[488] = 0
-	wep_load[488] = 22
-	wep_cost[488] = 4
+	wep_load[488] = 30
+	wep_cost[488] = 5
 	wep_sprt[488] = sprShlogger
 	wep_area[488] = 11
 	wep_text[488] = "shotgun slugger"
@@ -5409,7 +5409,7 @@ function scrWeapons() {
 	wep_load[490] = 2
 	wep_cost[490] = 2
 	wep_sprt[490] = sprHeavyPopGun
-	wep_area[490] = 8
+	wep_area[490] = 9
 	wep_text[490] = "bounces increase speed"
 	wep_swap[490] = sndSwapMachinegun
 	wep_rad[490] = 0;
@@ -5420,7 +5420,7 @@ function scrWeapons() {
 	wep_load[491] = 9
 	wep_cost[491] = 4
 	wep_sprt[491] = sprHeavyPopRifle
-	wep_area[491] = 9
+	wep_area[491] = 10
 	wep_text[491] = "faster pellets"
 	wep_swap[491] = sndSwapMachinegun
 	wep_rad[491] = 0;
@@ -6210,7 +6210,7 @@ function scrWeapons() {
 	wep_type[563] = 5
 	wep_auto[563] = 1
 	wep_load[563] = 340
-	wep_cost[563] = 20
+	wep_cost[563] = 22
 	wep_sprt[563] = sprSuperElectroCannon
 	wep_area[563] = 22
 	wep_text[563] = "electronic super power"
@@ -6605,11 +6605,11 @@ function scrWeapons() {
 	wep_name[599] = "BLOOD SHOVEL"
 	wep_type[599] = 0
 	wep_auto[599] = 0
-	wep_load[599] = 23//19
+	wep_load[599] = 24//19
 	wep_cost[599] = 0
 	wep_sprt[599] = sprBloodShovel
 	wep_area[599] = 16
-	wep_text[599] = "blood scooper"
+	wep_text[599] = "blood spoon"
 	wep_swap[599] = sndSwapExplosive
 	wep_rad[599] = 0;
 	
@@ -6682,15 +6682,25 @@ function scrWeapons() {
 	/*
 	//Debug how many weapons there are of each tier
 	var amountPerTier = [];
+	var amountTypes = [];
 	var z = 0;
 	repeat(highest_wep_tier+1)
 	{
 		amountPerTier[z] = 0;
-		z++;
+		var w = 0;
+		repeat(6)
+		{
+			amountTypes[z][w] = 0;
+			w ++;
+		}
+		z ++;
 	}
 	for (var i = 0; i < maxwep+1; i++) {
 		if wep_area[i] >= 0
-		amountPerTier[wep_area[i]] += 1;
+		{
+			amountPerTier[wep_area[i]] += 1;
+			amountTypes[wep_area[i]][wep_type[i]] += 1;
+		}
 	}
 	debug(amountPerTier);
 	z = 0;
@@ -6698,6 +6708,12 @@ function scrWeapons() {
 	repeat(array_length(amountPerTier))
 	{
 		debug(string(z) + " : " + string(amountPerTier[z]));
+		var w= 0;
+		repeat(6)
+		{
+			//debug("t"+string(w)+" : " + string(amountTypes[z][w]));//Log amount of types per tier
+			w++;
+		}
 		z++;
 	}
 	debug("__________________________________");

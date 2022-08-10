@@ -639,12 +639,14 @@ if (Player.area == 119 || Player.area == 120)
 		with ft
 		{
 			if Player.area == 119
-				instance_create(x+16,y+16,CampFireOff);
-			if Player.skill_got[23]//OPEN MIND
-			{
-				instance_create(x+16,y+32+16,HealthChest);
-				instance_create(x+16,y+32+16,WallBreak);
-			}
+				with instance_create(x+16,y+16,CampFireOff)
+				{
+					if Player.skill_got[23]//OPEN MIND
+					{
+						instance_create(x+16,y+32+16,HealthChest);
+						instance_create(x+16,y+32+16,WallBreak);
+					}
+				}
 		}
 		if Player.area == 119
 		{

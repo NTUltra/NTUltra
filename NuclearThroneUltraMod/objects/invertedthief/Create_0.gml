@@ -14,5 +14,6 @@ maxSpeed = 5;
 maxRunSpeed = 7;
 isInverted = false;
 stealWeaponOdds = 2;
+stealAmount = 3;
 if loops > 0
 	actTime = 4;

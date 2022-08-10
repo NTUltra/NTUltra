@@ -47,8 +47,12 @@ function scrNextLevel() {
 	        {
 	        area = 124
 			lastarea = 124;
-	        subarea = 0
+	        subarea = 0;
 			inverted=true
+			if crown == 24
+				hard -= 1;
+			else
+				hard += 1;
 	        exit;
 	        }
 	    }
@@ -349,11 +353,6 @@ function scrNextLevel() {
 			inverted=false;
 	    exit;
 	    }
-		if crown == 24
-			hard -= 1;
-		else
-			hard += 1;
-		
 		//Cursed caves to caves 2
 		if area == 115
 		{
@@ -426,6 +425,10 @@ function scrNextLevel() {
 		{
 			area = 117;
 			subarea = 1;
+			if crown == 24
+				hard -= 1;
+			else
+				hard += 1;
 		}
 		else if area == 9
 		{
@@ -484,21 +487,17 @@ function scrNextLevel() {
 	if ( area==10 && inverted )//inv Savanna
 	{area=121;
 	lastarea=121;
-	hard ++;
 	}
 	if ( area==117 && inverted )//inv Mushroom
 	{area=124;
 	lastarea=124;
 	subarea = 0;
-	hard ++;
-	debug("Go to mushroom");
 	}
 	if ( area==114 && inverted )//inv Mushroom
 	{
 		area=123;
 		lastarea=123;
 		subarea = 1;
-		hard ++;
 	}
 	if ( area == 103 && inverted ) //Iv mansion
 	{
@@ -509,7 +508,6 @@ function scrNextLevel() {
 	if ( area==101 && inverted )//inv Oasis
 	{area=122;
 	lastarea=122;
-	hard ++;
 	}
 
 	if race=6||race=12{//Yv's Crib? Yun cuz aswell
@@ -528,12 +526,22 @@ function scrNextLevel() {
 		}
 	}
 
-	if (area=105 || area=106|| area=107 || area = 108 || area = 109 | area = 110 || area = 111 || area = 112 || area == 121)&&subarea<2//inverted curse
+	if (area=105 || area=106|| area=107 || area = 108 || area = 109 | area = 110 || area = 111 || area = 112 || area == 121 || area == 122 || area == 123 || area == 124 || area == 125)&&subarea<2//inverted
 	{
-		if crown == 24
-			hard -= 1.5;
+		if area == 112//Inv labs normal labs skips one
+		{
+			if crown == 24
+				hard -= 1;
+			else
+				hard += 1;
+		}
 		else
-			hard += 1.5;
+		{
+			if crown == 24
+				hard -= 1.5;
+			else
+				hard += 1.5;
+		}
 	}
 	else if area == 10 && subarea < 2
 	{
@@ -542,10 +550,15 @@ function scrNextLevel() {
 		else
 			hard += 2;
 	}
-	else if (!(area = 7 && subarea == 1) && !(area = 6 && subarea == 1) //Labs 1 and Vulcano 1 don't increase hard
+	else if (
+	//!(area = 7 && subarea == 1) //Vulcano 1
+	!(area = 6 && subarea == 2) //Labs 2
 	&& !(area = 4 && subarea == 1)//Caves 1
-	&& !(area = 9 && subarea == 1)//Palace 1 and 2 don't increase hard
-	&& !(area = 9 && subarea == 2))
+	&& !(area = 9 && subarea == 2)//Palace 2
+	&& !(area = 9 && subarea == 3)//Throne 1
+	&& !(area = 119)//Throne 2
+	&& !(area = 5 && subarea == 1)//Frozen city 1
+	)
 	{
 		if crown == 24
 			hard -= 1;

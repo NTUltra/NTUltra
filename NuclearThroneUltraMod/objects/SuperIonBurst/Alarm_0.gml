@@ -14,15 +14,13 @@ with instance_create(UberCont.mouse__x+random(64)-32,UberCont.mouse__y+random(64
 {motion_add(random(360),2+random(8))
 image_speed-=0.1;}
 
-repeat(2){
+repeat(4){
 with instance_create(UberCont.mouse__x+random(64)-32,UberCont.mouse__y+random(64)-32,IonImpact){
 team = other.team
-dmg+=8;
-}
+}/*
 with instance_create(UberCont.mouse__x+random(64)-32,UberCont.mouse__y+random(64)-32,MiniPlasmaImpact){
 team = other.team
-dmg+=4;
-}
+}*/
 }
 
 

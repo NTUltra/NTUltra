@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprBigPandaSlash",
-    "path": "sprites/sprBigPandaSlash/sprBigPandaSlash.yy",
+    "name": "sprGhettoBlast",
+    "path": "sprites/sprGhettoBlast/sprGhettoBlast.yy",
   },
   "solid": false,
   "visible": true,

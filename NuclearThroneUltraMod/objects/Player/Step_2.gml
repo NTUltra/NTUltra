@@ -597,7 +597,7 @@ if (tookHit)
 			}
 			with instance_create(x,y,SharpTeeth)
 				owner=other.id;
-			snd_play(sndHealthPickup)
+			snd_play(sndAlkalineProc);
 			var pt = instance_create(x,y,PopupText)
 			if UberCont.opt_ammoicon
 			{

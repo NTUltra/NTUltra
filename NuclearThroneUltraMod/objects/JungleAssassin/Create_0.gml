@@ -26,7 +26,7 @@ wepflip = 1
 
 dodge=0;
 range = 74;
-tellTime = 7;
+tellTime = 8;
 actTime = 3;
 maxSpeed = 3;
 loops = GetPlayerLoops();

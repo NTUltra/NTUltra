@@ -9,6 +9,7 @@ with instance_create(x,y,Lightning)
 	accuracy=0;
 	team = other.team
 	ammo = 8;
+	dmg -= other.dmgReduction;
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)

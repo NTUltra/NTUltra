@@ -34,11 +34,11 @@ ammo=7;
 dodge=0;
 friction = 0.8;
 myWazer = -1;
-wazerDuration = 104;
+wazerDuration = 102;
 wazerRotation = 0;
 wazerDirection = 0;
 wazerOffset = 120;
-tellTime = 18;
+tellTime = 16;
 
 loops = GetPlayerLoops();
 startLoop = 3;

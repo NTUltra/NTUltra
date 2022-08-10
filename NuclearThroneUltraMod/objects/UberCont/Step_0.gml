@@ -35,7 +35,6 @@ if crown = 0
 crown = ceil(irandom(crownmax))
 with WepPickup
 instance_destroy();
-draw_texture_flush();//Free memory (removes all loadedness of texture pages, txp for all areas for example) meaning sprites for area 7 & others aren't loaded when you restart
 
 with instance_create(x,y,GenCont)
 {race = other.race
@@ -46,6 +45,11 @@ with Player
 	randomlySelected = ranChar;
 	restarted = true;
 	skeletonlives = 0;
+	if UberCont.crown_start[race]{
+		crownpoints = 1;
+		if !instance_exists(Crown)
+			instance_create(x,y,Crown);
+	}
 }
 debug("BIG CHUNK RESTART");
 var loadedRun = UberCont.loadedRun;

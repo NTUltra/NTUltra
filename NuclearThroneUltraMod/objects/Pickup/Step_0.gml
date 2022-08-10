@@ -10,7 +10,7 @@ if instance_exists(Player) && (!cursed) {
 		if !inverted && alarm[1] < 1
 			levelEnded = true;
 	}
-    if instance_exists(ProtoStatue) and speed = 0 {
+    if instance_exists(ProtoStatue) and speed <= 0.5 {
         if point_distance(x, y, ProtoStatue.x, ProtoStatue.y) < 180 and(Player.ultra_got[12] == 1 || (collision_line(x, y, ProtoStatue.x, ProtoStatue.y, Wall, 0, 0) < 0)) {
             if !place_meeting(x + lengthdir_x(12, point_direction(x, y, ProtoStatue.x, ProtoStatue.y)), y,Wall)
 				x += lengthdir_x(12, point_direction(x, y, ProtoStatue.x, ProtoStatue.y))
@@ -21,7 +21,7 @@ if instance_exists(Player) && (!cursed) {
 			{
 				event_user(1);	
 			}
-        } else if speed = 0 {
+        } else if speed <= 0.5 {
             if point_distance(x, y, Player.x, Player.y) < extraRange + Player.betterpluto or levelEnded {
                 if !place_meeting(x + lengthdir_x(12, point_direction(x, y, Player.x, Player.y)), y,Wall)
                 x += lengthdir_x(12, point_direction(x, y, Player.x, Player.y))
@@ -79,7 +79,7 @@ if instance_exists(Player) && (!cursed) {
         }
 
     }
-    else if speed = 0 {
+    else if speed <= 0.5 {
 		
         if point_distance(x, y, Player.x, Player.y) < extraRange + Player.betterpluto or levelEnded {
             if !place_meeting(x + lengthdir_x(12, point_direction(x, y, Player.x, Player.y)), y,Wall)

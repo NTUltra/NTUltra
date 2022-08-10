@@ -7,6 +7,8 @@ with other
 	sprite_index = spr_hurt
 	image_index = 0
 	motion_add(other.image_angle,4)
+	if speed > maxSpeed+1
+		speed = maxSpeed+1;
 }
 
 instance_create(x,y,Smoke)

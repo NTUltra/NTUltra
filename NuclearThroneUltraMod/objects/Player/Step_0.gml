@@ -1442,7 +1442,7 @@ if ultra_got[16]{
 
 /* */
 ///lava and frost
-if area=7&&race!=18&&race!=24&&skill_got[14]==0//angel & elementor boiling veins
+if area=7&&race!=18&&race!=24&&skill_got[14]==0 && !outOfCombat///angel & elementor boiling veins
 {
 
     if collision_point(x,y,FloorLava,0,1) || collision_point(x,y,FloorExplo,0,1)
@@ -1469,7 +1469,7 @@ if area=7&&race!=18&&race!=24&&skill_got[14]==0//angel & elementor boiling veins
 	}
 
 }
-if area=108&&race!=18&&race!=24//angel & elementor don't bother with this stuff
+if area=108&&race!=18&&race!=24 && !outOfCombat//angel & elementor don't bother with this stuff
 {
 
     if place_meeting(x,y,FloorLava) || place_meeting(x,y,FloorExplo)

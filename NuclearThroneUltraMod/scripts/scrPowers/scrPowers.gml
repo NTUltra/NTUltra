@@ -657,7 +657,7 @@ function scrPowers() {
 					}
 					with instance_create(x,y,SharpTeeth)
 						owner=other.id;
-					snd_play(sndHealthPickup)
+					snd_play(sndAlkalineProc)
 					var pt = instance_create(x,y,PopupText)
 					if UberCont.opt_ammoicon
 					{
@@ -1302,7 +1302,7 @@ function scrPowers() {
 	{
 		if speed < 0.4
 			direction = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
-		speed = 4
+		speed = 4;
 		if skill_got[2] == 1
 		{
 			speed = 8;

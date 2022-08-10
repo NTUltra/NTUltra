@@ -1,6 +1,6 @@
 event_inherited();
 image_speed = 0;
-dmg = 12;
+dmg = 10;
 typ = 0 //0 = nothing, 1 = deflectable, 2 = destructable, 3 = deflectable
 
 walled = 0
@@ -22,3 +22,5 @@ if instance_exists(Player)
 		is *= 0.5;	
 	}
 }
+image_xscale -= 0.2;
+image_yscale -= 0.2;
