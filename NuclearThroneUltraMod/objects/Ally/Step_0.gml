@@ -71,8 +71,8 @@ if instance_exists(Player)
 
 }
 
-if speed > 5.5
-speed = 5.5
+if speed > maxSpeed
+speed = maxSpeed
 
 if(alarm[0]>0)
 {

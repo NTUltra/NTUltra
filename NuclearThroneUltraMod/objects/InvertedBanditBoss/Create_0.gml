@@ -3,8 +3,8 @@ maxhealth = 80
 meleedamage = 0
 size = 3
 
-if UberCont.loops>1
-maxhealth=94;
+var loops = GetPlayerLoops();
+maxhealth += clamp(18*loops,0,200);
 
 event_inherited()
 

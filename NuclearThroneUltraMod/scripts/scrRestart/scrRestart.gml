@@ -1,5 +1,5 @@
 function scrRestart() {
-	debug("RESTART");
+	debug("RESTART game");
 	var loadedRun = UberCont.loadedRun
 	scrEndOfRun();
 	with all
@@ -21,5 +21,7 @@ function scrRestart() {
 	if loadedRun  && !keyboard_check_pressed(vk_enter) and !gamepad_button_check(0,gp_face4)//Not end of run clicked (ugly fix but Im falling asleep)
 		scrLoadRun();
 	else
+	{
 		room_goto(romGame)
+	}
 }

@@ -75,8 +75,12 @@ if instance_exists(Menu)
 {
     if UberCont.race_have[Menu.race]
     {
-    viewx2 = viewx2-(viewx2-(Menu.char[Menu.race].x-vw))*0.1
-    viewy2 = viewy2-(viewy2-(Menu.char[Menu.race].y-vh))*0.1
+		if (!instance_exists(OptionSelect) || OptionSelect.selected == 0) &&
+		(!instance_exists(OptionSelect2) || OptionSelect2.selected == 0)
+		{
+			viewx2 = viewx2-(viewx2-(Menu.char[Menu.race].x-vw))*0.1
+			viewy2 = viewy2-(viewy2-(Menu.char[Menu.race].y-vh))*0.1
+		}
     }
 }
 else

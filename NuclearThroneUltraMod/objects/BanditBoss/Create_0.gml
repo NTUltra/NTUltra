@@ -2,13 +2,10 @@ raddrop = 30
 maxhealth = 100
 meleedamage = 0
 size = 3
-
+var loops = GetPlayerLoops();
+maxhealth += clamp(20*loops,0,200);
 event_inherited()
 
-if instance_exists(Player){
-my_health=round( (1+(Player.loops*0.2))*my_health )//bandit loop 1: 1.1*4= 5(rounded up)
-maxhealth=my_health;
-}
 
 spr_idle = sprBanditBossIdle
 spr_walk = sprBanditBossWalk

@@ -279,7 +279,7 @@ function scrDrawHUD() {
 			{
 				var ht;
 				if dir == 28//RAGE
-					ht = "["+Player.skill_name[dir]+"] ["+string(Player.rage)+"/350]\n"+Player.skill_text[dir];//MAX RAGE
+					ht = "["+Player.skill_name[dir]+"] ["+string(Player.rage)+"/500]\n"+Player.skill_text[dir];//MAX RAGE
 				else
 					ht = "["+Player.skill_name[dir]+"]\n"+Player.skill_text[dir];
 				

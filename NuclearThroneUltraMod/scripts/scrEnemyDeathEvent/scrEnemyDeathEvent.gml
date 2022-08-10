@@ -191,8 +191,8 @@ function scrEnemyDeathEvent(){
 				rage+=1;
 				if isdoc
 					rage += 0.25;
-				if rage>350//MAX RAGE
-					rage=350;//340
+				if rage>500//MAX RAGE
+					rage=500;//340
 			}
 			//Chicken Ultra A harder to kill
 			if ultra_got[33] == 1

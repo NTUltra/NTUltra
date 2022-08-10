@@ -4,7 +4,6 @@ depth = TopCont.depth - 1;
 //randomize();
 dix = 32
 diy = 32
-
 __background_set_colour( make_color_rgb(106,122,175) )
 
 //x=64;

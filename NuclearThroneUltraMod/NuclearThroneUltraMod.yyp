@@ -4210,6 +4210,7 @@
     {"id":{"name":"sndDevestator","path":"sounds/sndDevestator/sndDevestator.yy",},"order":17,},
     {"id":{"name":"sndHyperLightning","path":"sounds/sndHyperLightning/sndHyperLightning.yy",},"order":11,},
     {"id":{"name":"sndGhettoBlast","path":"sounds/sndGhettoBlast/sndGhettoBlast.yy",},"order":12,},
+    {"id":{"name":"sprMaxRage","path":"sprites/sprMaxRage/sprMaxRage.yy",},"order":26,},
     {"id":{"name":"sndSuperCrossbow","path":"sounds/sndSuperCrossbow/sndSuperCrossbow.yy",},"order":0,},
     {"id":{"name":"sprInvertedGhostGuardianWalk","path":"sprites/sprInvertedGhostGuardianWalk/sprInvertedGhostGuardianWalk.yy",},"order":21,},
     {"id":{"name":"sndHeavyCrossbow","path":"sounds/sndHeavyCrossbow/sndHeavyCrossbow.yy",},"order":1,},

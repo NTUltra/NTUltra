@@ -9,3 +9,4 @@ if impactWristed && speed > 4.4
 	instance_create(x+hspeed,y+vspeed,SmallWallBreak);
 }
 move_bounce_solid(false)
+speed *= 0.99;

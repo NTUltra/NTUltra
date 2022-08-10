@@ -72,7 +72,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprRage","path":"sprites/sprRage/sprRage.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprRage",
     "tags": [],
     "resourceType": "GMSequence",
   },

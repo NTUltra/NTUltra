@@ -152,7 +152,7 @@ function scrDecideInvader(){
 					fe = sprFloor9Explo;
 				break
 				case 121://Inv Savanna
-					array_push(spawns,SavannaBandit, Vulture, Thief, Hyena, Hyena, choose(FireBat, Scorpion));
+					array_push(spawns,SavannaBandit, Vulture,choose(FireBat,Thief), Hyena, Hyena, SnowTank);
 					fa = sprFloor10;
 					fb = sprFloor10B;
 					fe = sprFloor10Explo;
@@ -176,7 +176,7 @@ function scrDecideInvader(){
 					fe = sprFloor124Explo;
 				break;
 				case 124://Inv Mushroom land
-					array_push(spawns,BuffMushroom,ToxicMushroomGuy, Exploder, choose(Spider,Gator), Ratking, BuffGator, choose(LaserBandit,Scorpion,Necromancer));
+					array_push(spawns,BuffMushroom,ToxicMushroomGuy, Exploder, choose(Wolf,Gator), Ratking, BuffGator, choose(LaserBandit,Rat));
 					fa = sprFloor117;
 					fb = sprFloor117B;
 					fe = sprFloor117Explo;

@@ -37,6 +37,3 @@ with Vlambeer
 mode = 1
 alarm[0] = 30
 }
-
-alarm[2] = 30
-

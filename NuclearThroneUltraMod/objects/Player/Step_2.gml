@@ -686,7 +686,8 @@ if my_health < prevhealth && exception=false// && alarm[3] < 1//I been hit
 	///rage
 	if skill_got[28] == 1
 	{
-		rage = 0;
+		//rage = 0;
+		rage = max(floor(rage-100),0);
 	}
 	if race == 26 && humphrySkill > 0//Humphry
 	{

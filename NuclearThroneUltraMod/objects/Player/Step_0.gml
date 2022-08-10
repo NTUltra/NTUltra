@@ -386,10 +386,9 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		if (keyboard_check_pressed(ord("G")))
 		{
 			var dangle = random(1)*360;
-			//thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,PopupText);
-			//thing.mytext = "WARPZONE";
-			thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,InvertedBigDisc);
-			//scrTurnIntoPortalArea();
+			thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,PopupText);
+			thing.mytext = "WARPZONE";
+			scrTurnIntoPortalArea();
 		}
 		if (keyboard_check_pressed(ord("J")))
 		{
@@ -1057,12 +1056,12 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 		{
 			//rage
 			var rageAccuracy;
-			var reduction = rage*0.0054;
-			reload -= reduction//0.01//0.009 when cap is 100
+			var reduction = rage*0.002;//With 500 max this caps at 100% reload speed
+			reload -= reduction
 			breload -= reduction*0.4;
 			creload -= reduction*0.4;
 
-			rageAccuracy = rage*0.0013//0.0011// caps at 0.10 increase when cap = 100
+			rageAccuracy = rage*0.0012//with 500 max this caps at 60%
 			accuracy=standartAccuracy+rageAccuracy;//standartAccuracy will be changed by eagle eyes so this scales with that.
 		}
 		if skill_got[34]//FLEXIBLE ELBOWS

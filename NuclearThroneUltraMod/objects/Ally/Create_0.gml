@@ -1,7 +1,8 @@
 raddrop = 4
 
 hurt_pitch_variation = 0;
-
+existTime = 0;
+maxSpeed = 5.5;
 gun = sprBanditGun;
 spr_idle = sprAllyAppear
 spr_walk = sprAllyWalk

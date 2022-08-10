@@ -57,7 +57,7 @@ function scrPopEnemies() {
 		{
 			theBandit = choose(SavannaBandit, SavannaBandit, SavannaBandit, Bandit, BanditSquare);
 	        if styleb = 1 {
-	            instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, choose(Vulture, Scorpion, FireBat, Vulture))
+	            instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, choose(Vulture, SnowTank, FireBat, Vulture))
 	        }
 	        else {
 	            if random(8) < 1
@@ -83,7 +83,7 @@ function scrPopEnemies() {
 							}
 						}
 		                else
-		                    instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, choose(theBandit, theBandit, Scorpion, FireBat, GatorSmoke, Thief, Vulture, Vulture,Scorpion))
+		                    instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, choose(theBandit, theBandit, Hyena, FireBat, GatorSmoke, Thief, Vulture, Vulture,SnowTank))
 	            }
 			}
 		}
@@ -1189,7 +1189,7 @@ function scrPopEnemies() {
 		    if random(9) < 1
 		    instance_create(x + 16, y + 16, choose(Exploder, BuffMushroom, ToxicMushroomGuy, BuffMushroom, Gator, ToxicMushroomGuy, Necromancer, Ratking, BuffGator))
 		    else if random(2) < 1
-		        instance_create(x + 16, y + 16, choose(Gator, Rat, ToxicMushroomGuy, BuffMushroom, BuffMushroom, ToxicMushroomGuy, ToxicMushroomGuy, BanditSquare,Exploder,Ratking,Ratking,Rat,LaserBandit,LaserBandit,Spider,Spider))
+		        instance_create(x + 16, y + 16, choose(Gator, Rat, ToxicMushroomGuy, BuffMushroom, BuffMushroom, ToxicMushroomGuy, ToxicMushroomGuy, BanditSquare,Exploder,Ratking,Ratking,Rat,LaserBandit,LaserBandit,Wolf,Wolf))
 		}
 		else
 		{

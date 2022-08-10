@@ -1,2 +1,2 @@
 /// @description Skip
-event_user(0);
+event_perform(ev_alarm,1);

@@ -93,13 +93,11 @@ if (keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4)) && !in
 	}
 	scrRestart()
 	debug("RETURN TO MENU PAUSED");
-	draw_texture_flush();//free texture memory
 }
 //QUIT
 if ( keyboard_check_pressed(ord("Q")) or ( gamepad_button_check(0,gp_shoulderr) && gamepad_button_check(0,gp_shoulderrb) 
 && gamepad_button_check(0,gp_shoulderl) && gamepad_button_check(0,gp_shoulderlb) ) )
 {
-draw_texture_flush();//probably not necesary, but may aswell?
 game_end()}
 }
 else

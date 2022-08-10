@@ -21,7 +21,12 @@ if instance_exists(Player)
 		}
 		alarm[6] = 60;
 	}
-	if Player.crown == 25 || instance_exists(ThroneIISpiral)//Crown of freedom
+	if Player.crown == 25
+	{
+		alarm[9] = 30;
+		alarm[4] = 30;
+	}
+	if instance_exists(ThroneIISpiral)//Crown of freedom
 	{
 		alarm[4] = 30;
 	}
