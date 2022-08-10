@@ -109,7 +109,7 @@ function scrTips() {
 	tip = choose("beep boop","nerds","don't push any buttons","randa")
 	if Player.area = 100
 	tip = choose("aw yes","take a crown to uncurse your weapon","there is value here","visit this place atleast twice","let's hope its not toxic again",
-	"old torches","you can get 3 mods#on a single weapon","mods stack","take a crown to unlock#crown start for this character","most weapon mods benefit from#weapon specific mutations",
+	"old torches","you can get 3 mods#on a single weapon","mods stack","take a crown to unlock#crown start for this character","most weapon mods benefit from#weapon specific mutations","a weapon you mod will always come through the portal, you can pick it up next area",
 	"power craving spawns more mods","open mind can spawn two proto chests","weapon mods can be rerolled#when you have 3","when you mod a weapon it will always come through the portal with you even if you leave it")
 	if Player.area = 102
 	tip = choose("hunger...","it smells nice here","wait for it....")
@@ -278,7 +278,7 @@ function scrTips() {
 	)
 
 	if Player.race = 15//Atom
-	tip = choose("molecules","don't touch each other","elite being","not an accurate#representation of reality","science bitch!","balance of the universe"
+	tip = choose("molecules","don't touch each other","elite being","not an accurate#representation of reality","science bitch!","balance of the universe","telefrag",
 	,"from the other side","inverted mutant","higher chance for inverted worlds","purple balls","split the atom","atoms for peace","Entropy","she blinded me with science","don't touch me")
 
 	if Player.race = 16//Viking

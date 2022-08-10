@@ -1,8 +1,8 @@
 event_inherited();
 image_speed=0.7;
 
-friction=0.8;
-
+friction=0.75;
+dmg = 20;
 /*THIS IS HOW IT SHOULD WORK
 
 damagers have a DAMAGE

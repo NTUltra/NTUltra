@@ -615,7 +615,7 @@ if (tookHit)
 				else
 					pt.mytext = "+"+string(damageTaken)+" HP";
 			}
-			
+			Sleep(50);
 			alarm[3]=10;//duration of iframes
 		}
 	}
@@ -648,6 +648,7 @@ if(my_health<=0 && maxhealth>0)
     {
     snd_play(sndStrongSpiritLost);
     my_health=1;
+	Sleep(50);
     alarm[1]=20;//invincibility 
     strongspiritused=true;
     strongspirit=false;

@@ -4,3 +4,4 @@ typ = 1
 ShotgunShouldersType();
 visible=false;
 aimed = false;
+dmg = 30;

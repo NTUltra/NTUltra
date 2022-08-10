@@ -868,7 +868,7 @@ function scrWeapons() {
 	wep_name[78] = "HYPER SLUGGER"
 	wep_type[78] = 2
 	wep_auto[78] = 0
-	wep_load[78] = 11
+	wep_load[78] = 10
 	wep_cost[78] = 2
 	wep_sprt[78] = sprHyperSlugger
 	wep_area[78] = 14

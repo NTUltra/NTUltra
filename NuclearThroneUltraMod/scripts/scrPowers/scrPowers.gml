@@ -400,6 +400,7 @@ function scrPowers() {
 	    {
 	    snd_play_2d(sndStrongSpiritLost);
 	    my_health=1;
+		Sleep(50);
 	    alarm[1]=20;//invincibility 
 	    strongspiritused=true;
 	    strongspirit=false;
@@ -675,13 +676,14 @@ function scrPowers() {
 						else
 							pt.mytext = "+"+string(h-1)+" HP";
 					}
-			
+					Sleep(50);
 					alarm[3]=10;//duration of iframes
 				}
 				else if skill_got[25] && strongspirit == true && strongspiritused == false
 				{
 					snd_play(sndStrongSpiritLost);
 				    my_health=1;
+					Sleep(50);
 				    alarm[1]=20;//invincibility 
 				    strongspiritused=true;
 				    strongspirit=false;

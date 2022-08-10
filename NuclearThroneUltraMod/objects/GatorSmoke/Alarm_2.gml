@@ -13,5 +13,8 @@ walk = 0
 wepangle = choose(-140, 140)
 wepflip = 1
 gunangle = random(360)
-instance_change(Gator, true)
-alarm[1] = max(alarm[1] ,5 + random(5));
+instance_destroy(id,false);
+with instance_create(x,y,Gator) {
+	my_health = my_health;
+	alarm[1] = max(alarm[1] ,5 + random(5));
+}

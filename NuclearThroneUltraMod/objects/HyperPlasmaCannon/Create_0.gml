@@ -4,3 +4,4 @@ typ = 1
 visible=false;
 
 aimed = false;
+dmg = 20;

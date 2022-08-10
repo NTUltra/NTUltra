@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndStrongSpiritLost",
-  "duration": 0.0,
+  "duration": 1.493344,
   "parent": {
     "name": "Player",
     "path": "folders/Sounds/Player.yy",

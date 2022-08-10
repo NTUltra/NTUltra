@@ -13,7 +13,7 @@ if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {
 if point_distance(target.x,target.y,x,y) > 48
 {
-if random(5) < 1 && point_distance(target.x,target.y,x,y) < 210
+if random(5) < 1 && point_distance(target.x,target.y,x,y) < 200
 {
 
 gunangle = point_direction(x,y,target.xprevious,target.yprevious)
