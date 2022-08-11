@@ -138,7 +138,7 @@ else
 
 
 skillsChosen = 0; //To check for ultra mutation (always last)
-
+totalSkills = 0;
 skeletonlives = 0
 livesRegain = [];
 
@@ -320,6 +320,7 @@ if UberCont.opt_gamemode == 30//Ultra mutation start
 else if UberCont.opt_gamemode == 31//Melee only
 {
 	skill_got[13] = 1;
+	totalSkills ++;
 }
 if UberCont.opt_gamemode == 32//One hit wonder
 {
@@ -622,6 +623,7 @@ if UberCont.opt_gamemode == 35
 	var i = 0
 	repeat(maxskill+1)
 	{skill_got[i] = 1
+		totalSkills++;
 	i += 1}
 	i = 0
 	repeat(maxultra+2)

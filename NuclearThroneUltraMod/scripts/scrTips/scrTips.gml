@@ -205,7 +205,7 @@ function scrTips() {
 
 	if Player.race = 5
 	tip = choose("kill kill kill","death death death","blood blood blood","slay slay slay","fast fast fast","go go go","shoot shoot shoot","murder murder murder",
-	"eat eat eat","apex predator","annihilate eliminate destroy","all shall die","plant is fast","no mercy","photosynthesizing...","plant can hold RMB to see further"
+	"eat eat eat","the apex predator","annihilate eliminate destroy","all shall die","plant is fast","no mercy","photosynthesizing...","plant can hold RMB to see further"
 	,"trap the enemy")
 
 	if Player.race = 6

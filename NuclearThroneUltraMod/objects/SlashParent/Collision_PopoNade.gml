@@ -1,7 +1,7 @@
 /// @description Hitting back nade
 with other
 {
-	if !gotHit
+	if !gotHit || speed == 0
 	{
 		gotHit = true;
 		team=other.team;

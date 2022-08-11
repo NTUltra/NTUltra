@@ -1,5 +1,5 @@
 /// @description Fire big balls
-if target > -1 && instance_exists(target)
+if target != noone
 {
 	if loops > random(3)
 	{

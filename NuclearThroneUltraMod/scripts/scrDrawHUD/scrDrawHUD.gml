@@ -248,7 +248,7 @@ function scrDrawHUD() {
 	//SKILL ICONS
 	dix = 0;
 	dir = 0;
-	if Player.level > 13 - (max(-1,Player.maxarmour-1))
+	if Player.totalSkills > 13 - (max(-1,Player.maxarmour-1))
 	{
 		var cdir = 0;
 		var fs = 0;

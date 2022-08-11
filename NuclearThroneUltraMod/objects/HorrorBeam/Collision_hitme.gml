@@ -15,7 +15,7 @@ if other.sprite_index != other.spr_hurt
 
 		raddrop+=other.rad;
 		other.rad=0;
-		my_health -= max(1,floor(other.charge*0.75));
+		my_health -= max(1,floor(other.charge*0.725));
 		sprite_index = spr_hurt
 		image_index = 0
 		motion_add(other.image_angle,2+other.charge)

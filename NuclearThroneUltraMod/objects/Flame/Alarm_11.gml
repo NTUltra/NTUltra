@@ -21,7 +21,8 @@ else if um == ultramods.morphFire
 		direction = other.direction;
 		image_angle = direction;
 		speed = other.speed*2;
-		alarm[0] -= 2;
+		alarm[0] -= 1;
+		dmg -= 0.6;
 		alarm[11] = 0;
 	}
 	UberCont.ultramodSwap = true;

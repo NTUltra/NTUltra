@@ -26,13 +26,17 @@ ammo = maxAmmo;
 image_speed = 0;
 trackingStrength = 0.4;
 projectileSpeed = 6;
-if GetPlayerLoops() > 0
+loops = GetPlayerLoops()
+proj = EnemyBullet1
+if loops > 0
 {
 	trackingStrength = 0.7;
 	projectileSpeed = 8;
+	if loops > 1
+		trackingStrength = 0.75;
+	if loops > 6
+	{
+		proj = EnemyBullet5;
+	}
 }
-proj = EnemyBullet1
-if GetPlayerLoops() > 6
-{
-	proj = EnemyBullet5;
-}
+

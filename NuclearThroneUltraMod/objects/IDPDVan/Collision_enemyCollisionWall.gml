@@ -13,3 +13,10 @@ snd_play(snd_hurt, hurt_pitch_variation,true)
 }
 
 }
+var ang = 0;
+if right
+	ang = 180;
+with other
+{
+	motion_add(other.image_angle+ang,0.8);
+}

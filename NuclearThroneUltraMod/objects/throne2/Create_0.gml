@@ -71,6 +71,7 @@ if loops > 3
 	actTime -= 1;
 	crossAmount ++;
 	pSpeedAccurate += 0.5;
+	maxAmmo ++;
 }
 if loops > 4
 {
@@ -85,7 +86,10 @@ if loops > 5
 	actTime -= 3;// thats 9
 	pSpeedAccurate += 0.5;
 }
-
+if loops > 6
+{
+	maxAmmo ++;	
+}
 if target > 0
 	angle = point_direction(target.x,target.y,x,y);
 else

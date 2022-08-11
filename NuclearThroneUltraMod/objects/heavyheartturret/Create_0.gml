@@ -43,7 +43,6 @@ image_speed = 0.4
 //scrRaces()
 //scrSkills()
 //scrUltras()
-scrWeapons()
 //scrCrowns()
 
 race=Player.race;

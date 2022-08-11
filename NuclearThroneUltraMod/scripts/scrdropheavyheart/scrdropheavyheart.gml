@@ -27,7 +27,7 @@ function scrDropHeavyHeart(){
 
 		reload=wep_load[wep];
 
-
+		scrWeaponHold();
 		alarm[0]=clamp(reload*0.5,5,60);
 	}
 	return daGun;

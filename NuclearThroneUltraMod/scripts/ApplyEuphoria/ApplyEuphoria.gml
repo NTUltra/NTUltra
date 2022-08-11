@@ -13,7 +13,7 @@ function ApplyEuphoria(){
 			}
 			if Player.skill_got[12] = 1
 			{
-				speed = speed*0.75
+				speed = speed*0.76
 			}
 			if Player.crown == 24//Crown of sloth
 			{

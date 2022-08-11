@@ -1353,7 +1353,7 @@ function scrWeapons() {
 	wep_type[122] = 4
 	wep_auto[122] = 0
 	wep_load[122] = 32
-	wep_cost[122] = 3
+	wep_cost[122] = 4
 	wep_sprt[122] = sprFlareShotgun
 	wep_area[122] = 9
 	wep_text[122] = "4 flares for the cost of 3"
@@ -1990,10 +1990,10 @@ function scrWeapons() {
 	wep_name[180] = "AUTO FLARE SHOTGUN"
 	wep_type[180] = 4
 	wep_auto[180] = 1
-	wep_load[180] = 19
-	wep_cost[180] = 3
+	wep_load[180] = 14
+	wep_cost[180] = 4
 	wep_sprt[180] = sprAutoFlareShotgun
-	wep_area[180] = 16
+	wep_area[180] = 17
 	wep_text[180] = "signal in your face"
 	wep_swap[180] = sndSwapFlame
 	wep_rad[180] = 0;
@@ -2851,7 +2851,7 @@ function scrWeapons() {
 	wep_load[258] = 17
 	wep_cost[258] = 1
 	wep_sprt[258] = sprShotgunRifle1
-	wep_area[258] = 4
+	wep_area[258] = 3
 	wep_text[258] = "true hybrid gun"
 	wep_swap[258] = sndSwapShotgun
 	wep_rad[258] = 0;
@@ -2994,7 +2994,7 @@ function scrWeapons() {
 	wep_load[271] = 3
 	wep_cost[271] = 4
 	wep_sprt[271] = sprFatSmg
-	wep_area[271] = 18
+	wep_area[271] = 20
 	wep_text[271] = "DEEP PENETRATION"
 	wep_swap[271] = sndSwapPistol
 	wep_rad[271] = 0;
@@ -3399,7 +3399,7 @@ function scrWeapons() {
 	wep_type[308] = 1
 	wep_auto[308] = 1
 	wep_load[308] = 9
-	wep_cost[308] = 12
+	wep_cost[308] = 13
 	wep_sprt[308] = sprBulletDisperseMachinegun
 	wep_area[308] = 18
 	wep_text[308] = "rapid fire goodness"
@@ -3872,7 +3872,7 @@ function scrWeapons() {
 	wep_type[351] = 1
 	wep_auto[351] = 1
 	wep_load[351] = 22
-	wep_cost[351] = 33
+	wep_cost[351] = 40
 	wep_sprt[351] = sprBulletDisperseDisperseGun
 	wep_area[351] = 24
 	wep_text[351] = "disperse it all!"

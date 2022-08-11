@@ -5,8 +5,8 @@ if instance_exists(Player)
 	y = Player.y;
 	image_angle = point_direction(x,y,mouse_x,mouse_y);
 	var hit = collision_line_point(x,y,
-	x + lengthdir_x(120,image_angle),
-	y + lengthdir_y(120,image_angle),
+	x + lengthdir_x(140,image_angle),
+	y + lengthdir_y(140,image_angle),
 	Wall,true,true);
 	if x < other.x
 		right = 1;

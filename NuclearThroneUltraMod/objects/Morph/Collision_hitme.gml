@@ -7,7 +7,6 @@ if other.team != team
 		    my_health -=other.dmg;
 		    sprite_index = spr_hurt
 		    image_index = 0
-		    Sleep(1)
 		    BackCont.shake += 0.5
 		    }
 	}

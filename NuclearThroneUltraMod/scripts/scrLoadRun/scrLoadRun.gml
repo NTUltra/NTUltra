@@ -231,6 +231,13 @@ function scrLoadRun(){
 				var ug = ultra_got;
 				scrUltras();
 				ultra_got = ug;
+				var i = 0
+				repeat(maxskill+1)
+				{
+					if skill_got[i]
+						totalSkills++;
+					i += 1;
+				}
 			}
 			debug("load complete");
 			room_restart();

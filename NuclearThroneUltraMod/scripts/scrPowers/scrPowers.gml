@@ -2120,6 +2120,54 @@ function scrPowers() {
 	var px = Player.x;
 	var py = Player.y;
 	var od = 180;
+	
+	with chestprop
+	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+	{if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
+	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
+	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
+	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))}}
+	with Pickup
+	{
+		if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+		{
+
+		if Player.ultra_got[12]==1{//Ultra D don't care about the walls +increase speed
+		x += lengthdir_x(2+Player.skill_got[5],point_direction(x,y,px,py))//shouldnt it be more efficient
+		y += lengthdir_y(2+Player.skill_got[5],point_direction(x,y,px,py))//if I do this cehck outside of the with
+		}
+		else{
+		if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
+		x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
+		if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
+		y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))
+		}
+
+		}
+	}
+	with RadChest
+	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+	{if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
+	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
+	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
+	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))}}
+	with WepPickup
+	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+	{
+
+	if Player.ultra_got[12]==1{//Ultra D don't care about the walls
+	x += lengthdir_x(2+Player.skill_got[5],point_direction(x,y,px,py))
+	y += lengthdir_y(2+Player.skill_got[5],point_direction(x,y,px,py))
+	}
+	else{
+	if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
+	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
+	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
+	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))
+	}
+
+	}}
+	
 	if altUltra && ultra_got[9]
 	{
 		px = mouse_x;
@@ -2157,88 +2205,9 @@ function scrPowers() {
 	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
 	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))}}
 
-	with chestprop
-	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
-	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
-	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))}}
-	with Pickup
-	{
-		if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-		{
-
-		if Player.ultra_got[12]==1{//Ultra D don't care about the walls +increase speed
-		x += lengthdir_x(2+Player.skill_got[5],point_direction(x,y,px,py))//shouldnt it be more efficient
-		y += lengthdir_y(2+Player.skill_got[5],point_direction(x,y,px,py))//if I do this cehck outside of the with
-		}
-		else{
-		if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
-		x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-		if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
-		y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))
-		}
-
-		}
-	}
-	
-	with WepPickup
-	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{
-
-	if Player.ultra_got[12]==1{//Ultra D don't care about the walls
-	x += lengthdir_x(2+Player.skill_got[5],point_direction(x,y,px,py))
-	y += lengthdir_y(2+Player.skill_got[5],point_direction(x,y,px,py))
-	}
-	else{
-	if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
-	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
-	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))
-	}
-
-	}}
-/*	got a proper parent now
-	with Rad
-	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{
-
-	if Player.ultra_got[12]==1{//Ultra D don't care about the walls
-	x += lengthdir_x(2+Player.skill_got[5],point_direction(x,y,px,py))
-	y += lengthdir_y(2+Player.skill_got[5],point_direction(x,y,px,py))
-	}
-	else{
-	if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
-	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
-	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))
-	}
-
-	with BigRad
-	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{
-
-	if Player.ultra_got[12]==1{//Ultra D don't care about the walls
-	x += lengthdir_x(2+Player.skill_got[5],point_direction(x,y,px,py))
-	y += lengthdir_y(2+Player.skill_got[5],point_direction(x,y,px,py))
-	}
-	else{
-	if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y)
-	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)))
-	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))
-	}
-
-	}}
-
-	}}*/
-	with RadChest
-	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
-	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
-	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))}}
-	var ts = 1.1+Player.skill_got[5]+(Player.ultra_got[9]*0.4);
+	var ts = 1.1+Player.skill_got[5];
+	if ultra_got[9] == 1 && !altUltra
+		ts = 1.1+Player.skill_got[5]+(Player.ultra_got[9]*0.4);
 	with projectile
 	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) and team != 2 and canBeMoved
 	{if !place_meeting(x+lengthdir_x(ts,point_direction(x,y,px,py)+od),y,Wall)
@@ -2246,16 +2215,8 @@ function scrPowers() {
 	if !place_meeting(x,y+lengthdir_y(ts,point_direction(x,y,px,py)+od),Wall)
 	y += lengthdir_y(ts,point_direction(x,y,px,py)+od)}}
 	
-	/*
-	with PopoNade
-	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) and team != 2 and canBeMoved
-	{if !place_meeting(x+lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od),y,Wall)
-	x += lengthdir_x(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od)
-	if !place_meeting(x,y+lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od),Wall)
-	y += lengthdir_y(1.2+Player.skill_got[5]+Player.ultra_got[9],point_direction(x,y,px,py)+od)}}
-*/
 
-	if ultra_got[9] == 1 && !altUltra{//eyes Projectile Style ULTRA A
+	if ultra_got[9] == 1 && !altUltra {//eyes Projectile Style ULTRA A
 	    with projectile
 	    if team=other.team && canBeMoved
 	    {

@@ -1,4 +1,5 @@
 scrCrowns()
+room_speed = UberCont.normalGameSpeed;
 p = 0
 if instance_exists(Player)
 {

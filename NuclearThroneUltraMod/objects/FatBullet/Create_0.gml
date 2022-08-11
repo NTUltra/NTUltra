@@ -8,6 +8,6 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 dmg=5;//9
 typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 RecycleGlandType();
-hits=3;
+hits=3;//15 dmg total
 
 alarm[11] = 1;
