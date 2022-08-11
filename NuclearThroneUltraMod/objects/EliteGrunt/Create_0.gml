@@ -30,11 +30,11 @@ roll = 1
 ammo=3;
 rolltime=15+random(40);
 freeze = 0
-if instance_exists(Player)
+scrTarget();
+if target != noone
 {
-lastx = Player.x
-lasty = Player.y
-
+lastx = target.x
+lasty = target.y
 direction = point_direction(x,y,target.x,target.y)+random(30)-15
 gunangle=point_direction(x,y,target.x,target.y);
 }
