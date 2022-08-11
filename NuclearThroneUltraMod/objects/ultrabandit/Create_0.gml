@@ -21,7 +21,7 @@ gunangle = random(360)
 alarm[1] = 30+random(90)
 wkick = 0
 maxSpeed = 4;
-pspeed = 4.6;
+pspeed = 4.4;
 loops = GetPlayerLoops()
 if loops > 0
 {

@@ -2,9 +2,9 @@
 if sprite_index = sprQuickBigPortalSpawn
 {
 	if scrIsInInvertedArea()
-		sprite_index = sprInvertedBigPortal;
-	else
 		sprite_index = sprBigPortal;
+	else
+		sprite_index = sprInvertedBigPortal;
 	image_index = 0;
 	depth = 0;
 }

@@ -100,7 +100,7 @@ function scrUltras() {
 		}
     
 	    ultra_name[14] = "DETACHMENT"
-	    ultra_text[14] = "LOSE HALF YOUR HEALTH#GET 4 MORE MUTATIONS"//originally 3
+	    ultra_text[14] = "LOSE HALF YOUR HEALTH#GET 3 MORE MUTATIONS"//originally 3
 	    ultra_tips[14] = "three is not enough"
     
 	    ultra_name[15] = "POWER OVERWHELMING"
