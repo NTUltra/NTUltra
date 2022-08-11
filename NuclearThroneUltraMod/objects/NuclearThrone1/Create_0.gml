@@ -13,6 +13,7 @@ x += 16;
 y += 16;
 y += 64;
 maxhealth = 1750//retail has 1500 but the parts take 100 health each away upon destruction
+scrBossHealthBuff();
 isInverted = false;
 size = 8;
 friction = 6;

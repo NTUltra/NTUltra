@@ -1,5 +1,6 @@
 mask_index=mskHotDrake;
-direction=point_direction(x,y,target.x,target.y);
+if target != noone
+	direction=point_direction(x,y,target.x,target.y);
 repeat(50){//flame wall of death baby yes 
 with instance_create(x,y+96,TrapFire)
     {

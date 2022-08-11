@@ -711,7 +711,7 @@ if KeyCont.key_swap[p] = 1 and bwep != 0
 			{
 				snd_play(sndPunchSwap,0.1,true);
 				var aim = point_direction(x,y,mouse_x,mouse_y);
-				with instance_create(x+lengthdir_x(8,aim+180),y+lengthdir_y(8,aim+180),RoidsSuperSwap)
+				with instance_create(x+lengthdir_x(11+(skill_got[13]*3),aim+180),y+lengthdir_y(11+(skill_got[13]*3),aim+180),RoidsSuperSwap)
 				{
 					wepSpr = other.wep_sprt[other.bwep];
 					motion_add(aim,1+(other.skill_got[13]*2))
@@ -1213,19 +1213,19 @@ if wep == 531//Coffee makes you faster
 {
 	maxSpeed += 1;	
 }
-outOfCombat = (!instance_exists(enemy) || instance_number(enemy) <= instance_number(IDPDVan)) && !instance_exists(becomenemy) && UberCont.opt_gamemode != 25//Not survival arena
+outOfCombat = (!instance_exists(enemy) || instance_number(enemy) <= instance_number(IDPDVan)) && !instance_exists(becomenemy)
 if instance_exists(SurvivalWave)
 {
 	with SurvivalWave {
 		if alarm[0] > 0
-			outOfCombat = false;
+			other.outOfCombat = false;
 	}
 }
-if outOfCombat
+if outOfCombat && UberCont.opt_gamemode != 25
 	maxSpeed += 1;
 if speed > maxSpeed
 	speed = maxSpeed
-if outOfCombat
+if outOfCombat && UberCont.opt_gamemode != 25
 	maxSpeed -= 1;
 if wep == 531
 {
@@ -1413,89 +1413,67 @@ if skill_got[25]//strong spirit
     }
     
     }
-if instance_exists(enemy){    
-if ultra_got[96]//ELEMENTOR lightning ultra
-{
-if random(100)<2&&point_distance(x,y,instance_nearest(x,y,enemy).x,instance_nearest(x,y,enemy).y)<300{//constant sparks annoy me so only if enemy is close
-snd_play(choose(sndSpark1,sndSpark2));
-    repeat(irandom_range(1,5))
-    {
-    with instance_create(x,y,Lightning)
-{image_angle = random(360);
-team = other.team
-ammo = irandom_range(4,18)
-event_perform(ev_alarm,0)
-visible = 0
-with instance_create(x,y,LightningSpawn)
-image_angle = other.image_angle}
-    }
-    }
-
-}}
-if ultra_got[16]{
-	with meltingd
-	{
-		my_health = 0;
-		//instance_destroy();
-	}
-}
 
 /* */
 ///lava and frost
-if area=7&&race!=18&&race!=24&&skill_got[14]==0 && !outOfCombat///angel & elementor boiling veins
+if (area==7||area==108)&&race!=18&&race!=24&&skill_got[14]==0 && !outOfCombat///angel & elementor boiling veins
 {
-
-    if collision_point(x,y,FloorLava,0,1) || collision_point(x,y,FloorExplo,0,1)
-    {
-	    if alarm[4]<=0
-			alarm[4]=4;
+	var ground = instance_position(x,y,FloorLava)
+	if ground == noone
+		ground = instance_position(x,y,FloorExplo)
+	if ground != noone
+	{
+	    if ground.sprite_index == sprFloor7Explo || ground.sprite_index == sprFloorLava
+	    {
+		    if alarm[4]<=0
+				alarm[4]=4;
     
-		hotfloor+=1;
-        if hotfloor>39//time before crisping
-        {
-        with instance_create(x,y,TrapFire){//burn!
-        team=1;}
-        hotfloor=0;//allright you've burned now continue
+			hotfloor+=1;
+	        if hotfloor>39//time before crisping
+	        {
+	        with instance_create(x,y,TrapFire){//burn!
+	        team=1;}
+	        hotfloor=0;//allright you've burned now continue
         
-        //GAMEMODE UNLOCKABLE WALL IS LAVA
-        scrUnlockGameMode(4,"FOR STANDING IN LAVA");
-        
-        
-        }
-    }
+	        //GAMEMODE UNLOCKABLE WALL IS LAVA
+	        scrUnlockGameMode(4,"FOR STANDING IN LAVA");
+	        }
+	    }
+		else if ground.sprite_index == sprFloor108Explo || ground.sprite_index == sprInvertedFloorLava
+	    {
+		    if skill_got[2]==0
+				friction = 0.1
+    
+		    //when player isn't frozen increase the time that determines when it should get frozeen
+		    if frozen<1
+				getFrozen++;
+    
+		    if getFrozen>24 && alarm[3] < 1
+		    {
+				my_health -= 1;
+				snd_play_2d(snd_hurt);
+			    instance_create(x,y,FrozenPlayer);
+			    frozen=15;
+			    getFrozen=0;
+		    }
+		}
+		else
+		{
+			friction = 0.45
+			getFrozen=0;
+			hotfloor=0
+		}
+	}
 	else
 	{
-	hotfloor=0;//calm da fuk down
+		getFrozen=0;
+		hotfloor=0	
 	}
-
 }
 if area=108&&race!=18&&race!=24 && !outOfCombat//angel & elementor don't bother with this stuff
 {
 
-    if place_meeting(x,y,FloorLava) || place_meeting(x,y,FloorExplo)
-    {
-    if skill_got[2]==0
-    friction = 0.1
     
-    //when player isn't frozen increase the time that determines when it should get frozeen
-    if frozen<1
-		getFrozen++;
-    
-    if getFrozen>24 && alarm[3] < 1
-    {
-		my_health -= 1;
-		snd_play_2d(snd_hurt);
-	    instance_create(x,y,FrozenPlayer);
-	    frozen=15;
-	    getFrozen=0;
-    }
-
-    }
-    else
-    {
-    friction = 0.45
-    getFrozen=0;
-    }
 
 
 }

@@ -268,7 +268,7 @@ if looping && area != 104
 	scrRegainOneLifePart();
 	
 	debug("Looping now");
-if loops > 0
+if loops > 0 && UberCont.opt_gamemode == 34
 {
 	scrUnlockGameMode(35,"FOR REACHING LOOP 2#ON HARD MODE",34)
 }
@@ -295,8 +295,6 @@ if race = 14 && fired=false
 scrUnlockCSkin(14,"FOR LOOPING BY ONLY THROWING WEAPONS#AND NOT USING THEM",0)
 
 looping=false;
-    //if !instance_exists(Crown)
-    //instance_create(x,y,Crown)
     UberCont.ctot_loop[race] += 1
     loops += 1
     if (ultra_got[73] == 1)

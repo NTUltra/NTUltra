@@ -2,7 +2,7 @@ raddrop = 120
 maxhealth = 365
 meleedamage = 0
 size = 6;
-
+scrBossHealthBuff();
 event_inherited()
 
 spr_idle = sprBushBox

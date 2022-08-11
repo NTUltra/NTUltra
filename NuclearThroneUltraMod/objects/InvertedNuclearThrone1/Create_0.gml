@@ -3,6 +3,7 @@
 // Inherit the parent event
 event_inherited();
 maxhealth = 1700//1700
+scrBossHealthBuff();
 raddrop = 600;
 isInverted = true;
 aTime = 30;

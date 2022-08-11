@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-raddrop = 152;
+raddrop = 150;
 
 spr_idle = sprInvertedBigVultureIdle;
 spr_walk = sprInvertedBigVultureWalk;
@@ -14,7 +14,8 @@ projectileSpeed += 1;
 isInverted = true;
 raddrop = 80
 maxhealth = 130;
-EnemyHealthAdjustments()
+scrBossHealthBuff();
+EnemyHealthAdjustments();
 maxAmmo = 25;
 fireRate = 1;
 fireRate2 = 5;

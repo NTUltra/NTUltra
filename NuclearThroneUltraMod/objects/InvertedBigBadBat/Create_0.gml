@@ -4,7 +4,7 @@
 event_inherited();
 raddrop = 70
 maxhealth = 330
-my_health = maxhealth;
+scrBossHealthBuff();
 rotationSpeed *= 1.05;
 EnemyHealthAdjustments();
 spr_idle = sprInvertedBigBadBatIdle

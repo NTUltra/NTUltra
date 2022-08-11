@@ -1,5 +1,6 @@
 raddrop = 60
-maxhealth = 165
+maxhealth = 165;;
+scrBossHealthBuff();
 meleedamage = 0
 size = 1
 dropItem = true;

@@ -2,6 +2,7 @@ raddrop = 60
 maxhealth = 120;
 meleedamage = 1
 size = 1
+scrBossHealthBuff();
 
 if UberCont.loops>1
 maxhealth=70;

@@ -1,6 +1,7 @@
 event_inherited()
 raddrop = 150
 maxhealth = 280//365
+scrBossHealthBuff();
 EnemyHealthAdjustments();
 spr_idle = sprInvertedBushBox
 spr_walk = sprInvertedBushBoxWalk

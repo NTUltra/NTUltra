@@ -7,8 +7,8 @@
   "visible": true,
   "managed": true,
   "spriteMaskId": {
-    "name": "mskMiniPlasmaImpact",
-    "path": "sprites/mskMiniPlasmaImpact/mskMiniPlasmaImpact.yy",
+    "name": "mskMiniPlasmaBall",
+    "path": "sprites/mskMiniPlasmaBall/mskMiniPlasmaBall.yy",
   },
   "persistent": false,
   "parentObjectId": {

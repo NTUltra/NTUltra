@@ -7,6 +7,7 @@ maxhealth = 1080;
 if UberCont.opt_gamemode == 34
 	maxhealth += 100;
 maxhealth += max(0,55*min(12,(loops-1)));
+scrBossHealthBuff();
 EnemyHealthAdjustments();
 
 spr_idle = sprInvertedNothing2Idle

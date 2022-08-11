@@ -45,6 +45,11 @@ for (var i = 0; i < al; i++) {
 		else
 		{
 			sprite_index = fse;
+			if fse == sprFloor7Explo
+				alarm[1] = irandom(90);
+			else
+				alarm[1] = 0;
+				
 		}
 	}
 }

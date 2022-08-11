@@ -4,6 +4,9 @@ meleedamage = 0
 size = 3
 var loops = GetPlayerLoops();
 maxhealth += clamp(20*loops,0,200);
+
+scrBossHealthBuff();
+
 event_inherited()
 
 
@@ -29,8 +32,8 @@ intro = 0
 wkick = 0
 
 scrTarget()
-if target != -1
-gunangle = point_direction(x,y,target.x,target.y)
+if target != noone
+	gunangle = point_direction(x,y,target.x,target.y)
 
 sndhalfhp = 0
 sndtaunt = 0

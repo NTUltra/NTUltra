@@ -5706,6 +5706,7 @@
     {"id":{"name":"Eliminator","path":"objects/Eliminator/Eliminator.yy",},"order":289,},
     {"id":{"name":"Pickup","path":"objects/Pickup/Pickup.yy",},"order":22,},
     {"id":{"name":"GenCont","path":"objects/GenCont/GenCont.yy",},"order":8,},
+    {"id":{"name":"scrBossHealthBuff","path":"scripts/scrBossHealthBuff/scrBossHealthBuff.yy",},"order":12,},
     {"id":{"name":"sprJungleTopDecal","path":"sprites/sprJungleTopDecal/sprJungleTopDecal.yy",},"order":10,},
     {"id":{"name":"NOWALLSHEREPLEASE","path":"objects/NOWALLSHEREPLEASE/NOWALLSHEREPLEASE.yy",},"order":9,},
     {"id":{"name":"sndEnergyScrewdriver","path":"sounds/sndEnergyScrewdriver/sndEnergyScrewdriver.yy",},"order":17,},

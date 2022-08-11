@@ -373,8 +373,10 @@ if UberCont.crown_start[race] && !instance_exists(PlayerSpawn){
     //crownvisits = -1;
 	//instance_create(0,0,PauseTimer);
 	crownpoints = 1;
-	if !instance_exists(Crown)
-		instance_create(x,y,Crown);
+	with Crown
+		instance_destroy();
+		
+	instance_create(x,y,Crown);
 }
 
 if UberCont.opt_gamemode == 25 {
@@ -626,7 +628,9 @@ if UberCont.opt_gamemode == 35
 	{
 		//if i != 81//SUPER BLAST ARMOUR STALKER
 		//{
-		ultra_got[i] = 1
+		if i != 26
+			ultra_got[i] = 1
+			
 		i += 1
 		//}
 	}

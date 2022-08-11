@@ -1,6 +1,6 @@
 image_speed = 0;
 visible  = false;
-depth = 4;
+depth = 1;
 type=1;
 inverted=false;//is this an inverted portal?
 

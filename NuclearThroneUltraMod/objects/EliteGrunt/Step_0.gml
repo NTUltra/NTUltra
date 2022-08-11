@@ -30,7 +30,7 @@ dodge -= 1
 }
 
 if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<60{
-if mouse_check_button_pressed(mb_left) and target > 0
+if mouse_check_button_pressed(mb_left) and target != noone
 {
 if point_distance(x,y,target.x,target.y) < 64
 direction = point_direction(x,y,target.x,target.y)
@@ -43,7 +43,7 @@ gunangle = direction
 }}
 
 }
-else
+else if target != noone
 {
 //rolling
 motion_add(point_direction(x,y,target.x,target.y)+random(30)-15,0.4);

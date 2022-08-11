@@ -45,11 +45,6 @@ with Player
 	randomlySelected = ranChar;
 	restarted = true;
 	skeletonlives = 0;
-	if UberCont.crown_start[race]{
-		crownpoints = 1;
-		if !instance_exists(Crown)
-			instance_create(x,y,Crown);
-	}
 }
 debug("BIG CHUNK RESTART");
 var loadedRun = UberCont.loadedRun;

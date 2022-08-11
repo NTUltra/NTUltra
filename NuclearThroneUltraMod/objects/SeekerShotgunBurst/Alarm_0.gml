@@ -49,7 +49,7 @@ team = other.team
 BackCont.viewx2 += lengthdir_x(28,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 BackCont.viewy2 += lengthdir_y(28,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 BackCont.shake += 7
-creator.wkick -= 6}
+creator.wkick = -6}
 
 
 if ammo <= 0

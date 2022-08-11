@@ -7,8 +7,9 @@ maxhealth = 195;//210
 meleedamage = 4
 size = 3
 if GetPlayerLoops() > 0{
-	maxhealth = 350//370;
+	maxhealth = 250//370;
 }
+scrBossHealthBuff();
 healAmount = 15;
 EnemyHealthAdjustments()
 inverted = true;

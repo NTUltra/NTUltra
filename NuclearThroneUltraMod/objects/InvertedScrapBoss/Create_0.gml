@@ -1,7 +1,8 @@
 raddrop = 120
 maxhealth = 300
 if GetPlayerLoops() > 0
-	maxhealth = 410;
+	maxhealth = 400;
+scrBossHealthBuff();
 meleedamage = 0
 size = 3
 
@@ -20,7 +21,7 @@ spr_fire = sprInvertedScrapBossFire
 
 right = 1
 scrTarget()
-if target != -1
+if target != noone
 gunangle = point_direction(x,y,target.x,target.y)
 else
 gunangle = 0

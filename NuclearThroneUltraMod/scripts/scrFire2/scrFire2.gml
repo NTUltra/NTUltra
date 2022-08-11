@@ -2571,8 +2571,8 @@ function scrFire2() {
 			longarms = 0
 			if instance_exists(Player)
 				longarms = (Player.skill_got[13]+other.bettermelee)*2
-			motion_add(aimDir,1+longarms)
-			image_angle = aimDir
+			motion_add(aimDirection,1+longarms)
+			image_angle = aimDirection
 			team = other.team
 			}
 		}
@@ -5180,7 +5180,6 @@ function scrFire2() {
 	snd_play_fire(sndUltraLaserUpg);
 	snd_play_fire(sndPlasmaHit);
 	Sleep(40);
-	var aimDir = aimDirection+(random(12)-6)*accuracy;
 	var t = team;
 	with Wall
 	{
@@ -5506,7 +5505,6 @@ function scrFire2() {
 	snd_play_fire(sndDragonStop);
 	snd_play_fire(sndRocket);
 	snd_play_fire(sndRocket);
-	var aimDir = aimDirection+(random(12)-6)*accuracy;
 	var r = right;
 	var t = team;
 	with Floor
@@ -7720,7 +7718,6 @@ function scrFire2() {
 	snd_play_fire(sndDragonStop);
 	snd_play_fire(sndRocket);
 	snd_play_fire(sndGoldRocketFly);
-	var aimDir = aimDirection+(random(12)-6)*accuracy;
 	var r = right;
 	var t = team;
 	with Floor
@@ -8938,7 +8935,6 @@ function scrFire2() {
 	case 525:
 	Sleep(50);
 	snd_play_fire(sndLightningCannonUpg);
-	var aimDir = aimDirection+(random(12)-6)*accuracy;
 	var r = right;
 	var t = team;
 	with Floor

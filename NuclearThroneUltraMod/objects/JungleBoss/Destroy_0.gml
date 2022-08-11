@@ -2,7 +2,7 @@ scrDrop(100,50)
 scrDrop(10,0)
 event_inherited();
 scrBossKill();
-if UberCont.area == 114
+if UberCont.area == 114 || UberCont.area == 123
 scrDefeatedRequiredBoss(secretChallengeBosses.bushBox);
 scrEndBossMusic();
 repeat(30)
@@ -16,7 +16,7 @@ repeat(30)
 }
 event_user(0);
 event_user(0);
-if !instance_exists(SurvivalWave) && !instance_exists(InvaderBossSpawnPortal) && instance_number(JungleBoss) == 1
+if !instance_exists(SurvivalWave) && !instance_exists(InvaderBossSpawnPortal) && instance_number(JungleBoss) == 1 && UberCont.area != 7 && UberCont.area != 108
 	with instance_create(x,y,PinkSheep)
 	{
 		alarm[0] = 0;

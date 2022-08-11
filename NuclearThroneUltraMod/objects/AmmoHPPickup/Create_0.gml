@@ -5,6 +5,8 @@ alarm[0] = 200+random(30)
 
 atomUltraD = false;
 
+if UberCont.opt_gamemode == 9 //CASUAL MODE
+	alarm[0] += 30;
 if UberCont.opt_gamemode == 34 //HARD MODE
 	alarm[0] -= 30;
 	

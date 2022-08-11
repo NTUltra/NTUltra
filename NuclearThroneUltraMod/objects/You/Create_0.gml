@@ -1,5 +1,11 @@
 friction = 0.45
 image_speed = 0.4
+totemBuffed = false;
+MorphMe=false;
+frozen=false;
+maxSpeed = 16;
+existTime = 30;
+myConfusion = noone;
 
 raddrop = 10
 meleedamage = 0
@@ -114,6 +120,7 @@ strongspiritused=Player.strongspiritused;//false
 maxhealth = floor(6*1.5*Player.level);
 if Player.skill_got[1]//rhino skin
 maxhealth=floor(7*1.5*Player.level);
+scrBossHealthBuff();
 
 my_health = maxhealth
 lsthealth = maxhealth//lasthealth

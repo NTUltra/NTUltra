@@ -13,6 +13,8 @@ if other.team != team and other.my_health > 0
 			sprite_index = spr_hurt
 			image_index = 0
 			motion_add(other.direction,12)
+			if speed > maxSpeed + 4
+				speed = maxSpeed + 4;
 			snd_play(snd_hurt, hurt_pitch_variation,true)
 		}
 	}

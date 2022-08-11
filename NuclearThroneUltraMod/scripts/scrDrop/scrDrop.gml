@@ -102,7 +102,7 @@ function scrDrop(itemdrop, weapondrop) {
 
 	if Player.ultra_got[85]
 	{
-		if random(Player.rogueammomax) > Player.rogueammo && random(160) < itemdrop * dropRateBuff
+		if random(Player.rogueammomax) > Player.rogueammo && random(160) < min(itemdrop * dropRateBuff, 160)
 		{
 			instance_create(x+random(4)-2,y+random(4)-2,RoguePickup);
 		}
@@ -130,7 +130,7 @@ function scrDrop(itemdrop, weapondrop) {
 			confDroprate += 0.25;	
 		}
 		confDroprate *= 0.33;
-	    if (itemdrop > 0 && random(110) < (itemdrop*0.5) * ((need*0.25) + confDroprate))//rage=0.001
+	    if (itemdrop > 0 && random(110) < min((itemdrop*0.5) * ((need*0.25) + confDroprate), 110))//rage=0.001
 	    {
 		    if ( Player.crown != 2 && Player.canHeal && random(Player.maxhealth) > Player.my_health || random(100) < 10) and random(3) < 2 and random(1) <= canHealth
 			{
@@ -151,7 +151,7 @@ function scrDrop(itemdrop, weapondrop) {
 	    }
 	}
 	//drop items (10 + 2) * (0.75 + 0.5)
-	if itemdrop > 0 && random(100) < itemdrop * (need + dropRateBuff)
+	if itemdrop > 0 && random(100) < min(itemdrop * (need + dropRateBuff), 100)
 	{//0.3 for each ally Rebel has REBEL ULTRA C?
 
 		if random(Player.maxhealth) > Player.my_health and random(3) < 2 and Player.crown != 2 and Player.canHeal and random(1) <= canHealth
@@ -176,7 +176,7 @@ function scrDrop(itemdrop, weapondrop) {
 			}
 		}
 	}
-	else if random(100) < weapondrop*(dropRateBuff * 0.25)
+	else if random(100) < min(weapondrop*(dropRateBuff * 0.25), 100)
 	{
 		//drop weps
 		with instance_create(x+random(4)-2,y+random(4)-2,WepPickup)

@@ -1,5 +1,5 @@
 /// @description 60 FPS
-var dt = dt;
+var dt = 0.5;
 with all
 {
 	x -= hspeed*dt;

@@ -2,6 +2,10 @@
 alarm[0] = checkDelay;
 if instance_exists(Player)
 {
+	if Player.ultra_got[96]
+		alarm[11] = 30;
+	if Player.ultra_got[16]
+		alarm[10] = 10;
 	if Player.skill_got[22] == 1 //STRESS
 		alarm[2] = stressLowCheck;
 	if Player.ultra_got[26] //GET LOADED

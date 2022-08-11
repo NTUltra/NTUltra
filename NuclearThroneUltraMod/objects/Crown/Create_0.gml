@@ -3,7 +3,11 @@ spr_walk = sprCrown0Walk
 newThing = 1
 targetx = Player.x
 targety = Player.y
-
+with Crown
+{
+	if other.id != id
+		instance_destroy();
+}
 image_speed = 0.4
 
 

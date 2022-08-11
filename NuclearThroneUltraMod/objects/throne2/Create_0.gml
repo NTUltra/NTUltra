@@ -4,6 +4,7 @@ loops = GetPlayerLoops();
 if UberCont.opt_gamemode == 34
 	maxhealth += 100;
 maxhealth += max(0,60*min(12,(loops-1)));
+scrBossHealthBuff();
 meleedamage = 10
 size = 6;
 

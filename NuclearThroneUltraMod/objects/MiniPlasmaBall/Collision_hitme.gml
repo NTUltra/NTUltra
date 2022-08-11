@@ -13,6 +13,8 @@ if other.team != team and other.my_health > 0
 			image_index = 0
 			snd_play(snd_hurt, hurt_pitch_variation,true)
 			motion_add(other.direction,4)
+			if speed > maxSpeed + 1
+				speed = maxSpeed + 1;
 		}
 	}
 	else

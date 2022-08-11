@@ -77,6 +77,10 @@ function scrPopulate() {
 					{
 						instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraBandit);
 					}
+					else if ran < 20 && spawnarea != 1
+					{
+						instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraBandit);
+					}
 				}
 				
             }

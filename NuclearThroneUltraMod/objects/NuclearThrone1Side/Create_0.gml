@@ -1,5 +1,6 @@
 /// @description Init
 maxhealth = 700;
+scrBossHealthBuff();
 disable = false;
 size = 8;
 meleedamage = 0;

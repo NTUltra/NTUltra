@@ -2,7 +2,7 @@
 var canSpawn = true;
 with Portal
 {
-	if type == 1 && !inverted
+	if (type == 4 || type == 1) && !inverted
 		canSpawn = false;
 }
 if !canSpawn

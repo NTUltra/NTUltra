@@ -443,6 +443,7 @@ function scrNextLevel() {
 
 	if ( area=1 && oasis )
 	{area=101;
+	lastarea = 101;
 	subarea=1;}
 
 	if ( area=3 && inverted )//inv scrap
@@ -453,7 +454,7 @@ function scrNextLevel() {
 	if ( area=4 && inverted )//inv crystal caves
 	{area=111;
 	subarea=1;
-	lastarea=5;}//in case of crownvault
+	lastarea=111;}//in case of crownvault
 
 	if ( area=5 && inverted )//inv frozen city
 	{area=107;
@@ -463,26 +464,26 @@ function scrNextLevel() {
 	if ( area=6 && inverted )//inv labs
 	{area=112;
 	subarea=1;
-	lastarea=7;}//in case of crownvault
+	lastarea=112;}//in case of crownvault
 
 	if ( area=7 && inverted )//inv vulcano
 	{area=108;
-	lastarea=7;}//in case of crownvault
+	lastarea=108;}//in case of crownvault
 
 	if ( area=8 && inverted )//inv wonderland
 	{area=109;
 	lastarea = 109
-	lastarea=8;}//in case of crownvault
+	}//in case of crownvault
 	
 	if ( area=9 && inverted )//inv wonderland
 	{area=118;
 	lastarea = 118
-	lastarea=9;}//in case of crownvault
+	}//in case of crownvault
 
 	if ( area=2 && inverted )//inv sewers
 	{area=110;
 	subarea=1;
-	lastarea=3;}
+	lastarea=110;}
 	
 	if ( area==10 && inverted )//inv Savanna
 	{area=121;

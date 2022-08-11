@@ -13,6 +13,7 @@ scrRaces();
 //Give long arms
 skill_got[13] = 1;
 drawempty = 0;
+p = 0;
 race = instance_number(Friend);
 gunangle = choose(0,180);
 wepflip = 1

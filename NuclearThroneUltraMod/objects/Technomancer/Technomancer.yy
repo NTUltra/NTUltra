@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskTechnomancer",
     "path": "sprites/mskTechnomancer/mskTechnomancer.yy",

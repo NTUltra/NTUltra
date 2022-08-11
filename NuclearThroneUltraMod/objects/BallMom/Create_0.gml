@@ -3,6 +3,7 @@ maxhealth = 450
 meleedamage = 10
 size = 3
 
+scrBossHealthBuff();
 
 
 event_inherited()

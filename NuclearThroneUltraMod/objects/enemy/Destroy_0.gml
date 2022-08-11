@@ -60,5 +60,5 @@ scrEnemyDeathEvent();
 
 if totemBuffed
 {
-	scrDrop(10,1);	
+	scrDrop(14,1.6);	
 }

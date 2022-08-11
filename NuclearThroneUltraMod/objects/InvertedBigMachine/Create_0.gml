@@ -1,10 +1,8 @@
 raddrop = 50
-maxhealth = 190
+maxhealth = 200
 meleedamage = 0;
 size = 5
-
-if UberCont.loops>1
-maxhealth=230;
+scrBossHealthBuff();
 
 event_inherited()
 

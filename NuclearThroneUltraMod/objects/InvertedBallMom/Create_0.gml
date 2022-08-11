@@ -2,7 +2,10 @@
 
 // Inherit the parent event
 event_inherited();
-
+raddrop = 150
+maxhealth = 420;
+scrBossHealthBuff();
+EnemyHealthAdjustments();
 inverted = true;
 spr_idle = sprInvertedFrogQueenIdle
 spr_walk = sprInvertedFrogQueenWalk

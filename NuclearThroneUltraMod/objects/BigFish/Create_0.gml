@@ -1,11 +1,13 @@
 raddrop = 60
 maxhealth = 220;//175
+
 meleedamage = 3
 size = 3
 if GetPlayerLoops() > 0{
-	maxhealth = 370;
+	maxhealth = 300;
 }
 sucking = false;
+scrBossHealthBuff();
 
 event_inherited();
 
@@ -57,7 +59,7 @@ with BigFish
 		other.cam=false;
 }
 
-if !(instance_exists(Player) && Player.area == 2 || Player.area == 110)
+if !(instance_exists(Player) && (Player.area == 2 || Player.area == 110))
 	with instance_create(x,y,DramaCamera)
 	{
 		name = "BIG FISH";

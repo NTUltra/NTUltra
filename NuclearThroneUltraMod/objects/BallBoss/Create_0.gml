@@ -1,9 +1,10 @@
 raddrop = 600
 maxhealth = 2800//2500
 if instance_exists(InvaderBossSpawnPortal)
-	maxhealth = 1800;
+	maxhealth = 1600;
 meleedamage = 0
 size = 2
+scrBossHealthBuff();
 
 event_inherited()
 instance_create(x,y,DramaCamera);
