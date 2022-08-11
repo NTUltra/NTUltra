@@ -122,7 +122,7 @@ with Player//Data to keep
 		isAlkaline = other.isAlkaline;
 		crown = other.crown;
 		wep = other.wep;
-		bwep = other.wep;
+		bwep = other.bwep;
 		cwep = other.cwep;
 		bskin = other.bskin;
 		spr_idle=other.spr_idle;
