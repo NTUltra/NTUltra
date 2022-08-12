@@ -16,7 +16,7 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 			{
 				if other.ion=true {
 					with Tentacle
-						alarm[1] = 12;
+						alarm[1] = 15;
 					snd_play(sndMeatExplo,0,true)
 					snd_play(sndBloodLauncherExplo,0.1,true)
 					var dir = point_direction(UberCont.mouse__x,UberCont.mouse__y,hit.x,hit.y);
@@ -37,7 +37,7 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 				{
 					with other.creator {
 						with Tentacle
-							alarm[1] = 15;
+							alarm[1] = 11;
 						snd_play(sndMeatExplo,0,true)
 						snd_play(sndBloodLauncherExplo,0.1,true)
 						var dir = point_direction(x,y,hit.x,hit.y);
@@ -73,9 +73,8 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 		}
 		else
 		{
-			scrIframeSkipper(0.11);
-			with Tentacle
-				alarm[1] -= 0.1;
+			scrIframeSkipper(0.09);
+			other.alarm[1] -= 0.1;
 		}
 	}
 	

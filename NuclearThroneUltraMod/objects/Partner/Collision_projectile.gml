@@ -1,9 +1,14 @@
 /// @description Destroy projectiles
 with other
 {
-	if other.team != team && typ != 3
+	if other.team != team
 	{
-		if ProjectileCanBeMoved()
+		if isGrenade
+		{
+			snd_play(sndHitMetal,0.1,true);
+			instance_destroy(id, false);	
+		}
+		else if canBeMoved
 		{
 			snd_play(sndHitMetal,0.1,true);
 			with instance_create(x,y,ImpactFX)

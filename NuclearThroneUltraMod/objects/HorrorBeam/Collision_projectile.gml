@@ -1,23 +1,24 @@
-if other.team!=2 && other.typ != 3
+if other.team!=2 && (other.typ == 1 || other.typ == 2 || ultraD)
 {
 	with other
 	{
-	if object_index!=PopoNade&&object_index!=Grenade
-	instance_destroy();
+		if other.isGrenade
+			instance_destroy(id,false);
+		else
+			instance_destroy();
 	}
 
 	if !ultraD
 	{
-	with HorrorBeam
-	{
-	ammo=0;
-	if originnr=other.originnr
-	instance_destroy();
+		with HorrorBeam
+		{
+			ammo=0;
+			if originnr=other.originnr
+				instance_destroy();
+		}
+		instance_destroy();
 	}
-	instance_destroy();
-	}
 	ammo=0;
-
 
 
 	if bskin=1

@@ -92,7 +92,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprSmallExplosion","path":"sprites/sprSmallExplosion/sprSmallExplosion.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprSmallExplosion",
     "tags": [],
     "resourceType": "GMSequence",
   },

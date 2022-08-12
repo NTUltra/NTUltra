@@ -2,7 +2,7 @@ image_speed = 0.4
 dmg = 5;
 myExplosionMask = -1;
 var um = GetPlayerUltramod()
-if um == ultramods.bloodExplosionExplosion && UberCont.ultramodSwap
+if object_index != PopoExplosion && object_index != RogueExplosion && um == ultramods.bloodExplosionExplosion && UberCont.ultramodSwap
 {
 	mask_index = mskPickupThroughWall;
 	visible = false;
@@ -15,6 +15,7 @@ else
 	with myExplosionMask {
 		owner = other.id;
 	}
+	repeat (4)
 	with instance_create(x,y,Smoke)
 	motion_add(random(360),1+random(2))
 
@@ -30,14 +31,14 @@ else
 }
 
 team = -1
-if instance_exists(Player){
+if instance_exists(Player) && object_index == Explosion{
 	if Player.ultra_got[57]//atom bomb
 	{
-		instance_create(x+random(48)-24,y+random(48)-24,ExplosionStop);
 		//FIERY EXPLOSIONS
-		alarm[1]=9;
+		alarm[2] = irandom_range(1,4);
+		alarm[1]=11;
 	}
-scrCrownOfDeath();
+	scrCrownOfDeath();
 }
 
 alarm[0]=3;

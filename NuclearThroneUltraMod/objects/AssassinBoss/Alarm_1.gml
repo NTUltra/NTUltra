@@ -3,7 +3,7 @@ deflectExhaustion -= 2;
 if deflectExhaustion < 0
 deflectExhaustion = 0;
 scrTarget()
-if target > 0
+if  target != noone
 {
 	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 	{

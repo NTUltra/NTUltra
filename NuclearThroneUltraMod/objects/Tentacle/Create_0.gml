@@ -28,3 +28,4 @@ if instance_exists(Player)
 ultra = false;
 isog = true;
 canBeMoved = false;
+alarm[1] = 11;

@@ -2078,7 +2078,7 @@ function scrWeapons() {
 	wep_name[188] = "GRENADE REVOLVER"
 	wep_type[188] = 4
 	wep_auto[188] = 0
-	wep_load[188] = 13
+	wep_load[188] = 14
 	wep_cost[188] = 1
 	wep_sprt[188] = sprGrenadePistol
 	wep_area[188] = 1
@@ -2420,9 +2420,9 @@ function scrWeapons() {
 	wep_type[219] = 4
 	wep_auto[219] = 0
 	wep_load[219] = 5
-	wep_cost[219] = 3
+	wep_cost[219] = 4
 	wep_sprt[219] = sprHyperGrenadeRifle
-	wep_area[219] = 12
+	wep_area[219] = 13
 	wep_text[219] = "not the hyper launcher"
 	wep_swap[219] = sndSwapExplosive
 	wep_rad[219] = 0;
@@ -4416,7 +4416,7 @@ function scrWeapons() {
 	wep_name[400] = "GOLDEN GRENADE REVOLVER"
 	wep_type[400] = 4
 	wep_auto[400] = 0
-	wep_load[400] = 11//13
+	wep_load[400] = 12//13
 	wep_cost[400] = 1
 	wep_sprt[400] = sprGoldenGrenadeRevolver
 	wep_area[400] = 17

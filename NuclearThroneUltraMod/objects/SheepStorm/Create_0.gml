@@ -32,7 +32,7 @@ if instance_exists(Player)
 		sprite_index=sprSheepDashFXultra;
 		projectileHitBrake-= 0.7;
 		enemyHitbrake -= 2;
-		dmg = 1.75*damageBoost;
+		dmg = 1.25*damageBoost;
     }
     if Player.skill_got[5]==1
     {

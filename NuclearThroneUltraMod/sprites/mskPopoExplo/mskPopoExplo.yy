@@ -88,7 +88,7 @@
     "eventStubScript": null,
     "parent": {"name":"mskPopoExplo","path":"sprites/mskPopoExplo/mskPopoExplo.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "mskPopoExplo",
     "tags": [],
     "resourceType": "GMSequence",
   },

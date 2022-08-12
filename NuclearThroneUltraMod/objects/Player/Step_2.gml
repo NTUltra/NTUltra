@@ -513,19 +513,19 @@ if race=16 || race = 17 || race = 19 || race = 20 || race = 21//Viking and Gunsm
 if armour>0
 {
 
-if tookHit&&my_health!=maxhealth&&alarm[3]<1&&!exception
-{armour-=1;
+	if tookHit&&my_health!=maxhealth&&alarm[3]<1&&!exception
+	{armour-=1;
 
 
-snd_play(sndHitMetal);
-alarm[3]=max(alarm[3],5);//before your armour lowers again}
-resetPrevHealth = true;
+	snd_play(sndHitMetal);
+	alarm[3]=max(alarm[3],5);//before your armour lowers again}
+	resetPrevHealth = true;
 
-scrBlankArmour();
+	scrBlankArmour();
 
 
 
-}
+	}
 if armour>maxarmour
 armour=maxarmour;
 }

@@ -1,31 +1,9 @@
-image_speed = 0.4
-
-repeat(10)
-{
-with instance_create(x,y,Smoke)
-motion_add(random(360),1+random(2))
-}
-
-ang = random(360)
-var angstep = 360/10
-repeat(10)
-{
-	with instance_create(x,y,Dust)
-		motion_add(other.ang,6)
-
-	ang += angstep
-}
-
-
-BackCont.shake += 7
-
-team = 0
-
+event_inherited();
 
 if instance_exists(Player)
 {
-if Player.bskin=2
-sprite_index=sprRogueCExplosion;
+	if Player.bskin=2
+		sprite_index=sprRogueCExplosion;
 }
 
-dmg = 5;
+dmg = 9;

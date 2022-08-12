@@ -18,5 +18,7 @@ if right
 	ang = 180;
 with other
 {
-	motion_add(other.image_angle+ang,0.8);
+	motion_add(other.image_angle+ang,1.2);
+	if speed > maxSpeed + 5
+		speed = maxSpeed + 5;
 }

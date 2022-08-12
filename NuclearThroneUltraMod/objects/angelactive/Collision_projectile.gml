@@ -1,7 +1,16 @@
 if team != other.team && instance_exists(Player)
 {
-	if other.typ = 1
+	if other.isGrenade
 	{
+		BackCont.shake += 1;
+		Sleep(5);
+		snd_play(sndRicochet,0.1,true);
+		with other
+			scrDeflectNade(point_direction(other.x,other.y,x,y));
+	}
+	else if other.typ == 1
+	{
+		BackCont.shake += 1;
 		Sleep(5);
 		other.team = team
 		with other
@@ -30,8 +39,10 @@ if team != other.team && instance_exists(Player)
 			scrUnlockCSkin(18,"FOR REFLECTING A PROJECTILE#THAT IS REFLECTED BY A CROWN GUARDIAN#AS ANGEL",0);
 		}
 	}
-	else if other.typ = 2
+	else
 	{
+		BackCont.shake += 1;
+		Sleep(5);
 		with other
 			instance_destroy()
 	}

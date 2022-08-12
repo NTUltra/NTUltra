@@ -34,9 +34,11 @@ function scrFire() {
 	{
 		if random(100)<((wep_cost[wep]/typ_ammo[wep_type[wep]])*0.5)*100
 		{
-			with instance_create(Player.x,Player.y-8,HealFX)
+			with instance_create(x,y-16,FxOnOwner)
 			{
+				owner = other.id;
 				sprite_index=sprBloodlust;
+				yOffset = -16;
 			}
 			snd_play(sndBloodlustProc);
 			var num = 1
@@ -50,45 +52,81 @@ function scrFire() {
 			dir.mytext = "OVER MAX HP"
 		}
 	}
-	if (Player.race=7 && Player.skill_got[5]=1)
+	if (Player.race=7 && Player.skill_got[5] && wep_cost[wep] > 0 && wep_cost[bwep] > 0)
 	{
 	    if KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2
 	    {
 	        if random(100)<((wep_cost[bwep]/typ_ammo[wep_type[bwep]])*0.69)*100
 			{
     
-			    var wantAmmo = round(typ_ammo[wep_type[bwep]]/2);
+			    var wantAmmo = round(typ_ammo[wep_type[bwep]]*0.5);
 			    if (ammo[wep_type[bwep]] + wantAmmo >=typ_amax[wep_type[bwep]] && !ultra_got[26])
 			    {
 					ammo[wep_type[bwep]] = typ_amax[wep_type[bwep]];
 			    }
 			    else
 					ammo[wep_type[bwep]] += wantAmmo;
-    
-				dir = instance_create(x,y,PopupText)
-				dir.mytext = "+"+string(wantAmmo)+" "+string(other.typ_name[wep_type[bwep]])
-				if ammo[wep_type[bwep]] == typ_amax[wep_type[bwep]]
-					dir.mytext = "MAX "+string(other.typ_name[wep_type[bwep]])
+					
+				with instance_create(x,y-16,FxOnOwner)
+				{
+					owner = other.id;
+					sprite_index=sprSteroidsTB;
+					yOffset = -16;
+				}
+				if (UberCont.opt_ammoicon)
+				{
+					dir = instance_create(x,y,PopupText)
+					dir.sprt = sprAmmoIconsPickup;
+					dir.ii = wep_type[bwep]-1;
+					dir.mytext = "+"+string(wantAmmo);
+					if ammo[wep_type[bwep]] == typ_amax[wep_type[bwep]]
+						dir.mytext = "MAX ";
+				}
+				else
+				{
+					dir = instance_create(x,y,PopupText)
+					dir.mytext = "+"+string(wantAmmo)+" "+string(other.typ_name[wep_type[bwep]])
+					if ammo[wep_type[bwep]] == typ_amax[wep_type[bwep]]
+						dir.mytext = "MAX "+string(other.typ_name[wep_type[bwep]])
+				}
 			}
 
 	    }
 	    else
 	    {
-		    if random(100)<((wep_cost[bwep]/typ_ammo[wep_type[bwep]])*0.5)*100
+		    if random(100)<((wep_cost[bwep]/typ_ammo[wep_type[bwep]])*0.51)*100
 			{
     
-			    var wantAmmo = round(typ_ammo[wep_type[bwep]]/2)
+			    var wantAmmo = round(typ_ammo[wep_type[bwep]]*0.5)
 			    if (ammo[wep_type[bwep]] + wantAmmo >= typ_amax[wep_type[bwep]] && !ultra_got[26])
 			    {
 					ammo[wep_type[bwep]] = typ_amax[wep_type[bwep]];
 			    }
 			    else
 					ammo[wep_type[bwep]] += wantAmmo;
-    
-				dir = instance_create(x,y,PopupText)
-				dir.mytext = "+"+string(wantAmmo)+" "+string(other.typ_name[wep_type[bwep]])
-				if ammo[wep_type[bwep]] == other.typ_amax[wep_type[bwep]]
-					dir.mytext = "MAX "+string(other.typ_name[wep_type[bwep]])
+					
+				with instance_create(x,y-16,FxOnOwner)
+				{
+					owner = other.id;
+					sprite_index=sprSteroidsTB;
+					yOffset = -16;
+				}
+				if (UberCont.opt_ammoicon)
+				{
+					dir = instance_create(x,y,PopupText);
+					dir.sprt = sprAmmoIconsPickup;
+					dir.ii = wep_type[bwep]-1;
+					dir.mytext = "+"+string(wantAmmo)
+					if ammo[wep_type[bwep]] == other.typ_amax[wep_type[bwep]]
+						dir.mytext = "MAX ";
+				}
+				else
+				{
+					dir = instance_create(x,y,PopupText)
+					dir.mytext = "+"+string(wantAmmo)+" "+string(other.typ_name[wep_type[bwep]])
+					if ammo[wep_type[bwep]] == other.typ_amax[wep_type[bwep]]
+						dir.mytext = "MAX "+string(other.typ_name[wep_type[bwep]])
+				}
 		    }
 	    }
 

@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskPartner",
     "path": "sprites/mskPartner/mskPartner.yy",

@@ -5,7 +5,7 @@ snd_play(sndAssassinAttack)
 wepangle = -wepangle
 motion_add(gunangle,6)
 scrTarget();
-if target > 0 && instance_exists(target)
+if  target != noone
 {
 	gunangle = point_direction(x,y,target.x,target.y)
 

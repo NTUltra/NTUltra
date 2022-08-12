@@ -139,7 +139,7 @@ function scrUltras() {
 		{
 			//EXTRA FEET OR CROWN OF SPEED
 			ultra_name[20] = "SONIC SPEED"
-			ultra_text[20] = "YOU CAN MOVE EXTREMELY FAST!#ACCELERATING OR DECCELERATING QUICKLY#CREATES A SONIC BOOM"
+			ultra_text[20] = "YOU CAN MOVE EXTREMELY FAST!#ACCELERATING OR DECELERATING QUICKLY#CREATES A SONIC BOOM"
 			ultra_tips[20] = "SONIC BOOM!"
 		}
 	}
@@ -635,7 +635,7 @@ function scrUltras() {
 	    ultra_tips[103] = "strong skillet"
         
 		ultra_name[104] = "DISCIPLINE"
-	    ultra_text[104] = "ACTIVE CAN SHRINK PROJECTILES#INTO NOTHINGNESS#ACTIVE STUNS ENEMIES FOR LONGER"
+	    ultra_text[104] = "ACTIVE CAN SHRINK#ALL ENEMY PROJECTILES#INTO NOTHINGNESS#ACTIVE STUNS ENEMIES FOR LONGER"
 	    ultra_tips[104] = "discipline those projectiles!"
 		/*
 	    ultra_name[104] = "FRUITS OF LABOR"

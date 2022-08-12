@@ -15,11 +15,12 @@ if other.sprite_index != other.spr_hurt
 
 		raddrop+=other.rad;
 		other.rad=0;
-		my_health -= max(1,floor(other.charge*0.725));
+		my_health -= clamp(floor(other.charge*0.65),1,12);
 		sprite_index = spr_hurt
 		image_index = 0
 		motion_add(other.image_angle,2+other.charge)
-
+		if speed > maxSpeed + 3
+			speed = maxSpeed + 3;
 		snd_play(snd_hurt, hurt_pitch_variation)
 	}
 
@@ -39,6 +40,13 @@ if other.sprite_index != other.spr_hurt
 	sprite_index=sprHorrorHit;
 	}
 
+}
+else
+{
+	with other
+	{
+		scrIframeSkipper(0.05);
+	}
 }
 
 }

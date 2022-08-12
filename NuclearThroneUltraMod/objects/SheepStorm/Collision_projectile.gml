@@ -11,15 +11,22 @@ if team != other.team
 	BackCont.viewx2 += lengthdir_x(1,direction)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(1,direction)*UberCont.opt_shake
 	BackCont.shake += 5
-	if other.typ = 2 or (other.typ = 1 && Player.ultra_got[51]=0)
+	if other.typ == 2
 	{
+		BackCont.shake += 1;
 		with other{
 		instance_destroy();}
 	}
-	else if (Player.ultra_got[51]=1){
+	else if (Player.ultra_got[51]) {
 	    //deflect
-		BackCont.shake += 1;
-	    if other.typ=1
+		BackCont.shake += 2;
+		if other.isGrenade
+		{
+			snd_play(sndRicochet,0.1,true);
+			with other
+				scrDeflectNade(point_direction(other.x,other.y,x,y));
+		}
+	    else if other.typ=1
 		{
 			with other
 			{
@@ -40,10 +47,10 @@ if team != other.team
 					image_angle = other.direction
 			}
 		}
-	    else if other.typ=2
+	    else if other.typ=2 || Player.ultra_got[51]
 	    {
-	    with other
-	    instance_destroy()
+		    with other
+				instance_destroy()
 	    }
 	}
 }

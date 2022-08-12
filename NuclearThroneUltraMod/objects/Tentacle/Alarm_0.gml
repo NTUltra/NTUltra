@@ -74,7 +74,7 @@ image_xscale = -point_distance(x,y,oldx,oldy)/4
 
 ammo -= 1
 
-if !place_free(x,y)
+if place_meeting(x,y,Wall)
 {
 x = xprevious
 y = yprevious
@@ -85,23 +85,25 @@ if ammo > 0
 	image_index += 0.4/ammo
 	with instance_create(x,y,Tentacle)
 	{
+		alarm[1] = other.alarm[1];
 		scrCopyWeaponMod(other);
 		isog = other.isog;
-	sprite_index=other.sprite_index;
-	ion=other.ion;
-	accuracy=other.accuracy;
-	creator=other.creator;
-	dmg=other.dmg;
-	direction = other.direction
-	image_angle = direction
-	ammo = other.ammo
-	team = other.team
-	image_index = other.image_index
-	if ammo=20
-	alarm[0]=1;
-	else if ammo=40
-	alarm[0]=1;
-	else event_perform(ev_alarm,0);
+		sprite_index=other.sprite_index;
+		ion=other.ion;
+		accuracy=other.accuracy;
+		creator=other.creator;
+		dmg=other.dmg;
+		direction = other.direction
+		image_angle = direction
+		ammo = other.ammo
+		team = other.team
+		image_index = other.image_index
+		if ammo=20
+			alarm[0]=1;
+		else if ammo=40
+			alarm[0]=1;
+		else
+			event_perform(ev_alarm,0);
 
 	}
 }

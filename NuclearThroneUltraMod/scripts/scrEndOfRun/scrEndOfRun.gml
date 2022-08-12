@@ -2,6 +2,13 @@
 // /@description reset some important variables
 ///@param
 function scrEndOfRun(){
+	if instance_exists(FPSHACK)
+	{
+		with FPSHACK
+			instance_destroy();
+		with UberCont
+			normalGameSpeed = 30;
+	}
 	with UberCont
 	{
 		loadedRun = false;

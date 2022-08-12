@@ -368,7 +368,7 @@ if UberCont.opt_gamemode = 21 { //loop start
     hard = 18
     loops = 1;
 }
-if UberCont.crown_start[race] && !instance_exists(PlayerSpawn){
+if UberCont.crown_start[race] && !instance_exists(PlayerSpawn) && UberCont.opt_gamemode != 25 {
     //area = 100;
     //hard -= 1;
     //crownvisits = -1;

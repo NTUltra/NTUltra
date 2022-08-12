@@ -4,3 +4,5 @@ alarm[1] = 10
 alarm[0] = 90
 gotHit = false;
 team = 3;
+typ = 1;
+isGrenade = true;

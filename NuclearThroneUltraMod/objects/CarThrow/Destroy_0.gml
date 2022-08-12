@@ -1,8 +1,9 @@
-repeat(3)
-instance_create(x+random(4)-2,y+random(4)-2,Explosion)
+repeat(2)
+instance_create(x+random(30)-15,y+random(30)-15,Explosion)
 
-repeat(4)
-instance_create(x+random(6)-3,y+random(6)-3,SmallExplosion)
+repeat(3)
+instance_create(x+choose(random_range(8,16),random_range(-8,-16))
+,y+choose(random_range(8,16),random_range(-8,-16)),SmallExplosion)
 
 instance_create(x,y+6,Scorchmark)
 event_inherited()

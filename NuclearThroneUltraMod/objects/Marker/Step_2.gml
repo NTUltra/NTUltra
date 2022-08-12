@@ -34,7 +34,7 @@ with projectile
 	    {exit;}
 	if !instance_exists(Marker)
 	    {exit;}
-	if !ProjectileCanBeMoved(){exit;}
+	if !canBeMoved{exit;}
 	if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )  and object_index != EnemyLaser
 	{if place_free(x+lengthdir_x(0.4,point_direction(x,y,Marker.x,Marker.y)),y)
 	x += lengthdir_x(0.4,point_direction(x,y,Marker.x,Marker.y))

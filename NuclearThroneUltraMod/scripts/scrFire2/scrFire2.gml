@@ -78,7 +78,7 @@ function scrFire2() {
 	break;
 
 
-	//KRAKEN CANNON
+	//KRAKEN LAUNCHER
 	case 196:
 
 	snd_play_fire(sndRoll);
@@ -89,7 +89,6 @@ function scrFire2() {
 	with instance_create(x,y,Tentacle)
 	{
 	creator=other.id;
-	dmg=10+irandom(4);
 	image_angle = aimDirection+(random(50)-25)*other.accuracy
 	team = other.team
 	ammo = 24
@@ -678,7 +677,7 @@ function scrFire2() {
 	with instance_create(x,y,SmallGrenadeBurst)
 	{
 	creator = other.id
-	ammo = 9
+	ammo = 8
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -6515,7 +6514,7 @@ function scrFire2() {
 		}
 		with projectile
 		{
-			if typ == 1 && ProjectileCanBeMoved()
+			if typ == 1 && canBeMoved
 			{
 				team = other.team;
 				if instance_exists(enemy)

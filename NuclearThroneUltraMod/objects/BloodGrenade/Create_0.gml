@@ -8,4 +8,3 @@ offy = random(2)-1
 
 typ = 1 
 dmg = 10;
-

@@ -84,10 +84,10 @@ dir = choose(1,1,1,1,5,5,5,2,2,3,3,3,4,4,4);//1,1,2,3,4
 
 if instance_exists(Player)
 {
-if(Player.loops<1&&Player.area<2)//no shielders in desert start
-{
-dir = choose(1,1,1,5,5,1,3,3,4);//less chance inspector
-}
+	if(Player.loops<1&&Player.area<2)//no shielders in desert start
+	{
+		dir = choose(1,1,1,5,5,1,3,3,4);//less chance inspector
+	}
 }
 
 

@@ -22,9 +22,9 @@ ultraD=false
 dropRad = false;
 if instance_exists(Player)
 {
-if Player.ultra_got[84]
-ultraD=true;
-if Player.skill_got[5]
-dropRad = true;
+	if Player.ultra_got[84]
+		ultraD=true;
+	if Player.skill_got[5]
+		dropRad = true;
 }
 canBeMoved = false;

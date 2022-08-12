@@ -248,7 +248,7 @@ function scrPowers() {
 							image_speed = 0.4;
 							sprite_index = sprHumphryDestroyProjectile;	
 						}
-						if object_index == PopoNade
+						if isGrenade
 							instance_destroy(id,false);
 						else
 							instance_destroy();	
@@ -2079,15 +2079,15 @@ function scrPowers() {
 	//STEROIDS
 	if race = 7 and bwep != 0 //and wep != 0
 	{
-	if ultra_got[27]=0
-	scrSwapWeps()
-	else if !altUltra{
-	twep=bwep;
-	bwep=wep;
-	scrSwapWeps();
-	}
-	if ammo[wep_type[wep]] < wep_cost[wep] and KeyCont.key_spec[p] = 1 and wep_type[wep] != 0
-	scrEmpty()
+		if !ultra_got[27] || altUltra
+			scrSwapWeps()
+		else if !altUltra{
+			twep=bwep;
+			bwep=wep;
+			scrSwapWeps();
+		}
+		if ammo[wep_type[wep]] < wep_cost[wep] and KeyCont.key_spec[p] = 1 and wep_type[wep] != 0
+			scrEmpty()
 
 		if can_shoot = 1 and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)
 		{

@@ -1,14 +1,15 @@
 if other.team != team
 {
-instance_destroy()
-snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
-with other
-{
-my_health -= 3
-sprite_index = spr_hurt
-image_index = 0
-motion_add(other.direction,6)
-}
-
+	instance_destroy()
+	with other
+	{
+		my_health -= other.dmg;
+		sprite_index = spr_hurt
+		image_index = 0
+		snd_play(snd_hurt, hurt_pitch_variation,true)
+		motion_add(other.direction,6)
+		if speed > maxSpeed + 3
+			speed = maxSpeed + 3;
+	}
 }
 

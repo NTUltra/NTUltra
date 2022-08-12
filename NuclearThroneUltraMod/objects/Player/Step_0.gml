@@ -70,7 +70,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 				speed *= 0.4;
 			}
 			var msk = mask_index;
-			if (!place_meeting(x+hspeed,y+vspeed,WallHitMe) && abs(speed - previousSpeed) > 4)
+			if (abs(speed - previousSpeed) > 4 && !instance_exists(RocketSlash) && !place_meeting(x+hspeed,y+vspeed,WallHitMe))
 			{
 				snd_play(sndGhettoBlast);
 				with instance_create(x+lengthdir_x(16,direction),y+lengthdir_y(16,direction),PlantSonicBoom)
@@ -1330,7 +1330,7 @@ if homeBoost > 0
     {
         if (team == other.team && speed > 0)
         {
-	        if ProjectileCanBeMoved()
+	        if canBeMoved
 	        {
 		        if instance_exists(enemy)
 		        {
@@ -1364,7 +1364,7 @@ if (ultra_got[43]==1)//HUNTER ULTRA C Focused projectiles
 		{
 			//if (x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) 
 			 //and ProjectileCanBeMoved())
-			if speed > 0 && ProjectileCanBeMoved()
+			if speed > 0 && canBeMoved
 			{
 				var str = 2.0;
 				if place_free(x+lengthdir_x(str,point_direction(x,y,Marker.x,Marker.y)),y)

@@ -16,7 +16,6 @@ if instance_exists(Player)
 		maxspd += 5;
 	if Player.crown == 24//Crown of sloth
 		maxspd -= 4;
-	
 }
 with creator
 {

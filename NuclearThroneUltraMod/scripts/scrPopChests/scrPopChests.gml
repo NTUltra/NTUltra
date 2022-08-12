@@ -197,37 +197,35 @@ function scrPopChests() {
 			healthChestGol = 0;
 	
 	}
-	var totalWepsChests=0,totalRadChests=0,totalAmmoChests=0,totalHealthChests=0;
 	if instance_exists(WeaponChest)
 	{
-		totalWepsChests = instance_number(WeaponChest);
 		do {with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,WeaponChest) instance_destroy(id,false)}
 	until instance_number(WeaponChest) <= wepChestGol
 	}
 	if instance_exists(RadChest)
 	{
-		totalRadChests = instance_number(RadChest);
-		do {with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,RadChest) instance_destroy(id,false)}
-	until instance_number(RadChest) <= gol
+		do {
+			with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,RadChest) 
+				instance_destroy(id,false)
+			}
+		until instance_number(RadChest) <= gol
 	}
 	if instance_exists(AmmoChest)
 	{
-		totalAmmoChests = instance_number(AmmoChest)
 		do {with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,AmmoChest) instance_destroy(id,false)}
 	until instance_number(AmmoChest) <= gol
 	}
 	if instance_exists(HealthChest)
 	{
-		totalHealthChests = instance_number(HealthChest)
 		do {
 		with instance_nearest(Player.x+random(500)-250,Player.y+random(500)-250,HealthChest) instance_destroy(id,false)}
 	until instance_number(HealthChest) <= healthChestGol
 	}
-	if (totalWepsChests < wepChestGol)
+	if (instance_number(WeaponChest) < wepChestGol)
 	{
 		scrCreateMissingChest(WeaponChest,wepChestGol);	
 	}
-	if (totalAmmoChests < gol)
+	if (instance_number(AmmoChest) < gol)
 	{
 		scrCreateMissingChest(AmmoChest,gol);	
 	}
@@ -236,11 +234,11 @@ function scrPopChests() {
 	{
 		gol = 0;
 	}
-	if (totalRadChests < gol)
+	if (instance_number(RadChest) < gol)
 	{
 		scrCreateMissingChest(RadChest,gol);
 	}
-	if (totalHealthChests < healthChestGol)
+	if (instance_number(HealthChest) < healthChestGol)
 	{
 		scrCreateMissingChest(HealthChest,healthChestGol);	
 	}

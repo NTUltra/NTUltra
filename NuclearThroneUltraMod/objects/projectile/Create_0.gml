@@ -6,6 +6,7 @@ hadSpeedApplied = false;
 dmg = 0;
 team = 2;
 canBeMoved = true;
+isGrenade = false;
 typ = 0;
 if UberCont.opt_gamemode == 33//All Deflector
 {

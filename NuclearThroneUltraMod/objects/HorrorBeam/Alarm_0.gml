@@ -12,7 +12,7 @@ accuracycharge=2;
 if instance_exists(enemy)
 {
 var enem = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
-if ultraD && point_distance(UberCont.mouse__x,UberCont.mouse__y,enem.x,enem.y)<128
+if ultraD && point_distance(UberCont.mouse__x,UberCont.mouse__y,enem.x,enem.y)<48
 {
 direction=point_direction(x,y,enem.x,enem.y);
 image_angle=direction;
@@ -40,7 +40,7 @@ image_xscale = -point_distance(x,y,oldx,oldy)/2
 
 ammo -= 1;
 
-if !place_free(x,y) && !ultraD
+if place_meeting(x,y,Wall) && !ultraD
 {
 x = xprevious
 y = yprevious
