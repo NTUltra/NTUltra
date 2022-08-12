@@ -10,7 +10,16 @@ image_angle = choose(0,90,180,270);
 var al = array_length(whatToSpawn);
 for (var i = 0; i < al; i++)
 {
-	with instance_create(x+random_range(128,-128),y+random_range(128,-128),whatToSpawn[i])
+	var xx = x+random_range(128,-128);
+	var yy = y+random_range(128,-128);
+	var tries = 0;
+	while (!place_meeting(xx,yy,Floor) && tries < 1000)
+	{
+		xx = x+random_range(128,-128);
+		yy = y+random_range(128,-128);
+		tries ++;
+	}
+	with instance_create(xx,yy,whatToSpawn[i])
 	{
 		if alarm[1] > 2
 		{

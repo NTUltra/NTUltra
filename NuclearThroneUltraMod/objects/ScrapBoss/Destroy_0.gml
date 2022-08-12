@@ -37,7 +37,7 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 		}
 	}
 scrDrop(0,100)
-scrDrop(0,50)
+scrDrop(0,40)
 scrBossKill();
 Sleep(50)
 with instance_create(x,y,BigDogExplo)

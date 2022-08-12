@@ -9,6 +9,7 @@ owner = -1;
 wkick = 0
 maxhealth = 10;
 my_health = maxhealth;
+snd_hurt = sndHitMetal;
 roll = 0;
 friction = 0.4
 

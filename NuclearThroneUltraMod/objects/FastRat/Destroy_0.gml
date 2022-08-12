@@ -1,5 +1,5 @@
 event_inherited()
-scrDrop(20,0)
+scrDrop(15,0)
 
 with instance_create(x,y,AcidStreak)
 {

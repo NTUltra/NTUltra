@@ -95,7 +95,10 @@ if place_meeting(x,y,Player) && !used
 					}
 					else if rogueammomax > 3
 						rogueammomax = 3;
-						
+					if ultra_got[87] && altUltra//Imortal popo
+						rogueammomax = 2;
+					rogueammo = min(rogueammo,rogueammomax);	
+					
 					typ_amax[0] = 1000 typ_amax[1] = 255 typ_amax[2] = 55 typ_amax[3] = 55 typ_amax[4] = 55 typ_amax[5] = 55
 					ammo[1] = min(ammo[1],typ_amax[1]);
 					ammo[2] = min(ammo[2],typ_amax[2]);

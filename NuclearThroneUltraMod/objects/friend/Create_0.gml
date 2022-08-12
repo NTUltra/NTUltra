@@ -1,5 +1,5 @@
 /// @description Init
-maxhealth = 120;
+maxhealth = 100;
 // Inherit the parent event
 event_inherited();
 my_health = maxhealth;

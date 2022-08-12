@@ -3,8 +3,9 @@ var um = GetPlayerUltramod();
 if um == ultramods.bulletShotgun
 {
 	instance_destroy(id,false);
-	with instance_create(x,y,Slug)
+	with instance_create(x,y,Flug)
 	{
+		dmg -=2;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -47,4 +48,19 @@ if um == ultramods.bulletShotgun
 		alarm[11] = 0;
 	}
 	instance_destroy(id,false);
+}
+else if um == ultramods.boltBullet
+{
+	instance_destroy(id,false);
+	snd_play_fire(sndCrossbow)
+	with instance_create(x,y,PenetratorBolt)
+	{
+		dmg -= 10;
+		scrCopyWeaponMod(other);
+		direction = other.direction;
+		image_angle = direction;
+		speed = other.speed;
+		team = other.team;
+		alarm[11] = 0;
+	}
 }

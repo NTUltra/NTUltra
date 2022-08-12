@@ -6,7 +6,10 @@
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskPlasmaBall",
+    "path": "sprites/mskPlasmaBall/mskPlasmaBall.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "projectile",

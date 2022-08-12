@@ -99,7 +99,7 @@ enum ultramods {
 	shotgunBolt,
 	seekerMissile,
 	
-	splinterBullet,
+	boltBullet,
 	splinterElectro,
 	bloodMelee,
 	lightningPellet,

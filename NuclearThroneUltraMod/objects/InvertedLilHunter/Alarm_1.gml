@@ -6,7 +6,7 @@ if target > 0
 {
 
 //HAS A TARGET
-if random(35) < 1 or (point_distance(x,y,target.x,target.y) < 64 and random(3) < 1) or (point_distance(x,y,target.x,target.y) > 160 and random(16) < 1)
+if random(35) < 1 or (point_distance(x,y,target.x,target.y) < 64 and random(5) < 1) or (point_distance(x,y,target.x,target.y) > 160 and random(16) < 1)
 {
 //FLY
 
@@ -68,7 +68,7 @@ else if random(5)<1
     alarm[4]=6;
 
 }
-else if point_distance(x,y,target.x,target.y) > 130 && random(2)<1
+else if point_distance(x,y,target.x,target.y) > 130 && random(4)<1
 {
 //LONG SNIPE MISSILE
 gunangle = point_direction(x,y,target.x,target.y)+random(10)-5

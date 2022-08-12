@@ -1050,7 +1050,7 @@ function scrFire2() {
 	snd_play_fire(sndHeavyCrossbow)
 
 	with instance_create(x,y,HeavyBolt)
-	{motion_add(aimDirection+random(18)-9,18)
+	{motion_add(aimDirection+random(18)-9*other.accuracy,18)
 	image_angle = direction
 	team = other.team}
 
@@ -5107,7 +5107,7 @@ function scrFire2() {
 		var msk = mask_index;
 		mask_index = mskBullet1;
 		var aimDir = aimDirection+(random(6)-3)*accuracy;
-		var len = 8+(accuracy*3);
+		var len = 11+(accuracy*2);
 		var xstep = lengthdir_x(len,aimDir);
 		var ystep = lengthdir_y(len,aimDir);
 		var bx = x;
@@ -7056,7 +7056,7 @@ function scrFire2() {
 		var msk = mask_index;
 		mask_index = mskBullet1;
 		var aimDir = aimDirection+(random(7)-3.5)*accuracy;
-		var len = 8+(accuracy*3);
+		var len = 11+(accuracy*2);
 		var xstep = lengthdir_x(len,aimDir);
 		var ystep = lengthdir_y(len,aimDir);
 		var bx = x;

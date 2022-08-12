@@ -7,8 +7,11 @@ function scrBlankArmour() {
 	{
 	//if sprite_index!=spr_hurt{
 	snd_play(snd_hurt, hurt_pitch_variation,true)
-	Sleep(20)
-	draw_rectangle_colour(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ),c_white,c_white,c_white,c_white,false);
+	with instance_create(x,y,Flash)
+	{
+		alpha = 0.4;
+		alarm[1] = 4;
+	}
 	Sleep(20);
 
 	if place_free(x+lengthdir_x(4,point_direction(x,y,Player.x,Player.y)+180),y)
@@ -28,13 +31,15 @@ function scrBlankArmour() {
 
 	motion_add(other.direction+180,10);
 	}}
-	with PopoNade {
-		instance_destroy(id,false);	
-	}
 	with projectile
 	{
 		if team!=other.team
-			instance_destroy();
+		{
+			if isGrenade
+				instance_destroy(id,false);
+			else
+				instance_destroy();
+		}
 	}
 
 	}

@@ -66,3 +66,49 @@ if um == ultramods.plasmaBolt
 		alarm[11] = 0;
 	}
 }
+ else if um == ultramods.boltBullet
+{
+	snd_play_fire(sndQuadMachinegun);
+	var acc = scrGetPlayerAccuracy();
+	with instance_create(x,y,Bullet1Explosive)
+	{
+		dmg ++;
+		direction = other.direction-(5*acc);
+		speed = other.speed-2;
+		scrCopyWeaponMod(other);
+		image_angle = direction
+		team = other.team
+		alarm[11] = 0;
+	}
+	with instance_create(x,y,Bullet1Explosive)
+	{
+		dmg ++;
+		direction = other.direction+(5*acc);
+		speed = other.speed-2;
+		scrCopyWeaponMod(other);
+		image_angle = direction
+		team = other.team
+		alarm[11] = 0;
+	}
+	with instance_create(x,y,Bullet1Explosive)
+	{
+		dmg ++;
+		direction = other.direction-(10*acc);
+		speed = other.speed-2;
+		scrCopyWeaponMod(other);
+		image_angle = direction
+		team = other.team
+		alarm[11] = 0;
+	}
+	with instance_create(x,y,Bullet1Explosive)
+	{
+		dmg ++;
+		direction = other.direction+(10*acc);
+		speed = other.speed-2;
+		scrCopyWeaponMod(other);
+		image_angle = direction
+		team = other.team
+		alarm[11] = 0;
+	}
+	instance_destroy(id,false);
+} 

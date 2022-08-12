@@ -230,7 +230,7 @@ else if Player.area = 5
 		else
 		name = "LIL HUNTER"
 	}
-	else if Player.subarea == 1
+	else// if Player.subarea == 2
 	{
 		name = "BIG DISC";
 		if random(600)<1
@@ -247,7 +247,7 @@ if Player.area = 107
 		else
 		name = "INVERTED LIL HUNTER";
 	}
-	else if Player.subarea == 1
+	else// if Player.subarea == 2
 	{
 		name = "INVERTED BIG DISC";
 		if random(600)<1

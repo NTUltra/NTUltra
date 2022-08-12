@@ -6,7 +6,7 @@ if target > 0
 {
 
 //HAS A TARGET
-if random(35) < 1 or (point_distance(x,y,target.x,target.y) < 64 and random(4) < 1) or (point_distance(x,y,target.x,target.y) > 160 and random(16) < 1)
+if random(35) < 1 or (point_distance(x,y,target.x,target.y) < 64 and random(6) < 1) or (point_distance(x,y,target.x,target.y) > 160 and random(18) < 1)
 {
 //FLY
 sprite_index = sprLilHunterLiftStart

@@ -18,7 +18,7 @@ with instance_create(x,y,BulletHit)
 sprite_index=sprHeavyBulletHit;
 
 scrRecycleGland(2);
-
+event_user(0);
 if other.team!=0
 hits--;
 

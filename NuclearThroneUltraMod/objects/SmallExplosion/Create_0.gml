@@ -13,5 +13,9 @@ if instance_exists(Player){
 }
 with myExplosionMask
 {
+	if UberCont.opt_gamemode != 34 && UberCont.opt_gamemode != 9//NORMAL MODE
+	{
+		dmg = 4;
+	}
 	mask_index = mskSmallExplosion4Player;
 }

@@ -1,9 +1,9 @@
 /// @description ultramod
 var um = GetPlayerUltramod()
-if um == ultramods.splinterBullet
+if um == ultramods.boltBullet
 {
 	instance_destroy(id,false);
-	snd_play_fire(sndPopgun);
+	snd_play_fire(sndMachinegun);
 	with instance_create(x,y,Bullet1)
 	{
 		scrCopyWeaponMod(other);

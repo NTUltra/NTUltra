@@ -10,7 +10,7 @@ if GetPlayerLoops() > 0{
 	maxhealth = 250//370;
 }
 scrBossHealthBuff();
-healAmount = 15;
+healAmount = 11;
 EnemyHealthAdjustments()
 inverted = true;
 actTime = 6;

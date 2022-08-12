@@ -83,7 +83,7 @@ if alarm[5] > 0
 if dodge > 0
 {
 
-move_contact_solid(direction,1)
+move_contact_solid(direction,0.8)
 dodge -= 1
 }
 
@@ -94,7 +94,7 @@ if mouse_check_button_pressed(mb_left) && point_distance(x,y,instance_nearest(x,
 //direction = point_direction(x,y,target.x,target.y)
 //else
 direction = point_direction(target.x+lengthdir_x(point_distance(x,y,target.x,target.y)*0.95,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),target.y+lengthdir_y(point_distance(x,y,target.x,target.y)*0.95,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),x,y)+choose(90,-90)
-dodge = 4
+dodge = 3
 }
 }
 

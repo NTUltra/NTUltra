@@ -234,7 +234,6 @@ function scrPopChests() {
 	{
 		gol = 0;
 	}
-			debug("radgol",gol);
 
 	if (instance_number(RadChest) < gol)
 	{

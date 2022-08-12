@@ -13,11 +13,11 @@ dir = instance_nearest(x,y,enemy)
     if point_distance(x,y,dir.x,dir.y) < 24 +Player.betterboltmarrow && dir.team != team
     {
 
-with instance_create(x,y,BoltTrail)
-{
-image_angle=point_direction(x,y,other.dir.x-other.hspeed,other.dir.y-other.vspeed)+180;
-image_xscale=point_distance(x,y,other.dir.x-other.hspeed,other.dir.y-other.vspeed);
-}  
+		with instance_create(x,y,BoltTrail)
+		{
+		image_angle=point_direction(x,y,other.dir.x-other.hspeed,other.dir.y-other.vspeed)+180;
+		image_xscale=point_distance(x,y,other.dir.x-other.hspeed,other.dir.y-other.vspeed);
+		} 
     
     x = dir.x-hspeed
     y = dir.y-vspeed

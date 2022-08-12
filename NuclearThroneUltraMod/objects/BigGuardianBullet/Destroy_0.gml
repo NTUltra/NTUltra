@@ -6,11 +6,14 @@ with instance_create(x,y,ScorpionBulletHit)
 	sprite_index = other.hitSprite;
 }
 var canSpawn = true;
-with Portal
-{
-	if (type == 1 || type == 4) && !inverted
-		canSpawn = false;
-}
+if instance_exists(ThroneExplo)
+	canSpawn = false;
+else
+	with Portal
+	{
+		if (type == 1 || type == 4) && !inverted
+			canSpawn = false;
+	}
 if canSpawn
 {
 	var loops = min(GetPlayerLoops(),3);

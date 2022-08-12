@@ -65,3 +65,22 @@ if um == ultramods.plasmaBolt
 		alarm[11] = 0;
 	}
 }
+ else if um == ultramods.boltBullet
+{
+	instance_destroy(id,false);
+	snd_play_fire(sndHeavyRevolver);
+	repeat(4)
+	{
+	with instance_create(x,y,Smoke)
+	motion_add(aimDirection+(random(30)-15)*other.accuracy,3+random(3))
+	}
+	with instance_create(x,y,FatToxicBullet)
+	{
+		scrCopyWeaponMod(other);
+		direction = other.direction;
+		image_angle = direction;
+		speed = other.speed - 2;
+		team = other.team;
+		alarm[11] = 0;
+	}
+} 

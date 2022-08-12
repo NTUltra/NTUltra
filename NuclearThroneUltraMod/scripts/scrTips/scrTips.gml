@@ -28,6 +28,7 @@ function scrTips() {
 	"inverted enemies have less  health",
 	"there is a cheatcode#to unlock everything",
 	"square bullets are immune to melee",
+	"flashing effects can be turned off by setting screenshake and freezeframes to 0",
 	/*these are rare*/ choose("no","bob and weave","airhorn.wav","danger zone","no sex jokes","in and about"
 	,"the purple dragon","golden frog anyone?","Y.V. mony rad","the flying cat head","myth of time","sheeps are a thing","feedback is much appreciated","follow @erdeppol","sorry bout bugs","I love you!",
 	"be nice#get bitches","fish can dodgeroll to prevent blood hammer self damage")
@@ -238,7 +239,7 @@ function scrTips() {
 	tip = choose("remember the training","focus","go","never surrender","amateur hour is over","again","in cold shadows","slow down time","hyper fast reactions","chicken used to slow down time#in retail","can't throw weapons")
 
 	if Player.race = 10
-	tip = choose("forget the old days","change is coming","a new generation","it will get better","spawning new allies heals old ones","allies take damage over time","making babies hurts","whre do these allies come from?")
+	tip = choose("forget the old days","change is coming","a new generation","it will get better","spawning new allies heals old ones","allies take damage over time","making babies hurts","where do these allies come from?")
 
 	if Player.race = 11//hunter
 	tip = choose("never miss",

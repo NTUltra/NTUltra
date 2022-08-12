@@ -2,7 +2,7 @@ scrDrop(100,100)
 scrDrop(20,0)
 if UberCont.area == 101 || UberCont.area == 122
 scrDefeatedRequiredBoss(secretChallengeBosses.bigFish);
-if !isOneWeaponOnlyModes()
+if !isOneWeaponOnlyModes() && !instance_exists(SurvivalWave) && !instance_exists(InvaderBossSpawnPortal)
 {
 	with instance_create(x-8,y,WepPickup)
 	{

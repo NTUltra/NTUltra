@@ -66,8 +66,8 @@ function scrUltraModName(um){
 			umn[1] = "MISSILE";
 		break;
 
-		case ultramods.splinterBullet:
-			umn[0] = "SPLINTER";
+		case ultramods.boltBullet:
+			umn[0] = "BOLT";
 			umn[1] = "BULLET";
 		break;
 		case ultramods.splinterElectro:

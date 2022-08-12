@@ -1,10 +1,14 @@
 /// @description Spawn some bullets
 var canSpawn = true;
-with Portal
-{
-	if (type == 4 || type == 1) && !inverted
-		canSpawn = false;
-}
+
+if instance_exists(ThroneExplo)
+	canSpawn = false;
+else
+	with Portal
+	{
+		if (type == 4 || type == 1) && !inverted
+			canSpawn = false;
+	}
 if !canSpawn
 {
 	instance_destroy(id,false);

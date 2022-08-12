@@ -7,7 +7,7 @@ shotgunshouldered = false;
 if instance_exists(Player)
 {
 if Player.race==24
-alarm[1] += 2;
+	alarm[1] += 2;
 	if Player.skill_got[15] = 1
 	{
 		shotgunshouldered = true;
@@ -16,13 +16,13 @@ alarm[1] += 2;
 
 		if Player.race=25
 		{
-		wallbounce = 8;
+			wallbounce = 8;
 
-		if Player.ultra_got[97]
-		{
-		wallbounce+=5;
-		alarm[1]+= 2;
-		}
+			if Player.ultra_got[97]
+			{
+				wallbounce+=5;
+				alarm[1]+= 2;
+			}
 		}
 	}
 }

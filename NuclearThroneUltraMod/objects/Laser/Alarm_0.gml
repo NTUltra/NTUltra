@@ -9,7 +9,7 @@ if(instance_exists(Player)){
 			motion_add(other.image_angle+Player.right*100+random(50)-25,2+random(2))
 			if isExplosive
 			{
-				snd_play_fire(sndHeavyMachinegun);
+				snd_play_fire(sndTripleMachinegun);
 				var acc = scrGetPlayerAccuracy();
 				with instance_create(x,y,Bullet1Explosive)
 				{motion_add(other.image_angle-(5*acc),14)

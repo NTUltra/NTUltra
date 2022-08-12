@@ -24,7 +24,7 @@ alarm[1] = 1;
 
 event_inherited()
 canMoveOver = true;
-team=0;
+team=1;
 
 snd_hurt = sndStatueHurt
 snd_dead = sndStatueDead

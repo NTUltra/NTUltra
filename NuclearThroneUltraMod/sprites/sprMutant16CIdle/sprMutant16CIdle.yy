@@ -67,7 +67,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 8,
-    "yorigin": 16,
+    "yorigin": 15,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprMutant16CIdle","path":"sprites/sprMutant16CIdle/sprMutant16CIdle.yy",},

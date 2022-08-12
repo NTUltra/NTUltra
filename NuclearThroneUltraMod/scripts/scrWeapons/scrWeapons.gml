@@ -937,7 +937,7 @@ function scrWeapons() {
 	wep_load[84] = 2
 	wep_cost[84] = 2
 	wep_sprt[84] = sprTripleBloodGun
-	wep_area[84] = 4
+	wep_area[84] = 3
 	wep_text[84] = "fueled by fleshwounds"
 	wep_swap[84] = sndSwapMachinegun
 	wep_rad[84] = 0;
@@ -2062,7 +2062,7 @@ function scrWeapons() {
 	wep_area[186] = 9
 	wep_text[186] = "eagle eyes + bolt marrow#allows seekers to bounce off walls"
 	wep_swap[186] = sndSwapBow
-	wep_rad[186] = 0;f
+	wep_rad[186] = 0;
 
 	wep_name[187] = "ASSAULT SEEKER SHOTGUN"
 	wep_type[187] = 3
@@ -3014,7 +3014,7 @@ function scrWeapons() {
 	wep_type[273] = 1
 	wep_auto[273] = 0
 	wep_load[273] = 55
-	wep_cost[273] = 26
+	wep_cost[273] = 30
 	wep_sprt[273] = sprGyroBurster
 	wep_area[273] = 18
 	wep_text[273] = "bwbwpebffpwefnowobfo"
@@ -4026,7 +4026,7 @@ function scrWeapons() {
 	wep_name[365] = "SPLINTER SHOTGUN"
 	wep_type[365] = 3
 	wep_auto[365] = 0
-	wep_load[365] = 26
+	wep_load[365] = 28
 	wep_cost[365] = 2
 	wep_sprt[365] = sprSplinterShotgun
 	wep_area[365] = 11
@@ -4196,10 +4196,10 @@ function scrWeapons() {
 	wep_name[380] = "BULLET LASER"
 	wep_type[380] = 1
 	wep_auto[380] = 0
-	wep_load[380] = 14
+	wep_load[380] = 15
 	wep_cost[380] = 12
 	wep_sprt[380] = sprSkullSplitter
-	wep_area[380] = 12
+	wep_area[380] = 13
 	wep_text[380] = "more bullets with eagle eyes"
 	wep_swap[380] = sndSwapMachinegun
 	wep_rad[380] = 0;
@@ -4966,7 +4966,7 @@ function scrWeapons() {
 	wep_name[450] = "POP LASER"
 	wep_type[450] = 2
 	wep_auto[450] = 0
-	wep_load[450] = 14
+	wep_load[450] = 15
 	wep_cost[450] = 2
 	wep_sprt[450] = sprPopLaser
 	wep_area[450] = 14
@@ -5088,7 +5088,7 @@ function scrWeapons() {
 	wep_type[461] = 1
 	wep_auto[461] = 0
 	wep_load[461] = 70
-	wep_cost[461] = 30
+	wep_cost[461] = 35
 	wep_sprt[461] = sprGyroIncinerator
 	wep_area[461] = 29
 	wep_text[461] = ""
@@ -5891,7 +5891,7 @@ function scrWeapons() {
 	wep_type[534] = 1
 	wep_auto[534] = 0
 	wep_load[534] = 170
-	wep_cost[534] = 124
+	wep_cost[534] = 130
 	wep_sprt[534] = sprSuperGyroBurster
 	wep_area[534] = 31
 	wep_text[534] = "bullets for months"
@@ -6561,7 +6561,7 @@ function scrWeapons() {
 	wep_name[595] = "AUTO LIGHTNING CROSSBOW"
 	wep_type[595] = 3
 	wep_auto[595] = 1
-	wep_load[595] = 8
+	wep_load[595] = 9
 	wep_cost[595] = 2
 	wep_sprt[595] = sprAutoLightningCrossbow
 	wep_area[595] = 14

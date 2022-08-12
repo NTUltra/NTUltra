@@ -52,3 +52,27 @@ if um == ultramods.laserBullet
 	}
 	instance_destroy(id,false);
 }
+else if um == ultramods.boltBullet
+{
+	instance_destroy(id,false);
+	snd_play_fire(sndSplinterGun)
+	with instance_create(x,y,Splinter)
+	{
+		scrCopyWeaponMod(other);
+		direction = other.direction+2;
+		image_angle = direction;
+		speed = other.speed;
+		team = other.team;
+		alarm[11] = 0;
+	}
+	with instance_create(x,y,Splinter)
+	{
+		scrCopyWeaponMod(other);
+		direction = other.direction-2;
+		image_angle = direction;
+		speed = other.speed;
+		team = other.team;
+		alarm[11] = 0;
+	}
+	instance_destroy(id,false);
+}

@@ -12,7 +12,7 @@ if um == ultramods.bulletShotgun
 		alarm[11] = 0;
 	}
 	instance_destroy(id,false);
-} else if um == ultramods.splinterBullet
+} else if um == ultramods.boltBullet
 {
 	instance_destroy(id,false);
 	snd_play_fire(sndSplinterGun)

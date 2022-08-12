@@ -102,7 +102,7 @@ function scrUltraModDescription(um){
 			INFEST SPLINTER <WITH> INFEST PELLET
 			ULTRA SLUGS <TO> ULTRA BOLT & 2 SPLINTERS"
 		break;
-		case ultramods.splinterBullet:
+		case ultramods.boltBullet:
 			umn = @"SWAPS
 			SPLINTERS <WITH> BULLETS
 			ULTRA SPLINTERS <WITH> ULTRA BULLETS

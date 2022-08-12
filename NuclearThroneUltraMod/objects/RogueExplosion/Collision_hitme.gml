@@ -1,4 +1,4 @@
-if other.team != team && team != 2
+if other.team != team && other.team != 2
 {
 	with other
 	{
