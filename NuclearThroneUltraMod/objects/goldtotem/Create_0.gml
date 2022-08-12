@@ -1,4 +1,4 @@
-maxhealth = 80
+maxhealth = 70
 meleedamage = 0
 size = 2
 prevhealth = 100;

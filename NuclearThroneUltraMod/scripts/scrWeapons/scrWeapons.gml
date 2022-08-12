@@ -2062,7 +2062,7 @@ function scrWeapons() {
 	wep_area[186] = 9
 	wep_text[186] = "eagle eyes + bolt marrow#allows seekers to bounce off walls"
 	wep_swap[186] = sndSwapBow
-	wep_rad[186] = 0;
+	wep_rad[186] = 0;f
 
 	wep_name[187] = "ASSAULT SEEKER SHOTGUN"
 	wep_type[187] = 3
@@ -2081,7 +2081,7 @@ function scrWeapons() {
 	wep_load[188] = 14
 	wep_cost[188] = 1
 	wep_sprt[188] = sprGrenadePistol
-	wep_area[188] = 1
+	wep_area[188] = 3
 	wep_text[188] = "tiny"
 	wep_swap[188] = sndSwapExplosive
 	wep_rad[188] = 0;

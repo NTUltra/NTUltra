@@ -1,5 +1,5 @@
 ///AI
-alarm[1] = 6 + random(4);
+alarm[1] = 7 + random(5);
 scrTarget()
 if target > 0 {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {

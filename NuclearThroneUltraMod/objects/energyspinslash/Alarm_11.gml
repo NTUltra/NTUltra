@@ -12,6 +12,7 @@ repeat(am)
 	var yy = y + lengthdir_y(l,ang);
 	with instance_create(xx,yy,MeatExplosion)
 	{
+		dmg --;
 		direction = other.direction;
 		speed = other.speed;
 		team = other.team;

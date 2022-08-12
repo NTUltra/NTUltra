@@ -5,10 +5,10 @@ var angstep = 360/am;
 var ang = image_angle + angstep
 repeat(am)
 {
-	with instance_create(x,y,HeavyBloodBullet)
+	with instance_create(x,y,BloodBullet)
 	{
+		dmg = 2;
 		scrCopyWeaponMod(other);
-		dmg += floor(other.dmg*0.25);
 		direction = ang;
 		image_angle = direction;
 		speed = 14+other.speed;
