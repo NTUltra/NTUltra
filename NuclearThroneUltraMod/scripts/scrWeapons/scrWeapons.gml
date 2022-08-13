@@ -3398,8 +3398,8 @@ function scrWeapons() {
 	wep_name[308] = "BULLET DISPERSE MACHINEGUN"
 	wep_type[308] = 1
 	wep_auto[308] = 1
-	wep_load[308] = 9
-	wep_cost[308] = 13
+	wep_load[308] = 11
+	wep_cost[308] = 18
 	wep_sprt[308] = sprBulletDisperseMachinegun
 	wep_area[308] = 18
 	wep_text[308] = "rapid fire goodness"
@@ -3871,8 +3871,8 @@ function scrWeapons() {
 	wep_name[351] = "BULLET DISPERSE DISPERSE GUN"
 	wep_type[351] = 1
 	wep_auto[351] = 1
-	wep_load[351] = 22
-	wep_cost[351] = 40
+	wep_load[351] = 25
+	wep_cost[351] = 50
 	wep_sprt[351] = sprBulletDisperseDisperseGun
 	wep_area[351] = 24
 	wep_text[351] = "disperse it all!"

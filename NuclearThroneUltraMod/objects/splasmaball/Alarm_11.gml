@@ -3,30 +3,23 @@ var um =GetPlayerUltramod();
 if um == ultramods.plasmaBolt
 {
 	snd_play_fire(sndCrossbow)
-	with instance_create(x,y,BouncerBolt)
+	UberCont.ultramodSwap = false;
+	with instance_create(x,y,SplinterSpear)
 	{
 		scrCopyWeaponMod(other);
-		direction = other.direction+5;
+		direction = other.direction;
 		image_angle = direction;
 		speed = 18+other.speed;
 		team = other.team;
 		alarm[11] = 0;
 	}
-	with instance_create(x,y,Splinter)
-	{
-		scrCopyWeaponMod(other);
-		direction = other.direction-5;
-		image_angle = direction;
-		speed = 18+other.speed;
-		team = other.team;
-		alarm[11] = 0;
-	}
+	UberCont.ultramodSwap = true;
 	instance_destroy(id,false);
 }
 else if um == ultramods.plasmaRocket
 {
 	snd_play_fire(sndRocket)
-	with instance_create(x,y,BouncerRocket)
+	with instance_create(x,y,PenetratorRocket)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;

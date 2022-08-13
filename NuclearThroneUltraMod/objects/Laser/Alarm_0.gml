@@ -92,14 +92,17 @@ if(instance_exists(Player)){
 			{
 				snd_play_fire(sndCrossbow);	
 			}
+			UberCont.ultramodSwap = false;
 			with instance_create(x,y,thebolt)
 			{motion_add(other.image_angle,24)
+				dmg = round(dmg*0.5);
 				scrCopyWeaponMod(other);
 			image_angle = direction
 			team = other.team
 			alarm[11] = 0;}
 		
 			instance_destroy(id,false);
+			UberCont.ultramodSwap = true;
 			exit;
 		}
 	}

@@ -4,4 +4,5 @@ typ = 2 //0 = normal, 1 = deflectable, 2 = destructable
 candmg=true;
 piercedmg = 30;
 dmg = 50;
-alarm[11] = 1;
+if UberCont.ultramodSwap
+	event_user(0);

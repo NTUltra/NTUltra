@@ -22,6 +22,7 @@ if um == ultramods.plasmaRocket
 	instance_destroy(id,false);
 } else if um == ultramods.rocketBolt
 {
+	UberCont.ultramodSwap = false;
 	audio_stop_sound(sndRocket);
 	snd_play_fire(sndCrossbow)
 	with instance_create(x,y,Bolt)
@@ -33,5 +34,6 @@ if um == ultramods.plasmaRocket
 		team = other.team;
 		alarm[11] = 0;
 	}
+	UberCont.ultramodSwap = true;
 	instance_destroy(id,false);
 }

@@ -1,4 +1,6 @@
 /// @description ultramod
+x = xstart;
+y = ystart;
 var um = GetPlayerUltramod();
 if um == ultramods.plasmaBolt
 {
@@ -11,6 +13,8 @@ if um == ultramods.plasmaBolt
 	}
 	with instance_create(x,y,PlasmaBallExplosive)
 	{
+		nomscale += 0.3;
+		maxSpeed += 10;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -43,7 +47,8 @@ if um == ultramods.plasmaBolt
 	}
 	with instance_create(x,y,LaserExplosive)
 	{
-		image_yscale += 0.1;
+		
+		image_yscale += 0.5;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;

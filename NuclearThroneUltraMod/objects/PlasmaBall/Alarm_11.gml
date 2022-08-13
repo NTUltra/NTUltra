@@ -2,6 +2,7 @@
 var um =GetPlayerUltramod();
 if um == ultramods.plasmaBolt
 {
+	UberCont.ultramodSwap = false;
 	snd_play_fire(sndCrossbow)
 	with instance_create(x,y,Bolt)
 	{
@@ -10,8 +11,8 @@ if um == ultramods.plasmaBolt
 		image_angle = direction;
 		speed = 18+other.speed;
 		team = other.team;
-		alarm[11] = 0;
 	}
+	UberCont.ultramodSwap = true;
 	instance_destroy(id,false);
 }
 else if um == ultramods.plasmaRocket

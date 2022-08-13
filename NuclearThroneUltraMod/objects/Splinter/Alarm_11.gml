@@ -46,7 +46,10 @@ if um == ultramods.boltBullet
 	with instance_create(x,y,ElectroBallSpawn)
 	{motion_add(other.direction+(random(8)-4),1)
 	image_angle = direction}
-	with instance_create(x,y,ElectroBall)
+	var proj = ElectroBall;
+	if isGaseous
+		proj = ToxicElectroBall
+	with instance_create(x,y,proj)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;
@@ -67,7 +70,10 @@ else if um == ultramods.plasmaBolt
 		else
 			snd_play_fire(sndPlasmaMinigun)	
 	}
-	with instance_create(x,y,MiniPlasmaBall)
+	var proj = MiniPlasmaBall;
+	if isGaseous
+		proj = ToxicMiniPlasmaBall
+	with instance_create(x,y,proj)
 	{
 		scrCopyWeaponMod(other);
 		ptime = 6;
@@ -84,7 +90,10 @@ else if um == ultramods.laserBolt
 	{
 		snd_play_fire(sndLaser)
 	}
-	with instance_create(x,y,Laser)
+	var proj = Laser;
+	if isGaseous
+		proj = LaserToxic
+	with instance_create(x,y,proj)
 	{
 		image_yscale -= 0.34;
 		scrCopyWeaponMod(other);
@@ -97,7 +106,10 @@ else if um == ultramods.laserBolt
 }  else if um == ultramods.rocketBolt
 {
 	snd_play(sndRocket,0,true);
-	with instance_create(x,y,RocketMini)
+	var proj = RocketMini;
+	if isGaseous
+		proj = RocketMiniToxic
+	with instance_create(x,y,proj)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;

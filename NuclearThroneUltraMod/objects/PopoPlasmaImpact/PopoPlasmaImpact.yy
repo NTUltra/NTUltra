@@ -1,14 +1,14 @@
 {
   "spriteId": {
-    "name": "sprPopoPlasmaImpact",
-    "path": "sprites/sprPopoPlasmaImpact/sprPopoPlasmaImpact.yy",
+    "name": "mskEnemyPlasmaImpact",
+    "path": "sprites/mskEnemyPlasmaImpact/mskEnemyPlasmaImpact.yy",
   },
   "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": {
-    "name": "mskPopoPlasmaImpact",
-    "path": "sprites/mskPopoPlasmaImpact/mskPopoPlasmaImpact.yy",
+    "name": "mskEnemyPlasmaImpact",
+    "path": "sprites/mskEnemyPlasmaImpact/mskEnemyPlasmaImpact.yy",
   },
   "persistent": false,
   "parentObjectId": null,

@@ -1,10 +1,7 @@
-/// @description ultramod
-x = xprevious;
-y = yprevious;
-mask_index = myMask;
-visible = true;
+/// @description Ultramod swap
+x = xstart;
+y = ystart;
 var um = GetPlayerUltramod();
-image_speed = 0.4;
 if um == ultramods.plasmaBolt
 {
 	with Player
@@ -16,10 +13,12 @@ if um == ultramods.plasmaBolt
 	}
 	with instance_create(x,y,PlasmaBall)
 	{
+		nomscale += 0.3;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
 		speed = other.speed;
+		maxSpeed += 10;
 		team = other.team;
 		alarm[11] = 0;
 	}
@@ -27,7 +26,7 @@ if um == ultramods.plasmaBolt
 } else if um == ultramods.rocketBolt
 {
 	snd_play(sndRocket,0,true);
-	with instance_create(x,y,RocketMini)
+	with instance_create(x,y,Rocket)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;
@@ -48,7 +47,8 @@ if um == ultramods.plasmaBolt
 	}
 	with instance_create(x,y,Laser)
 	{
-		image_yscale += 0.1;
+		dmg ++;
+		image_yscale += 0.3;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;
@@ -79,7 +79,7 @@ if um == ultramods.plasmaBolt
 	with instance_create(x,y,Smoke)
 		motion_add(other.direction+(random(30)-15),3+random(3))
 	}
-	with instance_create(x,y,FatToxicBullet)
+	with instance_create(x,y,FatBullet)
 	{
 		dmg ++;
 		scrCopyWeaponMod(other);

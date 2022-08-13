@@ -5,9 +5,6 @@ candmg=true;
 dmg = 20;
 boltStick = BoltStick;
 hitEntities = [];
-alarm[11] = 1;
-myMask = mask_index;
-visible = false;
-mask_index = mskPickupThroughWall;
 trailScale = 1;
-image_speed = 0;
+if UberCont.ultramodSwap
+	event_user(0);

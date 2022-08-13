@@ -38,6 +38,6 @@ if speed > 2 and other.team != team && !array_contains(hitEntities,other.id)
 		}
 		target = other.id
 	}
-	event_user(0);
+	event_user(1);
 }
 

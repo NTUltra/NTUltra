@@ -19,6 +19,7 @@ team = other.team
 if random(4)<1 
 norecycle=true;
 }
-
+speed += 0.1;
+if speed > 20
+	speed = 20;
 BackCont.shake += 1
-

@@ -31,7 +31,7 @@ else if other.my_health < (dmg*0.5) and !array_contains(hitEntities,other.id)// 
 	{
 		image_angle = other.direction+180;
 		team = other.team
-		ammo = 10
+		ammo = 6
 		event_perform(ev_alarm,0)
 		visible = 0
 		with instance_create(x,y,LightningSpawn)

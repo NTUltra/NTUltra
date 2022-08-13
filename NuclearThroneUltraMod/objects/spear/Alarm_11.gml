@@ -1,22 +1,19 @@
 /// @description ultramod
-x = xprevious;
-y = yprevious;
-mask_index = myMask;
-visible = true;
+x = xstart;
+y = ystart;
 var um = GetPlayerUltramod();
-image_speed = 0.4;
 if um == ultramods.plasmaBolt
 {
 	with Player
 	{
 		if skill_got[17] = 1
-			snd_play_fire(sndPlasmaBigUpg)
+			snd_play_fire(sndPlasmaUpg)
 		else
-			snd_play_fire(sndPlasmaBig)
+			snd_play_fire(sndPlasma)
 	}
-	with instance_create(x,y,PlasmaBall)
+	with instance_create(x,y,RedirectorPlasmaBall)
 	{
-		dmg += 1;
+		nomscale += 0.3;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -49,7 +46,8 @@ if um == ultramods.plasmaBolt
 	}
 	with instance_create(x,y,Laser)
 	{
-		image_yscale += 0.1;
+		image_yscale += 0.2;
+		dmg += 2;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;

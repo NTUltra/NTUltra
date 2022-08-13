@@ -1,9 +1,11 @@
-    with instance_create(x,y,BoltTrail)
+if alarm[11] < 1
+with instance_create(x,y,BoltTrail)
 {
 image_angle=other.direction;
 image_xscale=other.speed;
 }
 
+if alarm[11] < 1
 if instance_exists(enemy) and instance_exists(Player)
 {
 

@@ -53,6 +53,7 @@ else if um == ultramods.boltBullet
 {
 	instance_destroy(id,false);
 	snd_play_fire(sndCrossbow)
+	UberCont.ultramodSwap = false;
 	with instance_create(x,y,PenetratorBolt)
 	{
 		dmg -= 10;
@@ -63,4 +64,5 @@ else if um == ultramods.boltBullet
 		team = other.team;
 		alarm[11] = 0;
 	}
+	UberCont.ultramodSwap = true;
 }

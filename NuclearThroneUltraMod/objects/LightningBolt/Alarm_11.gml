@@ -1,4 +1,6 @@
 /// @description ultramod
+x = xstart;
+y = ystart;
 var um = GetPlayerUltramod();
 if um == ultramods.plasmaBolt
 {
@@ -11,6 +13,8 @@ if um == ultramods.plasmaBolt
 	}
 	with instance_create(x,y,PlasmaBallLightning)
 	{
+		nomscale += 0.3;
+		maxSpeed += 10;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -47,7 +51,6 @@ if um == ultramods.plasmaBolt
 	with instance_create(x,y,Laser)
 	{
 		scrCopyWeaponMod(other);
-		image_yscale -= 0.2;
 		image_angle = other.direction;
 		team = other.team;
 		startImg = sprLightningLaserStart;
@@ -60,7 +63,7 @@ if um == ultramods.plasmaBolt
 	{
 		image_angle = other.direction;
 		team = other.team;
-		step = 48//32 originally
+		step = 50//32 originally
 		event_perform(ev_alarm,0);
 	}
 	instance_destroy(id,false);

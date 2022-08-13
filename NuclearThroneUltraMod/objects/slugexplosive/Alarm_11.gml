@@ -55,6 +55,7 @@ if um == ultramods.bulletShotgun
 {
 	snd_play_fire(sndCrossbow);
 	instance_destroy(id,false);
+	UberCont.ultramodSwap = false;
 	with instance_create(x,y,ExplosiveBolt)
 	{
 		scrCopyWeaponMod(other);
@@ -64,4 +65,5 @@ if um == ultramods.bulletShotgun
 		team = other.team;
 		alarm[11] = 0;
 	}
+	UberCont.ultramodSwap = true;
 }

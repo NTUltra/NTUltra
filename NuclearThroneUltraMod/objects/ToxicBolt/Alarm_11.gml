@@ -1,10 +1,7 @@
 /// @description ultramod
-x = xprevious;
-y = yprevious;
-mask_index = myMask;
-visible = true;
+x = xstart;
+y = ystart;
 var um = GetPlayerUltramod();
-image_speed = 0.4;
 if um == ultramods.plasmaBolt
 {
 	with Player
@@ -16,6 +13,8 @@ if um == ultramods.plasmaBolt
 	}
 	with instance_create(x,y,PlasmaBallToxic)
 	{
+		nomscale += 0.3;
+		maxSpeed += 10;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -48,6 +47,7 @@ if um == ultramods.plasmaBolt
 	}
 	with instance_create(x,y,LaserToxic)
 	{
+		image_yscale += 0.5;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;

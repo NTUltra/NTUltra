@@ -1001,30 +1001,33 @@ function scrPowers() {
 	{
 		var mx = UberCont.mouse__x;
 		var my = UberCont.mouse__y;
-		var triedFloors = [];
-		var i = 0;
-		var n = noone;
-		while ((!place_meeting(mx+hspeed,my+vspeed,Floor) || place_meeting(mx+hspeed,my+vspeed,Wall))
-		|| (!place_meeting(mx,my,Floor) || place_meeting(mx,my,Wall))
-		&& i < 50)
+		if place_meeting(x,y,Floor)
 		{
-			n = instance_nearest_not_one_of_these(mx,my,Floor,triedFloors);
-			triedFloors[i] = n;
-			i ++;
-			var o = 16;
-			if n != noone
+			var triedFloors = [];
+			var i = 0;
+			var n = noone;
+			while ((!place_meeting(mx+hspeed,my+vspeed,Floor) || place_meeting(mx+hspeed,my+vspeed,Wall))
+			|| (!place_meeting(mx,my,Floor) || place_meeting(mx,my,Wall))
+			|| i > 50)
 			{
-				if n.object_index == FloorExplo
-					o = 8;
-				mx = n.x+o;
-				my = n.y+o;
+				n = instance_nearest_not_one_of_these(mx,my,Floor,triedFloors);
+				triedFloors[i] = n;
+				i ++;
+				var o = 16;
+				if n != noone
+				{
+					if n.object_index == FloorExplo
+						o = 8;
+					mx = n.x+o;
+					my = n.y+o;
+				}
 			}
-		}
-		//Safety but will probably never reach
-		if i >= 50
-		{
-			mx = x;
-			my = y;
+			//Safety but will probably never reach
+			if i >= 50
+			{
+				mx = x;
+				my = y;
+			}
 		}
 		if alarm[3]<1
 			alarm[3]=max(4,alarm[3]);//imunity
@@ -2376,7 +2379,7 @@ function scrPowers() {
 			toxicamount++
 		if ultra_got[92] && altUltra
 		{
-			toxicamount *= 0.6;
+			toxicamount *= 0.7;//0.6
 			toxicamount = ceil(toxicamount);
 			if toxicamount > 6
 				snd_play(sndSplinterGun,0.1,true);

@@ -1,4 +1,6 @@
 /// @description ultramod
+x = xstart;
+y = ystart;
 var um = GetPlayerUltramod();
 if um == ultramods.plasmaBolt
 {
@@ -26,6 +28,8 @@ if um == ultramods.plasmaBolt
 	snd_play_fire(sndNukeFire);
 	with instance_create(x,y,Nuke)
 	{
+		dmg = 40;
+		alarm[1] = 1;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -75,7 +79,7 @@ else if um == ultramods.boltBullet
 		scrCopyWeaponMod(other);
 		direction = other.direction-5;
 		image_angle = direction;
-		speed = 5;
+		speed = other.speed;
 		team = other.team;
 		alarm[11] = 0;
 	}
@@ -94,7 +98,7 @@ else if um == ultramods.boltBullet
 		scrCopyWeaponMod(other);
 		direction = other.direction+5;
 		image_angle = direction;
-		speed = 5;
+		speed = other.speed;
 		team = other.team;
 		alarm[11] = 0;
 	}

@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description Lightning
 if speed != 0
 {
 snd_play(sndBoltHitWall,0.1,true,true,1,false,true,0.76)
@@ -19,7 +19,7 @@ with instance_create(x,y,Lightning)
 {
 	image_angle = other.direction+180;
 team = other.team
-ammo = 20
+ammo = 18
 event_perform(ev_alarm,0)
 visible = 0
 with instance_create(x,y,LightningSpawn)
