@@ -13,6 +13,7 @@ function scrRestart() {
 	
 	with Player
 	{
+		ultra_got[87] = 0;
 		restarted = true;
 		skeletonlives = 0;
 	}

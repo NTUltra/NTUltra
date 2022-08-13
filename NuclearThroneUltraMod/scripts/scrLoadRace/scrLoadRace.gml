@@ -693,7 +693,7 @@ function scrLoadRace() {
 	case 16://Viking
 	snd_hurt=sndVikingHit
 	snd_dead=sndStatueHurt
-	snd_lowa=sndVikingHit;
+	snd_lowa=sndVikingLowA;
 	snd_lowh=sndVikingHit;
 	snd_crwn=sndLastEnemy;
 	snd_chst=sndStatueHurt;

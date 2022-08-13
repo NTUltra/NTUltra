@@ -214,6 +214,14 @@ function scrLoadRun(){
 					UberCont.revivedCharacters = encryptedRun.revivedCharacters;
 				if variable_struct_exists(encryptedRun, "beatTheGame")
 					UberCont.beatTheGame = encryptedRun.beatTheGame;
+				if variable_struct_exists(encryptedRun, "spr_idle")
+					Player.spr_idle = encryptedRun.spr_idle;
+				if variable_struct_exists(encryptedRun, "spr_walk")
+					Player.spr_walk = encryptedRun.spr_walk;
+				if variable_struct_exists(encryptedRun, "spr_hurt")
+					Player.spr_hurt = encryptedRun.spr_hurt;
+				if variable_struct_exists(encryptedRun, "spr_dead")
+					Player.spr_dead = encryptedRun.spr_dead;
 					
 			}
 			with Player
@@ -239,7 +247,6 @@ function scrLoadRun(){
 					i += 1;
 				}
 			}
-			debug("load complete");
 			room_restart();
 		}
 		else

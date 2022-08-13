@@ -13,7 +13,7 @@ branch = 20;
 image_speed = 0.4
 target = noone;
 dmg = 5;
-iframeskip = 0.09;
+iframeskip = 0.07;
 fork = 6;
 if instance_exists(Player){
 	if Player.skill_got[17] = 1{
@@ -31,7 +31,7 @@ if instance_exists(Player){
 	if Player.ultra_got[59]=1//atom electron ultra
 	{
 		image_speed-=0.1;
-		dmg += 2;
+		dmg += 1;
 		fork -= 2;
 	}
 

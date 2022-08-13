@@ -1,3 +1,4 @@
+if visible
 with instance_create(x,y,BoltTrail)
 {
 image_angle=other.direction;
@@ -6,7 +7,7 @@ image_yscale = other.trailScale;
 depth = other.depth + 1;
 }
 
-if instance_exists(enemy) and instance_exists(Player)
+if instance_exists(enemy) and instance_exists(Player) && visible
 {
 
 	if speed > 0 and Player.skill_got[21] = 1

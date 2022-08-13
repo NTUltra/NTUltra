@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndMutant12LowA",
-  "duration": 0.0,
+  "duration": 0.343492,
   "parent": {
     "name": "YungCuz",
     "path": "folders/Sounds/Player/YungCuz.yy",

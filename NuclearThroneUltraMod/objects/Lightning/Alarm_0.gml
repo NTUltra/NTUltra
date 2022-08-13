@@ -105,7 +105,8 @@ speed = 0
 image_xscale = -point_distance(x,y,oldx,oldy)/2
 
 ammo -= 1
-if place_meeting(x,y,Wall)
+var wall = instance_place(x,y,Wall)
+if wall != noone && wall.object_index == Wall
 {
 	x = xprevious
 	y = yprevious

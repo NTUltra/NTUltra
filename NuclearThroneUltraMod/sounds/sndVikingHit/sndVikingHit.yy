@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndVikingHit",
-  "duration": 0.0,
+  "duration": 0.411791,
   "parent": {
     "name": "Viking",
     "path": "folders/Sounds/Player/Viking.yy",

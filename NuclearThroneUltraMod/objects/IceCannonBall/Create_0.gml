@@ -10,11 +10,10 @@ typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 image_speed=0.4;
 alarm[0]=4;
 image_angle=random(360);
-
+friction = 0.1;
 
 alarm[1]=140;
 snd_loop(sndSnowBlowerLoop);
-
 ang=random(360);
 
 /* */

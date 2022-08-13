@@ -27,5 +27,5 @@ friction+=0.05;
 
 alarm[0]=6
 }
-alarm[1] = 150;
+alarm[1] = 120;
 alarm[11] = 1;

@@ -1,6 +1,7 @@
 if other.team != team and other.my_health > 0
 {//instance_destroy()
-speed*=0.8;
+	speed-=0.5;
+	speed*=0.9;
 with other
 {
 my_health -= 2

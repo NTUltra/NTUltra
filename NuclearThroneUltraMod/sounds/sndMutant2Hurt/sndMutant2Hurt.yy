@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndMutant2Hurt",
-  "duration": 0.0,
+  "duration": 0.353333,
   "parent": {
     "name": "Crystal",
     "path": "folders/Sounds/Player/Crystal.yy",

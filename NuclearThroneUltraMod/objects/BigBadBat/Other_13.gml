@@ -2,7 +2,8 @@
 snd_play(sndWazerStart,0,true,false,3,false,false,0.8,false,id);
 sprite_index = spr_fire;
 myLasers = [];
-var dir = point_direction(x,y,target.x,target.y);
+if instance_exists(Player)
+var dir = point_direction(x,y,Player.x,Player.y);
 var odis = laserOffset;
 var xx = x + lengthdir_x(odis,dir+90);
 var yy = y + lengthdir_y(odis,dir+90);

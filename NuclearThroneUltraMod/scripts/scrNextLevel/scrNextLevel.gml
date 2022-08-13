@@ -561,10 +561,20 @@ function scrNextLevel() {
 	&& !(area = 5 && subarea == 1)//Frozen city 1
 	)
 	{
-		if crown == 24
-			hard -= 1;
+		if area == 100
+		{
+			if crown == 24
+				hard -= 0.5;
+			else
+				hard += 0.5;
+		}
 		else
-			hard += 1;
+		{
+			if crown == 24
+				hard -= 1;
+			else
+				hard += 1;
+		}
 	}
 	if loops > 0 && hard - prevHard > 0
 	{

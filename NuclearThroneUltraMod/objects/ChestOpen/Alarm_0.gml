@@ -16,6 +16,10 @@ if instance_exists(Player) && !instance_exists(AmmoChest)
 	if t != 0 && ammo < cost && bt != 0 && bammo < bcost
 	{
 		instance_destroy()
-		instance_create(x,y,AmmoChest)
+		instance_create(x,y,AmmoChest);
+		with ChestOpen
+		{
+			alarm[0] = 0;	
+		}
 	}
 }

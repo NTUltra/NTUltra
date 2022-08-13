@@ -1,9 +1,8 @@
 /// @description Accurate shot
-scrTarget();
-if target > 0
+if instance_exists(Player)
 {
 	sprite_index = spr_fire;
-	var dir = point_direction(x,y,target.x,target.y);
+	var dir = point_direction(x,y,Player.x,Player.y);
 	audio_play_sound_on(emitter,sndSuperSlugger,false,4);
 	with instance_create(x,y,EnemyBullet1Square)
 	{

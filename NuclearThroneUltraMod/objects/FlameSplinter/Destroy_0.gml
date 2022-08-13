@@ -5,7 +5,7 @@ event_inherited();
 BackCont.shake += 1;
 snd_play(sndFlareExplode,0.1,true)
 var ang = direction + 180;
-var am = 5;
+var am = 4;
 var angstep = 360/am;
 repeat(am)
 {

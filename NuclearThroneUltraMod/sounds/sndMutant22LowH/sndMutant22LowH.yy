@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndMutant22LowH",
-  "duration": 0.0,
+  "duration": 1.409438,
   "parent": {
     "name": "Rogue",
     "path": "folders/Sounds/Player/Rogue.yy",

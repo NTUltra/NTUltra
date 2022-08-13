@@ -102,7 +102,7 @@ function scrDrop(itemdrop, weapondrop) {
 
 	if Player.ultra_got[85]
 	{
-		if random(Player.rogueammomax) > Player.rogueammo && random(160) < min(itemdrop * dropRateBuff, 160)
+		if random(Player.rogueammomax) > Player.rogueammo && random(180) < min(itemdrop * dropRateBuff, 180)
 		{
 			instance_create(x+random(4)-2,y+random(4)-2,RoguePickup);
 		}

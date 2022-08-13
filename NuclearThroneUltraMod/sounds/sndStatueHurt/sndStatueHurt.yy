@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndStatueHurt",
-  "duration": 0.0,
+  "duration": 1.53449,
   "parent": {
     "name": "Enviroment",
     "path": "folders/Sounds/Enviroment.yy",

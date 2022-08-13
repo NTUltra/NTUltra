@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndMutant10LowA",
-  "duration": 0.0,
+  "duration": 1.380688,
   "parent": {
     "name": "Rebel",
     "path": "folders/Sounds/Player/Rebel.yy",

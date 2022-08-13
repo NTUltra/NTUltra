@@ -18,7 +18,7 @@ blood = 0;
 bloodNeeded = 4;
 if (instance_exists(Player))
 {
-	if Player.area == 114 //In jungle
+	if Player.area == 114//In jungle
 	{
 		name = "TO FROZEN CITY";
 		bloodNeeded = 0;
@@ -29,6 +29,10 @@ if (instance_exists(Player))
 	} else if Player.race == 19//Skeleton also less HP so less blood needed
 	{
 		bloodNeeded = 3;
+	}
+	if UberCont.opt_gamemode == 32
+	{
+		bloodNeeded = 0;	
 	}
 }
 instance_create(x,y,WallBreak);

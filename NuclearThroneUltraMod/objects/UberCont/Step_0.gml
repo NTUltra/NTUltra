@@ -17,6 +17,7 @@ hard = Player.hard;
 with Player
 {
 	skeletonlives = 0;
+	ultra_got[87] = 0;
 	instance_destroy()
 }
 snd_play(sndMutant0Cnfm, 0, false, false)
@@ -88,6 +89,7 @@ if (keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4)) && !in
 	with Player
 	{
 		skeletonlives = 0;
+		ultra_got[87] = 0;
 		instance_destroy()
 	}
 	scrRestart()

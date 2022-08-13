@@ -6,6 +6,7 @@ if um == ultramods.boltBullet
 	snd_play_fire(sndMachinegun);
 	with instance_create(x,y,Bullet1)
 	{
+		dmg ++;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -16,8 +17,10 @@ if um == ultramods.boltBullet
 } else if um == ultramods.shotgunBolt
 {
 	instance_destroy(id,false);
+	snd_play_fire(sndPopgun);
 	with instance_create(x,y,Bullet2)
 	{
+		dmg ++;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -68,4 +71,34 @@ else if um == ultramods.plasmaBolt
 		team = other.team;
 		alarm[11] = 0;
 	}
+}
+else if um == ultramods.laserBolt
+{
+	with Player
+	{
+		snd_play_fire(sndLaser)
+	}
+	with instance_create(x,y,Laser)
+	{
+		image_yscale -= 0.34;
+		scrCopyWeaponMod(other);
+		isog = false;
+		image_angle = other.direction;
+		team = other.team
+		event_perform(ev_alarm,0);
+	}
+	instance_destroy(id,false);
+}  else if um == ultramods.rocketBolt
+{
+	snd_play(sndRocket,0,true);
+	with instance_create(x,y,RocketMini)
+	{
+		scrCopyWeaponMod(other);
+		direction = other.direction;
+		image_angle = direction;
+		speed = other.speed;
+		team = other.team;
+		alarm[11] = 0;
+	}
+	instance_destroy(id,false);
 }

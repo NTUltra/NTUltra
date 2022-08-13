@@ -66,7 +66,7 @@ function scrCrowns() {
 	crown_tips[12] = "looking for the blue stuff"
 
 	crown_name[13] = "[CROWN OF NATURAL SELECTION]"
-	crown_text[13] = "HIGHER DROPRATE#NO RADS"
+	crown_text[13] = "HIGHER DROPRATE#ENEMIES DROP NO RADS"
 	crown_used[13] = 0
 	crown_tips[13] = "don't need rads"
 

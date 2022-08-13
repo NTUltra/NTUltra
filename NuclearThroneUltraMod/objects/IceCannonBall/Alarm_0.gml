@@ -20,21 +20,16 @@ image_speed = 0.3+random(0.2)}
 }*/
 //else{
 BackCont.shake += 1
-repeat(2){
-with instance_create(x,y,IceFlame)
-{motion_add(other.image_angle+random(10)-5,2+random(4))
-team = other.team
-move_contact_solid(direction,16)
-}
+repeat(2)
+{
+	with instance_create(x+hspeed,y+vspeed,IceFlame)
+	{motion_add(other.image_angle+random(10)-5,3+random(4))
+	team = other.team
+	}
 
 
-with instance_create(x,y,IceFlame)
-{motion_add(other.image_angle+180+random(10)-5,2+random(4))
-team = other.team
-move_contact_solid(direction,16)
+	with instance_create(x+hspeed,y+vspeed,IceFlame)
+	{motion_add(other.image_angle+180+random(10)-5,3+random(4))
+	team = other.team
+	}
 }
-}
-//}
-
-/* */
-/*  */

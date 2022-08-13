@@ -5,7 +5,7 @@ if instance_exists(Player)
 	rad = Player.crownrad
 	close=false;
 	///crown of natural selection no rads more items
-	if Player.crown==13
+	if Player.crown == 13
 		rad=40;
 	if Player.crown == 17
 		rad = 20;

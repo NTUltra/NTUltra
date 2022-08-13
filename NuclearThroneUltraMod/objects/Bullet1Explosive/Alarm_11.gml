@@ -2,7 +2,7 @@
 var um = GetPlayerUltramod()
 if um == ultramods.bulletShotgun
 {
-	with instance_create(x,y,Bullet2)
+	with instance_create(x,y,Bullet2Explosive)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;
@@ -36,9 +36,9 @@ else if um == ultramods.laserBullet
 			snd_play_fire(sndLaser)	
 	}
 	instance_destroy(id,false);
-	with instance_create(x,y,Laser)
+	with instance_create(x,y,LaserExplosive)
 	{
-		image_yscale -= 0.3;
+		image_yscale -= 0.42;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;
@@ -56,7 +56,7 @@ else if um == ultramods.bulletPlasma
 		else
 			snd_play_fire(sndPlasmaMinigun)	
 	}
-	with instance_create(x,y,MiniPlasmaBall)
+	with instance_create(x,y,ExplosionMiniPlasmaBall)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;

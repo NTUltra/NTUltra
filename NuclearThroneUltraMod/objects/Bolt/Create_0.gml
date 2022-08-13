@@ -6,4 +6,7 @@ dmg = 20;
 boltStick = BoltStick;
 hitEntities = [];
 alarm[11] = 1;
+myMask = mask_index;
+visible = false;
+mask_index = mskPickupThroughWall;
 trailScale = 1;

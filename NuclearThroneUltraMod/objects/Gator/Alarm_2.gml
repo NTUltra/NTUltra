@@ -1,6 +1,7 @@
 /// @description fire
 
 snd_play(sndShotgun)
+if target != noone
 gunangle = point_direction(x,y,target.x,target.y)
 repeat(6)
 {

@@ -114,6 +114,10 @@ function scrSaveRun() {
 			hasFoughtInvadingThrone: UberCont.hasFoughtInvadingThrone,
 			revivedCharacters: UberCont.revivedCharacters,
 			beatTheGame: UberCont.beatTheGame,
+			spr_idle: Player.spr_idle,
+			spr_walk: Player.spr_walk,
+			spr_hurt: Player.spr_hurt,
+			spr_dead: Player.spr_dead,
 		};
 		with UberCont
 		{

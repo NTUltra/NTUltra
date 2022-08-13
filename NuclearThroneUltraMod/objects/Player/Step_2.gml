@@ -517,7 +517,7 @@ if armour>0
 	{armour-=1;
 
 
-	snd_play(sndHitMetal);
+	snd_play(sndLostArmour);
 	alarm[3]=max(alarm[3],5);//before your armour lowers again}
 	resetPrevHealth = true;
 

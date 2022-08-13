@@ -10,7 +10,7 @@ if um == ultramods.snowSwarm
 		speed = other.speed;
 		team = 2;
 		alarm[11] = 0;
-		dmg -= 1;
+		dmg = 0.5;
 	}
 	instance_destroy(id,false);
 }

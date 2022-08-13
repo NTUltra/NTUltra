@@ -1,6 +1,7 @@
 /// @description Fire
 sprite_index = spr_fire;
-var dir = point_direction(x,y,target.x,target.y);
+if instance_exists(Player)
+var dir = point_direction(x,y,Player.x,Player.y);
 var odis = fireOffset;
 var xx = x + lengthdir_x(odis,dir+90);
 var yy = y + lengthdir_y(odis,dir+90);

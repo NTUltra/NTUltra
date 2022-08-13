@@ -1001,7 +1001,7 @@ repeat(1+loops)
 			i++;
 			wave[i] = {
 				obj: LightningCrystal,
-				time: 240,
+				time: 260,
 				xx: centerX,
 				yy: centerY
 			};

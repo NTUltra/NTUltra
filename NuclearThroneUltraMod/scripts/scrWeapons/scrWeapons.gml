@@ -1245,7 +1245,7 @@ function scrWeapons() {
 	wep_load[112] = 5
 	wep_cost[112] = 0
 	wep_sprt[112] = sprInfinityPistol
-	wep_area[112] = 14
+	wep_area[112] = 12
 	wep_text[112] = "trusty new revolver"
 	wep_swap[112] = sndSwapPistol
 	wep_rad[112] = 0;
@@ -1872,7 +1872,7 @@ function scrWeapons() {
 	wep_load[169] = 60
 	wep_cost[169] = 11
 	wep_sprt[169] = sprSuperSpiralSlashShotgun
-	wep_area[169] = 14
+	wep_area[169] = 13
 	wep_text[169] = "vomit"
 	wep_swap[169] = sndSwapShotgun
 	wep_rad[169] = 0;
@@ -2356,7 +2356,7 @@ function scrWeapons() {
 	wep_load[213] = 100
 	wep_cost[213] = 9
 	wep_sprt[213] = sprSuperNukeLauncher
-	wep_area[213] = 14
+	wep_area[213] = 13
 	wep_text[213] = "true power"
 	wep_swap[213] = sndSwapExplosive
 	wep_rad[213] = 0;
@@ -2566,7 +2566,7 @@ function scrWeapons() {
 	wep_cost[232] = 2
 	wep_sprt[232] = sprHeavyCrossbow
 	wep_area[232] = 4
-	wep_text[232] = "heavy bolts homeing is#good with bolt marrow"
+	wep_text[232] = "sometimes in life, we don't have access to all of our braincells"
 	wep_swap[232] = sndSwapBow
 	wep_rad[232] = 0;
 
@@ -2837,7 +2837,7 @@ function scrWeapons() {
 	wep_name[257] = "LIGHTNING CROSSBOW"
 	wep_type[257] = 3
 	wep_auto[257] = 0
-	wep_load[257] = 22
+	wep_load[257] = 24
 	wep_cost[257] = 2
 	wep_sprt[257] = sprLightningCrossbow
 	wep_area[257] = 5
@@ -3362,7 +3362,7 @@ function scrWeapons() {
 	wep_swap[304] = sndSwapBow
 	wep_rad[304] = 15;
 
-	wep_name[305] = "SNOW BLOWER"
+	wep_name[305] = "FROST BLOWER"
 	wep_type[305] = 4
 	wep_auto[305] = 1
 	wep_load[305] = 4
@@ -3549,7 +3549,7 @@ function scrWeapons() {
 	wep_swap[321] = sndSwapEnergy
 	wep_rad[321] = 0;
 
-	wep_name[322] = "SNOW DRAGON"
+	wep_name[322] = "FROST DRAGON"
 	wep_type[322] = 4
 	wep_auto[322] = 1
 	wep_load[322] = 4
@@ -3571,13 +3571,13 @@ function scrWeapons() {
 	wep_swap[323] = sndSwapEnergy
 	wep_rad[323] = 0;
 
-	wep_name[324] = "ICE CANNON"
+	wep_name[324] = "FROST CANNON"
 	wep_type[324] = 4
 	wep_auto[324] = 0
 	wep_load[324] = 36
 	wep_cost[324] = 5
 	wep_sprt[324] = sprIceCannon
-	wep_area[324] = 14
+	wep_area[324] = 18
 	wep_text[324] = "Iceball!"
 	wep_swap[324] = sndSwapExplosive
 	wep_rad[324] = 0;
@@ -4036,8 +4036,8 @@ function scrWeapons() {
 	
 	wep_name[366] = "BOUNCER REVOLVER"
 	wep_type[366] = 1
-	wep_auto[366] = 0
-	wep_load[366] = 6
+	wep_auto[366] = 1
+	wep_load[366] = 7
 	wep_cost[366] = 1.5
 	wep_sprt[366] = sprBouncerRevolver
 	wep_area[366] = 2
@@ -4306,7 +4306,7 @@ function scrWeapons() {
 	wep_name[390] = "JAWSPLITTER"
 	wep_type[390] = 3
 	wep_auto[390] = 0
-	wep_load[390] = 13
+	wep_load[390] = 16
 	wep_cost[390] = 1
 	wep_sprt[390] = sprJawSplitter
 	wep_area[390] = 1
@@ -4317,7 +4317,7 @@ function scrWeapons() {
 	wep_name[391] = "GOLDEN JAWSPLITTER"
 	wep_type[391] = 3
 	wep_auto[391] = 0
-	wep_load[391] = 12
+	wep_load[391] = 17
 	wep_cost[391] = 1
 	wep_sprt[391] = sprGoldenJawSplitter
 	wep_area[391] = 17
@@ -5044,7 +5044,7 @@ function scrWeapons() {
 	wep_type[457] = 1
 	wep_auto[457] = 0
 	wep_load[457] = 11
-	wep_cost[457] = 4
+	wep_cost[457] = 5
 	wep_sprt[457] = sprExplosiveAssaultRifle
 	wep_area[457] = 7
 	wep_text[457] = "boom boom pow"
@@ -5183,7 +5183,7 @@ function scrWeapons() {
 	wep_swap[469] = sndSwapExplosive  
 	wep_rad[469] = 0;
 	
-	wep_name[470] = "SNOW LINE"
+	wep_name[470] = "FROST LINE"
 	wep_type[470] = 4
 	wep_auto[470] = 0
 	wep_load[470] = 17
@@ -5285,7 +5285,7 @@ function scrWeapons() {
 	wep_name[479] = "FROST SWORD GUN"
 	wep_type[479] = 3
 	wep_auto[479] = 1
-	wep_load[479] = 16
+	wep_load[479] = 15
 	wep_cost[479] = 2.5
 	wep_sprt[479] = sprFrostSwordGun
 	wep_area[479] = 11
@@ -6564,7 +6564,7 @@ function scrWeapons() {
 	wep_load[595] = 9
 	wep_cost[595] = 2
 	wep_sprt[595] = sprAutoLightningCrossbow
-	wep_area[595] = 14
+	wep_area[595] = 15
 	wep_text[595] = "delivering the payload"
 	wep_swap[595] = sndSwapBow
 	wep_rad[595] = 0;

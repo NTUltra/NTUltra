@@ -1,7 +1,6 @@
 ///@description AI
 alarm[1] = actTime + random(actTime);
-scrTarget()
-if target > 0 {
+if instance_exists(Player) {
 	var ran = random(100);
 	if ran > 90
 	{

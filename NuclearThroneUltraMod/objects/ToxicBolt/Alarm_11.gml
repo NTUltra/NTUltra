@@ -72,7 +72,7 @@ if um == ultramods.plasmaBolt
 	repeat(4)
 	{
 	with instance_create(x,y,Smoke)
-	motion_add(aimDirection+(random(30)-15)*other.accuracy,3+random(3))
+		motion_add(other.direction+(random(30)-15),3+random(3))
 	}
 	with instance_create(x,y,FatToxicBullet)
 	{

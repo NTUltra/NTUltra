@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndPanda",
-  "duration": 0.0,
+  "duration": 0.484263,
   "parent": {
     "name": "Panda",
     "path": "folders/Sounds/Player/Panda.yy",

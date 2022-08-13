@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndMutant2LowA",
-  "duration": 0.0,
+  "duration": 0.752018,
   "parent": {
     "name": "Crystal",
     "path": "folders/Sounds/Player/Crystal.yy",

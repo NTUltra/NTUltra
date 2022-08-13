@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndMutant3LowA",
-  "duration": 0.0,
+  "duration": 0.516349,
   "parent": {
     "name": "Player",
     "path": "folders/Sounds/Player.yy",

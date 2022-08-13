@@ -580,7 +580,7 @@ function scrUltras() {
 		    }
 		    else if Player.altUltra || (Player.wep_type[Player.wep] == 3 && Player.wep_type[Player.bwep] == 3 && instance_exists(UltraIcon)){
 				ultra_name[92] = "SPIKE BALL"
-				ultra_text[92] = "NORMAL CONTROLS#EMIT SPLINTERS INSTEAD OF GASS#ALL SPLINTERS ARE GASSEOUS"
+				ultra_text[92] = "NORMAL CONTROLS#EMIT SPLINTERS INSTEAD OF GASS#ALL SPLINTERS ARE GASEOUS"
 				ultra_tips[92] = "porkupine"
 		    }
 	    }

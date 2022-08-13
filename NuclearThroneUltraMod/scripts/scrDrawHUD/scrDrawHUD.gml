@@ -763,7 +763,6 @@ function scrDrawHUD() {
 	txt = string(floor(Player.humphrySkill));
 
 
-
 	draw_set_halign(fa_left)
 
 	draw_sprite(sprHumphrySkill,0,__view_get( e__VW.XView, 0 )+1,__view_get( e__VW.YView, 0 )+66)

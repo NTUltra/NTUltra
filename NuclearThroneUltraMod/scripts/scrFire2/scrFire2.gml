@@ -3422,7 +3422,7 @@ function scrFire2() {
 	with instance_create(x,y,IceCannonBall)
 	{
 	image_angle=random(360);
-	motion_add(aimDirection+(random(8)-4)*other.accuracy,3)
+	motion_add(aimDirection+(random(8)-4)*other.accuracy,4)
 	team = other.team}
 
 	motion_add(aimDirection+180,2)
@@ -8942,6 +8942,7 @@ function scrFire2() {
 		{image_angle = random(360);
 			accuracy = 60;
 			branch = 100;
+			iframeskip = max(0,iframeskip-0.04);
 		team = 2
 		ammo = 8;//24
 		event_perform(ev_alarm,0)
@@ -9075,7 +9076,7 @@ function scrFire2() {
 	else
 		snd_play_fire(sndLightningCannon)
 
-	var am = 24;
+	var am = 12;
 	var angStep = 360/am;
 	angStep *= accuracy;
 	var angg = aimDirection - (angStep * (am*0.5));
@@ -9083,7 +9084,7 @@ function scrFire2() {
 	{
 		with instance_create(x,y,Lightning)
 		{image_angle = angg;
-			iframeskip -= 0.02;
+			iframeskip = max(0,iframeskip-0.04);
 			accuracy = 40;
 			branch = 100;
 			team = other.team
@@ -9100,6 +9101,7 @@ function scrFire2() {
 		image_angle = aimDirection+angStep+(random(6)-3)*other.accuracy;
 		accuracy += 10;
 		branch = 60;
+		iframeskip = max(0,iframeskip-0.04);
 		team = other.team
 		ammo = 24;
 		event_perform(ev_alarm,0)
@@ -9112,6 +9114,7 @@ function scrFire2() {
 		image_angle = aimDirection-angStep+(random(6)-3)*other.accuracy;
 		accuracy += 10;
 		branch = 60;
+		iframeskip = max(0,iframeskip-0.04);
 		team = other.team
 		ammo = 24;
 		event_perform(ev_alarm,0)

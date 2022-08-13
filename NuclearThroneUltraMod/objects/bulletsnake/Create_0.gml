@@ -10,7 +10,7 @@ typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 RecycleGlandType();
 norecycle=choose(false,false,false,true);
 dmg = 2;
-alarm[11] = 0;
+alarm[11] = 1;
 cost = 1;
 
 offset = 6;

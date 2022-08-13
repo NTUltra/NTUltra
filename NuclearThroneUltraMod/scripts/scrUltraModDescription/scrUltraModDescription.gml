@@ -22,11 +22,10 @@ function scrUltraModDescription(um){
 		break;
 		case ultramods.laserBullet:
 			umn = @"SWAPS
-			LASERS <TO> HEAVY BULLETS
-			BULLETS <TO> LASERS
+			BULLETS <TO> SMALL LASERS
 			BOUNCER LASERS <TO> 2 BOUNCER BULLETS
 			BOUNCER BULLETS <TO> BOUNCER LASERS
-			HEAVY BULLETS <TO> 1 ULTRA LASER
+			HEAVY BULLETS <WITH> LASER
 			MEGA LASERS <TO> 2 FAT BULLETS
 			FAT BULLETS <TO> MEGA LASERS
 			ULTRA LASERS <TO> 2 ULTRA BULLETS
@@ -131,7 +130,7 @@ function scrUltraModDescription(um){
 		break;
 		case ultramods.snowSwarm:
 			umn = @"SWAPS
-			SNOW <WITH> SWARM"
+			FROST <WITH> SWARM"
 		break;
 		case ultramods.morphFire:
 			umn = @"SWAPS

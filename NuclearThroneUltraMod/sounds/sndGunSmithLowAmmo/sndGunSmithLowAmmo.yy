@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndGunSmithLowAmmo",
-  "duration": 0.0,
+  "duration": 1.75,
   "parent": {
     "name": "GunSmith",
     "path": "folders/Sounds/Player/GunSmith.yy",

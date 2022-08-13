@@ -1,4 +1,8 @@
 /// @description ultramod
+x = xprevious;
+y = yprevious;
+mask_index = myMask;
+visible = true;
 var um = GetPlayerUltramod();
 if um == ultramods.plasmaBolt
 {
@@ -22,7 +26,7 @@ if um == ultramods.plasmaBolt
 } else if um == ultramods.rocketBolt
 {
 	snd_play(sndRocket,0,true);
-	with instance_create(x,y,Rocket)
+	with instance_create(x,y,RocketMini)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;
@@ -69,13 +73,18 @@ if um == ultramods.plasmaBolt
 {
 	instance_destroy(id,false);
 	snd_play_fire(sndHeavyRevolver);
-	with instance_create(x,y,DistanceScaleBullet)
+	repeat(4)
 	{
-		dmg += 4;
+	with instance_create(x,y,Smoke)
+		motion_add(other.direction+(random(30)-15),3+random(3))
+	}
+	with instance_create(x,y,FatToxicBullet)
+	{
+		dmg ++;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = 5;
+		speed = other.speed - 2;
 		team = other.team;
 		alarm[11] = 0;
 	}

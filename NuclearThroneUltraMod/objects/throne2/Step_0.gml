@@ -1,17 +1,17 @@
 event_inherited()
 audio_emitter_position(emitter,x,y,depth);
-if target > 0 && crossAmmo < 1
+if instance_exists(Player) && crossAmmo < 1
 {
 	var lerpp = lp;
-	x += ((target.x + lengthdir_x(distanceToTarget,angle))-x)*lerpp;
-	y += ((target.y + lengthdir_y(distanceToTarget,angle))-y)*lerpp;
+	x += ((Player.x + lengthdir_x(distanceToTarget,angle))-x)*lerpp;
+	y += ((Player.y + lengthdir_y(distanceToTarget,angle))-y)*lerpp;
 	hspeed = x - xprevious;
 	vspeed = y - yprevious;
 	if alarm[6] < 1 && !place_meeting(x,y,Tangle) && alarm[11] < 1
 		angle += rotationSpeed; 
-	if target.x < x
+	if Player.x < x
 		right = -1
-	else if target.x > x
+	else if Player.x > x
 		right = 1
 }
 if speed > 3

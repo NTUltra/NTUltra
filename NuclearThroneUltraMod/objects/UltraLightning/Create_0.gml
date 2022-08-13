@@ -10,9 +10,9 @@ typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflects
 
 image_speed = 0.4
 target=enemy;
-dmg = 11
+dmg = 10
 accuracy=24;
-iframeskip = 0.14;
+iframeskip = 0.07;
 fork = 7;
 branch = 15;
 if instance_exists(Player)
@@ -27,7 +27,7 @@ if instance_exists(Player)
 	if Player.ultra_got[59]=1//atom electron ultra
 	{
 		image_speed-=0.1;
-		dmg += 2;
+		dmg += 1;
 		fork -= 2;
 	}
 

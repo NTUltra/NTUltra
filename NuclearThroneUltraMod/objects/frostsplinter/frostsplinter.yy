@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprFlameSplinter",
-    "path": "sprites/sprFlameSplinter/sprFlameSplinter.yy",
+    "name": "sprFrostSplinter",
+    "path": "sprites/sprFrostSplinter/sprFrostSplinter.yy",
   },
   "solid": false,
   "visible": true,

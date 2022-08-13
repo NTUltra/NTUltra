@@ -2,7 +2,7 @@
 var um = GetPlayerUltramod()
 if um == ultramods.bulletShotgun
 {
-	with instance_create(x,y,Bullet2)
+	with instance_create(x,y,Bullet2Toxic)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;
@@ -56,7 +56,7 @@ else if um == ultramods.bulletPlasma
 		else
 			snd_play_fire(sndPlasmaMinigun)	
 	}
-	with instance_create(x,y,MiniPlasmaBall)
+	with instance_create(x,y,ToxicMiniPlasmaBall)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;
