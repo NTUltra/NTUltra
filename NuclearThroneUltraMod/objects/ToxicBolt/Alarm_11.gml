@@ -1,5 +1,10 @@
 /// @description ultramod
+x = xprevious;
+y = yprevious;
+mask_index = myMask;
+visible = true;
 var um = GetPlayerUltramod();
+image_speed = 0.4;
 if um == ultramods.plasmaBolt
 {
 	with Player

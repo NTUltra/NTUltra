@@ -17,7 +17,7 @@ if wallHits < 1
 		with instance_create(x,y,LightningSpawn)
 			image_angle = other.image_angle
 	}
-	if isGasseous
+	if isGaseous
 	{
 		with instance_create(x,y,ToxicThrowerGas)
 		{
@@ -35,7 +35,7 @@ else if speed != 0
 	instance_create(x,y,Dust)
 	image_index = 2
 	image_speed = 0;
-	if isGasseous
+	if isGaseous
 	{
 		with instance_create(x,y,ToxicThrowerGas)
 		{
@@ -43,7 +43,7 @@ else if speed != 0
 			image_yscale -= 0.1
 			team = other.team;	
 		}
-		isGasseous = false;
+		isGaseous = false;
 	}
 }
 

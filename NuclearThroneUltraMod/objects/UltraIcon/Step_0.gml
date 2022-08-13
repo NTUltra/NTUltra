@@ -341,14 +341,11 @@ else if skill==14
 		Player.my_health = ceil(Player.my_health);
 		Player.exception = true;
 	}
-	else
+	Player.skillpoints += 3;//amounth of mutations
+	Player.skillsChosen -= 3;
+	if UberCont.opt_gamemode == 30 && Player.level == 1
 	{
-		Player.skillpoints += 3;//amounth of mutations
-		Player.skillsChosen -= 3;
-		if UberCont.opt_gamemode == 30 && Player.level == 1
-		{
-			Player.skillsChosen = -3;
-		}
+		Player.skillsChosen = -3;
 	}
 	//Player.skillsChosen=0;//no ultras pls
 }

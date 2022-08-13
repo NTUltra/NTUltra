@@ -9,3 +9,4 @@ trailScale = 1;
 alarm[11] = 1;
 myMask = mask_index;
 visible = false;
+image_speed = 0;

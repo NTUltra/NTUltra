@@ -4,7 +4,10 @@ if um == ultramods.boltBullet
 {
 	instance_destroy(id,false);
 	snd_play_fire(sndMachinegun);
-	with instance_create(x,y,Bullet1)
+	var proj = Bullet1;
+	if isGaseous
+		proj = Bullet1Toxic
+	with instance_create(x,y,proj)
 	{
 		dmg ++;
 		scrCopyWeaponMod(other);
@@ -18,7 +21,10 @@ if um == ultramods.boltBullet
 {
 	instance_destroy(id,false);
 	snd_play_fire(sndPopgun);
-	with instance_create(x,y,Bullet2)
+	var proj = Bullet2;
+	if isGaseous
+		proj = Bullet2Toxic
+	with instance_create(x,y,proj)
 	{
 		dmg ++;
 		scrCopyWeaponMod(other);

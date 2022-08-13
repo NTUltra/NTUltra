@@ -8,3 +8,4 @@ alarm[11] = 1;
 myMask = mask_index;
 mask_index = mskPickupThroughWall;
 visible = false;
+image_speed = 0;

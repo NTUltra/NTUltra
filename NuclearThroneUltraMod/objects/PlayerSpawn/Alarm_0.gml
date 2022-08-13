@@ -17,20 +17,21 @@ with Player//Data to keep
 {
 	//bskin=other.bskin;
 	inverted = other.inverted;
-	lastsubarea = other.lastsubarea;
 	ultramod = other.ultramod;
 	ultimategamble=true;
 	skeletonlives=other.skeletonlives;
 	livesRegain = other.livesRegain;
 	race = other.race
 	crown = 1;//other.crown
+	lastsubarea = other.lastsubarea;
 	lastarea = other.lastarea;
 	area = other.area//other.lastarea;
 	loops = other.loops;
 	hard = other.hard;
 	kills = other.kills;
-	subarea=other.subarea;
+	subarea= other.subarea;
 	boostLevel = other.level;
+	crownvisits = other.crownvisits;
 	ammo[1] = typ_ammo[1] * 3
     ammo[2] = typ_ammo[2] * 3
     ammo[3] = typ_ammo[3] * 3
@@ -86,7 +87,6 @@ with Player//Data to keep
 		accuracy = other.accuracy;
 		standartAccuracy = other.standartAccuracy;
 		invertedchance = other.invertedchance;
-		crownvisits = other.crownvisits;
 		hard = other.hard;
 		maxSpeed = other.maxSpeed;
 		hammerheadcounter = other.hammerheadcounter;

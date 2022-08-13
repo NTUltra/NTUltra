@@ -244,7 +244,6 @@ instance_destroy();
 with instance_create(x,y,PlayerSpawn)//Data to keep
 {
 //alarm[3]=300;//immunity
-lastsubarea = other.lastsubarea;
 ultramod = other.ultramod;
 ultimategamble=true;
 skeletonlives = other.skeletonlives-1;
@@ -264,15 +263,16 @@ repeat(al)
 race = other.race
 crown = 1//other.crown
 lastarea = other.lastarea;
+lastsubarea = other.lastsubarea;
 area = other.area//other.lastarea;
+subarea=other.subarea;
 loops = other.loops;
 hard = other.hard;
 kills = other.kills;
-subarea=other.subarea;
 myCorpse = playerCorpse;
 level = max(other.boostLevel,other.level);
 inverted = other.inverted;
-
+crownvisits = other.crownvisits;
 	if other.ultra_got[87] && other.altUltra && other.rogueammo > 0
 	{
 		skeletonlives += 1;
@@ -309,7 +309,6 @@ inverted = other.inverted;
 		accuracy = other.accuracy;
 		standartAccuracy = other.standartAccuracy;
 		invertedchance = other.invertedchance;
-		crownvisits = other.crownvisits;
 		hard = other.hard;
 		maxSpeed = other.maxSpeed;
 		hammerheadcounter = other.hammerheadcounter;

@@ -97,17 +97,17 @@ if target==Player
     else if hspeed < 0
     right = -1
     }
-    else if random(5+instance_number(PopoNade)*3) < 1 and grenades > 0 and freeze > 40
+    else if random(5+instance_number(PopoNade)*3) < 1 and grenades > 0 and freeze > 40 
     {
     //MISSILE
     grenades -= 1
     gunangle = point_direction(x,y,target.x,target.y)
         
     snd_play(sndEliteGruntRocketFire);
-    
+    alarm[1] += 20;
     wkick = 8
         with instance_create(x,y,PopoMissile){
-        motion_add(other.gunangle+random(10)-5,4)
+        motion_add(other.gunangle+random(10)-5,3.8)
         image_angle = direction
         team = other.team
 		if team == 2

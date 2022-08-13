@@ -13,7 +13,7 @@ for (var i = 0; i < al; i++)
 	var xx = x+random_range(128,-128);
 	var yy = y+random_range(128,-128);
 	var tries = 0;
-	while (!place_meeting(xx,yy,Floor) && tries < 1000)
+	while ((!collision_point(xx,yy,Floor,false,false) || collision_point(xx,yy,Wall,false,false)) && tries < 1000)
 	{
 		xx = x+random_range(128,-128);
 		yy = y+random_range(128,-128);

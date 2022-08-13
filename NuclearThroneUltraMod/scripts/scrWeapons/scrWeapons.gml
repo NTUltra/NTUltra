@@ -4991,7 +4991,7 @@ function scrWeapons() {
 	wep_load[452] = 12
 	wep_cost[452] = 3.5
 	wep_sprt[452] = sprJawObliterator
-	wep_area[452] = 17
+	wep_area[452] = 19
 	wep_text[452] = "why is the jaw so hated?"
 	wep_swap[452] = sndSwapShotgun
 	wep_rad[452] = 0;

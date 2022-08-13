@@ -32,7 +32,7 @@ if other.team != team and other.my_health > 0
 	else if other.team != 2
 	{
 		with other
-			scrIframeSkipper(0.03);
+			scrIframeSkipper(0.04);
 	}
 	x += (other.x-x)*0.2+random(6)-3
 	y += (other.y-y)*0.2+random(6)-3

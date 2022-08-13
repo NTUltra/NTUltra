@@ -10,3 +10,4 @@ myMask = mask_index;
 visible = false;
 mask_index = mskPickupThroughWall;
 trailScale = 1;
+image_speed = 0;

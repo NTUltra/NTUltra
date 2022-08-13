@@ -28,4 +28,17 @@ if um == ultramods.bulletShotgun
 		image_angle = other.image_angle
 	}
 	instance_destroy(id,false);
+} else if um == ultramods.shotgunBolt
+{
+	with instance_create(x,y,UltraSplinter)
+	{
+		dmg = other.dmg;
+		scrCopyWeaponMod(other);
+		direction = other.direction;
+		image_angle = direction;
+		speed = other.speed+4;
+		team = other.team;
+		alarm[11] = 0;
+	}
+	instance_destroy(id,false);
 }
