@@ -23,7 +23,7 @@ gunangle = random(360)
 alarm[1] = 30+random(30)
 wepangle = choose(-140,140)
 wepflip = 1
-
+isInverted = false;
 dodge=0;
 range = 74;
 tellTime = 8;

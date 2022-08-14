@@ -10,3 +10,4 @@ typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 time=1;
 alarm[0]=1;
 RecycleGlandType();
+norecycle = false;

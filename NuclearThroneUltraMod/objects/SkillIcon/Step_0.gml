@@ -126,79 +126,79 @@ else if skill = 18//last wish
 		Player.ammo[4] += 20
 		Player.ammo[5] += 20
 	}
-if Player.race = 22
-{
-	Player.rogueammo = Player.rogueammomax;
-}
+	if Player.race = 22
+	{
+		Player.rogueammo = Player.rogueammomax;
+	}
 
-with Player
-{
-	armour = maxarmour;
-	if race==9 || race==12//Chicken maxhealth regain
-    {
-		var targetHealth = 8;
-		if UberCont.opt_gamemode == 5
-			targetHealth = 1;
-		if skill_got[1] == 1//Rhino skin
-			targetHealth += 4;
-		if skill_got[33]//Glass arm cannon
-			targetHealth = max(1,targetHealth-2);
-		if UberCont.opt_gamemode == 9
-			targetHealth += UberCont.casualModeHPIncrease;
-		targetHealth += UberCont.maxHpIncrease;
-        if maxhealth<targetHealth
-        {
-	        maxhealth = targetHealth;
-        }
-    }	
-}
-
-Player.my_health = Player.maxhealth
-
-if Player.ammo[1] > Player.typ_amax[1]
-Player.ammo[1] = Player.typ_amax[1]
-
-if Player.ammo[2] > Player.typ_amax[2]
-Player.ammo[2] = Player.typ_amax[2]
-
-if Player.ammo[3] > Player.typ_amax[3]
-Player.ammo[3] = Player.typ_amax[3]
-
-if Player.ammo[4] > Player.typ_amax[4]
-Player.ammo[4] = Player.typ_amax[4]
-
-if Player.ammo[5] > Player.typ_amax[5]
-Player.ammo[5] = Player.typ_amax[5]
-
-if Player.curse = 1 or Player.bcurse = 1
-{
-repeat(10)
-instance_create(Player.x+random(16)-8,Player.y+random(16)-8,Curse)
-}
-Player.curse = 0
-Player.bcurse = 0
-
-if UberCont.lastwishused=false
-{
-	UberCont.lastwishused = true;
 	with Player
 	{
-		lastwishused = true;
-		skeletonlives += 1;
-		livesRegain[array_length(livesRegain)] = 3;
+		armour = maxarmour;
+		if race==9 || race==12//Chicken maxhealth regain
+	    {
+			var targetHealth = 8;
+			if UberCont.opt_gamemode == 5
+				targetHealth = 1;
+			if skill_got[1] == 1//Rhino skin
+				targetHealth += 4;
+			if skill_got[33]//Glass arm cannon
+				targetHealth = max(1,targetHealth-2);
+			if UberCont.opt_gamemode == 9
+				targetHealth += UberCont.casualModeHPIncrease;
+			targetHealth += UberCont.maxHpIncrease;
+	        if maxhealth<targetHealth
+	        {
+		        maxhealth = targetHealth;
+	        }
+	    }
 	}
-}
-else
-{
-	//Regain one part of life
-	scrRegainOneLifePart();
-}
+
+	Player.my_health = Player.maxhealth
+
+	if Player.ammo[1] > Player.typ_amax[1]
+	Player.ammo[1] = Player.typ_amax[1]
+
+	if Player.ammo[2] > Player.typ_amax[2]
+	Player.ammo[2] = Player.typ_amax[2]
+
+	if Player.ammo[3] > Player.typ_amax[3]
+	Player.ammo[3] = Player.typ_amax[3]
+
+	if Player.ammo[4] > Player.typ_amax[4]
+	Player.ammo[4] = Player.typ_amax[4]
+
+	if Player.ammo[5] > Player.typ_amax[5]
+	Player.ammo[5] = Player.typ_amax[5]
+
+	if Player.curse = 1 or Player.bcurse = 1
+	{
+	repeat(10)
+	instance_create(Player.x+random(16)-8,Player.y+random(16)-8,Curse)
+	}
+	Player.curse = 0
+	Player.bcurse = 0
+
+	if UberCont.lastwishused=false
+	{
+		UberCont.lastwishused = true;
+		with Player
+		{
+			lastwishused = true;
+			skeletonlives += 1;
+			livesRegain[array_length(livesRegain)] = 3;
+		}
+	}
+	else
+	{
+		//Regain one part of life
+		scrRegainOneLifePart();
+	}
 
 }
 else if skill = 5 && Player.race = 1//thronebut for fish
 {
-with Player//update the ammo values
-scrWeapons();
+	with Player//update the ammo values
+		scrWeapons();
 }
 else if skill = 5 && Player.race = 16//VIKING
 {
@@ -210,8 +210,9 @@ else if skill = 19{
 	scrApplyEagleEyes();
 }
 else if skill==25{
-Player.strongspirit=true;
-Player.strongspiritused=false;}
+	Player.strongspirit=true;
+	Player.strongspiritused=false;
+}
 else if skill=27//patience
 {
 
@@ -243,6 +244,19 @@ else if skill == 33 //GLASS ARM CANNON
 	//Dont die on me friend
 	Player.maxhealth = max(Player.maxhealth, 1);
 	Player.my_health = max(Player.my_health, 1);
+}
+else if skill == 35//PUFFY CHEEKS
+{
+	with Player
+	{
+		var lowa = wep_load[wep]*-2;
+		var lowb = wep_load[bwep]*-2;
+		var lowc = wep_load[cwep]*-2;
+		reload = lowa;
+		breload = lowb;
+		creload = lowc;
+			
+	}
 }
 if skill==13||skill==14||skill==15||skill==16||skill==17||skill==21//wep specific
 {Player.heavyheart++;}

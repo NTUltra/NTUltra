@@ -17,12 +17,16 @@ dmg=2;
 if instance_exists(Player)
 {
 	if Player.race=24
-		dmg ++;
+	{
+		dmg += 0.5;
+		friction -= 0.02;
+		
+	}
 
 	if Player.ultra_got[95]
 	{
 		alarm[1] = 1;
-		dmg++;
+		dmg += 0.5;
 	}
 	if (Player.bskin == 1 && Player.ultra_got[106])
 	{

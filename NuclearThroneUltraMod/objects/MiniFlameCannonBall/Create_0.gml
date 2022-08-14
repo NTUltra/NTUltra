@@ -15,7 +15,7 @@ alarm[1]=120;
 snd_loop(sndFlamerLoop);
 dmg = 20;
 fireAmount = 2;
-fireExplosionAmount = 10;
+fireExplosionAmount = 12;
 inverted = false;
 fireDelay = 2;
 bloomSprite = sprMiniFlameCannonBallBloom;

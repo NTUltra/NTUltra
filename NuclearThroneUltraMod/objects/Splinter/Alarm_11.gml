@@ -1,5 +1,6 @@
 /// @description ultramod
-var um = GetPlayerUltramod()
+x = xprevious;
+y = yprevious;
 if um == ultramods.boltBullet
 {
 	instance_destroy(id,false);

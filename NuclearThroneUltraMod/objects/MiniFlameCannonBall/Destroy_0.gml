@@ -12,11 +12,11 @@ if instance_exists(Player){
 	}
 	else{
 		var ang = direction;
-		var angstep = 360/10;
+		var angstep = 360/fireExplosionAmount;
 		repeat(fireExplosionAmount)
 		{
 		with instance_create(x,y,Flame)
-		{motion_add(ang,2+random(2))
+		{motion_add(ang,3+random(2))
 		team = other.team
 		move_contact_solid(direction,14)}
 		ang += angstep;

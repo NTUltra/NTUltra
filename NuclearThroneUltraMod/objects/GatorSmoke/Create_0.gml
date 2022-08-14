@@ -28,7 +28,7 @@ EnemyHealthAdjustments();
 
 
 team = 1
-target = -1
+target = noone;
 
 snd_hurt = sndGatorHit
 snd_dead = sndGatorDie

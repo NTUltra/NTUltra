@@ -2,17 +2,23 @@ alarm[1] = actTime+random(actTime)
 scrTarget()
 if target > 0
 {
-	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
+	var notBehindWall = collision_line(x,y,target.x,target.y,Wall,0,0) < 0
+	if notBehindWall || isInverted
 	{
 		var dis = point_distance(target.x,target.y,x,y)
 		if dis < range
 		{
-		walk = 2;
-		alarm[2]=tellTime//the delay that everyone wants
-		instance_create(x-5,y,Notice);
-		instance_create(x,y,Notice);
-		instance_create(x+5,y,Notice);
-		alarm[1]=tellTime*1.5;
+			walk = 2;
+			alarm[2]=tellTime//the delay that everyone wants
+			instance_create(x-5,y,Notice);
+			instance_create(x,y,Notice);
+			instance_create(x+5,y,Notice);
+			alarm[1]=tellTime*1.5;
+			if !notBehindWall
+			{
+				alarm[2] += 10;
+				alarm[1] += 10;
+			}
 		}
 		else if dis < 200
 		{

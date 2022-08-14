@@ -15,3 +15,4 @@ if instance_exists(Player)
 		sprite_index = sprToxicSplinter;
 	}
 }
+um = GetPlayerUltramod();

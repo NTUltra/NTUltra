@@ -18,7 +18,7 @@ branch = 15;
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1{
-		image_speed = 0.3-(Player.betterlaserbrain*0.06)
+		image_speed = 0.32-(Player.betterlaserbrain*0.06)
 		iframeskip += 0.01;
 		dmg ++;
 		fork--;
@@ -26,9 +26,14 @@ if instance_exists(Player)
 
 	if Player.ultra_got[59]=1//atom electron ultra
 	{
-		image_speed-=0.1;
+		image_speed-=0.09;
 		dmg += 1;
 		fork -= 2;
+	}
+	if Player.race=24
+	{
+		dmg ++;
+		fork --;
 	}
 
 }

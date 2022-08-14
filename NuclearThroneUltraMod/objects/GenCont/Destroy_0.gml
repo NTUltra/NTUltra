@@ -34,12 +34,12 @@ room_speed=35;
     
     if ultra_got[58]
 		alarm[9]=60;
-    
+    /*
     if ultra_got[79]==1&&race=21//Horror Ultra E
     {
-    ultra_got[79]=0;
-    skillsChosen=10;
-    }
+		ultra_got[79]=0;
+		skillsChosen=10;
+    }*/
     
     if ultra_got[69]//Angel protector
     instance_create(x,y,AngelDeflect);

@@ -2640,7 +2640,7 @@ function scrFire() {
 	}
 	with instance_create(x,y,MiniFlameCannonBall)
 	{
-	motion_add(aimDirection+(random(8)-4)*other.accuracy,3)
+	motion_add(aimDirection+(random(8)-4)*other.accuracy,5)
 	team = other.team}
 
 	motion_add(aimDirection+180,2.5)

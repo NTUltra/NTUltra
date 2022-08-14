@@ -1214,7 +1214,7 @@ function scrPopEnemies() {
 			if random(9) < 1
 				instance_create(x + 16, y + 16, choose(InvertedRat, InvertedBuffMushroom, InvertedToxicMushroomGuy, InvertedBuffMushroom, InvertedRatking, InvertedToxicMushroomGuy, InvertedBanditSquare, InvertedBuffGator))
 		    else if random(2) < 1
-		        instance_create(x + 16, y + 16, choose(InvertedRatking, InvertedToxicMushroomGuy, InvertedBuffMushroom, InvertedBuffMushroom, InvertedToxicMushroomGuy, InvertedToxicMushroomGuy, BanditSquare, InvertedRat))	
+		        instance_create(x + 16, y + 16, choose(InvertedRatking, InvertedToxicMushroomGuy, InvertedBuffMushroom, InvertedBuffMushroom, InvertedToxicMushroomGuy, InvertedToxicMushroomGuy, InvertedBanditSquare, InvertedRat))	
 		}
     }
 

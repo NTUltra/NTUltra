@@ -14,7 +14,7 @@ if instance_exists(Player)
 {
 
 if Player.race=24//elementor's passive
-dmg=5;
+	dmg=5;
 
 }
 

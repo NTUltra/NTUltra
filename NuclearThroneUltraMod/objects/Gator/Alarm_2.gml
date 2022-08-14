@@ -2,7 +2,7 @@
 
 snd_play(sndShotgun)
 if target != noone
-gunangle = point_direction(x,y,target.x,target.y)
+	gunangle = point_direction(x,y,target.x,target.y)
 repeat(6)
 {
 with instance_create(x,y,EnemyBullet3)

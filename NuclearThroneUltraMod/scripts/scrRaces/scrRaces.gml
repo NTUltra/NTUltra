@@ -36,8 +36,8 @@ function scrRaces() {
 	race_swep[2] = 1
 	race_bskin[2] = 0
 	race_cskin[2] = 0
-	race_bskin_lock[2] = "REACH INVERTED CAVES#AS CRYSTAL"
-	race_cskin_lock[2] = "REACH CURSED CAVES#AS CRYSTAL"
+	race_bskin_lock[2] = "REACH CURSED CAVES#AS CRYSTAL"
+	race_cskin_lock[2] = "REACH INVERTED CAVES#AS CRYSTAL"
 
 
 	race_name[3] = "[EYES]"

@@ -6,10 +6,11 @@ if um == ultramods.boltBullet
 	snd_play_fire(sndPopgun);
 	with instance_create(x,y,Bullet3Storm)
 	{
+		isGaseous = other.isGaseous;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = other.speed;
+		speed = other.speed-3;
 		team = other.team;
 		alarm[11] = 0;
 	}
@@ -18,6 +19,7 @@ if um == ultramods.boltBullet
 	instance_destroy(id,false);
 	with instance_create(x,y,Bullet2Storm)
 	{
+		isGaseous = other.isGaseous;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -37,7 +39,10 @@ if um == ultramods.boltBullet
 	with instance_create(x,y,ElectroBallSpawn)
 	{motion_add(other.direction+(random(8)-4),1)
 	image_angle = direction}
-	with instance_create(x,y,ElectroBall)
+	var proj = ElectroBall
+	if isGaseous
+		proj = ToxicElectroBall
+	with instance_create(x,y,proj)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;
@@ -58,8 +63,12 @@ else if um == ultramods.plasmaBolt
 		else
 			snd_play_fire(sndPlasmaMinigun)	
 	}
-	with instance_create(x,y,MiniPlasmaBall)
+	var proj = MiniPlasmaBall;
+	if isGaseous
+		proj = ToxicMiniPlasmaBall
+	with instance_create(x,y,proj)
 	{
+		nomscale += 0.1;
 		scrCopyWeaponMod(other);
 		ptime = 6;
 		direction = other.direction;
@@ -73,6 +82,7 @@ else if um == ultramods.plasmaBolt
 	snd_play(sndRocket,0,true);
 	with instance_create(x,y,RocketMiniStorm)
 	{
+		isGaseous = other.isGaseous;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -88,7 +98,10 @@ else if um == ultramods.plasmaBolt
 		snd_play_fire(sndLightning1)
 		snd_play_fire(sndLaser)
 	}
-	with instance_create(x,y,Laser)
+	var proj = Laser;
+	if isGaseous
+		proj = LaserToxic
+	with instance_create(x,y,proj)
 	{
 		scrCopyWeaponMod(other);
 		image_yscale -= 0.4;
@@ -100,11 +113,15 @@ else if um == ultramods.plasmaBolt
 		isog = false;
 		event_perform(ev_alarm,0);
 	}
-	with instance_create(x,y,LaserLightning)
+	var xx = x + lengthdir_x(random(32),direction);
+	var yy = y + lengthdir_y(random(32),direction);
+	if collision_line(x,y,xx,yy,Wall,false,false) == noone
+	with instance_create(xx,yy,LaserLightning)
 	{
+		delay = 4 +irandom(2);
 		image_angle = other.direction;
 		team = other.team;
-		step = 64//32 originally
+		step = 48+random(64)//32 originally
 		event_perform(ev_alarm,0);
 	}
 	instance_destroy(id,false);

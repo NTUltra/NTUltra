@@ -48,7 +48,7 @@ function scrEndCharacters(){
 			if !array_contains(UberCont.revivedCharacters,friendIndex)
 			{
 				instance_destroy();
-				with instance_create(x,y,DeadFriend)
+				with instance_create(x+random_range(16,-16),y+random_range(16,-16),DeadFriend)
 				{
 					sprite_index = other.spr_dead;
 					image_index = image_number-1;

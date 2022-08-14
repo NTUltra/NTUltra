@@ -34,6 +34,12 @@ if instance_exists(Player){
 		dmg += 1;
 		fork -= 2;
 	}
+	
+	if Player.race=24
+	{
+		dmg ++;
+		fork --;
+	}
 
 }
 

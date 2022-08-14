@@ -71,7 +71,7 @@ function scrUltras() {
 	if instance_exists(Player) && (Player.altUltra || (scrHasEyesMutations() && instance_exists(UltraIcon)))
 	{
 		ultra_name[9] = "STRANGE STYLE"
-		ultra_text[9] = "TELEKINESIS PULLS ENEMIES AND PROJECTILES#TOWARDS YOUR CROSSHAIR"
+		ultra_text[9] = "TELEKINESIS PULLS#ENEMIES AND PROJECTILES#TOWARDS YOUR CROSSHAIR"
 		ultra_tips[9] = "something strange"
 	}
 

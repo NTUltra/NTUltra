@@ -54,6 +54,7 @@ if instance_exists(Player)
 		with Player
 		{
 			area = 100;
+			friction = 0.45;
 		}
 		if instance_exists(TopCont)
 			TopCont.darkness = 1;

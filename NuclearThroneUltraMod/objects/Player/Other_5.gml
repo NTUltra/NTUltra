@@ -218,10 +218,10 @@ if crown==10
 hard+=0.5;
 
 
-if UberCont.opt_gamemode=10//random levels
+if UberCont.opt_gamemode == 10//random areas
 {
-area=choose(1,2,3,4,5,6,7,8,9,10,choose(105,102,103,106,107,101,100,108,109,110,113,114,115,118,117),choose(105,102,103,106,107,101,100,108,109,110,113,114,115,118,117),
-choose(105,102,103,106,107,101,100,108,109,110,113,114,115,118,117));
+area=choose(1,2,3,4,5,6,7,8,9,10,choose(105,102,103,106,107,101,100,108,109,110,113,114,115,118,117,118,119,120,121,122,123,124,15),choose(105,102,103,106,107,101,100,108,109,110,113,114,115,118,117,118,119,120,121,122,123,124,15),
+choose(105,102,103,106,107,101,100,108,109,110,113,114,115,118,117,118,119,120,121,122,123,124,15));
 
 if rnglevelloop=18
 {loops+=1;
@@ -633,6 +633,8 @@ if UberCont.opt_gamemode == 23 && !instance_exists(Menu) && instance_number(Play
 		level = other.level;
 		boostLevel = other.boostLevel;
 		rad = other.rad;
+		skillpoints = other.skillpoints;
+		crownpoints = other.crownpoints;
 		visible=true;
 		snd_play(snd_wrld, 0, false, false);
 		wep = other.wep;
@@ -645,16 +647,19 @@ if UberCont.opt_gamemode == 23 && !instance_exists(Menu) && instance_number(Play
 		skill_got = other.skill_got;
 		ultra_got = other.ultra_got;
 		swapChar = true;
+		wepmod1 =  other.wepmod1 
+		wepmod2 =  other.wepmod2 
+		wepmod3 =  other.wepmod3 
+		wepmod4 =  other.wepmod4 
+		bwepmod1 = other.bwepmod1
+		bwepmod2 = other.bwepmod2
+		bwepmod3 = other.bwepmod3
+		bwepmod4 = other.bwepmod4
+		cwepmod1 = other.cwepmod1
+		cwepmod2 = other.cwepmod2
+		cwepmod3 = other.cwepmod3
+		cwepmod4 = other.cwepmod4
 		scrWeaponHold();
-		/*
-		var dir = 0;
-		repeat(maxskill+1)
-		{skill_got[dir] = other.skill_got[dir]
-		dir += 1}
-		dir = 0
-		repeat(maxultra+1)
-		{ultra_got[dir] = other.ultra_got[dir]
-		dir += 1}*/
 	}
 	instance_destroy(id,false);
 }

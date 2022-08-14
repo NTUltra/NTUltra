@@ -41,7 +41,11 @@ if instance_exists(Player)
 		{
 			with other
 			{
-				if typ == 1
+				if isGrenade
+				{
+					instance_destroy(id,false);	
+				}
+				else if typ == 1
 				{
 					team = 2
 					if instance_exists(enemy)
@@ -59,9 +63,9 @@ if instance_exists(Player)
 						image_angle = other.direction
 					}
 					snd_play(sndRicochetWall,0.1,true);
-
+					event_user(15);
 				}
-				if typ == 2
+				else
 				{
 					instance_destroy()
 				}

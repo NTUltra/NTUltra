@@ -1,3 +1,4 @@
+if um == 0 || alarm[11] < 1
 with instance_create(x,y,BoltTrail)
 {
 	theColour = other.trailColour;
@@ -6,7 +7,7 @@ with instance_create(x,y,BoltTrail)
 	image_yscale = 0.8;
 	image_speed += 0.1;
 }
-
+if um == 0 || alarm[11] < 1
 if instance_exists(enemy) and instance_exists(Player) and alarm[2] < 1
 {
 

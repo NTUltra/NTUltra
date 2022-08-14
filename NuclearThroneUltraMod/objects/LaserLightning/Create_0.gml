@@ -7,7 +7,7 @@ their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
 they have a FORCE and can be 0 or DIRECTIONAL */
 
 typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
-
+delay = 3;
 image_yscale = 1.15//1.2
 
 if instance_exists(Player)

@@ -82,12 +82,12 @@ if area == 114
 
 if area == 115 && race == 2
 {
-	scrUnlockCSkin(2,"FOR REACHING CHEESE CAVES#AS CRYSTAL",0);	
+	scrUnlockBSkin(2,"FOR REACHING CHEESE CAVES#AS CRYSTAL",0);	
 }
 
 //SKINS
 if area = 111 && race = 2
-scrUnlockBSkin(2,"FOR REACHING INVERTED CRYSTAL CAVES#AS CRYSTAL",0);
+scrUnlockCSkin(2,"FOR REACHING INVERTED CRYSTAL CAVES#AS CRYSTAL",0);
 
 if area = 102 && race = 3
 scrUnlockBSkin(3,"FOR REACHING PIZZA SEWERS#AS EYES",0);

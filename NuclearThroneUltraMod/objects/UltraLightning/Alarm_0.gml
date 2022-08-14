@@ -16,7 +16,7 @@ if isog && ultraMod == ultramods.lightningKraken
 		ultra = true;
 		sprite_index=sprUltraTentacle;
 		scrCopyWeaponMod(other);
-		dmg = 18;
+		dmg = 10;
 		creator = Player.id;
 		team = other.team
 		ammo = other.ammo
@@ -113,6 +113,7 @@ if ammo > 0
 			branch = other.branch;
 			fork = other.fork;
 			canUltraMod = other.canUltraMod;
+			dmg = other.dmg;
 			scrCopyWeaponMod(other);
 			direction = other.direction
 			image_angle = direction
@@ -131,6 +132,7 @@ if ammo > 0
 				branch = clamp(other.branch*2.5,80,200);
 				fork = other.fork;
 				canUltraMod = other.canUltraMod;
+				dmg = other.dmg;
 				scrCopyWeaponMod(other);
 				accuracy = 5+(other.accuracy*3);
 				direction = other.direction+choose(80+random(30),-80+random(-30))
@@ -160,6 +162,7 @@ if ultraMod == ultramods.lightningPellet && alarm[0] < 1
 	
 	with instance_create(x,y,Bullet5)
 	{
+		dmg -= 1;
 		direction = other.direction;
 		if odd
 			direction += 90;
@@ -172,6 +175,7 @@ if ultraMod == ultramods.lightningPellet && alarm[0] < 1
 	}
 	with instance_create(x,y,Bullet5)
 	{
+		dmg -= 1;
 		direction = other.direction;
 		image_angle = direction;
 		speed = 8;

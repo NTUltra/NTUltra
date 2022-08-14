@@ -13,6 +13,7 @@ else
 if sprite_index = spr_fire
 sprite_index = spr_idle
 meleedamage = 0
+speed *= 0.4;
 }
 
 if speed > 5

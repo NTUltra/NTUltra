@@ -1,8 +1,7 @@
 if other.team != team and other.my_health > 0
 {//instance_destroy()
+	alarm[0] += 1;
 with other
-{
-if sprite_index!=spr_hurt
 {
     my_health -= 1
     if instance_exists(Player){
@@ -13,7 +12,6 @@ if sprite_index!=spr_hurt
     motion_add(other.direction,2)
     snd_play(snd_hurt, hurt_pitch_variation)
     instance_create(x,y,BulletHit)
-}
 
 }
 

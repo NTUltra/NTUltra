@@ -2,12 +2,6 @@ function scrEndBoss() {
 	//
 	if instance_exists(Player)
 	{
-	if Player.ultra_got[79] && Player.loops>0// && Player.area=105 && Player.subarea=1
-	{
-	Player.skillpoints+=2;
-	}
-
-
 	with UberCont
 	{
 		if opt_gamemode == 26 //DAILY RACE

@@ -1079,9 +1079,9 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 		}
 		if skill_got[35]//PUFFY CHEEKS
 		{
-			var crm = 0.6;
+			var crm = 0.5;
 			if race == 25//Doctor puffy cheeks
-				crm = 0.5;
+				crm = 0.4;
 	
 			var cr = (prevreload - reload)*crm;
 			if cr > 0 && reload < 0
@@ -1290,7 +1290,7 @@ if (ultra_got[42]==1)//HUNTER ULTRA B Homing projectiles
 	homeBoost += 4;
 if skill_got[19] == 1
 {
-	homeBoost += 1.2;
+	homeBoost += 1.1;
 	if race == 25
 		homeBoost += 0.2;
 }
@@ -1548,7 +1548,7 @@ if skill_got[2] && !instance_exists(GenCont) && !instance_exists(LevCont) && !ou
 		else
 		{
 			closedodges ++;
-			if closedodges >= 20
+			if race == 26 && closedodges >= 20
 			{
 				closedodges = -999;//Dont need this anymore
 				scrUnlockBSkin(26,"FOR PERFORMING 20 CLOSE DODGES#USING EXTRA FEET#AS HUMPHRY",0);	

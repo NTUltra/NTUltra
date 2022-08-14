@@ -1395,7 +1395,7 @@ function scrPowers() {
 	//MELTING
 	if race = 4
 	{
-		
+		var didKill = false;
 		var numberOfEnems = 0;
 		if instance_exists(IDPDVan)
 			numberOfEnems = instance_number(IDPDVan);
@@ -1403,7 +1403,7 @@ function scrPowers() {
 		{
 			if image_speed = 0 and (instance_number(enemy) > numberOfEnems or instance_exists(Portal)) and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 			{
-				
+				didKill = true;
 			instance_destroy()
 			with instance_create(x,y,BloodStreak)
 			{
@@ -1429,6 +1429,7 @@ function scrPowers() {
 			if maxhealth<=5 and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 			{//melting ultra a brain capacity
 			MorphMe=true;
+			didKill = true;
 			instance_destroy()
 			with instance_create(x,y,BloodStreak)
 			{
@@ -1449,8 +1450,9 @@ function scrPowers() {
 			} 
 		}
 		
-		if !audio_is_playing(sndCorpseExploUpg) && !audio_is_playing(sndCorpseExplo)
+		if didKill && !audio_is_playing(sndCorpseExploUpg) && !audio_is_playing(sndCorpseExplo)
 		{
+			snd_play(sndExplosion);
 			if Player.skill_got[5] = 1
 				snd_play_2d(sndCorpseExploUpg)
 			else

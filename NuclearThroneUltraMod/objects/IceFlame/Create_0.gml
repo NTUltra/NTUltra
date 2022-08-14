@@ -19,7 +19,11 @@ dmg=3;
 if instance_exists(Player)
 {
 if Player.race=24
-dmg=4
+{
+	dmg += 0.5;
+	freezetime ++;
+	friction -= 0.01;
+}
 
 }
 

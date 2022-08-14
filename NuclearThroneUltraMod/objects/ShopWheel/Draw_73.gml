@@ -31,3 +31,5 @@ draw_text(drawx+string_width(string_hash_to_newline(txt))/2+1,drawy-14,string_ha
 draw_set_color(c_silver)
 draw_text(drawx+string_width(string_hash_to_newline(txt))/2,drawy-14,string_hash_to_newline(string(txt)))
 draw_set_color(c_white)
+draw_set_halign(fa_center)
+draw_set_valign(fa_top)

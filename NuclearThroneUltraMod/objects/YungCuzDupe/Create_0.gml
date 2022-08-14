@@ -9,7 +9,7 @@ hammerheadtimer=0;
 hammerheadcounter=0;
 if Player.skill_got[26]//HAMMER HEAD
 {
-	hammerheadcounter = 30;
+	hammerheadcounter = 20;
 	if Player.race=25//Doctor but that doesn't really work right
 	{
 		hammerheadcounter += 5;

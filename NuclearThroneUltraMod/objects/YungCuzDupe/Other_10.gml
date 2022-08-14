@@ -2,7 +2,7 @@
 var canFire = false;
 with Player
 {
-	if ultra_got[45] == 0
+	if ultra_got[45] == 0 && alarm[3] < 1
 	{
 		if ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)
 		{

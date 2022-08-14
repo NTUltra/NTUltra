@@ -15,13 +15,14 @@ dir += 72
 }
 if existTime > 10
 {
-	repeat(50)
+	repeat(44)
 	{
 	with instance_create(x,y,EnemyBullet2)
 	{
-	motion_add(random(360),3+random(2))
-	image_angle = direction
-	team = other.team
+		var ran = random(330);
+			motion_add(other.gunangle+choose(ran,-ran),3.25+random(2))
+		image_angle = direction
+		team = other.team
 	}
 	}
 }

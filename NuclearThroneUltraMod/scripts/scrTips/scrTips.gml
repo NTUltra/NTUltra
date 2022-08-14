@@ -51,6 +51,7 @@ function scrTips() {
 	"war is hell",
 	"kraken pulls enemies towards you",
 	"doing alright",
+	"taking eagle eyes is for people with large brains",
 	"insomnia does not work on faking assassins",
 	"there are other worlds out there",
 	/*more rares*/choose("be kind","the original idea for#the name trashtalk#came from lars in a stream#he made a lot of the sounds#in ultra mod","if you ever get stuck#outside a level#walk far away#from the level to get teleported back","use wasd to move","don't get baited by items","ask and ye shall receive","you smell that?","sick build bro","what does your gun tell you?","don't get baited by items"

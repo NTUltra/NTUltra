@@ -3871,8 +3871,8 @@ function scrWeapons() {
 	wep_name[351] = "BULLET DISPERSE DISPERSE GUN"
 	wep_type[351] = 1
 	wep_auto[351] = 1
-	wep_load[351] = 25
-	wep_cost[351] = 50
+	wep_load[351] = 30
+	wep_cost[351] = 77
 	wep_sprt[351] = sprBulletDisperseDisperseGun
 	wep_area[351] = 24
 	wep_text[351] = "disperse it all!"
@@ -4239,8 +4239,8 @@ function scrWeapons() {
 	
 	wep_name[384] = "MINI PLASMA GUN"
 	wep_type[384] = 5
-	wep_auto[384] = 0
-	wep_load[384] = 9
+	wep_auto[384] = 1
+	wep_load[384] = 7
 	wep_cost[384] = 1
 	wep_sprt[384] = sprMiniPlasmaGun
 	wep_area[384] = 2
@@ -4925,7 +4925,7 @@ function scrWeapons() {
 	wep_load[446] = 3
 	wep_cost[446] = 2
 	wep_sprt[446] = sprAutoHandCannon
-	wep_area[446] = 15
+	wep_area[446] = 16
 	wep_text[446] = "trusty old revolver"
 	wep_swap[446] = sndSwapPistol
 	wep_rad[446] = 0;

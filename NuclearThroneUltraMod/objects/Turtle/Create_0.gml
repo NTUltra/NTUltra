@@ -4,7 +4,7 @@ meleedamage = 0
 size = 1
 
 event_inherited()
-
+friction += 0.01;
 spr_idle = sprTurtleIdle
 spr_walk = sprTurtleIdle
 spr_hurt = sprTurtleHurt
@@ -16,3 +16,4 @@ spr_fire = sprTurtleFire
 walk = 0
 alarm[1] = 30+random(90)
 
+speed = 0;

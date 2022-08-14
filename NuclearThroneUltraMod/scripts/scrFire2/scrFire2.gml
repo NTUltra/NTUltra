@@ -3861,7 +3861,7 @@ function scrFire2() {
 	sprite_index=sprUltraTentacle;
 	ultra=true;
 	creator=other.id;
-	dmg=16;//10+irandom(4)
+	dmg=10;//10+irandom(4)
 	image_angle = aimDirection+(random(60)-30)*other.accuracy
 	team = other.team
 	ammo = 52//24
@@ -7919,7 +7919,7 @@ function scrFire2() {
 	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 6
-	wkick = 3
+	wkick = 4
 
 	break;
 	

@@ -578,7 +578,7 @@ var resetPrevHealth = false;
 if (tookHit)
 {
 	//Took a hit?
-	if (skill_got[32] && isAlkaline && exception=false)//Alkaline Savila
+	if (skill_got[32] && isAlkaline && lag < 1 && armour < 1 && exception=false)//Alkaline Savila
 	{
 		var damageTaken = (prevhealth - my_health) + damageReduced;
 		//Needs to be healable or lethal
