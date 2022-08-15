@@ -12,7 +12,7 @@ if Player.ultra_got[94]{//cold heart
 instance_create(x+8+random(8)-4,y+8+random(8)-4,Debris)}
 }
 
-snd_play(sndWallBreak)
+snd_play(sndWallBreak,0.1)
 
 instance_create(x,y,Smoke);
 

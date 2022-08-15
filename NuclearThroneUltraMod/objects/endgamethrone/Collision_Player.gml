@@ -17,6 +17,11 @@ if active
 			sprite_index = sprBigPortalSpawn;
 			visible = true;
 		}
+		with Player
+		{
+			flying = 0;
+			mask_index=mskPlayer;
+		}
 		with WallHitMe
 		{
 			instance_destroy();	

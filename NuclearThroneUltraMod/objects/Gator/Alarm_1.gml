@@ -12,10 +12,10 @@ if target > 0 {
 				instance_create(x-5,y,Notice);
                 alarm[1] = actTime*3
             }
-            else if random(3) < 2 {
+            else if random(5) < 1 {
                 direction = point_direction(x, y, target.x, target.y) + random(180) - 90
 				var n = instance_nearest(x,y,Wall)
-				if n != noone && point_distance(x,y,n.x,n.y) < 40
+				if n != noone && point_distance(x,y,n.x,n.y) < 48
 				{
 					direction = point_direction(n.x,n.y,x,y);
 				}

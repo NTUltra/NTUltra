@@ -18,7 +18,10 @@ snd_melee = sndGoldScorpionMelee
 //behavior
 ammo = 20
 walk = 0
-gunangle = random(360)
+if instance_exists(Player)
+	gunangle = point_direction(x,y,Player.x,Player.y);
+else
+	gunangle = random(360);
 alarm[1] = 30+random(90)
 
 

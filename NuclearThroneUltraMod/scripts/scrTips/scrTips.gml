@@ -104,11 +104,11 @@ function scrTips() {
 	if Player.area = 3
 	tip = choose("shoot robots on sight","there used to be trees here","look up","rust everywhere","the sound of birds","don't cross the streams","climb over cars","thiefs can steal ammo","thiefs can steal weapons")
 	if Player.area = 4
-	tip = choose("oh no","good luck","spiderwebs everywhere","reflections on the walls","skin is crawling","almost halfway there")
+	tip = choose("oh no","good luck","spiderwebs everywhere","reflections on the walls","skin is crawling","nearly there")
 	if Player.area = 5
 	tip = choose("wear a scarf","they used to have electricity","miss the sun","civilization","walk softly",choose("cold potatoes","there is a pink sheep nearby","there is no yeti","there is no yeti","there is no yeti","lill hunter is a bitch"))
 	if Player.area = 6
-	tip = choose("beep boop","nerds","don't push any buttons","randa")
+	tip = choose("beep boop","nerds","don't push any buttons","randa","almost halfway there","where they're made")
 	if Player.area = 100
 	tip = choose("aw yes","take a crown to uncurse your weapon","there is value here","visit this place atleast twice","let's hope its not toxic again",
 	"old torches","you can get 3 mods#on a single weapon","mods stack","take a crown to unlock#crown start for this character","most weapon mods benefit from#weapon specific mutations","a weapon you mod will always come through the portal, you can pick it up next area",
@@ -149,7 +149,7 @@ function scrTips() {
 	if Player.area = 111
 	tip = choose("not cursed caves","green & blue","caves part 2","weird","odd","spinach caves","brocoli")
 	if Player.area = 112
-	tip = choose("buttons","balls","labs are now inverted")
+	tip = choose("buttons","balls","what was made here","experiments gone wrong","you have entered the danger zone")
 	if Player.area = 113
 	tip = choose("welcome to banditland","bandits with erasers","laserbandits","when the night falls","tonight bandit party","be afraid of the bandit")
 	if Player.area = 114

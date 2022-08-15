@@ -212,8 +212,6 @@ if random(200) < 1 topindex = 3
 topindex += choose(0,4)
 outindex = choose(0,0,0,0,1,2,3,4)
 outindex += choose(0,4)
-if !place_meeting(x,y+16,Floor)
-visible = 0
 
 
 

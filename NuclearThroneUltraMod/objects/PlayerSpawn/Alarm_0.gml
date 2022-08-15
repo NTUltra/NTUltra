@@ -155,7 +155,7 @@ with Player//Data to keep
 	{
 		with RerollStation
 			instance_destroy();
-		alarm[3]=max(300,31*boostLevel);//immunity
+		alarm[3]=max(270,29*boostLevel);//immunity
 		myShield = instance_create(x,y,EuphoriaShield)
 		with myShield
 		{

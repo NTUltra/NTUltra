@@ -93,7 +93,7 @@ with Player
 		{
 			snd_play_2d(sndRobotEatUpg)
 			r += 4;
-			if my_health < maxhealth
+			if my_health < maxhealth && random(maxhealth-1) > my_health and Player.crown != 2
 				instance_create(x,y,HPPickup);
 			else
 				instance_create(x,y,AmmoPickup);
@@ -101,7 +101,7 @@ with Player
 		else
 			snd_play_2d(sndRobotEat);
 			
-		if random(maxhealth) > my_health and Player.crown != 2
+		if my_health < maxhealth && random(maxhealth-1) > my_health and Player.crown != 2
 			instance_create(x,y,HPPickup)
 		else
 			instance_create(x,y,AmmoPickup)

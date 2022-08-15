@@ -60,10 +60,15 @@ else if skill = 10
 	{
 		Player.rogueammomax=8;
 	}
+	else if Player.ultra_got[87] && Player.altUltra
+	{
+		Player.rogueammomax=3;
+	}
 	else
 	{
 		Player.rogueammomax=4;
 	}
+	
 if Player.race=25
 {
 Player.typ_amax[1] = 255+Player.skill_got[10]*345

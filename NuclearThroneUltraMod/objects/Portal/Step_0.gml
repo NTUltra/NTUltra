@@ -75,7 +75,7 @@ with WepPickup
 	}
 }
 
-if point_distance(x,y,Player.x,Player.y)<d
+if alarm[1] < 1 && point_distance(x,y,Player.x,Player.y)<d
 	Player.alarm[3]=10;
 }
 

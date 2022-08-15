@@ -59,6 +59,11 @@ if sprite_index == sprNothing2Death || sprite_index == sprInvertedNothing2Death
 			{
 				instance_destroy();	
 			}
+			with Player
+			{
+				flying = 0;
+				mask_index=mskPlayer;
+			}
 		}
 		else
 		{

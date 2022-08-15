@@ -1695,9 +1695,7 @@ display_mouse_set(mox,moy);
 ///Angel flying through walls
 if race=18
 {
-    if instance_exists(Floor) && instance_exists(WallHitMe)
-    {
-    if flying>0
+	if flying>0
     {
     
 
@@ -1705,7 +1703,9 @@ if race=18
     if flying<1
 		mask_index=mskPlayer;
     }
-    
+	
+    if instance_exists(Floor) && instance_exists(WallHitMe)
+    {
      var ground = instance_nearest(x,y,Floor);
      var wall = instance_nearest(x,y,WallHitMe);
      

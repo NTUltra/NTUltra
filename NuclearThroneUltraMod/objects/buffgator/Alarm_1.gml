@@ -12,6 +12,13 @@ if target > 0 {
 			gunangle =  point_direction(x, y, target.x, target.y) + (random(16) - 8)
 	        alarm[1] = tellTime*4;
         }
+		else if random(5) < 1
+		{
+			direction = point_direction(x,y,target.x, target.y) + random(20) - 10
+            speed = 0.4
+            walk = 20 + random(10)
+            gunangle = point_direction(x, y, target.x, target.y)
+		}
         else {
             direction = point_direction(target.x, target.y, x, y) + random(20) - 10
             speed = 0.4
@@ -24,7 +31,7 @@ if target > 0 {
         else if target.x > x
         right = 1
     }
-    else if random(5) < 1 {
+    else if random(6) < 1 {
         motion_add(random(360), 0.4)
         walk = 20 + random(10)
         alarm[1] = walk + 10 + random(30)

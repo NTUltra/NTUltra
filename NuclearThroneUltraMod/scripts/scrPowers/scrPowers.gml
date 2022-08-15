@@ -25,6 +25,11 @@ function scrPowers() {
 		if (insufficientFunds)
 		{
 			snd_play_2d(snd_lowa,0,true,false,10);
+			snd_play(sndEmpty)
+			dir = instance_create(x,y,PopupText)
+			dir.mytext = "NOT ENOUGH AMMO";
+			dir.theColour=c_red;
+			drawempty = 30
 		}
 		else
 		{
@@ -1903,13 +1908,13 @@ function scrPowers() {
 
 	if race==24 && !lockoutElementor//Elementor
 	{
-		var takePercentage = 0.0075;//0.75%
+		var takePercentage = 0.05;//0.75%
 		if skill_got[5]
 		{
-			takePercentage = 0.005;//0.05%
+			takePercentage = 0.03;//0.05%
 		}
 		var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
-		var cost = typ_amax[wepType]*takePercentage;
+		var cost = typ_ammo[wepType]*takePercentage;
 		if (wepType != 0 && ammo[wepType] - cost > 0)
 		{
 			var myMask = mask_index;
@@ -1944,6 +1949,11 @@ function scrPowers() {
 		{
 			lockoutElementor = true;
 			snd_play_2d(snd_lowa,0,true,false,10);
+			snd_play(sndEmpty)
+			dir = instance_create(x,y,PopupText)
+			dir.mytext = "NOT ENOUGH AMMO";
+			dir.theColour=c_red;
+			drawempty = 30
 			BackCont.shake += 5;
 		}
 	}

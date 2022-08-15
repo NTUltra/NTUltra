@@ -1,9 +1,10 @@
 snd_play(sndMeatExplo)
 snd_play(sndBloodLauncherExplo)
 ang = random(360)
-instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
-instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
-instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
+instance_create(x+lengthdir_x(20,ang),y+lengthdir_y(20,ang),MeatExplosion)
+instance_create(x+lengthdir_x(20,ang+90),y+lengthdir_y(20,ang+90),MeatExplosion)
+instance_create(x+lengthdir_x(20,ang+180),y+lengthdir_y(20,ang+180),MeatExplosion)
+instance_create(x+lengthdir_x(20,ang+270),y+lengthdir_y(20,ang+270),MeatExplosion)
 
 
 with instance_create(x,y,BloodStreak)

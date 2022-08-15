@@ -18,8 +18,7 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 snd_play(sndDragonEmerge)
 scrBossKill();
 scrDrop(100,0)
-scrDrop(50,90)
-scrDrop(50,1)
+scrDrop(50,60)
 
 event_inherited()
 with myCorpse

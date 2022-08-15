@@ -262,6 +262,15 @@ function scrDrawBloom() {
 		{
 			draw_sprite_ext(sprRiskActive,other.wave,x,y,1.1,1.1,image_angle,c_white,ba+0.1)
 		}
+		
+		if ultra_got[94]
+		with Debris
+		{
+			if speed > 2
+			{
+				draw_sprite_ext(sprDebrisBloom,image_index,x,y,2,2,image_angle,c_white,ba)
+			}
+		}
 	}
 	with DeflectMelee
 	{

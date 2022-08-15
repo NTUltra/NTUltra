@@ -79,8 +79,10 @@ draw_sprite(sprite_index,image_index,x,y-8)
 with Wall
 draw_sprite(topspr,topindex,x,y-8)
 with VikingWall
-draw_sprite_ext(topspr,topindex,x,y-8,1,1,image_angle,c_gray,1)
-
+{
+	if visible
+		draw_sprite_ext(topspr,topindex,x,y-8,1,1,image_angle,c_gray,1)
+}
 if instance_exists(Spiral)
 	with Bones
 	draw_sprite_ext(sprite_index,-1,x,y,image_xscale,1,0,c_white,1)

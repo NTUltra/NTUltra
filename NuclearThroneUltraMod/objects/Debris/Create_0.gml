@@ -57,15 +57,25 @@ time = 10
 if speed > 0
 alarm[1] = random(10)/speed+1
 
+if instance_exists(enemy)
+{
+	var n = instance_nearest(x,y,enemy)
+	if n != noone && n.team != 2
+	{
+		speed *= 0.5;
+		motion_add(point_direction(x,y,n.x,n.y),speed);
+	}
+}
 if instance_exists(Player)
 {
-if Player.race=24
-{
-if Player.ultra_got[94]//elementor ultra Cold Heart
-{
-speed*=2
-friction=0.14;
-}
-}
+	if Player.ultra_got[94]//elementor ultra Cold Heart
+	{
+		speed*=2
+		friction=0.14;
+		alarm[2] = 1;
+		image_xscale += 0.1;
+		image_yscale += 0.1;
+		
+	}
 }
 

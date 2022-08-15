@@ -1,5 +1,6 @@
 if other.team != team and other.my_health > 0
 {
+	speed -= 0.02;
 	if other.sprite_index != other.spr_hurt
 	{
 		Sleep(4);

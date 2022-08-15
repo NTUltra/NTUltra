@@ -75,7 +75,7 @@ image_xscale = -point_distance(x,y,oldx,oldy)/4
 ammo -= 1
 
 var wall = instance_place(x,y,Wall)
-if wall != noone && wall.object_index == Wall
+if wall != noone && wall.object_index != WallHitMe
 {
 x = xprevious
 y = yprevious

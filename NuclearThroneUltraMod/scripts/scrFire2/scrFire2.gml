@@ -158,10 +158,10 @@ function scrFire2() {
 	{
 	if Player.skill_got[17] = 1//laserbrain
 	{
-	dmg=16+(other.betterlaserbrain*2)
+	dmg=17+(other.betterlaserbrain*2)
 	}
 	else
-	dmg = 14//rench4//sledge16
+	dmg = 16//rench4//sledge16
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
