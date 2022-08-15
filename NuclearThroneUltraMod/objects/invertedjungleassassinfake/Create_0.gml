@@ -11,7 +11,7 @@ target = -1
 wkick=false;
 spr_chrg=false;
 spr_fire=false;
-
+isInverted = true;
 spr_idle = sprite_index
 spr_hurt = sprJungleAssassinHurt
 spr_dead = sprJungleAssassinDead

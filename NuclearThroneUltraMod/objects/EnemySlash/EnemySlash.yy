@@ -5,9 +5,10 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
-    "name": "mskSlash",
-    "path": "sprites/mskSlash/mskSlash.yy",
+    "name": "mskEnemySlash",
+    "path": "sprites/mskEnemySlash/mskEnemySlash.yy",
   },
   "persistent": false,
   "parentObjectId": {

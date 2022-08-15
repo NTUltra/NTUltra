@@ -80,26 +80,31 @@ function scrCompletionPercentage() {
 	{//100% unlock!
 		scrUnlockGameMode(17,"FOR UNLOCKING EVERYTHING!#CONGRATULATIONS! U R DA BEST! <3");
 		
-		/*
-		Counting gold weapons post 100%
+		
+		//Counting gold weapons post 100%
 		//Golden weapons
 		var countrace=1;
 		var countstartwep=1;
 		var totalStartWeps = 0;
+		gotAllGold = true;
 		repeat(racemax-1)
 		{
 			countstartwep=1;
 			repeat(maxstartwep-1)
 			{
-				if start_wep_have[countstartwep,countrace] == 1
-					unlocked+=1//starting weapons count less
+				if start_wep_have[countstartwep,countrace] == 0
+				{
+					//unlocked++//If you want to count golds into percentage
+					gotAllGold = false;
+					continue;
+				}
 	
 				totalStartWeps++;
 				countstartwep++;
 			}
 			countrace++;
 		}
-		percentage=round( (unlocked/everything)*100 );*/
+		//percentage=round( (unlocked/everything)*100 );*/
 	}
 	return percentage;
 }

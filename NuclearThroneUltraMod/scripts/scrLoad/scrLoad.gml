@@ -8,5 +8,6 @@ function scrLoad() {
 	    ini_close();
 
 	//Percentage of unlocked stuff
-	completionpercentage=scrCompletionPercentage();
+	gotAllGold = false;
+	completionpercentage = scrCompletionPercentage();
 }

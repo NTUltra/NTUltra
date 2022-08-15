@@ -4,13 +4,14 @@ if UberCont.mouse__x > x and UberCont.mouse__x < x+24 and UberCont.mouse__y > y 
 with option
 	instance_destroy()
 selected = 1
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+40,KeyUp)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+48,KeyDown)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+56,KeyLeft)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+64,KeyRight)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+72,KeySwap)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+80,KeyPickup)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-__view_get( e__VW.WView, 0 )/4,__view_get( e__VW.YView, 0 )+64,KeyReset)
+var yy = -4;
+instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+yy+40,KeyUp)
+instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+yy+48,KeyDown)
+instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+yy+56,KeyLeft)
+instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+yy+64,KeyRight)
+instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+yy+72,KeySwap)
+instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+yy+80,KeyPickup)
+instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-__view_get( e__VW.WView, 0 )/4,__view_get( e__VW.YView, 0 )+yy+40,KeyReset)
 
 //instance_create(view_xview+view_wview/2,view_yview+96,GameModeUpDown)
 

@@ -7,7 +7,7 @@ meleedamage = 0
 size = 1
 target = -1
 
-
+isInverted = false;
 wkick=false;
 spr_chrg=false;
 spr_fire=false;

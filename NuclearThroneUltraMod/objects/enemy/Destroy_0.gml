@@ -24,7 +24,7 @@ if object_index!=SnowTank && object_index!=InvertedSnowTank && object_index!=Gol
 		{
 			var impactWrist = false;
 			if Player.ultra_got[52] == 1
-				speed += 4;
+				speed += 2;
 			if Player.skill_got[20] == 1
 			{
 				impactWrist = true;

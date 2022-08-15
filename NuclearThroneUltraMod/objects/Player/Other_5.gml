@@ -130,7 +130,8 @@ if (instance_exists(WeaponChest) or instance_exists(BigWeaponChest) && area != 1
 {
 	nochest += 1
 }
-
+if area == 1 && subarea == 1 & loops == 0
+	nochest = -1;
 if crown == 15
 {
 	if ultra_got[31]
@@ -268,259 +269,252 @@ if looping && area != 104
 	scrRegainOneLifePart();
 	
 	debug("Looping now");
-if loops > 0 && UberCont.opt_gamemode == 34
-{
-	scrUnlockGameMode(35,"FOR REACHING LOOP 2#ON HARD MODE",34)
-}
-if scrCheckLoopAll()
-	scrUnlockCSkin(1,"FOR LOOPING WITH EVERY CHARACTER",0);
+	if loops > 0 && UberCont.opt_gamemode == 34
+	{
+		scrUnlockGameMode(35,"FOR REACHING LOOP 2#ON HARD MODE",34)
+	}
+	if scrCheckLoopAll()
+		scrUnlockCSkin(1,"FOR LOOPING WITH EVERY CHARACTER",0);
 	
-if race = 11 && weaponspickedup<1
-scrUnlockBSkin(11,"FOR LOOPING#WITHOUT PICKING UP A WEAPON#AS HUNTER",0);
+	if race = 11 && weaponspickedup<1
+	scrUnlockBSkin(11,"FOR LOOPING#WITHOUT PICKING UP A WEAPON#AS HUNTER",0);
 
-//SKINNS
-if race =3 && skill_got[19]
-scrUnlockCSkin(3,"FOR LOOPING WITH EAGLE EYES#AS EYES",0);
+	//SKINNS
+	if race =3 && skill_got[19]
+	scrUnlockCSkin(3,"FOR LOOPING WITH EAGLE EYES#AS EYES",0);
 
-if race = 4 && skill_got[1]=0 && skill_got[25]=0
-scrUnlockBSkin(4,"FOR LOOPING WITHOUT#RHINO SKIN AND STRONG SPIRIT#AS MELTING",0);
+	if race = 4 && skill_got[1]=0 && skill_got[25]=0
+	scrUnlockBSkin(4,"FOR LOOPING WITHOUT#RHINO SKIN AND STRONG SPIRIT#AS MELTING",0);
 
-if loops>1 && race = 4
-scrUnlockCSkin(4,"FOR REACHING LOOP 3#AS MELTING ON 1HP EQUALITY",5);
+	if loops>1 && race = 4
+	scrUnlockCSkin(4,"FOR REACHING LOOP 3#AS MELTING ON 1HP EQUALITY",5);
 
-if UberCont.opt_gamemode=14
-scrUnlockBSkin(1,"FOR LOOPING ON GAMEMODE:#FISH'S PARTNER ONLY",14);
+	if UberCont.opt_gamemode=14
+	scrUnlockBSkin(1,"FOR LOOPING ON GAMEMODE:#FISH'S PARTNER ONLY",14);
 
-if race = 14 && fired=false
-scrUnlockCSkin(14,"FOR LOOPING BY ONLY THROWING WEAPONS#AND NOT USING THEM",0)
+	if race = 14 && fired=false
+	scrUnlockCSkin(14,"FOR LOOPING BY ONLY THROWING WEAPONS#AND NOT USING THEM",0)
 
-looping=false;
-    UberCont.ctot_loop[race] += 1
-    loops += 1
-    if (ultra_got[73] == 1)
-	{
-		ultra_got[73] = 0;
-		skillpoints ++
-		ultraNow = true;
-		skillsChosen --;
-	}
-        if race==9//Chicken maxhealth regain on loop
-        {
-			var targetHealth = 8;
-			if UberCont.opt_gamemode == 5
-				targetHealth = 1;
-			if skill_got[1] == 1//Rhino skin
-				targetHealth += 4;
-			if skill_got[33] == 1//Glass arm cannon
-				targetHealth = max(1,targetHealth-2);
-			if UberCont.opt_gamemode == 9
-				targetHealth += UberCont.casualModeHPIncrease;
-			targetHealth += UberCont.maxHpIncrease;
-            if maxhealth<targetHealth
-            {
-	            maxhealth = min(maxhealth + 2,targetHealth);
-            }
-        }
+	looping=false;
+	    UberCont.ctot_loop[race] += 1
+	    loops += 1
+	    if (ultra_got[73] == 1)
+		{
+			ultra_got[73] = 0;
+			skillpoints ++
+			ultraNow = true;
+			skillsChosen --;
+		}
+	        if race==9//Chicken maxhealth regain on loop
+	        {
+				var targetHealth = 8;
+				if UberCont.opt_gamemode == 5
+					targetHealth = 1;
+				if skill_got[1] == 1//Rhino skin
+					targetHealth += 4;
+				if skill_got[33] == 1//Glass arm cannon
+					targetHealth = max(1,targetHealth-2);
+				if UberCont.opt_gamemode == 9
+					targetHealth += UberCont.casualModeHPIncrease;
+				targetHealth += UberCont.maxHpIncrease;
+	            if maxhealth<targetHealth
+	            {
+		            maxhealth = min(maxhealth + 2,targetHealth);
+	            }
+	        }
             
-        if loops == 2 && UberCont.opt_gamemode != 15//not no mutations gamemode
-        {
-			UberCont.levelIncrease ++;
-			maxlevel++;
-        }
-		else if loops = 10 && UberCont.opt_gamemode != 15
-        {
-			UberCont.levelIncrease ++;
-			maxlevel++;
-		}
+	        if loops == 2 && UberCont.opt_gamemode != 15//not no mutations gamemode
+	        {
+				UberCont.levelIncrease ++;
+				maxlevel++;
+	        }
+			else if loops = 10 && UberCont.opt_gamemode != 15
+	        {
+				UberCont.levelIncrease ++;
+				maxlevel++;
+			}
     
     
-    //uncurse some shit
-    curse=0;
-    bcurse=0;
-    ccurse=0;
+	    //uncurse some shit
+	    curse=0;
+	    bcurse=0;
+	    ccurse=0;
     
-//drop VIKING GREAT AXE?
-if race=16&&loops=1{
-with instance_create(x,y,WepPickup)
-{
-	persistent=true;
-	scrWeapons()
-	wep =214
-	name = wep_name[wep]
-	ammo = 0
-	type = wep_type[wep]
-	curse = 0
-	sprite_index = wep_sprt[wep]
-}}
-//DROP HUNTER HEAVY SNIPER
-if race = 11 && loops=1
-{
-
-	with instance_create(x,y,WepPickup)
-	{
-		persistent = true;
-		scrWeapons()
-		wep =316
-		name = wep_name[wep]
-		ammo = 0
-		type = wep_type[wep]
-		curse = 0
-		sprite_index = wep_sprt[wep]
-	}
-
-}
-
-//DROP CHICKEN DARK SWORD
-if (wep = 46 || bwep = 46 || cwep == 46) && loops=1
-{
-
-	with instance_create(x,y,WepPickup)
-	{
-	persistent=true;
-	scrWeapons()
-	wep =329
-	name = wep_name[wep]
-	ammo = 0
-	type = wep_type[wep]
-	curse = 0
-	sprite_index = wep_sprt[wep]
-	}
-}
-//Secret
-if ((wep == 375 || bwep == 375 || cwep == 375) && isValidGamemodeToUnlock(0) && loops == 2)
-{
-	with UberCont
-	{
-		encrypted_data.secrets[0] = true;
-		scrSaveEncrypted();
-		with instance_create(x,y,UnlockPopup)
-		{
-			mytext="UNLOCKED SUPER SECRET#FOR BRINGING#THE INVERSION MAGNET#TO LOOP 2";
-		}
-	}
-}
-if ((wep == 231 || bwep == 231 || cwep == 231) && isValidGamemodeToUnlock(0) && race != 1 && loops > 0)
-{
-	with UberCont
-	{
-		encrypted_data.secrets[1] = true;
-		scrSaveEncrypted();
-		with instance_create(x,y,UnlockPopup)
-		{
-			mytext="YOU SHOULD NOT BE PLAYING GUITAR#HERE IS A SUPER SECRET#UNLOCK";
-		}
-	}
-}
-
-//DROP ULTRA ROGUE RIFLE
-if (wep = 312 || bwep = 312|| cwep == 312) && loops=1
-{
-
-	with instance_create(x,y,WepPickup)
-	{
-	persistent=true;
-	scrWeapons()
-	wep = 427
-	name = wep_name[wep]
-	ammo = 0
-	type = wep_type[wep]
-	curse = 0
-	sprite_index = wep_sprt[wep]
-	}
-
-}
-
-//DROP GIANT PANDA STICK
-if (wep = 200 || bwep = 200|| cwep == 200) && loops=1
-{
-
+	//drop VIKING GREAT AXE?
+	if race=16&&loops=1{
 	with instance_create(x,y,WepPickup)
 	{
 		persistent=true;
 		scrWeapons()
-		wep = 512
+		wep =214
 		name = wep_name[wep]
 		ammo = 0
 		type = wep_type[wep]
 		curse = 0
 		sprite_index = wep_sprt[wep]
+	}}
+	//DROP HUNTER HEAVY SNIPER
+	if race = 11 && loops=1
+	{
+
+		with instance_create(x,y,WepPickup)
+		{
+			persistent = true;
+			scrWeapons()
+			wep =316
+			name = wep_name[wep]
+			ammo = 0
+			type = wep_type[wep]
+			curse = 0
+			sprite_index = wep_sprt[wep]
+		}
+
 	}
 
-}
-
-//DROP BLACK SWORD
-if loops=1 && canblacksword
-{
-
-with instance_create(x,y,WepPickup)
-{
-persistent=true;
-scrWeapons()
-wep =328
-name = wep_name[wep]
-ammo = 0
-type = wep_type[wep]
-curse = 0
-sprite_index = wep_sprt[wep]
-}
-
-}
-
-//DROP GUITAR?
-if race=1
-{
-if loops=1{
-with instance_create(x,y,WepPickup)
-{
-persistent=true;
-scrWeapons()
-wep =231
-name = wep_name[wep]
-ammo = 0
-type = wep_type[wep]
-curse = 0
-sprite_index = wep_sprt[wep]
-}}
-if loops=2 && (wep = 231 || bwep = 231|| cwep == 231){
-	with instance_create(x,y,WepPickup)
+	//DROP CHICKEN DARK SWORD
+	if (wep = 46 || bwep = 46 || cwep == 46) && loops=1
 	{
-	persistent=true;
-	scrWeapons()
-	wep =263
-	name = wep_name[wep]
-	ammo = 0
-	type = wep_type[wep]
-	curse = 0
-	sprite_index = wep_sprt[wep]
-	}
-}
 
-}
-//Drop ultra sawed off
-if loops == 1 && wep == 443 || bwep == 443 || cwep == 443
-{
-	with instance_create(x,y,WepPickup)
-	{
+		with instance_create(x,y,WepPickup)
+		{
 		persistent=true;
 		scrWeapons()
-		wep = 568
+		wep =329
 		name = wep_name[wep]
 		ammo = 0
 		type = wep_type[wep]
 		curse = 0
 		sprite_index = wep_sprt[wep]
+		}
 	}
-}
-//GOLDEN FROG PISTOL
-if race = 23
-{
+	//Secret
+	if ((wep == 375 && bwep == 375) && isValidGamemodeToUnlock(0))
+	{
+		with UberCont
+		{
+			encrypted_data.secrets[2] = true;
+			scrSaveEncrypted();
+			with instance_create(x,y,UnlockPopup)
+			{
+				mytext="UNLOCKED SUPER SECRET#FOR LOOPING WITH TWO INVERSION MAGNETS#HAVE A BURGER!";
+			}
+			wep_name[375] = "HAMBURGER MAGNET"//Probably the worst weapon in the game
+			wep_type[375] = 0
+			wep_auto[375] = 0
+			wep_load[375] = 10
+			wep_cost[375] = 1
+			wep_sprt[375] = sprHamburgerMagnet
+			wep_area[375] = -1
+			wep_text[375] = "100% beef"
+			wep_swap[375] = sndSelectUp
+			wep_rad[375] = 0;
+		}
+	}
+	if ((wep == 231 || bwep == 231 || cwep == 231) && isValidGamemodeToUnlock(0) && race != 1 && loops > 0)
+	{
+		with UberCont
+		{
+			encrypted_data.secrets[1] = true;
+			scrSaveEncrypted();
+			with instance_create(x,y,UnlockPopup)
+			{
+				mytext="YOU SHOULD NOT BE PLAYING GUITAR#HERE IS A SUPER SECRET#UNLOCK";
+			}
+		}
+	}
 
-	if loops = 1 && wep == 348 || bwep == 348 || cwep == 348 {
+	//DROP ULTRA ROGUE RIFLE
+	if (wep = 312 || bwep = 312|| cwep == 312) && loops=1
+	{
+
+		with instance_create(x,y,WepPickup)
+		{
+		persistent=true;
+		scrWeapons()
+		wep = 427
+		name = wep_name[wep]
+		ammo = 0
+		type = wep_type[wep]
+		curse = 0
+		sprite_index = wep_sprt[wep]
+		}
+
+	}
+
+	//DROP GIANT PANDA STICK
+	if (wep = 200 || bwep = 200|| cwep == 200) && loops=1
+	{
+
 		with instance_create(x,y,WepPickup)
 		{
 			persistent=true;
 			scrWeapons()
-			wep =349
+			wep = 512
+			name = wep_name[wep]
+			ammo = 0
+			type = wep_type[wep]
+			curse = 0
+			sprite_index = wep_sprt[wep]
+		}
+
+	}
+
+	//DROP BLACK SWORD
+	if loops=1 && canblacksword
+	{
+
+	with instance_create(x,y,WepPickup)
+	{
+	persistent=true;
+	scrWeapons()
+	wep =328
+	name = wep_name[wep]
+	ammo = 0
+	type = wep_type[wep]
+	curse = 0
+	sprite_index = wep_sprt[wep]
+	}
+
+	}
+
+	//DROP GUITAR?
+	if race=1
+	{
+	if loops=1{
+	with instance_create(x,y,WepPickup)
+	{
+	persistent=true;
+	scrWeapons()
+	wep =231
+	name = wep_name[wep]
+	ammo = 0
+	type = wep_type[wep]
+	curse = 0
+	sprite_index = wep_sprt[wep]
+	}}
+	if loops=2 && (wep = 231 || bwep = 231|| cwep == 231){
+		with instance_create(x,y,WepPickup)
+		{
+		persistent=true;
+		scrWeapons()
+		wep =263
+		name = wep_name[wep]
+		ammo = 0
+		type = wep_type[wep]
+		curse = 0
+		sprite_index = wep_sprt[wep]
+		}
+	}
+
+	}
+	//Drop ultra sawed off
+	if loops == 1 && wep == 443 || bwep == 443 || cwep == 443
+	{
+		with instance_create(x,y,WepPickup)
+		{
+			persistent=true;
+			scrWeapons()
+			wep = 568
 			name = wep_name[wep]
 			ammo = 0
 			type = wep_type[wep]
@@ -528,29 +522,46 @@ if race = 23
 			sprite_index = wep_sprt[wep]
 		}
 	}
+	//GOLDEN FROG PISTOL
+	if race = 23
+	{
 
-}
+		if loops = 1 && wep == 348 || bwep == 348 || cwep == 348 {
+			with instance_create(x,y,WepPickup)
+			{
+				persistent=true;
+				scrWeapons()
+				wep =349
+				name = wep_name[wep]
+				ammo = 0
+				type = wep_type[wep]
+				curse = 0
+				sprite_index = wep_sprt[wep]
+			}
+		}
+
+	}
     
-    if loops > UberCont.cbst_loop[race]&&UberCont.opt_gamemode=0
-    UberCont.cbst_loop[race] = loops//this doesn't get saved if gamemode is not normal mode
+	    if loops > UberCont.cbst_loop[race]&&UberCont.opt_gamemode=0
+	    UberCont.cbst_loop[race] = loops//this doesn't get saved if gamemode is not normal mode
     
-    if  UberCont.opt_gamemode!=10
-    {/*
-        if loops>1
-        {
-            if ( ( loops & 1 ) == 1 ) {
-            area=1
-            // it's odd
-            /*} else{
-            // it's even go inverted
-            area=105*/
-           // } 
-       // }
-       // else
-        area=1;
-    }
+	    if  UberCont.opt_gamemode!=10
+	    {/*
+	        if loops>1
+	        {
+	            if ( ( loops & 1 ) == 1 ) {
+	            area=1
+	            // it's odd
+	            /*} else{
+	            // it's even go inverted
+	            area=105*/
+	           // } 
+	       // }
+	       // else
+	        area=1;
+	    }
     
-subarea = 1
+	subarea = 1
     
 }
 

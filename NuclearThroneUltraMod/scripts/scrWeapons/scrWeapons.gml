@@ -3379,7 +3379,7 @@ function scrWeapons() {
 	wep_load[306] = 14
 	wep_cost[306] = 6
 	wep_sprt[306] = sprBulletDisperseGun
-	wep_area[306] = 12
+	wep_area[306] = 11
 	wep_text[306] = "no sense was made"
 	wep_swap[306] = sndSwapPistol
 	wep_rad[306] = 0;
@@ -4138,16 +4138,32 @@ function scrWeapons() {
 	wep_swap[374] = sndSwapEnergy
 	wep_rad[374] = 0;
 	
-	wep_name[375] = "INVERSION MAGNET"//Probably the worst weapon in the game
-	wep_type[375] = 0
-	wep_auto[375] = 0
-	wep_load[375] = 10
-	wep_cost[375] = 1
-	wep_sprt[375] = sprInversionMagnet
-	wep_area[375] = -1
-	wep_text[375] = "100% inversion"
-	wep_swap[375] = sndSwapSword
-	wep_rad[375] = 0;
+	if UberCont.encrypted_data.secrets[2] == true
+	{
+		wep_name[375] = "HAMBURGER MAGNET"//Probably the worst weapon in the game
+		wep_type[375] = 0
+		wep_auto[375] = 0
+		wep_load[375] = 10
+		wep_cost[375] = 1
+		wep_sprt[375] = sprHamburgerMagnet
+		wep_area[375] = -1
+		wep_text[375] = "100% beef"
+		wep_swap[375] = sndSelectUp
+		wep_rad[375] = 0;
+	}
+	else
+	{
+		wep_name[375] = "INVERSION MAGNET"//Probably the worst weapon in the game
+		wep_type[375] = 0
+		wep_auto[375] = 0
+		wep_load[375] = 10
+		wep_cost[375] = 1
+		wep_sprt[375] = sprInversionMagnet
+		wep_area[375] = -1
+		wep_text[375] = "100% inversion"
+		wep_swap[375] = sndSwapSword
+		wep_rad[375] = 0;	
+	}
 	
 	wep_name[376] = "INFINITY SMART GUN"
 	wep_type[376] = 1
@@ -5013,7 +5029,7 @@ function scrWeapons() {
 	wep_load[454] = 18
 	wep_cost[454] = 4
 	wep_sprt[454] = sprFlameDirectorJawEraser
-	wep_area[454] = 16//6
+	wep_area[454] = 15//6
 	wep_text[454] = "jaw is erased"
 	wep_swap[454] = sndSwapShotgun
 	wep_rad[454] = 0;
@@ -6473,7 +6489,7 @@ function scrWeapons() {
 	wep_name[587] = "RADIATION GENERATOR"
 	wep_type[587] = 5
 	wep_auto[587] = 0
-	wep_load[587] = 15//13
+	wep_load[587] = 50//13
 	wep_cost[587] = 20
 	wep_sprt[587] = sprRadiationGenerator
 	wep_area[587] = 8

@@ -3,206 +3,7 @@ function scrPowers() {
 	/////SHIT PRESSED////////
 	if KeyCont.key_spec[p] = 1
 	{
-		if race == 27 && (!instance_exists(Hand) || (ultra_got[107] && instance_exists(Hand) && instance_number(Hand) < 2 || (scrIsInInvertedArea() && instance_number(Hand) < 2)))//Hands
-		{
-			var targetPickup = false;
-			var grabRange = 48;//same as hunter mark
-			var d0 = 999;
-			var d1 = 999;
-			var d2 = 999;
-			var d3 = 999;
-			var tar = -1;
-			var resulttar = -1;
-			var grabbedEnemy = false;
-			var slappedProjectile = false;
-			//Ultra target projectiles
-			if ultra_got[107]
-			{
-				if instance_exists(projectile)
-				{
-					tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,projectile);
-					if tar.team != other.team
-					{
-						d0 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y)
-						if d0 < grabRange
-						{
-							resulttar = tar;
-							slappedProjectile = true;
-						}
-					}
-				}
-				/*
-				if instance_exists(PopoNade)
-				{
-					var tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,PopoNade);
-					if tar.team != other.team
-					{
-						var dp = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y)
-						if dp < grabRange && dp < d0
-						{
-							d0 = dp;
-							resulttar = tar;
-							slappedProjectile = true;
-						}
-					}
-				}*/
-			}
-			if instance_exists(chestprop)
-			{
-				tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,chestprop);
-				d1 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y)
-				if d1 < grabRange && d1 < d0
-				{
-					resulttar = tar;
-					slappedProjectile = false;
-				}
-			}
-			if instance_exists(RadChest)
-			{
-				tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,RadChest);
-				d2 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y) 
-				if d2 < grabRange && d2 < d1 && d2 < d0
-				{
-					resulttar = tar;
-					slappedProjectile = false;
-				}
-			}
-			if instance_exists(enemy)
-			{
-				tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
-				d3 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);
-				if ((tar.team != 0  && tar.team != team && tar.my_health > 0 || (skill_got[5] && (tar.object_index == IDPDVan || tar.object_index == IDPDVanVertical)))
-				&& tar.team != team && d3 < grabRange && d3 < d2 && d3 < d1 && d3 < d0)
-				{
-					grabbedEnemy = true;
-					resulttar = tar;
-					slappedProjectile = false;
-				}
-			}
-			if ultra_got[108] && resulttar == -1
-			{
-				//Allow pickups to be picked up
-				if instance_exists(WepPickup)
-				{
-					tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,WepPickup);
-					var d4 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);
-					if (d4 < grabRange)
-					{
-						resulttar = tar;
-						slappedProjectile = false;
-					}
-				}
-				if instance_exists(Pickup) && resulttar == -1
-				{
-					tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,Pickup);
-					var d4 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);
-					if (d4 < grabRange)
-					{
-						resulttar = tar;
-						targetPickup = true;
-						slappedProjectile = false;
-					}
-				}
-			}
-			if resulttar > -1 && instance_exists(resulttar)
-			{
-				BackCont.viewx2 += lengthdir_x(10,point_direction(x,y,resulttar.x,resulttar.y))*UberCont.opt_shake
-				BackCont.viewy2 += lengthdir_y(10,point_direction(x,y,resulttar.x,resulttar.y))*UberCont.opt_shake
-				BackCont.shake += 5;
-				with instance_create(x,y,Hand)
-				{
-					if other.ultra_got[107]
-					{
-						alarm[3] = 1;//Destroy projectiles
-					}
-					if other.bskin == 2
-					{
-						sprite_index = sprHandCOpen;
-						spr_close = sprHandCClose;
-						spr_closing = sprHandCClosing;
-						if !scrIsInInvertedArea()
-							lerpSpeed *= 0.85;//Slower hand
-					}
-					else if other.bskin == 1
-					{
-						sprite_index = sprHandBOpen;
-						spr_close = sprHandBClose;
-						spr_closing = sprHandBClosing;
-						if other.ultra_got[106]
-						{
-							alarm[4] = 1;
-						}
-					}
-					if (other.skill_got[5])
-					{
-						dmg += 2;
-					}
-					if other.ultra_got[105] || other.ultra_got[106] || other.ultra_got[107] || other.ultra_got[107]
-						dmg ++;
-					grabbingPickup = targetPickup;
-					team = other.team;
-					creator = other.id;
-					target = resulttar;
-					lerpDistance = point_distance(x,y,target.x,target.y);
-					if other.ultra_got[108]
-					{
-						if scrIsInInvertedArea()
-						{
-							if (grabbingPickup)
-							{
-								lerpSpeed *= 4;	
-							}
-							else
-							{
-								lerpSpeed *= 3;
-							}
-						}
-						else
-						{
-							if (grabbingPickup)
-							{
-								lerpSpeed *= 2;
-							}
-							else
-							{
-								lerpSpeed *= 1.5;
-							}
-						}
-					}
-					if slappedProjectile
-					{
-						push = false;
-						lerpDistance += 8;
-						lerpCalc = min(1,lerpSpeed/lerpDistance);//Consistent speed
-						lerpCalcBack = lerpCalc;
-						grabbingPickup = true;
-						//PUNCH FIST!
-						sprite_index = spr_close;
-						spr_closing = spr_close;
-					}
-					else if other.skill_got[5] && grabbedEnemy && !grabbingPickup
-					{
-						push = true;
-						lerpDistance += 8;
-						lerpCalc = min(1,lerpSpeed/lerpDistance);//Consistent speed
-						lerpCalcBack = lerpCalc*0.8;
-						//PUNCH FIST!
-						sprite_index = spr_close;
-						spr_closing = spr_close;
-					}
-					else if !grabbingPickup
-					{
-						lerpCalc = min(1,lerpSpeed/lerpDistance);//Consistent speed
-						lerpCalcBack = (lerpCalc/target.size)*0.8;
-					}
-					else//ULTRA D
-					{
-						lerpCalc = min(1,(lerpSpeed)/lerpDistance);
-						lerpCalcBack = lerpCalc;
-					}
-				}
-			}
-		}
+		
 	if race = 26//Good O'l Humphry
 	{
 		var t1 = wep_type[wep];
@@ -1576,6 +1377,207 @@ function scrPowers() {
 	////////SHIT HELD////////
 	if KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2
 	{
+		//HANDS
+		if race == 27 && (!instance_exists(Hand) || (ultra_got[107] && instance_exists(Hand) && instance_number(Hand) < 2 || (scrIsInInvertedArea() && instance_number(Hand) < 2)))//Hands
+		{
+			var targetPickup = false;
+			var grabRange = 48;//same as hunter mark
+			var d0 = 999;
+			var d1 = 999;
+			var d2 = 999;
+			var d3 = 999;
+			var tar = -1;
+			var resulttar = -1;
+			var grabbedEnemy = false;
+			var slappedProjectile = false;
+			//Ultra target projectiles
+			if ultra_got[107]
+			{
+				if instance_exists(projectile)
+				{
+					tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,projectile);
+					if tar.team != other.team
+					{
+						d0 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y)
+						if d0 < grabRange
+						{
+							resulttar = tar;
+							slappedProjectile = true;
+						}
+					}
+				}
+				/*
+				if instance_exists(PopoNade)
+				{
+					var tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,PopoNade);
+					if tar.team != other.team
+					{
+						var dp = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y)
+						if dp < grabRange && dp < d0
+						{
+							d0 = dp;
+							resulttar = tar;
+							slappedProjectile = true;
+						}
+					}
+				}*/
+			}
+			if instance_exists(chestprop)
+			{
+				tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,chestprop);
+				d1 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y)
+				if d1 < grabRange && d1 < d0
+				{
+					resulttar = tar;
+					slappedProjectile = false;
+				}
+			}
+			if instance_exists(RadChest)
+			{
+				tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,RadChest);
+				d2 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y) 
+				if d2 < grabRange && d2 < d1 && d2 < d0
+				{
+					resulttar = tar;
+					slappedProjectile = false;
+				}
+			}
+			if instance_exists(enemy)
+			{
+				tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
+				d3 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);
+				if ((tar.team != 0  && tar.team != team && tar.my_health > 0 || (skill_got[5] && (tar.object_index == IDPDVan || tar.object_index == IDPDVanVertical)))
+				&& tar.team != team && d3 < grabRange && d3 < d2 && d3 < d1 && d3 < d0)
+				{
+					grabbedEnemy = true;
+					resulttar = tar;
+					slappedProjectile = false;
+				}
+			}
+			if ultra_got[108] && resulttar == -1
+			{
+				//Allow pickups to be picked up
+				if instance_exists(WepPickup)
+				{
+					tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,WepPickup);
+					var d4 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);
+					if (d4 < grabRange)
+					{
+						resulttar = tar;
+						slappedProjectile = false;
+					}
+				}
+				if instance_exists(Pickup) && resulttar == -1
+				{
+					tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,Pickup);
+					var d4 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);
+					if (d4 < grabRange)
+					{
+						resulttar = tar;
+						targetPickup = true;
+						slappedProjectile = false;
+					}
+				}
+			}
+			if resulttar > -1 && instance_exists(resulttar)
+			{
+				BackCont.viewx2 += lengthdir_x(10,point_direction(x,y,resulttar.x,resulttar.y))*UberCont.opt_shake
+				BackCont.viewy2 += lengthdir_y(10,point_direction(x,y,resulttar.x,resulttar.y))*UberCont.opt_shake
+				BackCont.shake += 5;
+				with instance_create(x,y,Hand)
+				{
+					if other.ultra_got[107]
+					{
+						alarm[3] = 1;//Destroy projectiles
+					}
+					if other.bskin == 2
+					{
+						sprite_index = sprHandCOpen;
+						spr_close = sprHandCClose;
+						spr_closing = sprHandCClosing;
+						if !scrIsInInvertedArea()
+							lerpSpeed *= 0.85;//Slower hand
+					}
+					else if other.bskin == 1
+					{
+						sprite_index = sprHandBOpen;
+						spr_close = sprHandBClose;
+						spr_closing = sprHandBClosing;
+						if other.ultra_got[106]
+						{
+							alarm[4] = 1;
+						}
+					}
+					if (other.skill_got[5])
+					{
+						dmg += 2;
+					}
+					if other.ultra_got[105] || other.ultra_got[106] || other.ultra_got[107] || other.ultra_got[107]
+						dmg ++;
+					grabbingPickup = targetPickup;
+					team = other.team;
+					creator = other.id;
+					target = resulttar;
+					lerpDistance = point_distance(x,y,target.x,target.y);
+					if other.ultra_got[108]
+					{
+						if scrIsInInvertedArea()
+						{
+							if (grabbingPickup)
+							{
+								lerpSpeed *= 4;	
+							}
+							else
+							{
+								lerpSpeed *= 3;
+							}
+						}
+						else
+						{
+							if (grabbingPickup)
+							{
+								lerpSpeed *= 2;
+							}
+							else
+							{
+								lerpSpeed *= 1.5;
+							}
+						}
+					}
+					if slappedProjectile
+					{
+						push = false;
+						lerpDistance += 8;
+						lerpCalc = min(1,lerpSpeed/lerpDistance);//Consistent speed
+						lerpCalcBack = lerpCalc;
+						grabbingPickup = true;
+						//PUNCH FIST!
+						sprite_index = spr_close;
+						spr_closing = spr_close;
+					}
+					else if other.skill_got[5] && grabbedEnemy && !grabbingPickup
+					{
+						push = true;
+						lerpDistance += 8;
+						lerpCalc = min(1,lerpSpeed/lerpDistance);//Consistent speed
+						lerpCalcBack = lerpCalc*0.8;
+						//PUNCH FIST!
+						sprite_index = spr_close;
+						spr_closing = spr_close;
+					}
+					else if !grabbingPickup
+					{
+						lerpCalc = min(1,lerpSpeed/lerpDistance);//Consistent speed
+						lerpCalcBack = (lerpCalc/target.size)*0.8;
+					}
+					else//ULTRA D
+					{
+						lerpCalc = min(1,(lerpSpeed)/lerpDistance);
+						lerpCalcBack = lerpCalc;
+					}
+				}
+			}
+		}
 		//YUNG VENUZ
 		if (race == 6 && (ultra_got[24] == 1 || (altUltra && ultra_got[23])) && wep_auto[wep] == 1)
 			scrYVPower();

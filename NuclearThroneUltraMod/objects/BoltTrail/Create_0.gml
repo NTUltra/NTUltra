@@ -9,6 +9,6 @@ if instance_exists(Player)
 else
     image_speed=0.5;
     
-    
+    shrinkRate = 0.1;
     theColour=c_white;
 

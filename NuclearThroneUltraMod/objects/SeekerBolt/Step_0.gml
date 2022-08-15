@@ -3,6 +3,7 @@ with instance_create(x,y,BoltTrail)
 image_angle=other.direction;
 image_xscale=other.speed;
 theColour=other.theColour;
+shrinkRate += 0.05;
 }
 var ee = false;
 var bm = false;

@@ -5,7 +5,7 @@ if (other.team != 2 && (size >= other.size-1 or impactWrist) and speed > 2)
 	{
 		if instance_exists(Player)
 		{
-			if Player.ultra_got[52] == 1 && random(10) < 6
+			if Player.ultra_got[52] == 1 && random(10) < 3
 			{
 				snd_play(sndMeatExplo,0.1,true);
 				snd_play(sndExplosionS,0.1,true);

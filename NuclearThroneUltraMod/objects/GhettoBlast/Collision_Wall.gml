@@ -1,17 +1,6 @@
 //x -= hspeed
 //y -= vspeed
 image_speed = 0.4;
-if speed > 2
-{
-x += lengthdir_x(3,image_angle)
-y += lengthdir_y(3,image_angle)
-}
-if walled = 0
-{
-with instance_create(other.x+8,other.y+8,MeleeHitWall)
-image_angle = point_direction(other.x,other.y,x,y)
-walled = 1
-//snd_play(sndMeleeWall,0.1)
-}
-
-
+x += lengthdir_x(6,image_angle)
+y += lengthdir_y(6,image_angle)
+alarm[2] = 1;

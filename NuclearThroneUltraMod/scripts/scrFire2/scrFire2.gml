@@ -1915,7 +1915,7 @@ function scrFire2() {
 	}
 
 	with instance_create(x,y,FatBullet)
-	{motion_add(aimDirection+(random(8)-4)*other.accuracy,12)
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,14)
 	image_angle = direction
 	team = other.team}
 
@@ -1943,7 +1943,7 @@ function scrFire2() {
 
 
 	with instance_create(x,y,FatBullet)
-	{motion_add(aimDirection+(random(12)-6)*other.accuracy,12)
+	{motion_add(aimDirection+(random(12)-6)*other.accuracy,14)
 	image_angle = direction
 	team = other.team}
 
@@ -2008,7 +2008,7 @@ function scrFire2() {
 	motion_add(aimDirection+other.right*100+random(60)-30,2+random(2))
 
 	with instance_create(x,y,FatBullet)
-	{motion_add(aimDirection+(random(32)-16)*other.accuracy,12)
+	{motion_add(aimDirection+(random(32)-16)*other.accuracy,14)
 	image_angle = direction
 	team = other.team}
 

@@ -259,6 +259,10 @@ with EnemyBullet1Square
 {
 	draw_self();
 }
+with GhettoBlast
+{
+	draw_self();	
+}
 //Flying enemies
 with ChesireCatTail{
 if visible&&instance_exists(ChesireCat){

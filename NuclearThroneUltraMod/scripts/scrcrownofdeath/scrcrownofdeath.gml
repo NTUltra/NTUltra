@@ -9,7 +9,10 @@ function scrCrownOfDeath(am = 3,dis = 34){
 		repeat(am)
 		{
 			with instance_create(x+lengthdir_x(dis,ang),y+lengthdir_y(dis,ang),SmallExplosion)
+			{
+				dmg -= 1;
 				alarm[0] = 0;
+			}
 			ang += angStep;
 		}
 	}

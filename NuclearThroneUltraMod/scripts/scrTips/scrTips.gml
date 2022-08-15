@@ -25,7 +25,7 @@ function scrTips() {
 	"watch out for dehydration",
 	"crystal can shield",
 	"fear is the mindkiller",
-	"inverted enemies have less  health",
+	"inverted enemies have less health",
 	"there is a cheatcode#to unlock everything",
 	"square bullets are immune to melee",
 	"flashing effects can be turned off by setting screenshake and freezeframes to 0",

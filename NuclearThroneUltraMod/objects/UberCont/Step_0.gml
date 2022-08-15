@@ -44,6 +44,7 @@ with Player
 {
 	randomlySelected = ranChar;
 	restarted = true;
+	nochest = -1;
 	skeletonlives = 0;
 }
 debug("BIG CHUNK RESTART");

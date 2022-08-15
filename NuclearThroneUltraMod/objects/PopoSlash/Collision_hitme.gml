@@ -14,4 +14,3 @@ if other.team != team
 		}
 	}
 }
-

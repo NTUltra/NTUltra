@@ -4,7 +4,7 @@
     "path": "sprites/sprEnemyBullet1Square/sprEnemyBullet1Square.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": {
     "name": "mskEnemyBullet1Square",
