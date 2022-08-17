@@ -1222,7 +1222,7 @@ if outOfCombat && UberCont.opt_gamemode != 25
 	maxSpeed += 1;
 //CAP SPEED
 var por = instance_place(x,y,Portal);
-if !visible || (por != noone && por.alarm[1] < 1)
+if !visible || (por != noone && por.alarm[1] < 1 && por.sprite_index != sprPortalSpawn)
 {
 	speed = 0;
 }
