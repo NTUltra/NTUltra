@@ -173,6 +173,7 @@ while (instance_number(RogueAmmoChest) < ammoWant)
 
 if Player.area = 100
 {
+	instance_create(10016,10016,CrownVaultExit);
 	with instance_furthest(Player.x,Player.y,Floor)
 	{
 		instance_create(x+16,y+16,CrownPickup)

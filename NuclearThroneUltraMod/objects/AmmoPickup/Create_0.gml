@@ -22,9 +22,11 @@ if sprite_index == sprAmmo {
 	if curselevel == 2 {
 		if random(2) < 1 {
 			cursed = true;
+			snd_play(sndCursedPickup);
 		}
 	} else if curselevel == 3 {
 		cursed = true;
+		snd_play(sndCursedPickup);
 		if random(4) < 1 {
 			supercursed = true;
 		}

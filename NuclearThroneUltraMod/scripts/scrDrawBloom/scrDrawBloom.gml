@@ -8,6 +8,9 @@ function scrDrawBloom() {
 	with Bullet1
 	draw_sprite_ext(sprite_index,-1,x,y,image_xscale*2,image_yscale*2,image_angle,c_white,(Player.ultra_got[28]*0.3)+ba)//roids ultra d
 	
+	with DistanceScaleBullet
+	draw_sprite_ext(sprite_index,-1,x,y,imagexscale*2,imageyscale*2,image_angle,c_white,(Player.ultra_got[28]*0.3)+ba)//roids ultra d
+	
 	with Bullet1Toxic
 	draw_sprite_ext(sprite_index,-1,x,y,image_xscale*2,image_yscale*2,image_angle,c_white,(Player.ultra_got[28]*0.3)+ba)//roids ultra d
 	

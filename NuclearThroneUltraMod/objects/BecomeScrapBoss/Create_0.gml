@@ -27,9 +27,11 @@ if instance_exists(WeaponChest)
 	}
 	else
 		dir = instance_furthest(x,y,WeaponChest)
+	if point_distance(Player.x,Player.y,dir.x,dir.y) <	point_distance(Player.x,Player.y,x,y)
+		dir = id;
 }
 else 
-dir = id;
+	dir = id;
 
 if !instance_exists(InvaderBossSpawnPortal) && instance_number(object_index) == 1
 {

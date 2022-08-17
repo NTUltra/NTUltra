@@ -1,9 +1,11 @@
 /// @description More dmg
-alarm[2] = 2;
-image_xscale *= 1.2;
-image_xscale = min(image_xscale,2.5);
-image_yscale = image_xscale;
+alarm[2] = 1;
+imagexscale *= 1.2;
+imagexscale = min(imagexscale,2.5);
+imageyscale = imagexscale;
 dmg += 2;
-speed = min(speed*1.5,18);
+speed = min(speed*2,18);
 instance_create(x,y,Smoke);
 snd_play(sndNadeAlmost,0.1,true,true,1,false,false,0.6);
+if dmg >= 24
+	alarm[2] = 0;

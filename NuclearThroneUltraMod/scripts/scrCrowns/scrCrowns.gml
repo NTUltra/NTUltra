@@ -101,7 +101,7 @@ function scrCrowns() {
 	crown_name[18] = "[CROWN OF DISCO]"
 	crown_text[18] = "DANCE BABY DANCE!#WARNING FLASHING LIGHTS"
 	crown_used[18] = 0
-	crown_tips[18] = "bullet disco!"
+	crown_tips[18] = "disco!"
 	
 	crown_name[19] = "[CROWN OF BLINDNESS]"
 	crown_text[19] = "EVERY AREA IS DARK#ENEMIES CAN HIT EACH OTHER"

@@ -7920,7 +7920,7 @@ function scrFire2() {
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
 	with instance_create(x,y,DistanceScaleBullet)
-	{motion_add(aimDirection+(random(6)-3)*other.accuracy,3)
+	{motion_add(aimDirection+(random(6)-3)*other.accuracy,12)
 	image_angle = direction
 	team = other.team}
 
@@ -7939,7 +7939,7 @@ function scrFire2() {
 	motion_add(aimDirection+other.right*100+random(80)-40,3+random(2))
 
 	with instance_create(x,y,DistanceScaleBullet)
-	{motion_add(aimDirection+(random(12)-6)*other.accuracy,3)
+	{motion_add(aimDirection+(random(12)-6)*other.accuracy,12)
 	image_angle = direction
 	team = other.team}
 	motion_add(aimDirection+180,0.6)
@@ -10084,7 +10084,7 @@ function scrFire2() {
 		ldy = 0;
 	}
 	with instance_create(x+ldx,y+ldy,DistanceScaleBullet)
-	{motion_add(aimDirection+(random(6)-3)*other.accuracy,3)
+	{motion_add(aimDirection+(random(6)-3)*other.accuracy,12)
 	image_angle = direction
 	team = other.team}
 	ldx = lengthdir_x(offset,aimdir-90);
@@ -10097,7 +10097,7 @@ function scrFire2() {
 		ldy = 0;
 	}
 	with instance_create(x+ldx,y+ldy,DistanceScaleBullet)
-	{motion_add(aimDirection+(random(6)-3)*other.accuracy,3)
+	{motion_add(aimDirection+(random(6)-3)*other.accuracy,12)
 	image_angle = direction
 	team = other.team}
 	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake

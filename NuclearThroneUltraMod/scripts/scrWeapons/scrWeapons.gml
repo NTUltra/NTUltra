@@ -1091,7 +1091,7 @@ function scrWeapons() {
 	wep_load[98] = 20
 	wep_cost[98] = 1
 	wep_sprt[98] = sprMorphOPistol
-	wep_area[98] = 4
+	wep_area[98] = 3
 	wep_text[98] = "sheeps!"
 	wep_swap[98] = sndSwapEnergy
 	wep_rad[98] = 0;
@@ -1971,7 +1971,7 @@ function scrWeapons() {
 	wep_load[178] = 10
 	wep_cost[178] = 4
 	wep_sprt[178] = sprHeavyAPistol
-	wep_area[178] = 11
+	wep_area[178] = 9
 	wep_text[178] = "fan of heavy bullets <3"
 	wep_swap[178] = sndSwapMachinegun
 	wep_rad[178] = 0;

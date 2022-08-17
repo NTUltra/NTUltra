@@ -1,6 +1,7 @@
 if blink < 0 {
     instance_create(x, y, SmallChestFade)
 	if supercursed {
+		snd_play(sndCursedPickupDisappear);
 		var ang = random(360)
 		snd_play(sndExplosionL)
 		repeat(5) {
@@ -9,6 +10,7 @@ if blink < 0 {
 		}
 	}
 	if cursed {
+		snd_play(sndCursedPickupDisappear);
 		var ang = random(360)
 		snd_play(sndExplosion)
 		repeat(3) {

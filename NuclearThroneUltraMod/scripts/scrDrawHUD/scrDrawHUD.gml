@@ -1145,6 +1145,23 @@ function scrDrawHUD() {
 			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 		}
 	}
+	with CrownVaultExit
+	{
+		if place_meeting(x,y,Player)
+		{
+			var yy = y-18;
+			var xx = x-2;
+			draw_sprite(sprEPickup,UberCont.opt_gamepad,xx,yy-7)
+
+			draw_set_color(c_black)
+			draw_text(xx,yy-30,string_hash_to_newline(string(name)))
+			draw_text(xx+1,yy-30,string_hash_to_newline(string(name)))
+			draw_text(xx+1,yy-31,string_hash_to_newline(string(name)))
+			draw_set_color(c_white)
+			draw_text(xx,yy-31,string_hash_to_newline(string(name)))
+			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+		}
+	}
 	with PizzaEntrance
 	{
 		if place_meeting(x,y,Player) && image_index == 1
