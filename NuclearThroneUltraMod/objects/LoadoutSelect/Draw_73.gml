@@ -1,7 +1,7 @@
 if (hasNoMenuOpen()
  && race != 0)
 {
-draw_set_halign(fa_left)
+draw_set_halign(fa_left)/
 
 if (wepmenuopen) {
     draw_sprite(sprSplash,0,__view_get( e__VW.XView, 0 )+77,__view_get( e__VW.YView, 0 )+49)
@@ -68,7 +68,7 @@ if (wepmenuopen) {
         wepiter++;
     } until (wepiter = UberCont.maxstartwep+1)
 	var xx = __view_get( e__VW.XView, 0 )+302;
-	var yy = __view_get( e__VW.YView, 0 )+168//170;
+	var yy = __view_get( e__VW.YView, 0 )+170;
 	var o = 10;
 	if UberCont.ctot_all_crowns_taken[Menu.race] > 0
 	{
