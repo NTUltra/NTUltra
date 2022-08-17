@@ -1,4 +1,4 @@
-scrDrop(3,0)
+scrDrop(4,0)
 if instance_exists(Player)
 {
 	

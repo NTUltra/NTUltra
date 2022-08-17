@@ -1,4 +1,4 @@
-raddrop = 4
+raddrop = 5
 
 hurt_pitch_variation = 0;
 existTime = 0;
