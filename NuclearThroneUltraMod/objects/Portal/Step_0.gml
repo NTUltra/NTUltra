@@ -103,6 +103,8 @@ if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or
 	roll = 0
 	angle = 0
 	}
+	with PlayerInPortal
+		instance_destroy();
 }
 }
 if !instance_exists(Player) && !instance_exists(PlayerSpawn)

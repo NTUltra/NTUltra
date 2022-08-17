@@ -11,7 +11,7 @@ else
 bwepright = right
 
 if bwep != 0 and race != 7
-draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*2,y,1,bwepright,90+15*right,c_silver,1)
+draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*2,y,image_yscale,bwepright,90+15*right,c_silver,1)
 
 if ( wep_type[wep] = 3||wep==257 ) and (!(IsShielding)||(ultra_got[7]==1)) and wep != 18
 {
@@ -122,12 +122,12 @@ if race = 7 and bwep != 0
 			until position_meeting(lasx,lasy,Wall) or lasd > 1000
 			draw_sprite_ext(sprLaserSightPlayer,-1,x,y-4,point_distance(x,y,lasx,lasy)/2+2,1,aimDirection,c_white,1)
 		}
-	}draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),y+gunY-4+lengthdir_y(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),1,-bwepright,aimDirection+(bwepangle*(1-bwkick/20)),c_white,1)
+	}draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),y+gunY-4+lengthdir_y(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),image_yscale,-bwepright,aimDirection+(bwepangle*(1-bwkick/20)),c_white,1)
 	if bwep = 63 || wep = 343//Blackhole/Dimension Generator
 	{
 	if can_shoot = 1 and ammo[wep_type[wep]] >= wep_cost[wep]{
 
-	draw_sprite_ext(sprBlackHoleGeneration,triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(bwepangle*(1-wkick/20))),y+gunY-4+lengthdir_y(-bwkick,aimDirection+(bwepangle*(1-wkick/20))),1,-bwepright,aimDirection+(bwepangle*(1-wkick/20)),c_white,1)}}
+	draw_sprite_ext(sprBlackHoleGeneration,triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(bwepangle*(1-wkick/20))),y+gunY-4+lengthdir_y(-bwkick,aimDirection+(bwepangle*(1-wkick/20))),image_yscale,-bwepright,aimDirection+(bwepangle*(1-wkick/20)),c_white,1)}}
 
 }
 
@@ -137,19 +137,19 @@ bwep=twep;//and return weapon
 }
 //DRAW DA GUNZ
 if back = 1 and (!(IsShielding)||(ultra_got[7]==1)){
-draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),y+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),1,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,1)
+draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),y+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,1)
 
 if wep = 63 || wep = 343//Blackhole/Dimension Generator
 {
 if can_shoot = 1 and ammo[wep_type[wep]] >= wep_cost[wep]{
 
-draw_sprite_ext(sprBlackHoleGeneration,wave,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),y+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),1,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,1)
+draw_sprite_ext(sprBlackHoleGeneration,wave,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),y+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,1)
 }}
 }
 if instance_exists(Decoy) || rollIframe > 0 
-draw_sprite_ext(sprite_index,-1,x,y,right,1,angle,c_white,0.4)//CHICKEN VANISHED OPACITY
+draw_sprite_ext(sprite_index,-1,x,y,right,image_yscale,angle,c_white,0.4)//CHICKEN VANISHED OPACITY
 else
-draw_sprite_ext(sprite_index,-1,x,y,right,1,angle,c_white,1)//PLAYER GETS DRAWN HERE
+draw_sprite_ext(sprite_index,-1,x,y,right,image_yscale,angle,c_white,1)//PLAYER GETS DRAWN HERE
 
 //Alkaline Saliva
 if skill_got[32] && isAlkaline && my_health < maxhealth && lag < 1 && armour < 1
@@ -162,11 +162,11 @@ if triggerfinger>7
 triggerfinger=0;
 
 if back = -1 and !(IsShielding){
-draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),y+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),1,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,1)
+draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),y+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,1)
 if wep = 63 || wep = 343//Blackhole/Dimension Generator
 {
 if can_shoot = 1 and ammo[wep_type[wep]] >= wep_cost[wep]{
-draw_sprite_ext(sprBlackHoleGeneration,wave,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),y+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),1,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,1)
+draw_sprite_ext(sprBlackHoleGeneration,wave,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),y+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,1)
 }}
 }
 

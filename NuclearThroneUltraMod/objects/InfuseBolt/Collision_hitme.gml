@@ -5,7 +5,7 @@ if other.team != team && !dealtDamage
 	speed = 0
 	x = other.x+offx
 	y = other.y+offy
-
+	other.stickTarget = id;
 
 	with other
 	{

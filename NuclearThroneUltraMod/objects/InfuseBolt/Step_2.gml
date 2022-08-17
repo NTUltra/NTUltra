@@ -26,7 +26,8 @@ dir = instance_nearest(x,y,enemy)
     }
 
 }}
-
-//if speed=0
-//    instance_destroy();
-
+if stickTarget != noone
+{
+	x = stickTarget.x+offx
+	y = stickTarget.y+offy
+}

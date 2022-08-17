@@ -10,7 +10,7 @@ alarm[0]=120;
 
 dmg = 7;
 dealtDamage = false;
-
+stickTarget = noone;
 hitTime = 10;
 
 alarm[11] = 1;

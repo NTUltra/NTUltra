@@ -1221,10 +1221,15 @@ if instance_exists(SurvivalWave)
 if outOfCombat && UberCont.opt_gamemode != 25
 	maxSpeed += 1;
 //CAP SPEED
-if race == 23 && ultra_got[92] == 0
+var por = instance_place(x,y,Portal);
+if !visible || (por != noone && por.alarm[1] < 1)
+{
+	speed = 0;
+}
+else if race == 23 && ultra_got[92] == 0
 {
 	speed = clamp(speed,maxSpeed*0.8,maxSpeed);
-	if toxicamount > 0 || !visible
+	if toxicamount > 0
 		speed = 0;
 }
 else if speed > maxSpeed

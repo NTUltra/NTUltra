@@ -1356,7 +1356,7 @@ function scrWeapons() {
 	wep_cost[122] = 4
 	wep_sprt[122] = sprFlareShotgun
 	wep_area[122] = 9
-	wep_text[122] = "4 flares for the cost of 3"
+	wep_text[122] = ""
 	wep_swap[122] = sndSwapFlame
 	wep_rad[122] = 0;
 
@@ -3984,7 +3984,7 @@ function scrWeapons() {
 	wep_load[361] = 10
 	wep_cost[361] = 2.5
 	wep_sprt[361] = sprRewirer
-	wep_area[361] = 13
+	wep_area[361] = 14
 	wep_text[361] = "connect the dots"
 	wep_swap[361] = sndSwapBow
 	wep_rad[361] = 0;
@@ -5689,7 +5689,7 @@ function scrWeapons() {
 	wep_load[514] = 45
 	wep_cost[514] = 0
 	wep_sprt[514] = sprHeavyShovel
-	wep_area[514] = 8//4 originally?
+	wep_area[514] = 7//4 originally?
 	wep_text[514] = "it can dig!"
 	wep_swap[514] = sndSwapHammer
 	wep_rad[514] = 0;

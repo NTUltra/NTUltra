@@ -8806,7 +8806,7 @@ function scrFire2() {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 	{
-	dmg = 16
+	dmg = 18
 	sprite_index=sprVeryHeavySlash;
 	longarms = 0
 	if instance_exists(Player)
@@ -8816,7 +8816,7 @@ function scrFire2() {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),EnergyHammerSlash)
 	{
-	dmg = 14
+	dmg = 16
 	sprite_index=sprVeryHeavySlash;
 	longarms = 0
 	if instance_exists(Player)
@@ -8826,7 +8826,7 @@ function scrFire2() {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),EnergyHammerSlash)
 	{
-	dmg = 14
+	dmg = 16
 	sprite_index=sprVeryHeavySlash;
 	longarms = 0
 	if instance_exists(Player)

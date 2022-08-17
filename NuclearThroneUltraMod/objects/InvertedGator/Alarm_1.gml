@@ -37,7 +37,10 @@ if point_distance(target.x,target.y,x,y) > 48 and point_distance(target.x,target
 }
 else
 {
-direction = point_direction(target.x,target.y,x,y)+random(20)-10
+	if random(3) < 1
+		direction = point_direction(x,y,target.x, target.y) + random(20) - 10
+	else
+		direction = point_direction(target.x,target.y,x,y)+random(20)-10
 speed = 0.4
 walk = 30+random(10)
 gunangle = point_direction(x,y,target.x,target.y)

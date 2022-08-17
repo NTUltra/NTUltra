@@ -2,19 +2,36 @@ if sprite_index == sprProtoPortalDormant || sprite_index == sprInvertedPortalDor
 	exit;
 if sprite_index != sprPortalSpawn
 {
-	//in portal don't decrease skill
+if other.visible
+{
+	other.visible = false;
+	with instance_create(x,y,PlayerInPortal)
+	{
+		depth = min(other.depth - 1,Player.depth);
+		image_speed = 0.4;
+		image_angle = Player.angle;
+		right = Player.right;
+		sprite_index = Player.spr_hurt;
+	}
+}
+//in portal don't decrease skill
 if other.race == 26
 {
 	with PlayerAlarms
 	{
-		alarm[6] += 1;	
+		alarm[6] += 1;
 	}
 }
+if other.race == 15//Atom can no longer teleport
+{
+	PlayerAlarms.alarm[8] += 200;	
+}
+other.speed = 0;
 if endgame = 100
 {
-snd_play(sndPortalClose);
+snd_play(sndPortalCloseShort);
 
-endgame = 30;
+endgame = 12;//originally 30
 
 //ROBOT
 if Player.race = 8

@@ -19,14 +19,17 @@ if target > 0 {
 				{
 					direction = point_direction(n.x,n.y,x,y);
 				}
-                speed = 0.4
+                speed = 0.6
                 walk = 10 + random(10)
                 gunangle = point_direction(x, y, target.x, target.y)
             }
 
         }
         else {
-            direction = point_direction(target.x, target.y, x, y) + random(20) - 10
+			if random(3) < 1
+				direction = point_direction(x,y,target.x, target.y) + random(20) - 10
+			else
+				direction = point_direction(target.x, target.y, x, y) + random(20) - 10
             speed = 0.4
             walk = actTime*2 + random(10)
             gunangle = point_direction(x, y, target.x, target.y)

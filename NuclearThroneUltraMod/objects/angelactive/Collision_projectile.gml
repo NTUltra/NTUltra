@@ -34,7 +34,7 @@ if team != other.team && instance_exists(Player)
 			event_user(15);
 		}
 		
-		if Player.area=100 && instance_exists(CrownGuardian)
+		if instance_exists(CrownGuardian)
 		{
 			scrUnlockCSkin(18,"FOR DEFLECTING A PROJECTILE#THAT IS DEFLECTED BY A CROWN GUARDIAN#AS ANGEL",0);
 		}
