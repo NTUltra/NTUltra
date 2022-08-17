@@ -260,7 +260,7 @@ else if skill = 85//ROGUE SUPER PORTAL STRIKE
 		Player.rogueammo=8;
 	}
 }
-else if skill == 87 && Player.skeletonlives > 0
+else if skill == 87 && scrHasAnEmptyLife()
 {
 	with Player
 	{

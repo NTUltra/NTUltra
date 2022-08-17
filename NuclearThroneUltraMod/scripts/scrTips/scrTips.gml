@@ -137,7 +137,7 @@ function scrTips() {
 	tip = choose("inverted darkness","back to the other dimension","pls explain","inverted world are a benefit","visit inverted world on loop","good luck getting through this"
 	,"white ravens")
 	if Player.area = 107
-	tip = choose("black snow?","looks like shit","mud?","explosions everywhere!","should not have come here","the greed is real","do you want to die?","inverted demons","chocolate city")
+	tip = choose("black snow?","mud?","explosions everywhere!","should not have come here","the greed is real","do you want to die?","inverted demons","chocolate city")
 	if Player.area = 101
 	tip = choose("water","hold your breath","big fish here","you should come here more often","ocean man!","swimming","you can use lightning here")
 	if Player.area = 108
@@ -310,7 +310,7 @@ function scrTips() {
 	"Radiation is everywhere","Green puppy","The beam homes in on your crosshair")
 
 	if Player.race = 22//ROGUE
-	tip = choose("Keep moving","Never look back","Never slow down","They're getting closer","Never stop","Another world lost","gone rogue")
+	tip = choose("Keep moving","Never look back","Never slow down","They're getting closer","Never stop","Another world lost","gone rogue","you can cancel portalstrike with e (use key)")
 
 	if Player.race = 23//FROG
 	tip = choose("Wait for me","Don't hold it up","Keep going","Let it all out","Gas is good","Bloated","Restless","Let's go","Can't wait","frog likes to sing")

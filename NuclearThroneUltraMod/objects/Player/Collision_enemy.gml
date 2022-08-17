@@ -61,7 +61,10 @@ if other.team != team && team != 0
 				}
 				sprite_index = spr_hurt
 				image_index = 0
-				motion_add(point_direction(other.x,other.y,x,y),3)
+				if meleedamage > 0
+					motion_add(point_direction(other.x,other.y,x,y),0.4)
+				else
+					motion_add(point_direction(other.x,other.y,x,y),3)
 				scrSheepHit();
 			}
 			if (other.my_health <= 0 && skill_got[8] || actuallyDead)//gamma guts kill?

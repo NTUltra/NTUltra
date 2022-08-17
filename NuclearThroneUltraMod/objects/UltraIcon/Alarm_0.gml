@@ -49,7 +49,8 @@ else if skill == 76 && Player.ultimategamble=true
 {
 	sprite_index=sprUltimateGamble;
 }
-else if skill == 87 && Player.skeletonlives > 0
+	
+else if skill == 87 && scrHasAnEmptyLife()
 {
 	sprite_index = sprFreakRogue;
 }

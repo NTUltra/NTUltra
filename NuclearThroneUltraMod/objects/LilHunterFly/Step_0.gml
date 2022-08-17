@@ -5,9 +5,12 @@ if y+z < __view_get( e__VW.YView, 0 )-64 and -z > 160
 {
 if instance_exists(Player)
 {
-
-x=instance_nearest(Player.xprevious+16+random(64-32),Player.yprevious+16+random(64-32),Floor).x;
-y=instance_nearest(Player.xprevious+16+random(64-32),Player.yprevious+16+random(64-32),Floor).y;//+16+random(64)-32;
+	var ground = instance_nearest(Player.xprevious+16+random(64-32),Player.yprevious+16+random(64-32),Floor);
+	var o = 16;
+	if ground.object_index == FloorExplo
+		o = 8;
+	x = ground.x + o;
+	y = ground.y + o;
 //x = Player.x
 //y = Player.y
 shadowdraw=true;

@@ -7,4 +7,5 @@ instance_create(xx,yy,ToxicThrowerGas);
 // Inherit the parent event
 event_inherited();
 
-
+if sprite_index == sprToxicBullet2
+		sprite_index = sprToxicBullet2HighDmg;

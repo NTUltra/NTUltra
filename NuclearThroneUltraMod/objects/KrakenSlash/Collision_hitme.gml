@@ -4,10 +4,10 @@ if other.team != team && (!inArray || other.sprite_index != other.spr_hurt)
 	if !inArray
 		hitEntities[array_length(hitEntities)] = other.id;
 	alarm[1] = hitDelay;
-	snd_play(sndRoll);
-	snd_play(sndBloodLauncher);
+	snd_play(sndRoll,0,true);
+	snd_play(sndBloodLauncher,0,true);
 
-	snd_play(choose(sndWater1,sndWater2) );
+	snd_play(choose(sndWater1,sndWater2) ,0,true);
 
 
 	with instance_create(x,y,Tentacle)

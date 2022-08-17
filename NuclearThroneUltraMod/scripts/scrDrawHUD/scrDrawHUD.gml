@@ -248,7 +248,7 @@ function scrDrawHUD() {
 	//SKILL ICONS
 	dix = 0;
 	dir = 0;
-	if Player.totalSkills > 13 - (max(-1,Player.maxarmour-1))
+	if Player.totalSkills > 12 - (max(-1,Player.maxarmour-1))
 	{
 		var cdir = 0;
 		var fs = 0;
@@ -267,7 +267,7 @@ function scrDrawHUD() {
 	}
 	repeat(Player.maxskill+1)
 	{
-		if Player.skill_got[dir] = 1 && dix < 12 - (max(-1,Player.maxarmour-1))
+		if Player.skill_got[dir] = 1 && dix < 11 - (max(-1,Player.maxarmour-1))
 		{
 			var xx = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-12-16*dix;
 			var yy = __view_get( e__VW.YView, 0 )+12;

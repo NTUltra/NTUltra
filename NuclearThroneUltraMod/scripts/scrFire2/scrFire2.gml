@@ -440,6 +440,7 @@ function scrFire2() {
 	{
 	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),MiniPlasmaBall)
 	{motion_add(aimDirection+(ang*other.accuracy),5)//40-20
+		originalDirection = direction;
 	image_angle = direction
 	team = other.team
 	}
@@ -464,6 +465,7 @@ function scrFire2() {
 
 	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),MiniPlasmaBall)
 	{motion_add(aimDirection+(random(26)-13)*other.accuracy,2)
+		originalDirection = direction;
 	image_angle = direction
 	team = other.team}
 
@@ -502,6 +504,7 @@ function scrFire2() {
 
 	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),MiniPlasmaBall)
 	{motion_add(aimDirection+(random(10)-5)*other.accuracy,2)
+		originalDirection = direction;
 	image_angle = direction
 	team = other.team}
 
@@ -1821,7 +1824,7 @@ function scrFire2() {
 	{
 	snd_wallhit=sndGuitarHitWall;
 	snd_hit=sndGuitarHit;
-	dmg = 23//26
+	dmg = 24//26
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -5275,6 +5278,7 @@ function scrFire2() {
 
 	with instance_create(x+lengthdir_x(6,aimDirection),y+lengthdir_y(6,aimDirection),MiniPlasmaBall)
 	{motion_add(aimDirection+(random(10)-5)*other.accuracy,2)
+		originalDirection = direction;
 	image_angle = direction
 	team = other.team}
 
@@ -6299,35 +6303,91 @@ function scrFire2() {
 
 	break;
 	
-	//WAZER
+	//WAZER RIFLE
 	case 424:
-	var exists = false;
-	with PlayerWazer
+	var um = GetPlayerUltramod()
+	if um == ultramods.laserBullet
 	{
-		if owner == other.id
-			exists = true;
-	}
-	if !exists
-	{
-		snd_play_2d(sndWazerStart,0,true);
-		with instance_create(x,y,PlayerWazer)
+		with instance_create(x,y,Burst)
 		{
-			owner = other.id;
-			team = other.team;
-			mywep = other.wep
-			alarm[0] = 1 + other.wep_load[mywep];
-			owner = other.id;
-			camKick = 5;
-			camShake = 3;
-			wkick = 4;
+			ultramodded = true;
+			creator = other.id
+			ammo = 3
+			time = 2
+			aimOffset = 5 * other.accuracy;
+			team = other.team
+			event_perform(ev_alarm,0) 
+		}
+		with instance_create(x,y,Burst)
+		{
+			ultramodded = true;
+			creator = other.id
+			ammo = 3
+			time = 2
+			aimOffset = -5 * other.accuracy;
+			team = other.team
+			alarm[0] = 1;
+		}
+	}
+	else if um == ultramods.laserBolt
+	{
+		with instance_create(x,y,SplinterBurst2)
+		{
+			ultramodded = true;
+			accuracy = 8*other.accuracy;
+			mox=UberCont.mouse__x;
+			moy=UberCont.mouse__y;
+			creator = other.id
+			ammo = 2
+			maxammo = ammo;
+			time = 2
+			team = other.team
+			event_perform(ev_alarm,0) 
+		}
+		with instance_create(x,y,SplinterBurst2)
+		{
+			ultramodded = true;
+			accuracy = 3*other.accuracy;
+			mox=UberCont.mouse__x;
+			moy=UberCont.mouse__y;
+			creator = other.id
+			ammo = 2
+			maxammo = ammo;
+			time = 2
+			team = other.team
+			alarm[0] = 1;
 		}
 	}
 	else
 	{
+		var exists = false;
 		with PlayerWazer
 		{
 			if owner == other.id
-				alarm[0] = 1 + other.wep_load[other.wep];
+				exists = true;
+		}
+		if !exists
+		{
+			snd_play_2d(sndWazerStart,0,true);
+			with instance_create(x,y,PlayerWazer)
+			{
+				owner = other.id;
+				team = other.team;
+				mywep = other.wep
+				alarm[0] = 1 + other.wep_load[mywep];
+				owner = other.id;
+				camKick = 5;
+				camShake = 3;
+				wkick = 4;
+			}
+		}
+		else
+		{
+			with PlayerWazer
+			{
+				if owner == other.id
+					alarm[0] = 1 + other.wep_load[other.wep];
+			}
 		}
 	}
 	break;
@@ -6386,33 +6446,86 @@ function scrFire2() {
 	
 	//EXPLOSIVE WAZER RIFLE
 	case 428:
-	var exists = false;
-	with PlayerExplosionWazer
+	var um = GetPlayerUltramod()
+	if um == ultramods.laserBullet
 	{
-		if owner == other.id
-			exists = true;
-	}
-	if !exists
-	{
-		snd_play_2d(sndWazerStart,0,true);
-		with instance_create(x,y,PlayerExplosionWazer)
+		var flip = choose(1,-1);
+		with instance_create(x,y,ExplosiveBulletBurst)
 		{
-			owner = other.id;
-			team = other.team;
-			mywep = other.wep
-			alarm[0] = 1 + other.wep_load[mywep];
-			owner = other.id;
-			camKick = 5;
-			camShake = 3;
-			wkick = 4;
+			ultramodded = true;
+			creator = other.id
+			ammo = 3
+			time = 2
+			aimOffset = 5 * other.accuracy * flip;
+			team = other.team
+			event_perform(ev_alarm,0) 
 		}
+		with instance_create(x,y,ExplosiveBulletBurst)
+		{
+			ultramodded = true;
+			creator = other.id
+			ammo = 2
+			time = 2
+			aimOffset = -5 * other.accuracy * flip;
+			team = other.team
+			alarm[0] = 1;
+		}
+	}
+	else if um == ultramods.laserBolt
+	{
+		snd_play_fire(sndSplinterGun)
+
+		with instance_create(x,y,ExplosiveSplinter)//5 splinters
+		{motion_add(aimDirection+(random(10)-5)*other.accuracy,20+random(4))
+		image_angle = direction
+		team = other.team}
+		repeat(2)
+		{
+		with instance_create(x,y,ExplosiveSplinter)
+		{motion_add(aimDirection+(random(24)-12)*other.accuracy,20+random(4))
+		image_angle = direction
+		team = other.team}
+		}
+		with instance_create(x,y,ExplosiveSplinter)
+		{motion_add(aimDirection+(random(14)-7)*other.accuracy,20+random(4))
+		image_angle = direction
+		team = other.team}
+		
+		BackCont.viewx2 += lengthdir_x(17,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(17,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 3
+		wkick -= 3
 	}
 	else
 	{
+		var exists = false;
 		with PlayerExplosionWazer
 		{
 			if owner == other.id
-				alarm[0] = 1 + other.wep_load[other.wep];
+				exists = true;
+		}
+		if !exists
+		{
+			snd_play_2d(sndWazerStart,0,true);
+			with instance_create(x,y,PlayerExplosionWazer)
+			{
+				owner = other.id;
+				team = other.team;
+				mywep = other.wep
+				alarm[0] = 1 + other.wep_load[mywep];
+				owner = other.id;
+				camKick = 5;
+				camShake = 3;
+				wkick = 4;
+			}
+		}
+		else
+		{
+			with PlayerExplosionWazer
+			{
+				if owner == other.id
+					alarm[0] = 1 + other.wep_load[other.wep];
+			}
 		}
 	}
 	break;
@@ -7195,6 +7308,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x(6,aimdir)+ldx,y+lengthdir_y(6,aimdir)+ldy,MiniPlasmaBall)
 	{
 		motion_add(aimdir,2)
+		originalDirection = direction;
 		image_angle = direction
 		team = other.team
 	}
@@ -7210,6 +7324,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x(6,aimdir)+ldx,y+lengthdir_y(6,aimdir)+ldy,MiniPlasmaBall)
 	{
 		motion_add(aimdir,2)
+		originalDirection = direction;
 		image_angle = direction
 		team = other.team
 	}
@@ -8385,34 +8500,102 @@ function scrFire2() {
 	
 	//ULTRA WAZER RIFLE
 	case 504:
-	var exists = false;
-	with PlayerUltraWazer
+	var um = GetPlayerUltramod()
+	if um == ultramods.laserBullet
 	{
-		if owner == other.id
-			exists = true;
-	}
-	if !exists
-	{
-		snd_play_2d(sndWazerStart,0,true);
-		snd_play_2d(sndUltraLaser,0,true);
-		with instance_create(x,y,PlayerUltraWazer)
+		with instance_create(x,y,UltraBulletBurst)
 		{
-			owner = other.id;
-			team = other.team;
-			mywep = other.wep
-			alarm[0] = 1 + other.wep_load[mywep];
-			owner = other.id;
-			camKick = 5;
-			camShake = 3;
-			wkick = 4;
+			ultramodded = true;
+			creator = other.id
+			ammo = 2
+			time = 2
+			aimOffset = 5 * other.accuracy;
+			team = other.team
+			event_perform(ev_alarm,0) 
 		}
+		with instance_create(x,y,UltraBulletBurst)
+		{
+			ultramodded = true;
+			creator = other.id
+			ammo = 2
+			time = 2
+			aimOffset = -5 * other.accuracy;
+			team = other.team
+			alarm[0] = 1;
+		}
+	}
+	else if um == ultramods.laserBolt
+	{
+		with instance_create(x,y,SplinterBurst2)
+		{
+			ultramodded = true;
+			accuracy = 8*other.accuracy;
+			mox=UberCont.mouse__x;
+			moy=UberCont.mouse__y;
+			creator = other.id
+			ammo = 2
+			maxammo = ammo;
+			time = 3
+			team = other.team
+			alarm[0] = 1;
+		}
+		snd_play_fire(sndUltraCrossbow)
+		snd_play_fire(sndSplinterGun)
+
+		with instance_create(x,y,UltraSplinter)//4 originally 6 splinters
+		{motion_add(aimDirection+(random(6)-3)*other.accuracy,20+random(4))
+		image_angle = direction
+		team = other.team}
+		with instance_create(x,y,UltraSplinter)
+		{motion_add(aimDirection+(random(12)-6)*other.accuracy,20+random(4))
+		image_angle = direction
+		team = other.team}
+		/*
+		with instance_create(x,y,UltraSplinter)
+		{motion_add(aimDirection+(random(20)-10)*other.accuracy,20+random(4))
+		image_angle = direction
+		team = other.team}*/
+		with instance_create(x,y,UltraSplinter)
+		{motion_add(aimDirection+(random(10)-5)*other.accuracy,20+random(4))
+		image_angle = direction
+		team = other.team}
+		
+		BackCont.viewx2 += lengthdir_x(21,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(21,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 7
+		wkick -= 6
 	}
 	else
 	{
+		var exists = false;
 		with PlayerUltraWazer
 		{
 			if owner == other.id
-				alarm[0] = 1 + other.wep_load[other.wep];
+				exists = true;
+		}
+		if !exists
+		{
+			snd_play_2d(sndWazerStart,0,true);
+			snd_play_2d(sndUltraLaser,0,true);
+			with instance_create(x,y,PlayerUltraWazer)
+			{
+				owner = other.id;
+				team = other.team;
+				mywep = other.wep
+				alarm[0] = 1 + other.wep_load[mywep];
+				owner = other.id;
+				camKick = 5;
+				camShake = 3;
+				wkick = 4;
+			}
+		}
+		else
+		{
+			with PlayerUltraWazer
+			{
+				if owner == other.id
+					alarm[0] = 1 + other.wep_load[other.wep];
+			}
 		}
 	}
 	break;
@@ -8602,7 +8785,7 @@ function scrFire2() {
 	with instance_create(x,y,LaserWallDestroyer)
 	{image_angle = aimDirection+(random(2)-1)*other.accuracy
 	team = other.team
-	image_yscale +=0.3;
+	image_yscale +=0.4;
 	dmg = 4;
 	event_perform(ev_alarm,0)
 	}
@@ -10052,33 +10235,98 @@ function scrFire2() {
 	
 	//TOXIC WAZER RIFLE
 	case 566:
-	var exists = false;
-	with PlayerToxicWazer
+	var um = GetPlayerUltramod()
+	if um == ultramods.laserBullet
 	{
-		if owner == other.id
-			exists = true;
-	}
-	if !exists
-	{
-		snd_play_2d(sndWazerStart,0,true);
-		with instance_create(x,y,PlayerToxicWazer)
+		var flip = choose(1,-1);
+		with instance_create(x,y,ToxicBulletBurst)
 		{
-			owner = other.id;
-			team = other.team;
-			mywep = other.wep
-			alarm[0] = 1 + other.wep_load[mywep];
-			owner = other.id;
-			camKick = 5;
-			camShake = 3;
-			wkick = 4;
+			ultramodded = true;
+			creator = other.id
+			ammo = 3
+			time = 2
+			aimOffset = 5 * other.accuracy * flip;
+			team = other.team
+			event_perform(ev_alarm,0) 
+		}
+		with instance_create(x,y,ToxicBulletBurst)
+		{
+			ultramodded = true;
+			creator = other.id
+			ammo = 2
+			time = 2
+			aimOffset = -5 * other.accuracy * flip;
+			team = other.team
+			alarm[0] = 1;
 		}
 	}
-	else
+	else if um == ultramods.laserBolt
 	{
+		snd_play_fire(sndSplinterGun)
+
+		with instance_create(x,y,Splinter)//5 splinters
+		{motion_add(aimDirection+(random(10)-5)*other.accuracy,20+random(4))
+			isGaseous = true;
+			alarm[11] = 0;
+		sprite_index = sprToxicSplinter;
+		trailColour = make_colour_rgb(138,204,61);
+		image_angle = direction
+		team = other.team}
+		repeat(2)
+		{
+		with instance_create(x,y,Splinter)
+		{motion_add(aimDirection+(random(24)-12)*other.accuracy,20+random(4))
+			isGaseous = true;
+			alarm[11] = 0;
+		sprite_index = sprToxicSplinter;
+		trailColour = make_colour_rgb(138,204,61);
+		image_angle = direction
+		team = other.team}
+		}
+		with instance_create(x,y,Splinter)
+		{motion_add(aimDirection+(random(14)-7)*other.accuracy,20+random(4))
+			isGaseous = true;
+			alarm[11] = 0;
+		sprite_index = sprToxicSplinter;
+		trailColour = make_colour_rgb(138,204,61);
+		image_angle = direction
+		team = other.team}
+		
+		BackCont.viewx2 += lengthdir_x(17,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(17,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 3
+		wkick -= 3
+	}
+	else 
+	{
+		var exists = false;
 		with PlayerToxicWazer
 		{
 			if owner == other.id
-				alarm[0] = 1 + other.wep_load[other.wep];
+				exists = true;
+		}
+		if !exists
+		{
+			snd_play_2d(sndWazerStart,0,true);
+			with instance_create(x,y,PlayerToxicWazer)
+			{
+				owner = other.id;
+				team = other.team;
+				mywep = other.wep
+				alarm[0] = 1 + other.wep_load[mywep];
+				owner = other.id;
+				camKick = 5;
+				camShake = 3;
+				wkick = 4;
+			}
+		}
+		else
+		{
+			with PlayerToxicWazer
+			{
+				if owner == other.id
+					alarm[0] = 1 + other.wep_load[other.wep];
+			}
 		}
 	}
 	break;
@@ -11005,6 +11253,29 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 4
 	wkick = 6
+
+	break;
+	
+	//SUPER BOUNCER LASER PISTOL
+	case 601:
+	if Player.skill_got[17] = 1
+	snd_play_fire(sndUltraLaserUpg)
+	else
+	snd_play_fire(sndUltraLaser)
+	with instance_create(x,y,Laser)
+	{
+		image_angle = aimDirection+(random(2)-1)*other.accuracy
+		team = other.team
+		laserhit=40+(Player.skill_got[17]*5);
+		sprite_index=sprBouncingLaser;
+		image_yscale += 1.6
+		event_perform(ev_alarm,0)
+	}
+
+	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 10
+	wkick = 2
 
 	break;
 	

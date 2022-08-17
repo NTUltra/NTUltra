@@ -337,9 +337,10 @@ function scrDrawBloom() {
 
 	with Laser
 	{
-	draw_sprite_ext(sprite_index,-1,x,y,image_xscale,2,image_angle,c_white,ba)
-	draw_sprite_ext(startImg,img,xstart,ystart,2,2,image_angle,c_white,ba)
-	draw_sprite_ext(endImg,img,x,y,2,2,image_angle,c_white,ba)
+		var ys = max(1.5,image_yscale+1);
+	draw_sprite_ext(sprite_index,-1,x,y,image_xscale,ys,image_angle,c_white,ba)
+	draw_sprite_ext(startImg,img,xstart,ystart,2,ys,image_angle,c_white,ba)
+	draw_sprite_ext(endImg,img,x,y,2,ys,image_angle,c_white,ba)
 	}
 	with IonBurst
 	{

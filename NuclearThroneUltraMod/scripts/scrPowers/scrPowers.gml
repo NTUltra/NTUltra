@@ -1622,8 +1622,8 @@ function scrPowers() {
 	if race = 23 //Frog
 	{
 
-	if ultra_got[92]=0
-	speed=0;
+	//if ultra_got[92]=0
+	//speed=0;
 
 	    if toxicamount<maxtoxicamount
 	    {

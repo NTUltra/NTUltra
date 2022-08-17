@@ -13,6 +13,7 @@ if instance_exists(Player)
 	{
 		isGaseous = true;
 		sprite_index = sprToxicSplinter;
+		trailColour = make_colour_rgb(138,204,61);
 	}
 }
 um = GetPlayerUltramod();

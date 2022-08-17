@@ -202,7 +202,13 @@ instance_create(x+random(50)-25,y+random(50)-25,IonImpact)
 //Crown of death
 if crown == 3
 {
-	instance_create(x,y,CrownOfDeathBoom);
+	with instance_create(x,y,CrownOfDeathBoom)
+	{
+		race = other.race;
+		area = other.area;
+		inverted = other.inverted;
+		crown = other.crown;
+	}
 }
 if actualLives>0 && !reincarnate
 {
@@ -243,39 +249,29 @@ instance_destroy();
 
 with instance_create(x,y,PlayerSpawn)//Data to keep
 {
-//alarm[3]=300;//immunity
-ultramod = other.ultramod;
-ultimategamble=true;
-skeletonlives = other.skeletonlives-1;
-var si= 0;
-livesRegain = other.livesRegain;
-var al = array_length(livesRegain);
-var tookLife = false;
-repeat(al)
-{
-	if !tookLife && livesRegain[si] > 2
-	{
-		livesRegain[si] = 0;
-		tookLife = true;
-	}
-	si++;
-}
-race = other.race
-crown = 1//other.crown
-lastarea = other.lastarea;
-lastsubarea = other.lastsubarea;
-area = other.area//other.lastarea;
-subarea=other.subarea;
-loops = other.loops;
-hard = other.hard;
-kills = other.kills;
-myCorpse = playerCorpse;
-level = max(other.boostLevel,other.level);
-inverted = other.inverted;
-crownvisits = other.crownvisits;
+	//alarm[3]=300;//immunity
+	ultramod = other.ultramod;
+	ultimategamble=true;
+	var si= 0;
+	livesRegain = other.livesRegain;
+	var al = array_length(livesRegain);
+	var tookLife = false;
+	race = other.race
+	crown = 1//other.crown
+	lastarea = other.lastarea;
+	lastsubarea = other.lastsubarea;
+	area = other.area//other.lastarea;
+	subarea=other.subarea;
+	loops = other.loops;
+	hard = other.hard;
+	kills = other.kills;
+	myCorpse = playerCorpse;
+	level = max(other.boostLevel,other.level);
+	inverted = other.inverted;
+	crownvisits = other.crownvisits;
 	if other.ultra_got[87] && other.altUltra && other.rogueammo > 0
 	{
-		skeletonlives += 1;
+		skeletonlives = other.skeletonlives
 		freakRespawn = true;
 		skill_got = other.skill_got;
 		ultra_got = other.ultra_got;
@@ -368,6 +364,16 @@ crownvisits = other.crownvisits;
 	}
 	else
 	{
+		skeletonlives = other.skeletonlives-1;
+		repeat(al)
+		{
+			if !tookLife && livesRegain[si] > 2
+			{
+				livesRegain[si] = 0;
+				tookLife = true;
+			}
+			si++;
+		}
 		alarm[0]=60;
 		alarm[1] = 5;
 		alarm[2] = 3;

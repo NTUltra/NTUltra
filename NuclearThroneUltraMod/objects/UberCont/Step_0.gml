@@ -34,8 +34,11 @@ if race = 0 || UberCont.opt_gamemode == 23
 if crown = 0
 crown = ceil(irandom(crownmax))
 with WepPickup
-instance_destroy();
-
+	instance_destroy();
+with ThrowWep
+	instance_destroy();
+with HardModeChest
+	instance_destroy();
 with instance_create(x,y,GenCont)
 {race = other.race
 crown = other.crown}

@@ -7,8 +7,8 @@
   "visible": true,
   "managed": true,
   "spriteMaskId": {
-    "name": "mskBullet1",
-    "path": "sprites/mskBullet1/mskBullet1.yy",
+    "name": "mskFlakBullet",
+    "path": "sprites/mskFlakBullet/mskFlakBullet.yy",
   },
   "persistent": false,
   "parentObjectId": {

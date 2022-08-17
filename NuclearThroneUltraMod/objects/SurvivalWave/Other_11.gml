@@ -6,6 +6,14 @@ if instance_exists(SurvivalArenaStarter)
 	x = centerX;
 	y = centerY;
 }
+with Player
+{
+	if ultra_got[87] && !altUltra//Rogue new captain ultra summon rogue idpd
+    {
+	    with BackCont
+			alarm[5] = 30;
+    }	
+}
 with prop
 {
 	if point_distance(x,y,other.x,other.y) < 400
@@ -422,7 +430,7 @@ switch (UberCont.crownVaultChallenge)
 			yy: centerY+64
 		};
 		i++;
-		repeat(4)
+		repeat(3)
 		{
 			wave[i] = {
 				obj: Sniper,
@@ -430,6 +438,11 @@ switch (UberCont.crownVaultChallenge)
 			};
 			i++;
 		};
+		wave[i] = {
+			obj: Sniper,
+			time: 60,
+		};
+		i++;
 	break;
 	#endregion
 	#region challenge 3
@@ -576,7 +589,7 @@ switch (UberCont.crownVaultChallenge)
 			yy: centerY+64
 		};
 		i++;
-		repeat(4)
+		repeat(3)
 		{
 			wave[i] = {
 				obj: DiscGuy,
@@ -584,6 +597,11 @@ switch (UberCont.crownVaultChallenge)
 			};
 			i++;
 		};
+		wave[i] = {
+			obj: DiscGuy,
+			time: 60,
+		};
+		i++;
 	break;
 	#endregion
 }

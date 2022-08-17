@@ -1,13 +1,6 @@
 if instance_exists(Player) && instance_exists(Wall)
 {
 
-if Player.area=100
-{
-instance_destroy()
-exit;
-}
-
-
 do {
 x = Player.x
 y = Player.y

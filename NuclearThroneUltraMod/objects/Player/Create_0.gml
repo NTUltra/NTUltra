@@ -71,7 +71,7 @@ if UberCont.opt_shake != 4
 screenshake400 = false
 with UberCont {
     if opt_gamemode = 17 //CHEATS
-    public = 1
+		public = 0
     //Daily
     if opt_gamemode == 26 {
         canRestart = false;

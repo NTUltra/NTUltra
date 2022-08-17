@@ -47,7 +47,7 @@ function scrNextLevel() {
 	        {
 	        area = 124
 			lastarea = 124;
-	        subarea = -1;
+	        subarea = 1;
 			inverted=true
 			if crown == 24
 				hard -= 1;
@@ -70,7 +70,7 @@ function scrNextLevel() {
 			//To Labs
 			area = 6
 			lastarea = 6;
-			subarea = -1;
+			subarea = 1;
 			inverted = false;
 			exit;
 		}

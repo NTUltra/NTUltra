@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sprBouncingLaser","path":"sprites/sprBouncingLaser/sprBouncingLaser.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sprBouncingLaser",
     "tags": [],
     "resourceType": "GMSequence",
   },

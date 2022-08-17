@@ -11,10 +11,11 @@ y = creator.y
 snd_play_fire(snd)
 with instance_create(x,y,Shell)
 motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+other.aimOffset+180+random(50)-25,2+random(2))
-
 with instance_create(x,y,Bullet1)
 {
-motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+other.aimOffset+random(4)-2,16)
+	if other.ultramodded
+		alarm[11] = 0;
+motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+other.aimOffset+(random(4)-2*other.accuracy),16)
 image_angle = direction
 team = other.team
     if (instance_exists(Player))

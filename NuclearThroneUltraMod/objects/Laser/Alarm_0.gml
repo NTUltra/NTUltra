@@ -44,8 +44,19 @@ if(instance_exists(Player)){
 				instance_destroy(id,false);
 			exit;
 			}
-			else if laserhit > 0
+			else if laserhit > 0 && instance_exists(Player)
 			{
+				with instance_create(x,y,BouncerBurst)
+				{
+					ultramodded = true;
+					pspeed += 3;
+					creator = Player
+					ammo = other.laserhit
+					time = 1
+					team = other.team
+					event_perform(ev_alarm,0) 
+				}
+				/*
 				snd_play_fire(sndBouncerFire);
 				var acc = scrGetPlayerAccuracy();
 				with instance_create(x,y,Bullet3)
@@ -59,9 +70,9 @@ if(instance_exists(Player)){
 					scrCopyWeaponMod(other);
 				image_angle = direction
 				team = other.team
-				alarm[11] = 0;}
+				alarm[11] = 0;}*/
 				instance_destroy(id,false);
-			exit;
+				exit;
 			}
 			else
 			{
@@ -100,6 +111,65 @@ if(instance_exists(Player)){
 			image_angle = direction
 			team = other.team
 			alarm[11] = 0;}
+			if laserhit > 10
+			{
+				snd_play(sndSuperCrossbow);
+				var acc = scrGetPlayerAccuracy();
+				with instance_create(x,y,thebolt)
+				{
+					motion_add(other.image_angle+5*acc,24)
+					dmg = round(dmg*0.5);
+					scrCopyWeaponMod(other);
+					image_angle = direction
+					team = other.team
+					alarm[11] = 0;
+				}
+				with instance_create(x,y,thebolt)
+				{
+					motion_add(other.image_angle-5*acc,24)
+					dmg = round(dmg*0.5);
+					scrCopyWeaponMod(other);
+					image_angle = direction
+					team = other.team
+					alarm[11] = 0;
+				}
+				with instance_create(x,y,thebolt)
+				{
+					motion_add(other.image_angle+10*acc,24)
+					dmg = round(dmg*0.5);
+					scrCopyWeaponMod(other);
+					image_angle = direction
+					team = other.team
+					alarm[11] = 0;
+				}
+				with instance_create(x,y,thebolt)
+				{
+					motion_add(other.image_angle-10*acc,24)
+					dmg = round(dmg*0.5);
+					scrCopyWeaponMod(other);
+					image_angle = direction
+					team = other.team
+					alarm[11] = 0;
+				}
+				with instance_create(x,y,thebolt)
+				{
+					motion_add(other.image_angle+15*acc,24)
+					dmg = round(dmg*0.5);
+					scrCopyWeaponMod(other);
+					image_angle = direction
+					team = other.team
+					alarm[11] = 0;
+				}
+				with instance_create(x,y,thebolt)
+				{
+					motion_add(other.image_angle-15*acc,24)
+					dmg = round(dmg*0.5);
+					scrCopyWeaponMod(other);
+					image_angle = direction
+					team = other.team
+					alarm[11] = 0;
+				}
+			}
 		
 			instance_destroy(id,false);
 			UberCont.ultramodSwap = true;
@@ -116,58 +186,102 @@ if(instance_exists(Player)){
 
 var dir;
 dir = 0
-
-do {x += lengthdir_x(2,image_angle) y += lengthdir_y(2,image_angle) dir += 1}
-until (place_meeting(x,y,hitme) and dir > 16) or place_meeting(x,y,Wall) or dir > 160
-
+//if !place_meeting(x,y,Wall)
+while !((place_meeting(x,y,hitme) and dir > 32) or place_meeting(x,y,Wall) or dir > 320)
+{
+	x += lengthdir_x(1,image_angle);
+	y += lengthdir_y(1,image_angle);
+	dir += 1;
+}
 if laserhit>0// && random(3)<1
 {
-//	var xx = x + lengthdir_x(3,image_angle+180);
-//	var yy = y + lengthdir_y(3,image_angle+180);
-//if ( place_meeting(x+8,y-4,Wall) ||place_meeting(x-8,y-4,Wall) ) && ( place_meeting(x+8,y+4,Wall) ||place_meeting(x-8,y+4,Wall) )
-if place_meeting(x,y,Wall) || place_meeting(x,y,hitme)
-{
-    with instance_create(x+lengthdir_x(4,image_angle+180),y+lengthdir_x(4,image_angle+180),Laser)
-    {
-		//flame = other.flame;
-		if !collision_line(x,y,x+lengthdir_x(4,image_angle),lengthdir_y(4,image_angle),Wall,false,false)
-			image_angle = other.image_angle*-1//180-other.image_angle;
-		else
-			image_angle = 180-other.image_angle;
-		
-		/*
-		if collision_point(x,y,Wall,false,false)
+	canSmoke = false;
+	var hitStyle = 0;
+	var o = 1;
+	dir = 0;
+	while !(collision_point(x,y,Wall,false,false) or dir > 160)
+	{
+		x += lengthdir_x(1,image_angle);
+		y += lengthdir_y(1,image_angle);
+		dir += 1;
+	}
+	while collision_point(x,y,Wall,false,false)//place_meeting(x,y,Wall)
+	{
+		x += lengthdir_x(1,image_angle+180) y += lengthdir_y(1,image_angle+180)
+	}
+	var hit = instance_place(x,y,hitme);
+	if hit != noone && hit.team != team
+	{
+		hitStyle = choose(1,2);	
+	}
+	if collision_point(x,y+o,Wall,false,false) || collision_point(x,y-o,Wall,false,false)
+		hitStyle = 1;//Vertical
+	if collision_point(x+o,y,Wall,false,false) || collision_point(x-o,y,Wall,false,false)
+	{/*
+		if hitStyle == 1
 		{
-			x -= lengthdir_x(4,image_angle);
-			y -= lengthdir_y(4,image_angle);
-			image_angle = other.image_angle*-1
-			x += lengthdir_x(4,image_angle);
-			y += lengthdir_y(4,image_angle);
+			var c = dcos(image_angle);
+			if abs(c) < 0.5
+				hitStyle = 1;
+			else if abs(c) > 0.5
+				hitStyle = 2;
+			else
+				hitStyle = 3;
 		}
-		else if instance_position(x,y,hitme) != noone && instance_position(x,y,hitme).team != team
+		else*/
+			hitStyle = 2;//Horizontal
+	}
+	if hitStyle != 0// && collision_point(x,y,Floor,false,false)
+	{
+		while place_meeting(x,y,Wall)
 		{
-			x -= lengthdir_x(4,image_angle);
-			y -= lengthdir_y(4,image_angle);
-			image_angle = other.image_angle*-1
-			x += lengthdir_x(4,image_angle);
-			y += lengthdir_y(4,image_angle);
-		}*/
-		isog = false;
-	    team = other.team
-		sprite_index=sprBouncingLaser;
-	    laserhit=other.laserhit-1;
-    
-    do {x += lengthdir_x(2,image_angle) y += lengthdir_y(2,image_angle) dir += 1}
-until (place_meeting(x,y,hitme) and dir > 16) or place_meeting(x,y,Wall) or place_meeting(x,y,VikingWall) or dir > 160
-    
-    alarm[0]=1;
-    }
-	laserhit=0;
-}
-}
-
+			x += lengthdir_x(1,image_angle+180); y += lengthdir_y(1,image_angle+180);
+		}
+		BackCont.shake += 1.5
+		x += lengthdir_x(1,image_angle+180); y += lengthdir_y(1,image_angle+180);
+	    with instance_create(x,y,Laser)
+	    {
+			image_yscale = max(image_yscale,other.image_yscale);
+			if place_meeting(x,y,Wall)//Might not fit in this spot
+				image_yscale = other.image_yscale;
+			if hitStyle == 2
+				image_angle = 180-other.image_angle;
+			else
+				image_angle = other.image_angle*-1
+			
+			/*
+			while collision_point(x,y,Wall,false,false)//place_meeting(x,y,Wall)
+			{
+				x += lengthdir_x(1,other.image_angle+180) y += lengthdir_y(1,other.image_angle+180)
+			}*/
+			isog = false;
+		    team = other.team
+			sprite_index=sprBouncingLaser;
+		    laserhit=other.laserhit-1;
+			dir = 0;
+			do {x += lengthdir_x(1,image_angle) y += lengthdir_y(1,image_angle) dir += 1}
+			until place_meeting(x,y,Wall) or dir > 320
+			alarm[0] = 1;
+		}
+		laserhit=0;
+		if instance_exists(Player) && Player.skill_got[17]
+			snd_play(sndLaserBounceUpg,0.3,false,true);
+		else
+			snd_play(sndLaserBounce,0.3,false,true);
+		with instance_create(x,y,ImpactFX)
+		{
+			if hitStyle == 2
+				image_angle = 0;
+			else
+				image_angle = 90;
+			image_yscale = choose(1,-1);
+			sprite_index = sprBouncingLaserBounce;	
+		}
+	}
+} else if canSmoke 
+	instance_create(x,y,Smoke)
+//if sprite_index != sprBouncingLaserBounce
+//	instance_create(x,y,Smoke)
 alarm[0] = 2
 
 image_xscale = point_distance(x,y,xstart,ystart)*0.5
-instance_create(x,y,Smoke)
-

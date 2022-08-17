@@ -104,13 +104,96 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 			}
 		}
 
-	if race == 23 && ultra_got[92] == 0
-	speed = clamp(speed,maxSpeed*0.8,maxSpeed);
+	
+	if speed = 0
+	{if sprite_index != spr_hurt
+	sprite_index = spr_idle}
+	else
+	{if sprite_index != spr_hurt
+	sprite_index = spr_walk}
+	if sprite_index = spr_hurt
+	{	
+		hurtTime++;
+		if (image_index > 2 && hurtTime > hurtDuration)
+		{
+			sprite_index = spr_idle
+			hurtTime = 0;
+		}
+	}
 
+	if UberCont.mouse__x < x
+	right = -1
+	else if UberCont.mouse__x > x
+	right = 1
+
+	if UberCont.mouse__y < y
+	back = 1
+	else if UberCont.mouse__y > y
+	back = -1
+
+		scrPowers();
+	}
+	else
+	{
+		//rolling
+		speed = 6.3*max(1,(skill_got[2]*1.3))//the rolling speed code is far below
+		angle += 50*right*max(1,(skill_got[2]*1.3))
+
+		if speed = 0
+		{if sprite_index != spr_hurt
+		sprite_index = spr_idle}
+		else
+		{if sprite_index != spr_hurt
+		sprite_index = spr_walk}
+		if sprite_index = spr_hurt
+		{if image_index > 2
+		sprite_index = spr_idle}
+
+		if skill_got[5] = 1
+		{
+			var spd = speed;
+			speed = 0;
+			if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+			hspeed -= 3
+			if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+			hspeed += 3
+			if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+			vspeed -= 3
+			if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+			vspeed += 3
+			instance_create(x,y,FishBoost)
+			speed += spd;
+			/*if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+			hspeed -= 3
+			if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+			hspeed += 3
+			if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+			vspeed -= 3
+			if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+			vspeed += 3*/
+			if (angle > 360 or -angle > 360) 
+			{
+				if !(KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2)
+				{
+					angle = 0
+					roll = 0
+				}
+			}
+		}
+		else{
+		instance_create(x+random(6)-3,y+random(6),Dust)
+			if angle > 360 or -angle > 360
+			{
+				angle = 0
+				roll = 0
+			}
+		}
+	}
 	if alarm[4]>0//boiling veins
 	{
 	instance_create(x+random(12)-6,y+random(12)-6,Smoke);
 	}
+	//Cheats
 	var thing;
 	if UberCont.public==0 && !keyboard_check(vk_control) && !keyboard_check(vk_shift){
 	//hacks
@@ -457,92 +540,6 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		}
 	//*/    
 	}
-
-	if speed = 0
-	{if sprite_index != spr_hurt
-	sprite_index = spr_idle}
-	else
-	{if sprite_index != spr_hurt
-	sprite_index = spr_walk}
-	if sprite_index = spr_hurt
-	{	
-		hurtTime++;
-		if (image_index > 2 && hurtTime > hurtDuration)
-		{
-			sprite_index = spr_idle
-			hurtTime = 0;
-		}
-	}
-
-	if UberCont.mouse__x < x
-	right = -1
-	else if UberCont.mouse__x > x
-	right = 1
-
-	if UberCont.mouse__y < y
-	back = 1
-	else if UberCont.mouse__y > y
-	back = -1
-
-		scrPowers();
-	}
-	else
-	{
-		//rolling
-		speed = 6.3*max(1,(skill_got[2]*1.3))//the rolling speed code is far below
-		angle += 50*right*max(1,(skill_got[2]*1.3))
-
-		if speed = 0
-		{if sprite_index != spr_hurt
-		sprite_index = spr_idle}
-		else
-		{if sprite_index != spr_hurt
-		sprite_index = spr_walk}
-		if sprite_index = spr_hurt
-		{if image_index > 2
-		sprite_index = spr_idle}
-
-		if skill_got[5] = 1
-		{
-			var spd = speed;
-			speed = 0;
-			if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
-			hspeed -= 3
-			if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
-			hspeed += 3
-			if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
-			vspeed -= 3
-			if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
-			vspeed += 3
-			instance_create(x,y,FishBoost)
-			speed += spd;
-			/*if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
-			hspeed -= 3
-			if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
-			hspeed += 3
-			if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
-			vspeed -= 3
-			if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
-			vspeed += 3*/
-			if (angle > 360 or -angle > 360) 
-			{
-				if !(KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2)
-				{
-					angle = 0
-					roll = 0
-				}
-			}
-		}
-		else{
-		instance_create(x+random(6)-3,y+random(6),Dust)
-			if angle > 360 or -angle > 360
-			{
-				angle = 0
-				roll = 0
-			}
-		}
-	}
-
 
 	if bleed > 0 and my_health > 0
 	{
@@ -1223,7 +1220,14 @@ if instance_exists(SurvivalWave)
 }
 if outOfCombat && UberCont.opt_gamemode != 25
 	maxSpeed += 1;
-if speed > maxSpeed
+//CAP SPEED
+if race == 23 && ultra_got[92] == 0
+{
+	speed = clamp(speed,maxSpeed*0.8,maxSpeed);
+	if toxicamount > 0 || place_meeting(x,y,Portal)
+		speed = 0;
+}
+else if speed > maxSpeed
 	speed = maxSpeed
 if outOfCombat && UberCont.opt_gamemode != 25
 	maxSpeed -= 1;
@@ -1257,19 +1261,19 @@ friction = 0.1
 else
 friction = 0.45
 }
-else if (area == 4 || area == 115) and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(FloorMaker)
+else if (skill_got[2]==0&&race!=18&&race!=24) && (area == 4 || area == 115 || area == 111) and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(FloorMaker)
 {
-//SPIDERWEBS
-if ((instance_nearest(x-16,y-16,Floor).styleb == 1)&&(skill_got[2]==0&&race!=18&&race!=24))//EXTRA FEET TEST
-friction = 1.8
-else
-friction = 0.45
-}
-else if area = 111 and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(FloorMaker)
-{
-//INVERTED SPIDERWEBS
-if ((instance_nearest(x-16,y-16,Floor).styleb == 1)&&(skill_got[2]==0&&race!=18&&race!=24))//EXTRA FEET TEST
-speed+=1;
+	//SPIDER WEBS
+	var ground = instance_nearest(x-16,y-16,Floor);
+	if (ground != noone && ground.styleb == 1)
+	{
+		if (ground.sprite_index == sprFloor111B)
+			speed+=1;
+		else
+			friction = 1.8;
+	}
+	else
+		friction = 0.45
 }
 
 

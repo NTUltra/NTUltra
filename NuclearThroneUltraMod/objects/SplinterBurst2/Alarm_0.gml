@@ -13,6 +13,8 @@ var dir = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + (accuracy *
 repeat(2)
 with instance_create(x,y,StormSplinter)//5 splinters
 {
+	if other.ultramodded
+		alarm[11] = 0;
 	motion_add(dir+random(8)-4,14+random(4))
 	image_angle = direction
 	team = other.team

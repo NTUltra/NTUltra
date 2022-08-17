@@ -1,6 +1,7 @@
 function scrDrawGameOver() {
 	//GAME OVER
-
+	if instance_exists(PlayerSpawn) || instance_exists(Player)
+		return;
 	draw_set_font(fntM)
 	draw_set_halign(fa_center)
 	draw_set_valign(fa_middle)

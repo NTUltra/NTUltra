@@ -5,8 +5,8 @@ if impactWristed && speed > 4.4
 		instance_destroy()
 		instance_create(x,y,FloorExplo)
 	}
-	snd_play(sndCorpseBounce,0.3,true);
+	snd_play(sndCorpseBounce,0.3,true,true);
 	instance_create(x+hspeed,y+vspeed,SmallWallBreak);
 }
 move_bounce_solid(false)
-speed *= 0.99;
+speed *= 0.97;

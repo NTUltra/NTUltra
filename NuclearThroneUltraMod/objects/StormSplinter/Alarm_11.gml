@@ -72,6 +72,7 @@ else if um == ultramods.plasmaBolt
 		scrCopyWeaponMod(other);
 		ptime = 6;
 		direction = other.direction;
+		originalDirection = direction;
 		image_angle = direction;
 		speed = other.speed;
 		team = other.team;

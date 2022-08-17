@@ -21,6 +21,7 @@ if um == ultramods.bulletShotgun
 		dmg --;
 		isGaseous = true;
 		sprite_index = sprToxicSplinter;
+		trailColour = make_colour_rgb(138,204,61);
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;

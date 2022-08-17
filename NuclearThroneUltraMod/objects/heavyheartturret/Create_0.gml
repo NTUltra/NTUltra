@@ -10,6 +10,7 @@ wkick = 0
 maxhealth = 10;
 my_health = maxhealth;
 snd_hurt = sndHitMetal;
+spr_hurt = sprBloodHammer;
 roll = 0;
 friction = 0.4
 
@@ -33,9 +34,9 @@ ammo[5] = typ_ammo[5]*2
 
 rad=0;
 
+accuracy = 1;
 if instance_exists(Player)
 {
-accuracy = Player.accuracy
 
 
 friction = 0.45

@@ -6640,6 +6640,17 @@ function scrWeapons() {
 	wep_swap[600] = sndSwapMachinegun
 	wep_rad[600] = 0;
 	
+	wep_name[601] = "SUPER BOUNCER LASER PISTOL"
+	wep_type[601] = 5
+	wep_auto[601] = 0
+	wep_load[601] = 15
+	wep_cost[601] = 8
+	wep_sprt[601] = sprSuperBouncerLaserGun
+	wep_area[601] = 17
+	wep_text[601] = "it boinks"
+	wep_swap[601] = sndSwapEnergy
+	wep_rad[601] = 0;
+	
 	maxwep = array_length(wep_name)-1;
 
 	//Only melee

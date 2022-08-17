@@ -5,11 +5,11 @@ if swapChar
 
 if area = 1 && instance_exists(WepPickup)
 {
-with WepPickup
-{
-	if wep = 46 && !persistent
-		other.canblacksword=true
-}
+	with WepPickup
+	{
+		if wep = 46 && !persistent
+			other.canblacksword=true
+	}
 }
 ///next level what procedure
 /*

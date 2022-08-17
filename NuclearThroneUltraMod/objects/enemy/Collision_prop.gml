@@ -1,4 +1,4 @@
-motion_add(point_direction(other.x,other.y,x,y),0.5)
+motion_add(point_direction(other.x,other.y,x,y),0.6)
 /*
 if other.team != team and other.my_health > 0 and size > other.size and meleedamage > 0
 {

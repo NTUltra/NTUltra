@@ -2,7 +2,7 @@ friction = 0.45
 image_speed = 0.4
 
 hurt_pitch_variation = 0;
-
+maxSpeed = Player.maxSpeed;
 hardshell=true;
 isAlkaline=false;
 hammerheadtimer=0;

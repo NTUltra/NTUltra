@@ -1,6 +1,7 @@
 /// @description ultramod
 x = xprevious;
 y = yprevious;
+var spd = max(6,speed);
 if um == ultramods.boltBullet
 {
 	instance_destroy(id,false);
@@ -14,7 +15,7 @@ if um == ultramods.boltBullet
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = other.speed;
+		speed = spd;
 		team = other.team;
 		alarm[11] = 0;
 	}
@@ -31,7 +32,7 @@ if um == ultramods.boltBullet
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = other.speed + 4;
+		speed = spd + 4;
 		team = other.team;
 		alarm[11] = 0;
 	}
@@ -55,7 +56,7 @@ if um == ultramods.boltBullet
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = other.speed;
+		speed = spd;
 		team = other.team;
 		alarm[11] = 0;
 	}
@@ -79,8 +80,9 @@ else if um == ultramods.plasmaBolt
 		scrCopyWeaponMod(other);
 		ptime = 6;
 		direction = other.direction;
+		originalDirection = direction;
 		image_angle = direction;
-		speed = other.speed;
+		speed = spd;
 		team = other.team;
 		alarm[11] = 0;
 	}
@@ -115,7 +117,7 @@ else if um == ultramods.laserBolt
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = other.speed;
+		speed = spd;
 		team = other.team;
 		alarm[11] = 0;
 	}

@@ -2,7 +2,8 @@ if team != other.team
 {
 	if other.isGrenade
 	{
-		scrDeflectNade(other.direction);
+		with other
+			scrDeflectNade(direction+180);
 		snd_play(sndCrystalRicochet,0.1,true);
 		Sleep(10);
 		BackCont.shake += 5;

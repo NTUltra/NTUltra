@@ -542,7 +542,7 @@ function scrUltras() {
 			ultra_text[87] = "AT THE START OF AN AREA#SUMMON A GROUP OF IDPD#THAT FIGHT FOR YOU";
 	    ultra_tips[87] = "rogue leader"
 		
-		if instance_exists(Player) && (Player.altUltra || (Player.skeletonlives > 0) && instance_exists(UltraIcon))
+		if instance_exists(Player) && (Player.altUltra || (scrHasAnEmptyLife() && instance_exists(UltraIcon)))
 		{
 			ultra_name[87] = "IMMORTAL POLICE"
 		    ultra_text[87] = "REPLACE PORTAL STRIKE WITH REVIVE#REVIVE USES PORTAL STRIKE AMMO#LOWER MAXIMUM PORTALSTRIKE AMMO BY 1#THRONEBUTT REVIVES YOU AT FULL HP#INSTEAD OF 1HP#PICKING UP PORTAL STRIKE AMMO#TRIGGERS BLAST ARMOUR"
@@ -581,7 +581,7 @@ function scrUltras() {
 		    else if Player.altUltra || (Player.wep_type[Player.wep] == 3 && Player.wep_type[Player.bwep] == 3 && instance_exists(UltraIcon)){
 				ultra_name[92] = "SPIKE BALL"
 				ultra_text[92] = "NORMAL CONTROLS#EMIT SPLINTERS INSTEAD OF GASS#ALL SPLINTERS ARE GASEOUS"
-				ultra_tips[92] = "porkupine"
+				ultra_tips[92] = "porkupain"
 		    }
 	    }
 

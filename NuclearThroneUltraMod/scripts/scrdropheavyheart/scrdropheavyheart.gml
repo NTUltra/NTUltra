@@ -13,7 +13,7 @@ function scrDropHeavyHeart(){
 		curse = other.curse;
 		wep = other.wep
 		spr_idle=wep_sprt[wep];
-
+		spr_hurt = spr_idle;
 		if wep_type[wep]=0
 		{//melee
 			wepammo=4+irandom(3)
