@@ -7,6 +7,7 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 	with SurvivalWave
 		instance_destroy();
 instance_activate_all()
+alarm[2] = 1;//Some objects are only accessible after a frame
 //audio_stop_all();
 isPaused = 0
 if instance_exists(Player)
@@ -39,6 +40,7 @@ with ThrowWep
 	instance_destroy();
 with HardModeChest
 	instance_destroy();
+
 with instance_create(x,y,GenCont)
 {race = other.race
 crown = other.crown}

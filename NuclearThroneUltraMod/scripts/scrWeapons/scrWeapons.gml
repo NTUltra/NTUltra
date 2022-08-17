@@ -4204,7 +4204,7 @@ function scrWeapons() {
 	wep_load[379] = 14
 	wep_cost[379] = 8
 	wep_sprt[379] = sprSkullBreaker
-	wep_area[379] = 11
+	wep_area[379] = 12
 	wep_text[379] = "bullets are closer together#with eagle eyes"
 	wep_swap[379] = sndSwapShotgun
 	wep_rad[379] = 0;
@@ -4974,7 +4974,7 @@ function scrWeapons() {
 	wep_load[449] = 14
 	wep_cost[449] = 2
 	wep_sprt[449] = sprPopWall
-	wep_area[449] = 11
+	wep_area[449] = 12
 	wep_text[449] = "pellets are closer together#with higher accuracy"
 	wep_swap[449] = sndSwapShotgun
 	wep_rad[449] = 0;

@@ -1224,7 +1224,7 @@ if outOfCombat && UberCont.opt_gamemode != 25
 if race == 23 && ultra_got[92] == 0
 {
 	speed = clamp(speed,maxSpeed*0.8,maxSpeed);
-	if toxicamount > 0 || place_meeting(x,y,Portal)
+	if toxicamount > 0 || !visible
 		speed = 0;
 }
 else if speed > maxSpeed
@@ -1252,28 +1252,84 @@ speed = 6.3*max(1,(skill_got[2]*1.3))//xtra feet rolling
 		instance_create(x,y,Dust);
 	}
 }
-
-if ((area = 5 || area = 107) and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(FloorMaker))
+if (!outOfCombat && skill_got[2]==0 && race!=18 && race!=24 && race != 15 and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(FloorMaker))
 {
-//SNOW & ICE TEST
-if ((instance_nearest(x-16,y-16,Floor).styleb == 1)&&(skill_got[2]==0&&race!=18&&race!=24)) // EXTRA FEET TEST
-friction = 0.1
-else
-friction = 0.45
-}
-else if (skill_got[2]==0&&race!=18&&race!=24) && (area == 4 || area == 115 || area == 111) and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(FloorMaker)
-{
-	//SPIDER WEBS
-	var ground = instance_nearest(x-16,y-16,Floor);
-	if (ground != noone && ground.styleb == 1)
+	if ((area = 5 || area = 107) and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(FloorMaker))
 	{
-		if (ground.sprite_index == sprFloor111B)
-			speed+=1;
+		//SNOW & ICE TEST
+		if ((instance_nearest(x-16,y-16,Floor).styleb == 1)) // EXTRA FEET TEST
+			friction = 0.1
 		else
-			friction = 1.8;
+			friction = 0.45
 	}
-	else
-		friction = 0.45
+	else if (area == 4 || area == 115 || area == 111) and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(FloorMaker)
+	{
+		//SPIDER WEBS
+		var ground = instance_nearest(x-16,y-16,Floor);
+		if (ground != noone && ground.styleb == 1)
+		{
+			if (ground.sprite_index == sprFloor111B)
+				speed+=1;
+			else
+				friction = 1.8;
+		}
+		else
+			friction = 0.45
+	} else if (area==7||area==108)
+	{//lava and frost
+		var ground = instance_position(x,y,FloorLava)
+		if ground == noone
+			ground = instance_position(x,y,FloorExplo)
+		if ground != noone
+		{
+		    if ground.sprite_index == sprFloor7Explo || ground.sprite_index == sprFloorLava
+		    {
+			    if alarm[4]<=0
+					alarm[4]=4;
+    
+				hotfloor+=1;
+		        if hotfloor>39//time before crisping
+		        {
+		        with instance_create(x,y,TrapFire){//burn!
+		        team=1;}
+		        hotfloor=0;//allright you've burned now continue
+        
+		        //GAMEMODE UNLOCKABLE WALL IS LAVA
+		        scrUnlockGameMode(4,"FOR STANDING IN LAVA");
+		        }
+				friction = 0.45
+		    }
+			else if ground.sprite_index == sprFloor108Explo || ground.sprite_index == sprInvertedFloorLava
+		    {
+			    if skill_got[2]==0
+					friction = 0.1
+    
+			    //when player isn't frozen increase the time that determines when it should get frozeen
+			    if frozen<1
+					getFrozen++;
+    
+			    if getFrozen>24 && alarm[3] < 1
+			    {
+					my_health -= 1;
+					snd_play_2d(snd_hurt);
+				    instance_create(x,y,FrozenPlayer);
+				    frozen=15;
+				    getFrozen=0;
+			    }
+			}
+			else
+			{
+				friction = 0.45
+				getFrozen=0;
+				hotfloor=0
+			}
+		}
+		else
+		{
+			getFrozen=0;
+			hotfloor=0	
+		}
+	}
 }
 
 
@@ -1407,7 +1463,7 @@ if skill_got[25]//strong spirit
     
     //UNLOCK VIKING
     if strongspiritregained>3
-    scrUnlockCharacter(16,"FOR REGAINING STRONG SPIRIT 4 TIMES")
+		scrUnlockCharacter(16,"FOR REGAINING STRONG SPIRIT 4 TIMES")
     
     }
     
@@ -1418,69 +1474,6 @@ if skill_got[25]//strong spirit
     
     }
 
-/* */
-///lava and frost
-if (area==7||area==108)&&race!=18&&race!=24&&skill_got[14]==0 && !outOfCombat///angel & elementor boiling veins
-{
-	var ground = instance_position(x,y,FloorLava)
-	if ground == noone
-		ground = instance_position(x,y,FloorExplo)
-	if ground != noone
-	{
-	    if ground.sprite_index == sprFloor7Explo || ground.sprite_index == sprFloorLava
-	    {
-		    if alarm[4]<=0
-				alarm[4]=4;
-    
-			hotfloor+=1;
-	        if hotfloor>39//time before crisping
-	        {
-	        with instance_create(x,y,TrapFire){//burn!
-	        team=1;}
-	        hotfloor=0;//allright you've burned now continue
-        
-	        //GAMEMODE UNLOCKABLE WALL IS LAVA
-	        scrUnlockGameMode(4,"FOR STANDING IN LAVA");
-	        }
-	    }
-		else if ground.sprite_index == sprFloor108Explo || ground.sprite_index == sprInvertedFloorLava
-	    {
-		    if skill_got[2]==0
-				friction = 0.1
-    
-		    //when player isn't frozen increase the time that determines when it should get frozeen
-		    if frozen<1
-				getFrozen++;
-    
-		    if getFrozen>24 && alarm[3] < 1
-		    {
-				my_health -= 1;
-				snd_play_2d(snd_hurt);
-			    instance_create(x,y,FrozenPlayer);
-			    frozen=15;
-			    getFrozen=0;
-		    }
-		}
-		else
-		{
-			friction = 0.45
-			getFrozen=0;
-			hotfloor=0
-		}
-	}
-	else
-	{
-		getFrozen=0;
-		hotfloor=0	
-	}
-}
-if area=108&&race!=18&&race!=24 && !outOfCombat//angel & elementor don't bother with this stuff
-{
-
-    
-
-
-}
 
 /* */
 ///Frozen

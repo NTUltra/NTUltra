@@ -21,8 +21,9 @@ if instance_exists(Player)
     }
 	if Player.crown == 9//Crown of love
 	{
-		instance_destroy(id,false);
-		instance_create(x,y,AmmoChest);
+		alarm[1] = 10;
+		if !instance_exists(GenCont)
+			event_perform(ev_alarm,1);
 	}
 }
 

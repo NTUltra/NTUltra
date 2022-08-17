@@ -36,7 +36,7 @@ if team != other.team && instance_exists(Player)
 		
 		if Player.area=100 && instance_exists(CrownGuardian)
 		{
-			scrUnlockCSkin(18,"FOR REFLECTING A PROJECTILE#THAT IS REFLECTED BY A CROWN GUARDIAN#AS ANGEL",0);
+			scrUnlockCSkin(18,"FOR DEFLECTING A PROJECTILE#THAT IS DEFLECTED BY A CROWN GUARDIAN#AS ANGEL",0);
 		}
 	}
 	else

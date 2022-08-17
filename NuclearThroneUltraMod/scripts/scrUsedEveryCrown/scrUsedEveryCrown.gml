@@ -6,8 +6,8 @@ function scrUsedEveryCrown() {
 		repeat(crownmax+4)
 		{
 
-		if crown_used[dir]=1
-		used++;
+		if crown_used[dir]=1 || dir > crownmax
+			used++;
 
 		dir++;
 		}

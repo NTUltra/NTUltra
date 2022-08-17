@@ -128,11 +128,11 @@ team = 2
 size = 5
 
 if instance_exists(GenCont)
-crown = GenCont.crown
+	crown = GenCont.crown
 else if instance_exists(CrownIcon)
-crown = CrownIcon.crown;
+	crown = CrownIcon.crown;
 else if instance_exists(PlayerSpawn)
-crown = PlayerSpawn.crown;
+	crown = PlayerSpawn.crown;
 else
     crown = 1;
 
@@ -371,15 +371,15 @@ if UberCont.opt_gamemode = 21 { //loop start
 var r = UberCont.racepick;
 if r == 0
 	r = race
+
 if UberCont.crown_start[r] && !instance_exists(PlayerSpawn) && UberCont.opt_gamemode != 25 {
     //area = 100;
     //hard -= 1;
     //crownvisits = -1;
 	//instance_create(0,0,PauseTimer);
-	crownpoints = 1;
 	with Crown
 		instance_destroy();
-		
+	crownpoints = 1;
 	instance_create(x,y,Crown);
 }
 

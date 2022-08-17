@@ -69,7 +69,7 @@ UberCont.maxHpIncrease ++;
 if scrUsedEveryCrown()
 {
 with Player
-scrUnlockBSkin(18,"FOR TRYING EVERY CROWN",0);
+	scrUnlockBSkin(18,"FOR TRYING EVERY CROWN",0);
 }
 //CROWN OF LIFE
 if crown == 2
