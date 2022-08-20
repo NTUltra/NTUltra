@@ -24,10 +24,28 @@ if dir<12
 		crown = other.dir
 		if crown == 0 
 		{
-			if Player.wep_type[Player.wep] == 4 && Player.wep_type[Player.bwep] == 4//Crown of freedom secret 2 explosive weps
+			if Player.crown == 8 && Player.tookDestiny
+				crown = 8;
+			else if Player.crown == 25
+				crown = 25;
+			else if Player.crown == 26
+				crown = 26;
+			else if Player.crown == 27
+				crown = 27;
+			else if Player.crown == 28
+				crown = 28;
+			else if Player.crown == 29
+				crown = 29;
+			else if Player.wep_type[Player.wep] == 4 && Player.wep_type[Player.bwep] == 4//Crown of freedom secret 2 explosive weps
 				crown = 25;
 			else if Player.wep_type[Player.wep] == 5 && Player.wep_type[Player.bwep] == 5//Crown of energy
 				crown = 26;
+			else if Player.crown == 7
+				crown = 28;
+			else if scrCanWeDisco()
+				crown = 27;
+			else if Player.wepmod1 != 0 || Player.bwepmod1 != 0
+				crown = 29;
 		}
 		else if crown == 8 && Player.tookDestiny//Crown of sloth secret
 			crown = 24;

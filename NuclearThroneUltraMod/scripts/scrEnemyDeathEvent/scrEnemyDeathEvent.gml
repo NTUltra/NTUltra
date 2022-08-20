@@ -138,7 +138,7 @@ function scrEnemyDeathEvent(){
 			if crown = 7
 			other.raddrop=round(other.raddrop*0.65);
 
-			if Player.crown = 17
+			if Player.crown == 28
 			other.raddrop=max(choose(0,1),floor(other.raddrop*0.06));
 			
 			//TRIGGER FINGERS

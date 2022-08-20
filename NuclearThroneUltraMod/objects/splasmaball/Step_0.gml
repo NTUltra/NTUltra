@@ -5,7 +5,7 @@ if(image_xscale<0.5)
 if abs(angleDir > 1)
 {
 	direction += angleDir;
-	angleDir -= 0.5*sign(angleDir);
+	angleDir -= 0.6*sign(angleDir);
 }
 speed+=2;
 image_angle = direction;

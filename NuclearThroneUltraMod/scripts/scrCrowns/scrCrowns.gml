@@ -93,15 +93,15 @@ function scrCrowns() {
 	crown_used[16] = 0
 	crown_tips[16] = "in love with da popo"
 
-	crown_name[17] = "[CROWN OF APOCALYPSE]"
-	crown_text[17] = "ABSURD AMOUNT OF ENEMIES!#ALMOST NO RADS"
+	crown_name[17] = "[CROWN OF INDECISION]"
+	crown_text[17] = "REPLACE WEAPON MOD STATIONS#WITH ULTRA CHESTS"
 	crown_used[17] = 0
-	crown_tips[17] = "your death has been signed#when you gave in to your greed"
+	crown_tips[17] = "diversity"
 
-	crown_name[18] = "[CROWN OF DISCO]"
-	crown_text[18] = "DANCE BABY DANCE!#WARNING FLASHING LIGHTS"
+	crown_name[18] = "[CROWN OF GREED]"
+	crown_text[18] = "YOU TAKE DOUBLE DAMAGE#ENEMIES DROP MORE RADS"
 	crown_used[18] = 0
-	crown_tips[18] = "disco!"
+	crown_tips[18] = "crown of green"
 	
 	crown_name[19] = "[CROWN OF BLINDNESS]"
 	crown_text[19] = "EVERY AREA IS DARK#ENEMIES CAN HIT EACH OTHER"
@@ -148,8 +148,23 @@ function scrCrowns() {
 	crown_text[26] = "THE CROWN GETS A LASER PISTOL#AND FIGHTS WITH YOU#CONSTANT ION STRIKES RAIN DOWN UPON YOU"
 	crown_used[26] = 0
 	crown_tips[26] = "just give it a gun and it is fun"
+	
+	crown_name[27] = "[CROWN OF DISCO]"
+	crown_text[27] = "DANCE BABY DANCE!#WARNING FLASHING LIGHTS"
+	crown_used[27] = 0
+	crown_tips[27] = "disco!"
+	
+	crown_name[28] = "[CROWN OF APOCALYPSE]"
+	crown_text[28] = "ABSURD AMOUNT OF ENEMIES!#ALMOST NO RADS"
+	crown_used[28] = 0
+	crown_tips[28] = "your death has been signed#when you gave in to your greed"
+	
+	crown_name[29] = "[CROWN OF PURITY]"
+	crown_text[29] = "DISABLE WEAPON MODS#FOREACH WEAPONMOD ON A WEAPON#GAIN +1 MAX HP#WHILE HOLDING THAT WEAPON"
+	crown_used[29] = 0
+	crown_tips[29] = "pure"
 
-	crownmax = 23
+	crownmax = 23//+7
 
 
 

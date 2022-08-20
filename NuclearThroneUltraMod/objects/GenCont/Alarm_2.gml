@@ -188,7 +188,7 @@ if Player.area = 100
 		    with instance_create(x+64,y+64,WeaponMod)
 				image_xscale=-1;	
 		}
-		if Player.loops > 0
+		if Player.loops > 0 || UberCont.opt_gamemode == 36//Ultra mod start
 		{
 			var xx = x;
 			var yy = y;

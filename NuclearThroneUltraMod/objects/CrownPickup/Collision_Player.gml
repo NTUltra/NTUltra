@@ -39,6 +39,11 @@ else if instance_exists(GuardianStatue)
 }
 else if !instance_exists(CrownGuardian)
 {
+	with UltraChest
+	{
+		instance_destroy();
+		scrRaddrop(50);
+	}
 	with instance_create(x,y,Portal)
 	{
 		type = 3

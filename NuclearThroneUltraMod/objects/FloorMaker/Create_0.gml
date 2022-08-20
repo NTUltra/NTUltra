@@ -5,7 +5,7 @@ styleb = choose(0,0,0,0,0,0,1)
 goal = 100//110
 
 if instance_exists(Player){
-	if Player.crown == 18
+	if Player.crown == 27
 	{
 		//Crown of opposite onto crown of disco
 		styleb = choose(1,1,1,1,1,1,0)

@@ -15,7 +15,7 @@ function scrDecideInvader(){
 			var am = clamp(floor(loops/am2),1,4);//Amount of enemies per spawn
 			if Player.crown == 7//Crown of blood
 				am += 1;
-			else if Player.crown == 17//Crown of apocalypse
+			else if Player.crown == 28//Crown of apocalypse
 				am += 3;
 			var spawns = [];
 			var fa = sprFloor1;

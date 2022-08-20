@@ -450,6 +450,15 @@ if skill_got[2] && tookHit && !exception
 	extrafeetdodged = false;
 }
 
+//Crown of Greed
+if crown == 18
+{
+	if tookHit
+	{
+		var dmgTaken = prevhealth-my_health;
+		my_health -= dmgTaken;
+	}
+}
 ///tough shell
 var damageReduced = 0;
 if (skill_got[31])
@@ -829,3 +838,20 @@ if (!canHeal)
 }
 if alarm[3] > 0
 	snd_hurt = sndDamageNegate;
+if crown == 29
+{
+	var wantHealth = 0
+	if wepmod1 != 0
+		wantHealth += 1;
+	if wepmod2 != 0 
+		wantHealth += 1;
+	if wepmod3 != 0
+		wantHealth += 1;
+	if wepmod4 != 0
+		wantHealth += 1;
+	if wantHealth != isPureHealthBoost
+	{
+		maxhealth += wantHealth - isPureHealthBoost;
+		isPureHealthBoost += wantHealth - isPureHealthBoost;
+	}
+}

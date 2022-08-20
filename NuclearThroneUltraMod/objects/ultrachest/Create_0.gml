@@ -41,7 +41,7 @@ if instance_exists(Player) && !UberCont.start_wep_have_all[Player.race]
 	weps[0] = scrDecideWepGold();
 }
 currentVisibleWep = 0;
-if instance_exists(Player) && Player.skill_got[19]
+if instance_exists(Player) && Player.skill_got[23]
 	alarm[1] = 30;
 actionName = "% RADS TO OPEN"
 name = actionName;

@@ -27,6 +27,12 @@
     {"compositeImage":{"FrameId":{"name":"c1b845a0-3f65-4583-86e0-29cca56900ee","path":"sprites/sprInvertedNothingOff/sprInvertedNothingOff.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"c1b845a0-3f65-4583-86e0-29cca56900ee","path":"sprites/sprInvertedNothingOff/sprInvertedNothingOff.yy",},"LayerId":{"name":"1dfd18db-c97a-423e-a42c-f18f84b672b2","path":"sprites/sprInvertedNothingOff/sprInvertedNothingOff.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sprInvertedNothingOff","path":"sprites/sprInvertedNothingOff/sprInvertedNothingOff.yy",},"resourceVersion":"1.0","name":"c1b845a0-3f65-4583-86e0-29cca56900ee","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"d0bffec0-2093-457e-bb82-104bd8779528","path":"sprites/sprInvertedNothingOff/sprInvertedNothingOff.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"d0bffec0-2093-457e-bb82-104bd8779528","path":"sprites/sprInvertedNothingOff/sprInvertedNothingOff.yy",},"LayerId":{"name":"1dfd18db-c97a-423e-a42c-f18f84b672b2","path":"sprites/sprInvertedNothingOff/sprInvertedNothingOff.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprInvertedNothingOff","path":"sprites/sprInvertedNothingOff/sprInvertedNothingOff.yy",},"resourceVersion":"1.0","name":"d0bffec0-2093-457e-bb82-104bd8779528","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"98517427-979d-4ad3-8f15-56b11e5ada02","path":"sprites/sprInvertedNothingOff/sprInvertedNothingOff.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"98517427-979d-4ad3-8f15-56b11e5ada02","path":"sprites/sprInvertedNothingOff/sprInvertedNothingOff.yy",},"LayerId":{"name":"1dfd18db-c97a-423e-a42c-f18f84b672b2","path":"sprites/sprInvertedNothingOff/sprInvertedNothingOff.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprInvertedNothingOff","path":"sprites/sprInvertedNothingOff/sprInvertedNothingOff.yy",},"resourceVersion":"1.0","name":"98517427-979d-4ad3-8f15-56b11e5ada02","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sprInvertedNothingOff","path":"sprites/sprInvertedNothingOff/sprInvertedNothingOff.yy",},
@@ -36,12 +42,14 @@
     "playbackSpeedType": 1,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 1.0,
+    "length": 3.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"3e81afda-04f9-4852-8f6f-84e136647552","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c1b845a0-3f65-4583-86e0-29cca56900ee","path":"sprites/sprInvertedNothingOff/sprInvertedNothingOff.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"02ae1f98-b5b0-407d-b7d0-cf44589ba0a5","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d0bffec0-2093-457e-bb82-104bd8779528","path":"sprites/sprInvertedNothingOff/sprInvertedNothingOff.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a86dd823-6575-4ef5-a8fd-3cb0eb6b7c52","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"98517427-979d-4ad3-8f15-56b11e5ada02","path":"sprites/sprInvertedNothingOff/sprInvertedNothingOff.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,

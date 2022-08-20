@@ -41,6 +41,10 @@ if UberCont.opt_gamemode != 25
 			sprite_index = sprFloor100;
 		}
 		UberCont.crownVaultChallenge ++;
+		if UberCont.crownVaultChallenge > 2
+		{
+				scrUnlockGameMode(36,"FOR COMPLETING THE THIRD#ULTRA MOD CHALLENGE");
+		}
 		with projectile
 		{
 			if team != 2

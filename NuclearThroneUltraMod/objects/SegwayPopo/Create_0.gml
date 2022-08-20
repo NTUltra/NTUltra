@@ -2,7 +2,7 @@ raddrop = 0
 maxhealth = 9
 meleedamage = 0
 size = 1
-scrCrownOfPopoRad(3);
+scrCrownOfPopoRad(4);
 event_inherited()
 
 friction = 0.2

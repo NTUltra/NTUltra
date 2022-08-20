@@ -4167,7 +4167,7 @@ function scrFire2() {
 	var hitWall = false;
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
-		dmg = 16;
+		dmg = 18;
 		sprite_index=sprHeavySlash;
 		longarms = 0
 		if instance_exists(Player)
@@ -6689,13 +6689,11 @@ function scrFire2() {
 	case 436:
 
 		snd_play_fire(sndWaveGun)
-		var aimDir = aimDirection+(random(12)-6)*other.accuracy
+		var aimDir = aimDirection+(random(12)-6)*accuracy
 		var s = 17
 		var am = 3;//am*am = 9
 		var offsetStep = 10*accuracy;
 		var offset = offsetStep*am*0.5;
-		var yoffset = offset;
-		var xoffset = offset;
 		var xx = x+lengthdir_x(offset,aimDir-90)+lengthdir_x(offset*0.5,aimDir+180);
 		var yy = y+lengthdir_y(offset,aimDir-90)+lengthdir_y(offset*0.5,aimDir+180);
 		var msk = mask_index;
@@ -6733,15 +6731,13 @@ function scrFire2() {
 	case 437:
 
 		snd_play_fire(sndSuperSlugger)
-		var aimDir = aimDirection+(random(12)-6)*other.accuracy
+		var aimDir = aimDirection+(random(12)-6)*accuracy
 		var s = 16
 		var am = 4;//am*am = 16
 		var offsetStep = 8*accuracy;
 		var offset = offsetStep*am*0.5;
-		var yoffset = offset;
-		var xoffset = offset;
-		var xx = x+lengthdir_x(xoffset,aimDir-90)+lengthdir_x(xoffset,aimDir+180);
-		var yy = y+lengthdir_y(yoffset,aimDir-90)+lengthdir_y(xoffset,aimDir+180);
+		var xx = x+lengthdir_x(offset,aimDir-90)+lengthdir_x(offset,aimDir+180);
+		var yy = y+lengthdir_y(offset,aimDir-90)+lengthdir_y(offset,aimDir+180);
 		var msk = mask_index;
 		mask_index = mskSlug;
 			repeat(am)

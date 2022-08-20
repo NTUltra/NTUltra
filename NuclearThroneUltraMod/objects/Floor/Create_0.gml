@@ -24,7 +24,7 @@ if UberCont.opt_gamemode == 25
 		b = 0
 	styleb = choose(l,l,l,l,l,l,b,0,0);
 	if instance_exists(Player){
-		if Player.crown == 18
+		if Player.crown == 27
 		{
 			//Crown of opposite onto crown of disco
 			styleb = choose(b,b,b,b,b,b,l)

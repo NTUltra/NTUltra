@@ -94,12 +94,7 @@ function scrUltraModDescription(um){
 		break;
 		case ultramods.shotgunBolt:
 			umn = @"SWAPS
-			SHOTGUN PELLETS <WITH> SPLINTERS
-			SLUGS <WITH> BOLTS
-			HEAVY SLUGS <WITH> HEAVY BOLTS
-			INFUSE SPLINTER <WITH> INFUSE PELLET
-			INFEST SPLINTER <WITH> INFEST PELLET
-			ULTRA SLUGS <TO> ULTRA BOLT & 2 SPLINTERS"
+			ANY BOLT TYPE <WITH> ANY SHOTGUN TYPE"
 		break;
 		case ultramods.boltBullet:
 			umn = @"SWAPS

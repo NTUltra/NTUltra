@@ -1809,7 +1809,7 @@ if (RogueHeat==true)
 
 /* */
 ///Lets try aggro
-if crown = 18//Crown of disco
+if crown == 27//Crown of disco
 {
 	with enemy
 	{

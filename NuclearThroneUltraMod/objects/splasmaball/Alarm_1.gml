@@ -2,6 +2,7 @@
 alarm[1] = sdelay;
 with instance_create(x,y,MiniSplasmaBall)
 {
+	ptime = 6;
 	direction = other.direction;
 	speed = 1
 	if instance_exists(Player)
@@ -9,6 +10,7 @@ with instance_create(x,y,MiniSplasmaBall)
 }
 with instance_create(x,y,MiniSplasmaBall)
 {
+	ptime = 6;
 	direction = other.direction+180;
 	speed = 1
 	if instance_exists(Player)

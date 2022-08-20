@@ -38,3 +38,10 @@ if active && target > -1 && instance_exists(target) && target != noone && point_
 	}
 	scrDrop(5,0);
 }
+if !lowHealth && my_health < 0.4
+{
+	lowHealth = true;
+	maxSpeed += 1;
+	acc ++;
+	actTime -= 1;
+}

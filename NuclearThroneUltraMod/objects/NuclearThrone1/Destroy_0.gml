@@ -39,3 +39,5 @@ scrEnemyDeathEvent();
 scrEndBoss();
 scrBossKill();
 Sleep(200)
+with enemy
+	my_health = 0;

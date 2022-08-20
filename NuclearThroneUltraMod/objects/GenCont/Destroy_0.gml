@@ -21,7 +21,7 @@ if UberCont.opt_gamemode == 8
 }
 if instance_exists(Player)
 {
-if Player.crown=18//DISCOOOO CROWN
+if Player.crown == 27//DISCOOOO CROWN
 room_speed=35;
     with Player{
     

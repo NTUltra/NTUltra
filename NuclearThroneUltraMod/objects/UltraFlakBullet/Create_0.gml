@@ -3,7 +3,7 @@ friction = 0.2
 typ = 1 
 ShotgunShouldersType();
 bullets=20;
-dmg=30//6 normmal
+dmg=35//6 normmal
 alarm[1] = 2;
 if instance_exists(Player)
 {

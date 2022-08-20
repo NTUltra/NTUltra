@@ -1077,7 +1077,7 @@ function scrWeapons() {
 	wep_name[97] = "BOUNCER FLAK CANNON"
 	wep_type[97] = 1
 	wep_auto[97] = 1
-	wep_load[97] = 22
+	wep_load[97] = 24
 	wep_cost[97] = 10
 	wep_sprt[97] = sprBouncerFlakCannon
 	wep_area[97] = 6
@@ -6148,7 +6148,7 @@ function scrWeapons() {
 	wep_name[556] = "ELIMINATOR"
 	wep_type[556] = 3
 	wep_auto[556] = 0
-	wep_load[556] = 60
+	wep_load[556] = 55
 	wep_cost[556] = 8
 	wep_sprt[556] = sprEliminator
 	wep_area[556] = 16

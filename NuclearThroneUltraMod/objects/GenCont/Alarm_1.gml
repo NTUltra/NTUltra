@@ -73,11 +73,30 @@ else if Player.subarea==2 && (Player.area==6 || Player.area == 112)//Labs boss
 Player.x = 10016+96;
 Player.y = 10016+96;
 }
+else if Player.area == 100 && UberCont.opt_gamemode == 36 && Player.crownvisits == 0 && instance_exists(SurvivalArenaStarter)//Ultra mod start
+{
+	Player.x = SurvivalArenaStarter.x;
+	Player.y = SurvivalArenaStarter.y - 48;
+	UberCont.crownVaultChallenge = 3;
+	with SurvivalWave
+	{
+		if UberCont.opt_gamemode == 25
+			event_user(0);
+		else if object_index != BallBossWave
+			event_user(1);
+	}
+	with SurvivalArenaStarter
+	{
+		instance_destroy();	
+	}
+	UberCont.crownVaultChallenge = 0;
+}
+/*
 else if Player.area = 100 && UberCont.crown_start[Player.race] && Player.crownvisits == 0 && instance_exists(CrownPickup)
 {
 	Player.x = CrownPickup.x;
 	Player.y = CrownPickup.y+32;
-}
+}*/
 if Player.saveLoaded
 {
 	Player.saveLoaded = false;//Next time normal position;

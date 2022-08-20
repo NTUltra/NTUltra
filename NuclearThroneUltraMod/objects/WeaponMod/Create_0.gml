@@ -1,5 +1,4 @@
 image_speed=0;
-
 wepmod=scrMods();
 if instance_exists(WeaponMod) && instance_number(WeaponMod) > 1
 {

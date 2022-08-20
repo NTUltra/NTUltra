@@ -2,7 +2,7 @@ raddrop = 0
 maxhealth = 8
 meleedamage = 0
 size = 1
-scrCrownOfPopoRad(2);
+scrCrownOfPopoRad(3);
 event_inherited()
 male=choose(true,false);
 

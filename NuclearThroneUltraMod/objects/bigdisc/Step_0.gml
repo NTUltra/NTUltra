@@ -1,6 +1,6 @@
 event_inherited()
 
-motion_add(targetDirection,2);
+motion_add(targetDirection,acc);
 
 if speed > maxSpeed
 speed = maxSpeed

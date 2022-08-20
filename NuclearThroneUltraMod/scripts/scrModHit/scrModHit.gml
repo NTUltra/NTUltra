@@ -26,6 +26,11 @@ function scrModHit() {
 	*/
 	if instance_exists(Player) && Player.moddelay < 1
 	{
+		if Player.crown == 29//Crown of purity
+		{
+			moddelay = 30;
+			return;
+		}
 		var r = 1;
 		var pc = false;
 		var itemRate = 9;

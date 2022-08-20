@@ -1,3 +1,4 @@
+if alarm[11] < 1
 with instance_create(x,y,BoltTrail)
 {
 image_angle=other.direction;

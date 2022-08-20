@@ -281,51 +281,68 @@ function scrPopChests() {
 	instance_destroy()
 	if instance_exists(Player)
 	{
-	if Player.crown = 9
-	{
-	with RadChest
-	{image_speed = 0.4
-	instance_destroy(id,false);
-	instance_create(x,y,AmmoChest)}
-	with AmmoChestMystery
-	{image_speed = 0.4
-	instance_destroy(id,false);
-	instance_create(x,y,AmmoChest)}
-	with WeaponChest
-	{image_speed = 0.4
-	instance_destroy(id,false);
-	instance_create(x,y,AmmoChest)}
-	with HealthChest
-	{image_speed = 0.4
-	instance_destroy(id,false);
-	instance_create(x,y,AmmoChest)}
-	}
-	with AmmoChest
-	{
-	if random(11) < 1 and (Player.area >= 2 or Player.loops >= 1)
-	{
-	instance_create(x,y,Mimic)
-	image_speed = 0.4
-	instance_destroy(id,false);
-	}
-	}
-	if instance_exists(Player) && Player.race == 25
-	{
-		with RadChest
+		if Player.crown = 9
 		{
-			instance_destroy(id,false);	
+			with RadChest
+			{image_speed = 0.4
+			instance_destroy(id,false);
+			instance_create(x,y,AmmoChest)}
+			with AmmoChestMystery
+			{image_speed = 0.4
+			instance_destroy(id,false);
+			instance_create(x,y,AmmoChest)}
+			with WeaponChest
+			{image_speed = 0.4
+			instance_destroy(id,false);
+			instance_create(x,y,AmmoChest)}
+			with HealthChest
+			{image_speed = 0.4
+			instance_destroy(id,false);
+			instance_create(x,y,AmmoChest)}
 		}
-	}
+		with AmmoChest
+		{
+			if random(11) < 1 and (Player.area >= 2 or Player.loops >= 1)
+			{
+			instance_create(x,y,Mimic)
+			image_speed = 0.4
+			instance_destroy(id,false);
+			}
+		}
+		if instance_exists(Player)
+		{
+			if Player.crown == 17
+			{
+				var replaced = false;
+				with WeaponMod
+				{
+					debug("replace weapon mod");
+					instance_destroy();
+					if !replaced
+					{
+						instance_create(x,y,UltraChest);
+						replaced = true;
+					}
+				}
+			}
+			if Player.race == 25
+			{
+				with RadChest
+				{
+					instance_destroy(id,false);	
+				}
+			}
+		}
 
-	with HealthChest
-	{
-	if random(51) < 1 and (Player.area >= 2 or Player.loops >= 1)
-	{
-	instance_create(x,y,SuperMimic)
-	image_speed = 0.4
-	instance_destroy(id,false);
-	}
-	}
+		with HealthChest
+		{
+			if random(51) < 1 and (Player.area >= 2 or Player.loops >= 1)
+			{
+				instance_create(x,y,SuperMimic)
+				image_speed = 0.4
+				instance_destroy(id,false);
+			}
+		}
 	}
 
 

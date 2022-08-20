@@ -7,7 +7,7 @@ if instance_exists(Player)
 	///crown of natural selection no rads more items
 	if Player.crown == 13
 		rad=40;
-	if Player.crown == 17
+	if Player.crown == 28
 		rad = 20;
 	if Player.loops > 0
 		maxhealth += 40;

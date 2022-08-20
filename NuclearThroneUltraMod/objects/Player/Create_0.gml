@@ -13,6 +13,7 @@ reachedUltra = false;
 canHeal = true;
 noHit = 0;
 closedodges = 0;
+isPureHealthBoost = 0;
 //3D audio
 audio_listener_orientation(0, 0, -1, 0, 1, 0);
 audio_falloff_set_model(audio_falloff_linear_distance);
@@ -371,7 +372,13 @@ if UberCont.opt_gamemode = 21 { //loop start
 var r = UberCont.racepick;
 if r == 0
 	r = race
-
+if UberCont.opt_gamemode == 36//Ultra mod start
+{
+	area = 100;
+    hard -= 1;
+    crownvisits = -1;
+	//instance_create(0,0,PauseTimer);
+}
 if UberCont.crown_start[r] && !instance_exists(PlayerSpawn) && UberCont.opt_gamemode != 25 {
     //area = 100;
     //hard -= 1;
@@ -379,6 +386,8 @@ if UberCont.crown_start[r] && !instance_exists(PlayerSpawn) && UberCont.opt_game
 	//instance_create(0,0,PauseTimer);
 	with Crown
 		instance_destroy();
+	with UberCont
+		alarm[2] = 0;
 	crownpoints = 1;
 	instance_create(x,y,Crown);
 }

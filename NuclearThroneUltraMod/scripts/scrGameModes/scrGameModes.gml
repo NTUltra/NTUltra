@@ -180,6 +180,11 @@ function scrGameModes() {
 	gamemode_have[35] = 0;
 	gamemode_tip[35] = "THE GREATEST GOD OF ALL GODS!##FROGOD";
 	
+	gamemode[36] = "ULTRA MOD START";
+	gamemode_unlock[36] = "BEAT THE THIRD#ULTRA MOD CHALLENGE";
+	gamemode_have[36] = 0;
+	gamemode_tip[36] = "ROLL CREDITS";
+	
 	/*
 	gamemode[23] = "SEEDED";
 	gamemode_description[23] = "YOU ONLY GET MELEE WEAPONS#ALWAYS GET LONG ARMS";
@@ -213,15 +218,16 @@ function scrGameModes() {
 	gamemodeOrder[24] = 24;
 	gamemodeOrder[25] = 18;
 	gamemodeOrder[26] = 30;
-	gamemodeOrder[27] = 32;
-	gamemodeOrder[28] = 29;
-	gamemodeOrder[29] = 33;
-	gamemodeOrder[30] = 34;
-	gamemodeOrder[31] = 35;
-	gamemodeOrder[32] = 17;
-	gamemodeOrder[33] = 26;
-	gamemodeOrder[34] = 28;
-	gamemodeOrder[35] = 27;
+	gamemodeOrder[27] = 36;
+	gamemodeOrder[28] = 32;
+	gamemodeOrder[29] = 29;
+	gamemodeOrder[30] = 33;
+	gamemodeOrder[31] = 34;
+	gamemodeOrder[32] = 35;
+	gamemodeOrder[33] = 17;
+	gamemodeOrder[34] = 26;
+	gamemodeOrder[35] = 28;
+	gamemodeOrder[36] = 27;
 
 
 	maxgamemode = array_length(gamemodeOrder) - 1;

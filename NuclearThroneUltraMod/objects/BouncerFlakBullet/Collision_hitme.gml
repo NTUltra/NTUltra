@@ -7,7 +7,7 @@ snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
 Sleep(50)
 with other
 {
-my_health -= 6
+my_health -= other.dmg
 if instance_exists(Player){
 if Player.ultra_got[28]//roids ultra d
 {my_health -=2;}}

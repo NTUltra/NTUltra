@@ -5055,7 +5055,7 @@ function scrFire() {
 		if wep_rad[wep]>0
 			rad+=wep_rad[wep]*0.4;
 	}
-	if Player.crown=18//DISCO FEVER!
+	if Player.crown == 27//DISCO FEVER!
 	{
 	draw_set_blend_mode(bm_add);
 	__background_set_colour( (make_color_hsv(random(255),255,255)) )

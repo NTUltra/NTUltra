@@ -1,5 +1,5 @@
 raddrop = 50
-maxhealth = 300;
+maxhealth = 350;
 meleedamage = 6
 size = 6
 
@@ -26,3 +26,5 @@ image_angle = random(360);
 projectileSpeed = 3;
 scrBossFloor();
 active = false;
+lowHealth = false;
+acc = 2;

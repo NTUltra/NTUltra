@@ -99,9 +99,10 @@ if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or
 	sprite_index = sprBigPortalDisappear;
 	with Player
 	{
-	visible = 0
-	roll = 0
-	angle = 0
+		visible = 0
+		roll = 0
+		angle = 0
+		sprite_index = spr_idle;
 	}
 	with PlayerInPortal
 		instance_destroy();

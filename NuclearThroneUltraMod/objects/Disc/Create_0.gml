@@ -5,3 +5,4 @@ alarm[0] = 4
 dmg = 6;
 dist = 0
 
+alarm[11] = 1;

@@ -67,11 +67,11 @@ function scrCrownAnimation(takenCrown){
 			spr_idle = sprCrown15Idle
 			spr_walk = sprCrown15Walk
 		break;
-		case 17://Apocalypse
+		case 17://indecision
 			spr_idle = sprCrown16Idle
 			spr_walk = sprCrown16Walk
 		break;
-		case 18://Disco
+		case 18://Greed
 			spr_idle = sprCrown17Idle
 			spr_walk = sprCrown17Walk
 		break;
@@ -109,6 +109,16 @@ function scrCrownAnimation(takenCrown){
 		case 26://Energy
 			spr_idle = sprCrown25Idle
 			spr_walk = sprCrown25Walk
+			maxSpeed = 1;
+		break;
+		case 27://Purity
+			spr_idle = sprCrown26Idle
+			spr_walk = sprCrown26Walk
+			maxSpeed = 1;
+		break;
+		case 28://Greed
+			spr_idle = sprCrown27Idle
+			spr_walk = sprCrown27Walk
 			maxSpeed = 1;
 		break;
 	}
