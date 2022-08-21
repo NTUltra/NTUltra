@@ -317,7 +317,7 @@ function scrPowers() {
 
 	if race = 22 && !altUltra //Rogue
 	{
-		var radcost = 80;//Cost is also in portal
+		var radcost = 100;//Cost is also in portal
 		var useRad = ultra_got[88] == 1
 	if rogueammo > instance_number(PortalStrike) || (useRad && rad >= radcost*(1+instance_number(PortalStrike)))
 	{

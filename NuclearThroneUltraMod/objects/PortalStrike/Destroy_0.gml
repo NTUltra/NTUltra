@@ -2,7 +2,7 @@ if instance_exists(Player)
 {
 	if (Player.ultra_got[88])
 	{
-		Player.rad -= 80//Also in scrPowers
+		Player.rad -= 100//Also in scrPowers
 	}
 	else
 	{

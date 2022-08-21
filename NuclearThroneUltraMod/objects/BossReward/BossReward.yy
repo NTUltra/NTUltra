@@ -7,8 +7,8 @@
   "visible": true,
   "managed": true,
   "spriteMaskId": {
-    "name": "mskWepPickup",
-    "path": "sprites/mskWepPickup/mskWepPickup.yy",
+    "name": "mskBigWepPickup",
+    "path": "sprites/mskBigWepPickup/mskBigWepPickup.yy",
   },
   "persistent": false,
   "parentObjectId": null,

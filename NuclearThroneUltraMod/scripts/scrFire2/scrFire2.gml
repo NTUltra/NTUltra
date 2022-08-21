@@ -11275,5 +11275,19 @@ function scrFire2() {
 
 	break;
 	
+	//ULTRA HEAVY ROGUE RIFLE
+	case 602:
+
+	with instance_create(x,y,UltraHeavyRogueRifleBurst)
+	{
+	creator = other.id
+	ammo = 2
+	time = 2
+	team = other.team
+	event_perform(ev_alarm,0) 
+	}
+
+	break;
+	
 	}//end of switch part 2!
 }

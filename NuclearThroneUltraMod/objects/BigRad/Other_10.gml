@@ -5,6 +5,8 @@ if instance_exists(Player)
 	Player.rad += 10
 	if Player.crown == 4
 		Player.rad += 1.8;
+	else if Player.crown == 18
+		Player.rad += 4;
 	if UberCont.radUp
 		Player.rad += 1.5;
 	if Player.ultra_got[83]

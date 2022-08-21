@@ -14,7 +14,8 @@ if atk=2//BLUE BALL OF FIRE!
     sprite_index=spr_fire;
     alarm[1]=10;
 
-    direction = point_direction(x,y,target.x,target.y)//backup backup
+	if (target != noone)
+		direction = point_direction(x,y,target.x,target.y)//backup backup
     BackCont.shake += 10
     snd_play(sndDragonStop)
     repeat(12)

@@ -6,7 +6,10 @@
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskBigWepPickup",
+    "path": "sprites/mskBigWepPickup/mskBigWepPickup.yy",
+  },
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,

@@ -560,7 +560,7 @@ if Player.area=1
 
 
 
-if scrIsInInvertedArea()
+if scrIsInInvertedArea() && Player.area != 120 && !(Player.area == 118 && Player.subarea == 3)
 {
 
 with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/4+random(128)-64+32,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/4+random(128)-64+32,Floor)
@@ -600,7 +600,7 @@ if Player.area == 102
 }
 
 //Gun Smiths weapon modder ultra
-if Player.ultra_got[65] && Player.area !=100 && (Player.area != 118 && Player.subarea != 3) && Player.area != 120
+if Player.ultra_got[65] && Player.area !=100 && (Player.area != 118 && Player.subarea != 3) && Player.area != 120 && Player.area != 119
 {
 	instance_create(instance_nearest(Player.x,Player.y,Floor).x+16, instance_nearest(Player.x,Player.y,Floor).y+16,WeaponMod);
 }
@@ -640,14 +640,7 @@ if (Player.area == 119 || Player.area == 120)
 		with ft
 		{
 			if Player.area == 119
-				with instance_create(x+16,y+16,CampFireOff)
-				{
-					if Player.skill_got[23]//OPEN MIND
-					{
-						instance_create(x+16,y+32+16,HealthChest);
-						instance_create(x+16,y+32+16,WallBreak);
-					}
-				}
+				instance_create(x+16,y+16,CampFireOff)
 		}
 		if Player.area == 119
 		{

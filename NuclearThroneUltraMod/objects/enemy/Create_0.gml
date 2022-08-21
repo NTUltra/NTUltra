@@ -27,8 +27,6 @@ if instance_exists(Player)
 
 	if Player.crown == 13
 		raddrop=0;
-	if Player.crown == 18
-		raddrop *= 1.3;
 	if Player.loops >1
 		raddrop*=0.8;
 }

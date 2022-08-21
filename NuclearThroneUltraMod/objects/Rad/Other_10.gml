@@ -5,6 +5,8 @@ if instance_exists(Player)
 	Player.rad += 1
 	if Player.crown == 4
 		Player.rad += 0.18;
+	else if Player.crown == 18
+		Player.rad += 0.4;
 	if UberCont.radUp
 		Player.rad += 0.15;
 	if Player.ultra_got[83]
@@ -27,9 +29,9 @@ if instance_exists(Player)
 		var ac = Player.accuracy;
 		with instance_create(x,y,UltraLightning)
 		{
-			image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(30)-15)*ac
+			image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(40)-20)*ac
 			team = 2
-			ammo = 6+random(8)//60
+			ammo = 5+random(9)//60
 			///if Player.ultra_got[59]=1 
 			///ammo+=4;
 			event_perform(ev_alarm,0)

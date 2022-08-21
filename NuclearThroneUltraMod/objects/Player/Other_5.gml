@@ -440,6 +440,23 @@ if looping && area != 104
 		}
 
 	}
+	//DROP ULTRA HEAVY ROGUE RIFLE
+	if (wep = 427 || bwep = 427|| cwep == 427) && loops=2
+	{
+
+		with instance_create(x,y,WepPickup)
+		{
+		persistent=true;
+		scrWeapons()
+		wep = 602
+		name = wep_name[wep]
+		ammo = 0
+		type = wep_type[wep]
+		curse = 0
+		sprite_index = wep_sprt[wep]
+		}
+
+	}
 
 	//DROP GIANT PANDA STICK
 	if (wep = 200 || bwep = 200|| cwep == 200) && loops=1

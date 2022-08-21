@@ -120,6 +120,7 @@ BackCont.viewy2 = Campfire.y-__view_get( e__VW.HView, 0 )/2
 BackCont.viewx = Campfire.x-__view_get( e__VW.WView, 0 )/2
 BackCont.viewy = Campfire.y-__view_get( e__VW.HView, 0 )/2
 
+debug("racemax : ",racemax);
 var dir;
 dir = 5
 repeat(racemax-4)
@@ -215,11 +216,14 @@ break;
 }
 with char[dir]
 {
-do {x = xstart
-y = ystart
-move_contact_solid(random(360),32+random(64)+random(64)*random(1))
-x = round(x) y = round(y)}
-until !collision_ellipse(x-14,y-14,x+14,y+14,CampChar,1,1)&&!collision_ellipse(x-14,y-14,x+14,y+14,Wall,1,1)//12
+	do {
+		x = xstart
+		y = ystart
+		move_contact_solid(random(360),32+random(64)+random(64)*random(1))
+		x = round(x) y = round(y)
+	}
+	until (!collision_ellipse(x-14,y-14,x+14,y+14,CampChar,1,1) &&
+	!collision_ellipse(x-14,y-14,x+14,y+14,Wall,1,1))//12
 }
 }
 dir += 1

@@ -222,11 +222,11 @@ function scrGameModes() {
 	gamemodeOrder[28] = 32;
 	gamemodeOrder[29] = 29;
 	gamemodeOrder[30] = 33;
-	gamemodeOrder[31] = 34;
-	gamemodeOrder[32] = 35;
-	gamemodeOrder[33] = 17;
-	gamemodeOrder[34] = 26;
-	gamemodeOrder[35] = 28;
+	gamemodeOrder[31] = 28;
+	gamemodeOrder[32] = 34//35;
+	gamemodeOrder[33] = 35//17;
+	gamemodeOrder[34] = 17//26;
+	gamemodeOrder[35] = 26//28;
 	gamemodeOrder[36] = 27;
 
 

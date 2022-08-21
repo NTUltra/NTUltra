@@ -311,12 +311,18 @@ function scrPopChests() {
 		}
 		if instance_exists(Player)
 		{
+			if (Player.area == 119 || Player.area == 120)//Throne 2
+			{
+				with WeaponMod
+					instance_destroy();
+				with RogueAmmoChest
+					instance_destroy(id,false);
+			}
 			if Player.crown == 17
 			{
 				var replaced = false;
 				with WeaponMod
 				{
-					debug("replace weapon mod");
 					instance_destroy();
 					if !replaced
 					{

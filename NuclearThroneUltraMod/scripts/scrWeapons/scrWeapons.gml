@@ -1136,7 +1136,7 @@ function scrWeapons() {
 	wep_cost[102] = 2
 	wep_sprt[102] = sprFrostPistol
 	wep_area[102] = 2
-	wep_text[102] = "frozen enemies #move while frozen"
+	wep_text[102] = "freeze enemies"
 	wep_swap[102] = sndSwapPistol
 	wep_rad[102] = 0;
 
@@ -6651,10 +6651,21 @@ function scrWeapons() {
 	wep_swap[601] = sndSwapEnergy
 	wep_rad[601] = 0;
 	
+	wep_name[602] = "ULTRA HEAVY ROGUE RIFLE"
+	wep_type[602] = 1
+	wep_auto[602] = 0
+	wep_load[602] = 4
+	wep_cost[602] = 5//3
+	wep_sprt[602] = sprUltraHeavyRogueRifle
+	wep_area[602] = -1
+	wep_text[602] = ""
+	wep_swap[602] = sndSwapMachinegun
+	wep_rad[602] = 12;//7 for one shot normally
+	
 	maxwep = array_length(wep_name)-1;
 
 	//Only melee
-	if (UberCont.opt_gamemode == 31)// && !instance_exists(MenuGen))
+	if ((UberCont.opt_gamemode == 31) && !instance_exists(MenuGen))
 	{
 		for (var wi = 0; wi < maxwep; wi++) {
 			if !scrMeleeWeapons(wi)

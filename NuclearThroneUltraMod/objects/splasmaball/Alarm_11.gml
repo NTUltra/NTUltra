@@ -1,5 +1,7 @@
 /// @description ultramod
 var um =GetPlayerUltramod();
+if choose(true,false)
+	exit;
 if um == ultramods.plasmaBolt
 {
 	snd_play_fire(sndCrossbow)

@@ -99,7 +99,7 @@ function scrCrowns() {
 	crown_tips[17] = "diversity"
 
 	crown_name[18] = "[CROWN OF GREED]"
-	crown_text[18] = "YOU TAKE DOUBLE DAMAGE#ENEMIES DROP MORE RADS"
+	crown_text[18] = "YOU TAKE DOUBLE DAMAGE#INCREASE VALUE OF RADIATION"
 	crown_used[18] = 0
 	crown_tips[18] = "crown of green"
 	
