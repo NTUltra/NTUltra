@@ -135,7 +135,7 @@ pauseimg = sprite_create_from_surface(application_surface,0,0,surface_get_width(
 //with Cursor
 //instance_destroy();
 instance_deactivate_all(1)
-instance_activate_object(BackCont);
+//instance_activate_object(BackCont);
 instance_activate_object(MusCont);
 //instance_activate_object(TopCont);//hmm?
 instance_activate_object(Cursor);
@@ -193,34 +193,6 @@ if isPaused == 0 && !instance_exists(GenCont) && !instance_exists(Menu) && !inst
 	}
 }
 
-///CAPTURE DA MOUSE AIRHORN.WAV
-if isPaused = 0 and opt_mousecp = 1 and window_has_focus()=true && !instance_exists(Menu) && !instance_exists(GenCont) && !instance_exists(LevCont)&& !instance_exists(Vlambeer)//and (UberCont.mouse__x < view_xview or UberCont.mouse__y < view_yview or UberCont.mouse__x > view_xview+view_wview or UberCont.mouse__y > view_yview+view_hview)
-{
-
-var mox=display_mouse_get_x();
-var moy=display_mouse_get_y();
-
-if mox > window_get_x()+window_get_width()-12 
-mox = window_get_x()+window_get_width()-12;
-if mox < window_get_x()+12
-mox = window_get_x()+12;
-if moy > window_get_y()+window_get_height()-12
-moy = window_get_y()+window_get_height()-12;
-if moy < window_get_y()+12
-moy = window_get_y()+12;
-
-if mox > display_get_dpi_x()+display_get_width()-12   
-mox = display_get_dpi_x()+display_get_width()-12;
-if mox < display_get_dpi_x()+12
-mox = display_get_dpi_x()+12;
-if moy > display_get_dpi_y()+display_get_height()-12
-moy = display_get_dpi_y()+display_get_height()-12;
-if moy < display_get_dpi_y()+12
-moy = display_get_dpi_y()+12;
-
-display_mouse_set(mox,moy);
-
-}
 with option
 	y+=other.optY;
 	

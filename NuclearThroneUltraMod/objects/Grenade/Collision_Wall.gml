@@ -7,7 +7,7 @@ instance_create(x,y,Dust)
 speed = 0
 move_contact_solid(direction,12)
 }
-else
+else if speed > 1
 {
 snd_play(sndGrenadeHitWall,0,true)
 move_bounce_solid(true)

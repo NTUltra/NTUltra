@@ -175,6 +175,15 @@ function scrPopChests() {
 						wepmod2=UberCont.protowepmod22
 						wepmod3=UberCont.protowepmod32
 						wepmod4=UberCont.protowepmod42
+						if wep == 0
+						{
+							wep = 56;
+							wepmod1=0;
+							wepmod2=0;
+							wepmod3=0;
+							wepmod4=0;
+						}
+							
 					}
 				}
 				else

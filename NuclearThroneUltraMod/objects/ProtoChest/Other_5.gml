@@ -1,5 +1,3 @@
-if sprite_index = sprProtoChestOpen
-UberCont.protowep = 56
 //else if UberCont.opt_gamemode!=1//Don't save proto wep when you're playing one weapon only GAMEMODE
 if issecond
 {

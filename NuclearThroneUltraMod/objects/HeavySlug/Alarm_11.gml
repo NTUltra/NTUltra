@@ -34,6 +34,60 @@ if um == ultramods.bulletShotgun
 		team = other.team;
 		alarm[11] = 0;
 	}
+	with instance_create(x,y,HeavyBullet)
+	{
+		scrCopyWeaponMod(other);
+		direction = other.direction-(10*acc);
+		image_angle = direction;
+		speed = other.speed;
+		team = other.team;
+		alarm[11] = 0;
+	}
+	with instance_create(x,y,HeavyBullet)
+	{
+		scrCopyWeaponMod(other);
+		direction = other.direction+(10*acc);
+		image_angle = direction;
+		speed = other.speed;
+		team = other.team;
+		alarm[11] = 0;
+	}
+	with instance_create(x,y,HeavyBullet)
+	{
+		scrCopyWeaponMod(other);
+		direction = other.direction-(15*acc);
+		image_angle = direction;
+		speed = other.speed;
+		team = other.team;
+		alarm[11] = 0;
+	}
+	with instance_create(x,y,HeavyBullet)
+	{
+		scrCopyWeaponMod(other);
+		direction = other.direction+(15*acc);
+		image_angle = direction;
+		speed = other.speed;
+		team = other.team;
+		alarm[11] = 0;
+	}
+	with instance_create(x,y,HeavyBullet)
+	{
+		scrCopyWeaponMod(other);
+		direction = other.direction+(20*acc);
+		image_angle = direction;
+		speed = other.speed;
+		team = other.team;
+		alarm[11] = 0;
+	}
+	with instance_create(x,y,HeavyBullet)
+	{
+		scrCopyWeaponMod(other);
+		direction = other.direction-(20*acc);
+		image_angle = direction;
+		speed = other.speed;
+		team = other.team;
+		alarm[11] = 0;
+	}
 } else if um == ultramods.shotgunBolt
 {
 	snd_play_fire(sndHeavyCrossbow);

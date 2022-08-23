@@ -496,6 +496,7 @@ hardshell = true;
 
 visitedCrib = false;
 meltingd = 0;
+lastEnemyKilled = noone;
 patience = 0;
 rage = 0;
 exception = false;
@@ -562,7 +563,6 @@ if race == 6 || race == 20 {
 }
 friction = 0.45
 image_speed = 0.4
-alarm[6] = 1000 //run a security if outside level
 // I AM A CHEATER ammo[5] = 99 wep = 19
 
 

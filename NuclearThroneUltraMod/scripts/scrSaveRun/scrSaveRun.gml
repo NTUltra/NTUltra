@@ -118,6 +118,7 @@ function scrSaveRun() {
 			spr_walk: Player.spr_walk,
 			spr_hurt: Player.spr_hurt,
 			spr_dead: Player.spr_dead,
+			lastEnemyKilled: Player.lastEnemyKilled,
 		};
 		with UberCont
 		{

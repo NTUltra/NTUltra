@@ -29,18 +29,45 @@ snd_play(sndLilHunterLand)
 alarm[5]=10;
 instance_create(x,y,WallBreak);
 var ang = random(360);
-var am = 12;
-var angstep = 360/12;
+var am = 18;
+var angstep = 360/18;
 repeat(am)
 {
 	with instance_create(x,y,TrapFire)//Trapfire
 	{
 		sprite_index = sprFireLilHunter
-		motion_add(ang,2.5+random(0.6))
+		motion_add(ang,3.4+random(0.5))
 		image_angle = direction
 		team = other.team
 	}
 	ang += angstep;
+}
+var lps = GetPlayerLoops()
+if lps > 3
+{
+	var am = 4;
+	ang = 0;
+	if lps > 4
+		am = 8;
+	var angStep = 360/am;
+	var ps = 3.5;
+	if lps > 7
+		ps = 4;
+	if lps > 8
+		ps = 4.5;
+	if lps > 9
+		ps = 5;
+	repeat(am)
+	{
+		with instance_create(x,y,EnemyBullet1Square)
+		{
+			sprite_index = sprIDPDSquareBullet;
+			motion_add(ang,ps);
+			image_angle = direction
+			team = other.team
+		}
+		ang += angStep;
+	}	
 }
 shadowdraw=false;
 repeat(4)

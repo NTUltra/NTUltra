@@ -3,13 +3,17 @@ var goTime = false;
 if type == 3 || inverted
 {	
 	var numEn = 0;
+	var totalHp = 0;
 	with enemy
 	{
-		if team != 2
+		if team != 2 && object_index != IDPDVan && object_index != IDPDVanVertical
+		{
 			numEn ++;
+			totalHp += my_health;
+		}
 	}
-	var atLeast = 5;
-	if numEn < atLeast || (instance_exists(IDPDVan) && numEn < atLeast + instance_number(IDPDVan))
+	var atLeast = 30;
+	if totalHp < atLeast && !instance_exists(BigDisc) && numEn < 5
 	{
 		goTime = true;
 	}

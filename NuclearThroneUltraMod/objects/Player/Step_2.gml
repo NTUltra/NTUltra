@@ -453,7 +453,7 @@ if skill_got[2] && tookHit && !exception
 //Crown of Greed
 if crown == 18
 {
-	if tookHit
+	if tookHit && !instance_exists(GenCont) && !instance_exists(LevCont)
 	{
 		var dmgTaken = prevhealth-my_health;
 		my_health -= dmgTaken;
@@ -591,7 +591,7 @@ if (tookHit)
 	{
 		var damageTaken = (prevhealth - my_health) + damageReduced;
 		//Needs to be healable or lethal
-		if (prevhealth < maxhealth || my_health <= 0)
+		if (damageTaken > 0 || my_health <= 0)
 		{
 			isAlkaline = false;
 			if race == 25//Doctor buff

@@ -9,3 +9,4 @@ with Player
 		}
 	}	
 }
+alarm[10] = 5;

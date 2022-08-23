@@ -1,19 +1,16 @@
 {
   "spriteId": {
-    "name": "sprScrapBossSleep",
-    "path": "sprites/sprScrapBossSleep/sprScrapBossSleep.yy",
+    "name": "sprToggle",
+    "path": "sprites/sprToggle/sprToggle.yy",
   },
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": {
-    "name": "mskScrapBoss",
-    "path": "sprites/mskScrapBoss/mskScrapBoss.yy",
-  },
+  "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "enemyCollisionWall",
-    "path": "objects/enemyCollisionWall/enemyCollisionWall.yy",
+    "name": "option2",
+    "path": "objects/option2/option2.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -29,17 +26,17 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Scrap",
-    "path": "folders/Objects/Enemies/Boss/Scrap.yy",
+    "name": "Menu",
+    "path": "folders/Objects/Menu.yy",
   },
   "resourceVersion": "1.0",
-  "name": "BecomeScrapBoss",
+  "name": "GameModeReset",
   "tags": [],
   "resourceType": "GMObject",
 }

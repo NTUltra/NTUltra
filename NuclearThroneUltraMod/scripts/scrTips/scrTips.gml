@@ -200,7 +200,8 @@ function scrTips() {
 	tip = choose("crystal can handle this","family","crystal does not like cheese","crystal is hard","crystal is tough","crystal rocks")
 
 	if Player.race = 3
-	tip = choose("eyes sees everything","don't blink","all these thoughts","eyes can't speak","telekinesis pushes bullets away","telekinesis pulls in enemies")
+	tip = choose("eyes sees everything","don't blink","all these thoughts","eyes can't speak","telekinesis pushes bullets away","telekinesis pulls in enemies","look into me eyes!"
+	,"watch where you're going")
 
 	if Player.race = 4
 	tip = choose("it's so cold out here","melting is tired","everything hurts","cough","fragile but strong")

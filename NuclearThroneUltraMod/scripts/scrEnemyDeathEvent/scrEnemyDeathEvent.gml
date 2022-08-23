@@ -235,13 +235,13 @@ function scrEnemyDeathEvent(){
 			    scrWeaponHold();
 	        }
 	    }
+		if instance_exists(Player)
+		{
+			if Player.ultra_got[16]
+				Player.lastEnemyKilled = object_index;
+		}
 		if instance_number(enemy) <= instance_number(IDPDVan)+1
 		{
-			if instance_exists(Player)
-			{
-				if Player.ultra_got[16]
-					Player.meltingd = object_index;
-			}
 			snd_play(sndLastEnemy,0,true)
 		}
 	}

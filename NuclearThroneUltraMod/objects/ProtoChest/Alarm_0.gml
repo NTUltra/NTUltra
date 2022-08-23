@@ -1,2 +1,2 @@
-/// @description xxx
+/// @description Wallbreak
 instance_create(x,y,WallBreak);

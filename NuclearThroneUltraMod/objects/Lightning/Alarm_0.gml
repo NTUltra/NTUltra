@@ -182,6 +182,7 @@ if ultraMod == ultramods.lightningPellet && alarm[0] < 1
 		team = other.team;
 		alarm[11] = 0;
 	}
+	if ammo == 0
 	with instance_create(x,y,Bullet2)
 	{
 		direction = other.direction;

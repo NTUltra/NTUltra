@@ -5,7 +5,15 @@ if instance_exists(Player)
 	if Player.ultra_got[96]
 		alarm[11] = 30;
 	if Player.ultra_got[16]
+	{
+		//Doomed Melting
+		with Player
+		{
+			debug(lastEnemyKilled);
+			meltingd = lastEnemyKilled;	
+		}
 		alarm[10] = 10;
+	}
 	if Player.skill_got[22] == 1 //STRESS
 		alarm[2] = stressLowCheck;
 	if Player.ultra_got[26] //GET LOADED

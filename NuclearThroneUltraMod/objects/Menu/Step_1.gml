@@ -73,6 +73,8 @@ if KeyCont.key_spec[p] = 1
 		instance_destroy()
 		with GameModeUpDown
 		instance_destroy();
+		with GameModeReset
+		instance_destroy();
 		with QuitSelect
 		instance_destroy()
 		with LoadSelect

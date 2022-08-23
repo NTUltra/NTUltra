@@ -2,4 +2,4 @@
 
 // Inherit the parent event
 event_inherited();
-scrDrop(15,0);
+scrDrop(10,0);

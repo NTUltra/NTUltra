@@ -1899,6 +1899,7 @@
     {"id":{"name":"sprMonsterStyle","path":"sprites/sprMonsterStyle/sprMonsterStyle.yy",},"order":1,},
     {"id":{"name":"sprMindPower","path":"sprites/sprMindPower/sprMindPower.yy",},"order":3,},
     {"id":{"name":"GyroIncineratorBurst","path":"objects/GyroIncineratorBurst/GyroIncineratorBurst.yy",},"order":231,},
+    {"id":{"name":"GameModeReset","path":"objects/GameModeReset/GameModeReset.yy",},"order":59,},
     {"id":{"name":"sprGiantAmmoChestOpen","path":"sprites/sprGiantAmmoChestOpen/sprGiantAmmoChestOpen.yy",},"order":39,},
     {"id":{"name":"sprMutant3Dead","path":"sprites/sprMutant3Dead/sprMutant3Dead.yy",},"order":5,},
     {"id":{"name":"sprFloor116","path":"sprites/sprFloor116/sprFloor116.yy",},"order":6,},

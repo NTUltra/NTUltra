@@ -124,7 +124,7 @@ if (my_health<prevhealth)
 	{
 		var damageTaken = prevhealth - my_health;
 		//Needs to be healable or lethal
-		if (prevhealth < maxhealth || my_health <= 0)
+		if (damageTaken > 0 || my_health <= 0)
 		{
 			isAlkaline = false;
 			if (skill_got[9]) //Second stomache

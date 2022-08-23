@@ -250,6 +250,24 @@ if crown == 24
 	Player.pSpeedBoost -= 0.12;
 	Player.maxSpeed -= 0.25;
 }
+if oldcrown == 29
+{
+	//Crown of greed
+	with Player
+	{
+		var wantHealth = 0
+		if wepmod1 != 0
+			wantHealth += 1;
+		if wepmod2 != 0 
+			wantHealth += 1;
+		if wepmod3 != 0
+			wantHealth += 1;
+		if wepmod4 != 0
+			wantHealth += 1;
+			
+		maxhealth -= wantHealth;
+	}
+}
 with CrownIcon
 instance_destroy()
 

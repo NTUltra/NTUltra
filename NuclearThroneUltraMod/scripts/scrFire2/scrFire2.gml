@@ -5147,9 +5147,6 @@ function scrFire2() {
 	var t = team;
 	with Floor
 	{
-		with instance_create(x+16,y+16,Shell)
-			motion_add(aimDir+r*100+random(50)-25,2+random(2))
-
 		with instance_create(x+16,y+16,Bullet2)
 		{
 			motion_add(0,14+random(2))
@@ -5158,13 +5155,7 @@ function scrFire2() {
 		}
 		with instance_create(x+16,y+16,Bullet2)
 		{
-			motion_add(120,14+random(2))
-			image_angle = direction
-			team = t
-		}
-		with instance_create(x+16,y+16,Bullet2)
-		{
-			motion_add(240,14+random(2))
+			motion_add(180,14+random(2))
 			image_angle = direction
 			team = t
 		}
@@ -11166,6 +11157,11 @@ function scrFire2() {
 	{
 		owner = other.id;
 		dmg = 22
+		if instance_exists(Player) && Player.ultra_got[16]
+		{
+			dmg +=2;
+		}
+
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -11177,6 +11173,10 @@ function scrFire2() {
 	{
 		owner = other.id;
 		dmg = 18
+		if instance_exists(Player) && Player.ultra_got[16]
+		{
+			dmg +=2;
+		}
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -11188,6 +11188,10 @@ function scrFire2() {
 	{
 		owner = other.id;
 		dmg = 18
+		if instance_exists(Player) && Player.ultra_got[16]
+		{
+			dmg +=2;
+		}
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3

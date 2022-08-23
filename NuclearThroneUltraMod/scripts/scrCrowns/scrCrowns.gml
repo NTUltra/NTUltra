@@ -160,7 +160,7 @@ function scrCrowns() {
 	crown_tips[28] = "your death has been signed#when you gave in to your greed"
 	
 	crown_name[29] = "[CROWN OF PURITY]"
-	crown_text[29] = "DISABLE WEAPON MODS#FOREACH WEAPONMOD ON A WEAPON#GAIN +1 MAX HP#WHILE HOLDING THAT WEAPON"
+	crown_text[29] = "DISABLE WEAPON MODS#FOR EACH WEAPON MOD ON A WEAPON#GAIN +1 MAX HP#WHILE HOLDING THAT WEAPON"
 	crown_used[29] = 0
 	crown_tips[29] = "pure"
 

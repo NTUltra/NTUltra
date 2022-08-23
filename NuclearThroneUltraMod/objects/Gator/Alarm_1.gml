@@ -36,9 +36,9 @@ if target > 0 {
         }
 
         if target.x < x
-        right = -1
+			right = -1
         else if target.x > x
-        right = 1
+			right = 1
     }
     else if random(4) < 1 {
         motion_add(random(360), 0.4)

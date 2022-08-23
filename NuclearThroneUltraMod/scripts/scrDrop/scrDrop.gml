@@ -6,7 +6,11 @@ function scrDrop(itemdrop, weapondrop) {
 		var rebelBuff = 0;
 		if Player.ultra_got[39] && !Player.altUltra
 			rebelBuff = instance_number(Ally)*0.25;
-		dropRateBuff = 0.976 + (Player.skill_got[4]*(0.38+Player.betterrabbitpaw))
+		if itemdrop >= 100
+			dropRateBuff = 1;
+		else
+			dropRateBuff = 0.974;
+		dropRateBuff += 0.974 + (Player.skill_got[4]*(0.38+Player.betterrabbitpaw))
 		+ rebelBuff
 		+ (Player.skill_got[28]*(Player.rage*0.0011))//max is 60%
 		if Player.crown == 21 //Crown of risk

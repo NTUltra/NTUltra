@@ -23,6 +23,7 @@ if instance_exists(Ally) && instance_number(Ally) > 1
 					dir = dir + (random(4)-2)
 				with instance_create(xx,yy,Laser)
 				{
+					canSmoke = false;
 					image_angle = dir
 					team = other.team
 					event_perform(ev_alarm,0)

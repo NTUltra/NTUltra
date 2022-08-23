@@ -661,7 +661,7 @@ function scrWeapons() {
 	wep_load[59] = 25
 	wep_cost[59] = 4
 	wep_sprt[59] = sprLightningShotgun
-	wep_area[59] = 14
+	wep_area[59] = 15
 	wep_text[59] = "hurricane"
 	wep_swap[59] = sndSwapEnergy
 	wep_rad[59] = 0;

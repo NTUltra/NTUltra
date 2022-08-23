@@ -19,8 +19,9 @@ shad = noone;//surface_create(view_wview,view_hview)
 
 
 alarm[0] = 1
-alarm[1] = 130
-loops = GetPlayerLoops()
+alarm[1] = 160
+loops = GetPlayerLoops();
+bulletHellLoops = loops;
 if UberCont.opt_gamemode == 34//HARD MODE
 	loops ++;
 canSpawnPopoThisManyTimes = 2 + loops;
@@ -49,6 +50,13 @@ if instance_exists(Player)
 			wantVanAmount++;
 		}
 		i ++;
+	}
+	if (UberCont.opt_gamemode != 9 &&  (loops > 9 || (UberCont.opt_gamemode == 34 && loops > 3)))
+	{
+		if UberCont.opt_gamemode == 34
+			bulletHellLoops = loops + 6;
+		alarm[8] = 120;
+		bulletHell = irandom_range(0,4);
 	}
 	if Player.skill_got[29]//Insomnia
 	{

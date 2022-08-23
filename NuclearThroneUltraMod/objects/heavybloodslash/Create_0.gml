@@ -12,7 +12,7 @@ dmg = 30;
 alarm[11] = 0;//Is already blood
 if instance_exists(Player) && Player.ultra_got[16]
 {
-	dmg +=5;
+	dmg +=4;
 }
 hitEnemy = false;
 owner = -1;

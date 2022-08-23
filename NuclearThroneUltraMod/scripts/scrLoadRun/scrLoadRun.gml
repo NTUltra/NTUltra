@@ -222,6 +222,8 @@ function scrLoadRun(){
 					Player.spr_hurt = encryptedRun.spr_hurt;
 				if variable_struct_exists(encryptedRun, "spr_dead")
 					Player.spr_dead = encryptedRun.spr_dead;
+				if variable_struct_exists(encryptedRun, "lastEnemyKilled")
+					Player.lastEnemyKilled = encryptedRun.lastEnemyKilled;
 					
 			}
 			with Player

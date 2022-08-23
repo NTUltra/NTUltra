@@ -75,7 +75,7 @@ function scrCompletionPercentage() {
 	countrace++;
 	}
 	var percentage;
-	percentage=round( (unlocked/everything)*100 );
+	percentage=(unlocked/everything)*100;//round( (unlocked/everything)*100 );
 	if (percentage>=100)
 	{//100% unlock!
 		scrUnlockGameMode(17,"FOR UNLOCKING EVERYTHING!#CONGRATULATIONS! U R DA BEST! <3");

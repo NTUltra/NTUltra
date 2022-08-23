@@ -10,6 +10,8 @@ repeat(am)
 {
 	with instance_create(x+lengthdir_x(dis,randir),y+lengthdir_y(dis,randir),RogueExplosion)
 	{team=2;
+		with myExplosionMask
+			instance_destroy(id,false)
 		dmg += other.dmg}
 	randir += dirStep
 }

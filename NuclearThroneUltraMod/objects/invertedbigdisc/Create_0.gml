@@ -13,3 +13,4 @@ acc = 3;
 actTime = 28;
 rotation = 12;
 acc = 2.5;
+discAmount += 6;

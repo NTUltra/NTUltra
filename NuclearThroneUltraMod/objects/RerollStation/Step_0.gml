@@ -48,7 +48,10 @@ if place_meeting(x,y,Player) && !used
 							maxhealth = 1;
 						if my_health > maxhealth
 						{
-							my_health = max(maxhealth,my_health - 5);	
+							if crown == 18
+								my_health = max(maxhealth,my_health - 2.5);
+							else
+								my_health = max(maxhealth,my_health - 5);
 						}
 					}
 					else
@@ -58,7 +61,10 @@ if place_meeting(x,y,Player) && !used
 							maxhealth = 1;
 						if my_health > maxhealth
 						{
-							my_health = max(maxhealth,my_health - 5);	
+							if crown == 18
+								my_health = max(maxhealth,my_health - 2);
+							else
+								my_health = max(maxhealth,my_health - 4);
 						}
 					}
 				break;

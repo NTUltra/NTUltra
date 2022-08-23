@@ -1,9 +1,9 @@
 raddrop = 70
-maxhealth = 1170
+maxhealth = 1200
 loops = GetPlayerLoops();
 if UberCont.opt_gamemode == 34
 	maxhealth += 100;
-maxhealth += max(0,60*min(12,(loops-1)));
+maxhealth += max(0,70*min(12,(loops-1)));
 scrBossHealthBuff();
 meleedamage = 10
 size = 6;
