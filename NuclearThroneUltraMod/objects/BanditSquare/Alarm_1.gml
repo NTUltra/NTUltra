@@ -17,7 +17,7 @@ with instance_create(x,y,EnemyBullet1Square)
 	image_angle = direction
 	team = other.team
 }
-alarm[1] = actTime}
+alarm[1] = actTime+1}
 else
 {direction = point_direction(x,y,target.x,target.y)+random(180)-90
 speed = 0.4

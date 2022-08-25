@@ -1,5 +1,5 @@
 event_inherited()
-scrDrop(40,0)
+scrDrop(20,0)
 with myCorpse
 	speed = 0;
 

@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskLavaBall",
     "path": "sprites/mskLavaBall/mskLavaBall.yy",

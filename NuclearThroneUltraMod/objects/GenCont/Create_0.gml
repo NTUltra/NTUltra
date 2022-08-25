@@ -240,7 +240,7 @@ scrTips()
 
 goal = 100//110
 if instance_exists(Player){
-var s = clamp(Player.loops*8,0,100);
+var s = clamp(Player.loops*10,0,100);
 goal += s;
 if Player.area = 3 and Player.subarea = 3
 goal = 50+s

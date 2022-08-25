@@ -226,7 +226,9 @@ function scrFire2() {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
-	dmg = 2
+		image_xscale -= 0.15;
+		image_yscale -= 0.15;
+	dmg = 4
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -1144,7 +1146,7 @@ function scrFire2() {
 	with instance_create(x,y,SlashDirectorShotgunPrep)
 	{
 	snd_play_fire(sndSlugger)
-	motion_add(aimDirection+(random(6)-3)*other.accuracy,10+random(2));
+	motion_add(aimDirection+(random(6)-3)*other.accuracy,11+random(2));
 	image_angle=direction;
 	rate=10//for extra speed more bullets per step
 	Direction=aimDirection;
@@ -5110,7 +5112,7 @@ function scrFire2() {
 		var msk = mask_index;
 		mask_index = mskBullet1;
 		var aimDir = aimDirection+(random(6)-3)*accuracy;
-		var len = 11+(accuracy*2);
+		var len = 14+(accuracy*2);
 		var xstep = lengthdir_x(len,aimDir);
 		var ystep = lengthdir_y(len,aimDir);
 		var bx = x;
@@ -5561,7 +5563,7 @@ function scrFire2() {
 
 		with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),FlameSlash)
 		{
-			dmg = 14//shovel is 12 is frostglove
+			dmg = 16//shovel is 12 is frostglove
 			longarms = 0
 			if instance_exists(Player)
 			longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -8914,9 +8916,9 @@ function scrFire2() {
 
 	with instance_create(x+lengthdir_x(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),BigPandaSlash)
 	{
-		image_xscale -= 0.1;
-		image_yscale -= 0.1;
-		dmg = 3;
+		image_xscale -= 0.15;
+		image_yscale -= 0.15;
+		dmg = 4;
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -9295,7 +9297,7 @@ function scrFire2() {
 
 	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
-	BackCont.shake += 8
+	BackCont.shake += 12
 	wkick += 4
 
 	break;

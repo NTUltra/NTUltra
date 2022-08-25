@@ -23,7 +23,11 @@ if instance_exists(Player)
 		dmg ++;
 		fork--;
 	}
-
+	//Lightning is fast take mods immediatly
+	Mod1=Player.wepmod1;
+	Mod2=Player.wepmod2;
+	Mod3=Player.wepmod3;
+	Mod4=Player.wepmod4;
 	if Player.ultra_got[59]=1//atom electron ultra
 	{
 		image_speed-=0.09;

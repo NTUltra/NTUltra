@@ -13,7 +13,7 @@ if type == 3 || inverted
 		}
 	}
 	var atLeast = 30;
-	if totalHp < atLeast && !instance_exists(BigDisc) && numEn < 5
+	if totalHp < atLeast && !instance_exists(BigDisc) && numEn < 4
 	{
 		goTime = true;
 	}
@@ -46,4 +46,18 @@ if goTime
 
 	instance_create(x-16,y+16,WallBreak)
 	instance_create(x+16,y-16,WallBreak)
+	if !inverted
+	{
+		with projectile
+		{
+			if team != 2
+				instance_destroy(id,false);
+		}
+		with BackCont
+		{
+			alarm[1] = 0;
+			alarm[2] = 0;
+			alarm[8] = 0;
+		}
+	}
 }

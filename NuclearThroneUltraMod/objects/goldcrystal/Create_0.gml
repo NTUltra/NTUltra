@@ -15,5 +15,5 @@ spr_fire = sprGoldCrystalFire
 
 snd_hurt = sndGoldCrystalHit
 
-tellTime -= 10;
+tellTime -= 8;
 maxAmmo = 6;

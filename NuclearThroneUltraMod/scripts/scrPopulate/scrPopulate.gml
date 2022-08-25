@@ -51,7 +51,7 @@ function scrPopulate() {
                 if random(3) < 1.3 {
                     if UberCont.opt_gamemode = 9 //easy mode
                     {
-                        if random(4) < 1
+                        if random(4) < 1 || !instance_exists(enemy)
 							scrPopEnemies()
 						else if Player.loops > 0 && random(8) < Player.loops
 							scrPopEnemies()
@@ -111,7 +111,7 @@ function scrPopulate() {
 					}
 
                     //spawn some more enemies on loop
-                    if Player.loops > 0 && random(10) < Player.loops
+                    if Player.loops > 0 && random(5) < Player.loops
                     scrPopEnemies();
 
                     if Player.loops > 5 && random(15) < Player.loops - 7

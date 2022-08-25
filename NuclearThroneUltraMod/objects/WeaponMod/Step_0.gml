@@ -117,11 +117,12 @@ if place_meeting(x,y,Player)
 		//show_message("RECEIVED: "+string(wepmod1)+string(wepmod2)+string(wepmod3) );
 
 
-		alarm[0]=90;
+		alarm[0] = 60;
 		if Player.race == 17
-			alarm[0] -= 50;
+			alarm[0] -= 30;
 		if Player.skill_got[30]
 			alarm[0] -= 30;
+		alarm[0] = max(alarm[0],1);
 		image_speed=0.4;
 		mask_index=mskPickupThroughWall;
 

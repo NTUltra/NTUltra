@@ -97,7 +97,7 @@ else if random(10) < 1
 {
 	//GOT NO TARGET
 	motion_add(random(360),0.4)
-	walk = 20+random(10)
+	walk = 18+random(10)
 	alarm[1] = walk+5
 	gunangle = direction
 	if hspeed > 0

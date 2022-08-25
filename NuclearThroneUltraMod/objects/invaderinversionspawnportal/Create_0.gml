@@ -10,3 +10,4 @@ spawnOffsetY = 0;
 floorA = sprFloor6;
 floorB = sprFloor6B;
 floorE = sprFloor6Explo;
+spawnDelayed = 0;

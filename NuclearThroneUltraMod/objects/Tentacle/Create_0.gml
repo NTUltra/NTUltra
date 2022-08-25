@@ -24,8 +24,14 @@ if instance_exists(Player)
 		dmg += 1;
 		accuracy -= 2;
 	}
+	//Kraken is fast take mods immediatly
+	Mod1=Player.wepmod1;
+	Mod2=Player.wepmod2;
+	Mod3=Player.wepmod3;
+	Mod4=Player.wepmod4;
 }
 ultra = false;
 isog = true;
 canBeMoved = false;
 alarm[1] = 11;
+UberCont.recursionCheck ++;

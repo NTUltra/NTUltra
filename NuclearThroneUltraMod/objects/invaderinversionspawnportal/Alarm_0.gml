@@ -31,5 +31,5 @@ if instance_number(InvaderBossSpawnPortal) < 3
 	instance_create(x - 64,y + 64,BigWallBreak);
 	instance_create(x + 64,y - 64,BigWallBreak);
 }
-alarm[1] = 10;
+alarm[1] = 15;
 

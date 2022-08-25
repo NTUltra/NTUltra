@@ -554,8 +554,8 @@ if skill_got[22]//Stress Sharp teeth part
 {
 if tookHit&&alarm[10]<1//I been hit
 {
-alarm[10]=40;
-sharpteeth=prevhealth-my_health-damageReduced;
+alarm[10]=30;
+sharpteeth = prevhealth - my_health - damageReduced;
 var multiplier = 2.5;
 if race = 25
 multiplier*=1.25//Sharp teeth's damage!

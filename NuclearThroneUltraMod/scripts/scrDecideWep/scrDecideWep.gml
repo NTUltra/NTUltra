@@ -1,4 +1,4 @@
-function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepAreaParam = 0) {
+function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepAreaParam = 0, areaWepTries = 0) {
 	var wepTier = wepTierParam;
 	var maxTries = maxTriesParam;
 	var cursed = cursedParam;
@@ -90,6 +90,17 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 				&& (random(3) < 2 || Player.race == 8))
 			{
 				wep = maxValidTierWep;
+			}
+			if (areaWepTries < 20)
+			{
+				var theTier = wepTierParam;
+				if theTier <= 0
+					theTier++;
+				with WepPickup
+				{
+					if wep == other.wep
+						return scrDecideWep(theTier, maxTriesParam, cursedParam, minWepAreaParam, areaWepTries + 1)
+				}
 			}
 		}
 		while (wep == 402 && Player.crown != 5)//Rolled gun gun? you must have crown of guns

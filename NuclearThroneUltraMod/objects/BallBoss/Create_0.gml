@@ -1,7 +1,9 @@
 raddrop = 600
 maxhealth = 2800//2500
 if instance_exists(InvaderBossSpawnPortal)
-	maxhealth = 1600;
+{
+	maxhealth = 900;
+}
 meleedamage = 0
 size = 2
 scrBossHealthBuff();

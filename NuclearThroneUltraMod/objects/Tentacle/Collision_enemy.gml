@@ -41,7 +41,7 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 						snd_play(sndMeatExplo,0,true)
 						snd_play(sndBloodLauncherExplo,0.1,true)
 						var dir = point_direction(x,y,hit.x,hit.y);
-						var dis = point_distance(x,y,hit.x,hit.y)*0.5;
+						var dis = point_distance(x,y,hit.x,hit.y)*0.75;
 						var xx = x+lengthdir_x(dis,dir);
 						var yy = y+lengthdir_y(dis,dir);
 						with instance_create(xx,yy,MeatExplosion) {

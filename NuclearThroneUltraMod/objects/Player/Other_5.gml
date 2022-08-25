@@ -459,7 +459,7 @@ if looping && area != 104
 	}
 
 	//DROP GIANT PANDA STICK
-	if (wep = 200 || bwep = 200|| cwep == 200) && loops=1
+	if (wep = 328 || bwep = 328|| cwep == 328) && loops == 2
 	{
 
 		with instance_create(x,y,WepPickup)
@@ -477,20 +477,20 @@ if looping && area != 104
 	}
 
 	//DROP BLACK SWORD
-	if loops=1 && canblacksword
+	if loops == 1 && (canblacksword || wep = 200 || bwep = 200|| cwep == 200)
 	{
 
-	with instance_create(x,y,WepPickup)
-	{
-	persistent=true;
-	scrWeapons()
-	wep =328
-	name = wep_name[wep]
-	ammo = 0
-	type = wep_type[wep]
-	curse = 0
-	sprite_index = wep_sprt[wep]
-	}
+		with instance_create(x,y,WepPickup)
+		{
+			persistent=true;
+			scrWeapons()
+			wep = 328
+			name = wep_name[wep]
+			ammo = 0
+			type = wep_type[wep]
+			curse = 0
+			sprite_index = wep_sprt[wep]
+		}
 
 	}
 

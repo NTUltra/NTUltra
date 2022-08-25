@@ -28,7 +28,7 @@ maxAmmo = 4;
 ammo = maxAmmo;
 bulletMaxOffset = 32;
 bulletOffset = bulletMaxOffset;
-projectileSpeed = 3.5;
+projectileSpeed = 3.3;
 nadeSpeed = 1;
 fireRate = 4;
 actDelayOnFire = 4;
@@ -41,7 +41,7 @@ if loops > 8
 {
 	nadeAmount = 3;
 	nadeSpeed = 4;
-	projectileSpeed = 4;
+	projectileSpeed = 3.7;
 	actTime = 6;
 	fireRate = 1;
 	actDelayOnFire = 0.5;
@@ -56,7 +56,7 @@ else if loops > 6
 {
 	nadeAmount = 3;
 	nadeSpeed = 3.5;
-	projectileSpeed = 3.8;
+	projectileSpeed = 3.6;
 	actTime = 7;
 	fireRate = 2;
 	actDelayOnFire = 2;
@@ -69,7 +69,7 @@ else if loops > 4
 {
 	nadeAmount = 3;
 	nadeSpeed = 3;
-	projectileSpeed = 3.7;
+	projectileSpeed = 3.5;
 	actTime = 8;
 	fireRate = 1;
 	actDelayOnFire = 1;
@@ -84,7 +84,7 @@ else if loops > 3
 {
 	
 	nadeSpeed = 2;
-	projectileSpeed = 3.6;
+	projectileSpeed = 3.4;
 	actTime = 9;
 	maxAmmo = 5;
 	bulletMaxOffset = 34;

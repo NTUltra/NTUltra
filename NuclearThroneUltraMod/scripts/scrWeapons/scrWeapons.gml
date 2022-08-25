@@ -511,7 +511,7 @@ function scrWeapons() {
 	wep_name[46] = "CHICKEN SWORD"
 	wep_type[46] = 0
 	wep_auto[46] = 0
-	wep_load[46] = 15//18 usual
+	wep_load[46] = 17
 	wep_cost[46] = 0
 	wep_sprt[46] = sprSword
 	wep_area[46] = -1
@@ -1872,7 +1872,7 @@ function scrWeapons() {
 	wep_load[169] = 60
 	wep_cost[169] = 11
 	wep_sprt[169] = sprSuperSpiralSlashShotgun
-	wep_area[169] = 13
+	wep_area[169] = 12
 	wep_text[169] = "vomit"
 	wep_swap[169] = sndSwapShotgun
 	wep_rad[169] = 0;
@@ -2210,7 +2210,7 @@ function scrWeapons() {
 	wep_name[200] = "PANDA STICK"
 	wep_type[200] = 0
 	wep_auto[200] = 0
-	wep_load[200] = 10//18 usual new chicken 16
+	wep_load[200] = 9//18 usual new chicken 16
 	wep_cost[200] = 0
 	wep_sprt[200] = sprStick
 	wep_area[200] = -1
@@ -3629,7 +3629,7 @@ function scrWeapons() {
 	wep_name[329] = "DARK SWORD"
 	wep_type[329] = 0
 	wep_auto[329] = 0
-	wep_load[329] = 28//16 usual
+	wep_load[329] = 25//16 usual
 	wep_cost[329] = 0
 	wep_sprt[329] = sprDarkSword
 	wep_area[329] = -1
@@ -3905,7 +3905,7 @@ function scrWeapons() {
 	wep_type[354] = 1
 	wep_auto[354] = 0
 	wep_load[354] = 64
-	wep_cost[354] = 40
+	wep_cost[354] = 45
 	wep_sprt[354] = sprSuperBouncerFlakCannon
 	wep_area[354] = 12//5.3
 	wep_text[354] = "11/10"
@@ -5279,7 +5279,7 @@ function scrWeapons() {
 	wep_name[477] = "HEAVY SLEDGEHAMMER"
 	wep_type[477] = 0
 	wep_auto[477] = 0
-	wep_load[477] = 69//NOICE
+	wep_load[477] = 60
 	wep_cost[477] = 0
 	wep_sprt[477] = sprHeavySledgeHammer
 	wep_area[477] = 4
@@ -5719,7 +5719,7 @@ function scrWeapons() {
 	wep_name[517] = "CLUB"
 	wep_type[517] = 0
 	wep_auto[517] = 0
-	wep_load[517] = 31
+	wep_load[517] = 33
 	wep_cost[517] = 0
 	wep_sprt[517] = sprClub
 	wep_area[517] = 3
@@ -6661,7 +6661,7 @@ function scrWeapons() {
 	wep_text[602] = ""
 	wep_swap[602] = sndSwapMachinegun
 	wep_rad[602] = 12;//7 for one shot normally
-	
+
 	maxwep = array_length(wep_name)-1;
 
 	//Only melee

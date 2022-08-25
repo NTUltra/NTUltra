@@ -1,4 +1,4 @@
-scrDrop(30,1)
+scrDrop(25,1)
 event_inherited()
 var ang = random(360);
 var am = 16;

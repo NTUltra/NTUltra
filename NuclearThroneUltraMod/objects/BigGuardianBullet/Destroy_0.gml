@@ -17,7 +17,7 @@ else
 if canSpawn
 {
 	var loops = min(GetPlayerLoops(),3);
-	var amount = 7 + loops;
+	var amount = min(7 + loops,12);
 	var angle = image_angle;
 	var angleStep = 360/amount;
 	repeat(amount)

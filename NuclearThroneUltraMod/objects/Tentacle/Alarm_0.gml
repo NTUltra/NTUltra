@@ -1,3 +1,8 @@
+if UberCont.recursionCheck > 28
+{
+	alarm[0] = 1;
+	exit;
+}
 if isog && GetPlayerUltramod() == ultramods.lightningKraken
 {
 	snd_play(choose(sndSpark1,sndSpark2),0.1,true)
@@ -72,18 +77,42 @@ move_contact_solid(direction,8+random(4))
 speed = 0
 image_xscale = -point_distance(x,y,oldx,oldy)/4
 
-ammo -= 1
+
+var ammoDecrease = 1;
+	var modBoost = 0.06;
+	with Player
+	{
+		if ultra_got[59]
+		{
+			ammoDecrease -= 0.1;
+		}
+		if skill_got[17]
+			ammoDecrease -= 0.08;
+		if skill_got[30] == 1//Power craving
+			modBoost = 0.09;
+	}
+	//Projectile Speed
+	if Mod1 == 11
+		ammoDecrease -= modBoost;
+	if Mod2 == 11
+		ammoDecrease -= modBoost;
+	if Mod3 == 11
+		ammoDecrease -= modBoost;
+	if Mod4 == 11
+		ammoDecrease -= modBoost;
+ammo -= ammoDecrease;
 
 var wall = instance_place(x,y,Wall)
 if wall != noone && wall.object_index != WallHitMe
 {
-x = xprevious
-y = yprevious
-direction += 180}
+	x = xprevious
+	y = yprevious
+	direction += 180+random_range(-20,20);
+}
 
-if ammo > 0
+if round(ammo) > 0
 {
-	image_index += 0.4/ammo
+	image_index += 0.4/max(1,ceil(ammo));
 	with instance_create(x,y,Tentacle)
 	{
 		alarm[1] = other.alarm[1];
@@ -99,23 +128,16 @@ if ammo > 0
 		ammo = other.ammo
 		team = other.team
 		image_index = other.image_index
-		if ammo=20
-			alarm[0]=1;
-		else if ammo=40
-			alarm[0]=1;
-		else
-			event_perform(ev_alarm,0);
-
+		event_perform(ev_alarm,0);
 	}
 }
 else
 {
+alarm[0] = 0;
+	with instance_create(x+lengthdir_x(image_xscale/2,image_angle),y+lengthdir_y(image_xscale/2,image_angle),LightningHit)
+		sprite_index=sprTentacleHit;
 
-with instance_create(x+lengthdir_x(image_xscale/2,image_angle),y+lengthdir_y(image_xscale/2,image_angle),LightningHit)
-sprite_index=sprTentacleHit;
-
-with instance_create(x,y,FishBoost)
-motion_add(other.direction+random(6)-3,1+random(2) );
-
+	with instance_create(x,y,FishBoost)
+	motion_add(other.direction+random(6)-3,1+random(2) );
 }
 

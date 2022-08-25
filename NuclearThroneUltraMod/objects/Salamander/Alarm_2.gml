@@ -5,10 +5,10 @@ snd_play(sndSalamanderFireLoop)
 ammo -= 1
 alarm[2] = 1
 sprite_index = spr_fire
-
-            with instance_create(x/*-8*/,y,TrapFire)
+	if ammo > 44 || ammo < 34
+            with instance_create(x,y,TrapFire)
             {
-            motion_add(other.gunangle+random(4)-2,8)
+            motion_add(other.gunangle+random(4)-2,9)
             team = other.team
             ignoreHitme=true;
             }

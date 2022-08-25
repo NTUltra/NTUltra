@@ -65,7 +65,7 @@ if instance_exists(Player)
 		}
 		else
 		{
-			motion_add(point_direction(x,y,Player.x,Player.y), 0.1)
+			motion_add(point_direction(x,y,Player.x,Player.y), 0.2)
 		}
 	}
 

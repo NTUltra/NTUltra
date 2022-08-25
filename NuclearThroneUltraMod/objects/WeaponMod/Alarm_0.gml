@@ -78,6 +78,12 @@ motion_add(random(360),random(5));
 myWeaponPickup = instance_create(x,y,WepPickupForOneWepOnly);
 with myWeaponPickup
 {
+	if instance_exists(Portal)
+	{
+		var n = instance_nearest(x,y,Portal);
+		if n != noone && collision_line(x,y,n.x,n.y,Wall,false,false) == noone
+			motion_add(point_direction(x,y,n.x,n.y),1);
+	}
 	persistent = true;
 	pickedup=true;
 	depth=-9;

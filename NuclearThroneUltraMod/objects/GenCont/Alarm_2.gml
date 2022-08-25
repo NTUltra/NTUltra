@@ -173,21 +173,35 @@ while (instance_number(RogueAmmoChest) < ammoWant)
 
 if Player.area = 100
 {
-	instance_create(10016,10016,CrownVaultExit);
+	var exitX = 10016;
+	var exitY = 10016;
+	instance_create(exitX,exitY,CrownVaultExit);
+	if Player.crownvisits > 1{
+		instance_create(exitX-32,exitY-32,WeaponMod);
+		with instance_create(exitX+32,exitY-32,WeaponMod)
+			image_xscale=-1;
+	}
+	exitX -= 16;
+	exitY += 16;
+	instance_create(exitX-32,exitY-64,Floor);
+	instance_create(exitX,exitY-64,Floor);
+	instance_create(exitX+32,exitY-64,Floor);
+	y -= 16;
+	if Player.skill_got[30]
+	{
+		instance_create(exitX-32,exitY+64,Floor);
+		instance_create(exitX,exitY+64,Floor);
+		instance_create(exitX+32,exitY+64,Floor);
+		exitX += 16;
+		exitY -= 16;
+		instance_create(exitX-32,exitY+64,WeaponMod)
+		with instance_create(exitX+32,exitY+64,WeaponMod)
+			image_xscale=-1;	
+	}
 	with instance_furthest(Player.x,Player.y,Floor)
 	{
 		instance_create(x+16,y+16,CrownPickup)
-	    if Player.crownvisits > 1{
-		    instance_create(x-32,y-64,WeaponMod)
-		    with instance_create(x+64,y-64,WeaponMod)
-				image_xscale=-1;
-	    }
-		if Player.skill_got[30]
-		{
-			instance_create(x-32,y+64,WeaponMod)
-		    with instance_create(x+64,y+64,WeaponMod)
-				image_xscale=-1;	
-		}
+	    
 		if Player.loops > 0 || UberCont.opt_gamemode == 36//Ultra mod start
 		{
 			var xx = x;

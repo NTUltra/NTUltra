@@ -50,7 +50,7 @@ if !(numEn <= 0 || (instance_exists(IDPDVan) && numEn <= instance_number(IDPDVan
 		//BOTTOM TO TOP
 			var xx = cx - o;
 			var yy = cy + ch + o;
-			var ad = 180;
+			var ad = 90;
 			var ang = 0;
 			var vdis = stair;
 			var hdis = dis;

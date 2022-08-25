@@ -872,7 +872,7 @@ function scrPowers() {
 					{
 						image_angle = point_direction(x,y,mx,my)+(random(360))*other.accuracy
 						team = other.team
-						ammo = 9
+						ammo = 8
 						event_perform(ev_alarm,0)
 						visible = 0
 						with instance_create(x,y,LightningSpawn)

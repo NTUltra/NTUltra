@@ -1,3 +1,8 @@
+if UberCont.recursionCheck > 28
+{
+	alarm[0] = 1;
+	exit;
+}
 var ultraMod = -1
 var simpleAccuracy = 1.5;
 if instance_exists(Player){
@@ -100,22 +105,47 @@ if instance_exists(target)
 image_angle = direction
 speed = 0
 
-move_contact_solid(direction,8+random(4))
+move_contact_solid(direction,7+random(4))
 speed = 0
 image_xscale = -point_distance(x,y,oldx,oldy)/2
 
-ammo -= 1
+var ammoDecrease = 1;
+if team == 2
+{
+	var modBoost = 0.06;
+	with Player
+	{
+		if ultra_got[59]
+		{
+			ammoDecrease -= 0.1;
+		}
+		if skill_got[17]
+			ammoDecrease -= 0.08;
+		if skill_got[30] == 1//Power craving
+			modBoost = 0.09;
+	}
+	//Projectile Speed
+	if Mod1 == 11
+		ammoDecrease -= modBoost;
+	if Mod2 == 11
+		ammoDecrease -= modBoost;
+	if Mod3 == 11
+		ammoDecrease -= modBoost;
+	if Mod4 == 11
+		ammoDecrease -= modBoost;
+}
+ammo -= ammoDecrease;
 var wall = instance_place(x,y,Wall)
 if wall != noone && wall.object_index != WallHitMe
 {
 	x = xprevious
 	y = yprevious
-	direction += 180
+	direction += 180+random_range(-20,20)
 }
 
-if ammo > 0
+if round(ammo) > 0
 {
-	image_index += 0.4/ammo
+	image_index += 0.4/max(1,ceil(ammo));
 	with instance_create(x,y,Lightning)
 	{
 		target = other.target;
@@ -131,10 +161,7 @@ if ammo > 0
 		ammo = other.ammo
 		team = other.team
 		image_index = other.image_index
-		if ammo % 5 == 0
-			alarm[0] = 1;
-		else
-			event_perform(ev_alarm,0)
+		event_perform(ev_alarm,0)
 	}
 	if team == 2 && round(ammo) % fork == 0//Forking lightning
 	{
@@ -150,7 +177,7 @@ if ammo > 0
 			accuracy=other.accuracy*2;
 			direction = other.direction+choose(80+random(30),-80+random(-30))
 			image_angle = direction
-			ammo = clamp(ceil(other.ammo*0.34),2,16);
+			ammo = clamp(round(other.ammo*0.34),2,16);
 			team = other.team
 			image_index = other.image_index
 			event_perform(ev_alarm,0)
@@ -159,6 +186,7 @@ if ammo > 0
 }
 else if ultraMod != ultramods.lightningPellet
 {
+	alarm[0] = 0;
 	instance_create(x+lengthdir_x(image_xscale/2,image_angle),y+lengthdir_y(image_xscale/2,image_angle),LightningHit)
 }
 if ultraMod == ultramods.lightningPellet && alarm[0] < 1
@@ -169,7 +197,7 @@ if ultraMod == ultramods.lightningPellet && alarm[0] < 1
 	}
 	var odd = false;
 	if ammo > 0
-		odd = ammo % 2 == 0
+		odd = round(ammo) % 2 == 0
 	with instance_create(x,y,Bullet2)
 	{
 		direction = other.direction;
@@ -182,7 +210,7 @@ if ultraMod == ultramods.lightningPellet && alarm[0] < 1
 		team = other.team;
 		alarm[11] = 0;
 	}
-	if ammo == 0
+	if ammo <= 0
 	with instance_create(x,y,Bullet2)
 	{
 		direction = other.direction;

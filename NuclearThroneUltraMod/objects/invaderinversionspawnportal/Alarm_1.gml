@@ -1,7 +1,15 @@
 /// @description Spawn in enemies
 if !instance_exists(Player)
+{
 	alarm[1] = 10;
-
+	exit;
+}
+if place_meeting(x,y,Player) && spawnDelayed < 6
+{
+	alarm[1] = 30;
+	spawnDelayed ++;
+	exit;
+}
 	BackCont.shake += 30;
 snd_play(sndExplosionL);
 snd_play(sndPortalOld);
@@ -68,4 +76,4 @@ image_yscale = 1;
 
 //Reset stuff
 image_angle = 90;
-instance_destroy();
+//instance_destroy();

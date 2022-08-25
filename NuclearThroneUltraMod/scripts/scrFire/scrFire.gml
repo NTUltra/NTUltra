@@ -209,7 +209,7 @@ function scrFire() {
 
 	with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),WrenchSlash)
 	{
-	dmg = 4
+	dmg = 8
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -1013,7 +1013,7 @@ function scrFire() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),WrenchSlash)
 	{
 	sprite_index=sprGoldenSlash
-	dmg = 4
+	dmg = 8
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -1144,7 +1144,7 @@ function scrFire() {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
-	dmg = 3
+	dmg = 7
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -1453,12 +1453,11 @@ function scrFire() {
 	case 60:
 
 	snd_play_fire(sndBloodLauncher)
-	repeat(2){
 		with instance_create(x,y,BloodGrenade)
 		{
 		visible=false;
 		sticky = 0
-		motion_add(aimDirection+(random(30)-15)*other.accuracy,12+random(6))
+		motion_add(aimDirection-(20*other.accuracy),12+random(6))
 		image_angle = direction
 		team = other.team
 		with instance_create(x,y,BloodStreak){
@@ -1466,7 +1465,18 @@ function scrFire() {
 		alarm[0]=3;
 		//instance_destroy();
 		}
-	}
+		with instance_create(x,y,BloodGrenade)
+		{
+		visible=false;
+		sticky = 0
+		motion_add(aimDirection+(20*other.accuracy),12+random(6))
+		image_angle = direction
+		team = other.team
+		with instance_create(x,y,BloodStreak){
+		image_angle = other.direction}
+		alarm[0]=3;
+		//instance_destroy();
+		}
 
 	BackCont.viewx2 += lengthdir_x(5,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(5,aimDirection+180)*UberCont.opt_shake
@@ -4120,7 +4130,7 @@ function scrFire() {
 	with instance_create(x,y,SlashShotgunPrep)
 	{
 	snd_play_fire(sndSlugger)
-	motion_add(aimDirection+(random(6)-3)*other.accuracy,10+random(2));
+	motion_add(aimDirection+(random(6)-3)*other.accuracy,11+random(2));
 	image_angle=direction;
 	rate=1//for extra speed more bullets per step
 	Direction=aimDirection;
@@ -4146,7 +4156,7 @@ function scrFire() {
 	with instance_create(x,y,SlashShotgunPrep)
 	{
 	snd_play_fire(sndSlugger)
-	motion_add(aimDirection+(random(6)-3)*other.accuracy,10+random(2));
+	motion_add(aimDirection+(random(6)-3)*other.accuracy,11+random(2));
 	image_angle=direction;
 	rate=4//for extra speed more bullets per step
 	Direction=aimDirection;
@@ -4172,7 +4182,7 @@ function scrFire() {
 	with instance_create(x,y,SlashEraserPrep)
 	{
 	snd_play_fire(sndEraser)
-	motion_add(aimDirection+(random(6)-3)*other.accuracy,10+random(2));
+	motion_add(aimDirection+(random(6)-3)*other.accuracy,11+random(2));
 	image_angle=direction;
 	rate=1//for extra speed more bullets per step
 	Direction=aimDirection;
@@ -4192,13 +4202,13 @@ function scrFire() {
 	break;
 
 
-	//SPIRAL SLASH SHOTGUN
+	//SUPER SPIRAL SLASH SHOTGUN
 	case 169:
 
 	with instance_create(x,y,SlashShotgunPrep)
 	{
 	snd_play_fire(sndSlugger)
-	motion_add(aimDirection+(random(6)-3)*other.accuracy,10+random(2));
+	motion_add(aimDirection+(random(6)-3)*other.accuracy,16+random(2));
 	image_angle=direction;
 	rate=4//for extra speed more bullets per step
 	Direction=aimDirection;
@@ -4881,11 +4891,12 @@ function scrFire() {
 
 	if Player.ultra_got[59]//ATOM ELECTRON
 	{
+		/*
 		with Lightning
 		{
 			ammo *= 1.25;
 			ammo = ceil(ammo+6);
-		}
+		}*/
 		//with UltraLightning we just do this in the actual fire thing
 		//ammo+=4;
 		if wep_type[wep] == 5//energy wep
@@ -4924,12 +4935,6 @@ function scrFire() {
     
 
 
-
-
-	if Player.curse//super minor curse weapon fire rate increase
-	{
-		reload -=0.03;
-	}
 
 	/*WEAPON MODS
 	mod1[]

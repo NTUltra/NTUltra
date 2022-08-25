@@ -22,6 +22,11 @@ if instance_exists(Player){
 		fork --;
 		iframeskip += 0.01;
 	}
+	//Lightning is fast take mods immediatly
+	Mod1=Player.wepmod1;
+	Mod2=Player.wepmod2;
+	Mod3=Player.wepmod3;
+	Mod4=Player.wepmod4;
 
 	if Player.skill_got[19]==1
 	{
@@ -46,3 +51,4 @@ if instance_exists(Player){
 isog = true;
 canUltraMod = true;
 canBeMoved = false;
+UberCont.recursionCheck ++;

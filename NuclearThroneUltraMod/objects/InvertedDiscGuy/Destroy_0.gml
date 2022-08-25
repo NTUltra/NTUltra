@@ -5,7 +5,7 @@ image_angle = direction
 team = other.team}
 
 
-scrDrop(50,5)
+scrDrop(20,3)
 
 event_inherited()
 
