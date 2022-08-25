@@ -1848,7 +1848,7 @@ if hammerheadcounter > 0
 			{
 				hammerheadcounter --;
 				var debrisAmount = 4;
-				var debrisMultiply = 2;
+				var debrisMultiply = 1.5;
 				if (hammerheadcounter > 0)
 				{
 					snd_play(sndHammerHeadProc);
@@ -1860,7 +1860,7 @@ if hammerheadcounter > 0
 					scrDrop(35,12);
 					nearWall = false;
 					debrisAmount += 2;
-					debrisMultiply += 2;
+					debrisMultiply += 1;
 				}
 				instance_create(x,y,WallBreak);
 				//More debris

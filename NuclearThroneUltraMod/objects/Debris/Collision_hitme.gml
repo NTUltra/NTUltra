@@ -1,14 +1,17 @@
 if /*size >= other.size-1 and */ speed > 2 && other.team != 2/* and other.sprite_index != other.spr_hurt */&& other.existTime > 30
 {
+	var dmgDealt = 1;
+	var dmgDiv = dmgDivision;
 	with other
 	{
+		dmgDealt = clamp(round(1+other.speed/dmgDiv)-(size*other.sizeDiv),1,5);
 	    if instance_exists(Player)
 	    {
 	        if Player.race==24 
 	        {
 		        if Player.ultra_got[94]//elementor coldheart
 		        {
-			        my_health -= clamp(round(1+other.speed/10)*2-(size*0.5),1,6);
+			        dmgDealt = clamp(round(1+other.speed/10)*2-(size*0.5),1,6);//Dont take hammerhead dmg div there is enough stacking
 			        motion_add(other.direction,other.speed/4)//lets add a little more knockback why not
         
 			        if alarm[11]<1&&my_health>0{
@@ -29,17 +32,11 @@ if /*size >= other.size-1 and */ speed > 2 && other.team != 2/* and other.sprite
 			        }
         
 		        }
-		        else
-		        my_health -= clamp(round(1+other.speed/10)-size,1,5);
         
 	        }
-	        else//regular
-				my_health -= clamp(round(1+other.speed/10)-size,1,5);
 	    }
-	    else//no playa
-			my_health -= clamp(round(1+other.speed/10)-size,1,5)
-
-	snd_play(snd_hurt, hurt_pitch_variation,true)
+		my_health -= dmgDealt;
+	//snd_play(snd_hurt, hurt_pitch_variation,true)
 	//sprite_index = spr_hurt
 	//image_index = 0
 	motion_add(other.direction,other.speed/2)
@@ -49,7 +46,12 @@ if /*size >= other.size-1 and */ speed > 2 && other.team != 2/* and other.sprite
 		}
 
 	}
-	snd_play(sndDebrisHit,0.2,false);
+	if dmgDealt >= 2
+	{
+		snd_play(sndDebrisHitUpg,0.2,false);
+	}
+	else
+		snd_play(sndDebrisHit,0.2,false);
 	instance_destroy();
 }
 

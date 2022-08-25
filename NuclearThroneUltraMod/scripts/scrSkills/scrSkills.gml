@@ -338,7 +338,7 @@ function scrSkills() {
 	skill_msnd[25] =  sndMutStrongSpirit
 
 	skill_name[26] = "HAMMER HEAD"
-	skill_text[26] = "BREAK THROUGH SOME WALLS#FIND RESOURCES IN ANY WALL"
+	skill_text[26] = "BREAK THROUGH SOME WALLS#FIND RESOURCES IN ANY WALL#FASTER AND MORE WALL DEBRIS"
 	skill_tips[26] = "hello welcome to my#minecraft let's play"
 	skill_msnd[26] =  sndMutHammerHead
 

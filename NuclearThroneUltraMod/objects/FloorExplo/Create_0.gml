@@ -154,7 +154,12 @@ image_index = choose(1,2,3,4)
 
 BackCont.shake += 1
 //if random(2)<1//not to much debris
-instance_create(x+8+random(8)-4,y+8+random(8)-4,Debris)
+if !instance_exists(SpiralCont)
+{
+	instance_create(x+8+random(8)-4,y+8+random(8)-4,Debris)
+	if instance_exists(Player) && Player.skill_got[26]
+		instance_create(x+8+random(8)-4,y+8+random(8)-4,Debris)
+}
 
 if !audio_is_playing(UberCont.snd_wallbreak)
 snd_play(UberCont.snd_wallbreak,0.05,true,true,1,false,false,0.6)

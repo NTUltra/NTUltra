@@ -573,6 +573,7 @@
     {"id":{"name":"sprFireBallerIdle","path":"sprites/sprFireBallerIdle/sprFireBallerIdle.yy",},"order":7,},
     {"id":{"name":"sprInvertedFireBallerIdle","path":"sprites/sprInvertedFireBallerIdle/sprInvertedFireBallerIdle.yy",},"order":9,},
     {"id":{"name":"DisperseYoyo","path":"objects/DisperseYoyo/DisperseYoyo.yy",},"order":203,},
+    {"id":{"name":"sndDebrisHitUpg","path":"sounds/sndDebrisHitUpg/sndDebrisHitUpg.yy",},"order":9,},
     {"id":{"name":"sprInvertedFireBallerHurt","path":"sprites/sprInvertedFireBallerHurt/sprInvertedFireBallerHurt.yy",},"order":11,},
     {"id":{"name":"sndToxicLauncher","path":"sounds/sndToxicLauncher/sndToxicLauncher.yy",},"order":74,},
     {"id":{"name":"sprInvertedFireBallerFire","path":"sprites/sprInvertedFireBallerFire/sprInvertedFireBallerFire.yy",},"order":13,},

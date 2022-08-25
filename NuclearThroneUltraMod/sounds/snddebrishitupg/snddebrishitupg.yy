@@ -11,14 +11,14 @@
     "name": "agsfx",
     "path": "audiogroups/agsfx",
   },
-  "soundFile": "snddebrishit.ogg",
-  "duration": 0.476656,
+  "soundFile": "snddebrishitupg.ogg",
+  "duration": 0.501031,
   "parent": {
     "name": "Wallbreak",
     "path": "folders/Sounds/Enviroment/Wallbreak.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sndDebrisHit",
+  "name": "sndDebrisHitUpg",
   "tags": [],
   "resourceType": "GMSound",
 }

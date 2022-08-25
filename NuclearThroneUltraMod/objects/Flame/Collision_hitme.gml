@@ -2,7 +2,8 @@ if other.team != team and other.my_health > 0 && (other.team!=2 || image_index<5
 {
 	if other.sprite_index != other.spr_hurt
 	{
-		snd_play(sndBurn)
+		if !audio_is_playing(sndBurn)
+		snd_play(sndBurn,0.01)
 
 		with other
 		{
