@@ -5,7 +5,7 @@ if speed > 6 && instance_exists(enemy)
 	if instance_exists(n) && n.team != 2 && point_distance(x,y,n.x,n.y) < 96
 	{
 		var dir = point_direction(x,y,n.x,n.y);
-		motion_add(dir,0.2);
+		motion_add(dir,0.18);
 	}
 	alarm[1] = 1;
 }

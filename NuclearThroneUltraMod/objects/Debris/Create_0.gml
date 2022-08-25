@@ -75,8 +75,8 @@ if instance_exists(Player)
 	{
 		dmgDivision -= 4;
 		speed *= 1.2;
-		s += 5;
-		sizeDiv = 0.75;
+		s += 4.5;
+		sizeDiv = 0.8;
 		if Player.ultra_got[94]
 		{
 			//Its too much together

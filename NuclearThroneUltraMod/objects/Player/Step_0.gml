@@ -1847,7 +1847,7 @@ if hammerheadcounter > 0
 			if hammerheadtimer > 8 || instance_exists(SheepStorm)
 			{
 				hammerheadcounter --;
-				var debrisAmount = 4;
+				var debrisAmount = 2;
 				var debrisMultiply = 1.5;
 				if (hammerheadcounter > 0)
 				{
