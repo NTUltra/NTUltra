@@ -165,6 +165,8 @@ function scrLoadRun(){
 				Player.randomlySelected = encryptedRun.randomlySelected;
 				UberCont.canSave = true//encryptedRun.canSave;
 				Player.saveLoaded = true;//To position to save station,
+				if variable_struct_exists(encryptedRun, "inverted")
+					Player.inverted = encryptedRun.inverted;
 				if variable_struct_exists(encryptedRun, "altUltra")
 					Player.altUltra = encryptedRun.altUltra;
 				if variable_struct_exists(encryptedRun, "reachedUltra")
@@ -224,6 +226,7 @@ function scrLoadRun(){
 					Player.spr_dead = encryptedRun.spr_dead;
 				if variable_struct_exists(encryptedRun, "lastEnemyKilled")
 					Player.lastEnemyKilled = encryptedRun.lastEnemyKilled;
+				Player.useGuarenteedReroll = true;
 					
 			}
 			with Player

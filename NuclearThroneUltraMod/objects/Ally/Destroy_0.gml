@@ -72,5 +72,5 @@ with instance_create(x,y,Corpse)
 	else if size > 0
 		speed /= size*0.82
 }
-snd_play(snd_dead)
+snd_play(snd_dead,0,true)
 scrRaddrop(raddrop);

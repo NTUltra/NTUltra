@@ -1,5 +1,13 @@
 var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
-
+if ultra_got[75] && speed < 1
+{
+	shader_set(shdDrawWhite);
+		draw_sprite_ext(sprite_index,image_index,x+1,y+1,right,image_yscale,angle,c_white,1);
+		draw_sprite_ext(sprite_index,image_index,x+1,y-1,right,image_yscale,angle,c_white,1);
+		draw_sprite_ext(sprite_index,image_index,x-1,y-1,right,image_yscale,angle,c_white,1);
+		draw_sprite_ext(sprite_index,image_index,x-1,y+1,right,image_yscale,angle,c_white,1);
+	shader_reset();
+}
 if wep_type[wep] = 0
 wepright = wepflip
 else

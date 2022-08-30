@@ -87,11 +87,12 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			}
 			//Found a higher option than our result? Take that one
 			if (wep_area[maxValidTierWep] > wep_area[wep] && ( (maxValidTierWep != Player.wep and maxValidTierWep != Player.bwep and maxValidTierWep != Player.cwep) || Player.race == 7/*roids can dual wield*/)
-				&& (random(3) < 2 || Player.race == 8))
+				&& (random(4) < 3 || Player.race == 8))
 			{
 				wep = maxValidTierWep;
 			}
-			if (areaWepTries < 20)
+			//Weapon already on the ground?
+			if (areaWepTries < 20 && Player.race != 7)
 			{
 				var theTier = wepTierParam;
 				if theTier <= 0

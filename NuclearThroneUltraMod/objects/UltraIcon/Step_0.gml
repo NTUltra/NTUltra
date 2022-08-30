@@ -42,24 +42,24 @@ else if skill == 9 // Strange style
 			ultra_tips[9] = "something strange"
 			if bskin == 1
 			{
-				spr_idle=sprMutant3DIdle;
-				spr_walk=sprMutant3DWalk;
-				spr_hurt=sprMutant3DHurt;
-				spr_dead=sprMutant3DDead;
-			}
-			else if bskin == 2
-			{
 				spr_idle=sprMutant3EIdle;
 				spr_walk=sprMutant3EWalk;
 				spr_hurt=sprMutant3EHurt;
 				spr_dead=sprMutant3EDead;
 			}
-			else
+			else if bskin == 2
 			{
 				spr_idle=sprMutant3FIdle;
 				spr_walk=sprMutant3FWalk;
 				spr_hurt=sprMutant3FHurt;
 				spr_dead=sprMutant3FDead;
+			}
+			else
+			{
+				spr_idle=sprMutant3DIdle;
+				spr_walk=sprMutant3DWalk;
+				spr_hurt=sprMutant3DHurt;
+				spr_dead=sprMutant3DDead;
 			}
 		}
 	}
@@ -559,7 +559,7 @@ instance_destroy()
 with UltraIcon
 instance_destroy()
 
-if skill = 75||ultimategamble>0//RANDOM ULTRAS HERE WE GO
+if ultimategamble>0//RANDOM ULTRAS HERE WE GO
 {
     do{ 
     skill1 = scrRandomUltraSelection();

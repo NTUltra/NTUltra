@@ -7,7 +7,7 @@ if !isOneWeaponOnlyModes() && !instance_exists(SurvivalWave) && !instance_exists
 	with instance_create(x-8,y,WepPickup)
 	{
 		scrWeapons()
-		wep = scrDecideWep(2, 1000, 0)
+		wep = scrDecideWep(choose(1,2), 1000, 0)
 		name = wep_name[wep]
 		ammo = 50
 		curse = 0;

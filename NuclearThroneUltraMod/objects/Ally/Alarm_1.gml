@@ -26,7 +26,7 @@ if (target = -1) || (random(8)<1)
 
 
 
-if target != noone && target > 0
+if target != noone && target.team != 2 && target.my_health > 0
 {
 
 	//GOT A TARGET

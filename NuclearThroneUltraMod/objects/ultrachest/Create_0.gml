@@ -26,11 +26,26 @@ var wepAmount = 8;
 weps = [];
 var i = 0;
 var newWep = 0;
+var highRange = -1;
+var lowRange = -6;
+if instance_exists(Player)
+{
+	if Player.race == 8//ROBOT
+	{
+		highRange += 1;
+		lowRange += 2;
+	}
+	if Player.ultra_got[29]
+	{
+		highRange += 1;
+		lowRange += 3;
+	}
+}
 repeat(wepAmount)
 {
 	var tries = 0;//Prevent infinite loop eventhough I dont think its possible
 	do {
-		newWep = scrDecideWep(irandom_range(-5,-9), 20, 0);
+		newWep = scrDecideWep(irandom_range(highRange,lowRange), 20, 0);
 		tries ++;
 	} until (!array_contains(weps,newWep) || tries > 5000)
 	weps[i] = newWep;

@@ -49,18 +49,11 @@ function scrUltraModDescription(um){
 		break;
 		case ultramods.plasmaBolt:
 			umn = @"SWAPS
-			SPLINTER <WITH> MINI PLASMA
-			PLASMA <WITH> BOLTS
-			BOUNCER PLASMA <WITH> BOUNCER BOLTS
-			HEAVY BOLTS <TO> PLASMA CANNON BALLS
-			ULTRA BOLTS <TO> SUPER PLASMA CANNON BALLS"
+			PLASMA <WITH> BOLTS"
 		break;
 		case ultramods.plasmaRocket:
 			umn = @"SWAPS
-			PLASMA <WITH> ROCKETS
-			BOUNCER PLASMA <WITH> BOUNCER ROCKETS
-			NUKES <TO> PLASMA CANNON BALLS
-			ULTRA ROCKETS <TO> SUPER PLASMA CANNON BALLS"
+			PLASMA <WITH> ROCKETS"
 		break;
 		case ultramods.bloodMelee:
 			umn = @"SWAPS

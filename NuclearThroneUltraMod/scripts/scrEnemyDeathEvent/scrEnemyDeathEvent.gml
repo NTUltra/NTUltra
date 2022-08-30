@@ -41,9 +41,9 @@ function scrEnemyDeathEvent(){
 					with other
 					{
 						if isdoc
-							dropped = scrDrop(10,0);
+							dropped = scrDrop(9,0);
 						else
-							dropped = scrDrop(8,0);
+							dropped = scrDrop(7,0);
 					}
 				}
 				if (ultra_got[32] && (creload > lowc || cwep == 0))
@@ -51,9 +51,9 @@ function scrEnemyDeathEvent(){
 					with other
 					{
 						if isdoc
-							dropped = scrDrop(10,0);
+							dropped = scrDrop(9,0);
 						else
-							dropped = scrDrop(8,0);
+							dropped = scrDrop(7,0);
 					}
 				}
 				if dropped {

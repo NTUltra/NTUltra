@@ -296,7 +296,11 @@ function scrUltras() {
 	ultra_name[43] = "FOCUSED FIRE"
 	ultra_text[43] = "ENEMY AND YOUR PROJECTILES#HOME IN ON YOUR MARKER"
 	ultra_tips[43] = "friendly fire?"
-
+	/*
+	ultra_name[43] = "SNIPER"
+	ultra_text[43] = "REPLACE MARKER WITH A HITSCAN SNIPER#THAT BREAKS WALLS#PIERCES AND STUNS ENEMIES#DAMAGE INCREASES EACH PIERCE"
+	ultra_tips[43] = "friendly fire?"
+	*/
 	ultra_name[44] = "CRACK SHOT"
 	ultra_text[44] = "PLACE MULTIPLE MARKERS#FIRE AT ALL MARKERS#WITHOUT EXTRA RELOAD TIME"
 	ultra_tips[44] = "gunslinger"
@@ -309,10 +313,16 @@ function scrUltras() {
 	    ultra_name[46] = "MLG SQUAD"
 	    ultra_text[46] = "CREATE MAX 3 BUDDIES#BUDDIES DON'T DECREASE#YOUR MAX HP"
 	    ultra_tips[46] = "teamwork"
-    
+		
 	    ultra_name[47] = "SPAM"
 	    ultra_text[47] = "BUDDIES COST 2 HP#INSTEAD OF MAX HP#PORTALS HEAL"
-	    ultra_tips[47] = "anoying"
+	    ultra_tips[47] = "annoying"
+		
+		/*
+		ultra_name[47] = "GREEN TEAM"
+	    ultra_text[47] = "SPAWNING BUDDIES COSTS RADS#INSTEAD OF MAX HP#BUDDIES DROP MORE RESOURCES"
+	    ultra_tips[47] = "teamwork"
+		*/
     
 	    ultra_name[48] = "LAG"
 	    ultra_text[48] = "FIRST THREE HITS#YOU TAKE IN A LEVEL WILL BE NEGLECTED"
@@ -330,6 +340,12 @@ function scrUltras() {
 	ultra_name[51] = "IMPENETRABLE"
 	ultra_text[51] = "BETTER CHARGE!#CHARGING DEFLECTS ENEMY PROJECTILES"
 	ultra_tips[51] = "what a beast"
+	
+	/*
+	ultra_name[51] = "INDESTRUCTABLE"
+	ultra_text[51] = "IMMUNE WHILE CHARGING#CHARGE DEALS NO DAMAGE#CHARGE DOES NOT DISSIPATE"
+	ultra_tips[51] = "what a beast"
+	*/
 
 	ultra_name[52] = "FLUFFY"//this is actually insane with impact wrists
 	ultra_text[52] = "CORPSES FLOAT#CORPSE COLLISION#CAN CAUSES BLOOD EXPLOSIONS#EVERYTHING THAT DIES#TURNS INTO A SHEEP"
@@ -347,7 +363,11 @@ function scrUltras() {
 	    ultra_name[55] = "DONE BEING EXTINCT"
 	    ultra_text[55] = "WHEN A WEAPON RETURNS#IT FIRES A MASSIVE LASER##WHENEVER A THROWN WEAPON HITS#DROP EXTRA RESOURCES##CHANCE PORTALS CHANGE#WEAPONS INTO A HIGHER TIER WEAPON##THROWS BOUNCE TOWARDS ENEMIES"
 	    ultra_tips[55] = "rise above"
-    
+		/*
+		ultra_name[55] = "INCONSISTENT INCOMPATABILITY"
+	    ultra_text[55] = "YOU NO LONGER CARRY WEAPONS ON YOU#INSTEAD YOU FIRE WEAPONS FROM YOUR CROSSHAIR#INSTEAD OF THROWING#SWITCH WEAPON POSITIONS"
+	    ultra_tips[55] = "how does it do that"
+		*/
 	    ultra_name[56] = "CLEANSING"
 	    ultra_text[56] = "MORE MELEE SWING RATE#PORTALS NO LONGER RANDOMIZE WEAPONS##THROWS BOUNCE TOWARDS ENEMIES"
 	    ultra_tips[56] = "survival above pacifism"
@@ -373,7 +393,11 @@ function scrUltras() {
 	    ultra_name[61] = "MEGA ARMOUR STRIKE"
 	    ultra_text[61] = "TRIPLE ARMOUR STRIKE#ARMOUR STRIKE DESTROYS PROJECTILES"
 	    ultra_tips[61] = "break down the walls!"
-    
+		/*
+		ultra_name[61] = "OCEAN ORIGIN"
+	    ultra_text[61] = "KRAKEN WEAPONS DEAL MORE DAMAGE#AND TENTACLES ARE LONGER#KRAKEN WEAPONS COST 20% LESS AMMO"
+	    ultra_tips[61] = "from the sea she came"
+		*/
 	    if instance_exists(Player)
 	    {
 	    if Player.race=19||Player.race=20||Player.race=21{//skeleton hog and horror
@@ -392,7 +416,7 @@ function scrUltras() {
 	    ultra_text[62] = "GAIN ONE EXTRA ARMOUR EACH AREA#INCREASE ARMOUR MAX BY TWO"
 	    ultra_tips[62] = "tank up"
 	    }
-    
+		
 	    ultra_name[63] = "COLD HEART"
 	    ultra_text[63] = "ARMOUR STRIKE USES 3HP#INSTEAD OF ARMOUR##ARMOUR STRIKE FREEZES ENEMIES##WHILE YOU HAVE ARMOUR#INCREASE PRIMARY FIRERATE BY 30%"//"ARMOUR STRIKE FREEZES ENEMIES#AND DEALS MORE DAMAGE#WHEN YOU HAVE NO MORE ARMOUR#YOU CAN USE 2HP TO USE AN ARMOUR STRIKE"
 	    ultra_tips[63] = "hearth strike"
@@ -446,18 +470,27 @@ function scrUltras() {
 	    ultra_name[72] = "ASCENT"
 	    ultra_text[72] = "YOU CAN FLY OVER WALLS FOREVER#ALSO DEFLECT ON YOUR RETICLE"
 	    ultra_tips[72] = "all you need is air"
+		/*
+		ultra_name[72] = "MIRROR"
+	    ultra_text[72] = "ACTIVE LONGER HEALS#ACTIVE COST IS ALWAYS REDUCES#(AS IF YOU ARE ON MAX HP)#ALSO DEFLECT ON YOUR RETICLE"
+	    ultra_tips[72] = "right back at ya"
+		*/
     
 	//SKELETON 
 	ultra_name[73] = "REDEMPTION"
-	ultra_text[73] = "REROLL ALL YOUR MUTATIONS#GET PATIENCE AS AN EXTRA#CHOICE EVERY TIME.#WHEN YOU LOOP YOU#CAN GET AN ULTRA AGAIN#NORMAL MOVEMENT SPEED#NORMAL ACCURACY"
+	ultra_text[73] = "REROLL ALL YOUR MUTATIONS#GET PATIENCE AS AN EXTRA#CHOICE EVERY TIME.#WHEN YOU LOOP YOU#CAN GET AN ULTRA AGAIN##NORMAL MOVEMENT SPEED#NORMAL ACCURACY"
 	ultra_tips[73] = "specific taste in mutations"
 
 	ultra_name[74] = "DAMNATION"
-	ultra_text[74] = "FIRING A WEAPON WITH BLOOD GAMBLE#WILL REDUCE ITS RELOAD TIME"//by 80%
+	ultra_text[74] = "FIRING A WEAPON WITH BLOOD GAMBLE#WILL REDUCE ITS RELOAD TIME BY 80%##USING BLOOD GAMBLE WHILE RELOADING#CAN FORCE YOUR WEAPON TO FIRE#AT THE COST OF 1HP"
 	ultra_tips[74] = "damn son!"
-
+	
 	ultra_name[75] = "THE BIG GAMBLE"
 	ultra_text[75] = "GET A RANDOM ULTRA MUTATION#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
+	ultra_tips[75] = "hybrid character"
+	
+	ultra_name[75] = "HARDENED BONE"
+	ultra_text[75] = "IMMUNE WHILE STATIONARY##SUCCESFULL BLOOD GAMBLE#MAKES YOU IMMUNE FOR A SHORT DURATION##FAILED BLOOD GAMBLE#CREATES BLOOD EXPLOSIONS"
 	ultra_tips[75] = "hybrid character"
 
 	if instance_exists(Player)
@@ -471,7 +504,7 @@ function scrUltras() {
 	    else
 	    {
 	    ultra_name[76] = "UNSTOPPABLE"
-	    ultra_text[76] = "GAIN THREE LIVES#NORMAL MOVEMENT SPEED#NORMAL ACCURACY"
+	    ultra_text[76] = "GAIN THREE LIVES##NORMAL MOVEMENT SPEED#NORMAL ACCURACY"
 	    ultra_tips[76] = "never dead"
 	    }
 	}
@@ -486,7 +519,11 @@ function scrUltras() {
 	    ultra_name[77] = "PROSPERITY"
 	    ultra_text[77] = "ENEMIES DROP MORE RADS#HIGHER RAD MAXIMUM"
 	    ultra_tips[77] = "money everywhere"
-    
+		/*
+		ultra_name[77] = "HORDING THIEF"
+	    ultra_text[77] = "GO TO YV'S CRIB#YOUR SHOP BECOMES AN INVENTORY#PICK UP WEAPONS WHILE#SHOP IS OPEN#AND YOU HOVER OVER A SLOT#TO DROP A WEAPON IN THERE"
+	    ultra_tips[77] = "money everywhere"
+		*/
 	    ultra_name[78] = "QUANTITY"
 	    ultra_text[78] = "MORE SHOP ITEMS"
 	    ultra_tips[78] = "options"
@@ -607,7 +644,11 @@ function scrUltras() {
 	ultra_name[97] = "SURGEON"
 	ultra_text[97] = "EVEN BETTER WEAPON#SPECIFIC MUTATIONS"
 	ultra_tips[97] = "delicacy"
-    
+	/*
+	ultra_name[97] = "BEEKEEPER"
+	ultra_text[97] = "RADIATION SPAWNS SWARM BOLTS"
+	ultra_tips[97] = "retired to a farm"
+    */
 	ultra_name[98] = "PLAGUE DOCTOR"
 	ultra_text[98] = "YOUR ACTIVE CHANGES INTO#INFEST ENEMIES USING RADS#THRONEBUTT DECREASES RAD COST"
 	ultra_tips[98] = "I am here to heal you"
@@ -638,6 +679,10 @@ function scrUltras() {
 	    ultra_text[104] = "ACTIVE CAN SHRINK#ALL ENEMY PROJECTILES#INTO NOTHINGNESS#ACTIVE STUNS ENEMIES FOR LONGER"
 	    ultra_tips[104] = "discipline those projectiles!"
 		/*
+		ultra_name[104] = "SNARK"
+	    ultra_text[104] = "ACTIVE COSTS 50 SKILL TO USE#INSTEAD OF UNEQUIPPED AMMO#ACTIVE DEFLECTS ALL ENEMY PROJECTILES"
+	    ultra_tips[104] = "discipline those projectiles!"
+		
 	    ultra_name[104] = "FRUITS OF LABOR"
 	    ultra_text[104] = "INCREASED SPRINT SPEED#IMMUNE TO CONTACT DAMAGE#WHILE SPRINTING"
 	    ultra_tips[104] = "fast old man"

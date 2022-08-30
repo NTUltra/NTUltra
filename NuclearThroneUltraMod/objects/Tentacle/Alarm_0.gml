@@ -36,9 +36,10 @@ if isog && GetPlayerUltramod() == ultramods.lightningKraken
 	exit;
 }
 isog = false;
-
-if instance_exists(target)
-dir = instance_nearest(x+lengthdir_x(80,direction),y+lengthdir_y(80,direction),target)
+if target == noone && instance_exists(enemy)
+{
+	target = instance_nearest(x,y,enemy);
+}
 var oldx, oldy;
 oldx = x
 oldy = y
@@ -65,10 +66,10 @@ accuracy=0;
 
 direction = image_angle+(random(accuracy)-(accuracy*0.5))//30 - 15
 speed = 4
-if instance_exists(target) && dir.team != team
+if target != noone && target.team != team
 {
-if point_distance(x,y,dir.x,dir.y) < 170-accuracy//120
-motion_add(point_direction(x,y,dir.x,dir.y),1.6-(accuracy*0.05))//1
+if point_distance(x,y,target.x,target.y) < 170-accuracy//120
+motion_add(point_direction(x,y,target.x,target.y),1.6-(accuracy*0.05))//1
 }
 image_angle = direction
 speed = 0
@@ -115,6 +116,7 @@ if round(ammo) > 0
 	image_index += 0.4/max(1,ceil(ammo));
 	with instance_create(x,y,Tentacle)
 	{
+		target = other.target;
 		alarm[1] = other.alarm[1];
 		scrCopyWeaponMod(other);
 		isog = other.isog;

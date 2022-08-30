@@ -7,6 +7,7 @@ exit;
 depth = 0;
 saveLoaded = false;
 outOfCombat = false;
+useGuarenteedReroll = false;
 restarted = false;
 hurt_pitch_variation = 0;
 reachedUltra = false;

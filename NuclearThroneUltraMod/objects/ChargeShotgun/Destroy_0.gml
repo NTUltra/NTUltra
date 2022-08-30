@@ -4,7 +4,7 @@ if instance_exists(Player) && instance_exists(creator)
 repeat(ceil(rate*1.6))
 {
 with instance_create(x,y,Bullet2)
-{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(50)-25)*other.creator.accuracy,12+random(6))
+{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(50)-25)*other.creator.accuracy,10+min(8,rate)+random(4))
 image_angle = direction
 team = other.team
 }

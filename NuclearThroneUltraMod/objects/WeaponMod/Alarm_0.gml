@@ -49,7 +49,7 @@ if instance_exists(Player) && Player.loops > 0 && instance_exists(Floor) && rand
 	instance_create(f.x+16,f.y+16,You);
 }
 
-with CrownPed {instance_create(x,y,GuardianStatue);}//curse!
+with CrownVaultExit {instance_create(x,y,GuardianStatue);}//curse!
 
 if instance_exists(GuardianStatue)
 {

@@ -1,5 +1,5 @@
 event_inherited()
-raddrop = 150
+raddrop = 170
 maxhealth = 280//365
 scrBossHealthBuff();
 EnemyHealthAdjustments();

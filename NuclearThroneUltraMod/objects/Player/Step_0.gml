@@ -1,8 +1,12 @@
 /// @description main
+if ultra_got[75] && speed < 1
+	alarm[3] = max(alarm[3],2);
 if UberCont.opt_gamemode == 29 || cheatyinfiniteammo //Infinite ammo
 	alarm[2] = 2;
 if unkillable
+{
 	alarm[1] = 2;
+}
 if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 {
 	if roll = 0

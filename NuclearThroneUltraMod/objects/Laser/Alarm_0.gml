@@ -32,12 +32,14 @@ if(instance_exists(Player)){
 				with instance_create(x,y,Bullet4)
 				{motion_add(other.image_angle-(5*acc),16)
 					scrCopyWeaponMod(other);
+					dmg -= 2;
 				image_angle = direction
 				team = other.team
 				alarm[11] = 0;}
 				with instance_create(x,y,Bullet4)
 				{motion_add(other.image_angle+(5*acc),16)
 					scrCopyWeaponMod(other);
+					dmg -= 2;
 				image_angle = direction
 				team = other.team
 				alarm[11] = 0;}

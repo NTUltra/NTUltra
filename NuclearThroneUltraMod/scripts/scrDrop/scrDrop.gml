@@ -10,7 +10,7 @@ function scrDrop(itemdrop, weapondrop) {
 			dropRateBuff = 1;
 		else
 			dropRateBuff = 0.974;
-		dropRateBuff += 0.974 + (Player.skill_got[4]*(0.38+Player.betterrabbitpaw))
+		dropRateBuff += 0.97 + (Player.skill_got[4]*(0.38+Player.betterrabbitpaw))
 		+ rebelBuff
 		+ (Player.skill_got[28]*(Player.rage*0.0011))//max is 60%
 		if Player.crown == 21 //Crown of risk

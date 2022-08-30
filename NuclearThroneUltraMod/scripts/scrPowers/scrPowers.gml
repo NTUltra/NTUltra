@@ -437,15 +437,14 @@ function scrPowers() {
 	instance_create(x,y,ShopWheel);
 	}
 
-	if race = 19&&wep_type[wep]!=0&&can_shoot=1 //&& my_health > 1//SKELETON
+	if race = 19&&wep_type[wep]!=0&&(can_shoot == 1 || ultra_got[74])//&& my_health > 1//SKELETON
 	{
-
+	var cs = can_shoot;
 	snd_play_2d(sndBloodGamble);
 
 	scrFire();
-
 	    //gamble some blood
-	    if (wep_cost[wep]/typ_ammo[wep_type[wep]] >random(1)*(1-(skill_got[5]*0.3333333333333333) )  )//(skill_got[5]*0.3333333333333333)  )//cost of shot divided by ammo pickup for weptype
+	    if cs != 1 || (wep_cost[wep]/typ_ammo[wep_type[wep]] > random(1.1)*(1+(skill_got[5]*0.3333333333333333) )  )//If this is true take damage
 	    {//thronebutt adds 1/3 chance of not taking damage
 			my_health -= 1;
 			exception=true;
@@ -509,7 +508,41 @@ function scrPowers() {
 			image_angle = direction
 			}
 			}
+			if ultra_got[75]
+			{
+				BackCont.shake += 2;
+				snd_play(sndExplosionL,0.01,true);
+				var len = 38;
+				var am = 6;
+				var aimDir = random(360);
+				var xx = x + lengthdir_x(len,aimDir);
+				var yy = y + lengthdir_y(len,aimDir);
+				var angstp = 360/am;
+				repeat(am)
+				{
+					instance_create(xx,yy,MeatExplosion)
+					aimDir += angstp;
+					xx = x + lengthdir_x(len,aimDir);
+					yy = y + lengthdir_y(len,aimDir);
+				}
+			}
 	    }
+		else
+		{
+			reload -= wep_load[wep]*0.25;
+			if ultra_got[75]
+			{
+				alarm[3] = max(10,alarm[3]);
+				if myShield == -1 || !instance_exists(myShield)
+				{
+					myShield = instance_create(x,y,EuphoriaShield);
+					with myShield
+					{
+						owner = other.id;
+					}
+				}
+			}
+		}
     
 	var t = wep_type[wep]
 	ammo[t]+=wep_cost[wep]//return ammo
@@ -518,8 +551,7 @@ function scrPowers() {
 	//Cap ammo
 	ammo[wep_type[wep]] = min(ammo[wep_type[wep]],typ_amax[t]);
 	rad = min(rad,GetPlayerMaxRad());
-
-	if Player.ultra_got[74]//Meltings Damnation Ultra B
+	if ultra_got[74]//Skeleton Damnation Ultra B
 	{
 		reload -= wep_load[wep]*0.8;//80 procent fire rate boost
 	}
@@ -1092,11 +1124,11 @@ function scrPowers() {
 		}
 		if skill_got[2]==1//extra feet
 		{
-		maxSpeed=8;
+		maxSpeed=7;
 		}
 		else
 		{
-		maxSpeed=7;
+		maxSpeed=6;
 		}
 		}
 	}

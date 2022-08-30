@@ -219,6 +219,7 @@ function scrModHit() {
 
 				case 9://bouncer
 				snd_play(sndBouncerHitWall,0.05,true);
+				repeat(2)
 				with instance_create(other.x+lengthdir_x(4,random(360)),other.y+lengthdir_x(4,random(360)),Bullet3)
 				{
 					motion_add(random(360),5.2)

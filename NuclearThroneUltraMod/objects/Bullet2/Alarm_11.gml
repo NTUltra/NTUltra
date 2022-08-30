@@ -16,7 +16,7 @@ if um == ultramods.bulletShotgun
 {
 	with instance_create(x,y,Splinter)
 	{
-		dmg --;
+		dmg -= choose(0,1,1,1);
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;

@@ -10,8 +10,8 @@ accuracy=10;
 ion=false;
 typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflects
 dmg=4;
-image_speed = 0.3
-target=enemy;
+image_speed = 0.3;
+target=noone;
 
 if instance_exists(Player)
 {
@@ -33,5 +33,5 @@ if instance_exists(Player)
 ultra = false;
 isog = true;
 canBeMoved = false;
-alarm[1] = 11;
+alarm[1] = 10;
 UberCont.recursionCheck ++;

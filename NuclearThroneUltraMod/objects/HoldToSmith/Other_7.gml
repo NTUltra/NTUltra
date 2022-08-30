@@ -13,11 +13,12 @@ with Player
 	    if string_copy(wep_name[bwep],0,4) = "GOLD"&&loops<1
 	    bwep=9//minigun tier 6
     
-	    //GO through array and check if there is a weapon of a higher  tier first
+	    //GO through array and check if there is a weapon of a higher tier first
 	    highesttier = max(wep_area[wep],wep_area[bwep]);
     
 	    if highesttier=-1
-	    highesttier=irandom(4);
+			highesttier=irandom(4);
+			
 			highesttier = min(highesttier,highest_wep_tier-2);//Cap it
 	        var dir=0;
 			var targetTier = highesttier+1+skill_got[5];

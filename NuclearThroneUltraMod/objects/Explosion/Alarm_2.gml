@@ -1,5 +1,5 @@
-/// @description xxx
-with instance_create(x+choose(random_range(24,48),random_range(-24,-48)),
-y+choose(random_range(24,48),random_range(-24,-48)),
+/// @description Atom Ultra
+with instance_create(x+choose(random_range(16,32),random_range(-16,-32)),
+y+choose(random_range(16,32),random_range(-16,-32)),
 Explosion)
 	alarm[2] = 0;

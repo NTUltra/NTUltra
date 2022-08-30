@@ -26,6 +26,10 @@ if other.race == 15//Atom can no longer teleport
 {
 	PlayerAlarms.alarm[8] += 200;	
 }
+with Ally
+{
+	my_health = 0;
+}
 other.speed = 0;
 if endgame = 100
 {

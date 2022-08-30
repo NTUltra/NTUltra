@@ -1457,24 +1457,24 @@ function scrFire() {
 		{
 		visible=false;
 		sticky = 0
-		motion_add(aimDirection-(20*other.accuracy),12+random(6))
+		motion_add(aimDirection-(20*other.accuracy),14+random(6))
 		image_angle = direction
 		team = other.team
 		with instance_create(x,y,BloodStreak){
 		image_angle = other.direction}
-		alarm[0]=3;
+		alarm[0]=4;
 		//instance_destroy();
 		}
 		with instance_create(x,y,BloodGrenade)
 		{
 		visible=false;
 		sticky = 0
-		motion_add(aimDirection+(20*other.accuracy),12+random(6))
+		motion_add(aimDirection+(20*other.accuracy),14+random(6))
 		image_angle = direction
 		team = other.team
 		with instance_create(x,y,BloodStreak){
 		image_angle = other.direction}
-		alarm[0]=3;
+		alarm[0]=4;
 		//instance_destroy();
 		}
 
@@ -1634,7 +1634,7 @@ function scrFire() {
 	with instance_create(x,y,Grenade)
 	{
 	sticky = 0
-	motion_add(aimDirection+(random(10)-3)*other.accuracy,10)
+	motion_add(aimDirection+(random(10)-3)*other.accuracy,11)
 	image_angle = direction
 	team = other.team}
 

@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndCrossbow",
-  "duration": 0.0,
+  "duration": 0.508345,
   "parent": {
     "name": "Bolts",
     "path": "folders/Sounds/Weapons/Bolts.yy",

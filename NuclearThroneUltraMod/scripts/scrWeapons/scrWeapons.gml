@@ -1187,7 +1187,7 @@ function scrWeapons() {
 	wep_name[107] = "SHORTGUN"
 	wep_type[107] = 2
 	wep_auto[107] = 0
-	wep_load[107] = 15
+	wep_load[107] = 14
 	wep_cost[107] = 2
 	wep_sprt[107] = sprShortgun
 	wep_area[107] = 0
@@ -1212,7 +1212,7 @@ function scrWeapons() {
 	wep_load[109] = 20
 	wep_cost[109] = 2
 	wep_sprt[109] = sprBloodGlove
-	wep_area[109] = 8
+	wep_area[109] = 7
 	wep_text[109] = "five point palm#exploding heart technique"
 	wep_swap[109] = sndSwapHammer
 	wep_rad[109] = 0;
@@ -2144,7 +2144,7 @@ function scrWeapons() {
 	wep_name[194] = "KRAKEN GUN"
 	wep_type[194] = 4
 	wep_auto[194] = 0
-	wep_load[194] = 16//10
+	wep_load[194] = 15//10
 	wep_cost[194] = 2
 	wep_sprt[194] = sprKrakenGun
 	wep_area[194] = 4
@@ -2155,7 +2155,7 @@ function scrWeapons() {
 	wep_name[195] = "BIG KRAKEN GUN"
 	wep_type[195] = 4
 	wep_auto[195] = 0
-	wep_load[195] = 25//10
+	wep_load[195] = 22//10
 	wep_cost[195] = 2.5
 	wep_sprt[195] = sprBigKrakenGun
 	wep_area[195] = 6
@@ -3731,7 +3731,7 @@ function scrWeapons() {
 	wep_load[338] = 16//10
 	wep_cost[338] = 1
 	wep_sprt[338] = sprKrakenPistol
-	wep_area[338] = 3
+	wep_area[338] = 2
 	wep_text[338] = "unleash the baby kraken"
 	wep_swap[338] = sndSwapDragon
 	wep_rad[338] = 0;
@@ -4567,7 +4567,7 @@ function scrWeapons() {
 	wep_load[412] = 17
 	wep_cost[412] = 0
 	wep_sprt[412] = sprLance
-	wep_area[412] = 5
+	wep_area[412] = 4
 	wep_text[412] = ""
 	wep_swap[412] = sndSwapSword
 	wep_rad[412] = 0;
@@ -5029,7 +5029,7 @@ function scrWeapons() {
 	wep_load[454] = 18
 	wep_cost[454] = 4
 	wep_sprt[454] = sprFlameDirectorJawEraser
-	wep_area[454] = 15//6
+	wep_area[454] = 14//6
 	wep_text[454] = "jaw is erased"
 	wep_swap[454] = sndSwapShotgun
 	wep_rad[454] = 0;
@@ -5169,7 +5169,7 @@ function scrWeapons() {
 	wep_name[467] = "BOOM BOOM CANNON"
 	wep_type[467] = 4
 	wep_auto[467] = 0
-	wep_load[467] = 26
+	wep_load[467] = 25
 	wep_cost[467] = 2
 	wep_sprt[467] = sprBoomBoomCannon
 	wep_area[467] = 15
@@ -5499,7 +5499,7 @@ function scrWeapons() {
 	wep_name[497] = "SUPER SPLINTER GUN"
 	wep_type[497] = 3
 	wep_auto[497] = 0
-	wep_load[497] = 39//42 normally
+	wep_load[497] = 38//42 normally
 	wep_cost[497] = 2
 	wep_sprt[497] = sprSuperSplinterGun
 	wep_area[497] = 8
@@ -5510,7 +5510,7 @@ function scrWeapons() {
 	wep_name[498] = "DEVASTATOR"
 	wep_type[498] = 5
 	wep_auto[498] = 0
-	wep_load[498] = 55//60 normally
+	wep_load[498] = 53//60 normally
 	wep_cost[498] = 8
 	wep_sprt[498] = sprDevastator
 	wep_area[498] = 15
@@ -5686,7 +5686,7 @@ function scrWeapons() {
 	wep_name[514] = "HEAVY SHOVEL"
 	wep_type[514] = 0
 	wep_auto[514] = 0
-	wep_load[514] = 45
+	wep_load[514] = 42
 	wep_cost[514] = 0
 	wep_sprt[514] = sprHeavyShovel
 	wep_area[514] = 7//4 originally?
@@ -5719,7 +5719,7 @@ function scrWeapons() {
 	wep_name[517] = "CLUB"
 	wep_type[517] = 0
 	wep_auto[517] = 0
-	wep_load[517] = 33
+	wep_load[517] = 31
 	wep_cost[517] = 0
 	wep_sprt[517] = sprClub
 	wep_area[517] = 3
@@ -5840,10 +5840,10 @@ function scrWeapons() {
 	wep_name[528] = "SHOVEL CRASH"
 	wep_type[528] = 0
 	wep_auto[528] = 0
-	wep_load[528] = 60
+	wep_load[528] = 50
 	wep_cost[528] = 0
 	wep_sprt[528] = sprShovelCrash
-	wep_area[528] = 13//4 originally?
+	wep_area[528] = 12//4 originally?
 	wep_text[528] = "beautifull flower"
 	wep_swap[528] = sndSwapHammer
 	wep_rad[528] = 0;
@@ -6115,8 +6115,8 @@ function scrWeapons() {
 	wep_name[553] = "BULLET SHOVEL"
 	wep_type[553] = 1
 	wep_auto[553] = 0
-	wep_load[553] = 22
-	wep_cost[553] = 15
+	wep_load[553] = 20
+	wep_cost[553] = 14
 	wep_sprt[553] = sprBulletShovel
 	wep_area[553] = 15
 	wep_text[553] = ""
@@ -6368,10 +6368,10 @@ function scrWeapons() {
 	wep_name[576] = "SUPER BOW"
 	wep_type[576] = 3
 	wep_auto[576] = 0
-	wep_load[576] = 30
+	wep_load[576] = 29
 	wep_cost[576] = 5
 	wep_sprt[576] = sprSuperBow
-	wep_area[576] = 9
+	wep_area[576] = 8
 	wep_text[576] = "hold for power"
 	wep_swap[576] = sndSwapBow
 	wep_rad[576] = 0;
@@ -6661,6 +6661,39 @@ function scrWeapons() {
 	wep_text[602] = ""
 	wep_swap[602] = sndSwapMachinegun
 	wep_rad[602] = 12;//7 for one shot normally
+	
+	wep_name[603] = "SPLINTER SHOVEL"
+	wep_type[603] = 0
+	wep_auto[603] = 0
+	wep_load[603] = 27
+	wep_cost[603] = 0
+	wep_sprt[603] = sprSplinterShovel
+	wep_area[603] = 15
+	wep_text[603] = "nails to the wall"
+	wep_swap[603] = sndSwapHammer
+	wep_rad[603] = 0;
+	
+	wep_name[604] = "SPLINTER LANCE"
+	wep_type[604] = 0
+	wep_auto[604] = 0
+	wep_load[604] = 12
+	wep_cost[604] = 0
+	wep_sprt[604] = sprLance
+	wep_area[604] = 14
+	wep_text[604] = ""
+	wep_swap[604] = sndSwapSword
+	wep_rad[604] = 0;
+	
+	wep_name[605] = "STABINATOR"
+	wep_type[605] = 3
+	wep_auto[605] = 0
+	wep_load[605] = 49//60 normally
+	wep_cost[605] = 8
+	wep_sprt[605] = sprStabinator
+	wep_area[605] = 18
+	wep_text[605] = "time for a good o'l fashion stabbin'"
+	wep_swap[605] = sndSwapExplosive
+	wep_rad[605] = 0;
 
 	maxwep = array_length(wep_name)-1;
 

@@ -3,11 +3,11 @@ if swapChar
 	exit;
 
 
-if area = 1 && instance_exists(WepPickup)
+if (area == 1 || area == 101 || area == 10) && instance_exists(WepPickup)
 {
 	with WepPickup
 	{
-		if wep = 46 && !persistent
+		if wep == 46 && !persistent
 			other.canblacksword=true
 	}
 }
@@ -354,14 +354,14 @@ if looping && area != 104
 		sprite_index = wep_sprt[wep]
 	}}
 	//DROP HUNTER HEAVY SNIPER
-	if race = 11 && loops=1
+	if race = 11 && loops = 1
 	{
 
 		with instance_create(x,y,WepPickup)
 		{
 			persistent = true;
 			scrWeapons()
-			wep =316
+			wep = 316
 			name = wep_name[wep]
 			ammo = 0
 			type = wep_type[wep]
@@ -372,19 +372,51 @@ if looping && area != 104
 	}
 
 	//DROP CHICKEN DARK SWORD
-	if (wep = 46 || bwep = 46 || cwep == 46) && loops=1
+	if ((wep = 328 || bwep = 328 || cwep == 328) && loops = 2) || ((wep = 46 || bwep = 46 || cwep == 46) && loops = 1)
 	{
 
 		with instance_create(x,y,WepPickup)
 		{
 		persistent=true;
 		scrWeapons()
-		wep =329
+		wep = 329
 		name = wep_name[wep]
 		ammo = 0
 		type = wep_type[wep]
 		curse = 0
 		sprite_index = wep_sprt[wep]
+		}
+	}
+	else if loops == 1 && (canblacksword || wep = 46 || bwep = 46|| cwep == 46)
+	{
+		//DROP BLACK SWORD
+		with instance_create(x,y,WepPickup)
+		{
+			persistent=true;
+			scrWeapons()
+			wep = 328
+			name = wep_name[wep]
+			ammo = 0
+			type = wep_type[wep]
+			curse = 0
+			sprite_index = wep_sprt[wep]
+		}
+
+	}
+	//DROP GIANT PANDA STICK
+	if (wep = 200 || bwep = 200|| cwep == 200) && loops == 1
+	{
+
+		with instance_create(x,y,WepPickup)
+		{
+			persistent=true;
+			scrWeapons()
+			wep = 512
+			name = wep_name[wep]
+			ammo = 0
+			type = wep_type[wep]
+			curse = 0
+			sprite_index = wep_sprt[wep]
 		}
 	}
 	//Secret
@@ -457,43 +489,7 @@ if looping && area != 104
 		}
 
 	}
-
-	//DROP GIANT PANDA STICK
-	if (wep = 328 || bwep = 328|| cwep == 328) && loops == 2
-	{
-
-		with instance_create(x,y,WepPickup)
-		{
-			persistent=true;
-			scrWeapons()
-			wep = 512
-			name = wep_name[wep]
-			ammo = 0
-			type = wep_type[wep]
-			curse = 0
-			sprite_index = wep_sprt[wep]
-		}
-
-	}
-
-	//DROP BLACK SWORD
-	if loops == 1 && (canblacksword || wep = 200 || bwep = 200|| cwep == 200)
-	{
-
-		with instance_create(x,y,WepPickup)
-		{
-			persistent=true;
-			scrWeapons()
-			wep = 328
-			name = wep_name[wep]
-			ammo = 0
-			type = wep_type[wep]
-			curse = 0
-			sprite_index = wep_sprt[wep]
-		}
-
-	}
-
+	
 	//DROP GUITAR?
 	if race=1
 	{

@@ -1,5 +1,5 @@
 image_speed=0;
-projectileHitBrake = 1.8;
+projectileHitBrake = 2;
 enemyHitbrake = 5;
 bloomSprite = sprSheepDashBloom;
 imageIndex = 0;
@@ -46,8 +46,6 @@ if instance_exists(Player)
 
 alpha = 0;
 
-projectileHitBrake = 2;
-enemyHitbrake = 5;
 
 thresholdBroken = false;
 //TODO make this speed based

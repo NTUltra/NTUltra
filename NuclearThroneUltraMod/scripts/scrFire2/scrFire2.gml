@@ -2697,7 +2697,7 @@ function scrFire2() {
 
 	with instance_create(x,y,ChargeFlakCannon)
 	{
-	maxcharge=45;//maxrate
+	maxcharge=50;//maxrate
 	type=2;
 	cost=1;
 	creator = other.id
@@ -3522,7 +3522,6 @@ function scrFire2() {
 	team = other.team}
 
 	wepangle = -wepangle
-	speed = -speed*0.5
 	BackCont.viewx2 += lengthdir_x(9,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(9,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 2
@@ -3613,7 +3612,7 @@ function scrFire2() {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),EnergySlash)
 	{
-		dmg = 21;
+		dmg = 22;
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -7158,7 +7157,7 @@ function scrFire2() {
 		var msk = mask_index;
 		mask_index = mskBullet1;
 		var aimDir = aimDirection+(random(7)-3.5)*accuracy;
-		var len = 11+(accuracy*2);
+		var len = 14+(accuracy*2);
 		var xstep = lengthdir_x(len,aimDir);
 		var ystep = lengthdir_y(len,aimDir);
 		var bx = x;
@@ -8320,10 +8319,10 @@ function scrFire2() {
 	{
 		if Player.skill_got[17] = 1//laserbrain
 		{
-		dmg=9+(other.betterlaserbrain)
+		dmg=10+(other.betterlaserbrain)
 		}
 		else
-		dmg = 8
+		dmg = 9
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -8795,7 +8794,7 @@ function scrFire2() {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 	{
-	dmg = 18
+	dmg = 24
 	sprite_index=sprVeryHeavySlash;
 	longarms = 0
 	if instance_exists(Player)
@@ -8805,7 +8804,7 @@ function scrFire2() {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),EnergyHammerSlash)
 	{
-	dmg = 16
+	dmg = 20
 	sprite_index=sprVeryHeavySlash;
 	longarms = 0
 	if instance_exists(Player)
@@ -8815,7 +8814,7 @@ function scrFire2() {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),EnergyHammerSlash)
 	{
-	dmg = 16
+	dmg = 20
 	sprite_index=sprVeryHeavySlash;
 	longarms = 0
 	if instance_exists(Player)
@@ -10815,7 +10814,7 @@ function scrFire2() {
 	with instance_create(x,y,SuperClusterGrenade)
 	{
 	sticky = 0;
-	motion_add(aimDirection+(random(6)-3)*other.accuracy,13)
+	motion_add(aimDirection+(random(6)-3)*other.accuracy,16)
 	image_angle = direction
 	team = other.team}
 
@@ -11294,6 +11293,95 @@ function scrFire2() {
 	}
 
 	break;
+	
+	//SPLINTER SHOVEL
+	case 603:
+
+	snd_play_fire(sndShovel)
+
+	instance_create(x,y,Dust)
+
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),SpikeSlash)
+	{
+	dmg = 25
+	longarms = 0
+	if instance_exists(Player)
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection,2+longarms)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),SpikeSlash)
+	{
+	dmg = 22
+	longarms = 0
+	if instance_exists(Player)
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection+60*other.accuracy,2+longarms)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),SpikeSlash)
+	{
+	dmg = 22
+	longarms = 0
+	if instance_exists(Player)
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection-60*other.accuracy,2+longarms)
+	image_angle = direction
+	team = other.team}
+
+	wepangle = -wepangle
+	motion_add(aimDirection,6)
+	BackCont.viewx2 += lengthdir_x(24,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(24,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 1
+	wkick = -4
+
+	break;
+	
+	//SPLINTER LANCE
+	case 604:
+
+	snd_play_fire(choose(sndSword1,sndSword2))
+
+	instance_create(x,y,Dust)
+
+	with instance_create(x+lengthdir_x(5+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(5+((Player.skill_got[13]+bettermelee)*20),aimDirection),SplinterLanceShank)
+	{
+		dmg = 14;
+		longarms = 0
+		if instance_exists(Player)
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection,4+longarms)
+		image_angle = direction
+		team = other.team
+	}
+
+	wepangle = -wepangle
+	motion_add(aimDirection,8)
+	BackCont.viewx2 += lengthdir_x(14,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(14,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 1
+	wkick = -6
+
+	break;
+	
+	//STABBINATOR
+	case 605:
+
+	snd_play_fire(sndSuperSplinterGun)
+
+	with instance_create(x,y,Stabinator)
+	{motion_add(aimDirection+(random(6)-3)*other.accuracy,16)
+	image_angle = direction
+	speed = 12;
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 5
+	wkick = 4
+
+	break
 	
 	}//end of switch part 2!
 }

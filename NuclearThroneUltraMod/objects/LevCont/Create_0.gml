@@ -9,7 +9,7 @@ __view_set( e__VW.XView, 0, 0 )
 __view_set( e__VW.YView, 0, 0 )
 wave = 0
 if UberCont.useSeed && instance_exists(Player)
-	random_set_seed(UberCont.seed+Player.lastarea+Player.lastsubarea+Player.skillpoints);
+	random_set_seed(UberCont.seed+Player.lastarea+Player.loops+Player.lastsubarea+Player.skillpoints);
 
 if Player.crownpoints > 0
 {
@@ -67,7 +67,7 @@ if Player.hogpoints > 1// && Player.area=105 && Player.subarea=1
     
     exit;
 }
-else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !Player.horrorEtaken
+else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !Player.horrorEtaken && Player.skillpoints == 1
 || Player.ultraNow))&&(Player.ultra_got[75]==0)//ULTRA! Player.level>9 not skelly redemption ultra a Player.skillsChosen>7
 {
 	Player.ultraNow = false;
@@ -205,8 +205,6 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
     else if Player.ultra_got[73]{//*/ Skelly ultra A redemption patience all da time
     
     scrSkills()//maybe dont run this when ultra
-    //27
-    skill0=27;//patience
 
     
     if scrSkillLeft(0,0,0,0) 
@@ -364,7 +362,13 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
     
     if Player.race=21//Horror
     {
-    
+    if Player.ultra_got[73] || (Player.skillsChosen == 7 && !Player.useGuarenteedReroll)//Melting ultra A patience
+	{
+		Player.useGuarenteedReroll = true;
+	with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-140,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
+	skill = 27
+	}
+		
     with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-112,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
     skill = other.skill1
     
@@ -386,10 +390,11 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
     
     }
     else{
-	    if Player.ultra_got[73]//Melting ultra A patience
+	    if Player.ultra_got[73] || (Player.skillsChosen == 7 && Player.useGuarenteedReroll)//Melting ultra A patience
 	    {
+			Player.useGuarenteedReroll = true;
 	    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-96,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-	    skill = other.skill0
+	    skill = 27
 	    }
     
 	    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-64,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
@@ -433,7 +438,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 	    if Player.ultra_got[73]//Melting ultra A patience
 	    {
 	    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-	    skill = other.skill0
+	    skill = 27
 	    }
     
 	    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)

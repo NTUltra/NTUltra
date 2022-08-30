@@ -154,7 +154,7 @@ image_index = choose(1,2,3,4)
 
 BackCont.shake += 1
 //if random(2)<1//not to much debris
-if !instance_exists(SpiralCont)
+if !instance_exists(SpiralCont) && !instance_exists(GenCont)
 {
 	instance_create(x+8+random(8)-4,y+8+random(8)-4,Debris)
 	if instance_exists(Player) && Player.skill_got[26]

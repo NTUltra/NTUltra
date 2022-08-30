@@ -8,7 +8,7 @@ function scrMoveContactSolid(ang, mdis) {
 		y += lengthdir_y(1,ang);
 	}
 	until(point_distance(x,y,sx,sy) > mdis || 
-		place_meeting(x+lengthdir_x(4,ang),y+lengthdir_y(4,ang),Wall)
+		place_meeting(x+lengthdir_x(4,ang),y+lengthdir_y(4,ang),WallHitMe)
 	)
 	mask_index = mask;
 	return point_distance(x,y,sx,sy) < mdis;

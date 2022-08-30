@@ -24,8 +24,8 @@ sprite_index= spr_prep;
 
 
 if alarm[2]>1{//breathe fire!
-scrTarget();
-direction = point_direction(x,y,target.xprevious,target.yprevious)
+if target != noone
+	direction = point_direction(x,y,target.xprevious,target.yprevious)
     BackCont.shake += 0.1
     
 if sprite_index=spr_hurt{//the prick hit me!

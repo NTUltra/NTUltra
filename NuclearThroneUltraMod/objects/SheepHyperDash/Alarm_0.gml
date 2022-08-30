@@ -62,7 +62,7 @@ with instance_create(x,y,SheepHyperDashTrail)
 }
 with Player {
 	//immunity
-	meleeimmunity = 5;
-	alarm[3] = 5;
+	meleeimmunity = max(meleeimmunity,5);
+	alarm[3] = max(alarm[3],5);
 }
 looped += 1;
