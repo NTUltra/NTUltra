@@ -23,4 +23,6 @@ if instance_exists(Player)
 		image_yscale += 2;
 	}*/
 	dmg *= 1+Player.level*0.1;//0.1
+	if Player.ultra_got[61] && Player.altUltra
+		sprite_index = sprArmourStrikeKraken;
 }

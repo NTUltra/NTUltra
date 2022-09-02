@@ -23,7 +23,7 @@ function scrSkills() {
 		{
 			isHand = true;	
 		}
-		if canCheckUltra && Player.ultra_got[97]
+		if canCheckUltra && Player.ultra_got[97] && !Player.altUltra
 		{
 			betterWepSpecific = true;	
 		}
@@ -437,9 +437,11 @@ function scrSkills() {
 	
 	
 	skill_name[35] = "PUFFY CHEEKS"
-	skill_text[35] = "YOU CAN PREEMPTIVELY RELOAD#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 50% RELOAD SPEED"
+	skill_text[35] = "YOU CAN PREEMPTIVELY RELOAD#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 50% RELOAD SPEED##+10% SECONDARY RELOAD SPEED"
+	if instance_exists(Player) && Player.cwep != 0
+		skill_text[35] = "YOU CAN PREEMPTIVELY RELOAD#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 50% RELOAD SPEED##+10% OFFHAND RELOAD SPEED"
 	if isDoctor
-		skill_text[35] = "YOU CAN PREEMPTIVELY RELOAD#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 60% RELOAD SPEED"
+		skill_text[35] = "YOU CAN PREEMPTIVELY RELOAD#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 60% RELOAD SPEED##+10% SECONDARY RELOAD SPEED"
 	skill_tips[35] = "big round cheeks"
 	skill_msnd[35] =  sndMutPuffyCheeks
 	

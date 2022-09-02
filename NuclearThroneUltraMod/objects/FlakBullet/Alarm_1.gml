@@ -1,2 +1,2 @@
 /// @description dmg
-dmg = 8;
+dmg -= 2;

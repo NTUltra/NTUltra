@@ -12,7 +12,7 @@ if other.team == 2 && instance_exists(Player) && (UberCont.opt_gamemode != 9 || 
 			if Player.race=25//Mutation smith
 				immunelimit=6;
 
-			if Player.ultra_got[97]//Mutation Doctor Ultra A
+			if Player.ultra_got[97] && !Player.altUltra//Mutation Doctor Ultra A
 				immunelimit=8;
 		}
 

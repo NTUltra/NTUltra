@@ -297,8 +297,8 @@ function scrUltras() {
 	ultra_text[43] = "ENEMY AND YOUR PROJECTILES#HOME IN ON YOUR MARKER"
 	ultra_tips[43] = "friendly fire?"
 	/*
-	ultra_name[43] = "SNIPER"
-	ultra_text[43] = "REPLACE MARKER WITH A HITSCAN SNIPER#THAT BREAKS WALLS#PIERCES AND STUNS ENEMIES#DAMAGE INCREASES EACH PIERCE"
+	ultra_name[43] = "SNIPER EYE"
+	ultra_text[43] = "REPLACE MARKER WITH A SNIPER EYE#THAT BREAKS WALLS#PIERCES AND STUNS ENEMIES#DAMAGE INCREASES EACH PIERCE#MORE POWERFULL THE LONGER YOU WAIT BETWEEN SHOTS"
 	ultra_tips[43] = "friendly fire?"
 	*/
 	ultra_name[44] = "CRACK SHOT"
@@ -344,6 +344,10 @@ function scrUltras() {
 	/*
 	ultra_name[51] = "INDESTRUCTABLE"
 	ultra_text[51] = "IMMUNE WHILE CHARGING#CHARGE DEALS NO DAMAGE#CHARGE DOES NOT DISSIPATE"
+	ultra_tips[51] = "what a beast"
+	//NO EXTRA FEET NO GAMMA GUTS
+	ultra_name[51] = "HYPNOTIC SHEEP"
+	ultra_text[51] = "ACTIVE CHANGES INTO HYPNOSIS#ENEMIES IMMEDIATLY FORGET YOU ARE AN ENEMY#THEY WILL ATTACK AGAIN IF YOU ENGAGE#CAN BE USED 3 TIMES EACH AREA#THRONEBUTT INCREASES USES TO 4"
 	ultra_tips[51] = "what a beast"
 	*/
 
@@ -391,13 +395,16 @@ function scrUltras() {
 
 	    //VIKING 
 	    ultra_name[61] = "MEGA ARMOUR STRIKE"
-	    ultra_text[61] = "TRIPLE ARMOUR STRIKE#ARMOUR STRIKE DESTROYS PROJECTILES"
+	    ultra_text[61] = "TRIPLE ARMOUR STRIKE#ARMOUR STRIKE DESTROYS PROJECTILES#GAIN 1 ARMOUR WHEN YOU KILL A BOSS"
 	    ultra_tips[61] = "break down the walls!"
-		/*
-		ultra_name[61] = "OCEAN ORIGIN"
-	    ultra_text[61] = "KRAKEN WEAPONS DEAL MORE DAMAGE#AND TENTACLES ARE LONGER#KRAKEN WEAPONS COST 20% LESS AMMO"
-	    ultra_tips[61] = "from the sea she came"
-		*/
+		
+		if instance_exists(Player) && (Player.altUltra || ((scrKrakenWeapons(Player.wep) || scrKrakenWeapons(Player.bwep)) && instance_exists(UltraIcon)))
+		{
+			ultra_name[61] = "CAPTAIN OF THE KRAKEN"
+			ultra_text[61] = "KRAKEN WEAPONS DEAL MORE DAMAGE#TENTACLES ARE LONGER#KRAKEN WEAPONS COST 30% LESS AMMO"
+			ultra_tips[61] = "from the sea she came"
+		}
+		
 	    if instance_exists(Player)
 	    {
 	    if Player.race=19||Player.race=20||Player.race=21{//skeleton hog and horror
@@ -470,11 +477,17 @@ function scrUltras() {
 	    ultra_name[72] = "ASCENT"
 	    ultra_text[72] = "YOU CAN FLY OVER WALLS FOREVER#ALSO DEFLECT ON YOUR RETICLE"
 	    ultra_tips[72] = "all you need is air"
-		/*
-		ultra_name[72] = "MIRROR"
-	    ultra_text[72] = "ACTIVE LONGER HEALS#ACTIVE COST IS ALWAYS REDUCES#(AS IF YOU ARE ON MAX HP)#ALSO DEFLECT ON YOUR RETICLE"
-	    ultra_tips[72] = "right back at ya"
-		*/
+		
+		//Have less than default max hp
+		if instance_exists(Player) && (Player.altUltra || (
+		((Player.maxhealth < 8 && UberCont.opt_gamemode != 9) || (UberCont.opt_gamemode == 9 && Player.maxhealth < 8 + UberCont.casualModeHPIncrease))
+		&& instance_exists(UltraIcon)))
+		{
+			ultra_name[72] = "MIRROR"
+		    ultra_text[72] = "ACTIVE NO LONGER HEALS#ACTIVE COST IS ALWAYS REDUCED#(AS IF YOU ARE ON MAX HP)#ALSO DEFLECT ON YOUR RETICLE"
+		    ultra_tips[72] = "right back at ya"
+		}
+		
     
 	//SKELETON 
 	ultra_name[73] = "REDEMPTION"
@@ -520,7 +533,7 @@ function scrUltras() {
 	    ultra_text[77] = "ENEMIES DROP MORE RADS#HIGHER RAD MAXIMUM"
 	    ultra_tips[77] = "money everywhere"
 		/*
-		ultra_name[77] = "HORDING THIEF"
+		ultra_name[77] = "HOARDING THIEF"
 	    ultra_text[77] = "GO TO YV'S CRIB#YOUR SHOP BECOMES AN INVENTORY#PICK UP WEAPONS WHILE#SHOP IS OPEN#AND YOU HOVER OVER A SLOT#TO DROP A WEAPON IN THERE"
 	    ultra_tips[77] = "money everywhere"
 		*/
@@ -644,11 +657,14 @@ function scrUltras() {
 	ultra_name[97] = "SURGEON"
 	ultra_text[97] = "EVEN BETTER WEAPON#SPECIFIC MUTATIONS"
 	ultra_tips[97] = "delicacy"
-	/*
-	ultra_name[97] = "BEEKEEPER"
-	ultra_text[97] = "RADIATION SPAWNS SWARM BOLTS"
-	ultra_tips[97] = "retired to a farm"
-    */
+	
+	if instance_exists(Player) && (Player.altUltra || (!Player.skill_got[13] && !Player.skill_got[16] && !Player.skill_got[17] && !Player.skill_got[21] && !Player.skill_got[14] && instance_exists(UltraIcon)))
+	{
+		ultra_name[97] = "BEEKEEPER"
+		ultra_text[97] = "SOME RADIATION SPAWNS SWARM BOLTS"
+		ultra_tips[97] = "retired to a farm"
+	}
+    
 	ultra_name[98] = "PLAGUE DOCTOR"
 	ultra_text[98] = "YOUR ACTIVE CHANGES INTO#INFEST ENEMIES USING RADS#THRONEBUTT DECREASES RAD COST"
 	ultra_tips[98] = "I am here to heal you"
@@ -678,15 +694,20 @@ function scrUltras() {
 		ultra_name[104] = "DISCIPLINE"
 	    ultra_text[104] = "ACTIVE CAN SHRINK#ALL ENEMY PROJECTILES#INTO NOTHINGNESS#ACTIVE STUNS ENEMIES FOR LONGER"
 	    ultra_tips[104] = "discipline those projectiles!"
-		/*
-		ultra_name[104] = "SNARK"
-	    ultra_text[104] = "ACTIVE COSTS 50 SKILL TO USE#INSTEAD OF UNEQUIPPED AMMO#ACTIVE DEFLECTS ALL ENEMY PROJECTILES"
-	    ultra_tips[104] = "discipline those projectiles!"
 		
+		//Have any director weapon
+		if instance_exists(Player) && (scrHasDirector() && instance_exists(UltraIcon))
+		{
+			ultra_name[104] = "GRUMPY LECTURE"
+		    ultra_text[104] = "ACTIVE COSTS 50 SKILL TO USE#INSTEAD OF UNEQUIPPED AMMO#ACTIVE DEFLECTS & DESTROYS#ALL ENEMY PROJECTILES"
+		    ultra_tips[104] = "teach them a lesson!"
+		}
+		/*
 	    ultra_name[104] = "FRUITS OF LABOR"
 	    ultra_text[104] = "INCREASED SPRINT SPEED#IMMUNE TO CONTACT DAMAGE#WHILE SPRINTING"
 	    ultra_tips[104] = "fast old man"
 		*/
+		
 	//HANDS
 	ultra_name[105] = "IRRADIATED"
 	ultra_text[105] = "ALL DAMAGE YOU DEAL TO AN ENEMY#IS INCREASED DEPENDING ON#HOW CLOSE YOU ARE TO THE ENEMY#DAMAGE BUFF IS HIGHER IN INVERTED AREAS"

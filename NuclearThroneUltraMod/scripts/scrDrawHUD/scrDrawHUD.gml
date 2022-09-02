@@ -201,9 +201,25 @@ function scrDrawHUD() {
 			{
 				draw_sprite_ext(sprBigRebelHUD,0,xx,yy,1,1,0,c_white,1);
 			}
+			else if dir == 61 && Player.altUltra
+			{
+				draw_sprite_ext(sprCaptainOfTheKrakenHUD,0,xx,yy,1,1,0,c_white,1);
+			}
 			else if dir == 66 && Player.altUltra
 			{
 				draw_sprite_ext(sprQuickSwapperHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 72 && Player.altUltra
+			{
+				draw_sprite_ext(sprMirrorHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 97 && Player.altUltra
+			{
+				draw_sprite_ext(sprBeeKeeperHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 104 && Player.altUltra
+			{
+				draw_sprite_ext(sprGrumpyLectureHUD,0,xx,yy,1,1,0,c_white,1);
 			}
 			else if dir == 106 && Player.bskin == 1
 			{

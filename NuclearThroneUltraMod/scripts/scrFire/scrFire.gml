@@ -2925,8 +2925,6 @@ function scrFire() {
 	{image_angle = aimDirection+(random(6)-3)*other.accuracy
 	team = other.team
 	ammo = 48//60
-	///if Player.ultra_got[59]=1 
-	///ammo+=4;
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)
@@ -4891,19 +4889,18 @@ function scrFire() {
 
 	if Player.ultra_got[59]//ATOM ELECTRON
 	{
-		/*
-		with Lightning
-		{
-			ammo *= 1.25;
-			ammo = ceil(ammo+6);
-		}*/
-		//with UltraLightning we just do this in the actual fire thing
-		//ammo+=4;
 		if wep_type[wep] == 5//energy wep
 		{
 			ammo[wep_type[wep]] += wep_cost[wep]*0.20;//return one ammo
 		}
-	} 
+	}
+	if Player.ultra_got[61] && Player.altUltra//CAPTAIN OF THE KRAKEN
+	{
+		if scrKrakenWeapons(wep)
+		{
+			ammo[wep_type[wep]] += wep_cost[wep]*0.30;//return one ammo
+		}
+	}
 
 	if Player.ultra_got[57]//ATOM NEUTRON
 	{

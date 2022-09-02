@@ -17,22 +17,32 @@ if Player.crown = 4{ alarm[0] /= 3}
 if Player.race = 15{ alarm[0] /= 2}//atom
 
 
+	if Player.ultra_got[97] && Player.altUltra
+	{
+		snd_play(sndSwarm,0.1,true);
+		repeat(2)
+		with instance_create(x,y,SwarmBolt)
+		{
+			team = 2;
+			hits = 1;
+			motion_add(random(360),2);
+		}
+	}
 
+	if Player.ultra_got[89]
+	{
+		snd_play(sndToxicBoltGas,0.1,true);
+		repeat(15)
+		{
 
-if Player.ultra_got[89]
-{
+		    with instance_create(x,y,ToxicThrowerGas)
+		    {
+				motion_add(random(360),1+random(2.5)+(Player.skill_got[5]));
+		    }
 
-repeat(15)
-{
+		}
 
-    with instance_create(x,y,ToxicThrowerGas)
-    {
-		motion_add(random(360),1+random(2.5)+(Player.skill_got[5]));
-    }
-
-}
-
-}
+	}
 
 }
 

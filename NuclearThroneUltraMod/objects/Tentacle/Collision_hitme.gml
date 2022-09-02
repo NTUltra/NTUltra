@@ -1,6 +1,7 @@
 if other.team != team and other.my_health > 0&&other.id != creator//the thing I hit must not be myself
 {
 	var hit = other;
+	var meatDmg = meatDmgReduction;
 	var s = max(0,other.size*1.5);
 	with other//enemy
 	{
@@ -16,7 +17,7 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 			{
 				if other.ion=true {
 					with Tentacle
-						alarm[1] = 15;
+						alarm[1] = bloodDelay;
 					snd_play(sndMeatExplo,0,true)
 					snd_play(sndBloodLauncherExplo,0.1,true)
 					var dir = point_direction(UberCont.mouse__x,UberCont.mouse__y,hit.x,hit.y);
@@ -24,7 +25,7 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 					var xx = UberCont.mouse__x+lengthdir_x(dis,dir);
 					var yy = UberCont.mouse__y+lengthdir_y(dis,dir);
 					with instance_create(xx,yy,MeatExplosion) {
-						dmg -= 1;
+						dmg -= meatDmg;
 					}
 				    repeat(2){
 					    with instance_create(x,y,FishBoost)
@@ -45,7 +46,7 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 						var xx = x+lengthdir_x(dis,dir);
 						var yy = y+lengthdir_y(dis,dir);
 						with instance_create(xx,yy,MeatExplosion) {
-							dmg -= 1;
+							dmg -= meatDmg;
 						}
 					    repeat(2){
 						    with instance_create(x,y,FishBoost)

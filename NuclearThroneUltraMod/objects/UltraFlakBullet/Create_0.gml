@@ -10,7 +10,7 @@ if instance_exists(Player)
 	if Player.skill_got[15] = 1
 	{
 		alarm[1] += 2;
-		if Player.ultra_got[97]
+		if Player.ultra_got[97] && !Player.altUltra
 		{
 			alarm[1]+=1;
 		}

@@ -1080,6 +1080,8 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 		}
 		if skill_got[35]//PUFFY CHEEKS
 		{
+			breload -= 0.1;
+			creload -= 0.1;
 			var crm = 0.5;
 			if race == 25//Doctor puffy cheeks
 				crm = 0.4;
@@ -1724,7 +1726,7 @@ if race=18
         }
         
 	    //GET HURT when flying too long unless acent ultra D
-	    if ( ( !place_meeting(x,y,Floor) || flying>0 || mask_index=mskPickupThroughWall || place_meeting(x,y,WallHitMe) )  && !instance_exists(GenCont) && !instance_exists(LevCont) && ultra_got[72]==0 )//NOT ASCND ULTRA
+	    if ( ( !place_meeting(x,y,Floor) || flying>0 || mask_index=mskPickupThroughWall || place_meeting(x,y,WallHitMe) )  && !instance_exists(GenCont) && !instance_exists(LevCont) && (ultra_got[72]==0 && !altUltra) )//NOT ASCND ULTRA
 	    {
 		    //var wall = instance_nearest(x,y,Wall);
 		    var ground = instance_nearest(x,y,Floor);

@@ -66,7 +66,7 @@ accuracy=0;
 
 direction = image_angle+(random(accuracy)-(accuracy*0.5))//30 - 15
 speed = 4
-if target != noone && target.team != team
+if target != noone && instance_exists(target) && target.team != team
 {
 if point_distance(x,y,target.x,target.y) < 170-accuracy//120
 motion_add(point_direction(x,y,target.x,target.y),1.6-(accuracy*0.05))//1
@@ -83,7 +83,7 @@ var ammoDecrease = 1;
 	var modBoost = 0.06;
 	with Player
 	{
-		if ultra_got[59]
+		if ultra_got[61] && altUltra
 		{
 			ammoDecrease -= 0.1;
 		}

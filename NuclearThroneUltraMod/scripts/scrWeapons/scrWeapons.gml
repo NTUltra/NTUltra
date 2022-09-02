@@ -1938,7 +1938,7 @@ function scrWeapons() {
 	wep_load[175] = 28
 	wep_cost[175] = 2
 	wep_sprt[175] = sprDoubleFlameDirectorShotgun
-	wep_area[175] = 8
+	wep_area[175] = 7
 	wep_text[175] = "two directions"
 	wep_swap[175] = sndSwapShotgun
 	wep_rad[175] = 0;
@@ -3467,7 +3467,7 @@ function scrWeapons() {
 	wep_load[314] = 25
 	wep_cost[314] = 0
 	wep_sprt[314] = sprChargeSplinterGun
-	wep_area[314] = 7
+	wep_area[314] = 8
 	wep_text[314] = "hold and hold longer"
 	wep_swap[314] = sndSwapShotgun
 	wep_rad[314] = 0;
@@ -5499,7 +5499,7 @@ function scrWeapons() {
 	wep_name[497] = "SUPER SPLINTER GUN"
 	wep_type[497] = 3
 	wep_auto[497] = 0
-	wep_load[497] = 38//42 normally
+	wep_load[497] = 35//42 normally
 	wep_cost[497] = 2
 	wep_sprt[497] = sprSuperSplinterGun
 	wep_area[497] = 8
@@ -6500,7 +6500,7 @@ function scrWeapons() {
 	wep_name[588] = "SHOTGUN LANCE"
 	wep_type[588] = 2
 	wep_auto[588] = 0
-	wep_load[588] = 20
+	wep_load[588] = 18
 	wep_cost[588] = 1.5
 	wep_sprt[588] = sprShotgunLance
 	wep_area[588] = 7
@@ -6694,6 +6694,28 @@ function scrWeapons() {
 	wep_text[605] = "time for a good o'l fashion stabbin'"
 	wep_swap[605] = sndSwapExplosive
 	wep_rad[605] = 0;
+	
+	wep_name[606] = "DIRECTOR PLASMA SHOTGUN"
+	wep_type[606] = 5
+	wep_auto[606] = 1
+	wep_load[606] = 31
+	wep_cost[606] = 7
+	wep_sprt[606] = sprDirectorPlasmaShotgun
+	wep_area[606] = 11
+	wep_text[606] = ""
+	wep_swap[606] = sndSwapEnergy
+	wep_rad[606] = 0;
+	
+	wep_name[607] = "DIRECTOR BOX GUN"
+	wep_type[607] = 1
+	wep_auto[607] = 0
+	wep_load[607] = 17
+	wep_cost[607] = 20//fires 25 bullets
+	wep_sprt[607] = sprDirectorBoxGun
+	wep_area[607] = 12
+	wep_text[607] = "pink blur"
+	wep_swap[607] = sndSwapShotgun
+	wep_rad[607] = 0;
 
 	maxwep = array_length(wep_name)-1;
 

@@ -47,13 +47,15 @@ function scrTarget() {
 			if instance_exists(YungCuzDupe){//Yung cuz's dupes
 			    with enemy
 			    {
-				    if point_distance(x,y,Player.x,Player.y) < point_distance(x,y,instance_nearest(x,y,YungCuzDupe).x,instance_nearest(x,y,YungCuzDupe).y)
+					var n =instance_nearest(x,y,YungCuzDupe);
+					if n != noone
+				    if point_distance(x,y,Player.x,Player.y) < point_distance(x,y,n.x,n.y)
 				    {
 						target = instance_nearest(x,y,Player)
 					}
 				    else
 					{
-						target = instance_nearest(x,y,YungCuzDupe)
+						target = n
 					}
 			    }
 		    } 
@@ -62,13 +64,15 @@ function scrTarget() {
 			if instance_exists(Ally){//Yung cuz's dupes
 			    with enemy
 			    {
-				    if point_distance(x,y,Player.x,Player.y) < point_distance(x,y,instance_nearest(x,y,Ally).x,instance_nearest(x,y,Ally).y)
+					var n =instance_nearest(x,y,Ally);
+					if n != noone
+				    if point_distance(x,y,Player.x,Player.y) < point_distance(x,y,n.x,n.y)
 				    {
 						target = instance_nearest(x,y,Player)
 					}
 				    else
 					{
-						target = instance_nearest(x,y,Ally)
+						target = n
 					}
 			    }
 		    } 
@@ -77,13 +81,15 @@ function scrTarget() {
 			if instance_exists(Partner){//Yung cuz's dupes
 			    with enemy
 			    {
-				    if point_distance(x,y,Player.x,Player.y) < point_distance(x,y,instance_nearest(x,y,Partner).x,instance_nearest(x,y,Partner).y)
+					var n =instance_nearest(x,y,Partner);
+					if n != noone
+				    if point_distance(x,y,Player.x,Player.y) < point_distance(x,y,n.x,n.y)
 				    {
 						target = instance_nearest(x,y,Player)
 					}
 				    else
 					{
-						target = instance_nearest(x,y,Partner)
+						target = n;
 					}
 			    }
 		    } 
@@ -92,13 +98,15 @@ function scrTarget() {
 			if instance_exists(Turret){//Robot's turret
 			    with enemy
 			    {
-				    if point_distance(x,y,Player.x,Player.y) < point_distance(x,y,instance_nearest(x,y,Turret).x,instance_nearest(x,y,Turret).y)
+					var n =instance_nearest(x,y,Turret);
+					if n != noone
+				    if point_distance(x,y,Player.x,Player.y) < point_distance(x,y,n.x,n.y)
 				    {
-						target = instance_nearest(x,y,Turret)
+						target = instance_nearest(x,y,Player)
 					}
 				    else
 					{
-						target = instance_nearest(x,y,Turret)
+						target = n
 					}
 			    }
 		    } 

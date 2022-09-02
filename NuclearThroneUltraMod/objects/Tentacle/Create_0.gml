@@ -12,7 +12,9 @@ typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflects
 dmg=4;
 image_speed = 0.3;
 target=noone;
-
+bloodDelay = 15;
+meatDmgReduction = 1;
+alarm[1] = 10;
 if instance_exists(Player)
 {
 	if Player.skill_got[19]==1
@@ -24,6 +26,15 @@ if instance_exists(Player)
 		dmg += 1;
 		accuracy -= 2;
 	}
+	if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
+	{
+		image_speed-=0.1;
+		dmg += 1;
+		alarm[1] = 8;
+		bloodDelay = 10;
+		meatDmgReduction = 0;
+		image_yscale += 0.1;
+	}
 	//Kraken is fast take mods immediatly
 	Mod1=Player.wepmod1;
 	Mod2=Player.wepmod2;
@@ -33,5 +44,4 @@ if instance_exists(Player)
 ultra = false;
 isog = true;
 canBeMoved = false;
-alarm[1] = 10;
 UberCont.recursionCheck ++;

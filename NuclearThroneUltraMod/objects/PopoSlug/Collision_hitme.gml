@@ -9,5 +9,10 @@ motion_add(other.direction,9)
 }
 snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
 with instance_create(x,y,BulletHit)
-sprite_index = sprBullet2Disappear}
-
+{
+	if other.team == 2
+		sprite_index = sprPopoSlugHitRogue;
+	else
+		sprite_index = sprPopoSlugHit
+}
+}

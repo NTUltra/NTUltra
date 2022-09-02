@@ -15,6 +15,8 @@ canHeal = true;
 noHit = 0;
 closedodges = 0;
 isPureHealthBoost = 0;
+hunterEye = 0;
+hunterEyeMax = 200;
 //3D audio
 audio_listener_orientation(0, 0, -1, 0, 1, 0);
 audio_falloff_set_model(audio_falloff_linear_distance);

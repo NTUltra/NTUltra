@@ -1,6 +1,6 @@
 if instance_exists(Player)
 {
-	if Player.ultra_got[61]
+	if Player.ultra_got[61] && !Player.altUltra
 	{
 		if other.team != 2
 		{

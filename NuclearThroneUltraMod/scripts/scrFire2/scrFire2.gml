@@ -362,7 +362,6 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 4
 	wkick = 6
-	resetSpeed=false;
 
 	break;
 
@@ -3866,6 +3865,10 @@ function scrFire2() {
 	ultra=true;
 	creator=other.id;
 	dmg=10;//10+irandom(4)
+	if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
+	{
+		dmg += 1;
+	}
 	image_angle = aimDirection+(random(60)-30)*other.accuracy
 	team = other.team
 	ammo = 52//24
@@ -6607,6 +6610,7 @@ function scrFire2() {
 
 	break;
 	
+	//THE DIRECTOR
 	case 433:
 		snd_play_fire(sndDirector);
 		BackCont.shake += 8
@@ -6631,6 +6635,7 @@ function scrFire2() {
 					direction = random(360);
 				image_angle = direction;
 				scrRedirectFx();
+				event_user(15);
 				speed *= 1.2;
 				speed += 1;
 			}
@@ -11382,6 +11387,75 @@ function scrFire2() {
 	wkick = 4
 
 	break
+	
+	//DIRECTOR PLASMA SHOTGUN
+	case 606:
+
+	if Player.skill_got[17] = 1
+	snd_play_fire(sndPlasmaUpg)
+	else
+	snd_play_fire(sndPlasma)
+
+	var ang = -40;
+	repeat(5)
+	{
+	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),RedirectorPlasmaBall)
+	{motion_add(aimDirection+(ang*other.accuracy),3)//40-20
+	image_angle = direction
+	team = other.team
+	}
+	ang += 20;
+	}
+
+	motion_add(aimDirection+180,2)
+	BackCont.viewx2 += lengthdir_x(4,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 6
+
+	break;
+	
+	//DIRECTOR BOX GUN
+	case 607:
+
+		snd_play_fire(sndWaveGun)
+		var aimDir = aimDirection+(random(12)-6)*accuracy
+		var s = 6
+		var am = 5;//am*am = 9
+		var offsetStep = 4*accuracy;
+		var offset = offsetStep*am*0.5;
+		var xx = x+lengthdir_x(offset,aimDir-90)+lengthdir_x(offset*0.5,aimDir+180);
+		var yy = y+lengthdir_y(offset,aimDir-90)+lengthdir_y(offset*0.5,aimDir+180);
+		var msk = mask_index;
+		mask_index = mskBullet1;
+			repeat(am)
+			{
+				var xxx = xx;
+				var yyy = yy;
+				repeat(am)
+				{
+					if !place_meeting(xx,yy,Wall)
+						with instance_create(xx,yy,Bullet8)
+						{
+							motion_add(aimDir,s)
+							image_angle = direction
+							team = other.team
+						}
+					yy += lengthdir_y(offsetStep,aimDir);
+					xx += lengthdir_x(offsetStep,aimDir);
+				}
+				xx = xxx;
+				yy = yyy;
+				yy += lengthdir_y(offsetStep,aimDir+90);
+				xx += lengthdir_x(offsetStep,aimDir+90);
+			}
+		mask_index = msk;
+		BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 9
+		wkick = 7
+
+	break;
 	
 	}//end of switch part 2!
 }

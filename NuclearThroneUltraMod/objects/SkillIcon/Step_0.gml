@@ -90,13 +90,13 @@ Player.typ_amax[5] = 55+Player.skill_got[10]*44
 else if skill = 13 && Player.race = 25//Long arms
 {
 	Player.bettermelee+=0.4;
-	if Player.ultra_got[97]
+	if Player.ultra_got[97] && !Player.altUltra
 		Player.bettermelee=1;
 }
 else if skill= 16 && Player.race = 25//recycle gland
 {
 	Player.betterrecyclegland = 5;
-	if Player.ultra_got[97]
+	if Player.ultra_got[97] && !Player.altUltra
 		Player.betterrecyclegland = 15;
 
 }
@@ -104,13 +104,13 @@ else if skill = 17 && Player.race = 25
 {
 Player.betterlaserbrain=1;
 
-	if Player.ultra_got[97]
+	if Player.ultra_got[97] && !Player.altUltra
 		Player.betterlaserbrain=2;
 }
 else if skill = 21//bolt marrow
 {
 Player.betterboltmarrow=7;
-if Player.ultra_got[97]
+if Player.ultra_got[97] && !Player.altUltra
 Player.betterboltmarrow=20;
 }
 else if skill = 18//last wish

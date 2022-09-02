@@ -24,6 +24,15 @@ function scrBossKill() {
 			}
 			Player.alarm[2] += 210;
 		}
+		with Player
+		{
+			if ultra_got[61] && !altUltra
+			{
+				armour ++;
+				if armour > maxarmour
+					armour = maxarmour;
+			}
+		}
 
 	}
 

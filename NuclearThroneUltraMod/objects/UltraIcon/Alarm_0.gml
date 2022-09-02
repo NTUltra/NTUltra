@@ -41,9 +41,17 @@ else if skill == 39 && (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUl
 {
 	sprite_index = sprBigRebel;
 }
+else if skill == 61 && (scrKrakenWeapons(Player.wep) || scrKrakenWeapons(Player.bwep))
+{
+	sprite_index=sprCaptainOfTheKraken;
+}
 else if skill == 66 && Player.bwep == 0
 {
 	sprite_index = sprQuickSwapper;
+}
+else if skill == 72 && ((Player.maxhealth < 8 && UberCont.opt_gamemode != 9) || (UberCont.opt_gamemode == 9 && Player.maxhealth < 8 + UberCont.casualModeHPIncrease))
+{
+	sprite_index=sprMirror;
 }
 else if skill == 76 && Player.ultimategamble=true
 {
@@ -58,13 +66,21 @@ else if skill == 92 && Player.wep_type[Player.wep] == 3 && Player.wep_type[Playe
 {
 	sprite_index = sprSpikedFrog;
 }
+else if skill == 97 && !Player.skill_got[13] && !Player.skill_got[16] && !Player.skill_got[17] && !Player.skill_got[21] && !Player.skill_got[14]
+{
+	sprite_index = sprBeeKeeper;
+}
+else if skill == 104 && scrHasDirector()
+{
+	sprite_index = sprGumpyLecture;
+}
 else if skill == 106 && Player.bskin == 1
 {
-	sprite_index=sprHotHands;
+	sprite_index = sprHotHands;
 }
 else if skill == 106 && Player.bskin == 2
 {
-	sprite_index=sprBoomHands;
+	sprite_index = sprBoomHands;
 }
 else if Player.race == 6 && skill == 23 && scrMeleeWeapons(Player.wep) && scrMeleeWeapons(Player.bwep)
 {

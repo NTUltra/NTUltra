@@ -250,6 +250,30 @@ else if skill == 39 && (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUl
 		}
 	}
 }
+else if skill == 61 && (scrKrakenWeapons(Player.wep) || scrKrakenWeapons(Player.bwep))
+{
+	with Player
+	{
+		altUltra = true;
+		ultra_name[61] = "CAPTAIN OF THE KRAKEN"
+		ultra_text[61] = "KRAKEN WEAPONS DEAL MORE DAMAGE#TENTACLES ARE LONGER#KRAKEN WEAPONS COST 20% LESS AMMO"
+		ultra_tips[61] = "from the sea she came"
+		spr_idle=sprMutant16DIdle;
+		spr_walk=sprMutant16DWalk;
+		spr_hurt=sprMutant16DHurt;
+		spr_dead=sprMutant16DDead;
+	}
+}
+else if skill == 72 && ((Player.maxhealth < 8 && UberCont.opt_gamemode != 9) || (UberCont.opt_gamemode == 9 && Player.maxhealth < 8 + UberCont.casualModeHPIncrease))
+{
+	with Player
+	{
+		altUltra = true;
+		ultra_name[72] = "MIRROR"
+		ultra_text[72] = "ACTIVE NO LONGER HEALS#ACTIVE COST IS ALWAYS REDUCED#(AS IF YOU ARE ON MAX HP)#ALSO DEFLECT ON YOUR RETICLE"
+		ultra_tips[72] = "right back at ya"
+	}
+}
 else if skill = 85//ROGUE SUPER PORTAL STRIKE
 {
 	Player.rogueammomax=6;
@@ -292,28 +316,47 @@ else if skill == 15
 else if skill = 97 // MUTATION SMITH WEAPON MUTATOR BETTER WEAPON SPECIFIC MUTATIONS
 {
 
-with Player
-{
-if skill_got[13]//long arms
-{
+	with Player
+	{
+		if !skill_got[13] && !skill_got[16] && !skill_got[17] && !skill_got[21] && !skill_got[14]
+		{
+			//Secret Beekeeper ultra
+			altUltra = true;
+			ultra_name[97] = "BEEKEEPER"
+			ultra_text[97] = "SOME RADIATION SPAWNS SWARM BOLTS"
+			ultra_tips[97] = "retired to a farm"
+		}
+		else
+		{
+			if skill_got[13]//long arms
+			{
+				bettermelee=1.5;
+			}
+			if skill_got[16]//RecycleGland
+			{
+				betterrecyclegland=15;
+			}
+			if skill_got[17]//LaserBrain
+			{
+				betterlaserbrain=2;
+			}
+			if skill_got[21]//bolt marrow
+			{
+				betterboltmarrow = 10;
+			}
+		}
+	}
 
-bettermelee=1.5;
-
 }
-if skill_got[16]//RecycleGland
+else if skill == 104 && scrHasDirector()
 {
-betterrecyclegland=15;
-}
-if skill_got[17]//LaserBrain
-{
-betterlaserbrain=2;
-}
-if skill_got[21]//bolt marrow
-{
-betterboltmarrow = 10;
-}
-}
-
+	with Player
+	{
+		altUltra = true;
+		ultra_name[104] = "GRUMPY LECTURE"
+		ultra_text[104] = "ACTIVE COSTS 50 SKILL TO USE#INSTEAD OF UNEQUIPPED AMMO#ACTIVE DEFLECTS & DESTROYS#ALL ENEMY PROJECTILES"
+		ultra_tips[104] = "teach them a lesson!"
+	}
 }
 else if skill = 5//CRYSTAL FORTRESS ULTRA A
 {

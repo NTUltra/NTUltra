@@ -382,6 +382,10 @@ function scrDrawBloom() {
 	draw_sprite_ext(sprEnemyLaserStart,img,xstart,ystart,2,2,image_angle,c_white,ba)
 	draw_sprite_ext(sprEnemyLaserEnd,img,x,y,2,2,image_angle,c_white,ba)
 	}
+	with HunterSniperEye
+	{
+		draw_sprite_ext(sprite_index,-1,x,y,image_xscale,image_yscale*2,image_angle,c_white,ba)
+	}
 	with IDPDLaser
 	{
 	draw_sprite_ext(sprite_index,-1,x,y,image_xscale,2,image_angle,c_white,ba)

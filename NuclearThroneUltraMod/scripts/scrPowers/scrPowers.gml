@@ -6,64 +6,124 @@ function scrPowers() {
 		
 	if race = 26//Good O'l Humphry
 	{
-		var t1 = wep_type[wep];
-		var t2 = wep_type[bwep];
-		var al = 6;//weapon types total
-		var takePercentage = 0.015//1.5%%//0.0075;//0.75%
 		var insufficientFunds = true;
-		for (var i = 1; i < al; i++) {
-			if (i != t1 && i != t2)
+		var failText = "NOT ENOUGH AMMO";
+		if ultra_got[104] && altUltra
+		{
+			failText = "NOT ENOUGH SKILL";
+			if humphrySkill >= 50
 			{
-				if (ammo[i] > 1 && ammo[i] - typ_amax[i]*takePercentage > 0)
+				insufficientFunds = false;
+				humphrySkill -= 50;
+			}
+		}
+		else
+		{
+			var t1 = wep_type[wep];
+			var t2 = wep_type[bwep];
+			var al = 6;//weapon types total
+			var takePercentage = 0.015//1.5%%//0.0075;//0.75%
+			for (var i = 1; i < al; i++) {
+				if (i != t1 && i != t2)
 				{
-					ammo[i] = max(1,ammo[i] - typ_amax[i]*takePercentage);
-					insufficientFunds = false;
+					if (ammo[i] > 1 && ammo[i] - typ_amax[i]*takePercentage > 0)
+					{
+						ammo[i] = max(1,ammo[i] - typ_amax[i]*takePercentage);
+						insufficientFunds = false;
+					}
 				}
-					
 			}
 		}
 		if (insufficientFunds)
 		{
 			snd_play_2d(snd_lowa,0,true,false,10);
 			snd_play(sndEmpty)
-			dir = instance_create(x,y,PopupText)
-			dir.mytext = "NOT ENOUGH AMMO";
+			dir = instance_create(x,y,PopupText);
+			dir.mytext = failText;
 			dir.theColour=c_red;
 			drawempty = 30
 		}
 		else
 		{
 			var effective = false;
-			var buffActive = ultra_got[104] * 0.6;
-			with projectile
+			if ultra_got[104] && altUltra
 			{
-				if (team!= other.team
-				&& x > other.x - 170 && x < other.x + 170 && y > other.y - 130 && y < other.y + 130)
+				snd_play_fire(sndDirector);
+				BackCont.shake += 8
+				with projectile
 				{
-					if (image_xscale > 0.15 + buffActive && image_yscale > 0.2 && speed > 1)
+					if team != other.team
 					{
-						image_xscale *= 0.75;
-						image_yscale *= 0.75;
-						effective = true;
-						speed *= 0.4;
-					} else if (other.ultra_got[104])
-					{
-						effective = true;
-						with instance_create(x,y,Notice)
-						{
-							image_speed = 0.4;
-							sprite_index = sprHumphryDestroyProjectile;	
-						}
 						if isGrenade
-							instance_destroy(id,false);
+						{
+							with instance_create(x,y,Notice)
+							{
+								image_speed = 0.4;
+								sprite_index = sprHumphryDestroyProjectile;	
+							}
+							instance_destroy(id,false);	
+						}
+						else if typ == 1 && canBeMoved
+						{
+							team = other.team;
+							if instance_exists(enemy)
+							{
+								var n = instance_nearest(x,y,enemy);
+								direction = point_direction(x,y,n.x,n.y);
+							}
+							else
+								direction = random(360);
+							image_angle = direction;
+							scrRedirectFx();
+							event_user(15);
+							speed *= 1.2;
+							speed += 1;
+						}
 						else
-							instance_destroy();	
+						{
+							with instance_create(x,y,Notice)
+							{
+								image_speed = 0.4;
+								sprite_index = sprHumphryDestroyProjectile;	
+							}
+							instance_destroy();
+						}
+					}
+				}
+			}
+			else
+			{
+				var buffActive = ultra_got[104] * 0.6;
+				with projectile
+				{
+					if (team!= other.team
+					&& x > other.x - 170 && x < other.x + 170 && y > other.y - 130 && y < other.y + 130)
+					{
+						if (image_xscale > 0.15 + buffActive && image_yscale > 0.2 && speed > 1)
+						{
+							image_xscale *= 0.75;
+							image_yscale *= 0.75;
+							effective = true;
+							speed *= 0.4;
+						} else if (other.ultra_got[104])
+						{
+							effective = true;
+							with instance_create(x,y,Notice)
+							{
+								image_speed = 0.4;
+								sprite_index = sprHumphryDestroyProjectile;	
+							}
+							if isGrenade
+								instance_destroy(id,false);
+							else
+								instance_destroy();	
+						}
 					}
 				}
 			}
 			var duration = 10;
 			var confspr = sprEnemyConfusion;
-			if ultra_got[104]
+			if ultra_got[104] && !altUltra
 			{
 				duration += 12;
 				confspr = sprEnemyUltraConfusion;
@@ -270,7 +330,7 @@ function scrPowers() {
 	    image_yscale=3;
 	    }}
     
-	    if ultra_got[61]//MEGA ARMOUR STRIKE
+	    if ultra_got[61] && !Player.altUltra//MEGA ARMOUR STRIKE
 	    {
     
 	    with instance_create(x,y,ArmourStrike)
@@ -604,7 +664,9 @@ function scrPowers() {
 				var multiply = 1.75;
 				if skill_got[5]
 					multiply -= 0.5;
-				if my_health >= maxhealth
+				if (ultra_got[72] && altUltra)
+					multiply -= 1;
+				else if my_health >= maxhealth
 					multiply -= 1.25;
 				multiply = max(0.2,multiply);
 				var cost = round(typ_ammo[wep_type[wep]]*multiply);
@@ -629,37 +691,38 @@ function scrPowers() {
 						dir.theColour = c_red;
 						dir.mytext = "-"+string(cost)+" "+string(other.typ_name[wep_type[other.wep]])
 					}
-			        var num = 2
-			        if Player.skill_got[9] = 1//secund tummy
-			        num = 4
-        
-			        instance_create(x,y,HealFX)
-        
-			        //RUSH CROWN
-			        if Player.crown = 4
-			        num += 1
-        
-			        snd_play_2d(sndHealthPickup)
-			        my_health += num
-			        if my_health > maxhealth
-			        my_health = maxhealth
-        
-			        if UberCont.opt_ammoicon
+					//HEAL
+					if !(ultra_got[72] && altUltra)
 					{
-						dir = instance_create(x,y,PopupText)
-						dir.sprt = sprHPIconPickup;
-						dir.mytext = "+"+string(num)
-						if my_health = maxhealth
-							dir.mytext = "MAX";
+				        var num = 2
+				        if Player.skill_got[9] = 1//secund tummy
+				        num = 4
+				        instance_create(x,y,HealFX)
+				        //RUSH CROWN
+				        if Player.crown = 4
+				        num += 1
+        
+				        snd_play_2d(sndHealthPickup)
+				        my_health += num
+				        if my_health > maxhealth
+				        my_health = maxhealth
+        
+				        if UberCont.opt_ammoicon
+						{
+							dir = instance_create(x,y,PopupText)
+							dir.sprt = sprHPIconPickup;
+							dir.mytext = "+"+string(num)
+							if my_health = maxhealth
+								dir.mytext = "MAX";
+						}
+						else
+						{
+							dir = instance_create(x,y,PopupText)
+							dir.mytext = "+"+string(num)+" HP"
+							if my_health = maxhealth
+								dir.mytext = "MAX HP";
+						}
 					}
-					else
-					{
-						dir = instance_create(x,y,PopupText)
-						dir.mytext = "+"+string(num)+" HP"
-						if my_health = maxhealth
-							dir.mytext = "MAX HP";
-					}
-			         //instance_create(x,y,HPPickup);
 			         Sleep(40)
 			    }
 			    else
@@ -1346,7 +1409,41 @@ function scrPowers() {
 	//HUNTER
 	if (race == 11)
 	{
-		if Player.ultra_got[44]=1{//Hunter Ultra D CRACKSHOT
+		if true
+		{
+			snd_play_fire(sndSniperEye);
+			var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+			with instance_create(x+(right*2),y+0.5,RedirectFX)
+			{
+				if other.bskin == 1
+					sprite_index = sprHunterEyeSniperB;
+				else if other.bskin == 2
+					sprite_index = sprHunterEyeSniperC;
+				else
+					sprite_index = sprHunterEyeSniperA;
+				image_angle = aimDirection;	
+			}
+			with instance_create(x+(right*2),y+0.5,HunterSniperEye)
+			{
+				image_angle = aimDirection;
+				team = other.team;
+				if other.bskin == 1
+					sprite_index = sprHunterSniperB;
+				else if other.bskin == 2
+					sprite_index = sprHunterSniperC;
+				else
+					sprite_index = sprHunterSniperA;
+				event_user(0);
+			}
+
+			BackCont.viewx2 += lengthdir_x(20,aimDirection+180)*UberCont.opt_shake
+			BackCont.viewy2 += lengthdir_y(20,aimDirection+180)*UberCont.opt_shake
+			BackCont.shake += 4
+			wkick = 8
+			//Max = 200;
+			hunterEye = 0;
+		}
+		else if Player.ultra_got[44]{//Hunter Ultra D CRACKSHOT
 			if(instance_exists(enemy)){
 				var n = instance_nearest(mouse_x,mouse_y,enemy)
 				if (point_distance(mouse_x,mouse_y,n.x,n.y) < 48 && n.team != team && n.my_health > 0) {

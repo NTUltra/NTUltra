@@ -13,7 +13,7 @@ if instance_exists(Player)
 	{
 		wallbounce += 8;
 		alarm[1] += 3;
-		if Player.ultra_got[97]
+		if Player.ultra_got[97] && !Player.altUltra
 		{
 		wallbounce+=5;
 		alarm[1]+=2;

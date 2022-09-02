@@ -12,7 +12,7 @@ if Player.race=25
 {
 wallbounce = 13;
 
-if Player.ultra_got[97]
+if Player.ultra_got[97] && !Player.altUltra
 wallbounce+=5;
 }
 }

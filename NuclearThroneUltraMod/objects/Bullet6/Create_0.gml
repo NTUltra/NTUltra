@@ -18,7 +18,7 @@ if Player.race==24
 		{
 			wallbounce = 8;
 
-			if Player.ultra_got[97]
+			if Player.ultra_got[97] && !Player.altUltra
 			{
 				wallbounce+=5;
 				alarm[1]+= 2;

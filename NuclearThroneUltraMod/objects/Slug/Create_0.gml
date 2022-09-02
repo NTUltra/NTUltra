@@ -12,7 +12,7 @@ if Player.race=25
 {
 wallbounce = 9;
 
-if Player.ultra_got[97]
+if Player.ultra_got[97] && !Player.altUltra
 wallbounce+=5;
 }
 
@@ -31,7 +31,7 @@ if instance_exists(Player)
 	if Player.skill_got[15] = 1
 	{
 		alarm[1] += 3;
-		if Player.ultra_got[97]
+		if Player.ultra_got[97] && !Player.altUltra
 		{
 		wallbounce+=5;
 		alarm[1]+=2;

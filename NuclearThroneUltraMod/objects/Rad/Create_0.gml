@@ -21,14 +21,24 @@ if Player.crown = 4{ alarm[0] /= 3}
 if Player.race = 15{ alarm[0] *= 0.6}//atom
 
 
-if Player.ultra_got[89]
-{
-	repeat(2)
-	with instance_create(x,y,ToxicThrowerGas)
+	if Player.ultra_got[89]
 	{
-		motion_add(random(360),1+random(2.5)+(Player.skill_got[5]));
+		repeat(2)
+		with instance_create(x,y,ToxicThrowerGas)
+		{
+			motion_add(random(360),2+(Player.skill_got[5]));
+		} 
 	}
-}
+	if Player.ultra_got[97] && Player.altUltra && random(3) < 2
+	{
+		snd_play(sndSwarmRapid,0.1,true);
+		with instance_create(x,y,SwarmBolt)
+		{
+			team = 2;
+			hits = 1;
+			motion_add(random(360),2);
+		}
+	}
 }
 
 

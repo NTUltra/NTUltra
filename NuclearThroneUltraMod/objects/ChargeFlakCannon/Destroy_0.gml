@@ -1,10 +1,10 @@
-snd_play_fire(sndGrenade)
+snd_play_fire(sndFlakCannon)
 if instance_exists(Player) && instance_exists(creator)
 {
 with instance_create(x,y,FlakBullet)
 {
-	dmg += min(10,other.rate*0.4)
-motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(10)-5)*other.creator.accuracy,8+min(8,rate)+random(2))
+	dmg = 7 + min(10,other.rate*0.4)
+motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(10)-5)*other.creator.accuracy,8+min(8,other.rate)+random(2))
 image_angle = direction
 team = other.team
 bullets=other.rate*1.5;}

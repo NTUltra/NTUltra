@@ -1,5 +1,7 @@
-snd_play(sndSplinterGun)
-
+if rate > 8
+	snd_play_fire(sndSuperSplinterGun);
+else
+	snd_play_fire(sndSplinterGun)
 if instance_exists(Player)  && instance_exists(creator)
 {
 
@@ -7,7 +9,7 @@ repeat(ceil(rate*1.2))
 {
 	with instance_create(x,y,Splinter)
 	{
-		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(6+other.rate)-((6+other.rate)*0.5)*other.creator.accuracy,20+random(4))
+		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(6+other.rate)-((6+other.rate)*0.5))*other.creator.accuracy,20+random(4))
 		image_angle = direction
 		team = other.team
 	}

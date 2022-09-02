@@ -15,7 +15,7 @@ if Player.race=25
 {
 wallbounce = 9;
 }
-if Player.ultra_got[97]
+if Player.ultra_got[97] && !Player.altUltra
 {
 wallbounce+=5;
 friction=0.9;

@@ -12,5 +12,7 @@ if other.team != team  && speed > 1{
 			image_index = 0
 			motion_add(other.direction,8)
 		}
+		if other.my_health > 0
+			instance_destroy();
 	}
 }
