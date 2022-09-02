@@ -185,7 +185,12 @@ room_speed=35;
 			name = "Guard Weave";
     }
     if race=13
-    {justAsheep=true;}
+    {justAsheep=true;
+		with PlayerAlarms2
+		{
+			alarm[0] = 60;	
+		}
+	}
     BackCont.enemiesInStartLevel=instance_number(enemy);
     
     if UberCont.opt_gamemode == 34 && area == 1//HARD MODE
@@ -208,18 +213,7 @@ room_speed=35;
 	    {
 			t = 220;
 	    }
-		if justAsheep
-		{
-			/*
-			insomniaEnemyList = [];
-			with enemy {
-				if alarm[1]>0
-				{
-					other.insomniaEnemyList[array_length(other.insomniaEnemyList)] = id;
-				}
-			}*/
-		}
-		else
+		if !justAsheep
 		{
 		    with enemy
 		    {

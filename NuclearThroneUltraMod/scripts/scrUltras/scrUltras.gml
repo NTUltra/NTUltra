@@ -296,11 +296,15 @@ function scrUltras() {
 	ultra_name[43] = "FOCUSED FIRE"
 	ultra_text[43] = "ENEMY AND YOUR PROJECTILES#HOME IN ON YOUR MARKER"
 	ultra_tips[43] = "friendly fire?"
-	/*
-	ultra_name[43] = "SNIPER EYE"
-	ultra_text[43] = "REPLACE MARKER WITH A SNIPER EYE#THAT BREAKS WALLS#PIERCES AND STUNS ENEMIES#DAMAGE INCREASES EACH PIERCE#MORE POWERFULL THE LONGER YOU WAIT BETWEEN SHOTS"
-	ultra_tips[43] = "friendly fire?"
-	*/
+	
+	//Bullet weapon? two lasers? not sure man no melee? bullet & laser weapon? eagle eyes? euphoria? I like eagle eyes
+	if instance_exists(Player) && (Player.altUltra || (Player.skill_got[19] && instance_exists(UltraIcon)))
+	{
+		ultra_name[43] = "SNIPER EYE"
+		ultra_text[43] = "REPLACE YOUR ACTIVE WITH A SNIPER EYE#THE EYE BREAKS WALLS#PIERCES, STUNS AND DAMAGES ENEMIES#DAMAGE INCREASES EACH PIERCE#MORE POWERFULL#THE LONGER YOU WAIT BETWEEN SHOTS#POWER SCALES FASTER#IF YOU HAVE THRONEBUTT"
+		ultra_tips[43] = "proper eyesight"
+	}
+	
 	ultra_name[44] = "CRACK SHOT"
 	ultra_text[44] = "PLACE MULTIPLE MARKERS#FIRE AT ALL MARKERS#WITHOUT EXTRA RELOAD TIME"
 	ultra_tips[44] = "gunslinger"
@@ -318,11 +322,15 @@ function scrUltras() {
 	    ultra_text[47] = "BUDDIES COST 2 HP#INSTEAD OF MAX HP#PORTALS HEAL"
 	    ultra_tips[47] = "annoying"
 		
-		/*
-		ultra_name[47] = "GREEN TEAM"
-	    ultra_text[47] = "SPAWNING BUDDIES COSTS RADS#INSTEAD OF MAX HP#BUDDIES DROP MORE RESOURCES"
-	    ultra_tips[47] = "teamwork"
-		*/
+		//Pluto and no rhino skin?
+		if instance_exists(Player) && (Player.altUltra || (
+		!Player.skill_got[1] && Player.skill_got[3]
+		&& instance_exists(UltraIcon)))
+		{
+			ultra_name[47] = "GREEN TEAM"
+		    ultra_text[47] = "SPAWNING BUDDIES COSTS RADS#INSTEAD OF MAX HP#BUDDIES DROP MORE RESOURCES"
+		    ultra_tips[47] = "pay up"
+		}
     
 	    ultra_name[48] = "LAG"
 	    ultra_text[48] = "FIRST THREE HITS#YOU TAKE IN A LEVEL WILL BE NEGLECTED"
@@ -345,11 +353,16 @@ function scrUltras() {
 	ultra_name[51] = "INDESTRUCTABLE"
 	ultra_text[51] = "IMMUNE WHILE CHARGING#CHARGE DEALS NO DAMAGE#CHARGE DOES NOT DISSIPATE"
 	ultra_tips[51] = "what a beast"
-	//NO EXTRA FEET NO GAMMA GUTS
-	ultra_name[51] = "HYPNOTIC SHEEP"
-	ultra_text[51] = "ACTIVE CHANGES INTO HYPNOSIS#ENEMIES IMMEDIATLY FORGET YOU ARE AN ENEMY#THEY WILL ATTACK AGAIN IF YOU ENGAGE#CAN BE USED 3 TIMES EACH AREA#THRONEBUTT INCREASES USES TO 4"
-	ultra_tips[51] = "what a beast"
 	*/
+	//NO EXTRA FEET NO GAMMA GUTS
+	if instance_exists(Player) && (Player.altUltra || (
+	!Player.skill_got[2] && !Player.skill_got[8]
+	&& instance_exists(UltraIcon)))
+	{
+		ultra_name[51] = "HYPNOTIZE"
+		ultra_text[51] = "ENEMIES REACT AND MOVE SLOWER##ACTIVE CHANGES INTO HYPNOSIS#HYPNOSIS RE-ACTIVATES YOUR PASSIVE#CAN BE USED 3 TIMES EACH AREA#THRONEBUTT INCREASES USES TO 4"
+		ultra_tips[51] = "no one expects a sheep to carry a gun"
+	}
 
 	ultra_name[52] = "FLUFFY"//this is actually insane with impact wrists
 	ultra_text[52] = "CORPSES FLOAT#CORPSE COLLISION#CAN CAUSES BLOOD EXPLOSIONS#EVERYTHING THAT DIES#TURNS INTO A SHEEP"
@@ -367,11 +380,17 @@ function scrUltras() {
 	    ultra_name[55] = "DONE BEING EXTINCT"
 	    ultra_text[55] = "WHEN A WEAPON RETURNS#IT FIRES A MASSIVE LASER##WHENEVER A THROWN WEAPON HITS#DROP EXTRA RESOURCES##CHANCE PORTALS CHANGE#WEAPONS INTO A HIGHER TIER WEAPON##THROWS BOUNCE TOWARDS ENEMIES"
 	    ultra_tips[55] = "rise above"
-		/*
-		ultra_name[55] = "INCONSISTENT INCOMPATABILITY"
-	    ultra_text[55] = "YOU NO LONGER CARRY WEAPONS ON YOU#INSTEAD YOU FIRE WEAPONS FROM YOUR CROSSHAIR#INSTEAD OF THROWING#SWITCH WEAPON POSITIONS"
-	    ultra_tips[55] = "how does it do that"
-		*/
+		
+		//Flexible elbows and or long arms
+		if instance_exists(Player) && (Player.altUltra || (
+		(Player.skill_got[13] || Player.skill_got[34]) && !Player.skill_got[5]
+		&& instance_exists(UltraIcon)))
+		{
+			ultra_name[55] = "INCONSISTENT INCOMPATABILITY"
+		    ultra_text[55] = "ALL WEAPONS ARE FULLY AUTOMATIC#YOU NO LONGER THROW WEAPONS#INSTEAD YOUR ACTIVE FIRES YOUR WEAPON#FROM THE ORIGIN OF YOUR CROSSHAIR";
+		    ultra_tips[55] = "how does it do that"
+		}
+		
 	    ultra_name[56] = "CLEANSING"
 	    ultra_text[56] = "MORE MELEE SWING RATE#PORTALS NO LONGER RANDOMIZE WEAPONS##THROWS BOUNCE TOWARDS ENEMIES"
 	    ultra_tips[56] = "survival above pacifism"
@@ -384,11 +403,22 @@ function scrUltras() {
 	ultra_name[58] = "PROTON"
 	ultra_text[58] = "YOU DEAL MORE CONTACT DAMAGE#DEAL DAMAGE TO ENEMIES NEAR YOU"
 	ultra_tips[58] = "always positive"
+	
 
 	ultra_name[59] = "ELECTRON"
 	ultra_text[59] = "ENERGY WEAPONS COST 20% LESS AMMO#LIGHTNING DOES MORE DAMAGE#AND TRAVELS FURTHER"
 	ultra_tips[59] = "that is electrifying!"
-
+	
+	//NO ENERGY BRAIN & CROWN OF HASTE
+	if instance_exists(Player) && (Player.altUltra || (
+	(!Player.skill_got[17] && Player.crown == 4)
+	&& instance_exists(UltraIcon)))
+	{
+		ultra_name[59] = "PATH OF DESTRUCTION"
+		ultra_text[59] = "EVERYWHERE YOU GO#YOU LEAVE BEHIND A TRAIL OF#DAMAGING GOOP##PICKUPS FADE FASTER#FADED PICKUPS REROLL INTO OTHER PICKUPS#PICKUPS CAN FADE/REROLL TWICE"
+		ultra_tips[59] = "always positive"
+	}
+	
 	ultra_name[60] = "ANTI MATTER"
 	ultra_text[60] = "TELEPORT INTO WALLS#FADED PICKUPS TRANSFROM INTO#(FRIENDLY) ULTRA LIGHTNING AND RADS"
 	ultra_tips[60] = "phase"
@@ -532,11 +562,12 @@ function scrUltras() {
 	    ultra_name[77] = "PROSPERITY"
 	    ultra_text[77] = "ENEMIES DROP MORE RADS#HIGHER RAD MAXIMUM"
 	    ultra_tips[77] = "money everywhere"
-		/*
+		
+		//Have heavy heart and not thronebutt?
 		ultra_name[77] = "HOARDING THIEF"
-	    ultra_text[77] = "GO TO YV'S CRIB#YOUR SHOP BECOMES AN INVENTORY#PICK UP WEAPONS WHILE#SHOP IS OPEN#AND YOU HOVER OVER A SLOT#TO DROP A WEAPON IN THERE"
+	    ultra_text[77] = "GO TO YV'S CRIB#YOUR SHOP BECOMES AN INVENTORY#PICK UP WEAPONS WHILE#SHOP IS OPEN#AND YOU HOVER OVER A SLOT#TO DROP A WEAPON IN THERE#THRONEBUTT DOUBLES WEAPON SLOTS"
 	    ultra_tips[77] = "money everywhere"
-		*/
+		
 	    ultra_name[78] = "QUANTITY"
 	    ultra_text[78] = "MORE SHOP ITEMS"
 	    ultra_tips[78] = "options"

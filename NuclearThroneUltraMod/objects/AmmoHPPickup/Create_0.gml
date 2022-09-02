@@ -9,12 +9,19 @@ if UberCont.opt_gamemode == 9 //CASUAL MODE
 	alarm[0] += 30;
 if UberCont.opt_gamemode == 34 //HARD MODE
 	alarm[0] -= 10;
-	
+
+rerolls = 0;
 //RUSH CROWN
 if instance_exists(Player){
 if Player.crown = 4{ alarm[0] /= 3}
 
 if Player.race = 15{ alarm[0] *= 0.6}//atom
+
+if Player.ultra_got[59] && Player.altUltra
+{
+	alarm[0] *= 0.4;
+	rerolls = 3;
+}
 
 if Player.ultra_got[60]//Anti matter
 	atomUltraD = true;

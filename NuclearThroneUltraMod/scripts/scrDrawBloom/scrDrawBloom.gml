@@ -384,7 +384,7 @@ function scrDrawBloom() {
 	}
 	with HunterSniperEye
 	{
-		draw_sprite_ext(sprite_index,-1,x,y,image_xscale,image_yscale*2,image_angle,c_white,ba)
+		draw_sprite_ext(sprHunterSniper,-1,x,y,image_xscale,image_yscale*2,image_angle,c_white,ba)
 	}
 	with IDPDLaser
 	{

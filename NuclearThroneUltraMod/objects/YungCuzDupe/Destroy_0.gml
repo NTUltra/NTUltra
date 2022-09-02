@@ -8,15 +8,15 @@ sprite_index = other.spr_dead
 image_xscale = other.right
 if speed > 16
 speed = 16
-if other.race = 4
+
+}
+var d = 4;
+var w = 0;
+if instance_exists(Player) && Player.ultra_got[47] && Player.altUltra
 {
-p = other.p
-with instance_create(x,y,MeltDead)
-{
-p= other.p
-creator = other.id
+	d = 50;
+	w = 4;
+	raddrop = 20;
 }
-}
-}
-scrDrop(4,0)
+scrDrop(d,w)
 scrRaddrop();

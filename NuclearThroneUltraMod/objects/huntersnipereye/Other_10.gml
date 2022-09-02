@@ -2,15 +2,6 @@
 
 if instance_exists(Player)
 {
-
-	//Always has never miss boost
-	/*
-	var gotUlt = Player.ultra_got[42];
-	Player.ultra_got[42] = true;
-	direction = scrAimAssistLaser(direction);
-	image_angle = direction;
-	Player.ultra_got[42] = gotUlt;
-	*/
 	if instance_exists(hitme)
 	{
 		var n = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,hitme);

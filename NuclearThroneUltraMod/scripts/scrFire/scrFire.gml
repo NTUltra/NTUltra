@@ -4887,7 +4887,7 @@ function scrFire() {
 
 	//Atom utlra electron
 
-	if Player.ultra_got[59]//ATOM ELECTRON
+	if Player.ultra_got[59] && !Player.altUltra//ATOM ELECTRON
 	{
 		if wep_type[wep] == 5//energy wep
 		{

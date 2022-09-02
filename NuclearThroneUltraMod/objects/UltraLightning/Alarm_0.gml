@@ -100,7 +100,7 @@ if team == 2
 	var modBoost = 0.06;
 	with Player
 	{
-		if ultra_got[59]
+		if ultra_got[59] && !altUltra
 		{
 			ammoDecrease -= 0.1;
 		}

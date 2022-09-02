@@ -154,6 +154,15 @@ function scrDrawHUD() {
 	    }
 	}
 	dix ++
+	var sheepFakouts = Player.sheepFakeouts;
+	if sheepFakouts > 0
+	{
+	    repeat(sheepFakouts)
+	    {
+			draw_sprite_ext(sprJustASheep,0,__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-16*dix,__view_get( e__VW.YView, 0 )+40,1,1,0,c_white,1);
+			dix++;
+	    }
+	}
 	repeat(Player.maxultra+2)//+1 because secret trash + 1BECAUSE HORROR EXTRA
 	{
 	    if Player.ultra_got[dir]
@@ -200,6 +209,26 @@ function scrDrawHUD() {
 			else if dir == 39 && Player.altUltra
 			{
 				draw_sprite_ext(sprBigRebelHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 43 && Player.altUltra
+			{
+				draw_sprite_ext(sprSniperEyeHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 47 && Player.altUltra
+			{
+				draw_sprite_ext(sprGreenTeamHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 51 && Player.altUltra
+			{
+				draw_sprite_ext(sprHypnotizeHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 55 && Player.altUltra
+			{
+				draw_sprite_ext(sprInconsistentIncompatabilityHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 59 && Player.altUltra
+			{
+				draw_sprite_ext(sprPathOfDestructionHUD,0,xx,yy,1,1,0,c_white,1);
 			}
 			else if dir == 61 && Player.altUltra
 			{

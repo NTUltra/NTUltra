@@ -1,4 +1,6 @@
 /// @description main
+if ultra_got[43] && altUltra && hunterEye < hunterEyeMax
+	hunterEye += 2;
 if ultra_got[75] && speed < 1
 	alarm[3] = max(alarm[3],2);
 if UberCont.opt_gamemode == 29 || cheatyinfiniteammo //Infinite ammo
@@ -600,7 +602,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		IsShielding=false;
 	}
 	if( (!(IsShielding)||(ultra_got[7]==1)) && (UberCont.opt_gamemode!=12||instance_exists(Marker)) ){
-	if (race == 7 || (altUltra && ultra_got[23] && scrMeleeWeapons(wep))) && wep != 0 {
+	if (race == 7 || (altUltra && ultra_got[55]) || (altUltra && ultra_got[23] && scrMeleeWeapons(wep))) && wep != 0 {
 		//Roids always auto fire
 		wep_auto[wep] = 1
 		if race == 7 && bwep != 0
@@ -608,7 +610,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 	}
 
 
-	if (KeyCont.key_fire[p] = 1 or keyfire = 1) and wep_auto[wep] = 0 and ((wep_type[wep] = 0 or wep_type[wep] = 1) or can_shoot = 1) and reload < 8//15 INPUT BUFFERING
+	if (KeyCont.key_fire[p] = 1 or keyfire = 1) and wep_auto[wep] = 0 and ((wep_type[wep] = 0 or wep_type[wep] = 1) or can_shoot == 1) and reload < 8//15 INPUT BUFFERING
 		clicked = 1
 
 	if (KeyCont.key_fire[p] = 1 or keyfire = 1)
@@ -640,7 +642,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		}
 	}
 
-	if can_shoot = 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
+	if can_shoot == 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 	{
 		if wep_auto[wep] = 0 and clicked = 1
 		{
@@ -901,6 +903,8 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 		if reload <= 0 && !can_shoot
 		{
 			can_shoot = 1
+			with CloneShooter
+				instance_destroy();
 		
 			if ammo[wep_type[wep]] < wep_cost[wep] and wep_type[wep] != 0
 				scrEmpty()
@@ -1141,7 +1145,7 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 	and (UberCont.opt_gamemode!=12||instance_exists(Marker))
 	and wep_auto[wep] = 1 and (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
 	{
-		while can_shoot = 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
+		while can_shoot == 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 		{
 			if ultra_got[44] == 1 && instance_exists(Marker)
 			{
@@ -1263,6 +1267,39 @@ speed = 6.3*max(1,(skill_got[2]*1.3))//xtra feet rolling
 		instance_create(x,y,Dust);
 	}
 }
+if ultra_got[59] && altUltra
+{
+	var msk = mask_index;
+	mask_index = mskBigWepPickup;
+	var floors = ds_list_create();
+	var al = instance_place_list(x,y,Floor,floors,false)
+	for (var j = 0; j < al; j++) {
+		with floors[| j]
+		{
+			var corrosion = instance_place(x,y,Corrosion);
+			if corrosion == noone
+			{
+				if object_index == FloorExplo
+				{
+					instance_create(x,y,CorrosionSmall)
+				}
+				else
+				{
+					instance_create(x,y,Corrosion)
+				}
+			}
+			else
+			{
+				with corrosion
+				{
+					alarm[0] = 60;	
+				}
+			}
+		}
+	}
+	ds_list_destroy(floors);
+	mask_index = msk;
+}
 if (!outOfCombat && skill_got[2]==0 && race!=18 && race!=24 && race != 15 and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(FloorMaker))
 {
 	if ((area = 5 || area = 107) and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(FloorMaker))
@@ -1347,7 +1384,11 @@ if (!outOfCombat && skill_got[2]==0 && race!=18 && race!=24 && race != 15 and !i
 if reload > 0
 	can_shoot = 0
 else
+{
 	can_shoot = 1
+	with CloneShooter
+		instance_destroy();
+}
 
 //cap reloads
 reload = max(reload,lowa);
@@ -1427,7 +1468,7 @@ if homeBoost > 0
     }
 }
 
-if (ultra_got[43]==1)//HUNTER ULTRA C Focused projectiles
+if (ultra_got[43] && !altUltra)//HUNTER ULTRA C Focused projectiles
 {
     if instance_exists(Marker)
     {

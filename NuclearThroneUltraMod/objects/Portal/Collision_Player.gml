@@ -30,6 +30,10 @@ with Ally
 {
 	my_health = 0;
 }
+with YungCuzDupe
+{
+	my_health = 0;
+}
 other.speed = 0;
 if endgame = 100
 {

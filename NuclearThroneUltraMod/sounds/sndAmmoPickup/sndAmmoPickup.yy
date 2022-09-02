@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndAmmoPickup",
-  "duration": 0.0,
+  "duration": 0.339841,
   "parent": {
     "name": "Pickups",
     "path": "folders/Sounds/Pickups.yy",

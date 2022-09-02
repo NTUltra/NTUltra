@@ -33,7 +33,7 @@ if instance_exists(Player){
 		accuracy=9;
 	}
 
-	if Player.ultra_got[59]=1//atom electron ultra
+	if Player.ultra_got[59] && !Player.altUltra//atom electron ultra
 	{
 		image_speed-=0.1;
 		dmg += 1;

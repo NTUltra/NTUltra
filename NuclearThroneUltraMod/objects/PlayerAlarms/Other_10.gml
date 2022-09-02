@@ -46,4 +46,13 @@ if instance_exists(Player)
 	{
 		alarm[5] = 120;	
 	}
+	if !instance_exists(PlayerAlarms2)
+	with instance_create(x,y,PlayerAlarms2)
+	{
+		//Nothing yet may need more alarms
+	}
+	if Player.ultra_got[59] && Player.altUltra && !instance_exists(CorrosionDrawer)
+	{
+		instance_create(x,y,CorrosionDrawer)
+	}
 }

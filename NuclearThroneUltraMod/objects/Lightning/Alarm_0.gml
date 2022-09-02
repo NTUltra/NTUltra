@@ -73,7 +73,7 @@ if instance_exists(Player){
 	if team!=Player.team
 	{
 		scrTarget()
-		if Player.ultra_got[43]//hunter focused fire
+		if Player.ultra_got[43] && !Player.altUltra//hunter focused fire
 		{
 			if instance_exists(Marker)
 				target=Marker;
@@ -115,7 +115,7 @@ if team == 2
 	var modBoost = 0.06;
 	with Player
 	{
-		if ultra_got[59]
+		if ultra_got[59] && !altUltra
 		{
 			ammoDecrease -= 0.1;
 		}

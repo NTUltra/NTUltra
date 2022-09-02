@@ -127,7 +127,7 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 		targetPickup.ammo = 0
 	}
 
-	if KeyCont.key_pick[p] = 1 && targetPickup.visible == true
+	if KeyCont.key_pick[p] = 1 && targetPickup.visible == true && !instance_exists(ShopWep)
 	{
 		KeyCont.key_pick[p] = 2;
 	if curse = 0||targetPickup.curse==curse or bwep = 0 || (cwep = 0 && ultra_got[31])//SWITCH OUR MODS DATA ASWELL!
@@ -827,6 +827,15 @@ else if crown == 24//Crown of sloth
 	with enemy
 	{
 		speed *= 0.9;	
+	}
+}
+if ultra_got[51] && altUltra
+{
+	with enemy
+	{
+		speed *= 0.8;
+		if alarm[1] > 1
+			alarm[1] += 0.3;
 	}
 }
 if (!canHeal)

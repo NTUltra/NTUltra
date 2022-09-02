@@ -17,6 +17,61 @@ closedodges = 0;
 isPureHealthBoost = 0;
 hunterEye = 0;
 hunterEyeMax = 200;
+sheepFakeouts = 0;
+hogWep[0] = 0;
+hogWep[1] = 0;
+hogWep[2] = 0;
+hogWep[3] = 0;
+hogWep[4] = 0;
+hogWep[5] = 0;
+hogWep[6] = 0;
+hogWep[7] = 0;
+
+hogWepmod1[0] = 0;
+hogWepmod1[1] = 0;
+hogWepmod1[2] = 0;
+hogWepmod1[3] = 0;
+hogWepmod1[4] = 0;
+hogWepmod1[5] = 0;
+hogWepmod1[6] = 0;
+hogWepmod1[7] = 0;
+
+hogWepmod2[0] = 0;
+hogWepmod2[1] = 0;
+hogWepmod2[2] = 0;
+hogWepmod2[3] = 0;
+hogWepmod2[4] = 0;
+hogWepmod2[5] = 0;
+hogWepmod2[6] = 0;
+hogWepmod2[7] = 0;
+
+hogWepmod3[0] = 0;
+hogWepmod3[1] = 0;
+hogWepmod3[2] = 0;
+hogWepmod3[3] = 0;
+hogWepmod3[4] = 0;
+hogWepmod3[5] = 0;
+hogWepmod3[6] = 0;
+hogWepmod3[7] = 0;
+
+hogWepmod4[0] = 0;
+hogWepmod4[1] = 0;
+hogWepmod4[2] = 0;
+hogWepmod4[3] = 0;
+hogWepmod4[4] = 0;
+hogWepmod4[5] = 0;
+hogWepmod4[6] = 0;
+hogWepmod4[7] = 0;
+
+hogCurse[0] = 0;
+hogCurse[1] = 0;
+hogCurse[2] = 0;
+hogCurse[3] = 0;
+hogCurse[4] = 0;
+hogCurse[5] = 0;
+hogCurse[6] = 0;
+hogCurse[7] = 0;
+
 //3D audio
 audio_listener_orientation(0, 0, -1, 0, 1, 0);
 audio_falloff_set_model(audio_falloff_linear_distance);

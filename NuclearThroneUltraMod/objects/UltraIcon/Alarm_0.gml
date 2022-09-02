@@ -41,6 +41,26 @@ else if skill == 39 && (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUl
 {
 	sprite_index = sprBigRebel;
 }
+else if skill == 43 && Player.skill_got[19]
+{
+	sprite_index = sprSniperEye;
+}
+else if skill == 47 && !Player.skill_got[1] && Player.skill_got[3]
+{
+	sprite_index = sprGreenTeam;
+}
+else if skill == 51 && !Player.skill_got[2] && !Player.skill_got[8]
+{
+	sprite_index = sprHynotize;
+}
+else if skill == 55 && (Player.skill_got[13] || Player.skill_got[34]) && !Player.skill_got[5]
+{
+	sprite_index = sprInconsistentIncompatability;
+}
+else if skill == 59 && (!Player.skill_got[17] && Player.crown == 4)
+{
+	sprite_index = sprPathOfDestruction;
+}
 else if skill == 61 && (scrKrakenWeapons(Player.wep) || scrKrakenWeapons(Player.bwep))
 {
 	sprite_index=sprCaptainOfTheKraken;
@@ -57,7 +77,6 @@ else if skill == 76 && Player.ultimategamble=true
 {
 	sprite_index=sprUltimateGamble;
 }
-	
 else if skill == 87 && scrHasAnEmptyLife()
 {
 	sprite_index = sprFreakRogue;

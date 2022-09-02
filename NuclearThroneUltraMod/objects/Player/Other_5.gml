@@ -43,8 +43,11 @@ if race == 27 && canHeal
 		my_health += am;
 	}
 }
+if ultra_got[51] && altUltra
+{
+	sheepFakeouts = 3 + skill_got[5];	
+}
 ///at the end of a level stuff
-
 if patience>0||(ultra_got[0]=1 && !altUltra)
 {
 skillpoints+=patience;
@@ -97,7 +100,9 @@ else if race=12//yung cuz reset max HP
 	maxhealth = targetHealth;
 	
 }
-if ultra_got[40] = 1 || ultra_got[47] && canHeal{//Rebel Ultra D YUNG CUZ ULTRA C
+if ((ultra_got[40] = 1 || (ultra_got[47] && altUltra)) && canHeal)
+{
+	//Rebel Ultra D YUNG CUZ ULTRA C
 	my_health=max(my_health,maxhealth);
 }
 
@@ -155,7 +160,7 @@ if crown == 15
 }
 if race == 14//PANDA
 {
-	if ultra_got[56]=0
+	if ultra_got[56]=0 && !(ultra_got[55] && altUltra)
     {
 		with WepPickup
 		{
@@ -172,47 +177,6 @@ if race == 14//PANDA
 			}
 		}
     }
-	/*
-    if level!=1 && ultra_got[56]=0 && wep_area[wep] != -1
-    {
-    
-        //primary
-        if wep!=0
-		{
-		    var dir= 0;
-		    var prevwep;
-        
-		    prevwep=wep;
-        
-		    //handling golden weapons
-		    if scrCheckGold(wep_name[prevwep])
-			{
-				prevwep=9//minigun tier 6
-				scrUnlockBSkin(14,"FOR CONVERTING A GOLDEN WEAPON",0)
-			}
-        
-		    if ultra_got[55]
-		    {
-		    do {wep = round(random(maxwep-1)+1);dir+=1;
-		    if dir >999
-		    wep=prevwep;}
-		    until ( ( (wep_area[wep] = wep_area[prevwep]) || (wep_area[wep] = wep_area[prevwep+1]) || (wep_area[wep] = wep_area[prevwep+2]) )||(dir>1000)  && (wep_area[wep] != -1) )
-		    }
-		    else{
-		    do {wep = round(random(maxwep-1)+1);dir++;
-		    if dir >999
-		    wep=prevwep;}
-		    until ( (wep_area[wep] = wep_area[prevwep])||(dir>1000) && (wep_area[wep] != -1) )
-		    }
-        
-		    //hold it properly now
-			scrWeaponHold();
-        
-        }
-        //dont start empty handed
-        if ( ammo[wep_type[wep]] < typ_ammo[wep_type[wep]]*3 )//if ammo below three times an ammo drop
-        {ammo[wep_type[wep]]=typ_ammo[wep_type[wep]]*3;}
-    }*/
 }
 
 if crown==10

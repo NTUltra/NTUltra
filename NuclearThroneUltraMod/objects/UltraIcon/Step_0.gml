@@ -85,6 +85,57 @@ else if skill == 20 && Player.crown == 23 && Player.skill_got[2]
 		maxSpeed += 6;
 	}
 }
+else if skill == 43 && Player.skill_got[19]
+{
+	with Player
+	{
+		altUltra = true;
+		ultra_name[43] = "SNIPER EYE"
+		ultra_text[43] = "REPLACE YOUR ACTIVE WITH A SNIPER EYE#THE EYE BREAKS WALLS#PIERCES, STUNS AND DAMAGES ENEMIES#DAMAGE INCREASES EACH PIERCE#MORE POWERFULL#THE LONGER YOU WAIT BETWEEN SHOTS#POWER SCALES FASTER#IF YOU HAVE THRONEBUTT"
+		ultra_tips[43] = "proper eyesight"
+	}
+}
+else if skill == 47 && !Player.skill_got[1] && Player.skill_got[3]
+{
+	with Player
+	{
+		altUltra = true;
+		ultra_name[47] = "GREEN TEAM"
+		ultra_text[47] = "SPAWNING BUDDIES COSTS RADS#INSTEAD OF MAX HP#BUDDIES DROP MORE RESOURCES"
+		ultra_tips[47] = "pay up"
+	}
+}
+else if skill == 51 && !Player.skill_got[2] && !Player.skill_got[8]
+{
+	with Player
+	{
+		altUltra = true;
+		sheepFakeouts = 3 + skill_got[5];	
+		ultra_name[51] = "HYPNOTIZE"
+		ultra_text[51] = "ENEMIES REACT AND MOVE SLOWER##ACTIVE CHANGES INTO HYPNOSIS#HYPNOSIS RE-ACTIVATES YOUR PASSIVE#CAN BE USED 3 TIMES EACH AREA#THRONEBUTT INCREASES USES TO 4"
+		ultra_tips[51] = "no one expects a sheep to carry a gun"
+	}
+}
+else if skill == 55 && (Player.skill_got[13] || Player.skill_got[34]) && !Player.skill_got[5]
+{
+	with Player
+	{
+		altUltra = true;
+		ultra_name[59] = "PATH OF DESTRUCTION"
+		ultra_text[59] = "EVERYWHERE YOU GO#YOU LEAVE BEHIND A TRAIL OF#DAMAGING GOOP##PICKUPS FADE FASTER#FADED PICKUPS REROLL INTO OTHER PICKUPS#PICKUPS CAN FADE/REROLL TWICE"
+		ultra_tips[59] = "always positive"
+	}
+}
+else if skill == 59 && (!Player.skill_got[17] && Player.crown == 4)
+{
+	with Player
+	{
+		altUltra = true;
+		ultra_name[55] = "INCONSISTENT INCOMPATABILITY"
+	    ultra_text[55] = "YOU NO LONGER THROW WEAPONS#INSTEAD YOUR ACTIVE FIRES YOUR WEAPON#FROM THE ORIGIN OF YOUR CROSSHAIR";
+	    ultra_tips[55] = "how does it do that"
+	}
+}
 else if skill == 82
 {
 	with BackCont
@@ -272,6 +323,16 @@ else if skill == 72 && ((Player.maxhealth < 8 && UberCont.opt_gamemode != 9) || 
 		ultra_name[72] = "MIRROR"
 		ultra_text[72] = "ACTIVE NO LONGER HEALS#ACTIVE COST IS ALWAYS REDUCED#(AS IF YOU ARE ON MAX HP)#ALSO DEFLECT ON YOUR RETICLE"
 		ultra_tips[72] = "right back at ya"
+	}
+}
+else if skill == 77
+{
+	with Player
+	{
+		altUltra = true;
+		ultra_name[77] = "HOARDING THIEF"
+	    ultra_text[77] = "GO TO YV'S CRIB#YOUR SHOP BECOMES AN INVENTORY#PICK UP WEAPONS WHILE#SHOP IS OPEN#AND YOU HOVER OVER A SLOT#TO DROP A WEAPON IN THERE#THRONEBUTT DOUBLES WEAPON SLOTS"
+	    ultra_tips[77] = "money everywhere"
 	}
 }
 else if skill = 85//ROGUE SUPER PORTAL STRIKE

@@ -377,7 +377,7 @@ function scrPowers() {
 
 	if race = 22 && !altUltra //Rogue
 	{
-		var radcost = 100;//Cost is also in portal
+		var radcost = 95;//Cost is also in portal
 		var useRad = ultra_got[88] == 1
 	if rogueammo > instance_number(PortalStrike) || (useRad && rad >= radcost*(1+instance_number(PortalStrike)))
 	{
@@ -938,6 +938,36 @@ function scrPowers() {
 		repeat(5){
 		with instance_create(x,y,Smoke)
 		motion_add(random(360),1+random(3))}
+		if ultra_got[59] && altUltra
+		{
+			var floors = ds_list_create();
+			var al = collision_line_list(x,y,mx,my,Floor,false,false,floors,false)
+			for (var j = 0; j < al; j++) {
+				with floors[| j]
+				{
+					var corrosion = instance_place(x,y,Corrosion);
+					if corrosion == noone
+					{
+						if object_index == FloorExplo
+						{
+							instance_create(x,y,CorrosionSmall)
+						}
+						else
+						{
+							instance_create(x,y,Corrosion)
+						}
+					}
+					else
+					{
+						with corrosion
+						{
+							alarm[0] = 60;	
+						}
+					}
+				}
+			}
+			ds_list_destroy(floors);
+		}
 		x = mx
 		y = my
 		BackCont.viewx2 += lengthdir_x(20,point_direction(x,y,mx,my)+180)*UberCont.opt_shake
@@ -961,7 +991,7 @@ function scrPowers() {
 					event_perform(ev_alarm,0)
 				}
     
-			    if ultra_got[59]=1
+			    if ultra_got[59] && !altUltra
 				{
 					with instance_create(x,y,Lightning)
 					{
@@ -996,54 +1026,58 @@ function scrPowers() {
 
 	if race==14//PANDA
 	{
-	if curse=0&&wep!=0{
+		if ultra_got[55] && altUltra
+		{
+			//CHECK HOLD LOGIC
+		}	
+		else if curse=0&&wep!=0
+		{
+			//snd_play_2d(sndEnemySlash);
+			snd_play_2d(sndChickenThrow);
 
-		//snd_play_2d(sndEnemySlash);
-		snd_play_2d(sndChickenThrow);
-
-	    with instance_create(x,y,ThrowWep)
-	    {
-		    team=other.team;
-		    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),16);
-		    scrWeapons()
-		    if other.ultra_got[54]=1
-			{
-			    //primary
-			    var prevwep;
+		    with instance_create(x,y,ThrowWep)
+		    {
+			    team=other.team;
+			    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),16);
+			    scrWeapons()
+			    if other.ultra_got[54]=1
+				{
+				    //primary
+				    var prevwep;
     
-			    //if wep_area[other.wep]==-1//handling starting weapons
-			    //wep_area[other.wep]=1 THE LOOPHOLE
+				    //if wep_area[other.wep]==-1//handling starting weapons
+				    //wep_area[other.wep]=1 THE LOOPHOLE
     
-			    prevwep=other.wep;
+				    prevwep=other.wep;
     
-			    do {wep = round(random(maxwep-1)+1)}
-			    until (wep_area[wep] = wep_area[prevwep])
+				    do {wep = round(random(maxwep-1)+1)}
+				    until (wep_area[wep] = wep_area[prevwep])
 				
+				    curse = other.curse
+				    wepmod1=other.wepmod1;
+				    wepmod2=other.wepmod2;
+				    wepmod3=other.wepmod3;
+				    wepmod4=other.wepmod4;
+    
+				}
+				else{
+			    wep=other.wep;
+				}
+			    name = wep_name[wep]
+			    //ammo = 50
+			    type = wep_type[wep]
 			    curse = other.curse
 			    wepmod1=other.wepmod1;
 			    wepmod2=other.wepmod2;
 			    wepmod3=other.wepmod3;
 			    wepmod4=other.wepmod4;
-    
-			}
-			else{
-		    wep=other.wep;
-			}
-		    name = wep_name[wep]
-		    //ammo = 50
-		    type = wep_type[wep]
-		    curse = other.curse
-		    wepmod1=other.wepmod1;
-		    wepmod2=other.wepmod2;
-		    wepmod3=other.wepmod3;
-		    wepmod4=other.wepmod4;
-		    sprite_index = wep_sprt[wep]
-	    }
-	    BackCont.viewx2 += lengthdir_x(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-	    BackCont.viewy2 += lengthdir_y(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-	    BackCont.shake += 1
-	    scrSwapWeps()
-	    bwep = 0
+			    sprite_index = wep_sprt[wep]
+		    }
+		    BackCont.viewx2 += lengthdir_x(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+		    BackCont.viewy2 += lengthdir_y(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+		    BackCont.shake += 1
+		    scrSwapWeps()
+		    bwep = 0
 	    }
 	}
 
@@ -1058,9 +1092,17 @@ function scrPowers() {
 	if race==12
 	{
 		var canSpawn = true;
-		if ultra_got[47] == 1
+		var radCost = 90;
+		if ultra_got[47]
 		{
-			canSpawn = my_health-2 > 0;	
+			if !altUltra
+			{
+				canSpawn = my_health - 2 > 0;
+			}
+			else
+			{
+				canSpawn = 	rad > radCost;
+			}
 		}
 		else if ultra_got[46] == 0
 		{
@@ -1090,7 +1132,14 @@ function scrPowers() {
 			    alarm[7]=12;//reset the exception in two steps
     
 			        if ultra_got[47] {
-						my_health -= 2//1/8--->0.875
+						if !altUltra
+						{
+							my_health -= 2//1/8--->0.875
+						}
+						else
+						{
+							rad = max(rad - radCost, 0);	
+						}
 			        }
 			        else{
 						var percMax = floor(maxhealth*0.75);
@@ -1123,8 +1172,15 @@ function scrPowers() {
 		    if alarm[7]<1
 		    alarm[7]=12;//reset the exception in two steps
     
-		        if ultra_got[47]{
-					my_health -= 2//1/8--->0.875
+		        if ultra_got[47] {
+					if !altUltra
+					{
+						my_health -= 2//1/8--->0.875
+					}
+					else
+					{
+						rad = max(rad - radCost, 0);	
+					}
 		        }
 		        else{
 					var percMax = floor(maxhealth*0.75);
@@ -1147,52 +1203,80 @@ function scrPowers() {
 	// SHEEP
 	if race==13
 	{
-		if (ultra_got[49] && !instance_exists(SheepHyperDash))
+		if (ultra_got[51] && altUltra)
 		{
-			var takePercentage = 0.1;//10%
-			//var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
-			//var cost = typ_amax[wepType]*takePercentage;
-			var cost = 31;//5% on level 10
-			if (rad >= cost)//(wepType != 0 && ammo[wepType] - cost > 0)
+			if sheepFakeouts > 0 && !justAsheep
 			{
-				//ammo[wepType] =  ammo[wepType] - cost;
-				rad -= cost;
-				var aimDir = point_direction(UberCont.mouse__x,UberCont.mouse__y,x,y);//Opposite of aimdir
-				BackCont.viewx2 += lengthdir_x(32,aimDir)*UberCont.opt_shake;
-				BackCont.viewy2 += lengthdir_y(32,aimDir)*UberCont.opt_shake;
-				BackCont.shake += 10;
-				snd_play_2d(sndSheepHyperDash);
-				instance_create(x,y,SheepHyperDash);
-				Sleep(10);
+				justAsheep = true;
+				var marginDuration = 120;
+				with PlayerAlarms2
+				{
+					alarm[0] += marginDuration;
+				}
+				//Stun
+				with enemy
+				{
+					speed = 0;
+					if alarm[1] > 0
+					{
+						alarm[11] += marginDuration
+						alarm[1] += marginDuration;
+					}	
+				}
+				sheepFakeouts --;
+				snd_play_2d(sndMorphStop);
+				instance_create(x,y,Hypnosis);
+			}
+		}
+		else
+		{
+			if (ultra_got[49] && !instance_exists(SheepHyperDash))
+			{
+				var takePercentage = 0.1;//10%
+				//var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
+				//var cost = typ_amax[wepType]*takePercentage;
+				var cost = 31;//5% on level 10
+				if (rad >= cost)//(wepType != 0 && ammo[wepType] - cost > 0)
+				{
+					//ammo[wepType] =  ammo[wepType] - cost;
+					rad -= cost;
+					var aimDir = point_direction(UberCont.mouse__x,UberCont.mouse__y,x,y);//Opposite of aimdir
+					BackCont.viewx2 += lengthdir_x(32,aimDir)*UberCont.opt_shake;
+					BackCont.viewy2 += lengthdir_y(32,aimDir)*UberCont.opt_shake;
+					BackCont.shake += 10;
+					snd_play_2d(sndSheepHyperDash);
+					instance_create(x,y,SheepHyperDash);
+					Sleep(10);
+				}
+				else
+				{
+					//snd_play_2d(snd_lowa,0,true,false,10);
+					if !audio_is_playing(sndUltraEmpty)
+							snd_play(sndUltraEmpty)
+					with instance_create(x,y,PopupText)
+					{
+						mytext = "NOT ENOUGH RADS"
+						theColour=c_red;
+					}
+					BackCont.shake += 5;
+				}
 			}
 			else
 			{
-				//snd_play_2d(snd_lowa,0,true,false,10);
-				if !audio_is_playing(sndUltraEmpty)
-						snd_play(sndUltraEmpty)
-				with instance_create(x,y,PopupText)
+				if !instance_exists(SheepStorm)
+				with instance_create(x,y,SheepStorm)
 				{
-					mytext = "NOT ENOUGH RADS"
-					theColour=c_red;
+				team=other.team;
 				}
-				BackCont.shake += 5;
+				if skill_got[2]==1//extra feet
+				{
+				maxSpeed=7;
+				}
+				else
+				{
+				maxSpeed=6;
+				}
 			}
-		}
-		else
-		{
-		if !instance_exists(SheepStorm)
-		with instance_create(x,y,SheepStorm)
-		{
-		team=other.team;
-		}
-		if skill_got[2]==1//extra feet
-		{
-		maxSpeed=7;
-		}
-		else
-		{
-		maxSpeed=6;
-		}
 		}
 	}
 
@@ -1409,9 +1493,12 @@ function scrPowers() {
 	//HUNTER
 	if (race == 11)
 	{
-		if true
+		if ultra_got[43] && altUltra
 		{
-			snd_play_fire(sndSniperEye);
+			if hunterEye > hunterEyeMax*0.7
+				snd_play_fire(sndSniperEyeUpg);
+			else
+				snd_play_fire(sndSniperEye);
 			var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 			with instance_create(x+(right*2),y+0.5,RedirectFX)
 			{
@@ -1426,6 +1513,12 @@ function scrPowers() {
 			with instance_create(x+(right*2),y+0.5,HunterSniperEye)
 			{
 				image_angle = aimDirection;
+				dmg = clamp(round(other.hunterEye*0.25),3,50);
+				image_yscale = clamp(other.hunterEye*0.03,1,5);
+				confuseTime = clamp(other.hunterEye*0.2,4,40);
+				var addTime = clamp(floor(other.hunterEye*0.025),0,5);
+				alarm[1] += addTime;
+				alarm[2] += addTime;
 				team = other.team;
 				if other.bskin == 1
 					sprite_index = sprHunterSniperB;
@@ -1436,14 +1529,13 @@ function scrPowers() {
 				event_user(0);
 			}
 
-			BackCont.viewx2 += lengthdir_x(20,aimDirection+180)*UberCont.opt_shake
-			BackCont.viewy2 += lengthdir_y(20,aimDirection+180)*UberCont.opt_shake
-			BackCont.shake += 4
-			wkick = 8
+			BackCont.viewx2 += lengthdir_x(clamp(hunterEye*0.25,5,30),aimDirection+180)*UberCont.opt_shake
+			BackCont.viewy2 += lengthdir_y(clamp(hunterEye*0.25,5,30),aimDirection+180)*UberCont.opt_shake
+			BackCont.shake += clamp(hunterEye*0.05,3,10);
 			//Max = 200;
 			hunterEye = 0;
 		}
-		else if Player.ultra_got[44]{//Hunter Ultra D CRACKSHOT
+		else if ultra_got[44]{//Hunter Ultra D CRACKSHOT
 			if(instance_exists(enemy)){
 				var n = instance_nearest(mouse_x,mouse_y,enemy)
 				if (point_distance(mouse_x,mouse_y,n.x,n.y) < 48 && n.team != team && n.my_health > 0) {
@@ -1516,6 +1608,41 @@ function scrPowers() {
 	////////SHIT HELD////////
 	if KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2
 	{
+		//PANDA ALT ULTRA
+		if ultra_got[55] && altUltra
+		{
+			if can_shoot == 1
+			{
+				if ammo[wep_type[wep]] < wep_cost[wep] and KeyCont.key_spec[p] = 1 and wep_type[wep] != 0
+					scrEmpty()
+				if rad - wep_rad[wep] < 0
+				{
+					//not enough radiation
+					clicked = 0
+					scrEmptyRad();
+					other.wkick = -2
+				}
+				if ammo[wep_type[wep]] >= wep_cost[wep] and rad>=wep_rad[wep]
+				{
+					reload = min(reload + wep_load[wep],wep_load[wep]);
+					can_shoot = 0
+					var dir = point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y)+180;
+					var xx = UberCont.mouse__x + lengthdir_x(1,dir);
+					var yy = UberCont.mouse__y + lengthdir_y(1,dir);
+					with instance_create(xx,yy,CloneShooter)
+					{
+						wepflip = other.wepflip;
+						wepright = other.wepright;
+						wep = other.wep;
+						theAim = point_direction(other.x,other.y,UberCont.mouse__x,UberCont.mouse__y);
+						scrFire();
+						alarm[0] = wep_load[wep];
+						if reload < other.reload
+							other.reload = reload;
+					}
+				}
+			}
+		}
 		//HANDS
 		if race == 27 && (!instance_exists(Hand) || (ultra_got[107] && instance_exists(Hand) && instance_number(Hand) < 2 || (scrIsInInvertedArea() && instance_number(Hand) < 2)))//Hands
 		{
@@ -2412,7 +2539,7 @@ function scrPowers() {
 		if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
 		vspeed -= 2.2-moveBoost
 		motion_add(direction,3.5);
-		}
+	}
 	}//END OF HOLD RMB
 	else if audio_is_playing(sndEyesLoop) or audio_is_playing(sndChickenLoop) or audio_is_playing(sndEyesLoopUpg) 
 	{
@@ -2573,7 +2700,7 @@ function scrPowers() {
 	image_speed=0.4;
 
 	}
-	else if race==13 
+	else if race==13 && !(ultra_got[51] && altUltra)
 	{
 	if KeyCont.key_spec[p] != 1 && KeyCont.key_spec[p] != 2 || !instance_exists(SheepStorm)//Sheep reset speed
 	{

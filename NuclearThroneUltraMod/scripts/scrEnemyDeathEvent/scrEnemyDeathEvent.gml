@@ -108,6 +108,9 @@ function scrEnemyDeathEvent(){
 				if skill_got[29]//Insomnia
 					t = 200;
 			}
+			//Insomnia should not trigger again after first justASheep
+			if skill_got[29] && ultra_got[51] && altUltra && sheepFakeouts != 3 + skill_got[5]
+				t = 0;
 			if t > 0
 			{
 				with enemy
@@ -121,6 +124,10 @@ function scrEnemyDeathEvent(){
 							yoffset = other.sprite_height*0.5 - 4;
 						}
 					}
+				}
+				with PlayerAlarms2
+				{
+					alarm[0] = t;	
 				}
 			}
 			//RADS

@@ -130,7 +130,8 @@ if race = 7 and bwep != 0
 			until position_meeting(lasx,lasy,Wall) or lasd > 1000
 			draw_sprite_ext(sprLaserSightPlayer,-1,x,y-4,point_distance(x,y,lasx,lasy)/2+2,1,aimDirection,c_white,1)
 		}
-	}draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),y+gunY-4+lengthdir_y(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),image_yscale,-bwepright,aimDirection+(bwepangle*(1-bwkick/20)),c_white,1)
+	}
+	draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),y+gunY-4+lengthdir_y(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),image_yscale,-bwepright,aimDirection+(bwepangle*(1-bwkick/20)),c_white,1)
 	if bwep = 63 || wep = 343//Blackhole/Dimension Generator
 	{
 	if can_shoot = 1 and ammo[wep_type[wep]] >= wep_cost[wep]{
