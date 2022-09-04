@@ -1,10 +1,5 @@
-if instance_exists(ShopWheel)
-{
-x=ShopWheel.x;
-y=ShopWheel.y;
-}
-else
-instance_destroy();
+if !instance_exists(ShopWheel)
+	instance_destroy();
 
 if instance_exists(Player)
 {

@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndPopPop",
-  "duration": 0.0,
+  "duration": 0.196848,
   "parent": {
     "name": "YV",
     "path": "folders/Sounds/Player/YV.yy",

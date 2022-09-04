@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndMutant24Hurt",
-  "duration": 0.0,
+  "duration": 0.743039,
   "parent": {
     "name": "Elementor",
     "path": "folders/Sounds/Player/Elementor.yy",

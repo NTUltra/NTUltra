@@ -6,8 +6,11 @@ function scrBossKill() {
 		instance_create(x+16,y-16,WallBreak);
 		instance_create(x-16,y+16,WallBreak);
 		instance_create(x-16,y-16,WallBreak);
-
-		if Player.race=20//Business hog
+		if Player.ultra_got[77] && !Player.altUltra
+		{
+			instance_create(x,y,UltraChest);
+		}
+		else if Player.race == 20//Business hog
 			instance_create(x,y,GoldChest);
 			
 		if Player.ultra_got[2]

@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndMutant24Slct",
-  "duration": 0.0,
+  "duration": 0.756485,
   "parent": {
     "name": "Elementor",
     "path": "folders/Sounds/Player/Elementor.yy",

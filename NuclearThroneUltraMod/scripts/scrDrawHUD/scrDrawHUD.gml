@@ -242,6 +242,14 @@ function scrDrawHUD() {
 			{
 				draw_sprite_ext(sprMirrorHUD,0,xx,yy,1,1,0,c_white,1);
 			}
+			else if dir == 77 && Player.altUltra
+			{
+				draw_sprite_ext(sprHoardingThiefHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 96 && Player.altUltra
+			{
+				draw_sprite_ext(sprAirLordHUD,0,xx,yy,1,1,0,c_white,1);
+			}
 			else if dir == 97 && Player.altUltra
 			{
 				draw_sprite_ext(sprBeeKeeperHUD,0,xx,yy,1,1,0,c_white,1);

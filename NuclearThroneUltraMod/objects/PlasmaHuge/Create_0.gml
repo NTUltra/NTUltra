@@ -24,6 +24,3 @@ image_speed = 0.5
 Sleep(100)
 originalDirection=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 resetSpeed=false;
-
-/* */
-/*  */

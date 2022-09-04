@@ -57,7 +57,7 @@ else if skill == 55 && (Player.skill_got[13] || Player.skill_got[34]) && !Player
 {
 	sprite_index = sprInconsistentIncompatability;
 }
-else if skill == 59 && (!Player.skill_got[17] && Player.crown == 4)
+else if skill == 59 && (!Player.skill_got[17] && (Player.crown == 4 || Player.crown == 28))
 {
 	sprite_index = sprPathOfDestruction;
 }
@@ -75,7 +75,11 @@ else if skill == 72 && ((Player.maxhealth < 8 && UberCont.opt_gamemode != 9) || 
 }
 else if skill == 76 && Player.ultimategamble=true
 {
-	sprite_index=sprUltimateGamble;
+	sprite_index = sprUltimateGamble;
+}
+else if skill == 77 && Player.skill_got[0]
+{
+	sprite_index = sprHoardingThief;
 }
 else if skill == 87 && scrHasAnEmptyLife()
 {
@@ -84,6 +88,10 @@ else if skill == 87 && scrHasAnEmptyLife()
 else if skill == 92 && Player.wep_type[Player.wep] == 3 && Player.wep_type[Player.bwep] == 3
 {
 	sprite_index = sprSpikedFrog;
+}
+else if skill == 96 && (Player.crown == 11 || Player.crown == 25)
+{
+	sprite_index = sprAirLord;
 }
 else if skill == 97 && !Player.skill_got[13] && !Player.skill_got[16] && !Player.skill_got[17] && !Player.skill_got[21] && !Player.skill_got[14]
 {

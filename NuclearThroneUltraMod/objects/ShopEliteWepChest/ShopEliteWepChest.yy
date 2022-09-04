@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskShopEliteWepChest",
     "path": "sprites/mskShopEliteWepChest/mskShopEliteWepChest.yy",

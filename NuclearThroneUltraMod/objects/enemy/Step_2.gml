@@ -71,7 +71,7 @@ if prevhealth > my_health
 				my_health = prevhealth - dmgTaken;
 		    }
 		}
-		if ( (Player.skill_got[5] = 1) && (Player.race=11))//HUNTER THRONEBUTT
+		if ( (Player.skill_got[5] = 1) && (Player.race=11))//HUNTER THRONE BUTT
 		{
 			var dmgTaken = prevhealth-my_health;
 			if dmgTaken > 0

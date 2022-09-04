@@ -1,13 +1,12 @@
 draw_self();
-
+draw_sprite(wep_sprt[wep],0,x+xx-6,y+yy);
 draw_set_color(c_dkgray)
-draw_sprite(wep_sprt[wep],0,xx,yy);
 draw_set_font(fntM)
 draw_set_valign(fa_bottom)
 draw_set_halign(fa_right)
 
 
-if place_meeting(x,y,ShopSelector)
+if place_meeting(x,y,ShopSelector) && wep != 0
 {
 	depth = selected;
 

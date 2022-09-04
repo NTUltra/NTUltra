@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskUltraShopMenuBigHPChest",
     "path": "sprites/mskUltraShopMenuBigHPChest/mskUltraShopMenuBigHPChest.yy",

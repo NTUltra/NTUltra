@@ -80,7 +80,7 @@ function scrUltras() {
 	ultra_tips[10] = "repellent"
 
 	ultra_name[11] = "BRAIN STYLE"
-	ultra_text[11] = "SOME ENEMIES ATTACK OTHER ENEMIES#THRONEBUTT INCREASES BRAINWASH CHANCE"
+	ultra_text[11] = "SOME ENEMIES ATTACK OTHER ENEMIES#THRONE BUTT INCREASES BRAINWASH CHANCE"
 	ultra_tips[11] = "brain style works on bosses!"
 
 	ultra_name[12] = "PSYCHONAUT STYLE"//thats a refrence
@@ -126,7 +126,7 @@ function scrUltras() {
 	ultra_tips[19] = "nutritious"
 */
 	ultra_name[19] = "APEX PREDATOR"
-	ultra_text[19] = "REPLACE SNARE WITH SPRINT#KILLS MAKE YOU IMMUNE#FOR A SHORT DURATION#MOVING FASTER INCREASES THE DURATION#EFFECT CAN STACK WITH MULTIPLE KILLS#THRONEBUTT INCREASES THE DURATION"
+	ultra_text[19] = "REPLACE SNARE WITH SPRINT#KILLS MAKE YOU IMMUNE#FOR A SHORT DURATION#MOVING FASTER INCREASES THE DURATION#EFFECT CAN STACK WITH MULTIPLE KILLS#THRONE BUTT INCREASES THE DURATION"
 	ultra_tips[19] = "nutritious"
 	
 	ultra_name[20] = "STEREO SNARES"
@@ -301,7 +301,7 @@ function scrUltras() {
 	if instance_exists(Player) && (Player.altUltra || (Player.skill_got[19] && instance_exists(UltraIcon)))
 	{
 		ultra_name[43] = "SNIPER EYE"
-		ultra_text[43] = "REPLACE YOUR ACTIVE WITH A SNIPER EYE#THE EYE BREAKS WALLS#PIERCES, STUNS AND DAMAGES ENEMIES#DAMAGE INCREASES EACH PIERCE#MORE POWERFULL#THE LONGER YOU WAIT BETWEEN SHOTS#POWER SCALES FASTER#IF YOU HAVE THRONEBUTT"
+		ultra_text[43] = "REPLACE YOUR ACTIVE WITH A SNIPER EYE#THE EYE BREAKS WALLS#PIERCES, STUNS AND DAMAGES ENEMIES#DAMAGE INCREASES EACH PIERCE#MORE POWERFULL#THE LONGER YOU WAIT BETWEEN SHOTS#POWER SCALES FASTER#IF YOU HAVE THRONE BUTT"
 		ultra_tips[43] = "proper eyesight"
 	}
 	
@@ -338,7 +338,7 @@ function scrUltras() {
     
 	//SHEEP 
 	ultra_name[49] = "UNSTOPPABLE"
-	ultra_text[49] = "CHANGE CHARGE TO A POWERFULL HYPERDASH#THAT COSTS RADS TO USE#EXTRA FEET INCREASES RANGE#GAMMA GUTS INCREASES DAMAGE#THRONEBUTT INCREASES BOTH"
+	ultra_text[49] = "CHANGE CHARGE TO A POWERFULL HYPERDASH#THAT COSTS RADS TO USE#EXTRA FEET INCREASES RANGE#GAMMA GUTS INCREASES DAMAGE#THRONE BUTT INCREASES BOTH"
 	ultra_tips[49] = "the fluffy blur"
 
 	ultra_name[50] = "JUST A SHEEP"
@@ -360,7 +360,7 @@ function scrUltras() {
 	&& instance_exists(UltraIcon)))
 	{
 		ultra_name[51] = "HYPNOTIZE"
-		ultra_text[51] = "ENEMIES REACT AND MOVE SLOWER##ACTIVE CHANGES INTO HYPNOSIS#HYPNOSIS RE-ACTIVATES YOUR PASSIVE#CAN BE USED 3 TIMES EACH AREA#THRONEBUTT INCREASES USES TO 4"
+		ultra_text[51] = "ENEMIES REACT AND MOVE SLOWER##ACTIVE CHANGES INTO HYPNOSIS#HYPNOSIS RE-ACTIVATES YOUR PASSIVE#CAN BE USED 3 TIMES EACH AREA#THRONE BUTT INCREASES USES TO 4"
 		ultra_tips[51] = "no one expects a sheep to carry a gun"
 	}
 
@@ -409,9 +409,9 @@ function scrUltras() {
 	ultra_text[59] = "ENERGY WEAPONS COST 20% LESS AMMO#LIGHTNING DOES MORE DAMAGE#AND TRAVELS FURTHER"
 	ultra_tips[59] = "that is electrifying!"
 	
-	//NO ENERGY BRAIN & CROWN OF HASTE
+	//NO ENERGY BRAIN & CROWN OF HASTE/APOCALYPSE
 	if instance_exists(Player) && (Player.altUltra || (
-	(!Player.skill_got[17] && Player.crown == 4)
+	(!Player.skill_got[17] && (Player.crown == 4 || Player.crown == 28))
 	&& instance_exists(UltraIcon)))
 	{
 		ultra_name[59] = "PATH OF DESTRUCTION"
@@ -497,7 +497,7 @@ function scrUltras() {
 	    ultra_tips[69] = "guardian"
     
 	    ultra_name[70] = "DESCENT"
-	    ultra_text[70] = "INSTEAD OF HEALING YOUR ACTIVE#GIVES AMMO FOR YOUR PRIMARY#AT THE COST OF HEALTH#THRONEBUTT DOUBLES THE AMMO"
+	    ultra_text[70] = "INSTEAD OF HEALING YOUR ACTIVE#GIVES AMMO FOR YOUR PRIMARY#AT THE COST OF HEALTH#THRONE BUTT DOUBLES THE AMMO"
 	    ultra_tips[70] = "emo style"
     
 	    ultra_name[71] = "TRANQUILITY"
@@ -560,13 +560,18 @@ function scrUltras() {
 
 	    //BUSINESSHOG 
 	    ultra_name[77] = "PROSPERITY"
-	    ultra_text[77] = "ENEMIES DROP MORE RADS#HIGHER RAD MAXIMUM"
+	    ultra_text[77] = "ENEMIES DROP MORE RADS#BOSSES DROP ULTRA CHESTS#INSTEAD OF GOLD CHESTS"
 	    ultra_tips[77] = "money everywhere"
 		
-		//Have heavy heart and not thronebutt?
-		ultra_name[77] = "HOARDING THIEF"
-	    ultra_text[77] = "GO TO YV'S CRIB#YOUR SHOP BECOMES AN INVENTORY#PICK UP WEAPONS WHILE#SHOP IS OPEN#AND YOU HOVER OVER A SLOT#TO DROP A WEAPON IN THERE#THRONEBUTT DOUBLES WEAPON SLOTS"
-	    ultra_tips[77] = "money everywhere"
+		//Have heavy heart
+		if instance_exists(Player) && (Player.altUltra || (
+		(Player.skill_got[0])
+		&& instance_exists(UltraIcon)))
+		{
+			ultra_name[77] = "HOARDING THIEF"
+		    ultra_text[77] = "GO TO YV'S CRIB#YOUR SHOP BECOMES A WEAPON WHEEL#SELECT A SLOT TO STORE#YOUR PRIMARY WEAPON#WEAPON CAN BE TAKEN OUT AT ANY TIME#THRONE BUTT DOUBLES INVENTORY SIZE"
+		    ultra_tips[77] = "tax evasion"
+		}
 		
 	    ultra_name[78] = "QUANTITY"
 	    ultra_text[78] = "MORE SHOP ITEMS"
@@ -626,7 +631,7 @@ function scrUltras() {
 		if instance_exists(Player) && (Player.altUltra || (scrHasAnEmptyLife() && instance_exists(UltraIcon)))
 		{
 			ultra_name[87] = "IMMORTAL POLICE"
-		    ultra_text[87] = "REPLACE PORTAL STRIKE WITH REVIVE#REVIVE USES PORTAL STRIKE AMMO#LOWER MAXIMUM PORTALSTRIKE AMMO BY 1#THRONEBUTT REVIVES YOU AT FULL HP#INSTEAD OF 1HP#PICKING UP PORTAL STRIKE AMMO#TRIGGERS BLAST ARMOUR"
+		    ultra_text[87] = "REPLACE PORTAL STRIKE WITH REVIVE#REVIVE USES PORTAL STRIKE AMMO#LOWER MAXIMUM PORTALSTRIKE AMMO BY 1#THRONE BUTT REVIVES YOU AT FULL HP#INSTEAD OF 1HP#PICKING UP PORTAL STRIKE AMMO#TRIGGERS BLAST ARMOUR"
 		    ultra_tips[87] = "rogue freak"
 		}
     
@@ -678,10 +683,20 @@ function scrUltras() {
 	    ultra_name[95] = "BURNING HOT"
 	    ultra_text[95] = "MORE FLAME DAMAGE#FIRE HOMES#FIRE TRAIL"
 	    ultra_tips[95] = "spicy"
-    
+		
 	    ultra_name[96] = "THUNDER BOMB"
 	    ultra_text[96] = "OCCASIONALLY PRODUCE LIGHTNING##WHEN USING LIGHTNING WEAPONS:#GAIN EXPLOSIVE AMMO##WHEN USING KRAKEN WEAPONS:#GAIN ENERGY AMMO"
 	    ultra_tips[96] = "you gain explosive ammo#when using a lightning weapon#you gain energy ammo#when using a kraken weapon"
+		
+		//CROWN OF REINCARNATION/FREEDOM
+		if instance_exists(Player) && (Player.altUltra || (
+		(Player.crown == 11 || Player.crown == 25)
+		&& instance_exists(UltraIcon)))
+		{
+			ultra_name[96] = "AIR LORD"
+		    ultra_text[96] = "YOUR ACTIVE CHANGES INTO#WIND PUSH#WIND PUSHES PROJECTILES AND ENEMIES#ENEMIES HITTING A WALL TAKE MORE DAMAGE#THRONE BUTT MAKES THE WIND STRONGER"
+		    ultra_tips[96] = "blow"
+		}
     
 
 	//MUTATION SMITH 
@@ -689,6 +704,7 @@ function scrUltras() {
 	ultra_text[97] = "EVEN BETTER WEAPON#SPECIFIC MUTATIONS"
 	ultra_tips[97] = "delicacy"
 	
+	//No weapon specific mutations (except for bolt marrow)
 	if instance_exists(Player) && (Player.altUltra || (!Player.skill_got[13] && !Player.skill_got[16] && !Player.skill_got[17] && !Player.skill_got[21] && !Player.skill_got[14] && instance_exists(UltraIcon)))
 	{
 		ultra_name[97] = "BEEKEEPER"
@@ -697,15 +713,15 @@ function scrUltras() {
 	}
     
 	ultra_name[98] = "PLAGUE DOCTOR"
-	ultra_text[98] = "YOUR ACTIVE CHANGES INTO#INFEST ENEMIES USING RADS#THRONEBUTT DECREASES RAD COST"
+	ultra_text[98] = "YOUR ACTIVE CHANGES INTO#INFEST ENEMIES USING RADS#THRONE BUTT DECREASES RAD COST"
 	ultra_tips[98] = "I am here to heal you"
     
 	ultra_name[99] = "NECROMANCER"
-	ultra_text[99] = "YOUR ACTIVE CHANGES INTO#REVIVE CORPSES INTO ALLY FREAKS#THRONEBUTT INCREASES THE DAMAGE#THEY DEAL"
+	ultra_text[99] = "YOUR ACTIVE CHANGES INTO#REVIVE CORPSES INTO ALLY FREAKS#THRONE BUTT INCREASES THE DAMAGE#THEY DEAL"
 	ultra_tips[99] = "doctor necromancer"
     
 	ultra_name[100] = "SEDATIVES"
-	ultra_text[100] = "YOUR PROJECTILES PUT ENEMIES TO SLEEP#FOR A SHORT MOMENT#THRONEBUTT INCREASES THE SLEEP DURATION"
+	ultra_text[100] = "YOUR PROJECTILES PUT ENEMIES TO SLEEP#FOR A SHORT MOMENT#THRONE BUTT INCREASES THE SLEEP DURATION"
 	ultra_tips[100] = "sleeping enemies don't react#for a moment"
 
 
@@ -727,7 +743,7 @@ function scrUltras() {
 	    ultra_tips[104] = "discipline those projectiles!"
 		
 		//Have any director weapon
-		if instance_exists(Player) && (scrHasDirector() && instance_exists(UltraIcon))
+		if instance_exists(Player) && (Player.altUltra || (scrHasDirector() && instance_exists(UltraIcon)))
 		{
 			ultra_name[104] = "GRUMPY LECTURE"
 		    ultra_text[104] = "ACTIVE COSTS 50 SKILL TO USE#INSTEAD OF UNEQUIPPED AMMO#ACTIVE DEFLECTS & DESTROYS#ALL ENEMY PROJECTILES"

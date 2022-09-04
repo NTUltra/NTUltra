@@ -2,20 +2,37 @@ image_speed=0;
 discount = 1;
 if instance_exists(Player)
 {
+	instance_create(x,y,ShopSelector);
 	if Player.skill_got[5]
 	{
 		discount = 0.8;
 	}
 	if Player.ultra_got[77] && Player.altUltra
 	{
-		instance_create(x,y,ShopWep1);
-		instance_create(x,y,ShopWep2);
-		instance_create(x,y,ShopWep3);
-		instance_create(x,y,ShopWep4);
-		instance_create(x,y,ShopWep5);
-		instance_create(x,y,ShopWep6);
-		instance_create(x,y,ShopWep7);
-		instance_create(x,y,ShopWep8);
+		visible = false;
+		if Player.skill_got[5]
+		{
+			instance_create(x,y,ShopWep1);
+			instance_create(x,y,ShopWep2);
+			instance_create(x,y,ShopWep3);
+			instance_create(x,y,ShopWep4);
+			instance_create(x,y,ShopWep5);
+			instance_create(x,y,ShopWep6);
+			instance_create(x,y,ShopWep7);
+			instance_create(x,y,ShopWep8);
+		}
+		else
+		{
+			instance_create(x,y,ShopWepA);
+			instance_create(x,y,ShopWepB);
+			instance_create(x,y,ShopWepC);
+			instance_create(x,y,ShopWepD);
+			with ShopWep
+			{
+				xx *= 1.2;
+				yy *= 1.2;
+			}
+		}
 	}
 	else
 	{

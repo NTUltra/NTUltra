@@ -12,7 +12,7 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndMutant6Thrn",
-  "duration": 0.0,
+  "duration": 3.539342,
   "parent": {
     "name": "YV",
     "path": "folders/Sounds/Player/YV.yy",

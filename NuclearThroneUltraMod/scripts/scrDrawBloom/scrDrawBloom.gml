@@ -50,6 +50,8 @@ function scrDrawBloom() {
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with PlantSonicBoom
 	draw_sprite_ext(sprite_index,image_index,x,y,1.25,1.25,image_angle,c_white,ba)
+	with ElementorWind
+	draw_sprite_ext(sprite_index,image_index,x,y,1.25,1.25,image_angle,c_white,ba)
 	with HorrorMoney
 	draw_sprite_ext(sprite_index,-1,x,y,1.5,1.5,image_angle,c_white,ba)
 	with PartnerBullet

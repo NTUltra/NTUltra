@@ -28,7 +28,7 @@ function scrFire() {
 		}
 	}
 
-	// ROIDS THRONEBUTT
+	// ROIDS THRONE BUTT
 	//when firing both weapon more chance to giev other weapon ammo
 	if Player.ultra_got[25] && wep == bwep
 	{
@@ -4856,7 +4856,7 @@ function scrFire() {
 			rad += max(0,wep_rad[wep]*0.1);
 		}
     
-	    if Player.ultra_got[96]//ULTRA D ELEMENTOR THUNDER BOMB
+	    if Player.ultra_got[96] && !Player.altUltra//ULTRA D ELEMENTOR THUNDER BOMB
 	    {
     
 	    if scrLightningWeapons(wep) // You are holding a lightning weapon

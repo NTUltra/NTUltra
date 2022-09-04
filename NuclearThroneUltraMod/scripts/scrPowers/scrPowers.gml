@@ -2167,55 +2167,86 @@ function scrPowers() {
 	}
 
 
-	if race==24 && !lockoutElementor//Elementor
+	if race==24
 	{
-		var takePercentage = 0.05;//0.75%
-		if skill_got[5]
+		if ultra_got[96] && altUltra
 		{
-			takePercentage = 0.03;//0.05%
+			if !instance_exists(ElementorWind)
+			{
+				snd_play_2d(sndElementorWind,0.03);
+				var aim = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+				repeat(6+(skill_got[5]*2))
+				{
+					with instance_create(x+random_range(12,-12),y+random_range(12,-12),Dust)
+					{
+						motion_add(aim+random_range(30,-30),4+other.skill_got[5]+random(4));
+						
+					}
+				}
+				with instance_create(x,y,ElementorWind)
+				{
+					motion_add(aim,4);
+					if other.skill_got[5]
+					{
+						dmg ++;
+						speed += 1;
+						projectilePush += 0.2;
+					}
+					image_angle = direction;
+					team = other.team;
+				}
+			}
 		}
-		var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
-		var cost = typ_ammo[wepType]*takePercentage;
-		if (wepType != 0 && ammo[wepType] - cost > 0)
+		else if !lockoutElementor//Elementor
 		{
-			var myMask = mask_index;
-			mask_index=mskWall;
-			var xx;
-			var yy;
-			xx=16*(UberCont.mouse__x div 16);
-			yy=16*(UberCont.mouse__y div 16);
-			if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)>16{
-			    if place_meeting(xx,yy,Floor)&&!place_meeting(xx,yy,Wall)&&/*!place_meeting(xx,yy,projectile)&&*/
-				!place_meeting(xx,yy,hitme)&&!place_meeting(xx,yy,VikingWall)//&&!place_meeting(xx,yy,prop)&&!place_meeting(xx,yy,Sheep)&&!place_meeting(xx,yy,ExplosiveSheep)
-			    {
+			var takePercentage = 0.05;//0.75%
+			if skill_got[5]
+			{
+				takePercentage = 0.03;//0.05%
+			}
+			var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
+			var cost = typ_ammo[wepType]*takePercentage;
+			if (wepType != 0 && ammo[wepType] - cost > 0)
+			{
+				var myMask = mask_index;
+				mask_index=mskWall;
+				var xx;
+				var yy;
+				xx=16*(UberCont.mouse__x div 16);
+				yy=16*(UberCont.mouse__y div 16);
+				if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)>16{
+				    if place_meeting(xx,yy,Floor)&&!place_meeting(xx,yy,Wall)&&/*!place_meeting(xx,yy,projectile)&&*/
+					!place_meeting(xx,yy,hitme)&&!place_meeting(xx,yy,VikingWall)//&&!place_meeting(xx,yy,prop)&&!place_meeting(xx,yy,Sheep)&&!place_meeting(xx,yy,ExplosiveSheep)
+				    {
 
-			    //if place_meeting(xx+16,yy,Wall)||place_meeting(xx-16,yy,Wall)||place_meeting(xx,yy-16,Wall)||place_meeting(xx,yy+16,Wall)
-			    //{
-			    //here check if we don't block a path
-			    snd_play_2d(sndStatueHurt);
+				    //if place_meeting(xx+16,yy,Wall)||place_meeting(xx-16,yy,Wall)||place_meeting(xx,yy-16,Wall)||place_meeting(xx,yy+16,Wall)
+				    //{
+				    //here check if we don't block a path
+				    snd_play_2d(sndStatueHurt);
     
-			    with instance_create(xx,yy,VikingWall)
-			    alarm[0]=15;
+				    with instance_create(xx,yy,VikingWall)
+				    alarm[0]=15;
 					
-				ammo[wepType] =  ammo[wepType] - cost;
+					ammo[wepType] =  ammo[wepType] - cost;
 
-			    //}
-			    }
+				    //}
+				    }
     
-			    //instance_create(xx,yy,Wall);
-			    }
-			mask_index=myMask;
-		}
-		else
-		{
-			lockoutElementor = true;
-			snd_play_2d(snd_lowa,0,true,false,10);
-			snd_play(sndEmpty)
-			dir = instance_create(x,y,PopupText)
-			dir.mytext = "NOT ENOUGH AMMO";
-			dir.theColour=c_red;
-			drawempty = 30
-			BackCont.shake += 5;
+				    //instance_create(xx,yy,Wall);
+				    }
+				mask_index=myMask;
+			}
+			else
+			{
+				lockoutElementor = true;
+				snd_play_2d(snd_lowa,0,true,false,10);
+				snd_play(sndEmpty)
+				dir = instance_create(x,y,PopupText)
+				dir.mytext = "NOT ENOUGH AMMO";
+				dir.theColour=c_red;
+				drawempty = 30
+				BackCont.shake += 5;
+			}
 		}
 	}
 
@@ -2283,7 +2314,7 @@ function scrPowers() {
 		{
 			instance_create(x+irandom(8)-4,y+irandom(8)-4,Smoke);
 		}
-		if skill_got[5]==1//THRONEBUTT
+		if skill_got[5]==1//THRONE BUTT
 		{//Normal movement speed
 			//spr_walk = sprMutant9Thronebutt;
 
@@ -2569,7 +2600,7 @@ function scrPowers() {
 		spr_walk = sprMutant9DWalk;
 	}
 	}
-	if skill_got[5]//THRONEBUTT
+	if skill_got[5]//THRONE BUTT
 	{
 	        if skill_got[2]==1//extra feet
 	        {

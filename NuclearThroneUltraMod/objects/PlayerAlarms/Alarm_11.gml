@@ -2,7 +2,7 @@
 if instance_exists(enemy)
 with Player
 {
-	if ultra_got[96]//ELEMENTOR lightning ultra
+	if ultra_got[96] && !altUltra//ELEMENTOR lightning ultra
 	{
 		if random(10)<6 && point_distance(x,y,instance_nearest(x,y,enemy).x,instance_nearest(x,y,enemy).y)<300 {//constant sparks annoy me so only if enemy is close
 			snd_play(choose(sndSpark1,sndSpark2),0.1);

@@ -91,7 +91,7 @@ else if skill == 43 && Player.skill_got[19]
 	{
 		altUltra = true;
 		ultra_name[43] = "SNIPER EYE"
-		ultra_text[43] = "REPLACE YOUR ACTIVE WITH A SNIPER EYE#THE EYE BREAKS WALLS#PIERCES, STUNS AND DAMAGES ENEMIES#DAMAGE INCREASES EACH PIERCE#MORE POWERFULL#THE LONGER YOU WAIT BETWEEN SHOTS#POWER SCALES FASTER#IF YOU HAVE THRONEBUTT"
+		ultra_text[43] = "REPLACE YOUR ACTIVE WITH A SNIPER EYE#THE EYE BREAKS WALLS#PIERCES, STUNS AND DAMAGES ENEMIES#DAMAGE INCREASES EACH PIERCE#MORE POWERFULL#THE LONGER YOU WAIT BETWEEN SHOTS#POWER SCALES FASTER#IF YOU HAVE THRONE BUTT"
 		ultra_tips[43] = "proper eyesight"
 	}
 }
@@ -112,7 +112,7 @@ else if skill == 51 && !Player.skill_got[2] && !Player.skill_got[8]
 		altUltra = true;
 		sheepFakeouts = 3 + skill_got[5];	
 		ultra_name[51] = "HYPNOTIZE"
-		ultra_text[51] = "ENEMIES REACT AND MOVE SLOWER##ACTIVE CHANGES INTO HYPNOSIS#HYPNOSIS RE-ACTIVATES YOUR PASSIVE#CAN BE USED 3 TIMES EACH AREA#THRONEBUTT INCREASES USES TO 4"
+		ultra_text[51] = "ENEMIES REACT AND MOVE SLOWER##ACTIVE CHANGES INTO HYPNOSIS#HYPNOSIS RE-ACTIVATES YOUR PASSIVE#CAN BE USED 3 TIMES EACH AREA#THRONE BUTT INCREASES USES TO 4"
 		ultra_tips[51] = "no one expects a sheep to carry a gun"
 	}
 }
@@ -121,19 +121,19 @@ else if skill == 55 && (Player.skill_got[13] || Player.skill_got[34]) && !Player
 	with Player
 	{
 		altUltra = true;
-		ultra_name[59] = "PATH OF DESTRUCTION"
-		ultra_text[59] = "EVERYWHERE YOU GO#YOU LEAVE BEHIND A TRAIL OF#DAMAGING GOOP##PICKUPS FADE FASTER#FADED PICKUPS REROLL INTO OTHER PICKUPS#PICKUPS CAN FADE/REROLL TWICE"
-		ultra_tips[59] = "always positive"
+		ultra_name[55] = "INCONSISTENT INCOMPATABILITY"
+		ultra_text[55] = "ALL WEAPONS ARE FULLY AUTOMATIC#YOU NO LONGER THROW WEAPONS#INSTEAD YOUR ACTIVE FIRES YOUR WEAPON#FROM THE ORIGIN OF YOUR CROSSHAIR";
+		ultra_tips[55] = "how does it do that"
 	}
 }
-else if skill == 59 && (!Player.skill_got[17] && Player.crown == 4)
+else if skill == 59 && (!Player.skill_got[17] && (Player.crown == 4 || Player.crown == 28))
 {
 	with Player
 	{
 		altUltra = true;
-		ultra_name[55] = "INCONSISTENT INCOMPATABILITY"
-	    ultra_text[55] = "YOU NO LONGER THROW WEAPONS#INSTEAD YOUR ACTIVE FIRES YOUR WEAPON#FROM THE ORIGIN OF YOUR CROSSHAIR";
-	    ultra_tips[55] = "how does it do that"
+		ultra_name[59] = "PATH OF DESTRUCTION"
+		ultra_text[59] = "EVERYWHERE YOU GO#YOU LEAVE BEHIND A TRAIL OF#DAMAGING GOOP##PICKUPS FADE FASTER#FADED PICKUPS REROLL INTO OTHER PICKUPS#PICKUPS CAN FADE/REROLL TWICE"
+		ultra_tips[59] = "always positive"
 	}
 }
 else if skill == 82
@@ -151,6 +151,16 @@ else if skill == 92 && Player.wep_type[Player.wep] == 3 && Player.wep_type[Playe
 		ultra_name[92] = "SPIKE BALL"
 		ultra_text[92] = "NORMAL CONTROLS#EMIT SPLINTERS INSTEAD OF GASS#ALL SPLINTERS ARE GASSEOUS"
 		ultra_tips[92] = "porkupine"
+	}
+}
+else if skill == 96 && (Player.crown == 11 || Player.crown == 25)
+{
+	with Player
+	{
+		altUltra = true;
+		ultra_name[96] = "AIR LORD"
+		ultra_text[96] = "YOUR ACTIVE CHANGES INTO#WIND PUSH#WIND PUSHES PROJECTILES AND ENEMIES#ENEMIES HITTING A WALL TAKE MORE DAMAGE#THRONE BUTT MAKES THE WIND STRONGER"
+		ultra_tips[96] = "blow"
 	}
 }
 else if skill == 106//Hands secret ultras
@@ -325,14 +335,24 @@ else if skill == 72 && ((Player.maxhealth < 8 && UberCont.opt_gamemode != 9) || 
 		ultra_tips[72] = "right back at ya"
 	}
 }
-else if skill == 77
+else if skill == 77 && Player.skill_got[0]
 {
 	with Player
 	{
+		area = 104;
+		with MusCont
+		{
+			audio_stop_sound(song);
+			song = mus107;//Don't play this as we are sneaking
+			amb = amb100;
+			snd_loop(amb);
+			audio_sound_gain(amb, max(0, sqrt(UberCont.opt_ambvol)), 0);
+		}
+		visitedCrib = true;
 		altUltra = true;
 		ultra_name[77] = "HOARDING THIEF"
-	    ultra_text[77] = "GO TO YV'S CRIB#YOUR SHOP BECOMES AN INVENTORY#PICK UP WEAPONS WHILE#SHOP IS OPEN#AND YOU HOVER OVER A SLOT#TO DROP A WEAPON IN THERE#THRONEBUTT DOUBLES WEAPON SLOTS"
-	    ultra_tips[77] = "money everywhere"
+		ultra_text[77] = "GO TO YV'S CRIB#YOUR SHOP BECOMES A WEAPON WHEEL#SELECT A SLOT TO STORE#YOUR PRIMARY WEAPON#WEAPON CAN BE TAKEN OUT AT ANY TIME#THRONE BUTT DOUBLES INVENTORY SIZE"
+		ultra_tips[77] = "tax evasion"
 	}
 }
 else if skill = 85//ROGUE SUPER PORTAL STRIKE
@@ -351,7 +371,7 @@ else if skill == 87 && scrHasAnEmptyLife()
 	{
 		altUltra = true;
 		ultra_name[87] = "IMMORTAL POLICE"
-		ultra_text[87] = "REPLACE PORTAL STRIKE WITH REVIVE#REVIVE USES PORTAL STRIKE AMMO#LOWER MAXIMUM PORTALSTRIKE AMMO BY 1#THRONEBUTT REVIVES YOU AT FULL HP#INSTEAD OF 1HP#PICKING UP PORTAL STRIKE AMMO#TRIGGERS BLAST ARMOUR"
+		ultra_text[87] = "REPLACE PORTAL STRIKE WITH REVIVE#REVIVE USES PORTAL STRIKE AMMO#LOWER MAXIMUM PORTALSTRIKE AMMO BY 1#THRONE BUTT REVIVES YOU AT FULL HP#INSTEAD OF 1HP#PICKING UP PORTAL STRIKE AMMO#TRIGGERS BLAST ARMOUR"
 		ultra_tips[87] = "rogue freak"
 		rogueammomax --;
 		rogueammo = min(rogueammomax,rogueammo);

@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskUltraShopMenuArmour",
     "path": "sprites/mskUltraShopMenuArmour/mskUltraShopMenuArmour.yy",

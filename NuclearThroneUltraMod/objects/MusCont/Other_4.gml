@@ -168,18 +168,18 @@ if oldarea != area || area == 0 or !audio_is_playing(song) or audio_is_playing(m
 
         amb = amb102;
     }
-    if area = 103 || area = 104 {
+    if area == 103
+	{
 
         song = mus103;
 
         amb = amb100;
     }
 
-    if area = 104 {
+    if area == 104 {
         song = mus107;
 
         amb = amb100;
-
     }
 
     if area = 106 //inverted scrap

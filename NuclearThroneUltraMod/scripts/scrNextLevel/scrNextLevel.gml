@@ -515,14 +515,13 @@ function scrNextLevel() {
 		if level>=10
 		{
 		    if (visitedCrib==false)
-		    {
-		    area=104;
-		
-		    visitedCrib=true;
-			if crown == 24
-				hard += 1;
-			else
-				hard -= 1;
+			{
+			    area = 104;
+			    visitedCrib = true;
+				if crown == 24
+					hard += 1;
+				else
+					hard -= 1;
 		    }
 		}
 	}

@@ -213,7 +213,7 @@ function scrRaces() {
 	race_acti[15] = "TELEPORT"
 	race_butt[15] = "EXPLOSIVE TELEPORTATION"
 	//race_back[15] = "SHORT IMMUNITY TO CONTACT DAMAGE#AFTER TELEPORTING";
-	race_lock[15] = "TAKE CRYSTAL'S THRONEBUTT"
+	race_lock[15] = "TAKE CRYSTAL'S THRONE BUTT"
 	race_have[15] = 0
 	race_swep[15] = 19//laser pistol
 	race_bskin[15] = 0
@@ -385,7 +385,7 @@ function scrRaces() {
 	race_bskin[27] = 0
 	race_cskin[27] = 0
 	race_bskin_lock[27] = "SLAP#THE PURPLE DRAGON#TO DEATH#(KILL WITH ACTIVE)"
-	race_cskin_lock[27] = "SUCKERPUNCH#THREE IDPD VANS#INTO OBLIVION#IN A SINGLE RUN#(KILL WITH ACTIVE&THRONEBUTT)"
+	race_cskin_lock[27] = "SUCKERPUNCH#THREE IDPD VANS#INTO OBLIVION#IN A SINGLE RUN#(KILL WITH ACTIVE&THRONE BUTT)"
 
 
 	racemax = 27;

@@ -15,5 +15,5 @@ function GetPlayerMaxRad(){
 		multiplier *= 0.2;//0.45;
 		return level*multiplier;
 	}
-	return (level*multiplier)+(300*ultra_got[77])+(600*ultra_got[83]);
+	return (level*multiplier) + (600*ultra_got[83]);
 }

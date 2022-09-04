@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskShopMod",
     "path": "sprites/mskShopMod/mskShopMod.yy",
