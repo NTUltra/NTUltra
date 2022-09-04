@@ -41,6 +41,10 @@ if target > 0 {
 		//cross Bullets from guy
 		crossAmmo = crossMaxAmmo;
 		event_user(5);
+		if ran > 25
+		{
+			rotationSpeed *= -1;
+		}
 	}
 	if ran < 10
 	{

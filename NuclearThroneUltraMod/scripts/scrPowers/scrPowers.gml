@@ -663,9 +663,13 @@ function scrPowers() {
 				if skill_got[5]
 					multiply -= 0.5;
 				if (ultra_got[72] && altUltra)
-					multiply -= 1;
+				{
+					multiply -= 0.7;
+					if skill_got[5]
+						multiply += 0.1;
+				}
 				else if my_health >= maxhealth
-					multiply -= 1.25;
+					multiply -= 0.75;
 				multiply = max(0.2,multiply);
 				var cost = round(typ_ammo[wep_type[wep]]*multiply);
 			    if ammo[wep_type[wep]]-cost >= 0

@@ -110,9 +110,9 @@ else if skill == 51 && !Player.skill_got[2] && !Player.skill_got[8]
 	with Player
 	{
 		altUltra = true;
-		sheepFakeouts = 3 + skill_got[5];	
+		sheepFakeouts = 3 + (skill_got[5] * 2);
 		ultra_name[51] = "HYPNOTIZE"
-		ultra_text[51] = "ENEMIES REACT AND MOVE SLOWER##ACTIVE CHANGES INTO HYPNOSIS#HYPNOSIS RE-ACTIVATES YOUR PASSIVE#CAN BE USED 3 TIMES EACH AREA#THRONE BUTT INCREASES USES TO 4"
+		ultra_text[51] = "ENEMIES REACT AND MOVE SLOWER##ACTIVE CHANGES INTO HYPNOSIS#HYPNOSIS RE-ACTIVATES YOUR PASSIVE#CAN BE USED 3 TIMES EACH AREA#THRONE BUTT INCREASES USES TO 5"
 		ultra_tips[51] = "no one expects a sheep to carry a gun"
 	}
 }

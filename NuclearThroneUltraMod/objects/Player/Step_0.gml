@@ -1767,13 +1767,11 @@ if race=18
         }
         
 	    //GET HURT when flying too long unless acent ultra D
-	    if ( ( !place_meeting(x,y,Floor) || flying>0 || mask_index=mskPickupThroughWall || place_meeting(x,y,WallHitMe) )  && !instance_exists(GenCont) && !instance_exists(LevCont) && (ultra_got[72]==0 && !altUltra) )//NOT ASCND ULTRA
+	    if ( ( !place_meeting(x,y,Floor) || flying>0 || mask_index=mskPickupThroughWall || place_meeting(x,y,WallHitMe) )  && !instance_exists(GenCont) && !instance_exists(LevCont) && !(ultra_got[72] && !altUltra) )//NOT ASCND ULTRA
 	    {
 		    //var wall = instance_nearest(x,y,Wall);
 		    var ground = instance_nearest(x,y,Floor);
 		    motion_add(point_direction(x,y,ground.x+16,ground.y+16),0.6);
-
-    
 		    flyduration++
 	    }
 	    else

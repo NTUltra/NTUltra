@@ -22,7 +22,7 @@ with other
 {
     if object_index!=Car
     {
-	my_health-=(sp-1)*other.dmg;
+	my_health-=round((sp-1)*other.dmg);
     sprite_index = spr_hurt                                 //2*1=2*p<<ULTRA
     image_index = 0
     motion_add(other.image_angle,sp*3);

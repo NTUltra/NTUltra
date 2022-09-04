@@ -1501,19 +1501,19 @@ function scrFire2() {
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Yoyo)
-	{motion_add(aimDirection+10+(random(10)-5)*other.accuracy,6)
+	{motion_add(aimDirection+10+(random(10)-5)*other.accuracy,7)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Yoyo)
-	{motion_add(aimDirection-10+(random(10)-5)*other.accuracy,6)
+	{motion_add(aimDirection-10+(random(10)-5)*other.accuracy,7)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Yoyo)
-	{motion_add(aimDirection+20+(random(10)-5)*other.accuracy,6)
+	{motion_add(aimDirection+20+(random(10)-5)*other.accuracy,7)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Yoyo)
-	{motion_add(aimDirection-20+(random(10)-5)*other.accuracy,6)
+	{motion_add(aimDirection-20+(random(10)-5)*other.accuracy,7)
 	image_angle = direction
 	team = other.team}
 

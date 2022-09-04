@@ -317,7 +317,7 @@ switch (UberCont.crownVaultChallenge)
 		i++;
 		wave[i] = {
 			obj: BigBadBat,
-			time: 390,
+			time: 300,
 		};
 		i++;
 		repeat(4)
@@ -458,7 +458,7 @@ switch (UberCont.crownVaultChallenge)
 		};
 		wave[i] = {
 			obj: BuffGator,
-			time: 200,
+			time: 130,
 		};
 		i++;
 		repeat(4)

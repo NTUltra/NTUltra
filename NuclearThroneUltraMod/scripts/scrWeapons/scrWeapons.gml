@@ -728,7 +728,7 @@ function scrWeapons() {
 	wep_load[65] = 3
 	wep_cost[65] = 4
 	wep_sprt[65] = sprHyperPopRifle
-	wep_area[65] = 9
+	wep_area[65] = 8
 	wep_text[65] = "hyper pop time"
 	wep_swap[65] = sndSwapMachinegun
 	wep_rad[65] = 0;
@@ -2785,7 +2785,7 @@ function scrWeapons() {
 	wep_load[252] = 12
 	wep_cost[252] = 6
 	wep_sprt[252] = sprSuperYoyoGun
-	wep_area[252] = 8
+	wep_area[252] = 7
 	wep_text[252] = "cutting edge technology"
 	wep_swap[252] = sndSwapBow
 	wep_rad[252] = 0;
@@ -4633,7 +4633,7 @@ function scrWeapons() {
 	wep_load[418] = 26
 	wep_cost[418] = 8
 	wep_sprt[418] = sprSuperSpiralYoyoGun
-	wep_area[418] = 9
+	wep_area[418] = 8
 	wep_text[418] = ""
 	wep_swap[418] = sndSwapBow
 	wep_rad[418] = 0;
@@ -4688,7 +4688,7 @@ function scrWeapons() {
 	wep_load[423] = 5
 	wep_cost[423] = 1
 	wep_sprt[423] = sprInfester
-	wep_area[423] = 14
+	wep_area[423] = 16
 	wep_text[423] = ""
 	wep_swap[423] = sndSwapBow
 	wep_rad[423] = 0;
@@ -5150,7 +5150,7 @@ function scrWeapons() {
 	wep_load[465] = 6
 	wep_cost[465] = 3
 	wep_sprt[465] = sprHeavyCuberRevolver
-	wep_area[465] = 21
+	wep_area[465] = 18
 	wep_text[465] = "phase through walls"
 	wep_swap[465] = sndSwapPistol
 	wep_rad[465] = 0;
@@ -5161,7 +5161,7 @@ function scrWeapons() {
 	wep_load[466] = 3
 	wep_cost[466] = 3
 	wep_sprt[466] = sprHeavyCuberRifle
-	wep_area[466] = 25
+	wep_area[466] = 21
 	wep_text[466] = "square bullets"
 	wep_swap[466] = sndSwapPistol
 	wep_rad[466] = 0;

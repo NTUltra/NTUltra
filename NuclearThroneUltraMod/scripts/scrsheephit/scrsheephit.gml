@@ -11,7 +11,7 @@ function scrSheepHit(){
 			//NOW IF INSOMNIA GIVE ALL THE BADBOYS SOME TIME AGAIN put em too sleep
 			if skill_got[29]//Insomnia
 			{
-				if !(ultra_got[51] && altUltra) || sheepFakeouts == 3 + skill_got[5]
+				if !(ultra_got[51] && altUltra) || sheepFakeouts == 3 + (skill_got[5] * 2)
 				{
 					with enemy
 					{

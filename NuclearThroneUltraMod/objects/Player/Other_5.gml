@@ -45,7 +45,7 @@ if race == 27 && canHeal
 }
 if ultra_got[51] && altUltra
 {
-	sheepFakeouts = 3 + skill_got[5];	
+	sheepFakeouts = 3 + (skill_got[5] * 2);
 }
 ///at the end of a level stuff
 if patience>0||(ultra_got[0]=1 && !altUltra)
