@@ -41,7 +41,7 @@ else if skill == 39 && (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUl
 {
 	sprite_index = sprBigRebel;
 }
-else if skill == 43 && Player.skill_got[19]
+else if skill == 43 && Player.skill_got[19] && Player.skill_got[17]
 {
 	sprite_index = sprSniperEye;
 }

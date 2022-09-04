@@ -9,6 +9,7 @@ if instance_exists(Corpse)
 				instance_destroy(id,false);
 				with instance_create(x,y,InvertedFreak)
 				{
+					existTime = 30;
 					raddrop = 0;
 				}
 			    with instance_create(x,y,ReviveFX)

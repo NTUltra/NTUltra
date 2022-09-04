@@ -7,6 +7,7 @@ if instance_exists(Player)
 		var n = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,hitme);
 		if n != noone && n.team != other.team 
 		&& point_distance(UberCont.mouse__x,UberCont.mouse__y,n.x,n.y) < 48
+		&& !collision_line(x,y,n.x,n.y,Wall,false,false) 
 		{
 			image_angle = point_direction(x,y,n.x,n.y);	
 		}

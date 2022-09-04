@@ -4,6 +4,7 @@ typ = 1
 ShotgunShouldersType();
 bullets=16;
 dmg = 10;
+pSpeed = 8;
 alarm[1] = 2;
 if instance_exists(Player)
 {

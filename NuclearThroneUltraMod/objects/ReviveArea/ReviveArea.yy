@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "mskReviveArea",
     "path": "sprites/mskReviveArea/mskReviveArea.yy",

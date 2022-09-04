@@ -10,6 +10,7 @@ if instance_exists(Corpse)
 				instance_destroy(id,false);
 				with instance_create(x,y,Freak)
 				{
+					existTime = 30;
 					raddrop = 0;
 				}
 		    }

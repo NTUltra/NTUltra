@@ -1,5 +1,5 @@
 event_inherited()
-scrDrop(100,0)
+scrDrop(70,0)
 snd_play(sndExplosion)
 instance_create(x,y,Explosion)
 with myCorpse

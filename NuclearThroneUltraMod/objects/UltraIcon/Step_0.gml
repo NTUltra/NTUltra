@@ -85,7 +85,7 @@ else if skill == 20 && Player.crown == 23 && Player.skill_got[2]
 		maxSpeed += 6;
 	}
 }
-else if skill == 43 && Player.skill_got[19]
+else if skill == 43 && Player.skill_got[19] && Player.skill_got[17]
 {
 	with Player
 	{

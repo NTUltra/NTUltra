@@ -297,8 +297,8 @@ function scrUltras() {
 	ultra_text[43] = "ENEMY AND YOUR PROJECTILES#HOME IN ON YOUR MARKER"
 	ultra_tips[43] = "friendly fire?"
 	
-	//Bullet weapon? two lasers? not sure man no melee? bullet & laser weapon? eagle eyes? euphoria? I like eagle eyes
-	if instance_exists(Player) && (Player.altUltra || (Player.skill_got[19] && instance_exists(UltraIcon)))
+	//Eagle eyes and energy brain results in laser eye duh
+	if instance_exists(Player) && (Player.altUltra || (Player.skill_got[19] && Player.skill_got[17] && instance_exists(UltraIcon)))
 	{
 		ultra_name[43] = "SNIPER EYE"
 		ultra_text[43] = "REPLACE YOUR ACTIVE WITH A SNIPER EYE#THE EYE BREAKS WALLS#PIERCES, STUNS AND DAMAGES ENEMIES#DAMAGE INCREASES EACH PIERCE#MORE POWERFULL#THE LONGER YOU WAIT BETWEEN SHOTS#POWER SCALES FASTER#IF YOU HAVE THRONE BUTT"

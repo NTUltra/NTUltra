@@ -1,5 +1,12 @@
 if instance_exists(Player)
 {
+	with Player
+	{
+		portalstrikesusedthislevel++;
+			if portalstrikesusedthislevel>=8
+				scrUnlockCSkin(22,"FOR USING EIGHT PORTAL STRIKES#IN ONE AREA",0);
+	}
+	
 	if (Player.ultra_got[88])
 	{
 		Player.rad -= 95//Also in scrPowers

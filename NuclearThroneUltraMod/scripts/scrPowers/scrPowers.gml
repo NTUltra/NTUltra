@@ -383,9 +383,7 @@ function scrPowers() {
 	{
 		//if useRad Ammo taken in portalstrike destroy
 		//	rad -= radcost;
-		portalstrikesusedthislevel++;
-		if portalstrikesusedthislevel>=8
-		scrUnlockCSkin(22,"FOR USING EIGHT PORTAL STRIKES#IN ONE LEVEL",0);
+		
 
 		with instance_create(UberCont.mouse__x,UberCont.mouse__y,PortalStrike)
 		{
@@ -1324,7 +1322,7 @@ function scrPowers() {
 		canrebel = 1
 		if ammoRebel
 		{
-			ammo[wep_type[wep]] -= typ_ammo[wep_type[wep]]*2;
+			ammo[wep_type[wep]] -= typ_ammo[wep_type[wep]]*1.5;
 		}
 		else
 		{
@@ -1510,13 +1508,14 @@ function scrPowers() {
 					sprite_index = sprHunterEyeSniperA;
 				image_angle = aimDirection;	
 			}
+			var he = round(hunterEye)
 			with instance_create(x+(right*2),y+0.5,HunterSniperEye)
 			{
 				image_angle = aimDirection;
-				dmg = clamp(round(other.hunterEye*0.25),3,50);
-				image_yscale = clamp(other.hunterEye*0.03,1,5);
-				confuseTime = clamp(other.hunterEye*0.2,4,40);
-				var addTime = clamp(floor(other.hunterEye*0.025),0,5);
+				dmg = clamp(round(he*0.25),3,50);
+				image_yscale = clamp(he*0.015,0.5,2.5);
+				confuseTime = clamp(he*0.2,4,40);
+				var addTime = clamp(floor(he*0.025),0,5);
 				alarm[1] += addTime;
 				alarm[2] += addTime;
 				team = other.team;
@@ -2188,9 +2187,9 @@ function scrPowers() {
 					motion_add(aim,4);
 					if other.skill_got[5]
 					{
-						dmg ++;
+						dmg += 1;
 						speed += 1;
-						projectilePush += 0.2;
+						projectilePush += 0.19;
 					}
 					image_angle = direction;
 					team = other.team;
@@ -2199,10 +2198,10 @@ function scrPowers() {
 		}
 		else if !lockoutElementor//Elementor
 		{
-			var takePercentage = 0.05;//0.75%
+			var takePercentage = 0.045;//0.75%
 			if skill_got[5]
 			{
-				takePercentage = 0.03;//0.05%
+				takePercentage = 0.035;//0.05%
 			}
 			var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
 			var cost = typ_ammo[wepType]*takePercentage;
@@ -2214,26 +2213,24 @@ function scrPowers() {
 				var yy;
 				xx=16*(UberCont.mouse__x div 16);
 				yy=16*(UberCont.mouse__y div 16);
-				if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)>16{
-				    if place_meeting(xx,yy,Floor)&&!place_meeting(xx,yy,Wall)&&/*!place_meeting(xx,yy,projectile)&&*/
-					!place_meeting(xx,yy,hitme)&&!place_meeting(xx,yy,VikingWall)//&&!place_meeting(xx,yy,prop)&&!place_meeting(xx,yy,Sheep)&&!place_meeting(xx,yy,ExplosiveSheep)
+				var l = 16;
+				var pd = point_direction(UberCont.mouse__x,UberCont.mouse__y,x,y);
+				while(place_meeting(xx,yy,hitme))
+				{
+					xx=16*((UberCont.mouse__x + lengthdir_x(l,pd)) div 16);
+					yy=16*((UberCont.mouse__y + lengthdir_y(l,pd)) div 16);
+					l += 8;
+				}
+				if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y) > 16 {
+				    if place_meeting(xx,yy,Floor)&&!place_meeting(xx,yy,Wall)&&
+					!place_meeting(xx,yy,VikingWall)
 				    {
-
-				    //if place_meeting(xx+16,yy,Wall)||place_meeting(xx-16,yy,Wall)||place_meeting(xx,yy-16,Wall)||place_meeting(xx,yy+16,Wall)
-				    //{
-				    //here check if we don't block a path
-				    snd_play_2d(sndStatueHurt);
-    
-				    with instance_create(xx,yy,VikingWall)
-				    alarm[0]=15;
-					
-					ammo[wepType] =  ammo[wepType] - cost;
-
-				    //}
+					    snd_play_2d(sndStatueHurt);
+					    with instance_create(xx,yy,VikingWall)
+					    alarm[0]=15;
+						ammo[wepType] =  ammo[wepType] - cost;
 				    }
-    
-				    //instance_create(xx,yy,Wall);
-				    }
+				}
 				mask_index=myMask;
 			}
 			else

@@ -11,6 +11,7 @@ if target > 0 && instance_exists(target)
 		if place_meeting(x+hspeed,y+vspeed,Wall)
 		{
 			snd_play(sndExplosion);
+			Sleep(20);
 			x = xprevious;
 			y = yprevious;
 			other.lerpTime = -1;

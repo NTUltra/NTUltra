@@ -93,7 +93,8 @@ if place_meeting(x,y,Player)
 				other.wepmod2=wepmod2;
 				other.wepmod3=wepmod3;
 				other.wepmod4=wepmod4;
-
+				if curse == 1
+					snd_play(sndCursedReminder);
 				snd_play(snd_thrn);
 
 			    Sleep(100);

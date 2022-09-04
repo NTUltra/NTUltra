@@ -25,13 +25,13 @@ if instance_exists(Player)
 		}
 		else
 		{
-			instance_destroy();
-
-		    with other
-		    {
-				if typ!=0
+			with other
+			{
+				if typ == 0
 					instance_destroy();
-		    }
+				else
+					event_perform(ev_collision,Wall);	
+			}
 		}
 
 	}

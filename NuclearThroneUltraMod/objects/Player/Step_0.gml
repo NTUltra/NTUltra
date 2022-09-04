@@ -1,6 +1,6 @@
 /// @description main
 if ultra_got[43] && altUltra && hunterEye < hunterEyeMax
-	hunterEye += 2;
+	hunterEye += 1.5+(1.5*skill_got[5]);
 if ultra_got[75] && speed < 1
 	alarm[3] = max(alarm[3],2);
 if UberCont.opt_gamemode == 29 || cheatyinfiniteammo //Infinite ammo
