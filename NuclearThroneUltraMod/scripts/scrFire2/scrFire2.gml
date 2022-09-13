@@ -564,7 +564,7 @@ function scrFire2() {
 	{
 	sprite_index=sprAxeSlash;
 	mask_index = mskBigAxeSlash;
-	dmg = 9//25//shovel is 8 sledge = 16
+	dmg = 10//25//shovel is 8 sledge = 16
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2271,7 +2271,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),Slash)
 	{
 	sprite_index=sprGoldenSlash;
-	dmg = 8
+	dmg = 10
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2281,7 +2281,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),Slash)
 	{
 	sprite_index=sprGoldenSlash;
-	dmg = 8
+	dmg = 10
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3

@@ -6,7 +6,7 @@ alarm[1] = aTime+random(10);
 var beamL = x - 20;
 var beamR = x + 20;
 scrTarget();
-if target > -1 && instance_exists(target)
+if target != noone && target > -1 && instance_exists(target)
 {
 	var ran = random(100);
 	badboyBuff = 1;

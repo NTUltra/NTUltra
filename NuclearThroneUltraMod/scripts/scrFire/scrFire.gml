@@ -434,7 +434,7 @@ function scrFire() {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),Slash)
 	{
-	dmg = 8
+	dmg = 10
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -443,7 +443,7 @@ function scrFire() {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),Slash)
 	{
-	dmg = 8
+	dmg = 10
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3

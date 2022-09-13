@@ -77,7 +77,7 @@ function scrEnemyDeathEvent(){
 		
 		if Player.race == 17
 		{
-			scrDrop(0,3);
+			scrDrop(0,2);
 		}
 		if Player.ultra_got[29] && !Player.altUltra//Refined taste
 		{

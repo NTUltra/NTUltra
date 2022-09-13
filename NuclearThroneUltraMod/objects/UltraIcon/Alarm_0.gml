@@ -37,7 +37,9 @@ else if skill == 35 && Player.crown == 12//Crown of inversion
 {
 	sprite_index = sprReverseFocus;	
 }
-else if skill == 39 && (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep]))
+else if skill == 39 && (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep]) || 
+(!Player.skill_got[1] && !Player.skill_got[7] && !Player.skill_got[9]&& !Player.skill_got[25])
+)
 {
 	sprite_index = sprBigRebel;
 }
@@ -53,7 +55,7 @@ else if skill == 51 && !Player.skill_got[2] && !Player.skill_got[8]
 {
 	sprite_index = sprHynotize;
 }
-else if skill == 55 && (Player.skill_got[13] || Player.skill_got[34]) && !Player.skill_got[5]
+else if skill == 55 && (Player.skill_got[13] || Player.skill_got[34] || Player.skill_got[20]) && !Player.skill_got[5]
 {
 	sprite_index = sprInconsistentIncompatability;
 }
@@ -89,11 +91,11 @@ else if skill == 92 && Player.wep_type[Player.wep] == 3 && Player.wep_type[Playe
 {
 	sprite_index = sprSpikedFrog;
 }
-else if skill == 96 && (Player.crown == 11 || Player.crown == 25)
+else if skill == 96 && (Player.crown == 11 || Player.crown == 25 || Player.skill_got[2]) && !Player.skill_got[17]
 {
 	sprite_index = sprAirLord;
 }
-else if skill == 97 && !Player.skill_got[13] && !Player.skill_got[16] && !Player.skill_got[17] && !Player.skill_got[21] && !Player.skill_got[14]
+else if skill == 97 && !Player.skill_got[13] && !Player.skill_got[16] && !Player.skill_got[17] && !Player.skill_got[15] && !Player.skill_got[14]
 {
 	sprite_index = sprBeeKeeper;
 }

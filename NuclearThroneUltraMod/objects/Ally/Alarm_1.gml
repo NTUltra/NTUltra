@@ -13,7 +13,7 @@ else if sprite_index = sprAllyEAppear
 	spr_idle = sprAllyEIdle
 	sprite_index = spr_idle
 }
-alarm[1] = 8+random(5)
+alarm[1] = 8+random(6)
 
 
 if !instance_exists(target)
@@ -38,7 +38,7 @@ if target != noone && target.team != 2 && target.my_health > 0
 		//FIRE
 		snd_play(sndEnemyFire)
 
-		gunangle = point_direction(x,y,target.x,target.y)
+		gunangle = point_direction(x,y,target.x+hspeed,target.y+target.vspeed)
 		wkick = 4
 		with instance_create(x,y,AllyBullet)
 		{

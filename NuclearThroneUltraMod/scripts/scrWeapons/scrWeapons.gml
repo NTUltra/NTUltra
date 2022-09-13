@@ -5719,7 +5719,7 @@ function scrWeapons() {
 	wep_name[517] = "CLUB"
 	wep_type[517] = 0
 	wep_auto[517] = 0
-	wep_load[517] = 31
+	wep_load[517] = 27
 	wep_cost[517] = 0
 	wep_sprt[517] = sprClub
 	wep_area[517] = 3
@@ -5840,7 +5840,7 @@ function scrWeapons() {
 	wep_name[528] = "SHOVEL CRASH"
 	wep_type[528] = 0
 	wep_auto[528] = 0
-	wep_load[528] = 50
+	wep_load[528] = 43
 	wep_cost[528] = 0
 	wep_sprt[528] = sprShovelCrash
 	wep_area[528] = 12//4 originally?
@@ -5918,7 +5918,7 @@ function scrWeapons() {
 	wep_type[535] = 5
 	wep_auto[535] = 0
 	wep_load[535] = 18
-	wep_cost[535] = 2
+	wep_cost[535] = 4
 	wep_sprt[535] = sprLaserCrash
 	wep_area[535] = 9
 	wep_text[535] = "crash blast"
@@ -6566,7 +6566,7 @@ function scrWeapons() {
 	wep_name[594] = "HEAVY CLUB"
 	wep_type[594] = 0
 	wep_auto[594] = 0
-	wep_load[594] = 30
+	wep_load[594] = 28
 	wep_cost[594] = 0
 	wep_sprt[594] = sprHeavyClub
 	wep_area[594] = 8
@@ -6678,7 +6678,7 @@ function scrWeapons() {
 	wep_auto[604] = 0
 	wep_load[604] = 12
 	wep_cost[604] = 0
-	wep_sprt[604] = sprLance
+	wep_sprt[604] = sprSplinterLance
 	wep_area[604] = 14
 	wep_text[604] = ""
 	wep_swap[604] = sndSwapSword
@@ -6698,7 +6698,7 @@ function scrWeapons() {
 	wep_name[606] = "DIRECTOR PLASMA SHOTGUN"
 	wep_type[606] = 5
 	wep_auto[606] = 1
-	wep_load[606] = 31
+	wep_load[606] = 32
 	wep_cost[606] = 7
 	wep_sprt[606] = sprDirectorPlasmaShotgun
 	wep_area[606] = 11

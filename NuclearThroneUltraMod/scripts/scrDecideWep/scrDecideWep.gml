@@ -87,7 +87,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			}
 			//Found a higher option than our result? Take that one
 			if (wep_area[maxValidTierWep] > wep_area[wep] && ( (maxValidTierWep != Player.wep and maxValidTierWep != Player.bwep and maxValidTierWep != Player.cwep) || Player.race == 7/*roids can dual wield*/)
-				&& (random(4) < 3 || Player.race == 8))
+				&& (Player.race == 8 || random(5) < 4))
 			{
 				wep = maxValidTierWep;
 			}

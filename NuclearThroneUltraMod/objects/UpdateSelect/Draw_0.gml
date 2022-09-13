@@ -1,6 +1,6 @@
 draw_text_colour(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-29-32,
 __view_get( e__VW.YView, 0 )-39+Menu.widescreen,
-"[29.110]",c_gray,c_gray,c_gray,c_gray,1);
+"[29.120]",c_gray,c_gray,c_gray,c_gray,1);
 /*
 x = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-24-22*4//-(UberCont.mouse__x-view_xview)*0.7
 y = __view_get( e__VW.YView, 0 )+12

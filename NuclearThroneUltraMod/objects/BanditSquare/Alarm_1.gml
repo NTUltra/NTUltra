@@ -9,15 +9,10 @@ if point_distance(target.x,target.y,x,y) > 32 && point_distance(target.x,target.
 if random(2) < 1 && point_distance(target.x,target.y,x,y) < 180
 {
 gunangle = point_direction(x,y,target.x,target.y)
-snd_play(sndEnemyFire)
-wkick = 4
-with instance_create(x,y,EnemyBullet1Square)
-{
-	motion_add(other.gunangle+random(20)-10,other.pSpeed)
-	image_angle = direction
-	team = other.team
+
+alarm[2] = 2;
+alarm[1] = actTime+3
 }
-alarm[1] = actTime+1}
 else
 {direction = point_direction(x,y,target.x,target.y)+random(180)-90
 speed = 0.4

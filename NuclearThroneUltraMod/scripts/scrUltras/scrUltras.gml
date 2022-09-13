@@ -8,7 +8,7 @@ function scrUltras() {
 	if (instance_exists(Player) && (Player.altUltra || (scrCheckGold(Player.wep_name[Player.wep]) || scrCheckGold(Player.wep_name[Player.bwep]))))
 	{
 		ultra_name[0] = "CASH FLOW"
-		ultra_text[0] = "REPLACE BEAM WITH CASH FLOW#CASH FLOW USES CASH INSTEAD OF RADS#GET 100 CASH EVERY AREA#CASH MAXIMUM IS 500#KILLS GENERATE CASH#(UPGRADES TO BEAM STILL APPLY)##YOU CAN KEEP USING ACTIVE#EVEN WHILE IN DEBT#BUT ACTIVE WILL BE LOCKED UNTILL#OUT OF DEBT AT THE START OF AN AREA"
+		ultra_text[0] = "REPLACE BEAM WITH CASH FLOW#CASH FLOW USES CASH INSTEAD OF RADS#GET 100 CASH EVERY AREA#CASH MAXIMUM IS 500#KILLS GENERATE CASH#(UPGRADES TO BEAM STILL APPLY)##YOU CAN KEEP USING ACTIVE#EVEN WHILE IN DEBT#BUT ACTIVE WILL BE LOCKED UNTIL#OUT OF DEBT AT THE START OF AN AREA"
 		ultra_tips[0] = "C.R.E.A.M."
 	}
 	
@@ -301,7 +301,7 @@ function scrUltras() {
 	if instance_exists(Player) && (Player.altUltra || (Player.skill_got[19] && Player.skill_got[17] && instance_exists(UltraIcon)))
 	{
 		ultra_name[43] = "SNIPER EYE"
-		ultra_text[43] = "REPLACE YOUR ACTIVE WITH A SNIPER EYE#THE EYE BREAKS WALLS#PIERCES, STUNS AND DAMAGES ENEMIES#DAMAGE INCREASES EACH PIERCE#MORE POWERFULL#THE LONGER YOU WAIT BETWEEN SHOTS#POWER SCALES FASTER#IF YOU HAVE THRONE BUTT"
+		ultra_text[43] = "REPLACE YOUR ACTIVE WITH A SNIPER EYE#THE EYE BREAKS WALLS#PIERCES, STUNS AND DAMAGES ENEMIES#DAMAGE INCREASES EACH PIERCE#MORE POWERFUL#THE LONGER YOU WAIT BETWEEN SHOTS#POWER SCALES FASTER#IF YOU HAVE THRONE BUTT"
 		ultra_tips[43] = "proper eyesight"
 	}
 	
@@ -338,7 +338,7 @@ function scrUltras() {
     
 	//SHEEP 
 	ultra_name[49] = "UNSTOPPABLE"
-	ultra_text[49] = "CHANGE CHARGE TO A POWERFULL HYPERDASH#THAT COSTS RADS TO USE#EXTRA FEET INCREASES RANGE#GAMMA GUTS INCREASES DAMAGE#THRONE BUTT INCREASES BOTH"
+	ultra_text[49] = "CHANGE CHARGE TO A POWERFUL HYPERDASH#THAT COSTS RADS TO USE#EXTRA FEET INCREASES RANGE#GAMMA GUTS INCREASES DAMAGE#THRONE BUTT INCREASES BOTH"
 	ultra_tips[49] = "the fluffy blur"
 
 	ultra_name[50] = "JUST A SHEEP"
@@ -383,7 +383,7 @@ function scrUltras() {
 		
 		//Flexible elbows and or long arms
 		if instance_exists(Player) && (Player.altUltra || (
-		(Player.skill_got[13] || Player.skill_got[34]) && !Player.skill_got[5]
+		(Player.skill_got[13] || Player.skill_got[34] || Player.skill_got[20]) && !Player.skill_got[5]
 		&& instance_exists(UltraIcon)))
 		{
 			ultra_name[55] = "INCONSISTENT INCOMPATABILITY"
@@ -690,7 +690,7 @@ function scrUltras() {
 		
 		//CROWN OF REINCARNATION/FREEDOM
 		if instance_exists(Player) && (Player.altUltra || (
-		(Player.crown == 11 || Player.crown == 25)
+		(Player.crown == 11 || Player.crown == 25 || Player.skill_got[2]) && !Player.skill_got[17]
 		&& instance_exists(UltraIcon)))
 		{
 			ultra_name[96] = "AIR LORD"
@@ -705,7 +705,7 @@ function scrUltras() {
 	ultra_tips[97] = "delicacy"
 	
 	//No weapon specific mutations (except for bolt marrow)
-	if instance_exists(Player) && (Player.altUltra || (!Player.skill_got[13] && !Player.skill_got[16] && !Player.skill_got[17] && !Player.skill_got[21] && !Player.skill_got[14] && instance_exists(UltraIcon)))
+	if instance_exists(Player) && (Player.altUltra || (!Player.skill_got[13] && !Player.skill_got[16] && !Player.skill_got[17] && !Player.skill_got[15] && !Player.skill_got[14] && instance_exists(UltraIcon)))
 	{
 		ultra_name[97] = "BEEKEEPER"
 		ultra_text[97] = "SOME RADIATION SPAWNS SWARM BOLTS"

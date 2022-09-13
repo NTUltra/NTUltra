@@ -10,7 +10,6 @@ if target > 0 {
 		if ran < 0.5
 		{
 			circleMode = false
-			debug("circle mode off");
 			walk = actTime + random_range(-4,6);
 		} else if dis < 140 && ran < 4
 		{

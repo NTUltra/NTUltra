@@ -14,7 +14,7 @@ if skill = 0
 		{
 			altUltra = true;
 			ultra_name[0] = "CASH FLOW"
-			ultra_text[0] = "REPLACE BEAM WITH CASH FLOW#CASH FLOW USES CASH INSTEAD OF RADS#GET 100 CASH EVERY AREA#CASH MAXIMUM IS 500#KILLS GENERATE CASH#(UPGRADES TO BEAM STILL APPLY)"
+			ultra_text[0] = "REPLACE BEAM WITH CASH FLOW#CASH FLOW USES CASH INSTEAD OF RADS#GET 100 CASH EVERY AREA#CASH MAXIMUM IS 500#KILLS GENERATE CASH#(UPGRADES TO BEAM STILL APPLY)##YOU CAN KEEP USING ACTIVE#EVEN WHILE IN DEBT#BUT ACTIVE WILL BE LOCKED UNTIL#OUT OF DEBT AT THE START OF AN AREA"
 			ultra_tips[0] = "C.R.E.A.M."
 			cash = maxCash;
 			inDebt = false;
@@ -91,7 +91,7 @@ else if skill == 43 && Player.skill_got[19] && Player.skill_got[17]
 	{
 		altUltra = true;
 		ultra_name[43] = "SNIPER EYE"
-		ultra_text[43] = "REPLACE YOUR ACTIVE WITH A SNIPER EYE#THE EYE BREAKS WALLS#PIERCES, STUNS AND DAMAGES ENEMIES#DAMAGE INCREASES EACH PIERCE#MORE POWERFULL#THE LONGER YOU WAIT BETWEEN SHOTS#POWER SCALES FASTER#IF YOU HAVE THRONE BUTT"
+		ultra_text[43] = "REPLACE YOUR ACTIVE WITH A SNIPER EYE#THE EYE BREAKS WALLS#PIERCES, STUNS AND DAMAGES ENEMIES#DAMAGE INCREASES EACH PIERCE#MORE POWERFUL#THE LONGER YOU WAIT BETWEEN SHOTS#POWER SCALES FASTER#IF YOU HAVE THRONE BUTT"
 		ultra_tips[43] = "proper eyesight"
 	}
 }
@@ -116,7 +116,7 @@ else if skill == 51 && !Player.skill_got[2] && !Player.skill_got[8]
 		ultra_tips[51] = "no one expects a sheep to carry a gun"
 	}
 }
-else if skill == 55 && (Player.skill_got[13] || Player.skill_got[34]) && !Player.skill_got[5]
+else if skill == 55 && (Player.skill_got[13] || Player.skill_got[34] || Player.skill_got[20]) && !Player.skill_got[5]
 {
 	with Player
 	{
@@ -153,7 +153,7 @@ else if skill == 92 && Player.wep_type[Player.wep] == 3 && Player.wep_type[Playe
 		ultra_tips[92] = "porkupine"
 	}
 }
-else if skill == 96 && (Player.crown == 11 || Player.crown == 25)
+else if skill == 96 && (Player.crown == 11 || Player.crown == 25 || Player.skill_got[2]) && !Player.skill_got[17]
 {
 	with Player
 	{
@@ -278,7 +278,8 @@ else if skill == 35 && Player.crown == 12//CHICKEN REVERSE TIME
 		}
 	}
 }
-else if skill == 39 && (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep]))
+else if skill == 39 && (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep]) ||
+(!Player.skill_got[1] && !Player.skill_got[7] && !Player.skill_got[9]&& !Player.skill_got[25]))
 {
 	with Player {
 		altUltra = true;
@@ -399,7 +400,7 @@ else if skill = 97 // MUTATION SMITH WEAPON MUTATOR BETTER WEAPON SPECIFIC MUTAT
 
 	with Player
 	{
-		if !skill_got[13] && !skill_got[16] && !skill_got[17] && !skill_got[21] && !skill_got[14]
+		if !skill_got[13] && !skill_got[16] && !skill_got[17] && !skill_got[15] && !skill_got[14]
 		{
 			//Secret Beekeeper ultra
 			altUltra = true;
