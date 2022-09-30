@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "sndDevastator",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -11,14 +14,10 @@
     "name": "agsfx",
     "path": "audiogroups/agsfx",
   },
-  "soundFile": "snddevastator",
-  "duration": 0.379969,
+  "soundFile": "sndDevastator.wav",
+  "duration": 1.381375,
   "parent": {
     "name": "Bullet",
     "path": "folders/Sounds/Weapons/Bullet.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sndDevastator",
-  "tags": [],
-  "resourceType": "GMSound",
 }

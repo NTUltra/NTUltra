@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprAmmoChestMysteryOpen",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6202f1ff-eed1-4ad1-9007-5fc83deca1b0","path":"sprites/sprAmmoChestMysteryOpen/sprAmmoChestMysteryOpen.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6202f1ff-eed1-4ad1-9007-5fc83deca1b0","path":"sprites/sprAmmoChestMysteryOpen/sprAmmoChestMysteryOpen.yy",},"LayerId":{"name":"e1a5eb4b-5bcb-440b-b004-c71d3cd7d9a4","path":"sprites/sprAmmoChestMysteryOpen/sprAmmoChestMysteryOpen.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprAmmoChestMysteryOpen","path":"sprites/sprAmmoChestMysteryOpen/sprAmmoChestMysteryOpen.yy",},"resourceVersion":"1.0","name":"6202f1ff-eed1-4ad1-9007-5fc83deca1b0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6202f1ff-eed1-4ad1-9007-5fc83deca1b0",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprAmmoChestMysteryOpen","path":"sprites/sprAmmoChestMysteryOpen/sprAmmoChestMysteryOpen.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"c81897f3-289a-45a0-be46-18c307418549","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6202f1ff-eed1-4ad1-9007-5fc83deca1b0","path":"sprites/sprAmmoChestMysteryOpen/sprAmmoChestMysteryOpen.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprAmmoChestMysteryOpen","path":"sprites/sprAmmoChestMysteryOpen/sprAmmoChestMysteryOpen.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e1a5eb4b-5bcb-440b-b004-c71d3cd7d9a4","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e1a5eb4b-5bcb-440b-b004-c71d3cd7d9a4","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Chests",
     "path": "folders/Sprites/Chests.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprAmmoChestMysteryOpen",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

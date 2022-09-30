@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprBloodGlove",
   "bboxMode": 0,
   "collisionKind": 0,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"df567f56-cd36-4e76-a5bb-5e23a25d0fde","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"df567f56-cd36-4e76-a5bb-5e23a25d0fde","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"LayerId":{"name":"4d279552-eb07-4cf7-9367-0cf2a8db17fa","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodGlove","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"resourceVersion":"1.0","name":"df567f56-cd36-4e76-a5bb-5e23a25d0fde","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"da1fc8e9-aa7f-4575-bd45-3d0001c9ec4b","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"da1fc8e9-aa7f-4575-bd45-3d0001c9ec4b","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"LayerId":{"name":"4d279552-eb07-4cf7-9367-0cf2a8db17fa","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodGlove","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"resourceVersion":"1.0","name":"da1fc8e9-aa7f-4575-bd45-3d0001c9ec4b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"15f6a476-63ca-406d-82f1-1b2066554f66","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"15f6a476-63ca-406d-82f1-1b2066554f66","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"LayerId":{"name":"4d279552-eb07-4cf7-9367-0cf2a8db17fa","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodGlove","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"resourceVersion":"1.0","name":"15f6a476-63ca-406d-82f1-1b2066554f66","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"86ad8e23-3153-4688-af1b-8948e4d3c10c","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"86ad8e23-3153-4688-af1b-8948e4d3c10c","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"LayerId":{"name":"4d279552-eb07-4cf7-9367-0cf2a8db17fa","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodGlove","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"resourceVersion":"1.0","name":"86ad8e23-3153-4688-af1b-8948e4d3c10c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8b65375f-884e-48d8-bd55-42dda2253a64","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8b65375f-884e-48d8-bd55-42dda2253a64","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"LayerId":{"name":"4d279552-eb07-4cf7-9367-0cf2a8db17fa","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodGlove","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"resourceVersion":"1.0","name":"8b65375f-884e-48d8-bd55-42dda2253a64","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"701e36b2-2171-4b5f-8256-c6b3386a6375","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"701e36b2-2171-4b5f-8256-c6b3386a6375","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"LayerId":{"name":"4d279552-eb07-4cf7-9367-0cf2a8db17fa","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodGlove","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"resourceVersion":"1.0","name":"701e36b2-2171-4b5f-8256-c6b3386a6375","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"46c80a10-97e1-46ce-be5f-59e61d1018e1","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"46c80a10-97e1-46ce-be5f-59e61d1018e1","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"LayerId":{"name":"4d279552-eb07-4cf7-9367-0cf2a8db17fa","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodGlove","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"resourceVersion":"1.0","name":"46c80a10-97e1-46ce-be5f-59e61d1018e1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"df567f56-cd36-4e76-a5bb-5e23a25d0fde",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"da1fc8e9-aa7f-4575-bd45-3d0001c9ec4b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"15f6a476-63ca-406d-82f1-1b2066554f66",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"86ad8e23-3153-4688-af1b-8948e4d3c10c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8b65375f-884e-48d8-bd55-42dda2253a64",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"701e36b2-2171-4b5f-8256-c6b3386a6375",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"46c80a10-97e1-46ce-be5f-59e61d1018e1",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprBloodGlove","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"d1778cd3-4374-4a31-9b51-8c098addf110","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"df567f56-cd36-4e76-a5bb-5e23a25d0fde","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a3171a72-9a32-494a-b78b-82cee90c9f08","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"da1fc8e9-aa7f-4575-bd45-3d0001c9ec4b","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d31be8f0-c91b-4eb4-b7b4-5904c23b1c8a","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"15f6a476-63ca-406d-82f1-1b2066554f66","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"27c981a1-5534-44f3-aab9-8054aa1fe60c","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8b65375f-884e-48d8-bd55-42dda2253a64","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"1fac62d8-a1cc-4b70-a8ca-85a07f34fb3c","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"701e36b2-2171-4b5f-8256-c6b3386a6375","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e909082f-d4c8-41b1-9e77-5f0e4a6dab41","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"46c80a10-97e1-46ce-be5f-59e61d1018e1","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 3,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprBloodGlove","path":"sprites/sprBloodGlove/sprBloodGlove.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4d279552-eb07-4cf7-9367-0cf2a8db17fa","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4d279552-eb07-4cf7-9367-0cf2a8db17fa","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Custom",
     "path": "folders/Sprites/Weapons/Custom.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprBloodGlove",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

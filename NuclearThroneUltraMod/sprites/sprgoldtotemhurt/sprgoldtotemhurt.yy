@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprGoldTotemHurt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"9d80281e-38a2-4a6f-a594-ceb8dd6bc932","path":"sprites/sprGoldTotemHurt/sprGoldTotemHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9d80281e-38a2-4a6f-a594-ceb8dd6bc932","path":"sprites/sprGoldTotemHurt/sprGoldTotemHurt.yy",},"LayerId":{"name":"c54e5654-07b9-491e-a09d-d9d067aa84de","path":"sprites/sprGoldTotemHurt/sprGoldTotemHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldTotemHurt","path":"sprites/sprGoldTotemHurt/sprGoldTotemHurt.yy",},"resourceVersion":"1.0","name":"9d80281e-38a2-4a6f-a594-ceb8dd6bc932","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"831f0788-e90c-4566-af57-5b22ccb0c298","path":"sprites/sprGoldTotemHurt/sprGoldTotemHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"831f0788-e90c-4566-af57-5b22ccb0c298","path":"sprites/sprGoldTotemHurt/sprGoldTotemHurt.yy",},"LayerId":{"name":"c54e5654-07b9-491e-a09d-d9d067aa84de","path":"sprites/sprGoldTotemHurt/sprGoldTotemHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldTotemHurt","path":"sprites/sprGoldTotemHurt/sprGoldTotemHurt.yy",},"resourceVersion":"1.0","name":"831f0788-e90c-4566-af57-5b22ccb0c298","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9251e39f-79be-49bb-9f1f-f5e62b77d7a2","path":"sprites/sprGoldTotemHurt/sprGoldTotemHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9251e39f-79be-49bb-9f1f-f5e62b77d7a2","path":"sprites/sprGoldTotemHurt/sprGoldTotemHurt.yy",},"LayerId":{"name":"c54e5654-07b9-491e-a09d-d9d067aa84de","path":"sprites/sprGoldTotemHurt/sprGoldTotemHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldTotemHurt","path":"sprites/sprGoldTotemHurt/sprGoldTotemHurt.yy",},"resourceVersion":"1.0","name":"9251e39f-79be-49bb-9f1f-f5e62b77d7a2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9d80281e-38a2-4a6f-a594-ceb8dd6bc932",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"831f0788-e90c-4566-af57-5b22ccb0c298",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9251e39f-79be-49bb-9f1f-f5e62b77d7a2",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprGoldTotemHurt","path":"sprites/sprGoldTotemHurt/sprGoldTotemHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprGoldTotemHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"ef5a157d-595d-4c98-8d85-358c654e3bf0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9d80281e-38a2-4a6f-a594-ceb8dd6bc932","path":"sprites/sprGoldTotemHurt/sprGoldTotemHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"96740721-b8f0-4de7-9c4a-8668b9f471b3","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"831f0788-e90c-4566-af57-5b22ccb0c298","path":"sprites/sprGoldTotemHurt/sprGoldTotemHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ab957ebc-3aab-4c60-b5db-b6a533a163a2","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9251e39f-79be-49bb-9f1f-f5e62b77d7a2","path":"sprites/sprGoldTotemHurt/sprGoldTotemHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 11,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprGoldTotemHurt","path":"sprites/sprGoldTotemHurt/sprGoldTotemHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprGoldTotemHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c54e5654-07b9-491e-a09d-d9d067aa84de","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c54e5654-07b9-491e-a09d-d9d067aa84de","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Totem",
     "path": "folders/Sprites/Enemies/Totem.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprGoldTotemHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprTripleElectroGun",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"52d03bd4-7aba-4ae0-8899-9a1aec9a58b5","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"52d03bd4-7aba-4ae0-8899-9a1aec9a58b5","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"LayerId":{"name":"fd0e06f8-7796-4187-a27d-753af7f6d4b8","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTripleElectroGun","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"resourceVersion":"1.0","name":"52d03bd4-7aba-4ae0-8899-9a1aec9a58b5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"76f76172-41a1-40e7-95f5-74e13d4d3484","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"76f76172-41a1-40e7-95f5-74e13d4d3484","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"LayerId":{"name":"fd0e06f8-7796-4187-a27d-753af7f6d4b8","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTripleElectroGun","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"resourceVersion":"1.0","name":"76f76172-41a1-40e7-95f5-74e13d4d3484","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c27bfda9-8dc5-46e2-b120-1592b8a205e4","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c27bfda9-8dc5-46e2-b120-1592b8a205e4","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"LayerId":{"name":"fd0e06f8-7796-4187-a27d-753af7f6d4b8","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTripleElectroGun","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"resourceVersion":"1.0","name":"c27bfda9-8dc5-46e2-b120-1592b8a205e4","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"62ae98fc-00d7-4659-ae71-5e574d4b3d20","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"62ae98fc-00d7-4659-ae71-5e574d4b3d20","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"LayerId":{"name":"fd0e06f8-7796-4187-a27d-753af7f6d4b8","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTripleElectroGun","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"resourceVersion":"1.0","name":"62ae98fc-00d7-4659-ae71-5e574d4b3d20","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0e59f57a-4fbd-4c9d-8a5e-02a5c56eed62","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0e59f57a-4fbd-4c9d-8a5e-02a5c56eed62","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"LayerId":{"name":"fd0e06f8-7796-4187-a27d-753af7f6d4b8","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTripleElectroGun","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"resourceVersion":"1.0","name":"0e59f57a-4fbd-4c9d-8a5e-02a5c56eed62","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"85d03946-d65c-402a-8a48-e6e9346e7740","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"85d03946-d65c-402a-8a48-e6e9346e7740","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"LayerId":{"name":"fd0e06f8-7796-4187-a27d-753af7f6d4b8","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTripleElectroGun","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"resourceVersion":"1.0","name":"85d03946-d65c-402a-8a48-e6e9346e7740","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6d0b7f7d-f2f0-43b0-87be-f45b8859b781","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6d0b7f7d-f2f0-43b0-87be-f45b8859b781","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"LayerId":{"name":"fd0e06f8-7796-4187-a27d-753af7f6d4b8","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTripleElectroGun","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"resourceVersion":"1.0","name":"6d0b7f7d-f2f0-43b0-87be-f45b8859b781","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"52d03bd4-7aba-4ae0-8899-9a1aec9a58b5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"76f76172-41a1-40e7-95f5-74e13d4d3484",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c27bfda9-8dc5-46e2-b120-1592b8a205e4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"62ae98fc-00d7-4659-ae71-5e574d4b3d20",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0e59f57a-4fbd-4c9d-8a5e-02a5c56eed62",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"85d03946-d65c-402a-8a48-e6e9346e7740",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6d0b7f7d-f2f0-43b0-87be-f45b8859b781",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprTripleElectroGun","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprTripleElectroGun",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"5807ba3a-68ac-4ee3-bfc8-b2237f4efae7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"52d03bd4-7aba-4ae0-8899-9a1aec9a58b5","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"70e8e5c9-e041-4e08-91b2-136d3cd63167","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"76f76172-41a1-40e7-95f5-74e13d4d3484","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e1675404-9606-4a5f-9791-a5c8077e3faf","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c27bfda9-8dc5-46e2-b120-1592b8a205e4","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"421a132f-de0e-4320-b6c0-ecddb64f3dbe","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0e59f57a-4fbd-4c9d-8a5e-02a5c56eed62","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"21d30c3b-fea3-4bb6-862b-426c7c6ab0f0","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"85d03946-d65c-402a-8a48-e6e9346e7740","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"241705b1-646b-47c6-922f-3781157ddb3e","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6d0b7f7d-f2f0-43b0-87be-f45b8859b781","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 4,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprTripleElectroGun","path":"sprites/sprTripleElectroGun/sprTripleElectroGun.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprTripleElectroGun",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fd0e06f8-7796-4187-a27d-753af7f6d4b8","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"fd0e06f8-7796-4187-a27d-753af7f6d4b8","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Custom",
     "path": "folders/Sprites/Weapons/Custom.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprTripleElectroGun",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

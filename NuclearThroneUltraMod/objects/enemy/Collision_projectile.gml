@@ -34,7 +34,7 @@ if(instance_exists(Player)){
 		{
 			BackCont.shake += 2
 			var shithead = id;
-			var s = 8;
+			var s = 6;
 			with Player
 			{
 				var al = 6;//weapon types total

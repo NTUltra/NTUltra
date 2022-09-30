@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "mskTechnomancer",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e9f11906-dd3d-4eb5-a2e6-7282d9165f85","path":"sprites/mskTechnomancer/mskTechnomancer.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e9f11906-dd3d-4eb5-a2e6-7282d9165f85","path":"sprites/mskTechnomancer/mskTechnomancer.yy",},"LayerId":{"name":"a89c5bb8-0b3a-4479-86fd-8f6dc9208852","path":"sprites/mskTechnomancer/mskTechnomancer.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"mskTechnomancer","path":"sprites/mskTechnomancer/mskTechnomancer.yy",},"resourceVersion":"1.0","name":"e9f11906-dd3d-4eb5-a2e6-7282d9165f85","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e9f11906-dd3d-4eb5-a2e6-7282d9165f85",},
   ],
   "sequence": {
-    "spriteId": {"name":"mskTechnomancer","path":"sprites/mskTechnomancer/mskTechnomancer.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "mskTechnomancer",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"e88dc8ff-bd2d-4729-8af5-3ba1cf9d1c10","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e9f11906-dd3d-4eb5-a2e6-7282d9165f85","path":"sprites/mskTechnomancer/mskTechnomancer.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 60,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"mskTechnomancer","path":"sprites/mskTechnomancer/mskTechnomancer.yy",},
-    "resourceVersion": "1.4",
-    "name": "mskTechnomancer",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a89c5bb8-0b3a-4479-86fd-8f6dc9208852","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a89c5bb8-0b3a-4479-86fd-8f6dc9208852","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Technomancer",
     "path": "folders/Sprites/Enemies/Boss/Technomancer.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "mskTechnomancer",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

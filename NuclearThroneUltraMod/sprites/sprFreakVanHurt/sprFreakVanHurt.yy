@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprFreakVanHurt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"3f2f303a-1a64-44f8-a247-6155e337e1ef","path":"sprites/sprFreakVanHurt/sprFreakVanHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3f2f303a-1a64-44f8-a247-6155e337e1ef","path":"sprites/sprFreakVanHurt/sprFreakVanHurt.yy",},"LayerId":{"name":"415f29c7-ec00-4e95-81b1-6a8122776858","path":"sprites/sprFreakVanHurt/sprFreakVanHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFreakVanHurt","path":"sprites/sprFreakVanHurt/sprFreakVanHurt.yy",},"resourceVersion":"1.0","name":"3f2f303a-1a64-44f8-a247-6155e337e1ef","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"25a72cc7-671d-47b5-b6e5-470c83920c0c","path":"sprites/sprFreakVanHurt/sprFreakVanHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"25a72cc7-671d-47b5-b6e5-470c83920c0c","path":"sprites/sprFreakVanHurt/sprFreakVanHurt.yy",},"LayerId":{"name":"415f29c7-ec00-4e95-81b1-6a8122776858","path":"sprites/sprFreakVanHurt/sprFreakVanHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFreakVanHurt","path":"sprites/sprFreakVanHurt/sprFreakVanHurt.yy",},"resourceVersion":"1.0","name":"25a72cc7-671d-47b5-b6e5-470c83920c0c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"289d4c55-663c-4738-8ec6-1e9d242bb503","path":"sprites/sprFreakVanHurt/sprFreakVanHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"289d4c55-663c-4738-8ec6-1e9d242bb503","path":"sprites/sprFreakVanHurt/sprFreakVanHurt.yy",},"LayerId":{"name":"415f29c7-ec00-4e95-81b1-6a8122776858","path":"sprites/sprFreakVanHurt/sprFreakVanHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFreakVanHurt","path":"sprites/sprFreakVanHurt/sprFreakVanHurt.yy",},"resourceVersion":"1.0","name":"289d4c55-663c-4738-8ec6-1e9d242bb503","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3f2f303a-1a64-44f8-a247-6155e337e1ef",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"25a72cc7-671d-47b5-b6e5-470c83920c0c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"289d4c55-663c-4738-8ec6-1e9d242bb503",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprFreakVanHurt","path":"sprites/sprFreakVanHurt/sprFreakVanHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprFreakVanHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"12dbf942-1427-4ab2-9248-bece4b1e02a3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3f2f303a-1a64-44f8-a247-6155e337e1ef","path":"sprites/sprFreakVanHurt/sprFreakVanHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"387fd66c-2dd2-4536-89ce-d0b0da8aa386","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"25a72cc7-671d-47b5-b6e5-470c83920c0c","path":"sprites/sprFreakVanHurt/sprFreakVanHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"48a006bd-e02b-403e-9928-d193f3afd597","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"289d4c55-663c-4738-8ec6-1e9d242bb503","path":"sprites/sprFreakVanHurt/sprFreakVanHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 64,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprFreakVanHurt","path":"sprites/sprFreakVanHurt/sprFreakVanHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprFreakVanHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"415f29c7-ec00-4e95-81b1-6a8122776858","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"415f29c7-ec00-4e95-81b1-6a8122776858","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "FreakVan",
     "path": "folders/Sprites/Enemies/IDPD/Elite IDPD/Van/FreakVan.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprFreakVanHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

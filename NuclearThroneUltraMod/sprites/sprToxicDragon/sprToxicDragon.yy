@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprToxicDragon",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"844d3467-a260-424f-8361-847713e7399f","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"844d3467-a260-424f-8361-847713e7399f","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"LayerId":{"name":"3fe6d561-2368-4cb8-b104-1df02e7f9926","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicDragon","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"resourceVersion":"1.0","name":"844d3467-a260-424f-8361-847713e7399f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"fe75c574-6729-4271-aab0-80104997b128","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fe75c574-6729-4271-aab0-80104997b128","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"LayerId":{"name":"3fe6d561-2368-4cb8-b104-1df02e7f9926","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicDragon","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"resourceVersion":"1.0","name":"fe75c574-6729-4271-aab0-80104997b128","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8779b50c-2012-41fb-9643-7935b5609f6a","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8779b50c-2012-41fb-9643-7935b5609f6a","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"LayerId":{"name":"3fe6d561-2368-4cb8-b104-1df02e7f9926","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicDragon","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"resourceVersion":"1.0","name":"8779b50c-2012-41fb-9643-7935b5609f6a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3f42b6df-a236-4295-87aa-8b3c27b62fd8","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3f42b6df-a236-4295-87aa-8b3c27b62fd8","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"LayerId":{"name":"3fe6d561-2368-4cb8-b104-1df02e7f9926","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicDragon","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"resourceVersion":"1.0","name":"3f42b6df-a236-4295-87aa-8b3c27b62fd8","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5371fd6b-6a06-46e8-9244-92c8d6f2b6bd","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5371fd6b-6a06-46e8-9244-92c8d6f2b6bd","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"LayerId":{"name":"3fe6d561-2368-4cb8-b104-1df02e7f9926","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicDragon","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"resourceVersion":"1.0","name":"5371fd6b-6a06-46e8-9244-92c8d6f2b6bd","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"242d314b-ca1a-4faa-be38-e6346185a378","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"242d314b-ca1a-4faa-be38-e6346185a378","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"LayerId":{"name":"3fe6d561-2368-4cb8-b104-1df02e7f9926","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicDragon","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"resourceVersion":"1.0","name":"242d314b-ca1a-4faa-be38-e6346185a378","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"22632e77-575f-4e3d-865a-bdd2b93b8d7c","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"22632e77-575f-4e3d-865a-bdd2b93b8d7c","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"LayerId":{"name":"3fe6d561-2368-4cb8-b104-1df02e7f9926","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicDragon","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"resourceVersion":"1.0","name":"22632e77-575f-4e3d-865a-bdd2b93b8d7c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"844d3467-a260-424f-8361-847713e7399f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fe75c574-6729-4271-aab0-80104997b128",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8779b50c-2012-41fb-9643-7935b5609f6a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3f42b6df-a236-4295-87aa-8b3c27b62fd8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5371fd6b-6a06-46e8-9244-92c8d6f2b6bd",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"242d314b-ca1a-4faa-be38-e6346185a378",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"22632e77-575f-4e3d-865a-bdd2b93b8d7c",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprToxicDragon","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"af1b6850-560f-44d7-a555-2c6cdb8122cc","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"844d3467-a260-424f-8361-847713e7399f","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e36a1f2e-6f50-4291-980f-94cc8d017f48","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fe75c574-6729-4271-aab0-80104997b128","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"de56bb85-31ca-40ec-8312-a11da4f27395","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8779b50c-2012-41fb-9643-7935b5609f6a","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"4884cedd-5412-49b4-93b5-b64eeb00fbb6","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5371fd6b-6a06-46e8-9244-92c8d6f2b6bd","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"27135f18-d4ee-49b1-b0b2-3617069ee3a2","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"242d314b-ca1a-4faa-be38-e6346185a378","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"2737ed5f-c4c5-49df-b866-7e8584dbde94","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"22632e77-575f-4e3d-865a-bdd2b93b8d7c","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 5,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprToxicDragon","path":"sprites/sprToxicDragon/sprToxicDragon.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3fe6d561-2368-4cb8-b104-1df02e7f9926","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3fe6d561-2368-4cb8-b104-1df02e7f9926","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Custom",
     "path": "folders/Sprites/Weapons/Custom.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprToxicDragon",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

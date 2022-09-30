@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprBushBoxHurt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"eb8c0904-a5fd-4b85-8d1b-5480a94ab7db","path":"sprites/sprBushBoxHurt/sprBushBoxHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"eb8c0904-a5fd-4b85-8d1b-5480a94ab7db","path":"sprites/sprBushBoxHurt/sprBushBoxHurt.yy",},"LayerId":{"name":"f8da4e70-5a07-45d6-86f0-47aee321d4bd","path":"sprites/sprBushBoxHurt/sprBushBoxHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBushBoxHurt","path":"sprites/sprBushBoxHurt/sprBushBoxHurt.yy",},"resourceVersion":"1.0","name":"eb8c0904-a5fd-4b85-8d1b-5480a94ab7db","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f88b181c-16af-4b6f-89b1-4482e41ac23c","path":"sprites/sprBushBoxHurt/sprBushBoxHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f88b181c-16af-4b6f-89b1-4482e41ac23c","path":"sprites/sprBushBoxHurt/sprBushBoxHurt.yy",},"LayerId":{"name":"f8da4e70-5a07-45d6-86f0-47aee321d4bd","path":"sprites/sprBushBoxHurt/sprBushBoxHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBushBoxHurt","path":"sprites/sprBushBoxHurt/sprBushBoxHurt.yy",},"resourceVersion":"1.0","name":"f88b181c-16af-4b6f-89b1-4482e41ac23c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5455270a-efa6-4453-b994-c282c7fbe50a","path":"sprites/sprBushBoxHurt/sprBushBoxHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5455270a-efa6-4453-b994-c282c7fbe50a","path":"sprites/sprBushBoxHurt/sprBushBoxHurt.yy",},"LayerId":{"name":"f8da4e70-5a07-45d6-86f0-47aee321d4bd","path":"sprites/sprBushBoxHurt/sprBushBoxHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBushBoxHurt","path":"sprites/sprBushBoxHurt/sprBushBoxHurt.yy",},"resourceVersion":"1.0","name":"5455270a-efa6-4453-b994-c282c7fbe50a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eb8c0904-a5fd-4b85-8d1b-5480a94ab7db",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f88b181c-16af-4b6f-89b1-4482e41ac23c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5455270a-efa6-4453-b994-c282c7fbe50a",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprBushBoxHurt","path":"sprites/sprBushBoxHurt/sprBushBoxHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprBushBoxHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"73b2a3ab-c958-4d20-9da5-ed5c8ed6d3d9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eb8c0904-a5fd-4b85-8d1b-5480a94ab7db","path":"sprites/sprBushBoxHurt/sprBushBoxHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"2f5374bf-3847-43a8-bf4c-c9565379193f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f88b181c-16af-4b6f-89b1-4482e41ac23c","path":"sprites/sprBushBoxHurt/sprBushBoxHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"0335d2ae-d316-47ef-b573-e0941cf07b43","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5455270a-efa6-4453-b994-c282c7fbe50a","path":"sprites/sprBushBoxHurt/sprBushBoxHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 30,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprBushBoxHurt","path":"sprites/sprBushBoxHurt/sprBushBoxHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprBushBoxHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f8da4e70-5a07-45d6-86f0-47aee321d4bd","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f8da4e70-5a07-45d6-86f0-47aee321d4bd","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "JungleEnemy",
     "path": "folders/Sprites/Enemies/JungleEnemy.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprBushBoxHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

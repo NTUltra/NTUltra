@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInfinitySmartGun",
   "bboxMode": 0,
   "collisionKind": 0,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6cedaafd-1b66-4f19-a04e-5addef22f166","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6cedaafd-1b66-4f19-a04e-5addef22f166","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"LayerId":{"name":"0e82285b-54c2-45bf-8d76-60c541106d8e","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInfinitySmartGun","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"resourceVersion":"1.0","name":"6cedaafd-1b66-4f19-a04e-5addef22f166","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"84989829-3a34-4674-92c3-0f905517fb70","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"84989829-3a34-4674-92c3-0f905517fb70","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"LayerId":{"name":"0e82285b-54c2-45bf-8d76-60c541106d8e","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInfinitySmartGun","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"resourceVersion":"1.0","name":"84989829-3a34-4674-92c3-0f905517fb70","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"67d857f6-1d1a-49a9-b5cc-74e93cf9480e","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"67d857f6-1d1a-49a9-b5cc-74e93cf9480e","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"LayerId":{"name":"0e82285b-54c2-45bf-8d76-60c541106d8e","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInfinitySmartGun","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"resourceVersion":"1.0","name":"67d857f6-1d1a-49a9-b5cc-74e93cf9480e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2910725d-50c8-4e6b-a856-c37edc389bf9","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2910725d-50c8-4e6b-a856-c37edc389bf9","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"LayerId":{"name":"0e82285b-54c2-45bf-8d76-60c541106d8e","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInfinitySmartGun","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"resourceVersion":"1.0","name":"2910725d-50c8-4e6b-a856-c37edc389bf9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"63e107c9-261a-4aeb-8118-5d89f6b4b138","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"63e107c9-261a-4aeb-8118-5d89f6b4b138","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"LayerId":{"name":"0e82285b-54c2-45bf-8d76-60c541106d8e","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInfinitySmartGun","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"resourceVersion":"1.0","name":"63e107c9-261a-4aeb-8118-5d89f6b4b138","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e9619a93-fb6f-4ad5-a54e-4166a0ded81b","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e9619a93-fb6f-4ad5-a54e-4166a0ded81b","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"LayerId":{"name":"0e82285b-54c2-45bf-8d76-60c541106d8e","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInfinitySmartGun","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"resourceVersion":"1.0","name":"e9619a93-fb6f-4ad5-a54e-4166a0ded81b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6cedaafd-1b66-4f19-a04e-5addef22f166",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"84989829-3a34-4674-92c3-0f905517fb70",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"67d857f6-1d1a-49a9-b5cc-74e93cf9480e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2910725d-50c8-4e6b-a856-c37edc389bf9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"63e107c9-261a-4aeb-8118-5d89f6b4b138",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e9619a93-fb6f-4ad5-a54e-4166a0ded81b",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInfinitySmartGun","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInfinitySmartGun",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -55,14 +48,14 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"164c2b8e-09f9-40e4-8471-00e5ce052efd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6cedaafd-1b66-4f19-a04e-5addef22f166","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d2ecfbb7-9b4f-43e3-b2ec-19ab0ce0a690","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"84989829-3a34-4674-92c3-0f905517fb70","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"2d9a2353-677b-46e3-9377-77c1ba49b388","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"67d857f6-1d1a-49a9-b5cc-74e93cf9480e","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8ff40d17-702f-4184-903b-053dc71595ec","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2910725d-50c8-4e6b-a856-c37edc389bf9","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"bc25ba83-4014-430c-bb42-454e7247d50f","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"63e107c9-261a-4aeb-8118-5d89f6b4b138","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"2ebadb21-aeaa-4caf-aeb0-e8245ed46d1f","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e9619a93-fb6f-4ad5-a54e-4166a0ded81b","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -78,22 +71,13 @@
     "yorigin": 5,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInfinitySmartGun","path":"sprites/sprInfinitySmartGun/sprInfinitySmartGun.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInfinitySmartGun",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0e82285b-54c2-45bf-8d76-60c541106d8e","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0e82285b-54c2-45bf-8d76-60c541106d8e","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Custom",
     "path": "folders/Sprites/Weapons/Custom.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInfinitySmartGun",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

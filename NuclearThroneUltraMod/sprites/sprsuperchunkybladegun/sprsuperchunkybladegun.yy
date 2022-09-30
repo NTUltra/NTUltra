@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprSuperChunkyBladeGun",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ad02982c-27ac-45c2-8788-362c9baae173","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ad02982c-27ac-45c2-8788-362c9baae173","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"LayerId":{"name":"5600666c-e2e1-4f7b-b440-7e113ff34308","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperChunkyBladeGun","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"resourceVersion":"1.0","name":"ad02982c-27ac-45c2-8788-362c9baae173","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b24909a1-9511-485f-986b-527a8c83f728","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b24909a1-9511-485f-986b-527a8c83f728","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"LayerId":{"name":"5600666c-e2e1-4f7b-b440-7e113ff34308","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperChunkyBladeGun","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"resourceVersion":"1.0","name":"b24909a1-9511-485f-986b-527a8c83f728","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9e9eebd1-6748-4aaa-bd5e-3a7bb66cae24","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9e9eebd1-6748-4aaa-bd5e-3a7bb66cae24","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"LayerId":{"name":"5600666c-e2e1-4f7b-b440-7e113ff34308","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperChunkyBladeGun","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"resourceVersion":"1.0","name":"9e9eebd1-6748-4aaa-bd5e-3a7bb66cae24","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d25cf275-b3ae-4c22-83e3-99dec2460fa1","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d25cf275-b3ae-4c22-83e3-99dec2460fa1","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"LayerId":{"name":"5600666c-e2e1-4f7b-b440-7e113ff34308","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperChunkyBladeGun","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"resourceVersion":"1.0","name":"d25cf275-b3ae-4c22-83e3-99dec2460fa1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"60f89f29-2e97-4628-919c-2b8dd16da4b9","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"60f89f29-2e97-4628-919c-2b8dd16da4b9","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"LayerId":{"name":"5600666c-e2e1-4f7b-b440-7e113ff34308","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperChunkyBladeGun","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"resourceVersion":"1.0","name":"60f89f29-2e97-4628-919c-2b8dd16da4b9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ae00ed8a-c18a-4725-a5d6-7e2b082d5aac","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ae00ed8a-c18a-4725-a5d6-7e2b082d5aac","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"LayerId":{"name":"5600666c-e2e1-4f7b-b440-7e113ff34308","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperChunkyBladeGun","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"resourceVersion":"1.0","name":"ae00ed8a-c18a-4725-a5d6-7e2b082d5aac","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3cc3eb62-caa0-4569-a2dd-89db9f9ceac0","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3cc3eb62-caa0-4569-a2dd-89db9f9ceac0","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"LayerId":{"name":"5600666c-e2e1-4f7b-b440-7e113ff34308","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperChunkyBladeGun","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"resourceVersion":"1.0","name":"3cc3eb62-caa0-4569-a2dd-89db9f9ceac0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ad02982c-27ac-45c2-8788-362c9baae173",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b24909a1-9511-485f-986b-527a8c83f728",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9e9eebd1-6748-4aaa-bd5e-3a7bb66cae24",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d25cf275-b3ae-4c22-83e3-99dec2460fa1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"60f89f29-2e97-4628-919c-2b8dd16da4b9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ae00ed8a-c18a-4725-a5d6-7e2b082d5aac",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3cc3eb62-caa0-4569-a2dd-89db9f9ceac0",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprSuperChunkyBladeGun","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprSuperChunkyBladeGun",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"39ec6f1c-01f6-4af2-8e2d-c4dac4b31556","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ad02982c-27ac-45c2-8788-362c9baae173","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"aa5141bb-dc0d-49d7-ab56-000ed851d03e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b24909a1-9511-485f-986b-527a8c83f728","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a72b2a97-2f32-4fc0-aa7b-535e2e32d170","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9e9eebd1-6748-4aaa-bd5e-3a7bb66cae24","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"3b7779f3-34ee-48ed-a1b4-33f9c287b8df","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"60f89f29-2e97-4628-919c-2b8dd16da4b9","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b8dd84c5-fd72-46af-80a2-91bb5c3ede5e","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ae00ed8a-c18a-4725-a5d6-7e2b082d5aac","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"658b5909-973f-4624-bc1c-4b6c31d81b85","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3cc3eb62-caa0-4569-a2dd-89db9f9ceac0","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 7,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprSuperChunkyBladeGun","path":"sprites/sprSuperChunkyBladeGun/sprSuperChunkyBladeGun.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprSuperChunkyBladeGun",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5600666c-e2e1-4f7b-b440-7e113ff34308","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5600666c-e2e1-4f7b-b440-7e113ff34308","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Custom",
     "path": "folders/Sprites/Weapons/Custom.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprSuperChunkyBladeGun",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

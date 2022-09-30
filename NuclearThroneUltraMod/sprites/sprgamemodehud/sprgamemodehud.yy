@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprGamemodeHUD",
   "bboxMode": 0,
   "collisionKind": 0,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c67d647d-5130-4c4d-9a0c-1fa51a2278af","path":"sprites/sprGamemodeHUD/sprGamemodeHUD.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c67d647d-5130-4c4d-9a0c-1fa51a2278af","path":"sprites/sprGamemodeHUD/sprGamemodeHUD.yy",},"LayerId":{"name":"3494acab-9171-45fc-a567-3d21eead4554","path":"sprites/sprGamemodeHUD/sprGamemodeHUD.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGamemodeHUD","path":"sprites/sprGamemodeHUD/sprGamemodeHUD.yy",},"resourceVersion":"1.0","name":"c67d647d-5130-4c4d-9a0c-1fa51a2278af","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c67d647d-5130-4c4d-9a0c-1fa51a2278af",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprGamemodeHUD","path":"sprites/sprGamemodeHUD/sprGamemodeHUD.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprGamemodeHUD",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"c418a328-ce60-454b-824c-9221afe7f374","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c67d647d-5130-4c4d-9a0c-1fa51a2278af","path":"sprites/sprGamemodeHUD/sprGamemodeHUD.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 9,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprGamemodeHUD","path":"sprites/sprGamemodeHUD/sprGamemodeHUD.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprGamemodeHUD",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3494acab-9171-45fc-a567-3d21eead4554","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3494acab-9171-45fc-a567-3d21eead4554","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Menu",
     "path": "folders/Sprites/Enemies/Menu.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprGamemodeHUD",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprHyperCrystalStatue",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"36341b7f-5ca9-4b1e-b582-d1e97a529c17","path":"sprites/sprHyperCrystalStatue/sprHyperCrystalStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"36341b7f-5ca9-4b1e-b582-d1e97a529c17","path":"sprites/sprHyperCrystalStatue/sprHyperCrystalStatue.yy",},"LayerId":{"name":"fd5dfcc9-ea6f-4ba1-b232-ffd934bf69b0","path":"sprites/sprHyperCrystalStatue/sprHyperCrystalStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHyperCrystalStatue","path":"sprites/sprHyperCrystalStatue/sprHyperCrystalStatue.yy",},"resourceVersion":"1.0","name":"36341b7f-5ca9-4b1e-b582-d1e97a529c17","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"36341b7f-5ca9-4b1e-b582-d1e97a529c17",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprHyperCrystalStatue","path":"sprites/sprHyperCrystalStatue/sprHyperCrystalStatue.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprHyperCrystalStatue",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"4a0f4dae-0ba1-4a91-b26d-8afc4b362287","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"36341b7f-5ca9-4b1e-b582-d1e97a529c17","path":"sprites/sprHyperCrystalStatue/sprHyperCrystalStatue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 48,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprHyperCrystalStatue","path":"sprites/sprHyperCrystalStatue/sprHyperCrystalStatue.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprHyperCrystalStatue",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fd5dfcc9-ea6f-4ba1-b232-ffd934bf69b0","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"fd5dfcc9-ea6f-4ba1-b232-ffd934bf69b0","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Statues",
     "path": "folders/Sprites/Enemies/Boss/Statues.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprHyperCrystalStatue",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprGoldenSplinterPistol",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ec55257e-9c36-4485-817e-a7608579c280","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ec55257e-9c36-4485-817e-a7608579c280","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"LayerId":{"name":"09989929-7975-453b-9254-57c373a3f2e0","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldenSplinterPistol","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"resourceVersion":"1.0","name":"ec55257e-9c36-4485-817e-a7608579c280","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0de1de37-6723-4a82-82e2-a9d50e36b064","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0de1de37-6723-4a82-82e2-a9d50e36b064","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"LayerId":{"name":"09989929-7975-453b-9254-57c373a3f2e0","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldenSplinterPistol","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"resourceVersion":"1.0","name":"0de1de37-6723-4a82-82e2-a9d50e36b064","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f96d7eb2-105b-49ab-aeef-b8b8dbe28546","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f96d7eb2-105b-49ab-aeef-b8b8dbe28546","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"LayerId":{"name":"09989929-7975-453b-9254-57c373a3f2e0","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldenSplinterPistol","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"resourceVersion":"1.0","name":"f96d7eb2-105b-49ab-aeef-b8b8dbe28546","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7a8ccaf9-1da6-4c75-8497-c334798c238e","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7a8ccaf9-1da6-4c75-8497-c334798c238e","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"LayerId":{"name":"09989929-7975-453b-9254-57c373a3f2e0","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldenSplinterPistol","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"resourceVersion":"1.0","name":"7a8ccaf9-1da6-4c75-8497-c334798c238e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"dc38079d-6333-4d6c-98ad-b93385a4f5d8","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dc38079d-6333-4d6c-98ad-b93385a4f5d8","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"LayerId":{"name":"09989929-7975-453b-9254-57c373a3f2e0","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldenSplinterPistol","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"resourceVersion":"1.0","name":"dc38079d-6333-4d6c-98ad-b93385a4f5d8","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"02f72390-b995-4f71-9240-69e7d027e5df","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"02f72390-b995-4f71-9240-69e7d027e5df","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"LayerId":{"name":"09989929-7975-453b-9254-57c373a3f2e0","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldenSplinterPistol","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"resourceVersion":"1.0","name":"02f72390-b995-4f71-9240-69e7d027e5df","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c384ec98-9052-4c63-824d-d0a1b67c65eb","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c384ec98-9052-4c63-824d-d0a1b67c65eb","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"LayerId":{"name":"09989929-7975-453b-9254-57c373a3f2e0","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldenSplinterPistol","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"resourceVersion":"1.0","name":"c384ec98-9052-4c63-824d-d0a1b67c65eb","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ec55257e-9c36-4485-817e-a7608579c280",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0de1de37-6723-4a82-82e2-a9d50e36b064",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f96d7eb2-105b-49ab-aeef-b8b8dbe28546",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7a8ccaf9-1da6-4c75-8497-c334798c238e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dc38079d-6333-4d6c-98ad-b93385a4f5d8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"02f72390-b995-4f71-9240-69e7d027e5df",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c384ec98-9052-4c63-824d-d0a1b67c65eb",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprGoldenSplinterPistol","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"0cf14ca2-3ad8-468a-850c-1c6c28c28552","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ec55257e-9c36-4485-817e-a7608579c280","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"20109531-0506-43da-9767-e3bce9c9761d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0de1de37-6723-4a82-82e2-a9d50e36b064","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9a40c979-b03e-4ea1-8eeb-73e13c0e4f63","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f96d7eb2-105b-49ab-aeef-b8b8dbe28546","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"596c851a-5411-46fe-8bbb-8a9a028899f6","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dc38079d-6333-4d6c-98ad-b93385a4f5d8","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"2d857602-c35f-4b81-933b-5233042cb7eb","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"02f72390-b995-4f71-9240-69e7d027e5df","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ee697c8e-ca8a-48bd-8850-d112e1789dad","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c384ec98-9052-4c63-824d-d0a1b67c65eb","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 4,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprGoldenSplinterPistol","path":"sprites/sprGoldenSplinterPistol/sprGoldenSplinterPistol.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"09989929-7975-453b-9254-57c373a3f2e0","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"09989929-7975-453b-9254-57c373a3f2e0","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Gold",
     "path": "folders/Sprites/Weapons/Gold.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprGoldenSplinterPistol",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

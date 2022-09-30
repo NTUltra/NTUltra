@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprSmallGoldGrenade",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a0a49a02-7b84-4dd5-b319-ec7dc4855209","path":"sprites/sprSmallGoldGrenade/sprSmallGoldGrenade.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a0a49a02-7b84-4dd5-b319-ec7dc4855209","path":"sprites/sprSmallGoldGrenade/sprSmallGoldGrenade.yy",},"LayerId":{"name":"619a51bf-c680-488e-82ec-f1fe231d13eb","path":"sprites/sprSmallGoldGrenade/sprSmallGoldGrenade.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSmallGoldGrenade","path":"sprites/sprSmallGoldGrenade/sprSmallGoldGrenade.yy",},"resourceVersion":"1.0","name":"a0a49a02-7b84-4dd5-b319-ec7dc4855209","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a0a49a02-7b84-4dd5-b319-ec7dc4855209",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprSmallGoldGrenade","path":"sprites/sprSmallGoldGrenade/sprSmallGoldGrenade.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprSmallGoldGrenade",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"9afb9bac-ffc9-4bfe-8636-418f88631a1f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a0a49a02-7b84-4dd5-b319-ec7dc4855209","path":"sprites/sprSmallGoldGrenade/sprSmallGoldGrenade.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 2,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprSmallGoldGrenade","path":"sprites/sprSmallGoldGrenade/sprSmallGoldGrenade.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprSmallGoldGrenade",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"619a51bf-c680-488e-82ec-f1fe231d13eb","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"619a51bf-c680-488e-82ec-f1fe231d13eb","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Projectiles",
     "path": "folders/Sprites/Projectiles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprSmallGoldGrenade",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

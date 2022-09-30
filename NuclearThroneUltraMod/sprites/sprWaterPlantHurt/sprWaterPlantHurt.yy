@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprWaterPlantHurt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d88f8c35-36c9-4442-b2ba-ddabadf51bf4","path":"sprites/sprWaterPlantHurt/sprWaterPlantHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d88f8c35-36c9-4442-b2ba-ddabadf51bf4","path":"sprites/sprWaterPlantHurt/sprWaterPlantHurt.yy",},"LayerId":{"name":"41590eed-9e9b-4c28-8f35-ca2d76668810","path":"sprites/sprWaterPlantHurt/sprWaterPlantHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprWaterPlantHurt","path":"sprites/sprWaterPlantHurt/sprWaterPlantHurt.yy",},"resourceVersion":"1.0","name":"d88f8c35-36c9-4442-b2ba-ddabadf51bf4","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"75e1d14f-a171-4854-b882-5fbea5707e3b","path":"sprites/sprWaterPlantHurt/sprWaterPlantHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"75e1d14f-a171-4854-b882-5fbea5707e3b","path":"sprites/sprWaterPlantHurt/sprWaterPlantHurt.yy",},"LayerId":{"name":"41590eed-9e9b-4c28-8f35-ca2d76668810","path":"sprites/sprWaterPlantHurt/sprWaterPlantHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprWaterPlantHurt","path":"sprites/sprWaterPlantHurt/sprWaterPlantHurt.yy",},"resourceVersion":"1.0","name":"75e1d14f-a171-4854-b882-5fbea5707e3b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8467d90c-a70e-49c2-be81-cd610bf912a4","path":"sprites/sprWaterPlantHurt/sprWaterPlantHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8467d90c-a70e-49c2-be81-cd610bf912a4","path":"sprites/sprWaterPlantHurt/sprWaterPlantHurt.yy",},"LayerId":{"name":"41590eed-9e9b-4c28-8f35-ca2d76668810","path":"sprites/sprWaterPlantHurt/sprWaterPlantHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprWaterPlantHurt","path":"sprites/sprWaterPlantHurt/sprWaterPlantHurt.yy",},"resourceVersion":"1.0","name":"8467d90c-a70e-49c2-be81-cd610bf912a4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d88f8c35-36c9-4442-b2ba-ddabadf51bf4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"75e1d14f-a171-4854-b882-5fbea5707e3b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8467d90c-a70e-49c2-be81-cd610bf912a4",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprWaterPlantHurt","path":"sprites/sprWaterPlantHurt/sprWaterPlantHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprWaterPlantHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"c0919ddb-2ee7-4e65-ace5-3ccfe2fdca08","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d88f8c35-36c9-4442-b2ba-ddabadf51bf4","path":"sprites/sprWaterPlantHurt/sprWaterPlantHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"1747cb5e-92d9-4c17-be45-d08599b35e45","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"75e1d14f-a171-4854-b882-5fbea5707e3b","path":"sprites/sprWaterPlantHurt/sprWaterPlantHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"cb8706e9-fc95-4b18-b727-417762b0a492","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8467d90c-a70e-49c2-be81-cd610bf912a4","path":"sprites/sprWaterPlantHurt/sprWaterPlantHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprWaterPlantHurt","path":"sprites/sprWaterPlantHurt/sprWaterPlantHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprWaterPlantHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"41590eed-9e9b-4c28-8f35-ca2d76668810","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"41590eed-9e9b-4c28-8f35-ca2d76668810","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "OasisProps",
     "path": "folders/Sprites/Enviroment/Props/OasisProps.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprWaterPlantHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

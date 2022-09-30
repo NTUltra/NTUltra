@@ -1,4 +1,4 @@
-scrDrop(18,1)
+scrDrop(20,1)
 
 //NOW SOME ENEMY CODE
 with instance_create(x,y,Corpse)

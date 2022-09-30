@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprVenusCarHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"93d89532-2b8d-4fe5-93a0-5eefdddd5ff4","path":"sprites/sprVenusCarHurt/sprVenusCarHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"93d89532-2b8d-4fe5-93a0-5eefdddd5ff4","path":"sprites/sprVenusCarHurt/sprVenusCarHurt.yy",},"LayerId":{"name":"f684e3ae-da08-4383-88bf-bd6a32781c79","path":"sprites/sprVenusCarHurt/sprVenusCarHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVenusCarHurt","path":"sprites/sprVenusCarHurt/sprVenusCarHurt.yy",},"resourceVersion":"1.0","name":"93d89532-2b8d-4fe5-93a0-5eefdddd5ff4","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c2d23a79-4180-49eb-b285-9caf898ffca0","path":"sprites/sprVenusCarHurt/sprVenusCarHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c2d23a79-4180-49eb-b285-9caf898ffca0","path":"sprites/sprVenusCarHurt/sprVenusCarHurt.yy",},"LayerId":{"name":"f684e3ae-da08-4383-88bf-bd6a32781c79","path":"sprites/sprVenusCarHurt/sprVenusCarHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVenusCarHurt","path":"sprites/sprVenusCarHurt/sprVenusCarHurt.yy",},"resourceVersion":"1.0","name":"c2d23a79-4180-49eb-b285-9caf898ffca0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bbfb3d5b-2946-46d2-bb1a-8dc1a71dfc73","path":"sprites/sprVenusCarHurt/sprVenusCarHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bbfb3d5b-2946-46d2-bb1a-8dc1a71dfc73","path":"sprites/sprVenusCarHurt/sprVenusCarHurt.yy",},"LayerId":{"name":"f684e3ae-da08-4383-88bf-bd6a32781c79","path":"sprites/sprVenusCarHurt/sprVenusCarHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVenusCarHurt","path":"sprites/sprVenusCarHurt/sprVenusCarHurt.yy",},"resourceVersion":"1.0","name":"bbfb3d5b-2946-46d2-bb1a-8dc1a71dfc73","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"93d89532-2b8d-4fe5-93a0-5eefdddd5ff4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c2d23a79-4180-49eb-b285-9caf898ffca0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bbfb3d5b-2946-46d2-bb1a-8dc1a71dfc73",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprVenusCarHurt","path":"sprites/sprVenusCarHurt/sprVenusCarHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"6733ce7a-91fa-4681-b924-58f28bad9717","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"93d89532-2b8d-4fe5-93a0-5eefdddd5ff4","path":"sprites/sprVenusCarHurt/sprVenusCarHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9a777fdb-2d3f-4944-a90b-37ecf0138668","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c2d23a79-4180-49eb-b285-9caf898ffca0","path":"sprites/sprVenusCarHurt/sprVenusCarHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"10f95f1c-e891-4ea0-8ea2-a0c17aaa1d48","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bbfb3d5b-2946-46d2-bb1a-8dc1a71dfc73","path":"sprites/sprVenusCarHurt/sprVenusCarHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprVenusCarHurt","path":"sprites/sprVenusCarHurt/sprVenusCarHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f684e3ae-da08-4383-88bf-bd6a32781c79","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f684e3ae-da08-4383-88bf-bd6a32781c79","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Cars",
     "path": "folders/Sprites/Enviroment/Cars.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprVenusCarHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

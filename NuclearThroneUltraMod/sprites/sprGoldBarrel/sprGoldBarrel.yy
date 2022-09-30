@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprGoldBarrel",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8e159c1c-0f67-4ad6-9599-d45cd65345a7","path":"sprites/sprGoldBarrel/sprGoldBarrel.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8e159c1c-0f67-4ad6-9599-d45cd65345a7","path":"sprites/sprGoldBarrel/sprGoldBarrel.yy",},"LayerId":{"name":"27cc30ed-eaea-4e7a-bac8-cfbaf16e7502","path":"sprites/sprGoldBarrel/sprGoldBarrel.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldBarrel","path":"sprites/sprGoldBarrel/sprGoldBarrel.yy",},"resourceVersion":"1.0","name":"8e159c1c-0f67-4ad6-9599-d45cd65345a7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8e159c1c-0f67-4ad6-9599-d45cd65345a7",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprGoldBarrel","path":"sprites/sprGoldBarrel/sprGoldBarrel.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprGoldBarrel",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"75412745-ea31-4455-94ab-ebb97649adc4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8e159c1c-0f67-4ad6-9599-d45cd65345a7","path":"sprites/sprGoldBarrel/sprGoldBarrel.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprGoldBarrel","path":"sprites/sprGoldBarrel/sprGoldBarrel.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprGoldBarrel",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"27cc30ed-eaea-4e7a-bac8-cfbaf16e7502","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"27cc30ed-eaea-4e7a-bac8-cfbaf16e7502","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "UnsortedProp",
     "path": "folders/Sprites/Enviroment/UnsortedProp.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprGoldBarrel",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

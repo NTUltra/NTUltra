@@ -17,10 +17,12 @@ function scrLoadEncrypted(){
 			encrypted_data = json_parse(hashlessString);
 			if is_struct(encrypted_data)
 			{
+				/*old data will be overwritten changes are too significant for legacy
 				if (variable_struct_get(encrypted_data,"secrets") == undefined)
 				{
 					var olddata = encrypted_data;
 					encrypted_data = {
+						username: "",
 						ctot_dailies_score_seed: olddata.ctot_dailies_score_seed,
 						daily_score_dates: olddata.daily_score_dates,
 						ctot_dailies_score_score: olddata.ctot_dailies_score_score,
@@ -31,7 +33,7 @@ function scrLoadEncrypted(){
 						dailies_race_day: olddata.dailies_race_day,
 						secrets: [false,false,false,false,false,false,false,false,false,false],
 					}
-				}
+				}*/
 			}
 			else
 			{

@@ -11,6 +11,7 @@ if instance_exists(Corpse)
 				{
 					existTime = 30;
 					raddrop = 0;
+					countKill = false;
 				}
 			    with instance_create(x,y,ReviveFX)
 				{

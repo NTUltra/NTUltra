@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprBuffMushroomHurt",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"0f057098-0774-4ea6-8889-1ba56ab9acbd","path":"sprites/sprBuffMushroomHurt/sprBuffMushroomHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0f057098-0774-4ea6-8889-1ba56ab9acbd","path":"sprites/sprBuffMushroomHurt/sprBuffMushroomHurt.yy",},"LayerId":{"name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","path":"sprites/sprBuffMushroomHurt/sprBuffMushroomHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBuffMushroomHurt","path":"sprites/sprBuffMushroomHurt/sprBuffMushroomHurt.yy",},"resourceVersion":"1.0","name":"0f057098-0774-4ea6-8889-1ba56ab9acbd","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"32d2657d-727c-4b54-8a66-879b1442a1de","path":"sprites/sprBuffMushroomHurt/sprBuffMushroomHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"32d2657d-727c-4b54-8a66-879b1442a1de","path":"sprites/sprBuffMushroomHurt/sprBuffMushroomHurt.yy",},"LayerId":{"name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","path":"sprites/sprBuffMushroomHurt/sprBuffMushroomHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBuffMushroomHurt","path":"sprites/sprBuffMushroomHurt/sprBuffMushroomHurt.yy",},"resourceVersion":"1.0","name":"32d2657d-727c-4b54-8a66-879b1442a1de","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"48b874aa-56df-4040-b123-2397e1216b04","path":"sprites/sprBuffMushroomHurt/sprBuffMushroomHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"48b874aa-56df-4040-b123-2397e1216b04","path":"sprites/sprBuffMushroomHurt/sprBuffMushroomHurt.yy",},"LayerId":{"name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","path":"sprites/sprBuffMushroomHurt/sprBuffMushroomHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBuffMushroomHurt","path":"sprites/sprBuffMushroomHurt/sprBuffMushroomHurt.yy",},"resourceVersion":"1.0","name":"48b874aa-56df-4040-b123-2397e1216b04","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0f057098-0774-4ea6-8889-1ba56ab9acbd",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"32d2657d-727c-4b54-8a66-879b1442a1de",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"48b874aa-56df-4040-b123-2397e1216b04",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprBuffMushroomHurt","path":"sprites/sprBuffMushroomHurt/sprBuffMushroomHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprBuffMushroomHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"a6bf558a-3545-4811-af84-f5b0f90e5910","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0f057098-0774-4ea6-8889-1ba56ab9acbd","path":"sprites/sprBuffMushroomHurt/sprBuffMushroomHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a0956886-1251-491a-bd87-caae5800b26a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"32d2657d-727c-4b54-8a66-879b1442a1de","path":"sprites/sprBuffMushroomHurt/sprBuffMushroomHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8fa86720-db96-4cfc-b2c7-e7d90883f40e","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"48b874aa-56df-4040-b123-2397e1216b04","path":"sprites/sprBuffMushroomHurt/sprBuffMushroomHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 24,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprBuffMushroomHurt","path":"sprites/sprBuffMushroomHurt/sprBuffMushroomHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprBuffMushroomHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Mushroom",
     "path": "folders/Sprites/Enemies/Mushroom.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprBuffMushroomHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

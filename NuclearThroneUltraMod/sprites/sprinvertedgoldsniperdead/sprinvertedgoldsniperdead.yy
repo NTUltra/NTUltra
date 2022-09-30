@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedGoldSniperDead",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"86bbf2cc-d925-40a1-82b1-02df3d59af79","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"86bbf2cc-d925-40a1-82b1-02df3d59af79","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"LayerId":{"name":"c203f485-ae93-499b-9e4a-8d518a516107","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldSniperDead","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"resourceVersion":"1.0","name":"86bbf2cc-d925-40a1-82b1-02df3d59af79","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c93b6fc8-2520-4982-85a1-112d3bc718a7","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c93b6fc8-2520-4982-85a1-112d3bc718a7","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"LayerId":{"name":"c203f485-ae93-499b-9e4a-8d518a516107","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldSniperDead","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"resourceVersion":"1.0","name":"c93b6fc8-2520-4982-85a1-112d3bc718a7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"30a52367-0e1a-4a2b-91d1-1a955f6def04","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"30a52367-0e1a-4a2b-91d1-1a955f6def04","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"LayerId":{"name":"c203f485-ae93-499b-9e4a-8d518a516107","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldSniperDead","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"resourceVersion":"1.0","name":"30a52367-0e1a-4a2b-91d1-1a955f6def04","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8a73f9ee-98e5-4734-9309-82cb8b469492","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8a73f9ee-98e5-4734-9309-82cb8b469492","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"LayerId":{"name":"c203f485-ae93-499b-9e4a-8d518a516107","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldSniperDead","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"resourceVersion":"1.0","name":"8a73f9ee-98e5-4734-9309-82cb8b469492","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"cb249050-c507-40d8-a72a-1071314416e5","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cb249050-c507-40d8-a72a-1071314416e5","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"LayerId":{"name":"c203f485-ae93-499b-9e4a-8d518a516107","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldSniperDead","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"resourceVersion":"1.0","name":"cb249050-c507-40d8-a72a-1071314416e5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"07cc7fe6-86c1-4837-8ad7-9e6977089826","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"07cc7fe6-86c1-4837-8ad7-9e6977089826","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"LayerId":{"name":"c203f485-ae93-499b-9e4a-8d518a516107","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldSniperDead","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"resourceVersion":"1.0","name":"07cc7fe6-86c1-4837-8ad7-9e6977089826","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"86bbf2cc-d925-40a1-82b1-02df3d59af79",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c93b6fc8-2520-4982-85a1-112d3bc718a7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"30a52367-0e1a-4a2b-91d1-1a955f6def04",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8a73f9ee-98e5-4734-9309-82cb8b469492",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cb249050-c507-40d8-a72a-1071314416e5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"07cc7fe6-86c1-4837-8ad7-9e6977089826",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedGoldSniperDead","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedGoldSniperDead",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -55,14 +48,14 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"80791f4f-8d9e-4d46-8768-52953502fe8f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"86bbf2cc-d925-40a1-82b1-02df3d59af79","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"937b6b0d-04e6-461a-ab5e-d2bef54e91f0","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c93b6fc8-2520-4982-85a1-112d3bc718a7","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a2991fa9-6dce-42a8-bf52-d0d446587dc4","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"30a52367-0e1a-4a2b-91d1-1a955f6def04","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"542b0d0c-bd6b-4dfb-b43b-98d1b5a378ca","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8a73f9ee-98e5-4734-9309-82cb8b469492","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b98f4ea4-cf67-477f-87d4-115bda6c6cae","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cb249050-c507-40d8-a72a-1071314416e5","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"67c46dbe-73d5-4340-bae6-953ebf007990","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"07cc7fe6-86c1-4837-8ad7-9e6977089826","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -78,22 +71,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedGoldSniperDead","path":"sprites/sprInvertedGoldSniperDead/sprInvertedGoldSniperDead.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedGoldSniperDead",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c203f485-ae93-499b-9e4a-8d518a516107","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c203f485-ae93-499b-9e4a-8d518a516107","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Sniper",
     "path": "folders/Sprites/Enemies/Sniper.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedGoldSniperDead",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

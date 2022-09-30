@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprTurretFire",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f688e0b9-c15b-4fb5-a97c-c7eea2fcf012","path":"sprites/sprTurretFire/sprTurretFire.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f688e0b9-c15b-4fb5-a97c-c7eea2fcf012","path":"sprites/sprTurretFire/sprTurretFire.yy",},"LayerId":{"name":"1a041d65-f7a3-4e72-bb8f-492b023e5d16","path":"sprites/sprTurretFire/sprTurretFire.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTurretFire","path":"sprites/sprTurretFire/sprTurretFire.yy",},"resourceVersion":"1.0","name":"f688e0b9-c15b-4fb5-a97c-c7eea2fcf012","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"db30d2a1-77a7-4134-a43f-a58605352467","path":"sprites/sprTurretFire/sprTurretFire.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"db30d2a1-77a7-4134-a43f-a58605352467","path":"sprites/sprTurretFire/sprTurretFire.yy",},"LayerId":{"name":"1a041d65-f7a3-4e72-bb8f-492b023e5d16","path":"sprites/sprTurretFire/sprTurretFire.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTurretFire","path":"sprites/sprTurretFire/sprTurretFire.yy",},"resourceVersion":"1.0","name":"db30d2a1-77a7-4134-a43f-a58605352467","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"87a81847-857b-448a-a053-64417d934aca","path":"sprites/sprTurretFire/sprTurretFire.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"87a81847-857b-448a-a053-64417d934aca","path":"sprites/sprTurretFire/sprTurretFire.yy",},"LayerId":{"name":"1a041d65-f7a3-4e72-bb8f-492b023e5d16","path":"sprites/sprTurretFire/sprTurretFire.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTurretFire","path":"sprites/sprTurretFire/sprTurretFire.yy",},"resourceVersion":"1.0","name":"87a81847-857b-448a-a053-64417d934aca","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f688e0b9-c15b-4fb5-a97c-c7eea2fcf012",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"db30d2a1-77a7-4134-a43f-a58605352467",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"87a81847-857b-448a-a053-64417d934aca",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprTurretFire","path":"sprites/sprTurretFire/sprTurretFire.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprTurretFire",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"4577e923-9768-4783-a12b-203cbdaf8893","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f688e0b9-c15b-4fb5-a97c-c7eea2fcf012","path":"sprites/sprTurretFire/sprTurretFire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"341ded84-6d1f-4030-8c2a-d2b4c4c5ad87","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"db30d2a1-77a7-4134-a43f-a58605352467","path":"sprites/sprTurretFire/sprTurretFire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8ddcf36e-3f8a-4f17-a929-60de64e655e2","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"87a81847-857b-448a-a053-64417d934aca","path":"sprites/sprTurretFire/sprTurretFire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprTurretFire","path":"sprites/sprTurretFire/sprTurretFire.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprTurretFire",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1a041d65-f7a3-4e72-bb8f-492b023e5d16","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1a041d65-f7a3-4e72-bb8f-492b023e5d16","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Labs",
     "path": "folders/Sprites/Enemies/Labs.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprTurretFire",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

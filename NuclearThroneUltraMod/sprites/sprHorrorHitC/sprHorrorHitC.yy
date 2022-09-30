@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprHorrorHitC",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a7232d5e-083a-4ebe-a36f-a94712b83af3","path":"sprites/sprHorrorHitC/sprHorrorHitC.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a7232d5e-083a-4ebe-a36f-a94712b83af3","path":"sprites/sprHorrorHitC/sprHorrorHitC.yy",},"LayerId":{"name":"6fdf8c09-5cdd-46f8-97b8-9f5dd965ac30","path":"sprites/sprHorrorHitC/sprHorrorHitC.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHorrorHitC","path":"sprites/sprHorrorHitC/sprHorrorHitC.yy",},"resourceVersion":"1.0","name":"a7232d5e-083a-4ebe-a36f-a94712b83af3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a7e77952-3f53-4a46-8ea1-c013a0a2eb29","path":"sprites/sprHorrorHitC/sprHorrorHitC.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a7e77952-3f53-4a46-8ea1-c013a0a2eb29","path":"sprites/sprHorrorHitC/sprHorrorHitC.yy",},"LayerId":{"name":"6fdf8c09-5cdd-46f8-97b8-9f5dd965ac30","path":"sprites/sprHorrorHitC/sprHorrorHitC.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHorrorHitC","path":"sprites/sprHorrorHitC/sprHorrorHitC.yy",},"resourceVersion":"1.0","name":"a7e77952-3f53-4a46-8ea1-c013a0a2eb29","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"02567828-f29b-4ecc-a8a6-d7a90a800554","path":"sprites/sprHorrorHitC/sprHorrorHitC.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"02567828-f29b-4ecc-a8a6-d7a90a800554","path":"sprites/sprHorrorHitC/sprHorrorHitC.yy",},"LayerId":{"name":"6fdf8c09-5cdd-46f8-97b8-9f5dd965ac30","path":"sprites/sprHorrorHitC/sprHorrorHitC.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHorrorHitC","path":"sprites/sprHorrorHitC/sprHorrorHitC.yy",},"resourceVersion":"1.0","name":"02567828-f29b-4ecc-a8a6-d7a90a800554","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a7232d5e-083a-4ebe-a36f-a94712b83af3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a7e77952-3f53-4a46-8ea1-c013a0a2eb29",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"02567828-f29b-4ecc-a8a6-d7a90a800554",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprHorrorHitC","path":"sprites/sprHorrorHitC/sprHorrorHitC.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"89cbf742-3e56-4e56-b436-643e4048b757","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a7232d5e-083a-4ebe-a36f-a94712b83af3","path":"sprites/sprHorrorHitC/sprHorrorHitC.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d17e9a63-0b62-4f07-8820-d4846e44dadb","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a7e77952-3f53-4a46-8ea1-c013a0a2eb29","path":"sprites/sprHorrorHitC/sprHorrorHitC.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9193ce01-c0cc-4107-a0df-8e7efab3afef","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"02567828-f29b-4ecc-a8a6-d7a90a800554","path":"sprites/sprHorrorHitC/sprHorrorHitC.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprHorrorHitC","path":"sprites/sprHorrorHitC/sprHorrorHitC.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6fdf8c09-5cdd-46f8-97b8-9f5dd965ac30","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6fdf8c09-5cdd-46f8-97b8-9f5dd965ac30","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "HorrorC",
     "path": "folders/Sprites/Player/Custom/Horror/HorrorC.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprHorrorHitC",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

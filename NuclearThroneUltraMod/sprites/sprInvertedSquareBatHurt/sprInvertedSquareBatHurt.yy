@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedSquareBatHurt",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"79cdb932-0132-4404-8eb7-d608e631ca66","path":"sprites/sprInvertedSquareBatHurt/sprInvertedSquareBatHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"79cdb932-0132-4404-8eb7-d608e631ca66","path":"sprites/sprInvertedSquareBatHurt/sprInvertedSquareBatHurt.yy",},"LayerId":{"name":"d3779abf-eddf-4feb-8027-e3eb1bb78c76","path":"sprites/sprInvertedSquareBatHurt/sprInvertedSquareBatHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedSquareBatHurt","path":"sprites/sprInvertedSquareBatHurt/sprInvertedSquareBatHurt.yy",},"resourceVersion":"1.0","name":"79cdb932-0132-4404-8eb7-d608e631ca66","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"80db7260-add1-4633-9c3e-f6642044c4c8","path":"sprites/sprInvertedSquareBatHurt/sprInvertedSquareBatHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"80db7260-add1-4633-9c3e-f6642044c4c8","path":"sprites/sprInvertedSquareBatHurt/sprInvertedSquareBatHurt.yy",},"LayerId":{"name":"d3779abf-eddf-4feb-8027-e3eb1bb78c76","path":"sprites/sprInvertedSquareBatHurt/sprInvertedSquareBatHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedSquareBatHurt","path":"sprites/sprInvertedSquareBatHurt/sprInvertedSquareBatHurt.yy",},"resourceVersion":"1.0","name":"80db7260-add1-4633-9c3e-f6642044c4c8","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0095c880-e104-4abe-8247-abc0564ad99a","path":"sprites/sprInvertedSquareBatHurt/sprInvertedSquareBatHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0095c880-e104-4abe-8247-abc0564ad99a","path":"sprites/sprInvertedSquareBatHurt/sprInvertedSquareBatHurt.yy",},"LayerId":{"name":"d3779abf-eddf-4feb-8027-e3eb1bb78c76","path":"sprites/sprInvertedSquareBatHurt/sprInvertedSquareBatHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedSquareBatHurt","path":"sprites/sprInvertedSquareBatHurt/sprInvertedSquareBatHurt.yy",},"resourceVersion":"1.0","name":"0095c880-e104-4abe-8247-abc0564ad99a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"79cdb932-0132-4404-8eb7-d608e631ca66",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"80db7260-add1-4633-9c3e-f6642044c4c8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0095c880-e104-4abe-8247-abc0564ad99a",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedSquareBatHurt","path":"sprites/sprInvertedSquareBatHurt/sprInvertedSquareBatHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedSquareBatHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"74ab6995-4462-4df9-88c0-427d8c4b04fa","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"79cdb932-0132-4404-8eb7-d608e631ca66","path":"sprites/sprInvertedSquareBatHurt/sprInvertedSquareBatHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6b148a9d-452f-4216-ab9e-34863748b833","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"80db7260-add1-4633-9c3e-f6642044c4c8","path":"sprites/sprInvertedSquareBatHurt/sprInvertedSquareBatHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9a289037-9e31-4452-bb08-d5aa3fdd3282","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0095c880-e104-4abe-8247-abc0564ad99a","path":"sprites/sprInvertedSquareBatHurt/sprInvertedSquareBatHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedSquareBatHurt","path":"sprites/sprInvertedSquareBatHurt/sprInvertedSquareBatHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedSquareBatHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d3779abf-eddf-4feb-8027-e3eb1bb78c76","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d3779abf-eddf-4feb-8027-e3eb1bb78c76","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "SquareBat",
     "path": "folders/Sprites/Enemies/CrystalCaves/SquareBat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedSquareBatHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

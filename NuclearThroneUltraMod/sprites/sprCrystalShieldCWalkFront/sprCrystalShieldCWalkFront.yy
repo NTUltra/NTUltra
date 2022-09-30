@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprCrystalShieldCWalkFront",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,33 +27,19 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d6085b34-3d42-4b5d-8408-3c0c978dcd18","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d6085b34-3d42-4b5d-8408-3c0c978dcd18","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"LayerId":{"name":"f91c5874-3af3-423e-8c77-c069f2fc7ed5","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCrystalShieldCWalkFront","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","name":"d6085b34-3d42-4b5d-8408-3c0c978dcd18","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"69021baf-1e4d-48bc-9869-f76e994a6e2c","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"69021baf-1e4d-48bc-9869-f76e994a6e2c","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"LayerId":{"name":"f91c5874-3af3-423e-8c77-c069f2fc7ed5","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCrystalShieldCWalkFront","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","name":"69021baf-1e4d-48bc-9869-f76e994a6e2c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"add76382-9905-4e92-a4d9-8ad89b7988a1","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"add76382-9905-4e92-a4d9-8ad89b7988a1","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"LayerId":{"name":"f91c5874-3af3-423e-8c77-c069f2fc7ed5","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCrystalShieldCWalkFront","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","name":"add76382-9905-4e92-a4d9-8ad89b7988a1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2c1df97b-dea6-4d94-8dd6-08a6d28e6684","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2c1df97b-dea6-4d94-8dd6-08a6d28e6684","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"LayerId":{"name":"f91c5874-3af3-423e-8c77-c069f2fc7ed5","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCrystalShieldCWalkFront","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","name":"2c1df97b-dea6-4d94-8dd6-08a6d28e6684","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f8abbd91-97db-4a2a-b5af-2ed90ff402fc","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f8abbd91-97db-4a2a-b5af-2ed90ff402fc","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"LayerId":{"name":"f91c5874-3af3-423e-8c77-c069f2fc7ed5","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCrystalShieldCWalkFront","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","name":"f8abbd91-97db-4a2a-b5af-2ed90ff402fc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"42ede7ab-fbcb-42fd-a814-f714a899fca6","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"42ede7ab-fbcb-42fd-a814-f714a899fca6","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"LayerId":{"name":"f91c5874-3af3-423e-8c77-c069f2fc7ed5","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCrystalShieldCWalkFront","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","name":"42ede7ab-fbcb-42fd-a814-f714a899fca6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a2edf467-d632-4461-8c0c-6ea4629cf485","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a2edf467-d632-4461-8c0c-6ea4629cf485","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"LayerId":{"name":"f91c5874-3af3-423e-8c77-c069f2fc7ed5","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCrystalShieldCWalkFront","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","name":"a2edf467-d632-4461-8c0c-6ea4629cf485","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"944fe5a5-9caa-466d-b9bd-c88c0cd4e7c7","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"944fe5a5-9caa-466d-b9bd-c88c0cd4e7c7","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"LayerId":{"name":"f91c5874-3af3-423e-8c77-c069f2fc7ed5","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCrystalShieldCWalkFront","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","name":"944fe5a5-9caa-466d-b9bd-c88c0cd4e7c7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d6085b34-3d42-4b5d-8408-3c0c978dcd18",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"69021baf-1e4d-48bc-9869-f76e994a6e2c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"add76382-9905-4e92-a4d9-8ad89b7988a1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2c1df97b-dea6-4d94-8dd6-08a6d28e6684",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f8abbd91-97db-4a2a-b5af-2ed90ff402fc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"42ede7ab-fbcb-42fd-a814-f714a899fca6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a2edf467-d632-4461-8c0c-6ea4629cf485",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"944fe5a5-9caa-466d-b9bd-c88c0cd4e7c7",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprCrystalShieldCWalkFront","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -61,7 +50,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"41bafc55-c4de-48a9-9372-fe2c76addbe7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d6085b34-3d42-4b5d-8408-3c0c978dcd18","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a4c595a1-bfd7-4b0b-91b3-2284334fa028","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"69021baf-1e4d-48bc-9869-f76e994a6e2c","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"93f3991e-0b7c-4223-8fd9-9521a0301b57","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"add76382-9905-4e92-a4d9-8ad89b7988a1","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -70,7 +59,7 @@
             {"id":"483dbe5f-1405-450a-a6b0-a47ef8de7f6f","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"42ede7ab-fbcb-42fd-a814-f714a899fca6","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f25790fb-1d8c-4923-9bb0-489f8a190aa0","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a2edf467-d632-4461-8c0c-6ea4629cf485","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"3137f8b9-9196-46b4-9d4d-1fdce8245393","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"944fe5a5-9caa-466d-b9bd-c88c0cd4e7c7","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -86,22 +75,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprCrystalShieldCWalkFront","path":"sprites/sprCrystalShieldCWalkFront/sprCrystalShieldCWalkFront.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f91c5874-3af3-423e-8c77-c069f2fc7ed5","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f91c5874-3af3-423e-8c77-c069f2fc7ed5","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "CrystalC",
     "path": "folders/Sprites/Player/Crystal/CrystalC.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprCrystalShieldCWalkFront",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprFrozenCarHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"df25a0c0-17a8-4ed1-9541-2d4576c31008","path":"sprites/sprFrozenCarHurt/sprFrozenCarHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"df25a0c0-17a8-4ed1-9541-2d4576c31008","path":"sprites/sprFrozenCarHurt/sprFrozenCarHurt.yy",},"LayerId":{"name":"b7f96317-9baf-43fd-b58a-2bc8bb78478d","path":"sprites/sprFrozenCarHurt/sprFrozenCarHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFrozenCarHurt","path":"sprites/sprFrozenCarHurt/sprFrozenCarHurt.yy",},"resourceVersion":"1.0","name":"df25a0c0-17a8-4ed1-9541-2d4576c31008","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2dfc8c05-7e19-47f8-aba1-0d60f08184fc","path":"sprites/sprFrozenCarHurt/sprFrozenCarHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2dfc8c05-7e19-47f8-aba1-0d60f08184fc","path":"sprites/sprFrozenCarHurt/sprFrozenCarHurt.yy",},"LayerId":{"name":"b7f96317-9baf-43fd-b58a-2bc8bb78478d","path":"sprites/sprFrozenCarHurt/sprFrozenCarHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFrozenCarHurt","path":"sprites/sprFrozenCarHurt/sprFrozenCarHurt.yy",},"resourceVersion":"1.0","name":"2dfc8c05-7e19-47f8-aba1-0d60f08184fc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"541a3fc7-3e9c-43ba-8ae6-e59d52e8985d","path":"sprites/sprFrozenCarHurt/sprFrozenCarHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"541a3fc7-3e9c-43ba-8ae6-e59d52e8985d","path":"sprites/sprFrozenCarHurt/sprFrozenCarHurt.yy",},"LayerId":{"name":"b7f96317-9baf-43fd-b58a-2bc8bb78478d","path":"sprites/sprFrozenCarHurt/sprFrozenCarHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFrozenCarHurt","path":"sprites/sprFrozenCarHurt/sprFrozenCarHurt.yy",},"resourceVersion":"1.0","name":"541a3fc7-3e9c-43ba-8ae6-e59d52e8985d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"df25a0c0-17a8-4ed1-9541-2d4576c31008",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2dfc8c05-7e19-47f8-aba1-0d60f08184fc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"541a3fc7-3e9c-43ba-8ae6-e59d52e8985d",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprFrozenCarHurt","path":"sprites/sprFrozenCarHurt/sprFrozenCarHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"75c18278-f0ae-4944-bf2b-312227821ad4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"df25a0c0-17a8-4ed1-9541-2d4576c31008","path":"sprites/sprFrozenCarHurt/sprFrozenCarHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b066fc0f-5441-447b-9dfc-c80bced3bc10","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2dfc8c05-7e19-47f8-aba1-0d60f08184fc","path":"sprites/sprFrozenCarHurt/sprFrozenCarHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"3963c6ff-9c6c-4d98-aad5-fd6770207a86","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"541a3fc7-3e9c-43ba-8ae6-e59d52e8985d","path":"sprites/sprFrozenCarHurt/sprFrozenCarHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprFrozenCarHurt","path":"sprites/sprFrozenCarHurt/sprFrozenCarHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b7f96317-9baf-43fd-b58a-2bc8bb78478d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b7f96317-9baf-43fd-b58a-2bc8bb78478d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Cars",
     "path": "folders/Sprites/Enviroment/Cars.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprFrozenCarHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

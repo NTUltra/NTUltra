@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprFrostSplinter",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"9a161a1e-802a-46ba-bdfb-cf68ea447ed5","path":"sprites/sprFrostSplinter/sprFrostSplinter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9a161a1e-802a-46ba-bdfb-cf68ea447ed5","path":"sprites/sprFrostSplinter/sprFrostSplinter.yy",},"LayerId":{"name":"30ab87a1-5fef-4feb-bb3d-4cc7e2757290","path":"sprites/sprFrostSplinter/sprFrostSplinter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFrostSplinter","path":"sprites/sprFrostSplinter/sprFrostSplinter.yy",},"resourceVersion":"1.0","name":"9a161a1e-802a-46ba-bdfb-cf68ea447ed5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"317bf3fa-bddf-4b8a-a8d0-ec62773fc78a","path":"sprites/sprFrostSplinter/sprFrostSplinter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"317bf3fa-bddf-4b8a-a8d0-ec62773fc78a","path":"sprites/sprFrostSplinter/sprFrostSplinter.yy",},"LayerId":{"name":"30ab87a1-5fef-4feb-bb3d-4cc7e2757290","path":"sprites/sprFrostSplinter/sprFrostSplinter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFrostSplinter","path":"sprites/sprFrostSplinter/sprFrostSplinter.yy",},"resourceVersion":"1.0","name":"317bf3fa-bddf-4b8a-a8d0-ec62773fc78a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7a6977f6-6356-497b-b78f-cfa0194cfa6c","path":"sprites/sprFrostSplinter/sprFrostSplinter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7a6977f6-6356-497b-b78f-cfa0194cfa6c","path":"sprites/sprFrostSplinter/sprFrostSplinter.yy",},"LayerId":{"name":"30ab87a1-5fef-4feb-bb3d-4cc7e2757290","path":"sprites/sprFrostSplinter/sprFrostSplinter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFrostSplinter","path":"sprites/sprFrostSplinter/sprFrostSplinter.yy",},"resourceVersion":"1.0","name":"7a6977f6-6356-497b-b78f-cfa0194cfa6c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9a161a1e-802a-46ba-bdfb-cf68ea447ed5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"317bf3fa-bddf-4b8a-a8d0-ec62773fc78a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7a6977f6-6356-497b-b78f-cfa0194cfa6c",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprFrostSplinter","path":"sprites/sprFrostSplinter/sprFrostSplinter.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprFrostSplinter",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"e62cf83b-59f7-4812-bb19-897bcc1a7d30","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9a161a1e-802a-46ba-bdfb-cf68ea447ed5","path":"sprites/sprFrostSplinter/sprFrostSplinter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8ed03e2b-1136-4b04-92de-9eeaed424b3b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"317bf3fa-bddf-4b8a-a8d0-ec62773fc78a","path":"sprites/sprFrostSplinter/sprFrostSplinter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"4885e3a1-4ff5-440a-96f9-3eb210c55791","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7a6977f6-6356-497b-b78f-cfa0194cfa6c","path":"sprites/sprFrostSplinter/sprFrostSplinter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 3,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprFrostSplinter","path":"sprites/sprFrostSplinter/sprFrostSplinter.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprFrostSplinter",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"30ab87a1-5fef-4feb-bb3d-4cc7e2757290","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"30ab87a1-5fef-4feb-bb3d-4cc7e2757290","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Projectiles",
     "path": "folders/Sprites/Projectiles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprFrostSplinter",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

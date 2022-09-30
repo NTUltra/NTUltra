@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprSteroidsMenuSelect",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"3f39cbf4-3c1c-4553-9b69-c26b71427b7a","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3f39cbf4-3c1c-4553-9b69-c26b71427b7a","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"LayerId":{"name":"0b595ec4-14a3-474d-8ad1-571741c0c5c5","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenuSelect","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"resourceVersion":"1.0","name":"3f39cbf4-3c1c-4553-9b69-c26b71427b7a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a9818bab-6687-45de-9f43-2930a9beb0fd","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a9818bab-6687-45de-9f43-2930a9beb0fd","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"LayerId":{"name":"0b595ec4-14a3-474d-8ad1-571741c0c5c5","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenuSelect","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"resourceVersion":"1.0","name":"a9818bab-6687-45de-9f43-2930a9beb0fd","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a861e882-a1e4-4de7-9dae-7874b4af01c1","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a861e882-a1e4-4de7-9dae-7874b4af01c1","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"LayerId":{"name":"0b595ec4-14a3-474d-8ad1-571741c0c5c5","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenuSelect","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"resourceVersion":"1.0","name":"a861e882-a1e4-4de7-9dae-7874b4af01c1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"87f7a184-03e7-4e66-9929-582c546e7859","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"87f7a184-03e7-4e66-9929-582c546e7859","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"LayerId":{"name":"0b595ec4-14a3-474d-8ad1-571741c0c5c5","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenuSelect","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"resourceVersion":"1.0","name":"87f7a184-03e7-4e66-9929-582c546e7859","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f93a7bec-1319-4844-ba31-36ddf266c32d","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f93a7bec-1319-4844-ba31-36ddf266c32d","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"LayerId":{"name":"0b595ec4-14a3-474d-8ad1-571741c0c5c5","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenuSelect","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"resourceVersion":"1.0","name":"f93a7bec-1319-4844-ba31-36ddf266c32d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7d4309e3-f9dc-4777-bc88-32f0676423b3","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7d4309e3-f9dc-4777-bc88-32f0676423b3","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"LayerId":{"name":"0b595ec4-14a3-474d-8ad1-571741c0c5c5","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenuSelect","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"resourceVersion":"1.0","name":"7d4309e3-f9dc-4777-bc88-32f0676423b3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3f39cbf4-3c1c-4553-9b69-c26b71427b7a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a9818bab-6687-45de-9f43-2930a9beb0fd",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a861e882-a1e4-4de7-9dae-7874b4af01c1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"87f7a184-03e7-4e66-9929-582c546e7859",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f93a7bec-1319-4844-ba31-36ddf266c32d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7d4309e3-f9dc-4777-bc88-32f0676423b3",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprSteroidsMenuSelect","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -55,14 +48,14 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"c636b505-ebaf-41d0-becd-b61a01f9876d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3f39cbf4-3c1c-4553-9b69-c26b71427b7a","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d57b136c-1375-4e96-80a0-b6c8bd983998","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a9818bab-6687-45de-9f43-2930a9beb0fd","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6ce697d6-a728-4275-b183-31b3e49fc3c1","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a861e882-a1e4-4de7-9dae-7874b4af01c1","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6442a28f-4692-406f-9677-5a78894755ff","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"87f7a184-03e7-4e66-9929-582c546e7859","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a6c86861-99b0-49e0-856d-f4957755864c","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f93a7bec-1319-4844-ba31-36ddf266c32d","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"94699095-834d-4f71-9c8f-d40c7b4e2eee","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7d4309e3-f9dc-4777-bc88-32f0676423b3","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -78,22 +71,13 @@
     "yorigin": 18,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprSteroidsMenuSelect","path":"sprites/sprSteroidsMenuSelect/sprSteroidsMenuSelect.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0b595ec4-14a3-474d-8ad1-571741c0c5c5","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0b595ec4-14a3-474d-8ad1-571741c0c5c5","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "MenuChar",
     "path": "folders/Sprites/Enemies/Menu/MenuChar.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprSteroidsMenuSelect",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

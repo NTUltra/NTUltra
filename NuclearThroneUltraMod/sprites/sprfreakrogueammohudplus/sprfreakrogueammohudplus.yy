@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprFreakRogueAmmoHUDPlus",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5703e782-6e13-468e-8028-aaeb852f6bfe","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5703e782-6e13-468e-8028-aaeb852f6bfe","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},"LayerId":{"name":"d68bb694-2def-4e4d-8a37-ffe078a50017","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFreakRogueAmmoHUDPlus","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},"resourceVersion":"1.0","name":"5703e782-6e13-468e-8028-aaeb852f6bfe","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5a085154-2218-4775-87c7-bb39998f411e","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5a085154-2218-4775-87c7-bb39998f411e","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},"LayerId":{"name":"d68bb694-2def-4e4d-8a37-ffe078a50017","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFreakRogueAmmoHUDPlus","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},"resourceVersion":"1.0","name":"5a085154-2218-4775-87c7-bb39998f411e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3f6155ef-6131-4a4a-ae75-d97991455cca","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3f6155ef-6131-4a4a-ae75-d97991455cca","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},"LayerId":{"name":"d68bb694-2def-4e4d-8a37-ffe078a50017","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFreakRogueAmmoHUDPlus","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},"resourceVersion":"1.0","name":"3f6155ef-6131-4a4a-ae75-d97991455cca","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"81196c63-f9b4-4fcb-9870-b7751481b4eb","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"81196c63-f9b4-4fcb-9870-b7751481b4eb","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},"LayerId":{"name":"d68bb694-2def-4e4d-8a37-ffe078a50017","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFreakRogueAmmoHUDPlus","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},"resourceVersion":"1.0","name":"81196c63-f9b4-4fcb-9870-b7751481b4eb","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5703e782-6e13-468e-8028-aaeb852f6bfe",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5a085154-2218-4775-87c7-bb39998f411e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3f6155ef-6131-4a4a-ae75-d97991455cca",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"81196c63-f9b4-4fcb-9870-b7751481b4eb",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprFreakRogueAmmoHUDPlus","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprFreakRogueAmmoHUDPlus",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -49,12 +46,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"593c8f61-fc06-4824-acca-0da743512bd5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5703e782-6e13-468e-8028-aaeb852f6bfe","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"086803f3-be0b-4ac7-9b25-e3a704aa12b9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5a085154-2218-4775-87c7-bb39998f411e","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"daaf5031-6eca-4e59-904a-51be775d0b7b","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3f6155ef-6131-4a4a-ae75-d97991455cca","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ac9f6c31-1c35-4f2c-9835-d5743271e597","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"81196c63-f9b4-4fcb-9870-b7751481b4eb","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +67,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprFreakRogueAmmoHUDPlus","path":"sprites/sprFreakRogueAmmoHUDPlus/sprFreakRogueAmmoHUDPlus.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprFreakRogueAmmoHUDPlus",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d68bb694-2def-4e4d-8a37-ffe078a50017","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d68bb694-2def-4e4d-8a37-ffe078a50017","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Rogue",
     "path": "folders/Sprites/Player/Custom/Rogue.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprFreakRogueAmmoHUDPlus",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

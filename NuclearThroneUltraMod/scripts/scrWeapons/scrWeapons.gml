@@ -3894,7 +3894,7 @@ function scrWeapons() {
 	wep_type[353] = 1
 	wep_auto[353] = 1
 	wep_load[353] = 2
-	wep_cost[353] = 1
+	wep_cost[353] = 1.5
 	wep_sprt[353] = sprTermiteGun
 	wep_area[353] = 10
 	wep_text[353] = "termites eat enemy mutants"
@@ -6716,6 +6716,17 @@ function scrWeapons() {
 	wep_text[607] = "pink blur"
 	wep_swap[607] = sndSwapShotgun
 	wep_rad[607] = 0;
+	
+	wep_name[608] = "SHANKER"
+	wep_type[608] = 0
+	wep_auto[608] = 0
+	wep_load[608] = 20
+	wep_cost[608] = 0
+	wep_sprt[608] = sprShovel
+	wep_area[608] = 3//4 originally?
+	wep_text[608] = "screwdriving shovel"
+	wep_swap[608] = sndSwapHammer
+	wep_rad[608] = 0;
 
 	maxwep = array_length(wep_name)-1;
 

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprNecromancerDead",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"71a9433b-4f8a-45bd-b1b2-8e08a506e8bf","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"71a9433b-4f8a-45bd-b1b2-8e08a506e8bf","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"LayerId":{"name":"1da5c34c-a47d-493a-ab8d-be98882964b4","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprNecromancerDead","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"resourceVersion":"1.0","name":"71a9433b-4f8a-45bd-b1b2-8e08a506e8bf","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"73ebc8f4-65de-4866-a531-05becb94e3cf","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"73ebc8f4-65de-4866-a531-05becb94e3cf","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"LayerId":{"name":"1da5c34c-a47d-493a-ab8d-be98882964b4","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprNecromancerDead","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"resourceVersion":"1.0","name":"73ebc8f4-65de-4866-a531-05becb94e3cf","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b858d5ab-ec3e-4ed4-a81c-96e887e8ad66","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b858d5ab-ec3e-4ed4-a81c-96e887e8ad66","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"LayerId":{"name":"1da5c34c-a47d-493a-ab8d-be98882964b4","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprNecromancerDead","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"resourceVersion":"1.0","name":"b858d5ab-ec3e-4ed4-a81c-96e887e8ad66","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"77726aeb-a52a-43b4-899a-a9aa0ad73f85","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"77726aeb-a52a-43b4-899a-a9aa0ad73f85","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"LayerId":{"name":"1da5c34c-a47d-493a-ab8d-be98882964b4","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprNecromancerDead","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"resourceVersion":"1.0","name":"77726aeb-a52a-43b4-899a-a9aa0ad73f85","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bcfdfc84-fa90-4523-b804-8e85d24776fd","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bcfdfc84-fa90-4523-b804-8e85d24776fd","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"LayerId":{"name":"1da5c34c-a47d-493a-ab8d-be98882964b4","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprNecromancerDead","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"resourceVersion":"1.0","name":"bcfdfc84-fa90-4523-b804-8e85d24776fd","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1afe73eb-82eb-492f-b57b-af62d1368951","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1afe73eb-82eb-492f-b57b-af62d1368951","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"LayerId":{"name":"1da5c34c-a47d-493a-ab8d-be98882964b4","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprNecromancerDead","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"resourceVersion":"1.0","name":"1afe73eb-82eb-492f-b57b-af62d1368951","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"71a9433b-4f8a-45bd-b1b2-8e08a506e8bf",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"73ebc8f4-65de-4866-a531-05becb94e3cf",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b858d5ab-ec3e-4ed4-a81c-96e887e8ad66",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"77726aeb-a52a-43b4-899a-a9aa0ad73f85",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bcfdfc84-fa90-4523-b804-8e85d24776fd",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1afe73eb-82eb-492f-b57b-af62d1368951",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprNecromancerDead","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprNecromancerDead",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -55,14 +48,14 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"aca067b9-e4d1-402b-b5e1-7b772922ead7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"71a9433b-4f8a-45bd-b1b2-8e08a506e8bf","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"cdb97fdf-6f0c-4382-a4f3-8165a58fbac7","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"73ebc8f4-65de-4866-a531-05becb94e3cf","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"23c42b6a-0ce2-4263-8d45-9631234ff4b5","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b858d5ab-ec3e-4ed4-a81c-96e887e8ad66","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"3b8abbf6-2904-49e7-8ff7-dd6fae2a71ab","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"77726aeb-a52a-43b4-899a-a9aa0ad73f85","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8fb9b4cf-cc13-45e8-8266-dbfd5a2bc502","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bcfdfc84-fa90-4523-b804-8e85d24776fd","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"df3fed0f-883f-4719-ab5f-6b13396698c2","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1afe73eb-82eb-492f-b57b-af62d1368951","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -78,22 +71,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprNecromancerDead","path":"sprites/sprNecromancerDead/sprNecromancerDead.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprNecromancerDead",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1da5c34c-a47d-493a-ab8d-be98882964b4","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1da5c34c-a47d-493a-ab8d-be98882964b4","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Labs",
     "path": "folders/Sprites/Enemies/Labs.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprNecromancerDead",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

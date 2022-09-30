@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprToxicMushroomGuyWalk",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"547fa4ff-8033-4b56-af56-d4a0bff04271","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"547fa4ff-8033-4b56-af56-d4a0bff04271","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"LayerId":{"name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicMushroomGuyWalk","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"resourceVersion":"1.0","name":"547fa4ff-8033-4b56-af56-d4a0bff04271","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"039cd56a-94eb-4683-ba90-5de1e611a4c5","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"039cd56a-94eb-4683-ba90-5de1e611a4c5","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"LayerId":{"name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicMushroomGuyWalk","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"resourceVersion":"1.0","name":"039cd56a-94eb-4683-ba90-5de1e611a4c5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6874f07d-fdb1-4f96-8870-e44358a3bc5a","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6874f07d-fdb1-4f96-8870-e44358a3bc5a","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"LayerId":{"name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicMushroomGuyWalk","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"resourceVersion":"1.0","name":"6874f07d-fdb1-4f96-8870-e44358a3bc5a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a7edc0b2-da04-4ac2-bca8-b52eb9371028","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a7edc0b2-da04-4ac2-bca8-b52eb9371028","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"LayerId":{"name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicMushroomGuyWalk","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"resourceVersion":"1.0","name":"a7edc0b2-da04-4ac2-bca8-b52eb9371028","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a83189f1-94b9-42d9-877a-c51f9280c000","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a83189f1-94b9-42d9-877a-c51f9280c000","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"LayerId":{"name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicMushroomGuyWalk","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"resourceVersion":"1.0","name":"a83189f1-94b9-42d9-877a-c51f9280c000","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4fa46346-23fa-4ec6-a995-1569e9958397","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4fa46346-23fa-4ec6-a995-1569e9958397","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"LayerId":{"name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicMushroomGuyWalk","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"resourceVersion":"1.0","name":"4fa46346-23fa-4ec6-a995-1569e9958397","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"547fa4ff-8033-4b56-af56-d4a0bff04271",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"039cd56a-94eb-4683-ba90-5de1e611a4c5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6874f07d-fdb1-4f96-8870-e44358a3bc5a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a7edc0b2-da04-4ac2-bca8-b52eb9371028",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a83189f1-94b9-42d9-877a-c51f9280c000",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4fa46346-23fa-4ec6-a995-1569e9958397",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprToxicMushroomGuyWalk","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprToxicMushroomGuyWalk",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -55,14 +48,14 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"74cadb8e-8fdc-4b4e-9149-71bd1f6f576a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"547fa4ff-8033-4b56-af56-d4a0bff04271","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"7e53f3e3-a496-4bb7-9d83-2291c88c34a3","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"039cd56a-94eb-4683-ba90-5de1e611a4c5","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"7db7afff-6d72-48b1-a98d-3d94370fe9a6","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6874f07d-fdb1-4f96-8870-e44358a3bc5a","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9cc96904-551d-4b9e-9520-338911048415","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a7edc0b2-da04-4ac2-bca8-b52eb9371028","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c817391b-8b39-4e83-bf76-d79e298b20a6","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a83189f1-94b9-42d9-877a-c51f9280c000","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b0fe5dba-01ee-46b9-905c-5d81fc504f23","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4fa46346-23fa-4ec6-a995-1569e9958397","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -78,22 +71,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprToxicMushroomGuyWalk","path":"sprites/sprToxicMushroomGuyWalk/sprToxicMushroomGuyWalk.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprToxicMushroomGuyWalk",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Mushroom",
     "path": "folders/Sprites/Enemies/Mushroom.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprToxicMushroomGuyWalk",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

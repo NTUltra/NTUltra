@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprSunkCar3",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b15e3844-ca31-43ef-954e-a62c79c2dbfa","path":"sprites/sprSunkCar3/sprSunkCar3.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b15e3844-ca31-43ef-954e-a62c79c2dbfa","path":"sprites/sprSunkCar3/sprSunkCar3.yy",},"LayerId":{"name":"08ccce41-c521-4e4f-9b35-ada4de4a495e","path":"sprites/sprSunkCar3/sprSunkCar3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSunkCar3","path":"sprites/sprSunkCar3/sprSunkCar3.yy",},"resourceVersion":"1.0","name":"b15e3844-ca31-43ef-954e-a62c79c2dbfa","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b15e3844-ca31-43ef-954e-a62c79c2dbfa",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprSunkCar3","path":"sprites/sprSunkCar3/sprSunkCar3.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprSunkCar3",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"15ba26a7-671a-417f-b996-78f4e4fa769f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b15e3844-ca31-43ef-954e-a62c79c2dbfa","path":"sprites/sprSunkCar3/sprSunkCar3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 15,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprSunkCar3","path":"sprites/sprSunkCar3/sprSunkCar3.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprSunkCar3",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"08ccce41-c521-4e4f-9b35-ada4de4a495e","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"08ccce41-c521-4e4f-9b35-ada4de4a495e","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "OasisProps",
     "path": "folders/Sprites/Enviroment/Props/OasisProps.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprSunkCar3",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

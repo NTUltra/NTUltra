@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedRavenWalk",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8a992792-6940-4891-9bc1-d8d00617d4ec","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8a992792-6940-4891-9bc1-d8d00617d4ec","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"LayerId":{"name":"6e85444a-2173-43b8-ab37-52a2afa8ef49","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedRavenWalk","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"resourceVersion":"1.0","name":"8a992792-6940-4891-9bc1-d8d00617d4ec","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"87fd37fa-4478-467b-8979-065617707d0e","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"87fd37fa-4478-467b-8979-065617707d0e","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"LayerId":{"name":"6e85444a-2173-43b8-ab37-52a2afa8ef49","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedRavenWalk","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"resourceVersion":"1.0","name":"87fd37fa-4478-467b-8979-065617707d0e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ddbd318a-31ac-4694-8de0-1f6b0c234957","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ddbd318a-31ac-4694-8de0-1f6b0c234957","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"LayerId":{"name":"6e85444a-2173-43b8-ab37-52a2afa8ef49","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedRavenWalk","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"resourceVersion":"1.0","name":"ddbd318a-31ac-4694-8de0-1f6b0c234957","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"40105938-6218-48b3-85f8-0e9f85a30e38","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"40105938-6218-48b3-85f8-0e9f85a30e38","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"LayerId":{"name":"6e85444a-2173-43b8-ab37-52a2afa8ef49","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedRavenWalk","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"resourceVersion":"1.0","name":"40105938-6218-48b3-85f8-0e9f85a30e38","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"25e092ec-79df-488c-9d73-bdd2944f6505","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"25e092ec-79df-488c-9d73-bdd2944f6505","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"LayerId":{"name":"6e85444a-2173-43b8-ab37-52a2afa8ef49","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedRavenWalk","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"resourceVersion":"1.0","name":"25e092ec-79df-488c-9d73-bdd2944f6505","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"eb77af25-84b1-4fd9-a6ed-e56daa424457","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"eb77af25-84b1-4fd9-a6ed-e56daa424457","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"LayerId":{"name":"6e85444a-2173-43b8-ab37-52a2afa8ef49","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedRavenWalk","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"resourceVersion":"1.0","name":"eb77af25-84b1-4fd9-a6ed-e56daa424457","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8a992792-6940-4891-9bc1-d8d00617d4ec",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"87fd37fa-4478-467b-8979-065617707d0e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ddbd318a-31ac-4694-8de0-1f6b0c234957",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"40105938-6218-48b3-85f8-0e9f85a30e38",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"25e092ec-79df-488c-9d73-bdd2944f6505",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eb77af25-84b1-4fd9-a6ed-e56daa424457",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedRavenWalk","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -55,14 +48,14 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"b8a3febb-20bb-4ddd-8afd-732558b034ac","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8a992792-6940-4891-9bc1-d8d00617d4ec","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"63c13945-cdaa-465c-897c-7841047c1b01","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"87fd37fa-4478-467b-8979-065617707d0e","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9aabb861-7788-4fde-9db9-c6cc9fdce7d4","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ddbd318a-31ac-4694-8de0-1f6b0c234957","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"93da4b1e-0f73-4b26-90c9-fb3bb516b49b","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"40105938-6218-48b3-85f8-0e9f85a30e38","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"bcdcb2f1-c64a-4a2a-a465-deb8232ee7d2","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"25e092ec-79df-488c-9d73-bdd2944f6505","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b0750c2a-a89f-4b98-9c43-8bee1f38aaab","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eb77af25-84b1-4fd9-a6ed-e56daa424457","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -78,22 +71,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedRavenWalk","path":"sprites/sprInvertedRavenWalk/sprInvertedRavenWalk.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6e85444a-2173-43b8-ab37-52a2afa8ef49","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6e85444a-2173-43b8-ab37-52a2afa8ef49","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Raven",
     "path": "folders/Sprites/Enemies/Raven.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedRavenWalk",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

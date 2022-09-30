@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedMoneyPileHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f295b3d9-1361-45bc-a727-a215987cbfdb","path":"sprites/sprInvertedMoneyPileHurt/sprInvertedMoneyPileHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f295b3d9-1361-45bc-a727-a215987cbfdb","path":"sprites/sprInvertedMoneyPileHurt/sprInvertedMoneyPileHurt.yy",},"LayerId":{"name":"25d6bddf-4c47-491b-abab-6c77604c7708","path":"sprites/sprInvertedMoneyPileHurt/sprInvertedMoneyPileHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedMoneyPileHurt","path":"sprites/sprInvertedMoneyPileHurt/sprInvertedMoneyPileHurt.yy",},"resourceVersion":"1.0","name":"f295b3d9-1361-45bc-a727-a215987cbfdb","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"dd3f1562-c4fe-468d-8179-58b6e65423c5","path":"sprites/sprInvertedMoneyPileHurt/sprInvertedMoneyPileHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dd3f1562-c4fe-468d-8179-58b6e65423c5","path":"sprites/sprInvertedMoneyPileHurt/sprInvertedMoneyPileHurt.yy",},"LayerId":{"name":"25d6bddf-4c47-491b-abab-6c77604c7708","path":"sprites/sprInvertedMoneyPileHurt/sprInvertedMoneyPileHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedMoneyPileHurt","path":"sprites/sprInvertedMoneyPileHurt/sprInvertedMoneyPileHurt.yy",},"resourceVersion":"1.0","name":"dd3f1562-c4fe-468d-8179-58b6e65423c5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7146be0a-bac9-4221-b279-e7f6c22cfbfb","path":"sprites/sprInvertedMoneyPileHurt/sprInvertedMoneyPileHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7146be0a-bac9-4221-b279-e7f6c22cfbfb","path":"sprites/sprInvertedMoneyPileHurt/sprInvertedMoneyPileHurt.yy",},"LayerId":{"name":"25d6bddf-4c47-491b-abab-6c77604c7708","path":"sprites/sprInvertedMoneyPileHurt/sprInvertedMoneyPileHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedMoneyPileHurt","path":"sprites/sprInvertedMoneyPileHurt/sprInvertedMoneyPileHurt.yy",},"resourceVersion":"1.0","name":"7146be0a-bac9-4221-b279-e7f6c22cfbfb","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f295b3d9-1361-45bc-a727-a215987cbfdb",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dd3f1562-c4fe-468d-8179-58b6e65423c5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7146be0a-bac9-4221-b279-e7f6c22cfbfb",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedMoneyPileHurt","path":"sprites/sprInvertedMoneyPileHurt/sprInvertedMoneyPileHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedMoneyPileHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"f8cc7600-3ac4-459e-9049-a3bd3963b1bf","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f295b3d9-1361-45bc-a727-a215987cbfdb","path":"sprites/sprInvertedMoneyPileHurt/sprInvertedMoneyPileHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a5af06cf-9505-4c98-a5f1-68adf4bd232c","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dd3f1562-c4fe-468d-8179-58b6e65423c5","path":"sprites/sprInvertedMoneyPileHurt/sprInvertedMoneyPileHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"50837bd7-1f8d-4b99-9b87-e84331864fa3","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7146be0a-bac9-4221-b279-e7f6c22cfbfb","path":"sprites/sprInvertedMoneyPileHurt/sprInvertedMoneyPileHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedMoneyPileHurt","path":"sprites/sprInvertedMoneyPileHurt/sprInvertedMoneyPileHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedMoneyPileHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"25d6bddf-4c47-491b-abab-6c77604c7708","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"25d6bddf-4c47-491b-abab-6c77604c7708","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Fancyness",
     "path": "folders/Sprites/Fancyness.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedMoneyPileHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

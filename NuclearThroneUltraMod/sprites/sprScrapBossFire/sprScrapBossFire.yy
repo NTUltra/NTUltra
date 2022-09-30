@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprScrapBossFire",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"cdfeeb84-eff9-4798-b0d1-1dfb3634ddff","path":"sprites/sprScrapBossFire/sprScrapBossFire.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cdfeeb84-eff9-4798-b0d1-1dfb3634ddff","path":"sprites/sprScrapBossFire/sprScrapBossFire.yy",},"LayerId":{"name":"154d44d8-5695-4584-a4bf-fa0d604bd803","path":"sprites/sprScrapBossFire/sprScrapBossFire.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprScrapBossFire","path":"sprites/sprScrapBossFire/sprScrapBossFire.yy",},"resourceVersion":"1.0","name":"cdfeeb84-eff9-4798-b0d1-1dfb3634ddff","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6fd87b6b-63d9-4579-91f4-736ffa1dc2e9","path":"sprites/sprScrapBossFire/sprScrapBossFire.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6fd87b6b-63d9-4579-91f4-736ffa1dc2e9","path":"sprites/sprScrapBossFire/sprScrapBossFire.yy",},"LayerId":{"name":"154d44d8-5695-4584-a4bf-fa0d604bd803","path":"sprites/sprScrapBossFire/sprScrapBossFire.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprScrapBossFire","path":"sprites/sprScrapBossFire/sprScrapBossFire.yy",},"resourceVersion":"1.0","name":"6fd87b6b-63d9-4579-91f4-736ffa1dc2e9","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cdfeeb84-eff9-4798-b0d1-1dfb3634ddff",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6fd87b6b-63d9-4579-91f4-736ffa1dc2e9",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprScrapBossFire","path":"sprites/sprScrapBossFire/sprScrapBossFire.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"3ecf37b5-b1c9-469b-be85-e962e4235684","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cdfeeb84-eff9-4798-b0d1-1dfb3634ddff","path":"sprites/sprScrapBossFire/sprScrapBossFire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e101ac1a-3749-494e-a59a-30db46f7f50f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6fd87b6b-63d9-4579-91f4-736ffa1dc2e9","path":"sprites/sprScrapBossFire/sprScrapBossFire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 48,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprScrapBossFire","path":"sprites/sprScrapBossFire/sprScrapBossFire.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"154d44d8-5695-4584-a4bf-fa0d604bd803","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"154d44d8-5695-4584-a4bf-fa0d604bd803","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "BigDog",
     "path": "folders/Sprites/Enemies/Boss/BigDog.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprScrapBossFire",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

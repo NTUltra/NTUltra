@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprPlasmaMinigun",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"9070941f-4963-431a-88f8-69d53a68fd3c","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9070941f-4963-431a-88f8-69d53a68fd3c","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"LayerId":{"name":"95e53d5d-7d5d-4869-b5bd-c13f8f51b4cf","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprPlasmaMinigun","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"resourceVersion":"1.0","name":"9070941f-4963-431a-88f8-69d53a68fd3c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7b619feb-5472-42a2-b2bd-b14c5fae086f","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7b619feb-5472-42a2-b2bd-b14c5fae086f","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"LayerId":{"name":"95e53d5d-7d5d-4869-b5bd-c13f8f51b4cf","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprPlasmaMinigun","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"resourceVersion":"1.0","name":"7b619feb-5472-42a2-b2bd-b14c5fae086f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4a392ed8-8748-4703-ba17-621257bc696e","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4a392ed8-8748-4703-ba17-621257bc696e","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"LayerId":{"name":"95e53d5d-7d5d-4869-b5bd-c13f8f51b4cf","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprPlasmaMinigun","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"resourceVersion":"1.0","name":"4a392ed8-8748-4703-ba17-621257bc696e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3e0370cb-9e30-4fc5-a769-9ef75eb7afcf","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3e0370cb-9e30-4fc5-a769-9ef75eb7afcf","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"LayerId":{"name":"95e53d5d-7d5d-4869-b5bd-c13f8f51b4cf","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprPlasmaMinigun","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"resourceVersion":"1.0","name":"3e0370cb-9e30-4fc5-a769-9ef75eb7afcf","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0557642a-27da-4f4e-b1ce-124bfc02db80","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0557642a-27da-4f4e-b1ce-124bfc02db80","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"LayerId":{"name":"95e53d5d-7d5d-4869-b5bd-c13f8f51b4cf","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprPlasmaMinigun","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"resourceVersion":"1.0","name":"0557642a-27da-4f4e-b1ce-124bfc02db80","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f9d5737e-55ef-4150-9ca7-e3876c7e7174","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f9d5737e-55ef-4150-9ca7-e3876c7e7174","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"LayerId":{"name":"95e53d5d-7d5d-4869-b5bd-c13f8f51b4cf","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprPlasmaMinigun","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"resourceVersion":"1.0","name":"f9d5737e-55ef-4150-9ca7-e3876c7e7174","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b0d7a053-0864-4cc8-92ef-f7a899f4452c","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b0d7a053-0864-4cc8-92ef-f7a899f4452c","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"LayerId":{"name":"95e53d5d-7d5d-4869-b5bd-c13f8f51b4cf","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprPlasmaMinigun","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"resourceVersion":"1.0","name":"b0d7a053-0864-4cc8-92ef-f7a899f4452c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9070941f-4963-431a-88f8-69d53a68fd3c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7b619feb-5472-42a2-b2bd-b14c5fae086f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4a392ed8-8748-4703-ba17-621257bc696e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3e0370cb-9e30-4fc5-a769-9ef75eb7afcf",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0557642a-27da-4f4e-b1ce-124bfc02db80",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f9d5737e-55ef-4150-9ca7-e3876c7e7174",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b0d7a053-0864-4cc8-92ef-f7a899f4452c",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprPlasmaMinigun","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"d762dba0-2a5c-4081-a94c-2120f5b66dec","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9070941f-4963-431a-88f8-69d53a68fd3c","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b5d49fb5-ba27-4454-8fae-fe07dad598f0","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7b619feb-5472-42a2-b2bd-b14c5fae086f","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ed47aa52-42d4-4c6b-acbd-585ca62ebad6","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4a392ed8-8748-4703-ba17-621257bc696e","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"caff2a28-fd30-4f34-92a6-b4c2909474d2","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0557642a-27da-4f4e-b1ce-124bfc02db80","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"41dd0343-b03a-4dc2-aef8-c9db7efdafc5","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f9d5737e-55ef-4150-9ca7-e3876c7e7174","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b56c3900-1dc9-4a89-b95a-9196e46707cd","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b0d7a053-0864-4cc8-92ef-f7a899f4452c","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 4,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprPlasmaMinigun","path":"sprites/sprPlasmaMinigun/sprPlasmaMinigun.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"95e53d5d-7d5d-4869-b5bd-c13f8f51b4cf","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"95e53d5d-7d5d-4869-b5bd-c13f8f51b4cf","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Existing",
     "path": "folders/Sprites/Weapons/Existing.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprPlasmaMinigun",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

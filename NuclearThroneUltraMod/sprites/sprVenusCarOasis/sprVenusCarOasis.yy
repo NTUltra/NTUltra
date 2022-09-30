@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprVenusCarOasis",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"18ae59af-7893-4e75-95a0-977a5ba6512e","path":"sprites/sprVenusCarOasis/sprVenusCarOasis.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"18ae59af-7893-4e75-95a0-977a5ba6512e","path":"sprites/sprVenusCarOasis/sprVenusCarOasis.yy",},"LayerId":{"name":"a4323bda-d314-4d0e-b514-943eedfbc679","path":"sprites/sprVenusCarOasis/sprVenusCarOasis.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVenusCarOasis","path":"sprites/sprVenusCarOasis/sprVenusCarOasis.yy",},"resourceVersion":"1.0","name":"18ae59af-7893-4e75-95a0-977a5ba6512e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"18ae59af-7893-4e75-95a0-977a5ba6512e",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprVenusCarOasis","path":"sprites/sprVenusCarOasis/sprVenusCarOasis.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprVenusCarOasis",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"98cc509c-2fbb-423c-8b6d-2d91e38f6800","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"18ae59af-7893-4e75-95a0-977a5ba6512e","path":"sprites/sprVenusCarOasis/sprVenusCarOasis.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprVenusCarOasis","path":"sprites/sprVenusCarOasis/sprVenusCarOasis.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprVenusCarOasis",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a4323bda-d314-4d0e-b514-943eedfbc679","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a4323bda-d314-4d0e-b514-943eedfbc679","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Cars",
     "path": "folders/Sprites/Enviroment/Cars.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprVenusCarOasis",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprFallenChairHurt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"0fe99089-9ccc-4c85-af76-1a34f27188ea","path":"sprites/sprFallenChairHurt/sprFallenChairHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0fe99089-9ccc-4c85-af76-1a34f27188ea","path":"sprites/sprFallenChairHurt/sprFallenChairHurt.yy",},"LayerId":{"name":"139cff52-2ff6-44c5-b459-8d8c580e3d76","path":"sprites/sprFallenChairHurt/sprFallenChairHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFallenChairHurt","path":"sprites/sprFallenChairHurt/sprFallenChairHurt.yy",},"resourceVersion":"1.0","name":"0fe99089-9ccc-4c85-af76-1a34f27188ea","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b7feedf0-336f-41f6-b431-47425dc06a00","path":"sprites/sprFallenChairHurt/sprFallenChairHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b7feedf0-336f-41f6-b431-47425dc06a00","path":"sprites/sprFallenChairHurt/sprFallenChairHurt.yy",},"LayerId":{"name":"139cff52-2ff6-44c5-b459-8d8c580e3d76","path":"sprites/sprFallenChairHurt/sprFallenChairHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFallenChairHurt","path":"sprites/sprFallenChairHurt/sprFallenChairHurt.yy",},"resourceVersion":"1.0","name":"b7feedf0-336f-41f6-b431-47425dc06a00","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"123617dd-9783-428a-b9b2-4e8b152870c5","path":"sprites/sprFallenChairHurt/sprFallenChairHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"123617dd-9783-428a-b9b2-4e8b152870c5","path":"sprites/sprFallenChairHurt/sprFallenChairHurt.yy",},"LayerId":{"name":"139cff52-2ff6-44c5-b459-8d8c580e3d76","path":"sprites/sprFallenChairHurt/sprFallenChairHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFallenChairHurt","path":"sprites/sprFallenChairHurt/sprFallenChairHurt.yy",},"resourceVersion":"1.0","name":"123617dd-9783-428a-b9b2-4e8b152870c5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0fe99089-9ccc-4c85-af76-1a34f27188ea",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b7feedf0-336f-41f6-b431-47425dc06a00",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"123617dd-9783-428a-b9b2-4e8b152870c5",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprFallenChairHurt","path":"sprites/sprFallenChairHurt/sprFallenChairHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprFallenChairHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"1d324f56-30ce-4b99-9099-8fa61f8a2c62","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0fe99089-9ccc-4c85-af76-1a34f27188ea","path":"sprites/sprFallenChairHurt/sprFallenChairHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d03d2d7b-bf1e-4e6d-b081-6bf12d1f1a21","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b7feedf0-336f-41f6-b431-47425dc06a00","path":"sprites/sprFallenChairHurt/sprFallenChairHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"05a85d2f-bd7f-4e3e-b8ca-76f6d8f70418","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"123617dd-9783-428a-b9b2-4e8b152870c5","path":"sprites/sprFallenChairHurt/sprFallenChairHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 13,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprFallenChairHurt","path":"sprites/sprFallenChairHurt/sprFallenChairHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprFallenChairHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"139cff52-2ff6-44c5-b459-8d8c580e3d76","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"139cff52-2ff6-44c5-b459-8d8c580e3d76","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Props",
     "path": "folders/Sprites/Palace/PalaceEnviroment/Props.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprFallenChairHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

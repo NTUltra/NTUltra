@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprExplosiveBolt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"87cc7da0-f441-4286-b0b9-ddb4b93a2e9a","path":"sprites/sprExplosiveBolt/sprExplosiveBolt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"87cc7da0-f441-4286-b0b9-ddb4b93a2e9a","path":"sprites/sprExplosiveBolt/sprExplosiveBolt.yy",},"LayerId":{"name":"bdd5ccb9-3bc0-473f-99fa-f4208900fff2","path":"sprites/sprExplosiveBolt/sprExplosiveBolt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprExplosiveBolt","path":"sprites/sprExplosiveBolt/sprExplosiveBolt.yy",},"resourceVersion":"1.0","name":"87cc7da0-f441-4286-b0b9-ddb4b93a2e9a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9daa3a34-ca44-4ecb-b5c3-817678637c15","path":"sprites/sprExplosiveBolt/sprExplosiveBolt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9daa3a34-ca44-4ecb-b5c3-817678637c15","path":"sprites/sprExplosiveBolt/sprExplosiveBolt.yy",},"LayerId":{"name":"bdd5ccb9-3bc0-473f-99fa-f4208900fff2","path":"sprites/sprExplosiveBolt/sprExplosiveBolt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprExplosiveBolt","path":"sprites/sprExplosiveBolt/sprExplosiveBolt.yy",},"resourceVersion":"1.0","name":"9daa3a34-ca44-4ecb-b5c3-817678637c15","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"87cc7da0-f441-4286-b0b9-ddb4b93a2e9a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9daa3a34-ca44-4ecb-b5c3-817678637c15",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprExplosiveBolt","path":"sprites/sprExplosiveBolt/sprExplosiveBolt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"cfca25d7-2310-469c-a023-46adb8a517df","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"87cc7da0-f441-4286-b0b9-ddb4b93a2e9a","path":"sprites/sprExplosiveBolt/sprExplosiveBolt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"18e6c95c-830d-478a-957e-b489a40c895f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9daa3a34-ca44-4ecb-b5c3-817678637c15","path":"sprites/sprExplosiveBolt/sprExplosiveBolt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprExplosiveBolt","path":"sprites/sprExplosiveBolt/sprExplosiveBolt.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bdd5ccb9-3bc0-473f-99fa-f4208900fff2","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"bdd5ccb9-3bc0-473f-99fa-f4208900fff2","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Projectiles",
     "path": "folders/Sprites/Projectiles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprExplosiveBolt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

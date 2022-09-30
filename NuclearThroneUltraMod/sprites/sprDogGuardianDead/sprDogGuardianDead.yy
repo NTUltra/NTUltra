@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprDogGuardianDead",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4bcba9db-2641-45b5-a72c-23b86690f55f","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4bcba9db-2641-45b5-a72c-23b86690f55f","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"LayerId":{"name":"042ad2ca-974e-44c1-9ccb-a6ddb13cd8e8","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprDogGuardianDead","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"resourceVersion":"1.0","name":"4bcba9db-2641-45b5-a72c-23b86690f55f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ff3aa8fb-1743-406e-8bf2-5a2f67a7d68b","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ff3aa8fb-1743-406e-8bf2-5a2f67a7d68b","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"LayerId":{"name":"042ad2ca-974e-44c1-9ccb-a6ddb13cd8e8","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprDogGuardianDead","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"resourceVersion":"1.0","name":"ff3aa8fb-1743-406e-8bf2-5a2f67a7d68b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c098dfbb-9408-4115-a171-4186a3d589ae","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c098dfbb-9408-4115-a171-4186a3d589ae","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"LayerId":{"name":"042ad2ca-974e-44c1-9ccb-a6ddb13cd8e8","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprDogGuardianDead","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"resourceVersion":"1.0","name":"c098dfbb-9408-4115-a171-4186a3d589ae","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"941fcf96-8de7-48d3-88ac-66a367aa0af9","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"941fcf96-8de7-48d3-88ac-66a367aa0af9","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"LayerId":{"name":"042ad2ca-974e-44c1-9ccb-a6ddb13cd8e8","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprDogGuardianDead","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"resourceVersion":"1.0","name":"941fcf96-8de7-48d3-88ac-66a367aa0af9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"de97c686-12d6-4648-a038-de31cef143f3","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"de97c686-12d6-4648-a038-de31cef143f3","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"LayerId":{"name":"042ad2ca-974e-44c1-9ccb-a6ddb13cd8e8","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprDogGuardianDead","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"resourceVersion":"1.0","name":"de97c686-12d6-4648-a038-de31cef143f3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7e459938-75c3-4f1d-900c-584a31627050","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7e459938-75c3-4f1d-900c-584a31627050","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"LayerId":{"name":"042ad2ca-974e-44c1-9ccb-a6ddb13cd8e8","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprDogGuardianDead","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"resourceVersion":"1.0","name":"7e459938-75c3-4f1d-900c-584a31627050","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a459222b-bdbc-4afb-af95-9b6a10b28c86","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a459222b-bdbc-4afb-af95-9b6a10b28c86","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"LayerId":{"name":"042ad2ca-974e-44c1-9ccb-a6ddb13cd8e8","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprDogGuardianDead","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"resourceVersion":"1.0","name":"a459222b-bdbc-4afb-af95-9b6a10b28c86","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4bcba9db-2641-45b5-a72c-23b86690f55f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ff3aa8fb-1743-406e-8bf2-5a2f67a7d68b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c098dfbb-9408-4115-a171-4186a3d589ae",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"941fcf96-8de7-48d3-88ac-66a367aa0af9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"de97c686-12d6-4648-a038-de31cef143f3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7e459938-75c3-4f1d-900c-584a31627050",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a459222b-bdbc-4afb-af95-9b6a10b28c86",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprDogGuardianDead","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprDogGuardianDead",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"ff58247c-2da7-4b62-8e16-06ca46d6bee7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4bcba9db-2641-45b5-a72c-23b86690f55f","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"5ad666de-5a5e-45f9-96cf-b5633db71175","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ff3aa8fb-1743-406e-8bf2-5a2f67a7d68b","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d4377b7a-dd8f-4e16-8b81-6b4ebb406faf","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c098dfbb-9408-4115-a171-4186a3d589ae","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"b13fc543-9f45-45e7-8914-7456eb554209","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"de97c686-12d6-4648-a038-de31cef143f3","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"3d2df2ad-cd22-4716-9a57-abe82f7be568","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7e459938-75c3-4f1d-900c-584a31627050","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d22c3329-a027-4e33-be2d-f097f16ab7a8","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a459222b-bdbc-4afb-af95-9b6a10b28c86","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprDogGuardianDead","path":"sprites/sprDogGuardianDead/sprDogGuardianDead.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprDogGuardianDead",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"042ad2ca-974e-44c1-9ccb-a6ddb13cd8e8","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"042ad2ca-974e-44c1-9ccb-a6ddb13cd8e8","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Palace Enemy",
     "path": "folders/Sprites/Palace/Palace Enemy.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprDogGuardianDead",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

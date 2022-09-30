@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprBanditBossFire",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"0240a70a-2166-47e8-a6e9-3dd4106075ea","path":"sprites/sprBanditBossFire/sprBanditBossFire.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0240a70a-2166-47e8-a6e9-3dd4106075ea","path":"sprites/sprBanditBossFire/sprBanditBossFire.yy",},"LayerId":{"name":"63db1c4d-fec7-447d-b291-5aacf50b37b7","path":"sprites/sprBanditBossFire/sprBanditBossFire.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBanditBossFire","path":"sprites/sprBanditBossFire/sprBanditBossFire.yy",},"resourceVersion":"1.0","name":"0240a70a-2166-47e8-a6e9-3dd4106075ea","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f06a4ff1-89f8-4138-bbd3-6a0df7315e95","path":"sprites/sprBanditBossFire/sprBanditBossFire.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f06a4ff1-89f8-4138-bbd3-6a0df7315e95","path":"sprites/sprBanditBossFire/sprBanditBossFire.yy",},"LayerId":{"name":"63db1c4d-fec7-447d-b291-5aacf50b37b7","path":"sprites/sprBanditBossFire/sprBanditBossFire.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBanditBossFire","path":"sprites/sprBanditBossFire/sprBanditBossFire.yy",},"resourceVersion":"1.0","name":"f06a4ff1-89f8-4138-bbd3-6a0df7315e95","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0240a70a-2166-47e8-a6e9-3dd4106075ea",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f06a4ff1-89f8-4138-bbd3-6a0df7315e95",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprBanditBossFire","path":"sprites/sprBanditBossFire/sprBanditBossFire.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprBanditBossFire",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"f0eb8a0a-1daa-45b4-8f3b-d135d88aed66","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0240a70a-2166-47e8-a6e9-3dd4106075ea","path":"sprites/sprBanditBossFire/sprBanditBossFire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6d96b1e8-10bd-4066-a60e-1c6012aaf44a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f06a4ff1-89f8-4138-bbd3-6a0df7315e95","path":"sprites/sprBanditBossFire/sprBanditBossFire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprBanditBossFire","path":"sprites/sprBanditBossFire/sprBanditBossFire.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprBanditBossFire",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"63db1c4d-fec7-447d-b291-5aacf50b37b7","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"63db1c4d-fec7-447d-b291-5aacf50b37b7","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "BigBandit",
     "path": "folders/Sprites/Enemies/Boss/BigBandit.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprBanditBossFire",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -21,6 +21,7 @@ function scrInit() {
 	
 	//Hey don't read this
 	encrypted_data = {
+		username: "",
 		ctot_dailies_score_seed: [],
 		daily_score_dates: [],
 		ctot_dailies_score_score: [],

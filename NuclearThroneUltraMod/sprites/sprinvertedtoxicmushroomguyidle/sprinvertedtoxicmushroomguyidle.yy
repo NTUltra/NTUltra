@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedToxicMushroomGuyIdle",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6874f07d-fdb1-4f96-8870-e44358a3bc5a","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6874f07d-fdb1-4f96-8870-e44358a3bc5a","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},"LayerId":{"name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedToxicMushroomGuyIdle","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},"resourceVersion":"1.0","name":"6874f07d-fdb1-4f96-8870-e44358a3bc5a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a7edc0b2-da04-4ac2-bca8-b52eb9371028","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a7edc0b2-da04-4ac2-bca8-b52eb9371028","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},"LayerId":{"name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedToxicMushroomGuyIdle","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},"resourceVersion":"1.0","name":"a7edc0b2-da04-4ac2-bca8-b52eb9371028","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a83189f1-94b9-42d9-877a-c51f9280c000","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a83189f1-94b9-42d9-877a-c51f9280c000","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},"LayerId":{"name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedToxicMushroomGuyIdle","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},"resourceVersion":"1.0","name":"a83189f1-94b9-42d9-877a-c51f9280c000","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4fa46346-23fa-4ec6-a995-1569e9958397","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4fa46346-23fa-4ec6-a995-1569e9958397","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},"LayerId":{"name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedToxicMushroomGuyIdle","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},"resourceVersion":"1.0","name":"4fa46346-23fa-4ec6-a995-1569e9958397","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6874f07d-fdb1-4f96-8870-e44358a3bc5a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a7edc0b2-da04-4ac2-bca8-b52eb9371028",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a83189f1-94b9-42d9-877a-c51f9280c000",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4fa46346-23fa-4ec6-a995-1569e9958397",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedToxicMushroomGuyIdle","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedToxicMushroomGuyIdle",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -49,12 +46,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"1a7116a3-fa7d-48b7-8e27-ea16d3ec781c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6874f07d-fdb1-4f96-8870-e44358a3bc5a","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ac8fa089-e1b4-4579-a3b2-70a2015235f7","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a7edc0b2-da04-4ac2-bca8-b52eb9371028","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f79d1128-204d-48ed-81ea-bd233dd2f72e","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a83189f1-94b9-42d9-877a-c51f9280c000","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"3a022cca-4245-4133-9fef-2b85be99ea3b","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4fa46346-23fa-4ec6-a995-1569e9958397","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +67,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedToxicMushroomGuyIdle","path":"sprites/sprInvertedToxicMushroomGuyIdle/sprInvertedToxicMushroomGuyIdle.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedToxicMushroomGuyIdle",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Mushroom",
     "path": "folders/Sprites/Enemies/Mushroom.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedToxicMushroomGuyIdle",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

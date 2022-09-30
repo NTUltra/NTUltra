@@ -164,6 +164,8 @@ function scrPopChests() {
 		if instance_exists(Crown){
 			with instance_furthest(Player.x,Player.y,WeaponChest)
 			{
+				instance_destroy(id,false);
+				if UberCont.opt_gamemode != 26 && UberCont.opt_gamemode != 27 && isValidGamemodeToUnlock(UberCont.opt_gamemode)//not daykrt
 				if Player.skill_got[23] //OPEN MIND
 				{
 					instance_create(x,y-24,ProtoChest)

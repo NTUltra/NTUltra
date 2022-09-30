@@ -13,6 +13,8 @@ if instance_exists(Corpse)
 				{
 					alarm[1] *= 0.5;
 					raddrop = 0;
+					countKill = false;
+					existTime = 30;
 				}
 		    }
 		}

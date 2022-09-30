@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprLilHunterDead",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4e15f1e4-7d72-4f19-a4e1-42684e00f94e","path":"sprites/sprLilHunterDead/sprLilHunterDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4e15f1e4-7d72-4f19-a4e1-42684e00f94e","path":"sprites/sprLilHunterDead/sprLilHunterDead.yy",},"LayerId":{"name":"25c70d86-6bd9-42aa-b891-8eac47ad4c50","path":"sprites/sprLilHunterDead/sprLilHunterDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprLilHunterDead","path":"sprites/sprLilHunterDead/sprLilHunterDead.yy",},"resourceVersion":"1.0","name":"4e15f1e4-7d72-4f19-a4e1-42684e00f94e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4f9d186e-7e5b-4e13-94ad-06cc7ba8f7bc","path":"sprites/sprLilHunterDead/sprLilHunterDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4f9d186e-7e5b-4e13-94ad-06cc7ba8f7bc","path":"sprites/sprLilHunterDead/sprLilHunterDead.yy",},"LayerId":{"name":"25c70d86-6bd9-42aa-b891-8eac47ad4c50","path":"sprites/sprLilHunterDead/sprLilHunterDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprLilHunterDead","path":"sprites/sprLilHunterDead/sprLilHunterDead.yy",},"resourceVersion":"1.0","name":"4f9d186e-7e5b-4e13-94ad-06cc7ba8f7bc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a9e6c1b5-beb3-4d3d-9b2d-579bb9ce24e3","path":"sprites/sprLilHunterDead/sprLilHunterDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a9e6c1b5-beb3-4d3d-9b2d-579bb9ce24e3","path":"sprites/sprLilHunterDead/sprLilHunterDead.yy",},"LayerId":{"name":"25c70d86-6bd9-42aa-b891-8eac47ad4c50","path":"sprites/sprLilHunterDead/sprLilHunterDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprLilHunterDead","path":"sprites/sprLilHunterDead/sprLilHunterDead.yy",},"resourceVersion":"1.0","name":"a9e6c1b5-beb3-4d3d-9b2d-579bb9ce24e3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4e15f1e4-7d72-4f19-a4e1-42684e00f94e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4f9d186e-7e5b-4e13-94ad-06cc7ba8f7bc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a9e6c1b5-beb3-4d3d-9b2d-579bb9ce24e3",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprLilHunterDead","path":"sprites/sprLilHunterDead/sprLilHunterDead.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"3b4a6189-d791-4d54-9f48-aceefe021a5c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4e15f1e4-7d72-4f19-a4e1-42684e00f94e","path":"sprites/sprLilHunterDead/sprLilHunterDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b7b2fb8a-7759-4396-b460-29c1b84f186d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4f9d186e-7e5b-4e13-94ad-06cc7ba8f7bc","path":"sprites/sprLilHunterDead/sprLilHunterDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"665b7d6f-19f7-4c29-9854-2fc6a339e445","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a9e6c1b5-beb3-4d3d-9b2d-579bb9ce24e3","path":"sprites/sprLilHunterDead/sprLilHunterDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprLilHunterDead","path":"sprites/sprLilHunterDead/sprLilHunterDead.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"25c70d86-6bd9-42aa-b891-8eac47ad4c50","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"25c70d86-6bd9-42aa-b891-8eac47ad4c50","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "LilHunter",
     "path": "folders/Sprites/Enemies/Boss/LilHunter.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprLilHunterDead",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

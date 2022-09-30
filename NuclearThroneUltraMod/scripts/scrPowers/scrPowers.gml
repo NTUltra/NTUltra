@@ -1285,13 +1285,43 @@ function scrPowers() {
 	//ROBOT
 	if race = 8
 	{
-		if instance_exists(HoldToEat)
+		if ultra_got[32]
 		{
-			with HoldToEat
-				instance_destroy();
+			//Force shot
+			var cost = wep_cost[wep]*4
+			if wep_cost[wep] == 0
+			{
+				wep_cost[wep] = clamp(round(wep_area[wep] * 1.5),5,40);	
+			}
+			if (rad >= cost)//(wepType != 0 && ammo[wepType] - cost > 0)
+			{
+				rad -= cost;
+				ammo[wep_type[wep]] += wep_cost[wep];
+				scrFire();
+			}
+			else
+			{
+				//snd_play_2d(snd_lowa,0,true,false,10);
+				if !audio_is_playing(sndUltraEmpty)
+						snd_play(sndUltraEmpty)
+				with instance_create(x,y,PopupText)
+				{
+					mytext = "NOT ENOUGH RADS"
+					theColour=c_red;
+				}
+				BackCont.shake += 5;
+			}
 		}
-		if bwep != 0
-		instance_create(x,y,HoldToEat);
+		else
+		{
+			if instance_exists(HoldToEat)
+			{
+				with HoldToEat
+					instance_destroy();
+			}
+			if bwep != 0
+			instance_create(x,y,HoldToEat);
+		}
 	}
 
 	//FISH

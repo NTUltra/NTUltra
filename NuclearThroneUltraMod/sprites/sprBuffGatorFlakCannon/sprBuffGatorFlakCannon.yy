@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprBuffGatorFlakCannon",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"bc6cc9f8-8008-4d89-a601-ace63ea32f85","path":"sprites/sprBuffGatorFlakCannon/sprBuffGatorFlakCannon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bc6cc9f8-8008-4d89-a601-ace63ea32f85","path":"sprites/sprBuffGatorFlakCannon/sprBuffGatorFlakCannon.yy",},"LayerId":{"name":"9fc5ee8d-87fa-41b6-9de8-c14d0ba358b0","path":"sprites/sprBuffGatorFlakCannon/sprBuffGatorFlakCannon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBuffGatorFlakCannon","path":"sprites/sprBuffGatorFlakCannon/sprBuffGatorFlakCannon.yy",},"resourceVersion":"1.0","name":"bc6cc9f8-8008-4d89-a601-ace63ea32f85","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bc6cc9f8-8008-4d89-a601-ace63ea32f85",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprBuffGatorFlakCannon","path":"sprites/sprBuffGatorFlakCannon/sprBuffGatorFlakCannon.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprBuffGatorFlakCannon",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"e1351640-f893-4097-b022-fa868809d22a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bc6cc9f8-8008-4d89-a601-ace63ea32f85","path":"sprites/sprBuffGatorFlakCannon/sprBuffGatorFlakCannon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 4,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprBuffGatorFlakCannon","path":"sprites/sprBuffGatorFlakCannon/sprBuffGatorFlakCannon.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprBuffGatorFlakCannon",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9fc5ee8d-87fa-41b6-9de8-c14d0ba358b0","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9fc5ee8d-87fa-41b6-9de8-c14d0ba358b0","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "BuffGator",
     "path": "folders/Sprites/Enemies/Sewers/BuffGator.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprBuffGatorFlakCannon",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

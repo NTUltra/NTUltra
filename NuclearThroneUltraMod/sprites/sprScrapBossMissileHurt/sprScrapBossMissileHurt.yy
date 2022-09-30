@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprScrapBossMissileHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"29f4c2ce-9bc7-44d0-920f-18daa2fb20e8","path":"sprites/sprScrapBossMissileHurt/sprScrapBossMissileHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"29f4c2ce-9bc7-44d0-920f-18daa2fb20e8","path":"sprites/sprScrapBossMissileHurt/sprScrapBossMissileHurt.yy",},"LayerId":{"name":"8ca2a72a-0d08-4e79-9632-df311161e02d","path":"sprites/sprScrapBossMissileHurt/sprScrapBossMissileHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprScrapBossMissileHurt","path":"sprites/sprScrapBossMissileHurt/sprScrapBossMissileHurt.yy",},"resourceVersion":"1.0","name":"29f4c2ce-9bc7-44d0-920f-18daa2fb20e8","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"00e99f1d-12d5-4242-a2d4-1e2fcfd893c8","path":"sprites/sprScrapBossMissileHurt/sprScrapBossMissileHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"00e99f1d-12d5-4242-a2d4-1e2fcfd893c8","path":"sprites/sprScrapBossMissileHurt/sprScrapBossMissileHurt.yy",},"LayerId":{"name":"8ca2a72a-0d08-4e79-9632-df311161e02d","path":"sprites/sprScrapBossMissileHurt/sprScrapBossMissileHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprScrapBossMissileHurt","path":"sprites/sprScrapBossMissileHurt/sprScrapBossMissileHurt.yy",},"resourceVersion":"1.0","name":"00e99f1d-12d5-4242-a2d4-1e2fcfd893c8","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"631aa5a2-15ab-4185-940c-4b0ec51e8edd","path":"sprites/sprScrapBossMissileHurt/sprScrapBossMissileHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"631aa5a2-15ab-4185-940c-4b0ec51e8edd","path":"sprites/sprScrapBossMissileHurt/sprScrapBossMissileHurt.yy",},"LayerId":{"name":"8ca2a72a-0d08-4e79-9632-df311161e02d","path":"sprites/sprScrapBossMissileHurt/sprScrapBossMissileHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprScrapBossMissileHurt","path":"sprites/sprScrapBossMissileHurt/sprScrapBossMissileHurt.yy",},"resourceVersion":"1.0","name":"631aa5a2-15ab-4185-940c-4b0ec51e8edd","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"29f4c2ce-9bc7-44d0-920f-18daa2fb20e8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"00e99f1d-12d5-4242-a2d4-1e2fcfd893c8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"631aa5a2-15ab-4185-940c-4b0ec51e8edd",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprScrapBossMissileHurt","path":"sprites/sprScrapBossMissileHurt/sprScrapBossMissileHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"16a06c37-4ea5-42e3-9495-79324e78dfcf","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"29f4c2ce-9bc7-44d0-920f-18daa2fb20e8","path":"sprites/sprScrapBossMissileHurt/sprScrapBossMissileHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"94bb643f-5ce8-4334-835d-7e399dc1dec6","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"00e99f1d-12d5-4242-a2d4-1e2fcfd893c8","path":"sprites/sprScrapBossMissileHurt/sprScrapBossMissileHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c220cb0e-f95e-45b6-87c9-05d48970622b","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"631aa5a2-15ab-4185-940c-4b0ec51e8edd","path":"sprites/sprScrapBossMissileHurt/sprScrapBossMissileHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprScrapBossMissileHurt","path":"sprites/sprScrapBossMissileHurt/sprScrapBossMissileHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8ca2a72a-0d08-4e79-9632-df311161e02d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8ca2a72a-0d08-4e79-9632-df311161e02d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "BigDog",
     "path": "folders/Sprites/Enemies/Boss/BigDog.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprScrapBossMissileHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

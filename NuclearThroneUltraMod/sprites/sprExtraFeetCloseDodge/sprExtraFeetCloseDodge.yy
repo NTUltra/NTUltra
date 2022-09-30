@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprExtraFeetCloseDodge",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,24 +27,16 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d0ef57cb-16bb-4773-b4f9-34e78dc2a5e1","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d0ef57cb-16bb-4773-b4f9-34e78dc2a5e1","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"LayerId":{"name":"fef33bf9-dcd3-4e60-8da6-c99f575ff0c1","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprExtraFeetCloseDodge","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"resourceVersion":"1.0","name":"d0ef57cb-16bb-4773-b4f9-34e78dc2a5e1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c914c2da-f9f1-4834-b6c0-bf81e91341a2","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c914c2da-f9f1-4834-b6c0-bf81e91341a2","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"LayerId":{"name":"fef33bf9-dcd3-4e60-8da6-c99f575ff0c1","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprExtraFeetCloseDodge","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"resourceVersion":"1.0","name":"c914c2da-f9f1-4834-b6c0-bf81e91341a2","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f10baf9c-0388-45e2-9253-1686dc15dee3","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f10baf9c-0388-45e2-9253-1686dc15dee3","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"LayerId":{"name":"fef33bf9-dcd3-4e60-8da6-c99f575ff0c1","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprExtraFeetCloseDodge","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"resourceVersion":"1.0","name":"f10baf9c-0388-45e2-9253-1686dc15dee3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d5b2305b-bdc2-446f-a127-727d67b8bc1b","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d5b2305b-bdc2-446f-a127-727d67b8bc1b","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"LayerId":{"name":"fef33bf9-dcd3-4e60-8da6-c99f575ff0c1","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprExtraFeetCloseDodge","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"resourceVersion":"1.0","name":"d5b2305b-bdc2-446f-a127-727d67b8bc1b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"31c279c1-1e12-4f7f-a35b-8214f66e349c","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"31c279c1-1e12-4f7f-a35b-8214f66e349c","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"LayerId":{"name":"fef33bf9-dcd3-4e60-8da6-c99f575ff0c1","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprExtraFeetCloseDodge","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"resourceVersion":"1.0","name":"31c279c1-1e12-4f7f-a35b-8214f66e349c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d0ef57cb-16bb-4773-b4f9-34e78dc2a5e1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c914c2da-f9f1-4834-b6c0-bf81e91341a2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f10baf9c-0388-45e2-9253-1686dc15dee3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d5b2305b-bdc2-446f-a127-727d67b8bc1b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"31c279c1-1e12-4f7f-a35b-8214f66e349c",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprExtraFeetCloseDodge","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprExtraFeetCloseDodge",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -52,13 +47,13 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"5650ab7e-1855-48c0-b571-c00ed4610d16","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d0ef57cb-16bb-4773-b4f9-34e78dc2a5e1","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"3ef76dbe-18b6-4f6a-85f0-6ac24dc4fb7e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c914c2da-f9f1-4834-b6c0-bf81e91341a2","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ac7a8e19-9ff7-4d32-bdce-203b8e91669d","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f10baf9c-0388-45e2-9253-1686dc15dee3","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"bee55e45-45d9-4f0e-a53e-f6d425403340","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d5b2305b-bdc2-446f-a127-727d67b8bc1b","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"75cd125c-d742-4af8-87d1-eba4a62a176e","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"31c279c1-1e12-4f7f-a35b-8214f66e349c","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -74,22 +69,13 @@
     "yorigin": 9,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprExtraFeetCloseDodge","path":"sprites/sprExtraFeetCloseDodge/sprExtraFeetCloseDodge.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprExtraFeetCloseDodge",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fef33bf9-dcd3-4e60-8da6-c99f575ff0c1","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"fef33bf9-dcd3-4e60-8da6-c99f575ff0c1","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Fancyness",
     "path": "folders/Sprites/Fancyness.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprExtraFeetCloseDodge",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

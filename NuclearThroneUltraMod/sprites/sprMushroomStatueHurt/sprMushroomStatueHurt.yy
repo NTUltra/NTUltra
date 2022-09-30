@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprMushroomStatueHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"fb93fbb7-b724-484a-ace8-f0e007e1fd03","path":"sprites/sprMushroomStatueHurt/sprMushroomStatueHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fb93fbb7-b724-484a-ace8-f0e007e1fd03","path":"sprites/sprMushroomStatueHurt/sprMushroomStatueHurt.yy",},"LayerId":{"name":"af240f1b-8f4f-456b-8e37-39d3bcaab967","path":"sprites/sprMushroomStatueHurt/sprMushroomStatueHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprMushroomStatueHurt","path":"sprites/sprMushroomStatueHurt/sprMushroomStatueHurt.yy",},"resourceVersion":"1.0","name":"fb93fbb7-b724-484a-ace8-f0e007e1fd03","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"61931b2b-1be8-40b5-9686-85a130f37358","path":"sprites/sprMushroomStatueHurt/sprMushroomStatueHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"61931b2b-1be8-40b5-9686-85a130f37358","path":"sprites/sprMushroomStatueHurt/sprMushroomStatueHurt.yy",},"LayerId":{"name":"af240f1b-8f4f-456b-8e37-39d3bcaab967","path":"sprites/sprMushroomStatueHurt/sprMushroomStatueHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprMushroomStatueHurt","path":"sprites/sprMushroomStatueHurt/sprMushroomStatueHurt.yy",},"resourceVersion":"1.0","name":"61931b2b-1be8-40b5-9686-85a130f37358","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"fa234153-23b2-4060-b57f-9d7de8872e4e","path":"sprites/sprMushroomStatueHurt/sprMushroomStatueHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fa234153-23b2-4060-b57f-9d7de8872e4e","path":"sprites/sprMushroomStatueHurt/sprMushroomStatueHurt.yy",},"LayerId":{"name":"af240f1b-8f4f-456b-8e37-39d3bcaab967","path":"sprites/sprMushroomStatueHurt/sprMushroomStatueHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprMushroomStatueHurt","path":"sprites/sprMushroomStatueHurt/sprMushroomStatueHurt.yy",},"resourceVersion":"1.0","name":"fa234153-23b2-4060-b57f-9d7de8872e4e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fb93fbb7-b724-484a-ace8-f0e007e1fd03",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"61931b2b-1be8-40b5-9686-85a130f37358",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fa234153-23b2-4060-b57f-9d7de8872e4e",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprMushroomStatueHurt","path":"sprites/sprMushroomStatueHurt/sprMushroomStatueHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprMushroomStatueHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"6d3845b3-6063-4464-a845-257c8ccf74c5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fb93fbb7-b724-484a-ace8-f0e007e1fd03","path":"sprites/sprMushroomStatueHurt/sprMushroomStatueHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c77023fc-6536-466a-824d-27d705fe7820","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"61931b2b-1be8-40b5-9686-85a130f37358","path":"sprites/sprMushroomStatueHurt/sprMushroomStatueHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"630d9270-58b3-42e0-b6e4-9f4e54dc904b","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fa234153-23b2-4060-b57f-9d7de8872e4e","path":"sprites/sprMushroomStatueHurt/sprMushroomStatueHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 20,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprMushroomStatueHurt","path":"sprites/sprMushroomStatueHurt/sprMushroomStatueHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprMushroomStatueHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"af240f1b-8f4f-456b-8e37-39d3bcaab967","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"af240f1b-8f4f-456b-8e37-39d3bcaab967","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Props",
     "path": "folders/Sprites/Enviroment/Props.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprMushroomStatueHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

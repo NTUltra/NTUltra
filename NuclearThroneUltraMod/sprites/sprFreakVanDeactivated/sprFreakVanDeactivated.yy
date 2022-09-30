@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprFreakVanDeactivated",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d1c0fd48-1083-4d4f-9c11-926c0e50572b","path":"sprites/sprFreakVanDeactivated/sprFreakVanDeactivated.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d1c0fd48-1083-4d4f-9c11-926c0e50572b","path":"sprites/sprFreakVanDeactivated/sprFreakVanDeactivated.yy",},"LayerId":{"name":"8269103b-22a8-43db-a42e-f9833009c13a","path":"sprites/sprFreakVanDeactivated/sprFreakVanDeactivated.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFreakVanDeactivated","path":"sprites/sprFreakVanDeactivated/sprFreakVanDeactivated.yy",},"resourceVersion":"1.0","name":"d1c0fd48-1083-4d4f-9c11-926c0e50572b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d1c0fd48-1083-4d4f-9c11-926c0e50572b",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprFreakVanDeactivated","path":"sprites/sprFreakVanDeactivated/sprFreakVanDeactivated.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprFreakVanDeactivated",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"048a22cc-97a1-4a89-9af0-278fa6859fbb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d1c0fd48-1083-4d4f-9c11-926c0e50572b","path":"sprites/sprFreakVanDeactivated/sprFreakVanDeactivated.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 64,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprFreakVanDeactivated","path":"sprites/sprFreakVanDeactivated/sprFreakVanDeactivated.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprFreakVanDeactivated",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8269103b-22a8-43db-a42e-f9833009c13a","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8269103b-22a8-43db-a42e-f9833009c13a","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "FreakVan",
     "path": "folders/Sprites/Enemies/IDPD/Elite IDPD/Van/FreakVan.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprFreakVanDeactivated",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprSavannaBanditDead",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a4bd2c05-d0b3-4bdf-b7a9-f2f0b083b8ba","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a4bd2c05-d0b3-4bdf-b7a9-f2f0b083b8ba","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"LayerId":{"name":"232d750a-24eb-4963-a928-a904e5348738","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSavannaBanditDead","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"resourceVersion":"1.0","name":"a4bd2c05-d0b3-4bdf-b7a9-f2f0b083b8ba","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"68b787b4-09ae-409d-85aa-aadf474c55a6","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"68b787b4-09ae-409d-85aa-aadf474c55a6","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"LayerId":{"name":"232d750a-24eb-4963-a928-a904e5348738","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSavannaBanditDead","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"resourceVersion":"1.0","name":"68b787b4-09ae-409d-85aa-aadf474c55a6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"979752d6-54cf-4f29-843b-ac4b2c8f920f","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"979752d6-54cf-4f29-843b-ac4b2c8f920f","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"LayerId":{"name":"232d750a-24eb-4963-a928-a904e5348738","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSavannaBanditDead","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"resourceVersion":"1.0","name":"979752d6-54cf-4f29-843b-ac4b2c8f920f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"462a805c-f610-477d-8ad3-74005d78c79a","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"462a805c-f610-477d-8ad3-74005d78c79a","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"LayerId":{"name":"232d750a-24eb-4963-a928-a904e5348738","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSavannaBanditDead","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"resourceVersion":"1.0","name":"462a805c-f610-477d-8ad3-74005d78c79a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7c610f48-8aba-4223-8634-d632190cf3c3","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7c610f48-8aba-4223-8634-d632190cf3c3","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"LayerId":{"name":"232d750a-24eb-4963-a928-a904e5348738","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSavannaBanditDead","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"resourceVersion":"1.0","name":"7c610f48-8aba-4223-8634-d632190cf3c3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"14866ef5-295c-43c7-8a69-cc52ee0e461a","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"14866ef5-295c-43c7-8a69-cc52ee0e461a","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"LayerId":{"name":"232d750a-24eb-4963-a928-a904e5348738","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSavannaBanditDead","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"resourceVersion":"1.0","name":"14866ef5-295c-43c7-8a69-cc52ee0e461a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a4bd2c05-d0b3-4bdf-b7a9-f2f0b083b8ba",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"68b787b4-09ae-409d-85aa-aadf474c55a6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"979752d6-54cf-4f29-843b-ac4b2c8f920f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"462a805c-f610-477d-8ad3-74005d78c79a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7c610f48-8aba-4223-8634-d632190cf3c3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"14866ef5-295c-43c7-8a69-cc52ee0e461a",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprSavannaBanditDead","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprSavannaBanditDead",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -55,14 +48,14 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"c451ff46-0714-445c-b065-2e83ca43370e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a4bd2c05-d0b3-4bdf-b7a9-f2f0b083b8ba","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"73f2fe68-8893-40a7-83c7-dce829d098f1","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"68b787b4-09ae-409d-85aa-aadf474c55a6","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"888dfd8b-7fa0-462b-9bc1-e83f6ac735ed","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"979752d6-54cf-4f29-843b-ac4b2c8f920f","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"bb9f31dc-85aa-4730-8594-943999ef2d5b","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"462a805c-f610-477d-8ad3-74005d78c79a","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d1a93ec1-5cc2-4649-a962-8ed1b1b5326f","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7c610f48-8aba-4223-8634-d632190cf3c3","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b6f9a800-fa41-4fe0-b85d-1b2718a84f98","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"14866ef5-295c-43c7-8a69-cc52ee0e461a","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -78,22 +71,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprSavannaBanditDead","path":"sprites/sprSavannaBanditDead/sprSavannaBanditDead.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprSavannaBanditDead",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"232d750a-24eb-4963-a928-a904e5348738","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"232d750a-24eb-4963-a928-a904e5348738","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "SavannaBandit",
     "path": "folders/Sprites/Enemies/Bandit/SavannaBandit.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprSavannaBanditDead",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

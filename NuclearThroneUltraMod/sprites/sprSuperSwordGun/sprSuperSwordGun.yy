@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprSuperSwordGun",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"62948be0-5015-43fd-a8ef-6afb3d7dbd37","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"62948be0-5015-43fd-a8ef-6afb3d7dbd37","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"LayerId":{"name":"e7745b31-4270-450d-873a-982fd306839e","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperSwordGun","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"resourceVersion":"1.0","name":"62948be0-5015-43fd-a8ef-6afb3d7dbd37","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"17f272ee-e222-420b-99be-53bb0f719cb4","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"17f272ee-e222-420b-99be-53bb0f719cb4","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"LayerId":{"name":"e7745b31-4270-450d-873a-982fd306839e","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperSwordGun","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"resourceVersion":"1.0","name":"17f272ee-e222-420b-99be-53bb0f719cb4","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6f120fec-6b00-4e22-9beb-a7775e423579","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6f120fec-6b00-4e22-9beb-a7775e423579","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"LayerId":{"name":"e7745b31-4270-450d-873a-982fd306839e","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperSwordGun","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"resourceVersion":"1.0","name":"6f120fec-6b00-4e22-9beb-a7775e423579","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7bfaf80f-2e69-4a82-bbcb-1166ffd671d1","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7bfaf80f-2e69-4a82-bbcb-1166ffd671d1","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"LayerId":{"name":"e7745b31-4270-450d-873a-982fd306839e","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperSwordGun","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"resourceVersion":"1.0","name":"7bfaf80f-2e69-4a82-bbcb-1166ffd671d1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3a2f0880-7a4b-47d3-8d76-fb07ee12e747","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3a2f0880-7a4b-47d3-8d76-fb07ee12e747","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"LayerId":{"name":"e7745b31-4270-450d-873a-982fd306839e","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperSwordGun","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"resourceVersion":"1.0","name":"3a2f0880-7a4b-47d3-8d76-fb07ee12e747","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ba3fd3cd-f7f5-456b-b755-d6507a23e08b","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ba3fd3cd-f7f5-456b-b755-d6507a23e08b","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"LayerId":{"name":"e7745b31-4270-450d-873a-982fd306839e","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperSwordGun","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"resourceVersion":"1.0","name":"ba3fd3cd-f7f5-456b-b755-d6507a23e08b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b94271e0-7c20-41f7-96ef-51f74f0d4e21","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b94271e0-7c20-41f7-96ef-51f74f0d4e21","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"LayerId":{"name":"e7745b31-4270-450d-873a-982fd306839e","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperSwordGun","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"resourceVersion":"1.0","name":"b94271e0-7c20-41f7-96ef-51f74f0d4e21","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"62948be0-5015-43fd-a8ef-6afb3d7dbd37",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"17f272ee-e222-420b-99be-53bb0f719cb4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6f120fec-6b00-4e22-9beb-a7775e423579",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7bfaf80f-2e69-4a82-bbcb-1166ffd671d1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3a2f0880-7a4b-47d3-8d76-fb07ee12e747",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ba3fd3cd-f7f5-456b-b755-d6507a23e08b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b94271e0-7c20-41f7-96ef-51f74f0d4e21",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprSuperSwordGun","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"cbf4ccb5-0656-4d96-a120-1f022ff6f082","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"62948be0-5015-43fd-a8ef-6afb3d7dbd37","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e7488a8f-81bb-42d2-9ff5-2745572612f5","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"17f272ee-e222-420b-99be-53bb0f719cb4","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"734a9eb6-cd22-4e19-af9b-0a877a267473","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6f120fec-6b00-4e22-9beb-a7775e423579","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"df59b652-f211-47d6-9f0a-4f782e976921","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3a2f0880-7a4b-47d3-8d76-fb07ee12e747","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6cb38128-9681-4847-ad7c-0e0b6c216ccc","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ba3fd3cd-f7f5-456b-b755-d6507a23e08b","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"aec6b317-486e-448a-b5a6-f32caeb9d01c","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b94271e0-7c20-41f7-96ef-51f74f0d4e21","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprSuperSwordGun","path":"sprites/sprSuperSwordGun/sprSuperSwordGun.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e7745b31-4270-450d-873a-982fd306839e","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e7745b31-4270-450d-873a-982fd306839e","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Custom",
     "path": "folders/Sprites/Weapons/Custom.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprSuperSwordGun",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

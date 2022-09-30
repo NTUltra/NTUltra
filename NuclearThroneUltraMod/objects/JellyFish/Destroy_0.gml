@@ -1,4 +1,4 @@
-scrDrop(6,2)
+scrDrop(8,2)
 if alarm[2] > 0 || loops > 1 || object_index == InvertedJellyFish
 {
 	ammo = maxAmmo

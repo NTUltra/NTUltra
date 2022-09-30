@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedJungleBanditHurt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"94e04ded-a836-442d-a88b-221815231029","path":"sprites/sprInvertedJungleBanditHurt/sprInvertedJungleBanditHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"94e04ded-a836-442d-a88b-221815231029","path":"sprites/sprInvertedJungleBanditHurt/sprInvertedJungleBanditHurt.yy",},"LayerId":{"name":"5a53fcbe-6057-4a6e-9254-74e0cc3df484","path":"sprites/sprInvertedJungleBanditHurt/sprInvertedJungleBanditHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedJungleBanditHurt","path":"sprites/sprInvertedJungleBanditHurt/sprInvertedJungleBanditHurt.yy",},"resourceVersion":"1.0","name":"94e04ded-a836-442d-a88b-221815231029","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0a84ba5b-f066-4bc7-91e9-19944a271ddc","path":"sprites/sprInvertedJungleBanditHurt/sprInvertedJungleBanditHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0a84ba5b-f066-4bc7-91e9-19944a271ddc","path":"sprites/sprInvertedJungleBanditHurt/sprInvertedJungleBanditHurt.yy",},"LayerId":{"name":"5a53fcbe-6057-4a6e-9254-74e0cc3df484","path":"sprites/sprInvertedJungleBanditHurt/sprInvertedJungleBanditHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedJungleBanditHurt","path":"sprites/sprInvertedJungleBanditHurt/sprInvertedJungleBanditHurt.yy",},"resourceVersion":"1.0","name":"0a84ba5b-f066-4bc7-91e9-19944a271ddc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3175d951-c2ae-4026-8500-f43557fd2631","path":"sprites/sprInvertedJungleBanditHurt/sprInvertedJungleBanditHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3175d951-c2ae-4026-8500-f43557fd2631","path":"sprites/sprInvertedJungleBanditHurt/sprInvertedJungleBanditHurt.yy",},"LayerId":{"name":"5a53fcbe-6057-4a6e-9254-74e0cc3df484","path":"sprites/sprInvertedJungleBanditHurt/sprInvertedJungleBanditHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedJungleBanditHurt","path":"sprites/sprInvertedJungleBanditHurt/sprInvertedJungleBanditHurt.yy",},"resourceVersion":"1.0","name":"3175d951-c2ae-4026-8500-f43557fd2631","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"94e04ded-a836-442d-a88b-221815231029",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0a84ba5b-f066-4bc7-91e9-19944a271ddc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3175d951-c2ae-4026-8500-f43557fd2631",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedJungleBanditHurt","path":"sprites/sprInvertedJungleBanditHurt/sprInvertedJungleBanditHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedJungleBanditHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"21a1dd51-4684-4c3a-ba02-ece1f4651c4d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"94e04ded-a836-442d-a88b-221815231029","path":"sprites/sprInvertedJungleBanditHurt/sprInvertedJungleBanditHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"401dfe32-c8c8-4ab0-9886-4655b7af2eb3","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0a84ba5b-f066-4bc7-91e9-19944a271ddc","path":"sprites/sprInvertedJungleBanditHurt/sprInvertedJungleBanditHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"37435def-30f9-4b80-9f84-276316d54a84","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3175d951-c2ae-4026-8500-f43557fd2631","path":"sprites/sprInvertedJungleBanditHurt/sprInvertedJungleBanditHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedJungleBanditHurt","path":"sprites/sprInvertedJungleBanditHurt/sprInvertedJungleBanditHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedJungleBanditHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5a53fcbe-6057-4a6e-9254-74e0cc3df484","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5a53fcbe-6057-4a6e-9254-74e0cc3df484","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "JungleEnemy",
     "path": "folders/Sprites/Enemies/JungleEnemy.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedJungleBanditHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

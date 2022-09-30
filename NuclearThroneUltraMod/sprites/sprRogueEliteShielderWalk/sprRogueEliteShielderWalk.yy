@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprRogueEliteShielderWalk",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6b60248b-07d8-4203-ad40-9bca05efd759","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6b60248b-07d8-4203-ad40-9bca05efd759","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"LayerId":{"name":"e57643e0-2709-45df-bd8d-8b6fd54d3005","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRogueEliteShielderWalk","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"resourceVersion":"1.0","name":"6b60248b-07d8-4203-ad40-9bca05efd759","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1015effd-9331-42db-bd4a-99c8501b704c","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1015effd-9331-42db-bd4a-99c8501b704c","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"LayerId":{"name":"e57643e0-2709-45df-bd8d-8b6fd54d3005","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRogueEliteShielderWalk","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"resourceVersion":"1.0","name":"1015effd-9331-42db-bd4a-99c8501b704c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a8fea80a-3d0d-476f-ba8c-f4b70820173a","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a8fea80a-3d0d-476f-ba8c-f4b70820173a","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"LayerId":{"name":"e57643e0-2709-45df-bd8d-8b6fd54d3005","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRogueEliteShielderWalk","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"resourceVersion":"1.0","name":"a8fea80a-3d0d-476f-ba8c-f4b70820173a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"12164726-668a-4555-8357-aaea1720534d","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"12164726-668a-4555-8357-aaea1720534d","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"LayerId":{"name":"e57643e0-2709-45df-bd8d-8b6fd54d3005","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRogueEliteShielderWalk","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"resourceVersion":"1.0","name":"12164726-668a-4555-8357-aaea1720534d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"95a94dbf-a0d8-46e0-b6c0-3845caa45377","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"95a94dbf-a0d8-46e0-b6c0-3845caa45377","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"LayerId":{"name":"e57643e0-2709-45df-bd8d-8b6fd54d3005","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRogueEliteShielderWalk","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"resourceVersion":"1.0","name":"95a94dbf-a0d8-46e0-b6c0-3845caa45377","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"20a460ef-bfcb-466b-85b2-e0e69fc45a08","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"20a460ef-bfcb-466b-85b2-e0e69fc45a08","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"LayerId":{"name":"e57643e0-2709-45df-bd8d-8b6fd54d3005","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRogueEliteShielderWalk","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"resourceVersion":"1.0","name":"20a460ef-bfcb-466b-85b2-e0e69fc45a08","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6b60248b-07d8-4203-ad40-9bca05efd759",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1015effd-9331-42db-bd4a-99c8501b704c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a8fea80a-3d0d-476f-ba8c-f4b70820173a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"12164726-668a-4555-8357-aaea1720534d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"95a94dbf-a0d8-46e0-b6c0-3845caa45377",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"20a460ef-bfcb-466b-85b2-e0e69fc45a08",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprRogueEliteShielderWalk","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -55,14 +48,14 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"e331a5a0-1cf1-4f78-8a44-6a6d223e5542","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6b60248b-07d8-4203-ad40-9bca05efd759","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d2e28c19-3a3a-482f-9768-8184ff16357e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1015effd-9331-42db-bd4a-99c8501b704c","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"53f8ceeb-eacc-4c82-93da-6fe56687aa67","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a8fea80a-3d0d-476f-ba8c-f4b70820173a","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c3f99468-afba-4931-a545-ed6a1a153b6b","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"12164726-668a-4555-8357-aaea1720534d","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6210fe02-0939-4e38-a0b1-f376baa2e021","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"95a94dbf-a0d8-46e0-b6c0-3845caa45377","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"5a3d0c27-26a9-434f-914e-69dc53673bf0","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"20a460ef-bfcb-466b-85b2-e0e69fc45a08","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -78,22 +71,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprRogueEliteShielderWalk","path":"sprites/sprRogueEliteShielderWalk/sprRogueEliteShielderWalk.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e57643e0-2709-45df-bd8d-8b6fd54d3005","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e57643e0-2709-45df-bd8d-8b6fd54d3005","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "EliteShielder",
     "path": "folders/Sprites/Enemies/IDPD/Elite IDPD/EliteShielder.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprRogueEliteShielderWalk",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

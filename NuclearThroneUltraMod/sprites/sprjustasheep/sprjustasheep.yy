@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprJustASheep",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"fa7a0740-ee5e-4258-b9b0-8b55a1b9b575","path":"sprites/sprJustASheep/sprJustASheep.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fa7a0740-ee5e-4258-b9b0-8b55a1b9b575","path":"sprites/sprJustASheep/sprJustASheep.yy",},"LayerId":{"name":"ca3e9de9-3dcd-4fb7-9bd7-457646c996c7","path":"sprites/sprJustASheep/sprJustASheep.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprJustASheep","path":"sprites/sprJustASheep/sprJustASheep.yy",},"resourceVersion":"1.0","name":"fa7a0740-ee5e-4258-b9b0-8b55a1b9b575","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fa7a0740-ee5e-4258-b9b0-8b55a1b9b575",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprJustASheep","path":"sprites/sprJustASheep/sprJustASheep.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprJustASheep",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"1a0f1352-f21d-4409-8ab5-0233c0cf0db9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fa7a0740-ee5e-4258-b9b0-8b55a1b9b575","path":"sprites/sprJustASheep/sprJustASheep.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 20,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprJustASheep","path":"sprites/sprJustASheep/sprJustASheep.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprJustASheep",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ca3e9de9-3dcd-4fb7-9bd7-457646c996c7","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ca3e9de9-3dcd-4fb7-9bd7-457646c996c7","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Sheep",
     "path": "folders/Sprites/Player/Custom/Sheep.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprJustASheep",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

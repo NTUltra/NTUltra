@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprScubaBanditIdle",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b3fc31a4-a33e-4e1f-a431-27220f122045","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b3fc31a4-a33e-4e1f-a431-27220f122045","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},"LayerId":{"name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprScubaBanditIdle","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},"resourceVersion":"1.0","name":"b3fc31a4-a33e-4e1f-a431-27220f122045","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6ce0b664-fc1d-4d2b-942f-c04acd858cf3","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6ce0b664-fc1d-4d2b-942f-c04acd858cf3","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},"LayerId":{"name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprScubaBanditIdle","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},"resourceVersion":"1.0","name":"6ce0b664-fc1d-4d2b-942f-c04acd858cf3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"83ff01e6-d732-4111-8a24-0980eccb3e2c","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"83ff01e6-d732-4111-8a24-0980eccb3e2c","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},"LayerId":{"name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprScubaBanditIdle","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},"resourceVersion":"1.0","name":"83ff01e6-d732-4111-8a24-0980eccb3e2c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d915c3c1-1972-40d3-a934-94ee468dcebe","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d915c3c1-1972-40d3-a934-94ee468dcebe","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},"LayerId":{"name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprScubaBanditIdle","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},"resourceVersion":"1.0","name":"d915c3c1-1972-40d3-a934-94ee468dcebe","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b3fc31a4-a33e-4e1f-a431-27220f122045",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6ce0b664-fc1d-4d2b-942f-c04acd858cf3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"83ff01e6-d732-4111-8a24-0980eccb3e2c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d915c3c1-1972-40d3-a934-94ee468dcebe",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprScubaBanditIdle","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprScubaBanditIdle",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -49,12 +46,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"d6b188de-5375-4a76-a6b6-ccff104798c1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b3fc31a4-a33e-4e1f-a431-27220f122045","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"7a87c48f-c2b1-4866-a104-04c22c8ca332","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6ce0b664-fc1d-4d2b-942f-c04acd858cf3","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"95db3c64-cf6d-4cc9-9525-308f332861f5","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"83ff01e6-d732-4111-8a24-0980eccb3e2c","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"05b5fb75-a901-4719-979e-48b75449eedc","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d915c3c1-1972-40d3-a934-94ee468dcebe","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +67,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprScubaBanditIdle","path":"sprites/sprScubaBanditIdle/sprScubaBanditIdle.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprScubaBanditIdle",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a9d89186-b0e0-49f1-8eb3-b4386317acd6","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Bandit",
     "path": "folders/Sprites/Enemies/Bandit.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprScubaBanditIdle",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

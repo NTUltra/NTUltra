@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprHotDrakeSkullIdleOpen",
   "bboxMode": 0,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"3ff9ee21-f17b-4ad2-b0ed-57fd9b2c227c","path":"sprites/sprHotDrakeSkullIdleOpen/sprHotDrakeSkullIdleOpen.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3ff9ee21-f17b-4ad2-b0ed-57fd9b2c227c","path":"sprites/sprHotDrakeSkullIdleOpen/sprHotDrakeSkullIdleOpen.yy",},"LayerId":{"name":"fc9fe231-2a61-400e-834b-c6c60c3b21bc","path":"sprites/sprHotDrakeSkullIdleOpen/sprHotDrakeSkullIdleOpen.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHotDrakeSkullIdleOpen","path":"sprites/sprHotDrakeSkullIdleOpen/sprHotDrakeSkullIdleOpen.yy",},"resourceVersion":"1.0","name":"3ff9ee21-f17b-4ad2-b0ed-57fd9b2c227c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"88cbb80a-5959-481a-af29-7feec6ce36be","path":"sprites/sprHotDrakeSkullIdleOpen/sprHotDrakeSkullIdleOpen.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"88cbb80a-5959-481a-af29-7feec6ce36be","path":"sprites/sprHotDrakeSkullIdleOpen/sprHotDrakeSkullIdleOpen.yy",},"LayerId":{"name":"fc9fe231-2a61-400e-834b-c6c60c3b21bc","path":"sprites/sprHotDrakeSkullIdleOpen/sprHotDrakeSkullIdleOpen.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHotDrakeSkullIdleOpen","path":"sprites/sprHotDrakeSkullIdleOpen/sprHotDrakeSkullIdleOpen.yy",},"resourceVersion":"1.0","name":"88cbb80a-5959-481a-af29-7feec6ce36be","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"91cb604a-5bf7-4824-afab-74da52d9ee30","path":"sprites/sprHotDrakeSkullIdleOpen/sprHotDrakeSkullIdleOpen.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"91cb604a-5bf7-4824-afab-74da52d9ee30","path":"sprites/sprHotDrakeSkullIdleOpen/sprHotDrakeSkullIdleOpen.yy",},"LayerId":{"name":"fc9fe231-2a61-400e-834b-c6c60c3b21bc","path":"sprites/sprHotDrakeSkullIdleOpen/sprHotDrakeSkullIdleOpen.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHotDrakeSkullIdleOpen","path":"sprites/sprHotDrakeSkullIdleOpen/sprHotDrakeSkullIdleOpen.yy",},"resourceVersion":"1.0","name":"91cb604a-5bf7-4824-afab-74da52d9ee30","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3ff9ee21-f17b-4ad2-b0ed-57fd9b2c227c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"88cbb80a-5959-481a-af29-7feec6ce36be",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"91cb604a-5bf7-4824-afab-74da52d9ee30",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprHotDrakeSkullIdleOpen","path":"sprites/sprHotDrakeSkullIdleOpen/sprHotDrakeSkullIdleOpen.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprHotDrakeSkullIdleOpen",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"cb1c89c8-309d-4865-9fe4-8b47ff5f449f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3ff9ee21-f17b-4ad2-b0ed-57fd9b2c227c","path":"sprites/sprHotDrakeSkullIdleOpen/sprHotDrakeSkullIdleOpen.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"2bd06acf-407d-465c-9602-e27f198bc8ba","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"88cbb80a-5959-481a-af29-7feec6ce36be","path":"sprites/sprHotDrakeSkullIdleOpen/sprHotDrakeSkullIdleOpen.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f6647c21-a308-42ef-bce0-0fa9c26e4172","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"91cb604a-5bf7-4824-afab-74da52d9ee30","path":"sprites/sprHotDrakeSkullIdleOpen/sprHotDrakeSkullIdleOpen.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprHotDrakeSkullIdleOpen","path":"sprites/sprHotDrakeSkullIdleOpen/sprHotDrakeSkullIdleOpen.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprHotDrakeSkullIdleOpen",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fc9fe231-2a61-400e-834b-c6c60c3b21bc","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"fc9fe231-2a61-400e-834b-c6c60c3b21bc","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "HotDrake",
     "path": "folders/Sprites/Enemies/Boss/HotDrake.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprHotDrakeSkullIdleOpen",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

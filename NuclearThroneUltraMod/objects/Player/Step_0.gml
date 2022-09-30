@@ -944,7 +944,7 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 		{
 			reload -= 0.29;
 		}
-		if (ultra_got[32] && (creload <= 0 || cwep == 0))
+		if (ultra_got[31] && (creload <= 0 || cwep == 0))
 		{
 			reload -= 0.28;
 		}

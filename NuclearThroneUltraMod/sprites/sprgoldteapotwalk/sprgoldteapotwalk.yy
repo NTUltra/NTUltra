@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprGoldTeaPotWalk",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"83f40666-3c7d-4375-b896-155d19e2879c","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"83f40666-3c7d-4375-b896-155d19e2879c","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"LayerId":{"name":"45211a02-854d-4b38-808b-004e7a1f8797","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldTeaPotWalk","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"83f40666-3c7d-4375-b896-155d19e2879c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"25fe0008-2c6b-407d-88a7-f82ff4b5c961","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"25fe0008-2c6b-407d-88a7-f82ff4b5c961","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"LayerId":{"name":"45211a02-854d-4b38-808b-004e7a1f8797","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldTeaPotWalk","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"25fe0008-2c6b-407d-88a7-f82ff4b5c961","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"364d4f3a-960c-4390-b0a9-fe56a3251560","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"364d4f3a-960c-4390-b0a9-fe56a3251560","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"LayerId":{"name":"45211a02-854d-4b38-808b-004e7a1f8797","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldTeaPotWalk","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"364d4f3a-960c-4390-b0a9-fe56a3251560","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"64b3d307-686d-414b-8bfc-38a8cb7e39ba","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"64b3d307-686d-414b-8bfc-38a8cb7e39ba","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"LayerId":{"name":"45211a02-854d-4b38-808b-004e7a1f8797","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldTeaPotWalk","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"64b3d307-686d-414b-8bfc-38a8cb7e39ba","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"36a8c5fa-1f9f-474b-b6f0-e3a65323cff1","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"36a8c5fa-1f9f-474b-b6f0-e3a65323cff1","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"LayerId":{"name":"45211a02-854d-4b38-808b-004e7a1f8797","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldTeaPotWalk","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"36a8c5fa-1f9f-474b-b6f0-e3a65323cff1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e4661355-7ffc-4905-88b8-5b99124ec58c","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e4661355-7ffc-4905-88b8-5b99124ec58c","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"LayerId":{"name":"45211a02-854d-4b38-808b-004e7a1f8797","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldTeaPotWalk","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"e4661355-7ffc-4905-88b8-5b99124ec58c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"489332cc-9778-494e-a3a3-88e0ac364398","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"489332cc-9778-494e-a3a3-88e0ac364398","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"LayerId":{"name":"45211a02-854d-4b38-808b-004e7a1f8797","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldTeaPotWalk","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"489332cc-9778-494e-a3a3-88e0ac364398","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"83f40666-3c7d-4375-b896-155d19e2879c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"25fe0008-2c6b-407d-88a7-f82ff4b5c961",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"364d4f3a-960c-4390-b0a9-fe56a3251560",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"64b3d307-686d-414b-8bfc-38a8cb7e39ba",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"36a8c5fa-1f9f-474b-b6f0-e3a65323cff1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e4661355-7ffc-4905-88b8-5b99124ec58c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"489332cc-9778-494e-a3a3-88e0ac364398",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprGoldTeaPotWalk","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprGoldTeaPotWalk",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"0f12fc30-1d03-4a1f-9859-720317b3e4c8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"83f40666-3c7d-4375-b896-155d19e2879c","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c292d118-c721-4216-9b2a-556fbccb9715","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"25fe0008-2c6b-407d-88a7-f82ff4b5c961","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"3662808a-4958-49c7-a972-e82a5c782b7c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"364d4f3a-960c-4390-b0a9-fe56a3251560","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"3f737660-5cc0-464d-bc53-801450b862d9","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"36a8c5fa-1f9f-474b-b6f0-e3a65323cff1","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"511fcdce-638e-48d4-9823-ca8537a9c63d","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e4661355-7ffc-4905-88b8-5b99124ec58c","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"0022f33c-d03f-4abe-9387-f897d10b3a05","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"489332cc-9778-494e-a3a3-88e0ac364398","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprGoldTeaPotWalk","path":"sprites/sprGoldTeaPotWalk/sprGoldTeaPotWalk.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprGoldTeaPotWalk",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"45211a02-854d-4b38-808b-004e7a1f8797","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"45211a02-854d-4b38-808b-004e7a1f8797","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "CardGuy",
     "path": "folders/Sprites/Enemies/CardGuy.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprGoldTeaPotWalk",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

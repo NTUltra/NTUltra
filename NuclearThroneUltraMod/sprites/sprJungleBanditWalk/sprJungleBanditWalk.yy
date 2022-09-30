@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprJungleBanditWalk",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a7e4edc7-25fb-4079-a2db-70c818215c46","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a7e4edc7-25fb-4079-a2db-70c818215c46","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"LayerId":{"name":"219bf43a-7120-4889-bcf7-fe8c35bfd557","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprJungleBanditWalk","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"resourceVersion":"1.0","name":"a7e4edc7-25fb-4079-a2db-70c818215c46","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"edb496dd-24dd-47e6-ac68-15724180d3c7","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"edb496dd-24dd-47e6-ac68-15724180d3c7","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"LayerId":{"name":"219bf43a-7120-4889-bcf7-fe8c35bfd557","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprJungleBanditWalk","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"resourceVersion":"1.0","name":"edb496dd-24dd-47e6-ac68-15724180d3c7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2f43a70f-9652-4a1d-aa3f-d072b422c96d","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2f43a70f-9652-4a1d-aa3f-d072b422c96d","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"LayerId":{"name":"219bf43a-7120-4889-bcf7-fe8c35bfd557","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprJungleBanditWalk","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"resourceVersion":"1.0","name":"2f43a70f-9652-4a1d-aa3f-d072b422c96d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c67e6e0f-10f9-4cdd-a836-badb298c4310","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c67e6e0f-10f9-4cdd-a836-badb298c4310","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"LayerId":{"name":"219bf43a-7120-4889-bcf7-fe8c35bfd557","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprJungleBanditWalk","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"resourceVersion":"1.0","name":"c67e6e0f-10f9-4cdd-a836-badb298c4310","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8aa2d55e-efdd-4f6a-b1c5-b9d930ddc3bd","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8aa2d55e-efdd-4f6a-b1c5-b9d930ddc3bd","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"LayerId":{"name":"219bf43a-7120-4889-bcf7-fe8c35bfd557","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprJungleBanditWalk","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"resourceVersion":"1.0","name":"8aa2d55e-efdd-4f6a-b1c5-b9d930ddc3bd","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3a0fe51d-bf68-4534-b713-33a8734f4841","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3a0fe51d-bf68-4534-b713-33a8734f4841","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"LayerId":{"name":"219bf43a-7120-4889-bcf7-fe8c35bfd557","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprJungleBanditWalk","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"resourceVersion":"1.0","name":"3a0fe51d-bf68-4534-b713-33a8734f4841","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a7e4edc7-25fb-4079-a2db-70c818215c46",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"edb496dd-24dd-47e6-ac68-15724180d3c7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2f43a70f-9652-4a1d-aa3f-d072b422c96d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c67e6e0f-10f9-4cdd-a836-badb298c4310",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8aa2d55e-efdd-4f6a-b1c5-b9d930ddc3bd",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3a0fe51d-bf68-4534-b713-33a8734f4841",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprJungleBanditWalk","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprJungleBanditWalk",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -55,14 +48,14 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"6d1ef896-129c-492c-87f9-cb633aef1bfc","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a7e4edc7-25fb-4079-a2db-70c818215c46","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e37aca75-d23c-439e-8f2d-bffe5495883e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"edb496dd-24dd-47e6-ac68-15724180d3c7","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"89be277d-3e0c-48fd-af91-e0d06e951829","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2f43a70f-9652-4a1d-aa3f-d072b422c96d","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"37b00a5d-3e0d-4686-9f3d-1b50f9946269","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c67e6e0f-10f9-4cdd-a836-badb298c4310","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"cfa1abcd-56e4-4cb2-8739-018dd7b9d0fb","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8aa2d55e-efdd-4f6a-b1c5-b9d930ddc3bd","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"5b5fc91b-a06e-4d80-bf52-b273de42c37b","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3a0fe51d-bf68-4534-b713-33a8734f4841","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -78,22 +71,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprJungleBanditWalk","path":"sprites/sprJungleBanditWalk/sprJungleBanditWalk.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprJungleBanditWalk",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"219bf43a-7120-4889-bcf7-fe8c35bfd557","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"219bf43a-7120-4889-bcf7-fe8c35bfd557","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "JungleEnemy",
     "path": "folders/Sprites/Enemies/JungleEnemy.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprJungleBanditWalk",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

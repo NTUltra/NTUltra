@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "mskBossSpawnArea",
   "bboxMode": 0,
   "collisionKind": 0,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c63ba541-1ec5-4400-b564-687e5804d9d3","path":"sprites/mskBossSpawnArea/mskBossSpawnArea.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c63ba541-1ec5-4400-b564-687e5804d9d3","path":"sprites/mskBossSpawnArea/mskBossSpawnArea.yy",},"LayerId":{"name":"f4ab3c87-dbb2-4e6f-9654-bc6476b37414","path":"sprites/mskBossSpawnArea/mskBossSpawnArea.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"mskBossSpawnArea","path":"sprites/mskBossSpawnArea/mskBossSpawnArea.yy",},"resourceVersion":"1.0","name":"c63ba541-1ec5-4400-b564-687e5804d9d3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c63ba541-1ec5-4400-b564-687e5804d9d3",},
   ],
   "sequence": {
-    "spriteId": {"name":"mskBossSpawnArea","path":"sprites/mskBossSpawnArea/mskBossSpawnArea.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "mskBossSpawnArea",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"6a8900bf-3860-4242-a4a1-258e82655ace","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c63ba541-1ec5-4400-b564-687e5804d9d3","path":"sprites/mskBossSpawnArea/mskBossSpawnArea.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 128,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"mskBossSpawnArea","path":"sprites/mskBossSpawnArea/mskBossSpawnArea.yy",},
-    "resourceVersion": "1.4",
-    "name": "mskBossSpawnArea",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f4ab3c87-dbb2-4e6f-9654-bc6476b37414","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f4ab3c87-dbb2-4e6f-9654-bc6476b37414","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Palace",
     "path": "folders/Sprites/Palace.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "mskBossSpawnArea",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

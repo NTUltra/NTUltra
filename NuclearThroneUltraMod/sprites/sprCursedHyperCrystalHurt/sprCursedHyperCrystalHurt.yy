@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprCursedHyperCrystalHurt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8d160850-379d-42e1-a77b-fe18770d7c95","path":"sprites/sprCursedHyperCrystalHurt/sprCursedHyperCrystalHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8d160850-379d-42e1-a77b-fe18770d7c95","path":"sprites/sprCursedHyperCrystalHurt/sprCursedHyperCrystalHurt.yy",},"LayerId":{"name":"dc2d356c-4d01-4842-8dfe-55adc333f5df","path":"sprites/sprCursedHyperCrystalHurt/sprCursedHyperCrystalHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCursedHyperCrystalHurt","path":"sprites/sprCursedHyperCrystalHurt/sprCursedHyperCrystalHurt.yy",},"resourceVersion":"1.0","name":"8d160850-379d-42e1-a77b-fe18770d7c95","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a57adaf5-3fde-4f46-bd09-12d780fee0dd","path":"sprites/sprCursedHyperCrystalHurt/sprCursedHyperCrystalHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a57adaf5-3fde-4f46-bd09-12d780fee0dd","path":"sprites/sprCursedHyperCrystalHurt/sprCursedHyperCrystalHurt.yy",},"LayerId":{"name":"dc2d356c-4d01-4842-8dfe-55adc333f5df","path":"sprites/sprCursedHyperCrystalHurt/sprCursedHyperCrystalHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCursedHyperCrystalHurt","path":"sprites/sprCursedHyperCrystalHurt/sprCursedHyperCrystalHurt.yy",},"resourceVersion":"1.0","name":"a57adaf5-3fde-4f46-bd09-12d780fee0dd","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"976edca0-f4ac-4b2c-85a0-efa0117654f9","path":"sprites/sprCursedHyperCrystalHurt/sprCursedHyperCrystalHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"976edca0-f4ac-4b2c-85a0-efa0117654f9","path":"sprites/sprCursedHyperCrystalHurt/sprCursedHyperCrystalHurt.yy",},"LayerId":{"name":"dc2d356c-4d01-4842-8dfe-55adc333f5df","path":"sprites/sprCursedHyperCrystalHurt/sprCursedHyperCrystalHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCursedHyperCrystalHurt","path":"sprites/sprCursedHyperCrystalHurt/sprCursedHyperCrystalHurt.yy",},"resourceVersion":"1.0","name":"976edca0-f4ac-4b2c-85a0-efa0117654f9","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8d160850-379d-42e1-a77b-fe18770d7c95",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a57adaf5-3fde-4f46-bd09-12d780fee0dd",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"976edca0-f4ac-4b2c-85a0-efa0117654f9",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprCursedHyperCrystalHurt","path":"sprites/sprCursedHyperCrystalHurt/sprCursedHyperCrystalHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprCursedHyperCrystalHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"640455ae-7d3c-4b2a-8302-854766956c43","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8d160850-379d-42e1-a77b-fe18770d7c95","path":"sprites/sprCursedHyperCrystalHurt/sprCursedHyperCrystalHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e45056fa-4db1-45ec-bff9-780507a981e1","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a57adaf5-3fde-4f46-bd09-12d780fee0dd","path":"sprites/sprCursedHyperCrystalHurt/sprCursedHyperCrystalHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"1b6b2db9-746c-4437-9f40-2ccb451057c6","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"976edca0-f4ac-4b2c-85a0-efa0117654f9","path":"sprites/sprCursedHyperCrystalHurt/sprCursedHyperCrystalHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 48,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprCursedHyperCrystalHurt","path":"sprites/sprCursedHyperCrystalHurt/sprCursedHyperCrystalHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprCursedHyperCrystalHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"dc2d356c-4d01-4842-8dfe-55adc333f5df","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"dc2d356c-4d01-4842-8dfe-55adc333f5df","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "HyperCrystal",
     "path": "folders/Sprites/Enemies/Boss/HyperCrystal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprCursedHyperCrystalHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

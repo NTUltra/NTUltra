@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprSteroidsMenu",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,123 +27,49 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5f9087f7-0223-403c-8792-90ef36ac0a4b","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5f9087f7-0223-403c-8792-90ef36ac0a4b","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"5f9087f7-0223-403c-8792-90ef36ac0a4b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f7e9ce67-2660-4ae3-9c4a-2ab2f8ca8e32","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f7e9ce67-2660-4ae3-9c4a-2ab2f8ca8e32","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"f7e9ce67-2660-4ae3-9c4a-2ab2f8ca8e32","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f9eca713-b3c7-47f0-b3d9-a26ba216c7ae","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f9eca713-b3c7-47f0-b3d9-a26ba216c7ae","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"f9eca713-b3c7-47f0-b3d9-a26ba216c7ae","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5268559f-7e91-4ae5-8821-b4863e612a58","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5268559f-7e91-4ae5-8821-b4863e612a58","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"5268559f-7e91-4ae5-8821-b4863e612a58","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4e85b741-4d59-4573-8e9a-a229039cd1f4","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4e85b741-4d59-4573-8e9a-a229039cd1f4","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"4e85b741-4d59-4573-8e9a-a229039cd1f4","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7167be3c-dc99-4875-9921-bc576d1cef54","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7167be3c-dc99-4875-9921-bc576d1cef54","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"7167be3c-dc99-4875-9921-bc576d1cef54","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5f8b70fd-64b7-4b8b-a143-52e402462b3a","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5f8b70fd-64b7-4b8b-a143-52e402462b3a","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"5f8b70fd-64b7-4b8b-a143-52e402462b3a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"248a865b-1484-40c3-bfb2-54767b167a68","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"248a865b-1484-40c3-bfb2-54767b167a68","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"248a865b-1484-40c3-bfb2-54767b167a68","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2726f584-d3c5-4039-86cf-5a57b7348196","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2726f584-d3c5-4039-86cf-5a57b7348196","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"2726f584-d3c5-4039-86cf-5a57b7348196","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"71f9032c-0201-4e8e-a358-66bb7d7fd492","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"71f9032c-0201-4e8e-a358-66bb7d7fd492","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"71f9032c-0201-4e8e-a358-66bb7d7fd492","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4106bea1-e116-4f28-b102-52a667a88b5b","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4106bea1-e116-4f28-b102-52a667a88b5b","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"4106bea1-e116-4f28-b102-52a667a88b5b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"fbb06c21-63f2-42bb-9033-3c583c276862","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fbb06c21-63f2-42bb-9033-3c583c276862","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"fbb06c21-63f2-42bb-9033-3c583c276862","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e011f68d-45ec-4066-bfa5-64ffb0edf362","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e011f68d-45ec-4066-bfa5-64ffb0edf362","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"e011f68d-45ec-4066-bfa5-64ffb0edf362","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2aca8924-77cb-4cec-91f6-840ab6dc8320","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2aca8924-77cb-4cec-91f6-840ab6dc8320","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"2aca8924-77cb-4cec-91f6-840ab6dc8320","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"643ea760-dd09-40e9-8845-f5dd502a8035","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"643ea760-dd09-40e9-8845-f5dd502a8035","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"643ea760-dd09-40e9-8845-f5dd502a8035","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"41a78d2d-725d-430b-b6b2-8fdd7856b580","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"41a78d2d-725d-430b-b6b2-8fdd7856b580","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"41a78d2d-725d-430b-b6b2-8fdd7856b580","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2f214f25-6019-45cd-88b9-c9b88c653a55","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2f214f25-6019-45cd-88b9-c9b88c653a55","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"2f214f25-6019-45cd-88b9-c9b88c653a55","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"99bd50b2-878f-466d-b768-7f9d90d0737e","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"99bd50b2-878f-466d-b768-7f9d90d0737e","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"99bd50b2-878f-466d-b768-7f9d90d0737e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"297e4507-c6c8-4994-83b6-04ca2756b5bf","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"297e4507-c6c8-4994-83b6-04ca2756b5bf","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"297e4507-c6c8-4994-83b6-04ca2756b5bf","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0e8c4374-10c6-4624-a759-adde1966c663","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0e8c4374-10c6-4624-a759-adde1966c663","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"0e8c4374-10c6-4624-a759-adde1966c663","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"023e163c-73a4-4ebe-a1c9-07c845f4461c","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"023e163c-73a4-4ebe-a1c9-07c845f4461c","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"023e163c-73a4-4ebe-a1c9-07c845f4461c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f8092a49-504d-400c-b16b-53879495dda0","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f8092a49-504d-400c-b16b-53879495dda0","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"f8092a49-504d-400c-b16b-53879495dda0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d35a7ad8-b37a-4e64-9940-988532579474","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d35a7ad8-b37a-4e64-9940-988532579474","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"d35a7ad8-b37a-4e64-9940-988532579474","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"aa98e52f-5295-4edb-8dac-2ec28aed352a","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"aa98e52f-5295-4edb-8dac-2ec28aed352a","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"aa98e52f-5295-4edb-8dac-2ec28aed352a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"38329485-6c8f-44f6-bcbf-40e94ae04a13","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"38329485-6c8f-44f6-bcbf-40e94ae04a13","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"38329485-6c8f-44f6-bcbf-40e94ae04a13","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bae342b9-e320-452f-91b7-711a5b4c5051","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bae342b9-e320-452f-91b7-711a5b4c5051","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"bae342b9-e320-452f-91b7-711a5b4c5051","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d4584166-9df0-4797-92a7-509390d55c16","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d4584166-9df0-4797-92a7-509390d55c16","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"d4584166-9df0-4797-92a7-509390d55c16","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b4d022ad-8d4c-4762-9e5d-0c2976ae896c","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b4d022ad-8d4c-4762-9e5d-0c2976ae896c","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"b4d022ad-8d4c-4762-9e5d-0c2976ae896c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f8973bb9-fbef-4b3d-9773-dcb92a3580ac","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f8973bb9-fbef-4b3d-9773-dcb92a3580ac","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"f8973bb9-fbef-4b3d-9773-dcb92a3580ac","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"cc83dbeb-144b-419d-8562-fddd7492c695","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cc83dbeb-144b-419d-8562-fddd7492c695","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"cc83dbeb-144b-419d-8562-fddd7492c695","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"dd5ed6f7-0a82-44ce-a2ab-360b49abd912","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dd5ed6f7-0a82-44ce-a2ab-360b49abd912","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"dd5ed6f7-0a82-44ce-a2ab-360b49abd912","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6d1e5c8a-1c00-41f8-8ba8-abe1b9109782","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6d1e5c8a-1c00-41f8-8ba8-abe1b9109782","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"6d1e5c8a-1c00-41f8-8ba8-abe1b9109782","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"16fe154d-c48a-4d00-bc2a-205c53d05eda","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"16fe154d-c48a-4d00-bc2a-205c53d05eda","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"16fe154d-c48a-4d00-bc2a-205c53d05eda","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1079bf9c-db80-45cb-b607-33fb51fe9ce7","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1079bf9c-db80-45cb-b607-33fb51fe9ce7","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"1079bf9c-db80-45cb-b607-33fb51fe9ce7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"94dc1808-b671-4fb1-afcf-5c4079bfabbe","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"94dc1808-b671-4fb1-afcf-5c4079bfabbe","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"94dc1808-b671-4fb1-afcf-5c4079bfabbe","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a2f9057e-49e2-411f-bf20-99804c071d53","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a2f9057e-49e2-411f-bf20-99804c071d53","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"a2f9057e-49e2-411f-bf20-99804c071d53","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ed7cb9d1-ad62-460b-9c92-8156056138ea","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ed7cb9d1-ad62-460b-9c92-8156056138ea","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"ed7cb9d1-ad62-460b-9c92-8156056138ea","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b11bd03f-1142-4a4f-b8d2-86c72a383f88","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b11bd03f-1142-4a4f-b8d2-86c72a383f88","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"LayerId":{"name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","name":"b11bd03f-1142-4a4f-b8d2-86c72a383f88","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5f9087f7-0223-403c-8792-90ef36ac0a4b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f7e9ce67-2660-4ae3-9c4a-2ab2f8ca8e32",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f9eca713-b3c7-47f0-b3d9-a26ba216c7ae",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5268559f-7e91-4ae5-8821-b4863e612a58",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4e85b741-4d59-4573-8e9a-a229039cd1f4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7167be3c-dc99-4875-9921-bc576d1cef54",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5f8b70fd-64b7-4b8b-a143-52e402462b3a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"248a865b-1484-40c3-bfb2-54767b167a68",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2726f584-d3c5-4039-86cf-5a57b7348196",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"71f9032c-0201-4e8e-a358-66bb7d7fd492",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4106bea1-e116-4f28-b102-52a667a88b5b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fbb06c21-63f2-42bb-9033-3c583c276862",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e011f68d-45ec-4066-bfa5-64ffb0edf362",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2aca8924-77cb-4cec-91f6-840ab6dc8320",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"643ea760-dd09-40e9-8845-f5dd502a8035",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"41a78d2d-725d-430b-b6b2-8fdd7856b580",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2f214f25-6019-45cd-88b9-c9b88c653a55",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"99bd50b2-878f-466d-b768-7f9d90d0737e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"297e4507-c6c8-4994-83b6-04ca2756b5bf",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0e8c4374-10c6-4624-a759-adde1966c663",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"023e163c-73a4-4ebe-a1c9-07c845f4461c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f8092a49-504d-400c-b16b-53879495dda0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d35a7ad8-b37a-4e64-9940-988532579474",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"aa98e52f-5295-4edb-8dac-2ec28aed352a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"38329485-6c8f-44f6-bcbf-40e94ae04a13",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bae342b9-e320-452f-91b7-711a5b4c5051",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d4584166-9df0-4797-92a7-509390d55c16",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b4d022ad-8d4c-4762-9e5d-0c2976ae896c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f8973bb9-fbef-4b3d-9773-dcb92a3580ac",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cc83dbeb-144b-419d-8562-fddd7492c695",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dd5ed6f7-0a82-44ce-a2ab-360b49abd912",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6d1e5c8a-1c00-41f8-8ba8-abe1b9109782",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"16fe154d-c48a-4d00-bc2a-205c53d05eda",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1079bf9c-db80-45cb-b607-33fb51fe9ce7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"94dc1808-b671-4fb1-afcf-5c4079bfabbe",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a2f9057e-49e2-411f-bf20-99804c071d53",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ed7cb9d1-ad62-460b-9c92-8156056138ea",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b11bd03f-1142-4a4f-b8d2-86c72a383f88",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -151,7 +80,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"40e0fe4f-f63d-4c6a-9e60-cdf0eeeda5b2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5f9087f7-0223-403c-8792-90ef36ac0a4b","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e1835ca3-c67b-479e-9a63-71f41c805181","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f7e9ce67-2660-4ae3-9c4a-2ab2f8ca8e32","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"2555a21a-0d08-41a4-8405-c9eb8be0db1f","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f9eca713-b3c7-47f0-b3d9-a26ba216c7ae","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -190,7 +119,7 @@
             {"id":"cb76548b-f5b7-416e-b352-62f49b8b2236","Key":35.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a2f9057e-49e2-411f-bf20-99804c071d53","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b789e4b1-295c-4df2-a865-96b5bd979b02","Key":36.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ed7cb9d1-ad62-460b-9c92-8156056138ea","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f316ed67-7634-439c-bf07-ea4c807047bb","Key":37.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b11bd03f-1142-4a4f-b8d2-86c72a383f88","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -206,22 +135,13 @@
     "yorigin": 18,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprSteroidsMenu","path":"sprites/sprSteroidsMenu/sprSteroidsMenu.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7ad821ac-f649-46e1-aed9-3cbad8de633d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "MenuChar",
     "path": "folders/Sprites/Enemies/Menu/MenuChar.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprSteroidsMenu",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

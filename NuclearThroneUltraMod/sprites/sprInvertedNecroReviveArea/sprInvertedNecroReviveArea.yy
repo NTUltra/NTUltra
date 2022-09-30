@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedNecroReviveArea",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"9aa25557-4c18-4199-a2b2-5ff36c1c814e","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9aa25557-4c18-4199-a2b2-5ff36c1c814e","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},"LayerId":{"name":"44d7022d-595a-4cba-895b-117a0ce4c7c4","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedNecroReviveArea","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},"resourceVersion":"1.0","name":"9aa25557-4c18-4199-a2b2-5ff36c1c814e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8122b9a9-9827-435e-b3f2-1b0e20c64f9d","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8122b9a9-9827-435e-b3f2-1b0e20c64f9d","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},"LayerId":{"name":"44d7022d-595a-4cba-895b-117a0ce4c7c4","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedNecroReviveArea","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},"resourceVersion":"1.0","name":"8122b9a9-9827-435e-b3f2-1b0e20c64f9d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6f1e39b6-4efd-4729-8ece-128af38cd60f","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6f1e39b6-4efd-4729-8ece-128af38cd60f","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},"LayerId":{"name":"44d7022d-595a-4cba-895b-117a0ce4c7c4","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedNecroReviveArea","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},"resourceVersion":"1.0","name":"6f1e39b6-4efd-4729-8ece-128af38cd60f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"648a8979-049b-4b27-bf00-d71d27764706","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"648a8979-049b-4b27-bf00-d71d27764706","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},"LayerId":{"name":"44d7022d-595a-4cba-895b-117a0ce4c7c4","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedNecroReviveArea","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},"resourceVersion":"1.0","name":"648a8979-049b-4b27-bf00-d71d27764706","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9aa25557-4c18-4199-a2b2-5ff36c1c814e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8122b9a9-9827-435e-b3f2-1b0e20c64f9d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6f1e39b6-4efd-4729-8ece-128af38cd60f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"648a8979-049b-4b27-bf00-d71d27764706",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedNecroReviveArea","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedNecroReviveArea",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -49,12 +46,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"d233d45e-db25-4b6c-aff1-00f9877232a9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9aa25557-4c18-4199-a2b2-5ff36c1c814e","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"07699e6c-78b8-4889-b32f-f0ecd14133fe","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8122b9a9-9827-435e-b3f2-1b0e20c64f9d","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e6a6a90e-372f-4fef-a160-15bdf57f4154","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6f1e39b6-4efd-4729-8ece-128af38cd60f","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f2499192-9b96-4993-a112-e33ae17ff080","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"648a8979-049b-4b27-bf00-d71d27764706","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +67,13 @@
     "yorigin": 20,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedNecroReviveArea","path":"sprites/sprInvertedNecroReviveArea/sprInvertedNecroReviveArea.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedNecroReviveArea",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"44d7022d-595a-4cba-895b-117a0ce4c7c4","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"44d7022d-595a-4cba-895b-117a0ce4c7c4","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Technomancer",
     "path": "folders/Sprites/Enemies/Boss/Technomancer.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedNecroReviveArea",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

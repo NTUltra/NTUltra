@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprNightBones",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"0c6a6fa2-b0d2-4ad6-a325-c3852f365415","path":"sprites/sprNightBones/sprNightBones.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0c6a6fa2-b0d2-4ad6-a325-c3852f365415","path":"sprites/sprNightBones/sprNightBones.yy",},"LayerId":{"name":"226669de-d1e6-4e12-b0fe-c4e0e23f1755","path":"sprites/sprNightBones/sprNightBones.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprNightBones","path":"sprites/sprNightBones/sprNightBones.yy",},"resourceVersion":"1.0","name":"0c6a6fa2-b0d2-4ad6-a325-c3852f365415","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"eee016e2-c217-4a51-95b8-1357da68f624","path":"sprites/sprNightBones/sprNightBones.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"eee016e2-c217-4a51-95b8-1357da68f624","path":"sprites/sprNightBones/sprNightBones.yy",},"LayerId":{"name":"226669de-d1e6-4e12-b0fe-c4e0e23f1755","path":"sprites/sprNightBones/sprNightBones.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprNightBones","path":"sprites/sprNightBones/sprNightBones.yy",},"resourceVersion":"1.0","name":"eee016e2-c217-4a51-95b8-1357da68f624","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0c6a6fa2-b0d2-4ad6-a325-c3852f365415",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eee016e2-c217-4a51-95b8-1357da68f624",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprNightBones","path":"sprites/sprNightBones/sprNightBones.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprNightBones",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"56298b9a-1609-467b-bc47-809740aa9b43","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0c6a6fa2-b0d2-4ad6-a325-c3852f365415","path":"sprites/sprNightBones/sprNightBones.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"88a95077-2e0b-4ab1-9f1a-9744fef9d1c5","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eee016e2-c217-4a51-95b8-1357da68f624","path":"sprites/sprNightBones/sprNightBones.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 24,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprNightBones","path":"sprites/sprNightBones/sprNightBones.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprNightBones",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"226669de-d1e6-4e12-b0fe-c4e0e23f1755","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"226669de-d1e6-4e12-b0fe-c4e0e23f1755","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "NightDesert",
     "path": "folders/Sprites/Enviroment/Tiles/NightDesert.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprNightBones",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

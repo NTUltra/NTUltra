@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprGoldSniperGun",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"37ea0525-2a5f-4dd1-86c7-f6d30883f2e2","path":"sprites/sprGoldSniperGun/sprGoldSniperGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"37ea0525-2a5f-4dd1-86c7-f6d30883f2e2","path":"sprites/sprGoldSniperGun/sprGoldSniperGun.yy",},"LayerId":{"name":"6fed7f8a-5463-45ee-898b-0e5397f16411","path":"sprites/sprGoldSniperGun/sprGoldSniperGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldSniperGun","path":"sprites/sprGoldSniperGun/sprGoldSniperGun.yy",},"resourceVersion":"1.0","name":"37ea0525-2a5f-4dd1-86c7-f6d30883f2e2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"37ea0525-2a5f-4dd1-86c7-f6d30883f2e2",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprGoldSniperGun","path":"sprites/sprGoldSniperGun/sprGoldSniperGun.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprGoldSniperGun",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"fc219052-17dc-4538-980a-7ced89a2239e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"37ea0525-2a5f-4dd1-86c7-f6d30883f2e2","path":"sprites/sprGoldSniperGun/sprGoldSniperGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 11,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprGoldSniperGun","path":"sprites/sprGoldSniperGun/sprGoldSniperGun.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprGoldSniperGun",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6fed7f8a-5463-45ee-898b-0e5397f16411","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6fed7f8a-5463-45ee-898b-0e5397f16411","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Sniper",
     "path": "folders/Sprites/Enemies/Sniper.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprGoldSniperGun",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

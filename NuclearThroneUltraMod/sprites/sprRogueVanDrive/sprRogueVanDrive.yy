@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprRogueVanDrive",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d9d044b1-4054-4cd5-afae-ab8ccce97c39","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d9d044b1-4054-4cd5-afae-ab8ccce97c39","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},"LayerId":{"name":"f001ce10-3d61-44e9-90e5-7d3df56d9347","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRogueVanDrive","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},"resourceVersion":"1.0","name":"d9d044b1-4054-4cd5-afae-ab8ccce97c39","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"dde43b0b-4586-4b33-b57b-e99201f87b6b","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dde43b0b-4586-4b33-b57b-e99201f87b6b","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},"LayerId":{"name":"f001ce10-3d61-44e9-90e5-7d3df56d9347","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRogueVanDrive","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},"resourceVersion":"1.0","name":"dde43b0b-4586-4b33-b57b-e99201f87b6b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9cfbfdb9-583c-4ac5-a848-1cde8bf2b966","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9cfbfdb9-583c-4ac5-a848-1cde8bf2b966","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},"LayerId":{"name":"f001ce10-3d61-44e9-90e5-7d3df56d9347","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRogueVanDrive","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},"resourceVersion":"1.0","name":"9cfbfdb9-583c-4ac5-a848-1cde8bf2b966","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1820a9bd-3cd3-47bd-9f7a-8d2e7452fe1e","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1820a9bd-3cd3-47bd-9f7a-8d2e7452fe1e","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},"LayerId":{"name":"f001ce10-3d61-44e9-90e5-7d3df56d9347","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRogueVanDrive","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},"resourceVersion":"1.0","name":"1820a9bd-3cd3-47bd-9f7a-8d2e7452fe1e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d9d044b1-4054-4cd5-afae-ab8ccce97c39",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dde43b0b-4586-4b33-b57b-e99201f87b6b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9cfbfdb9-583c-4ac5-a848-1cde8bf2b966",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1820a9bd-3cd3-47bd-9f7a-8d2e7452fe1e",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprRogueVanDrive","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -49,12 +46,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"08aba6c4-9bcd-4ed2-add4-601eb37efc10","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d9d044b1-4054-4cd5-afae-ab8ccce97c39","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"cc8e6abc-c360-4061-8002-e6073d7456fb","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dde43b0b-4586-4b33-b57b-e99201f87b6b","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c583c8b6-0e8d-41ac-8e3c-ec74362affa6","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9cfbfdb9-583c-4ac5-a848-1cde8bf2b966","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b839ee4c-ed53-48ed-b2ba-4ba3aaac47cb","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1820a9bd-3cd3-47bd-9f7a-8d2e7452fe1e","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +67,13 @@
     "yorigin": 64,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprRogueVanDrive","path":"sprites/sprRogueVanDrive/sprRogueVanDrive.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f001ce10-3d61-44e9-90e5-7d3df56d9347","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f001ce10-3d61-44e9-90e5-7d3df56d9347","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Van",
     "path": "folders/Sprites/Enemies/IDPD/Elite IDPD/Van.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprRogueVanDrive",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

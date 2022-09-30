@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprCandyCaneHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"440c91f6-0cb1-4b10-ae7c-763e2fc08895","path":"sprites/sprCandyCaneHurt/sprCandyCaneHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"440c91f6-0cb1-4b10-ae7c-763e2fc08895","path":"sprites/sprCandyCaneHurt/sprCandyCaneHurt.yy",},"LayerId":{"name":"25d94fd6-277c-4502-bccb-78391aba2c49","path":"sprites/sprCandyCaneHurt/sprCandyCaneHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCandyCaneHurt","path":"sprites/sprCandyCaneHurt/sprCandyCaneHurt.yy",},"resourceVersion":"1.0","name":"440c91f6-0cb1-4b10-ae7c-763e2fc08895","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"35c2c757-f3f1-44ec-9bc6-afa585b332ce","path":"sprites/sprCandyCaneHurt/sprCandyCaneHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"35c2c757-f3f1-44ec-9bc6-afa585b332ce","path":"sprites/sprCandyCaneHurt/sprCandyCaneHurt.yy",},"LayerId":{"name":"25d94fd6-277c-4502-bccb-78391aba2c49","path":"sprites/sprCandyCaneHurt/sprCandyCaneHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCandyCaneHurt","path":"sprites/sprCandyCaneHurt/sprCandyCaneHurt.yy",},"resourceVersion":"1.0","name":"35c2c757-f3f1-44ec-9bc6-afa585b332ce","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3006a071-e36d-4fc6-a25f-9e2177946675","path":"sprites/sprCandyCaneHurt/sprCandyCaneHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3006a071-e36d-4fc6-a25f-9e2177946675","path":"sprites/sprCandyCaneHurt/sprCandyCaneHurt.yy",},"LayerId":{"name":"25d94fd6-277c-4502-bccb-78391aba2c49","path":"sprites/sprCandyCaneHurt/sprCandyCaneHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCandyCaneHurt","path":"sprites/sprCandyCaneHurt/sprCandyCaneHurt.yy",},"resourceVersion":"1.0","name":"3006a071-e36d-4fc6-a25f-9e2177946675","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"440c91f6-0cb1-4b10-ae7c-763e2fc08895",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"35c2c757-f3f1-44ec-9bc6-afa585b332ce",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3006a071-e36d-4fc6-a25f-9e2177946675",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprCandyCaneHurt","path":"sprites/sprCandyCaneHurt/sprCandyCaneHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"25a38a96-4378-4a20-8d13-6ff5a48834a0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"440c91f6-0cb1-4b10-ae7c-763e2fc08895","path":"sprites/sprCandyCaneHurt/sprCandyCaneHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a7951dbc-82c9-40f2-b51b-6e9934ee3da2","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"35c2c757-f3f1-44ec-9bc6-afa585b332ce","path":"sprites/sprCandyCaneHurt/sprCandyCaneHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d7775fae-bbce-4a18-98d1-1da8538c82b9","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3006a071-e36d-4fc6-a25f-9e2177946675","path":"sprites/sprCandyCaneHurt/sprCandyCaneHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 14,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprCandyCaneHurt","path":"sprites/sprCandyCaneHurt/sprCandyCaneHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"25d94fd6-277c-4502-bccb-78391aba2c49","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"25d94fd6-277c-4502-bccb-78391aba2c49","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Props",
     "path": "folders/Sprites/Enviroment/Props.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprCandyCaneHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

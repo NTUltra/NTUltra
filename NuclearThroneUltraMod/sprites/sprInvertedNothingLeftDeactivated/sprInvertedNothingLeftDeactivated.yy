@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedNothingLeftDeactivated",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"2d6367c2-e43b-4d74-84c8-dd04e8a329ab","path":"sprites/sprInvertedNothingLeftDeactivated/sprInvertedNothingLeftDeactivated.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2d6367c2-e43b-4d74-84c8-dd04e8a329ab","path":"sprites/sprInvertedNothingLeftDeactivated/sprInvertedNothingLeftDeactivated.yy",},"LayerId":{"name":"f4518aaf-3265-456a-ada3-94e4210390e3","path":"sprites/sprInvertedNothingLeftDeactivated/sprInvertedNothingLeftDeactivated.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedNothingLeftDeactivated","path":"sprites/sprInvertedNothingLeftDeactivated/sprInvertedNothingLeftDeactivated.yy",},"resourceVersion":"1.0","name":"2d6367c2-e43b-4d74-84c8-dd04e8a329ab","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2d6367c2-e43b-4d74-84c8-dd04e8a329ab",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedNothingLeftDeactivated","path":"sprites/sprInvertedNothingLeftDeactivated/sprInvertedNothingLeftDeactivated.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedNothingLeftDeactivated",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"a6b4080c-64af-407a-a258-a12e3b782696","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2d6367c2-e43b-4d74-84c8-dd04e8a329ab","path":"sprites/sprInvertedNothingLeftDeactivated/sprInvertedNothingLeftDeactivated.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 98,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedNothingLeftDeactivated","path":"sprites/sprInvertedNothingLeftDeactivated/sprInvertedNothingLeftDeactivated.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedNothingLeftDeactivated",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f4518aaf-3265-456a-ada3-94e4210390e3","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f4518aaf-3265-456a-ada3-94e4210390e3","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Pieces",
     "path": "folders/Sprites/Palace/Palace Enemy/TheThrone/Throne1/Pieces.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedNothingLeftDeactivated",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprMarkerCrosshairTB",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d910f3f8-50df-4da5-baba-4dd77a315a33","path":"sprites/sprMarkerCrosshairTB/sprMarkerCrosshairTB.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d910f3f8-50df-4da5-baba-4dd77a315a33","path":"sprites/sprMarkerCrosshairTB/sprMarkerCrosshairTB.yy",},"LayerId":{"name":"61f04674-3082-43dc-b492-d62b175a5958","path":"sprites/sprMarkerCrosshairTB/sprMarkerCrosshairTB.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprMarkerCrosshairTB","path":"sprites/sprMarkerCrosshairTB/sprMarkerCrosshairTB.yy",},"resourceVersion":"1.0","name":"d910f3f8-50df-4da5-baba-4dd77a315a33","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d910f3f8-50df-4da5-baba-4dd77a315a33",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprMarkerCrosshairTB","path":"sprites/sprMarkerCrosshairTB/sprMarkerCrosshairTB.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"597efb7c-2a4d-4060-9d2d-c81e6ce4a232","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d910f3f8-50df-4da5-baba-4dd77a315a33","path":"sprites/sprMarkerCrosshairTB/sprMarkerCrosshairTB.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprMarkerCrosshairTB","path":"sprites/sprMarkerCrosshairTB/sprMarkerCrosshairTB.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"61f04674-3082-43dc-b492-d62b175a5958","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"61f04674-3082-43dc-b492-d62b175a5958","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Marker",
     "path": "folders/Sprites/Player/Custom/Hunter/Marker.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprMarkerCrosshairTB",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

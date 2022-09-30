@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprOasisTopDecal",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a96ab389-d2d2-49a7-80f4-a6ab2feb1bbf","path":"sprites/sprOasisTopDecal/sprOasisTopDecal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a96ab389-d2d2-49a7-80f4-a6ab2feb1bbf","path":"sprites/sprOasisTopDecal/sprOasisTopDecal.yy",},"LayerId":{"name":"1c4c851f-de4e-4e78-8fca-c4c08bb2e08d","path":"sprites/sprOasisTopDecal/sprOasisTopDecal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprOasisTopDecal","path":"sprites/sprOasisTopDecal/sprOasisTopDecal.yy",},"resourceVersion":"1.0","name":"a96ab389-d2d2-49a7-80f4-a6ab2feb1bbf","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"db711f5b-0b1b-4a0c-8be6-5762add5044d","path":"sprites/sprOasisTopDecal/sprOasisTopDecal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"db711f5b-0b1b-4a0c-8be6-5762add5044d","path":"sprites/sprOasisTopDecal/sprOasisTopDecal.yy",},"LayerId":{"name":"1c4c851f-de4e-4e78-8fca-c4c08bb2e08d","path":"sprites/sprOasisTopDecal/sprOasisTopDecal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprOasisTopDecal","path":"sprites/sprOasisTopDecal/sprOasisTopDecal.yy",},"resourceVersion":"1.0","name":"db711f5b-0b1b-4a0c-8be6-5762add5044d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"59b61c0e-780f-432e-abff-868c3e565a2b","path":"sprites/sprOasisTopDecal/sprOasisTopDecal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"59b61c0e-780f-432e-abff-868c3e565a2b","path":"sprites/sprOasisTopDecal/sprOasisTopDecal.yy",},"LayerId":{"name":"1c4c851f-de4e-4e78-8fca-c4c08bb2e08d","path":"sprites/sprOasisTopDecal/sprOasisTopDecal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprOasisTopDecal","path":"sprites/sprOasisTopDecal/sprOasisTopDecal.yy",},"resourceVersion":"1.0","name":"59b61c0e-780f-432e-abff-868c3e565a2b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a96ab389-d2d2-49a7-80f4-a6ab2feb1bbf",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"db711f5b-0b1b-4a0c-8be6-5762add5044d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"59b61c0e-780f-432e-abff-868c3e565a2b",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprOasisTopDecal","path":"sprites/sprOasisTopDecal/sprOasisTopDecal.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprOasisTopDecal",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"76a17109-5c33-49e8-aff5-ce35484f5866","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a96ab389-d2d2-49a7-80f4-a6ab2feb1bbf","path":"sprites/sprOasisTopDecal/sprOasisTopDecal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9f43aa11-a8ca-4967-979f-e20a04f1d6ca","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"db711f5b-0b1b-4a0c-8be6-5762add5044d","path":"sprites/sprOasisTopDecal/sprOasisTopDecal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"528280a9-5d6a-45f2-b77f-23a99d4ba193","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"59b61c0e-780f-432e-abff-868c3e565a2b","path":"sprites/sprOasisTopDecal/sprOasisTopDecal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprOasisTopDecal","path":"sprites/sprOasisTopDecal/sprOasisTopDecal.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprOasisTopDecal",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1c4c851f-de4e-4e78-8fca-c4c08bb2e08d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1c4c851f-de4e-4e78-8fca-c4c08bb2e08d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "OasisProps",
     "path": "folders/Sprites/Enviroment/Props/OasisProps.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprOasisTopDecal",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

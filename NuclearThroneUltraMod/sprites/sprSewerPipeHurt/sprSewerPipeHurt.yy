@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprSewerPipeHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"944c84c0-2e3c-4c8d-85b4-c25ae366d7da","path":"sprites/sprSewerPipeHurt/sprSewerPipeHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"944c84c0-2e3c-4c8d-85b4-c25ae366d7da","path":"sprites/sprSewerPipeHurt/sprSewerPipeHurt.yy",},"LayerId":{"name":"b004722e-a3b6-4489-a086-50462e675f9e","path":"sprites/sprSewerPipeHurt/sprSewerPipeHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSewerPipeHurt","path":"sprites/sprSewerPipeHurt/sprSewerPipeHurt.yy",},"resourceVersion":"1.0","name":"944c84c0-2e3c-4c8d-85b4-c25ae366d7da","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"73ac96d7-3312-4acc-b908-f6ee962bc1e7","path":"sprites/sprSewerPipeHurt/sprSewerPipeHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"73ac96d7-3312-4acc-b908-f6ee962bc1e7","path":"sprites/sprSewerPipeHurt/sprSewerPipeHurt.yy",},"LayerId":{"name":"b004722e-a3b6-4489-a086-50462e675f9e","path":"sprites/sprSewerPipeHurt/sprSewerPipeHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSewerPipeHurt","path":"sprites/sprSewerPipeHurt/sprSewerPipeHurt.yy",},"resourceVersion":"1.0","name":"73ac96d7-3312-4acc-b908-f6ee962bc1e7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"97dcf9a5-2be9-4bcc-94d5-d7d45126f1e2","path":"sprites/sprSewerPipeHurt/sprSewerPipeHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"97dcf9a5-2be9-4bcc-94d5-d7d45126f1e2","path":"sprites/sprSewerPipeHurt/sprSewerPipeHurt.yy",},"LayerId":{"name":"b004722e-a3b6-4489-a086-50462e675f9e","path":"sprites/sprSewerPipeHurt/sprSewerPipeHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSewerPipeHurt","path":"sprites/sprSewerPipeHurt/sprSewerPipeHurt.yy",},"resourceVersion":"1.0","name":"97dcf9a5-2be9-4bcc-94d5-d7d45126f1e2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"944c84c0-2e3c-4c8d-85b4-c25ae366d7da",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"73ac96d7-3312-4acc-b908-f6ee962bc1e7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"97dcf9a5-2be9-4bcc-94d5-d7d45126f1e2",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprSewerPipeHurt","path":"sprites/sprSewerPipeHurt/sprSewerPipeHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"76608640-79bc-428c-8b74-ffb389046e6d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"944c84c0-2e3c-4c8d-85b4-c25ae366d7da","path":"sprites/sprSewerPipeHurt/sprSewerPipeHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"298c6636-ba7b-4d1b-b7d6-b3ef3dae6d6c","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"73ac96d7-3312-4acc-b908-f6ee962bc1e7","path":"sprites/sprSewerPipeHurt/sprSewerPipeHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6bf2d34a-393a-463b-8996-f29bd52f668c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"97dcf9a5-2be9-4bcc-94d5-d7d45126f1e2","path":"sprites/sprSewerPipeHurt/sprSewerPipeHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 10,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprSewerPipeHurt","path":"sprites/sprSewerPipeHurt/sprSewerPipeHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b004722e-a3b6-4489-a086-50462e675f9e","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b004722e-a3b6-4489-a086-50462e675f9e","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Sewers",
     "path": "folders/Sprites/Enviroment/Props/Sewers.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprSewerPipeHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprCactusB3Hurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"2d60a875-5760-4248-8b59-ddfd45f157ef","path":"sprites/sprCactusB3Hurt/sprCactusB3Hurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2d60a875-5760-4248-8b59-ddfd45f157ef","path":"sprites/sprCactusB3Hurt/sprCactusB3Hurt.yy",},"LayerId":{"name":"16575ec8-eec7-4020-99b7-55ed931ac61b","path":"sprites/sprCactusB3Hurt/sprCactusB3Hurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCactusB3Hurt","path":"sprites/sprCactusB3Hurt/sprCactusB3Hurt.yy",},"resourceVersion":"1.0","name":"2d60a875-5760-4248-8b59-ddfd45f157ef","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f8fc5fc4-2f85-4d24-91e0-8032e5157056","path":"sprites/sprCactusB3Hurt/sprCactusB3Hurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f8fc5fc4-2f85-4d24-91e0-8032e5157056","path":"sprites/sprCactusB3Hurt/sprCactusB3Hurt.yy",},"LayerId":{"name":"16575ec8-eec7-4020-99b7-55ed931ac61b","path":"sprites/sprCactusB3Hurt/sprCactusB3Hurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCactusB3Hurt","path":"sprites/sprCactusB3Hurt/sprCactusB3Hurt.yy",},"resourceVersion":"1.0","name":"f8fc5fc4-2f85-4d24-91e0-8032e5157056","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1d918499-7e27-402b-983c-bc6aebc2b9df","path":"sprites/sprCactusB3Hurt/sprCactusB3Hurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1d918499-7e27-402b-983c-bc6aebc2b9df","path":"sprites/sprCactusB3Hurt/sprCactusB3Hurt.yy",},"LayerId":{"name":"16575ec8-eec7-4020-99b7-55ed931ac61b","path":"sprites/sprCactusB3Hurt/sprCactusB3Hurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCactusB3Hurt","path":"sprites/sprCactusB3Hurt/sprCactusB3Hurt.yy",},"resourceVersion":"1.0","name":"1d918499-7e27-402b-983c-bc6aebc2b9df","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2d60a875-5760-4248-8b59-ddfd45f157ef",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f8fc5fc4-2f85-4d24-91e0-8032e5157056",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1d918499-7e27-402b-983c-bc6aebc2b9df",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprCactusB3Hurt","path":"sprites/sprCactusB3Hurt/sprCactusB3Hurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"23c7452f-0e18-4cca-abe7-fa5eaed4f4ab","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2d60a875-5760-4248-8b59-ddfd45f157ef","path":"sprites/sprCactusB3Hurt/sprCactusB3Hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"14ab246e-dadd-4b69-8f72-aecf9fcf66cd","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f8fc5fc4-2f85-4d24-91e0-8032e5157056","path":"sprites/sprCactusB3Hurt/sprCactusB3Hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d9fe2710-fae9-4500-8d64-10eaf8c955e7","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1d918499-7e27-402b-983c-bc6aebc2b9df","path":"sprites/sprCactusB3Hurt/sprCactusB3Hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprCactusB3Hurt","path":"sprites/sprCactusB3Hurt/sprCactusB3Hurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"16575ec8-eec7-4020-99b7-55ed931ac61b","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"16575ec8-eec7-4020-99b7-55ed931ac61b","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "UnsortedProp",
     "path": "folders/Sprites/Enviroment/UnsortedProp.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprCactusB3Hurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

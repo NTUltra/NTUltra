@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprBushBoxStatue",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8fd06bca-d43e-40d4-b063-2d0c70f7d29b","path":"sprites/sprBushBoxStatue/sprBushBoxStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8fd06bca-d43e-40d4-b063-2d0c70f7d29b","path":"sprites/sprBushBoxStatue/sprBushBoxStatue.yy",},"LayerId":{"name":"f8da4e70-5a07-45d6-86f0-47aee321d4bd","path":"sprites/sprBushBoxStatue/sprBushBoxStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBushBoxStatue","path":"sprites/sprBushBoxStatue/sprBushBoxStatue.yy",},"resourceVersion":"1.0","name":"8fd06bca-d43e-40d4-b063-2d0c70f7d29b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d60508e4-859e-453d-8a6e-27350f667066","path":"sprites/sprBushBoxStatue/sprBushBoxStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d60508e4-859e-453d-8a6e-27350f667066","path":"sprites/sprBushBoxStatue/sprBushBoxStatue.yy",},"LayerId":{"name":"f8da4e70-5a07-45d6-86f0-47aee321d4bd","path":"sprites/sprBushBoxStatue/sprBushBoxStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBushBoxStatue","path":"sprites/sprBushBoxStatue/sprBushBoxStatue.yy",},"resourceVersion":"1.0","name":"d60508e4-859e-453d-8a6e-27350f667066","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4721e1a1-8411-4b13-ac75-e3dc33deeee7","path":"sprites/sprBushBoxStatue/sprBushBoxStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4721e1a1-8411-4b13-ac75-e3dc33deeee7","path":"sprites/sprBushBoxStatue/sprBushBoxStatue.yy",},"LayerId":{"name":"f8da4e70-5a07-45d6-86f0-47aee321d4bd","path":"sprites/sprBushBoxStatue/sprBushBoxStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBushBoxStatue","path":"sprites/sprBushBoxStatue/sprBushBoxStatue.yy",},"resourceVersion":"1.0","name":"4721e1a1-8411-4b13-ac75-e3dc33deeee7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8fd06bca-d43e-40d4-b063-2d0c70f7d29b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d60508e4-859e-453d-8a6e-27350f667066",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4721e1a1-8411-4b13-ac75-e3dc33deeee7",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprBushBoxStatue","path":"sprites/sprBushBoxStatue/sprBushBoxStatue.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprBushBoxStatue",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"569a806e-d275-4c88-a008-4dffad18d54c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8fd06bca-d43e-40d4-b063-2d0c70f7d29b","path":"sprites/sprBushBoxStatue/sprBushBoxStatue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"751830c2-731f-46db-86d0-4a7e73e81f93","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d60508e4-859e-453d-8a6e-27350f667066","path":"sprites/sprBushBoxStatue/sprBushBoxStatue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9e7b1c98-10f2-448d-b91b-4e2da423776d","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4721e1a1-8411-4b13-ac75-e3dc33deeee7","path":"sprites/sprBushBoxStatue/sprBushBoxStatue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 30,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprBushBoxStatue","path":"sprites/sprBushBoxStatue/sprBushBoxStatue.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprBushBoxStatue",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f8da4e70-5a07-45d6-86f0-47aee321d4bd","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f8da4e70-5a07-45d6-86f0-47aee321d4bd","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Statues",
     "path": "folders/Sprites/Enemies/Boss/Statues.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprBushBoxStatue",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

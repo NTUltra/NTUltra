@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedChesireCatLaser",
   "bboxMode": 0,
   "collisionKind": 0,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"69dee9a5-ced7-475d-9d15-e0e1af813ebe","path":"sprites/sprInvertedChesireCatLaser/sprInvertedChesireCatLaser.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"69dee9a5-ced7-475d-9d15-e0e1af813ebe","path":"sprites/sprInvertedChesireCatLaser/sprInvertedChesireCatLaser.yy",},"LayerId":{"name":"09c5d4c5-73ef-46cb-b4a5-4e6583a8f7e3","path":"sprites/sprInvertedChesireCatLaser/sprInvertedChesireCatLaser.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedChesireCatLaser","path":"sprites/sprInvertedChesireCatLaser/sprInvertedChesireCatLaser.yy",},"resourceVersion":"1.0","name":"69dee9a5-ced7-475d-9d15-e0e1af813ebe","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a0714525-4c41-44dd-acd6-f5c518acc400","path":"sprites/sprInvertedChesireCatLaser/sprInvertedChesireCatLaser.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a0714525-4c41-44dd-acd6-f5c518acc400","path":"sprites/sprInvertedChesireCatLaser/sprInvertedChesireCatLaser.yy",},"LayerId":{"name":"09c5d4c5-73ef-46cb-b4a5-4e6583a8f7e3","path":"sprites/sprInvertedChesireCatLaser/sprInvertedChesireCatLaser.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedChesireCatLaser","path":"sprites/sprInvertedChesireCatLaser/sprInvertedChesireCatLaser.yy",},"resourceVersion":"1.0","name":"a0714525-4c41-44dd-acd6-f5c518acc400","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"69dee9a5-ced7-475d-9d15-e0e1af813ebe",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a0714525-4c41-44dd-acd6-f5c518acc400",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedChesireCatLaser","path":"sprites/sprInvertedChesireCatLaser/sprInvertedChesireCatLaser.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"10bceced-bb7a-4dfe-9d22-2a484d417594","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"69dee9a5-ced7-475d-9d15-e0e1af813ebe","path":"sprites/sprInvertedChesireCatLaser/sprInvertedChesireCatLaser.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"83388acf-abd4-493f-bd70-6818be96296f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a0714525-4c41-44dd-acd6-f5c518acc400","path":"sprites/sprInvertedChesireCatLaser/sprInvertedChesireCatLaser.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedChesireCatLaser","path":"sprites/sprInvertedChesireCatLaser/sprInvertedChesireCatLaser.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"09c5d4c5-73ef-46cb-b4a5-4e6583a8f7e3","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"09c5d4c5-73ef-46cb-b4a5-4e6583a8f7e3","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "FlyingCatHead",
     "path": "folders/Sprites/Enemies/Boss/FlyingCatHead.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedChesireCatLaser",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

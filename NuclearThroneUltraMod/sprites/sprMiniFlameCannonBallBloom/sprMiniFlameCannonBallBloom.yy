@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprMiniFlameCannonBallBloom",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b8271ab2-b950-4ddb-8741-8fe23156229e","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b8271ab2-b950-4ddb-8741-8fe23156229e","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},"LayerId":{"name":"6293ae97-241a-4f63-854a-ebbe232096c0","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprMiniFlameCannonBallBloom","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},"resourceVersion":"1.0","name":"b8271ab2-b950-4ddb-8741-8fe23156229e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"933dd22a-c809-453a-bcc2-7e8caf3d666f","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"933dd22a-c809-453a-bcc2-7e8caf3d666f","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},"LayerId":{"name":"6293ae97-241a-4f63-854a-ebbe232096c0","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprMiniFlameCannonBallBloom","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},"resourceVersion":"1.0","name":"933dd22a-c809-453a-bcc2-7e8caf3d666f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bf689cc2-064a-4449-883d-30456b43dd0b","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bf689cc2-064a-4449-883d-30456b43dd0b","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},"LayerId":{"name":"6293ae97-241a-4f63-854a-ebbe232096c0","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprMiniFlameCannonBallBloom","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},"resourceVersion":"1.0","name":"bf689cc2-064a-4449-883d-30456b43dd0b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a60ff8d8-0bbf-4210-aecf-f0988fc52c10","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a60ff8d8-0bbf-4210-aecf-f0988fc52c10","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},"LayerId":{"name":"6293ae97-241a-4f63-854a-ebbe232096c0","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprMiniFlameCannonBallBloom","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},"resourceVersion":"1.0","name":"a60ff8d8-0bbf-4210-aecf-f0988fc52c10","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b8271ab2-b950-4ddb-8741-8fe23156229e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"933dd22a-c809-453a-bcc2-7e8caf3d666f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bf689cc2-064a-4449-883d-30456b43dd0b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a60ff8d8-0bbf-4210-aecf-f0988fc52c10",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprMiniFlameCannonBallBloom","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprMiniFlameCannonBallBloom",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -49,12 +46,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"25705146-2072-4fd5-b7d5-7334c060803b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b8271ab2-b950-4ddb-8741-8fe23156229e","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"09bb95fb-6fc6-4864-9e05-8a86fa3bf4dc","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"933dd22a-c809-453a-bcc2-7e8caf3d666f","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e9449411-72b5-48ee-b759-14e46fd3af81","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bf689cc2-064a-4449-883d-30456b43dd0b","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"004574e6-b6ae-47dd-b792-14a580ace393","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a60ff8d8-0bbf-4210-aecf-f0988fc52c10","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +67,13 @@
     "yorigin": 10,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprMiniFlameCannonBallBloom","path":"sprites/sprMiniFlameCannonBallBloom/sprMiniFlameCannonBallBloom.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprMiniFlameCannonBallBloom",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6293ae97-241a-4f63-854a-ebbe232096c0","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6293ae97-241a-4f63-854a-ebbe232096c0","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Projectiles",
     "path": "folders/Sprites/Projectiles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprMiniFlameCannonBallBloom",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

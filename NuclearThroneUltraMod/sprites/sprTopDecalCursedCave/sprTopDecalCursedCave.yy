@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprTopDecalCursedCave",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"078bce89-1a2e-4666-85d9-d5ec7af4beb1","path":"sprites/sprTopDecalCursedCave/sprTopDecalCursedCave.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"078bce89-1a2e-4666-85d9-d5ec7af4beb1","path":"sprites/sprTopDecalCursedCave/sprTopDecalCursedCave.yy",},"LayerId":{"name":"709df2d0-3f9f-4738-b45e-cb574b2209e9","path":"sprites/sprTopDecalCursedCave/sprTopDecalCursedCave.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTopDecalCursedCave","path":"sprites/sprTopDecalCursedCave/sprTopDecalCursedCave.yy",},"resourceVersion":"1.0","name":"078bce89-1a2e-4666-85d9-d5ec7af4beb1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5df2a33c-8f2a-4a5a-a434-f9488ce446e0","path":"sprites/sprTopDecalCursedCave/sprTopDecalCursedCave.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5df2a33c-8f2a-4a5a-a434-f9488ce446e0","path":"sprites/sprTopDecalCursedCave/sprTopDecalCursedCave.yy",},"LayerId":{"name":"709df2d0-3f9f-4738-b45e-cb574b2209e9","path":"sprites/sprTopDecalCursedCave/sprTopDecalCursedCave.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTopDecalCursedCave","path":"sprites/sprTopDecalCursedCave/sprTopDecalCursedCave.yy",},"resourceVersion":"1.0","name":"5df2a33c-8f2a-4a5a-a434-f9488ce446e0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"078bce89-1a2e-4666-85d9-d5ec7af4beb1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5df2a33c-8f2a-4a5a-a434-f9488ce446e0",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprTopDecalCursedCave","path":"sprites/sprTopDecalCursedCave/sprTopDecalCursedCave.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprTopDecalCursedCave",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"aa6bb481-7620-4841-86b9-531fdc96dd61","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"078bce89-1a2e-4666-85d9-d5ec7af4beb1","path":"sprites/sprTopDecalCursedCave/sprTopDecalCursedCave.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"509f0582-d523-4412-9abc-0900292701bd","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5df2a33c-8f2a-4a5a-a434-f9488ce446e0","path":"sprites/sprTopDecalCursedCave/sprTopDecalCursedCave.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprTopDecalCursedCave","path":"sprites/sprTopDecalCursedCave/sprTopDecalCursedCave.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprTopDecalCursedCave",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"709df2d0-3f9f-4738-b45e-cb574b2209e9","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"709df2d0-3f9f-4738-b45e-cb574b2209e9","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "CursedCaves",
     "path": "folders/Sprites/Enviroment/Tiles/CursedCaves.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprTopDecalCursedCave",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

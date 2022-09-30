@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprRogueAmmoHUD",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8acda796-d32c-49e3-9a5f-5eec476badcb","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8acda796-d32c-49e3-9a5f-5eec476badcb","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"LayerId":{"name":"d68bb694-2def-4e4d-8a37-ffe078a50017","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRogueAmmoHUD","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"resourceVersion":"1.0","name":"8acda796-d32c-49e3-9a5f-5eec476badcb","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c2623bc0-00d4-4d67-9760-a61d426bfe46","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c2623bc0-00d4-4d67-9760-a61d426bfe46","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"LayerId":{"name":"d68bb694-2def-4e4d-8a37-ffe078a50017","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRogueAmmoHUD","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"resourceVersion":"1.0","name":"c2623bc0-00d4-4d67-9760-a61d426bfe46","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d82145c6-a1eb-4fc0-8f64-d8e3d2f6c584","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d82145c6-a1eb-4fc0-8f64-d8e3d2f6c584","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"LayerId":{"name":"d68bb694-2def-4e4d-8a37-ffe078a50017","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRogueAmmoHUD","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"resourceVersion":"1.0","name":"d82145c6-a1eb-4fc0-8f64-d8e3d2f6c584","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4c2a55a4-7f34-48bd-a1f0-5b0bf36aa040","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4c2a55a4-7f34-48bd-a1f0-5b0bf36aa040","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"LayerId":{"name":"d68bb694-2def-4e4d-8a37-ffe078a50017","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRogueAmmoHUD","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"resourceVersion":"1.0","name":"4c2a55a4-7f34-48bd-a1f0-5b0bf36aa040","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8acda796-d32c-49e3-9a5f-5eec476badcb",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c2623bc0-00d4-4d67-9760-a61d426bfe46",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d82145c6-a1eb-4fc0-8f64-d8e3d2f6c584",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4c2a55a4-7f34-48bd-a1f0-5b0bf36aa040",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprRogueAmmoHUD","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprRogueAmmoHUD",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -49,12 +46,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"186fb50f-ea19-4294-82c5-12b79b910abc","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8acda796-d32c-49e3-9a5f-5eec476badcb","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"0cd5cbdd-43c9-40be-a32f-26133cfb8659","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c2623bc0-00d4-4d67-9760-a61d426bfe46","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ebd46378-af1b-4ab5-afc6-9dde55b1ae29","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d82145c6-a1eb-4fc0-8f64-d8e3d2f6c584","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f93cf31e-01e0-4cca-817a-83831b5e1188","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4c2a55a4-7f34-48bd-a1f0-5b0bf36aa040","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +67,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprRogueAmmoHUD","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprRogueAmmoHUD",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d68bb694-2def-4e4d-8a37-ffe078a50017","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d68bb694-2def-4e4d-8a37-ffe078a50017","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Rogue",
     "path": "folders/Sprites/Player/Custom/Rogue.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprRogueAmmoHUD",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

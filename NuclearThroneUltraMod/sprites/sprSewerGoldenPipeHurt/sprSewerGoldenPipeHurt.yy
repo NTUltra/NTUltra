@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprSewerGoldenPipeHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"39e1f770-966c-44ca-ba10-4460070704aa","path":"sprites/sprSewerGoldenPipeHurt/sprSewerGoldenPipeHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"39e1f770-966c-44ca-ba10-4460070704aa","path":"sprites/sprSewerGoldenPipeHurt/sprSewerGoldenPipeHurt.yy",},"LayerId":{"name":"4cb35b2e-fca6-4436-a7c2-235570851d2a","path":"sprites/sprSewerGoldenPipeHurt/sprSewerGoldenPipeHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSewerGoldenPipeHurt","path":"sprites/sprSewerGoldenPipeHurt/sprSewerGoldenPipeHurt.yy",},"resourceVersion":"1.0","name":"39e1f770-966c-44ca-ba10-4460070704aa","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3bc8233b-06f6-4b0f-86ec-996d85d0da1d","path":"sprites/sprSewerGoldenPipeHurt/sprSewerGoldenPipeHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3bc8233b-06f6-4b0f-86ec-996d85d0da1d","path":"sprites/sprSewerGoldenPipeHurt/sprSewerGoldenPipeHurt.yy",},"LayerId":{"name":"4cb35b2e-fca6-4436-a7c2-235570851d2a","path":"sprites/sprSewerGoldenPipeHurt/sprSewerGoldenPipeHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSewerGoldenPipeHurt","path":"sprites/sprSewerGoldenPipeHurt/sprSewerGoldenPipeHurt.yy",},"resourceVersion":"1.0","name":"3bc8233b-06f6-4b0f-86ec-996d85d0da1d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"87da5330-bbc0-438c-90fb-da0c2aede376","path":"sprites/sprSewerGoldenPipeHurt/sprSewerGoldenPipeHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"87da5330-bbc0-438c-90fb-da0c2aede376","path":"sprites/sprSewerGoldenPipeHurt/sprSewerGoldenPipeHurt.yy",},"LayerId":{"name":"4cb35b2e-fca6-4436-a7c2-235570851d2a","path":"sprites/sprSewerGoldenPipeHurt/sprSewerGoldenPipeHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSewerGoldenPipeHurt","path":"sprites/sprSewerGoldenPipeHurt/sprSewerGoldenPipeHurt.yy",},"resourceVersion":"1.0","name":"87da5330-bbc0-438c-90fb-da0c2aede376","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"39e1f770-966c-44ca-ba10-4460070704aa",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3bc8233b-06f6-4b0f-86ec-996d85d0da1d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"87da5330-bbc0-438c-90fb-da0c2aede376",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprSewerGoldenPipeHurt","path":"sprites/sprSewerGoldenPipeHurt/sprSewerGoldenPipeHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprSewerGoldenPipeHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"181f2860-ff00-4685-bf2e-dbccaf869307","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"39e1f770-966c-44ca-ba10-4460070704aa","path":"sprites/sprSewerGoldenPipeHurt/sprSewerGoldenPipeHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a60a78e3-fde5-4bb3-a4f2-a2c25279db63","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3bc8233b-06f6-4b0f-86ec-996d85d0da1d","path":"sprites/sprSewerGoldenPipeHurt/sprSewerGoldenPipeHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6c6ab95a-7539-433a-b7f1-61124859c416","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"87da5330-bbc0-438c-90fb-da0c2aede376","path":"sprites/sprSewerGoldenPipeHurt/sprSewerGoldenPipeHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 10,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprSewerGoldenPipeHurt","path":"sprites/sprSewerGoldenPipeHurt/sprSewerGoldenPipeHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprSewerGoldenPipeHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4cb35b2e-fca6-4436-a7c2-235570851d2a","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4cb35b2e-fca6-4436-a7c2-235570851d2a","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Sewers",
     "path": "folders/Sprites/Enviroment/Props/Sewers.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprSewerGoldenPipeHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

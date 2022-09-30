@@ -32,7 +32,7 @@ with Player
 		var r = 5;
 		
 		var hasUltra = false;
-		if ultra_got[32]
+		if ultra_got[30]
 		{
 		hasUltra = true;
 		with instance_create(x,y,RobotTurret)
@@ -106,7 +106,7 @@ with Player
 		else
 			instance_create(x,y,AmmoPickup)
 		
-		if ultra_got[29] || ultra_got[30] || ultra_got[31] || ultra_got[32]
+		if ultra_got[29] || ultra_got[30] || ultra_got[31]
 			r += 2;
 		scrRaddrop(r);
 		breload = min(breload,0)

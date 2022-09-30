@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprScrapBossHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"14f7a451-ad5e-4020-9bef-fca373c955c5","path":"sprites/sprScrapBossHurt/sprScrapBossHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"14f7a451-ad5e-4020-9bef-fca373c955c5","path":"sprites/sprScrapBossHurt/sprScrapBossHurt.yy",},"LayerId":{"name":"7986df1c-8e68-4c45-ba3b-b23606352525","path":"sprites/sprScrapBossHurt/sprScrapBossHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprScrapBossHurt","path":"sprites/sprScrapBossHurt/sprScrapBossHurt.yy",},"resourceVersion":"1.0","name":"14f7a451-ad5e-4020-9bef-fca373c955c5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c1d52fdb-a7fb-4c0c-9bd7-fd54c2dbc885","path":"sprites/sprScrapBossHurt/sprScrapBossHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c1d52fdb-a7fb-4c0c-9bd7-fd54c2dbc885","path":"sprites/sprScrapBossHurt/sprScrapBossHurt.yy",},"LayerId":{"name":"7986df1c-8e68-4c45-ba3b-b23606352525","path":"sprites/sprScrapBossHurt/sprScrapBossHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprScrapBossHurt","path":"sprites/sprScrapBossHurt/sprScrapBossHurt.yy",},"resourceVersion":"1.0","name":"c1d52fdb-a7fb-4c0c-9bd7-fd54c2dbc885","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"67cf2aaf-ef5e-4bcc-9139-e4d0cc2b643a","path":"sprites/sprScrapBossHurt/sprScrapBossHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"67cf2aaf-ef5e-4bcc-9139-e4d0cc2b643a","path":"sprites/sprScrapBossHurt/sprScrapBossHurt.yy",},"LayerId":{"name":"7986df1c-8e68-4c45-ba3b-b23606352525","path":"sprites/sprScrapBossHurt/sprScrapBossHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprScrapBossHurt","path":"sprites/sprScrapBossHurt/sprScrapBossHurt.yy",},"resourceVersion":"1.0","name":"67cf2aaf-ef5e-4bcc-9139-e4d0cc2b643a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"14f7a451-ad5e-4020-9bef-fca373c955c5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c1d52fdb-a7fb-4c0c-9bd7-fd54c2dbc885",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"67cf2aaf-ef5e-4bcc-9139-e4d0cc2b643a",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprScrapBossHurt","path":"sprites/sprScrapBossHurt/sprScrapBossHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"c61b5ee1-25ff-4877-93f3-aefe8d9078c6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"14f7a451-ad5e-4020-9bef-fca373c955c5","path":"sprites/sprScrapBossHurt/sprScrapBossHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d369adbb-1636-48ac-97e6-3145546c88d9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c1d52fdb-a7fb-4c0c-9bd7-fd54c2dbc885","path":"sprites/sprScrapBossHurt/sprScrapBossHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f78a2a19-0ec1-4cc6-9328-dec63a762e62","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"67cf2aaf-ef5e-4bcc-9139-e4d0cc2b643a","path":"sprites/sprScrapBossHurt/sprScrapBossHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 48,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprScrapBossHurt","path":"sprites/sprScrapBossHurt/sprScrapBossHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7986df1c-8e68-4c45-ba3b-b23606352525","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7986df1c-8e68-4c45-ba3b-b23606352525","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "BigDog",
     "path": "folders/Sprites/Enemies/Boss/BigDog.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprScrapBossHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

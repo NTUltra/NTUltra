@@ -19,6 +19,16 @@ function scrRestart() {
 	}
 	with SurvivalWave
 		instance_destroy();
+	if UberCont.goToLeaderboard
+	{
+		room_goto(romLeaderboard);
+		with UberCont
+		{
+			goToLeaderboard = false;	
+		}
+		debug("go to leaderboard");
+		exit;
+	}
 	if loadedRun  && !keyboard_check_pressed(vk_enter) and !gamepad_button_check(0,gp_face4)//Not end of run clicked (ugly fix but Im falling asleep)
 		scrLoadRun();
 	else

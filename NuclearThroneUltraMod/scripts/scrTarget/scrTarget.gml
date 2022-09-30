@@ -94,7 +94,7 @@ function scrTarget() {
 			    }
 		    } 
 		}
-		else if Player.ultra_got[32] && target == Player.id {
+		else if Player.ultra_got[30] && target == Player.id {
 			if instance_exists(Turret){//Robot's turret
 			    with enemy
 			    {

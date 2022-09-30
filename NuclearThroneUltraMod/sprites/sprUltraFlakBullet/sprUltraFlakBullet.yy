@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprUltraFlakBullet",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"021db978-3348-4984-bf6f-1d822d2fe3a1","path":"sprites/sprUltraFlakBullet/sprUltraFlakBullet.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"021db978-3348-4984-bf6f-1d822d2fe3a1","path":"sprites/sprUltraFlakBullet/sprUltraFlakBullet.yy",},"LayerId":{"name":"40ef7c37-f610-4bb9-a3c9-50c928a97c4b","path":"sprites/sprUltraFlakBullet/sprUltraFlakBullet.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprUltraFlakBullet","path":"sprites/sprUltraFlakBullet/sprUltraFlakBullet.yy",},"resourceVersion":"1.0","name":"021db978-3348-4984-bf6f-1d822d2fe3a1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6b855626-ad7a-4dd2-b8cc-6d65717aa683","path":"sprites/sprUltraFlakBullet/sprUltraFlakBullet.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6b855626-ad7a-4dd2-b8cc-6d65717aa683","path":"sprites/sprUltraFlakBullet/sprUltraFlakBullet.yy",},"LayerId":{"name":"40ef7c37-f610-4bb9-a3c9-50c928a97c4b","path":"sprites/sprUltraFlakBullet/sprUltraFlakBullet.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprUltraFlakBullet","path":"sprites/sprUltraFlakBullet/sprUltraFlakBullet.yy",},"resourceVersion":"1.0","name":"6b855626-ad7a-4dd2-b8cc-6d65717aa683","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"021db978-3348-4984-bf6f-1d822d2fe3a1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6b855626-ad7a-4dd2-b8cc-6d65717aa683",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprUltraFlakBullet","path":"sprites/sprUltraFlakBullet/sprUltraFlakBullet.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprUltraFlakBullet",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"28af42c5-2d2f-4d1d-b987-103976614704","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"021db978-3348-4984-bf6f-1d822d2fe3a1","path":"sprites/sprUltraFlakBullet/sprUltraFlakBullet.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"60cc4204-0b87-4135-a305-7b332cf89bf6","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6b855626-ad7a-4dd2-b8cc-6d65717aa683","path":"sprites/sprUltraFlakBullet/sprUltraFlakBullet.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprUltraFlakBullet","path":"sprites/sprUltraFlakBullet/sprUltraFlakBullet.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprUltraFlakBullet",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"40ef7c37-f610-4bb9-a3c9-50c928a97c4b","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"40ef7c37-f610-4bb9-a3c9-50c928a97c4b","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Projectiles",
     "path": "folders/Sprites/Projectiles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprUltraFlakBullet",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

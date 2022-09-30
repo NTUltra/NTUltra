@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprCrosshairPowerTB",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"64ed4cdb-edb4-475a-ad38-771e557b8314","path":"sprites/sprCrosshairPowerTB/sprCrosshairPowerTB.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"64ed4cdb-edb4-475a-ad38-771e557b8314","path":"sprites/sprCrosshairPowerTB/sprCrosshairPowerTB.yy",},"LayerId":{"name":"ca3e9de9-3dcd-4fb7-9bd7-457646c996c7","path":"sprites/sprCrosshairPowerTB/sprCrosshairPowerTB.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCrosshairPowerTB","path":"sprites/sprCrosshairPowerTB/sprCrosshairPowerTB.yy",},"resourceVersion":"1.0","name":"64ed4cdb-edb4-475a-ad38-771e557b8314","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"14d7ab57-39a9-494a-863c-370b04cdfae7","path":"sprites/sprCrosshairPowerTB/sprCrosshairPowerTB.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"14d7ab57-39a9-494a-863c-370b04cdfae7","path":"sprites/sprCrosshairPowerTB/sprCrosshairPowerTB.yy",},"LayerId":{"name":"ca3e9de9-3dcd-4fb7-9bd7-457646c996c7","path":"sprites/sprCrosshairPowerTB/sprCrosshairPowerTB.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCrosshairPowerTB","path":"sprites/sprCrosshairPowerTB/sprCrosshairPowerTB.yy",},"resourceVersion":"1.0","name":"14d7ab57-39a9-494a-863c-370b04cdfae7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a231c3f0-d52a-4302-847b-3be1cc1d0e29","path":"sprites/sprCrosshairPowerTB/sprCrosshairPowerTB.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a231c3f0-d52a-4302-847b-3be1cc1d0e29","path":"sprites/sprCrosshairPowerTB/sprCrosshairPowerTB.yy",},"LayerId":{"name":"ca3e9de9-3dcd-4fb7-9bd7-457646c996c7","path":"sprites/sprCrosshairPowerTB/sprCrosshairPowerTB.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCrosshairPowerTB","path":"sprites/sprCrosshairPowerTB/sprCrosshairPowerTB.yy",},"resourceVersion":"1.0","name":"a231c3f0-d52a-4302-847b-3be1cc1d0e29","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"64ed4cdb-edb4-475a-ad38-771e557b8314",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"14d7ab57-39a9-494a-863c-370b04cdfae7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a231c3f0-d52a-4302-847b-3be1cc1d0e29",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprCrosshairPowerTB","path":"sprites/sprCrosshairPowerTB/sprCrosshairPowerTB.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprCrosshairPowerTB",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"74d3b3ff-8a07-41c5-9687-497cc5fb63d4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"64ed4cdb-edb4-475a-ad38-771e557b8314","path":"sprites/sprCrosshairPowerTB/sprCrosshairPowerTB.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"fc9135b8-d2a7-49f1-8d93-8f20282d208a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"14d7ab57-39a9-494a-863c-370b04cdfae7","path":"sprites/sprCrosshairPowerTB/sprCrosshairPowerTB.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"1ccd8aab-894b-4283-b174-0d1e02edb052","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a231c3f0-d52a-4302-847b-3be1cc1d0e29","path":"sprites/sprCrosshairPowerTB/sprCrosshairPowerTB.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprCrosshairPowerTB","path":"sprites/sprCrosshairPowerTB/sprCrosshairPowerTB.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprCrosshairPowerTB",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ca3e9de9-3dcd-4fb7-9bd7-457646c996c7","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ca3e9de9-3dcd-4fb7-9bd7-457646c996c7","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Eyes",
     "path": "folders/Sprites/Player/Eyes.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprCrosshairPowerTB",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

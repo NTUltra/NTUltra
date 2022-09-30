@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprSuperEnergyShankGun",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ce575b6c-5fb5-4588-8d89-37d101a61c2b","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ce575b6c-5fb5-4588-8d89-37d101a61c2b","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"LayerId":{"name":"aa7e5b00-ec72-46a0-84b6-d2e8530dfbcc","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperEnergyShankGun","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"resourceVersion":"1.0","name":"ce575b6c-5fb5-4588-8d89-37d101a61c2b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b629de8c-390e-40eb-b40d-6ff2256fb626","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b629de8c-390e-40eb-b40d-6ff2256fb626","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"LayerId":{"name":"aa7e5b00-ec72-46a0-84b6-d2e8530dfbcc","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperEnergyShankGun","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"resourceVersion":"1.0","name":"b629de8c-390e-40eb-b40d-6ff2256fb626","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5b8d9411-3378-4ee1-bc9c-c0593f39c501","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5b8d9411-3378-4ee1-bc9c-c0593f39c501","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"LayerId":{"name":"aa7e5b00-ec72-46a0-84b6-d2e8530dfbcc","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperEnergyShankGun","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"resourceVersion":"1.0","name":"5b8d9411-3378-4ee1-bc9c-c0593f39c501","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d5c7b707-c7cb-4352-8aac-e087dfa10dfe","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d5c7b707-c7cb-4352-8aac-e087dfa10dfe","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"LayerId":{"name":"aa7e5b00-ec72-46a0-84b6-d2e8530dfbcc","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperEnergyShankGun","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"resourceVersion":"1.0","name":"d5c7b707-c7cb-4352-8aac-e087dfa10dfe","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f9bd0c7e-3773-4d3f-9040-6a4f31207a2b","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f9bd0c7e-3773-4d3f-9040-6a4f31207a2b","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"LayerId":{"name":"aa7e5b00-ec72-46a0-84b6-d2e8530dfbcc","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperEnergyShankGun","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"resourceVersion":"1.0","name":"f9bd0c7e-3773-4d3f-9040-6a4f31207a2b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"31743049-875d-47c2-9c39-96c56247510c","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"31743049-875d-47c2-9c39-96c56247510c","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"LayerId":{"name":"aa7e5b00-ec72-46a0-84b6-d2e8530dfbcc","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperEnergyShankGun","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"resourceVersion":"1.0","name":"31743049-875d-47c2-9c39-96c56247510c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"141336f7-07b0-4bc0-83e1-56d69549b66b","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"141336f7-07b0-4bc0-83e1-56d69549b66b","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"LayerId":{"name":"aa7e5b00-ec72-46a0-84b6-d2e8530dfbcc","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperEnergyShankGun","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"resourceVersion":"1.0","name":"141336f7-07b0-4bc0-83e1-56d69549b66b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ce575b6c-5fb5-4588-8d89-37d101a61c2b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b629de8c-390e-40eb-b40d-6ff2256fb626",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5b8d9411-3378-4ee1-bc9c-c0593f39c501",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d5c7b707-c7cb-4352-8aac-e087dfa10dfe",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f9bd0c7e-3773-4d3f-9040-6a4f31207a2b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"31743049-875d-47c2-9c39-96c56247510c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"141336f7-07b0-4bc0-83e1-56d69549b66b",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprSuperEnergyShankGun","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"0b6b413a-7234-4fed-9548-471a62883f14","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ce575b6c-5fb5-4588-8d89-37d101a61c2b","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9e8aabe4-ba3a-47cc-a26f-4c167bd0aac4","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b629de8c-390e-40eb-b40d-6ff2256fb626","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"505b86d8-d11e-4f67-88f9-3de7fcdaa692","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5b8d9411-3378-4ee1-bc9c-c0593f39c501","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"10e33d1c-c7aa-4751-98b9-295ee7a86658","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f9bd0c7e-3773-4d3f-9040-6a4f31207a2b","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"09f932f8-9be5-4487-a202-80c231287cb2","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"31743049-875d-47c2-9c39-96c56247510c","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"5edc967c-e8d4-453e-b67b-daa7e0da77ce","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"141336f7-07b0-4bc0-83e1-56d69549b66b","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprSuperEnergyShankGun","path":"sprites/sprSuperEnergyShankGun/sprSuperEnergyShankGun.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"aa7e5b00-ec72-46a0-84b6-d2e8530dfbcc","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"aa7e5b00-ec72-46a0-84b6-d2e8530dfbcc","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Custom",
     "path": "folders/Sprites/Weapons/Custom.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprSuperEnergyShankGun",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

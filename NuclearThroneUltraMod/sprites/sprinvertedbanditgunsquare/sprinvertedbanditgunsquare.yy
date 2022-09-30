@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedBanditGunSquare",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"92b858b3-5ceb-41dd-a291-0b88947330cb","path":"sprites/sprInvertedBanditGunSquare/sprInvertedBanditGunSquare.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"92b858b3-5ceb-41dd-a291-0b88947330cb","path":"sprites/sprInvertedBanditGunSquare/sprInvertedBanditGunSquare.yy",},"LayerId":{"name":"e60e98c9-823b-49f1-87fd-1d9d5299d02c","path":"sprites/sprInvertedBanditGunSquare/sprInvertedBanditGunSquare.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedBanditGunSquare","path":"sprites/sprInvertedBanditGunSquare/sprInvertedBanditGunSquare.yy",},"resourceVersion":"1.0","name":"92b858b3-5ceb-41dd-a291-0b88947330cb","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"92b858b3-5ceb-41dd-a291-0b88947330cb",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedBanditGunSquare","path":"sprites/sprInvertedBanditGunSquare/sprInvertedBanditGunSquare.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedBanditGunSquare",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"c61af5a4-5fea-4fd9-a3e0-d0b51e45a491","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"92b858b3-5ceb-41dd-a291-0b88947330cb","path":"sprites/sprInvertedBanditGunSquare/sprInvertedBanditGunSquare.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 2,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedBanditGunSquare","path":"sprites/sprInvertedBanditGunSquare/sprInvertedBanditGunSquare.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedBanditGunSquare",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e60e98c9-823b-49f1-87fd-1d9d5299d02c","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e60e98c9-823b-49f1-87fd-1d9d5299d02c","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Bandit",
     "path": "folders/Sprites/Enemies/Bandit.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedBanditGunSquare",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

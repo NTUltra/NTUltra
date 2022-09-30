@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedOasisBossWalk",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,39 +27,21 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"14cc960a-0c61-40ea-b14a-089eebd0d54e","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"14cc960a-0c61-40ea-b14a-089eebd0d54e","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"LayerId":{"name":"e53dc09b-9467-47d2-aa41-b63fb67f2bcf","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedOasisBossWalk","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","name":"14cc960a-0c61-40ea-b14a-089eebd0d54e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f5f9b5d5-2004-42eb-b9c9-a98a4190a364","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f5f9b5d5-2004-42eb-b9c9-a98a4190a364","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"LayerId":{"name":"e53dc09b-9467-47d2-aa41-b63fb67f2bcf","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedOasisBossWalk","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","name":"f5f9b5d5-2004-42eb-b9c9-a98a4190a364","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"937c64e7-ef34-4373-b0dd-34ca47e011e8","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"937c64e7-ef34-4373-b0dd-34ca47e011e8","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"LayerId":{"name":"e53dc09b-9467-47d2-aa41-b63fb67f2bcf","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedOasisBossWalk","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","name":"937c64e7-ef34-4373-b0dd-34ca47e011e8","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"fde93d56-b362-472d-8811-4789bd9d71d9","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fde93d56-b362-472d-8811-4789bd9d71d9","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"LayerId":{"name":"e53dc09b-9467-47d2-aa41-b63fb67f2bcf","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedOasisBossWalk","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","name":"fde93d56-b362-472d-8811-4789bd9d71d9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0c1e15bb-63d3-4dba-9408-15aac346f4fd","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0c1e15bb-63d3-4dba-9408-15aac346f4fd","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"LayerId":{"name":"e53dc09b-9467-47d2-aa41-b63fb67f2bcf","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedOasisBossWalk","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","name":"0c1e15bb-63d3-4dba-9408-15aac346f4fd","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a8972c46-35a7-4c41-9557-f15becd20838","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a8972c46-35a7-4c41-9557-f15becd20838","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"LayerId":{"name":"e53dc09b-9467-47d2-aa41-b63fb67f2bcf","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedOasisBossWalk","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","name":"a8972c46-35a7-4c41-9557-f15becd20838","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9f11f815-0d73-4ad4-a861-547a5e9a55c0","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9f11f815-0d73-4ad4-a861-547a5e9a55c0","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"LayerId":{"name":"e53dc09b-9467-47d2-aa41-b63fb67f2bcf","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedOasisBossWalk","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","name":"9f11f815-0d73-4ad4-a861-547a5e9a55c0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"548a2aba-b7ec-4aab-9bca-7bcca97f4721","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"548a2aba-b7ec-4aab-9bca-7bcca97f4721","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"LayerId":{"name":"e53dc09b-9467-47d2-aa41-b63fb67f2bcf","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedOasisBossWalk","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","name":"548a2aba-b7ec-4aab-9bca-7bcca97f4721","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d047a02d-b5be-4fa8-bf0d-e3c4e7680543","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d047a02d-b5be-4fa8-bf0d-e3c4e7680543","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"LayerId":{"name":"e53dc09b-9467-47d2-aa41-b63fb67f2bcf","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedOasisBossWalk","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","name":"d047a02d-b5be-4fa8-bf0d-e3c4e7680543","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5e3f939f-ea22-4e30-83be-fc780e73455d","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5e3f939f-ea22-4e30-83be-fc780e73455d","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"LayerId":{"name":"e53dc09b-9467-47d2-aa41-b63fb67f2bcf","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedOasisBossWalk","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","name":"5e3f939f-ea22-4e30-83be-fc780e73455d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"14cc960a-0c61-40ea-b14a-089eebd0d54e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f5f9b5d5-2004-42eb-b9c9-a98a4190a364",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"937c64e7-ef34-4373-b0dd-34ca47e011e8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fde93d56-b362-472d-8811-4789bd9d71d9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0c1e15bb-63d3-4dba-9408-15aac346f4fd",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a8972c46-35a7-4c41-9557-f15becd20838",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9f11f815-0d73-4ad4-a861-547a5e9a55c0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"548a2aba-b7ec-4aab-9bca-7bcca97f4721",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d047a02d-b5be-4fa8-bf0d-e3c4e7680543",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5e3f939f-ea22-4e30-83be-fc780e73455d",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedOasisBossWalk","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedOasisBossWalk",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -67,7 +52,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"496b06fc-6360-46d9-8eb6-c4c02dc02aed","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"14cc960a-0c61-40ea-b14a-089eebd0d54e","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"dc599c0a-0a43-4259-95c1-ce6104d27446","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f5f9b5d5-2004-42eb-b9c9-a98a4190a364","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ce093ef7-9a65-473e-8c51-a5fec83acba9","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"937c64e7-ef34-4373-b0dd-34ca47e011e8","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -78,7 +63,7 @@
             {"id":"b110835a-fc2f-4f64-affe-a9983738c6af","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"548a2aba-b7ec-4aab-9bca-7bcca97f4721","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f0cbbda7-8f69-48be-8f4a-41305c17f0e2","Key":8.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d047a02d-b5be-4fa8-bf0d-e3c4e7680543","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ebd2afe2-5510-479f-95a6-60d72c6b112e","Key":9.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5e3f939f-ea22-4e30-83be-fc780e73455d","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -94,22 +79,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedOasisBossWalk","path":"sprites/sprInvertedOasisBossWalk/sprInvertedOasisBossWalk.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedOasisBossWalk",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e53dc09b-9467-47d2-aa41-b63fb67f2bcf","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e53dc09b-9467-47d2-aa41-b63fb67f2bcf","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "BigFish",
     "path": "folders/Sprites/Enemies/Boss/BigFish.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedOasisBossWalk",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

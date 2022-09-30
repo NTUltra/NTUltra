@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprDiscGuyHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"51e76171-a8cd-4f2d-ba13-0a7e4cc0f269","path":"sprites/sprDiscGuyHurt/sprDiscGuyHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"51e76171-a8cd-4f2d-ba13-0a7e4cc0f269","path":"sprites/sprDiscGuyHurt/sprDiscGuyHurt.yy",},"LayerId":{"name":"7dd5f38a-02d4-4ced-ba25-55143a06798b","path":"sprites/sprDiscGuyHurt/sprDiscGuyHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprDiscGuyHurt","path":"sprites/sprDiscGuyHurt/sprDiscGuyHurt.yy",},"resourceVersion":"1.0","name":"51e76171-a8cd-4f2d-ba13-0a7e4cc0f269","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b9057045-6c5e-4bb0-a49f-6224ec29e7da","path":"sprites/sprDiscGuyHurt/sprDiscGuyHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b9057045-6c5e-4bb0-a49f-6224ec29e7da","path":"sprites/sprDiscGuyHurt/sprDiscGuyHurt.yy",},"LayerId":{"name":"7dd5f38a-02d4-4ced-ba25-55143a06798b","path":"sprites/sprDiscGuyHurt/sprDiscGuyHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprDiscGuyHurt","path":"sprites/sprDiscGuyHurt/sprDiscGuyHurt.yy",},"resourceVersion":"1.0","name":"b9057045-6c5e-4bb0-a49f-6224ec29e7da","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f713f209-12a5-49a6-b52a-a1bbe11cecd9","path":"sprites/sprDiscGuyHurt/sprDiscGuyHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f713f209-12a5-49a6-b52a-a1bbe11cecd9","path":"sprites/sprDiscGuyHurt/sprDiscGuyHurt.yy",},"LayerId":{"name":"7dd5f38a-02d4-4ced-ba25-55143a06798b","path":"sprites/sprDiscGuyHurt/sprDiscGuyHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprDiscGuyHurt","path":"sprites/sprDiscGuyHurt/sprDiscGuyHurt.yy",},"resourceVersion":"1.0","name":"f713f209-12a5-49a6-b52a-a1bbe11cecd9","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"51e76171-a8cd-4f2d-ba13-0a7e4cc0f269",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b9057045-6c5e-4bb0-a49f-6224ec29e7da",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f713f209-12a5-49a6-b52a-a1bbe11cecd9",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprDiscGuyHurt","path":"sprites/sprDiscGuyHurt/sprDiscGuyHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"1a1ad612-a67c-469b-bd97-b5d5ef1684af","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"51e76171-a8cd-4f2d-ba13-0a7e4cc0f269","path":"sprites/sprDiscGuyHurt/sprDiscGuyHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c0b04660-bbfe-49f7-bf8c-18b5f3482de3","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b9057045-6c5e-4bb0-a49f-6224ec29e7da","path":"sprites/sprDiscGuyHurt/sprDiscGuyHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a67cd2e8-6939-4232-b0d3-6713c77c950a","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f713f209-12a5-49a6-b52a-a1bbe11cecd9","path":"sprites/sprDiscGuyHurt/sprDiscGuyHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprDiscGuyHurt","path":"sprites/sprDiscGuyHurt/sprDiscGuyHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7dd5f38a-02d4-4ced-ba25-55143a06798b","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7dd5f38a-02d4-4ced-ba25-55143a06798b","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "DiscGuy",
     "path": "folders/Sprites/Enemies/FrozenCity/DiscGuy.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprDiscGuyHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

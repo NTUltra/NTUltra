@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "sndCursedChest",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -11,14 +14,10 @@
     "name": "agsfx",
     "path": "audiogroups/agsfx",
   },
-  "soundFile": "sndcursedchest.ogg",
-  "duration": 0.367347,
+  "soundFile": "sndCursedChest.wav",
+  "duration": 2.944031,
   "parent": {
     "name": "Fx",
     "path": "folders/Sounds/Fx.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sndCursedChest",
-  "tags": [],
-  "resourceType": "GMSound",
 }

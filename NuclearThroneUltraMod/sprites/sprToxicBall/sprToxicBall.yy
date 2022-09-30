@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprToxicBall",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"910cbddb-101a-43f1-a9f6-adeab07dac3b","path":"sprites/sprToxicBall/sprToxicBall.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"910cbddb-101a-43f1-a9f6-adeab07dac3b","path":"sprites/sprToxicBall/sprToxicBall.yy",},"LayerId":{"name":"2e392551-6e04-4084-880e-55528589240c","path":"sprites/sprToxicBall/sprToxicBall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicBall","path":"sprites/sprToxicBall/sprToxicBall.yy",},"resourceVersion":"1.0","name":"910cbddb-101a-43f1-a9f6-adeab07dac3b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"802f05d9-c3c2-4d75-ac2c-afc4c5ae13bc","path":"sprites/sprToxicBall/sprToxicBall.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"802f05d9-c3c2-4d75-ac2c-afc4c5ae13bc","path":"sprites/sprToxicBall/sprToxicBall.yy",},"LayerId":{"name":"2e392551-6e04-4084-880e-55528589240c","path":"sprites/sprToxicBall/sprToxicBall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicBall","path":"sprites/sprToxicBall/sprToxicBall.yy",},"resourceVersion":"1.0","name":"802f05d9-c3c2-4d75-ac2c-afc4c5ae13bc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b32961d9-9352-4980-bf10-9b6eae62a9e7","path":"sprites/sprToxicBall/sprToxicBall.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b32961d9-9352-4980-bf10-9b6eae62a9e7","path":"sprites/sprToxicBall/sprToxicBall.yy",},"LayerId":{"name":"2e392551-6e04-4084-880e-55528589240c","path":"sprites/sprToxicBall/sprToxicBall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicBall","path":"sprites/sprToxicBall/sprToxicBall.yy",},"resourceVersion":"1.0","name":"b32961d9-9352-4980-bf10-9b6eae62a9e7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"910cbddb-101a-43f1-a9f6-adeab07dac3b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"802f05d9-c3c2-4d75-ac2c-afc4c5ae13bc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b32961d9-9352-4980-bf10-9b6eae62a9e7",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprToxicBall","path":"sprites/sprToxicBall/sprToxicBall.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"a2009038-4090-4b4a-b8e0-a280a3fae20b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"910cbddb-101a-43f1-a9f6-adeab07dac3b","path":"sprites/sprToxicBall/sprToxicBall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f1ca011c-a2f3-403e-9f72-0007564a93f6","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"802f05d9-c3c2-4d75-ac2c-afc4c5ae13bc","path":"sprites/sprToxicBall/sprToxicBall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"35356397-f6d0-4522-8525-77bc3db659d0","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b32961d9-9352-4980-bf10-9b6eae62a9e7","path":"sprites/sprToxicBall/sprToxicBall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprToxicBall","path":"sprites/sprToxicBall/sprToxicBall.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2e392551-6e04-4084-880e-55528589240c","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"2e392551-6e04-4084-880e-55528589240c","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Projectiles",
     "path": "folders/Sprites/Projectiles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprToxicBall",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

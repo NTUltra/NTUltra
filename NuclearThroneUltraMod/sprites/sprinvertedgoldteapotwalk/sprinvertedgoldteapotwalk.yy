@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedGoldTeaPotWalk",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"83f40666-3c7d-4375-b896-155d19e2879c","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"83f40666-3c7d-4375-b896-155d19e2879c","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"LayerId":{"name":"45211a02-854d-4b38-808b-004e7a1f8797","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldTeaPotWalk","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"83f40666-3c7d-4375-b896-155d19e2879c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"25fe0008-2c6b-407d-88a7-f82ff4b5c961","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"25fe0008-2c6b-407d-88a7-f82ff4b5c961","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"LayerId":{"name":"45211a02-854d-4b38-808b-004e7a1f8797","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldTeaPotWalk","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"25fe0008-2c6b-407d-88a7-f82ff4b5c961","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"364d4f3a-960c-4390-b0a9-fe56a3251560","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"364d4f3a-960c-4390-b0a9-fe56a3251560","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"LayerId":{"name":"45211a02-854d-4b38-808b-004e7a1f8797","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldTeaPotWalk","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"364d4f3a-960c-4390-b0a9-fe56a3251560","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"64b3d307-686d-414b-8bfc-38a8cb7e39ba","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"64b3d307-686d-414b-8bfc-38a8cb7e39ba","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"LayerId":{"name":"45211a02-854d-4b38-808b-004e7a1f8797","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldTeaPotWalk","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"64b3d307-686d-414b-8bfc-38a8cb7e39ba","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"36a8c5fa-1f9f-474b-b6f0-e3a65323cff1","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"36a8c5fa-1f9f-474b-b6f0-e3a65323cff1","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"LayerId":{"name":"45211a02-854d-4b38-808b-004e7a1f8797","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldTeaPotWalk","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"36a8c5fa-1f9f-474b-b6f0-e3a65323cff1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e4661355-7ffc-4905-88b8-5b99124ec58c","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e4661355-7ffc-4905-88b8-5b99124ec58c","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"LayerId":{"name":"45211a02-854d-4b38-808b-004e7a1f8797","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldTeaPotWalk","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"e4661355-7ffc-4905-88b8-5b99124ec58c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"489332cc-9778-494e-a3a3-88e0ac364398","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"489332cc-9778-494e-a3a3-88e0ac364398","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"LayerId":{"name":"45211a02-854d-4b38-808b-004e7a1f8797","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldTeaPotWalk","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"resourceVersion":"1.0","name":"489332cc-9778-494e-a3a3-88e0ac364398","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"83f40666-3c7d-4375-b896-155d19e2879c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"25fe0008-2c6b-407d-88a7-f82ff4b5c961",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"364d4f3a-960c-4390-b0a9-fe56a3251560",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"64b3d307-686d-414b-8bfc-38a8cb7e39ba",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"36a8c5fa-1f9f-474b-b6f0-e3a65323cff1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e4661355-7ffc-4905-88b8-5b99124ec58c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"489332cc-9778-494e-a3a3-88e0ac364398",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedGoldTeaPotWalk","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedGoldTeaPotWalk",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"25711845-6271-4787-8bb0-bf309c6c3bc3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"83f40666-3c7d-4375-b896-155d19e2879c","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ebdfb81b-297f-4455-891d-1ece00b835f6","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"25fe0008-2c6b-407d-88a7-f82ff4b5c961","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d90a67a5-f5a4-4ba2-991c-a78886e1bb74","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"364d4f3a-960c-4390-b0a9-fe56a3251560","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"03ded7b7-77f7-4764-a8cc-39d50807e768","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"36a8c5fa-1f9f-474b-b6f0-e3a65323cff1","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"4ffde845-94e0-4adc-9ea4-7003824522d6","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e4661355-7ffc-4905-88b8-5b99124ec58c","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"50eba720-de5e-495a-9152-5f6d46f8dd68","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"489332cc-9778-494e-a3a3-88e0ac364398","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedGoldTeaPotWalk","path":"sprites/sprInvertedGoldTeaPotWalk/sprInvertedGoldTeaPotWalk.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedGoldTeaPotWalk",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"45211a02-854d-4b38-808b-004e7a1f8797","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"45211a02-854d-4b38-808b-004e7a1f8797","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "CardGuy",
     "path": "folders/Sprites/Enemies/CardGuy.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedGoldTeaPotWalk",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

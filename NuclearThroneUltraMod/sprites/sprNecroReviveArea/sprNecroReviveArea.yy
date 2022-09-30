@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprNecroReviveArea",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a56b70b5-9b0a-43a4-b936-73a1c10900a0","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a56b70b5-9b0a-43a4-b936-73a1c10900a0","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},"LayerId":{"name":"725b79e0-756d-49fd-95b6-9044c1fd4d56","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprNecroReviveArea","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},"resourceVersion":"1.0","name":"a56b70b5-9b0a-43a4-b936-73a1c10900a0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"fcdfe174-b75f-4d37-a1e8-599c9e26a1a2","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fcdfe174-b75f-4d37-a1e8-599c9e26a1a2","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},"LayerId":{"name":"725b79e0-756d-49fd-95b6-9044c1fd4d56","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprNecroReviveArea","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},"resourceVersion":"1.0","name":"fcdfe174-b75f-4d37-a1e8-599c9e26a1a2","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7c6443af-edf1-4416-aaac-2ed751d7b2d0","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7c6443af-edf1-4416-aaac-2ed751d7b2d0","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},"LayerId":{"name":"725b79e0-756d-49fd-95b6-9044c1fd4d56","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprNecroReviveArea","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},"resourceVersion":"1.0","name":"7c6443af-edf1-4416-aaac-2ed751d7b2d0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e7de2147-3533-4d89-aa59-b86154e83391","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e7de2147-3533-4d89-aa59-b86154e83391","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},"LayerId":{"name":"725b79e0-756d-49fd-95b6-9044c1fd4d56","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprNecroReviveArea","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},"resourceVersion":"1.0","name":"e7de2147-3533-4d89-aa59-b86154e83391","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a56b70b5-9b0a-43a4-b936-73a1c10900a0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fcdfe174-b75f-4d37-a1e8-599c9e26a1a2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7c6443af-edf1-4416-aaac-2ed751d7b2d0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e7de2147-3533-4d89-aa59-b86154e83391",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprNecroReviveArea","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprNecroReviveArea",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -49,12 +46,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"8cd8759a-c23c-479e-b40a-9e9df5ef9125","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a56b70b5-9b0a-43a4-b936-73a1c10900a0","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"1748706b-93fb-4ed5-9c74-7fe459530f4b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fcdfe174-b75f-4d37-a1e8-599c9e26a1a2","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"65de0aa9-470d-4ff7-9e95-5ceab51ca0a6","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7c6443af-edf1-4416-aaac-2ed751d7b2d0","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"df3ef697-93d2-414e-b727-6be6b0df09b5","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e7de2147-3533-4d89-aa59-b86154e83391","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +67,13 @@
     "yorigin": 20,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprNecroReviveArea","path":"sprites/sprNecroReviveArea/sprNecroReviveArea.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprNecroReviveArea",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"725b79e0-756d-49fd-95b6-9044c1fd4d56","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"725b79e0-756d-49fd-95b6-9044c1fd4d56","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Technomancer",
     "path": "folders/Sprites/Enemies/Boss/Technomancer.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprNecroReviveArea",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprGoldCrystalHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c6837dd0-5111-4a6a-9cd7-61c790746c36","path":"sprites/sprGoldCrystalHurt/sprGoldCrystalHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c6837dd0-5111-4a6a-9cd7-61c790746c36","path":"sprites/sprGoldCrystalHurt/sprGoldCrystalHurt.yy",},"LayerId":{"name":"4272fca2-e444-48ac-9108-24140835b92d","path":"sprites/sprGoldCrystalHurt/sprGoldCrystalHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldCrystalHurt","path":"sprites/sprGoldCrystalHurt/sprGoldCrystalHurt.yy",},"resourceVersion":"1.0","name":"c6837dd0-5111-4a6a-9cd7-61c790746c36","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9472248c-ba90-4355-b406-4515873e9cb6","path":"sprites/sprGoldCrystalHurt/sprGoldCrystalHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9472248c-ba90-4355-b406-4515873e9cb6","path":"sprites/sprGoldCrystalHurt/sprGoldCrystalHurt.yy",},"LayerId":{"name":"4272fca2-e444-48ac-9108-24140835b92d","path":"sprites/sprGoldCrystalHurt/sprGoldCrystalHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldCrystalHurt","path":"sprites/sprGoldCrystalHurt/sprGoldCrystalHurt.yy",},"resourceVersion":"1.0","name":"9472248c-ba90-4355-b406-4515873e9cb6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f57933d5-7a82-49e0-aa6b-1f7e87024010","path":"sprites/sprGoldCrystalHurt/sprGoldCrystalHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f57933d5-7a82-49e0-aa6b-1f7e87024010","path":"sprites/sprGoldCrystalHurt/sprGoldCrystalHurt.yy",},"LayerId":{"name":"4272fca2-e444-48ac-9108-24140835b92d","path":"sprites/sprGoldCrystalHurt/sprGoldCrystalHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldCrystalHurt","path":"sprites/sprGoldCrystalHurt/sprGoldCrystalHurt.yy",},"resourceVersion":"1.0","name":"f57933d5-7a82-49e0-aa6b-1f7e87024010","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c6837dd0-5111-4a6a-9cd7-61c790746c36",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9472248c-ba90-4355-b406-4515873e9cb6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f57933d5-7a82-49e0-aa6b-1f7e87024010",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprGoldCrystalHurt","path":"sprites/sprGoldCrystalHurt/sprGoldCrystalHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprGoldCrystalHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"8d9d582e-7eb4-4254-8497-1108ac4870fb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c6837dd0-5111-4a6a-9cd7-61c790746c36","path":"sprites/sprGoldCrystalHurt/sprGoldCrystalHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"130d580d-638c-4b57-9c9f-7c5992fcf2d0","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9472248c-ba90-4355-b406-4515873e9cb6","path":"sprites/sprGoldCrystalHurt/sprGoldCrystalHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a43fc19a-f28f-40d0-9026-141bf2bd1707","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f57933d5-7a82-49e0-aa6b-1f7e87024010","path":"sprites/sprGoldCrystalHurt/sprGoldCrystalHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 24,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprGoldCrystalHurt","path":"sprites/sprGoldCrystalHurt/sprGoldCrystalHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprGoldCrystalHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4272fca2-e444-48ac-9108-24140835b92d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4272fca2-e444-48ac-9108-24140835b92d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "CrystalCaves",
     "path": "folders/Sprites/Enemies/CrystalCaves.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprGoldCrystalHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

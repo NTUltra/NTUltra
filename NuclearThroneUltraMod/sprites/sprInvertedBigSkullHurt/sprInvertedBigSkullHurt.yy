@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedBigSkullHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"0f070822-7c42-4553-83c6-6a1494f8e429","path":"sprites/sprInvertedBigSkullHurt/sprInvertedBigSkullHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0f070822-7c42-4553-83c6-6a1494f8e429","path":"sprites/sprInvertedBigSkullHurt/sprInvertedBigSkullHurt.yy",},"LayerId":{"name":"4e70f796-fe11-4b28-9dc8-97fe899e779c","path":"sprites/sprInvertedBigSkullHurt/sprInvertedBigSkullHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedBigSkullHurt","path":"sprites/sprInvertedBigSkullHurt/sprInvertedBigSkullHurt.yy",},"resourceVersion":"1.0","name":"0f070822-7c42-4553-83c6-6a1494f8e429","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4c0a0c58-77a3-4685-bb8c-a508ad1f0a0a","path":"sprites/sprInvertedBigSkullHurt/sprInvertedBigSkullHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4c0a0c58-77a3-4685-bb8c-a508ad1f0a0a","path":"sprites/sprInvertedBigSkullHurt/sprInvertedBigSkullHurt.yy",},"LayerId":{"name":"4e70f796-fe11-4b28-9dc8-97fe899e779c","path":"sprites/sprInvertedBigSkullHurt/sprInvertedBigSkullHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedBigSkullHurt","path":"sprites/sprInvertedBigSkullHurt/sprInvertedBigSkullHurt.yy",},"resourceVersion":"1.0","name":"4c0a0c58-77a3-4685-bb8c-a508ad1f0a0a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"42f309a5-6777-4aca-b8f8-b8590cbdf57a","path":"sprites/sprInvertedBigSkullHurt/sprInvertedBigSkullHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"42f309a5-6777-4aca-b8f8-b8590cbdf57a","path":"sprites/sprInvertedBigSkullHurt/sprInvertedBigSkullHurt.yy",},"LayerId":{"name":"4e70f796-fe11-4b28-9dc8-97fe899e779c","path":"sprites/sprInvertedBigSkullHurt/sprInvertedBigSkullHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedBigSkullHurt","path":"sprites/sprInvertedBigSkullHurt/sprInvertedBigSkullHurt.yy",},"resourceVersion":"1.0","name":"42f309a5-6777-4aca-b8f8-b8590cbdf57a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0f070822-7c42-4553-83c6-6a1494f8e429",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4c0a0c58-77a3-4685-bb8c-a508ad1f0a0a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"42f309a5-6777-4aca-b8f8-b8590cbdf57a",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedBigSkullHurt","path":"sprites/sprInvertedBigSkullHurt/sprInvertedBigSkullHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedBigSkullHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"42da0a36-da85-4d60-b739-457c6932e6ba","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0f070822-7c42-4553-83c6-6a1494f8e429","path":"sprites/sprInvertedBigSkullHurt/sprInvertedBigSkullHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"76edc1eb-0222-4cc2-a958-3d7e91b33006","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4c0a0c58-77a3-4685-bb8c-a508ad1f0a0a","path":"sprites/sprInvertedBigSkullHurt/sprInvertedBigSkullHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6ea48042-685f-4691-bda6-b5d6c700727b","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"42f309a5-6777-4aca-b8f8-b8590cbdf57a","path":"sprites/sprInvertedBigSkullHurt/sprInvertedBigSkullHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 13,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedBigSkullHurt","path":"sprites/sprInvertedBigSkullHurt/sprInvertedBigSkullHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedBigSkullHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4e70f796-fe11-4b28-9dc8-97fe899e779c","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4e70f796-fe11-4b28-9dc8-97fe899e779c","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "UnsortedProp",
     "path": "folders/Sprites/Enviroment/UnsortedProp.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedBigSkullHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

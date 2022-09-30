@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprPalaceTopDecal",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d2cfd37f-8f73-4a07-a271-a6d3df762d24","path":"sprites/sprPalaceTopDecal/sprPalaceTopDecal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d2cfd37f-8f73-4a07-a271-a6d3df762d24","path":"sprites/sprPalaceTopDecal/sprPalaceTopDecal.yy",},"LayerId":{"name":"a998835b-4d5f-4132-a1ca-a2291b4be268","path":"sprites/sprPalaceTopDecal/sprPalaceTopDecal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprPalaceTopDecal","path":"sprites/sprPalaceTopDecal/sprPalaceTopDecal.yy",},"resourceVersion":"1.0","name":"d2cfd37f-8f73-4a07-a271-a6d3df762d24","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f22edd5d-2e82-4ef8-8e0c-ba2e5168dfd7","path":"sprites/sprPalaceTopDecal/sprPalaceTopDecal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f22edd5d-2e82-4ef8-8e0c-ba2e5168dfd7","path":"sprites/sprPalaceTopDecal/sprPalaceTopDecal.yy",},"LayerId":{"name":"a998835b-4d5f-4132-a1ca-a2291b4be268","path":"sprites/sprPalaceTopDecal/sprPalaceTopDecal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprPalaceTopDecal","path":"sprites/sprPalaceTopDecal/sprPalaceTopDecal.yy",},"resourceVersion":"1.0","name":"f22edd5d-2e82-4ef8-8e0c-ba2e5168dfd7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d2cfd37f-8f73-4a07-a271-a6d3df762d24",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f22edd5d-2e82-4ef8-8e0c-ba2e5168dfd7",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprPalaceTopDecal","path":"sprites/sprPalaceTopDecal/sprPalaceTopDecal.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprPalaceTopDecal",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"be3437ab-5b9e-4c99-bf64-e1febc790d1e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d2cfd37f-8f73-4a07-a271-a6d3df762d24","path":"sprites/sprPalaceTopDecal/sprPalaceTopDecal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ae9438e7-e418-4238-8620-307f88b2a69a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f22edd5d-2e82-4ef8-8e0c-ba2e5168dfd7","path":"sprites/sprPalaceTopDecal/sprPalaceTopDecal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprPalaceTopDecal","path":"sprites/sprPalaceTopDecal/sprPalaceTopDecal.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprPalaceTopDecal",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a998835b-4d5f-4132-a1ca-a2291b4be268","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a998835b-4d5f-4132-a1ca-a2291b4be268","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Props",
     "path": "folders/Sprites/Palace/PalaceEnviroment/Props.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprPalaceTopDecal",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

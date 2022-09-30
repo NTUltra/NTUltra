@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprHorrorCBullet",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f775d0f3-87d6-4088-b66f-446b0cd06bc1","path":"sprites/sprHorrorCBullet/sprHorrorCBullet.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f775d0f3-87d6-4088-b66f-446b0cd06bc1","path":"sprites/sprHorrorCBullet/sprHorrorCBullet.yy",},"LayerId":{"name":"5b5d34c3-fe2b-42f9-969b-789eb41c3242","path":"sprites/sprHorrorCBullet/sprHorrorCBullet.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHorrorCBullet","path":"sprites/sprHorrorCBullet/sprHorrorCBullet.yy",},"resourceVersion":"1.0","name":"f775d0f3-87d6-4088-b66f-446b0cd06bc1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f340bcd0-9fb4-42db-9b8c-2cf8895ee0fe","path":"sprites/sprHorrorCBullet/sprHorrorCBullet.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f340bcd0-9fb4-42db-9b8c-2cf8895ee0fe","path":"sprites/sprHorrorCBullet/sprHorrorCBullet.yy",},"LayerId":{"name":"5b5d34c3-fe2b-42f9-969b-789eb41c3242","path":"sprites/sprHorrorCBullet/sprHorrorCBullet.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHorrorCBullet","path":"sprites/sprHorrorCBullet/sprHorrorCBullet.yy",},"resourceVersion":"1.0","name":"f340bcd0-9fb4-42db-9b8c-2cf8895ee0fe","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f775d0f3-87d6-4088-b66f-446b0cd06bc1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f340bcd0-9fb4-42db-9b8c-2cf8895ee0fe",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprHorrorCBullet","path":"sprites/sprHorrorCBullet/sprHorrorCBullet.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"731c35de-dc2e-46bb-8a89-d9ec03744a96","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f775d0f3-87d6-4088-b66f-446b0cd06bc1","path":"sprites/sprHorrorCBullet/sprHorrorCBullet.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"23d1d193-44d6-4085-b79e-2562219f863c","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f340bcd0-9fb4-42db-9b8c-2cf8895ee0fe","path":"sprites/sprHorrorCBullet/sprHorrorCBullet.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprHorrorCBullet","path":"sprites/sprHorrorCBullet/sprHorrorCBullet.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5b5d34c3-fe2b-42f9-969b-789eb41c3242","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5b5d34c3-fe2b-42f9-969b-789eb41c3242","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "HorrorC",
     "path": "folders/Sprites/Player/Custom/Horror/HorrorC.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprHorrorCBullet",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

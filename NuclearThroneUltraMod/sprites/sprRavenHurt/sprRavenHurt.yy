@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprRavenHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"377dbaf7-8687-4658-8f51-f5b670c795f3","path":"sprites/sprRavenHurt/sprRavenHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"377dbaf7-8687-4658-8f51-f5b670c795f3","path":"sprites/sprRavenHurt/sprRavenHurt.yy",},"LayerId":{"name":"d803aff8-5a69-4531-9a08-e7cc06227117","path":"sprites/sprRavenHurt/sprRavenHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRavenHurt","path":"sprites/sprRavenHurt/sprRavenHurt.yy",},"resourceVersion":"1.0","name":"377dbaf7-8687-4658-8f51-f5b670c795f3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6ec2c603-db40-42fb-85be-605c193602c6","path":"sprites/sprRavenHurt/sprRavenHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6ec2c603-db40-42fb-85be-605c193602c6","path":"sprites/sprRavenHurt/sprRavenHurt.yy",},"LayerId":{"name":"d803aff8-5a69-4531-9a08-e7cc06227117","path":"sprites/sprRavenHurt/sprRavenHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRavenHurt","path":"sprites/sprRavenHurt/sprRavenHurt.yy",},"resourceVersion":"1.0","name":"6ec2c603-db40-42fb-85be-605c193602c6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"eaa16791-eedf-44f0-9d05-eee51385b3b1","path":"sprites/sprRavenHurt/sprRavenHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"eaa16791-eedf-44f0-9d05-eee51385b3b1","path":"sprites/sprRavenHurt/sprRavenHurt.yy",},"LayerId":{"name":"d803aff8-5a69-4531-9a08-e7cc06227117","path":"sprites/sprRavenHurt/sprRavenHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRavenHurt","path":"sprites/sprRavenHurt/sprRavenHurt.yy",},"resourceVersion":"1.0","name":"eaa16791-eedf-44f0-9d05-eee51385b3b1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"377dbaf7-8687-4658-8f51-f5b670c795f3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6ec2c603-db40-42fb-85be-605c193602c6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eaa16791-eedf-44f0-9d05-eee51385b3b1",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprRavenHurt","path":"sprites/sprRavenHurt/sprRavenHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"463ba277-e7ea-498a-88f3-9ad45578f552","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"377dbaf7-8687-4658-8f51-f5b670c795f3","path":"sprites/sprRavenHurt/sprRavenHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c8e557e3-f712-4357-bfd1-d1fa9b4b0591","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6ec2c603-db40-42fb-85be-605c193602c6","path":"sprites/sprRavenHurt/sprRavenHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"cc7993b2-1e63-41c8-89b0-2c6c597d3ab3","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eaa16791-eedf-44f0-9d05-eee51385b3b1","path":"sprites/sprRavenHurt/sprRavenHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprRavenHurt","path":"sprites/sprRavenHurt/sprRavenHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d803aff8-5a69-4531-9a08-e7cc06227117","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d803aff8-5a69-4531-9a08-e7cc06227117","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Raven",
     "path": "folders/Sprites/Enemies/Raven.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprRavenHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

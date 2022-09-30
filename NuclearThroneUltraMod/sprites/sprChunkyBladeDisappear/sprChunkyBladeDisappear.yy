@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprChunkyBladeDisappear",
   "bboxMode": 1,
   "collisionKind": 2,
   "type": 0,
@@ -24,24 +27,16 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"2581dff9-8949-4cdb-a546-40b104430b9f","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2581dff9-8949-4cdb-a546-40b104430b9f","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"LayerId":{"name":"6a0ec65e-9f1a-4612-83a7-15b24df4a563","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprChunkyBladeDisappear","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"resourceVersion":"1.0","name":"2581dff9-8949-4cdb-a546-40b104430b9f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8a6615f7-b186-48b3-9c68-889a36dd079f","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8a6615f7-b186-48b3-9c68-889a36dd079f","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"LayerId":{"name":"6a0ec65e-9f1a-4612-83a7-15b24df4a563","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprChunkyBladeDisappear","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"resourceVersion":"1.0","name":"8a6615f7-b186-48b3-9c68-889a36dd079f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"dcf80882-59c9-44e2-903c-49a87f482948","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dcf80882-59c9-44e2-903c-49a87f482948","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"LayerId":{"name":"6a0ec65e-9f1a-4612-83a7-15b24df4a563","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprChunkyBladeDisappear","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"resourceVersion":"1.0","name":"dcf80882-59c9-44e2-903c-49a87f482948","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"df54996a-d994-4cad-8a33-623fe727e9f7","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"df54996a-d994-4cad-8a33-623fe727e9f7","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"LayerId":{"name":"6a0ec65e-9f1a-4612-83a7-15b24df4a563","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprChunkyBladeDisappear","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"resourceVersion":"1.0","name":"df54996a-d994-4cad-8a33-623fe727e9f7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ca083cc8-e4a5-4741-acb1-097bcc3c5358","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ca083cc8-e4a5-4741-acb1-097bcc3c5358","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"LayerId":{"name":"6a0ec65e-9f1a-4612-83a7-15b24df4a563","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprChunkyBladeDisappear","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"resourceVersion":"1.0","name":"ca083cc8-e4a5-4741-acb1-097bcc3c5358","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2581dff9-8949-4cdb-a546-40b104430b9f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8a6615f7-b186-48b3-9c68-889a36dd079f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dcf80882-59c9-44e2-903c-49a87f482948",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"df54996a-d994-4cad-8a33-623fe727e9f7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ca083cc8-e4a5-4741-acb1-097bcc3c5358",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprChunkyBladeDisappear","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprChunkyBladeDisappear",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -52,13 +47,13 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"30abbac3-60f5-4da3-81df-3db1634c71f4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2581dff9-8949-4cdb-a546-40b104430b9f","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"7b50b81a-922c-4f8c-b0ad-fcc90b81ac97","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8a6615f7-b186-48b3-9c68-889a36dd079f","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8425b6bd-bf32-40ac-8757-0e665a5d5114","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dcf80882-59c9-44e2-903c-49a87f482948","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c7ff1a09-5b77-4f47-9f96-784f7d93ce9d","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"df54996a-d994-4cad-8a33-623fe727e9f7","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"413b238c-8b41-4a52-a5ad-13592a5060eb","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ca083cc8-e4a5-4741-acb1-097bcc3c5358","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -74,22 +69,13 @@
     "yorigin": 24,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprChunkyBladeDisappear","path":"sprites/sprChunkyBladeDisappear/sprChunkyBladeDisappear.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprChunkyBladeDisappear",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6a0ec65e-9f1a-4612-83a7-15b24df4a563","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6a0ec65e-9f1a-4612-83a7-15b24df4a563","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "disc",
     "path": "folders/Sprites/Projectiles/disc.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprChunkyBladeDisappear",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedBushHurt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a30360e1-9622-4f88-9145-1f6575ab28df","path":"sprites/sprInvertedBushHurt/sprInvertedBushHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a30360e1-9622-4f88-9145-1f6575ab28df","path":"sprites/sprInvertedBushHurt/sprInvertedBushHurt.yy",},"LayerId":{"name":"18d584ef-9d9a-4494-a701-b03cc0a45240","path":"sprites/sprInvertedBushHurt/sprInvertedBushHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedBushHurt","path":"sprites/sprInvertedBushHurt/sprInvertedBushHurt.yy",},"resourceVersion":"1.0","name":"a30360e1-9622-4f88-9145-1f6575ab28df","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bf12afde-c727-4862-beda-32c715e44a61","path":"sprites/sprInvertedBushHurt/sprInvertedBushHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bf12afde-c727-4862-beda-32c715e44a61","path":"sprites/sprInvertedBushHurt/sprInvertedBushHurt.yy",},"LayerId":{"name":"18d584ef-9d9a-4494-a701-b03cc0a45240","path":"sprites/sprInvertedBushHurt/sprInvertedBushHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedBushHurt","path":"sprites/sprInvertedBushHurt/sprInvertedBushHurt.yy",},"resourceVersion":"1.0","name":"bf12afde-c727-4862-beda-32c715e44a61","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"808a5aea-34a9-4621-ae9c-7b84f4204d06","path":"sprites/sprInvertedBushHurt/sprInvertedBushHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"808a5aea-34a9-4621-ae9c-7b84f4204d06","path":"sprites/sprInvertedBushHurt/sprInvertedBushHurt.yy",},"LayerId":{"name":"18d584ef-9d9a-4494-a701-b03cc0a45240","path":"sprites/sprInvertedBushHurt/sprInvertedBushHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedBushHurt","path":"sprites/sprInvertedBushHurt/sprInvertedBushHurt.yy",},"resourceVersion":"1.0","name":"808a5aea-34a9-4621-ae9c-7b84f4204d06","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a30360e1-9622-4f88-9145-1f6575ab28df",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bf12afde-c727-4862-beda-32c715e44a61",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"808a5aea-34a9-4621-ae9c-7b84f4204d06",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedBushHurt","path":"sprites/sprInvertedBushHurt/sprInvertedBushHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedBushHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"83727556-b62f-489b-8f11-17da6936c708","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a30360e1-9622-4f88-9145-1f6575ab28df","path":"sprites/sprInvertedBushHurt/sprInvertedBushHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e61da3f9-1e0d-4420-a1a5-accf4eee3ace","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bf12afde-c727-4862-beda-32c715e44a61","path":"sprites/sprInvertedBushHurt/sprInvertedBushHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"20a84ada-7ab1-4761-9520-909432ff4b0e","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"808a5aea-34a9-4621-ae9c-7b84f4204d06","path":"sprites/sprInvertedBushHurt/sprInvertedBushHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedBushHurt","path":"sprites/sprInvertedBushHurt/sprInvertedBushHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedBushHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"18d584ef-9d9a-4494-a701-b03cc0a45240","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"18d584ef-9d9a-4494-a701-b03cc0a45240","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Jungle prop",
     "path": "folders/Sprites/Enviroment/Tiles/Jungle/Jungle prop.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedBushHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

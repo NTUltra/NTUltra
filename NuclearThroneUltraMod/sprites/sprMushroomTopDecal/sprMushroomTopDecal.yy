@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprMushroomTopDecal",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b881f3ef-dfcb-42dd-810e-2dacd6077f6e","path":"sprites/sprMushroomTopDecal/sprMushroomTopDecal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b881f3ef-dfcb-42dd-810e-2dacd6077f6e","path":"sprites/sprMushroomTopDecal/sprMushroomTopDecal.yy",},"LayerId":{"name":"91f0cc29-ae12-42cd-90fe-3ef04a319eef","path":"sprites/sprMushroomTopDecal/sprMushroomTopDecal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprMushroomTopDecal","path":"sprites/sprMushroomTopDecal/sprMushroomTopDecal.yy",},"resourceVersion":"1.0","name":"b881f3ef-dfcb-42dd-810e-2dacd6077f6e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"714e63e6-d97f-499b-b944-cb446e910a3c","path":"sprites/sprMushroomTopDecal/sprMushroomTopDecal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"714e63e6-d97f-499b-b944-cb446e910a3c","path":"sprites/sprMushroomTopDecal/sprMushroomTopDecal.yy",},"LayerId":{"name":"91f0cc29-ae12-42cd-90fe-3ef04a319eef","path":"sprites/sprMushroomTopDecal/sprMushroomTopDecal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprMushroomTopDecal","path":"sprites/sprMushroomTopDecal/sprMushroomTopDecal.yy",},"resourceVersion":"1.0","name":"714e63e6-d97f-499b-b944-cb446e910a3c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b881f3ef-dfcb-42dd-810e-2dacd6077f6e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"714e63e6-d97f-499b-b944-cb446e910a3c",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprMushroomTopDecal","path":"sprites/sprMushroomTopDecal/sprMushroomTopDecal.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprMushroomTopDecal",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"249211f4-d2ed-4e1d-b6e1-96095d20a1d8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b881f3ef-dfcb-42dd-810e-2dacd6077f6e","path":"sprites/sprMushroomTopDecal/sprMushroomTopDecal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"496e4888-1a1c-423b-9148-417203f1b8d8","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"714e63e6-d97f-499b-b944-cb446e910a3c","path":"sprites/sprMushroomTopDecal/sprMushroomTopDecal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprMushroomTopDecal","path":"sprites/sprMushroomTopDecal/sprMushroomTopDecal.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprMushroomTopDecal",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"91f0cc29-ae12-42cd-90fe-3ef04a319eef","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"91f0cc29-ae12-42cd-90fe-3ef04a319eef","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Mushroomland",
     "path": "folders/Sprites/Enviroment/Tiles/Mushroomland.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprMushroomTopDecal",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

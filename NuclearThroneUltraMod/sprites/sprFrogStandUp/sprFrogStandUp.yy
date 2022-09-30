@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprFrogStandUp",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"84109079-d61c-433a-904f-9582cda932a6","path":"sprites/sprFrogStandUp/sprFrogStandUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"84109079-d61c-433a-904f-9582cda932a6","path":"sprites/sprFrogStandUp/sprFrogStandUp.yy",},"LayerId":{"name":"857d7994-a3e0-4876-a6a5-f7f92023b977","path":"sprites/sprFrogStandUp/sprFrogStandUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFrogStandUp","path":"sprites/sprFrogStandUp/sprFrogStandUp.yy",},"resourceVersion":"1.0","name":"84109079-d61c-433a-904f-9582cda932a6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0a7f1674-e113-4c2a-b16a-83facfc15e9f","path":"sprites/sprFrogStandUp/sprFrogStandUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0a7f1674-e113-4c2a-b16a-83facfc15e9f","path":"sprites/sprFrogStandUp/sprFrogStandUp.yy",},"LayerId":{"name":"857d7994-a3e0-4876-a6a5-f7f92023b977","path":"sprites/sprFrogStandUp/sprFrogStandUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFrogStandUp","path":"sprites/sprFrogStandUp/sprFrogStandUp.yy",},"resourceVersion":"1.0","name":"0a7f1674-e113-4c2a-b16a-83facfc15e9f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"eccfe486-4ef2-4419-9e44-35d1f1921a05","path":"sprites/sprFrogStandUp/sprFrogStandUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"eccfe486-4ef2-4419-9e44-35d1f1921a05","path":"sprites/sprFrogStandUp/sprFrogStandUp.yy",},"LayerId":{"name":"857d7994-a3e0-4876-a6a5-f7f92023b977","path":"sprites/sprFrogStandUp/sprFrogStandUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFrogStandUp","path":"sprites/sprFrogStandUp/sprFrogStandUp.yy",},"resourceVersion":"1.0","name":"eccfe486-4ef2-4419-9e44-35d1f1921a05","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"84109079-d61c-433a-904f-9582cda932a6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0a7f1674-e113-4c2a-b16a-83facfc15e9f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eccfe486-4ef2-4419-9e44-35d1f1921a05",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprFrogStandUp","path":"sprites/sprFrogStandUp/sprFrogStandUp.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"2d266cba-f03c-4124-9684-254d62d6cd14","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"84109079-d61c-433a-904f-9582cda932a6","path":"sprites/sprFrogStandUp/sprFrogStandUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f02b3607-5282-4f05-b188-dc641ce20508","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0a7f1674-e113-4c2a-b16a-83facfc15e9f","path":"sprites/sprFrogStandUp/sprFrogStandUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a33a6660-29b9-492e-a54c-fd60c5c6f195","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eccfe486-4ef2-4419-9e44-35d1f1921a05","path":"sprites/sprFrogStandUp/sprFrogStandUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprFrogStandUp","path":"sprites/sprFrogStandUp/sprFrogStandUp.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"857d7994-a3e0-4876-a6a5-f7f92023b977","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"857d7994-a3e0-4876-a6a5-f7f92023b977","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Frog",
     "path": "folders/Sprites/Player/Custom/Frog.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprFrogStandUp",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

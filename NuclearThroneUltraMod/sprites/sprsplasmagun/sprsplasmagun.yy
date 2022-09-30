@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprSplasmaGun",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c67d19a9-1b35-4087-923f-f5d52af5bf88","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c67d19a9-1b35-4087-923f-f5d52af5bf88","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"LayerId":{"name":"b27f352e-a92c-4b45-9417-93dceb74a4d0","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSplasmaGun","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"resourceVersion":"1.0","name":"c67d19a9-1b35-4087-923f-f5d52af5bf88","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"46492502-d43b-4e1a-8971-7420d3c52734","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"46492502-d43b-4e1a-8971-7420d3c52734","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"LayerId":{"name":"b27f352e-a92c-4b45-9417-93dceb74a4d0","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSplasmaGun","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"resourceVersion":"1.0","name":"46492502-d43b-4e1a-8971-7420d3c52734","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"123b6dab-abaf-4629-a5a9-f38d0a470d4f","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"123b6dab-abaf-4629-a5a9-f38d0a470d4f","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"LayerId":{"name":"b27f352e-a92c-4b45-9417-93dceb74a4d0","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSplasmaGun","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"resourceVersion":"1.0","name":"123b6dab-abaf-4629-a5a9-f38d0a470d4f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b50ddb87-36e2-4feb-a45e-0ff539bac74a","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b50ddb87-36e2-4feb-a45e-0ff539bac74a","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"LayerId":{"name":"b27f352e-a92c-4b45-9417-93dceb74a4d0","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSplasmaGun","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"resourceVersion":"1.0","name":"b50ddb87-36e2-4feb-a45e-0ff539bac74a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6e154e0d-b639-4f3d-8940-09b59cb68543","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6e154e0d-b639-4f3d-8940-09b59cb68543","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"LayerId":{"name":"b27f352e-a92c-4b45-9417-93dceb74a4d0","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSplasmaGun","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"resourceVersion":"1.0","name":"6e154e0d-b639-4f3d-8940-09b59cb68543","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"63a4a8d8-25d8-485b-b324-effac9091d5c","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"63a4a8d8-25d8-485b-b324-effac9091d5c","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"LayerId":{"name":"b27f352e-a92c-4b45-9417-93dceb74a4d0","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSplasmaGun","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"resourceVersion":"1.0","name":"63a4a8d8-25d8-485b-b324-effac9091d5c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d786e030-1559-4b42-b58d-5571c7adf6c2","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d786e030-1559-4b42-b58d-5571c7adf6c2","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"LayerId":{"name":"b27f352e-a92c-4b45-9417-93dceb74a4d0","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSplasmaGun","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"resourceVersion":"1.0","name":"d786e030-1559-4b42-b58d-5571c7adf6c2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c67d19a9-1b35-4087-923f-f5d52af5bf88",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"46492502-d43b-4e1a-8971-7420d3c52734",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"123b6dab-abaf-4629-a5a9-f38d0a470d4f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b50ddb87-36e2-4feb-a45e-0ff539bac74a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6e154e0d-b639-4f3d-8940-09b59cb68543",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"63a4a8d8-25d8-485b-b324-effac9091d5c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d786e030-1559-4b42-b58d-5571c7adf6c2",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprSplasmaGun","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprSplasmaGun",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"ffbca5b5-0665-4e20-af24-5f0afdbab7f6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c67d19a9-1b35-4087-923f-f5d52af5bf88","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"50eca167-43cf-4b44-96fe-724acbe2c79e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"46492502-d43b-4e1a-8971-7420d3c52734","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"404ffb83-d0f5-4e9f-9551-40d74a65819f","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"123b6dab-abaf-4629-a5a9-f38d0a470d4f","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"f99322b5-ec7e-4b5b-9380-374eebcffaf2","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6e154e0d-b639-4f3d-8940-09b59cb68543","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"92776c1e-81c1-49c3-b4c1-30792d32da80","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"63a4a8d8-25d8-485b-b324-effac9091d5c","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ba01c4d1-42a8-494d-9245-c031d428c3cb","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d786e030-1559-4b42-b58d-5571c7adf6c2","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 5,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprSplasmaGun","path":"sprites/sprSplasmaGun/sprSplasmaGun.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprSplasmaGun",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b27f352e-a92c-4b45-9417-93dceb74a4d0","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b27f352e-a92c-4b45-9417-93dceb74a4d0","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Custom",
     "path": "folders/Sprites/Weapons/Custom.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprSplasmaGun",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

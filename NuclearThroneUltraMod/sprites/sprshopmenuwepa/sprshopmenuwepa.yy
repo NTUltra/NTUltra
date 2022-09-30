@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprShopMenuWepA",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"49b94774-a7f2-4053-b927-6bea89dff48c","path":"sprites/sprShopMenuWepA/sprShopMenuWepA.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"49b94774-a7f2-4053-b927-6bea89dff48c","path":"sprites/sprShopMenuWepA/sprShopMenuWepA.yy",},"LayerId":{"name":"b3fb3b56-39ca-4a42-b6d8-1571b8fe4b81","path":"sprites/sprShopMenuWepA/sprShopMenuWepA.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprShopMenuWepA","path":"sprites/sprShopMenuWepA/sprShopMenuWepA.yy",},"resourceVersion":"1.0","name":"49b94774-a7f2-4053-b927-6bea89dff48c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c65d1484-4222-4f8e-9a73-17a3b5c94e24","path":"sprites/sprShopMenuWepA/sprShopMenuWepA.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c65d1484-4222-4f8e-9a73-17a3b5c94e24","path":"sprites/sprShopMenuWepA/sprShopMenuWepA.yy",},"LayerId":{"name":"b3fb3b56-39ca-4a42-b6d8-1571b8fe4b81","path":"sprites/sprShopMenuWepA/sprShopMenuWepA.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprShopMenuWepA","path":"sprites/sprShopMenuWepA/sprShopMenuWepA.yy",},"resourceVersion":"1.0","name":"c65d1484-4222-4f8e-9a73-17a3b5c94e24","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"49b94774-a7f2-4053-b927-6bea89dff48c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c65d1484-4222-4f8e-9a73-17a3b5c94e24",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprShopMenuWepA","path":"sprites/sprShopMenuWepA/sprShopMenuWepA.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprShopMenuWepA",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"a494261c-8a02-4ee5-9946-8113216d4aa0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"49b94774-a7f2-4053-b927-6bea89dff48c","path":"sprites/sprShopMenuWepA/sprShopMenuWepA.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"3c01bfec-5f21-4a06-8a66-d48db9ee3aeb","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c65d1484-4222-4f8e-9a73-17a3b5c94e24","path":"sprites/sprShopMenuWepA/sprShopMenuWepA.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"a494261c-8a02-4ee5-9946-8113216d4aa0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"49b94774-a7f2-4053-b927-6bea89dff48c","path":"sprites/sprShopMenuWepA/sprShopMenuWepA.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3c01bfec-5f21-4a06-8a66-d48db9ee3aeb","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c65d1484-4222-4f8e-9a73-17a3b5c94e24","path":"sprites/sprShopMenuWepA/sprShopMenuWepA.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 65,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprShopMenuWepA","path":"sprites/sprShopMenuWepA/sprShopMenuWepA.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprShopMenuWepA",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b3fb3b56-39ca-4a42-b6d8-1571b8fe4b81","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b3fb3b56-39ca-4a42-b6d8-1571b8fe4b81","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "BusinessHog",
     "path": "folders/Sprites/Player/Custom/BusinessHog.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprShopMenuWepA",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprCrabHurt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6645f49a-8aa2-4723-b5d0-daec618c4533","path":"sprites/sprCrabHurt/sprCrabHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6645f49a-8aa2-4723-b5d0-daec618c4533","path":"sprites/sprCrabHurt/sprCrabHurt.yy",},"LayerId":{"name":"6bf8fc04-a3ad-4a6d-90c0-88cb871b4c01","path":"sprites/sprCrabHurt/sprCrabHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCrabHurt","path":"sprites/sprCrabHurt/sprCrabHurt.yy",},"resourceVersion":"1.0","name":"6645f49a-8aa2-4723-b5d0-daec618c4533","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9c7e953a-014e-4604-a45a-fcf5e1d8e063","path":"sprites/sprCrabHurt/sprCrabHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9c7e953a-014e-4604-a45a-fcf5e1d8e063","path":"sprites/sprCrabHurt/sprCrabHurt.yy",},"LayerId":{"name":"6bf8fc04-a3ad-4a6d-90c0-88cb871b4c01","path":"sprites/sprCrabHurt/sprCrabHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCrabHurt","path":"sprites/sprCrabHurt/sprCrabHurt.yy",},"resourceVersion":"1.0","name":"9c7e953a-014e-4604-a45a-fcf5e1d8e063","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"617966b6-efa2-4fea-9266-2bbd85bd12d2","path":"sprites/sprCrabHurt/sprCrabHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"617966b6-efa2-4fea-9266-2bbd85bd12d2","path":"sprites/sprCrabHurt/sprCrabHurt.yy",},"LayerId":{"name":"6bf8fc04-a3ad-4a6d-90c0-88cb871b4c01","path":"sprites/sprCrabHurt/sprCrabHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCrabHurt","path":"sprites/sprCrabHurt/sprCrabHurt.yy",},"resourceVersion":"1.0","name":"617966b6-efa2-4fea-9266-2bbd85bd12d2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6645f49a-8aa2-4723-b5d0-daec618c4533",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9c7e953a-014e-4604-a45a-fcf5e1d8e063",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"617966b6-efa2-4fea-9266-2bbd85bd12d2",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprCrabHurt","path":"sprites/sprCrabHurt/sprCrabHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprCrabHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"622b384b-7207-48e6-816c-c4401d8a7a6b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6645f49a-8aa2-4723-b5d0-daec618c4533","path":"sprites/sprCrabHurt/sprCrabHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"78070d47-12f2-47de-988a-4daf4f7042c6","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9c7e953a-014e-4604-a45a-fcf5e1d8e063","path":"sprites/sprCrabHurt/sprCrabHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"16b7bbb4-46fe-46e9-be17-03dd72d3c51a","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"617966b6-efa2-4fea-9266-2bbd85bd12d2","path":"sprites/sprCrabHurt/sprCrabHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 24,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprCrabHurt","path":"sprites/sprCrabHurt/sprCrabHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprCrabHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6bf8fc04-a3ad-4a6d-90c0-88cb871b4c01","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6bf8fc04-a3ad-4a6d-90c0-88cb871b4c01","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Oasis",
     "path": "folders/Sprites/Enemies/Oasis.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprCrabHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

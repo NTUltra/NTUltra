@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprSunkCar1Hurt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"064d0bf5-ed81-47a0-8a4e-191e10da69cc","path":"sprites/sprSunkCar1Hurt/sprSunkCar1Hurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"064d0bf5-ed81-47a0-8a4e-191e10da69cc","path":"sprites/sprSunkCar1Hurt/sprSunkCar1Hurt.yy",},"LayerId":{"name":"a309527b-3a9b-4911-b8b2-6fd7fe999c47","path":"sprites/sprSunkCar1Hurt/sprSunkCar1Hurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSunkCar1Hurt","path":"sprites/sprSunkCar1Hurt/sprSunkCar1Hurt.yy",},"resourceVersion":"1.0","name":"064d0bf5-ed81-47a0-8a4e-191e10da69cc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"46b031e4-4b3c-4cc7-aa50-c086e63952c6","path":"sprites/sprSunkCar1Hurt/sprSunkCar1Hurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"46b031e4-4b3c-4cc7-aa50-c086e63952c6","path":"sprites/sprSunkCar1Hurt/sprSunkCar1Hurt.yy",},"LayerId":{"name":"a309527b-3a9b-4911-b8b2-6fd7fe999c47","path":"sprites/sprSunkCar1Hurt/sprSunkCar1Hurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSunkCar1Hurt","path":"sprites/sprSunkCar1Hurt/sprSunkCar1Hurt.yy",},"resourceVersion":"1.0","name":"46b031e4-4b3c-4cc7-aa50-c086e63952c6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"29ebb5d5-adf6-4864-9a6e-3feb5509c368","path":"sprites/sprSunkCar1Hurt/sprSunkCar1Hurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"29ebb5d5-adf6-4864-9a6e-3feb5509c368","path":"sprites/sprSunkCar1Hurt/sprSunkCar1Hurt.yy",},"LayerId":{"name":"a309527b-3a9b-4911-b8b2-6fd7fe999c47","path":"sprites/sprSunkCar1Hurt/sprSunkCar1Hurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSunkCar1Hurt","path":"sprites/sprSunkCar1Hurt/sprSunkCar1Hurt.yy",},"resourceVersion":"1.0","name":"29ebb5d5-adf6-4864-9a6e-3feb5509c368","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"064d0bf5-ed81-47a0-8a4e-191e10da69cc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"46b031e4-4b3c-4cc7-aa50-c086e63952c6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"29ebb5d5-adf6-4864-9a6e-3feb5509c368",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprSunkCar1Hurt","path":"sprites/sprSunkCar1Hurt/sprSunkCar1Hurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprSunkCar1Hurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"0796385c-23f7-4e74-bf30-4380cb53b455","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"064d0bf5-ed81-47a0-8a4e-191e10da69cc","path":"sprites/sprSunkCar1Hurt/sprSunkCar1Hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"2eaebb22-48a5-47d0-819a-2fd77cef3205","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"46b031e4-4b3c-4cc7-aa50-c086e63952c6","path":"sprites/sprSunkCar1Hurt/sprSunkCar1Hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"31fa6138-f189-4799-a7a0-06977d80f313","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"29ebb5d5-adf6-4864-9a6e-3feb5509c368","path":"sprites/sprSunkCar1Hurt/sprSunkCar1Hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 11,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprSunkCar1Hurt","path":"sprites/sprSunkCar1Hurt/sprSunkCar1Hurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprSunkCar1Hurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a309527b-3a9b-4911-b8b2-6fd7fe999c47","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a309527b-3a9b-4911-b8b2-6fd7fe999c47","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "OasisProps",
     "path": "folders/Sprites/Enviroment/Props/OasisProps.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprSunkCar1Hurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

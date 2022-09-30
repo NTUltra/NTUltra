@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprToxicMushroomGuyGun",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"75240923-b072-4634-ae52-9edb79f9e620","path":"sprites/sprToxicMushroomGuyGun/sprToxicMushroomGuyGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"75240923-b072-4634-ae52-9edb79f9e620","path":"sprites/sprToxicMushroomGuyGun/sprToxicMushroomGuyGun.yy",},"LayerId":{"name":"8b2663ab-4328-461d-8807-b62f10d2f299","path":"sprites/sprToxicMushroomGuyGun/sprToxicMushroomGuyGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicMushroomGuyGun","path":"sprites/sprToxicMushroomGuyGun/sprToxicMushroomGuyGun.yy",},"resourceVersion":"1.0","name":"75240923-b072-4634-ae52-9edb79f9e620","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"75240923-b072-4634-ae52-9edb79f9e620",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprToxicMushroomGuyGun","path":"sprites/sprToxicMushroomGuyGun/sprToxicMushroomGuyGun.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprToxicMushroomGuyGun",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"384b9344-fa60-441e-a110-cf806b96b313","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"75240923-b072-4634-ae52-9edb79f9e620","path":"sprites/sprToxicMushroomGuyGun/sprToxicMushroomGuyGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprToxicMushroomGuyGun","path":"sprites/sprToxicMushroomGuyGun/sprToxicMushroomGuyGun.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprToxicMushroomGuyGun",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8b2663ab-4328-461d-8807-b62f10d2f299","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8b2663ab-4328-461d-8807-b62f10d2f299","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Mushroom",
     "path": "folders/Sprites/Enemies/Mushroom.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprToxicMushroomGuyGun",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

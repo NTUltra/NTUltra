@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprSnowBotCarHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c3340545-1b92-4a2f-b7dc-cc3ddb98fad7","path":"sprites/sprSnowBotCarHurt/sprSnowBotCarHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c3340545-1b92-4a2f-b7dc-cc3ddb98fad7","path":"sprites/sprSnowBotCarHurt/sprSnowBotCarHurt.yy",},"LayerId":{"name":"79963f96-a6af-4224-9943-3b3012f8d8af","path":"sprites/sprSnowBotCarHurt/sprSnowBotCarHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSnowBotCarHurt","path":"sprites/sprSnowBotCarHurt/sprSnowBotCarHurt.yy",},"resourceVersion":"1.0","name":"c3340545-1b92-4a2f-b7dc-cc3ddb98fad7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"83aaca31-bb29-4ecf-aeef-11c8dcdf9d81","path":"sprites/sprSnowBotCarHurt/sprSnowBotCarHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"83aaca31-bb29-4ecf-aeef-11c8dcdf9d81","path":"sprites/sprSnowBotCarHurt/sprSnowBotCarHurt.yy",},"LayerId":{"name":"79963f96-a6af-4224-9943-3b3012f8d8af","path":"sprites/sprSnowBotCarHurt/sprSnowBotCarHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSnowBotCarHurt","path":"sprites/sprSnowBotCarHurt/sprSnowBotCarHurt.yy",},"resourceVersion":"1.0","name":"83aaca31-bb29-4ecf-aeef-11c8dcdf9d81","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e10eaf4b-760c-4855-a7c4-b7590fdd8791","path":"sprites/sprSnowBotCarHurt/sprSnowBotCarHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e10eaf4b-760c-4855-a7c4-b7590fdd8791","path":"sprites/sprSnowBotCarHurt/sprSnowBotCarHurt.yy",},"LayerId":{"name":"79963f96-a6af-4224-9943-3b3012f8d8af","path":"sprites/sprSnowBotCarHurt/sprSnowBotCarHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSnowBotCarHurt","path":"sprites/sprSnowBotCarHurt/sprSnowBotCarHurt.yy",},"resourceVersion":"1.0","name":"e10eaf4b-760c-4855-a7c4-b7590fdd8791","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c3340545-1b92-4a2f-b7dc-cc3ddb98fad7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"83aaca31-bb29-4ecf-aeef-11c8dcdf9d81",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e10eaf4b-760c-4855-a7c4-b7590fdd8791",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprSnowBotCarHurt","path":"sprites/sprSnowBotCarHurt/sprSnowBotCarHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"264bb852-8f93-4e5d-8a77-1bb558585b5c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c3340545-1b92-4a2f-b7dc-cc3ddb98fad7","path":"sprites/sprSnowBotCarHurt/sprSnowBotCarHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"40c19e20-e6db-4f44-a255-b3ac7662ee97","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"83aaca31-bb29-4ecf-aeef-11c8dcdf9d81","path":"sprites/sprSnowBotCarHurt/sprSnowBotCarHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e31a1f28-aec7-4c05-92ce-666a71f890fa","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e10eaf4b-760c-4855-a7c4-b7590fdd8791","path":"sprites/sprSnowBotCarHurt/sprSnowBotCarHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprSnowBotCarHurt","path":"sprites/sprSnowBotCarHurt/sprSnowBotCarHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"79963f96-a6af-4224-9943-3b3012f8d8af","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"79963f96-a6af-4224-9943-3b3012f8d8af","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "SnowbotCar",
     "path": "folders/Sprites/Enemies/FrozenCity/SnowbotCar.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprSnowBotCarHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedAssassinBossDeadFake",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f370e918-2ebb-4960-a8e7-f5fc4cad4f12","path":"sprites/sprInvertedAssassinBossDeadFake/sprInvertedAssassinBossDeadFake.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f370e918-2ebb-4960-a8e7-f5fc4cad4f12","path":"sprites/sprInvertedAssassinBossDeadFake/sprInvertedAssassinBossDeadFake.yy",},"LayerId":{"name":"0ecc1715-228c-4fc1-9bf3-7c809303a043","path":"sprites/sprInvertedAssassinBossDeadFake/sprInvertedAssassinBossDeadFake.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedAssassinBossDeadFake","path":"sprites/sprInvertedAssassinBossDeadFake/sprInvertedAssassinBossDeadFake.yy",},"resourceVersion":"1.0","name":"f370e918-2ebb-4960-a8e7-f5fc4cad4f12","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f370e918-2ebb-4960-a8e7-f5fc4cad4f12",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedAssassinBossDeadFake","path":"sprites/sprInvertedAssassinBossDeadFake/sprInvertedAssassinBossDeadFake.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedAssassinBossDeadFake",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"012416bd-8080-41d6-860a-99c33c14de29","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f370e918-2ebb-4960-a8e7-f5fc4cad4f12","path":"sprites/sprInvertedAssassinBossDeadFake/sprInvertedAssassinBossDeadFake.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 14,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedAssassinBossDeadFake","path":"sprites/sprInvertedAssassinBossDeadFake/sprInvertedAssassinBossDeadFake.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedAssassinBossDeadFake",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0ecc1715-228c-4fc1-9bf3-7c809303a043","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0ecc1715-228c-4fc1-9bf3-7c809303a043","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "AssassinBoss",
     "path": "folders/Sprites/Enemies/Boss/AssassinBoss.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedAssassinBossDeadFake",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

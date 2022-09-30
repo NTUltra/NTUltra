@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedDogGuardianHurt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"bdb4b872-ad2a-4252-8181-1ee80a485579","path":"sprites/sprInvertedDogGuardianHurt/sprInvertedDogGuardianHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bdb4b872-ad2a-4252-8181-1ee80a485579","path":"sprites/sprInvertedDogGuardianHurt/sprInvertedDogGuardianHurt.yy",},"LayerId":{"name":"1214c406-efbb-4297-8a8d-837f550a2b25","path":"sprites/sprInvertedDogGuardianHurt/sprInvertedDogGuardianHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedDogGuardianHurt","path":"sprites/sprInvertedDogGuardianHurt/sprInvertedDogGuardianHurt.yy",},"resourceVersion":"1.0","name":"bdb4b872-ad2a-4252-8181-1ee80a485579","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f29e4936-f586-408a-9603-34fb14cc0a7c","path":"sprites/sprInvertedDogGuardianHurt/sprInvertedDogGuardianHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f29e4936-f586-408a-9603-34fb14cc0a7c","path":"sprites/sprInvertedDogGuardianHurt/sprInvertedDogGuardianHurt.yy",},"LayerId":{"name":"1214c406-efbb-4297-8a8d-837f550a2b25","path":"sprites/sprInvertedDogGuardianHurt/sprInvertedDogGuardianHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedDogGuardianHurt","path":"sprites/sprInvertedDogGuardianHurt/sprInvertedDogGuardianHurt.yy",},"resourceVersion":"1.0","name":"f29e4936-f586-408a-9603-34fb14cc0a7c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"34eb2c92-ae9d-4e45-9866-d1293f714f5d","path":"sprites/sprInvertedDogGuardianHurt/sprInvertedDogGuardianHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"34eb2c92-ae9d-4e45-9866-d1293f714f5d","path":"sprites/sprInvertedDogGuardianHurt/sprInvertedDogGuardianHurt.yy",},"LayerId":{"name":"1214c406-efbb-4297-8a8d-837f550a2b25","path":"sprites/sprInvertedDogGuardianHurt/sprInvertedDogGuardianHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedDogGuardianHurt","path":"sprites/sprInvertedDogGuardianHurt/sprInvertedDogGuardianHurt.yy",},"resourceVersion":"1.0","name":"34eb2c92-ae9d-4e45-9866-d1293f714f5d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bdb4b872-ad2a-4252-8181-1ee80a485579",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f29e4936-f586-408a-9603-34fb14cc0a7c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"34eb2c92-ae9d-4e45-9866-d1293f714f5d",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedDogGuardianHurt","path":"sprites/sprInvertedDogGuardianHurt/sprInvertedDogGuardianHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedDogGuardianHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"c7b4de28-72f1-4975-83d6-28977a6c9d16","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bdb4b872-ad2a-4252-8181-1ee80a485579","path":"sprites/sprInvertedDogGuardianHurt/sprInvertedDogGuardianHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"7f326355-178c-45c1-a500-7cc3489088bd","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f29e4936-f586-408a-9603-34fb14cc0a7c","path":"sprites/sprInvertedDogGuardianHurt/sprInvertedDogGuardianHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"37d2923e-dd4f-42c0-a23c-2bd60a264af8","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"34eb2c92-ae9d-4e45-9866-d1293f714f5d","path":"sprites/sprInvertedDogGuardianHurt/sprInvertedDogGuardianHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedDogGuardianHurt","path":"sprites/sprInvertedDogGuardianHurt/sprInvertedDogGuardianHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedDogGuardianHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1214c406-efbb-4297-8a8d-837f550a2b25","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1214c406-efbb-4297-8a8d-837f550a2b25","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "InvertedPalaceEnemies",
     "path": "folders/Sprites/Palace/Palace Enemy/InvertedPalaceEnemies.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedDogGuardianHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

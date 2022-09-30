@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprScytheGun",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"de612db6-4c83-4573-b0d1-103c14298c97","path":"sprites/sprScytheGun/sprScytheGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"de612db6-4c83-4573-b0d1-103c14298c97","path":"sprites/sprScytheGun/sprScytheGun.yy",},"LayerId":{"name":"51e1c6fe-8057-45a9-8478-8e2a584a19d5","path":"sprites/sprScytheGun/sprScytheGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprScytheGun","path":"sprites/sprScytheGun/sprScytheGun.yy",},"resourceVersion":"1.0","name":"de612db6-4c83-4573-b0d1-103c14298c97","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d7e3b853-8615-4470-882b-7507411fd2cd","path":"sprites/sprScytheGun/sprScytheGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d7e3b853-8615-4470-882b-7507411fd2cd","path":"sprites/sprScytheGun/sprScytheGun.yy",},"LayerId":{"name":"51e1c6fe-8057-45a9-8478-8e2a584a19d5","path":"sprites/sprScytheGun/sprScytheGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprScytheGun","path":"sprites/sprScytheGun/sprScytheGun.yy",},"resourceVersion":"1.0","name":"d7e3b853-8615-4470-882b-7507411fd2cd","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6f6ba03c-2e9f-45f9-a96d-1fc2f33b473a","path":"sprites/sprScytheGun/sprScytheGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6f6ba03c-2e9f-45f9-a96d-1fc2f33b473a","path":"sprites/sprScytheGun/sprScytheGun.yy",},"LayerId":{"name":"51e1c6fe-8057-45a9-8478-8e2a584a19d5","path":"sprites/sprScytheGun/sprScytheGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprScytheGun","path":"sprites/sprScytheGun/sprScytheGun.yy",},"resourceVersion":"1.0","name":"6f6ba03c-2e9f-45f9-a96d-1fc2f33b473a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"960d7195-3e49-48dd-bc91-12bed2ac6310","path":"sprites/sprScytheGun/sprScytheGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"960d7195-3e49-48dd-bc91-12bed2ac6310","path":"sprites/sprScytheGun/sprScytheGun.yy",},"LayerId":{"name":"51e1c6fe-8057-45a9-8478-8e2a584a19d5","path":"sprites/sprScytheGun/sprScytheGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprScytheGun","path":"sprites/sprScytheGun/sprScytheGun.yy",},"resourceVersion":"1.0","name":"960d7195-3e49-48dd-bc91-12bed2ac6310","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"55a12b74-1dcf-4fea-9825-0403342afb6f","path":"sprites/sprScytheGun/sprScytheGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"55a12b74-1dcf-4fea-9825-0403342afb6f","path":"sprites/sprScytheGun/sprScytheGun.yy",},"LayerId":{"name":"51e1c6fe-8057-45a9-8478-8e2a584a19d5","path":"sprites/sprScytheGun/sprScytheGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprScytheGun","path":"sprites/sprScytheGun/sprScytheGun.yy",},"resourceVersion":"1.0","name":"55a12b74-1dcf-4fea-9825-0403342afb6f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1d0f300c-e9fc-48cb-a664-5935fc1f8e91","path":"sprites/sprScytheGun/sprScytheGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1d0f300c-e9fc-48cb-a664-5935fc1f8e91","path":"sprites/sprScytheGun/sprScytheGun.yy",},"LayerId":{"name":"51e1c6fe-8057-45a9-8478-8e2a584a19d5","path":"sprites/sprScytheGun/sprScytheGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprScytheGun","path":"sprites/sprScytheGun/sprScytheGun.yy",},"resourceVersion":"1.0","name":"1d0f300c-e9fc-48cb-a664-5935fc1f8e91","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bafec664-6cf3-4b0f-b6cc-221ba3723fd3","path":"sprites/sprScytheGun/sprScytheGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bafec664-6cf3-4b0f-b6cc-221ba3723fd3","path":"sprites/sprScytheGun/sprScytheGun.yy",},"LayerId":{"name":"51e1c6fe-8057-45a9-8478-8e2a584a19d5","path":"sprites/sprScytheGun/sprScytheGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprScytheGun","path":"sprites/sprScytheGun/sprScytheGun.yy",},"resourceVersion":"1.0","name":"bafec664-6cf3-4b0f-b6cc-221ba3723fd3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"de612db6-4c83-4573-b0d1-103c14298c97",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d7e3b853-8615-4470-882b-7507411fd2cd",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6f6ba03c-2e9f-45f9-a96d-1fc2f33b473a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"960d7195-3e49-48dd-bc91-12bed2ac6310",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"55a12b74-1dcf-4fea-9825-0403342afb6f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1d0f300c-e9fc-48cb-a664-5935fc1f8e91",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bafec664-6cf3-4b0f-b6cc-221ba3723fd3",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprScytheGun","path":"sprites/sprScytheGun/sprScytheGun.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprScytheGun",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"a0912866-6a84-41ef-a562-0fc594566453","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"de612db6-4c83-4573-b0d1-103c14298c97","path":"sprites/sprScytheGun/sprScytheGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ff45f03e-1727-4cba-a57d-fcf6865650b8","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d7e3b853-8615-4470-882b-7507411fd2cd","path":"sprites/sprScytheGun/sprScytheGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"695d9b89-8391-4849-a570-61582076cd6a","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6f6ba03c-2e9f-45f9-a96d-1fc2f33b473a","path":"sprites/sprScytheGun/sprScytheGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"75473f40-4e48-4697-b331-5a553299f850","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"55a12b74-1dcf-4fea-9825-0403342afb6f","path":"sprites/sprScytheGun/sprScytheGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9b830985-b04e-4204-b4d9-152817491483","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1d0f300c-e9fc-48cb-a664-5935fc1f8e91","path":"sprites/sprScytheGun/sprScytheGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9d72e30d-d974-4250-8ee3-5da4676878bc","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bafec664-6cf3-4b0f-b6cc-221ba3723fd3","path":"sprites/sprScytheGun/sprScytheGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprScytheGun","path":"sprites/sprScytheGun/sprScytheGun.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprScytheGun",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"51e1c6fe-8057-45a9-8478-8e2a584a19d5","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"51e1c6fe-8057-45a9-8478-8e2a584a19d5","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Custom",
     "path": "folders/Sprites/Weapons/Custom.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprScytheGun",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

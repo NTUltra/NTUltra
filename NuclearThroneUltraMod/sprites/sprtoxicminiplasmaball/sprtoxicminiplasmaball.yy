@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprToxicMiniPlasmaBall",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"592c3fb1-9653-480d-9356-dd9b232d85dd","path":"sprites/sprToxicMiniPlasmaBall/sprToxicMiniPlasmaBall.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"592c3fb1-9653-480d-9356-dd9b232d85dd","path":"sprites/sprToxicMiniPlasmaBall/sprToxicMiniPlasmaBall.yy",},"LayerId":{"name":"86f2d772-f89f-4199-812b-e7b6db17d7cf","path":"sprites/sprToxicMiniPlasmaBall/sprToxicMiniPlasmaBall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicMiniPlasmaBall","path":"sprites/sprToxicMiniPlasmaBall/sprToxicMiniPlasmaBall.yy",},"resourceVersion":"1.0","name":"592c3fb1-9653-480d-9356-dd9b232d85dd","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"eff92cea-3d1a-4ccc-a156-5298e1007c2d","path":"sprites/sprToxicMiniPlasmaBall/sprToxicMiniPlasmaBall.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"eff92cea-3d1a-4ccc-a156-5298e1007c2d","path":"sprites/sprToxicMiniPlasmaBall/sprToxicMiniPlasmaBall.yy",},"LayerId":{"name":"86f2d772-f89f-4199-812b-e7b6db17d7cf","path":"sprites/sprToxicMiniPlasmaBall/sprToxicMiniPlasmaBall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicMiniPlasmaBall","path":"sprites/sprToxicMiniPlasmaBall/sprToxicMiniPlasmaBall.yy",},"resourceVersion":"1.0","name":"eff92cea-3d1a-4ccc-a156-5298e1007c2d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"592c3fb1-9653-480d-9356-dd9b232d85dd",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eff92cea-3d1a-4ccc-a156-5298e1007c2d",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprToxicMiniPlasmaBall","path":"sprites/sprToxicMiniPlasmaBall/sprToxicMiniPlasmaBall.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprToxicMiniPlasmaBall",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"1f554a98-7fd4-4612-a79d-86c18b374fb5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"592c3fb1-9653-480d-9356-dd9b232d85dd","path":"sprites/sprToxicMiniPlasmaBall/sprToxicMiniPlasmaBall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8d86f07e-0bbc-4bdf-925a-cea0eee6f360","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eff92cea-3d1a-4ccc-a156-5298e1007c2d","path":"sprites/sprToxicMiniPlasmaBall/sprToxicMiniPlasmaBall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 9,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprToxicMiniPlasmaBall","path":"sprites/sprToxicMiniPlasmaBall/sprToxicMiniPlasmaBall.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprToxicMiniPlasmaBall",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"86f2d772-f89f-4199-812b-e7b6db17d7cf","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"86f2d772-f89f-4199-812b-e7b6db17d7cf","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Projectiles",
     "path": "folders/Sprites/Projectiles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprToxicMiniPlasmaBall",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

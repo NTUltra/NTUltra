@@ -46,14 +46,14 @@ function scrEnemyDeathEvent(){
 							dropped = scrDrop(7,0);
 					}
 				}
-				if (ultra_got[32] && (creload > lowc || cwep == 0))
+				if (ultra_got[31] && (creload > lowc || cwep == 0))
 				{
 					with other
 					{
 						if isdoc
-							dropped = scrDrop(9,0);
+							dropped = scrDrop(8,0);
 						else
-							dropped = scrDrop(7,0);
+							dropped = scrDrop(6,0);
 					}
 				}
 				if dropped {
@@ -81,10 +81,11 @@ function scrEnemyDeathEvent(){
 		}
 		if Player.ultra_got[29] && !Player.altUltra//Refined taste
 		{
-			scrDrop(0,5);	
+			scrDrop(0,4);
 		}
 		with Player
 		{
+			if other.countKill
 			kills ++;
 			var t = 0;
 			

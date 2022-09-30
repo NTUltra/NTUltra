@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprAssassinBossRespawn",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,36 +27,20 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"760be216-fc7f-4a77-9167-346f2a5c169c","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"760be216-fc7f-4a77-9167-346f2a5c169c","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"LayerId":{"name":"1e324a3f-9727-4af9-aaf6-868384adcfc3","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprAssassinBossRespawn","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","name":"760be216-fc7f-4a77-9167-346f2a5c169c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9d4eebca-6b35-4781-8203-61592df7911d","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9d4eebca-6b35-4781-8203-61592df7911d","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"LayerId":{"name":"1e324a3f-9727-4af9-aaf6-868384adcfc3","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprAssassinBossRespawn","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","name":"9d4eebca-6b35-4781-8203-61592df7911d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3e1491f5-fd73-4360-b210-e6960c3e5642","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3e1491f5-fd73-4360-b210-e6960c3e5642","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"LayerId":{"name":"1e324a3f-9727-4af9-aaf6-868384adcfc3","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprAssassinBossRespawn","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","name":"3e1491f5-fd73-4360-b210-e6960c3e5642","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"76bc4dac-87e2-4921-8123-54b2f5b25a96","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"76bc4dac-87e2-4921-8123-54b2f5b25a96","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"LayerId":{"name":"1e324a3f-9727-4af9-aaf6-868384adcfc3","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprAssassinBossRespawn","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","name":"76bc4dac-87e2-4921-8123-54b2f5b25a96","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d7d72871-6bc6-4938-814b-52099261eaaa","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d7d72871-6bc6-4938-814b-52099261eaaa","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"LayerId":{"name":"1e324a3f-9727-4af9-aaf6-868384adcfc3","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprAssassinBossRespawn","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","name":"d7d72871-6bc6-4938-814b-52099261eaaa","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e5399f5b-2ef2-4a82-8a8a-7da22840a169","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e5399f5b-2ef2-4a82-8a8a-7da22840a169","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"LayerId":{"name":"1e324a3f-9727-4af9-aaf6-868384adcfc3","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprAssassinBossRespawn","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","name":"e5399f5b-2ef2-4a82-8a8a-7da22840a169","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"70cda76c-6335-428d-ae04-fccc5ff65731","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"70cda76c-6335-428d-ae04-fccc5ff65731","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"LayerId":{"name":"1e324a3f-9727-4af9-aaf6-868384adcfc3","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprAssassinBossRespawn","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","name":"70cda76c-6335-428d-ae04-fccc5ff65731","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"fa885548-51ab-4079-b23e-4322133fc718","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fa885548-51ab-4079-b23e-4322133fc718","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"LayerId":{"name":"1e324a3f-9727-4af9-aaf6-868384adcfc3","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprAssassinBossRespawn","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","name":"fa885548-51ab-4079-b23e-4322133fc718","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0a2c7a90-47b6-4b14-9b59-151b986f31e1","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0a2c7a90-47b6-4b14-9b59-151b986f31e1","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"LayerId":{"name":"1e324a3f-9727-4af9-aaf6-868384adcfc3","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprAssassinBossRespawn","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","name":"0a2c7a90-47b6-4b14-9b59-151b986f31e1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"760be216-fc7f-4a77-9167-346f2a5c169c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9d4eebca-6b35-4781-8203-61592df7911d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3e1491f5-fd73-4360-b210-e6960c3e5642",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"76bc4dac-87e2-4921-8123-54b2f5b25a96",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d7d72871-6bc6-4938-814b-52099261eaaa",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e5399f5b-2ef2-4a82-8a8a-7da22840a169",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"70cda76c-6335-428d-ae04-fccc5ff65731",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fa885548-51ab-4079-b23e-4322133fc718",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0a2c7a90-47b6-4b14-9b59-151b986f31e1",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprAssassinBossRespawn","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprAssassinBossRespawn",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -64,7 +51,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"5bbddc9c-be0f-4ba3-bcba-71596d6b6053","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"760be216-fc7f-4a77-9167-346f2a5c169c","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"44b98117-1b29-440c-a54b-e3b951900e1c","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9d4eebca-6b35-4781-8203-61592df7911d","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"230ec544-7e74-4dfe-a2f6-4324016dcb72","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3e1491f5-fd73-4360-b210-e6960c3e5642","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -74,7 +61,7 @@
             {"id":"bbca4e5f-4e5d-427d-ab74-3b406c602c34","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"70cda76c-6335-428d-ae04-fccc5ff65731","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"395f25cf-9c3f-4c2c-b80a-2d71ddcef47d","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fa885548-51ab-4079-b23e-4322133fc718","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"578785f8-462c-4a19-bd24-17cfeeeb6309","Key":8.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0a2c7a90-47b6-4b14-9b59-151b986f31e1","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -90,22 +77,13 @@
     "yorigin": 14,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprAssassinBossRespawn","path":"sprites/sprAssassinBossRespawn/sprAssassinBossRespawn.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprAssassinBossRespawn",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1e324a3f-9727-4af9-aaf6-868384adcfc3","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1e324a3f-9727-4af9-aaf6-868384adcfc3","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "AssassinBoss",
     "path": "folders/Sprites/Enemies/Boss/AssassinBoss.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprAssassinBossRespawn",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

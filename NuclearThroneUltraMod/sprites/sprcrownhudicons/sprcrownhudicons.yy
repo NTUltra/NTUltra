@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprCrownHUDIcons",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,25 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d70308af-fe6d-42f6-bb46-6d2082ac50ed","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d70308af-fe6d-42f6-bb46-6d2082ac50ed","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"LayerId":{"name":"0657f702-a036-497b-ae19-058f0594ffb6","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"d70308af-fe6d-42f6-bb46-6d2082ac50ed","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"LayerId":{"name":"1bd3ffa0-97e7-4442-9f43-7b4a940e3b6a","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCrownHUDIcons","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"resourceVersion":"1.0","name":"d70308af-fe6d-42f6-bb46-6d2082ac50ed","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"028fb979-6a85-4db1-84df-66e821ee1726","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"028fb979-6a85-4db1-84df-66e821ee1726","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"LayerId":{"name":"0657f702-a036-497b-ae19-058f0594ffb6","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"028fb979-6a85-4db1-84df-66e821ee1726","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"LayerId":{"name":"1bd3ffa0-97e7-4442-9f43-7b4a940e3b6a","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCrownHUDIcons","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"resourceVersion":"1.0","name":"028fb979-6a85-4db1-84df-66e821ee1726","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4d8d5c0d-164e-4fad-bbfe-b3188aca2009","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4d8d5c0d-164e-4fad-bbfe-b3188aca2009","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"LayerId":{"name":"1bd3ffa0-97e7-4442-9f43-7b4a940e3b6a","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"4d8d5c0d-164e-4fad-bbfe-b3188aca2009","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"LayerId":{"name":"0657f702-a036-497b-ae19-058f0594ffb6","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCrownHUDIcons","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"resourceVersion":"1.0","name":"4d8d5c0d-164e-4fad-bbfe-b3188aca2009","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"37d68366-8baa-4eeb-b043-ca4ea0f4a40b","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"37d68366-8baa-4eeb-b043-ca4ea0f4a40b","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"LayerId":{"name":"1bd3ffa0-97e7-4442-9f43-7b4a940e3b6a","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"37d68366-8baa-4eeb-b043-ca4ea0f4a40b","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"LayerId":{"name":"0657f702-a036-497b-ae19-058f0594ffb6","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCrownHUDIcons","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"resourceVersion":"1.0","name":"37d68366-8baa-4eeb-b043-ca4ea0f4a40b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d70308af-fe6d-42f6-bb46-6d2082ac50ed",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"028fb979-6a85-4db1-84df-66e821ee1726",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4d8d5c0d-164e-4fad-bbfe-b3188aca2009",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"37d68366-8baa-4eeb-b043-ca4ea0f4a40b",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprCrownHUDIcons","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprCrownHUDIcons",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -53,12 +46,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"d5caf91f-fea2-4592-b547-bd95a1ab73be","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d70308af-fe6d-42f6-bb46-6d2082ac50ed","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"7354a457-0956-4412-89e3-651d9b117026","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"028fb979-6a85-4db1-84df-66e821ee1726","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"0f32b58f-b1e8-492e-b138-ea722b7b5ca0","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4d8d5c0d-164e-4fad-bbfe-b3188aca2009","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d3f5d587-efff-4c9f-9617-cf92b28b7b3c","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"37d68366-8baa-4eeb-b043-ca4ea0f4a40b","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -74,23 +67,14 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprCrownHUDIcons","path":"sprites/sprCrownHUDIcons/sprCrownHUDIcons.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprCrownHUDIcons",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"1bd3ffa0-97e7-4442-9f43-7b4a940e3b6a","tags":[],"resourceType":"GMImageLayer",},
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0657f702-a036-497b-ae19-058f0594ffb6","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1bd3ffa0-97e7-4442-9f43-7b4a940e3b6a","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0657f702-a036-497b-ae19-058f0594ffb6","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "CrownVault",
     "path": "folders/Sprites/CrownVault.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprCrownHUDIcons",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

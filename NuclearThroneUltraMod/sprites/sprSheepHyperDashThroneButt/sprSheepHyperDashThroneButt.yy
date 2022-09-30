@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprSheepHyperDashThroneButt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"181c3dbc-6e54-445e-9434-fb6bd0340dcb","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"181c3dbc-6e54-445e-9434-fb6bd0340dcb","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},"LayerId":{"name":"2eac559d-2624-43d5-a75f-a6c8ab23cdb6","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSheepHyperDashThroneButt","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},"resourceVersion":"1.0","name":"181c3dbc-6e54-445e-9434-fb6bd0340dcb","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4b6513b9-15d1-4531-be24-e08b9fdfa077","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4b6513b9-15d1-4531-be24-e08b9fdfa077","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},"LayerId":{"name":"2eac559d-2624-43d5-a75f-a6c8ab23cdb6","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSheepHyperDashThroneButt","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},"resourceVersion":"1.0","name":"4b6513b9-15d1-4531-be24-e08b9fdfa077","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"19df82a9-de67-412e-a8ec-4a8b7822c043","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"19df82a9-de67-412e-a8ec-4a8b7822c043","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},"LayerId":{"name":"2eac559d-2624-43d5-a75f-a6c8ab23cdb6","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSheepHyperDashThroneButt","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},"resourceVersion":"1.0","name":"19df82a9-de67-412e-a8ec-4a8b7822c043","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5d76310c-b50a-40f0-862b-779bef268fa8","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5d76310c-b50a-40f0-862b-779bef268fa8","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},"LayerId":{"name":"2eac559d-2624-43d5-a75f-a6c8ab23cdb6","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSheepHyperDashThroneButt","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},"resourceVersion":"1.0","name":"5d76310c-b50a-40f0-862b-779bef268fa8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"181c3dbc-6e54-445e-9434-fb6bd0340dcb",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4b6513b9-15d1-4531-be24-e08b9fdfa077",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"19df82a9-de67-412e-a8ec-4a8b7822c043",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5d76310c-b50a-40f0-862b-779bef268fa8",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprSheepHyperDashThroneButt","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprSheepHyperDashThroneButt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -49,12 +46,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"68a149a5-6f2c-4ecb-896a-5c29cdd8a4d7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"181c3dbc-6e54-445e-9434-fb6bd0340dcb","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9a9a0795-83a1-4a98-9527-c847b95ded1f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4b6513b9-15d1-4531-be24-e08b9fdfa077","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"1c3a7a70-5879-4b31-bdb5-691cebf02ff7","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"19df82a9-de67-412e-a8ec-4a8b7822c043","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"65764826-d600-456d-ab2f-3bdaddcee395","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5d76310c-b50a-40f0-862b-779bef268fa8","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +67,13 @@
     "yorigin": 28,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprSheepHyperDashThroneButt","path":"sprites/sprSheepHyperDashThroneButt/sprSheepHyperDashThroneButt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprSheepHyperDashThroneButt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2eac559d-2624-43d5-a75f-a6c8ab23cdb6","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"2eac559d-2624-43d5-a75f-a6c8ab23cdb6","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Sheep",
     "path": "folders/Sprites/Player/Custom/Sheep.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprSheepHyperDashThroneButt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

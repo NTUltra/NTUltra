@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprRadChestMaggotHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e23e9d37-40aa-4ceb-a256-46620e4f017d","path":"sprites/sprRadChestMaggotHurt/sprRadChestMaggotHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e23e9d37-40aa-4ceb-a256-46620e4f017d","path":"sprites/sprRadChestMaggotHurt/sprRadChestMaggotHurt.yy",},"LayerId":{"name":"5ae507bf-ea05-4260-b73a-a414fb798585","path":"sprites/sprRadChestMaggotHurt/sprRadChestMaggotHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRadChestMaggotHurt","path":"sprites/sprRadChestMaggotHurt/sprRadChestMaggotHurt.yy",},"resourceVersion":"1.0","name":"e23e9d37-40aa-4ceb-a256-46620e4f017d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"525ce48b-f32f-461b-afc3-e1b7ba913c20","path":"sprites/sprRadChestMaggotHurt/sprRadChestMaggotHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"525ce48b-f32f-461b-afc3-e1b7ba913c20","path":"sprites/sprRadChestMaggotHurt/sprRadChestMaggotHurt.yy",},"LayerId":{"name":"5ae507bf-ea05-4260-b73a-a414fb798585","path":"sprites/sprRadChestMaggotHurt/sprRadChestMaggotHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRadChestMaggotHurt","path":"sprites/sprRadChestMaggotHurt/sprRadChestMaggotHurt.yy",},"resourceVersion":"1.0","name":"525ce48b-f32f-461b-afc3-e1b7ba913c20","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ab4b7121-640c-4bfd-a812-c67ea7efdae2","path":"sprites/sprRadChestMaggotHurt/sprRadChestMaggotHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ab4b7121-640c-4bfd-a812-c67ea7efdae2","path":"sprites/sprRadChestMaggotHurt/sprRadChestMaggotHurt.yy",},"LayerId":{"name":"5ae507bf-ea05-4260-b73a-a414fb798585","path":"sprites/sprRadChestMaggotHurt/sprRadChestMaggotHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRadChestMaggotHurt","path":"sprites/sprRadChestMaggotHurt/sprRadChestMaggotHurt.yy",},"resourceVersion":"1.0","name":"ab4b7121-640c-4bfd-a812-c67ea7efdae2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e23e9d37-40aa-4ceb-a256-46620e4f017d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"525ce48b-f32f-461b-afc3-e1b7ba913c20",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ab4b7121-640c-4bfd-a812-c67ea7efdae2",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprRadChestMaggotHurt","path":"sprites/sprRadChestMaggotHurt/sprRadChestMaggotHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"c00ea610-5e56-4bcb-9452-480ccf077c8e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e23e9d37-40aa-4ceb-a256-46620e4f017d","path":"sprites/sprRadChestMaggotHurt/sprRadChestMaggotHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"0a7f8dc2-4944-4c0b-844a-1a3ac499c77f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"525ce48b-f32f-461b-afc3-e1b7ba913c20","path":"sprites/sprRadChestMaggotHurt/sprRadChestMaggotHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a713089e-cf6e-4ade-939d-2b0d452de7bc","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ab4b7121-640c-4bfd-a812-c67ea7efdae2","path":"sprites/sprRadChestMaggotHurt/sprRadChestMaggotHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 10,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprRadChestMaggotHurt","path":"sprites/sprRadChestMaggotHurt/sprRadChestMaggotHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5ae507bf-ea05-4260-b73a-a414fb798585","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5ae507bf-ea05-4260-b73a-a414fb798585","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Maggots",
     "path": "folders/Sprites/Enemies/Maggots.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprRadChestMaggotHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

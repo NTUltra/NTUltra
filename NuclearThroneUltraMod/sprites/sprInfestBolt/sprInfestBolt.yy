@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInfestBolt",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"71698a02-3515-4903-9ab9-ff61a07af15a","path":"sprites/sprInfestBolt/sprInfestBolt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"71698a02-3515-4903-9ab9-ff61a07af15a","path":"sprites/sprInfestBolt/sprInfestBolt.yy",},"LayerId":{"name":"30ab87a1-5fef-4feb-bb3d-4cc7e2757290","path":"sprites/sprInfestBolt/sprInfestBolt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInfestBolt","path":"sprites/sprInfestBolt/sprInfestBolt.yy",},"resourceVersion":"1.0","name":"71698a02-3515-4903-9ab9-ff61a07af15a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4d3dee90-e9a7-437e-8ec9-173a09120e67","path":"sprites/sprInfestBolt/sprInfestBolt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4d3dee90-e9a7-437e-8ec9-173a09120e67","path":"sprites/sprInfestBolt/sprInfestBolt.yy",},"LayerId":{"name":"30ab87a1-5fef-4feb-bb3d-4cc7e2757290","path":"sprites/sprInfestBolt/sprInfestBolt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInfestBolt","path":"sprites/sprInfestBolt/sprInfestBolt.yy",},"resourceVersion":"1.0","name":"4d3dee90-e9a7-437e-8ec9-173a09120e67","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e5a78fda-0356-49ba-8b8a-b13dbe66214a","path":"sprites/sprInfestBolt/sprInfestBolt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e5a78fda-0356-49ba-8b8a-b13dbe66214a","path":"sprites/sprInfestBolt/sprInfestBolt.yy",},"LayerId":{"name":"30ab87a1-5fef-4feb-bb3d-4cc7e2757290","path":"sprites/sprInfestBolt/sprInfestBolt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInfestBolt","path":"sprites/sprInfestBolt/sprInfestBolt.yy",},"resourceVersion":"1.0","name":"e5a78fda-0356-49ba-8b8a-b13dbe66214a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"71698a02-3515-4903-9ab9-ff61a07af15a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4d3dee90-e9a7-437e-8ec9-173a09120e67",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e5a78fda-0356-49ba-8b8a-b13dbe66214a",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInfestBolt","path":"sprites/sprInfestBolt/sprInfestBolt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInfestBolt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"1d2a1cbe-c39c-4a74-b2d2-5e6a297dc7bd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"71698a02-3515-4903-9ab9-ff61a07af15a","path":"sprites/sprInfestBolt/sprInfestBolt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"3a9c6076-3861-4bc2-ae5c-f4e9a9dfea6a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4d3dee90-e9a7-437e-8ec9-173a09120e67","path":"sprites/sprInfestBolt/sprInfestBolt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"20626ab9-8a11-45df-86b8-070f6d6ca7f6","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e5a78fda-0356-49ba-8b8a-b13dbe66214a","path":"sprites/sprInfestBolt/sprInfestBolt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 3,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInfestBolt","path":"sprites/sprInfestBolt/sprInfestBolt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInfestBolt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"30ab87a1-5fef-4feb-bb3d-4cc7e2757290","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"30ab87a1-5fef-4feb-bb3d-4cc7e2757290","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Projectiles",
     "path": "folders/Sprites/Projectiles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInfestBolt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

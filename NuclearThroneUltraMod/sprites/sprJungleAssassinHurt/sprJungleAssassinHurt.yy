@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprJungleAssassinHurt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"cf3a4cc4-215d-4b2a-9ff0-32f5e79698f2","path":"sprites/sprJungleAssassinHurt/sprJungleAssassinHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cf3a4cc4-215d-4b2a-9ff0-32f5e79698f2","path":"sprites/sprJungleAssassinHurt/sprJungleAssassinHurt.yy",},"LayerId":{"name":"7ff3361b-1288-4854-babc-9aa9b01509ad","path":"sprites/sprJungleAssassinHurt/sprJungleAssassinHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprJungleAssassinHurt","path":"sprites/sprJungleAssassinHurt/sprJungleAssassinHurt.yy",},"resourceVersion":"1.0","name":"cf3a4cc4-215d-4b2a-9ff0-32f5e79698f2","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"468087e0-a514-4300-93a8-faf274cb49f5","path":"sprites/sprJungleAssassinHurt/sprJungleAssassinHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"468087e0-a514-4300-93a8-faf274cb49f5","path":"sprites/sprJungleAssassinHurt/sprJungleAssassinHurt.yy",},"LayerId":{"name":"7ff3361b-1288-4854-babc-9aa9b01509ad","path":"sprites/sprJungleAssassinHurt/sprJungleAssassinHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprJungleAssassinHurt","path":"sprites/sprJungleAssassinHurt/sprJungleAssassinHurt.yy",},"resourceVersion":"1.0","name":"468087e0-a514-4300-93a8-faf274cb49f5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6a9d0393-5f96-40a3-9d99-da1bbe9370a8","path":"sprites/sprJungleAssassinHurt/sprJungleAssassinHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6a9d0393-5f96-40a3-9d99-da1bbe9370a8","path":"sprites/sprJungleAssassinHurt/sprJungleAssassinHurt.yy",},"LayerId":{"name":"7ff3361b-1288-4854-babc-9aa9b01509ad","path":"sprites/sprJungleAssassinHurt/sprJungleAssassinHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprJungleAssassinHurt","path":"sprites/sprJungleAssassinHurt/sprJungleAssassinHurt.yy",},"resourceVersion":"1.0","name":"6a9d0393-5f96-40a3-9d99-da1bbe9370a8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cf3a4cc4-215d-4b2a-9ff0-32f5e79698f2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"468087e0-a514-4300-93a8-faf274cb49f5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6a9d0393-5f96-40a3-9d99-da1bbe9370a8",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprJungleAssassinHurt","path":"sprites/sprJungleAssassinHurt/sprJungleAssassinHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprJungleAssassinHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"38d4f26c-e24f-4702-9951-310f63256ce0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cf3a4cc4-215d-4b2a-9ff0-32f5e79698f2","path":"sprites/sprJungleAssassinHurt/sprJungleAssassinHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"85bf0fbc-4abd-44dc-977e-3f6c54113948","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"468087e0-a514-4300-93a8-faf274cb49f5","path":"sprites/sprJungleAssassinHurt/sprJungleAssassinHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c8535db8-6a2f-4d3f-8839-4cdcaa9ba971","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6a9d0393-5f96-40a3-9d99-da1bbe9370a8","path":"sprites/sprJungleAssassinHurt/sprJungleAssassinHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprJungleAssassinHurt","path":"sprites/sprJungleAssassinHurt/sprJungleAssassinHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprJungleAssassinHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7ff3361b-1288-4854-babc-9aa9b01509ad","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7ff3361b-1288-4854-babc-9aa9b01509ad","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "JungleEnemy",
     "path": "folders/Sprites/Enemies/JungleEnemy.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprJungleAssassinHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

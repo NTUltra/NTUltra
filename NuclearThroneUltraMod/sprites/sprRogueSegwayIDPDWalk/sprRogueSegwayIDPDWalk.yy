@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprRogueSegwayIDPDWalk",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f9ce4217-35cf-4b6c-8588-9a2cd8839dd8","path":"sprites/sprRogueSegwayIDPDWalk/sprRogueSegwayIDPDWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f9ce4217-35cf-4b6c-8588-9a2cd8839dd8","path":"sprites/sprRogueSegwayIDPDWalk/sprRogueSegwayIDPDWalk.yy",},"LayerId":{"name":"8e85aaa8-687c-427d-9f7a-5a4f60628889","path":"sprites/sprRogueSegwayIDPDWalk/sprRogueSegwayIDPDWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRogueSegwayIDPDWalk","path":"sprites/sprRogueSegwayIDPDWalk/sprRogueSegwayIDPDWalk.yy",},"resourceVersion":"1.0","name":"f9ce4217-35cf-4b6c-8588-9a2cd8839dd8","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8991d004-a483-4023-8b8d-f8c5a22aedeb","path":"sprites/sprRogueSegwayIDPDWalk/sprRogueSegwayIDPDWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8991d004-a483-4023-8b8d-f8c5a22aedeb","path":"sprites/sprRogueSegwayIDPDWalk/sprRogueSegwayIDPDWalk.yy",},"LayerId":{"name":"8e85aaa8-687c-427d-9f7a-5a4f60628889","path":"sprites/sprRogueSegwayIDPDWalk/sprRogueSegwayIDPDWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprRogueSegwayIDPDWalk","path":"sprites/sprRogueSegwayIDPDWalk/sprRogueSegwayIDPDWalk.yy",},"resourceVersion":"1.0","name":"8991d004-a483-4023-8b8d-f8c5a22aedeb","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f9ce4217-35cf-4b6c-8588-9a2cd8839dd8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8991d004-a483-4023-8b8d-f8c5a22aedeb",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprRogueSegwayIDPDWalk","path":"sprites/sprRogueSegwayIDPDWalk/sprRogueSegwayIDPDWalk.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"f758b36f-cde8-4c70-9e1e-420e0805fa57","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f9ce4217-35cf-4b6c-8588-9a2cd8839dd8","path":"sprites/sprRogueSegwayIDPDWalk/sprRogueSegwayIDPDWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"32d39a27-da20-40ca-9a24-bda0ea4d2773","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8991d004-a483-4023-8b8d-f8c5a22aedeb","path":"sprites/sprRogueSegwayIDPDWalk/sprRogueSegwayIDPDWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 19,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprRogueSegwayIDPDWalk","path":"sprites/sprRogueSegwayIDPDWalk/sprRogueSegwayIDPDWalk.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8e85aaa8-687c-427d-9f7a-5a4f60628889","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8e85aaa8-687c-427d-9f7a-5a4f60628889","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "SegwayPopo",
     "path": "folders/Sprites/Enemies/IDPD/SegwayPopo.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprRogueSegwayIDPDWalk",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

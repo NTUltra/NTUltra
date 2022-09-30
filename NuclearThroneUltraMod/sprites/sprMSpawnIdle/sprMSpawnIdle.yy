@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprMSpawnIdle",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c335fe2b-a7fa-4e19-8ba8-8f8e4ec1c392","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c335fe2b-a7fa-4e19-8ba8-8f8e4ec1c392","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},"LayerId":{"name":"9c812ccf-2105-46b0-96f2-dafda56c38f2","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprMSpawnIdle","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},"resourceVersion":"1.0","name":"c335fe2b-a7fa-4e19-8ba8-8f8e4ec1c392","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4e4aca20-223c-4aad-815b-e22c807f4439","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4e4aca20-223c-4aad-815b-e22c807f4439","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},"LayerId":{"name":"9c812ccf-2105-46b0-96f2-dafda56c38f2","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprMSpawnIdle","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},"resourceVersion":"1.0","name":"4e4aca20-223c-4aad-815b-e22c807f4439","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c8c6b74b-6e94-470e-923e-eeeb966c1242","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c8c6b74b-6e94-470e-923e-eeeb966c1242","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},"LayerId":{"name":"9c812ccf-2105-46b0-96f2-dafda56c38f2","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprMSpawnIdle","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},"resourceVersion":"1.0","name":"c8c6b74b-6e94-470e-923e-eeeb966c1242","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"53e0abfd-a702-4c17-aec5-d93f892b1bc5","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"53e0abfd-a702-4c17-aec5-d93f892b1bc5","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},"LayerId":{"name":"9c812ccf-2105-46b0-96f2-dafda56c38f2","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprMSpawnIdle","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},"resourceVersion":"1.0","name":"53e0abfd-a702-4c17-aec5-d93f892b1bc5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c335fe2b-a7fa-4e19-8ba8-8f8e4ec1c392",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4e4aca20-223c-4aad-815b-e22c807f4439",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c8c6b74b-6e94-470e-923e-eeeb966c1242",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"53e0abfd-a702-4c17-aec5-d93f892b1bc5",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprMSpawnIdle","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -49,12 +46,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"41d5dc1f-52ce-4fa1-8630-16034f0979c8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c335fe2b-a7fa-4e19-8ba8-8f8e4ec1c392","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"28ad2ac4-24f9-49c6-a37b-7faa1473bcdf","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4e4aca20-223c-4aad-815b-e22c807f4439","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b7d9b340-ee1d-4bd0-b62d-5adaade5f7be","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c8c6b74b-6e94-470e-923e-eeeb966c1242","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d03bef78-ae11-4d81-98f9-a91c02836c12","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"53e0abfd-a702-4c17-aec5-d93f892b1bc5","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -70,22 +67,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprMSpawnIdle","path":"sprites/sprMSpawnIdle/sprMSpawnIdle.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9c812ccf-2105-46b0-96f2-dafda56c38f2","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9c812ccf-2105-46b0-96f2-dafda56c38f2","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Maggots",
     "path": "folders/Sprites/Enemies/Maggots.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprMSpawnIdle",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

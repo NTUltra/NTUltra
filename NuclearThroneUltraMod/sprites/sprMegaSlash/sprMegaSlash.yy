@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprMegaSlash",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b269fff5-2654-4fce-a9f8-11f33d725006","path":"sprites/sprMegaSlash/sprMegaSlash.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b269fff5-2654-4fce-a9f8-11f33d725006","path":"sprites/sprMegaSlash/sprMegaSlash.yy",},"LayerId":{"name":"dfb5969b-d68c-4725-9bed-3a44d0945cdf","path":"sprites/sprMegaSlash/sprMegaSlash.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprMegaSlash","path":"sprites/sprMegaSlash/sprMegaSlash.yy",},"resourceVersion":"1.0","name":"b269fff5-2654-4fce-a9f8-11f33d725006","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0e4e2f38-be86-4d3f-be32-1044000fa36a","path":"sprites/sprMegaSlash/sprMegaSlash.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0e4e2f38-be86-4d3f-be32-1044000fa36a","path":"sprites/sprMegaSlash/sprMegaSlash.yy",},"LayerId":{"name":"dfb5969b-d68c-4725-9bed-3a44d0945cdf","path":"sprites/sprMegaSlash/sprMegaSlash.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprMegaSlash","path":"sprites/sprMegaSlash/sprMegaSlash.yy",},"resourceVersion":"1.0","name":"0e4e2f38-be86-4d3f-be32-1044000fa36a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e3f42fa4-f0ba-4fdd-ad67-ca2840e8c7c5","path":"sprites/sprMegaSlash/sprMegaSlash.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e3f42fa4-f0ba-4fdd-ad67-ca2840e8c7c5","path":"sprites/sprMegaSlash/sprMegaSlash.yy",},"LayerId":{"name":"dfb5969b-d68c-4725-9bed-3a44d0945cdf","path":"sprites/sprMegaSlash/sprMegaSlash.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprMegaSlash","path":"sprites/sprMegaSlash/sprMegaSlash.yy",},"resourceVersion":"1.0","name":"e3f42fa4-f0ba-4fdd-ad67-ca2840e8c7c5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b269fff5-2654-4fce-a9f8-11f33d725006",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0e4e2f38-be86-4d3f-be32-1044000fa36a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e3f42fa4-f0ba-4fdd-ad67-ca2840e8c7c5",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprMegaSlash","path":"sprites/sprMegaSlash/sprMegaSlash.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"cee01940-6adb-491d-835d-ac9e3e41ded2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b269fff5-2654-4fce-a9f8-11f33d725006","path":"sprites/sprMegaSlash/sprMegaSlash.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"48455ed4-cd26-4958-b920-f3f96a5792fb","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0e4e2f38-be86-4d3f-be32-1044000fa36a","path":"sprites/sprMegaSlash/sprMegaSlash.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"cdf74210-ac39-47fd-b4e4-fb297116734a","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e3f42fa4-f0ba-4fdd-ad67-ca2840e8c7c5","path":"sprites/sprMegaSlash/sprMegaSlash.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 36,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprMegaSlash","path":"sprites/sprMegaSlash/sprMegaSlash.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"dfb5969b-d68c-4725-9bed-3a44d0945cdf","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"dfb5969b-d68c-4725-9bed-3a44d0945cdf","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Melee Atacks",
     "path": "folders/Sprites/Projectiles/Melee Atacks.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprMegaSlash",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

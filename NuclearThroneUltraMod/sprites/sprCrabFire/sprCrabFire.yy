@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprCrabFire",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c1e4f625-a9f0-450a-9a63-45654090bcec","path":"sprites/sprCrabFire/sprCrabFire.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c1e4f625-a9f0-450a-9a63-45654090bcec","path":"sprites/sprCrabFire/sprCrabFire.yy",},"LayerId":{"name":"a57c5adf-8b7a-458c-8442-76698747eb91","path":"sprites/sprCrabFire/sprCrabFire.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCrabFire","path":"sprites/sprCrabFire/sprCrabFire.yy",},"resourceVersion":"1.0","name":"c1e4f625-a9f0-450a-9a63-45654090bcec","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"96d2cf1a-b59d-408f-b37d-a44c4465cf2b","path":"sprites/sprCrabFire/sprCrabFire.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"96d2cf1a-b59d-408f-b37d-a44c4465cf2b","path":"sprites/sprCrabFire/sprCrabFire.yy",},"LayerId":{"name":"a57c5adf-8b7a-458c-8442-76698747eb91","path":"sprites/sprCrabFire/sprCrabFire.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCrabFire","path":"sprites/sprCrabFire/sprCrabFire.yy",},"resourceVersion":"1.0","name":"96d2cf1a-b59d-408f-b37d-a44c4465cf2b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c1e4f625-a9f0-450a-9a63-45654090bcec",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"96d2cf1a-b59d-408f-b37d-a44c4465cf2b",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprCrabFire","path":"sprites/sprCrabFire/sprCrabFire.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprCrabFire",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"29e2c1b5-4906-419e-99b4-f38ecb8ed053","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c1e4f625-a9f0-450a-9a63-45654090bcec","path":"sprites/sprCrabFire/sprCrabFire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"80116b69-e250-40c2-96fd-20c070373307","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"96d2cf1a-b59d-408f-b37d-a44c4465cf2b","path":"sprites/sprCrabFire/sprCrabFire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 24,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprCrabFire","path":"sprites/sprCrabFire/sprCrabFire.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprCrabFire",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a57c5adf-8b7a-458c-8442-76698747eb91","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a57c5adf-8b7a-458c-8442-76698747eb91","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Oasis",
     "path": "folders/Sprites/Enemies/Oasis.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprCrabFire",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

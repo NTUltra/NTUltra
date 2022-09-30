@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprBloodBulletShotgun",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ae387a3f-5fa3-41eb-a1f9-7aad2250c703","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ae387a3f-5fa3-41eb-a1f9-7aad2250c703","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodBulletShotgun","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"ae387a3f-5fa3-41eb-a1f9-7aad2250c703","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d19618ca-a596-45ef-83b7-da6dd1ecac91","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d19618ca-a596-45ef-83b7-da6dd1ecac91","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodBulletShotgun","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"d19618ca-a596-45ef-83b7-da6dd1ecac91","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c5b8d3db-c252-40d8-a054-2c8276ee0251","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c5b8d3db-c252-40d8-a054-2c8276ee0251","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodBulletShotgun","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"c5b8d3db-c252-40d8-a054-2c8276ee0251","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ef2898e6-858c-4bc4-b429-9090bac2b7d1","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ef2898e6-858c-4bc4-b429-9090bac2b7d1","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodBulletShotgun","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"ef2898e6-858c-4bc4-b429-9090bac2b7d1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ef5ffc0c-5550-4cd2-828a-842dfd427a3c","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ef5ffc0c-5550-4cd2-828a-842dfd427a3c","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodBulletShotgun","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"ef5ffc0c-5550-4cd2-828a-842dfd427a3c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"14660e3a-673e-4944-af57-3dcd3089c2f9","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"14660e3a-673e-4944-af57-3dcd3089c2f9","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodBulletShotgun","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"14660e3a-673e-4944-af57-3dcd3089c2f9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5e8cb0cf-4f58-44b4-8656-1d0d24e64d72","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5e8cb0cf-4f58-44b4-8656-1d0d24e64d72","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodBulletShotgun","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"5e8cb0cf-4f58-44b4-8656-1d0d24e64d72","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ae387a3f-5fa3-41eb-a1f9-7aad2250c703",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d19618ca-a596-45ef-83b7-da6dd1ecac91",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c5b8d3db-c252-40d8-a054-2c8276ee0251",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ef2898e6-858c-4bc4-b429-9090bac2b7d1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ef5ffc0c-5550-4cd2-828a-842dfd427a3c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"14660e3a-673e-4944-af57-3dcd3089c2f9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5e8cb0cf-4f58-44b4-8656-1d0d24e64d72",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprBloodBulletShotgun","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprBloodBulletShotgun",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"3c7e1160-ef52-4e82-bf6a-1a2ac18c5c8a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ae387a3f-5fa3-41eb-a1f9-7aad2250c703","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"19810bda-96fc-4787-a930-d9e90f041351","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d19618ca-a596-45ef-83b7-da6dd1ecac91","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"2e4bd92e-7521-4ca0-b67c-0c0cb24f540d","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c5b8d3db-c252-40d8-a054-2c8276ee0251","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"5030b5ab-f988-456d-a949-00f3e83f0ee2","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ef5ffc0c-5550-4cd2-828a-842dfd427a3c","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"5562a1a0-9b90-4410-bed8-d5edcb2bbd55","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"14660e3a-673e-4944-af57-3dcd3089c2f9","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"1fc38f96-a78c-4e6d-a3c0-152c7f56af7c","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5e8cb0cf-4f58-44b4-8656-1d0d24e64d72","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 4,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprBloodBulletShotgun","path":"sprites/sprBloodBulletShotgun/sprBloodBulletShotgun.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprBloodBulletShotgun",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6be38f58-57b4-409b-be33-e50fd1037e83","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6be38f58-57b4-409b-be33-e50fd1037e83","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Custom",
     "path": "folders/Sprites/Weapons/Custom.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprBloodBulletShotgun",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

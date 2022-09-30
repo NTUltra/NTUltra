@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprSuperMissileCannon",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"3c37938c-36cd-405f-b626-04c3497762c5","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3c37938c-36cd-405f-b626-04c3497762c5","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"LayerId":{"name":"5bf7556e-2828-4be9-91c4-d2be18617576","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperMissileCannon","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"resourceVersion":"1.0","name":"3c37938c-36cd-405f-b626-04c3497762c5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8016b578-3fa8-4d52-a723-000f43b9b4ea","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8016b578-3fa8-4d52-a723-000f43b9b4ea","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"LayerId":{"name":"5bf7556e-2828-4be9-91c4-d2be18617576","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperMissileCannon","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"resourceVersion":"1.0","name":"8016b578-3fa8-4d52-a723-000f43b9b4ea","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"279287ee-b439-4c41-b3f7-0cddd8db4af4","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"279287ee-b439-4c41-b3f7-0cddd8db4af4","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"LayerId":{"name":"5bf7556e-2828-4be9-91c4-d2be18617576","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperMissileCannon","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"resourceVersion":"1.0","name":"279287ee-b439-4c41-b3f7-0cddd8db4af4","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bae0c21c-a27a-4e55-b891-450e4c23d3e8","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bae0c21c-a27a-4e55-b891-450e4c23d3e8","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"LayerId":{"name":"5bf7556e-2828-4be9-91c4-d2be18617576","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperMissileCannon","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"resourceVersion":"1.0","name":"bae0c21c-a27a-4e55-b891-450e4c23d3e8","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6d30782d-7bf5-449a-ba44-847f43ffc17c","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6d30782d-7bf5-449a-ba44-847f43ffc17c","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"LayerId":{"name":"5bf7556e-2828-4be9-91c4-d2be18617576","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperMissileCannon","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"resourceVersion":"1.0","name":"6d30782d-7bf5-449a-ba44-847f43ffc17c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0ae72075-094c-48f2-8067-5e009cdca86e","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0ae72075-094c-48f2-8067-5e009cdca86e","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"LayerId":{"name":"5bf7556e-2828-4be9-91c4-d2be18617576","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperMissileCannon","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"resourceVersion":"1.0","name":"0ae72075-094c-48f2-8067-5e009cdca86e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8ab89158-c366-4294-84d7-0584ea68be78","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8ab89158-c366-4294-84d7-0584ea68be78","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"LayerId":{"name":"5bf7556e-2828-4be9-91c4-d2be18617576","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSuperMissileCannon","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"resourceVersion":"1.0","name":"8ab89158-c366-4294-84d7-0584ea68be78","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3c37938c-36cd-405f-b626-04c3497762c5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8016b578-3fa8-4d52-a723-000f43b9b4ea",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"279287ee-b439-4c41-b3f7-0cddd8db4af4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bae0c21c-a27a-4e55-b891-450e4c23d3e8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6d30782d-7bf5-449a-ba44-847f43ffc17c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0ae72075-094c-48f2-8067-5e009cdca86e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8ab89158-c366-4294-84d7-0584ea68be78",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprSuperMissileCannon","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprSuperMissileCannon",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"b2e65b4e-4444-460e-a91f-638a27313ee4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3c37938c-36cd-405f-b626-04c3497762c5","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ae3286a9-8c3b-4acb-a56a-170da3134b7b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8016b578-3fa8-4d52-a723-000f43b9b4ea","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a64f8820-9e33-40f1-b379-ce6ecc4eca32","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"279287ee-b439-4c41-b3f7-0cddd8db4af4","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"488e8d6c-1d67-437e-bd6d-140c2acdfaef","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6d30782d-7bf5-449a-ba44-847f43ffc17c","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9a5875e5-efc6-4532-99b3-4915b3335c36","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0ae72075-094c-48f2-8067-5e009cdca86e","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"57eecae0-46dc-4e2a-8768-156f1687fbaf","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8ab89158-c366-4294-84d7-0584ea68be78","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 11,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprSuperMissileCannon","path":"sprites/sprSuperMissileCannon/sprSuperMissileCannon.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprSuperMissileCannon",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5bf7556e-2828-4be9-91c4-d2be18617576","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5bf7556e-2828-4be9-91c4-d2be18617576","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Custom",
     "path": "folders/Sprites/Weapons/Custom.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprSuperMissileCannon",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

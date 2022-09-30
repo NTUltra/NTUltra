@@ -46,4 +46,5 @@ dodge=0;
 
 MorphMe=false;
 frozen=false;
+countKill = true;
 EnemyHealthAdjustments();

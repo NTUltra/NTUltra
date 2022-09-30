@@ -36,4 +36,5 @@ with instance_create(x,y,IDPDFreak)
 	alarm[1] *= 0.5;
 	scrSleepyPopo()
 	lifes = other.lifes;
+	countKill = false;
 }

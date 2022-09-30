@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprHeavyBloodBulletShotgun",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"83784253-0093-4e3d-9841-b81ae575f4c2","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"83784253-0093-4e3d-9841-b81ae575f4c2","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHeavyBloodBulletShotgun","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"83784253-0093-4e3d-9841-b81ae575f4c2","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"abadfec6-1472-4aec-95b7-d9db86bdbc25","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"abadfec6-1472-4aec-95b7-d9db86bdbc25","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHeavyBloodBulletShotgun","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"abadfec6-1472-4aec-95b7-d9db86bdbc25","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e3801f31-f9b0-4dae-93b0-cb1747ee275e","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e3801f31-f9b0-4dae-93b0-cb1747ee275e","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHeavyBloodBulletShotgun","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"e3801f31-f9b0-4dae-93b0-cb1747ee275e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b62f5bd9-a9ef-4260-b740-220b83f1e02f","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b62f5bd9-a9ef-4260-b740-220b83f1e02f","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHeavyBloodBulletShotgun","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"b62f5bd9-a9ef-4260-b740-220b83f1e02f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bb7975ca-7aa0-46d5-b259-199a05f634c6","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bb7975ca-7aa0-46d5-b259-199a05f634c6","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHeavyBloodBulletShotgun","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"bb7975ca-7aa0-46d5-b259-199a05f634c6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2e7a001d-a155-459a-a54f-464cb5ac2a09","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2e7a001d-a155-459a-a54f-464cb5ac2a09","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHeavyBloodBulletShotgun","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"2e7a001d-a155-459a-a54f-464cb5ac2a09","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0e929bac-2b67-4778-9e63-b99d22daa083","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0e929bac-2b67-4778-9e63-b99d22daa083","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHeavyBloodBulletShotgun","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"resourceVersion":"1.0","name":"0e929bac-2b67-4778-9e63-b99d22daa083","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"83784253-0093-4e3d-9841-b81ae575f4c2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"abadfec6-1472-4aec-95b7-d9db86bdbc25",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e3801f31-f9b0-4dae-93b0-cb1747ee275e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b62f5bd9-a9ef-4260-b740-220b83f1e02f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bb7975ca-7aa0-46d5-b259-199a05f634c6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2e7a001d-a155-459a-a54f-464cb5ac2a09",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0e929bac-2b67-4778-9e63-b99d22daa083",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprHeavyBloodBulletShotgun","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprHeavyBloodBulletShotgun",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"9161d362-0fa3-40d7-8421-68ba8cccbe88","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"83784253-0093-4e3d-9841-b81ae575f4c2","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b1c343af-88d6-41a1-ac96-3740073d29fa","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"abadfec6-1472-4aec-95b7-d9db86bdbc25","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"939539a3-78e2-43db-bc15-be7e2a861ba1","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e3801f31-f9b0-4dae-93b0-cb1747ee275e","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"fd6db870-be2b-45e5-b231-9a354e47f8aa","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bb7975ca-7aa0-46d5-b259-199a05f634c6","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"966a2155-fbd0-439e-942c-7a8b66f0ac2d","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2e7a001d-a155-459a-a54f-464cb5ac2a09","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"3cf8fecc-daf8-451b-9c8b-d86d5e4d989c","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0e929bac-2b67-4778-9e63-b99d22daa083","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 6,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprHeavyBloodBulletShotgun","path":"sprites/sprHeavyBloodBulletShotgun/sprHeavyBloodBulletShotgun.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprHeavyBloodBulletShotgun",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6be38f58-57b4-409b-be33-e50fd1037e83","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6be38f58-57b4-409b-be33-e50fd1037e83","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Custom",
     "path": "folders/Sprites/Weapons/Custom.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprHeavyBloodBulletShotgun",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprGoldNecromancerWalk",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d3e937b6-d56b-4ae9-a98b-36de4ed7937f","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d3e937b6-d56b-4ae9-a98b-36de4ed7937f","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"LayerId":{"name":"d66a313d-5391-4dab-8383-63e695e9dcaf","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldNecromancerWalk","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"resourceVersion":"1.0","name":"d3e937b6-d56b-4ae9-a98b-36de4ed7937f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f46df5be-fbd1-4a90-9190-e15f92b2235f","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f46df5be-fbd1-4a90-9190-e15f92b2235f","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"LayerId":{"name":"d66a313d-5391-4dab-8383-63e695e9dcaf","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldNecromancerWalk","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"resourceVersion":"1.0","name":"f46df5be-fbd1-4a90-9190-e15f92b2235f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"34c46b97-2f88-426b-8e25-5dd21f513244","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"34c46b97-2f88-426b-8e25-5dd21f513244","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"LayerId":{"name":"d66a313d-5391-4dab-8383-63e695e9dcaf","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldNecromancerWalk","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"resourceVersion":"1.0","name":"34c46b97-2f88-426b-8e25-5dd21f513244","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"da92f5bd-6b89-4b96-a178-15a5a98d4054","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"da92f5bd-6b89-4b96-a178-15a5a98d4054","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"LayerId":{"name":"d66a313d-5391-4dab-8383-63e695e9dcaf","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldNecromancerWalk","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"resourceVersion":"1.0","name":"da92f5bd-6b89-4b96-a178-15a5a98d4054","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"683c8a2f-f666-4c4d-902a-64cf1fe0ec1f","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"683c8a2f-f666-4c4d-902a-64cf1fe0ec1f","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"LayerId":{"name":"d66a313d-5391-4dab-8383-63e695e9dcaf","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldNecromancerWalk","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"resourceVersion":"1.0","name":"683c8a2f-f666-4c4d-902a-64cf1fe0ec1f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a41f5a68-8adf-4b0d-bce4-a00fc8205d51","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a41f5a68-8adf-4b0d-bce4-a00fc8205d51","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"LayerId":{"name":"d66a313d-5391-4dab-8383-63e695e9dcaf","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldNecromancerWalk","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"resourceVersion":"1.0","name":"a41f5a68-8adf-4b0d-bce4-a00fc8205d51","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d3e937b6-d56b-4ae9-a98b-36de4ed7937f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f46df5be-fbd1-4a90-9190-e15f92b2235f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"34c46b97-2f88-426b-8e25-5dd21f513244",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"da92f5bd-6b89-4b96-a178-15a5a98d4054",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"683c8a2f-f666-4c4d-902a-64cf1fe0ec1f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a41f5a68-8adf-4b0d-bce4-a00fc8205d51",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprGoldNecromancerWalk","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprGoldNecromancerWalk",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -55,14 +48,14 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"dc7f094d-72e2-4d15-855e-c99f5fd2d112","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d3e937b6-d56b-4ae9-a98b-36de4ed7937f","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"53325c46-90f3-4c10-84cf-ea16a602af40","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f46df5be-fbd1-4a90-9190-e15f92b2235f","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"91d4ee0a-8606-401a-a35f-667e911bb2e1","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"34c46b97-2f88-426b-8e25-5dd21f513244","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"39318588-4592-423f-9e15-5a1e18833188","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"da92f5bd-6b89-4b96-a178-15a5a98d4054","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"4aeab3e4-dc75-4852-ad91-224e7c149e15","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"683c8a2f-f666-4c4d-902a-64cf1fe0ec1f","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"cc7bcdf1-3834-4555-bce7-d019f7a06a6f","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a41f5a68-8adf-4b0d-bce4-a00fc8205d51","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -78,22 +71,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprGoldNecromancerWalk","path":"sprites/sprGoldNecromancerWalk/sprGoldNecromancerWalk.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprGoldNecromancerWalk",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d66a313d-5391-4dab-8383-63e695e9dcaf","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d66a313d-5391-4dab-8383-63e695e9dcaf","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Labs",
     "path": "folders/Sprites/Enemies/Labs.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprGoldNecromancerWalk",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

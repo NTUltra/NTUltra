@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedBoneFishHurt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"2fa8b852-f94d-4ced-973c-5561a9e1d5d0","path":"sprites/sprInvertedBoneFishHurt/sprInvertedBoneFishHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2fa8b852-f94d-4ced-973c-5561a9e1d5d0","path":"sprites/sprInvertedBoneFishHurt/sprInvertedBoneFishHurt.yy",},"LayerId":{"name":"a2e60531-c5f8-4bd6-ab5b-7213b3b4983c","path":"sprites/sprInvertedBoneFishHurt/sprInvertedBoneFishHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedBoneFishHurt","path":"sprites/sprInvertedBoneFishHurt/sprInvertedBoneFishHurt.yy",},"resourceVersion":"1.0","name":"2fa8b852-f94d-4ced-973c-5561a9e1d5d0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f23e4df8-353b-4a7f-a863-e01206c6bfcd","path":"sprites/sprInvertedBoneFishHurt/sprInvertedBoneFishHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f23e4df8-353b-4a7f-a863-e01206c6bfcd","path":"sprites/sprInvertedBoneFishHurt/sprInvertedBoneFishHurt.yy",},"LayerId":{"name":"a2e60531-c5f8-4bd6-ab5b-7213b3b4983c","path":"sprites/sprInvertedBoneFishHurt/sprInvertedBoneFishHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedBoneFishHurt","path":"sprites/sprInvertedBoneFishHurt/sprInvertedBoneFishHurt.yy",},"resourceVersion":"1.0","name":"f23e4df8-353b-4a7f-a863-e01206c6bfcd","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5838678c-405c-494c-9017-74dfc2ef6401","path":"sprites/sprInvertedBoneFishHurt/sprInvertedBoneFishHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5838678c-405c-494c-9017-74dfc2ef6401","path":"sprites/sprInvertedBoneFishHurt/sprInvertedBoneFishHurt.yy",},"LayerId":{"name":"a2e60531-c5f8-4bd6-ab5b-7213b3b4983c","path":"sprites/sprInvertedBoneFishHurt/sprInvertedBoneFishHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedBoneFishHurt","path":"sprites/sprInvertedBoneFishHurt/sprInvertedBoneFishHurt.yy",},"resourceVersion":"1.0","name":"5838678c-405c-494c-9017-74dfc2ef6401","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2fa8b852-f94d-4ced-973c-5561a9e1d5d0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f23e4df8-353b-4a7f-a863-e01206c6bfcd",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5838678c-405c-494c-9017-74dfc2ef6401",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedBoneFishHurt","path":"sprites/sprInvertedBoneFishHurt/sprInvertedBoneFishHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedBoneFishHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"cca27d55-c26c-4cd6-b85f-243ddcd4a30f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2fa8b852-f94d-4ced-973c-5561a9e1d5d0","path":"sprites/sprInvertedBoneFishHurt/sprInvertedBoneFishHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"510b0450-d4a0-41cd-bd5d-5c15958e7a28","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f23e4df8-353b-4a7f-a863-e01206c6bfcd","path":"sprites/sprInvertedBoneFishHurt/sprInvertedBoneFishHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f826d5f6-632d-4115-92ec-ed69f3bbe567","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5838678c-405c-494c-9017-74dfc2ef6401","path":"sprites/sprInvertedBoneFishHurt/sprInvertedBoneFishHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedBoneFishHurt","path":"sprites/sprInvertedBoneFishHurt/sprInvertedBoneFishHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedBoneFishHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a2e60531-c5f8-4bd6-ab5b-7213b3b4983c","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a2e60531-c5f8-4bd6-ab5b-7213b3b4983c","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Oasis",
     "path": "folders/Sprites/Enemies/Oasis.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedBoneFishHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprLogoRelease",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,13 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"df07e705-2346-48a2-8605-de2ed10b71e0","path":"sprites/sprLogoRelease/sprLogoRelease.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"df07e705-2346-48a2-8605-de2ed10b71e0","path":"sprites/sprLogoRelease/sprLogoRelease.yy",},"LayerId":{"name":"2026a5db-0841-48d9-b7c6-3bf895035fe5","path":"sprites/sprLogoRelease/sprLogoRelease.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"df07e705-2346-48a2-8605-de2ed10b71e0","path":"sprites/sprLogoRelease/sprLogoRelease.yy",},"LayerId":{"name":"ca83dfcd-fe20-4cc6-b297-dd0cbe3dda75","path":"sprites/sprLogoRelease/sprLogoRelease.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprLogoRelease","path":"sprites/sprLogoRelease/sprLogoRelease.yy",},"resourceVersion":"1.0","name":"df07e705-2346-48a2-8605-de2ed10b71e0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"df07e705-2346-48a2-8605-de2ed10b71e0",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprLogoRelease","path":"sprites/sprLogoRelease/sprLogoRelease.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprLogoRelease",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -41,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"b220a84a-31ae-42cc-b73b-02bd99e70595","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"df07e705-2346-48a2-8605-de2ed10b71e0","path":"sprites/sprLogoRelease/sprLogoRelease.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -59,23 +61,14 @@
     "yorigin": 176,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprLogoRelease","path":"sprites/sprLogoRelease/sprLogoRelease.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprLogoRelease",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2026a5db-0841-48d9-b7c6-3bf895035fe5","tags":[],"resourceType":"GMImageLayer",},
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"ca83dfcd-fe20-4cc6-b297-dd0cbe3dda75","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"2026a5db-0841-48d9-b7c6-3bf895035fe5","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ca83dfcd-fe20-4cc6-b297-dd0cbe3dda75","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Logo",
     "path": "folders/Sprites/Enemies/Menu/Logo.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprLogoRelease",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

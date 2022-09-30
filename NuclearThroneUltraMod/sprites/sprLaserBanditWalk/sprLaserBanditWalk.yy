@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprLaserBanditWalk",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a88a60f6-57ac-4fe6-adf0-8a343d9b2203","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a88a60f6-57ac-4fe6-adf0-8a343d9b2203","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"LayerId":{"name":"cd8d1c31-be04-491b-82fd-8fee270e28a4","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprLaserBanditWalk","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"resourceVersion":"1.0","name":"a88a60f6-57ac-4fe6-adf0-8a343d9b2203","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f0434e9b-1b43-4e5c-8ff1-e8a1119e7754","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f0434e9b-1b43-4e5c-8ff1-e8a1119e7754","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"LayerId":{"name":"cd8d1c31-be04-491b-82fd-8fee270e28a4","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprLaserBanditWalk","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"resourceVersion":"1.0","name":"f0434e9b-1b43-4e5c-8ff1-e8a1119e7754","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"deb282d9-a35a-4ead-8237-ad1e64ed4558","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"deb282d9-a35a-4ead-8237-ad1e64ed4558","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"LayerId":{"name":"cd8d1c31-be04-491b-82fd-8fee270e28a4","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprLaserBanditWalk","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"resourceVersion":"1.0","name":"deb282d9-a35a-4ead-8237-ad1e64ed4558","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"049033d2-6537-42a4-bf9a-aeb94805a04b","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"049033d2-6537-42a4-bf9a-aeb94805a04b","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"LayerId":{"name":"cd8d1c31-be04-491b-82fd-8fee270e28a4","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprLaserBanditWalk","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"resourceVersion":"1.0","name":"049033d2-6537-42a4-bf9a-aeb94805a04b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"659fdde3-21d2-43a5-9e90-a7e707c519e5","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"659fdde3-21d2-43a5-9e90-a7e707c519e5","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"LayerId":{"name":"cd8d1c31-be04-491b-82fd-8fee270e28a4","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprLaserBanditWalk","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"resourceVersion":"1.0","name":"659fdde3-21d2-43a5-9e90-a7e707c519e5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8da129db-ff2c-4a6b-82fb-5ff56b82d7d5","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8da129db-ff2c-4a6b-82fb-5ff56b82d7d5","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"LayerId":{"name":"cd8d1c31-be04-491b-82fd-8fee270e28a4","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprLaserBanditWalk","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"resourceVersion":"1.0","name":"8da129db-ff2c-4a6b-82fb-5ff56b82d7d5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a88a60f6-57ac-4fe6-adf0-8a343d9b2203",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f0434e9b-1b43-4e5c-8ff1-e8a1119e7754",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"deb282d9-a35a-4ead-8237-ad1e64ed4558",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"049033d2-6537-42a4-bf9a-aeb94805a04b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"659fdde3-21d2-43a5-9e90-a7e707c519e5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8da129db-ff2c-4a6b-82fb-5ff56b82d7d5",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprLaserBanditWalk","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -55,14 +48,14 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"961aa454-0b1a-426f-80d7-753f119fc50a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a88a60f6-57ac-4fe6-adf0-8a343d9b2203","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e0b64771-dfd3-4258-85e9-6ba2d89f12fc","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f0434e9b-1b43-4e5c-8ff1-e8a1119e7754","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b1cfcc5d-31bc-415b-bdac-649b8a828774","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"deb282d9-a35a-4ead-8237-ad1e64ed4558","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"1f95d6fc-c4fc-43ec-b497-b1ff5802221d","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"049033d2-6537-42a4-bf9a-aeb94805a04b","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6e30b7d9-c18f-49ba-9346-0aeb126c5e64","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"659fdde3-21d2-43a5-9e90-a7e707c519e5","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"cb51ba6d-542f-4dd0-9023-45d2b72a4509","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8da129db-ff2c-4a6b-82fb-5ff56b82d7d5","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -78,22 +71,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprLaserBanditWalk","path":"sprites/sprLaserBanditWalk/sprLaserBanditWalk.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"cd8d1c31-be04-491b-82fd-8fee270e28a4","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"cd8d1c31-be04-491b-82fd-8fee270e28a4","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Bandit",
     "path": "folders/Sprites/Enemies/Bandit.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprLaserBanditWalk",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

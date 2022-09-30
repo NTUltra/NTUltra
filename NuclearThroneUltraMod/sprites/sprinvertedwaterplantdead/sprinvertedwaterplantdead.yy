@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedWaterPlantDead",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,33 +27,19 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6812f957-d81a-4098-93bc-8c34be78f091","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6812f957-d81a-4098-93bc-8c34be78f091","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"LayerId":{"name":"98e9c483-f5b6-4fd3-8f86-a36f6a7a19ed","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedWaterPlantDead","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","name":"6812f957-d81a-4098-93bc-8c34be78f091","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ca427ac7-0d68-4cf2-b876-99f792d88e07","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ca427ac7-0d68-4cf2-b876-99f792d88e07","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"LayerId":{"name":"98e9c483-f5b6-4fd3-8f86-a36f6a7a19ed","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedWaterPlantDead","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","name":"ca427ac7-0d68-4cf2-b876-99f792d88e07","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7479df02-a541-4347-b8b8-2069c393f12b","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7479df02-a541-4347-b8b8-2069c393f12b","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"LayerId":{"name":"98e9c483-f5b6-4fd3-8f86-a36f6a7a19ed","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedWaterPlantDead","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","name":"7479df02-a541-4347-b8b8-2069c393f12b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"fb7dba38-997f-47b5-b32e-13a6c4fd5051","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fb7dba38-997f-47b5-b32e-13a6c4fd5051","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"LayerId":{"name":"98e9c483-f5b6-4fd3-8f86-a36f6a7a19ed","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedWaterPlantDead","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","name":"fb7dba38-997f-47b5-b32e-13a6c4fd5051","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"88fb0dbf-32af-449f-969c-f26f353b5c4f","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"88fb0dbf-32af-449f-969c-f26f353b5c4f","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"LayerId":{"name":"98e9c483-f5b6-4fd3-8f86-a36f6a7a19ed","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedWaterPlantDead","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","name":"88fb0dbf-32af-449f-969c-f26f353b5c4f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4a341a8c-1eb0-494d-8ca0-de6a5e73f777","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4a341a8c-1eb0-494d-8ca0-de6a5e73f777","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"LayerId":{"name":"98e9c483-f5b6-4fd3-8f86-a36f6a7a19ed","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedWaterPlantDead","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","name":"4a341a8c-1eb0-494d-8ca0-de6a5e73f777","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"52590e93-18dd-4494-9306-7472d27a90db","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"52590e93-18dd-4494-9306-7472d27a90db","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"LayerId":{"name":"98e9c483-f5b6-4fd3-8f86-a36f6a7a19ed","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedWaterPlantDead","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","name":"52590e93-18dd-4494-9306-7472d27a90db","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"99cddd9e-7734-424d-ad63-441ac1d7242a","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"99cddd9e-7734-424d-ad63-441ac1d7242a","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"LayerId":{"name":"98e9c483-f5b6-4fd3-8f86-a36f6a7a19ed","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedWaterPlantDead","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","name":"99cddd9e-7734-424d-ad63-441ac1d7242a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6812f957-d81a-4098-93bc-8c34be78f091",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ca427ac7-0d68-4cf2-b876-99f792d88e07",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7479df02-a541-4347-b8b8-2069c393f12b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fb7dba38-997f-47b5-b32e-13a6c4fd5051",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"88fb0dbf-32af-449f-969c-f26f353b5c4f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4a341a8c-1eb0-494d-8ca0-de6a5e73f777",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"52590e93-18dd-4494-9306-7472d27a90db",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"99cddd9e-7734-424d-ad63-441ac1d7242a",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedWaterPlantDead","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedWaterPlantDead",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -61,7 +50,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"a2989e4e-60c2-4a8f-a65f-f7c3b6afb4e4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6812f957-d81a-4098-93bc-8c34be78f091","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"03068942-a0e7-4ab7-8ea9-f85b9f78df4f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ca427ac7-0d68-4cf2-b876-99f792d88e07","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"5edd3b70-6f1c-4188-9169-13e71adf23c5","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7479df02-a541-4347-b8b8-2069c393f12b","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -70,7 +59,7 @@
             {"id":"5a4a0071-2d0e-4428-90e6-d54384bcabe6","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4a341a8c-1eb0-494d-8ca0-de6a5e73f777","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ff2e9441-bf5a-46a6-9d7b-63cbb8d91e01","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"52590e93-18dd-4494-9306-7472d27a90db","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b35e53d9-a115-47c9-8b0a-34d84d10f7f7","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"99cddd9e-7734-424d-ad63-441ac1d7242a","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -86,22 +75,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedWaterPlantDead","path":"sprites/sprInvertedWaterPlantDead/sprInvertedWaterPlantDead.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedWaterPlantDead",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"98e9c483-f5b6-4fd3-8f86-a36f6a7a19ed","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"98e9c483-f5b6-4fd3-8f86-a36f6a7a19ed","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "OasisProps",
     "path": "folders/Sprites/Enviroment/Props/OasisProps.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedWaterPlantDead",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

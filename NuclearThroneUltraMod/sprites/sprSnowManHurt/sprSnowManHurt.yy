@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprSnowManHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"60f82621-d9ce-4638-84c8-120d6446379f","path":"sprites/sprSnowManHurt/sprSnowManHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"60f82621-d9ce-4638-84c8-120d6446379f","path":"sprites/sprSnowManHurt/sprSnowManHurt.yy",},"LayerId":{"name":"7bf85048-f87d-4c4e-b4d2-ede846318224","path":"sprites/sprSnowManHurt/sprSnowManHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSnowManHurt","path":"sprites/sprSnowManHurt/sprSnowManHurt.yy",},"resourceVersion":"1.0","name":"60f82621-d9ce-4638-84c8-120d6446379f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9fbd2a3d-2727-4dba-963a-e9abf1a103dc","path":"sprites/sprSnowManHurt/sprSnowManHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9fbd2a3d-2727-4dba-963a-e9abf1a103dc","path":"sprites/sprSnowManHurt/sprSnowManHurt.yy",},"LayerId":{"name":"7bf85048-f87d-4c4e-b4d2-ede846318224","path":"sprites/sprSnowManHurt/sprSnowManHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSnowManHurt","path":"sprites/sprSnowManHurt/sprSnowManHurt.yy",},"resourceVersion":"1.0","name":"9fbd2a3d-2727-4dba-963a-e9abf1a103dc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"699ed0de-48c2-4db2-8da0-3226739e6d72","path":"sprites/sprSnowManHurt/sprSnowManHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"699ed0de-48c2-4db2-8da0-3226739e6d72","path":"sprites/sprSnowManHurt/sprSnowManHurt.yy",},"LayerId":{"name":"7bf85048-f87d-4c4e-b4d2-ede846318224","path":"sprites/sprSnowManHurt/sprSnowManHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSnowManHurt","path":"sprites/sprSnowManHurt/sprSnowManHurt.yy",},"resourceVersion":"1.0","name":"699ed0de-48c2-4db2-8da0-3226739e6d72","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"60f82621-d9ce-4638-84c8-120d6446379f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9fbd2a3d-2727-4dba-963a-e9abf1a103dc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"699ed0de-48c2-4db2-8da0-3226739e6d72",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprSnowManHurt","path":"sprites/sprSnowManHurt/sprSnowManHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"d9c96ccc-4355-4acd-99d8-8fcf923f76e7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"60f82621-d9ce-4638-84c8-120d6446379f","path":"sprites/sprSnowManHurt/sprSnowManHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"61eee61d-2d99-4ceb-8fc3-27cf27c862d6","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9fbd2a3d-2727-4dba-963a-e9abf1a103dc","path":"sprites/sprSnowManHurt/sprSnowManHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c1019e10-a07d-4335-b71b-bdeec1407336","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"699ed0de-48c2-4db2-8da0-3226739e6d72","path":"sprites/sprSnowManHurt/sprSnowManHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprSnowManHurt","path":"sprites/sprSnowManHurt/sprSnowManHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7bf85048-f87d-4c4e-b4d2-ede846318224","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7bf85048-f87d-4c4e-b4d2-ede846318224","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "UnsortedProp",
     "path": "folders/Sprites/Enviroment/UnsortedProp.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprSnowManHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

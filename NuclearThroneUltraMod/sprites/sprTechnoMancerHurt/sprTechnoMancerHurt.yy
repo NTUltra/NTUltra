@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprTechnoMancerHurt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5e36a602-8ddb-4599-8fb3-ccae01f11667","path":"sprites/sprTechnoMancerHurt/sprTechnoMancerHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5e36a602-8ddb-4599-8fb3-ccae01f11667","path":"sprites/sprTechnoMancerHurt/sprTechnoMancerHurt.yy",},"LayerId":{"name":"e20a0404-f898-4c0a-855f-5d1f93f2d682","path":"sprites/sprTechnoMancerHurt/sprTechnoMancerHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerHurt","path":"sprites/sprTechnoMancerHurt/sprTechnoMancerHurt.yy",},"resourceVersion":"1.0","name":"5e36a602-8ddb-4599-8fb3-ccae01f11667","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3f2ab1af-47e3-4d43-a85c-b0fd3a7a8ba7","path":"sprites/sprTechnoMancerHurt/sprTechnoMancerHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3f2ab1af-47e3-4d43-a85c-b0fd3a7a8ba7","path":"sprites/sprTechnoMancerHurt/sprTechnoMancerHurt.yy",},"LayerId":{"name":"e20a0404-f898-4c0a-855f-5d1f93f2d682","path":"sprites/sprTechnoMancerHurt/sprTechnoMancerHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerHurt","path":"sprites/sprTechnoMancerHurt/sprTechnoMancerHurt.yy",},"resourceVersion":"1.0","name":"3f2ab1af-47e3-4d43-a85c-b0fd3a7a8ba7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6d156340-7cb8-4db8-b9ec-70b0f426dc04","path":"sprites/sprTechnoMancerHurt/sprTechnoMancerHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6d156340-7cb8-4db8-b9ec-70b0f426dc04","path":"sprites/sprTechnoMancerHurt/sprTechnoMancerHurt.yy",},"LayerId":{"name":"e20a0404-f898-4c0a-855f-5d1f93f2d682","path":"sprites/sprTechnoMancerHurt/sprTechnoMancerHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerHurt","path":"sprites/sprTechnoMancerHurt/sprTechnoMancerHurt.yy",},"resourceVersion":"1.0","name":"6d156340-7cb8-4db8-b9ec-70b0f426dc04","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5e36a602-8ddb-4599-8fb3-ccae01f11667",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3f2ab1af-47e3-4d43-a85c-b0fd3a7a8ba7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6d156340-7cb8-4db8-b9ec-70b0f426dc04",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprTechnoMancerHurt","path":"sprites/sprTechnoMancerHurt/sprTechnoMancerHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprTechnoMancerHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"fc11be1d-2bed-4b88-b7fe-2f93ccde5656","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5e36a602-8ddb-4599-8fb3-ccae01f11667","path":"sprites/sprTechnoMancerHurt/sprTechnoMancerHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"7cfdc8ec-9420-4128-b118-0590991a8c11","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3f2ab1af-47e3-4d43-a85c-b0fd3a7a8ba7","path":"sprites/sprTechnoMancerHurt/sprTechnoMancerHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f7f1c678-97b7-4924-9cfb-a1f0aaa64206","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6d156340-7cb8-4db8-b9ec-70b0f426dc04","path":"sprites/sprTechnoMancerHurt/sprTechnoMancerHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 60,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprTechnoMancerHurt","path":"sprites/sprTechnoMancerHurt/sprTechnoMancerHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprTechnoMancerHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e20a0404-f898-4c0a-855f-5d1f93f2d682","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e20a0404-f898-4c0a-855f-5d1f93f2d682","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Technomancer",
     "path": "folders/Sprites/Enemies/Boss/Technomancer.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprTechnoMancerHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

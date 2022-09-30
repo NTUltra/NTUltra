@@ -473,13 +473,6 @@ wave[i] = {
 };
 i++;
 wave[i] = {
-	obj: HealthChest,
-	time: 100,
-	xx: centerX,
-	yy: centerY - 32
-};
-i++
-wave[i] = {
 	obj: AmmoChest,
 	time: 100,
 	xx: centerX-64,

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedNecromancerHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"0966c788-686d-4dc9-8df0-26fa7624c4f1","path":"sprites/sprInvertedNecromancerHurt/sprInvertedNecromancerHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0966c788-686d-4dc9-8df0-26fa7624c4f1","path":"sprites/sprInvertedNecromancerHurt/sprInvertedNecromancerHurt.yy",},"LayerId":{"name":"a9fb027e-6582-4df8-b7e2-bda1d9635506","path":"sprites/sprInvertedNecromancerHurt/sprInvertedNecromancerHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedNecromancerHurt","path":"sprites/sprInvertedNecromancerHurt/sprInvertedNecromancerHurt.yy",},"resourceVersion":"1.0","name":"0966c788-686d-4dc9-8df0-26fa7624c4f1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7ab09158-c9ac-4c10-83da-f3c7ee81f500","path":"sprites/sprInvertedNecromancerHurt/sprInvertedNecromancerHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7ab09158-c9ac-4c10-83da-f3c7ee81f500","path":"sprites/sprInvertedNecromancerHurt/sprInvertedNecromancerHurt.yy",},"LayerId":{"name":"a9fb027e-6582-4df8-b7e2-bda1d9635506","path":"sprites/sprInvertedNecromancerHurt/sprInvertedNecromancerHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedNecromancerHurt","path":"sprites/sprInvertedNecromancerHurt/sprInvertedNecromancerHurt.yy",},"resourceVersion":"1.0","name":"7ab09158-c9ac-4c10-83da-f3c7ee81f500","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"657d39ce-f18f-446f-9ac9-d3f9739e8e59","path":"sprites/sprInvertedNecromancerHurt/sprInvertedNecromancerHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"657d39ce-f18f-446f-9ac9-d3f9739e8e59","path":"sprites/sprInvertedNecromancerHurt/sprInvertedNecromancerHurt.yy",},"LayerId":{"name":"a9fb027e-6582-4df8-b7e2-bda1d9635506","path":"sprites/sprInvertedNecromancerHurt/sprInvertedNecromancerHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedNecromancerHurt","path":"sprites/sprInvertedNecromancerHurt/sprInvertedNecromancerHurt.yy",},"resourceVersion":"1.0","name":"657d39ce-f18f-446f-9ac9-d3f9739e8e59","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0966c788-686d-4dc9-8df0-26fa7624c4f1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7ab09158-c9ac-4c10-83da-f3c7ee81f500",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"657d39ce-f18f-446f-9ac9-d3f9739e8e59",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedNecromancerHurt","path":"sprites/sprInvertedNecromancerHurt/sprInvertedNecromancerHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"43c6c45f-baa4-46fe-9172-49477662f0ba","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0966c788-686d-4dc9-8df0-26fa7624c4f1","path":"sprites/sprInvertedNecromancerHurt/sprInvertedNecromancerHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"0125c097-9dd5-4fcb-ba72-d5a743d85d2e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7ab09158-c9ac-4c10-83da-f3c7ee81f500","path":"sprites/sprInvertedNecromancerHurt/sprInvertedNecromancerHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"836c1ffb-a8aa-4b34-b32a-bdf20ea3bf3b","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"657d39ce-f18f-446f-9ac9-d3f9739e8e59","path":"sprites/sprInvertedNecromancerHurt/sprInvertedNecromancerHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedNecromancerHurt","path":"sprites/sprInvertedNecromancerHurt/sprInvertedNecromancerHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a9fb027e-6582-4df8-b7e2-bda1d9635506","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a9fb027e-6582-4df8-b7e2-bda1d9635506","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Labs",
     "path": "folders/Sprites/Enemies/Labs.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedNecromancerHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

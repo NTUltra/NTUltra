@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprEnergySwordBullet",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6ffd49bc-f342-4baf-b564-57044ea27590","path":"sprites/sprEnergySwordBullet/sprEnergySwordBullet.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6ffd49bc-f342-4baf-b564-57044ea27590","path":"sprites/sprEnergySwordBullet/sprEnergySwordBullet.yy",},"LayerId":{"name":"f109030e-9889-48a0-84a5-58cd7ab7d214","path":"sprites/sprEnergySwordBullet/sprEnergySwordBullet.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEnergySwordBullet","path":"sprites/sprEnergySwordBullet/sprEnergySwordBullet.yy",},"resourceVersion":"1.0","name":"6ffd49bc-f342-4baf-b564-57044ea27590","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f4e4c49f-9143-48c7-a7f2-6cc1b091452a","path":"sprites/sprEnergySwordBullet/sprEnergySwordBullet.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f4e4c49f-9143-48c7-a7f2-6cc1b091452a","path":"sprites/sprEnergySwordBullet/sprEnergySwordBullet.yy",},"LayerId":{"name":"f109030e-9889-48a0-84a5-58cd7ab7d214","path":"sprites/sprEnergySwordBullet/sprEnergySwordBullet.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEnergySwordBullet","path":"sprites/sprEnergySwordBullet/sprEnergySwordBullet.yy",},"resourceVersion":"1.0","name":"f4e4c49f-9143-48c7-a7f2-6cc1b091452a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6ffd49bc-f342-4baf-b564-57044ea27590",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f4e4c49f-9143-48c7-a7f2-6cc1b091452a",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprEnergySwordBullet","path":"sprites/sprEnergySwordBullet/sprEnergySwordBullet.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"18404d94-a865-4511-be15-9f7c5cf9714f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6ffd49bc-f342-4baf-b564-57044ea27590","path":"sprites/sprEnergySwordBullet/sprEnergySwordBullet.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8dbb7070-98dd-463d-a3b7-979e7eb10db8","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f4e4c49f-9143-48c7-a7f2-6cc1b091452a","path":"sprites/sprEnergySwordBullet/sprEnergySwordBullet.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprEnergySwordBullet","path":"sprites/sprEnergySwordBullet/sprEnergySwordBullet.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f109030e-9889-48a0-84a5-58cd7ab7d214","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f109030e-9889-48a0-84a5-58cd7ab7d214","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Projectiles",
     "path": "folders/Sprites/Projectiles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprEnergySwordBullet",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

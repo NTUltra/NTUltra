@@ -10,3 +10,9 @@ if instance_exists(Player) && Player.skill_got[12]
 }
 maxRange = 800;
 alarm[3] = 1;
+
+	dmg = 3;
+if UberCont.opt_gamemode == 9//Casual mode
+	dmg = 2;
+if UberCont.opt_gamemode == 34//HARD MODE
+	dmg = 4;

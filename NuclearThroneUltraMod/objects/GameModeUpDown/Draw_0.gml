@@ -25,8 +25,8 @@ event_user(0);
 //draw_sprite(sprite_index,/*UberCont.opt_gamemode*/1,x,y)
 if (UberCont.opt_gamemode==1&&gamemodeOrder[gamemodenr]==1)
 {
-if !instance_exists(StartingWeaponUpDown)
-instance_create(x,y+24,StartingWeaponUpDown);
+	if !instance_exists(StartingWeaponUpDown)
+		instance_create(x,y+24,StartingWeaponUpDown);
 /*with(instance_create(x,y+32,WeaponDisplay))
 {
 scrWeapons();
@@ -34,8 +34,8 @@ sprite_index=wep_sprt[1];
 }*/
 }
 else{
-with StartingWeaponUpDown
-instance_destroy()
+	with StartingWeaponUpDown
+		instance_destroy()
 }
 
 if (UberCont.opt_gamemode==19&&gamemodeOrder[gamemodenr]==19)

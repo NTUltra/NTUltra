@@ -11,8 +11,11 @@ if instance_exists(Corpse)
 				instance_destroy(id,false);
 				with instance_create(x,y,choose(InvertedFreak,InvertedExploFreak))
 				{
-					droprate = 8;
+					droprate = 5;
 					raddrop = 0;
+					countKill = false;
+					existTime = 30;
+					alarm[1] *= 0.5;
 					snd_play(choose(sndSpark1,sndSpark2),0.1)
 					var ang = random(360);
 					var am = 4;

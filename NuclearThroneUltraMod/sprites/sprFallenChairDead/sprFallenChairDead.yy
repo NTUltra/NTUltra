@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprFallenChairDead",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"2e030503-65ab-4d63-8035-53e0b0920c11","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2e030503-65ab-4d63-8035-53e0b0920c11","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},"LayerId":{"name":"3e67322e-cbe9-4d6f-993c-44e7dc6491a6","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFallenChairDead","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},"resourceVersion":"1.0","name":"2e030503-65ab-4d63-8035-53e0b0920c11","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ff3a6e69-0ce4-413a-9bc0-ee0b9c0e92c1","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ff3a6e69-0ce4-413a-9bc0-ee0b9c0e92c1","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},"LayerId":{"name":"3e67322e-cbe9-4d6f-993c-44e7dc6491a6","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFallenChairDead","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},"resourceVersion":"1.0","name":"ff3a6e69-0ce4-413a-9bc0-ee0b9c0e92c1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d27f7778-8346-4c55-95f4-a770067fc4de","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d27f7778-8346-4c55-95f4-a770067fc4de","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},"LayerId":{"name":"3e67322e-cbe9-4d6f-993c-44e7dc6491a6","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFallenChairDead","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},"resourceVersion":"1.0","name":"d27f7778-8346-4c55-95f4-a770067fc4de","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"51bbbdf3-57e2-4041-a18b-21cd3ff8244a","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"51bbbdf3-57e2-4041-a18b-21cd3ff8244a","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},"LayerId":{"name":"3e67322e-cbe9-4d6f-993c-44e7dc6491a6","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFallenChairDead","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},"resourceVersion":"1.0","name":"51bbbdf3-57e2-4041-a18b-21cd3ff8244a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2e030503-65ab-4d63-8035-53e0b0920c11",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ff3a6e69-0ce4-413a-9bc0-ee0b9c0e92c1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d27f7778-8346-4c55-95f4-a770067fc4de",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"51bbbdf3-57e2-4041-a18b-21cd3ff8244a",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprFallenChairDead","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprFallenChairDead",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -49,12 +46,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"b209e1ea-d7d3-464c-871a-0f74280fd254","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2e030503-65ab-4d63-8035-53e0b0920c11","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"97cd674c-59e8-49ad-81e6-00872819f471","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ff3a6e69-0ce4-413a-9bc0-ee0b9c0e92c1","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ef1c0dcf-242d-4b18-9191-a31884b11402","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d27f7778-8346-4c55-95f4-a770067fc4de","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"aa09426f-bd92-4e3c-9bdd-050470984828","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"51bbbdf3-57e2-4041-a18b-21cd3ff8244a","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +67,13 @@
     "yorigin": 13,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprFallenChairDead","path":"sprites/sprFallenChairDead/sprFallenChairDead.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprFallenChairDead",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3e67322e-cbe9-4d6f-993c-44e7dc6491a6","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3e67322e-cbe9-4d6f-993c-44e7dc6491a6","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Props",
     "path": "folders/Sprites/Palace/PalaceEnviroment/Props.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprFallenChairDead",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

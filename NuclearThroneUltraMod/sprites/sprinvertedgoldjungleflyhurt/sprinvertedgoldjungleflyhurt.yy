@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedGoldJungleFlyHurt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f29f30d1-3fcc-4267-a375-66f6acf5d1be","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f29f30d1-3fcc-4267-a375-66f6acf5d1be","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"LayerId":{"name":"24201dee-f11b-40c3-86b3-d73ca06fb0bc","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldJungleFlyHurt","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"resourceVersion":"1.0","name":"f29f30d1-3fcc-4267-a375-66f6acf5d1be","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e974d228-ab06-4455-9892-139ad065d185","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e974d228-ab06-4455-9892-139ad065d185","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"LayerId":{"name":"24201dee-f11b-40c3-86b3-d73ca06fb0bc","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldJungleFlyHurt","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"resourceVersion":"1.0","name":"e974d228-ab06-4455-9892-139ad065d185","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4cb62450-e634-4673-87b7-fb3d28681e47","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4cb62450-e634-4673-87b7-fb3d28681e47","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"LayerId":{"name":"24201dee-f11b-40c3-86b3-d73ca06fb0bc","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldJungleFlyHurt","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"resourceVersion":"1.0","name":"4cb62450-e634-4673-87b7-fb3d28681e47","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f29f30d1-3fcc-4267-a375-66f6acf5d1be",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e974d228-ab06-4455-9892-139ad065d185",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4cb62450-e634-4673-87b7-fb3d28681e47",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedGoldJungleFlyHurt","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedGoldJungleFlyHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"668b24ed-2191-4bbf-b2f5-6fc881e3ee12","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f29f30d1-3fcc-4267-a375-66f6acf5d1be","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"cd559dc1-b645-4185-a3a3-a9870b8b0cd5","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e974d228-ab06-4455-9892-139ad065d185","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"0b5c8148-8778-4809-9a27-6148fe42c46d","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4cb62450-e634-4673-87b7-fb3d28681e47","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedGoldJungleFlyHurt","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedGoldJungleFlyHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"24201dee-f11b-40c3-86b3-d73ca06fb0bc","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"24201dee-f11b-40c3-86b3-d73ca06fb0bc","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "GoldJungleFly",
     "path": "folders/Sprites/Enemies/JungleEnemy/GoldJungleFly.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedGoldJungleFlyHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

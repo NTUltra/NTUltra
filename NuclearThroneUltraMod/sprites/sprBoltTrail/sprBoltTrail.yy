@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprBoltTrail",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,24 +27,16 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a1596971-3227-406a-86d0-66788af0e0bc","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a1596971-3227-406a-86d0-66788af0e0bc","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"LayerId":{"name":"a194f2cf-07fa-4025-ab5b-6ba999c9afd8","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBoltTrail","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"resourceVersion":"1.0","name":"a1596971-3227-406a-86d0-66788af0e0bc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3eb6bc93-c791-41f7-9ebb-419c77ce47dc","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3eb6bc93-c791-41f7-9ebb-419c77ce47dc","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"LayerId":{"name":"a194f2cf-07fa-4025-ab5b-6ba999c9afd8","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBoltTrail","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"resourceVersion":"1.0","name":"3eb6bc93-c791-41f7-9ebb-419c77ce47dc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"09ad05cd-32cb-4b66-920e-9b008159f599","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"09ad05cd-32cb-4b66-920e-9b008159f599","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"LayerId":{"name":"a194f2cf-07fa-4025-ab5b-6ba999c9afd8","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBoltTrail","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"resourceVersion":"1.0","name":"09ad05cd-32cb-4b66-920e-9b008159f599","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3426bd72-7459-4b40-b113-1f622173f833","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3426bd72-7459-4b40-b113-1f622173f833","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"LayerId":{"name":"a194f2cf-07fa-4025-ab5b-6ba999c9afd8","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBoltTrail","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"resourceVersion":"1.0","name":"3426bd72-7459-4b40-b113-1f622173f833","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f5989e32-2083-46d0-a15b-fadf5117af93","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f5989e32-2083-46d0-a15b-fadf5117af93","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"LayerId":{"name":"a194f2cf-07fa-4025-ab5b-6ba999c9afd8","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBoltTrail","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"resourceVersion":"1.0","name":"f5989e32-2083-46d0-a15b-fadf5117af93","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a1596971-3227-406a-86d0-66788af0e0bc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3eb6bc93-c791-41f7-9ebb-419c77ce47dc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"09ad05cd-32cb-4b66-920e-9b008159f599",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3426bd72-7459-4b40-b113-1f622173f833",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f5989e32-2083-46d0-a15b-fadf5117af93",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprBoltTrail","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -52,13 +47,13 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"aeea0776-3752-4a26-be7c-90cefba09eae","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a1596971-3227-406a-86d0-66788af0e0bc","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"65e0e92c-ca9d-4ff1-9245-a49151e411ad","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3eb6bc93-c791-41f7-9ebb-419c77ce47dc","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"fa2aeda6-028b-459f-b27f-1bca87ed604d","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"09ad05cd-32cb-4b66-920e-9b008159f599","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ca5efdf6-a6b1-4497-bb71-8a19bdcced71","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3426bd72-7459-4b40-b113-1f622173f833","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"aafdcb40-0463-4282-b668-59ab03c89886","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f5989e32-2083-46d0-a15b-fadf5117af93","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -74,22 +69,13 @@
     "yorigin": 1,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprBoltTrail","path":"sprites/sprBoltTrail/sprBoltTrail.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a194f2cf-07fa-4025-ab5b-6ba999c9afd8","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a194f2cf-07fa-4025-ab5b-6ba999c9afd8","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Projectiles",
     "path": "folders/Sprites/Projectiles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprBoltTrail",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

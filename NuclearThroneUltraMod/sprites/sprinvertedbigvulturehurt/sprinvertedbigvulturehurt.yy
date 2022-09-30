@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedBigVultureHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4c11c7a6-93dc-47c8-aad6-87b6e10c50b2","path":"sprites/sprInvertedBigVultureHurt/sprInvertedBigVultureHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4c11c7a6-93dc-47c8-aad6-87b6e10c50b2","path":"sprites/sprInvertedBigVultureHurt/sprInvertedBigVultureHurt.yy",},"LayerId":{"name":"8ee3921b-f736-417a-927d-d55e3d6ecb5b","path":"sprites/sprInvertedBigVultureHurt/sprInvertedBigVultureHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedBigVultureHurt","path":"sprites/sprInvertedBigVultureHurt/sprInvertedBigVultureHurt.yy",},"resourceVersion":"1.0","name":"4c11c7a6-93dc-47c8-aad6-87b6e10c50b2","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"19cc4d21-a027-4c45-9f81-3eb321755fd2","path":"sprites/sprInvertedBigVultureHurt/sprInvertedBigVultureHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"19cc4d21-a027-4c45-9f81-3eb321755fd2","path":"sprites/sprInvertedBigVultureHurt/sprInvertedBigVultureHurt.yy",},"LayerId":{"name":"8ee3921b-f736-417a-927d-d55e3d6ecb5b","path":"sprites/sprInvertedBigVultureHurt/sprInvertedBigVultureHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedBigVultureHurt","path":"sprites/sprInvertedBigVultureHurt/sprInvertedBigVultureHurt.yy",},"resourceVersion":"1.0","name":"19cc4d21-a027-4c45-9f81-3eb321755fd2","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4d96da35-6bdf-46db-bc6c-7a7c4d8aa5f7","path":"sprites/sprInvertedBigVultureHurt/sprInvertedBigVultureHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4d96da35-6bdf-46db-bc6c-7a7c4d8aa5f7","path":"sprites/sprInvertedBigVultureHurt/sprInvertedBigVultureHurt.yy",},"LayerId":{"name":"8ee3921b-f736-417a-927d-d55e3d6ecb5b","path":"sprites/sprInvertedBigVultureHurt/sprInvertedBigVultureHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedBigVultureHurt","path":"sprites/sprInvertedBigVultureHurt/sprInvertedBigVultureHurt.yy",},"resourceVersion":"1.0","name":"4d96da35-6bdf-46db-bc6c-7a7c4d8aa5f7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4c11c7a6-93dc-47c8-aad6-87b6e10c50b2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"19cc4d21-a027-4c45-9f81-3eb321755fd2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4d96da35-6bdf-46db-bc6c-7a7c4d8aa5f7",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedBigVultureHurt","path":"sprites/sprInvertedBigVultureHurt/sprInvertedBigVultureHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedBigVultureHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"1d932fa8-698f-46fb-8ec6-da0595bb136a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4c11c7a6-93dc-47c8-aad6-87b6e10c50b2","path":"sprites/sprInvertedBigVultureHurt/sprInvertedBigVultureHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"44eceba9-5d0f-4969-a93d-71444dc2afdf","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"19cc4d21-a027-4c45-9f81-3eb321755fd2","path":"sprites/sprInvertedBigVultureHurt/sprInvertedBigVultureHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"152db7c3-fe5c-4856-91de-844ca064979c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4d96da35-6bdf-46db-bc6c-7a7c4d8aa5f7","path":"sprites/sprInvertedBigVultureHurt/sprInvertedBigVultureHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedBigVultureHurt","path":"sprites/sprInvertedBigVultureHurt/sprInvertedBigVultureHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedBigVultureHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8ee3921b-f736-417a-927d-d55e3d6ecb5b","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8ee3921b-f736-417a-927d-d55e3d6ecb5b","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "BigVulture",
     "path": "folders/Sprites/Enemies/Boss/BigVulture.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedBigVultureHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

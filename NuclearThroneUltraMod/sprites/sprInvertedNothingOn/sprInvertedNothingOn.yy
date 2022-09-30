@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedNothingOn",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"16aa8db1-73d2-4084-9b01-7c7810af655d","path":"sprites/sprInvertedNothingOn/sprInvertedNothingOn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"16aa8db1-73d2-4084-9b01-7c7810af655d","path":"sprites/sprInvertedNothingOn/sprInvertedNothingOn.yy",},"LayerId":{"name":"8f25db97-b39f-447c-b970-c4d8e968f622","path":"sprites/sprInvertedNothingOn/sprInvertedNothingOn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedNothingOn","path":"sprites/sprInvertedNothingOn/sprInvertedNothingOn.yy",},"resourceVersion":"1.0","name":"16aa8db1-73d2-4084-9b01-7c7810af655d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a9f12f92-a0b6-4650-9cff-7c87721ce814","path":"sprites/sprInvertedNothingOn/sprInvertedNothingOn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a9f12f92-a0b6-4650-9cff-7c87721ce814","path":"sprites/sprInvertedNothingOn/sprInvertedNothingOn.yy",},"LayerId":{"name":"8f25db97-b39f-447c-b970-c4d8e968f622","path":"sprites/sprInvertedNothingOn/sprInvertedNothingOn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedNothingOn","path":"sprites/sprInvertedNothingOn/sprInvertedNothingOn.yy",},"resourceVersion":"1.0","name":"a9f12f92-a0b6-4650-9cff-7c87721ce814","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"76a7b4b4-9346-4cae-adcd-4ca68f4aeb59","path":"sprites/sprInvertedNothingOn/sprInvertedNothingOn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"76a7b4b4-9346-4cae-adcd-4ca68f4aeb59","path":"sprites/sprInvertedNothingOn/sprInvertedNothingOn.yy",},"LayerId":{"name":"8f25db97-b39f-447c-b970-c4d8e968f622","path":"sprites/sprInvertedNothingOn/sprInvertedNothingOn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedNothingOn","path":"sprites/sprInvertedNothingOn/sprInvertedNothingOn.yy",},"resourceVersion":"1.0","name":"76a7b4b4-9346-4cae-adcd-4ca68f4aeb59","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"16aa8db1-73d2-4084-9b01-7c7810af655d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a9f12f92-a0b6-4650-9cff-7c87721ce814",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"76a7b4b4-9346-4cae-adcd-4ca68f4aeb59",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedNothingOn","path":"sprites/sprInvertedNothingOn/sprInvertedNothingOn.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedNothingOn",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"be13648e-ee3e-4ab7-8eca-822e99e12c8f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"16aa8db1-73d2-4084-9b01-7c7810af655d","path":"sprites/sprInvertedNothingOn/sprInvertedNothingOn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6367c9b8-c118-43ab-973c-d983c0a64fba","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a9f12f92-a0b6-4650-9cff-7c87721ce814","path":"sprites/sprInvertedNothingOn/sprInvertedNothingOn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"726fabc7-1bc9-4e5a-9ef0-19c676dfed93","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"76a7b4b4-9346-4cae-adcd-4ca68f4aeb59","path":"sprites/sprInvertedNothingOn/sprInvertedNothingOn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 125,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedNothingOn","path":"sprites/sprInvertedNothingOn/sprInvertedNothingOn.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedNothingOn",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8f25db97-b39f-447c-b970-c4d8e968f622","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8f25db97-b39f-447c-b970-c4d8e968f622","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Throne1",
     "path": "folders/Sprites/Palace/Palace Enemy/TheThrone/Throne1.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedNothingOn",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprTechnoMancerLastDead",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,102 +27,42 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6ba1a636-67a2-4903-9bcb-20108b32532a","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6ba1a636-67a2-4903-9bcb-20108b32532a","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"6ba1a636-67a2-4903-9bcb-20108b32532a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"df2c9294-75c8-4ccb-b495-e607fd3062e6","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"df2c9294-75c8-4ccb-b495-e607fd3062e6","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"df2c9294-75c8-4ccb-b495-e607fd3062e6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6e856191-2793-468b-acb3-2bab6c620fd1","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6e856191-2793-468b-acb3-2bab6c620fd1","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"6e856191-2793-468b-acb3-2bab6c620fd1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"dab8639a-cddc-49ba-9332-1a0c03647e2b","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dab8639a-cddc-49ba-9332-1a0c03647e2b","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"dab8639a-cddc-49ba-9332-1a0c03647e2b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7fefa7cd-807c-4072-b51f-bb6fd21cad79","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7fefa7cd-807c-4072-b51f-bb6fd21cad79","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"7fefa7cd-807c-4072-b51f-bb6fd21cad79","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a69d64e7-c8a8-4e1b-859a-aa6bdd5e34c5","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a69d64e7-c8a8-4e1b-859a-aa6bdd5e34c5","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"a69d64e7-c8a8-4e1b-859a-aa6bdd5e34c5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f380a6fc-da49-4277-a74f-85986df9edad","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f380a6fc-da49-4277-a74f-85986df9edad","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"f380a6fc-da49-4277-a74f-85986df9edad","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2180371c-5599-4b2f-8d00-b85384f40ba7","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2180371c-5599-4b2f-8d00-b85384f40ba7","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"2180371c-5599-4b2f-8d00-b85384f40ba7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d24fd29d-4ef9-4ba2-bf12-44715b727af2","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d24fd29d-4ef9-4ba2-bf12-44715b727af2","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"d24fd29d-4ef9-4ba2-bf12-44715b727af2","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"834d0796-b29e-4b47-859b-7093f45cacee","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"834d0796-b29e-4b47-859b-7093f45cacee","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"834d0796-b29e-4b47-859b-7093f45cacee","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"be3d4161-c749-4600-b5c1-31d042858072","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"be3d4161-c749-4600-b5c1-31d042858072","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"be3d4161-c749-4600-b5c1-31d042858072","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f8d1daa9-5a14-4dff-81b9-4cac2cc5361d","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f8d1daa9-5a14-4dff-81b9-4cac2cc5361d","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"f8d1daa9-5a14-4dff-81b9-4cac2cc5361d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f56a1d5f-feec-4caa-b633-8ab6965be6d5","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f56a1d5f-feec-4caa-b633-8ab6965be6d5","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"f56a1d5f-feec-4caa-b633-8ab6965be6d5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"21e83367-d9f4-4d04-abdb-554796297568","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"21e83367-d9f4-4d04-abdb-554796297568","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"21e83367-d9f4-4d04-abdb-554796297568","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bcd808c2-b0bb-4b5c-93e8-0ce15a764dff","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bcd808c2-b0bb-4b5c-93e8-0ce15a764dff","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"bcd808c2-b0bb-4b5c-93e8-0ce15a764dff","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ebe463cd-2f57-4ed1-9af7-9666d6aa3dde","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ebe463cd-2f57-4ed1-9af7-9666d6aa3dde","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"ebe463cd-2f57-4ed1-9af7-9666d6aa3dde","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e2eb9cad-e273-46cd-aa23-79fee3b89c95","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e2eb9cad-e273-46cd-aa23-79fee3b89c95","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"e2eb9cad-e273-46cd-aa23-79fee3b89c95","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3101205e-0c4b-4ad1-b3b6-cab47b068c67","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3101205e-0c4b-4ad1-b3b6-cab47b068c67","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"3101205e-0c4b-4ad1-b3b6-cab47b068c67","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"853e3136-8d5a-4e27-8c26-79c47c9b53ea","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"853e3136-8d5a-4e27-8c26-79c47c9b53ea","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"853e3136-8d5a-4e27-8c26-79c47c9b53ea","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"fd1ee070-040f-4e21-9933-c896eed4e95e","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fd1ee070-040f-4e21-9933-c896eed4e95e","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"fd1ee070-040f-4e21-9933-c896eed4e95e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5be9374a-7dab-4f25-a2d8-d9efc08ce539","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5be9374a-7dab-4f25-a2d8-d9efc08ce539","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"5be9374a-7dab-4f25-a2d8-d9efc08ce539","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a03e566a-cee1-40e3-bc0b-cdd34cc99fae","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a03e566a-cee1-40e3-bc0b-cdd34cc99fae","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"a03e566a-cee1-40e3-bc0b-cdd34cc99fae","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ed6c8b20-bb8f-451c-9518-1a51dd3d72cc","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ed6c8b20-bb8f-451c-9518-1a51dd3d72cc","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"ed6c8b20-bb8f-451c-9518-1a51dd3d72cc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a766afd1-dd72-44cf-befb-03d8ca07a333","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a766afd1-dd72-44cf-befb-03d8ca07a333","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"a766afd1-dd72-44cf-befb-03d8ca07a333","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"156c1702-0220-4800-be65-1babda270e92","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"156c1702-0220-4800-be65-1babda270e92","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"156c1702-0220-4800-be65-1babda270e92","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6d238909-50e3-4ddd-b396-ec326d113abc","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6d238909-50e3-4ddd-b396-ec326d113abc","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"6d238909-50e3-4ddd-b396-ec326d113abc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e96a293d-40f1-4ad9-b8e8-f516a564f34b","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e96a293d-40f1-4ad9-b8e8-f516a564f34b","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"e96a293d-40f1-4ad9-b8e8-f516a564f34b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7fba007d-c21a-4a7b-9809-bc6a07df2cfc","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7fba007d-c21a-4a7b-9809-bc6a07df2cfc","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"7fba007d-c21a-4a7b-9809-bc6a07df2cfc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"517a2567-01d5-4258-99c2-bb092b930e10","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"517a2567-01d5-4258-99c2-bb092b930e10","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"517a2567-01d5-4258-99c2-bb092b930e10","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"49b50139-5a61-4a6d-bdb6-82777d02f2cb","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"49b50139-5a61-4a6d-bdb6-82777d02f2cb","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"49b50139-5a61-4a6d-bdb6-82777d02f2cb","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c036e109-63d6-439e-9978-e866b9c025a4","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c036e109-63d6-439e-9978-e866b9c025a4","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"LayerId":{"name":"c3600823-1ae6-49c7-9329-3264b940e14c","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","name":"c036e109-63d6-439e-9978-e866b9c025a4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6ba1a636-67a2-4903-9bcb-20108b32532a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"df2c9294-75c8-4ccb-b495-e607fd3062e6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6e856191-2793-468b-acb3-2bab6c620fd1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dab8639a-cddc-49ba-9332-1a0c03647e2b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7fefa7cd-807c-4072-b51f-bb6fd21cad79",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a69d64e7-c8a8-4e1b-859a-aa6bdd5e34c5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f380a6fc-da49-4277-a74f-85986df9edad",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2180371c-5599-4b2f-8d00-b85384f40ba7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d24fd29d-4ef9-4ba2-bf12-44715b727af2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"834d0796-b29e-4b47-859b-7093f45cacee",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"be3d4161-c749-4600-b5c1-31d042858072",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f8d1daa9-5a14-4dff-81b9-4cac2cc5361d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f56a1d5f-feec-4caa-b633-8ab6965be6d5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"21e83367-d9f4-4d04-abdb-554796297568",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bcd808c2-b0bb-4b5c-93e8-0ce15a764dff",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ebe463cd-2f57-4ed1-9af7-9666d6aa3dde",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e2eb9cad-e273-46cd-aa23-79fee3b89c95",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3101205e-0c4b-4ad1-b3b6-cab47b068c67",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"853e3136-8d5a-4e27-8c26-79c47c9b53ea",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fd1ee070-040f-4e21-9933-c896eed4e95e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5be9374a-7dab-4f25-a2d8-d9efc08ce539",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a03e566a-cee1-40e3-bc0b-cdd34cc99fae",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ed6c8b20-bb8f-451c-9518-1a51dd3d72cc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a766afd1-dd72-44cf-befb-03d8ca07a333",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"156c1702-0220-4800-be65-1babda270e92",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6d238909-50e3-4ddd-b396-ec326d113abc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e96a293d-40f1-4ad9-b8e8-f516a564f34b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7fba007d-c21a-4a7b-9809-bc6a07df2cfc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"517a2567-01d5-4258-99c2-bb092b930e10",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"49b50139-5a61-4a6d-bdb6-82777d02f2cb",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c036e109-63d6-439e-9978-e866b9c025a4",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprTechnoMancerLastDead",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -130,7 +73,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"0663d499-c1b5-46e7-af92-e0094b0bb4b3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6ba1a636-67a2-4903-9bcb-20108b32532a","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f872dd18-d047-4f94-bd20-637720e98a5f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"df2c9294-75c8-4ccb-b495-e607fd3062e6","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ddd31e13-84e9-423b-80a5-a8cc48d49b1a","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6e856191-2793-468b-acb3-2bab6c620fd1","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -162,7 +105,7 @@
             {"id":"d721d52c-472f-4a21-8efc-bb9a395b4485","Key":28.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"517a2567-01d5-4258-99c2-bb092b930e10","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"1cdf33cf-76ea-4cc0-b395-d9635249cd6b","Key":29.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"49b50139-5a61-4a6d-bdb6-82777d02f2cb","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"5382b923-14e4-4d43-a79b-b1f503eaf82a","Key":30.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c036e109-63d6-439e-9978-e866b9c025a4","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -178,22 +121,13 @@
     "yorigin": 60,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprTechnoMancerLastDead","path":"sprites/sprTechnoMancerLastDead/sprTechnoMancerLastDead.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprTechnoMancerLastDead",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c3600823-1ae6-49c7-9329-3264b940e14c","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c3600823-1ae6-49c7-9329-3264b940e14c","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Technomancer",
     "path": "folders/Sprites/Enemies/Boss/Technomancer.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprTechnoMancerLastDead",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

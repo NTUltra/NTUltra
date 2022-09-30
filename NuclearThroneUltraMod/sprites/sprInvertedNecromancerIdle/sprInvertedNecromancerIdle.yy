@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedNecromancerIdle",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8bb494cc-3bc6-4bb8-b2ed-ebc7b5d07341","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8bb494cc-3bc6-4bb8-b2ed-ebc7b5d07341","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},"LayerId":{"name":"bb5d6d62-b1f5-4e0c-99fe-3492df1254ea","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedNecromancerIdle","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},"resourceVersion":"1.0","name":"8bb494cc-3bc6-4bb8-b2ed-ebc7b5d07341","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"fabfc4a7-a596-41ea-8c71-a9d19fbc0a34","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fabfc4a7-a596-41ea-8c71-a9d19fbc0a34","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},"LayerId":{"name":"bb5d6d62-b1f5-4e0c-99fe-3492df1254ea","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedNecromancerIdle","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},"resourceVersion":"1.0","name":"fabfc4a7-a596-41ea-8c71-a9d19fbc0a34","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f14b77bb-d86b-42fe-ad3b-26745a46db1d","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f14b77bb-d86b-42fe-ad3b-26745a46db1d","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},"LayerId":{"name":"bb5d6d62-b1f5-4e0c-99fe-3492df1254ea","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedNecromancerIdle","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},"resourceVersion":"1.0","name":"f14b77bb-d86b-42fe-ad3b-26745a46db1d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ca6145bb-33aa-4327-a5b3-560eb3a3567e","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ca6145bb-33aa-4327-a5b3-560eb3a3567e","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},"LayerId":{"name":"bb5d6d62-b1f5-4e0c-99fe-3492df1254ea","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedNecromancerIdle","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},"resourceVersion":"1.0","name":"ca6145bb-33aa-4327-a5b3-560eb3a3567e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8bb494cc-3bc6-4bb8-b2ed-ebc7b5d07341",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fabfc4a7-a596-41ea-8c71-a9d19fbc0a34",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f14b77bb-d86b-42fe-ad3b-26745a46db1d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ca6145bb-33aa-4327-a5b3-560eb3a3567e",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedNecromancerIdle","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -49,12 +46,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"a01a0e4a-5705-45df-b340-5e0a806652da","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8bb494cc-3bc6-4bb8-b2ed-ebc7b5d07341","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"4d38293c-7ae6-4532-94dc-c674b94e2ff1","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fabfc4a7-a596-41ea-8c71-a9d19fbc0a34","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"bdaaaf82-7a96-4d5f-8b73-570e6274be5a","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f14b77bb-d86b-42fe-ad3b-26745a46db1d","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e2a3a071-7ff0-40ba-b97a-502da4254f9a","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ca6145bb-33aa-4327-a5b3-560eb3a3567e","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +67,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedNecromancerIdle","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bb5d6d62-b1f5-4e0c-99fe-3492df1254ea","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"bb5d6d62-b1f5-4e0c-99fe-3492df1254ea","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Labs",
     "path": "folders/Sprites/Enemies/Labs.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedNecromancerIdle",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

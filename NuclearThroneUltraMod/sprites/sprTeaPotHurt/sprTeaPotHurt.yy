@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprTeaPotHurt",
   "bboxMode": 0,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"39521d70-ab21-458a-b884-ffba46e3a6ad","path":"sprites/sprTeaPotHurt/sprTeaPotHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"39521d70-ab21-458a-b884-ffba46e3a6ad","path":"sprites/sprTeaPotHurt/sprTeaPotHurt.yy",},"LayerId":{"name":"3ee53a11-a6d0-4b8b-96bb-08b91630cfd1","path":"sprites/sprTeaPotHurt/sprTeaPotHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTeaPotHurt","path":"sprites/sprTeaPotHurt/sprTeaPotHurt.yy",},"resourceVersion":"1.0","name":"39521d70-ab21-458a-b884-ffba46e3a6ad","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2aef1aa3-1987-4396-8761-b2de30cdd8ba","path":"sprites/sprTeaPotHurt/sprTeaPotHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2aef1aa3-1987-4396-8761-b2de30cdd8ba","path":"sprites/sprTeaPotHurt/sprTeaPotHurt.yy",},"LayerId":{"name":"3ee53a11-a6d0-4b8b-96bb-08b91630cfd1","path":"sprites/sprTeaPotHurt/sprTeaPotHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTeaPotHurt","path":"sprites/sprTeaPotHurt/sprTeaPotHurt.yy",},"resourceVersion":"1.0","name":"2aef1aa3-1987-4396-8761-b2de30cdd8ba","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0696112f-1f84-42fc-a2de-503874b2c72c","path":"sprites/sprTeaPotHurt/sprTeaPotHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0696112f-1f84-42fc-a2de-503874b2c72c","path":"sprites/sprTeaPotHurt/sprTeaPotHurt.yy",},"LayerId":{"name":"3ee53a11-a6d0-4b8b-96bb-08b91630cfd1","path":"sprites/sprTeaPotHurt/sprTeaPotHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTeaPotHurt","path":"sprites/sprTeaPotHurt/sprTeaPotHurt.yy",},"resourceVersion":"1.0","name":"0696112f-1f84-42fc-a2de-503874b2c72c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"39521d70-ab21-458a-b884-ffba46e3a6ad",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2aef1aa3-1987-4396-8761-b2de30cdd8ba",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0696112f-1f84-42fc-a2de-503874b2c72c",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprTeaPotHurt","path":"sprites/sprTeaPotHurt/sprTeaPotHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprTeaPotHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"54e0513a-d5f0-49a9-bde7-d56afff7f854","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"39521d70-ab21-458a-b884-ffba46e3a6ad","path":"sprites/sprTeaPotHurt/sprTeaPotHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"83a5a4a4-e5a9-47c5-8532-78eecd9bb3cb","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2aef1aa3-1987-4396-8761-b2de30cdd8ba","path":"sprites/sprTeaPotHurt/sprTeaPotHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"4b466ca2-3366-47a0-8d47-b24407cf8c27","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0696112f-1f84-42fc-a2de-503874b2c72c","path":"sprites/sprTeaPotHurt/sprTeaPotHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprTeaPotHurt","path":"sprites/sprTeaPotHurt/sprTeaPotHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprTeaPotHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3ee53a11-a6d0-4b8b-96bb-08b91630cfd1","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3ee53a11-a6d0-4b8b-96bb-08b91630cfd1","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "CardGuy",
     "path": "folders/Sprites/Enemies/CardGuy.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprTeaPotHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

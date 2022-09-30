@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprChesireCatStatue",
   "bboxMode": 0,
   "collisionKind": 0,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"51e46976-59b2-4c17-b38a-dd162de9f67f","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"51e46976-59b2-4c17-b38a-dd162de9f67f","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},"LayerId":{"name":"1e07ccd3-0e3a-420d-8257-ace59fb8df7f","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprChesireCatStatue","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},"resourceVersion":"1.0","name":"51e46976-59b2-4c17-b38a-dd162de9f67f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4f2d7080-7990-4c7d-9444-7b6443c9e738","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4f2d7080-7990-4c7d-9444-7b6443c9e738","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},"LayerId":{"name":"1e07ccd3-0e3a-420d-8257-ace59fb8df7f","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprChesireCatStatue","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},"resourceVersion":"1.0","name":"4f2d7080-7990-4c7d-9444-7b6443c9e738","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"99216314-9df0-411b-b902-07cca382e389","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"99216314-9df0-411b-b902-07cca382e389","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},"LayerId":{"name":"1e07ccd3-0e3a-420d-8257-ace59fb8df7f","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprChesireCatStatue","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},"resourceVersion":"1.0","name":"99216314-9df0-411b-b902-07cca382e389","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"81dbd5d4-80b9-485b-8c95-9967caf4f5ec","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"81dbd5d4-80b9-485b-8c95-9967caf4f5ec","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},"LayerId":{"name":"1e07ccd3-0e3a-420d-8257-ace59fb8df7f","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprChesireCatStatue","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},"resourceVersion":"1.0","name":"81dbd5d4-80b9-485b-8c95-9967caf4f5ec","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"51e46976-59b2-4c17-b38a-dd162de9f67f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4f2d7080-7990-4c7d-9444-7b6443c9e738",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"99216314-9df0-411b-b902-07cca382e389",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"81dbd5d4-80b9-485b-8c95-9967caf4f5ec",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprChesireCatStatue","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprChesireCatStatue",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -49,12 +46,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"965fd003-0c4b-47f0-adf9-2aeb9a97a5b6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"51e46976-59b2-4c17-b38a-dd162de9f67f","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"05f2b855-d310-4a6e-93c8-9ad4d7c15e6f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4f2d7080-7990-4c7d-9444-7b6443c9e738","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"51b4fb4f-0698-4902-a00f-4d9ff7bf44b1","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"99216314-9df0-411b-b902-07cca382e389","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d9065890-d04f-4f76-919a-43454c17a6bf","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"81dbd5d4-80b9-485b-8c95-9967caf4f5ec","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +67,13 @@
     "yorigin": 14,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprChesireCatStatue","path":"sprites/sprChesireCatStatue/sprChesireCatStatue.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprChesireCatStatue",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1e07ccd3-0e3a-420d-8257-ace59fb8df7f","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1e07ccd3-0e3a-420d-8257-ace59fb8df7f","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Statues",
     "path": "folders/Sprites/Enemies/Boss/Statues.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprChesireCatStatue",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

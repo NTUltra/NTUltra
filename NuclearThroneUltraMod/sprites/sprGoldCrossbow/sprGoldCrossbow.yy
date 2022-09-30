@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprGoldCrossbow",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"3bc60906-c5e7-4092-a183-ec38d7d5e47e","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3bc60906-c5e7-4092-a183-ec38d7d5e47e","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"LayerId":{"name":"9cd16c61-1603-482d-be09-335032be0ae4","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldCrossbow","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"resourceVersion":"1.0","name":"3bc60906-c5e7-4092-a183-ec38d7d5e47e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"479f5304-cf70-4ff0-b714-15dbb42ff93b","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"479f5304-cf70-4ff0-b714-15dbb42ff93b","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"LayerId":{"name":"9cd16c61-1603-482d-be09-335032be0ae4","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldCrossbow","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"resourceVersion":"1.0","name":"479f5304-cf70-4ff0-b714-15dbb42ff93b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5c6d2565-bf7a-4a88-bf1c-5a2eaaf933ef","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5c6d2565-bf7a-4a88-bf1c-5a2eaaf933ef","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"LayerId":{"name":"9cd16c61-1603-482d-be09-335032be0ae4","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldCrossbow","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"resourceVersion":"1.0","name":"5c6d2565-bf7a-4a88-bf1c-5a2eaaf933ef","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ad0042e9-a80d-4f42-bb9c-db7066cc02e0","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ad0042e9-a80d-4f42-bb9c-db7066cc02e0","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"LayerId":{"name":"9cd16c61-1603-482d-be09-335032be0ae4","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldCrossbow","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"resourceVersion":"1.0","name":"ad0042e9-a80d-4f42-bb9c-db7066cc02e0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bc4d91cc-4b41-4a27-9389-e9b879be3831","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bc4d91cc-4b41-4a27-9389-e9b879be3831","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"LayerId":{"name":"9cd16c61-1603-482d-be09-335032be0ae4","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldCrossbow","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"resourceVersion":"1.0","name":"bc4d91cc-4b41-4a27-9389-e9b879be3831","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"35089a68-9c86-4617-acbf-8e9236da42b7","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"35089a68-9c86-4617-acbf-8e9236da42b7","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"LayerId":{"name":"9cd16c61-1603-482d-be09-335032be0ae4","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldCrossbow","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"resourceVersion":"1.0","name":"35089a68-9c86-4617-acbf-8e9236da42b7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"aaebfa64-ca77-4124-9939-f65ac52d81e4","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"aaebfa64-ca77-4124-9939-f65ac52d81e4","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"LayerId":{"name":"9cd16c61-1603-482d-be09-335032be0ae4","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldCrossbow","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"resourceVersion":"1.0","name":"aaebfa64-ca77-4124-9939-f65ac52d81e4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3bc60906-c5e7-4092-a183-ec38d7d5e47e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"479f5304-cf70-4ff0-b714-15dbb42ff93b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5c6d2565-bf7a-4a88-bf1c-5a2eaaf933ef",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ad0042e9-a80d-4f42-bb9c-db7066cc02e0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bc4d91cc-4b41-4a27-9389-e9b879be3831",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"35089a68-9c86-4617-acbf-8e9236da42b7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"aaebfa64-ca77-4124-9939-f65ac52d81e4",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprGoldCrossbow","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"a6c4b6e3-9adb-43bf-953f-beefe020772c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3bc60906-c5e7-4092-a183-ec38d7d5e47e","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d44e3e36-a4b6-4553-941d-36c40d5933f4","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"479f5304-cf70-4ff0-b714-15dbb42ff93b","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"665a71bc-a8b1-41c7-acdd-b83cf7695800","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5c6d2565-bf7a-4a88-bf1c-5a2eaaf933ef","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"173b508e-e138-431d-9a58-753b15151127","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bc4d91cc-4b41-4a27-9389-e9b879be3831","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"761ea9d9-dc9e-4f10-b6ea-aa6aa28fa033","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"35089a68-9c86-4617-acbf-8e9236da42b7","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8f00509d-f7ff-4d61-b05a-f1075f0f8ac6","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"aaebfa64-ca77-4124-9939-f65ac52d81e4","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 4,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprGoldCrossbow","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9cd16c61-1603-482d-be09-335032be0ae4","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9cd16c61-1603-482d-be09-335032be0ae4","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Gold",
     "path": "folders/Sprites/Weapons/Gold.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprGoldCrossbow",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

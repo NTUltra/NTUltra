@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprExplosiveFlakBullet",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"85402a6f-99d6-4666-ba80-ab387c65e604","path":"sprites/sprExplosiveFlakBullet/sprExplosiveFlakBullet.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"85402a6f-99d6-4666-ba80-ab387c65e604","path":"sprites/sprExplosiveFlakBullet/sprExplosiveFlakBullet.yy",},"LayerId":{"name":"ff8c5f64-3a74-4bf6-930c-80657654aef5","path":"sprites/sprExplosiveFlakBullet/sprExplosiveFlakBullet.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprExplosiveFlakBullet","path":"sprites/sprExplosiveFlakBullet/sprExplosiveFlakBullet.yy",},"resourceVersion":"1.0","name":"85402a6f-99d6-4666-ba80-ab387c65e604","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"273965c9-537e-4fe7-8d8d-bc68f7c8e023","path":"sprites/sprExplosiveFlakBullet/sprExplosiveFlakBullet.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"273965c9-537e-4fe7-8d8d-bc68f7c8e023","path":"sprites/sprExplosiveFlakBullet/sprExplosiveFlakBullet.yy",},"LayerId":{"name":"ff8c5f64-3a74-4bf6-930c-80657654aef5","path":"sprites/sprExplosiveFlakBullet/sprExplosiveFlakBullet.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprExplosiveFlakBullet","path":"sprites/sprExplosiveFlakBullet/sprExplosiveFlakBullet.yy",},"resourceVersion":"1.0","name":"273965c9-537e-4fe7-8d8d-bc68f7c8e023","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"85402a6f-99d6-4666-ba80-ab387c65e604",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"273965c9-537e-4fe7-8d8d-bc68f7c8e023",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprExplosiveFlakBullet","path":"sprites/sprExplosiveFlakBullet/sprExplosiveFlakBullet.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprExplosiveFlakBullet",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"9d9cf2c4-a3b5-4641-acd3-4c389d6c9ef0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"85402a6f-99d6-4666-ba80-ab387c65e604","path":"sprites/sprExplosiveFlakBullet/sprExplosiveFlakBullet.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"347e7d2c-2a56-4282-abd4-ec4269ce9496","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"273965c9-537e-4fe7-8d8d-bc68f7c8e023","path":"sprites/sprExplosiveFlakBullet/sprExplosiveFlakBullet.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprExplosiveFlakBullet","path":"sprites/sprExplosiveFlakBullet/sprExplosiveFlakBullet.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprExplosiveFlakBullet",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ff8c5f64-3a74-4bf6-930c-80657654aef5","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ff8c5f64-3a74-4bf6-930c-80657654aef5","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Projectiles",
     "path": "folders/Sprites/Projectiles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprExplosiveFlakBullet",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

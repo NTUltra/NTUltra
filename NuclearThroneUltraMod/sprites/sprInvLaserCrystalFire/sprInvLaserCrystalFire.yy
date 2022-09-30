@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvLaserCrystalFire",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"91f3b31f-52ea-459b-8210-31278a2dd30a","path":"sprites/sprInvLaserCrystalFire/sprInvLaserCrystalFire.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"91f3b31f-52ea-459b-8210-31278a2dd30a","path":"sprites/sprInvLaserCrystalFire/sprInvLaserCrystalFire.yy",},"LayerId":{"name":"7e71572b-5f59-4f87-8bc1-09c613ead0e2","path":"sprites/sprInvLaserCrystalFire/sprInvLaserCrystalFire.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvLaserCrystalFire","path":"sprites/sprInvLaserCrystalFire/sprInvLaserCrystalFire.yy",},"resourceVersion":"1.0","name":"91f3b31f-52ea-459b-8210-31278a2dd30a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a985535a-d9e6-4119-863d-ff4e68e291ef","path":"sprites/sprInvLaserCrystalFire/sprInvLaserCrystalFire.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a985535a-d9e6-4119-863d-ff4e68e291ef","path":"sprites/sprInvLaserCrystalFire/sprInvLaserCrystalFire.yy",},"LayerId":{"name":"7e71572b-5f59-4f87-8bc1-09c613ead0e2","path":"sprites/sprInvLaserCrystalFire/sprInvLaserCrystalFire.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvLaserCrystalFire","path":"sprites/sprInvLaserCrystalFire/sprInvLaserCrystalFire.yy",},"resourceVersion":"1.0","name":"a985535a-d9e6-4119-863d-ff4e68e291ef","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"91f3b31f-52ea-459b-8210-31278a2dd30a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a985535a-d9e6-4119-863d-ff4e68e291ef",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvLaserCrystalFire","path":"sprites/sprInvLaserCrystalFire/sprInvLaserCrystalFire.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvLaserCrystalFire",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"2aa3117d-779e-4a2a-9e2a-0bee3f85e471","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"91f3b31f-52ea-459b-8210-31278a2dd30a","path":"sprites/sprInvLaserCrystalFire/sprInvLaserCrystalFire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9d556696-0436-4d38-999f-09adcb099955","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a985535a-d9e6-4119-863d-ff4e68e291ef","path":"sprites/sprInvLaserCrystalFire/sprInvLaserCrystalFire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 24,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvLaserCrystalFire","path":"sprites/sprInvLaserCrystalFire/sprInvLaserCrystalFire.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvLaserCrystalFire",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7e71572b-5f59-4f87-8bc1-09c613ead0e2","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7e71572b-5f59-4f87-8bc1-09c613ead0e2","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "CrystalCaves",
     "path": "folders/Sprites/Enemies/CrystalCaves.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvLaserCrystalFire",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

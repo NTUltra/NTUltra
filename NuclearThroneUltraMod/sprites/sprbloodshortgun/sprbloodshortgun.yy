@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprBloodShortgun",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ae387a3f-5fa3-41eb-a1f9-7aad2250c703","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ae387a3f-5fa3-41eb-a1f9-7aad2250c703","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodShortgun","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"resourceVersion":"1.0","name":"ae387a3f-5fa3-41eb-a1f9-7aad2250c703","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5e342238-c163-4ab0-9047-3d8056384c59","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5e342238-c163-4ab0-9047-3d8056384c59","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodShortgun","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"resourceVersion":"1.0","name":"5e342238-c163-4ab0-9047-3d8056384c59","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"178b3fcc-de4a-47c6-b10d-fd27b8999487","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"178b3fcc-de4a-47c6-b10d-fd27b8999487","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodShortgun","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"resourceVersion":"1.0","name":"178b3fcc-de4a-47c6-b10d-fd27b8999487","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6bdd5b13-9491-4eaf-9db7-e7ba2293554e","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6bdd5b13-9491-4eaf-9db7-e7ba2293554e","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodShortgun","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"resourceVersion":"1.0","name":"6bdd5b13-9491-4eaf-9db7-e7ba2293554e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3c3b0ca2-74bd-48d2-b522-c0933085383a","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3c3b0ca2-74bd-48d2-b522-c0933085383a","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodShortgun","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"resourceVersion":"1.0","name":"3c3b0ca2-74bd-48d2-b522-c0933085383a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ef1e0d53-d568-4d6c-9b1f-8a54fc077d9d","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ef1e0d53-d568-4d6c-9b1f-8a54fc077d9d","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodShortgun","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"resourceVersion":"1.0","name":"ef1e0d53-d568-4d6c-9b1f-8a54fc077d9d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"cec8c669-7e49-4b37-8bcd-5ff76474a299","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cec8c669-7e49-4b37-8bcd-5ff76474a299","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"LayerId":{"name":"6be38f58-57b4-409b-be33-e50fd1037e83","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBloodShortgun","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"resourceVersion":"1.0","name":"cec8c669-7e49-4b37-8bcd-5ff76474a299","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ae387a3f-5fa3-41eb-a1f9-7aad2250c703",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5e342238-c163-4ab0-9047-3d8056384c59",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"178b3fcc-de4a-47c6-b10d-fd27b8999487",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6bdd5b13-9491-4eaf-9db7-e7ba2293554e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3c3b0ca2-74bd-48d2-b522-c0933085383a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ef1e0d53-d568-4d6c-9b1f-8a54fc077d9d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cec8c669-7e49-4b37-8bcd-5ff76474a299",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprBloodShortgun","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprBloodShortgun",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"5c38bb7f-27ff-4b3b-ac73-48befa3cd5b8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ae387a3f-5fa3-41eb-a1f9-7aad2250c703","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a31a9acb-4e5a-407f-8703-dd197ea4c8f9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5e342238-c163-4ab0-9047-3d8056384c59","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"38d5f520-57fa-426f-9951-983d633c597f","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"178b3fcc-de4a-47c6-b10d-fd27b8999487","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"293fda82-4b3f-4298-8c86-126b209a0bb9","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3c3b0ca2-74bd-48d2-b522-c0933085383a","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"686c4a71-2734-42bf-afcd-ab10467d7b51","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ef1e0d53-d568-4d6c-9b1f-8a54fc077d9d","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"068e3f4a-edfe-4b2b-a3da-385fecd74e3e","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cec8c669-7e49-4b37-8bcd-5ff76474a299","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 4,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprBloodShortgun","path":"sprites/sprBloodShortgun/sprBloodShortgun.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprBloodShortgun",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6be38f58-57b4-409b-be33-e50fd1037e83","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6be38f58-57b4-409b-be33-e50fd1037e83","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Custom",
     "path": "folders/Sprites/Weapons/Custom.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprBloodShortgun",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

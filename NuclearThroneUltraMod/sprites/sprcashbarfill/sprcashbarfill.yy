@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprCashBarFill",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"9717b78f-63cc-48d4-847f-ec7215021bc9","path":"sprites/sprCashBarFill/sprCashBarFill.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9717b78f-63cc-48d4-847f-ec7215021bc9","path":"sprites/sprCashBarFill/sprCashBarFill.yy",},"LayerId":{"name":"5d359b7a-d258-468f-8502-7bb43e4843c4","path":"sprites/sprCashBarFill/sprCashBarFill.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCashBarFill","path":"sprites/sprCashBarFill/sprCashBarFill.yy",},"resourceVersion":"1.0","name":"9717b78f-63cc-48d4-847f-ec7215021bc9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4d447c16-95dc-4bd7-9e41-34a608e15936","path":"sprites/sprCashBarFill/sprCashBarFill.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4d447c16-95dc-4bd7-9e41-34a608e15936","path":"sprites/sprCashBarFill/sprCashBarFill.yy",},"LayerId":{"name":"5d359b7a-d258-468f-8502-7bb43e4843c4","path":"sprites/sprCashBarFill/sprCashBarFill.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCashBarFill","path":"sprites/sprCashBarFill/sprCashBarFill.yy",},"resourceVersion":"1.0","name":"4d447c16-95dc-4bd7-9e41-34a608e15936","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ddae050d-697b-44bc-a3a7-c06e28419b76","path":"sprites/sprCashBarFill/sprCashBarFill.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ddae050d-697b-44bc-a3a7-c06e28419b76","path":"sprites/sprCashBarFill/sprCashBarFill.yy",},"LayerId":{"name":"5d359b7a-d258-468f-8502-7bb43e4843c4","path":"sprites/sprCashBarFill/sprCashBarFill.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCashBarFill","path":"sprites/sprCashBarFill/sprCashBarFill.yy",},"resourceVersion":"1.0","name":"ddae050d-697b-44bc-a3a7-c06e28419b76","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9717b78f-63cc-48d4-847f-ec7215021bc9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4d447c16-95dc-4bd7-9e41-34a608e15936",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ddae050d-697b-44bc-a3a7-c06e28419b76",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprCashBarFill","path":"sprites/sprCashBarFill/sprCashBarFill.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprCashBarFill",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"a598cbc1-802c-422b-ae3d-0c19ed940369","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9717b78f-63cc-48d4-847f-ec7215021bc9","path":"sprites/sprCashBarFill/sprCashBarFill.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6d5f6e5f-2c19-427b-9cf1-43ae0c6e1cfa","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4d447c16-95dc-4bd7-9e41-34a608e15936","path":"sprites/sprCashBarFill/sprCashBarFill.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"83e76ebb-5ebc-4211-9e4c-c7d6484d3186","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ddae050d-697b-44bc-a3a7-c06e28419b76","path":"sprites/sprCashBarFill/sprCashBarFill.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprCashBarFill","path":"sprites/sprCashBarFill/sprCashBarFill.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprCashBarFill",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5d359b7a-d258-468f-8502-7bb43e4843c4","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5d359b7a-d258-468f-8502-7bb43e4843c4","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "UnsortedProp",
     "path": "folders/Sprites/Enviroment/UnsortedProp.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprCashBarFill",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

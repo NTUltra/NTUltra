@@ -11456,6 +11456,63 @@ function scrFire2() {
 		wkick = 7
 
 	break;
+	snd_play_fire(sndScrewdriver)
+	snd_play_fire(sndShovel)
+
+	instance_create(x,y,Dust)
+
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Shank)
+	{
+	dmg = 6
+	longarms = 0
+	if instance_exists(Player)
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection,2+longarms)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+30*Player.accuracy),Shank)
+	{
+	dmg = 6
+	longarms = 0
+	if instance_exists(Player)
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection+60*other.accuracy,2+longarms)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-30*Player.accuracy),Shank)
+	{
+	dmg = 6
+	longarms = 0
+	if instance_exists(Player)
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection-60*other.accuracy,2+longarms)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),Shank)
+	{
+	dmg = 6
+	longarms = 0
+	if instance_exists(Player)
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection+60*other.accuracy,2+longarms)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),Shank)
+	{
+	dmg = 6
+	longarms = 0
+	if instance_exists(Player)
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection-60*other.accuracy,2+longarms)
+	image_angle = direction
+	team = other.team}
+
+	wepangle = -wepangle
+	motion_add(aimDirection,6)
+	BackCont.viewx2 += lengthdir_x(24,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(24,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 1
+	wkick = -4
 	
 	}//end of switch part 2!
 }

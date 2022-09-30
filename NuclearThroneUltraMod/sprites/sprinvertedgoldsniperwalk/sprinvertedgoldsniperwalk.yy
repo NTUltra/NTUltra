@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedGoldSniperWalk",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"703f195a-c19d-4c06-9c1f-37fcda33996d","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"703f195a-c19d-4c06-9c1f-37fcda33996d","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"LayerId":{"name":"e41697b6-30da-4b12-9404-225f1bb2cb51","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldSniperWalk","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"resourceVersion":"1.0","name":"703f195a-c19d-4c06-9c1f-37fcda33996d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5597f99f-fcce-42c5-9f0d-06fd2108f80e","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5597f99f-fcce-42c5-9f0d-06fd2108f80e","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"LayerId":{"name":"e41697b6-30da-4b12-9404-225f1bb2cb51","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldSniperWalk","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"resourceVersion":"1.0","name":"5597f99f-fcce-42c5-9f0d-06fd2108f80e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"84ed7aad-bd1a-4575-b929-aba0aedb250a","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"84ed7aad-bd1a-4575-b929-aba0aedb250a","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"LayerId":{"name":"e41697b6-30da-4b12-9404-225f1bb2cb51","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldSniperWalk","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"resourceVersion":"1.0","name":"84ed7aad-bd1a-4575-b929-aba0aedb250a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3cd226d8-bfbe-4477-a953-2bd4967fa6b3","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3cd226d8-bfbe-4477-a953-2bd4967fa6b3","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"LayerId":{"name":"e41697b6-30da-4b12-9404-225f1bb2cb51","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldSniperWalk","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"resourceVersion":"1.0","name":"3cd226d8-bfbe-4477-a953-2bd4967fa6b3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"114a9d0a-ab64-4a97-84b2-f89b4be91fce","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"114a9d0a-ab64-4a97-84b2-f89b4be91fce","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"LayerId":{"name":"e41697b6-30da-4b12-9404-225f1bb2cb51","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldSniperWalk","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"resourceVersion":"1.0","name":"114a9d0a-ab64-4a97-84b2-f89b4be91fce","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e0762a32-2784-4b9f-8e3d-66b82e970894","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e0762a32-2784-4b9f-8e3d-66b82e970894","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"LayerId":{"name":"e41697b6-30da-4b12-9404-225f1bb2cb51","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedGoldSniperWalk","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"resourceVersion":"1.0","name":"e0762a32-2784-4b9f-8e3d-66b82e970894","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"703f195a-c19d-4c06-9c1f-37fcda33996d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5597f99f-fcce-42c5-9f0d-06fd2108f80e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"84ed7aad-bd1a-4575-b929-aba0aedb250a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3cd226d8-bfbe-4477-a953-2bd4967fa6b3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"114a9d0a-ab64-4a97-84b2-f89b4be91fce",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e0762a32-2784-4b9f-8e3d-66b82e970894",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedGoldSniperWalk","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedGoldSniperWalk",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -55,14 +48,14 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"7bfb6edb-ab0c-4d4f-a960-494bc5475391","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"703f195a-c19d-4c06-9c1f-37fcda33996d","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e57f1c5e-e8e6-4308-b06f-faf4374f3fed","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5597f99f-fcce-42c5-9f0d-06fd2108f80e","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"69b640cb-beb6-4822-9c14-12629671c0d9","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"84ed7aad-bd1a-4575-b929-aba0aedb250a","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8b2b6030-8400-4529-aea0-d47b15ccfcf8","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3cd226d8-bfbe-4477-a953-2bd4967fa6b3","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9f811bbd-2ebb-4345-bd24-179178e1ace2","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"114a9d0a-ab64-4a97-84b2-f89b4be91fce","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c3183763-d717-4fc2-89b3-3c606b3ef6eb","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e0762a32-2784-4b9f-8e3d-66b82e970894","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -78,22 +71,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedGoldSniperWalk","path":"sprites/sprInvertedGoldSniperWalk/sprInvertedGoldSniperWalk.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedGoldSniperWalk",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e41697b6-30da-4b12-9404-225f1bb2cb51","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e41697b6-30da-4b12-9404-225f1bb2cb51","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Sniper",
     "path": "folders/Sprites/Enemies/Sniper.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedGoldSniperWalk",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

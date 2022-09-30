@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprThroneStatueDead",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,48 +27,24 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"27252321-2b37-4317-b1af-076f31ab8d70","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"27252321-2b37-4317-b1af-076f31ab8d70","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":{"name":"fc5b634c-8c67-4bc5-959f-eca0675f46e2","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatueDead","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"27252321-2b37-4317-b1af-076f31ab8d70","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2cb60a32-3f85-4b49-a184-9e1e891c4483","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2cb60a32-3f85-4b49-a184-9e1e891c4483","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":{"name":"fc5b634c-8c67-4bc5-959f-eca0675f46e2","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatueDead","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"2cb60a32-3f85-4b49-a184-9e1e891c4483","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b4ec932a-bede-4976-930f-f3102249951d","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b4ec932a-bede-4976-930f-f3102249951d","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":{"name":"fc5b634c-8c67-4bc5-959f-eca0675f46e2","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatueDead","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"b4ec932a-bede-4976-930f-f3102249951d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7204602e-521b-4f9d-b0ff-73b7513f68da","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7204602e-521b-4f9d-b0ff-73b7513f68da","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":{"name":"fc5b634c-8c67-4bc5-959f-eca0675f46e2","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatueDead","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"7204602e-521b-4f9d-b0ff-73b7513f68da","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9b8af2bb-7df8-4e82-868f-101039f890c3","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9b8af2bb-7df8-4e82-868f-101039f890c3","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":{"name":"fc5b634c-8c67-4bc5-959f-eca0675f46e2","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatueDead","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"9b8af2bb-7df8-4e82-868f-101039f890c3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3ecec932-1205-4e41-9e75-9c5701a8934c","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3ecec932-1205-4e41-9e75-9c5701a8934c","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":{"name":"fc5b634c-8c67-4bc5-959f-eca0675f46e2","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatueDead","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"3ecec932-1205-4e41-9e75-9c5701a8934c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"685ce8d3-6b91-4281-9598-5f3ac7e04a73","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"685ce8d3-6b91-4281-9598-5f3ac7e04a73","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":{"name":"fc5b634c-8c67-4bc5-959f-eca0675f46e2","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatueDead","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"685ce8d3-6b91-4281-9598-5f3ac7e04a73","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"dfdc72c5-ee82-4f67-99c4-ebe3bc3ed81d","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dfdc72c5-ee82-4f67-99c4-ebe3bc3ed81d","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":{"name":"fc5b634c-8c67-4bc5-959f-eca0675f46e2","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatueDead","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"dfdc72c5-ee82-4f67-99c4-ebe3bc3ed81d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"71667c45-78f6-4d3b-86cc-653f84dd438f","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"71667c45-78f6-4d3b-86cc-653f84dd438f","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":{"name":"fc5b634c-8c67-4bc5-959f-eca0675f46e2","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatueDead","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"71667c45-78f6-4d3b-86cc-653f84dd438f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"fa87230b-681f-4ff9-bd88-9a76cf16540c","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fa87230b-681f-4ff9-bd88-9a76cf16540c","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":{"name":"fc5b634c-8c67-4bc5-959f-eca0675f46e2","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatueDead","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"fa87230b-681f-4ff9-bd88-9a76cf16540c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a8d8a5d5-82fb-4762-91a7-a2e1519549d2","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a8d8a5d5-82fb-4762-91a7-a2e1519549d2","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":{"name":"fc5b634c-8c67-4bc5-959f-eca0675f46e2","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatueDead","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"a8d8a5d5-82fb-4762-91a7-a2e1519549d2","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"084a7513-214b-4b69-aec1-1168f7c880d0","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"084a7513-214b-4b69-aec1-1168f7c880d0","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":{"name":"fc5b634c-8c67-4bc5-959f-eca0675f46e2","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatueDead","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"084a7513-214b-4b69-aec1-1168f7c880d0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"021a0513-5c22-4630-acd0-c0a71203c865","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"021a0513-5c22-4630-acd0-c0a71203c865","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"LayerId":{"name":"fc5b634c-8c67-4bc5-959f-eca0675f46e2","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatueDead","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","name":"021a0513-5c22-4630-acd0-c0a71203c865","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"27252321-2b37-4317-b1af-076f31ab8d70",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2cb60a32-3f85-4b49-a184-9e1e891c4483",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b4ec932a-bede-4976-930f-f3102249951d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7204602e-521b-4f9d-b0ff-73b7513f68da",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9b8af2bb-7df8-4e82-868f-101039f890c3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3ecec932-1205-4e41-9e75-9c5701a8934c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"685ce8d3-6b91-4281-9598-5f3ac7e04a73",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dfdc72c5-ee82-4f67-99c4-ebe3bc3ed81d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"71667c45-78f6-4d3b-86cc-653f84dd438f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fa87230b-681f-4ff9-bd88-9a76cf16540c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a8d8a5d5-82fb-4762-91a7-a2e1519549d2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"084a7513-214b-4b69-aec1-1168f7c880d0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"021a0513-5c22-4630-acd0-c0a71203c865",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprThroneStatueDead","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprThroneStatueDead",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -76,7 +55,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"2974a0e5-925a-4855-9b10-edc6f48dc7c1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"27252321-2b37-4317-b1af-076f31ab8d70","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6b88502a-6920-4265-a5d5-a4cc1f3fd367","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2cb60a32-3f85-4b49-a184-9e1e891c4483","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"5f203301-6272-44db-a291-a9767fc7b73f","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b4ec932a-bede-4976-930f-f3102249951d","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -90,7 +69,7 @@
             {"id":"9cb798f4-f346-4abb-9ca6-27ec26c76350","Key":10.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a8d8a5d5-82fb-4762-91a7-a2e1519549d2","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"51f7b8eb-cbbe-4ff1-8003-186c7127f0c0","Key":11.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"084a7513-214b-4b69-aec1-1168f7c880d0","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"51d81779-5e49-4667-91a0-3a420df07970","Key":12.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"021a0513-5c22-4630-acd0-c0a71203c865","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -106,22 +85,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprThroneStatueDead","path":"sprites/sprThroneStatueDead/sprThroneStatueDead.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprThroneStatueDead",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fc5b634c-8c67-4bc5-959f-eca0675f46e2","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"fc5b634c-8c67-4bc5-959f-eca0675f46e2","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Throne1",
     "path": "folders/Sprites/Palace/Palace Enemy/TheThrone/Throne1.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprThroneStatueDead",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

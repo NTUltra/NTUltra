@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprGoldBarrelDead",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"53f75195-2202-4a3b-8654-6600fa9836e5","path":"sprites/sprGoldBarrelDead/sprGoldBarrelDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"53f75195-2202-4a3b-8654-6600fa9836e5","path":"sprites/sprGoldBarrelDead/sprGoldBarrelDead.yy",},"LayerId":{"name":"26454404-c3b4-4b33-a557-db3f67f36a3c","path":"sprites/sprGoldBarrelDead/sprGoldBarrelDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldBarrelDead","path":"sprites/sprGoldBarrelDead/sprGoldBarrelDead.yy",},"resourceVersion":"1.0","name":"53f75195-2202-4a3b-8654-6600fa9836e5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"edcfff0a-86af-40ad-80c9-6a3ef72c71a1","path":"sprites/sprGoldBarrelDead/sprGoldBarrelDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"edcfff0a-86af-40ad-80c9-6a3ef72c71a1","path":"sprites/sprGoldBarrelDead/sprGoldBarrelDead.yy",},"LayerId":{"name":"26454404-c3b4-4b33-a557-db3f67f36a3c","path":"sprites/sprGoldBarrelDead/sprGoldBarrelDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldBarrelDead","path":"sprites/sprGoldBarrelDead/sprGoldBarrelDead.yy",},"resourceVersion":"1.0","name":"edcfff0a-86af-40ad-80c9-6a3ef72c71a1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0bb82c31-762e-4026-a606-533292c9cedf","path":"sprites/sprGoldBarrelDead/sprGoldBarrelDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0bb82c31-762e-4026-a606-533292c9cedf","path":"sprites/sprGoldBarrelDead/sprGoldBarrelDead.yy",},"LayerId":{"name":"26454404-c3b4-4b33-a557-db3f67f36a3c","path":"sprites/sprGoldBarrelDead/sprGoldBarrelDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldBarrelDead","path":"sprites/sprGoldBarrelDead/sprGoldBarrelDead.yy",},"resourceVersion":"1.0","name":"0bb82c31-762e-4026-a606-533292c9cedf","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"53f75195-2202-4a3b-8654-6600fa9836e5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"edcfff0a-86af-40ad-80c9-6a3ef72c71a1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0bb82c31-762e-4026-a606-533292c9cedf",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprGoldBarrelDead","path":"sprites/sprGoldBarrelDead/sprGoldBarrelDead.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprGoldBarrelDead",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"8339e40d-c5a1-44a7-b34c-c99e144cbd2e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"53f75195-2202-4a3b-8654-6600fa9836e5","path":"sprites/sprGoldBarrelDead/sprGoldBarrelDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a2f03a33-41a1-4a5d-b5c6-9e78df74a64e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"edcfff0a-86af-40ad-80c9-6a3ef72c71a1","path":"sprites/sprGoldBarrelDead/sprGoldBarrelDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e69a396c-53e6-47f3-b11e-386cf9f1e1bd","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0bb82c31-762e-4026-a606-533292c9cedf","path":"sprites/sprGoldBarrelDead/sprGoldBarrelDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprGoldBarrelDead","path":"sprites/sprGoldBarrelDead/sprGoldBarrelDead.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprGoldBarrelDead",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"26454404-c3b4-4b33-a557-db3f67f36a3c","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"26454404-c3b4-4b33-a557-db3f67f36a3c","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "UnsortedProp",
     "path": "folders/Sprites/Enviroment/UnsortedProp.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprGoldBarrelDead",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

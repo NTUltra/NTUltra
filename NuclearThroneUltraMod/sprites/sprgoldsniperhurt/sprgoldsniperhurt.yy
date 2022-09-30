@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprGoldSniperHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a83bee1d-676e-4345-b28c-4940dd9c12bb","path":"sprites/sprGoldSniperHurt/sprGoldSniperHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a83bee1d-676e-4345-b28c-4940dd9c12bb","path":"sprites/sprGoldSniperHurt/sprGoldSniperHurt.yy",},"LayerId":{"name":"1450115b-8db8-4676-bee5-a688966bef4e","path":"sprites/sprGoldSniperHurt/sprGoldSniperHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldSniperHurt","path":"sprites/sprGoldSniperHurt/sprGoldSniperHurt.yy",},"resourceVersion":"1.0","name":"a83bee1d-676e-4345-b28c-4940dd9c12bb","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"795bfa64-03d1-4720-88aa-5676f3c0008a","path":"sprites/sprGoldSniperHurt/sprGoldSniperHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"795bfa64-03d1-4720-88aa-5676f3c0008a","path":"sprites/sprGoldSniperHurt/sprGoldSniperHurt.yy",},"LayerId":{"name":"1450115b-8db8-4676-bee5-a688966bef4e","path":"sprites/sprGoldSniperHurt/sprGoldSniperHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldSniperHurt","path":"sprites/sprGoldSniperHurt/sprGoldSniperHurt.yy",},"resourceVersion":"1.0","name":"795bfa64-03d1-4720-88aa-5676f3c0008a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"790a0f9a-2d6f-48c1-bc36-2d31ad8c3c7e","path":"sprites/sprGoldSniperHurt/sprGoldSniperHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"790a0f9a-2d6f-48c1-bc36-2d31ad8c3c7e","path":"sprites/sprGoldSniperHurt/sprGoldSniperHurt.yy",},"LayerId":{"name":"1450115b-8db8-4676-bee5-a688966bef4e","path":"sprites/sprGoldSniperHurt/sprGoldSniperHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldSniperHurt","path":"sprites/sprGoldSniperHurt/sprGoldSniperHurt.yy",},"resourceVersion":"1.0","name":"790a0f9a-2d6f-48c1-bc36-2d31ad8c3c7e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a83bee1d-676e-4345-b28c-4940dd9c12bb",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"795bfa64-03d1-4720-88aa-5676f3c0008a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"790a0f9a-2d6f-48c1-bc36-2d31ad8c3c7e",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprGoldSniperHurt","path":"sprites/sprGoldSniperHurt/sprGoldSniperHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprGoldSniperHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"6ce705e9-0abd-4edc-836c-d183804770ee","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a83bee1d-676e-4345-b28c-4940dd9c12bb","path":"sprites/sprGoldSniperHurt/sprGoldSniperHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"5d6d1ab2-47ff-4683-aab7-8968a6bd6565","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"795bfa64-03d1-4720-88aa-5676f3c0008a","path":"sprites/sprGoldSniperHurt/sprGoldSniperHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"249ed226-0a8f-4462-8205-a266075deb09","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"790a0f9a-2d6f-48c1-bc36-2d31ad8c3c7e","path":"sprites/sprGoldSniperHurt/sprGoldSniperHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprGoldSniperHurt","path":"sprites/sprGoldSniperHurt/sprGoldSniperHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprGoldSniperHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1450115b-8db8-4676-bee5-a688966bef4e","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1450115b-8db8-4676-bee5-a688966bef4e","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Sniper",
     "path": "folders/Sprites/Enemies/Sniper.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprGoldSniperHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

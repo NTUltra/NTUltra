@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprSnowBlower",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"30ddf0f3-b398-471e-9a63-a9a11be60e2d","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"30ddf0f3-b398-471e-9a63-a9a11be60e2d","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"LayerId":{"name":"7d173d36-45c9-4298-865a-189b8eb40571","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSnowBlower","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"resourceVersion":"1.0","name":"30ddf0f3-b398-471e-9a63-a9a11be60e2d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e4b94060-53c5-4ef1-acaa-7e8ae26bf5b5","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e4b94060-53c5-4ef1-acaa-7e8ae26bf5b5","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"LayerId":{"name":"7d173d36-45c9-4298-865a-189b8eb40571","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSnowBlower","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"resourceVersion":"1.0","name":"e4b94060-53c5-4ef1-acaa-7e8ae26bf5b5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"10e83a4a-b826-4e14-a630-df94e62cbd87","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"10e83a4a-b826-4e14-a630-df94e62cbd87","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"LayerId":{"name":"7d173d36-45c9-4298-865a-189b8eb40571","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSnowBlower","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"resourceVersion":"1.0","name":"10e83a4a-b826-4e14-a630-df94e62cbd87","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8beb743f-d937-4baf-8c8a-fc9b9c9b144a","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8beb743f-d937-4baf-8c8a-fc9b9c9b144a","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"LayerId":{"name":"7d173d36-45c9-4298-865a-189b8eb40571","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSnowBlower","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"resourceVersion":"1.0","name":"8beb743f-d937-4baf-8c8a-fc9b9c9b144a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"825af1e6-0e76-4c18-944f-eae3cc939341","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"825af1e6-0e76-4c18-944f-eae3cc939341","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"LayerId":{"name":"7d173d36-45c9-4298-865a-189b8eb40571","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSnowBlower","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"resourceVersion":"1.0","name":"825af1e6-0e76-4c18-944f-eae3cc939341","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"dec429a4-a431-45b7-875b-c662363db027","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dec429a4-a431-45b7-875b-c662363db027","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"LayerId":{"name":"7d173d36-45c9-4298-865a-189b8eb40571","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSnowBlower","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"resourceVersion":"1.0","name":"dec429a4-a431-45b7-875b-c662363db027","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8eea7ddb-c981-4a82-85c2-21e365fbbec8","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8eea7ddb-c981-4a82-85c2-21e365fbbec8","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"LayerId":{"name":"7d173d36-45c9-4298-865a-189b8eb40571","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSnowBlower","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"resourceVersion":"1.0","name":"8eea7ddb-c981-4a82-85c2-21e365fbbec8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"30ddf0f3-b398-471e-9a63-a9a11be60e2d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e4b94060-53c5-4ef1-acaa-7e8ae26bf5b5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"10e83a4a-b826-4e14-a630-df94e62cbd87",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8beb743f-d937-4baf-8c8a-fc9b9c9b144a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"825af1e6-0e76-4c18-944f-eae3cc939341",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dec429a4-a431-45b7-875b-c662363db027",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8eea7ddb-c981-4a82-85c2-21e365fbbec8",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprSnowBlower","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"596af471-5dcd-47dc-8aff-7396c7218372","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"30ddf0f3-b398-471e-9a63-a9a11be60e2d","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e899caa8-0ef3-446d-a281-87460c560ba6","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e4b94060-53c5-4ef1-acaa-7e8ae26bf5b5","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"658da355-cba6-42b0-827d-59ec43813ff5","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"10e83a4a-b826-4e14-a630-df94e62cbd87","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"479a2b26-7d98-4d56-b17a-5c83adc52125","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"825af1e6-0e76-4c18-944f-eae3cc939341","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c1d32085-7fc3-41c5-851e-4095858b974b","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dec429a4-a431-45b7-875b-c662363db027","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"89dd644e-0e6f-496f-bdcf-6ca59eac5185","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8eea7ddb-c981-4a82-85c2-21e365fbbec8","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 4,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprSnowBlower","path":"sprites/sprSnowBlower/sprSnowBlower.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7d173d36-45c9-4298-865a-189b8eb40571","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7d173d36-45c9-4298-865a-189b8eb40571","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Custom",
     "path": "folders/Sprites/Weapons/Custom.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprSnowBlower",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

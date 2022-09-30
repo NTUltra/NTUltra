@@ -20,7 +20,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			}
 			if !Player.altUltra && Player.ultra_got[29]==1//Refined taste
 			{
-				wepTier ++;
+				wepTier += choose(1,2);
 				minWepArea = min(7,Player.hard+wepTier);
 				maxTries += 20;
 			}
@@ -87,7 +87,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			}
 			//Found a higher option than our result? Take that one
 			if (wep_area[maxValidTierWep] > wep_area[wep] && ( (maxValidTierWep != Player.wep and maxValidTierWep != Player.bwep and maxValidTierWep != Player.cwep) || Player.race == 7/*roids can dual wield*/)
-				&& (Player.race == 8 || random(5) < 4))
+				&& (cursed || Player.race == 8 || random(5) < 4))
 			{
 				wep = maxValidTierWep;
 			}

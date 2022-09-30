@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprBigDogExplode",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"903658a9-ee18-423d-96fd-a044c40ccb9f","path":"sprites/sprBigDogExplode/sprBigDogExplode.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"903658a9-ee18-423d-96fd-a044c40ccb9f","path":"sprites/sprBigDogExplode/sprBigDogExplode.yy",},"LayerId":{"name":"73a271e5-1a68-4e9d-9005-37b70a79ff1c","path":"sprites/sprBigDogExplode/sprBigDogExplode.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBigDogExplode","path":"sprites/sprBigDogExplode/sprBigDogExplode.yy",},"resourceVersion":"1.0","name":"903658a9-ee18-423d-96fd-a044c40ccb9f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5368a462-f4ac-4660-95eb-a3df0ef33ac8","path":"sprites/sprBigDogExplode/sprBigDogExplode.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5368a462-f4ac-4660-95eb-a3df0ef33ac8","path":"sprites/sprBigDogExplode/sprBigDogExplode.yy",},"LayerId":{"name":"73a271e5-1a68-4e9d-9005-37b70a79ff1c","path":"sprites/sprBigDogExplode/sprBigDogExplode.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBigDogExplode","path":"sprites/sprBigDogExplode/sprBigDogExplode.yy",},"resourceVersion":"1.0","name":"5368a462-f4ac-4660-95eb-a3df0ef33ac8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"903658a9-ee18-423d-96fd-a044c40ccb9f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5368a462-f4ac-4660-95eb-a3df0ef33ac8",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprBigDogExplode","path":"sprites/sprBigDogExplode/sprBigDogExplode.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprBigDogExplode",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"f80be665-39ae-404e-ac57-58e8f82e7560","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"903658a9-ee18-423d-96fd-a044c40ccb9f","path":"sprites/sprBigDogExplode/sprBigDogExplode.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ef0e0478-8a9c-4aa8-8503-d0ba85892eb7","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5368a462-f4ac-4660-95eb-a3df0ef33ac8","path":"sprites/sprBigDogExplode/sprBigDogExplode.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 48,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprBigDogExplode","path":"sprites/sprBigDogExplode/sprBigDogExplode.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprBigDogExplode",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"73a271e5-1a68-4e9d-9005-37b70a79ff1c","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"73a271e5-1a68-4e9d-9005-37b70a79ff1c","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "BigDog",
     "path": "folders/Sprites/Enemies/Boss/BigDog.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprBigDogExplode",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

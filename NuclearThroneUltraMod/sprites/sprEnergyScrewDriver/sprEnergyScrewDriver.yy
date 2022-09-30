@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprEnergyScrewDriver",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"43216691-4564-4061-ae4a-41121fd94c95","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"43216691-4564-4061-ae4a-41121fd94c95","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"LayerId":{"name":"7534b6fd-2100-400a-865a-b1f99303f2ee","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEnergyScrewDriver","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"resourceVersion":"1.0","name":"43216691-4564-4061-ae4a-41121fd94c95","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"65fb923e-9551-48ff-b140-6b704e6d7089","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"65fb923e-9551-48ff-b140-6b704e6d7089","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"LayerId":{"name":"7534b6fd-2100-400a-865a-b1f99303f2ee","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEnergyScrewDriver","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"resourceVersion":"1.0","name":"65fb923e-9551-48ff-b140-6b704e6d7089","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9f1a4b08-0bae-4b8a-8f84-ac31b26bfc00","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9f1a4b08-0bae-4b8a-8f84-ac31b26bfc00","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"LayerId":{"name":"7534b6fd-2100-400a-865a-b1f99303f2ee","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEnergyScrewDriver","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"resourceVersion":"1.0","name":"9f1a4b08-0bae-4b8a-8f84-ac31b26bfc00","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b0183c96-5a0f-46b7-a71c-b6c96fb4eb28","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b0183c96-5a0f-46b7-a71c-b6c96fb4eb28","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"LayerId":{"name":"7534b6fd-2100-400a-865a-b1f99303f2ee","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEnergyScrewDriver","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"resourceVersion":"1.0","name":"b0183c96-5a0f-46b7-a71c-b6c96fb4eb28","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9de29e7c-18cd-480a-96b6-c043ec03ca36","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9de29e7c-18cd-480a-96b6-c043ec03ca36","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"LayerId":{"name":"7534b6fd-2100-400a-865a-b1f99303f2ee","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEnergyScrewDriver","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"resourceVersion":"1.0","name":"9de29e7c-18cd-480a-96b6-c043ec03ca36","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2b154a62-7a61-4bd8-a828-1a22e7a5156f","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2b154a62-7a61-4bd8-a828-1a22e7a5156f","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"LayerId":{"name":"7534b6fd-2100-400a-865a-b1f99303f2ee","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEnergyScrewDriver","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"resourceVersion":"1.0","name":"2b154a62-7a61-4bd8-a828-1a22e7a5156f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"dd8263b2-c7e8-4b7c-81dc-b1112c7ec5ea","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dd8263b2-c7e8-4b7c-81dc-b1112c7ec5ea","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"LayerId":{"name":"7534b6fd-2100-400a-865a-b1f99303f2ee","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEnergyScrewDriver","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"resourceVersion":"1.0","name":"dd8263b2-c7e8-4b7c-81dc-b1112c7ec5ea","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"43216691-4564-4061-ae4a-41121fd94c95",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"65fb923e-9551-48ff-b140-6b704e6d7089",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9f1a4b08-0bae-4b8a-8f84-ac31b26bfc00",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b0183c96-5a0f-46b7-a71c-b6c96fb4eb28",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9de29e7c-18cd-480a-96b6-c043ec03ca36",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2b154a62-7a61-4bd8-a828-1a22e7a5156f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dd8263b2-c7e8-4b7c-81dc-b1112c7ec5ea",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprEnergyScrewDriver","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprEnergyScrewDriver",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"9eb6cd32-3147-4f55-b633-b906e11886f8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"43216691-4564-4061-ae4a-41121fd94c95","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"bb3767a0-cc90-435f-8ffd-affb1d974008","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"65fb923e-9551-48ff-b140-6b704e6d7089","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d1ab9753-9b62-4fed-b6d7-caf163733846","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9f1a4b08-0bae-4b8a-8f84-ac31b26bfc00","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"a66b571d-6061-4ef3-b146-b25e81996249","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9de29e7c-18cd-480a-96b6-c043ec03ca36","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d3570459-3494-48d9-8124-cbd0684d31d7","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2b154a62-7a61-4bd8-a828-1a22e7a5156f","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e0259136-96da-47db-baa1-b39d30848fce","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dd8263b2-c7e8-4b7c-81dc-b1112c7ec5ea","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 4,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprEnergyScrewDriver","path":"sprites/sprEnergyScrewDriver/sprEnergyScrewDriver.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprEnergyScrewDriver",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7534b6fd-2100-400a-865a-b1f99303f2ee","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7534b6fd-2100-400a-865a-b1f99303f2ee","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Existing",
     "path": "folders/Sprites/Weapons/Existing.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprEnergyScrewDriver",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

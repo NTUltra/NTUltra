@@ -211,17 +211,17 @@ function scrUltras() {
 		{
 			ultra_name[29] = "REFINED TASTE"
 			if isOtherCharacter
-				ultra_text[29] = "ONLY HIGH TIER WEAPON DROPS#EVERY ENEMY HAS A 5% CHANCE#TO DROP A WEAPON#INCREASE FIRERATE BASED ON WEAPON TIER"
+				ultra_text[29] = "ONLY HIGH TIER WEAPON DROPS#EVERY ENEMY HAS A 4% CHANCE#TO DROP A WEAPON#INCREASE FIRERATE BASED ON WEAPON TIER"
 			else
-				ultra_text[29] = "ONLY HIGH TIER WEAPON DROPS#EVERY ENEMY HAS A 5% CHANCE#TO DROP A WEAPON#INCREASE FIRERATE BASED ON WEAPON TIER##AUTO EAT WEAPONS LEFT IN THE LEVEL"
+				ultra_text[29] = "ONLY HIGH TIER WEAPON DROPS#EVERY ENEMY HAS A 4% CHANCE#TO DROP A WEAPON#INCREASE FIRERATE BASED ON WEAPON TIER##AUTO EAT WEAPONS LEFT IN THE LEVEL"
 		    ultra_tips[29] = "delicacy"
 		}
 		
 		ultra_name[30] = "REGURGITATE"
 		if instance_exists(Player) && !isOtherCharacter && Player.skill_got[23]//Has open mind
-			ultra_text[30] = "EATING WEAPONS HAS A 70% CHANCE#TO DROP CHESTS##AUTO EAT WEAPONS LEFT IN THE LEVEL";
+			ultra_text[30] = "EATING WEAPONS HAS A 40% CHANCE#TO DROP CHESTS##EATING A WEAPON DROPS IT LIKE A TURRET#THE TURRET FIRES THE EATEN WEAPON##AUTO EAT WEAPONS LEFT IN THE LEVEL";
 		else
-			ultra_text[30] = "EATING WEAPONS HAS A 60% CHANCE#TO DROP CHESTS##AUTO EAT WEAPONS LEFT IN THE LEVEL"
+			ultra_text[30] = "EATING WEAPONS HAS A 30% CHANCE#TO DROP CHESTS##EATING A WEAPON DROPS IT LIKE A TURRET#THE TURRET FIRES THE EATEN WEAPON##AUTO EAT WEAPONS LEFT IN THE LEVEL"
 		ultra_tips[30] = "2% more chance for weapon chests"
     
 	    ultra_name[31] = "EXTRA STORAGE"
@@ -229,11 +229,11 @@ function scrUltras() {
 			ultra_text[31] = "YOU CAN CARRY THREE WEAPONS"
 		else
 			ultra_text[31] = "YOU CAN CARRY THREE WEAPONS#EATING WEAPONS GIVES MORE RADS##AUTO EAT WEAPONS LEFT IN THE LEVEL"
-	    ultra_tips[31] = "can't choose"
+	    ultra_tips[31] = "why not all three?"
     
-	    ultra_name[32] = "MULTI FUNCTIONAL"
-	    ultra_text[32] = "EATING A WEAPON DROPS IT LIKE A TURRET#THE TURRET FIRES THE EATEN WEAPON##AUTO EAT WEAPONS LEFT IN THE LEVEL"//"OCCASIONALLY PRODUCE LIGHTNING#EATING WEAPONS CREATES RADS & LIGHTNING##AUTO EAT WEAPONS LEFT IN LEVEL"
-	    ultra_tips[32] = "like a pocket knife"
+	    ultra_name[32] = "GUN EXTENSION"
+	    ultra_text[32] = "REPLACE ACTIVE WITH:#FORCE SHOT#YOUR ACTIVE FIRES YOUR PRIMARY WEAPON#AT THE COST OF RADS INSTEAD OF AMMO#INDEPENDANT OF FIRERATE!"//"OCCASIONALLY PRODUCE LIGHTNING#EATING WEAPONS CREATES RADS & LIGHTNING##AUTO EAT WEAPONS LEFT IN LEVEL"
+	    ultra_tips[32] = "no omnomnom"
     
 	//CHICKEN 
 	ultra_name[33] = "HARDER TO KILL"
@@ -272,7 +272,7 @@ function scrUltras() {
 	    ultra_text[39] = "ALLIES CAST LASERS TOWARDS EACH OTHER#THE MORE ALLIES YOU HAVE#THE HIGHER YOUR DROP RATE IS#ALIES DROP MORE RESOURCES#WHEN THEY DIE"
 	    ultra_tips[39] = "hurt stone"
 		
-		if instance_exists(Player) && (Player.altUltra || (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep]) && instance_exists(UltraIcon)))
+		if instance_exists(Player) && (Player.altUltra || (scrCheckUltra(Player.wep_name[Player.wep]) || (!Player.skill_got[1] && !Player.skill_got[7] && !Player.skill_got[9]&& !Player.skill_got[25]) || scrCheckUltra(Player.wep_name[Player.bwep]) && instance_exists(UltraIcon)))
 		{
 			ultra_name[39] = "BIG REBEL"
 		    ultra_text[39] = "+40 MAX HP!#YOU CAN'T HEAL#EVERY LOOP RESET HP TO FULL#ALLIES COST AMMO"

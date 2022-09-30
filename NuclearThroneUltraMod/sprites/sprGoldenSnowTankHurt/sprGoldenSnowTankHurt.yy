@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprGoldenSnowTankHurt",
   "bboxMode": 0,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"115df8e6-4d86-4901-b27d-0169819145ae","path":"sprites/sprGoldenSnowTankHurt/sprGoldenSnowTankHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"115df8e6-4d86-4901-b27d-0169819145ae","path":"sprites/sprGoldenSnowTankHurt/sprGoldenSnowTankHurt.yy",},"LayerId":{"name":"e206ebed-c52b-4f75-a414-95f6a416813c","path":"sprites/sprGoldenSnowTankHurt/sprGoldenSnowTankHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldenSnowTankHurt","path":"sprites/sprGoldenSnowTankHurt/sprGoldenSnowTankHurt.yy",},"resourceVersion":"1.0","name":"115df8e6-4d86-4901-b27d-0169819145ae","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0bee7e37-8007-4782-9885-f163ffe8b2d6","path":"sprites/sprGoldenSnowTankHurt/sprGoldenSnowTankHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0bee7e37-8007-4782-9885-f163ffe8b2d6","path":"sprites/sprGoldenSnowTankHurt/sprGoldenSnowTankHurt.yy",},"LayerId":{"name":"e206ebed-c52b-4f75-a414-95f6a416813c","path":"sprites/sprGoldenSnowTankHurt/sprGoldenSnowTankHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldenSnowTankHurt","path":"sprites/sprGoldenSnowTankHurt/sprGoldenSnowTankHurt.yy",},"resourceVersion":"1.0","name":"0bee7e37-8007-4782-9885-f163ffe8b2d6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4e7cf293-73d0-4399-8702-06c3d23eedd8","path":"sprites/sprGoldenSnowTankHurt/sprGoldenSnowTankHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4e7cf293-73d0-4399-8702-06c3d23eedd8","path":"sprites/sprGoldenSnowTankHurt/sprGoldenSnowTankHurt.yy",},"LayerId":{"name":"e206ebed-c52b-4f75-a414-95f6a416813c","path":"sprites/sprGoldenSnowTankHurt/sprGoldenSnowTankHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldenSnowTankHurt","path":"sprites/sprGoldenSnowTankHurt/sprGoldenSnowTankHurt.yy",},"resourceVersion":"1.0","name":"4e7cf293-73d0-4399-8702-06c3d23eedd8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"115df8e6-4d86-4901-b27d-0169819145ae",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0bee7e37-8007-4782-9885-f163ffe8b2d6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4e7cf293-73d0-4399-8702-06c3d23eedd8",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprGoldenSnowTankHurt","path":"sprites/sprGoldenSnowTankHurt/sprGoldenSnowTankHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprGoldenSnowTankHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"d8634718-c982-4698-9974-01dbd308463d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"115df8e6-4d86-4901-b27d-0169819145ae","path":"sprites/sprGoldenSnowTankHurt/sprGoldenSnowTankHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a1855198-2db7-4290-9b78-9053e046387b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0bee7e37-8007-4782-9885-f163ffe8b2d6","path":"sprites/sprGoldenSnowTankHurt/sprGoldenSnowTankHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"694a2672-ce3b-413c-8ac5-05459218878c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4e7cf293-73d0-4399-8702-06c3d23eedd8","path":"sprites/sprGoldenSnowTankHurt/sprGoldenSnowTankHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 24,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprGoldenSnowTankHurt","path":"sprites/sprGoldenSnowTankHurt/sprGoldenSnowTankHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprGoldenSnowTankHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e206ebed-c52b-4f75-a414-95f6a416813c","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e206ebed-c52b-4f75-a414-95f6a416813c","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "FrozenCity",
     "path": "folders/Sprites/Enemies/FrozenCity.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprGoldenSnowTankHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

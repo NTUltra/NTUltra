@@ -9,10 +9,10 @@ if other.team != team && (image_index<5)
 				var immunelimit = 0;
 				if skill_got[14] = 1
 				{
-					immune = 1
+					immunelimit = 5;
 
 					if race=25
-					immunelimit=6;
+						immunelimit=6;
 			
 					if immunelimit > maxhealth
 						immunelimit = maxhealth;
@@ -20,7 +20,7 @@ if other.team != team && (image_index<5)
 				}
 				if my_health > immunelimit
 				{
-					if my_health-1 < immunelimit
+					if my_health-2 < immunelimit
 						my_health = immunelimit
 					else
 					{

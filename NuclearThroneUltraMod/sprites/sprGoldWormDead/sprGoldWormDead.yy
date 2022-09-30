@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprGoldWormDead",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,24 +27,16 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"878730b9-fddd-4c96-90cb-fd3cd285515a","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"878730b9-fddd-4c96-90cb-fd3cd285515a","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"LayerId":{"name":"092fcd47-d045-48f0-9d66-980f8c68595d","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldWormDead","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"resourceVersion":"1.0","name":"878730b9-fddd-4c96-90cb-fd3cd285515a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9458e43a-e593-4404-8f74-ec032d6c196f","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9458e43a-e593-4404-8f74-ec032d6c196f","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"LayerId":{"name":"092fcd47-d045-48f0-9d66-980f8c68595d","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldWormDead","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"resourceVersion":"1.0","name":"9458e43a-e593-4404-8f74-ec032d6c196f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"29956497-78ec-40b4-98f8-4de8d56c857f","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"29956497-78ec-40b4-98f8-4de8d56c857f","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"LayerId":{"name":"092fcd47-d045-48f0-9d66-980f8c68595d","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldWormDead","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"resourceVersion":"1.0","name":"29956497-78ec-40b4-98f8-4de8d56c857f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"79ce54e0-b89a-401e-ac85-4f0f1be6849d","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"79ce54e0-b89a-401e-ac85-4f0f1be6849d","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"LayerId":{"name":"092fcd47-d045-48f0-9d66-980f8c68595d","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldWormDead","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"resourceVersion":"1.0","name":"79ce54e0-b89a-401e-ac85-4f0f1be6849d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a8fa49ee-1278-4641-a5b1-fbd3bb8ed6c6","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a8fa49ee-1278-4641-a5b1-fbd3bb8ed6c6","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"LayerId":{"name":"092fcd47-d045-48f0-9d66-980f8c68595d","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldWormDead","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"resourceVersion":"1.0","name":"a8fa49ee-1278-4641-a5b1-fbd3bb8ed6c6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"878730b9-fddd-4c96-90cb-fd3cd285515a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9458e43a-e593-4404-8f74-ec032d6c196f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"29956497-78ec-40b4-98f8-4de8d56c857f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"79ce54e0-b89a-401e-ac85-4f0f1be6849d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a8fa49ee-1278-4641-a5b1-fbd3bb8ed6c6",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprGoldWormDead","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprGoldWormDead",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -52,13 +47,13 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"c0c8d1b6-9036-475c-9b98-023401c18089","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"878730b9-fddd-4c96-90cb-fd3cd285515a","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b3d66acf-8faf-4269-b694-aef02d612454","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9458e43a-e593-4404-8f74-ec032d6c196f","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a30fd254-1cfe-43bb-9946-d9b86017309b","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"29956497-78ec-40b4-98f8-4de8d56c857f","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d6517503-950e-45cc-a10b-96432471b828","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"79ce54e0-b89a-401e-ac85-4f0f1be6849d","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"25f0d574-dd54-472a-897f-8ceb1d4c2952","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a8fa49ee-1278-4641-a5b1-fbd3bb8ed6c6","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -74,22 +69,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprGoldWormDead","path":"sprites/sprGoldWormDead/sprGoldWormDead.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprGoldWormDead",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"092fcd47-d045-48f0-9d66-980f8c68595d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"092fcd47-d045-48f0-9d66-980f8c68595d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "FireWorm",
     "path": "folders/Sprites/Enemies/Vulcano/FireWorm.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprGoldWormDead",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

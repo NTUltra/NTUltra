@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprArmourStrike",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f53acfe4-1641-4ab4-a16b-6e9c96ed1227","path":"sprites/sprArmourStrike/sprArmourStrike.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f53acfe4-1641-4ab4-a16b-6e9c96ed1227","path":"sprites/sprArmourStrike/sprArmourStrike.yy",},"LayerId":{"name":"51f7f2e3-1214-4819-ae70-251939bc1400","path":"sprites/sprArmourStrike/sprArmourStrike.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprArmourStrike","path":"sprites/sprArmourStrike/sprArmourStrike.yy",},"resourceVersion":"1.0","name":"f53acfe4-1641-4ab4-a16b-6e9c96ed1227","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7de0b1d7-894d-4e8a-bba9-e8e8445cd453","path":"sprites/sprArmourStrike/sprArmourStrike.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7de0b1d7-894d-4e8a-bba9-e8e8445cd453","path":"sprites/sprArmourStrike/sprArmourStrike.yy",},"LayerId":{"name":"51f7f2e3-1214-4819-ae70-251939bc1400","path":"sprites/sprArmourStrike/sprArmourStrike.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprArmourStrike","path":"sprites/sprArmourStrike/sprArmourStrike.yy",},"resourceVersion":"1.0","name":"7de0b1d7-894d-4e8a-bba9-e8e8445cd453","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f53acfe4-1641-4ab4-a16b-6e9c96ed1227",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7de0b1d7-894d-4e8a-bba9-e8e8445cd453",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprArmourStrike","path":"sprites/sprArmourStrike/sprArmourStrike.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprArmourStrike",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"9a68240a-8912-4b55-b659-4684f786bab2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f53acfe4-1641-4ab4-a16b-6e9c96ed1227","path":"sprites/sprArmourStrike/sprArmourStrike.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"6a0b7c12-933a-430c-89cb-c1df4996c274","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7de0b1d7-894d-4e8a-bba9-e8e8445cd453","path":"sprites/sprArmourStrike/sprArmourStrike.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"9a68240a-8912-4b55-b659-4684f786bab2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f53acfe4-1641-4ab4-a16b-6e9c96ed1227","path":"sprites/sprArmourStrike/sprArmourStrike.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6a0b7c12-933a-430c-89cb-c1df4996c274","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7de0b1d7-894d-4e8a-bba9-e8e8445cd453","path":"sprites/sprArmourStrike/sprArmourStrike.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 4,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprArmourStrike","path":"sprites/sprArmourStrike/sprArmourStrike.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprArmourStrike",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"51f7f2e3-1214-4819-ae70-251939bc1400","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"51f7f2e3-1214-4819-ae70-251939bc1400","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Armourstrike",
     "path": "folders/Sprites/Player/Custom/Viking/Armourstrike.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprArmourStrike",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

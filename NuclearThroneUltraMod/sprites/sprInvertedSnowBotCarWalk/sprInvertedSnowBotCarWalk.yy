@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedSnowBotCarWalk",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,33 +27,19 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6731ea19-ddb6-4d42-9cd5-aba559b6d7db","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6731ea19-ddb6-4d42-9cd5-aba559b6d7db","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"LayerId":{"name":"0743217f-0ca1-4d1e-9a5f-8eebc3233672","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedSnowBotCarWalk","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","name":"6731ea19-ddb6-4d42-9cd5-aba559b6d7db","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4be2bbdc-ea5f-43e8-9b75-5bd210a68074","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4be2bbdc-ea5f-43e8-9b75-5bd210a68074","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"LayerId":{"name":"0743217f-0ca1-4d1e-9a5f-8eebc3233672","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedSnowBotCarWalk","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","name":"4be2bbdc-ea5f-43e8-9b75-5bd210a68074","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e443eb79-1615-4280-bb86-379c1fefcac8","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e443eb79-1615-4280-bb86-379c1fefcac8","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"LayerId":{"name":"0743217f-0ca1-4d1e-9a5f-8eebc3233672","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedSnowBotCarWalk","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","name":"e443eb79-1615-4280-bb86-379c1fefcac8","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e71fec8b-c314-4ade-bf7e-e111a5ffa3dc","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e71fec8b-c314-4ade-bf7e-e111a5ffa3dc","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"LayerId":{"name":"0743217f-0ca1-4d1e-9a5f-8eebc3233672","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedSnowBotCarWalk","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","name":"e71fec8b-c314-4ade-bf7e-e111a5ffa3dc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0fcc35e7-d777-4635-8ed0-9d7bf5792623","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0fcc35e7-d777-4635-8ed0-9d7bf5792623","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"LayerId":{"name":"0743217f-0ca1-4d1e-9a5f-8eebc3233672","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedSnowBotCarWalk","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","name":"0fcc35e7-d777-4635-8ed0-9d7bf5792623","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b632ea88-b505-4bc8-9140-4133bf21d55b","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b632ea88-b505-4bc8-9140-4133bf21d55b","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"LayerId":{"name":"0743217f-0ca1-4d1e-9a5f-8eebc3233672","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedSnowBotCarWalk","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","name":"b632ea88-b505-4bc8-9140-4133bf21d55b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2a231552-f6d5-4487-96fe-0664cfc40337","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2a231552-f6d5-4487-96fe-0664cfc40337","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"LayerId":{"name":"0743217f-0ca1-4d1e-9a5f-8eebc3233672","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedSnowBotCarWalk","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","name":"2a231552-f6d5-4487-96fe-0664cfc40337","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9df20c54-10a1-42b6-a4e4-6704b21f0c4c","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9df20c54-10a1-42b6-a4e4-6704b21f0c4c","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"LayerId":{"name":"0743217f-0ca1-4d1e-9a5f-8eebc3233672","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedSnowBotCarWalk","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","name":"9df20c54-10a1-42b6-a4e4-6704b21f0c4c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6731ea19-ddb6-4d42-9cd5-aba559b6d7db",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4be2bbdc-ea5f-43e8-9b75-5bd210a68074",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e443eb79-1615-4280-bb86-379c1fefcac8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e71fec8b-c314-4ade-bf7e-e111a5ffa3dc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0fcc35e7-d777-4635-8ed0-9d7bf5792623",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b632ea88-b505-4bc8-9140-4133bf21d55b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2a231552-f6d5-4487-96fe-0664cfc40337",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9df20c54-10a1-42b6-a4e4-6704b21f0c4c",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedSnowBotCarWalk","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -61,7 +50,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"a9cb4c33-b5a8-4026-9b4e-22fb17eff67c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6731ea19-ddb6-4d42-9cd5-aba559b6d7db","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"5b1d16ef-45e3-4e13-8c6d-cd87a32d1929","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4be2bbdc-ea5f-43e8-9b75-5bd210a68074","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b2866fe8-6511-483f-b900-3ca73dcb0f3a","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e443eb79-1615-4280-bb86-379c1fefcac8","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -70,7 +59,7 @@
             {"id":"cc47232a-b1c2-40df-bdbf-efa8880e446d","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b632ea88-b505-4bc8-9140-4133bf21d55b","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6d9a896e-7940-4bbd-8e0a-7a2c30873f74","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2a231552-f6d5-4487-96fe-0664cfc40337","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6779a7a7-8b0c-4c18-96d2-11c855262cce","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9df20c54-10a1-42b6-a4e4-6704b21f0c4c","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -86,22 +75,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedSnowBotCarWalk","path":"sprites/sprInvertedSnowBotCarWalk/sprInvertedSnowBotCarWalk.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0743217f-0ca1-4d1e-9a5f-8eebc3233672","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0743217f-0ca1-4d1e-9a5f-8eebc3233672","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "SnowbotCar",
     "path": "folders/Sprites/Enemies/FrozenCity/SnowbotCar.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedSnowBotCarWalk",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprCursedWeaponChestOpen",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e8c0285d-52ea-4a18-b907-b6ec798ed9f1","path":"sprites/sprCursedWeaponChestOpen/sprCursedWeaponChestOpen.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e8c0285d-52ea-4a18-b907-b6ec798ed9f1","path":"sprites/sprCursedWeaponChestOpen/sprCursedWeaponChestOpen.yy",},"LayerId":{"name":"926d97cf-0c96-4318-8849-517a82649735","path":"sprites/sprCursedWeaponChestOpen/sprCursedWeaponChestOpen.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCursedWeaponChestOpen","path":"sprites/sprCursedWeaponChestOpen/sprCursedWeaponChestOpen.yy",},"resourceVersion":"1.0","name":"e8c0285d-52ea-4a18-b907-b6ec798ed9f1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e8c0285d-52ea-4a18-b907-b6ec798ed9f1",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprCursedWeaponChestOpen","path":"sprites/sprCursedWeaponChestOpen/sprCursedWeaponChestOpen.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprCursedWeaponChestOpen",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"94c59692-a526-45f0-b6a7-360ab0974c8c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e8c0285d-52ea-4a18-b907-b6ec798ed9f1","path":"sprites/sprCursedWeaponChestOpen/sprCursedWeaponChestOpen.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprCursedWeaponChestOpen","path":"sprites/sprCursedWeaponChestOpen/sprCursedWeaponChestOpen.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprCursedWeaponChestOpen",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"926d97cf-0c96-4318-8849-517a82649735","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"926d97cf-0c96-4318-8849-517a82649735","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Chests",
     "path": "folders/Sprites/Chests.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprCursedWeaponChestOpen",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

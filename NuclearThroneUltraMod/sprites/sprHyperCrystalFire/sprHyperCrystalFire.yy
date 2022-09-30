@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprHyperCrystalFire",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"19b0abc9-ff44-4042-8ea1-0541a94c1e4b","path":"sprites/sprHyperCrystalFire/sprHyperCrystalFire.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"19b0abc9-ff44-4042-8ea1-0541a94c1e4b","path":"sprites/sprHyperCrystalFire/sprHyperCrystalFire.yy",},"LayerId":{"name":"b9399a69-c10b-4f5d-86fe-b8a885f78047","path":"sprites/sprHyperCrystalFire/sprHyperCrystalFire.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHyperCrystalFire","path":"sprites/sprHyperCrystalFire/sprHyperCrystalFire.yy",},"resourceVersion":"1.0","name":"19b0abc9-ff44-4042-8ea1-0541a94c1e4b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"11ba76b5-b99f-40ae-a819-01b1b7cc57dc","path":"sprites/sprHyperCrystalFire/sprHyperCrystalFire.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"11ba76b5-b99f-40ae-a819-01b1b7cc57dc","path":"sprites/sprHyperCrystalFire/sprHyperCrystalFire.yy",},"LayerId":{"name":"b9399a69-c10b-4f5d-86fe-b8a885f78047","path":"sprites/sprHyperCrystalFire/sprHyperCrystalFire.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHyperCrystalFire","path":"sprites/sprHyperCrystalFire/sprHyperCrystalFire.yy",},"resourceVersion":"1.0","name":"11ba76b5-b99f-40ae-a819-01b1b7cc57dc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a44fec7b-856d-43ad-8f70-75e5b393a643","path":"sprites/sprHyperCrystalFire/sprHyperCrystalFire.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a44fec7b-856d-43ad-8f70-75e5b393a643","path":"sprites/sprHyperCrystalFire/sprHyperCrystalFire.yy",},"LayerId":{"name":"b9399a69-c10b-4f5d-86fe-b8a885f78047","path":"sprites/sprHyperCrystalFire/sprHyperCrystalFire.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHyperCrystalFire","path":"sprites/sprHyperCrystalFire/sprHyperCrystalFire.yy",},"resourceVersion":"1.0","name":"a44fec7b-856d-43ad-8f70-75e5b393a643","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"19b0abc9-ff44-4042-8ea1-0541a94c1e4b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"11ba76b5-b99f-40ae-a819-01b1b7cc57dc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a44fec7b-856d-43ad-8f70-75e5b393a643",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprHyperCrystalFire","path":"sprites/sprHyperCrystalFire/sprHyperCrystalFire.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprHyperCrystalFire",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"979406dd-9a7a-40b9-9f33-83fdc02f247f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"19b0abc9-ff44-4042-8ea1-0541a94c1e4b","path":"sprites/sprHyperCrystalFire/sprHyperCrystalFire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"05e1965b-d555-490a-8ab3-e8acdf76bba0","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"11ba76b5-b99f-40ae-a819-01b1b7cc57dc","path":"sprites/sprHyperCrystalFire/sprHyperCrystalFire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"47752559-fc1c-488e-9b0f-30f0275d8d76","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a44fec7b-856d-43ad-8f70-75e5b393a643","path":"sprites/sprHyperCrystalFire/sprHyperCrystalFire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 48,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprHyperCrystalFire","path":"sprites/sprHyperCrystalFire/sprHyperCrystalFire.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprHyperCrystalFire",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b9399a69-c10b-4f5d-86fe-b8a885f78047","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b9399a69-c10b-4f5d-86fe-b8a885f78047","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "HyperCrystal",
     "path": "folders/Sprites/Enemies/Boss/HyperCrystal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprHyperCrystalFire",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprVenusCarOasisHurt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"18ae59af-7893-4e75-95a0-977a5ba6512e","path":"sprites/sprVenusCarOasisHurt/sprVenusCarOasisHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"18ae59af-7893-4e75-95a0-977a5ba6512e","path":"sprites/sprVenusCarOasisHurt/sprVenusCarOasisHurt.yy",},"LayerId":{"name":"a4323bda-d314-4d0e-b514-943eedfbc679","path":"sprites/sprVenusCarOasisHurt/sprVenusCarOasisHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVenusCarOasisHurt","path":"sprites/sprVenusCarOasisHurt/sprVenusCarOasisHurt.yy",},"resourceVersion":"1.0","name":"18ae59af-7893-4e75-95a0-977a5ba6512e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7d1b4e7a-990f-4074-9d10-66e59b788a97","path":"sprites/sprVenusCarOasisHurt/sprVenusCarOasisHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7d1b4e7a-990f-4074-9d10-66e59b788a97","path":"sprites/sprVenusCarOasisHurt/sprVenusCarOasisHurt.yy",},"LayerId":{"name":"a4323bda-d314-4d0e-b514-943eedfbc679","path":"sprites/sprVenusCarOasisHurt/sprVenusCarOasisHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVenusCarOasisHurt","path":"sprites/sprVenusCarOasisHurt/sprVenusCarOasisHurt.yy",},"resourceVersion":"1.0","name":"7d1b4e7a-990f-4074-9d10-66e59b788a97","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"21d37f4c-ba8a-473f-a745-d99720e419b7","path":"sprites/sprVenusCarOasisHurt/sprVenusCarOasisHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"21d37f4c-ba8a-473f-a745-d99720e419b7","path":"sprites/sprVenusCarOasisHurt/sprVenusCarOasisHurt.yy",},"LayerId":{"name":"a4323bda-d314-4d0e-b514-943eedfbc679","path":"sprites/sprVenusCarOasisHurt/sprVenusCarOasisHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVenusCarOasisHurt","path":"sprites/sprVenusCarOasisHurt/sprVenusCarOasisHurt.yy",},"resourceVersion":"1.0","name":"21d37f4c-ba8a-473f-a745-d99720e419b7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"18ae59af-7893-4e75-95a0-977a5ba6512e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7d1b4e7a-990f-4074-9d10-66e59b788a97",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"21d37f4c-ba8a-473f-a745-d99720e419b7",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprVenusCarOasisHurt","path":"sprites/sprVenusCarOasisHurt/sprVenusCarOasisHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprVenusCarOasisHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"9e12d21d-a4cd-464e-9540-da87896a8b2e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"18ae59af-7893-4e75-95a0-977a5ba6512e","path":"sprites/sprVenusCarOasisHurt/sprVenusCarOasisHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"7dc54a98-6208-418b-99c1-dfbb8c7a72a7","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7d1b4e7a-990f-4074-9d10-66e59b788a97","path":"sprites/sprVenusCarOasisHurt/sprVenusCarOasisHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"50b7209e-be57-41c9-a064-28a2f48f6fb6","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"21d37f4c-ba8a-473f-a745-d99720e419b7","path":"sprites/sprVenusCarOasisHurt/sprVenusCarOasisHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprVenusCarOasisHurt","path":"sprites/sprVenusCarOasisHurt/sprVenusCarOasisHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprVenusCarOasisHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a4323bda-d314-4d0e-b514-943eedfbc679","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a4323bda-d314-4d0e-b514-943eedfbc679","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Cars",
     "path": "folders/Sprites/Enviroment/Cars.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprVenusCarOasisHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

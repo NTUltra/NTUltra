@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprVulcanoTopDecal",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"9bc99e2d-8dbf-4068-a442-5ac86865adde","path":"sprites/sprVulcanoTopDecal/sprVulcanoTopDecal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9bc99e2d-8dbf-4068-a442-5ac86865adde","path":"sprites/sprVulcanoTopDecal/sprVulcanoTopDecal.yy",},"LayerId":{"name":"8756d536-a41c-4cfa-983a-a42c2d1c5149","path":"sprites/sprVulcanoTopDecal/sprVulcanoTopDecal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVulcanoTopDecal","path":"sprites/sprVulcanoTopDecal/sprVulcanoTopDecal.yy",},"resourceVersion":"1.0","name":"9bc99e2d-8dbf-4068-a442-5ac86865adde","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d2b1f9f0-43c8-47a0-abf2-29005d2a9240","path":"sprites/sprVulcanoTopDecal/sprVulcanoTopDecal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d2b1f9f0-43c8-47a0-abf2-29005d2a9240","path":"sprites/sprVulcanoTopDecal/sprVulcanoTopDecal.yy",},"LayerId":{"name":"8756d536-a41c-4cfa-983a-a42c2d1c5149","path":"sprites/sprVulcanoTopDecal/sprVulcanoTopDecal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVulcanoTopDecal","path":"sprites/sprVulcanoTopDecal/sprVulcanoTopDecal.yy",},"resourceVersion":"1.0","name":"d2b1f9f0-43c8-47a0-abf2-29005d2a9240","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e1ebe87b-9ed4-40bf-9bb4-ad4e40ac6220","path":"sprites/sprVulcanoTopDecal/sprVulcanoTopDecal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e1ebe87b-9ed4-40bf-9bb4-ad4e40ac6220","path":"sprites/sprVulcanoTopDecal/sprVulcanoTopDecal.yy",},"LayerId":{"name":"8756d536-a41c-4cfa-983a-a42c2d1c5149","path":"sprites/sprVulcanoTopDecal/sprVulcanoTopDecal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVulcanoTopDecal","path":"sprites/sprVulcanoTopDecal/sprVulcanoTopDecal.yy",},"resourceVersion":"1.0","name":"e1ebe87b-9ed4-40bf-9bb4-ad4e40ac6220","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9bc99e2d-8dbf-4068-a442-5ac86865adde",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d2b1f9f0-43c8-47a0-abf2-29005d2a9240",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e1ebe87b-9ed4-40bf-9bb4-ad4e40ac6220",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprVulcanoTopDecal","path":"sprites/sprVulcanoTopDecal/sprVulcanoTopDecal.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprVulcanoTopDecal",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"eba61557-6df8-46d3-a1d4-40e27163f64e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9bc99e2d-8dbf-4068-a442-5ac86865adde","path":"sprites/sprVulcanoTopDecal/sprVulcanoTopDecal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"74fa2d79-9f87-47f5-b6b4-32d785806b9f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d2b1f9f0-43c8-47a0-abf2-29005d2a9240","path":"sprites/sprVulcanoTopDecal/sprVulcanoTopDecal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d9f3e4f0-0802-41f5-9f28-d1596b5df871","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e1ebe87b-9ed4-40bf-9bb4-ad4e40ac6220","path":"sprites/sprVulcanoTopDecal/sprVulcanoTopDecal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprVulcanoTopDecal","path":"sprites/sprVulcanoTopDecal/sprVulcanoTopDecal.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprVulcanoTopDecal",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8756d536-a41c-4cfa-983a-a42c2d1c5149","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8756d536-a41c-4cfa-983a-a42c2d1c5149","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Vulcano",
     "path": "folders/Sprites/Enviroment/Tiles/Vulcano.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprVulcanoTopDecal",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

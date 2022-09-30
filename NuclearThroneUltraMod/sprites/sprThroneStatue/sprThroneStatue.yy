@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprThroneStatue",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,51 +27,25 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"7d74654c-a497-4fa6-bee2-22e6b264c638","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7d74654c-a497-4fa6-bee2-22e6b264c638","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":{"name":"532ee959-fed6-4edf-94c4-0b8ab2d975d1","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatue","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"7d74654c-a497-4fa6-bee2-22e6b264c638","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"743ab362-cf25-4e73-9a8d-ea2bedf7d70e","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"743ab362-cf25-4e73-9a8d-ea2bedf7d70e","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":{"name":"532ee959-fed6-4edf-94c4-0b8ab2d975d1","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatue","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"743ab362-cf25-4e73-9a8d-ea2bedf7d70e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0f78a0f8-d4df-4fe4-a53e-e1e2d9011c21","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0f78a0f8-d4df-4fe4-a53e-e1e2d9011c21","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":{"name":"532ee959-fed6-4edf-94c4-0b8ab2d975d1","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatue","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"0f78a0f8-d4df-4fe4-a53e-e1e2d9011c21","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2dd11e5a-2f6d-4221-a4a2-987799e6abd3","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2dd11e5a-2f6d-4221-a4a2-987799e6abd3","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":{"name":"532ee959-fed6-4edf-94c4-0b8ab2d975d1","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatue","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"2dd11e5a-2f6d-4221-a4a2-987799e6abd3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"cabafd57-5e20-44d0-b722-9370522b7b09","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cabafd57-5e20-44d0-b722-9370522b7b09","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":{"name":"532ee959-fed6-4edf-94c4-0b8ab2d975d1","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatue","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"cabafd57-5e20-44d0-b722-9370522b7b09","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0d9c0dea-ce5b-442b-bfd2-73d05a994733","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0d9c0dea-ce5b-442b-bfd2-73d05a994733","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":{"name":"532ee959-fed6-4edf-94c4-0b8ab2d975d1","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatue","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"0d9c0dea-ce5b-442b-bfd2-73d05a994733","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0fcfab66-4250-4dab-9d29-69704117ad3c","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0fcfab66-4250-4dab-9d29-69704117ad3c","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":{"name":"532ee959-fed6-4edf-94c4-0b8ab2d975d1","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatue","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"0fcfab66-4250-4dab-9d29-69704117ad3c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3cfeeec4-b9ba-4ccb-be31-793870c5cae6","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3cfeeec4-b9ba-4ccb-be31-793870c5cae6","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":{"name":"532ee959-fed6-4edf-94c4-0b8ab2d975d1","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatue","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"3cfeeec4-b9ba-4ccb-be31-793870c5cae6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9ffb7a03-d130-42b6-9f31-668b4146d5e7","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9ffb7a03-d130-42b6-9f31-668b4146d5e7","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":{"name":"532ee959-fed6-4edf-94c4-0b8ab2d975d1","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatue","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"9ffb7a03-d130-42b6-9f31-668b4146d5e7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"dfdbeda1-66a7-457a-8f65-3a0ea16b877d","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dfdbeda1-66a7-457a-8f65-3a0ea16b877d","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":{"name":"532ee959-fed6-4edf-94c4-0b8ab2d975d1","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatue","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"dfdbeda1-66a7-457a-8f65-3a0ea16b877d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"037e2a38-8af4-4df1-a5a8-59bbe5e25c1a","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"037e2a38-8af4-4df1-a5a8-59bbe5e25c1a","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":{"name":"532ee959-fed6-4edf-94c4-0b8ab2d975d1","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatue","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"037e2a38-8af4-4df1-a5a8-59bbe5e25c1a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a07eaf90-19dd-4a96-889c-edb0442c59b3","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a07eaf90-19dd-4a96-889c-edb0442c59b3","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":{"name":"532ee959-fed6-4edf-94c4-0b8ab2d975d1","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatue","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"a07eaf90-19dd-4a96-889c-edb0442c59b3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e77d3c28-f29e-456c-8357-2b6b05362062","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e77d3c28-f29e-456c-8357-2b6b05362062","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":{"name":"532ee959-fed6-4edf-94c4-0b8ab2d975d1","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatue","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"e77d3c28-f29e-456c-8357-2b6b05362062","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7dcdec73-2b05-45ab-9c7b-fe83351a1fb6","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7dcdec73-2b05-45ab-9c7b-fe83351a1fb6","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"LayerId":{"name":"532ee959-fed6-4edf-94c4-0b8ab2d975d1","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprThroneStatue","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","name":"7dcdec73-2b05-45ab-9c7b-fe83351a1fb6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7d74654c-a497-4fa6-bee2-22e6b264c638",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"743ab362-cf25-4e73-9a8d-ea2bedf7d70e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0f78a0f8-d4df-4fe4-a53e-e1e2d9011c21",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2dd11e5a-2f6d-4221-a4a2-987799e6abd3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cabafd57-5e20-44d0-b722-9370522b7b09",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0d9c0dea-ce5b-442b-bfd2-73d05a994733",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0fcfab66-4250-4dab-9d29-69704117ad3c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3cfeeec4-b9ba-4ccb-be31-793870c5cae6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9ffb7a03-d130-42b6-9f31-668b4146d5e7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dfdbeda1-66a7-457a-8f65-3a0ea16b877d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"037e2a38-8af4-4df1-a5a8-59bbe5e25c1a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a07eaf90-19dd-4a96-889c-edb0442c59b3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e77d3c28-f29e-456c-8357-2b6b05362062",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7dcdec73-2b05-45ab-9c7b-fe83351a1fb6",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprThroneStatue","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprThroneStatue",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -79,7 +56,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"212db1cb-5063-4b7d-97cf-5fecda284e29","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7d74654c-a497-4fa6-bee2-22e6b264c638","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9fbc01bc-ce27-4869-9fed-2cccf9ac7f4f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"743ab362-cf25-4e73-9a8d-ea2bedf7d70e","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"3968db5c-3a6b-4864-8240-d98e51aee44c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0f78a0f8-d4df-4fe4-a53e-e1e2d9011c21","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -94,7 +71,7 @@
             {"id":"3d2e5535-5114-48f0-8e55-ee9f63cecd98","Key":11.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a07eaf90-19dd-4a96-889c-edb0442c59b3","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"cda356b2-353a-40ca-a0d7-5af045775e74","Key":12.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e77d3c28-f29e-456c-8357-2b6b05362062","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a2508a1f-41a6-4894-be46-237f2bdfaff6","Key":13.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7dcdec73-2b05-45ab-9c7b-fe83351a1fb6","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -110,22 +87,13 @@
     "yorigin": 24,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprThroneStatue","path":"sprites/sprThroneStatue/sprThroneStatue.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprThroneStatue",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"532ee959-fed6-4edf-94c4-0b8ab2d975d1","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"532ee959-fed6-4edf-94c4-0b8ab2d975d1","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Throne1",
     "path": "folders/Sprites/Palace/Palace Enemy/TheThrone/Throne1.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprThroneStatue",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

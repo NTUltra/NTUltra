@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprAssassinBossDash",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"16254959-29d1-491d-b86f-12ddddc8512d","path":"sprites/sprAssassinBossDash/sprAssassinBossDash.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"16254959-29d1-491d-b86f-12ddddc8512d","path":"sprites/sprAssassinBossDash/sprAssassinBossDash.yy",},"LayerId":{"name":"f5ec67c2-facf-42c2-9404-32d596fcce0b","path":"sprites/sprAssassinBossDash/sprAssassinBossDash.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprAssassinBossDash","path":"sprites/sprAssassinBossDash/sprAssassinBossDash.yy",},"resourceVersion":"1.0","name":"16254959-29d1-491d-b86f-12ddddc8512d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"fdd2f3f1-f3ec-4b75-a91a-8eb50cc69465","path":"sprites/sprAssassinBossDash/sprAssassinBossDash.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fdd2f3f1-f3ec-4b75-a91a-8eb50cc69465","path":"sprites/sprAssassinBossDash/sprAssassinBossDash.yy",},"LayerId":{"name":"f5ec67c2-facf-42c2-9404-32d596fcce0b","path":"sprites/sprAssassinBossDash/sprAssassinBossDash.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprAssassinBossDash","path":"sprites/sprAssassinBossDash/sprAssassinBossDash.yy",},"resourceVersion":"1.0","name":"fdd2f3f1-f3ec-4b75-a91a-8eb50cc69465","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"185ecc40-3838-4e45-9017-c758507ad2cd","path":"sprites/sprAssassinBossDash/sprAssassinBossDash.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"185ecc40-3838-4e45-9017-c758507ad2cd","path":"sprites/sprAssassinBossDash/sprAssassinBossDash.yy",},"LayerId":{"name":"f5ec67c2-facf-42c2-9404-32d596fcce0b","path":"sprites/sprAssassinBossDash/sprAssassinBossDash.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprAssassinBossDash","path":"sprites/sprAssassinBossDash/sprAssassinBossDash.yy",},"resourceVersion":"1.0","name":"185ecc40-3838-4e45-9017-c758507ad2cd","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"16254959-29d1-491d-b86f-12ddddc8512d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fdd2f3f1-f3ec-4b75-a91a-8eb50cc69465",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"185ecc40-3838-4e45-9017-c758507ad2cd",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprAssassinBossDash","path":"sprites/sprAssassinBossDash/sprAssassinBossDash.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"d368c360-9b48-4bd5-90db-79122d2395cb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"16254959-29d1-491d-b86f-12ddddc8512d","path":"sprites/sprAssassinBossDash/sprAssassinBossDash.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"017c7695-7e35-48e8-a457-714c1abeb0ac","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fdd2f3f1-f3ec-4b75-a91a-8eb50cc69465","path":"sprites/sprAssassinBossDash/sprAssassinBossDash.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"10a3c804-86d2-45e5-8db1-70f99a0266e4","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"185ecc40-3838-4e45-9017-c758507ad2cd","path":"sprites/sprAssassinBossDash/sprAssassinBossDash.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 9,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprAssassinBossDash","path":"sprites/sprAssassinBossDash/sprAssassinBossDash.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f5ec67c2-facf-42c2-9404-32d596fcce0b","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f5ec67c2-facf-42c2-9404-32d596fcce0b","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "AssassinBoss",
     "path": "folders/Sprites/Enemies/Boss/AssassinBoss.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprAssassinBossDash",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

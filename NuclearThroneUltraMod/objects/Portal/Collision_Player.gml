@@ -44,7 +44,7 @@ endgame = 12;//originally 30
 //ROBOT
 if Player.race = 8
 {
-	    if (Player.race == 8 && (Player.ultra_got[29]==1||Player.ultra_got[30]==1||Player.ultra_got[31]==1||Player.ultra_got[32]==1))
+	    if (Player.race == 8 && (Player.ultra_got[29]==1||Player.ultra_got[30]==1||Player.ultra_got[31]==1))
 	    {
 	    with WepPickup
 	    {
@@ -93,7 +93,7 @@ if Player.race = 8
 				{
 					r += 4;	
 				}
-				if ultra_got[29] || ultra_got[30] || ultra_got[31] || ultra_got[32]
+				if ultra_got[29] || ultra_got[30] || ultra_got[31]
 					r += 2;
 					scrRaddrop(r);
 				if ultra_got[31]

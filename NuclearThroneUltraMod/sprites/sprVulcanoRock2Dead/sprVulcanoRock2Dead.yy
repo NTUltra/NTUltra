@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprVulcanoRock2Dead",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"0b27ccdc-e136-4edc-8de0-22cdbf148676","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0b27ccdc-e136-4edc-8de0-22cdbf148676","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},"LayerId":{"name":"e4730650-248d-4709-9b26-d051faa5b717","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVulcanoRock2Dead","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},"resourceVersion":"1.0","name":"0b27ccdc-e136-4edc-8de0-22cdbf148676","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"06004ed4-ef48-4f84-b215-ba6ebdba7083","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"06004ed4-ef48-4f84-b215-ba6ebdba7083","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},"LayerId":{"name":"e4730650-248d-4709-9b26-d051faa5b717","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVulcanoRock2Dead","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},"resourceVersion":"1.0","name":"06004ed4-ef48-4f84-b215-ba6ebdba7083","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"30e8301e-a93d-4cd3-ab45-a2fe83b6f937","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"30e8301e-a93d-4cd3-ab45-a2fe83b6f937","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},"LayerId":{"name":"e4730650-248d-4709-9b26-d051faa5b717","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVulcanoRock2Dead","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},"resourceVersion":"1.0","name":"30e8301e-a93d-4cd3-ab45-a2fe83b6f937","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"54de9dd9-dce6-46f8-953c-828cd3ac4633","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"54de9dd9-dce6-46f8-953c-828cd3ac4633","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},"LayerId":{"name":"e4730650-248d-4709-9b26-d051faa5b717","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVulcanoRock2Dead","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},"resourceVersion":"1.0","name":"54de9dd9-dce6-46f8-953c-828cd3ac4633","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0b27ccdc-e136-4edc-8de0-22cdbf148676",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"06004ed4-ef48-4f84-b215-ba6ebdba7083",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"30e8301e-a93d-4cd3-ab45-a2fe83b6f937",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"54de9dd9-dce6-46f8-953c-828cd3ac4633",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprVulcanoRock2Dead","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprVulcanoRock2Dead",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -49,12 +46,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"dcd4fc68-f4da-405b-aecc-bc7e41731809","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0b27ccdc-e136-4edc-8de0-22cdbf148676","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"82cb2d51-a5d1-420a-aa08-f8e471db9679","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"06004ed4-ef48-4f84-b215-ba6ebdba7083","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9e1b72f4-ad84-434e-8e9b-c74418f1f359","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"30e8301e-a93d-4cd3-ab45-a2fe83b6f937","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"05107da9-7f3e-4f11-9adc-7c19742edaae","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"54de9dd9-dce6-46f8-953c-828cd3ac4633","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +67,13 @@
     "yorigin": 9,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprVulcanoRock2Dead","path":"sprites/sprVulcanoRock2Dead/sprVulcanoRock2Dead.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprVulcanoRock2Dead",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e4730650-248d-4709-9b26-d051faa5b717","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e4730650-248d-4709-9b26-d051faa5b717","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Vulcano",
     "path": "folders/Sprites/Enviroment/Tiles/Vulcano.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprVulcanoRock2Dead",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

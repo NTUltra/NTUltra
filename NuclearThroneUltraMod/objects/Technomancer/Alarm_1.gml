@@ -42,7 +42,11 @@ if target > 0
 					{
 						canSpawnTurret = true;
 						instance_create(xx,yy,BigWallBreak);
-						instance_create(xx,yy,turretToSpawn);
+						with instance_create(xx,yy,turretToSpawn)
+						{
+							countKill = false;
+							alarm[1] *= 0.8;
+						}
 					}
 					xx = x + 64;
 					yy = y - 32;
@@ -50,7 +54,11 @@ if target > 0
 					{
 						canSpawnTurret = true;
 						instance_create(xx,yy,BigWallBreak);
-						instance_create(xx,yy,turretToSpawn);
+						with instance_create(xx,yy,turretToSpawn)
+						{
+							countKill = false;
+							alarm[1] *= 0.8;
+						}
 					}
 					xx = x + 64;
 					yy = y + 48;
@@ -58,7 +66,11 @@ if target > 0
 					{
 						canSpawnTurret = true;
 						instance_create(xx,yy,BigWallBreak);
-						instance_create(xx,yy,turretToSpawn);
+						with instance_create(xx,yy,turretToSpawn)
+						{
+							countKill = false;
+							alarm[1] *= 0.8;
+						}
 					}
 					xx = x - 64;
 					yy = y + 48;
@@ -66,7 +78,11 @@ if target > 0
 					{
 						canSpawnTurret = true;
 						instance_create(xx,yy,BigWallBreak);
-						instance_create(xx,yy,turretToSpawn);
+						with instance_create(xx,yy,turretToSpawn)
+						{
+							countKill = false;
+							alarm[1] *= 0.8;
+						}
 					}
 			
 					if canSpawnTurret

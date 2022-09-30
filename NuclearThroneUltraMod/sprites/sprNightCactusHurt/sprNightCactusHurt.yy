@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprNightCactusHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ee1e10a9-f995-49ac-b47c-ef32fa10cf31","path":"sprites/sprNightCactusHurt/sprNightCactusHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ee1e10a9-f995-49ac-b47c-ef32fa10cf31","path":"sprites/sprNightCactusHurt/sprNightCactusHurt.yy",},"LayerId":{"name":"e692d94e-f538-4ce1-b788-a5e80d5bb801","path":"sprites/sprNightCactusHurt/sprNightCactusHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprNightCactusHurt","path":"sprites/sprNightCactusHurt/sprNightCactusHurt.yy",},"resourceVersion":"1.0","name":"ee1e10a9-f995-49ac-b47c-ef32fa10cf31","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7b17d024-a639-4825-b908-b9bd084f58a1","path":"sprites/sprNightCactusHurt/sprNightCactusHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7b17d024-a639-4825-b908-b9bd084f58a1","path":"sprites/sprNightCactusHurt/sprNightCactusHurt.yy",},"LayerId":{"name":"e692d94e-f538-4ce1-b788-a5e80d5bb801","path":"sprites/sprNightCactusHurt/sprNightCactusHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprNightCactusHurt","path":"sprites/sprNightCactusHurt/sprNightCactusHurt.yy",},"resourceVersion":"1.0","name":"7b17d024-a639-4825-b908-b9bd084f58a1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0057f982-1ee5-4249-8e35-bb9cd18667ad","path":"sprites/sprNightCactusHurt/sprNightCactusHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0057f982-1ee5-4249-8e35-bb9cd18667ad","path":"sprites/sprNightCactusHurt/sprNightCactusHurt.yy",},"LayerId":{"name":"e692d94e-f538-4ce1-b788-a5e80d5bb801","path":"sprites/sprNightCactusHurt/sprNightCactusHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprNightCactusHurt","path":"sprites/sprNightCactusHurt/sprNightCactusHurt.yy",},"resourceVersion":"1.0","name":"0057f982-1ee5-4249-8e35-bb9cd18667ad","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ee1e10a9-f995-49ac-b47c-ef32fa10cf31",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7b17d024-a639-4825-b908-b9bd084f58a1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0057f982-1ee5-4249-8e35-bb9cd18667ad",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprNightCactusHurt","path":"sprites/sprNightCactusHurt/sprNightCactusHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"b13ba5be-6be8-47db-b596-f726cc2c8b4a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ee1e10a9-f995-49ac-b47c-ef32fa10cf31","path":"sprites/sprNightCactusHurt/sprNightCactusHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9be35f73-4678-418e-82ed-dfc759569afa","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7b17d024-a639-4825-b908-b9bd084f58a1","path":"sprites/sprNightCactusHurt/sprNightCactusHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"4b635d19-43ce-4d58-a473-fed430a93e11","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0057f982-1ee5-4249-8e35-bb9cd18667ad","path":"sprites/sprNightCactusHurt/sprNightCactusHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprNightCactusHurt","path":"sprites/sprNightCactusHurt/sprNightCactusHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e692d94e-f538-4ce1-b788-a5e80d5bb801","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e692d94e-f538-4ce1-b788-a5e80d5bb801","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "UnsortedProp",
     "path": "folders/Sprites/Enviroment/UnsortedProp.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprNightCactusHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprPizzaBoxHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"277fb659-85ab-4bcc-9dcd-1e4d06b24099","path":"sprites/sprPizzaBoxHurt/sprPizzaBoxHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"277fb659-85ab-4bcc-9dcd-1e4d06b24099","path":"sprites/sprPizzaBoxHurt/sprPizzaBoxHurt.yy",},"LayerId":{"name":"f7020991-152f-4e38-ade5-c88d128d4f48","path":"sprites/sprPizzaBoxHurt/sprPizzaBoxHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprPizzaBoxHurt","path":"sprites/sprPizzaBoxHurt/sprPizzaBoxHurt.yy",},"resourceVersion":"1.0","name":"277fb659-85ab-4bcc-9dcd-1e4d06b24099","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"09e51142-a32a-48ec-be5f-b79f205762ee","path":"sprites/sprPizzaBoxHurt/sprPizzaBoxHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"09e51142-a32a-48ec-be5f-b79f205762ee","path":"sprites/sprPizzaBoxHurt/sprPizzaBoxHurt.yy",},"LayerId":{"name":"f7020991-152f-4e38-ade5-c88d128d4f48","path":"sprites/sprPizzaBoxHurt/sprPizzaBoxHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprPizzaBoxHurt","path":"sprites/sprPizzaBoxHurt/sprPizzaBoxHurt.yy",},"resourceVersion":"1.0","name":"09e51142-a32a-48ec-be5f-b79f205762ee","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ee7085d0-a5d8-4c65-8de7-c7b8465a1ad9","path":"sprites/sprPizzaBoxHurt/sprPizzaBoxHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ee7085d0-a5d8-4c65-8de7-c7b8465a1ad9","path":"sprites/sprPizzaBoxHurt/sprPizzaBoxHurt.yy",},"LayerId":{"name":"f7020991-152f-4e38-ade5-c88d128d4f48","path":"sprites/sprPizzaBoxHurt/sprPizzaBoxHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprPizzaBoxHurt","path":"sprites/sprPizzaBoxHurt/sprPizzaBoxHurt.yy",},"resourceVersion":"1.0","name":"ee7085d0-a5d8-4c65-8de7-c7b8465a1ad9","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"277fb659-85ab-4bcc-9dcd-1e4d06b24099",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"09e51142-a32a-48ec-be5f-b79f205762ee",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ee7085d0-a5d8-4c65-8de7-c7b8465a1ad9",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprPizzaBoxHurt","path":"sprites/sprPizzaBoxHurt/sprPizzaBoxHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"c9a900e2-172b-4b6d-b711-f4e536ee43e7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"277fb659-85ab-4bcc-9dcd-1e4d06b24099","path":"sprites/sprPizzaBoxHurt/sprPizzaBoxHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"81582a33-d0fc-4db6-a5fa-0dd6a48df649","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"09e51142-a32a-48ec-be5f-b79f205762ee","path":"sprites/sprPizzaBoxHurt/sprPizzaBoxHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f29313b6-01a7-4cac-bb04-1f6ea8f238d7","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ee7085d0-a5d8-4c65-8de7-c7b8465a1ad9","path":"sprites/sprPizzaBoxHurt/sprPizzaBoxHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprPizzaBoxHurt","path":"sprites/sprPizzaBoxHurt/sprPizzaBoxHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f7020991-152f-4e38-ade5-c88d128d4f48","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f7020991-152f-4e38-ade5-c88d128d4f48","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Sewers",
     "path": "folders/Sprites/Enemies/Sewers.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprPizzaBoxHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

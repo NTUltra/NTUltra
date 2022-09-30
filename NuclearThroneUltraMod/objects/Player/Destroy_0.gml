@@ -502,12 +502,27 @@ else if !reincarnate
 			scrSaveEncrypted();
 			useSeed = false;
 			opt_gamemode = 0;
+			goToLeaderboard = true;
+			runScore[0] = other.kills;
+			runScore[1] = "playerName";
+			runScore[2] = other.area;
+			runScore[3] = other.subarea;
+			runScore[4] = other.loops;
+			runScore[5] = other.race;
+			runScore[6] = other.bskin;
+			runScore[7] = other.altUltra;
+			runScore[8] = other.wep;
+			runScore[9] = other.bwep;
+			runScore[10] = other.cwep;
+			runScore[11] = other.crown;
+			runScore[12] = getUltraMutation();
 			canRestart = true;
 		}
 		if (opt_gamemode == 26)
 		{
 			scrSaveEncrypted();
 			useSeed = false;
+			goToLeaderboard = true;
 			opt_gamemode = 0;
 		}
 		

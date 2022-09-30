@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprHotDrakeSkullDead",
   "bboxMode": 0,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"0d3bef3d-2bc1-4b6f-802e-b7e669aedd90","path":"sprites/sprHotDrakeSkullDead/sprHotDrakeSkullDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0d3bef3d-2bc1-4b6f-802e-b7e669aedd90","path":"sprites/sprHotDrakeSkullDead/sprHotDrakeSkullDead.yy",},"LayerId":{"name":"fc9fe231-2a61-400e-834b-c6c60c3b21bc","path":"sprites/sprHotDrakeSkullDead/sprHotDrakeSkullDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHotDrakeSkullDead","path":"sprites/sprHotDrakeSkullDead/sprHotDrakeSkullDead.yy",},"resourceVersion":"1.0","name":"0d3bef3d-2bc1-4b6f-802e-b7e669aedd90","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b745936b-6516-4b80-a768-56443ea03c19","path":"sprites/sprHotDrakeSkullDead/sprHotDrakeSkullDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b745936b-6516-4b80-a768-56443ea03c19","path":"sprites/sprHotDrakeSkullDead/sprHotDrakeSkullDead.yy",},"LayerId":{"name":"fc9fe231-2a61-400e-834b-c6c60c3b21bc","path":"sprites/sprHotDrakeSkullDead/sprHotDrakeSkullDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHotDrakeSkullDead","path":"sprites/sprHotDrakeSkullDead/sprHotDrakeSkullDead.yy",},"resourceVersion":"1.0","name":"b745936b-6516-4b80-a768-56443ea03c19","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3431d138-bcda-4fda-8cee-35f5fae3d6f3","path":"sprites/sprHotDrakeSkullDead/sprHotDrakeSkullDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3431d138-bcda-4fda-8cee-35f5fae3d6f3","path":"sprites/sprHotDrakeSkullDead/sprHotDrakeSkullDead.yy",},"LayerId":{"name":"fc9fe231-2a61-400e-834b-c6c60c3b21bc","path":"sprites/sprHotDrakeSkullDead/sprHotDrakeSkullDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprHotDrakeSkullDead","path":"sprites/sprHotDrakeSkullDead/sprHotDrakeSkullDead.yy",},"resourceVersion":"1.0","name":"3431d138-bcda-4fda-8cee-35f5fae3d6f3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0d3bef3d-2bc1-4b6f-802e-b7e669aedd90",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b745936b-6516-4b80-a768-56443ea03c19",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3431d138-bcda-4fda-8cee-35f5fae3d6f3",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprHotDrakeSkullDead","path":"sprites/sprHotDrakeSkullDead/sprHotDrakeSkullDead.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprHotDrakeSkullDead",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"dd4e09a4-8587-44ff-83db-a609b40e4e5c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0d3bef3d-2bc1-4b6f-802e-b7e669aedd90","path":"sprites/sprHotDrakeSkullDead/sprHotDrakeSkullDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"dcf4a625-8e13-4f85-bf37-90d8158019e9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b745936b-6516-4b80-a768-56443ea03c19","path":"sprites/sprHotDrakeSkullDead/sprHotDrakeSkullDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"324927f1-0a87-4d44-bee5-a7ae2a254b4e","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3431d138-bcda-4fda-8cee-35f5fae3d6f3","path":"sprites/sprHotDrakeSkullDead/sprHotDrakeSkullDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprHotDrakeSkullDead","path":"sprites/sprHotDrakeSkullDead/sprHotDrakeSkullDead.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprHotDrakeSkullDead",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fc9fe231-2a61-400e-834b-c6c60c3b21bc","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"fc9fe231-2a61-400e-834b-c6c60c3b21bc","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "HotDrake",
     "path": "folders/Sprites/Enemies/Boss/HotDrake.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprHotDrakeSkullDead",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprGoldCrystalDead",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,39 +27,21 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"35c7e919-5e9b-4960-845d-16da50d20431","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"35c7e919-5e9b-4960-845d-16da50d20431","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"LayerId":{"name":"d5f96f77-57aa-43bd-a7ec-30aa645c8456","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldCrystalDead","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","name":"35c7e919-5e9b-4960-845d-16da50d20431","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"67b4856c-4438-4295-b95e-e51f234b2f57","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"67b4856c-4438-4295-b95e-e51f234b2f57","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"LayerId":{"name":"d5f96f77-57aa-43bd-a7ec-30aa645c8456","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldCrystalDead","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","name":"67b4856c-4438-4295-b95e-e51f234b2f57","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e932e13f-0c14-4dcb-abc1-794980c19795","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e932e13f-0c14-4dcb-abc1-794980c19795","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"LayerId":{"name":"d5f96f77-57aa-43bd-a7ec-30aa645c8456","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldCrystalDead","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","name":"e932e13f-0c14-4dcb-abc1-794980c19795","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d3832897-763e-4aec-aa23-d44fdc9fda4a","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d3832897-763e-4aec-aa23-d44fdc9fda4a","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"LayerId":{"name":"d5f96f77-57aa-43bd-a7ec-30aa645c8456","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldCrystalDead","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","name":"d3832897-763e-4aec-aa23-d44fdc9fda4a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7d43adfd-edb0-4868-861b-a09179dbeb48","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7d43adfd-edb0-4868-861b-a09179dbeb48","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"LayerId":{"name":"d5f96f77-57aa-43bd-a7ec-30aa645c8456","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldCrystalDead","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","name":"7d43adfd-edb0-4868-861b-a09179dbeb48","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1ecb86cd-0c0a-4acf-a82f-b3a9e3831a3d","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1ecb86cd-0c0a-4acf-a82f-b3a9e3831a3d","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"LayerId":{"name":"d5f96f77-57aa-43bd-a7ec-30aa645c8456","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldCrystalDead","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","name":"1ecb86cd-0c0a-4acf-a82f-b3a9e3831a3d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"911d1741-ddf3-4b67-8561-7ce98c1a13ee","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"911d1741-ddf3-4b67-8561-7ce98c1a13ee","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"LayerId":{"name":"d5f96f77-57aa-43bd-a7ec-30aa645c8456","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldCrystalDead","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","name":"911d1741-ddf3-4b67-8561-7ce98c1a13ee","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0d841332-2712-4f8b-a8ef-a7dae1020303","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0d841332-2712-4f8b-a8ef-a7dae1020303","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"LayerId":{"name":"d5f96f77-57aa-43bd-a7ec-30aa645c8456","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldCrystalDead","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","name":"0d841332-2712-4f8b-a8ef-a7dae1020303","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2dfbfcee-d37b-4202-a783-9723f99a0395","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2dfbfcee-d37b-4202-a783-9723f99a0395","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"LayerId":{"name":"d5f96f77-57aa-43bd-a7ec-30aa645c8456","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldCrystalDead","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","name":"2dfbfcee-d37b-4202-a783-9723f99a0395","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"78158f30-677c-416c-b887-04396310f742","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"78158f30-677c-416c-b887-04396310f742","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"LayerId":{"name":"d5f96f77-57aa-43bd-a7ec-30aa645c8456","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGoldCrystalDead","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","name":"78158f30-677c-416c-b887-04396310f742","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"35c7e919-5e9b-4960-845d-16da50d20431",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"67b4856c-4438-4295-b95e-e51f234b2f57",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e932e13f-0c14-4dcb-abc1-794980c19795",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d3832897-763e-4aec-aa23-d44fdc9fda4a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7d43adfd-edb0-4868-861b-a09179dbeb48",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1ecb86cd-0c0a-4acf-a82f-b3a9e3831a3d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"911d1741-ddf3-4b67-8561-7ce98c1a13ee",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0d841332-2712-4f8b-a8ef-a7dae1020303",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2dfbfcee-d37b-4202-a783-9723f99a0395",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"78158f30-677c-416c-b887-04396310f742",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprGoldCrystalDead","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprGoldCrystalDead",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -67,7 +52,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"dc527cae-d677-4026-977a-4079430f09fa","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"35c7e919-5e9b-4960-845d-16da50d20431","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a62a4ef9-371d-44f0-b36a-049c737b71e6","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"67b4856c-4438-4295-b95e-e51f234b2f57","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"feb0ee8a-2c5e-471c-a0db-d6c4a12e397e","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e932e13f-0c14-4dcb-abc1-794980c19795","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -78,7 +63,7 @@
             {"id":"68107c71-5e29-46b3-ba2b-f51ab9a489a5","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0d841332-2712-4f8b-a8ef-a7dae1020303","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d8cde941-9193-42a9-b1e6-4404bcad3b6a","Key":8.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2dfbfcee-d37b-4202-a783-9723f99a0395","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b590725b-a01f-4c8b-a6b8-fdb0d645429d","Key":9.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"78158f30-677c-416c-b887-04396310f742","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -94,22 +79,13 @@
     "yorigin": 24,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprGoldCrystalDead","path":"sprites/sprGoldCrystalDead/sprGoldCrystalDead.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprGoldCrystalDead",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d5f96f77-57aa-43bd-a7ec-30aa645c8456","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d5f96f77-57aa-43bd-a7ec-30aa645c8456","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "CrystalCaves",
     "path": "folders/Sprites/Enemies/CrystalCaves.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprGoldCrystalDead",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

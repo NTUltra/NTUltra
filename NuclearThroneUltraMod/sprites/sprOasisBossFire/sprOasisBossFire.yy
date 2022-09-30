@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprOasisBossFire",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"38388d97-b574-4539-9ddc-09b36fb83391","path":"sprites/sprOasisBossFire/sprOasisBossFire.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"38388d97-b574-4539-9ddc-09b36fb83391","path":"sprites/sprOasisBossFire/sprOasisBossFire.yy",},"LayerId":{"name":"b064484b-f8ff-4175-8f79-07708e2c0a5c","path":"sprites/sprOasisBossFire/sprOasisBossFire.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprOasisBossFire","path":"sprites/sprOasisBossFire/sprOasisBossFire.yy",},"resourceVersion":"1.0","name":"38388d97-b574-4539-9ddc-09b36fb83391","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"60f7cb2a-dc60-4ab7-a31a-e8c8c6800228","path":"sprites/sprOasisBossFire/sprOasisBossFire.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"60f7cb2a-dc60-4ab7-a31a-e8c8c6800228","path":"sprites/sprOasisBossFire/sprOasisBossFire.yy",},"LayerId":{"name":"b064484b-f8ff-4175-8f79-07708e2c0a5c","path":"sprites/sprOasisBossFire/sprOasisBossFire.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprOasisBossFire","path":"sprites/sprOasisBossFire/sprOasisBossFire.yy",},"resourceVersion":"1.0","name":"60f7cb2a-dc60-4ab7-a31a-e8c8c6800228","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"38388d97-b574-4539-9ddc-09b36fb83391",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"60f7cb2a-dc60-4ab7-a31a-e8c8c6800228",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprOasisBossFire","path":"sprites/sprOasisBossFire/sprOasisBossFire.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprOasisBossFire",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"c053a8aa-3e1a-4159-953a-f87c8b5dc529","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"38388d97-b574-4539-9ddc-09b36fb83391","path":"sprites/sprOasisBossFire/sprOasisBossFire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"bf191c63-f425-4586-8941-fe457af52f3a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"60f7cb2a-dc60-4ab7-a31a-e8c8c6800228","path":"sprites/sprOasisBossFire/sprOasisBossFire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +63,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprOasisBossFire","path":"sprites/sprOasisBossFire/sprOasisBossFire.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprOasisBossFire",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b064484b-f8ff-4175-8f79-07708e2c0a5c","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b064484b-f8ff-4175-8f79-07708e2c0a5c","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "BigFish",
     "path": "folders/Sprites/Enemies/Boss/BigFish.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprOasisBossFire",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

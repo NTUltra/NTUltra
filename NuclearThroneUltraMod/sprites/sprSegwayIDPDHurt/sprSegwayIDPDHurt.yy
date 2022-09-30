@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprSegwayIDPDHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"bff7339f-fd8e-430e-9e5f-180d3dc2c8eb","path":"sprites/sprSegwayIDPDHurt/sprSegwayIDPDHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bff7339f-fd8e-430e-9e5f-180d3dc2c8eb","path":"sprites/sprSegwayIDPDHurt/sprSegwayIDPDHurt.yy",},"LayerId":{"name":"a58f2125-0dc0-4d2d-a3d7-97cd6f0be741","path":"sprites/sprSegwayIDPDHurt/sprSegwayIDPDHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSegwayIDPDHurt","path":"sprites/sprSegwayIDPDHurt/sprSegwayIDPDHurt.yy",},"resourceVersion":"1.0","name":"bff7339f-fd8e-430e-9e5f-180d3dc2c8eb","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e8b6c424-492e-445f-b630-ed39b4ff4158","path":"sprites/sprSegwayIDPDHurt/sprSegwayIDPDHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e8b6c424-492e-445f-b630-ed39b4ff4158","path":"sprites/sprSegwayIDPDHurt/sprSegwayIDPDHurt.yy",},"LayerId":{"name":"a58f2125-0dc0-4d2d-a3d7-97cd6f0be741","path":"sprites/sprSegwayIDPDHurt/sprSegwayIDPDHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSegwayIDPDHurt","path":"sprites/sprSegwayIDPDHurt/sprSegwayIDPDHurt.yy",},"resourceVersion":"1.0","name":"e8b6c424-492e-445f-b630-ed39b4ff4158","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"947c6556-80ac-40d8-be70-f563d1b6ab15","path":"sprites/sprSegwayIDPDHurt/sprSegwayIDPDHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"947c6556-80ac-40d8-be70-f563d1b6ab15","path":"sprites/sprSegwayIDPDHurt/sprSegwayIDPDHurt.yy",},"LayerId":{"name":"a58f2125-0dc0-4d2d-a3d7-97cd6f0be741","path":"sprites/sprSegwayIDPDHurt/sprSegwayIDPDHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprSegwayIDPDHurt","path":"sprites/sprSegwayIDPDHurt/sprSegwayIDPDHurt.yy",},"resourceVersion":"1.0","name":"947c6556-80ac-40d8-be70-f563d1b6ab15","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bff7339f-fd8e-430e-9e5f-180d3dc2c8eb",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e8b6c424-492e-445f-b630-ed39b4ff4158",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"947c6556-80ac-40d8-be70-f563d1b6ab15",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprSegwayIDPDHurt","path":"sprites/sprSegwayIDPDHurt/sprSegwayIDPDHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"4131eda2-195d-447e-bc7c-c74b850d207e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bff7339f-fd8e-430e-9e5f-180d3dc2c8eb","path":"sprites/sprSegwayIDPDHurt/sprSegwayIDPDHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"2b058d9b-4374-4367-aaf4-081935ee6787","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e8b6c424-492e-445f-b630-ed39b4ff4158","path":"sprites/sprSegwayIDPDHurt/sprSegwayIDPDHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"70ea12c8-cfee-4132-a23f-41b665699453","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"947c6556-80ac-40d8-be70-f563d1b6ab15","path":"sprites/sprSegwayIDPDHurt/sprSegwayIDPDHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprSegwayIDPDHurt","path":"sprites/sprSegwayIDPDHurt/sprSegwayIDPDHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a58f2125-0dc0-4d2d-a3d7-97cd6f0be741","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a58f2125-0dc0-4d2d-a3d7-97cd6f0be741","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "SegwayPopo",
     "path": "folders/Sprites/Enemies/IDPD/SegwayPopo.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprSegwayIDPDHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

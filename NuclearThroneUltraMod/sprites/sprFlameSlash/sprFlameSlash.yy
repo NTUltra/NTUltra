@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprFlameSlash",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"13ef7cd8-0707-46fa-a30b-9444a7c86110","path":"sprites/sprFlameSlash/sprFlameSlash.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"13ef7cd8-0707-46fa-a30b-9444a7c86110","path":"sprites/sprFlameSlash/sprFlameSlash.yy",},"LayerId":{"name":"9e417142-d116-46a1-a694-c5cb0a018c03","path":"sprites/sprFlameSlash/sprFlameSlash.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFlameSlash","path":"sprites/sprFlameSlash/sprFlameSlash.yy",},"resourceVersion":"1.0","name":"13ef7cd8-0707-46fa-a30b-9444a7c86110","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"feb97b9e-0d77-4d53-9a40-8f38cdcbd90b","path":"sprites/sprFlameSlash/sprFlameSlash.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"feb97b9e-0d77-4d53-9a40-8f38cdcbd90b","path":"sprites/sprFlameSlash/sprFlameSlash.yy",},"LayerId":{"name":"9e417142-d116-46a1-a694-c5cb0a018c03","path":"sprites/sprFlameSlash/sprFlameSlash.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFlameSlash","path":"sprites/sprFlameSlash/sprFlameSlash.yy",},"resourceVersion":"1.0","name":"feb97b9e-0d77-4d53-9a40-8f38cdcbd90b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a49d898c-5419-483b-9fdd-48b94c664f46","path":"sprites/sprFlameSlash/sprFlameSlash.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a49d898c-5419-483b-9fdd-48b94c664f46","path":"sprites/sprFlameSlash/sprFlameSlash.yy",},"LayerId":{"name":"9e417142-d116-46a1-a694-c5cb0a018c03","path":"sprites/sprFlameSlash/sprFlameSlash.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFlameSlash","path":"sprites/sprFlameSlash/sprFlameSlash.yy",},"resourceVersion":"1.0","name":"a49d898c-5419-483b-9fdd-48b94c664f46","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"13ef7cd8-0707-46fa-a30b-9444a7c86110",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"feb97b9e-0d77-4d53-9a40-8f38cdcbd90b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a49d898c-5419-483b-9fdd-48b94c664f46",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprFlameSlash","path":"sprites/sprFlameSlash/sprFlameSlash.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprFlameSlash",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"716e3ad4-f2e4-4690-b920-1289ca3ef14f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"13ef7cd8-0707-46fa-a30b-9444a7c86110","path":"sprites/sprFlameSlash/sprFlameSlash.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"27859460-efbe-4dc4-8004-3bc54d18133d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"feb97b9e-0d77-4d53-9a40-8f38cdcbd90b","path":"sprites/sprFlameSlash/sprFlameSlash.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"76f82e22-3641-4245-bfc8-0e0b75de3e8d","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a49d898c-5419-483b-9fdd-48b94c664f46","path":"sprites/sprFlameSlash/sprFlameSlash.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 24,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprFlameSlash","path":"sprites/sprFlameSlash/sprFlameSlash.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprFlameSlash",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9e417142-d116-46a1-a694-c5cb0a018c03","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9e417142-d116-46a1-a694-c5cb0a018c03","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Melee Atacks",
     "path": "folders/Sprites/Projectiles/Melee Atacks.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprFlameSlash",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprVenusCarFix",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"2d4b66c4-f3a6-4c2c-b37f-4b2c73ea802f","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2d4b66c4-f3a6-4c2c-b37f-4b2c73ea802f","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"LayerId":{"name":"30132941-dcd8-47f0-b921-3f88af9fde0a","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVenusCarFix","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"resourceVersion":"1.0","name":"2d4b66c4-f3a6-4c2c-b37f-4b2c73ea802f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d97d815f-7ad2-4331-8b37-bde0655b3457","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d97d815f-7ad2-4331-8b37-bde0655b3457","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"LayerId":{"name":"30132941-dcd8-47f0-b921-3f88af9fde0a","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVenusCarFix","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"resourceVersion":"1.0","name":"d97d815f-7ad2-4331-8b37-bde0655b3457","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5d1ba243-9bea-42cd-a20d-063798995e80","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5d1ba243-9bea-42cd-a20d-063798995e80","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"LayerId":{"name":"30132941-dcd8-47f0-b921-3f88af9fde0a","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVenusCarFix","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"resourceVersion":"1.0","name":"5d1ba243-9bea-42cd-a20d-063798995e80","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7b2545f9-40be-442e-964c-b134be7b4aac","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7b2545f9-40be-442e-964c-b134be7b4aac","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"LayerId":{"name":"30132941-dcd8-47f0-b921-3f88af9fde0a","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVenusCarFix","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"resourceVersion":"1.0","name":"7b2545f9-40be-442e-964c-b134be7b4aac","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"887a8db5-3fd1-42e1-b090-292a0f5a70da","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"887a8db5-3fd1-42e1-b090-292a0f5a70da","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"LayerId":{"name":"30132941-dcd8-47f0-b921-3f88af9fde0a","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVenusCarFix","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"resourceVersion":"1.0","name":"887a8db5-3fd1-42e1-b090-292a0f5a70da","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"de391bdd-6981-46fd-922e-0dd326fffe93","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"de391bdd-6981-46fd-922e-0dd326fffe93","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"LayerId":{"name":"30132941-dcd8-47f0-b921-3f88af9fde0a","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVenusCarFix","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"resourceVersion":"1.0","name":"de391bdd-6981-46fd-922e-0dd326fffe93","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"76f1aa66-cfe1-482d-9ead-99c6c3e4ed84","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"76f1aa66-cfe1-482d-9ead-99c6c3e4ed84","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"LayerId":{"name":"30132941-dcd8-47f0-b921-3f88af9fde0a","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprVenusCarFix","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"resourceVersion":"1.0","name":"76f1aa66-cfe1-482d-9ead-99c6c3e4ed84","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2d4b66c4-f3a6-4c2c-b37f-4b2c73ea802f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d97d815f-7ad2-4331-8b37-bde0655b3457",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5d1ba243-9bea-42cd-a20d-063798995e80",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7b2545f9-40be-442e-964c-b134be7b4aac",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"887a8db5-3fd1-42e1-b090-292a0f5a70da",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"de391bdd-6981-46fd-922e-0dd326fffe93",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"76f1aa66-cfe1-482d-9ead-99c6c3e4ed84",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprVenusCarFix","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"dd10a4f4-0869-4059-bf31-5f626efe5527","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2d4b66c4-f3a6-4c2c-b37f-4b2c73ea802f","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"3375db9c-678e-4737-b7a7-8a2fcbbb54a0","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d97d815f-7ad2-4331-8b37-bde0655b3457","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"5999b6f9-1ef7-4e82-974c-3c5f5b1300d2","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5d1ba243-9bea-42cd-a20d-063798995e80","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"7331b311-156f-4128-95e6-ce05f6d964ac","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"887a8db5-3fd1-42e1-b090-292a0f5a70da","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"cc2b47a6-741c-40bd-bde8-0a911585cd73","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"de391bdd-6981-46fd-922e-0dd326fffe93","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ec5c238d-fb1f-4be7-9afe-b3ad61cff4ac","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"76f1aa66-cfe1-482d-9ead-99c6c3e4ed84","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprVenusCarFix","path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"30132941-dcd8-47f0-b921-3f88af9fde0a","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"30132941-dcd8-47f0-b921-3f88af9fde0a","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Cars",
     "path": "folders/Sprites/Enviroment/Cars.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprVenusCarFix",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

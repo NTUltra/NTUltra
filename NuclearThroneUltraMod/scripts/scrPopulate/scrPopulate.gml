@@ -60,7 +60,7 @@ function scrPopulate() {
                 }
 				
                 //spawn some more enemies on loop
-                if Player.loops > 0 && random(5) < Player.loops
+                if Player.loops > 0 && random(4) < Player.loops
 					scrPopEnemies();
 					
 				if Player.loops > 5 && random(15) < Player.loops - 7

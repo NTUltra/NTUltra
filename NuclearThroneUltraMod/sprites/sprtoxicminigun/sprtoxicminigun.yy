@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprToxicMinigun",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8943291f-4844-4619-aa25-8b6373a56755","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8943291f-4844-4619-aa25-8b6373a56755","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"LayerId":{"name":"022a6462-4826-4882-9a05-9c853c56f976","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicMinigun","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"resourceVersion":"1.0","name":"8943291f-4844-4619-aa25-8b6373a56755","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ddc2220c-4744-4c9e-97ea-55bdcd4696ef","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ddc2220c-4744-4c9e-97ea-55bdcd4696ef","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"LayerId":{"name":"022a6462-4826-4882-9a05-9c853c56f976","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicMinigun","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"resourceVersion":"1.0","name":"ddc2220c-4744-4c9e-97ea-55bdcd4696ef","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5c7c01db-3a19-4ec3-8575-8f7a1902ba4a","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5c7c01db-3a19-4ec3-8575-8f7a1902ba4a","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"LayerId":{"name":"022a6462-4826-4882-9a05-9c853c56f976","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicMinigun","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"resourceVersion":"1.0","name":"5c7c01db-3a19-4ec3-8575-8f7a1902ba4a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8e1cf66b-922b-437d-92e2-7d134696f47f","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8e1cf66b-922b-437d-92e2-7d134696f47f","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"LayerId":{"name":"022a6462-4826-4882-9a05-9c853c56f976","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicMinigun","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"resourceVersion":"1.0","name":"8e1cf66b-922b-437d-92e2-7d134696f47f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"79264778-c941-4275-b9a6-a07a29c89e4d","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"79264778-c941-4275-b9a6-a07a29c89e4d","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"LayerId":{"name":"022a6462-4826-4882-9a05-9c853c56f976","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicMinigun","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"resourceVersion":"1.0","name":"79264778-c941-4275-b9a6-a07a29c89e4d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"103a10a0-a804-4ed0-9a8e-2aa48104b94e","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"103a10a0-a804-4ed0-9a8e-2aa48104b94e","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"LayerId":{"name":"022a6462-4826-4882-9a05-9c853c56f976","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicMinigun","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"resourceVersion":"1.0","name":"103a10a0-a804-4ed0-9a8e-2aa48104b94e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b21a5576-0a0d-4bf0-88c3-33abb60540f8","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b21a5576-0a0d-4bf0-88c3-33abb60540f8","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"LayerId":{"name":"022a6462-4826-4882-9a05-9c853c56f976","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprToxicMinigun","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"resourceVersion":"1.0","name":"b21a5576-0a0d-4bf0-88c3-33abb60540f8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8943291f-4844-4619-aa25-8b6373a56755",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ddc2220c-4744-4c9e-97ea-55bdcd4696ef",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5c7c01db-3a19-4ec3-8575-8f7a1902ba4a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8e1cf66b-922b-437d-92e2-7d134696f47f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"79264778-c941-4275-b9a6-a07a29c89e4d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"103a10a0-a804-4ed0-9a8e-2aa48104b94e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b21a5576-0a0d-4bf0-88c3-33abb60540f8",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprToxicMinigun","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprToxicMinigun",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"da32dc6e-4e06-478b-b4ff-fe1a9b0e9fdb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8943291f-4844-4619-aa25-8b6373a56755","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"42ceea22-bd27-408b-8c22-58fee1b5110d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ddc2220c-4744-4c9e-97ea-55bdcd4696ef","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6ae1bbf8-a4c4-4de7-8c02-ef8abc56cb81","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5c7c01db-3a19-4ec3-8575-8f7a1902ba4a","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"1a290751-5aa0-4aa3-8f57-315677ef456b","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"79264778-c941-4275-b9a6-a07a29c89e4d","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"2f6adb78-5830-4de2-a549-c79cf014a5a8","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"103a10a0-a804-4ed0-9a8e-2aa48104b94e","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"080cc223-32e8-4762-a2f1-b623215d436b","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b21a5576-0a0d-4bf0-88c3-33abb60540f8","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 7,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprToxicMinigun","path":"sprites/sprToxicMinigun/sprToxicMinigun.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprToxicMinigun",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"022a6462-4826-4882-9a05-9c853c56f976","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"022a6462-4826-4882-9a05-9c853c56f976","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Custom",
     "path": "folders/Sprites/Weapons/Custom.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprToxicMinigun",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

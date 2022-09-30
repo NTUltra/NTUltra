@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprEraserBanditHurt",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e916aa0f-91a3-489e-a467-67a3d61a5ca5","path":"sprites/sprEraserBanditHurt/sprEraserBanditHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e916aa0f-91a3-489e-a467-67a3d61a5ca5","path":"sprites/sprEraserBanditHurt/sprEraserBanditHurt.yy",},"LayerId":{"name":"49f56c89-32c6-40f2-8d69-c9774e107128","path":"sprites/sprEraserBanditHurt/sprEraserBanditHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEraserBanditHurt","path":"sprites/sprEraserBanditHurt/sprEraserBanditHurt.yy",},"resourceVersion":"1.0","name":"e916aa0f-91a3-489e-a467-67a3d61a5ca5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1ccb3935-6cd2-4fbb-860d-bb89f0ee26f6","path":"sprites/sprEraserBanditHurt/sprEraserBanditHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1ccb3935-6cd2-4fbb-860d-bb89f0ee26f6","path":"sprites/sprEraserBanditHurt/sprEraserBanditHurt.yy",},"LayerId":{"name":"49f56c89-32c6-40f2-8d69-c9774e107128","path":"sprites/sprEraserBanditHurt/sprEraserBanditHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEraserBanditHurt","path":"sprites/sprEraserBanditHurt/sprEraserBanditHurt.yy",},"resourceVersion":"1.0","name":"1ccb3935-6cd2-4fbb-860d-bb89f0ee26f6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a47390ac-dbd7-486c-9d54-d4cdb1cb9778","path":"sprites/sprEraserBanditHurt/sprEraserBanditHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a47390ac-dbd7-486c-9d54-d4cdb1cb9778","path":"sprites/sprEraserBanditHurt/sprEraserBanditHurt.yy",},"LayerId":{"name":"49f56c89-32c6-40f2-8d69-c9774e107128","path":"sprites/sprEraserBanditHurt/sprEraserBanditHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEraserBanditHurt","path":"sprites/sprEraserBanditHurt/sprEraserBanditHurt.yy",},"resourceVersion":"1.0","name":"a47390ac-dbd7-486c-9d54-d4cdb1cb9778","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e916aa0f-91a3-489e-a467-67a3d61a5ca5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1ccb3935-6cd2-4fbb-860d-bb89f0ee26f6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a47390ac-dbd7-486c-9d54-d4cdb1cb9778",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprEraserBanditHurt","path":"sprites/sprEraserBanditHurt/sprEraserBanditHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"540481ad-21e6-4be5-938a-0eb666fa9f17","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e916aa0f-91a3-489e-a467-67a3d61a5ca5","path":"sprites/sprEraserBanditHurt/sprEraserBanditHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"0537b89b-1fc8-4b09-aa8e-c0ab347f2aad","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1ccb3935-6cd2-4fbb-860d-bb89f0ee26f6","path":"sprites/sprEraserBanditHurt/sprEraserBanditHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"145e11f0-29e0-4e98-aefc-4287e651c0c2","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a47390ac-dbd7-486c-9d54-d4cdb1cb9778","path":"sprites/sprEraserBanditHurt/sprEraserBanditHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprEraserBanditHurt","path":"sprites/sprEraserBanditHurt/sprEraserBanditHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"49f56c89-32c6-40f2-8d69-c9774e107128","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"49f56c89-32c6-40f2-8d69-c9774e107128","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Bandit",
     "path": "folders/Sprites/Enemies/Bandit.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprEraserBanditHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

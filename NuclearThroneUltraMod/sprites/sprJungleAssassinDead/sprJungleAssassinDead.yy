@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprJungleAssassinDead",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"04e34ad8-38bc-49b8-8909-9f309c580b97","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"04e34ad8-38bc-49b8-8909-9f309c580b97","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"LayerId":{"name":"459b5cf4-f467-4c29-a7b3-b6ec43e80a44","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprJungleAssassinDead","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"resourceVersion":"1.0","name":"04e34ad8-38bc-49b8-8909-9f309c580b97","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"824f4c84-d0db-49bc-be39-3e3cb7c9d79a","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"824f4c84-d0db-49bc-be39-3e3cb7c9d79a","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"LayerId":{"name":"459b5cf4-f467-4c29-a7b3-b6ec43e80a44","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprJungleAssassinDead","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"resourceVersion":"1.0","name":"824f4c84-d0db-49bc-be39-3e3cb7c9d79a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ee9b068d-ad26-4bdf-b8a9-23c3ba9dd071","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ee9b068d-ad26-4bdf-b8a9-23c3ba9dd071","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"LayerId":{"name":"459b5cf4-f467-4c29-a7b3-b6ec43e80a44","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprJungleAssassinDead","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"resourceVersion":"1.0","name":"ee9b068d-ad26-4bdf-b8a9-23c3ba9dd071","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bcffbc26-f3e9-42b2-9d03-52011b20110f","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bcffbc26-f3e9-42b2-9d03-52011b20110f","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"LayerId":{"name":"459b5cf4-f467-4c29-a7b3-b6ec43e80a44","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprJungleAssassinDead","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"resourceVersion":"1.0","name":"bcffbc26-f3e9-42b2-9d03-52011b20110f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"db04320e-9e21-4f8a-8f6c-67f96cda7b0b","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"db04320e-9e21-4f8a-8f6c-67f96cda7b0b","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"LayerId":{"name":"459b5cf4-f467-4c29-a7b3-b6ec43e80a44","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprJungleAssassinDead","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"resourceVersion":"1.0","name":"db04320e-9e21-4f8a-8f6c-67f96cda7b0b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7f0bf192-d9dc-44cd-932b-0bc540ecb864","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7f0bf192-d9dc-44cd-932b-0bc540ecb864","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"LayerId":{"name":"459b5cf4-f467-4c29-a7b3-b6ec43e80a44","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprJungleAssassinDead","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"resourceVersion":"1.0","name":"7f0bf192-d9dc-44cd-932b-0bc540ecb864","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"04e34ad8-38bc-49b8-8909-9f309c580b97",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"824f4c84-d0db-49bc-be39-3e3cb7c9d79a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ee9b068d-ad26-4bdf-b8a9-23c3ba9dd071",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bcffbc26-f3e9-42b2-9d03-52011b20110f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"db04320e-9e21-4f8a-8f6c-67f96cda7b0b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7f0bf192-d9dc-44cd-932b-0bc540ecb864",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprJungleAssassinDead","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprJungleAssassinDead",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -55,14 +48,14 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"773ed147-af6f-48be-ac0e-f8cb7750ca29","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"04e34ad8-38bc-49b8-8909-9f309c580b97","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"88addcca-40f5-44b5-8865-aa4892167c04","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"824f4c84-d0db-49bc-be39-3e3cb7c9d79a","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"1bf44c46-45f2-4a64-b537-f0f1cb2d24d3","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ee9b068d-ad26-4bdf-b8a9-23c3ba9dd071","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"7dbc49b4-f55c-4139-94ba-1d1444a96952","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bcffbc26-f3e9-42b2-9d03-52011b20110f","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"66008172-ed13-4eaf-b1f5-34ba4792eea1","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"db04320e-9e21-4f8a-8f6c-67f96cda7b0b","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"22246ba6-f273-4e9e-9d66-e4f264305e35","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7f0bf192-d9dc-44cd-932b-0bc540ecb864","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -78,22 +71,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprJungleAssassinDead","path":"sprites/sprJungleAssassinDead/sprJungleAssassinDead.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprJungleAssassinDead",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"459b5cf4-f467-4c29-a7b3-b6ec43e80a44","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"459b5cf4-f467-4c29-a7b3-b6ec43e80a44","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "JungleEnemy",
     "path": "folders/Sprites/Enemies/JungleEnemy.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprJungleAssassinDead",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

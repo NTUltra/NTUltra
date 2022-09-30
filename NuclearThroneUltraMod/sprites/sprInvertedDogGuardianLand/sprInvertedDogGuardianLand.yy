@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprInvertedDogGuardianLand",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e5e1c5d2-ca50-4686-a88b-497d89c424de","path":"sprites/sprInvertedDogGuardianLand/sprInvertedDogGuardianLand.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e5e1c5d2-ca50-4686-a88b-497d89c424de","path":"sprites/sprInvertedDogGuardianLand/sprInvertedDogGuardianLand.yy",},"LayerId":{"name":"2739044e-c179-4070-b4f2-29334a361fcf","path":"sprites/sprInvertedDogGuardianLand/sprInvertedDogGuardianLand.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedDogGuardianLand","path":"sprites/sprInvertedDogGuardianLand/sprInvertedDogGuardianLand.yy",},"resourceVersion":"1.0","name":"e5e1c5d2-ca50-4686-a88b-497d89c424de","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"98e457d3-5e1e-4ab1-bdcd-1ece506a0ece","path":"sprites/sprInvertedDogGuardianLand/sprInvertedDogGuardianLand.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"98e457d3-5e1e-4ab1-bdcd-1ece506a0ece","path":"sprites/sprInvertedDogGuardianLand/sprInvertedDogGuardianLand.yy",},"LayerId":{"name":"2739044e-c179-4070-b4f2-29334a361fcf","path":"sprites/sprInvertedDogGuardianLand/sprInvertedDogGuardianLand.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedDogGuardianLand","path":"sprites/sprInvertedDogGuardianLand/sprInvertedDogGuardianLand.yy",},"resourceVersion":"1.0","name":"98e457d3-5e1e-4ab1-bdcd-1ece506a0ece","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4ff79f8b-b177-4203-8824-fab07bf3d987","path":"sprites/sprInvertedDogGuardianLand/sprInvertedDogGuardianLand.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4ff79f8b-b177-4203-8824-fab07bf3d987","path":"sprites/sprInvertedDogGuardianLand/sprInvertedDogGuardianLand.yy",},"LayerId":{"name":"2739044e-c179-4070-b4f2-29334a361fcf","path":"sprites/sprInvertedDogGuardianLand/sprInvertedDogGuardianLand.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprInvertedDogGuardianLand","path":"sprites/sprInvertedDogGuardianLand/sprInvertedDogGuardianLand.yy",},"resourceVersion":"1.0","name":"4ff79f8b-b177-4203-8824-fab07bf3d987","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e5e1c5d2-ca50-4686-a88b-497d89c424de",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"98e457d3-5e1e-4ab1-bdcd-1ece506a0ece",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4ff79f8b-b177-4203-8824-fab07bf3d987",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprInvertedDogGuardianLand","path":"sprites/sprInvertedDogGuardianLand/sprInvertedDogGuardianLand.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprInvertedDogGuardianLand",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"cc747ef0-9a12-4ae4-8058-4ce62f28038b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e5e1c5d2-ca50-4686-a88b-497d89c424de","path":"sprites/sprInvertedDogGuardianLand/sprInvertedDogGuardianLand.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6dd0944a-e8ca-43bb-adcd-cf3c05c04aa9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"98e457d3-5e1e-4ab1-bdcd-1ece506a0ece","path":"sprites/sprInvertedDogGuardianLand/sprInvertedDogGuardianLand.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"34d6c17e-67e2-4dc8-9c6d-ac18fd8270fa","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4ff79f8b-b177-4203-8824-fab07bf3d987","path":"sprites/sprInvertedDogGuardianLand/sprInvertedDogGuardianLand.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprInvertedDogGuardianLand","path":"sprites/sprInvertedDogGuardianLand/sprInvertedDogGuardianLand.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprInvertedDogGuardianLand",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2739044e-c179-4070-b4f2-29334a361fcf","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"2739044e-c179-4070-b4f2-29334a361fcf","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "InvertedPalaceEnemies",
     "path": "folders/Sprites/Palace/Palace Enemy/InvertedPalaceEnemies.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprInvertedDogGuardianLand",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

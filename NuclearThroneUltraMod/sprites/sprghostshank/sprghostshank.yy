@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprGhostShank",
   "bboxMode": 1,
   "collisionKind": 4,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"60a55e48-8126-46ce-86e3-276ffcdadfe9","path":"sprites/sprGhostShank/sprGhostShank.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"60a55e48-8126-46ce-86e3-276ffcdadfe9","path":"sprites/sprGhostShank/sprGhostShank.yy",},"LayerId":{"name":"fd174ee2-85cd-4ead-ac13-c0b0ab7985b9","path":"sprites/sprGhostShank/sprGhostShank.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGhostShank","path":"sprites/sprGhostShank/sprGhostShank.yy",},"resourceVersion":"1.0","name":"60a55e48-8126-46ce-86e3-276ffcdadfe9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4071b3b8-97d3-47e4-bf05-e594b6536e81","path":"sprites/sprGhostShank/sprGhostShank.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4071b3b8-97d3-47e4-bf05-e594b6536e81","path":"sprites/sprGhostShank/sprGhostShank.yy",},"LayerId":{"name":"fd174ee2-85cd-4ead-ac13-c0b0ab7985b9","path":"sprites/sprGhostShank/sprGhostShank.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGhostShank","path":"sprites/sprGhostShank/sprGhostShank.yy",},"resourceVersion":"1.0","name":"4071b3b8-97d3-47e4-bf05-e594b6536e81","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6c25f436-8951-48e9-be22-f06f0e9283c5","path":"sprites/sprGhostShank/sprGhostShank.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6c25f436-8951-48e9-be22-f06f0e9283c5","path":"sprites/sprGhostShank/sprGhostShank.yy",},"LayerId":{"name":"fd174ee2-85cd-4ead-ac13-c0b0ab7985b9","path":"sprites/sprGhostShank/sprGhostShank.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGhostShank","path":"sprites/sprGhostShank/sprGhostShank.yy",},"resourceVersion":"1.0","name":"6c25f436-8951-48e9-be22-f06f0e9283c5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"60a55e48-8126-46ce-86e3-276ffcdadfe9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4071b3b8-97d3-47e4-bf05-e594b6536e81",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6c25f436-8951-48e9-be22-f06f0e9283c5",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprGhostShank","path":"sprites/sprGhostShank/sprGhostShank.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprGhostShank",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"76d94880-f1a1-4e53-9407-2fd56e634793","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"60a55e48-8126-46ce-86e3-276ffcdadfe9","path":"sprites/sprGhostShank/sprGhostShank.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"86de9042-2076-4a2d-9e17-eaa036977715","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4071b3b8-97d3-47e4-bf05-e594b6536e81","path":"sprites/sprGhostShank/sprGhostShank.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"017f12b6-3901-4cde-84d2-d698792deb7f","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6c25f436-8951-48e9-be22-f06f0e9283c5","path":"sprites/sprGhostShank/sprGhostShank.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprGhostShank","path":"sprites/sprGhostShank/sprGhostShank.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprGhostShank",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fd174ee2-85cd-4ead-ac13-c0b0ab7985b9","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"fd174ee2-85cd-4ead-ac13-c0b0ab7985b9","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Melee Atacks",
     "path": "folders/Sprites/Projectiles/Melee Atacks.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprGhostShank",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprGatorHurt",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4ef34dbc-2092-4051-9ea6-066f8994acda","path":"sprites/sprGatorHurt/sprGatorHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4ef34dbc-2092-4051-9ea6-066f8994acda","path":"sprites/sprGatorHurt/sprGatorHurt.yy",},"LayerId":{"name":"a2dc8568-7a53-46af-9b98-ea353413fdfc","path":"sprites/sprGatorHurt/sprGatorHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGatorHurt","path":"sprites/sprGatorHurt/sprGatorHurt.yy",},"resourceVersion":"1.0","name":"4ef34dbc-2092-4051-9ea6-066f8994acda","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9a2ba9da-df7c-40ae-971a-c55e1aacb23c","path":"sprites/sprGatorHurt/sprGatorHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9a2ba9da-df7c-40ae-971a-c55e1aacb23c","path":"sprites/sprGatorHurt/sprGatorHurt.yy",},"LayerId":{"name":"a2dc8568-7a53-46af-9b98-ea353413fdfc","path":"sprites/sprGatorHurt/sprGatorHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGatorHurt","path":"sprites/sprGatorHurt/sprGatorHurt.yy",},"resourceVersion":"1.0","name":"9a2ba9da-df7c-40ae-971a-c55e1aacb23c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8951f92d-8410-483e-b842-310077d5a29b","path":"sprites/sprGatorHurt/sprGatorHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8951f92d-8410-483e-b842-310077d5a29b","path":"sprites/sprGatorHurt/sprGatorHurt.yy",},"LayerId":{"name":"a2dc8568-7a53-46af-9b98-ea353413fdfc","path":"sprites/sprGatorHurt/sprGatorHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprGatorHurt","path":"sprites/sprGatorHurt/sprGatorHurt.yy",},"resourceVersion":"1.0","name":"8951f92d-8410-483e-b842-310077d5a29b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4ef34dbc-2092-4051-9ea6-066f8994acda",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9a2ba9da-df7c-40ae-971a-c55e1aacb23c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8951f92d-8410-483e-b842-310077d5a29b",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprGatorHurt","path":"sprites/sprGatorHurt/sprGatorHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"25bb2334-a3cf-4525-aac0-759ec3a2b275","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4ef34dbc-2092-4051-9ea6-066f8994acda","path":"sprites/sprGatorHurt/sprGatorHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"0b98d277-5b4e-4ec1-8647-0cabd7159439","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9a2ba9da-df7c-40ae-971a-c55e1aacb23c","path":"sprites/sprGatorHurt/sprGatorHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6bc7cba7-6b7a-4be5-bc19-d632a3a361a5","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8951f92d-8410-483e-b842-310077d5a29b","path":"sprites/sprGatorHurt/sprGatorHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprGatorHurt","path":"sprites/sprGatorHurt/sprGatorHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a2dc8568-7a53-46af-9b98-ea353413fdfc","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a2dc8568-7a53-46af-9b98-ea353413fdfc","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Gator",
     "path": "folders/Sprites/Enemies/Sewers/Gator.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprGatorHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

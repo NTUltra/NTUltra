@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprBigDogStatue",
   "bboxMode": 1,
   "collisionKind": 0,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"1b76c266-b4b6-4cec-95fc-9c8f85eff4b2","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1b76c266-b4b6-4cec-95fc-9c8f85eff4b2","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},"LayerId":{"name":"c5007c0f-7360-403f-a03a-b60abd32de18","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBigDogStatue","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},"resourceVersion":"1.0","name":"1b76c266-b4b6-4cec-95fc-9c8f85eff4b2","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"959d9dce-5311-43e7-bc71-d8d659836f8f","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"959d9dce-5311-43e7-bc71-d8d659836f8f","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},"LayerId":{"name":"c5007c0f-7360-403f-a03a-b60abd32de18","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBigDogStatue","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},"resourceVersion":"1.0","name":"959d9dce-5311-43e7-bc71-d8d659836f8f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3537e60e-d323-4045-a076-e21fb19fd263","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3537e60e-d323-4045-a076-e21fb19fd263","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},"LayerId":{"name":"c5007c0f-7360-403f-a03a-b60abd32de18","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBigDogStatue","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},"resourceVersion":"1.0","name":"3537e60e-d323-4045-a076-e21fb19fd263","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c9d213a3-38ff-49da-a869-016f06b1ffc3","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c9d213a3-38ff-49da-a869-016f06b1ffc3","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},"LayerId":{"name":"c5007c0f-7360-403f-a03a-b60abd32de18","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBigDogStatue","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},"resourceVersion":"1.0","name":"c9d213a3-38ff-49da-a869-016f06b1ffc3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1b76c266-b4b6-4cec-95fc-9c8f85eff4b2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"959d9dce-5311-43e7-bc71-d8d659836f8f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3537e60e-d323-4045-a076-e21fb19fd263",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c9d213a3-38ff-49da-a869-016f06b1ffc3",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprBigDogStatue","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprBigDogStatue",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -49,12 +46,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"643ce164-4c44-445d-a0a3-257575921d92","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1b76c266-b4b6-4cec-95fc-9c8f85eff4b2","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"bb4fb09c-944a-4366-b078-5a8735f96a13","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"959d9dce-5311-43e7-bc71-d8d659836f8f","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"65c82637-e013-4ee1-9e41-ddf1d900dec6","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3537e60e-d323-4045-a076-e21fb19fd263","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"039e6301-14c7-4162-b306-f7dd608b41cd","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c9d213a3-38ff-49da-a869-016f06b1ffc3","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +67,13 @@
     "yorigin": 48,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprBigDogStatue","path":"sprites/sprBigDogStatue/sprBigDogStatue.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprBigDogStatue",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c5007c0f-7360-403f-a03a-b60abd32de18","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c5007c0f-7360-403f-a03a-b60abd32de18","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Statues",
     "path": "folders/Sprites/Enemies/Boss/Statues.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprBigDogStatue",
-  "tags": [],
-  "resourceType": "GMSprite",
 }
