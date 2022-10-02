@@ -12,12 +12,15 @@ day = -1;
 event_perform(ev_alarm,0);
 ini_open(dailyScoreSaveFileString);
 var scoreLeaderboard = "";
-while(ini_key_exists("scorelb",0))
+var i = 0;
+while(ini_key_exists("scorelb",i))
 {
 	scoreLeaderboard += ini_read_string("scorelb",i,"")+"|";
+	i++;
 }
 ini_close();
 leaderboardString = scoreLeaderboard;
+leaderboardString = string_replace_all(leaderboardString,"|","\n");
 //Data types
 enum NETDATA {
 	CLIENT_ID,

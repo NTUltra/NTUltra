@@ -50,17 +50,27 @@ if (type == network_type_data) {
 			var j = 0;
 			repeat(clamp(totalScoreLeaderboardEntries-(page*10),1,10))
 			{
-				var scoreEntry = string_copy(receivedLeaderboard,startIndex,string_pos("|",receivedLeaderboard));
+				var scoreEntry = string_copy(receivedLeaderboard,startIndex,string_pos_ext("|",receivedLeaderboard,startIndex)-startIndex);
+				debug("check: ", scoreEntry);
 				var scoreEntryList = [];
 				var i = 0;
+				var entryIndex = 1;
 				repeat(13)//12 entries
 				{
-					scoreEntryList[i] = string_copy(scoreEntry,startIndex, string_pos_ext(" ",scoreEntry,startIndex)-startIndex);
-					startIndex = string_pos_ext(" ",scoreEntry,startIndex);
-					debug("endIndex",startIndex);
+					/*
+					while string_pos_ext(" ",scoreEntry,startIndex)-startIndex < 1
+					{
+						startIndex = string_pos_ext(" ",scoreEntry,startIndex);
+						startIndex++;
+					}*/
+					scoreEntryList[i] = string_copy(scoreEntry,entryIndex, string_pos_ext(" ",scoreEntry,entryIndex)-entryIndex);
 					debug("-"+scoreEntryList[i]+"-");
 					i++;
+					entryIndex = string_pos_ext(" ",scoreEntry,entryIndex);
+					entryIndex++;
 				}
+				debug("row end");
+				startIndex = string_pos_ext("|",receivedLeaderboard,startIndex);
 				startIndex++;
 				leaderboard[j] = scoreEntryList;
 				j++;

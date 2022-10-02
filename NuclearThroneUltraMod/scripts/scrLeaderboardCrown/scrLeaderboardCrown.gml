@@ -86,4 +86,5 @@ function scrLeaderboardCrown(takenCrown){
 			return sprCrown27Idle;
 		break;
 	}
+	return sprSharpStress;
 }

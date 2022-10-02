@@ -2,9 +2,13 @@
 // /@description
 ///@param
 function scrLeaderboardRace(entry){
-	if entry[6] = 1
+	var race = real(entry[5]);
+	var bskin = real(entry[6]);
+	var altUltra = bool(entry[7]);
+	var area = real(entry[2]);
+	if bskin = 1
 	{
-	switch (entry[5])
+	switch (race)
 	{
 	case 1:
 	return sprMutant1BIdle;
@@ -13,7 +17,7 @@ function scrLeaderboardRace(entry){
 	return sprMutant2BIdle;
 	break;
 	case 3:
-	if entry[7]
+	if altUltra
 	{
 		return sprMutant3EIdle;
 	}
@@ -26,7 +30,7 @@ function scrLeaderboardRace(entry){
 	return sprMutant5BIdle;
 	break;
 	case 6:
-	if entry[7]
+	if altUltra
 	{
 		return sprMutant6EIdle;
 	}
@@ -39,16 +43,16 @@ function scrLeaderboardRace(entry){
 	return sprMutant8BIdle;
 	break;
 	case 9:
-	if entry[7]
+	if altUltra
 	{
 		return sprMutant9DIdle;
 	}
 	return sprMutant9BIdle;
 	break;
 	case 10:
-	if entry[7]
+	if altUltra
 	{
-		if entry[2] == 5 || entry[2] == 108
+		if area == 5 || area == 108
 		{
 			return sprMutant10HIdle
 		}
@@ -57,7 +61,7 @@ function scrLeaderboardRace(entry){
 			return sprMutant10FIdle;
 		}
 	}
-	else if entry[2] == 5 || entry[2] == 108
+	else if area == 5 || area == 108
 	{
 		 return sprMutant10DIdle;
 	}
@@ -79,7 +83,7 @@ function scrLeaderboardRace(entry){
 	return sprMutant15BIdle;
 	break;
 	case 16:
-	if entry[7]
+	if altUltra
 	{
 		return sprMutant16DIdle;
 	}
@@ -98,14 +102,14 @@ function scrLeaderboardRace(entry){
 	return sprMutant20BIdle;
 	break;
 	case 21:
-	if entry[7]
+	if altUltra
 	{
 		return sprMutant21DIdle;
 	}
 	return sprMutant21BIdle;
 	break;
 	case 22:
-	if entry[7]
+	if altUltra
 	{
 		return sprMutant22DIdle;
 	}
@@ -129,9 +133,9 @@ function scrLeaderboardRace(entry){
 
 	}
 	}
-	else if entry[6]=2//cskin
+	else if bskin=2//cskin
 	{
-	switch (entry[5])
+	switch (race)
 	{
 	case 1:
 	return sprMutant1CIdle;
@@ -140,7 +144,7 @@ function scrLeaderboardRace(entry){
 	return sprMutant2CIdle;
 	break;
 	case 3:
-	if entry[7]
+	if altUltra
 	{
 		return sprMutant3FIdle;
 	}
@@ -165,7 +169,7 @@ function scrLeaderboardRace(entry){
 	return sprMutant9CIdle;
 	break;
 	case 10:
-	if entry[7]
+	if altUltra
 	{
 		return sprMutant10GIdle;
 	}
@@ -187,7 +191,7 @@ function scrLeaderboardRace(entry){
 	return sprMutant15CIdle;
 	break;
 	case 16:
-	if entry[7]
+	if altUltra
 	{
 		return sprMutant16DIdle;
 	}
@@ -206,14 +210,14 @@ function scrLeaderboardRace(entry){
 	return sprMutant20CIdle;
 	break;
 	case 21:
-	if entry[7]
+	if altUltra
 	{
 		return sprMutant21DIdle;
 	}
 	return sprMutant21CIdle;
 	break;
 	case 22:
-	if entry[7]
+	if altUltra
 	{
 		return sprMutant22DIdle;
 	}
@@ -239,7 +243,7 @@ function scrLeaderboardRace(entry){
 	}
 	else//REGULAR SKIN!
 	{
-	switch (entry[6])
+	switch (race)
 	{
 	case 1:
 	return sprMutant1Idle;
@@ -248,7 +252,7 @@ function scrLeaderboardRace(entry){
 	return sprMutant2Idle;
 	break;
 	case 3:
-	if entry[7]
+	if altUltra
 	{
 		return sprMutant3DIdle;
 	}
@@ -261,7 +265,7 @@ function scrLeaderboardRace(entry){
 	return sprMutant5Idle;
 	break;
 	case 6:
-	if entry[7]
+	if altUltra
 	{
 		return sprMutant6DIdle;
 	}
@@ -271,21 +275,21 @@ function scrLeaderboardRace(entry){
 	return sprMutant7Idle;
 	break;
 	case 8:
-	if entry[7]
+	if altUltra
 	{
 		return sprMutant8DIdle;
 	}
 	return sprMutant8Idle;
 	break;
 	case 9:
-	if entry[7]
+	if altUltra
 	{
 		return sprMutant9DIdle;
 	}
 	return sprMutant9Idle;
 	break;
 	case 10:
-	if entry[7]
+	if altUltra
 	{
 		return sprMutant10EIdle;
 	}
@@ -307,7 +311,7 @@ function scrLeaderboardRace(entry){
 	return sprMutant15Idle;
 	break;
 	case 16:
-	if entry[7]
+	if altUltra
 	{
 		return sprMutant16DIdle;
 	}
@@ -326,7 +330,7 @@ function scrLeaderboardRace(entry){
 	return sprMutant20Idle;
 	break;
 	case 21:
-	if entry[7]
+	if altUltra
 	{
 		return sprMutant21DIdle;
 	}
@@ -334,7 +338,7 @@ function scrLeaderboardRace(entry){
 	break;
 	case 22:
 	return sprMutant22Idle;
-	if entry[7]
+	if altUltra
 	{
 		return sprMutant22DIdle;
 	}
@@ -357,4 +361,5 @@ function scrLeaderboardRace(entry){
 	}
 
 	}
+	return sprSharpStress;
 }

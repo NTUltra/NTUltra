@@ -26,6 +26,14 @@ function scrRestart() {
 		{
 			goToLeaderboard = false;	
 		}
+		audio_stop_all();
+		with MusCont {
+			amb = amb0c;
+			snd_loop(amb);
+			audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
+		    audio_sound_gain(song,max(0,sqrt(UberCont.opt_musvol)),0);
+		    audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
+		}
 		debug("go to leaderboard");
 		exit;
 	}
