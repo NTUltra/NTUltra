@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scrLoadRace",
+  "name": "scrLeaderboardCrown",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Player Character",
-    "path": "folders/Scripts/Player Character.yy",
+    "name": "Menus",
+    "path": "folders/Scripts/Menus.yy",
   },
 }

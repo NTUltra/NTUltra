@@ -1,0 +1,360 @@
+///scrLeaderboardRace();
+// /@description
+///@param
+function scrLeaderboardRace(entry){
+	if entry[6] = 1
+	{
+	switch (entry[5])
+	{
+	case 1:
+	return sprMutant1BIdle;
+	break;
+	case 2:
+	return sprMutant2BIdle;
+	break;
+	case 3:
+	if entry[7]
+	{
+		return sprMutant3EIdle;
+	}
+	return sprMutant3BIdle;
+	break;
+	case 4:
+	return sprMutant4BIdle;
+	break;
+	case 5:
+	return sprMutant5BIdle;
+	break;
+	case 6:
+	if entry[7]
+	{
+		return sprMutant6EIdle;
+	}
+	return sprMutant6BIdle;
+	break;
+	case 7:
+	return sprMutant7BIdle;
+	break;
+	case 8:
+	return sprMutant8BIdle;
+	break;
+	case 9:
+	if entry[7]
+	{
+		return sprMutant9DIdle;
+	}
+	return sprMutant9BIdle;
+	break;
+	case 10:
+	if entry[7]
+	{
+		if entry[2] == 5 || entry[2] == 108
+		{
+			return sprMutant10HIdle
+		}
+		else
+		{
+			return sprMutant10FIdle;
+		}
+	}
+	else if entry[2] == 5 || entry[2] == 108
+	{
+		 return sprMutant10DIdle;
+	}
+	return sprMutant10BIdle;
+	break;
+	case 11:
+	return sprMutant11BIdle;
+	break;
+	case 12:
+	return sprMutant12BIdle;
+	break;
+	case 13:
+	return sprMutant13BIdle;
+	break;
+	case 14:
+	return sprMutant14BIdle;
+	break;
+	case 15:
+	return sprMutant15BIdle;
+	break;
+	case 16:
+	if entry[7]
+	{
+		return sprMutant16DIdle;
+	}
+	return sprMutant16BIdle;
+	break;
+	case 17:
+	return sprMutant17BIdle;
+	break;
+	case 18:
+	return sprMutant18BIdle;
+	break;
+	case 19:
+	return sprMutant19BIdle;
+	break;
+	case 20:
+	return sprMutant20BIdle;
+	break;
+	case 21:
+	if entry[7]
+	{
+		return sprMutant21DIdle;
+	}
+	return sprMutant21BIdle;
+	break;
+	case 22:
+	if entry[7]
+	{
+		return sprMutant22DIdle;
+	}
+	return sprMutant22BIdle;
+	break;
+	case 23:
+	return sprMutant23BIdle;
+	break;
+	case 24:
+	return sprMutant24BIdle;
+	break;
+	case 25:
+	return sprMutant25BIdle;
+	break;
+	case 26:
+	return sprMutant26BIdle;
+	break;
+	case 27:
+	return sprMutant27BIdle;
+	break;
+
+	}
+	}
+	else if entry[6]=2//cskin
+	{
+	switch (entry[5])
+	{
+	case 1:
+	return sprMutant1CIdle;
+	break;
+	case 2:
+	return sprMutant2CIdle;
+	break;
+	case 3:
+	if entry[7]
+	{
+		return sprMutant3FIdle;
+	}
+	return sprMutant3CIdle;
+	break;
+	case 4:
+	return sprMutant4CIdle;
+	break;
+	case 5:
+	return sprMutant5CIdle;
+	break;
+	case 6:
+	return sprMutant6CIdle;
+	break;
+	case 7:
+	return sprMutant7CIdle;
+	break;
+	case 8:
+	return sprMutant8CIdle;
+	break;
+	case 9:
+	return sprMutant9CIdle;
+	break;
+	case 10:
+	if entry[7]
+	{
+		return sprMutant10GIdle;
+	}
+	return sprMutant10CIdle;
+	break;
+	case 11:
+	return sprMutant11CIdle;
+	break;
+	case 12:
+	return sprMutant12CIdle;
+	break;
+	case 13:
+	return sprMutant13CIdle;
+	break;
+	case 14:
+	return sprMutant14CIdle;
+	break;
+	case 15:
+	return sprMutant15CIdle;
+	break;
+	case 16:
+	if entry[7]
+	{
+		return sprMutant16DIdle;
+	}
+	return sprMutant16CIdle;
+	break;
+	case 17:
+	return sprMutant17CIdle;
+	break;
+	case 18:
+	return sprMutant18CIdle;
+	break;
+	case 19:
+	return sprMutant19CIdle;
+	break;
+	case 20:
+	return sprMutant20CIdle;
+	break;
+	case 21:
+	if entry[7]
+	{
+		return sprMutant21DIdle;
+	}
+	return sprMutant21CIdle;
+	break;
+	case 22:
+	if entry[7]
+	{
+		return sprMutant22DIdle;
+	}
+	return sprMutant22CIdle;
+	break;
+	case 23:
+	return sprMutant23CIdle;
+	break;
+	case 24:
+	return sprMutant24CIdle;
+	break;
+	case 25:
+	return sprMutant25CIdle;
+	break;
+	case 26:
+	return sprMutant26CIdle;
+	break;
+	case 27:
+	return sprMutant27CIdle;
+	break;
+	}
+
+	}
+	else//REGULAR SKIN!
+	{
+	switch (entry[6])
+	{
+	case 1:
+	return sprMutant1Idle;
+	break;
+	case 2:
+	return sprMutant2Idle;
+	break;
+	case 3:
+	if entry[7]
+	{
+		return sprMutant3DIdle;
+	}
+	return sprMutant3Idle;
+	break;
+	case 4:
+	return sprMutant4Idle;
+	break;
+	case 5:
+	return sprMutant5Idle;
+	break;
+	case 6:
+	if entry[7]
+	{
+		return sprMutant6DIdle;
+	}
+	return sprMutant6Idle;
+	break;
+	case 7:
+	return sprMutant7Idle;
+	break;
+	case 8:
+	if entry[7]
+	{
+		return sprMutant8DIdle;
+	}
+	return sprMutant8Idle;
+	break;
+	case 9:
+	if entry[7]
+	{
+		return sprMutant9DIdle;
+	}
+	return sprMutant9Idle;
+	break;
+	case 10:
+	if entry[7]
+	{
+		return sprMutant10EIdle;
+	}
+	return sprMutant10Idle;
+	break;
+	case 11:
+	return sprMutant11Idle;
+	break;
+	case 12:
+	return sprMutant12Idle;
+	break;
+	case 13:
+	return sprMutant13Idle;
+	break;
+	case 14:
+	return sprMutant14Idle;
+	break;
+	case 15:
+	return sprMutant15Idle;
+	break;
+	case 16:
+	if entry[7]
+	{
+		return sprMutant16DIdle;
+	}
+	return sprMutant16Idle;
+	break;
+	case 17:
+	return sprMutant17Idle;
+	break;
+	case 18:
+	return sprMutant18Idle;
+	break;
+	case 19:
+	return sprMutant19Idle;
+	break;
+	case 20:
+	return sprMutant20Idle;
+	break;
+	case 21:
+	if entry[7]
+	{
+		return sprMutant21DIdle;
+	}
+	return sprMutant21Idle;
+	break;
+	case 22:
+	return sprMutant22Idle;
+	if entry[7]
+	{
+		return sprMutant22DIdle;
+	}
+	break;
+	case 23:
+	return sprMutant23Idle;
+	break;
+	case 24:
+	return sprMutant24Idle;
+	break;
+	case 25:
+	return sprMutant25Idle;
+	break;
+	case 26:
+	return sprMutant26Idle;
+	break;
+	case 27:
+	return sprMutant27Idle;
+	break;
+	}
+
+	}
+}

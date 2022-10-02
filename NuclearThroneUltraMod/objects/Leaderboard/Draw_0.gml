@@ -22,11 +22,12 @@ if array_length(leaderboard) > 0
 		//5 = race Enter logic to determine skin
 		// 6 = bskin
 		//7 = altultra
-		draw_sprite(sprMutant1Idle,0,x+(col*3),yy);
+		draw_sprite(scrLeaderboardRace(entry),0,x+(col*3),yy);
 		draw_sprite(wep_sprt[real(entry[8])],0,x+(col*4),yy);
 		draw_sprite(wep_sprt[real(entry[9])],0,x+(col*5),yy);
 		draw_sprite(wep_sprt[real(entry[10])],0,x+(col*6),yy);
-		draw_sprite(sprCrown1Idle,0,x+(col*7),yy);
+		if (entry[11] != 1)
+		draw_sprite(scrLeaderboardCrown(entry[11]),0,x+(col*7),yy);
 		if entry[12] != "255"
 			draw_sprite(sprUltraIconHUD,real(entry[12]),x+(col*8),yy);
 	}
