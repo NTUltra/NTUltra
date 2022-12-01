@@ -28,7 +28,7 @@ else
 {
 	txttime = minutesstring+":"+secondsstring+":"+microseconds;
 }
-if !instance_exists(Menu)&&!instance_exists(Vlambeer) && !instance_exists(UnlockPopup) && opt_timer=1
+if !instance_exists(Menu)&&!instance_exists(Vlambeer) && !instance_exists(UnlockPopup) && opt_timer=1 && !instance_exists(Leaderboard)
 {
 draw_set_valign(fa_top)
 draw_set_halign(fa_center)

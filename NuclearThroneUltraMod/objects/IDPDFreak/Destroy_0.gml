@@ -8,16 +8,16 @@ if lifes > 0
 		lifes = other.lifes - 1;
 		myCorpse = other.myCorpse; 
 	}
-}
-var ang = random(360);
-var am = 3;
-var angStep = 360/am;
-repeat(am)
-{
-	with instance_create(x,y,PopoNade){
-		motion_add(ang,other.nadeSpeed)
-		image_angle = direction
-		team = other.team
+	var ang = random(360);
+	var am = 3;
+	var angStep = 360/am;
+	repeat(am)
+	{
+		with instance_create(x,y,PopoNade){
+			motion_add(ang,other.nadeSpeed)
+			image_angle = direction
+			team = other.team
+		}
+		ang += angStep;
 	}
-	ang += angStep;
 }

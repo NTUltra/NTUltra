@@ -29,9 +29,9 @@ if object_index!=SnowTank && object_index!=InvertedSnowTank && object_index!=Gol
 			{
 				impactWrist = true;
 				alarm[0] = 2;
-				speed = max(speed+8,9)//9.3
+				speed = max(speed+7.5,8.5)//9.3
 				if Player.race=25
-					speed+=1.24;
+					speed+=1.2;
 			}
 			else if speed > 17
 			speed = 17
@@ -45,11 +45,11 @@ if object_index!=SnowTank && object_index!=InvertedSnowTank && object_index!=Gol
 					speed /= size*0.82;
 			}
 			
-			if Player.skill_got[20] == 1 && speed > 19
-				speed = 19
+			if Player.skill_got[20] == 1 && speed > 18
+				speed = 18
 		}
 		else if size > 0
-			speed /= size*0.82
+			speed /= size*0.83
 	}
 	snd_play(snd_dead, 0.1,true);
 }
@@ -61,4 +61,13 @@ scrEnemyDeathEvent();
 if totemBuffed
 {
 	scrDrop(14,1.6);	
+}
+if super {
+	snd_play(sndNothingFire)
+	with instance_create(x,y,SquarePool)
+	{
+		speed = 0;
+		image_angle = 0;
+		team = other.team;
+	}	
 }

@@ -90,6 +90,7 @@ hurtDuration = 13; //Additional iframes
 hurtTime = 0;
 lockoutElementor = false; //When no ammo lockout ability for elementor
 boostLevel = 0;
+level = 1
 if instance_exists(BackCont)
 BackCont.alarm[4] = 10;
 canblacksword = false;
@@ -218,6 +219,7 @@ bwep = 0;
 cwep = 0;
 scrSkills()
 scrWeapons();
+unlockAlternativeUltras = false;
 altUltra = false;
 loops = 0;
 //RACE STUFF
@@ -361,7 +363,6 @@ if UberCont.opt_gamemode == 9
 maxSpeed = 4
 
 
-level = 1
 maxlevel = 10 + UberCont.levelIncrease;
 if UberCont.opt_gamemode == 15 //no mutaitons gamemode
 maxlevel = 1;

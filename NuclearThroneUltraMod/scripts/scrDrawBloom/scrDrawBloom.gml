@@ -296,13 +296,14 @@ function scrDrawBloom() {
 		{
 		    with enemy
 		    {
+				var minSize = min(3,size);
 		        if(point_distance(x,y,Player.x,Player.y)>100)
 		        {
-		        draw_sprite_ext(sprHunterUltraBMark,-1,x,y,size,size,image_angle,c_green,0.2);
+		        draw_sprite_ext(sprHunterUltraBMark,-1,x,y,minSize,minSize,image_angle,c_green,0.2);
 		        }
 		        else
 		        {
-		        draw_sprite_ext(sprHunterUltraBMark,-1,x,y,size,size,image_angle,c_green,0.05);
+		        draw_sprite_ext(sprHunterUltraBMark,-1,x,y,minSize,minSize,image_angle,c_green,0.05);
 		        }
         
 		    }
@@ -409,7 +410,7 @@ function scrDrawBloom() {
 	with EnemyBullet1
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with EnemyBullet1Square
-	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
+	draw_sprite_ext(sprite_index,-1,x,y,image_xscale*2,image_yscale*2,image_angle,c_white,ba)
 	with AllyBullet
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with RadChest
@@ -462,7 +463,11 @@ function scrDrawBloom() {
 	{
 		if totemBuffed
 		{
-			draw_sprite_ext(sprite_index,image_index,x,y,image_xscale*1.3,image_yscale*1.3,image_angle,c_red,ba);
+			draw_sprite_ext(sprite_index,image_index,x,y,image_xscale*1.3,image_yscale*1.3,image_angle,c_red,ba+0.1);
+		}
+		if super
+		{
+			draw_sprite_ext(sprite_index,image_index,x,y,image_xscale*1.3,image_yscale*1.3,image_angle,c_green,ba+0.1);
 		}
 	}
 	draw_set_blend_mode(bm_normal)

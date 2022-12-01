@@ -3970,7 +3970,7 @@ function scrWeapons() {
 	wep_name[360] = "FLAIL"
 	wep_type[360] = 0
 	wep_auto[360] = 0
-	wep_load[360] = 25
+	wep_load[360] = 27
 	wep_cost[360] = 0
 	wep_sprt[360] = sprFlail
 	wep_area[360] = 10
@@ -5323,7 +5323,7 @@ function scrWeapons() {
 	wep_name[481] = "EXPLOSION FLAIL"
 	wep_type[481] = 0
 	wep_auto[481] = 0
-	wep_load[481] = 30
+	wep_load[481] = 31
 	wep_cost[481] = 0
 	wep_sprt[481] = sprExplosionFlail
 	wep_area[481] = 12
@@ -5731,9 +5731,9 @@ function scrWeapons() {
 	wep_type[518] = 1
 	wep_auto[518] = 1
 	wep_load[518] = 4
-	wep_cost[518] = 3
+	wep_cost[518] = 3.5
 	wep_sprt[518] = sprSeekerMachinegun
-	wep_area[518] = 8
+	wep_area[518] = 9
 	wep_text[518] = "auto seeking"
 	wep_swap[518] = sndSwapMachinegun
 	wep_rad[518] = 0;
@@ -5742,7 +5742,7 @@ function scrWeapons() {
 	wep_type[519] = 1
 	wep_auto[519] = 1
 	wep_load[519] = 3
-	wep_cost[519] = 6
+	wep_cost[519] = 7
 	wep_sprt[519] = sprDoubleSeekerMachinegun
 	wep_area[519] = 15
 	wep_text[519] = "seek and destroy"
@@ -6588,7 +6588,7 @@ function scrWeapons() {
 	wep_name[596] = "PLASMA FLAIL"
 	wep_type[596] = 5
 	wep_auto[596] = 0
-	wep_load[596] = 23
+	wep_load[596] = 24
 	wep_cost[596] = 2.5
 	wep_sprt[596] = sprPlasmaFlail
 	wep_area[596] = 15
@@ -6720,11 +6720,11 @@ function scrWeapons() {
 	wep_name[608] = "SHANKER"
 	wep_type[608] = 0
 	wep_auto[608] = 0
-	wep_load[608] = 20
+	wep_load[608] = 12
 	wep_cost[608] = 0
-	wep_sprt[608] = sprShovel
-	wep_area[608] = 3//4 originally?
-	wep_text[608] = "screwdriving shovel"
+	wep_sprt[608] = sprShanker
+	wep_area[608] = 9
+	wep_text[608] = "lance shovel"
 	wep_swap[608] = sndSwapHammer
 	wep_rad[608] = 0;
 
@@ -6783,8 +6783,9 @@ function scrWeapons() {
 			// highestTierWeapon = i;
 		}
 	}
-	/*
+	
 	//Debug how many weapons there are of each tier
+	/*
 	var amountPerTier = [];
 	var amountTypes = [];
 	var z = 0;

@@ -5,7 +5,9 @@ function scrDeflectNade(deflectDirection){
 	if !gotHit || speed == 0
 	{
 		if !gotHit
-			alarm[1] = 6
+			alarm[1] = 6;
+		
+		alarm[8] = 15;
 		gotHit = true;
 		team=other.team;
 		direction = deflectDirection;

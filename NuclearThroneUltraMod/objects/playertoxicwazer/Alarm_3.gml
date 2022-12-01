@@ -1,4 +1,5 @@
 /// @description Gass
+if array_length(hit) > 1
 if point_distance(x,y,hit[1],hit[2]) > 16
 {
 	var l = 6;	

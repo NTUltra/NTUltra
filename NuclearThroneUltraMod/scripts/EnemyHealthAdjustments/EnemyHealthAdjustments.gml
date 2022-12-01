@@ -8,7 +8,7 @@ function EnemyHealthAdjustments(){
 		if UberCont.opt_gamemode == 34
 			maxhealth *= 1.1;
 		if Player.crown == 10
-			maxhealth *= 1.05;//Very minor crown of difficulty
+			maxhealth *= 1.2;//Crown of difficulty
 		
 		my_health = maxhealth;
 		//var hpReduction = 0;

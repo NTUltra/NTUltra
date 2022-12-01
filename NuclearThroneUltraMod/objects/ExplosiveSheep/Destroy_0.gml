@@ -19,7 +19,7 @@ with instance_create(x,y,Corpse)
 			speed += 4;
 	if Player.skill_got[20] = 1
 	{
-	speed += 9
+	speed += 8
 	if Player.race=25
 	speed+=1;
 	}

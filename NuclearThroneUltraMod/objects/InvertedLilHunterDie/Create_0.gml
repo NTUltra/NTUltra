@@ -10,3 +10,4 @@ direction = random(360)
 
 bounces = 0
 
+alarm[2]=600;

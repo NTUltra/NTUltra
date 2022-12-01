@@ -1,4 +1,4 @@
-if impactWristed && speed > 4.5
+if impactWristed && speed > 4.6
 {
 	with other
 	{

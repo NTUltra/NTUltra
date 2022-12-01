@@ -238,6 +238,10 @@ function scrDrawHUD() {
 			{
 				draw_sprite_ext(sprQuickSwapperHUD,0,xx,yy,1,1,0,c_white,1);
 			}
+			else if dir == 68 && Player.altUltra
+			{
+				draw_sprite_ext(sprEnginuityHUD,0,xx,yy,1,1,0,c_white,1);
+			}
 			else if dir == 72 && Player.altUltra
 			{
 				draw_sprite_ext(sprMirrorHUD,0,xx,yy,1,1,0,c_white,1);
@@ -987,89 +991,89 @@ function scrDrawHUD() {
 	if instance_exists(Player.targetPickup)
 	{
 	if Player.targetPickup.visible == true
-	with Player.targetPickup
-	{
-
-	draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-7)
-	if type = 1{
-	draw_sprite(sprBulletIconBG,2,x+7,y-21)
-	draw_sprite(sprBulletIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
-	if type = 2{
-	draw_sprite(sprShotIconBG,2,x+7,y-21)
-	draw_sprite(sprShotIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
-	if type = 3{
-	draw_sprite(sprBoltIconBG,2,x+7,y-21)
-	draw_sprite(sprBoltIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
-	if type = 4{
-	draw_sprite(sprExploIconBG,2,x+7,y-21)
-	draw_sprite(sprExploIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
-	if type = 5{
-	draw_sprite(sprEnergyIconBG,2,x+7,y-21)
-	draw_sprite(sprEnergyIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
-
-//wep_area[Player.wep]
-/*
-	draw_set_color(c_black)
-	draw_text(x,y-30,string_hash_to_newline(string(name)))
-	draw_text(x+1,y-30,string_hash_to_newline(string(name)))
-	draw_text(x+1,y-31,string_hash_to_newline(string(name)))
-	draw_set_color(c_white)
-	draw_text(x,y-31,string_hash_to_newline(string(name)))*/
-	//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
-		//draw_set_halign(fa_left)
-	var ny = y-30;
-	//Eagle eyes weptier
-		var tier = string(wep_area[wep]);
-		if tier >= 0//eagle eyes
+		with Player.targetPickup
 		{
-			var spaceBetweenStarAndText = 4;
-			var ty = y-40;
-			var tierSprite = sprWepTier;
-			var sw = string_width(tier)+spaceBetweenStarAndText;
-			var tx = x-(sw*0.25)//string_width(string_hash_to_newline(string(name)));
-			var txa = tx + sw;
-			if curse > 0
+
+		draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-7)
+		if type = 1{
+		draw_sprite(sprBulletIconBG,2,x+7,y-21)
+		draw_sprite(sprBulletIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
+		if type = 2{
+		draw_sprite(sprShotIconBG,2,x+7,y-21)
+		draw_sprite(sprShotIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
+		if type = 3{
+		draw_sprite(sprBoltIconBG,2,x+7,y-21)
+		draw_sprite(sprBoltIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
+		if type = 4{
+		draw_sprite(sprExploIconBG,2,x+7,y-21)
+		draw_sprite(sprExploIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
+		if type = 5{
+		draw_sprite(sprEnergyIconBG,2,x+7,y-21)
+		draw_sprite(sprEnergyIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
+
+	//wep_area[Player.wep]
+	/*
+		draw_set_color(c_black)
+		draw_text(x,y-30,string_hash_to_newline(string(name)))
+		draw_text(x+1,y-30,string_hash_to_newline(string(name)))
+		draw_text(x+1,y-31,string_hash_to_newline(string(name)))
+		draw_set_color(c_white)
+		draw_text(x,y-31,string_hash_to_newline(string(name)))*/
+		//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+			//draw_set_halign(fa_left)
+		var ny = y-30;
+		//Eagle eyes weptier
+			var tier = string(wep_area[wep]);
+			if tier >= 0//eagle eyes
 			{
-				var col = draw_set_color(make_colour_rgb(136,36,174));
-				var n = string_hash_to_newline(string(name));
+				var spaceBetweenStarAndText = 4;
+				var ty = y-40;
+				var tierSprite = sprWepTier;
+				var sw = string_width(tier)+spaceBetweenStarAndText;
+				var tx = x-(sw*0.25)//string_width(string_hash_to_newline(string(name)));
+				var txa = tx + sw;
+				if curse > 0
+				{
+					var col = draw_set_color(make_colour_rgb(136,36,174));
+					var n = string_hash_to_newline(string(name));
 				
-				draw_text(x+2,ny,n)
-				draw_text(x+2,ny-2,n)
-				draw_text(x+2,ny-1,n)
-				draw_text(x+2,ny+1,n)
+					draw_text(x+2,ny,n)
+					draw_text(x+2,ny-2,n)
+					draw_text(x+2,ny-1,n)
+					draw_text(x+2,ny+1,n)
 				
-				draw_text(x,ny,n)
-				draw_text(x,ny-2,n)
-				draw_text(x,ny-1,n)
-				draw_text(x,ny+1,n)
+					draw_text(x,ny,n)
+					draw_text(x,ny-2,n)
+					draw_text(x,ny-1,n)
+					draw_text(x,ny+1,n)
 				
-				draw_text(x-1,ny,n)
-				draw_text(x-1,ny-2,n)
-				draw_text(x-1,ny-1,n)
-				draw_text(x-1,ny+1,n)
+					draw_text(x-1,ny,n)
+					draw_text(x-1,ny-2,n)
+					draw_text(x-1,ny-1,n)
+					draw_text(x-1,ny+1,n)
+				}
+				draw_set_color(c_black)
+				draw_text(x,ny,string_hash_to_newline(string(name)))
+				draw_text(x+1,ny,string_hash_to_newline(string(name)))
+				draw_text(tx,ty,tier)
+				draw_text(tx+1,ty,tier)
+				draw_text(tx+1,ty-1,tier)
+				draw_text(x+1,ny-1,string_hash_to_newline(string(name)))
+				draw_set_color(c_white)
+				draw_text(x,ny-1,string_hash_to_newline(string(name)))
+				draw_text(tx,ty-1,tier)
+				draw_sprite(tierSprite,0,txa,ty+1);
 			}
-			draw_set_color(c_black)
-			draw_text(x,ny,string_hash_to_newline(string(name)))
-			draw_text(x+1,ny,string_hash_to_newline(string(name)))
-			draw_text(tx,ty,tier)
-			draw_text(tx+1,ty,tier)
-			draw_text(tx+1,ty-1,tier)
-			draw_text(x+1,ny-1,string_hash_to_newline(string(name)))
-			draw_set_color(c_white)
-			draw_text(x,ny-1,string_hash_to_newline(string(name)))
-			draw_text(tx,ty-1,tier)
-			draw_sprite(tierSprite,0,txa,ty+1);
+			else
+			{
+				draw_set_color(c_black)
+				draw_text(x,ny,string_hash_to_newline(string(name)))
+				draw_text(x+1,ny,string_hash_to_newline(string(name)))
+				draw_text(x+1,ny-1,string_hash_to_newline(string(name)))
+				draw_set_color(c_white)
+				draw_text(x,ny-1,string_hash_to_newline(string(name)))
+			}
 		}
-		else
-		{
-			draw_set_color(c_black)
-			draw_text(x,ny,string_hash_to_newline(string(name)))
-			draw_text(x+1,ny,string_hash_to_newline(string(name)))
-			draw_text(x+1,ny-1,string_hash_to_newline(string(name)))
-			draw_set_color(c_white)
-			draw_text(x,ny-1,string_hash_to_newline(string(name)))
-		}
-	}
 	}
 	}}
 
@@ -1605,11 +1609,11 @@ function scrDrawHUD() {
 			if shouldDraw
 			{
 			if inverted
-			draw_sprite(sprPortalIndicator,2,xx,yy);
+				draw_sprite(sprPortalIndicator,2,xx,yy);
 			else if type = 1
-			draw_sprite(sprPortalIndicator,0,xx,yy);
-			else if type = 2
-			draw_sprite(sprPortalIndicator,1,xx,yy);
+				draw_sprite(sprPortalIndicator,0,xx,yy);
+			else if type = 3
+				draw_sprite(sprPortalIndicator,1,xx,yy);
 			}
 		}
 	}

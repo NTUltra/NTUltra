@@ -1,10 +1,20 @@
 scrDrop(100,50)
-scrDrop(100,0)
+scrDrop(80,0)
 scrDrop(80,0)
 event_inherited()
 scrEndBossMusic();
 snd_play(sndExplosionL);
-instance_create(x,y,GreenExplosion);
+var am = 3+min(loops,4);
+var angStep = 360/am;
+var ang = random(360);
+repeat(am)
+{
+	with instance_create(x,y,myBat)
+	{
+		motion_add(ang,4);	
+	}
+	ang += angStep;
+}
 instance_create(x,y,BigWallBreak);
 if alarm[5] >  0
 {

@@ -9,6 +9,7 @@ offy = random(2)-1
 typ = 1 
 
 dmg=15;
+gotHit = false;
 isGrenade = true;
 image_angle=random(360);
 

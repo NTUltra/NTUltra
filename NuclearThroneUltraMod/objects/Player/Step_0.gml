@@ -707,6 +707,10 @@ if KeyCont.key_swap[p] = 1 and bwep != 0
 {
 	instance_create(x,y,WepSwap)
 	scrSwapWeps()
+	if ultra_got[68] && altUltra {
+		snd_play(sndMorphStart);
+		instance_create(UberCont.mouse__x,UberCont.mouse__y,Morph);
+	}
 	if ultra_got[27]{
 		if altUltra
 		{
@@ -857,13 +861,13 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 		}
 		if ultra_got[21]//YV ULTRA A
 		{
-			reload -=0.41;
+			reload -=0.4;
 		}
 		if ultra_got[23] && altUltra
 		{
 			if scrMeleeWeapons(wep)
 			{
-				reload -=0.43;
+				reload -=0.44;
 			}
 		}
 		//Weaponsmith one with the gun fire rate
@@ -1854,6 +1858,15 @@ if (RogueHeat==true)
 
 /* */
 ///Lets try aggro
+if loops > 0
+	with enemy {
+		if super {
+			if alarm[1] > 3
+				alarm[1] -= 2;
+			my_health = min(maxhealth,my_health + 0.1);
+			speed *= 1.15;
+		}
+	}
 if crown == 27//Crown of disco
 {
 	with enemy
@@ -1866,9 +1879,9 @@ else if crown == 10 //Crown of difficulty
 {
 	with enemy
 	{
-		if alarm[1] > 2 && alarm[1] < 15
-			alarm[1] -= 1;
-		speed *= 1.1;
+		if alarm[1] > 3 && alarm[1] < 30
+			alarm[1] -= 2;
+		speed *= 1.15;
 	}
 }
 wave += 0.4;//Looping animations

@@ -78,7 +78,6 @@ if instance_exists(Player)
 	if Player.crown==10//crown of difficulty
 	{
 		vanDelay*=0.7;
-		verticalVans = true;
 	}
 	if Player.ultra_got[82]
 	{

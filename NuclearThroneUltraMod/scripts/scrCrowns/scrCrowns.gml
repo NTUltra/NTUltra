@@ -51,12 +51,16 @@ function scrCrowns() {
 	crown_tips[9] = "you really like these weapons"
 
 	crown_name[10] = "[CROWN OF DIFFICULTY]"
-	crown_text[10] = "THE DIFFICULTY & WEAPON TIER INCREASES#MORE EACH AREA"
+	crown_text[10] = "WEAPON DROP TIER INCREASES#MORE EACH AREA#ENEMIES HAVE MORE HEALTH#AND ARE MORE AGGRESSIVE"
 	crown_used[10] = 0
 	crown_tips[10] = "acceleration"
 
 	crown_name[11] = "[CROWN OF REINCARNATION]"
 	crown_text[11] = "DIE AND BE REBORN"
+	if instance_exists(Player) && (Player.level > 8 || Player.boostLevel > 8)
+	{
+		crown_text[11] = "DIE AND BE REBORN#UNLOCK ALTERNATIVE ULTRA MUTATIONS"
+	}
 	crown_used[11] = 0
 	crown_tips[11] = "new born"
 
@@ -141,7 +145,7 @@ function scrCrowns() {
 	crown_name[25] = "[CROWN OF FREEDOM]"
 	crown_text[25] = "WALLS DON'T EXIST"
 	crown_used[25] = 0
-	crown_tips[25] = "freedom!"
+	crown_tips[25] = "remove all barriers"
 	
 	//Secret crown two energy weapons
 	crown_name[26] = "[CROWN OF ENERGY]"

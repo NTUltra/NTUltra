@@ -502,6 +502,7 @@ else if !reincarnate
 			scrSaveEncrypted();
 			useSeed = false;
 			opt_gamemode = 0;
+			
 			goToLeaderboard = true;
 			runScore[0] = other.kills;
 			runScore[1] = "playerName";
@@ -516,13 +517,14 @@ else if !reincarnate
 			runScore[10] = other.cwep;
 			runScore[11] = other.crown;
 			runScore[12] = getUltraMutation();
+			
 			canRestart = true;
 		}
 		if (opt_gamemode == 26)
 		{
 			scrSaveEncrypted();
 			useSeed = false;
-			goToLeaderboard = true;
+			//goToLeaderboard = true;
 			opt_gamemode = 0;
 		}
 		

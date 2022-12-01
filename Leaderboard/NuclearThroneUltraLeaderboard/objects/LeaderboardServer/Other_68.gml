@@ -63,7 +63,7 @@ if (type == network_type_data) {
 					i++;
 					//split on _ then split on | and take second entry thats the kills
 				}
-				
+				totalEntries = i;
 				//And add the new one
 				ds_list_add(scoreSorter,newScore[0]);
 				ds_list_add(scoreList,scoreString);
@@ -97,9 +97,12 @@ if (type == network_type_data) {
 			ini_close();
 			
 			show_debug_message("leaderboard send: " + scoreLeaderboard);
-			var sendBuffer = buffer_create(2,buffer_grow,1);
+			var sendBuffer = buffer_create(7,buffer_grow,1);
 			buffer_write(sendBuffer,buffer_u8,NETDATA.LEADERBOARD);
 			buffer_write(sendBuffer,buffer_string,scoreLeaderboard);
+			buffer_write(sendBuffer,buffer_string,string_replace(dailyScoreSaveFileString,"ntultra",""));
+			buffer_write(sendBuffer,buffer_u16,0);//Page
+			buffer_write(sendBuffer,buffer_u16,floor(totalEntries/10));//Total pages
 			network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
 			buffer_delete(sendBuffer);
 			scoreLeaderboard = string_replace_all(scoreLeaderboard,"|","\n");
@@ -107,22 +110,34 @@ if (type == network_type_data) {
 		break;
 		case NETDATA.LEADERBOARD:
 			//Sending leaderboard
+			show_debug_message("leaderboard request ");
 			var socket = buffer_read(buffer, buffer_u16);
-			var page = buffer_read(buffer, buffer_u8)*10;//Display per 10?
-			var sendBuffer = buffer_create(2,buffer_grow,1);
+			var page = buffer_read(buffer, buffer_u16);//Display per 10?
+			show_debug_message("page " + string(page));
+			var sendBuffer = buffer_create(4,buffer_grow,1);
 			buffer_write(sendBuffer,buffer_u8,NETDATA.LEADERBOARD);
 			ini_open(dailyScoreSaveFileString);
-			var i = page;
+			var i = page*10;
+			var j = 0;
 			var scoreLeaderboard = "";
-			while(ini_key_exists("scorelb",i))
+			while(ini_key_exists("scorelb",i) && j < 10)
 			{
 				scoreLeaderboard += ini_read_string("scorelb",i,"")+"|";
 				i++;
+				j++;
 			}
+			show_debug_message("amount of scores to show " + string(j));
 			ini_close();
+			var totalPages = floor(totalEntries/10);
+			show_debug_message("totalEntries " + string(totalEntries));
+			show_debug_message("totalPages " + string(totalPages));
 			buffer_write(sendBuffer,buffer_string,scoreLeaderboard);
+			buffer_write(sendBuffer,buffer_string,string_replace(dailyScoreSaveFileString,"ntultra",""));
+			buffer_write(sendBuffer,buffer_u16,page);
+			buffer_write(sendBuffer,buffer_u16,totalPages);
 			network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
 			buffer_delete(sendBuffer);
+			scoreLeaderboard = string_replace_all(scoreLeaderboard,"|","\n");
 			leaderboardString = scoreLeaderboard;
 		break;
 	}

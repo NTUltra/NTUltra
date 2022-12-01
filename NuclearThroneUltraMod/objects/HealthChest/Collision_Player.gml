@@ -16,7 +16,7 @@ if !instance_exists(GenCont)
 	if Player.skill_got[9] = 1
 		num = 8
 	
-	var  mHpI = 2;
+	var  mHpI = 1;
 	with other {
 		//OVERHEAL
 		if my_health + other.num > maxhealth
@@ -30,12 +30,6 @@ if !instance_exists(GenCont)
 		{
 			my_health += other.num;	
 		}
-		/*
-		if my_health + other.num <= maxhealth
-			my_health += other.num
-		else// if other.crown != 2
-			my_health = max(my_health,maxhealth);
-		*/
 		if race==9 || race=12//Chicken maxhealth regain
 		{
 			var targetHealth = 8;

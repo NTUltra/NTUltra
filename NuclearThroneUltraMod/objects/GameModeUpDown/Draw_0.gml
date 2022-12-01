@@ -38,6 +38,20 @@ else{
 		instance_destroy()
 }
 
+//draw_sprite(sprite_index,/*UberCont.opt_gamemode*/1,x,y)
+/*
+if (UberCont.opt_gamemode==27&&gamemodeOrder[gamemodenr]==27)
+{
+	debug("leaderboard");
+	if !instance_exists(GoToLeaderboard)
+		instance_create(x,y+24,GoToLeaderboard);
+}
+else{
+	with GoToLeaderboard
+		instance_destroy()
+}
+*/
+
 if (UberCont.opt_gamemode==19&&gamemodeOrder[gamemodenr]==19)
 {
 if !instance_exists(DiscDamageUpDown)

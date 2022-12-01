@@ -10,7 +10,7 @@ if (gamemodeOrder[gamemodenr] == 26)
 	with UberCont
 	{
 		seed = todaysSeed;
-		seedText = seed;
+		//seedText = seed;
 		useSeed = true;
 		canRestart = false;
 	}
@@ -25,17 +25,21 @@ else if (gamemodeOrder[gamemodenr] == 27)
 		dailyDone = UberCont.encrypted_data.daily_score_dates[array_length(UberCont.encrypted_data.daily_score_dates)-1] == UberCont.today
 	}
 	if !dailyDone
-	with UberCont
-	{
-		seed = todaysSeed;
-		seedText = seed;
-		useSeed = true;
-		canRestart = false;
-	}
+		with UberCont
+		{
+			seed = todaysSeed;
+			seedText = seed;
+			useSeed = true;
+			canRestart = false;
+		}
 }
 else
 {
 	dailyDone = false;
-	UberCont.useSeed = false;
-	UberCont.canRestart = true;	
+	with UberCont
+	{
+		useSeed = false;
+		canRestart = true;
+		seedText = "";
+	}
 }

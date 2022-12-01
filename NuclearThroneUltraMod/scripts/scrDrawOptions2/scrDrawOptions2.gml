@@ -38,12 +38,12 @@ function scrDrawOptions2() {
 	{
 		canUnlock = "-DISABLED-";
 	}
-	txt0 = "#OPTIONS2#CLICK WITH LMB ON SQUARE THEN PRESS KEY####################UNLOCKABLES ARE#"+canUnlock+"#IN THIS GAMEMODE##PRESS [RIGHT CLICK] TO RETURN";
+	txt0 = "#GAME#CLICK WITH LMB ON SQUARE THEN PRESS KEY####################UNLOCKABLES ARE#"+canUnlock+"#IN THIS GAMEMODE##PRESS [RIGHT CLICK] TO RETURN";
 	txt1 = "####CUSTOMIZE CONTROLS#UP#DOWN#LEFT#RIGHT#SWAP WEAPONS#PICKUP##GAMEMODE########"
 	txt2 = "#####"+up+"#"+down+"#"+left
 	+"#"+right+"#"+swap+"#"+pickup+"####"+string(gamemodename)+"######";
 
-	stxt0 = "#OPTIONS2######################" + canUnlock;
+	stxt0 = "#GAME######################" + canUnlock;
 	stxt1 = "####CUSTOMIZE CONTROLS##### ####### #### ####"
 	stxt2 = txt2
 

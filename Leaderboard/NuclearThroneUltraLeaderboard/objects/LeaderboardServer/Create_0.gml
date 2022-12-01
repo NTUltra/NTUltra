@@ -1,5 +1,5 @@
 /// @description Init
-serverPort = 0;
+serverPort = 1414;
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 network_set_config(network_config_use_non_blocking_socket, 1);
 if (hostSocket < 0) {
@@ -19,6 +19,7 @@ while(ini_key_exists("scorelb",i))
 	i++;
 }
 ini_close();
+totalEntries = i;
 leaderboardString = scoreLeaderboard;
 leaderboardString = string_replace_all(leaderboardString,"|","\n");
 //Data types
@@ -28,3 +29,4 @@ enum NETDATA {
 	LEADERBOARD
 }
 draw_set_font(fntM);
+alarm[1] = 120;

@@ -1,7 +1,11 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "option",
   "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -24,8 +28,4 @@
     "name": "Menu",
     "path": "folders/Objects/Menu.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "option",
-  "tags": [],
-  "resourceType": "GMObject",
 }

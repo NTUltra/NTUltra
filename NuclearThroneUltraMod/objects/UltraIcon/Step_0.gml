@@ -8,7 +8,7 @@ Player.skillpoints -= 1
 
 if skill = 0
 {
-	if scrCheckGold(Player.wep_name[Player.wep]) || scrCheckGold(Player.wep_name[Player.bwep])
+	if scrCheckGold(Player.wep_name[Player.wep]) || scrCheckGold(Player.wep_name[Player.bwep]) || Player.unlockAlternativeUltras
 	{
 		with Player
 		{
@@ -33,7 +33,7 @@ if skill = 0
 }
 else if skill == 9 // Strange style
 {
-	if scrHasEyesMutations()
+	if scrHasEyesMutations() || Player.unlockAlternativeUltras
 	{
 		with Player {
 			altUltra = true;
@@ -64,7 +64,7 @@ else if skill == 9 // Strange style
 		}
 	}
 }
-else if skill == 13 && Player.maxhealth == 1
+else if skill == 13 && (Player.maxhealth == 1 || Player.unlockAlternativeUltras)
 {
 	with Player {
 		altUltra = true;
@@ -74,7 +74,7 @@ else if skill == 13 && Player.maxhealth == 1
 		instance_create(x,y,DeathStare);
 	}
 }
-else if skill == 20 && Player.crown == 23 && Player.skill_got[2]
+else if skill == 20 && (Player.crown == 23 && Player.skill_got[2] || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -85,7 +85,7 @@ else if skill == 20 && Player.crown == 23 && Player.skill_got[2]
 		maxSpeed += 6;
 	}
 }
-else if skill == 43 && Player.skill_got[19] && Player.skill_got[17]
+else if skill == 43 && (Player.skill_got[19] && Player.skill_got[17] || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -95,7 +95,7 @@ else if skill == 43 && Player.skill_got[19] && Player.skill_got[17]
 		ultra_tips[43] = "proper eyesight"
 	}
 }
-else if skill == 47 && !Player.skill_got[1] && Player.skill_got[3]
+else if skill == 47 && (!Player.skill_got[1] && Player.skill_got[3] || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -105,7 +105,7 @@ else if skill == 47 && !Player.skill_got[1] && Player.skill_got[3]
 		ultra_tips[47] = "pay up"
 	}
 }
-else if skill == 51 && !Player.skill_got[2] && !Player.skill_got[8]
+else if skill == 51 && (!Player.skill_got[2] && !Player.skill_got[8] || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -116,7 +116,7 @@ else if skill == 51 && !Player.skill_got[2] && !Player.skill_got[8]
 		ultra_tips[51] = "no one expects a sheep to carry a gun"
 	}
 }
-else if skill == 55 && (Player.skill_got[13] || Player.skill_got[34] || Player.skill_got[20]) && !Player.skill_got[5]
+else if skill == 55 && ((Player.skill_got[13] || Player.skill_got[34] || Player.skill_got[20]) && !Player.skill_got[5] || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -126,7 +126,7 @@ else if skill == 55 && (Player.skill_got[13] || Player.skill_got[34] || Player.s
 		ultra_tips[55] = "how does it do that"
 	}
 }
-else if skill == 59 && (!Player.skill_got[17] && (Player.crown == 4 || Player.crown == 28))
+else if skill == 59 && (!Player.skill_got[17] && (Player.crown == 4 || Player.crown == 28) || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -143,7 +143,7 @@ else if skill == 82
 		alarm[3]=60;	
 	}
 }
-else if skill == 92 && Player.wep_type[Player.wep] == 3 && Player.wep_type[Player.bwep] == 3
+else if skill == 92 &&( Player.wep_type[Player.wep] == 3 && Player.wep_type[Player.bwep] == 3 || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -153,7 +153,7 @@ else if skill == 92 && Player.wep_type[Player.wep] == 3 && Player.wep_type[Playe
 		ultra_tips[92] = "porkupine"
 	}
 }
-else if skill == 96 && (Player.crown == 11 || Player.crown == 25 || Player.skill_got[2]) && !Player.skill_got[17]
+else if skill == 96 && ((Player.crown == 11 || Player.crown == 25 || Player.skill_got[2]) && !Player.skill_got[17] || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -167,14 +167,14 @@ else if skill == 106//Hands secret ultras
 {
 	with Player
 	{
-		if bskin == 1
+		if bskin == 1 || (Player.unlockAlternativeUltras && other.randomHand == 1 && !bskin == 1)
 		{
 			//Secret B skin ultra
 			ultra_name[106] = "HOT HANDS!"
 			ultra_text[106] = "FIERY HANDS#MORE FIRE DAMAGE#HOMING FIRE#EVEN MORE FIRE DAMAGE#WHILE IN INVERTED AREAS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
 			ultra_tips[106] = "secret b-skin ultra mutation"
 		}
-		else if bskin == 2
+		else if bskin == 2 || (Player.unlockAlternativeUltras && other.randomHand == 2 && !bskin == 2)
 		{
 			//Secret C skin ultra
 			ultra_name[106] = "BOOM HANDS!"
@@ -191,13 +191,13 @@ else if skill == 4
 {
 	with Player
 	{
-		if bskin == 2
+		if bskin == 2 || Player.unlockAlternativeUltras
 			scrWeaponAdjustCost(0.85);
 		else
 			scrWeaponAdjustCost(0.95);
 	}	
 }
-else if skill == 6 && (Player.curse || Player.bcurse)
+else if skill == 6 && (Player.curse || Player.bcurse || Player.unlockAlternativeUltras)
 {
 	with Player {
 		altUltra = true;
@@ -206,7 +206,7 @@ else if skill == 6 && (Player.curse || Player.bcurse)
 		ultra_tips[6] = "cursed crystal"
 	}
 }
-else if skill == 23 && Player.race == 6 && scrMeleeWeapons(Player.wep) && scrMeleeWeapons(Player.bwep)
+else if skill == 23 && (Player.race == 6 && scrMeleeWeapons(Player.wep) && scrMeleeWeapons(Player.bwep) || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -230,7 +230,7 @@ else if skill == 23 && Player.race == 6 && scrMeleeWeapons(Player.wep) && scrMel
 		}
 	}
 }
-else if skill == 27 && (Player.wep == Player.bwep)
+else if skill == 27 && (Player.wep == Player.bwep || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -240,7 +240,7 @@ else if skill == 27 && (Player.wep == Player.bwep)
 		ultra_tips[27] = "GET KNOCKED OUT"
 	}
 }
-else if skill == 29 && Player.spr_idle == sprMutant8DIdle
+else if skill == 29 && (Player.spr_idle == sprMutant8DIdle || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -254,7 +254,7 @@ else if skill == 29 && Player.spr_idle == sprMutant8DIdle
 		}
 	}
 }
-else if skill == 35 && Player.crown == 12//CHICKEN REVERSE TIME
+else if skill == 35 && (Player.crown == 12 || Player.unlockAlternativeUltras)//CHICKEN REVERSE TIME
 {
 	with Player
 	{
@@ -279,7 +279,7 @@ else if skill == 35 && Player.crown == 12//CHICKEN REVERSE TIME
 	}
 }
 else if skill == 39 && (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep]) ||
-(!Player.skill_got[1] && !Player.skill_got[7] && !Player.skill_got[9]&& !Player.skill_got[25]))
+(!Player.skill_got[1] && !Player.skill_got[7] && !Player.skill_got[9]&& !Player.skill_got[25]) || Player.unlockAlternativeUltras)
 {
 	with Player {
 		altUltra = true;
@@ -312,7 +312,7 @@ else if skill == 39 && (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUl
 		}
 	}
 }
-else if skill == 61 && (scrKrakenWeapons(Player.wep) || scrKrakenWeapons(Player.bwep))
+else if skill == 61 && (scrKrakenWeapons(Player.wep) || scrKrakenWeapons(Player.bwep) || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -326,7 +326,7 @@ else if skill == 61 && (scrKrakenWeapons(Player.wep) || scrKrakenWeapons(Player.
 		spr_dead=sprMutant16DDead;
 	}
 }
-else if skill == 72 && ((Player.maxhealth < 8 && UberCont.opt_gamemode != 9) || (UberCont.opt_gamemode == 9 && Player.maxhealth < 8 + UberCont.casualModeHPIncrease))
+else if skill == 72 && ((Player.maxhealth < 8 && UberCont.opt_gamemode != 9) || (UberCont.opt_gamemode == 9 && Player.maxhealth < 8 + UberCont.casualModeHPIncrease) || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -336,7 +336,7 @@ else if skill == 72 && ((Player.maxhealth < 8 && UberCont.opt_gamemode != 9) || 
 		ultra_tips[72] = "right back at ya"
 	}
 }
-else if skill == 77 && Player.skill_got[0]
+else if skill == 77 && (Player.skill_got[0] || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -366,7 +366,7 @@ else if skill = 85//ROGUE SUPER PORTAL STRIKE
 		Player.rogueammo=8;
 	}
 }
-else if skill == 87 && scrHasAnEmptyLife()
+else if skill == 87 && (scrHasAnEmptyLife() || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -400,7 +400,7 @@ else if skill = 97 // MUTATION SMITH WEAPON MUTATOR BETTER WEAPON SPECIFIC MUTAT
 
 	with Player
 	{
-		if !skill_got[13] && !skill_got[16] && !skill_got[17] && !skill_got[15] && !skill_got[14]
+		if !skill_got[13] && !skill_got[16] && !skill_got[17] && !skill_got[15] && !skill_got[14] || unlockAlternativeUltras
 		{
 			//Secret Beekeeper ultra
 			altUltra = true;
@@ -430,7 +430,7 @@ else if skill = 97 // MUTATION SMITH WEAPON MUTATOR BETTER WEAPON SPECIFIC MUTAT
 	}
 
 }
-else if skill == 104 && scrHasDirector()
+else if skill == 104 && (scrHasDirector() || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -490,7 +490,7 @@ maxarmour+=2;
 }
 else if skill==66
 {
-	if Player.bwep == 0
+	if Player.bwep == 0 || Player.unlockAlternativeUltras
 	{
 		with Player
 		{
@@ -504,9 +504,21 @@ else if skill==66
 	{
 		//Gunsmith armoursmith
 	    with Player {
-			maxarmour=2;
+			maxarmour=3;
 			armour=2;
 	    }
+	}
+}
+else if skill == 68
+{
+	with Player {
+		if (unlockAlternativeUltras || scrHasMorphMod() || scrHasMorphWeapon())
+		{
+			altUltra = true;
+			ultra_name[68] = "ENGINUITY"
+			ultra_text[68] = "YOUR ACTIVE BECOMES:#CHANGE YOUR WEAPON#INTO ONE OF THE SAME TIER#YOU CAN GO THROUGH#ALL AVAILABLE WEAPONS##WHENEVER YOU CHANGE OR SWAP WEAPONS#SPAWN MORPH ON YOUR CROSSHAIR"
+			ultra_tips[68] = "moldable weapons"
+		}
 	}
 }
 else if skill==78//business hog more options armour
@@ -581,7 +593,7 @@ instance_destroy();
 }
 else if skill == 76//skelly ultra D
 {
-    if Player.ultimategamble==false//skeleton lives
+    if Player.ultimategamble==false && !Player.unlockAlternativeUltras//skeleton lives
     {
 	    with Player
 	    {

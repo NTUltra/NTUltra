@@ -14,7 +14,7 @@ if ( !((spawnarea == 9 || spawnarea == 118) && subarea == 3) && !((spawnarea == 
 	if tots > 1
 		scrSpawnMoreBosses(GoldTotem,tots);
 }
-if Player.area = 3 and Player.subarea = 3
+if (Player.area = 3 and Player.subarea = 3)
 {
 	var n = instance_furthest(Player.x,Player.y,Floor)
 	instance_create(n.x+16, n.y+16,BecomeScrapBoss);

@@ -16,6 +16,7 @@ snd_hurt = sndHitFlesh
 snd_dead = sndFrogExplode
 snd_melee = sndGoldScorpionMelee;
 
+lowHealthReached = false;
 //behavior
 alarm[1] = 30;
 rotationSpeed = choose(1.8,-1.8);
@@ -41,6 +42,7 @@ image_xscale = 1;
 actTime = 14;
 scrTarget();
 angle = random(360);
+myBat = SquareBat;
 loops = GetPlayerLoops();
 if loops > 2
 {

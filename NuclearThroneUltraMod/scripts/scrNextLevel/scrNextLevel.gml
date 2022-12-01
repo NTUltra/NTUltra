@@ -347,8 +347,8 @@ function scrNextLevel() {
 	    if area=101 && subarea=3
 	    {
 			//Oasis to vulcano
-		    area=7;
-		    subarea=1;
+		    area=7
+		    subarea=1
 		    oasis=false
 			inverted=false;
 	    exit;
@@ -579,5 +579,7 @@ function scrNextLevel() {
 	{
 		hard -= 0.5;
 	}
+	if crown == 10
+		hard ++;
 	hard = max(0,hard);
 }

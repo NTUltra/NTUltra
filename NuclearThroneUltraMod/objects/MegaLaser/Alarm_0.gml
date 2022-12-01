@@ -61,12 +61,16 @@ if(instance_exists(Player)){
 			audio_stop_sound(sndMegaLaser);
 			snd_play(sndHeavyCrossbow);
 			instance_destroy(id,false);
+			UberCont.ultramodSwap = false;
 			with instance_create(x,y,HeavyBolt)
-			{motion_add(other.image_angle,24)
-			image_angle = direction
-			scrCopyWeaponMod(other);
-			team = other.team
-			alarm[11] = 0;}
+			{
+				motion_add(other.image_angle,20)
+				image_angle = direction
+				scrCopyWeaponMod(other);
+				team = other.team
+				alarm[11] = 0;
+			}
+			UberCont.ultramodSwap = true;
 		}
 	}
 	isog = false;

@@ -130,12 +130,12 @@ function scrGameModes() {
 	gamemode_tip[25] = "SURVIVAL ARENA!";
 	
 	gamemode[26] = "DAILY RACE";
-	gamemode_unlock[26] = "i dunno";
+	gamemode_unlock[26] = "";
 	gamemode_have[26] = 1;
 	gamemode_tip[26] = "DAILY RACE";
 	
 	gamemode[27] = "DAILY SCORE";
-	gamemode_unlock[27] = "i dunno";
+	gamemode_unlock[27] = "";
 	gamemode_have[27] = 1;
 	gamemode_tip[27] = "DAILY SCORE";
 	

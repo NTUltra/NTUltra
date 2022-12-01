@@ -32,6 +32,22 @@ if instance_exists(Player) {
 	{
 		rotationSpeed *= -1;	
 	}
+	if !lowHealthReached && my_health < maxhealth * 0.4
+	{
+		lowHealthReached = true;
+		snd_play(sndFrogExplode);
+		var am = 3+min(loops,4);
+		var angStep = 360/am;
+		var ang = random(360);
+		repeat(am)
+		{
+			with instance_create(x,y,myBat)
+			{
+				motion_add(ang,4);	
+			}
+			ang += angStep;
+		}
+	}
 }
 else
 {

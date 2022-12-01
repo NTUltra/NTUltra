@@ -1,2 +1,5 @@
 /// @description Scroll
-y -= 10;
+if keyboard_check(vk_shift)
+	x += 20;
+else
+	y -= 10;

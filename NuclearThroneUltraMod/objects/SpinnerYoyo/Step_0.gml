@@ -40,8 +40,8 @@ if instance_exists(Player) and instance_exists(enemy)
 	{
 		if point_distance(x,y,dir.x,dir.y) < home
 		{
-			x += lengthdir_x(4,point_direction(x,y,dir.x,dir.y))
-			y += lengthdir_y(4,point_direction(x,y,dir.x,dir.y))
+			x += lengthdir_x(3,point_direction(x,y,dir.x,dir.y))
+			y += lengthdir_y(3,point_direction(x,y,dir.x,dir.y))
 			oDir -= (angle_difference(oDir,point_direction(tx,ty,dir.x,dir.y))*0.6);
 			length -= speed*0.6;
 		}
@@ -76,5 +76,5 @@ image_angle+=20;
 if instance_exists(Player) and instance_exists(enemy)
 {dir = instance_nearest(x,y,enemy)
 if speed > 0 and Player.skill_got[21] = 1 and point_distance(x,y,dir.x,dir.y) < 48 +Player.betterboltmarrow
-{x += lengthdir_x(4,point_direction(x,y,dir.x,dir.y))
-y += lengthdir_y(4,point_direction(x,y,dir.x,dir.y))}}
+{x += lengthdir_x(3,point_direction(x,y,dir.x,dir.y))
+y += lengthdir_y(3,point_direction(x,y,dir.x,dir.y))}}

@@ -193,7 +193,22 @@ room_speed=35;
 			}
 		}
 	    BackCont.enemiesInStartLevel=instance_number(enemy);
-    
+		var buffs = 0;
+		
+		if loops > 0
+		{
+			buffs = min(3 + (loops*2), 20);
+		with enemy {
+			if buffs > 0 && my_health > 3 && my_health <= 110
+			{
+				buffs --;
+				super = true;
+				maxhealth = my_health;
+				maxhealth *= 2;
+				my_health = maxhealth;
+			}	
+		}
+		}
 	    if UberCont.opt_gamemode == 34 && area == 1//HARD MODE
 		{
 			var t = 30;

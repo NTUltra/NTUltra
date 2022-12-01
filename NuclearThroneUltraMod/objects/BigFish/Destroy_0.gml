@@ -47,3 +47,23 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 
 }
 
+if !instance_exists(WantBoss) && instance_number(BigFish) == 1
+with Player
+{
+	if my_health >= round(maxhealth*0.5)
+	{
+		with DragonSkull
+		{
+			snd_play(sndDragonEmerge,0,false,true,2,false,false,0.7,false,-1,0.8);
+			event_user(0);	
+		}
+	}
+	else
+	{
+		with DragonSkull
+		{
+			alarm[1] = 0;
+			closed = true;
+		}
+	}
+}

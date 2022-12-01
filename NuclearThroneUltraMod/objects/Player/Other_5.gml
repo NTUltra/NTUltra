@@ -179,9 +179,6 @@ if race == 14//PANDA
     }
 }
 
-if crown==10
-hard+=0.5;
-
 
 if UberCont.opt_gamemode == 10//random areas
 {
@@ -394,16 +391,19 @@ if looping && area != 104
 			{
 				mytext="UNLOCKED SUPER SECRET#FOR LOOPING WITH TWO INVERSION MAGNETS#HAVE A BURGER!";
 			}
-			wep_name[375] = "HAMBURGER MAGNET"//Probably the worst weapon in the game
-			wep_type[375] = 0
-			wep_auto[375] = 0
-			wep_load[375] = 10
-			wep_cost[375] = 1
-			wep_sprt[375] = sprHamburgerMagnet
-			wep_area[375] = -1
-			wep_text[375] = "100% beef"
-			wep_swap[375] = sndSelectUp
-			wep_rad[375] = 0;
+			with Player
+			{
+				wep_name[375] = "HAMBURGER MAGNET"//Probably the worst weapon in the game
+				wep_type[375] = 0
+				wep_auto[375] = 0
+				wep_load[375] = 10
+				wep_cost[375] = 1
+				wep_sprt[375] = sprHamburgerMagnet
+				wep_area[375] = -1
+				wep_text[375] = "100% beef"
+				wep_swap[375] = sndSelectUp
+				wep_rad[375] = 0;
+			}
 		}
 	}
 	if ((wep == 231 || bwep == 231 || cwep == 231) && isValidGamemodeToUnlock(0) && race != 1 && loops > 0)

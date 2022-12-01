@@ -748,7 +748,24 @@ function scrPowers() {
 
 	if race==17//weaponsmith
 	{
-	    if bwep!=0
+		if (ultra_got[68] && altUltra)
+		{
+			//Weapon smith enginuity ultra
+			snd_play(sndMorphStart);
+			instance_create(UberCont.mouse__x,UberCont.mouse__y,Morph);
+			var wantTier = wep_area[wep];
+			wep ++;
+			if wep > maxwep
+				wep = 1;
+			while (wep_area[wep] != wantTier)
+			{
+				wep ++;
+				if wep > maxwep
+					wep = 1;
+			}
+			scrWeaponHold();
+		}
+	    else if bwep!=0
 		{
 			instance_create(x,y,HoldToSmith);
 		}
@@ -1433,7 +1450,25 @@ function scrPowers() {
 			image_angle = direction
 			}
 			instance_create(x,y,MeltSplat)
-			if Player.skill_got[5] = 1 || size>1
+			if Player.skill_got[5] = 1
+			{
+				ang = random(360)
+				if size > 1
+				{
+					instance_create(x,y,MeatExplosion);
+					instance_create(x+lengthdir_x(44,ang),y+lengthdir_y(24,ang),MeatExplosion)
+					instance_create(x+lengthdir_x(44,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
+					instance_create(x+lengthdir_x(44,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
+				}
+				else
+				{
+					instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
+					instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
+					instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)	
+				}
+				
+			}
+			else if size>1
 			{
 				ang = random(360)
 				instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
@@ -1448,7 +1483,7 @@ function scrPowers() {
 		
 		if ultra_got[13] && !altUltra {
 			with enemy {
-			if maxhealth<=5 and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+			if maxhealth<=6 and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 			{//melting ultra a brain capacity
 			MorphMe=true;
 			didKill = true;
@@ -1459,16 +1494,34 @@ function scrPowers() {
 			image_angle = direction
 			}
 			instance_create(x,y,MeltSplat)//Scorchmark
-			if Player.skill_got[5] = 1
-			{
-				ang = random(360)
-				instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
-				instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
-				instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
-			}
-			else
-				instance_create(x,y,MeatExplosion)
-			}
+				if Player.skill_got[5] = 1
+				{
+					ang = random(360)
+					if size > 1
+					{
+						instance_create(x,y,MeatExplosion);
+						instance_create(x+lengthdir_x(44,ang),y+lengthdir_y(24,ang),MeatExplosion)
+						instance_create(x+lengthdir_x(44,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
+						instance_create(x+lengthdir_x(44,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
+					}
+					else
+					{
+						instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
+						instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
+						instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)	
+					}
+				
+				}
+				else if size>1
+				{
+					ang = random(360)
+					instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
+					instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
+					instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
+				}
+				else
+					instance_create(x,y,MeatExplosion)
+				}
 			} 
 		}
 		

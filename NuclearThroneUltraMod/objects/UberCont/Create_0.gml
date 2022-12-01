@@ -14,7 +14,7 @@ if public == 0
 //DEBUG STUFF
 scrn = 0
 scrn_take = 0
-
+optY = 24;
 everything=69;
 unlocked=69;
 

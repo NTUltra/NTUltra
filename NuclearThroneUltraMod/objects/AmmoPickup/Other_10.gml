@@ -10,9 +10,13 @@ with Player
 	var sa = ammo[st];//secondary ammo
 	var pam = typ_amax[pt];//primary max ammo
 	var sam = typ_amax[st]//secondary max ammo
+	if pt == 0
+		pa = pam;
+	if st == 0
+		pa = pam;
 }
 var ran = random(6);
-if pa = pam or sa = sam && ran < 3
+if (pa == pam or sa == sam && ran < 3)
 {
 	if ran < 1
 	{

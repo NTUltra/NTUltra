@@ -34,6 +34,11 @@ if (type == network_type_data) {
 				network_send_packet(serverSocket, sendBuffer, buffer_get_size(sendBuffer));
 				buffer_delete(sendBuffer);
 			}
+			else
+			{
+				//Just get leaderboard
+				event_user(0);
+			}
 			UberCont.runScore = [];
 		break;
 		case NETDATA.SCORE:
@@ -42,34 +47,38 @@ if (type == network_type_data) {
 			debug("leaderboard received!");
 			//Receiving leaderboard
 			var receivedLeaderboard = buffer_read(buffer,buffer_string);
+			var leaderboardType = buffer_read(buffer,buffer_string);
+			if string_count("dailyscore",leaderboardType) > 0
+			{
+				leaderboardName = "DAILY SCORE "+string_replace(leaderboardType,"dailyscore","");
+			} else if string_count("dailyrace",leaderboardType) > 0
+			{
+				leaderboardName = "DAILY RACE "+string_replace(leaderboardType,"dailyrace","");
+			}
+			leaderboardName = string_replace(leaderboardName,".sav","");
+			page = buffer_read(buffer,buffer_u16);
+			totalPages = buffer_read(buffer,buffer_u16);
+			debug("totalPages ", totalPages);
+			debug(leaderboardType);
 			debug(receivedLeaderboard);
 			totalScoreLeaderboardEntries = string_count("|",receivedLeaderboard);
 			//leaderboard = string_replace(receivedLeaderboard,"_","\n");
 			leaderboard = [];
 			var startIndex = 1;
 			var j = 0;
-			repeat(clamp(totalScoreLeaderboardEntries-(page*10),1,10))
+			repeat(clamp(totalScoreLeaderboardEntries,1,10))
 			{
 				var scoreEntry = string_copy(receivedLeaderboard,startIndex,string_pos_ext("|",receivedLeaderboard,startIndex)-startIndex);
-				debug("check: ", scoreEntry);
 				var scoreEntryList = [];
 				var i = 0;
 				var entryIndex = 1;
 				repeat(13)//12 entries
 				{
-					/*
-					while string_pos_ext(" ",scoreEntry,startIndex)-startIndex < 1
-					{
-						startIndex = string_pos_ext(" ",scoreEntry,startIndex);
-						startIndex++;
-					}*/
 					scoreEntryList[i] = string_copy(scoreEntry,entryIndex, string_pos_ext(" ",scoreEntry,entryIndex)-entryIndex);
-					debug("-"+scoreEntryList[i]+"-");
 					i++;
 					entryIndex = string_pos_ext(" ",scoreEntry,entryIndex);
 					entryIndex++;
 				}
-				debug("row end");
 				startIndex = string_pos_ext("|",receivedLeaderboard,startIndex);
 				startIndex++;
 				leaderboard[j] = scoreEntryList;

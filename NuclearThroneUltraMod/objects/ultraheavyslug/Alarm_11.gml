@@ -1,10 +1,9 @@
 /// @description ultramod
 var um = GetPlayerUltramod()
-
+var acc = 1;
 if um == ultramods.bulletShotgun
 {
 	instance_destroy(id,false);
-	var acc = 1;
 	if instance_exists(Player)
 		acc = Player.accuracy;
 	with instance_create(x,y,Bullet4)

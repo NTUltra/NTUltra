@@ -124,6 +124,7 @@ if crown != 25
 //CROWN OF REINCARNATION
 if crown==11 && Player.crownvisits > 0
 {
+	var hasReachedUltra = false;
 	with Player
 	{
 		skeletonlives=0;
@@ -144,6 +145,8 @@ if crown==11 && Player.crownvisits > 0
 		var wc1 = cwepmod1;
 		var wc2 = cwepmod2;
 		var wc3 = cwepmod3;
+		if level > 9
+			hasReachedUltra = true;
 		instance_destroy();
 	}
 	scrUnlockGameMode(25,"FOR GETTING RESURRECTED");
@@ -193,6 +196,7 @@ with Player//Data to keep
 	ammo[5] = typ_amax[5];
 	
 	scrWeaponHold();
+	unlockAlternativeUltras = hasReachedUltra;
 	//event_perform(ev_other,ev_room_end);
 }
 /*with instance_create(x,y,GenCont)

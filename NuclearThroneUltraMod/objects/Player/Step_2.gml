@@ -1,10 +1,10 @@
 /// @description WepPickup
 if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(LevCont)  && !instance_exists(SpiralCont){
 
-	if point_distance(x,y,instance_nearest(x,y,WepPickup).x,instance_nearest(x,y,WepPickup).y)<36
+	targetPickup=instance_nearest(x,y,WepPickup);
+	if targetPickup != noone && point_distance(x,y,targetPickup.x,targetPickup.y)<36 && targetPickup.visible
 	{
 
-	targetPickup=instance_nearest(x,y,WepPickup);
 
 	var isGold = false;
 	//UNLOCK GOLDEN WEAPON
@@ -14,10 +14,10 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 		scrUnlockGoldWeapon(targetPickup.wep);
 	}
 	//first get ammo
-	if targetPickup.ammo > 0 and (wep_type[targetPickup.wep] != 0 || ultra_got[68])
+	if targetPickup.ammo > 0 and (wep_type[targetPickup.wep] != 0 || (ultra_got[68] && !altUltra))
 	{
 		ammoMultiple = 2;
-		if ultra_got[68]
+		if ultra_got[68] && !altUltra
 		{
 			ammoMultiple = 4;
 			if wep_type[targetPickup.wep] == 0
@@ -132,7 +132,7 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 		KeyCont.key_pick[p] = 2;
 	if curse = 0||targetPickup.curse==curse or bwep = 0 || (cwep = 0 && ultra_got[31])//SWITCH OUR MODS DATA ASWELL!
 	{
-		if ultra_got[68] == 1//Weapon smith scrapfinder
+		if ultra_got[68] && !altUltra//Weapon smith scrapfinder
 		{
 			snd_play_2d(choose(sndSpark1,sndSpark2),0.1,true);
 			var angl = random(360);

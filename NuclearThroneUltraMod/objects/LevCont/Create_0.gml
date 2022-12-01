@@ -49,6 +49,12 @@ if dir<12
 		}
 		else if crown == 8 && Player.tookDestiny//Crown of sloth secret
 			crown = 24;
+		else if crown == 11
+		{
+			//Upgrade crown fo reincarnation
+			if Player.level > 9
+				sprite_index = sprCrownOfReincarnationUpgraded;
+		}
 	}
 }
 else

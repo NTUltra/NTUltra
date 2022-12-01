@@ -7,7 +7,7 @@ skill1=1;
 skill2=1;
 skill3=1;
 skill4=1;
-
+randomHand = choose(1,2);
 ultimategamble=0;
 if instance_exists(Player){
 ///more skeleton data things for resetting redemption Ultra A

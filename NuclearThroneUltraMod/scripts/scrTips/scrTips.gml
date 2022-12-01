@@ -217,6 +217,7 @@ function scrTips() {
 	"so cool",
 	"thanks gun god",
 	"\u0023verifyvenuz",
+	"8 dollars to verify",
 	"\u0023yv",
 	"guns for fake necklace",
 	"guns that send textses",
