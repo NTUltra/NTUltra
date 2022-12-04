@@ -1,11 +1,8 @@
 ///scrLeaderboardRace();
 // /@description
 ///@param
-function scrLeaderboardRace(entry){
-	var race = real(entry[5]);
-	var bskin = real(entry[6]);
-	var altUltra = bool(entry[7]);
-	var area = real(entry[2]);
+function scrLeaderboardRace(race,bskin,altUltra,area){
+	
 	if bskin = 1
 	{
 	switch (race)

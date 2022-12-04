@@ -3600,7 +3600,7 @@ function scrWeapons() {
 	wep_cost[326] = 4
 	wep_sprt[326] = sprToxicCannon
 	wep_area[326] = 11
-	wep_text[326] = "Ball of gass"
+	wep_text[326] = "Ball of gas"
 	wep_swap[326] = sndSwapExplosive
 	wep_rad[326] = 0;
 
@@ -4623,7 +4623,7 @@ function scrWeapons() {
 	wep_cost[417] = 8
 	wep_sprt[417] = sprSuperToxicCannon
 	wep_area[417] = 14
-	wep_text[417] = "so much gass"
+	wep_text[417] = "so much gas"
 	wep_swap[417] = sndSwapExplosive
 	wep_rad[417] = 0;
 	
@@ -5279,7 +5279,7 @@ function scrWeapons() {
 	wep_name[477] = "HEAVY SLEDGEHAMMER"
 	wep_type[477] = 0
 	wep_auto[477] = 0
-	wep_load[477] = 60
+	wep_load[477] = 55
 	wep_cost[477] = 0
 	wep_sprt[477] = sprHeavySledgeHammer
 	wep_area[477] = 4
@@ -5686,7 +5686,7 @@ function scrWeapons() {
 	wep_name[514] = "HEAVY SHOVEL"
 	wep_type[514] = 0
 	wep_auto[514] = 0
-	wep_load[514] = 42
+	wep_load[514] = 45
 	wep_cost[514] = 0
 	wep_sprt[514] = sprHeavyShovel
 	wep_area[514] = 7//4 originally?

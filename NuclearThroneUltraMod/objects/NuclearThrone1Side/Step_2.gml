@@ -95,12 +95,12 @@ if owner > -1 && instance_exists(owner)
 	y = owner.y + yOffset;
 	if owner.walk > 0
 	{
-		walk += 0.9;
 		if walk > sprite_get_number(sprNothingLeg)
 		{
 			walk = 0;
-			snd_play_2d(sndNothingFootstep);
+			snd_play(sndNothingFootstep);
 		}
+		walk += 0.9;
 	}
 	mask_index = msk;
 }

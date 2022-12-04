@@ -12,6 +12,8 @@ function scrLoadRun(){
 	    crown = 2}
 		with UberCont {
 			lastwishused=false;
+			routeString = "";
+			time_frame = 0;
 			time_microseconds=0;
 			time_seconds=0;
 			time_minutes=0;
@@ -130,6 +132,10 @@ function scrLoadRun(){
 				else
 					Player.usedHogInvestment = true;
 				Player.boostLevel = encryptedRun.boostLevel;
+				if variable_struct_exists(encryptedRun, "routeString")
+					UberCont.routeString = encryptedRun.routeString;
+				if variable_struct_exists(encryptedRun, "time_frame")
+					UberCont.time_frame = encryptedRun.time_frame;
 				UberCont.time_microseconds = encryptedRun.time_microseconds;
 				UberCont.time_seconds = encryptedRun.time_seconds;
 				UberCont.time_minutes = encryptedRun.time_minutes;

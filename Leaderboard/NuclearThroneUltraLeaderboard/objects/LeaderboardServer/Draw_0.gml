@@ -2,13 +2,23 @@
 draw_set_halign(fa_left)
 draw_set_valign(fa_top);
 draw_text(x,y-16,day);
-draw_text(x+64,y,leaderboardString);
+draw_text(x+256,y-16,"SEED:"+string(todaySeed));
+draw_text(x+64,y,scoreLeaderboardString);
 var yy = y;
 var i = 1;
-repeat(string_count("\n",leaderboardString))
+repeat(string_count("\n",scoreLeaderboardString))
 {
 	draw_text(x,yy,string(i)+".");
 	yy += string_height("W");
 	i++;
 }
-
+draw_set_valign(fa_bottom);
+draw_text(x+64,y-32,raceLeaderboardString);
+var yy = y-32;
+var i = 1;
+repeat(string_count("\n",raceLeaderboardString))
+{
+	draw_text(x,yy,string(i)+".");
+	yy -= string_height("W");
+	i++;
+}

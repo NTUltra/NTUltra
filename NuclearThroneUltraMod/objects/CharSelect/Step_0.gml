@@ -126,6 +126,8 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+20 and UberCon
     crown = other.crown}
 	with UberCont {
 		lastwishused=false;
+		routeString = "";
+		time_frame = 0;
 		time_microseconds=0;
 		time_seconds=0;
 		time_minutes=0;
@@ -142,7 +144,8 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+20 and UberCon
 		restarted = true;
 		randomlySelected = ranChar;
 	}
-    room_restart()
+	if !instance_exists(StartDaily)
+		room_restart();
     exit;
     }
     }

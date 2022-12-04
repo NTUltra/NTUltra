@@ -1,4 +1,5 @@
 /// @description BOSSES mods secret areas
+SetSeed();
 scrDecideInvader();
 var spawnarea =  Player.area;
 var subarea =  Player.subarea;

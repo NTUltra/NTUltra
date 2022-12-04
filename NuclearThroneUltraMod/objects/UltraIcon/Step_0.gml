@@ -173,6 +173,13 @@ else if skill == 106//Hands secret ultras
 			ultra_name[106] = "HOT HANDS!"
 			ultra_text[106] = "FIERY HANDS#MORE FIRE DAMAGE#HOMING FIRE#EVEN MORE FIRE DAMAGE#WHILE IN INVERTED AREAS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
 			ultra_tips[106] = "secret b-skin ultra mutation"
+			with Player {
+				spr_idle=sprMutant27BIdle;
+				spr_walk=sprMutant27BWalk;
+				spr_hurt=sprMutant27BHurt;
+				spr_dead=sprMutant27BDead;
+				bskin = 1;
+			}
 		}
 		else if bskin == 2 || (Player.unlockAlternativeUltras && other.randomHand == 2 && !bskin == 2)
 		{
@@ -180,6 +187,13 @@ else if skill == 106//Hands secret ultras
 			ultra_name[106] = "BOOM HANDS!"
 			ultra_text[106] = "EXPLOSIVE HANDS#HAND IS SLOWER#NORMAL HAND SPEED IN INVERTED AREAS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
 			ultra_tips[106] = "secret c-skin ultra mutation"
+			with Player {
+				spr_idle=sprMutant27CIdle;
+				spr_walk=sprMutant27CWalk;
+				spr_hurt=sprMutant27CHurt;
+				spr_dead=sprMutant27CDead;
+				bskin = 2;
+			}
 		}	
 	}
 }
@@ -192,7 +206,14 @@ else if skill == 4
 	with Player
 	{
 		if bskin == 2 || Player.unlockAlternativeUltras
+		{
 			scrWeaponAdjustCost(0.85);
+			bskin = 2;
+			spr_idle=sprMutant1CIdle;
+			spr_walk=sprMutant1CWalk;
+			spr_hurt=sprMutant1CHurt;
+			spr_dead=sprMutant1CDead;
+		}
 		else
 			scrWeaponAdjustCost(0.95);
 	}	
@@ -680,6 +701,10 @@ else if skill == 76//skelly ultra D
     else//pick out ultras
     {
     ultimategamble=2;
+	with Player
+	{
+		altUltra = true;
+	}
     //with instance_create(view_xview+view_wview/2,view_yview+view_hview-24,SkillIcon)
     //skill = choose(//choose(other.skill1,other.skill2,other.skill3,other.skill4);
     //

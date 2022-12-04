@@ -8,9 +8,10 @@ if (type == network_type_non_blocking_connect || type == network_type_connect)
 	//I am host and I detect a new guy
 	var socket = async_load[? "socket"];
 	show_debug_message("socket connected: "+string(socket));
-	var sendBuffer = buffer_create(3,buffer_fixed,1);
+	var sendBuffer = buffer_create(5,buffer_fixed,1);
 	buffer_write(sendBuffer,buffer_u8,NETDATA.CLIENT_ID);
 	buffer_write(sendBuffer,buffer_u16,socket);
+	buffer_write(sendBuffer,buffer_u16,todaySeed);
 	network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
 	buffer_delete(sendBuffer);
 }
@@ -20,41 +21,70 @@ if (type == network_type_data) {
 
 	buffer_seek(buffer, buffer_seek_start, 0);
 	var data = buffer_read(buffer, buffer_u8);
+	var isScore = true;
+	var getScore = true;
 	switch(data)
 	{
 		//Receiving score
-		case NETDATA.SCORE:
+		case NETDATA.RACE:
+			isScore = false;
+			var sendBuffer = buffer_create(7,buffer_grow,1);
 			var socket = buffer_read(buffer, buffer_u16);
-			show_debug_message("send to socket: "+string(socket));
+			buffer_write(sendBuffer,buffer_u8,NETDATA.CONFIRMRACE);
+			network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
+			buffer_delete(sendBuffer);
+		case NETDATA.SCORE:
+			if isScore
+			var socket = buffer_read(buffer, buffer_u16);
 			var newScore = [];
-			newScore[0] = buffer_read(buffer, buffer_u64);//Kills
+			newScore[0] = buffer_read(buffer, buffer_u64);//Kills / frame time
 			newScore[1] = buffer_read(buffer,buffer_string);//Username
-			newScore[2] = buffer_read(buffer,buffer_u8)//area
-			newScore[3] = buffer_read(buffer,buffer_u8)//subarea
-			newScore[4] = buffer_read(buffer,buffer_u8)//loops technically limited to loop 255
-			newScore[5] = buffer_read(buffer,buffer_u8)//race
-			newScore[6] = buffer_read(buffer,buffer_u8)//bskin
-			newScore[7] = buffer_read(buffer,buffer_bool)//altUltra
-			newScore[8] = buffer_read(buffer,buffer_u16);//wep
-			newScore[9] = buffer_read(buffer,buffer_u16);//bwep
-			newScore[10] = buffer_read(buffer,buffer_u16);//cwep
-			newScore[11] = buffer_read(buffer,buffer_u8);//crown
-			newScore[12] = buffer_read(buffer,buffer_u8);//ultra mutation 255 is none
-			show_debug_message("received score: " + string(newScore));
+			if isScore
+			{
+				newScore[2] = buffer_read(buffer,buffer_u8)//area
+				newScore[3] = buffer_read(buffer,buffer_u8)//subarea
+				newScore[4] = buffer_read(buffer,buffer_u8)//loops technically limited to loop 255
+				newScore[5] = buffer_read(buffer,buffer_u8)//race
+				newScore[6] = buffer_read(buffer,buffer_u8)//bskin
+				newScore[7] = buffer_read(buffer,buffer_bool)//altUltra
+				newScore[8] = buffer_read(buffer,buffer_u16);//wep
+				newScore[9] = buffer_read(buffer,buffer_u16);//bwep
+				newScore[10] = buffer_read(buffer,buffer_u16);//cwep
+				newScore[11] = buffer_read(buffer,buffer_u8);//crown
+				newScore[12] = buffer_read(buffer,buffer_u8);//ultra mutation 255 is none
+			}
+			else
+			{
+				newScore[2] = buffer_read(buffer,buffer_string)//Route
+				newScore[3] = buffer_read(buffer,buffer_u8)//race
+				newScore[4] = buffer_read(buffer,buffer_u8)//bskin
+				newScore[5] = buffer_read(buffer,buffer_bool)//altUltra
+				newScore[6] = buffer_read(buffer,buffer_u16);//wep
+				newScore[7] = buffer_read(buffer,buffer_u16);//bwep
+				newScore[8] = buffer_read(buffer,buffer_u16);//cwep
+				newScore[9] = buffer_read(buffer,buffer_u8);//crown
+				newScore[10] = buffer_read(buffer,buffer_u8);//ultra mutation 255 is none
+			}
 			var scoreString = "";
 			for (var i = 0; i < array_length(newScore); i++)
 			{
 				scoreString += string(newScore[i])+" ";
 			}
-			show_debug_message("string: " + scoreString);
 			var scoreSorter = ds_list_create();
 			var scoreList = ds_list_create();
-			ini_open(dailyScoreSaveFileString);
+			var stringChecker = "racelb"
+			if isScore
+			{
+				stringChecker = "scorelb";
+				ini_open(dailyScoreSaveFileString);
+			}
+			else
+				ini_open(dailyRaceSaveFileString);
 				//Get existing
 				var i = 0;
-				while(ini_key_exists("scorelb",i))
+				while(ini_key_exists(stringChecker,i))
 				{
-					var newEntry = ini_read_string("scorelb",i,"");
+					var newEntry = ini_read_string(stringChecker,i,"");
 					show_debug_message(newEntry);
 					//First entry must be kills
 					var killsString = string_copy(newEntry,1,string_pos(" ",newEntry));
@@ -63,7 +93,10 @@ if (type == network_type_data) {
 					i++;
 					//split on _ then split on | and take second entry thats the kills
 				}
-				totalEntries = i;
+				if isScore
+					totalScoreEntries = i;
+				else
+					totalRaceEntries = i;
 				//And add the new one
 				ds_list_add(scoreSorter,newScore[0]);
 				ds_list_add(scoreList,scoreString);
@@ -84,14 +117,17 @@ if (type == network_type_data) {
 						}
 					}
 				}
+				//Reverse the list for races
+				if !isScore
+					ds_list_sort(scoreList,false);
 				//Rewrite!
-				ini_section_delete("scorelb");
+				ini_section_delete(stringChecker);
 				var scoreLeaderboard = "";
 				var al = ds_list_size(scoreList);
 				for (var i = 0; i < al; i++)
 				{
 					scoreLeaderboard += scoreList[| i]+"|";
-					ini_write_string("scorelb",i,scoreList[| i]);
+					ini_write_string(stringChecker,i,scoreList[| i]);
 				}
 				
 			ini_close();
@@ -100,14 +136,26 @@ if (type == network_type_data) {
 			var sendBuffer = buffer_create(7,buffer_grow,1);
 			buffer_write(sendBuffer,buffer_u8,NETDATA.LEADERBOARD);
 			buffer_write(sendBuffer,buffer_string,scoreLeaderboard);
-			buffer_write(sendBuffer,buffer_string,string_replace(dailyScoreSaveFileString,"ntultra",""));
+			if isScore
+				buffer_write(sendBuffer,buffer_string,string_replace(dailyScoreSaveFileString,"ntultra",""));
+			else
+				buffer_write(sendBuffer,buffer_string,string_replace(dailyRaceSaveFileString,"ntultra",""));
 			buffer_write(sendBuffer,buffer_u16,0);//Page
-			buffer_write(sendBuffer,buffer_u16,floor(totalEntries/10));//Total pages
+			if isScore
+				buffer_write(sendBuffer,buffer_u16,ceil(totalScoreEntries/10)-1);//Total pages
+			else
+				buffer_write(sendBuffer,buffer_u16,ceil(totalRaceEntries/10)-1);//Total pages
 			network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
 			buffer_delete(sendBuffer);
 			scoreLeaderboard = string_replace_all(scoreLeaderboard,"|","\n");
-			leaderboardString = scoreLeaderboard;
+			if isScore
+				scoreLeaderboardString = scoreLeaderboard;
+			else
+				raceLeaderboardString = scoreLeaderboard;
 		break;
+		case NETDATA.LEADERBOARDRACE:
+			getScore = false;
+			show_debug_message("leaderboard request race ");
 		case NETDATA.LEADERBOARD:
 			//Sending leaderboard
 			show_debug_message("leaderboard request ");
@@ -116,29 +164,44 @@ if (type == network_type_data) {
 			show_debug_message("page " + string(page));
 			var sendBuffer = buffer_create(4,buffer_grow,1);
 			buffer_write(sendBuffer,buffer_u8,NETDATA.LEADERBOARD);
-			ini_open(dailyScoreSaveFileString);
+			var stringChecker = "scorelb";
+			if getScore
+			{
+				ini_open(dailyScoreSaveFileString);
+			}
+			else
+			{
+				ini_open(dailyRaceSaveFileString);
+				stringChecker = "racelb";
+			}
 			var i = page*10;
 			var j = 0;
 			var scoreLeaderboard = "";
-			while(ini_key_exists("scorelb",i) && j < 10)
+			while(ini_key_exists(stringChecker,i) && j < 10)
 			{
-				scoreLeaderboard += ini_read_string("scorelb",i,"")+"|";
+				scoreLeaderboard += ini_read_string(stringChecker,i,"")+"|";
 				i++;
 				j++;
 			}
 			show_debug_message("amount of scores to show " + string(j));
 			ini_close();
-			var totalPages = floor(totalEntries/10);
-			show_debug_message("totalEntries " + string(totalEntries));
-			show_debug_message("totalPages " + string(totalPages));
+			var totalPages = ceil(totalScoreEntries/10) - 1;
+			if !getScore
+				totalPages = ceil(totalRaceEntries/10) - 1;
 			buffer_write(sendBuffer,buffer_string,scoreLeaderboard);
-			buffer_write(sendBuffer,buffer_string,string_replace(dailyScoreSaveFileString,"ntultra",""));
+			if getScore
+				buffer_write(sendBuffer,buffer_string,string_replace(dailyScoreSaveFileString,"ntultra",""));
+			else
+				buffer_write(sendBuffer,buffer_string,string_replace(dailyRaceSaveFileString,"ntultra",""));
 			buffer_write(sendBuffer,buffer_u16,page);
 			buffer_write(sendBuffer,buffer_u16,totalPages);
 			network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
 			buffer_delete(sendBuffer);
 			scoreLeaderboard = string_replace_all(scoreLeaderboard,"|","\n");
-			leaderboardString = scoreLeaderboard;
+			if getScore
+				scoreLeaderboardString = scoreLeaderboard;
+			else
+				raceLeaderboardString = scoreLeaderboard;
 		break;
 	}
 	buffer_delete(buffer);

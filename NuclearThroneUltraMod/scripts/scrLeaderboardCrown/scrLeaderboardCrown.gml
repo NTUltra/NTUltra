@@ -79,11 +79,20 @@ function scrLeaderboardCrown(takenCrown){
 		case 26://Energy
 			return sprCrown25Idle;
 		break;
-		case 27://Purity
+		case 27://Disco
 			return sprCrown26Idle;
 		break;
-		case 28://Greed
+		case 28://Apocalypse
 			return sprCrown27Idle;
+		break;
+		case 29://Purity
+			return sprCrown28Idle;
+		break;
+		case 30://Mercenary
+			return sprCrown29Idle;
+		break;
+		case 31://Bounty
+			return sprCrown30Idle;
 		break;
 	}
 	return sprSharpStress;

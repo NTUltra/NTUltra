@@ -3,18 +3,44 @@ with Player
 {
 	if bwep != 0
 	{
-
-		if string_copy(wep_name[wep],0,5) = "ULTRA"
+		//reload stuff
+		var lowa = 0;
+		var lowb = 0;
+		var lowc = 0;
+		if skill_got[35]
+		{
+			lowa = wep_load[wep]*-2;
+			lowb = wep_load[bwep]*-2;
+			lowc = wep_load[cwep]*-2;
+		}
+		reload = lowa;
+		breload = lowb;
+		creload = lowc;
+		
+		if ultra_got[29] && altUltra//ROBOT EXCLUSIVE TASTE
+		{
+			maxhealth += 4;
+		}
+		var eatWep = wep;
+		if ultra_got[31]&&cwep!=0{//robot 3 weps A B C
+		scrSwapWeps()// B C A
+		cwep=0; // B C x
+		}
+		else{
+		scrSwapWeps()
+		bwep = 0}
+		
+		if string_copy(wep_name[eatWep],0,5) = "ULTRA"
 		{
 			scrRaddrop(12);
 			scrUnlockCSkin(8,"FOR EATING AN ULTRA WEAPON",0);
 		}
-		else if string_copy(wep_name[wep],0,5) = "HYPER" || wep = 131//heavy hyper shit
+		else if string_copy(wep_name[eatWep],0,5) = "HYPER" || eatWep = 131//heavy hyper shit
 		{
 			scrUnlockBSkin(8,"FOR EATING A HYPER WEAPON",0);
 		}
 
-		if string_copy(wep_name[wep],0,4) = "GOLD"
+		if string_copy(wep_name[eatWep],0,4) = "GOLD"
 		{
 			if bskin=0//Robot secret golden skin
 			{
@@ -43,7 +69,7 @@ with Player
 			wepmod4 = other.wepmod4;
 			curse = other.curse;
 			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),11);
-			wep = other.wep
+			wep = eatWep
 			spr_idle=wep_sprt[wep];
 
 			if wep_type[wep]=0
@@ -76,18 +102,6 @@ with Player
 				instance_create(x+random(16)-8,y+random(16)-8,Curse)
 		}
 		
-		if ultra_got[29] && altUltra && bwep != 0//ROBOT EXCLUSIVE TASTE
-		{
-			maxhealth += 4;
-		}
-
-		if ultra_got[31]&&cwep!=0{//robot 3 weps A B C
-		scrSwapWeps()// B C A
-		cwep=0; // B C x
-		}
-		else{
-		scrSwapWeps()
-		bwep = 0}
 
 		if skill_got[5] = 1
 		{

@@ -1,4 +1,5 @@
 function scrPopulate() {
+	SetSeed();
 	//setting area and spawning some enemies
 	if UberCont.opt_gamemode == 25 || UberCont.opt_gamemode == 8
 	return;

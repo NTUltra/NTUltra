@@ -147,7 +147,7 @@ function scrTips() {
 	if Player.area = 110
 	tip = choose("not sure what the smell is","blue toxic?","glitchy","things are going wrong","get out of here")
 	if Player.area = 111
-	tip = choose("not cursed caves","green & blue","caves part 2","weird","odd","spinach caves","brocoli")
+	tip = choose("not cursed caves","green & blue","caves part 2","weird","odd","spinach caves","broccoli")
 	if Player.area = 112
 	tip = choose("buttons","balls","what was made here","experiments gone wrong","you have entered the danger zone")
 	if Player.area = 113
@@ -165,9 +165,9 @@ function scrTips() {
 	if Player.area = 120
 	tip = choose("empty","nothingness","void","  "," ... ","it is time","no one here","beating this fight makes one less van spawn next loop","confuse the idpd");
 	if Player.area = 121
-	tip = choose("risk it","fast route","they are fast","colourfull grass","watch yourself out there","inverted savanna")
+	tip = choose("risk it","fast route","they are fast","colourful grass","watch yourself out there","inverted savanna")
 	if Player.area = 122
-	tip = choose("stinky water","something is not right","gass under water?","toxic ocean","polder")
+	tip = choose("stinky water","something is not right","gas underwater?","toxic ocean","polder")
 	if Player.area = 123
 	tip = choose("pink and blue jungle","inverted bush box moves straight","inverted jungle","though faster and more aggressive#enemies here have less hp and drop more rads","land of square");
 	if Player.area = 124
@@ -236,7 +236,7 @@ function scrTips() {
 	,"eat 14 eggs in the morning")
 
 	if Player.race = 8
-	tip = choose("6b 69 6c 6c#61 6c 6c#68 75 6d 61 6e 73","72 6f 62 6f 74","3c 33","74 61 73 74 79","guns for breakfast","I'm afraid I can't let you do that","don't forget to eat weapons")
+	tip = choose("6b 69 6c 6c#61 6c 6c#68 75 6d 61 6e 73","72 6f 62 6f 74","3c 33","74 61 73 74 79","guns for breakfast","I'm afraid I can't let you do that","don't forget to eat weapons","eating a weapon instantly reloads your other weapon")
 
 	if Player.race = 9
 	tip = choose("remember the training","focus","go","never surrender","amateur hour is over","again","in cold shadows","slow down time","hyper fast reactions","chicken used to slow down time#in retail","can't throw weapons")

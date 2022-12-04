@@ -35,6 +35,9 @@ function scrAreaName(area,subarea,loops){
 		txt = "???"
 		switch (area)
 		{
+			case 100://Crown vault
+				txt = "C";
+			break;
 			case 121://INV Savanna
 				txt = "1C_"+string(subarea);
 				upsideDown = true;
@@ -104,6 +107,7 @@ function scrAreaName(area,subarea,loops){
 			break;
 			case 118: //Inverted Palace
 				txt = "7_"+string(subarea);
+				upsideDown = true;
 			break;
 		}
 	}

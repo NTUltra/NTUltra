@@ -582,4 +582,5 @@ function scrNextLevel() {
 	if crown == 10
 		hard ++;
 	hard = max(0,hard);
+	scrAddToRoute(area);
 }

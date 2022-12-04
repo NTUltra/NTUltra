@@ -125,7 +125,15 @@ if crown = 2 && canHeal
 	my_health = max(maxhealth,my_health + overheal);
 	*/
 }
-if crown == 22//Crown of luck
+else if crown == 30
+{
+	kills = max(0,kills-20);
+}
+else if crown == 31
+{
+	kills += 20;
+}
+else if crown == 22//Crown of luck
 {
 	my_health = 1;
 	prevhealth = 1;

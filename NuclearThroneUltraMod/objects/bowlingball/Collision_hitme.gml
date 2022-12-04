@@ -1,7 +1,9 @@
 if other.team != team and other.my_health > 0
 {
+	alarm[2] = 2;
 	BackCont.shake += 1
 	Sleep(5);
+	dmg = max(dmg-1,7);
 	with other
 	{
 		my_health -= other.dmg

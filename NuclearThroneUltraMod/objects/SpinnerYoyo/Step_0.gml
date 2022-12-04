@@ -1,8 +1,16 @@
 instance_create(x,y,DiscTrail);
-if followOwner && owner > -1 && instance_exists(owner)
+if followOwner 
 {
-	tx = owner.x;
-	ty = owner.y;
+	if owner > -1 && instance_exists(owner)
+	{
+		tx = owner.x;
+		ty = owner.y;
+	}
+	else
+	{
+		instance_destroy();
+		instance_create(x,y,DiscDisappear);	
+	}
 }
 x = tx + lengthdir_x(length,oDir);
 y = ty + lengthdir_y(length,oDir);

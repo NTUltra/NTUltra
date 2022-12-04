@@ -54,6 +54,17 @@ if dir<12
 			//Upgrade crown fo reincarnation
 			if Player.level > 9
 				sprite_index = sprCrownOfReincarnationUpgraded;
+		} 
+		if UberCont.opt_gamemode == 27
+		{
+			if crown == 7
+			{
+				crown = 30;
+			}
+			else if crown == 30
+			{
+				crown = 31;
+			}
 		}
 	}
 }
@@ -67,7 +78,7 @@ else
 {
 if Player.hogpoints > 1// && Player.area=105 && Player.subarea=1
 {
-	scrUnlockCSkin(20,"FOR SUCCESFULLY USING#THE INVESTMENT ULTRA",0);
+	scrUnlockCSkin(20,"FOR SUCCESSFULLY USING#THE INVESTMENT ULTRA",0);
     scrUltras()
     scrBusinessHogInvestment();
     

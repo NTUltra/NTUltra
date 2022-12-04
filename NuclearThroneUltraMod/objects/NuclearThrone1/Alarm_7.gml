@@ -20,6 +20,7 @@ with instance_create(x,y,ThronePipes)
 }
 alarm[2] = 90;
 beamY = y;
+existTime = 10;
 repeat(8)
 {
 	with instance_create(x+random_range(32,-32),y,Debris)

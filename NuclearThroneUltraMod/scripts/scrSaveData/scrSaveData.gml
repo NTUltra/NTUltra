@@ -17,7 +17,7 @@ function scrSaveData() {
 	}
 
 	dir=0
-	repeat(crownmax+7)
+	repeat(crownmax+9)
 	{
 	ini_write_real("DATA","crown_used"+string(dir),crown_used[dir]);
 	dir++;

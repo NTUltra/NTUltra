@@ -28,6 +28,8 @@ function scrEndOfRun(){
 		revivedCharacters = [];
 		beatTheGame = false;
 		
+		routeString = "";
+		time_frame = 0;
 		time_microseconds=0;
 		microseconds=""//string for microseconds
 		time_seconds=0;

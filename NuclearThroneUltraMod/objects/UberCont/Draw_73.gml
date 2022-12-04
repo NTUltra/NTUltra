@@ -1,7 +1,8 @@
 /// @description Timer
-microseconds=string(time_microseconds)
+var ts = string(floor(time_microseconds))
+microseconds=ts
 if time_microseconds<10
-{microseconds="0"+string(time_microseconds);}
+{microseconds="0"+ts;}
 
 secondsstring=string(time_seconds)
 if time_seconds<10

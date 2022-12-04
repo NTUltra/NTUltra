@@ -170,14 +170,16 @@ audio_pause_all();
 ///Timer
 
 if isPaused == 0 && !instance_exists(GenCont) && !instance_exists(Menu) && !instance_exists(Vlambeer) &&
-(instance_exists(Player) || instance_exists(PlayerSpawn) && !instance_exists(PauseTimer)) && !instance_exists(PauseTimer)
+(instance_exists(Player) || instance_exists(PlayerSpawn)) && !instance_exists(PauseTimer) && !instance_exists(StartDaily)
 {
-	time_microseconds+=03;
+	time_frame ++;
+	debug("frame time: ", time_frame);
+	time_microseconds+=3.3333333333333333333333333333333;//Counts to 100
 
-	if time_microseconds>=60
+	if time_microseconds>=100
 	{
 		time_seconds+=1;
-		time_microseconds=00;
+		time_microseconds=0;
 	}
 
 	if time_seconds>=60

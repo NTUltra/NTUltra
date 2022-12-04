@@ -93,7 +93,18 @@ function scrDrawHUD() {
 			if holdExplainGamemode >= 10
 				scrDrawHelp("["+UberCont.gamemode[UberCont.opt_gamemode]+"]");
 		}
-		draw_sprite(sprGamemodeHUD,0,__view_get( e__VW.XView, 0 )+4,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-2);	
+		if UberCont.opt_gamemode == 26
+		{
+			draw_sprite(sprDailyChallengeHUDRace,0,__view_get( e__VW.XView, 0 )+4,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-2);
+		}
+		else if UberCont.opt_gamemode == 27
+		{
+			draw_sprite(sprDailyChallengeHUD,0,__view_get( e__VW.XView, 0 )+4,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-2);
+		}
+		else
+		{
+			draw_sprite(sprGamemodeHUD,0,__view_get( e__VW.XView, 0 )+4,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-2);
+		}
 	}
 	if holdExplainGamemode > 0 
 		holdExplainGamemode --;

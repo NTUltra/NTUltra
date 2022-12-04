@@ -167,8 +167,18 @@ function scrCrowns() {
 	crown_text[29] = "DISABLE WEAPON MODS#FOR EACH WEAPON MOD ON A WEAPON#GAIN +1 MAX HP#WHILE HOLDING THAT WEAPON"
 	crown_used[29] = 0
 	crown_tips[29] = "pure"
+	
+	crown_name[30] = "[CROWN OF MERCENARY]"
+	crown_text[30] = "+2 MAX HP# AT THE END OF EACH AREA#LOSE 20 KILLS"
+	crown_used[30] = 0
+	crown_tips[30] = "there is no crime worse than tax fraud"
+	
+	crown_name[31] = "[CROWN OF BOUNTY]"
+	crown_text[31] = "-2 MAX HP# AT THE END OF EACH AREA#GAIN 20 KILLS"
+	crown_used[31] = 0
+	crown_tips[31] = "no pain no gain"
 
-	crownmax = 23//+7
+	crownmax = 23//+9
 
 
 

@@ -65,6 +65,8 @@ function scrSaveRun() {
 			hogpoints: Player.hogpoints,
 			usedHogInvestment: Player.usedHogInvestment,
 			boostLevel: Player.boostLevel,
+			routeString: UberCont.routeString,
+			time_frame: UberCont.time_frame,
 			time_microseconds: UberCont.time_microseconds,
 			time_seconds: UberCont.time_seconds,
 			time_minutes: UberCont.time_minutes,

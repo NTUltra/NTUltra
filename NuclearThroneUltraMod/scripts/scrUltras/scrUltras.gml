@@ -539,7 +539,7 @@ function scrUltras() {
 	ultra_tips[75] = "hybrid character"
 	
 	ultra_name[75] = "HARDENED BONE"
-	ultra_text[75] = "IMMUNE WHILE STATIONARY##SUCCESFULL BLOOD GAMBLE#MAKES YOU IMMUNE FOR A SHORT DURATION##FAILED BLOOD GAMBLE#CREATES BLOOD EXPLOSIONS"
+	ultra_text[75] = "IMMUNE WHILE STATIONARY##SUCCESSFUL BLOOD GAMBLE#MAKES YOU IMMUNE FOR A SHORT DURATION##FAILED BLOOD GAMBLE#CREATES BLOOD EXPLOSIONS"
 	ultra_tips[75] = "hybrid character"
 
 	if instance_exists(Player)
@@ -661,7 +661,7 @@ function scrUltras() {
 	
 	ultra_name[92] = "POTENCY"
 	ultra_text[92] = "NORMAL CONTROLS#MORE GAS DAMAGE"
-	ultra_tips[92] = "you can gass while moving"
+	ultra_tips[92] = "you can gas while moving"
 
 	    if instance_exists(Player)
 	    {

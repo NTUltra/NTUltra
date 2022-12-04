@@ -1879,8 +1879,8 @@ else if crown == 10 //Crown of difficulty
 {
 	with enemy
 	{
-		if alarm[1] > 3 && alarm[1] < 30
-			alarm[1] -= 2;
+		if alarm[1] > 3 && alarm[1] < 25
+			alarm[1] -= 1.5;
 		speed *= 1.15;
 	}
 }

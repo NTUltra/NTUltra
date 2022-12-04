@@ -15,4 +15,4 @@ y += lengthdir_y(6,point_direction(x,y,targetx,targety))
 else
 	sprite_index = sprInvertedRavenLand;
 if my_health <= 0
-	instance_destroy();
+	instance_change(InvertedRaven,false)

@@ -9,7 +9,7 @@ if (gamemodeOrder[gamemodenr] == 26)
 	if !dailyDone
 	with UberCont
 	{
-		seed = todaysSeed;
+		seed = todaysSeed + 1;
 		//seedText = seed;
 		useSeed = true;
 		canRestart = false;
@@ -19,9 +19,6 @@ else if (gamemodeOrder[gamemodenr] == 27)
 {
 	if (array_length(UberCont.encrypted_data.daily_score_dates) > 0)
 	{
-		debug("DAILY SCORE SEED");
-		debug(UberCont.encrypted_data.daily_score_dates[array_length(UberCont.encrypted_data.daily_score_dates)-1]);
-		debug(UberCont.today);
 		dailyDone = UberCont.encrypted_data.daily_score_dates[array_length(UberCont.encrypted_data.daily_score_dates)-1] == UberCont.today
 	}
 	if !dailyDone

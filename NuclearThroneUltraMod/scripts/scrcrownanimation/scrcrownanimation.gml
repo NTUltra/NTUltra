@@ -104,22 +104,31 @@ function scrCrownAnimation(takenCrown){
 		case 25://Freedom
 			spr_idle = sprCrown24Idle
 			spr_walk = sprCrown24Walk
-			maxSpeed = 1;
 		break;
 		case 26://Energy
 			spr_idle = sprCrown25Idle
 			spr_walk = sprCrown25Walk
-			maxSpeed = 1;
 		break;
-		case 27://Purity
+		case 27://Disco
 			spr_idle = sprCrown26Idle
 			spr_walk = sprCrown26Walk
-			maxSpeed = 1;
+			maxSpeed = 2.5;
 		break;
-		case 28://Greed
+		case 28://Apocalypse
 			spr_idle = sprCrown27Idle
 			spr_walk = sprCrown27Walk
-			maxSpeed = 1;
+		break;
+		case 29://Purity
+			spr_idle = sprCrown28Idle
+			spr_walk = sprCrown28Walk
+		break;
+		case 30://Mercenary
+			spr_idle = sprCrown29Idle
+			spr_walk = sprCrown29Walk
+		break;
+		case 31://Bounty
+			spr_idle = sprCrown30Idle
+			spr_walk = sprCrown30Walk
 		break;
 	}
 }

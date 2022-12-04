@@ -6,18 +6,37 @@ function scrEndBoss() {
 	{
 		if opt_gamemode == 26 //DAILY RACE
 		{
-			debug("RACE WIN");
 			var al = array_length(encrypted_data.ctot_dailies_race_seed) - 1;//Minus one to overwrite the original score we set
 	        encrypted_data.ctot_dailies_race_seed[al] = seed;
-			var raceTime = time_seconds+(time_minutes*60)+(time_hours*3600);
-	        encrypted_data.ctot_dailies_race_time[al] = raceTime;
+	        encrypted_data.ctot_dailies_race_time[al] = time_frame;
 	        encrypted_data.dailies_race_day[al] = today;
-			txttime = string(time_hours)+":"+minutesstring+":"+secondsstring+":"+microseconds;
+			txttime = string(time_hours)+":"+minutesstring+":"+secondsstring+":"+string(floor(microseconds));
 			with instance_create(x,y,UnlockPopup)
 		    {
 				mytext="RACE FINISHED! "+other.race_name[Player.race]+"#"+other.txttime
 		    }
 			scrSaveEncrypted();
+			runRace[0] = time_frame;
+			runRace[1] = encrypted_data.username;
+			//Route string
+			runRace[2] = routeString;
+			//runRace[2] = Player.area;
+			//runRace[3] = Player.subarea;
+			//runRace[4] = Player.loops;
+			runRace[3] = Player.race;
+			runRace[4] = Player.bskin;
+			runRace[5] = Player.altUltra;
+			runRace[6] = Player.wep;
+			runRace[7] = Player.bwep;
+			runRace[8] = Player.cwep;
+			runRace[9] = Player.crown;
+			runRace[10] = getUltraMutation();
+			useSeed = false;
+			opt_gamemode = 0;
+			leaderboardType = LEADERBOARD.RACE;
+			goToLeaderboard = true;
+			canRestart = true;
+			instance_create(x,y,SendRace);
 		}
 		if opt_gamemode == 0//isValidGamemodeToUnlock(opt_gamemode) && opt_gamemode != 6
 		{

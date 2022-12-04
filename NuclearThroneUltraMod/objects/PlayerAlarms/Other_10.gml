@@ -1,5 +1,6 @@
 /// @description (re)-Init
-alarm[0] = checkDelay;
+if !instance_exists(StartDaily)
+	alarm[0] = checkDelay;
 if instance_exists(Player)
 {
 	if Player.ultra_got[96] && !Player.altUltra

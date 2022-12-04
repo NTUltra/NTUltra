@@ -112,7 +112,8 @@ with WepPickup
 	//{
 		x = Player.x
 		y = Player.y
-		motion_add(random(360),1.5+random(1))
+		speed = 1;
+		//motion_add(random(360),1.5+random(1))
 	//}
 }
 Player.drawempty = 30

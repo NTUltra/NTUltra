@@ -4,6 +4,8 @@ if sprite_index == spr_activate && image_speed > 0
 	imageIndex += 0.5;
 	my_health = maxhealth;
 }
+if alarm[2] > 0
+	y = yprevious;
 if intro
 		BackCont.shake = max(BackCont.shake, 8);
 if immune

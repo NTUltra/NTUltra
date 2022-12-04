@@ -10,23 +10,17 @@ else {
 }
 day = -1;
 event_perform(ev_alarm,0);
-ini_open(dailyScoreSaveFileString);
-var scoreLeaderboard = "";
-var i = 0;
-while(ini_key_exists("scorelb",i))
-{
-	scoreLeaderboard += ini_read_string("scorelb",i,"")+"|";
-	i++;
-}
-ini_close();
-totalEntries = i;
-leaderboardString = scoreLeaderboard;
-leaderboardString = string_replace_all(leaderboardString,"|","\n");
+event_user(0);
+
+
 //Data types
 enum NETDATA {
 	CLIENT_ID,
 	SCORE,
-	LEADERBOARD
+	RACE,
+	LEADERBOARD,
+	LEADERBOARDRACE,
+	CONFIRMRACE
 }
 draw_set_font(fntM);
 alarm[1] = 120;

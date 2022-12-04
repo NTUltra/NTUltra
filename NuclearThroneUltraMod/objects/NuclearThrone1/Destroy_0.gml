@@ -36,7 +36,7 @@ with PopoNade
 	instance_destroy(id,false)
 }
 scrEnemyDeathEvent();
-scrEndBoss();
+//scrEndBoss();
 scrBossKill();
 Sleep(200)
 with enemy

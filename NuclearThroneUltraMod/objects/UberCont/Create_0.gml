@@ -5,6 +5,8 @@ version = 000//23 is final probably
 encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
+serverIp =  "";
+serverPort =  0;
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
 /*
@@ -41,7 +43,7 @@ loadedRun = false;
 
 //window_set_max_height(1440);
 //window_set_max_width(1920);
-
+time_frame = 0;
 time_microseconds=0;
 microseconds=""//string for microseconds
 time_seconds=0;
@@ -54,22 +56,31 @@ txttime="00:00:00:00";
 lastwishused=false;
 kills = 0;
 hard = 0;
-
-var todaysSeedName = current_day+current_month+current_year;
+/*
+var todaysSeedName =  string(current_day) + string(current_month) + string(current_year);
 debug("today: ",todaysSeedName);
 var byteSeed = 0;
 var byteSize = string_byte_length(todaysSeedName);
 for (var i = 0; i < byteSize; i++) {
 	byteSeed = (byteSeed + string_byte_at(todaysSeedName, i)) << 1;
-}
-todaysSeed = byteSeed;
+}*/
+todaysSeed = -1;
 today = string(current_day) + "-" + string(current_month) + "-"+ string(current_year);
 useSeed = false;
 seed = 0;
 seedText = "";
 
+
 goToLeaderboard = false;
 runScore = [];
+runRace = [];
+routeString = "";
+previousRoute = 0;
+enum LEADERBOARD{
+	SCORE,
+	RACE
+};
+leaderboardType = LEADERBOARD.SCORE;
 
 firstFloorMaker = true;
 seedOffset = 0;

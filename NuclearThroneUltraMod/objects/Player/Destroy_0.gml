@@ -495,17 +495,17 @@ else if !reincarnate
 		}
 		
 		//DAILY RUN
-		if (opt_gamemode == 27)
+		if (opt_gamemode == 27 && !instance_exists(StartDaily))
 		{
 			encrypted_data.ctot_dailies_score_score[
 			array_length(encrypted_data.ctot_dailies_score_score)-1] = other.kills;
 			scrSaveEncrypted();
 			useSeed = false;
 			opt_gamemode = 0;
-			
+			leaderboardType = LEADERBOARD.SCORE;
 			goToLeaderboard = true;
 			runScore[0] = other.kills;
-			runScore[1] = "playerName";
+			runScore[1] = encrypted_data.username;
 			runScore[2] = other.area;
 			runScore[3] = other.subarea;
 			runScore[4] = other.loops;
@@ -520,14 +520,14 @@ else if !reincarnate
 			
 			canRestart = true;
 		}
-		if (opt_gamemode == 26)
+		if (opt_gamemode == 26 && !instance_exists(StartDaily))
 		{
-			scrSaveEncrypted();
 			useSeed = false;
-			//goToLeaderboard = true;
 			opt_gamemode = 0;
+			leaderboardType = LEADERBOARD.RACE;
+			goToLeaderboard = true;
+			canRestart = true;
 		}
-		
 		scrSave();
 	}
 

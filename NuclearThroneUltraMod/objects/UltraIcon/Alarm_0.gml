@@ -7,7 +7,7 @@ if skill == 0 && (Player.unlockAlternativeUltras || (scrCheckGold(Player.wep_nam
 }
 else if skill == 4 && (Player.unlockAlternativeUltras || Player.bskin == 2)
 {
-	sprite_index = sprFishCanGun;	
+	sprite_index = sprFishCanGun;
 }
 else if skill == 6 && (Player.unlockAlternativeUltras || (Player.curse || Player.bcurse))
 {
@@ -105,7 +105,7 @@ else if skill == 97 && (Player.unlockAlternativeUltras || !Player.skill_got[13] 
 }
 else if skill == 104 && (Player.unlockAlternativeUltras || scrHasDirector())
 {
-	sprite_index = sprGumpyLecture;
+	sprite_index = sprGrumpyLecture;
 }
 else if skill == 106 && ((Player.unlockAlternativeUltras && randomHand == 1 && !Player.bskin == 1) || Player.bskin == 1)
 {

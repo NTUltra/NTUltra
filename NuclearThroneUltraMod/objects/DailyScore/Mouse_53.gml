@@ -1,6 +1,8 @@
 if hover
 {
 	snd_play_2d(sndClick);
+	with DailyRace
+		image_index = 0;
 	if !dailyDone {
 		if UberCont.opt_gamemode == 27
 		{
@@ -20,7 +22,7 @@ if hover
 			with UberCont
 			{
 				seed = todaysSeed;
-				seedText = seed;
+				//seedText = seed;
 				useSeed = true;
 				canRestart = false;
 				opt_gamemode = 27;
@@ -34,6 +36,8 @@ if hover
 		{
 			goToLeaderboard = true;
 			runScore = [];
+			runRace = [];
+			leaderboardType = LEADERBOARD.SCORE;
 		}
 		scrRestart();
 	}

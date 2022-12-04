@@ -22,7 +22,7 @@ with Player//Data to keep
 	skeletonlives=other.skeletonlives;
 	livesRegain = other.livesRegain;
 	race = other.race
-	crown = 1;//other.crown
+	crown = other.crown
 	lastsubarea = other.lastsubarea;
 	lastarea = other.lastarea;
 	area = other.area//other.lastarea;

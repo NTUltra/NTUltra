@@ -86,7 +86,7 @@ function scrEnemyDeathEvent(){
 		with Player
 		{
 			if other.countKill
-			kills ++;
+				kills ++;
 			var t = 0;
 			
 

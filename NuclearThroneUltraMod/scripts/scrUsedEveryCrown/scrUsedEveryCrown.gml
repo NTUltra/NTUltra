@@ -12,7 +12,7 @@ function scrUsedEveryCrown() {
 		dir++;
 		}
 
-		if used>=crownmax+7
+		if used>=crownmax+7//Don't count the daily crowns
 			return true;
 		else
 			return false;

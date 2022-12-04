@@ -12,6 +12,7 @@ if (type == network_type_data) {
 	{
 		case NETDATA.CLIENT_ID:
 			myClientId = buffer_read(buffer, buffer_u16);
+			UberCont.todaysSeed = buffer_read(buffer, buffer_u16);
 			if array_length(UberCont.runScore) > 1
 			{
 				debug("send score: ",string(UberCont.runScore));
@@ -47,32 +48,35 @@ if (type == network_type_data) {
 			debug("leaderboard received!");
 			//Receiving leaderboard
 			var receivedLeaderboard = buffer_read(buffer,buffer_string);
-			var leaderboardType = buffer_read(buffer,buffer_string);
-			if string_count("dailyscore",leaderboardType) > 0
+			var leaderboardTypeString = buffer_read(buffer,buffer_string);
+			if string_count("dailyscore",leaderboardTypeString) > 0
 			{
-				leaderboardName = "DAILY SCORE "+string_replace(leaderboardType,"dailyscore","");
-			} else if string_count("dailyrace",leaderboardType) > 0
+				leaderboardName = "DAILY SCORE "+string_replace(leaderboardTypeString,"dailyscore","");
+				leaderboardType = LEADERBOARD.SCORE;
+			} else if string_count("dailyrace",leaderboardTypeString) > 0
 			{
-				leaderboardName = "DAILY RACE "+string_replace(leaderboardType,"dailyrace","");
+				leaderboardName = "DAILY RACE "+string_replace(leaderboardTypeString,"dailyrace","");
+				leaderboardType = LEADERBOARD.RACE;
 			}
+			UberCont.leaderboardType = leaderboardType;
 			leaderboardName = string_replace(leaderboardName,".sav","");
 			page = buffer_read(buffer,buffer_u16);
 			totalPages = buffer_read(buffer,buffer_u16);
-			debug("totalPages ", totalPages);
-			debug(leaderboardType);
-			debug(receivedLeaderboard);
 			totalScoreLeaderboardEntries = string_count("|",receivedLeaderboard);
 			//leaderboard = string_replace(receivedLeaderboard,"_","\n");
 			leaderboard = [];
 			var startIndex = 1;
 			var j = 0;
-			repeat(clamp(totalScoreLeaderboardEntries,1,10))
+			repeat(clamp(totalScoreLeaderboardEntries,0,10))
 			{
 				var scoreEntry = string_copy(receivedLeaderboard,startIndex,string_pos_ext("|",receivedLeaderboard,startIndex)-startIndex);
 				var scoreEntryList = [];
 				var i = 0;
 				var entryIndex = 1;
-				repeat(13)//12 entries
+				var entries = 13//12 entries
+				if leaderboardType == LEADERBOARD.RACE
+					entries = 11;//10 entries
+				repeat(entries)
 				{
 					scoreEntryList[i] = string_copy(scoreEntry,entryIndex, string_pos_ext(" ",scoreEntry,entryIndex)-entryIndex);
 					i++;
@@ -81,6 +85,56 @@ if (type == network_type_data) {
 				}
 				startIndex = string_pos_ext("|",receivedLeaderboard,startIndex);
 				startIndex++;
+				if leaderboardType == LEADERBOARD.RACE
+				{
+					var frameTime = scoreEntryList[0];
+					var microseconds = frameTime / 0.3;
+					microseconds /= 100
+					microseconds = floor(100 * frac(microseconds));
+					var seconds = frameTime / 30;
+					seconds /= 60
+					seconds = floor(60 * frac(seconds));
+					var minutes = frameTime / 1800;
+					minutes /= 60
+					minutes = floor(60 * frac(minutes));
+					var hours = frameTime / 108000;
+					hours /= 60
+					hours = floor(60 * frac(hours));
+					var microsecondsstring = string(microseconds);
+					if microseconds<10
+					{microsecondsstring="0"+microsecondsstring;}
+					var secondsstring=string(seconds)
+					if seconds<10
+					{secondsstring="0"+secondsstring;}
+					var minutesstring=string(minutes)
+					if minutes<10
+					{minutesstring="0"+minutesstring;}
+					var txttime = "";
+					if hours >= 1
+					{
+						txttime = string(hours)+":"+minutesstring+":"+secondsstring+":"+microsecondsstring;
+					}
+					else
+					{
+						txttime = minutesstring+":"+secondsstring+":"+microsecondsstring;
+					}
+					scoreEntryList[0] = txttime;
+					var routeArray = string_split(scoreEntryList[2],">");
+					debug("routearray: ", routeArray);
+					var al = array_length(routeArray)-1
+					var areaArray = [];
+					for (var i = 0; i < al; i++)
+					{
+						areaArray[i] = scrAreaName(real(routeArray[i]),0,0);
+						areaArray[i][0] = string_replace(areaArray[i][0],"_1",">");
+						areaArray[i][0] = string_replace(areaArray[i][0],"_2",">");
+						areaArray[i][0] = string_replace(areaArray[i][0],"_3",">");
+						areaArray[i][0] = string_replace(areaArray[i][0],"???","?>");
+					}
+					i --;
+					areaArray[i][0] = string_copy(areaArray[i][0],0,string_length(areaArray[i][0])-1);
+					scoreEntryList[2] = areaArray;
+				}
 				leaderboard[j] = scoreEntryList;
 				j++;
 			}

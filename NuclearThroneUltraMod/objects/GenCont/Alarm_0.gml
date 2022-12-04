@@ -50,7 +50,6 @@ with WepPickup
 	x = Player.x
 	y = Player.y
 }
-SetSeed();
 if Player.area!=104
 scrPopulate()
 

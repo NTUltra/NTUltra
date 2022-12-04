@@ -763,6 +763,9 @@ function scrPowers() {
 				if wep > maxwep
 					wep = 1;
 			}
+			with instance_create(x,y,PopupText) {
+				mytext = other.wep_name[other.wep];
+			}
 			scrWeaponHold();
 		}
 	    else if bwep!=0
