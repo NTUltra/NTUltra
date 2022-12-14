@@ -14,7 +14,9 @@ network_set_config(network_config_use_non_blocking_socket, 1);
 instance_create_depth(x,y,depth + 2,ThroneIISpiral);
 alarm[0] = 2;
 alarm[1] = 60;
-leaderboardName = "LEADERBOARD"
+leaderboardName[0] = "LEADERBOARD";
+leaderboardName[1] = "";
+noBoard = false;
 serverIp =  UberCont.serverIp;
 serverPort =  UberCont.serverPort;
 leaderboard = [];

@@ -76,8 +76,9 @@ function scrDrawGameOver() {
 	var ranChar = false;
 	with Player
 	{
-		ultra_got[87] = 0;
-		skeletonlives = 0;
+		//ultra_got[87] = 0;
+		//skeletonlives = 0;
+		instance_destroy();
 	}
 	if race = 0 || UberCont.opt_gamemode == 23
 	{
@@ -89,18 +90,18 @@ function scrDrawGameOver() {
 	with instance_create(x,y,GenCont)
 	{race = other.race
 	crown = other.crown}
-	instance_create(x,y,Player)
+	instance_create(x,y,Player);
 	with MusCont
 		instance_destroy()
 	instance_create(0,0,MusCont)
-	
+	/*
 	with Player
 	{
 		nochest = 0;
 		randomlySelected = ranChar;
 		restarted = true;
 		skeletonlives = 0;
-	}
+	}*/
 	debug("GAMEOVER RESTART");
 	
 	room_restart()

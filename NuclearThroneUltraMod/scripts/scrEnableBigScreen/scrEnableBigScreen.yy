@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scrDrawOptions",
+  "name": "scrEnableBigScreen",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

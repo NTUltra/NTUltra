@@ -1,15 +1,17 @@
 /// @description Sideart
+if opt_sideart == sprite_get_number(sprSideArt) + 1
+	exit;
 var ww = window_get_width();
 var wh = window_get_height()
 var s = ww/display_get_gui_width();
 s = min(s,wh/display_get_gui_height());
 var excesswidth = (ww - (view_get_wport(0)*s))*0.5
 var step = 64*s;
-if UberCont.opt_sideart == sprite_get_number(sprSideArt) && sprite_exists(UberCont.customSideArt)
+if opt_sideart == sprite_get_number(sprSideArt) && sprite_exists(customSideArt)
 {
 	var sw = 64*s
-	var ws = sw/sprite_get_width(UberCont.customSideArt);
-	var hs = sw/sprite_get_height(UberCont.customSideArt);
+	var ws = sw/sprite_get_width(customSideArt);
+	var hs = sw/sprite_get_height(customSideArt);
 }
 if (excesswidth > 0) {
 	var tilex = excesswidth-step;
@@ -21,9 +23,9 @@ if (excesswidth > 0) {
 			tilex -= step;
 			tiley = 0;
 		}
-		if UberCont.opt_sideart == sprite_get_number(sprSideArt) && sprite_exists(UberCont.customSideArt)
+		if opt_sideart == sprite_get_number(sprSideArt) && sprite_exists(customSideArt)
 		{
-			draw_sprite_ext(UberCont.customSideArt, 0, tilex, tiley,ws,hs,0,c_white,1);
+			draw_sprite_ext(customSideArt, 0, tilex, tiley,ws,hs,0,c_white,1);
 		}
 		else
 			draw_sprite_ext(sprSideArt, opt_sideart, tilex, tiley,s,s,0,c_white,1);
@@ -38,9 +40,9 @@ if (excesswidth > 0) {
 			tilex += step;
 			tiley = 0;
 		}
-		if UberCont.opt_sideart == sprite_get_number(sprSideArt) && sprite_exists(UberCont.customSideArt)
+		if opt_sideart == sprite_get_number(sprSideArt) && sprite_exists(customSideArt)
 		{
-			draw_sprite_ext(UberCont.customSideArt, 0, tilex, tiley,ws,hs,0,c_white,1);
+			draw_sprite_ext(customSideArt, 0, tilex, tiley,ws,hs,0,c_white,1);
 		}
 		else
 			draw_sprite_ext(sprSideArt, opt_sideart, tilex, tiley,s,s,0,c_white,1);

@@ -5,7 +5,10 @@ draw_set_colour(c_white);
 if array_length(leaderboard) > 0
 {
 	var space = 22;
-	draw_text(x,y-16,leaderboardName);
+	draw_text(x + 16,y-16,leaderboardName[0]);
+	draw_set_halign(fa_right);
+	draw_text(camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 16,y-16,leaderboardName[1]);
+	draw_set_halign(fa_left);
 	var al = array_length(leaderboard);
 	if leaderboardType == LEADERBOARD.SCORE
 		for (var i = 0; i < al; i++)
@@ -43,7 +46,7 @@ if array_length(leaderboard) > 0
 			xx += 14;
 			draw_surface(surf,xx,yy);
 			xx += 64;
-			draw_sprite(scrLeaderboardRace(entry[5],entry[6],entry[7],entry[2]),0,xx,yy+2);
+			draw_sprite(scrLeaderboardRace(entry[5],entry[6],entry[7],entry[2]),0,xx,yy+3);
 			xx += 11;
 			var area = scrAreaName(real(entry[2]),real(entry[3]),0);
 			if entry[4] != "0"
@@ -94,7 +97,7 @@ if array_length(leaderboard) > 0
 				xx += 30;
 				draw_sprite(wep_sprt[real(entry[9])],0,xx,yy);
 			}
-			xx += 29;
+			xx += 30;
 			if (entry[11] != "1")
 				draw_sprite(scrLeaderboardCrown(real(entry[11])),0,xx,yy);
 			xx += 8;
@@ -172,7 +175,7 @@ if array_length(leaderboard) > 0
 			draw_surface(surf,xx,yy);
 			xx += 73;
 			
-			draw_sprite(scrLeaderboardRace(entry[3],entry[4],bool(entry[5]),9),0,xx,yy+2);
+			draw_sprite(scrLeaderboardRace(entry[3],entry[4],bool(entry[5]),9),0,xx,yy+3);
 			xx += 9;
 			
 			var aal = array_length(entry[2])
@@ -266,7 +269,7 @@ if array_length(leaderboard) > 0
 		}
 	var yy = camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0]) - 16;
 	//Can do next
-	var o = 12;
+	var o = 8;
 	if totalPages > page
 	{
 		var s = 1;
@@ -282,7 +285,28 @@ if array_length(leaderboard) > 0
 				leaderboard = [];
 			}
 		}
-		draw_sprite_ext(sprLoadOutArrow,0,
+		draw_sprite_ext(sprMenuArrowSmall,0,
+		ax,
+		ay,
+		s,s,270,c_white,1);
+		
+	}
+	if UberCont.dailyDay < UberCont.totalDailies
+	{
+		var s = 1;
+		var ax = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])-o;
+		var ay = camera_get_view_y(view_camera[0]) + o;
+		if mouse_x > ax - o && mouse_x < ax + o && mouse_y > ay - o && mouse_y < ay + o
+		{
+			s = 1.25;
+			if mouse_check_button_pressed(mb_left) {
+				//Just get leaderboard
+				UberCont.dailyDay ++;
+				event_user(0);
+				leaderboard = [];
+			}
+		}
+		draw_sprite_ext(sprMenuArrowSmall,0,
 		ax,
 		ay,
 		s,s,270,c_white,1);
@@ -303,11 +327,123 @@ if array_length(leaderboard) > 0
 				leaderboard = [];
 			}
 		}
-		draw_sprite_ext(sprLoadOutArrow,0,
+		draw_sprite_ext(sprMenuArrowSmall,0,
 		ax,
 		ay,
 		s,s,90,c_white,1);
 	}
+	if UberCont.dailyDay > 1
+	{
+		var s = 1;
+		var ax = o
+		var ay = camera_get_view_y(view_camera[0]) + o;
+		if mouse_x > ax - o && mouse_x < ax + o && mouse_y > ay - o && mouse_y < ay + o
+		{
+			s = 1.25;
+			if mouse_check_button_pressed(mb_left) {
+				//Just get leaderboard
+				UberCont.dailyDay --;
+				event_user(0);
+				leaderboard = [];
+			}
+		}
+		draw_sprite_ext(sprMenuArrowSmall,0,
+		ax,
+		ay,
+		s,s,90,c_white,1);
+	}
+	//Toggle daily / race
+	var s = 1;
+	var ax = o + string_width("DAILY SCORE  ");
+	var ay = camera_get_view_y(view_camera[0]) + o;
+	if mouse_x > ax - o && mouse_x < ax + o && mouse_y > ay - o && mouse_y < ay + o
+	{
+		s = 1.25;
+		if mouse_check_button_pressed(mb_left) {
+			//Just get leaderboard
+			if leaderboardType == LEADERBOARD.RACE
+				leaderboardType = LEADERBOARD.SCORE;
+			else
+				leaderboardType = LEADERBOARD.RACE;
+			event_user(0);
+			leaderboard = [];
+		}
+	}
+	draw_sprite_ext(sprMenuArrowSmall,0,
+	ax,
+	ay,
+	s,s,0,c_white,1);
+}
+else if noBoard
+{
+	draw_text(x + 16,y-16,leaderboardName[0]);
+	draw_set_halign(fa_right);
+	draw_text(camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 16,y-16,leaderboardName[1]);
+	draw_set_halign(fa_left);
+	draw_text(x + 31,y,"NO LEADERBOARD ENTRY");
+	var o = 8;
+	if UberCont.dailyDay < UberCont.totalDailies
+	{
+		var s = 1;
+		var ax = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])-o;
+		var ay = camera_get_view_y(view_camera[0]) + o;
+		if mouse_x > ax - o && mouse_x < ax + o && mouse_y > ay - o && mouse_y < ay + o
+		{
+			s = 1.25;
+			if mouse_check_button_pressed(mb_left) {
+				//Just get leaderboard
+				UberCont.dailyDay ++;
+				event_user(0);
+				leaderboard = [];
+			}
+		}
+		draw_sprite_ext(sprMenuArrowSmall,0,
+		ax,
+		ay,
+		s,s,270,c_white,1);
+		
+	}
+	if UberCont.dailyDay > 1
+	{
+		var s = 1;
+		var ax = o
+		var ay = camera_get_view_y(view_camera[0]) + o;
+		if mouse_x > ax - o && mouse_x < ax + o && mouse_y > ay - o && mouse_y < ay + o
+		{
+			s = 1.25;
+			if mouse_check_button_pressed(mb_left) {
+				//Just get leaderboard
+				UberCont.dailyDay --;
+				event_user(0);
+				leaderboard = [];
+			}
+		}
+		draw_sprite_ext(sprMenuArrowSmall,0,
+		ax,
+		ay,
+		s,s,90,c_white,1);
+	}
+	//Toggle daily / race
+	var s = 1;
+	var ax = o + string_width("DAILY SCORE  ");
+	var ay = camera_get_view_y(view_camera[0]) + o;
+	if mouse_x > ax - o && mouse_x < ax + o && mouse_y > ay - o && mouse_y < ay + o
+	{
+		s = 1.25;
+		if mouse_check_button_pressed(mb_left) {
+			//Just get leaderboard
+			if leaderboardType == LEADERBOARD.RACE
+				leaderboardType = LEADERBOARD.SCORE;
+			else
+				leaderboardType = LEADERBOARD.RACE;
+			event_user(0);
+			leaderboard = [];
+		}
+	}
+	draw_sprite_ext(sprMenuArrowSmall,0,
+	ax,
+	ay,
+	s,s,0,c_white,1);
 }
 else
 {

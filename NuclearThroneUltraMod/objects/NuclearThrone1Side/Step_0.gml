@@ -21,7 +21,7 @@ if my_health <= 0 && !disable
 	repeat(6)
 	{
 		xx = x + lengthdir_x(48,ang);
-		yy = y - 32 + lengthdir_y(48,ang);
+		yy = y - 36 + lengthdir_y(48,ang);
 		ang += angstep;
 		with instance_create(xx,yy,boom)
 		{
@@ -33,7 +33,7 @@ if my_health <= 0 && !disable
 	repeat(6)
 	{
 		xx = x + lengthdir_x(96,ang);
-		yy = y - 32 + lengthdir_y(96,ang);
+		yy = y - 36 + lengthdir_y(96,ang);
 		ang += angstep;
 		with instance_create(xx,yy,boom)
 		{

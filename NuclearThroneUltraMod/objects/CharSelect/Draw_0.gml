@@ -32,6 +32,10 @@ normalDepth = lowerDepth;
 depth = normalDepth;
 //x = view_xview+8+22;
 }
+if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+{
+	x += 54;	
+}
 //yy=32;//48
 var yyy = y + 48 - Menu.widescreen;
 if Menu.race = image_index

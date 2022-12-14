@@ -16,9 +16,10 @@ if (type == network_type_data) {
 			if array_length(UberCont.runScore) > 1
 			{
 				debug("send score: ",string(UberCont.runScore));
-				var sendBuffer = buffer_create(21,buffer_grow,1);
+				var sendBuffer = buffer_create(23,buffer_grow,1);
 				buffer_write(sendBuffer,buffer_u8,NETDATA.SCORE);
 				buffer_write(sendBuffer,buffer_u16,myClientId);
+				buffer_write(sendBuffer,buffer_u16,UberCont.dailyDay);//This is the day I started my run
 				buffer_write(sendBuffer,buffer_u64,UberCont.runScore[0]);//Kills
 				buffer_write(sendBuffer,buffer_string,UberCont.runScore[1]);//Name
 				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[2]);//area
@@ -49,22 +50,33 @@ if (type == network_type_data) {
 			//Receiving leaderboard
 			var receivedLeaderboard = buffer_read(buffer,buffer_string);
 			var leaderboardTypeString = buffer_read(buffer,buffer_string);
+			debug("leaderboardTypeString" ,leaderboardTypeString);
 			if string_count("dailyscore",leaderboardTypeString) > 0
 			{
-				leaderboardName = "DAILY SCORE "+string_replace(leaderboardTypeString,"dailyscore","");
+				leaderboardName[0] = "DAILY SCORE ";
+				leaderboardName[1] = string_replace(leaderboardTypeString,"dailyscore","");
 				leaderboardType = LEADERBOARD.SCORE;
 			} else if string_count("dailyrace",leaderboardTypeString) > 0
 			{
-				leaderboardName = "DAILY RACE "+string_replace(leaderboardTypeString,"dailyrace","");
+				leaderboardName[0] = "DAILY RACE ";
+				leaderboardName[1] = string_replace(leaderboardTypeString,"dailyrace","");
 				leaderboardType = LEADERBOARD.RACE;
 			}
 			UberCont.leaderboardType = leaderboardType;
-			leaderboardName = string_replace(leaderboardName,".sav","");
+			leaderboardName[1] = string_replace(leaderboardName[1],".sav","");
 			page = buffer_read(buffer,buffer_u16);
 			totalPages = buffer_read(buffer,buffer_u16);
+			UberCont.dailyDay = buffer_read(buffer,buffer_u16);
+			if UberCont.totalDailies == -1
+				UberCont.totalDailies = UberCont.dailyDay;
 			totalScoreLeaderboardEntries = string_count("|",receivedLeaderboard);
+			debug("totalScoreLeaderboardEntries ", totalScoreLeaderboardEntries);
 			//leaderboard = string_replace(receivedLeaderboard,"_","\n");
 			leaderboard = [];
+			if totalScoreLeaderboardEntries == 0
+				noBoard = true;
+			else
+				noBoard = false;
 			var startIndex = 1;
 			var j = 0;
 			repeat(clamp(totalScoreLeaderboardEntries,0,10))

@@ -29,7 +29,14 @@ if instance_exists(Player)
 	{
 		wallPierce = 0.25;
 		image_xscale += 0.18;//0.1;
-		image_yscale += 0.18;//0.1;	
+		image_yscale += 0.18;//0.1;
+		if Player.ultra_got[97] && !Player.altUltra
+		{
+			wallPierce = 0.05;
+			image_xscale += 0.18;//0.1;
+			image_yscale += 0.18;//0.1;
+		}
+		
 	}
 	if Player.ultra_got[34]
 	{

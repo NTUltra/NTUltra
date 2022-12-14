@@ -15,4 +15,3 @@ snd_play(sndVenuz)
 
 //screen_save("NTULTRA"+string(scrn)+".png");
 //scrn += 1
-

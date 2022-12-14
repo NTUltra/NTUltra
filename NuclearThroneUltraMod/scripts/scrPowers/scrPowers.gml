@@ -190,113 +190,145 @@ function scrPowers() {
 	if race = 25//Mutation doctor
 	{
 
-	if ultra_got[99]
-	{//necro doctor
+		if ultra_got[99]
+		{//necro doctor
     
-	if instance_exists(Corpse)
-	{
-	//snd_play_2d(sndNecromancerRevive)
-	        //audio_stop_sound(sndBouncerHitWall)
-        var numberOfEnems = 0;
-		if instance_exists(IDPDVan)
-			numberOfEnems = instance_number(IDPDVan);
-	    with Corpse
-	    {
-			if image_speed = 0 and (instance_number(enemy) > numberOfEnems or instance_exists(Portal)) and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	        {
+			if instance_exists(Corpse)
+			{
+			//snd_play_2d(sndNecromancerRevive)
+			        //audio_stop_sound(sndBouncerHitWall)
+		        var numberOfEnems = 0;
+				if instance_exists(IDPDVan)
+					numberOfEnems = instance_number(IDPDVan);
+			    with Corpse
+			    {
+					if image_speed = 0 and (instance_number(enemy) > numberOfEnems or instance_exists(Portal)) and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+			        {
         
-	        if !audio_is_playing(sndNecromancerRevive)
-	        {
-				audio_sound_pitch(sndNecromancerRevive,random_range(1.1,1.5))
-				audio_play_sound(sndNecromancerRevive,90,0)
-	        }
+			        if !audio_is_playing(sndNecromancerRevive)
+			        {
+						audio_sound_pitch(sndNecromancerRevive,random_range(1.1,1.5))
+						audio_play_sound(sndNecromancerRevive,90,0)
+			        }
         
         
         
-	        instance_destroy()
-	        with instance_create(x,y,BloodStreak)
-	        {
-	        motion_add(point_direction(Player.x,Player.y,x,y),8)
-	        image_angle = direction
-	        }
+			        instance_destroy()
+			        with instance_create(x,y,BloodStreak)
+			        {
+			        motion_add(point_direction(Player.x,Player.y,x,y),8)
+			        image_angle = direction
+			        }
         
-	        instance_create(x,y,Scorchmark)
-	        instance_create(x,y,AllyFreak);
-	        //instance_create(x,y,AllyFreak);
-	        }
-	    }
-	}
+			        instance_create(x,y,Scorchmark)
+			        instance_create(x,y,AllyFreak);
+			        //instance_create(x,y,AllyFreak);
+			        }
+			    }
+			}
 
-	}
-	else if ultra_got[98]
-	{
-
-	if rad>21
-	{
-		audio_stop_sound(sndMutant0Slct)
-		audio_sound_pitch(sndMutant0Slct,random_range(0.6,0.9))
-		audio_play_sound(sndMutant0Slct,90,0)
-		instance_create(UberCont.mouse__x,UberCont.mouse__y,Infect);
-		if skill_got[5]
-		{
-			rad -= 9;
 		}
-		else
+		else if ultra_got[98]
 		{
-			rad-=16;
+
+			if rad>21
+			{
+				audio_stop_sound(sndMutant0Slct)
+				audio_sound_pitch(sndMutant0Slct,random_range(0.6,0.9))
+				audio_play_sound(sndMutant0Slct,90,0)
+				instance_create(UberCont.mouse__x,UberCont.mouse__y,Infect);
+				if skill_got[5]
+				{
+					rad -= 9;
+				}
+				else
+				{
+					rad-=16;
+				}
+			}
+			else
+				scrEmptyRad();
+
 		}
-	}
-	else
-		scrEmptyRad();
+		else if alarm[3]<1 
+		{
+		//Regular active  
+			if my_health == 1 && skill_got[32] && isAlkaline
+			{
+				isAlkaline = false;
+				var h = 2;
+				if (skill_got[9]) //Second stomache
+					h = 4;
+				my_health = min(h,maxhealth);
+				with instance_create(x,y,HealFX)
+				{
+					depth = other.depth - 1;	
+				}
+				with instance_create(x,y,SharpTeeth)
+					owner=other.id;
+				snd_play(sndAlkalineProc,0,true)
+				var pt = instance_create(x,y,PopupText)
+				if UberCont.opt_ammoicon
+				{
+					if my_health = maxhealth
+						pt.mytext = "MAX";
+					else
+						pt.mytext = "+"+string(h-1);
+				
+					pt.sprt = sprHPIconPickup;
+				}
+				else
+				{
+					if my_health = maxhealth
+						pt.mytext = "MAX HP";
+					else
+						pt.mytext = "+"+string(h-1)+" HP";
+				}
+				Sleep(50);
+				alarm[3]=10;//duration of iframes
+			}
+			else
+			{
+				my_health--;
+				exception=true;
+			    if my_health<=0 //KILL YOSELF USING ACTIVE
+			    {
+				    if skill_got[25]//strong spirit
+				    {
+					    if strongspirit==true&&strongspiritused==false
+					    {
+						    snd_play_2d(sndStrongSpiritLost);
+						    my_health=1;
+							Sleep(50);
+						    alarm[1]=20;//invincibility 
+						    strongspiritused=true;
+						    strongspirit=false;
+					    }
+					    else
+							scrUnlockCSkin(25,"HAHAHAHAHA!",0);
+				    }
+				    else
+						scrUnlockCSkin(25,"HAHAHAHAHA!",0);
+			    }
+			}
+		    //if my_health<1&&strongspirit
+		    image_index=0;
+		    sprite_index=spr_hurt;
+		    snd_play_2d(snd_hurt, hurt_pitch_variation);
 
-	}
-	else if alarm[3]<1 
-	{
-	//Regular active   
+		    var raddrop=16;//13 An ally drops 5 rads
+		    if skill_got[5]
+		    raddrop=26;//19
     
-	    my_health--;
-	    exception=true;
-    
-	    if my_health<=0 //KILL YOSELF USING ACTIVE
-	    {
-    
-	    if skill_got[25]//strong spirit
-	    {
-	    if strongspirit==true&&strongspiritused==false
-	    {
-	    snd_play_2d(sndStrongSpiritLost);
-	    my_health=1;
-		Sleep(50);
-	    alarm[1]=20;//invincibility 
-	    strongspiritused=true;
-	    strongspirit=false;
-	    }
-	    else
-			scrUnlockCSkin(25,"HAHAHAHAHA!",0);
-	    }
-	    else
-			scrUnlockCSkin(25,"HAHAHAHAHA!",0);
-    
-	    }
-    
-	    //if my_health<1&&strongspirit
-	    image_index=0;
-	    sprite_index=spr_hurt;
-	    snd_play_2d(snd_hurt, hurt_pitch_variation);
-
-	    var raddrop=16;//13 An ally drops 5 rads
-	    if skill_got[5]
-	    raddrop=26;//19
-    
-	    repeat(raddrop)
-	    {
-	    with instance_create(x,y,Rad)
-	    {motion_add(other.direction,other.speed)
-	    motion_add(random(360),random(10*0.5)+3)
-	    repeat(speed)
-	    speed *= 0.9}
-	    }
-	}
+		    repeat(raddrop)
+		    {
+		    with instance_create(x,y,Rad)
+		    {motion_add(other.direction,other.speed)
+		    motion_add(random(360),random(10*0.5)+3)
+		    repeat(speed)
+		    speed *= 0.9}
+		    }
+		}
     
     
 	}

@@ -19,8 +19,10 @@ if UberCont.start_wep_have[wep,race] == 1
 	UberCont.cwep[race]=UberCont.start_wep[wep];
 	UberCont.selected_start_wep[race] = wep;
 }
-
-if race != 0 && UberCont.mouse__x > __view_get( e__VW.XView, 0 )+300-10 and UberCont.mouse__x < __view_get( e__VW.XView, 0 )+300+12 and UberCont.mouse__y > __view_get( e__VW.YView, 0 )+arrowOpenerY-12 and UberCont.mouse__y < __view_get( e__VW.YView, 0 )+arrowOpenerY+10
+var xo = 0;
+if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+	xo = 108;
+if race != 0 && UberCont.mouse__x > __view_get( e__VW.XView, 0 )+xo+300-10 and UberCont.mouse__x < __view_get( e__VW.XView, 0 )+xo+300+12 and UberCont.mouse__y > __view_get( e__VW.YView, 0 )+arrowOpenerY-12 and UberCont.mouse__y < __view_get( e__VW.YView, 0 )+arrowOpenerY+10
 {
     wepopenscale=1.5;
     

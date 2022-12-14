@@ -30,9 +30,6 @@ if skill_got[18]//Last wish
 with UberCont
 lastwishused=true;
 }
-if !(other.ultra_got[87] && other.altUltra && other.rogueammo > 0)
-	with Crown
-		instance_destroy();
 
 with CrystalShield
 instance_destroy();
@@ -257,7 +254,7 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 	var al = array_length(livesRegain);
 	var tookLife = false;
 	race = other.race
-	crown = 1//other.crown
+	crown = other.crown
 	lastarea = other.lastarea;
 	lastsubarea = other.lastsubarea;
 	area = other.area//other.lastarea;
@@ -383,6 +380,8 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 }
 else if !reincarnate
 {
+	with Crown
+		instance_destroy();
 	scrEndOfRun();
 	//Horror and atom bskin drop rads
 	if race == 21 || (race == 15 && bskin = 1)

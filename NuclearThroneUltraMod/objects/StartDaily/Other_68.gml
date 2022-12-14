@@ -13,6 +13,8 @@ if (type == network_type_data) {
 		case NETDATA.CLIENT_ID:
 			myClientId = buffer_read(buffer, buffer_u16);
 			UberCont.todaysSeed = buffer_read(buffer, buffer_u16);
+			UberCont.dailyDay = buffer_read(buffer, buffer_u16);
+			UberCont.totalDailies = UberCont.dailyDay;
 			network_destroy(serverSocket);
 			instance_destroy();
 			room_goto(romGame);

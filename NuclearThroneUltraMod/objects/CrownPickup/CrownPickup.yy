@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "CrownPickup",
   "spriteId": {
     "name": "sprCrown0Idle",
     "path": "sprites/sprCrown0Idle/sprCrown0Idle.yy",
@@ -22,9 +25,9 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"Player","path":"objects/Player/Player.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"Player","path":"objects/Player/Player.yy",},},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -32,8 +35,4 @@
     "name": "CrownVault",
     "path": "folders/Objects/CrownVault.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "CrownPickup",
-  "tags": [],
-  "resourceType": "GMObject",
 }

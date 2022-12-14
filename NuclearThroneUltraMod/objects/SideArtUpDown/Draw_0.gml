@@ -4,19 +4,44 @@ draw_sprite(sprite_index,UberCont.opt_sideart,x,y)
 if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x and UberCont.mouse__x < x+8 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
 {
 	snd_play_2d(sndClick);
-if UberCont.opt_sideart > 0
-UberCont.opt_sideart -= 1
-else
-UberCont.opt_sideart = sprite_get_number(sprSideArt);
-
+	if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+	{
+		scrDisableBigScreen();
+	}
+	if UberCont.opt_sideart > 0
+		UberCont.opt_sideart -= 1
+	else
+		UberCont.opt_sideart = sprite_get_number(sprSideArt) + 1;
+	if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+	{
+		scrEnableBigScreen();
+	}
 }
 if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x+10 and UberCont.mouse__x < x+18 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
 {
 	snd_play_2d(sndClick);
-if UberCont.opt_sideart < sprite_get_number(sprSideArt)
-UberCont.opt_sideart += 1
-else
-UberCont.opt_sideart = 0;
+	if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+	{
+		scrDisableBigScreen();
+	}
+	if UberCont.opt_sideart < sprite_get_number(sprSideArt) + 1
+		UberCont.opt_sideart += 1
+	else
+		UberCont.opt_sideart = 0;
+	
+	if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+	{
+		scrEnableBigScreen();
+	}
+}
+if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+{
+	draw_set_valign(fa_top);
+	draw_set_halign(fa_left);
+	draw_text_colour(x+17,y+1,"16:9",c_black,c_black,c_black,c_black,1);
+	draw_text_colour(x+18,y,"16:9",c_black,c_black,c_black,c_black,1);
+	draw_text_colour(x+18,y+1,"16:9",c_black,c_black,c_black,c_black,1);
+	draw_text_colour(x+17,y,"16:9",c_white,c_white,c_white,c_white,1);
 }
 if UberCont.opt_sideart == sprite_get_number(sprSideArt)
 {
@@ -25,7 +50,7 @@ if UberCont.opt_sideart == sprite_get_number(sprSideArt)
 	draw_text_colour(x+17,y+1,"CUSTOM",c_black,c_black,c_black,c_black,1);
 	draw_text_colour(x+18,y,"CUSTOM",c_black,c_black,c_black,c_black,1);
 	draw_text_colour(x+18,y+1,"CUSTOM",c_black,c_black,c_black,c_black,1);
-	draw_text(x+17,y,"CUSTOM");
+	draw_text_colour(x+17,y,"CUSTOM",c_white,c_white,c_white,c_white,1);
 	var s = 8;
 	var xx = x+66;
 	draw_sprite(sprToggle,0,xx,y);

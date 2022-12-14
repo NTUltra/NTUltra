@@ -1,3 +1,5 @@
+if speed > 1
+speed = 1
 scrTarget()
 if target > 0 {
     if (point_distance(x, y, target.x, target.y) < 128 || collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0) && !instance_exists(Portal)
@@ -17,3 +19,4 @@ if image_index < 1
 image_index += random(0.02)
 else
     image_index += 0.4
+

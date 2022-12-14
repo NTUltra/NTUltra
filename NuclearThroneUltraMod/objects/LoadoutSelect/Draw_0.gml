@@ -2,9 +2,13 @@ if (hasNoMenuOpen()
  && race != 0)
 {
 draw_set_halign(fa_left)
+var xo = 0;
+
+if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+	xo = 108;
 
 if (wepmenuopen) {
-    draw_sprite(sprSplash,0,__view_get( e__VW.XView, 0 )+77,__view_get( e__VW.YView, 0 )+49)
+    draw_sprite(sprSplash,0,__view_get( e__VW.XView, 0 )+xo+77,__view_get( e__VW.YView, 0 )+49)
     var wepiter = 0;
     var wepx = 148;
     var wepy = 85;
@@ -16,7 +20,7 @@ if (wepmenuopen) {
             wepx = 148;
             wepy += 16;
         }
-        var xx = __view_get( e__VW.XView, 0 )+wepx;
+        var xx = __view_get( e__VW.XView, 0 )+xo+wepx;
 		var yy = __view_get( e__VW.YView, 0 )+wepy;
 		var l = xx;
 		xx += sprite_get_xoffset(sprite);
@@ -67,7 +71,7 @@ if (wepmenuopen) {
         wepx += 8 + spritewidth
         wepiter++;
     } until (wepiter = UberCont.maxstartwep+1)
-	var xx = __view_get( e__VW.XView, 0 )+302;
+	var xx = __view_get( e__VW.XView, 0 )+xo+302;
 	var yy = __view_get( e__VW.YView, 0 )+168//170;
 	var o = 10;
 	if UberCont.ctot_all_crowns_taken[Menu.race] > 0
@@ -161,7 +165,7 @@ draw_set_valign(fa_bottom)
 }
 else
 {
-	var xx = __view_get( e__VW.XView, 0 )+304;
+	var xx = __view_get( e__VW.XView, 0 )+xo+304;
 	var yy = __view_get( e__VW.YView, 0 )+174;
 	draw_sprite(sprMutationSplat,3,xx+24,yy+44);
 	var scl = 1.5;
@@ -171,7 +175,7 @@ else
 	var sprw = (sprite_get_xoffset(spr)*scl) - (sprite_get_width(spr)*scl);
 	draw_sprite_ext(spr,0,xx+sprw-8,yy,scl,scl,0,c_white,1);
 }
-    draw_sprite_ext(sprLoadOutArrow,1,__view_get( e__VW.XView, 0 )+300,__view_get( e__VW.YView, 0 )+arrowOpenerY,wepopenscale,wepopenscale,0,c_white,wepopenscale-0.1);
+    draw_sprite_ext(sprLoadOutArrow,1,__view_get( e__VW.XView, 0 )+xo+300,__view_get( e__VW.YView, 0 )+arrowOpenerY,wepopenscale,wepopenscale,0,c_white,wepopenscale-0.1);
 
 }
 

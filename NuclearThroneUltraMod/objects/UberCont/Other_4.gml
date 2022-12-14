@@ -1,3 +1,5 @@
+if opt_sideart == sprite_get_number(sprSideArt) + 1
+	scrEnableBigScreen();
 if !instance_exists(KeyCont)
 instance_create(0,0,KeyCont)
 if instance_exists(Player)

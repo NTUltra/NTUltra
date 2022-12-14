@@ -218,6 +218,21 @@ scrLoadRace();
 curse = 0
 bcurse = 0
 ccurse = 0
+//MODIFIERS!
+wepmod1 = 0;
+wepmod2 = 0;
+wepmod3 = 0;
+wepmod4 = 0;
+//BMODIFIERS!
+bwepmod1 = 0;
+bwepmod2 = 0;
+bwepmod3 = 0;
+bwepmod4 = 0;
+//CMODIFIERS!
+cwepmod1 = 0;
+cwepmod2 = 0;
+cwepmod3 = 0;
+cwepmod4 = 0;
 scrUltras()
 scrCrowns()
 
@@ -282,21 +297,6 @@ prevcreload = 0;
 queueshot = 0;
 bqueueshot = 0;
 cqueueshot = 0;
-//MODIFIERS!
-wepmod1 = 0;
-wepmod2 = 0;
-wepmod3 = 0;
-wepmod4 = 0;
-//BMODIFIERS!
-bwepmod1 = 0;
-bwepmod2 = 0;
-bwepmod3 = 0;
-bwepmod4 = 0;
-//CMODIFIERS!
-cwepmod1 = 0;
-cwepmod2 = 0;
-cwepmod3 = 0;
-cwepmod4 = 0;
 
 
 

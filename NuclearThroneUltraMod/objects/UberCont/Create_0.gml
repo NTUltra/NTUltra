@@ -3,7 +3,7 @@
 win8 = 1;
 version = 000//23 is final probably
 encryptedVersion = 003;
-public = 1 //1 is no cheats and release
+public = 0 //1 is no cheats and release
 defaultPublic = public;
 serverIp =  "";
 serverPort =  0;
@@ -66,6 +66,8 @@ for (var i = 0; i < byteSize; i++) {
 }*/
 todaysSeed = -1;
 today = string(current_day) + "-" + string(current_month) + "-"+ string(current_year);
+dailyDay = 0;
+totalDailies = -1;
 useSeed = false;
 seed = 0;
 seedText = "";
@@ -93,7 +95,9 @@ window_set_fullscreen(opt_fulscrn)
 if !opt_fulscrn
 	window_set_size(640*2,480*2);
 canRestart = true;
-
+/*
+	854 x 480
+*/
 enum ultramods {
 	nothing,
 	

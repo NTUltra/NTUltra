@@ -433,7 +433,7 @@ else if skill = 97 // MUTATION SMITH WEAPON MUTATOR BETTER WEAPON SPECIFIC MUTAT
 		{
 			if skill_got[13]//long arms
 			{
-				bettermelee=1.5;
+				bettermelee=0.4;
 			}
 			if skill_got[16]//RecycleGland
 			{
