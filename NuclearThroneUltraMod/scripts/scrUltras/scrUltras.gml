@@ -157,7 +157,7 @@ function scrUltras() {
 	    ultra_name[23] = "MAKE IT RAIN"
 	    ultra_text[23] = "REALLY HIGH SHOTGUN FIRE RATE#USED BULLET AMMO#CONVERTS TO SHOTGUN AMMO#(10 BULLET TO 1 SHOTGUN AMMO)"//"REALLY HIGH SHOTGUN FIRE RATE#USED SHOTGUN AMMO CONVERTS#TO BULLET AMMO"
 	    ultra_tips[23] = "shells and bullets <3"
-		if instance_exists(Player)
+		if instance_exists(Player) && Player.race == 6
 		{
 			if (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && (scrMeleeWeapons(Player.wep) || Player.wep == 0) && (scrMeleeWeapons(Player.bwep) || Player.bwep == 0)))
 			{
@@ -489,7 +489,7 @@ function scrUltras() {
 	ultra_name[68] = "SCRAP FINDER"
 	ultra_text[68] = "ALL WEAPON DROPS GIVE YOU HEALTH, RADS#AND MORE AMMO FOR ALL TYPES#PICKING UP A WEAPON#SPAWNS LIGHTNING"
 	ultra_tips[68] = "recourseful"
-	if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && (scrHasMorphMod() || scrHasMorphWeapon())))
+	if instance_exists(Player) && Player.race == 17 && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && (scrHasMorphMod() || scrHasMorphWeapon())))
 	{
 		ultra_name[68] = "ENGINUITY"
 		ultra_text[68] = "YOUR ACTIVE BECOMES:#CHANGE YOUR WEAPON#INTO ONE OF THE SAME TIER#YOU CAN GO THROUGH#ALL AVAILABLE WEAPONS##WHENEVER YOU CHANGE OR SWAP WEAPONS#SPAWN MORPH ON YOUR CROSSHAIR"
@@ -570,7 +570,7 @@ function scrUltras() {
 	    ultra_tips[77] = "money everywhere"
 		
 		//Have heavy heart
-		if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (
+		if instance_exists(Player) && Player.race == 20 && (Player.altUltra || Player.unlockAlternativeUltras || (
 		(Player.skill_got[0])
 		&& instance_exists(UltraIcon)))
 		{
@@ -634,7 +634,7 @@ function scrUltras() {
 			ultra_text[87] = "AT THE START OF AN AREA#SUMMON A GROUP OF IDPD#THAT FIGHT FOR YOU";
 	    ultra_tips[87] = "rogue leader"
 		
-		if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (scrHasAnEmptyLife() && instance_exists(UltraIcon)))
+		if instance_exists(Player) && Player.race == 22 && (Player.altUltra || Player.unlockAlternativeUltras || (scrHasAnEmptyLife() && instance_exists(UltraIcon)))
 		{
 			ultra_name[87] = "IMMORTAL POLICE"
 		    ultra_text[87] = "REPLACE PORTAL STRIKE WITH REVIVE#REVIVE USES PORTAL STRIKE AMMO#LOWER MAXIMUM PORTALSTRIKE AMMO BY 1#THRONE BUTT REVIVES YOU AT FULL HP#INSTEAD OF 1HP#PICKING UP PORTAL STRIKE AMMO#TRIGGERS BLAST ARMOUR"
@@ -695,7 +695,7 @@ function scrUltras() {
 	    ultra_tips[96] = "you gain explosive ammo#when using a lightning weapon#you gain energy ammo#when using a kraken weapon"
 		
 		//CROWN OF REINCARNATION/FREEDOM
-		if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (
+		if instance_exists(Player) && Player.race == 24 && (Player.altUltra || Player.unlockAlternativeUltras || (
 		(Player.crown == 11 || Player.crown == 25 || Player.skill_got[2]) && !Player.skill_got[17]
 		&& instance_exists(UltraIcon)))
 		{

@@ -17,7 +17,7 @@ if instance_exists(Player)
 {
 	if (Player.ultra_got[25]==1)
     {
-    mediumchest=1;
+		mediumchest = 1;
     }
 	if Player.crown == 9//Crown of love
 	{
@@ -28,21 +28,21 @@ if instance_exists(Player)
 }
 
 scrWeapons()
-wep=scrDecideWep(0, 10, curse)
+wep = scrDecideWep(0, 10, curse)
 
 
-    if (mediumchest==1)
-    {
+if (mediumchest==1)
+{
     //medium sprite
     if curse==1
-    sprite_index=sprMediumCursedWeaponChest;
+		sprite_index=sprMediumCursedWeaponChest;
     else
-    sprite_index=sprMediumWeaponChest;
-    }
-	else if oneweponly
-	{
+		sprite_index=sprMediumWeaponChest;
+}
+else if oneweponly
+{
 		sprite_index = sprWeaponChestReplaced;
 		shadowSprite = shd16;
 		wep = 0;
 		curse = 0;
-	}
+}

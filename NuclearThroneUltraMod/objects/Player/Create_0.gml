@@ -133,15 +133,18 @@ with UberCont {
     if opt_gamemode = 17 //CHEATS
 		public = 0
     //Daily
-    if opt_gamemode == 26 {
-		instance_create(0,0,StartDaily);
-        canRestart = false;
+	if !instance_exists(PlayerSpawn)
+	{
+	    if opt_gamemode == 26 {
+			instance_create(0,0,StartDaily);
+	        canRestart = false;
         
-    }
-    else if opt_gamemode == 27 {
-		instance_create(0,0,StartDaily);
-        canRestart = false;
-    }
+	    }
+	    else if opt_gamemode == 27 {
+			instance_create(0,0,StartDaily);
+	        canRestart = false;
+	    }
+	}
 }
 
 keyfire = 0

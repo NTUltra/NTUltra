@@ -10,7 +10,9 @@ if !instance_exists(MusCont)
 	snd_loop(amb0c);
 	audio_sound_gain(amb0c, max(0, sqrt(UberCont.opt_ambvol)), 0);
 }
+connectionSuccess = true;
 network_set_config(network_config_use_non_blocking_socket, 1);
+network_set_config(network_config_connect_timeout, 20000);
 instance_create_depth(x,y,depth + 2,ThroneIISpiral);
 alarm[0] = 2;
 alarm[1] = 60;

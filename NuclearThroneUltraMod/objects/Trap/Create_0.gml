@@ -1,7 +1,7 @@
 side = choose(0,1)
 alarm[0] = 100+random(40)
 fire = 0
-instance_create(x,y,TrapScorchMark)
+myscorch = instance_create(x,y,TrapScorchMark)
 
 loop=false;
 

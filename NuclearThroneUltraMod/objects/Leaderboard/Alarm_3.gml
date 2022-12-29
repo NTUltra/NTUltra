@@ -1,0 +1,2 @@
+/// @description timeout
+connectionSuccess = false;

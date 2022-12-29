@@ -1,425 +1,411 @@
 /// @description WepPickup
 if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(LevCont)  && !instance_exists(SpiralCont){
 
-	targetPickup=instance_nearest(x,y,WepPickup);
-	if targetPickup != noone && point_distance(x,y,targetPickup.x,targetPickup.y)<36 && targetPickup.visible
+	targetPickup = instance_nearest(x,y,WepPickup);
+	var prange = 36;
+	if ultra_got[66] && altUltra
+		prange = 48;
+	if targetPickup != noone && point_distance(x,y,targetPickup.x,targetPickup.y) < prange  && targetPickup.visible
 	{
-
-
-	var isGold = false;
-	//UNLOCK GOLDEN WEAPON
-	if scrCheckGold(wep_name[targetPickup.wep])
-	{
-		isGold = true;
-		scrUnlockGoldWeapon(targetPickup.wep);
-	}
-	//first get ammo
-	if targetPickup.ammo > 0 and (wep_type[targetPickup.wep] != 0 || (ultra_got[68] && !altUltra))
-	{
-		ammoMultiple = 2;
-		if ultra_got[68] && !altUltra
+		var isGold = false;
+		//UNLOCK GOLDEN WEAPON
+		if scrCheckGold(wep_name[targetPickup.wep])
 		{
-			ammoMultiple = 4;
-			if wep_type[targetPickup.wep] == 0
-				ammoMultiple = 0;
-			var allammotypes=5;
-			repeat(5)
+			isGold = true;
+			scrUnlockGoldWeapon(targetPickup.wep);
+		}
+		//first get ammo
+		if targetPickup.ammo > 0 and (wep_type[targetPickup.wep] != 0 || (ultra_got[68] && !altUltra))
+		{
+			ammoMultiple = 2;
+			if ultra_got[68] && !altUltra
 			{
-				ammo[allammotypes] += typ_ammo[allammotypes]
-				if ammo[allammotypes] > typ_amax[allammotypes]
-					ammo[allammotypes] = typ_amax[allammotypes]
+				ammoMultiple = 4;
+				if wep_type[targetPickup.wep] == 0
+					ammoMultiple = 0;
+				var allammotypes=5;
+				repeat(5)
+				{
+					ammo[allammotypes] += typ_ammo[allammotypes]
+					if ammo[allammotypes] > typ_amax[allammotypes]
+						ammo[allammotypes] = typ_amax[allammotypes]
+					if (UberCont.opt_ammoicon)
+					{
+						dir = instance_create(x,y,PopupText);
+						dir.sprt = sprAmmoIconsPickup
+						dir.ii = allammotypes-1;
+						dir.mytext = "+"+string(typ_ammo[allammotypes]);
+						if ammo[allammotypes] = typ_amax[allammotypes]
+							dir.mytext = "MAX";
+					}
+					else
+					{
+						dir = instance_create(x,y,PopupText)
+						dir.mytext = "+"+string(typ_ammo[allammotypes])+" "+string(typ_name[allammotypes])
+						if ammo[allammotypes] = typ_amax[allammotypes]
+							dir.mytext = "MAX "+string(typ_name[allammotypes])
+					}
+					allammotypes--;
+				}
+				snd_play(sndAmmoPickup);
+				var num = 3;
+				if skill_got[9]//Second stomache
+					num = 6;
+				if my_health < maxhealth
+					my_health += clamp(my_health+num,my_health,maxhealth);
+				if UberCont.opt_ammoicon
+				{
+					dir = instance_create(x,y,PopupText)
+					dir.sprt = sprHPIconPickup;
+					dir.mytext = "+"+string(num)
+					if my_health = maxhealth
+						dir.mytext = "MAX"
+					else if my_health > maxhealth
+						dir.mytext = "OVER MAX"
+				}
+				else
+				{
+					dir = instance_create(x,y,PopupText)
+					dir.mytext = "+"+string(num)+" HP"
+					if my_health = maxhealth
+						dir.mytext = "MAX HP"
+					else if my_health > maxhealth
+						dir.mytext = "OVER MAX HP"
+				}
+				instance_create(x,y,HealFX);
+				snd_play(sndHealthPickup);
+			
+				scrRaddrop(60);
+			}
+			if crown == 20 && ammoMultiple > 0//Crown of protection
+			{
+				ammoMultiple -= 2;
+				my_health += 1;
+				var num = 1;
+				if skill_got[9]//Second stomache
+					num = 2;
+				if UberCont.opt_ammoicon
+				{
+					dir = instance_create(x,y,PopupText)
+					dir.sprt = sprHPIconPickup;
+					dir.mytext = "+"+string(num)
+					if my_health > maxhealth
+						dir.mytext += "#OVERHEAL!"
+				}
+				else
+				{
+					dir = instance_create(x,y,PopupText)
+					dir.mytext = "+"+string(num)+" HP"
+					if my_health > maxhealth
+						dir.mytext += "#OVERHEAL!"
+				}
+				instance_create(x,y,HealFX);
+				snd_play(sndHealthPickup,0,true);
+			}
+			
+			if ammoMultiple > 0{
+				ammo[wep_type[targetPickup.wep]] += typ_ammo[targetPickup.wep_type[targetPickup.wep]]*ammoMultiple
+				if ammo[wep_type[targetPickup.wep]] > typ_amax[targetPickup.wep_type[targetPickup.wep]] && !ultra_got[26]
+					ammo[wep_type[targetPickup.wep]] = typ_amax[targetPickup.wep_type[targetPickup.wep]]
+				snd_play(sndAmmoPickup,0,true);
 				if (UberCont.opt_ammoicon)
 				{
 					dir = instance_create(x,y,PopupText);
 					dir.sprt = sprAmmoIconsPickup
-					dir.ii = allammotypes-1;
-					dir.mytext = "+"+string(typ_ammo[allammotypes]);
-					if ammo[allammotypes] = typ_amax[allammotypes]
+					dir.ii = targetPickup.wep_type[targetPickup.wep]-1;
+					dir.mytext = "+"+string(typ_ammo[wep_type[targetPickup.wep]]*ammoMultiple);
+					if ammo[wep_type[targetPickup.wep]] == typ_amax[targetPickup.wep_type[targetPickup.wep]]
 						dir.mytext = "MAX";
 				}
 				else
 				{
 					dir = instance_create(x,y,PopupText)
-					dir.mytext = "+"+string(typ_ammo[allammotypes])+" "+string(typ_name[allammotypes])
-					if ammo[allammotypes] = typ_amax[allammotypes]
-						dir.mytext = "MAX "+string(typ_name[allammotypes])
+					dir.mytext = "+"+string(typ_ammo[wep_type[targetPickup.wep]]*ammoMultiple)+" "+string(typ_name[wep_type[targetPickup.wep]])
+					if ammo[wep_type[targetPickup.wep]] == typ_amax[targetPickup.wep_type[targetPickup.wep]]
+						dir.mytext = "MAX "+string(typ_name[wep_type[targetPickup.wep]])
 				}
-				allammotypes--;
 			}
-			snd_play(sndAmmoPickup);
-			var num = 3;
-			if skill_got[9]//Second stomache
-				num = 6;
-			if my_health < maxhealth
-				my_health += clamp(my_health+num,my_health,maxhealth);
-			if UberCont.opt_ammoicon
-			{
-				dir = instance_create(x,y,PopupText)
-				dir.sprt = sprHPIconPickup;
-				dir.mytext = "+"+string(num)
-				if my_health = maxhealth
-					dir.mytext = "MAX"
-				else if my_health > maxhealth
-					dir.mytext = "OVER MAX"
-			}
-			else
-			{
-				dir = instance_create(x,y,PopupText)
-				dir.mytext = "+"+string(num)+" HP"
-				if my_health = maxhealth
-					dir.mytext = "MAX HP"
-				else if my_health > maxhealth
-					dir.mytext = "OVER MAX HP"
-			}
-			instance_create(x,y,HealFX);
-			snd_play(sndHealthPickup);
-			
-			scrRaddrop(60);
+			targetPickup.ammo = 0
 		}
-		if crown == 20 && ammoMultiple > 0//Crown of protection
+
+		if KeyCont.key_pick[p] = 1 && targetPickup.visible == true
 		{
-			ammoMultiple -= 2;
-			my_health += 1;
-			var num = 1;
-			if skill_got[9]//Second stomache
-				num = 2;
-			if UberCont.opt_ammoicon
+			KeyCont.key_pick[p] = 2;
+			if curse = 0 || targetPickup.curse == curse or bwep = 0 || (cwep = 0 && ultra_got[31])
 			{
-				dir = instance_create(x,y,PopupText)
-				dir.sprt = sprHPIconPickup;
-				dir.mytext = "+"+string(num)
-				if my_health > maxhealth
-					dir.mytext += "#OVERHEAL!"
-			}
-			else
-			{
-				dir = instance_create(x,y,PopupText)
-				dir.mytext = "+"+string(num)+" HP"
-				if my_health > maxhealth
-					dir.mytext += "#OVERHEAL!"
-			}
-			instance_create(x,y,HealFX);
-			snd_play(sndHealthPickup,0,true);
-		}
-			
-		if ammoMultiple > 0{
-			ammo[wep_type[targetPickup.wep]] += typ_ammo[targetPickup.wep_type[targetPickup.wep]]*ammoMultiple
-			if ammo[wep_type[targetPickup.wep]] > typ_amax[targetPickup.wep_type[targetPickup.wep]] && !ultra_got[26]
-				ammo[wep_type[targetPickup.wep]] = typ_amax[targetPickup.wep_type[targetPickup.wep]]
-			snd_play(sndAmmoPickup,0,true);
-			if (UberCont.opt_ammoicon)
-			{
-				dir = instance_create(x,y,PopupText);
-				dir.sprt = sprAmmoIconsPickup
-				dir.ii = targetPickup.wep_type[targetPickup.wep]-1;
-				dir.mytext = "+"+string(typ_ammo[wep_type[targetPickup.wep]]*ammoMultiple);
-				if ammo[wep_type[targetPickup.wep]] == typ_amax[targetPickup.wep_type[targetPickup.wep]]
-					dir.mytext = "MAX";
-			}
-			else
-			{
-				dir = instance_create(x,y,PopupText)
-				dir.mytext = "+"+string(typ_ammo[wep_type[targetPickup.wep]]*ammoMultiple)+" "+string(typ_name[wep_type[targetPickup.wep]])
-				if ammo[wep_type[targetPickup.wep]] == typ_amax[targetPickup.wep_type[targetPickup.wep]]
-					dir.mytext = "MAX "+string(typ_name[wep_type[targetPickup.wep]])
-			}
-		}
-		targetPickup.ammo = 0
-	}
-
-	if KeyCont.key_pick[p] = 1 && targetPickup.visible == true
-	{
-		KeyCont.key_pick[p] = 2;
-	if curse = 0||targetPickup.curse==curse or bwep = 0 || (cwep = 0 && ultra_got[31])//SWITCH OUR MODS DATA ASWELL!
-	{
-		if ultra_got[68] && !altUltra//Weapon smith scrapfinder
-		{
-			snd_play_2d(choose(sndSpark1,sndSpark2),0.1,true);
-			var angl = random(360);
-			var anglStep = 360 / 3;
-			repeat(3)
-			{
-			with instance_create(x,y,Lightning)
-			{image_angle = angl
-			accuracy=0;
-			team = other.team
-			ammo = 16;
-			event_perform(ev_alarm,0)
-			visible = 0
-			with instance_create(x,y,LightningSpawn)
-			image_angle = other.image_angle}
-			angl += anglStep;
-			}
-		}
-	instance_create(x,y,WepSwap)
-	if !isGold
-	{
-		onlyusemegold = false;	
-	}
-	if targetPickup.pickedup=false
-	weaponspickedup+=1;
-
-	if scrCheckGold(wep_name[targetPickup.wep])
-	{
-		snd_play(sndGoldPickup);
-	}
-
-	//GUN GAME
-	if weaponspickedup>=50
-	scrUnlockGameMode(11,"FOR PICKING UP 50 WEAPONS THIS RUN")
-
-	//favourable BUILD GAMMODE
-	if scrFavourableWeapons(targetPickup.wep)
-	scrUnlockGameMode(2,"FOR PICKING UP A FAVOURABLE WEAPON")
-
-	//SKINS
-	if targetPickup.wep=328//BLACK SWORD
-	scrUnlockBSkin(9,"FOR PICKING UP THE BLACK SWORD",0);
-
-	if targetPickup.wep=329//Dark sword
-	scrUnlockCSkin(9,"FOR TOUCHING DEATH ITSELF",0);
-
-	if scrToxicWeapons(targetPickup.wep, wep_name[targetPickup.wep]) && targetPickup.pickedup=false && race = 23
-	{
-	toxicweaponsfound++;
-	if toxicweaponsfound>=2
-	scrUnlockBSkin(23,"BY USING 2 DIFFERENT TOXIC WEAPONS#IN ONE RUN AS FROG",0)
-	}
-
-	//some one wep only unlocks that odont really count as unlockables
-	if targetPickup.wep=298//golden oops gun
-	{
-	with UberCont
-	{
-	oneweponly298=1
-	scrSave();
-	}
-	}
-	if targetPickup.wep=315//moneygun
-	{
-		scrUnlockCharacter(20,"FOR STEALING THE MONEY GUN")
-	with UberCont
-	{
-	oneweponly315=1
-	scrSave();
-	}
-	}
-	if targetPickup.wep=329//dark sword
-	{
-	with UberCont
-	{
-	oneweponly329=1
-	scrSave();
-	}
-	}
-	if targetPickup.wep=177//time thrower
-	{
-	with UberCont
-	{
-	oneweponly177=1
-	scrSave();
-	}
-	}
-	if targetPickup.wep=192//time bomb
-	{
-	with UberCont
-	{
-	oneweponly192=1
-	scrSave();
-	}
-	}
-	if targetPickup.wep=69//oops gun
-	{
-	with UberCont
-	{
-	oneweponly69=1
-	scrSave();
-	}
-	}
-	if targetPickup.wep=75//idkwid
-	{
-	with UberCont
-	{
-	oneweponly75=1
-	scrSave();
-	}
-	}
-	if targetPickup.wep=264//broken ster gun
-	{
-	with UberCont
-	{
-	oneweponly298=1
-	scrSave();
-	}
-	}
-	if targetPickup.wep=328//black sword
-	{
-	with UberCont
-	{
-	oneweponly328=1
-	scrSave();
-	}
-	}
-	if targetPickup.wep=231//guitar
-	{
-	with UberCont
-	{
-	oneweponly231=1
-	scrSave();
-	}
-	}
-	if targetPickup.wep=263//electric guitar
-	{
-	with UberCont
-	{
-	oneweponly263=1
-	scrSave();
-	}
-	}
-	if targetPickup.wep=214//viking great axe
-	{
-	with UberCont
-	{
-	oneweponly214=1
-	scrSave();
-	}
-	}
-	if targetPickup.wep=316//hunter heavy sniper
-	{
-	with UberCont
-	{
-	oneweponly316=1
-	scrSave();
-	}
-	}
-
-
-	snd_play(sndWeaponPickup)
-	if bwep = 0
-	{
-		bcurse = curse
-		if ultra_got[29] && altUltra && bwep == 0 && wep != 0//ROBOT EXCLUSIVE TASTE
-		{
-			maxhealth -= 4;
-		}
-		bwep = wep
-		bwepmod1 = wepmod1;
-		bwepmod2 = wepmod2;
-		bwepmod3 = wepmod3;
-		bwepmod4 = wepmod4;
-	}
-	else if cwep = 0 && ultra_got[31]//robot ultra third wep
-	{
-		ccurse = curse
-		cwep = wep
-		cwepmod1 = wepmod1;
-		cwepmod2 = wepmod2;
-		cwepmod3 = wepmod3;
-		cwepmod4 = wepmod4;
-	}
-	else if wep != 0
-	{
-		var tx = targetPickup.x;
-		var ty = targetPickup.y;
-		
-		if ultra_got[66] && altUltra
-		{
-			tx = x;
-			ty = y;
-			alarm[3] = max(alarm[3],6);
-			if myShield == -1 || !instance_exists(myShield)
-			{
-				myShield = instance_create(x,y,EuphoriaShield);
-				with myShield
+				if ultra_got[68] && !altUltra//Weapon smith scrapfinder
 				{
-					owner = other.id;
+					snd_play_2d(choose(sndSpark1,sndSpark2),0.1,true);
+					var angl = random(360);
+					var anglStep = 360 / 3;
+					repeat(3)
+					{
+					with instance_create(x,y,Lightning)
+					{image_angle = angl
+					accuracy=0;
+					team = other.team
+					ammo = 16;
+					event_perform(ev_alarm,0)
+					visible = 0
+					with instance_create(x,y,LightningSpawn)
+					image_angle = other.image_angle}
+					angl += anglStep;
+					}
+				}
+			instance_create(x,y,WepSwap);
+			if !isGold
+			{
+				onlyusemegold = false;	
+			}
+			if targetPickup.pickedup=false
+			weaponspickedup+=1;
+
+			if scrCheckGold(wep_name[targetPickup.wep])
+			{
+				snd_play(sndGoldPickup);
+			}
+
+			//GUN GAME
+			if weaponspickedup>=50
+			scrUnlockGameMode(11,"FOR PICKING UP 50 WEAPONS THIS RUN")
+
+			//favourable BUILD GAMMODE
+			if scrFavourableWeapons(targetPickup.wep)
+			scrUnlockGameMode(2,"FOR PICKING UP A FAVOURABLE WEAPON")
+
+			//SKINS
+			if targetPickup.wep == 328//BLACK SWORD
+			scrUnlockBSkin(9,"FOR PICKING UP THE BLACK SWORD",0);
+
+			if targetPickup.wep == 329//Dark sword
+			scrUnlockCSkin(9,"FOR TOUCHING DEATH ITSELF",0);
+
+			if scrToxicWeapons(targetPickup.wep, wep_name[targetPickup.wep]) && !targetPickup.pickedup && race = 23
+			{
+			toxicweaponsfound++;
+			if toxicweaponsfound>=2
+			scrUnlockBSkin(23,"BY USING 2 DIFFERENT TOXIC WEAPONS#IN ONE RUN AS FROG",0)
+			}
+
+			//some one wep only unlocks that odont really count as unlockables
+			if targetPickup.wep == 298//golden oops gun
+			{
+			with UberCont
+			{
+			oneweponly298=1
+			scrSave();
+			}
+			}
+			if targetPickup.wep == 315//moneygun
+			{
+				scrUnlockCharacter(20,"FOR STEALING THE MONEY GUN")
+			with UberCont
+			{
+			oneweponly315=1
+			scrSave();
+			}
+			}
+			if targetPickup.wep == 329//dark sword
+			{
+			with UberCont
+			{
+			oneweponly329=1
+			scrSave();
+			}
+			}
+			if targetPickup.wep == 177//time thrower
+			{
+			with UberCont
+			{
+			oneweponly177=1
+			scrSave();
+			}
+			}
+			if targetPickup.wep == 192//time bomb
+			{
+			with UberCont
+			{
+			oneweponly192=1
+			scrSave();
+			}
+			}
+			if targetPickup.wep == 69//oops gun
+			{
+			with UberCont
+			{
+			oneweponly69=1
+			scrSave();
+			}
+			}
+			if targetPickup.wep == 75//idkwid
+			{
+			with UberCont
+			{
+			oneweponly75=1
+			scrSave();
+			}
+			}
+			if targetPickup.wep == 264//broken ster gun
+			{
+			with UberCont
+			{
+			oneweponly298=1
+			scrSave();
+			}
+			}
+			if targetPickup.wep == 328//black sword
+			{
+			with UberCont
+			{
+			oneweponly328=1
+			scrSave();
+			}
+			}
+			if targetPickup.wep == 231//guitar
+			{
+			with UberCont
+			{
+			oneweponly231=1
+			scrSave();
+			}
+			}
+			if targetPickup.wep == 263//electric guitar
+			{
+			with UberCont
+			{
+			oneweponly263=1
+			scrSave();
+			}
+			}
+			if targetPickup.wep == 214//viking great axe
+			{
+			with UberCont
+			{
+			oneweponly214=1
+			scrSave();
+			}
+			}
+			if targetPickup.wep == 316//hunter heavy sniper
+			{
+			with UberCont
+			{
+			oneweponly316=1
+			scrSave();
+			}
+			}
+
+
+			snd_play(sndWeaponPickup)
+			if bwep = 0
+			{
+				bcurse = curse
+				if ultra_got[29] && altUltra && bwep == 0 && wep != 0//ROBOT EXCLUSIVE TASTE
+				{
+					maxhealth -= 4;
+				}
+				bwep = wep
+				bwepmod1 = wepmod1;
+				bwepmod2 = wepmod2;
+				bwepmod3 = wepmod3;
+				bwepmod4 = wepmod4;
+			}
+			else if cwep = 0 && ultra_got[31]//robot ultra third wep
+			{
+				ccurse = curse
+				cwep = wep
+				cwepmod1 = wepmod1;
+				cwepmod2 = wepmod2;
+				cwepmod3 = wepmod3;
+				cwepmod4 = wepmod4;
+			}
+			else if wep != 0
+			{
+				var tx = targetPickup.x;
+				var ty = targetPickup.y;
+		
+				if ultra_got[66] && altUltra
+				{
+					tx = x;
+					ty = y;
+					alarm[3] = max(alarm[3],6);
+					if myShield == -1 || !instance_exists(myShield)
+					{
+						myShield = instance_create(x,y,EuphoriaShield);
+						with myShield
+						{
+							owner = other.id;
+						}
+					}
+				}
+				with instance_create(tx,ty,WepPickup)
+				{
+					pickedup=true;
+					scrWeapons()
+					wep = other.wep;
+					name = wep_name[wep];
+					type = wep_type[wep];
+					curse = other.curse;
+					wepmod1=other.wepmod1;
+					wepmod2=other.wepmod2;
+					wepmod3=other.wepmod3;
+					wepmod4=other.wepmod4;
+					//alarm[0] = 0; Can't heavy heart this? Let's try it this out first it seems fun
+					sprite_index = wep_sprt[wep]
+					ammo = 0
 				}
 			}
+			if targetPickup.wep == 239//ROCKET GLOVE GM UNLOCK
+				scrUnlockGameMode(13,"FOR PICKING UP A ROCKET GLOVE")
+
+			wep = targetPickup.wep
+			curse = targetPickup.curse
+			wepmod1 = targetPickup.wepmod1
+			wepmod2 = targetPickup.wepmod2
+			wepmod3 = targetPickup.wepmod3
+			wepmod4 = targetPickup.wepmod4
+			can_shoot = 1
+			reload = min(reload,0)
+			queueshot = 0;
+			if skill_got[35]
+			{
+				var lowa = wep_load[wep]*-2;
+				if reload <= lowa*0.5 && queueshot < 1
+				{
+					queueshot++;
+					scrPlayReloadSound(wep);
+				} else if reload <= lowa && queueshot < 2
+				{
+					queueshot++;
+					scrPlayReloadSound(wep);
+				}
+			}
+
+			if wep == 298//golden oops gun
+				game_end();
+
+
+			snd_play(wep_swap[wep])
+			if (curse)
+			{
+				snd_play(sndSwapCursed);
+			}
+			if (scrCheckGold(wep_name[targetPickup.wep]))
+			{
+				snd_play(sndSwapGold);	
+			}
+			dir = instance_create(x,y,PopupText)
+			dir.mytext = string(wep_name[wep])+"!"
+
+			//Done picking up
+			scrWeaponHold();
+			with targetPickup
+				instance_destroy()
+			}
+			if ( wep != 0 && bwep != 0 && cwep != 0 && scrMeleeWeapons(wep) && scrMeleeWeapons(bwep) && scrMeleeWeapons(cwep))
+			{
+				scrUnlockGameMode(31,"FOR HOLDING#THREE MELEE WEAPONS");
+			}
 		}
-	with instance_create(tx,ty,WepPickup)
-	{
-	pickedup=true;
-	scrWeapons()
-	wep = other.wep
-	name = wep_name[wep]
-	type = wep_type[wep]
-	curse = other.curse
-	wepmod1=other.wepmod1;
-	wepmod2=other.wepmod2;
-	wepmod3=other.wepmod3;
-	wepmod4=other.wepmod4;
-	//alarm[0] = 0; Can't heavy heart this? Let's try it this out first it seems fun
-	/*WEAPON MODS
-	mod1[]
-	mod2[]
-	mod3[]
-	0 nothing
-	1 toxic
-	2 explosive
-	3 flame
-	4 frost
-	5 blood
-	6 lightning
-	7 kraken
-	*/
-
-
-	sprite_index = wep_sprt[wep]
-	ammo = 0
-	}
-	}
-	if targetPickup.wep = 239//ROCKET GLOVE GM UNLOCK
-	scrUnlockGameMode(13,"FOR PICKING UP A ROCKET GLOVE")
-
-	wep = targetPickup.wep
-	curse = targetPickup.curse
-	wepmod1 = targetPickup.wepmod1
-	wepmod2 = targetPickup.wepmod2
-	wepmod3 = targetPickup.wepmod3
-	wepmod4 = targetPickup.wepmod4
-	can_shoot = 1
-	reload = min(reload,0)
-	queueshot = 0;
-	if skill_got[35]
-	{
-		var lowa = wep_load[wep]*-2;
-		if reload <= lowa*0.5 && queueshot < 1
-		{
-			queueshot++;
-			scrPlayReloadSound(wep);
-		} else if reload <= lowa && queueshot < 2
-		{
-			queueshot++;
-			scrPlayReloadSound(wep);
-		}
-	}
-
-	if wep=298//golden oops gun
-	game_end();
-
-
-	snd_play(wep_swap[wep])
-	if (curse)
-	{
-		snd_play(sndSwapCursed);
-	}
-	if (scrCheckGold(wep_name[targetPickup.wep]))
-	{
-		snd_play(sndSwapGold);	
-	}
-	dir = instance_create(x,y,PopupText)
-	dir.mytext = string(wep_name[wep])+"!"
-
-		//Done picking up
-		scrWeaponHold();
-		with targetPickup
-			instance_destroy()
-		}
-		if ( wep != 0 && bwep != 0 && cwep != 0 && scrMeleeWeapons(wep) && scrMeleeWeapons(bwep) && scrMeleeWeapons(cwep))
-		{
-			scrUnlockGameMode(31,"FOR HOLDING#THREE MELEE WEAPONS");
-		}
-	}
 
 
 	} else

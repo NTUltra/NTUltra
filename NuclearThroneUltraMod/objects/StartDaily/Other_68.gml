@@ -8,15 +8,20 @@ if (type == network_type_data) {
 	buffer_seek(buffer, buffer_seek_start, 0);
 	var data = buffer_read(buffer, buffer_u8);
 	debug("data received: ",data);
+	connectionState = 1;
 	switch(data)
 	{
 		case NETDATA.CLIENT_ID:
 			myClientId = buffer_read(buffer, buffer_u16);
 			UberCont.todaysSeed = buffer_read(buffer, buffer_u16);
-			UberCont.dailyDay = buffer_read(buffer, buffer_u16);
+			UberCont.dailyDay = buffer_read(buffer, buffer_u16) + 1;
 			UberCont.totalDailies = UberCont.dailyDay;
 			network_destroy(serverSocket);
 			instance_destroy();
+			with Player
+			{
+				subarea = 0;	
+			}
 			room_goto(romGame);
 			with UberCont {
 				if opt_gamemode == 26 {

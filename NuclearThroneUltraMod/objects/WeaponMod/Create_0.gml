@@ -28,6 +28,7 @@ modname = scrWepModName(wepmod);
 moddescription = scrWepModDescription(wepmod);
 holdExplainTimer = 0;
 name="##MODIFY WEAPON#"+modname;
+type = 0;
 instance_create(x,y,WallBreak);
 
 

@@ -19,6 +19,8 @@ function scrDarkness() {	if darkness = 1
 	draw_circle(x+16-__view_get( e__VW.XView, 0 ),y+16-__view_get( e__VW.YView, 0 ),32+random(4),0)}
 	with Player
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),130+random(4),0)
+	with InversionShard
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),54+random(4),0)
 	with You
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),130+random(4),0)
 	with MeatExplosion
@@ -134,6 +136,8 @@ function scrDarkness() {	if darkness = 1
 		else
 		draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),45+random(3),0)
 	}
+	with InversionShard
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),48+random(4),0)
 	with Explosion
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),110+random(3),0)
 	with SmallExplosion

@@ -105,7 +105,7 @@ char[17].num = 17
 }
 if UberCont.race_have[27]
 {
-	char[27] = instance_create(196,79,CampChar)
+	char[27] = instance_create(200,70,CampChar)
 	char[27].sprite_index = sprHandsMenu
 	char[27].spr_menu = sprHandsMenuSelected
 	char[27].spr_to = sprHandsMenuSelect

@@ -2763,7 +2763,7 @@ function scrWeapons() {
 	wep_load[250] = 12
 	wep_cost[250] = 1
 	wep_sprt[250] = sprAutoExploBow
-	wep_area[250] = 8
+	wep_area[250] = 9
 	wep_text[250] = ""
 	wep_swap[250] = sndSwapBow
 	wep_rad[250] = 0;
@@ -3720,7 +3720,7 @@ function scrWeapons() {
 	wep_load[337] = 14
 	wep_cost[337] = 1
 	wep_sprt[337] = sprMiniLightningPistol
-	wep_area[337] = 1
+	wep_area[337] = 0
 	wep_text[337] = "and we're back"
 	wep_swap[337] = sndSwapPistol
 	wep_rad[337] = 0;
@@ -4292,7 +4292,7 @@ function scrWeapons() {
 	wep_load[387] = 10
 	wep_cost[387] = 2
 	wep_sprt[387] = sprBouncerPlasmaRifle
-	wep_area[387] = 10
+	wep_area[387] = 9
 	wep_text[387] = "boioioioink"
 	wep_swap[387] = sndSwapEnergy
 	wep_rad[387] = 0;

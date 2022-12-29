@@ -1005,22 +1005,22 @@ function scrDrawHUD() {
 		with Player.targetPickup
 		{
 
-		draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-7)
-		if type = 1{
-		draw_sprite(sprBulletIconBG,2,x+7,y-21)
-		draw_sprite(sprBulletIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
-		if type = 2{
-		draw_sprite(sprShotIconBG,2,x+7,y-21)
-		draw_sprite(sprShotIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
-		if type = 3{
-		draw_sprite(sprBoltIconBG,2,x+7,y-21)
-		draw_sprite(sprBoltIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
-		if type = 4{
-		draw_sprite(sprExploIconBG,2,x+7,y-21)
-		draw_sprite(sprExploIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
-		if type = 5{
-		draw_sprite(sprEnergyIconBG,2,x+7,y-21)
-		draw_sprite(sprEnergyIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
+			draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-7)
+			if type = 1{
+			draw_sprite(sprBulletIconBG,2,x+7,y-21)
+			draw_sprite(sprBulletIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
+			if type = 2{
+			draw_sprite(sprShotIconBG,2,x+7,y-21)
+			draw_sprite(sprShotIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
+			if type = 3{
+			draw_sprite(sprBoltIconBG,2,x+7,y-21)
+			draw_sprite(sprBoltIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
+			if type = 4{
+			draw_sprite(sprExploIconBG,2,x+7,y-21)
+			draw_sprite(sprExploIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
+			if type = 5{
+			draw_sprite(sprEnergyIconBG,2,x+7,y-21)
+			draw_sprite(sprEnergyIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,x+7,y-21)}
 
 	//wep_area[Player.wep]
 	/*
@@ -1408,11 +1408,11 @@ function scrDrawHUD() {
 			draw_sprite(sprEPickup,UberCont.opt_gamepad,x+8,y)
 
 			draw_set_color(c_black)
-			draw_text(x+16,y,string_hash_to_newline(string(name)))
-			draw_text(x+17,y,string_hash_to_newline(string(name)))
-			draw_text(x+17,y-1,string_hash_to_newline(string(name)))
+			draw_text(x+16,y,string_hash_to_newline(string(modname)))
+			draw_text(x+17,y,string_hash_to_newline(string(modname)))
+			draw_text(x+17,y-1,string_hash_to_newline(string(modname)))
 			draw_set_color(c_white)
-			draw_text(x+16,y-1,string_hash_to_newline(string(name)))
+			draw_text(x+16,y-1,string_hash_to_newline(string(modname)))
 			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 			holdExplainTimer ++;
 			//Ultra mod destription

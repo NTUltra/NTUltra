@@ -7,12 +7,18 @@ if (gamemodeOrder[gamemodenr] == 26)
 		dailyDone = UberCont.encrypted_data.daily_race_dates[array_length(UberCont.encrypted_data.daily_race_dates)-1] == UberCont.today
 	}
 	if !dailyDone
-	with UberCont
 	{
-		seed = todaysSeed + 1;
-		//seedText = seed;
-		useSeed = true;
-		canRestart = false;
+		with UberCont
+		{
+			seed = todaysSeed + 1;
+			//seedText = seed;
+			useSeed = true;
+			canRestart = false;
+		}
+		with DailyScore
+			image_index = 0;
+		with DailyRace
+			image_index = 1;
 	}
 }
 else if (gamemodeOrder[gamemodenr] == 27)
@@ -22,13 +28,19 @@ else if (gamemodeOrder[gamemodenr] == 27)
 		dailyDone = UberCont.encrypted_data.daily_score_dates[array_length(UberCont.encrypted_data.daily_score_dates)-1] == UberCont.today
 	}
 	if !dailyDone
+	{
 		with UberCont
 		{
 			seed = todaysSeed;
-			seedText = seed;
+			//seedText = seed;
 			useSeed = true;
 			canRestart = false;
 		}
+		with DailyScore
+			image_index = 1;
+		with DailyRace
+			image_index = 0;
+	}
 }
 else
 {
@@ -39,4 +51,8 @@ else
 		canRestart = true;
 		seedText = "";
 	}
+	with DailyScore
+		image_index = 0;
+	with DailyRace
+		image_index = 0;
 }

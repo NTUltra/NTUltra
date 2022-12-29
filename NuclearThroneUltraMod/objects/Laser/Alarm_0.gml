@@ -108,7 +108,7 @@ if(instance_exists(Player)){
 			UberCont.ultramodSwap = false;
 			with instance_create(x,y,thebolt)
 			{motion_add(other.image_angle,24)
-				dmg = round(dmg*0.5);
+				dmg = round(dmg*0.4);
 				scrCopyWeaponMod(other);
 			image_angle = direction
 			team = other.team
@@ -120,7 +120,7 @@ if(instance_exists(Player)){
 				with instance_create(x,y,thebolt)
 				{
 					motion_add(other.image_angle+5*acc,24)
-					dmg = round(dmg*0.5);
+					dmg = round(dmg*0.4);
 					scrCopyWeaponMod(other);
 					image_angle = direction
 					team = other.team
@@ -129,7 +129,7 @@ if(instance_exists(Player)){
 				with instance_create(x,y,thebolt)
 				{
 					motion_add(other.image_angle-5*acc,24)
-					dmg = round(dmg*0.5);
+					dmg = round(dmg*0.4);
 					scrCopyWeaponMod(other);
 					image_angle = direction
 					team = other.team
@@ -138,7 +138,7 @@ if(instance_exists(Player)){
 				with instance_create(x,y,thebolt)
 				{
 					motion_add(other.image_angle+10*acc,24)
-					dmg = round(dmg*0.5);
+					dmg = round(dmg*0.4);
 					scrCopyWeaponMod(other);
 					image_angle = direction
 					team = other.team
@@ -147,7 +147,7 @@ if(instance_exists(Player)){
 				with instance_create(x,y,thebolt)
 				{
 					motion_add(other.image_angle-10*acc,24)
-					dmg = round(dmg*0.5);
+					dmg = round(dmg*0.4);
 					scrCopyWeaponMod(other);
 					image_angle = direction
 					team = other.team
@@ -156,7 +156,7 @@ if(instance_exists(Player)){
 				with instance_create(x,y,thebolt)
 				{
 					motion_add(other.image_angle+15*acc,24)
-					dmg = round(dmg*0.5);
+					dmg = round(dmg*0.4);
 					scrCopyWeaponMod(other);
 					image_angle = direction
 					team = other.team
@@ -165,7 +165,7 @@ if(instance_exists(Player)){
 				with instance_create(x,y,thebolt)
 				{
 					motion_add(other.image_angle-15*acc,24)
-					dmg = round(dmg*0.5);
+					dmg = round(dmg*0.4);
 					scrCopyWeaponMod(other);
 					image_angle = direction
 					team = other.team

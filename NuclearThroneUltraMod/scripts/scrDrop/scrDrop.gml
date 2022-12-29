@@ -186,7 +186,7 @@ function scrDrop(itemdrop, weapondrop) {
 		with instance_create(x+random(4)-2,y+random(4)-2,WepPickup)
 		{
 		scrWeapons()
-		scrDecideWep(0)
+		wep = scrDecideWep(0)
 		name = wep_name[wep]
 		type = wep_type[wep]
 		ammo = 50

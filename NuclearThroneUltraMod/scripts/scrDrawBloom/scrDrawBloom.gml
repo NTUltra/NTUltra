@@ -249,7 +249,7 @@ function scrDrawBloom() {
 	{
 	draw_sprite_ext(sprite_index,image_index,x,y,right,1,image_angle,c_white,(ultra_got[49]*2)*sheepPower/10);}
 	if race = 9 and bskin
-	draw_sprite_ext(sprite_index,image_index,x,y,right*1.2,1.2,image_angle,c_white,ba)
+	draw_sprite_ext(sprite_index,image_index,x,y,right*1.2,image_yscale*1.2,angle,c_white,ba)
 	if skill_got[8]//gamma guts
 	{
 		draw_sprite_ext(sprGammaGuts,wave,x,y,1.1,1.1,image_angle,c_white,ba)

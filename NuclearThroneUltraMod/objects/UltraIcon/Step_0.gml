@@ -143,7 +143,7 @@ else if skill == 82
 		alarm[3]=60;	
 	}
 }
-else if skill == 92 &&( Player.wep_type[Player.wep] == 3 && Player.wep_type[Player.bwep] == 3 || Player.unlockAlternativeUltras)
+else if skill == 92 && Player.race == 23 && ( Player.wep_type[Player.wep] == 3 && Player.wep_type[Player.bwep] == 3 || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -153,7 +153,7 @@ else if skill == 92 &&( Player.wep_type[Player.wep] == 3 && Player.wep_type[Play
 		ultra_tips[92] = "porkupine"
 	}
 }
-else if skill == 96 && ((Player.crown == 11 || Player.crown == 25 || Player.skill_got[2]) && !Player.skill_got[17] || Player.unlockAlternativeUltras)
+else if skill == 96 && Player.race == 24 && ((Player.crown == 11 || Player.crown == 25 || Player.skill_got[2]) && !Player.skill_got[17] || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -357,7 +357,7 @@ else if skill == 72 && ((Player.maxhealth < 8 && UberCont.opt_gamemode != 9) || 
 		ultra_tips[72] = "right back at ya"
 	}
 }
-else if skill == 77 && (Player.skill_got[0] || Player.unlockAlternativeUltras)
+else if skill == 77 && Player.race == 20 && (Player.skill_got[0] || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -387,7 +387,7 @@ else if skill = 85//ROGUE SUPER PORTAL STRIKE
 		Player.rogueammo=8;
 	}
 }
-else if skill == 87 && (scrHasAnEmptyLife() || Player.unlockAlternativeUltras)
+else if skill == 87 && Player.race == 22 && (scrHasAnEmptyLife() || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -530,7 +530,7 @@ else if skill==66
 	    }
 	}
 }
-else if skill == 68
+else if skill == 68 && Player.race == 17
 {
 	with Player {
 		if (unlockAlternativeUltras || scrHasMorphMod() || scrHasMorphWeapon())

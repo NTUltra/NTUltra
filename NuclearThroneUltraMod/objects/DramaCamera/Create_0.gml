@@ -388,8 +388,9 @@ else if Player.area == 120
 }
 
 }
+var n = name;
 with instance_create(x,y,Drama)
-name=other.name;
+	name=n
 
 __view_set( e__VW.XView, 0, x-(__view_get( e__VW.WView, 0 )*0.5) );
 __view_set( e__VW.YView, 0, y-(__view_get( e__VW.HView, 0 )*0.5) );

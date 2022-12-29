@@ -100,7 +100,12 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 				with WepPickup
 				{
 					if wep == other.wep
-						return scrDecideWep(theTier, maxTriesParam, cursedParam, minWepAreaParam, areaWepTries + 1)
+					{
+						with other
+						{
+							return scrDecideWep(theTier, maxTriesParam, cursedParam, minWepAreaParam, areaWepTries + 1);
+						}
+					}
 				}
 			}
 		}

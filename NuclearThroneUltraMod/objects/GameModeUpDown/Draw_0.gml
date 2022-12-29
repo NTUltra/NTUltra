@@ -39,18 +39,17 @@ else{
 }
 
 //draw_sprite(sprite_index,/*UberCont.opt_gamemode*/1,x,y)
-/*
-if (UberCont.opt_gamemode==27&&gamemodeOrder[gamemodenr]==27)
+
+if (UberCont.opt_gamemode==27&&gamemodeOrder[gamemodenr]==27) || UberCont.opt_gamemode==26&&gamemodeOrder[gamemodenr]==26
 {
-	debug("leaderboard");
-	if !instance_exists(GoToLeaderboard)
-		instance_create(x,y+24,GoToLeaderboard);
+	if !instance_exists(GoToLeaderboard) && !instance_exists(PlayerSpawn)
+		instance_create(x-10,y+24,GoToLeaderboard);
 }
 else{
 	with GoToLeaderboard
 		instance_destroy()
 }
-*/
+
 
 if (UberCont.opt_gamemode==19&&gamemodeOrder[gamemodenr]==19)
 {
@@ -79,10 +78,12 @@ if (UberCont.gamemode_have[gamemodeOrder[gamemodenr]]=1 && !dailyDone)
 }
 else
 {
-draw_sprite(sprLocked,0,x,y+38);
+draw_sprite(sprLocked,0,x-18,y+38);
 var str;
 if dailyDone && UberCont.gamemode_have[gamemodeOrder[gamemodenr]]=1
 {
+	if !instance_exists(GoToLeaderboard)
+		instance_create(x-10,y+24,GoToLeaderboard);
 	/*
 	if ((gamemodeOrder[gamemodenr] == 26 && array_length(UberCont.encrypted_data.ctot_dailies_race_seed) == 1)
 	|| (gamemodeOrder[gamemodenr] == 27 && array_length(UberCont.encrypted_data.ctot_dailies_score_seed) == 1))

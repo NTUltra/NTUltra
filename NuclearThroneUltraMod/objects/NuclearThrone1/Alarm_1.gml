@@ -58,7 +58,11 @@ if target != noone && target > -1 && instance_exists(target)
 	{
 		walk = alarm[1];
 		if walkDir == 0
-			walkDir = 0.8;
+		{
+			walkDir = 0.85;
+			if y > ystart + 300
+				walkDir = 0.7;
+		}
 	}
 }
 else if instance_exists(ThroneBeam)

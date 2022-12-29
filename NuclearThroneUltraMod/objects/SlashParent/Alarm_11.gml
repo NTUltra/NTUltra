@@ -14,7 +14,7 @@ var yy = y + lengthdir_y(ol,image_angle+180);
 with instance_create(xx,yy,toSpawn)
 {
 	scrCopyWeaponMod(other);
-	ceil(other.dmg*0.25);
+	ceil(other.dmg*0.3);
 	direction = other.direction;
 	image_angle = direction;
 	speed = 14+other.speed;
@@ -25,7 +25,7 @@ var offset = 30 * acc;
 with instance_create(xx,yy,toSpawn)
 {
 	scrCopyWeaponMod(other);
-	ceil(other.dmg*0.25);
+	ceil(other.dmg*0.3);
 	direction = other.direction-offset;
 	image_angle = direction;
 	speed = 14+other.speed;

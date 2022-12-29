@@ -73,7 +73,7 @@ else if um == ultramods.lightningPellet
 	{
 		image_angle = other.direction;
 		team = other.team
-		ammo = 4+round(other.speed*0.8);
+		ammo = 5+round(other.speed*0.8);
 		canUltraMod = false;
 		event_perform(ev_alarm,0)
 		visible = 0
@@ -84,7 +84,7 @@ else if um == ultramods.lightningPellet
 	{
 		image_angle = other.direction;
 		team = other.team
-		ammo = round(other.speed*0.5);
+		ammo = 1 + round(other.speed*0.6);
 		canUltraMod = false;
 		event_perform(ev_alarm,0)
 		visible = 0

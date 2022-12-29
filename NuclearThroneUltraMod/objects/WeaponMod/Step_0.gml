@@ -85,14 +85,17 @@ if place_meeting(x,y,Player)
 				scrUnlockCharacter(17,"FOR MODDING A WEAPON")
 
 				///store the data into this object
-				other.wep=wep;
-				other.name=wep_name[wep];
-				other.type=wep_type[wep]
-				other.curse=curse;
-				other.wepmod1=wepmod1;
-				other.wepmod2=wepmod2;
-				other.wepmod3=wepmod3;
-				other.wepmod4=wepmod4;
+				with other
+				{
+					wep = other.wep;
+					name = wep_name[wep];//THIS IS WHERE IT GOES WRONG
+					type = wep_type[wep]
+					curse = other.curse;
+					wepmod1 = other.wepmod1;
+					wepmod2=other.wepmod2;
+					wepmod3=other.wepmod3;
+					wepmod4=other.wepmod4;
+				}
 				if curse == 1
 					snd_play(sndCursedReminder);
 				snd_play(snd_thrn);

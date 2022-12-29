@@ -13,4 +13,12 @@ if alarm[0] < 1
 draw_text(camera_get_view_x(view_camera[0])+4,
 camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) - 2,
 "[ESC] CANCEL");
-draw_sprite(sprLoading,image_index,xx,yy);
+if alarm[1] > 0
+{
+	draw_sprite(sprLoading,image_index,xx,yy);
+}
+else
+{
+	draw_set_halign(fa_center);
+	draw_text(xx,yy,"CONNECTION FAILED");
+}

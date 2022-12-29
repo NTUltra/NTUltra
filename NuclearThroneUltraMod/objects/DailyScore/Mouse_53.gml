@@ -12,7 +12,7 @@ if hover
 				useSeed = false;
 				canRestart = true;
 				seedText = "";
-				opt_gamemode = 0;
+				opt_gamemode = previous_gamemode;
 			}
 			image_index = 0;
 		}
@@ -25,6 +25,7 @@ if hover
 				//seedText = seed;
 				useSeed = true;
 				canRestart = false;
+				previous_gamemode = opt_gamemode;
 				opt_gamemode = 27;
 			}
 			
@@ -37,6 +38,7 @@ if hover
 			goToLeaderboard = true;
 			runScore = [];
 			runRace = [];
+			opt_gamemode = previous_gamemode;
 			leaderboardType = LEADERBOARD.SCORE;
 		}
 		scrRestart();

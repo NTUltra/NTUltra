@@ -21,5 +21,8 @@ if KeyCont.key_pick[other.p] = 1
 		repeat(10)
 		instance_create(x+random(16)-8,y+random(16)-8,Curse)
 	}
+	Player.curse = 0
+	Player.bcurse = 0
+	Player.ccurse = 0
 	scrExitCrownVault();
 }

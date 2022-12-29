@@ -182,7 +182,6 @@ with Player//Data to keep
 		with instance_create(x,y,RespawnLightning)
 		{
 			amount = other.boostLevel-1;
-			debug("amount: ",amount);
 		}
 	}
 }

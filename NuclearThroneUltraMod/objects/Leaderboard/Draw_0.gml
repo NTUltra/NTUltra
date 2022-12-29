@@ -2,7 +2,10 @@
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_colour(c_white);
-if array_length(leaderboard) > 0
+if !connectionSuccess {
+	draw_text(x + 16,y-16,"CONNECTION FAILED");
+}
+else if array_length(leaderboard) > 0
 {
 	var space = 22;
 	draw_text(x + 16,y-16,leaderboardName[0]);
@@ -59,11 +62,11 @@ if array_length(leaderboard) > 0
 				else
 				{
 					draw_set_valign(fa_bottom);
-					draw_text_ext(xx,yy-4,area[0],10,48);
+					draw_text_ext(xx,yy,area[0],10,48);
 				}
 				draw_set_valign(fa_top);
 				draw_set_halign(fa_left);
-				draw_text_ext(xx,yy+4,"L"+entry[4],10,48);
+				draw_text_ext(xx,yy+3,"L"+entry[4],10,48);
 			}
 			else
 			{
@@ -403,7 +406,7 @@ else if noBoard
 		s,s,270,c_white,1);
 		
 	}
-	if UberCont.dailyDay > 1
+	if UberCont.dailyDay > 0
 	{
 		var s = 1;
 		var ax = o

@@ -38,6 +38,7 @@ if (type == network_type_data) {
 			if isScore
 			var socket = buffer_read(buffer, buffer_u16);
 			var wantDay = buffer_read(buffer, buffer_u16);
+			show_debug_message("wantDay " + string(wantDay));
 			var newScore = [];
 			newScore[0] = buffer_read(buffer, buffer_u64);//Kills / frame time
 			newScore[1] = buffer_read(buffer,buffer_string);//Username
@@ -152,7 +153,7 @@ if (type == network_type_data) {
 			//	buffer_write(sendBuffer,buffer_string,string_split(string_replace(dailyScoreSaveFileString,"ntultra",""),"_")[1]);
 			//else
 			//	buffer_write(sendBuffer,buffer_string,string_split(string_replace(dailyRaceSaveFileString,"ntultra",""),"_")[1]);
-			buffer_write(sendBuffer,buffer_string,fileName);
+			buffer_write(sendBuffer,buffer_string,string_split(string_replace(fileName,"ntultra",""),"_")[1]);
 			buffer_write(sendBuffer,buffer_u16,0);//Page
 			if isScore
 				buffer_write(sendBuffer,buffer_u16,ceil(totalScoreEntries/10)-1);//Total pages
@@ -175,8 +176,8 @@ if (type == network_type_data) {
 			show_debug_message("leaderboard request ");
 			var socket = buffer_read(buffer, buffer_u16);
 			var page = buffer_read(buffer, buffer_u16);//Display per 10?
-			var wantDailyNumber = buffer_read(buffer, buffer_u16);//Display per 10?
-			if wantDailyNumber == 0
+			var wantDailyNumber = buffer_read(buffer, buffer_u16) - 1;//Display per 10?
+			if wantDailyNumber == -1
 				wantDailyNumber = totalDailies;
 			show_debug_message("page " + string(page));
 			show_debug_message("dailyNumber " + string(wantDailyNumber));
@@ -186,14 +187,14 @@ if (type == network_type_data) {
 			var fileName;
 			if getScore {
 				fileName = file_find_first("ds"+string(wantDailyNumber) + "_ntultradailyscore*", 0);
-				//if fileName == ""
-				//	fileName = dailyScoreSaveFileString;
+				if fileName == ""
+					fileName = dailyScoreSaveFileString;
 			}
 			else {
 				fileName = file_find_first(string(wantDailyNumber) + "_ntultradailyrace*", 0);
 				stringChecker = "racelb";
-				//if fileName == ""
-				//	fileName = dailyRaceSaveFileString;
+				if fileName == ""
+					fileName = dailyRaceSaveFileString;
 			}
 			show_debug_message("fileName " + string(fileName));
 			var scoreLeaderboard = "";
@@ -211,9 +212,11 @@ if (type == network_type_data) {
 				show_debug_message("amount of scores to show " + string(j));
 				ini_close();
 			}
+				
 			var totalPages = ceil(totalScoreEntries/10) - 1;
 			if !getScore
 				totalPages = ceil(totalRaceEntries/10) - 1;
+			totalPages = max(0,totalPages);
 			buffer_write(sendBuffer,buffer_string,scoreLeaderboard);
 			/*
 			if getScore

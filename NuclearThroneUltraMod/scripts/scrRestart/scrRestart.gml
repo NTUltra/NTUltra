@@ -19,7 +19,7 @@ function scrRestart() {
 	}
 	with SurvivalWave
 		instance_destroy();
-	if UberCont.goToLeaderboard
+	if !instance_exists(PlayerSpawn) && UberCont.goToLeaderboard
 	{
 		room_goto(romLeaderboard);
 		with UberCont

@@ -3,7 +3,7 @@
 win8 = 1;
 version = 000//23 is final probably
 encryptedVersion = 003;
-public = 0 //1 is no cheats and release
+public = 1 //1 is no cheats and release
 defaultPublic = public;
 serverIp =  "";
 serverPort =  0;
@@ -66,13 +66,13 @@ for (var i = 0; i < byteSize; i++) {
 }*/
 todaysSeed = -1;
 today = string(current_day) + "-" + string(current_month) + "-"+ string(current_year);
-dailyDay = 0;
+dailyDay = -1;
 totalDailies = -1;
 useSeed = false;
 seed = 0;
 seedText = "";
 
-
+previous_gamemode = 0;
 goToLeaderboard = false;
 runScore = [];
 runRace = [];

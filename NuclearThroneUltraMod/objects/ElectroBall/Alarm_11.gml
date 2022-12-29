@@ -22,7 +22,7 @@ else if um == ultramods.shotgunElectro
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = other.speed;
+		speed = 11 + other.speed;
 		team = other.team;
 		alarm[11] = 0;
 	}

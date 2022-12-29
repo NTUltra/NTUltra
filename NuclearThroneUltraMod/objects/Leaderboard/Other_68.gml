@@ -7,12 +7,14 @@ if (type == network_type_data) {
 	var buffer = async_load[? "buffer"];
 	buffer_seek(buffer, buffer_seek_start, 0);
 	var data = buffer_read(buffer, buffer_u8);
+	alarm[3] = 0;
 	debug("data received: ",data);
 	switch(data)
 	{
 		case NETDATA.CLIENT_ID:
 			myClientId = buffer_read(buffer, buffer_u16);
 			UberCont.todaysSeed = buffer_read(buffer, buffer_u16);
+			UberCont.totalDailies = buffer_read(buffer, buffer_u16);
 			if array_length(UberCont.runScore) > 1
 			{
 				debug("send score: ",string(UberCont.runScore));
@@ -39,6 +41,7 @@ if (type == network_type_data) {
 			else
 			{
 				//Just get leaderboard
+				UberCont.dailyDay = UberCont.totalDailies;
 				event_user(0);
 			}
 			UberCont.runScore = [];
@@ -47,9 +50,25 @@ if (type == network_type_data) {
 		break;
 		case NETDATA.LEADERBOARD:
 			debug("leaderboard received!");
+			//Allow continueation quicker
+			if alarm[1] > 3
+				alarm[1] = 3;
 			//Receiving leaderboard
 			var receivedLeaderboard = buffer_read(buffer,buffer_string);
 			var leaderboardTypeString = buffer_read(buffer,buffer_string);
+			if leaderboardTypeString == ""
+			{
+				if (leaderboardType == LEADERBOARD.SCORE)
+				{
+					leaderboardName[0] = "DAILY SCORE ";
+					leaderboardName[1] = UberCont.today;
+				}
+				else if (leaderboardType == LEADERBOARD.RACE)
+				{
+					leaderboardName[0] = "DAILY RACE ";
+					leaderboardName[1] = UberCont.today;
+				}
+			}
 			debug("leaderboardTypeString" ,leaderboardTypeString);
 			if string_count("dailyscore",leaderboardTypeString) > 0
 			{
@@ -62,18 +81,30 @@ if (type == network_type_data) {
 				leaderboardName[1] = string_replace(leaderboardTypeString,"dailyrace","");
 				leaderboardType = LEADERBOARD.RACE;
 			}
+			
+			
 			UberCont.leaderboardType = leaderboardType;
 			leaderboardName[1] = string_replace(leaderboardName[1],".sav","");
 			page = buffer_read(buffer,buffer_u16);
 			totalPages = buffer_read(buffer,buffer_u16);
-			UberCont.dailyDay = buffer_read(buffer,buffer_u16);
+			debug("UberCont.dailyDay ", UberCont.dailyDay);
+			UberCont.dailyDay = buffer_read(buffer,buffer_u16) + 1;
+			if leaderboardTypeString == "" {
+				leaderboardName[1] = "";
+				if UberCont.dailyDay == 1
+				{
+					UberCont.dailyDay = -1;
+					UberCont.totalDailies = -1;
+				}
+			}
+			debug("UberCont.dailyDay ", UberCont.dailyDay);
 			if UberCont.totalDailies == -1
 				UberCont.totalDailies = UberCont.dailyDay;
 			totalScoreLeaderboardEntries = string_count("|",receivedLeaderboard);
 			debug("totalScoreLeaderboardEntries ", totalScoreLeaderboardEntries);
 			//leaderboard = string_replace(receivedLeaderboard,"_","\n");
 			leaderboard = [];
-			if totalScoreLeaderboardEntries == 0
+			if totalScoreLeaderboardEntries == 0 || UberCont.dailyDay == 0
 				noBoard = true;
 			else
 				noBoard = false;

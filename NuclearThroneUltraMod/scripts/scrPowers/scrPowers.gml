@@ -778,7 +778,7 @@ function scrPowers() {
 
 	}
 
-	if race==17//weaponsmith
+	if race == 17
 	{
 		if (ultra_got[68] && altUltra)
 		{
@@ -1343,7 +1343,7 @@ function scrPowers() {
 			var cost = wep_cost[wep]*4
 			if wep_cost[wep] == 0
 			{
-				wep_cost[wep] = clamp(round(wep_area[wep] * 1.5),5,40);	
+				wep_cost[wep] = clamp(round(wep_area[wep] * 1.5),6,40);	
 			}
 			if (rad >= cost)//(wepType != 0 && ammo[wepType] - cost > 0)
 			{

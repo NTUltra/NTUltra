@@ -1,6 +1,8 @@
 if other.team != team and other.my_health > 0
 {
 	speed -= 0.02;
+	x += (xprevious - x)*0.9;
+	y += (yprevious - y)*0.9;
 	if other.sprite_index != other.spr_hurt
 	{
 		Sleep(4);
