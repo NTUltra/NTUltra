@@ -102,7 +102,7 @@ else if array_length(leaderboard) > 0
 			}
 			xx += 30;
 			if (entry[11] != "1")
-				draw_sprite(scrLeaderboardCrown(real(entry[11])),0,xx,yy);
+				draw_sprite(scrLeaderboardCrown(real(entry[11])),0,xx,yy+2);
 			xx += 8;
 			if entry[12] != "255"
 			{
@@ -121,11 +121,11 @@ else if array_length(leaderboard) > 0
 				{
 					//Hands skins
 					//fish skin
-					if race == 1 && bskin == 2
+					if race == 1 && bskin == 2 && entry[12] == 4
 					{	
 						draw_sprite(sprFishCanGunHUD,0,xx,yy-8);
 					}
-					else if race == 27//race
+					else if race == 27 && entry[12] == 106//race
 					{
 						if bskin == 1//bskin
 							draw_sprite(sprHothandsHUD,0,xx,yy-8);
@@ -231,41 +231,41 @@ else if array_length(leaderboard) > 0
 			}
 			xx += 31;
 			if (entry[9] != "1")
-				draw_sprite(scrLeaderboardCrown(real(entry[9])),0,xx,yy);
+				draw_sprite(scrLeaderboardCrown(real(entry[9])),0,xx,yy+2);
 			xx += 8;
 			if entry[10] != "255"
 			{
-				var race = real(entry[5]);
-				var bskin = real(entry[6]);
-				var altUltra = bool(entry[7]);
+				var race = real(entry[3]);
+				var bskin = real(entry[4]);
+				var altUltra = bool(entry[5]);
 				if altUltra {
 					//alt Ultras
 					var ultraSpr = scrLeaderboardAltUltra(real(entry[5]));
 					if ultraSpr != -1
 						draw_sprite(ultraSpr,0,xx,yy-8);
 					else
-						draw_sprite(sprUltraIconHUD,real(entry[5]),xx,yy-8);
+						draw_sprite(sprUltraIconHUD,real(entry[10]),xx,yy-8);
 				}
 				else
 				{
 					//Hands skins
 					//fish skin
-					if race == 1 && bskin == 2
+					if race == 1 && bskin == 2 && entry[10] == 4
 					{	
 						draw_sprite(sprFishCanGunHUD,0,xx,yy-8);
 					}
-					else if race == 27//race
+					else if race == 27 && entry[12] == 106//race
 					{
 						if bskin == 1//bskin
 							draw_sprite(sprHothandsHUD,0,xx,yy-8);
 						else if bskin == 2
 							draw_sprite(sprExplosiveHandsHUD,0,xx,yy-8);
 						else
-							draw_sprite(sprUltraIconHUD,real(entry[5]),xx,yy-8);
+							draw_sprite(sprUltraIconHUD,real(entry[10]),xx,yy-8);
 					}
 					else
 					{
-						draw_sprite(sprUltraIconHUD,real(entry[5]),xx,yy-8);
+						draw_sprite(sprUltraIconHUD,real(entry[10]),xx,yy-8);
 					}
 				}
 			}
@@ -406,7 +406,7 @@ else if noBoard
 		s,s,270,c_white,1);
 		
 	}
-	if UberCont.dailyDay > 0
+	if UberCont.dailyDay > 1
 	{
 		var s = 1;
 		var ax = o

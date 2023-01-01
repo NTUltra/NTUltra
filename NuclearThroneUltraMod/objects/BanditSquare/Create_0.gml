@@ -26,10 +26,10 @@ maxDetectRange = 160;
 maxSpeed = 3;
 loops = GetPlayerLoops();
 actTime = 15;
-pSpeed = 4;
+pSpeed = 3.6;
 if loops > 0
 {
 	actTime = 10;
 	maxDetectRange += 20;
-	pSpeed = 4.5;
+	pSpeed = 4.1;
 }

@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-dmg = 16;
+dmg = 18;
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1

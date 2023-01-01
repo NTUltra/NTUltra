@@ -1,7 +1,9 @@
 /// @description Open chest
 if !instance_exists(GenCont)
 {
-	Player.nochest = 0
+	with Player {
+		nochest = 0;
+	}
 	if !oneweponly
 	{
 		repeat(1+mediumchest){

@@ -10,9 +10,9 @@ else {
 	show_debug_message("SUCCESFULLY CREATED SERVER");	
 }
 day = -1;
+defaultTotalDailies = -1;
 event_perform(ev_alarm,0);
 event_user(0);
-
 
 //Data types
 enum NETDATA {

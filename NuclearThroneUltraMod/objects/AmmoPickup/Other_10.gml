@@ -8,6 +8,8 @@ with Player
 	var st = wep_type[bwep];//secondary ammo type
 	var pa = ammo[pt];//primary ammo
 	var sa = ammo[st];//secondary ammo
+	var pc = wep_cost[wep];
+	var sc = wep_cost[bwep];
 	var pam = typ_amax[pt];//primary max ammo
 	var sam = typ_amax[st]//secondary max ammo
 	if pt == 0
@@ -15,10 +17,26 @@ with Player
 	if st == 0
 		pa = pam;
 }
-var ran = random(6);
-if (pa == pam or sa == sam && ran < 3)
+var ran = random(7);
+if ran > 6
 {
-	if ran < 1
+	//Make sure there is enough ammo to fire either gun
+	ran -= 1
+	if (sa < sc)
+	{
+		type = st;
+		ran = -1;
+	}
+	else if (pa < pc)
+	{
+		type = pt;
+		ran = -1;
+	}
+}
+
+if (pa == pam or sa == sam && ran < 3 && ran > -1)
+{
+	if ran < 2
 	{
 		//Chance to top up weapon that is not full
 		if (pa >= pam) && sa < sam
@@ -33,11 +51,12 @@ if (pa == pam or sa == sam && ran < 3)
 		type = choose(1,2,3,4,5)
 	}
 }
-else if Player.bwep != 0
+else if Player.bwep != 0 && ran > -1
 {
 	//Chance to give ammo which you need most
-	if ran < 1
+	if ran > 4
 	{
+		/*
 		if pt == 0
 		{
 			type = st;
@@ -47,10 +66,10 @@ else if Player.bwep != 0
 			type = pt;
 		}
 		else
-		{
+		{*/
 			var pap = pa/pam;//primary ammo percentage
 			var sap = sa/sam;//secondary ammo percentage
-			if pap < sap
+			if pap < sap && pt != 0
 			{
 				type = pt;	
 			}
@@ -58,7 +77,7 @@ else if Player.bwep != 0
 			{
 				type = st;	
 			}
-		}
+		//}
 	}
 	else
 	{

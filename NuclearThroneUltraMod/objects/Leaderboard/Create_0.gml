@@ -27,38 +27,6 @@ myClientId = -1;
 page = 0;
 totalPages = 0;
 image_speed = 0.6;
-/*
-with UberCont
-{
-	debug("runScore ",runScore);
-	debug("leaderboardType ",leaderboardType);
-	if (array_length(runScore) > 0 && leaderboardType == LEADERBOARD.SCORE) || ( array_length(runRace) > 0 && leaderboardType = LEADERBOARD.RACE)
-	{
-		if encrypted_data.username == ""
-		{
-			var inputText = "YOU CAN'T CHANGE THIS AFTERWARDS!";
-			var fail = true;
-			while fail
-			{
-				encrypted_data.username = get_string("ENTER A USERNAME",inputText);
-				if string_count(" ",encrypted_data.username)
-					inputText = "SPACES ARE NOT ALLOWED";
-				else if string_count("|",encrypted_data.username)
-					inputText = "| IS NOT ALLOWED";
-				else if string_length(encrypted_data.username) > 20
-					inputText = "THAT IS TOO LONG OF A NAME! (MAX 20 CHARACTERS)";
-				else if string_length(encrypted_data.username) < 1
-					inputText= "INPUT ATLEAST ONE CHARACTER";
-				else
-					fail = false;
-			}
-			scrSaveEncrypted();
-		}
-		runScore[1] = encrypted_data.username;
-		runRace[1] = encrypted_data.username;
-	}
-}
-*/
 leaderboardType = UberCont.leaderboardType;
 scrWeapons();
 scrCrowns();

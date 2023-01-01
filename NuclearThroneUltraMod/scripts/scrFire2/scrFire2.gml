@@ -542,8 +542,8 @@ function scrFire2() {
 	with instance_create(x,y,NukeBurst)
 	{
 	creator = other.id
-	ammo = 3
-	time = 10
+	ammo = 4
+	time = 7
 	team = other.team
 	event_perform(ev_alarm,0);
 
@@ -11056,7 +11056,7 @@ function scrFire2() {
 
 	with instance_create(x+lengthdir_x(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),BigPandaSlash)
 	{
-		dmg = 6;
+		dmg = 7;
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3

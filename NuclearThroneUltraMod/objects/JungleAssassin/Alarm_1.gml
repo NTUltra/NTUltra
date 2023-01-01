@@ -16,8 +16,8 @@ if target > 0
 			alarm[1]=tellTime*1.5;
 			if !notBehindWall
 			{
-				alarm[2] += 10;
-				alarm[1] += 10;
+				alarm[2] += 20;
+				alarm[1] += 20;
 			}
 		}
 		else if dis < 200

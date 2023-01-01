@@ -2353,8 +2353,8 @@ function scrWeapons() {
 	wep_name[213] = "SUPER NUKE LAUNCHER"
 	wep_type[213] = 4
 	wep_auto[213] = 0
-	wep_load[213] = 100
-	wep_cost[213] = 9
+	wep_load[213] = 90
+	wep_cost[213] = 12
 	wep_sprt[213] = sprSuperNukeLauncher
 	wep_area[213] = 13
 	wep_text[213] = "true power"

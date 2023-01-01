@@ -5,7 +5,8 @@ day = date_date_string(date_current_datetime());
 if day != yesterday
 {
 	var fileName = file_find_first("ds*", 0);
-	totalDailies = 0;
+	totalDailies = defaultTotalDailies;
+	defaultTotalDailies = 0;
 	while (fileName != "")
 	{
 		totalDailies ++;
@@ -21,6 +22,8 @@ if day != yesterday
 	todaySeed = byteSeed;
 	dailyScoreSaveFileString="ds"+string(totalDailies) + "_ntultradailyscore"+string(day)+".sav";
 	dailyRaceSaveFileString=string(totalDailies) + "_ntultradailyrace"+string(day)+".sav";
+	show_debug_message("scopre " + string(dailyScoreSaveFileString));
+	show_debug_message("race " + string(dailyRaceSaveFileString));
 	scoreLeaderboardString = "";
 	raceLeaderboardString = "";
 }

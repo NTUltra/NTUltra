@@ -407,7 +407,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
     
     }
     else{
-	    if Player.ultra_got[73] || (Player.skillsChosen == 7 && Player.useGuarenteedReroll)//Melting ultra A patience
+	    if Player.ultra_got[73] || (Player.skillsChosen == 7 && !Player.useGuarenteedReroll)//Melting ultra A patience
 	    {
 			Player.useGuarenteedReroll = true;
 		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-96,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
@@ -452,7 +452,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 	    else  
 	    {
     
-	    if Player.ultra_got[73] || (Player.skillsChosen == 7 && Player.useGuarenteedReroll)//Melting ultra A patience
+	    if Player.ultra_got[73] || (Player.skillsChosen == 7 && !Player.useGuarenteedReroll)//Melting ultra A patience
 	    {
 			Player.useGuarenteedReroll = true;
 		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)

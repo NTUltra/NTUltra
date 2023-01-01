@@ -133,7 +133,7 @@ with UberCont {
     if opt_gamemode = 17 //CHEATS
 		public = 0
     //Daily
-	if !instance_exists(PlayerSpawn)
+	if !instance_exists(PlayerSpawn) && instance_number(Player) == 1 && !instance_exists(CrownIcon)
 	{
 	    if opt_gamemode == 26 {
 			instance_create(0,0,StartDaily);

@@ -27,8 +27,13 @@ if instance_exists(Player)
 		{
 			with other
 			{
-				if typ == 0
-					instance_destroy();
+				if typ == 0 // Laser
+				{
+					var d = point_distance(xstart,ystart,other.x,other.y) - 1;
+					x = xstart + lengthdir_x(d,image_angle);
+					y = ystart + lengthdir_y(d,image_angle);
+					image_xscale = point_distance(x,y,xstart,ystart)*0.5
+				}
 				else
 					event_perform(ev_collision,Wall);	
 			}
@@ -64,6 +69,13 @@ if instance_exists(Player)
 					}
 					snd_play(sndRicochetWall,0.1,true);
 					event_user(15);
+				}
+				else if typ == 0
+				{
+					var d = point_distance(xstart,ystart,other.x,other.y) - 1;
+					x = xstart + lengthdir_x(d,image_angle);
+					y = ystart + lengthdir_y(d,image_angle);
+					image_xscale = point_distance(x,y,xstart,ystart)*0.5	
 				}
 				else
 				{

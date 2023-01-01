@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description Fire
 snd_play(sndEnemyFire)
 wkick = 4
 with instance_create(x,y,EnemyBullet1Square)

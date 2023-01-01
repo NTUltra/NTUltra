@@ -1,7 +1,16 @@
 raddrop = 120
 maxhealth = 850
 scrBossHealthBuff();
-
+with chestprop {
+	var f = instance_nearest(Player.x + random_range(32,200), Player.y + random_range(128,400), Floor);
+	x = f.x+16;
+	y = f.y+16;
+}
+with RadChest {
+	var f = instance_nearest(Player.x + random_range(32,200), Player.y + random_range(128,400), Floor);
+	x = f.x+16;
+	y = f.y+16;
+}
 meleedamage = 7
 size = 4
 

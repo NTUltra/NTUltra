@@ -69,7 +69,8 @@ if (type == network_type_data) {
 					leaderboardName[1] = UberCont.today;
 				}
 			}
-			debug("leaderboardTypeString" ,leaderboardTypeString);
+			debug("leaderboardTypeString " ,leaderboardTypeString);
+			debug("receivedLeaderboard " ,receivedLeaderboard);
 			if string_count("dailyscore",leaderboardTypeString) > 0
 			{
 				leaderboardName[0] = "DAILY SCORE ";
@@ -89,14 +90,6 @@ if (type == network_type_data) {
 			totalPages = buffer_read(buffer,buffer_u16);
 			debug("UberCont.dailyDay ", UberCont.dailyDay);
 			UberCont.dailyDay = buffer_read(buffer,buffer_u16) + 1;
-			if leaderboardTypeString == "" {
-				leaderboardName[1] = "";
-				if UberCont.dailyDay == 1
-				{
-					UberCont.dailyDay = -1;
-					UberCont.totalDailies = -1;
-				}
-			}
 			debug("UberCont.dailyDay ", UberCont.dailyDay);
 			if UberCont.totalDailies == -1
 				UberCont.totalDailies = UberCont.dailyDay;

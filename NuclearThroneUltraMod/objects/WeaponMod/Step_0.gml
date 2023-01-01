@@ -88,8 +88,8 @@ if place_meeting(x,y,Player)
 				with other
 				{
 					wep = other.wep;
-					name = wep_name[wep];//THIS IS WHERE IT GOES WRONG
-					type = wep_type[wep]
+					name = other.wep_name[wep];//THIS IS WHERE IT GOES WRONG
+					type = other.wep_type[wep]
 					curse = other.curse;
 					wepmod1 = other.wepmod1;
 					wepmod2=other.wepmod2;

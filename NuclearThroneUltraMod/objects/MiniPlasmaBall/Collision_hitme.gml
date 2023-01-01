@@ -1,5 +1,6 @@
 if other.team != team and other.my_health > 0
 {
+	speed -= 0.8;
 	scrPlasmaPush();
 	if other.sprite_index != other.spr_hurt
 	{
