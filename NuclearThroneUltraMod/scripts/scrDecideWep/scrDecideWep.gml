@@ -97,21 +97,21 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 				var theTier = wepTierParam;
 				if theTier <= 0
 					theTier++;
+				var isOnGround = false;
 				with WepPickup
 				{
 					if wep == other.wep
 					{
-						with other
-						{
-							return scrDecideWep(theTier, maxTriesParam, cursedParam, minWepAreaParam, areaWepTries + 1);
-						}
+						isOnGround = true;
 					}
 				}
+				if isOnGround
+					return scrDecideWep(theTier, maxTriesParam, cursedParam, minWepAreaParam, areaWepTries + 1);
 			}
 		}
 		while (wep == 402 && Player.crown != 5)//Rolled gun gun? you must have crown of guns
 		{
-			scrDecideWep(wepTierParam, maxTriesParam, cursedParam, minWepAreaParam);
+			wep = scrDecideWep(wepTierParam, maxTriesParam, cursedParam, minWepAreaParam);
 		}
 	}
 	else

@@ -55,7 +55,7 @@ function scrTips() {
 	"insomnia does not work on faking assassins",
 	"there are other worlds out there",
 	/*more rares*/choose("be kind","the original idea for#the name trashtalk#came from lars in a stream#he made a lot of the sounds#in ultra mod","if you ever get stuck#outside a level#walk far away#from the level to get teleported back","use wasd to move","don't get baited by items","ask and ye shall receive","you smell that?","sick build bro","what does your gun tell you?","don't get baited by items"
-	,"frog is voiced by#Jukio Kallio","don't be sorry#git gutter"
+	,"frog is voiced by#Jukio Kallio","don't be sorry#git gutter","kimchi",
 	,"thematically inconsistent!","if you reach loop 2#your level cap increases by 1","skeleton has#a fifth ultra mutation","don't be afraid to pick up new weapons",choose("28 EGGS FOR BREAKFAST","shit on my tits","never pick hanzo","microtransactions","if you are seeing this#you are fucking aswesome")/*super rare*/
 	)
 	),choose(
@@ -87,7 +87,8 @@ function scrTips() {
 	"just enjoy",
 	"panda can throw",
 	"chicken can slow down time",
-	"the more dangerous the weapon#the more damage it deals"
+	"the more dangerous the weapon#the more damage it deals",
+	"everything changes"
 	) )
 	}
 
@@ -102,7 +103,7 @@ function scrTips() {
 	if Player.area = 2
 	tip = choose("don't drink the water","the sewers stink","don't touch the frogs","don't eat the rat meat","danger","water dripping","sludge everywhere","frog loves to sing")
 	if Player.area = 3
-	tip = choose("shoot robots on sight","there used to be trees here","look up","rust everywhere","the sound of birds","don't cross the streams","climb over cars","thieves can steal ammo","thieves can steal weapons")
+	tip = choose("shoot robots on sight","thank goodness snipers only have one eye","there used to be trees here","look up","rust everywhere","the sound of birds","don't cross the streams","climb over cars","thieves can steal ammo","thieves can steal weapons")
 	if Player.area = 4
 	tip = choose("oh no","good luck","spiderwebs everywhere","reflections on the walls","skin is crawling","nearly there")
 	if Player.area = 5
@@ -183,6 +184,8 @@ function scrTips() {
 	"jackhammers with 6 senses",
 	"shovels that hate texas",
 	"axes that wear vests it")
+	if Player.area = 126
+	tip = choose("skeletons","boneyard","crawling bones","don't get overwhelmed","be wary of skeletons","the dead walk","sniper skeletons are stationary",choose("emo land","goth land","dark world","graveyard","halloween"))
 	}
 
 

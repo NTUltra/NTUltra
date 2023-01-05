@@ -73,17 +73,17 @@ alarm[1] = 4+random(5);
         with instance_create(x,y,MiniFlameCannonBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(40)-20)+50,4.56)
+        motion_add(other.direction+(random(40)-20)+50,4.4)
         team = other.team}
         with instance_create(x,y,MiniFlameCannonBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(40)-20)-50,4.6)
+        motion_add(other.direction+(random(40)-20)-50,4.5)
         team = other.team}
         with instance_create(x,y,MiniFlameCannonBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(40)-20),4.6)
+        motion_add(other.direction+(random(40)-20),4.5)
         team = other.team}
     }
     else if point_distance(x,y,target.x,target.y)>70&&random(14) < 1//long SNIPE!
@@ -100,7 +100,7 @@ alarm[1] = 4+random(5);
     with instance_create(x,y,TrapFire)
     {
     sprite_index = sprFireLilHunter
-    motion_add(other.direction+random(60)-30,3+random(6))
+    motion_add(other.direction+random(60)-30,2+random(5))
     image_angle = direction
     team = other.team
     }
@@ -108,7 +108,7 @@ alarm[1] = 4+random(5);
         with instance_create(x,y,MiniFlameCannonBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(12)-6),5+random(3))
+        motion_add(other.direction+(random(12)-6),7)
         team = other.team}
     }
     else if random(8)<1 && point_distance(x,y,target.x,target.y)<200//breathe fire short range

@@ -1859,31 +1859,36 @@ if (RogueHeat==true)
 }
 
 /* */
+//INSOMNIA TIMER !?
 ///Lets try aggro
-if loops > 0
-	with enemy {
-		if super {
-			if alarm[1] > 3
-				alarm[1] -= 2;
-			my_health = min(maxhealth,my_health + 0.1);
-			speed *= 1.15;
+
+if instance_exists(PlayerAlarms2) && PlayerAlarms2.alarm[1] < 1
+{
+	if loops > 0
+		with enemy {
+			if super {
+				if alarm[1] > 3
+					alarm[1] -= 2;
+				my_health = min(maxhealth,my_health + 0.1);
+				speed *= 1.15;
+			}
+		}
+	if crown == 27//Crown of disco
+	{
+		with enemy
+		{
+			if alarm[1]>8 && alarm[1] < 30
+				alarm[1]=8;
 		}
 	}
-if crown == 27//Crown of disco
-{
-	with enemy
+	else if crown == 10 //Crown of difficulty
 	{
-		if alarm[1]>8 && alarm[1] < 30
-			alarm[1]=8;
-	}
-}
-else if crown == 10 //Crown of difficulty
-{
-	with enemy
-	{
-		if alarm[1] > 3 && alarm[1] < 25
-			alarm[1] -= 1.5;
-		speed *= 1.15;
+		with enemy
+		{
+			if alarm[1] > 3 && alarm[1] < 25
+				alarm[1] -= 1.5;
+			speed *= 1.15;
+		}
 	}
 }
 wave += 0.4;//Looping animations

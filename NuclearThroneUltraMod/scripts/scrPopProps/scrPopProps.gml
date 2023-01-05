@@ -185,6 +185,13 @@ function scrPopProps() {
 	if spawnarea = 112 and random(4) < 1 && !place_meeting(x,y,Wall)
 	instance_create(x+16,y+16,choose(InvertedTube,InvertedTube,InvertedTube,InvertedTube,InvertedMutantTube))
 
+		if spawnarea = 126 && !place_meeting(x,y,Wall) { //CUSTOM
+			instance_create(x+16,y+16,Gravestone);
+		}
+		if spawnarea = 127 && !place_meeting(x,y,Wall) { //CUSTOM
+			instance_create(x+16,y+16,InvertedGravestone);
+		}
+		
 	    if spawnarea = 7 && !place_meeting(x,y,Wall){ //CUSTOM
 		    if random(60) < 1{
 				instance_create(x+16,y+16,BigSkull)

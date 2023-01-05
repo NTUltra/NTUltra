@@ -11,7 +11,7 @@ if sprite_index = sprUltraShank || sprite_index == sprUltraLanceSlash
 	spawn = UltraBloodBullet;
 with instance_create(xx,yy,spawn)
 {
-	dmg = ceil(other.dmg*0.6);
+	dmg = ceil(other.dmg*0.7);
 	scrCopyWeaponMod(other);
 	direction = other.direction;
 	image_angle = direction;

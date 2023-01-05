@@ -13,7 +13,7 @@ instance_create(x+random(32),y+random(32),WindNight)
 }
 }
 
-if area = 1
+if area = 1 || area == 101
 {
 with instance_nearest(__view_get( e__VW.XView, 0 )+random(__view_get( e__VW.WView, 0 )),__view_get( e__VW.YView, 0 )+random(__view_get( e__VW.HView, 0 )),Floor)
 {
@@ -27,14 +27,20 @@ alarm[0] = 1+random(120)
 with instance_nearest(__view_get( e__VW.XView, 0 )+random(__view_get( e__VW.WView, 0 )),__view_get( e__VW.YView, 0 )+random(__view_get( e__VW.HView, 0 )),Floor)
 instance_create(x+random(24)+8,y+random(24)+8,Drip)
 }
-if area = 3
+if area == 117 || area == 123//Mushroom rain
 {
-alarm[0] = 1
-repeat(3)
-instance_create(__view_get( e__VW.XView, 0 )+random(__view_get( e__VW.WView, 0 )*2)-__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+random(__view_get( e__VW.HView, 0 )*2)-__view_get( e__VW.HView, 0 )/2,RainDrop)
+	alarm[0] = 1
+	repeat(2)
+	instance_create(__view_get( e__VW.XView, 0 )+random(__view_get( e__VW.WView, 0 )*2)-__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+random(__view_get( e__VW.HView, 0 )*2)-__view_get( e__VW.HView, 0 )/2,RainDrop)
+}
+if area == 3 
+{
+	alarm[0] = 1
+	repeat(3)
+		instance_create(__view_get( e__VW.XView, 0 )+random(__view_get( e__VW.WView, 0 )*2)-__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+random(__view_get( e__VW.HView, 0 )*2)-__view_get( e__VW.HView, 0 )/2,RainDrop)
 }
 
-if area = 4 or area = 103
+if area = 4 or area = 103 || area == 115
 {
 with instance_nearest(__view_get( e__VW.XView, 0 )+random(__view_get( e__VW.WView, 0 )),__view_get( e__VW.YView, 0 )+random(__view_get( e__VW.HView, 0 )),Floor)
 instance_create(x+random(24)+8,y+random(24)+8,CaveSparkle)

@@ -41,9 +41,9 @@ if instance_exists(Player) && !instance_exists(SurvivalWave)
 		else
 			song = musBoss6B;
 	}
-	if area = 2 || (area == 10 && subarea < 3)
+	if area = 2 || (area == 10 && subarea == 2)
 		song = musBoss5;
-	else if area == 110
+	else if area == 110 && subarea == 2
 		song = musBoss5B;
 	else if area == 4
 		song = musBoss6;
@@ -346,18 +346,19 @@ else if Player.area == 9
 }
 else if Player.area == 10
 {
-	if Player.subarea == 3
-	{
-		name = "BIG VULTURE";
-		if random(100) < 1
-			name = choose("CHARGE BIRD","BIG BIRD","ANGRY BIRD");
-	}
-	else
+	 if Player.subarea == 2
 	{
 		name = "MOM ON VACATION";
 		if random(100) < 1
 			name = choose("WE NOT SKIPPING THIS FIGHT","BALL MOM ON VACATION","MOMMY IN THE SUN","BIKINI");
 	}
+	else
+	{
+		name = "BIG VULTURE";
+		if random(100) < 1
+			name = choose("CHARGE BIRD","BIG BIRD","ANGRY BIRD");
+	}
+	
 }
 else if Player.area == 121
 {

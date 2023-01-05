@@ -37,7 +37,7 @@ alarm[1] = 4+random(5);
     {
     with instance_create(x,y,EnemyIceFlame)
     {
-    motion_add(other.direction+random(60)-30,4+random(7))
+    motion_add(other.direction+random(60)-30,3+random(7))
     image_angle = direction
     team = other.team
     }
@@ -46,7 +46,7 @@ alarm[1] = 4+random(5);
         with instance_create(x,y,EnemyLightningBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(22)-11),5+random(5))
+        motion_add(other.direction+(random(22)-11),4+random(5))
         team = other.team}
         }
     }
@@ -63,7 +63,7 @@ alarm[1] = 4+random(5);
     {
     with instance_create(x,y,EnemyIceFlame)
     {
-    motion_add(other.direction+random(60)-30,2+random(6))
+    motion_add(other.direction+random(60)-30,2+random(5))
     image_angle = direction
     team = other.team
     }
@@ -71,17 +71,17 @@ alarm[1] = 4+random(5);
         with instance_create(x,y,EnemyLightningBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(40)-20)+50,5)
+        motion_add(other.direction+(random(40)-20)+50,4)
         team = other.team}
         with instance_create(x,y,EnemyLightningBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(40)-20)-50,5)
+        motion_add(other.direction+(random(40)-20)-50,4)
         team = other.team}
         with instance_create(x,y,EnemyLightningBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(40)-20),5)
+        motion_add(other.direction+(random(40)-20),4)
         team = other.team}
     }
     else if point_distance(x,y,target.x,target.y)>70&&random(14) < 1//long SNIPE!

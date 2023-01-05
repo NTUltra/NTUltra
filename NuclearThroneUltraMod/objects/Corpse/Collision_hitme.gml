@@ -28,7 +28,7 @@ if (other.team != 2 && (size >= other.size-1 or impactWrist) and speed > 2)
 			}
 			sprite_index = spr_hurt
 			image_index = 0
-			motion_add(other.direction,other.speed*0.5)
+			motion_add(other.direction,other.speed*0.35)
 			snd_play(snd_hurt, hurt_pitch_variation)
 		}
 		speed *= 0.5;

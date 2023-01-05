@@ -34,7 +34,7 @@ canshield=false;
 		do {
 			i++
 			var angle = random(360)
-			var length = 5 + random(75)
+			var length = 5 + random(60) + i
 			var dx = lengthdir_x(length, angle)
 			var dy = lengthdir_y(length, angle)
 			
@@ -101,32 +101,37 @@ else if freeze > 40 and random(5) < 1
 //SHIELD
 canshield=false;
 var dir = 0;
+var xx = x;
+var yy = y;
 do
 {
-var NewPos = instance_nearest(target.x+random(128)-64,target.y+random(128)-64,Floor)
-x=NewPos.x+16;
-y=NewPos.y+16;
+	var NewPos = instance_nearest(target.x+random(128)-64,target.y+random(128)-64,Floor)
+	xx=NewPos.x+16;
+	yy=NewPos.y+16;
 
-dir++;
-with instance_create(x,y,PopoShield)
-{
-team=other.team;
-sprite_index=sprEliteShielderShieldAppear;
-alarm[0]=50;//shorter shielding time 60 for the normal shielder
-if place_meeting(x,y,Wall)
-{
-other.canshield=false;
-instance_destroy();
-}
-else
-other.canshield=true;
-}
+	dir++;
+	with instance_create(x,y,PopoShield)
+	{
+		team=other.team;
+		sprite_index=sprEliteShielderShieldAppear;
+		alarm[0]=50;//shorter shielding time 60 for the normal shielder
+		if place_meeting(x,y,Wall)
+		{
+			other.canshield=false;
+			instance_destroy();
+		}
+		else
+			other.canshield=true;
+	}
 
 }
 until(canshield==true||dir>200)
 
 if dir>100||canshield=false
-exit;
+	exit;
+	
+x = xx;
+y = yy;
 
 
 snd_play(sndEliteShielderShield);

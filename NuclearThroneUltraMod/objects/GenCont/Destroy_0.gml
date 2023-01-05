@@ -88,6 +88,12 @@ room_speed=35;
 		    invertedportaldelay=45+random(100);
 		    //area=107
 		    }
+			else if ( (area==126&&subarea<2)  )//Inv Graveyard
+		    {
+		    invertedportalcounter=1;
+		    invertedportaldelay=45+random(100);
+		    //area=107
+		    }
 		    else if ( area=2  )
 		    {
 		    invertedportalcounter=1;
@@ -326,6 +332,40 @@ room_speed=35;
 			with nearestFloor
 			{
 				instance_create(x+16,y+8,BigVultureSkull)
+			}
+		}
+	}
+	
+	if (Player.area == 10 && Player.subarea == 1)
+	{
+		if instance_exists(WeaponChest)
+		{
+			with Floor
+			{
+				if instance_exists(GraveyardEntrance)
+					continue;
+				var xx = x+16;
+				var yy = y+16;
+				var t = instance_nearest(xx,yy,WeaponChest)
+				var d = point_distance(xx,yy,t.x,t.y)
+				if d < 160 && d > 32
+					instance_create(x+16,y+8,GraveyardEntrance)
+			}
+		}
+		else
+		{
+			var tar = Player;
+			if instance_exists(WeaponChest)
+			{
+				tar = WeaponChest;
+			}
+			var furthest = instance_furthest(tar.x,tar,Floor);
+			var dir = point_direction(x,y,furthest.x,furthest.y)+random_range(120,-120);
+			var len = 128+random(32);
+			var nearestFloor = instance_nearest(tar.x+lengthdir_x(len,dir),tar.y+lengthdir_y(len,dir),Floor)
+			with nearestFloor
+			{
+				instance_create(x+16,y+8,GraveyardEntrance)
 			}
 		}
 	}

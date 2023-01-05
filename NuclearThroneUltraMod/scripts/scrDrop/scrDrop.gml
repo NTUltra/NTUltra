@@ -180,7 +180,7 @@ function scrDrop(itemdrop, weapondrop) {
 			}
 		}
 	}
-	else if random(100) < min(weapondrop*(dropRateBuff * 0.25), 100)
+	if random(100) < min(weapondrop*(dropRateBuff * 0.25), 100)
 	{
 		//drop weps
 		with instance_create(x+random(4)-2,y+random(4)-2,WepPickup)

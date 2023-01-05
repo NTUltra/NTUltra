@@ -1217,7 +1217,83 @@ function scrPopEnemies() {
 		        instance_create(x + 16, y + 16, choose(InvertedRatking, InvertedToxicMushroomGuy, InvertedBuffMushroom, InvertedBuffMushroom, InvertedToxicMushroomGuy, InvertedToxicMushroomGuy, InvertedBanditSquare, InvertedRat))	
 		}
     }
-
+	
+	//GRAVEYARD
+    if spawnarea = 126 {
+		var theBandit = choose(Bandit, Bandit, Bandit, BanditSquare);
+		if loops > 0
+		{
+		    var r = random(10);
+			if r > 8
+			{
+				instance_create(x + 16, y + 16, choose(GraveyardSniper,GraveyardBreeder))
+			}
+			if r > 4
+			{
+				repeat(3)
+				instance_create(x + 16, y + 16, choose(GraveyardSkeleton))
+			}
+		    else
+			{
+		        instance_create(x + 16, y + 16, choose(theBandit,theBandit,GraveyardSkeleton,GraveyardSkeleton,GraveyardSkeleton,GraveyardSkeleton,GraveyardSniper))
+			}
+		}
+		else
+		{
+			var r = random(10);
+			if r > 7
+			{
+				instance_create(x + 16, y + 16, choose(GraveyardSniper,GraveyardBreeder))
+			}
+			if r > 4
+			{
+				repeat(2)
+				instance_create(x + 16, y + 16, choose(GraveyardSkeleton))
+			}
+		    else
+			{
+		        instance_create(x + 16, y + 16, choose(theBandit,theBandit,MaggotSpawn,GraveyardSkeleton,GraveyardSkeleton,GraveyardSkeleton,GraveyardSkeleton,GraveyardSniper))
+			}
+		}
+    }
+	//INVERTED GRAVEYARD
+    else if spawnarea = 127 {
+		var theBandit = choose(BanditInverted, BanditInverted, BanditInverted, InvertedBanditSquare);
+		if loops > 0
+		{
+		    var r = random(10);
+			if r > 8
+			{
+				instance_create(x + 16, y + 16, choose(InvertedGraveyardSniper,InvertedGraveyardBreeder))
+			}
+			if r > 4
+			{
+				repeat(3)
+				instance_create(x + 16, y + 16, choose(InvertedGraveyardSkeleton))
+			}
+		    else
+			{
+		        instance_create(x + 16, y + 16, choose(theBandit,theBandit,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSniper))
+			}
+		}
+		else
+		{
+			var r = random(10);
+			if r > 7
+			{
+				instance_create(x + 16, y + 16, choose(InvertedGraveyardSniper,InvertedGraveyardBreeder))
+			}
+			if r > 4
+			{
+				repeat(2)
+				instance_create(x + 16, y + 16, choose(InvertedGraveyardSkeleton))
+			}
+		    else
+			{
+		        instance_create(x + 16, y + 16, choose(theBandit,theBandit,BigMaggotInverted,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSniper))
+			}
+		}
+    }
 
     if spawnarea == 9 && subarea != 3 {
 		if loops > 0 {

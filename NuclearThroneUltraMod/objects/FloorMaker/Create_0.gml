@@ -55,6 +55,8 @@ if instance_exists(Player){
 		goal = 60;
 		s = -10;
 	}
+	else if Player.area == 126 || Player.area == 127
+		goal = 130+s
 	if UberCont.opt_gamemode==6//small levels
 	{
 		goal=45+s;

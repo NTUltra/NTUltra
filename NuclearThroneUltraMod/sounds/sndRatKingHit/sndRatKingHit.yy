@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "sndRatKingHit",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -12,13 +15,9 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndRatKingHit",
-  "duration": 0.0,
+  "duration": 0.486667,
   "parent": {
     "name": "Regular",
     "path": "folders/Sounds/Enemies/Regular.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sndRatKingHit",
-  "tags": [],
-  "resourceType": "GMSound",
 }

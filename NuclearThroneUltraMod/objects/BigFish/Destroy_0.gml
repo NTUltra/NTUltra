@@ -1,4 +1,4 @@
-scrDrop(100,100)
+scrDrop(100,5)
 scrDrop(20,0)
 if UberCont.area == 101 || UberCont.area == 122
 scrDefeatedRequiredBoss(secretChallengeBosses.bigFish);

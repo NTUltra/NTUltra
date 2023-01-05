@@ -8,7 +8,6 @@ snd_play(sndVenuz)
 }
 //wepmod2++;
 
-
 //automatic screenshot taking
 //if scrn_take = 1
 

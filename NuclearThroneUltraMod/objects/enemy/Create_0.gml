@@ -10,8 +10,6 @@ maxSpeed = 16;
 team = 1
 target = noone
 countKill = true;
-//if object_index!=HotDrake
-//alarm[10]=1000;
 
 snd_hurt = sndHitFlesh
 snd_dead = sndEnemyDie

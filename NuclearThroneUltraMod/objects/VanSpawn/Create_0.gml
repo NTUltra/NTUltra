@@ -1,7 +1,8 @@
 if instance_exists(Player) && instance_exists(Wall)
 {
-
+var tries = 0;
 do {
+	tries ++;
 x = Player.x
 y = Player.y
 ang = random(360)
@@ -9,7 +10,7 @@ x = Player.x+lengthdir_x(96+random(96),ang) y = Player.y+lengthdir_y(96+random(9
 dir = instance_nearest(x,y,Wall)
 x = dir.x+16; y = dir.y+16;
 }
-until point_distance(x,y,Player.x,Player.y) > 64
+until point_distance(x,y,Player.x,Player.y) > 64 | tries > 200
 
 }
 

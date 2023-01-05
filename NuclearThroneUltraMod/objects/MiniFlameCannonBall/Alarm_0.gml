@@ -6,13 +6,13 @@ if team!=Player.team{//enemy
 	if inverted
 		spawn = EnemyIceFlame;
 	with instance_create(x,y,spawn)
-	{motion_add(other.image_angle+random(10)-5,1+random(2))
+	{motion_add(other.image_angle+random(10)-5,2)
 	team = other.team
 	image_speed=0.5+random(0.2);}
 
 
 	with instance_create(x,y,spawn)
-	{motion_add(other.image_angle+180+random(10)-5,1+random(2))
+	{motion_add(other.image_angle+180+random(10)-5,2)
 	team = other.team
 	image_speed=0.5+random(0.2);}
 }

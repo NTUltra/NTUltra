@@ -301,8 +301,7 @@ queueshot = 0;
 bqueueshot = 0;
 cqueueshot = 0;
 
-
-
+SetSeed();
 if race = 17 //GunSmith random wepmod
 {
     do {
@@ -614,6 +613,7 @@ if race == 6 || race == 20 {
     if random(100) < 1
     RadMony = true; //this will be a small chance
 }
+SetSeed();
 friction = 0.45
 image_speed = 0.4
 // I AM A CHEATER ammo[5] = 99 wep = 19

@@ -7,6 +7,7 @@ snd_play(sndFlyFire);
 with instance_create(x,y,Maggot)
 {
 	raddrop = 0;
+	countKill = false;
 	motion_add(other.gunangle+(random(28)-14),6)
 	image_angle = direction
 	team = other.team

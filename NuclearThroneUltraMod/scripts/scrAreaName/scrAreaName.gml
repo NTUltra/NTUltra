@@ -30,6 +30,10 @@ function scrAreaName(area,subarea,loops){
 	{
 		txt = "5B_"+string(subarea);
 	}
+	else if area == 126
+	{
+		txt = "2C_"+string(subarea);
+	}
 	else if area > 99
 	{
 		txt = "???"
@@ -51,6 +55,10 @@ function scrAreaName(area,subarea,loops){
 			break;
 			case 102://Pizza
 				txt = "2B_"+string(subarea);
+			break;
+			case 127://INV Graveyard
+				txt = "2C_"+string(subarea);
+				upsideDown = true;
 			break;
 			case 103://YV MANSION
 				txt = "3B_"+string(subarea);

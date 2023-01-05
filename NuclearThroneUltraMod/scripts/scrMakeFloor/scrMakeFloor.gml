@@ -493,6 +493,60 @@ function scrMakeFloor() {
 		}
 	}
 	
+	//Graveyard
+	if area = 126 || area == 127 {
+		var r = random(4)
+		if r < 1
+		{
+			//instance_create(x,y,Floor)
+			instance_create(x+64,y,Floor)
+			instance_create(x-64,y,Floor)
+			instance_create(x,y+64,Floor)
+			instance_create(x,y-64,Floor)
+			
+			instance_create(x+32,y+64,Floor)
+			instance_create(x+64,y+32,Floor)
+			instance_create(x+64,y+64,Floor)
+			
+			instance_create(x+32,y-64,Floor)
+			instance_create(x+64,y-32,Floor)
+			instance_create(x+64,y-64,Floor)
+			
+			instance_create(x-32,y-64,Floor)
+			instance_create(x-64,y-32,Floor)
+			instance_create(x-64,y-64,Floor)
+			
+			instance_create(x-32,y+64,Floor)
+			instance_create(x-64,y+32,Floor)
+			instance_create(x-64,y+64,Floor)
+			
+			instance_create(x+32,y,Floor)
+			instance_create(x-32,y,Floor)
+			instance_create(x,y+32,Floor)
+			instance_create(x,y-32,Floor)
+			instance_create(x+32,y+32,Floor)
+			instance_create(x+32,y-32,Floor)
+			instance_create(x-32,y-32,Floor)
+			instance_create(x-32,y+32,Floor)
+		}
+		else if r < 2
+		{
+			//instance_create(x,y,Floor);
+			instance_create(x+32,y,Floor)
+			instance_create(x-32,y,Floor)
+			instance_create(x,y+32,Floor)
+			instance_create(x,y-32,Floor)
+			instance_create(x+32,y+32,Floor)
+			instance_create(x+32,y-32,Floor)
+			instance_create(x-32,y-32,Floor)
+			instance_create(x-32,y+32,Floor)
+		}
+		else
+		{
+			instance_create(x,y,Floor);
+		}
+	}
+	
 	if UberCont.opt_gamemode == 8
 		instance_destroy();
 	if UberCont.opt_gamemode == 25 && !instance_exists(Vlambeer) && !instance_exists(MenuGen) && area != 0//Survival Arena
@@ -602,6 +656,17 @@ function scrMakeFloor() {
 	trn = choose(0,0,0,0,90,-90,180)
 	else if area == 119 || area == 120
 	trn = choose(0,0,90,-90,90,-90,180)
+	else if area == 126 || area == 127
+	{
+		if ( ((random(10) < 2 && instance_number(Floor) > 30) || instance_number(Floor) > 70) && !instance_exists(CantTurn))
+		|| (instance_number(CantTurn) == 1 && instance_number(Floor) > 110)
+		{
+			trn = 90;
+			instance_create(x,y,CantTurn);
+		}
+		else
+		trn = 0;
+	}
 	direction += trn
 	if ((area=7||area=108) && subarea=3) || area=104
 		direction=0;

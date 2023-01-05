@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "amb106",
   "conversionMode": 0,
   "compression": 3,
   "volume": 1.0,
@@ -17,8 +20,4 @@
     "name": "Music & amb",
     "path": "folders/Sounds/Music & amb.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "amb106",
-  "tags": [],
-  "resourceType": "GMSound",
 }

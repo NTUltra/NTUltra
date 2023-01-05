@@ -1,5 +1,25 @@
-scrDrop(100,100)
+scrDrop(100,5)
+scrDrop(30,0)
 scrDrop(20,0)
+with GraveyardEntrance
+{
+	with instance_create(x,y,Portal)
+	{
+		type = 1
+		pullstrength = 3;
+		alarm[1] = 1;
+	}
+	with Player
+	{
+		area = 126;
+		subarea = 0;	
+	}
+	with PlayerSpawn
+	{
+		area = 126;
+		subarea = 0;	
+	}
+}
 if UberCont.area == 10 || Player.area == 121
 	scrDefeatedRequiredBoss(secretChallengeBosses.bigVulture);
 if !isOneWeaponOnlyModes() && !instance_exists(SurvivalWave) && !instance_exists(InvaderBossSpawnPortal)

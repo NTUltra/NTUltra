@@ -1,6 +1,8 @@
 /// @description (re)-Init
 if !instance_exists(StartDaily)
 	alarm[0] = checkDelay;
+if !instance_exists(SecretFinder)
+	instance_create(x,y,SecretFinder);
 if instance_exists(Player)
 {
 	if Player.ultra_got[96] && !Player.altUltra
@@ -52,8 +54,20 @@ if instance_exists(Player)
 	{
 		//Nothing yet may need more alarms
 	}
+	with PlayerAlarms2 {
+		if Player.skill_got[29]//insomnia
+		{
+			var t = 185;
+			if Player.race = 25
+			{
+				t = 225;
+			}
+			alarm[1] = t;
+		}	
+	}
 	if Player.ultra_got[59] && Player.altUltra && !instance_exists(CorrosionDrawer)
 	{
 		instance_create(x,y,CorrosionDrawer)
 	}
+	
 }

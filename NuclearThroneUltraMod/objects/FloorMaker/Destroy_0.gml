@@ -16,6 +16,7 @@ if instance_exists(Player) && !endPieceSpawned
 		var yy;
 		for(xx=0;xx<10;xx+=1){
 		instance_create(x+32*xx,y,Floor);//BOSS VULCANO/////////////////////////////<------------
+		/*
 		if (area==7||area=108)
 		{
 			//Second entrance to the dragon fight
@@ -37,7 +38,7 @@ if instance_exists(Player) && !endPieceSpawned
 				mask_index = msk;
 			}
 			instance_create(x+32*-xx,y+320,Floor);
-		}
+		}*/
 			if !instance_exists(HotDrake) && !instance_exists(InvertedHotDrake)
 			for(yy=0;yy<10;yy+=1)
 			{

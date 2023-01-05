@@ -135,6 +135,12 @@ if instance_exists(Player)
 			case 125:
 				__background_set_colour( make_color_rgb(20,44,51) )
 			break;
+			case 126:
+				__background_set_colour( make_color_rgb(0,0,0) )
+			break;
+			case 127:
+				__background_set_colour( make_color_rgb(246, 198,255) )
+			break;
 		}
 	}
 	else
@@ -228,6 +234,10 @@ if instance_exists(Player)
 		__background_set_colour( make_color_rgb(63,38,76) )
 		else if Player.area == 125//Inverted Mansion
 		__background_set_colour( make_color_rgb(178,149,124) )
+		else if Player.area == 126//Graveyard
+		__background_set_colour( make_color_rgb(0,0,0) )
+		else if Player.area == 127//Graveyard
+		__background_set_colour( make_color_rgb(246, 198,255) )
 	}
 }
 else
@@ -300,6 +310,8 @@ if Player.area == 117 || Player.area == 124//Mushroom land
 goal=120+s;
 if Player.area == 119 || Player.area == 120
 goal = 60;
+if Player.area == 126 || Player.area == 127
+goal = 120;
 
 
 if UberCont.opt_gamemode==6 && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels

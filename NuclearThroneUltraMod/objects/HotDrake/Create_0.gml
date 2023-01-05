@@ -2,12 +2,12 @@ raddrop = 80
 maxhealth = 900
 scrBossHealthBuff();
 with chestprop {
-	var f = instance_nearest(Player.x + random_range(32,200), Player.y + random_range(128,400), Floor);
+	var f = instance_nearest(Player.x + random_range(32,200), Player.y + random_range(128,500), Floor);
 	x = f.x+16;
 	y = f.y+16;
 }
 with RadChest {
-	var f = instance_nearest(Player.x + random_range(32,200), Player.y + random_range(128,400), Floor);
+	var f = instance_nearest(Player.x + random_range(32,200), Player.y + random_range(128,500), Floor);
 	x = f.x+16;
 	y = f.y+16;
 }

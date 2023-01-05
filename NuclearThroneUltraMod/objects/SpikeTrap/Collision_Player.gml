@@ -1,5 +1,6 @@
 with other
 instance_destroy();
 
-instance_create(x,y,BigDogExplo);
+with instance_create(x,y,BigDogExplo)
+	visible = false;
 

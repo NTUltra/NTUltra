@@ -28,7 +28,7 @@ function scrNextLevel() {
 		lastarea = area
 	}
 	else if subarea = 1 || area = 105 || area = 106 || area = 107 || area = 101 || area = 110 || area = 111 || area = 112 || area = 103 || area = 109 || area = 113 || area == 114 || area = 108 || area == 115 || area == 117 || area == 118
-	|| area == 121 || area == 122 || area == 123 || area == 124 || area == 125
+	|| area == 121 || area == 122 || area == 123 || area == 124 || area == 125 || area == 126
 	{
 		//Inverted savanna
 		if area = 121//bring to inverted mushroom
@@ -65,6 +65,15 @@ function scrNextLevel() {
 			inverted = false;
 			exit;
 		}
+		if area == 127//Inv Graveyard
+		{
+			//Inv scrapyard
+			area = 106
+			lastarea = 106;
+			subarea = -1;
+			inverted = false;
+			exit;
+		}
 		if area == 125//Inv Mansion
 		{
 			//To Labs
@@ -75,7 +84,7 @@ function scrNextLevel() {
 			exit;
 		}
 		//Inverted Oasis
-		if area = 122//bring to inverted Vulcano 2
+		if area = 122
 	    {
 			//TODO
 	        if inverted && area == 122 &&subarea < 3
@@ -97,7 +106,7 @@ function scrNextLevel() {
 	        }
 	    }
 		//Inverted Jungle
-		if area = 123//bring to inverted Vulcano 2
+		if area = 123
 	    {
 			//TODO
 	        if inverted && area == 123 &&subarea<2
@@ -169,6 +178,16 @@ function scrNextLevel() {
 				subarea = 1;
 				inverted=false;
 			}
+			exit;
+		}
+		//Graveyard
+		if area == 126 && subarea > 0 && !inverted
+		{
+			// To scrapyard
+			area = 3;
+			lastarea = 3;
+			subarea = -1;
+			inverted = false;
 			exit;
 		}
 		if area == 117 && subarea > 0 && !inverted//Mushroom
@@ -264,11 +283,11 @@ function scrNextLevel() {
 	        inverted=false;
 	        exit;
 	        }
-	        else//Inverted vulcano bring to banditland
+	        else//Inverted vulcano bring to frozen city
 	        {
-	        area=113;
-	        subarea=2;
-			lastarea = 8;
+	        area = 5;
+	        subarea = 2;
+			lastarea = 5;
 			inverted=false
 	        exit;
 	        }
@@ -493,6 +512,11 @@ function scrNextLevel() {
 	{area=124;
 	lastarea=124;
 	subarea = 0;
+	}
+	if ( area==126 && inverted )//inv Graveyard
+	{area=127;
+	lastarea=127;
+	subarea = 1;
 	}
 	if ( area==114 && inverted )//inv Mushroom
 	{

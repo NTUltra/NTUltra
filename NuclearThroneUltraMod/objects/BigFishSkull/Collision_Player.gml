@@ -16,6 +16,7 @@ if loops > 0 && spr_idle = sprBigFishSkullOpen
 */
 		//with enemy
 		//	my_health = 0
+		alarm[1] += 200;
 		spr_idle = sprBigFishSkull;
 		spr_hurt = sprBigFishSkullHurt;
 		with instance_create(x,y,WantBoss)

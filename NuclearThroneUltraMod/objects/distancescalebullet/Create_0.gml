@@ -10,3 +10,4 @@ dmg = 4;
 imagexscale = 0.9;
 imageyscale = 0.9;
 alarm[2] = 4;
+alarm[11] = 1;

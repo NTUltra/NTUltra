@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "sndMutant19Hurt",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -12,13 +15,9 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndMutant19Hurt",
-  "duration": 0.0,
+  "duration": 0.348031,
   "parent": {
     "name": "Skeleton",
     "path": "folders/Sounds/Player/Skeleton.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sndMutant19Hurt",
-  "tags": [],
-  "resourceType": "GMSound",
 }

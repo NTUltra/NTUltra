@@ -997,7 +997,7 @@ function scrFire2() {
 	{
 	snd_wallhit=sndGuitarHitWall;
 	snd_hit=sndGuitarHit;
-	dmg = 26
+	dmg = 28
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3

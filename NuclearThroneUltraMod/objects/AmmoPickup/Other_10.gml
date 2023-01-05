@@ -15,58 +15,61 @@ with Player
 	if pt == 0
 		pa = pam;
 	if st == 0
-		pa = pam;
+		sa = sam;
 }
-var ran = random(7);
-if ran > 6
-{
-	//Make sure there is enough ammo to fire either gun
-	ran -= 1
-	if (sa < sc)
-	{
-		type = st;
-		ran = -1;
-	}
-	else if (pa < pc)
-	{
-		type = pt;
-		ran = -1;
-	}
-}
+var randomAmmo = true;
 
-if (pa == pam or sa == sam && ran < 3 && ran > -1)
+if (pa < pc && pt != 0 && (Player.bwep == 0 || st == 0
+	|| (sa < sc)))
 {
-	if ran < 2
-	{
-		//Chance to top up weapon that is not full
-		if (pa >= pam) && sa < sam
-			type = st;
-		else if (pa < pam) && sa == sam
-			type = pt;
-		else
-			type = choose(1,2,3,4,5);
-	}
-	else
-	{
-		type = choose(1,2,3,4,5)
-	}
+	//Primary is empty & secondary is also empty or uses no ammo
+	type = pt;
+	randomAmmo = false;
 }
-else if Player.bwep != 0 && ran > -1
+else if (sa < sc && st != 0 && ((pt == 0)
+	|| (pa < pc)))
 {
-	//Chance to give ammo which you need most
-	if ran > 4
+	//Secondary is empty & primary is also empty or uses no ammo
+	type = st;
+	randomAmmo = false
+}
+if randomAmmo 
+{
+	var ran = random(7);
+	if ran > 6
 	{
-		/*
-		if pt == 0
+		//Make sure there is enough ammo to fire either gun
+		if (sa < sc)
 		{
 			type = st;
 		}
-		else if st == 0
+		if (pa < pc)
 		{
 			type = pt;
 		}
+	}
+	else if (pa == pam or sa == sam && ran < 3)
+	{
+		if ran < 2
+		{
+			//Chance to top up weapon that is not full
+			if (pa >= pam) && sa < sam
+				type = st;
+			else if (pa < pam) && sa == sam
+				type = pt;
+			else
+				type = choose(1,2,3,4,5);
+		}
 		else
-		{*/
+		{
+			type = choose(1,2,3,4,5)
+		}
+	}
+	else if Player.bwep != 0
+	{
+		//Chance to give ammo which you need most
+		if ran > 4
+		{
 			var pap = pa/pam;//primary ammo percentage
 			var sap = sa/sam;//secondary ammo percentage
 			if pap < sap && pt != 0
@@ -77,15 +80,15 @@ else if Player.bwep != 0 && ran > -1
 			{
 				type = st;	
 			}
-		//}
+		}
+		else
+		{
+			type = choose(pt,st)
+		}
 	}
 	else
-	{
-		type = choose(pt,st)
-	}
+		type = pt
 }
-else
-	type = pt
 
 //Roids get loaded ultra
 //if ( Player.ultra_got[26] && Player.wep!=0 )

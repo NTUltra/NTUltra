@@ -216,7 +216,7 @@ event_perform(ev_draw,0);//on top of all things cause I'm an angel!
 //FOGGGG
 
 if instance_exists(Player){
-if Player.area = 2 || Player.area=8
+if Player.area = 2 || Player.area=8 || Player.area == 126 || Player.area == 127
 {draw_sprite_ext(sprFog2,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)
 draw_sprite_ext(sprFog2,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll-480,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)
 draw_sprite_ext(sprFog2,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll+480,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)

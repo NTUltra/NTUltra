@@ -4,7 +4,7 @@ __view_get( e__VW.YView, 0 )-39+Menu.widescreen,
 draw_set_halign(fa_right);
 draw_text_colour(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-4,
 __view_get( e__VW.YView, 0 )-39+Menu.widescreen,
-"[BETA 29.13.5]",c_gray,c_gray,c_gray,c_gray,1);
+"[BETA 30.01]",c_gray,c_gray,c_gray,c_gray,1);
 draw_set_halign(fa_left);
 /*
 x = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-24-22*4//-(UberCont.mouse__x-view_xview)*0.7

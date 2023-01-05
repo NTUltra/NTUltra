@@ -256,6 +256,13 @@ if oldarea != area || area == 0 or !audio_is_playing(song) or audio_is_playing(m
 
         amb = amb102
     }
+	
+	if area == 126 || area == 127 {
+
+        song = mus126
+
+        amb = amb126;
+    }
 
 	if song != prevSong || amb != prevAmb
 	{

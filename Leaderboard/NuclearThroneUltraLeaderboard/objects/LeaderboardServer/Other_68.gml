@@ -77,16 +77,12 @@ if (type == network_type_data) {
 			var scoreList = ds_list_create();
 			var stringChecker = "scorelb"
 			var fileName;
-			var noFile = false;
 			if isScore {
 				fileName = file_find_first("ds"+string(wantDay) + "_ntultradailyscore*", 0);
 				show_debug_message("FILE1score: " + fileName);
 				if fileName == ""
 				{
-					noFile = true;
-					fileName = file_find_first(string(wantDay) + "_ntultradailyrace*", 0);
-					fileName = string_replace(fileName, "_ntultradailyrace", "_ntultradailyscore");
-					//fileName = dailyScoreSaveFileString;
+					fileName = dailyScoreSaveFileString;
 				}
 			}
 			else {
@@ -95,73 +91,66 @@ if (type == network_type_data) {
 				stringChecker = "racelb";
 				if fileName == ""
 				{
-					noFile = true;
-					fileName = file_find_first("ds"+string(wantDay) + "_ntultradailyscore*", 0);
-					fileName = string_replace(fileName, "_ntultradailyscore", "_ntultradailyrace");
-					//fileName = dailyRaceSaveFileString;
+					fileName = dailyRaceSaveFileString;
 				}
 			}
 			show_debug_message("FILE: " + fileName);
-			if (!noFile)
-			{
-				ini_open(fileName);
-					//Get existing
-					var i = 0;
-					if (file_exists(fileName))
+			var scoreLeaderboard = "";
+			ini_open(fileName);
+				//Get existing
+				var i = 0;
+				if (file_exists(fileName))
+				{
+					while(ini_key_exists(stringChecker,i))
 					{
-						while(ini_key_exists(stringChecker,i))
-						{
-							var newEntry = ini_read_string(stringChecker,i,"");
-							show_debug_message(newEntry);
-							//First entry must be kills
-							var killsString = string_copy(newEntry,1,string_pos(" ",newEntry));
-							ds_list_add(scoreSorter,real(killsString));
-							ds_list_add(scoreList,newEntry);
-							i++;
-							//split on _ then split on | and take second entry thats the kills
+						var newEntry = ini_read_string(stringChecker,i,"");
+						show_debug_message(newEntry);
+						//First entry must be kills
+						var killsString = string_copy(newEntry,1,string_pos(" ",newEntry));
+						ds_list_add(scoreSorter,real(killsString));
+						ds_list_add(scoreList,newEntry);
+						i++;
+						//split on _ then split on | and take second entry thats the kills
+					}
+				}
+				if isScore
+					totalScoreEntries = i;
+				else
+					totalRaceEntries = i;
+				//And add the new one
+				ds_list_add(scoreSorter,newScore[0]);
+				ds_list_add(scoreList,scoreString);
+				
+				var al = ds_list_size(scoreSorter);
+				//Sorting algorithm (bubble)
+				for (var i = al; i >= 0; i--)
+				{
+					for (var j = al; j > al-i; j--)
+					{
+						if (scoreSorter[| j] > scoreSorter[| j-1]) {
+							var swapper = scoreList[| j];
+							scoreList[| j] = scoreList[| j - 1]
+							scoreList[| j - 1] = swapper;
+							var swapperScore = scoreSorter[| j];
+							scoreSorter[| j] = scoreSorter[| j - 1]
+							scoreSorter[| j - 1] = swapperScore;
 						}
 					}
-					if isScore
-						totalScoreEntries = i;
-					else
-						totalRaceEntries = i;
-					//And add the new one
-					ds_list_add(scoreSorter,newScore[0]);
-					ds_list_add(scoreList,scoreString);
+				}
+				//Reverse the list for races
+				if !isScore
+					ds_list_sort(scoreList,false);
+				//Rewrite!
+				if (file_exists(fileName))
+					ini_section_delete(stringChecker);
+				var al = ds_list_size(scoreList);
+				for (var i = 0; i < al; i++)
+				{
+					scoreLeaderboard += scoreList[| i]+"|";
+					ini_write_string(stringChecker,i,scoreList[| i]);
+				}
 				
-					var al = ds_list_size(scoreSorter);
-					//Sorting algorithm (bubble)
-					for (var i = al; i >= 0; i--)
-					{
-						for (var j = al; j > al-i; j--)
-						{
-							if (scoreSorter[| j] > scoreSorter[| j-1]) {
-								var swapper = scoreList[| j];
-								scoreList[| j] = scoreList[| j - 1]
-								scoreList[| j - 1] = swapper;
-								var swapperScore = scoreSorter[| j];
-								scoreSorter[| j] = scoreSorter[| j - 1]
-								scoreSorter[| j - 1] = swapperScore;
-							}
-						}
-					}
-					//Reverse the list for races
-					if !isScore
-						ds_list_sort(scoreList,false);
-					//Rewrite!
-					if (file_exists(fileName))
-						ini_section_delete(stringChecker);
-					var scoreLeaderboard = "";
-					var al = ds_list_size(scoreList);
-					for (var i = 0; i < al; i++)
-					{
-						scoreLeaderboard += scoreList[| i]+"|";
-						ini_write_string(stringChecker,i,scoreList[| i]);
-					}
-				
-				ini_close();
-			}
-			show_debug_message("leaderboard send: " + scoreLeaderboard);
+			ini_close();
 			var sendBuffer = buffer_create(8,buffer_grow,1);
 			buffer_write(sendBuffer,buffer_u8,NETDATA.LEADERBOARD);
 			buffer_write(sendBuffer,buffer_string,scoreLeaderboard);
