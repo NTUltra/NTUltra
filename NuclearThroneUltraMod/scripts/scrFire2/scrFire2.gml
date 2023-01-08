@@ -10838,7 +10838,7 @@ function scrFire2() {
 		{
 			motion_add(aimDirection+(random(30)-15)*other.accuracy,5)
 		}
-		repeat(12)
+		repeat(12 + (skill_got[17] * 4))
 			with instance_create(x,y,Rad)
 			{
 				motion_add(aimDirection+(random(30)-15)*other.accuracy,4+random(4))
@@ -11520,6 +11520,20 @@ function scrFire2() {
 		BackCont.viewy2 += lengthdir_y(24,aimDirection)*UberCont.opt_shake
 		BackCont.shake += 2
 		wkick = -4;
+	
+	break;
+	
+	//ASSAULT BLOOD NADER
+	case 609:
+
+	with instance_create(x,y,BloodLauncherBurst)
+	{
+	creator = other.id
+	ammo = 3
+	time = 2
+	team = other.team
+	event_perform(ev_alarm,0) 
+	}
 	
 	break;
 	

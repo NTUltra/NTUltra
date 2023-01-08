@@ -7,7 +7,7 @@
     "path": "sprites/mskWallDeflect/mskWallDeflect.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": {
     "name": "mskWallDeflect",

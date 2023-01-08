@@ -431,7 +431,7 @@ if UberCont.opt_gamemode == 36//Ultra mod start
     crownvisits = -1;
 	//instance_create(0,0,PauseTimer);
 }
-if UberCont.crown_start[r] && !instance_exists(PlayerSpawn) && UberCont.opt_gamemode != 25 {
+if UberCont.crown_start[r] && !instance_exists(PlayerSpawn) && UberCont.opt_gamemode != 25 && !instance_exists(CrownIcon) {
     //area = 100;
     //hard -= 1;
     //crownvisits = -1;

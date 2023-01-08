@@ -13,9 +13,18 @@ with Player
 			lowb = wep_load[bwep]*-2;
 			lowc = wep_load[cwep]*-2;
 		}
+		else if curse = 1
+		{
+			curse = 0
+			my_health -= 7
+			repeat(10)
+				instance_create(x+random(16)-8,y+random(16)-8,Curse)
+		}
 		reload = lowa;
 		breload = lowb;
 		creload = lowc;
+		
+		
 		
 		if ultra_got[29] && altUltra//ROBOT EXCLUSIVE TASTE
 		{
@@ -92,15 +101,6 @@ with Player
 		with instance_create(x,y,RobotEat)
 		image_xscale = Player.right
 
-		
-
-		if curse = 1
-		{
-			curse = 0
-			my_health -= 7
-			repeat(10)
-				instance_create(x+random(16)-8,y+random(16)-8,Curse)
-		}
 		
 
 		if skill_got[5] = 1

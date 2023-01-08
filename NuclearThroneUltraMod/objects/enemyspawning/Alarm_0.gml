@@ -19,6 +19,8 @@ else
 				for (var i = 0; i < amountOfWalls; i++) {
 					with hitWalls[| i] {
 						instance_destroy();
+					}
+					with hitWalls[| i] {
 						instance_create(x,y,FloorExplo);
 					}
 				}

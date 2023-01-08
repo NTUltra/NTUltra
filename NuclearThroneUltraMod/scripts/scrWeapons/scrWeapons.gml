@@ -5477,7 +5477,7 @@ function scrWeapons() {
 	wep_name[495] = "SHEEP ON A STICK"
 	wep_type[495] = 5
 	wep_auto[495] = 0
-	wep_load[495] = 13
+	wep_load[495] = 11
 	wep_cost[495] = 1
 	wep_sprt[495] = sprSheepOnStick
 	wep_area[495] = 11
@@ -6727,6 +6727,17 @@ function scrWeapons() {
 	wep_text[608] = "lance shovel"
 	wep_swap[608] = sndSwapHammer
 	wep_rad[608] = 0;
+	
+	wep_name[609] = "ASSAULT BLOOD LAUNCHER"
+	wep_type[609] = 4
+	wep_auto[609] = 1
+	wep_load[609] = 15
+	wep_cost[609] = 3
+	wep_sprt[609] = sprAssaultBloodLauncher
+	wep_area[609] = 14
+	wep_text[609] = "bad to the bone"
+	wep_swap[609] = sndSwapExplosive
+	wep_rad[609] = 0;
 
 	maxwep = array_length(wep_name)-1;
 

@@ -239,7 +239,8 @@ function scrTips() {
 	,"eat 14 eggs in the morning")
 
 	if Player.race = 8
-	tip = choose("6b 69 6c 6c#61 6c 6c#68 75 6d 61 6e 73","72 6f 62 6f 74","3c 33","74 61 73 74 79","guns for breakfast","I'm afraid I can't let you do that","don't forget to eat weapons","eating a weapon instantly reloads your other weapon")
+	tip = choose("6b 69 6c 6c#61 6c 6c#68 75 6d 61 6e 73","72 6f 62 6f 74","3c 33","74 61 73 74 79","guns for breakfast","I'm afraid I can't let you do that","don't forget to eat weapons","eating a weapon instantly reloads your other weapon",
+	"robot can eat cursed weapons without taking damage while having thronebutt","thronebutt allows you to eat cursed weapons")
 
 	if Player.race = 9
 	tip = choose("remember the training","focus","go","never surrender","amateur hour is over","again","in cold shadows","slow down time","hyper fast reactions","chicken used to slow down time#in retail","can't throw weapons")

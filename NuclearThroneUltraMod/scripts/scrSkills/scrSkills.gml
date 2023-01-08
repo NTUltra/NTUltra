@@ -386,11 +386,11 @@ function scrSkills() {
 	{
 		if instance_exists(Player) && Player.skill_got[9] == 1
 		{
-			skill_text[32] = "FIRST HIT YOU TAKE IN AN AREA#WHILE BELOW MAX HP#HEALS YOU INSTEAD (125%)#DOUBLE HEALING WITH SECOND STOMACH"
+			skill_text[32] = "FIRST HIT YOU TAKE IN AN AREA#WHILE BELOW MAX HP#HEALS YOU INSTEAD (125%)#DOUBLE HEALING WITH SECOND STOMACH#PREVENTS LETHAL FIRST HITS"
 		}
 		else
 		{
-			skill_text[32] = "FIRST HIT YOU TAKE IN AN AREA#WHILE BELOW MAX HP#HEALS YOU INSTEAD (125%)";
+			skill_text[32] = "FIRST HIT YOU TAKE IN AN AREA#WHILE BELOW MAX HP#HEALS YOU INSTEAD (125%)#PREVENTS LETHAL FIRST HITS";
 			if instance_exists(Player) && Player.skill_got[32] == 1
 				skill_text[9] = "4, SOMETIMES 5 HP# FROM MEDKITS#DOUBLE HP FROM MEDCHESTS#AND ALKALINE SALIVA"
 		}
@@ -399,16 +399,16 @@ function scrSkills() {
 	{
 		if instance_exists(Player) && Player.skill_got[9] == 1
 		{
-			skill_text[32] = "FIRST HIT YOU TAKE IN AN AREA#WHILE BELOW MAX HP#HEALS YOU INSTEAD#DOUBLE HEALING WITH SECOND STOMACH";
+			skill_text[32] = "FIRST HIT YOU TAKE IN AN AREA#WHILE BELOW MAX HP#HEALS YOU INSTEAD#DOUBLE HEALING WITH SECOND STOMACH#PREVENTS LETHAL FIRST HITS";
 		}
 		else
 		{
-			skill_text[32] = "FIRST HIT YOU TAKE IN AN AREA#WHILE BELOW MAX HP#HEALS YOU INSTEAD"
+			skill_text[32] = "FIRST HIT YOU TAKE IN AN AREA#WHILE BELOW MAX HP#HEALS YOU INSTEAD#PREVENTS LETHAL FIRST HITS"
 			if instance_exists(Player) && Player.skill_got[32] == 1 && UberCont.opt_gamemode != 32
 				skill_text[9] = "DOUBLE HP FROM MEDKITS, MEDCHESTS#AND ALKALINE SALIVA"
 		}
 	}
-	skill_tips[32] = "yes pain yes gain"
+	skill_tips[32] = "alkaline saliva prevents lethal damage if thats the first hit you take"
 	skill_msnd[32] =  sndMutAlkalineSaliva
 	
 	skill_name[33] = "GLASS ARM CANNON"//Metroid reference I guess

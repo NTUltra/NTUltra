@@ -8,7 +8,7 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 	if targetPickup != noone && point_distance(x,y,targetPickup.x,targetPickup.y) < prange  && targetPickup.visible
 	{
 		var isGold = false;
-		//UNLOCK GOLDEN WEAPON
+		//UNLOCK GOLDEN WEAPONf
 		if scrCheckGold(wep_name[targetPickup.wep])
 		{
 			isGold = true;
@@ -577,14 +577,14 @@ if (tookHit)
 	{
 		var damageTaken = (prevhealth - my_health) + damageReduced;
 		//Needs to be healable or lethal
-		if (damageTaken > 0 || my_health <= 0)
+		if ((damageTaken > 0 && prevhealth < maxhealth) || my_health <= 0)
 		{
 			isAlkaline = false;
 			if race == 25//Doctor buff
 				damageTaken = ceil(damageTaken*1.25);
 			if (skill_got[9]) //Second stomache
 				damageTaken *= 2;
-			my_health=min(maxhealth,prevhealth+damageTaken);
+			my_health = min(maxhealth,prevhealth+damageTaken);
 			resetPrevHealth = true;
 			with instance_create(x,y,HealFX)
 			{
@@ -596,7 +596,7 @@ if (tookHit)
 			var pt = instance_create(x,y,PopupText)
 			if UberCont.opt_ammoicon
 			{
-				if my_health = maxhealth
+				if my_health == maxhealth
 					pt.mytext = "MAX";
 				else
 					pt.mytext = "+"+string(damageTaken);

@@ -14,7 +14,7 @@ if (type == network_type_data) {
 		case NETDATA.CLIENT_ID:
 			myClientId = buffer_read(buffer, buffer_u16);
 			UberCont.todaysSeed = buffer_read(buffer, buffer_u16);
-			UberCont.totalDailies = buffer_read(buffer, buffer_u16);
+			UberCont.totalDailies = buffer_read(buffer, buffer_u16) + 1;
 			if array_length(UberCont.runScore) > 1
 			{
 				debug("send score: ",string(UberCont.runScore));
@@ -91,7 +91,7 @@ if (type == network_type_data) {
 			debug("UberCont.dailyDay ", UberCont.dailyDay);
 			UberCont.dailyDay = buffer_read(buffer,buffer_u16) + 1;
 			debug("UberCont.dailyDay ", UberCont.dailyDay);
-			if UberCont.totalDailies == -1
+			if UberCont.totalDailies < UberCont.dailyDay
 				UberCont.totalDailies = UberCont.dailyDay;
 			totalScoreLeaderboardEntries = string_count("|",receivedLeaderboard);
 			debug("totalScoreLeaderboardEntries ", totalScoreLeaderboardEntries);

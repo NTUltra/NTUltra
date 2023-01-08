@@ -9,8 +9,9 @@ function scrRavenLift() {
 	    if (target > 0 && target.object_index=Player) {
 	        var mx = UberCont.mouse__x;
 	        var my = UberCont.mouse__y;
-	        var tries = 1024;
-	        while (--tries >= 0) {
+	        var tries = 300;
+	        while (tries >= 0) {
+				tries--;
 	            targetx = x + lengthdir_x(128, point_direction(mx, my, target.x, target.y) + random(50) - 25);
 	            targety = y + lengthdir_y(128, point_direction(mx, my, target.x, target.y) + random(50) - 25);
 	            dir = instance_nearest(targetx, targety, Floor);
