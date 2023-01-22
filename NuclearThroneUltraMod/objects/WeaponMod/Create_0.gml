@@ -3,16 +3,18 @@ wepmod=scrMods();
 if instance_exists(WeaponMod) && instance_number(WeaponMod) > 1
 {
 	var nearest = instance_nearest_notme(x,y,WeaponMod);
+	var tries = 100;
 	if nearest != noone
 	{
 		with nearest
 		{
-			while wepmod == other.wepmod
+			while (wepmod == other.wepmod && tries > 0)
 			{
 				wepmod = scrMods();
 				modname = scrWepModName(wepmod);
 				moddescription = scrWepModDescription(wepmod);
 				name="##MODIFY WEAPON#"+modname;
+				tries--;
 			}
 		}
 	}

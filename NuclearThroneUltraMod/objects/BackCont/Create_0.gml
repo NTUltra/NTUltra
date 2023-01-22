@@ -98,3 +98,4 @@ if instance_exists(SurvivalArenaStarter)
 {
 	alarm[7] = 1;
 }
+alarm[9] = 1;

@@ -142,7 +142,7 @@ if oldarea != area || area == 0 or !audio_is_playing(song) or audio_is_playing(m
 
         amb = amb100;
     }
-    if area = 9 {
+    if area == 9 {
 
         song = mus7;
 

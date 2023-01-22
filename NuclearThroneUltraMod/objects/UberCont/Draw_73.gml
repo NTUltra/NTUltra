@@ -33,12 +33,14 @@ if !instance_exists(Menu)&&!instance_exists(Vlambeer) && !instance_exists(Unlock
 {
 draw_set_valign(fa_top)
 draw_set_halign(fa_center)
-
-draw_text_colour(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-string_width(string_hash_to_newline(formatString))*0.5+1,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-string_height(string_hash_to_newline(txttime)),string_hash_to_newline(txttime),c_black
+var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-string_height(string_hash_to_newline(txttime));
+if isPaused
+	yy -= 8;
+draw_text_colour(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-string_width(string_hash_to_newline(formatString))*0.5+1,yy,string_hash_to_newline(txttime),c_black
 ,c_black,c_black,c_black,1);
-draw_text_colour(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-string_width(string_hash_to_newline(formatString))*0.5,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-string_height(string_hash_to_newline(txttime)),string_hash_to_newline(txttime),c_black
+draw_text_colour(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-string_width(string_hash_to_newline(formatString))*0.5,yy,string_hash_to_newline(txttime),c_black
 ,c_black,c_black,c_black,1);
-draw_text_colour(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-string_width(string_hash_to_newline(formatString))*0.5,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-string_height(string_hash_to_newline(txttime))-1,string_hash_to_newline(txttime),c_white
+draw_text_colour(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-string_width(string_hash_to_newline(formatString))*0.5,yy-1,string_hash_to_newline(txttime),c_white
 ,c_white,c_white,c_white,1);
 
 

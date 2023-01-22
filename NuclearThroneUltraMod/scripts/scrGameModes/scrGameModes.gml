@@ -59,13 +59,18 @@ function scrGameModes() {
 	gamemode_have[11] = 0;
 	gamemode_tip[11] = "IT'S GUN GAME!";
 
+	gamemode[12] = "ZOMBIES";//
+	gamemode_unlock[12] = "DISCOVER THE G??V?Y?R?";
+	gamemode_have[12] = 0;
+	gamemode_tip[12] = "THEY KEEP ON COMING";
+/*
 	gamemode[12] = "HUNTER ONLY SHOOT#WHEN MARKED";//
 	gamemode_unlock[12] = "KILL A THIEF#WHILE IT IS MARKED";
 	gamemode_have[12] = 0;
 	gamemode_tip[12] = "MARK THEN SHOOT THEN KILL";
-
+*/
 	gamemode[13] = "ROCKET GLOVE ONLY#NO WALKING";//
-	gamemode_unlock[13] = "PICK UP A ROCKET GLOVE";
+	gamemode_unlock[13] = "FIND A ROCKET GLOVE";
 	gamemode_have[13] = 0;
 	gamemode_tip[13] = "ROCKET GLOVE!";
 
@@ -132,12 +137,12 @@ function scrGameModes() {
 	gamemode[26] = "DAILY RACE";
 	gamemode_unlock[26] = "";
 	gamemode_have[26] = 1;
-	gamemode_tip[26] = "DAILY RACE";
+	gamemode_tip[26] = "GOTTA GO FAST";
 	
 	gamemode[27] = "DAILY SCORE";
 	gamemode_unlock[27] = "";
 	gamemode_have[27] = 1;
-	gamemode_tip[27] = "DAILY SCORE";
+	gamemode_tip[27] = "SWEATING";
 	
 	gamemode[28] = "ALL MUTATION#CHOICES";
 	gamemode_unlock[28] = "TAKE EVERY REGULAR MUTATION#ATLEAST ONCE";
@@ -185,6 +190,11 @@ function scrGameModes() {
 	gamemode_have[36] = 0;
 	gamemode_tip[36] = "ROLL CREDITS";
 	
+	gamemode[37] = "WEEKLY";
+	gamemode_unlock[37] = "";
+	gamemode_have[37] = 1;
+	gamemode_tip[37] = "WHAT A WEEK";
+	
 	/*
 	gamemode[23] = "SEEDED";
 	gamemode_description[23] = "YOU ONLY GET MELEE WEAPONS#ALWAYS GET LONG ARMS";
@@ -228,6 +238,7 @@ function scrGameModes() {
 	gamemodeOrder[34] = 17//26;
 	gamemodeOrder[35] = 26//28;
 	gamemodeOrder[36] = 27;
+	gamemodeOrder[37] = 37;
 
 
 	maxgamemode = array_length(gamemodeOrder) - 1;

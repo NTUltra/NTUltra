@@ -11,7 +11,7 @@ else
 	with myEnemy
 	{
 		var hitWalls = ds_list_create();
-		var amountOfWalls = instance_place_list(x,y+140,Wall,hitWalls,false);
+		var amountOfWalls = instance_place_list(x,y,Wall,hitWalls,false);
 		if amountOfWalls > 0
 		{
 			while(amountOfWalls > 0)
@@ -25,7 +25,7 @@ else
 					}
 				}
 				ds_list_clear(hitWalls);
-				amountOfWalls = instance_place_list(x,y+140,Wall,hitWalls,false);
+				amountOfWalls = instance_place_list(x,y,Wall,hitWalls,false);
 			}
 		}
 		ds_list_destroy(hitWalls);

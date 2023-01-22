@@ -1,5 +1,5 @@
 alarm[0]=time;
-if room_speed <30
+if room_speed < UberCont.normalGameSpeed
 {
 room_speed+=1;
 }

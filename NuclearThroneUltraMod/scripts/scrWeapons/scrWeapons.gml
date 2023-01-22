@@ -894,7 +894,7 @@ function scrWeapons() {
 	wep_cost[80] = 2
 	wep_sprt[80] = sprSniper
 	wep_area[80] = -1
-	wep_text[80] = "hunter prefers bolt weapons"
+	wep_text[80] = "reliable sniper"
 	wep_swap[80] = sndSwapPistol
 	wep_rad[80] = 0;
 
@@ -3467,7 +3467,7 @@ function scrWeapons() {
 	wep_load[314] = 25
 	wep_cost[314] = 0
 	wep_sprt[314] = sprChargeSplinterGun
-	wep_area[314] = 8
+	wep_area[314] = 9
 	wep_text[314] = "hold and hold longer"
 	wep_swap[314] = sndSwapShotgun
 	wep_rad[314] = 0;
@@ -6738,6 +6738,28 @@ function scrWeapons() {
 	wep_text[609] = "bad to the bone"
 	wep_swap[609] = sndSwapExplosive
 	wep_rad[609] = 0;
+	
+	wep_name[610] = "CUBER SNIPER"
+	wep_type[610] = 1
+	wep_auto[610] = 0
+	wep_load[610] = 12
+	wep_cost[610] = 5
+	wep_sprt[610] = sprCuberSniper
+	wep_area[610] = -1
+	wep_text[610] = "it's only fair"
+	wep_swap[610] = sndSwapPistol
+	wep_rad[610] = 0;
+	
+	wep_name[611] = "HEAVY CUBER SNIPER"
+	wep_type[611] = 1
+	wep_auto[611] = 0
+	wep_load[611] = 11
+	wep_cost[611] = 8
+	wep_sprt[611] = sprHeavyCuberSniper
+	wep_area[611] = -1
+	wep_text[611] = "ultra moddable!"
+	wep_swap[611] = sndSwapPistol
+	wep_rad[611] = 0;
 
 	maxwep = array_length(wep_name)-1;
 

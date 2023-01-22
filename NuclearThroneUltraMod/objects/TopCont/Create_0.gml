@@ -24,7 +24,11 @@ if instance_exists(Player)
 	}
 }
 if darkness = 1
-{dark = surface_create(__view_get( e__VW.WView, 0 ),__view_get( e__VW.HView, 0 ))
+{
+	if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+		dark = surface_create(427,__view_get( e__VW.HView, 0 ))
+	else
+		dark = surface_create(__view_get( e__VW.WView, 0 ),__view_get( e__VW.HView, 0 ))
 surface_set_target(dark)
 draw_clear(c_white)
 surface_reset_target()}

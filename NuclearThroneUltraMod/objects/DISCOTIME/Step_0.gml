@@ -3,7 +3,6 @@ if instance_exists(Player) && Player.wep == 396
 {
 	if !visible
 	{
-		room_speed = 35;
 		audio_resume_sound(sndChubbyEmuSong);
 		if !audio_is_playing(sndChubbyEmuSong)
 		{

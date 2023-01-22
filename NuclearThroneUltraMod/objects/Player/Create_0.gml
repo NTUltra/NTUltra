@@ -4,6 +4,10 @@ instance_destroy()
 exit;
 }*/
 //scrn=0; //for screenshot taking character explain pic
+if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK)
+{
+	instance_create(x,y,FPSHACK);	
+}
 depth = 0;
 saveLoaded = false;
 outOfCombat = false;
@@ -135,7 +139,11 @@ with UberCont {
     //Daily
 	if !instance_exists(PlayerSpawn) && instance_number(Player) == 1 && !instance_exists(CrownIcon)
 	{
-	    if opt_gamemode == 26 {
+		if isWeekly {
+			instance_create(0,0,StartDaily);
+			canRestart = false;
+		}
+	    else if opt_gamemode == 26 {
 			instance_create(0,0,StartDaily);
 	        canRestart = false;
         
@@ -170,8 +178,6 @@ else
 
 if UberCont.opt_gamemode == 7 //ATOM TELEPORT ONLY GM
 race = 15;
-if UberCont.opt_gamemode == 12 //HUNTER MARK SHOT ONLY
-race = 11;
 if UberCont.opt_gamemode == 35
 race = 23
 //if UberCont.opt_gamemode==14//fish companion only
@@ -190,6 +196,12 @@ else if instance_exists(PlayerSpawn)
 else
     crown = 1;
 
+//AREA STUFF
+area = 1
+subarea = 0
+lastarea = 1
+lastsubarea = 1;
+hard = 0
 
 skillsChosen = 0; //To check for ultra mutation (always last)
 totalSkills = 0;
@@ -302,7 +314,7 @@ bqueueshot = 0;
 cqueueshot = 0;
 
 SetSeed();
-if race = 17 //GunSmith random wepmod
+if race = 17// && !instance_exists(StartDaily)//GunSmith random wepmod
 {
     do {
         wepmod1 = scrMods();
@@ -387,12 +399,6 @@ if UberCont.opt_gamemode == 32//One hit wonder
 		skillpoints ++;
 	}
 }
-//AREA STUFF
-area = 1
-subarea = 0
-lastarea = 1
-lastsubarea = 1;
-hard = 0
 if UberCont.opt_gamemode == 34//HARD MODE
 {
 	skillpoints ++;
@@ -547,6 +553,7 @@ lag = -1;
 hardshell = true;
 
 visitedCrib = false;
+fromCribToVault = false;
 meltingd = 0;
 lastEnemyKilled = noone;
 patience = 0;

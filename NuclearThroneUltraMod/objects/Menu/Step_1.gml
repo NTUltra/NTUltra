@@ -34,6 +34,7 @@ instance_create(x,y,OptionSelect)
 instance_create(x,y,OptionSelect2)
 instance_create(x,y,DailyScore);
 instance_create(x,y,DailyRace);
+instance_create(x,y,Weekly);
 instance_create(x,y,UpdateSelect)
 instance_create(x,y,Cheatcode);
 //If savefile found

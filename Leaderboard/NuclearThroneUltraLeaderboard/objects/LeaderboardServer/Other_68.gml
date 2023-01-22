@@ -26,6 +26,27 @@ if (type == network_type_data) {
 	var getScore = true;
 	switch(data)
 	{
+		case NETDATA.STARTWEEKLY:
+			show_debug_message("Weekly start");
+			var socket = buffer_read(buffer, buffer_u16);
+			var sendBuffer = buffer_create(5,buffer_grow,1);
+			buffer_write(sendBuffer,buffer_u8,NETDATA.STARTWEEKLY);
+			buffer_write(sendBuffer,buffer_u16,weekSeed);
+			buffer_write(sendBuffer,buffer_u16,weekGamemode);
+			buffer_write(sendBuffer,buffer_u16,totalWeeklies);
+			switch (weekGamemode)
+			{
+				case 1://One weapon only
+					buffer_write(sendBuffer,buffer_u16,weeklyOption[0]);
+				break;
+				case 19://Disc room
+					buffer_write(sendBuffer,buffer_u16,weeklyOption[0]);
+					buffer_write(sendBuffer,buffer_u8,weeklyOption[1]);
+				break;
+			}
+			network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
+			buffer_delete(sendBuffer);
+		break;
 		//Receiving score
 		case NETDATA.RACE:
 			isScore = false;

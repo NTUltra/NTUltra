@@ -51,7 +51,10 @@ if blink < 0 {
 }
 else {
     alarm[0] = 2
-    blink -= 1
+	if UberCont.normalGameSpeed == 60
+		blink -= 0.5;
+	else
+		blink --;
     if visible = 1
     visible = 0
     else visible = 1

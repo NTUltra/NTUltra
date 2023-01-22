@@ -2,15 +2,12 @@
 // /@description reset some important variables
 ///@param
 function scrEndOfRun(){
-	if instance_exists(FPSHACK)
-	{
-		with FPSHACK
-			instance_destroy();
-		with UberCont
-			normalGameSpeed = 30;
-	}
+	with FPSHACK
+		instance_destroy();
+	room_speed = 30;
 	with UberCont
 	{
+		hasLeveledUp = false;
 		loadedRun = false;
 		crownVaultChallenge = 0;
 		killedBoss = [];

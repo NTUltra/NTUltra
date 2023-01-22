@@ -11,6 +11,12 @@ function scrNextLevel() {
 
 	if area = 104//YV CRIB
 	{
+		if fromCribToVault
+		{
+			area = 100;
+			fromCribToVault = false;
+			exit;
+		}
 		area = lastarea;
 		if looping
 		{
@@ -307,11 +313,15 @@ function scrNextLevel() {
 	        }
 	        else//Skip one palace
 	        {
-	        area=9;
-	        subarea=1;
-			lastarea = 9;
-			lastsubarea = 2;
-			inverted=false
+		        area = 9;
+		        subarea = 1;
+				lastarea = 9;
+				lastsubarea = 2;
+				inverted=false
+				if !UberCont.hasLeveledUp
+				{
+					scrUnlockBSkin(21,"FOR REACHING THE PALACE#WITHOUT LEVELING UP#AS HORROR",0);	
+				}
 	        }
         
 	    }
@@ -335,10 +345,14 @@ function scrNextLevel() {
 			}
 			else//Skip one palace
 			{
-				area=9
+				area = 9;
 				lastarea = 9;
-				subarea=2;
+				subarea = 2;
 				inverted=false;
+				if !UberCont.hasLeveledUp
+				{
+					scrUnlockBSkin(21,"FOR REACHING THE PALACE#WITHOUT LEVELING UP#AS HORROR",0);	
+				}
 			}
 	    exit;
 	    }
@@ -418,6 +432,10 @@ function scrNextLevel() {
 				{
 					area = 9
 					subarea = 1;
+					if !UberCont.hasLeveledUp
+					{
+						scrUnlockBSkin(21,"FOR REACHING THE PALACE#WITHOUT LEVELING UP#AS HORROR",0);	
+					}
 				}
 				else if area == 5 && (curse || bcurse || ccurse)
 				{
@@ -495,31 +513,31 @@ function scrNextLevel() {
 	lastarea = 109
 	}//in case of crownvault
 	
-	if ( area=9 && inverted )//inv wonderland
+	if ( area == 9 && inverted )//inv Palace
 	{area=118;
 	lastarea = 118
 	}//in case of crownvault
 
-	if ( area=2 && inverted )//inv sewers
+	if ( area == 2 && inverted )//inv sewers
 	{area=110;
 	subarea=1;
 	lastarea=110;}
 	
-	if ( area==10 && inverted )//inv Savanna
+	if ( area == 10 && inverted )//inv Savanna
 	{area=121;
 	lastarea=121;
 	}
-	if ( area==117 && inverted )//inv Mushroom
+	if ( area == 117 && inverted )//inv Mushroom
 	{area=124;
 	lastarea=124;
 	subarea = 0;
 	}
-	if ( area==126 && inverted )//inv Graveyard
+	if ( area == 126 && inverted )//inv Graveyard
 	{area=127;
 	lastarea=127;
 	subarea = 1;
 	}
-	if ( area==114 && inverted )//inv Mushroom
+	if ( area == 114 && inverted )//inv Mushroom
 	{
 		area=123;
 		lastarea=123;
@@ -537,10 +555,18 @@ function scrNextLevel() {
 	}
 
 	if race=6||race=12{//Yv's Crib? Yun cuz aswell
-		if level>=10
+		if level >= 10
 		{
 		    if (visitedCrib==false)
 			{
+				if area == 100
+				{
+					if !instance_exists(CrownPed)
+					{
+						//Next level should be crown
+						fromCribToVault = true;
+					}
+				}
 			    area = 104;
 			    visitedCrib = true;
 				if crown == 24
@@ -551,7 +577,7 @@ function scrNextLevel() {
 		}
 	}
 
-	if (area=105 || area=106|| area=107 || area = 108 || area = 109 | area = 110 || area = 111 || area = 112 || area == 121 || area == 122 || area == 123 || area == 124 || area == 125)&&subarea<2//inverted
+	if (area=105 || area=106|| area=107 || area = 108 || area = 109 || area = 110 || area = 111 || area = 112 || area == 121 || area == 122 || area == 123 || area == 124 || area == 125)&&subarea<2//inverted
 	{
 		if area == 112//Inv labs normal labs skips one
 		{
@@ -578,11 +604,11 @@ function scrNextLevel() {
 	else if (
 	//!(area = 7 && subarea == 1) //Vulcano 1
 	!(area = 6 && subarea == 2) //Labs 2
-	&& !(area = 4 && subarea == 1)//Caves 1
-	&& !(area = 9 && subarea == 2)//Palace 2
-	&& !(area = 9 && subarea == 3)//Throne 1
-	&& !(area = 119)//Throne 2
-	&& !(area = 5 && subarea == 1)//Frozen city 1
+	&& !(area == 4 && subarea == 1)//Caves 1
+	&& !(area == 9 && subarea == 2)//Palace 2
+	&& !(area == 9 && subarea == 3)//Throne 1
+	&& !(area == 119)//Throne 2
+	&& !(area == 5 && subarea == 1)//Frozen city 1
 	)
 	{
 		if area == 100

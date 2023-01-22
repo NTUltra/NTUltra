@@ -727,7 +727,7 @@ function scrUltras() {
 	ultra_tips[99] = "doctor necromancer"
     
 	ultra_name[100] = "SEDATIVES"
-	ultra_text[100] = "YOUR PROJECTILES PUT ENEMIES TO SLEEP#FOR A SHORT MOMENT#THRONE BUTT INCREASES THE SLEEP DURATION"
+	ultra_text[100] = "YOUR PROJECTILES PUT ENEMIES TO SLEEP#FOR A SHORT MOMENT#THRONE BUTT INCREASES#THE SLEEP DURATION"
 	ultra_tips[100] = "sleeping enemies don't react#for a moment"
 
 

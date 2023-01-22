@@ -38,4 +38,8 @@ with Player
 	if hammerheadtimer > 0
 		hammerheadtimer -= dt;
 }
+with SnowFlake
+	wave -= 0.1;
+with WeaponMod
+	wave -= 0.2;
 //There are probably a ton of enemies that also have localized timers run itterated in step events

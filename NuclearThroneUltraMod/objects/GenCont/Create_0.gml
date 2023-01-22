@@ -188,39 +188,39 @@ if instance_exists(Player)
 		draw_sprite(sprLavaBubble,0,0,0);
 
 		}
-		else if Player.area = 104//YV's Crib
+		else if Player.area == 104//YV's Crib
 		__background_set_colour( make_color_rgb(238,240,242) )
-		else if Player.area = 105//Inverted Desert
+		else if Player.area == 105//Inverted Desert
 		__background_set_colour( make_color_rgb(80,112,149) )
-		else if Player.area = 8//Candyland
+		else if Player.area == 8//Candyland
 		__background_set_colour( make_color_rgb(162,111,220) )
-		else if Player.area = 9//Palace
+		else if Player.area == 9//Palace
 		__background_set_colour( make_color_rgb(97,29,36) )
-		else if Player.area = 10//savanna
+		else if Player.area == 10//savanna
 		__background_set_colour( make_color_rgb(160,95,61) )
-		else if Player.area = 106//Inverted scrapyard
+		else if Player.area == 106//Inverted scrapyard
 		__background_set_colour( make_color_rgb(194,176,163) )
-		else if Player.area = 107//Inverted Frozen City
+		else if Player.area == 107//Inverted Frozen City
 		__background_set_colour( make_color_rgb(75,66,58) )
-		else if Player.area = 101//Oasis
+		else if Player.area == 101//Oasis
 		__background_set_colour( make_color_rgb(81,209,200) )
-		else if Player.area = 108//Inverted Vulcano
+		else if Player.area == 108//Inverted Vulcano
 		__background_set_colour( make_color_rgb(220,240,240) )
-		else if Player.area = 109//Inverted wonderland
+		else if Player.area == 109//Inverted wonderland
 		__background_set_colour( make_color_rgb(65,111,35) )
-		else if Player.area = 111//inverted caves
+		else if Player.area == 111//inverted caves
 		__background_set_colour( make_color_rgb(138,186,79) )
-		else if Player.area = 112//inverted labs
+		else if Player.area == 112//inverted labs
 		__background_set_colour( make_color_rgb(246,228,224) )
-		else if Player.area = 114//Jungle bungle wungle fungle fuck ass
+		else if Player.area == 114//Jungle bungle wungle fungle fuck ass
 		__background_set_colour( make_color_rgb(42,144,12) )
-		else if Player.area = 115//cheese cave
+		else if Player.area == 115//cheese cave
 		__background_set_colour( make_color_rgb(255,156,35) )
-		else if Player.area = 116//SURVIVAL ARENA
+		else if Player.area == 116//SURVIVAL ARENA
 		__background_set_colour( make_color_rgb(43,35,23) )
-		else if Player.area = 117//MUSHROOM
+		else if Player.area == 117//MUSHROOM
 		__background_set_colour( make_color_rgb(75,79,31) )
-		else if Player.area = 118//Inverted Palace
+		else if Player.area == 118//Inverted Palace
 		__background_set_colour( make_color_rgb(142,204,204) )
 		else if Player.area == 120//Inverted throne 2
 		__background_set_colour( make_color_rgb(76,68,61) )
@@ -280,27 +280,27 @@ else if Player.area = 108 && Player.subarea==3
 }
 if Player.area = 104
 goal=150+s
-if Player.area = 105//inverted desert
+if Player.area == 105//inverted desert
 goal=130+s
-if Player.area = 106//inverted scrapyard
+if Player.area == 106//inverted scrapyard
 goal=120+s
-if Player.area = 8//Wonderland
+if Player.area == 8//Wonderland
 goal = 130+s
-if Player.area = 9//Palace
+if Player.area == 9//Palace
 goal = 130+s
-if Player.area = 118//Inverted Palace
+if Player.area == 118//Inverted Palace
 goal = 130+s
-if Player.area = 10 || Player.area == 121//savanna
+if Player.area == 10 || Player.area == 121//savanna
 goal = 110+s
-if Player.area = 109//inverted Wonderland
+if Player.area == 109//inverted Wonderland
 goal=130+s
-if Player.area = 3
+if Player.area == 3
 goal = 90+s
-if Player.area = 107//inverted FrozenCity
+if Player.area == 107//inverted FrozenCity
 goal=120+s;
 if Player.area == 101 || Player.area == 122//Oasis
 goal=95+s;
-if (Player.area = 6 || Player.area = 112) && Player.subarea=2//LABS BOSS
+if (Player.area == 6 || Player.area = 112) && Player.subarea == 2//LABS BOSS
 goal=1;
 if Player.area == 113//Banditland
 goal=70+s;

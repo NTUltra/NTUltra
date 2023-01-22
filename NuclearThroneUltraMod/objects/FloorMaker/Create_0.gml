@@ -37,11 +37,11 @@ if instance_exists(Player){
 	goal = 130+s
 	else if (Player.area = 6||Player.area=112) && Player.subarea=2//LABS BOSS
 	goal=1;
-	else if Player.area = 9 && Player.subarea < 3
+	else if Player.area == 9 && Player.subarea < 3
 	goal = 130+s
-	else if Player.area = 118 && Player.subarea < 3
+	else if Player.area == 118 && Player.subarea < 3
 	goal = 130+s
-	else if Player.area = 10 || Player.area == 121
+	else if Player.area == 10 || Player.area == 121
 	{
 		styleb = choose(0,0,0,0,0,0,1,1)//Slightly higher chance for B tiles
 		goal = 120+s
@@ -50,7 +50,7 @@ if instance_exists(Player){
 	goal = 350;
 	else if Player.area == 118 && Player.subarea == 3
 	goal = 300;
-	else if Player.area = 119 || Player.area == 120
+	else if Player.area == 119 || Player.area == 120
 	{
 		goal = 60;
 		s = -10;

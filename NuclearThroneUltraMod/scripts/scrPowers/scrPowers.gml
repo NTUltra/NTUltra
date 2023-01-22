@@ -1105,7 +1105,7 @@ function scrPowers() {
 				    prevwep=other.wep;
     
 				    do {wep = round(random(maxwep-1)+1)}
-				    until (wep_area[wep] = wep_area[prevwep])
+				    until (wep_area[wep] == wep_area[prevwep] && wep != 298 && wep != 373)
 				
 				    curse = other.curse
 				    wepmod1=other.wepmod1;
@@ -2374,7 +2374,8 @@ function scrPowers() {
 	if race = 9 && !(instance_exists(GenCont))
 	{
 		room_speed=24;//15
-
+		if UberCont.normalGameSpeed == 60
+			room_speed = 48;
 		if (ultra_got[35])
 		{
 			if altUltra
@@ -2505,8 +2506,8 @@ function scrPowers() {
 			bwep=wep;
 			scrSwapWeps();
 		}
-		if ammo[wep_type[wep]] < wep_cost[wep] and KeyCont.key_spec[p] = 1 and wep_type[wep] != 0
-			scrEmpty()
+		//if ammo[wep_type[wep]] < wep_cost[wep] and KeyCont.key_spec[p] = 1 and wep_type[wep] != 0
+		//	scrEmpty()
 
 		if can_shoot = 1 and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)
 		{

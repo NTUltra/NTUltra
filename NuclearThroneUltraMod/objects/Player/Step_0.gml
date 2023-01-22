@@ -211,9 +211,9 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 			//screen_save("explain"+string(scrn)+".png");
 			//scrn++;
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			instance_create(f.x + 16,f.y + 16,GoldChest)
+			instance_create(f.x + 16,f.y + 16,UltraSniper)
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "GOLD CHEST";
+			thing.mytext = "Ultra Sniper";
 		}
 		if keyboard_check_pressed(ord("C")) {
 			var dangle = random(1)*360;
@@ -603,7 +603,7 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 	else{
 		IsShielding=false;
 	}
-	if( (!(IsShielding)||(ultra_got[7]==1)) && (UberCont.opt_gamemode!=12||instance_exists(Marker)) ){
+	if( (!(IsShielding)||(ultra_got[7]==1))){
 	if (race == 7 || (altUltra && ultra_got[55]) || (altUltra && ultra_got[23] && scrMeleeWeapons(wep))) && wep != 0 {
 		//Roids always auto fire
 		wep_auto[wep] = 1
@@ -769,21 +769,20 @@ if KeyCont.key_swap[p] = 1 and bwep != 0
 	}
 }
 
-var mr =GetPlayerMaxRad()
+var mr = GetPlayerMaxRad()
 if (rad > mr)
 {
 	if level < maxlevel || UberCont.opt_gamemode == 22
 	{
-	
-	//rad -= level*60
-	rad -= mr;
-	level += 1
+		//rad -= level*60
+		rad -= mr;
+		level += 1
 
-	if level==7 && loops < 1 && race = 25 && (area < 4 || area == 105 || area == 110 || area == 106 || area == 103 || area == 102 || area == 101 || area == 10)
-		scrUnlockBSkin(25,"FOR REACHING LEVEL 7#BEFORE THE LABS#AS MUTATION DOCTOR",0);
+		if level==7 && loops < 1 && race = 25 && (area < 4 || area == 105 || area == 110 || area == 106 || area == 103 || area == 102 || area == 101 || area == 10)
+			scrUnlockBSkin(25,"FOR REACHING LEVEL 7#BEFORE THE LABS#AS MUTATION DOCTOR",0);
 
-	repeat(level-6)
-	instance_create(x,y,IDPDSpawn)
+		repeat(level-6)
+		instance_create(x,y,IDPDSpawn)
 	
 		if level == 10 && !reachedUltra
 		{
@@ -807,25 +806,23 @@ if (rad > mr)
 		{
 			snd_play_2d(sndLevelUp)
 		}
-	if level != 10
-	{
-		with instance_create(x,y,PopupText)
+		if level != 10
 		{
-			mytext = "LEVEL "+string(other.level)+"!"
+			with instance_create(x,y,PopupText)
+			{
+				mytext = "LEVEL "+string(other.level)+"!"
+			}
+			instance_create(x,y,LevelUp);
+			UberCont.hasLeveledUp = true;
 		}
-		instance_create(x,y,LevelUp)
-	}
-	skillpoints += 1
-	if level > 40
-		skillsChosen --;
-	
+		skillpoints += 1
+		if level > 40
+			skillsChosen --;
 
 	}
 	else
 	{
-	rad = mr;
-	if ultra_got[83]
-	scrUnlockBSkin(21,"FOR GAINING THE MAXIMUM AMOUNT#OF RADS AS HORROR",0);
+		rad = mr;
 	}
 }
 
@@ -1148,7 +1145,6 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 	}
 	//Can we fire again? Two times in a frame? Or even more if you go negative reload
 	if (!IsShielding || ultra_got[7]==1) 
-	and (UberCont.opt_gamemode!=12||instance_exists(Marker))
 	and wep_auto[wep] = 1 and (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
 	{
 		while can_shoot == 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
@@ -1778,12 +1774,14 @@ if race=18
 		    //var wall = instance_nearest(x,y,Wall);
 		    var ground = instance_nearest(x,y,Floor);
 		    motion_add(point_direction(x,y,ground.x+16,ground.y+16),0.6);
-		    flyduration++
+			if UberCont.normalGameSpeed == 60
+				flyduration += 0.5;
+			else
+				flyduration ++
 	    }
 	    else
 	    {
 			flyduration=0;
-    
 	    }
 	}
     if flyduration>flymax

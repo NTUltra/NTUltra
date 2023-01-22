@@ -1,4 +1,4 @@
-/// @description distance
+/// @description distance higher dmg
 
 // Inherit the parent event
 event_inherited();

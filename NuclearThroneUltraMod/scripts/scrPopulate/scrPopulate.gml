@@ -81,9 +81,13 @@ function scrPopulate() {
 					{
 						instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraBandit);
 					}
-					else if ran < 20 && spawnarea != 1
+					else if ran < 18 && spawnarea != 1
 					{
 						instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraBandit);
+					}
+					else if ran < 23 && spawnarea != 1
+					{
+						instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraSniper);
 					}
 				}
 				
@@ -105,9 +109,13 @@ function scrPopulate() {
 						{
 							scrPopEnemies();
 						}
-						else if ran < 15
+						else if ran < 14
 						{
 							instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraBandit);
+						}
+						else if ran < 18
+						{
+							instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraSniper);
 						}
 					}
 

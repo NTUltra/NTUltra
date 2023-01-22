@@ -39,6 +39,8 @@ if Player.area == 101 and Player.subarea == 3
 			instance_destroy(id,false);
 			instance_create(x,y,WallBreak);
 			instance_create(x,y,CarVenusOasis);
+			with Debris
+				instance_destroy();
 		}
 	}
 	else

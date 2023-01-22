@@ -1,0 +1,43 @@
+{
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "Bullet2HeavySquare",
+  "spriteId": {
+    "name": "sprBullet2HeavySquareHighDmg",
+    "path": "sprites/sprBullet2HeavySquareHighDmg/sprBullet2HeavySquareHighDmg.yy",
+  },
+  "solid": false,
+  "visible": true,
+  "managed": true,
+  "spriteMaskId": {
+    "name": "mskBullet2",
+    "path": "sprites/mskBullet2/mskBullet2.yy",
+  },
+  "persistent": false,
+  "parentObjectId": {
+    "name": "Bullet2Square",
+    "path": "objects/Bullet2Square/Bullet2Square.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsGroup": 1,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":1,"eventType":2,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+  ],
+  "properties": [],
+  "overriddenProperties": [],
+  "parent": {
+    "name": "Projectiles",
+    "path": "folders/Objects/Projectiles.yy",
+  },
+}

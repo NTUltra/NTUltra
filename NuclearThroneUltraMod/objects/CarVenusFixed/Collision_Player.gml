@@ -20,6 +20,10 @@ if KeyCont.key_pick[other.p] = 1
 		alarm[1] = 1;
 	}
 	
+	with WantBoss {
+		instance_destroy();	
+	}
+	
 	//instance_change(Wind,false)
 }
 

@@ -48,7 +48,7 @@ if instance_exists(Player) && Player.skill_got[26]
 	{
 		var rebelBuff = 0;
 		if Player.ultra_got[39] && !Player.altUltra
-			rebelBuff = instance_number(Ally)*0.25;
+			rebelBuff = instance_number(Ally)*0.15;
 		var dropRateBuff = Player.skill_got[4]*(0.45+Player.betterrabbitpaw) 
 		+ rebelBuff
 		+ (Player.skill_got[28]*(Player.rage*0.0011))

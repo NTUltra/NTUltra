@@ -1,3 +1,8 @@
+/// @description Screenshake
+alarm[9] = 1;
+
+if instance_exists(GenCont)
+	exit;
 var vw = __view_get( e__VW.WView, 0 )*0.5;
 var vh = __view_get( e__VW.HView, 0 )*0.5;
 if instance_exists(Player)
@@ -105,6 +110,11 @@ if UberCont.opt_camera_follow==0
 	prevviewx2 = viewx2;
 	prevviewy2 = viewy2;
 }
+
+__view_set( e__VW.XView, 0, round(viewx2+(random(shake)-shake/2)*UberCont.opt_shake) );
+__view_set( e__VW.YView, 0, round(viewy2+(random(shake)-shake/2)*UberCont.opt_shake) );
+
+
 if instance_exists(YungCuzDupe)
 {
 	shake /= instance_number(YungCuzDupe);
@@ -113,15 +123,9 @@ if instance_exists(Friend)
 {
 	shake /= instance_number(Friend);
 }
-__view_set( e__VW.XView, 0, round(viewx2+(random(shake)-shake/2)*UberCont.opt_shake) );
-__view_set( e__VW.YView, 0, round(viewy2+(random(shake)-shake/2)*UberCont.opt_shake) );
-
 if shake > 10
 shake *= 0.8
 if shake > 0
 shake -= 1
 else
 shake = 0
-
-/* */
-/*  */

@@ -79,9 +79,9 @@ if prevhealth > my_health
 				var resultDmgTaken = dmgTaken;
 			    with Marker
 			    {
-				    if instance_exists(enemy)&&instance_exists(target)
+				    if instance_exists(target)
 				    {
-					    if other.id=target.id
+					    if other.id == target.id
 					    {
 							other.my_health -= dmgTaken*0.2;
 							resultDmgTaken += (dmgTaken*0.2);

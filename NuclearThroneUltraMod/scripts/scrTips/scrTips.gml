@@ -128,7 +128,7 @@ function scrTips() {
 	"boiling veins protects you#against lava","don't stand#too long in lava","hot feet","tomato sauce","do not run away from a dragon fight!","do not flee from thy dragon")
 	if Player.area = 8
 	tip = choose("sweet","wonderland","evil cards","play your cards right","teapots of doom","cotton candy floors","do not eat the mushrooms","I'm not even a fan of#alice in wonderland")
-	if Player.area = 9
+	if Player.area == 9
 	tip = choose("the palace","This place is old");
 	if Player.area = 118
 	tip = choose("the inverted palace","regular portals");

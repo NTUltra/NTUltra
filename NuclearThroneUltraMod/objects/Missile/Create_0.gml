@@ -4,7 +4,7 @@ friction=0.1;
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable
 
 target=0;
-dmg = 6;
+dmg = 5;
 alarm[0]=6
 
 //mask_index=mskPickupThroughWall;

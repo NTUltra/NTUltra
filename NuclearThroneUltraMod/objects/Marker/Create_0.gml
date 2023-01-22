@@ -2,7 +2,7 @@ image_speed=0;
 if instance_exists(enemy)
 target=instance_nearest(x,y,enemy);
 else
-target=-1;
+target=noone;
 //visible=false;
 MarkerNr = 0;
 if instance_exists(Player)

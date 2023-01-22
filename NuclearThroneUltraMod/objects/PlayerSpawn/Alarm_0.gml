@@ -16,6 +16,7 @@ snd_play(sndStatueCharge);
 with Player//Data to keep
 {
 	//bskin=other.bskin;
+	onlyusemerevolver = other.onlyusemerevolver;
 	inverted = other.inverted;
 	ultramod = other.ultramod;
 	ultimategamble=true;

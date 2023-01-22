@@ -1,4 +1,5 @@
 /// @description xxx
+depth = -90;
 owner = noone;
 buffList = [];
 image_xscale = 0.1;

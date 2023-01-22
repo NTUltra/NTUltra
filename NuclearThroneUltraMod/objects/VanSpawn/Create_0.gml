@@ -11,7 +11,7 @@ if instance_exists(Player) && instance_exists(Wall)
 		dir = instance_nearest(x,y,Wall)
 		x = dir.x+16; y = dir.y+16;
 	}
-	until point_distance(x,y,Player.x,Player.y) > 64 | tries > 200
+	until point_distance(x,y,Player.x,Player.y) > 64 || tries > 200
 
 }
 

@@ -1,19 +1,11 @@
-if instance_exists(enemy)
+if instance_exists(target)
 {
-	if(target != -1 && instance_exists(target) && target.my_health > 0)
+	if(target.my_health > 0)
 	{
 		var tx = target.x// + (target.hspeed*2);
 		var ty = target.y// + (target.vspeed*2);
 		x = tx;
 		y = ty;
-	}
-	else
-	{
-		if target.object_index == Thief
-		{
-			scrUnlockGameMode(12,"FOR KILLING A THIEF#WHILE IT IS MARKED")	
-		}
-		instance_destroy();
 	}
 }
 else

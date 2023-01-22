@@ -13,7 +13,7 @@ if other.team != team
 		}
 		else
 		{
-			scrIframeSkipper(0.1);
+			scrIframeSkipper(0.05);
 		}
 	}
 }

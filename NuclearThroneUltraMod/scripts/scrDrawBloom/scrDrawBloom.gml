@@ -463,11 +463,11 @@ function scrDrawBloom() {
 	{
 		if totemBuffed
 		{
-			draw_sprite_ext(sprite_index,image_index,x,y,image_xscale*1.3,image_yscale*1.3,image_angle,c_red,ba+0.1);
+			draw_sprite_ext(sprite_index,image_index,x,y,image_xscale*1.3,image_yscale*1.3,image_angle,c_red,ba+0.2);
 		}
 		if super
 		{
-			draw_sprite_ext(sprite_index,image_index,x,y,image_xscale*1.3,image_yscale*1.3,image_angle,c_green,ba+0.1);
+			draw_sprite_ext(sprite_index,image_index,x,y,image_xscale*1.3,image_yscale*1.3,image_angle,c_green,ba+0.2);
 		}
 	}
 	draw_set_blend_mode(bm_normal)

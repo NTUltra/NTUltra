@@ -9,3 +9,4 @@ shadowSprite = mskPickupThroughWall;
 spr_idle = sprVenusCarOasis
 spr_hurt = sprVenusCarOasisHurt
 spr_dead = sprScorchmark
+alarm[2] = 4;

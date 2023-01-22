@@ -1,2 +1,5 @@
 /// @description Wave
-wave += 0.3;
+if UberCont.normalGameSpeed == 60
+	wave += 0.15
+else
+	wave += 3

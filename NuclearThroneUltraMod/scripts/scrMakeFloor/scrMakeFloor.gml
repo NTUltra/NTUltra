@@ -640,15 +640,15 @@ function scrMakeFloor() {
 	trn = choose(0,0,0,0,0,0,0,0,0,0,0,90,-90,180)
 	if area = 7 || area = 108
 	trn= choose(-90,0,0,0,0,0,0,0,180,0,90);
-	if area = 8 || area = 109
+	if area == 8 || area == 109
 	trn = choose(0,0,0,0,0,180,0,0,90,90,-90,90,-90,180)
-	if ((area = 9 || area == 118) && subarea < 3)
+	if ((area == 9 || area == 118) && subarea < 3)
 	trn = choose(0,0,0,0,0,0,0,0,0,90,-90,90,-90)
-	else if ((area = 9 || area == 118) && subarea == 3)
+	else if ((area == 9 || area == 118) && subarea == 3)
 	trn = 0;
-	else if area = 100
+	else if area == 100
 	trn = choose(0,0,0,0,0,0,0,0,0,0,90,-90,180,180)
-	else if area = 103 || area == 125
+	else if area == 103 || area == 125
 	trn = choose(0,0,0,90,-90,180)
 	else if area == 114 || area == 123
 	trn = choose(0,0,0,0,0,90,-90,180)
@@ -743,7 +743,7 @@ function scrMakeFloor() {
 		}
 	}
 
-	if ((area = 9 || area == 118) && subarea < 3)
+	if ((area == 9 || area == 118) && subarea < 3)
 	{
 	   if random(19+instance_number(FloorMaker)) > 20
 	   {
@@ -759,7 +759,7 @@ function scrMakeFloor() {
 		instance_create(x,y,FloorMaker)
 	}
 
-	if area = 2 or area = 110
+	if area == 2 or area == 110
 	{
 	if random(14+instance_number(FloorMaker)) > 15
 	{
@@ -772,7 +772,7 @@ function scrMakeFloor() {
 	instance_create(x,y,FloorMaker)
 	}
 
-	if (area = 3 || area = 106) && subarea !=3
+	if (area == 3 || area == 106) && subarea !=3
 	{
 	if random(39+instance_number(FloorMaker)) > 40
 	{

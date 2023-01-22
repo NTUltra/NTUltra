@@ -220,7 +220,7 @@ function scrEnemyDeathEvent(){
 			    }
 		    }
 		}
-	    if UberCont.opt_gamemode=11//GUN GAME
+	    if UberCont.opt_gamemode = 11//GUN GAME
 	    {
 	        with Player
 	        {
@@ -251,6 +251,10 @@ function scrEnemyDeathEvent(){
 		if instance_number(enemy) <= instance_number(IDPDVan)+1
 		{
 			snd_play(sndLastEnemy,0,true)
+		}
+		else if !wasResurrected && UberCont.opt_gamemode == 12
+		{
+			instance_create(x,y,Zombie);
 		}
 	}
 	else{

@@ -21,6 +21,7 @@ function scrInitOptions() {
 	opt_freeze = 0.5
 	opt_loading = 3.5
 	opt_bossintro = 1
+	normalGameSpeed = 30;
 	//Gamemode stuff that doesn't get saved.
 	opt_gamemode=0;
 	opt_gm1wep=1;

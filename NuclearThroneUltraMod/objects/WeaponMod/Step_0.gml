@@ -29,7 +29,7 @@ if place_meeting(x,y,Player)
 	if !active || KeyCont.key_swap[Player.p] = 1
 	{
 		active = true;
-		name="##MODIFY WEAPON#"+modname;
+		modname="##MODIFY WEAPON#"+modname;
 		moddescription = scrWepModDescription(wepmod);
 		var hasPowerCraving = Player.skill_got[30];
 		if (Player.wepmod1==0)
@@ -55,19 +55,19 @@ if place_meeting(x,y,Player)
 			switch (replaceModNr)
 			{
 				case 1:
-					name += "#REPLACE MOD 1 "+scrWepModName(Player.wepmod1);
+					modname += "#REPLACE MOD 1 "+scrWepModName(Player.wepmod1);
 					moddescription = "##"+moddescription;
 				break;
 				case 2:
-					name += "#REPLACE MOD 2 "+scrWepModName(Player.wepmod2);
+					modname += "#REPLACE MOD 2 "+scrWepModName(Player.wepmod2);
 					moddescription = "##"+moddescription;
 				break;
 				case 3:
-					name += "#REPLACE MOD 3 "+scrWepModName(Player.wepmod3);
+					modname += "#REPLACE MOD 3 "+scrWepModName(Player.wepmod3);
 					moddescription = "##"+moddescription;
 				break;
 				case 4:
-					name += "#REPLACE MOD 4 "+scrWepModName(Player.wepmod4);
+					modname += "#REPLACE MOD 4 "+scrWepModName(Player.wepmod4);
 					moddescription = "##"+moddescription;
 				break;
 			}

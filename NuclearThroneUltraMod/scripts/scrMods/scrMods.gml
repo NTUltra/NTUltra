@@ -3,7 +3,32 @@ function scrMods() {
 	var notToxi = 4;
 	if instance_exists(Player) && Player.race == 23//Frog is oke with toxic!
 	notToxi = -1;
-	var choice;
+	if UberCont.useSeed
+	{
+		if instance_exists(Player)
+		{
+			var i = Player.area + Player.subarea + UberCont.randomDailyMod;
+			var b = Player.subarea;
+		} else
+		{
+			var i = BackCont.area + BackCont.subarea + UberCont.randomDailyMod;
+			var b = BackCont.subarea;
+		}
+		choice = 0;
+		do
+		{
+			choice += i + b;
+			while (choice > 18)
+				choice -= 18;
+			while (choice < 1)
+				choice += max(1,b);
+			
+				notToxi--;
+		}
+		until ( (choice != 1 || notToxi < 0) && choice <= 18 )
+		UberCont.randomDailyMod ++;
+		return choice;
+	}
 	do 
 	{
 		choice = irandom_range(1,18);

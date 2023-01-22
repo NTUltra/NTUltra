@@ -29,6 +29,9 @@ function scrSaveOptions() {
 	ini_write_real("OPTIONS","loading",opt_loading);
 	ini_write_real("OPTIONS","bossintro",opt_bossintro);
 	ini_write_real("OPTIONS","timer",opt_timer);
+	ini_write_real("OPTIONS","fps",normalGameSpeed);
+	if normalGameSpeed < 30
+		normalGameSpeed = 30;
 	if opt_gamemode == 26 || opt_gamemode == 27//Can't save daily
 		ini_write_real("OPTIONS","gamemode",0);
 	else

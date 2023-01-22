@@ -11537,5 +11537,99 @@ function scrFire2() {
 	
 	break;
 	
+	//CUBE SNIPER
+	case 610:
+	
+	snd_play_fire(sndCuber)
+	snd_play_fire(sndSniperFire)
+
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+	var aimdir = aimDirection+(random(10)-5*accuracy);
+	var sps = 12 * accuracy;
+	var xx = x;
+	var yy = y;
+	var spd = 17;
+	with instance_create(xx,yy,PlayerSquareBullet)
+	{
+		motion_add(aimdir,spd)
+		team = other.team
+		image_angle = direction
+		firedbysniper=true;
+	}
+	xx = x + lengthdir_x(sps,aimdir+90);
+	yy = y + lengthdir_y(sps,aimdir+90);
+	with instance_create(xx,yy,PlayerSquareBullet)
+	{
+		motion_add(aimdir,spd)
+		team = other.team
+		image_angle = direction
+		firedbysniper=true;
+	}
+	xx = x + lengthdir_x(sps,aimdir-90);
+	yy = y + lengthdir_y(sps,aimdir-90);
+	with instance_create(xx,yy,PlayerSquareBullet)
+	{
+		motion_add(aimdir,spd)
+		team = other.team
+		image_angle = direction
+		firedbysniper=true;
+	}
+
+	BackCont.viewx2 += lengthdir_x(16,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(16,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4.2
+	wkick = 3
+
+	break;
+	
+	//CUBE SNIPER
+	case 610:
+	
+	snd_play_fire(sndHeavyCuber);
+	snd_play_fire(sndSniperFire);
+
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+	var aimdir = aimDirection+(random(10)-5*accuracy);
+	var sps = 12 * accuracy;
+	var xx = x;
+	var yy = y;
+	var spd = 17;
+	with instance_create(xx,yy,PlayerHeavySquareBullet)
+	{
+		motion_add(aimdir,spd)
+		team = other.team
+		image_angle = direction
+		firedbysniper=true;
+	}
+	xx = x + lengthdir_x(sps,aimdir+90);
+	yy = y + lengthdir_y(sps,aimdir+90);
+	with instance_create(xx,yy,PlayerHeavySquareBullet)
+	{
+		motion_add(aimdir,spd)
+		team = other.team
+		image_angle = direction
+		firedbysniper=true;
+	}
+	xx = x + lengthdir_x(sps,aimdir-90);
+	yy = y + lengthdir_y(sps,aimdir-90);
+	with instance_create(xx,yy,PlayerHeavySquareBullet)
+	{
+		motion_add(aimdir,spd)
+		team = other.team
+		image_angle = direction
+		firedbysniper=true;
+	}
+
+	BackCont.viewx2 += lengthdir_x(17,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(17,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4.8
+	wkick = 3
+
+	break;
+	
 	}//end of switch part 2!
 }

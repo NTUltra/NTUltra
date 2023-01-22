@@ -41,7 +41,7 @@ timer="OFF"
 
 var d = " DIFFICULTY: "+string(hard);
 
-txt0 = "#OPTIONS###########################PRESS [RIGHT CLICK] TO RETURN#PRESS [ENTER] FOR MAIN MENU"
+txt0 = "#OPTIONS############################CONTINUE [ESC] ------------ QUIT [ENTER]"
 
 if UberCont.opt_loading == 4
 	var loadspeed = "MAX#"
@@ -52,12 +52,15 @@ if sideAspect >= sprite_get_number(sprSideArt)
 	sideAspect = "";
 else
 	sideAspect = string(sideAspect);
-txt1 = "######AUDIO#MUSIC VOLUME#SFX VOLUME#AMBIENT VOLUME#3D AUDIO##VISUALS#FULL SCREEN#CROSSHAIR#SIDE ART / ASPECT RATIO#DAMAGE INDICATORS#CAMERA FOLLOW AIM#HUD DESCRIPTION##OTHER#SCREEN SHAKE#FREEZE FRAMES#LOADING SPEED#CAPTURE MOUSE#BOSS INTROS#TIMER"
+var fpsMode = "#OFF";
+	if UberCont.normalGameSpeed == 60
+		fpsMode = "#ON";
+txt1 = "######AUDIO#MUSIC VOLUME#SFX VOLUME#AMBIENT VOLUME#3D AUDIO##VISUALS#FULL SCREEN#CROSSHAIR#SIDE ART / ASPECT RATIO#DAMAGE INDICATORS#CAMERA FOLLOW AIM#HUD DESCRIPTION##OTHER#SCREEN SHAKE#FREEZE FRAMES#LOADING SPEED#CAPTURE MOUSE#BOSS INTROS#TIMER#60 FPS [BETA]"
 txt2 = "#######"+string(scrAddZero(round(UberCont.opt_musvol*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_sfxvol*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_ambvol*100),2))
 +"%#"+string(scrOnOff(UberCont.opt_3d_audio))+"###"+string(scrOnOff(UberCont.opt_fulscrn))+"#"+string(UberCont.opt_crosshair+1)+"#"+sideAspect+"#"+
 string(scrOnOff(UberCont.opt_dmgindicator))+"#"+string(scrOnOff(UberCont.opt_camera_follow))+"#"//
 +string(scrOnOff(UberCont.opt_hud_des))+
-"###"+string(scrAddZero(round(UberCont.opt_shake*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_freeze*100),2))+"%#"+loadspeed+string(scrOnOff(UberCont.opt_mousecp))+"#"+string(bossintro)+"#"+string(timer)
+"###"+string(scrAddZero(round(UberCont.opt_shake*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_freeze*100),2))+"%#"+loadspeed+string(scrOnOff(UberCont.opt_mousecp))+"#"+string(bossintro)+"#"+string(timer)+fpsMode
 
 
 
@@ -104,7 +107,8 @@ with BossIntroToggle
 event_perform(ev_draw,0)
 with TimerToggle
 event_perform(ev_draw,0)
-
+with FPSToggle
+event_perform(ev_draw,0)
 
 draw_set_font(fntM)
 draw_set_valign(fa_top)

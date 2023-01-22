@@ -3,6 +3,8 @@ if hover
 	snd_play_2d(sndClick);
 	with DailyRace
 		image_index = 0;
+	with Weekly
+		image_index = 0;
 	if !dailyDone {
 		if UberCont.opt_gamemode == 27
 		{
@@ -25,7 +27,8 @@ if hover
 				//seedText = seed;
 				useSeed = true;
 				canRestart = false;
-				previous_gamemode = opt_gamemode;
+				if opt_gamemode != 37 && opt_gamemode != 26 && opt_gamemode != 27
+					previous_gamemode = opt_gamemode;
 				opt_gamemode = 27;
 			}
 			

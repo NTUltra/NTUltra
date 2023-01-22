@@ -5,7 +5,7 @@ function scrDrop(itemdrop, weapondrop) {
 	{
 		var rebelBuff = 0;
 		if Player.ultra_got[39] && !Player.altUltra
-			rebelBuff = instance_number(Ally)*0.25;
+			rebelBuff = instance_number(Ally)*0.15;
 		if itemdrop >= 100
 			dropRateBuff = 0.04;
 		else
@@ -79,8 +79,8 @@ function scrDrop(itemdrop, weapondrop) {
 	}
 
 	if UberCont.opt_gamemode=2{
-		weapondrop+=100
-		itemdrop+=100
+		weapondrop+=10
+		itemdrop+=10
 	}
 
 	if instance_exists(Player)

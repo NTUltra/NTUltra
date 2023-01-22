@@ -15,12 +15,6 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 
 }
-with Player
-{
-
-scrUnlockCSkin(11,"FOR DEFEATING INVERTED LIL' HUNTER#IN HUNTER ONLY SHOOT WHEN MARKED",12)
-
-}
 scrBossKill();
 scrDrop(200,0)
 scrDrop(10,2)

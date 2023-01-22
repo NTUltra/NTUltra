@@ -54,7 +54,7 @@ function scrFire() {
 	}
 	if (Player.race=7 && Player.skill_got[5] && wep_cost[wep] > 0 && wep_cost[bwep] > 0)
 	{
-	    if KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2
+	    if KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2
 	    {
 	        if random(100)<((wep_cost[bwep]/typ_ammo[wep_type[bwep]])*0.69)*100
 			{

@@ -68,6 +68,8 @@ todaysSeed = -1;
 today = string(current_day) + "-" + string(current_month) + "-"+ string(current_year);
 dailyDay = -1;
 totalDailies = -1;
+weeklyWeek = -1;
+totalWeeklies = -1;
 useSeed = false;
 seed = 0;
 seedText = "";
@@ -80,7 +82,8 @@ routeString = "";
 previousRoute = 0;
 enum LEADERBOARD{
 	SCORE,
-	RACE
+	RACE,
+	WEEKLY
 };
 leaderboardType = LEADERBOARD.SCORE;
 
@@ -179,4 +182,6 @@ recursionCheck = 0;
 revivedCharacters = [];
 beatTheGame = false;
 
-normalGameSpeed = 30;
+randomDailyMod = 0;
+isWeekly = false;
+hasLeveledUp = false;

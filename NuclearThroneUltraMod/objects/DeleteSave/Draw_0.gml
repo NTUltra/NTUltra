@@ -90,7 +90,7 @@ holdTimer = 10;
 draw_sprite(sprite_index,im,x,y)
 
 x=round(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+10+string_width(string_hash_to_newline("HOLD")))
-y=round(__view_get( e__VW.YView, 0 )+192)
+y=round(__view_get( e__VW.YView, 0 )+200)
 
 draw_text(x+10,y,string_hash_to_newline(string(fh)+joke))
 }

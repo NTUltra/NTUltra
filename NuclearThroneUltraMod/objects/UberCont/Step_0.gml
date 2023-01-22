@@ -6,59 +6,57 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 {
 	with SurvivalWave
 		instance_destroy();
-instance_activate_all()
-alarm[2] = 1;//Some objects are only accessible after a frame
-//audio_stop_all();
-isPaused = 0
-if instance_exists(Player)
-{
-kills=Player.kills
-hard = Player.hard;
-}
-with Player
-{
-	skeletonlives = 0;
-	ultra_got[87] = 0;
-	instance_destroy()
-}
-snd_play(sndMutant0Cnfm, 0, false, false)
-race = UberCont.racepick
-crown = 1
-//scrRaces()
-//scrCrowns()
-var ranChar = false;
-if race = 0 || UberCont.opt_gamemode == 23
-{
-	ranChar = true;
-	do {race = 1+irandom(racemax-1);debug("char char char!!")} until race_have[race] = 1
-}
-if crown = 0
-crown = ceil(irandom(crownmax))
-with WepPickup
-	instance_destroy();
-with ThrowWep
-	instance_destroy();
-with HardModeChest
-	instance_destroy();
+	instance_activate_all();
+	alarm[2] = 1;//Some objects are only accessible after a frame
+	//audio_stop_all();
+	isPaused = 0
+	alarm[3] = 1;
+	with Player
+	{
+		other.kills = kills;
+		other.hard = hard;
+		skeletonlives = 0;
+		ultra_got[87] = 0;
+		instance_destroy()
+	}
+	snd_play(sndMutant0Cnfm, 0, false, false)
+	race = UberCont.racepick
+	crown = 1
+	//scrRaces()
+	//scrCrowns()
+	var ranChar = false;
+	if race = 0 || UberCont.opt_gamemode == 23
+	{
+		ranChar = true;
+		do {race = 1+irandom(racemax-1);debug("char char char!!")} until race_have[race] = 1
+	}
+	if crown = 0
+	crown = ceil(irandom(crownmax))
+	with WepPickup
+		instance_destroy();
+	with ThrowWep
+		instance_destroy();
+	with HardModeChest
+		instance_destroy();
 
-with instance_create(x,y,GenCont)
-{race = other.race
-crown = other.crown}
-instance_create(x,y,Player)
-with Player
-{
-	randomlySelected = ranChar;
-	restarted = true;
-	nochest = -1;
-	skeletonlives = 0;
-}
-debug("BIG CHUNK RESTART");
-var loadedRun = UberCont.loadedRun;
-if loadedRun
-	scrLoadRun();
-else
-	room_restart()
-exit;
+	with instance_create(x,y,GenCont)
+	{race = other.race
+	crown = other.crown}
+	instance_create(x,y,Player)
+	with Player
+	{
+		randomlySelected = ranChar;
+		restarted = true;
+		nochest = -1;
+		skeletonlives = 0;
+	}
+	debug("BIG CHUNK RESTART");
+	var loadedRun = UberCont.loadedRun;
+	if loadedRun
+		scrLoadRun();
+	else
+		room_restart()
+	exit;
 }
 instance_activate_object(KeyCont)
 with KeyCont{
@@ -81,6 +79,7 @@ Cursor.image_index=UberCont.opt_crosshair;
 Cursor.image_index=UberCont.opt_crosshair;}
 */
 isPaused = 0
+alarm[3] = 1;
 audio_resume_all();
 }
 //RETURN TO MENU
@@ -88,6 +87,7 @@ if (keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4)) && !in
 {
 	instance_activate_all()
 	isPaused = 0
+	alarm[3] = 1;
 	//audio_stop_all();
 	if instance_exists(Player)
 	kills=Player.kills
@@ -137,6 +137,7 @@ pauseimg = sprite_create_from_surface(application_surface,0,0,surface_get_width(
 instance_deactivate_all(1)
 //instance_activate_object(BackCont);
 instance_activate_object(MusCont);
+instance_activate_object(FPSHACK);
 //instance_activate_object(TopCont);//hmm?
 instance_activate_object(Cursor);
 optY = 24;
@@ -160,7 +161,7 @@ instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+st
 instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+198+optY,MouseCPToggle)
 instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+206+optY,BossIntroToggle);
 instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+214+optY,TimerToggle);
-
+instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+222+optY,FPSToggle);
 
 isPaused = 1
 audio_pause_all();
@@ -173,8 +174,16 @@ audio_pause_all();
 if isPaused == 0 && !instance_exists(GenCont) && !instance_exists(Menu) && !instance_exists(Vlambeer) &&
 (instance_exists(Player) || instance_exists(PlayerSpawn)) && !instance_exists(PauseTimer) && !instance_exists(StartDaily)
 {
-	time_frame ++;
-	time_microseconds+=3.3333333333333333333333333333333;//Counts to 100
+	if UberCont.normalGameSpeed == 60
+	{
+		time_frame += 0.5;
+		time_microseconds += 1.6666666666666666666666666666667;//Counts to 100
+	}
+	else
+	{
+		time_frame ++;
+		time_microseconds+=3.3333333333333333333333333333333;//Counts to 100
+	}
 
 	if time_microseconds>=100
 	{

@@ -1,7 +1,7 @@
 if mode = 2
 {
 instance_destroy()
-room_speed = UberCont.normalGameSpeed;
+room_speed = 30;
 with Menu
 {
 	visible = true;

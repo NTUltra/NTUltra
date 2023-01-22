@@ -111,7 +111,10 @@ draw_sprite_ext(sprGammaGuts,wave*0.4,x,y,1.1,1.1,image_angle,c_white,0.1)
 
 draw_set_blend_mode(bm_normal)
 
-wave += 1
+if UberCont.normalGameSpeed == 60
+	wave += 0.5;
+else
+	wave ++
 
 if wkick > 0
 wkick -= 1

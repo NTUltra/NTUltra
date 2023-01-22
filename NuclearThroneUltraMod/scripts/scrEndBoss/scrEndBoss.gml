@@ -8,7 +8,7 @@ function scrEndBoss() {
 		{
 			var al = array_length(encrypted_data.ctot_dailies_race_seed) - 1;//Minus one to overwrite the original score we set
 	        encrypted_data.ctot_dailies_race_seed[al] = seed;
-	        encrypted_data.ctot_dailies_race_time[al] = time_frame;
+	        encrypted_data.ctot_dailies_race_time[al] = round(time_frame);
 	        encrypted_data.dailies_race_day[al] = today;
 			txttime = string(time_hours)+":"+minutesstring+":"+secondsstring+":"+string(floor(microseconds));
 			with instance_create(x,y,UnlockPopup)
@@ -16,7 +16,7 @@ function scrEndBoss() {
 				mytext="RACE FINISHED! "+other.race_name[Player.race]+"#"+other.txttime
 		    }
 			scrSaveEncrypted();
-			runRace[0] = time_frame;
+			runRace[0] = round(time_frame);
 			runRace[1] = encrypted_data.username;
 			//Route string
 			runRace[2] = routeString;

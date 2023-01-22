@@ -8,6 +8,8 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 	if targetPickup != noone && point_distance(x,y,targetPickup.x,targetPickup.y) < prange  && targetPickup.visible
 	{
 		var isGold = false;
+		if targetPickup.wep == 239//ROCKET GLOVE GM UNLOCK
+				scrUnlockGameMode(13,"FOR FINDING A ROCKET GLOVE")
 		//UNLOCK GOLDEN WEAPONf
 		if scrCheckGold(wep_name[targetPickup.wep])
 		{
@@ -354,8 +356,6 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 					ammo = 0
 				}
 			}
-			if targetPickup.wep == 239//ROCKET GLOVE GM UNLOCK
-				scrUnlockGameMode(13,"FOR PICKING UP A ROCKET GLOVE")
 
 			wep = targetPickup.wep
 			curse = targetPickup.curse

@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "TrapScorchMark",
   "spriteId": {
     "name": "sprTrapScorchMark",
     "path": "sprites/sprTrapScorchMark/sprTrapScorchMark.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -24,11 +28,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemies",
-    "path": "folders/Objects/Enemies.yy",
+    "name": "Scrapyard",
+    "path": "folders/Objects/Enemies/Scrapyard.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "TrapScorchMark",
-  "tags": [],
-  "resourceType": "GMObject",
 }

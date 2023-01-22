@@ -157,7 +157,10 @@ function scrLoadRun(){
 				Player.invertedchance = encryptedRun.invertedchance;
 				Player.crownvisits = encryptedRun.crownvisits;
 				Player.hard = encryptedRun.hard;
-				Player.maxSpeed = encryptedRun.maxSpeed;
+				if variable_struct_exists(encryptedRun, "maxspeed")
+					Player.maxSpeed = encryptedRun.maxspeed;
+				else
+					Player.maxSpeed = encryptedRun.maxSpeed;
 				Player.hammerheadcounter = encryptedRun.hammerheadcounter;
 				Player.lag = encryptedRun.lag;
 				Player.hardshell = encryptedRun.hardshell;
@@ -243,6 +246,7 @@ function scrLoadRun(){
 				}
 				//RACE STUFF
 				scrLoadRace();
+				scrLoadRunSkins();//ALT ultra skins
 				//Some ultras change weapon stats:
 				scrWeapons();
 				scrWeaponHold();

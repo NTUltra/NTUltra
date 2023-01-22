@@ -1,3 +1,4 @@
+event_inherited();
 image_speed = 0.4
 friction = 0.4
 right = choose(1,-1)
@@ -10,6 +11,7 @@ maxSpeed = 16;
 team = 1
 target = noone
 countKill = true;
+wasResurrected = false;
 
 snd_hurt = sndHitFlesh
 snd_dead = sndEnemyDie

@@ -10,6 +10,10 @@ var area = 0;
 var subarea = 0;
 var loops = 0;
 var txt = "";
+var upsideDown = false;
+var txt = "";
+var s = string_height("A");
+var w = 300;
 if instance_exists(Player)
 {
 
@@ -29,14 +33,13 @@ loops = Player.loops;
 
 
 var res = scrAreaName(area,subarea,loops);
-var txt = res[0];
-var upsideDown = res[1];
+txt = res[0];
+upsideDown = res[1];
 
 
 }
 draw_set_color(c_black)
-var s = string_height("A");
-var w = 300;
+
 if kutgrap
 {
 var theText = string_hash_to_newline(string(text)+"#OBLITERATING... "+string(round((instance_number(Floor)/goal)*100))+"%##"+string_upper(tip));

@@ -93,7 +93,11 @@ function scrDrawHUD() {
 			if holdExplainGamemode >= 10
 				scrDrawHelp("["+UberCont.gamemode[UberCont.opt_gamemode]+"]");
 		}
-		if UberCont.opt_gamemode == 26
+		if UberCont.isWeekly
+		{
+			draw_sprite(sprWeeklyChallengeHUD,0,__view_get( e__VW.XView, 0 )+4,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-2);
+		}
+		else if UberCont.opt_gamemode == 26
 		{
 			draw_sprite(sprDailyChallengeHUDRace,0,__view_get( e__VW.XView, 0 )+4,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-2);
 		}

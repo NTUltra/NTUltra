@@ -27,4 +27,4 @@ var spr = wep_sprt[mi]
 if mi < maxwep
 	alarm[2] = 1;
 mi ++;
-*/
+//*/

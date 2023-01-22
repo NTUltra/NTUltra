@@ -21,8 +21,8 @@ if UberCont.opt_gamemode == 8
 }
 if instance_exists(Player)
 {
-if Player.crown == 27//DISCOOOO CROWN
-room_speed=35;
+//if Player.crown == 27//DISCOOOO CROWN
+//room_speed=35;
     with Player
 	{
     
@@ -136,7 +136,7 @@ room_speed=35;
 		    invertedportaldelay=45+random(100);
 		    //area=107
 		    }
-			else if ( (area=9&&subarea<3)  )
+			else if ( (area == 9&&subarea<3)  )
 		    {
 		    invertedportalcounter=1;
 		    invertedportaldelay=45+random(100);
@@ -145,8 +145,6 @@ room_speed=35;
 		
 		}
 
-    
-    
     
 	    if skill_got[28]//RAGE
 	    {

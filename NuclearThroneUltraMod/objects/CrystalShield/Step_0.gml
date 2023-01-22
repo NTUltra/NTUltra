@@ -173,5 +173,8 @@ if place_meeting(x+hspeed,y+vspeed,Wall){
 mask_index=mskShield;
 }}
 
-wave++;
+if UberCont.normalGameSpeed == 60
+	wave += 0.5;
+else
+	wave++;
 

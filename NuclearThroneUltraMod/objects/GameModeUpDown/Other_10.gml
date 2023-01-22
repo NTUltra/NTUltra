@@ -19,6 +19,8 @@ if (gamemodeOrder[gamemodenr] == 26)
 			image_index = 0;
 		with DailyRace
 			image_index = 1;
+		with Weekly
+			image_index = 0;
 	}
 }
 else if (gamemodeOrder[gamemodenr] == 27)
@@ -40,6 +42,18 @@ else if (gamemodeOrder[gamemodenr] == 27)
 			image_index = 1;
 		with DailyRace
 			image_index = 0;
+		with Weekly
+			image_index = 0;
+	}
+}
+else if gamemodeOrder[gamemodenr] == 37 {
+	with Weekly
+		image_index = 1;
+	with UberCont
+	{
+		isWeekly = true;
+		canRestart = false;
+		useSeed = true;
 	}
 }
 else
@@ -47,6 +61,7 @@ else
 	dailyDone = false;
 	with UberCont
 	{
+		isWeekly = false;
 		useSeed = false;
 		canRestart = true;
 		seedText = "";
@@ -54,5 +69,7 @@ else
 	with DailyScore
 		image_index = 0;
 	with DailyRace
+		image_index = 0;
+	with Weekly
 		image_index = 0;
 }

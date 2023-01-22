@@ -190,8 +190,8 @@ if race == 14//PANDA
 
 if UberCont.opt_gamemode == 10//random areas
 {
-area=choose(1,2,3,4,5,6,7,8,9,10,choose(105,102,103,106,107,101,100,108,109,110,113,114,115,118,117,118,119,120,121,122,123,124,125),choose(105,102,103,106,107,101,100,108,109,110,113,114,115,118,117,118,119,120,121,122,123,124,125),
-choose(105,102,103,106,107,101,100,108,109,110,113,114,115,118,117,118,119,120,121,122,123,124,125));
+area=choose(1,2,3,4,5,6,7,8,9,10,choose(105,102,103,106,107,101,100,108,109,110,113,114,115,118,117,118,119,120,121,122,123,124,125),choose(105,102,103,106,107,101,100,108,109,110,113,114,115,118,117,118,119,120,121,122,123,124,125,126,127),
+choose(105,102,103,106,107,101,100,108,109,110,113,114,115,118,117,118,119,120,121,122,123,124,125,126,127));
 
 if rnglevelloop=18
 {loops+=1;
@@ -325,7 +325,19 @@ if looping && area != 104
 	//DROP HUNTER HEAVY SNIPER
 	if race = 11 && loops = 1
 	{
-
+		if UberCont.opt_gamemode == 34 //HARD MODE EXCLUSIVE
+		with instance_create(x,y,WepPickup)
+		{
+			persistent = true;
+			scrWeapons()
+			wep = 610
+			name = wep_name[wep]
+			ammo = 0
+			type = wep_type[wep]
+			curse = 0
+			sprite_index = wep_sprt[wep]
+		}
+		else
 		with instance_create(x,y,WepPickup)
 		{
 			persistent = true;
@@ -337,7 +349,20 @@ if looping && area != 104
 			curse = 0
 			sprite_index = wep_sprt[wep]
 		}
-
+	}
+	else if race = 11 && loops = 2 && UberCont.opt_gamemode == 34
+	{
+		with instance_create(x,y,WepPickup)
+		{
+			persistent = true;
+			scrWeapons()
+			wep = 611
+			name = wep_name[wep]
+			ammo = 0
+			type = wep_type[wep]
+			curse = 0
+			sprite_index = wep_sprt[wep]
+		}
 	}
 
 	//DROP CHICKEN DARK SWORD

@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "mskWallBreakSmall",
   "bboxMode": 1,
-  "collisionKind": 4,
+  "collisionKind": 1,
   "type": 0,
   "origin": 4,
   "preMultiplyAlpha": false,
