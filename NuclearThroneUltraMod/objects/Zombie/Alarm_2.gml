@@ -7,7 +7,7 @@ if amountOfenemies > 0
 {
 	for (var i = 0; i < amountOfenemies; i++) {
 		with enemies[| i] {
-			if existTime < 25
+			if existTime < 20
 			{
 				wasResurrected = true;
 				var hitWalls = ds_list_create();

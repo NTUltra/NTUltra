@@ -15,6 +15,16 @@ else if(place_meeting(x,y,ExplosiveMorph))
     else{MorphMe=false}
 instance_destroy()}
 }
+var overlap = instance_place(x,y,enemy);
+if overlap != noone
+{
+	if size <= overlap.size
+	{
+		var getmeout = point_direction(overlap.x,overlap.y,x,y);
+		motion_add(getmeout,size)
+		direction += 1;
+	}
+}
 //WKICK
 if wkick!=false//variable_local_exists("wkick") = 1
 {

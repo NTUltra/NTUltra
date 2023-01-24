@@ -9,6 +9,7 @@ else
 	{
 		if loops == 0
 		{
+			UberCont.chestRan = 0;
 			with instance_create(x,y,BigWeaponChest)
 			{
 				event_perform(ev_collision,Player)

@@ -1,3 +1,4 @@
+event_inherited();
 raddrop = 1;
 maxhealth = 1
 meleedamage = 0

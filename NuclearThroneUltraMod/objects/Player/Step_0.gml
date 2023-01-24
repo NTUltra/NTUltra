@@ -1,4 +1,6 @@
 /// @description main
+if instance_exists(GenCont)
+	exit;
 if instance_exists(StartDaily)
 	exit;
 if ultra_got[43] && altUltra && hunterEye < hunterEyeMax
@@ -121,7 +123,10 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 	sprite_index = spr_walk}
 	if sprite_index = spr_hurt
 	{	
-		hurtTime++;
+		if UberCont.normalGameSpeed == 60
+			hurtTime += 0.5;
+		else
+			hurtTime++;
 		if (image_index > 2 && hurtTime > hurtDuration)
 		{
 			sprite_index = spr_idle
@@ -1089,9 +1094,9 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 		{
 			breload -= 0.1;
 			creload -= 0.1;
-			var crm = 0.5;
+			var crm = 0.4;
 			if race == 25//Doctor puffy cheeks
-				crm = 0.4;
+				crm = 0.3;
 	
 			var cr = (prevreload - reload)*crm;
 			if cr > 0 && reload < 0
@@ -1107,6 +1112,52 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 			if cr > 0 && creload < 0
 			{
 				creload = min(creload+cr,0)
+			}
+		}
+		if UberCont.normalGameSpeed == 60
+		{
+			var crm = 0.5;
+			var cr = (prevreload - reload)*crm;
+			if cr < 0
+			{
+				prevreload += wep_load[wep];
+				var cr = (prevreload - reload)*crm;
+			}
+			if reload + cr > lowa
+			{
+				reload = reload+cr
+			}
+			else
+			{
+				reload = lowa;	
+			}
+			cr = (prevbreload - breload)*crm;
+			if cr < 0
+			{
+				prevbreload += wep_load[bwep];
+				var cr = (prevbreload - breload)*crm;
+			}
+			if breload + cr > lowb
+			{
+				breload = breload+cr
+			}
+			else
+			{
+				breload = lowb;	
+			}
+			cr = (prevcreload - creload)*crm;
+			if cr < 0
+			{
+				prevcreload += wep_load[cwep];
+				var cr = (prevcreload - creload)*crm;
+			}
+			if creload + cr > lowc
+			{
+				creload = creload+cr
+			}
+			else
+			{
+				creload = lowc;	
 			}
 		}
 	}
@@ -1648,12 +1699,20 @@ if skill_got[2] && !instance_exists(GenCont) && !instance_exists(LevCont) && !ou
 /* */
 ///Delay before taking melee damage again
 if meleeimmunity>0
-meleeimmunity--;
+{
+	if UberCont.normalGameSpeed == 60
+		meleeimmunity -= 0.5;
+	else
+		meleeimmunity--;
+}
 
 /* */
 ///time and unlock
 
-microseconds+=3;
+if UberCont.normalGameSpeed == 60
+	microseconds += 1.5;
+else
+	microseconds += 3;
 
 if microseconds>60
 {

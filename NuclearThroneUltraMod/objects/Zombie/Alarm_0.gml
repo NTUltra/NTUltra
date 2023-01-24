@@ -124,7 +124,7 @@ repeat(clamp(Player.loops + 1, 1, 10))
 	{
 		wasResurrected = true;
 		raddrop = ceil(raddrop*0.5);
-		existTime = 25;
+		existTime = 20;
 		alarm[1] *= 0.2;
 	}
 	//x = xstart + random_range(-10, 10);

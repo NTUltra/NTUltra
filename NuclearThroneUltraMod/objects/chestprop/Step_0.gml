@@ -1,7 +1,17 @@
-if image_index < 1
-image_index += random(0.04)
+if UberCont.normalGameSpeed == 60
+{
+	if image_index < 1
+		image_index += random(0.02)
+	else
+		image_index += 0.2
+}
 else
-image_index += 0.4
+{
+	if image_index < 1
+		image_index += random(0.04)
+	else
+		image_index += 0.4
+}
 
 if speed > 4
 speed = 4

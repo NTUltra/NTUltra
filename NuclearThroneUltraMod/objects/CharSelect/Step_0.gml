@@ -118,7 +118,6 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+20 and UberCon
 	}
     if crown = 0
     crown = ceil(random(crownmax))
-    instance_create(x,y,SpiralCont)
 	draw_texture_flush();//mainly used to only remove the main menu texture page cause we don't need that while in game.
 	UberCont.race = race
     with instance_create(x,y,GenCont)

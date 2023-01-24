@@ -843,7 +843,7 @@ function scrDrawHUD() {
 	draw_text(__view_get( e__VW.XView, 0 )+14,__view_get( e__VW.YView, 0 )+69,string_hash_to_newline(string(txt)))
 	draw_text(__view_get( e__VW.XView, 0 )+15,__view_get( e__VW.YView, 0 )+69,string_hash_to_newline(string(txt)))
 
-	if instance_exists(PlayerAlarms) && PlayerAlarms.alarm[7] > 0
+	if instance_exists(PlayerAlarms) && PlayerAlarms.alarm[7] > 0 || (instance_exists(HumphryDiscipline) && !(Player.altUltra && Player.ultra_got[104]))
 		draw_set_color(c_red)
 	else
 		draw_set_color(c_white)
@@ -859,7 +859,8 @@ function scrDrawHUD() {
 
 	//AMMO ICONS
 	img = 0
-	if (Player.race == 26 && instance_exists(HumphryDiscipline) && Player.wep_type[Player.wep] != 1 && Player.wep_type[Player.bwep] != 1)
+	var hump = instance_exists(HumphryDiscipline) && Player.altUltra && Player.ultra_got[104]
+	if (Player.race == 26 && hump && Player.wep_type[Player.wep] != 1 && Player.wep_type[Player.bwep] != 1)
 	{
 		img = 3
 	}
@@ -871,7 +872,7 @@ function scrDrawHUD() {
 	draw_sprite(sprBulletIcon,clamp(7-ceil((Player.ammo[1]/Player.typ_amax[1])*7),-1,7)+1,__view_get( e__VW.XView, 0 )+2,__view_get( e__VW.YView, 0 )+ammoheight)//36
 
 	img = 0
-	if (Player.race == 26 && instance_exists(HumphryDiscipline) && Player.wep_type[Player.wep] != 2 && Player.wep_type[Player.bwep] != 2)
+	if (Player.race == 26 && hump && Player.wep_type[Player.wep] != 2 && Player.wep_type[Player.bwep] != 2)
 	{
 		img = 3
 	}
@@ -883,7 +884,7 @@ function scrDrawHUD() {
 	draw_sprite(sprShotIcon,clamp(7-ceil((Player.ammo[2]/Player.typ_amax[2])*7),-1,7)+1,__view_get( e__VW.XView, 0 )+12,__view_get( e__VW.YView, 0 )+ammoheight)
 
 	img = 0
-	if (Player.race == 26 && instance_exists(HumphryDiscipline) && Player.wep_type[Player.wep] != 3 && Player.wep_type[Player.bwep] != 3)
+	if (Player.race == 26 && hump && Player.wep_type[Player.wep] != 3 && Player.wep_type[Player.bwep] != 3)
 	{
 		img = 3
 	}
@@ -895,7 +896,7 @@ function scrDrawHUD() {
 	draw_sprite(sprBoltIcon,clamp(7-ceil((Player.ammo[3]/Player.typ_amax[3])*7),-1,7)+1,__view_get( e__VW.XView, 0 )+22,__view_get( e__VW.YView, 0 )+ammoheight)
 
 	img = 0
-	if (Player.race == 26 && instance_exists(HumphryDiscipline) && Player.wep_type[Player.wep] != 4 && Player.wep_type[Player.bwep] != 4)
+	if (Player.race == 26 && hump && Player.wep_type[Player.wep] != 4 && Player.wep_type[Player.bwep] != 4)
 	{
 		img = 3
 	}
@@ -907,7 +908,7 @@ function scrDrawHUD() {
 	draw_sprite(sprExploIcon,clamp(7-ceil((Player.ammo[4]/Player.typ_amax[4])*7),-1,7)+1,__view_get( e__VW.XView, 0 )+32,__view_get( e__VW.YView, 0 )+ammoheight)
 
 	img = 0
-	if (Player.race == 26 && instance_exists(HumphryDiscipline) && Player.wep_type[Player.wep] != 5 && Player.wep_type[Player.bwep] != 5)
+	if (Player.race == 26 && hump && Player.wep_type[Player.wep] != 5 && Player.wep_type[Player.bwep] != 5)
 	{
 		img = 3
 	}

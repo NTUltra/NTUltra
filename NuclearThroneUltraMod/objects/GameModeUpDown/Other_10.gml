@@ -49,10 +49,14 @@ else if (gamemodeOrder[gamemodenr] == 27)
 else if gamemodeOrder[gamemodenr] == 37 {
 	with Weekly
 		image_index = 1;
+	with DailyScore
+		image_index = 0;
+	with DailyRace
+		image_index = 0;
 	with UberCont
 	{
 		isWeekly = true;
-		canRestart = false;
+		canRestart = true;
 		useSeed = true;
 	}
 }

@@ -1,4 +1,5 @@
 instance_destroy()
+SetSeed();
 if instance_exists(Player)
 {
 with Crown

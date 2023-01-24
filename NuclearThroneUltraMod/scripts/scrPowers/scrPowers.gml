@@ -10,19 +10,10 @@ function scrPowers() {
 		var failText = "NOT ENOUGH AMMO";
 		if ultra_got[104] && altUltra
 		{
-			failText = "NOT ENOUGH SKILL";
-			if humphrySkill >= 50
-			{
-				insufficientFunds = false;
-				humphrySkill -= 50;
-			}
-		}
-		else
-		{
 			var t1 = wep_type[wep];
 			var t2 = wep_type[bwep];
 			var al = 6;//weapon types total
-			var takePercentage = 0.015//1.5%%//0.0075;//0.75%
+			var takePercentage = 0.01//0.015//1.5%%//0.0075;//0.75%
 			for (var i = 1; i < al; i++) {
 				if (i != t1 && i != t2)
 				{
@@ -34,6 +25,15 @@ function scrPowers() {
 				}
 			}
 		}
+		else {
+			failText = "NOT ENOUGH SKILL";
+			if humphrySkill >= 5//used to be 50//10%?
+			{
+				insufficientFunds = false;
+				humphrySkill -= 5;
+			}
+		}
+		
 		if (insufficientFunds)
 		{
 			snd_play_2d(snd_lowa,0,true,false,10);

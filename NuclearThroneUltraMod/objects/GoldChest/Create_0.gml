@@ -1,4 +1,5 @@
 scrWeapons()
+SetSeedWeapon();
 wep = scrDecideWepGold()
 aditionalwep = 0;
 size = 1;
@@ -8,6 +9,7 @@ while (wep == 315)
 	aditionalwep = 315;
 	wep = scrDecideWepGold()
 }
+SetSeed();
 //If you don't have the pig yet give em a money gun yo fukc da grind!
 if aditionalwep != 315 && instance_exists(Player) && Player.area == 103
 {

@@ -461,13 +461,15 @@ function scrDrawBloom() {
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with enemy
 	{
+		var theScale = 1.3;
 		if totemBuffed
 		{
-			draw_sprite_ext(sprite_index,image_index,x,y,image_xscale*1.3,image_yscale*1.3,image_angle,c_red,ba+0.2);
+			draw_sprite_ext(sprite_index,image_index,x,y,image_xscale*theScale,image_yscale*theScale,image_angle,c_red,ba+0.2);
+			theScale += 0.1;
 		}
 		if super
 		{
-			draw_sprite_ext(sprite_index,image_index,x,y,image_xscale*1.3,image_yscale*1.3,image_angle,c_green,ba+0.2);
+			draw_sprite_ext(sprite_index,image_index,x,y,image_xscale*theScale,image_yscale*theScale,image_angle,c_green,ba+0.2);
 		}
 	}
 	draw_set_blend_mode(bm_normal)

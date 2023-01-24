@@ -28,6 +28,8 @@ page = 0;
 totalPages = 0;
 image_speed = 0.6;
 leaderboardType = UberCont.leaderboardType;
+viewingWeekly = false;
+viewingWeeklyGamemode = 0;
 scrWeapons();
 scrCrowns();
 //Data types
@@ -35,11 +37,12 @@ enum NETDATA {
 	CLIENT_ID,
 	SCORE,
 	RACE,
-	STARTWEEKLY,
+	WEEKLY,
 	LEADERBOARD,
 	LEADERBOARDRACE,
+	LEADERBOARDWEEKLY,
 	CONFIRMRACE,
-	LEADERBOARDWEEKLY
+	STARTWEEKLY,
 }
 killScroll = 0;
 killScrollAdd = 0.01;

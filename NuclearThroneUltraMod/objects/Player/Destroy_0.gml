@@ -19,6 +19,7 @@ if UberCont.opt_gamemode == 8
 		time_seconds=UberCont.time_seconds;
 		time_minutes=UberCont.time_minutes;
 		time_hours=UberCont.time_hours;
+		time_frame = UberCont.time_frame;
 		txttime = UberCont.minutesstring+":"+UberCont.secondsstring+":"+UberCont.microseconds;
 		if (other.race == 22 && (time_seconds >= 30 || time_minutes >= 1 || time_hours >= 1))
 			scrUnlockBSkin(22,"FOR SURVIVING THE VANS!#FOR ATLEAST 30 SECONDS",8);
@@ -531,43 +532,52 @@ else if !reincarnate
 				canRestart = true;
 			}
 			if (isWeekly && !instance_exists(StartDaily)){
-				isWeekly = false;
+				
 				useSeed = false;
 				leaderboardType = LEADERBOARD.WEEKLY;
 				goToLeaderboard = true;
 				canRestart = true;
-				
 				//Do I need to send the gamemode?
 				/*
 					Send gamemode and week to post it in ofcourse
 					check how daily does this.
 				*/
+				debug("weekly ", opt_gamemode);
 				if opt_gamemode == 8// VAN FAN
 				{
-					runRace[0] = round(time_frame);
-					runRace[1] = encrypted_data.username;
-					//Route string (2)
-					runRace[2] = Player.race;
-					runRace[3] = Player.bskin;
+					//Check if this is your highest score
+					var tf = round(VanFan.time_frame);
+					debug("tf: ", tf);
+					debug("data: ", encrypted_data.ctot_weeklies_score[1][? weeklyWeek]);
+					if (tf > encrypted_data.ctot_weeklies_score[1][? weeklyWeek])
+					{
+						encrypted_data.ctot_weeklies_score[1][? weeklyWeek] = tf;
+						runRace[0] = tf;
+						runRace[1] = encrypted_data.username;
+						runRace[2] = Player.race;
+						runRace[3] = Player.bskin;
+					}
 				}
 				else
 				{
-					runScore[0] = other.kills;
-					runScore[1] = encrypted_data.username;
-					runScore[2] = other.area;
-					runScore[3] = other.subarea;
-					runScore[4] = other.loops;
-					runScore[5] = other.race;
-					runScore[6] = other.bskin;
-					runScore[7] = other.altUltra;
-					runScore[8] = other.wep;
-					runScore[9] = other.bwep;
-					runScore[10] = other.cwep;
-					runScore[11] = other.crown;
-					runScore[12] = getUltraMutation();
+					if (other.kills > encrypted_data.ctot_weeklies_score[1][? weeklyWeek])
+					{
+						encrypted_data.ctot_weeklies_score[1][? weeklyWeek] = other.kills;
+						runScore[0] = other.kills;
+						runScore[1] = encrypted_data.username;
+						runScore[2] = other.area;
+						runScore[3] = other.subarea;
+						runScore[4] = other.loops;
+						runScore[5] = other.race;
+						runScore[6] = other.bskin;
+						runScore[7] = other.altUltra;
+						runScore[8] = other.wep;
+						runScore[9] = other.bwep;
+						runScore[10] = other.cwep;
+						runScore[11] = other.crown;
+						runScore[12] = getUltraMutation();
+					}
 				}
-				
-				opt_gamemode = 0;
 			}
 		}
 		scrSave();

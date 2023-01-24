@@ -4,6 +4,7 @@ draw_set_valign(fa_top);
 draw_set_colour(c_white);
 if !connectionSuccess {
 	draw_text(x + 16,y-16,"CONNECTION FAILED");
+draw_text(x + 16,y+1256,"leaderboardType  " + string(leaderboardType));
 }
 else if array_length(leaderboard) > 0
 {
@@ -14,6 +15,7 @@ else if array_length(leaderboard) > 0
 	draw_set_halign(fa_left);
 	var al = array_length(leaderboard);
 	if leaderboardType == LEADERBOARD.SCORE
+	{
 		for (var i = 0; i < al; i++)
 		{
 			var yy = y + (space * i);
@@ -57,7 +59,7 @@ else if array_length(leaderboard) > 0
 				if area[1] {
 					draw_set_valign(fa_bottom);
 					draw_set_halign(fa_right);
-					draw_text_ext_transformed(xx,yy-8,area[0],10,44,-1,-1,0);
+					draw_text_ext_transformed(xx,yy-7,area[0],10,44,-1,-1,0);
 				}
 				else
 				{
@@ -86,7 +88,7 @@ else if array_length(leaderboard) > 0
 			//5 = race Enter logic to determine skin
 			// 6 = bskin
 			//7 = altultra
-		
+			
 			if (real(entry[10]) != 0)//Three weapons
 			{
 				draw_sprite(wep_sprt[real(entry[8])],0,xx,yy-3);
@@ -141,7 +143,51 @@ else if array_length(leaderboard) > 0
 				}
 			}
 		}
+	}
+	else if leaderboardType == LEADERBOARD.VANFAN
+	{
+		for (var i = 0; i < al; i++)
+		{
+			var yy = y + (space * i);
+			var entry = leaderboard[i];
+			draw_text_ext(x,yy,string((page*10) + i + 1) + ".",10,14);
+			var xx = x + 30;
+			var surf = surface_create(128,string_height(entry[0]));
+			surface_set_target(surf);
+			var ux = 0;
+			var uw = string_width(entry[1]);
+			if (uw > 128)
+			{
+				//scrolling	
+				ux = lerp(0,0-max(0,uw-128),killScroll);
+			}
+			draw_text(ux,0,entry[1]);
+			surface_reset_target();
+			draw_surface(surf,xx,yy);
+		
+			xx += 128;
+			draw_sprite(sprTime,0,xx,yy+5);
+			xx += 14;
+			var surf = surface_create(118,string_height(entry[0]));
+			surface_set_target(surf);
+			var kx = 0;
+			var kw = string_width(entry[0]);
+			if (kw > 118)
+			{
+				//scrolling	
+				kx = lerp(0,0-max(0,kw-118),killScroll);
+			}
+			draw_text(kx,0,entry[0]);
+			surface_reset_target();
+			draw_surface(surf,xx,yy);
+			xx += 127;
+			
+			draw_sprite(scrLeaderboardRace(entry[2],entry[3],false,9),0,xx,yy+3);
+			xx += 9;
+		}	
+	}
 	else
+	{
 		for (var i = 0; i < al; i++)
 		{
 			var yy = y + (space * i);
@@ -155,7 +201,7 @@ else if array_length(leaderboard) > 0
 			if (uw > 48)
 			{
 				//scrolling	
-				ux = lerp(0,0-max(0,uw-64),killScroll);
+				ux = lerp(0,0-max(0,uw-48),killScroll);
 			}
 			draw_text(ux,0,entry[1]);
 			surface_reset_target();
@@ -270,6 +316,7 @@ else if array_length(leaderboard) > 0
 				}
 			}
 		}
+	}
 	var yy = camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0]) - 16;
 	//Can do next
 	var o = 8;
@@ -294,7 +341,8 @@ else if array_length(leaderboard) > 0
 		s,s,270,c_white,1);
 		
 	}
-	if UberCont.dailyDay < UberCont.totalDailies
+	if (!viewingWeekly && UberCont.dailyDay < UberCont.totalDailies) ||
+	 (viewingWeekly && UberCont.weeklyWeek < UberCont.totalWeeklies)
 	{
 		var s = 1;
 		var ax = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])-o;
@@ -304,7 +352,10 @@ else if array_length(leaderboard) > 0
 			s = 1.25;
 			if mouse_check_button_pressed(mb_left) {
 				//Just get leaderboard
-				UberCont.dailyDay ++;
+				if viewingWeekly
+					UberCont.weeklyWeek ++;
+				else
+					UberCont.dailyDay ++;
 				event_user(0);
 				leaderboard = [];
 			}
@@ -335,7 +386,8 @@ else if array_length(leaderboard) > 0
 		ay,
 		s,s,90,c_white,1);
 	}
-	if UberCont.dailyDay > 1
+	if (!viewingWeekly && UberCont.dailyDay > 0) ||
+	 (viewingWeekly && UberCont.weeklyWeek > 0)
 	{
 		var s = 1;
 		var ax = o
@@ -345,7 +397,10 @@ else if array_length(leaderboard) > 0
 			s = 1.25;
 			if mouse_check_button_pressed(mb_left) {
 				//Just get leaderboard
-				UberCont.dailyDay --;
+				if viewingWeekly
+					UberCont.weeklyWeek --;
+				else
+					UberCont.dailyDay --;
 				event_user(0);
 				leaderboard = [];
 			}
@@ -364,8 +419,13 @@ else if array_length(leaderboard) > 0
 		s = 1.25;
 		if mouse_check_button_pressed(mb_left) {
 			//Just get leaderboard
-			if leaderboardType == LEADERBOARD.RACE
+			if viewingWeekly
+			{
 				leaderboardType = LEADERBOARD.SCORE;
+				viewingWeekly = false;
+			}
+			else if leaderboardType == LEADERBOARD.RACE
+				leaderboardType = LEADERBOARD.WEEKLY;
 			else
 				leaderboardType = LEADERBOARD.RACE;
 			event_user(0);
@@ -385,7 +445,8 @@ else if noBoard
 	draw_set_halign(fa_left);
 	draw_text(x + 31,y,"NO LEADERBOARD ENTRY");
 	var o = 8;
-	if UberCont.dailyDay < UberCont.totalDailies
+	if (!viewingWeekly && UberCont.dailyDay < UberCont.totalDailies) ||
+	 (viewingWeekly && UberCont.weeklyWeek < UberCont.totalWeeklies)
 	{
 		var s = 1;
 		var ax = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])-o;
@@ -395,7 +456,10 @@ else if noBoard
 			s = 1.25;
 			if mouse_check_button_pressed(mb_left) {
 				//Just get leaderboard
-				UberCont.dailyDay ++;
+				if viewingWeekly
+					UberCont.weeklyWeek ++;
+				else
+					UberCont.dailyDay ++;
 				event_user(0);
 				leaderboard = [];
 			}
@@ -406,7 +470,8 @@ else if noBoard
 		s,s,270,c_white,1);
 		
 	}
-	if UberCont.dailyDay > 1
+	if (!viewingWeekly && UberCont.dailyDay > 0) ||
+		(viewingWeekly && UberCont.weeklyWeek > 0)
 	{
 		var s = 1;
 		var ax = o
@@ -416,7 +481,10 @@ else if noBoard
 			s = 1.25;
 			if mouse_check_button_pressed(mb_left) {
 				//Just get leaderboard
-				UberCont.dailyDay --;
+				if viewingWeekly
+					UberCont.weeklyWeek --;
+				else
+					UberCont.dailyDay --;
 				event_user(0);
 				leaderboard = [];
 			}
@@ -435,8 +503,13 @@ else if noBoard
 		s = 1.25;
 		if mouse_check_button_pressed(mb_left) {
 			//Just get leaderboard
-			if leaderboardType == LEADERBOARD.RACE
+			if viewingWeekly
+			{
+				viewingWeekly = false;
 				leaderboardType = LEADERBOARD.SCORE;
+			}
+			else if leaderboardType == LEADERBOARD.RACE
+				leaderboardType = LEADERBOARD.WEEKLY;
 			else
 				leaderboardType = LEADERBOARD.RACE;
 			event_user(0);

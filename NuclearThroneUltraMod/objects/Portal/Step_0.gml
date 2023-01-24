@@ -128,8 +128,10 @@ if type = 4
 	sprite_index = sprBigPortalDisappear;
 }
 }
-
-pullstrength+=0.04;
+if UberCont.normalGameSpeed == 60
+	pullstrength += 0.02;
+else
+	pullstrength += 0.04;
 if inverted
 {
 	if pullstrength>2.25 && type != 4

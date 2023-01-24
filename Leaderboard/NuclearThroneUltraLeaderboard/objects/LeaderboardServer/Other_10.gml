@@ -24,3 +24,16 @@ ini_close();
 totalRaceEntries = i;
 raceLeaderboardString = raceLeaderboard;
 raceLeaderboardString = string_replace_all(raceLeaderboardString,"|","\n");
+
+ini_open(weeklySaveFileString);
+var weeklyLeaderboard = "";
+var i = 0;
+while(ini_key_exists("weeklylb",i))
+{
+	weeklyLeaderboard += ini_read_string("weeklylb",i,"")+"|";
+	i++;
+}
+ini_close();
+totalWeeklyEntries = i;
+weeklyLeaderboardString = weeklyLeaderboard;
+weeklyLeaderboardString = string_replace_all(weeklyLeaderboardString,"|","\n");

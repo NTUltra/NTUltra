@@ -1,7 +1,7 @@
 event_inherited();
 image_speed = 0.4
 appliedBoost = false;
-typ = 0 //0 = nothing, 1 = deflectable, 2 = destructable, 3 = deflectable
+typ = 0 //0 = nothing, 1 = deflectable, 2 = destructable, 3 = deflectable 4 = laser
 hits = 1;
 hitDelay = 8;
 hitEntities = [];

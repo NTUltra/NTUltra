@@ -42,6 +42,9 @@ function scrAreaName(area,subarea,loops){
 			case 100://Crown vault
 				txt = "C";
 			break;
+			case 116://Survival Arena
+				txt = string(subarea);
+			break;
 			case 121://INV Savanna
 				txt = "1C_"+string(subarea);
 				upsideDown = true;

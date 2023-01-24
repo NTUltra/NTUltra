@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "SetSeed",
+  "name": "SetSeedWeapon",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

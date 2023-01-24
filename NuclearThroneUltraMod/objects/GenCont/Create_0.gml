@@ -7,7 +7,6 @@ if UberCont.opt_loading == 4
 	room_speed = 999999;
 
 SetSeed();
-
 instance_create(10000,10000,FloorMaker)
 instance_create(0,0,TopCont)
 wave = 0

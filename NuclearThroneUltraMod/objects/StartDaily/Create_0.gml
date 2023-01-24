@@ -3,6 +3,7 @@ network_set_config(network_config_use_non_blocking_socket, 1);
 network_set_config(network_config_connect_timeout, 20000);
 alarm[1] = 600;
 room_goto(romConnect);
+latestVersion = UberCont.updateVersion;
 serverSocket = network_create_socket(network_socket_tcp);
 serverIp =  UberCont.serverIp;
 serverPort = UberCont.serverPort;

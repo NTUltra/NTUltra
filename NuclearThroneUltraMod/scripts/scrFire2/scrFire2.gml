@@ -3178,23 +3178,19 @@ function scrFire2() {
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
 	with instance_create(x,y,HeavyBullet)
-	{motion_add(aimDirection+4,16)
+	{motion_add(aimDirection+(4*other.accuracy),16)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,HeavyBullet)
-	{motion_add(aimDirection-4,16)
+	{motion_add(aimDirection-(4*other.accuracy),16)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,HeavyBullet)
-	{motion_add(aimDirection-8,16)
+	{motion_add(aimDirection-(8*other.accuracy),16)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,HeavyBullet)
-	{motion_add(aimDirection+8,16)
-	image_angle = direction
-	team = other.team}
-	with instance_create(x,y,HeavyBullet)
-	{motion_add(aimDirection,16)
+	{motion_add(aimDirection+(8*other.accuracy),16)
 	image_angle = direction
 	team = other.team}
 
@@ -4873,8 +4869,8 @@ function scrFire2() {
 	//VAN PUSHER
 	case 373:
 
-	snd_play_fire(sndGhettoBlast)
-	snd_play_fire(sndPlasmaHit);
+	snd_play_2d(sndGhettoBlast,0.1);
+	snd_play_2d(sndVanPusher,0.2);
 
 	instance_create(x,y,Dust)
 
@@ -11585,7 +11581,7 @@ function scrFire2() {
 	break;
 	
 	//CUBE SNIPER
-	case 610:
+	case 611:
 	
 	snd_play_fire(sndHeavyCuber);
 	snd_play_fire(sndSniperFire);

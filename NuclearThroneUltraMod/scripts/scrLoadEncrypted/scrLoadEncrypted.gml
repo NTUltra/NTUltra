@@ -31,9 +31,16 @@ function scrLoadEncrypted(){
 						daily_race_dates: olddata.daily_race_dates,
 						ctot_dailies_race_time: olddata.ctot_dailies_race_time,
 						dailies_race_day: olddata.dailies_race_day,
+						ctot_weeklies_score: ds_map_create(),
 						secrets: [false,false,false,false,false,false,false,false,false,false],
 					}
 				}*/
+				//Legacy handling
+				if !variable_struct_exists(encrypted_data, "ctot_weeklies_score")
+				{
+					encrypted_data.ctot_weeklies_score[0] = "";
+					encrypted_data.ctot_weeklies_score[1] = ds_map_create();
+				}
 			}
 			else
 			{

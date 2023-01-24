@@ -6753,7 +6753,7 @@ function scrWeapons() {
 	wep_name[611] = "HEAVY CUBER SNIPER"
 	wep_type[611] = 1
 	wep_auto[611] = 0
-	wep_load[611] = 11
+	wep_load[611] = 9
 	wep_cost[611] = 8
 	wep_sprt[611] = sprHeavyCuberSniper
 	wep_area[611] = -1

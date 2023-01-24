@@ -35,7 +35,7 @@ else
 {
 if UberCont.firstFloorMaker
 {
-	SetSeed();
+	//SetSeed();
 	UberCont.firstFloorMaker = false;
 	if instance_exists(Player) 
 	{
@@ -59,8 +59,9 @@ if UberCont.firstFloorMaker
 			with instance_create(x,y,WepPickup)
 			{
 				scrWeapons()
+				SetSeedWeapon();
 				wep = scrDecideWep(0, 8)
-
+				SetSeed();
 				name = wep_name[wep]
 				ammo = 50
 				type = wep_type[wep]
@@ -73,9 +74,10 @@ if UberCont.firstFloorMaker
 scrMakeFloor()
 
 with GenCont
+{
 alarm[0] = 3
-with GenCont
 alarm[2] = 2
+}
 
 with MenuGen
 alarm[1] = 3;

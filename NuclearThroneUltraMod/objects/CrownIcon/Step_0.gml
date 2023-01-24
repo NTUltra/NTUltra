@@ -19,9 +19,9 @@ Player.crownpoints -= 1
 //RESET INVERTED CHANCE
     with Player
     {
-        invertedchance = 8;
+        invertedchance = 10;
 		if race == 27
-			invertedchance = 20;
+			invertedchance = 25;
     }
 
 
@@ -237,9 +237,9 @@ if crown==12
 {
     with Player
     {
-		invertedchance = 70;
+		invertedchance = 80;
 		if race == 27
-			invertedchance = 90;
+			invertedchance = 100;
     }
 }
 //Crown of popo

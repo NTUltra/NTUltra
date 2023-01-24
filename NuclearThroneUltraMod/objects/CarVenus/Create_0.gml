@@ -13,4 +13,4 @@ snd_hurt = sndHitMetal
 drawShadow = false;
 image_xscale = 1
 
-alarm[1] = 1;
+alarm[1] = 2;

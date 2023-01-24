@@ -12,16 +12,42 @@ if (type == network_type_data) {
 	switch(data)
 	{
 		case NETDATA.CLIENT_ID:
+			debug("CLIENT ID");
 			myClientId = buffer_read(buffer, buffer_u16);
+			var latestVersion = buffer_read(buffer, buffer_string);
 			UberCont.todaysSeed = buffer_read(buffer, buffer_u16);
-			UberCont.totalDailies = buffer_read(buffer, buffer_u16) + 1;
+			UberCont.totalDailies = buffer_read(buffer, buffer_u16);
+			UberCont.totalWeeklies = buffer_read(buffer, buffer_u16);
+			debug("TOTAL WEEKLIES ", UberCont.totalWeeklies);
+			debug("TOTAL DAILIES ", UberCont.totalDailies);
+			debug("isWeekly ", UberCont.isWeekly);
+			debug( "score :",UberCont.runScore);
+			debug( "rees :",UberCont.runRace);
 			if array_length(UberCont.runScore) > 1
 			{
 				debug("send score: ",string(UberCont.runScore));
 				var sendBuffer = buffer_create(23,buffer_grow,1);
-				buffer_write(sendBuffer,buffer_u8,NETDATA.SCORE);
+				if UberCont.isWeekly
+				{
+					buffer_write(sendBuffer,buffer_u8,NETDATA.WEEKLY);
+					viewingWeekly = true;
+					UberCont.isWeekly = false;
+				}
+				else
+					buffer_write(sendBuffer,buffer_u8,NETDATA.SCORE);
 				buffer_write(sendBuffer,buffer_u16,myClientId);
-				buffer_write(sendBuffer,buffer_u16,UberCont.dailyDay);//This is the day I started my run
+				if viewingWeekly
+				{
+					buffer_write(sendBuffer,buffer_u16,UberCont.weeklyWeek);
+					buffer_write(sendBuffer,buffer_string,UberCont.encrypted_data.ctot_weeklies_score[0]);//Send UUID
+					UberCont.encrypted_data.ctot_weeklies_score[0] = "";
+					for (var i = 0; i < array_length(UberCont.runScore); i++)
+					{
+						UberCont.encrypted_data.ctot_weeklies_score[0] += string(UberCont.runScore[i])+" ";
+					}
+				}
+				else
+					buffer_write(sendBuffer,buffer_u16,UberCont.dailyDay);//This is the day I started my run
 				buffer_write(sendBuffer,buffer_u64,UberCont.runScore[0]);//Kills
 				buffer_write(sendBuffer,buffer_string,UberCont.runScore[1]);//Name
 				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[2]);//area
@@ -38,10 +64,28 @@ if (type == network_type_data) {
 				network_send_packet(serverSocket, sendBuffer, buffer_get_size(sendBuffer));
 				buffer_delete(sendBuffer);
 			}
+			else if UberCont.isWeekly && array_length(UberCont.runRace) > 1{
+				UberCont.isWeekly = false;
+				viewingWeekly = true;
+				debug("send vanfan: ",string(UberCont.runRace));
+				var sendBuffer = buffer_create(10,buffer_grow,1);
+				buffer_write(sendBuffer,buffer_u8,NETDATA.WEEKLY);
+				buffer_write(sendBuffer,buffer_u16,myClientId);
+				buffer_write(sendBuffer,buffer_u16,UberCont.weeklyWeek);
+				buffer_write(sendBuffer,buffer_string,UberCont.encrypted_data.ctot_weeklies_score[0]);//Send UID
+				buffer_write(sendBuffer,buffer_u64,UberCont.runRace[0]);//Time
+				buffer_write(sendBuffer,buffer_string,UberCont.runRace[1]);//Name
+				buffer_write(sendBuffer,buffer_u8,UberCont.runRace[2]);//race
+				buffer_write(sendBuffer,buffer_u8,UberCont.runRace[3]);//bskin
+				network_send_packet(serverSocket, sendBuffer, buffer_get_size(sendBuffer));
+				buffer_delete(sendBuffer);
+			}
 			else
 			{
 				//Just get leaderboard
+				UberCont.weeklyWeek = UberCont.totalWeeklies;
 				UberCont.dailyDay = UberCont.totalDailies;
+				debug("total dailies ", UberCont.dailyDay);
 				event_user(0);
 			}
 			UberCont.runScore = [];
@@ -49,7 +93,7 @@ if (type == network_type_data) {
 		case NETDATA.SCORE:
 		break;
 		case NETDATA.LEADERBOARD:
-			debug("leaderboard received!");
+			debug("leaderboard received! ", leaderboardType);
 			//Allow continueation quicker
 			if alarm[1] > 3
 				alarm[1] = 3;
@@ -68,9 +112,40 @@ if (type == network_type_data) {
 					leaderboardName[0] = "DAILY RACE ";
 					leaderboardName[1] = UberCont.today;
 				}
+				else if (leaderboardType == LEADERBOARD.WEEKLY) {
+					viewingWeekly = true;
+					leaderboardName[0] = "WEEKLY ";
+					var displayWeek = string_replace(leaderboardTypeString,"weekly","");
+					displayWeek = string_copy(displayWeek,0,2);
+					displayWeek = string_replace(displayWeek,"+","");
+					leaderboardName[0] += displayWeek;
+					var gmn = string_copy(leaderboardTypeString,string_pos("+",leaderboardTypeString),3);
+					viewingWeeklyGamemode = real(string_replace(gmn,".",""));
+					if viewingWeeklyGamemode == 8
+						leaderboardType = LEADERBOARD.VANFAN;
+					else
+						leaderboardType = LEADERBOARD.SCORE;
+					leaderboardName[1] = UberCont.gamemode[viewingWeeklyGamemode];
+				}
 			}
 			debug("leaderboardTypeString " ,leaderboardTypeString);
 			debug("receivedLeaderboard " ,receivedLeaderboard);
+			if string_count("weekly",leaderboardTypeString) > 0
+			{
+				viewingWeekly = true;
+				leaderboardName[0] = "WEEKLY ";
+				var displayWeek = string_replace(leaderboardTypeString,"weekly","");
+				displayWeek = string_copy(displayWeek,0,2);
+				displayWeek = string_replace(displayWeek,"+","");
+				leaderboardName[0] += displayWeek;
+				var gmn = string_copy(leaderboardTypeString,string_pos("+",leaderboardTypeString),3);
+				viewingWeeklyGamemode = real(string_replace(gmn,".",""));
+				if viewingWeeklyGamemode == 8
+					leaderboardType = LEADERBOARD.VANFAN;
+				else
+					leaderboardType = LEADERBOARD.SCORE;
+				leaderboardName[1] = UberCont.gamemode[viewingWeeklyGamemode];
+			}
 			if string_count("dailyscore",leaderboardTypeString) > 0
 			{
 				leaderboardName[0] = "DAILY SCORE ";
@@ -82,19 +157,24 @@ if (type == network_type_data) {
 				leaderboardName[1] = string_replace(leaderboardTypeString,"dailyrace","");
 				leaderboardType = LEADERBOARD.RACE;
 			}
-			
-			
 			UberCont.leaderboardType = leaderboardType;
 			leaderboardName[1] = string_replace(leaderboardName[1],".sav","");
 			page = buffer_read(buffer,buffer_u16);
 			totalPages = buffer_read(buffer,buffer_u16);
-			debug("UberCont.dailyDay ", UberCont.dailyDay);
-			UberCont.dailyDay = buffer_read(buffer,buffer_u16) + 1;
-			debug("UberCont.dailyDay ", UberCont.dailyDay);
-			if UberCont.totalDailies < UberCont.dailyDay
-				UberCont.totalDailies = UberCont.dailyDay;
+			if viewingWeekly
+			{
+				UberCont.weeklyWeek = buffer_read(buffer,buffer_u16);
+				if UberCont.totalWeeklies < UberCont.weeklyWeek
+					UberCont.totalWeeklies = UberCont.weeklyWeek;
+			}
+			else
+			{
+				UberCont.dailyDay = buffer_read(buffer,buffer_u16);
+				debug("Receive daily day: ", UberCont.dailyDay);
+				if UberCont.totalDailies < UberCont.dailyDay
+					UberCont.totalDailies = UberCont.dailyDay;
+			}
 			totalScoreLeaderboardEntries = string_count("|",receivedLeaderboard);
-			debug("totalScoreLeaderboardEntries ", totalScoreLeaderboardEntries);
 			//leaderboard = string_replace(receivedLeaderboard,"_","\n");
 			leaderboard = [];
 			if totalScoreLeaderboardEntries == 0 || UberCont.dailyDay == 0
@@ -121,7 +201,7 @@ if (type == network_type_data) {
 				}
 				startIndex = string_pos_ext("|",receivedLeaderboard,startIndex);
 				startIndex++;
-				if leaderboardType == LEADERBOARD.RACE
+				if leaderboardType == LEADERBOARD.RACE || leaderboardType == LEADERBOARD.VANFAN
 				{
 					var frameTime = scoreEntryList[0];
 					var microseconds = frameTime / 0.3;
@@ -155,21 +235,24 @@ if (type == network_type_data) {
 						txttime = minutesstring+":"+secondsstring+":"+microsecondsstring;
 					}
 					scoreEntryList[0] = txttime;
-					var routeArray = string_split(scoreEntryList[2],">");
-					debug("routearray: ", routeArray);
-					var al = array_length(routeArray)-1
-					var areaArray = [];
-					for (var i = 0; i < al; i++)
+					if leaderboardType != LEADERBOARD.VANFAN
 					{
-						areaArray[i] = scrAreaName(real(routeArray[i]),0,0);
-						areaArray[i][0] = string_replace(areaArray[i][0],"_1",">");
-						areaArray[i][0] = string_replace(areaArray[i][0],"_2",">");
-						areaArray[i][0] = string_replace(areaArray[i][0],"_3",">");
-						areaArray[i][0] = string_replace(areaArray[i][0],"???","?>");
+						var routeArray = string_split(scoreEntryList[2],">");
+						debug("routearray: ", routeArray);
+						var al = array_length(routeArray)-1
+						var areaArray = [];
+						for (var i = 0; i < al; i++)
+						{
+							areaArray[i] = scrAreaName(real(routeArray[i]),0,0);
+							areaArray[i][0] = string_replace(areaArray[i][0],"_1",">");
+							areaArray[i][0] = string_replace(areaArray[i][0],"_2",">");
+							areaArray[i][0] = string_replace(areaArray[i][0],"_3",">");
+							areaArray[i][0] = string_replace(areaArray[i][0],"???","?>");
+						}
+						i --;
+						areaArray[i][0] = string_copy(areaArray[i][0],0,string_length(areaArray[i][0])-1);
+						scoreEntryList[2] = areaArray;
 					}
-					i --;
-					areaArray[i][0] = string_copy(areaArray[i][0],0,string_length(areaArray[i][0])-1);
-					scoreEntryList[2] = areaArray;
 				}
 				leaderboard[j] = scoreEntryList;
 				j++;

@@ -14,6 +14,8 @@ if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x and UberCont.mo
 			leaderboardType = LEADERBOARD.SCORE;
 		else if UberCont.opt_gamemode == 27
 			leaderboardType = LEADERBOARD.RACE;
+		else if UberCont.opt_gamemode == 37
+			leaderboardType = LEADERBOARD.WEEKLY;
 	}
 	scrRestart();
 }

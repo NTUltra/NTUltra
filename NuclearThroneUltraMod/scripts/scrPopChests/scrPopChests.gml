@@ -1,6 +1,8 @@
 function scrPopChests() {
 	if instance_exists(Vlambeer) || instance_exists(MenuGen)
 		return;
+		
+	var ran = random(10);
 	//Special cases:
 	if UberCont.opt_gamemode == 25
 	{
@@ -105,11 +107,11 @@ function scrPopChests() {
 	var gol = 1;
 	var healthChestGol = 0;
 	//Melting
-	if Player.race=4 && Player.my_health <= Player.maxhealth*0.5 and random(2) < 1
+	if Player.race=4 && Player.my_health <= Player.maxhealth*0.5 and ran < 5
 	{
 		healthChestGol += 1;
 	}
-	else if Player.race!=4 && Player.my_health < round(6/2) and random(2) < 1
+	else if Player.race!=4 && Player.my_health < round(6/2) and ran < 5
 	{
 		healthChestGol += 1;
 	}
@@ -361,7 +363,5 @@ function scrPopChests() {
 			}
 		}
 	}
-
-
-
+	SetSeed();
 }

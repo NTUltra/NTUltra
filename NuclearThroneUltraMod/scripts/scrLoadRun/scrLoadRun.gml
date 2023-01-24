@@ -114,7 +114,7 @@ function scrLoadRun(){
 				Player.rogueammomax = encryptedRun.rogueammomax;
 				Player.ultraNow = encryptedRun.ultraNow;
 				UberCont.opt_gamemode = encryptedRun.gamemode;
-				if UberCont.opt_gamemode == 26 || UberCont.opt_gamemode == 27
+				if UberCont.opt_gamemode == 26 || UberCont.opt_gamemode == 27 || UberCont.opt_gamemode == 37
 					UberCont.opt_gamemode = 0;
 				UberCont.killedBoss = encryptedRun.killedBoss;
 				UberCont.collectedRewards = encryptedRun.collectedRewards;

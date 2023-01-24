@@ -140,8 +140,9 @@ with UberCont {
 	if !instance_exists(PlayerSpawn) && instance_number(Player) == 1 && !instance_exists(CrownIcon)
 	{
 		if isWeekly {
+			UberCont.opt_gamemode = 0;
 			instance_create(0,0,StartDaily);
-			canRestart = false;
+			// canRestart = false;
 		}
 	    else if opt_gamemode == 26 {
 			instance_create(0,0,StartDaily);
@@ -437,11 +438,7 @@ if UberCont.opt_gamemode == 36//Ultra mod start
     crownvisits = -1;
 	//instance_create(0,0,PauseTimer);
 }
-if UberCont.crown_start[r] && !instance_exists(PlayerSpawn) && UberCont.opt_gamemode != 25 && !instance_exists(CrownIcon) {
-    //area = 100;
-    //hard -= 1;
-    //crownvisits = -1;
-	//instance_create(0,0,PauseTimer);
+if UberCont.crown_start[r] && !instance_exists(PlayerSpawn) && UberCont.opt_gamemode != 25 && !instance_exists(CrownIcon){
 	with Crown
 		instance_destroy();
 	with UberCont
@@ -709,3 +706,9 @@ if UberCont.opt_gamemode == 35
 		//}
 	}
 }
+enum LEADERBOARD {
+	SCORE,
+	RACE,
+	WEEKLY,
+	VANFAN,
+};

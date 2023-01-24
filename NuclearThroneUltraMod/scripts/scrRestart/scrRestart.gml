@@ -24,7 +24,8 @@ function scrRestart() {
 		room_goto(romLeaderboard);
 		with UberCont
 		{
-			goToLeaderboard = false;	
+			goToLeaderboard = false;
+			opt_gamemode = 0;
 		}
 		audio_stop_all();
 		with MusCont {
@@ -39,7 +40,7 @@ function scrRestart() {
 	}
 	if loadedRun  && !keyboard_check_pressed(vk_enter) and !gamepad_button_check(0,gp_face4)//Not end of run clicked (ugly fix but Im falling asleep)
 		scrLoadRun();
-	else
+	else if !instance_exists(StartDaily)
 	{
 		room_goto(romGame)
 	}

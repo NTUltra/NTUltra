@@ -673,4 +673,4 @@ with Crown
 	x = Player.x;
 	y = Player.y;
 }
-
+SetSeed();

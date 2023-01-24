@@ -4,15 +4,18 @@ var yesterday = day;
 day = date_date_string(date_current_datetime());
 var lastweek = week;
 week = date_get_week(date_current_datetime());
+
 if day != yesterday
 {
 	var fileName = file_find_first("ds*", 0);
 	totalDailies = defaultTotalDailies;
+	show_debug_message("start counting " + string(totalDailies));
 	defaultTotalDailies = 0;
 	while (fileName != "")
 	{
 		totalDailies ++;
 		fileName = file_find_next();
+		show_debug_message(fileName);
 	}
 	file_find_close();
 	show_debug_message("new day " + string(totalDailies));
@@ -24,15 +27,25 @@ if day != yesterday
 	todaySeed = byteSeed;
 	dailyScoreSaveFileString="ds"+string(totalDailies) + "_ntultradailyscore"+string(day)+".sav";
 	dailyRaceSaveFileString=string(totalDailies) + "_ntultradailyrace"+string(day)+".sav";
-	show_debug_message("scopre " + string(dailyScoreSaveFileString));
-	show_debug_message("race " + string(dailyRaceSaveFileString));
 	scoreLeaderboardString = "";
 	raceLeaderboardString = "";
 	if week != lastweek
 	{
-		weekSeed = byteSeed+2;
+		show_debug_message("WEEK");
+		var weekchecker = date_inc_week(date_current_datetime(), -1);
+		var year = min(date_current_datetime(), date_get_year(weekchecker));//In case week crosses the year
+		var seedweek = string(week) + string(year);
+		show_debug_message(week);
+		show_debug_message(seedweek);
+		var byteSeed = 0;
+		var byteSize = string_byte_length(seedweek);
+		for (var i = 0; i < byteSize; i++) {
+			byteSeed = (byteSeed + string_byte_at(seedweek, i)) << 1;
+		}
+		weekSeed = byteSeed;
 		random_set_seed(weekSeed);
 		weekGamemode = irandom_range(1,36);
+		//Manual gamemode injection here
 		weeklyOption = [];
 		if weekGamemode == 26//Daily race
 			weekGamemode = 1;
@@ -40,7 +53,7 @@ if day != yesterday
 		{
 			case 1://One weapon only
 				weeklyOption[0] = irandom_range(1,maxwep);
-				while (weeklyOption[0] != 69 && weeklyOption[0] != 298)
+				while (weeklyOption[0] == 69 || weeklyOption[0] == 298 || weeklyOption[0] == 1)
 				{
 					weeklyOption[0] = irandom_range(1,maxwep);
 				}
@@ -69,6 +82,6 @@ if day != yesterday
 		}
 		file_find_close();
 		show_debug_message("new week " + string(totalWeeklies));
-		weeklySaveFileString = "w"+string(totalWeeklies) + "_ntultraweekly"+string(week)+"-"+string(weekGamemode)+".sav";
+		weeklySaveFileString = "w"+string(totalWeeklies) + "_ntultraweekly"+string(week)+"+"+string(weekGamemode)+".sav";
 	}
 }

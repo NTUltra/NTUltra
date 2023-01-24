@@ -609,7 +609,7 @@ scrUnlockBSkin(15,"FOR COMPLETING A MAIN AREA# AFTER THE SEWERS#WITHOUT FIRING A
 if ( firedthislevel=false && race = 21 && loops>0 )
 scrUnlockCSkin(21,"FOR COMPLETING A MAIN AREA ON#USING ONLY THE BEAM",0);
 
-if ( firedthislevel=false && race = 24 && area <100 && area != 10 && ( area>2 || loops>0 )  )
+if ( firedthislevel=false && race = 24 && area < 100 && area != 10 && ( area > 2 || loops > 0 )  )
 scrUnlockCSkin(24,"FOR COMPLETING A MAIN AREA# AFTER THE SEWERS#WITHOUT FIRING AS ELEMENTOR",0);
 
 if (yungCuzCskin > 2)

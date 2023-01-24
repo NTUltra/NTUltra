@@ -6,10 +6,11 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 	if instance_exists(Player)
 	{
 		if UberCont.opt_gamemode == 2 {
-			if Player.loops>0
-				wep=choose(24,79,12,11,234,236,197,127,128);//E Sword, SPC, SuCros, Auto crossy, heavy auto, super heavy auto, dubble super plasma cannon,Eswordgun,SEswordgun
+			//Favourable build
+			if Player.loops > 0
+				wep=choose(592, 591, 500, 508, 410, 24,79,12,11,562, 481, 360, 596, 598, 22, 99, 213, 220, 331, 221, 222, 223, 87, 234, 140, 236,197,127,128,395,397,536,540,542, 118, 563,543,541,538, 507, 506, 504, 494, 487, 120, 524, 266, 544, 396, 550, 121, 422, 456);
 			else
-				wep=choose(24,79,12,11);//E Sword, SPC, SuCros, Auto crossy
+				wep=choose(592, 591, 500, 508, 410, 24,79,12,11,562, 481, 360, 596, 598, 22, 99, 213, 220, 331, 221, 222, 223, 87, 234, 140);
 		}
 		else {
 			var maxAreaGoodEnough = irandom_range(7,12);

@@ -4,6 +4,8 @@ if isPaused = 1
 //QUICK RESTART
 if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_exists(Player) && (keyboard_check_pressed(ord("R")) || gamepad_button_check(0,gp_face3)) )//(gamepad_button_check(0,gp_stickl) && gamepad_button_check(0,gp_stickr)) )
 {
+	debug("QUICK RESTART");
+	scrEndOfRun();
 	with SurvivalWave
 		instance_destroy();
 	instance_activate_all();
@@ -28,7 +30,7 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 	if race = 0 || UberCont.opt_gamemode == 23
 	{
 		ranChar = true;
-		do {race = 1+irandom(racemax-1);debug("char char char!!")} until race_have[race] = 1
+		do {race = 1+irandom(racemax-1);} until race_have[race] = 1
 	}
 	if crown = 0
 	crown = ceil(irandom(crownmax))
@@ -37,6 +39,10 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 	with ThrowWep
 		instance_destroy();
 	with HardModeChest
+		instance_destroy();
+	with CrownIcon
+		instance_destroy();
+	with PlayerSpawn
 		instance_destroy();
 
 	with instance_create(x,y,GenCont)
@@ -50,11 +56,10 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 		nochest = -1;
 		skeletonlives = 0;
 	}
-	debug("BIG CHUNK RESTART");
 	var loadedRun = UberCont.loadedRun;
 	if loadedRun
 		scrLoadRun();
-	else
+	else if !instance_exists(StartDaily)
 		room_restart()
 	exit;
 }
@@ -85,6 +90,8 @@ audio_resume_all();
 //RETURN TO MENU
 if (keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4)) && !instance_exists(PlayerSpawn)
 {
+	if isWeekly
+		opt_gamemode = 0;
 	instance_activate_all()
 	isPaused = 0
 	alarm[3] = 1;
@@ -97,6 +104,7 @@ if (keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4)) && !in
 		ultra_got[87] = 0;
 		instance_destroy()
 	}
+	scrSave();
 	scrRestart()
 	debug("RETURN TO MENU PAUSED");
 }
@@ -104,7 +112,13 @@ if (keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4)) && !in
 if ( keyboard_check_pressed(ord("Q")) or ( gamepad_button_check(0,gp_shoulderr) && gamepad_button_check(0,gp_shoulderrb) 
 && gamepad_button_check(0,gp_shoulderl) && gamepad_button_check(0,gp_shoulderlb) ) )
 {
-game_end()}
+	if (UberCont.isWeekly)
+	{
+		UberCont.opt_gamemode = 0;	
+	}
+	scrSave();
+	game_end()
+}
 }
 else
 {
@@ -115,6 +129,9 @@ if instance_exists(KeyCont) && (keyboard_check_pressed(vk_escape)or KeyCont.key_
 {
 if keyboard_check_pressed(vk_escape) and instance_exists(Menu)
 {
+	if isWeekly
+		opt_gamemode = 0;
+	scrSave();
 if !instance_exists(OptionSelect)
 game_end()
 else if OptionSelect.selected = 0 and CreditsSelect.selected = 0 and StatsSelect.selected = 0 and OptionSelect2.selected = 0 and UpdateSelect.selected = 0
@@ -174,7 +191,7 @@ audio_pause_all();
 if isPaused == 0 && !instance_exists(GenCont) && !instance_exists(Menu) && !instance_exists(Vlambeer) &&
 (instance_exists(Player) || instance_exists(PlayerSpawn)) && !instance_exists(PauseTimer) && !instance_exists(StartDaily)
 {
-	if UberCont.normalGameSpeed == 60
+	if normalGameSpeed == 60
 	{
 		time_frame += 0.5;
 		time_microseconds += 1.6666666666666666666666666666667;//Counts to 100

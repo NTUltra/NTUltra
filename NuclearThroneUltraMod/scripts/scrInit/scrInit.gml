@@ -30,6 +30,7 @@ function scrInit() {
 		daily_race_dates: [],
 		ctot_dailies_race_time: [],
 		dailies_race_day: [],
+		ctot_weeklies_score: ["", ds_map_create()],
 		secrets: [false,false,false,false,false,false,false,false,false,false],
 	};
 	scrLoadEncrypted();

@@ -5,6 +5,7 @@ version = 000//23 is final probably
 encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
+updateVersion = "BETA 30.08";
 serverIp =  "";
 serverPort =  0;
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
@@ -80,11 +81,7 @@ runScore = [];
 runRace = [];
 routeString = "";
 previousRoute = 0;
-enum LEADERBOARD{
-	SCORE,
-	RACE,
-	WEEKLY
-};
+
 leaderboardType = LEADERBOARD.SCORE;
 
 firstFloorMaker = true;
@@ -183,5 +180,7 @@ revivedCharacters = [];
 beatTheGame = false;
 
 randomDailyMod = 0;
+chestRan = 0;
 isWeekly = false;
+weeklyGamemode = 0;
 hasLeveledUp = false;

@@ -9,7 +9,13 @@ __view_set( e__VW.XView, 0, 0 )
 __view_set( e__VW.YView, 0, 0 )
 wave = 0
 
-
+with UberCont
+{
+	if (useSeed)
+	{
+		random_set_seed(seed+Player.level);
+	}
+}
 if Player.crownpoints > 0
 {
 scrCrowns()
@@ -501,3 +507,4 @@ if UberCont.opt_gamemode == 32 {
 		}
 	}
 }
+SetSeed();

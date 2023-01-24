@@ -2,7 +2,7 @@
 // /@description
 ///@param dmgTaken
 function scrHumphryDamage(dmgTaken){
-	var newDmg = dmgTaken + (dmgTaken * Player.humphrySkill*0.00225);//0.01 originally
+	var newDmg = dmgTaken + (dmgTaken * Player.humphrySkill*0.0025);//0.01 originally
 	Player.humphrySkill += dmgTaken;//This should be original damage so no other dmg buffs before this
 	//scrUnlockCSkin
 	if Player.humphrySkill >= 1000

@@ -27,7 +27,7 @@ if instance_exists(Player)
 		{
 			with other
 			{
-				if typ == 0 // Laser
+				if typ == 0 && !canBeMoved// Laser
 				{
 					var d = point_distance(xstart,ystart,other.x,other.y) - 1;
 					x = xstart + lengthdir_x(d,image_angle);

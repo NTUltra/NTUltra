@@ -29,6 +29,7 @@ snd_hurt = sndHitMetal
 }
 
 hurt_pitch_variation = 0;
+alarm[1] = 2;
 
 
 my_health = maxhealth

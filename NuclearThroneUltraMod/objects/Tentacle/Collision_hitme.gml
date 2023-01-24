@@ -59,7 +59,7 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 			}
 			if instance_exists(other.creator) && team != 0 && s < 6 {
 				direction = point_direction(x,y,other.creator.x,other.creator.y);
-				var theS = 8/s;
+				var theS = 7/s;
 				motion_add(direction,theS*0.75);
 				x += lengthdir_x(theS,direction);
 				y += lengthdir_y(theS,direction);

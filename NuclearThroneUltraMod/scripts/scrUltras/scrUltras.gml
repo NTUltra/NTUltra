@@ -752,7 +752,8 @@ function scrUltras() {
 		if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (scrHasDirector() && instance_exists(UltraIcon)))
 		{
 			ultra_name[104] = "GRUMPY LECTURE"
-		    ultra_text[104] = "ACTIVE COSTS 50 SKILL TO USE#INSTEAD OF UNEQUIPPED AMMO#ACTIVE DEFLECTS & DESTROYS#ALL ENEMY PROJECTILES"
+			//TODO change to unequipped ammo
+		    ultra_text[104] = "ACTIVE COSTS UNEQUIPPED AMMO#INSTEAD OF SKILL#ACTIVE DEFLECTS & DESTROYS#ALL ENEMY PROJECTILES"
 		    ultra_tips[104] = "teach them a lesson!"
 		}
 		/*
