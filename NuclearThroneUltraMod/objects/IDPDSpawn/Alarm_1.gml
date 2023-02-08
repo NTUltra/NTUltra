@@ -18,7 +18,7 @@ if instance_exists(Player)
 		exit;
 	}
 	var loops = UberCont.loops
-	if UberCont.opt_gamemode == 34  && Player.area > 1 && Player.loops != 1// HARD MODE
+	if scrIsHardMode()  && Player.area > 1 && Player.loops != 1// HARD MODE
 		loops += 2;
 //ElITES ON LOOP
 if random(4)<1+min(loops-1,2) && loops>0//elite

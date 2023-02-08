@@ -5,7 +5,7 @@ size = 1
 
 event_inherited()
 
-if UberCont.opt_gamemode == 34 && random(2) < 1//HARD MODE
+if scrIsHardMode() && random(2) < 1//HARD MODE
 {
 	instance_destroy(id,false);
 	instance_create(x,y,UltraSniper);

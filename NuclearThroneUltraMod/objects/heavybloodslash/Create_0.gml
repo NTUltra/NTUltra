@@ -10,9 +10,18 @@ friction = 0.1
 
 dmg = 30;
 alarm[11] = 0;//Is already blood
-if instance_exists(Player) && Player.ultra_got[16]
+if instance_exists(Player)
 {
-	dmg +=4;
+	if Player.ultra_got[74] && Player.altUltra
+	{
+		wallPierce = 0;
+		speed += 1;
+		destroyAll = true;
+	}
+	if Player.ultra_got[16]
+	{
+		dmg += 4;
+	}
 }
 hitEnemy = false;
 owner = -1;

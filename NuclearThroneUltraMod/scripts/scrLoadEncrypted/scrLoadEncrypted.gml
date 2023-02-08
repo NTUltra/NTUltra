@@ -36,10 +36,10 @@ function scrLoadEncrypted(){
 					}
 				}*/
 				//Legacy handling
-				if !variable_struct_exists(encrypted_data, "ctot_weeklies_score")
+				if !variable_struct_exists(encrypted_data, "ctot_weeklies_score") || !is_array(encrypted_data.ctot_weeklies_score) || !is_struct(encrypted_data.ctot_weeklies_score[1])
 				{
 					encrypted_data.ctot_weeklies_score[0] = "";
-					encrypted_data.ctot_weeklies_score[1] = ds_map_create();
+					encrypted_data.ctot_weeklies_score[1] = {};
 				}
 			}
 			else

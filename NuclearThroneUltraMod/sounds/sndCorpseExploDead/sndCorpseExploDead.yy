@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "sndCorpseExploDead",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -12,13 +15,9 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndCorpseExploDead",
-  "duration": 0.0,
+  "duration": 0.992018,
   "parent": {
     "name": "Player",
     "path": "folders/Sounds/Player.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sndCorpseExploDead",
-  "tags": [],
-  "resourceType": "GMSound",
 }

@@ -125,7 +125,7 @@ if (type == network_type_data) {
 						leaderboardType = LEADERBOARD.VANFAN;
 					else
 						leaderboardType = LEADERBOARD.SCORE;
-					leaderboardName[1] = UberCont.gamemode[viewingWeeklyGamemode];
+					leaderboardName[1] = string_replace_all(UberCont.gamemode[viewingWeeklyGamemode],"#"," ");
 				}
 			}
 			debug("leaderboardTypeString " ,leaderboardTypeString);
@@ -144,7 +144,7 @@ if (type == network_type_data) {
 					leaderboardType = LEADERBOARD.VANFAN;
 				else
 					leaderboardType = LEADERBOARD.SCORE;
-				leaderboardName[1] = UberCont.gamemode[viewingWeeklyGamemode];
+				leaderboardName[1] = string_replace_all(UberCont.gamemode[viewingWeeklyGamemode],"#"," ")
 			}
 			if string_count("dailyscore",leaderboardTypeString) > 0
 			{

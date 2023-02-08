@@ -10,8 +10,20 @@ else if array_length(leaderboard) > 0
 {
 	var space = 22;
 	draw_text(x + 16,y-16,leaderboardName[0]);
-	draw_set_halign(fa_right);
-	draw_text(camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 16,y-16,leaderboardName[1]);
+	//draw_set_halign(fa_right);
+	//draw_text(camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 16,y-16,leaderboardName[1]);
+	var surf = surface_create(174,string_height(leaderboardName[1]));
+	surface_set_target(surf);
+	var ux = 0;
+	var uw = string_width(leaderboardName[1]);
+	if (uw > 174)
+	{
+		//scrolling	
+		ux = lerp(0,0-max(0,uw-174),killScroll);
+	}
+	draw_text(ux,0,leaderboardName[1]);
+	surface_reset_target();
+	draw_surface(surf,camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 16 - min(string_width(leaderboardName[1]),174), y-16);
 	draw_set_halign(fa_left);
 	var al = array_length(leaderboard);
 	if leaderboardType == LEADERBOARD.SCORE
@@ -440,8 +452,19 @@ else if array_length(leaderboard) > 0
 else if noBoard
 {
 	draw_text(x + 16,y-16,leaderboardName[0]);
-	draw_set_halign(fa_right);
-	draw_text(camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 16,y-16,leaderboardName[1]);
+	var surf = surface_create(174,string_height(leaderboardName[1]));
+	surface_set_target(surf);
+	var ux = 0;
+	var uw = string_width(leaderboardName[1]);
+	if (uw > 174)
+	{
+		//scrolling	
+		ux = lerp(0,0-max(0,uw-174),killScroll);
+	}
+	draw_text(ux,0,leaderboardName[1]);
+	surface_reset_target();
+	draw_surface(surf,camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 16 - min(string_width(leaderboardName[1]),174), y-16);
+	
 	draw_set_halign(fa_left);
 	draw_text(x + 31,y,"NO LEADERBOARD ENTRY");
 	var o = 8;

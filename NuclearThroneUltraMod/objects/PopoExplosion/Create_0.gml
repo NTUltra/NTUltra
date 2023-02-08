@@ -6,7 +6,7 @@ with myExplosionMask
 	dmg = 7;
 	if UberCont.opt_gamemode == 9
 		dmg = 4;
-	else if UberCont.opt_gamemode == 34//HARD MODE
+	else if scrIsHardMode()//HARD MODE
 		dmg = 10;
 }
 dmg = 8;

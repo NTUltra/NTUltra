@@ -1,4 +1,5 @@
 /// @description seed
+exit;
 seedI++;
 alarm[1] = sequenceDelay;
 if (seedI) >= array_length(seed) && UberCont.opt_gamemode != 27 && UberCont.opt_gamemode != 26

@@ -36,6 +36,10 @@ function scrLoadOptions() {
 	opt_timer = ini_read_real("OPTIONS","timer",0);
 	normalGameSpeed = ini_read_real("OPTIONS","fps",30);
 	opt_gamemode = ini_read_real("OPTIONS","gamemode",0);
+	if opt_gamemode == 39
+	{
+		useSeed = true;	
+	}
 
 	//custom controls (ASCII)
 	opt_up = ini_read_real("OPTIONS","up",87);//W
@@ -44,7 +48,6 @@ function scrLoadOptions() {
 	opt_right = ini_read_real("OPTIONS","right",68);//D
 	opt_swap = ini_read_real("OPTIONS","swap",81);//Q
 	opt_pickup = ini_read_real("OPTIONS","pickup",69);//E
-
-
+	
 
 }

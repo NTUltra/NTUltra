@@ -400,7 +400,7 @@ if UberCont.opt_gamemode == 32//One hit wonder
 		skillpoints ++;
 	}
 }
-if UberCont.opt_gamemode == 34//HARD MODE
+if scrIsHardMode()//HARD MODE
 {
 	skillpoints ++;
 	skillsChosen --;
@@ -566,6 +566,7 @@ horrorcharge = 2;
 origincharge = 2;
 maxcharge = 20;
 horrorhealtime = 0;
+horrordelay = false;
 
 //extra feet items
 extrafeetalarm = 0;

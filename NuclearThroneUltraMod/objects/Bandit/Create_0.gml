@@ -4,7 +4,7 @@ meleedamage = 0
 size = 1
 
 event_inherited()
-if UberCont.opt_gamemode == 34//HARD MODE
+if scrIsHardMode()//HARD MODE
 {
 	if (!(instance_exists(Player) && Player.area == 1 && Player.loops < 1) || random(5) < 2)
 	{

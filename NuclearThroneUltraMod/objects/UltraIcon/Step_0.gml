@@ -12,6 +12,7 @@ if skill = 0
 	{
 		with Player
 		{
+			scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			altUltra = true;
 			ultra_name[0] = "CASH FLOW"
 			ultra_text[0] = "REPLACE BEAM WITH CASH FLOW#CASH FLOW USES CASH INSTEAD OF RADS#GET 100 CASH EVERY AREA#CASH MAXIMUM IS 500#KILLS GENERATE CASH#(UPGRADES TO BEAM STILL APPLY)##YOU CAN KEEP USING ACTIVE#EVEN WHILE IN DEBT#BUT ACTIVE WILL BE LOCKED UNTIL#OUT OF DEBT AT THE START OF AN AREA"
@@ -36,6 +37,7 @@ else if skill == 9 // Strange style
 	if scrHasEyesMutations() || Player.unlockAlternativeUltras
 	{
 		with Player {
+			scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			altUltra = true;
 			ultra_name[9] = "STRANGE STYLE"
 			ultra_text[9] = "STRONGER TELEKINESIS#TELEKINESIS PULLS EVERYTHING TOWARDS YOUR CROSSHAIR"
@@ -67,6 +69,7 @@ else if skill == 9 // Strange style
 else if skill == 13 && (Player.maxhealth == 1 || Player.unlockAlternativeUltras)
 {
 	with Player {
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 		ultra_name[13] = "DEATH STARE"
 		ultra_text[13] = "LOOKING AT ENEMIES SLOWLY KILLS THEM#ENEMIES ARE SCARED OF YOU"
@@ -78,6 +81,7 @@ else if skill == 20 && (Player.crown == 23 && Player.skill_got[2] || Player.unlo
 {
 	with Player
 	{
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 		ultra_name[20] = "SONIC SPEED"
 		ultra_text[20] = "YOU CAN MOVE EXTREMELY FAST!#ACCELERATING OR DECCELERATING QUICKLY#CREATES A SONIC BOOM"
@@ -89,6 +93,7 @@ else if skill == 43 && (Player.skill_got[19] && Player.skill_got[17] || Player.u
 {
 	with Player
 	{
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 		ultra_name[43] = "SNIPER EYE"
 		ultra_text[43] = "REPLACE YOUR ACTIVE WITH A SNIPER EYE#THE EYE BREAKS WALLS#PIERCES, STUNS AND DAMAGES ENEMIES#DAMAGE INCREASES EACH PIERCE#MORE POWERFUL#THE LONGER YOU WAIT BETWEEN SHOTS#POWER SCALES FASTER#IF YOU HAVE THRONE BUTT"
@@ -99,6 +104,7 @@ else if skill == 47 && (!Player.skill_got[1] && Player.skill_got[3] || Player.un
 {
 	with Player
 	{
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 		ultra_name[47] = "GREEN TEAM"
 		ultra_text[47] = "SPAWNING BUDDIES COSTS RADS#INSTEAD OF MAX HP#BUDDIES DROP MORE RESOURCES"
@@ -109,6 +115,7 @@ else if skill == 51 && (!Player.skill_got[2] && !Player.skill_got[8] || Player.u
 {
 	with Player
 	{
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 		sheepFakeouts = 3 + (skill_got[5] * 2);
 		ultra_name[51] = "HYPNOTIZE"
@@ -120,6 +127,7 @@ else if skill == 55 && ((Player.skill_got[13] || Player.skill_got[34] || Player.
 {
 	with Player
 	{
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 		ultra_name[55] = "INCONSISTENT INCOMPATABILITY"
 		ultra_text[55] = "ALL WEAPONS ARE FULLY AUTOMATIC#YOU NO LONGER THROW WEAPONS#INSTEAD YOUR ACTIVE FIRES YOUR WEAPON#FROM THE ORIGIN OF YOUR CROSSHAIR";
@@ -130,6 +138,7 @@ else if skill == 59 && (!Player.skill_got[17] && (Player.crown == 4 || Player.cr
 {
 	with Player
 	{
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 		ultra_name[59] = "PATH OF DESTRUCTION"
 		ultra_text[59] = "EVERYWHERE YOU GO#YOU LEAVE BEHIND A TRAIL OF#DAMAGING GOOP##PICKUPS FADE FASTER#FADED PICKUPS REROLL INTO OTHER PICKUPS#PICKUPS CAN FADE/REROLL TWICE"
@@ -147,6 +156,7 @@ else if skill == 92 && Player.race == 23 && ( Player.wep_type[Player.wep] == 3 &
 {
 	with Player
 	{
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 		ultra_name[92] = "SPIKE BALL"
 		ultra_text[92] = "NORMAL CONTROLS#EMIT SPLINTERS INSTEAD OF GASS#ALL SPLINTERS ARE GASSEOUS"
@@ -157,6 +167,7 @@ else if skill == 96 && Player.race == 24 && ((Player.crown == 11 || Player.crown
 {
 	with Player
 	{
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 		ultra_name[96] = "AIR LORD"
 		ultra_text[96] = "YOUR ACTIVE CHANGES INTO#WIND PUSH#WIND PUSHES PROJECTILES AND ENEMIES#ENEMIES HITTING A WALL TAKE MORE DAMAGE#THRONE BUTT MAKES THE WIND STRONGER"
@@ -169,6 +180,7 @@ else if skill == 106//Hands secret ultras
 	{
 		if bskin == 1 || (Player.unlockAlternativeUltras && other.randomHand == 1 && !bskin == 1)
 		{
+			scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			//Secret B skin ultra
 			ultra_name[106] = "HOT HANDS!"
 			ultra_text[106] = "FIERY HANDS#MORE FIRE DAMAGE#HOMING FIRE#EVEN MORE FIRE DAMAGE#WHILE IN INVERTED AREAS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
@@ -183,6 +195,7 @@ else if skill == 106//Hands secret ultras
 		}
 		else if bskin == 2 || (Player.unlockAlternativeUltras && other.randomHand == 2 && !bskin == 2)
 		{
+			scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			//Secret C skin ultra
 			ultra_name[106] = "BOOM HANDS!"
 			ultra_text[106] = "EXPLOSIVE HANDS#HAND IS SLOWER#NORMAL HAND SPEED IN INVERTED AREAS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
@@ -207,6 +220,7 @@ else if skill == 4
 	{
 		if bskin == 2 || Player.unlockAlternativeUltras
 		{
+			scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			scrWeaponAdjustCost(0.85);
 			bskin = 2;
 			spr_idle=sprMutant1CIdle;
@@ -221,6 +235,7 @@ else if skill == 4
 else if skill == 6 && (Player.curse || Player.bcurse || Player.unlockAlternativeUltras)
 {
 	with Player {
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 		ultra_name[6] = "CURSED"
 		ultra_text[6] = "TELEPORT AFTER SHIELDING#SHIELDING FIRES LASERS"
@@ -231,6 +246,7 @@ else if skill == 23 && (Player.race == 6 && scrMeleeWeapons(Player.wep) && scrMe
 {
 	with Player
 	{
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 		ultra_name[23] = "BLASPHEMY"
 		ultra_text[23] = "CAN NO LONGER POP POP GUNS#43% HIGHER MELEE SWING RATE#MELEE IS FULLY AUTOMATIC#CAN POP POP MELEE"
@@ -255,6 +271,7 @@ else if skill == 27 && (Player.wep == Player.bwep || Player.unlockAlternativeUlt
 {
 	with Player
 	{
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 		ultra_name[27] = "PUNCHSWAP"
 		ultra_text[27] = "SWAPPING MAKES YOU SWING WITH YOUR WEAPON#SWINGS DEFLECT PROJECTILES AND DEALS DAMAGE"
@@ -265,6 +282,7 @@ else if skill == 29 && (Player.spr_idle == sprMutant8DIdle || Player.unlockAlter
 {
 	with Player
 	{
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 		ultra_name[29] = "EXCLUSIVE TASTE"
 		ultra_text[29] = "HOLDING ONLY ONE WEAPON WILL:#INCREASE DAMAGE DEALT TO ENEMIES BY 25%#RETURN 10% AMMO UPON FIRING#+15% FIRERATE AND +4 MAX HP##AUTO EAT WEAPONS LEFT IN THE LEVEL";
@@ -279,6 +297,7 @@ else if skill == 35 && (Player.crown == 12 || Player.unlockAlternativeUltras)//C
 {
 	with Player
 	{
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 		ultra_name[35] = "SUCOF"
 		ultra_text[35] = "EMIT SESREVER EVICA"//ACTIVE REVERSES TIME
@@ -303,6 +322,7 @@ else if skill == 39 && (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUl
 (!Player.skill_got[1] && !Player.skill_got[7] && !Player.skill_got[9]&& !Player.skill_got[25]) || Player.unlockAlternativeUltras)
 {
 	with Player {
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 		maxhealth += 40;
 		my_health += 40;
@@ -337,6 +357,7 @@ else if skill == 61 && (scrKrakenWeapons(Player.wep) || scrKrakenWeapons(Player.
 {
 	with Player
 	{
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 		ultra_name[61] = "CAPTAIN OF THE KRAKEN"
 		ultra_text[61] = "KRAKEN WEAPONS DEAL MORE DAMAGE#TENTACLES ARE LONGER#KRAKEN WEAPONS COST 20% LESS AMMO"
@@ -351,6 +372,7 @@ else if skill == 72 && ((Player.maxhealth < 8 && UberCont.opt_gamemode != 9) || 
 {
 	with Player
 	{
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 		ultra_name[72] = "MIRROR"
 		ultra_text[72] = "ACTIVE NO LONGER HEALS#ACTIVE COST IS ALWAYS REDUCED#(AS IF YOU ARE ON MAX HP)#ALSO DEFLECT ON YOUR RETICLE"
@@ -372,6 +394,7 @@ else if skill == 77 && Player.race == 20 && (Player.skill_got[0] || Player.unloc
 		}
 		visitedCrib = true;
 		altUltra = true;
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		ultra_name[77] = "HOARDING THIEF"
 		ultra_text[77] = "GO TO YV'S CRIB#YOUR SHOP BECOMES A WEAPON WHEEL#SELECT A SLOT TO STORE#YOUR PRIMARY WEAPON#WEAPON CAN BE TAKEN OUT AT ANY TIME#THRONE BUTT DOUBLES INVENTORY SIZE"
 		ultra_tips[77] = "tax evasion"
@@ -391,6 +414,7 @@ else if skill == 87 && Player.race == 22 && (scrHasAnEmptyLife() || Player.unloc
 {
 	with Player
 	{
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 		ultra_name[87] = "IMMORTAL POLICE"
 		ultra_text[87] = "REPLACE PORTAL STRIKE WITH REVIVE#REVIVE USES PORTAL STRIKE AMMO#LOWER MAXIMUM PORTALSTRIKE AMMO BY 1#THRONE BUTT REVIVES YOU AT FULL HP#INSTEAD OF 1HP#PICKING UP PORTAL STRIKE AMMO#TRIGGERS BLAST ARMOUR"
@@ -423,6 +447,7 @@ else if skill = 97 // MUTATION SMITH WEAPON MUTATOR BETTER WEAPON SPECIFIC MUTAT
 	{
 		if !skill_got[13] && !skill_got[16] && !skill_got[17] && !skill_got[15] && !skill_got[14] || unlockAlternativeUltras
 		{
+			scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			//Secret Beekeeper ultra
 			altUltra = true;
 			ultra_name[97] = "BEEKEEPER"
@@ -455,6 +480,7 @@ else if skill == 104 && (scrHasDirector() || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 		ultra_name[104] = "GRUMPY LECTURE"
 		ultra_text[104] = "ACTIVE COSTS 50 SKILL TO USE#INSTEAD OF UNEQUIPPED AMMO#ACTIVE DEFLECTS & DESTROYS#ALL ENEMY PROJECTILES"
@@ -515,6 +541,7 @@ else if skill==66
 	{
 		with Player
 		{
+			scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			altUltra = true;
 			ultra_name[66] = "QUICK SWAPPER"
 			ultra_text[66] = "INCREASE WEAPON PICKUP RANGE##YOU DROP WEAPONS AT YOUR FEET##DROPPING A WEAPON#MAKES YOU IMMUNE FOR A SHORT DURATION##PORTALS SPIT OUT A NEW RANDOM WEAPON#UPON ENTERING AN AREA"
@@ -535,6 +562,7 @@ else if skill == 68 && Player.race == 17
 	with Player {
 		if (unlockAlternativeUltras || scrHasMorphMod() || scrHasMorphWeapon())
 		{
+			scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			altUltra = true;
 			ultra_name[68] = "ENGINUITY"
 			ultra_text[68] = "YOUR ACTIVE BECOMES:#CHANGE YOUR WEAPON#INTO ONE OF THE SAME TIER#YOU CAN GO THROUGH#ALL AVAILABLE WEAPONS##WHENEVER YOU CHANGE OR SWAP WEAPONS#SPAWN MORPH ON YOUR CROSSHAIR"
@@ -612,6 +640,20 @@ with Corpse
 instance_destroy();
 
 }
+else if skill == 74//Reminisce secret skeleton Ultra B
+{
+	if Player.race == 19 && (scrHasBloodWeapon() || Player.unlockAlternativeUltras)
+	{
+		with Player
+		{
+			scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			altUltra = true;
+			ultra_name[74] = "REMINISCE"
+			ultra_text[74] = "REPLACE ACTIVE WITH BLOOD SPLATTER#YOU SPAWN BLOOD TOWARDS NEARBY CORPSES#BLOOD CAN DESTROY ALL TYPES OF PROJECTILES##THRONEBUTT INCREASES AMOUNT OF BLOOD"
+			ultra_tips[74] = "i used to have skin and warm blood"
+		}
+	}
+}
 else if skill == 76//skelly ultra D
 {
     if Player.ultimategamble==false && !Player.unlockAlternativeUltras//skeleton lives
@@ -651,6 +693,7 @@ else if skill == 76//skelly ultra D
 			instance_destroy();
 			with instance_create(x,y,Player)//Data to keep
 			{
+				scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 				bskin = other.bskin
 				race = other.race
 				crown = other.crown
@@ -703,6 +746,7 @@ else if skill == 76//skelly ultra D
     ultimategamble=2;
 	with Player
 	{
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 	}
     //with instance_create(view_xview+view_wview/2,view_yview+view_hview-24,SkillIcon)

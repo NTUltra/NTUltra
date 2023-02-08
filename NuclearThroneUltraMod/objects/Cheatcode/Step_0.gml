@@ -9,7 +9,7 @@ if (keyboard_check_pressed(vk_up))
 	{
 		hundredPercentI = 0;
 	}
-	
+	/*
 	if (seed[seedI] == vk_up)
 	{
 		event_user(1);
@@ -18,7 +18,7 @@ if (keyboard_check_pressed(vk_up))
 	{
 		seedI = 0;	
 	}
-	
+	*/
 	if (disableSecret1[disableSecret1I] == vk_up)
 	{
 		event_user(3);

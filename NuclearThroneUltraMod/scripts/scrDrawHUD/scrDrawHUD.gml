@@ -146,13 +146,14 @@ function scrDrawHUD() {
 			draw_set_color(c_black)
 			xx += 14;
 			//yy += 8;
-			draw_text(xx,yy+1,string(Player.cash))
-			draw_text(xx+1,yy+1,string(Player.cash))
-			draw_text(xx+1,yy,string(Player.cash))
+			var rc = string(round(Player.cash));
+			draw_text(xx,yy+1,rc)
+			draw_text(xx+1,yy+1,rc)
+			draw_text(xx+1,yy,rc)
 			draw_set_color(c_white)
 			if Player.cash < 0
 				draw_set_color(c_red);
-			draw_text(xx,yy,string(Player.cash))
+			draw_text(xx,yy,rc)
 		}
 	
 	}

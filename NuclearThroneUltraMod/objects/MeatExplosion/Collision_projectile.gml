@@ -1,11 +1,27 @@
-if team != other.team and (other.typ == 1 or other.typ == 2)
+if team != other.team
 {
 	with other
 	{
-		if isGrenade
-			instance_destroy(id,false);
-		else
-			instance_destroy();
+		if (typ =1 or typ = 2)
+		{
+			if isGrenade
+				instance_destroy(id,false);
+			else
+				instance_destroy();
+		}
+		else if destroyAll
+		{
+			if typ == 0 && !canBeMoved
+			{
+				var d = point_distance(xstart,ystart,other.x,other.y) - 1;
+				x = xstart + lengthdir_x(d,image_angle);
+				y = ystart + lengthdir_y(d,image_angle);
+				image_xscale = point_distance(x,y,xstart,ystart)*0.5
+			}
+			else
+			{
+				instance_destroy();	
+			}
+		}
 	}
 }
-

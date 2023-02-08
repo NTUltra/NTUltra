@@ -10,6 +10,7 @@ if !jumpScared && UberCont.opt_gamemode == 25 && instance_exists(SurvivalWave) &
 else if KeyCont.key_pick[other.p] = 1
 {
 	KeyCont.key_pick[Player.p] = 2;
+	mask_index = mskPickupThroughWall;
 	with SurvivalWave
 	{
 		if UberCont.opt_gamemode == 25

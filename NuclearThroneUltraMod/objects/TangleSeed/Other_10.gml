@@ -1,6 +1,15 @@
 /// @description Explode it
 instance_destroy()
 snd_play(sndPlantPower);
+if !instance_exists(SnareTimer)
+{
+	instance_create(x,y,SnareTimer);
+}
+else
+{
+	with SnareTimer
+		event_user(0);
+}
 if instance_exists(Player){
 	if (Player.ultra_got[17])
 	{

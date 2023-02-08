@@ -70,7 +70,7 @@ function scrPopulate() {
 				if Player.loops > 10 && random(15) < Player.loops - 13
 					scrPopEnemies();
 				
-				if UberCont.opt_gamemode == 34
+				if scrIsHardMode()
 				{
 					var ran = random(100);
 					if ran < 10
@@ -102,7 +102,7 @@ function scrPopulate() {
                 } else { //normal procedure
                     scrPopEnemies()
 					
-					if UberCont.opt_gamemode == 34 && spawnarea != 100 && spawnarea != 104
+					if scrIsHardMode() && spawnarea != 100 && spawnarea != 104
 					{
 						var ran = random(100);
 						if ran < 10

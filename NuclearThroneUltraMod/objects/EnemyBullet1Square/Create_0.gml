@@ -3,7 +3,7 @@ alarm[2] = 1
 onlyHitPlayerTeam = false;
 typ = 3 //0 = nothing, 1 = deflectable, 2 = destructable 3 = immune to melee
 dmg = 3
-if UberCont.opt_gamemode == 34//HARD MODE
+if scrIsHardMode()//HARD MODE
 	dmg = 4;
 
 alarm[3] = 240;

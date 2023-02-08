@@ -181,7 +181,7 @@ function scrGameModes() {
 	gamemode_tip[34] = "";
 	
 	gamemode[35] = "GOD FROG";
-	gamemode_unlock[35] = "REACH LOOP 2#ON HARD MODE";
+	gamemode_unlock[35] = "REACH LOOP 2#ON (ANY) HARD MODE";
 	gamemode_have[35] = 0;
 	gamemode_tip[35] = "THE GREATEST GOD OF ALL GODS!##FROGOD";
 	
@@ -195,50 +195,63 @@ function scrGameModes() {
 	gamemode_have[37] = 1;
 	gamemode_tip[37] = "WHAT A WEEK";
 	
-	/*
-	gamemode[23] = "SEEDED";
-	gamemode_description[23] = "YOU ONLY GET MELEE WEAPONS#ALWAYS GET LONG ARMS";
-	gamemode_unlock[23] = "USE SNARE AGAINST A WALL RAPIDLY";
-	gamemode_have[23] = 0;*/
+	gamemode[38] = "ALL MUTATIONS#INFINITE LEVELS";
+	gamemode_unlock[38] = "TAKE A SECRET ULTRA MUTATION#ON THE GAMEMODE: ALL MUTATION CHOICES";
+	gamemode_have[38] = 0;
+	gamemode_tip[38] = "YOU LEVEL UP FASTER";
+	
+	gamemode[39] = "INFINITE LEVELS#HARD MODE";
+	gamemode_unlock[39] = "REACH LEVEL 20#ON INFINITE LEVELS MODE";
+	gamemode_have[39] = 0;
+	gamemode_tip[39] = "YOU LEVEL UP SLOWER";
+	
+	gamemode[40] = "SEEDED";
+	gamemode_unlock[40] = "USE PLANT'S SNARE#VERY RAPIDLY";
+	gamemode_have[40] = 0;
+	gamemode_tip[40] = "CONSISTENCY";
+	
 
 	gamemodeOrder[0] = 0;
 	gamemodeOrder[1] = 9;
 	gamemodeOrder[2] = 3;
-	gamemodeOrder[3] = 1;
-	gamemodeOrder[4] = 2;
-	gamemodeOrder[5] = 8;
-	gamemodeOrder[6] = 5;
-	gamemodeOrder[7] = 6;
-	gamemodeOrder[8] = 20;
-	gamemodeOrder[9] = 4;
-	gamemodeOrder[10] = 10;
-	gamemodeOrder[11] = 11;
-	gamemodeOrder[12] = 12;
-	gamemodeOrder[13] = 13;
-	gamemodeOrder[14] = 7;
-	gamemodeOrder[15] = 14;
-	gamemodeOrder[16] = 15;
-	gamemodeOrder[17] = 31;
-	gamemodeOrder[18] = 19;
-	gamemodeOrder[19] = 16;
-	gamemodeOrder[20] = 21;
-	gamemodeOrder[21] = 22;
-	gamemodeOrder[22] = 25;
-	gamemodeOrder[23] = 23;
-	gamemodeOrder[24] = 24;
-	gamemodeOrder[25] = 18;
-	gamemodeOrder[26] = 30;
-	gamemodeOrder[27] = 36;
-	gamemodeOrder[28] = 32;
-	gamemodeOrder[29] = 29;
-	gamemodeOrder[30] = 33;
-	gamemodeOrder[31] = 28;
-	gamemodeOrder[32] = 34//35;
-	gamemodeOrder[33] = 35//17;
-	gamemodeOrder[34] = 17//26;
-	gamemodeOrder[35] = 26//28;
-	gamemodeOrder[36] = 27;
-	gamemodeOrder[37] = 37;
+	gamemodeOrder[3] = 40;
+	gamemodeOrder[4] = 1;
+	gamemodeOrder[5] = 2;
+	gamemodeOrder[6] = 8;
+	gamemodeOrder[7] = 5;
+	gamemodeOrder[8] = 6;
+	gamemodeOrder[9] = 20;
+	gamemodeOrder[10] = 4;
+	gamemodeOrder[11] = 10;
+	gamemodeOrder[12] = 11;
+	gamemodeOrder[13] = 12;
+	gamemodeOrder[14] = 13;
+	gamemodeOrder[15] = 7;
+	gamemodeOrder[16] = 14;
+	gamemodeOrder[17] = 15;
+	gamemodeOrder[18] = 31;
+	gamemodeOrder[19] = 19;
+	gamemodeOrder[20] = 16;
+	gamemodeOrder[21] = 21;
+	gamemodeOrder[22] = 22;
+	gamemodeOrder[23] = 39;
+	gamemodeOrder[24] = 25;
+	gamemodeOrder[25] = 23;
+	gamemodeOrder[26] = 24;
+	gamemodeOrder[27] = 18;
+	gamemodeOrder[28] = 30;
+	gamemodeOrder[29] = 36;
+	gamemodeOrder[30] = 32;
+	gamemodeOrder[31] = 29;
+	gamemodeOrder[32] = 33;
+	gamemodeOrder[33] = 34//35;
+	gamemodeOrder[34] = 28;
+	gamemodeOrder[35] = 38//35;
+	gamemodeOrder[36] = 35//17;
+	gamemodeOrder[37] = 17//26;
+	gamemodeOrder[38] = 26//28;
+	gamemodeOrder[39] = 27;
+	gamemodeOrder[40] = 37;
 
 
 	maxgamemode = array_length(gamemodeOrder) - 1;

@@ -5,7 +5,7 @@ with all
 {
 	x -= hspeed*dt;
 	y -= vspeed*dt;
-	if speed > 0
+	if speed > 0.5
 		speed += friction*dt;
 	image_index = clamp(0,image_index - image_speed*dt,image_number);
 	/*

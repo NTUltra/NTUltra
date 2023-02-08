@@ -14,5 +14,5 @@ alarm[3] = 1;
 	dmg = 3;
 if UberCont.opt_gamemode == 9//Casual mode
 	dmg = 2;
-if UberCont.opt_gamemode == 34//HARD MODE
+if scrIsHardMode()//HARD MODE
 	dmg = 4;

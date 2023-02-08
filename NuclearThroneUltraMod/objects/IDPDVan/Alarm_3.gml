@@ -14,7 +14,7 @@ spr_walk = spr_idle;
 team = 0;
 var extra = 0;
 var loops = UberCont.loops
-if UberCont.opt_gamemode == 34 && instance_exists(Player) && Player.area > 1 && Player.loops != 1// HARD MODE
+if scrIsHardMode() && instance_exists(Player) && Player.area > 1 && Player.loops != 1// HARD MODE
 	loops += 2;
 if RogueIDPD
 	extra = 1;

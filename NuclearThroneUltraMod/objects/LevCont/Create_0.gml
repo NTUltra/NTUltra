@@ -116,13 +116,14 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 				instance_destroy();
 			}
 		}
-		if UberCont.opt_gamemode == 28 //ALL MUTATION CHOICES
+		if UberCont.opt_gamemode == 28 || UberCont.opt_gamemode == 38 //ALL MUTATION CHOICES
 		{
 			var xx = __view_get( e__VW.XView, 0 )+16;
 			var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24;
 			var step = 30;
 			scrollWidth = (-(__view_get( e__VW.WView, 0 ))) - 8
 			scroll = 0;
+			var gotNoSkills = true;
 			for (var i = 0; i <= maxultra; i++) {
 				if (Player.ultra_got[i] = 0)
 				{
@@ -132,10 +133,18 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 					}
 					xx += step;
 					scrollWidth += step;
+					gotNoSkills = false;
 				}
 				else
 				{
 					i++;
+				}
+			}
+			if gotNoSkills
+			{
+				with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,yy,SkillIcon)
+				{
+					skill = i;
 				}
 			}
 		}
@@ -356,16 +365,18 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 
 //}
 
-	if UberCont.opt_gamemode == 28 //ALL MUTATION CHOICES
+	if UberCont.opt_gamemode == 28 || UberCont.opt_gamemode == 38//ALL MUTATION CHOICES
 	{
 		var xx = __view_get( e__VW.XView, 0 )+16;
 		var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24;
 		var step = 30;
 		scrollWidth = (-(__view_get( e__VW.WView, 0 ))) - 8
 		scroll = 0;
+		var gotNoSkills = true;
 		for (var i = 0; i <= maxskill; i++) {
 			if (Player.skill_got[i] = 0)
 			{
+				gotNoSkills = false;
 				with instance_create(xx,yy,SkillIcon)
 				{
 					skill = i;
@@ -378,6 +389,37 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 				i++;
 			}
 		}
+		if gotNoSkills
+		{
+			if UberCont.opt_gamemode != 28//This mode allows unlocks getting ultras easy is too powerfull
+			{
+				gotNoSkills = true;
+				for (var i = 0; i <= maxultra; i++) {
+					if (Player.ultra_got[i] = 0)
+					{
+						with instance_create(xx,yy,UltraIcon)
+						{
+							skill = i;
+						}
+						xx += step;
+						scrollWidth += step;
+						gotNoSkills = false;
+					}
+					else
+					{
+						i++;
+					}
+				}
+			}
+			if gotNoSkills
+			{
+				with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,yy,SkillIcon)
+				{
+					skill = i;
+				}
+			}
+		}
+		scrollWidth = max(scrollWidth,0);
 	}
     else if Player.crown != 8
     {

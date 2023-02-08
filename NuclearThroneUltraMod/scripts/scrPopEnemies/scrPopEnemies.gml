@@ -2,7 +2,7 @@ function scrPopEnemies() {
 	var loops = 0;
 	if instance_exists(Player)
 		loops = Player.loops;
-	if UberCont.opt_gamemode == 34//HARD MODE
+	if scrIsHardMode()//HARD MODE
 		loops ++;
     //DESERT
     if spawnarea = 1 or spawnarea = 0 // or spawnarea = 100

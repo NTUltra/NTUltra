@@ -12,9 +12,12 @@ alarm[0]=4;
 image_angle=random(360);
 dmg = 20;
 ang = random(360);
+alarm[3] = 1;
 if instance_exists(Player){
 	if Player.ultra_got[16]//Melting doomed
 		dmg=30;
+	if Player.ultra_got[74] && Player.altUltra
+		alarm[3] = 0;
 }
 alarm[1]=140;
 if !audio_is_playing(sndBloodCannonLoop)

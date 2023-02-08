@@ -17,24 +17,24 @@ if instance_exists(Player)
 {
     if Player.loops>0
     {
-    if speed > 3.4
-    speed = 3.4
+    if speed > 3.3
+    speed = 3.3
     }
     else
     {
-    if speed > 3.2
-    speed = 3.2
+    if speed > 3.1
+    speed = 3.1
     }
 }
 else
 {
-if speed > 3.2
-speed = 3.2
+if speed > 3.1
+speed = 3.1
 }
 
-if target > 0
+if target > 0 && instance_exists(target) && target != noone && alarm[2] < 1
 {
 if instance_exists(target)
-mp_potential_step(target.x,target.y,1,0)
+mp_potential_step(target.x,target.y,1.25,0)
 }
 

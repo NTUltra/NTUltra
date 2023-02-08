@@ -22,7 +22,7 @@ alarm[0] = 1
 alarm[1] = 160
 loops = GetPlayerLoops();
 bulletHellLoops = loops;
-if UberCont.opt_gamemode == 34//HARD MODE
+if scrIsHardMode()//HARD MODE
 	loops ++;
 canSpawnPopoThisManyTimes = 2 + loops;
 canSpawnPopoThisManyTimes = min(canSpawnPopoThisManyTimes,8);
@@ -51,9 +51,9 @@ if instance_exists(Player)
 		}
 		i ++;
 	}
-	if (UberCont.opt_gamemode != 9 &&  (loops > 9 || (UberCont.opt_gamemode == 34 && loops > 3)))
+	if (UberCont.opt_gamemode != 9 &&  (loops > 9 || (scrIsHardMode() && loops > 3)))
 	{
-		if UberCont.opt_gamemode == 34
+		if scrIsHardMode()
 			bulletHellLoops = loops + 6;
 		alarm[8] = 120;
 		bulletHell = irandom_range(0,4);

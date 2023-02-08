@@ -9,7 +9,7 @@ closedTheVault = false;
 endgame = 100
 
 alarm[1] = 18;//Delay before opening
-if UberCont.opt_gamemode == 34//HARD MODE
+if scrIsHardMode()//HARD MODE
 	alarm[1] = 1;
 else if UberCont.opt_gamemode == 9//CASUAL MODE
 	alarm[1] = 45;

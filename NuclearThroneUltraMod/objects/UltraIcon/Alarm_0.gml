@@ -79,6 +79,10 @@ else if skill == 72 && (Player.unlockAlternativeUltras || ((Player.maxhealth < 8
 {
 	sprite_index=sprMirror;
 }
+else if skill == 74 && (Player.unlockAlternativeUltras || scrHasBloodWeapon())
+{
+	sprite_index = sprReminisce;
+}
 else if skill == 76 && (Player.unlockAlternativeUltras || Player.ultimategamble=true)
 {
 	sprite_index = sprUltimateGamble;

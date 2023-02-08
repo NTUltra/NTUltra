@@ -2,6 +2,11 @@ event_inherited();
 typ = 3;
 image_speed = 0.4
 dmg = 4;
+destroyAll = false;
+if instance_exists(Player) && Player.ultra_got[74] && Player.altUltra
+{
+	destroyAll = true;
+}
 if UberCont.ultramodSwap
 {
 	dir = 0;

@@ -122,11 +122,6 @@ function scrSaveRun() {
 			spr_dead: Player.spr_dead,
 			lastEnemyKilled: Player.lastEnemyKilled,
 		};
-		with UberCont
-		{
-			useSeed = true;
-			seed = savedSeed;
-		}
 		var saveString = json_stringify(encrypted_run_data);
 		var hash = sha1_string_utf8(saveString);
 		saveString += "#" + hash + "#";

@@ -6,7 +6,6 @@ function SetSeedWeapon(){
 	{
 		if (useSeed)
 		{
-			debug("chestRan ", chestRan);
 			random_set_seed(seed+loops+chestRan)
 			chestRan ++;
 		}

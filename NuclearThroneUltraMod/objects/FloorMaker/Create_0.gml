@@ -1,8 +1,7 @@
 direction = choose(0,90,180,270)
-
 styleb = choose(0,0,0,0,0,0,1)
 
-goal = 100//110
+goal = 200//110
 
 if instance_exists(Player){
 	if Player.crown == 27
@@ -12,29 +11,33 @@ if instance_exists(Player){
 	}
 	var s = clamp(Player.loops*8,0,50);
 	if Player.area = 3 and Player.subarea = 3
-	goal = 150+s//50
+	goal = 140+s//50
 	else if Player.area = 4
 	goal = 120+s
+	else if Player.area = 5
+	goal = 160+s
+	else if Player.area = 7
+	goal = 150+s
 	else if (Player.area = 7||Player.area=108) and Player.subarea == 3
 	goal = 50+s
 	else if Player.area = 100
 	goal = 40+s
 	else if Player.area = 101 || Player.area == 122
-	goal = 95+s
+	goal = 110+s
 	else if Player.area = 103
-	goal = 130+s
+	goal = 140+s
 	else if Player.area = 102
 	goal = 50+s
 	else if Player.area = 104
 	goal = 10
 	else if Player.area = 105
-	goal = 145+s
+	goal = 155+s
 	else if Player.area = 106
-	goal = 120+s
-	else if Player.area = 114 || Player.area == 123
-	goal = 125+s
-	else if Player.area = 117 || Player.area == 124
 	goal = 130+s
+	else if Player.area = 114 || Player.area == 123
+	goal = 140+s
+	else if Player.area = 117 || Player.area == 124
+	goal = 160+s
 	else if (Player.area = 6||Player.area=112) && Player.subarea=2//LABS BOSS
 	goal=1;
 	else if Player.area == 9 && Player.subarea < 3
@@ -61,15 +64,16 @@ if instance_exists(Player){
 	{
 		goal=45+s;
 		if Player.area == 9 && Player.subarea == 3
-			goal = 290;
+			goal = 310;
 	}
 }
+goal += 100;
 if UberCont.opt_gamemode == 25 //Survival arena
 {
 	goal = 1;
 }
 if instance_exists(MenuGen)
-goal = 80//60
+	goal = 80//60
 
 endPieceSpawned = false;
 /*
@@ -143,5 +147,90 @@ PlayerStartY=y-32;}
 
 instance_create(x,y,Floor)
 
-/* */
-/*  */
+if (UberCont.opt_gamemode == 25 && !instance_exists(Vlambeer))
+{
+	scrMakeFloor()
+	exit;
+}
+while !(instance_number(Floor) > goal)
+{
+	if UberCont.firstFloorMaker
+	{
+		//SetSeed();
+		UberCont.firstFloorMaker = false;
+		if instance_exists(Player) 
+		{
+			if (Player.area == 9 || Player.area == 118) && Player.subarea == 3
+			{
+				other.x = 10016;
+				other.y = 10016;
+				Player.x = other.x;
+				Player.y = other.y;
+				with WepPickup
+				{
+					x = Player.x;
+					y = Player.y-200;
+					speed = 0;
+				}
+				direction = 90;
+			}
+			if Player.ultra_got[66] && Player.altUltra
+			{
+				snd_play(sndWeaponChest);
+				with instance_create(x,y,WepPickup)
+				{
+					scrWeapons()
+					SetSeedWeapon();
+					wep = scrDecideWep(0, 8)
+					SetSeed();
+					name = wep_name[wep]
+					ammo = 50
+					type = wep_type[wep]
+					curse = 0
+					sprite_index = wep_sprt[wep]
+				}
+			}
+		}
+	}
+	scrMakeFloor()
+	/*
+	with GenCont
+	{
+		alarm[0] = 3
+		alarm[2] = 2
+	}
+	*/
+
+	with MenuGen
+		alarm[1] = 3;
+}
+if point_distance(x,y,10016,10016) > 48 
+{
+	if instance_exists(Player){
+	if (Player.area == 3 and Player.subarea == 3){//#safe spawns 4 big dog
+		Player.x=x+16;
+		Player.y=y+16;
+	}
+	instance_create(x,y,Floor)
+	if (Player.area == 9 && Player.subarea == 3)
+	{
+		instance_create(x+16,y+16,Carpet);
+		instance_create(x,y,NuclearThrone1);
+	}
+	else if (Player.area == 118 && Player.subarea == 3)
+	{
+		with instance_create(x+16,y+16,Carpet)
+			sprite_index = sprInvertedCarpet;
+		instance_create(x,y,InvertedNuclearThrone1);
+	}
+	else if Player.race=22
+	{
+		if Player.area!=104 && Player.area!=100 && !instance_exists(RogueAmmoChest)
+			instance_create(x+16,y+16,RogueAmmoChest)
+	}
+	else if Player.area!=104 && Player.race != 25 && !(Player.area == 9 && Player.subarea ==3)&& !(Player.area == 118 && Player.subarea ==3)//Not mutation smith
+	instance_create(x+16,y+16,RadChest)
+	}
+}
+	
+instance_destroy()

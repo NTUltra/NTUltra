@@ -1982,7 +1982,7 @@ function scrFire() {
 	snd_play_fire(sndMachinegun)
 	snd_play_fire(sndBloodPistol)
 
-	repeat(3)
+	repeat(2)
 	{
 	with instance_create(x,y,Shell)
 	motion_add(aimDirection+other.right*100+random(70)-35,2+random(2))

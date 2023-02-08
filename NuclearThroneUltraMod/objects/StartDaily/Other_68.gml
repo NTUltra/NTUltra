@@ -33,10 +33,10 @@ if (type == network_type_data) {
 				network_send_packet(serverSocket, sendBuffer, buffer_get_size(sendBuffer));
 				buffer_delete(sendBuffer);
 				with UberCont {
-					if !ds_map_exists(encrypted_data.ctot_weeklies_score[1], weeklyWeek)
+					if !variable_struct_exists(encrypted_data.ctot_weeklies_score[1], "w"+string(weeklyWeek))
 					{
+						encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)] = 0;
 						encrypted_data.ctot_weeklies_score[0] = "";
-						ds_map_add(encrypted_data.ctot_weeklies_score[1], weeklyWeek, 0);
 					}
 				}
 			}
@@ -44,12 +44,13 @@ if (type == network_type_data) {
 			{
 				SetSeed();
 				UberCont.randomDailyMod = irandom_range(1,18);
-				UberCont.chestRan = 0;
+				UberCont.chestRan = 10;
 				network_destroy(serverSocket);
 				instance_destroy();
 				with Player
 				{
-					subarea = 0;	
+					subarea = 0;
+					nochest = -1;
 				}
 				room_goto(romGame);
 				with UberCont {
@@ -63,7 +64,7 @@ if (type == network_type_data) {
 					} else if opt_gamemode == 27 {
 						todaysSeed += 1;
 						seed = UberCont.todaysSeed;
-				        var al = array_length(encrypted_data.ctot_dailies_race_seed);
+				        var al = array_length(encrypted_data.ctot_dailies_score_seed);
 				        encrypted_data.ctot_dailies_score_seed[al] = todaysSeed;
 						encrypted_data.daily_score_dates[al] = UberCont.today;
 				        encrypted_data.ctot_dailies_score_score[al] = 0;
@@ -99,6 +100,20 @@ if (type == network_type_data) {
 						scrWeaponHold();
 					}
 				break;
+				case 5:// 1HP EQUALITY
+					with Player
+					{
+						my_health = 1;
+						maxhealth = my_health;
+					}
+				break;
+				case 7://Atom teleport only
+				with Player
+				{
+					race = 15;
+					scrLoadRace();
+				}
+				break;
 				case 8://VAN FAN
 				with Player
 				{
@@ -112,10 +127,72 @@ if (type == network_type_data) {
 					scrWeaponHold();
 				}
 				break;
+				case 9://Casual mode
+				with Player
+				{
+					maxhealth += UberCont.casualModeHPIncrease;
+					my_health = maxhealth;
+					maxSpeed = 4
+				}
+				break;
+				case 11://Gun Game
+					with Player
+					{
+						do {
+					        wep = irandom(maxwep);
+					    }
+					    until(wep != 69 && wep != 0 && wep != 298) //no oops gun and no no gun
+
+					    if race = 7 //roids
+					    {
+					        do {
+					            bwep = irandom(maxwep);
+					        }
+					        until(bwep != 69 && bwep != 0 && wep != 298) //no oops gun and no no gun
+					    }
+
+					    if ammo[wep_type[wep]] < typ_ammo[wep_type[wep]] * 3 {
+					        ammo[wep_type[wep]] += typ_ammo[wep_type[wep]] * 3;
+					    }
+						scrWeaponHold();
+					}
+				break;
+				case 13://ROCKET GLOVE
+				with Player
+				{
+					wep = 239;
+					if ammo[wep_type[wep]] < typ_ammo[wep_type[wep]] * 3
+						ammo[wep_type[wep]] += typ_ammo[wep_type[wep]] * 3;
+					scrWeaponHold();
+				}
+				break;
+				case 14://Fish companion only
+					with Player
+					{
+						wep = 0;
+						race = 1;
+						ultra_got[3] = 1;
+						if !instance_exists(Partner)
+							instance_create(x,y,Partner);
+						scrLoadRace();
+					}
+				break;
+				case 15://No mutations
+					with Player
+					{
+						maxlevel = 1;
+					}
+				break;
 				case 19://Disc room
 					UberCont.opt_discs = buffer_read(buffer,buffer_u16);
 					UberCont.opt_discdamage = buffer_read(buffer,buffer_u8);
 				break;
+				case 21://Loop start
+					with Player
+					{
+						hard = 18;
+						loops = 1;	
+					}
 				case 25: //Survival Arena
 					with Player
 					{
@@ -126,6 +203,32 @@ if (type == network_type_data) {
 						}
 					}
 				break;
+				case 30://Ultra mutation start
+					with Player {
+						skillsChosen = 10;
+						skillpoints = 1;
+					}
+				break;
+				case 31://Melee only
+					with Player {
+						skill_got[13] = 1;
+						totalSkills ++;
+					}
+				break;
+				case 32://One hit wonder
+					with Player {
+						if array_length(UberCont.collectedRewards) > 0
+						{
+							skillpoints ++;
+						}
+						if array_length(UberCont.collectedRewards) > 5
+						{
+							ultraNow = true;
+							skillpoints ++;
+						}
+					}
+				break;
+				case 40://Infinite level hard mode
 				case 34://HARD MODE
 					with Player {
 						skillpoints ++;
@@ -135,6 +238,14 @@ if (type == network_type_data) {
 							hard = 3;
 							instance_create(x,y,HardModeChest);
 						}	
+					}
+				break;
+				case 36://Ultra mod start
+					with Player
+					{
+						area = 100;
+					    hard -= 1;
+					    crownvisits = -1;
 					}
 				break;
 			}

@@ -437,7 +437,7 @@ if skill_got[2] && tookHit && !exception
 }
 
 //Crown of Greed
-if crown == 18
+if crown == 18 && !exception
 {
 	if tookHit && !instance_exists(GenCont) && !instance_exists(LevCont)
 	{

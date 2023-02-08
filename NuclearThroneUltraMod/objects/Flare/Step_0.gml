@@ -1,3 +1,4 @@
+event_inherited();
 if friction > 0.15
 {
 with instance_create(x,y,Flame)

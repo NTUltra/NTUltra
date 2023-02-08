@@ -8,7 +8,7 @@ if ( !((spawnarea == 9 || spawnarea == 118) && subarea == 3) && !((spawnarea == 
 	&& spawnarea != 100 && spawnarea != 104)
 {
 	var tots = clamp(round(GetPlayerLoops()*0.5) - 2,0,6);
-	if UberCont.opt_gamemode == 34//HARD MODE
+	if scrIsHardMode()//HARD MODE
 		tots ++;
 	if tots > 0
 		scrSpawnBoss(GoldTotem);

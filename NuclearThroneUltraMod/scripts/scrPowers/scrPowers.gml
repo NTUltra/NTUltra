@@ -456,6 +456,9 @@ function scrPowers() {
 
 	if race = 21//horror
 	{
+		horrordelay = false;
+		if UberCont.normalGameSpeed == 60
+			horrordelay = true;
 		if ultra_got[0] && altUltra
 		{
 			if cash <= 0 && inDebt
@@ -484,7 +487,10 @@ function scrPowers() {
 			{
 
 				//First rad for game feel
-				rad--;
+				if  UberCont.normalGameSpeed == 60
+					rad -= 0.5;
+				else
+					rad--;
 
 			    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
 			    {
@@ -527,127 +533,209 @@ function scrPowers() {
 	instance_create(x,y,ShopWheel);
 	}
 
-	if race = 19&&wep_type[wep]!=0&&(can_shoot == 1 || ultra_got[74])//&& my_health > 1//SKELETON
+	if race = 19//Skeleton
 	{
-	var cs = can_shoot;
-	snd_play_2d(sndBloodGamble);
-
-	scrFire();
-	    //gamble some blood
-	    if cs != 1 || (wep_cost[wep]/typ_ammo[wep_type[wep]] > random(1.1)*(1+(skill_got[5]*0.3333333333333333) )  )//If this is true take damage
-	    {//thronebutt adds 1/3 chance of not taking damage
-			my_health -= 1;
-			exception=true;
-			if my_health == 0
+		if ultra_got[74] && altUltra//Skeleton alt ultra
+		{
+			var corpseExist = false;
+			var upTo = 3;
+			var numberOfEnems = 0;
+			if instance_exists(IDPDVan)
+				numberOfEnems = instance_number(IDPDVan);
+			if  (instance_number(enemy) > numberOfEnems or instance_exists(Portal))
+			with Corpse
 			{
-				if skill_got[32] && isAlkaline
+				if image_speed = 0 && x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 				{
-					isAlkaline = false;
-					var h = 2;
-					if (skill_got[9]) //Second stomache
-						h = 4;
-					my_health = min(h,maxhealth);
-					with instance_create(x,y,HealFX)
+					corpseExist = true;
+					BackCont.shake += 2;
+					with instance_create(x,y,BloodStreak)
 					{
-						depth = other.depth - 1;	
+					motion_add(point_direction(Player.x,Player.y,x,y),8)
+					image_angle = direction
 					}
-					with instance_create(x,y,SharpTeeth)
-						owner=other.id;
-					snd_play(sndAlkalineProc,0,true)
-					var pt = instance_create(x,y,PopupText)
-					if UberCont.opt_ammoicon
+					instance_create(x,y,MeltSplat);
+					instance_destroy();
+					instance_create(x,y,Smoke);
+					var d = point_direction(other.x,other.y,x,y);
+					if other.skill_got[5]
 					{
-						if my_health = maxhealth
-							pt.mytext = "MAX";
-						else
-							pt.mytext = "+"+string(h-1);
-				
-						pt.sprt = sprHPIconPickup;
+						BackCont.shake += 1;
+						if upTo > -1
+						snd_play(sndExplosionS);
+							
+						with instance_create(other.x,other.y,BloodBullet)
+						{
+							motion_add(d,15)
+							image_angle = direction+6;
+							team = 2
+						}
+						with instance_create(other.x,other.y,BloodBullet)
+						{
+							motion_add(d,15)
+							image_angle = direction-6;
+							team = 2
+						}
+						with instance_create(other.x,other.y,HeavyBloodBullet)
+						{
+						
+							motion_add(d+180,16)
+							image_angle = direction;
+							team = 2
+						}
 					}
 					else
 					{
-						if my_health = maxhealth
-							pt.mytext = "MAX HP";
-						else
-							pt.mytext = "+"+string(h-1)+" HP";
+						with instance_create(x,y,BloodBullet)
+						{
+							motion_add(d+180,16)
+							image_angle = direction;
+							team = 2
+						}
 					}
-					Sleep(50);
-					alarm[3]=10;//duration of iframes
-				}
-				else if skill_got[25] && strongspirit == true && strongspiritused == false
-				{
-					snd_play(sndStrongSpiritLost);
-				    my_health=1;
-					Sleep(50);
-				    alarm[1]=20;//invincibility 
-				    strongspiritused=true;
-				    strongspirit=false;
-				}
-			}
-    
-			//if my_health<1&&strongspirit
-			image_index=0;
-			sprite_index=spr_hurt;
-			snd_play_2d(snd_hurt, hurt_pitch_variation);
-    
-			repeat(3)
-			{
-			with instance_create(x,y,BloodStreak)
-			{
-			motion_add(random(360),8)
-			image_angle = direction
-			}
-			}
-			if ultra_got[75]
-			{
-				BackCont.shake += 2;
-				snd_play(sndExplosionL,0.01,true);
-				var len = 38;
-				var am = 6;
-				var aimDir = random(360);
-				var xx = x + lengthdir_x(len,aimDir);
-				var yy = y + lengthdir_y(len,aimDir);
-				var angstp = 360/am;
-				repeat(am)
-				{
-					instance_create(xx,yy,MeatExplosion)
-					aimDir += angstp;
-					xx = x + lengthdir_x(len,aimDir);
-					yy = y + lengthdir_y(len,aimDir);
-				}
-			}
-	    }
-		else
-		{
-			reload -= wep_load[wep]*0.25;
-			if ultra_got[75]
-			{
-				alarm[3] = max(10,alarm[3]);
-				if myShield == -1 || !instance_exists(myShield)
-				{
-					myShield = instance_create(x,y,EuphoriaShield);
-					with myShield
+					if upTo > 0
 					{
-						owner = other.id;
+						snd_play(sndCorpseExplo);	
 					}
+					
+					with instance_create(other.x,other.y,HeavyBloodBullet)
+					{
+						
+						motion_add(d,19)
+						image_angle = direction;
+						team = 2
+					}
+					upTo--;
 				}
+			}
+			if corpseExist
+			{
+				BackCont.shake += 5;
+				snd_play_2d(sndBloodGamble);
+				snd_play_fire(sndHeavyBloodPistol);
 			}
 		}
+		else if wep_type[wep]!=0&&(can_shoot == 1 || ultra_got[74])//&& my_health > 1//SKELETON
+		{
+		var cs = can_shoot;
+		snd_play_2d(sndBloodGamble);
+
+		scrFire();
+		    //gamble some blood
+		    if cs != 1 || (wep_cost[wep]/typ_ammo[wep_type[wep]] > random(1.1)*(1+(skill_got[5]*0.3333333333333333) )  )//If this is true take damage
+		    {//thronebutt adds 1/3 chance of not taking damage
+				my_health -= 1;
+				exception=true;
+				if my_health == 0
+				{
+					if skill_got[32] && isAlkaline
+					{
+						isAlkaline = false;
+						var h = 2;
+						if (skill_got[9]) //Second stomache
+							h = 4;
+						my_health = min(h,maxhealth);
+						with instance_create(x,y,HealFX)
+						{
+							depth = other.depth - 1;	
+						}
+						with instance_create(x,y,SharpTeeth)
+							owner=other.id;
+						snd_play(sndAlkalineProc,0,true)
+						var pt = instance_create(x,y,PopupText)
+						if UberCont.opt_ammoicon
+						{
+							if my_health = maxhealth
+								pt.mytext = "MAX";
+							else
+								pt.mytext = "+"+string(h-1);
+				
+							pt.sprt = sprHPIconPickup;
+						}
+						else
+						{
+							if my_health = maxhealth
+								pt.mytext = "MAX HP";
+							else
+								pt.mytext = "+"+string(h-1)+" HP";
+						}
+						Sleep(50);
+						alarm[3]=10;//duration of iframes
+					}
+					else if skill_got[25] && strongspirit == true && strongspiritused == false
+					{
+						snd_play(sndStrongSpiritLost);
+					    my_health=1;
+						Sleep(50);
+					    alarm[1]=20;//invincibility 
+					    strongspiritused=true;
+					    strongspirit=false;
+					}
+				}
     
-	var t = wep_type[wep]
-	ammo[t]+=wep_cost[wep]//return ammo
-	rad+=wep_rad[wep]//return rad cost
-	can_shoot=0;
-	//Cap ammo
-	ammo[wep_type[wep]] = min(ammo[wep_type[wep]],typ_amax[t]);
-	rad = min(rad,GetPlayerMaxRad());
-	if ultra_got[74]//Skeleton Damnation Ultra B
-	{
-		reload -= wep_load[wep]*0.8;//80 procent fire rate boost
-	}
+				//if my_health<1&&strongspirit
+				image_index=0;
+				sprite_index=spr_hurt;
+				snd_play_2d(snd_hurt, hurt_pitch_variation);
+    
+				repeat(3)
+				{
+				with instance_create(x,y,BloodStreak)
+				{
+				motion_add(random(360),8)
+				image_angle = direction
+				}
+				}
+				if ultra_got[75]
+				{
+					BackCont.shake += 2;
+					snd_play(sndExplosionL,0.01,true);
+					var len = 38;
+					var am = 6;
+					var aimDir = random(360);
+					var xx = x + lengthdir_x(len,aimDir);
+					var yy = y + lengthdir_y(len,aimDir);
+					var angstp = 360/am;
+					repeat(am)
+					{
+						instance_create(xx,yy,MeatExplosion)
+						aimDir += angstp;
+						xx = x + lengthdir_x(len,aimDir);
+						yy = y + lengthdir_y(len,aimDir);
+					}
+				}
+		    }
+			else
+			{
+				reload -= wep_load[wep]*0.25;
+				if ultra_got[75]
+				{
+					alarm[3] = max(10,alarm[3]);
+					if myShield == -1 || !instance_exists(myShield)
+					{
+						myShield = instance_create(x,y,EuphoriaShield);
+						with myShield
+						{
+							owner = other.id;
+						}
+					}
+				}
+			}
+    
+		var t = wep_type[wep]
+		ammo[t]+=wep_cost[wep]//return ammo
+		rad+=wep_rad[wep]//return rad cost
+		can_shoot=0;
+		//Cap ammo
+		ammo[wep_type[wep]] = min(ammo[wep_type[wep]],typ_amax[t]);
+		rad = min(rad,GetPlayerMaxRad());
+		if ultra_got[74]//Skeleton Damnation Ultra B
+		{
+			reload -= wep_load[wep]*0.8;//80 procent fire rate boost
+		}
 
 
-
+		}
 	}
 
 	if race = 18//ANGEL
@@ -2041,72 +2129,89 @@ function scrPowers() {
 		{
 			if !inDebt || cash > 0
 			{
-				cash --;
-				if horrorcharge=origincharge
-					snd_play_2d(sndHorrorCashFlowStart);
-					//snd_play_2d(sndHorrorBeam);
-
-				if horrorcharge<maxcharge
-					horrorcharge+=0.2+(skill_got[5]*0.3);
-
-				if skill_got[5]
+				if UberCont.normalGameSpeed == 60
 				{
-					horrorhealtime++;
+					cash -= 0.5;
+					horrordelay = !horrordelay;
+				}
+				else
+					cash --;
+				if !horrordelay
+				{
+					if horrorcharge=origincharge
+						snd_play_2d(sndHorrorCashFlowStart);
+						//snd_play_2d(sndHorrorBeam);
 
-				    if horrorhealtime>115
-				    {
-					    if my_health<maxhealth
+					if horrorcharge<maxcharge
+					{
+						if  UberCont.normalGameSpeed == 60
+							horrorcharge += 0.1+(skill_got[5]*0.15);
+						else
+							horrorcharge += 0.2+(skill_got[5]*0.3);
+					}
+
+					if skill_got[5]
+					{
+						if  UberCont.normalGameSpeed == 60
+							horrorhealtime += 0.5;
+						else
+							horrorhealtime++;
+
+					    if horrorhealtime>115
 					    {
-					        my_health++;
+						    if my_health<maxhealth
+						    {
+						        my_health++;
         
         
-					        with instance_create(x,y,HealFX)
-								sprite_index=sprHorrorTB;
+						        with instance_create(x,y,HealFX)
+									sprite_index=sprHorrorTB;
         
-					        if UberCont.opt_ammoicon
-							{
-								dir = instance_create(x,y,PopupText)
-								dir.sprt = sprHPIconPickup;
-								dir.mytext = "+1"
-								if Player.my_health = Player.maxhealth
-									dir.mytext = "MAX"
-								else if Player.my_health > Player.maxhealth
-									dir.mytext = "OVER MAX"
-							}
-							else
-							{
-								dir = instance_create(x,y,PopupText)
-								dir.mytext = "+1 HP";
-								if Player.my_health = Player.maxhealth
-									dir.mytext = "MAX HP"
-								else if Player.my_health > Player.maxhealth
-									dir.mytext = "OVER MAX HP"
-							}
+						        if UberCont.opt_ammoicon
+								{
+									dir = instance_create(x,y,PopupText)
+									dir.sprt = sprHPIconPickup;
+									dir.mytext = "+1"
+									if Player.my_health = Player.maxhealth
+										dir.mytext = "MAX"
+									else if Player.my_health > Player.maxhealth
+										dir.mytext = "OVER MAX"
+								}
+								else
+								{
+									dir = instance_create(x,y,PopupText)
+									dir.mytext = "+1 HP";
+									if Player.my_health = Player.maxhealth
+										dir.mytext = "MAX HP"
+									else if Player.my_health > Player.maxhealth
+										dir.mytext = "OVER MAX HP"
+								}
+						    }
+							horrorhealtime=0;
 					    }
-						horrorhealtime=0;
-				    }
-					if !(audio_is_playing(sndHorrorCashFlowTB))
-						snd_loop(sndHorrorCashFlowTB);
-				}
-				else if !(audio_is_playing(sndHorrorCashFlow))
-					snd_loop(sndHorrorCashFlow);
+						if !(audio_is_playing(sndHorrorCashFlowTB))
+							snd_loop(sndHorrorCashFlowTB);
+					}
+					else if !(audio_is_playing(sndHorrorCashFlow))
+						snd_loop(sndHorrorCashFlow);
 				
-				var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
-				var r = 1
-				if horrorcharge > 12
-					r = 2;
-				repeat(r)
-				with instance_create(x,y,HorrorMoney)
-				{
-					charge=other.horrorcharge;
-					motion_add(aimDirection+(random(charge*4)-charge*2),8.5+random(3)+(charge*0.5))
-					image_angle = direction
-					team = other.team
+					var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+					var r = 1
+					if horrorcharge > 12
+						r = 2;
+					repeat(r)
+					with instance_create(x,y,HorrorMoney)
+					{
+						charge=other.horrorcharge;
+						motion_add(aimDirection+(random(charge*4)-charge*2),8.5+random(3)+(charge*0.5))
+						image_angle = direction
+						team = other.team
+					}
+					var s = max(2,horrorcharge*0.25);
+					BackCont.viewx2 += lengthdir_x(s,aimDirection+180)*UberCont.opt_shake
+					BackCont.viewy2 += lengthdir_y(s,aimDirection+180)*UberCont.opt_shake
+					BackCont.shake += s;
 				}
-				var s = max(2,horrorcharge*0.25);
-				BackCont.viewx2 += lengthdir_x(s,aimDirection+180)*UberCont.opt_shake
-				BackCont.viewy2 += lengthdir_y(s,aimDirection+180)*UberCont.opt_shake
-				BackCont.shake += s;
 			}
 		}
 		else if rad>0
@@ -2116,11 +2221,18 @@ function scrPowers() {
 			snd_play_2d(sndHorrorBeam);
 
 		if horrorcharge<maxcharge
-			horrorcharge+=0.2+(skill_got[5]*0.3);
-
+		{
+			if  UberCont.normalGameSpeed == 60
+				horrorcharge += 0.1+(skill_got[5]*0.15);
+			else
+				horrorcharge += 0.2+(skill_got[5]*0.3);
+		}
 		if skill_got[5]
 		{
-			horrorhealtime++;
+			if  UberCont.normalGameSpeed == 60
+				horrorhealtime += 0.5;
+			else
+				horrorhealtime++;
 
 		    if horrorhealtime>115
 		    {
@@ -2167,74 +2279,85 @@ function scrPowers() {
 		if (horrorcharge>7||random(7)<horrorcharge||horrorcharge=origincharge)
 		{
 
-		// this makes the beam more efficient
-		//if random(3)<2
-		rad--;
-
-		if horrorcharge>12&&random(2)<1
-		{
-			rad--;
-
-		    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
-		    {
-		    bskin=other.bskin
-		    if bskin = 1
-				sprite_index=sprHorrorBeamB;
-			else if bskin = 2
-				sprite_index=sprHorrorBeamC;
+			// this makes the beam more efficient
+			//if random(3)<2
+			if  UberCont.normalGameSpeed == 60
+			{
+				rad -= 0.5;
+				horrordelay = !horrordelay;
+			}
+			else
+				rad--;
+			if !horrordelay
+			{
+				if horrorcharge>12&&random(2)<1
+				{
+					if  UberCont.normalGameSpeed == 60
+					{
+						rad -= 0.5;
+					}
+					else
+						rad--;
+				    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
+				    {
+				    bskin=other.bskin
+				    if bskin = 1
+						sprite_index=sprHorrorBeamB;
+					else if bskin = 2
+						sprite_index=sprHorrorBeamC;
     
-		    originnr=instance_number(HorrorBeam);
+				    originnr=instance_number(HorrorBeam);
     
-		    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
-		    team = other.team
-		    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
-		    ammo=50
-		    charge=other.horrorcharge;
-		    event_perform(ev_alarm,0)
-		    rad=1;
-		        with instance_create(x,y,LightningSpawn)
-		        {
-		        if other.bskin=1
-					sprite_index=sprHorrorBeamSpawnB
-				else if other.bskin=2
-					sprite_index=sprHorrorBeamSpawnC
-		        else
-					sprite_index=sprHorrorBeamSpawn
-		        image_angle = other.image_angle
-		        }
-		    }
+				    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
+				    team = other.team
+				    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
+				    ammo=50
+				    charge=other.horrorcharge;
+				    event_perform(ev_alarm,0)
+				    rad=1;
+				        with instance_create(x,y,LightningSpawn)
+				        {
+				        if other.bskin=1
+							sprite_index=sprHorrorBeamSpawnB
+						else if other.bskin=2
+							sprite_index=sprHorrorBeamSpawnC
+				        else
+							sprite_index=sprHorrorBeamSpawn
+				        image_angle = other.image_angle
+				        }
+				    }
 
-		}
+				}
 
-		with instance_create(x+lengthdir_x(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
-		{
-		bskin=other.bskin
-		if bskin = 1
-			sprite_index=sprHorrorBeamB;
-		else if bskin = 2
-			sprite_index=sprHorrorBeamC;
+				with instance_create(x+lengthdir_x(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
+				{
+				bskin=other.bskin
+				if bskin = 1
+					sprite_index=sprHorrorBeamB;
+				else if bskin = 2
+					sprite_index=sprHorrorBeamC;
 
-		originnr=instance_number(HorrorBeam);
+				originnr=instance_number(HorrorBeam);
 
-		image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
-		team = other.team
-		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
-		ammo=50
-		charge=other.horrorcharge;
-		rad=1;
-		event_perform(ev_alarm,0)
-		    with instance_create(x,y,LightningSpawn)
-		    {
-		    if other.bskin=1
-				sprite_index=sprHorrorBeamSpawnB
-			else if other.bskin=2
-				sprite_index=sprHorrorBeamSpawnC
-		    else
-				sprite_index=sprHorrorBeamSpawn
-		    image_angle = other.image_angle
-		    }
-		}
-
+				image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
+				team = other.team
+				motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
+				ammo=50
+				charge=other.horrorcharge;
+				rad=1;
+				event_perform(ev_alarm,0)
+				    with instance_create(x,y,LightningSpawn)
+				    {
+				    if other.bskin=1
+						sprite_index=sprHorrorBeamSpawnB
+					else if other.bskin=2
+						sprite_index=sprHorrorBeamSpawnC
+				    else
+						sprite_index=sprHorrorBeamSpawn
+				    image_angle = other.image_angle
+				    }
+				}
+			}
 		}
 
 		if random(4)<1
@@ -2269,11 +2392,9 @@ function scrPowers() {
 		    }
 		}
 
-
-		if BackCont.viewx2 < 8
-		BackCont.viewx2 = lengthdir_x(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-		if BackCont.viewy2 < 8
-		BackCont.viewy2 = lengthdir_y(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+		
+		BackCont.viewx2 += lengthdir_x(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 		BackCont.shake += 0.9
 
 

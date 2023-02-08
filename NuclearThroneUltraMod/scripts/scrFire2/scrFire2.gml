@@ -995,6 +995,7 @@ function scrFire2() {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
+		sprite_index = sprHeavySlash;
 	snd_wallhit=sndGuitarHitWall;
 	snd_hit=sndGuitarHit;
 	dmg = 28
@@ -8390,7 +8391,7 @@ function scrFire2() {
 	{motion_add(aimDirection+(random(6)-3)*other.accuracy,16)
 	image_angle = direction
 	speed = 16;
-	if Player.skill_got[17] = 1
+	if Player.skill_got[17]
 		speed *= 0.5;
 	team = other.team}
 
@@ -8410,6 +8411,8 @@ function scrFire2() {
 	{motion_add(aimDirection+(random(6)-3)*other.accuracy,16)
 	image_angle = direction
 	speed = 14;
+	if Player.ultra_got[16]//Melting doomed
+		speed *= 0.5;
 	team = other.team}
 
 	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
@@ -11624,6 +11627,50 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(17,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 4.8
 	wkick = 3
+
+	break;
+	
+	//SEPTUPLE BLOOD RIFLE
+	case 612:
+
+	snd_play_fire(sndMachinegun)
+	snd_play_fire(sndBloodPistol)
+
+	repeat(3)
+	{
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(70)-35,2+random(2))
+	}
+
+	with instance_create(x,y,BloodBullet)
+	{motion_add(aimDirection+2*other.accuracy+(random(6)-3)*other.accuracy,19)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,BloodBullet)
+	{motion_add(aimDirection-2*other.accuracy+(random(6)-3)*other.accuracy,19)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,BloodBullet)
+	{motion_add(aimDirection+12*other.accuracy+(random(6)-3)*other.accuracy,17)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,BloodBullet)
+	{motion_add(aimDirection-12*other.accuracy+(random(6)-3)*other.accuracy,17)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,BloodBullet)
+	{motion_add(aimDirection+22*other.accuracy+(random(6)-3)*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,BloodBullet)
+	{motion_add(aimDirection-22*other.accuracy+(random(6)-3)*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3
+	wkick = 5
 
 	break;
 	

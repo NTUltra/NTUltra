@@ -15,7 +15,8 @@ function scrEndOfRun(){
 		enableReroll = false;
 		maxHpIncrease = 0;
 		canSave = false;
-		useSeed = false;
+		if opt_gamemode != 39
+			useSeed = false;
 		canSpawnInversionShards = false;
 		collectedInversionShards = 0;
 		collectedInversionShardReward = false;

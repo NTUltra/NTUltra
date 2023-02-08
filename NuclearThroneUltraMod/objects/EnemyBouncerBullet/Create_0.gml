@@ -13,5 +13,5 @@ hitWall=0;
 alarm[2] = 1
 dmg = 3;
 rotation = choose(10,-10);
-if UberCont.opt_gamemode == 34//HARD MODE
+if scrIsHardMode()//HARD MODE
 	dmg = 4;

@@ -214,7 +214,7 @@ if instance_exists(Player)
 			}	
 		}
 		}
-	    if UberCont.opt_gamemode == 34 && area == 1//HARD MODE
+	    if scrIsHardMode() && area == 1//HARD MODE
 		{
 			var t = 30;
 			if subarea == 1 && loops < 1

@@ -777,7 +777,7 @@ if KeyCont.key_swap[p] = 1 and bwep != 0
 var mr = GetPlayerMaxRad()
 if (rad > mr)
 {
-	if level < maxlevel || UberCont.opt_gamemode == 22
+	if level < maxlevel || UberCont.opt_gamemode == 22 || UberCont.opt_gamemode == 38 || UberCont.opt_gamemode == 39
 	{
 		//rad -= level*60
 		rad -= mr;
@@ -788,7 +788,10 @@ if (rad > mr)
 
 		repeat(level-6)
 		instance_create(x,y,IDPDSpawn)
-	
+		if level == 20
+		{
+			scrUnlockGameMode(39,"FOR REACHING LEVEL 20",22);
+		}
 		if level == 10 && !reachedUltra
 		{
 			reachedUltra = true;
@@ -959,7 +962,7 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 	}
 	if (reload > lowa || breload > lowb || creload > lowc)
 	{
-		if UberCont.opt_gamemode == 34//HARD MODE
+		if scrIsHardMode()//HARD MODE
 		{
 			reload -= 0.1;
 			breload -= 0.1;
@@ -1698,13 +1701,7 @@ if skill_got[2] && !instance_exists(GenCont) && !instance_exists(LevCont) && !ou
 
 /* */
 ///Delay before taking melee damage again
-if meleeimmunity>0
-{
-	if UberCont.normalGameSpeed == 60
-		meleeimmunity -= 0.5;
-	else
-		meleeimmunity--;
-}
+
 
 /* */
 ///time and unlock
@@ -1833,10 +1830,6 @@ if race=18
 		    //var wall = instance_nearest(x,y,Wall);
 		    var ground = instance_nearest(x,y,Floor);
 		    motion_add(point_direction(x,y,ground.x+16,ground.y+16),0.6);
-			if UberCont.normalGameSpeed == 60
-				flyduration += 0.5;
-			else
-				flyduration ++
 	    }
 	    else
 	    {

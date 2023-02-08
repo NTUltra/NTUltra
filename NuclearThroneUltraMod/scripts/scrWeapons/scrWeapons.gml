@@ -931,7 +931,7 @@ function scrWeapons() {
 	wep_swap[83] = sndSwapMachinegun
 	wep_rad[83] = 0;
 
-	wep_name[84] = "TRIPLE BLOOD GUN"
+	wep_name[84] = "TRIPLE BLOOD RIFLE"
 	wep_type[84] = 1
 	wep_auto[84] = 1
 	wep_load[84] = 2
@@ -6760,6 +6760,17 @@ function scrWeapons() {
 	wep_text[611] = "ultra moddable!"
 	wep_swap[611] = sndSwapPistol
 	wep_rad[611] = 0;
+	
+	wep_name[612] = "SEPTUPLE BLOOD RIFLE"
+	wep_type[612] = 1
+	wep_auto[612] = 1
+	wep_load[612] = 2
+	wep_cost[612] = 3
+	wep_sprt[612] = sprSeptupleBloodRifle
+	wep_area[612] = 7
+	wep_text[612] = "its a bloody mess"
+	wep_swap[612] = sndSwapMachinegun
+	wep_rad[612] = 0;
 
 	maxwep = array_length(wep_name)-1;
 

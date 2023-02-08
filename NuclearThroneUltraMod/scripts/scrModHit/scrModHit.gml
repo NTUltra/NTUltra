@@ -101,9 +101,10 @@ function scrModHit() {
 
 				case 3://burn!
 				snd_play(sndFlare,0,true);
+				repeat(2)
 				with instance_create(other.x,other.y,Flame){
 					//image_speed = 0.5;//0.6 for regular flame from flame shotguns
-					motion_add(random(360),1+random(2))
+					motion_add(random(360),2+random(2))
 					team=other.team;
 				}
 				break;
@@ -209,6 +210,7 @@ function scrModHit() {
 
 				case 8://swarm
 					snd_play(sndSwarmRapid,0.05,true);
+					repeat(2)
 					with instance_create(other.x+lengthdir_x(4,random(360)),other.y+lengthdir_x(4,random(360)),SwarmBolt)
 					{
 						team=other.team;

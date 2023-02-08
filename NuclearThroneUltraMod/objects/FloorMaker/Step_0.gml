@@ -1,3 +1,4 @@
+exit;
 if instance_number(Floor) > goal && (UberCont.opt_gamemode != 25 || instance_exists(Vlambeer))
 {
 	if point_distance(x,y,10016,10016) > 48 
@@ -33,53 +34,53 @@ if instance_number(Floor) > goal && (UberCont.opt_gamemode != 25 || instance_exi
 }
 else
 {
-if UberCont.firstFloorMaker
-{
-	//SetSeed();
-	UberCont.firstFloorMaker = false;
-	if instance_exists(Player) 
+	if UberCont.firstFloorMaker
 	{
-		if (Player.area == 9 || Player.area == 118) && Player.subarea == 3
+		//SetSeed();
+		UberCont.firstFloorMaker = false;
+		if instance_exists(Player) 
 		{
-			other.x = 10016;
-			other.y = 10016;
-			Player.x = other.x;
-			Player.y = other.y;
-			with WepPickup
+			if (Player.area == 9 || Player.area == 118) && Player.subarea == 3
 			{
-				x = Player.x;
-				y = Player.y-200;
-				speed = 0;
+				other.x = 10016;
+				other.y = 10016;
+				Player.x = other.x;
+				Player.y = other.y;
+				with WepPickup
+				{
+					x = Player.x;
+					y = Player.y-200;
+					speed = 0;
+				}
+				direction = 90;
 			}
-			direction = 90;
-		}
-		if Player.ultra_got[66] && Player.altUltra
-		{
-			snd_play(sndWeaponChest);
-			with instance_create(x,y,WepPickup)
+			if Player.ultra_got[66] && Player.altUltra
 			{
-				scrWeapons()
-				SetSeedWeapon();
-				wep = scrDecideWep(0, 8)
-				SetSeed();
-				name = wep_name[wep]
-				ammo = 50
-				type = wep_type[wep]
-				curse = 0
-				sprite_index = wep_sprt[wep]
+				snd_play(sndWeaponChest);
+				with instance_create(x,y,WepPickup)
+				{
+					scrWeapons()
+					SetSeedWeapon();
+					wep = scrDecideWep(0, 8)
+					SetSeed();
+					name = wep_name[wep]
+					ammo = 50
+					type = wep_type[wep]
+					curse = 0
+					sprite_index = wep_sprt[wep]
+				}
 			}
 		}
 	}
-}
-scrMakeFloor()
+	scrMakeFloor()
 
-with GenCont
-{
-alarm[0] = 3
-alarm[2] = 2
-}
+	with GenCont
+	{
+		alarm[0] = 3
+		alarm[2] = 2
+	}
 
-with MenuGen
-alarm[1] = 3;
+	with MenuGen
+		alarm[1] = 3;
 }
 

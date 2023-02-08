@@ -491,7 +491,6 @@ else if !reincarnate
 		}
 		if (playedWithAll)
 		{
-			debug("UNLOCK ALL");
 			scrUnlockGameMode(23,"UNLOCKED FOR PLAYING#EVERY CHARACTER");
 		}
 		
@@ -548,10 +547,11 @@ else if !reincarnate
 					//Check if this is your highest score
 					var tf = round(VanFan.time_frame);
 					debug("tf: ", tf);
-					debug("data: ", encrypted_data.ctot_weeklies_score[1][? weeklyWeek]);
-					if (tf > encrypted_data.ctot_weeklies_score[1][? weeklyWeek])
+					debug("data: ", encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)]);
+					if (tf > encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)])
 					{
-						encrypted_data.ctot_weeklies_score[1][? weeklyWeek] = tf;
+						encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)] = tf;
+						scrSaveEncrypted();
 						runRace[0] = tf;
 						runRace[1] = encrypted_data.username;
 						runRace[2] = Player.race;
@@ -560,9 +560,13 @@ else if !reincarnate
 				}
 				else
 				{
-					if (other.kills > encrypted_data.ctot_weeklies_score[1][? weeklyWeek])
+					//Check if this is your highest score
+					debug("kills: ", other.kills);
+					debug("data: ", encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)]);
+					if (other.kills > encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)])
 					{
-						encrypted_data.ctot_weeklies_score[1][? weeklyWeek] = other.kills;
+						encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)] = other.kills;
+						scrSaveEncrypted();
 						runScore[0] = other.kills;
 						runScore[1] = encrypted_data.username;
 						runScore[2] = other.area;

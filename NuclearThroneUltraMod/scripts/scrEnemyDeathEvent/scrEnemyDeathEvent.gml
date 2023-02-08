@@ -70,7 +70,7 @@ function scrEnemyDeathEvent(){
 				if isdoc
 					scrDrop(0,4);
 				else
-					scrDrop(0,2.5);
+					scrDrop(0,2.7);
 			}
 		}
 		

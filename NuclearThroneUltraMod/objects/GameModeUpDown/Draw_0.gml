@@ -39,7 +39,17 @@ else{
 }
 
 //draw_sprite(sprite_index,/*UberCont.opt_gamemode*/1,x,y)
-
+if (UberCont.opt_gamemode==40 && gamemodeOrder[gamemodenr]==40)
+{
+	if !instance_exists(SeedSetter) && !instance_exists(PlayerSpawn)
+		instance_create(x-10,y+24,SeedSetter);
+	UberCont.useSeed = true;
+}
+else{
+	UberCont.useSeed = false;
+	with SeedSetter
+		instance_destroy()
+}
 if (UberCont.opt_gamemode==27&&gamemodeOrder[gamemodenr]==27) || UberCont.opt_gamemode==26&&gamemodeOrder[gamemodenr]==26  || UberCont.opt_gamemode==37&&gamemodeOrder[gamemodenr]==37
 {
 	if !instance_exists(GoToLeaderboard) && !instance_exists(PlayerSpawn)

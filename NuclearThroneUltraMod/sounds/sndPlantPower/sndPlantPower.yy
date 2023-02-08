@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "sndPlantPower",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -12,13 +15,9 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndPlantPower",
-  "duration": 0.0,
+  "duration": 0.288685,
   "parent": {
     "name": "Player",
     "path": "folders/Sounds/Player.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sndPlantPower",
-  "tags": [],
-  "resourceType": "GMSound",
 }

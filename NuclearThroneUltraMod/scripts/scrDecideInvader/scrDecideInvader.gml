@@ -7,7 +7,7 @@ function scrDecideInvader(){
 		var area = Player.area;
 		var subarea = Player.subarea;
 		var loops = Player.loops;
-		if UberCont.opt_gamemode == 34//Hard mode
+		if scrIsHardMode()//Hard mode
 			loops += 1;
 		if loops > 1
 		{
@@ -216,7 +216,7 @@ function scrDecideInvader(){
 			if array_length(spawns) > 0
 				scrSpawnInversionInvasion(am2,spawns,fa,fb,fe);
 		}
-		if UberCont.opt_gamemode == 34//Hard mode
+		if scrIsHardMode()//Hard mode
 			loops += 2;
 		if loops > 3
 		{

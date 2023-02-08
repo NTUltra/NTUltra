@@ -58,7 +58,7 @@ spinAttackFireRate = 20;
 spinAttackMaxAmmo = 0;
 spinAttackAmmo = 0;
 friction = 0.5;
-if UberCont.opt_gamemode == 34//HARD MODE
+if scrIsHardMode()//HARD MODE
 {
 	maxhealth += 200;
 	maxSpeed += 0.2;

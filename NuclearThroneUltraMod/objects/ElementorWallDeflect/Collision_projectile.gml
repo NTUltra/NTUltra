@@ -35,7 +35,7 @@ if instance_exists(Player)
 					image_xscale = point_distance(x,y,xstart,ystart)*0.5
 				}
 				else
-					event_perform(ev_collision,Wall);	
+					event_perform(ev_collision,Wall);
 			}
 		}
 

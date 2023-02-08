@@ -5,7 +5,7 @@ version = 000//23 is final probably
 encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
-updateVersion = "BETA 30.08";
+updateVersion = "BETA 30.10";
 serverIp =  "";
 serverPort =  0;
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
@@ -74,6 +74,8 @@ totalWeeklies = -1;
 useSeed = false;
 seed = 0;
 seedText = "";
+seedModeSeed = -1;
+seedModeSeedText = "";
 
 previous_gamemode = 0;
 goToLeaderboard = false;
@@ -180,7 +182,7 @@ revivedCharacters = [];
 beatTheGame = false;
 
 randomDailyMod = 0;
-chestRan = 0;
+chestRan = 10;
 isWeekly = false;
 weeklyGamemode = 0;
 hasLeveledUp = false;

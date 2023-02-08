@@ -4,7 +4,7 @@
 event_inherited();
 raddrop = 80
 maxhealth = 1120;
-if UberCont.opt_gamemode == 34
+if scrIsHardMode()
 	maxhealth += 100;
 maxhealth += max(0,55*min(12,(loops-1)));
 scrBossHealthBuff();

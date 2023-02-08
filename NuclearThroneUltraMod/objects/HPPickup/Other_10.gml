@@ -21,7 +21,7 @@ instance_create(x,y,HealFX)
 //RUSH CROWN
 if Player.crown = 4
 num += 1
-if UberCont.opt_gamemode == 34//HARD MODE
+if scrIsHardMode()//HARD MODE
 {
 	num = round(num*0.5);
 	if Player.skill_got[9] = 1

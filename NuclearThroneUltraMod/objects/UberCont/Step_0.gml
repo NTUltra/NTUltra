@@ -88,7 +88,7 @@ alarm[3] = 1;
 audio_resume_all();
 }
 //RETURN TO MENU
-if (keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4)) && !instance_exists(PlayerSpawn)
+if (keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4)) && !instance_exists(PlayerSpawn) && !instance_exists(StartDaily)
 {
 	if isWeekly
 		opt_gamemode = 0;
@@ -125,25 +125,25 @@ else
 
 //NOT PAUSED
 
-if instance_exists(KeyCont) && (keyboard_check_pressed(vk_escape)or KeyCont.key_paus[0] = 1 || (!instance_exists(Vlambeer)&&(!window_has_focus()) && public == 1) ) and !instance_exists(GenCont)
+if instance_exists(KeyCont) && !instance_exists(StartDaily) && (keyboard_check_pressed(vk_escape)or KeyCont.key_paus[0] = 1 || (!instance_exists(Vlambeer)&&(!window_has_focus()) && public == 1) ) and !instance_exists(GenCont)
 {
-if keyboard_check_pressed(vk_escape) and instance_exists(Menu)
-{
-	if isWeekly
-		opt_gamemode = 0;
-	scrSave();
-if !instance_exists(OptionSelect)
-game_end()
-else if OptionSelect.selected = 0 and CreditsSelect.selected = 0 and StatsSelect.selected = 0 and OptionSelect2.selected = 0 and UpdateSelect.selected = 0
-game_end()
-else if !instance_exists(PlayerSpawn) && !instance_exists(Player)
-{
-scrRestart()
-}
-}
-else if instance_exists(Vlambeer)
-game_end()
-else if instance_exists(Player)///PAUSE IN-GAME
+	if keyboard_check_pressed(vk_escape) and instance_exists(Menu)
+	{
+		if isWeekly
+			opt_gamemode = 0;
+		scrSave();
+		if !instance_exists(OptionSelect)
+			game_end()
+		else if OptionSelect.selected = 0 and CreditsSelect.selected = 0 and StatsSelect.selected = 0 and OptionSelect2.selected = 0 and UpdateSelect.selected = 0
+			game_end()
+		else if !instance_exists(PlayerSpawn) && !instance_exists(Player) && !instance_exists(StartDaily)
+		{
+			scrRestart()
+		}
+	}
+	else if instance_exists(Vlambeer)
+		game_end()
+else if instance_exists(Player) && !instance_exists(StartDaily)///PAUSE IN-GAME
 {
 kills=Player.kills
 hard=Player.hard;

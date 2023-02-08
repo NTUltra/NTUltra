@@ -8,3 +8,5 @@ instance_destroy();
 with DiscDamageUpDown
 instance_destroy();
 
+with SeedSetter
+instance_destroy();

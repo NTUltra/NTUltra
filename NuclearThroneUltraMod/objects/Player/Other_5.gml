@@ -238,9 +238,10 @@ if looping && area != 104
 	scrRegainOneLifePart();
 	
 	debug("Looping now");
-	if loops > 0 && UberCont.opt_gamemode == 34
+	if loops > 0 && scrIsHardMode()
 	{
 		scrUnlockGameMode(35,"FOR REACHING LOOP 2#ON HARD MODE",34)
+		scrUnlockGameMode(35,"FOR REACHING LOOP 2#ON INFINITE LEVELS#SLOW LEVELING#HARD MODE",40)
 	}
 	if scrCheckLoopAll()
 		scrUnlockCSkin(1,"FOR LOOPING WITH EVERY CHARACTER",0);
@@ -325,7 +326,7 @@ if looping && area != 104
 	//DROP HUNTER HEAVY SNIPER
 	if race = 11 && loops = 1
 	{
-		if UberCont.opt_gamemode == 34 //HARD MODE EXCLUSIVE
+		if scrIsHardMode() //HARD MODE EXCLUSIVE
 		with instance_create(x,y,WepPickup)
 		{
 			persistent = true;
@@ -350,7 +351,7 @@ if looping && area != 104
 			sprite_index = wep_sprt[wep]
 		}
 	}
-	else if race = 11 && loops = 2 && UberCont.opt_gamemode == 34
+	else if race = 11 && loops = 2 && scrIsHardMode()
 	{
 		with instance_create(x,y,WepPickup)
 		{

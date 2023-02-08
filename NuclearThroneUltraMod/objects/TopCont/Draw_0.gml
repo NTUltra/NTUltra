@@ -263,6 +263,7 @@ with GhettoBlast
 {
 	draw_self();	
 }
+
 //Flying enemies
 with ChesireCatTail{
 if visible&&instance_exists(ChesireCat){
@@ -305,6 +306,20 @@ with HealFX
 	draw_self();
 }
 if instance_exists(Player){
+	if Player.ultra_got[74] && Player.altUltra
+	{
+		//Skeleton Reminisce
+		with BloodBullet
+			draw_self();
+		with MeatExplosion
+			draw_self();
+		with BloodSlash
+			draw_self();
+		with BloodSlashRetail
+			draw_self();
+		with BloodGrenade
+			draw_self();
+	}
 if Player.ultra_got[44]=1&&instance_exists(Marker){
 if Player.skill_got[5]=1{
 with Marker//thronebutt and ultra d hunter

@@ -3,11 +3,20 @@ holdExplainUltraModTimer = 0;
 holdExplainWepModTimer = 0;
 holdExplainMutation = 0;
 holdExplainGamemode = 0;
-if UberCont.opt_loading == 4
-	room_speed = 999999;
+seedCounter = 0;
 
+loadTime = 60;
+if UberCont.opt_loading == 4
+{
+	loadTime = 4;
+	room_speed = 999999;
+}
+alarm[3] = loadTime - 2;//Loading time;
+alarm[0] = loadTime - 1;
+alarm[2] = loadTime - 2;
+
+debug("GO GENCONT!");
 SetSeed();
-instance_create(10000,10000,FloorMaker)
 instance_create(0,0,TopCont)
 wave = 0
 skillscroll = 0;
@@ -335,3 +344,6 @@ kutgrap=true;
 kutgrap2=false;
 if random(300)<1
 kutgrap2=true;
+
+//SetSeed();
+instance_create(10000,10000,FloorMaker)

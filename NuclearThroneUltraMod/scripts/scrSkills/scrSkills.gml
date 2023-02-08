@@ -30,9 +30,9 @@ function scrSkills() {
 	}
 	skill_name[0] = "HEAVY HEART"
 	if isDoctor
-		skill_text[0] = "DOUBLE WEAPON DROPRATE#EVERY ENEMY HAS A 8% CHANCE#TO DROP AN ADDITIONAL WEAPON#DROPPED WEAPONS FIRE AT ENEMIES"
+		skill_text[0] = "+52% WEAPON DROPRATE#EVERY ENEMY HAS A 6% CHANCE#TO DROP AN ADDITIONAL WEAPON#DROPPED WEAPONS FIRE AT ENEMIES"
 	else
-		skill_text[0] = "DOUBLE WEAPON DROPRATE#EVERY ENEMY HAS A 5% CHANCE#TO DROP AN ADDITIONAL WEAPON#DROPPED WEAPONS FIRE AT ENEMIES"
+		skill_text[0] = "+50% WEAPON DROPRATE#EVERY ENEMY HAS A 4% CHANCE#TO DROP AN ADDITIONAL WEAPON#DROPPED WEAPONS FIRE AT ENEMIES"
 	skill_msnd[0] = sndMutHeavyHeart
 	skill_tips[0] = ""
 
@@ -132,13 +132,13 @@ function scrSkills() {
 	if isDoctor
 	{
 		skill_text[7] = "7.9% CHANCE KILLS REGENERATE HP"
-		if UberCont.opt_gamemode == 34//HARD MODE
+		if scrIsHardMode()//HARD MODE
 			skill_text[7] = "7.4% CHANCE KILLS REGENERATE HP"
 	}
 	else
 	{
 		skill_text[7] = "7.7% CHANCE KILLS REGENERATE HP"
-		if UberCont.opt_gamemode == 34//HARD MODE
+		if scrIsHardMode()//HARD MODE
 			skill_text[7] = "7.2% CHANCE KILLS REGENERATE HP"
 	}
 	skill_tips[7] = "drink blood"
@@ -180,13 +180,13 @@ function scrSkills() {
 	if (isDoctor)
 	{
 		skill_text[9] = "4, SOMETIMES 5 HP# FROM MEDKITS#DOUBLE HP FROM MEDCHESTS"
-		if UberCont.opt_gamemode == 34 //HARD MODE
+		if scrIsHardMode() //HARD MODE
 			skill_text[9] = "3, SOMETIMES 4 HP FROM MEDKITS#DOUBLE HP FROM MEDCHESTS"
 	}
 	else
 	{
 		skill_text[9] = "DOUBLE HP FROM MEDKITS & MEDCHESTS"
-		if UberCont.opt_gamemode == 34 //HARD MODE
+		if scrIsHardMode() //HARD MODE
 			skill_text[9] = "3 HP FROM MEDKITS#DOUBLE HP FROM MEDCHESTS"
 	}
 	skill_tips[9] = "stomach rumbles"

@@ -103,8 +103,8 @@ function scrDrawGameOver() {
 		skeletonlives = 0;
 	}*/
 	debug("GAMEOVER RESTART");
-	
-	room_restart()
+	if !instance_exists(StartDaily)
+		room_restart()
 	exit;
 	}
 	if (keyboard_check_pressed(vk_enter) or mouse_check_button_pressed(mb_left)) and gameovertime > 40 && !instance_exists(PlayerSpawn)

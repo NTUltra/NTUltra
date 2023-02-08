@@ -31,7 +31,7 @@ if instance_exists(Player)
 	alarm[1] += t;
 }
 actTime = 90;
-if UberCont.opt_gamemode == 34//HARD MODE
+if scrIsHardMode()//HARD MODE
 	alarm[2] = alarm[1];
 alarm[0] = 2;
 

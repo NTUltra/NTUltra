@@ -13,11 +13,22 @@ draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get
 }
 if mode = 1
 {
-draw_sprite(sprite_index,0,__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ))
-draw_set_blend_mode(bm_add)
-repeat(10)
-draw_sprite_ext(sprite_index,0,__view_get( e__VW.XView, 0 )+random(8)-4,__view_get( e__VW.YView, 0 )+random(8)-4,1,1,0,c_white,0.1)
-draw_set_blend_mode(bm_normal)
+	if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+	{
+		draw_sprite(sprite_index,0,__view_get( e__VW.XView, 0 )+54,__view_get( e__VW.YView, 0 ))
+		draw_set_blend_mode(bm_add)
+		repeat(10)
+		draw_sprite_ext(sprite_index,0,__view_get( e__VW.XView, 0 )+random(8)-4+54,__view_get( e__VW.YView, 0 )+random(8)-4,1,1,0,c_white,0.1)
+		draw_set_blend_mode(bm_normal)
+	}
+	else
+	{
+		draw_sprite(sprite_index,0,__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ))
+		draw_set_blend_mode(bm_add)
+		repeat(10)
+		draw_sprite_ext(sprite_index,0,__view_get( e__VW.XView, 0 )+random(8)-4,__view_get( e__VW.YView, 0 )+random(8)-4,1,1,0,c_white,0.1)
+		draw_set_blend_mode(bm_normal)
+	}
 
 }
 if mode = 2

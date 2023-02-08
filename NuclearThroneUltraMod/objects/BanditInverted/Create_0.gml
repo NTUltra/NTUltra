@@ -8,7 +8,7 @@ meleedamage = 0
 size = 1
 
 event_inherited()
-if UberCont.opt_gamemode == 34//HARD MODE
+if scrIsHardMode()//HARD MODE
 {
 	instance_destroy(id,false);
 	instance_create(x,y,UltraBandit);

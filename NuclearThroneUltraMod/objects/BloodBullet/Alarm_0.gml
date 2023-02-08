@@ -7,3 +7,4 @@ if place_meeting(x,y,Wall)
 	instance_destroy()
 }
 mask_index = msk;
+alarm[0] = 1;

@@ -50,7 +50,14 @@ function scrLoadData() {
 	oneweponly263 = ini_read_real("DATA","oneweponly263",0);
 	oneweponly214 = ini_read_real("DATA","oneweponly214",0);
 	oneweponly316 = ini_read_real("DATA","oneweponly316",0);
- 
+	seedModeSeed = ini_read_real("DATA","savedseed",-1);
+	seedModeSeedText = ini_read_string("DATA","savedseedtext","");
+	if opt_gamemode == 39
+	{
+		useSeed = true;
+		seed = seedModeSeed;
+		seedText = seedModeSeedText;
+	}
 	var racedir=1;
 
 	repeat(racemax)

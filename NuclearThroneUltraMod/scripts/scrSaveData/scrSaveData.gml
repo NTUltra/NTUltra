@@ -55,4 +55,6 @@ function scrSaveData() {
 	ini_write_real("DATA","oneweponly263",oneweponly263);
 	ini_write_real("DATA","oneweponly214",oneweponly214);
 	ini_write_real("DATA","oneweponly316",oneweponly316);
+	ini_write_real("DATA","savedseed",seedModeSeed);
+	ini_write_string("DATA","savedseedtext",seedModeSeedText);
 }

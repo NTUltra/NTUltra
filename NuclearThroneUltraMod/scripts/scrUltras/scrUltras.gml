@@ -529,15 +529,23 @@ function scrUltras() {
 	ultra_name[73] = "REDEMPTION"
 	ultra_text[73] = "REROLL ALL YOUR MUTATIONS#GET PATIENCE AS AN EXTRA#CHOICE EVERY TIME.#WHEN YOU LOOP YOU#CAN GET AN ULTRA AGAIN##NORMAL MOVEMENT SPEED#NORMAL ACCURACY"
 	ultra_tips[73] = "specific taste in mutations"
-
+	
 	ultra_name[74] = "DAMNATION"
 	ultra_text[74] = "FIRING A WEAPON WITH BLOOD GAMBLE#WILL REDUCE ITS RELOAD TIME BY 80%##USING BLOOD GAMBLE WHILE RELOADING#CAN FORCE YOUR WEAPON TO FIRE#AT THE COST OF 1HP"
 	ultra_tips[74] = "damn son!"
 	
+	if instance_exists(Player) && Player.race == 19 && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && scrHasBloodWeapon()))
+	{
+		ultra_name[74] = "REMINISCE"
+		ultra_text[74] = "REPLACE YOUR ACTIVE WITH BLOOD SPLATTER#YOU SPAWN BLOOD TOWARDS NEARBY CORPSES##THRONEBUTT INCREASES AMOUNT OF BLOOD##BLOOD CAN DESTROY#ALL TYPES OF PROJECTILES#BLOOD CAN GO THROUGH WALLS"
+		ultra_tips[74] = "i used to have skin and warm blood"
+	}
+	
+	/*
 	ultra_name[75] = "THE BIG GAMBLE"
 	ultra_text[75] = "GET A RANDOM ULTRA MUTATION#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
 	ultra_tips[75] = "hybrid character"
-	
+	*/
 	ultra_name[75] = "HARDENED BONE"
 	ultra_text[75] = "IMMUNE WHILE STATIONARY##SUCCESSFUL BLOOD GAMBLE#MAKES YOU IMMUNE FOR A SHORT DURATION##FAILED BLOOD GAMBLE#CREATES BLOOD EXPLOSIONS"
 	ultra_tips[75] = "hybrid character"

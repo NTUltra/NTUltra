@@ -1,6 +1,6 @@
 function scrMods() {
 	//List of mods here
-	var notToxi = 4;
+	var notToxi = 2;
 	if instance_exists(Player) && Player.race == 23//Frog is oke with toxic!
 	notToxi = -1;
 	if UberCont.useSeed

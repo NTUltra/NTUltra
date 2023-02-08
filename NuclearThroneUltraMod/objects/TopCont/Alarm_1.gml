@@ -4,7 +4,6 @@ if instance_exists(GenCont)
 {
 	exit;
 }
-	debug("scroll");
 skillscroll += 1;
 if skillscroll > skillscrollmax
 {

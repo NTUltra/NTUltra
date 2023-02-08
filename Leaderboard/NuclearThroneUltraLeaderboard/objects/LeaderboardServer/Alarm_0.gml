@@ -17,6 +17,7 @@ if day != yesterday
 		fileName = file_find_next();
 		show_debug_message(fileName);
 	}
+	totalDailies = max(0,totalDailies);
 	file_find_close();
 	show_debug_message("new day " + string(totalDailies));
 	var byteSeed = 0;
@@ -59,14 +60,17 @@ if day != yesterday
 				}
 			break;
 			case 17://CHEATS
-				weekGamemode = 34;//Hard mode
+				weekGamemode = 40;//Hard mode infinite levels
 			break;
 			case 19://Disc room
 				weeklyOption[0] = irandom_range(1,100);//Disc amount
 				weeklyOption[1] = irandom_range(1,20);//Disc damage
 			break;
 			case 35://God frog
-				weekGamemode = 34;//Hard mode
+				weekGamemode = choose(40,34);//Hard mode
+			break;
+			case 26://Daily race
+				weekGamemode = 38;//all mutations infinite levels
 			break;
 			case 27://Daily score
 				weekGamemode = 25;//Survival arena
@@ -80,6 +84,7 @@ if day != yesterday
 			totalWeeklies ++;
 			fileName = file_find_next();
 		}
+		totalWeeklies = max(totalWeeklies,0);
 		file_find_close();
 		show_debug_message("new week " + string(totalWeeklies));
 		weeklySaveFileString = "w"+string(totalWeeklies) + "_ntultraweekly"+string(week)+"+"+string(weekGamemode)+".sav";

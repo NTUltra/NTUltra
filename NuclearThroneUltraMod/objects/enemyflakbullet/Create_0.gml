@@ -4,5 +4,5 @@ typ = 1
 dmg = 4;
 if UberCont.opt_gamemode == 9//CASUAL MODE
 	dmg = 3;
-else if UberCont.opt_gamemode == 34//HARD MODE
+else if scrIsHardMode()//HARD MODE
 	dmg = 6;

@@ -1,4 +1,5 @@
 /// @description Suck it
+event_inherited();
 if speed < 1
 {
 	if alarm[0] < 1

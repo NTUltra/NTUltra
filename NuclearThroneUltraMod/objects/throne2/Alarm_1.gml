@@ -31,7 +31,7 @@ if target > 0 {
 	else if ran > 30
 	{
 		//Accurate shot
-		if loops > 2 || UberCont.opt_gamemode == 34 || isInverted
+		if loops > 2 || scrIsHardMode() || isInverted
 			event_user(2);
 		else
 			alarm[1] = max(1,alarm[1] - 5);

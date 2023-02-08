@@ -24,7 +24,7 @@ function scrDrop(itemdrop, weapondrop) {
 				dropRateBuff -= 0.5;
 			}
 		}
-		if UberCont.opt_gamemode == 34 //HARD MODE
+		if scrIsHardMode() //HARD MODE
 		{
 			itemdrop *= 0.975;
 			canHealth = 0.9;
@@ -59,12 +59,12 @@ function scrDrop(itemdrop, weapondrop) {
 		weapondrop+=4;
 	}
 
-	if Player.skill_got[0] = 1//heavy heart
+	if Player.skill_got[0]//heavy heart
 	{
 		if Player.race=25
-			weapondrop=(weapondrop*2.11);
+			weapondrop=(weapondrop*1.52);
 		else
-			weapondrop=(weapondrop*2.1);
+			weapondrop=(weapondrop*1.5);
 	}
 	// adjusting for inflation ©2016
 	//weapondrop *= 1.01;//weapon
