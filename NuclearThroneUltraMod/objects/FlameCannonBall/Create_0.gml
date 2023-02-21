@@ -13,7 +13,8 @@ image_angle=random(360);
 dmg = 2;
 
 alarm[1]=160;
-snd_loop(sndDragonLoop);
-
-/* */
-/*  */
+emitter = audio_emitter_create();
+audio_emitter_position(emitter,x,y,depth);
+audio_emitter_gain(emitter, 0.8);
+audio_emitter_falloff(emitter, 50, 400, 1);
+audio_play_sound_on(emitter,sndFlameCannonLoop,true,1)

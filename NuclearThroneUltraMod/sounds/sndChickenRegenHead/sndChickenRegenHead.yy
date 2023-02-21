@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "sndChickenRegenHead",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -12,13 +15,9 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndChickenRegenHead",
-  "duration": 0.0,
+  "duration": 1.13068,
   "parent": {
     "name": "Player",
     "path": "folders/Sounds/Player.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sndChickenRegenHead",
-  "tags": [],
-  "resourceType": "GMSound",
 }

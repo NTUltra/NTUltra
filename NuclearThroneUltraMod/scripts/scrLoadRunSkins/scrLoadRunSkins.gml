@@ -2,7 +2,20 @@
 // /@description
 ///@param
 function scrLoadRunSkins(race,bskin,altUltra,area){
-	
+	if bskin == 3
+	{
+		bskin = 0;
+		altUltra = true;
+	}
+	else if bskin == 4
+	{
+		bskin = 1;
+		altUltra = true;
+	} else if bskin == 5
+	{
+		bskin = 2;
+		altUltra = true;
+	}
 	if bskin = 1
 	{
 		switch (race)

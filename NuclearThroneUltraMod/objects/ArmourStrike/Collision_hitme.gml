@@ -2,7 +2,10 @@ if other.team != team and other.my_health > 0
 {
 with other
 {
-	my_health -= other.dmg;
+	if UberCont.normalGameSpeed == 60
+		my_health -= other.dmg*0.5;
+	else
+		my_health -= other.dmg
 	if instance_exists(Player)
 	{
 

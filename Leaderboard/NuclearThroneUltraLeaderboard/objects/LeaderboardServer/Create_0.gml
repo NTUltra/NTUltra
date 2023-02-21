@@ -1,5 +1,5 @@
 /// @description Init
-updateVersion = "BETA 30.10";
+updateVersion = "BETA 30.11";
 serverPort = 0;
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;

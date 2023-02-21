@@ -5,6 +5,9 @@ function scrSaveData() {
 		ini_write_real("DATA","race_have"+string(dir),race_have[dir]);
 		ini_write_real("DATA","bskin"+string(dir),race_bskin[dir]);
 		ini_write_real("DATA","cskin"+string(dir),race_cskin[dir]);
+		ini_write_real("DATA","dskin"+string(dir),race_dskin[dir]);
+		ini_write_real("DATA","eskin"+string(dir),race_eskin[dir]);
+		ini_write_real("DATA","fskin"+string(dir),race_fskin[dir]);
 		ini_write_real("DATA","skin"+string(dir),skin[dir]);
 		ini_write_real("DATA","crown_start"+string(dir),crown_start[dir]);
 		var wepdir = 0;
@@ -17,7 +20,7 @@ function scrSaveData() {
 	}
 
 	dir=0
-	repeat(crownmax+9)
+	repeat(crownmax+10)
 	{
 	ini_write_real("DATA","crown_used"+string(dir),crown_used[dir]);
 	dir++;

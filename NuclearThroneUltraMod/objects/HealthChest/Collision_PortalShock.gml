@@ -1,6 +1,13 @@
-repeat(2)
-instance_create(x,y,HPPickup)
-snd_play(sndHealthChest)
+if isArmour
+{
+	snd_play(sndArmourHeal)
+}
+else
+{
+	snd_play(sndHealthChest)
+}
+	repeat(2)
+	instance_create(x,y,HPPickup)
 //I show mercy unlike Vlambeer
 var  mHpI = 2;
 with Player {

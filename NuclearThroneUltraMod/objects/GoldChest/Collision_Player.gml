@@ -1,5 +1,7 @@
 if !instance_exists(GenCont)
 {
+	scrChestAbsorbingPores(other);
+
 with instance_create(x,y,WepPickup)
 {
 	scrWeapons()

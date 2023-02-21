@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "sndChickenLoseHead",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -12,13 +15,9 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndChickenLoseHead",
-  "duration": 0.0,
+  "duration": 0.174671,
   "parent": {
     "name": "Player",
     "path": "folders/Sounds/Player.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sndChickenLoseHead",
-  "tags": [],
-  "resourceType": "GMSound",
 }

@@ -6,6 +6,7 @@ other.ammo[type] += other.typ_ammo[type]*3
 if other.ammo[type] > other.typ_amax[type] && !Player.ultra_got[26]
 	other.ammo[type] = other.typ_amax[type]
 
+scrChestAbsorbingPores(other);
 if (UberCont.opt_ammoicon)
 {
 	dir = instance_create(x,y,PopupText)

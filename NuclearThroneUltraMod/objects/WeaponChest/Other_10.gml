@@ -3,6 +3,7 @@ if !instance_exists(GenCont)
 {
 	with Player {
 		nochest = 0;
+		scrChestAbsorbingPores(Player);
 	}
 	if !oneweponly
 	{

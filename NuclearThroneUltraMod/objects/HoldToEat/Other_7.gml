@@ -53,6 +53,7 @@ with Player
 		{
 			if bskin=0//Robot secret golden skin
 			{
+				scrUnlockAltSkin(race, 0);
 				spr_idle=sprMutant8DIdle;
 				spr_walk=sprMutant8DWalk;
 				spr_hurt=sprMutant8DHurt;

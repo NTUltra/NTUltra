@@ -1720,7 +1720,7 @@ function scrWeapons() {
 	wep_sprt[155] = sprMiniIncinerator
 	wep_area[155] = 8
 	wep_text[155] = "junior firestarter"
-	wep_swap[155] = sndSwapMachinegun
+	wep_swap[155] = sndSwapFlame
 	wep_rad[155] = 0;
 
 	wep_name[156] = "FLAME SHOTGUN"
@@ -1797,7 +1797,7 @@ function scrWeapons() {
 	wep_sprt[162] = sprMegaIncinerator
 	wep_area[162] = 18//15 quadripple machinegun
 	wep_text[162] = "senior firestarter"
-	wep_swap[162] = sndSwapMachinegun
+	wep_swap[162] = sndSwapShotgun
 	wep_rad[162] = 0;
 
 	wep_name[163] = "QUADRUPLE POP GUN"
@@ -6005,7 +6005,7 @@ function scrWeapons() {
 	wep_name[543] = "SUPER KRAKEN CANNON"
 	wep_type[543] = 4
 	wep_auto[543] = 0
-	wep_load[543] = 380
+	wep_load[543] = 360
 	wep_cost[543] = 25
 	wep_sprt[543] = sprSuperKrakenCannon
 	wep_area[543] = 22
@@ -6771,6 +6771,50 @@ function scrWeapons() {
 	wep_text[612] = "its a bloody mess"
 	wep_swap[612] = sndSwapMachinegun
 	wep_rad[612] = 0;
+	
+	wep_name[613] = "TSUNAMI CANNON"
+	wep_type[613] = 4
+	wep_auto[613] = 0
+	wep_load[613] = 240
+	wep_cost[613] = 25
+	wep_sprt[613] = sprTsunamiCannon
+	wep_area[613] = 22
+	wep_text[613] = "monster storm"
+	wep_swap[613] = sndSwapEnergy
+	wep_rad[613] = 0;
+	
+	wep_name[614] = "SUPER LIGHTNING CANNON"
+	wep_type[614] = 5
+	wep_auto[614] = 0
+	wep_load[614] = 230
+	wep_cost[614] = 24
+	wep_sprt[614] = sprSuperLightningCannon
+	wep_area[614] = 20
+	wep_text[614] = "storm bringer"
+	wep_swap[614] = sndSwapEnergy
+	wep_rad[614] = 0;
+	
+	wep_name[615] = "SUPER FLAME CANNON"
+	wep_type[615] = 4
+	wep_auto[615] = 0
+	wep_load[615] = 150
+	wep_cost[615] = 17
+	wep_sprt[615] = sprSuperFlameCannon
+	wep_area[615] = 19
+	wep_text[615] = "balls of fire"
+	wep_swap[615] = sndSwapFlame
+	wep_rad[615] = 0;
+	
+	wep_name[616] = "DIRECTOR BURST GRENADE LAUNCHER"
+	wep_type[616] = 4
+	wep_auto[616] = 0
+	wep_load[616] = 48
+	wep_cost[616] = 3
+	wep_sprt[616] = sprDirectorBurstGrenadeLauncher
+	wep_area[616] = 7
+	wep_text[616] = "bursting"
+	wep_swap[616] = sndSwapExplosive
+	wep_rad[616] = 0;
 
 	maxwep = array_length(wep_name)-1;
 

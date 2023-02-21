@@ -9,7 +9,7 @@ if team != other.team
 			else
 				instance_destroy();
 		}
-		else if destroyAll
+		else if other.destroyAll
 		{
 			if typ == 0 && !canBeMoved
 			{

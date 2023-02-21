@@ -7,7 +7,14 @@ if Player.crown = 4
 	num += 1
 if Player.ultra_got[85]=1//ROGUE SUPER PORTAL STRIKE ULTRA
 	num*=2;
-
+with Player
+{
+	if skill_got[36]
+	{
+		speed = 6;
+		scrRaddrop(4);
+	}	
+}
 Player.rogueammo+=num;
 if Player.rogueammo > Player.rogueammomax
 Player.rogueammo = Player.rogueammomax

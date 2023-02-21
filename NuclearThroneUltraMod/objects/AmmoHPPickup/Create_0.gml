@@ -13,6 +13,10 @@ if scrIsHardMode() //HARD MODE
 rerolls = 0;
 //RUSH CROWN
 if instance_exists(Player){
+	if Player.skill_got[3]
+	{
+		friction = 0.3;
+	}
 if Player.crown = 4{ alarm[0] /= 3}
 
 if Player.race = 15{ alarm[0] *= 0.6}//atom
@@ -33,5 +37,7 @@ event_inherited();
 
 supercursed = false;
 as = 6;
-if instance_exists(Player) && Player.skill_got[3]
-	as = 8;
+//if instance_exists(Player) && Player.skill_got[3]
+//	as = 8;
+if UberCont.normalGameSpeed == 60
+	as *= 0.5;

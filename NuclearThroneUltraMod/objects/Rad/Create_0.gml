@@ -1,4 +1,4 @@
-friction = 0.2
+friction = 0.21
 image_angle = random(360)
 
 isGettingSucked = false;
@@ -12,6 +12,10 @@ if scrIsHardMode() //HARD MODE
 
 //RUSH CROWN
 if instance_exists(Player){
+	if Player.skill_got[3]
+	{
+		friction = 0.31;
+	}
 if Player.RadMony
 {
 sprite_index=sprRadMony;

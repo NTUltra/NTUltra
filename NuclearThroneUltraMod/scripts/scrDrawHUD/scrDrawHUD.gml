@@ -1,5 +1,5 @@
 function scrDrawHUD() {
-	if UberCont.opt_gamemode!=3{//NO HUD gamemode
+	if UberCont.opt_gamemode!=3 {//NO HUD gamemode
 
 	draw_set_font(fntM)
 	draw_set_halign(fa_center)
@@ -31,13 +31,24 @@ function scrDrawHUD() {
 
 
 	//HEALTH BAR
-	draw_sprite(sprHealthBar,2,__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+4)
-	if Player.maxhealth!=0{
-	draw_sprite_ext(sprHealthFill,2,__view_get( e__VW.XView, 0 )+22,__view_get( e__VW.YView, 0 )+7,clamp(84*(Player.lsthealth/Player.maxhealth),0,84),1,0,c_white,1)
-	draw_sprite_ext(sprHealthFill,1,__view_get( e__VW.XView, 0 )+22,__view_get( e__VW.YView, 0 )+7,clamp(84*(Player.lsthealth/Player.maxhealth),0,84),1,0,c_white,1)
+	var armourX = 94;
+	if !(Player.ultra_got[62] && Player.altUltra)
+	{
+		var hx = 20;
+		if Player.skill_got[36] //Absorbing pores
+			hx = 22;
+		draw_sprite(sprHealthBar,2,__view_get( e__VW.XView, 0 )+hx,__view_get( e__VW.YView, 0 )+4)
+		if Player.maxhealth!=0{
+		draw_sprite_ext(sprHealthFill,2,__view_get( e__VW.XView, 0 )+hx+2,__view_get( e__VW.YView, 0 )+7,clamp(84*(Player.lsthealth/Player.maxhealth),0,84),1,0,c_white,1)
+		draw_sprite_ext(sprHealthFill,1,__view_get( e__VW.XView, 0 )+hx+2,__view_get( e__VW.YView, 0 )+7,clamp(84*(Player.lsthealth/Player.maxhealth),0,84),1,0,c_white,1)
 
-	if ((Player.sprite_index = Player.spr_hurt and Player.image_index < 1 and !instance_exists(Portal)) or Player.lsthealth < Player.my_health) and !instance_exists(GenCont) and !instance_exists(LevCont)
-	draw_sprite_ext(sprHealthFill,0,__view_get( e__VW.XView, 0 )+22,__view_get( e__VW.YView, 0 )+7,clamp(84*(Player.lsthealth/Player.maxhealth),0,84),1,0,c_white,1)
+		if ((Player.sprite_index = Player.spr_hurt and Player.image_index < 1 and !instance_exists(Portal)) or Player.lsthealth < Player.my_health) and !instance_exists(GenCont) and !instance_exists(LevCont)
+		draw_sprite_ext(sprHealthFill,0,__view_get( e__VW.XView, 0 )+hx+2,__view_get( e__VW.YView, 0 )+7,clamp(84*(Player.lsthealth/Player.maxhealth),0,84),1,0,c_white,1)
+		}
+	}
+	else
+	{
+		armourX = 7;
 	}
 	draw_set_font(fntM)
 
@@ -48,7 +59,7 @@ function scrDrawHUD() {
 	repeat(armour)
 	{
 	dir++;
-	draw_sprite(sprArmour,0,__view_get( e__VW.XView, 0 )+94+(15*dir),__view_get( e__VW.YView, 0 )+4);
+	draw_sprite(sprArmour,0,__view_get( e__VW.XView, 0 )+armourX+(15*dir),__view_get( e__VW.YView, 0 )+4);
 	}
 
 
@@ -115,6 +126,7 @@ function scrDrawHUD() {
 
 	//HEALTH TEXT
 	draw_set_halign(fa_center)
+	if !(Player.ultra_got[62] && Player.altUltra)
 	if (!((Player.sprite_index = Player.spr_hurt and Player.image_index < 1 and !instance_exists(Portal)) or Player.lsthealth < Player.my_health) or sin(wave) > 0) or instance_exists(GenCont) or instance_exists(LevCont)
 	{
 	draw_set_color(c_black)
@@ -218,6 +230,10 @@ function scrDrawHUD() {
 			{
 				draw_sprite_ext(sprExclusiveTasteHUD,0,xx,yy,1,1,0,c_white,1);
 			}
+			else if dir == 33 && Player.altUltra
+			{
+				draw_sprite_ext(sprPhoenixHUD,0,xx,yy,1,1,0,c_white,1);
+			}
 			else if dir == 35 && Player.altUltra
 			{
 				draw_sprite_ext(sprReverseFocusHUD,0,xx,yy,1,1,0,c_white,1);
@@ -250,6 +266,10 @@ function scrDrawHUD() {
 			{
 				draw_sprite_ext(sprCaptainOfTheKrakenHUD,0,xx,yy,1,1,0,c_white,1);
 			}
+			else if dir == 62 && Player.altUltra
+			{
+				draw_sprite_ext(sprLivingArmourHUD,0,xx,yy,1,1,0,c_white,1);
+			}
 			else if dir == 66 && Player.altUltra
 			{
 				draw_sprite_ext(sprQuickSwapperHUD,0,xx,yy,1,1,0,c_white,1);
@@ -261,6 +281,10 @@ function scrDrawHUD() {
 			else if dir == 72 && Player.altUltra
 			{
 				draw_sprite_ext(sprMirrorHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 74 && Player.altUltra
+			{
+				draw_sprite_ext(sprReminisceHUD,0,xx,yy,1,1,0,c_white,1);
 			}
 			else if dir == 77 && Player.altUltra
 			{
@@ -321,7 +345,7 @@ function scrDrawHUD() {
 	//SKILL ICONS
 	dix = 0;
 	dir = 0;
-	if Player.totalSkills > 12 - (max(-1,Player.maxarmour-1))
+	if Player.totalSkills > 12 - (max(-1,Player.maxarmour-1-Player.hudArmourSpace))
 	{
 		var cdir = 0;
 		var fs = 0;
@@ -340,7 +364,7 @@ function scrDrawHUD() {
 	}
 	repeat(Player.maxskill+1)
 	{
-		if Player.skill_got[dir] = 1 && dix < 11 - (max(-1,Player.maxarmour-1))
+		if Player.skill_got[dir] = 1 && dix < 11 - (max(-1,Player.maxarmour-1-Player.hudArmourSpace))
 		{
 			var xx = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-12-16*dix;
 			var yy = __view_get( e__VW.YView, 0 )+12;
@@ -785,26 +809,35 @@ function scrDrawHUD() {
 
 	//EXPERIENCE BAR
 	draw_set_halign(fa_center)
-	if Player.skillpoints > 0
-	draw_sprite(sprExpBarLevel,0,__view_get( e__VW.XView, 0 )+4,__view_get( e__VW.YView, 0 )+4)
+	
 	with Player
 	{
 		var maxRad = GetPlayerMaxRad();	
 	}
-	draw_sprite(sprExpBar,(Player.rad/maxRad)*16,__view_get( e__VW.XView, 0 )+4,__view_get( e__VW.YView, 0 )+4)
+	var ro = 4;
+	var rto = 11;
+	if Player.skill_got[36]//Absorbing pores
+	{
+		ro -= 3;
+		rto -= 3;
+		draw_sprite(sprAbsorbingRadBar,(Player.radPickedUp/Player.maxRadPickedUp)*18,__view_get( e__VW.XView, 0 )+ 16,__view_get( e__VW.YView, 0 )+4)	
+	}
+	if Player.skillpoints > 0
+		draw_sprite(sprExpBarLevel,0,__view_get( e__VW.XView, 0 )+ro,__view_get( e__VW.YView, 0 )+4)
+	draw_sprite(sprExpBar,(Player.rad/maxRad)*16,__view_get( e__VW.XView, 0 )+ro,__view_get( e__VW.YView, 0 )+4)
 	var lvl = Player.level
 	if lvl != 10
 	{
 		draw_set_color(c_black)
-		draw_text(__view_get( e__VW.XView, 0 )+11,__view_get( e__VW.YView, 0 )+17-string_height(string_hash_to_newline("A"))/2,string_hash_to_newline(string(lvl)))
-		draw_text(__view_get( e__VW.XView, 0 )+12,__view_get( e__VW.YView, 0 )+17-string_height(string_hash_to_newline("A"))/2,string_hash_to_newline(string(lvl)))
-		draw_text(__view_get( e__VW.XView, 0 )+12,__view_get( e__VW.YView, 0 )+16-string_height(string_hash_to_newline("A"))/2,string_hash_to_newline(string(lvl)))
+		draw_text(__view_get( e__VW.XView, 0 )+rto,__view_get( e__VW.YView, 0 )+17-string_height(string_hash_to_newline("A"))/2,string_hash_to_newline(string(lvl)))
+		draw_text(__view_get( e__VW.XView, 0 )+rto+1,__view_get( e__VW.YView, 0 )+17-string_height(string_hash_to_newline("A"))/2,string_hash_to_newline(string(lvl)))
+		draw_text(__view_get( e__VW.XView, 0 )+rto+1,__view_get( e__VW.YView, 0 )+16-string_height(string_hash_to_newline("A"))/2,string_hash_to_newline(string(lvl)))
 		draw_set_color(c_white)
-		draw_text(__view_get( e__VW.XView, 0 )+11,__view_get( e__VW.YView, 0 )+16-string_height(string_hash_to_newline("A"))/2,string_hash_to_newline(string(lvl)))
+		draw_text(__view_get( e__VW.XView, 0 )+rto,__view_get( e__VW.YView, 0 )+16-string_height(string_hash_to_newline("A"))/2,string_hash_to_newline(string(lvl)))
 	}
 	else
 	{
-		draw_sprite(sprUltraLevel,0,__view_get( e__VW.XView, 0 )+11,__view_get( e__VW.YView, 0 )+16);
+		draw_sprite(sprUltraLevel,0,__view_get( e__VW.XView, 0 )+rto,__view_get( e__VW.YView, 0 )+16);
 	}
 
 
@@ -1538,7 +1571,6 @@ function scrDrawHUD() {
 	//grid
 	//with Floor
 	//draw_rectangle(x,y,x+32,y+32,1)
-	}
 
 
 	if instance_exists(enemy) && instance_number(enemy) + instance_number(becomenemy) < instance_number(IDPDVan) + 2
@@ -1674,6 +1706,15 @@ function scrDrawHUD() {
 		with GraveyardEntrance
 		{
 			scrDrawSecretFinder();
+		}
+	}
+	}
+	else
+	{
+		//No hud
+		if !instance_exists(Player) && !instance_exists(GenCont) && !instance_exists(PlayerSpawn)
+		{
+			scrDrawGameOver()
 		}
 	}
 }

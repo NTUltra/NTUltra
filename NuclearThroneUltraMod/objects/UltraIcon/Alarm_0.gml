@@ -31,7 +31,11 @@ else if skill == 27 && (Player.unlockAlternativeUltras || (Player.wep == Player.
 }
 else if skill == 29 && (Player.unlockAlternativeUltras || Player.spr_idle == sprMutant8DIdle)
 {
-	sprite_index = sprExclusiveTaste	
+	sprite_index = sprExclusiveTaste
+}
+else if Player.race == 9 && skill == 33 && (Player.unlockAlternativeUltras || scrHasFireWeapon())
+{
+	sprite_index = sprPhoenix;
 }
 else if skill == 35 && (Player.unlockAlternativeUltras || Player.crown == 12)//Crown of inversion
 {
@@ -66,6 +70,10 @@ else if skill == 59 && (Player.unlockAlternativeUltras || (!Player.skill_got[17]
 else if skill == 61 && (Player.unlockAlternativeUltras || scrKrakenWeapons(Player.wep) || scrKrakenWeapons(Player.bwep))
 {
 	sprite_index=sprCaptainOfTheKraken;
+}
+else if skill == 62 && (Player.unlockAlternativeUltras || (Player.race == 16 && !Player.skill_got[14] && !Player.skill_got[22] && !Player.skill_got[7] && !Player.skill_got[36] && Player.crown != 20 && !Player.skill_got[32] && !Player.skill_got[31]))
+{
+	sprite_index = sprLivingArmour;
 }
 else if skill == 66 && (Player.unlockAlternativeUltras || Player.bwep == 0)
 {

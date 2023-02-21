@@ -10,6 +10,7 @@ if instance_exists(Player)
     {
 	    if my_health <= maxhealth*0.36//Plant thronebutt
 	    {
+			snd_play(sndPlantTBKill);
 		    with instance_create(x,y,PlantThronebutt)
 				image_angle=random(360);
 		    my_health = 0

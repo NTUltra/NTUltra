@@ -4820,11 +4820,22 @@ function scrFire2() {
 	}
 	else
 	{
-		if !yc
-			scrSwapWeps();
-		clicked = 0;
-		can_shoot = 0;
-		bwep = 0
+		if object_index == CloneShooter
+		{
+			if !yc
+				scrSwapWeps();
+			clicked = 0;
+			can_shoot = 0;
+			bwep = 0
+		}
+		else
+		{
+			if !yc
+				scrSwapWeps();
+			clicked = 0;
+			can_shoot = 0;
+			bwep = 0
+		}
 	}
 	break;
 	
@@ -11671,6 +11682,93 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 3
 	wkick = 5
+
+	break;
+	
+	//TSUNAMI CANNON
+	case 613:
+	if wep_type[613] == 5
+	{
+		wep_type[613] = 4;
+		wep_swap[613] = sndSwapEnergy
+	}
+	else
+	{
+		wep_type[613] = 5;
+		wep_swap[613] = sndSwapDragon
+	}
+	snd_play_fire(sndSuperBazooka)
+	if Player.skill_got[17] = 1
+		snd_play_fire(sndLightningCannonUpg)
+	else
+		snd_play_fire(sndLightningCannon)
+	snd_play_fire(sndBloodCannon)
+
+	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),TsunamiBall)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,5.5)
+	image_angle = direction
+	team = other.team}
+
+	motion_add(aimDirection+180,8)
+	BackCont.viewx2 += lengthdir_x(18,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(18,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 14
+	wkick = 11
+
+	break;
+	
+	//SUPER LIGHTNING CANNON
+	case 614:
+	
+	snd_play_fire(sndSuperBazooka)
+	if Player.skill_got[17] = 1
+		snd_play_fire(sndLightningCannonUpg)
+	else
+		snd_play_fire(sndLightningCannon)
+
+	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),SuperLightningCannonBall)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,5)
+	image_angle = direction
+	team = other.team}
+
+	motion_add(aimDirection+180,6)
+	BackCont.viewx2 += lengthdir_x(16,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(16,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 12
+	wkick = 10
+
+	break;
+	
+	//SUPER FLAME CANNON
+	case 615:
+
+	snd_play_fire(sndSuperBazooka)
+	snd_play_fire(sndFlameCannon)
+
+	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),SuperFlameCannonBall)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,4.9)
+	image_angle = direction
+	team = other.team}
+
+	motion_add(aimDirection+180,6)
+	BackCont.viewx2 += lengthdir_x(16,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(16,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 12
+	wkick = 10
+
+	break;
+	
+	//DIRECTOR BURST GRENADE LAUNCHER
+	case 616:
+
+	with instance_create(x,y,DirectorGrenadeBurst)
+	{
+	creator = other.id
+	ammo = 3
+	time = 2
+	team = other.team
+	event_perform(ev_alarm,0) 
+	}
 
 	break;
 	

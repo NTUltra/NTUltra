@@ -1,6 +1,6 @@
 if !instance_exists(GenCont)
 {
-
+scrChestAbsorbingPores(other);
 Player.nochest = 0
 repeat(1+Player.ultra_got[25]){//ROIDS ULTRA A DOUBLE WEPS
 with instance_create(x-8,y,WepPickup)

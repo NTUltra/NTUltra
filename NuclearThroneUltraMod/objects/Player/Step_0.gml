@@ -133,7 +133,13 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 			hurtTime = 0;
 		}
 	}
-
+	if meleeimmunity > 0
+	{
+		if UberCont.normalGameSpeed == 60
+			meleeimmunity -= 0.5;
+		else
+			meleeimmunity--;
+	}
 	if UberCont.mouse__x < x
 	right = -1
 	else if UberCont.mouse__x > x
@@ -570,18 +576,30 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		spr_idle = sprMutant9BIdle
 		spr_hurt = sprMutant9BHurt
 		spr_walk = sprMutant9BWalk
-			if altUltra {
+			if altUltra && ultra_got[35] {
 				spr_idle = sprMutant9EIdle
 				spr_hurt = sprMutant9EHurt
 				spr_walk = sprMutant9EWalk
 			}
+		}
+		else if bskin == 3
+		{
+			spr_idle = sprMutant9DIdle
+			spr_hurt = sprMutant9DHurt
+			spr_walk = sprMutant9DWalk
+		}
+		else if bskin == 4
+		{
+			spr_idle = sprMutant9EIdle
+			spr_hurt = sprMutant9EHurt
+			spr_walk = sprMutant9EWalk
 		}
 		else
 		{
 			spr_idle = sprMutant9Idle
 			spr_hurt = sprMutant9Hurt
 			spr_walk = sprMutant9Walk
-			if altUltra {
+			if altUltra && ultra_got[35] {
 				spr_idle = sprMutant9DIdle
 				spr_hurt = sprMutant9DHurt
 				spr_walk = sprMutant9DWalk
@@ -690,7 +708,10 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 	//crown of hatred
 	if crown == 6
 	{
-	decay -= 1
+		if UberCont.normalGameSpeed == 60
+			decay -= 0.5;
+		else
+			decay -= 1
 	if decay <= 0 and my_health > 1 && alarm[3]<1
 	{
 	Sleep(30)
@@ -967,6 +988,12 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 			reload -= 0.1;
 			breload -= 0.1;
 			creload -= 0.1;
+		}
+		if altUltra && ultra_got[33]//Phoenix
+		{
+			reload -= phoenixrevives*0.1;
+			breload -= phoenixrevives*0.05;
+			creload -= phoenixrevives*0.05;
 		}
 		if ultra_got[7] && speed < 2//BUNKER
 		{
@@ -1628,7 +1655,7 @@ if typ!=0&&object_index!=Flame&&object_index!=TrapFire&&object_index!=HotDrakeFl
 ///extra feet dodging bonus
 if skill_got[2] && !instance_exists(GenCont) && !instance_exists(LevCont) && !outOfCombat
 {
-	if extrafeetalarm>0
+	if extrafeetalarm > 0
 		extrafeetalarm--;
 
 	if extrafeetalarm == 11 && extrafeetdodged && alarm[3] < 1

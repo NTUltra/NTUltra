@@ -43,6 +43,7 @@ function scrPopChests() {
 		}
 		if ( (Player.area == 9 || Player.area == 118) && Player.subarea == 3)
 		{
+			//THRONEROOM
 			with RadChest
 				instance_destroy(id,false);
 			with AmmoChest

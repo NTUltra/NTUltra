@@ -638,6 +638,7 @@ else if Player.area != 100
 	Player.x += 16;
 	Player.y -= 32;
 }
+
 if (Player.area == 119 || Player.area == 120)
 {
 	if !instance_exists(IDPDSpawn)

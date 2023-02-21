@@ -37,8 +37,8 @@ if dis<240
 			    sprite_index = spr_fire
 			    alarm[1] = 38+random(10)
     
-			    if random(5)<1
-			    scrDrop(50,0);
+			    if  random(5)<1 && !collision_point(x,y,Wall,false,false)
+					scrDrop(50,0);
 		    }
 		    else if random(7)<1//spin
 		    {
@@ -78,7 +78,7 @@ if dis<240
 		    }
 		    else if random(3)<1{
     
-		    if random(5)<1
+		    if random(5)<1 && !collision_point(x,y,Wall,false,false)
 		    scrDrop(80,0);
     
 			    walk=14+random(12);
@@ -153,7 +153,7 @@ motion_add(random(360),2)
 walk=30+random(10)
 alarm[1]=walk;}
 
-if random(40)<1
+if random(40)<1 && !collision_point(x,y,Wall,false,false)
     scrDrop(90,1);
 
 /* */

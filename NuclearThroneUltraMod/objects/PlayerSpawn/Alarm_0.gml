@@ -79,7 +79,7 @@ with Player//Data to keep
 		maxhealth = other.maxhealth;
 		humphrySkill = other.humphrySkill;
 		ultimategamble = other.ultimategamble;
-		bettermelee = other.bettermelee;;
+		bettermelee = other.bettermelee;
 		betterlaserbrain = other.betterlaserbrain;
 		betterpluto = other.betterpluto;
 		betterrabbitpaw = other.betterrabbitpaw;

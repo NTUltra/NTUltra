@@ -335,7 +335,7 @@ function scrTips() {
 	,"Any projectile in one shot#counts as one hit","When one of multiple projectiles#fire in one shot/burst#hits an enemy it counts as a hit"
 	,"Out of the fallout shelter","focus and discipline","experience","shrink and slow projectiles","active costs unequipped weapon type ammo",
 	"with years of experience#humphry has mastered the art#of shrinking bullets","good o'l humphry was the first mutant","one and only mutant#without side effects","super soldier"
-	,"immortal soldier","warzone control uses#unequipped ammo","warzone control stuns enemies","overkill")
+	,"immortal soldier","warzone control uses#unequipped ammo","warzone control stuns enemies","overkill","S S S#Slow Shrink Stun")
 	
 	if Player.race = 27//HANDS
 	tip = choose("look ma! no face","don't get too touchy","proto","the only inverted mutant","pull my finger","hand from the other side",

@@ -18,6 +18,8 @@ snd_dead = sndNothingTaunt
 gunangle = random(360)
 alarm[4] = 90;//120 before + 90
 alarm[2] = 30;
+if instance_exists(GenCont)
+alarm[5] = GenCont.alarm[0] + 2;
 wkick = 0
 image_speed=0.4;
 

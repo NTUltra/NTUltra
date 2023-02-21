@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "sndMutHeavyHeart",
   "conversionMode": 0,
   "compression": 1,
   "volume": 1.0,
@@ -12,13 +15,9 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndMutHeavyHeart",
-  "duration": 0.0,
+  "duration": 1.962585,
   "parent": {
     "name": "Mutations",
     "path": "folders/Sounds/Mutations.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sndMutHeavyHeart",
-  "tags": [],
-  "resourceType": "GMSound",
 }

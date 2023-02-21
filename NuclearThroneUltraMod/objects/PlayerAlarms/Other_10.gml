@@ -50,10 +50,8 @@ if instance_exists(Player)
 		alarm[5] = 120;	
 	}
 	if !instance_exists(PlayerAlarms2)
-	with instance_create(x,y,PlayerAlarms2)
-	{
-		//Nothing yet may need more alarms
-	}
+		instance_create(x,y,PlayerAlarms2);
+	
 	with PlayerAlarms2 {
 		if Player.skill_got[29]//insomnia
 		{
@@ -63,7 +61,12 @@ if instance_exists(Player)
 				t = 225;
 			}
 			alarm[1] = t;
-		}	
+		}
+		//Nothing yet may need more alarms
+		if Player.altUltra && Player.ultra_got[33] && Player.phoenixrevives > 2
+		{
+			alarm[2] = 1;
+		}
 	}
 	if Player.ultra_got[59] && Player.altUltra && !instance_exists(CorrosionDrawer)
 	{

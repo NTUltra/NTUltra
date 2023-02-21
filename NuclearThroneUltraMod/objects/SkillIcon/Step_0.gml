@@ -3,7 +3,7 @@ if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+16 and UberCont.mouse__y <
 Player.skill_got[skill] = 1
 Player.skillsChosen+=1;
 Player.skillpoints -= 1
-if skill != 36
+if skill != 37
 	Player.totalSkills ++;
 if skill = 0//heavy heart
 {
@@ -12,8 +12,12 @@ scrUnlockCharacter(24,"FOR TAKING HEAVY HEART")
 }
 if skill = 1
 {
-
-	if Player.race=25
+	if Player.ultra_got[62] && Player.altUltra
+	{
+		Player.maxarmour += 4;
+		Player.armour += 4;
+	}
+	else if Player.race=25
 	{
 		Player.maxhealth += 5
 		Player.my_health += 5
@@ -27,10 +31,7 @@ if skill = 1
 }
 else if skill = 2
 {
-if Player.race=25
-	Player.maxSpeed +=0.6;
-else
-	Player.maxSpeed += 0.5;
+	scrApplyExtraFeet();
 
 }
 else if skill = 3
@@ -41,7 +42,7 @@ else if skill = 3
 	}
 	else
 	{
-		Player.betterpluto = 92;	
+		Player.betterpluto = 94;	
 	}
 }
 else if skill = 4 && Player.race=25//rabitpaw
@@ -219,16 +220,18 @@ else if skill==25{
 	Player.strongspiritused=false;
 }
 else if skill=27//patience
-{
-
-
-	if Player.race=25
+{	with Player
 	{
-		Player.skillpoints++;
-		Player.skillsChosen--;
+		if race=25
+		{
+			skillpoints++;
+			skillsChosen--;
+		}
+		else
+			patience++;
+	
+		patienceUsed++;
 	}
-	else
-	Player.patience++;
 }
 else if skill == 33 //GLASS ARM CANNON
 {

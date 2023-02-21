@@ -226,8 +226,8 @@ function scrDrawBloom() {
 	draw_sprite_ext(sprite_index,-1,xprevious,yprevious,1,1,image_angle,c_white,ba)
 	with MiniFlameCannonBall
 	draw_sprite_ext(bloomSprite,image_index,x,y,2,2,image_angle,c_white,ba)
-	with FlameCannonBall
-	draw_sprite_ext(sprFlameCannonBallBloom,image_index,x,y,2,2,image_angle,c_white,ba)
+	with SuperFlameCannonBall
+	draw_sprite_ext(sprSuperFlameCannonBallBloom,image_index,x,y,2,2,image_angle,c_white,ba)
 	with FlameCannonBall
 	draw_sprite_ext(sprite_index,image_index,x,y,2,2,image_angle,c_white,ba)
 	with HotDrakeFlameCannon
@@ -250,6 +250,15 @@ function scrDrawBloom() {
 	draw_sprite_ext(sprite_index,image_index,x,y,right,1,image_angle,c_white,(ultra_got[49]*2)*sheepPower/10);}
 	if race = 9 and bskin
 	draw_sprite_ext(sprite_index,image_index,x,y,right*1.2,image_yscale*1.2,angle,c_white,ba)
+	if skill_got[36]//Absorbing Pores
+	{
+		//var aprs = lerp(0,0.7,radPickedUp*0.01);
+		//draw_sprite_ext(sprAbsorbingPoresRad,0,x,y,aprs,aprs,image_angle,c_white,min(aprs-0.3,0.4));
+		with HealAbsorbingPores
+		{
+			draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,0,c_white,0.5);
+		}
+	}
 	if skill_got[8]//gamma guts
 	{
 		draw_sprite_ext(sprGammaGuts,wave,x,y,1.1,1.1,image_angle,c_white,ba)

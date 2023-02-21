@@ -52,7 +52,19 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 				snd_play(sndAmmoPickup);
 				var num = 3;
 				if skill_got[9]//Second stomache
+				{
 					num = 6;
+					snd_play(sndHealthPickupUpg);
+					with instance_create(x,y,HealFX)
+					{
+						sprite_index = sprHealBigFX;
+					}
+				}
+				else
+				{
+					snd_play(sndHealthPickup);
+					instance_create(x,y,HealFX);
+				}
 				if my_health < maxhealth
 					my_health += clamp(my_health+num,my_health,maxhealth);
 				if UberCont.opt_ammoicon
@@ -74,8 +86,6 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 					else if my_health > maxhealth
 						dir.mytext = "OVER MAX HP"
 				}
-				instance_create(x,y,HealFX);
-				snd_play(sndHealthPickup);
 			
 				scrRaddrop(60);
 			}
@@ -85,7 +95,19 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 				my_health += 1;
 				var num = 1;
 				if skill_got[9]//Second stomache
+				{
 					num = 2;
+					snd_play(sndHealthPickupUpg,0,true);
+					with instance_create(x,y,HealFX)
+					{
+						sprite_index = sprHealBigFX;
+					}
+				}
+				else
+				{
+					snd_play(sndHealthPickup,0,true);
+					instance_create(x,y,HealFX);
+				}
 				if UberCont.opt_ammoicon
 				{
 					dir = instance_create(x,y,PopupText)
@@ -101,8 +123,8 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 					if my_health > maxhealth
 						dir.mytext += "#OVERHEAL!"
 				}
-				instance_create(x,y,HealFX);
-				snd_play(sndHealthPickup,0,true);
+				
+				
 			}
 			
 			if ammoMultiple > 0{
@@ -427,6 +449,14 @@ if my_health < prevhealth
 			my_health = 0;
 			prevhealth = 0;
 		}
+		if phoenixrevives > 0
+		{
+			with instance_create(x,y,Flame)
+			{
+				motion_add(random(360),4);
+				team = other.team
+			}
+		}
 	}
 }
 //Extra feet consider failed dodge
@@ -577,19 +607,30 @@ if (tookHit)
 	{
 		var damageTaken = (prevhealth - my_health) + damageReduced;
 		//Needs to be healable or lethal
-		if ((damageTaken > 0 && prevhealth < maxhealth) || my_health <= 0)
+		if ((damageTaken > 0 && prevhealth < maxhealth) || (my_health <= 0 &&  armour < 1))
 		{
 			isAlkaline = false;
 			if race == 25//Doctor buff
 				damageTaken = ceil(damageTaken*1.25);
 			if (skill_got[9]) //Second stomache
+			{
 				damageTaken *= 2;
+				with instance_create(x,y,HealFX)
+				{
+					sprite_index = sprHealBigFX;
+					depth = other.depth - 1;	
+				}
+			}
+			else
+			{
+				with instance_create(x,y,HealFX)
+				{
+					depth = other.depth - 1;	
+				}
+			}
 			my_health = min(maxhealth,prevhealth+damageTaken);
 			resetPrevHealth = true;
-			with instance_create(x,y,HealFX)
-			{
-				depth = other.depth - 1;	
-			}
+			
 			with instance_create(x,y,SharpTeeth)
 				owner=other.id;
 			snd_play(sndAlkalineProc,0,true);
@@ -721,9 +762,84 @@ if rollIframe > 0
 	}
 }
 
-if my_health <= 0
+if my_health <= 0 && armour < 1
 {
-	if race = 9 and bleed < 150
+	my_health = 0
+	if altUltra && ultra_got[33] && level > 1//PHOENIX secret chicken ultra
+	{
+		var gottenSkills = [];
+		var si = 0;
+		repeat(maxskill)
+		{
+			if skill_got[si]
+			{
+				array_push(gottenSkills,si);
+			}
+			si++;
+		}
+		//Its possible to have a skillpoint so leveled up but not have a skill to lose yet
+		if array_length(gottenSkills) > 0
+		{
+			var chosenSkillToLose = gottenSkills[irandom(array_length(gottenSkills)-1)]
+			scrLoseSkill(chosenSkillToLose);
+			with instance_create(x,y,PopupText)
+			{
+				mytext = "LOST "+other.skill_name[chosenSkillToLose];
+			}
+		}
+		else if skillpoints > 0
+		{
+			skillpoints --;
+			level --;
+		}
+		else
+			level --;
+		phoenixrevives++;
+		if phoenixrevives > 2
+		{
+			with PlayerAlarms2
+			{
+				alarm[2] = 1;	
+			}
+			if phoenixrevives == 5 || phoenixrevives == 12
+				pSpeedBoost += 0.1
+			if phoenixrevives == 7 || phoenixrevives == 8
+				maxSpeed += 0.1;
+			if phoenixrevives == 6 || phoenixrevives == 10
+			{
+				standartAccuracy -= 0.1;
+				accuracy -= 0.1;
+			}
+			if phoenixrevives == 9
+				maxhealth ++;
+		}
+		rad = 0;
+		my_health = maxhealth;
+		prevhealth = maxhealth;
+		snd_play_2d(sndPhoenixChicken);
+		myShield = instance_create(x,y,EuphoriaShield)
+		with myShield
+		{
+			owner = other.id
+		}
+		alarm[3] = 60 + (phoenixrevives*5);
+		snd_play(sndFlameCannonEnd,0.1,true);
+		var ang = direction + 180;
+		var am = min(44,23 + (phoenixrevives*2));
+		var angstep = 360/am;
+		repeat(am)
+		{
+			with instance_create(x,y,Flame)
+			{
+				motion_add(ang,min(16,random(2)+5 + other.phoenixrevives))
+				team = other.team
+				ang += angstep;
+			}
+		}
+		Sleep(min(40,20 + (phoenixrevives*2)));
+		BackCont.shake += min(50,20 + (phoenixrevives*2));
+	}
+	else if race = 9 and bleed < 150
 	{
 		if bleed = 0
 		{
@@ -764,13 +880,21 @@ if my_health <= 0
 		else if other.bskin=1
 		{
 			sprite_index = sprMutant9BHeadIdle;
-			if other.altUltra
+			if other.altUltra && other.ultra_got[35]
 				sprite_index = sprMutant9EHeadIdle;
+		}
+		else if other.bskin == 3
+		{
+			sprite_index = sprMutant9DHeadIdle;
+		}
+		else if other.bskin == 4
+		{
+			sprite_index = sprMutant9EHeadIdle;
 		}
 		else
 		{
 			sprite_index = sprMutant9HeadIdle;
-			if other.altUltra
+			if other.altUltra && other.ultra_got[35]
 				sprite_index = sprMutant9DHeadIdle;
 		}
 		image_xscale = other.right
@@ -794,11 +918,11 @@ if my_health <= 0
 		}
 		if !instance_exists(LevCont) && !instance_exists(GenCont) && !place_meeting(x,y,Portal) && !instance_exists(SpiralCont)
 			bleed += 1;
+		my_health = 0
 	}
 	else
 		instance_destroy();
 		
-	my_health = 0
 }
 
 if crown == 23//Crown of speed

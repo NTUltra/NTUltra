@@ -1,5 +1,5 @@
 function scrSkills() {
-	maxskill = 35;
+	maxskill = 36;
 
 
 	dir = 0
@@ -40,7 +40,13 @@ function scrSkills() {
 	if isDoctor
 		skill_text[1] = "+5 MAX HP"
 	else
+	{
 		skill_text[1] = "+4 MAX HP"
+		if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
+		{
+			skill_text[1] = "+4 MAX ARMOUR"
+		}
+	}
 	skill_tips[1] = "thick skin"
 	skill_msnd[1] =  sndMutRhinoSkin
 
@@ -131,15 +137,15 @@ function scrSkills() {
 	skill_name[7] = "BLOODLUST"
 	if isDoctor
 	{
-		skill_text[7] = "7.9% CHANCE KILLS REGENERATE HP"
+		skill_text[7] = "7.9% CHANCE KILLS REGENERATE HP#BOSS KILLS ALWAYS HEAL"
 		if scrIsHardMode()//HARD MODE
-			skill_text[7] = "7.4% CHANCE KILLS REGENERATE HP"
+			skill_text[7] = "7.4% CHANCE KILLS REGENERATE HP#BOSS KILLS ALWAYS HEAL"
 	}
 	else
 	{
-		skill_text[7] = "7.7% CHANCE KILLS REGENERATE HP"
+		skill_text[7] = "7.7% CHANCE KILLS REGENERATE HP#BOSS KILLS ALWAYS HEAL"
 		if scrIsHardMode()//HARD MODE
-			skill_text[7] = "7.2% CHANCE KILLS REGENERATE HP"
+			skill_text[7] = "7.2% CHANCE KILLS REGENERATE HP#BOSS KILLS ALWAYS HEAL"
 	}
 	skill_tips[7] = "drink blood"
 	skill_msnd[7] =  sndMutBloodlust
@@ -179,15 +185,15 @@ function scrSkills() {
 	skill_name[9] = "SECOND STOMACH"
 	if (isDoctor)
 	{
-		skill_text[9] = "4, SOMETIMES 5 HP# FROM MEDKITS#DOUBLE HP FROM MEDCHESTS"
+		skill_text[9] = "4, SOMETIMES 5 HP# FROM MEDKITS#DOUBLE HP FROM MEDCHESTS,#ALKALINE SALIVA#AND ABSORBING PORES"
 		if scrIsHardMode() //HARD MODE
-			skill_text[9] = "3, SOMETIMES 4 HP FROM MEDKITS#DOUBLE HP FROM MEDCHESTS"
+			skill_text[9] = "3, SOMETIMES 4 HP FROM MEDKITS#DOUBLE HP FROM MEDCHESTS,#ALKALINE SALIVA#AND ABSORBING PORES"
 	}
 	else
 	{
 		skill_text[9] = "DOUBLE HP FROM MEDKITS & MEDCHESTS"
 		if scrIsHardMode() //HARD MODE
-			skill_text[9] = "3 HP FROM MEDKITS#DOUBLE HP FROM MEDCHESTS"
+			skill_text[9] = "3 HP FROM MEDKITS#DOUBLE HP FROM MEDCHESTS,#ALKALINE SALIVA#AND ABSORBING PORES"
 	}
 	skill_tips[9] = "stomach rumbles"
 	if isHand
@@ -391,8 +397,6 @@ function scrSkills() {
 		else
 		{
 			skill_text[32] = "FIRST HIT YOU TAKE IN AN AREA#WHILE BELOW MAX HP#HEALS YOU INSTEAD (125%)#PREVENTS LETHAL FIRST HITS";
-			if instance_exists(Player) && Player.skill_got[32] == 1
-				skill_text[9] = "4, SOMETIMES 5 HP# FROM MEDKITS#DOUBLE HP FROM MEDCHESTS#AND ALKALINE SALIVA"
 		}
 	}
 	else
@@ -404,8 +408,6 @@ function scrSkills() {
 		else
 		{
 			skill_text[32] = "FIRST HIT YOU TAKE IN AN AREA#WHILE BELOW MAX HP#HEALS YOU INSTEAD#PREVENTS LETHAL FIRST HITS"
-			if instance_exists(Player) && Player.skill_got[32] == 1 && UberCont.opt_gamemode != 32
-				skill_text[9] = "DOUBLE HP FROM MEDKITS, MEDCHESTS#AND ALKALINE SALIVA"
 		}
 	}
 	skill_tips[32] = "alkaline saliva prevents lethal damage if thats the first hit you take"
@@ -437,13 +439,28 @@ function scrSkills() {
 	
 	
 	skill_name[35] = "PUFFY CHEEKS"
-	skill_text[35] = "YOU CAN PREEMPTIVELY RELOAD#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 560% RELOAD SPEED##+10% SECONDARY RELOAD SPEED"
+	skill_text[35] = "YOU CAN PREEMPTIVELY RELOAD#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 60% RELOAD SPEED##+10% SECONDARY RELOAD SPEED"
 	if instance_exists(Player) && Player.cwep != 0
 		skill_text[35] = "YOU CAN PREEMPTIVELY RELOAD#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 60% RELOAD SPEED##+10% OFFHAND RELOAD SPEED"
 	if isDoctor
 		skill_text[35] = "YOU CAN PREEMPTIVELY RELOAD#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 70% RELOAD SPEED##+10% SECONDARY RELOAD SPEED"
 	skill_tips[35] = "big round cheeks"
 	skill_msnd[35] =  sndMutPuffyCheeks
+	
+	skill_name[36] = "ABSORBING PORES"
+	if scrIsHardMode()
+		skill_text[36] = "AMMO AND HEALTH DROPS GIVE RADS##EVERY 140TH RAD HEALS 1HP#(HEALING DOUBLED BY SECOND STOMACH)##OPENING CHESTS#FULLY RELOADS YOUR WEAPONS"
+	else
+		skill_text[36] = "AMMO AND HEALTH DROPS GIVE RADS##EVERY 100TH RAD HEALS 1HP#(HEALING DOUBLED BY SECOND STOMACH)##OPENING CHESTS#FULLY RELOADS YOUR WEAPONS"
+	if isDoctor
+	{
+		if scrIsHardMode()
+			skill_text[36] = "AMMO AND HEALTH DROPS GIVE RADS##EVERY 130TH RAD HEALS 1HP#(HEALING DOUBLED BY SECOND STOMACH)##OPENING CHESTS#FULLY RELOADS YOUR WEAPONS"
+		else
+			skill_text[36] = "AMMO AND HEALTH DROPS GIVE RADS##EVERY 90TH RAD HEALS 1HP#(HEALING DOUBLED BY SECOND STOMACH)##OPENING CHESTS#FULLY RELOADS YOUR WEAPONS"
+	}
+	skill_tips[36] = "osmosis"
+	skill_msnd[36] =  sndMutAbsorbingPores
 	
 	/*
 	skill_name[33] = "THRONE BACK"
@@ -454,10 +471,10 @@ function scrSkills() {
 	skill_msnd[33] =  sndMutThronebutt
 	*/
 	
-	skill_name[36] = "NOTHING"
-	skill_text[36] = "THERE ARE NO MORE MUTATIONS LEFT!"
-	skill_tips[36] = ""
-	skill_msnd[36] =  sndPartyHorn
+	skill_name[37] = "NOTHING"
+	skill_text[37] = "THERE ARE NO MORE MUTATIONS LEFT!"
+	skill_tips[37] = ""
+	skill_msnd[37] =  sndPartyHorn
 
 
 }

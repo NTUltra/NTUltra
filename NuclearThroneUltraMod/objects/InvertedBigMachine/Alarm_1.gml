@@ -1,4 +1,6 @@
 /// @description shooot
+if instance_exists(SpiralCont)
+	alarm[1] += 30;
 snd_play_2d(sndNothingBeamStart);
 
 ///shoot

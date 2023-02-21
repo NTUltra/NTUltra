@@ -35,7 +35,7 @@ if !place_meeting(x,y,Wall)&&place_meeting(x,y,Floor)
     sprite_index = spr_fire
     alarm[1] = 20+random(15)
     
-    if random(4)<1
+    if random(4)<1 && !collision_point(x,y,Wall,false,false)
     scrDrop(10,0);
     //mask_index=mskChesireCat;
     
@@ -55,7 +55,7 @@ if !place_meeting(x,y,Wall)&&place_meeting(x,y,Floor)
     sprite_index = spr_fire
     alarm[1] = 60+random(30)
     
-    if random(7)<1
+    if random(7)<1 && !collision_point(x,y,Wall,false,false)
     scrDrop(40,0);
     }
     else if random(3)<1//quick burp
@@ -168,7 +168,7 @@ motion_add(random(360),0.5)
 walk=30+random(10)
 alarm[1]=walk;}
 
-if random(40)<1
+if random(40)<1 && !collision_point(x,y,Wall,false,false)
     scrDrop(90,1);
 
 /* */

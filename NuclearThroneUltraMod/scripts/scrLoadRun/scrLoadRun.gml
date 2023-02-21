@@ -203,9 +203,9 @@ function scrLoadRun(){
 				}
 				if variable_struct_exists(encryptedRun, "canSpawnInversionShards")
 					UberCont.canSpawnInversionShards = encryptedRun.canSpawnInversionShards;
-				if variable_struct_exists(encryptedRun, "canSpawnInversionShards")
+				if variable_struct_exists(encryptedRun, "collectedInversionShards")
 					UberCont.collectedInversionShards = encryptedRun.collectedInversionShards;
-				if variable_struct_exists(encryptedRun, "canSpawnInversionShards")
+				if variable_struct_exists(encryptedRun, "collectedInversionShardReward")
 					UberCont.collectedInversionShardReward = encryptedRun.collectedInversionShardReward;
 				if variable_struct_exists(encryptedRun, "cash")
 					Player.cash = encryptedRun.cash;
@@ -236,6 +236,8 @@ function scrLoadRun(){
 				if variable_struct_exists(encryptedRun, "lastEnemyKilled")
 					Player.lastEnemyKilled = encryptedRun.lastEnemyKilled;
 				Player.useGuarenteedReroll = true;
+				if variable_struct_exists(encryptedRun, "phoenixrevives")
+					Player.phoenixrevives = encryptedRun.phoenixrevives;
 					
 			}
 			with Player
@@ -246,7 +248,7 @@ function scrLoadRun(){
 				}
 				//RACE STUFF
 				scrLoadRace();
-				scrLoadRunSkins();//ALT ultra skins
+				scrLoadRunSkins(race,bskin,altUltra,area);//ALT ultra skins
 				//Some ultras change weapon stats:
 				scrWeapons();
 				scrWeaponHold();

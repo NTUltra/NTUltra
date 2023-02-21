@@ -18,10 +18,19 @@ if instance_exists(Player)
 			rogueammo--;
 			if ultra_got[85]
 			{
-				instance_create(x,y,HealFX);
 				var num = 1;
 				if skill_got[9]
+				{
 					num = 2;
+					with instance_create(x,y,HealFX)
+						sprite_index = sprHealBigFX;
+					snd_play(sndHealthPickupUpg);
+				}
+				else
+				{
+					instance_create(x,y,HealFX);
+					snd_play(sndHealthPickup);
+				}
 				if my_health + num <= maxhealth
 					my_health += num
 				else// if Player.crown != 2

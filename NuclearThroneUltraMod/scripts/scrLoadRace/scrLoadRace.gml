@@ -1,4 +1,5 @@
 function scrLoadRace() {
+	debug("load skin: ", bskin);
 	//RACE STUFF not using the stupid functions
 	if bskin = 1
 	{
@@ -337,6 +338,144 @@ function scrLoadRace() {
 	break;
 	}
 
+	}
+	else if bskin=3//dskin
+	{
+	switch (race)
+	{
+		case 3:
+		spr_idle=sprMutant3DIdle;
+		spr_walk=sprMutant3DWalk;
+		spr_hurt=sprMutant3DHurt;
+		spr_dead=sprMutant3DDead;
+		break;
+		case 6:
+		spr_idle=sprMutant6DIdle;
+		spr_walk=sprMutant6DWalk;
+		spr_hurt=sprMutant6DHurt;
+		spr_dead=sprMutant6DDead;
+		break;
+		case 8:
+		spr_idle=sprMutant8DIdle;
+		spr_walk=sprMutant8DWalk;
+		spr_hurt=sprMutant8DHurt;
+		spr_dead=sprMutant8DDead;
+		break;
+		case 9:
+		spr_idle=sprMutant9DIdle;
+		spr_walk=sprMutant9DWalk;
+		spr_hurt=sprMutant9DHurt;
+		spr_dead=sprMutant9DDead;
+		break;
+		case 10:
+		spr_idle=sprMutant10EIdle;
+		spr_walk=sprMutant10EWalk;
+		spr_hurt=sprMutant10EHurt;
+		spr_dead=sprMutant10EDead;
+		break;
+		case 16:
+		spr_idle=sprMutant16DIdle;
+		spr_walk=sprMutant16DWalk;
+		spr_hurt=sprMutant16DHurt;
+		spr_dead=sprMutant16DDead;
+		break;
+		case 21:
+		spr_idle=sprMutant21DIdle;
+		spr_walk=sprMutant21DWalk;
+		spr_hurt=sprMutant21DHurt;
+		spr_dead=sprMutant21DDead;
+		break;
+		case 22:
+		spr_idle=sprMutant22DIdle;
+		spr_walk=sprMutant22DWalk;
+		spr_hurt=sprMutant22DHurt;
+		spr_dead=sprMutant22DDead;
+		break;
+	}
+	}
+	else if bskin=4//eskin
+	{
+	switch (race)
+	{
+		case 3:
+		spr_idle=sprMutant3EIdle;
+		spr_walk=sprMutant3EWalk;
+		spr_hurt=sprMutant3EHurt;
+		spr_dead=sprMutant3EDead;
+		break;
+		case 6:
+		spr_idle=sprMutant6EIdle;
+		spr_walk=sprMutant6EWalk;
+		spr_hurt=sprMutant6EHurt;
+		spr_dead=sprMutant6EDead;
+		break;
+		case 9:
+		spr_idle=sprMutant9EIdle;
+		spr_walk=sprMutant9EWalk;
+		spr_hurt=sprMutant9EHurt;
+		spr_dead=sprMutant9DDead;
+		break;
+		case 10:
+		spr_idle=sprMutant10FIdle;
+		spr_walk=sprMutant10FWalk;
+		spr_hurt=sprMutant10FHurt;
+		spr_dead=sprMutant10FDead;
+		break;
+		case 16:
+		spr_idle=sprMutant16DIdle;
+		spr_walk=sprMutant16DWalk;
+		spr_hurt=sprMutant16DHurt;
+		spr_dead=sprMutant16DDead;
+		break;
+		case 21:
+		spr_idle=sprMutant21DIdle;
+		spr_walk=sprMutant21DWalk;
+		spr_hurt=sprMutant21DHurt;
+		spr_dead=sprMutant21DDead;
+		break;
+		case 22:
+		spr_idle=sprMutant22DIdle;
+		spr_walk=sprMutant22DWalk;
+		spr_hurt=sprMutant22DHurt;
+		spr_dead=sprMutant22DDead;
+		break;
+	}
+	}
+	else if bskin=5//fskin
+	{
+	switch (race)
+	{
+		case 3:
+		spr_idle=sprMutant3FIdle;
+		spr_walk=sprMutant3FWalk;
+		spr_hurt=sprMutant3FHurt;
+		spr_dead=sprMutant3FDead;
+		break;
+		case 10:
+		spr_idle=sprMutant10GIdle;
+		spr_walk=sprMutant10GWalk;
+		spr_hurt=sprMutant10GHurt;
+		spr_dead=sprMutant10GDead;
+		break;
+		case 16:
+		spr_idle=sprMutant16DIdle;
+		spr_walk=sprMutant16DWalk;
+		spr_hurt=sprMutant16DHurt;
+		spr_dead=sprMutant16DDead;
+		break;
+		case 21:
+		spr_idle=sprMutant21DIdle;
+		spr_walk=sprMutant21DWalk;
+		spr_hurt=sprMutant21DHurt;
+		spr_dead=sprMutant21DDead;
+		break;
+		case 22:
+		spr_idle=sprMutant22DIdle;
+		spr_walk=sprMutant22DWalk;
+		spr_hurt=sprMutant22DHurt;
+		spr_dead=sprMutant22DDead;
+		break;
+	}
 	}
 	else//REGULAR SKIN!
 	{

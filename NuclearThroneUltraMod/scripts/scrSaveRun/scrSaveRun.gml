@@ -121,6 +121,7 @@ function scrSaveRun() {
 			spr_hurt: Player.spr_hurt,
 			spr_dead: Player.spr_dead,
 			lastEnemyKilled: Player.lastEnemyKilled,
+			phoenixrevives: Player.phoenixrevives,
 		};
 		var saveString = json_stringify(encrypted_run_data);
 		var hash = sha1_string_utf8(saveString);

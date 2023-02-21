@@ -21,10 +21,13 @@ if !place_meeting(x,y,Floor) && instance_exists(Floor)
 	var targetFloor = instance_nearest(xx,yy,Floor);
 	direction = point_direction(x,y,targetFloor.x,targetFloor.y);
 }
-if hspeed > 0
-right = 1
-else if hspeed < 0
-right = -1
+if alarm[4] < 1
+{
+	if hspeed > 0
+	right = 1
+	else if hspeed < 0
+	right = -1
+}
 }
 
 if alarm[3] > 4

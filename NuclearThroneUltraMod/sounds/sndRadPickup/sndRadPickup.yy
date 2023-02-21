@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "sndRadPickup",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -12,13 +15,9 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndRadPickup",
-  "duration": 0.0,
+  "duration": 0.17068,
   "parent": {
     "name": "Pickups",
     "path": "folders/Sounds/Pickups.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sndRadPickup",
-  "tags": [],
-  "resourceType": "GMSound",
 }

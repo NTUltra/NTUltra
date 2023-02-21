@@ -258,12 +258,23 @@ function scrPowers() {
 				isAlkaline = false;
 				var h = 2;
 				if (skill_got[9]) //Second stomache
-					h = 4;
-				my_health = min(h,maxhealth);
-				with instance_create(x,y,HealFX)
 				{
-					depth = other.depth - 1;	
+					h = 4;
+					with instance_create(x,y,HealFX)
+					{
+						sprite_index = sprHealBigFX;
+						depth = other.depth - 1;
+					}
 				}
+				else
+				{
+					with instance_create(x,y,HealFX)
+					{
+						depth = other.depth - 1;
+					}
+				}
+				my_health = min(h,maxhealth);
+				
 				with instance_create(x,y,SharpTeeth)
 					owner=other.id;
 				snd_play(sndAlkalineProc,0,true)
@@ -538,7 +549,7 @@ function scrPowers() {
 		if ultra_got[74] && altUltra//Skeleton alt ultra
 		{
 			var corpseExist = false;
-			var upTo = 3;
+			var upTo = 2;
 			var numberOfEnems = 0;
 			if instance_exists(IDPDVan)
 				numberOfEnems = instance_number(IDPDVan);
@@ -633,12 +644,22 @@ function scrPowers() {
 						isAlkaline = false;
 						var h = 2;
 						if (skill_got[9]) //Second stomache
-							h = 4;
-						my_health = min(h,maxhealth);
-						with instance_create(x,y,HealFX)
 						{
-							depth = other.depth - 1;	
+							h = 4;
+							with instance_create(x,y,HealFX)
+							{
+								sprite_index = sprHealBigFX;
+								depth = other.depth - 1;
+							}
 						}
+						else
+						{
+							with instance_create(x,y,HealFX)
+							{
+								depth = other.depth - 1;	
+							}
+						}
+						my_health = min(h,maxhealth);
 						with instance_create(x,y,SharpTeeth)
 							owner=other.id;
 						snd_play(sndAlkalineProc,0,true)
@@ -818,8 +839,21 @@ function scrPowers() {
 					{
 				        var num = 2
 				        if Player.skill_got[9] = 1//secund tummy
-				        num = 4
-				        instance_create(x,y,HealFX)
+						{
+							num = 4
+							with instance_create(x,y,HealFX)
+							{
+								sprite_index = sprHealBigFX;
+								depth = other.depth - 1;
+							}
+						}
+						else
+						{
+							with instance_create(x,y,HealFX)
+							{
+								depth = other.depth - 1;
+							}
+						}
 				        //RUSH CROWN
 				        if Player.crown = 4
 				        num += 1
@@ -1663,6 +1697,10 @@ function scrPowers() {
 	if race = 5 && !ultra_got[19]
 	{
 		var poppedSeed = false;
+		if skill_got[5]
+			snd_play_2d(sndPlantFireTB);
+		else
+			snd_play_2d(sndPlantFire);
 	    if ultra_got[20] && !Player.altUltra
 		{//STEREO SNARES
 		    with Tangle
@@ -1848,6 +1886,13 @@ function scrPowers() {
 						alarm[0] = wep_load[wep];
 						if reload < other.reload
 							other.reload = reload;
+					}
+					if (Player.alarm[2]<1)//alarm = Fish Ultra B
+					{
+						ammo[wep_type[wep]] -= wep_cost[wep]
+						ammo[wep_type[wep]] = max(0,ammo[wep_type[wep]]);
+						rad -= wep_rad[wep]
+						rad = max(rad,0);
 					}
 				}
 			}
@@ -2522,6 +2567,7 @@ function scrPowers() {
 				var pslow = 0.5;
 				if skill_got[12]
 					pslow = 0.6;
+				
 				with projectile
 				{
 					if team == other.team
@@ -2555,7 +2601,7 @@ function scrPowers() {
 		{
 			instance_create(x+irandom(8)-4,y+irandom(8)-4,Smoke);
 		}
-		if skill_got[5]==1//THRONE BUTT
+		if skill_got[5]//THRONE BUTT
 		{//Normal movement speed
 			//spr_walk = sprMutant9Thronebutt;
 
@@ -2565,15 +2611,19 @@ function scrPowers() {
 			if bskin=1
 			{
 			spr_walk = sprMutant9BThronebutt;
-			if altUltra
+			if ultra_got[35] && altUltra
 				spr_walk=sprMutant9EThronebutt;
 			}
 			else if bskin=2
 			spr_walk = sprMutant9CThronebutt;
+			else if bskin=3
+			spr_walk = sprMutant9DThronebutt;
+			else if bskin=4
+			spr_walk = sprMutant9EThronebutt;
 			else
 			{
 			spr_walk=sprMutant9Thronebutt;
-			if altUltra
+			if ultra_got[35] && altUltra
 				spr_walk=sprMutant9DThronebutt;
 			}
 			}
@@ -2829,15 +2879,19 @@ function scrPowers() {
 	if bskin=1
 	{
 	spr_walk = sprMutant9BWalk;
-	if altUltra
+	if ultra_got[35] && altUltra
 		spr_walk = sprMutant9EWalk;
 	}
 	else if bskin=2
 	spr_walk = sprMutant9CWalk;
+	else if bskin == 3
+	spr_walk = sprMutant9DWalk;
+	else if bskin == 4
+	spr_walk = sprMutant9EWalk;
 	else
 	{
 	spr_walk = sprMutant9Walk;
-	if altUltra
+	if ultra_got[35] && altUltra
 		spr_walk = sprMutant9DWalk;
 	}
 	}

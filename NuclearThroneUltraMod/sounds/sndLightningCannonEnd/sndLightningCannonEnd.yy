@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "sndLightningCannonEnd",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -17,8 +20,4 @@
     "name": "Energy",
     "path": "folders/Sounds/Weapons/Energy.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sndLightningCannonEnd",
-  "tags": [],
-  "resourceType": "GMSound",
 }

@@ -8,3 +8,6 @@ if Player.skill_got[3]
 	
 cursed = false;
 size = 1;
+stepDis = 12;
+if UberCont.normalGameSpeed == 60
+	stepDis = 6;

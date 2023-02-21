@@ -237,7 +237,9 @@ if (type == network_type_data) {
 						{
 							hard = 3;
 							instance_create(x,y,HardModeChest);
-						}	
+						}
+						maxRadPickedUp += 40;
+						//Also in Player create
 					}
 				break;
 				case 36://Ultra mod start

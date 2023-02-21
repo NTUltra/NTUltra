@@ -8,6 +8,10 @@ alarm[0] = 170+random(30)
 
 //RUSH CROWN
 if instance_exists(Player){
+	if Player.skill_got[3]
+	{
+		friction = 0.31;
+	}
 if Player.RadMony
 {
 sprite_index=sprBigRadMony;

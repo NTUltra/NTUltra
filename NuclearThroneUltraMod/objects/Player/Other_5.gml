@@ -109,14 +109,21 @@ if ((ultra_got[40] = 1 || (ultra_got[47] && altUltra)) && canHeal)
 //CROWN OF LIFE
 if crown = 2 && canHeal
 {
-	if my_health >= maxhealth
+	if ultra_got[62] && altUltra //Living armour
 	{
-		my_health = max(my_health,maxhealth);
-		my_health += 1;
+		armour = maxarmour;
 	}
 	else
 	{
-		my_health = max(my_health,maxhealth);
+		if my_health >= maxhealth
+		{
+			my_health = max(my_health,maxhealth);
+			my_health += 1;
+		}
+		else
+		{
+			my_health = max(my_health,maxhealth);
+		}
 	}
 	/*
 	var toHeal = maxhealth - min(my_health,maxhealth);
@@ -135,8 +142,16 @@ else if crown == 31
 }
 else if crown == 22//Crown of luck
 {
-	my_health = 1;
-	prevhealth = 1;
+	
+	if ultra_got[62] && altUltra //Living armour
+	{
+		armour = 1;
+	}
+	else
+	{
+		my_health = 1;
+		prevhealth = 1;
+	}
 }
 //NOCHEST SHIT
 if (instance_exists(WeaponChest) or instance_exists(BigWeaponChest) && area != 100 && !restarted)// and !(area = 1 and subarea = 1)
@@ -640,48 +655,148 @@ if UberCont.opt_gamemode == 23 && !instance_exists(Menu) && instance_number(Play
 	}
 	with instance_create(x,y,Player)
 	{
+		swapChar = true;
 		//Copy it all!
-		ultimategamble=other.ultimategamble;
-		skeletonlives=other.skeletonlives
-		race = iWillBecome;
-		crown = other.crown
-		lastarea = other.lastarea;
 		area = other.area
-		subarea=other.subarea;
+		subarea = other.subarea;
+		lastarea = other.lastarea;
+		lastsubarea = other.lastsubarea;
 		loops = other.loops;
-		hard = other.hard;
-		kills = other.kills;
-		subarea=other.subarea;
-		level = other.level;
-		boostLevel = other.boostLevel;
-		rad = other.rad;
+		crown = other.crown;
+		ammo[0] = other.ammo[0];
+		ammo[1] = other.ammo[1];
+		ammo[2] = other.ammo[2];
+		ammo[3] = other.ammo[3];
+		ammo[4] = other.ammo[4];
+		ammo[5] = other.ammo[5];
+		typ_ammo[0] = other.typ_ammo[0];
+		typ_ammo[1] = other.typ_ammo[1];
+		typ_ammo[2] = other.typ_ammo[2];
+		typ_ammo[3] = other.typ_ammo[3];
+		typ_ammo[4] = other.typ_ammo[4];
+		typ_ammo[5] = other.typ_ammo[5];
+		typ_amax[0] = other.typ_amax[0];
+		typ_amax[1] = other.typ_amax[1];
+		typ_amax[2] = other.typ_amax[2];
+		typ_amax[3] = other.typ_amax[3];
+		typ_amax[4] = other.typ_amax[4];
+		typ_amax[5] = other.typ_amax[5];
+		skill_got = other.skill_got;
+		ultra_got = other.ultra_got;
+		my_health = other.my_health;
+		strongspirit = other.strongspirit;
+		strongspiritused = other.strongspiritused;
+		isAlkaline = other.isAlkaline;
+		rage = other.rage;
+		humphrySkill = other.humphrySkill;
+		skeletonlives = other.skeletonlives;
+		patience = other.patience;
 		skillpoints = other.skillpoints;
-		crownpoints = other.crownpoints;
-		visible=true;
-		snd_play(snd_wrld, 0, false, false);
+		level = other.level;
+		maxlevel = other.maxlevel;
+		rad = other.rad;
+		raddrop = other.raddrop;
+		ultramod = other.ultramod;
+		skillsChosen = other.skillsChosen;
 		wep = other.wep;
 		bwep = other.bwep;
 		cwep = other.cwep;
-		ammo = other.ammo;
-		curse=other.curse;
-	    bcurse=other.bcurse;
-	    ccurse=other.ccurse;
-		skill_got = other.skill_got;
-		ultra_got = other.ultra_got;
-		swapChar = true;
-		wepmod1 =  other.wepmod1 
-		wepmod2 =  other.wepmod2 
-		wepmod3 =  other.wepmod3 
-		wepmod4 =  other.wepmod4 
-		bwepmod1 = other.bwepmod1
-		bwepmod2 = other.bwepmod2
-		bwepmod3 = other.bwepmod3
-		bwepmod4 = other.bwepmod4
-		cwepmod1 = other.cwepmod1
+		curse = other.curse;
+		bcurse = other.bcurse;
+		ccurse = other.ccurse;
+		wepmod1 = other.wepmod1;
+		wepmod2 = other.wepmod2;
+		wepmod3 = other.wepmod3;
+		wepmod4 = other.wepmod4;
+		bwepmod1 = other.bwepmod1;
+		bwepmod2 = other.bwepmod2;
+		bwepmod3 = other.bwepmod3;
+		bwepmod4 = other.bwepmod4;
+		cwepmod1 = other.cwepmod1;
+		cwepmod2 = other.cwepmod2;
+		cwepmod3 = other.cwepmod3;
+		cwepmod4 = other.cwepmod4;
+		rogueammo = other.rogueammo;
+		rogueammomax = other.rogueammomax;
+		ultraNow = other.ultraNow;
+		horrorEtaken = other.horrorEtaken;
+		hogpoints = other.hogpoints;
+		usedHogInvestment = other.usedHogInvestment;
+		boostLevel = other.boostLevel;
+		ultimategamble = other.ultimategamble;
+		kills = other.kills;
+		invertedchance = other.invertedchance;
+		crownvisits = other.crownvisits;
+		hard = other.hard;
+		//PLANT
+		hammerheadcounter = other.hammerheadcounter;
+		lag = other.lag;
+		hardshell = other.hardshell;
+		visitedCrib = other.visitedCrib;
+		meltingd = other.meltingd;
+		heavyheart = other.heavyheart;
+		freeArmourStrike = other.freeArmourStrike;
+		armour = other.armour;
+		maxarmour = other.maxarmour;
+		randomlySelected = other.randomlySelected;
+		inverted = other.inverted;
+		altUltra = other.altUltra;
+		reachedUltra = other.reachedUltra;
+		tookDestiny = other.tookDestiny;
+		pSpeedBoost = other.pSpeedBoost;
+		livesRegain = other.livesRegain;
+		cash = other.cash;
+		lstCash = other.lstCash;
+		maxCash = other.maxCash;
+		canHeal = other.canHeal;
+		lastEnemyKilled = other.lastEnemyKilled;
+		useGuarenteedReroll = other.useGuarenteedReroll;
+		phoenixrevives = other.phoenixrevives;
 		cwepmod2 = other.cwepmod2
 		cwepmod3 = other.cwepmod3
 		cwepmod4 = other.cwepmod4
+		patience = other.patience;
+		strongspirit = other.strongspirit;
+		isAlkaline = other.isAlkaline;
+		humphrySkill = other.humphrySkill;
+		skillpoints = other.skillpoints;
+		rogueammo = other.rogueammo;
+		rogueammomax = other.rogueammomax;
+		ultraNow = other.ultraNow;
+		horrorEtaken = other.horrorEtaken;
+		hogpoints = other.hogpoints;
+		usedHogInvestment = other.usedHogInvestment;
+		ultimategamble = other.ultimategamble;
+		totalSkills = other.totalSkills;
 		scrWeaponHold();
+		
+		//Re-apply some mutations
+		if skill_got[1]
+			maxhealth += 4;
+		if skill_got[33]
+			maxhealth -= 2;
+		my_health = other.my_health;
+		if ultra_got[62] && altUltra
+			maxhealth = 1;
+			
+		bettermelee = other.bettermelee;
+		betterlaserbrain = other.betterlaserbrain;
+		betterpluto = max(betterpluto,other.betterpluto);
+		betterrabbitpaw = other.betterrabbitpaw;
+		betterrecyclegland = other.betterrecyclegland;
+		betterboltmarrow = other.betterboltmarrow;
+		if skill_got[2] {
+			scrApplyExtraFeet();
+		}
+		if (race == 19 && (ultra_got[73] || (ultra_got[76] && !ultimategamble)))
+		{
+			maxSpeed += 0.4;
+			accuracy = 1;
+			standartAccuracy = accuracy;
+		}
+		if skill_got[19] {
+			scrApplyEagleEyes();
+		}
 	}
 	instance_destroy(id,false);
 }

@@ -1,7 +1,7 @@
 if image_xscale+growspeed < 1
 {
-image_xscale += growspeed
-image_yscale += growspeed
+	image_xscale += growspeed
+	image_yscale += growspeed
 }
 
 if growspeed > -0.005

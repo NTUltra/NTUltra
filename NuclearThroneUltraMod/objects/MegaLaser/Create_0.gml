@@ -23,3 +23,4 @@ Direction=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 isUltra = false;
 isog = true;
 canBeMoved = false;
+event_perform(ev_alarm,1);

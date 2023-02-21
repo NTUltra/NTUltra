@@ -56,7 +56,10 @@ with WepPickup
 				angle -= 30*right
 				sprite_index = spr_hurt
 				depth = -9
-				image_index = 1
+				if UberCont.normalGameSpeed == 60
+					image_index = 2;
+				else
+					image_index = 1
 			}
 			else if (point_distance(x,y,pt.x,pt.y) < other.pullRange || t == 4) and collision_line(x,y,pt.x,pt.y,Wall,0,0) < 0
 			{
@@ -67,7 +70,10 @@ with WepPickup
 				angle -= 30*right
 				sprite_index = spr_hurt
 				depth = -9
-				image_index = 1
+				if UberCont.normalGameSpeed == 60
+					image_index = 2;
+				else
+					image_index = 1
 			}
 			else if roll = 0
 				angle = 0

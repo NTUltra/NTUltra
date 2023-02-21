@@ -3,4 +3,4 @@
 // Inherit the parent event
 event_inherited();
 
-alarm[2] = 3;
+alarm[1] = 3;

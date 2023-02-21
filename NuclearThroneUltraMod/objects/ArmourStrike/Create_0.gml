@@ -26,3 +26,5 @@ if instance_exists(Player)
 	if Player.ultra_got[61] && Player.altUltra
 		sprite_index = sprArmourStrikeKraken;
 }
+
+event_perform(ev_alarm,1);

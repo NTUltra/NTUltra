@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "sndMutBackMuscle",
   "conversionMode": 0,
   "compression": 1,
   "volume": 1.0,
@@ -12,13 +15,9 @@
     "path": "audiogroups/agsfx",
   },
   "soundFile": "sndMutBackMuscle",
-  "duration": 0.0,
+  "duration": 1.952018,
   "parent": {
     "name": "Mutations",
     "path": "folders/Sounds/Mutations.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sndMutBackMuscle",
-  "tags": [],
-  "resourceType": "GMSound",
 }

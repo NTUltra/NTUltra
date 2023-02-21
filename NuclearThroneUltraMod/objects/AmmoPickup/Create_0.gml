@@ -1,5 +1,6 @@
 event_inherited();
 type = 0;
+isArmour = false;
 if sprite_index == sprAmmo {
 	var curselevel = 0;
 
@@ -17,8 +18,16 @@ if sprite_index == sprAmmo {
 		{
 			curselevel --;	
 		}
+		if  Player.crown == 32//Misfortune
+		{
+			sprite_index = sprHPAmmo;
+			if Player.ultra_got[62] && Player.altUltra// living armour
+			{
+				isArmour = true;
+				sprite_index = sprArmourAmmo;
+			}
+		}
 	}
-
 	if curselevel == 2 {
 		if random(2) < 1 {
 			cursed = true;

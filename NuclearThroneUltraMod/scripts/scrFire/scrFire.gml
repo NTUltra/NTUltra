@@ -12,7 +12,7 @@ function scrFire() {
 	{
 		ammo[wep_type[wep]] -= wep_cost[wep]
 		ammo[wep_type[wep]] = max(0,ammo[wep_type[wep]]);
-		rad-=wep_rad[wep]
+		rad -= wep_rad[wep]
 		rad = max(rad,0);
 	}
 
@@ -2665,8 +2665,7 @@ function scrFire() {
 	//FLAME CANNON
 	case 111:
 
-	snd_play_fire(sndFiretrap)
-	snd_play_fire(sndSuperFlakExplode);
+	snd_play_fire(sndFlameCannon)
 
 	with instance_create(x,y,FlameCannonBall)
 	{
@@ -4814,7 +4813,28 @@ function scrFire() {
 			reload -= wep_load[wep]*0.4;//0.6;
 	    }
 	}
-
+	if Player.ultra_got[33] && Player.altUltra
+	{
+		var pr = Player.phoenixrevives
+		if  pr > 4 && reload > 0
+	    {
+			reload -= wep_load[wep] * min(0.5,(Player.phoenixrevives-3)*0.5)
+	    }
+		if pr > 3
+		{
+			pr += max(0,(wep_load[wep]*0.03));
+			pr = clamp(round(pr),1,50);
+			repeat(pr-3)
+			{
+				with instance_create(x,y,Bullet6)
+				{
+					motion_add(aimDirection+(random(50)-25)*other.accuracy,min(22,2+pr+random(4+pr)))
+					image_angle = direction
+					team = other.team
+				}
+			}
+		}
+	}
 	if Player.ultra_got[34]==1//Chicken Ultra B ninja
 	{
 	//some melee exceptions
@@ -4963,8 +4983,8 @@ function scrFire() {
 					var speedAdd = 0;
 					if other.poppop
 					{
-						speed += 2;
-						speed *= 1.2;
+						speed += 1.5;
+						speed *= 1.15;
 					}
 					if other.skill_got[30] == 1
 					{

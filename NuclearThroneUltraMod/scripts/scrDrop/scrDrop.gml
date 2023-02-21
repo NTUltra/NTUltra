@@ -7,10 +7,10 @@ function scrDrop(itemdrop, weapondrop) {
 		if Player.ultra_got[39] && !Player.altUltra
 			rebelBuff = instance_number(Ally)*0.15;
 		if itemdrop >= 100
-			dropRateBuff = 0.04;
+			dropRateBuff = 0.05;
 		else
 			dropRateBuff = 0;
-		dropRateBuff += 0.95 + (Player.skill_got[4]*(0.38+Player.betterrabbitpaw))
+		dropRateBuff += 0.94 + (Player.skill_got[4]*(0.38+Player.betterrabbitpaw))
 		+ rebelBuff
 		+ (Player.skill_got[28]*(Player.rage*0.0011))//max is 60%
 		if Player.crown == 21 //Crown of risk
@@ -57,6 +57,10 @@ function scrDrop(itemdrop, weapondrop) {
 	{
 		weapondrop*=1.15;
 		weapondrop+=4;
+	}
+	else if Player.crown == 32//Crown of Misfortune
+	{
+		itemdrop *= 0.5;
 	}
 
 	if Player.skill_got[0]//heavy heart
@@ -131,9 +135,9 @@ function scrDrop(itemdrop, weapondrop) {
 		var confDroprate = dropRateBuff
 		if Player.skill_got[23]//Open mind
 		{
-			confDroprate += 0.25;	
+			confDroprate += 0.15;
 		}
-		confDroprate *= 0.33;
+		confDroprate *= 0.28;
 	    if (itemdrop > 0 && random(110) < min((itemdrop*0.5) * ((need*0.25) + confDroprate), 110))//rage=0.001
 	    {
 		    if ( Player.crown != 2 && Player.canHeal && random(Player.maxhealth) > Player.my_health || random(100) < 10) and random(3) < 2 and random(1) <= canHealth
@@ -157,8 +161,14 @@ function scrDrop(itemdrop, weapondrop) {
 	//drop items (10 + 2) * (0.75 + 0.5)
 	if itemdrop > 0 && random(100) < min(itemdrop * (need + dropRateBuff), 100)
 	{//0.3 for each ally Rebel has REBEL ULTRA C?
-
-		if random(Player.maxhealth) > Player.my_health and random(3) < 2 and Player.crown != 2 and Player.canHeal and random(1) <= canHealth
+		var mh = Player.maxhealth;
+		var h = Player.my_health;
+		if Player.ultra_got[62] && Player.altUltra//Living armour
+		{
+			mh = Player.maxarmour
+			h = Player.armour;
+		}
+		if random(mh) > h and random(3) < 2 and Player.crown != 2 and Player.canHeal and random(1) <= canHealth
 		{
 			instance_create(x+random(4)-2,y+random(4)-2,HPPickup)
 			return true;
@@ -167,7 +177,7 @@ function scrDrop(itemdrop, weapondrop) {
 		{
 			if Player.crown == 5//Crown of guns roll again for healthdrop
 			{
-				if random(Player.maxhealth) > Player.my_health and random(3) < 2 and Player.crown != 2 and Player.canHeal and random(1) <= canHealth
+				if random(mh) > h and random(3) < 2 and Player.crown != 2 and Player.canHeal and random(1) <= canHealth
 				{
 					instance_create(x+random(4)-2,y+random(4)-2,HPPickup)
 					return true;

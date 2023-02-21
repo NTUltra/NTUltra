@@ -24,3 +24,5 @@ endImg = sprLaserEnd;
 isUltra = false;
 canBeMoved = false;
 canSmoke = true;
+
+event_perform(ev_alarm,2);

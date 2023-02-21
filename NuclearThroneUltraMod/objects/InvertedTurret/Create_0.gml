@@ -9,6 +9,7 @@ event_inherited()
 hidden = true;
 spr_appear = sprTurretAppearInverted;
 spr_normal = sprTurretIdleInverted;
+spr_walk = sprTurretIdleInverted;
 spr_idle = spr_appear
 spr_hurt = sprTurretHurtInverted;
 spr_dead = sprTurretDeadInverted;

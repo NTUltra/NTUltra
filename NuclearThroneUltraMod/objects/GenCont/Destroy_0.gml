@@ -368,23 +368,29 @@ if instance_exists(Player)
 			}
 		}
 	}
-}
-SetSeed();
-with WepPickup
-{
-	persistent = false;
-	x = Player.x
-	y = Player.y
-	if instance_exists(Floor) && !collision_point(x,y,Floor,false,false)
+	with WepPickup
 	{
-		var f = instance_nearest(x,y,Floor)
-		var o = 16;
-		if f.object_index == FloorExplo
-			o = 8;
-		x = f.x+o;
-		y = f.y+o;
+		persistent = false;
+		x = Player.x
+		y = Player.y
+		if instance_exists(Floor) && !collision_point(x,y,Floor,false,false)
+		{
+			var f = instance_nearest(x,y,Floor)
+			var o = 16;
+			if f.object_index == FloorExplo
+				o = 8;
+			x = f.x+o;
+			y = f.y+o;
+		}
+	}
+	with Crown
+	{
+		x = Player.x;
+		y = Player.y;
 	}
 }
+SetSeed();
+
 with PlayerAlarms//Recheck alarms for certain skills
 	event_user(0);
 

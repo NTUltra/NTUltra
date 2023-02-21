@@ -17,7 +17,7 @@ if instance_exists(Player)
 	&& Player.area != 114 && UberCont.opt_gamemode != 25 && Player.area!=104&&Player.area!=8&&Player.area!=108&&Player.area!=122
 		darkness = 1
 		
-	if Player.totalSkills > 13 - (max(-1,Player.maxarmour-1))
+	if Player.totalSkills > 13 - (max(-1,Player.maxarmour-1-Player.hudArmourSpace))
 	{
 		alarm[1] = 1;
 		skillscrollmax = Player.totalSkills - floor(min(Player.totalSkills,40)/10);

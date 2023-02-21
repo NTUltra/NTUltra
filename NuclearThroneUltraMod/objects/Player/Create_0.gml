@@ -9,6 +9,9 @@ if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK)
 	instance_create(x,y,FPSHACK);	
 }
 depth = 0;
+hudArmourSpace = 0;
+radPickedUp = 0;
+maxRadPickedUp = 100;
 saveLoaded = false;
 outOfCombat = false;
 useGuarenteedReroll = false;
@@ -98,6 +101,7 @@ level = 1
 if instance_exists(BackCont)
 BackCont.alarm[4] = 10;
 canblacksword = false;
+phoenixrevives = 0;
 firedthislevel = false;
 fired = false;
 poppop = false;
@@ -228,6 +232,7 @@ scrSkills()
 scrWeapons();
 unlockAlternativeUltras = false;
 altUltra = false;
+altSkin = false;
 loops = 0;
 //RACE STUFF
 scrLoadRace();
@@ -259,6 +264,11 @@ if race == 11
 if race == 7 && bskin == 2
 {
 	gunY = 4;
+}
+if race == 25
+{
+	//Better mutations
+	maxRadPickedUp = 90;
 }
 
 canSecondaryPop = true;
@@ -409,6 +419,8 @@ if scrIsHardMode()//HARD MODE
 		hard = 3;
 		instance_create(x,y,HardModeChest);
 	}
+	maxRadPickedUp += 40;
+	//Also in startDaily
 }
 inverted = false; //for when entering inverted portals
 invertedportalcounter = 0;
@@ -554,6 +566,7 @@ fromCribToVault = false;
 meltingd = 0;
 lastEnemyKilled = noone;
 patience = 0;
+patienceUsed = 0;
 rage = 0;
 exception = false;
 sharpteeth = 0; //stress embedded

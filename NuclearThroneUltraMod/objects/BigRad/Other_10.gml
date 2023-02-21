@@ -1,16 +1,57 @@
 /// @description Collect
 if instance_exists(Player)
 {
-	instance_destroy()
-	Player.rad += 10
-	if Player.crown == 4
-		Player.rad += 1.8;
-	else if Player.crown == 18
-		Player.rad += 5;
-	if UberCont.radUp
-		Player.rad += 1.5;
-	if Player.ultra_got[83]
-		Player.rad += 2;
+	instance_destroy();
+	with Player
+	{
+		var add = 10;
+		if crown == 4
+			add += 1.8;
+		else if crown == 18
+			add += 5;
+		if UberCont.radUp
+			add += 1.5;
+		if ultra_got[83]
+			add += 2;
+		rad += add;
+		if skill_got[36]
+		{
+			radPickedUp += add;
+			if radPickedUp > maxRadPickedUp
+			{
+				radPickedUp -= maxRadPickedUp;
+				instance_create(x,y,HealAbsorbingPores);
+				var num = 1;
+				if skill_got[9]
+				{
+					num = 2;
+					snd_play(sndAbsorbingPoresHealUpg);
+				}
+				else
+					snd_play(sndAbsorbingPoresHeal);
+				
+				if UberCont.opt_ammoicon
+				{
+					dir = instance_create(x,y,PopupText)
+					dir.sprt = sprHPIconPickup;
+					dir.mytext = "+"+string(num)
+					if Player.my_health = Player.maxhealth
+					dir.mytext = "MAX"
+					else if Player.my_health > Player.maxhealth
+					dir.mytext = "OVER MAX"
+				}
+				else
+				{
+					dir = instance_create(x,y,PopupText)
+					dir.mytext = "+"+string(num)+" HP"
+					if Player.my_health = Player.maxhealth
+					dir.mytext = "MAX HP"
+					else if Player.my_health > Player.maxhealth
+					dir.mytext = "OVER MAX HP"
+				}
+			}
+		}
+	}
 	snd_play(sndRadPickup)
 
 	if Player.skill_got[3]//Pluto

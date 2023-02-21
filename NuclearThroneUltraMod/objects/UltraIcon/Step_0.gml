@@ -19,6 +19,7 @@ if skill = 0
 			ultra_tips[0] = "C.R.E.A.M."
 			cash = maxCash;
 			inDebt = false;
+			scrUnlockAltSkin(race, 0);
 			spr_idle=sprMutant21DIdle;
 			spr_walk=sprMutant21DWalk;
 			spr_hurt=sprMutant21DHurt;
@@ -42,14 +43,16 @@ else if skill == 9 // Strange style
 			ultra_name[9] = "STRANGE STYLE"
 			ultra_text[9] = "STRONGER TELEKINESIS#TELEKINESIS PULLS EVERYTHING TOWARDS YOUR CROSSHAIR"
 			ultra_tips[9] = "something strange"
-			if bskin == 1
+			scrUnlockAltSkin(race, bskin);
+			if bskin == 1 || bskin == 4
 			{
 				spr_idle=sprMutant3EIdle;
 				spr_walk=sprMutant3EWalk;
 				spr_hurt=sprMutant3EHurt;
 				spr_dead=sprMutant3EDead;
+				
 			}
-			else if bskin == 2
+			else if bskin == 2 || bskin == 5
 			{
 				spr_idle=sprMutant3FIdle;
 				spr_walk=sprMutant3FWalk;
@@ -87,6 +90,17 @@ else if skill == 20 && (Player.crown == 23 && Player.skill_got[2] || Player.unlo
 		ultra_text[20] = "YOU CAN MOVE EXTREMELY FAST!#ACCELERATING OR DECCELERATING QUICKLY#CREATES A SONIC BOOM"
 		ultra_tips[20] = "SONIC BOOM!"
 		maxSpeed += 6;
+	}
+}
+else if Player.race == 9 && skill == 33 && (scrHasFireWeapon() || Player.unlockAlternativeUltras)
+{
+	with Player
+	{
+		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+		altUltra = true;
+		ultra_name[33] = "PHOENIX"
+		ultra_text[33] = "WHILE YOU ARE ABOVE LEVEL 1#PREVENT THE LOSS OF YOUR HEAD#INSTEAD, REGAIN ALL YOUR HP#LOSE A LEVEL AND A RANDOM MUTATION##EVERYTIME YOUR DEATH IS PREVENTED#YOU PERMANENTLY BECOME STRONGER#AND YOU LEVEL UP SLOWER"
+		ultra_tips[33] = "rise and rise again"
 	}
 }
 else if skill == 43 && (Player.skill_got[19] && Player.skill_got[17] || Player.unlockAlternativeUltras)
@@ -253,6 +267,7 @@ else if skill == 23 && (Player.race == 6 && scrMeleeWeapons(Player.wep) && scrMe
 		ultra_tips[23] = "why would you forsake us gun god?"
 		if bskin == 0//YV secret skin
 		{
+			scrUnlockAltSkin(race, bskin);
 			spr_idle=sprMutant6DIdle;
 			spr_walk=sprMutant6DWalk;
 			spr_hurt=sprMutant6DHurt;
@@ -260,6 +275,7 @@ else if skill == 23 && (Player.race == 6 && scrMeleeWeapons(Player.wep) && scrMe
 		}
 		else if bskin == 1//YV secret skin
 		{
+			scrUnlockAltSkin(race, bskin);
 			spr_idle=sprMutant6EIdle;
 			spr_walk=sprMutant6EWalk;
 			spr_hurt=sprMutant6EHurt;
@@ -302,15 +318,17 @@ else if skill == 35 && (Player.crown == 12 || Player.unlockAlternativeUltras)//C
 		ultra_name[35] = "SUCOF"
 		ultra_text[35] = "EMIT SESREVER EVICA"//ACTIVE REVERSES TIME
 		ultra_tips[35] = "reverse time"
-		if bskin == 0
+		if bskin == 0 || bskin == 3
 		{
+			scrUnlockAltSkin(race, bskin);
 			spr_idle=sprMutant9DIdle;
 			spr_walk=sprMutant9DWalk;
 			spr_hurt=sprMutant9DHurt;
 			spr_dead=sprMutant9DDead;
 		}
-		else if bskin == 1
+		else if bskin == 1 || bskin == 4
 		{
+			scrUnlockAltSkin(race, bskin);
 			spr_idle=sprMutant9EIdle;
 			spr_walk=sprMutant9EWalk;
 			spr_hurt=sprMutant9EHurt;
@@ -331,20 +349,21 @@ else if skill == 39 && (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUl
 		ultra_text[39] = "+40 MAX HP!#YOU CAN'T HEAL#EVERY LOOP RESET HP TO FULL#ALLIES COST AMMO"
 		ultra_tips[39] = "she is a maniac!"
 		canHeal = false;
-		if bskin == 0
+		scrUnlockAltSkin(race, bskin);
+		if bskin == 0 || bskin == 3
 		{
 			spr_idle=sprMutant10EIdle;
 			spr_walk=sprMutant10EWalk;
 			spr_hurt=sprMutant10EHurt;
 			spr_dead=sprMutant10EDead;
 		}
-		else if bskin == 1
+		else if bskin == 1 || bskin == 4
 		{
 			spr_idle=sprMutant10FIdle;
 			spr_walk=sprMutant10FWalk;
 			spr_hurt=sprMutant10FHurt;
 			spr_dead=sprMutant10FDead;
-		} else if bskin == 2
+		} else if bskin == 2 || bskin == 5
 		{
 			spr_idle=sprMutant10GIdle;
 			spr_walk=sprMutant10GWalk;
@@ -362,6 +381,7 @@ else if skill == 61 && (scrKrakenWeapons(Player.wep) || scrKrakenWeapons(Player.
 		ultra_name[61] = "CAPTAIN OF THE KRAKEN"
 		ultra_text[61] = "KRAKEN WEAPONS DEAL MORE DAMAGE#TENTACLES ARE LONGER#KRAKEN WEAPONS COST 20% LESS AMMO"
 		ultra_tips[61] = "from the sea she came"
+		scrUnlockAltSkin(race, 0);
 		spr_idle=sprMutant16DIdle;
 		spr_walk=sprMutant16DWalk;
 		spr_hurt=sprMutant16DHurt;
@@ -421,6 +441,7 @@ else if skill == 87 && Player.race == 22 && (scrHasAnEmptyLife() || Player.unloc
 		ultra_tips[87] = "rogue freak"
 		rogueammomax --;
 		rogueammo = min(rogueammomax,rogueammo);
+		scrUnlockAltSkin(race, 0);
 		spr_idle=sprMutant22DIdle;
 		spr_walk=sprMutant22DWalk;
 		spr_hurt=sprMutant22DHurt;
@@ -524,16 +545,34 @@ else if skill==14
 else if skill==62
 {
 	//ARMOUR UP viking
-
-with Player{
-	if maxarmour < 1//skelly business hog
-	{
-		armour=0;
-		maxarmour=0;
+	
+	with Player {
+		//No health mutations
+		if (unlockAlternativeUltras || (race == 16 && !skill_got[14] && !skill_got[22] && !skill_got[7] && !skill_got[36] && crown != 20 && !skill_got[32] && !skill_got[31]))
+		{
+			scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			altUltra = true;
+			//maxhealth = round(maxhealth*0.5);
+			ultra_name[62] = "LIVING ARMOUR"
+			ultra_text[62] = "REPLACE ALL YOUR HEALTH WITH ARMOUR##HEALTH DROPS BECOME ARMOUR DROPS##(SECOND STOMACH DOUBLES ARMOUR#FROM ARMOUR DROPS)"
+			ultra_tips[62] = "iron woman"
+			maxarmour += maxhealth;
+			armour += maxhealth;
+			maxhealth = 1;
+			my_health = 1;
+			hudArmourSpace = 6;
+		}
+		else
+		{
+			if maxarmour < 1//skelly business hog
+			{
+				armour=0;
+				maxarmour=0;
+			}
+			armour+=2;
+			maxarmour+=2;
+		}
 	}
-armour+=2;
-maxarmour+=2;
-}
 }
 else if skill==66
 {

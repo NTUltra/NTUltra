@@ -15,9 +15,7 @@ function scrUltras() {
 
 	//FISH
 	ultra_name[1] = "CONFISCATE"
-	ultra_text[1] = "ENEMIES SOMETIMES DROP CHESTS#(EFFECTED BY DROPRATE)"
-	if instance_exists(Player) && Player.skill_got[23]
-		ultra_text[1] = "ENEMIES SOMETIMES DROP CHESTS#(EFFECTED BY DROPRATE)#OPEN MIND INCREASES#CHANCE BY 25%"
+	ultra_text[1] = "ENEMIES SOMETIMES DROP CHESTS#(EFFECTED BY DROPRATE)#OPEN MIND INCREASES#CHANCE BY 10%"
 	ultra_tips[1] = "that's mine"
 
 	ultra_name[2] = "GUN WARRANT"
@@ -239,6 +237,14 @@ function scrUltras() {
 	ultra_name[33] = "HARDER TO KILL"
 	ultra_text[33] = "KILLS EXTEND BLEED TIME"
 	ultra_tips[33] = "immortal"
+	
+	//FIRE WEAPON
+	if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (scrHasFireWeapon() && instance_exists(UltraIcon)))
+	{
+		ultra_name[33] = "PHOENIX"
+		ultra_text[33] = "WHILE YOU ARE ABOVE LEVEL 1#PREVENT THE LOSS OF YOUR HEAD#INSTEAD, REGAIN ALL YOUR HP#LOSE A LEVEL AND A RANDOM MUTATION##EVERYTIME YOUR DEATH IS PREVENTED#YOU PERMANENTLY BECOME STRONGER#AND YOU LEVEL UP SLOWER"
+		ultra_tips[33] = "rise and rise again"
+	}
 
 	ultra_name[34] = "NINJA"
 	ultra_text[34] = "MORE MELEE DAMAGE"
@@ -437,22 +443,29 @@ function scrUltras() {
 		
 	    if instance_exists(Player)
 	    {
-	    if Player.race=19||Player.race=20||Player.race=21{//skeleton hog and horror
-	    ultra_name[62] = "ARMOUR UP"
-	    ultra_text[62] = "GAIN ONE ARMOUR EACH AREA#INCREASE ARMOUR MAX BY TWO"
-	    ultra_tips[62] = "tank up"
+		    if Player.race=19||Player.race=20||Player.race=21{//skeleton hog and horror
+			    ultra_name[62] = "ARMOUR UP"
+			    ultra_text[62] = "GAIN ONE ARMOUR EACH AREA#INCREASE ARMOUR MAX BY TWO"
+			    ultra_tips[62] = "tank up"
+		    }
+		    else {
+			    ultra_name[62] = "ARMOUR UP"
+			    ultra_text[62] = "GAIN ONE EXTRA ARMOUR EACH AREA#INCREASE ARMOUR MAX BY TWO"
+			    ultra_tips[62] = "tank up"
+		    }
 	    }
-	    else{
-	    ultra_name[62] = "ARMOUR UP"
-	    ultra_text[62] = "GAIN ONE EXTRA ARMOUR EACH AREA#INCREASE ARMOUR MAX BY TWO"
-	    ultra_tips[62] = "tank up"
+	    else {
+		    ultra_name[62] = "ARMOUR UP"
+		    ultra_text[62] = "GAIN ONE EXTRA ARMOUR EACH AREA#INCREASE ARMOUR MAX BY TWO"
+		    ultra_tips[62] = "tank up"
 	    }
-	    }
-	    else{
-	    ultra_name[62] = "ARMOUR UP"
-	    ultra_text[62] = "GAIN ONE EXTRA ARMOUR EACH AREA#INCREASE ARMOUR MAX BY TWO"
-	    ultra_tips[62] = "tank up"
-	    }
+		//IF no health mutations
+		if instance_exists(Player) && Player.race == 16 && (Player.altUltra || Player.unlockAlternativeUltras || (!Player.skill_got[14] && !Player.skill_got[22] && !Player.skill_got[7] && !Player.skill_got[36] && Player.crown != 20 && !Player.skill_got[32] && !Player.skill_got[31] && instance_exists(UltraIcon)))
+		{
+			ultra_name[62] = "LIVING ARMOUR"
+			ultra_text[62] = "REPLACE ALL YOUR HEALTH WITH ARMOUR##HEALTH DROPS BECOME ARMOUR DROPS##(SECOND STOMACH DOUBLES ARMOUR#FROM ARMOUR DROPS)"
+			ultra_tips[62] = "iron woman"
+		}
 		
 	    ultra_name[63] = "COLD HEART"
 	    ultra_text[63] = "ARMOUR STRIKE USES 3HP#INSTEAD OF ARMOUR##ARMOUR STRIKE FREEZES ENEMIES##WHILE YOU HAVE ARMOUR#INCREASE PRIMARY FIRERATE BY 30%"//"ARMOUR STRIKE FREEZES ENEMIES#AND DEALS MORE DAMAGE#WHEN YOU HAVE NO MORE ARMOUR#YOU CAN USE 2HP TO USE AN ARMOUR STRIKE"

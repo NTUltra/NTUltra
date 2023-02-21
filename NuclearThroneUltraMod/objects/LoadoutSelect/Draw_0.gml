@@ -151,7 +151,23 @@ else if skin = 2
 }
 else
 {
-draw_text_color(sx+1,__view_get( e__VW.YView, 0 )+67,string_hash_to_newline("SKIN: A"),c_white,c_white,c_white,c_white,1);
+	var letter = "A";
+	switch (skin)
+	{
+		case 3:
+			letter = "D";
+		break;
+		case 4:
+			letter = "E";
+		break;
+		case 5:
+			letter = "F";
+		break;
+		default:
+			letter = "A";
+		break;
+	}
+draw_text_color(sx+1,__view_get( e__VW.YView, 0 )+67,string_hash_to_newline("SKIN: " + string(letter)),c_white,c_white,c_white,c_white,1);
 draw_set_halign(fa_left)
 drawMenuBSkin(skin,race,c_white);
 }

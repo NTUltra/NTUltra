@@ -15,7 +15,7 @@ if (hundredPercentI) >= array_length(hundredPercent)
 		//Crownstart unlock
 		var cir = 0;
 		ctot_all_crowns_taken[dir] = 0;
-		repeat(crownmax+9)
+		repeat(crownmax+10)
 		{
 			ctot_crown_taken[dir,cir] = 1;
 			if (cir > 1)

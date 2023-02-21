@@ -7,7 +7,7 @@ UberCont.skin[race]=skin;
 else if UberCont.skin[race]=2 && UberCont.race_cskin[race]=1
 UberCont.skin[race]=skin;
 else
-UberCont.skin[race]=0;
+	UberCont.skin[race] = skin;
 
 //standard weapon
 if wep = 0
@@ -93,44 +93,40 @@ if race != 0 && UberCont.mouse__x > sx-24 and UberCont.mouse__x < sx and UberCon
 
 	if mouse_check_button_pressed(mb_left)
 	{
-	/*
-	if UberCont.race_bskin[race]=1&&UberCont.race_cskin[race]=1//you have a bskin and a cskin for this character
-	{
-	skin++
-	if skin>2
-	skin=0
-	}
-	else if UberCont.race_bskin[race]=1//you have a skin for this character
-	{
-
-	skin++
-	if skin>1
-	skin=0
-
-
-
-	}
-	else//you have no new skins
-	{
-	skin=0;
-	}*/
-
 		skin++
-		if skin>2
-		skin=0
+		if skin > 2
+		{
+			//Secret skins
+			while (
+				(!UberCont.race_dskin[race] && skin == 3) ||
+				(!UberCont.race_eskin[race] && skin == 4) ||
+				(!UberCont.race_fskin[race] && skin == 5)
+			)
+			{
+				skin++
+			}
+			debug("d " , UberCont.race_dskin[race]);
+			debug("e " , UberCont.race_eskin[race]);
+			debug("f " , UberCont.race_fskin[race]);
+			debug("SKIN: ", skin);
+			if skin > 5
+				skin = 0
+		}
 
-		if skin=1 && UberCont.race_bskin[race]=1
-			UberCont.skin[race]=skin;
-		else if skin=2 && UberCont.race_cskin[race]=1
-			UberCont.skin[race]=skin;
-		else
-			UberCont.skin[race]=0;
+		if skin == 1 && UberCont.race_bskin[race]
+			UberCont.skin[race] = skin;
+		else if skin == 2 && UberCont.race_cskin[race]
+			UberCont.skin[race] = skin;
+		else if skin == 0
+			UberCont.skin[race] = 0;
+		else 
+			UberCont.skin[race] = skin;
 		
 		snd_play_2d(choose(sndMenuASkin,sndMenuBSkin));
 	}
 
 	with UberCont
-	scrSave();
+		scrSave();
 
 }
 else

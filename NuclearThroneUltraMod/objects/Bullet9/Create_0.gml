@@ -23,8 +23,8 @@ alarm[1]=4;
 }
 }
 
-typ = 1
-ShotgunShouldersType();
+//ShotgunShouldersType();
+typ = 3;
 dmg=3;
 turned=false;
 

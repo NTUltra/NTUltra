@@ -177,8 +177,13 @@ function scrCrowns() {
 	crown_text[31] = "-2 MAX HP# AT THE END OF EACH AREA#GAIN 20 KILLS"
 	crown_used[31] = 0
 	crown_tips[31] = "no pain no gain"
-
-	crownmax = 23//+9
+	
+	crown_name[32] = "[CROWN OF MISFORTUNE]"
+	crown_text[32] = "LOWER DROPRATE#PICKUPS GIVE BOTH HEALTH AND AMMO"
+	crown_used[32] = 0
+	crown_tips[32] = "don't leave it up to chance"
+	
+	crownmax = 23//+10
 
 
 

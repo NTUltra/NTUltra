@@ -1,6 +1,5 @@
 /// @description Explode it
 instance_destroy()
-snd_play(sndPlantPower);
 if !instance_exists(SnareTimer)
 {
 	instance_create(x,y,SnareTimer);
@@ -11,6 +10,37 @@ else
 		event_user(0);
 }
 if instance_exists(Player){
+	if Player.skill_got[5]
+	{
+		if Player.ultra_got[17]
+		{
+			snd_play(sndPlantSnareTrapperTB);
+		}
+		else if Player.ultra_got[20]
+		{
+			snd_play(sndPlantSnareTB);
+		}
+		else
+		{
+			snd_play(sndPlantSnare);
+		}
+	}
+	else
+	{
+		if Player.ultra_got[17]//Big
+		{
+			snd_play(sndPlantSnareTrapper);
+		}
+		else if Player.ultra_got[20]//Stereo
+		{
+			snd_play(sndPlantSnare);
+		}
+		else
+		{
+			snd_play(sndPlantPower);
+		}
+	}
+	
 	if (Player.ultra_got[17])
 	{
 

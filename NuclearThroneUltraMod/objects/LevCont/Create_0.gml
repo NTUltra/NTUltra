@@ -13,7 +13,7 @@ with UberCont
 {
 	if (useSeed)
 	{
-		random_set_seed(seed+Player.level);
+		random_set_seed(seed+Player.level+Player.patienceUsed);
 	}
 }
 if Player.crownpoints > 0
@@ -56,10 +56,10 @@ if dir<12
 			crown = 24;
 		else if crown == 11
 		{
-			//Upgrade crown fo reincarnation
+			//Upgrade crown of reincarnation
 			if Player.level > 9
 				sprite_index = sprCrownOfReincarnationUpgraded;
-		} 
+		}
 		if UberCont.opt_gamemode == 27
 		{
 			if crown == 7
@@ -74,8 +74,15 @@ if dir<12
 	}
 }
 else
-{with instance_create(__view_get( e__VW.XView, 0 )+14+(dir-12)*26.5,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-16,CrownIcon)//24
-crown = other.dir
+{
+	with instance_create(__view_get( e__VW.XView, 0 )+14+(dir-12)*26.5,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-16,CrownIcon)//24
+	{
+		crown = other.dir
+		if crown == 22 && Player.crown == 22//Luck to misfortune
+		{
+			crown = 32;
+		}
+	}
 }
 dir += 1}
 }
@@ -120,8 +127,8 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 		{
 			var xx = __view_get( e__VW.XView, 0 )+16;
 			var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24;
-			var step = 30;
-			scrollWidth = (-(__view_get( e__VW.WView, 0 ))) - 8
+			var step = 31;
+			scrollWidth = step + (-(__view_get( e__VW.WView, 0 ))) - 8
 			scroll = 0;
 			var gotNoSkills = true;
 			for (var i = 0; i <= maxultra; i++) {
@@ -150,7 +157,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 		}
 	    else if Player.crown != 8
 		{
-		    if Player.race=21//horror
+		    if Player.race == 21//horror
 		    {
 		    if (Player.ultra_got[skill1] == 0)
 		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-64,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
@@ -199,7 +206,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 		else
 		{
 			//CROWN OF DESTINYYYYYYY
-			if Player.race=21//horror
+			if Player.race == 21//horror
 			{
 			do {
 			chosenskill=choose(skill1,skill2,skill3,skill4)
@@ -301,7 +308,10 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 		}
 	}
     scrSkills()//maybe dont run this when ultra
-    
+    if (Player.skillsChosen == 7 && !Player.useGuarenteedReroll)//Fake pocession of patience
+	{
+		Player.skill_got[27] = 1;
+	}
     if scrSkillLeft(0,0,0,0) 
 	{
     do skill1 = ceil(random(maxskill))
@@ -349,7 +359,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
     else
     skill5=maxskill+1
     
-	if Player.race=21//Horror
+	if Player.race == 21 || Player.phoenixrevives > 6//Horror
     {
 		if scrSkillLeft(skill5,skill4,skill3,skill2,skill1) 
 		{
@@ -369,8 +379,8 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 	{
 		var xx = __view_get( e__VW.XView, 0 )+16;
 		var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24;
-		var step = 30;
-		scrollWidth = (-(__view_get( e__VW.WView, 0 ))) - 8
+		var step = 31;
+		scrollWidth = step + (-(__view_get( e__VW.WView, 0 ))) - 8
 		scroll = 0;
 		var gotNoSkills = true;
 		for (var i = 0; i <= maxskill; i++) {
@@ -424,11 +434,12 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
     else if Player.crown != 8
     {
     
-    if Player.race=21//Horror
+    if Player.race == 21 || Player.phoenixrevives > 6//Horror
     {
     if Player.ultra_got[73] || (Player.skillsChosen == 7 && !Player.useGuarenteedReroll)//Melting ultra A patience
 	{
 		Player.useGuarenteedReroll = true;
+		Player.skill_got[27] = 0;
 		with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-140,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
 			skill = 27
 	}
@@ -457,6 +468,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 	    if Player.ultra_got[73] || (Player.skillsChosen == 7 && !Player.useGuarenteedReroll)//Melting ultra A patience
 	    {
 			Player.useGuarenteedReroll = true;
+			Player.skill_got[27] = 0;
 		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-96,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
 				skill = 27
 	    }
@@ -480,7 +492,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
     else
     {
     //CROWN OF DESTINYYYYYYY
-    if Player.race=21
+    if Player.race == 21 || Player.phoenixrevives > 6
     {//horror
     
 	chosenskill=choose(skill1,skill2,skill3,skill4)
@@ -502,6 +514,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 	    if Player.ultra_got[73] || (Player.skillsChosen == 7 && !Player.useGuarenteedReroll)//Melting ultra A patience
 	    {
 			Player.useGuarenteedReroll = true;
+			Player.skill_got[27] = 0;
 		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
 				skill = 27
 	    }

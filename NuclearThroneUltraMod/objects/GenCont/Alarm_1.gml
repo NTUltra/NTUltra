@@ -56,9 +56,11 @@ if ( (Player.area = 101 && Player.area = 10)  && Player.subarea == 1) {
 		instance_destroy(id,false);
     }
 }
-
+//PLAYER START POSITION
 Player.x = 10016
 Player.y = 10016
+if (Player.area == 9 || Player.area == 118) && Player.subarea == 3
+	Player.y -= 64;
 if UberCont.opt_gamemode == 25
 {
 	Player.x = SurvivalArenaStarter.x;

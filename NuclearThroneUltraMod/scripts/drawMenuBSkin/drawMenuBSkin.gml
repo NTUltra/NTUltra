@@ -12,6 +12,18 @@ function drawMenuBSkin(skin,race,theColour){
 	{
 		var spr = asset_get_index("sprMutant" + string(race)+"CIdle");
 	}
+	else if (skin == 3)
+	{
+		var spr = scrLeaderboardRace(race,0,true,0);
+	}
+	else if (skin == 4)
+	{
+		var spr = scrLeaderboardRace(race,1,true,0);	
+	}
+	else if (skin == 5)
+	{
+		var spr = scrLeaderboardRace(race,2,true,0);
+	}
 	else
 	{
 		var spr = asset_get_index("sprMutant" + string(race)+"Idle");

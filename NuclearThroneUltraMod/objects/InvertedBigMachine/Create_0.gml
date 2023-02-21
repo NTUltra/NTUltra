@@ -16,8 +16,7 @@ snd_dead = sndNothingTaunt
 
 //behavior
 gunangle = random(360)
-alarm[1] = 90
-alarm[2] = 30
+
 wkick = 0
 image_speed=0.4;
 
@@ -27,8 +26,11 @@ with instance_create(x-64,y+32,InvertedBigMachineTurret)
 {
 	alarm[1] += 5;	
 }
+if instance_exists(GenCont)
+alarm[5] = GenCont.alarm[0] + 2;
 
-
+alarm[1] = 120 + alarm[5];
+alarm[2] = 30 + alarm[5];
 
 if UberCont.opt_gamemode = 6 && instance_exists(Player)
 {

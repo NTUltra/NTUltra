@@ -1,10 +1,10 @@
 /// @description Expose now
-if spr_idle != sprInvertedBigMachineExposed
-{
+alarm[3]=80;//EXPOSURE TIME!
+//if spr_idle != sprInvertedBigMachineExposed
+//{
 	image_index=0;
 	spr_idle=sprInvertedBigMachineExposed;
 	spr_walk=sprInvertedBigMachineExposed;
-	alarm[3]=80;//EXPOSURE TIME!
 	if instance_exists(Player)
 	{
 	if Player.loops>0
@@ -24,4 +24,4 @@ if spr_idle != sprInvertedBigMachineExposed
 	ammo=6+Player.loops//EXPOSURE TIME!
 	}
 	}
-}
+//}

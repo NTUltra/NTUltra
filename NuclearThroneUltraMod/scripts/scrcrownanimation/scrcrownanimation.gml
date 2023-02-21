@@ -130,5 +130,9 @@ function scrCrownAnimation(takenCrown){
 			spr_idle = sprCrown30Idle
 			spr_walk = sprCrown30Walk
 		break;
+		case 32://Misfortune
+			spr_idle = sprCrown31Idle
+			spr_walk = sprCrown31Walk
+		break;
 	}
 }
