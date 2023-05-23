@@ -1,9 +1,8 @@
 scrDrop(100,50)
-scrDrop(10,0)
 event_inherited();
 scrBossKill();
 if UberCont.area == 114 || UberCont.area == 123
-scrDefeatedRequiredBoss(secretChallengeBosses.bushBox);
+	scrDefeatedRequiredBoss(secretChallengeBosses.bushBox);
 scrEndBossMusic();
 repeat(30)
 {

@@ -19,8 +19,13 @@ if other.team != team && team != 0
 			if ultra_got[58]
 				contactDmg += 6;
 		}
-		if contactDmg > 0
+		if contactDmg > 0 && PlayerAlarms2.alarm[3] < 1
 		{
+			if UberCont.normalGameSpeed == 60
+			{
+				PlayerAlarms2.alarm[3] = 1;
+					
+			}
 			snd_play(sndGammaGutsProc);
 			with other
 			{

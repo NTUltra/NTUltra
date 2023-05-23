@@ -1,16 +1,21 @@
 /// @description 60 FPS
 var dt = 0.5;
-
+var al = ds_list_size(forcePositions)
+for (var i = 0; i < al; i++)
+{
+	instance_deactivate_object(forcePositions[| i]);
+}
 with all
 {
 	//x = xprevious + (x - xprevious) * 0.5;
 	//y = yprevious + (y - yprevious) * 0.5;
+	
 	if speed > friction
 	{
 		//x -= hspeed*dt;
 		//y -= vspeed*dt;
-		x = xprevious + (x - xprevious) * 0.5;
-		y = yprevious + (y - yprevious) * 0.5;
+		x = xprevious + ((x - xprevious) * dt);
+		y = yprevious + ((y - yprevious) * dt);
 		speed += friction*dt;
 	}
 	image_index = clamp(0,image_index - image_speed*dt,image_number);
@@ -22,6 +27,11 @@ with all
 		i++;
 	}*/
 }
+for (var i = 0; i < al; i++)
+{
+	instance_activate_object(forcePositions[| i]);
+}
+ds_list_clear(forcePositions);
 //Individual timers
 with Player
 {
@@ -41,8 +51,6 @@ with Player
 	if race=22
 		blastArmourDelay += dt;
 	wave -= 0.4*dt;
-	if hammerheadtimer > 0
-		hammerheadtimer -= dt;
 }
 with SnowFlake
 	wave -= 0.1;
@@ -50,12 +58,127 @@ with WeaponMod
 	wave -= 0.2;
 with ToxicGas
 {
-	image_xscale += growspeed*0.5;
-	image_yscale += growspeed*0.5;
+	
+	image_xscale -= growspeed*dt;
+	image_yscale -= growspeed*dt;
+	image_angle -= rot*dt
+	if growspeed > -0.005
+	growspeed += 0.0003
+if image_xscale < 0.4
+	growspeed += 0.01
 }
-	/*
-with ArmourStrike
+with PlasmaBall
 {
-	image_yscale += 0.1155
-}*/
-//There are probably a ton of enemies that also have localized timers run itterated in step events
+	image_xscale-=0.0155;
+	image_yscale-=0.0155;
+}
+with RedirectorPlasmaBall
+{
+	image_xscale-=0.016;
+	image_yscale-=0.016;
+}
+with PopoPlasmaBall
+{
+	image_xscale-=0.05;
+	image_yscale-=0.05;
+}
+with MiniPlasmaBall
+{
+	image_xscale-=0.015;
+	image_yscale-=0.015;
+}
+with MiniSplasmaBall
+{
+	image_xscale-=0.0155;
+	image_yscale-=0.0155;
+}
+with BouncerPlasmaBall
+{
+	image_xscale-=0.01;
+	image_yscale-=0.01;
+}
+with BouncerPlasmaBallBig
+{
+	image_xscale-=0.01;
+	image_yscale-=0.01;
+}
+with PlasmaBig
+{
+	image_xscale-=0.015;
+	image_yscale-=0.015;
+}
+with PlasmaHuge
+{
+	image_xscale-=0.015;
+	image_yscale-=0.015;
+}
+with Disc
+{
+	dist -= dt;
+}
+with Blade
+{
+	dist -= dt;
+}
+with SplitBlade
+{
+	dist -= dt;
+}
+with SuperSplitBlade
+{
+	dist -= dt;
+}
+with UltraBlade
+{
+	dist -= dt;
+}
+with ChunkyBlade
+{
+	dist -= dt;
+}
+with BladeSplintershooter
+{
+	dist -= dt;
+}
+with Raven
+{
+	nofly += 0.25;	
+}
+with InvertedRaven
+{
+	nofly += 0.25;	
+}
+with enemy
+{
+	existTime -= dt;
+	if walk > 0
+		walk += dt;
+}
+with LilHunterFly {
+	if sprite_index = sprLilHunterLift
+	{
+		z -= 4;
+	}
+	else if sprite_index = sprLilHunterLand
+	{
+		z -= 5;	
+	}
+}
+with InvertedLilHunterFly {
+	if sprite_index = sprInvertedLilHunterLift
+	{
+		z -= 4;
+	}
+	else if sprite_index = sprInvertedLilHunterLand
+	{
+		z -= 5;	
+	}
+}
+with LilHunterDie
+{
+	direction -= 0.25;
+}
+with InvertedLilHunterDie
+{
+	direction -= 0.25;
+}

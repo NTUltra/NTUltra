@@ -7,4 +7,7 @@ sprite_index = spr_fire
 alarm[1] = 55+random(15)
     
 if random(5)<1
-scrDrop(90,0);
+{
+	scrAddDrops(1);
+	scrDrop(90,0);
+}

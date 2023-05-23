@@ -15,5 +15,3 @@ alarm[1] = 30+random(90)
 alarm[0] = 10+random(10)
 maxSpeed = 2;
 walk = 0
-
-debug("CREATE A CROWN");

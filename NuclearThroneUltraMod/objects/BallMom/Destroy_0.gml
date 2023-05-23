@@ -1,5 +1,5 @@
 dir = random(360)
-scrDrop(100,10);
+scrDrop(100,20);
 scrDrop(100,0);
 scrEnemyDeathEvent();
 Sleep(50)

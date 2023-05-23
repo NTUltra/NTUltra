@@ -1,4 +1,4 @@
-scrDrop(1,20)
+scrDrop(4,20)
 
 if (charge || fire)
 {

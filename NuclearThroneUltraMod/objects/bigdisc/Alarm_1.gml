@@ -36,7 +36,8 @@ if active && target > -1 && instance_exists(target) && target != noone && point_
 		team = other.team
 		alarm[1] = 0;
 	}
-	scrDrop(5,0);
+	scrAddDrops(1);
+	scrDrop(10,0);
 }
 if !lowHealth && my_health < 0.4
 {

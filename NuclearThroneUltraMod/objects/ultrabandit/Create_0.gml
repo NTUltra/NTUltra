@@ -38,3 +38,4 @@ if loops > 2
 	pspeed = 5.8;
 	maxSpeed = 5.25;
 }
+scrAddDrops(1);

@@ -13,5 +13,8 @@ if instance_exists(Player)
 	alarm[2] = max(sprite_get_number(spr_fire)/image_speed,alarm[2]);
 	instance_create(x,y,BigWallBreak);
 	if place_meeting(x,y,Floor)
+	{
+		scrAddDrops(1);
 		scrDrop(7,0);
+	}
 }

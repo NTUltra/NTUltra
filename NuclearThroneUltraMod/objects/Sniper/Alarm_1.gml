@@ -14,7 +14,7 @@ if random(3) < 2
 {
 snd_play(sndSniperTarget)
 walk = 0
-alarm[1] = tellTime+10;
+alarm[1] = tellTime+actTime+10;
 alarm[2] = tellTime;
 gonnafire = 1
 }

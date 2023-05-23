@@ -11,6 +11,7 @@ image_index = 0
 snd_play(snd_hurt, hurt_pitch_variation,true)
 
 motion_add(other.direction,5)
+scrForcePosition60fps();
 if speed > maxSpeed + 2
 	speed = maxSpeed + 2;
 }

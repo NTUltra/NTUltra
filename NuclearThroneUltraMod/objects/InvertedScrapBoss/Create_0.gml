@@ -67,5 +67,3 @@ scrInvertedRavenLift()
 }
 
 originalgunangle=gunangle;
-
-

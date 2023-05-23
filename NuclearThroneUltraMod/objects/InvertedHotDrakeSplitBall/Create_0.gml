@@ -14,3 +14,4 @@ alarm[1]=55;
 snd_loop(sndDragonLoop);
 dmg = 16;
 inverted = false;
+scrInitDrops(1);

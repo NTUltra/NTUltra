@@ -29,6 +29,8 @@
   "gridY": 0,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5f3a7809-f0cf-4e71-896a-168e15a72095",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"356654f7-f7ec-4bc0-8f57-4f351d683538",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bd47f655-68f9-4d2c-8958-feb4ce64b532",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -40,12 +42,14 @@
     "playbackSpeedType": 1,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 1.0,
+    "length": 3.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"2c106ee3-495a-456c-8e48-da61a1a75bf5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5f3a7809-f0cf-4e71-896a-168e15a72095","path":"sprites/sprNothingMiddleDeactivated/sprNothingMiddleDeactivated.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1328c1d4-6405-495d-a302-5943b0828205","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"356654f7-f7ec-4bc0-8f57-4f351d683538","path":"sprites/sprNothingMiddleDeactivated/sprNothingMiddleDeactivated.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8c9f74aa-738f-409e-85a5-4b5261d1cff4","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bd47f655-68f9-4d2c-8958-feb4ce64b532","path":"sprites/sprNothingMiddleDeactivated/sprNothingMiddleDeactivated.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,

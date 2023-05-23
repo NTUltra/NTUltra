@@ -18,7 +18,10 @@ alarm[1]=75;
 ammo=5;
 
 if random(6)
-scrDrop(36,0);
+{
+	scrDrop(36,0);
+	scrAddDrops(1);
+}
 
 //sprite_index = spr_idle
 }

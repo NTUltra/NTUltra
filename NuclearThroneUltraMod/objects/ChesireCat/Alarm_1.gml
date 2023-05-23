@@ -38,7 +38,10 @@ if dis<240
 			    alarm[1] = 38+random(10)
     
 			    if  random(5)<1 && !collision_point(x,y,Wall,false,false)
+				{
+					scrAddDrops(1);
 					scrDrop(50,0);
+				}
 		    }
 		    else if random(7)<1//spin
 		    {
@@ -79,7 +82,10 @@ if dis<240
 		    else if random(3)<1{
     
 		    if random(5)<1 && !collision_point(x,y,Wall,false,false)
-		    scrDrop(80,0);
+			{
+				scrAddDrops(1);
+				scrDrop(80,0);
+			}
     
 			    walk=14+random(12);
 			    alarm[1]=walk;
@@ -154,7 +160,10 @@ walk=30+random(10)
 alarm[1]=walk;}
 
 if random(40)<1 && !collision_point(x,y,Wall,false,false)
+{
+	scrAddDrops(1);
     scrDrop(90,1);
+}
 
 /* */
 /*  */

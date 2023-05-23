@@ -153,37 +153,49 @@ function scrCrowns() {
 	crown_used[26] = 0
 	crown_tips[26] = "just give it a gun and it is fun"
 	
+	//Morph or disco
 	crown_name[27] = "[CROWN OF DISCO]"
 	crown_text[27] = "DANCE BABY DANCE!#WARNING FLASHING LIGHTS"
 	crown_used[27] = 0
 	crown_tips[27] = "disco!"
 	
+	//COB
 	crown_name[28] = "[CROWN OF APOCALYPSE]"
 	crown_text[28] = "ABSURD AMOUNT OF ENEMIES!#ALMOST NO RADS"
 	crown_used[28] = 0
 	crown_tips[28] = "your death has been signed#when you gave in to your greed"
 	
+	//Weapon mods
 	crown_name[29] = "[CROWN OF PURITY]"
 	crown_text[29] = "DISABLE WEAPON MODS#FOR EACH WEAPON MOD ON A WEAPON#GAIN +1 MAX HP#WHILE HOLDING THAT WEAPON"
 	crown_used[29] = 0
 	crown_tips[29] = "pure"
 	
+	//Daily
 	crown_name[30] = "[CROWN OF MERCENARY]"
 	crown_text[30] = "+2 MAX HP# AT THE END OF EACH AREA#LOSE 20 KILLS"
 	crown_used[30] = 0
 	crown_tips[30] = "there is no crime worse than tax fraud"
 	
+	//Mercenary
 	crown_name[31] = "[CROWN OF BOUNTY]"
 	crown_text[31] = "-2 MAX HP# AT THE END OF EACH AREA#GAIN 20 KILLS"
 	crown_used[31] = 0
 	crown_tips[31] = "no pain no gain"
 	
+	//Luck
 	crown_name[32] = "[CROWN OF MISFORTUNE]"
 	crown_text[32] = "LOWER DROPRATE#PICKUPS GIVE BOTH HEALTH AND AMMO"
 	crown_used[32] = 0
 	crown_tips[32] = "don't leave it up to chance"
 	
-	crownmax = 23//+10
+	//Visit a vault twice with the same crown?
+	crown_name[33] = "[CROWN OF ECHO]"
+	crown_text[33] = "YOUR WEAPONS FIRE TWICE#RELOAD TIME IS ALMOST DOUBLED"
+	crown_used[33] = 0
+	crown_tips[33] = "duplication"
+	
+	crownmax = 23//+11
 
 
 

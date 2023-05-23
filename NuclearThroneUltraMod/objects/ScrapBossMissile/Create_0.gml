@@ -22,3 +22,4 @@ if instance_exists(Player)
 		proj = EnemyBouncerBullet
 }
 
+scrInitDrops(1);

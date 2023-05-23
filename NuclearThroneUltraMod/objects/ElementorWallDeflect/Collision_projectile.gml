@@ -70,12 +70,13 @@ if instance_exists(Player)
 					snd_play(sndRicochetWall,0.1,true);
 					event_user(15);
 				}
-				else if typ == 0
+				else if typ == 0 && !canBeMoved
 				{
 					var d = point_distance(xstart,ystart,other.x,other.y) - 1;
 					x = xstart + lengthdir_x(d,image_angle);
 					y = ystart + lengthdir_y(d,image_angle);
-					image_xscale = point_distance(x,y,xstart,ystart)*0.5	
+					image_xscale = point_distance(x,y,xstart,ystart)*0.5
+					alarm[0] ++;
 				}
 				else
 				{

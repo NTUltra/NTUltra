@@ -1,4 +1,4 @@
-scrDrop(16,5)
+scrDrop(18,0)
 scrRaddrop();
 event_inherited()
 

@@ -31,14 +31,20 @@ else
 }
 
 team = -1
-if instance_exists(Player) && object_index == Explosion{
-	if Player.ultra_got[57]//atom bomb
+if instance_exists(Player) {
+	if Player.ultra_got[57]
 	{
-		//FIERY EXPLOSIONS
-		alarm[2] = irandom_range(1,4);
-		alarm[1]=11;
+		dmg += 3;
 	}
-	scrCrownOfDeath();
+	if object_index == Explosion {
+		if Player.ultra_got[57]//atom bomb
+		{
+			//FIERY EXPLOSIONS
+			alarm[2] = irandom_range(1,4);
+			alarm[1]=11;
+		}
+		scrCrownOfDeath();
+	}
 }
 
 alarm[0]=3;

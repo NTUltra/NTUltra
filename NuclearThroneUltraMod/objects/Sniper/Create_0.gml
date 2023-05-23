@@ -29,10 +29,10 @@ loops = GetPlayerLoops();
 if loops > 11
 proj = EnemyBullet1Square;
 tellTime = 30
-actTime = 20;
+actTime = 25;
 if loops > 0
 {
-	tellTime = 20;
+	tellTime = 22;
 	actTime = 10;
 }
 alarm[0] = 1;

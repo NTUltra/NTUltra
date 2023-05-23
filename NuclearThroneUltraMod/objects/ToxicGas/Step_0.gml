@@ -5,9 +5,9 @@ if image_xscale+growspeed < 1
 }
 
 if growspeed > -0.005
-growspeed -= 0.0006
+	growspeed -= 0.0006
 if image_xscale < 0.4
-growspeed -= 0.02
+	growspeed -= 0.02
 image_angle += rot
 
 if image_xscale < 0.15

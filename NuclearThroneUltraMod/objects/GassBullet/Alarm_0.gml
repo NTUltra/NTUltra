@@ -1,3 +1,4 @@
 /// @description Gass
-instance_create(x,y,ToxicGas)
+with instance_create(x,y,ToxicGas)
+	cantHitTeam = other.team;
 alarm[0] = 1;

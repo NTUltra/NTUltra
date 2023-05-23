@@ -1,4 +1,12 @@
 styleb=0;//this is to prevent parent related bugs
+canCount = true;
+var of = instance_place(x,y,Floor)
+if of != noone && of.object_index != FloorExplo
+{
+	canCount = false;
+    instance_destroy();
+}
+depth = 8;
 image_index = choose(0,0,0,0,0,0,0,1,2)
 image_speed = 0
 if random(500) < 1

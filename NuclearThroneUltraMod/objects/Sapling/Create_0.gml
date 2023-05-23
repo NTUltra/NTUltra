@@ -35,3 +35,4 @@ wkick = 0
 
 /* */
 /*  */
+scrInitDrops(1);

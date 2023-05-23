@@ -1,6 +1,21 @@
 raddrop = 80
-maxhealth = 900
+maxhealth = 820
 scrBossHealthBuff();
+var loops = GetPlayerLoops();
+if loops > 0
+{
+	with instance_create(x,y,DragonShield)
+		myDragon = other.id;
+	}
+if loops > 2
+{
+	with instance_create(x,y,DragonShield)
+	{
+		xOffset -= 30;
+		myDragon = other.id;
+		waveSpeed *= -1;
+	}
+}
 with chestprop {
 	var f = instance_nearest(Player.x + random_range(32,200), Player.y + random_range(128,500), Floor);
 	x = f.x+16;
@@ -45,3 +60,4 @@ mask_index=mskPickupThroughWall;
 
 /* */
 /*  */
+scrAddDrops(1);

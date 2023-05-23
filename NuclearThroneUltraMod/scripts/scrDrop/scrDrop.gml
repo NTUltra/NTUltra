@@ -3,6 +3,13 @@ function scrDrop(itemdrop, weapondrop) {
 	var dropRateBuff = 0;
 	if instance_exists(Player)
 	{
+		var mh = Player.maxhealth;
+		var h = Player.my_health;
+		if Player.ultra_got[62] && Player.altUltra//Living armour
+		{
+			mh = Player.maxarmour
+			h = Player.armour;
+		}
 		var rebelBuff = 0;
 		if Player.ultra_got[39] && !Player.altUltra
 			rebelBuff = instance_number(Ally)*0.15;
@@ -15,7 +22,7 @@ function scrDrop(itemdrop, weapondrop) {
 		+ (Player.skill_got[28]*(Player.rage*0.0011))//max is 60%
 		if Player.crown == 21 //Crown of risk
 		{
-			if Player.my_health >= floor(Player.maxhealth*0.75)
+			if h >= floor(mh*0.75)
 			{
 				dropRateBuff += 0.7;
 			}
@@ -127,7 +134,7 @@ function scrDrop(itemdrop, weapondrop) {
 		need += 0.73
 	else if Player.ammo[Player.wep_type[Player.bwep]] > Player.typ_amax[Player.wep_type[Player.bwep]]*(0.6-(Player.skill_got[10]*0.1))
 		need += 0.08 else need += 0.36
-	if random(Player.maxhealth) > Player.my_health
+	if random(mh) > h
 		need += 0.08;
 
 	if (Player.ultra_got[1]==1)//FISH ULTRA A Confiscate
@@ -138,9 +145,14 @@ function scrDrop(itemdrop, weapondrop) {
 			confDroprate += 0.15;
 		}
 		confDroprate *= 0.28;
-	    if (itemdrop > 0 && random(110) < min((itemdrop*0.5) * ((need*0.25) + confDroprate), 110))//rage=0.001
+		if confDropChanceIndex < 0
+			var ran = random(100);
+		else
+			var ran = confDropChance[confDropChanceIndex];
+
+	    if (itemdrop > 0 && ran < min((itemdrop*0.5) * ((need*0.25) + confDroprate), 110))//rage=0.001
 	    {
-		    if ( Player.crown != 2 && Player.canHeal && random(Player.maxhealth) > Player.my_health || random(100) < 10) and random(3) < 2 and random(1) <= canHealth
+		    if ( Player.crown != 2 && Player.canHeal && random(mh) > h || random(100) < 10) and random(3) < 2 and random(1) <= canHealth
 			{
 				instance_create(x+random(4)-2,y+random(4)-2,HealthChest)
 			//return true;
@@ -152,22 +164,20 @@ function scrDrop(itemdrop, weapondrop) {
 			}
 			//return false;
 	    }
-	    else if random(110) < ((itemdrop*0.1)+weapondrop*0.75) * confDroprate
+	    else if confDropChance[confDropChanceIndex - 1] < ((itemdrop*0.1)+weapondrop*0.75) * confDroprate
 	    {
 			instance_create(x+random(4)-2,y+random(4)-2,WeaponChest);
 			//return true;
 	    }
+		confDropChanceIndex -= 2;
 	}
 	//drop items (10 + 2) * (0.75 + 0.5)
-	if itemdrop > 0 && random(100) < min(itemdrop * (need + dropRateBuff), 100)
+	if itemDropChanceIndex < 0
+		var ran = random(100);
+	else
+		var ran = itemDropChance[itemDropChanceIndex];
+	if itemdrop > 0 && ran < min(itemdrop * (need + dropRateBuff), 100)
 	{//0.3 for each ally Rebel has REBEL ULTRA C?
-		var mh = Player.maxhealth;
-		var h = Player.my_health;
-		if Player.ultra_got[62] && Player.altUltra//Living armour
-		{
-			mh = Player.maxarmour
-			h = Player.armour;
-		}
 		if random(mh) > h and random(3) < 2 and Player.crown != 2 and Player.canHeal and random(1) <= canHealth
 		{
 			instance_create(x+random(4)-2,y+random(4)-2,HPPickup)
@@ -190,7 +200,12 @@ function scrDrop(itemdrop, weapondrop) {
 			}
 		}
 	}
-	if random(100) < min(weapondrop*(dropRateBuff * 0.25), 100)
+	itemDropChanceIndex --;
+	if weaponDropChanceIndex < 0
+		var ran = random(100);
+	else
+		var ran = weaponDropChance[weaponDropChanceIndex];
+	if ran < min(weapondrop*(dropRateBuff * 0.25), 100)
 	{
 		//drop weps
 		with instance_create(x+random(4)-2,y+random(4)-2,WepPickup)
@@ -205,6 +220,7 @@ function scrDrop(itemdrop, weapondrop) {
 		}
 		return true;
 	}
+	weaponDropChanceIndex --;
 	}
 	return false;
 }

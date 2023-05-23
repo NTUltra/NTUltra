@@ -100,6 +100,6 @@ if UberCont.opt_camera_follow==0
 	prevviewy2 = viewy2;
 }
 
-__view_set( e__VW.XView, 0, round(viewx2+(random(shake)-shake/2)*UberCont.opt_shake) );
-__view_set( e__VW.YView, 0, round(viewy2+(random(shake)-shake/2)*UberCont.opt_shake) );
+__view_set( e__VW.XView, 0, round(viewx2+(random(shake)-shake*0.5)*UberCont.opt_shake) );
+__view_set( e__VW.YView, 0, round(viewy2+(random(shake)-shake*0.5)*UberCont.opt_shake) );
 

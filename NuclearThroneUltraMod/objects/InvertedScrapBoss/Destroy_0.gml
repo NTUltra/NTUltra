@@ -16,7 +16,7 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 }
 
-scrDrop(0,100)
+scrDrop(50,100)
 scrBossKill();
 Sleep(50)
 with instance_create(x,y,BigDogExplo)
@@ -48,7 +48,7 @@ img += 1
 }
 
 //drop IDKWID?
-if(random(50)<1){
+if(random(100)<1){
 with instance_create(x,y,WepPickup)
 {
 scrWeapons()

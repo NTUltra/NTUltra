@@ -25,4 +25,5 @@ with instance_create(x,y,EnemyBullet1Square)
 	image_angle = direction
 	team = other.team
 }
+scrAddDrops(1);
 scrDrop(5,0);

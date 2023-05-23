@@ -1,6 +1,7 @@
 pick = 0
 canmove = 1
 skillscroll = 0;
+scroll = 0;
 holdExplainUltraModTimer = 0;
 holdExplainWepModTimer = 0;
 holdExplainMutation = 0;
@@ -13,13 +14,15 @@ with UberCont
 {
 	if (useSeed)
 	{
-		random_set_seed(seed+Player.level+Player.patienceUsed);
+		random_set_seed(seed+UberCont.globalMutationsChosen);
 	}
 }
 if Player.crownpoints > 0
 {
 scrCrowns()
 dir = 0
+// Count visits with a given crown
+// If you still have that crown give option echo on random.
 repeat(crownmax+1)
 {
 if dir<12
@@ -39,9 +42,13 @@ if dir<12
 				crown = 27;
 			else if Player.crown == 28
 				crown = 28;
-			else if Player.crown == 29
+			else if Player.crown == 29//Purity
 				crown = 29;
-			else if Player.wep_type[Player.wep] == 4 && Player.wep_type[Player.bwep] == 4//Crown of freedom secret 2 explosive weps
+			else if Player.crown == 32 || Player.crown == 22 //Luck to misfortune
+				crown = 32;
+			else if Player.crown == 33 || Player.consecutiveCrownVisits > 1 
+				crown = 33;
+			else if Player.wep_type[Player.wep] == 4 && Player.wep_type[Player.bwep] == 4 && UberCont.opt_gamemode != 4//Crown of freedom secret 2 explosive weps
 				crown = 25;
 			else if Player.wep_type[Player.wep] == 5 && Player.wep_type[Player.bwep] == 5//Crown of energy
 				crown = 26;
@@ -49,7 +56,7 @@ if dir<12
 				crown = 28;
 			else if scrCanWeDisco()
 				crown = 27;
-			else if Player.wepmod1 != 0 || Player.bwepmod1 != 0
+			else if Player.wepmod1 != 0 || Player.bwepmod1 != 0//Purity
 				crown = 29;
 		}
 		else if crown == 8 && Player.tookDestiny//Crown of sloth secret
@@ -78,10 +85,6 @@ else
 	with instance_create(__view_get( e__VW.XView, 0 )+14+(dir-12)*26.5,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-16,CrownIcon)//24
 	{
 		crown = other.dir
-		if crown == 22 && Player.crown == 22//Luck to misfortune
-		{
-			crown = 32;
-		}
 	}
 }
 dir += 1}
@@ -131,7 +134,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 			scrollWidth = step + (-(__view_get( e__VW.WView, 0 ))) - 8
 			scroll = 0;
 			var gotNoSkills = true;
-			for (var i = 0; i <= maxultra; i++) {
+			for (var i = 0; i <= Player.maxultra; i++) {
 				if (Player.ultra_got[i] = 0)
 				{
 					with instance_create(xx,yy,UltraIcon)
@@ -141,10 +144,6 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 					xx += step;
 					scrollWidth += step;
 					gotNoSkills = false;
-				}
-				else
-				{
-					i++;
 				}
 			}
 			if gotNoSkills
@@ -384,7 +383,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 		scroll = 0;
 		var gotNoSkills = true;
 		for (var i = 0; i <= maxskill; i++) {
-			if (Player.skill_got[i] = 0)
+			if (!Player.skill_got[i])
 			{
 				gotNoSkills = false;
 				with instance_create(xx,yy,SkillIcon)
@@ -394,17 +393,13 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 				xx += step;
 				scrollWidth += step;
 			}
-			else
-			{
-				i++;
-			}
 		}
 		if gotNoSkills
 		{
 			if UberCont.opt_gamemode != 28//This mode allows unlocks getting ultras easy is too powerfull
 			{
 				gotNoSkills = true;
-				for (var i = 0; i <= maxultra; i++) {
+				for (var i = 0; i <= Player.maxultra; i++) {
 					if (Player.ultra_got[i] = 0)
 					{
 						with instance_create(xx,yy,UltraIcon)
@@ -414,10 +409,6 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 						xx += step;
 						scrollWidth += step;
 						gotNoSkills = false;
-					}
-					else
-					{
-						i++;
 					}
 				}
 			}

@@ -27,5 +27,4 @@ alarm[1] = 2
 //alarm[0] = 24/0.4//intro animation which is cool af
 wkick = 0
 
-/* */
-/*  */
+scrInitDrops(1);

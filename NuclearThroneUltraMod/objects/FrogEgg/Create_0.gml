@@ -14,3 +14,4 @@ snd_play(choose(sndFrogEggSpawn1,sndFrogEggSpawn2,sndFrogEggSpawn3))
 snd_hurt = sndFrogEggHurt
 alarm[0]=20+irandom(50);
 
+scrInitDrops(1);

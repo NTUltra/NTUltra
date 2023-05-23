@@ -1230,7 +1230,7 @@ function scrPopEnemies() {
 			}
 			if r > 4
 			{
-				repeat(3)
+				repeat(choose(1,2))
 				instance_create(x + 16, y + 16, choose(GraveyardSkeleton))
 			}
 		    else
@@ -1247,7 +1247,7 @@ function scrPopEnemies() {
 			}
 			if r > 4
 			{
-				repeat(2)
+				repeat(choose(1,2))
 				instance_create(x + 16, y + 16, choose(GraveyardSkeleton))
 			}
 		    else

@@ -13,7 +13,7 @@ if other.team != team and other.my_health > 0
 			my_health -= other.dmg
 			sprite_index = spr_hurt
 			image_index = 0
-
+			scrForcePosition60fps();
 			motion_add(other.direction,6)
 			if speed > maxSpeed + 2
 				speed = maxSpeed + 2;

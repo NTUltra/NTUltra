@@ -1,6 +1,7 @@
 if active = 1
 {
-instance_create(x,y,Smoke)
+with instance_create(x,y,Smoke)
+	depth = other.depth + 1;
 if speed > 5.2
 speed = 5.2
 

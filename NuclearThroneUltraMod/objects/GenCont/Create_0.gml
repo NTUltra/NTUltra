@@ -15,7 +15,6 @@ alarm[3] = loadTime - 2;//Loading time;
 alarm[0] = loadTime - 1;
 alarm[2] = loadTime - 2;
 
-debug("GO GENCONT!");
 SetSeed();
 instance_create(0,0,TopCont)
 wave = 0
@@ -345,6 +344,6 @@ kutgrap2=false;
 if random(300)<1
 kutgrap2=true;
 
-//SetSeed();
-UberCont.recursionCheck = 0;
-with instance_create(10000,10000,FloorMaker) {scrGenerateFloorMaker();}
+SetSeed();
+with instance_create(10000,10000,FloorMaker) {scrGenerateFloorMaker(0);}
+SetSeed();

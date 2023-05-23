@@ -57,3 +57,4 @@ returnFX = true;
 
 stopSpeed = 1;
 thrownByCuz = false;
+scrInitDrops(1);

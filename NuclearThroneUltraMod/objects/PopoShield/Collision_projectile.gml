@@ -14,10 +14,10 @@ if other.typ =1
 			image_angle = other.direction
 	}
 }
-if other.typ = 2
+if other.typ == 2
 {
-with other
-instance_destroy()
+	with other
+		instance_destroy()
 }
 
 }

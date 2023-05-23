@@ -12,7 +12,8 @@ image_angle=direction;
 speed = 2
 
 if random(2) < 1{
-instance_create(xprevious,yprevious,Smoke)
+with instance_create(xprevious,yprevious,Smoke)
+	depth = other.depth + 1;
 //scrTarget()
 }
 else{

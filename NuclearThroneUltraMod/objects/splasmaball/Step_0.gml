@@ -38,8 +38,9 @@ if speed < 2
 
 if(image_xscale<nomscale)
 {
-image_xscale+=0.031;
-image_yscale+=0.031;
+	
+	image_xscale+=0.031;
+	image_yscale+=0.031;
 }
 else
 {

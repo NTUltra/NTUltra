@@ -48,3 +48,4 @@ MorphMe=false;
 frozen=false;
 countKill = true;
 EnemyHealthAdjustments();
+scrInitDrops(1);

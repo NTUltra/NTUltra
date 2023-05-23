@@ -36,3 +36,4 @@ if loops > 6
 {	
 	canSniperTogether = 5;
 }
+scrAddDrops(1);

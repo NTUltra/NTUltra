@@ -134,5 +134,9 @@ function scrCrownAnimation(takenCrown){
 			spr_idle = sprCrown31Idle
 			spr_walk = sprCrown31Walk
 		break;
+		case 33://Echo
+			spr_idle = sprCrown32Idle
+			spr_walk = sprCrown32Walk
+		break;
 	}
 }

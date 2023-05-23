@@ -1,7 +1,7 @@
 ///AI
 if instance_exists(Player)
 {
-alarm[1] = 5;
+alarm[1] = 4;
 
 scrTarget()
 if target > 0
@@ -12,7 +12,7 @@ if target > 0
 		{
 			if hidden
 			{
-				if (point_distance(target.x,target.y,x,y) < 128)
+				if (point_distance(target.x,target.y,x,y) < 132)
 				{
 					image_speed = 0.4;
 				}
@@ -40,5 +40,5 @@ if target > 0
 }
 else
 {
-	alarm[1] = 30;
+	alarm[1] = 28;
 }

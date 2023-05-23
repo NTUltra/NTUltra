@@ -202,12 +202,13 @@ if instance_exists(Player)
 		
 		if loops > 0
 		{
-			buffs = min(3 + (loops*2), 20);
+			buffs = min(2 + ceil(loops*1.5), 15);
 		with enemy {
 			if buffs > 0 && my_health > 3 && my_health <= 110
 			{
 				buffs --;
 				super = true;
+				raddrop *= 1.25;
 				maxhealth = my_health;
 				maxhealth *= 2;
 				my_health = maxhealth;
@@ -368,6 +369,7 @@ if instance_exists(Player)
 			}
 		}
 	}
+	/*
 	with WepPickup
 	{
 		persistent = false;
@@ -385,9 +387,11 @@ if instance_exists(Player)
 	}
 	with Crown
 	{
+		debug("Move to player");
 		x = Player.x;
 		y = Player.y;
 	}
+	*/
 }
 SetSeed();
 

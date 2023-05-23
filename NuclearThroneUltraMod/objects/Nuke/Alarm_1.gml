@@ -2,5 +2,6 @@ active = 1
 BackCont.shake += 3
 
 repeat(5)
-instance_create(x,y,Smoke)
+with instance_create(x,y,Smoke)
+	depth = other.depth + 1;
 

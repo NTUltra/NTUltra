@@ -6,6 +6,7 @@ if instance_exists(Player)
 if Player.loops>0
 alarm[1] = 55
 }
+scrAddDrops(1);
 scrDrop(20,0);
 scrTarget()
 if target > 0

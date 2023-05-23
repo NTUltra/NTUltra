@@ -1,6 +1,6 @@
 image_speed=0;
 image_index=choose(0,1);
-
+image_angle = random(360);
 if place_meeting(x,y,FloorLava)
 instance_destroy();
 depth = 4;

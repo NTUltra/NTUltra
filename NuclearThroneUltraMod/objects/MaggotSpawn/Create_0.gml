@@ -17,4 +17,4 @@ snd_dead = sndMaggotSpawnDie
 
 
 motion_add(random(360),2);
-
+scrAddDrops(1);

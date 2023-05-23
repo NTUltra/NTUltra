@@ -1,3 +1,4 @@
+event_inherited();
 if Shielding
 {
 x=xx;

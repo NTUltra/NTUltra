@@ -1,0 +1,42 @@
+{
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "PopoExplosionCrownOfDeath",
+  "spriteId": {
+    "name": "sprPopoExplo",
+    "path": "sprites/sprPopoExplo/sprPopoExplo.yy",
+  },
+  "solid": false,
+  "visible": true,
+  "managed": true,
+  "spriteMaskId": {
+    "name": "mskPopoExplo",
+    "path": "sprites/mskPopoExplo/mskPopoExplo.yy",
+  },
+  "persistent": false,
+  "parentObjectId": {
+    "name": "PopoExplosion",
+    "path": "objects/PopoExplosion/PopoExplosion.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 0,
+  "physicsGroup": 0,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,},
+  ],
+  "properties": [],
+  "overriddenProperties": [],
+  "parent": {
+    "name": "Projectiles",
+    "path": "folders/Objects/Projectiles.yy",
+  },
+}

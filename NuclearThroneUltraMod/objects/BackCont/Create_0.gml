@@ -72,6 +72,7 @@ if instance_exists(Player)
 	{
 		wantVanAmount ++;
 		canSpawnPopoThisManyTimes ++;
+		vanDelay *= 0.8;
 	}
 	wantVanAmount += UberCont.extraVan;
 	vanDelay = max(100,vanDelay - ((wantVanAmount-1)*40));

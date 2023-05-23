@@ -68,3 +68,4 @@ if !(instance_exists(Player) && (Player.area == 2 || Player.area == 110))
 	}
 
 friction = 0.8;
+scrAddDrops(1);

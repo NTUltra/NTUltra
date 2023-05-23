@@ -66,3 +66,5 @@ shooting = 0;
 
 if UberCont.opt_gamemode != 25
 	existTime = 40;
+
+scrAddDrops(2);

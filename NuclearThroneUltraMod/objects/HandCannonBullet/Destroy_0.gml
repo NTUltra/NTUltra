@@ -13,6 +13,3 @@ repeat(am)
 	snd_play(sndExplosionS);
 	BackCont.shake += 5
 	
-// Inherit the parent event
-event_inherited();
-

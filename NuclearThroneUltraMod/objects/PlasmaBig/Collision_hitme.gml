@@ -14,6 +14,7 @@ if other.team != team and other.my_health > 0
 			sprite_index = spr_hurt
 			image_index = 0
 			motion_add(other.direction,6)
+			scrForcePosition60fps();
 			if speed > maxSpeed + 2
 				speed = maxSpeed + 2;
 			snd_play(snd_hurt, hurt_pitch_variation,true)

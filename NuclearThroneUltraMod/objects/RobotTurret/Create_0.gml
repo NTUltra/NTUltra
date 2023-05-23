@@ -101,3 +101,4 @@ cqueueshot = 0;
 else
 instance_destroy();
 
+scrInitDrops(1);

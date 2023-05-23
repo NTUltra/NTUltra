@@ -4,7 +4,6 @@ if UberCont.opt_gamemode == 28 || UberCont.opt_gamemode == 38//ALL MUTATION CHOI
 {
 	var spd = 24;
 	if mouse_wheel_down() || keyboard_check_pressed(vk_right){
-		debug(scroll);
 		if scroll <= scrollWidth
 		{
 			with SkillIcon {

@@ -30,6 +30,7 @@ function scrDrawOptions2() {
 	else {gamemode="NO HUD"}*/
 
 	var canUnlock = "";
+	if instance_exists(GameModeUpDown)
 	if isValidGamemodeToUnlock(gamemodeOrder[GameModeUpDown.gamemodenr])
 	{
 		canUnlock = "- ENABLED -";

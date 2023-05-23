@@ -33,3 +33,4 @@ sndtaunt = 0
 tauntdelay = 0
 isInverted = false;
 scrBossFloor();
+scrAddDrops(1);

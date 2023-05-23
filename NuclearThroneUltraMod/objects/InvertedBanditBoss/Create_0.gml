@@ -56,3 +56,4 @@ other.cam=false;
 if cam
 instance_create(x,y,DramaCamera);
 
+scrAddDrops(2);

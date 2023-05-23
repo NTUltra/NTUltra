@@ -147,3 +147,4 @@ depth = Player.depth + 1;
 
 myShield = -1;
 image_angle = 0;
+scrInitDrops(1);

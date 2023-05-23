@@ -138,6 +138,14 @@ if area=100
 	if crownvisits == -1
 		instance_create(0,0,PauseTimer);
 	crownvisits++;
+	if crown != 0 && crown == prevCrown
+	{
+		consecutiveCrownVisits ++;	
+	} else
+	{
+		consecutiveCrownVisits = 0;
+	}
+	prevCrown = crown;
 }
 
 

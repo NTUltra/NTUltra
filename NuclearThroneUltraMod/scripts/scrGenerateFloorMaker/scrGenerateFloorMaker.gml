@@ -1,12 +1,11 @@
 ///scrGenerateFloorMaker();
 // /@description
 ///@param
-function scrGenerateFloorMaker(){
-	
+function scrGenerateFloorMaker(limiter) {
 	direction = choose(0,90,180,270)
 	styleb = choose(0,0,0,0,0,0,1)
 
-	goal = 220//110
+	goal = 100//110
 	
 	if instance_exists(Player){
 		if Player.crown == 27
@@ -15,16 +14,20 @@ function scrGenerateFloorMaker(){
 			styleb = choose(1,1,1,1,1,1,0)
 		}
 		var s = clamp(Player.loops*8,0,50);
+		goal += s;
 		if Player.area = 3 and Player.subarea = 3
-		goal = 140+s//50
+		goal = 150+s//50
 		else if Player.area = 4
 		goal = 120+s
 		else if Player.area = 5
 		goal = 160+s
-		else if Player.area = 7
-		goal = 150+s
-		else if (Player.area = 7||Player.area=108) and Player.subarea == 3
-		goal = 50+s
+		else if Player.area = 7 || Player.area == 108
+		{
+			if Player.subarea == 3
+				goal = 30+s
+			else
+				goal = 130+s
+		}
 		else if Player.area = 100
 		goal = 40+s
 		else if Player.area = 101 || Player.area == 122
@@ -36,13 +39,13 @@ function scrGenerateFloorMaker(){
 		else if Player.area = 104
 		goal = 10
 		else if Player.area = 105
-		goal = 155+s
+		goal = 150+s
 		else if Player.area = 106
 		goal = 130+s
 		else if Player.area = 114 || Player.area == 123
-		goal = 200+s
+		goal = 130+s
 		else if Player.area = 117 || Player.area == 124
-		goal = 220+s
+		goal = 140+s
 		else if (Player.area = 6||Player.area=112) && Player.subarea=2//LABS BOSS
 		goal=1;
 		else if Player.area == 9 && Player.subarea < 3
@@ -72,7 +75,6 @@ function scrGenerateFloorMaker(){
 				goal = 310;
 		}
 	}
-	goal += 110;
 	if UberCont.opt_gamemode == 25 //Survival arena
 	{
 		goal = 1;
@@ -155,11 +157,21 @@ function scrGenerateFloorMaker(){
 
 	if (UberCont.opt_gamemode == 25 && !instance_exists(Vlambeer))
 	{
-		scrMakeFloor()
+		limiter = scrMakeFloor(limiter);
 		exit;
 	}
-	while !(instance_number(Floor) > goal)
+	var fc = 0;
+	with Floor{
+		if canCount
+			fc ++;
+	}
+	while ( fc <= goal && limiter < 1000)
 	{
+		fc = 0;
+		with Floor{
+			if canCount
+				fc ++;
+		}
 		if UberCont.firstFloorMaker
 		{
 			//SetSeed();
@@ -198,7 +210,7 @@ function scrGenerateFloorMaker(){
 				}
 			}
 		}
-		scrMakeFloor()
+		limiter = scrMakeFloor(limiter);
 		/*
 		with GenCont
 		{
@@ -213,10 +225,11 @@ function scrGenerateFloorMaker(){
 	if point_distance(x,y,10016,10016) > 48 
 	{
 		if instance_exists(Player){
+			/*
 		if (Player.area == 3 and Player.subarea == 3){//#safe spawns 4 big dog
 			Player.x=x+16;
 			Player.y=y+16;
-		}
+		}*/
 		instance_create(x,y,Floor)
 		if (Player.area == 9 && Player.subarea == 3)
 		{
@@ -239,4 +252,5 @@ function scrGenerateFloorMaker(){
 		}
 	}
 	instance_destroy();
+	return limiter;
 }

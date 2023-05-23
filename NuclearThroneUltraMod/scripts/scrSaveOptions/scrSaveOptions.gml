@@ -32,7 +32,7 @@ function scrSaveOptions() {
 	ini_write_real("OPTIONS","fps",normalGameSpeed);
 	if normalGameSpeed < 30
 		normalGameSpeed = 30;
-	if opt_gamemode == 26 || opt_gamemode == 27 || opt_gamemode == 37//Can't save daily
+	if opt_gamemode == 26 || opt_gamemode == 27 || opt_gamemode == 37 || isWeekly//Can't save daily
 		ini_write_real("OPTIONS","gamemode",0);
 	else
 		ini_write_real("OPTIONS","gamemode",opt_gamemode);

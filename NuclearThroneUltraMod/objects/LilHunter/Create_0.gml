@@ -48,3 +48,4 @@ shadowdraw=false;
 shadowdrawx=x;
 shadowdrawy=y;
 
+scrAddDrops(1);

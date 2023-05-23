@@ -3,6 +3,7 @@ if (place_meeting(x,y,FloorExplo))
 	instance_destroy();
 	exit;
 }
+canCount = false;
 var area;
 canSpawnSwarm = false
 if instance_exists(Player) 
@@ -181,3 +182,6 @@ depth = 8;
 isArenaFloor = true;
 canSpawnSwarm = true;
 event_user(0);
+confDropChanceIndex = -1;
+itemDropChanceIndex = -1;
+itemDropChanceIndex = -1;

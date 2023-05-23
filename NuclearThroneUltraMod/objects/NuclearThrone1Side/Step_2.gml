@@ -100,7 +100,11 @@ if owner > -1 && instance_exists(owner)
 			walk = 0;
 			snd_play(sndNothingFootstep);
 		}
-		walk += 0.9;
+		//if UberCont.normalGameSpeed == 60
+		//	walk -= 0.45;
+		//else
+			walk += 0.9;
+		
 	}
 	mask_index = msk;
 }

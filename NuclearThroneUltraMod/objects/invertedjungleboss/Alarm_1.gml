@@ -81,6 +81,7 @@ if target > 0 {
 	}
 	if ran < 1
 	{
+		scrAddDrops(1);
 		scrDrop(20,0);	
 	}
 }

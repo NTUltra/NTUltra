@@ -43,3 +43,5 @@ myCorpse = -1;
 totemBuffed = false;
 super = false;
 myConfusion = noone;
+
+scrInitDrops(5);

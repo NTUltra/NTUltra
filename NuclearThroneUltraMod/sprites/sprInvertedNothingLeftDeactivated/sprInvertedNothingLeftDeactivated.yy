@@ -29,6 +29,8 @@
   "gridY": 0,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2d6367c2-e43b-4d74-84c8-dd04e8a329ab",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"679cf39c-a135-4646-a721-ae9117c6e03e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"167cc54e-b108-4805-b642-1dae1dad14f0",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -40,12 +42,14 @@
     "playbackSpeedType": 1,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 1.0,
+    "length": 3.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"a6b4080c-64af-407a-a258-a12e3b782696","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2d6367c2-e43b-4d74-84c8-dd04e8a329ab","path":"sprites/sprInvertedNothingLeftDeactivated/sprInvertedNothingLeftDeactivated.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"aac43db5-1001-4685-98b3-9aeb298ac9d5","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"679cf39c-a135-4646-a721-ae9117c6e03e","path":"sprites/sprInvertedNothingLeftDeactivated/sprInvertedNothingLeftDeactivated.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a4efcf0c-361b-4166-afd6-732f005b7dc3","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"167cc54e-b108-4805-b642-1dae1dad14f0","path":"sprites/sprInvertedNothingLeftDeactivated/sprInvertedNothingLeftDeactivated.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,

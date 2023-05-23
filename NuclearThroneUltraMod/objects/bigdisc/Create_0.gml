@@ -29,3 +29,4 @@ active = false;
 lowHealth = false;
 acc = 2;
 discAmount = 6*clamp(GetPlayerLoops()-1,1,3);
+scrAddDrops(1);

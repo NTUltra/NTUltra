@@ -238,6 +238,8 @@ function scrLoadRun(){
 				Player.useGuarenteedReroll = true;
 				if variable_struct_exists(encryptedRun, "phoenixrevives")
 					Player.phoenixrevives = encryptedRun.phoenixrevives;
+				if variable_struct_exists(encryptedRun, "globalMutationsChosen")
+					UberCont.globalMutationsChosen = encryptedRun.globalMutationsChosen;
 					
 			}
 			with Player

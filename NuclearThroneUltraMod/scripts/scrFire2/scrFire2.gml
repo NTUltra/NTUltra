@@ -3480,7 +3480,7 @@ function scrFire2() {
 	with instance_create(x,y,BloodCannonBall)
 	{
 	image_angle=random(360);
-	motion_add(aimDirection+(random(8)-4)*other.accuracy,3)
+	motion_add(aimDirection+(random(8)-4)*other.accuracy,4)
 	team = other.team}
 
 	motion_add(aimDirection+180,2)
@@ -4488,7 +4488,7 @@ function scrFire2() {
 					image_angle = other.image_angle
 				}
 			}
-			if (skill_got[5]) { //we have throne butt too? time to kick it up a notch
+			if (Player.skill_got[5]) { //we have throne butt too? time to kick it up a notch
 				snd_play_fire(sndPlasmaBigExplode)
 				var ang = random(360)
 				repeat(6)
@@ -4778,7 +4778,7 @@ function scrFire2() {
 	with instance_create(x,y,ThrowWepNoReturn)
 	{
 		team=other.team;
-		motion_add(aimDirection,16);
+		motion_add(aimDirection,18);
 		scrWeapons()
 		wep=other.wep;
 		name = wep_name[wep]
@@ -10848,7 +10848,7 @@ function scrFire2() {
 		{
 			motion_add(aimDirection+(random(30)-15)*other.accuracy,5)
 		}
-		repeat(12 + (skill_got[17] * 4))
+		repeat(12 + (Player.skill_got[17] * 4))
 			with instance_create(x,y,Rad)
 			{
 				motion_add(aimDirection+(random(30)-15)*other.accuracy,4+random(4))
@@ -11769,6 +11769,47 @@ function scrFire2() {
 	team = other.team
 	event_perform(ev_alarm,0) 
 	}
+
+	break;
+	
+	//GOLDEN DISC GUN
+	case 617:
+
+	snd_play_fire(sndDiscgun)
+
+	with instance_create(x,y,Disc)
+	{motion_add(aimDirection+(random(10)-5)*other.accuracy,6)
+	image_angle = direction
+	sprite_index = sprDiscGold;
+	alarm[1] = 5 + random(20);
+	dmg += 1;
+	dist -= 10;
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(11,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(11,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 7
+	wkick = 4
+
+	break;
+	
+	//ULTRA HAND CANNON
+	case 618:
+
+	snd_play_fire(sndFlakCannon)
+
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+	with instance_create(x,y,UltraHandCannonBullet)
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 8
+	wkick = 4.5
 
 	break;
 	

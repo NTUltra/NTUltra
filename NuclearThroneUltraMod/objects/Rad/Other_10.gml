@@ -16,7 +16,7 @@ if instance_exists(Player)
 		rad += add;
 		snd_play_2d(sndRadPickup,0.05,true);
 	
-		if skill_got[36]
+		if skill_got[36] && canHeal
 		{
 			radPickedUp += add;
 			if radPickedUp > maxRadPickedUp
@@ -51,6 +51,10 @@ if instance_exists(Player)
 					else if Player.my_health > Player.maxhealth
 					dir.mytext = "OVER MAX HP"
 				}
+				if my_health + num <= maxhealth
+					my_health += num
+				else// if Player.crown != 2
+					my_health = max(my_health,maxhealth);
 			}
 		}
 	}

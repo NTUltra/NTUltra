@@ -5,10 +5,16 @@ event_inherited()
 if !place_meeting(x,y,Morph)
 with instance_create(x,y,SnowTankExplo)
 {
-spr_dead = sprSnowTankDead;
-right=other.right;
-sprite_index=sprSnowTankHurt;
-my_health=other.my_health;
+	itemDropChance = other.itemDropChance;
+	itemDropChanceIndex = other.itemDropChanceIndex;
+	weaponDropChance = other.weaponDropChance;
+	weaponDropChanceIndex = other.weaponDropChanceIndex;
+	confDropChance = other.confDropChance;
+	confDropChanceIndex = other.confDropChanceIndex;
+	spr_dead = sprSnowTankDead;
+	right=other.right;
+	sprite_index=sprSnowTankHurt;
+	my_health=other.my_health;
 }
 /*
 //scrDrop(50,0)

@@ -13,7 +13,7 @@ repeat(am)
 {
 	with instance_create(x,y,ToxicThrowerGas)
 	{
-		motion_add(1,ang);
+		motion_add(ang,1);
 	}
 	ang += angstep;
 }

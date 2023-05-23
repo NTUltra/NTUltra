@@ -13,6 +13,7 @@ depth --;
 if instance_exists(Player){
 	if Player.ultra_got[57]//atom bomb
 	{
+		dmg += 3;
 		alarm[2] = irandom_range(1,4);
 		alarm[1] = 11;
 	}

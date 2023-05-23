@@ -16,12 +16,14 @@ snd_dead = sndNothingTaunt
 
 //behavior
 gunangle = random(360)
-alarm[4] = 90;//120 before + 90
-alarm[2] = 30;
+
+alarm[1] = 0;
 if instance_exists(GenCont)
-alarm[5] = GenCont.alarm[0] + 2;
+	alarm[7] = GenCont.alarm[0] + 60;
+else
+	alarm[7] = 60;
 wkick = 0
-image_speed=0.4;
+image_speed=0;
 
 instance_create(x+64,y+32,BigMachineTurret);
 
@@ -77,3 +79,4 @@ friction=4;
 
 ammo=0;
 
+scrAddDrops(2);

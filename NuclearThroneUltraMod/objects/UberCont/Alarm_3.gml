@@ -1,5 +1,4 @@
 /// @description Update surfaces to new screensize
-debug("UPDATE SCREENSIZE");
 with TopCont
 {
 	if surface_exists(dark)

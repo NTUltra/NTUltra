@@ -67,3 +67,5 @@ if instance_exists(Player) && Player.area != 103
 {
 	instance_create(x,y,DramaCamera);
 }
+
+scrAddDrops(2);

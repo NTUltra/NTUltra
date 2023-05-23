@@ -8,7 +8,6 @@ sprite_index= sprFireLilHunter;}
 }
 
 scrDrop(100,0)
-scrDrop(3,0)
 snd_play(sndExplosion)
 instance_create(x,y,Explosion)
 audio_stop_sound(sndDragonLoop)

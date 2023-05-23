@@ -1,5 +1,5 @@
-if sprite_index = sprStatueBossShieldSpawn || sprite_index == sprStatueBossShieldDeflect
+if sprite_index = spr_spawn || sprite_index == spr_deflect
 {
-	sprite_index = sprStatueBossShield;
+	sprite_index = spr_default;
 }
 

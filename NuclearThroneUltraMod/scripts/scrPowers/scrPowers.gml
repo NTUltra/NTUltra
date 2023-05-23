@@ -970,8 +970,9 @@ function scrPowers() {
 			instance_create(UberCont.mouse__x,UberCont.mouse__y,WallBreak);
 			var msk = mask_index;
 			mask_index = mskPickupThroughWall;
-		    x=UberCont.mouse__x;
-		    y=UberCont.mouse__y;
+		    x = UberCont.mouse__x;
+		    y = UberCont.mouse__y;
+			scrForcePosition60fps();
 			mask_index = msk;
 		    BackCont.viewx2 += lengthdir_x(20,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 		    BackCont.viewy2 += lengthdir_y(20,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
@@ -1035,8 +1036,9 @@ function scrPowers() {
     
 		    alarm[8]=2;
     
-		    x=xx;
-		    y=yy;
+		    x = xx;
+		    y = yy;
+			scrForcePosition60fps();
 		    BackCont.viewx2 += lengthdir_x(20,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 		    BackCont.viewy2 += lengthdir_y(20,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 		    BackCont.shake += 2    
@@ -1146,6 +1148,7 @@ function scrPowers() {
 		}
 		x = mx
 		y = my
+		scrForcePosition60fps();
 		BackCont.viewx2 += lengthdir_x(20,point_direction(x,y,mx,my)+180)*UberCont.opt_shake
 		BackCont.viewy2 += lengthdir_y(20,point_direction(x,y,mx,my)+180)*UberCont.opt_shake
 		BackCont.shake += 2  

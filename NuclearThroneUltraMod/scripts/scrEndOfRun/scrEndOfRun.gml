@@ -14,6 +14,7 @@ function scrEndOfRun(){
 		collectedRewards = [];
 		enableReroll = false;
 		maxHpIncrease = 0;
+		globalMutationsChosen = 0;
 		canSave = false;
 		if opt_gamemode != 39
 			useSeed = false;

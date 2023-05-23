@@ -17,6 +17,8 @@ alarm[1] = 4+random(5);
     if my_health<maxhealth*0.75&&random(40)<1
     {
 	    sprite_index=spr_vanish
+		with DragonShield
+		event_user(1);
 	    image_index=0;
 	    mask_index=mskPickupThroughWall;
 	    direction=90;

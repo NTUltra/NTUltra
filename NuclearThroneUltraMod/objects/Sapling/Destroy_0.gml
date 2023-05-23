@@ -1,4 +1,4 @@
-scrDrop(73,0)
+scrDrop(73,1)
 
 snd_play(sndSaplingDead);
 

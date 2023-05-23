@@ -1,5 +1,5 @@
 scrDrop(100,0);
-scrDrop(100,1);
+scrDrop(50,10);
 scrDrop(50,40);
 
 with Player

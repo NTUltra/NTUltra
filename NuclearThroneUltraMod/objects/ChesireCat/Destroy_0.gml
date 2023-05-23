@@ -14,7 +14,6 @@ instance_create(x,y,ChesireCatExplosion);
 if UberCont.area == 8
 scrDefeatedRequiredBoss(secretChallengeBosses.chesireCat);
 scrDrop(100,0)
-scrDrop(20,0)
 scrDrop(50,40)
 scrDrop(50,100)
 

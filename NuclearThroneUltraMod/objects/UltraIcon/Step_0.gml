@@ -4,6 +4,7 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 		Player.horrorEtaken = true;
 var regularprocedure=true;
 Player.ultra_got[skill] = 1
+Player.previousUltra = skill;
 Player.skillpoints -= 1
 
 if skill = 0

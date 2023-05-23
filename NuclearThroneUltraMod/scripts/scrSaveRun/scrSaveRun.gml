@@ -122,6 +122,7 @@ function scrSaveRun() {
 			spr_dead: Player.spr_dead,
 			lastEnemyKilled: Player.lastEnemyKilled,
 			phoenixrevives: Player.phoenixrevives,
+			globalMutationsChosen: UberCont.globalMutationsChosen,
 		};
 		var saveString = json_stringify(encrypted_run_data);
 		var hash = sha1_string_utf8(saveString);

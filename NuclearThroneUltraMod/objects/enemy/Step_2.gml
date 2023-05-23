@@ -40,7 +40,9 @@ if alarm[1] > 1 && alarm[1] < 3
 
 if prevhealth > my_health
 {
-	var dmgTaken = prevhealth-my_health;//Damage increase
+	var dmgTaken = prevhealth - my_health;//Damage increase
+	if super
+		dmgTaken += 0.1;//Negate healing
 	if instance_exists(Player)
 	{
 		if Player.race == 26//HUMPHRY mr damage

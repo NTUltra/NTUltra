@@ -496,20 +496,8 @@ if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
 		{
 			var dangle = random(1)*360;
 			thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,PopupText);
-			thing.mytext = "60 FPS TOGGLE";
-			if instance_exists(FPSHACK)
-			{
-				with FPSHACK
-					instance_destroy();
-				with UberCont
-					normalGameSpeed = 30;
-			}
-			else
-			{
-				with UberCont
-					normalGameSpeed = 60;
-				instance_create(x,y,FPSHACK);	
-			}
+			thing.mytext = "WEP";
+			instance_create(x,y,WeaponChest);
 			room_speed = UberCont.normalGameSpeed;
 		}
 		if (keyboard_check_pressed(ord("I")))
@@ -1418,7 +1406,10 @@ if (!outOfCombat && skill_got[2]==0 && race!=18 && race!=24 && race != 15 and !i
 			    if alarm[4]<=0
 					alarm[4]=4;
     
-				hotfloor+=1;
+				if UberCont.normalGameSpeed == 60
+					hotfloor += 0.5;
+				else
+					hotfloor+=1;
 		        if hotfloor>39//time before crisping
 		        {
 		        with instance_create(x,y,TrapFire){//burn!
@@ -1437,7 +1428,12 @@ if (!outOfCombat && skill_got[2]==0 && race!=18 && race!=24 && race != 15 and !i
     
 			    //when player isn't frozen increase the time that determines when it should get frozeen
 			    if frozen<1
-					getFrozen++;
+				{
+					if UberCont.normalGameSpeed == 60
+						getFrozen += 0.5;
+					else
+						getFrozen+=1;
+				}
     
 			    if getFrozen>24 && alarm[3] < 1
 			    {
@@ -1981,8 +1977,10 @@ if hammerheadcounter > 0
 		mask_index = msk;
 		if place_meeting(x+hspeed,y+vspeed,Wall)
 		{
-			
-			hammerheadtimer += 1;
+			if UberCont.normalGameSpeed == 60
+				hammerheadtimer += 0.5;
+			else
+				hammerheadtimer += 1;
 
 			alarm[5]=12;//timer before hammerhead continuation stops
 			

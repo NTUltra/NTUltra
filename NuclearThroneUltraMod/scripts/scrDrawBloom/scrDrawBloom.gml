@@ -65,7 +65,10 @@ function scrDrawBloom() {
 	with Deflect
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with BallBossShield
-	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
+	{
+		if visible
+			draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
+	}
 	with Bullet2//PELLETS
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with Bullet6//FLAME PELLETS

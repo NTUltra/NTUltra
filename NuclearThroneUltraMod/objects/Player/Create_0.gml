@@ -9,6 +9,7 @@ if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK)
 	instance_create(x,y,FPSHACK);	
 }
 depth = 0;
+previousUltra = -1;
 hudArmourSpace = 0;
 radPickedUp = 0;
 maxRadPickedUp = 100;
@@ -106,6 +107,8 @@ firedthislevel = false;
 fired = false;
 poppop = false;
 rushcrownlevels = 0;
+consecutiveCrownVisits = 0;
+prevCrown = 0;
 portalstrikesusedthislevel = 0;
 toxicweaponsfound = 0;
 
@@ -456,7 +459,7 @@ if UberCont.crown_start[r] && !instance_exists(PlayerSpawn) && UberCont.opt_game
 	with UberCont
 		alarm[2] = 0;
 	crownpoints = 1;
-	instance_create(x,y,Crown);
+	instance_create(x,y,Crown)
 }
 
 if UberCont.opt_gamemode == 25 {
@@ -726,3 +729,7 @@ enum LEADERBOARD {
 	WEEKLY,
 	VANFAN,
 };
+
+confDropChanceIndex = -1;
+itemDropChanceIndex = -1;
+itemDropChanceIndex = -1;

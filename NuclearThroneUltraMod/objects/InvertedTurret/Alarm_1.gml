@@ -40,5 +40,5 @@ if target > 0
 }
 else
 {
-	alarm[1] = 10;
+	alarm[1] = 9;
 }

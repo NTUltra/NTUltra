@@ -5,7 +5,16 @@ if random(500) < 1
 image_index = 3
 
 image_index += choose(0,4)
-
+canCount = true;
+var of = instance_place(x,y,Floor)
+if of != noone && of.object_index != FloorExplo
+{
+	styleb = 0;
+	canCount = false;
+    instance_destroy();
+}
+else
+{
 if instance_exists(FloorMaker)
 styleb = instance_nearest(x,y,FloorMaker).styleb
 else
@@ -31,6 +40,7 @@ if UberCont.opt_gamemode == 25
 		}
 	}
 }
+
 
 var area;
 if instance_exists(Player) area = Player.area 
@@ -305,7 +315,7 @@ if !place_meeting(x-32,y+32,Floor) && !place_meeting(x-32,y+32,Wall)
 	instance_create(x-32,y+32,Top)
 if !place_meeting(x+32,y+32,Floor) && !place_meeting(x+32,y+32,Wall)
 	instance_create(x+32,y+32,Top)
-
+}
 /*
 instance_create(x-32,y,Top)
 instance_create(x+32,y,Top)

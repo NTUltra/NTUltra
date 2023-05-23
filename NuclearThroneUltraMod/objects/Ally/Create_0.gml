@@ -91,3 +91,5 @@ name=choose(
 "Johan","Laura","Gertrude","Pierce","Noel","Cora","Rex","Ann","Hilary","Elisa","Jerry","Helen","Daphne","Shanon","Curt","Jeff","Seymour","Helly",
 "Carlos","Britta","Geoff","Dom","Matt","Matthew","Anna","Smith","Lucius","Britanny","Anita","Doug","Colin","Fernando","David","Shel","Spencer"
 );
+
+scrInitDrops(2);

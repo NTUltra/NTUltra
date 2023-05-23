@@ -11,6 +11,7 @@ if KeyCont.key_pick[other.p] = 1
 		snd_play(other.snd_thrn);
 		with other
 		{
+			inverted = false;
 			if area == 114
 			{
 				area = 8;

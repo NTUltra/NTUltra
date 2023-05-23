@@ -29,7 +29,7 @@ if place_meeting(x,y,Player)
 	if !active || KeyCont.key_swap[Player.p] = 1
 	{
 		active = true;
-		modname="##MODIFY WEAPON#"+modname;
+		modname="##MODIFY WEAPON#"+weaponModName;
 		moddescription = scrWepModDescription(wepmod);
 		var hasPowerCraving = Player.skill_got[30];
 		if (Player.wepmod1==0)
@@ -88,8 +88,6 @@ if place_meeting(x,y,Player)
 				with other
 				{
 					wep = other.wep;
-					name = other.wep_name[wep];//THIS IS WHERE IT GOES WRONG
-					type = other.wep_type[wep]
 					curse = other.curse;
 					wepmod1 = other.wepmod1;
 					wepmod2=other.wepmod2;

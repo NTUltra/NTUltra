@@ -1,0 +1,12 @@
+event_inherited();
+xOffset = 112;
+myDragon = noone;
+wave = 0.5;
+waveSpeed = 0.005;
+loops = GetPlayerLoops();
+image_speed = 0;
+waveSpeed += clamp(loops*0.001 - 0.002,0,0.01);
+spr_default = sprDragonShield;
+spr_deflect = sprDragonShieldDeflect;
+spr_dissapear = sprDragonShieldDissappear;
+spr_spawn = sprDragonShieldAppear;

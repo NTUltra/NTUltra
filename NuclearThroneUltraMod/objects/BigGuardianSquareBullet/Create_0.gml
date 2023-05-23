@@ -8,3 +8,4 @@ projectileToSpawn = GuardianBulletSpawn;
 projectileToSpawnSprite = sprGuardianSquareBulletSpawn;
 hitSprite = sprGuardianBulletHit;
 
+scrInitDrops(1);

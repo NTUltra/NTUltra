@@ -3283,7 +3283,7 @@ function scrWeapons() {
 	wep_area[297] = 21
 	wep_text[297] = "green ball of green pellets"
 	wep_swap[297] = sndSwapExplosive
-	wep_rad[297] = 20;//14ultrashotgun
+	wep_rad[297] = 19;//14ultrashotgun
 
 	wep_name[298] = "GOLDEN OOPS GUN"
 	wep_type[298] = 1
@@ -6815,6 +6815,28 @@ function scrWeapons() {
 	wep_text[616] = "bursting"
 	wep_swap[616] = sndSwapExplosive
 	wep_rad[616] = 0;
+	
+	wep_name[617] = "GOLDEN DISC GUN"
+	wep_type[617] = 3
+	wep_auto[617] = 1
+	wep_load[617] = 7
+	wep_cost[617] = 1
+	wep_sprt[617] = sprGoldenDiscGun
+	wep_area[617] = -1
+	wep_text[617] = "what could go wrong"
+	wep_swap[617] = sndSwapBow
+	wep_rad[617] = 0;
+	
+	wep_name[618] = "ULTRA HAND CANNON"
+	wep_type[618] = 1
+	wep_auto[618] = 1
+	wep_load[618] = 12;
+	wep_cost[618] = 6;
+	wep_sprt[618] = sprUltraHandCannon
+	wep_area[618] = 20
+	wep_text[618] = "such power in the palm of your hand"
+	wep_swap[618] = sndSwapPistol
+	wep_rad[618] = 18;
 
 	maxwep = array_length(wep_name)-1;
 

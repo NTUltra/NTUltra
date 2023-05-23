@@ -32,3 +32,4 @@ snd_dead = sndDogGuardianDead;
 snd_melee = sndDogGuardianMelee;
 justjumped = false;
 instance_create(x,y,BigWallBreak);
+scrAddDrops(1);

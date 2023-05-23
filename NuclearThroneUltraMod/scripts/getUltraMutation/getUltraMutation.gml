@@ -25,5 +25,21 @@ function getUltraMutation(){
 		{
 			return 255;
 		}
+		if (previousUltra != -1)
+		{
+			var noUltra = true;
+			var i = 0;
+			repeat(maxultra+1)
+			{
+				if !ultra_got[i]
+				{
+					noUltra = false;
+					continue;
+				}
+				i ++;
+			}
+			if noUltra
+				return previousUltra;
+		}
 	}
 }

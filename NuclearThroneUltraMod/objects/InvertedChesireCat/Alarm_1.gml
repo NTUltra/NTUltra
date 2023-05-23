@@ -36,7 +36,10 @@ if !place_meeting(x,y,Wall)&&place_meeting(x,y,Floor)
     alarm[1] = 20+random(15)
     
     if random(4)<1 && !collision_point(x,y,Wall,false,false)
-    scrDrop(10,0);
+	{
+		scrAddDrops(1);
+		scrDrop(10,0);
+	}
     //mask_index=mskChesireCat;
     
     /*speed*=0.4;
@@ -56,7 +59,10 @@ if !place_meeting(x,y,Wall)&&place_meeting(x,y,Floor)
     alarm[1] = 60+random(30)
     
     if random(7)<1 && !collision_point(x,y,Wall,false,false)
-    scrDrop(40,0);
+	{
+		scrAddDrops(1);
+		scrDrop(40,0);
+	}
     }
     else if random(3)<1//quick burp
     {
@@ -169,7 +175,10 @@ walk=30+random(10)
 alarm[1]=walk;}
 
 if random(40)<1 && !collision_point(x,y,Wall,false,false)
+{
+	scrAddDrops(1);
     scrDrop(90,1);
+}
 
 /* */
 /*  */

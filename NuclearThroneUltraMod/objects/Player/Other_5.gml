@@ -205,6 +205,7 @@ if race == 14//PANDA
 
 if UberCont.opt_gamemode == 10//random areas
 {
+	SetSeed();
 area=choose(1,2,3,4,5,6,7,8,9,10,choose(105,102,103,106,107,101,100,108,109,110,113,114,115,118,117,118,119,120,121,122,123,124,125),choose(105,102,103,106,107,101,100,108,109,110,113,114,115,118,117,118,119,120,121,122,123,124,125,126,127),
 choose(105,102,103,106,107,101,100,108,109,110,113,114,115,118,117,118,119,120,121,122,123,124,125,126,127));
 
@@ -645,6 +646,7 @@ scrUnlockCSkin(15,"FOR COMPLETING 5 AREAS IN A ROW#USING CROWN OF HASTE AS ATOM"
 if UberCont.opt_gamemode == 23 && !instance_exists(Menu) && instance_number(Player) == 1//Random character!
 {
 	var iWillBecome = 0;
+	SetSeed();
 	do 
 	{
 		iWillBecome = 1+irandom(racemax-1);

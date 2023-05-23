@@ -25,3 +25,4 @@ spr_idle = sprSentryGun
 spr_hurt = sprSentryGun
 spr_dead = sprScorchmark
 
+scrInitDrops(1);

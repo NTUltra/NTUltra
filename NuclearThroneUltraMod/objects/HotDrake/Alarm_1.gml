@@ -18,6 +18,8 @@ alarm[1] = 4+random(5);
     {
     sprite_index=spr_vanish
     image_index=0;
+	with DragonShield
+		event_user(1);
     mask_index=mskPickupThroughWall;
     direction=90;
     alarm[1]=300;

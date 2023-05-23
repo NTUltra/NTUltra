@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "RogueExplosion",
   "spriteId": {
     "name": "sprRogueExplosion",
     "path": "sprites/sprRogueExplosion/sprRogueExplosion.yy",
@@ -7,8 +10,8 @@
   "visible": true,
   "managed": true,
   "spriteMaskId": {
-    "name": "mskPopoExplo",
-    "path": "sprites/mskPopoExplo/mskPopoExplo.yy",
+    "name": "mskRogueExplosion",
+    "path": "sprites/mskRogueExplosion/mskRogueExplosion.yy",
   },
   "persistent": false,
   "parentObjectId": {
@@ -28,12 +31,12 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"hitme","path":"objects/hitme/hitme.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"Explosion","path":"objects/Explosion/Explosion.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"projectile","path":"objects/projectile/projectile.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"hitme","path":"objects/hitme/hitme.yy",},},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"Explosion","path":"objects/Explosion/Explosion.yy",},},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"projectile","path":"objects/projectile/projectile.yy",},},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -41,8 +44,4 @@
     "name": "Ability",
     "path": "folders/Objects/Player/Ability.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "RogueExplosion",
-  "tags": [],
-  "resourceType": "GMObject",
 }

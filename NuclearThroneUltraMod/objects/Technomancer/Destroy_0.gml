@@ -1,5 +1,5 @@
 scrDrop(100,0)
-scrDrop(50,1)
+scrDrop(50,4)
 speed = 0;
 event_inherited()
 

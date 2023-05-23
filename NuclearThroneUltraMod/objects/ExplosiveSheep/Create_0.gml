@@ -20,7 +20,7 @@ right = choose(1,-1)
 my_health = maxhealth
 
 EnemyHealthAdjustments();
-
+scrInitDrops(5);
 
 team = 0
 target = -1

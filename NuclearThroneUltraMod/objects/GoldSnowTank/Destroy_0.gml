@@ -16,9 +16,18 @@ if !place_meeting(x,y,Morph)
 {
 	with instance_create(x,y,SnowTankExplo)
 	{
-	spr_dead = other.spr_dead;
-	right=other.right;
-	sprite_index= other.spr_hurt;
-	my_health=other.my_health;
+		itemDropChance = other.itemDropChance;
+		itemDropChanceIndex = other.itemDropChanceIndex;
+		weaponDropChance = other.weaponDropChance;
+		weaponDropChanceIndex = other.weaponDropChanceIndex;
+		confDropChance = other.confDropChance;
+		confDropChanceIndex = other.confDropChanceIndex;
+		spr_dead = other.spr_dead;
+		right=other.right;
+		sprite_index= other.spr_hurt;
+		my_health=other.my_health;
+		if other.isInverted
+			alarm[0] = 6;
+		
 	}
 }

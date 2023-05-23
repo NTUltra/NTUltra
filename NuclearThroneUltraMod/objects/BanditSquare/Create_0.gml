@@ -25,11 +25,11 @@ wkick = 0
 maxDetectRange = 160;
 maxSpeed = 3;
 loops = GetPlayerLoops();
-actTime = 15;
+actTime = 17;
 pSpeed = 3.6;
 if loops > 0
 {
-	actTime = 10;
+	actTime = 12;
 	maxDetectRange += 20;
 	pSpeed = 4.1;
 }

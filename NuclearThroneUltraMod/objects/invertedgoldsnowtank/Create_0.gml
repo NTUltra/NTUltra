@@ -12,3 +12,4 @@ raddrop = 20
 maxhealth = 60
 EnemyHealthAdjustments();
 maxSpeed = 2;
+isInverted = true;

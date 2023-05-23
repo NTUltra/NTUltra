@@ -1,6 +1,6 @@
 move_bounce_solid(true)
 move_outside_solid(point_direction(other.x+8,other.y+8,x,y),2)
-speed*=0.8;
+speed*=0.84;
 if instance_exists(Player)
 {
 	if Player.ultra_got[53] == 1 || Player.ultra_got[54] == 1 || Player.ultra_got[55] == 1 || Player.ultra_got[56] == 1

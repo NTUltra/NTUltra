@@ -11,9 +11,9 @@ if instance_exists(WeaponMod) && instance_number(WeaponMod) > 1
 			while (wepmod == other.wepmod && tries > 0)
 			{
 				wepmod = scrMods();
-				modname = scrWepModName(wepmod);
+				weaponModName = scrWepModName(wepmod);
 				moddescription = scrWepModDescription(wepmod);
-				name="##MODIFY WEAPON#"+modname;
+				modname="##MODIFY WEAPON#"+modname;
 				tries--;
 			}
 		}
@@ -26,10 +26,10 @@ wepmod3=0;
 wepmod4=0;
 
 
-modname = scrWepModName(wepmod);
+weaponModName = scrWepModName(wepmod);
 moddescription = scrWepModDescription(wepmod);
 holdExplainTimer = 0;
-name="##MODIFY WEAPON#"+modname;
+modname="##MODIFY WEAPON#"+weaponModName;
 type = 0;
 instance_create(x,y,WallBreak);
 

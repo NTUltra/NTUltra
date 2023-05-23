@@ -56,8 +56,8 @@ if UberCont.public = 0 {
     }
 
     if keyboard_check_pressed(ord("1")) {
-        area = 9
-        subarea = 3
+        area = 1
+        subarea = 0
         //inverted=true
         with enemy
         my_health = 0
@@ -65,8 +65,7 @@ if UberCont.public = 0 {
     }
 
     if keyboard_check_pressed(ord("2")) {
-        area = 121
-        inverted=true;
+        area = 2
         subarea = 0
         with enemy
         my_health = 0
@@ -74,46 +73,42 @@ if UberCont.public = 0 {
     }
 
     if keyboard_check_pressed(ord("3")) {
-        area = 122
+        area = 3
         subarea = 0
-        inverted = true;
         with enemy
         my_health = 0
         with instance_create(x, y, Portal) type = 1
     }
 	if keyboard_check_pressed(ord("4")) {
-        area = 123
+        area = 6
         subarea = 0
-		inverted = true;
         with enemy
         my_health = 0
         with instance_create(x, y, Portal) type = 1
     }
     if keyboard_check_pressed(ord("5")) {
-        area = 124
+        area = 5
         subarea = 0;
-		inverted = true;
         with enemy
         my_health = 0
         with instance_create(x, y, Portal) type = 1
     }
     if keyboard_check_pressed(ord("6")) {
-        area = 125
+        area = 7
         subarea = 0
-		inverted = true;
         with enemy
         my_health = 0
         with instance_create(x, y, Portal) type = 1
     }
     if keyboard_check_pressed(ord("7")) {
-        area = 100
+        area = 9
         subarea = 0
         with enemy
         my_health = 0
         with instance_create(x, y, Portal) type = 1
     }
     if keyboard_check_pressed(ord("8")) {
-        area = 8
+        area = 101
         subarea = 0
         with enemy
         my_health = 0
@@ -121,17 +116,16 @@ if UberCont.public = 0 {
     }
 
     if keyboard_check_pressed(ord("9")) {
-        area = 9
-        subarea = 2
-		inverted = true;
+        area = 10
+        subarea = 0
         with enemy
         my_health = 0
         with instance_create(x, y, Portal) type = 1
     }
 
     if keyboard_check_pressed(ord("0")) {
-        area = 9
-        subarea = 2
+        area = 114
+        subarea = 0
         with enemy
         my_health = 0
         with instance_create(x, y, Portal) type = 1

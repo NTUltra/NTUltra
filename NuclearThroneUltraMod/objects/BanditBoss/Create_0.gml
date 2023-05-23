@@ -53,3 +53,4 @@ if UberCont.opt_gamemode != 25
 if cam
 instance_create(x,y,DramaCamera);
 
+scrAddDrops(2);

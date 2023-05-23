@@ -47,7 +47,10 @@ alarm[0] = 2+random(4)
 
 if alarm[4]>0
 {
-image_angle+=10;
+if UberCont.normalGameSpeed == 60
+		image_angle += 6;
+	else
+		image_angle+=12;
 }
 else if alarm[5] < 1
 image_angle=0;

@@ -11,6 +11,7 @@ with other
 	sprite_index = spr_hurt
 	image_index = 0
 	motion_add(other.direction,6)
+	scrForcePosition60fps();
 	if speed > maxSpeed + 2
 		speed = maxSpeed+2;
 }

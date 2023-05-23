@@ -1,5 +1,5 @@
 scrDrop(40,5)
-scrDrop(5,0)
+scrDrop(6,0)
 instance_create(x,y,BigGreenExplosion);
 event_inherited();
 with Player

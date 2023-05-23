@@ -13,15 +13,26 @@ if team != other.team && alarm[0] < 1
 			with instance_create(x,y,Deflect)
 				image_angle = other.direction
 		}
-		sprite_index = sprStatueBossShieldDeflect;
+		sprite_index = spr_deflect;
 		image_index = 0;
 	}
-	else if other.typ = 2
+	else if other.typ == 2
 	{
-		sprite_index = sprStatueBossShieldDeflect;
+		sprite_index = spr_deflect;
 		image_index = 0;
 		with other
 			instance_destroy()
+	}
+	else if other.typ == 0 && !other.canBeMoved
+	{
+		with other
+		{
+			var d = point_distance(xstart,ystart,other.x,other.y) - 1;
+			x = xstart + lengthdir_x(d,image_angle);
+			y = ystart + lengthdir_y(d,image_angle);
+			image_xscale = point_distance(x,y,xstart,ystart)*0.5
+			alarm[0] += 2;
+		}
 	}
 	
 }

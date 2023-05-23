@@ -73,7 +73,8 @@ if target > 0 {
 	}
 	if ran < 1
 	{
-		scrDrop(20,0);	
+		scrAddDrops(1);
+		scrDrop(20,0);
 	}
 	//cos 45 = 0.7 cos 90 = 0; cos 0 = 0;
 	//cos 135 = -0.7

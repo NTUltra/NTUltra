@@ -11,7 +11,7 @@ if random(2) < 1 && point_distance(target.x,target.y,x,y) < 180
 gunangle = point_direction(x,y,target.x,target.y)
 
 alarm[2] = 2;
-alarm[1] = actTime+3
+alarm[1] += 4;
 }
 else
 {direction = point_direction(x,y,target.x,target.y)+random(180)-90

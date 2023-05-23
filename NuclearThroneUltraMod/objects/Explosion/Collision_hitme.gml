@@ -6,9 +6,19 @@ if other.team != team && other.team!=2
 		snd_play(snd_hurt, hurt_pitch_variation)
 
 		if instance_exists(Player)
-			my_health -= other.dmg+Player.ultra_got[57]*5//atom ultra
+		{
+			if UberCont.normalGameSpeed == 60
+				my_health -= (other.dmg + Player.ultra_got[57]*5) * 0.5//atom ultra
+			else
+				my_health -= other.dmg + Player.ultra_got[57] * 5//atom ultra
+		}
 		else
-			my_health-=other.dmg;
+		{
+			if UberCont.normalGameSpeed == 60
+				my_health -= other.dmg * 0.5;
+			else
+				my_health-=other.dmg;
+		}
 
 		sprite_index = spr_hurt
 		image_index = 0

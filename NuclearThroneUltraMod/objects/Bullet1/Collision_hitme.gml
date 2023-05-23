@@ -10,6 +10,7 @@ if Player.ultra_got[28]//roids ultra d
 sprite_index = spr_hurt
 image_index = 0
 motion_add(other.direction,5)
+scrForcePosition60fps();
 if speed > maxSpeed+1
 	speed = maxSpeed+1;
 }

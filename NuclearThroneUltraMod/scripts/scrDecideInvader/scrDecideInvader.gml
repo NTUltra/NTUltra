@@ -26,6 +26,11 @@ function scrDecideInvader(){
 			{
 				am2 = 1;
 				am = 1;
+			}//Dragon
+			if (area == 7 || area == 108)  && subarea == 3
+			{
+				am2 = 1;
+				am = 1;
 			}
 			else if (area == 9 || area == 118) && subarea == 3
 			{

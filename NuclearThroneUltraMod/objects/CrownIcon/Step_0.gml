@@ -335,6 +335,10 @@ with Crown
 	else
 	{
 		scrCrownAnimation(c);
+		if c == 33//ECHO
+			alarm[2] = 30;
+		else
+			alarm[2] = 0;
 	}
 }
 }

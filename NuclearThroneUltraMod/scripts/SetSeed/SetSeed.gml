@@ -4,9 +4,16 @@
 function SetSeed(){
 	with UberCont
 	{
+		var a = loops;
+		if instance_exists(Player)
+		{
+			a = Player.loops;
+			a += Player.area;
+			a += Player.subarea;
+		}
 		if (useSeed)
 		{
-			random_set_seed(seed+loops)
+			random_set_seed(seed+a)
 		}
 	}
 }

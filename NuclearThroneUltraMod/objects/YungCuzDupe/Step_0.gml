@@ -60,8 +60,10 @@ if hammerheadcounter > 0
 		mask_index = msk;
 		if place_meeting(x+hspeed,y+vspeed,Wall)
 		{
-			
-			hammerheadtimer += 1;
+			if UberCont.normalGameSpeed == 60
+				hammerheadtimer += 0.5;
+			else
+				hammerheadtimer += 1;
 
 			alarm[5]=12;//timer before hammerhead continuation stops
 			

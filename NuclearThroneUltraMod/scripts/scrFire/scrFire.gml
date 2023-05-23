@@ -27,7 +27,13 @@ function scrFire() {
 		    }
 		}
 	}
-
+	if Player.crown == 33 && object_index == Player {
+		//CROWN OF ECHO
+		crown = 0;
+		scrFire();
+		reload += wep_load[wep]*0.8;
+		crown = 33;
+	}
 	// ROIDS THRONE BUTT
 	//when firing both weapon more chance to giev other weapon ammo
 	if Player.ultra_got[25] && wep == bwep
