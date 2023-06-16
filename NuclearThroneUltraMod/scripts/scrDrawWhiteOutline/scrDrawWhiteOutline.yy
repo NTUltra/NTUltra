@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scrEndOfRun",
+  "name": "scrDrawWhiteOutline",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

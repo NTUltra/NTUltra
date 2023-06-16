@@ -3,13 +3,13 @@ alarm[9] = 1;
 
 if instance_exists(GenCont)
 	exit;
-
+/*
 if !instance_exists(Menu)
 {
 	var normalizationSpeed = min(0.98,0.4 + (instance_number(YungCuzDupe)+instance_number(Friend)*0.1));
 	viewx2 = viewx2-(viewx2-viewx)*normalizationSpeed;
 	viewy2 = viewy2-(viewy2-viewy)*normalizationSpeed;
-}
+}*/
 if instance_exists(Player)
 {
 	//Only start spawning vans and popo when no longer a sheep

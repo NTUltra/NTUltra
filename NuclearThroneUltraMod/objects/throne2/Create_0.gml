@@ -9,6 +9,7 @@ meleedamage = 10
 size = 6;
 
 event_inherited()
+depth -= 1;
 alarm[10] = 0;
 spr_idle = sprNothing2Idle
 spr_walk = sprNothing2Idle

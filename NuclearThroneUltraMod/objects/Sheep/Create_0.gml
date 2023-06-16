@@ -42,3 +42,4 @@ wkick = 0
 alarm[0] = 8;
 snd_play(sndSheep,0.1,true);
 
+scrInitDrops(5);

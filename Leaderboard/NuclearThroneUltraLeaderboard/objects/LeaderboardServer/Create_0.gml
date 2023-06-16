@@ -1,7 +1,6 @@
 /// @description Init
-updateVersion = "BETA 30.11";
-serverPort = 0;
 updateVersion = "BETA 30.13";
+serverPort = 0;
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;
 maxwep = 609;
@@ -16,7 +15,7 @@ day = -1;
 week = -1;
 /*
 	if we want to load in a manual week set week to the previous one (thats a number)
-	THen when the new week hits it will run the new code there for the first time,
+	Then when the new week hits it will run the new code there for the first time,
 	So you can force your rng there
 */
 defaultTotalDailies = -1;

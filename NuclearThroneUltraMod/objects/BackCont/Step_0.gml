@@ -99,7 +99,12 @@ if UberCont.opt_camera_follow==0
 	prevviewx2 = viewx2;
 	prevviewy2 = viewy2;
 }
-
+if !instance_exists(Menu)
+{
+	var normalizationSpeed = min(0.98,0.4 + (instance_number(YungCuzDupe)+instance_number(Friend)*0.1));
+	viewx2 = viewx2-(viewx2-viewx)*normalizationSpeed;
+	viewy2 = viewy2-(viewy2-viewy)*normalizationSpeed;
+}
 __view_set( e__VW.XView, 0, round(viewx2+(random(shake)-shake*0.5)*UberCont.opt_shake) );
 __view_set( e__VW.YView, 0, round(viewy2+(random(shake)-shake*0.5)*UberCont.opt_shake) );
 

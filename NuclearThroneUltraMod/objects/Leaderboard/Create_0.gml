@@ -32,6 +32,7 @@ viewingWeekly = false;
 viewingWeeklyGamemode = 0;
 scrWeapons();
 scrCrowns();
+scrUltras();
 //Data types
 enum NETDATA {
 	CLIENT_ID,
@@ -47,3 +48,10 @@ enum NETDATA {
 killScroll = 0;
 killScrollAdd = 0.01;
 alarm[2] = 20;
+
+enablePopUp = 0;
+popupEntry = 0;
+popUpX = 0;
+popUpY = 0;
+popUpIndex = 0;
+popUpAltUltra = false;

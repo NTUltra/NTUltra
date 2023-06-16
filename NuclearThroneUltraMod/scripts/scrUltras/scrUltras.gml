@@ -1,11 +1,11 @@
-function scrUltras() {
+function scrUltras(altOverride = false) {
 	var isOtherCharacter = false;
 	// ULTRAS
 	ultra_name[0] = "TOTAL FORECALL"
 	ultra_text[0] = "CHOOSE AN ULTRA MUTATION#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)#GET OFFERED PATIENCE WITH EVERY CHOICE"
 	ultra_tips[0] = "adapting"
 	
-	if (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (scrCheckGold(Player.wep_name[Player.wep]) || scrCheckGold(Player.wep_name[Player.bwep]))))
+	if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (scrCheckGold(Player.wep_name[Player.wep]) || scrCheckGold(Player.wep_name[Player.bwep]))))
 	{
 		ultra_name[0] = "CASH FLOW"
 		ultra_text[0] = "REPLACE BEAM WITH CASH FLOW#CASH FLOW USES CASH INSTEAD OF RADS#GET 100 CASH EVERY AREA#CASH MAXIMUM IS 500#KILLS GENERATE CASH#(UPGRADES TO BEAM STILL APPLY)##YOU CAN KEEP USING ACTIVE#EVEN WHILE IN DEBT#BUT ACTIVE WILL BE LOCKED UNTIL#OUT OF DEBT AT THE START OF AN AREA"
@@ -30,7 +30,7 @@ function scrUltras() {
 	ultra_text[4] = "REDUCE AMMO/RAD COST BY 5%#INCREASED PRIMARY FIRE RATE#DEPENDING ON YOUR SPEED#MUCH MORE EFFECTIVE WHEN ROLLING"
 	ultra_tips[4] = "is waterboost a thing now?"
 	
-	if instance_exists(Player) && Player.bskin == 2
+	if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || Player.bskin == 2)
 	{
 		ultra_name[4] = "FISH CAN GUN"
 		ultra_text[4] = "REDUCE AMMO/RAD COST BY 15%#THE MORE AMMO YOU HAVE#THE HIGHER YOUR FIRERATE#DOES NOT HAVE AN EFFECT ON MELEE"
@@ -46,7 +46,7 @@ function scrUltras() {
 	    ultra_text[6] = "MOVE WHILE SHIELDED"
 	    ultra_tips[6] = "crab legs"
 		
-		if (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || ((Player.curse || Player.bcurse) && instance_exists(UltraIcon))))
+		if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || ((Player.curse || Player.bcurse) && instance_exists(UltraIcon))))
 		{
 			ultra_name[6] = "CURSED"
 		    ultra_text[6] = "TELEPORT AFTER SHIELDING#SHIELDING FIRES LASERS"
@@ -66,7 +66,7 @@ function scrUltras() {
 	ultra_text[9] = "HOLD YOUR PROJECTILES#STRONGER PROJECTILE PUSH"
 	ultra_tips[9] = "need more cannons"
 	
-	if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (scrHasEyesMutations() && instance_exists(UltraIcon)))
+	if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (scrHasEyesMutations() && instance_exists(UltraIcon))))
 	{
 		ultra_name[9] = "STRANGE STYLE"
 		ultra_text[9] = "TELEKINESIS PULLS#ENEMIES AND PROJECTILES#TOWARDS YOUR CROSSHAIR"
@@ -90,7 +90,7 @@ function scrUltras() {
 	    ultra_text[13] = "BLOW UP LOW HP ENEMIES"// originally doesn't work with scarier face
 	    ultra_tips[13] = "5hp == death"
 		
-		if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (Player.maxhealth == 1 && UberCont.opt_gamemode != 5 && instance_exists(UltraIcon)))
+		if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (Player.maxhealth == 1 && UberCont.opt_gamemode != 5 && instance_exists(UltraIcon))))
 		{
 			ultra_name[13] = "DEATH STARE"
 			ultra_text[13] = "LOOKING AT ENEMIES SLOWLY KILLS THEM#ENEMIES ARE SCARED OF YOU"
@@ -131,15 +131,12 @@ function scrUltras() {
 	ultra_text[20] = "SPAWN TWO SNARES#SNARES DESTROY PROJECTILES"
 	ultra_tips[20] = "better then original stereo snares"
 	
-	if instance_exists(Player)
+	if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && (Player.crown == 23 && Player.skill_got[2]))))
 	{
-		if (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && (Player.crown == 23 && Player.skill_got[2])))
-		{
-			//EXTRA FEET OR CROWN OF SPEED
-			ultra_name[20] = "SONIC SPEED"
-			ultra_text[20] = "YOU CAN MOVE EXTREMELY FAST!#ACCELERATING OR DECELERATING QUICKLY#CREATES A SONIC BOOM"
-			ultra_tips[20] = "SONIC BOOM!"
-		}
+		//EXTRA FEET OR CROWN OF SPEED
+		ultra_name[20] = "SONIC SPEED"
+		ultra_text[20] = "YOU CAN MOVE EXTREMELY FAST!#ACCELERATING OR DECELERATING QUICKLY#CREATES A SONIC BOOM"
+		ultra_tips[20] = "SONIC BOOM!"
 	}
 	
 
@@ -155,14 +152,11 @@ function scrUltras() {
 	    ultra_name[23] = "MAKE IT RAIN"
 	    ultra_text[23] = "REALLY HIGH SHOTGUN FIRE RATE#USED BULLET AMMO#CONVERTS TO SHOTGUN AMMO#(10 BULLET TO 1 SHOTGUN AMMO)"//"REALLY HIGH SHOTGUN FIRE RATE#USED SHOTGUN AMMO CONVERTS#TO BULLET AMMO"
 	    ultra_tips[23] = "shells and bullets <3"
-		if instance_exists(Player) && Player.race == 6
+		if altOverride || (instance_exists(Player) && Player.race == 6 && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && (scrMeleeWeapons(Player.wep) || Player.wep == 0) && (scrMeleeWeapons(Player.bwep) || Player.bwep == 0))))
 		{
-			if (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && (scrMeleeWeapons(Player.wep) || Player.wep == 0) && (scrMeleeWeapons(Player.bwep) || Player.bwep == 0)))
-			{
-				ultra_name[23] = "BLASPHEMY"
-			    ultra_text[23] = "CAN NO LONGER POP POP GUNS#45% HIGHER MELEE SWING RATE#MELEE IS FULLY AUTOMATIC#CAN POP POP MELEE"
-			    ultra_tips[23] = "why would you forsake us gun god?"
-			}
+			ultra_name[23] = "BLASPHEMY"
+			ultra_text[23] = "CAN NO LONGER POP POP GUNS#45% HIGHER MELEE SWING RATE#MELEE IS FULLY AUTOMATIC#CAN POP POP MELEE"
+			ultra_tips[23] = "why would you forsake us gun god?"
 		}
     
 	    ultra_name[24] = "VERIFY VENUZ"
@@ -181,15 +175,12 @@ function scrUltras() {
 	ultra_name[27] = "MIRROR HANDS"
 	ultra_text[27] = "RIGHT CLICK FIRES YOUR PRIMARY#SWAPPING RELOADS YOUR WEAPONS"
 	ultra_tips[27] = "auto pop pop"
-	if instance_exists(Player)
+	if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && (Player.wep == Player.bwep))))
 	{
-		if (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && (Player.wep == Player.bwep)))
-		{
-			//Need to update alt ultra description in ultraIcon
-			ultra_name[27] = "PUNCHSWAP"
-			ultra_text[27] = "SWAPPING MAKES YOU SWING#WITH YOUR WEAPON#SWINGS DEFLECT PROJECTILES#AND DEAL DAMAGE"
-			ultra_tips[27] = "GET KNOCKED OUT"
-		}
+		//Need to update alt ultra description in ultraIcon
+		ultra_name[27] = "PUNCHSWAP"
+		ultra_text[27] = "SWAPPING MAKES YOU SWING#WITH YOUR WEAPON#SWINGS DEFLECT PROJECTILES#AND DEAL DAMAGE"
+		ultra_tips[27] = "GET KNOCKED OUT"
 	}
 
 	ultra_name[28] = "STRONG FIRE"
@@ -199,7 +190,7 @@ function scrUltras() {
 	    //ROBOT 
 		if instance_exists(Player) && Player.race != 8
 			isOtherCharacter = true;
-		if instance_exists(Player) && (Player.spr_idle == sprMutant8DIdle || Player.unlockAlternativeUltras)
+		if altOverride || (instance_exists(Player) && (Player.spr_idle == sprMutant8DIdle || Player.unlockAlternativeUltras))
 		{
 			ultra_name[29] = "EXCLUSIVE TASTE"
 			ultra_text[29] = "HOLDING ONLY ONE WEAPON WILL:#INCREASE DAMAGE DEALT TO ENEMIES BY 20%#RETURN 10% AMMO/RAD UPON FIRING#+15% FIRERATE AND +4 MAX HP##AUTO EAT WEAPONS LEFT IN THE LEVEL";
@@ -216,7 +207,7 @@ function scrUltras() {
 		}
 		
 		ultra_name[30] = "REGURGITATE"
-		if instance_exists(Player) && !isOtherCharacter && Player.skill_got[23]//Has open mind
+		if altOverride || (instance_exists(Player) && !isOtherCharacter && Player.skill_got[23])//Has open mind
 			ultra_text[30] = "EATING WEAPONS HAS A 40% CHANCE#TO DROP CHESTS##EATING A WEAPON DROPS IT LIKE A TURRET#THE TURRET FIRES THE EATEN WEAPON##AUTO EAT WEAPONS LEFT IN THE LEVEL";
 		else
 			ultra_text[30] = "EATING WEAPONS HAS A 30% CHANCE#TO DROP CHESTS##EATING A WEAPON DROPS IT LIKE A TURRET#THE TURRET FIRES THE EATEN WEAPON##AUTO EAT WEAPONS LEFT IN THE LEVEL"
@@ -239,7 +230,7 @@ function scrUltras() {
 	ultra_tips[33] = "immortal"
 	
 	//FIRE WEAPON
-	if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (scrHasFireWeapon() && instance_exists(UltraIcon)))
+	if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (scrHasFireWeapon() && instance_exists(UltraIcon))))
 	{
 		ultra_name[33] = "PHOENIX"
 		ultra_text[33] = "WHILE YOU ARE ABOVE LEVEL 1#PREVENT THE LOSS OF YOUR HEAD#INSTEAD, REGAIN ALL YOUR HP#LOSE A LEVEL AND A RANDOM MUTATION##EVERYTIME YOUR DEATH IS PREVENTED#YOU PERMANENTLY BECOME STRONGER#AND YOU LEVEL UP SLOWER"
@@ -254,7 +245,7 @@ function scrUltras() {
 	ultra_text[35] = "SLOW MOTION IS MUCH MORE EFFECTIVE#ON ENEMY PROJECTILES#(EVEN MORE EFFECTIVE WITH EUPHORIA)##SLOW MOTION COMPLETLY STOPS#YOUR PROJECTILES"
 	ultra_tips[35] = "so fast"
 	
-	if instance_exists(Player) && ((Player.crown == 12 && instance_exists(UltraIcon)) || Player.altUltra)
+	if altOverride || (instance_exists(Player) && ((Player.crown == 12 && instance_exists(UltraIcon)) || Player.altUltra))
 	{
 		ultra_name[35] = "SUCOF"
 		ultra_text[35] = "EMIT SESREVER EVITCA"//ACTIVE REVERSES TIME
@@ -278,7 +269,7 @@ function scrUltras() {
 	    ultra_text[39] = "ALLIES CAST LASERS TOWARDS EACH OTHER#THE MORE ALLIES YOU HAVE#THE HIGHER YOUR DROP RATE IS#ALIES DROP MORE RESOURCES#WHEN THEY DIE"
 	    ultra_tips[39] = "hurt stone"
 		
-		if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (scrCheckUltra(Player.wep_name[Player.wep]) || (!Player.skill_got[1] && !Player.skill_got[7] && !Player.skill_got[9]&& !Player.skill_got[25]) || scrCheckUltra(Player.wep_name[Player.bwep]) && instance_exists(UltraIcon)))
+		if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (scrCheckUltra(Player.wep_name[Player.wep]) || (!Player.skill_got[1] && !Player.skill_got[7] && !Player.skill_got[9]&& !Player.skill_got[25]) || scrCheckUltra(Player.wep_name[Player.bwep]) && instance_exists(UltraIcon))))
 		{
 			ultra_name[39] = "BIG REBEL"
 		    ultra_text[39] = "+40 MAX HP!#YOU CAN'T HEAL#EVERY LOOP RESET HP TO FULL#ALLIES COST AMMO"
@@ -304,7 +295,7 @@ function scrUltras() {
 	ultra_tips[43] = "friendly fire?"
 	
 	//Eagle eyes and energy brain results in laser eye duh
-	if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (Player.skill_got[19] && Player.skill_got[17] && instance_exists(UltraIcon)))
+	if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (Player.skill_got[19] && Player.skill_got[17] && instance_exists(UltraIcon))))
 	{
 		ultra_name[43] = "SNIPER EYE"
 		ultra_text[43] = "REPLACE YOUR ACTIVE WITH A SNIPER EYE#THE EYE BREAKS WALLS#PIERCES, STUNS AND DAMAGES ENEMIES#DAMAGE INCREASES EACH PIERCE#MORE POWERFUL#THE LONGER YOU WAIT BETWEEN SHOTS#POWER SCALES FASTER#IF YOU HAVE THRONE BUTT"
@@ -329,9 +320,9 @@ function scrUltras() {
 	    ultra_tips[47] = "annoying"
 		
 		//Pluto and no rhino skin?
-		if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (
+		if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (
 		!Player.skill_got[1] && Player.skill_got[3]
-		&& instance_exists(UltraIcon)))
+		&& instance_exists(UltraIcon))))
 		{
 			ultra_name[47] = "GREEN TEAM"
 		    ultra_text[47] = "SPAWNING BUDDIES COSTS RADS#INSTEAD OF MAX HP#BUDDIES DROP MORE RESOURCES"
@@ -361,9 +352,9 @@ function scrUltras() {
 	ultra_tips[51] = "what a beast"
 	*/
 	//NO EXTRA FEET NO GAMMA GUTS
-	if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (
+	if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (
 	!Player.skill_got[2] && !Player.skill_got[8]
-	&& instance_exists(UltraIcon)))
+	&& instance_exists(UltraIcon))))
 	{
 		ultra_name[51] = "HYPNOTIZE"
 		ultra_text[51] = "ENEMIES REACT AND MOVE SLOWER##ACTIVE CHANGES INTO HYPNOSIS#HYPNOSIS RE-ACTIVATES YOUR PASSIVE#CAN BE USED 3 TIMES EACH AREA#THRONE BUTT INCREASES USES TO 5"
@@ -388,9 +379,9 @@ function scrUltras() {
 	    ultra_tips[55] = "rise above"
 		
 		//Flexible elbows and or long arms
-		if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (
+		if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (
 		(Player.skill_got[13] || Player.skill_got[34] || Player.skill_got[20]) && !Player.skill_got[5]
-		&& instance_exists(UltraIcon)))
+		&& instance_exists(UltraIcon))))
 		{
 			ultra_name[55] = "INCONSISTENT INCOMPATABILITY"
 		    ultra_text[55] = "ALL WEAPONS ARE FULLY AUTOMATIC#YOU NO LONGER THROW WEAPONS#INSTEAD YOUR ACTIVE FIRES YOUR WEAPON#FROM THE ORIGIN OF YOUR CROSSHAIR";
@@ -416,9 +407,9 @@ function scrUltras() {
 	ultra_tips[59] = "that is electrifying!"
 	
 	//NO ENERGY BRAIN & CROWN OF HASTE/APOCALYPSE
-	if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (
+	if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (
 	(!Player.skill_got[17] && (Player.crown == 4 || Player.crown == 28))
-	&& instance_exists(UltraIcon)))
+	&& instance_exists(UltraIcon))))
 	{
 		ultra_name[59] = "PATH OF DESTRUCTION"
 		ultra_text[59] = "EVERYWHERE YOU GO#YOU LEAVE BEHIND A TRAIL OF#DAMAGING GOOP##PICKUPS FADE FASTER#FADED PICKUPS REROLL INTO OTHER PICKUPS#PICKUPS CAN FADE/REROLL TWICE"
@@ -434,7 +425,7 @@ function scrUltras() {
 	    ultra_text[61] = "TRIPLE ARMOUR STRIKE#ARMOUR STRIKE DESTROYS PROJECTILES#GAIN 1 ARMOUR WHEN YOU KILL A BOSS"
 	    ultra_tips[61] = "break down the walls!"
 		
-		if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || ((scrKrakenWeapons(Player.wep) || scrKrakenWeapons(Player.bwep)) && instance_exists(UltraIcon)))
+		if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || ((scrKrakenWeapons(Player.wep) || scrKrakenWeapons(Player.bwep)) && instance_exists(UltraIcon))))
 		{
 			ultra_name[61] = "CAPTAIN OF THE KRAKEN"
 			ultra_text[61] = "KRAKEN WEAPONS DEAL MORE DAMAGE#TENTACLES ARE LONGER#KRAKEN WEAPONS COST 30% LESS AMMO"
@@ -460,7 +451,7 @@ function scrUltras() {
 		    ultra_tips[62] = "tank up"
 	    }
 		//IF no health mutations
-		if instance_exists(Player) && Player.race == 16 && (Player.altUltra || Player.unlockAlternativeUltras || (!Player.skill_got[14] && !Player.skill_got[22] && !Player.skill_got[7] && !Player.skill_got[36] && Player.crown != 20 && !Player.skill_got[32] && !Player.skill_got[31] && instance_exists(UltraIcon)))
+		if altOverride || (instance_exists(Player) && Player.race == 16 && (Player.altUltra || Player.unlockAlternativeUltras || (!Player.skill_got[14] && !Player.skill_got[22] && !Player.skill_got[7] && !Player.skill_got[36] && Player.crown != 20 && !Player.skill_got[32] && !Player.skill_got[31] && instance_exists(UltraIcon))))
 		{
 			ultra_name[62] = "LIVING ARMOUR"
 			ultra_text[62] = "REPLACE ALL YOUR HEALTH WITH ARMOUR##HEALTH DROPS BECOME ARMOUR DROPS##(SECOND STOMACH DOUBLES ARMOUR#FROM ARMOUR DROPS)"
@@ -479,7 +470,7 @@ function scrUltras() {
 	ultra_name[65] = "WEAPON MODDER"
 	//ultra_text[65] = "IN EVERY AREA#A WEAPON MOD SPAWNS#INCREASE HOW OFTEN MODS TRIGGER#COMBINING A WEAPON ADDS A MOD TO IT"
 	ultra_text[65] = "IN EVERY AREA#A WEAPON MOD SPAWNS#DOUBLE WEAPONMOD EFFECTIVENESS#COMBINING A WEAPON ADDS A MOD TO IT"
-	if instance_exists(Player) && Player.race != 17
+	if instance_exists(Player) && (Player.race != 17)
 		ultra_text[65] = "IN EVERY AREA#A WEAPON MOD SPAWNS#DOUBLE WEAPONMOD EFFECTIVENESS"
 	ultra_tips[65] = "modder"
 
@@ -488,7 +479,7 @@ function scrUltras() {
 	ultra_tips[66] = "craft changer"
 	
 	//EMPY HAND
-	if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (Player.bwep == 0 && instance_exists(UltraIcon)))
+	if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (Player.bwep == 0 && instance_exists(UltraIcon))))
 	{
 		ultra_name[66] = "QUICK SWAPPER"
 		ultra_text[66] = "INCREASE WEAPON PICKUP RANGE##YOU DROP WEAPONS AT YOUR FEET##DROPPING A WEAPON#MAKES YOU IMMUNE FOR A SHORT DURATION##PORTALS SPIT OUT A NEW RANDOM WEAPON#UPON ENTERING AN AREA"
@@ -502,7 +493,7 @@ function scrUltras() {
 	ultra_name[68] = "SCRAP FINDER"
 	ultra_text[68] = "ALL WEAPON DROPS GIVE YOU HEALTH, RADS#AND MORE AMMO FOR ALL TYPES#PICKING UP A WEAPON#SPAWNS LIGHTNING"
 	ultra_tips[68] = "recourseful"
-	if instance_exists(Player) && Player.race == 17 && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && (scrHasMorphMod() || scrHasMorphWeapon())))
+	if altOverride || (instance_exists(Player) && (Player.race == 17 && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && (scrHasMorphMod() || scrHasMorphWeapon())))))
 	{
 		ultra_name[68] = "ENGINUITY"
 		ultra_text[68] = "YOUR ACTIVE BECOMES:#CHANGE YOUR WEAPON#INTO ONE OF THE SAME TIER#YOU CAN GO THROUGH#ALL AVAILABLE WEAPONS##WHENEVER YOU CHANGE OR SWAP WEAPONS#SPAWN MORPH ON YOUR CROSSHAIR"
@@ -528,9 +519,9 @@ function scrUltras() {
 	    ultra_tips[72] = "all you need is air"
 		
 		//Have less than default max hp
-		if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (
+		if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (
 		((Player.maxhealth < 8 && UberCont.opt_gamemode != 9) || (UberCont.opt_gamemode == 9 && Player.maxhealth < 8 + UberCont.casualModeHPIncrease))
-		&& instance_exists(UltraIcon)))
+		&& instance_exists(UltraIcon))))
 		{
 			ultra_name[72] = "MIRROR"
 		    ultra_text[72] = "ACTIVE NO LONGER HEALS#ACTIVE COST IS ALWAYS REDUCED#(AS IF YOU ARE ON MAX HP)#ALSO DEFLECT ON YOUR RETICLE"
@@ -547,7 +538,7 @@ function scrUltras() {
 	ultra_text[74] = "FIRING A WEAPON WITH BLOOD GAMBLE#WILL REDUCE ITS RELOAD TIME BY 80%##USING BLOOD GAMBLE WHILE RELOADING#CAN FORCE YOUR WEAPON TO FIRE#AT THE COST OF 1HP"
 	ultra_tips[74] = "damn son!"
 	
-	if instance_exists(Player) && Player.race == 19 && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && scrHasBloodWeapon()))
+	if altOverride || (instance_exists(Player) && (Player.race == 19 && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && scrHasBloodWeapon()))))
 	{
 		ultra_name[74] = "REMINISCE"
 		ultra_text[74] = "REPLACE YOUR ACTIVE WITH BLOOD SPLATTER#YOU SPAWN BLOOD TOWARDS NEARBY CORPSES##THRONEBUTT INCREASES AMOUNT OF BLOOD##BLOOD CAN DESTROY#ALL TYPES OF PROJECTILES#BLOOD CAN GO THROUGH WALLS"
@@ -563,26 +554,15 @@ function scrUltras() {
 	ultra_text[75] = "IMMUNE WHILE STATIONARY##SUCCESSFUL BLOOD GAMBLE#MAKES YOU IMMUNE FOR A SHORT DURATION##FAILED BLOOD GAMBLE#CREATES BLOOD EXPLOSIONS"
 	ultra_tips[75] = "hybrid character"
 
-	if instance_exists(Player)
-	{
-	    if Player.ultimategamble==true || Player.unlockAlternativeUltras
-	    {
-	    ultra_name[76] = "THE ULTIMATE GAMBLE"
-	    ultra_text[76] = "50% CHANCE TO DIE OR TO GET#TWO RANDOM ULTRA MUTATIONS#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
-	    ultra_tips[76] = "that went well!"
-	    }
-	    else
-	    {
-	    ultra_name[76] = "UNSTOPPABLE"
-	    ultra_text[76] = "GAIN THREE LIVES##NORMAL MOVEMENT SPEED#NORMAL ACCURACY"
-	    ultra_tips[76] = "never dead"
-	    }
-	}
-	else
-	{
 	ultra_name[76] = "UNSTOPPABLE"
 	ultra_text[76] = "GAIN THREE LIVES"
 	ultra_tips[76] = "never dead"
+	
+	if altOverride || (instance_exists(Player) && (Player.ultimategamble==true || Player.unlockAlternativeUltras))
+	{
+	    ultra_name[76] = "THE ULTIMATE GAMBLE"
+	    ultra_text[76] = "50% CHANCE TO DIE OR TO GET#TWO RANDOM ULTRA MUTATIONS#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
+	    ultra_tips[76] = "that went well!"
 	}
 
 	    //BUSINESSHOG 
@@ -591,9 +571,9 @@ function scrUltras() {
 	    ultra_tips[77] = "money everywhere"
 		
 		//Have heavy heart
-		if instance_exists(Player) && Player.race == 20 && (Player.altUltra || Player.unlockAlternativeUltras || (
+		if altOverride || (instance_exists(Player) && (Player.race == 20 && (Player.altUltra || Player.unlockAlternativeUltras || (
 		(Player.skill_got[0])
-		&& instance_exists(UltraIcon)))
+		&& instance_exists(UltraIcon)))))
 		{
 			ultra_name[77] = "HOARDING THIEF"
 		    ultra_text[77] = "GO TO YV'S CRIB#YOUR SHOP BECOMES A WEAPON WHEEL#SELECT A SLOT TO STORE#YOUR PRIMARY WEAPON#WEAPON CAN BE TAKEN OUT AT ANY TIME#THRONE BUTT DOUBLES INVENTORY SIZE"
@@ -651,11 +631,11 @@ function scrUltras() {
     
 	    ultra_name[87] = "NEW CAPTAIN"
 	    ultra_text[87] = "AT THE START OF AN AREA#SUMMON A GROUP OF IDPD#THAT FIGHT FOR YOU#PICKING UP PORTAL STRIKE AMMO#TRIGGERS BLAST ARMOUR"
-		if instance_exists(Player) && Player.race != 22
+		if instance_exists(Player) && (Player.race != 22)
 			ultra_text[87] = "AT THE START OF AN AREA#SUMMON A GROUP OF IDPD#THAT FIGHT FOR YOU";
 	    ultra_tips[87] = "rogue leader"
 		
-		if instance_exists(Player) && Player.race == 22 && (Player.altUltra || Player.unlockAlternativeUltras || (scrHasAnEmptyLife() && instance_exists(UltraIcon)))
+		if altOverride || (instance_exists(Player) && (Player.race == 22 && (Player.altUltra || Player.unlockAlternativeUltras || (scrHasAnEmptyLife() && instance_exists(UltraIcon)))))
 		{
 			ultra_name[87] = "IMMORTAL POLICE"
 		    ultra_text[87] = "REPLACE PORTAL STRIKE WITH REVIVE#REVIVE USES PORTAL STRIKE AMMO#LOWER MAXIMUM PORTALSTRIKE AMMO BY 1#THRONE BUTT REVIVES YOU AT FULL HP#INSTEAD OF 1HP#PICKING UP PORTAL STRIKE AMMO#TRIGGERS BLAST ARMOUR"
@@ -716,9 +696,9 @@ function scrUltras() {
 	    ultra_tips[96] = "you gain explosive ammo#when using a lightning weapon#you gain energy ammo#when using a kraken weapon"
 		
 		//CROWN OF REINCARNATION/FREEDOM
-		if instance_exists(Player) && Player.race == 24 && (Player.altUltra || Player.unlockAlternativeUltras || (
+		if altOverride || (instance_exists(Player) && (Player.race == 24 && (Player.altUltra || Player.unlockAlternativeUltras || (
 		(Player.crown == 11 || Player.crown == 25 || Player.skill_got[2]) && !Player.skill_got[17]
-		&& instance_exists(UltraIcon)))
+		&& instance_exists(UltraIcon)))))
 		{
 			ultra_name[96] = "AIR LORD"
 		    ultra_text[96] = "YOUR ACTIVE CHANGES INTO#WIND PUSH#WIND PUSHES PROJECTILES AND ENEMIES#ENEMIES HITTING A WALL TAKE MORE DAMAGE#THRONE BUTT MAKES THE WIND STRONGER"
@@ -732,7 +712,7 @@ function scrUltras() {
 	ultra_tips[97] = "delicacy"
 	
 	//No weapon specific mutations (except for bolt marrow)
-	if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (!Player.skill_got[13] && !Player.skill_got[16] && !Player.skill_got[17] && !Player.skill_got[15] && !Player.skill_got[14] && instance_exists(UltraIcon)))
+	if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (!Player.skill_got[13] && !Player.skill_got[16] && !Player.skill_got[17] && !Player.skill_got[15] && !Player.skill_got[14] && instance_exists(UltraIcon))))
 	{
 		ultra_name[97] = "BEEKEEPER"
 		ultra_text[97] = "SOME RADIATION SPAWNS SWARM BOLTS"
@@ -770,7 +750,7 @@ function scrUltras() {
 	    ultra_tips[104] = "discipline those projectiles!"
 		
 		//Have any director weapon
-		if instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (scrHasDirector() && instance_exists(UltraIcon)))
+		if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (scrHasDirector() && instance_exists(UltraIcon))))
 		{
 			ultra_name[104] = "GRUMPY LECTURE"
 			//TODO change to unequipped ammo
@@ -792,14 +772,14 @@ function scrUltras() {
 	ultra_text[106] = "WALLS CONTAIN SWARM BOLTS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
 	ultra_tips[106] = "I'm a glass half empty kinda hand"
 	
-	if instance_exists(Player) && Player.race == 27 && Player.bskin == 1
+	if instance_exists(Player) && (Player.race == 27 && Player.bskin == 1)
 	{
 		//Secret B skin ultra
 		ultra_name[106] = "HOT HANDS!"
 		ultra_text[106] = "FIERY HANDS#MORE FIRE DAMAGE#HOMING FIRE#EVEN MORE FIRE DAMAGE#WHILE IN INVERTED AREAS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
 		ultra_tips[106] = "secret b-skin ultra mutation"
 	}
-	else if instance_exists(Player) && Player.race == 27 && Player.bskin == 2
+	else if instance_exists(Player) && (Player.race == 27 && Player.bskin == 2)
 	{
 		//Secret C skin ultra
 		ultra_name[106] = "BOOM HANDS!"
