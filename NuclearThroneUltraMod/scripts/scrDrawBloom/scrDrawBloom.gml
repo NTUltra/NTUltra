@@ -308,7 +308,7 @@ function scrDrawBloom() {
 		{
 		    with enemy
 		    {
-				var minSize = min(3,size);
+				var minSize = min(3,mySize);
 		        if(point_distance(x,y,Player.x,Player.y)>100)
 		        {
 		        draw_sprite_ext(sprHunterUltraBMark,-1,x,y,minSize,minSize,image_angle,c_green,0.2);

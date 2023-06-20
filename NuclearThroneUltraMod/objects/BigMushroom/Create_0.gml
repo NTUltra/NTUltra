@@ -1,5 +1,5 @@
 maxhealth = 500
-size = 1
+mySize = 1
 
 spr_idle = sprBigMushroom
 spr_hurt = sprBigMushroomHurt

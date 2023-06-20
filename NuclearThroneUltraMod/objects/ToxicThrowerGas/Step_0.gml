@@ -31,10 +31,16 @@ instance_destroy()
 if instance_exists(Player) && instance_exists(enemy)
 {
 	var dir=point_direction(x,y,instance_nearest(x,y,enemy).x,instance_nearest(x,y,enemy).y)
-	motion_add(dir,0.05);
+	if fps60
+		motion_add(dir,0.025);
+	else
+		motion_add(dir,0.05);
 if Player.race=23&&Player.skill_got[5]=1
 {
-	motion_add(dir,0.12);
+	if fps60
+		motion_add(dir,0.6);
+	else
+		motion_add(dir,0.12);
 }
 
 }

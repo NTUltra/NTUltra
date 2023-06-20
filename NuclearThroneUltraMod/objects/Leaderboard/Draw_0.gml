@@ -15,6 +15,7 @@ else if array_length(leaderboard) > 0
 	//draw_text(camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 16,y-16,leaderboardName[1]);
 	var surf = surface_create(174,string_height(leaderboardName[1]));
 	surface_set_target(surf);
+	draw_clear_alpha(c_black,0.0);
 	var ux = 0;
 	var uw = string_width(leaderboardName[1]);
 	if (uw > 174)
@@ -25,6 +26,7 @@ else if array_length(leaderboard) > 0
 	draw_text(ux,0,leaderboardName[1]);
 	surface_reset_target();
 	draw_surface(surf,camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 16 - min(string_width(leaderboardName[1]),174), y-16);
+	surface_free(surf);
 	draw_set_halign(fa_left);
 	var al = array_length(leaderboard);
 	if leaderboardType == LEADERBOARD.SCORE
@@ -37,6 +39,7 @@ else if array_length(leaderboard) > 0
 			var xx = x + 31;
 			var surf = surface_create(108,string_height(entry[0]));
 			surface_set_target(surf);
+			draw_clear_alpha(c_black,0.0);
 			var ux = 0;
 			var uw = string_width(entry[1]);
 			if (uw > 108)
@@ -47,22 +50,25 @@ else if array_length(leaderboard) > 0
 			draw_text(ux,0,entry[1]);
 			surface_reset_target();
 			draw_surface(surf,xx,yy);
-		
+			surface_free(surf);
+			
 			xx += 104;
 			draw_sprite(sprKills,0,xx,yy+5);
-			var surf = surface_create(55,string_height(entry[0]));
+			var surf = surface_create(64,string_height(entry[0]));
 			surface_set_target(surf);
+			draw_clear_alpha(c_black,0.0);
 			var kx = 0;
 			var kw = string_width(entry[0]);
-			if (kw > 65)
+			if (kw > 64)
 			{
 				//scrolling	
-				kx = lerp(0,0-max(0,kw-65),killScroll);
+				kx = lerp(0,0-max(0,kw-64),killScroll);
 			}
 			draw_text(kx,0,entry[0]);
 			surface_reset_target();
 			xx += 14;
 			draw_surface(surf,xx,yy);
+			surface_free(surf);
 			xx += 74;
 			//scrDrawWhiteOutline(scrLeaderboardRace(entry[5],entry[6],entry[7],entry[2]),0,xx,yy+3);
 			draw_sprite(scrLeaderboardRace(entry[5],entry[6],entry[7],entry[2]),0,xx,yy+3);
@@ -125,6 +131,7 @@ else if array_length(leaderboard) > 0
 			var xx = x + 30;
 			var surf = surface_create(128,string_height(entry[0]));
 			surface_set_target(surf);
+			draw_clear_alpha(c_black,0.0);
 			var ux = 0;
 			var uw = string_width(entry[1]);
 			if (uw > 128)
@@ -135,12 +142,14 @@ else if array_length(leaderboard) > 0
 			draw_text(ux,0,entry[1]);
 			surface_reset_target();
 			draw_surface(surf,xx,yy);
+			surface_free(surf);
 		
 			xx += 128;
 			draw_sprite(sprTime,0,xx,yy+5);
 			xx += 14;
 			var surf = surface_create(118,string_height(entry[0]));
 			surface_set_target(surf);
+			draw_clear_alpha(c_black,0.0);
 			var kx = 0;
 			var kw = string_width(entry[0]);
 			if (kw > 118)
@@ -151,6 +160,7 @@ else if array_length(leaderboard) > 0
 			draw_text(kx,0,entry[0]);
 			surface_reset_target();
 			draw_surface(surf,xx,yy);
+			surface_free(surf);
 			xx += 127;
 			
 			draw_sprite(scrLeaderboardRace(entry[2],entry[3],false,9),0,xx,yy+3);
@@ -168,6 +178,7 @@ else if array_length(leaderboard) > 0
 			var xx = x + 30;
 			var surf = surface_create(64,string_height(entry[0]));
 			surface_set_target(surf);
+			draw_clear_alpha(c_black,0.0);
 			var ux = 0;
 			var uw = string_width(entry[1]);
 			if (uw > 64)
@@ -184,6 +195,7 @@ else if array_length(leaderboard) > 0
 			xx += 14;
 			var surf = surface_create(88,string_height(entry[0]));
 			surface_set_target(surf);
+			draw_clear_alpha(c_black,0.0);
 			var kx = 0;
 			var kw = string_width(entry[0]);
 			if (kw > 88)
@@ -194,6 +206,7 @@ else if array_length(leaderboard) > 0
 			draw_text(kx,0,entry[0]);
 			surface_reset_target();
 			draw_surface(surf,xx,yy);
+			surface_free(surf);
 			xx += 96;
 			
 			draw_sprite(scrLeaderboardRace(entry[3],entry[4],bool(entry[5]),9),0,xx,yy+3);
@@ -204,6 +217,7 @@ else if array_length(leaderboard) > 0
 			var tx = 0;
 			var surf = surface_create(123,string_height(entry[0]));
 			surface_set_target(surf);
+			draw_clear_alpha(c_black,0.0);
 			var tw = 0;
 			for (var ti = 0; ti < aal; ti++)
 			{
@@ -232,6 +246,7 @@ else if array_length(leaderboard) > 0
 			}
 			surface_reset_target();
 			draw_surface(surf,xx,yy);
+			surface_free(surf);
 			
 			xx += 133;
 			scrDrawLeaderboardWeapon(entry,6,xx,yy);
@@ -342,7 +357,7 @@ else if array_length(leaderboard) > 0
 	}
 	//Toggle daily / race
 	var s = 1;
-	var ax = o + string_width("DAILY SCORE  ");
+	var ax = o + string_width("WEEKLY 2023 88  ");
 	var ay = camera_get_view_y(view_camera[0]) + o;
 	if mouse_x > ax - o && mouse_x < ax + o && mouse_y > ay - o && mouse_y < ay + o
 	{
@@ -358,6 +373,9 @@ else if array_length(leaderboard) > 0
 				leaderboardType = LEADERBOARD.WEEKLY;
 			else
 				leaderboardType = LEADERBOARD.RACE;
+			page = 0;
+			UberCont.weeklyWeek = UberCont.totalWeeklies;
+			UberCont.dailyDay = UberCont.totalDailies;
 			event_user(0);
 			leaderboard = [];
 		}
@@ -372,6 +390,7 @@ else if noBoard
 	draw_text(x + 16,y-16,leaderboardName[0]);
 	var surf = surface_create(174,string_height(leaderboardName[1]));
 	surface_set_target(surf);
+	draw_clear_alpha(c_black,0.0);
 	var ux = 0;
 	var uw = string_width(leaderboardName[1]);
 	if (uw > 174)
@@ -382,6 +401,7 @@ else if noBoard
 	draw_text(ux,0,leaderboardName[1]);
 	surface_reset_target();
 	draw_surface(surf,camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 16 - min(string_width(leaderboardName[1]),174), y-16);
+	surface_free(surf);
 	
 	draw_set_halign(fa_left);
 	draw_text(x + 31,y,"NO LEADERBOARD ENTRY");
@@ -437,7 +457,7 @@ else if noBoard
 	}
 	//Toggle daily / race
 	var s = 1;
-	var ax = o + string_width("DAILY SCORE  ");
+	var ax = o + string_width("WEEKLY 2023 88  ");
 	var ay = camera_get_view_y(view_camera[0]) + o;
 	if mouse_x > ax - o && mouse_x < ax + o && mouse_y > ay - o && mouse_y < ay + o
 	{
@@ -453,6 +473,9 @@ else if noBoard
 				leaderboardType = LEADERBOARD.WEEKLY;
 			else
 				leaderboardType = LEADERBOARD.RACE;
+			page = 0;
+			UberCont.weeklyWeek = UberCont.totalWeeklies;
+			UberCont.dailyDay = UberCont.totalDailies;
 			event_user(0);
 			leaderboard = [];
 		}

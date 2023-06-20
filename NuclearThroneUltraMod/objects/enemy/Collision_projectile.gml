@@ -7,24 +7,35 @@ if(instance_exists(Player)){
 		scrModHit();
 		scrSheepHit();
 		//Sedatives
-		if Player.ultra_got[100] && team != other.team
+		if Player.ultra_got[100] && team != other.team && my_health > 0
 		{
 			target = -1;
 			walk = 0;
 			var amount = 1;
-			if Player.reload > 0
+			var backupAmount = 1;
+			if other.wepFire != 0
+				amount = Player.wep_load[other.wepFire];
+			if Player.skill_got[5]
 			{
-				amount = Player.reload * 0.6;
-				if Player.skill_got[5]
-					var amount = Player.reload * 0.8;
-				else
-					var amount = Player.reload * 0.6;
+				amount *= 0.9;
+				backupAmount = 2;
 			}
-			
-			if alarm[1] > 0 && my_health > 0
+			else
+				amount *= 0.7;
+			other.wepFire = 0;
+			if alarm[1] > 1
 			{
-				alarm[1] += amount;
-				instance_create(x,y-6,SleepFX);
+				if alarm[1] < amount * 2
+				{
+					alarm[1] += amount;
+					alarm[11] += amount;
+				} else
+				{
+					alarm[1] += backupAmount;
+				}
+				with instance_create(x,y-6,SleepFX) {
+					alarm[0] = max(1,amount+1);
+				}
 			}
 		}
 		
@@ -58,7 +69,7 @@ if(instance_exists(Player)){
 				pushDirection = d;
 				pushStartX = target.x;
 				pushStartY = target.y;
-				var s = target.size;
+				var s = target.mySize;
 				if s == 4
 					s = 5;
 				pushX = target.x + lengthdir_x(pushStrength/max(1,s*0.5),pushDirection);

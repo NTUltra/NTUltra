@@ -2,7 +2,7 @@ raddrop = 25
 scrCrownOfPopoRad(30);
 maxhealth = 25
 meleedamage = 5
-size = 1
+mySize = 1
 instance_create(x,y,WallBreak);
 event_inherited()
 team = 4;

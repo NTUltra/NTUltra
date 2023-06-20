@@ -18,10 +18,10 @@ instance_destroy()}
 var overlap = instance_place(x,y,enemy);
 if overlap != noone
 {
-	if size <= overlap.size
+	if mySize <= overlap.mySize
 	{
 		var getmeout = point_direction(overlap.x,overlap.y,x,y);
-		motion_add(getmeout,size)
+		motion_add(getmeout,mySize)
 		direction += 1;
 	}
 }

@@ -6,7 +6,7 @@ friction = 0.4
 motion_add(random(360),0.5+random(1))
 
 rotspeed = (random(1)+1)*choose(1,-1)
-size = 1;
+mySize = 1;
 team = 0;
 my_health = 1;
 pickedup=false;

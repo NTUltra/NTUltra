@@ -1,6 +1,6 @@
 loops = GetPlayerLoops();
 maxhealth = 90 * clamp(loops*5,1,10)
-size = 1
+mySize = 1
 spr_idle = sprGraveyardEntrance;
 spr_hurt = sprGraveyardEntranceHurt
 

@@ -1,4 +1,4 @@
-if size >= other.size-1 and speed > 2 and other.sprite_index != other.spr_hurt
+if mySize >= other.mySize-1 and speed > 2 and other.sprite_index != other.spr_hurt
 {
 with other
 {
@@ -7,7 +7,7 @@ sprite_index = spr_hurt
 image_index = 0
 motion_add(other.direction,other.speed/2)
 }
-Sleep(2*size*size)
+Sleep(2*mySize*mySize)
 speed /= 2
 }
 

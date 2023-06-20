@@ -1,5 +1,5 @@
 maxhealth = 1
-size = 1
+mySize = 1
 
 spr_idle = sprMoneyPile
 spr_hurt = sprMoneyPileHurt

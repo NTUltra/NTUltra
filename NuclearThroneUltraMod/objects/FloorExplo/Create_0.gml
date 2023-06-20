@@ -3,6 +3,7 @@ if (place_meeting(x,y,FloorExplo))
 	instance_destroy();
 	exit;
 }
+scrInitDrops(1);
 canCount = false;
 var area;
 canSpawnSwarm = false

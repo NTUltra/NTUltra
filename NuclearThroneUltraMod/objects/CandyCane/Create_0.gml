@@ -1,5 +1,5 @@
 maxhealth = 35
-size = 1
+mySize = 1
 
 spr_idle = sprCandyCane
 spr_hurt = sprCandyCaneHurt

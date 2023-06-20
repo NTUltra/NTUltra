@@ -4,7 +4,7 @@ image_index = 0
 raddrop = 15
 maxhealth = 8
 meleedamage = 1
-size = 1
+mySize = 1
 target = -1
 
 

@@ -9,7 +9,7 @@ target = -1
 
 team = 2
 reload=0;
-size=1;
+mySize=1;
 //behavior
 walk = 0
 gunangle = random(360)

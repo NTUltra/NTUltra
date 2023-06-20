@@ -1,5 +1,5 @@
 maxhealth = 8
-size = 1
+mySize = 1
 
 spr_idle = sprCocoon
 spr_hurt = sprCocoonHurt

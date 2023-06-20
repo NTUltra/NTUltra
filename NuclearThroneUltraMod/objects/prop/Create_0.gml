@@ -6,7 +6,7 @@ existTime = 0;
 team = 0
 canMoveOver = false;
 myConfusion = noone;
-
+depth = 2;
 snd_hurt = sndHitPlant
 hurt_pitch_variation = 0;
 frozen=false;

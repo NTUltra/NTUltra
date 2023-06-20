@@ -30,7 +30,7 @@ UberCont.ctot_kill[UberCont.race] += 1
 
 snd_play(snd_dead)
 
-Sleep(20+size*15)
+Sleep(20+mySize*15)
 if instance_exists(Player)
 {
 if Player.race = 4

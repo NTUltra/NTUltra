@@ -4,7 +4,7 @@ if GetPlayerLoops() > 0
 	maxhealth = 430;
 scrBossHealthBuff();
 meleedamage = 0
-size = 3
+mySize = 3
 
 event_inherited()
 

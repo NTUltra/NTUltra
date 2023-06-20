@@ -7,7 +7,7 @@ if Player.skill_got[3]
 	isGettingSucked = false;
 	
 cursed = false;
-size = 1;
+mySize = 1;
 stepDis = 12;
 if UberCont.normalGameSpeed == 60
 	stepDis = 6;

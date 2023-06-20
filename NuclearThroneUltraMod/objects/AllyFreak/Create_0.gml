@@ -1,5 +1,5 @@
 raddrop = 1
-size = 1
+mySize = 1
 target = -1
 goForIt=false;
 

@@ -1,5 +1,5 @@
 /// @description Spawn popo
-size=2;
+mySize=2;
 if dropFreaks
 {
 	snd_play(sndFreakPopoEnter);

@@ -10,17 +10,17 @@ if speed > 2
 		yy: y
 	});
 }
-var size = 	ds_list_size(afterImage);
-for (var i = 0; i < size; i++) {
+var mySize = 	ds_list_size(afterImage);
+for (var i = 0; i < mySize; i++) {
 	afterImage[| i].time --;
 	if (afterImage[| i].time < 0)
 	{
 		ds_list_delete(afterImage,i)
 	}
 }
-var size = 	ds_list_size(afterImage);
-if (size > afterImageMax)
+var mySize = 	ds_list_size(afterImage);
+if (mySize > afterImageMax)
 {
-	ds_list_delete(afterImage,size);
+	ds_list_delete(afterImage,mySize);
 }
 alarm[7] = afterImageDelay;

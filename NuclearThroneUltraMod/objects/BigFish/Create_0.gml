@@ -2,7 +2,7 @@ raddrop = 60
 maxhealth = 220;//175
 
 meleedamage = 3
-size = 3
+mySize = 3
 if GetPlayerLoops() > 0{
 	maxhealth = 300;
 }

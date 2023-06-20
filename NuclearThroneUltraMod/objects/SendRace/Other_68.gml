@@ -12,14 +12,16 @@ if (type == network_type_data) {
 	{
 		case NETDATA.CLIENT_ID:
 			myClientId = buffer_read(buffer, buffer_u16);
-			UberCont.todaysSeed = buffer_read(buffer, buffer_u16);
 			if array_length(UberCont.runRace) > 1
 			{
 				debug("send race: ",string(UberCont.runRace));
-				var sendBuffer = buffer_create(21,buffer_grow,1);
+				var sendBuffer = buffer_create(22,buffer_grow,1);
 				buffer_write(sendBuffer,buffer_u8,NETDATA.RACE);
 				buffer_write(sendBuffer,buffer_u16,myClientId);
+				debug("send day: ", UberCont.dailyDay);
+				buffer_write(sendBuffer,buffer_u16,UberCont.dailyDay);//This is the day I started my run
 				buffer_write(sendBuffer,buffer_u64,UberCont.runRace[0]);//Time
+				//Add empty space because for some reason first character is lost at server
 				buffer_write(sendBuffer,buffer_string,UberCont.runRace[1]);//Name
 				buffer_write(sendBuffer,buffer_string,UberCont.runRace[2]);//route
 				buffer_write(sendBuffer,buffer_u8,UberCont.runRace[3]);//race
@@ -34,8 +36,10 @@ if (type == network_type_data) {
 				buffer_delete(sendBuffer);
 			}
 			UberCont.runRace = [];
+			UberCont.runScore = [];
 		break;
 		case NETDATA.CONFIRMRACE:
+			debug("RACE CONFIRMED");
 			network_destroy(serverSocket);
 			instance_destroy();
 		break;

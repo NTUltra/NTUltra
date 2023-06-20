@@ -1,7 +1,7 @@
 raddrop = 2
 maxhealth = 5
 meleedamage = 3
-size = 1
+mySize = 1
 droprate = 7;
 
 event_inherited()

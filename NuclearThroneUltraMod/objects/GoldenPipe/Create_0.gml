@@ -1,5 +1,5 @@
 maxhealth = 50
-size = 1
+mySize = 1
 
 spr_idle = sprSewerGoldenPipe
 spr_hurt = sprSewerGoldenPipeHurt

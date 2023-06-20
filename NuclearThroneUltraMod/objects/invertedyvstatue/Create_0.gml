@@ -1,5 +1,5 @@
 maxhealth = 10
-size = 1
+mySize = 1
 
 spr_idle = sprInvertedYVStatue
 spr_hurt = sprInvertedYVStatueHurt

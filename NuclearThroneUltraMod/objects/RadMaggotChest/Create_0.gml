@@ -3,7 +3,7 @@ friction = 0.4
 image_speed = 0
 
 team = 0
-size = 2
+mySize = 2
 
 maxhealth = 8
 

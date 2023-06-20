@@ -1836,13 +1836,19 @@ if race=18
 	
     if instance_exists(Floor) && instance_exists(WallHitMe)
     {
-     var ground = instance_nearest(x,y,Floor);
+     var ground = instance_nearest(x-8,y-8,Floor);
+	 var o = 16;
+	if ground.object_index == FloorExplo
+		o = 8;
      var wall = instance_nearest(x,y,WallHitMe);
      
         if !place_meeting(x,y,Floor)&&point_distance(x,y,wall.x,wall.y)>16&&point_distance(x,y,ground.x,ground.y)>28//OUT OF BOUNDS
         {
         motion_add(direction+180,speed);
-        motion_add(point_direction(x,y,ground.x+16,ground.y+16),0.9);
+		if UberCont.normalGameSpeed == 60
+			motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.45);
+		else
+			motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.9);
         //if point_distance(x,y,wall.x,wall.y)>17
         //motion_add(direction,1);
         }
@@ -1851,17 +1857,21 @@ if race=18
 	    if ( ( !place_meeting(x,y,Floor) || flying>0 || mask_index=mskPickupThroughWall || place_meeting(x,y,WallHitMe) )  && !instance_exists(GenCont) && !instance_exists(LevCont) && !(ultra_got[72] && !altUltra) )//NOT ASCND ULTRA
 	    {
 		    //var wall = instance_nearest(x,y,Wall);
-		    var ground = instance_nearest(x,y,Floor);
-		    motion_add(point_direction(x,y,ground.x+16,ground.y+16),0.6);
+			if UberCont.normalGameSpeed == 60
+				motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.3);
+			else
+				motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.6);
 	    }
 	    else
 	    {
 			flyduration=0;
 	    }
 	}
+	flyduration ++;
     if flyduration>flymax
-    {my_health--;
-    flyduration=20;
+    {
+		my_health--;
+		flyduration=20;
     snd_play(snd_hurt, hurt_pitch_variation);
     image_index=0;
     sprite_index=spr_hurt;
@@ -1893,7 +1903,10 @@ if race=18
     
 if ultra_got[71]//tranquility
 {
-tranquilitydelay--;
+	if UberCont.normalGameSpeed == 60
+		tranquilitydelay -= 0.5;
+	else
+		tranquilitydelay--;
 
 if tranquilitydelay <=0
 tranquilitydelay=0;

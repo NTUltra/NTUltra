@@ -1,5 +1,5 @@
 maxhealth = 12
-size = 1
+mySize = 1
 
 
 

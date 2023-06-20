@@ -1,5 +1,5 @@
 maxhealth = 14
-size = 1
+mySize = 1
 event_inherited()
 var img;
 img = choose(1,2,3)

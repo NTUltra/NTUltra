@@ -1,6 +1,6 @@
 maxhealth = 500
 maxhealth *= clamp(1+(GetPlayerLoops() *0.5),1,2);
-size = 1
+mySize = 1
 
 spr_idle = sprIceFlowerIdle
 spr_hurt = sprIceFlowerHurt

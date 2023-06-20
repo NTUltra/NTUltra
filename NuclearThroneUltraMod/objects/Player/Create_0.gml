@@ -193,7 +193,7 @@ race = 23
 
 
 team = 2
-size = 5
+mySize = 5
 
 if instance_exists(GenCont)
 	crown = GenCont.crown
@@ -729,7 +729,4 @@ enum LEADERBOARD {
 	WEEKLY,
 	VANFAN,
 };
-
-confDropChanceIndex = -1;
-itemDropChanceIndex = -1;
-itemDropChanceIndex = -1;
+scrInitDrops(0);

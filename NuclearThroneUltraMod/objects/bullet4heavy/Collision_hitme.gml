@@ -25,7 +25,7 @@ if other.team != team and other.my_health > 0
 			pushDirection = other.direction;
 			pushStartX = target.x;
 			pushStartY = target.y;
-			var s = target.size;
+			var s = target.mySize;
 			if s == 4
 				s = 5;
 			pushX = target.x + lengthdir_x(pushStrength/max(1,s*0.5),pushDirection);

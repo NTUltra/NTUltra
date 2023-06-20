@@ -4,7 +4,7 @@ spr_idle = sprVenusCarFix
 spr_hurt = sprVenusCarFixedHurt
 spr_dead = sprScorchmark
 
-size = 1
+mySize = 1
 
 event_inherited()
 canMoveOver = true;

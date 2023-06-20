@@ -1,5 +1,5 @@
 event_inherited()
-size = 2;
+mySize = 2;
 team = 0;
 curse = 0
 sprite_index = sprWeaponChestBig

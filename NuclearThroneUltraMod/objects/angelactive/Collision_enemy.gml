@@ -20,7 +20,7 @@ with other
 		Sleep(10);
 		with instance_create(x,y,DeflectMelee)
 		{
-			var s = clamp(other.size*0.5,1,3);
+			var s = clamp(other.mySize*0.5,1,3);
 			image_xscale = s;
 			image_yscale = s;
 			image_alpha = other.meleedamage*0.05;

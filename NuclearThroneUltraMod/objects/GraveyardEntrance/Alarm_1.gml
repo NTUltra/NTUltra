@@ -1,3 +1,3 @@
 /// @description Close
-size = 2;
+mySize = 2;
 my_health = 0;

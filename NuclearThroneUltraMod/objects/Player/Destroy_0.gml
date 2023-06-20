@@ -90,7 +90,7 @@ instance_create(x,y,Explosion);
 var playerCorpse = instance_create(x,y,Corpse)
 with playerCorpse
 {
-size = 1
+mySize = 1
 mask_index = other.mask_index
 motion_add(other.direction,other.speed)
 speed += max(0,-other.my_health/5)
@@ -513,12 +513,15 @@ else if !reincarnate
 				runScore[4] = other.loops;
 				runScore[5] = other.race;
 				runScore[6] = other.bskin;
-				runScore[7] = other.altUltra;
+				if getUltraMutation() != 255 || array_length(runScore) <= 12
+					runScore[7] = other.altUltra;
 				runScore[8] = other.wep;
 				runScore[9] = other.bwep;
 				runScore[10] = other.cwep;
 				runScore[11] = other.crown;
-				runScore[12] = getUltraMutation();
+				debug("array_length(runScore) ", array_length(runScore));
+				if getUltraMutation() != 255 || array_length(runScore) <= 12//Keep ultra display after using lives
+					runScore[12] = getUltraMutation();
 			
 				canRestart = true;
 			}
@@ -563,7 +566,8 @@ else if !reincarnate
 					//Check if this is your highest score
 					debug("kills: ", other.kills);
 					debug("data: ", encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)]);
-					if (other.kills > encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)])
+					//Also in UltraIcon to set ultra,
+					if (scrIsWeeklyScoreHigher(other.kills))
 					{
 						encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)] = other.kills;
 						scrSaveEncrypted();
@@ -573,13 +577,16 @@ else if !reincarnate
 						runScore[3] = other.subarea;
 						runScore[4] = other.loops;
 						runScore[5] = other.race;
-						runScore[6] = other.bskin;
-						runScore[7] = other.altUltra;
+						runScore[6] = other.bskin
+						if getUltraMutation() != 255 || array_length(runScore) <= 12
+							runScore[7] = other.altUltra;
 						runScore[8] = other.wep;
 						runScore[9] = other.bwep;
 						runScore[10] = other.cwep;
 						runScore[11] = other.crown;
-						runScore[12] = getUltraMutation();
+						debug("array_length(runScore) ", array_length(runScore));
+						if getUltraMutation() != 255 || array_length(runScore) <= 12
+							runScore[12] = getUltraMutation();
 					}
 				}
 			}

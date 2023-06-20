@@ -5,7 +5,7 @@ if point_distance(x,y,target.x,target.y) < 128 and !instance_exists(Portal) and 
 {
 raddrop = 8
 meleedamage = 0
-size = 1
+mySize = 1
 image_speed = 0.4
 
 spr_idle = sprInvertedMeleeIdle

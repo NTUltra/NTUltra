@@ -6,7 +6,7 @@ mytext="";
 
 alarm[0]=150;
 drawtext=false;
-
+depth = -9999999;
 yy=0;
 alarm[0] += instance_number(UnlockPopup);
 with UnlockPopup

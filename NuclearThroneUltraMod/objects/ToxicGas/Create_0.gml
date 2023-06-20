@@ -4,7 +4,7 @@ motion_add(random(360),random(1.5)+0.2)
 friction = 0.01
 image_speed = 0
 image_index = random(5)
-
+depth = 0;
 image_xscale = 0.5
 image_yscale = 0.5
 rot = (1+random(3))*choose(1,-1)

@@ -1,5 +1,5 @@
 maxhealth = 6
-size = 1
+mySize = 1
 
 spr_idle = sprTires
 spr_hurt = sprTiresHurt

@@ -1,6 +1,6 @@
 maxhealth = 30
 my_health = maxhealth;
-size = 2
+mySize = 2
 
 spr_idle = sprTable1
 spr_hurt = sprTable1Hurt

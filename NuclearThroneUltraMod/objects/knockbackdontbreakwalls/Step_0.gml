@@ -4,7 +4,7 @@ if target > 0 && instance_exists(target)
 {
 	with target
 	{
-		speed = other.pushSpeed/max(1,(size*0.5));
+		speed = other.pushSpeed/max(1,(mySize*0.5));
 		direction = other.pushDirection;
 		x = lerp(other.pushX,other.pushStartX,other.lerpTime);
 		y = lerp(other.pushY,other.pushStartY,other.lerpTime);

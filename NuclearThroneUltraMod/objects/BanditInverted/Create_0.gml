@@ -5,7 +5,7 @@ if UberCont.loops>1
 maxhealth=4;
 
 meleedamage = 0
-size = 1
+mySize = 1
 
 event_inherited()
 if scrIsHardMode()//HARD MODE

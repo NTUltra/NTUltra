@@ -2,7 +2,7 @@ scrWeapons()
 SetSeedWeapon();
 wep = scrDecideWepGold()
 aditionalwep = 0;
-size = 1;
+mySize = 1;
 team = 0;
 while (wep == 315)
 {

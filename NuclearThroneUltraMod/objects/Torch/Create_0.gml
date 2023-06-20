@@ -1,5 +1,5 @@
 maxhealth = 20
-size = 1
+mySize = 1
 
 spr_idle = sprTorchNew
 spr_hurt = sprTorchNewHurt

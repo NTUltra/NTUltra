@@ -1,5 +1,5 @@
 //event_inherited()
-size = 1;
+mySize = 1;
 team = 0;
 my_health = 1;
 shadowSprite = shd24;

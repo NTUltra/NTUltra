@@ -4,7 +4,7 @@ if GetPlayerLoops() > 0
 	maxhealth = 400;
 scrBossHealthBuff();
 meleedamage = 0
-size = 3
+mySize = 3
 
 if UberCont.loops>1
 maxhealth=290;

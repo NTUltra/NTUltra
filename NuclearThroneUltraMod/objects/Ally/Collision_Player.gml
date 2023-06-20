@@ -1,4 +1,4 @@
-if size <= other.size
+if mySize <= other.mySize
 motion_add(point_direction(other.x,other.y,x,y),1)
 
 //cap speed

@@ -2,7 +2,7 @@ raddrop = 50
 maxhealth = 370
 scrBossHealthBuff();
 meleedamage = 5
-size = 6;
+mySize = 6;
 
 event_inherited()
 alarm[10] = 0;

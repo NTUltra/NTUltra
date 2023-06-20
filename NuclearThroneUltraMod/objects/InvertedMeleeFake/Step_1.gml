@@ -2,7 +2,7 @@ if instance_number(enemy) < 2 or my_health < maxhealth
 {
 raddrop = 11
 meleedamage = 0
-size = 1
+mySize = 1
 image_speed = 0.4
 
 spr_idle = sprInvertedMeleeIdle

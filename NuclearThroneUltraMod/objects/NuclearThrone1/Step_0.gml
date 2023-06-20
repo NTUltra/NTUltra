@@ -58,9 +58,6 @@ else
 {
 	if walk > 0
 	{
-		//if UberCont.normalGameSpeed == 60
-		//	walk -= 0.5;
-		//else
 		walk --;
 		if UberCont.normalGameSpeed == 60
 			vspeed += walkDir*1.5;

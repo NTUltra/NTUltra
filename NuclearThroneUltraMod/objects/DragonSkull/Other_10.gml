@@ -3,5 +3,5 @@ if !closed
 {
 	spr_idle = sprHotDrakeSkullIdleOpen;
 	spr_hurt = sprHotDrakeSkullHurtOpen;
-	size = 0;
+	mySize = 0;
 }

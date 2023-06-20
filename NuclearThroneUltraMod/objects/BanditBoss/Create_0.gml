@@ -1,7 +1,7 @@
 raddrop = 30
 maxhealth = 100
 meleedamage = 0
-size = 3
+mySize = 3
 var loops = GetPlayerLoops();
 maxhealth += clamp(20*loops,0,200);
 scrBossHealthBuff();

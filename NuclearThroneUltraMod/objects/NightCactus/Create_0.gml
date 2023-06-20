@@ -1,5 +1,5 @@
 maxhealth = 2
-size = 1
+mySize = 1
 
 var img;
 img = choose(1,2,3)

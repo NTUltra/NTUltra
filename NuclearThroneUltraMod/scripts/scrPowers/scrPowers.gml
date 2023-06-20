@@ -1523,7 +1523,19 @@ function scrPowers() {
 
 		instance_create(x,y,Dust)
 	}
-
+	
+	//HANDS
+	if race == 27
+	{
+		//Lose target
+		with Hand
+		{
+			if !push
+			{
+				target = -1;
+			}
+		}
+	}
 	//REBEL
 	var ammoRebel = false;
 	if altUltra && Player.ultra_got[39]
@@ -1613,7 +1625,7 @@ function scrPowers() {
 			if Player.skill_got[5] = 1
 			{
 				ang = random(360)
-				if size > 1
+				if mySize > 1
 				{
 					instance_create(x,y,MeatExplosion);
 					instance_create(x+lengthdir_x(44,ang),y+lengthdir_y(24,ang),MeatExplosion)
@@ -1628,7 +1640,7 @@ function scrPowers() {
 				}
 				
 			}
-			else if size>1
+			else if mySize>1
 			{
 				ang = random(360)
 				instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
@@ -1657,7 +1669,7 @@ function scrPowers() {
 				if Player.skill_got[5] = 1
 				{
 					ang = random(360)
-					if size > 1
+					if mySize > 1
 					{
 						instance_create(x,y,MeatExplosion);
 						instance_create(x+lengthdir_x(44,ang),y+lengthdir_y(24,ang),MeatExplosion)
@@ -1672,7 +1684,7 @@ function scrPowers() {
 					}
 				
 				}
-				else if size>1
+				else if mySize>1
 				{
 					ang = random(360)
 					instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
@@ -2091,7 +2103,11 @@ function scrPowers() {
 					else if !grabbingPickup
 					{
 						lerpCalc = min(1,lerpSpeed/lerpDistance);//Consistent speed
-						lerpCalcBack = (lerpCalc/target.size)*0.8;
+						lerpCalcBack = (lerpCalc/target.mySize)*0.8;
+						if target.meleedamage > other.skill_got[8]*7//Gamma guts
+						{
+							lerpCalcBack *= 0.8;
+						}
 					}
 					else//ULTRA D
 					{
@@ -2142,24 +2158,52 @@ function scrPowers() {
 
 	//if ultra_got[92]=0
 	//speed=0;
-
-	    if toxicamount<maxtoxicamount
+		
+	    if toxicamount < maxtoxicamount
 	    {
+		    if ultra_got[90]//intimacy ultra
+			{
+				if UberCont.normalGameSpeed == 60
+					toxicamount += 1;
+				else
+					toxicamount += 2;
+			}
+		    else
+			{
+				if UberCont.normalGameSpeed == 60
+					toxicamount += 0.75;
+				else
+					toxicamount += 1.5;
+			}
     
-	    if ultra_got[90]//intimacy ultra
-	    toxicamount+=2;
-	    else
-	    toxicamount++;
+		    if ultra_got[91]//FROG MOMMA ULTRA C
+		    {
     
-	    if ultra_got[91]//FROG MOMMA ULTRA C
-	    {
+		    if toxicamount = floor(maxtoxicamount*0.1)
+				instance_create(x,y,FrogEgg);
     
-	    if toxicamount = floor(maxtoxicamount*0.1)
-			instance_create(x,y,FrogEgg);
-    
-	    }
-    
-    
+		    }
+			
+			if toxicamount % 3 == 0
+			{
+				if ultra_got[92] && altUltra
+				{
+					with instance_create(x,y,Splinter)
+					{
+						motion_add(random(360),18)
+						image_angle = direction
+						team = other.team
+					}
+				}
+				else
+				{
+					with instance_create(x,y,ToxicThrowerGas)
+					{
+						motion_add(random(360),1+random(1.8)+(other.skill_got[5]));
+						dmg += 1;
+					}
+				}
+			}
 	    }
 		else
 		{
@@ -2976,7 +3020,7 @@ function scrPowers() {
 		    }
 		}
 	}
-	else if race == 23//FROG
+	else if race == 23//FROG release
 	{
 
 		if ultra_got[90]//intimacy
@@ -2989,6 +3033,14 @@ function scrPowers() {
 				snd_play(sndSplinterGun,0.1,true);
 			var ta = random(360);
 			var taStep = 360 / toxicamount;
+			if toxicamount > 3
+			with instance_create(x,y,ToxicThrowerGas)
+			{
+				motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),18)
+				image_angle = direction
+				team = other.team
+				dmg += 1;
+			}
 			repeat(toxicamount)
 			{
 				with instance_create(x,y,Splinter)
@@ -3000,14 +3052,36 @@ function scrPowers() {
 				ta += taStep;
 			}
 		}
-		else
+		else 
 		{
+			var spd = 2;
+			if toxicamount >= maxtoxicamount
+				spd = 4;
+			if toxicamount > 3
+			with instance_create(x,y,ToxicThrowerGas)
+			{
+				motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),spd+2+(other.skill_got[5]*2));
+				dmg += 1;
+			}
+			var counter = 0;
 			repeat(toxicamount)
 			{
-				with instance_create(x,y,ToxicThrowerGas)
+				counter ++;
+				if counter % 4 == 0
 				{
-					motion_add(random(360),1.3+random(2)+(other.skill_got[5]*2));
-					dmg += 1;
+					with instance_create(x,y,ToxicThrowerGas)
+					{
+						motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + random_range(-16,16),spd+1+random(2)+(other.skill_got[5]*2));
+						dmg += 1;
+					}
+				}
+				else
+				{
+					with instance_create(x,y,ToxicThrowerGas)
+					{
+						motion_add(random(360),spd+random(2)+(other.skill_got[5]*2));
+						dmg += 1;
+					}
 				}
 			}
 		}

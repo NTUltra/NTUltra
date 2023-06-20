@@ -2,8 +2,8 @@ friction = 0.4
 
 
 team = 0
-size = 1;
-
+mySize = 1;
+meleedamage = 0;
 maxhealth = 4
 event_inherited();
 image_speed = 0

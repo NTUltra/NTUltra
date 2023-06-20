@@ -52,7 +52,7 @@ default: sprite_index = sprDebris0; break;
 image_speed = 0
 image_index = random(4)
 image_angle = random(360)
-size = 1
+mySize = 1
 motion_add(random(360),3+random(2))
 alarm[0] = 200+random(90)
 time = 10

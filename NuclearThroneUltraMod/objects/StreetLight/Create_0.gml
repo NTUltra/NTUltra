@@ -1,5 +1,5 @@
 maxhealth = 5
-size = 1
+mySize = 1
 
 spr_idle = sprStreetLight
 spr_hurt = sprStreetLightHurt

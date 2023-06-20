@@ -1,5 +1,5 @@
 /// @description Init
-updateVersion = "BETA 30.13";
+updateVersion = "BETA 30.14";
 serverPort = 0;
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;
@@ -23,6 +23,7 @@ defaultTotalWeeklies = -1;
 weekGamemode = -1;
 weeklyOption = [];
 event_perform(ev_alarm,0);
+var tds = string(totalDailies);
 event_user(0);
 
 //Data types

@@ -1,7 +1,7 @@
 var loops = GetPlayerLoops();
 maxhealth = 150 * clamp(loops*2,1,4)
 maxhealth *= max(1,instance_number(BecomeScrapBoss));
-size = 1
+mySize = 1
 spr_idle = sprHotDrakeSkullIdleClosed;
 spr_hurt = sprHotDrakeSkullHurtClosed;
 spr_dead = sprHotDrakeSkullDead;

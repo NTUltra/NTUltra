@@ -1,7 +1,7 @@
 raddrop = 0
 maxhealth = 10
 meleedamage = 0
-size = 1
+mySize = 1
 scrCrownOfPopoRad(4);
 event_inherited()
 

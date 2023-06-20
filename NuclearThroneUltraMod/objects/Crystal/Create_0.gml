@@ -1,5 +1,5 @@
 maxhealth = 2
-size = 1
+mySize = 1
 area = 0;
 if instance_exists(Player)
 area = Player.area;

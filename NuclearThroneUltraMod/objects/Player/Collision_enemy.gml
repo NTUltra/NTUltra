@@ -1,4 +1,4 @@
-motion_add(point_direction(other.x,other.y,x,y),other.size*0.5)
+motion_add(point_direction(other.x,other.y,x,y),other.mySize*0.5)
 if other.team != team && team != 0
 {
 	var actuallyDead = false;

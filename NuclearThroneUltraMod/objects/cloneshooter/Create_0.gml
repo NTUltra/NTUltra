@@ -1,4 +1,4 @@
-size = 2;
+mySize = 2;
 existTime = 0;
 depth = 1;
 myConfusion = noone;
@@ -59,7 +59,7 @@ ccurse = Player.ccurse;
 reload = 0//Player.reload
 breload = 0//Player.breload
 team = Player.team
-size = Player.size
+mySize = Player.mySize
 queueshot = 0;
 bqueueshot = 0;
 cqueueshot = 0;

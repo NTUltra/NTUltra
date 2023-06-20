@@ -1,7 +1,7 @@
 raddrop = 22
 maxhealth = 160
 meleedamage = 6;
-size = 4;
+mySize = 4;
 
 event_inherited()
 actTime = 10;

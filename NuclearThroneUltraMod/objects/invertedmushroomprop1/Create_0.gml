@@ -3,7 +3,7 @@ maxhealth = 7;
 spr_idle = sprInvertedMushroomProp1
 spr_hurt = sprInvertedMushroomProp1Hurt
 spr_dead = sprInvertedMushroomProp1Dead
-size = 1
+mySize = 1
 // Inherit the parent event
 event_inherited();
 

@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "AnySkillLeft",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "Player Character",
     "path": "folders/Scripts/Player Character.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "AnySkillLeft",
-  "tags": [],
-  "resourceType": "GMScript",
 }

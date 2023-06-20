@@ -990,4 +990,23 @@ instance_destroy();
 		}
 		scrSave();//Don't necesserily have to save here
 	}
+	
+	with UberCont {
+	if (isWeekly) {
+		if (scrIsWeeklyScoreHigher(Player.kills)) {
+			runScore[7] = Player.altUltra;
+			runScore[12] = getUltraMutation();
+		}
+	}
+	else if (opt_gamemode == 27) // && !instance_exists(StartDaily))
+	{
+		runScore[7] = Player.altUltra;
+		runScore[12] = getUltraMutation();
+	}
+	else if (opt_gamemode == 26) // && !instance_exists(StartDaily))
+	{
+		runScore[5] = Player.altUltra;
+		runScore[10] = getUltraMutation();
+	}
+}
 }

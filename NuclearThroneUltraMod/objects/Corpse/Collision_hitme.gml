@@ -1,5 +1,5 @@
 var impactWrist = impactWristed;
-if (other.team != 2 && (size >= other.size-1 or impactWrist) and speed > 2)
+if (other.team != 2 && (mySize >= other.mySize-1 or impactWrist) and speed > 2)
 {
 	if (other.sprite_index != other.spr_hurt)
 	{
@@ -15,7 +15,7 @@ if (other.team != 2 && (size >= other.size-1 or impactWrist) and speed > 2)
 	
 		with other
 		{
-			my_health -= max(1,floor(other.dmg+(other.size*0.25)+other.speed/5))
+			my_health -= max(1,floor(other.dmg+(other.mySize*0.25)+other.speed/5))
 			if instance_exists(Player)
 			{
 				if impactWrist

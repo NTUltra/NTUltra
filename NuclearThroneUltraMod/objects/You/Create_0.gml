@@ -55,7 +55,7 @@ ccurse = 0;
 reload = 0//Player.reload
 breload = 0//Player.breload
 team = 4//Player.team
-size = 2;
+mySize = 2;
 
 
 accuracy = Player.accuracy

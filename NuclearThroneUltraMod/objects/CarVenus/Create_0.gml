@@ -5,7 +5,7 @@ spr_idle = sprVenusCar
 spr_hurt = sprVenusCarHurt
 spr_dead = sprScorchmark
 
-size = 1
+mySize = 1
 
 event_inherited()
 

@@ -116,8 +116,8 @@ if (type == network_type_data) {
 					viewingWeekly = true;
 					leaderboardName[0] = "WEEKLY ";
 					var displayWeek = string_replace(leaderboardTypeString,"weekly","");
-					displayWeek = string_copy(displayWeek,0,2);
-					displayWeek = string_replace(displayWeek,"+","");
+					displayWeek = string_copy(displayWeek,0,string_pos("+", displayWeek) - 1);
+					displayWeek = string_replace(displayWeek,"-"," ");
 					leaderboardName[0] += displayWeek;
 					var gmn = string_copy(leaderboardTypeString,string_pos("+",leaderboardTypeString),3);
 					viewingWeeklyGamemode = real(string_replace(gmn,".",""));
@@ -128,15 +128,14 @@ if (type == network_type_data) {
 					leaderboardName[1] = string_replace_all(UberCont.gamemode[viewingWeeklyGamemode],"#"," ");
 				}
 			}
-			debug("leaderboardTypeString " ,leaderboardTypeString);
-			debug("receivedLeaderboard " ,receivedLeaderboard);
 			if string_count("weekly",leaderboardTypeString) > 0
 			{
 				viewingWeekly = true;
 				leaderboardName[0] = "WEEKLY ";
 				var displayWeek = string_replace(leaderboardTypeString,"weekly","");
-				displayWeek = string_copy(displayWeek,0,2);
-				displayWeek = string_replace(displayWeek,"+","");
+				displayWeek = string_copy(displayWeek,0,string_pos("+", displayWeek) - 1);
+				displayWeek = string_replace(displayWeek,"-"," ");
+				
 				leaderboardName[0] += displayWeek;
 				var gmn = string_copy(leaderboardTypeString,string_pos("+",leaderboardTypeString),3);
 				viewingWeeklyGamemode = real(string_replace(gmn,".",""));
@@ -166,6 +165,7 @@ if (type == network_type_data) {
 				UberCont.weeklyWeek = buffer_read(buffer,buffer_u16);
 				if UberCont.totalWeeklies < UberCont.weeklyWeek
 					UberCont.totalWeeklies = UberCont.weeklyWeek;
+				debug("get totalweeklies: ", UberCont.totalWeeklies);
 			}
 			else
 			{

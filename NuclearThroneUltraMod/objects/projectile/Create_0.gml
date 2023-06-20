@@ -11,6 +11,8 @@ team = 2;
 canBeMoved = true;
 isGrenade = false;
 typ = 0;
+wepFire = 0;
+depth = -1;
 if UberCont.opt_gamemode == 33//All Deflector
 {
 	hasBeenDeflected = false;

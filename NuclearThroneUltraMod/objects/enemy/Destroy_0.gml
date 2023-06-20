@@ -7,7 +7,7 @@ if object_index!=SnowTank && object_index!=InvertedSnowTank && object_index!=Gol
 	myCorpse = instance_create(x,y,Corpse)
 	with myCorpse
 	{
-		size = other.size
+		mySize = other.mySize
 		mask_index = other.mask_index
 		if other.speed > 0
 		{
@@ -35,26 +35,26 @@ if object_index!=SnowTank && object_index!=InvertedSnowTank && object_index!=Gol
 			}
 			else if speed > 17
 			speed = 17
-			if size > 0
+			if mySize > 0
 			{
 				if impactWrist
 				{
-					speed /= (size*0.35);
+					speed /= (mySize*0.35);
 				}
 				else
-					speed /= size*0.82;
+					speed /= mySize*0.82;
 			}
 			
 			if Player.skill_got[20] && speed > 18
 				speed = 18
 		}
-		else if size > 0
-			speed /= size*0.83
+		else if mySize > 0
+			speed /= mySize*0.83
 	}
 	snd_play(snd_dead, 0.1,true);
 }
 
-Sleep(15+size*10)
+Sleep(15+mySize*10)
 //Mutations
 scrEnemyDeathEvent();
 

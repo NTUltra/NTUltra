@@ -1,7 +1,7 @@
 raddrop = 30
 maxhealth = 40
 meleedamage = 0
-size = 2
+mySize = 2
 
 spr_idle = sprGuardianActivate
 spr_walk = sprGuardianIdle

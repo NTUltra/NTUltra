@@ -7,7 +7,7 @@ instance_create(x+lengthdir_x(16,ang+240),y+lengthdir_y(16,ang+180),Explosion)
 
 with instance_create(x,y,Corpse)
 {
-size = 1
+mySize = 1
 mask_index = mskPlayer
 motion_add(other.direction,other.speed)
 sprite_index = sprInvertedLilHunterDead
@@ -24,8 +24,8 @@ speed+=1;
 }
 if speed > 16
 speed = 16
-if size > 0
-speed /= size
+if mySize > 0
+speed /= mySize
 
 
 }

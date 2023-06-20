@@ -27,7 +27,7 @@ with RadChest {
 	y = f.y+16;
 }
 meleedamage = 7
-size = 4
+mySize = 4
 event_inherited();
 existTime = 30;
 alarm[10] = 0;

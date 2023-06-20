@@ -1,7 +1,7 @@
 maxhealth = 10
 my_health = maxhealth
 meleedamage = 0
-size = 1
+mySize = 1
 ammo = 34
 
 hurt_pitch_variation = 0.1;

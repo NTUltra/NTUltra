@@ -1,5 +1,5 @@
 maxhealth = 1
-size = 1
+mySize = 1
 
 event_inherited()
 

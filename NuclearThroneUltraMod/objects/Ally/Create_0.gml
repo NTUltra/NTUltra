@@ -49,7 +49,7 @@ if instance_exists(Player)
 }
 
 meleedamage = 0
-size = 1
+mySize = 1
 
 
 

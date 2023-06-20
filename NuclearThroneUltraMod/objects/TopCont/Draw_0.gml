@@ -289,6 +289,12 @@ if visible{
 draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1);
 }
 }
+with DiscTrail
+{
+	draw_set_color(theColour);
+	draw_self();
+	draw_set_color(c_white);
+}
 with SquareBat
 {
 	draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1)

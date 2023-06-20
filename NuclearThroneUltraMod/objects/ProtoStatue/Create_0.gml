@@ -1,5 +1,5 @@
 maxhealth = 76//80
-size = 2
+mySize = 2
 if instance_exists(Player)
 {
 	rad = Player.crownrad

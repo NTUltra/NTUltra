@@ -1,5 +1,5 @@
 maxhealth = 15
-size = 1
+mySize = 1
 
 spr_idle = sprYVStatue
 spr_hurt = sprYVStatueHurt

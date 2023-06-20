@@ -1,6 +1,6 @@
 maxhealth = 13
 my_health = maxhealth;
-size = 1;
+mySize = 1;
 
 spr_idle = sprOasisBarrel
 spr_hurt = sprOasisBarrelHurt

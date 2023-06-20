@@ -1,7 +1,7 @@
 raddrop = 14
 maxhealth = 2
 meleedamage = 2
-size = 1
+mySize = 1
 droprate = 60;
 
 

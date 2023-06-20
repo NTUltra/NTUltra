@@ -28,7 +28,7 @@ if instance_exists(Player)
 
 with instance_create(x,y,Corpse)
 {
-	size = other.size
+	mySize = other.mySize
 	mask_index = other.mask_index
 	if other.speed > 0
 	{
@@ -56,21 +56,21 @@ with instance_create(x,y,Corpse)
 		}
 		else if speed > 17
 		speed = 17
-		if size > 0
+		if mySize > 0
 		{
 			if impactWrist
 			{
-				speed /= (size*0.32);
+				speed /= (mySize*0.32);
 			}
 			else
-				speed /= size*0.82;
+				speed /= mySize*0.82;
 		}
 			
 		if Player.skill_got[20] == 1 && speed > 19
 			speed = 19
 	}
-	else if size > 0
-		speed /= size*0.82
+	else if mySize > 0
+		speed /= mySize*0.82
 }
 snd_play(snd_dead,0,true)
 scrRaddrop(raddrop);

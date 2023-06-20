@@ -5,7 +5,7 @@ version = 000//23 is final probably
 encryptedVersion = 003;
 public = 0 //1 is no cheats and release
 defaultPublic = public;
-updateVersion = "BETA 30.13";
+updateVersion = "BETA 30.14";
 serverIp =  "";
 serverPort =  0;
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
@@ -93,6 +93,7 @@ wallsBroken = 0;
 scrInit();
 window_set_min_width(640);
 window_set_min_height(480);
+window_set_position((display_get_width()*0.5)-640,display_get_height()*0.5 - 480);
 window_set_fullscreen(opt_fulscrn)
 if !opt_fulscrn
 	window_set_size(640*2,480*2);

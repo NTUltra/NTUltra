@@ -1,7 +1,7 @@
 raddrop = 5
 maxhealth = 25
 meleedamage = 0
-size = 1
+mySize = 1
 
 event_inherited()
 spr_idle = sprFireBallerIdle

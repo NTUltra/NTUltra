@@ -120,7 +120,6 @@ BackCont.viewy2 = Campfire.y-__view_get( e__VW.HView, 0 )/2
 BackCont.viewx = Campfire.x-__view_get( e__VW.WView, 0 )/2
 BackCont.viewy = Campfire.y-__view_get( e__VW.HView, 0 )/2
 
-debug("racemax : ",racemax);
 var dir;
 dir = 5
 repeat(racemax-4)

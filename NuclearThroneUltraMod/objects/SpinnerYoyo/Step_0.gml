@@ -1,4 +1,5 @@
 instance_create(x,y,DiscTrail);
+var fps60 = UberCont.normalGameSpeed == 60;
 if followOwner 
 {
 	if owner > -1 && instance_exists(owner)
@@ -47,30 +48,62 @@ if instance_exists(Player) and instance_exists(enemy)
 	if home > 0
 	{
 		if point_distance(x,y,dir.x,dir.y) < home
-		{
-			x += lengthdir_x(3,point_direction(x,y,dir.x,dir.y))
-			y += lengthdir_y(3,point_direction(x,y,dir.x,dir.y))
-			oDir -= (angle_difference(oDir,point_direction(tx,ty,dir.x,dir.y))*0.6);
-			length -= speed*0.6;
+		{/*
+			if UberCont.normalGameSpeed == 60
+			{
+				x += lengthdir_x(1.5,point_direction(x,y,dir.x,dir.y))
+				y += lengthdir_y(1.5,point_direction(x,y,dir.x,dir.y))
+				oDir -= (angle_difference(oDir,point_direction(tx,ty,dir.x,dir.y))*0.3);
+				length -= speed*0.3;
+			}
+			else
+			{*/
+				x += lengthdir_x(2.75,point_direction(x,y,dir.x,dir.y))
+				y += lengthdir_y(2.75,point_direction(x,y,dir.x,dir.y))
+				oDir -= (angle_difference(oDir,point_direction(tx,ty,dir.x,dir.y))*0.6);
+				length -= speed*0.6;
+			//}
 		}
 	}
 }
 if speed < 0
 {
-	if rotation > 0
-		oDir += max((rotation/length)*2,5);
+	if fps60
+	{
+		if rotation > 0
+			oDir += max((rotation/length),2.5);
+		else
+			oDir += min((rotation/length),-2.5);
+	}
 	else
-		oDir += min((rotation/length)*2,-5) ;
+	{
+		if rotation > 0
+			oDir += max((rotation/length)*2,5);
+		else
+			oDir += min((rotation/length)*2,-5);
+	}
 }
 else
 {
-	if rotation > 0
-		oDir += clamp(rotation/(maxlength-length),1,2);
+	if fps60
+	{
+		if rotation > 0
+			oDir += clamp(rotation/(maxlength-length),0.5,1);
+		else
+			oDir += clamp(rotation/(maxlength-length),-1,-0.5);
+	}
 	else
-		oDir += clamp(rotation/(maxlength-length),-2,-1);
-		
+	{
+		if rotation > 0
+			oDir += clamp(rotation/(maxlength-length),1,2);
+		else
+			oDir += clamp(rotation/(maxlength-length),-2,-1);
+	}
 }
-length += speed;
+if fps60
+	length += speed * 0.5;
+else
+	length += speed;
 if (point_distance(tx,ty,x,y) > maxlength && speed > 0)
 {
 	speed = -3;

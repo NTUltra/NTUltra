@@ -2,7 +2,7 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 {
 	var hit = other;
 	var meatDmg = meatDmgReduction;
-	var s = max(0,other.size*1.5);
+	var s = max(0,other.mySize*1.5);
 	with other//enemy
 	{
 		if sprite_index != spr_hurt

@@ -20,7 +20,6 @@ if (type == network_type_data) {
 			UberCont.weeklyWeek = buffer_read(buffer, buffer_u16);
 			UberCont.totalDailies = UberCont.dailyDay;
 			UberCont.totalWeeklies = UberCont.weeklyWeek;
-			debug("TOTAL WEEKLIES", UberCont.totalWeeklies);
 			if latestVersion != UberCont.updateVersion
 			{
 				alarm[0] = min(alarm[0],1);

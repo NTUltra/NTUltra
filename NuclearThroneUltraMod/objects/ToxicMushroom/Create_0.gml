@@ -3,7 +3,7 @@ maxhealth = 10
 spr_idle = sprToxicMushroomProp
 spr_hurt = sprToxicMushroomPropHurt
 spr_dead = sprToxicMushroomPropDead
-size = 1
+mySize = 1
 
 event_inherited()
 

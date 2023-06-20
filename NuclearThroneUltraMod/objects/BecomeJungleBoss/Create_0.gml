@@ -1,6 +1,6 @@
 image_index = 0
 
-size = 3
+mySize = 3
 raddrop = 0;
 maxhealth = 30
 meleedamage = 0;

@@ -1,7 +1,7 @@
 /// @description become gator
 raddrop = 8
 meleedamage = 0
-size = 1
+mySize = 1
 image_speed = 0.4
 
 spr_idle = sprGatorIdle

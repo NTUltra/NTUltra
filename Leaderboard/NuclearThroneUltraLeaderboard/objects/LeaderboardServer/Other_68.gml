@@ -55,16 +55,11 @@ if (type == network_type_data) {
 		//Receiving score
 		case NETDATA.RACE:
 			isScore = false;
-			var sendBuffer = buffer_create(7,buffer_grow,1);
-			var socket = buffer_read(buffer, buffer_u16);
-			buffer_write(sendBuffer,buffer_u8,NETDATA.CONFIRMRACE);
-			network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
-			buffer_delete(sendBuffer);
 		case NETDATA.WEEKLY:
 			if isScore
 				isWeekly = true;
 		case NETDATA.SCORE:
-			if isScore
+			//if isScore
 			var socket = buffer_read(buffer, buffer_u16);
 			var wantDay = buffer_read(buffer, buffer_u16);
 			show_debug_message("wantDay/week " + string(wantDay));
@@ -87,7 +82,9 @@ if (type == network_type_data) {
 			}
 			var newScore = [];
 			newScore[0] = buffer_read(buffer, buffer_u64);//Kills / frame time
+			show_debug_message("TIME: " + string(newScore[0]));
 			newScore[1] = buffer_read(buffer,buffer_string);//Username
+			show_debug_message("USERNAME: " + newScore[1]);
 			if gm == 8
 			{
 				//Van Fan
@@ -119,6 +116,10 @@ if (type == network_type_data) {
 				newScore[8] = buffer_read(buffer,buffer_u16);//cwep
 				newScore[9] = buffer_read(buffer,buffer_u8);//crown
 				newScore[10] = buffer_read(buffer,buffer_u8);//ultra mutation 255 is none
+				var sendBuffer = buffer_create(1,buffer_fixed,1);
+				buffer_write(sendBuffer,buffer_u8,NETDATA.CONFIRMRACE);
+				network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
+				buffer_delete(sendBuffer);
 			}
 			var scoreString = "";
 			for (var i = 0; i < array_length(newScore); i++)
@@ -148,14 +149,12 @@ if (type == network_type_data) {
 			}
 			else {
 				fileName = file_find_first(string(wantDay) + "_ntultradailyrace*", 0);
-				show_debug_message("FILE1race: " + fileName);
 				stringChecker = "racelb";
 				if fileName == ""
 				{
 					fileName = dailyRaceSaveFileString;
 				}
 			}
-			show_debug_message("FILE: " + fileName);
 			var scoreLeaderboard = "";
 			ini_open(fileName);
 				//Get existing
@@ -218,6 +217,7 @@ if (type == network_type_data) {
 					}
 				}
 				//Reverse the list for races
+				show_debug_message("sorting: "+ string(isScore));
 				if !isScore
 					ds_list_sort(scoreList,false);
 				//Rewrite!
@@ -234,10 +234,6 @@ if (type == network_type_data) {
 			var sendBuffer = buffer_create(8,buffer_grow,1);
 			buffer_write(sendBuffer,buffer_u8,NETDATA.LEADERBOARD);
 			buffer_write(sendBuffer,buffer_string,scoreLeaderboard);
-			//if isScore
-			//	buffer_write(sendBuffer,buffer_string,string_split(string_replace(dailyScoreSaveFileString,"ntultra",""),"_")[1]);
-			//else
-			//	buffer_write(sendBuffer,buffer_string,string_split(string_replace(dailyRaceSaveFileString,"ntultra",""),"_")[1]);
 			buffer_write(sendBuffer,buffer_string,string_split(string_replace(fileName,"ntultra",""),"_")[1]);
 			buffer_write(sendBuffer,buffer_u16,0);//Page
 			if isWeekly
@@ -317,7 +313,6 @@ if (type == network_type_data) {
 					//fileName = dailyRaceSaveFileString;
 				}
 			}
-			show_debug_message("fileName " + string(fileName));
 			var scoreLeaderboard = "";
 			if (file_exists(fileName) && !noFile)
 			{

@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "scrSleepyPopo",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "Enemy",
     "path": "folders/Scripts/Enemy.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "scrSleepyPopo",
-  "tags": [],
-  "resourceType": "GMScript",
 }

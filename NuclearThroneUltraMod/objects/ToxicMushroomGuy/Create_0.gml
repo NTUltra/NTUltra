@@ -1,7 +1,7 @@
 raddrop = 15
 maxhealth = 15
 meleedamage = 2;
-size = 1
+mySize = 1
 
 event_inherited()
 spr_gun = sprToxicMushroomGuyGun

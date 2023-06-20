@@ -5,7 +5,7 @@ scrDrop(30,2)
 
 with instance_create(x,y,Corpse)
 {
-	size = other.size
+	mySize = other.mySize
 	mask_index = other.mask_index
 	motion_add(other.direction,other.speed)
 	speed += max(0,-other.my_health/5)
@@ -26,13 +26,13 @@ with instance_create(x,y,Corpse)
 	}
 	if speed > 18
 	speed = 18
-	if size > 0
-	speed /= size
+	if mySize > 0
+	speed /= mySize
 }
 
 snd_play(snd_dead)
 
-Sleep(20+size*15)
+Sleep(20+mySize*15)
 if instance_exists(Player)
 {
 if Player.race = 4

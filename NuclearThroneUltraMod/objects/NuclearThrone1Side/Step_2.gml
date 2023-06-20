@@ -82,7 +82,7 @@ if owner > -1 && instance_exists(owner)
 		{
 			if !place_meeting(x,y,Tangle)
 			{
-				var s = 0.07 + clamp(size*0.01,0,0.07);
+				var s = 0.07 + clamp(mySize*0.01,0,0.07);
 				x = xprevious+hspeed*s;
 				y = yprevious+vspeed*s;
 			}
@@ -95,15 +95,17 @@ if owner > -1 && instance_exists(owner)
 	y = owner.y + yOffset;
 	if owner.walk > 0
 	{
-		if walk > sprite_get_number(sprNothingLeg)
+		if walkAnim > sprite_get_number(sprNothingLeg)
 		{
-			walk = 0;
+			walkAnim = 0;
 			snd_play(sndNothingFootstep);
 		}
-		//if UberCont.normalGameSpeed == 60
-		//	walk -= 0.45;
-		//else
-			walk += 0.9;
+		if UberCont.normalGameSpeed == 60
+		{
+			walkAnim += 0.45;
+		}
+		else
+			walkAnim += 0.9;
 		
 	}
 	mask_index = msk;

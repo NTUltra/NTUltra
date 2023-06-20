@@ -1,5 +1,5 @@
 meleedamage = 0
-size = 1
+mySize = 1
 scrWeapons();
 owner = -1;
 
@@ -58,7 +58,7 @@ bwep = Player.bwep
 reload = 0//Player.reload
 breload = 0//Player.breload
 team = Player.team
-size = Player.size
+mySize = Player.mySize
 
 
 accuracy = Player.accuracy

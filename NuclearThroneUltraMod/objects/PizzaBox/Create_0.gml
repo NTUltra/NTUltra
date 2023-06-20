@@ -1,5 +1,5 @@
 maxhealth = 4
-size = 1
+mySize = 1
 
 spr_idle = sprPizzaBox
 spr_hurt = sprPizzaBoxHurt

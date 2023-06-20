@@ -1,6 +1,6 @@
 maxhealth = 1
 my_health = maxhealth;
-size = 2
+mySize = 2
 
 spr_idle = sprBushIdle
 spr_hurt = sprBushHurt

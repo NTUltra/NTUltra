@@ -5,7 +5,7 @@ if instance_exists(InvaderBossSpawnPortal)
 	maxhealth = 900;
 }
 meleedamage = 0
-size = 2
+mySize = 2
 scrBossHealthBuff();
 
 event_inherited()

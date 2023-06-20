@@ -1,7 +1,7 @@
 raddrop = 9
 maxhealth = 255
 meleedamage = 20
-size = 4
+mySize = 4
 RogueIDPD=false;
 scrCrownOfPopoRad(15);
 event_inherited()

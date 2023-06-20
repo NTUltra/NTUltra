@@ -4980,6 +4980,8 @@ function scrFire() {
 				Mod2=other.wepmod2;
 				Mod3=other.wepmod3;
 				Mod4=other.wepmod4;
+				if wepFire == 0
+					wepFire = other.wep;
 				if !hadSpeedApplied && canBeMoved//speed > 0
 				{
 					speed *= other.pSpeedBoost;

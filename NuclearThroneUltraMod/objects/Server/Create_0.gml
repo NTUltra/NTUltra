@@ -1,5 +1,5 @@
 maxhealth = 10
-size = 1
+mySize = 1
 
 spr_idle = sprServer
 spr_hurt = sprServerHurt

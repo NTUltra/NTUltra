@@ -1,7 +1,7 @@
 raddrop = 25
 maxhealth = 70
 meleedamage = 3
-size = 2
+mySize = 2
 
 event_inherited()
 detectionRange = 200;

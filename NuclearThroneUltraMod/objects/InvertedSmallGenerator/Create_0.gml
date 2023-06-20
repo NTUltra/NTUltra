@@ -1,6 +1,6 @@
 maxhealth = 35
 my_health = maxhealth;
-size = 2
+mySize = 2
 
 spr_idle = sprInvertedSmallGenerator;
 spr_hurt = sprInvertedSmallGeneratorHurt;

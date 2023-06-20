@@ -12,7 +12,7 @@ spr_hurt = sprFrozenCarHurt
 spr_dead = sprScorchmark
 }
 }
-size = 1
+mySize = 1
 
 event_inherited()
 

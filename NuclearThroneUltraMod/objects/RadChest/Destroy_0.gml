@@ -2,7 +2,7 @@ if my_health <= 0
 {
 with instance_create(x,y,Corpse)
 {
-size = other.size
+mySize = other.mySize
 mask_index = other.mask_index
 sprite_index = other.spr_dead
 }

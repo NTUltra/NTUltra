@@ -1,6 +1,6 @@
 var loops = GetPlayerLoops();
 maxhealth = 90 * clamp(loops*5,1,10)
-size = 1
+mySize = 1
 //if UberCont.public == 0//Temp only for dev build
 //{
 	spr_idle = sprBigVultureSkullOpen;

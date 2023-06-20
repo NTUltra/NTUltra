@@ -1,7 +1,7 @@
 raddrop = 25
 maxhealth = 40
 meleedamage = 1
-size = 1
+mySize = 1
 
 if UberCont.loops>1
 maxhealth=55;

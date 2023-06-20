@@ -1,4 +1,4 @@
-motion_add(point_direction(other.x,other.y,x,y),other.size*0.5)
+motion_add(point_direction(other.x,other.y,x,y),other.mySize*0.5)
 if !instance_exists(Player){instance_destroy();exit;}
 if Player.skill_got[8] = 1//Dealing the damage with gamma guts
 {

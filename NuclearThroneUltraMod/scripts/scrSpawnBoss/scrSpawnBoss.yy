@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "scrSpawnBoss",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "LevelGen",
     "path": "folders/Scripts/LevelGen.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "scrSpawnBoss",
-  "tags": [],
-  "resourceType": "GMScript",
 }

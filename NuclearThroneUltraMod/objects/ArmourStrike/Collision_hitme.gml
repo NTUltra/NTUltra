@@ -14,7 +14,7 @@ with other
 	frozen=true;
 		with instance_create(x,y,FrozenEnemy)
 		{
-			var s = min(2,other.size)
+			var s = min(2,other.mySize)
 			image_xscale=s*choose(1,-1);
 			image_yscale=s;
 			xx=other.x

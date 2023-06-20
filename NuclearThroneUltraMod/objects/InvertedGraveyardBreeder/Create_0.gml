@@ -2,7 +2,7 @@ event_inherited()
 raddrop = 26
 maxhealth = 20
 meleedamage = 3
-size = 2
+mySize = 2
 spr_idle = sprInvertedGraveyardBreeder
 spr_walk = sprInvertedGraveyardBreeder
 spr_hurt = sprInvertedGraveyardBreederHurt

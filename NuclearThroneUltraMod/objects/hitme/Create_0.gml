@@ -1,5 +1,5 @@
 /// @description Variables
-size = 2;
+mySize = 2;
 existTime = 0;
 depth = 1;
 myConfusion = noone;

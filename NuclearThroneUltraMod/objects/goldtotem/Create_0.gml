@@ -1,6 +1,6 @@
 maxhealth = 70
 meleedamage = 0
-size = 2
+mySize = 2
 prevhealth = 100;
 event_inherited()
 

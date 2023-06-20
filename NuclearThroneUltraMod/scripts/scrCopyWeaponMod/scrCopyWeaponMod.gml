@@ -6,4 +6,5 @@ function scrCopyWeaponMod(othr){
 	Mod2 = othr.Mod2;
 	Mod3 = othr.Mod3;
 	Mod4 = othr.Mod4;
+	wepFire = othr.wepFire;
 }

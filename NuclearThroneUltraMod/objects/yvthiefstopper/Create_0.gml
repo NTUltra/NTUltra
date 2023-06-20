@@ -7,7 +7,7 @@ frozen=false;
 maxSpeed = 16;
 target = noone
 meleedamage = 0
-size = 1
+mySize = 1
 image_speed = 0.4
 friction = 0.4
 

@@ -9,17 +9,22 @@ if day != yesterday
 {
 	var fileName = file_find_first("ds*", 0);
 	totalDailies = defaultTotalDailies;
-	show_debug_message("start counting " + string(totalDailies));
 	defaultTotalDailies = 0;
 	while (fileName != "")
 	{
 		totalDailies ++;
 		fileName = file_find_next();
-		show_debug_message(fileName);
 	}
 	totalDailies = max(0,totalDailies);
 	file_find_close();
-	show_debug_message("new day " + string(totalDailies));
+	var existingScoreFile = file_find_first("ds" + string(totalDailies) + "_ntultradailyscore*",0);
+	if (existingScoreFile != "")
+	{
+		//Score day exists
+		if (existingScoreFile != "ds" + string(totalDailies) + "_ntultradailyscore"+string(day)+".sav")//Day is not the same as today so its a new day
+			totalDailies ++;
+	}
+	file_find_close();
 	var byteSeed = 0;
 	var byteSize = string_byte_length(day);
 	for (var i = 0; i < byteSize; i++) {
@@ -34,7 +39,7 @@ if day != yesterday
 	{
 		show_debug_message("WEEK");
 		var weekchecker = date_inc_week(date_current_datetime(), -1);
-		var year = min(date_current_datetime(), date_get_year(weekchecker));//In case week crosses the year
+		var year = min(date_get_year(date_current_datetime()), date_get_year(weekchecker));//In case week crosses the year
 		var seedweek = string(week) + string(year);
 		show_debug_message(week);
 		show_debug_message(seedweek);
@@ -86,7 +91,16 @@ if day != yesterday
 		}
 		totalWeeklies = max(totalWeeklies,0);
 		file_find_close();
+		var existingWeeklyFile = file_find_first("w" + string(totalWeeklies) + "_ntultraweekly*",0);
+		show_debug_message("existingWeeklyFile: " + string(existingWeeklyFile));
+		if (existingWeeklyFile != "")
+		{
+			//Weekly exists is it accurate??
+			if (existingWeeklyFile != "w" + string(totalWeeklies) + "_ntultraweekly"+string(year)+"-"+string(week)+"+"+string(weekGamemode)+".sav")
+				totalWeeklies ++;
+		}
+		file_find_close();
 		show_debug_message("new week " + string(totalWeeklies));
-		weeklySaveFileString = "w"+string(totalWeeklies) + "_ntultraweekly"+string(week)+"+"+string(weekGamemode)+".sav";
+		weeklySaveFileString = "w" + string(totalWeeklies) + "_ntultraweekly"+string(year)+"-"+string(week)+"+"+string(weekGamemode)+".sav";
 	}
 }

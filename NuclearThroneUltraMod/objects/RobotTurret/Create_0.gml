@@ -1,7 +1,7 @@
 maxhealth = 400
 my_health = maxhealth;
 meleedamage = 0
-size = 1
+mySize = 1
 event_inherited();
 scrWeapons();
 roll = 0;
@@ -66,7 +66,7 @@ bwep = Player.bwep
 reload = 0//Player.reload
 breload = 0//Player.breload
 team = Player.team
-size = Player.size
+mySize = Player.mySize
 
 
 accuracy = Player.accuracy

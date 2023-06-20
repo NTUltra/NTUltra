@@ -1,7 +1,7 @@
 raddrop = 6
 maxhealth = 7
 meleedamage = 0
-size = 1
+mySize = 1
 
 event_inherited()
 if scrIsHardMode() && random(2) < 1//HARD MODE

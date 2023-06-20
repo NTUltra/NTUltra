@@ -1,7 +1,7 @@
 raddrop = 40
 maxhealth = 80
 meleedamage = 0
-size = 3
+mySize = 3
 
 var loops = GetPlayerLoops();
 maxhealth += clamp(18*loops,0,200);

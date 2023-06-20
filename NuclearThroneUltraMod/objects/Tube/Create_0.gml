@@ -1,5 +1,5 @@
 maxhealth = 2
-size = 1
+mySize = 1
 
 spr_idle = sprTube
 spr_hurt = sprTubeHurt

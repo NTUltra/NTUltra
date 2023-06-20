@@ -12,7 +12,7 @@ growspeed = 0.002+random(0.003)
 alarm[0]=10;
 team = 2
 typ = 0//2
-
+depth = 0;
 dmg=3;
 if instance_exists(Player)
 {
@@ -20,8 +20,16 @@ if instance_exists(Player)
 	if Player.ultra_got[92] && !Player.altUltra
 	{
 		dmg=4;
-		image_xscale += 0.06;
-		image_yscale += 0.06;
+		image_xscale += 0.054;
+		image_yscale += 0.054;
+	}
+	if place_meeting(x,y,Wall)
+	{
+		var ground = instance_nearest(x,y,Floor);
+		var o = 16;
+		if ground.object_index == FloorExplo
+				o = 8;
+		move_outside_solid(point_direction(x,y,ground.x+o,ground.y+o),16);	
 	}
 }
 

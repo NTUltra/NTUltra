@@ -7,12 +7,19 @@ if instance_exists(Player) && crossAmmo < 1
 	y += ((Player.y + lengthdir_y(distanceToTarget,angle))-y)*lerpp;
 	hspeed = x - xprevious;
 	vspeed = y - yprevious;
+	
 	if alarm[6] < 1 && !place_meeting(x,y,Tangle) && alarm[11] < 1
 		angle += rotationSpeed; 
 	if Player.x < x
 		right = -1
 	else if Player.x > x
 		right = 1
+	if (UberCont.normalGameSpeed == 60)
+	{
+		hspeed *= 2;
+		vspeed *= 2;
+		angle -= rotationSpeed*0.5;
+	}
 }
 if speed > 3
 speed = 3;

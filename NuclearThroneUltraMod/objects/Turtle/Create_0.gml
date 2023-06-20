@@ -1,7 +1,7 @@
 raddrop = 12
 maxhealth = 15
 meleedamage = 0
-size = 1
+mySize = 1
 
 event_inherited()
 friction += 0.01;

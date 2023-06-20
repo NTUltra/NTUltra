@@ -1,5 +1,5 @@
 maxhealth = 5
-size = 1
+mySize = 1
 
 if instance_nearest(x-16,y-16,Floor).styleb = 0
 {

@@ -1,5 +1,5 @@
 maxhealth = 40
-size = 2
+mySize = 2
 
 spr_idle = sprInvertedBigSkull
 spr_hurt = sprInvertedBigSkullHurt

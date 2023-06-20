@@ -1,7 +1,7 @@
 raddrop = 5
 maxhealth = 16//15
 meleedamage = 0
-size = 2
+mySize = 2
 
 event_inherited()
 

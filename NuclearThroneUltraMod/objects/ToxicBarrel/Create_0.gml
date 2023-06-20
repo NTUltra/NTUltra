@@ -3,7 +3,7 @@ maxhealth = 1
 spr_idle = sprToxicBarrel
 spr_hurt = sprToxicBarrelHurt
 spr_dead = sprToxicBarrelDead
-size = 1
+mySize = 1
 
 event_inherited()
 

@@ -2,7 +2,7 @@
 maxhealth = 700;
 scrBossHealthBuff();
 disable = false;
-size = 8;
+mySize = 8;
 meleedamage = 0;
 raddrop = 0;
 // Inherit the parent event
@@ -46,3 +46,4 @@ angleI = 0;//random(array_length(gunangle)-1);
 badboyBuff = 1;
 loops = GetPlayerLoops()
 tookDamageThisFrame = false;
+walkAnim = 0;

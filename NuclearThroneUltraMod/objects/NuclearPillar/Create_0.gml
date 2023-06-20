@@ -1,6 +1,6 @@
 maxhealth = 70
 my_health = maxhealth;
-size = 2
+mySize = 2
 
 spr_idle = sprNuclearPillar;
 spr_hurt = sprNuclearPillarHurt;

@@ -1,6 +1,6 @@
 maxhealth = 12
 my_health = maxhealth;
-size = 3
+mySize = 3
 
 spr_idle = sprBigFlowerIdle
 spr_hurt = sprBigFlowerHurt

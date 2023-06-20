@@ -1,7 +1,7 @@
 raddrop = 1;
 maxhealth = 1
 meleedamage = 1
-size = 0
+mySize = 0
 
 
 

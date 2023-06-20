@@ -6,7 +6,7 @@ if scrIsHardMode()
 maxhealth += max(0,70*min(12,(loops-1)));
 scrBossHealthBuff();
 meleedamage = 10
-size = 6;
+mySize = 6;
 
 event_inherited()
 depth -= 1;
