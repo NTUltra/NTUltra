@@ -11,19 +11,19 @@ if(instance_exists(Player)){
 		{
 			target = -1;
 			walk = 0;
-			var amount = 1;
-			var backupAmount = 1;
+			var amount = 1.25;
+			var backupAmount = 1.25;
 			if other.wepFire != 0
 				amount = Player.wep_load[other.wepFire];
 			if Player.skill_got[5]
 			{
-				amount *= 0.9;
+				amount *= 1.05;
 				backupAmount = 2;
 			}
 			else
-				amount *= 0.7;
+				amount *= 0.8;
 			other.wepFire = 0;
-			if alarm[1] > 1
+			if alarm[1] > 0
 			{
 				if alarm[1] < amount * 2
 				{
@@ -34,7 +34,8 @@ if(instance_exists(Player)){
 					alarm[1] += backupAmount;
 				}
 				with instance_create(x,y-6,SleepFX) {
-					alarm[0] = max(1,amount+1);
+					depth = other.depth - 1;
+					alarm[0] = max(2,amount+1);
 				}
 			}
 		}

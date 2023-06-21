@@ -161,7 +161,7 @@ else
 draw_sprite_ext(sprite_index,-1,x,y,right,image_yscale,angle,c_white,1)//PLAYER GETS DRAWN HERE
 
 //Alkaline Saliva
-if skill_got[32] && isAlkaline && my_health < maxhealth && lag < 1 && armour < 1
+if skill_got[32] && isAlkaline// && my_health < maxhealth && lag < 1 && armour < 1
 	draw_sprite_ext(sprAlkalineSaliva,wave,x,y,right,1,0,c_white,0.75);
 
 if triggerfinger>0

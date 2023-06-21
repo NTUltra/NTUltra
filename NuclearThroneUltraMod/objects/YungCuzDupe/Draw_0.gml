@@ -73,7 +73,7 @@ draw_sprite_ext(sprBlackHoleGeneration,wave*0.4,x+lengthdir_x(-wkick,point_direc
 draw_sprite_ext(sprite_index,-1,x,y,right,1,angle,c_white,1);
 
 //Alkaline Saliva
-if isAlkaline && my_health < maxhealth
+if isAlkaline// && my_health < maxhealth
 	draw_sprite_ext(sprAlkalineSaliva,wave,x,y,right,1,0,c_white,0.8);
 	
 if triggerfinger>0

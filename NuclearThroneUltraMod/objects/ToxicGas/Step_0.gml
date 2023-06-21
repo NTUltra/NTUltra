@@ -41,9 +41,9 @@ if instance_exists(Player) && instance_exists(enemy)
 		if Player.race=23&&Player.skill_got[5]=1
 		{
 			if fps60
-				motion_add(dir,0.6);
+				motion_add(dir,0.55);
 			else
-				motion_add(dir,0.12);
+				motion_add(dir,0.11);
 		}
 	}
 }
