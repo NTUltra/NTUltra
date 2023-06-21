@@ -34,7 +34,7 @@ function scrRaces() {
 
 	race_name[2] = "[CRYSTAL]"
 	race_pass[2] = "HAS MORE HP"
-	race_acti[2] = "CRYSTAL SHIELD"
+	race_acti[2] = "SHIELD"
 	race_butt[2] = "LONGER SHIELD"
 	//race_back[2] = "DAMAGE REDUCTION WHILE STANDING STILL";
 	race_lock[2] = "UNLOCKED FROM THE START"
@@ -68,7 +68,7 @@ function scrRaces() {
 
 	race_name[4] = "[MELTING]"
 	race_pass[4] = "HAS LESS HP, GETS MORE RADS"
-	race_acti[4] = "EXPLOSIVE REVENGE"
+	race_acti[4] = "EXPLODE CORPSES"
 	race_butt[4] = "BIGGER CORPSE EXPLOSIONS"
 	//race_back[4] = "CORPSE EXPLOSIONS CAN GIVE DROPS";
 	race_lock[4] = "DIE TO UNLOCK"
@@ -85,7 +85,7 @@ function scrRaces() {
 
 	race_name[5] = "[PLANT]"
 	race_pass[5] = "IS FASTER"
-	race_acti[5] = "SNARE GROWTH"
+	race_acti[5] = "SNARE ENEMIES"
 	race_butt[5] = "SNARE IS SLIGHTLY BIGGER#SNARE FINISHES ENEMIES#UNDER 36% HP"
 	//race_back[5] = "ENEMIES KILLED WHILE SNARED GIVE MORE DROPS THIS IS AN ULTRA ";
 	race_lock[5] = "KILL 100 ENEMIES TO UNLOCK"
@@ -136,7 +136,7 @@ function scrRaces() {
 
 	race_name[8] = "[ROBOT]"
 	race_pass[8] = "FINDS BETTER TECH"
-	race_acti[8] = "EAT GUNS"
+	race_acti[8] = "EAT WEAPONS"
 	race_butt[8] = "BETTER GUN NUTRITION"
 	//race_back[8] = "FIND EVEN BETTER WEAPONS";
 	race_lock[8] = "REACH SCRAPYARD TO UNLOCK"
@@ -170,7 +170,7 @@ function scrRaces() {
 
 	race_name[10] = "[REBEL]"
 	race_pass[10] = "PORTALS HEAL"
-	race_acti[10] = "ALLIES"
+	race_acti[10] = "SPAWN ALLIES"
 	race_butt[10] = "HIGHER ALLY RATE OF FIRE"
 	//race_back[10] = "FASTER ALLIES#ALLIES TELEPORT TO YOU#WHEN LOST";
 	race_lock[10] = "REACH FROZEN CITY TO UNLOCK"
@@ -187,7 +187,7 @@ function scrRaces() {
 
 	race_name[11] = "[HUNTER]"
 	race_pass[11] = "HIGHER PROJECTILE VELOCITY#HIGHER ACCURACY"
-	race_acti[11] = "MARK"
+	race_acti[11] = "MARK ENEMIES"
 	race_butt[11] = "MARKED ENEMIES#TAKE 20% MORE DAMAGE"
 	//race_back[11] = "MARKED ENEMIES THAT DIE#HAVE A HIGHER DROPRATE(this is an ultra?) MARKED ENEMIES THAT DIE#DECREATE RELOAD";
 	race_lock[11] = "DEFLECT A SNIPER SHOT#INTO THE SNIPER"
@@ -204,7 +204,7 @@ function scrRaces() {
 
 	race_name[12] = "[YUNG CUZ]"
 	race_pass[12] = "MORE BUDDIES MEANS#MORE AMMO FROM PICKUPS#FIND MORE HP CHESTS"
-	race_acti[12] = "LIL BUDDY"
+	race_acti[12] = "DUPLICATE"
 	race_butt[12] = "GAIN EVEN MORE AMMO#DEPENDING ON NUMBER OF BUDDIES"
 	//race_back[12] = "DECREASE COST OF BUDDY";
 	race_lock[12] = "KILL A MIMIC"
@@ -322,7 +322,7 @@ function scrRaces() {
 
 
 	race_name[19] = "[SKELETON]"
-	race_pass[19] = "HAS ONLY 4HP#SLOWER#SLIGHTLY LESS ACCURATE"
+	race_pass[19] = "REDUCED HP, SLOWER#SLIGHTLY LESS ACCURATE"
 	race_acti[19] = "BLOOD GAMBLE"
 	race_butt[19] = "BETTER BLOOD GAMBLE ODDS"
 	//race_back[19] = "THE SLOWER YOU MOVE#THE FASTER YOU FIRE";
@@ -390,8 +390,10 @@ function scrRaces() {
 
 
 	race_name[23] = "[FROG]"
-	race_pass[23] = "IMMUNE TO TOXIC"
+	race_pass[23] = "IMMUNE TO TOXIC";
 	race_acti[23] = "TOXIC GAS"
+	if random(1000) < 1
+		race_acti[23] = "SHIT & FART"
 	race_butt[23] = "TOXIC SPREADS FASTER#HOMING TOXIC"
 	//race_back[23] = "TOXIC GASS DEALS MORE DAMAGE (this is an ulta)";
 	race_lock[23] = "KILL BALL MOM"
@@ -440,7 +442,7 @@ function scrRaces() {
 	race_cskin_lock[25] = "PROFESSIONAL#SELFCARE"
 
 	race_name[26] = "[GOOD OL' HUMPHRY]"//RUSTY GRANDPA SOLDIER
-	race_pass[26] = "DEALING DAMAGE#BUILDS UP SKILL##SKILL DECREASES OVER TIME#AND WHEN YOU GET HIT##SKILL INCREASES ALL DAMAGE DEALT#"//"HITTING SHOTS BUILDS SKILL#MISSING RESETS SKILL#UNTIL YOU HIT A SHOT AGAIN#SKILL INCREASES DAMAGE"
+	race_pass[26] = "REDUCED HP##DEALING DAMAGE#BUILDS UP SKILL##SKILL DECREASES OVER TIME#AND WHEN YOU GET HIT##SKILL INCREASES ALL DAMAGE DEALT#"//"HITTING SHOTS BUILDS SKILL#MISSING RESETS SKILL#UNTIL YOU HIT A SHOT AGAIN#SKILL INCREASES DAMAGE"
 	race_acti[26] = "STUN & SHRINK - COSTS 5 SKILL"//"SLOW AND SHRINK#ENEMY PROJECTILES#AT THE COST OF#unequipped AMMO"//DISCIPLINE those bullets
 	race_butt[26] = "#SKILL DECREASES SLOWER"
 	//race_back[26] = "DECREASE COST OF ACTIVE";

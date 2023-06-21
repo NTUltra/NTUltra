@@ -6,7 +6,7 @@ exit;
 //scrn=0; //for screenshot taking character explain pic
 if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK)
 {
-	instance_create(x,y,FPSHACK);	
+	instance_create(x,y,FPSHACK);
 }
 depth = 0;
 previousUltra = -1;
@@ -480,9 +480,13 @@ maxhealth = 2
 
 if race == 19 //skeleton
 {
-    maxhealth = 4;
+    maxhealth = 5;
     maxSpeed = 3.6
     accuracy = 1.2
+}
+if race == 26//Good O'l Humphry
+{
+	maxhealth = 6;
 }
 
 if race = 5 //Plant
@@ -491,7 +495,6 @@ if race = 5 //Plant
 if race = 7 //roids secondary weapon
 {
     if UberCont.opt_gamemode = 1 { //one weapon only game mode yo
-		debug("UberCont.opt_gm1wep: ", UberCont.opt_gm1wep);
         if UberCont.opt_gm1wep - 1 == 0
 			bwep = irandom(maxwep);
         else
