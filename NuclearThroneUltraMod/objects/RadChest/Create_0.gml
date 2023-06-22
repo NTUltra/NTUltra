@@ -1,6 +1,4 @@
 friction = 0.4
-
-
 team = 0
 mySize = 1;
 meleedamage = 0;

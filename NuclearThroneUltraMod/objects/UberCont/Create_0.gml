@@ -6,6 +6,9 @@ encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "BETA 30.14";
+subUpdateVersion = ".02"
+serverIp =  "";
+serverPort =  0;
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
 /*
@@ -55,14 +58,7 @@ txttime="00:00:00:00";
 lastwishused=false;
 kills = 0;
 hard = 0;
-/*
-var todaysSeedName =  string(current_day) + string(current_month) + string(current_year);
-debug("today: ",todaysSeedName);
-var byteSeed = 0;
-var byteSize = string_byte_length(todaysSeedName);
-for (var i = 0; i < byteSize; i++) {
-	byteSeed = (byteSeed + string_byte_at(todaysSeedName, i)) << 1;
-}*/
+
 todaysSeed = -1;
 today = string(current_day) + "-" + string(current_month) + "-"+ string(current_year);
 dailyDay = -1;

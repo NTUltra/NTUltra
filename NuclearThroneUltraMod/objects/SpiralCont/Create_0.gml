@@ -21,7 +21,7 @@ if Player.area == 8
 type = 6;
 }
 
-
+depth = -6;
 
 repeat(60)//(200)
 {

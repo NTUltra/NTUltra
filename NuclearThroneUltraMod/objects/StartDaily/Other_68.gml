@@ -55,7 +55,7 @@ if (type == network_type_data) {
 				with UberCont {
 					if opt_gamemode == 26 {
 						var al = array_length(encrypted_data.ctot_dailies_race_seed);
-				        encrypted_data.ctot_dailies_race_seed[al] = todaysSeed;
+				        encrypted_data.ctot_dailies_race_seed[al] = todaysSeed + 1;
 						encrypted_data.daily_race_dates[al] = UberCont.today;
 				        encrypted_data.ctot_dailies_race_time[al] = -1;
 				        encrypted_data.dailies_race_day[al] = today;
@@ -195,11 +195,14 @@ if (type == network_type_data) {
 				case 25: //Survival Arena
 					with Player
 					{
+						crownpoints = 0;
 						area = 116;
 						if !instance_exists(SurvivalWave)
 						{
 							instance_create(x,y,SurvivalWave);
 						}
+						with Crown
+							instance_destroy();
 					}
 				break;
 				case 30://Ultra mutation start

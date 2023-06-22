@@ -41,6 +41,11 @@ with WeaponMod
 	instance_destroy();
 	instance_create(x,y,SurvivalPortal);
 }
+with RerollStation
+{
+	instance_destroy();
+	instance_create(x,y,SurvivalPortal);
+}
 snd_play(sndCrownBlood);//LETS GO GET EM!
 wave = [];
 alarm[3] = 5;//Tell time is the difference between these two numbers

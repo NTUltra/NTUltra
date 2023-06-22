@@ -1,10 +1,13 @@
 /// @description 60 FPS
+if instance_exists(GenCont)
+	exit;
 var dt = 0.5;
 var al = ds_list_size(forcePositions)
 for (var i = 0; i < al; i++)
 {
 	instance_deactivate_object(forcePositions[| i]);
 }
+//Todo check for gencont
 with all
 {
 	//x = xprevious + (x - xprevious) * 0.5;

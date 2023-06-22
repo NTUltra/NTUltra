@@ -1,7 +1,7 @@
 event_inherited();
 friction = 0.4
 image_speed = 0
-
+meleedamage = 0;
 team = 0
 mySize = 2
 

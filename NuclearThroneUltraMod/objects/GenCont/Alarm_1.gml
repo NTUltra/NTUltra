@@ -95,12 +95,6 @@ if instance_exists(Player)
 		}
 		UberCont.crownVaultChallenge = 0;
 	}
-	/*
-	else if Player.area = 100 && UberCont.crown_start[Player.race] && Player.crownvisits == 0 && instance_exists(CrownPickup)
-	{
-		Player.x = CrownPickup.x;
-		Player.y = CrownPickup.y+32;
-	}*/
 	if Player.saveLoaded
 	{
 		Player.saveLoaded = false;//Next time normal position;

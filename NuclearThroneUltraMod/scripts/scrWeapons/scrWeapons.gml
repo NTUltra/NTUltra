@@ -5499,7 +5499,7 @@ function scrWeapons() {
 	wep_name[497] = "SUPER SPLINTER GUN"
 	wep_type[497] = 3
 	wep_auto[497] = 0
-	wep_load[497] = 35//42 normally
+	wep_load[497] = 34//42 normally
 	wep_cost[497] = 2
 	wep_sprt[497] = sprSuperSplinterGun
 	wep_area[497] = 8

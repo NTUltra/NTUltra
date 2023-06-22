@@ -136,7 +136,7 @@ function scrEnemyDeathEvent(){
 				other.raddrop += 1
 
 			if isdoc
-			other.raddrop=round(other.raddrop*0.5);
+			other.raddrop = round(other.raddrop*0.5);
 
 			if ultra_got[15]//POWER OVERWHELMING! melting c ultra
 				other.raddrop += 2;

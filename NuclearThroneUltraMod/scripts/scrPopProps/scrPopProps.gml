@@ -11,14 +11,14 @@ function scrPopProps() {
 	instance_create(x,y,NOWALLSHEREPLEASE)
 	}
 	//walls near the player for safer spawn
-	if random(5)<1  and !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(x,y,hitme) && !place_meeting(x,y,chestprop) && !place_meeting(x,y,prop)
+	if random(5)<1  and !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(x,y,hitme) && !place_meeting(x,y,chestprop) && !place_meeting(x,y,RadChest) && !place_meeting(x,y,prop)
 	&& point_distance(x,y,Player.x,Player.y)<128 and Player.area != 100 and Player.area != 6 and Player.area != 112 and (Player.area !=5 or random(3) < 1) and Player.area != 102 and Player.area != 104 and !(Player.area = 8 && Player.subarea=3)
 	and Player.area != 9 and Player.area != 118 and Player.area != 114 and Player.area != 116 and Player.area != 123
 	{
 		
 	myx = x+choose(0,16)
 	myy = y+choose(0,16)
-	if !place_meeting(myx,myy,hitme) && !place_meeting(myx,myy,chestprop) && !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(myx,myy,prop)
+	if !place_meeting(myx,myy,hitme) && !place_meeting(myx,myy,chestprop) && !place_meeting(myx,myy,RadChest) && !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(myx,myy,prop)
 		instance_create(myx,myy,Wall)
 	instance_create(x,y,NOWALLSHEREPLEASE)
 	}//random(5)< 1
@@ -33,13 +33,13 @@ function scrPopProps() {
 		instance_create(myx,myy,Wall)
 	instance_create(x,y,NOWALLSHEREPLEASE)
 	}*/
-	if random(6) < 1 and !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(x,y,hitme) && !place_meeting(x,y,chestprop)  && !place_meeting(x,y,hitme)
+	if random(6) < 1 and !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(x,y,hitme) && !place_meeting(x,y,chestprop) && !place_meeting(x,y,RadChest) && !place_meeting(x,y,hitme)
 	and Player.area != 100 and Player.area != 6 and Player.area != 9 and Player.area != 118 and Player.area != 112  and (Player.area !=5 or random(3) < 1) and Player.area != 102 and Player.area != 104
 	and !(Player.area = 8 && Player.subarea=3) and Player.area != 116//lill walls
 	{
 	myx = x+choose(0,16)
 	myy = y+choose(0,16)
-	if !place_meeting(myx,myy,hitme) && !place_meeting(myx,myy,chestprop) && !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(myx,myy,prop)
+	if !place_meeting(myx,myy,hitme) && !place_meeting(myx,myy,chestprop) && !place_meeting(myx,myy,RadChest) && !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(myx,myy,prop)
 		instance_create(myx,myy,Wall)
 	instance_create(x,y,NOWALLSHEREPLEASE)
 	if random(15) < 1 and point_distance(myx,myy,Player.x,Player.y) > 128 and (spawnarea = 3 || spawnarea == 121) && Player.subarea != 3

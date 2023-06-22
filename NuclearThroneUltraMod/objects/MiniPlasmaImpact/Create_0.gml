@@ -1,6 +1,6 @@
 image_speed = 0.5
 
-BackCont.shake += 4
+BackCont.shake += 2
 
 team = 2
 dmg=2;

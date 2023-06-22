@@ -295,6 +295,33 @@ with DiscTrail
 	draw_self();
 	draw_set_color(c_white);
 }
+with Yoyo
+{
+	draw_self();	
+}
+with Disc
+{
+	draw_self();	
+}
+with Blade
+{
+	draw_self();	
+}
+with ChunkyBlade {
+	draw_self();	
+}
+with SplitBlade {
+	draw_self();	
+}
+with SuperSplitBlade {
+	draw_self();	
+}
+with UltraBlade {
+	draw_self();	
+}
+with BladeSplintershooter {
+	draw_self();	
+}
 with SquareBat
 {
 	draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1)

@@ -36,5 +36,5 @@ surface_reset_target()}
 gameovertime = 0
 wave = 0
 fogscroll = 0
-
+//depth = -5;
 gameoverText = "YOU DID NOT REACH THE NUCLEAR THRONE";

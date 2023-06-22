@@ -1,4 +1,4 @@
-raddrop = 6
+raddrop = 5
 maxhealth = 13//20 release is 12
 meleedamage = 2
 mySize = 1

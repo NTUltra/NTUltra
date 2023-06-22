@@ -628,84 +628,92 @@ function scrPowers() {
 		}
 		else if wep_type[wep]!=0&&(can_shoot == 1 || ultra_got[74])//&& my_health > 1//SKELETON
 		{
-		var cs = can_shoot;
-		snd_play_2d(sndBloodGamble);
-
-		scrFire();
+			snd_play_2d(sndBloodGamble);
+			scrFire();
 		    //gamble some blood
-		    if cs != 1 || (wep_cost[wep]/typ_ammo[wep_type[wep]] > random(1.1)*(1+(skill_got[5]*0.3333333333333333) )  )//If this is true take damage
+		    if (wep_cost[wep]/typ_ammo[wep_type[wep]] > random(1.05)*(1+(skill_got[5]*0.3333333333333333) )  )//If this is true take damage
 		    {//thronebutt adds 1/3 chance of not taking damage
-				my_health -= 1;
-				exception=true;
-				if my_health == 0
+				//Damnation
+				if (ammo[wep_type[wep]] >= 0 && ultra_got[74])
 				{
-					if skill_got[32] && isAlkaline
-					{
-						isAlkaline = false;
-						var h = 2;
-						if (skill_got[9]) //Second stomache
-						{
-							h = 4;
-							with instance_create(x,y,HealFX)
-							{
-								sprite_index = sprHealBigFX;
-								depth = other.depth - 1;
-							}
-						}
-						else
-						{
-							with instance_create(x,y,HealFX)
-							{
-								depth = other.depth - 1;	
-							}
-						}
-						my_health = min(h,maxhealth);
-						with instance_create(x,y,SharpTeeth)
-							owner=other.id;
-						snd_play(sndAlkalineProc,0,true)
-						var pt = instance_create(x,y,PopupText)
-						if UberCont.opt_ammoicon
-						{
-							if my_health = maxhealth
-								pt.mytext = "MAX";
-							else
-								pt.mytext = "+"+string(h-1);
-				
-							pt.sprt = sprHPIconPickup;
-						}
-						else
-						{
-							if my_health = maxhealth
-								pt.mytext = "MAX HP";
-							else
-								pt.mytext = "+"+string(h-1)+" HP";
-						}
-						Sleep(50);
-						alarm[3]=10;//duration of iframes
-					}
-					else if skill_got[25] && strongspirit == true && strongspiritused == false
-					{
-						snd_play(sndStrongSpiritLost);
-					    my_health=1;
-						Sleep(50);
-					    alarm[1]=20;//invincibility 
-					    strongspiritused=true;
-					    strongspirit=false;
-					}
+					var punishment = 6;
+					ammo[wep_type[wep]] -= wep_cost[wep]*punishment;
+					rad = max(-wep_rad[wep],rad - wep_rad[wep] * punishment);
 				}
+				else
+				{
+					my_health -= 1;
+					exception=true;
+					if my_health == 0
+					{
+						if skill_got[32] && isAlkaline
+						{
+							isAlkaline = false;
+							var h = 2;
+							if (skill_got[9]) //Second stomache
+							{
+								h = 4;
+								with instance_create(x,y,HealFX)
+								{
+									sprite_index = sprHealBigFX;
+									depth = other.depth - 1;
+								}
+							}
+							else
+							{
+								with instance_create(x,y,HealFX)
+								{
+									depth = other.depth - 1;	
+								}
+							}
+							my_health = min(h,maxhealth);
+							with instance_create(x,y,SharpTeeth)
+								owner=other.id;
+							snd_play(sndAlkalineProc,0,true)
+							var pt = instance_create(x,y,PopupText)
+							if UberCont.opt_ammoicon
+							{
+								if my_health = maxhealth
+									pt.mytext = "MAX";
+								else
+									pt.mytext = "+"+string(h-1);
+				
+								pt.sprt = sprHPIconPickup;
+							}
+							else
+							{
+								if my_health = maxhealth
+									pt.mytext = "MAX HP";
+								else
+									pt.mytext = "+"+string(h-1)+" HP";
+							}
+							Sleep(50);
+							alarm[3]=10;//duration of iframes
+						}
+						else if skill_got[25] && strongspirit == true && strongspiritused == false
+						{
+							snd_play(sndStrongSpiritLost);
+						    my_health=1;
+							Sleep(50);
+						    alarm[1]=20;//invincibility 
+						    strongspiritused=true;
+						    strongspirit=false;
+						}
+					}
     
-				//if my_health<1&&strongspirit
-				image_index=0;
-				sprite_index=spr_hurt;
-				snd_play_2d(snd_hurt, hurt_pitch_variation);
+					//if my_health<1&&strongspirit
+					image_index=0;
+					sprite_index=spr_hurt;
+					snd_play_2d(snd_hurt, hurt_pitch_variation);
+				}
     
 				repeat(3)
 				{
-				with instance_create(x,y,BloodStreak)
-				{
-				motion_add(random(360),8)
-				image_angle = direction
-				}
+					with instance_create(x,y,BloodStreak)
+					{
+						motion_add(random(360),8)
+						image_angle = direction
+					}
 				}
 				if ultra_got[75]
 				{
@@ -728,7 +736,7 @@ function scrPowers() {
 		    }
 			else
 			{
-				reload -= wep_load[wep]*0.25;
+				//reload -= wep_load[wep]*0.8//*0.25;
 				if ultra_got[75]
 				{
 					alarm[3] = max(10,alarm[3]);
@@ -742,18 +750,19 @@ function scrPowers() {
 					}
 				}
 			}
-    
+		reload -= wep_load[wep]//*0.25;
 		var t = wep_type[wep]
-		ammo[t]+=wep_cost[wep]//return ammo
-		rad+=wep_rad[wep]//return rad cost
-		can_shoot=0;
+		ammo[t] += wep_cost[wep]//return ammo
+		rad += wep_rad[wep]//return rad cost
+		can_shoot = 0;
 		//Cap ammo
 		ammo[wep_type[wep]] = min(ammo[wep_type[wep]],typ_amax[t]);
 		rad = min(rad,GetPlayerMaxRad());
+		/*
 		if ultra_got[74]//Skeleton Damnation Ultra B
 		{
 			reload -= wep_load[wep]*0.8;//80 procent fire rate boost
-		}
+		}*/
 
 
 		}
@@ -779,7 +788,7 @@ function scrPowers() {
     
 				    dir = instance_create(x,y,PopupText)
 				    dir.mytext = "+"+string( round((typ_ammo[wep_type[wep]]* (1.5+skill_got[5]) +extra )) )+" "+string(typ_name[wep_type[wep]]) 
-				    if ammo[wep_type[wep]] = typ_amax[wep_type[wep]]
+				    if ammo[wep_type[wep]] == typ_amax[wep_type[wep]]
 				    dir.mytext = "MAX "+string(typ_name[wep_type[wep]])
     
     
@@ -2760,11 +2769,15 @@ function scrPowers() {
 	var od = 180;
 	
 	with chestprop
-	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
-	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
-	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))}}
+	{
+		if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+		{
+			if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
+				x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
+			if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
+				y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))
+		}
+	}
 	with Pickup
 	{
 		if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )

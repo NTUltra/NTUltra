@@ -2,7 +2,8 @@
 ammo=4;
 alarm[4] = 16
 snd_play(sndBigBanditMeleeHit)
-gunangle = point_direction(x,y,target.x,target.y)
+if target != noone
+	gunangle = point_direction(x,y,target.x,target.y)
 sprite_index = spr_fire
 alarm[1] = 55+random(15)
     

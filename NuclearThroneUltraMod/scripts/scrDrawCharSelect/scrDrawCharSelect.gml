@@ -14,11 +14,13 @@ function scrDrawCharSelect() {
 
 	if (!instance_exists(LoadoutSelect) || LoadoutSelect.wepmenuopen)
 		return;
-	
+	var showExplain = false;
 	if mouseover = race and race != 0
-	extra = 96
+		showExplain = true;
+	//extra = 96
 	else if mouseover != -1
-	extra = 0
+		showExplain = false;
+	//extra = 0
 	
 	draw_set_font(fntM)
 
@@ -75,8 +77,8 @@ function scrDrawCharSelect() {
 	else
 	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14-string_height(string_hash_to_newline(txt2))+string_height(string_hash_to_newline(race_name[mouseover])),string_hash_to_newline("[LOCKED]"))
 
-	if extra > 0 and race != 0
-	draw_sprite(sprExplain,race,drawx+string_width(string_hash_to_newline(txt2))/2+2,drawy-13)
+	if showExplain and race != 0
+	draw_sprite(sprExplain,race,drawx+string_width(string_hash_to_newline(txt2))/2-92,drawy-17-string_height(string_hash_to_newline(txt2)))
 
 	img += 0.1
 

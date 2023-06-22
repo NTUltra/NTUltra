@@ -6,10 +6,10 @@ alarm[0]=200;
 team = 1;
 gunangle=0;
 ammo=0;
+scrInitDrops(1);
 
 spr_idle=sprBigMachineLaser
 spr_fire=sprBigMachineLaserFire
-
 if instance_exists(BigMachine)
 {
 	if BigMachine.x < x

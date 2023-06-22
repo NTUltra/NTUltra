@@ -74,7 +74,7 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 		}
 		else
 		{
-			scrIframeSkipper(0.09);
+			scrIframeSkipper(0.08);
 			other.alarm[1] -= 0.1;
 		}
 	}

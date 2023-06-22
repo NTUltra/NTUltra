@@ -17,7 +17,7 @@ if target > 0 {
 				//Start shooting
 				event_user(1);
 			}
-			else
+			else if alarm[7] < 1
 			{
 				//Charge
 				event_user(0);

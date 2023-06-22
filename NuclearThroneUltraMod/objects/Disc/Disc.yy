@@ -45,5 +45,5 @@
     "name": "mskDisc",
     "path": "sprites/mskDisc/mskDisc.yy",
   },
-  "visible": true,
+  "visible": false,
 }

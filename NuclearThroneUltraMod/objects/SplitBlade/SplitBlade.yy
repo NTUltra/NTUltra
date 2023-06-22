@@ -41,5 +41,5 @@
     "name": "mskBlade",
     "path": "sprites/mskBlade/mskBlade.yy",
   },
-  "visible": true,
+  "visible": false,
 }

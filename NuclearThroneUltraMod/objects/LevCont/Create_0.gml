@@ -15,6 +15,7 @@ with UberCont
 	if (useSeed)
 	{
 		random_set_seed(seed+UberCont.globalMutationsChosen);
+		debug("mutationseed: ",UberCont.globalMutationsChosen);
 	}
 }
 if Player.crownpoints > 0

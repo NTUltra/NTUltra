@@ -21,8 +21,8 @@ instance_create(x,y,ChesireCatExplosion);
 if UberCont.area == 109
 scrDefeatedRequiredBoss(secretChallengeBosses.chesireCat);
 scrDrop(100,0)
-scrDrop(50,40)
-scrDrop(50,100)
+scrDrop(100,40)
+scrDrop(100,100)
 
 if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(InvertedChesireCat) == 1
 with MusCont

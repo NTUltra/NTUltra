@@ -3,8 +3,8 @@ if opt_sideart == sprite_get_number(sprSideArt) + 1
 	exit;
 var ww = window_get_width();
 var wh = window_get_height()
-var s = ww/display_get_gui_width();
-s = min(s,wh/display_get_gui_height());
+var s = ww/view_get_wport(0);
+s = min(s,wh/view_get_hport(0));
 var excesswidth = (ww - (view_get_wport(0)*s))*0.5
 var step = 64*s;
 if opt_sideart == sprite_get_number(sprSideArt) && sprite_exists(customSideArt)

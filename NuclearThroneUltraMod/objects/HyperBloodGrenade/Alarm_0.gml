@@ -28,5 +28,9 @@ until dir > 100 or (!pierceWall && place_meeting(x,y,Wall)) or place_meeting(x,y
 alarm[1] = 2
 
 speed = 4
+	if (UberCont.normalGameSpeed == 60)
+	{
+		x = x + ((x - xprevious));
+		y = y + ((y - yprevious));
+	}
 }
-

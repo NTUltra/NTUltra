@@ -9,7 +9,7 @@ function SetSeed(){
 		{
 			a = Player.loops;
 			a += Player.area;
-			a += Player.subarea;
+			a += Player.subarea*10;
 		}
 		if (useSeed)
 		{

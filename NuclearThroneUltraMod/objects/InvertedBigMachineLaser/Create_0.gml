@@ -6,6 +6,7 @@ alarm[0]=200;
 team = 1;
 gunangle=0;
 ammo=0;
+scrInitDrops(1);
 
 horizontal=false;
 

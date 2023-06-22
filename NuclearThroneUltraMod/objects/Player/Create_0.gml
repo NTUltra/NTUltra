@@ -480,7 +480,7 @@ maxhealth = 2
 
 if race == 19 //skeleton
 {
-    maxhealth = 5;
+    maxhealth = 4;
     maxSpeed = 3.6
     accuracy = 1.2
 }

@@ -21,7 +21,7 @@ until point_distance(x,y,Player.x,Player.y) > 64 and place_free(x,y) or tries < 
 }
 
 image_speed = 0.4
-
+depth = 1;
 //if Player.loops>=1
 alarm[0] = 40
 

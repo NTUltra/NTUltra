@@ -58,4 +58,5 @@ if loops > startLoop
 			alarm[6] += 100;
 	}
 }
+gunangle = 0;
 scrAddDrops(2);

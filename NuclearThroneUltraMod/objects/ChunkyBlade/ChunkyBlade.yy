@@ -41,5 +41,5 @@
     "name": "mskChunkyBlade",
     "path": "sprites/mskChunkyBlade/mskChunkyBlade.yy",
   },
-  "visible": true,
+  "visible": false,
 }
