@@ -15,7 +15,7 @@ if (type == network_type_data) {
 			if array_length(UberCont.runRace) > 1
 			{
 				debug("send race: ",string(UberCont.runRace));
-				var sendBuffer = buffer_create(22,buffer_grow,1);
+				var sendBuffer = buffer_create(23,buffer_grow,1);
 				buffer_write(sendBuffer,buffer_u8,NETDATA.RACE);
 				buffer_write(sendBuffer,buffer_u16,myClientId);
 				debug("send day: ", UberCont.dailyDay);
@@ -32,6 +32,7 @@ if (type == network_type_data) {
 				buffer_write(sendBuffer,buffer_u16,UberCont.runRace[8]);//cwep
 				buffer_write(sendBuffer,buffer_u8,UberCont.runRace[9]);//crown
 				buffer_write(sendBuffer,buffer_u8,UberCont.runRace[10]);//Ultra mutation 255 is none
+				buffer_write(sendBuffer,buffer_string,UberCont.runRace[11]);//List of mutations
 				network_send_packet(serverSocket, sendBuffer, buffer_get_size(sendBuffer));
 				buffer_delete(sendBuffer);
 			}

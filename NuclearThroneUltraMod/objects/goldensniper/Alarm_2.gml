@@ -8,5 +8,6 @@ with instance_create(x,y,EnemyLineFire)
 	team = other.team
 	maxRange = 300;
 }
-alarm[1] = 20+random(5)
+alarm[1] = 20+random(5);
+
 gonnafire = 0

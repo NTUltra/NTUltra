@@ -115,10 +115,7 @@ else if array_length(leaderboard) > 0
 				scrDrawLeaderboardCrown(entry,11,xx,yy);
 			}
 			xx += 16;
-			if entry[12] != "255"
-			{
-				scrDrawLeaderboardUltra(xx,yy,entry,5,6,7,12);
-			}
+			scrDrawLeaderboardUltra(xx,yy,entry,5,6,7,12);
 		}
 	}
 	else if leaderboardType == LEADERBOARD.VANFAN
@@ -136,7 +133,7 @@ else if array_length(leaderboard) > 0
 			var uw = string_width(entry[1]);
 			if (uw > 128)
 			{
-				//scrolling	
+				//scrolling
 				ux = lerp(0,0-max(0,uw-128),killScroll);
 			}
 			draw_text(ux,0,entry[1]);
@@ -256,10 +253,7 @@ else if array_length(leaderboard) > 0
 				scrDrawLeaderboardCrown(entry,9,xx,yy)
 			}
 			xx += 15;
-			if entry[10] != "255"
-			{
-				scrDrawLeaderboardUltra(xx,yy,entry,3,4,5,10);
-			}
+			scrDrawLeaderboardUltra(xx,yy,entry,3,4,5,10);
 		}
 	}
 	var yy = camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0]) - 16;

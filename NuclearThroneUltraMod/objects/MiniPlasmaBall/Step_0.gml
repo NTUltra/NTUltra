@@ -6,14 +6,16 @@ speed=0;
 motion_add(originalDirection,7)
 resetSpeed=false;
 friction=0;}
-
-speed+=1.8;
+var dt = 1;
+if UberCont.normalGameSpeed == 60
+	dt = 0.5;
+speed+=1.8*dt;
 
 if instance_exists(Player)
 {
     if Player.race=11
     {
-    speed+=0.5;
+    speed+=0.5*dt;
     if speed>16
     {
     speed=16;
@@ -35,8 +37,16 @@ else if(speed>12)
 
 if(image_xscale<nomscale)
 {
-image_xscale+=0.03;
-image_yscale+=0.03;
+if UberCont.normalGameSpeed == 60
+	{
+		image_xscale += 0.015;
+		image_yscale += 0.015;
+	}
+	else
+	{
+		image_xscale += 0.03;
+		image_yscale += 0.03;
+	}
 }
 else
 {

@@ -5,8 +5,7 @@ if other.team != team && !dealtDamage
 	speed = 0
 	x = other.x+offx
 	y = other.y+offy
-	other.stickTarget = id;
-
+	stickTarget = other;
 	with other
 	{
 	    my_health -= other.dmg

@@ -10,6 +10,29 @@ function BloodLust(){
 		chance -= 0.5;
     if Player.skill_got[7] = 1 and Player.canHeal and random(100) <  chance//7.69% chance
     {
+		var splatDir = random(360);
+		var rpt = 1+mySize;
+		var angStep = 360 / rpt;
+		repeat(rpt)
+		{
+			with instance_create(x,y,BloodStreak)
+			{
+			motion_add(splatDir,6 + other.mySize)
+			image_angle = direction
+			}
+			scrAddToBGFXLayer(
+				sprBloodSplat,
+				irandom(sprite_get_number(sprBloodSplat)),
+				x + lengthdir_x(random_range(4,8)+mySize,splatDir),
+				y + lengthdir_y(random_range(4,8)+mySize,splatDir),
+				random_range(0.8,1),
+				random_range(0.8,1),
+				splatDir,
+				c_white,
+				1
+			);
+			splatDir += angStep;
+		}
     	snd_play_2d(sndBloodlustProc,0,true);
 	    with instance_create(Player.x,Player.y-8,HealFX)
 	    {

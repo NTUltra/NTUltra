@@ -23,7 +23,6 @@ defaultTotalWeeklies = -1;
 weekGamemode = -1;
 weeklyOption = [];
 event_perform(ev_alarm,0);
-var tds = string(totalDailies);
 event_user(0);
 
 //Data types

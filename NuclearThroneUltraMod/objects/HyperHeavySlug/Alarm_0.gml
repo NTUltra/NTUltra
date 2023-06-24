@@ -23,10 +23,6 @@ if instance_exists(Player)
 
 
 	speed = 4
-	if (UberCont.normalGameSpeed == 60)
-	{
-		x = x + ((x - xprevious));
-		y = y + ((y - yprevious));
-	}
+	scrForcePosition60fps();
 }
 

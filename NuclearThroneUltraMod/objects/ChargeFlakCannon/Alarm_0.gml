@@ -15,7 +15,7 @@ if instance_exists(creator)
 //snd_play(sndJackHammer)
 //FIRING
 
-if (KeyCont.key_fire[Player.p] = 1 or KeyCont.key_fire[Player.p] = 2 or Player.keyfire = 1 or Player.clicked = 1 or KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2) && (Player.ammo[type]>=cost)
+if (scrCanChargeChargeGun())
 {
 
 snd_play(sndNadeAlmost);

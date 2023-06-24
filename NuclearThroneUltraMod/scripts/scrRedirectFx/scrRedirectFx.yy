@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "ProjectileScripts",
-    "path": "folders/Scripts/ProjectileScripts.yy",
+    "path": "folders/Scripts/Weapons/ProjectileScripts.yy",
   },
 }

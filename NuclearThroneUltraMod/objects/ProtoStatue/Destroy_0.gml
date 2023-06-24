@@ -16,7 +16,7 @@ if close
 	scrRaddrop(raddrop);
 } else if rad > 23
 {
-with instance_create(x,y,Portal)
+with instance_create(xstart,ystart,Portal)
 type = 3
 if instance_exists(Player)
 	Player.area = 100

@@ -12,11 +12,7 @@ if point_distance(target.x,target.y,x,y) > 96
 {
 if random(3) < 2
 {
-snd_play(sndSniperTarget)
-walk = 0
-alarm[1] = tellTime+actTime+10;
-alarm[2] = tellTime;
-gonnafire = 1
+	event_user(0);
 }
 else
 {direction = point_direction(x,y,target.x,target.y)+random(160)-80

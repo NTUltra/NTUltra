@@ -16,5 +16,5 @@ if myFloor != noone
 }
 if place_meeting(x,y,Wall)
 {
-	instance_create(x,y,WallBreak);	
+	instance_create(x,y,WallBreak);
 }

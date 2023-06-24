@@ -560,11 +560,23 @@ function scrPowers() {
 				{
 					corpseExist = true;
 					BackCont.shake += 2;
+					var splatDir = point_direction(Player.x,Player.y,x,y);
 					with instance_create(x,y,BloodStreak)
 					{
-					motion_add(point_direction(Player.x,Player.y,x,y),8)
-					image_angle = direction
+						motion_add(splatDir,8)
+						image_angle = direction
 					}
+					scrAddToBGFXLayer(
+						sprBloodSplat,
+						irandom(sprite_get_number(sprBloodSplat)),
+						x + lengthdir_x(random_range(6,12),splatDir),
+						y + lengthdir_y(random_range(6,12),splatDir),
+						random_range(0.8,1),
+						random_range(0.8,1),
+						splatDir,
+						c_white,
+						1
+					);
 					instance_create(x,y,MeltSplat);
 					instance_destroy();
 					instance_create(x,y,Smoke);
@@ -631,7 +643,7 @@ function scrPowers() {
 			snd_play_2d(sndBloodGamble);
 			scrFire();
 		    //gamble some blood
-		    if (wep_cost[wep]/typ_ammo[wep_type[wep]] > random(1.05)*(1+(skill_got[5]*0.3333333333333333) )  )//If this is true take damage
+		    if (wep_cost[wep]/typ_ammo[wep_type[wep]] > random(1.03)*(1+(skill_got[5]*0.3333333333333333) )  )//If this is true take damage
 		    {//thronebutt adds 1/3 chance of not taking damage
 				//Damnation
 				if (ammo[wep_type[wep]] >= 0 && ultra_got[74])
@@ -644,6 +656,29 @@ function scrPowers() {
 				{
 					my_health -= 1;
 					exception=true;
+					var splatDir = random(360);
+					var rpt = 3;
+					var angStep = 360 / rpt;
+					repeat(rpt)
+					{
+						with instance_create(x,y,BloodStreak)
+						{
+							motion_add(splatDir,10);
+							image_angle = direction
+						}
+						scrAddToBGFXLayer(
+							sprBloodSplat,
+							irandom(sprite_get_number(sprBloodSplat)),
+							x + lengthdir_x(random_range(8,14),splatDir),
+							y + lengthdir_y(random_range(8,14),splatDir),
+							random_range(0.8,1),
+							random_range(0.8,1),
+							splatDir,
+							c_white,
+							1
+						);
+						splatDir += angStep;
+					}
 					if my_health == 0
 					{
 						if skill_got[32] && isAlkaline
@@ -2761,123 +2796,88 @@ function scrPowers() {
 	//MIND CONTROL
 	if race = 3
 	{
-	if !audio_is_playing(sndEyesLoop) snd_loop(sndEyesLoop)
+		if !audio_is_playing(sndEyesLoop) snd_loop(sndEyesLoop)
 
-	if !sound_isplaying(sndEyesLoopUpg) and Player.skill_got[5] =1 snd_loop(sndEyesLoopUpg)
-	var px = Player.x;
-	var py = Player.y;
-	var od = 180;
+		if !sound_isplaying(sndEyesLoopUpg) and Player.skill_got[5] =1 snd_loop(sndEyesLoopUpg)
+		var px = x;
+		var py = y;
+		var od = 180;
+		var ps = ultra_got[9] && !altUltra;
+		var tb = skill_got[5];
+		var pp = ultra_got[12];
+		with chestprop
+		{
+			scrEyesTelekinesis(ps,tb,px,py);
+		}
+		with Pickup
+		{
+			scrEyesTelekinesisThroughWalls(ps,pp,tb,px,py);
+		}
+		with RadChest
+		{
+			scrEyesTelekinesis(ps,tb,px,py);
+		}
+		with WepPickup
+		{
+			scrEyesTelekinesisThroughWalls(ps,pp,tb,px,py);
+		}
 	
-	with chestprop
-	{
-		if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+		if altUltra && ultra_got[9]
 		{
-			if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
-				x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-			if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
-				y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))
-		}
-	}
-	with Pickup
-	{
-		if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-		{
-
-		if Player.ultra_got[12]==1{//Ultra D don't care about the walls +increase speed
-		x += lengthdir_x(2+Player.skill_got[5],point_direction(x,y,px,py))//shouldnt it be more efficient
-		y += lengthdir_y(2+Player.skill_got[5],point_direction(x,y,px,py))//if I do this cehck outside of the with
-		}
-		else{
-		if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
-		x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-		if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
-		y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))
-		}
-
-		}
-	}
-	with RadChest
-	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
-	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
-	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))}}
-	with WepPickup
-	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{
-
-	if Player.ultra_got[12]==1{//Ultra D don't care about the walls
-	x += lengthdir_x(2+Player.skill_got[5],point_direction(x,y,px,py))
-	y += lengthdir_y(2+Player.skill_got[5],point_direction(x,y,px,py))
-	}
-	else{
-	if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
-	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
-	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))
-	}
-
-	}}
-	
-	if altUltra && ultra_got[9]
-	{
-		px = mouse_x;
-		py = mouse_y;
-		od = 0;
-		if !instance_exists(EyesCrosshair)
-		{
-			instance_create(mouse_x,mouse_y,EyesCrosshair);	
-		}
-		else
-		{
-			with EyesCrosshair
+			px = mouse_x;
+			py = mouse_y;
+			od = 0;
+			if !instance_exists(EyesCrosshair)
 			{
-				x = mouse_x;
-				y = mouse_y;
+				instance_create(mouse_x,mouse_y,EyesCrosshair);	
+			}
+			else
+			{
+				with EyesCrosshair
+				{
+					x = mouse_x;
+					y = mouse_y;
+				}
 			}
 		}
-	}
-	with enemy
-	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
-	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
-	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))}}
-	with Sheep
-	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
-	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
-	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))}}
-	with ExplosiveSheep
-	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py)),y,Wall)
-	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,px,py))
-	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py)),Wall)
-	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,px,py))}}
+		with enemy
+		{
+			scrEyesTelekinesis(ps,tb,px,py);
+		}
+		with Sheep
+		{
+			scrEyesTelekinesis(ps,tb,px,py);
+		}
+		with ExplosiveSheep
+		{
+			scrEyesTelekinesis(ps,tb,px,py);
+		}
 
-	var ts = 1.1+Player.skill_got[5];
-	if ultra_got[9] == 1 && !altUltra
-		ts = 1.1+Player.skill_got[5]+(Player.ultra_got[9]*0.4);
-	with projectile
-	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) and team != 2 and canBeMoved
-	{if !place_meeting(x+lengthdir_x(ts,point_direction(x,y,px,py)+od),y,Wall)
-	x += lengthdir_x(ts,point_direction(x,y,px,py)+od)
-	if !place_meeting(x,y+lengthdir_y(ts,point_direction(x,y,px,py)+od),Wall)
-	y += lengthdir_y(ts,point_direction(x,y,px,py)+od)}}
-	
+		var ts = 1.2+(Player.skill_got[5]*1.1);
+		if ultra_got[9] == 1 && !altUltra
+			ts = 1.2+(Player.skill_got[5]*1.1)+0.4;
+		with projectile
+		{
+			if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) and team != 2 and canBeMoved
+			{
+				var pd = point_direction(x,y,px,py)+od;
+				if !place_meeting(x+lengthdir_x(ts,pd),y,Wall)
+					x += lengthdir_x(ts,pd)
+				if !place_meeting(x,y+lengthdir_y(ts,pd),Wall)
+					y += lengthdir_y(ts,pd)
+			}
+		}
 
-	if ultra_got[9] == 1 && !altUltra {//eyes Projectile Style ULTRA A
-	    with projectile
-	    if team=other.team && canBeMoved
-	    {
-			x=Player.x+lengthdir_x(8,point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y));
-			y=Player.y+lengthdir_y(8,point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y));
-			speed += friction;
-	    }    
-
-	    }
-    
+		if ultra_got[9] == 1 && !altUltra {//eyes Projectile Style ULTRA A
+		    with projectile
+			    if team=other.team && canBeMoved
+			    {
+					x = px+lengthdir_x(8,point_direction(px,py,UberCont.mouse__x,UberCont.mouse__y));
+					y = py+lengthdir_y(8,point_direction(px,py,UberCont.mouse__x,UberCont.mouse__y));
+					speed += friction;
+					scrForcePosition60fps();
+			    }
+		}
 	}
 
 	//SHEEP
@@ -2976,10 +2976,10 @@ function scrPowers() {
 	//Eyes Monster style Ultra B
 	with enemy
 	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) and team != 2 and object_index != EnemyLaser
-	{if !place_meeting(x+lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)+180),y,Wall)
-	x += lengthdir_x(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)+180)
-	if !place_meeting(x,y+lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)+180),Wall)
-	y += lengthdir_y(1+Player.skill_got[5],point_direction(x,y,Player.x,Player.y)+180)}}
+	{if !place_meeting(x+lengthdir_x(1+tb,point_direction(x,y,Player.x,Player.y)+180),y,Wall)
+	x += lengthdir_x(1+tb,point_direction(x,y,Player.x,Player.y)+180)
+	if !place_meeting(x,y+lengthdir_y(1+tb,point_direction(x,y,Player.x,Player.y)+180),Wall)
+	y += lengthdir_y(1+tb,point_direction(x,y,Player.x,Player.y)+180)}}
 
 
 	}

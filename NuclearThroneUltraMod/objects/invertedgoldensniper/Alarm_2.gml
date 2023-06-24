@@ -1,4 +1,4 @@
-/// @description Line of fire
+/// @description Line of frost
 snd_play(sndSniperFire)
 wkick = 7
 with instance_create(x,y,EnemyLineFrostFire)

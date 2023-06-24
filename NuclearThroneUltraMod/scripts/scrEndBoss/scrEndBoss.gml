@@ -17,7 +17,6 @@ function scrEndBoss() {
 		    }
 			scrSaveEncrypted();
 			runRace[0] = round(time_frame);
-			debug("SEND TIME: ", runRace[0]);
 			runRace[1] = encrypted_data.username;
 			//Route string
 			runRace[2] = routeString;
@@ -33,7 +32,10 @@ function scrEndBoss() {
 			runRace[8] = Player.cwep;
 			runRace[9] = Player.crown;
 			if getUltraMutation() != 255 || array_length(runScore) <= 10
+			{
 				runRace[10] = getUltraMutation();
+				runRace[11] = scrGetAllMutations();
+			}
 			useSeed = false;
 			opt_gamemode = 0;
 			leaderboardType = LEADERBOARD.RACE;

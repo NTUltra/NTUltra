@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "ProjectileScripts",
-    "path": "folders/Scripts/ProjectileScripts.yy",
+    "name": "Weapons",
+    "path": "folders/Scripts/Weapons.yy",
   },
 }

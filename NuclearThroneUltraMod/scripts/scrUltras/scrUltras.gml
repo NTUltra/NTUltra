@@ -63,7 +63,7 @@ function scrUltras(altOverride = false) {
 
 	//EYES 
 	ultra_name[9] = "PROJECTILE STYLE"
-	ultra_text[9] = "HOLD YOUR PROJECTILES#STRONGER PROJECTILE PUSH"
+	ultra_text[9] = "HOLD YOUR PROJECTILES#STRONGER PROJECTILE PUSH#INFINITE ATTRACT RANGE"
 	ultra_tips[9] = "need more cannons"
 	
 	if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (scrHasEyesMutations() && instance_exists(UltraIcon))))
@@ -78,7 +78,7 @@ function scrUltras(altOverride = false) {
 	ultra_tips[10] = "repellent"
 
 	ultra_name[11] = "BRAIN STYLE"
-	ultra_text[11] = "SOME ENEMIES ATTACK OTHER ENEMIES#THRONE BUTT INCREASES BRAINWASH CHANCE"
+	ultra_text[11] = "FULLY SEE IN THE DARK#SOME ENEMIES ATTACK OTHER ENEMIES#THRONE BUTT INCREASES BRAINWASH CHANCE"
 	ultra_tips[11] = "brain style works on bosses!"
 
 	ultra_name[12] = "PSYCHONAUT STYLE"//thats a refrence

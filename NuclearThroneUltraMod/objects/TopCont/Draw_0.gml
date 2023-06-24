@@ -303,6 +303,10 @@ with Disc
 {
 	draw_self();	
 }
+with EnemyDisc
+{
+	draw_self();	
+}
 with Blade
 {
 	draw_self();	

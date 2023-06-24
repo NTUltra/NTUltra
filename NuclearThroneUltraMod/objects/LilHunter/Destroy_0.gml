@@ -36,7 +36,7 @@ Sleep(20+mySize*15)
 scrEnemyDeathEvent();
 
 //drop timebomb??
-if(random(100)<1){//2
+if(random(1000)<1){//2
 with instance_create(x,y,WepPickup)
 {
 scrWeapons()

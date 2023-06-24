@@ -31,11 +31,7 @@ motion_add(random(360),random(1))
 }
 until dir > 100/* or place_meeting(x,y,Wall)*/ or place_meeting(x,y,hitme)
 alarm[1] = 20
-	if (UberCont.normalGameSpeed == 60)
-	{
-		x = x + ((x - xprevious));
-		y = y + ((y - yprevious));
-	}
+	scrForcePosition60fps();
 speed = 0
 
 }

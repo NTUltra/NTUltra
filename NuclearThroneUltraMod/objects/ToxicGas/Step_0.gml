@@ -1,18 +1,10 @@
 var fps60 = UberCont.normalGameSpeed == 60
-if image_xscale < 1
+image_xscale += growspeed
+image_yscale += growspeed
+if fps60
 {
-	image_xscale += growspeed
-	image_yscale += growspeed
-	if fps60
-	{
-		image_xscale -= growspeed*0.5;
-		image_yscale -= growspeed*0.5;
-	}	
-}
-else
-{
-	image_xscale = 1;
-	image_yscale = 1;
+	image_xscale -= growspeed*0.5;
+	image_yscale -= growspeed*0.5;
 }
 
 if growspeed > -0.005

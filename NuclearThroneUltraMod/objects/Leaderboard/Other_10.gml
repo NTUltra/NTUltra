@@ -10,8 +10,6 @@ if leaderboardType == LEADERBOARD.WEEKLY
 	buffer_write(sendBuffer,buffer_u16,page);
 	UberCont.weeklyWeek = max(0,UberCont.weeklyWeek);
 	buffer_write(sendBuffer,buffer_u16,UberCont.weeklyWeek);
-	debug("want page: ", page);
-	debug("want week: ", UberCont.weeklyWeek);
 	network_send_packet(serverSocket, sendBuffer, buffer_get_size(sendBuffer));
 	buffer_delete(sendBuffer);
 	viewingWeekly = true;

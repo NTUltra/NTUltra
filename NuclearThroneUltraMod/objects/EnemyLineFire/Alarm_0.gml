@@ -2,7 +2,7 @@ move_contact_solid(direction,16)
 
 
 dir = 0
-do {dir += 1 x += lengthdir_x(4,direction) y += lengthdir_y(4,direction)
+do {dir += 1 x += lengthdir_x(5,direction) y += lengthdir_y(5,direction)
 
 with instance_create(x,y,TrapFire)
 {motion_add(random(360),0.4)
@@ -13,11 +13,9 @@ ignoreHitme=true;}
 
 }
 until dir > maxRange or place_meeting(x,y,Wall)
-if (UberCont.normalGameSpeed == 60)
-{
-	x = x + ((x - xprevious));
-	y = y + ((y - yprevious));
-}
+
+scrForcePosition60fps();
+
 alarm[1] = 2
 
 //speed = 4

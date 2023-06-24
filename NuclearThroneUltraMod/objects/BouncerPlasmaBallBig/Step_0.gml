@@ -6,12 +6,14 @@ BackCont.shake = 2
 if(image_xscale<0.5)
 {instance_destroy();}
 
-
+var dt = 1;
+if UberCont.normalGameSpeed == 60
+	dt = 0.5;
 if instance_exists(Player)
 {
     if Player.race=11
     {
-    speed+=0.5;
+    speed+=0.5*dt;
     if speed>9
     {
     speed=9;
@@ -21,7 +23,7 @@ if instance_exists(Player)
     {speed=6;}
 	if Player.crown == 23//Crown of speed
 	{
-		speed += 2;	
+		speed += 2*dt;	
 	}
 	if Player.crown == 24 && speed > 4.5//Crown of sloth
 	{
@@ -33,8 +35,16 @@ else if(speed>6)
 
 if(image_xscale<nomscale)
 {
-image_xscale+=0.02;
-image_yscale+=0.02;
+	if UberCont.normalGameSpeed == 60
+	{
+		image_xscale += 0.01;
+		image_yscale += 0.01;
+	}
+	else
+	{
+		image_xscale += 0.02;
+		image_yscale += 0.02;
+	}
 }
 else
 {

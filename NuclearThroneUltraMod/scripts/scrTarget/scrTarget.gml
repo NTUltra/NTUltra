@@ -4,7 +4,7 @@ function scrTarget() {
 
 	if instance_exists(Player)
 	{
-		if target == -1 && Player.justAsheep=false || (Player.ultra_got[11]=1 && random(5000)<1)//TODO let enemies fight when you are just a sheep
+		if target == -1 && Player.justAsheep=false || (Player.ultra_got[11]=1 && random(1000)<1)//TODO let enemies fight when you are just a sheep
 		{
 			if instance_exists(Decoy)//Chickens vanish
 			{

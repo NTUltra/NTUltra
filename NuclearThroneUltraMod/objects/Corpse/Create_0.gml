@@ -12,6 +12,10 @@ if instance_exists(Player){
 		alarm[1] = 1;
 		impactWristed = true;
 	}
+	if Player.crown == 28
+	{
+		alarm[2] = 1;
+	}
 }
 
 canspawnportal = true;
@@ -20,3 +24,4 @@ with Corpse
 {
 	other.alarm[0] += sign(alarm[0]);	
 }
+skidScale = 1;

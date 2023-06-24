@@ -6,6 +6,8 @@ holdExplainUltraModTimer = 0;
 holdExplainWepModTimer = 0;
 holdExplainMutation = 0;
 holdExplainGamemode = 0;
+if !instance_exists(BGFXLayer)
+	instance_create(x,y,BGFXLayer);
 if instance_exists(Player)
 {
 	if Player.crown == 19
@@ -16,7 +18,8 @@ if instance_exists(Player)
 	else if Player.area == 115 || round(Player.area*0.5) = Player.area*0.5 && Player.area != 10 &&Player.area!=118 &&Player.area!=106
 	&& Player.area != 114 && UberCont.opt_gamemode != 25 && Player.area!=104&&Player.area!=8&&Player.area!=108&&Player.area!=122
 		darkness = 1
-		
+	if Player.ultra_got[11]//BRAIN STYLE
+		darkness = 0;
 	if Player.totalSkills > 13 - (max(-1,Player.maxarmour-1-Player.hudArmourSpace))
 	{
 		alarm[1] = 1;

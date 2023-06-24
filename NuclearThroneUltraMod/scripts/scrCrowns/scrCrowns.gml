@@ -161,7 +161,7 @@ function scrCrowns() {
 	
 	//COB
 	crown_name[28] = "[CROWN OF APOCALYPSE]"
-	crown_text[28] = "ABSURD AMOUNT OF ENEMIES!#ALMOST NO RADS"
+	crown_text[28] = "GORE GALORE!#ABSURD AMOUNT OF ENEMIES!#ALMOST NO RADS"
 	crown_used[28] = 0
 	crown_tips[28] = "your death has been signed#when you gave in to your greed"
 	

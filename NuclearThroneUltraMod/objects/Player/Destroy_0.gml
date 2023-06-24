@@ -519,9 +519,11 @@ else if !reincarnate
 				runScore[9] = other.bwep;
 				runScore[10] = other.cwep;
 				runScore[11] = other.crown;
-				debug("array_length(runScore) ", array_length(runScore));
 				if getUltraMutation() != 255 || array_length(runScore) <= 12//Keep ultra display after using lives
+				{
 					runScore[12] = getUltraMutation();
+					runScore[13] = scrGetAllMutations();
+				}
 			
 				canRestart = true;
 			}
@@ -573,7 +575,10 @@ else if !reincarnate
 						scrSaveEncrypted();
 						runScore[0] = other.kills;
 						runScore[1] = encrypted_data.username;
-						runScore[2] = other.area;
+						if opt_gamemode == 25 //Survival area
+							runScore[2] = 116;
+						else
+							runScore[2] = other.area;
 						runScore[3] = other.subarea;
 						runScore[4] = other.loops;
 						runScore[5] = other.race;
@@ -584,9 +589,11 @@ else if !reincarnate
 						runScore[9] = other.bwep;
 						runScore[10] = other.cwep;
 						runScore[11] = other.crown;
-						debug("array_length(runScore) ", array_length(runScore));
 						if getUltraMutation() != 255 || array_length(runScore) <= 12
+						{
 							runScore[12] = getUltraMutation();
+							runScore[13] = scrGetAllMutations();
+						}
 					}
 				}
 			}

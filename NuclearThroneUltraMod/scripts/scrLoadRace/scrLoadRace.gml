@@ -1,5 +1,4 @@
 function scrLoadRace() {
-	debug("load skin: ", bskin);
 	//RACE STUFF not using the stupid functions
 	if bskin = 1
 	{

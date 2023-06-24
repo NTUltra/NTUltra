@@ -18,11 +18,7 @@ motion_add(random(360),random(4))
 Sleep(20)
 dir = 0
 do {dir += 1 x += lengthdir_x(3,direction) y += lengthdir_y(3,direction)
-	if (UberCont.normalGameSpeed == 60)
-	{
-		x = x + ((x - xprevious));
-		y = y + ((y - yprevious));
-	}
+	scrForcePosition60fps();
 //repeat(2){
 with instance_create(x,y,Flame)
 {motion_add(random(360),0.5+random(2))

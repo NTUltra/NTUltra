@@ -18,7 +18,7 @@ snd_melee = sndExploFreakKillself
 //behavior
 alarm[1] = 50+random(30)
 alarm[2] = 60;
-if Player.skill_got[29]
+if instance_exists(Player) && Player.skill_got[29]
 	alarm[2] += 30;
 walk = 0
 

@@ -5,5 +5,5 @@ if place_meeting(x,y,FloorLava)
 instance_destroy();
 depth = 4;
 popo=false;
-alarm[0]=1;
-
+alarm[0] = 1;
+alarm[1] = 1;

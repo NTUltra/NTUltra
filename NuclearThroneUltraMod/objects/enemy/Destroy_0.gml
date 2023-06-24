@@ -5,8 +5,10 @@ if object_index!=SnowTank && object_index!=InvertedSnowTank && object_index!=Gol
 	if!(MorphMe){
 
 	myCorpse = instance_create(x,y,Corpse)
+
 	with myCorpse
 	{
+		skidScale = (max(2,(other.bbox_right - other.bbox_left - 1))*0.5)/6;
 		mySize = other.mySize
 		mask_index = other.mask_index
 		if other.speed > 0

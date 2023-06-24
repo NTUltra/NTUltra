@@ -62,7 +62,6 @@ if (type == network_type_data) {
 			//if isScore
 			var socket = buffer_read(buffer, buffer_u16);
 			var wantDay = buffer_read(buffer, buffer_u16);
-			show_debug_message("wantDay/week " + string(wantDay));
 			var gm = 0;
 			var uid = "";
 			if isWeekly {
@@ -82,7 +81,6 @@ if (type == network_type_data) {
 			}
 			var newScore = [];
 			newScore[0] = buffer_read(buffer, buffer_u64);//Kills / frame time
-			show_debug_message("TIME: " + string(newScore[0]));
 			newScore[1] = buffer_read(buffer,buffer_string);//Username
 			show_debug_message("USERNAME: " + newScore[1]);
 			if gm == 8
@@ -104,6 +102,7 @@ if (type == network_type_data) {
 				newScore[10] = buffer_read(buffer,buffer_u16);//cwep
 				newScore[11] = buffer_read(buffer,buffer_u8);//crown
 				newScore[12] = buffer_read(buffer,buffer_u8);//ultra mutation 255 is none
+				newScore[13] = buffer_read(buffer,buffer_string);//List of mutations
 			}
 			else
 			{
@@ -116,6 +115,7 @@ if (type == network_type_data) {
 				newScore[8] = buffer_read(buffer,buffer_u16);//cwep
 				newScore[9] = buffer_read(buffer,buffer_u8);//crown
 				newScore[10] = buffer_read(buffer,buffer_u8);//ultra mutation 255 is none
+				newScore[11] = buffer_read(buffer,buffer_string);//List of mutations
 				var sendBuffer = buffer_create(1,buffer_fixed,1);
 				buffer_write(sendBuffer,buffer_u8,NETDATA.CONFIRMRACE);
 				network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));

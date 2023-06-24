@@ -14,21 +14,21 @@ if instance_exists(creator)
 //snd_play(sndJackHammer)
 //FIRING
 
-if (KeyCont.key_fire[Player.p] = 1 or KeyCont.key_fire[Player.p] = 2 or Player.keyfire = 1 or Player.clicked = 1 or KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2) && (Player.ammo[type]>=cost)
-{
+	if (scrCanChargeChargeGun())
+	{
 
-//snd_play(sndNadeAlmost);
-rate++;
+		//snd_play(sndNadeAlmost);
+		rate++;
 
-with instance_create(x+random(48)-24,y+random(48)-24,WeaponCharge)
-{
-motion_add(point_direction(x,y,other.x,other.y),2+random(1))
-alarm[0] = point_distance(x,y,other.x,other.y)/speed+1
-}
+		with instance_create(x+random(48)-24,y+random(48)-24,WeaponCharge)
+		{
+			motion_add(point_direction(x,y,other.x,other.y),2+random(1))
+			alarm[0] = point_distance(x,y,other.x,other.y)/speed+1
+		}
 
-BackCont.shake+=1+rate*0.05;
+		BackCont.shake+=1+rate*0.05;
 
-}
+	}
 
 }
 

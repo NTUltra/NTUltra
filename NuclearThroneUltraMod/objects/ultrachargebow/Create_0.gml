@@ -4,3 +4,4 @@
 event_inherited();
 
 chargeSpr = sprChargeWeaponChargeUltra;
+chargeType = scrGetChargeType();

@@ -5,8 +5,10 @@ BackCont.shake = 2
 
 if(image_xscale<0.5)
 {instance_destroy();}
-
-speed+=2;
+var dt = 1;
+if UberCont.normalGameSpeed == 60
+	dt = 0.5;
+speed+=2*dt;
 image_angle = direction;
 
 
@@ -14,7 +16,7 @@ if instance_exists(Player)
 {
     if Player.race=11
     {
-    speed+=0.5;
+    speed+=0.5*dt;
     if speed>maxSpeed+2
     {
     speed=maxSpeed+2;
@@ -32,8 +34,16 @@ else if(speed>maxSpeed)
 
 if(image_xscale<nomscale)
 {
-image_xscale+=0.03;
-image_yscale+=0.03;
+if UberCont.normalGameSpeed == 60
+	{
+		image_xscale += 0.015;
+		image_yscale += 0.015;
+	}
+	else
+	{
+		image_xscale += 0.03;
+		image_yscale += 0.03;
+	}
 }
 else
 {

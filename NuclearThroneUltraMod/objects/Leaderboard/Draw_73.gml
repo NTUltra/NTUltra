@@ -20,14 +20,14 @@ if enablePopUp == 1
 	draw_rectangle_color(xx-ww,yy-wh,xx+ww,yy+wh,bkcol,bkcol,bkcol,bkcol,false);
 	draw_rectangle_color(xx-ww,yy-wh,xx+ww,yy+wh,outcol,outcol,outcol,outcol,true);
 	
-	draw_sprite(wep_sprt[real(popupEntry[popUpIndex])],0,xx-ww*offset,yy+12);
-	draw_text_ext(xx-ww*offset,yy-4,wep_name[real(popupEntry[popUpIndex])],0,47);
-	draw_sprite(wep_sprt[real(popupEntry[popUpIndex+1])],0,xx+ww*offset,yy+12);
-	draw_text_ext(xx+ww*offset,yy-4,wep_name[real(popupEntry[popUpIndex+1])],0,47);
+	draw_sprite(wep_sprt[real(popupEntry[popUpIndex])],0,xx-ww*offset,yy+14);
+	draw_text_ext(xx-ww*offset,yy-2,wep_name[real(popupEntry[popUpIndex])],0,47);
+	draw_sprite(wep_sprt[real(popupEntry[popUpIndex+1])],0,xx+ww*offset,yy+14);
+	draw_text_ext(xx+ww*offset,yy-2,wep_name[real(popupEntry[popUpIndex+1])],0,47);
 	if (real(popupEntry[popUpIndex+2]) != 0)//Three weapons
 	{
-		draw_sprite(wep_sprt[real(popupEntry[popUpIndex+2])],0,xx,yy+12);
-		draw_text_ext(xx,yy-4,wep_name[real(popupEntry[popUpIndex+2])],0,47);
+		draw_sprite(wep_sprt[real(popupEntry[popUpIndex+2])],0,xx,yy+14);
+		draw_text_ext(xx,yy-2,wep_name[real(popupEntry[popUpIndex+2])],0,47);
 	}
 	
 }
@@ -47,13 +47,13 @@ else if enablePopUp == 2
 else if enablePopUp == 3
 {
 	//Ultra popup
-	var ww = 72;
-	var wh = 24;
+	var ww = 76;
+	var wh = 40;
 	var xx = scrPopUpStayInScreenX(ww);
 	var yy = scrPopUpStayInScreenY(wh);
 	draw_rectangle_color(xx-ww,yy-wh,xx+ww,yy+wh,bkcol,bkcol,bkcol,bkcol,false);
 	draw_rectangle_color(xx-ww,yy-wh,xx+ww,yy+wh,outcol,outcol,outcol,outcol,true);
-	
+	yy -= wh*0.5;
 	if popupEntry[popUpIndex[0]] == 1 && popupEntry[popUpIndex[1]] == 2 && popupEntry[popUpIndex[3]] == 4
 	{	
 		draw_text_ext(xx,yy-4,"FISH CAN GUN",0,(ww*2)-2);
@@ -79,8 +79,59 @@ else if enablePopUp == 3
 	}
 	
 	scrDrawLeaderboardUltra(xx,yy+8,popupEntry,popUpIndex[0],popUpIndex[1],popUpIndex[2],popUpIndex[3]);
+	yy += wh * 0.5;
+	//Mutation popup
+	ww -= 12;
+	wh -= 12;
+	var xxx = xx - ww;
+	var xr = xx + ww;
+	var xl = xxx;
+	var yyy = yy + 12;
+	var muts = popupEntry[popUpIndex[3]+1];
+	var al = array_length(muts);
+	var i = 0;
+	repeat(al)
+	{
+		draw_sprite(sprSkillIconHUD, muts[i], xxx, yyy);
+		xxx += 18;
+		if xxx >= xr
+		{
+			xxx = xl
+			yyy += 18;
+		}
+		i++;
+	}
 }
-
+else if enablePopUp == 4
+{
+	//Mutation popup
+	var ww = 76;
+	var wh = 20;
+	var xx = scrPopUpStayInScreenX(ww);
+	var yy = scrPopUpStayInScreenY(wh);
+	draw_rectangle_color(xx-ww,yy-wh,xx+ww,yy+wh,bkcol,bkcol,bkcol,bkcol,false);
+	draw_rectangle_color(xx-ww,yy-wh,xx+ww,yy+wh,outcol,outcol,outcol,outcol,true);
+	ww -= 12;
+	wh -= 12;
+	var xxx = xx - ww;
+	var xr = xx + ww;
+	var xl = xxx;
+	var yyy = yy - wh;
+	var muts = popupEntry[popUpIndex];
+	var al = array_length(muts);
+	var i = 0;
+	repeat(al)
+	{
+		draw_sprite(sprSkillIconHUD, muts[i], xxx, yyy);
+		xxx += 18;
+		if xxx >= xr
+		{
+			xxx = xl
+			yyy += 18;
+		}
+		i++;
+	}
+}
 
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);

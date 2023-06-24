@@ -29,11 +29,7 @@ move_contact_solid(direction,4)}
 }
 until dir > 100 or place_meeting(x,y,Wall)
 alarm[1] = 2
-	if (UberCont.normalGameSpeed == 60)
-	{
-		x = x + ((x - xprevious));
-		y = y + ((y - yprevious));
-	}
+	scrForcePosition60fps();
 speed = 3
 }
 

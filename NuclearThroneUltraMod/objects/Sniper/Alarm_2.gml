@@ -1,4 +1,8 @@
 snd_play(sndSniperFire)
+with Sniper
+{
+	alarm[1] += 2;	
+}
 wkick = 7
 with instance_create(x,y,proj)
 {motion_add(other.gunangle+4,16)

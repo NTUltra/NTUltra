@@ -1,17 +1,19 @@
 
-if(image_xscale<0.5)
+if(image_xscale<0.4)
 {instance_destroy();}
 if resetSpeed{
 speed=0;
 motion_add(originalDirection,7)
 resetSpeed=false;
 friction=0;}
-
+var dt = 1;
+if UberCont.normalGameSpeed == 60
+	dt = 0.5;
 if instance_exists(Player)
 {
     if Player.race=11
     {
-    speed+=0.5;
+    speed+=0.5*dt;
     if speed>maxSpeed+3
     {
     speed=maxSpeed+3;
@@ -31,8 +33,16 @@ else if(speed>maxSpeed)
 
 if(image_xscale<nomscale)
 {
-image_xscale+=0.031;
-image_yscale+=0.031;
+	if UberCont.normalGameSpeed == 60
+	{
+		image_xscale += 0.0155;
+		image_yscale += 0.0155;
+	}
+	else
+	{
+		image_xscale += 0.031;
+		image_yscale += 0.031;
+	}
 }
 else
 {

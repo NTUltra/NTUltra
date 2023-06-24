@@ -5,8 +5,8 @@ if other.team != team and other.my_health > 0
 	{
 		Sleep(50)
 		BackCont.shake += 6
-		image_xscale-=0.35;
-		image_yscale-=0.35;
+		image_xscale-=0.33;
+		image_yscale-=0.33;
 		with other
 		{
 			my_health -= other.dmg

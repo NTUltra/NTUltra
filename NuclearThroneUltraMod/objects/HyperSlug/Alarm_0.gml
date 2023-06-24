@@ -22,9 +22,5 @@ until dir > 100 or place_meeting(x,y,Wall) or place_meeting(x,y,hitme)
 alarm[1] = 2
 
 speed = 4
-	if (UberCont.normalGameSpeed == 60)
-	{
-		x = x + ((x - xprevious));
-		y = y + ((y - yprevious));
-	}
+	scrForcePosition60fps();
 }

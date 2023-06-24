@@ -26,7 +26,7 @@ if (type == network_type_data) {
 			if array_length(UberCont.runScore) > 1
 			{
 				debug("send score: ",string(UberCont.runScore));
-				var sendBuffer = buffer_create(23,buffer_grow,1);
+				var sendBuffer = buffer_create(24,buffer_grow,1);
 				if UberCont.isWeekly
 				{
 					buffer_write(sendBuffer,buffer_u8,NETDATA.WEEKLY);
@@ -61,6 +61,7 @@ if (type == network_type_data) {
 				buffer_write(sendBuffer,buffer_u16,UberCont.runScore[10]);//cwep
 				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[11]);//crown
 				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[12]);//Ultra mutation 255 is none
+				buffer_write(sendBuffer,buffer_string,UberCont.runScore[13]);//List of mutations
 				network_send_packet(serverSocket, sendBuffer, buffer_get_size(sendBuffer));
 				buffer_delete(sendBuffer);
 			}
@@ -189,9 +190,9 @@ if (type == network_type_data) {
 				var scoreEntryList = [];
 				var i = 0;
 				var entryIndex = 1;
-				var entries = 13//12 entries
+				var entries = 14//13 entries
 				if leaderboardType == LEADERBOARD.RACE
-					entries = 11;//10 entries
+					entries = 12;//11 entries
 				repeat(entries)
 				{
 					scoreEntryList[i] = string_copy(scoreEntry,entryIndex, string_pos_ext(" ",scoreEntry,entryIndex)-entryIndex);
@@ -254,6 +255,14 @@ if (type == network_type_data) {
 						scoreEntryList[2] = areaArray;
 					}
 				}
+				//List of mutations
+				var lastIndex = array_length(scoreEntryList)-1
+				var mutationsString = scoreEntryList[lastIndex];
+				if (scoreEntryList[lastIndex] != "" && string_replace_all(scoreEntryList[lastIndex],"-","") != scoreEntryList[lastIndex])
+					scoreEntryList[lastIndex] = string_split(mutationsString,"-",true);
+				else
+					scoreEntryList[lastIndex] = "";
+				debug(scoreEntryList[lastIndex]);
 				leaderboard[j] = scoreEntryList;
 				j++;
 			}

@@ -1,24 +1,6 @@
 /// @description Start it
-network_set_config(network_config_use_non_blocking_socket, 1);
-network_set_config(network_config_connect_timeout, 20000);
-alarm[1] = 600;
-room_goto(romConnect);
+serverSocket = -1;
 latestVersion = UberCont.updateVersion;
-serverSocket = network_create_socket(network_socket_tcp);
-serverIp =  UberCont.serverIp;
-serverPort = UberCont.serverPort;
-alarm[2] = 1;
-var res = network_connect_async(serverSocket,string(serverIp),real(serverPort));
-if (res < 0) {
-	//FAIL
-	debug("CONNECTION FAIL");
-} else
-{
-}
-room_speed=UberCont.normalGameSpeed;
-image_speed = 0.6;
-alarm[0] = 30;
-depth = -9999;
 with UberCont
 {
 	if encrypted_data.username == ""
@@ -35,10 +17,35 @@ with UberCont
 			else if string_length(encrypted_data.username) > 20
 				inputText = "THAT IS TOO LONG OF A NAME! (MAX 20 CHARACTERS)";
 			else if string_length(encrypted_data.username) < 1
-				inputText= "INPUT ATLEAST ONE CHARACTER";
+			{
+				room_goto(romConnect);
+				with other
+					alarm[4] = 1;
+				exit;
+			}
 			else
 				fail = false;
 		}
 		scrSaveEncrypted();
 	}
 }
+
+network_set_config(network_config_use_non_blocking_socket, 1);
+network_set_config(network_config_connect_timeout, 20000);
+alarm[1] = 600;
+room_goto(romConnect);
+serverSocket = network_create_socket(network_socket_tcp);
+serverIp =  UberCont.serverIp;
+serverPort = UberCont.serverPort;
+alarm[2] = 1;
+var res = network_connect_async(serverSocket,string(serverIp),real(serverPort));
+if (res < 0) {
+	//FAIL
+	debug("CONNECTION FAIL");
+} else
+{
+}
+room_speed=UberCont.normalGameSpeed;
+image_speed = 0.6;
+alarm[0] = 30;
+depth = -9999;

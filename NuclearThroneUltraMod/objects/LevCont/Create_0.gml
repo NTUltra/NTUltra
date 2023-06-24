@@ -9,13 +9,12 @@ holdExplainGamemode = 0;
 __view_set( e__VW.XView, 0, 0 )
 __view_set( e__VW.YView, 0, 0 )
 wave = 0
-
+gameovertime = 0;
 with UberCont
 {
 	if (useSeed)
 	{
 		random_set_seed(seed+UberCont.globalMutationsChosen);
-		debug("mutationseed: ",UberCont.globalMutationsChosen);
 	}
 }
 if Player.crownpoints > 0
