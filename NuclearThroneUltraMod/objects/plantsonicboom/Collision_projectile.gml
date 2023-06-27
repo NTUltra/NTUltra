@@ -23,6 +23,7 @@ if team != other.team
 	}
 	else
 	{
+		snd_play(sndProjectileDestroy,0.1,true);
 		BackCont.shake += 1;
 		with other
 			instance_destroy()

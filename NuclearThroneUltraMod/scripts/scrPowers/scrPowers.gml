@@ -2802,7 +2802,7 @@ function scrPowers() {
 		var px = x;
 		var py = y;
 		var od = 180;
-		var ps = ultra_got[9] && !altUltra;
+		var ps = ultra_got[9] && altUltra;
 		var tb = skill_got[5];
 		var pp = ultra_got[12];
 		with chestprop
@@ -2853,9 +2853,9 @@ function scrPowers() {
 			scrEyesTelekinesis(ps,tb,px,py);
 		}
 
-		var ts = 1.2+(Player.skill_got[5]*1.1);
-		if ultra_got[9] == 1 && !altUltra
-			ts = 1.2+(Player.skill_got[5]*1.1)+0.4;
+		var ts = 1.05+(Player.skill_got[5]*1.1);
+		if ultra_got[9] == 1 && altUltra
+			ts = 1.3+(Player.skill_got[5]*1.1);
 		with projectile
 		{
 			if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) and team != 2 and canBeMoved
@@ -2869,14 +2869,7 @@ function scrPowers() {
 		}
 
 		if ultra_got[9] == 1 && !altUltra {//eyes Projectile Style ULTRA A
-		    with projectile
-			    if team=other.team && canBeMoved
-			    {
-					x = px+lengthdir_x(8,point_direction(px,py,UberCont.mouse__x,UberCont.mouse__y));
-					y = py+lengthdir_y(8,point_direction(px,py,UberCont.mouse__x,UberCont.mouse__y));
-					speed += friction;
-					scrForcePosition60fps();
-			    }
+			scrProjectileStyle(team, px, py);
 		}
 	}
 
@@ -2972,16 +2965,33 @@ function scrPowers() {
 
 	}
 	else if ultra_got[10]=1{
-
-	//Eyes Monster style Ultra B
-	with enemy
-	{if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) and team != 2 and object_index != EnemyLaser
-	{if !place_meeting(x+lengthdir_x(1+tb,point_direction(x,y,Player.x,Player.y)+180),y,Wall)
-	x += lengthdir_x(1+tb,point_direction(x,y,Player.x,Player.y)+180)
-	if !place_meeting(x,y+lengthdir_y(1+tb,point_direction(x,y,Player.x,Player.y)+180),Wall)
-	y += lengthdir_y(1+tb,point_direction(x,y,Player.x,Player.y)+180)}}
-
-
+		var ps = ultra_got[19] && altUltra;
+		var tb = skill_got[5];
+		var px = x;
+		var py = y;
+		//Eyes Monster style Ultra B
+		with enemy
+		{
+			if (
+				ps || 
+				(
+					x > __view_get( e__VW.XView, 0 ) &&
+					x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) &&
+					y > __view_get( e__VW.YView, 0 ) &&
+					y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+				)
+			)
+			{
+				var d = 1.1 + tb;
+				if UberCont.normalGameSpeed == 60
+					d*= 0.5;
+				var pd = point_direction(x,y,px,py)+180;
+				if !place_meeting(x+lengthdir_x(d,pd),y,Wall)
+					x += lengthdir_x(d,pd)
+				if !place_meeting(x,y+lengthdir_y(d,pd),Wall)
+					y += lengthdir_y(d,pd)
+			}
+		}
 	}
 	else if KeyCont.key_spec[p] != 1 and KeyCont.key_spec[p] != 2
 	{

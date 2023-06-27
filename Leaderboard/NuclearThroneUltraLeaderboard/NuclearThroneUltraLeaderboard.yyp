@@ -33,6 +33,7 @@
     "IDEVersion": "2023.4.0.84",
   },
   "resources": [
+    {"id":{"name":"scrGetSeedOfDay","path":"scripts/scrGetSeedOfDay/scrGetSeedOfDay.yy",},},
     {"id":{"name":"fntM","path":"fonts/fntM/fntM.yy",},},
     {"id":{"name":"LeaderboardServer","path":"objects/LeaderboardServer/LeaderboardServer.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},

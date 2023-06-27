@@ -1,4 +1,4 @@
-
+instance_create(x,y,BigCircleWallBreak);
 if instance_exists(Player)
 {
 if Player.skill_got[17] = 1
@@ -13,7 +13,6 @@ repeat(balls)
 with instance_create(xprevious,yprevious,PlasmaBig)
 {motion_add(other.ang,2)
 image_angle = direction
-originalDirection=other.ang;
 team = other.team}
 ang += angstep;
 }

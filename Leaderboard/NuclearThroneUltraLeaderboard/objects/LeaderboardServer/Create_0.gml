@@ -36,6 +36,7 @@ enum NETDATA {
 	LEADERBOARDWEEKLY,
 	CONFIRMRACE,
 	STARTWEEKLY,
+	STARTDAILY,
 }
 draw_set_font(fntM);
 alarm[1] = 120;

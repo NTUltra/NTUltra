@@ -3,7 +3,6 @@ holdExplainUltraModTimer = 0;
 holdExplainWepModTimer = 0;
 holdExplainMutation = 0;
 holdExplainGamemode = 0;
-seedCounter = 0;
 gameovertime = 0;
 loadTime = 60;
 if UberCont.opt_loading == 4

@@ -1,29 +1,8 @@
 event_inherited();
-/*THIS IS HOW IT SHOULD WORK
-
-damagers have a DAMAGE
-their collision can be NORMAL, PIERCING or PIERCING AT OVERKILL (piercing checks per frame)
-their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
-they have a FORCE and can be 0 or DIRECTIONAL */
-
-typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
-
-dmg = 21
-nomscale = 1;
-maxSpeed = 16;
-if instance_exists(Player)
-{
-if Player.skill_got[17] = 1
-{
-dmg = 23+(Player.betterlaserbrain)
-nomscale += 0.2;
-}
-	if Player.crown == 24//Crown of sloth
-		maxSpeed -= 4;
-}
-//friction=0.4;
-image_speed = 0.5
-Sleep(10)
+grow -= 0.01;
 balls = 6;
-ballstep = 360/balls;
 alarm[1] = 3;
+alarm[2] = 30;
+
+acc += 1;
+maxSpeed += 2;

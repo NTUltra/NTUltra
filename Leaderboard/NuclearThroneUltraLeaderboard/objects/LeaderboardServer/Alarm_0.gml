@@ -5,7 +5,7 @@ day = date_date_string(date_current_datetime());
 var lastweek = week;
 week = date_get_week(date_current_datetime());
 
-if day != yesterday
+if day != yesterday || forceDayPass
 {
 	var fileName = file_find_first("ds*", 0);
 	totalDailies = defaultTotalDailies;
@@ -25,12 +25,7 @@ if day != yesterday
 			totalDailies ++;
 	}
 	file_find_close();
-	var byteSeed = 0;
-	var byteSize = string_byte_length(day);
-	for (var i = 0; i < byteSize; i++) {
-		byteSeed = (byteSeed + string_byte_at(day, i)) << 1;
-	}
-	todaySeed = byteSeed;
+	todaySeed = scrGetSeedOfDay(day);
 	dailyScoreSaveFileString="ds"+string(totalDailies) + "_ntultradailyscore"+string(day)+".sav";
 	dailyRaceSaveFileString=string(totalDailies) + "_ntultradailyrace"+string(day)+".sav";
 	scoreLeaderboardString = "";

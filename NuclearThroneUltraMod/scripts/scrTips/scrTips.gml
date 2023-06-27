@@ -245,8 +245,9 @@ function scrTips() {
 	if Player.race = 9
 	tip = choose("remember the training","focus","go","never surrender","amateur hour is over","again","in cold shadows","slow down time","hyper fast reactions","chicken used to slow down time#in retail","can't throw weapons")
 
-	if Player.race = 10
-	tip = choose("forget the old days","change is coming","a new generation","it will get better","spawning new allies heals old ones","allies take damage over time","making babies hurts","where do these allies come from?")
+	if Player.race = 10//Rebel
+	tip = choose("forget the old days","change is coming","a new generation","it will get better","spawning new allies heals old ones","allies take damage over time","making babies hurts","where do these allies come from?"
+	,"allies gain +1 health each loop")
 
 	if Player.race = 11//hunter
 	tip = choose("never miss",

@@ -4,7 +4,8 @@
 function EnemyHealthAdjustments(){
 	if instance_exists(Player)
 	{
-		maxhealth*= 1 + (clamp(Player.loops-1,0,7)*0.1);//0.15
+		var ogmaxhealth = maxhealth;
+		maxhealth *= 1 + (clamp(Player.loops-1,0,7)*0.1);//0.15
 		if scrIsHardMode()
 			maxhealth *= 1.1;
 		if Player.crown == 10
@@ -12,7 +13,7 @@ function EnemyHealthAdjustments(){
 		
 		my_health = maxhealth;
 		//var hpReduction = 0;
-		if Player.skill_got[11] = 1//Scarier face
+		if Player.skill_got[11]//Scarier face
 		{
 			/* Old additive
 			if Player.race=25
@@ -21,14 +22,14 @@ function EnemyHealthAdjustments(){
 				hpReduction += round(maxhealth*0.18)
 				*/
 			if Player.race=25
-				my_health *= 0.8;
+				my_health *= 0.8 + clamp(ogmaxhealth*0.00005,0,0.15);
 			else
-				my_health *= 0.82;
+				my_health *= 0.78 + clamp(ogmaxhealth*0.00005,0,0.15);
 		}
 		if Player.skill_got[33] = 1//GLASS ARM CANNON
 		{
 			//hpReduction += round(maxhealth*0.25)
-			my_health *= 0.75;
+			my_health *= 0.73 + clamp(ogmaxhealth*0.00005,0,0.15);
 		}
 		if UberCont.opt_gamemode = 9//easy mode
 		{

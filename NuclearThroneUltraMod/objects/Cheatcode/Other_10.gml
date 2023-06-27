@@ -3,6 +3,7 @@ hundredPercentI++;
 alarm[0] = sequenceDelay;
 if (hundredPercentI) >= array_length(hundredPercent)
 {
+	hundredPercentI = 0;
 	with UberCont
 	{
 	var dir=0;

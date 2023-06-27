@@ -10,11 +10,17 @@ if instance_exists(Player){
 	if Player.skill_got[20] {
 		dmg = 2;
 		alarm[1] = 1;
+		alarm[3] = 1;
 		impactWristed = true;
+		xprev = x;
+		yprev = y;
 	}
-	if Player.crown == 28
+	if Player.crown == 28 || UberCont.opt_gamemode == 41//Gore galore
 	{
+		bxprev = x;
+		byprev = y;
 		alarm[2] = 1;
+		alarm[3] = 0;
 	}
 }
 

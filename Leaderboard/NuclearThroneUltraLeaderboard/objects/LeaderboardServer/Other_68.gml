@@ -8,11 +8,10 @@ if (type == network_type_non_blocking_connect || type == network_type_connect)
 	//I am host and I detect a new guy
 	var socket = async_load[? "socket"];
 	show_debug_message("socket connected: "+string(socket));
-	var sendBuffer = buffer_create(10,buffer_grow,1);
+	var sendBuffer = buffer_create(8,buffer_grow,1);
 	buffer_write(sendBuffer,buffer_u8,NETDATA.CLIENT_ID);
 	buffer_write(sendBuffer,buffer_u16,socket);
 	buffer_write(sendBuffer,buffer_string,updateVersion);
-	buffer_write(sendBuffer,buffer_u16,todaySeed);
 	buffer_write(sendBuffer,buffer_u16,totalDailies);
 	show_debug_message("total dailies: " + string(totalDailies));
 	show_debug_message("total weeklies: " + string(totalWeeklies));
@@ -32,6 +31,40 @@ if (type == network_type_data) {
 	var getWeekly = false;
 	switch(data)
 	{
+		case NETDATA.STARTDAILY:
+			show_debug_message("Daily start");
+			var socket = buffer_read(buffer, buffer_u16);
+			var clientDay = buffer_read(buffer, buffer_string);
+			//Get correct seed and day based on user time
+			var sendBuffer = buffer_create(5,buffer_grow,1);
+			buffer_write(sendBuffer,buffer_u8,NETDATA.STARTDAILY);
+			var seed = scrGetSeedOfDay(clientDay);
+			buffer_write(sendBuffer,buffer_u16,seed);
+			var dailyDay = 0;
+			//Find file with the clientDay then get the number of that file
+			var existingScoreFile = "";
+			existingScoreFile = file_find_first("*_ntultradailyscore" + clientDay + ".sav",0);
+			if (existingScoreFile != "")
+			{
+				dailyDay = real(
+					string_copy
+					(
+						existingScoreFile,
+						3,
+						string_last_pos("_ntultradailyscore",
+						existingScoreFile)-2
+					)
+				);
+			} else
+			{
+				dailyDay = totalDailies;
+				show_debug_message("Newest score");
+			}
+			file_find_close();
+			buffer_write(sendBuffer,buffer_u16,dailyDay);
+			network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
+			buffer_delete(sendBuffer);
+		break;
 		case NETDATA.STARTWEEKLY:
 			show_debug_message("Weekly start");
 			var socket = buffer_read(buffer, buffer_u16);
@@ -62,6 +95,8 @@ if (type == network_type_data) {
 			//if isScore
 			var socket = buffer_read(buffer, buffer_u16);
 			var wantDay = buffer_read(buffer, buffer_u16);
+			show_debug_message("Sending to day: " + string(wantDay));
+			show_debug_message("Having total: " + string(totalDailies));
 			var gm = 0;
 			var uid = "";
 			if isWeekly {
@@ -174,11 +209,11 @@ if (type == network_type_data) {
 					}
 				}
 				if isWeekly
-					totalWeeklyEntries = i;
+					totalWeeklyEntries = i + 1;
 				else if isScore
-					totalScoreEntries = i;
+					totalScoreEntries = i + 1;
 				else
-					totalRaceEntries = i;
+					totalRaceEntries = i + 1;
 				if isWeekly 
 				{
 					if uid != ""
@@ -199,7 +234,7 @@ if (type == network_type_data) {
 				//And add the new one
 				ds_list_add(scoreSorter,newScore[0]);
 				ds_list_add(scoreList,scoreString);
-				
+				show_debug_message("ADD NEW SCORE ");
 				var al = ds_list_size(scoreSorter);
 				//Sorting algorithm (bubble)
 				for (var i = al; i >= 0; i--)
@@ -236,6 +271,7 @@ if (type == network_type_data) {
 			buffer_write(sendBuffer,buffer_string,scoreLeaderboard);
 			buffer_write(sendBuffer,buffer_string,string_split(string_replace(fileName,"ntultra",""),"_")[1]);
 			buffer_write(sendBuffer,buffer_u16,0);//Page
+			show_debug_message("TOTAL PAGES: " + string(ceil(totalScoreEntries/10)-1));
 			if isWeekly
 				buffer_write(sendBuffer,buffer_u16,ceil(totalWeeklyEntries/10)-1);//Total pages
 			else if isScore

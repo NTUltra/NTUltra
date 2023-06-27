@@ -8,7 +8,7 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 
 image_yscale = 1.25
-
+alarm[1] = 1;
 img = 0
 sprStart = sprPopoLaserStart;
 sprEnd = sprPopoLaserEnd;

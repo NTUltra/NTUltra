@@ -1,4 +1,6 @@
 /// @description Inputs
+if instance_exists(option2)
+	exit;
 if (keyboard_check_pressed(vk_up))
 {
 	if (hundredPercent[hundredPercentI] == vk_up)

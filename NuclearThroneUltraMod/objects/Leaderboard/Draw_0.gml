@@ -370,6 +370,7 @@ else if array_length(leaderboard) > 0
 			page = 0;
 			UberCont.weeklyWeek = UberCont.totalWeeklies;
 			UberCont.dailyDay = UberCont.totalDailies;
+			page = 0;
 			event_user(0);
 			leaderboard = [];
 		}
@@ -470,6 +471,7 @@ else if noBoard
 			page = 0;
 			UberCont.weeklyWeek = UberCont.totalWeeklies;
 			UberCont.dailyDay = UberCont.totalDailies;
+			page = 0;
 			event_user(0);
 			leaderboard = [];
 		}

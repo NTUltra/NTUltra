@@ -1,4 +1,4 @@
-/// @description Crown of darkness
+/// @description Crown of blindness
 alarm[2] = 2;
 with projectile
 {

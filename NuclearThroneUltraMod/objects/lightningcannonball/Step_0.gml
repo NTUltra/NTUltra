@@ -1,4 +1,5 @@
 /// @description Position and end
 if speed < 0.2
 	instance_destroy();
-audio_emitter_position(emitter,x,y,depth);
+if (audio_emitter_exists(emitter))
+	audio_emitter_position(emitter,x,y,depth);

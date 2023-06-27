@@ -14,8 +14,8 @@ instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__vi
 instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-__view_get( e__VW.WView, 0 )/4,__view_get( e__VW.YView, 0 )+yy+40,KeyReset)
 
 //instance_create(view_xview+view_wview/2,view_yview+96,GameModeUpDown)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+10+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+96,GameModeUpDown)
-with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+96,GameModeReset)
+instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+10+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+100,GameModeUpDown)
+with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+92,GameModeReset)
 	depth = GameModeUpDown.depth;
 
 

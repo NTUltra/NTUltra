@@ -11,7 +11,7 @@ if growspeed > -0.005
 {
 	growspeed -= 0.0007
 	if fps60
-		growspeed += 0.0045
+		growspeed += 0.00045
 }
 if image_xscale < 0.4
 {
@@ -23,7 +23,7 @@ image_angle += rot
 if fps60
 	image_angle -= rot*0.5;
 if image_xscale < 0.15
-instance_destroy()
+	instance_destroy()
 
 if instance_exists(Player) && instance_exists(enemy)
 {

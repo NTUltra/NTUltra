@@ -788,6 +788,9 @@ else if skill == 76//skelly ultra D
 	{
 		scrUnlockGameMode(38,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
+		ultra_name[76] = "THE ULTIMATE GAMBLE"
+	    ultra_text[76] = "50% CHANCE TO DIE OR TO GET#TWO RANDOM ULTRA MUTATIONS#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
+	    ultra_tips[76] = "that went well!"
 	}
     //with instance_create(view_xview+view_wview/2,view_yview+view_hview-24,SkillIcon)
     //skill = choose(//choose(other.skill1,other.skill2,other.skill3,other.skill4);

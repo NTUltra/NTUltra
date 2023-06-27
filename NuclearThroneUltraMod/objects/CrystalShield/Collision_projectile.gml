@@ -71,6 +71,7 @@ if team != other.team
 	}
 	else if other.typ = 2 || Player.ultra_got[8]
 	{
+		snd_play(sndProjectileDestroy,0.1,true);
 		with other
 			instance_destroy()
 	}

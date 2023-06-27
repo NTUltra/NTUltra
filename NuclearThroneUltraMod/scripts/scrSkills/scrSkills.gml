@@ -212,12 +212,12 @@ function scrSkills() {
 	skill_name[11] = "SCARIER FACE"
 	if isHand
 		skill_name[11] = "SCARIER NAIL"
-	skill_text[11] = "18% LESS ENEMY HP"
+	skill_text[11] = "20% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE ON BIG HEALTHPOOLS"
 	skill_tips[11] = "mirrors will break"
 	skill_msnd[11] =  sndMutScarierFace
 	if instance_exists(Player) && Player.race = 25
 	{
-		skill_text[11] = "20% LESS ENEMY HP"
+		skill_text[11] = "22% LESS ENEMY HP"
 	}
 
 	skill_name[12] = "EUPHORIA"
@@ -419,9 +419,9 @@ function scrSkills() {
 	
 	skill_name[33] = "GLASS ARM CANNON"//Metroid reference I guess
 	if isDoctor
-		skill_text[33] = "25% LESS ENEMY HP#-1 MAX HP"
+		skill_text[33] = "27% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE ON BIG HEALTHPOOLS##-1 MAX HP"
 	else
-		skill_text[33] = "25% LESS ENEMY HP#-2 MAX HP"
+		skill_text[33] = "27% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE ON BIG HEALTHPOOLS##-2 MAX HP"
 	skill_tips[33] = "fragile"
 	skill_msnd[33] =  sndMutGlassArmCannon
 	if instance_exists(Player) 

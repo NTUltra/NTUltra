@@ -40,6 +40,7 @@ if team != other.team && instance_exists(Player)
 		}
 		else
 		{
+			snd_play(sndProjectileDestroy,0.1,true);
 			BackCont.shake += 1;
 			with other
 				instance_destroy()

@@ -4,28 +4,11 @@ function scrTarget() {
 
 	if instance_exists(Player)
 	{
-		if target == -1 && Player.justAsheep=false || (Player.ultra_got[11]=1 && random(1000)<1)//TODO let enemies fight when you are just a sheep
+		if target == -1 && !Player.justAsheep
 		{
 			if instance_exists(Decoy)//Chickens vanish
 			{
 				target = Decoy;
-			} else if Player.ultra_got[11]=1{//eyes ultra c brainwash
-			    if instance_exists(enemy) && instance_number(enemy) > 2
-			    {
-			        if random(100)<28+(Player.skill_got[5]*10)//chance to get brainwashed
-			        {//thronebutt adds 10%
-				        var nearest = instance_nearest_notme(x,y,enemy);
-						if instance_exists(nearest) && nearest != noone && nearest.team != team && nearest.team != 0
-						{
-							target = nearest;
-							team = 5 + irandom(10);
-						}
-			        }
-			        else{
-						target = instance_nearest(x,y,Player)
-						team=1;//what if popo?
-			        }
-			    }
 			}
 			else {
 				target = instance_nearest(x,y,Player);

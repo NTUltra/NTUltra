@@ -174,6 +174,33 @@ function scrEnemyDeathEvent(){
 					splatDir += angStep;
 				}
 			}
+			else if UberCont.opt_gamemode == 41//Gore galore
+			{
+				var splatDir = random(360);
+				var ms = other.mySize;
+				var rpt = 2+ms;
+				var angStep = 360 / rpt;
+				repeat(rpt)
+				{
+					with instance_create(other.x,other.y,BloodStreak)
+					{
+					motion_add(splatDir,6 + other.mySize)
+					image_angle = direction
+					}
+					scrAddToBGFXLayer(
+						sprBloodSplat,
+						irandom(sprite_get_number(sprBloodSplat)),
+						other.x + lengthdir_x(random_range(4,8)+ms,splatDir),
+						other.y + lengthdir_y(random_range(4,8)+ms,splatDir),
+						random_range(0.8,1),
+						random_range(0.8,1),
+						splatDir,
+						c_white,
+						1
+					);
+					splatDir += angStep;
+				}
+			}
 			
 			//TRIGGER FINGERS
 			if skill_got[24]

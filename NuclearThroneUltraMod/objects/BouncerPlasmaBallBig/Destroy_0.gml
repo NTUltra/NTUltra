@@ -7,12 +7,13 @@ snd_play(sndPlasmaBigExplode)
 }
 
 ang = direction
-repeat(4)
+var angstep = 360/balls
+repeat(balls)
 {
 with instance_create(xprevious,yprevious,BouncerPlasmaBall)
 {motion_add(other.ang,2)
 image_angle = direction
 team = other.team}
-ang += 360/4;
+ang += angstep;
 }
 

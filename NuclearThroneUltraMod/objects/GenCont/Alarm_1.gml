@@ -140,3 +140,7 @@ with CrownPickup
 	}
 }
 
+if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK)
+{
+	instance_create(x,y,FPSHACK);
+}

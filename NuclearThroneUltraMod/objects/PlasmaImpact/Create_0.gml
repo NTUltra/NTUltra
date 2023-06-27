@@ -3,9 +3,9 @@ image_speed = 0.5
 BackCont.shake += 4
 
 team = 2
-
-repeat(3)
-instance_create(x,y,Smoke)
+if fps_real >= fps
+	repeat(3)
+		instance_create(x,y,Smoke)
 
 dmg = 5;
 if instance_exists(Player)

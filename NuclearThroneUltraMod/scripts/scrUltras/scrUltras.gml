@@ -63,13 +63,13 @@ function scrUltras(altOverride = false) {
 
 	//EYES 
 	ultra_name[9] = "PROJECTILE STYLE"
-	ultra_text[9] = "HOLD YOUR PROJECTILES#STRONGER PROJECTILE PUSH#INFINITE ATTRACT RANGE"
+	ultra_text[9] = "HOLD YOUR PROJECTILES#HELD PROJECTILES BLOCK#ENEMY PROJECTILES"
 	ultra_tips[9] = "need more cannons"
 	
 	if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (scrHasEyesMutations() && instance_exists(UltraIcon))))
 	{
 		ultra_name[9] = "STRANGE STYLE"
-		ultra_text[9] = "TELEKINESIS PULLS#ENEMIES AND PROJECTILES#TOWARDS YOUR CROSSHAIR"
+		ultra_text[9] = "TELEKINESIS PULLS#ENEMIES AND PROJECTILES#TOWARDS YOUR CROSSHAIR#INFINITE TELEKINESIS RANGE#STRONGER PROJECTILE PUSH"
 		ultra_tips[9] = "something strange"
 	}
 
@@ -78,11 +78,11 @@ function scrUltras(altOverride = false) {
 	ultra_tips[10] = "repellent"
 
 	ultra_name[11] = "BRAIN STYLE"
-	ultra_text[11] = "FULLY SEE IN THE DARK#SOME ENEMIES ATTACK OTHER ENEMIES#THRONE BUTT INCREASES BRAINWASH CHANCE"
+	ultra_text[11] = "FULLY SEE IN THE DARK#SOME ENEMIES ATTACK OTHER ENEMIES"
 	ultra_tips[11] = "brain style works on bosses!"
 
 	ultra_name[12] = "PSYCHONAUT STYLE"//thats a refrence
-	ultra_text[12] = "ACTIVE ABILITY ATTRACTS#ITEM DROPS, RADS & WEAPONS#THROUGH WALLS#INCREASED ITEM ATTRACTION SPEED"
+	ultra_text[12] = "TELEKINESIS ATTRACTS#ITEM DROPS, RADS & WEAPONS#THROUGH WALLS#INCREASED ITEM ATTRACTION SPEED"
 	ultra_tips[12] = "never miss a drop"
 
 	    //MELTING 

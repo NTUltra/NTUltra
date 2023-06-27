@@ -1,5 +1,6 @@
 event_inherited()
-audio_emitter_position(emitter,x,y,depth);
+if (audio_emitter_exists(emitter))
+	audio_emitter_position(emitter,x,y,depth);
 if instance_exists(Player) && crossAmmo < 1
 {
 	var lerpp = lp;

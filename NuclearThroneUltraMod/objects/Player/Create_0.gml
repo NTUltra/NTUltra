@@ -4,10 +4,11 @@ instance_destroy()
 exit;
 }*/
 //scrn=0; //for screenshot taking character explain pic
-if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK)
+/*
+if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK) && !instance_exists(GenCont)
 {
 	instance_create(x,y,FPSHACK);
-}
+}*/
 depth = 0;
 previousUltra = -1;
 hudArmourSpace = 0;

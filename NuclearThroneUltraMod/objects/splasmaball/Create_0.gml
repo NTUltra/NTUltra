@@ -1,8 +1,11 @@
-/// @description xxx
+/// @description Speed up and spin
 
 // Inherit the parent event
 event_inherited();
-maxSpeed = 16;
+grow -= 0.01;
+acc += 1;
+maxSpeed += 6;
 alarm[1] = 2;
 angleDir = 0;
-sdelay = 8;
+sdelay = 10;
+alarm[2] = 30;

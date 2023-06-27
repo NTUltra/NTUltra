@@ -5,15 +5,15 @@ snd_play(sndPlasmaBigExplodeUpg)
 else
 snd_play(sndPlasmaBigExplode)
 }
-instance_create(x,y,WallBreak);
+instance_create(x,y,BigWallBreak);
 var ang = random(360)
+var angstep = 360/balls
 repeat(balls)
 {
 	with instance_create(xprevious,yprevious,PlasmaBall)
 	{motion_add(ang,2)
 	image_angle = direction
-	originalDirection=ang;
 	team = other.team}
-	ang += ballstep;
+	ang += angstep;
 }
 

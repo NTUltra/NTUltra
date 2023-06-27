@@ -44,6 +44,7 @@ enum NETDATA {
 	LEADERBOARDWEEKLY,
 	CONFIRMRACE,
 	STARTWEEKLY,
+	STARTDAILY,
 }
 killScroll = 0;
 killScrollAdd = 0.01;

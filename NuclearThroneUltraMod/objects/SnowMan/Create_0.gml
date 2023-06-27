@@ -1,6 +1,6 @@
 maxhealth = 10
 mySize = 1
-
+meleedamage = 0
 spr_idle = sprSnowMan
 spr_hurt = sprSnowManHurt
 spr_dead = sprSnowManDead
@@ -14,3 +14,4 @@ move_contact_solid(random(90)+45,random(12))
 
 snd_hurt = sndHitRock
 
+scrInitDrops(1);

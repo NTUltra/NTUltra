@@ -1,59 +1,49 @@
-
-if(image_xscale<0.4)
-{instance_destroy();}
-if resetSpeed{
-speed=0;
-motion_add(originalDirection,7)
-resetSpeed=false;
-friction=0;}
+/// @description Plasma!
 var dt = 1;
 if UberCont.normalGameSpeed == 60
 	dt = 0.5;
-if instance_exists(Player)
+	
+if(image_xscale < destroyScale)
 {
-    if Player.race=11
-    {
-    speed+=0.5*dt;
-    if speed>maxSpeed+3
-    {
-    speed=maxSpeed+3;
-    }
-    }
-    else if(speed>maxSpeed)
-    {speed=maxSpeed;}
-	if Player.crown == 23//Crown of speed
-	{
-		speed += 2;	
-	}
+	instance_destroy();
 }
-else if(speed>maxSpeed)
-{speed=maxSpeed;}
+speed += acc * dt;
+
+if (speed > maxSpeed)
+	speed = maxSpeed;
 
 
-
-if(image_xscale<nomscale)
+if(image_xscale < nomscale)
 {
-	if UberCont.normalGameSpeed == 60
-	{
-		image_xscale += 0.0155;
-		image_yscale += 0.0155;
-	}
-	else
-	{
-		image_xscale += 0.031;
-		image_yscale += 0.031;
-	}
+	image_xscale += grow * dt;
+	image_yscale += grow * dt;
 }
 else
 {
-image_xscale=nomscale;
-image_yscale=nomscale;
+	image_xscale = nomscale;
+	image_yscale = nomscale;
 }
 if speed < 2
 	instance_destroy();
 
-with instance_create(x+random(8)-4,y+random(16)-8,PlasmaFX)
-{
-motion_add(other.direction+random(30)-15,random(2))
-}
 
+var hitWall = false;
+if place_meeting(x+hspeed,y,Wall)
+{
+	x -= hspeed;
+	hitWall = true;
+	event_user(0);
+}
+if place_meeting(x,y+vspeed,Wall)
+{
+	y -= vspeed;
+	hitWall = true;
+	event_user(1);
+}
+if (hitWall)
+{
+	image_xscale -= wallScale*dt;
+	image_yscale -= wallScale*dt;
+	instance_create(x,y,Dust);
+	event_user(3);
+}

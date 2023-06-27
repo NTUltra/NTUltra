@@ -1,5 +1,7 @@
 /// @description Spawn tiny spiraling splasma balls
-alarm[1] = 8;
+alarm[1] = 12;
+if BackCont.shake < 2
+	BackCont.shake = 2
 with instance_create(x,y,SplasmaBall)
 {
 	direction = other.direction;

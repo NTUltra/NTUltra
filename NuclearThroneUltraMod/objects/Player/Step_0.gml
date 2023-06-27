@@ -1,7 +1,5 @@
 /// @description main
-if instance_exists(GenCont)
-	exit;
-if instance_exists(StartDaily)
+if instance_exists(GenCont) || instance_exists(StartDaily)
 	exit;
 if ultra_got[43] && altUltra && hunterEye < hunterEyeMax
 	hunterEye += 1.5+(1.5*skill_got[5]);
@@ -13,7 +11,7 @@ if unkillable
 {
 	alarm[1] = 2;
 }
-if !instance_exists(GenCont) and !instance_exists(LevCont) and visible = 1
+if !instance_exists(LevCont) and visible = 1
 {
 	if roll = 0
 	{
@@ -854,7 +852,7 @@ if skill_got[35]
 	lowc = wep_load[cwep]*-2;
 }
 //Can't reload while in loading shit, will automatically reload
-if (!instance_exists(LevCont) && !instance_exists(GenCont))
+if (!instance_exists(LevCont))
 {
 	if reload > lowa
 	{
@@ -903,7 +901,7 @@ if (!instance_exists(LevCont) && !instance_exists(GenCont))
 		}
 	
 		if race=9 && skill_got[5]{
-			if KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2 && !(instance_exists(GenCont))
+			if KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2
 			{
 				reload -= 0.25; // 1 - (30 / room_speed)
 			}
@@ -1303,15 +1301,17 @@ if outOfCombat && UberCont.opt_gamemode != 25
 	maxSpeed += 1;
 //CAP SPEED
 var por = instance_place(x,y,Portal);
-if !visible || (por != noone && por.alarm[1] < 1 && por.sprite_index != sprPortalSpawn)
+if !visible || (por != noone && por.alarm[1] < 1 && por.sprite_index != sprPortalSpawn) || instance_exists(SpiralCont)
 {
 	speed = 0;
 }
 else if race == 23 && ultra_got[92] == 0
 {
-	speed = clamp(speed,maxSpeed*0.8,maxSpeed);
+	//speed = clamp(speed,maxSpeed*0.8,maxSpeed);
 	if toxicamount > 0
-		speed = 0;
+		speed *= 0.25;
+	else
+		speed = clamp(speed,maxSpeed*0.8,maxSpeed);
 }
 else if speed > maxSpeed
 	speed = maxSpeed
@@ -1371,9 +1371,9 @@ if ultra_got[59] && altUltra
 	ds_list_destroy(floors);
 	mask_index = msk;
 }
-if (!outOfCombat && skill_got[2]==0 && race!=18 && race!=24 && race != 15 and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(FloorMaker))
+if (!outOfCombat && skill_got[2]==0 && race!=18 && race!=24 && race != 15 and !instance_exists(LevCont) and !instance_exists(FloorMaker))
 {
-	if ((area = 5 || area = 107) and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(FloorMaker))
+	if ((area = 5 || area = 107) and !instance_exists(LevCont) and !instance_exists(FloorMaker))
 	{
 		//SNOW & ICE TEST
 		if ((instance_nearest(x-16,y-16,Floor).styleb == 1)) // EXTRA FEET TEST
@@ -1381,7 +1381,7 @@ if (!outOfCombat && skill_got[2]==0 && race!=18 && race!=24 && race != 15 and !i
 		else
 			friction = 0.45
 	}
-	else if (area == 4 || area == 115 || area == 111) and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(FloorMaker)
+	else if (area == 4 || area == 115 || area == 111) and !instance_exists(LevCont) and !instance_exists(FloorMaker)
 	{
 		//SPIDER WEBS
 		var ground = instance_nearest(x-16,y-16,Floor);
@@ -1478,18 +1478,22 @@ creload = max(creload,lowc);
 var homeBoost = 0;
 
 if (ultra_got[42]==1)//HUNTER ULTRA B Homing projectiles
-	homeBoost += 4;
+	homeBoost += 2.8;
 if skill_got[19] == 1
 {
-	homeBoost += 1.1;
+	homeBoost += 0.6;
 	if race == 25
-		homeBoost += 0.2;
+		homeBoost += 0.1;
 }
 ///homing projectiles mod
-var modHomeBoost = 0.6;
+var modHomeBoost = 0.25;
+if skill_got[30] == 1
+	modHomeBoost += 0.14;
+if ultra_got[65]
+	modHomeBoost += 0.14;
+
 if race == 7//Steroids
 {
-	homeBoost = max(0,homeBoost-0.4);
 	modHomeBoost -= 0.2;
 	if bwepmod1 == 13
 	homeBoost += modHomeBoost;
@@ -1499,13 +1503,8 @@ if race == 7//Steroids
 		homeBoost += modHomeBoost;
 	if bwepmod4 == 13
 		homeBoost += modHomeBoost;
+	homeBoost = max(0,homeBoost-0.2);
 }
-
-if skill_got[30] == 1
-	modHomeBoost += 0.34;
-if ultra_got[65]
-	modHomeBoost += 0.4;
-
 if wepmod1 == 13
 	homeBoost += modHomeBoost;
 if wepmod2 == 13
@@ -1530,6 +1529,7 @@ if homeBoost > 0
 		            {
 						var d = point_direction(x,y,t.x,t.y)
 						var ad = angle_difference(d,direction);
+						homeBoost *= 1 + (speed *0.008);
 		                if (ad > 2)
 		                {
 							direction+=homeBoost;
@@ -1649,7 +1649,7 @@ if typ!=0&&object_index!=Flame&&object_index!=TrapFire&&object_index!=HotDrakeFl
 
 
 ///extra feet dodging bonus
-if skill_got[2] && !instance_exists(GenCont) && !instance_exists(LevCont) && !outOfCombat
+if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 {
 	if extrafeetalarm > 0
 		extrafeetalarm--;
@@ -1786,7 +1786,7 @@ microseconds=0;
 var h_point = gamepad_axis_value(0, gp_axisrh);
 var v_point = gamepad_axis_value(0, gp_axisrv);
 
-if ((h_point != 0) || (v_point != 0))//&&!instance_exists(GenCont)&&!instance_exists(LevCont)&&UberCont.isPaused=0
+if ((h_point != 0) || (v_point != 0))
 {
 var dir = point_direction(0,0, h_point, v_point);
 //var dif = angle_difference(pdir, image_angle);
@@ -1823,15 +1823,13 @@ display_mouse_set(mox,moy);
 
 /* */
 ///Angel flying through walls
-if race=18
+if race==18
 {
-	if flying>0
+	if flying > 0 && !instance_exists(SpiralCont)
     {
-    
-
-    flying--;
-    if flying<1
-		mask_index=mskPlayer;
+	    flying--;
+	    if flying<1
+			mask_index=mskPlayer;
     }
 	
     if instance_exists(Floor) && instance_exists(WallHitMe)
@@ -1854,7 +1852,7 @@ if race=18
         }
         
 	    //GET HURT when flying too long unless acent ultra D
-	    if ( ( !place_meeting(x,y,Floor) || flying>0 || mask_index=mskPickupThroughWall || place_meeting(x,y,WallHitMe) )  && !instance_exists(GenCont) && !instance_exists(LevCont) && !(ultra_got[72] && !altUltra) )//NOT ASCND ULTRA
+	    if ( ( !place_meeting(x,y,Floor) || flying>0 || mask_index=mskPickupThroughWall || place_meeting(x,y,WallHitMe) ) && !instance_exists(LevCont) && !(ultra_got[72] && !altUltra) )//NOT ASCND ULTRA
 	    {
 		    //var wall = instance_nearest(x,y,Wall);
 			if UberCont.normalGameSpeed == 60

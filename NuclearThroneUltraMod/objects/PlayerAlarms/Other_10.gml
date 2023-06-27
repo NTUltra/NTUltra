@@ -67,6 +67,11 @@ if instance_exists(Player)
 		{
 			alarm[2] = 1;
 		}
+		if Player.ultra_got[11]
+		{
+			alarm[4] = 90;
+			alarm[5] = 2;
+		}	
 	}
 	if Player.ultra_got[59] && Player.altUltra && !instance_exists(CorrosionDrawer)
 	{

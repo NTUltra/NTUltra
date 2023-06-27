@@ -44,7 +44,7 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 		instance_destroy();
 	with PlayerSpawn
 		instance_destroy();
-
+	
 	with instance_create(x,y,GenCont)
 	{race = other.race
 	crown = other.crown}

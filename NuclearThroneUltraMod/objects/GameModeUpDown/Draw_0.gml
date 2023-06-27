@@ -1,32 +1,58 @@
-draw_sprite(sprite_index,/*UberCont.opt_gamemode*/1,x,y)
-//draw_sprite(sprite_index,UberCont.opt_gamemode,x,y)
-//draw_self();
-if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x and UberCont.mouse__x < x+8 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
+var gmx = x - 190;
+var surfWidth = 148;
+var surfHeight = 100;
+var hoverOverGamemode = (UberCont.mouse__x > gmx &&
+UberCont.mouse__x < gmx + surfWidth &&
+UberCont.mouse__y > y &&
+UberCont.mouse__y < y + surfHeight);
+var i = 0;
+if !surface_exists(surf)
 {
-	snd_play_2d(sndClick);
-if gamemodenr > 0
-gamemodenr -= 1
-else
-gamemodenr = maxgamemode
-
-event_user(0);
+	surf = surface_create(surfWidth,surfHeight);
 }
-if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x+10 and UberCont.mouse__x < x+18 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
+surface_set_target(surf);
+draw_clear_alpha(c_black,0);
+var xx = 1
+var yy = scroll - totalHeight;
+draw_set_valign(fa_top);
+repeat(3)
 {
-	snd_play_2d(sndClick);
-if gamemodenr < maxgamemode
-gamemodenr += 1
-else
-gamemodenr=0;
-
-event_user(0);
+	i = 0;
+	repeat(maxgamemode+1)
+	{
+		var h = string_height("* "+string_hash_to_newline(gamemode[gamemodeOrder[i]]));
+		if hoverOverGamemode && UberCont.mouse__y-y > yy && UberCont.mouse__y-y < yy + h
+		{
+			draw_text_color(xx,yy,"* "+string_hash_to_newline(gamemode[gamemodeOrder[i]]),c_white,c_white,c_white,c_white,1)
+			if (mouse_check_button_pressed(mb_left))
+			{
+				gamemodenr = i;
+				snd_play_2d(sndClick);
+				event_user(0);
+			}
+		} else if i == gamemodenr
+		{
+			draw_text_color(xx,yy,"* "+string_hash_to_newline(gamemode[gamemodeOrder[i]]),c_white,c_white,c_white,c_white,1);
+			currentHeight = yy;
+		}
+		else if !UberCont.gamemode_have[gamemodeOrder[i]]
+			draw_text_color(xx,yy,"* "+string_hash_to_newline(gamemode[gamemodeOrder[i]]),c_dkgray,c_dkgray,c_dkgray,c_dkgray,1)
+		else
+			draw_text_color(xx,yy,"* "+string_hash_to_newline(gamemode[gamemodeOrder[i]]),c_gray,c_gray,c_gray,c_gray,1)
+		yy += h;
+		yy += 2;
+		i++;
+	}
 }
-
+draw_set_colour(c_white);
+surface_reset_target();
+draw_surface(surf,gmx,y);
+var o = 48;
 //draw_sprite(sprite_index,/*UberCont.opt_gamemode*/1,x,y)
 if (UberCont.opt_gamemode==1&&gamemodeOrder[gamemodenr]==1)
 {
 	if !instance_exists(StartingWeaponUpDown)
-		instance_create(x,y+24,StartingWeaponUpDown);
+		instance_create(x+o,y+24,StartingWeaponUpDown);
 /*with(instance_create(x,y+32,WeaponDisplay))
 {
 scrWeapons();
@@ -60,14 +86,14 @@ else{
 		instance_destroy()
 }
 
-
+o = 64;
 if (UberCont.opt_gamemode==19&&gamemodeOrder[gamemodenr]==19)
 {
 if !instance_exists(DiscDamageUpDown)
-instance_create(x,y+24,DiscDamageUpDown);
+instance_create(x+o,y+24,DiscDamageUpDown);
 
 if !instance_exists(DiscAmountUpDown)
-instance_create(x,y+32,DiscAmountUpDown);
+instance_create(x+o,y+32,DiscAmountUpDown);
 /*with(instance_create(x,y+32,WeaponDisplay))
 {
 scrWeapons();
@@ -81,14 +107,14 @@ with DiscAmountUpDown
 instance_destroy()
 }
 
-var yy = y+64;
+var yy = y+32;
 if (UberCont.gamemode_have[gamemodeOrder[gamemodenr]]=1 && !dailyDone)
 {
 	UberCont.opt_gamemode=gamemodeOrder[gamemodenr];
 }
 else
 {
-draw_sprite(sprLocked,0,x-18,y+38);
+draw_sprite(sprLocked,0,x,y+20);
 var str;
 if dailyDone && UberCont.gamemode_have[gamemodeOrder[gamemodenr]]=1
 {
@@ -110,29 +136,13 @@ else
 {
 	str = string_hash_to_newline(gamemode_unlock[gamemodeOrder[gamemodenr]]);
 }
+var o = 32
+draw_set_halign(fa_middle);
 draw_set_color(c_gray)
-draw_text(x-string_width(str)*0.6,yy,str)
+draw_text_ext(x+o,yy,str,8,128)
 draw_set_color(c_white)
-draw_text(x-string_width(str)*0.6,yy,str)
+draw_text_ext(x+o,yy,str,8,128)
+draw_set_halign(fa_left);
 }
 
-
-/*draw_sprite(sprite_index,UberCont.opt_fulscrn,x,y)
-
-if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x and UberCont.mouse__x < x+8 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
-{
-if UberCont.opt_freeze > 0
-UberCont.opt_freeze -= 0.1
-}
-if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x+10 and UberCont.mouse__x < x+18 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
-{
-if UberCont.opt_freeze < 4
-UberCont.opt_freeze += 0.1
-}
-
-if UberCont.opt_freeze != 1
-draw_text(x+20,y,"TWEAK IT!")
-
-
-/* */
-/*  */
+draw_set_valign(fa_bottom);

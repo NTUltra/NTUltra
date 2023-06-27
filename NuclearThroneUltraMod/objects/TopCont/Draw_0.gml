@@ -368,7 +368,7 @@ draw_sprite_ext(sprMarkerCrosshair,image_index,x,y,image_xscale,image_yscale,ima
     }
 }
 // EYES ULTRA C BRAINWASH
-if Player.ultra_got[11]=1{
+if Player.ultra_got[11] {
     with enemy//brainwashed enemy
     {
     //draw_text(x,y,string(team));
@@ -425,6 +425,10 @@ with HorrorBeam
 {
 	image_yscale = 1+random(1.5)
 	draw_sprite_ext(sprite_index,-1,x,y,image_xscale,image_yscale/2,image_angle,c_white,1)
+}
+with EyesBrainWashFX
+{
+	event_user(0);	
 }
 scrDrawBloom()
 

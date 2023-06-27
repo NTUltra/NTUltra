@@ -11,15 +11,13 @@ if (type == network_type_data) {
 	switch(data)
 	{
 		case NETDATA.CLIENT_ID:
+		//SEND TIME
 			myClientId = buffer_read(buffer, buffer_u16);
 			latestVersion = buffer_read(buffer, buffer_string);
 			debug(latestVersion);
-			UberCont.todaysSeed = buffer_read(buffer, buffer_u16);
-			UberCont.seed = UberCont.todaysSeed;
-			UberCont.dailyDay = buffer_read(buffer, buffer_u16);
-			UberCont.weeklyWeek = buffer_read(buffer, buffer_u16);
-			UberCont.totalDailies = UberCont.dailyDay;
-			UberCont.totalWeeklies = UberCont.weeklyWeek;
+			UberCont.totalDailies = buffer_read(buffer, buffer_u16);
+			UberCont.totalWeeklies = buffer_read(buffer, buffer_u16);
+			UberCont.weeklyWeek = UberCont.totalWeeklies;
 			if latestVersion != UberCont.updateVersion
 			{
 				alarm[0] = min(alarm[0],1);
@@ -41,35 +39,45 @@ if (type == network_type_data) {
 			}
 			else
 			{
-				SetSeed();
-				UberCont.randomDailyMod = irandom_range(1,18);
-				UberCont.chestRan = 10;
-				network_destroy(serverSocket);
-				instance_destroy();
-				with Player
-				{
-					subarea = 0;
-					nochest = -1;
-				}
-				room_goto(romGame);
-				with UberCont {
-					if opt_gamemode == 26 {
-						var al = array_length(encrypted_data.ctot_dailies_race_seed);
-				        encrypted_data.ctot_dailies_race_seed[al] = todaysSeed + 1;
-						encrypted_data.daily_race_dates[al] = UberCont.today;
-				        encrypted_data.ctot_dailies_race_time[al] = -1;
-				        encrypted_data.dailies_race_day[al] = today;
-						scrSaveEncrypted();
-					} else if opt_gamemode == 27 {
-						todaysSeed += 1;
-						seed = UberCont.todaysSeed;
-				        var al = array_length(encrypted_data.ctot_dailies_score_seed);
-				        encrypted_data.ctot_dailies_score_seed[al] = todaysSeed;
-						encrypted_data.daily_score_dates[al] = UberCont.today;
-				        encrypted_data.ctot_dailies_score_score[al] = 0;
-				        encrypted_data.dailies_score_day[al] = today;
-						scrSaveEncrypted();
-				    }
+				var sendBuffer = buffer_create(4,buffer_grow,1);
+				buffer_write(sendBuffer,buffer_u8,NETDATA.STARTDAILY);
+				buffer_write(sendBuffer,buffer_u16,myClientId);
+				buffer_write(sendBuffer,buffer_string,date_date_string(date_current_datetime()));
+				network_send_packet(serverSocket, sendBuffer, buffer_get_size(sendBuffer));
+			}
+		break;
+		case NETDATA.STARTDAILY:
+			UberCont.todaysSeed = buffer_read(buffer, buffer_u16);
+			UberCont.seed = UberCont.todaysSeed;
+			UberCont.dailyDay = buffer_read(buffer, buffer_u16);
+			SetSeed();
+			UberCont.randomDailyMod = irandom_range(1,18);
+			UberCont.chestRan = 10;
+			network_destroy(serverSocket);
+			instance_destroy();
+			with Player
+			{
+				subarea = 0;
+				nochest = -1;
+			}
+			room_goto(romGame);
+			with UberCont {
+				if opt_gamemode == 26 {
+					var al = array_length(encrypted_data.ctot_dailies_race_seed);
+				    encrypted_data.ctot_dailies_race_seed[al] = todaysSeed;
+					encrypted_data.daily_race_dates[al] = UberCont.today;
+				    encrypted_data.ctot_dailies_race_time[al] = -1;
+				    encrypted_data.dailies_race_day[al] = today;
+					scrSaveEncrypted();
+				} else if opt_gamemode == 27 {
+					todaysSeed += 1;
+					seed = UberCont.todaysSeed;
+				    var al = array_length(encrypted_data.ctot_dailies_score_seed);
+				    encrypted_data.ctot_dailies_score_seed[al] = todaysSeed;
+					encrypted_data.daily_score_dates[al] = UberCont.today;
+				    encrypted_data.ctot_dailies_score_score[al] = 0;
+				    encrypted_data.dailies_score_day[al] = today;
+					scrSaveEncrypted();
 				}
 			}
 		break;

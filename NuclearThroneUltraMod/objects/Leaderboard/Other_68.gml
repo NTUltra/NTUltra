@@ -12,11 +12,12 @@ if (type == network_type_data) {
 	switch(data)
 	{
 		case NETDATA.CLIENT_ID:
+		//SENDING SCORE
 			debug("CLIENT ID");
 			myClientId = buffer_read(buffer, buffer_u16);
 			var latestVersion = buffer_read(buffer, buffer_string);
-			UberCont.todaysSeed = buffer_read(buffer, buffer_u16);
 			UberCont.totalDailies = buffer_read(buffer, buffer_u16);
+			//Has a day passed?
 			UberCont.totalWeeklies = buffer_read(buffer, buffer_u16);
 			debug("TOTAL WEEKLIES ", UberCont.totalWeeklies);
 			debug("TOTAL DAILIES ", UberCont.totalDailies);
@@ -239,7 +240,6 @@ if (type == network_type_data) {
 					if leaderboardType != LEADERBOARD.VANFAN
 					{
 						var routeArray = string_split(scoreEntryList[2],">");
-						debug("routearray: ", routeArray);
 						var al = array_length(routeArray)-1
 						var areaArray = [];
 						for (var i = 0; i < al; i++)
@@ -262,7 +262,6 @@ if (type == network_type_data) {
 					scoreEntryList[lastIndex] = string_split(mutationsString,"-",true);
 				else
 					scoreEntryList[lastIndex] = "";
-				debug(scoreEntryList[lastIndex]);
 				leaderboard[j] = scoreEntryList;
 				j++;
 			}
