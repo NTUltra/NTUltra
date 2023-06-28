@@ -20,3 +20,4 @@ if UberCont.normalGameSpeed == 60
 	growspeed *= 0.5;
 	growshrink *= 0.5;
 }
+alarm[0] = 2;

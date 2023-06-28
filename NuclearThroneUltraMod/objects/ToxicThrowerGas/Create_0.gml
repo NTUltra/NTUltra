@@ -32,5 +32,5 @@ if instance_exists(Player)
 		move_outside_solid(point_direction(x,y,ground.x+o,ground.y+o),16);	
 	}
 }
-
+alarm[1] = 10;
 alarm[11] = 1;

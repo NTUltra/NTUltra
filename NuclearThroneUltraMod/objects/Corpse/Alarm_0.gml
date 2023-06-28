@@ -1,1 +1,2 @@
+/// @description Spawn portal
 scrSpawnEndLevelPortal();

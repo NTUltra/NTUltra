@@ -19,6 +19,7 @@ else if um == ultramods.shotgunElectro
 	instance_destroy(id,false);
 	with instance_create(x,y,Bullet2)
 	{
+		dmg += 1;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;

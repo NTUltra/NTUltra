@@ -49,4 +49,21 @@ if um == ultramods.bulletShotgun
 	}
 	instance_destroy(id,false);
 }
+else if um == ultramods.lightningPellet
+{
+	snd_play(choose(sndSpark1,sndSpark2),0.1,true)
+	with instance_create(x,y,FlameLightning)
+	{
+		dmg -= 3;
+		image_angle = other.direction;
+		team = other.team
+		ammo = 3+round(other.speed*0.8);
+		canUltraMod = false;
+		event_perform(ev_alarm,0)
+		visible = 0
+		with instance_create(x,y,LightningSpawn)
+		image_angle = other.image_angle
+	}
+	instance_destroy(id,false);
+}
 

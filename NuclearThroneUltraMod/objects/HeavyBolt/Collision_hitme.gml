@@ -19,7 +19,7 @@ if other.my_health >= piercedmg
 	target = other.target
 	}
 }
-else if other.my_health < piercedmg and (alarm[1]<1 || other.sprite_index != other.spr_hurt)//other.sprite_index != other.spr_hurt
+else if other.my_health > 0 && other.my_health < piercedmg and (alarm[1]<1 || other.sprite_index != other.spr_hurt)//other.sprite_index != other.spr_hurt
 {
 	with other
 	{

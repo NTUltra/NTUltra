@@ -16,113 +16,96 @@ function scrSpawnEndLevelPortal(){
 		if (!instance_exists(becomenemy) and 
 		!instance_exists(Menu) and !instance_exists(RadMaggotChest) and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(UltraIcon))
 		{
-			//if instance_exists(Player)
-			//{
-			    if !instance_exists(Portal)
+			if !instance_exists(Portal)
+			{
+			    if !instance_exists(CrownPickup) && instance_exists(Floor)
 			    {
-			        if !instance_exists(CrownPickup) && instance_exists(Floor)
-			        {
-						if instance_exists(Portal)
+					if instance_exists(Portal)
+					{
+						dir = instance_furthest(Portal.x,Portal.y,Floor);
+					}
+					else
+					{
+						dir = instance_nearest(x-16,y-16,Floor)
+					}
+					if dir != noone
+					{
+						if instance_exists(Player)
 						{
-							dir = instance_furthest(Portal.x,Portal.y,Floor);
-						}
-						else
-						{
-							dir = instance_nearest(x-16,y-16,Floor)
-						}
-						if dir != noone
-						{
-							if instance_exists(Player)
+							if Player.area == 119
 							{
-								if Player.area == 119
-								{
-									instance_create(dir.x+16,dir.y+16,BecomeThrone2);
-									scrTurnIntoPortalArea();
-									exit;
-								}
-								else if Player.area == 120
-								{
-									instance_create(dir.x+16,dir.y+16,BecomeInvertedThrone2);
-									scrTurnIntoPortalArea(true);
-									exit;
-								}
+								instance_create(dir.x+16,dir.y+16,BecomeThrone2);
+								scrTurnIntoPortalArea();
+								exit;
 							}
-					        with instance_create(dir.x+16,dir.y+16,Portal)
-								type = 1
-						
-							//UNLOCK GAME MODE CLAUSTROFOBIA
-							with Player
+							else if Player.area == 120
 							{
-								if seconds<11 && ( my_health>0 || bleed>0 )
-									scrUnlockGameMode(6,"FOR COMPLETING A LEVEL#IN UNDER 10 SECONDS")
+								instance_create(dir.x+16,dir.y+16,BecomeInvertedThrone2);
+								scrTurnIntoPortalArea(true);
+								exit;
 							}
-							with UltraChest
-							{
-								instance_destroy();
-								scrRaddrop(50);
-							}
-					        instance_create(dir.x+16,dir.y+16,WallBreak);
-        
-					        Sleep(50)
 						}
-			        }
-			    }//can only spawn 1 portal in inverted worlds
-			    else if !scrIsInInvertedArea()
-			    {
-			        with Portal
-			        {
-						if inverted == false && type = 1
-						{
-							other.canspawnportal=false;
-						}
-			        }
-        
-			        if Portal.inverted == true && canspawnportal == true && instance_exists(Floor)
-			        {
-						if instance_exists(Portal)
-						{
-							dir = instance_furthest(Portal.x,Portal.y,Floor);
-						}
-						else
-						{
-							dir = instance_nearest(x-16,y-16,Floor);
-						}
-				        with instance_create(dir.x+16,dir.y+16,Portal)
+					    with instance_create(dir.x+16,dir.y+16,Portal)
 							type = 1
+						
+						//UNLOCK GAME MODE CLAUSTROFOBIA
+						with Player
+						{
+							if seconds<11 && ( my_health>0 || bleed>0 )
+								scrUnlockGameMode(6,"FOR COMPLETING A LEVEL#IN UNDER 10 SECONDS")
+						}
 						with UltraChest
 						{
 							instance_destroy();
 							scrRaddrop(50);
 						}
-						//UNLOCK GAME MODE CLAUSTROFOBIA
-						with Player
-						{
-							if seconds<11 && ( my_health>0 || bleed>0 )
-								scrUnlockGameMode(6,"FOR COMPLETING AN AREA#IN UNDER 10 SECONDS")
-						}
+					    instance_create(dir.x+16,dir.y+16,WallBreak);
         
-				        instance_create(dir.x+16,dir.y+16,WallBreak);
-        
-				        Sleep(50)
-						with Corpse
-							canspawnportal = false;
-			        }
+					    Sleep(50)
+					}
 			    }
-				/*
-			}
-		    else if !instance_exists(Portal) && instance_exists(Floor)//No Player
-		    {
-		        if !instance_exists(CrownPickup)
-		        {
-					dir = instance_nearest(x-16,y-16,Floor);
-			        with instance_create(dir.x+16,dir.y+16,Portal)
+			}//can only spawn 1 portal in inverted worlds
+			else if !scrIsInInvertedArea()
+			{
+			    with Portal
+			    {
+					if inverted == false && type = 1
+					{
+						other.canspawnportal=false;
+					}
+			    }
+        
+			    if Portal.inverted == true && canspawnportal == true && instance_exists(Floor)
+			    {
+					if instance_exists(Portal)
+					{
+						dir = instance_furthest(Portal.x,Portal.y,Floor);
+					}
+					else
+					{
+						dir = instance_nearest(x-16,y-16,Floor);
+					}
+				    with instance_create(dir.x+16,dir.y+16,Portal)
 						type = 1
+					with UltraChest
+					{
+						instance_destroy();
+						scrRaddrop(50);
+					}
+					//UNLOCK GAME MODE CLAUSTROFOBIA
+					with Player
+					{
+						if seconds<11 && ( my_health>0 || bleed>0 )
+							scrUnlockGameMode(6,"FOR COMPLETING AN AREA#IN UNDER 10 SECONDS")
+					}
         
-			        instance_create(dir.x+16,dir.y+16,WallBreak);
+				    instance_create(dir.x+16,dir.y+16,WallBreak);
         
-			        Sleep(50)
-		        }
-		    }*/
+				    Sleep(50)
+					with Corpse
+						canspawnportal = false;
+			    }
+			}
 		}
 	}
 }

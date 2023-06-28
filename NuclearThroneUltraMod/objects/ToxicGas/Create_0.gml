@@ -31,3 +31,4 @@ if instance_exists(Player)
 		image_yscale -= 0.1
 	}
 }
+alarm[1] = 10;

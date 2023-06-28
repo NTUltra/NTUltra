@@ -21,7 +21,10 @@ function scrDrawHUD() {
 			draw_text(xx,median(__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-30,__view_get( e__VW.YView, 0 )+20,y),string_hash_to_newline(string(mytext)))
 		}
 	}
-
+	with DamageNumbers
+	{
+		event_user(0);	
+	}
 	with LevelUp
 	draw_sprite(sprite_index,-1,x,y)
 

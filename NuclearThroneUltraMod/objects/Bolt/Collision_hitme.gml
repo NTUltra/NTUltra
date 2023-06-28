@@ -22,7 +22,7 @@ if other.my_health >= (dmg*0.5) && !array_contains(hitEntities,other.id)//other.
 		team = other.team;
 	}
 }
-else if other.my_health < (dmg*0.5) and !array_contains(hitEntities,other.id)// other.sprite_index != other.spr_hurt)//other.sprite_index != other.spr_hurt
+else if other.my_health > 0 && other.my_health < (dmg*0.5) and !array_contains(hitEntities,other.id)// other.sprite_index != other.spr_hurt)//other.sprite_index != other.spr_hurt
 {
 	hitEntities[array_length(hitEntities)] = other.id;
 	with other

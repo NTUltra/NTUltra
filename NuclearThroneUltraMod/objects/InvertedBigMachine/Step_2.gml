@@ -7,3 +7,4 @@ if alarm[3] < 1 && prevhealth > my_health
 	var dmgTaken = prevhealth - my_health;
 	my_health += dmgTaken * 0.75;
 }
+event_inherited();

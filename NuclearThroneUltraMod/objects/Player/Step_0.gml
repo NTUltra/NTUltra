@@ -218,11 +218,13 @@ if !instance_exists(LevCont) and visible = 1
 			var dangle = random(1)*360;
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			//screen_save("explain"+string(scrn)+".png");
+			instance_create(x+64,y,EnemyMissile);
 			//scrn++;
+			/*
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
 			instance_create(f.x + 16,f.y + 16,UltraSniper)
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "Ultra Sniper";
+			thing.mytext = "Ultra Sniper";*/
 		}
 		if keyboard_check_pressed(ord("C")) {
 			var dangle = random(1)*360;
@@ -358,6 +360,12 @@ if !instance_exists(LevCont) and visible = 1
 				hard += 1.25;
 				thing = instance_create(x,y,PopupText)
 				thing.mytext = "SUBAREA++! "+string(subarea);
+			}
+			else if instance_exists(Portal)
+			{
+				scrNextLevel();
+				thing = instance_create(x,y,PopupText)
+				thing.mytext = string(area) + "-" + string(subarea);
 			}
 			else
 			{
@@ -1823,9 +1831,9 @@ display_mouse_set(mox,moy);
 
 /* */
 ///Angel flying through walls
-if race==18
+if race==18&& !instance_exists(LevCont) && !instance_exists(Portal)
 {
-	if flying > 0 && !instance_exists(SpiralCont)
+	if flying > 0
     {
 	    flying--;
 	    if flying<1

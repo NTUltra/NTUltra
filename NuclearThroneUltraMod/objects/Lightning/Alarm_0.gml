@@ -146,7 +146,7 @@ if wall != noone && wall.object_index != WallHitMe
 if round(ammo) > 0
 {
 	image_index += 0.4/max(1,ceil(ammo));
-	with instance_create(x,y,Lightning)
+	with instance_create(x,y,object_index)
 	{
 		target = other.target;
 		isog = other.isog;
@@ -165,7 +165,7 @@ if round(ammo) > 0
 	}
 	if team == 2 && round(ammo) % fork == 0//Forking lightning
 	{
-		with instance_create(x,y,Lightning)
+		with instance_create(x,y,object_index)
 		{
 			target = other.target;
 			isog = other.isog;

@@ -5,7 +5,7 @@ day = date_date_string(date_current_datetime());
 var lastweek = week;
 week = date_get_week(date_current_datetime());
 
-if day != yesterday || forceDayPass
+if day != yesterday
 {
 	var fileName = file_find_first("ds*", 0);
 	totalDailies = defaultTotalDailies;
@@ -45,7 +45,7 @@ if day != yesterday || forceDayPass
 		}
 		weekSeed = byteSeed;
 		random_set_seed(weekSeed);
-		weekGamemode = irandom_range(1,36);
+		weekGamemode = irandom_range(1,37);
 		//Manual gamemode injection here
 		weeklyOption = [];
 		if weekGamemode == 26//Daily race
@@ -60,20 +60,23 @@ if day != yesterday || forceDayPass
 				}
 			break;
 			case 17://CHEATS
-				weekGamemode = 40;//Hard mode infinite levels
+				weekGamemode = 34;//Hard mode
 			break;
 			case 19://Disc room
 				weeklyOption[0] = irandom_range(1,100);//Disc amount
 				weeklyOption[1] = irandom_range(1,20);//Disc damage
 			break;
 			case 35://God frog
-				weekGamemode = choose(40,34);//Hard mode
+				weekGamemode = 39;//Hard mode (infinite levels)
 			break;
 			case 26://Daily race
 				weekGamemode = 38;//all mutations infinite levels
 			break;
 			case 27://Daily score
 				weekGamemode = 25;//Survival arena
+			break;
+			case 37:
+				weekGamemode = 41;//Gore galore
 			break;
 		}
 		var fileName = file_find_first("w*", 0);

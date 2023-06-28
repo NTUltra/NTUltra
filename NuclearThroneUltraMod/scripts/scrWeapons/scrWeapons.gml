@@ -37,7 +37,7 @@ function scrWeapons() {
 	wep_name[3] = "WRENCH"
 	wep_type[3] = 0
 	wep_auto[3] = 0
-	wep_load[3] = 22
+	wep_load[3] = 21
 	wep_cost[3] = 0
 	wep_sprt[3] = sprWrench
 	wep_area[3] = 2
@@ -449,7 +449,7 @@ function scrWeapons() {
 	wep_cost[40] = 0
 	wep_sprt[40] = sprGoldWrench
 	wep_area[40] = 17
-	wep_text[40] = "shiny wrench"
+	wep_text[40] = "riveting"
 	wep_swap[40] = sndSwapHammer
 	wep_rad[40] = 0;
 
@@ -511,7 +511,7 @@ function scrWeapons() {
 	wep_name[46] = "CHICKEN SWORD"
 	wep_type[46] = 0
 	wep_auto[46] = 0
-	wep_load[46] = 17
+	wep_load[46] = 25
 	wep_cost[46] = 0
 	wep_sprt[46] = sprSword
 	wep_area[46] = -1
@@ -935,7 +935,7 @@ function scrWeapons() {
 	wep_type[84] = 1
 	wep_auto[84] = 1
 	wep_load[84] = 2
-	wep_cost[84] = 2
+	wep_cost[84] = 1.75
 	wep_sprt[84] = sprTripleBloodGun
 	wep_area[84] = 3
 	wep_text[84] = "fueled by fleshwounds"
@@ -1034,9 +1034,9 @@ function scrWeapons() {
 	wep_type[93] = 1
 	wep_auto[93] = 1
 	wep_load[93] = 3
-	wep_cost[93] = 1
+	wep_cost[93] = 1.5
 	wep_sprt[93] = sprBouncerSMG
-	wep_area[93] = 6
+	wep_area[93] = 5
 	wep_text[93] = "first reddit requested"
 	wep_swap[93] = sndSwapPistol
 	wep_rad[93] = 0;
@@ -1088,7 +1088,7 @@ function scrWeapons() {
 	wep_name[98] = "MORPH-O-PISTOL"
 	wep_type[98] = 5
 	wep_auto[98] = 0
-	wep_load[98] = 20
+	wep_load[98] = 22
 	wep_cost[98] = 1
 	wep_sprt[98] = sprMorphOPistol
 	wep_area[98] = 3
@@ -3201,7 +3201,7 @@ function scrWeapons() {
 	wep_type[290] = 1
 	wep_auto[290] = 1
 	wep_load[290] = 3
-	wep_cost[290] = 1
+	wep_cost[290] = 1.5
 	wep_sprt[290] = sprGoldenBouncerSMG
 	wep_area[290] = 18
 	wep_text[290] = "fast bouncing"

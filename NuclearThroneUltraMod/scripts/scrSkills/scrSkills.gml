@@ -217,7 +217,7 @@ function scrSkills() {
 	skill_msnd[11] =  sndMutScarierFace
 	if instance_exists(Player) && Player.race = 25
 	{
-		skill_text[11] = "22% LESS ENEMY HP"
+		skill_text[11] = "22% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE ON BIG HEALTHPOOLS"
 	}
 
 	skill_name[12] = "EUPHORIA"

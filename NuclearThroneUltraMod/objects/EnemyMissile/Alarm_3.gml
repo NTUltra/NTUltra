@@ -1,2 +1,2 @@
-/// @description xxx
+/// @description Lifetime
 instance_destroy();

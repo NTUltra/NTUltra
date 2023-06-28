@@ -917,7 +917,12 @@ if my_health <= 0 && armour < 1
 		image_angle = direction}
 		}
 		if !instance_exists(LevCont) && !instance_exists(GenCont) && !place_meeting(x,y,Portal) && !instance_exists(SpiralCont)
-			bleed += 1;
+		{
+			if UberCont.normalGameSpeed == 60
+				bleed += 0.5;
+			else
+				bleed += 1;
+		}
 		my_health = 0
 	}
 	else

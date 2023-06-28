@@ -113,16 +113,42 @@ if prevhealth > my_health
 		
 		if UberCont.opt_dmgindicator
 	    {
-	        with instance_create(x+irandom(16)-16,y+irandom(16)-16,PopupText)
-	        {
-		        theColour=c_orange;
-		        mytext=string(dmgTaken)
-		        time = 6
-		        alarm[1] = 1;
-		        blink=false;
-		        vspeed = irandom(3)-1;
-		        hspeed = irandom(3)-1;
-	        }
+			var offset = sprite_height*0.5;
+			if offset >= 48
+			{
+				offset = 0;
+			}
+			var newDmg = true;
+			if instance_exists(DamageNumbers)
+			{
+				var o = instance_nearest(x, y - offset, DamageNumbers);
+				if o != noone && o.owner = id
+				&& point_distance(x,y - offset,o.x,o.y) < 32 + offset
+				{
+					newDmg = false;
+					with o
+					{
+						dmg += dmgTaken;
+						var dir = point_direction(x,y,other.x,other.y - offset)
+						x += lengthdir_x(3,dir);
+						y += lengthdir_y(3,dir);
+						motion_add(dir,2);
+						speed = max(speed,other.speed*0.5);
+						event_user(1);
+					}
+				}
+			}
+			if newDmg
+			{
+				with instance_create(x,y, DamageNumbers)
+				{
+					owner = other.id;
+					speed = other.speed;
+					direction = other.direction;
+					dmg = dmgTaken;
+					event_user(1);
+				}	
+			}
 	    }
 	}
 	prevhealth = my_health;

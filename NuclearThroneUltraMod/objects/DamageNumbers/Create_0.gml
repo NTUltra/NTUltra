@@ -1,0 +1,9 @@
+size = 0;
+dmg = 0;
+friction = 0.6;
+surf = -1;
+fadeHeight = 10;
+middle = 5;
+fadeDir = choose(1.5,-1.5);
+alarm[6] = 1;
+owner = noone;

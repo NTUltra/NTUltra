@@ -248,7 +248,7 @@ function scrUltras(altOverride = false) {
 	if altOverride || (instance_exists(Player) && ((Player.crown == 12 && instance_exists(UltraIcon)) || Player.altUltra))
 	{
 		ultra_name[35] = "SUCOF"
-		ultra_text[35] = "EMIT SESREVER EVITCA"//ACTIVE REVERSES TIME
+		ultra_text[35] = "SELITCEJORP SESREVER EVITCA"//ACTIVE REVERSES PROJECTILES | EMIT SESREVER EVITCA
 		ultra_tips[35] = "reverse time"
 	}
 

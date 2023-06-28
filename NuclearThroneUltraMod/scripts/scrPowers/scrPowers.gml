@@ -2643,15 +2643,6 @@ function scrPowers() {
 					x -= hspeed*pslow;
 					y -= vspeed*pslow;
 				}
-				with MeleeParent
-				{
-					image_speed *= 4;
-				}
-				with enemy
-				{
-					x -= hspeed*pslow;
-					y -= vspeed*pslow;
-				}
 			}
 			else
 			{
@@ -2672,10 +2663,6 @@ function scrPowers() {
 						x -= hspeed*pslow;
 						y -= vspeed*pslow;
 					}
-				}
-				with MeleeParent
-				{
-					image_speed *= 4;
 				}
 			}
 		}

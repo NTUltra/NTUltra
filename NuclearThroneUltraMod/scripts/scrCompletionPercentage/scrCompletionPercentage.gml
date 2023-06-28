@@ -9,7 +9,7 @@ function scrCompletionPercentage() {
 
 	//gamemodes
 	everything+=(maxgamemode)*6//21
-	everything -= 6;//Final 100% unlock does not count
+	everything -= 18;//Final 100% unlock does not count Weekly daily daily
 
 	//characters
 	everything+=racemax*33;//characters are priority (also includes crownstart (2))
@@ -32,24 +32,25 @@ function scrCompletionPercentage() {
 	var countgamemode=1;
 	repeat(maxgamemode)
 	{
-	if gamemode_have[countgamemode] = 1 && countgamemode != 17
-		unlocked+=6
+		if gamemode_have[countgamemode] = 1 && countgamemode != 17
+			unlocked+=6
 
-	countgamemode++;
+		countgamemode++;
 	}
+	unlocked -= 12;//Weekly daily daily
 
 	//characters
 	var countrace=1;
 
 	repeat(racemax)
 	{
-	if race_have[countrace] = 1
-	unlocked+=30//10 instead of 1 because these should count more into the completion shit
+		if race_have[countrace] = 1
+		unlocked+=30//10 instead of 1 because these should count more into the completion shit
 
-	if ctot_all_crowns_taken[countrace] > 0//Unlocked crownstart
-		unlocked += 3;
+		if ctot_all_crowns_taken[countrace] > 0//Unlocked crownstart
+			unlocked += 3;
 
-	countrace++;
+		countrace++;
 	}
 	unlocked -= 66;//Don't count the first two characters and there crownstart (3points each)
 	//skins
@@ -59,8 +60,8 @@ function scrCompletionPercentage() {
 	repeat(racemax)
 	{
 
-	if race_bskin[countrace] = 1
-	unlocked+=12
+		if race_bskin[countrace] = 1
+			unlocked+=12
 
 	countrace++;
 	}
@@ -69,10 +70,10 @@ function scrCompletionPercentage() {
 	repeat(racemax)
 	{
 
-	if race_cskin[countrace] = 1
-	unlocked+=12
+		if race_cskin[countrace] = 1
+			unlocked+=12
 
-	countrace++;
+		countrace++;
 	}
 	var percentage;
 	percentage=(unlocked/everything)*100;//round( (unlocked/everything)*100 );
@@ -94,17 +95,21 @@ function scrCompletionPercentage() {
 			{
 				if start_wep_have[countstartwep,countrace] == 0
 				{
-					//unlocked++//If you want to count golds into percentage
 					gotAllGold = false;
 					continue;
 				}
+				/*
+				else
+				{
+					unlocked++//If you want to count golds into percentage
+				}*/
 	
 				totalStartWeps++;
 				countstartwep++;
 			}
 			countrace++;
 		}
-		//percentage=round( (unlocked/everything)*100 );*/
+		//percentage=round( (unlocked/everything)*100 );//*/
 	}
 	return percentage;
 }
