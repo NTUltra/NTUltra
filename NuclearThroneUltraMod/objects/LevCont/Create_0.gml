@@ -10,12 +10,29 @@ __view_set( e__VW.XView, 0, 0 )
 __view_set( e__VW.YView, 0, 0 )
 wave = 0
 gameovertime = 0;
+
 with UberCont
 {
 	if (useSeed)
 	{
 		random_set_seed(seed+UberCont.globalMutationsChosen);
 	}
+}
+if Player.charpoints > 0
+{
+	chars = [0];
+	var step = 28
+	var xx = __view_get( e__VW.XView, 0 ) + (__view_get( e__VW.WView, 0 )*0.5) - (step*5);
+	var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24;
+	for (var i = 0; i < 10; i++)
+	{
+		with instance_create(xx, yy, CharIcon)
+		{
+			skill = other.chars[0];
+		}
+		xx += step;
+	}
+	exit;
 }
 if Player.crownpoints > 0
 {
@@ -67,7 +84,7 @@ if dir<12
 			if Player.level > 9
 				sprite_index = sprCrownOfReincarnationUpgraded;
 		}
-		if UberCont.opt_gamemode == 27
+		if scrIsGamemode(27)
 		{
 			if crown == 7
 			{
@@ -126,7 +143,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 				instance_destroy();
 			}
 		}
-		if UberCont.opt_gamemode == 28 || UberCont.opt_gamemode == 38 //ALL MUTATION CHOICES
+		if scrIsGamemode(28)//ALL MUTATION CHOICES
 		{
 			var xx = __view_get( e__VW.XView, 0 )+16;
 			var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24;
@@ -287,7 +304,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
     }
     else{
 	//Get a regular mutation
-    if UberCont.opt_gamemode == 32 {
+    if scrIsGamemode(32) {
 		//No alkaline boiling veins and no strong spirit
 		// One hit wonder
 		with Player
@@ -374,7 +391,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 
 //}
 
-	if UberCont.opt_gamemode == 28 || UberCont.opt_gamemode == 38//ALL MUTATION CHOICES
+	if scrIsGamemode(28)//ALL MUTATION CHOICES
 	{
 		var xx = __view_get( e__VW.XView, 0 )+16;
 		var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24;
@@ -526,7 +543,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 	        image_index=0;
 	        }
 	    }
-	    if (UberCont.opt_gamemode == 24)
+	    if (scrIsGamemode(24))
 		{
 			with SkillIcon
 				skill = 22;//SHARPSTRESS	
@@ -534,7 +551,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
     }
 }
 image_speed = 0.4;
-if UberCont.opt_gamemode == 32 {
+if scrIsGamemode(32) {
 	// One hit wonder
 	with Player
 	{

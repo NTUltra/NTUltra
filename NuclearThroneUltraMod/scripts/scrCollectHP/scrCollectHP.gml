@@ -69,7 +69,7 @@ function scrCollectHP(num = 2){
 			instance_create(x,y,HealFX)
 		}
 
-		if UberCont.opt_gamemode == 9 //Casual mode
+		if scrIsGamemode(9) //Casual mode
 			num +=1;
 
 

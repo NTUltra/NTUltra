@@ -320,14 +320,14 @@ if Player.area == 126 || Player.area == 127
 goal = 120;
 
 
-if UberCont.opt_gamemode==6 && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels
+if scrIsGamemode(6) && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels
 goal=70+s;
 
-if UberCont.opt_gamemode==20 && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//big levels
+if scrIsGamemode(20) && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//big levels
 goal=300+s;
 
 }
-if UberCont.opt_gamemode == 25//Survival Arena
+if scrIsGamemode(25)//Survival Arena
 goal = 1;
 
 if instance_exists(MenuGen)

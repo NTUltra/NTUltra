@@ -2,7 +2,7 @@
 image_speed = 0;
 var dis = 48;
 jumpScared = false;
-if (UberCont.opt_gamemode == 25)
+if (scrIsGamemode(25))
 {
 	if instance_exists(Player)
 	{

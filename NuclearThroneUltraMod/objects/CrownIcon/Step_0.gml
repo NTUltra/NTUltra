@@ -289,7 +289,7 @@ if crown == 24
 if crown == 28
 {
 	//Crown of apocalypse
-	scrUnlockGameMode(41,"FOR FINDING THE SECRET#CROWN OF APOCALYPSE");
+	scrUnlockGameMode(39,"FOR FINDING THE SECRET#CROWN OF APOCALYPSE");
 }
 if oldcrown == 29
 {

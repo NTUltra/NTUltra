@@ -53,7 +53,6 @@ function scrBusinessHogInvestment() {
 
 	Player.hogpoints -= 1;
 	//Player.skillpoints -= 1;
-	debug("SKILLPOINTS:",Player.skillpoints);
 	/*
 	if Player.hogpoints > 1 || Player.skillpoints > 0
 	{

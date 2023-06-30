@@ -7,7 +7,7 @@ function scrUnlockAltSkin(raceIndex, altIndex) {
 		(UberCont.race_eskin[raceIndex] == 0 && altIndex == 1 ) ||
 		(UberCont.race_fskin[raceIndex] == 0 && altIndex == 2 )
 	) && 
-	(isValidGamemodeToUnlock(UberCont.opt_gamemode) ))//Crown start and hunter marked only can unlock shit
+	(isValidGamemodeToUnlock() ))//Crown start and hunter marked only can unlock shit
 	{
 		if (UberCont.race_dskin[raceIndex] == 0 && altIndex == 0 )
 			UberCont.race_dskin[raceIndex] = 1;

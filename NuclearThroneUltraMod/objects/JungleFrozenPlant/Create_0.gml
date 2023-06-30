@@ -30,7 +30,7 @@ if (instance_exists(Player))
 	{
 		bloodNeeded = 3;
 	}
-	if UberCont.opt_gamemode == 32
+	if scrIsGamemode(32)
 	{
 		bloodNeeded = 0;	
 	}

@@ -1,3 +1,3 @@
-/// @description xxx
+/// @description Init
 holdTime = 10;
 doneFor = false;

@@ -563,9 +563,9 @@ function scrMakeFloor(limiter) {
 		}
 	}
 	
-	if UberCont.opt_gamemode == 8
+	if scrIsGamemode(8)
 		instance_destroy();
-	if UberCont.opt_gamemode == 25 && !instance_exists(Vlambeer) && !instance_exists(MenuGen) && area != 0//Survival Arena
+	if scrIsGamemode(25) && !instance_exists(Vlambeer) && !instance_exists(MenuGen) && area != 0//Survival Arena
 	{
 		//instance_create(x,y,Floor)
 		x = 0;

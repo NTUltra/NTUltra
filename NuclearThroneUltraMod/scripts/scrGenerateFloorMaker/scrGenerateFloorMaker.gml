@@ -68,14 +68,14 @@ function scrGenerateFloorMaker(limiter) {
 		}
 		else if Player.area == 126 || Player.area == 127
 			goal = 130+s
-		if UberCont.opt_gamemode==6//small levels
+		if scrIsGamemode(6)//small levels
 		{
 			goal=45+s;
 			if Player.area == 9 && Player.subarea == 3
 				goal = 310;
 		}
 	}
-	if UberCont.opt_gamemode == 25 //Survival arena
+	if scrIsGamemode(25) //Survival arena
 	{
 		goal = 1;
 	}
@@ -155,7 +155,7 @@ function scrGenerateFloorMaker(limiter) {
 
 	//instance_create(x,y,Floor) NEed test data on this
 
-	if (UberCont.opt_gamemode == 25 && !instance_exists(Vlambeer))
+	if (scrIsGamemode(25) && !instance_exists(Vlambeer))
 	{
 		limiter = scrMakeFloor(limiter);
 		exit;

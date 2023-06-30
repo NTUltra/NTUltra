@@ -17,7 +17,7 @@ if hover
 			canRestart = true;
 			if opt_gamemode != 37 && opt_gamemode != 26 && opt_gamemode != 27
 				previous_gamemode = opt_gamemode;
-			opt_gamemode = 37;
+			opt_gamemode = [37];
 		}
 	}
 	else

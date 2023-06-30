@@ -144,13 +144,13 @@ else if skill = 18//last wish
 		if race==9 || race==12//Chicken maxhealth regain
 	    {
 			var targetHealth = 8;
-			if UberCont.opt_gamemode == 5
+			if scrIsGamemode(5)
 				targetHealth = 1;
 			if skill_got[1] == 1//Rhino skin
 				targetHealth += 4;
 			if skill_got[33]//Glass arm cannon
 				targetHealth = max(1,targetHealth-2);
-			if UberCont.opt_gamemode == 9
+			if scrIsGamemode(9)
 				targetHealth += UberCont.casualModeHPIncrease;
 			targetHealth += UberCont.maxHpIncrease;
 	        if maxhealth<targetHealth

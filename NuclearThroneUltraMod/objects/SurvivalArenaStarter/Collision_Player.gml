@@ -1,6 +1,6 @@
 /// @description Start wave
 //Surprise attack
-if !jumpScared && UberCont.opt_gamemode == 25 && instance_exists(SurvivalWave) && other.subarea == 10
+if !jumpScared && scrIsGamemode(25) && instance_exists(SurvivalWave) && other.subarea == 10
 {
 	jumpScared = true;
 	mask_index = mskPickupThroughWall;
@@ -13,7 +13,7 @@ else if KeyCont.key_pick[other.p] = 1
 	mask_index = mskPickupThroughWall;
 	with SurvivalWave
 	{
-		if UberCont.opt_gamemode == 25
+		if scrIsGamemode(25)
 			event_user(0);
 		else if object_index != BallBossWave
 			event_user(1);

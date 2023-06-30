@@ -1,6 +1,6 @@
 function scrUnlockGameMode(gm, unlockText, specificGamemode = 0) {
 	//GAMEMODE UNLOCKABLE gm=gamemode
-	if UberCont.gamemode_have[gm]=0 && (isValidGamemodeToUnlock(UberCont.opt_gamemode) || UberCont.opt_gamemode == specificGamemode)
+	if UberCont.gamemode_have[gm]=0 && (isValidGamemodeToUnlock() || scrIsGamemode(specificGamemode))
 	{
 		UberCont.gamemode_have[gm]=1
 		debug("unlock");

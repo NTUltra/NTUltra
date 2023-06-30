@@ -444,7 +444,7 @@ if my_health < prevhealth
 	if !exception && alarm[3] < 1
 	{
 		noHit = 0;
-		if UberCont.opt_gamemode == 32 || ultra_got[109]
+		if scrIsGamemode(32) || ultra_got[109]
 		{
 			my_health = 0;
 			prevhealth = 0;
@@ -575,7 +575,7 @@ sharpteeth = prevhealth - my_health - damageReduced;
 var multiplier = 2.5;
 if race = 25
 multiplier*=1.25//Sharp teeth's damage!
-if UberCont.opt_gamemode == 24 //SHARP STRESS GAMEMODE
+if scrIsGamemode(24) //SHARP STRESS GAMEMODE
 	multiplier *= level;
 snd_play_2d(sndSharpTeeth);
 with enemy{

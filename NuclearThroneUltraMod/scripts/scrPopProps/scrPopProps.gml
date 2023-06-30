@@ -3,7 +3,7 @@ function scrPopProps() {
 	{
 
 
-	if UberCont.opt_gamemode=16  and !place_meeting(x,y,NOWALLSHEREPLEASE)
+	if scrIsGamemode(16) and !place_meeting(x,y,NOWALLSHEREPLEASE)
 	{
 	myx = x+choose(0,16)
 	myy = y+choose(0,16)

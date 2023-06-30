@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "mskBanditBoss",
+    "path": "sprites/mskBanditBoss/mskBanditBoss.yy",
+  },
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }

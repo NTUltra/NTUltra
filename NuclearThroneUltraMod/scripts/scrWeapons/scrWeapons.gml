@@ -6841,7 +6841,7 @@ function scrWeapons() {
 	maxwep = array_length(wep_name)-1;
 
 	//Only melee
-	if ((UberCont.opt_gamemode == 31) && !instance_exists(MenuGen))
+	if ((scrIsGamemode(31)) && !instance_exists(MenuGen))
 	{
 		for (var wi = 0; wi < maxwep; wi++) {
 			if !scrMeleeWeapons(wi)

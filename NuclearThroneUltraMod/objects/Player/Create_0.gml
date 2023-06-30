@@ -27,6 +27,7 @@ isPureHealthBoost = 0;
 hunterEye = 0;
 hunterEyeMax = 200;
 sheepFakeouts = 0;
+charpoints = 0;
 hogWep[0] = 0;
 hogWep[1] = 0;
 hogWep[2] = 0;
@@ -142,22 +143,22 @@ freezeframe400 = false
 if UberCont.opt_shake != 4
 screenshake400 = false
 with UberCont {
-    if opt_gamemode = 17 //CHEATS
+    if scrIsGamemode(17) //CHEATS
 		public = 0
     //Daily
 	if !instance_exists(PlayerSpawn) && instance_number(Player) == 1 && !instance_exists(CrownIcon)
 	{
 		if isWeekly {
-			UberCont.opt_gamemode = 0;
+			UberCont.opt_gamemode = [0];
 			instance_create(0,0,StartDaily);
 			// canRestart = false;
 		}
-	    else if opt_gamemode == 26 {
+	    else if scrIsGamemode(26) {
 			instance_create(0,0,StartDaily);
 	        canRestart = false;
         
 	    }
-	    else if opt_gamemode == 27 {
+	    else if scrIsGamemode(27) {
 			instance_create(0,0,StartDaily);
 	        canRestart = false;
 	    }
@@ -185,12 +186,11 @@ else
     race = 19;
 
 
-if UberCont.opt_gamemode == 7 //ATOM TELEPORT ONLY GM
+if scrIsGamemode(7) //ATOM TELEPORT ONLY GM
 race = 15;
-if UberCont.opt_gamemode == 35
+if scrIsGamemode(35)
 race = 23
-//if UberCont.opt_gamemode==14//fish companion only
-//race=1;
+
 
 
 team = 2
@@ -277,7 +277,7 @@ if race == 25
 
 canSecondaryPop = true;
 
-if UberCont.opt_gamemode == 14 //fish companion only
+if scrIsGamemode(14) //fish companion only
 {
 	ultra_got[3] = 1;
 	if !instance_exists(Partner)
@@ -285,7 +285,7 @@ if UberCont.opt_gamemode == 14 //fish companion only
 }
 oneweponlywep = 0;
 //WEAPON STUFF!
-if UberCont.opt_gamemode = 1 { //one weapon only game mode yo
+if scrIsGamemode(1) { //one weapon only game mode yo
     if UberCont.opt_gm1wep - 1 == 0 {
         wep = ceil(irandom(maxwep));
     }
@@ -300,12 +300,12 @@ else {
 
 oneweponlywep = wep;
 
-if UberCont.opt_gamemode = 13
+if scrIsGamemode(13)
 	wep = 239; //rocketglove
 
-if UberCont.opt_gamemode == 14 //fish companion only no wep
+if scrIsGamemode(14) //fish companion only no wep
 	wep = 0;
-if UberCont.opt_gamemode == 31
+if UberCont.scrIsGamemode(31)
 {
 	if wep != 0 && !scrMeleeWeapons(wep)
 	{
@@ -376,7 +376,7 @@ else {
     ammo[wep_type[wep]] = typ_ammo[wep_type[wep]] * 3
 }
 
-if UberCont.opt_gamemode == 9
+if scrIsGamemode(9)
 {
 	maxhealth += UberCont.casualModeHPIncrease;
 }
@@ -384,7 +384,7 @@ maxSpeed = 4
 
 
 maxlevel = 10 + UberCont.levelIncrease;
-if UberCont.opt_gamemode == 15 //no mutaitons gamemode
+if scrIsGamemode(15) //no mutaitons gamemode
 maxlevel = 1;
 skillsChosen = 0
 skillpoints = 0;
@@ -392,17 +392,17 @@ crownpoints = 0
 
 kills = 0
 
-if UberCont.opt_gamemode == 30//Ultra mutation start
+if UberCont.scrIsGamemode(30)//Ultra mutation start
 {
 	skillsChosen = 10;
 	skillpoints = 1;
 }
-else if UberCont.opt_gamemode == 31//Melee only
+else if UberCont.scrIsGamemode(31)//Melee only
 {
 	skill_got[13] = 1;
 	totalSkills ++;
 }
-if UberCont.opt_gamemode == 32//One hit wonder
+if scrIsGamemode(32)//One hit wonder
 {
 	if array_length(UberCont.collectedRewards) > 0
 	{
@@ -440,14 +440,14 @@ oasisskip = -1;
 swapChar = false;
 crownvisits = 0
 reincarnate = false;
-if UberCont.opt_gamemode = 21 { //loop start
+if scrIsGamemode(21) { //loop start
     hard = 18
     loops = 1;
 }
 var r = UberCont.racepick;
 if r == 0
 	r = race
-if UberCont.opt_gamemode == 36//Ultra mod start
+if scrIsGamemode(36)//Ultra mod start
 {
 	area = 100;
     hard -= 1;
@@ -463,7 +463,7 @@ if UberCont.crown_start[r] && !instance_exists(PlayerSpawn) && UberCont.opt_game
 	instance_create(x,y,Crown)
 }
 
-if UberCont.opt_gamemode == 25 {
+if scrIsGamemode(25) {
     area = 116;
 }
 
@@ -495,7 +495,7 @@ if race = 5 //Plant
 
 if race = 7 //roids secondary weapon
 {
-    if UberCont.opt_gamemode = 1 { //one weapon only game mode yo
+    if scrIsGamemode(1) { //one weapon only game mode yo
         if UberCont.opt_gm1wep - 1 == 0
 			bwep = irandom(maxwep);
         else
@@ -505,7 +505,7 @@ if race = 7 //roids secondary weapon
         bwep = wep
     } //start with another golden weapon instead of a revolver
 
-    if UberCont.opt_gamemode = 13
+    if scrIsGamemode(13)
 		bwep = 239; //rocketglove
 
     accuracy = 1.8
@@ -644,13 +644,13 @@ image_speed = 0.4
 // I AM A CHEATER ammo[5] = 99 wep = 19
 
 
-if UberCont.opt_gamemode == 5 //1HP gamemode
+if scrIsGamemode(5) //1HP gamemode
 {
     my_health = 1;
     maxhealth = my_health
 }
 
-if UberCont.opt_gamemode = 11 //GUN GAME
+if scrIsGamemode(11) //GUN GAME
 {
     do {
         wep = irandom(maxwep);
@@ -671,7 +671,7 @@ if UberCont.opt_gamemode = 11 //GUN GAME
 
 }
 
-if UberCont.opt_gamemode == 8 { //VAN FAN
+if scrIsGamemode(8) { //VAN FAN
     area = 117;
 	if race != 13 // Sheep gets no fanpusher
 	{
@@ -694,7 +694,7 @@ if scrCheckGold(wep_name[wep])
 	onlyusemegold = true;
 isAlkaline = true;
 myShield = -1;
-if UberCont.opt_gamemode == 25 && !instance_exists(SurvivalWave)
+if scrIsGamemode(25) && !instance_exists(SurvivalWave)
 {
 	instance_create(x,y,SurvivalWave);	
 }
@@ -708,7 +708,7 @@ if wep == bwep
 
 
 //TEST HAVE ALL MUTS FROG GOD
-if UberCont.opt_gamemode == 35
+if scrIsGamemode(35)
 {
 	var i = 0
 	repeat(maxskill+1)

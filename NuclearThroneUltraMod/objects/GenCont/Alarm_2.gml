@@ -205,7 +205,7 @@ if Player.area = 100
 	{
 		instance_create(x+16,y+16,CrownPickup)
 	    
-		if Player.loops > 0 || UberCont.opt_gamemode == 36//Ultra mod start
+		if Player.loops > 0 || scrIsGamemode(36)//Ultra mod start
 		{
 			var xx = x;
 			var yy = y;
@@ -623,7 +623,7 @@ if Player.ultra_got[65] && Player.area !=100 && (Player.area != 118 && Player.su
 }
 
 
-if !(( (Player.area == 9 || Player.area == 118) && Player.subarea == 3) || ((Player.area == 6 || Player.area == 112) && Player.subarea == 2) || UberCont.opt_gamemode == 25 || UberCont.opt_gamemode == 8
+if !(( (Player.area == 9 || Player.area == 118) && Player.subarea == 3) || ((Player.area == 6 || Player.area == 112) && Player.subarea == 2) || scrIsGamemode(25) || scrIsGamemode(8)
 || Player.area == 100)
 {
 	//safe corridors pls

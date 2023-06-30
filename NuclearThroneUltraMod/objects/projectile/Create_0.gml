@@ -13,7 +13,7 @@ isGrenade = false;
 typ = 0;
 wepFire = 0;
 depth = -1;
-if UberCont.opt_gamemode == 33//All Deflector
+if scrIsGamemode(33)//All Deflector
 {
 	hasBeenDeflected = false;
 	alarm[7] = 1;

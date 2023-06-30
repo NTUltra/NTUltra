@@ -14,13 +14,13 @@ with Player {
 	if race==9 || race=12//Chicken maxhealth & yung cuz regain
 	{
 		var targetHealth = 8;
-		if UberCont.opt_gamemode == 5
+		if scrIsGamemode(5)
 			targetHealth = 1;
 		if skill_got[1] == 1//Rhino skin
 			targetHealth += 4;
 		if skill_got[33]//Glass arm cannon
 			targetHealth = max(1,targetHealth-2);
-		if UberCont.opt_gamemode == 9
+		if scrIsGamemode(9)
 			targetHealth += UberCont.casualModeHPIncrease;
 		if skill_got[9] 
 			mHpI *= 2;

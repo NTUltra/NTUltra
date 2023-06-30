@@ -6,7 +6,7 @@ if hover
 	with Weekly
 		image_index = 0;
 	if !dailyDone {
-		if UberCont.opt_gamemode == 26
+		if scrIsGamemode(26)
 		{
 			dailyDone = false;
 			with UberCont
@@ -29,7 +29,7 @@ if hover
 				canRestart = false;
 				if opt_gamemode != 37 && opt_gamemode != 26 && opt_gamemode != 27
 					previous_gamemode = opt_gamemode;
-				opt_gamemode = 26;
+				opt_gamemode = [26];
 			}
 			
 		}

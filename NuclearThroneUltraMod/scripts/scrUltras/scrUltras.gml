@@ -347,6 +347,11 @@ function scrUltras(altOverride = false) {
 	ultra_tips[51] = "what a beast"
 	
 	/*
+		ultra_name[50] = "CODENAME S.A.S. : SECRET AGENT SHEEP"
+		ultra_text[50] = "ENEMIES THAT DON'T KNOW YOU'RE THERE#TAKE QUADRUPPLE DAMAGE##EACH AREA#TAKE ON THE APPEARANCE#OF A DIFFERENT CHARACTER##CROWN VAULT BECOMES YOUR SPY HUB#ALLOWING YOU ACCESS TO SEVERAL AREAS#"
+		ultra_tips[50] = "S.A.S."//Probably busted with unlockables but yea
+	*/
+	/* 
 	ultra_name[51] = "INDESTRUCTABLE"
 	ultra_text[51] = "IMMUNE WHILE CHARGING#CHARGE DEALS NO DAMAGE#CHARGE DOES NOT DISSIPATE"
 	ultra_tips[51] = "what a beast"
@@ -520,7 +525,7 @@ function scrUltras(altOverride = false) {
 		
 		//Have less than default max hp
 		if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (
-		((Player.maxhealth < 8 && UberCont.opt_gamemode != 9) || (UberCont.opt_gamemode == 9 && Player.maxhealth < 8 + UberCont.casualModeHPIncrease))
+		((Player.maxhealth < 8 && UberCont.opt_gamemode != 9) || (scrIsGamemode(9) && Player.maxhealth < 8 + UberCont.casualModeHPIncrease))
 		&& instance_exists(UltraIcon))))
 		{
 			ultra_name[72] = "MIRROR"

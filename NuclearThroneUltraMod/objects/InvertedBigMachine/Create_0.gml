@@ -32,7 +32,7 @@ if instance_exists(GenCont)
 else
 	alarm[7] = 60;
 
-if UberCont.opt_gamemode = 6 && instance_exists(Player)
+if scrIsGamemode(6) && instance_exists(Player)
 {
 Player.x=x;
 Player.y=y+124;

@@ -62,7 +62,7 @@ if instance_exists(Player)
 	Player.y = 10016
 	if (Player.area == 9 || Player.area == 118) && Player.subarea == 3
 		Player.y -= 64;
-	if UberCont.opt_gamemode == 25
+	if scrIsGamemode(25)
 	{
 		Player.x = SurvivalArenaStarter.x;
 		Player.y = SurvivalArenaStarter.y-128;
@@ -77,14 +77,14 @@ if instance_exists(Player)
 	Player.x = 10016+96;
 	Player.y = 10016+128;
 	}
-	else if Player.area == 100 && UberCont.opt_gamemode == 36 && Player.crownvisits == 0 && instance_exists(SurvivalArenaStarter)//Ultra mod start
+	else if Player.area == 100 && scrIsGamemode(36) && Player.crownvisits == 0 && instance_exists(SurvivalArenaStarter)//Ultra mod start
 	{
 		Player.x = SurvivalArenaStarter.x;
 		Player.y = SurvivalArenaStarter.y - 48;
 		UberCont.crownVaultChallenge = 3;
 		with SurvivalWave
 		{
-			if UberCont.opt_gamemode == 25
+			if scrIsGamemode(25)
 				event_user(0);
 			else if object_index != BallBossWave
 				event_user(1);

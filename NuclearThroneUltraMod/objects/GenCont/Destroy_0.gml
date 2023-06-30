@@ -1,6 +1,6 @@
 room_speed=UberCont.normalGameSpeed;
 SetSeed();
-if UberCont.opt_gamemode == 8
+if scrIsGamemode(8)
 {
 	with Floor
 	{
@@ -283,7 +283,7 @@ if instance_exists(Player)
     
     
     
-    if UberCont.opt_gamemode=19&&instance_exists(Floor)//DISCS!
+    if scrIsGamemode(19)&&instance_exists(Floor)//DISCS!
     {
     repeat(UberCont.opt_discs)
     {

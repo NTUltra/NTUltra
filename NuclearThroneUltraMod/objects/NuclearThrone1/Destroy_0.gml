@@ -16,10 +16,10 @@ if instance_exists(Player)
 	}
 	if Player.race == 23
 	{
-		if UberCont.opt_gamemode == 19 && UberCont.opt_discs >= 6 && UberCont.opt_discdamage >= 2
+		if scrIsGamemode(19) && UberCont.opt_discs >= 6 && UberCont.opt_discdamage >= 2
 			scrUnlockCSkin(23,"FOR BEATING THE THRONE#ON DISC ROOM MODE#AS FROG#WHAT A MADLAD!",19);
 	}
-	if UberCont.opt_gamemode == 25
+	if scrIsGamemode(25)
 	{
 		scrUnlockGameMode(34,"FOR KILLING THE THRONE#IN THE SURVIVAL ARENA",25);
 	}

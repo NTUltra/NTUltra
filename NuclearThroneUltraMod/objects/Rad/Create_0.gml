@@ -5,7 +5,7 @@ isGettingSucked = false;
 
 blink = 30
 alarm[0] = 150+random(30)
-if UberCont.opt_gamemode == 9 //CASUAL MODE
+if scrIsGamemode(9) //CASUAL MODE
 	alarm[0] += 30;
 if scrIsHardMode() //HARD MODE
 	alarm[0] -= 10;

@@ -2223,8 +2223,11 @@ function scrPowers() {
 		    if ultra_got[91]//FROG MOMMA ULTRA C
 		    {
     
-		    if toxicamount = floor(maxtoxicamount*0.1)
-				instance_create(x,y,FrogEgg);
+				if toxicamount = floor(maxtoxicamount*0.1)
+					with instance_create(x,y,FrogEgg)
+					{
+						team = other.team;	
+					}
     
 		    }
 			

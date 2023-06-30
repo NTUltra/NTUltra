@@ -20,7 +20,7 @@ function ApplyEuphoria(){
 				speed = max(0,speed-0.1);
 				speed *= 0.82;
 			}
-			if UberCont.opt_gamemode == 9
+			if scrIsGamemode(9)
 			{
 				//Easy mode adjustments
 				speed = speed*0.9

@@ -34,7 +34,7 @@ with instance_create(x-64,y+32,BigMachineTurret)
 
 
 
-if UberCont.opt_gamemode = 6 && instance_exists(Player)
+if scrIsGamemode(6) && instance_exists(Player)
 {
 Player.x=x;
 Player.y=y+132;

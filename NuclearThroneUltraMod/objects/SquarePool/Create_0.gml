@@ -26,7 +26,7 @@ if instance_exists(Player)
 		{
 			alarm[4] -= 5;
 		}
-		if UberCont.opt_gamemode == 9
+		if scrIsGamemode(9)
 		{
 			alarm[4] -= 5;
 		}

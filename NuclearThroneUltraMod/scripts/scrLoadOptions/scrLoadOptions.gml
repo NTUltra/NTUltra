@@ -35,8 +35,16 @@ function scrLoadOptions() {
 	opt_bossintro = ini_read_real("OPTIONS","bossintro",0);
 	opt_timer = ini_read_real("OPTIONS","timer",0);
 	normalGameSpeed = ini_read_real("OPTIONS","fps",30);
-	opt_gamemode = ini_read_real("OPTIONS","gamemode",0);
-	if opt_gamemode == 39
+	//Read array!??
+	var al = ini_read_real("OPTIONS","gamemodes",1);
+	opt_gamemode = [];
+	if al < 1
+		opt_gamemode = [0];
+	for (var i = 0; i < al; i ++)
+	{
+		opt_gamemode[i] = ini_read_real("OPTIONS","gamemode"+string(i),0);
+	}
+	if scrIsGamemode(38)
 	{
 		useSeed = true;	
 	}

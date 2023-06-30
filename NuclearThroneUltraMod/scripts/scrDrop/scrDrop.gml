@@ -89,7 +89,7 @@ function scrDrop(itemdrop, weapondrop) {
 		dropRateBuff += 0.3;
 	}
 
-	if UberCont.opt_gamemode=2{
+	if scrIsGamemode(2){
 		weapondrop+=10
 		itemdrop+=10
 	}

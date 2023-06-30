@@ -15,7 +15,7 @@ if instance_exists(Player) && Player.skill_got[12]
 	laserDecrease = 0.3;
 }
 	dmg = 3;
-if UberCont.opt_gamemode == 9//Casual mode
+if scrIsGamemode(9)//Casual mode
 	dmg = 2;
 if scrIsHardMode()//HARD MODE
 	dmg = 4;

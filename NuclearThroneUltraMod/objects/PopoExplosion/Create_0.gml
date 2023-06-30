@@ -4,7 +4,7 @@ with myExplosionMask
 {
 	mask_index = mskPopoExplosion4Player;
 	dmg = 7;
-	if UberCont.opt_gamemode == 9
+	if scrIsGamemode(9)
 		dmg = 4;
 	else if scrIsHardMode()//HARD MODE
 		dmg = 10;

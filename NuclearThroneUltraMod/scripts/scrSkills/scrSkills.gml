@@ -304,7 +304,7 @@ function scrSkills() {
 	skill_msnd[21] =  sndMutBoltMarrow
 
 	skill_name[22] = "SHARP STRESS"
-	if UberCont.opt_gamemode == 24
+	if scrIsGamemode(24)
 	{
 		skill_text[22] = "FUCK YEA SHARP STRESS!#IT STACKS!"
 	}
@@ -366,7 +366,7 @@ function scrSkills() {
 	skill_text[29] = "ENEMIES DON'T ATTACK YOU#FOR A COUPLE OF SECONDS#AT THE START OF EACH AREA"
 	if instance_exists(Player) && Player.race == 13
 		skill_text[29] = "ENEMIES DON'T ATTACK YOU#FOR A COUPLE OF SECONDS#AFTER YOU ENGAGE FIRE"
-	if UberCont.opt_gamemode == 25
+	if scrIsGamemode(25)
 		skill_text[29] = "ENEMIES DON'T ATTACK YOU#FOR A COUPLE OF SECONDS#WHEN THEY SPAWN IN"
 	skill_tips[29] = "sleep"
 	skill_msnd[29] =  sndInsomnia

@@ -10,7 +10,7 @@ if instance_exists(Player) {
 else area = BackCont.area
 if area==104
 area=103;
-if instance_exists(SurvivalWave)//(UberCont.opt_gamemode == 25 && !instance_exists(Vlambeer))
+if instance_exists(SurvivalWave)//(scrIsGamemode(25) && !instance_exists(Vlambeer))
 {
 	sprite_index=sprWall116Trans;
 }

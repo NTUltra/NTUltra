@@ -20,10 +20,11 @@ UberCont.opt_discdamage=0;
 }
 
 draw_set_valign(fa_top);
-draw_set_halign(fa_left);
+draw_set_halign(fa_right);
 draw_text_color(x+32,y,string_hash_to_newline(string(UberCont.opt_discdamage)),c_white,c_white,c_white,c_white,1);
 
-draw_text_color(x-128,y,string_hash_to_newline("DISC DAMAGE: "),c_white,c_white,c_white,c_white,1)
+draw_text_color(x,y,string_hash_to_newline("DAMAGE: "),c_white,c_white,c_white,c_white,1)
+draw_set_halign(fa_left);
 
 draw_set_valign(fa_bottom);
 /*draw_sprite(sprite_index,UberCont.opt_fulscrn,x,y)

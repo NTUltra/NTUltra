@@ -1,5 +1,5 @@
 //delay before you can chose
-if skill == 82 && UberCont.opt_gamemode == 25
+if skill == 82 && scrIsGamemode(25)
 	instance_destroy();
 if skill == 0 && (Player.unlockAlternativeUltras || (scrCheckGold(Player.wep_name[Player.wep]) || scrCheckGold(Player.wep_name[Player.bwep])))
 {
@@ -83,7 +83,7 @@ else if skill == 68 && (Player.unlockAlternativeUltras || scrHasMorphMod() || sc
 {
 	sprite_index = sprEnginuity;
 }
-else if skill == 72 && (Player.unlockAlternativeUltras || ((Player.maxhealth < 8 && UberCont.opt_gamemode != 9) || (UberCont.opt_gamemode == 9 && Player.maxhealth < 8 + UberCont.casualModeHPIncrease)))
+else if skill == 72 && (Player.unlockAlternativeUltras || ((Player.maxhealth < 8 && UberCont.opt_gamemode != 9) || (scrIsGamemode(9) && Player.maxhealth < 8 + UberCont.casualModeHPIncrease)))
 {
 	sprite_index=sprMirror;
 }

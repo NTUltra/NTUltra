@@ -55,7 +55,7 @@ if other.team == 2 && instance_exists(Player) && (UberCont.opt_gamemode != 9 || 
 			Sleep(10)
 			BackCont.shake += 2
 		}
-		if UberCont.opt_gamemode == 9//CASUAL MODE
+		if scrIsGamemode(9)//CASUAL MODE
 			instance_destroy();
 	}
 }

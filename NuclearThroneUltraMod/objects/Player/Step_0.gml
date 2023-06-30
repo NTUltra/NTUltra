@@ -5,7 +5,7 @@ if ultra_got[43] && altUltra && hunterEye < hunterEyeMax
 	hunterEye += 1.5+(1.5*skill_got[5]);
 if ultra_got[75] && speed < 1
 	alarm[3] = max(alarm[3],2);
-if UberCont.opt_gamemode == 29 || cheatyinfiniteammo //Infinite ammo
+if scrIsGamemode(29) || cheatyinfiniteammo //Infinite ammo
 	alarm[2] = 2;
 if unkillable
 {
@@ -354,7 +354,8 @@ if !instance_exists(LevCont) and visible = 1
 			rad = GetPlayerMaxRad()*2;
 		}
 		if keyboard_check_pressed(ord("T")) {
-			if instance_exists(Portal) && UberCont.opt_gamemode == 25
+			charpoints = 1;
+			if instance_exists(Portal) && scrIsGamemode(25)
 			{
 				subarea++;
 				hard += 1.25;
@@ -371,7 +372,7 @@ if !instance_exists(LevCont) and visible = 1
 			{
 				instance_create(Player.x,Player.y,Portal);
 				thing = instance_create(x,y,PopupText)
-				thing.mytext = "PORTAL!";
+				thing.mytext = "PORTAL!#" + string(area) + "-" + string(subarea);
 			}
 		}
 		if (keyboard_check_pressed(ord("1")))
@@ -792,7 +793,7 @@ if KeyCont.key_swap[p] = 1 and bwep != 0
 var mr = GetPlayerMaxRad()
 if (rad > mr)
 {
-	if level < maxlevel || UberCont.opt_gamemode == 22 || UberCont.opt_gamemode == 38 || UberCont.opt_gamemode == 39
+	if level < maxlevel || scrIsGamemode(22)
 	{
 		//rad -= level*60
 		rad -= mr;
@@ -803,10 +804,11 @@ if (rad > mr)
 
 		repeat(level-6)
 		instance_create(x,y,IDPDSpawn)
+		/*
 		if level == 20
 		{
 			scrUnlockGameMode(39,"FOR REACHING LEVEL 20",22);
-		}
+		}*/
 		if level == 10 && !reachedUltra
 		{
 			reachedUltra = true;
@@ -841,7 +843,6 @@ if (rad > mr)
 		skillpoints += 1
 		if level > 40
 			skillsChosen --;
-
 	}
 	else
 	{
@@ -1056,7 +1057,7 @@ if (!instance_exists(LevCont))
 			{
 				reduction = (1-(my_health/maxhealth))*0.68//*1//0.35 the original has 80% boost
 			}
-			if UberCont.opt_gamemode == 24//SHARP STRESS GAMEMODE
+			if scrIsGamemode(24)//SHARP STRESS GAMEMODE
 				reduction *= level;
 			reduction = max(reduction,0);
 			reload -= reduction

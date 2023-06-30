@@ -25,7 +25,7 @@ function scrRestart() {
 		with UberCont
 		{
 			goToLeaderboard = false;
-			opt_gamemode = 0;
+			opt_gamemode = [0];
 		}
 		audio_stop_all();
 		with MusCont {

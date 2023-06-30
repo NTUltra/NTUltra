@@ -69,7 +69,7 @@ seedText = "";
 seedModeSeed = -1;
 seedModeSeedText = "";
 
-previous_gamemode = 0;
+previous_gamemode = [0];
 goToLeaderboard = false;
 runScore = [];
 runRace = [];

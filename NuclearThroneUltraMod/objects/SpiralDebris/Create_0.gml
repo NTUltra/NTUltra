@@ -91,7 +91,7 @@ rotspeed = (10+random(20))*choose(1,-1)
 
 	
 }
-if UberCont.opt_gamemode == 24
+if scrIsGamemode(24)
 {
 	sprite_index = sprSkillIcon
 	image_index = 22;

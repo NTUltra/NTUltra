@@ -20,7 +20,7 @@ if ultra_got[13] && altUltra && !instance_exists(DeathStare)
 if !instance_exists(PlayerAlarms)
 	instance_create(x,y,PlayerAlarms);
 
-if UberCont.opt_gamemode=1
+if scrIsGamemode(1)
 {
 if wep =0 
 wep=oneweponlywep;

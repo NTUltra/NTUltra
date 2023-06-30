@@ -1,7 +1,7 @@
 /// @description areas regular
 function scrNextLevel() {
 	var prevHard = hard;
-	if UberCont.opt_gamemode == 25//Survival
+	if scrIsGamemode(25)//Survival
 	{
 		area = 116;
 		subarea ++;

@@ -32,10 +32,17 @@ function scrSaveOptions() {
 	ini_write_real("OPTIONS","fps",normalGameSpeed);
 	if normalGameSpeed < 30
 		normalGameSpeed = 30;
-	if opt_gamemode == 26 || opt_gamemode == 27 || opt_gamemode == 37 || isWeekly//Can't save daily
+	if scrIsGamemode(26) || scrIsGamemode(27) || scrIsGamemode(37) || isWeekly//Can't save daily
 		ini_write_real("OPTIONS","gamemode",0);
 	else
-		ini_write_real("OPTIONS","gamemode",opt_gamemode);
+	{
+		var al = array_length(opt_gamemode);
+		ini_write_real("OPTIONS","gamemodes",al);
+		for (var i = 0; i < al; i++)
+		{
+			ini_write_real("OPTIONS","gamemode"+string(i),opt_gamemode[i]);
+		}
+	}
 
 	//custom controls
 	ini_write_real("OPTIONS","up",opt_up);

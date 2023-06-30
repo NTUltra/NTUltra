@@ -31,10 +31,10 @@ else if alarm[3] > 0
 	"[LMB] CONTINUE");
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
-	draw_text(xx,yy,string_hash_to_newline("GAMEMODE:#"+UberCont.gamemode[UberCont.opt_gamemode]));
-	if UberCont.opt_gamemode == 19
+	draw_text(xx,yy,string_hash_to_newline("GAMEMODE:#"+UberCont.gamemode[UberCont.opt_gamemode[0]]));
+	if scrIsGamemode(19)
 	{
-		draw_text(xx,yy,string_hash_to_newline("##"+"DISC AMOUNT: " + UberCont.opt_discs + "#DISC DAMAGE: " + UberCont.opt_discdamage));
+		draw_text(xx,yy,string_hash_to_newline("##"+"DISCS: " + UberCont.opt_discs + "#DAMAGE: " + UberCont.opt_discdamage));
 	}
 }
 else

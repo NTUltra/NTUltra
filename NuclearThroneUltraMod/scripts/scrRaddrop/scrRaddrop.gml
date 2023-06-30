@@ -7,7 +7,7 @@ function scrRaddrop(amountOfRads = raddrop) {
 		{
 			var am = ceil(amountOfRads*0.7);//0.6 in real game
 			am = min(am,40);
-			if UberCont.opt_gamemode == 35
+			if scrIsGamemode(35)
 			{
 				am = min(am,14);
 				if instance_number(HorrorBullet) > 100

@@ -1,5 +1,5 @@
 /// @description Collision with wall
-if UberCont.opt_gamemode=4 && !instance_exists(GenCont) && !instance_exists(LevCont)
+if scrIsGamemode(4) && !instance_exists(GenCont) && !instance_exists(LevCont)
 my_health=0;
 
 if race!=18

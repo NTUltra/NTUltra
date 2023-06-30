@@ -2,7 +2,7 @@
 // /@description
 ///@param
 function scrEnemyDeathEvent(){
-	if UberCont.opt_gamemode == 9//easy mode
+	if scrIsGamemode(9)//easy mode
 	{
 		raddrop*=1.5;
 	}
@@ -174,7 +174,7 @@ function scrEnemyDeathEvent(){
 					splatDir += angStep;
 				}
 			}
-			else if UberCont.opt_gamemode == 41//Gore galore
+			else if scrIsGamemode(39)//Gore galore
 			{
 				var splatDir = random(360);
 				var ms = other.mySize;
@@ -273,7 +273,7 @@ function scrEnemyDeathEvent(){
 			    }
 		    }
 		}
-	    if UberCont.opt_gamemode = 11//GUN GAME
+	    if scrIsGamemode(11)//GUN GAME
 	    {
 	        with Player
 	        {
@@ -305,7 +305,7 @@ function scrEnemyDeathEvent(){
 		{
 			snd_play(sndLastEnemy,0,true)
 		}
-		else if !wasResurrected && UberCont.opt_gamemode == 12
+		else if !wasResurrected && scrIsGamemode(12)
 		{
 			instance_create(x,y,Zombie);
 		}

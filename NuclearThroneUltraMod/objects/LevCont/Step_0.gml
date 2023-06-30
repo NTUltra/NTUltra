@@ -1,6 +1,6 @@
 __view_set( e__VW.XView, 0, 0 )
 __view_set( e__VW.YView, 0, 0 )
-if UberCont.opt_gamemode == 28 || UberCont.opt_gamemode == 38//ALL MUTATION CHOICES
+if scrIsGamemode(28)//ALL MUTATION CHOICES
 {
 	var spd = 24;
 	if mouse_wheel_down() || keyboard_check_pressed(vk_right){

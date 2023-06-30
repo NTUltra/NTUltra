@@ -14,8 +14,8 @@
     "path": "folders/Objects/Menu.yy",
   },
   "parentObjectId": {
-    "name": "option2",
-    "path": "objects/option2/option2.yy",
+    "name": "option",
+    "path": "objects/option/option.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

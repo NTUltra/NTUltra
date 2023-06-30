@@ -1,0 +1,2 @@
+scrSkills()
+p = 0

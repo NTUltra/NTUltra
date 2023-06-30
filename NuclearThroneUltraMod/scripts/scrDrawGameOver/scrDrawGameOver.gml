@@ -16,7 +16,7 @@ function scrDrawGameOver() {
 	var upsideDown = res[1];
 	if (UberCont.opt_gamemode != 25 && UberCont.opt_gamemode != 8)
 		gameover = gameoverText+"##KILLS: "+string(BackCont.kills)+"###DIFFICULTY: "+string(BackCont.hard)
-	else if (UberCont.opt_gamemode == 25)
+	else if (scrIsGamemode(25))
 	{
 		txt = "";
 		gameover = "KILLS: "+string(BackCont.kills)+"#WAVE: "+string(BackCont.subarea)+"#DIFFICULTY: "+string(BackCont.hard)
@@ -35,9 +35,9 @@ function scrDrawGameOver() {
 	if UberCont.public = 1
 	gameover += "##MODDED EARLY ACCESS BUILD";
 */
-	gameover += "##GAME MODE : "+UberCont.gamemode[UberCont.opt_gamemode];
+	gameover += "##GAME MODE : "+UberCont.gamemode[UberCont.opt_gamemode[0]];
 	
-	if (UberCont.opt_gamemode == 8)
+	if (scrIsGamemode(8))
 	{
 		txt = "";
 		gameover += "##TIME SURVIVED: " + VanFan.txttime;
@@ -80,7 +80,7 @@ function scrDrawGameOver() {
 		//skeletonlives = 0;
 		instance_destroy();
 	}
-	if race = 0 || UberCont.opt_gamemode == 23
+	if race = 0 || scrIsGamemode(23)
 	{
 		ranChar = true;
 		do race = 1+irandom(racemax-1) until race_have[race] = 1
@@ -112,9 +112,9 @@ function scrDrawGameOver() {
 		debug("GAMEOVER QUIT");
 		with UberCont
 		{
-			if opt_gamemode == 26 || opt_gamemode == 27
+			if scrIsGamemode(26) || opt_gamemode == 27
 			{
-				opt_gamemode = 0;	
+				opt_gamemode = [0];	
 			}
 		}
 	//BACK TO MENU

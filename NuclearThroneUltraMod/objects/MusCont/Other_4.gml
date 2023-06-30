@@ -4,7 +4,7 @@ if instance_exists(Player)
 	area = Player.area;
 	alarm[0] = 0;
 }
-if UberCont.opt_gamemode == 25 && area != 0
+if scrIsGamemode(25) && area != 0
 {
     audio_stop_sound(song);
     song = mus100;
@@ -26,7 +26,7 @@ if UberCont.opt_gamemode == 25 && area != 0
 	
     exit;
 }
-if UberCont.opt_gamemode == 8 && area != 0
+if scrIsGamemode(8) && area != 0
 {
     audio_stop_sound(song);
     audio_stop_sound(amb);

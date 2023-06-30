@@ -7,7 +7,7 @@ spr_dead = sprFrogEggDead
 
 event_inherited()
 
-team=2;
+team = 1;
 
 snd_play(choose(sndFrogEggSpawn1,sndFrogEggSpawn2,sndFrogEggSpawn3))
 

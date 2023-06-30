@@ -20,7 +20,7 @@ styleb = instance_nearest(x,y,FloorMaker).styleb
 else
 styleb = 0
 
-if UberCont.opt_gamemode == 25
+if scrIsGamemode(25)
 {
 	var nearestFloor = instance_nearest_notme(x,y,Floor);
 	var l = 0;

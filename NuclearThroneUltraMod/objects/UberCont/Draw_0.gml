@@ -64,7 +64,7 @@ string(scrOnOff(UberCont.opt_dmgindicator))+"#"+string(scrOnOff(UberCont.opt_cam
 
 
 
-stxt0 = "#OPTIONS#GAMEMODE: "+UberCont.gamemode[UberCont.opt_gamemode];
+stxt0 = "#OPTIONS#GAMEMODE: "+UberCont.gamemode[UberCont.opt_gamemode[0]];
 stxt1 = "######AUDIO######VISUALS########OTHER####"
 stxt2 = txt2
 

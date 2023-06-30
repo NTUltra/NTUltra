@@ -5,7 +5,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 	var minWepArea = minWepAreaParam;
 	if instance_exists(Player)
 	{
-		if UberCont.opt_gamemode == 2 {
+		if scrIsGamemode(2) {
 			//Favourable build
 			if Player.loops > 0
 				wep=choose(592, 591, 500, 508, 410, 24,79,12,11,562, 481, 360, 596, 598, 22, 99, 213, 220, 331, 221, 222, 223, 87, 234, 140, 236,197,127,128,395,397,536,540,542, 118, 563,543,541,538, 507, 506, 504, 494, 487, 120, 524, 266, 544, 396, 550, 121, 422, 456);
@@ -46,7 +46,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			}
 			var triesForSpecificTier = 0;
 			var maxValidTierWep = 0;
-			if UberCont.opt_gamemode == 31//Only melee
+			if UberCont.scrIsGamemode(31)//Only melee
 			{
 				var tries = 0;
 				var tooBad = 0;

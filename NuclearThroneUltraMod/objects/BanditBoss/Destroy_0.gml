@@ -26,7 +26,7 @@ scrDrop(0,10)
 scrBossKill();
 
 
-if GetPlayerLoops() > 0 && UberCont.gamemode_have[13] == 0 && UberCont.opt_gamemode == 0
+if GetPlayerLoops() > 0 && UberCont.gamemode_have[13] == 0 && (scrIsGamemode(0) || scrIsGamemode(9))
 {
 	//Drop rocket glove
 	var noRocketGloveDropped = true;

@@ -105,17 +105,27 @@ function scrDrawHUD() {
 			if holdExplainGamemode > 10
 				holdExplainGamemode = 10;
 			if holdExplainGamemode >= 10
-				scrDrawHelp("["+UberCont.gamemode[UberCont.opt_gamemode]+"]");
+			{
+				var gamemodeScrollString = "";
+				var al = array_length(UberCont.opt_gamemode)
+				for (var i = 0; i < al; i++)
+				{
+					gamemodeScrollString += "["+string_replace_all(UberCont.gamemode[UberCont.opt_gamemode[i]],"#"," ") + "]";
+					if i != al - 1
+						gamemodeScrollString += "\n";
+				}
+				scrDrawHelp(gamemodeScrollString);
+			}
 		}
 		if UberCont.isWeekly
 		{
 			draw_sprite(sprWeeklyChallengeHUD,0,__view_get( e__VW.XView, 0 )+4,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-2);
 		}
-		else if UberCont.opt_gamemode == 26
+		else if scrIsGamemode(26)
 		{
 			draw_sprite(sprDailyChallengeHUDRace,0,__view_get( e__VW.XView, 0 )+4,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-2);
 		}
-		else if UberCont.opt_gamemode == 27
+		else if scrIsGamemode(27)
 		{
 			draw_sprite(sprDailyChallengeHUD,0,__view_get( e__VW.XView, 0 )+4,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-2);
 		}

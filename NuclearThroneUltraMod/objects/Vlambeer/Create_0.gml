@@ -3,13 +3,15 @@ if instance_exists(Player)
 {
 	instance_destroy()
 	instance_create(x,y,SpiralCont)
-	if Player.skillpoints > 0 or Player.crownpoints > 0
+	if Player.skillpoints > 0 or Player.crownpoints > 0 or Player.charpoints > 0
 	{
 		instance_create(0,0,BackCont)
 		if random(2000) < 1//Culture
 			snd_play_2d(sndYEAH,0,true,false,2,1);
 		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
 			scrEnableBigScreen();
+		
+		room_speed = UberCont.normalGameSpeed;
 		instance_create(x,y,LevCont)
 	}
 	else

@@ -3,7 +3,7 @@ switch(array_length(UberCont.collectedRewards))
 {
 	case 0:
 		//One hit wonder
-		if UberCont.opt_gamemode == 32
+		if scrIsGamemode(32)
 		{
 			with Player
 			{
@@ -49,7 +49,7 @@ switch(array_length(UberCont.collectedRewards))
 	break;
 	case 5:
 		//One hit wonder
-		if UberCont.opt_gamemode == 32
+		if scrIsGamemode(32)
 		{
 			with Player
 			{

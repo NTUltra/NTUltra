@@ -60,6 +60,7 @@ if instance_exists(Player)
 	{
 		if dis >= 280
 		{
+			scrForcePosition60fps();
 			x = Player.x;
 			y = Player.y;
 		}

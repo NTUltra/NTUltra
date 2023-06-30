@@ -386,7 +386,7 @@ function scrTips() {
 
 	///GAMEMODE
 	if tiptype == 7
-		tip = UberCont.gamemode_tip[UberCont.opt_gamemode];
+		tip = UberCont.gamemode_tip[UberCont.opt_gamemode[irandom(array_length(UberCont.opt_gamemode))-1]];
 		
 	if tip = ""
 	scrTips()

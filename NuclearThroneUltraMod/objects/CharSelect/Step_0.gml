@@ -111,7 +111,7 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+20 and UberCon
 	
     UberCont.racepick = Menu.race
 	var ranChar = false;
-    if race = 0 || UberCont.opt_gamemode = 23
+    if race = 0 || scrIsGamemode(23)
     {
 		ranChar = true;
 		do {race = 1+irandom(racemax-1);} until UberCont.race_have[race] = 1

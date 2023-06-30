@@ -10,11 +10,11 @@ if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x and UberCont.mo
 		goToLeaderboard = true;
 		runScore = [];
 		runRace = [];
-		if UberCont.opt_gamemode == 26
+		if GameModeUpDown.gamemodeOrder[GameModeUpDown.gamemodenr] == 26//scrIsGamemode(26)
 			leaderboardType = LEADERBOARD.SCORE;
-		else if UberCont.opt_gamemode == 27
+		else if GameModeUpDown.gamemodeOrder[GameModeUpDown.gamemodenr] == 27//scrIsGamemode(27)
 			leaderboardType = LEADERBOARD.RACE;
-		else if UberCont.opt_gamemode == 37
+		else if GameModeUpDown.gamemodeOrder[GameModeUpDown.gamemodenr] == 37//scrIsGamemode(37)
 			leaderboardType = LEADERBOARD.WEEKLY;
 	}
 	scrRestart();

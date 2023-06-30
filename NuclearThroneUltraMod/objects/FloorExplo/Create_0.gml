@@ -30,7 +30,7 @@ else
 }
 if area==104
 area=103;
-if (UberCont.opt_gamemode == 25 && area != 7 && !instance_exists(Vlambeer))
+if (scrIsGamemode(25) && area != 7 && !instance_exists(Vlambeer))
 {
 	sprite_index=sprFloor116Explo;
 }

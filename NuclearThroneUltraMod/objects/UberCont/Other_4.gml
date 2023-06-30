@@ -33,7 +33,7 @@ firstFloorMaker = true;
 seedOffset = 0;
 
 //Cheat mode
-if (opt_gamemode == 17)
+if (scrIsGamemode(17))
 	public = 0;
 else
 	public = defaultPublic;

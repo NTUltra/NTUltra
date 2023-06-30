@@ -27,7 +27,7 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 	//scrRaces()
 	//scrCrowns()
 	var ranChar = false;
-	if race = 0 || UberCont.opt_gamemode == 23
+	if race = 0 || scrIsGamemode(23)
 	{
 		ranChar = true;
 		do {race = 1+irandom(racemax-1);} until race_have[race] = 1
@@ -91,7 +91,7 @@ audio_resume_all();
 if (keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4)) && !instance_exists(PlayerSpawn) && !instance_exists(StartDaily)
 {
 	if isWeekly
-		opt_gamemode = 0;
+		opt_gamemode = [0];
 	instance_activate_all()
 	isPaused = 0
 	alarm[3] = 1;
@@ -114,7 +114,7 @@ if ( keyboard_check_pressed(ord("Q")) or ( gamepad_button_check(0,gp_shoulderr) 
 {
 	if (UberCont.isWeekly)
 	{
-		UberCont.opt_gamemode = 0;	
+		UberCont.opt_gamemode = [0];	
 	}
 	scrSave();
 	game_end()
@@ -130,7 +130,7 @@ if instance_exists(KeyCont) && !instance_exists(StartDaily) && (keyboard_check_p
 	if keyboard_check_pressed(vk_escape) and instance_exists(Menu)
 	{
 		if isWeekly
-			opt_gamemode = 0;
+			opt_gamemode = [0];
 		scrSave();
 		if !instance_exists(OptionSelect)
 			game_end()

@@ -2,7 +2,6 @@
 if swapChar
 	exit;
 
-
 if (area == 1 || area == 101 || area == 10) && instance_exists(WepPickup)
 {
 	with WepPickup
@@ -88,13 +87,13 @@ else if race=12//yung cuz reset max HP
 		yungCuzCskin = 0;	
 	}
 	var targetHealth = 8;
-	if UberCont.opt_gamemode == 5
+	if scrIsGamemode(5)
 		targetHealth = 1;
 	if skill_got[1] == 1//Rhino skin
 		targetHealth += 4;
 	if skill_got[33] == 1//Glass arm cannon
 		targetHealth -= 2;
-	if UberCont.opt_gamemode == 9
+	if scrIsGamemode(9)
 		targetHealth += UberCont.casualModeHPIncrease;
 	targetHealth += UberCont.maxHpIncrease;
 	maxhealth = targetHealth;
@@ -203,7 +202,7 @@ if race == 14//PANDA
 }
 
 
-if UberCont.opt_gamemode == 10//random areas
+if scrIsGamemode(10)//random areas
 {
 	SetSeed();
 area=choose(1,2,3,4,5,6,7,8,9,10,choose(105,102,103,106,107,101,100,108,109,110,113,114,115,118,117,118,119,120,121,122,123,124,125),choose(105,102,103,106,107,101,100,108,109,110,113,114,115,118,117,118,119,120,121,122,123,124,125,126,127),
@@ -275,7 +274,7 @@ if looping && area != 104
 	if loops>1 && race = 4
 	scrUnlockCSkin(4,"FOR REACHING LOOP 3#AS MELTING ON 1HP EQUALITY",5);
 
-	if UberCont.opt_gamemode=14
+	if scrIsGamemode(14)
 	scrUnlockBSkin(1,"FOR LOOPING ON GAMEMODE:#FISH'S PARTNER ONLY",14);
 
 	if race = 14 && fired=false
@@ -294,13 +293,13 @@ if looping && area != 104
 	        if race==9//Chicken maxhealth regain on loop
 	        {
 				var targetHealth = 8;
-				if UberCont.opt_gamemode == 5
+				if scrIsGamemode(5)
 					targetHealth = 1;
 				if skill_got[1] == 1//Rhino skin
 					targetHealth += 4;
 				if skill_got[33] == 1//Glass arm cannon
 					targetHealth = max(1,targetHealth-2);
-				if UberCont.opt_gamemode == 9
+				if scrIsGamemode(9)
 					targetHealth += UberCont.casualModeHPIncrease;
 				targetHealth += UberCont.maxHpIncrease;
 	            if maxhealth<targetHealth
@@ -431,7 +430,7 @@ if looping && area != 104
 		}
 	}
 	//Secret
-	if ((wep == 375 && bwep == 375) && isValidGamemodeToUnlock(0))
+	if ((wep == 375 && bwep == 375) && isValidGamemodeToUnlock())
 	{
 		with UberCont
 		{
@@ -456,7 +455,7 @@ if looping && area != 104
 			}
 		}
 	}
-	if ((wep == 231 || bwep == 231 || cwep == 231) && isValidGamemodeToUnlock(0) && race != 1 && loops > 0)
+	if ((wep == 231 || bwep == 231 || cwep == 231) && isValidGamemodeToUnlock() && race != 1 && loops > 0)
 	{
 		with UberCont
 		{
@@ -569,8 +568,8 @@ if looping && area != 104
 
 	}
     
-	    if loops > UberCont.cbst_loop[race]&&UberCont.opt_gamemode=0
-	    UberCont.cbst_loop[race] = loops//this doesn't get saved if gamemode is not normal mode
+	    if loops > UberCont.cbst_loop[race]&&scrIsGamemode(0)
+			UberCont.cbst_loop[race] = loops//this doesn't get saved if gamemode is not normal mode
     
 	    if  UberCont.opt_gamemode!=10
 	    {/*
@@ -604,7 +603,7 @@ if area != 100 && area != 103
 		scrUnlockGameMode(32,"FOR COMPLETING FIVE AREAS#IN A ROW WITHOUT#TAKING A HIT")
 	}
 }
-if UberCont.opt_gamemode == 32 && area == 114
+if scrIsGamemode(32) && area == 114
 {
 	scrUnlockGameMode(33,"FOR REACHING THE JUNGLE#ON GAMEMODE: ONE HIT WONDER")
 }
@@ -643,7 +642,7 @@ scrUnlockCSkin(15,"FOR COMPLETING 5 AREAS IN A ROW#USING CROWN OF HASTE AS ATOM"
 
 	StartHogInvestment();
 
-if UberCont.opt_gamemode == 23 && !instance_exists(Menu) && instance_number(Player) == 1//Random character!
+if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//Random character!
 {
 	var iWillBecome = 0;
 	SetSeed();

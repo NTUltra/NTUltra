@@ -4,7 +4,7 @@
 function isOneWeaponOnlyModes(){
 	with UberCont
 	{
-		return (opt_gamemode=1||opt_gamemode=11||opt_gamemode=13||opt_gamemode=14);
+		return (scrIsGamemode(1)||scrIsGamemode(11)||scrIsGamemode(13)||scrIsGamemode(14));
 	}
 	return false;
 }

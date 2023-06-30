@@ -1,7 +1,7 @@
 function scrPopulate() {
 	SetSeed();
 	//setting area and spawning some enemies
-	if UberCont.opt_gamemode == 25 || UberCont.opt_gamemode == 8
+	if scrIsGamemode(25) || scrIsGamemode(8)
 	return;
 	
 	var hard = Player.hard;
@@ -50,7 +50,7 @@ function scrPopulate() {
         {
             if ( ((spawnarea = 3 || spawnarea = 106) && Player.subarea = 3) || ((spawnarea = 5 || spawnarea = 112) && Player.subarea = 3) ) {
                 if random(3) < 1.3 {
-                    if UberCont.opt_gamemode = 9 //easy mode
+                    if scrIsGamemode(9) //easy mode
                     {
                         if random(4) < 1 || !instance_exists(enemy)
 							scrPopEnemies()
@@ -93,7 +93,7 @@ function scrPopulate() {
 				
             }
             else {
-                if UberCont.opt_gamemode = 9 //easy mode
+                if scrIsGamemode(9) //easy mode
                 {
                     if random(4) < 1 || !instance_exists(enemy)
                     scrPopEnemies()
@@ -455,7 +455,7 @@ function scrPopulate() {
 				repeat(3)
 					scrPopEnemies()
 			}
-			if UberCont.opt_gamemode == 6//Claustrophobia
+			if scrIsGamemode(6)//Claustrophobia
 			{
 				if point_distance(x, y, Player.x, Player.y) > 110 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280)
 				{

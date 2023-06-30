@@ -15,7 +15,7 @@ if area==104
 area=103;
 
 alarm[0]=1;
-if instance_exists(SurvivalWave)//UberCont.opt_gamemode == 25 && !instance_exists(Vlambeer))
+if instance_exists(SurvivalWave)//scrIsGamemode(25) && !instance_exists(Vlambeer))
 {
 	topspr=sprWall116Top;
 	outspr=sprWall116Out;

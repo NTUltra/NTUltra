@@ -13,7 +13,7 @@ if alarm[5] >  0
 }
 
 
-scrUnlockGameMode(22,"FOR KILLING#THE INVERTED CHESHIRE CAT");
+//scrUnlockGameMode(22,"FOR KILLING#THE INVERTED CHESHIRE CAT");
 
 Sleep(200)
 scrBossKill();

@@ -5,7 +5,10 @@ creditpage = 0;
 mode = 0
 mouseover = -1;
 image_speed = 0
-
+gmScroll = 0;
+gmwidth = 1;
+gmSurf = -1;
+alarm[1] = 1;
 widescreen = -5
 scrRaces()
 scrCrowns()
@@ -418,10 +421,10 @@ img = 0
 
 wave = 0
 p = 0
-
+scrGameModes();
 
 updatepage=0;
-
+openRemapper = false;
 //JOYPAD STUFF
 /*
 pick = 0

@@ -62,14 +62,14 @@ if (type == network_type_data) {
 			}
 			room_goto(romGame);
 			with UberCont {
-				if opt_gamemode == 26 {
+				if scrIsGamemode(26) {
 					var al = array_length(encrypted_data.ctot_dailies_race_seed);
 				    encrypted_data.ctot_dailies_race_seed[al] = todaysSeed;
 					encrypted_data.daily_race_dates[al] = UberCont.today;
 				    encrypted_data.ctot_dailies_race_time[al] = -1;
 				    encrypted_data.dailies_race_day[al] = today;
 					scrSaveEncrypted();
-				} else if opt_gamemode == 27 {
+				} else if scrIsGamemode(27) {
 					todaysSeed += 1;
 					seed = UberCont.todaysSeed;
 				    var al = array_length(encrypted_data.ctot_dailies_score_seed);
@@ -86,8 +86,8 @@ if (type == network_type_data) {
 			UberCont.todaysSeed = buffer_read(buffer, buffer_u16);
 			debug("the seed: ", UberCont.todaysSeed);
 			UberCont.seed = UberCont.todaysSeed;
-			UberCont.opt_gamemode = buffer_read(buffer, buffer_u16);
-			UberCont.weeklyGamemode = UberCont.opt_gamemode;
+			UberCont.opt_gamemode = [buffer_read(buffer, buffer_u16)];
+			UberCont.weeklyGamemode = UberCont.opt_gamemode[0];
 			switch (UberCont.opt_gamemode)
 			{
 				case 1://One weapon only

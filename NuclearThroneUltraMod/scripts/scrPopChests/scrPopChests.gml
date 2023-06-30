@@ -4,7 +4,7 @@ function scrPopChests() {
 		
 	var ran = random(10);
 	//Special cases:
-	if UberCont.opt_gamemode == 25
+	if scrIsGamemode(25)
 	{
 		with RadChest
 			instance_destroy(id,false);
@@ -168,7 +168,7 @@ function scrPopChests() {
 			with instance_furthest(Player.x,Player.y,WeaponChest)
 			{
 				instance_destroy(id,false);
-				if UberCont.opt_gamemode != 26 && UberCont.opt_gamemode != 27 && isValidGamemodeToUnlock(UberCont.opt_gamemode)//not daykrt
+				if UberCont.opt_gamemode != 26 && UberCont.opt_gamemode != 27 && isValidGamemodeToUnlock()//not daykrt
 				if Player.skill_got[23] //OPEN MIND
 				{
 					instance_create(x,y-24,ProtoChest)

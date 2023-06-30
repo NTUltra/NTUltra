@@ -11,7 +11,7 @@ if !skill_got[18] && UberCont.lastwishused
 	//dir= instance_create(x,y-8,PopupText)
 	//dir.mytext = "LAST WISH#CAN GIVE A LIFE AGAIN!";
 }
-if UberCont.opt_gamemode == 8
+if scrIsGamemode(8)
 {
 	with VanFan
 	{
@@ -497,13 +497,13 @@ else if !reincarnate
 		//DAILY RUN
 		if actualLives < 1
 		{
-			if (opt_gamemode == 27 && !instance_exists(StartDaily))
+			if (scrIsGamemode(27) && !instance_exists(StartDaily))
 			{
 				encrypted_data.ctot_dailies_score_score[
 				array_length(encrypted_data.ctot_dailies_score_score)-1] = other.kills;
 				scrSaveEncrypted();
 				useSeed = false;
-				opt_gamemode = 0;
+				opt_gamemode = [0];
 				leaderboardType = LEADERBOARD.SCORE;
 				goToLeaderboard = true;
 				runScore[0] = other.kills;
@@ -527,10 +527,10 @@ else if !reincarnate
 			
 				canRestart = true;
 			}
-			if (opt_gamemode == 26 && !instance_exists(StartDaily))
+			if (scrIsGamemode(26) && !instance_exists(StartDaily))
 			{
 				useSeed = false;
-				opt_gamemode = 0;
+				opt_gamemode = [0];
 				leaderboardType = LEADERBOARD.RACE;
 				goToLeaderboard = true;
 				canRestart = true;
@@ -547,7 +547,7 @@ else if !reincarnate
 					check how daily does this.
 				*/
 				debug("weekly ", opt_gamemode);
-				if opt_gamemode == 8// VAN FAN
+				if scrIsGamemode(8)// VAN FAN
 				{
 					//Check if this is your highest score
 					var tf = round(VanFan.time_frame);
@@ -575,7 +575,7 @@ else if !reincarnate
 						scrSaveEncrypted();
 						runScore[0] = other.kills;
 						runScore[1] = encrypted_data.username;
-						if opt_gamemode == 25 //Survival area
+						if scrIsGamemode(25) //Survival area
 							runScore[2] = 116;
 						else
 							runScore[2] = other.area;

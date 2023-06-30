@@ -4,7 +4,7 @@ function scrEndBoss() {
 	{
 	with UberCont
 	{
-		if opt_gamemode == 26 //DAILY RACE
+		if scrIsGamemode(26) //DAILY RACE
 		{
 			var al = array_length(encrypted_data.ctot_dailies_race_seed) - 1;//Minus one to overwrite the original score we set
 	        encrypted_data.ctot_dailies_race_seed[al] = seed;
@@ -37,13 +37,13 @@ function scrEndBoss() {
 				runRace[11] = scrGetAllMutations();
 			}
 			useSeed = false;
-			opt_gamemode = 0;
+			opt_gamemode = [0];
 			leaderboardType = LEADERBOARD.RACE;
 			goToLeaderboard = true;
 			canRestart = true;
 			instance_create(x,y,SendRace);
 		}
-		if opt_gamemode == 0//isValidGamemodeToUnlock(opt_gamemode) && opt_gamemode != 6
+		if scrIsGamemode(0)//isValidGamemodeToUnlock(opt_gamemode) && opt_gamemode != 6
 		{
 
 			//in seconds

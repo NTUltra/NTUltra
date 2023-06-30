@@ -31,7 +31,7 @@ function EnemyHealthAdjustments(){
 			//hpReduction += round(maxhealth*0.25)
 			my_health *= 0.73 + clamp(ogmaxhealth*0.00005,0,0.15);
 		}
-		if UberCont.opt_gamemode = 9//easy mode
+		if scrIsGamemode(9)//easy mode
 		{
 			//hpReduction += round(maxhealth*0.2);
 			my_health *= 0.8;
@@ -49,7 +49,7 @@ function EnemyHealthAdjustments(){
 		//my_health = max(1,maxhealth - hpReduction);
 		my_health = max(1,my_health);
 	}
-	if UberCont.opt_gamemode == 5//1HP gamemode
+	if scrIsGamemode(5)//1HP gamemode
 	{
 		my_health=1;
 		maxhealth=my_health;

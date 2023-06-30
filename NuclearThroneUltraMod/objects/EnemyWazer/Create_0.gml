@@ -12,7 +12,7 @@ maxRange = 800;
 alarm[3] = 1;
 
 	dmg = 3;
-if UberCont.opt_gamemode == 9//Casual mode
+if scrIsGamemode(9)//Casual mode
 	dmg = 2;
 if scrIsHardMode()//HARD MODE
 	dmg = 4;

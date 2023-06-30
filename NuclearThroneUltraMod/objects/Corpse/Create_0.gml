@@ -15,7 +15,7 @@ if instance_exists(Player){
 		xprev = x;
 		yprev = y;
 	}
-	if Player.crown == 28 || UberCont.opt_gamemode == 41//Gore galore
+	if Player.crown == 28 || scrIsGamemode(39)//Gore galore
 	{
 		bxprev = x;
 		byprev = y;

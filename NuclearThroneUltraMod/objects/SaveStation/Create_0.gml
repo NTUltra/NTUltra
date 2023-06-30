@@ -5,7 +5,7 @@ name = "SAVE RUN";
 var fileString ="ntultrarun1.sav";
 if (file_exists(fileString))
 	name += "#(OVERWRITES EXISTING SAVE!)";
-if UberCont.opt_gamemode == 26 || UberCont.opt_gamemode == 27
+if scrIsGamemode(26) || scrIsGamemode(27)
 {
 	name += "#DAILIES WILL BE LOADED AS NORMAL MODE RUNS"
 }

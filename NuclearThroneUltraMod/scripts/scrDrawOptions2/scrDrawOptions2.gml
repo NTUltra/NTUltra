@@ -3,35 +3,17 @@ function scrDrawOptions2() {
 
 	if widescreen > 0
 	widescreen -= 8
-	var up;
-	var down;
-	var left;
-	var right;
-	var swap;
-	var gamemodename;
 
-	up=scrAsciiChar(UberCont.opt_up);
-	down=scrAsciiChar(UberCont.opt_down);
-	left=scrAsciiChar(UberCont.opt_left);
-	right=scrAsciiChar(UberCont.opt_right);
-	swap=scrAsciiChar(UberCont.opt_swap);
-	pickup=scrAsciiChar(UberCont.opt_pickup);
-
-	scrGameModes();
+	//scrGameModes();
 
 	if instance_exists(GameModeUpDown)
 	gamemodename=string(gamemode[gamemodeOrder[GameModeUpDown.gamemodenr]]);
 	else
-	gamemodename=string(gamemode[UberCont.opt_gamemode]);
-	/*if UberCont.opt_gamemode = 0{
-	gamemode="NORMAL"}
-	else if UberCont.opt_gamemode = 1 {gamemode="ONE WEAPON ONLY"}
-	else if UberCont.opt_gamemode = 2 {gamemode="FAVOURABLE BUILD"}
-	else {gamemode="NO HUD"}*/
+	gamemodename=string(gamemode[UberCont.opt_gamemode[0]]);
 
 	var canUnlock = "";
 	if instance_exists(GameModeUpDown)
-	if isValidGamemodeToUnlock(gamemodeOrder[GameModeUpDown.gamemodenr])
+	if isValidGamemodeToUnlock()
 	{
 		canUnlock = "- ENABLED -";
 	}
@@ -39,30 +21,24 @@ function scrDrawOptions2() {
 	{
 		canUnlock = "-DISABLED-";
 	}
-	txt0 = "#GAME#CLICK WITH LMB ON SQUARE THEN PRESS KEY########################UNLOCKABLES ARE#"+canUnlock+"#IN THIS GAMEMODE#PRESS [RIGHT CLICK] TO RETURN";
-	txt1 = "####CUSTOMIZE CONTROLS#UP#DOWN#LEFT#RIGHT#SWAP WEAPONS#PICKUP##GAMEMODE########"
-	txt2 = "#####"+up+"#"+down+"#"+left
-	+"#"+right+"#"+swap+"#"+pickup+"##"+string(gamemodename)+"######";
+	txt0 = "#GAMEMODE CONCOCTIONS########################UNLOCKABLES ARE#"+canUnlock+"##HOLD [LEFT CLICK] TO ADD/REMOVE GAMEMODE#PRESS [RIGHT CLICK] TO RETURN";
+	var gamemodeScrollString = "";
+	var al = array_length(UberCont.opt_gamemode)
+	for (var i = 0; i < al; i++)
+	{
+		gamemodeScrollString += string_replace_all(UberCont.gamemode[UberCont.opt_gamemode[i]],"#"," ");
+		if i != al - 1
+			gamemodeScrollString += " + ";
+	}
+	txt1 = "###RESET########"
+	txt2 = "#####"+string(gamemodename)+"######";
 
-	stxt0 = "#GAME##########################" + canUnlock;
-	stxt1 = "####CUSTOMIZE CONTROLS##### ####### #### ####"
+	stxt0 = "#GAMEMODE CONCOCTIONS#########################" + canUnlock //+ "##HOLD                                    ";
+	stxt1 = "###RESET##### ####### #### ####"
 	stxt2 = txt2
 
 
-	with KeyUp
-	event_perform(ev_draw,0)
-	with KeyDown
-	event_perform(ev_draw,0)
-	with KeyLeft
-	event_perform(ev_draw,0)
-	with KeyRight
-	event_perform(ev_draw,0)
-	with KeySwap
-	event_perform(ev_draw,0)
-	with KeyPickup
-	event_perform(ev_draw,0)
-	with KeyReset
-	event_perform(ev_draw,0)
+	
 
 	//with DiscAmountUpDown
 	//event_perform(ev_draw,0)
@@ -113,6 +89,23 @@ function scrDrawOptions2() {
 	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+8,yy,string_hash_to_newline(string(txt2)))
 	draw_set_color(c_white)
 	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+8,yy,string_hash_to_newline(string(stxt2)))
+	
+	draw_set_color(c_black)
+	yy = __view_get( e__VW.YView, 0 ) + __view_get( e__VW.HView, 0 ) - 28;
+	gmwidth = max(0,string_width(gamemodeScrollString) - __view_get( e__VW.WView, 0 ));
+	var xx = lerp(
+	__view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )*0.5) - gmwidth*0.5,
+	__view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )*0.5) + gmwidth*0.5,
+	gmScroll);
+		draw_set_halign(fa_middle)
+	draw_text(xx,yy+1,gamemodeScrollString)
+	draw_text(xx,yy+1,gamemodeScrollString)
+	draw_text(xx,yy,gamemodeScrollString)
+	draw_set_color(c_gray)
+	draw_text(xx,yy,gamemodeScrollString)
+	draw_set_halign(fa_left)
+	//draw_set_color(c_white)
+	//draw_text(xx,yy,gamemodeScrollString)
 
 	if instance_exists(StartingWeaponUpDown)
 	{

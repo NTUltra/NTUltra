@@ -55,7 +55,7 @@ function scrLoadData() {
 	oneweponly316 = ini_read_real("DATA","oneweponly316",0);
 	seedModeSeed = ini_read_real("DATA","savedseed",-1);
 	seedModeSeedText = ini_read_string("DATA","savedseedtext","");
-	if opt_gamemode == 39
+	if scrIsGamemode(38)
 	{
 		useSeed = true;
 		seed = seedModeSeed;
