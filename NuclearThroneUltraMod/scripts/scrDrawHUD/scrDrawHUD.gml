@@ -94,7 +94,7 @@ function scrDrawHUD() {
 	}
 
 	//GAMEMODES
-	if UberCont.opt_gamemode != 0 && !instance_exists(LevCont)
+	if (!scrIsOnlyNormalGamemode() && !instance_exists(LevCont))
 	{
 		var xx = __view_get( e__VW.XView, 0 );
 		var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 );
@@ -110,9 +110,12 @@ function scrDrawHUD() {
 				var al = array_length(UberCont.opt_gamemode)
 				for (var i = 0; i < al; i++)
 				{
-					gamemodeScrollString += "["+string_replace_all(UberCont.gamemode[UberCont.opt_gamemode[i]],"#"," ") + "]";
-					if i != al - 1
-						gamemodeScrollString += "\n";
+					if (UberCont.opt_gamemode[i] != 0)
+					{
+						gamemodeScrollString += "["+string_replace_all(UberCont.gamemode[UberCont.opt_gamemode[i]],"#"," ") + "]";
+						if i != al - 1
+							gamemodeScrollString += "\n";
+					}
 				}
 				scrDrawHelp(gamemodeScrollString);
 			}
@@ -1294,6 +1297,23 @@ function scrDrawHUD() {
 			draw_text(xx+1,yy-31,string_hash_to_newline(string(name)))
 			draw_set_color(c_white)
 			draw_text(xx,yy-31,string_hash_to_newline(string(name)))
+			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+		}
+	}
+	with CrownVaultSecretExit
+	{
+		if place_meeting(x,y,Player)
+		{
+			var yy = y-18;
+			var xx = x-2;
+			draw_sprite(sprEPickup,UberCont.opt_gamepad,xx,yy-7)
+
+			draw_set_color(c_black)
+			draw_text_transformed(xx,yy-30,string_hash_to_newline(string(name)),textScaleX,textScaleY,textAngle)
+			draw_text_transformed(xx+1,yy-30,string_hash_to_newline(string(name)),textScaleX,textScaleY,textAngle)
+			draw_text_transformed(xx+1,yy-31,string_hash_to_newline(string(name)),textScaleX,textScaleY,textAngle)
+			draw_set_color(c_white)
+			draw_text_transformed(xx,yy-31,string_hash_to_newline(string(name)),textScaleX,textScaleY,textAngle)
 			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 		}
 	}

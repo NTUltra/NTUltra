@@ -14,8 +14,7 @@ if (instance_exists(Player))
     {
     with instance_create(x,y,Bullet2)
     {
-    
-    
+
     if (other.creator.x==Player.x)&&(Player.skill_got[19]=1)
     {
     motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),14+random(6))
@@ -23,13 +22,9 @@ if (instance_exists(Player))
     else{
     motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5,13+random(6))}
     
+	scrCopyWeaponMod(other);
     friction=0.9;
     team = other.team
-    
-        
-
-        if team=2
-        speed*=max(1,Player.pSpeedBoost-0.4)
         
     
     

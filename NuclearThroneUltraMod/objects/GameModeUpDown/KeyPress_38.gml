@@ -1,6 +1,6 @@
 /// @description step
 gamemodenr--;
-if gamemodenr < 0
+if gamemodenr < 1
 {
 	gamemodenr = maxgamemode;
 }

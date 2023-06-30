@@ -354,7 +354,6 @@ if !instance_exists(LevCont) and visible = 1
 			rad = GetPlayerMaxRad()*2;
 		}
 		if keyboard_check_pressed(ord("T")) {
-			charpoints = 1;
 			if instance_exists(Portal) && scrIsGamemode(25)
 			{
 				subarea++;
@@ -365,6 +364,7 @@ if !instance_exists(LevCont) and visible = 1
 			else if instance_exists(Portal)
 			{
 				scrNextLevel();
+				instance_create(Player.x,Player.y,Portal);
 				thing = instance_create(x,y,PopupText)
 				thing.mytext = string(area) + "-" + string(subarea);
 			}

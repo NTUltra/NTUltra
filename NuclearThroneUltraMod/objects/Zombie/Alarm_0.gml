@@ -3,9 +3,12 @@ alarm[2] = 2;
 if !instance_exists(Player)
 	exit;
 var chosenZombie = GraveyardSkeleton;
+var ar = Player.area;
+if ar == 116//Survival arena
+	ar = subarea;
 repeat(clamp(Player.loops + 1, 1, 10))
 {
-	switch (Player.area)
+	switch (ar)
 	{
 		case 1:
 			chosenZombie = choose(Maggot,Maggot,Maggot, Maggot, GraveyardSkeleton,RadMaggot,GraveyardSkeleton,GraveyardSniper, Maggot,Maggot,Maggot, Maggot, GraveyardSkeleton,Scorpion,GraveyardSkeleton,GraveyardSniper, Scorpion);
@@ -118,6 +121,9 @@ repeat(clamp(Player.loops + 1, 1, 10))
 		break;
 		case 127://Graveyard
 			chosenZombie = choose(InvertedGraveyardSkeleton, InvertedGraveyardSkeleton, InvertedGraveyardSkeleton, InvertedGraveyardSkeleton, InvertedGraveyardSniper);
+		break;
+		default:
+			chosenZombie = choose(GraveyardSniper, GraveyardSkeleton);
 		break;
 	}
 	with instance_create(x,y,chosenZombie)

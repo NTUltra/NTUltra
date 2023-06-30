@@ -191,7 +191,7 @@ race = 15;
 if scrIsGamemode(35)
 race = 23
 
-
+fakeRace = race;
 
 team = 2
 mySize = 5
@@ -258,8 +258,9 @@ cwepmod1 = 0;
 cwepmod2 = 0;
 cwepmod3 = 0;
 cwepmod4 = 0;
-scrUltras()
+ultra_got[31] = 0;
 scrCrowns()
+scrUltras()
 
 gunY = 0;
 pSpeedBoost = 1;
@@ -655,7 +656,7 @@ if scrIsGamemode(11) //GUN GAME
     do {
         wep = irandom(maxwep);
     }
-    until(wep != 69 && wep != 0 && wep != 298) //no oops gun and no no gun
+    until(wep != 69 && wep != 0 && wep != 298 && wep_rad[wep] <= 0) //no oops gun and no no gun
 
     if race = 7 //roids
     {

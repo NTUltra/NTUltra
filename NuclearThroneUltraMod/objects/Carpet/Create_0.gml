@@ -1,4 +1,4 @@
 /// @description depth
-depth = 9;
+depth = 8;
 if scrIsGamemode(25)
  depth = 2;

@@ -20,17 +20,29 @@ with UberCont
 }
 if Player.charpoints > 0
 {
-	chars = [0];
-	var step = 28
-	var xx = __view_get( e__VW.XView, 0 ) + (__view_get( e__VW.WView, 0 )*0.5) - (step*5);
-	var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24;
-	for (var i = 0; i < 10; i++)
+	scrRaces();
+	var step = 21
+	var xx = __view_get( e__VW.XView, 0 ) + (__view_get( e__VW.WView, 0 )*0.5) - (step*7) + 2;
+	var xo = xx;
+	var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-60;
+	var num = 0
+	repeat(racemax+1)
 	{
 		with instance_create(xx, yy, CharIcon)
 		{
-			skill = other.chars[0];
+			char = num;
+		}
+		if num == 13
+		{
+			yy += 26;
+			xx = xo;
 		}
 		xx += step;
+		if num == racemax-1
+		{
+			xx = xo;
+		}
+		num += 1;
 	}
 	exit;
 }

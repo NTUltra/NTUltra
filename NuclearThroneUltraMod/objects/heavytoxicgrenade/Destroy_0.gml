@@ -4,7 +4,8 @@
 event_inherited();
 snd_play(sndToxicBoltGas);
 repeat(14)
-instance_create(x,y,ToxicThrowerGas)
+with instance_create(x,y,ToxicThrowerGas)
+	scrCopyWeaponMod(other);
 
 var ang = direction;
 var am = 10;
@@ -14,6 +15,7 @@ repeat(am)
 	with instance_create(x,y,ToxicThrowerGas)
 	{
 		motion_add(ang,1);
+		scrCopyWeaponMod(other);
 	}
 	ang += angstep;
 }

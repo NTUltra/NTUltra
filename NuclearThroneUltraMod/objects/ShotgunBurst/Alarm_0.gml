@@ -19,12 +19,8 @@ team = other.team
 
 
 
-if (instance_exists(Player))//HUNTER
-    {
-    
-    if team=2
-    speed*=Player.pSpeedBoost
-    }
+	scrCopyWeaponMod(other);
+
 
 }
 }

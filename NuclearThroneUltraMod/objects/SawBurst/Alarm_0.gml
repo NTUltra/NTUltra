@@ -30,12 +30,15 @@ if instance_exists(Player){
     else{
     motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(30)-15,3)}
     image_angle = direction
+			scrCopyWeaponMod(other);
+
     team = other.team}
 }
 else
 {
     with instance_create(x,y,Shank)
     {
+		scrCopyWeaponMod(other);
 		dmg = 1;
     motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(30)-15,3)
     image_angle = direction

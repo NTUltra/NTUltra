@@ -138,7 +138,7 @@ if area=100
 	if crownvisits == -1
 		instance_create(0,0,PauseTimer);
 	crownvisits++;
-	if crown != 0 && crown == prevCrown
+	if crown != 1 && crown == prevCrown
 	{
 		consecutiveCrownVisits ++;	
 	} else
@@ -190,5 +190,6 @@ if race=10//rebel hoody
 if race=22//ROGUE
 RogueHeat=true;
 
-
+if ultra_got[5] && altUltra
+	charpoints = 1;
 friction = 0.45//reset friction

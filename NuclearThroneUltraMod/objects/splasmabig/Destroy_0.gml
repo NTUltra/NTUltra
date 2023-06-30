@@ -18,6 +18,7 @@ repeat(balls)
 			angleDir *= -1
 			image_angle = direction
 		team = other.team
+		scrCopyWeaponMod(other);
 	}
 	ang += angstep;
 	bi ++;

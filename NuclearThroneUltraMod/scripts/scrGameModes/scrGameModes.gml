@@ -4,7 +4,7 @@ function scrGameModes() {
 	gamemode_have[0] = 1;
 	gamemode_tip[0] = "";
 	gamemode_description[0] = "";
-	gamemode_nocombo[0] = [26,27,37];
+	gamemode_nocombo[0] = [];
 
 	gamemode[1] = "ONE WEAPON ONLY";//
 	gamemode_unlock[1] = "REACH AND BEAT THE THRONE#USING ONLY A REVOLVER";
@@ -184,7 +184,7 @@ function scrGameModes() {
 	gamemode_have[25] = 0;
 	gamemode_tip[25] = "SURVIVAL ARENA!";
 	gamemode_description[25] = "SURVIVE IN A WAVE BASED ARENA WITH OVER wip CUSTOM WAVES!";
-	gamemode_nocombo[25] = [6,8,10,18,20,21,26,27,36,37];
+	gamemode_nocombo[25] = [6,8,10,18,20,21,26,27,36,37,40];
 	
 	gamemode[26] = "DAILY RACE";
 	gamemode_unlock[26] = "";
@@ -285,6 +285,13 @@ function scrGameModes() {
 	gamemode_description[39] = "BLOOD LOTS OF BLOOD";
 	gamemode_nocombo[39] = [26,27,37,8];
 	
+	gamemode[40] = "1 VS 1";
+	gamemode_unlock[40] = "COLLECT A BOSS BOUNTY";
+	gamemode_have[40] = 0;
+	gamemode_tip[40] = "THERE CAN BE ONLY ONE";
+	gamemode_description[40] = "ONLY ONE ENEMY SPAWNS EACH AREA. BUT THE ENEMY IS BEEFED UP!";
+	gamemode_nocombo[40] = [25,26,27,37,8];
+	
 	/*
 	gamemode[38] = "ALL MUTATIONS#INFINITE LEVELS";
 	gamemode_unlock[38] = "TAKE A SECRET ULTRA MUTATION#ON THE GAMEMODE: ALL MUTATION CHOICES";
@@ -308,11 +315,11 @@ function scrGameModes() {
 	gamemodeOrder[5] = 39;
 	gamemodeOrder[6] = 1;
 	gamemodeOrder[7] = 2;
-	gamemodeOrder[8] = 8;
+	gamemodeOrder[8] = 31;
 	gamemodeOrder[9] = 5;
 	gamemodeOrder[10] = 6;
 	gamemodeOrder[11] = 20;
-	gamemodeOrder[12] = 4;
+	gamemodeOrder[12] = 40;
 	gamemodeOrder[13] = 10;
 	gamemodeOrder[14] = 11;
 	gamemodeOrder[15] = 12;
@@ -320,28 +327,27 @@ function scrGameModes() {
 	gamemodeOrder[17] = 7;
 	gamemodeOrder[18] = 14;
 	gamemodeOrder[19] = 15;
-	gamemodeOrder[20] = 31;
-	gamemodeOrder[21] = 19;
-	gamemodeOrder[22] = 16;
-	gamemodeOrder[23] = 21;
-	gamemodeOrder[24] = 22;
-	//gamemodeOrder[25] = 39;
-	gamemodeOrder[25] = 25;
-	gamemodeOrder[26] = 23;
-	gamemodeOrder[27] = 24;
-	gamemodeOrder[28] = 18;
-	gamemodeOrder[29] = 30;
-	gamemodeOrder[30] = 36;
-	gamemodeOrder[31] = 32;
-	gamemodeOrder[32] = 29;
-	gamemodeOrder[33] = 33;
-	gamemodeOrder[34] = 28;
-	//gamemodeOrder[36] = 38//35;
-	gamemodeOrder[35] = 35//17;
-	gamemodeOrder[36] = 17//26;
-	gamemodeOrder[37] = 26//28;
-	gamemodeOrder[38] = 27;
-	gamemodeOrder[39] = 37;
+	gamemodeOrder[20] = 8;
+	gamemodeOrder[21] = 4;
+	gamemodeOrder[22] = 19;
+	gamemodeOrder[23] = 16;
+	gamemodeOrder[24] = 21;
+	gamemodeOrder[25] = 22;
+	gamemodeOrder[26] = 25;
+	gamemodeOrder[27] = 23;
+	gamemodeOrder[28] = 24;
+	gamemodeOrder[29] = 18;
+	gamemodeOrder[30] = 30;
+	gamemodeOrder[31] = 36;
+	gamemodeOrder[32] = 32;
+	gamemodeOrder[33] = 29;
+	gamemodeOrder[34] = 33;
+	gamemodeOrder[35] = 28;
+	gamemodeOrder[36] = 35;
+	gamemodeOrder[37] = 17;
+	gamemodeOrder[38] = 26;
+	gamemodeOrder[39] = 27;
+	gamemodeOrder[40] = 37;
 
 
 	maxgamemode = array_length(gamemodeOrder) - 1;

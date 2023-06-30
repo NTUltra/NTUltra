@@ -83,7 +83,7 @@ draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 )+__view_
 	}
 	
 	
-	if (UberCont.opt_gamemode != [0])
+	if (!scrIsOnlyNormalGamemode())
 	{
 		//draw_text_color(__view_get( e__VW.XView, 0 )+32,__view_get( e__VW.YView, 0 )-40 + widescreen,string_hash_to_newline("GAMEMODE:#"+gamemode[UberCont.opt_gamemode[0]]),c_white,c_white,c_white,c_white,1);
 		var sw = 128;
@@ -95,9 +95,12 @@ draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 )+__view_
 		var al = array_length(UberCont.opt_gamemode)
 		for (var i = 0; i < al; i++)
 		{
-			gamemodeScrollString += string_replace_all(UberCont.gamemode[UberCont.opt_gamemode[i]],"#"," ");
-			if i != al - 1
-				gamemodeScrollString += " + ";
+			if (UberCont.opt_gamemode[i] != 0)
+			{
+				gamemodeScrollString += string_replace_all(UberCont.gamemode[UberCont.opt_gamemode[i]],"#"," ");
+				if i != al - 1
+					gamemodeScrollString += " + ";
+			}
 		}
 		gmwidth = max(0,string_width(gamemodeScrollString) - sw);
 		var xx = lerp(
@@ -106,7 +109,7 @@ draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 )+__view_
 		gmScroll);
 		surface_set_target(gmSurf);
 		draw_clear_alpha(c_black,0);
-			draw_text_color(xx,1,gamemodeScrollString,c_white,c_white,c_white,c_white,1);	
+			draw_text_color(xx,1,gamemodeScrollString,c_ltgray,c_ltgray,c_ltgray,c_ltgray,1);	
 		surface_reset_target();
 		draw_text_color(__view_get( e__VW.XView, 0 )+32,__view_get( e__VW.YView, 0 )-40 + widescreen,"GAMEMODE:",c_grey,c_grey,c_grey,c_grey,1);
 		draw_surface(gmSurf,__view_get( e__VW.XView, 0 )+32,__view_get( e__VW.YView, 0 )-32 + widescreen);

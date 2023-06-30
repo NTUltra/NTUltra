@@ -13,8 +13,9 @@ repeat(2)
 {
 with instance_create(x,y,UltraToxicThrowerGas)
 {motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5,8+random(4))
+	scrCopyWeaponMod(other);
 //team = other.team
-move_contact_solid(direction,8)}
+}
 }
 
 BackCont.viewx2 += lengthdir_x(1.4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake

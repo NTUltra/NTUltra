@@ -20,14 +20,14 @@ var yy = scroll - totalHeight;
 var selectedModeCol = make_colour_rgb(100,42,140);
 repeat(3)
 {
-	i = 0;
-	repeat(maxgamemode+1)
+	i = 1;//Normal mode does not matter
+	repeat(maxgamemode)
 	{
 		var pre = "";
-		if i < 9
-			var pre = "0"+string(i+1); 
+		if i < 10
+			var pre = "0"+string(i); 
 		else
-			pre = string(i+1);
+			pre = string(i);
 		var strin = pre + ". "+string_hash_to_newline(gamemode[gamemodeOrder[i]]);
 		if i == gamemodenr
 			strin += " *";
@@ -79,7 +79,7 @@ draw_set_colour(c_white);
 surface_reset_target();
 draw_surface(surf,gmx,y);
 var o = 48;
-if (/*scrIsGamemode(1)&&*/gamemodeOrder[gamemodenr]==1)
+if (gamemodeOrder[gamemodenr]==1 && UberCont.gamemode_have[1])
 {
 	if !instance_exists(StartingWeaponUpDown)
 		instance_create(x+o,y+24,StartingWeaponUpDown);
@@ -89,7 +89,7 @@ else{
 		instance_destroy()
 }
 
-if (/*scrIsGamemode(38) && */gamemodeOrder[gamemodenr]==38)
+if (gamemodeOrder[gamemodenr]==38 && UberCont.gamemode_have[38])
 {
 	if !instance_exists(SeedSetter) && !instance_exists(PlayerSpawn)
 		instance_create(x-10,y+56,SeedSetter);
@@ -111,7 +111,7 @@ else{
 }
 
 o = 72;
-if (/*scrIsGamemode(19)&&*/gamemodeOrder[gamemodenr]==19)
+if (gamemodeOrder[gamemodenr]==19 && UberCont.gamemode_have[19])
 {
 	if !instance_exists(DiscDamageUpDown)
 		instance_create(x+o,y+96,DiscDamageUpDown);
@@ -127,8 +127,8 @@ with DiscAmountUpDown
 instance_destroy()
 }
 
-var yy = y+32;
-if (UberCont.gamemode_have[gamemodeOrder[gamemodenr]]=1 && !dailyDone)
+var yy = y + 32;
+if (UberCont.gamemode_have[gamemodeOrder[gamemodenr]] && !dailyDone)
 {
 	if newClick// && (prevgamemodenr == gamemodenr)
 	{
@@ -147,9 +147,9 @@ if (UberCont.gamemode_have[gamemodeOrder[gamemodenr]]=1 && !dailyDone)
 }
 else
 {
-	draw_sprite(sprLocked,0,x,y+20);
+	draw_sprite(sprLocked,0,x,y+40);
 	var str;
-	if dailyDone && UberCont.gamemode_have[gamemodeOrder[gamemodenr]]=1
+	if dailyDone && UberCont.gamemode_have[gamemodeOrder[gamemodenr]]
 	{
 		if !instance_exists(GoToLeaderboard)
 			instance_create(x-10,y+96,GoToLeaderboard);
@@ -170,12 +170,13 @@ else
 		str = string_hash_to_newline(gamemode_unlock[gamemodeOrder[gamemodenr]]);
 	}
 	var o = 32
-	draw_set_halign(fa_middle);
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
 	draw_set_color(c_gray)
 	draw_text_ext(x+o,yy,str,8,128)
 	draw_set_color(c_white)
 	draw_text_ext(x+o,yy,str,8,128)
-	draw_set_halign(fa_left);
+	//draw_set_halign(fa_left);
 }
 
 draw_set_valign(fa_bottom);

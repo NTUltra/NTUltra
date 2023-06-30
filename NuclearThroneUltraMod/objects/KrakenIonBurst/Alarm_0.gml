@@ -18,6 +18,7 @@ ion=true;
 creator=other.id;
 team = other.team
 ammo = 8
+scrCopyWeaponMod(other);
 event_perform(ev_alarm,0)
 visible = 0
 with instance_create(x,y,LightningSpawn)
@@ -25,7 +26,6 @@ with instance_create(x,y,LightningSpawn)
 sprite_index=sprTentacleSpawn
 image_angle = other.image_angle
 }
-
 //repeat(6){
     with instance_create(x,y,FishBoost)
     {

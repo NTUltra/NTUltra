@@ -16,6 +16,7 @@ snd_play(sndSeekerWave,0.1,true,false,1,false,false,0.5);
 with instance_create(x,y,SeekerBolt)
 {motion_add((other.leftang+other.ang)+(random(12)-6)-15*other.creator.accuracy,2+random(3))
 image_angle = direction
+scrCopyWeaponMod(other);
 team = other.team
 }
 

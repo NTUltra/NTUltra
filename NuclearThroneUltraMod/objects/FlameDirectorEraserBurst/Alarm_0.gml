@@ -20,13 +20,7 @@ with instance_create(x,y,Bullet9)
 motion_add(point_direction(x,y,other.mox,other.moy),10+random(4))
 image_angle = direction
 team = other.team
-    if (instance_exists(Player))
-    {
-    
-
-    if team=2
-    speed*=Player.pSpeedBoost
-    }
+scrCopyWeaponMod(other);
 }
 }
 }

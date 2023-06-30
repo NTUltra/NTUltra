@@ -26,11 +26,9 @@ if instance_exists(creator)
 		with instance_create(x,y,Splinter)//5 splinters
 		{
 			motion_add(d+(random(30)-15)*Player.accuracy,20+random(4))
+			scrCopyWeaponMod(other);
 			image_angle = direction
 			team = other.team
-			
-		    if team=2
-		    speed*=Player.pSpeedBoost
 		    
 		}
 	}

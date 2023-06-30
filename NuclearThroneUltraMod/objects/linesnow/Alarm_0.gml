@@ -23,6 +23,7 @@ repeat(2){
 with instance_create(x,y,IceFlame)
 {motion_add(random(360),0.5+random(2))
 team = other.team
+scrCopyWeaponMod(other);
 move_contact_solid(direction,4)}
 }
 

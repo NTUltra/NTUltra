@@ -6,7 +6,8 @@ var ang = direction;
 var angStep = 360/am;
 repeat(am)
 {
-	instance_create(x+lengthdir_x(l,ang),y+lengthdir_y(l,ang),GreenExplosion)
+	with instance_create(x+lengthdir_x(l,ang),y+lengthdir_y(l,ang),GreenExplosion)
+		scrCopyWeaponMod(other);
 	ang += angStep;
 }
 scrRaddrop(6);

@@ -15,8 +15,8 @@ repeat(rate)
 with instance_create(x,y,Flame)
 {motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5,6+random(2+other.rate*2))
 team = other.team
+scrCopyWeaponMod(other);
 dmg=other.dmg;
-move_contact_solid(direction,14)
 sprite_index=sprFireLilHunter;}
 }
 

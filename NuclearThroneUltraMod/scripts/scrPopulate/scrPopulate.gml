@@ -70,7 +70,7 @@ function scrPopulate() {
 				if Player.loops > 10 && random(15) < Player.loops - 13
 					scrPopEnemies();
 				
-				if scrIsHardMode()
+				if scrIsHardMode() && !scrIsGamemode(40)
 				{
 					var ran = random(100);
 					if ran < 10
@@ -102,7 +102,7 @@ function scrPopulate() {
                 } else { //normal procedure
                     scrPopEnemies()
 					
-					if scrIsHardMode() && spawnarea != 100 && spawnarea != 104
+					if scrIsHardMode() && spawnarea != 100 && spawnarea != 104 && !scrIsGamemode(40)
 					{
 						var ran = random(100);
 						if ran < 10
@@ -475,56 +475,60 @@ function scrPopulate() {
     //spawning chests
     scrPopChests()
 
-    //spawn desert boss
-    if Player.area = 1 and Player.subarea = 3 {
-        repeat(clamp(Player.loops + 1,1,6))
-        instance_create(x, y, WantBoss)
-    }
+	//BOSSES
+	if !scrIsGamemode(40)
+	{
+	    //spawn desert boss
+	    if Player.area = 1 and Player.subarea = 3 {
+	        repeat(clamp(Player.loops + 1,1,6))
+	        instance_create(x, y, WantBoss)
+	    }
 	
-	if Player.area = 4 and Player.subarea = 2 {
-        instance_create(x, y, WantBoss)//Big bad bat
-		if Player.loops > 11
-			instance_create(x, y, WantBoss)
-    }
-	if Player.area = 111 and Player.subarea = 2 {
-        instance_create(x, y, WantBoss)//Inverted big bad
-		if Player.loops > 11
-			instance_create(x, y, WantBoss)
-    }
+		if Player.area = 4 and Player.subarea = 2 {
+	        instance_create(x, y, WantBoss)//Big bad bat
+			if Player.loops > 11
+				instance_create(x, y, WantBoss)
+	    }
+		if Player.area = 111 and Player.subarea = 2 {
+	        instance_create(x, y, WantBoss)//Inverted big bad
+			if Player.loops > 11
+				instance_create(x, y, WantBoss)
+	    }
 	
-	//spawn SEWER FISH boss
-	/*
-    if (Player.area = 2 || Player.area == 110) and Player.subarea = 1 and Player.loops > 1 {
-		instance_create(x, y, WantBoss)
-    }
-	*/
-
-    //spawn INVERTED desert boss
-    if Player.area = 105 and Player.subarea = 3 {
-        repeat(clamp(Player.loops + 1,1,6))
-        instance_create(x, y, WantBoss)
-    }
-	//Big vulture
-	if ( (Player.area == 10 || Player.area == 121) and Player.subarea = 3 ) {
-        repeat(ceil(max(1,Player.loops*0.5)))
+		//spawn SEWER FISH boss
+		/*
+	    if (Player.area = 2 || Player.area == 110) and Player.subarea = 1 and Player.loops > 1 {
 			instance_create(x, y, WantBoss)
-    }
+	    }
+		*/
 
-    //spawn OASIS boss
-    if (Player.area = 101 || Player.area == 122) and Player.subarea == 3 {
-        repeat(ceil(max(1,Player.loops*0.5)))
-        instance_create(x, y, WantBoss)
-    }
+	    //spawn INVERTED desert boss
+	    if Player.area = 105 and Player.subarea = 3 {
+	        repeat(clamp(Player.loops + 1,1,6))
+	        instance_create(x, y, WantBoss)
+	    }
+		//Big vulture
+		if ( (Player.area == 10 || Player.area == 121) and Player.subarea = 3 ) {
+	        repeat(ceil(max(1,Player.loops*0.5)))
+				instance_create(x, y, WantBoss)
+	    }
 
-    if (Player.area = 3 && Player.subarea = 1 && Player.loops > 0) { //SPAWN ASSASSINBOSS
-        repeat(min(3,ceil(Player.loops*0.25)))
-        instance_create(x, y, WantBoss);
-    }
+	    //spawn OASIS boss
+	    if (Player.area = 101 || Player.area == 122) and Player.subarea == 3 {
+	        repeat(ceil(max(1,Player.loops*0.5)))
+	        instance_create(x, y, WantBoss)
+	    }
 
-    if (Player.area = 106 && Player.subarea = 1 && Player.loops > 0) { //SPAWN ASSASSINBOSS
-        repeat(min(3,ceil(Player.loops*0.25)))
-        instance_create(x, y, WantBoss);
-    }
+	    if (Player.area = 3 && Player.subarea = 1 && Player.loops > 0) { //SPAWN ASSASSINBOSS
+	        repeat(min(3,ceil(Player.loops*0.25)))
+	        instance_create(x, y, WantBoss);
+	    }
+
+	    if (Player.area = 106 && Player.subarea = 1 && Player.loops > 0) { //SPAWN ASSASSINBOSS
+	        repeat(min(3,ceil(Player.loops*0.25)))
+	        instance_create(x, y, WantBoss);
+	    }
+	}
 
     //venuz car
     if Player.area = 3 and Player.subarea = 1 {
@@ -554,7 +558,7 @@ function scrPopulate() {
 		}
     }
 
-    if !((Player.area == 118 || Player.area == 9) && Player.subarea == 3) {
+    if !((Player.area == 118 || Player.area == 9) && Player.subarea == 3) && !scrIsGamemode(40){
         if Player.area < 5 {
             with WeaponChest
             instance_create(x, y, Bandit)
@@ -573,7 +577,7 @@ function scrPopulate() {
         }
     }
     //populate pizza sewers
-    if Player.area = 102 {
+    if Player.area = 102 && !scrIsGamemode(40){
 
         with enemy
         instance_destroy()

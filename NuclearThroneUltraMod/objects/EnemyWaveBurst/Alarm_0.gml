@@ -13,12 +13,15 @@ with instance_create(x,y,EnemyBullet3)
 {
 motion_add(other.creator.gunangle+random(4)-2+sin(other.ammo/2)*16,12)
 image_angle = direction
-team = other.team}
+team = other.team
+scrCopyWeaponMod(other);
+}
 with instance_create(x,y,EnemyBullet3)
 {
 motion_add(other.creator.gunangle+random(4)-2-sin(other.ammo/2)*16,12)
 image_angle = direction
 team = other.team
+scrCopyWeaponMod(other);
 }
 
 

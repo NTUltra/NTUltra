@@ -17,7 +17,8 @@ Sleep(20)
 dir = 0
 do {dir += 1 x += lengthdir_x(step,direction) y += lengthdir_y(step,direction)
 	var randir = random(360);
-	instance_create(x+lengthdir_x(4,randir),y+lengthdir_y(4,randir),MeatExplosion)
+	with instance_create(x+lengthdir_x(4,randir),y+lengthdir_y(4,randir),MeatExplosion)
+		scrCopyWeaponMod(other);
 if(random(6)<1){
 with instance_create(x,y,Smoke)
 motion_add(random(360),random(2))

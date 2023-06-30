@@ -1,5 +1,4 @@
 maxhealth = 20
-
 spr_idle = sprCarIdle
 spr_hurt = sprCarHurt
 spr_dead = sprScorchmark

@@ -20,7 +20,8 @@ do {dir += 1 x += lengthdir_x(24,direction) y += lengthdir_y(24,direction)
 if point_distance(x,y,Player.x,Player.y)>64
 {
 	var randir = random(360);
-	instance_create(x+lengthdir_x(4,randir),y+lengthdir_y(4,randir),Explosion)
+	with instance_create(x+lengthdir_x(4,randir),y+lengthdir_y(4,randir),Explosion)
+		scrCopyWeaponMod(other);
 }
 if(random(6)<1){
 with instance_create(x,y,Smoke)

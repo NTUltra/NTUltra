@@ -91,7 +91,7 @@ function scrEnemyDeathEvent(){
 			
 
 			//Sheep Ultra B Just A Sheep
-			if ultra_got[50] == 1
+			if ultra_got[50] == 1 && !altUltra
 			{
 				if justAsheep && instance_number(enemy) < BackCont.enemiesInStartLevel*0.7//if70% left enemies will notice you
 				{
@@ -292,7 +292,7 @@ function scrEnemyDeathEvent(){
 			        {ammo[wep_type[wep]]+=typ_ammo[wep_type[wep]]*3;}
 					
 			        if rad < wep_rad[wep] * 4
-			        rad = wep_rad[wep] * 4;
+						rad = wep_rad[wep] * 4;
 			    scrWeaponHold();
 	        }
 	    }

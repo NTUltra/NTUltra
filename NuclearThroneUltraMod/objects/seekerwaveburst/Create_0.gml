@@ -1,3 +1,4 @@
+event_inherited();
 leftang=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)-60;
 rightang=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+60;
 

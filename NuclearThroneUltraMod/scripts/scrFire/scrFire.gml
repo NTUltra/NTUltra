@@ -3629,7 +3629,7 @@ function scrFire() {
 	break;
 
 
-	//LINE OF TOXIC
+	//TOXIC LINE
 	case 146:
 
 	snd_play_fire(sndGrenade)

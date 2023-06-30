@@ -35,5 +35,5 @@
     "path": "sprites/mskBanditBoss/mskBanditBoss.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

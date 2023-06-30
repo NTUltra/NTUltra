@@ -233,6 +233,15 @@ function scrGenerateFloorMaker(limiter) {
 		instance_create(x,y,Floor)
 		if (Player.area == 9 && Player.subarea == 3)
 		{
+			instance_create(x,y,Floor)
+			instance_create(x+32,y,Floor)
+			instance_create(x-32,y,Floor)
+			instance_create(x+64,y,Floor)
+			instance_create(x-64,y,Floor)
+			instance_create(x+96,y,Floor)
+			instance_create(x-96,y,Floor)
+			instance_create(x+128,y,Floor)
+			instance_create(x-128,y,Floor)
 			instance_create(x+16,y+16,Carpet);
 			instance_create(x,y,NuclearThrone1);
 		}

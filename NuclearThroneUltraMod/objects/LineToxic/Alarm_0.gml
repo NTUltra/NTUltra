@@ -24,7 +24,10 @@ if point_distance(x,y,Player.x,Player.y)>40
 {motion_add(random(360),0.5+random(2))
 team = other.team
 move_contact_solid(direction,4)}*/
-instance_create(x,y,ToxicThrowerGas);
+with instance_create(x,y,ToxicThrowerGas)
+{
+	scrCopyWeaponMod(other);
+}
 //}
 
 }

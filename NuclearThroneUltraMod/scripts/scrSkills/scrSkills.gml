@@ -364,7 +364,7 @@ function scrSkills() {
 
 	skill_name[29] = "INSOMNIA"
 	skill_text[29] = "ENEMIES DON'T ATTACK YOU#FOR A COUPLE OF SECONDS#AT THE START OF EACH AREA"
-	if instance_exists(Player) && Player.race == 13
+	if instance_exists(Player) && (Player.race == 13)
 		skill_text[29] = "ENEMIES DON'T ATTACK YOU#FOR A COUPLE OF SECONDS#AFTER YOU ENGAGE FIRE"
 	if scrIsGamemode(25)
 		skill_text[29] = "ENEMIES DON'T ATTACK YOU#FOR A COUPLE OF SECONDS#WHEN THEY SPAWN IN"

@@ -1,7 +1,11 @@
 image_speed = 0.5
 
 BackCont.shake += 2
-
+Mod1=0;
+Mod2=0;
+Mod3=0;
+Mod4=0;
+wepFire=0;
 team = 2
 dmg=2;
 if instance_exists(Player)

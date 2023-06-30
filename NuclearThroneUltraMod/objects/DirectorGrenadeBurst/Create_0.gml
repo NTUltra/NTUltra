@@ -1,4 +1,5 @@
 /// @description init
+event_inherited();
 aimOffset = 0;
 accuracy = 1;
 if instance_exists(Player)

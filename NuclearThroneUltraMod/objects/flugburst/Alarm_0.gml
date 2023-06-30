@@ -14,17 +14,9 @@ motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180+random(5
 with instance_create(x,y,Flug)
 {
 motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(8)-4,18)
+scrCopyWeaponMod(other);
 image_angle = direction
 team = other.team
-
-if (instance_exists(Player))
-    {
-    
-
-    if team=2
-    speed*=Player.pSpeedBoost
-    
-    }
 
 }
 

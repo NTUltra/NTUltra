@@ -1,5 +1,6 @@
 /// @description Explode
 event_inherited()
 
-instance_create(x,y,Explosion)
+with instance_create(x,y,Explosion)
+	scrCopyWeaponMod(other);
 snd_play(sndExplosion)

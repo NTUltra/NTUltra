@@ -12,18 +12,10 @@ ammo -= 1
 with instance_create(x,y,Bullet7)
 {motion_add(other.Direction+(random(10)-5)+((other.ammo*10)-(other.totalammo*5))*other.creator.accuracy,9+random(6))
 image_angle = direction
+scrCopyWeaponMod(other);
 team = other.team
 
 
-
-if (instance_exists(Player))//HUNTER
-    {
-    
-
-    if team=2
-    speed*=Player.pSpeedBoost
-    
-    }
 
 }
 }

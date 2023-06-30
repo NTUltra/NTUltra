@@ -67,16 +67,16 @@ if day != yesterday
 				weeklyOption[1] = irandom_range(1,20);//Disc damage
 			break;
 			case 35://God frog
-				weekGamemode = 39;//Hard mode (infinite levels)
+				weekGamemode = 34;//Hard mode (infinite levels)
 			break;
 			case 26://Daily race
-				weekGamemode = 38;//all mutations infinite levels
+				weekGamemode = 25;//all mutations infinite levels
 			break;
 			case 27://Daily score
 				weekGamemode = 25;//Survival arena
 			break;
 			case 37:
-				weekGamemode = 41;//Gore galore
+				weekGamemode = 39;//Gore galore
 			break;
 		}
 		var fileName = file_find_first("w*", 0);

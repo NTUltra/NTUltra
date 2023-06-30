@@ -1,5 +1,5 @@
 /// @description gmScroll
-gmScroll += 4/max(1,Menu.gmwidth);
+gmScroll += 4/max(1,gmwidth);
 if gmScroll >= 1
 {
 	gmScroll = 1;

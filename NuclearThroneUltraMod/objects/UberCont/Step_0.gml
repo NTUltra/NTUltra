@@ -1,5 +1,5 @@
 recursionCheck = 0;
-if isPaused = 1
+if isPaused == 1
 {
 //QUICK RESTART
 if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_exists(Player) && (keyboard_check_pressed(ord("R")) || gamepad_button_check(0,gp_face3)) )//(gamepad_button_check(0,gp_stickl) && gamepad_button_check(0,gp_stickr)) )
@@ -11,6 +11,8 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 	instance_activate_all();
 	alarm[2] = 1;//Some objects are only accessible after a frame
 	//audio_stop_all();
+	alarm[4] = 0;
+	alarm[5] = 0;
 	isPaused = 0
 	alarm[3] = 1;
 	with Player
@@ -84,6 +86,8 @@ Cursor.image_index=UberCont.opt_crosshair;
 Cursor.image_index=UberCont.opt_crosshair;}
 */
 isPaused = 0
+alarm[4] = 0;
+alarm[5] = 0;
 alarm[3] = 1;
 audio_resume_all();
 }
@@ -94,6 +98,8 @@ if (keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4)) && !in
 		opt_gamemode = [0];
 	instance_activate_all()
 	isPaused = 0
+	alarm[4] = 0;
+	alarm[5] = 0;
 	alarm[3] = 1;
 	//audio_stop_all();
 	if instance_exists(Player)
@@ -181,6 +187,7 @@ instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+st
 instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+222+optY,FPSToggle);
 
 isPaused = 1
+alarm[4] = 1;
 audio_pause_all();
 }
 }

@@ -14,19 +14,10 @@ repeat(5)
 with instance_create(x,y,Bullet2)
 {motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(40)-20)*other.creator.accuracy,12+random(6))
 image_angle = direction
+scrCopyWeaponMod(other);
 team = other.team
 }
 
-
-
-if (instance_exists(Player))//HUNTER
-    {
-    
-
-    if team=2
-    speed*=Player.pSpeedBoost
-    
-    }
 
 }
 

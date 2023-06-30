@@ -13,6 +13,7 @@ repeat(balls)
 	with instance_create(xprevious,yprevious,PlasmaBall)
 	{motion_add(ang,2)
 	image_angle = direction
+	scrCopyWeaponMod(other);
 	team = other.team}
 	ang += angstep;
 }

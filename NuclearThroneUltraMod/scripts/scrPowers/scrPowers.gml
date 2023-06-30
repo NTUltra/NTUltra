@@ -1,5 +1,10 @@
 /// @description
 function scrPowers() {
+	var keepRace = race;
+	if ultra_got[50] && altUltra
+	{
+		race = fakeRace;	
+	}
 	/////SHIT PRESSED////////
 	if KeyCont.key_spec[p] = 1
 	{
@@ -3140,5 +3145,5 @@ function scrPowers() {
 		lockoutElementor = false;	
 	}
 	}
-	
+	race = keepRace;
 }

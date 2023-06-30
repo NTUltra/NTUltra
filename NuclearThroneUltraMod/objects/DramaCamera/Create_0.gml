@@ -1,4 +1,4 @@
-if instance_exists(InvaderBossSpawnPortal) || instance_exists(BossInvasionNoName)
+if instance_exists(InvaderBossSpawnPortal) || instance_exists(BossInvasionNoName) || scrIsGamemode(40)
 {
 	instance_destroy();
 	exit;

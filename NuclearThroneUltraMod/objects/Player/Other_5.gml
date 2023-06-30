@@ -616,7 +616,7 @@ scrUnlockGameMode(7,"FOR COMPLETING AN AREA WITHOUT WALKING")
 if ( firedthislevel=false && race = 10 && area < 100 && area != 10 && loops>0 )
 scrUnlockBSkin(10,"FOR COMPLETING A MAIN AREA#ON LOOP#WITHOUT FIRING AS REBEL",0);
 
-if ( firedthislevel=false && race = 13 && area <100 && area != 10 && ( area>3 || loops>0 )  )
+if ( firedthislevel=false && (race == 13) && area <100 && area != 10 && ( area>3 || loops>0 )  )
 scrUnlockCSkin(13,"FOR COMPLETING A MAIN AREA# AFTER THE SCRAPYARD#WITHOUT FIRING AS SHEEP",0);
 
 if ( firedthislevel=false && race = 15 && area <100 && area != 10 && ( area>2 || loops>0 )  )

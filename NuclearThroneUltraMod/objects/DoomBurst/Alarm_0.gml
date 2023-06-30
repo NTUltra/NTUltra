@@ -16,15 +16,8 @@ with instance_create(x,y,DoomGrenade)
 walk=6+irandom(6);
 motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(14)-7)*other.creator.accuracy,16)
 team = other.team
+	scrCopyWeaponMod(other);
 
-    if (instance_exists(Player))
-    {
-    
-
-    if team=2
-    speed*=Player.pSpeedBoost
-   
-    }
 }
 
 BackCont.viewx2 += lengthdir_x(6,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake

@@ -16,6 +16,7 @@ image_speed-=0.1;}
 
 repeat(4){
 with instance_create(UberCont.mouse__x+random(64)-32,UberCont.mouse__y+random(64)-32,IonImpact){
+	scrCopyWeaponMod(other);
 team = other.team
 }/*
 with instance_create(UberCont.mouse__x+random(64)-32,UberCont.mouse__y+random(64)-32,MiniPlasmaImpact){

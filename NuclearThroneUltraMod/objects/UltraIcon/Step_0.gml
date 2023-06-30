@@ -126,6 +126,17 @@ else if skill == 47 && (!Player.skill_got[1] && Player.skill_got[3] || Player.un
 		ultra_tips[47] = "pay up"
 	}
 }
+else if skill == 50 && Player.crown > Player.crownmax
+{
+	with Player
+	{
+		scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+		altUltra = true;
+		ultra_name[50] = "CODENAME S.A.S. : SECRET AGENT SHEEP"
+		ultra_text[50] = "ENEMIES THAT DON'T KNOW YOU'RE THERE#TAKE QUADRUPPLE DAMAGE##EACH AREA#TAKE ON THE APPEARANCE#OF A DIFFERENT CHARACTER##CROWN VAULT BECOMES YOUR SPY HUB#ALLOWING YOU ACCESS TO SEVERAL AREAS#"
+		ultra_tips[50] = "S.A.S."//Probably busted with unlockables but yea
+	}
+}
 else if skill == 51 && (!Player.skill_got[2] && !Player.skill_got[8] || Player.unlockAlternativeUltras)
 {
 	with Player

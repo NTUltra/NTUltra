@@ -20,15 +20,8 @@ if other.isGold
 motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(12)-6)*other.creator.accuracy,other.projectileSpeed+random(3))//speed=10
 image_angle = direction
 team = other.team
-//alarm[0] = 14//shorter fuse original 40 regular naddes 60
-    if (instance_exists(Player))
-    {
-    
+	scrCopyWeaponMod(other);
 
-    if team=2
-    speed*=Player.pSpeedBoost
-    
-    }
 }
 //}
 

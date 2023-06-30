@@ -180,3 +180,6 @@ chestRan = 10;
 isWeekly = false;
 weeklyGamemode = 0;
 hasLeveledUp = false;
+
+gmScroll = 0;
+gmwidth = 1;

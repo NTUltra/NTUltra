@@ -14,17 +14,11 @@ motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180+random(5
 
 with instance_create(x,y,FreezeBullet)
 {
-motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(4)-2,16)
-image_angle = direction
-team = other.team
-    if (instance_exists(Player))
-    {
-    
+	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(4)-2,16)
+	image_angle = direction
+	team = other.team
+	scrCopyWeaponMod(other);
 
-    if team=2
-    speed*=Player.pSpeedBoost
-    
-    }
 }
 
 BackCont.viewx2 += lengthdir_x(7,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake

@@ -20,3 +20,6 @@ repeat(maxgamemode)
 	i++;
 }
 totalHeight = yy;
+debug("UberCont.opt_gamemode ", UberCont.opt_gamemode);
+if scrIsOnlyNormalGamemode()
+	UberCont.opt_gamemode = [];

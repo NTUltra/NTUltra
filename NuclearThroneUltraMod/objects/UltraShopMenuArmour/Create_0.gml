@@ -6,5 +6,5 @@ drawx = x
 drawy = y
 
 cost=0.35;
-cost*=ShopWheel.discount;
+cost*=ShopWheel.discount; event_inherited();
 txt = "ARMOUR#RADS: "+string(round(cost*100))+"%";

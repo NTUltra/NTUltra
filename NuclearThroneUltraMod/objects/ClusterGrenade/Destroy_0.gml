@@ -10,6 +10,7 @@ repeat(8)
 		motion_add(ang,2+random(3))//speed=10
 		image_angle = direction
 		team = other.team
+		scrCopyWeaponMod(other);
 	}
 	ang += angstep;
 }

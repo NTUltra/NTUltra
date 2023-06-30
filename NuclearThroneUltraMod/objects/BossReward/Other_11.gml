@@ -1,4 +1,5 @@
 /// @description Muchas clickas
+scrUnlockGameMode(40,"FOR COLLECTING#A BOSS BOUNTY REWARD");
 switch(array_length(UberCont.collectedRewards))
 {
 	case 0:

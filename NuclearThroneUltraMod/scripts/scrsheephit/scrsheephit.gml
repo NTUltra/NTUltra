@@ -3,7 +3,7 @@
 ///@param
 function scrSheepHit(){
 	with Player {
-		if justAsheep && ultra_got[50]==0 && instance_exists(PlayerAlarms2) && PlayerAlarms2.alarm[0] < 1 {
+		if justAsheep && ((!ultra_got[50] || altUltra) || instance_number(enemy) == 1 || instance_exists(NuclearThrone1)) && instance_exists(PlayerAlarms2) && PlayerAlarms2.alarm[0] < 1 {
 			//Sheep passive
 			justAsheep = false;
 			instance_create(other.x-5,other.y-16,Notice);

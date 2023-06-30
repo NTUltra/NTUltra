@@ -14,14 +14,16 @@ repeat(2)
 with instance_create(x,y,ToxicThrowerGas)
 {motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5,7+random(3))
 //team = other.team
-move_contact_solid(direction,8)}
+scrCopyWeaponMod(other);
+}
 }
 repeat(2)
 {
 with instance_create(x,y,ToxicThrowerGas)
 {motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5+8,6+random(3))
 //team = other.team
-move_contact_solid(direction,8)}
+scrCopyWeaponMod(other);
+}
 }
 
 repeat(2)
@@ -29,7 +31,8 @@ repeat(2)
 with instance_create(x,y,ToxicThrowerGas)
 {motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5-8,6+random(3))
 //team = other.team
-move_contact_solid(direction,8)}
+scrCopyWeaponMod(other);
+}
 }
 
 

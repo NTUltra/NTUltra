@@ -69,7 +69,7 @@ if Player.area == 101 and Player.subarea == 3
 		}
 	}
 }
-if Player.area = 106 and Player.subarea = 3
+if Player.area = 106 and Player.subarea = 3 && !scrIsGamemode(40)
 {
 	instance_create(instance_furthest(Player.x,Player.y,Floor).x+16, instance_furthest(Player.x,Player.y,Floor).y+16,BecomeInvertedScrapBoss)
 	if Player.loops > 4
@@ -78,35 +78,35 @@ if Player.area = 106 and Player.subarea = 3
 	}
 }
 
-if Player.area = 114 and Player.subarea = 2
+if Player.area = 114 and Player.subarea = 2 && !scrIsGamemode(40)
 {
 	scrSpawnBoss(BecomeJungleBoss);
 	if (Player.loops > 4)
 		scrSpawnMoreBosses(BecomeJungleBoss,1+clamp(floor((Player.loops-4)*0.5),1,3));
 }
-if Player.area = 123 and Player.subarea = 2
+if Player.area = 123 and Player.subarea = 2 && !scrIsGamemode(40)
 {
 	scrSpawnBoss(BecomeInvertedJungleBoss);
 	if (Player.loops > 4)
 		scrSpawnMoreBosses(BecomeInvertedJungleBoss,1+clamp(floor((Player.loops-4)*0.5),1,3));
 }
-	if (Player.area = 5 and Player.subarea = 3)
+	if (Player.area = 5 and Player.subarea = 3) && !scrIsGamemode(40)
 	instance_create(instance_furthest(Player.x,Player.y,Floor).x+16, instance_furthest(Player.x,Player.y,Floor).y+16,LilHunter)
 
-	if (Player.area = 107 and Player.subarea = 3)//inverted frozen city
+	if (Player.area = 107 and Player.subarea = 3) && !scrIsGamemode(40)//inverted frozen city
 	instance_create(instance_furthest(Player.x,Player.y,Floor).x+16, instance_furthest(Player.x,Player.y,Floor).y+16,InvertedLilHunter)
 
-	if (Player.loops>1) && (Player.area = 5 and Player.subarea = 3)
+	if (Player.loops>1) && (Player.area = 5 and Player.subarea = 3) && !scrIsGamemode(40)
 	{
 		repeat(clamp(floor((Player.loops-1)*0.25),1,3))
 			instance_create(instance_furthest(Player.x,Player.y,Floor).x+132, instance_furthest(Player.x,Player.y,Floor).y+32,LilHunter);
 	}
-	if (Player.loops>1) && (Player.area = 107 and Player.subarea = 3)
+	if (Player.loops>1) && (Player.area = 107 and Player.subarea = 3) && !scrIsGamemode(40)
 	{
 		repeat(clamp(floor((Player.loops-1)*0.25),1,3))
 			instance_create(instance_furthest(Player.x,Player.y,Floor).x+132, instance_furthest(Player.x,Player.y,Floor).y+32,InvertedLilHunter);
 	}
-if Player.loops > 0 && (Player.area == 5 && Player.subarea == 2)
+if Player.loops > 0 && (Player.area == 5 && Player.subarea == 2) && !scrIsGamemode(40)
 {
 	scrSpawnBoss(BigDisc);
 	if (Player.loops > 5)
@@ -201,6 +201,15 @@ if Player.area = 100
 		with instance_create(exitX+32,exitY+64,WeaponMod)
 			image_xscale=-1;	
 	}
+	//Temp
+	instance_create(exitX-64,exitY,Floor);
+	instance_create(exitX-96,exitY,Floor);
+	with instance_create(exitX-94+16,exitY-16,CrownVaultSecretExit)
+		event_user(0)
+	instance_create(exitX+64,exitY,Floor);
+	instance_create(exitX+96,exitY,Floor);
+	with instance_create(exitX+94+16,exitY-16,CrownVaultSecretExit)
+		event_user(1)
 	with instance_furthest(Player.x,Player.y,Floor)
 	{
 		instance_create(x+16,y+16,CrownPickup)
@@ -675,3 +684,5 @@ with Crown
 	y = Player.y;
 }
 SetSeed();
+if scrIsGamemode(40)
+	scrPopEnemies1vs1(Player.area, Player.subarea, Player.loops);

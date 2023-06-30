@@ -5,15 +5,13 @@ with instance_create(x,y,MiniSplasmaBall)
 	ptime = 6;
 	direction = other.direction;
 	speed = 1
-	if instance_exists(Player)
-		speed *= Player.pSpeedBoost;
+	scrCopyWeaponMod(other);
 }
 with instance_create(x,y,MiniSplasmaBall)
 {
 	ptime = 6;
 	direction = other.direction+180;
 	speed = 1
-	if instance_exists(Player)
-		speed *= Player.pSpeedBoost;
+	scrCopyWeaponMod(other);
 }
 snd_play(sndPlasmaMinigun,0.2,true);

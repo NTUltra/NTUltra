@@ -6,5 +6,5 @@ drawx = x
 drawy = y
 
 cost=0.05;
-cost*=ShopWheel.discount;
+cost*=ShopWheel.discount; event_inherited();
 txt = "INSTANT RELOAD YOUR WEAPONS#RADS: "+string(round(cost*100))+"%";

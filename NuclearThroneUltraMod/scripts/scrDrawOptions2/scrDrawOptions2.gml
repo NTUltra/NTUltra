@@ -6,10 +6,10 @@ function scrDrawOptions2() {
 
 	//scrGameModes();
 
-	if instance_exists(GameModeUpDown)
-	gamemodename=string(gamemode[gamemodeOrder[GameModeUpDown.gamemodenr]]);
+	if instance_exists(GameModeUpDown) && GameModeUpDown.gamemodenr != 0
+		gamemodename=string(gamemode[gamemodeOrder[GameModeUpDown.gamemodenr]]);
 	else
-	gamemodename=string(gamemode[UberCont.opt_gamemode[0]]);
+		gamemodename = "";
 
 	var canUnlock = "";
 	if instance_exists(GameModeUpDown)
@@ -24,6 +24,8 @@ function scrDrawOptions2() {
 	txt0 = "#GAMEMODE CONCOCTIONS########################UNLOCKABLES ARE#"+canUnlock+"##HOLD [LEFT CLICK] TO ADD/REMOVE GAMEMODE#PRESS [RIGHT CLICK] TO RETURN";
 	var gamemodeScrollString = "";
 	var al = array_length(UberCont.opt_gamemode)
+	if al < 1
+		gamemodeScrollString = "NORMAL";
 	for (var i = 0; i < al; i++)
 	{
 		gamemodeScrollString += string_replace_all(UberCont.gamemode[UberCont.opt_gamemode[i]],"#"," ");
@@ -101,7 +103,7 @@ function scrDrawOptions2() {
 	draw_text(xx,yy+1,gamemodeScrollString)
 	draw_text(xx,yy+1,gamemodeScrollString)
 	draw_text(xx,yy,gamemodeScrollString)
-	draw_set_color(c_gray)
+	draw_set_color(c_ltgray)
 	draw_text(xx,yy,gamemodeScrollString)
 	draw_set_halign(fa_left)
 	//draw_set_color(c_white)

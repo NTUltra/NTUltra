@@ -21,6 +21,7 @@ with instance_create(x,y,EnemyBullet3)
 motion_add(point_direction(x,y,other.mox,other.moy),14+random(4))
 image_angle = direction
 team = other.team
+scrCopyWeaponMod(other);
 }
 
 //}

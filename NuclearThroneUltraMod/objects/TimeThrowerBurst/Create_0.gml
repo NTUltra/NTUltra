@@ -1,3 +1,4 @@
+event_inherited();
 rate=2;
 
 dmg=1;

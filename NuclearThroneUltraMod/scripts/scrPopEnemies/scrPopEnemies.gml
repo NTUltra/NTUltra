@@ -4,6 +4,11 @@ function scrPopEnemies() {
 		loops = Player.loops;
 	if scrIsHardMode()//HARD MODE
 		loops ++;
+		
+	if scrIsGamemode(40)
+	{
+		return;
+	}
     //DESERT
     if spawnarea = 1 or spawnarea = 0 // or spawnarea = 100
     {

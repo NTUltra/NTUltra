@@ -7,5 +7,5 @@ drawy = y
 
 
 cost=0.45;
-cost*=ShopWheel.discount;
+cost*=ShopWheel.discount; event_inherited();
 txt = "ELITE WEAPON CHEST#RADS: "+string(round(cost*100))+"%";

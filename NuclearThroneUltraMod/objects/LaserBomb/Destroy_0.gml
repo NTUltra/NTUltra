@@ -16,6 +16,7 @@ repeat(4)
 	{
 		image_angle = dir
 		team = other.team
+		scrCopyWeaponMod(other);
 		event_perform(ev_alarm,0)
 	}
 dir += dirStep;

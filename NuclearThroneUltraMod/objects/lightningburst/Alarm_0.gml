@@ -18,6 +18,7 @@ if instance_exists(creator)
 
 	with instance_create(x,y,Lightning)
 	{image_angle = aimDirection+(random(6)-3)*Player.accuracy
+		scrCopyWeaponMod(other);
 	team = other.team
 	ammo = other.lightningAmmo
 	event_perform(ev_alarm,0)

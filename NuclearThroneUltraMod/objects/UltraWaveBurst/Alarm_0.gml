@@ -15,24 +15,14 @@ with instance_create(x,y,Bullet5)
 motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(4)-2+sin(other.ammo/2)*16,17)
 image_angle = direction
 team = other.team
-if (instance_exists(Player))
-    {
-
-
-    speed*=Player.pSpeedBoost
-    
-    }
+scrCopyWeaponMod(other);
 }
 with instance_create(x,y,Bullet5)
 {
 motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(4)-2-sin(other.ammo/2)*16,17)
 image_angle = direction
 team = other.team
-if (instance_exists(Player))
-    {
-    
-    speed*=Player.pSpeedBoost
-    }
+scrCopyWeaponMod(other);
 }
 
 BackCont.viewx2 += lengthdir_x(2,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake

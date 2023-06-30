@@ -1,4 +1,5 @@
 /// @description init
+event_inherited();
 snd = sndUltraPistol;
 aimOffset = 0;
 ultramodded = false;

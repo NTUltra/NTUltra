@@ -10,6 +10,7 @@ repeat(am)
 	with instance_create(x,y,Flame)
 	{
 		motion_add(ang,random(2)+4)
+		scrCopyWeaponMod(other);
 		team = other.team
 		ang += angstep;
 	}

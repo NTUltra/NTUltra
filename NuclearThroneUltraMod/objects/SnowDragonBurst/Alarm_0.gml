@@ -14,14 +14,16 @@ repeat(2)
 with instance_create(x,y,IceFlame)
 {motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5,10+random(3))
 team = other.team
-move_contact_solid(direction,14)}
+scrCopyWeaponMod(other);
+}
 }
 repeat(2)
 {
 with instance_create(x,y,IceFlame)
 {motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5+8,9+random(3))
 team = other.team
-move_contact_solid(direction,14)}
+scrCopyWeaponMod(other);
+}
 }
 
 repeat(2)
@@ -29,7 +31,7 @@ repeat(2)
 with instance_create(x,y,IceFlame)
 {motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5-8,9+random(3))
 team = other.team
-move_contact_solid(direction,14)}
+scrCopyWeaponMod(other);}
 }
 
 

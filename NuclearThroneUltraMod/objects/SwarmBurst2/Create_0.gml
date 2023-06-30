@@ -1,4 +1,5 @@
 /// @description Init
+event_inherited();
 team = 1;
 ang = random(360);
 ammo = 10;

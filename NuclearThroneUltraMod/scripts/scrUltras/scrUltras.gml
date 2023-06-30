@@ -341,16 +341,20 @@ function scrUltras(altOverride = false) {
 	ultra_name[50] = "JUST A SHEEP"
 	ultra_text[50] = "ENEMIES DON'T ATTACK UNTIL#MULTIPLE ENEMIES HAVE DIED"
 	ultra_tips[50] = "they're stoopid"
-
+	
+	if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (
+	Player.crown > Player.crownmax
+	&& instance_exists(UltraIcon))))
+	{
+		ultra_name[50] = "CODENAME S.A.S. : SECRET AGENT SHEEP"
+		ultra_text[50] = "ENEMIES THAT DON'T KNOW YOU'RE THERE#TAKE QUADRUPPLE DAMAGE##EACH AREA#TAKE ON THE APPEARANCE#OF ANY CHARACTER##SECRET GATEWAYS APPEAR#IN THE CROWN VAULT#ALLOWING YOU ACCESS TO SEVERAL AREAS"
+		ultra_tips[50] = "S.A.S."
+	}
+	
 	ultra_name[51] = "IMPENETRABLE"
 	ultra_text[51] = "BETTER CHARGE!#CHARGING DEFLECTS ENEMY PROJECTILES"
 	ultra_tips[51] = "what a beast"
 	
-	/*
-		ultra_name[50] = "CODENAME S.A.S. : SECRET AGENT SHEEP"
-		ultra_text[50] = "ENEMIES THAT DON'T KNOW YOU'RE THERE#TAKE QUADRUPPLE DAMAGE##EACH AREA#TAKE ON THE APPEARANCE#OF A DIFFERENT CHARACTER##CROWN VAULT BECOMES YOUR SPY HUB#ALLOWING YOU ACCESS TO SEVERAL AREAS#"
-		ultra_tips[50] = "S.A.S."//Probably busted with unlockables but yea
-	*/
 	/* 
 	ultra_name[51] = "INDESTRUCTABLE"
 	ultra_text[51] = "IMMUNE WHILE CHARGING#CHARGE DEALS NO DAMAGE#CHARGE DOES NOT DISSIPATE"

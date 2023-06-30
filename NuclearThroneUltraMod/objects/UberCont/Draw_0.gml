@@ -1,6 +1,6 @@
 var yy = __view_get( e__VW.YView, 0 );
 
-if isPaused = 1
+if isPaused == 1
 {
 var res = scrAreaName(area,subarea,loops);
 var text = res[0];
@@ -64,11 +64,35 @@ string(scrOnOff(UberCont.opt_dmgindicator))+"#"+string(scrOnOff(UberCont.opt_cam
 
 
 
-stxt0 = "#OPTIONS#GAMEMODE: "+UberCont.gamemode[UberCont.opt_gamemode[0]];
+stxt0 = "#OPTIONS"
 stxt1 = "######AUDIO######VISUALS########OTHER####"
 stxt2 = txt2
 
-
+var gamemodeScrollString = "";
+var al = array_length(UberCont.opt_gamemode)
+for (var i = 1; i < al; i++)
+{
+	if (UberCont.opt_gamemode[i] != 0)
+	{
+		gamemodeScrollString += string_replace_all(UberCont.gamemode[UberCont.opt_gamemode[i]],"#"," ");
+		if i != al - 1
+			gamemodeScrollString += " + ";
+	}
+}
+var yyy = __view_get( e__VW.YView, 0 ) + 16;
+gmwidth = max(0,string_width(gamemodeScrollString) - __view_get( e__VW.WView, 0 ));
+var xx = lerp(
+__view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )*0.5) - gmwidth*0.5,
+__view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )*0.5) + gmwidth*0.5,
+gmScroll);
+	draw_set_halign(fa_middle)
+draw_text(xx,yyy+1,gamemodeScrollString)
+draw_text(xx,yyy+1,gamemodeScrollString)
+draw_text(xx,yyy,gamemodeScrollString)
+draw_set_color(c_gray)
+draw_text(xx,yyy,gamemodeScrollString)
+draw_set_halign(fa_left)
+	
 with MusVolSlider
 event_perform(ev_draw,0)
 with SfxVolSlider

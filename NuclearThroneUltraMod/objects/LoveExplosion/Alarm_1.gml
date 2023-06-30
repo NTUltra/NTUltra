@@ -1,3 +1,5 @@
 /// @description p2
-instance_create(x-(step*2),y-(step*2),SmallExplosion);
-instance_create(x+(step*2),y-(step*2),SmallExplosion);
+with instance_create(x-(step*2),y-(step*2),SmallExplosion)
+	scrCopyWeaponMod(other);
+with instance_create(x+(step*2),y-(step*2),SmallExplosion)
+	scrCopyWeaponMod(other);

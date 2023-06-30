@@ -6,5 +6,5 @@ drawx = x
 drawy = y
 
 cost=0.25;
-cost*=ShopWheel.discount;
+cost*=ShopWheel.discount; event_inherited();
 txt = "AMMO CHEST#RADS: "+string(round(cost*100))+"%";

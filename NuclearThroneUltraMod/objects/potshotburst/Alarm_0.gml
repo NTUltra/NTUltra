@@ -18,16 +18,9 @@ case 4:
 	with instance_create(x,y,Bullet1)
 	{
 	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(4)-2,16)
+	scrCopyWeaponMod(other);
 	image_angle = direction
 	team = other.team
-	    if (instance_exists(Player))
-	    {
-    
-
-	    if team=2
-	    speed*=Player.pSpeedBoost
-	    
-	    }
 	}
 break;
 case 3:
@@ -38,16 +31,9 @@ case 3:
 	with instance_create(x,y,Bullet2)
 	{
 	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(14)-7,14+random(2))
+	scrCopyWeaponMod(other);
 	image_angle = direction
-	team = other.team
-	    if (instance_exists(Player))
-	    {
-    
-
-	    if team=2
-	    speed*=Player.pSpeedBoost
-	    
-	    }
+	team = other.onlyHitPlayerTeam
 	}
 break;
 case 2:
@@ -58,16 +44,9 @@ case 2:
 	with instance_create(x,y,Bullet6)
 	{
 	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(14)-7,14+random(2))
+	scrCopyWeaponMod(other);
 	image_angle = direction
 	team = other.team
-	    if (instance_exists(Player))
-	    {
-    
-	    
-	    if team=2
-	    speed*=Player.pSpeedBoost
-	    
-	    }
 	}
 break;
 case 1:
@@ -78,14 +57,9 @@ case 1:
 	with instance_create(x,y,FreezeBullet)
 	{
 	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(4)-2,16)
+	scrCopyWeaponMod(other);
 	image_angle = direction
 	team = other.team
-	    if (instance_exists(Player))
-	    {
-    
-			if team=2
-				speed*=Player.pSpeedBoost;
-	    }
 	}
 break;
 case 0:
@@ -96,16 +70,9 @@ case 0:
 	with instance_create(x,y,Bullet1Flame)
 	{
 	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(4)-2,15)
+	scrCopyWeaponMod(other);
 	image_angle = direction
 	team = other.team
-	    if (instance_exists(Player))
-	    {
-    
-
-	    if team=2
-	    speed*=Player.pSpeedBoost
-	    }
-	    
 	}
 break;
 }

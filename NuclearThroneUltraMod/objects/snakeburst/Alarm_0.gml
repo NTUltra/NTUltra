@@ -14,15 +14,9 @@ with instance_create(x,y,BulletSnake)
 {
 	offset*= other.creator.accuracy;
 	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(6)-3,11)
+	scrCopyWeaponMod(other);
 	image_angle = direction
 	team = other.team
-    if (instance_exists(Player))
-    {
-    
-
-	    if team=2
-			speed*=Player.pSpeedBoost
-	}
     
 }
 

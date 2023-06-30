@@ -2,7 +2,7 @@ if other.team != team && other.team!=2
 {
 	with other
 	{
-
+		scrModHit();
 		snd_play(snd_hurt, hurt_pitch_variation)
 
 		if instance_exists(Player)

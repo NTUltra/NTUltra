@@ -12,6 +12,7 @@ ammo -= 1
 
 with instance_create(x,y,EraserBurst2)
 {
+	scrCopyWeaponMod(other);
 Direction=other.Direction+(random(10)-5)+((other.ammo*30)-(other.totalammo*15))*other.creator.accuracy;
 creator = other.id
 ammo = 16

@@ -15,6 +15,7 @@ with instance_create(x,y,Nuke)
 {motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(4)-2),2)
 image_angle = direction
 team = other.team
+scrCopyWeaponMod(other);
 }
 
 BackCont.viewx2 += lengthdir_x(55,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake

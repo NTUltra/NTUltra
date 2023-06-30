@@ -1,4 +1,5 @@
 snd_play(sndPlasmaHit,0.1,true)
-instance_create(x,y,PlasmaImpact)
+with instance_create(x,y,PlasmaImpact)
+	scrCopyWeaponMod(other);
 Sleep(10)
 

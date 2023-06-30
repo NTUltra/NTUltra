@@ -5,4 +5,5 @@ sticky = false;
 event_inherited();
 snd_play(sndToxicBoltGas);
 repeat(14)
-instance_create(x,y,ToxicThrowerGas)
+with instance_create(x,y,ToxicThrowerGas)
+	scrCopyWeaponMod(other);

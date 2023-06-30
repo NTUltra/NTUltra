@@ -1,4 +1,5 @@
 /// @description init
+event_inherited();
 snd = sndMachinegun;
 ultramodded = false;
 accuracy = 1;

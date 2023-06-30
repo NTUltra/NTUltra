@@ -1,5 +1,14 @@
 if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+16 and UberCont.mouse__y < y+16 and UberCont.mouse__x > x and UberCont.mouse__y > y-20)
 {
+	with Player
+	{
+		var keepRace = race;
+		race = other.char;
+		bskin = UberCont.skin[race];
+		scrLoadRace();
+		fakeRace = race;
+		race = keepRace;
+	}
 	snd_play_2d(sndClick);
 	Player.charpoints--;
 	with CharIcon

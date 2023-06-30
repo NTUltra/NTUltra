@@ -24,12 +24,14 @@ snd_play_fire(sndLaserCannon);
 with instance_create(x+lengthdir_x(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),Laser)
 {image_angle = (other.leftang+other.ang)+(random(2)-1)
 team = other.team
+scrCopyWeaponMod(other);
 event_perform(ev_alarm,0)
 image_yscale-=0.1;
 }
 with instance_create(x+lengthdir_x(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),Laser)
 {image_angle = (other.rightang-other.ang)+(random(2)-1)
 team = other.team
+scrCopyWeaponMod(other);
 event_perform(ev_alarm,0)
 image_yscale-=0.1;
 }

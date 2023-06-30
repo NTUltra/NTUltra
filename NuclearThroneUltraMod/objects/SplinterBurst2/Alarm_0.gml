@@ -16,9 +16,9 @@ with instance_create(x,y,StormSplinter)//5 splinters
 	if other.ultramodded
 		alarm[11] = 0;
 	motion_add(dir+random(8)-4,14+random(4))
+		scrCopyWeaponMod(other);
 	image_angle = direction
 	team = other.team
-	scrBoostProjectileSpeed();
 }
 
 BackCont.viewx2 += lengthdir_x(7,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake

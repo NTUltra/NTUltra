@@ -15,6 +15,7 @@ snd_play(sndSwarmRapid,0.2,true,false,1,false,false,0.7);
 with instance_create(x,y,SwarmBolt)
 {motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(40)-20),2+random(3))
 image_angle = direction
+scrCopyWeaponMod(other);
 team = other.team
 }
 

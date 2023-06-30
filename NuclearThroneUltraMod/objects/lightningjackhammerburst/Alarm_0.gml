@@ -20,6 +20,7 @@ if instance_exists(Player){
     motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(30)-15,3+Player.longarms)}
     else{
     motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(30)-15,3)}
+	scrCopyWeaponMod(other);
     image_angle = direction
     team = other.team}
 }
@@ -30,6 +31,7 @@ else
 		dmg = 4;
 		knockback = 2;
     motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(30)-15,3)
+	scrCopyWeaponMod(other);
     image_angle = direction
     team = other.team}
 

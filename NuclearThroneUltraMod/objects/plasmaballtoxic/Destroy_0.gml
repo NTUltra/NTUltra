@@ -1,6 +1,7 @@
 event_inherited()
 
 repeat(15)
-instance_create(x,y,ToxicThrowerGas)
+with instance_create(x,y,ToxicThrowerGas)
+	scrCopyWeaponMod(other);
 
 snd_play(sndToxicBoltGas);

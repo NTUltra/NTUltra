@@ -190,7 +190,7 @@ if instance_exists(Player)
 			with instance_create(x,y,Ally)
 				name = "Guard Weave";
 	    }
-	    if race=13
+	    if race == 13
 	    {justAsheep=true;
 			with PlayerAlarms2
 			{

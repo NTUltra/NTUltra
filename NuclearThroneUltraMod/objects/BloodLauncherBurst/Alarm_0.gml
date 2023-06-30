@@ -13,11 +13,7 @@ with instance_create(x,y,BloodGrenade)
 {
 	sticky = 0
 	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+other.aimOffset+(random(10)-5)*other.accuracy,15 - other.ammo)
-	if (instance_exists(Player))
-    {
-		if team=2
-			speed*=Player.pSpeedBoost;
-    }
+	scrCopyWeaponMod(other);
 	image_angle = direction
 	team = other.team
 }

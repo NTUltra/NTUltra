@@ -15,6 +15,7 @@ repeat(amount)
 	{
 		motion_add(angle+(random(6)-3)*accuracy,20+random(4))
 		image_angle = direction
+		scrCopyWeaponMod(other);
 		team = other.team
 	}
 	with instance_create(x,y,Smoke)
