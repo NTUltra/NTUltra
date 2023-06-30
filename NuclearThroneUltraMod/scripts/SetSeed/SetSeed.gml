@@ -7,7 +7,7 @@ function SetSeed(){
 		var a = loops;
 		if instance_exists(Player)
 		{
-			a = Player.loops;
+			a = Player.loops*10;
 			a += Player.area;
 			a += Player.subarea*10;
 		}

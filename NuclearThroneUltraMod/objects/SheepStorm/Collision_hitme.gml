@@ -36,7 +36,8 @@ with other
     }
     if other.team!=0 && team != other.team
     {
-	    scrSheepHit();
+		with other
+			scrSheepHit();
     }
 }}
 

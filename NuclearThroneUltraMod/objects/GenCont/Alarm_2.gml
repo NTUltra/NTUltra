@@ -201,15 +201,20 @@ if Player.area = 100
 		with instance_create(exitX+32,exitY+64,WeaponMod)
 			image_xscale=-1;	
 	}
-	//Temp
-	instance_create(exitX-64,exitY,Floor);
-	instance_create(exitX-96,exitY,Floor);
-	with instance_create(exitX-94+16,exitY-16,CrownVaultSecretExit)
-		event_user(0)
-	instance_create(exitX+64,exitY,Floor);
-	instance_create(exitX+96,exitY,Floor);
-	with instance_create(exitX+94+16,exitY-16,CrownVaultSecretExit)
-		event_user(1)
+	//Secret agent sheep
+	if Player.ultra_got[50] && Player.altUltra
+	{
+		instance_create(exitX-32,exitY,Floor);
+		instance_create(exitX-64,exitY,Floor);
+		instance_create(exitX-96,exitY,Floor);
+		with instance_create(exitX-94+16,exitY-16,CrownVaultSecretExit)
+			event_user(0)
+		instance_create(exitX+32,exitY,Floor);
+		instance_create(exitX+64,exitY,Floor);
+		instance_create(exitX+96,exitY,Floor);
+		with instance_create(exitX+94+16,exitY-16,CrownVaultSecretExit)
+			event_user(1)
+	}
 	with instance_furthest(Player.x,Player.y,Floor)
 	{
 		instance_create(x+16,y+16,CrownPickup)

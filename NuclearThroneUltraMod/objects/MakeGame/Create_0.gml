@@ -1,5 +1,5 @@
 //preventing players from pirating
-/*
+
 if (!file_exists("amb106.ogg")||
 !file_exists("amb0.ogg")||
 !file_exists("amb0b.ogg")||

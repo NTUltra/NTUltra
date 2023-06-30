@@ -20,6 +20,7 @@ if (other.team != 2 && (mySize >= other.mySize-1 or impactWrist) and speed > 2)
 			{
 				if impactWrist
 				{
+					instance_create(x,y,ImpactFX);
 					if my_health <= 0
 						snd_play(sndImpWristKill,0.05,true);
 					else

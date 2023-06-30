@@ -190,6 +190,4 @@ if race=10//rebel hoody
 if race=22//ROGUE
 RogueHeat=true;
 
-if ultra_got[5] && altUltra
-	charpoints = 1;
 friction = 0.45//reset friction

@@ -7,6 +7,7 @@ function scrPlasmaPush(){
 	image_xscale -= hitShrink;
 	image_yscale -= hitShrink;
 	BackCont.shake += 2;
+	speed *= 0.8;
 	speed -= acc * 2;
 	Sleep(2);
 }

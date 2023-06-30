@@ -1,6 +1,8 @@
 /// @description Black sword? and UNLOCKABLES
 if swapChar
 	exit;
+if ultra_got[50] && altUltra
+	charpoints = 1;
 
 if (area == 1 || area == 101 || area == 10) && instance_exists(WepPickup)
 {

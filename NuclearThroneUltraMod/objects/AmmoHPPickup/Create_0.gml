@@ -1,5 +1,23 @@
 friction = 0.2
 
+var otherPickup = instance_place(x,y,AmmoHPPickup);
+if otherPickup != noone
+{
+	var pickDir = point_direction(x,y,otherPickup.x,otherPickup.y);
+	speed = 2;
+	direction = pickDir;
+	with otherPickup
+	{
+		speed = 2;
+		direction = pickDir + 180;
+	}
+	
+}
+else
+{
+	direction = random(360);
+	speed = 2;
+}
 blink = 30
 alarm[0] = 200+random(30)
 

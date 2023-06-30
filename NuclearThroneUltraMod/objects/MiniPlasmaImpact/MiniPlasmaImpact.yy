@@ -7,7 +7,7 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"hitme","path":"objects/hitme/hitme.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
   ],
-  "managed": true,
+  "managed": false,
   "overriddenProperties": [],
   "parent": {
     "name": "Projectiles",
@@ -34,8 +34,8 @@
     "path": "sprites/sprMiniPlasmaImpact/sprMiniPlasmaImpact.yy",
   },
   "spriteMaskId": {
-    "name": "mskPlasmaImpact",
-    "path": "sprites/mskPlasmaImpact/mskPlasmaImpact.yy",
+    "name": "mskMiniPlasmaImpact",
+    "path": "sprites/mskMiniPlasmaImpact/mskMiniPlasmaImpact.yy",
   },
   "visible": true,
 }

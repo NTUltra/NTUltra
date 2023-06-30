@@ -1,4 +1,4 @@
-ammo -= 4
+ammo -= projectileAmount
 
 alarm[0] = time
 
@@ -13,16 +13,16 @@ yy=creator.y;
 //FIRING
 //with instance_create(xx,yy,Shell)
 //motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180+random(50)-25,2+random(2))
-
 repeat(projectileAmount){
-with instance_create(x,y,Bullet2)
-{
-motion_add(point_direction(x,y,other.mox,other.moy),14+random(4))
-image_angle = direction
-team = other.team
-scrCopyWeaponMod(other);
-}
-}
+		with instance_create(x,y,Bullet2)
+		{
+			motion_add(point_direction(x,y,other.mox,other.moy),12+other.boost)
+			image_angle = direction
+			team = other.team
+			scrCopyWeaponMod(other);
+		}
+		boost+= 0.5;
+	}
 }
 
 

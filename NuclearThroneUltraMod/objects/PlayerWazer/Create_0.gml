@@ -7,7 +7,7 @@ typ = 0
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1
-	image_yscale = 1.8+(Player.betterlaserbrain*0.22)
+		image_yscale = 1.8+(Player.betterlaserbrain*0.22)
 }
 offset = 16;
 camKick = 0;

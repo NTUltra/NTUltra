@@ -133,8 +133,9 @@ else if skill == 50 && Player.crown > Player.crownmax
 		scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 		altUltra = true;
 		ultra_name[50] = "CODENAME S.A.S. : SECRET AGENT SHEEP"
-		ultra_text[50] = "ENEMIES THAT DON'T KNOW YOU'RE THERE#TAKE QUADRUPPLE DAMAGE##EACH AREA#TAKE ON THE APPEARANCE#OF A DIFFERENT CHARACTER##CROWN VAULT BECOMES YOUR SPY HUB#ALLOWING YOU ACCESS TO SEVERAL AREAS#"
+		ultra_text[50] = "ENEMIES THAT DON'T KNOW YOU'RE THERE#TAKE 10X DAMAGE##EACH AREA#TAKE ON THE APPEARANCE#OF ANY CHARACTER#ENABLING YOU TO USE THEIR ACTIVE##SECRET GATEWAYS APPEAR#IN THE CROWN VAULT#CONNECTING SEVERAL AREAS"
 		ultra_tips[50] = "S.A.S."//Probably busted with unlockables but yea
+		charpoints = 1;
 	}
 }
 else if skill == 51 && (!Player.skill_got[2] && !Player.skill_got[8] || Player.unlockAlternativeUltras)
@@ -499,7 +500,7 @@ else if skill = 97 // MUTATION SMITH WEAPON MUTATOR BETTER WEAPON SPECIFIC MUTAT
 			}
 			if skill_got[17]//LaserBrain
 			{
-				betterlaserbrain=2;
+				betterlaserbrain = 2;
 			}
 			if skill_got[21]//bolt marrow
 			{

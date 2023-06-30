@@ -24,8 +24,22 @@ if instance_exists(Player)
 		wallScale -= 0.05;
 		grow += 0.01;
 		destroyScale -= 0.05;
+		if Player.betterlaserbrain > 1
+		{
+			nomscale += 0.1;
+			dmg ++;
+		}
+		else if Player.betterlaserbrain > 0
+		{
+			nomscale += 0.1
+		}
 		image_xscale = nomscale;
 		image_yscale = nomscale;
+		
+		if Player.betterlaserbrain > 1
+		{
+			dmg += 1;
+		}
 	}
 	if Player.race=11
     {

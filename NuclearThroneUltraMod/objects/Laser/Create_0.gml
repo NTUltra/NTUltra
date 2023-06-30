@@ -11,8 +11,8 @@ typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 image_yscale = 1.35//1.2
 if instance_exists(Player)
 {
-if Player.skill_got[17] = 1
-image_yscale = 1.94+(Player.betterlaserbrain*0.2)
+	if Player.skill_got[17] = 1
+		image_yscale = 1.94+(Player.betterlaserbrain*0.2)
 }
 aimed=false;
 img = 0

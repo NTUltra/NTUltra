@@ -1,4 +1,5 @@
 function scrModHit() {
+	scrSheepHit();
 	//RUN THIS CODE INSIDE OF ENEMY OBJET IN THE PROJETILE COLLISION EVENT
 	/*WEAPON MODS
 	mod1[]

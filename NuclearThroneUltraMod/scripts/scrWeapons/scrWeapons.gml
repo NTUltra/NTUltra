@@ -4256,7 +4256,7 @@ function scrWeapons() {
 	wep_name[384] = "MINI PLASMA GUN"
 	wep_type[384] = 5
 	wep_auto[384] = 1
-	wep_load[384] = 7
+	wep_load[384] = 9
 	wep_cost[384] = 1
 	wep_sprt[384] = sprMiniPlasmaGun
 	wep_area[384] = 2

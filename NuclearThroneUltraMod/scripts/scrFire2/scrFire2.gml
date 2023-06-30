@@ -4365,7 +4365,7 @@ function scrFire2() {
 	//JAWBREAKER
 	case 355:
 	var aimdir = aimDirection+(random(10)-5*accuracy);
-	var offset = 11 * accuracy;
+	var offset = 10 * accuracy;
 	var ldx = lengthdir_x(offset,aimdir+90);
 	var ldy = lengthdir_y(offset,aimdir+90);
 	var cldx = x+lengthdir_x(offset+8,aimdir+90);
@@ -5221,7 +5221,7 @@ function scrFire2() {
 	//GOLDEN JAWBREAKER
 	case 383:
 	var aimdir = aimDirection+(random(6)-3*accuracy);
-	var offset = 10 * accuracy;
+	var offset = 9 * accuracy;
 	var ldx = lengthdir_x(offset,aimdir+90);
 	var ldy = lengthdir_y(offset,aimdir+90);
 	var cldx = x+lengthdir_x(offset+8,aimdir+90);
@@ -5405,7 +5405,7 @@ function scrFire2() {
 	//JAWSPLITTER
 	case 390:
 	var aimdir = aimDirection+(random(4)-2*accuracy);
-	var offset = 8 * accuracy;
+	var offset = 7 * accuracy;
 	var ldx = lengthdir_x(offset,aimdir+90);
 	var ldy = lengthdir_y(offset,aimdir+90);
 	var cldx = x+lengthdir_x(offset+8,aimdir+90);
@@ -5456,7 +5456,7 @@ function scrFire2() {
 	//GOLDEN JAWSPLITTER
 	case 391:
 	var aimdir = aimDirection+(random(2)-1*accuracy);
-	var offset = 7 * accuracy;
+	var offset = 6 * accuracy;
 	var ldx = lengthdir_x(offset,aimdir+90);
 	var ldy = lengthdir_y(offset,aimdir+90);
 	var cldx = x+lengthdir_x(offset+8,aimdir+90);
@@ -7199,7 +7199,7 @@ function scrFire2() {
 	//JAW CRUSHER
 	case 451:
 	var aimdir = aimDirection+(random(10)-5*accuracy);
-	var offset = 11 * accuracy;
+	var offset = 10 * accuracy;
 	var ldx = lengthdir_x(offset,aimdir+90);
 	var ldy = lengthdir_y(offset,aimdir+90);
 	var cldx = x+lengthdir_x(offset+8,aimdir+90);
@@ -7244,7 +7244,7 @@ function scrFire2() {
 	//JAW OBLITERATOR
 	case 452:
 	var aimdir = aimDirection+(random(10)-5*accuracy);
-	var offset = 11 * accuracy;
+	var offset = 10 * accuracy;
 	var ldx = lengthdir_x(offset,aimdir+90);
 	var ldy = lengthdir_y(offset,aimdir+90);
 	var cldx = x+lengthdir_x(offset+8,aimdir+90);
@@ -7343,7 +7343,7 @@ function scrFire2() {
 	snd_play_fire(sndEraser)
 	snd_play_fire(sndFireShotgun);
 	var aimdir = aimDirection+(random(10)-5*accuracy);
-	var offset = 11 * accuracy;
+	var offset = 10 * accuracy;
 	var ldx = lengthdir_x(offset,aimdir+90);
 	var ldy = lengthdir_y(offset,aimdir+90);
 	var cldx = x+lengthdir_x(offset+8,aimdir+90);
