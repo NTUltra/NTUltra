@@ -45,8 +45,6 @@ with instance_create(x,y,BigDogExplo)
 }
 event_inherited()
 
-with instance_nearest(x,y,Corpse)
-instance_destroy()
 
 //drop IDKWID?
 if(random(1000)<1){

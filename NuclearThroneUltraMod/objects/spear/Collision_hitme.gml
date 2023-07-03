@@ -20,7 +20,7 @@ if speed > 2 and other.team != team && !array_contains(hitEntities,other.id)
 			team = other.team;
 		}
 	}
-	else
+	else if other.my_health > 0
 	{
 		friction += 0.4;
 		speed *= min(0.95,other.my_health*0.1);

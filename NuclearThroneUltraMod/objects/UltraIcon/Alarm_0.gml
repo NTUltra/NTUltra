@@ -57,7 +57,7 @@ else if skill == 47 && (Player.unlockAlternativeUltras || !Player.skill_got[1] &
 }
 else if skill == 50 && (Player.unlockAlternativeUltras || Player.crown > Player.crownmax)
 {
-	sprite_index = sprHynotize;
+	sprite_index = sprSAS;
 }
 else if skill == 51 && (Player.unlockAlternativeUltras || !Player.skill_got[2] && !Player.skill_got[8])
 {

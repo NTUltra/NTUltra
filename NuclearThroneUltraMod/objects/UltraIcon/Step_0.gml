@@ -549,7 +549,7 @@ else if skill==14
 	}
 	Player.skillpoints += 3;//amounth of mutations
 	Player.skillsChosen -= 3;
-	if UberCont.scrIsGamemode(30) && Player.level == 1
+	if scrIsGamemode(30) && Player.level == 1
 	{
 		Player.skillsChosen = -3;
 	}
@@ -973,7 +973,7 @@ instance_destroy()
 
 }
 
-if Player.skillpoints > 0
+if Player.skillpoints > 0 || Player.charpoints > 0
 {
 	if regularprocedure
 	instance_create(x,y,LevCont)

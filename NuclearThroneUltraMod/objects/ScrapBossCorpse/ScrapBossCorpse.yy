@@ -12,8 +12,8 @@
     "path": "folders/Objects/Enemies/Boss.yy",
   },
   "parentObjectId": {
-    "name": "Corpse",
-    "path": "objects/Corpse/Corpse.yy",
+    "name": "MovingCorpse",
+    "path": "objects/MovingCorpse/MovingCorpse.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

@@ -525,6 +525,7 @@ function scrFire2() {
 	{
 	creator = other.id
 	ammo = 40
+	maxTime = ammo;
 	time = 1
 	team = other.team
 	alarm[0] = 15
@@ -3903,6 +3904,7 @@ function scrFire2() {
 	{
 	creator = other.id
 	ammo = 15
+	maxTime = 15;
 	time = 1
 	team = other.team
 	alarm[0] = 14

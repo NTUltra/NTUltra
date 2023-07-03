@@ -1,6 +1,6 @@
 if my_health <= 0
 {
-with instance_create(x,y,Corpse)
+with instance_create(x,y,MovingCorpse)
 {
 mySize = other.mySize
 mask_index = other.mask_index

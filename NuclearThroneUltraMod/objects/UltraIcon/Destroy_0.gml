@@ -4,7 +4,7 @@ if instance_exists(Player)
 	{
 		Player.skillsChosen=0;
 	}
-	if (UberCont.scrIsGamemode(30) && Player.level == 1 && Player.skillsChosen > 0)
+	if (scrIsGamemode(30) && Player.level == 1 && Player.skillsChosen > 0)
 	{
 		Player.skillsChosen=0;
 	}

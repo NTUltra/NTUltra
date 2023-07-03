@@ -2,7 +2,7 @@
 // /@description
 ///@param
 function scrCopyWeaponMod(othr){
-	if othr.team == 2
+	if instance_exists(Player) && othr.team == Player.team
 	{
 		Mod1 = othr.Mod1;
 		Mod2 = othr.Mod2;

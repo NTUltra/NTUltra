@@ -266,6 +266,10 @@ function scrDrawHUD() {
 			{
 				draw_sprite_ext(sprGreenTeamHUD,0,xx,yy,1,1,0,c_white,1);
 			}
+			else if dir == 50 && Player.altUltra
+			{
+				draw_sprite_ext(sprSASHUD,0,xx,yy,1,1,0,c_white,1);
+			}
 			else if dir == 51 && Player.altUltra
 			{
 				draw_sprite_ext(sprHypnotizeHUD,0,xx,yy,1,1,0,c_white,1);

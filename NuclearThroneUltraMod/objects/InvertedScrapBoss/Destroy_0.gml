@@ -26,8 +26,6 @@ with instance_create(x,y,BigDogExplo)
 }
 event_inherited()
 
-with instance_nearest(x,y,Corpse)
-instance_destroy()
 
 img = 0
 repeat(6)

@@ -33,7 +33,7 @@ case 3:
 	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(14)-7,14+random(2))
 	scrCopyWeaponMod(other);
 	image_angle = direction
-	team = other.onlyHitPlayerTeam
+	team = other.team
 	}
 break;
 case 2:

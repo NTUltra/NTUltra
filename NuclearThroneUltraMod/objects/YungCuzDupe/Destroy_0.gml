@@ -1,4 +1,4 @@
-with instance_create(x,y,Corpse)
+with instance_create(x,y,MovingCorpse)
 {
 mySize = 1
 mask_index = other.mask_index

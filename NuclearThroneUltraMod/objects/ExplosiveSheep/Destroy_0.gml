@@ -3,7 +3,7 @@ scrDrop(30,2)
 //NOW SOME ENEMY CODE
 
 
-with instance_create(x,y,Corpse)
+with instance_create(x,y,MovingCorpse)
 {
 	mySize = other.mySize
 	mask_index = other.mask_index

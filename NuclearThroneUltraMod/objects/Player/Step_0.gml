@@ -1832,13 +1832,13 @@ display_mouse_set(mox,moy);
 
 /* */
 ///Angel flying through walls
-if race==18&& !instance_exists(LevCont) && !instance_exists(Portal)
+if race==18&& !instance_exists(LevCont)// && !instance_exists(Portal)
 {
 	if flying > 0
     {
 	    flying--;
 	    if flying<1
-			mask_index=mskPlayer;
+			mask_index = mskPlayer;
     }
 	
     if instance_exists(Floor) && instance_exists(WallHitMe)

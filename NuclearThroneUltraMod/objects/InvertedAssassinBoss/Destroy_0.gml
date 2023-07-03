@@ -16,7 +16,7 @@ scrBossKill();
 event_inherited()
 if UberCont.area == 106
 scrDefeatedRequiredBoss(secretChallengeBosses.bigAssassin);
-with Corpse
+with MovingCorpse
 {
 //Big Assassins corpse doesnt move
 if mask_index=other.mask_index

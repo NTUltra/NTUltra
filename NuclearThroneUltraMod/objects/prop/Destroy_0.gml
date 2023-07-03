@@ -1,4 +1,4 @@
-with instance_create(x,y,Corpse)
+with instance_create(x,y,MovingCorpse)
 {
 mySize = other.mySize
 sprite_index = other.spr_dead

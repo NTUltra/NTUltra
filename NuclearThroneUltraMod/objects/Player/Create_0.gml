@@ -306,7 +306,7 @@ if scrIsGamemode(13)
 
 if scrIsGamemode(14) //fish companion only no wep
 	wep = 0;
-if UberCont.scrIsGamemode(31)
+if scrIsGamemode(31)
 {
 	if wep != 0 && !scrMeleeWeapons(wep)
 	{
@@ -393,12 +393,12 @@ crownpoints = 0
 
 kills = 0
 
-if UberCont.scrIsGamemode(30)//Ultra mutation start
+if scrIsGamemode(30)//Ultra mutation start
 {
 	skillsChosen = 10;
 	skillpoints = 1;
 }
-else if UberCont.scrIsGamemode(31)//Melee only
+else if scrIsGamemode(31)//Melee only
 {
 	skill_got[13] = 1;
 	totalSkills ++;

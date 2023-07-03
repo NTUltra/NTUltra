@@ -869,9 +869,9 @@ if my_health <= 0 && armour < 1
 		}
 
 
-		with instance_create(x,y,Corpse)
+		with instance_create(x,y,MovingCorpse)
 		{
-		mySize = 1
+		mySize = 2
 		mask_index = other.mask_index
 		motion_add(other.direction,other.speed)
 		speed += max(0,-other.my_health/5)

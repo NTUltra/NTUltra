@@ -24,7 +24,7 @@ function scrPopEnemies1vs1(area, subarea, loops){
 		instance_create(x,y,OneVOne);	
 	}
 	var enem = Bandit;
-	var buff = 5*clamp(1+loops*0.5,1,10);
+	var buff = 6*clamp(1+loops*0.5,1,10);
 	var sBuff = 1.5;
 	if area == 1 // Desert
 	{
@@ -223,13 +223,12 @@ function scrPopEnemies1vs1(area, subarea, loops){
 	{
 		if subarea == 1
 		{
-			enem = SnowBot;
+			enem = Wolf;
+			buff*= 1.25;
 		}
 		else if subarea == 2
 		{
 			enem = SnowTank;
-			sBuff = 1.8;
-			buff *= 0.75;
 			if loops > 0
 			{
 				buff = 1.4*clamp(1+loops*0.5,1,10);
@@ -248,13 +247,12 @@ function scrPopEnemies1vs1(area, subarea, loops){
 	{
 		if subarea == 1
 		{
-			enem = InvertedSnowBot;
+			enem = InvertedWolf
+			buff*= 1.25;
 		}
 		else if subarea == 2
 		{
 			enem = InvertedSnowTank;
-			sBuff = 1.8;
-			buff *= 0.75;
 			if loops > 0
 			{
 				buff = 1.4*clamp(1+loops*0.5,1,10);
@@ -274,7 +272,7 @@ function scrPopEnemies1vs1(area, subarea, loops){
 		if subarea == 1
 		{
 			enem = RhinoFreak;
-			buff *= 0.75;
+			buff *= 0.8;
 			sBuff = 1.8;
 		}
 		else if subarea == 2
@@ -288,7 +286,7 @@ function scrPopEnemies1vs1(area, subarea, loops){
 		if subarea == 1
 		{
 			enem = InvertedRhinoFreak;
-			buff *= 0.75;
+			buff *= 0.8;
 			sBuff = 1.8;
 		}
 		else if subarea == 3

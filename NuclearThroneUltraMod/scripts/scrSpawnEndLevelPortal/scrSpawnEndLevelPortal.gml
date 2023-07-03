@@ -45,6 +45,21 @@ function scrSpawnEndLevelPortal(){
 								exit;
 							}
 						}
+						else
+						{
+							if BackCont.area == 119
+							{
+								instance_create(dir.x+16,dir.y+16,BecomeThrone2);
+								scrTurnIntoPortalArea();
+								exit;
+							}
+							else if BackCont.area == 120
+							{
+								instance_create(dir.x+16,dir.y+16,BecomeInvertedThrone2);
+								scrTurnIntoPortalArea(true);
+								exit;
+							}
+						}
 					    with instance_create(dir.x+16,dir.y+16,Portal)
 							type = 1
 						

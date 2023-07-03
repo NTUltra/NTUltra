@@ -87,7 +87,7 @@ if race=11
 instance_create(x,y,Explosion);
 }
 
-var playerCorpse = instance_create(x,y,Corpse)
+var playerCorpse = instance_create(x,y,MovingCorpse)
 with playerCorpse
 {
 mySize = 1

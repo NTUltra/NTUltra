@@ -46,7 +46,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			}
 			var triesForSpecificTier = 0;
 			var maxValidTierWep = 0;
-			if UberCont.scrIsGamemode(31)//Only melee
+			if scrIsGamemode(31)//Only melee
 			{
 				var tries = 0;
 				var tooBad = 0;

@@ -8,7 +8,7 @@ scrDefeatedRequiredBoss(secretChallengeBosses.bigAssassin);
 scrBossKill();
 event_inherited()
 
-with Corpse
+with MovingCorpse
 {
 //Big Assassins corpse doesnt move
 if mask_index=other.mask_index

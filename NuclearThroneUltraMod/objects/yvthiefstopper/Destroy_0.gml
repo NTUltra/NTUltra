@@ -2,7 +2,7 @@ scrDrop(100,100)
 
 event_inherited()
 //COPY PASTE MOST ENEMY CODE
-myCorpse = instance_create(x,y,Corpse)
+myCorpse = instance_create(x,y,MovingCorpse)
 with myCorpse
 {
 	mySize = other.mySize

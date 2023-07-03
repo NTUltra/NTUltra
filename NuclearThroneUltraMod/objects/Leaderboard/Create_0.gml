@@ -56,3 +56,4 @@ popUpX = 0;
 popUpY = 0;
 popUpIndex = 0;
 popUpAltUltra = false;
+scrEnableBigScreen();

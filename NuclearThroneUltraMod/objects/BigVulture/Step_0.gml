@@ -58,7 +58,10 @@ if shooting < 1
 	}
 } else if shooting > 0
 {
-	shooting --;
+	if UberCont.normalGameSpeed == 60
+		shooting -= 0.5;
+	else
+		shooting --;
 }
 if alarm[4] > 0
 {

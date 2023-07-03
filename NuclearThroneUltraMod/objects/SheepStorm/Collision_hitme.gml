@@ -18,26 +18,37 @@ BackCont.viewx2 += lengthdir_x(1.12*sp*0.5,direction)*UberCont.opt_shake
 BackCont.viewy2 += lengthdir_y(1.12*sp*0.5,direction)*UberCont.opt_shake
 BackCont.shake += 1.12*sp*0.5;
 
-with other
-{
-    if object_index!=Car
-    {
-	my_health-=round((sp-1)*other.dmg);
-    sprite_index = spr_hurt                                 //2*1=2*p<<ULTRA
-    image_index = 0
-    motion_add(other.image_angle,sp*3);
-	if (team != 0)
+	with other
 	{
-		//Didnea care bout props yo
-		Player.sheepPower -= other.enemyHitbrake;
-		Player.speed *= 0.1;
-	}
-    }
-    }
-    if other.team!=0 && team != other.team
-    {
-		with other
+		if my_health > 0
+		{
+			var deal = round((sp-1)*other.dmg);
+			if UberCont.normalGameSpeed == 60
+			{
+				my_health -= deal*0.5;
+				motion_add(other.image_angle,sp*1.5);
+				if (team != 0)
+				{
+					//Didnea care bout props yo
+					Player.sheepPower -= other.enemyHitbrake*0.5;
+					Player.speed *= 0.2;
+				}
+			}
+			else
+			{
+				my_health -= deal;
+				motion_add(other.image_angle,sp*3);
+				if (team != 0)
+				{
+					//Didnea care bout props yo
+					Player.sheepPower -= other.enemyHitbrake;
+					Player.speed *= 0.1;
+				}
+			}
+		    sprite_index = spr_hurt                                 //2*1=2*p<<ULTRA
+		    image_index = 0
 			scrSheepHit();
+		}
     }
 }}
 

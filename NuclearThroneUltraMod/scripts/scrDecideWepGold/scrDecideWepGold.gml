@@ -1,7 +1,7 @@
 function scrDecideWepGold() {
 	if instance_exists(Player)
 	{
-		if UberCont.scrIsGamemode(31)
+		if scrIsGamemode(31)
 		{
 			return choose(40,230,286);
 		}

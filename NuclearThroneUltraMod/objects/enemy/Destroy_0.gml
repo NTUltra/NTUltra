@@ -4,7 +4,7 @@ if object_index!=SnowTank && object_index!=InvertedSnowTank && object_index!=Gol
 
 	if!(MorphMe){
 
-	myCorpse = instance_create(x,y,Corpse)
+	myCorpse = instance_create(x,y,MovingCorpse)
 
 	with myCorpse
 	{
