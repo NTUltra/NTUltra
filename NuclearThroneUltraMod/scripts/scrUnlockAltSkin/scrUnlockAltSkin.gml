@@ -7,7 +7,7 @@ function scrUnlockAltSkin(raceIndex, altIndex) {
 		(UberCont.race_eskin[raceIndex] == 0 && altIndex == 1 ) ||
 		(UberCont.race_fskin[raceIndex] == 0 && altIndex == 2 )
 	) && 
-	(isValidGamemodeToUnlock() ))//Crown start and hunter marked only can unlock shit
+	(isValidGamemodeToUnlock() ))
 	{
 		if (UberCont.race_dskin[raceIndex] == 0 && altIndex == 0 )
 			UberCont.race_dskin[raceIndex] = 1;
@@ -16,13 +16,13 @@ function scrUnlockAltSkin(raceIndex, altIndex) {
 		else if (UberCont.race_fskin[raceIndex] == 0 && altIndex == 2 )
 			UberCont.race_fskin[raceIndex] = 1;
 
-	with instance_create(x,y,UnlockPopup)
-	{
-		mytext=UberCont.race_name[raceIndex]+"#SECRET-SKIN UNLOCKED#";
-	}
+		with instance_create(x,y,UnlockPopup)
+		{
+			mytext=UberCont.race_name[raceIndex]+"#SECRET-SKIN UNLOCKED#";
+		}
 
-	with UberCont
-	scrSave();
+		with UberCont
+			scrSave();
 	}
 
 

@@ -1,6 +1,6 @@
 /// @description Time to simplify
 alarm[4] = 5;
-if speed < 1 && alarm[0] < 1
+if speed < 1 && alarm[0] < 1 && image_index == image_number-1
 {
 	instance_destroy(id,false);
 	with instance_create_depth(x,y,depth,Corpse)

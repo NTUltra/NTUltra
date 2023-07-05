@@ -27,6 +27,7 @@ if instance_exists(ElectroBall)
 				if ammo>25
 				ammo=25;
 				fork = 99;
+				scrCopyWeaponMod(other);
 				event_perform(ev_alarm,0)
 				visible = 0
 			//with instance_create(x,y,LightningSpawn)

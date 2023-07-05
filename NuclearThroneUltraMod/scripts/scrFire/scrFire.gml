@@ -872,7 +872,7 @@ function scrFire() {
 
 	//WAVE GUN
 	case 33:
-
+	snd_play_fire(sndWaveGun);
 	with instance_create(x,y,WaveBurst)
 	{
 	creator = other.id

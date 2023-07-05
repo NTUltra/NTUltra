@@ -193,6 +193,8 @@ else if skill = 18//last wish
 			lastwishused = true;
 			skeletonlives += 1;
 			livesRegain[array_length(livesRegain)] = 3;
+			if array_length(livesRegain) > 3
+				scrUnlockBSkin(19,"FOR HAVING FOUR LIVES",0);
 		}
 	}
 	else

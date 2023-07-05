@@ -1,7 +1,7 @@
-
+/*
 with BoltTrail
 draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,theColour,1);
-
+*/
 with Wall
 {
 	draw_sprite_part_ext(outspr,outindex,l,r,w,h,x-4+l,y-12+r,1,1,c_white,1)//this draws white lines WHAT
@@ -300,6 +300,10 @@ with Yoyo
 	draw_self();	
 }
 with Disc
+{
+	draw_self();	
+}
+with PermanentDisc
 {
 	draw_self();	
 }

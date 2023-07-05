@@ -7,6 +7,10 @@ function scrEndOfRun(){
 	room_speed = 30;
 	with UberCont
 	{
+		if array_length(opt_gamemode) == 2
+		{
+			scrUnlockGameMode(41,"FOR PLAYING TWO GAMEMODES");
+		}
 		hasLeveledUp = false;
 		loadedRun = false;
 		crownVaultChallenge = 0;

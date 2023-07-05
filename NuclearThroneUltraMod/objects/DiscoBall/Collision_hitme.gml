@@ -12,7 +12,8 @@ if other.team != team and other.my_health > 0
 	snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
 	instance_create(x,y,Smoke)
 	if !place_meeting(x,y,PlasmaImpact)
-		instance_create(x,y,PlasmaImpact)
+		with instance_create(x,y,PlasmaImpact)
+			scrCopyWeaponMod(other);
 	Sleep(2)
 	alarm[0] -= 1;
 }

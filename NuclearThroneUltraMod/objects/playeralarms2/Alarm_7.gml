@@ -1,0 +1,1 @@
+/// @description Auto throw cooldown

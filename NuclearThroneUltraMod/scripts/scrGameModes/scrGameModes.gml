@@ -39,7 +39,7 @@ function scrGameModes() {
 	gamemode_have[5] = 0;
 	gamemode_tip[5] = "WE ARE ALL EQUAL HERE";
 	gamemode_description[5] = "EVERYTHING HAS 1 HP";
-	gamemode_nocombo[5] = [26,27,37,8];
+	gamemode_nocombo[5] = [24,26,27,32,37,8,41];
 
 	gamemode[6] = "CLAUSTROPHOBIA";//
 	gamemode_unlock[6] = "FINISH AN AREA IN UNDER 10 SECONDS";
@@ -60,7 +60,7 @@ function scrGameModes() {
 	gamemode_have[8] = 0;
 	gamemode_tip[8] = "I AM FAN OF THE VAN";
 	gamemode_description[8] = "SURVIVE AGAINST AN ONSLAUGHT OF VANS, PUSH INCOMING VANS AWAY WITH YOUR FAN";
-	gamemode_nocombo[8] = [1,2,4,5,6,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40];
+	gamemode_nocombo[8] = [1,2,4,5,6,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41];
 
 	gamemode[9] = "CASUAL MODE";//
 	gamemode_unlock[9] = "DIE ON 1-1";
@@ -177,7 +177,7 @@ function scrGameModes() {
 	gamemode_have[24] = 0;
 	gamemode_tip[24] = "SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS SHARP STRESS ";
 	gamemode_description[24] = "ONLY SHARP STRESS, BUT IT STACKS";
-	gamemode_nocombo[24] = [15,26,27,28,35,37,8];
+	gamemode_nocombo[24] = [5,15,26,27,28,32,35,37,8];
 	
 	gamemode[25] = "SURVIVAL ARENA";
 	gamemode_unlock[25] = "GET RESURRECTED";
@@ -191,14 +191,14 @@ function scrGameModes() {
 	gamemode_have[26] = 1;
 	gamemode_tip[26] = "GOTTA GO FAST";
 	gamemode_description[26] = "COMPETE FOR THE FASTEST TIME IN THE LEADERBOARD, TIME ENDS WHEN YOU KILL THRONE II";
-	gamemode_nocombo[26] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,0,27,28,29,30,31,32,33,34,35,36,37,38,39,40];
+	gamemode_nocombo[26] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,0,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41];
 	
 	gamemode[27] = "DAILY SCORE";
 	gamemode_unlock[27] = "";
 	gamemode_have[27] = 1;
 	gamemode_tip[27] = "SWEATING";
 	gamemode_description[27] = "COMPETE FOR SCORE IN THE LEADERBOARD";
-	gamemode_nocombo[27] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,0,28,29,30,31,32,33,34,35,36,37,38,39,40];
+	gamemode_nocombo[27] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,0,28,29,30,31,32,33,34,35,36,37,38,39,40,41];
 	
 	gamemode[28] = "ALL MUTATION#CHOICES";
 	gamemode_unlock[28] = "TAKE EVERY REGULAR MUTATION#ATLEAST ONCE";
@@ -234,7 +234,7 @@ function scrGameModes() {
 	gamemode_have[32] = 0;
 	gamemode_tip[32] = "DO NOT TAKE A HIT!";
 	gamemode_description[32] = "YOU DIE IN ONE HIT, MOST SURVIVAL MUTATIONS ARE DISABLED";
-	gamemode_nocombo[32] = [26,27,37,8];
+	gamemode_nocombo[32] = [5,24,26,27,37,8];
 	
 	gamemode[33] = "ALL DEFLECTOR";
 	gamemode_unlock[33] = "REACH THE JUNGLE#IN THE GAMEMODE: ONE HIT WONDER";
@@ -269,7 +269,7 @@ function scrGameModes() {
 	gamemode_have[37] = 1;
 	gamemode_tip[37] = "WHAT A WEEK";
 	gamemode_description[37] = "EACH WEEK OFFERS A DIFFERENT GAMEMODE. YOU CAN REPLAY THE WEEKLY THROUGHOUT THE WEEK TO IMPROVE YOUR SCORE";
-	gamemode_nocombo[37] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,0,38,39,40];
+	gamemode_nocombo[37] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,0,38,39,40,41];
 	
 	gamemode[38] = "SEEDED";
 	gamemode_unlock[38] = "USE PLANT'S SNARE#VERY RAPIDLY";
@@ -292,6 +292,13 @@ function scrGameModes() {
 	gamemode_description[40] = "ONLY ONE ENEMY SPAWNS EACH AREA. BUT THE ENEMY IS BEEFED UP!";
 	gamemode_nocombo[40] = [25,26,27,37,8];
 	
+	gamemode[41] = "DOUBLE ENEMY HP";
+	gamemode_unlock[41] = "PLAY A RUN WITH A COMBINATION OF TWO GAMEMODES";
+	gamemode_have[41] = 0;
+	gamemode_tip[41] = "DOUBLE THE TROUBLE";
+	gamemode_description[41] = "ALL ENEMIES HAVE DOUBLE HP";
+	gamemode_nocombo[41] = [26,27,37,8,5];
+	
 	/*
 	gamemode[38] = "ALL MUTATIONS#INFINITE LEVELS";
 	gamemode_unlock[38] = "TAKE A SECRET ULTRA MUTATION#ON THE GAMEMODE: ALL MUTATION CHOICES";
@@ -306,49 +313,49 @@ function scrGameModes() {
 	gamemode_nocombo[1] = [0,1,26,27,37,25,8]
 	*/
 	
-
-	gamemodeOrder[0] = 0;
-	gamemodeOrder[1] = 9;
-	gamemodeOrder[2] = 34//35;
-	gamemodeOrder[3] = 3;
-	gamemodeOrder[4] = 38;
-	gamemodeOrder[5] = 39;
-	gamemodeOrder[6] = 1;
-	gamemodeOrder[7] = 2;
-	gamemodeOrder[8] = 31;
-	gamemodeOrder[9] = 5;
-	gamemodeOrder[10] = 6;
-	gamemodeOrder[11] = 20;
-	gamemodeOrder[12] = 40;
-	gamemodeOrder[13] = 10;
-	gamemodeOrder[14] = 11;
-	gamemodeOrder[15] = 12;
-	gamemodeOrder[16] = 13;
-	gamemodeOrder[17] = 7;
-	gamemodeOrder[18] = 14;
-	gamemodeOrder[19] = 15;
-	gamemodeOrder[20] = 8;
-	gamemodeOrder[21] = 4;
-	gamemodeOrder[22] = 19;
-	gamemodeOrder[23] = 16;
-	gamemodeOrder[24] = 21;
-	gamemodeOrder[25] = 22;
-	gamemodeOrder[26] = 25;
-	gamemodeOrder[27] = 23;
-	gamemodeOrder[28] = 24;
-	gamemodeOrder[29] = 18;
-	gamemodeOrder[30] = 30;
-	gamemodeOrder[31] = 36;
-	gamemodeOrder[32] = 32;
-	gamemodeOrder[33] = 29;
-	gamemodeOrder[34] = 33;
-	gamemodeOrder[35] = 28;
-	gamemodeOrder[36] = 35;
-	gamemodeOrder[37] = 17;
-	gamemodeOrder[38] = 26;
-	gamemodeOrder[39] = 27;
-	gamemodeOrder[40] = 37;
-
+	var i = 0;
+	gamemodeOrder[i] = 0;
+	i++; gamemodeOrder[i] = 9;
+	i++; gamemodeOrder[i] = 34//35;
+	i++; gamemodeOrder[i] = 3;
+	i++; gamemodeOrder[i] = 38;
+	i++; gamemodeOrder[i] = 39;
+	i++; gamemodeOrder[i] = 1;
+	i++; gamemodeOrder[i] = 2;
+	i++; gamemodeOrder[i] = 31;
+	i++; gamemodeOrder[i] = 5;
+	i++; gamemodeOrder[i] = 41;
+	i++; gamemodeOrder[i] = 6;
+	i++; gamemodeOrder[i] = 20;
+	i++; gamemodeOrder[i] = 40;
+	i++; gamemodeOrder[i] = 10;//random areas
+	i++; gamemodeOrder[i] = 23;
+	i++; gamemodeOrder[i] = 11;
+	i++; gamemodeOrder[i] = 12;
+	i++; gamemodeOrder[i] = 13;
+	i++; gamemodeOrder[i] = 7;
+	i++; gamemodeOrder[i] = 14;
+	i++; gamemodeOrder[i] = 15;
+	i++; gamemodeOrder[i] = 8;
+	i++; gamemodeOrder[i] = 4;
+	i++; gamemodeOrder[i] = 19;
+	i++; gamemodeOrder[i] = 16;
+	i++; gamemodeOrder[i] = 21;
+	i++; gamemodeOrder[i] = 22;
+	i++; gamemodeOrder[i] = 25;
+	i++; gamemodeOrder[i] = 24;
+	i++; gamemodeOrder[i] = 18;
+	i++; gamemodeOrder[i] = 30;
+	i++; gamemodeOrder[i] = 36;
+	i++; gamemodeOrder[i] = 32;
+	i++; gamemodeOrder[i] = 29;
+	i++; gamemodeOrder[i] = 33;
+	i++; gamemodeOrder[i] = 28;
+	i++; gamemodeOrder[i] = 35;
+	i++; gamemodeOrder[i] = 17;
+	i++; gamemodeOrder[i] = 26;
+	i++; gamemodeOrder[i] = 27;
+	i++; gamemodeOrder[i] = 37;
 
 	maxgamemode = array_length(gamemodeOrder) - 1;
 

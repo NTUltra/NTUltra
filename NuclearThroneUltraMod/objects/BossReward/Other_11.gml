@@ -32,6 +32,8 @@ switch(array_length(UberCont.collectedRewards))
 		{
 			skeletonlives += 1;
 			livesRegain[array_length(livesRegain)] = 3;
+			if array_length(livesRegain) > 3
+				scrUnlockBSkin(19,"FOR HAVING FOUR LIVES",0);
 		}
 		snd_play(other.snd_chst);
 	break;

@@ -51,8 +51,13 @@ function EnemyHealthAdjustments(){
 	}
 	if scrIsGamemode(5)//1HP gamemode
 	{
-		my_health=1;
-		maxhealth=my_health;
+		my_health = 1;
+		maxhealth = my_health;
+	}
+	else if scrIsGamemode(41)//Double hp
+	{
+		my_health *= 2;
+		maxhealth = my_health;
 	}
 	prevhealth = my_health;
 	// 400 * 0.82 * 0.75 = 246

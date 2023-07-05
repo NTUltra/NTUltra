@@ -23,7 +23,7 @@ wallbounce+=5;
 typ = 1
 alarm[0]=1;
 dmg = 1;
-
+trailColour = make_colour_rgb(0,255,0);
 //friction = 0.6
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable
 //thisBolt=instance_number(Bolt)+instance_number(ToxicBolt)+instance_number(Splinter);

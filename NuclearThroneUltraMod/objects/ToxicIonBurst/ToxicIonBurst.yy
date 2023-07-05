@@ -12,8 +12,8 @@
     "path": "folders/Objects/Player/Ability/Bursts.yy",
   },
   "parentObjectId": {
-    "name": "BurstWeapons",
-    "path": "objects/BurstWeapons/BurstWeapons.yy",
+    "name": "IonBurst",
+    "path": "objects/IonBurst/IonBurst.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

@@ -87,26 +87,26 @@ if race=11
 instance_create(x,y,Explosion);
 }
 
-var playerCorpse = instance_create(x,y,MovingCorpse)
+var playerCorpse = instance_create(x,y,MovingCorpseDynamic)
 with playerCorpse
 {
-mySize = 1
-mask_index = other.mask_index
-motion_add(other.direction,other.speed)
-speed += max(0,-other.my_health/5)
-sprite_index = other.spr_dead
-image_xscale = other.right
-if speed > 16
-speed = 16
-if other.race = 4
-{
-p = other.p
-with instance_create(x,y,MeltDead)
-{
-p= other.p
-creator = other.id
-}
-}
+	mySize = 1
+	mask_index = other.mask_index
+	motion_add(other.direction,other.speed)
+	speed += max(0,-other.my_health/5)
+	sprite_index = other.spr_dead
+	image_xscale = other.right
+	if speed > 16
+	speed = 16
+	if other.race = 4
+	{
+	p = other.p
+	with instance_create(x,y,MeltDead)
+	{
+	p= other.p
+	creator = other.id
+	}
+	}
 }
 
 audio_stop_sound(sndEyesLoop)
@@ -214,31 +214,32 @@ instance_create(x,y,WallBreak);
 
 //blank armour sorta yea
 with enemy{
-if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-{
-//if sprite_index!=spr_hurt{
-snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
-Sleep(20)
-draw_rectangle_colour(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ),c_white,c_white,c_white,c_white,false);
-Sleep(20);
+	if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+	{
+		//if sprite_index!=spr_hurt{
+		snd_play(snd_hurt, hurt_pitch_variation,true)
+		Sleep(20)
+		draw_rectangle_colour(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ),c_white,c_white,c_white,c_white,false);
+		Sleep(20);
 
-//move it
-if place_free(x+lengthdir_x(4,point_direction(x,y,Player.x,Player.y)+180),y)
-x += lengthdir_x(4,point_direction(x,y,Player.x,Player.y)+180)
-if place_free(x,y+lengthdir_y(4,point_direction(x,y,Player.x,Player.y)+180))
-y += lengthdir_y(4,point_direction(x,y,Player.x,Player.y)+180)
+		//move it
+		if place_free(x+lengthdir_x(4,point_direction(x,y,Player.x,Player.y)+180),y)
+		x += lengthdir_x(4,point_direction(x,y,Player.x,Player.y)+180)
+		if place_free(x,y+lengthdir_y(4,point_direction(x,y,Player.x,Player.y)+180))
+		y += lengthdir_y(4,point_direction(x,y,Player.x,Player.y)+180)
 
-my_health -= 24;
-sprite_index = spr_hurt
-image_index = 0
-//motion_add(other.direction,6)
+		my_health -= 24;
+		sprite_index = spr_hurt
+		image_index = 0
+		//motion_add(other.direction,6)
 
-//with instance_create(x,y,SharpTeeth)
-//owner=other.id;
-//}
+		//with instance_create(x,y,SharpTeeth)
+		//owner=other.id;
+		//}
 
-motion_add(other.direction+180,10);
-}}
+		motion_add(other.direction+180,10);
+	}
+}
 with projectile
 {
 if team!=other.team

@@ -57,6 +57,8 @@ spawnItell = 0;
 switch (waveNumber)
 {
 	case 1:
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
 		song = mus1;
 		with Floor
 		{
@@ -77,6 +79,8 @@ switch (waveNumber)
 		}
 	break;
 	case 3:
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
 		song = mus3;
 		with Floor
 		{
@@ -98,6 +102,8 @@ switch (waveNumber)
 		}
 	break;
 	case 5:
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
 		song = mus5;
 		Player.area = 5;
 		with Floor
@@ -119,6 +125,8 @@ switch (waveNumber)
 		}
 	break;
 	case 7:
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
 		song = musVulcano;
 		Player.area = 7;
 		with Floor
@@ -130,6 +138,8 @@ switch (waveNumber)
 		}
 	break;
 	case 8:
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
 		song = mus102;
 		with Floor
 		{
@@ -140,6 +150,8 @@ switch (waveNumber)
 		}
 	break;
 	case 9:
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
 		song = mus7;
 		with Floor
 		{
@@ -150,6 +162,8 @@ switch (waveNumber)
 		}
 	break;
 	case 10:
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
 		//Clean up throne 2
 		with BigScorchMark
 		{
@@ -180,6 +194,8 @@ switch (waveNumber)
 		}
 	break;
 	case 11:
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
 		song = mus105;
 		with Floor
 		{
@@ -189,7 +205,17 @@ switch (waveNumber)
 				sprite_index = sprFloor10;
 		}
 	break;
-	case 12://inv sewers
+	case 12://Graveyard
+		song = mus126;
+		with Floor
+		{
+			if styleb
+				sprite_index = sprFloor126B;
+			else
+				sprite_index = sprFloor126;
+		}
+	break;
+	case 13://inv sewers
 		song = musInvertedSewers;
 		with Floor
 		{
@@ -199,7 +225,9 @@ switch (waveNumber)
 				sprite_index = sprFloor110;
 		}
 	break;
-	case 13://inv scrap
+	case 14://inv scrap
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
 		song = mus3b;
 		with Floor
 		{
@@ -209,7 +237,9 @@ switch (waveNumber)
 				sprite_index = sprFloor106;
 		}
 	break;
-	case 14://mansion
+	case 15://mansion
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
 		song = mus103;
 		with Floor
 		{
@@ -219,7 +249,7 @@ switch (waveNumber)
 				sprite_index = sprFloor103;
 		}
 	break;
-	case 15://inv lab
+	case 16://inv lab
 		song = mus106b
 		with Floor
 		{
@@ -229,7 +259,9 @@ switch (waveNumber)
 				sprite_index = sprFloor106;
 		}
 	break;
-	case 16://inv frozen
+	case 17://inv frozen
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
 		song = mus101;
 		Player.area = 101;
 		with Floor
@@ -240,7 +272,9 @@ switch (waveNumber)
 				sprite_index = sprFloor101;
 		}
 	break;
-	case 17://jungle
+	case 18://jungle
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
 		song = mus105;
 		with Floor
 		{
@@ -250,7 +284,9 @@ switch (waveNumber)
 				sprite_index = sprFloor114;
 		}
 	break;
-	case 18://inv cave
+	case 19://inv cave
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
 		song = mus104;
 		Player.area = 111;
 		with Floor
@@ -261,7 +297,7 @@ switch (waveNumber)
 				sprite_index = sprFloor111;
 		}
 	break;
-	case 19://inv oasis
+	case 20://inv oasis
 		song = mus101;
 		with Floor
 		{
@@ -271,7 +307,7 @@ switch (waveNumber)
 				sprite_index = sprFloor101;
 		}
 	break;
-	case 20://pizza sewers
+	case 21://pizza sewers
 		song = mus102;
 		with Floor
 		{
@@ -281,7 +317,7 @@ switch (waveNumber)
 				sprite_index = sprFloor102;
 		}
 	break;
-	case 21://cursed caves
+	case 22://cursed caves
 		song = mus104;
 		Player.area = 115;
 		with Floor
@@ -292,7 +328,9 @@ switch (waveNumber)
 				sprite_index = sprFloor115;
 		}
 	break;
-	case 22://inv vulcano
+	case 23://inv vulcano
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
 		song = mus5b;
 		Player.area = 108;
 		with Floor
@@ -303,7 +341,9 @@ switch (waveNumber)
 				sprite_index = sprFloor108;
 		}
 	break;
-	case 23://inv banditland
+	case 24://inv banditland
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
 		song = musThemeP;
 		with Floor
 		{
@@ -313,7 +353,9 @@ switch (waveNumber)
 				sprite_index = sprFloor0;
 		}
 	break;
-	case 24://inv wonderland
+	case 25://inv wonderland
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
 		song = mus5b;
 		with Floor
 		{
@@ -321,6 +363,18 @@ switch (waveNumber)
 				sprite_index = sprFloor109B;
 			else
 				sprite_index = sprFloor109;
+		}
+	break;
+	case 26://inv graveyard
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
+		song = mus5b;
+		with Floor
+		{
+			if styleb
+				sprite_index = sprFloor127B;
+			else
+				sprite_index = sprFloor127;
 		}
 	break;
 }
@@ -2538,8 +2592,252 @@ repeat(1+loops)
 			
 		break;
 		#endregion
-		#region wave 12 Inverted sewers
+		#region wave 12 Graveyard
 		case 12:
+			var xxx = centerX - 128;
+			for (var ix = 0; ix < 6; ix++) {
+				var yyy = centerY - 128;
+				for (var iy = 0; iy < 3; iy++) {
+					wave[i] = {
+						obj: WallBreak,
+						time: 1,
+						xx: xxx,
+						yy: yyy,
+					};
+					wave[i] = {
+						obj: GraveyardSkeleton,
+						time: 1,
+						xx: xxx,
+						yy: yyy,
+					};
+					yyy += 32;
+					i++
+				}
+				xxx -= 32;
+			}
+			wave[i] = {
+				obj: GraveyardBreeder,
+				time: 1,
+				xx: xxx+32,
+				yy: yyy-32,
+			};
+			i++;
+			var xxx = centerX + 128;
+			for (var ix = 0; ix < 6; ix++) {
+				var yyy = centerY + 96;
+				for (var iy = 0; iy < 3; iy++) {
+					wave[i] = {
+						obj: WallBreak,
+						time: 1,
+						xx: xxx,
+						yy: yyy,
+					};
+					wave[i] = {
+						obj: GraveyardSkeleton,
+						time: 1,
+						xx: xxx,
+						yy: yyy,
+					};
+					yyy += 32;
+					i++
+				}
+				xxx += 32;
+			}
+			wave[i] = {
+				obj: GraveyardBreeder,
+				time: 5,
+				xx: xxx-32,
+				yy: yyy-32,
+			};
+			i++;
+			repeat(4)
+			{
+				wave[i] = {
+					obj: GraveyardSniper,
+					time: 5,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: GraveyardBreeder,
+				time: 90,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			var xxx = centerX + 128;
+			for (var ix = 0; ix < 6; ix++) {
+				var yyy = centerY + 96;
+				for (var iy = 0; iy < 3; iy++) {
+					wave[i] = {
+						obj: GraveyardSkeleton,
+						time: 2,
+						xx: xxx,
+						yy: yyy,
+					};
+					yyy += 32;
+					i++
+				}
+				xxx += 32;
+			}
+			wave[i] = {
+				obj: GraveyardBreeder,
+				time: 30,
+				xx: xxx-32,
+				yy: yyy-32,
+			};
+			i++;
+			var xxx = centerX - 128;
+			for (var ix = 0; ix < 6; ix++) {
+				var yyy = centerY - 128;
+				for (var iy = 0; iy < 3; iy++) {
+					wave[i] = {
+						obj: GraveyardSkeleton,
+						time: 2,
+						xx: xxx,
+						yy: yyy,
+					};
+					yyy += 32;
+					i++
+				}
+				xxx -= 32;
+			}
+			wave[i] = {
+				obj: GraveyardBreeder,
+				time: 30,
+				xx: xxx+32,
+				yy: yyy-32,
+			};
+			i++;
+			wave[i] = {
+				obj: GraveyardBreeder,
+				time: 90,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			var xxx = centerX + 128;
+			for (var ix = 0; ix < 6; ix++) {
+				var yyy = centerY + 96;
+				for (var iy = 0; iy < 3; iy++) {
+					wave[i] = {
+						obj: GraveyardSniper,
+						time: 2,
+						xx: xxx,
+						yy: yyy,
+					};
+					yyy += 32;
+					i++
+				}
+				xxx += 32;
+			}
+			wave[i] = {
+				obj: GraveyardBreeder,
+				time: 30,
+				xx: xxx-32,
+				yy: yyy-32,
+			};
+			i++;
+			var xxx = centerX - 128;
+			for (var ix = 0; ix < 6; ix++) {
+				var yyy = centerY - 128;
+				for (var iy = 0; iy < 3; iy++) {
+					wave[i] = {
+						obj: GraveyardSniper,
+						time: 2,
+						xx: xxx,
+						yy: yyy,
+					};
+					yyy += 32;
+					i++
+				}
+				xxx -= 32;
+			}
+			wave[i] = {
+				obj: GraveyardBreeder,
+				time: 30,
+				xx: xxx+32,
+				yy: yyy-32,
+			};
+			i++;
+			wave[i] = {
+				obj: GraveyardBreeder,
+				time: 90,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			var xxx = centerX + 128;
+			for (var ix = 0; ix < 6; ix++) {
+				var yyy = centerY + 96;
+				for (var iy = 0; iy < 3; iy++) {
+					wave[i] = {
+						obj: GraveyardBreeder,
+						time: 5,
+						xx: xxx,
+						yy: yyy,
+					};
+					yyy += 32;
+					i++
+				}
+				xxx += 32;
+			}
+			var xxx = centerX - 128;
+			for (var ix = 0; ix < 6; ix++) {
+				var yyy = centerY - 128;
+				for (var iy = 0; iy < 3; iy++) {
+					wave[i] = {
+						obj: GraveyardBreeder,
+						time: 5,
+						xx: xxx,
+						yy: yyy,
+					};
+					yyy += 32;
+					i++
+				}
+				xxx -= 32;
+			}
+			wave[i] = {
+				obj: GraveyardSniper,
+				time: 60,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			repeat(4)
+			{
+				wave[i] = {
+					obj: GraveyardSniper,
+					time: 5,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: GraveyardBreeder,
+				time: 90,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			repeat(4)
+			{
+				wave[i] = {
+					obj: GraveyardBreeder,
+					time: 5,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: GraveyardBreeder,
+				time: 90,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+		break;
+		#endregion
+		#region wave 13 Inverted sewers
+		case 13:
 			wave[i] = {
 				obj: SurvivalArenaToxicTrapRight,
 				time: 20,
@@ -2821,69 +3119,403 @@ repeat(1+loops)
 			i++;
 		break;
 		#endregion
-		#region next
-		/*
-		#region wave 13 Inverted scrapyard
-		case 13:
-		break;
-		#endregion
-				
-		#region wave 14 YV mansion
+		#region wave 14 Inverted scrapyard
 		case 14:
+			var xxx = centerX - 128;
+			for (var ix = 0; ix < 6; ix++) {
+				var yyy = centerY + 96;
+				for (var iy = 0; iy < 3; iy++) {
+					wave[i] = {
+						obj: WallBreak,
+						time: 2,
+						xx: xxx,
+						yy: yyy,
+					};
+					wave[i] = {
+						obj: InvertedRaven,
+						time: 5,
+						xx: xxx,
+						yy: yyy,
+					};
+					yyy += 32;
+					i++
+				}
+				xxx -= 32;
+			}
+			wave[i] = {
+				obj: InvertedSniper,
+				time: 10,
+				xx: xxx+32,
+				yy: yyy-32,
+			};
+			i++;
+			var xxx = centerX + 128;
+			for (var ix = 0; ix < 6; ix++) {
+				var yyy = centerY - 128;
+				for (var iy = 0; iy < 3; iy++) {
+					wave[i] = {
+						obj: WallBreak,
+						time: 2,
+						xx: xxx,
+						yy: yyy,
+					};
+					wave[i] = {
+						obj: InvertedRaven,
+						time: 5,
+						xx: xxx,
+						yy: yyy,
+					};
+					yyy += 32;
+					i++
+				}
+				xxx += 32;
+			}
+			wave[i] = {
+				obj: InvertedSniper,
+				time: 10,
+				xx: xxx-32,
+				yy: yyy-32,
+			};
+			i++;
+			wave[i] = {
+				obj: InvertedMeleeFake,
+				time: 90,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			var xxx = centerX - 128;
+			for (var ix = 0; ix < 6; ix++) {
+				var yyy = centerY - 128;
+				for (var iy = 0; iy < 3; iy++) {
+					wave[i] = {
+						obj: WallBreak,
+						time: 2,
+						xx: xxx,
+						yy: yyy,
+					};
+					wave[i] = {
+						obj: InvertedMeleeBandit,
+						time: 5,
+						xx: xxx,
+						yy: yyy,
+					};
+					yyy += 32;
+					i++
+				}
+				xxx -= 32;
+			}
+			wave[i] = {
+				obj: InvertedSniper,
+				time: 10,
+				xx: xxx+32,
+				yy: yyy-32,
+			};
+			i++;
+			var xxx = centerX + 128;
+			for (var ix = 0; ix < 6; ix++) {
+				var yyy = centerY + 96;
+				for (var iy = 0; iy < 3; iy++) {
+					wave[i] = {
+						obj: WallBreak,
+						time: 2,
+						xx: xxx,
+						yy: yyy,
+					};
+					wave[i] = {
+						obj: InvertedMeleeBandit,
+						time: 5,
+						xx: xxx,
+						yy: yyy,
+					};
+					yyy += 32;
+					i++
+				}
+				xxx += 32;
+			}
+			wave[i] = {
+				obj: InvertedSniper,
+				time: 10,
+				xx: xxx-32,
+				yy: yyy-32,
+			};
+			i++;
+			wave[i] = {
+				obj: InvertedSalamander,
+				time: 90,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			repeat(4)
+			{
+				wave[i] = {
+					obj: InvertedThief,
+					time: 6,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: InvertedScrapBoss,
+				time: 90,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			repeat(3)
+			{
+				wave[i] = {
+					obj: InvertedSalamander,
+					time: 10,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: InvertedSalamander,
+				time: 60,
+			};
+			i++;
+			
+			repeat(4)
+			{
+				wave[i] = {
+					obj: InvertedSniper,
+					time: 10,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: InvertedSniper,
+				time: 30,
+				xx: centerX + 256,
+				yy: centerY + 192,
+			};
+			i++;
+			wave[i] = {
+				obj: InvertedSniper,
+				time: 30,
+				xx: centerX - 256,
+				yy: centerY - 64,
+			};
+			i++;
+			wave[i] = {
+				obj: InvertedSniper,
+				time: 30,
+				xx: centerX + 256,
+				yy: centerY - 64,
+			};
+			i++;
+			wave[i] = {
+				obj: InvertedSniper,
+				time: 60,
+				xx: centerX - 256,
+				yy: centerY + 192,
+			};
+			i++;
+			repeat(4)
+			{
+				wave[i] = {
+					obj: InvertedMeleeFake,
+					time: 10,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: InvertedAssassinBoss,
+				time: 90,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			var xxx = centerX - 128;
+			for (var ix = 0; ix < 6; ix++) {
+				var yyy = centerY + 96;
+				for (var iy = 0; iy < 3; iy++) {
+					wave[i] = {
+						obj: WallBreak,
+						time: 2,
+						xx: xxx,
+						yy: yyy,
+					};
+					wave[i] = {
+						obj: InvertedRaven,
+						time: 5,
+						xx: xxx,
+						yy: yyy,
+					};
+					yyy += 32;
+					i++
+				}
+				xxx -= 32;
+			}
+			wave[i] = {
+				obj: InvertedSniper,
+				time: 10,
+				xx: xxx+32,
+				yy: yyy-32,
+			};
+			i++;
+			var xxx = centerX + 128;
+			for (var ix = 0; ix < 6; ix++) {
+				var yyy = centerY - 128;
+				for (var iy = 0; iy < 3; iy++) {
+					wave[i] = {
+						obj: WallBreak,
+						time: 2,
+						xx: xxx,
+						yy: yyy,
+					};
+					wave[i] = {
+						obj: InvertedRaven,
+						time: 5,
+						xx: xxx,
+						yy: yyy,
+					};
+					yyy += 32;
+					i++
+				}
+				xxx += 32;
+			}
+			wave[i] = {
+				obj: InvertedSniper,
+				time: 10,
+				xx: xxx-32,
+				yy: yyy-32,
+			};
+			i++;
+			wave[i] = {
+				obj: InvertedMeleeFake,
+				time: 90,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			var xxx = centerX - 128;
+			for (var ix = 0; ix < 6; ix++) {
+				var yyy = centerY - 128;
+				for (var iy = 0; iy < 3; iy++) {
+					wave[i] = {
+						obj: WallBreak,
+						time: 2,
+						xx: xxx,
+						yy: yyy,
+					};
+					wave[i] = {
+						obj: InvertedMeleeBandit,
+						time: 5,
+						xx: xxx,
+						yy: yyy,
+					};
+					yyy += 32;
+					i++
+				}
+				xxx -= 32;
+			}
+			wave[i] = {
+				obj: InvertedSniper,
+				time: 10,
+				xx: xxx+32,
+				yy: yyy-32,
+			};
+			i++;
+			var xxx = centerX + 128;
+			for (var ix = 0; ix < 6; ix++) {
+				var yyy = centerY + 96;
+				for (var iy = 0; iy < 3; iy++) {
+					wave[i] = {
+						obj: WallBreak,
+						time: 2,
+						xx: xxx,
+						yy: yyy,
+					};
+					wave[i] = {
+						obj: InvertedMeleeBandit,
+						time: 5,
+						xx: xxx,
+						yy: yyy,
+					};
+					yyy += 32;
+					i++
+				}
+				xxx += 32;
+			}
+			wave[i] = {
+				obj: InvertedSniper,
+				time: 10,
+				xx: xxx-32,
+				yy: yyy-32,
+			};
+			i++;
+			wave[i] = {
+				obj: InvertedSalamander,
+				time: 90,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
 		break;
 		#endregion
-				
-		#region wave 15 Inverted labs
+		/*
+		#region wave 15 YV mansion
 		case 15:
 		break;
 		#endregion
 				
-		#region wave 16 Inverted Frozen city
+		#region wave 16 Inverted labs
 		case 16:
 		break;
 		#endregion
 				
-		#region wave 17 Jungle
+		#region wave 17 Inverted Frozen city
 		case 17:
 		break;
 		#endregion
 				
-		#region wave 18 Inverted caves
+		#region wave 18 Jungle
 		case 18:
 		break;
 		#endregion
-		
-		#region wave 19 Oasis
+				
+		#region wave 19 Inverted caves
 		case 19:
 		break;
 		#endregion
-				
-		#region wave 20 Pizza sewers
+		
+		#region wave 20 Oasis
 		case 20:
 		break;
 		#endregion
 				
-		#region wave 21 Cursed caves
+		#region wave 21 Pizza sewers
 		case 21:
 		break;
 		#endregion
 				
-		#region wave 22 Inverted Vulcano
+		#region wave 22 Cursed caves
 		case 22:
 		break;
 		#endregion
 				
-		#region wave 23 Banditland
+		#region wave 23 Inverted Vulcano
 		case 23:
 		break;
 		#endregion
-		
-		#region wave 24 Inverted wonderland
+				
+		#region wave 24 Banditland
 		case 24:
 		break;
 		#endregion
-		*/
+		
+		#region wave 25 Inverted wonderland
+		case 25:
+		break;
 		#endregion
+		
+		#region wave 26 Inverted Graveyard
+		case 26:
+		break;
+		#endregion
+		*/
 		#region loop
 		default:
 			//loops

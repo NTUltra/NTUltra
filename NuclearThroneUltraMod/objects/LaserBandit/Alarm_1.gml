@@ -11,12 +11,12 @@ if dis > 24 && dis < 300
 if random(3) < 1
 {
 //fire
-alarm[2]=6
+alarm[2]=8
 instance_create(x,y,Notice);
 gunangle = point_direction(x,y,target.x,target.y)
 
 
-alarm[1] = 7+random(5)}
+alarm[1] = 9+random(5)}
 else
 {direction = point_direction(x,y,target.x,target.y)+random(180)-90
 speed = 0.4

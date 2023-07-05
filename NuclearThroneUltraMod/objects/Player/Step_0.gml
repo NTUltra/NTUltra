@@ -5,7 +5,7 @@ if ultra_got[43] && altUltra && hunterEye < hunterEyeMax
 	hunterEye += 1.5+(1.5*skill_got[5]);
 if ultra_got[75] && speed < 1
 	alarm[3] = max(alarm[3],2);
-if scrIsGamemode(29) || cheatyinfiniteammo //Infinite ammo
+if scrIsGamemode(29) || cheatyinfiniteammo || freeAmmoRound > 0//Infinite ammo
 	alarm[2] = 2;
 if unkillable
 {

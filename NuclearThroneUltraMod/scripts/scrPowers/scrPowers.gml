@@ -646,16 +646,16 @@ function scrPowers() {
 		else if wep_type[wep]!=0&&(can_shoot == 1 || ultra_got[74])//&& my_health > 1//SKELETON
 		{
 			snd_play_2d(sndBloodGamble);
-			scrFire();
 		    //gamble some blood
-		    if (wep_cost[wep]/typ_ammo[wep_type[wep]] > random(1.03)*(1+(skill_got[5]*0.3333333333333333) )  )//If this is true take damage
+		    if (wep_cost[wep]/typ_ammo[wep_type[wep]] > random(1.05 - consecutiveGoodBloodGambles)*(1+(skill_got[5]*0.3333333333333333) )  )//If this is true take damage
 		    {//thronebutt adds 1/3 chance of not taking damage
+				consecutiveGoodBloodGambles = 0;
 				//Damnation
 				if (ammo[wep_type[wep]] >= 0 && ultra_got[74])
 				{
 					var punishment = 6;
 					ammo[wep_type[wep]] -= wep_cost[wep]*punishment;
-					rad = max(-wep_rad[wep],rad - wep_rad[wep] * punishment);
+					rad = max(0,rad - wep_rad[wep] * punishment);
 				}
 				else
 				{
@@ -776,6 +776,10 @@ function scrPowers() {
 		    }
 			else
 			{
+				if skill_got[5]
+					consecutiveGoodBloodGambles += wep_load[wep]*0.0005;
+				else
+					consecutiveGoodBloodGambles += wep_load[wep]*0.001;
 				//reload -= wep_load[wep]*0.8//*0.25;
 				if ultra_got[75]
 				{
@@ -790,19 +794,15 @@ function scrPowers() {
 					}
 				}
 			}
-		reload -= wep_load[wep]//*0.25;
-		var t = wep_type[wep]
-		ammo[t] += wep_cost[wep]//return ammo
-		rad += wep_rad[wep]//return rad cost
-		can_shoot = 0;
-		//Cap ammo
-		ammo[wep_type[wep]] = min(ammo[wep_type[wep]],typ_amax[t]);
-		rad = min(rad,GetPlayerMaxRad());
-		/*
-		if ultra_got[74]//Skeleton Damnation Ultra B
-		{
-			reload -= wep_load[wep]*0.8;//80 procent fire rate boost
-		}*/
+			var t = wep_type[wep];
+			var wantRad = rad;
+			var wantAmmo = ammo[t]
+			scrFire();
+			reload -= wep_load[wep]//*0.25;
+			ammo[t] = wantAmmo;
+			//ammo[t] += wep_cost[wep]//return ammo
+			rad = max(rad,wantRad);
+			can_shoot = 0;
 
 
 		}
@@ -1252,61 +1252,16 @@ function scrPowers() {
 
 	}
 
-	if race==14//PANDA
+	if race == 14//PANDA
 	{
 		if ultra_got[55] && altUltra
 		{
 			//CHECK HOLD LOGIC
 		}	
-		else if curse=0&&wep!=0
+		else
 		{
-			//snd_play_2d(sndEnemySlash);
-			snd_play_2d(sndChickenThrow);
-
-		    with instance_create(x,y,ThrowWep)
-		    {
-			    team=other.team;
-			    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),16);
-			    scrWeapons()
-			    if other.ultra_got[54]=1
-				{
-				    //primary
-				    var prevwep;
-    
-				    //if wep_area[other.wep]==-1//handling starting weapons
-				    //wep_area[other.wep]=1 THE LOOPHOLE
-    
-				    prevwep=other.wep;
-    
-				    do {wep = round(random(maxwep-1)+1)}
-				    until (wep_area[wep] == wep_area[prevwep] && wep != 298 && wep != 373)
-				
-				    curse = other.curse
-				    wepmod1=other.wepmod1;
-				    wepmod2=other.wepmod2;
-				    wepmod3=other.wepmod3;
-				    wepmod4=other.wepmod4;
-    
-				}
-				else{
-			    wep=other.wep;
-				}
-			    name = wep_name[wep]
-			    //ammo = 50
-			    type = wep_type[wep]
-			    curse = other.curse
-			    wepmod1=other.wepmod1;
-			    wepmod2=other.wepmod2;
-			    wepmod3=other.wepmod3;
-			    wepmod4=other.wepmod4;
-			    sprite_index = wep_sprt[wep]
-		    }
-		    BackCont.viewx2 += lengthdir_x(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-		    BackCont.viewy2 += lengthdir_y(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-		    BackCont.shake += 1
-		    scrSwapWeps()
-		    bwep = 0
-	    }
+			scrPandaThrow();
+		}
 	}
 
 	if ultra_got[36]//CHICKEN VANISH
@@ -1960,6 +1915,9 @@ function scrPowers() {
 					}
 				}
 			}
+		} else if race == 14 && PlayerAlarms2.alarm[7] < 1
+		{
+			scrPandaThrow();
 		}
 		//HANDS
 		if race == 27 && (!instance_exists(Hand) || (ultra_got[107] && instance_exists(Hand) && instance_number(Hand) < 2 || (scrIsInInvertedArea() && instance_number(Hand) < 2)))//Hands

@@ -1,6 +1,7 @@
 friction = 0.45
 image_speed = 0.4
 totemBuffed = false;
+super = false;
 MorphMe=false;
 frozen=false;
 maxSpeed = 16;
@@ -11,8 +12,8 @@ raddrop = 10
 meleedamage = 0
 humphrySkill = 0;
 
-oldmox=UberCont.mouse__x;
-oldmoy=UberCont.mouse__y;
+aimX = 0;
+aimY = 0;
 
 hardshell=true;
 p=0;
@@ -141,7 +142,7 @@ instance_destroy();
 target=-1;
 walk = 0
 gunangle = random(360)
-alarm[5] = 10+random(40)
+alarm[1] = 10+random(40)
 
 instance_create(x,y,WallBreak);
 instance_create(x+16,y+16,WallBreak);
@@ -163,3 +164,13 @@ prevhealth=my_health;
 queueshot = 0;
 bqueueshot = 0;
 cqueueshot = 0;
+
+with Player
+{
+	if justAsheep
+	{
+		instance_create(other.x-5,other.y-16,Notice);
+		instance_create(other.x+5,other.y-16,Notice);	
+	}
+	justAsheep = false;	
+}

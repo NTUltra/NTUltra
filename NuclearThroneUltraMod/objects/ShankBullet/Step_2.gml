@@ -1,0 +1,9 @@
+//image_angle = direction
+image_angle+=40;
+scrBoltMarrow(0.9);
+scrBoltTrail(c_white,0.05,2);
+if(speed<=0){instance_destroy();}
+
+
+/* */
+/*  */

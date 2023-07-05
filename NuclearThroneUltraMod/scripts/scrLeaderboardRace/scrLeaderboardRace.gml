@@ -347,11 +347,11 @@ function scrLeaderboardRace(race,bskin,altUltra,area){
 	return sprMutant21Idle;
 	break;
 	case 22:
-	return sprMutant22Idle;
 	if altUltra
 	{
 		return sprMutant22DIdle;
 	}
+	return sprMutant22Idle;
 	break;
 	case 23:
 	return sprMutant23Idle;

@@ -28,6 +28,7 @@ hunterEye = 0;
 hunterEyeMax = 200;
 sheepFakeouts = 0;
 charpoints = 0;
+freeAmmoRound = 0;
 hogWep[0] = 0;
 hogWep[1] = 0;
 hogWep[2] = 0;
@@ -214,7 +215,8 @@ hard = 0
 
 skillsChosen = 0; //To check for ultra mutation (always last)
 totalSkills = 0;
-skeletonlives = 0
+skeletonlives = 0;
+consecutiveGoodBloodGambles = 0;
 livesRegain = [];
 
 ultimategamble = false;
@@ -455,7 +457,7 @@ if scrIsGamemode(36)//Ultra mod start
     crownvisits = -1;
 	//instance_create(0,0,PauseTimer);
 }
-if UberCont.crown_start[r] && !instance_exists(PlayerSpawn) && UberCont.opt_gamemode != 25 && !instance_exists(CrownIcon){
+if UberCont.crown_start[r] && !instance_exists(PlayerSpawn) && !scrIsGamemode(25) && !instance_exists(CrownIcon){
 	with Crown
 		instance_destroy();
 	with UberCont

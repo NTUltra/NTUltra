@@ -1,10 +1,4 @@
-if alarm[11] < 1
-with instance_create(x,y,BoltTrail)
-{
-image_angle=other.direction;
-image_xscale=other.speed;
-}
-
+scrBoltTrail(c_white,0.05,0.8);
 
 if !instance_exists(Player)
 {instance_destroy();exit;}

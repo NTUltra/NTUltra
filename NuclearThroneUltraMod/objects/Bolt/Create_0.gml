@@ -6,5 +6,6 @@ dmg = 20;
 boltStick = BoltStick;
 hitEntities = [];
 trailScale = 1;
+trailColour = c_white;
 if UberCont.ultramodSwap
 	event_user(0);

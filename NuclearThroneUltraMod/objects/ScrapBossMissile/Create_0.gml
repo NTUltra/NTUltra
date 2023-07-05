@@ -10,7 +10,7 @@ spr_walk = sprScrapBossMissileIdle
 spr_hurt = sprScrapBossMissileHurt
 spr_dead = sprScrapBossMissileDead
 
-
+alarm[2] = 2;
 scrTarget()
 
 if instance_exists(Player)

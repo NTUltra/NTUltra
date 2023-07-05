@@ -20,8 +20,8 @@ do {dir += 1 x += lengthdir_x(4,direction) y += lengthdir_y(4,direction)
 
 with instance_create(x,y,BoltTrail)
 {
-image_angle=other.direction;
-image_xscale=4//other.speed;
+	image_angle=other.direction;
+	image_xscale=4//other.speed;
 }
 
 with instance_create(x,y,Smoke)

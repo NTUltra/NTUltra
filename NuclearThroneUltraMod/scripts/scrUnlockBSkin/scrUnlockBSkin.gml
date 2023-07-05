@@ -1,8 +1,7 @@
 function scrUnlockBSkin(raceIndex, unlockText, requiredGamemode) {
 	//GAMEMODE UNLOCKABLE raceIndex=gamemode
 	//raceIndex,unlock requirement, gamemode
-	if (UberCont.race_bskin[raceIndex] == 0 && (scrIsGamemode(requiredGamemode) || 
-	(requiredGamemode == 0 && isValidGamemodeToUnlock() )))//Crown start and hunter marked only can unlock shit
+	if (UberCont.race_bskin[raceIndex] == 0 && (scrIsGamemode(requiredGamemode) && (isValidGamemodeToUnlock(requiredGamemode))))
 	{
 	UberCont.race_bskin[raceIndex]=1
 

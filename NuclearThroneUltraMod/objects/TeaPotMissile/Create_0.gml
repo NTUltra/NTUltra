@@ -13,3 +13,4 @@ spr_dead = sprScrapBossMissileDead
 
 scrTarget()
 
+alarm[2] = 2;

@@ -5,5 +5,6 @@ with instance_create(x,y,PlasmaImpact)
 	dmg = other.dmg;
 	sprite_index=sprElectroImpact;
 	mask_index = mskElectroImpact;
+	scrCopyWeaponMod(other);
 }
 Sleep(10)

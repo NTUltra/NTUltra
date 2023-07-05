@@ -21,9 +21,10 @@ if UberCont.normalGameSpeed == 60
 	growshrink *= 0.5;
 }
 if instance_exists(Player)
-{if Player.area=101 || Player.area == 122
-sprite_index=sprBubble;
+{
+	if Player.area=101 || Player.area == 122
+		sprite_index=sprBubble;
 }
-else if BackCont.area=101 || BackCont.area == 122
-sprite_index=sprBubble;
+else if instance_exists(BackCont) && BackCont.area=101 || BackCont.area == 122
+	sprite_index=sprBubble;
 

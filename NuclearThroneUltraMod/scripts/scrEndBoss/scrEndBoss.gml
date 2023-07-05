@@ -43,7 +43,7 @@ function scrEndBoss() {
 			canRestart = true;
 			instance_create(x,y,SendRace);
 		}
-		if scrIsGamemode(0)//isValidGamemodeToUnlock(opt_gamemode) && opt_gamemode != 6
+		if scrIsOnlyNormalGamemode()
 		{
 
 			//in seconds

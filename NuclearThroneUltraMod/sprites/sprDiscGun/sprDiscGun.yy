@@ -69,7 +69,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4c3e6fa3-6a01-4da9-97b7-109b0eb45d66","path":"sprites/sprDiscGun/sprDiscGun.yy",},},},"Disabled":false,"id":"a5db255d-e45a-4985-a5bb-5edd6b694c0b","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": -2,
     "yorigin": 4,

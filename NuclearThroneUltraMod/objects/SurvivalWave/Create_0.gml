@@ -18,5 +18,5 @@ spawnY[1] = -96;
 spawnY[2] = 96;
 spawnY[3] = 96;
 posIlength = 3;
-if UberCont.opt_gamemode != 25
+if !scrIsGamemode(25)
 	persistent = false;

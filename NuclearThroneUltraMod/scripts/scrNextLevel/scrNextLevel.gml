@@ -1,5 +1,6 @@
 /// @description areas regular
 function scrNextLevel() {
+	freeAmmoRound = max(0,freeAmmoRound-1);
 	var prevHard = hard;
 	if scrIsGamemode(25)//Survival
 	{

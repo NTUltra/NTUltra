@@ -112,7 +112,7 @@ function scrDrawGameOver() {
 		debug("GAMEOVER QUIT");
 		with UberCont
 		{
-			if scrIsGamemode(26) || opt_gamemode == 27
+			if scrIsGamemode(26) || scrIsGamemode(27)
 			{
 				opt_gamemode = [0];	
 			}

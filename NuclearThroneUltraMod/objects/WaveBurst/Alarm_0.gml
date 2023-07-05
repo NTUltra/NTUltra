@@ -8,7 +8,6 @@ if instance_exists(creator)
 x = creator.x
 y = creator.y
 //FIRING
-snd_play_fire(sndWaveGun);
 
 with instance_create(x,y,Bullet2)
 {

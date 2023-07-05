@@ -1,4 +1,5 @@
 /// @description Black sword? and UNLOCKABLES
+consecutiveGoodBloodGambles = 0;
 if swapChar
 	exit;
 if ultra_got[50] && altUltra
@@ -656,6 +657,8 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 	{
 		race = iWillBecome;
 	}
+	var cs = UberCont.crown_start[UberCont.racepick];
+	UberCont.crown_start[UberCont.racepick] = false;
 	with instance_create(x,y,Player)
 	{
 		swapChar = true;
@@ -801,5 +804,6 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 			scrApplyEagleEyes();
 		}
 	}
+	UberCont.crown_start[UberCont.racepick] = cs;
 	instance_destroy(id,false);
 }

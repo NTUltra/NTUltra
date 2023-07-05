@@ -20,3 +20,4 @@ if scrIsGamemode(9)//Casual mode
 if scrIsHardMode()//HARD MODE
 	dmg = 4;
 //dir=0;
+alarm[2] = 1;

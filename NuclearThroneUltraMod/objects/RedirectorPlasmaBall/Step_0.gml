@@ -10,6 +10,7 @@ if instance_exists(Player){
 		with instance_create(x,y,PlasmaImpact)
 		{
 			sprite_index = sprRedirectorPlasmaImpact;
+			scrCopyWeaponMod(other);
 		}
 		scrRedirectFx();
 

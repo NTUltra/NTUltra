@@ -6,3 +6,4 @@ wallsdestroyed=22;
 dmg = 45;
 alarm[11] = 1;
 trailScale = 1;
+alarm[4] = 1;

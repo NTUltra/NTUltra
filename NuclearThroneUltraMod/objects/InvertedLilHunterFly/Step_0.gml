@@ -9,6 +9,7 @@ if instance_exists(Player)
 x=instance_nearest(Player.xprevious+16+random(64-32),Player.yprevious+16+random(64-32),Floor).x;
 y=instance_nearest(Player.xprevious+16+random(64-32),Player.yprevious+16+random(64-32),Floor).y;//+16+random(64)-32;
 //x = Player.x
+scrForcePosition60fps();
 //y = Player.y
 shadowdraw=true;
 

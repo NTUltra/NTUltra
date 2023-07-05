@@ -720,6 +720,8 @@ else if skill == 76//skelly ultra D
 				livesRegain[si] = 3;
 				si++;
 			}
+			if array_length(livesRegain) > 3
+				scrUnlockBSkin(19,"FOR HAVING FOUR LIVES",0);
 		    ultimategamble=false;
 			maxSpeed += 0.4;//Normal speed
 			accuracy = 1;//Normal accuracy
@@ -812,7 +814,13 @@ else if skill == 76//skelly ultra D
     
     }
 }
-
+else if skill == 109
+{
+	with Player
+	{
+		snd_dead = sndStupidHurt;
+	}
+}
 
 with SkillIcon
 instance_destroy()

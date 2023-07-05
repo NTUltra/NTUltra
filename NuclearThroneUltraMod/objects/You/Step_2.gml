@@ -121,13 +121,13 @@ if(my_health<=0)
     if strongspirit==true&&strongspiritused==false
     {
     my_health=1;
-    alarm[1]=10;
+    alarm[5]=10;
     strongspiritused=true;
     strongspirit=false;
     }
     }
     
-    if(alarm[1]>0)
+    if(alarm[5]>0)
     {
         my_health=1;
     }

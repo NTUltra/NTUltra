@@ -11,6 +11,7 @@ if instance_exists(Player)
 		o = 8;
 	x = ground.x + o;
 	y = ground.y + o;
+	scrForcePosition60fps();
 //x = Player.x
 //y = Player.y
 shadowdraw=true;

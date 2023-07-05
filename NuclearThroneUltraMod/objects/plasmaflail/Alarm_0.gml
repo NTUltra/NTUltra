@@ -7,4 +7,5 @@ with instance_create(x+lengthdir_x(len,image_angle),y+lengthdir_y(len,image_angl
 	image_angle = other.image_angle;
 	speed = other.speed*0.5;
 	friction = 0.1;
+	scrCopyWeaponMod(other);
 }

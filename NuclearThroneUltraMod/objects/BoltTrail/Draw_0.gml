@@ -1,4 +1,1 @@
-draw_set_colour(theColour);
-draw_self();
-draw_set_colour(c_white);
-
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,theColour,1);

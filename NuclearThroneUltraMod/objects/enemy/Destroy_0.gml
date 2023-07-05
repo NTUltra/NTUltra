@@ -56,16 +56,16 @@ if object_index!=SnowTank && object_index!=InvertedSnowTank && object_index!=Gol
 	snd_play(snd_dead, 0.1,true);
 }
 
-Sleep(15+mySize*10)
+//Sleep(15+mySize*10)
 //Mutations
 scrEnemyDeathEvent();
 
 if totemBuffed
 {
-	scrDrop(14,1.6);	
+	scrDrop(22,2);
 }
 if super {
-	snd_play(sndNothingFire)
+	snd_play(sndNothingFire);
 	with instance_create(x,y,SquarePool)
 	{
 		speed = 0;

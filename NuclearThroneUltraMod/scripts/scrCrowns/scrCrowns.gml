@@ -56,10 +56,10 @@ function scrCrowns() {
 	crown_tips[10] = "acceleration"
 
 	crown_name[11] = "[CROWN OF REINCARNATION]"
-	crown_text[11] = "DIE AND BE REBORN"
+	crown_text[11] = "DIE AND BE REBORN#FOR ONE AREA YOU HAVE INFINITE AMMO"
 	if instance_exists(Player) && (Player.level > 8 || Player.boostLevel > 8)
 	{
-		crown_text[11] = "DIE AND BE REBORN#UNLOCK ALTERNATIVE ULTRA MUTATIONS"
+		crown_text[11] = "DIE AND BE REBORN#FOR ONE AREA YOU HAVE INFINITE AMMO#UNLOCK ALTERNATIVE ULTRA MUTATIONS"
 	}
 	crown_used[11] = 0
 	crown_tips[11] = "new born"

@@ -1,4 +1,13 @@
 /// @description Let the battle begin!
+with Player
+{
+	if justAsheep
+	{
+		instance_create(other.x-5,other.y-16,Notice);
+		instance_create(other.x+5,other.y-16,Notice);	
+	}
+	justAsheep = false;	
+}
 sprite_index=sprChesireCatIntro;
 mask_index=mskPickupThroughWall;
 alarm[1]=70;

@@ -1826,7 +1826,7 @@ function scrWeapons() {
 	wep_type[165] = 3
 	wep_auto[165] = 0
 	wep_load[165] = 25
-	wep_cost[165] = 1
+	wep_cost[165] = 2
 	wep_sprt[165] = sprExplosiveBow
 	wep_area[165] = 6
 	wep_text[165] = "the year of the bow"
@@ -2760,8 +2760,8 @@ function scrWeapons() {
 	wep_name[250] = "AUTO EXPLOSIVE CROSSBOW"
 	wep_type[250] = 3
 	wep_auto[250] = 1
-	wep_load[250] = 12
-	wep_cost[250] = 1
+	wep_load[250] = 11
+	wep_cost[250] = 2
 	wep_sprt[250] = sprAutoExploBow
 	wep_area[250] = 9
 	wep_text[250] = ""
@@ -3080,7 +3080,7 @@ function scrWeapons() {
 	wep_type[279] = 3
 	wep_auto[279] = 0
 	wep_load[279] = 23
-	wep_cost[279] = 1
+	wep_cost[279] = 2
 	wep_sprt[279] = sprGoldenExplosiveBow
 	wep_area[279] = 20
 	wep_text[279] = "golden explosives"
@@ -3929,7 +3929,7 @@ function scrWeapons() {
 	wep_load[356] = 25
 	wep_cost[356] = 2
 	wep_sprt[356] = sprHeavyNader
-	wep_area[356] = 9
+	wep_area[356] = 8
 	wep_text[356] = "green explosions"
 	wep_swap[356] = sndSwapExplosive
 	wep_rad[356] = 0;
@@ -3940,7 +3940,7 @@ function scrWeapons() {
 	wep_load[357] = 12
 	wep_cost[357] = 2
 	wep_sprt[357] = sprAutoHeavyNader
-	wep_area[357] = 13
+	wep_area[357] = 12
 	wep_text[357] = "slimeballs"
 	wep_swap[357] = sndSwapExplosive
 	wep_rad[357] = 0;
@@ -4200,10 +4200,10 @@ function scrWeapons() {
 	
 	wep_name[379] = "BULLET WALL"
 	wep_type[379] = 1
-	wep_auto[379] = 0
+	wep_auto[379] = 1
 	wep_load[379] = 14
 	wep_cost[379] = 8
-	wep_sprt[379] = sprSkullBreaker
+	wep_sprt[379] = sprBulletWall
 	wep_area[379] = 12
 	wep_text[379] = "bullets are closer together#with eagle eyes"
 	wep_swap[379] = sndSwapShotgun
@@ -5249,7 +5249,7 @@ function scrWeapons() {
 	wep_load[474] = 18
 	wep_cost[474] = 1
 	wep_sprt[474] = sprFrazer
-	wep_area[474] = 13
+	wep_area[474] = 11
 	wep_text[474] = "frost flame"
 	wep_swap[474] = sndSwapFlame
 	wep_rad[474] = 0;
@@ -6837,6 +6837,138 @@ function scrWeapons() {
 	wep_text[618] = "such power in the palm of your hand"
 	wep_swap[618] = sndSwapPistol
 	wep_rad[618] = 18;
+	
+	wep_name[619] = "SUPER KRAKEN GUN"
+	wep_type[619] = 4
+	wep_auto[619] = 0
+	wep_load[619] = 30//10
+	wep_cost[619] = 3.5
+	wep_sprt[619] = sprSuperKrakenGun
+	wep_area[619] = 8
+	wep_text[619] = "sea monster"
+	wep_swap[619] = sndSwapDragon
+	wep_rad[619] = 0;
+	
+	wep_name[620] = "DISC ERASER"
+	wep_type[620] = 3
+	wep_auto[620] = 0
+	wep_load[620] = 18
+	wep_cost[620] = 2
+	wep_sprt[620] = sprDiscEraser
+	wep_area[620] = 7
+	wep_text[620] = "disc eraser life eraser"
+	wep_swap[620] = sndSwapShotgun
+	wep_rad[620] = 0;
+	
+	wep_name[621] = "BOUNCER CROSSBOW"
+	wep_type[621] = 3
+	wep_auto[621] = 0
+	wep_load[621] = 31
+	wep_cost[621] = 1
+	wep_sprt[621] = sprBouncerCrossbow
+	wep_area[621] = 1
+	wep_text[621] = ""
+	wep_swap[621] = sndSwapBow
+	wep_rad[621] = 0;
+	
+	wep_name[622] = "SPLINTER RUSH"
+	wep_type[622] = 3
+	wep_auto[622] = 1
+	wep_load[622] = 20
+	wep_cost[622] = 3
+	wep_sprt[622] = sprSplinterRush
+	wep_area[622] = 14
+	wep_text[622] = "rush and push"
+	wep_swap[622] = sndSwapBow
+	wep_rad[622] = 0;
+	
+	wep_name[623] = "BOUNCER WAVE CROSSBOW"
+	wep_type[623] = 3
+	wep_auto[623] = 1
+	wep_load[623] = 35
+	wep_cost[623] = 6
+	wep_sprt[623] = sprBouncerWaveCrossbow
+	wep_area[623] = 7
+	wep_text[623] = "boink poink"
+	wep_swap[623] = sndSwapBow
+	wep_rad[623] = 0;
+	
+	wep_name[624] = "SUPER HEAVY GRENADE LAUNCHER"
+	wep_type[624] = 4
+	wep_auto[624] = 0
+	wep_load[624] = 45
+	wep_cost[624] = 10
+	wep_sprt[624] = sprSuperHeavyNader
+	wep_area[624] = 11
+	wep_text[624] = ""
+	wep_swap[624] = sndSwapExplosive
+	wep_rad[624] = 0;
+	
+	wep_name[625] = "DOUBLE ENERGY LANCE"
+	wep_type[625] = 5
+	wep_auto[625] = 0
+	wep_load[625] = 18
+	wep_cost[625] = 4
+	wep_sprt[625] = sprDoubleEnergyLance
+	wep_area[625] = 14
+	wep_text[625] = ""
+	wep_swap[625] = sndSwapEnergy
+	wep_rad[625] = 0;
+	
+	wep_name[626] = "BLOOD WALL"
+	wep_type[626] = 1
+	wep_auto[626] = 1
+	wep_load[626] = 8
+	wep_cost[626] = 5
+	wep_sprt[626] = sprBloodWall
+	wep_area[626] = 12
+	wep_text[626] = "a wall of blood"
+	wep_swap[626] = sndSwapShotgun
+	wep_rad[626] = 0;
+	
+	wep_name[627] = "BOUNCER WAVE RIFLE"
+	wep_type[627] = 1
+	wep_auto[627] = 0
+	wep_load[627] = 18
+	wep_cost[627] = 15
+	wep_sprt[627] = sprBouncerWaveRifle
+	wep_area[627] = 12
+	wep_text[627] = "wave, bounce and dance"
+	wep_swap[627] = sndSwapMachinegun
+	wep_rad[627] = 0;
+	
+	wep_name[628] = "LOTSIP RESAL"
+	wep_type[628] = 5
+	wep_auto[628] = 1
+	wep_load[628] = 4
+	wep_cost[628] = 1
+	wep_sprt[628] = sprNugResal
+	wep_area[628] = 15
+	wep_text[628] = "yrnopaew citsirutuf"
+	wep_swap[628] = sndSwapEnergy
+	wep_rad[628] = 0;
+	
+	wep_name[629] = "SKULLBREAKER"
+	wep_type[629] = 2
+	wep_auto[629] = 0
+	wep_load[629] = 20
+	wep_cost[629] = 3
+	wep_sprt[629] = sprSkullBreaker
+	wep_area[629] = 10
+	wep_text[629] = "break their skull"
+	wep_swap[629] = sndSwapShotgun
+	wep_rad[629] = 0;
+	
+	wep_name[630] = "PLASMA QUAKE"
+	wep_type[630] = 5
+	wep_auto[630] = 1
+	wep_load[630] = 15
+	wep_cost[630] = 2
+	wep_sprt[630] = sprPlasmaQuake
+	wep_area[630] = 9
+	wep_text[630] = "shake the earth"
+	wep_swap[630] = sndSwapEnergy
+	wep_rad[630] = 0;
 
 	maxwep = array_length(wep_name)-1;
 

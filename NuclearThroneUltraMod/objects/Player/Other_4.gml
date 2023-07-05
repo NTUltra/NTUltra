@@ -107,10 +107,10 @@ scrUnlockGameMode(12,"FOR DISCOVERING#THE GRAVEYARD",0)
 if armour >= 5 && race =16
 scrUnlockBSkin(16,"FOR GETTING THE MAXIMUM AMOUNT#OF ARMOUR POSSIBLE AS VIKING",0);
 
-if skeletonlives=4
-scrUnlockBSkin(19,"FOR HAVING FOUR LIVES",0);
+if array_length(livesRegain) > 3
+	scrUnlockBSkin(19,"FOR HAVING FOUR LIVES",0);
 
-if freezeframe400=true && race = 19 && area=7
+if screenshake400 && race == 19 && area=7
 scrUnlockCSkin(19,"FOR REACHING THE VULCANO#ON 400% SCREENSHAKE#AS SKELETON",0);
 
 
