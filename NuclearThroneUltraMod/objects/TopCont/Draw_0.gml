@@ -299,6 +299,10 @@ with Yoyo
 {
 	draw_self();	
 }
+with GyroBurst
+{
+	draw_self();	
+}
 with Disc
 {
 	draw_self();	

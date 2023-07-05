@@ -360,6 +360,15 @@ if !instance_exists(LevCont) and visible = 1
 				hard += 1.25;
 				thing = instance_create(x,y,PopupText)
 				thing.mytext = "SUBAREA++! "+string(subarea);
+				if scrIsGamemode(42)
+				{
+					if subarea >= array_length(UberCont.customSurvivalArena)*(loops + 1)
+					{
+						thing = instance_create(x,y,PopupText)
+						thing.mytext = "LOOP";
+						loops++;
+					}
+				}
 			}
 			else if instance_exists(Portal)
 			{

@@ -124,6 +124,18 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+20 and UberCon
     {race = other.race
     crown = other.crown}
 	with UberCont {
+		if (scrIsGamemode(42))
+		{
+			opt_gamemode[array_length(opt_gamemode)] = 25;
+			var file = file_text_open_read(opt_custom_survival);
+			var text = "";
+			while (!file_text_eof(file))
+			{
+				text += file_text_readln(file);
+			}
+			file_text_close(file);
+			customSurvivalArena = json_parse(text);
+		}
 		lastwishused=false;
 		routeString = "";
 		time_frame = 0;

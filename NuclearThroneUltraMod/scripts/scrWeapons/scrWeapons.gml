@@ -1771,7 +1771,7 @@ function scrWeapons() {
 	wep_type[160] = 2
 	wep_auto[160] = 0
 	wep_load[160] = 20
-	wep_cost[160] = 3
+	wep_cost[160] = 2
 	wep_sprt[160] = sprFlameEraser
 	wep_area[160] = 8//6 ERASER
 	wep_text[160] = "buuuuuuuuuuuuurrrrrn"
@@ -1782,7 +1782,7 @@ function scrWeapons() {
 	wep_type[161] = 2
 	wep_auto[161] = 0
 	wep_load[161] = 50
-	wep_cost[161] = 10
+	wep_cost[161] = 8
 	wep_sprt[161] = sprSuperFlameEraser
 	wep_area[161] = 16//14 SUPER ERASER
 	wep_text[161] = "vaporize"
@@ -2838,7 +2838,7 @@ function scrWeapons() {
 	wep_type[257] = 3
 	wep_auto[257] = 0
 	wep_load[257] = 24
-	wep_cost[257] = 2
+	wep_cost[257] = 1.5
 	wep_sprt[257] = sprLightningCrossbow
 	wep_area[257] = 5
 	wep_text[257] = "lightning jolt!"
@@ -3002,7 +3002,7 @@ function scrWeapons() {
 	wep_name[272] = "GHOST BLADE"
 	wep_type[272] = 0
 	wep_auto[272] = 0
-	wep_load[272] = 33
+	wep_load[272] = 30
 	wep_cost[272] = 0
 	wep_sprt[272] = sprGhostBlade
 	wep_area[272] = 22
@@ -6578,7 +6578,7 @@ function scrWeapons() {
 	wep_type[595] = 3
 	wep_auto[595] = 1
 	wep_load[595] = 9
-	wep_cost[595] = 2
+	wep_cost[595] = 1.5
 	wep_sprt[595] = sprAutoLightningCrossbow
 	wep_area[595] = 15
 	wep_text[595] = "delivering the payload"
@@ -6841,8 +6841,8 @@ function scrWeapons() {
 	wep_name[619] = "SUPER KRAKEN GUN"
 	wep_type[619] = 4
 	wep_auto[619] = 0
-	wep_load[619] = 30//10
-	wep_cost[619] = 3.5
+	wep_load[619] = 28//10
+	wep_cost[619] = 3
 	wep_sprt[619] = sprSuperKrakenGun
 	wep_area[619] = 8
 	wep_text[619] = "sea monster"
@@ -6863,7 +6863,7 @@ function scrWeapons() {
 	wep_name[621] = "BOUNCER CROSSBOW"
 	wep_type[621] = 3
 	wep_auto[621] = 0
-	wep_load[621] = 31
+	wep_load[621] = 33
 	wep_cost[621] = 1
 	wep_sprt[621] = sprBouncerCrossbow
 	wep_area[621] = 1

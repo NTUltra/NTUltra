@@ -86,42 +86,54 @@ if (type == network_type_data) {
 			UberCont.todaysSeed = buffer_read(buffer, buffer_u16);
 			debug("the seed: ", UberCont.todaysSeed);
 			UberCont.seed = UberCont.todaysSeed;
+			UberCont.opt_gamemode = [];
 			UberCont.opt_gamemode = [buffer_read(buffer, buffer_u16)];
-			UberCont.weeklyGamemode = UberCont.opt_gamemode[0];
-			switch (UberCont.opt_gamemode)
+			var i = 1;
+			repeat(2)
 			{
-				case 1://One weapon only
-					UberCont.opt_gm1wep = buffer_read(buffer,buffer_u16);
-					with Player
-					{
-						if UberCont.opt_gm1wep - 1 == 0 {
-					        wep = ceil(irandom(maxwep));
-					    }
-					    else {
-					        wep = UberCont.opt_gm1wep
-					    }
-						if race == 7
-							bwep = wep;
-						if ammo[wep_type[wep]] < typ_ammo[wep_type[wep]] * 3
-							ammo[wep_type[wep]] += typ_ammo[wep_type[wep]] * 3;
-						scrWeaponHold();
+				var nextGm = buffer_read(buffer, buffer_u16);
+				if (nextGm != 0)
+				{
+					UberCont.opt_gamemode[i] = nextGm;
+				}
+			}
+			UberCont.weeklyGamemode = UberCont.opt_gamemode[0];
+			if scrIsGamemode(1)//One weapon only
+			{
+				UberCont.opt_gm1wep = buffer_read(buffer,buffer_u16);
+				with Player
+				{
+					if UberCont.opt_gm1wep - 1 == 0 {
+					    wep = ceil(irandom(maxwep));
 					}
-				break;
-				case 5:// 1HP EQUALITY
-					with Player
-					{
-						my_health = 1;
-						maxhealth = my_health;
+					else {
+					    wep = UberCont.opt_gm1wep
 					}
-				break;
-				case 7://Atom teleport only
+					if race == 7
+						bwep = wep;
+					if ammo[wep_type[wep]] < typ_ammo[wep_type[wep]] * 3
+						ammo[wep_type[wep]] += typ_ammo[wep_type[wep]] * 3;
+					scrWeaponHold();
+				}
+			}
+			if scrIsGamemode(5)// 1HP EQUALITY
+			{
+				with Player
+				{
+					my_health = 1;
+					maxhealth = my_health;
+				}
+			}
+			if scrIsGamemode(7)//Atom teleport only
+			{
 				with Player
 				{
 					race = 15;
 					scrLoadRace();
 				}
-				break;
-				case 8://VAN FAN
+			}
+			if scrIsGamemode(8)//VAN FAN
+			{
 				with Player
 				{
 					area = 117;
@@ -133,38 +145,41 @@ if (type == network_type_data) {
 					}
 					scrWeaponHold();
 				}
-				break;
-				case 9://Casual mode
+			}
+			if scrIsGamemode(9)//Casual mode
+			{
 				with Player
 				{
 					maxhealth += UberCont.casualModeHPIncrease;
 					my_health = maxhealth;
 					maxSpeed = 4
 				}
-				break;
-				case 11://Gun Game
-					with Player
+			}
+			if scrIsGamemode(11)//Gun Game
+			{
+				with Player
+				{
+					do {
+						wep = irandom(maxwep);
+					}
+					until(wep != 69 && wep != 0 && wep != 298) //no oops gun and no no gun
+
+					if race = 7 //roids
 					{
 						do {
-					        wep = irandom(maxwep);
-					    }
-					    until(wep != 69 && wep != 0 && wep != 298) //no oops gun and no no gun
-
-					    if race = 7 //roids
-					    {
-					        do {
-					            bwep = irandom(maxwep);
-					        }
-					        until(bwep != 69 && bwep != 0 && wep != 298) //no oops gun and no no gun
-					    }
-
-					    if ammo[wep_type[wep]] < typ_ammo[wep_type[wep]] * 3 {
-					        ammo[wep_type[wep]] += typ_ammo[wep_type[wep]] * 3;
-					    }
-						scrWeaponHold();
+						    bwep = irandom(maxwep);
+						}
+						until(bwep != 69 && bwep != 0 && wep != 298) //no oops gun and no no gun
 					}
-				break;
-				case 13://ROCKET GLOVE
+
+					if ammo[wep_type[wep]] < typ_ammo[wep_type[wep]] * 3 {
+						ammo[wep_type[wep]] += typ_ammo[wep_type[wep]] * 3;
+					}
+					scrWeaponHold();
+				}
+			}
+			if scrIsGamemode(13)//ROCKET GLOVE
+			{
 				with Player
 				{
 					wep = 239;
@@ -172,94 +187,103 @@ if (type == network_type_data) {
 						ammo[wep_type[wep]] += typ_ammo[wep_type[wep]] * 3;
 					scrWeaponHold();
 				}
-				break;
-				case 14://Fish companion only
-					with Player
+			}
+			if scrIsGamemode(14)//Fish companion only
+			{
+				with Player
+				{
+					wep = 0;
+					race = 1;
+					ultra_got[3] = 1;
+					if !instance_exists(Partner)
+						instance_create(x,y,Partner);
+					scrLoadRace();
+				}
+			}
+			if scrIsGamemode(15)//No mutations
+			{
+				with Player
+				{
+					maxlevel = 1;
+				}
+			}
+			if scrIsGamemode(19)//Disc room
+			{
+				UberCont.opt_discs = buffer_read(buffer,buffer_u16);
+				UberCont.opt_discdamage = buffer_read(buffer,buffer_u8);
+			}
+			if scrIsGamemode(21)//Loop start
+			{
+				with Player
+				{
+					hard = 18;
+					loops = 1;	
+				}
+			}
+			if scrIsGamemode(25) //Survival Arena
+			{
+				with Player
+				{
+					crownpoints = 0;
+					area = 116;
+					if !instance_exists(SurvivalWave)
 					{
-						wep = 0;
-						race = 1;
-						ultra_got[3] = 1;
-						if !instance_exists(Partner)
-							instance_create(x,y,Partner);
-						scrLoadRace();
+						instance_create(x,y,SurvivalWave);
 					}
-				break;
-				case 15://No mutations
-					with Player
+					with Crown
+						instance_destroy();
+				}
+			}
+			if scrIsGamemode(30)//Ultra mutation start
+			{
+				with Player {
+					skillsChosen = 10;
+					skillpoints = 1;
+				}
+			}
+			if scrIsGamemode(31)//Melee only
+			{
+				with Player {
+					skill_got[13] = 1;
+					totalSkills ++;
+				}
+			}
+			if scrIsGamemode(32)//One hit wonder
+			{
+				with Player {
+					if array_length(UberCont.collectedRewards) > 0
 					{
-						maxlevel = 1;
-					}
-				break;
-				case 19://Disc room
-					UberCont.opt_discs = buffer_read(buffer,buffer_u16);
-					UberCont.opt_discdamage = buffer_read(buffer,buffer_u8);
-				break;
-				case 21://Loop start
-					with Player
-					{
-						hard = 18;
-						loops = 1;	
-					}
-				case 25: //Survival Arena
-					with Player
-					{
-						crownpoints = 0;
-						area = 116;
-						if !instance_exists(SurvivalWave)
-						{
-							instance_create(x,y,SurvivalWave);
-						}
-						with Crown
-							instance_destroy();
-					}
-				break;
-				case 30://Ultra mutation start
-					with Player {
-						skillsChosen = 10;
-						skillpoints = 1;
-					}
-				break;
-				case 31://Melee only
-					with Player {
-						skill_got[13] = 1;
-						totalSkills ++;
-					}
-				break;
-				case 32://One hit wonder
-					with Player {
-						if array_length(UberCont.collectedRewards) > 0
-						{
-							skillpoints ++;
-						}
-						if array_length(UberCont.collectedRewards) > 5
-						{
-							ultraNow = true;
-							skillpoints ++;
-						}
-					}
-				break;
-				case 40://Infinite level hard mode
-				case 34://HARD MODE
-					with Player {
 						skillpoints ++;
-						skillsChosen --;
-						if !instance_exists(PlayerSpawn)
-						{
-							hard = 3;
-							instance_create(x,y,HardModeChest);
-						}
-						maxRadPickedUp += 40;
-						//Also in Player create
 					}
-				break;
-				case 36://Ultra mod start
-					with Player
+					if array_length(UberCont.collectedRewards) > 5
 					{
-						area = 100;
-					    hard -= 1;
-					    crownvisits = -1;
+						ultraNow = true;
+						skillpoints ++;
 					}
-				break;
+				}
+			}
+			if scrIsGamemode(34)//HARD MODE
+			{
+				with Player {
+					skillpoints ++;
+					skillsChosen --;
+					if !instance_exists(PlayerSpawn)
+					{
+						hard = 3;
+						instance_create(x,y,HardModeChest);
+					}
+					maxRadPickedUp += 40;
+					//Also in Player create
+				}
+			}
+			if scrIsGamemode(36)//Ultra mod start
+			{
+				with Player
+				{
+					area = 100;
+					hard -= 1;
+					crownvisits = -1;
+				}
 			}
 			alarm[3] = 60;
 			alarm[1] += 90;

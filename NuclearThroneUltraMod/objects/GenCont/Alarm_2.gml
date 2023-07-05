@@ -1,4 +1,11 @@
 /// @description BOSSES mods secret areas
+if !instance_exists(Player)
+{
+	alarm[2] = 1;
+	if alarm[1] > 0
+		alarm[1] += 1;
+	exit;
+}
 SetSeed();
 scrDecideInvader();
 var spawnarea =  Player.area;

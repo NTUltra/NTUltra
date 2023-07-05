@@ -3932,7 +3932,7 @@ function scrFire() {
 	mox=UberCont.mouse__x;
 	moy=UberCont.mouse__y;
 	creator = other.id
-	ammo = 16
+	ammo = 14
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -3958,7 +3958,7 @@ function scrFire() {
 	mox=UberCont.mouse__x;
 	moy=UberCont.mouse__y;
 	creator = other.id
-	ammo = 16
+	ammo = 14
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -3969,7 +3969,7 @@ function scrFire() {
 	mox=x+lengthdir_x(64*other.accuracy,aimDirection+10*other.accuracy+(random(4)-2)*other.accuracy)
 	moy=y+lengthdir_y(64*other.accuracy,aimDirection+10*other.accuracy+(random(4)-2)*other.accuracy)
 	creator = other.id
-	ammo = 16
+	ammo = 14
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -3980,7 +3980,7 @@ function scrFire() {
 	mox=x+lengthdir_x(64*other.accuracy,aimDirection+20*other.accuracy+(random(4)-2)*other.accuracy)
 	moy=y+lengthdir_y(64*other.accuracy,aimDirection+20*other.accuracy+(random(4)-2)*other.accuracy)
 	creator = other.id
-	ammo = 16
+	ammo = 14
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -3991,7 +3991,7 @@ function scrFire() {
 	mox=x+lengthdir_x(64*other.accuracy,aimDirection-10*other.accuracy+(random(4)-2)*other.accuracy)
 	moy=y+lengthdir_y(64*other.accuracy,aimDirection-10*other.accuracy+(random(4)-2)*other.accuracy)
 	creator = other.id
-	ammo = 16
+	ammo = 14
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -4002,7 +4002,7 @@ function scrFire() {
 	mox=x+lengthdir_x(64*other.accuracy,aimDirection-20*other.accuracy+(random(4)-2)*other.accuracy)
 	moy=y+lengthdir_y(64*other.accuracy,aimDirection-20*other.accuracy+(random(4)-2)*other.accuracy)
 	creator = other.id
-	ammo = 16
+	ammo = 14
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 

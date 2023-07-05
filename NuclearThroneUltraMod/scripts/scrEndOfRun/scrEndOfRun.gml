@@ -2,11 +2,17 @@
 // /@description reset some important variables
 ///@param
 function scrEndOfRun(){
+	with ThrowWep
+		instance_destroy();
 	with FPSHACK
 		instance_destroy();
 	room_speed = 30;
 	with UberCont
 	{
+		if (scrIsGamemode(42))
+		{
+			array_delete(opt_gamemode,array_length(opt_gamemode)-1,1);
+		}
 		if array_length(opt_gamemode) == 2
 		{
 			scrUnlockGameMode(41,"FOR PLAYING TWO GAMEMODES");
@@ -44,5 +50,6 @@ function scrEndOfRun(){
 		vansSlapped = 0;
 		lastSaveLoop = -1;
 		levelIncrease = 0;
+		//customSurvivalArena = [];
 	}
 }

@@ -1,3 +1,6 @@
+holdUpArrow = max(0, holdUpArrow - 1);
+holdDownArrow = max(0, holdDownArrow - 1);
+
 var gmx = x - 190;
 var surfWidth = 180;
 var surfHeight = 159//167//175;
@@ -32,7 +35,8 @@ repeat(3)
 		if i == gamemodenr
 			strin += " *";
 		var h = string_height(strin);
-		if hoverOverGamemode && UberCont.mouse__y-y > yy && UberCont.mouse__y-y < yy + h
+		if ((hoverOverGamemode && UberCont.mouse__y-y > yy && UberCont.mouse__y-y < yy + h) || (gamemodenr == i
+		&& (instance_exists(HoldToAddRemoveGamemode) || instance_exists(HoldToReplaceGamemode))))
 		{
 			draw_text_color(xx,yy,strin,c_white,c_white,c_white,c_white,1);
 			if (mouse_check_button_pressed(mb_left))
@@ -88,7 +92,11 @@ else{
 	with StartingWeaponUpDown
 		instance_destroy()
 }
-
+if (gamemodeOrder[gamemodenr]==42 && UberCont.gamemode_have[42])
+{
+	if !instance_exists(CustomSurvivalWave) && !instance_exists(PlayerSpawn)
+		instance_create(x-10,y+72,CustomSurvivalWave);
+}
 if (gamemodeOrder[gamemodenr]==38 && UberCont.gamemode_have[38])
 {
 	if !instance_exists(SeedSetter) && !instance_exists(PlayerSpawn)
@@ -132,16 +140,7 @@ if (UberCont.gamemode_have[gamemodeOrder[gamemodenr]] && !dailyDone)
 {
 	if newClick// && (prevgamemodenr == gamemodenr)
 	{
-		if (scrCanComboGamemode(gamemodeOrder[gamemodenr]))
-		{
-			with instance_create(UberCont.mouse__x,UberCont.mouse__y,HoldToAddRemoveGamemode)
-				wantMode = other.gamemodeOrder[other.gamemodenr];
-		}
-		else
-		{
-			with instance_create(UberCont.mouse__x,UberCont.mouse__y,HoldToReplaceGamemode)
-				wantMode = other.gamemodeOrder[other.gamemodenr];
-		}
+		event_user(1);
 	}
 	draw_text_ext_colour(x-16,y+24,gamemode_description[gamemodeOrder[gamemodenr]],8,132,c_gray,c_gray,c_gray,c_gray,1);
 }

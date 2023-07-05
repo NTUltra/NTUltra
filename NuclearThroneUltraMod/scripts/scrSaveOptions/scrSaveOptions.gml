@@ -43,6 +43,7 @@ function scrSaveOptions() {
 			ini_write_real("OPTIONS","gamemode"+string(i),opt_gamemode[i]);
 		}
 	}
+	ini_write_string("OPTIONS","customsurvival",opt_custom_survival);
 
 	//custom controls
 	ini_write_real("OPTIONS","up",opt_up);

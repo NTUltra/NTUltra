@@ -1,6 +1,6 @@
 /// @description Start wave
 //Surprise attack
-if !jumpScared && scrIsGamemode(25) && instance_exists(SurvivalWave) && other.subarea == 10
+if !jumpScared && scrIsGamemode(25) && instance_exists(SurvivalWave) && other.subarea == 10 && !scrIsGamemode(42)
 {
 	jumpScared = true;
 	mask_index = mskPickupThroughWall;

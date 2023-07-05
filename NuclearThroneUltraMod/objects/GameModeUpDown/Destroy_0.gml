@@ -11,5 +11,8 @@ instance_destroy();
 with SeedSetter
 instance_destroy();
 
+with CustomSurvivalWave
+instance_destroy();
+
 if array_length(UberCont.opt_gamemode) < 1
 	UberCont.opt_gamemode = [0];

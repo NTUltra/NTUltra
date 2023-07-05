@@ -98,6 +98,10 @@ else
 {
 	if instance_number(enemy) <= instance_number(IDPDVan) && !instance_exists(LilHunterFly) && !instance_exists(InvertedLilHunterFly)
 	{
+		if waveNumber == 3
+		{
+			scrUnlockGameMode(42,"#FOR REACHING WAVE 4#IN SURVIVAL ARENA",25);	
+		}
 		instance_create(centerX,centerY,Portal);
 	}
 	else

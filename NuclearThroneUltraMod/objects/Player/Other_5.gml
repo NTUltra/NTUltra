@@ -777,6 +777,8 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		scrWeaponHold();
 		
 		//Re-apply some mutations
+		if ultra_got[39] && altUltra
+			maxhealth = 40;
 		if skill_got[1]
 			maxhealth += 4;
 		if skill_got[33]
@@ -802,6 +804,10 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		}
 		if skill_got[19] {
 			scrApplyEagleEyes();
+		}
+		if race == 16
+		{
+			armour = min(armour + 1, maxarmour);	
 		}
 	}
 	UberCont.crown_start[UberCont.racepick] = cs;

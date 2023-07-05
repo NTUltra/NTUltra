@@ -73,7 +73,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"81a6f865-659b-4e4f-9d22-c0f4352b80a5","path":"sprites/sprWindNight/sprWindNight.yy",},},},"Disabled":false,"id":"0a2c21c8-74c2-4692-8b35-81cb295bee70","IsCreationKey":false,"Key":8.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 12,
     "yorigin": 12,

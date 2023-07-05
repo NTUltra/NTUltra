@@ -46,7 +46,7 @@ function scrGameModes() {
 	gamemode_have[6] = 0;
 	gamemode_tip[6] = "IT'S A SMALL WORLD";
 	gamemode_description[6] = "SMALLER AREAS";
-	gamemode_nocombo[6] = [20,26,27,37,25,8];
+	gamemode_nocombo[6] = [20,26,27,37,25,42,8];
 
 	gamemode[7] = "ATOM TELEPORT#NO WALKING";//
 	gamemode_unlock[7] = "FINISH AN AREA WITHOUT WALKING AS ATOM";
@@ -60,7 +60,7 @@ function scrGameModes() {
 	gamemode_have[8] = 0;
 	gamemode_tip[8] = "I AM FAN OF THE VAN";
 	gamemode_description[8] = "SURVIVE AGAINST AN ONSLAUGHT OF VANS, PUSH INCOMING VANS AWAY WITH YOUR FAN";
-	gamemode_nocombo[8] = [1,2,4,5,6,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41];
+	gamemode_nocombo[8] = [1,2,4,5,6,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41];
 
 	gamemode[9] = "CASUAL MODE";//
 	gamemode_unlock[9] = "DIE ON 1-1";
@@ -74,7 +74,7 @@ function scrGameModes() {
 	gamemode_have[10] = 0;
 	gamemode_tip[10] = "WHERE WILL WE GO NEXT?";
 	gamemode_description[10] = "AREAS ARE IN RANDOMIZED ORDER";
-	gamemode_nocombo[10] = [26,27,34,37,25,8];
+	gamemode_nocombo[10] = [26,27,34,37,25,42,8];
 
 	gamemode[11] = "GUN GAME";//
 	gamemode_unlock[11] = "PICK UP 50 WEAPONS IN ONE RUN";
@@ -135,7 +135,7 @@ function scrGameModes() {
 	gamemode_have[18] = 0;
 	gamemode_tip[18] = "NO ELITE POPO";
 	gamemode_description[18] = "";
-	gamemode_nocombo[18] = [26,27,37,25,8];
+	gamemode_nocombo[18] = [26,27,37,25,42,8];
 
 	gamemode[19] = "DISC ROOM";//
 	gamemode_unlock[19] = "DIE TO A DISC";
@@ -149,14 +149,14 @@ function scrGameModes() {
 	gamemode_have[20] = 0;
 	gamemode_tip[20] = "IT'S A BIG WORLD OUT THERE";
 	gamemode_description[20] = "BIGGER AREAS";
-	gamemode_nocombo[20] = [6,26,27,37,25,8];
+	gamemode_nocombo[20] = [6,26,27,37,25,42,8];
 
 	gamemode[21] = "LOOP START";
 	gamemode_unlock[21] = "REACH L1 2-1";
 	gamemode_have[21] = 0;
 	gamemode_tip[21] = "START IN THE FUTURE";
 	gamemode_description[21] = "START AT LOOP 1";
-	gamemode_nocombo[21] = [26,27,37,25,8];
+	gamemode_nocombo[21] = [26,27,37,25,42,8];
 
 	gamemode[22] = "INFINITE LEVELS#SLOW LEVELING";
 	gamemode_unlock[22] = "FIND AND TAKE#A SECRET ULTRA MUTATION";
@@ -183,22 +183,28 @@ function scrGameModes() {
 	gamemode_unlock[25] = "GET RESURRECTED";
 	gamemode_have[25] = 0;
 	gamemode_tip[25] = "SURVIVAL ARENA!";
-	gamemode_description[25] = "SURVIVE IN A WAVE BASED ARENA WITH OVER wip CUSTOM WAVES!";
-	gamemode_nocombo[25] = [6,8,10,18,20,21,26,27,36,37,40];
+	gamemode_description[25] = "SURVIVE IN A WAVE BASED ARENA";
+	gamemode_nocombo[25] = [6,8,10,18,20,21,26,27,36,37,40,42];
+	gamemode[42] = "CUSTOM#SURVIVAL ARENA";
+	gamemode_unlock[42] = "REACH WAVE 4#IN SURVIVAL ARENA";
+	gamemode_have[42] = 0;
+	gamemode_tip[42] = "CUSTOM WAVES";
+	gamemode_description[42] = "\nLOAD IN A JSON FILE TO PLAY CUSTOMIZED WAVES IN SURVIVAL ARENA";
+	gamemode_nocombo[42] = [6,8,10,18,20,21,25,26,27,36,37,40];
 	
 	gamemode[26] = "DAILY RACE";
 	gamemode_unlock[26] = "";
 	gamemode_have[26] = 1;
 	gamemode_tip[26] = "GOTTA GO FAST";
 	gamemode_description[26] = "COMPETE FOR THE FASTEST TIME IN THE LEADERBOARD, TIME ENDS WHEN YOU KILL THRONE II";
-	gamemode_nocombo[26] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,0,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41];
+	gamemode_nocombo[26] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,0,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41];
 	
 	gamemode[27] = "DAILY SCORE";
 	gamemode_unlock[27] = "";
 	gamemode_have[27] = 1;
 	gamemode_tip[27] = "SWEATING";
 	gamemode_description[27] = "COMPETE FOR SCORE IN THE LEADERBOARD";
-	gamemode_nocombo[27] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,0,28,29,30,31,32,33,34,35,36,37,38,39,40,41];
+	gamemode_nocombo[27] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,0,28,29,30,31,32,33,34,35,36,37,38,39,40,41];
 	
 	gamemode[28] = "ALL MUTATION#CHOICES";
 	gamemode_unlock[28] = "TAKE EVERY REGULAR MUTATION#ATLEAST ONCE";
@@ -262,14 +268,14 @@ function scrGameModes() {
 	gamemode_have[36] = 0;
 	gamemode_tip[36] = "ROLL CREDITS";
 	gamemode_description[36] = "START WITH AN ULTRA MOD";
-	gamemode_nocombo[36] = [26,27,35,37,25,8];
+	gamemode_nocombo[36] = [26,27,35,37,25,42,8];
 	
 	gamemode[37] = "WEEKLY";
 	gamemode_unlock[37] = "";
 	gamemode_have[37] = 1;
 	gamemode_tip[37] = "WHAT A WEEK";
 	gamemode_description[37] = "EACH WEEK OFFERS A DIFFERENT GAMEMODE. YOU CAN REPLAY THE WEEKLY THROUGHOUT THE WEEK TO IMPROVE YOUR SCORE";
-	gamemode_nocombo[37] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,0,38,39,40,41];
+	gamemode_nocombo[37] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,27,28,29,30,31,32,33,34,35,36,0,38,39,40,41];
 	
 	gamemode[38] = "SEEDED";
 	gamemode_unlock[38] = "USE PLANT'S SNARE#VERY RAPIDLY";
@@ -290,7 +296,7 @@ function scrGameModes() {
 	gamemode_have[40] = 0;
 	gamemode_tip[40] = "THERE CAN BE ONLY ONE";
 	gamemode_description[40] = "ONLY ONE ENEMY SPAWNS EACH AREA. BUT THE ENEMY IS BEEFED UP!";
-	gamemode_nocombo[40] = [25,26,27,37,8];
+	gamemode_nocombo[40] = [25,42,26,27,37,8];
 	
 	gamemode[41] = "DOUBLE ENEMY HP";
 	gamemode_unlock[41] = "PLAY A RUN WITH A COMBINATION OF TWO GAMEMODES";
@@ -304,13 +310,13 @@ function scrGameModes() {
 	gamemode_unlock[38] = "TAKE A SECRET ULTRA MUTATION#ON THE GAMEMODE: ALL MUTATION CHOICES";
 	gamemode_have[38] = 0;
 	gamemode_tip[38] = "YOU LEVEL UP FASTER";
-	gamemode_nocombo[1] = [0,1,26,27,37,25,8]
+	gamemode_nocombo[1] = [0,1,26,27,37,25,42,8]
 	
 	gamemode[39] = "INFINITE LEVELS#HARD MODE";
 	gamemode_unlock[39] = "REACH LEVEL 20#ON INFINITE LEVELS MODE";
 	gamemode_have[39] = 0;
 	gamemode_tip[39] = "YOU LEVEL UP SLOWER";
-	gamemode_nocombo[1] = [0,1,26,27,37,25,8]
+	gamemode_nocombo[1] = [0,1,26,27,37,25,42,8]
 	*/
 	
 	var i = 0;
@@ -343,6 +349,7 @@ function scrGameModes() {
 	i++; gamemodeOrder[i] = 21;
 	i++; gamemodeOrder[i] = 22;
 	i++; gamemodeOrder[i] = 25;
+	i++; gamemodeOrder[i] = 42;
 	i++; gamemodeOrder[i] = 24;
 	i++; gamemodeOrder[i] = 18;
 	i++; gamemodeOrder[i] = 30;

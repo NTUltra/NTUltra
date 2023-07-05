@@ -6,7 +6,7 @@ alarm[0] = 0;
 tellTime -= 3;
 actTime -= 3;
 raddrop = 12
-maxhealth = 25
+maxhealth = 23
 my_health = maxhealth;
 EnemyHealthAdjustments();
 spr_idle = sprGoldSniperIdle

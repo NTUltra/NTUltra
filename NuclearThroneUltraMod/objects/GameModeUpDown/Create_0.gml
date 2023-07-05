@@ -20,6 +20,11 @@ repeat(maxgamemode)
 	i++;
 }
 totalHeight = yy;
-debug("UberCont.opt_gamemode ", UberCont.opt_gamemode);
 if scrIsOnlyNormalGamemode()
 	UberCont.opt_gamemode = [];
+scrollOffset = 80;
+holdUpArrow = 0;
+holdDownArrow = 0;
+holdDelayDefault = 10;
+holdDelay = holdDelayDefault;
+holdDelayDecrease = 1;

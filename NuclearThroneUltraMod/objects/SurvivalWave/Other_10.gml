@@ -1,64 +1,18 @@
 /// @description Start wave
-#region intro
-if instance_exists(SurvivalArenaStarter)
+event_user(3);
+if scrIsGamemode(42)
 {
-	centerX = SurvivalArenaStarter.x;
-	centerY = SurvivalArenaStarter.y;
-	x = centerX;
-	y = centerY;
+	event_user(4);
+	exit;
 }
-if instance_exists(Player)
-{
-	waveNumber = Player.subarea - waveNumberOffset
-}
-with WepPickup
-{
-	instance_destroy();
-	instance_create(x,y,SurvivalPortal);
-}
-with chestprop
-{
-	instance_destroy(id,false);
-	instance_create(x,y,SurvivalPortal);
-}
-with RadChest
-{
-	instance_destroy(id,false);
-	instance_create(x,y,SurvivalPortal);
-}
-with ChestOpen
-{
-	instance_destroy(id,false);
-	instance_create(x,y,SurvivalPortal);
-}
-with Corpse
-{
-	instance_destroy(id,false);
-	instance_create(x,y,SurvivalPortal);
-}
-with WeaponMod
-{
-	instance_destroy();
-	instance_create(x,y,SurvivalPortal);
-}
-with RerollStation
-{
-	instance_destroy();
-	instance_create(x,y,SurvivalPortal);
-}
-snd_play(sndCrownBlood);//LETS GO GET EM!
-wave = [];
-alarm[3] = 5;//Tell time is the difference between these two numbers
-alarm[0] = 20;
-spawnI = 0;
-spawnItell = 0;
-#endregion
 #region area manip
 switch (waveNumber)
 {
 	case 1:
 		if instance_exists(TopCont)
 			TopCont.darkness = 0;
+		if instance_exists(BackCont)
+			BackCont.wind = true;
 		song = mus1;
 		with Floor
 		{
@@ -843,8 +797,8 @@ repeat(1+loops)
 				time: 5
 			};
 			wave[i] = {
-				obj: Sniper,
-				time: 1
+				obj: GoldenSniper,
+				time: 5
 			};
 			i++;
 			wave[i] = {
@@ -992,7 +946,7 @@ repeat(1+loops)
 			i++;
 			wave[i] = {
 				obj: AmmoChest,
-				time: 10,
+				time: 30,
 				xx: centerX,
 				yy: centerY+32
 			};
@@ -1007,14 +961,14 @@ repeat(1+loops)
 			}
 			wave[i] = {
 				obj: GoldCrystal,
-				time: 120
+				time: 130
 			};
 			i++;
 			repeat(3)
 			{
 				wave[i] = {
 					obj: LaserCrystal,
-					time: 11
+					time: 20
 				};
 				i++;
 			}
@@ -1027,7 +981,7 @@ repeat(1+loops)
 			{
 				wave[i] = {
 					obj: Spider,
-					time: 3
+					time: 5
 				};
 				i++;
 			}
@@ -1038,7 +992,7 @@ repeat(1+loops)
 			i++;
 			wave[i] = {
 				obj: AmmoChest,
-				time: 60,
+				time: 90,
 				xx: centerX-32,
 				yy: centerY
 			};
@@ -1047,13 +1001,13 @@ repeat(1+loops)
 			{
 				wave[i] = {
 					obj: GoldCrystal,
-					time: 8
+					time: 10
 				};
 				i++;
 			}
 			wave[i] = {
 				obj: HealthChest,
-				time: 60,
+				time: 120,
 				xx: centerX,
 				yy: centerY-32
 			};
@@ -1358,7 +1312,7 @@ repeat(1+loops)
 			i++;
 			wave[i] = {
 				obj: GoldNecromancer,
-				time: 120,
+				time: 130,
 				xx: centerX,
 				yy: centerY
 			};
@@ -1385,7 +1339,7 @@ repeat(1+loops)
 			i++;
 			wave[i] = {
 				obj: GoldNecromancer,
-				time: 30,
+				time: 40,
 				xx: centerX,
 				yy: centerY
 			};
@@ -3285,28 +3239,28 @@ repeat(1+loops)
 				i++;
 			}
 			wave[i] = {
-				obj: InvertedSniper,
-				time: 30,
+				obj: InvertedGoldenSniper,
+				time: 50,
 				xx: centerX + 256,
 				yy: centerY + 192,
 			};
 			i++;
 			wave[i] = {
 				obj: InvertedSniper,
-				time: 30,
+				time: 40,
 				xx: centerX - 256,
 				yy: centerY - 64,
 			};
 			i++;
 			wave[i] = {
 				obj: InvertedSniper,
-				time: 30,
+				time: 40,
 				xx: centerX + 256,
 				yy: centerY - 64,
 			};
 			i++;
 			wave[i] = {
-				obj: InvertedSniper,
+				obj: InvertedGoldenSniper,
 				time: 60,
 				xx: centerX - 256,
 				yy: centerY + 192,

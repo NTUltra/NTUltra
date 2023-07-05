@@ -14,6 +14,15 @@ totalEnemyHealth=0;
 hard = 0
 area = 0
 subarea = 0
+nightwind = false;
+wind = false;
+drip = false;
+cheese = false;
+heavyrain = false;
+rain = false;
+snow = false;
+cave = false;
+
 
 shad = noone;//surface_create(view_wview,view_hview)
 

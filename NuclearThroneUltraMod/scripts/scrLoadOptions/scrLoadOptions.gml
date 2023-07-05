@@ -48,6 +48,7 @@ function scrLoadOptions() {
 	{
 		useSeed = true;	
 	}
+	opt_custom_survival = ini_read_string("OPTIONS","customsurvival","custom_survival_wave_template");
 
 	//custom controls (ASCII)
 	opt_up = ini_read_real("OPTIONS","up",87);//W
