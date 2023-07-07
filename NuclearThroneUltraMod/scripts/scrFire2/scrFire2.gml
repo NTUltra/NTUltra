@@ -12180,5 +12180,25 @@ function scrFire2() {
 
 	break;
 	
+	//ULTRA LIGHTNING CANNON
+	case 631:
+	snd_play_fire(sndUltraLaser);
+	if Player.skill_got[17] = 1
+		snd_play_fire(sndLightningCannonUpg)
+	else
+		snd_play_fire(sndLightningCannon)
+
+	with instance_create(x,y,UltraLightningCannonBall)
+	{motion_add(aimDirection+(random(10)-5)*other.accuracy,8)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(20,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(20,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 8
+	wkick = 5
+
+	break
+	
 	}//end of switch part 2!
 }

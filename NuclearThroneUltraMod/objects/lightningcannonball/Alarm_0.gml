@@ -2,7 +2,6 @@
 if !audio_is_playing(sndSpark1)&&!audio_is_playing(sndSpark2)
 snd_play(choose(sndSpark1,sndSpark2))
 
-
 with instance_create(x,y,Lightning)
 {
 	iframeskip -= 0.02;

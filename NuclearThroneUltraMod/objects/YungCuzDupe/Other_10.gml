@@ -16,4 +16,11 @@ with Player
 	else 
 		canFire = true;
 }
+if instance_exists(Player)
+{
+	wepmod1 = Player.wepmod1;
+	wepmod2 = Player.wepmod2;
+	wepmod3 = Player.wepmod3;
+	wepmod4 = Player.wepmod4;
+}
 scrFire();

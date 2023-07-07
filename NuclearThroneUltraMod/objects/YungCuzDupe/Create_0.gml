@@ -15,10 +15,10 @@ if Player.skill_got[26]//HAMMER HEAD
 		hammerheadcounter += 5;
 	}
 }
-wepmod1 = 0;
-wepmod2 = 0;
-wepmod3 = 0;
-wepmod4 = 0;
+wepmod1 = Player.wepmod1;
+wepmod2 = Player.wepmod2;
+wepmod3 = Player.wepmod3;
+wepmod4 = Player.wepmod4;
 nearWall = false;
 //scrRaces()
 //scrSkills()

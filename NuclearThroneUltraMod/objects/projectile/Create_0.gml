@@ -9,6 +9,7 @@ hadSpeedApplied = false;
 dmg = 0;
 team = 2;
 canBeMoved = true;
+isLaser = false;
 isGrenade = false;
 typ = 0;
 wepFire = 0;

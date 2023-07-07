@@ -9,3 +9,4 @@ alarm[2] = 1;
 lerpAcc = 0.2;// 1 / (alarm[1] - alarm[2])
 lerpTime = 0;
 canBeMoved = false;
+isLaser = true;

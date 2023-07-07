@@ -1370,4 +1370,22 @@ function scrPopEnemies() {
 		if !instance_exists(IDPDSpawn) || (instance_number(IDPDSpawn) < clamp(loops + 1,2,4))
 			instance_create(x,y,IDPDSpawn);	
 	}
+	//Crown Courtyard
+    if spawnarea = 128 {
+		if loops > 0 {
+	        if styleb = 1 {
+	            instance_create(x + 16, y + 16, choose(PalaceGuardian, GhostGuardian, GuardianDog, CubeGuardian))
+	        }
+	        else {
+	            instance_create(x + 16, y + 16, choose(Raven, Raven, Raven, CrownGuardian, CrownGuardian, CrownGuardian, CrownGuardian, CrownGuardian, CrownGuardian))
+	        }
+		} else {
+	        if styleb = 1 {
+	            instance_create(x + 16, y + 16, choose(PalaceGuardian, GhostGuardian, GuardianDog, CubeGuardian))
+	        }
+	        else {
+				instance_create(x + 16, y + 16, choose(Raven, Raven, Raven, CrownGuardian, CrownGuardian, CrownGuardian, CrownGuardian, CrownGuardian, CrownGuardian))
+	        }
+		}
+    }
 }

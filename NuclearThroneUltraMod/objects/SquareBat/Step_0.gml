@@ -12,6 +12,12 @@ if circleMode {
 			right = -1
 		else if target.x > x
 			right = 1
+		if (UberCont.normalGameSpeed == 60)
+		{
+			hspeed *= 2;
+			vspeed *= 2;
+			angle -= rotationSpeed*0.5;
+		}
 	}
 	else
 	{

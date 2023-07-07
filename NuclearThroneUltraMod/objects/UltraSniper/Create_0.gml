@@ -21,7 +21,7 @@ wkick = 0
 proj = EnemyBullet1Square;
 loops = GetPlayerLoops();
 tellTime = 16
-actTime = 9;
+actTime = 10;
 canSniperTogether = 3;
 if loops > 0
 {

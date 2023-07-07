@@ -47,6 +47,7 @@ case 124:sprite_index = sprDebris123; break;
 case 125:sprite_index = sprDebris125; break;
 case 126:sprite_index = sprDebris126; break;
 case 127:sprite_index = sprDebris127; break;
+case 128:sprite_index = sprDebris128; break;
 default: sprite_index = sprDebris0; break;
 }
 image_speed = 0
@@ -54,7 +55,7 @@ image_index = random(4)
 image_angle = random(360)
 mySize = 1
 motion_add(random(360),3+random(2))
-alarm[0] = 200+random(90)
+alarm[0] = 150+irandom(90)
 time = 10
 
 if speed > 0

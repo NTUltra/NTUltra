@@ -44,4 +44,5 @@ if instance_exists(Player)
 ultra = false;
 isog = true;
 canBeMoved = false;
+isLaser = false;
 UberCont.recursionCheck ++;

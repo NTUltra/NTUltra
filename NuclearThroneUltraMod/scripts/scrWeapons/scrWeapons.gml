@@ -2255,7 +2255,7 @@ function scrWeapons() {
 	wep_type[204] = 3
 	wep_auto[204] = 0
 	wep_load[204] = 28
-	wep_cost[204] = 4
+	wep_cost[204] = 3
 	wep_sprt[204] = sprSplinterSeekerCrossbow
 	wep_area[204] = 10
 	wep_text[204] = "ultimate hybrid"
@@ -6969,6 +6969,17 @@ function scrWeapons() {
 	wep_text[630] = "shake the earth"
 	wep_swap[630] = sndSwapEnergy
 	wep_rad[630] = 0;
+	
+	wep_name[631] = "ULTRA LIGHTNING CANNON"
+	wep_type[631] = 5
+	wep_auto[631] = 0
+	wep_load[631] = 36//1.13 seconds
+	wep_cost[631] = 9
+	wep_sprt[631] = sprLightningCannon
+	wep_area[631] = 27
+	wep_text[631] = "a devestating development"
+	wep_swap[631] = sndSwapEnergy
+	wep_rad[631] = 25;
 
 	maxwep = array_length(wep_name)-1;
 

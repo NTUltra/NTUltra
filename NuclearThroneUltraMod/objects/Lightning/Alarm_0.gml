@@ -105,10 +105,11 @@ if instance_exists(target)
 image_angle = direction
 speed = 0
 
-move_contact_solid(direction,7+random(4))
+//move_contact_solid(direction,7+random(4))
+move_contact_solid(direction,8);
 speed = 0
 image_xscale = -point_distance(x,y,oldx,oldy)/2
-
+var hitElementorWall = false;
 var ammoDecrease = 1;
 if team == 2
 {
@@ -133,14 +134,25 @@ if team == 2
 		ammoDecrease -= modBoost;
 	if Mod4 == 11
 		ammoDecrease -= modBoost;
+	if !Player.ultra_got[93] && place_meeting(x,y,VikingWall)
+		hitElementorWall = true;
 }
 ammo -= ammoDecrease;
-var wall = instance_place(x,y,Wall)
-if wall != noone && wall.object_index != WallHitMe
+if hitElementorWall
 {
 	x = xprevious
 	y = yprevious
 	direction += 180+random_range(-20,20)
+}
+else
+{
+	var wall = instance_place(x,y,Wall)
+	if hitElementorWall || wall != noone && wall.object_index != WallHitMe
+	{
+		x = xprevious
+		y = yprevious
+		direction += 180+random_range(-20,20)
+	}
 }
 
 if round(ammo) > 0

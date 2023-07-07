@@ -7,6 +7,7 @@ typ = 2;
 alarm[0] = 1;
 dmg = 40;
 friction = 0.1;
+alarm[1] = 150
 if instance_exists(Player) && Player.skill_got[17] = 1
 	friction -= 0.05;
 emitter = audio_emitter_create();

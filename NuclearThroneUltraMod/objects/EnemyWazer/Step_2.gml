@@ -10,7 +10,7 @@ if owner > -1 && instance_exists(owner) && !ending {
 		var otherHit = collision_line_point(x,y,
 		x+lengthdir_x(300,image_angle),
 		y+lengthdir_y(300,image_angle),
-		Wall,true,true);
+		VikingWall,true,true);
 		if point_distance(x,y,otherHit[1],otherHit[2]) < point_distance(x,y,hit[1],hit[2])
 			hit = otherHit;
 	}

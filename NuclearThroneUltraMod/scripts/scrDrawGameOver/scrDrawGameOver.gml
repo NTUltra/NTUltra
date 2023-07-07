@@ -56,7 +56,7 @@ function scrDrawGameOver() {
 	}
 
 
-	if (UberCont.canRestart && keyboard_check_pressed(ord("R")) or KeyCont.key_back[0] = 1) and gameovertime > 30
+	if (UberCont.canRestart && keyboard_check_pressed(ord("R")) ) and gameovertime > 30
 	{//QUICK RESTART
 	with SurvivalWave
 		instance_destroy();

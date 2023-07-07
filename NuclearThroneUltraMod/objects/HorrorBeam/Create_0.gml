@@ -28,3 +28,4 @@ if instance_exists(Player)
 		dropRad = true;
 }
 canBeMoved = false;
+isLaser = false;

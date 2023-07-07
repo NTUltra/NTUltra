@@ -32,7 +32,7 @@ if instance_exists(Player)
 	x = 10016
 	y = 10016
 	}
-	if Player.crown == 25
+	if Player.crown == 25//Crown of freedom copy colour of floorexplo
 	{
 		switch (Player.area)
 		{
@@ -147,6 +147,9 @@ if instance_exists(Player)
 			case 127:
 				__background_set_colour( make_color_rgb(246, 198,255) )
 			break;
+			case 128:
+				__background_set_colour( make_color_rgb(15, 25, 13) )
+			break;
 		}
 	}
 	else
@@ -244,6 +247,8 @@ if instance_exists(Player)
 		__background_set_colour( make_color_rgb(0,0,0) )
 		else if Player.area == 127//Graveyard
 		__background_set_colour( make_color_rgb(246, 198,255) )
+		else if Player.area == 128//Crown Courtyard
+			__background_set_colour( make_color_rgb(44, 43, 19) )
 	}
 }
 else
@@ -317,7 +322,9 @@ goal=120+s;
 if Player.area == 119 || Player.area == 120
 goal = 60;
 if Player.area == 126 || Player.area == 127
-goal = 120;
+goal = 120+s;
+if Player.area == 128 || Player.area == 129
+goal = 140+s;
 
 
 if scrIsGamemode(6) && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels

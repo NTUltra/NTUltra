@@ -247,6 +247,12 @@ outspr=sprWall127Out;
 sprite_index=sprWall127Bot;
 break;
 
+case 128:
+topspr=sprWall128Top;
+outspr=sprWall128Out;
+sprite_index=sprWall128Bot;
+break;
+
 default:
 topspr=sprWall0Top;
 outspr=sprWall0Out;
@@ -256,11 +262,13 @@ break;
 }
 image_speed = 0 
 
-image_index = choose(0,0,0,0,0,0,0,1,2) 
-if random(150) < 1 image_index = 3
-
+image_index = choose(0,0,0,0,0,0,0,1,2)
+if random(150) < 1 
+	image_index = 3
+else if area == 128 || area == 129
+	image_index += choose(0,0,1);
+	
 image_index += choose(0,4)
-
 topindex = choose(0,0,0,0,0,0,0,1,2)
 if random(200) < 1 topindex = 3
 topindex += choose(0,4)

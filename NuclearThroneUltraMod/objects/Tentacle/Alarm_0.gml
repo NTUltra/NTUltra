@@ -43,7 +43,7 @@ if target == noone && instance_exists(enemy)
 var oldx, oldy;
 oldx = x
 oldy = y
-
+var hitElementorWall = false;
 if instance_exists(Player){
 	if Player.skill_got[19] == 1
 	{accuracy-=3;}
@@ -60,6 +60,8 @@ if instance_exists(Player){
 	accuracy-=modBoost;
 	if Mod4=13
 	accuracy-=modBoost;
+	if !Player.ultra_got[93] && place_meeting(x,y,VikingWall)
+		hitElementorWall = true;
 }
 if accuracy<0
 accuracy=0;
@@ -103,12 +105,21 @@ var ammoDecrease = 1;
 		ammoDecrease -= modBoost;
 ammo -= ammoDecrease;
 
-var wall = instance_place(x,y,Wall)
-if wall != noone && wall.object_index != WallHitMe
+if hitElementorWall
 {
 	x = xprevious
 	y = yprevious
-	direction += 180+random_range(-20,20);
+	direction += 180+random_range(-20,20)
+}
+else
+{
+	var wall = instance_place(x,y,Wall)
+	if hitElementorWall || wall != noone && wall.object_index != WallHitMe
+	{
+		x = xprevious
+		y = yprevious
+		direction += 180+random_range(-20,20)
+	}
 }
 
 if round(ammo) > 0

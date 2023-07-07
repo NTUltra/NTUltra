@@ -126,6 +126,9 @@ break;
 case 127:
 sprite_index=sprWall127Trans;
 break;
+case 128:
+sprite_index=sprWall128Trans;
+break;
 default:
 sprite_index=sprWall0Trans;
 break;
@@ -135,5 +138,5 @@ image_index = choose(0,1,2,3,4,5,6,7)
 image_speed = 0
 
 visible=false;
-alarm[0]=25;
+alarm[0]=5;
 alarm[1] = 3;

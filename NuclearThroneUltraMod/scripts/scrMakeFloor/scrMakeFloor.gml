@@ -748,6 +748,18 @@ function scrMakeFloor(limiter) {
 	if random(8) < 1
 	with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 	}
+	if area == 128 || area == 129
+	{
+		if random(15+instance_number(FloorMaker)) > 16
+		{
+		instance_destroy()
+		if point_distance(x,y,10016,10016) > 48{
+		instance_create(x+16,y+16,AmmoChest)
+		instance_create(x,y,Floor)}
+		}
+		if random(8) < 1
+		with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
+	}
 	//No branch but chest
 	if area == 117 || area == 124
 	{
@@ -889,6 +901,18 @@ function scrMakeFloor(limiter) {
 	if random(20) < 1
 	with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 	}
+	
+	//Multi Crown
+	if area = 128 || area == 129{ if random(5) < 2
+	{instance_create(x,y,Floor)
+	instance_create(x+32,y,Floor)
+	instance_create(x-32,y,Floor)
+
+	}else 
+	{
+	instance_create(x,y,Floor)
+	instance_create(x,y+32,Floor)
+	}}
 
 
 	x += lengthdir_x(32,direction);

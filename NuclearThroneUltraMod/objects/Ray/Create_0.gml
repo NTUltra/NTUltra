@@ -9,6 +9,7 @@ team = 2;
 typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 explosive=1;
 canBeMoved = false;
+isLaser = false;
 direction=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 x=Player.x+lengthdir_x(16,direction);
 y=Player.y+lengthdir_y(16,direction);

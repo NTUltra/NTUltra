@@ -21,3 +21,4 @@ repeat(am)
 	}
 	ang += angStep;
 }
+instance_create(x,y,BigWallBreak);

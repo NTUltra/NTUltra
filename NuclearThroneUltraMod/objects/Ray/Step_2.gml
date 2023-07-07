@@ -22,5 +22,14 @@ if(instance_exists(creator)){
 	}
 	image_angle = direction;
 	hit = collision_line_point(x,y,xx,yy,Wall,false,false);
+	if hit == noone && instance_exists(Player) && !Player.ultra_got[93]
+	{
+		var potentialHit
+		potentialHit = collision_line_point(x,y,xx,yy,VikingWall,false,false);
+		if potentialHit != noone
+		{
+			hit = potentialHit
+		}
+	}
 }
 

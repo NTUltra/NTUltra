@@ -10,7 +10,7 @@ with enemy
 			var al = instance_place_list(x,y,enemy,enems,false)
 			for (var i = 0; i < al; i ++)
 			{
-				var en = enems[|i];
+				var en = enems[| i];
 				if (en.sprite_index != en.spr_hurt && en.id != id)
 				{
 					bite = true;

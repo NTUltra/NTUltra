@@ -7,7 +7,7 @@ if gonnafire = 0
 	if target > 0
 	{
 		var dis = point_distance(target.x,target.y,x,y);
-		if dis < 400
+		if dis < 350
 		{
 			if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 			{
@@ -32,7 +32,7 @@ if gonnafire = 0
 						alarm[2] = tellTime;
 						with UltraSniper
 						{
-							alarm[1] += actTime;
+							alarm[1] += actTime + tellTime;
 						}
 						gonnafire = 1
 					}

@@ -533,6 +533,10 @@ function scrPopEnemies1vs1(area, subarea, loops){
 	{
 		enem = InvertedGraveyardBreeder;
 	}
+	else if area == 128 // Crown Courtyard
+	{
+		enem = CrownGuardian;
+	}
 	
 	if enem != noone
 		scrSpawnBoss(enem);

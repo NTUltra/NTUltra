@@ -22,4 +22,5 @@ dmg = 1;
 lightningStartDir = choose(true,false);
 aimed = false;
 canBeMoved = false;
+isLaser = true;
 step = 32;

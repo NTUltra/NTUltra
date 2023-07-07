@@ -1,7 +1,7 @@
-if place_meeting(x,y,Floor)
+var ground = instance_place(x,y,Floor);
+if ground != noone && ground.id > id
 {
-	if other.id > id
-		instance_destroy()
+	instance_destroy();
 }
 else
 {

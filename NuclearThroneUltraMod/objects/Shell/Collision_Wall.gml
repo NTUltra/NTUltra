@@ -1,2 +1,2 @@
 move_bounce_solid(true)
-speed /= 2
+speed *= 0.5

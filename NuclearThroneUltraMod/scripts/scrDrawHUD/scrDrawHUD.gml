@@ -27,26 +27,31 @@ function scrDrawHUD() {
 	}
 	with LevelUp
 	draw_sprite(sprite_index,-1,x,y)
-
-	if instance_exists(Player)
+	
+	if !instance_exists(Player)
 	{
+		var dataRef = DataRef;
+	}
+	else
+	{
+		var dataRef = Player;	
+	}
+	#region Normal HUD
 	//DRAW THE HUD HERE
-
-
 	//HEALTH BAR
 	var armourX = 94;
-	if !(Player.ultra_got[62] && Player.altUltra)
+	if !(dataRef.ultra_got[62] && dataRef.altUltra)
 	{
 		var hx = 20;
-		if Player.skill_got[36] //Absorbing pores
+		if dataRef.skill_got[36] //Absorbing pores
 			hx = 22;
 		draw_sprite(sprHealthBar,2,__view_get( e__VW.XView, 0 )+hx,__view_get( e__VW.YView, 0 )+4)
-		if Player.maxhealth!=0{
-		draw_sprite_ext(sprHealthFill,2,__view_get( e__VW.XView, 0 )+hx+2,__view_get( e__VW.YView, 0 )+7,clamp(84*(Player.lsthealth/Player.maxhealth),0,84),1,0,c_white,1)
-		draw_sprite_ext(sprHealthFill,1,__view_get( e__VW.XView, 0 )+hx+2,__view_get( e__VW.YView, 0 )+7,clamp(84*(Player.lsthealth/Player.maxhealth),0,84),1,0,c_white,1)
+		if dataRef.maxhealth!=0{
+		draw_sprite_ext(sprHealthFill,2,__view_get( e__VW.XView, 0 )+hx+2,__view_get( e__VW.YView, 0 )+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
+		draw_sprite_ext(sprHealthFill,1,__view_get( e__VW.XView, 0 )+hx+2,__view_get( e__VW.YView, 0 )+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
 
-		if ((Player.sprite_index = Player.spr_hurt and Player.image_index < 1 and !instance_exists(Portal)) or Player.lsthealth < Player.my_health) and !instance_exists(GenCont) and !instance_exists(LevCont)
-		draw_sprite_ext(sprHealthFill,0,__view_get( e__VW.XView, 0 )+hx+2,__view_get( e__VW.YView, 0 )+7,clamp(84*(Player.lsthealth/Player.maxhealth),0,84),1,0,c_white,1)
+		if ((dataRef.sprite_index = dataRef.spr_hurt and dataRef.image_index < 1 and !instance_exists(Portal)) or dataRef.lsthealth < dataRef.my_health) and !instance_exists(GenCont) and !instance_exists(LevCont)
+		draw_sprite_ext(sprHealthFill,0,__view_get( e__VW.XView, 0 )+hx+2,__view_get( e__VW.YView, 0 )+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
 		}
 	}
 	else
@@ -57,7 +62,7 @@ function scrDrawHUD() {
 
 
 	//VIKING ARMOUR
-	var armour = Player.armour;
+	var armour = dataRef.armour;
 	var dir=0;
 	repeat(armour)
 	{
@@ -67,12 +72,12 @@ function scrDrawHUD() {
 
 
 	//ROGUE AMMO
-	if Player.race=22 && Player.ultra_got[88] != 1
+	if dataRef.race=22 && dataRef.ultra_got[88] != 1
 	{
 		var spr = sprRogueAmmoHUD;
-		if Player.ultra_got[85]=1
+		if dataRef.ultra_got[85]=1
 		{
-			if Player.skill_got[10]
+			if dataRef.skill_got[10]
 			{
 				spr = sprRogueAmmoHUDTBPlus;
 			}
@@ -81,16 +86,16 @@ function scrDrawHUD() {
 				spr = sprRogueAmmoHUDTB;
 			}
 		}
-		else if Player.skill_got[10]
+		else if dataRef.skill_got[10]
 		{
 			spr = sprRogueAmmoHUDPlus;
-			if Player.ultra_got[87] && Player.altUltra
+			if dataRef.ultra_got[87] && dataRef.altUltra
 				spr = sprFreakRogueAmmoHUDPlus;
 		}
-		else if Player.ultra_got[87] && Player.altUltra
+		else if dataRef.ultra_got[87] && dataRef.altUltra
 			spr = sprFreakRogueAmmoHUD;
 		draw_sprite(spr,0,__view_get( e__VW.XView, 0 )+116,__view_get( e__VW.YView, 0 )+11)
-		draw_sprite(spr,Player.rogueammo,__view_get( e__VW.XView, 0 )+116,__view_get( e__VW.YView, 0 )+11)
+		draw_sprite(spr,dataRef.rogueammo,__view_get( e__VW.XView, 0 )+116,__view_get( e__VW.YView, 0 )+11)
 	}
 
 	//GAMEMODES
@@ -142,44 +147,44 @@ function scrDrawHUD() {
 
 	//HEALTH TEXT
 	draw_set_halign(fa_center)
-	if !(Player.ultra_got[62] && Player.altUltra)
-	if (!((Player.sprite_index = Player.spr_hurt and Player.image_index < 1 and !instance_exists(Portal)) or Player.lsthealth < Player.my_health) or sin(wave) > 0) or instance_exists(GenCont) or instance_exists(LevCont)
+	if !(dataRef.ultra_got[62] && dataRef.altUltra)
+	if (!((dataRef.sprite_index = dataRef.spr_hurt and dataRef.image_index < 1 and !instance_exists(Portal)) or dataRef.lsthealth < dataRef.my_health) or sin(wave) > 0) or instance_exists(GenCont) or instance_exists(LevCont)
 	{
 	draw_set_color(c_black)
-	draw_text(__view_get( e__VW.XView, 0 )+23+44,__view_get( e__VW.YView, 0 )+8,string_hash_to_newline(string(Player.my_health)+"/"+string(Player.maxhealth)))
-	draw_text(__view_get( e__VW.XView, 0 )+23+45,__view_get( e__VW.YView, 0 )+8,string_hash_to_newline(string(Player.my_health)+"/"+string(Player.maxhealth)))
-	draw_text(__view_get( e__VW.XView, 0 )+23+45,__view_get( e__VW.YView, 0 )+7,string_hash_to_newline(string(Player.my_health)+"/"+string(Player.maxhealth)))
+	draw_text(__view_get( e__VW.XView, 0 )+23+44,__view_get( e__VW.YView, 0 )+8,string_hash_to_newline(string(dataRef.my_health)+"/"+string(dataRef.maxhealth)))
+	draw_text(__view_get( e__VW.XView, 0 )+23+45,__view_get( e__VW.YView, 0 )+8,string_hash_to_newline(string(dataRef.my_health)+"/"+string(dataRef.maxhealth)))
+	draw_text(__view_get( e__VW.XView, 0 )+23+45,__view_get( e__VW.YView, 0 )+7,string_hash_to_newline(string(dataRef.my_health)+"/"+string(dataRef.maxhealth)))
 	draw_set_color(c_white)
-	draw_text(__view_get( e__VW.XView, 0 )+23+44,__view_get( e__VW.YView, 0 )+7,string_hash_to_newline(string(Player.my_health)+"/"+string(Player.maxhealth)))
+	draw_text(__view_get( e__VW.XView, 0 )+23+44,__view_get( e__VW.YView, 0 )+7,string_hash_to_newline(string(dataRef.my_health)+"/"+string(dataRef.maxhealth)))
 	}
 	var wepcolour = c_white;
 	
 	//CASH BAR
-	if Player.ultra_got[0] && Player.altUltra
+	if dataRef.ultra_got[0] && dataRef.altUltra
 	{
 		var xx =__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-16-16;
 		var yy =__view_get( e__VW.YView, 0 )+40;
 		var w = 28;
 		draw_sprite(sprCashBar,0,xx-2,yy-3)
-		if Player.cash > 0{
-		draw_sprite_ext(sprCashBarFill,2,xx,yy,clamp(w*(Player.lstCash/Player.maxCash),0,w),1,0,c_white,1)
-		draw_sprite_ext(sprCashBarFill,1,xx,yy,clamp(w*(Player.lstCash/Player.maxCash),0,w),1,0,c_white,1)
+		if dataRef.cash > 0{
+		draw_sprite_ext(sprCashBarFill,2,xx,yy,clamp(w*(dataRef.lstCash/dataRef.maxCash),0,w),1,0,c_white,1)
+		draw_sprite_ext(sprCashBarFill,1,xx,yy,clamp(w*(dataRef.lstCash/dataRef.maxCash),0,w),1,0,c_white,1)
 
-		if (Player.lstCash < Player.cash) and !instance_exists(GenCont) and !instance_exists(LevCont)
-			draw_sprite_ext(sprCashBarFill,0,xx,yy,clamp(w*(Player.lstCash/Player.maxCash),0,w),1,0,c_white,1)
+		if (dataRef.lstCash < dataRef.cash) and !instance_exists(GenCont) and !instance_exists(LevCont)
+			draw_sprite_ext(sprCashBarFill,0,xx,yy,clamp(w*(dataRef.lstCash/dataRef.maxCash),0,w),1,0,c_white,1)
 		}
 		draw_set_font(fntM)
-		if Player.lstCash >= Player.cash or sin(wave) > 0 or instance_exists(GenCont) or instance_exists(LevCont)
+		if dataRef.lstCash >= dataRef.cash or sin(wave) > 0 or instance_exists(GenCont) or instance_exists(LevCont)
 		{
 			draw_set_color(c_black)
 			xx += 14;
 			//yy += 8;
-			var rc = string(round(Player.cash));
+			var rc = string(round(dataRef.cash));
 			draw_text(xx,yy+1,rc)
 			draw_text(xx+1,yy+1,rc)
 			draw_text(xx+1,yy,rc)
 			draw_set_color(c_white)
-			if Player.cash < 0
+			if dataRef.cash < 0
 				draw_set_color(c_red);
 			draw_text(xx,yy,rc)
 		}
@@ -188,17 +193,17 @@ function scrDrawHUD() {
 	//ULTRA ICON
 	dir=0;
 	dix=0;
-	var totalLives = array_length(Player.livesRegain);
+	var totalLives = array_length(dataRef.livesRegain);
 	if totalLives > 0
 	{
 	    repeat(totalLives)
 	    {
 			dix++;
-			draw_sprite_ext(sprExtraLivesHud,Player.livesRegain[dix-1],__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-16*dix,__view_get( e__VW.YView, 0 )+36,1,1,0,c_white,1);
+			draw_sprite_ext(sprExtraLivesHud,dataRef.livesRegain[dix-1],__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-16*dix,__view_get( e__VW.YView, 0 )+36,1,1,0,c_white,1);
 	    }
 	}
 	dix ++
-	var sheepFakouts = Player.sheepFakeouts;
+	var sheepFakouts = dataRef.sheepFakeouts;
 	if sheepFakouts > 0
 	{
 	    repeat(sheepFakouts)
@@ -207,146 +212,146 @@ function scrDrawHUD() {
 			dix++;
 	    }
 	}
-	repeat(Player.maxultra+2)//+1 because secret trash + 1BECAUSE HORROR EXTRA
+	repeat(dataRef.maxultra+2)//+1 because secret trash + 1BECAUSE HORROR EXTRA
 	{
-	    if Player.ultra_got[dir]
+	    if dataRef.ultra_got[dir]
 	    {
 			var xx =__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-12-16*dix;
 			var yy =__view_get( e__VW.YView, 0 )+20;
 			var s = 18;
-			if dir == 0 && Player.altUltra
+			if dir == 0 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprCashFlowHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 4 && Player.bskin == 2
+			else if dir == 4 && dataRef.bskin == 2
 			{
 				draw_sprite_ext(sprFishCanGunHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 6 && Player.altUltra
+			else if dir == 6 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprCrystalCursedUltraHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 9 && Player.altUltra
+			else if dir == 9 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprEyesStrangeStyleHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 13 && Player.altUltra
+			else if dir == 13 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprDeathStareHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 20 && Player.altUltra
+			else if dir == 20 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprPlantSonicSpeedHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 27 && Player.altUltra
+			else if dir == 27 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprSteroidsPunchSwapHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 29 && Player.spr_idle == sprMutant8DIdle
+			else if dir == 29 && dataRef.spr_idle == sprMutant8DIdle
 			{
 				draw_sprite_ext(sprExclusiveTasteHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 33 && Player.altUltra
+			else if dir == 33 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprPhoenixHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 35 && Player.altUltra
+			else if dir == 35 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprReverseFocusHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 39 && Player.altUltra
+			else if dir == 39 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprBigRebelHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 43 && Player.altUltra
+			else if dir == 43 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprSniperEyeHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 47 && Player.altUltra
+			else if dir == 47 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprGreenTeamHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 50 && Player.altUltra
+			else if dir == 50 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprSASHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 51 && Player.altUltra
+			else if dir == 51 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprHypnotizeHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 55 && Player.altUltra
+			else if dir == 55 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprInconsistentIncompatabilityHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 59 && Player.altUltra
+			else if dir == 59 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprPathOfDestructionHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 61 && Player.altUltra
+			else if dir == 61 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprCaptainOfTheKrakenHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 62 && Player.altUltra
+			else if dir == 62 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprLivingArmourHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 66 && Player.altUltra
+			else if dir == 66 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprQuickSwapperHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 68 && Player.altUltra
+			else if dir == 68 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprEnginuityHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 72 && Player.altUltra
+			else if dir == 72 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprMirrorHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 74 && Player.altUltra
+			else if dir == 74 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprReminisceHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 77 && Player.altUltra
+			else if dir == 77 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprHoardingThiefHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 96 && Player.altUltra
+			else if dir == 96 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprAirLordHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 97 && Player.altUltra
+			else if dir == 97 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprBeeKeeperHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 104 && Player.altUltra
+			else if dir == 104 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprGrumpyLectureHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 106 && Player.bskin == 1
+			else if dir == 106 && dataRef.bskin == 1
 			{
 				draw_sprite_ext(sprHothandsHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 106 && Player.bskin == 2
+			else if dir == 106 && dataRef.bskin == 2
 			{
 				draw_sprite_ext(sprExplosiveHandsHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 76 && Player.ultimategamble == true
+			else if dir == 76 && dataRef.ultimategamble == true
 			{
 				draw_sprite_ext(sprUltimateGambleIconHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 23 && Player.altUltra
+			else if dir == 23 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprYVBlasphemyHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 87 && Player.altUltra
+			else if dir == 87 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprFreakRogueHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 92 && Player.altUltra
+			else if dir == 92 && dataRef.altUltra
 			{
 				draw_sprite_ext(sprSpikedFrogHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-		    else if !(dir=79 && Player.race=21){//Horror don't draw skeleton's ultra
+		    else if !(dir=79 && dataRef.race=21){//Horror don't draw skeleton's ultra
 				draw_sprite_ext(sprUltraIconHUD,dir,xx,yy,1,1,0,c_white,1);
 			}
 			if (mouse_x > xx && mouse_x < xx + s && mouse_y > yy && mouse_y < yy + s)
@@ -355,7 +360,7 @@ function scrDrawHUD() {
 				if holdExplainMutation > 10
 					holdExplainMutation = 10;
 				if holdExplainMutation >= 10
-					scrDrawHelp("["+Player.ultra_name[dir]+"]\n"+Player.ultra_text[dir]);
+					scrDrawHelp("["+dataRef.ultra_name[dir]+"]\n"+dataRef.ultra_text[dir]);
 			}
 			dix+=1
 			
@@ -365,13 +370,13 @@ function scrDrawHUD() {
 	//SKILL ICONS
 	dix = 0;
 	dir = 0;
-	if Player.totalSkills > 12 - (max(-1,Player.maxarmour-1-Player.hudArmourSpace))
+	if dataRef.totalSkills > 12 - (max(-1,dataRef.maxarmour-1-dataRef.hudArmourSpace))
 	{
 		var cdir = 0;
 		var fs = 0;
-		repeat(Player.maxskill+1)
+		repeat(dataRef.maxskill+1)
 		{
-			if Player.skill_got[cdir] == 1
+			if dataRef.skill_got[cdir] == 1
 			{
 				fs++
 				if fs == skillscroll
@@ -382,9 +387,9 @@ function scrDrawHUD() {
 			cdir ++;
 		}
 	}
-	repeat(Player.maxskill+1)
+	repeat(dataRef.maxskill+1)
 	{
-		if Player.skill_got[dir] = 1 && dix < 11 - (max(-1,Player.maxarmour-1-Player.hudArmourSpace))
+		if dataRef.skill_got[dir] = 1 && dix < 11 - (max(-1,dataRef.maxarmour-1-dataRef.hudArmourSpace))
 		{
 			var xx = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-12-16*dix;
 			var yy = __view_get( e__VW.YView, 0 )+12;
@@ -396,9 +401,9 @@ function scrDrawHUD() {
 			{
 				var ht;
 				if dir == 28//RAGE
-					ht = "["+Player.skill_name[dir]+"] ["+string(Player.rage)+"/500]\n"+Player.skill_text[dir];//MAX RAGE
+					ht = "["+dataRef.skill_name[dir]+"] ["+string(dataRef.rage)+"/500]\n"+dataRef.skill_text[dir];//MAX RAGE
 				else
-					ht = "["+Player.skill_name[dir]+"]\n"+Player.skill_text[dir];
+					ht = "["+dataRef.skill_name[dir]+"]\n"+dataRef.skill_text[dir];
 				
 				holdExplainMutation +=2;
 				if holdExplainMutation >= 10
@@ -409,7 +414,7 @@ function scrDrawHUD() {
 			}
 		}
 		dir += 1
-		if dir > Player.maxskill
+		if dir > dataRef.maxskill
 			dir = 0;
 	}
 	if holdExplainMutation > 0
@@ -421,45 +426,53 @@ function scrDrawHUD() {
 	var loadA = 0.35;
 	var loadedColour = c_gray//make_colour_rgb(102,69,0);//make_colour_rgb(127,87,0);
 	//TERTIARY WEAPON
-	if Player.cwep != 0 && Player.ultra_got[31]//robot ultra c
+	if dataRef.cwep != 0 && dataRef.ultra_got[31]//robot ultra c
 	{
 	var spr, col, wid;
-	spr = Player.wep_sprt[Player.cwep]
+	spr = dataRef.wep_sprt[dataRef.cwep]
 	wid = 16
-	if Player.wep_type[Player.cwep] = 0
+	if dataRef.wep_type[dataRef.cwep] = 0
 	wid = 32
 	col = c_dkgray
 
 	//Wepon
-	if Player.ccurse==1
+	if dataRef.ccurse==1
 	col=make_colour_rgb(136,36,174);//curse
-	else if (scrCheckGold(Player.wep_name[Player.cwep]))
+	else if (scrCheckGold(dataRef.wep_name[dataRef.cwep]))
 	col=make_colour_rgb(223,201,134);//gold
-	else if (scrCheckUltra(Player.wep_name[Player.cwep]))
+	else if (scrCheckUltra(dataRef.wep_name[dataRef.cwep]))
 	col=make_colour_rgb(72,253,8);//ultra baby
+	var wxx = __view_get( e__VW.XView, 0 )+110;
+	var wyy = __view_get( e__VW.YView, 0 )+16;
+	var ss = 20;
 	
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+110,__view_get( e__VW.YView, 0 )+16,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+112,__view_get( e__VW.YView, 0 )+16,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+15,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+17,col,1)
-
-	var wwep = Player.cwep;
-	var pcc = Player.cqueueshot;
+	if (mouse_x > wxx && mouse_x < wxx+ss && mouse_y < wyy+ss && mouse_y > wyy)
+	{
+		scrDrawHelp("  " + string(dataRef.wep_area[dataRef.cwep])
+		+ "\n" + dataRef.wep_name[dataRef.cwep]);
+		draw_sprite(sprWepTier,0,__view_get( e__VW.XView, 0 )+118,__view_get( e__VW.YView, 0 )+22);
+	}
+	var wwep = dataRef.cwep;
+	var pcc = dataRef.cqueueshot;
 	var pci = 0;
 	var pcsw = min(wid*0.5,(sprite_get_width(spr)-sprite_get_xoffset(spr))*0.5);
 	var fillw = min(wid,2+sprite_get_width(spr));
-	if Player.creload < 0 && Player.wep_load[wwep] != 0
+	if dataRef.creload < 0 && dataRef.wep_load[wwep] != 0
 	{
-		pci = Player.creload/Player.wep_load[wwep]
+		pci = dataRef.creload/dataRef.wep_load[wwep]
 		pci = 1+pci;
 		pci = pci-floor(pci)
 	}
-	if Player.creload > 0
+	if dataRef.creload > 0
 	{
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,c_black,1)
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(Player.wep_load[Player.cwep],1-(Player.creload/Player.wep_load[Player.cwep]))),14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[dataRef.cwep],1-(dataRef.creload/dataRef.wep_load[dataRef.cwep]))),14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
 	}
-	else if Player.creload != 0
+	else if dataRef.creload != 0
 	{
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,loadedColour,1)
 		if pcc == 2
@@ -467,11 +480,11 @@ function scrDrawHUD() {
 		else if pcc == 1
 		{
 			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,pcsw,14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,puffColour,puffA)
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(Player.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
 		}
 		else
 		{
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(Player.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
 		}
 	}
 	else
@@ -480,26 +493,26 @@ function scrDrawHUD() {
 	}
 	
 	
-	if Player.wep_type[Player.cwep] != 0
+	if dataRef.wep_type[dataRef.cwep] != 0
 	{
 	draw_set_halign(fa_left)
 	draw_set_color(c_black)
-	var cAmmo = string(round(Player.ammo[Player.wep_type[Player.cwep]]));
+	var cAmmo = string(round(dataRef.ammo[dataRef.wep_type[dataRef.cwep]]));
 	draw_text(__view_get( e__VW.XView, 0 )+130,__view_get( e__VW.YView, 0 )+22,cAmmo)
 	draw_text(__view_get( e__VW.XView, 0 )+131,__view_get( e__VW.YView, 0 )+22,cAmmo)
 	draw_text(__view_get( e__VW.XView, 0 )+131,__view_get( e__VW.YView, 0 )+21,cAmmo)
-	if Player.wep_type[Player.wep] = Player.wep_type[Player.cwep]
+	if dataRef.wep_type[dataRef.wep] = dataRef.wep_type[dataRef.cwep]
 	draw_set_color(c_white)
 	else
 	draw_set_color(c_silver)
-	if Player.ammo[Player.wep_type[Player.cwep]] <= Player.typ_ammo[Player.wep_type[Player.cwep]]
+	if dataRef.ammo[dataRef.wep_type[dataRef.cwep]] <= dataRef.typ_ammo[dataRef.wep_type[dataRef.cwep]]
 	{
-	if Player.wep_type[Player.wep] = Player.wep_type[Player.cwep]
+	if dataRef.wep_type[dataRef.wep] = dataRef.wep_type[dataRef.cwep]
 	draw_set_color(c_red)
 	else
 	draw_set_color(c_gray)
 	}
-	if Player.ammo[Player.wep_type[Player.cwep]] <= 0
+	if dataRef.ammo[dataRef.wep_type[dataRef.cwep]] <= 0
 	draw_set_color(c_dkgray)
 	draw_text(__view_get( e__VW.XView, 0 )+130,__view_get( e__VW.YView, 0 )+21,cAmmo)
 	}
@@ -507,47 +520,55 @@ function scrDrawHUD() {
 
 
 	//SECONDARY WEAPON
-	if Player.bwep != 0
+	if dataRef.bwep != 0
 	{
 	var spr, col, wid;
-	spr = Player.wep_sprt[Player.bwep]
+	spr = dataRef.wep_sprt[dataRef.bwep]
 	wid = 16
-	if Player.wep_type[Player.bwep] = 0
+	if dataRef.wep_type[dataRef.bwep] = 0
 	wid = 32
 	col = c_dkgray
-	if Player.race = 7
+	if dataRef.race = 7
 	col = c_white
 
 	//wepon
-	if Player.bcurse==1
+	if dataRef.bcurse==1
 	col=make_colour_rgb(136,36,174);//curse
-	else if (scrCheckGold(Player.wep_name[Player.bwep]))
+	else if (scrCheckGold(dataRef.wep_name[dataRef.bwep]))
 	col=make_colour_rgb(223,201,134);//gold
-	else if (scrCheckUltra(Player.wep_name[Player.bwep]))
+	else if (scrCheckUltra(dataRef.wep_name[dataRef.bwep]))
 	col=make_colour_rgb(72,253,8);//ultra baby
-
+	var wxx = __view_get( e__VW.XView, 0 )+67;
+	var wyy = __view_get( e__VW.YView, 0 )+16;
+	var ss = 20;
+	if (mouse_x > wxx && mouse_x < wxx+ss && mouse_y < wyy+ss && mouse_y > wyy)
+	{
+		scrDrawHelp("  " + string(dataRef.wep_area[dataRef.bwep])
+		+ "\n" + dataRef.wep_name[dataRef.bwep]);
+		draw_sprite(sprWepTier,0,__view_get( e__VW.XView, 0 )+118,__view_get( e__VW.YView, 0 )+22);
+	}
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+67,__view_get( e__VW.YView, 0 )+16,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+69,__view_get( e__VW.YView, 0 )+16,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+15,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+17,col,1)
 
-	var wwep = Player.bwep;
-	var pcc = Player.bqueueshot;
+	var wwep = dataRef.bwep;
+	var pcc = dataRef.bqueueshot;
 	var pci = 0;
 	var pcsw = min(wid*0.5,(sprite_get_width(spr)-sprite_get_xoffset(spr))*0.5);
 	var fillw = min(wid,2+sprite_get_width(spr));
-	if Player.breload < 0 && Player.wep_load[wwep] != 0
+	if dataRef.breload < 0 && dataRef.wep_load[wwep] != 0
 	{
-		pci = Player.breload/Player.wep_load[wwep]
+		pci = dataRef.breload/dataRef.wep_load[wwep]
 		pci = 1+pci;
 		pci = pci-floor(pci)
 	}
-	if Player.breload > 0
+	if dataRef.breload > 0
 	{
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,c_black,1)
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(Player.wep_load[wwep],1-(Player.breload/Player.wep_load[wwep]))),14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-(dataRef.breload/dataRef.wep_load[wwep]))),14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
 	}
-	else if Player.breload != 0
+	else if dataRef.breload != 0
 	{
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,loadedColour,1)
 		if pcc == 2
@@ -557,11 +578,11 @@ function scrDrawHUD() {
 		else if pcc == 1
 		{
 			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,pcsw,14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,puffColour,puffA)
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(Player.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
 		}
 		else
 		{
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(Player.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)	
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+68,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)	
 		}
 	}
 	else
@@ -571,26 +592,26 @@ function scrDrawHUD() {
 
 
 
-	if Player.wep_type[Player.bwep] != 0
+	if dataRef.wep_type[dataRef.bwep] != 0
 	{
 	draw_set_halign(fa_left)
 	draw_set_color(c_black)
-	var bAmmo = string(round(Player.ammo[Player.wep_type[Player.bwep]]))
+	var bAmmo = string(round(dataRef.ammo[dataRef.wep_type[dataRef.bwep]]))
 	draw_text(__view_get( e__VW.XView, 0 )+86,__view_get( e__VW.YView, 0 )+22,bAmmo)
 	draw_text(__view_get( e__VW.XView, 0 )+87,__view_get( e__VW.YView, 0 )+22,bAmmo)
 	draw_text(__view_get( e__VW.XView, 0 )+87,__view_get( e__VW.YView, 0 )+21,bAmmo)
-	if Player.race = 7 or Player.wep_type[Player.wep] = Player.wep_type[Player.bwep]
+	if dataRef.race = 7 or dataRef.wep_type[dataRef.wep] = dataRef.wep_type[dataRef.bwep]
 	draw_set_color(c_white)
 	else
 	draw_set_color(c_silver)
-	if Player.ammo[Player.wep_type[Player.bwep]] <= Player.typ_ammo[Player.wep_type[Player.bwep]]
+	if dataRef.ammo[dataRef.wep_type[dataRef.bwep]] <= dataRef.typ_ammo[dataRef.wep_type[dataRef.bwep]]
 	{
-	if Player.race = 7 or Player.wep_type[Player.wep] = Player.wep_type[Player.bwep]
+	if dataRef.race = 7 or dataRef.wep_type[dataRef.wep] = dataRef.wep_type[dataRef.bwep]
 	draw_set_color(c_red)
 	else
 	draw_set_color(c_gray)
 	}
-	if Player.ammo[Player.wep_type[Player.bwep]] <= 0
+	if dataRef.ammo[dataRef.wep_type[dataRef.bwep]] <= 0
 	draw_set_color(c_dkgray)
 	draw_text(__view_get( e__VW.XView, 0 )+86,__view_get( e__VW.YView, 0 )+21,bAmmo)
 	}
@@ -599,34 +620,29 @@ function scrDrawHUD() {
 
 	//PRIMARY WEAPON
 	var spr, wid;
-	spr = Player.wep_sprt[Player.wep]
+	spr = dataRef.wep_sprt[dataRef.wep]
 	wid = 16
-	if Player.wep_type[Player.wep] = 0
+	if dataRef.wep_type[dataRef.wep] = 0
 	wid = 32
 
 	wepcolour=c_white;
 
-	if Player.curse==1
+	if dataRef.curse==1
 	wepcolour=make_colour_rgb(136,36,174);//curse
-	else if (scrCheckGold(Player.wep_name[Player.wep]))
+	else if (scrCheckGold(dataRef.wep_name[dataRef.wep]))
 	wepcolour=make_colour_rgb(223,201,134);//gold
-	else if (scrCheckUltra(Player.wep_name[Player.wep]))
+	else if (scrCheckUltra(dataRef.wep_name[dataRef.wep]))
 	wepcolour=make_colour_rgb(72,253,8);//ultra baby
+	var wxx = __view_get( e__VW.XView, 0 )+24;
+	var wyy = __view_get( e__VW.YView, 0 )+16;
+	var ss = 20;
+	if (mouse_x > wxx && mouse_x < wxx+ss && mouse_y < wyy+ss && mouse_y > wyy)
+	{
+		scrDrawHelp("  " + string(dataRef.wep_area[dataRef.wep])
+		+ "\n" + dataRef.wep_name[dataRef.wep]);
+		draw_sprite(sprWepTier,0,__view_get( e__VW.XView, 0 )+118,__view_get( e__VW.YView, 0 )+22);
+	}
 
-	//draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+25,__view_get( e__VW.YView, 0 )+16,wepcolour,1)
-	//draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,wepcolour,1)
-	/*
-	Tried outline but it takes too much HUD space
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+26,__view_get( e__VW.YView, 0 )+18,wepcolour,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+22,__view_get( e__VW.YView, 0 )+18,wepcolour,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+22,__view_get( e__VW.YView, 0 )+15,wepcolour,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+26,__view_get( e__VW.YView, 0 )+15,wepcolour,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+15,wepcolour,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+18,wepcolour,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+22,__view_get( e__VW.YView, 0 )+16,wepcolour,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+26,__view_get( e__VW.YView, 0 )+16,wepcolour,1)
-	*/
-	
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+24,__view_get( e__VW.YView, 0 )+16+1,c_black,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+22,__view_get( e__VW.YView, 0 )+16+1,c_black,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+17+1,c_black,1)
@@ -650,36 +666,36 @@ function scrDrawHUD() {
 	
 	
 
-	var wwep = Player.wep;
-	var pcc = Player.queueshot;
+	var wwep = dataRef.wep;
+	var pcc = dataRef.queueshot;
 	var pci = 0;
 	var pcsw = min(wid*0.5,(sprite_get_width(spr)-sprite_get_xoffset(spr))*0.5);
 	var fillw = min(wid,2+sprite_get_width(spr));
-	if Player.reload < 0 && Player.wep_load[wwep] != 0
+	if dataRef.reload < 0 && dataRef.wep_load[wwep] != 0
 	{
-		pci = Player.reload/Player.wep_load[wwep]
+		pci = dataRef.reload/dataRef.wep_load[wwep]
 		pci = 1+pci;
 		pci = pci-floor(pci)
 	}
-	if Player.reload > 0
+	if dataRef.reload > 0
 	{
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,c_black,1)
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(Player.wep_load[wwep],1-(Player.reload/Player.wep_load[wwep]))),14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-(dataRef.reload/dataRef.wep_load[wwep]))),14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
 	}
-	else if Player.reload != 0
+	else if dataRef.reload != 0
 	{
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,loadedColour,1)
 		if pcc == 1
 		{
 			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,pcsw,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,puffColour,puffA)
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(Player.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)
 		}
 		else if pcc == 2
 		{
 			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,puffColour,1)
 		} else
 		{
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(Player.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)	
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-pci)),14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,loadColour,loadA)	
 		}
 	}
 	else
@@ -693,13 +709,13 @@ function scrDrawHUD() {
 	{
 		var xx = __view_get( e__VW.XView, 0 )+14
 		var yy = __view_get( e__VW.YView, 0 )+60
-		draw_text(xx+32,yy,"reload: "+string(Player.reload));
-		draw_text(xx+32,yy,"\nbreload: "+string(Player.breload));
+		draw_text(xx+32,yy,"reload: "+string(dataRef.reload));
+		draw_text(xx+32,yy,"\nbreload: "+string(dataRef.breload));
 	}
 	*/
 	
 	//Ultramod
-	if Player.ultramod != 0
+	if dataRef.ultramod != 0
 	{
 		var xx = __view_get( e__VW.XView, 0 )+14
 		var yy = __view_get( e__VW.YView, 0 )+60
@@ -707,11 +723,11 @@ function scrDrawHUD() {
 		var w = 24*0.5;
 		if (mouse_x > xx-w && mouse_x < xx+w && mouse_y < yy+h && mouse_y > yy-h)
 		{
-			var umn = scrUltraModName(Player.ultramod);
+			var umn = scrUltraModName(dataRef.ultramod);
 			holdExplainUltraModTimer++;
 			if holdExplainUltraModTimer > 30
 			{
-				scrDrawHelp(umn[0] + " <=> " + umn[1]+"\n"+scrUltraModDescription(Player.ultramod));
+				scrDrawHelp(umn[0] + " <=> " + umn[1]+"\n"+scrUltraModDescription(dataRef.ultramod));
 			}
 			else
 			{
@@ -722,85 +738,85 @@ function scrDrawHUD() {
 		{
 			holdExplainUltraModTimer = 0;
 		}
-		draw_sprite(sprUltraModIcon,Player.ultramod,xx,yy);
+		draw_sprite(sprUltraModIcon,dataRef.ultramod,xx,yy);
 	}
 	//WEAPON MODS!
 	var xx = __view_get( e__VW.XView, 0 )+2;
 	var yy = __view_get( e__VW.YView, 0 )+43;
 	var xs = 10;
 	var noHover = true;
-	if Player.wepmod1 != 0
+	if dataRef.wepmod1 != 0
 	{
-		draw_sprite(sprModHUD,Player.wepmod1,xx,yy);
+		draw_sprite(sprModHUD,dataRef.wepmod1,xx,yy);
 		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
 		{
 			noHover = false;
 			holdExplainWepModTimer++;
 			if holdExplainWepModTimer > 30
 			{
-				scrDrawHelp(scrWepModName(Player.wepmod1)
-				+ "\n" + scrWepModDescription(Player.wepmod1));
+				scrDrawHelp(scrWepModName(dataRef.wepmod1)
+				+ "\n" + scrWepModDescription(dataRef.wepmod1));
 			}
 			else
 			{
-				scrDrawHelp(scrWepModName(Player.wepmod1));
+				scrDrawHelp(scrWepModName(dataRef.wepmod1));
 			}
 		}
 	}
 	xx += xs;
-	if Player.wepmod2 != 0
+	if dataRef.wepmod2 != 0
 	{
-		draw_sprite(sprModHUD,Player.wepmod2,xx,yy);
+		draw_sprite(sprModHUD,dataRef.wepmod2,xx,yy);
 		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
 		{
 			noHover = false;
 			holdExplainWepModTimer++;
 			if holdExplainWepModTimer > 30
 			{
-				scrDrawHelp(scrWepModName(Player.wepmod2)
-				+ "\n" + scrWepModDescription(Player.wepmod2));
+				scrDrawHelp(scrWepModName(dataRef.wepmod2)
+				+ "\n" + scrWepModDescription(dataRef.wepmod2));
 			}
 			else
 			{
-				scrDrawHelp(scrWepModName(Player.wepmod2));
+				scrDrawHelp(scrWepModName(dataRef.wepmod2));
 			}
 		}
 	}
 	xx += xs;
-	if Player.wepmod3 != 0
+	if dataRef.wepmod3 != 0
 	{
-		draw_sprite(sprModHUD,Player.wepmod3,xx,yy);
+		draw_sprite(sprModHUD,dataRef.wepmod3,xx,yy);
 		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
 		{
 			noHover = false;
 			holdExplainWepModTimer++;
 			if holdExplainWepModTimer > 30
 			{
-				scrDrawHelp(scrWepModName(Player.wepmod3)
-				+ "\n" + scrWepModDescription(Player.wepmod3));
+				scrDrawHelp(scrWepModName(dataRef.wepmod3)
+				+ "\n" + scrWepModDescription(dataRef.wepmod3));
 			}
 			else
 			{
-				scrDrawHelp(scrWepModName(Player.wepmod3));
+				scrDrawHelp(scrWepModName(dataRef.wepmod3));
 			}
 		}
 	}
 	xx += xs;
-	if Player.wepmod4 != 0
+	if dataRef.wepmod4 != 0
 	{
-		draw_sprite(sprModHUD,Player.wepmod4,xx,yy);
+		draw_sprite(sprModHUD,dataRef.wepmod4,xx,yy);
 		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
 		{
 			noHover = false;
 			holdExplainWepModTimer++;
 			if holdExplainWepModTimer > 30
 			{
-				scrDrawHelp(scrWepModName(Player.wepmod4)
-				+ "\n" + scrWepModDescription(Player.wepmod4));
+				scrDrawHelp(scrWepModName(dataRef.wepmod4)
+				+ "\n" + scrWepModDescription(dataRef.wepmod4));
 			}
 			else
 			{
-				scrDrawHelp(scrWepModName(Player.wepmod4));
+				scrDrawHelp(scrWepModName(dataRef.wepmod4));
 			}
 		}
 	}
@@ -808,9 +824,9 @@ function scrDrawHUD() {
 	{
 		holdExplainWepModTimer = 0;
 	}
-	if Player.wep_type[Player.wep] != 0
+	if dataRef.wep_type[dataRef.wep] != 0
 	{
-	var aAmmo = string(round(Player.ammo[Player.wep_type[Player.wep]]))
+	var aAmmo = string(round(dataRef.ammo[dataRef.wep_type[dataRef.wep]]))
 	draw_set_halign(fa_left)
 	draw_set_color(c_black)
 	draw_text(__view_get( e__VW.XView, 0 )+42,__view_get( e__VW.YView, 0 )+22,aAmmo)
@@ -818,9 +834,9 @@ function scrDrawHUD() {
 	draw_text(__view_get( e__VW.XView, 0 )+43,__view_get( e__VW.YView, 0 )+21,aAmmo)
 
 	draw_set_color(c_white)
-	if Player.ammo[Player.wep_type[Player.wep]] <= Player.typ_ammo[Player.wep_type[Player.wep]]
+	if dataRef.ammo[dataRef.wep_type[dataRef.wep]] <= dataRef.typ_ammo[dataRef.wep_type[dataRef.wep]]
 	draw_set_color(c_red)
-	if Player.ammo[Player.wep_type[Player.wep]] <= 0
+	if dataRef.ammo[dataRef.wep_type[dataRef.wep]] <= 0
 	draw_set_color(c_dkgray)
 	draw_text(__view_get( e__VW.XView, 0 )+42,__view_get( e__VW.YView, 0 )+21,aAmmo)
 	}
@@ -830,22 +846,22 @@ function scrDrawHUD() {
 	//EXPERIENCE BAR
 	draw_set_halign(fa_center)
 	
-	with Player
+	with dataRef
 	{
 		var maxRad = GetPlayerMaxRad();	
 	}
 	var ro = 4;
 	var rto = 11;
-	if Player.skill_got[36]//Absorbing pores
+	if dataRef.skill_got[36]//Absorbing pores
 	{
 		ro -= 3;
 		rto -= 3;
-		draw_sprite(sprAbsorbingRadBar,(Player.radPickedUp/Player.maxRadPickedUp)*18,__view_get( e__VW.XView, 0 )+ 16,__view_get( e__VW.YView, 0 )+4)	
+		draw_sprite(sprAbsorbingRadBar,(dataRef.radPickedUp/dataRef.maxRadPickedUp)*18,__view_get( e__VW.XView, 0 )+ 16,__view_get( e__VW.YView, 0 )+4)	
 	}
-	if Player.skillpoints > 0
+	if dataRef.skillpoints > 0
 		draw_sprite(sprExpBarLevel,0,__view_get( e__VW.XView, 0 )+ro,__view_get( e__VW.YView, 0 )+4)
-	draw_sprite(sprExpBar,(Player.rad/maxRad)*16,__view_get( e__VW.XView, 0 )+ro,__view_get( e__VW.YView, 0 )+4)
-	var lvl = Player.level
+	draw_sprite(sprExpBar,(dataRef.rad/maxRad)*16,__view_get( e__VW.XView, 0 )+ro,__view_get( e__VW.YView, 0 )+4)
+	var lvl = dataRef.level
 	if lvl != 10
 	{
 		draw_set_color(c_black)
@@ -860,33 +876,11 @@ function scrDrawHUD() {
 		draw_sprite(sprUltraLevel,0,__view_get( e__VW.XView, 0 )+rto,__view_get( e__VW.YView, 0 )+16);
 	}
 
-
-
-	//BUSINES HOG MONYRAD
-	/*
-	if Player.race=20
-	{
-	var rads = 0;
-	with Player
-	{
-		rads = floor((rad/GetPlayerMaxRad())*100);
-	}
-	txt = "RADS: "+string(rads))+"%";
-	draw_set_halign(fa_left)
-	draw_set_color(c_black)
-	draw_text(__view_get( e__VW.XView, 0 )+1,__view_get( e__VW.YView, 0 )+51,string_hash_to_newline(string(txt)))
-	draw_text(__view_get( e__VW.XView, 0 )+1,__view_get( e__VW.YView, 0 )+52,string_hash_to_newline(string(txt)))
-	draw_text(__view_get( e__VW.XView, 0 )+2,__view_get( e__VW.YView, 0 )+53,string_hash_to_newline(string(txt)))
-	draw_set_color(c_white)
-	draw_text(__view_get( e__VW.XView, 0 )+2,__view_get( e__VW.YView, 0 )+51,string_hash_to_newline(string(txt)))
-
-	}*/
-
 	//GOOD O'L HUMPHRY SKILL
-	if Player.race=26
+	if dataRef.race=26
 	{
 
-	txt = string(floor(Player.humphrySkill));
+	txt = string(floor(dataRef.humphrySkill));
 
 
 	draw_set_halign(fa_left)
@@ -897,7 +891,7 @@ function scrDrawHUD() {
 	draw_text(__view_get( e__VW.XView, 0 )+14,__view_get( e__VW.YView, 0 )+69,string_hash_to_newline(string(txt)))
 	draw_text(__view_get( e__VW.XView, 0 )+15,__view_get( e__VW.YView, 0 )+69,string_hash_to_newline(string(txt)))
 
-	if instance_exists(PlayerAlarms) && PlayerAlarms.alarm[7] > 0 || (instance_exists(HumphryDiscipline) && !(Player.altUltra && Player.ultra_got[104]))
+	if instance_exists(PlayerAlarms) && PlayerAlarms.alarm[7] > 0 || (instance_exists(HumphryDiscipline) && !(dataRef.altUltra && dataRef.ultra_got[104]))
 		draw_set_color(c_red)
 	else
 		draw_set_color(c_white)
@@ -913,81 +907,81 @@ function scrDrawHUD() {
 
 	//AMMO ICONS
 	img = 0
-	var hump = instance_exists(HumphryDiscipline) && Player.altUltra && Player.ultra_got[104]
-	if (Player.race == 26 && hump && Player.wep_type[Player.wep] != 1 && Player.wep_type[Player.bwep] != 1)
+	var hump = instance_exists(HumphryDiscipline) && dataRef.altUltra && dataRef.ultra_got[104]
+	if (dataRef.race == 26 && hump && dataRef.wep_type[dataRef.wep] != 1 && dataRef.wep_type[dataRef.bwep] != 1)
 	{
 		img = 3
 	}
-	else if Player.wep_type[Player.wep] = 1 or (Player.race = 7 and Player.wep_type[Player.bwep] = 1)
+	else if dataRef.wep_type[dataRef.wep] = 1 or (dataRef.race = 7 and dataRef.wep_type[dataRef.bwep] = 1)
 	{img = 2}
-	else if Player.wep_type[Player.bwep] = 1
+	else if dataRef.wep_type[dataRef.bwep] = 1
 	{img = 1}
 	draw_sprite(sprBulletIconBG,img,__view_get( e__VW.XView, 0 )+2,__view_get( e__VW.YView, 0 )+ammoheight)
-	draw_sprite(sprBulletIcon,clamp(7-ceil((Player.ammo[1]/Player.typ_amax[1])*7),-1,7)+1,__view_get( e__VW.XView, 0 )+2,__view_get( e__VW.YView, 0 )+ammoheight)//36
+	draw_sprite(sprBulletIcon,clamp(7-ceil((dataRef.ammo[1]/dataRef.typ_amax[1])*7),-1,7)+1,__view_get( e__VW.XView, 0 )+2,__view_get( e__VW.YView, 0 )+ammoheight)//36
 
 	img = 0
-	if (Player.race == 26 && hump && Player.wep_type[Player.wep] != 2 && Player.wep_type[Player.bwep] != 2)
+	if (dataRef.race == 26 && hump && dataRef.wep_type[dataRef.wep] != 2 && dataRef.wep_type[dataRef.bwep] != 2)
 	{
 		img = 3
 	}
-	else if Player.wep_type[Player.wep] = 2 or (Player.race = 7 and Player.wep_type[Player.bwep] = 2)
+	else if dataRef.wep_type[dataRef.wep] = 2 or (dataRef.race = 7 and dataRef.wep_type[dataRef.bwep] = 2)
 	{img = 2}
-	else if Player.wep_type[Player.bwep] = 2
+	else if dataRef.wep_type[dataRef.bwep] = 2
 	{img = 1}
 	draw_sprite(sprShotIconBG,img,__view_get( e__VW.XView, 0 )+12,__view_get( e__VW.YView, 0 )+ammoheight)
-	draw_sprite(sprShotIcon,clamp(7-ceil((Player.ammo[2]/Player.typ_amax[2])*7),-1,7)+1,__view_get( e__VW.XView, 0 )+12,__view_get( e__VW.YView, 0 )+ammoheight)
+	draw_sprite(sprShotIcon,clamp(7-ceil((dataRef.ammo[2]/dataRef.typ_amax[2])*7),-1,7)+1,__view_get( e__VW.XView, 0 )+12,__view_get( e__VW.YView, 0 )+ammoheight)
 
 	img = 0
-	if (Player.race == 26 && hump && Player.wep_type[Player.wep] != 3 && Player.wep_type[Player.bwep] != 3)
+	if (dataRef.race == 26 && hump && dataRef.wep_type[dataRef.wep] != 3 && dataRef.wep_type[dataRef.bwep] != 3)
 	{
 		img = 3
 	}
-	else if Player.wep_type[Player.wep] = 3 or (Player.race = 7 and Player.wep_type[Player.bwep] = 3)
+	else if dataRef.wep_type[dataRef.wep] = 3 or (dataRef.race = 7 and dataRef.wep_type[dataRef.bwep] = 3)
 	{img = 2}
-	else if Player.wep_type[Player.bwep] = 3
+	else if dataRef.wep_type[dataRef.bwep] = 3
 	{img = 1}
 	draw_sprite(sprBoltIconBG,img,__view_get( e__VW.XView, 0 )+22,__view_get( e__VW.YView, 0 )+ammoheight)
-	draw_sprite(sprBoltIcon,clamp(7-ceil((Player.ammo[3]/Player.typ_amax[3])*7),-1,7)+1,__view_get( e__VW.XView, 0 )+22,__view_get( e__VW.YView, 0 )+ammoheight)
+	draw_sprite(sprBoltIcon,clamp(7-ceil((dataRef.ammo[3]/dataRef.typ_amax[3])*7),-1,7)+1,__view_get( e__VW.XView, 0 )+22,__view_get( e__VW.YView, 0 )+ammoheight)
 
 	img = 0
-	if (Player.race == 26 && hump && Player.wep_type[Player.wep] != 4 && Player.wep_type[Player.bwep] != 4)
+	if (dataRef.race == 26 && hump && dataRef.wep_type[dataRef.wep] != 4 && dataRef.wep_type[dataRef.bwep] != 4)
 	{
 		img = 3
 	}
-	else if Player.wep_type[Player.wep] = 4 or (Player.race = 7 and Player.wep_type[Player.bwep] = 4)
+	else if dataRef.wep_type[dataRef.wep] = 4 or (dataRef.race = 7 and dataRef.wep_type[dataRef.bwep] = 4)
 	{img = 2}
-	else if Player.wep_type[Player.bwep] = 4 
+	else if dataRef.wep_type[dataRef.bwep] = 4 
 	{img = 1}
 	draw_sprite(sprExploIconBG,img,__view_get( e__VW.XView, 0 )+32,__view_get( e__VW.YView, 0 )+ammoheight)
-	draw_sprite(sprExploIcon,clamp(7-ceil((Player.ammo[4]/Player.typ_amax[4])*7),-1,7)+1,__view_get( e__VW.XView, 0 )+32,__view_get( e__VW.YView, 0 )+ammoheight)
+	draw_sprite(sprExploIcon,clamp(7-ceil((dataRef.ammo[4]/dataRef.typ_amax[4])*7),-1,7)+1,__view_get( e__VW.XView, 0 )+32,__view_get( e__VW.YView, 0 )+ammoheight)
 
 	img = 0
-	if (Player.race == 26 && hump && Player.wep_type[Player.wep] != 5 && Player.wep_type[Player.bwep] != 5)
+	if (dataRef.race == 26 && hump && dataRef.wep_type[dataRef.wep] != 5 && dataRef.wep_type[dataRef.bwep] != 5)
 	{
 		img = 3
 	}
-	else if Player.wep_type[Player.wep] = 5 or (Player.race = 7 and Player.wep_type[Player.bwep] = 5)
+	else if dataRef.wep_type[dataRef.wep] = 5 or (dataRef.race = 7 and dataRef.wep_type[dataRef.bwep] = 5)
 	{img = 2}
-	else if Player.wep_type[Player.bwep] = 5 
+	else if dataRef.wep_type[dataRef.bwep] = 5 
 	{img = 1}
 	draw_sprite(sprEnergyIconBG,img,__view_get( e__VW.XView, 0 )+42,__view_get( e__VW.YView, 0 )+ammoheight)
-	draw_sprite(sprEnergyIcon,clamp(7-ceil((Player.ammo[5]/Player.typ_amax[5])*7),-1,7)+1,__view_get( e__VW.XView, 0 )+42,__view_get( e__VW.YView, 0 )+ammoheight)
+	draw_sprite(sprEnergyIcon,clamp(7-ceil((dataRef.ammo[5]/dataRef.typ_amax[5])*7),-1,7)+1,__view_get( e__VW.XView, 0 )+42,__view_get( e__VW.YView, 0 )+ammoheight)
 
 	//LOW AMMO WARNING
 
-	if Player.wep_type[Player.wep] > 0 && Player.ammo[Player.wep_type[Player.wep]] <= Player.typ_ammo[Player.wep_type[Player.wep]] and sin(wave) > 0 and Player.drawempty > 0
+	if dataRef.wep_type[dataRef.wep] > 0 && dataRef.ammo[dataRef.wep_type[dataRef.wep]] <= dataRef.typ_ammo[dataRef.wep_type[dataRef.wep]] and sin(wave) > 0 and dataRef.drawempty > 0
 	{
-	if Player.drawempty = 10 and Player.ammo[Player.wep_type[Player.wep]] > Player.typ_ammo[Player.wep_type[Player.wep]]-Player.wep_cost[Player.wep]
-	snd_play_2d(Player.snd_lowa,0,true,false,10);
-	Player.drawempty -= 1
+	if dataRef.drawempty = 10 and dataRef.ammo[dataRef.wep_type[dataRef.wep]] > dataRef.typ_ammo[dataRef.wep_type[dataRef.wep]]-dataRef.wep_cost[dataRef.wep]
+	snd_play_2d(dataRef.snd_lowa,0,true,false,10);
+	dataRef.drawempty -= 1
 
-	txt = "LOW ";//+string(Player.typ_name[Player.wep_type[Player.wep]])
+	txt = "LOW ";//+string(dataRef.typ_name[dataRef.wep_type[dataRef.wep]])
 	var noenuf = false;
-	if Player.ammo[Player.wep_type[Player.wep]] < Player.wep_cost[Player.wep]
+	if dataRef.ammo[dataRef.wep_type[dataRef.wep]] < dataRef.wep_cost[dataRef.wep]
 	{
 		noenuf = true;
-	if Player.ammo[Player.wep_type[Player.wep]] > 0
-	txt = "NOT ENOUGH ";//+string(Player.typ_name[Player.wep_type[Player.wep]])
+	if dataRef.ammo[dataRef.wep_type[dataRef.wep]] > 0
+	txt = "NOT ENOUGH ";//+string(dataRef.typ_name[dataRef.wep_type[dataRef.wep]])
 	else
 	txt = "EMPTY "
 	}
@@ -1007,7 +1001,7 @@ function scrDrawHUD() {
 	draw_rectangle(cl,ct,cr,cb,true);
 	}
 	draw_set_color(c_white)
-	draw_sprite(sprAmmoIconsEmpty,Player.wep_type[Player.wep] - 1,
+	draw_sprite(sprAmmoIconsEmpty,dataRef.wep_type[dataRef.wep] - 1,
 	__view_get( e__VW.XView, 0 )+54+(string_width(string_hash_to_newline(string(txt)))),
 	__view_get( e__VW.YView, 0 )+34);
 	
@@ -1016,9 +1010,9 @@ function scrDrawHUD() {
 
 	//LOW HP
 
-	if Player.my_health <= 4 and Player.my_health != Player.maxhealth and sin(wave) > 0 and Player.drawlowhp > 0
+	if dataRef.my_health <= 4 and dataRef.my_health != dataRef.maxhealth and sin(wave) > 0 and dataRef.drawlowhp > 0
 	{
-	Player.drawlowhp -= 1
+	dataRef.drawlowhp -= 1
 	txt = "LOW HP"
 	draw_set_halign(fa_left)
 	draw_set_color(c_black)
@@ -1039,7 +1033,7 @@ function scrDrawHUD() {
 	
 
 	}
-	else if !instance_exists(GenCont) && !instance_exists(PlayerSpawn)
+	if !instance_exists(Player) && !instance_exists(GenCont) && !instance_exists(PlayerSpawn)
 	{
 		scrDrawGameOver()
 	}
@@ -1477,7 +1471,7 @@ function scrDrawHUD() {
 			if explainTimer > 30
 			{
 				var mr = 620;
-				with Player
+				with dataRef
 					mr = GetPlayerMaxRad();
 				var helpText = "YOU HAVE " + string((Player.rad/mr)*100) + "% RADS";
 				yy = y + 14;
@@ -1745,13 +1739,10 @@ function scrDrawHUD() {
 			scrDrawSecretFinder();
 		}
 	}
-	}
-	else
+	#endregion
+	//No hud
+	if !instance_exists(Player) && !instance_exists(GenCont) && !instance_exists(PlayerSpawn)
 	{
-		//No hud
-		if !instance_exists(Player) && !instance_exists(GenCont) && !instance_exists(PlayerSpawn)
-		{
-			scrDrawGameOver()
-		}
+		scrDrawGameOver()
 	}
 }

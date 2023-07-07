@@ -113,7 +113,7 @@ function scrPopulate() {
 						{
 							instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraBandit);
 						}
-						else if ran < 18
+						else if ran < 18 && (spawnarea != 1  && spawnarea != 10 && spawnarea != 101 || Player.loops > 0)
 						{
 							instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraSniper);
 						}
@@ -221,7 +221,7 @@ function scrPopulate() {
                 sprite_index = sprMushroomDecal;
             }
         }
-		else if spawnarea = 117 //Mushroom
+		else if spawnarea = 124 //Mushroom
         {
             GenBones();
             TopDecals();
@@ -320,7 +320,14 @@ function scrPopulate() {
             sprite_index = sprInvertedSavannaTopDecal;
 
         }
-        if spawnarea = 3 || spawnarea = 106 {
+        else if spawnarea = 128 //Crown Courtyard
+        {
+            TopDecals();
+            with TopDecal {
+                sprite_index = sprCrownCourtyardTopDecal;
+            }
+        }
+		if spawnarea = 3 || spawnarea = 106 {
             if !place_free(x - 32, y) and!place_free(x + 32, y) and place_free(x, y) {
                 if random(7) < 1
                 instance_create(x, y, Bones)

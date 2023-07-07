@@ -50,6 +50,7 @@ case 124:sprite_index = sprDebris123; break;
 case 125:sprite_index = sprDebris125; break;
 case 126:sprite_index = sprDebris126; break;
 case 127:sprite_index = sprDebris127; break;
+case 128:sprite_index = sprDebris128; break;
 default: sprite_index = sprDebris0; break;
 }
 

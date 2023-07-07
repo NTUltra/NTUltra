@@ -83,8 +83,25 @@ if(instance_exists(Player)){
 
 var dir;
 dir = 0
-
-while !((place_meeting(x,y,hitme) and dir > 64) or place_meeting(x,y,Wall) or dir > 320)
+var pierce = 64;
+var modBoost = 12;
+with Player
+{
+	if skill_got[17]
+		pierce += 16;
+	//Projectile Speed
+	if skill_got[30] == 1//Power craving
+		modBoost = 16;
+}
+if Mod1 == 11
+	pierce += modBoost;
+if Mod2 == 11
+	pierce += modBoost;
+if Mod3 == 11
+	pierce += modBoost;
+if Mod4 == 11
+	pierce += modBoost;
+while !((place_meeting(x,y,hitme) and dir > pierce) or place_meeting(x,y,Wall) or dir > 320)
 {
 	x += lengthdir_x(1,image_angle);
 	y += lengthdir_y(1,image_angle);

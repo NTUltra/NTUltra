@@ -9,6 +9,8 @@ if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK) && !instance_exis
 {
 	instance_create(x,y,FPSHACK);
 }*/
+with DataRef
+	instance_destroy();
 depth = 0;
 previousUltra = -1;
 hudArmourSpace = 0;
