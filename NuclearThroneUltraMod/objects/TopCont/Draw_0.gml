@@ -259,6 +259,10 @@ with EnemyBullet1Square
 {
 	draw_self();
 }
+with InvertedGuardianBulletSpawn
+{
+	draw_self();
+}
 with GhettoBlast
 {
 	draw_self();	
@@ -335,6 +339,15 @@ with BladeSplintershooter {
 	draw_self();	
 }
 with SquareBat
+{
+	draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1)
+}
+with CourtyardTankShield
+{
+	if visible
+		draw_self();
+}
+with CourtyardGuardian
 {
 	draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1)
 }

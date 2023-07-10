@@ -99,9 +99,9 @@ function scrTips() {
 	if Player.area = 0
 	tip = choose("it's dark here","your friends were here")
 	if Player.area = 1
-	tip = choose("welcome to the future","the wasteland calls you","scorching sun","watch out for maggots","let's do this","dust surrounds you","the wind hurts","use the skulls to go to a different area")
+	tip = choose("welcome to the future","the wasteland calls you","scorching sun","watch out for maggots","let's do this","dust surrounds you","the wind hurts","use the skulls to go to a different area","today is the day")
 	if Player.area = 2
-	tip = choose("don't drink the water","the sewers stink","don't touch the frogs","don't eat the rat meat","danger","water dripping","sludge everywhere","frog loves to sing")
+	tip = choose("don't drink the water","the sewers stink","don't touch the frogs","don't eat the rat meat","danger","water dripping","sludge everywhere","frog loves to sing","the sludge")
 	if Player.area = 3
 	tip = choose("shoot robots on sight","thank goodness snipers only have one eye","there used to be trees here","look up","rust everywhere","the sound of birds","don't cross the streams","climb over cars","thieves can steal ammo","thieves can steal weapons")
 	if Player.area = 4
@@ -127,22 +127,22 @@ function scrTips() {
 	tip = choose("inferno","hell","its getting hot in here", "vulcano", "hot", "heat", "lava", "magma","lava damages over time",
 	"boiling veins protects you#against lava","don't stand#too long in lava","hot feet","tomato sauce","do not run away from a dragon fight!","do not flee from thy dragon")
 	if Player.area = 8
-	tip = choose("sweet","wonderland","evil cards","play your cards right","teapots of doom","cotton candy floors","do not eat the mushrooms","I'm not even a fan of#alice in wonderland")
+	tip = choose("sweet","wonderland","evil cards","play your cards right","teapots of doom","cotton candy floors","do not eat the mushrooms",choose("I'm not even a fan of#alice in wonderland","non cannon","dumb shit","regrets"))
 	if Player.area == 9
-	tip = choose("the palace","This place is old");
+	tip = choose("the palace","This place is old","nearly there","almost there","the time has come");
 	if Player.area = 118
-	tip = choose("the inverted palace","regular portals");
+	tip = choose("the inverted palace","regular portals","greatness awaits","to evade","one more step");
 	if Player.area = 10
-	tip = choose("dry grass","savanna","they eat each other","they attack together","bring a good strating weapon");
+	tip = choose("dry grass","savanna","they eat each other","they attack together","bring a good strating weapon","they heal off of corpses");
 	if Player.area = 106
-	tip = choose("inverted darkness","back to the other dimension","pls explain","inverted world are a benefit","visit inverted world on loop","good luck getting through this"
+	tip = choose("inverted darkness","back to the other dimension","pls explain","inverted worlds are great","visit inverted world on loop","good luck getting through this"
 	,"white ravens")
 	if Player.area = 107
 	tip = choose("black snow?","mud?","explosions everywhere!","should not have come here","the greed is real","do you want to die?","inverted demons","chocolate city")
 	if Player.area = 101
 	tip = choose("water","hold your breath","big fish here","you should come here more often","ocean man!","swimming","you can use lightning here")
 	if Player.area = 108
-	tip = choose("true hell","frozen vulcano","ice cold")
+	tip = choose("true hell","frozen vulcano","ice cold","hellheim","frost and lightning")
 	if Player.area = 109
 	tip = choose("this place is very deadly","don't get nuked","try not to burn","don't blow up","why are you here","your run ends now")
 	if Player.area = 110
@@ -154,21 +154,21 @@ function scrTips() {
 	if Player.area = 113
 	tip = choose("welcome to banditland","bandits with erasers","laserbandits","when the night falls","tonight bandit party","be afraid of the bandit")
 	if Player.area = 114
-	tip = choose("jungle","ugga bugga","wet grass","green")
+	tip = choose("jungle","ugga bugga","wet grass","green","plants")
 	if Player.area = 115
 	tip = choose("cheese caves","cursed caves","gouda")//Fun fact I used to live in Gouda
 	if Player.area = 116
-	tip = choose("survival arena","when starting a wave#chests and weapon drops get destroyed")
+	tip = choose("survival arena","when starting a wave#chests and weapon drops get destroyed","how long","go on","another one down","dont forget to drink water")
 	if Player.area = 117
 	tip = choose("mushrooms with guns","mushroom land","infected mushrooms","don't eat the mushrooms")
 	if Player.area = 119
 	tip = choose("friends","I will save you all!","never stop","return","loop","throne II","we're here");
 	if Player.area = 120
-	tip = choose("empty","nothingness","void","  "," ... ","it is time","no one here","beating this fight makes one less van spawn next loop","confuse the idpd");
+	tip = choose("empty","nothingness","void","  "," ... ","it is time","no one here","beating this fight causes one less van spawn next loop","confuse the idpd");
 	if Player.area = 121
 	tip = choose("risk it","fast route","they are fast","colourful grass","watch yourself out there","inverted savanna")
 	if Player.area = 122
-	tip = choose("stinky water","something is not right","gas underwater?","toxic ocean","polder")
+	tip = choose("stinky water","something is not right","gas underwater?","toxic ocean","polder","dont drink this water")
 	if Player.area = 123
 	tip = choose("pink and blue jungle","inverted bush box moves straight","inverted jungle","though faster and more aggressive#enemies here have less hp and drop more rads","land of square");
 	if Player.area = 124
@@ -185,7 +185,11 @@ function scrTips() {
 	"shovels that hate texas",
 	"axes that wear vests it")
 	if Player.area = 126
-	tip = choose("skeletons","boneyard","crawling bones","don't get overwhelmed","be wary of skeletons","the dead walk","sniper skeletons are stationary",choose("emo land","goth land","dark world","graveyard","halloween"))
+	tip = choose("skeletons","graveyard","crawling bones","don't get overwhelmed","be wary of skeletons","the dead walk","sniper skeletons are stationary",choose("emo land","goth land","dark world","boneyard","cemetary","halloween"))
+	if Player.area = 127
+	tip = choose("love & death","crowd","sprawling bones","the brink","for all that have fallen","crawl","bloodshed forever")
+	if Player.area = 128
+	tip = choose("crown crown crown crown","crown crown","more crowns","get crown","royalty","kings and queens of wasteland","watch out for the crowns")
 	}
 
 

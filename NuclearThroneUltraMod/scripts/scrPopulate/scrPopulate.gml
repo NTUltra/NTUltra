@@ -501,6 +501,9 @@ function scrPopulate() {
 			if Player.loops > 11
 				instance_create(x, y, WantBoss)
 	    }
+		if Player.area == 128 and Player.subarea == 2 {
+	        instance_create(x, y, WantBoss)//Crown Glutton
+	    }
 	
 		//spawn SEWER FISH boss
 		/*
@@ -574,7 +577,7 @@ function scrPopulate() {
             with AmmoChest
             instance_create(x, y, Bandit)
         }
-        else if Player.area != 101{
+        else if Player.area != 101 && Player.area != 128 && !scrIsGamemode(40){
             with WeaponChest
             instance_create(x, y, Grunt)
             //with RadChest

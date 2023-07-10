@@ -43,8 +43,8 @@
     "path": "sprites/sprNewGuardianIdle/sprNewGuardianIdle.yy",
   },
   "spriteMaskId": {
-    "name": "mskGuardian",
-    "path": "sprites/mskGuardian/mskGuardian.yy",
+    "name": "mskPalaceGuardian",
+    "path": "sprites/mskPalaceGuardian/mskPalaceGuardian.yy",
   },
   "visible": true,
 }

@@ -1,6 +1,6 @@
 event_inherited();
 friction = 0.4
-
+trailColour = c_white;
 wallbounce = 0
 
 if instance_exists(Player)

@@ -26,6 +26,7 @@ if (UberCont.canMultiCrown)
 		Player.crown = [1];
 		with Crown
 			instance_destroy();
+		Player.crownpoints -= 1;
 	}
 	else if scrIsCrown(crown)
 	{

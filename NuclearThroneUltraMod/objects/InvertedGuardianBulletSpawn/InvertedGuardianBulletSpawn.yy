@@ -38,5 +38,5 @@
     "name": "mskGuardianBullet",
     "path": "sprites/mskGuardianBullet/mskGuardianBullet.yy",
   },
-  "visible": true,
+  "visible": false,
 }

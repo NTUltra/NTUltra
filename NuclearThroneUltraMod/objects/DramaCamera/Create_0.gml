@@ -387,6 +387,12 @@ else if Player.area == 120
 	if random(400) < 1
 		name = choose("THRONE III","END OF THE ROAD","TICKET TO 1 LESS VAN");
 }
+else if Player.area = 128
+{
+	name = "CROWN GLUTTON";
+	if random(100)<1
+		name = choose("CROWN CROWN CROWN","MULTI CROWN");
+}
 
 }
 var n = name;

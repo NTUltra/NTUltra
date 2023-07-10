@@ -1,6 +1,7 @@
 visible=true;
 x=xstart;
 y=ystart;
+scrForcePosition60fps();
 image_index=0;
 sprite_index=spr_appear;
 image_speed=0.4;

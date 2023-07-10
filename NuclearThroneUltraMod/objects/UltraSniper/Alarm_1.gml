@@ -106,6 +106,7 @@ if gonnafire = 0
 								c1 = make_color_rgb(181,241,8);
 								c2 = make_color_rgb(65,188,21);
 							}
+							scrForcePosition60fps();
 							snd_play(sndUltraSniperTeleport,0,false,true);
 							instance_create(x,y,Smoke);
 						}

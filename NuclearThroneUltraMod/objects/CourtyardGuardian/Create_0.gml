@@ -1,5 +1,5 @@
-raddrop = 5
-maxhealth = 20;
+raddrop = 7
+maxhealth = 18;
 meleedamage = 0;
 mySize = 1
 
@@ -12,21 +12,22 @@ spr_fire = sprCourtyardGuardianFire
 spr_dead = sprCourtyardGuardianDead
 
 snd_hurt = sndHitRock
-snd_dead = sndFrogExplode//sndScorpionDie
+snd_dead = sndWallBreak//sndScorpionDie
 
 //behavior
 walk = 0
 alarm[1] = 30+random(90)
 alarm[10] = 0;
-actTime = 19;
-
-circleMode = false;
-circleDistance = 80;
-angle = 0;
-rotationSpeed = choose(2,-2);
-projectileSpeed = 4;
-projectileSpeedCircle = 3;
-lp = 0.118;
-maxSpeed = 3;
+actTime = 17;
+acc = 1;
+projectileSpeed = 3;
+maxSpeed = 4;
 isInverted = false;
-myBat = InvertedSquareBat;
+
+maxammo = 3;
+ammo = maxammo;
+angleStep = 360/maxammo;
+angle = 0;
+distance = 128;
+originX = x;
+originY = y;

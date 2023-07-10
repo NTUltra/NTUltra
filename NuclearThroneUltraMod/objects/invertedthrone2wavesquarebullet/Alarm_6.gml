@@ -1,4 +1,5 @@
 /// @description Spawn some projectiles now
+snd_play(sndNothingFire,0.1);
 with instance_create(x,y,InvertedGuardianBulletSpawn)
 {	
 	onlyHitPlayerTeam = other.onlyHitPlayerTeam;

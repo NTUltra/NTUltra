@@ -170,6 +170,7 @@ if (alarm[4] < 0) {
 					c1 = make_color_hsv(123,9,92);
 					c2 = make_color_hsv(123,21,83);
 				}
+				scrForcePosition60fps();
 				repeat(5){
 					with instance_create(other.x,other.y,Smoke)
 					motion_add(random(360),1+random(3))

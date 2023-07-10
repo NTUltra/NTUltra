@@ -20,3 +20,5 @@ alarm[1] = 30+random(90)
 wkick = 0
 actTime = 12;
 
+acc = 0.8;
+maxSpeed = 3;

@@ -1,5 +1,4 @@
 /// @description Enable
-debug("ENABLE SHIELD");
 if sprite_index != spr_default
 {
 	sprite_index = spr_spawn;

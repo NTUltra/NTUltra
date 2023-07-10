@@ -1,42 +1,43 @@
 ///@description AI
 alarm[1] = actTime + random(actTime)
+if alarm[2] > 0
+	exit;
 scrTarget()
-if target > 0 {
+if target > 0{
 	var dis = point_distance(target.x, target.y, x, y);
-    if dis > 48  && dis < 200{
+    if dis > 48  && dis < 200 {
 		var ran = random(10);
 		
 		
 		if ran < 0.5
 		{
-			circleMode = false
 			walk = actTime + random_range(-4,6);
+			motion_add(point_direction(x,y,target.x,target.y),2);
 		} else if dis < 140 && ran < 4
 		{
-			circleMode = true;
-			alarm[1] += 5;
-			angle = point_direction(target.x,target.y,x,y);
-		}
-		else if ran < 6
-		{
-			var pspeed = projectileSpeed;
-			if circleMode
-				pspeed = projectileSpeedCircle;
 			
-			var dir = point_direction(x,y,target.x,target.y) + random_range(10,-10);
-			sprite_index = spr_fire;
-			alarm[2] = sprite_get_number(spr_fire)/image_speed;
-			snd_play(sndEnemyFire);
-			with instance_create(x,y,EnemyBullet1Square)
+			alarm[1] += 10;
+			alarm[2] = 5;
+			originX = x;
+			originY = y;
+			with CourtyardGuardian
 			{
-				motion_add(dir,pspeed)
-				image_angle = direction
-				team = other.team
+				alarm[1] += actTime*3;
+				walk = max(actTime, walk);
+				motion_add(point_direction(x,y,target.x,target.y) + 180,acc*2);
 			}
-			if ran < 4.5
-				walk = actTime + random_range(-4,6);
-		} else if ran > 8
+			walk = 0;
+			speed = 0;
+			ammo = maxammo;
+			angle = point_direction(x,y,target.x,target.y) + 180;//Behind player
+			
+		}
+		else if ran > 8 && instance_exists(Floor)
+		{
+			//Go to a random floor
+			motion_add(point_direction(x,y,Floor.x,Floor.y),acc);
 			walk = actTime + random_range(-4,6);
+		}
 		
     }
     else {

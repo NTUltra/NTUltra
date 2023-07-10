@@ -76,6 +76,22 @@ if(instance_exists(Player)){
 				instance_destroy(id,false);
 				exit;
 			}
+			else if object_index == MorphLaser
+			{
+				snd_play_fire(sndCuber);
+				with instance_create(x,y,MorphBullet)
+				{motion_add(other.image_angle+5,18)
+					scrCopyWeaponMod(other);
+				image_angle = direction
+				team = other.team
+				alarm[11] = 0;}
+				with instance_create(x,y,MorphBullet)
+				{motion_add(other.image_angle-5,18)
+					scrCopyWeaponMod(other);
+				image_angle = direction
+				team = other.team
+				alarm[11] = 0;}
+			}
 			else
 			{
 				snd_play_fire(sndHeavyMachinegun);

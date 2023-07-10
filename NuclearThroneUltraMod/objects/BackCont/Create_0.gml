@@ -97,7 +97,7 @@ if instance_exists(Player)
 	//progression
 	alarm[4]=600;//10 seconds
 	
-	if ((Player.area == 9 || Player.area == 118) && Player.subarea == 3 || Player.area == 104)
+	if ((Player.area == 9 || Player.area == 118) && Player.subarea == 3 || Player.area == 104 || Player.area == 128)
 	{
 		//No popo no
 		alarm[1] = 0;

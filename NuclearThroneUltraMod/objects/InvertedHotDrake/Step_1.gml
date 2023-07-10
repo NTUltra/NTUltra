@@ -1,6 +1,7 @@
 if awake == false{
 x=xstart+2000;//place outside level
 y=ystart+2000;
+scrForcePosition60fps();
 my_health = maxhealth;
 }
 else if  alarm[5] < 1 && alarm[4] < 1 && point_distance(x,y,xstart,ystart) > 300

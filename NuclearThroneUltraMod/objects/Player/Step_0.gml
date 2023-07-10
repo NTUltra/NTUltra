@@ -139,9 +139,9 @@ if !instance_exists(LevCont) and visible = 1
 			meleeimmunity--;
 	}
 	if UberCont.mouse__x < x
-	right = -1
+		right = -1
 	else if UberCont.mouse__x > x
-	right = 1
+		right = 1
 
 	if UberCont.mouse__y < y
 	back = 1
@@ -218,7 +218,7 @@ if !instance_exists(LevCont) and visible = 1
 			var dangle = random(1)*360;
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			//screen_save("explain"+string(scrn)+".png");
-			instance_create(x+64,y,LilHunterDie);
+			instance_create(x+64,y,CourtyardGuardian);
 			//scrn++;
 			/*
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
@@ -1495,16 +1495,16 @@ creload = max(creload,lowc);
 
 var homeBoost = 0;
 
-if (ultra_got[42]==1)//HUNTER ULTRA B Homing projectiles
-	homeBoost += 2.8;
+if (ultra_got[42])//HUNTER ULTRA B Homing projectiles
+	homeBoost += 2.5;
 if skill_got[19] == 1
 {
-	homeBoost += 0.6;
+	homeBoost += 0.5;
 	if race == 25
 		homeBoost += 0.1;
 }
 ///homing projectiles mod
-var modHomeBoost = 0.25;
+var modHomeBoost = 0.23;
 if skill_got[30] == 1
 	modHomeBoost += 0.14;
 if ultra_got[65]

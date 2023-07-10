@@ -36,6 +36,9 @@
     "name": "sprCrown0Idle",
     "path": "sprites/sprCrown0Idle/sprCrown0Idle.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskWalkingCrown",
+    "path": "sprites/mskWalkingCrown/mskWalkingCrown.yy",
+  },
   "visible": true,
 }

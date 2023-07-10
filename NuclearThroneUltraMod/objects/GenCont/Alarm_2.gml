@@ -196,6 +196,12 @@ if Player.area = 100
 	instance_create(exitX-32,exitY-64,Floor);
 	instance_create(exitX,exitY-64,Floor);
 	instance_create(exitX+32,exitY-64,Floor);
+	if (array_length(Player.crown) > 0 && !UberCont.canMultiCrown)
+	{
+		instance_create(exitX,exitY-96,Floor);
+		instance_create(exitX,exitY-128,Floor);	
+		instance_create(exitX+16,exitY-128,CourtyardEntrance)
+	}
 	y -= 16;
 	if Player.skill_got[30]
 	{
@@ -565,7 +571,7 @@ if Player.area = 100
 		}
 	}
 }
-else if Player.area > 2 and Player.subarea = 2 && Player.area!=101&&Player.area!=6
+else if Player.area > 2 and Player.subarea = 2 && Player.area!=101&&Player.area!=6 && Player.area!=128
 && Player.area!=102 && Player.area!=103 && Player.area != 125 && Player.area!=104 && Player.area != 4 && Player.area != 111
 && Player.area!=112 && Player.area!=113 && Player.area!=114 && Player.area != 123 && Player.area != 124 && Player.area != 117
 && Player.area!=115 && Player.area!=116 && UberCont.opt_gamemode != 25

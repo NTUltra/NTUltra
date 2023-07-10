@@ -41,8 +41,8 @@
     "path": "sprites/sprGuardianActivate/sprGuardianActivate.yy",
   },
   "spriteMaskId": {
-    "name": "mskScorpion",
-    "path": "sprites/mskScorpion/mskScorpion.yy",
+    "name": "mskGuardian",
+    "path": "sprites/mskGuardian/mskGuardian.yy",
   },
   "visible": true,
 }

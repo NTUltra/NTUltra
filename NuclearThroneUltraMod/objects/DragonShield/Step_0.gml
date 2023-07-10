@@ -9,6 +9,7 @@ if instance_exists(myDragon) {
 	if wave >= 1.05 || wave <= -0.05
 		waveSpeed *= -1;
 	wave += waveSpeed;
+	scrForcePosition60fps();
 }
 else
 {

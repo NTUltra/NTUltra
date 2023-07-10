@@ -18,13 +18,15 @@ if team != other.team && alarm[0] < 1
 	}
 	else if other.typ == 2
 	{
+		snd_play(sndProjectileDestroy,0.1,true);
 		sprite_index = spr_deflect;
 		image_index = 0;
 		with other
 			instance_destroy()
 	}
-	else if other.typ == 0 && !other.canBeMoved
+	else if other.typ == 0 && !other.canBeMoved && other.isLaser
 	{
+		snd_play(sndProjectileDestroy,0.1,true);
 		with other
 		{
 			var d = point_distance(xstart,ystart,other.x,other.y) - 1;

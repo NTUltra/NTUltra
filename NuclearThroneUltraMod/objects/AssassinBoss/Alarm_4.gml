@@ -24,6 +24,7 @@ with instance_nearest(instance_furthest(x+random(120)-60,y+random(120)-60,Floor)
 		self.assx = other.x+o;
 		self.assy = other.y+o;
 	}
+	scrForcePosition60fps();
 	repeat(5){
 		with instance_create(other.x,other.y,Smoke)
 		motion_add(random(360),1+random(3))

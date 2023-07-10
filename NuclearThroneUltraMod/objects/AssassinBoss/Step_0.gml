@@ -152,6 +152,7 @@ if (alarm[4] < 0) {
 						self.assx = other.x+o;
 						self.assy = other.y+o;
 					}
+					scrForcePosition60fps();
 				    repeat(5){
 					    with instance_create(other.x,other.y,Smoke)
 					    motion_add(random(360),1+random(3))
@@ -192,6 +193,7 @@ if (alarm[4] < 0) {
 					self.assx = other.x+o;
 					self.assy = other.y+o;
 				}
+				scrForcePosition60fps();
 				repeat(5){
 					with instance_create(other.x,other.y,Smoke)
 					motion_add(random(360),1+random(3))

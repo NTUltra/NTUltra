@@ -368,7 +368,7 @@ function scrWeapons() {
 	wep_name[33] = "WAVE GUN"
 	wep_type[33] = 2
 	wep_auto[33] = 0
-	wep_load[33] = 17
+	wep_load[33] = 16
 	wep_cost[33] = 2
 	wep_sprt[33] = sprWaveGun
 	wep_area[33] = 12
@@ -2686,7 +2686,7 @@ function scrWeapons() {
 	wep_load[243] = 22
 	wep_cost[243] = 4
 	wep_sprt[243] = sprSwarmShotgun
-	wep_area[243] = 13
+	wep_area[243] = 12
 	wep_text[243] = "honeybee"
 	wep_swap[243] = sndSwapBow
 	wep_rad[243] = 0;
@@ -5536,7 +5536,7 @@ function scrWeapons() {
 	wep_cost[500] = 8
 	wep_sprt[500] = sprLightningCannon
 	wep_area[500] = 15
-	wep_text[500] = "a devestating development"
+	wep_text[500] = "never strikes twice"
 	wep_swap[500] = sndSwapEnergy
 	wep_rad[500] = 0;
 	
@@ -6900,7 +6900,7 @@ function scrWeapons() {
 	wep_cost[624] = 10
 	wep_sprt[624] = sprSuperHeavyNader
 	wep_area[624] = 11
-	wep_text[624] = ""
+	wep_text[624] = "hi there"
 	wep_swap[624] = sndSwapExplosive
 	wep_rad[624] = 0;
 	
@@ -6911,7 +6911,7 @@ function scrWeapons() {
 	wep_cost[625] = 4
 	wep_sprt[625] = sprDoubleEnergyLance
 	wep_area[625] = 14
-	wep_text[625] = ""
+	wep_text[625] = "it be that way sometimes"
 	wep_swap[625] = sndSwapEnergy
 	wep_rad[625] = 0;
 	
@@ -6952,7 +6952,7 @@ function scrWeapons() {
 	wep_type[629] = 2
 	wep_auto[629] = 0
 	wep_load[629] = 20
-	wep_cost[629] = 3
+	wep_cost[629] = 2.5
 	wep_sprt[629] = sprSkullBreaker
 	wep_area[629] = 10
 	wep_text[629] = "break their skull"
@@ -6977,7 +6977,7 @@ function scrWeapons() {
 	wep_cost[631] = 9
 	wep_sprt[631] = sprLightningCannon
 	wep_area[631] = 27
-	wep_text[631] = "a devestating development"
+	wep_text[631] = "always strike thrice"
 	wep_swap[631] = sndSwapEnergy
 	wep_rad[631] = 25;
 
