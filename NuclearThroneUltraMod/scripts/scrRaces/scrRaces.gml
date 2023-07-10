@@ -317,7 +317,7 @@ function scrRaces() {
 	race_dskin[18] = 0
 	race_eskin[18] = 0
 	race_fskin[18] = 0
-	race_bskin_lock[18] = "TRY EVERY CROWN#AT LEAST ONCE#(WITH ANY CHARACTER)"
+	race_bskin_lock[18] = "TRY 10 DIFFERENT CROWNS#AT LEAST ONCE#(WITH ANY CHARACTER)"
 	race_cskin_lock[18] = "DEFLECT A PROJECTILE#THAT IS DEFLECTED#BY A CROWN GUARDIANS#WITHOUT USING MELEE#AS ANGEL"
 
 

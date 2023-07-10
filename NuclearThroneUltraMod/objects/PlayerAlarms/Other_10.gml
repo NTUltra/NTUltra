@@ -36,7 +36,7 @@ if instance_exists(Player)
 		}
 		alarm[6] = 60;
 	}
-	if Player.crown == 25
+	if scrIsCrown(25)
 	{
 		alarm[9] = 30;
 		alarm[4] = 30;
@@ -45,7 +45,7 @@ if instance_exists(Player)
 	{
 		alarm[4] = 30;
 	}
-	else if Player.crown == 26
+	else if scrIsCrown(26)
 	{
 		alarm[5] = 120;	
 	}

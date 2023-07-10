@@ -19,7 +19,7 @@ if instance_exists(Player)
     {
 		mediumchest = 1;
     }
-	if Player.crown == 9//Crown of love
+	if scrIsCrown(9)//Crown of love
 	{
 		alarm[1] = 10;
 		if !instance_exists(GenCont)

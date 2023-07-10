@@ -3,16 +3,16 @@ function scrUsedEveryCrown() {
 	{
 		var dir=0;
 		var used=0;
-		repeat(crownmax+7)
+		repeat(crownmax + secretcrownmax)
 		{
 
-		if crown_used[dir]=1 || dir > crownmax
+		if crown_used[dir] > 0
 			used++;
 
 		dir++;
 		}
 
-		if used>=crownmax+7//Don't count the daily crowns
+		if used >= 10//Don't count the daily crowns
 			return true;
 		else
 			return false;

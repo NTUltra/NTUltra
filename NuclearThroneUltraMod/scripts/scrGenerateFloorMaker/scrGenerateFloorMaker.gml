@@ -8,7 +8,7 @@ function scrGenerateFloorMaker(limiter) {
 	goal = 100//110
 	
 	if instance_exists(Player){
-		if Player.crown == 27
+		if scrIsCrown(27)
 		{
 			//Crown of opposite onto crown of disco
 			styleb = choose(1,1,1,1,1,1,0)

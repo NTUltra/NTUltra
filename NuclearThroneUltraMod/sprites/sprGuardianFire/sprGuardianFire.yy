@@ -99,7 +99,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4acb96cd-461e-4aa6-a900-f27dd71988ff","path":"sprites/sprGuardianFire/sprGuardianFire.yy",},},},"Disabled":false,"id":"831169c9-e328-4f91-9e2a-ac97c1545e3d","IsCreationKey":false,"Key":21.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 24,
     "yorigin": 48,

@@ -131,7 +131,7 @@ function scrUltras(altOverride = false) {
 	ultra_text[20] = "SPAWN TWO SNARES#SNARES DESTROY PROJECTILES"
 	ultra_tips[20] = "better then original stereo snares"
 	
-	if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && (Player.crown == 23 && Player.skill_got[2]))))
+	if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && (scrIsCrown(23) && Player.skill_got[2]))))
 	{
 		//EXTRA FEET OR CROWN OF SPEED
 		ultra_name[20] = "SONIC SPEED"
@@ -245,7 +245,7 @@ function scrUltras(altOverride = false) {
 	ultra_text[35] = "SLOW MOTION IS MUCH MORE EFFECTIVE#ON ENEMY PROJECTILES#(EVEN MORE EFFECTIVE WITH EUPHORIA)##SLOW MOTION COMPLETLY STOPS#YOUR PROJECTILES"
 	ultra_tips[35] = "so fast"
 	
-	if altOverride || (instance_exists(Player) && ((Player.crown == 12 && instance_exists(UltraIcon)) || Player.altUltra))
+	if altOverride || (instance_exists(Player) && ((scrIsCrown(12) && instance_exists(UltraIcon)) || Player.altUltra))
 	{
 		ultra_name[35] = "SUCOF"
 		ultra_text[35] = "SELITCEJORP SESREVER EVITCA"//ACTIVE REVERSES PROJECTILES | EMIT SESREVER EVITCA
@@ -343,7 +343,7 @@ function scrUltras(altOverride = false) {
 	ultra_tips[50] = "they're stoopid"
 	
 	if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (
-	Player.crown > Player.crownmax
+	scrHasASecretCrown()
 	&& instance_exists(UltraIcon))))
 	{
 		ultra_name[50] = "CODENAME S.A.S. : SECRET AGENT SHEEP"
@@ -417,7 +417,7 @@ function scrUltras(altOverride = false) {
 	
 	//NO ENERGY BRAIN & CROWN OF HASTE/APOCALYPSE
 	if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (
-	(!Player.skill_got[17] && (Player.crown == 4 || Player.crown == 28))
+	(!Player.skill_got[17] && (scrIsCrown(4) || scrIsCrown(28)))
 	&& instance_exists(UltraIcon))))
 	{
 		ultra_name[59] = "PATH OF DESTRUCTION"
@@ -707,7 +707,7 @@ function scrUltras(altOverride = false) {
 		
 		//CROWN OF REINCARNATION/FREEDOM
 		if altOverride || (instance_exists(Player) && (Player.race == 24 && (Player.altUltra || Player.unlockAlternativeUltras || (
-		(Player.crown == 11 || Player.crown == 25 || Player.skill_got[2]) && !Player.skill_got[17]
+		(scrIsCrown(11) || scrIsCrown(25) || Player.skill_got[2]) && !Player.skill_got[17]
 		&& instance_exists(UltraIcon)))))
 		{
 			ultra_name[96] = "AIR LORD"

@@ -20,7 +20,7 @@ function scrDrop(itemdrop, weapondrop) {
 		dropRateBuff += 0.93 + (Player.skill_got[4]*(0.35+Player.betterrabbitpaw))
 		+ rebelBuff
 		+ (Player.skill_got[28]*(Player.rage*0.0011))//max is 60%
-		if Player.crown == 21 //Crown of risk
+		if scrIsCrown(21) //Crown of risk
 		{
 			if h >= floor(mh*0.75)
 			{
@@ -38,7 +38,7 @@ function scrDrop(itemdrop, weapondrop) {
 			weapondrop *= 1.09
 		}
 		var lps = Player.loops;
-		if lps > 1 && Player.crown != 5
+		if lps > 1 && !scrIsCrown(5)
 		{
 			lps --;
 			repeat (min(lps,4))
@@ -55,17 +55,17 @@ function scrDrop(itemdrop, weapondrop) {
 				weapondrop *= 0.95;
 			}
 		}
-	if Player.crown = 5//crown of guns
+	if scrIsCrown(5)//crown of guns
 	{
 		weapondrop*=1.4;
-		weapondrop+=9;
+		weapondrop += 8;
 	}
-	else if Player.crown == 15 //Crown of choice
+	else if scrIsCrown(15) //Crown of choice
 	{
 		weapondrop*=1.15;
 		weapondrop+=4;
 	}
-	else if Player.crown == 32//Crown of Misfortune
+	else if scrIsCrown(32)//Crown of Misfortune
 	{
 		itemdrop *= 0.5;
 	}
@@ -82,7 +82,7 @@ function scrDrop(itemdrop, weapondrop) {
 	//itemdrop *= 1.01;//1.16//item
 	//calculate need
 
-	if Player.crown = 13//no rads higher droprate crown
+	if scrIsCrown(13)//no rads higher droprate crown
 	{
 		weapondrop *= 1.3;
 		itemdrop *= 1.3;
@@ -185,7 +185,7 @@ function scrDrop(itemdrop, weapondrop) {
 		}
 		else
 		{
-			if Player.crown == 5//Crown of guns roll again for healthdrop
+			if scrIsCrown(5)//Crown of guns roll again for healthdrop
 			{
 				if random(mh) > h and random(3) < 2 and Player.crown != 2 and Player.canHeal and random(1) <= canHealth
 				{

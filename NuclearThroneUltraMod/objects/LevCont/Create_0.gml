@@ -61,27 +61,28 @@ if dir<12
 		crown = other.dir
 		if crown == 0 
 		{
-			if Player.crown == 8 && Player.tookDestiny
+			//Replace option 1 with keep current set of crowns always
+			if scrIsCrown(8) && Player.tookDestiny
 				crown = 8;
-			else if Player.crown == 25
+			else if scrIsCrown(25)
 				crown = 25;
-			else if Player.crown == 26
+			else if scrIsCrown(26)
 				crown = 26;
-			else if Player.crown == 27
+			else if scrIsCrown(27)
 				crown = 27;
-			else if Player.crown == 28
+			else if scrIsCrown(28)
 				crown = 28;
-			else if Player.crown == 29//Purity
+			else if scrIsCrown(29)//Purity
 				crown = 29;
-			else if Player.crown == 32 || Player.crown == 22 //Luck to misfortune
+			else if scrIsCrown(32) || scrIsCrown(22) //Luck to misfortune
 				crown = 32;
-			else if Player.crown == 33 || Player.consecutiveCrownVisits > 1 
+			else if scrIsCrown(33) || Player.consecutiveCrownVisits > 1 
 				crown = 33;
 			else if Player.wep_type[Player.wep] == 4 && Player.wep_type[Player.bwep] == 4 && UberCont.opt_gamemode != 4//Crown of freedom secret 2 explosive weps
 				crown = 25;
 			else if Player.wep_type[Player.wep] == 5 && Player.wep_type[Player.bwep] == 5//Crown of energy
 				crown = 26;
-			else if Player.crown == 7
+			else if scrIsCrown(7)
 				crown = 28;
 			else if scrCanWeDisco()
 				crown = 27;
@@ -101,7 +102,7 @@ if dir<12
 			if crown == 7
 			{
 				crown = 30;
-				if Player.crown == 30 || Player.crown == 31
+				if scrIsCrown(30) || scrIsCrown(31)
 				{
 					crown = 31;
 				}

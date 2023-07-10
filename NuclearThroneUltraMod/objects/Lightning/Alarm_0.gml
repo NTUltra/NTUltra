@@ -209,7 +209,7 @@ if ultraMod == ultramods.lightningPellet && alarm[0] < 1
 	}
 	var odd = false;
 	if ammo > 0
-		odd = round(ammo) % 2 == 0
+		odd = round(ammo) % 3 == 0
 	with instance_create(x,y,Bullet2)
 	{
 		direction = other.direction;

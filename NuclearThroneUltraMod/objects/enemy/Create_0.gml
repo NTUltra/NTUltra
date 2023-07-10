@@ -25,7 +25,7 @@ if instance_exists(Player)
 	//if Player.ultra_got[19]{//plant leacher
 	//bloodempty=0}
 
-	if Player.crown == 13
+	if scrIsCrown(13)
 		raddrop=0;
 	if Player.loops >1
 		raddrop*=0.8;

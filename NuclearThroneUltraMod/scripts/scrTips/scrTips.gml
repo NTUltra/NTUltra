@@ -367,7 +367,7 @@ function scrTips() {
 
 	//CROWNS
 	if tiptype = 5
-		tip = Player.crown_tips[Player.crown]
+		tip = Player.crown_tips[irandom(array_length(Player.crown)-1)]
 
 	//ULTRAS
 	if tiptype = 6 

@@ -35,7 +35,7 @@ function scrPopChests() {
 				instance_create(xx,yy+64,WeaponChest);
 				instance_create(xx+48,yy+64,AmmoChest);
 			}
-			if Player.crown == 15//CROWN OF CHOICE
+			if scrIsCrown(15)//CROWN OF CHOICE
 			{
 				instance_create(xx+24,yy+16,WeaponChest);
 			}
@@ -73,7 +73,7 @@ function scrPopChests() {
 				instance_create(xx-96,yy-64,WeaponChest);
 				instance_create(xx+06,yy-64,AmmoChest);
 			}
-			if Player.crown == 15//CROWN OF CHOICE
+			if scrIsCrown(15)//CROWN OF CHOICE
 			{
 				instance_create(xx-72,yy-64,WeaponChest);
 			}
@@ -150,7 +150,7 @@ function scrPopChests() {
 				wepChestGol += choose(1,0,0,0,0,0);
 		}
 	
-		if Player.crown == 15//CROWN OF CHOICE
+		if scrIsCrown(15)//CROWN OF CHOICE
 		{
 			gol += 1;
 			healthChestGol += choose(0,0,0,0,0,1);
@@ -295,7 +295,7 @@ function scrPopChests() {
 	instance_destroy()
 	if instance_exists(Player)
 	{
-		if Player.crown = 9
+		if scrIsCrown(9)
 		{
 			with RadChest
 			{image_speed = 0.4
@@ -332,7 +332,7 @@ function scrPopChests() {
 				with RogueAmmoChest
 					instance_destroy(id,false);
 			}
-			if Player.crown == 17
+			if scrIsCrown(17)
 			{
 				var replaced = false;
 				with WeaponMod

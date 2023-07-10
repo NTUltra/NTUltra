@@ -74,7 +74,7 @@ function scrCollectHP(num = 2){
 
 
 		//RUSH CROWN
-		if Player.crown = 4
+		if scrIsCrown(4)
 		num += 1
 		if scrIsHardMode()//HARD MODE
 		{

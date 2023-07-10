@@ -25,7 +25,7 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 	}
 	snd_play(sndMutant0Cnfm, 0, false, false)
 	race = UberCont.racepick
-	crown = 1
+	crown = [1]
 	//scrRaces()
 	//scrCrowns()
 	var ranChar = false;
@@ -34,8 +34,8 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 		ranChar = true;
 		do {race = 1+irandom(racemax-1);} until race_have[race] = 1
 	}
-	if crown = 0
-	crown = ceil(irandom(crownmax))
+	//if crown = 0
+	//crown = ceil(irandom(crownmax))
 	with WepPickup
 		instance_destroy();
 	with ThrowWep

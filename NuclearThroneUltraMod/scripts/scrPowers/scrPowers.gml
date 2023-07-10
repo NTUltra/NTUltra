@@ -817,7 +817,7 @@ function scrPowers() {
 			    if ( my_health-2>0 && ammo[wep_type[wep]] < typ_amax[wep_type[wep]]) && alarm[3]<1
 			    {
 				    var extra=0;
-				    if Player.crown = 4
+				    if scrIsCrown(4)
 				    extra += 1
     
 				    ammo[wep_type[wep]] += round((typ_ammo[wep_type[wep]]* (1.5+skill_got[5]) +extra))
@@ -904,7 +904,7 @@ function scrPowers() {
 							}
 						}
 				        //RUSH CROWN
-				        if Player.crown = 4
+				        if scrIsCrown(4)
 				        num += 1
         
 				        snd_play_2d(sndHealthPickup)

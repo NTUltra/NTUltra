@@ -1,4 +1,4 @@
-alarm[1] = 8+random(10)
+alarm[1] = 10+random(10)
 
 scrTarget()
 if target > 0
@@ -11,7 +11,7 @@ if dis > 24 && dis < 300
 if random(3) < 1
 {
 //fire
-alarm[2]=8
+alarm[2]=10
 instance_create(x,y,Notice);
 gunangle = point_direction(x,y,target.x,target.y)
 

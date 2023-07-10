@@ -39,4 +39,4 @@ with instance_create(x,y,EnemySpawning)
 {
 	myEnemy = other.id;	
 }
-scrInitDrops(2);
+scrInitDrops(3);

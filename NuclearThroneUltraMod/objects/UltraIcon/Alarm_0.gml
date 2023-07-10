@@ -21,7 +21,7 @@ else if skill == 13 && (Player.unlockAlternativeUltras || Player.maxhealth == 1)
 {
 	sprite_index = sprDeathStare;
 }
-else if skill == 20 && (Player.unlockAlternativeUltras || Player.crown == 23 && Player.skill_got[2])
+else if skill == 20 && (Player.unlockAlternativeUltras || scrIsCrown(23) && Player.skill_got[2])
 {
 	sprite_index = sprPlantSonicSpeed;
 }
@@ -37,7 +37,7 @@ else if Player.race == 9 && skill == 33 && (Player.unlockAlternativeUltras || sc
 {
 	sprite_index = sprPhoenix;
 }
-else if skill == 35 && (Player.unlockAlternativeUltras || Player.crown == 12)//Crown of inversion
+else if skill == 35 && (Player.unlockAlternativeUltras || scrIsCrown(12))//Crown of inversion
 {
 	sprite_index = sprReverseFocus;	
 }
@@ -67,7 +67,7 @@ else if skill == 55 && (Player.unlockAlternativeUltras || (Player.skill_got[13] 
 {
 	sprite_index = sprInconsistentIncompatability;
 }
-else if skill == 59 && (Player.unlockAlternativeUltras || (!Player.skill_got[17] && (Player.crown == 4 || Player.crown == 28)))
+else if skill == 59 && (Player.unlockAlternativeUltras || (!Player.skill_got[17] && (scrIsCrown(4) || scrIsCrown(28))))
 {
 	sprite_index = sprPathOfDestruction;
 }
@@ -111,7 +111,7 @@ else if skill == 92 && (Player.unlockAlternativeUltras || Player.wep_type[Player
 {
 	sprite_index = sprSpikedFrog;
 }
-else if skill == 96 && (Player.unlockAlternativeUltras || (Player.crown == 11 || Player.crown == 25 || Player.skill_got[2]) && !Player.skill_got[17])
+else if skill == 96 && (Player.unlockAlternativeUltras || (scrIsCrown(11) || scrIsCrown(25) || Player.skill_got[2]) && !Player.skill_got[17])
 {
 	sprite_index = sprAirLord;
 }

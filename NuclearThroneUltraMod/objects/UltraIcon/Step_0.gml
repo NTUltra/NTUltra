@@ -81,7 +81,7 @@ else if skill == 13 && (Player.maxhealth == 1 || Player.unlockAlternativeUltras)
 		instance_create(x,y,DeathStare);
 	}
 }
-else if skill == 20 && (Player.crown == 23 && Player.skill_got[2] || Player.unlockAlternativeUltras)
+else if skill == 20 && (scrIsCrown(23) && Player.skill_got[2] || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -161,7 +161,7 @@ else if skill == 55 && ((Player.skill_got[13] || Player.skill_got[34] || Player.
 		ultra_tips[55] = "how does it do that"
 	}
 }
-else if skill == 59 && (!Player.skill_got[17] && (Player.crown == 4 || Player.crown == 28) || Player.unlockAlternativeUltras)
+else if skill == 59 && (!Player.skill_got[17] && (scrIsCrown(4) || scrIsCrown(28)) || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -190,7 +190,7 @@ else if skill == 92 && Player.race == 23 && ( Player.wep_type[Player.wep] == 3 &
 		ultra_tips[92] = "porkupine"
 	}
 }
-else if skill == 96 && Player.race == 24 && ((Player.crown == 11 || Player.crown == 25 || Player.skill_got[2]) && !Player.skill_got[17] || Player.unlockAlternativeUltras)
+else if skill == 96 && Player.race == 24 && ((scrIsCrown(11) || scrIsCrown(25) || Player.skill_got[2]) && !Player.skill_got[17] || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -322,7 +322,7 @@ else if skill == 29 && (Player.spr_idle == sprMutant8DIdle || Player.unlockAlter
 		}
 	}
 }
-else if skill == 35 && (Player.crown == 12 || Player.unlockAlternativeUltras)//CHICKEN REVERSE TIME
+else if skill == 35 && (scrIsCrown(12) || Player.unlockAlternativeUltras)//CHICKEN REVERSE TIME
 {
 	with Player
 	{

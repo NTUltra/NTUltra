@@ -29,12 +29,12 @@ if instance_exists(Player)
 		acc += 0.5;
 		maxSpeed += 2;
     }
-	if Player.crown == 23//Crown of speed
+	if scrIsCrown(23)//Crown of speed
 	{
 		acc += 0.5;
 		maxSpeed += 2;
 	}
-	if Player.crown == 24//Crown of sloth
+	if scrIsCrown(24)//Crown of sloth
 	{
 		acc -= 0.2;
 		maxSpeed -= 1.5;

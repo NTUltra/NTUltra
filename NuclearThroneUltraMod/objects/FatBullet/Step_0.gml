@@ -18,11 +18,11 @@ if instance_exists(Player)
     }
     else if speed>10
 		speed=10;
-	if Player.crown == 23//Crown of speed
+	if scrIsCrown(23)//Crown of speed
 	{
 		speed += 2;	
 	}
-	if Player.crown == 24 && speed > 8//Crown of sloth
+	if scrIsCrown(24) && speed > 8//Crown of sloth
 	{
 		speed = 8;
 	}

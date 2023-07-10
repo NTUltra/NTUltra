@@ -7,8 +7,8 @@ if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+10 and UberCont.mouse__y <
 {
     with UberCont///UNLOCK CROWN
     {
-    crown_used[other.crown]=1;
-    scrSave();
+		crown_used[other.crown] += 1;
+		scrSave();
     }
 var usedRandom = false;
 if crown = 0
@@ -16,11 +16,51 @@ if crown = 0
 	usedRandom = true;
 	crown = ceil(irandom(crownmax)+1)//Includes 24 crown of sloth
 }
-
-oldcrown = Player.crown
-Player.crown = crown
-Player.crownpoints -= 1
-
+oldcrown = 1;
+if array_length(Player.crown) > 0
+	oldcrown = Player.crown[0];
+if (UberCont.canMultiCrown)
+{
+	if crown == 1
+	{
+		Player.crown = [1];
+		with Crown
+			instance_destroy();
+	}
+	else if scrIsCrown(crown)
+	{
+		var al = array_length(Player.crown);
+		//Remove
+		for (var i = 0; i < al; i++) {
+			if (Player.crown[i] == crown)
+			{
+				array_delete(Player.crown,i,1);
+				i = al;
+			}
+		}
+		with Crown
+		{
+			if crown == other.crown
+				instance_destroy();
+		}
+		canReAdd = true;
+		oldcrown = crown;
+		crown = 1;
+	}
+	else {
+		//Add
+		Player.crown[array_length(Player.crown)] = crown;
+		if !canReAdd
+			Player.crownpoints -= 1
+	}
+}
+else
+{
+	with Crown
+		instance_destroy();
+	Player.crown = [crown]
+	Player.crownpoints -= 1
+}
 //RESET INVERTED CHANCE
     with Player
     {
@@ -31,12 +71,6 @@ Player.crownpoints -= 1
 
 
     
-//NONE
-if crown = 1
-{
-	with Crown
-		instance_destroy()
-}
 with UberCont
 {
 	if usedRandom
@@ -89,7 +123,7 @@ with Player
 	scrUnlockBSkin(18,"FOR TRYING EVERY CROWN",0);
 }
 //CROWN OF LIFE
-if crown == 2
+if crown == 2 && !canReAdd
 {
 	with Player
 	{
@@ -142,7 +176,7 @@ Player.rushcrownlevels=0;
 
 //CROWN OF DECAY
 if crown == 6
-Player.decay = 300
+	Player.decay = 300
 
 if crown != 25
 {
@@ -247,7 +281,7 @@ if crown == 11
 }
 
 //CROWN OF INVERSION
-if crown==12
+if crown == 12
 {
     with Player
     {
@@ -326,7 +360,15 @@ instance_destroy()
 
 if Player.crownpoints > 0 or Player.skillpoints > 0
 {
-instance_create(x,y,LevCont)
+	instance_create(x,y,LevCont);
+	if canReAdd
+	{
+		with CrownIcon
+		{
+			if crown == other.oldcrown
+				canReAdd = true;
+		}
+	}
 }
 else
 {
@@ -335,21 +377,33 @@ race = Player.race
 }
 
 snd_play_2d(sndCrownRandom)
-var c = crown;
-with Crown
+var xx = x;
+var yy = y;
+with FakeCrown
+{
+	xx = x;
+	yy = y;
+	instance_destroy();
+}
+if crown != 1
+with instance_create(xx,yy,Crown)
 {	
-	if c == 26
+	crown = other.crown;
+	if other.canReAdd
+		newThing = 0;//Not new
+	if crown == 26
 	{
 		instance_destroy();
 		with instance_create(x,y,CrownGunned)
 		{
-			scrCrownAnimation(c);
+			crown = other.crown;
+			scrCrownAnimation(crown);
 		}
 	}
 	else
 	{
-		scrCrownAnimation(c);
-		if c == 33//ECHO
+		scrCrownAnimation(crown);
+		if crown == 33//ECHO
 			alarm[2] = 30;
 		else
 			alarm[2] = 0;

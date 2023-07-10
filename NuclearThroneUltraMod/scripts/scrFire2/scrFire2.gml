@@ -1445,7 +1445,7 @@ function scrFire2() {
 	snd_play_fire(sndHeavySlugger)
 
 	with instance_create(x,y,HeavySlug)
-	{motion_add(aimDirection+(random(10)-5)*other.accuracy,13)//16
+	{motion_add(aimDirection+(random(10)-5)*other.accuracy,14)//16
 	image_angle = direction
 	team = other.team}
 

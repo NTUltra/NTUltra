@@ -26,6 +26,7 @@ function scrEndOfRun(){
 		maxHpIncrease = 0;
 		globalMutationsChosen = 0;
 		canSave = false;
+		//canMultiCrown = false;
 		if opt_gamemode != 39
 			useSeed = false;
 		canSpawnInversionShards = false;

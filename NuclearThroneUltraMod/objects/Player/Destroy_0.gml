@@ -115,7 +115,7 @@ audio_stop_sound(sndChickenLoop)
 audio_stop_sound(sndChickenHeadlessLoop)
 
 //CROWN OF DEATH
-if crown = 3
+if scrIsCrown(3)
 {with enemy
 {if x > __view_get( e__VW.XView, 0 ) and y > __view_get( e__VW.YView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 my_health = 0}}
@@ -198,7 +198,7 @@ instance_create(x+random(50)-25,y+random(50)-25,IonImpact)
 
 
 //Crown of death
-if crown == 3
+if scrIsCrown(3)
 {
 	with instance_create(x,y,CrownOfDeathBoom)
 	{

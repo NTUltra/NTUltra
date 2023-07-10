@@ -1,8 +1,9 @@
-with Crown
-{
-	instance_destroy();	
-}
-instance_change(Crown,true)
+if !UberCont.canMultiCrown
+	with Crown
+	{
+		instance_destroy();	
+	}
+instance_change(FakeCrown,true)
 Player.crownpoints += 1
 if Player.curse = 1 or Player.bcurse = 1 or Player.ccurse = 1
 {

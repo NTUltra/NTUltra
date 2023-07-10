@@ -1,7 +1,7 @@
 /// @description COLLECT HP
 if !instance_exists(Player)
 	exit;
-if Player.crown == 32//Crown of misfortune
+if scrIsCrown(32)//Crown of misfortune
 {
 	scrCollectAmmo(1);
 }

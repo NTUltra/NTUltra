@@ -6,7 +6,7 @@ if !instance_exists(GenCont)
 var num = 1;
 
 
-if other.crown = 4
+if scrIsCrown(4)
 num += 1
 if other.ultra_got[85]=1//ROGUE SUPER PORTAL STRIKE ULTRA
 num*=2;

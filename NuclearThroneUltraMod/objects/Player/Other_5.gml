@@ -109,7 +109,7 @@ if ((ultra_got[40] = 1 || (ultra_got[47] && altUltra)) && canHeal)
 }
 
 //CROWN OF LIFE
-if crown = 2 && canHeal
+if scrIsCrown(2) && canHeal
 {
 	if ultra_got[62] && altUltra //Living armour
 	{
@@ -134,15 +134,15 @@ if crown = 2 && canHeal
 	my_health = max(maxhealth,my_health + overheal);
 	*/
 }
-else if crown == 30
+else if scrIsCrown(30)
 {
 	kills = max(0,kills-20);
 }
-else if crown == 31
+else if scrIsCrown(31)
 {
 	kills += 20;
 }
-else if crown == 22//Crown of luck
+else if scrIsCrown(22)//Crown of luck
 {
 	
 	if ultra_got[62] && altUltra //Living armour
@@ -162,7 +162,7 @@ if (instance_exists(WeaponChest) or instance_exists(BigWeaponChest) && area != 1
 }
 if area == 1 && subarea == 1 & loops == 0
 	nochest = -1;
-if crown == 15
+if scrIsCrown(15)
 {
 	if ultra_got[31]
 	{
@@ -637,7 +637,7 @@ if (yungCuzCskin > 2)
 }
 
 
-if crown = 4 && area !=100 && race = 15
+if scrIsCrown(4) && area !=100 && race = 15
 rushcrownlevels++;
 
 if rushcrownlevels=5

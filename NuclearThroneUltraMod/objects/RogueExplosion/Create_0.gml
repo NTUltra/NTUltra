@@ -9,7 +9,7 @@ if instance_exists(Player)
 dmg = 9;
 
 //Crown of death
-if instance_exists(Player) && Player.crown == 3 && object_index == RogueExplosion
+if instance_exists(Player) && scrIsCrown(3) && object_index == RogueExplosion
 {
 	var am = 3;
 	var dis = 34;

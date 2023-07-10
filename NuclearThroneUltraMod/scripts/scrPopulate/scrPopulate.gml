@@ -5,7 +5,7 @@ function scrPopulate() {
 	return;
 	
 	var hard = Player.hard;
-	if Player.crown == 24//Crown of sloth backup difficulty
+	if scrIsCrown(24)//Crown of sloth backup difficulty
 		hard = max(8 + (Player.loops*3),hard);
     //setting area and spawning some enemies
     with Floor {
@@ -452,12 +452,12 @@ function scrPopulate() {
 
         //CROWN OF BLOOD
         if instance_exists(Player) {
-            if (Player.crown = 7 and random(8 + min(40,hard)) < min(30,hard) and point_distance(x, y, Player.x, Player.y) > 210 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280))
+            if (scrIsCrown(7) and random(8 + min(40,hard)) < min(30,hard) and point_distance(x, y, Player.x, Player.y) > 210 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280))
             {
 				scrPopEnemies()
 			}
 				
-            if (Player.crown == 28 and random(8 + min(40,hard)) < min(30,hard) and point_distance(x, y, Player.x, Player.y) > 100 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280))
+            if (scrIsCrown(28) and random(8 + min(40,hard)) < min(30,hard) and point_distance(x, y, Player.x, Player.y) > 100 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280))
             {    
 				repeat(3)
 					scrPopEnemies()

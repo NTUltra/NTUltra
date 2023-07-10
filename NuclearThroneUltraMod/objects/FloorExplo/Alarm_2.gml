@@ -52,7 +52,7 @@ if instance_exists(Player) && Player.skill_got[26]
 		var dropRateBuff = Player.skill_got[4]*(0.45+Player.betterrabbitpaw) 
 		+ rebelBuff
 		+ (Player.skill_got[28]*(Player.rage*0.0011))
-		if Player.crown == 21 //Crown of risk
+		if scrIsCrown(21) //Crown of risk
 		{
 			if Player.my_health >= floor(Player.maxhealth*0.75)
 			{

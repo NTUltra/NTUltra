@@ -77,7 +77,7 @@ if instance_exists(Player)
 	if wantVanAmount > 2
 		verticalVans = true;
 	wantVanAmount = min(wantVanAmount,6);
-	if Player.crown == 16 //CROWN OF POPO
+	if scrIsCrown(16) //CROWN OF POPO
 	{
 		wantVanAmount ++;
 		canSpawnPopoThisManyTimes ++;
@@ -85,7 +85,7 @@ if instance_exists(Player)
 	}
 	wantVanAmount += UberCont.extraVan;
 	vanDelay = max(100,vanDelay - ((wantVanAmount-1)*40));
-	if Player.crown==10//crown of difficulty
+	if scrIsCrown(10)//crown of difficulty
 	{
 		vanDelay*=0.7;
 	}

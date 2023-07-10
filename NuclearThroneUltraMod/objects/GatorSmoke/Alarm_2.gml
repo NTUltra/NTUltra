@@ -16,5 +16,5 @@ gunangle = random(360)
 instance_destroy(id,false);
 with instance_create(x,y,Gator) {
 	my_health = other.my_health;
-	alarm[1] = max(alarm[1] ,5 + random(5));
+	alarm[1] = max(other.alarm[1]+5,5 + random(5));
 }

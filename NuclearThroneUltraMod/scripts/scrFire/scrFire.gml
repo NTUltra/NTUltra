@@ -27,12 +27,13 @@ function scrFire() {
 		    }
 		}
 	}
-	if Player.crown == 33 && object_index == Player {
+	if scrIsCrown(33) && object_index == Player {
 		//CROWN OF ECHO
-		crown = 0;
+		var currentCrown = crown;
+		crown = [];
 		scrFire();
 		reload += wep_load[wep]*0.8;
-		crown = 33;
+		crown = currentCrown;
 	}
 	// ROIDS THRONE BUTT
 	//when firing both weapon more chance to giev other weapon ammo
@@ -5009,12 +5010,12 @@ function scrFire() {
 						speed *= 1.1;
 						speedAdd += 1.5;
 					}
-					if other.crown == 23//Crown of speed
+					if scrIsCrown(23)//Crown of speed
 					{
 						speed *= 1.12;
 						speedAdd += 4;
 					}
-					if other.crown == 24//Crown of sloth
+					if scrIsCrown(24)//Crown of sloth
 					{
 						speed *= 0.92;
 						speedAdd = max(0,speedAdd-1);
@@ -5085,7 +5086,7 @@ function scrFire() {
 		if wep_rad[wep]>0
 			rad+=wep_rad[wep]*0.4;
 	}
-	if Player.crown == 27//DISCO FEVER!
+	if scrIsCrown(27)//DISCO FEVER!
 	{
 	draw_set_blend_mode(bm_add);
 	__background_set_colour( (make_color_hsv(random(255),255,255)) )

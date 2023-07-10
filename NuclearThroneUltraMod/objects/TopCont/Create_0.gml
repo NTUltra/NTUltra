@@ -10,7 +10,7 @@ if !instance_exists(BGFXLayer)
 	instance_create(x,y,BGFXLayer);
 if instance_exists(Player)
 {
-	if Player.crown == 19
+	if scrIsCrown(19)
 	{
 		darkness = 1
 		alarm[2] = 2;

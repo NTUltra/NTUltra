@@ -2,7 +2,7 @@ var area;
 if instance_exists(Player)
 {
 	area = Player.area
-	if Player.crown == 25
+	if scrIsCrown(25)
 	{	
 		instance_destroy(id,false);
 		if !place_meeting(x,y,FloorExplo)

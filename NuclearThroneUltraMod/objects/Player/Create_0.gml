@@ -206,7 +206,7 @@ else if instance_exists(CrownIcon)
 else if instance_exists(PlayerSpawn)
 	crown = PlayerSpawn.crown;
 else
-    crown = 1;
+    crown = [1];
 
 //AREA STUFF
 area = 1
@@ -465,7 +465,6 @@ if UberCont.crown_start[r] && !instance_exists(PlayerSpawn) && !scrIsGamemode(25
 	with UberCont
 		alarm[2] = 0;
 	crownpoints = 1;
-	instance_create(x,y,Crown)
 }
 
 if scrIsGamemode(25) {

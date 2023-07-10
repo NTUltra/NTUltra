@@ -20,7 +20,7 @@ if Player.RadMony
 {
 sprite_index=sprRadMony;
 }
-if Player.crown = 4{ alarm[0] /= 3}
+if scrIsCrown(4){ alarm[0] /= 3}
 
 if Player.race = 15{ alarm[0] *= 0.6}//atom
 

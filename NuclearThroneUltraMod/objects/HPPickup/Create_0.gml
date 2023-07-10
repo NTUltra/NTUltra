@@ -11,12 +11,12 @@ if instance_exists(Player)
 		//LIVING ARMOUR
 		isArmour = true;
 		sprite_index = sprArmourPickup;
-		if Player.crown == 32//Misfortune
+		if scrIsCrown(32)//Misfortune
 		{
 			sprite_index = sprArmourAmmo;
 		}
 	}
-	else if Player.crown == 32//Misfortune
+	else if scrIsCrown(32)//Misfortune
 	{
 		sprite_index = sprHPAmmo;
 	}

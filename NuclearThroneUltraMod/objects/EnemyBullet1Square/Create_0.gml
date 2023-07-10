@@ -6,4 +6,5 @@ dmg = 3
 if scrIsHardMode()//HARD MODE
 	dmg = 4;
 
+depth = -2;
 alarm[3] = 240;

@@ -17,7 +17,7 @@ if instance_exists(Player)
 	{
 		dmg += 3;
 	}
-	if Player.crown == 3 && object_index == PopoExplosion
+	if scrIsCrown(3) && object_index == PopoExplosion
 	{
 		var am = 3;
 		var dis = 42;

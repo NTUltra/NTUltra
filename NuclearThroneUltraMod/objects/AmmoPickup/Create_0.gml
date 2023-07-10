@@ -18,7 +18,7 @@ if sprite_index == sprAmmo {
 		{
 			curselevel --;	
 		}
-		if  Player.crown == 32//Misfortune
+		if scrIsCrown(32)//Misfortune
 		{
 			sprite_index = sprHPAmmo;
 			if Player.ultra_got[62] && Player.altUltra// living armour

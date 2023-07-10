@@ -143,10 +143,10 @@ function scrEnemyDeathEvent(){
 			if ultra_got[77] && !altUltra//business hog prosperity
 				other.raddrop += 2;
 
-			if crown = 7
+			if scrIsCrown(7)
 			other.raddrop=round(other.raddrop*0.65);
 
-			if crown == 28
+			if scrIsCrown(28)
 			{
 				other.raddrop=max(choose(0,1),floor(other.raddrop*0.06));
 				var splatDir = random(360);

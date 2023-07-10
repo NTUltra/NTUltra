@@ -4,9 +4,9 @@ if instance_exists(Player)
 {
 	if Player.skill_got[30] == 1
 		modBoost += 0.2;
-	if Player.crown == 23//Crown of speed
+	if scrIsCrown(23)//Crown of speed
 		mxSpd += 0.4;
-	if Player.crown == 24//Crown of sloth
+	if scrIsCrown(24)//Crown of sloth
 		mxSpd -= 0.4;
 }
 if Mod1 == 11

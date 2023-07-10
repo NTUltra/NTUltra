@@ -14,7 +14,7 @@ scrRaces()
 scrCrowns()
 scrGameModes();
 race = 0
-crown = 1
+crown = [1];
 
 char[0] = instance_create(64,64,Campfire)
 char[0].num = 0

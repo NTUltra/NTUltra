@@ -62,7 +62,7 @@ function scrDrawGameOver() {
 		instance_destroy();
 	snd_play(sndMutant0Cnfm)
 	race = UberCont.racepick
-	crown = 1
+	crown = [1]
 	with all
 	{
 	if id != UberCont.id and persistent = true && id != Cursor.id
@@ -85,8 +85,8 @@ function scrDrawGameOver() {
 		ranChar = true;
 		do race = 1+irandom(racemax-1) until race_have[race] = 1
 	}
-	if crown = 0
-	crown = ceil(random(crownmax))
+	if scrIsCrown(0)
+		crown = [ceil(random(crownmax))]
 	with instance_create(x,y,GenCont)
 	{race = other.race
 	crown = other.crown}

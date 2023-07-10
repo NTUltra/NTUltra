@@ -151,6 +151,7 @@ maxHpIncrease = 0;
 levelIncrease = 0;
 savedSeed = 0;
 canSave = false;
+canMultiCrown = true;
 encrypted_run_data = {}
 
 //Aim overwrite

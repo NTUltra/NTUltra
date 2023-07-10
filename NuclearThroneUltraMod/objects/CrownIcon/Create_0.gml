@@ -14,3 +14,4 @@ area=Player.area;
 else
 race=0;
 
+canReAdd = false;

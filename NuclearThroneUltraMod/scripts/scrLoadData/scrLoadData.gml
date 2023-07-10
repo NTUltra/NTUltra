@@ -15,7 +15,7 @@ function scrLoadData() {
 	dir += 1;}
 
 	dir=0
-	repeat(crownmax+11)
+	repeat(crownmax + secretcrownmax)
 	{
 	crown_used[dir] = ini_read_real("DATA","crown_used"+string(dir),0);
 	dir++;

@@ -32,7 +32,7 @@ if instance_exists(Player)
 	x = 10016
 	y = 10016
 	}
-	if Player.crown == 25//Crown of freedom copy colour of floorexplo
+	if scrIsCrown(25)//Crown of freedom copy colour of floorexplo
 	{
 		switch (Player.area)
 		{

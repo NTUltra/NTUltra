@@ -5,9 +5,9 @@ if instance_exists(Player)
 	with Player
 	{
 		var add = 1;
-		if crown == 4
+		if scrIsCrown(4)
 			add += 0.18;
-		else if crown == 18
+		else if scrIsCrown(18)
 			add += 0.5;
 		if UberCont.radUp
 			add += 0.15;

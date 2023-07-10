@@ -11,7 +11,7 @@ typ = 0//2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 image_speed = 0.38;
 friction = 0.12
 image_angle = random(360)
-
+depth = 0;
 freezetime = 2;
 
 dmg=3;

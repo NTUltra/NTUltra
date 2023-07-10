@@ -8,7 +8,7 @@ function EnemyHealthAdjustments(){
 		maxhealth *= 1 + (clamp(Player.loops-1,0,7)*0.1);//0.15
 		if scrIsHardMode()
 			maxhealth *= 1.1;
-		if Player.crown == 10
+		if scrIsCrown(10)
 			maxhealth *= 1.2;//Crown of difficulty
 		
 		my_health = maxhealth;
@@ -36,7 +36,7 @@ function EnemyHealthAdjustments(){
 			//hpReduction += round(maxhealth*0.2);
 			my_health *= 0.8;
 		}
-		if Player.crown == 22 && random(100 + floor(my_health*0.2)) < 25//Crown of luck
+		if scrIsCrown(22) && random(100 + floor(my_health*0.2)) < 25//Crown of luck
 		{
 			my_health = floor(my_health*0.1);
 			with instance_create(x,y,CrownOfLucked)

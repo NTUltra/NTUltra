@@ -14,7 +14,7 @@ if instance_exists(Player)
 {
 	if team != Player.team
 	{
-		if Player.crown == 23//Crown of speed
+		if scrIsCrown(23)//Crown of speed
 		{
 			alarm[4] += 5;
 		}
@@ -22,7 +22,7 @@ if instance_exists(Player)
 		{
 			alarm[4] -= 10;
 		}
-		if Player.crown == 24//Crown of sloth
+		if scrIsCrown(24)//Crown of sloth
 		{
 			alarm[4] -= 5;
 		}

@@ -9,7 +9,7 @@ function scrLoadRun(){
 		UberCont.loadedRun = true;
 	    with instance_create(x,y,GenCont)
 	    {race = 1
-	    crown = 2}
+	    crown = [2]}
 		with UberCont {
 			lastwishused=false;
 			routeString = "";
@@ -43,6 +43,8 @@ function scrLoadRun(){
 				UberCont.lastSaveLoop = encryptedRun.loops;
 				Player.crown = encryptedRun.crown;
 				GenCont.crown = encryptedRun.crown;
+				if !is_array(GenCont.crown)
+					GenCont.crown = [GenCont.crown];
 				Player.ammo[0] = encryptedRun.ammo[0];
 				Player.ammo[1] = encryptedRun.ammo[1];
 				Player.ammo[2] = encryptedRun.ammo[2];
@@ -240,6 +242,9 @@ function scrLoadRun(){
 					Player.phoenixrevives = encryptedRun.phoenixrevives;
 				if variable_struct_exists(encryptedRun, "globalMutationsChosen")
 					UberCont.globalMutationsChosen = encryptedRun.globalMutationsChosen;
+				if variable_struct_exists(encryptedRun, "canMultiCrown")
+					UberCont.canMultiCrown = encryptedRun.canMultiCrown;
+				
 					
 			}
 			with Player
