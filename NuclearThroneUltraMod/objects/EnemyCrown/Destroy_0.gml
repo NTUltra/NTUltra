@@ -1,9 +1,8 @@
 /// @description Dead
-with instance_create(x,y,Shell)
+event_inherited();
+scrDrop(28,0);
+with InvertedCrownGlutton
 {
-	direction= other.direction;
-	speed = other.speed + 3;
-	sprite_index = other.sprite_index;
-	image_index = 0;
-	image_speed = 0;
+	alarm[1] += 10;
+	tempchance += 2;
 }

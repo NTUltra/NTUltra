@@ -1,17 +1,18 @@
-raddrop = 2
-maxhealth = 4
+raddrop = 0
+maxhealth = 21;
 meleedamage = 0
 mySize = 1
 
 event_inherited();
-
+creator = noone;
+scrInitDrops(1);
+snd_play(sndGluttonSpawnCrown,0.02);
 spr_idle = sprCrown0Idle
 spr_walk = sprCrown0Walk
 
 snd_hurt = sndCrownRandom
 snd_dead = sndCrownRandom
 
-newThing = 1
 targetx = x
 targety = y
 

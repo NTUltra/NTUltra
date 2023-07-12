@@ -1,6 +1,6 @@
-raddrop = 16
+raddrop = 12
 maxhealth = 40
-meleedamage = 7;
+meleedamage = 4;
 mySize = 3
 
 event_inherited()
@@ -18,7 +18,6 @@ snd_melee = sndScorpionMelee
 //behavior
 walk = 0
 alarm[1] = 30+random(90)
-wkick = 0
 actTime = 14;
 gunangle = 0;
 acc = 1;

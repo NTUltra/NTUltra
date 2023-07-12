@@ -1,6 +1,6 @@
 /// @description Spray
 snd_play(sndScorpionFire);
-alarm[3] = 20;
+alarm[3] = sprayTimer;
 var angle = direction;
 var ps = projectileSpeed;
 repeat(projectileAmount)

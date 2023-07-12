@@ -33,7 +33,7 @@ if area == 117 || area == 123 || rain//Mushroom rain
 	repeat(2)
 	instance_create(__view_get( e__VW.XView, 0 )+random(__view_get( e__VW.WView, 0 )*2)-__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+random(__view_get( e__VW.HView, 0 )*2)-__view_get( e__VW.HView, 0 )/2,RainDrop)
 }
-if area == 3 || heavyrain
+if area == 3 || heavyrain || area == 129
 {
 	alarm[0] = 1
 	repeat(3)

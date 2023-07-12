@@ -10,7 +10,7 @@ canSpawnSwarm = false
 if instance_exists(Player) 
 {
 	area = Player.area
-	if Player.crown != 25
+	if Player.crown != 25 && !instance_exists(WallRemover)
 	{
 		event_perform(ev_alarm,2);
 		event_perform(ev_alarm,0);
@@ -151,6 +151,9 @@ sprite_index=sprFloor127Explo;
 break;
 case 128:
 sprite_index=sprFloor128Explo;
+break;
+case 129:
+sprite_index=sprFloor129Explo;
 break;
 default:
 sprite_index=sprFloor0Explo;

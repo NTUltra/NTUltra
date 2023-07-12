@@ -1371,12 +1371,12 @@ function scrPopEnemies() {
 			instance_create(x,y,IDPDSpawn);	
 	}
 	//Crown Courtyard
-    if spawnarea = 128 {
+    if spawnarea = 128{
 		if loops > 0 {
-			if instance_number(enemy) < 1 || random(100) < 75
+			if instance_number(enemy) < 1 || random(100) < 60
 			{
 		        if styleb = 1 {
-		            instance_create(x + 16, y + 16, choose(PalaceGuardian, CrownGuardian, CourtyardTank, CourtyardTank))
+		            instance_create(x + 16, y + 16, choose(PalaceGuardian, PalaceGuardian, CourtyardTank, CourtyardTank))
 		        }
 		        else {
 		            instance_create(x + 16, y + 16, choose(Raven, Raven, Raven, Exploder, CourtyardGuardian, GhostGuardian, CourtyardGuardian, CourtyardGuardian, CourtyardTank))
@@ -1384,13 +1384,37 @@ function scrPopEnemies() {
 			}
 		} else
 		{
-			if instance_number(enemy) < 1 || random(100) < 75
+			if instance_number(enemy) < 1 || random(100) < 60
 			{
 		        if styleb = 1 {
 		            instance_create(x + 16, y + 16, choose(CourtyardGuardian, CourtyardGuardian, CourtyardTank, CourtyardTank))
 		        }
 		        else {
 					instance_create(x + 16, y + 16, choose(Raven, Raven, Raven, Raven, Exploder, CourtyardGuardian, CourtyardGuardian, CourtyardGuardian, CourtyardTank))
+		        }
+			}
+		}
+    }
+	if spawnarea == 129{
+		if loops > 0 {
+			if instance_number(enemy) < 1 || random(100) < 40
+			{
+		        if styleb = 1 {
+		            instance_create(x + 16, y + 16, choose(InvertedPalaceGuardian, InvertedPalaceGuardian, InvertedCourtyardTank, InvertedCourtyardTank))
+		        }
+		        else {
+		            instance_create(x + 16, y + 16, choose(InvertedRaven, InvertedRaven, InvertedRaven, InvertedExploder, InvertedCourtyardGuardian, InvertedGhostGuardian, InvertedCourtyardGuardian, InvertedCourtyardGuardian, InvertedCourtyardTank))
+		        }
+			}
+		} else
+		{
+			if instance_number(enemy) < 1 || random(100) < 40
+			{
+		        if styleb = 1 {
+		            instance_create(x + 16, y + 16, choose(InvertedCourtyardGuardian, InvertedCourtyardGuardian, InvertedCourtyardTank, InvertedCourtyardTank))
+		        }
+		        else {
+					instance_create(x + 16, y + 16, choose(InvertedRaven, InvertedRaven, InvertedRaven, InvertedRaven, InvertedExploder, InvertedCourtyardGuardian, InvertedCourtyardGuardian, InvertedCourtyardGuardian, InvertedCourtyardTank))
 		        }
 			}
 		}

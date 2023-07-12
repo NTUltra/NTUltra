@@ -1,4 +1,6 @@
 instance_create(x,y,CrownPed)
+if UberCont.canMultiCrown
+	sprite_index = sprCrownMultiPickup;
 var visits = 0;
 if instance_exists(Player)
 	visits = Player.crownvisits-1;
@@ -93,9 +95,12 @@ if instance_exists(Crown){
 ang1 = choose(0,90,180,270)
 do ang2 = choose(0,90,180,270) until ang1 != ang2
 
-
-instance_create(x+lengthdir_x(128,ang1),y+lengthdir_y(128,ang1),GuardianStatue)
-instance_create(x+lengthdir_x(128,ang2),y+lengthdir_y(128,ang2),GuardianStatue)}
+	if !UberCont.canMultiCrown
+	{
+		instance_create(x+lengthdir_x(128,ang1),y+lengthdir_y(128,ang1),GuardianStatue)
+		instance_create(x+lengthdir_x(128,ang2),y+lengthdir_y(128,ang2),GuardianStatue)
+	}
+}
 
 if Player.loops > 3 && !UberCont.hasFoughtInvadingThrone
 {

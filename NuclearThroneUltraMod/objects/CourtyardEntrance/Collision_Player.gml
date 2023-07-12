@@ -27,7 +27,4 @@ if KeyCont.key_pick[other.p] = 1
 		x = other.x;
 		y = other.y;
 	}
-	Player.lastarea = nav;
-	if textScaleX == -1
-		Player.inverted = true;
 }

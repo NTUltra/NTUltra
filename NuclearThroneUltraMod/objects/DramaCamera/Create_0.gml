@@ -59,6 +59,8 @@ if instance_exists(Player) && !instance_exists(SurvivalWave)
 		song = musBushBoxBoss;
 	else if area == 119 || area == 120
 		song = musBoss4B;
+	else if area == 128 || area == 129
+		song = musCrownGluttonBoss;
     snd_loop(song)
     snd_loop(amb)
     //audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
@@ -392,6 +394,12 @@ else if Player.area = 128
 	name = "CROWN GLUTTON";
 	if random(100)<1
 		name = choose("CROWN CROWN CROWN","MULTI CROWN");
+}
+else if Player.area = 129
+{
+	name = "INVERTED CROWN GLUTTON";
+	if random(80)<1
+		name = choose("AGAIN!","CROWN AGAIN");
 }
 
 }

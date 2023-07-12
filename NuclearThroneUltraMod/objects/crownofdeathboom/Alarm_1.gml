@@ -4,8 +4,8 @@ snd_play(sndExplosionXL);
 instance_create(x,y,GreenExplosion);
 am = 3;
 amPlus = 4;
-dis = 32;
-disPlus = 32;
+dis = disStep;
+disPlus = disStep;
 rings = 4;
 if alarm[0] < 10
 {

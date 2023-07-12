@@ -21,5 +21,5 @@ else
 event_inherited();
 if place_meeting(x,y,Floor) || place_meeting(x,y,FloorExplo)
 {
-	scrDrop(15,0)
+	scrDrop(18,0)
 }

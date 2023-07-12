@@ -9,6 +9,4 @@ x += 16;
 y += 16;
 name = "EXIT TO COURTYARD";
 nav = 0;
-textScaleX = 1;
-textScaleY = 1;
 textAngle = 0;

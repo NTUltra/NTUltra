@@ -22,12 +22,11 @@ actTime = 17;
 acc = 1;
 projectileSpeed = 3;
 maxSpeed = 4;
-isInverted = false;
 
 maxammo = 3;
 ammo = maxammo;
 angleStep = 360/maxammo;
 angle = 0;
-distance = 128;
+distance = 132;
 originX = x;
 originY = y;

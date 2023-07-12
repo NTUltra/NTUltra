@@ -30,7 +30,7 @@ function scrCollectHP(num = 2){
 		}
 		with instance_create(x,y,SmallChestPickup)
 		{
-			sprite_index = sprPickupArmourPickup	
+			sprite_index = sprPickupArmourPickup
 		}
 		snd_play(sndArmourHeal);
 	}

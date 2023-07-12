@@ -47,7 +47,7 @@ function scrGenerateFloorMaker(limiter) {
 		else if Player.area = 117 || Player.area == 124
 		goal = 140+s
 		else if (Player.area = 6||Player.area=112) && Player.subarea=2//LABS BOSS
-		goal=1;
+		goal = 1;
 		else if Player.area == 9 && Player.subarea < 3
 		goal = 130+s
 		else if Player.area == 118 && Player.subarea < 3

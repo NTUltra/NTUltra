@@ -1,11 +1,16 @@
-scrDrop(15,0);
-scrDrop(100,10);
-
-event_inherited()
-instance_create(x,y,BigWallBreak);
-repeat( 6 + irandom(3))
-	with instance_create(x,y,Shell)
+event_inherited();
+if instance_exists(Player)
+{
+	with instance_create_depth(x,y,depth,EnemyCrownOfInversion)
 	{
-		sprite_index = sprCrownParticle;
-		motion_add(random(360),3 + random(4));
+		team = other.team;
+		creator = Player;
 	}
+}
+else
+{
+	with instance_create_depth(x,y,depth,QueueSecondWaveGlutton)
+	{
+		team = other.team;	
+	}
+}

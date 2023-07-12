@@ -35,7 +35,7 @@ function scrNextLevel() {
 		lastarea = area
 	}
 	else if subarea == 1 || area = 105 || area = 106 || area = 107 || area = 101 || area = 110 || area = 111 || area = 112 || area = 103 || area = 109 || area = 113 || area == 114 || area = 108 || area == 115 || area == 117 || area == 118
-	|| area == 121 || area == 122 || area == 123 || area == 124 || area == 125 || area == 126 || area == 128
+	|| area == 121 || area == 122 || area == 123 || area == 124 || area == 125 || area == 126 || area == 128 || area == 129
 	{
 		//Inverted savanna
 		if area = 121//bring to inverted mushroom
@@ -187,8 +187,8 @@ function scrNextLevel() {
 			}
 			exit;
 		}
-		//Jungle
-		if area == 128 && subarea > 1
+		//Courtyard
+		if (area == 128 || area == 129) && subarea > 1
 		{
 			// Back to vault
 			area = 100;
@@ -619,7 +619,7 @@ function scrNextLevel() {
 	&& !(area == 5 && subarea == 1)//Frozen city 1
 	)
 	{
-		if area == 100
+		if area == 100 || area == 128 || area == 129
 		{
 			if crown == 24
 				hard -= 0.5;

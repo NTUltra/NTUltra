@@ -28,6 +28,8 @@ function scrShadows() {
 	draw_sprite_ext(sprite_index,image_index,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 )+8,image_xscale,-1,0,c_black,1)
 	with Crown
 	draw_sprite(shd16,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 )+3)
+	with EnemyCrown
+	draw_sprite(shd16,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 )+3)
 	with prop
 	{
 		draw_sprite(shadowSprite,0,x-__view_get( e__VW.XView, 0 )+shadowXoffset,y-__view_get( e__VW.YView, 0 )+shadowYoffset)
@@ -79,6 +81,8 @@ function scrShadows() {
 	draw_sprite(shd32,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 )+6)
 	with CourtyardGuardian
 	draw_sprite(shd16,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 )+10)
+	with InvertedCrownGlutton
+	draw_sprite(shd32,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 )+6)
 	with MaggotInverted
 	draw_sprite_ext(shd16,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),1,1,image_angle,c_white,1)
 	with Scorpion

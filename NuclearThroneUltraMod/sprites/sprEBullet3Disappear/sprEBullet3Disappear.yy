@@ -63,7 +63,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f06e986a-25c1-43fc-b99d-18d9f8bf63a9","path":"sprites/sprEBullet3Disappear/sprEBullet3Disappear.yy",},},},"Disabled":false,"id":"c401f6b2-1183-43bd-a987-d39bf83d75a8","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 8,
     "yorigin": 8,

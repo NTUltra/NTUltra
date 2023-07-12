@@ -22,7 +22,7 @@ if target > 0{
 			originY = y;
 			with CourtyardGuardian
 			{
-				alarm[1] += actTime*3;
+				alarm[1] += actTime*4;
 				walk = max(actTime, walk);
 				motion_add(point_direction(x,y,target.x,target.y) + 180,acc*2);
 			}

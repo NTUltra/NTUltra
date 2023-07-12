@@ -6,7 +6,7 @@ function scrRavenLift_old() {
 	motion_add(random(360),3+random(1))
 	}
 	if x >__view_get( e__VW.XView, 0 ) and y > __view_get( e__VW.YView, 0 ) and x<__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	snd_play(sndRavenLift)
+	snd_play(sndRavenLift,0.01,true)
 	z = 0
 	scrTarget()
 	if target > 0

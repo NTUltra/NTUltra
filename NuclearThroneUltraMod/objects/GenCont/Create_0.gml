@@ -150,6 +150,9 @@ if instance_exists(Player)
 			case 128:
 				__background_set_colour( make_color_rgb(15, 25, 13) )
 			break;
+			case 129:
+				__background_set_colour( make_color_rgb(33, 4, 4) )
+			break;
 		}
 	}
 	else
@@ -249,6 +252,8 @@ if instance_exists(Player)
 		__background_set_colour( make_color_rgb(246, 198,255) )
 		else if Player.area == 128//Crown Courtyard
 			__background_set_colour( make_color_rgb(44, 43, 19) )
+		else if Player.area == 129//Inverted Crown Courtyard
+			__background_set_colour( make_color_rgb(58, 34, 46) )
 	}
 }
 else

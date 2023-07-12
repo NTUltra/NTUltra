@@ -533,9 +533,29 @@ function scrPopEnemies1vs1(area, subarea, loops){
 	{
 		enem = InvertedGraveyardBreeder;
 	}
-	else if area == 128 // Crown Courtyard
+	else if area == 128 // Courtyard
 	{
-		enem = CrownGuardian;
+		if subarea == 1
+		{
+			enem = CourtyardTank;
+		}
+		else if subarea == 2
+		{
+			enem = CrownGlutton;
+			buff = 1.4*clamp(1+loops*0.5,1,10);
+			sBuff = 1.2;
+		}
+	}
+	else if area == 129 // Inverted Courtyard
+	{
+		if subarea == 1
+		{
+			enem = InvertedCourtyardTank;
+		}
+		else if subarea == 2
+		{
+			enem = InvertedCourtyardGuardian;
+		}
 	}
 	
 	if enem != noone

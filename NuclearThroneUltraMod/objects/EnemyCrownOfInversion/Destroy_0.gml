@@ -1,0 +1,71 @@
+/// @description Transform area into inverted area
+event_inherited();
+snd_play(sndCrownBlood);
+instance_create(x,y,Flash);
+__background_set_colour( make_color_rgb(58, 34, 46) );
+with BackCont
+{
+	area = 129;	
+}
+with Player
+{
+	area = 129;	
+}
+with FloorExplo
+{
+	sprite_index = sprFloor129Explo;
+}
+with Wall
+{
+	topspr=sprWall129Top;
+	outspr=sprWall129Out;
+	sprite_index=sprWall129Bot;
+}
+with Top
+{
+	sprite_index=sprWall129Trans;
+}
+with TopSmall
+{
+	sprite_index=sprWall129Trans;
+}
+with Player
+{
+	if !collision_point(x,y,Floor,false,false)
+	{
+		var n =	instance_nearest_not_one_of_these(x,y,Floor,[FloorExplo]);
+		x = n.x + 16;
+		y = n.y + 16;
+		instance_create(x,y,WallBreak);
+		scrForcePosition60fps();
+	}
+}
+with Floor
+{
+	spawnarea = 129;
+	if object_index != FloorExplo
+	{
+		if styleb
+			sprite_index = sprFloor129B;
+		else
+			sprite_index = sprFloor129;
+		if point_distance(x, y, Player.x, Player.y) > 256
+			scrPopEnemies();
+	}
+}
+with MusCont
+{
+	audio_stop_sound(song);
+	song = mus129;
+	snd_loop(song);
+	audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
+    
+    audio_sound_gain(song,max(0,sqrt(UberCont.opt_musvol)),0);
+    
+    audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
+}
+with BackCont
+{
+	heavyrain = true;	
+}
+instance_create(x,y,WantBoss);

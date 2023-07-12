@@ -1,4 +1,4 @@
-/// @description INITALE DANCE PROTOCOL
+/// @description INITIATE DANCE PROTOCOL
 with MusCont
 {
 	audio_pause_sound(song);

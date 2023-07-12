@@ -64,6 +64,10 @@ if target > 0 && instance_exists(target)
 			{
 				instance_create(x,y,CrownGlutton);
 			}
+			else if other.area == 129
+			{
+				instance_create(x,y,InvertedCrownGlutton);
+			}
 			else
 			{
 			    if other.area=3 && other.loops>0 && instance_exists(Floor)//scrapyard

@@ -1,3 +1,4 @@
+event_inherited();
 if instance_exists(creator)
 {if point_distance(x,y,creator.x,creator.y) > 96 
 {
@@ -18,9 +19,3 @@ if walk > 0
 walk -= 1
 motion_add(direction,1)
 }
-
-if speed > 0
-sprite_index = spr_walk
-else
-sprite_index = spr_idle
-

@@ -17,9 +17,14 @@ if instance_exists(Floor) && (!collision_point(x,y,Floor,false,false) || place_m
 		ny = nearest.y + 8;
 	}
 	var dir = point_direction(x,y,nx,ny);
-	motion_add(dir,acc*0.9);
+	motion_add(dir,acc*0.8);
 	if walk <= 0 && target > -1 && instance_exists(target)
 		motion_add(point_direction(x,y,target.x,target.y),acc*0.5);
+}
+else if walk > 0 && instance_exists(Wall)
+{
+	var nearest = instance_nearest(x,y,Wall)
+	motion_add(point_direction(x,y,nearest.x,nearest.y)+180,acc*0.5);
 }
 if speed > maxSpeed && my_health > 0
 	speed = maxSpeed

@@ -35,7 +35,7 @@ if instance_exists(Player){
 	{
 		friction = 0.3;
 	}
-if scrIsCrown(4) { alarm[0] /= 3}
+if scrIsCrown(4) { alarm[0] *= 0.34}
 
 if Player.race = 15{ alarm[0] *= 0.6}//atom
 
