@@ -11,6 +11,11 @@ if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+10 and UberCont.mouse__y <
 		scrSave();
     }
 var usedRandom = false;
+if keeper
+{
+	Player.crownpoints -= 1
+}
+else {
 if crown = 0
 {
 	usedRandom = true;
@@ -352,6 +357,7 @@ if oldcrown == 29
 			
 		maxhealth -= wantHealth;
 	}
+}
 }
 with CrownIcon
 instance_destroy()

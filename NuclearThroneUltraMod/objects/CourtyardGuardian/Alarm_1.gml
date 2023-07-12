@@ -5,7 +5,7 @@ if alarm[2] > 0
 scrTarget()
 if target > 0{
 	var dis = point_distance(target.x, target.y, x, y);
-    if dis > 48  && dis < 200 {
+    if dis > 48  && dis < 230 {
 		var ran = random(10);
 		
 		

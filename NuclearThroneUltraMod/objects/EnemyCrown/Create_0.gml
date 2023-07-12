@@ -4,6 +4,7 @@ meleedamage = 0
 mySize = 1
 
 event_inherited();
+alarm[10] = 0;
 creator = noone;
 scrInitDrops(1);
 snd_play(sndGluttonSpawnCrown,0.02);

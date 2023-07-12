@@ -89,7 +89,7 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 			
 				scrRaddrop(60);
 			}
-			if crown == 20 && ammoMultiple > 0//Crown of protection
+			if scrIsCrown(20) && ammoMultiple > 0//Crown of protection
 			{
 				ammoMultiple -= 2;
 				my_health += 1;
@@ -467,7 +467,7 @@ if skill_got[2] && tookHit && !exception
 }
 
 //Crown of Greed
-if crown == 18 && !exception
+if scrIsCrown(18) && !exception
 {
 	if tookHit && !instance_exists(GenCont) && !instance_exists(LevCont)
 	{
@@ -930,14 +930,14 @@ if my_health <= 0 && armour < 1
 		
 }
 
-if crown == 23//Crown of speed
+if scrIsCrown(23)//Crown of speed
 {
 	with enemy
 	{
 		speed *= 1.2;
 	}
 }
-else if crown == 24//Crown of sloth
+else if scrIsCrown(24)//Crown of sloth
 {
 	with enemy
 	{
@@ -962,7 +962,7 @@ if (!canHeal)
 }
 if alarm[3] > 0
 	snd_hurt = sndDamageNegate;
-if crown == 29
+if scrIsCrown(29)
 {
 	var wantHealth = 0
 	if wepmod1 != 0

@@ -329,6 +329,10 @@ breload = 0
 prevreload = 0;
 prevbreload = 0;
 prevcreload = 0;
+prev60reload = 0;
+prev60breload = 0;
+prev60creload = 0;
+
 queueshot = 0;
 bqueueshot = 0;
 cqueueshot = 0;

@@ -1,4 +1,6 @@
-scrCrowns()
+scrCrowns();
+depth = -999;
+keeper = false;
 room_speed = UberCont.normalGameSpeed;
 p = 0
 if instance_exists(Player)

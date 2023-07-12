@@ -994,15 +994,16 @@ function scrPowers() {
 	var d = 99999;
 	var mx = UberCont.mouse__x;
 	var my = UberCont.mouse__y;
-	with Floor
-	{
-		if object_index != FloorExplo
+	if !scrIsCrown(25)
+		with Floor
 		{
-			var nd = point_distance(x,y,mx,my)
-			if nd < d
-				d = nd
+			if object_index != FloorExplo
+			{
+				var nd = point_distance(x,y,mx,my)
+				if nd < d
+					d = nd
+			}
 		}
-	}
 	if (d < 300)
 	{
 		
@@ -1129,6 +1130,7 @@ function scrPowers() {
 	{
 		var mx = UberCont.mouse__x;
 		var my = UberCont.mouse__y;
+		if !scrIsCrown(25)
 		if place_meeting(x,y,Floor)
 		{
 			var triedFloors = [];
@@ -2567,7 +2569,7 @@ function scrPowers() {
 					l += 8;
 				}
 				if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y) > 16 {
-				    if place_meeting(xx,yy,Floor)&&!place_meeting(xx,yy,Wall)&&
+				    if (place_meeting(xx,yy,Floor) && !scrIsCrown(25))&&!place_meeting(xx,yy,Wall)&&
 					!place_meeting(xx,yy,VikingWall)
 				    {
 					    snd_play_2d(sndStatueHurt);

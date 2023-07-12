@@ -120,7 +120,7 @@ function scrGameModes() {
 	gamemode_unlock[16] = "REACH CRYSTAL CAVES ON 400% SCREENSHAKE";
 	gamemode_have[16] = 0;
 	gamemode_tip[16] = "SPIKES EVERYWHERE!";
-	gamemode_description[16] = "SPAWNS SPIKE TRAPS IN AREAS THAT DEAL DAMAGE";
+	gamemode_description[16] = "SPAWNS SPIKE TRAPS ACROSS EACH AREA THAT DEAL DAMAGE";
 	gamemode_nocombo[16] = [26,27,37,8];
 
 	gamemode[17] = "CHEATS";//
@@ -184,27 +184,27 @@ function scrGameModes() {
 	gamemode_have[25] = 0;
 	gamemode_tip[25] = "SURVIVAL ARENA!";
 	gamemode_description[25] = "SURVIVE IN A WAVE BASED ARENA";
-	gamemode_nocombo[25] = [6,8,10,18,20,21,26,27,36,37,40,42];
+	gamemode_nocombo[25] = [6,8,10,18,20,21,26,27,36,37,40,42,43];
 	gamemode[42] = "CUSTOM#SURVIVAL ARENA";
 	gamemode_unlock[42] = "REACH WAVE 4#IN SURVIVAL ARENA";
 	gamemode_have[42] = 0;
 	gamemode_tip[42] = "CUSTOM WAVES";
 	gamemode_description[42] = "\nLOAD IN A JSON FILE TO PLAY CUSTOMIZED WAVES IN SURVIVAL ARENA";
-	gamemode_nocombo[42] = [6,8,10,18,20,21,25,26,27,36,37,40];
+	gamemode_nocombo[42] = [6,8,10,18,20,21,25,26,27,36,37,40,42,43];
 	
 	gamemode[26] = "DAILY RACE";
 	gamemode_unlock[26] = "";
 	gamemode_have[26] = 1;
 	gamemode_tip[26] = "GOTTA GO FAST";
 	gamemode_description[26] = "COMPETE FOR THE FASTEST TIME IN THE LEADERBOARD, TIME ENDS WHEN YOU KILL THRONE II";
-	gamemode_nocombo[26] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,0,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41];
+	gamemode_nocombo[26] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,0,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,43];
 	
 	gamemode[27] = "DAILY SCORE";
 	gamemode_unlock[27] = "";
 	gamemode_have[27] = 1;
 	gamemode_tip[27] = "SWEATING";
 	gamemode_description[27] = "COMPETE FOR SCORE IN THE LEADERBOARD";
-	gamemode_nocombo[27] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,0,28,29,30,31,32,33,34,35,36,37,38,39,40,41];
+	gamemode_nocombo[27] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,0,28,29,30,31,32,33,34,35,36,37,38,39,40,41,43];
 	
 	gamemode[28] = "ALL MUTATION#CHOICES";
 	gamemode_unlock[28] = "TAKE EVERY REGULAR MUTATION#ATLEAST ONCE";
@@ -275,7 +275,7 @@ function scrGameModes() {
 	gamemode_have[37] = 1;
 	gamemode_tip[37] = "WHAT A WEEK";
 	gamemode_description[37] = "EACH WEEK OFFERS A DIFFERENT GAMEMODE. YOU CAN REPLAY THE WEEKLY THROUGHOUT THE WEEK TO IMPROVE YOUR SCORE";
-	gamemode_nocombo[37] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,27,28,29,30,31,32,33,34,35,36,0,38,39,40,41];
+	gamemode_nocombo[37] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,27,28,29,30,31,32,33,34,35,36,0,38,39,40,41,43];
 	
 	gamemode[38] = "SEEDED";
 	gamemode_unlock[38] = "USE PLANT'S SNARE#VERY RAPIDLY";
@@ -305,6 +305,13 @@ function scrGameModes() {
 	gamemode_description[41] = "ALL ENEMIES HAVE DOUBLE HP";
 	gamemode_nocombo[41] = [26,27,37,8,5];
 	
+	gamemode[43] = "MULTI-CROWN";
+	gamemode_unlock[43] = "AQUIRE THE MULTI-CROWN";
+	gamemode_have[43] = 0;
+	gamemode_tip[43] = "CROWN CROWN CROWN CROWN";
+	gamemode_description[43] = "START WITH THE ABILITY TO EQUIP MULTIPLE CROWNS AT ONCE";
+	gamemode_nocombo[43] = [25,42,26,27,37,8];
+	
 	/*
 	gamemode[38] = "ALL MUTATIONS#INFINITE LEVELS";
 	gamemode_unlock[38] = "TAKE A SECRET ULTRA MUTATION#ON THE GAMEMODE: ALL MUTATION CHOICES";
@@ -321,48 +328,49 @@ function scrGameModes() {
 	
 	var i = 0;
 	gamemodeOrder[i] = 0;
-	i++; gamemodeOrder[i] = 9;
-	i++; gamemodeOrder[i] = 34//35;
-	i++; gamemodeOrder[i] = 3;
-	i++; gamemodeOrder[i] = 38;
-	i++; gamemodeOrder[i] = 39;
-	i++; gamemodeOrder[i] = 1;
-	i++; gamemodeOrder[i] = 2;
-	i++; gamemodeOrder[i] = 31;
-	i++; gamemodeOrder[i] = 5;
-	i++; gamemodeOrder[i] = 41;
-	i++; gamemodeOrder[i] = 6;
-	i++; gamemodeOrder[i] = 20;
-	i++; gamemodeOrder[i] = 40;
+	i++; gamemodeOrder[i] = 9;//Casual
+	i++; gamemodeOrder[i] = 34//Hard;
+	i++; gamemodeOrder[i] = 32;//One hit wonder
+	i++; gamemodeOrder[i] = 21;//Loop start
+	i++; gamemodeOrder[i] = 18;//No elite idpd
+	i++; gamemodeOrder[i] = 3;//No HUD
+	i++; gamemodeOrder[i] = 39;//Gore galore
+	i++; gamemodeOrder[i] = 1;//One wep only
+	i++; gamemodeOrder[i] = 31;//Melee only
+	i++; gamemodeOrder[i] = 2;//Favourable build
+	i++; gamemodeOrder[i] = 5;//1hp equality
+	i++; gamemodeOrder[i] = 41;//Double enemy hp
+	i++; gamemodeOrder[i] = 25;//survival arena
+	i++; gamemodeOrder[i] = 42;//custom survival arena
+	i++; gamemodeOrder[i] = 8;//van fan
+	i++; gamemodeOrder[i] = 6;//Claustophobia
+	i++; gamemodeOrder[i] = 20;//Agoraphobia
+	i++; gamemodeOrder[i] = 40;//1vs1
+	i++; gamemodeOrder[i] = 33;//all deflector
 	i++; gamemodeOrder[i] = 10;//random areas
-	i++; gamemodeOrder[i] = 23;
-	i++; gamemodeOrder[i] = 11;
-	i++; gamemodeOrder[i] = 12;
-	i++; gamemodeOrder[i] = 13;
-	i++; gamemodeOrder[i] = 7;
-	i++; gamemodeOrder[i] = 14;
-	i++; gamemodeOrder[i] = 15;
-	i++; gamemodeOrder[i] = 8;
-	i++; gamemodeOrder[i] = 4;
-	i++; gamemodeOrder[i] = 19;
-	i++; gamemodeOrder[i] = 16;
-	i++; gamemodeOrder[i] = 21;
-	i++; gamemodeOrder[i] = 22;
-	i++; gamemodeOrder[i] = 25;
-	i++; gamemodeOrder[i] = 42;
-	i++; gamemodeOrder[i] = 24;
-	i++; gamemodeOrder[i] = 18;
-	i++; gamemodeOrder[i] = 30;
-	i++; gamemodeOrder[i] = 36;
-	i++; gamemodeOrder[i] = 32;
-	i++; gamemodeOrder[i] = 29;
-	i++; gamemodeOrder[i] = 33;
-	i++; gamemodeOrder[i] = 28;
-	i++; gamemodeOrder[i] = 35;
-	i++; gamemodeOrder[i] = 17;
-	i++; gamemodeOrder[i] = 26;
-	i++; gamemodeOrder[i] = 27;
-	i++; gamemodeOrder[i] = 37;
+	i++; gamemodeOrder[i] = 23;//random chars
+	i++; gamemodeOrder[i] = 11;//gun game
+	i++; gamemodeOrder[i] = 12;//Zombies
+	i++; gamemodeOrder[i] = 13;//rocket glove
+	i++; gamemodeOrder[i] = 7;//atom teleport
+	i++; gamemodeOrder[i] = 14;//fish partner
+	i++; gamemodeOrder[i] = 4;//Wall is lava
+	i++; gamemodeOrder[i] = 19;//disc room
+	i++; gamemodeOrder[i] = 16;//spike traps
+	i++; gamemodeOrder[i] = 15;//No mutations
+	i++; gamemodeOrder[i] = 24;//Sharp stress
+	i++; gamemodeOrder[i] = 28;//all mutation choices
+	i++; gamemodeOrder[i] = 22;//Infinite levels slow leveling
+	i++; gamemodeOrder[i] = 30;//Ultra mutation start
+	i++; gamemodeOrder[i] = 36;//Ultra mod start
+	i++; gamemodeOrder[i] = 43;//multi crown
+	i++; gamemodeOrder[i] = 29;//infinite ammo
+	i++; gamemodeOrder[i] = 35;//God frog
+	i++; gamemodeOrder[i] = 17;//Cheats
+	i++; gamemodeOrder[i] = 38;//Seeded
+	i++; gamemodeOrder[i] = 26;//daily score
+	i++; gamemodeOrder[i] = 27;//daily race
+	i++; gamemodeOrder[i] = 37;//weekly
 
 	maxgamemode = array_length(gamemodeOrder) - 1;
 

@@ -79,9 +79,9 @@ if !cursed {
 	if instance_exists(Player) {
 	    if point_distance(x, y, Player.x, Player.y) < 36 {
 	        if !place_meeting(x + lengthdir_x(2, point_direction(x, y, Player.x, Player.y)), y, Wall)
-	        x -= lengthdir_x(1, point_direction(x, y, Player.x, Player.y))
+	        x -= lengthdir_x(curseSpeed, point_direction(x, y, Player.x, Player.y))
 	        if !place_meeting(x, y + lengthdir_y(2, point_direction(x, y, Player.x, Player.y)), Wall)
-	        y -= lengthdir_y(1, point_direction(x, y, Player.x, Player.y))
+	        y -= lengthdir_y(curseSpeed, point_direction(x, y, Player.x, Player.y))
 			
 			if place_meeting(x,y,Player)
 			{

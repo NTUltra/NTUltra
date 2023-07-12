@@ -2,7 +2,7 @@
 if instance_exists(creator) && creator.target > -1 && instance_exists(creator.target){
 	var dir = point_direction(creator.x,creator.y,creator.target.x,creator.target.y);
 	var dis = point_distance(creator.x,creator.y,creator.target.x,creator.target.y);
-	if (dis < 80 || dis > 250 || collision_line(creator.x,creator.y,creator.target.x,creator.target.y,Wall,false,false))
+	if (dis < 84 || dis > 250 || collision_line(creator.x,creator.y,creator.target.x,creator.target.y,Wall,false,false))
 	{
 		event_user(1);
 	}

@@ -14,6 +14,10 @@ for (var i = 0; i < al; i ++)
 		}
 	}
 }
+with Debris
+{
+	instance_destroy();	
+}
 ds_list_destroy(newcollision);
 var newcollision = ds_list_create();
 var al = collision_circle_list(x,y,radius,Top,false,false,newcollision,false);

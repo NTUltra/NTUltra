@@ -6,3 +6,4 @@ dist = 0
 image_speed=0.2;
 
 alarm[11] = 1;
+alarm[2] = 120;

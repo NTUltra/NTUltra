@@ -7,7 +7,7 @@ if um == ultramods.snowSwarm
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = other.speed + 2;
+		speed = other.speed + 2 + irandom(2);
 		team = 2;
 		alarm[11] = 0;
 	}

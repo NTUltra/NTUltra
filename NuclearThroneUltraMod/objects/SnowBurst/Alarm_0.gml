@@ -12,7 +12,7 @@ y = creator.y
 repeat(2)
 {
 with instance_create(x,y,IceFlame)
-{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5,5+random(3))
+{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5,5+random(4))
 team = other.team
 scrCopyWeaponMod(other);
 }

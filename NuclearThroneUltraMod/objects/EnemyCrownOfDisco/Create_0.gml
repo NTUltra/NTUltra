@@ -1,10 +1,10 @@
 event_inherited();
-
+alarm[4] = 60;
 spr_idle = sprCrown26IdleEnemy
 spr_walk = sprCrown26WalkEnemy
 spr_hurt = sprCrown26HurtEnemy
 spr_dead = sprCrown26DeadEnemy
-
+instance_create(x,y,WarningCircle);
 /// @description INITIATE DANCE PROTOCOL
 with MusCont
 {

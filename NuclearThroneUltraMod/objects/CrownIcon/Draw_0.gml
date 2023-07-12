@@ -23,7 +23,7 @@ draw_set_valign(fa_bottom)
 draw_set_halign(fa_right)
 txt2 = "";
 var preTxt = "";
-if (UberCont.canMultiCrown)
+if (UberCont.canMultiCrown && crown != 1)
 {
 	preTxt = "\n";
 	txt2 = "ADD#";
@@ -38,6 +38,8 @@ if hover
 
 	drawx = x
 	drawy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-58//48
+	if keeper
+		drawy -= 34;
 
 	if drawx-string_width(string_hash_to_newline(txt2))/2-2 < __view_get( e__VW.XView, 0 )+2
 	drawx = __view_get( e__VW.XView, 0 )+4+string_width(string_hash_to_newline(txt2))/2

@@ -12,7 +12,7 @@ if target > 0 {
 			walk = alarm[1];
 		}
         else if dis > 52 {
-			direction = point_direction(x, y, target.x, target.y) + random(180) - 90
+			direction = point_direction(x, y, target.x, target.y) + random(90) - 45
 			var ran = random(chance + tempchance);
 			tempchance = 0;
             if ran > 6
@@ -22,6 +22,8 @@ if target > 0 {
 				walk *= 0.5;
 				gunangle = point_direction(x, y, target.x, target.y);
 				ammo = maxammo;
+				originX = x;
+				originY = y;
 				alarm[4] = 5;
             }
 			else if ran > 4 && !instance_exists(crowns[1])
@@ -123,6 +125,15 @@ if target > 0 {
         else if hspeed < 0
         right = -1
     }
+	else if choose(false,true)
+	{
+		direction = point_direction( x, y,target.x, target.y) + random(60) - 30;
+		walk = alarm[1];
+		if hspeed > 0
+			right = 1
+        else if hspeed < 0
+			right = -1
+	}
 }
 else if random(10) < 1 {
     motion_add(random(360), 0.4)
@@ -136,6 +147,7 @@ else if random(10) < 1 {
 }
 if !reachedHalfway && my_health < maxhealth * 0.7
 {	
+	actTime -= 1;
 	reachedHalfway = true;
 	event_user(0);
 	with instance_create_depth(x,y,depth,crowns[5])
@@ -149,6 +161,7 @@ if !reachedHalfway && my_health < maxhealth * 0.7
 }
 else if !reached75 && my_health < maxhealth * 0.4
 {
+	actTime -= 2;
 	reached75 = true;
 	event_user(0);
 	with instance_create_depth(x,y,depth,crowns[6])

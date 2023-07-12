@@ -7,6 +7,7 @@ if instance_exists(enemy)
 {
 //if Player.skill_got[19]//eagle eyes
 //{
+motion_add(direction,3);//the force that pulls it away from the direction?
 if collision_line(x,y,instance_nearest(x,y,enemy).x,instance_nearest(x,y,enemy).y,Wall,0,0) < 0 && ( alarm[0]<1 || Player.skill_got[19] )
 target=instance_nearest(x,y,enemy);
 else
@@ -26,9 +27,8 @@ target=0
 //target=instance_nearest(x,y,enemy);
 
 if target!=0 && target.team != team
-motion_add(point_direction(x,y,target.x,target.y),2+Player.skill_got[21]+Player.skill_got[19]);
+motion_add(point_direction(x,y,target.x,target.y),1+Player.skill_got[21]+Player.skill_got[19]);
 }
-motion_add(direction,3);//the force that pulls it away from the direction?
 if speed>mxSpd
 speed=max(mxSpd,speed*0.54);
 

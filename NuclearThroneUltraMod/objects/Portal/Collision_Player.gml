@@ -61,7 +61,7 @@ if Player.race = 8
 				}
 			    else if string_copy(name,0,4) = "GOLD"
 			    {repeat(4)
-			    {if random(Player.maxhealth) > Player.my_health and Player.crown != 2
+			    {if random(Player.maxhealth) > Player.my_health and !scrIsCrown(2)
 			    instance_create(Player.x,Player.y,HPPickup)
 			    else
 			    instance_create(Player.x,Player.y,AmmoPickup)}
@@ -82,7 +82,7 @@ if Player.race = 8
 		    else
 				snd_play(sndRobotEat);
 			
-			if random(Player.maxhealth) > Player.my_health and Player.crown != 2
+			if random(Player.maxhealth) > Player.my_health and !scrIsCrown(2)
 				instance_create(Player.x,Player.y,HPPickup)
 		    else
 				instance_create(Player.x,Player.y,AmmoPickup)

@@ -36,6 +36,9 @@
     "name": "sprExplosiveSlash",
     "path": "sprites/sprExplosiveSlash/sprExplosiveSlash.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskSlash",
+    "path": "sprites/mskSlash/mskSlash.yy",
+  },
   "visible": true,
 }

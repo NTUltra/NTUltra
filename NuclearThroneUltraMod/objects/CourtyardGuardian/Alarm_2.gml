@@ -35,7 +35,7 @@ else
 	speed = 0;
 	alarm[4] = actTime;
 	sprite_index = spr_idle;
-	alarm[1] = min(alarm[1],actTime*3);
+	alarm[1] = actTime*3.5;
 	mask_index = mskPickupThroughWall;
 	with instance_create_depth(x,y,depth-1,CourtyardGuardianTeleport)
 	{

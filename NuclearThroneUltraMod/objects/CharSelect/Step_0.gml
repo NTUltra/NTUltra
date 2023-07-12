@@ -116,6 +116,13 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+20 and UberCon
 		ranChar = true;
 		do {race = 1+irandom(racemax-1);} until UberCont.race_have[race] = 1
 	}
+	with UberCont
+	{
+		if scrIsGamemode(43)
+			canMultiCrown = true;
+		else
+			canMultiCrown = false;
+	}
     if crown = 0
     crown = ceil(random(crownmax))
 	draw_texture_flush();//mainly used to only remove the main menu texture page cause we don't need that while in game.
@@ -264,5 +271,14 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+20 and UberCon
 	}
     
     }
+	with CampChar
+	{
+		if num == other.num
+		{
+			camera_set_view_pos(view_camera[0],
+			x - camera_get_view_width(view_camera[0])*0.5,
+			y - camera_get_view_height(view_camera[0])*0.5);
+		}
+	}
 }
 

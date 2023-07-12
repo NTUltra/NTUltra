@@ -5,7 +5,7 @@ mySize = 3
 
 event_inherited()
 actTime = 7;
-maxRange = 200;
+maxRange = 190;
 spr_idle = sprGhostGuardianWalk;
 spr_walk = sprGhostGuardianWalk;
 spr_hurt = sprGhostGuardianHurt;

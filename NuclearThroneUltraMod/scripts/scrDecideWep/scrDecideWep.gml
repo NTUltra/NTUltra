@@ -110,7 +110,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 					return scrDecideWep(theTier, maxTriesParam, cursedParam, minWepAreaParam, areaWepTries + 1);
 			}
 		}
-		while (wep == 402 && Player.crown != 5)//Rolled gun gun? you must have crown of guns
+		while (wep == 402 && !scrIsCrown(5))//Rolled gun gun? you must have crown of guns
 		{
 			wep = scrDecideWep(wepTierParam, maxTriesParam, cursedParam, minWepAreaParam);
 		}

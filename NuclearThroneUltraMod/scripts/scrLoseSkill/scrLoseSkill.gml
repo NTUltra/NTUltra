@@ -24,7 +24,7 @@ function scrLoseSkill(skillIndex){
 					maxhealth = 1;
 				if my_health > maxhealth
 				{
-					if crown == 18
+					if scrIsCrown(18)
 						my_health = max(maxhealth,my_health - 2.5);
 					else
 						my_health = max(maxhealth,my_health - 5);
@@ -37,7 +37,7 @@ function scrLoseSkill(skillIndex){
 					maxhealth = 1;
 				if my_health > maxhealth
 				{
-					if crown == 18
+					if scrIsCrown(18)
 						my_health = max(maxhealth,my_health - 2);
 					else
 						my_health = max(maxhealth,my_health - 4);

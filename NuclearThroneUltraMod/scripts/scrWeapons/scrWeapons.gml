@@ -2420,7 +2420,7 @@ function scrWeapons() {
 	wep_type[219] = 4
 	wep_auto[219] = 0
 	wep_load[219] = 5
-	wep_cost[219] = 4
+	wep_cost[219] = 3
 	wep_sprt[219] = sprHyperGrenadeRifle
 	wep_area[219] = 13
 	wep_text[219] = "not the hyper launcher"
@@ -4007,7 +4007,7 @@ function scrWeapons() {
 	wep_cost[363] = 1.25
 	wep_sprt[363] = sprSplinterMinigun
 	wep_area[363] = 16
-	wep_text[363] = "like a swarm of bees"
+	wep_text[363] = ""
 	wep_swap[363] = sndSwapMachinegun
 	wep_rad[363] = 0;
 	
@@ -5499,7 +5499,7 @@ function scrWeapons() {
 	wep_name[497] = "SUPER SPLINTER GUN"
 	wep_type[497] = 3
 	wep_auto[497] = 0
-	wep_load[497] = 34//42 normally
+	wep_load[497] = 33//42 normally
 	wep_cost[497] = 2
 	wep_sprt[497] = sprSuperSplinterGun
 	wep_area[497] = 8

@@ -1,8 +1,4 @@
-if object_index!=SnowTank && object_index!=InvertedSnowTank && object_index!=GoldSnowTank && 
-!instance_exists(Portal) && instance_number(enemy) <2 && instance_number(becomenemy) = 0 and !instance_exists(Menu) and !instance_exists(RadMaggotChest) and !instance_exists(BecomeScrapBoss) and instance_exists(Player) and !instance_exists(GenCont)
-{MorphMe=false;}
-
-	if!(MorphMe){
+if!(MorphMe){
 
 	myCorpse = instance_create(x,y,MovingCorpse)
 
@@ -14,7 +10,8 @@ if object_index!=SnowTank && object_index!=InvertedSnowTank && object_index!=Gol
 		if other.speed > 0
 		{
 			motion_add(other.direction,other.speed)
-			speed += max(0,-other.my_health/5)
+			if other.my_health != 0
+				speed += max(0,-other.my_health/5)
 		}
 		sprite_index = other.spr_dead
 		image_xscale = other.right
@@ -54,6 +51,10 @@ if object_index!=SnowTank && object_index!=InvertedSnowTank && object_index!=Gol
 			speed /= mySize*0.83
 	}
 	snd_play(snd_dead, 0.1,true);
+}
+else
+{
+	instance_create(x,y,PortalChecker);
 }
 
 //Sleep(15+mySize*10)

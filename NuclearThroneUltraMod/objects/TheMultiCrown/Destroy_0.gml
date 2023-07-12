@@ -1,6 +1,2 @@
-/// @description Fake a corpse for the portal to spawn
-instance_create(x,y,MovingCorpse)
-{
-	mySize = 1;
-	speed =0;
-}
+/// @description Potential portal
+instance_create(x,y,PortalChecker);

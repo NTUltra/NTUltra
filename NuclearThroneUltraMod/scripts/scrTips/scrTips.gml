@@ -295,8 +295,8 @@ function scrTips() {
 	,"from the other side","inverted mutant","higher chance for inverted worlds","purple balls","split the atom","atoms for peace","Entropy","she blinded me with science","don't touch me")
 
 	if Player.race = 16//Viking
-	tip = choose("the ship that brought you here","the sea","ocean fire","hate pirates","you've come from far","water dragon","tough!"
-	,"rock hard","plunder","time travel?","armour strike damage scales#depending on your level","armour strike damage is more#when you are a higher level","3030")
+	tip = choose("the radioactive sea","ocean fire","sea serpent","you've come from far","water dragon","tough!"
+	,"rock hard","serpent strike","bitten by a radioactive serpent","armour strike damage scales#depending on your level","armour strike damage is more#when you are a higher level","3030")
 
 	if Player.race = 17//WEAPONSMITH
 	tip = choose("anvil","you keep the weapon mods#of the weapon you are holding#when upgrading","you upgrade one of your#two weapons at random",

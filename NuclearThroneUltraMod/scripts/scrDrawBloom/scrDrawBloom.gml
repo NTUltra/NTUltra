@@ -274,7 +274,7 @@ function scrDrawBloom() {
 			draw_sprite_ext(sprGammaGuts,other.wave,x,y,1.8,1.8,image_angle,c_white,ba+0.02)
 		}
 	}
-		if crown == 21 && my_health >= floor(maxhealth*0.75)//Crown of risk
+		if scrIsCrown(21) && my_health >= floor(maxhealth*0.75)//Crown of risk
 		with Crown
 		{
 			draw_sprite_ext(sprRiskActive,other.wave,x,y,1.1,1.1,image_angle,c_white,ba+0.1)

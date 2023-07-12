@@ -17,12 +17,8 @@ if instance_exists(Player)
 		}
 		with Player
 		{
-			friction = 0.8;
+			x -= hspeed*0.2;
+			y -= vspeed*0.2;
 		}
-	}
-	else
-	{
-		with Player
-			friction = 0.45;
 	}
 }

@@ -138,7 +138,7 @@ if area=100
 	if crownvisits == -1
 		instance_create(0,0,PauseTimer);
 	crownvisits++;
-	if !scrIsCrown(1) && crown == prevCrown
+	if !scrIsCrown(1) && array_contains(crown,prevCrown)
 	{
 		consecutiveCrownVisits ++;	
 	} else

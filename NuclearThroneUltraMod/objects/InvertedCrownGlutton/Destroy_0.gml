@@ -2,7 +2,7 @@ scrDrop(80,0);
 scrDrop(100,10);
 
 event_inherited();
-snd_play(sndWallBreakLabs);
+scrBossKill();
 instance_create(x,y,BigWallBreak);
 repeat( 6 + irandom(3))
 	with instance_create(x,y,Shell)

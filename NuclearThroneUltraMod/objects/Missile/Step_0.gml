@@ -1,6 +1,6 @@
 if !instance_exists(Player)
 {instance_destroy();exit;}
-
+motion_add(direction,2);
 if instance_exists(enemy)
 {
 if Player.skill_got[19]//eagle eyes
@@ -26,7 +26,6 @@ target=instance_nearest(x,y,enemy);
 if target!=0 && target.team != 2
 motion_add(point_direction(x,y,target.x,target.y),0.7+Player.skill_got[19]);
 }
-motion_add(direction,1);
 if speed>6+Player.skill_got[19]
 speed=6+Player.skill_got[19];
 

@@ -1,5 +1,5 @@
 raddrop = 7
-maxhealth = 18;
+maxhealth = 15;
 meleedamage = 0;
 mySize = 1
 
@@ -18,9 +18,9 @@ snd_dead = sndWallBreak//sndScorpionDie
 walk = 0
 alarm[1] = 30+random(90)
 alarm[10] = 0;
-actTime = 17;
+actTime = 16;
 acc = 1;
-projectileSpeed = 3;
+projectileSpeed = 2.8;
 maxSpeed = 4;
 
 maxammo = 3;

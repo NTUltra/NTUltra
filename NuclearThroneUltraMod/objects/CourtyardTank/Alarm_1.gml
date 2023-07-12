@@ -7,7 +7,7 @@ if target > 0 {
 	var dis = point_distance(target.x, target.y, x, y)
 	with myShield
 	{	
-		if dis > 80 && dis < 250 && lineOfSight
+		if dis > 84 && dis < 250 && lineOfSight
 			event_user(0);
 	}
     if lineOfSight {

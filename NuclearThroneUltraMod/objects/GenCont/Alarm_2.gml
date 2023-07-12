@@ -604,7 +604,7 @@ if Player.area=1
 
 
 
-if scrIsInInvertedArea() && Player.area != 120 && !(Player.area == 118 && Player.subarea == 3)
+if (scrIsInInvertedArea() || Player.area == 128) && Player.area != 120 && !(Player.area == 118 && Player.subarea == 3)
 {
 
 with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/4+random(128)-64+32,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/4+random(128)-64+32,Floor)

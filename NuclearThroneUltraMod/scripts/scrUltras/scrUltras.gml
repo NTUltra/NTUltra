@@ -460,7 +460,7 @@ function scrUltras(altOverride = false) {
 		    ultra_tips[62] = "tank up"
 	    }
 		//IF no health mutations
-		if altOverride || (instance_exists(Player) && Player.race == 16 && (Player.altUltra || Player.unlockAlternativeUltras || (!Player.skill_got[14] && !Player.skill_got[22] && !Player.skill_got[7] && !Player.skill_got[36] && Player.crown != 20 && !Player.skill_got[32] && !Player.skill_got[31] && instance_exists(UltraIcon))))
+		if altOverride || (instance_exists(Player) && Player.race == 16 && (Player.altUltra || Player.unlockAlternativeUltras || (!Player.skill_got[14] && !Player.skill_got[22] && !Player.skill_got[7] && !Player.skill_got[36] && !scrIsCrown(20) && !Player.skill_got[32] && !Player.skill_got[31] && instance_exists(UltraIcon))))
 		{
 			ultra_name[62] = "LIVING ARMOUR"
 			ultra_text[62] = "REPLACE ALL YOUR HEALTH WITH ARMOUR##HEALTH DROPS BECOME ARMOUR DROPS##(SECOND STOMACH DOUBLES ARMOUR#FROM ARMOUR DROPS)"

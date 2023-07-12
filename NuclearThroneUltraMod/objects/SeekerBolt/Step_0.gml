@@ -3,6 +3,7 @@ var ee = false;
 var bm = false;
 if !instance_exists(Player)
 {instance_destroy();exit;}
+motion_add(direction,1);
 if instance_exists(enemy)
 {
 //if ee//eagle eyes
@@ -27,7 +28,6 @@ if instance_exists(Wall)
 if target!=0 && target.team != team
 motion_add(point_direction(x,y,target.x,target.y),acc+bm+ee);
 }
-motion_add(direction,0.8);
 if speed>maxSpeed+bm+ee
 	speed = max(maxSpeed+bm+ee,speed*0.7);
 	//speed=6+bm;

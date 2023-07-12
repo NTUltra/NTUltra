@@ -63,7 +63,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"eaeff5ca-8d7f-49b4-a5bd-fe75d31e5fda","path":"sprites/sprDebris107/sprDebris107.yy",},},},"Disabled":false,"id":"fd2aeed0-7637-4678-b03e-098921294f4d","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 4,
     "yorigin": 4,

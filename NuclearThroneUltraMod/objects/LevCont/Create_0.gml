@@ -52,29 +52,43 @@ scrCrowns()
 dir = 0
 // Count visits with a given crown
 // If you still have that crown give option echo on random.
+if UberCont.canMultiCrown
+{
+	with instance_create(__view_get( e__VW.XView, 0 )+14,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-49 - 33,CrownIcon)//24
+	{
+		depth = -998;
+		//Replace option 1 with keep current set of crowns always
+		crown = 1;
+		keeper = true;
+		crown_name[1] = "[MULTI-CROWN]"
+		crown_text[1] = "KEEP CURRENT CROWN LOADOUT"
+		crown_used[1] = 0
+		crown_tips[1] = ""
+		sprite_index = sprCrownSelectKeep;
+	}
+}
 repeat(crownmax+1)
 {
 if dir<12
 {
-	with instance_create(__view_get( e__VW.XView, 0 )+14+dir*26.5,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-50,CrownIcon)//24
+	with instance_create(__view_get( e__VW.XView, 0 )+14+dir*26.5,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-49,CrownIcon)//24
 	{
 		crown = other.dir
 		if crown == 0 
 		{
-			//Replace option 1 with keep current set of crowns always
 			if scrIsCrown(8) && Player.tookDestiny
 				crown = 8;
-			else if scrIsCrown(25)
+			else if scrIsCrown(25) && !UberCont.canMultiCrown
 				crown = 25;
-			else if scrIsCrown(26)
+			else if scrIsCrown(26) && !UberCont.canMultiCrown
 				crown = 26;
-			else if scrIsCrown(27)
+			else if scrIsCrown(27) && !UberCont.canMultiCrown
 				crown = 27;
-			else if scrIsCrown(28)
+			else if scrIsCrown(28) && !UberCont.canMultiCrown
 				crown = 28;
-			else if scrIsCrown(29)//Purity
+			else if scrIsCrown(29) && !UberCont.canMultiCrown//Purity
 				crown = 29;
-			else if scrIsCrown(32) || scrIsCrown(22) //Luck to misfortune
+			else if (scrIsCrown(32) && !UberCont.canMultiCrown) || scrIsCrown(22) //Luck to misfortune
 				crown = 32;
 			else if scrIsCrown(33) || Player.consecutiveCrownVisits > 1 
 				crown = 33;
@@ -96,6 +110,11 @@ if dir<12
 			//Upgrade crown of reincarnation
 			if Player.level > 9
 				sprite_index = sprCrownOfReincarnationUpgraded;
+		}
+		else if crown == 1 && UberCont.canMultiCrown
+		{
+			crown_name[1] = "[NONE]"
+			crown_text[1] = "REMOVE ALL CROWNS"
 		}
 		if scrIsGamemode(27)
 		{
@@ -184,7 +203,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 				}
 			}
 		}
-	    else if Player.crown != 8
+	    else if !scrIsCrown(8)
 		{
 		    if Player.race == 21//horror
 		    {
@@ -452,7 +471,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 		}
 		scrollWidth = max(scrollWidth,0);
 	}
-    else if Player.crown != 8
+    else if !scrIsCrown(8)
     {
     
     if Player.race == 21 || Player.phoenixrevives > 6//Horror

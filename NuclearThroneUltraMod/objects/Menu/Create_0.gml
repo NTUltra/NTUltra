@@ -98,7 +98,7 @@ char[20].num = 20
 
 if UberCont.race_have[17] = 1//GUNSMITH
 {
-char[17] = instance_create(96,108,CampChar)
+char[17] = instance_create(96,106,CampChar)
 char[17].sprite_index = sprWeaponSmithMenu
 char[17].spr_menu = sprWeaponSmithMenuSelected
 char[17].spr_to = sprWeaponSmithMenuSelect

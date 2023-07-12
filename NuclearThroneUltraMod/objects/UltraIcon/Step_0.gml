@@ -561,7 +561,7 @@ else if skill==62
 	
 	with Player {
 		//No health mutations
-		if (unlockAlternativeUltras || (race == 16 && !skill_got[14] && !skill_got[22] && !skill_got[7] && !skill_got[36] && crown != 20 && !skill_got[32] && !skill_got[31]))
+		if (unlockAlternativeUltras || (race == 16 && !skill_got[14] && !skill_got[22] && !skill_got[7] && !skill_got[36] && !scrIsCrown(20) && !skill_got[32] && !skill_got[31]))
 		{
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			altUltra = true;

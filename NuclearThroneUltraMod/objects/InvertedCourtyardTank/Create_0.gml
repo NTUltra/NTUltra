@@ -20,3 +20,11 @@ gunangle = 0;
 acc = 1.2;
 maxSpeed = 4.5;
 projectileSpeed = 1.5;
+
+with myShield
+{
+	spr_default = sprInvertedCourtyardTankShield;
+	spr_deflect = sprInvertedCourtyardTankShieldDeflect;
+	spr_dissapear = sprInvertedCourtyardTankShieldDissappear;
+	spr_spawn = sprInvertedCourtyardTankShieldAppear;
+}

@@ -10,7 +10,7 @@ canSpawnSwarm = false
 if instance_exists(Player) 
 {
 	area = Player.area
-	if Player.crown != 25 && !instance_exists(WallRemover)
+	if !scrIsCrown(25) && !instance_exists(WallRemover)
 	{
 		event_perform(ev_alarm,2);
 		event_perform(ev_alarm,0);

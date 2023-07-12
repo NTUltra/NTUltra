@@ -710,7 +710,7 @@ if !instance_exists(LevCont) and visible = 1
 
 
 	//crown of hatred
-	if crown == 6
+	if scrIsCrown(6)
 	{
 		if UberCont.normalGameSpeed == 60
 			decay -= 0.5;
@@ -935,7 +935,7 @@ if (!instance_exists(LevCont))
 			reload -= 0.3;
 		}
 	
-
+		scr60fpsReload();
 		if reload <= 0 && !can_shoot
 		{
 			can_shoot = 1
@@ -948,30 +948,33 @@ if (!instance_exists(LevCont))
 			wepflip = -wepflip
 
 			if wep_type[wep] = 0
-			snd_play(sndMeleeFlip,0,true)
-			if wep_type[wep] = 3
-			snd_play(sndCrossReload,0,true)
-			if wep_type[wep] = 4
-			snd_play(sndNadeReload,0,true,false,2,false,false,0.6)
-			if string_copy(wep_name[wep],0,6) = "PLASMA"
+				snd_play(sndMeleeFlip,0,true)
+			else if wep_type[wep] = 2
 			{
-			if skill_got[17] = 1
-			snd_play(sndPlasmaReloadUpg,0,true)
-			else
-			snd_play(sndPlasmaReload,0,true)
-			}
-			if wep_type[wep] = 2
-			{
-			repeat(wep_cost[wep])
-			{with instance_create(x,y,Shell)
-			{sprite_index = sprShotShell
-			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+other.right*100+random(40)-20,2+random(2))}}
+				repeat(wep_cost[wep])
+				{
+					with instance_create(x,y,Shell)
+					{sprite_index = sprShotShell
+					motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+other.right*100+random(40)-20,2+random(2))}
+				}
 
-			wkick = -1
-			if wep = 8
-			wkick = -2
-			snd_play(sndShotReload,0,true)
+				wkick = -1
+				if wep = 8
+				wkick = -2
+				snd_play(sndShotReload,0,true)
 			}
+			else if wep_type[wep] = 3
+				snd_play(sndCrossReload,0,true)
+			else if wep_type[wep] = 4
+				snd_play(sndNadeReload,0,true,false,2,false,false,0.6)
+			else if string_copy(wep_name[wep],0,6) = "PLASMA"
+			{
+				if skill_got[17] = 1
+				snd_play(sndPlasmaReloadUpg,0,true)
+				else
+				snd_play(sndPlasmaReload,0,true)
+			}
+			
 		}
 	}
 	if skill_got[34]//FLEXIBLE ELBOWS
@@ -985,6 +988,7 @@ if (!instance_exists(LevCont))
 			reload -= 0.28;
 		}
 	}
+	scr60fpsReload();
 	if (reload > lowa || breload > lowb || creload > lowc)
 	{
 		if scrIsHardMode()//HARD MODE
@@ -1007,6 +1011,7 @@ if (!instance_exists(LevCont))
 		}
 		if race == 7
 			breload -= 1
+		scr60fpsReload();
 		if breload <= 0 && !bcan_shoot
 		{
 			bcan_shoot = 1
@@ -1148,52 +1153,7 @@ if (!instance_exists(LevCont))
 				creload = min(creload+cr,0)
 			}
 		}
-		if UberCont.normalGameSpeed == 60
-		{
-			var crm = 0.5;
-			var cr = (prevreload - reload)*crm;
-			if cr < 0
-			{
-				prevreload += wep_load[wep];
-				var cr = (prevreload - reload)*crm;
-			}
-			if reload + cr > lowa
-			{
-				reload = reload+cr
-			}
-			else
-			{
-				reload = lowa;	
-			}
-			cr = (prevbreload - breload)*crm;
-			if cr < 0
-			{
-				prevbreload += wep_load[bwep];
-				var cr = (prevbreload - breload)*crm;
-			}
-			if breload + cr > lowb
-			{
-				breload = breload+cr
-			}
-			else
-			{
-				breload = lowb;	
-			}
-			cr = (prevcreload - creload)*crm;
-			if cr < 0
-			{
-				prevcreload += wep_load[cwep];
-				var cr = (prevcreload - creload)*crm;
-			}
-			if creload + cr > lowc
-			{
-				creload = creload+cr
-			}
-			else
-			{
-				creload = lowc;	
-			}
-		}
+		scr60fpsReload();
 	}
 	//PUFFY CHEEKS
 	if skill_got[35]
@@ -1477,7 +1437,7 @@ if (!outOfCombat && skill_got[2]==0 && race!=18 && race!=24 && race != 15 and !i
 	}
 }
 
-
+scr60fpsReload();
 if reload > 0
 	can_shoot = 0
 else
@@ -1967,28 +1927,33 @@ if (RogueHeat==true)
 if instance_exists(PlayerAlarms2) && PlayerAlarms2.alarm[1] < 1
 {
 	if loops > 0
+	{
+		var healingAmount = 0.1;
+		if UberCont.normalGameSpeed == 60
+			healingAmount = 0.05;
 		with enemy {
 			if super {
 				if alarm[1] > 3
-					alarm[1] -= 2;
-				my_health = min(maxhealth,my_health + 0.1);
+					alarm[1] -= 1;
+				my_health = min(maxhealth,my_health + healingAmount);
 				speed *= 1.15;
 			}
 		}
-	if crown == 27//Crown of disco
+	}
+	if scrIsCrown(27)//Crown of disco
 	{
 		with enemy
 		{
-			if alarm[1]>8 && alarm[1] < 30
+			if alarm[1]>8 && alarm[1] < 12
 				alarm[1]=8;
 		}
 	}
-	else if crown == 10 //Crown of difficulty
+	else if scrIsCrown(10) //Crown of difficulty
 	{
 		with enemy
 		{
 			if alarm[1] > 3 && alarm[1] < 25
-				alarm[1] -= 1.5;
+				alarm[1] -= 1.25;
 			speed *= 1.15;
 		}
 	}

@@ -1,7 +1,7 @@
 if(instance_exists(Player)){
     
     
-	if other.team = Player.team || other.object_index=Disc || other.object_index=ToxicThrowerGas
+	if other.team != team //|| other.object_index==Disc || other.object_index==ToxicThrowerGas
 	{
 		//WEAPON MODS!
 		scrModHit();

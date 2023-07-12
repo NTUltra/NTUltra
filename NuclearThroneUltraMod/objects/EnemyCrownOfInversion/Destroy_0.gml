@@ -1,5 +1,6 @@
 /// @description Transform area into inverted area
 event_inherited();
+scrDrop(100,0);
 snd_play(sndCrownBlood);
 instance_create(x,y,Flash);
 __background_set_colour( make_color_rgb(58, 34, 46) );
@@ -69,3 +70,30 @@ with BackCont
 	heavyrain = true;	
 }
 instance_create(x,y,WantBoss);
+with Player
+{
+	if skill_got[29]//insomnia
+	{
+		var t = 180;
+		if race = 25
+		{
+			t = 220;
+		}
+		if !justAsheep
+		{
+			with enemy
+			{
+				if alarm[1]>0
+				{
+					alarm[1]+=t;
+					with instance_create(x,y,Snooze)
+					{
+						owner = other.id;
+						yoffset = other.sprite_height*0.5 - 4;
+					}
+				}
+			}
+		}
+		//Store this list of enemies to put to sleep when sheep passive is done
+	}
+}

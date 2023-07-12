@@ -15,6 +15,7 @@
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f2c7ef64-923c-4f27-81dd-1a3d7e18f66a",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f9561ad7-2c2e-44b1-9c34-2ce4fcd0cbba",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fb3dc6a9-3054-4c68-9a64-dfb19d737c6b",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4a4855af-6566-4a77-9cfc-62cfd22c203f",},
   ],
   "gridX": 0,
@@ -45,7 +46,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 3.0,
+    "length": 4.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -58,7 +59,8 @@
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f2c7ef64-923c-4f27-81dd-1a3d7e18f66a","path":"sprites/sprCrown25DeadEnemy/sprCrown25DeadEnemy.yy",},},},"Disabled":false,"id":"f6251d96-e776-49ae-985e-906cd4886a6d","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f9561ad7-2c2e-44b1-9c34-2ce4fcd0cbba","path":"sprites/sprCrown25DeadEnemy/sprCrown25DeadEnemy.yy",},},},"Disabled":false,"id":"cbad7c4f-8e82-4b3e-a0af-84e01e659034","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4a4855af-6566-4a77-9cfc-62cfd22c203f","path":"sprites/sprCrown25DeadEnemy/sprCrown25DeadEnemy.yy",},},},"Disabled":false,"id":"6da7e0e9-3814-4b11-804e-fed8fdf7137c","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fb3dc6a9-3054-4c68-9a64-dfb19d737c6b","path":"sprites/sprCrown25DeadEnemy/sprCrown25DeadEnemy.yy",},},},"Disabled":false,"id":"23584453-4aa9-41bf-91c4-879c279a08ef","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4a4855af-6566-4a77-9cfc-62cfd22c203f","path":"sprites/sprCrown25DeadEnemy/sprCrown25DeadEnemy.yy",},},},"Disabled":false,"id":"6da7e0e9-3814-4b11-804e-fed8fdf7137c","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

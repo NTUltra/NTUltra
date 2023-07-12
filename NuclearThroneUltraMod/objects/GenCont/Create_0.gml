@@ -329,7 +329,7 @@ goal = 60;
 if Player.area == 126 || Player.area == 127
 goal = 120+s;
 if Player.area == 128 || Player.area == 129
-goal = 140+s;
+goal = 150+s;
 
 
 if scrIsGamemode(6) && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels

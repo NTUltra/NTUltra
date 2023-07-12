@@ -56,7 +56,7 @@ function scrNextLevel() {
 			lastarea = 124;
 	        subarea = 1;
 			inverted=true
-			if crown == 24
+			if scrIsCrown(24)
 				hard -= 1;
 			else
 				hard += 1;
@@ -471,7 +471,7 @@ function scrNextLevel() {
 		{
 			area = 117;
 			subarea = 1;
-			if crown == 24
+			if scrIsCrown(24)
 				hard -= 1;
 			else
 				hard += 1;
@@ -577,7 +577,7 @@ function scrNextLevel() {
 				}
 			    area = 104;
 			    visitedCrib = true;
-				if crown == 24
+				if scrIsCrown(24)
 					hard += 1;
 				else
 					hard -= 1;
@@ -589,14 +589,14 @@ function scrNextLevel() {
 	{
 		if area == 112//Inv labs normal labs skips one
 		{
-			if crown == 24
+			if scrIsCrown(24)
 				hard -= 1;
 			else
 				hard += 1;
 		}
 		else
 		{
-			if crown == 24
+			if scrIsCrown(24)
 				hard -= 1.5;
 			else
 				hard += 1.5;
@@ -604,7 +604,7 @@ function scrNextLevel() {
 	}
 	else if area == 10 && subarea < 2
 	{
-		if crown == 24
+		if scrIsCrown(24)
 			hard -= 2;
 		else
 			hard += 2;
@@ -621,14 +621,14 @@ function scrNextLevel() {
 	{
 		if area == 100 || area == 128 || area == 129
 		{
-			if crown == 24
+			if scrIsCrown(24)
 				hard -= 0.5;
 			else
 				hard += 0.5;
 		}
 		else
 		{
-			if crown == 24
+			if scrIsCrown(24)
 				hard -= 1;
 			else
 				hard += 1;
@@ -638,7 +638,7 @@ function scrNextLevel() {
 	{
 		hard -= 0.5;
 	}
-	if crown == 10
+	if scrIsCrown(10)
 		hard ++;
 	hard = max(0,hard);
 	scrAddToRoute(area);

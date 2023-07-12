@@ -192,8 +192,13 @@ if cwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 if race=15
 {
 Sleep(20)
-repeat(20)
-instance_create(x+random(50)-25,y+random(50)-25,IonImpact)
+with instance_create(x,y,PlasmaImpact)
+{
+	team = other.team;	
+}
+snd_play_2d(sndExplosionXL);
+//repeat(20)
+//instance_create(x+random(50)-25,y+random(50)-25,IonImpact)
 }
 
 

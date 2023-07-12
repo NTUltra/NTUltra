@@ -1,11 +1,14 @@
-if /*size >= other.size-1 and */ speed > 2 && other.team != 2/* and other.sprite_index != other.spr_hurt */&& other.existTime > 30
+if /*size >= other.size-1 and */ speed > 2 && other.team != 2/* and other.sprite_index != other.spr_hurt */&& other.existTime > 40
 {
+	var actuallyDealtDamage = false;
 	var dmgDealt = 1;
 	var dmgDiv = dmgDivision;
+	var soundBreakpoint = 2;
 	with other
 	{
 		if my_health > 0 && sprite_index != spr_chrg
 		{
+			actuallyDealtDamage = true;
 			dmgDealt = clamp(round(1+other.speed/dmgDiv)-(mySize*other.sizeDiv),1,5);
 		    if instance_exists(Player)
 		    {
@@ -37,20 +40,29 @@ if /*size >= other.size-1 and */ speed > 2 && other.team != 2/* and other.sprite
         
 		        }
 		    }
+			if UberCont.normalGameSpeed == 60
+			{
+				dmgDealt *= 0.5;
+				soundBreakpoint = 1;
+			}
 			my_health -= dmgDealt;
-			motion_add(other.direction,other.speed/2)
+			motion_add(other.direction,other.speed*0.5)
 			with instance_create(other.x,other.y,Smoke)
 			{
 				depth = other.depth - 1;
 			}
 		}
 	}
-	if dmgDealt >= 2
+	if actuallyDealtDamage
 	{
-		snd_play(sndDebrisHitUpg,0.2,false);
+		if dmgDealt >= soundBreakpoint
+		{
+			snd_play(sndDebrisHitUpg,0.2,false);
+		}
+		else
+			snd_play(sndDebrisHit,0.2,false);
+			
+		instance_destroy();
 	}
-	else
-		snd_play(sndDebrisHit,0.2,false);
-	instance_destroy();
 }
 

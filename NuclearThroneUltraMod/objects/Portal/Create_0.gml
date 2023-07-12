@@ -63,7 +63,7 @@ if !inverted && (currentarea  == 8 || (currentarea == 7 && currentsubarea == 3))
 	isPink = true;
 	sprite_index = sprPinkPortalSpawn;	
 }
-else if currentarea == 128 || currentarea == 100
+else if currentarea == 100 || currentarea == 128 || currentarea == 129
 {
 	type = 3;
 }

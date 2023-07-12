@@ -1,6 +1,6 @@
 event_inherited();
 raddrop = 9
-maxhealth = 10;
+maxhealth = 9;
 EnemyHealthAdjustments();
 
 spr_idle = sprInvertedCourtyardGuardianIdle
@@ -11,9 +11,9 @@ spr_dead = sprInvertedCourtyardGuardianDead
 
 
 //behavior
-actTime = 14;
+actTime = 13;
 acc = 1.2;
-projectileSpeed = 3.5;
+projectileSpeed = 3.3;
 maxSpeed = 5;
 
 maxammo = 4;

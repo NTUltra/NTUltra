@@ -2912,7 +2912,7 @@ function scrFire2() {
 
 	break;
 
-	//SNOW BLOWER
+	//FROST BLOWER
 	case 305:
 
 	if !instance_exists(SnowSound)
@@ -12136,39 +12136,58 @@ function scrFire2() {
 	var o = 32;
 	var lo = o*0.5;
 	var l = lo;
+	var i = 0;
 	repeat(am + 1)
 	{
 		with instance_create(x + lengthdir_x(l,aimDirection),
-		y + lengthdir_y(l,aimDirection),PlasmaImpact)
+		y + lengthdir_y(l,aimDirection),PlasmaDelay)
 		{ team = other.team
 			Mod1=other.wepmod1;
 				Mod2=other.wepmod2;
 				Mod3=other.wepmod3;
-				Mod4=other.wepmod4;}
+				Mod4=other.wepmod4;
+				alarm[0] = i;
+				if i == 0
+					event_perform(ev_alarm,0)
+		}
+		i++;
 		l += o;
 	}
 	l = lo + o;
+	i = 0;
 	repeat(am)
 	{
 		with instance_create(x + lengthdir_x(l,aimDirection-ango*accuracy),
-		y + lengthdir_y(l,aimDirection-ango*accuracy),PlasmaImpact)
-		{ team = other.team
+		y + lengthdir_y(l,aimDirection-ango*accuracy),PlasmaDelay)
+		{ 
+			team = other.team
 			Mod1=other.wepmod1;
-				Mod2=other.wepmod2;
-				Mod3=other.wepmod3;
-				Mod4=other.wepmod4;}
+			Mod2=other.wepmod2;
+			Mod3=other.wepmod3;
+			Mod4=other.wepmod4;
+			alarm[0] = i;
+			if i == 0
+				event_perform(ev_alarm,0)
+		}
+		i++;
 		l += o;
 	}
 	l = lo + o;
+	i = 0;
 	repeat(am)
 	{
 		with instance_create(x + lengthdir_x(l,aimDirection+ango*accuracy),
-		y + lengthdir_y(l,aimDirection+ango*accuracy),PlasmaImpact)
+		y + lengthdir_y(l,aimDirection+ango*accuracy),PlasmaDelay)
 		{ team = other.team
 			Mod1=other.wepmod1;
-				Mod2=other.wepmod2;
-				Mod3=other.wepmod3;
-				Mod4=other.wepmod4;}
+			Mod2=other.wepmod2;
+			Mod3=other.wepmod3;
+			Mod4=other.wepmod4;
+			alarm[0] = i;
+			if i == 0
+				event_perform(ev_alarm,0)
+		}
+		i++;
 		l += o;
 	}
 

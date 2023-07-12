@@ -60,7 +60,7 @@ with Player
 				spr_dead=sprMutant8DDead;
 			}
 			repeat(4)
-			{if random(maxhealth) > my_health and Player.crown != 2
+			{if random(maxhealth) > my_health and !scrIsCrown(2)
 			instance_create(x,y,HPPickup)
 			else
 			instance_create(x,y,AmmoPickup)}
@@ -108,7 +108,7 @@ with Player
 		{
 			snd_play_2d(sndRobotEatUpg)
 			r += 4;
-			if my_health < maxhealth && random(maxhealth-1) > my_health and Player.crown != 2
+			if my_health < maxhealth && random(maxhealth-1) > my_health and !scrIsCrown(2)
 				instance_create(x,y,HPPickup);
 			else
 				instance_create(x,y,AmmoPickup);
@@ -116,7 +116,7 @@ with Player
 		else
 			snd_play_2d(sndRobotEat);
 			
-		if my_health < maxhealth && random(maxhealth-1) > my_health and Player.crown != 2
+		if my_health < maxhealth && random(maxhealth-1) > my_health and !scrIsCrown(2)
 			instance_create(x,y,HPPickup)
 		else
 			instance_create(x,y,AmmoPickup)

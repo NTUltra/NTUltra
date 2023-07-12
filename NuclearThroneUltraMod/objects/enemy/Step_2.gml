@@ -42,7 +42,13 @@ if prevhealth > my_health
 {
 	var dmgTaken = prevhealth - my_health;//Damage increase
 	if super
-		dmgTaken += 0.1;//Negate healing
+	{
+		//Negate healing
+		if UberCont.normalGameSpeed == 60
+			dmgTaken += 0.05;
+		else
+			dmgTaken += 0.1;
+	}
 	if instance_exists(Player)
 	{
 		if Player.race == 26//HUMPHRY mr damage

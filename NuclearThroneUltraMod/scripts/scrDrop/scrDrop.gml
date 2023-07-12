@@ -152,12 +152,12 @@ function scrDrop(itemdrop, weapondrop) {
 
 	    if (itemdrop > 0 && ran < min((itemdrop*0.5) * ((need*0.25) + confDroprate), 110))//rage=0.001
 	    {
-		    if ( Player.crown != 2 && Player.canHeal && random(mh) > h || random(100) < 10) and random(3) < 2 and random(1) <= canHealth
+		    if ( scrIsCrown(2) && Player.canHeal && random(mh) > h || random(100) < 10) and random(3) < 2 and random(1) <= canHealth
 			{
 				instance_create(x+random(4)-2,y+random(4)-2,HealthChest)
 			//return true;
 			}
-		    else if Player.crown != 5
+		    else if !scrIsCrown(5)
 			{
 				instance_create(x+random(4)-2,y+random(4)-2,AmmoChest)
 			//return true;
@@ -178,7 +178,7 @@ function scrDrop(itemdrop, weapondrop) {
 		var ran = itemDropChance[itemDropChanceIndex];
 	if itemdrop > 0 && ran < min(itemdrop * (need + dropRateBuff), 100)
 	{//0.3 for each ally Rebel has REBEL ULTRA C?
-		if random(mh) > h and random(3) < 2 and Player.crown != 2 and Player.canHeal and random(1) <= canHealth
+		if random(mh) > h and random(3) < 2 and !scrIsCrown(2) and Player.canHeal and random(1) <= canHealth
 		{
 			instance_create(x+random(4)-2,y+random(4)-2,HPPickup)
 			return true;
@@ -187,7 +187,7 @@ function scrDrop(itemdrop, weapondrop) {
 		{
 			if scrIsCrown(5)//Crown of guns roll again for healthdrop
 			{
-				if random(mh) > h and random(3) < 2 and Player.crown != 2 and Player.canHeal and random(1) <= canHealth
+				if random(mh) > h and random(3) < 2 and !scrIsCrown(2) and Player.canHeal and random(1) <= canHealth
 				{
 					instance_create(x+random(4)-2,y+random(4)-2,HPPickup)
 					return true;

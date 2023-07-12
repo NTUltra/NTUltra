@@ -1,5 +1,5 @@
 friction = 0.2
-
+depth = -2;
 var otherPickup = instance_place(x,y,AmmoHPPickup);
 if otherPickup != noone
 {
@@ -55,7 +55,11 @@ event_inherited();
 
 supercursed = false;
 as = 6;
+curseSpeed = 1;
 //if instance_exists(Player) && Player.skill_got[3]
 //	as = 8;
 if UberCont.normalGameSpeed == 60
+{
 	as *= 0.5;
+	curseSpeed *= 0.5;
+}

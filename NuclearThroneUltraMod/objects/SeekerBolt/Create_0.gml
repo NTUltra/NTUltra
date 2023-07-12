@@ -24,5 +24,5 @@ alarm[0]=4
 
 }
 maxSpeed = 6;
-acc = 1.2;
+acc = 1;
 alarm[11] = 1;
