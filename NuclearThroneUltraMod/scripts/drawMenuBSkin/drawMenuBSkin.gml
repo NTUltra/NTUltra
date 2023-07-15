@@ -35,4 +35,8 @@ function drawMenuBSkin(skin,race,theColour){
 	draw_sprite_ext(spr,imageIndex,xx-1,yy+1,1,1,0,theColour,1);
 	shader_reset();
 	draw_sprite_ext(spr,imageIndex,xx,yy,1,1,0,theColour,1);
+	if race == 24 && skin == 0 && instance_exists(ElementorHead)
+	{
+		draw_sprite_ext(sprMutant24IdleHead,imageIndex,xx,yy,1,1,0,ElementorHead.col,1);
+	}
 }

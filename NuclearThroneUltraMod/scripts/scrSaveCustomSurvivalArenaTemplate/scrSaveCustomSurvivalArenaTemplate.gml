@@ -8,7 +8,6 @@ function scrSaveCustomSurvivalArenaTemplate() {
 	}
 	var fileName = "CustomSurvivalArena/Important notes on creating custom survival arena.txt";
 	var file = file_text_open_write(fileName);
-	debug("file: ", file);
 	var str = @"
 - Must be JSON object consisting of a 2D array
 - First entry of each wave must hold all properties
@@ -25,7 +24,6 @@ function scrSaveCustomSurvivalArenaTemplate() {
 	
 	var fileName = "CustomSurvivalArena/custom_survival_wave_template.json";
 	var file = file_text_open_write(fileName);
-	debug("file: ", file);
 	var str = @'
 
 [

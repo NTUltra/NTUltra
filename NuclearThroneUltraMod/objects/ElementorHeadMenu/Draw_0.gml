@@ -1,6 +1,7 @@
 /// @description Draw on top of elementor's head
 with myElementor
 {
+	//draw_self();
 	var spr = sprite_index;
 	switch(sprite_index)
 	{

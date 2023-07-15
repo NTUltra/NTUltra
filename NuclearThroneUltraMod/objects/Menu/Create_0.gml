@@ -76,7 +76,7 @@ instance_create(x,y-24,TV)
 
 if UberCont.race_have[24] = 1//Elementor
 {
-char[24] = instance_create(150,36,CampChar)
+char[24] = instance_create(150,36,CampChar);
 char[24].sprite_index = sprElementorMenuSelect
 char[24].spr_menu = sprElementorMenuSelected
 char[24].spr_to = sprElementorMenuSelect
@@ -88,7 +88,6 @@ with ElementorHead
 with instance_create(x,y,ElementorHeadMenu)
 {
 	myElementor = other.char[24];
-	depth = myElementor.depth - 1;
 }
 //char[24].depth--;
 }
@@ -406,7 +405,7 @@ if UberCont.race_have[26] = 1{
 char[26].x = 48;
 char[26].y = 8;
 char[26].camX = 128;
-char[16].camY = 8;
+char[26].camY = 8;
 char[26].image_speed = 0.3;//Humphry is a slow man
 char[26].sprite_index = sprHumphryMenu
 char[26].spr_menu = sprHumphryMenuSelected

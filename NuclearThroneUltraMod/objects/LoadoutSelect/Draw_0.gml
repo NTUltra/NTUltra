@@ -170,6 +170,7 @@ else
 draw_text_color(sx+1,__view_get( e__VW.YView, 0 )+67,string_hash_to_newline("SKIN: " + string(letter)),c_white,c_white,c_white,c_white,1);
 draw_set_halign(fa_left)
 drawMenuBSkin(skin,race,c_white);
+
 }
 
 

@@ -253,7 +253,11 @@ with Notice{draw_self();}
 with EuphoriaShield{draw_self();}
 with CampChar
 {
-	draw_self();	
+	draw_self();
+}
+with ElementorHeadMenu
+{
+	event_perform(ev_draw,0);	
 }
 with EnemyBullet1Square
 {

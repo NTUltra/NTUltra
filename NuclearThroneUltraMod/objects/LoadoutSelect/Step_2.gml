@@ -111,10 +111,6 @@ if race != 0 && UberCont.mouse__x > sx-24 and UberCont.mouse__x < sx and UberCon
 			{
 				skin++
 			}
-			debug("d " , UberCont.race_dskin[race]);
-			debug("e " , UberCont.race_eskin[race]);
-			debug("f " , UberCont.race_fskin[race]);
-			debug("SKIN: ", skin);
 			if skin > 5
 				skin = 0
 		}
