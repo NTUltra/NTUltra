@@ -1,5 +1,5 @@
-function scrDarkness() {	
-	if darkness = 1
+function scrDarkness() {
+	if darkness = 1 && !instance_exists(GenCont)
 	{
 
 	if !(surface_exists(dark) ){

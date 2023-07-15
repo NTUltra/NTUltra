@@ -181,8 +181,8 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 			{
 				onlyusemegold = false;	
 			}
-			if targetPickup.pickedup=false
-			weaponspickedup+=1;
+			if !targetPickup.pickedup
+				weaponspickedup+=1;
 
 			if scrCheckGold(wep_name[targetPickup.wep])
 			{
@@ -191,7 +191,7 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 
 			//GUN GAME
 			if weaponspickedup>=50
-			scrUnlockGameMode(11,"FOR PICKING UP 50 WEAPONS THIS RUN")
+				scrUnlockGameMode(11,"FOR PICKING UP 50 WEAPONS THIS RUN")
 
 			//favourable BUILD GAMMODE
 			if scrFavourableWeapons(targetPickup.wep)

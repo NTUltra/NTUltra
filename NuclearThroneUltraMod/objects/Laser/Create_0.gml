@@ -25,5 +25,5 @@ isUltra = false;
 canBeMoved = false;
 isLaser = true;
 canSmoke = true;
-
+defaultPierce = 32;
 event_perform(ev_alarm,2);

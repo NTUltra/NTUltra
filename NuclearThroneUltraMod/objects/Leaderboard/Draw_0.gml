@@ -70,8 +70,11 @@ else if array_length(leaderboard) > 0
 			draw_surface(surf,xx,yy);
 			surface_free(surf);
 			xx += 74;
-			//scrDrawWhiteOutline(scrLeaderboardRace(entry[5],entry[6],entry[7],entry[2]),0,xx,yy+3);
 			draw_sprite(scrLeaderboardRace(entry[5],entry[6],entry[7],entry[2]),0,xx,yy+3);
+			if (entry[5] == 24 && entry[6] == 0)
+			{
+				draw_sprite_ext(sprMutant24IdleHead,0,xx,yy+3,1,1,0,ElementorHead.col,1);
+			}
 			xx += 20;
 			var area = scrAreaName(real(entry[2]),real(entry[3]),0);
 			if entry[4] != "0"
@@ -110,12 +113,15 @@ else if array_length(leaderboard) > 0
 			//7 = altultra
 			scrDrawLeaderboardWeapon(entry, 8, xx, yy);
 			xx += 48;
-			if (entry[11] != "1")
+			if (entry[11] != "[1]")
 			{
-				scrDrawLeaderboardCrown(entry,11,xx,yy);
+				
+				scrDrawLeaderboardCrown(scrStringArrayToNumbersArray(entry[11]),xx,yy);
 			}
 			xx += 16;
-			scrDrawLeaderboardUltra(xx,yy,entry,5,6,7,12);
+			scrDrawLeaderboardUltra(xx,yy,entry,5,6,7,13);
+			xx += 32;
+			draw_sprite(sprUltraModIcon,real(entry[12]),xx,yy);
 		}
 	}
 	else if leaderboardType == LEADERBOARD.VANFAN
@@ -161,6 +167,10 @@ else if array_length(leaderboard) > 0
 			xx += 127;
 			
 			draw_sprite(scrLeaderboardRace(entry[2],entry[3],false,9),0,xx,yy+3);
+			if (entry[2] == 24 && entry[3] == 0)
+			{
+				draw_sprite_ext(sprMutant24IdleHead,0,xx,yy+3,1,1,0,ElementorHead.col,1);
+			}
 			xx += 9;
 		}	
 	}
@@ -207,6 +217,10 @@ else if array_length(leaderboard) > 0
 			xx += 96;
 			
 			draw_sprite(scrLeaderboardRace(entry[3],entry[4],bool(entry[5]),9),0,xx,yy+3);
+			if (entry[3] == 24 && entry[4] == 0)
+			{
+				draw_sprite_ext(sprMutant24IdleHead,0,xx,yy+3,1,1,0,ElementorHead.col,1);
+			}
 			xx += 12;
 			
 			var aal = array_length(entry[2])
@@ -248,12 +262,14 @@ else if array_length(leaderboard) > 0
 			xx += 133;
 			scrDrawLeaderboardWeapon(entry,6,xx,yy);
 			xx += 40;
-			if (entry[9] != "1")
+			if (entry[9] != [1])
 			{
-				scrDrawLeaderboardCrown(entry,9,xx,yy)
+				scrDrawLeaderboardCrown(scrStringArrayToNumbersArray(entry[9]),xx,yy);
 			}
 			xx += 15;
-			scrDrawLeaderboardUltra(xx,yy,entry,3,4,5,10);
+			scrDrawLeaderboardUltra(xx,yy,entry,3,4,5,11);
+			xx += 32;
+			draw_sprite(sprUltraModIcon,real(entry[10]),xx,yy);
 		}
 	}
 	var yy = camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0]) - 16;

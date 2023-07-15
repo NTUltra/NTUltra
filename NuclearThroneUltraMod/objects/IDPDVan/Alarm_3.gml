@@ -173,7 +173,8 @@ if other.RogueIDPD=true
     spr_idle=sprRogueSegwayIDPDIdle;
     spr_walk=sprRogueSegwayIDPDWalk;
     spr_hurt=sprRogueSegwayIDPDHurt;
-    spr_dead=sprRogueSegwayIDPDDead;}
+    spr_dead=sprRogueSegwayIDPDDead;
+	}
 	else
 		scrSleepyPopo()
 if instance_exists(Player)

@@ -2,21 +2,29 @@
 // /@description reset some important variables
 ///@param
 function scrEndOfRun(){
+	//Also delete in alarm[2] in UberCont if object is deactivated during menuing
+	with ElementorHead
+		instance_destroy();
 	with ThrowWep
 		instance_destroy();
 	with FPSHACK
 		instance_destroy();
+	with SurvivalWave
+		instance_destroy();
 	room_speed = 30;
 	with UberCont
 	{
-		if (scrIsGamemode(42))
+		if (scrIsGamemode(42) && scrIsGamemode(25))
 		{
-			array_delete(opt_gamemode,array_length(opt_gamemode)-1,1);
+			array_delete(opt_gamemode,array_contains_get_index(opt_gamemode,25),1)
+			
 		}
+		debug("End gamemodes: ", opt_gamemode);
 		if array_length(opt_gamemode) == 2
 		{
 			scrUnlockGameMode(41,"FOR PLAYING TWO GAMEMODES");
 		}
+		lastwishused=false;
 		hasLeveledUp = false;
 		loadedRun = false;
 		crownVaultChallenge = 0;
@@ -51,6 +59,6 @@ function scrEndOfRun(){
 		vansSlapped = 0;
 		lastSaveLoop = -1;
 		levelIncrease = 0;
-		//customSurvivalArena = [];
+		isWeekly = false;
 	}
 }

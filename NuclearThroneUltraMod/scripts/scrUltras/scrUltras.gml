@@ -430,8 +430,8 @@ function scrUltras(altOverride = false) {
 	ultra_tips[60] = "phase"
 
 	    //VIKING 
-	    ultra_name[61] = "MEGA ARMOUR STRIKE"
-	    ultra_text[61] = "TRIPLE ARMOUR STRIKE#ARMOUR STRIKE DESTROYS PROJECTILES#GAIN 1 ARMOUR WHEN YOU KILL A BOSS"
+	    ultra_name[61] = "MEGA SERPENT ARMOUR STRIKE"
+	    ultra_text[61] = "TRIPLE SERPENT ARMOUR STRIKE#ARMOUR STRIKE DESTROYS PROJECTILES#GAIN 1 ARMOUR WHEN YOU KILL A BOSS"
 	    ultra_tips[61] = "break down the walls!"
 		
 		if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || ((scrKrakenWeapons(Player.wep) || scrKrakenWeapons(Player.bwep)) && instance_exists(UltraIcon))))
@@ -640,7 +640,7 @@ function scrUltras(altOverride = false) {
 	    ultra_tips[86] = "options"
     
 	    ultra_name[87] = "NEW CAPTAIN"
-	    ultra_text[87] = "AT THE START OF AN AREA#SUMMON A GROUP OF IDPD#THAT FIGHT FOR YOU#PICKING UP PORTAL STRIKE AMMO#TRIGGERS BLAST ARMOUR"
+	    ultra_text[87] = "AT THE START OF AN AREA#SUMMON A GROUP OF IDPD#THAT FIGHT FOR YOU#REPEAT EACH TIME#YOU PICK UP PORTAL STRIKE AMMO#PICKING UP PORTAL STRIKE AMMO#TRIGGERS BLAST ARMOUR"
 		if instance_exists(Player) && (Player.race != 22)
 			ultra_text[87] = "AT THE START OF AN AREA#SUMMON A GROUP OF IDPD#THAT FIGHT FOR YOU";
 	    ultra_tips[87] = "rogue leader"

@@ -5,17 +5,18 @@ event_inherited()
 //motion_add(direction,0.8)
 if walk > 0
 {
+	motion_add(direction,1.4)
 	if target > -1 && instance_exists(target)
-		motion_add(point_direction(x,y,target.x,target.y),0.2);
+		motion_add(point_direction(x,y,target.x,target.y),0.16);
 walk -= 1
-motion_add(direction,1.5)
+
 }
-if !place_meeting(x,y,Floor) && instance_exists(Floor)
+if speed > 1 && !place_meeting(x,y,Floor) && instance_exists(Floor)
 {
 	var xx = x + lengthdir_x(64,direction);
 	var yy = y + lengthdir_y(64,direction);
 	var targetFloor = instance_nearest(xx,yy,Floor);
-	direction = point_direction(x,y,targetFloor.x+16,targetFloor.y+16);
+	motion_add(point_direction(x,y,targetFloor.x,targetFloor.y),0.7);
 }
 if alarm[4] < 1
 {
@@ -104,3 +105,5 @@ dodge = 3
 }
 }
 
+if speed > maxSpeed
+	speed = maxSpeed;

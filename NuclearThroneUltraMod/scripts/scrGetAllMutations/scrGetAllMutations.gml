@@ -12,6 +12,5 @@ function scrGetAllMutations() {
 			i++;
 		}
 	}
-	debug("POSTING MUTATIONS: ", returnString);
 	return returnString;
 }

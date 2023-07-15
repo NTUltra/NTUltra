@@ -4,3 +4,5 @@ depth = -10
 num=0;
 
 alarm[0] = 2;
+camX = 0;
+camY = 0;

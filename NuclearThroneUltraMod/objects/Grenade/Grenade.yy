@@ -43,6 +43,9 @@
     "name": "sprGrenade",
     "path": "sprites/sprGrenade/sprGrenade.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "sprGrenade",
+    "path": "sprites/sprGrenade/sprGrenade.yy",
+  },
   "visible": true,
 }

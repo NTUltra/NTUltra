@@ -31,7 +31,11 @@ else if alarm[3] > 0
 	"[LMB] CONTINUE");
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
-	draw_text(xx,yy,string_hash_to_newline("GAMEMODE:#"+UberCont.gamemode[UberCont.opt_gamemode[0]]));
+	draw_text(xx,yy,string_hash_to_newline("GAMEMODE:#"+
+	UberCont.gamemode[UberCont.opt_gamemode[0]] + "#" +
+	UberCont.gamemode[UberCont.opt_gamemode[1]] + "#" +
+	UberCont.gamemode[UberCont.opt_gamemode[2]] + "#"
+	));
 	if scrIsGamemode(19)
 	{
 		draw_text(xx,yy,string_hash_to_newline("##"+"DISCS: " + UberCont.opt_discs + "#DAMAGE: " + UberCont.opt_discdamage));
@@ -45,7 +49,7 @@ else
 	"[ESC] CANCEL");
 	if alarm[1] > 0
 	{
-		draw_sprite(sprLoading,image_index,xx,yy);
+		draw_sprite(sprLoading,image_index,round(xx),round(yy));
 	}
 	else
 	{

@@ -219,6 +219,7 @@ if crown == 11
 			var wc1 = cwepmod1;
 			var wc2 = cwepmod2;
 			var wc3 = cwepmod3;
+			var wpu = weaponspickedup;
 			if level > 9
 				hasReachedUltra = true;
 			instance_destroy();
@@ -234,6 +235,7 @@ if crown == 11
 
 		with Player//Data to keep
 		{
+			weaponspickedup = wpu;
 			freeAmmoRound = 1;
 			ultimategamble = true;
 			race = other.race
@@ -279,10 +281,22 @@ if crown == 11
 		crown = other.crown}*/
 
 	}
+	else if !scrIsGamemode(26) && !scrIsGamemode(27) && !scrIsGamemode(37)
+	{
+		with Player
+		{
+			if area == 100
+				lastarea = 2;
+			else
+				area = 2
+		}
+	}
 	else
 	{
 		with Player
-			freeAmmoRound = 1;
+		{
+			freeAmmoRound = 1;	
+		}
 	}
 }
 

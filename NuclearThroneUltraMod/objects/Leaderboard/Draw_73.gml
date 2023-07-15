@@ -34,15 +34,37 @@ if enablePopUp == 1
 else if enablePopUp == 2
 {
 	//Crown popup
-	var ww = 72;
-	var wh = 24;
+	var ww = 76;
+	var wh = 38;
 	var xx = scrPopUpStayInScreenX(ww);
 	var yy = scrPopUpStayInScreenY(wh);
 	draw_rectangle_color(xx-ww,yy-wh,xx+ww,yy+wh,bkcol,bkcol,bkcol,bkcol,false);
 	draw_rectangle_color(xx-ww,yy-wh,xx+ww,yy+wh,outcol,outcol,outcol,outcol,true);
-	
-	draw_text_ext(xx,yy-4,string_replace_all(string_replace_all(crown_name[real(popupEntry[popUpIndex])],"[",""),"]",""),0,(ww*2)-2);
-	draw_sprite(scrLeaderboardCrown(real(popupEntry[popUpIndex])),0,xx,yy+8);
+	var al = array_length(popupEntry);
+	if al == 1
+	{
+		draw_text_ext(xx,yy-4,string_replace_all(string_replace_all(crown_name[popupEntry[0]],"[",""),"]",""),0,(ww*2)-2);
+		scrDrawLeaderboardCrown(popupEntry,xx,yy+8)
+	}
+	else
+	{
+		var xxx = xx - ww + 13;
+		var xr = xx + ww;
+		var xl = xxx;
+		var yyy = yy-26;
+		var i = 0;
+		repeat(al)
+		{
+			draw_sprite(scrLeaderboardCrown(popupEntry[i]), 0, xxx, yyy);
+			xxx += 18;
+			if xxx >= xr
+			{
+				xxx = xl
+				yyy += 18;
+			}
+			i++;
+		}
+	}
 }
 else if enablePopUp == 3
 {

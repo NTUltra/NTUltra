@@ -86,7 +86,52 @@ if race=11
 {
 instance_create(x,y,Explosion);
 }
-
+if race == 24
+{
+	snd_play(sndSpark1,0);
+	snd_play(sndRoll,0);
+	var ang = random(360);
+	repeat(3)
+	{
+		with instance_create(x,y,Lightning)
+		{image_angle = ang;
+			team = other.team
+			ammo = 8;
+		event_perform(ev_alarm,0)
+		visible = 0
+		with instance_create(x,y,LightningSpawn)
+		image_angle = other.image_angle}
+		with instance_create(x,y,Flame)
+		{
+			motion_add(ang+30,6)
+			team = other.team
+		}
+		with instance_create(x,y,IceFlame)
+		{
+			motion_add(ang+90,6)
+			team = other.team
+		}
+		with instance_create(x,y,FishBoost)
+		{
+			motion_add(ang+60,5);
+		}
+		with instance_create(x,y,Tentacle)
+		{
+			image_angle = ang + 60;
+			creator=other.id;
+			team = other.team
+			ammo = 9
+			event_perform(ev_alarm,0)
+			visible = 0
+			with instance_create(x,y,LightningSpawn)
+			{
+			sprite_index=sprTentacleSpawn
+			image_angle = other.image_angle
+			}
+		}
+		ang += 120;
+	}
+}
 var playerCorpse = instance_create(x,y,MovingCorpseDynamic)
 with playerCorpse
 {
@@ -254,6 +299,7 @@ instance_destroy();
 with instance_create(x,y,PlayerSpawn)//Data to keep
 {
 	//alarm[3]=300;//immunity
+	weaponspickedup = other.weaponspickedup;
 	onlyusemerevolver = other.onlyusemerevolver;
 	ultramod = other.ultramod;
 	ultimategamble=true;
@@ -512,28 +558,29 @@ else if !reincarnate
 				opt_gamemode = [0];
 				leaderboardType = LEADERBOARD.SCORE;
 				goToLeaderboard = true;
-				runScore[0] = other.kills;
+				runScore[0] = max(0,other.kills);
 				runScore[1] = encrypted_data.username;
 				runScore[2] = other.area;
 				runScore[3] = other.subarea;
 				runScore[4] = other.loops;
 				runScore[5] = other.race;
 				runScore[6] = other.bskin;
-				if getUltraMutation() != 255 || array_length(runScore) <= 12
+				if getUltraMutation() != 255 || array_length(runScore) <= 13
 					runScore[7] = other.altUltra;
 				runScore[8] = other.wep;
 				runScore[9] = other.bwep;
 				runScore[10] = other.cwep;
-				runScore[11] = other.crown;
-				if getUltraMutation() != 255 || array_length(runScore) <= 12//Keep ultra display after using lives
+				runScore[11] = string_replace_all(string(other.crown)," ","");
+				runScore[12] = other.ultramod;
+				if getUltraMutation() != 255 || array_length(runScore) <= 13//Keep ultra display after using lives
 				{
-					runScore[12] = getUltraMutation();
-					runScore[13] = scrGetAllMutations();
+					runScore[13] = getUltraMutation();
+					runScore[14] = scrGetAllMutations();
 				}
-			
+				debug("POST SCOORE: ",runScore);
 				canRestart = true;
 			}
-			if (scrIsGamemode(26) && !instance_exists(StartDaily))
+			else if (scrIsGamemode(26) && !instance_exists(StartDaily))
 			{
 				useSeed = false;
 				opt_gamemode = [0];
@@ -541,7 +588,7 @@ else if !reincarnate
 				goToLeaderboard = true;
 				canRestart = true;
 			}
-			if (isWeekly && !instance_exists(StartDaily)){
+			else if (isWeekly && !instance_exists(StartDaily)){
 				
 				useSeed = false;
 				leaderboardType = LEADERBOARD.WEEKLY;
@@ -579,7 +626,7 @@ else if !reincarnate
 					{
 						encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)] = other.kills;
 						scrSaveEncrypted();
-						runScore[0] = other.kills;
+						runScore[0] = max(0,other.kills);
 						runScore[1] = encrypted_data.username;
 						if scrIsGamemode(25) //Survival area
 							runScore[2] = 116;
@@ -589,16 +636,17 @@ else if !reincarnate
 						runScore[4] = other.loops;
 						runScore[5] = other.race;
 						runScore[6] = other.bskin
-						if getUltraMutation() != 255 || array_length(runScore) <= 12
+						if getUltraMutation() != 255 || array_length(runScore) <= 13
 							runScore[7] = other.altUltra;
 						runScore[8] = other.wep;
 						runScore[9] = other.bwep;
 						runScore[10] = other.cwep;
-						runScore[11] = other.crown;
-						if getUltraMutation() != 255 || array_length(runScore) <= 12
+						runScore[11] = string_replace_all(string(other.crown)," ","");
+						runScore[12] = other.ultramod;
+						if getUltraMutation() != 255 || array_length(runScore) <= 13
 						{
-							runScore[12] = getUltraMutation();
-							runScore[13] = scrGetAllMutations();
+							runScore[13] = getUltraMutation();
+							runScore[14] = scrGetAllMutations();
 						}
 					}
 				}

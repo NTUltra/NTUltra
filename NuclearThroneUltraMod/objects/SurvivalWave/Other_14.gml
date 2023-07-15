@@ -1,8 +1,9 @@
 /// @description Custom Wave
 waveNumber = max(0,waveNumber-1);
 waveNumber -= array_length(UberCont.customSurvivalArena)*Player.loops;
+debug("WAVENUMBER: ", waveNumber);
 var wantWave = UberCont.customSurvivalArena[waveNumber];
-var al = array_length(wantWave) - 1;
+var al = array_length(wantWave);
 
 //Translate json
 var property = wantWave[0];
@@ -43,7 +44,11 @@ for (var i = 1; i < al; i++)
 {
 	if is_string(wantWave[i].obj)
 		wantWave[i].obj = asset_get_index(wantWave[i].obj);
-	
+	var reps = 0;
+	if variable_struct_exists(wantWave[i],"echo")
+	{
+		reps += wantWave[i].echo;
+	}
 	if variable_struct_exists(wantWave[i],"xx")
 	{
 		var xxx = wantWave[i].xx;
@@ -69,6 +74,23 @@ for (var i = 1; i < al; i++)
 			result += real(plus[p]);
 		}
 		wantWave[i].yy = result;
+	}
+	repeat(reps)
+	{
+		wantWave[i].noX = false;
+		if !variable_struct_exists(wantWave[i],"xx")
+		{
+			wantWave[i].noX = true;
+		}
+		wantWave[i].noY = false;
+		if !variable_struct_exists(wantWave[i],"yy")
+		{
+			wantWave[i].noY = true;
+		}
+		wantWave[i].echo = 0;
+		array_insert(wantWave,i,wantWave[i]);
+		i++;
+		al++;
 	}
 }
 var j = 0;

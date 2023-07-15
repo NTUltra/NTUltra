@@ -205,7 +205,7 @@ if(instance_exists(Player)){
 var dir;
 dir = 0
 //if !place_meeting(x,y,Wall)
-var pierce = 32;
+var pierce = defaultPierce;
 var modBoost = 12;
 	with Player
 	{

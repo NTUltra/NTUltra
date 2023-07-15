@@ -196,7 +196,7 @@ if Player.area = 100
 	instance_create(exitX-32,exitY-64,Floor);
 	instance_create(exitX,exitY-64,Floor);
 	instance_create(exitX+32,exitY-64,Floor);
-	if (array_length(Player.crown) > 0 && !UberCont.canMultiCrown)
+	if (Player.crownvisits > 0 && array_length(Player.crown) > 0 && Player.crown[0] != 1 && !UberCont.canMultiCrown)
 	{
 		instance_create(exitX,exitY-96,Floor);
 		instance_create(exitX,exitY-128,Floor);	
@@ -277,6 +277,9 @@ if Player.area = 100
 				}
 				xx += xstep;
 			}
+		}
+		if (Player.loops > 0)
+		{
 			//Reroll station
 			if (instance_exists(Player) && Player.level > 1 && UberCont.enableReroll)
 			{

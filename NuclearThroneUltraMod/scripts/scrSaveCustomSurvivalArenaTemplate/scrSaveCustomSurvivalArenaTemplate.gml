@@ -12,7 +12,9 @@ function scrSaveCustomSurvivalArenaTemplate() {
 	var str = @"
 - Must be JSON object consisting of a 2D array
 - First entry of each wave must hold all properties
+- Giving no number to xx or yy will spawn your object in 1 of 4 corners of the arena, in rotating order
 - For positions xx & yy can only add up one number (no deductions or multiplications)
+- The echo word repeats your object and spawns in multiple times (I could not use the word repeat)
 - Can use cheat mode and press T to skip to other waves
 - Check https://bitbucket.org/UltraMod/ultramod/src/master/NuclearThroneUltraMod/objects/ for all available object names that can be spawned
 - Check https://bitbucket.org/UltraMod/ultramod/src/master/NuclearThroneUltraMod/sounds/ for all available songs and sounds
@@ -25,6 +27,7 @@ function scrSaveCustomSurvivalArenaTemplate() {
 	var file = file_text_open_write(fileName);
 	debug("file: ", file);
 	var str = @'
+
 [
 	[
 		{
@@ -73,19 +76,13 @@ function scrSaveCustomSurvivalArenaTemplate() {
         },
         {
             "obj": "Scorpion",
-            "time": 20
-        },
-        {
-            "obj": "Scorpion",
-            "time": 20
+            "time": 20,
+            "echo": 1
         },
         {
             "obj": "BigMaggot",
-            "time": 20
-        },
-        {
-            "obj": "BigMaggot",
-            "time": 20
+            "time": 20,
+            "echo": 1
         },
         {
             "obj": "BanditBoss",
@@ -111,11 +108,13 @@ function scrSaveCustomSurvivalArenaTemplate() {
         },
         {
             "obj": "Rat",
-            "time": 10
+            "time": 20,
+            "echo": 3
         },
         {
             "obj": "FastRat",
-            "time": 10
+            "time": 10,
+            "echo": 3
         },
         {
             "obj": "Ratking",

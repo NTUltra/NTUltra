@@ -594,6 +594,8 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),BigPandaSlash)
 	{
 	dmg = 4//shovel is 8
+	image_xscale *= 0.8;
+	image_yscale *= 0.8;
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -605,7 +607,7 @@ function scrFire2() {
 	motion_add(aimDirection,6)
 	BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
-	BackCont.shake += 1
+	BackCont.shake += 2
 	wkick = -4
 
 	break;
@@ -833,12 +835,12 @@ function scrFire2() {
 	snd_play_fire(sndSnowBotThrow);
 	with instance_create(x,y,CarThrow)
 	{
-	maxhealth = 30;//20 original
-	spr_idle = sprGoldenCarIdle
-	spr_hurt = sprGoldenCarHurt
-	//spr_dead = sprScorchmark
-	team = other.team
-	motion_add(aimDirection+(random(8)-4)*other.accuracy,16)
+		maxhealth = 30;//20 original
+		spr_idle = sprGoldenCarIdle
+		spr_hurt = sprGoldenCarHurt
+		//spr_dead = sprScorchmark
+		team = other.team
+		motion_add(aimDirection+(random(8)-4)*other.accuracy,16)
 	}
 
 	BackCont.viewx2 += lengthdir_x(-8,aimDirection+180)*UberCont.opt_shake
@@ -9132,7 +9134,7 @@ function scrFire2() {
 			branch = 100;
 			iframeskip = max(0,iframeskip-0.04);
 		team = 2
-		ammo = 8;//24
+		ammo = 12;//24
 		event_perform(ev_alarm,0)
 		visible = 0
 		with instance_create(x,y,LightningSpawn)
@@ -11748,7 +11750,7 @@ function scrFire2() {
 	snd_play_fire(sndFlameCannon)
 
 	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),SuperFlameCannonBall)
-	{motion_add(aimDirection+(random(4)-2)*other.accuracy,4.9)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,5)
 	image_angle = direction
 	team = other.team}
 

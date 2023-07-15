@@ -102,6 +102,7 @@ raddrop = 0;
 hurtDuration = 13; //Additional iframes
 hurtTime = 0;
 lockoutElementor = false; //When no ammo lockout ability for elementor
+mushroomhead = sprMutant24IdleHead;
 boostLevel = 0;
 level = 1
 if instance_exists(BackCont)
@@ -278,6 +279,17 @@ if race == 25
 {
 	//Better mutations
 	maxRadPickedUp = 90;
+}
+if race == 14//Panda
+{
+	mask_index = mskPanda;	
+}
+
+if race == 24//Elementor
+{
+	with ElementorHead
+		instance_destroy();
+	instance_create(x,y,ElementorHead);
 }
 
 canSecondaryPop = true;

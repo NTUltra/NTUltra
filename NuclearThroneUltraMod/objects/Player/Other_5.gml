@@ -263,9 +263,6 @@ if looping && area != 104
 	}
 	if scrCheckLoopAll()
 		scrUnlockCSkin(1,"FOR LOOPING WITH EVERY CHARACTER",0);
-	
-	if race = 11 && weaponspickedup<1
-	scrUnlockBSkin(11,"FOR LOOPING#WITHOUT PICKING UP A WEAPON#AS HUNTER",0);
 
 	//SKINNS
 	if race =3 && skill_got[19]
@@ -606,10 +603,15 @@ if area != 100 && area != 103
 		scrUnlockGameMode(32,"FOR COMPLETING FIVE AREAS#IN A ROW WITHOUT#TAKING A HIT")
 	}
 }
-if scrIsGamemode(32) && area == 114
+if scrIsGamemode(32) && (area == 114 || area == 123)
 {
 	scrUnlockGameMode(33,"FOR REACHING THE JUNGLE#ON GAMEMODE: ONE HIT WONDER")
 }
+if (area == 9 || area == 118) && race == 11 && weaponspickedup < 1
+{
+	scrUnlockBSkin(11,"FOR REACHING THE PALACE#WITHOUT PICKING UP A WEAPON#AS HUNTER",0);
+}
+	
 if movethislevel==false&&race=15 &&!instance_exists(MenuGen) &&!instance_exists(Menu) &&  !instance_exists(Vlambeer) && !instance_exists(CrownPickup)
 {//ATOM TELEPORT ONLY GAMEMODE UNLOCK
 scrUnlockGameMode(7,"FOR COMPLETING AN AREA WITHOUT WALKING")

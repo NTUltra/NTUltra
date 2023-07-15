@@ -49,7 +49,7 @@ if instance_exists(Player)
 	    if instance_exists(RadChest)
 	    oasisskip+=1;}
 	    else oasisskip=-1;
-		
+		SetSeed();
 		var inc = random(100);
 		if (random(100)<invertedchance+clamp(loops*2,0,20) || wep == 375 || bwep == 375 || cwep == 375)//Inversion magnet
 		{

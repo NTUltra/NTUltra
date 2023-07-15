@@ -33,7 +33,13 @@ function scrDrawSpiral() {
 	fishy = fishy-(fishy-(__view_get( e__VW.YView, 0 )+y))*0.01
 
 	if instance_exists(Player)
+	{
 		draw_sprite_ext(Player.spr_hurt,1,fishx,fishy,0.8+sin(image_angle/200)/5,0.8+sin(image_angle/200)/5,-image_angle*2,c_white,1)
+		if Player.race == 24 && instance_exists(ElementorHead) //Elemental Mushroom head
+		{
+			draw_sprite_ext(sprMutant24HurtHead,1,fishx,fishy,0.8+sin(image_angle/200)/5,0.8+sin(image_angle/200)/5,-image_angle*2,ElementorHead.col,1)
+		}
+	}
 
 	draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+48,0)
 	draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-48,0)

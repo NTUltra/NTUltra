@@ -247,11 +247,15 @@ function scrDrawBloom() {
 	draw_sprite_ext(sprite_index,image_index,x,y,2,2,image_angle,c_white,ba)
 
 	with Player
-	{
-	if race=13 && (KeyCont.key_spec[p] = 1 || KeyCont.key_spec[p] = 2)
+	{/*
+		if race == 24
+		{
+			draw_sprite_ext(mushroomhead,-1,x,y+1,right*1.4,image_yscale*1.4,angle,ElementorHead.col,0.5)
+		}
+	else */if race=13 && (KeyCont.key_spec[p] = 1 || KeyCont.key_spec[p] = 2)
 	{
 	draw_sprite_ext(sprite_index,image_index,x,y,right,1,image_angle,c_white,(ultra_got[49]*2)*sheepPower/10);}
-	if race = 9 and bskin
+	else if race = 9 and bskin
 	draw_sprite_ext(sprite_index,image_index,x,y,right*1.2,image_yscale*1.2,angle,c_white,ba)
 	if skill_got[36]//Absorbing Pores
 	{

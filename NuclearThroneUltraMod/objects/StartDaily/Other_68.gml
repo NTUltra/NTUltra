@@ -87,17 +87,18 @@ if (type == network_type_data) {
 			debug("the seed: ", UberCont.todaysSeed);
 			UberCont.seed = UberCont.todaysSeed;
 			UberCont.opt_gamemode = [];
-			UberCont.opt_gamemode = [buffer_read(buffer, buffer_u16)];
+			UberCont.opt_gamemode = [37,buffer_read(buffer, buffer_u8)];
 			var i = 1;
 			repeat(2)
 			{
-				var nextGm = buffer_read(buffer, buffer_u16);
+				var nextGm = buffer_read(buffer, buffer_u8);
 				if (nextGm != 0)
 				{
 					UberCont.opt_gamemode[i] = nextGm;
 				}
+				i++;
 			}
-			UberCont.weeklyGamemode = UberCont.opt_gamemode[0];
+			debug("GAMEMODES ", UberCont.opt_gamemode);
 			if scrIsGamemode(1)//One weapon only
 			{
 				UberCont.opt_gm1wep = buffer_read(buffer,buffer_u16);
@@ -285,8 +286,8 @@ if (type == network_type_data) {
 					crownvisits = -1;
 				}
 			}
-			alarm[3] = 60;
-			alarm[1] += 90;
+			alarm[3] = 90;
+			alarm[1] += 120;
 			
 		break;
 	}

@@ -107,16 +107,28 @@ if dir<12
 			crown = 24;
 		else if crown == 11
 		{
-			//Upgrade crown of reincarnation
-			if Player.level > 9
-				sprite_index = sprCrownOfReincarnationUpgraded;
+			if Player.crownvisits <= 0 && !scrIsGamemode(26) && !scrIsGamemode(27) && !scrIsGamemode(37)
+			{
+				//Crown of start
+				crown_name[11] = "[CROWN OF FROG]"
+				crown_text[11] = "START IN THE SEWERS"
+				crown_used[11] = 0
+				crown_tips[11] = "quick start"
+				sprite_index = sprCrownSelectStart;
+			}
+			else
+			{
+				//Upgrade crown of reincarnation
+				if Player.level > 9
+					sprite_index = sprCrownOfReincarnationUpgraded;
+			}
 		}
 		else if crown == 1 && UberCont.canMultiCrown
 		{
 			crown_name[1] = "[NONE]"
 			crown_text[1] = "REMOVE ALL CROWNS"
 		}
-		if scrIsGamemode(27)
+		if scrIsGamemode(27) || scrIsGamemode(37)
 		{
 			if crown == 7
 			{

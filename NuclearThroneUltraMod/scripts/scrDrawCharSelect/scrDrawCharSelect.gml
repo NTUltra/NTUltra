@@ -8,15 +8,15 @@ function scrDrawCharSelect() {
 	with CampChar{
 	if position_meeting(UberCont.mouse__x,UberCont.mouse__y,self) and y > view_yview+48 and y < view_yview+view_hview-48 and UberCont.mouse__y > view_yview+Menu.widescreen and UberCont.mouse__y < view_yview+view_hview-Menu.widescreen
 	other.mouseover = num}*/
-	/*
+	
 	with CharSelect{
 	if position_meeting(UberCont.mouse__x,UberCont.mouse__y,self)// and y > view_yview+48 and y < view_yview+view_hview-48
 	other.mouseover = num}
-*/
+
 	if (!instance_exists(LoadoutSelect) || LoadoutSelect.wepmenuopen)
 		return;
 	var showExplain = false;
-	if mouseover = race and race != 0
+	if mouseover == race and race != 0
 		showExplain = true;
 	//extra = 96
 	else if mouseover != -1

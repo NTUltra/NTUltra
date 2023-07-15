@@ -16,7 +16,7 @@ if other.team != team and other.my_health > 0 && (other.team!=2 || image_index<5
 				image_index = 0;
 			}
 
-			motion_add(other.direction,0.5)
+			motion_add(other.direction,0.4 + (other.speed*0.1))
 
 			if alarm[11]>0//frozen
 			{

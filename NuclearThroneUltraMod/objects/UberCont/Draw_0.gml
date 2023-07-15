@@ -70,7 +70,7 @@ stxt2 = txt2
 
 var gamemodeScrollString = "";
 var al = array_length(UberCont.opt_gamemode)
-for (var i = 1; i < al; i++)
+for (var i = 0; i < al; i++)
 {
 	if (UberCont.opt_gamemode[i] != 0)
 	{

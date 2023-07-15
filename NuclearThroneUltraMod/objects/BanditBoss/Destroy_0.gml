@@ -1,4 +1,4 @@
-if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(BanditBoss) == 1
+if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(BanditBoss) == 1 && (!instance_exists(Player) || (instance_exists(Player) && Player.area != 2))
 with MusCont
 {
 //optimise sound_discard(song)

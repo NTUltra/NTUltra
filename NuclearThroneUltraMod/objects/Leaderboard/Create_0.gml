@@ -10,6 +10,10 @@ if !instance_exists(MusCont)
 	snd_loop(amb0c);
 	audio_sound_gain(amb0c, max(0, sqrt(UberCont.opt_ambvol)), 0);
 }
+with UberCont
+{
+	goToLeaderboard = false;	
+}
 connectionSuccess = true;
 network_set_config(network_config_use_non_blocking_socket, 1);
 network_set_config(network_config_connect_timeout, 20000);
@@ -57,3 +61,6 @@ popUpY = 0;
 popUpIndex = 0;
 popUpAltUltra = false;
 scrEnableBigScreen();
+with ElementorHead
+	instance_destroy();
+instance_create(x,y,ElementorHead);

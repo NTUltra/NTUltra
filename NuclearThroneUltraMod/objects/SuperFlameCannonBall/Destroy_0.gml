@@ -21,7 +21,7 @@ var angStep = 360/am;
 repeat(am)
 {
 	with instance_create(x,y,FlameCannonBall)
-	{motion_add(ang,5)
+	{motion_add(ang,6)
 	image_angle = direction
 	team = other.team}
 	ang += angStep;

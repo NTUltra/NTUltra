@@ -35,6 +35,9 @@
     "name": "sprLoveBomb",
     "path": "sprites/sprLoveBomb/sprLoveBomb.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "sprGrenade",
+    "path": "sprites/sprGrenade/sprGrenade.yy",
+  },
   "visible": true,
 }

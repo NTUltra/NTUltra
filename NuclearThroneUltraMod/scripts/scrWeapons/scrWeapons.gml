@@ -2364,22 +2364,22 @@ function scrWeapons() {
 	wep_name[214] = "VIKING GREAT AXE"
 	wep_type[214] = 0
 	wep_auto[214] = 0
-	wep_load[214] = 33
+	wep_load[214] = 30
 	wep_cost[214] = 0
 	wep_sprt[214] = sprVikingAxe
 	wep_area[214] = -1
-	wep_text[214] = "holy mother of thor!"
+	wep_text[214] = "not for woodchopping"
 	wep_swap[214] = sndSwapHammer
 	wep_rad[214] = 0;
 
 	wep_name[215] = "VIKING AXE"
 	wep_type[215] = 0
 	wep_auto[215] = 0
-	wep_load[215] = 32
+	wep_load[215] = 30
 	wep_cost[215] = 0
 	wep_sprt[215] = sprVikingSmallAxe
 	wep_area[215] = -1
-	wep_text[215] = "not for woodchopping"
+	wep_text[215] = "serpent axe"
 	wep_swap[215] = sndSwapHammer
 	wep_rad[215] = 0;
 
@@ -3717,7 +3717,7 @@ function scrWeapons() {
 	wep_name[337] = "MINI LIGHTNING PISTOL"
 	wep_type[337] = 5
 	wep_auto[337] = 0
-	wep_load[337] = 14
+	wep_load[337] = 13
 	wep_cost[337] = 1
 	wep_sprt[337] = sprMiniLightningPistol
 	wep_area[337] = 0
@@ -6104,10 +6104,10 @@ function scrWeapons() {
 	wep_name[552] = "SUPER WRONG DIRECTION"
 	wep_type[552] = 3
 	wep_auto[552] = 0
-	wep_load[552] = 60
+	wep_load[552] = 55
 	wep_cost[552] = 5
 	wep_sprt[552] = sprSuperWrongDirection
-	wep_area[552] = 18
+	wep_area[552] = 14
 	wep_text[552] = "lost completly"
 	wep_swap[552] = sndSwapBow
 	wep_rad[552] = 0;
@@ -6975,7 +6975,7 @@ function scrWeapons() {
 	wep_auto[631] = 0
 	wep_load[631] = 36//1.13 seconds
 	wep_cost[631] = 9
-	wep_sprt[631] = sprLightningCannon
+	wep_sprt[631] = sprUltraLightningCannon
 	wep_area[631] = 27
 	wep_text[631] = "always strike thrice"
 	wep_swap[631] = sndSwapEnergy

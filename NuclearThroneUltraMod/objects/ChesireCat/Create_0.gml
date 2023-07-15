@@ -57,3 +57,4 @@ if loops >= startLoop
 }
 gunangle = 0;
 scrAddDrops(2);
+maxSpeed = 6;

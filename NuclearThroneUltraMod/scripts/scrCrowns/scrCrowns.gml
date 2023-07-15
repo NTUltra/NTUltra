@@ -195,6 +195,7 @@ function scrCrowns() {
 	crown_used[33] = 0
 	crown_tips[33] = "duplication"
 	
+	
 	crownmax = 23//+11
 	secretcrownmax = 11;
 

@@ -1457,7 +1457,7 @@ var homeBoost = 0;
 
 if (ultra_got[42])//HUNTER ULTRA B Homing projectiles
 	homeBoost += 2.5;
-if skill_got[19] == 1
+if skill_got[19]
 {
 	homeBoost += 0.5;
 	if race == 25
@@ -1603,7 +1603,7 @@ if speed<2
 {
 with projectile{
 
-if speed>2 &&object_index!=Flame&&object_index!=TrapFire&&object_index!=HotDrakeFlameCannon&&object_index!=HotDrakeSplitBall&&object_index!=Bolt&&object_index!=Splinter&&object_index!=UltraBolt{
+if speed>2 && canBeMoved{
 speed*=0.1;}
 
 }
@@ -1615,7 +1615,7 @@ speed*=0.1;
 else{
 with projectile
 {
-if typ!=0&&object_index!=Flame&&object_index!=TrapFire&&object_index!=HotDrakeFlameCannon&&object_index!=HotDrakeSplitBall&&object_index!=Bolt&&object_index!=Splinter&&object_index!=UltraBolt{
+if typ!=0&&canBeMoved{
     if speed<8
     {speed+=1;}
     else
@@ -1900,7 +1900,7 @@ if ultra_got[95]
 with instance_create(x,y,Flame)
 {motion_add(other.direction+180+random(60)-30,0.4+random(2.5))
 team = other.team
-depth=-1;}
+depth=+1;}
 
 }
 
@@ -2010,4 +2010,33 @@ if hammerheadcounter > 0
 		nearWall = false;
 	
 	mask_index = msk;
+}
+//COLLISION
+if(race != 18)
+{
+	if place_meeting(x+hspeed,y,WallHitMe)
+	{
+		x -= hspeed*friction;
+		var h = sign(hspeed);
+		while(!place_meeting(x+h,y,WallHitMe))
+		{
+			x += h;
+		}
+		hspeed = 0;
+	}
+	if place_meeting(x,y+vspeed,WallHitMe)
+	{
+		y -= vspeed*friction;
+		var v = sign(vspeed);
+		while(!place_meeting(x,y+v,WallHitMe))
+		{
+			y += v;
+		}
+		vspeed = 0;
+	}
+}
+else if place_meeting(x,y,WallHitMe)
+{	
+	flying = 2;
+	mask_index = mskPickupThroughWall;
 }

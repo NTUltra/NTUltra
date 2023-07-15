@@ -27,7 +27,7 @@ if (type == network_type_data) {
 			if array_length(UberCont.runScore) > 1
 			{
 				debug("send score: ",string(UberCont.runScore));
-				var sendBuffer = buffer_create(24,buffer_grow,1);
+				var sendBuffer = buffer_create(25,buffer_grow,1);
 				if UberCont.isWeekly
 				{
 					buffer_write(sendBuffer,buffer_u8,NETDATA.WEEKLY);
@@ -60,9 +60,10 @@ if (type == network_type_data) {
 				buffer_write(sendBuffer,buffer_u16,UberCont.runScore[8]);//wep
 				buffer_write(sendBuffer,buffer_u16,UberCont.runScore[9]);//bwep
 				buffer_write(sendBuffer,buffer_u16,UberCont.runScore[10]);//cwep
-				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[11]);//crown
-				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[12]);//Ultra mutation 255 is none
-				buffer_write(sendBuffer,buffer_string,UberCont.runScore[13]);//List of mutations
+				buffer_write(sendBuffer,buffer_string,UberCont.runScore[11]);//crown
+				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[12]);//Ultramod
+				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[13]);//Ultra mutation 255 is none
+				buffer_write(sendBuffer,buffer_string,UberCont.runScore[14]);//List of mutations
 				network_send_packet(serverSocket, sendBuffer, buffer_get_size(sendBuffer));
 				buffer_delete(sendBuffer);
 			}
@@ -115,19 +116,37 @@ if (type == network_type_data) {
 					leaderboardName[1] = UberCont.today;
 				}
 				else if (leaderboardType == LEADERBOARD.WEEKLY) {
+					debug("Dupe code??");
 					viewingWeekly = true;
 					leaderboardName[0] = "WEEKLY ";
 					var displayWeek = string_replace(leaderboardTypeString,"weekly","");
 					displayWeek = string_copy(displayWeek,0,string_pos("+", displayWeek) - 1);
 					displayWeek = string_replace(displayWeek,"-"," ");
 					leaderboardName[0] += displayWeek;
-					var gmn = string_copy(leaderboardTypeString,string_pos("+",leaderboardTypeString),3);
-					viewingWeeklyGamemode = real(string_replace(gmn,".",""));
-					if viewingWeeklyGamemode == 8
+					var gmn = string_copy(leaderboardTypeString,string_pos("+",leaderboardTypeString)+3,
+					string_length(leaderboardTypeString)-string_pos("+",leaderboardTypeString) - 8);
+					gmn = string_split(gmn,",",false);
+					viewingWeeklyGamemode[0] = real(gmn[0]);
+					viewingWeeklyGamemode[1] = real(gmn[1]);
+					viewingWeeklyGamemode[2] = real(gmn[2]);
+					if viewingWeeklyGamemode[0] == 8
 						leaderboardType = LEADERBOARD.VANFAN;
 					else
 						leaderboardType = LEADERBOARD.SCORE;
-					leaderboardName[1] = string_replace_all(UberCont.gamemode[viewingWeeklyGamemode],"#"," ");
+					leaderboardName[1] = "";
+					var i = 0;
+					repeat(3)
+					{
+						if viewingWeeklyGamemode[i] != 0
+						{
+							leaderboardName[1] += string_replace_all(UberCont.gamemode[viewingWeeklyGamemode[i]],"#"," ");
+							if i != 2 && viewingWeeklyGamemode[i + 1] != 0
+							{
+								leaderboardName[1] +=  " - ";
+							}
+						}
+						i++;
+					}
 				}
 			}
 			if string_count("weekly",leaderboardTypeString) > 0
@@ -139,13 +158,30 @@ if (type == network_type_data) {
 				displayWeek = string_replace(displayWeek,"-"," ");
 				
 				leaderboardName[0] += displayWeek;
-				var gmn = string_copy(leaderboardTypeString,string_pos("+",leaderboardTypeString),3);
-				viewingWeeklyGamemode = real(string_replace(gmn,".",""));
-				if viewingWeeklyGamemode == 8
+				var gmn = string_copy(leaderboardTypeString,string_pos("+",leaderboardTypeString)+3,
+				string_length(leaderboardTypeString)-string_pos("+",leaderboardTypeString) - 8);
+				gmn = string_split(gmn,",",false);
+				viewingWeeklyGamemode[0] = real(gmn[0]);
+				viewingWeeklyGamemode[1] = real(gmn[1]);
+				viewingWeeklyGamemode[2] = real(gmn[2]);
+				if viewingWeeklyGamemode[0] == 8
 					leaderboardType = LEADERBOARD.VANFAN;
 				else
 					leaderboardType = LEADERBOARD.SCORE;
-				leaderboardName[1] = string_replace_all(UberCont.gamemode[viewingWeeklyGamemode],"#"," ")
+				leaderboardName[1] = "";
+				var i = 0;
+				repeat(3)
+				{
+					if viewingWeeklyGamemode[i] != 0
+					{
+						leaderboardName[1] += string_replace_all(UberCont.gamemode[viewingWeeklyGamemode[i]],"#"," ");
+						if i != 2 && viewingWeeklyGamemode[i + 1] != 0
+						{
+							leaderboardName[1] +=  " - ";
+						}
+					}
+					i++;
+				}
 			}
 			if string_count("dailyscore",leaderboardTypeString) > 0
 			{
@@ -191,9 +227,9 @@ if (type == network_type_data) {
 				var scoreEntryList = [];
 				var i = 0;
 				var entryIndex = 1;
-				var entries = 14//13 entries
+				var entries = 15//13 entries ALL DATA ENTRIES
 				if leaderboardType == LEADERBOARD.RACE
-					entries = 12;//11 entries
+					entries = 13;//11 entries
 				repeat(entries)
 				{
 					scoreEntryList[i] = string_copy(scoreEntry,entryIndex, string_pos_ext(" ",scoreEntry,entryIndex)-entryIndex);

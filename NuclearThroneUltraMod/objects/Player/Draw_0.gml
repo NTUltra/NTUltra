@@ -156,9 +156,16 @@ draw_sprite_ext(sprBlackHoleGeneration,wave,x+lengthdir_x(-wkick,aimDirection+(w
 }}
 }
 if instance_exists(Decoy) || rollIframe > 0 
-draw_sprite_ext(sprite_index,-1,x,y,right,image_yscale,angle,c_white,0.4)//CHICKEN VANISHED OPACITY
+	draw_sprite_ext(sprite_index,-1,x,y,right,image_yscale,angle,c_white,0.4)//CHICKEN VANISHED OPACITY
 else
-draw_sprite_ext(sprite_index,-1,x,y,right,image_yscale,angle,c_white,1)//PLAYER GETS DRAWN HERE
+{
+	draw_sprite_ext(sprite_index,-1,x,y,right,image_yscale,angle,c_white,1)//PLAYER GETS DRAWN HERE
+	if race == 24 && my_health > 0 && instance_exists(ElementorHead) //Elemental Mushroom head
+	{
+		mushroomhead = scrElementorMushroomHead();
+		draw_sprite_ext(mushroomhead,-1,x,y,right,image_yscale,angle,ElementorHead.col,1)
+	}
+}
 
 //Alkaline Saliva
 if skill_got[32] && isAlkaline// && my_health < maxhealth && lag < 1 && armour < 1
@@ -229,3 +236,4 @@ bwkick += 1
 }
 if nearWall
 	draw_sprite(sprHammerHeadNear,wave,x,y-16);
+	

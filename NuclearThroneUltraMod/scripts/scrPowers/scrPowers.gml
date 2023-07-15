@@ -364,9 +364,42 @@ function scrPowers() {
 	        exception=true
 	    }
 	    scrBlankArmour();
-    
+		if spr_idle == sprMutant16DIdle
+			snd_play(sndRoll);
+		else
+			snd_play_2d(sndSnake);
+		with instance_create(x,y,SerpentStrike)
+	    {
+			myHead = instance_create(x,y,SerpentStrikeAnimateHead);
+			image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+			if dcos(image_angle) < 0
+				flipped = -1;
+			team = other.team;
+			dmg *= 1+Player.level*0.09;//0.1
+			if other.spr_idle = sprMutant16DIdle
+			{
+				sprOutline = sprKrakenStrikeOutline;
+				if other.ultra_got[63] {
+					sprite_index = sprFrostKrakenStrikeHead;
+					sprHead = sprFrostKrakenStrike;
+				}
+				else
+				{
+					sprHead = sprKrakenStrikeHead;
+					sprite_index = sprKrakenStrike;
+				}
+			} else if other.ultra_got[63] {
+				sprite_index = sprFrostSerpentStrike;
+				sprHead = sprFrostSerpentStrikeHead;
+			}
+			event_perform(ev_alarm,0);
+			currentFrameAmount = 0;
+			
+		}
+    /*
 	    with instance_create(x,y,ArmourStrike)
-	    {image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
+	    {
+			image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
 	    Originalangle=image_angle;
 	    team = other.team
 	    ammo = 100;
@@ -376,7 +409,8 @@ function scrPowers() {
 	    {
 	    image_angle = other.image_angle
 	    image_yscale=3;
-	    }}
+	    }
+		}*/
     
 	    if ultra_got[61] && !Player.altUltra//MEGA ARMOUR STRIKE
 	    {

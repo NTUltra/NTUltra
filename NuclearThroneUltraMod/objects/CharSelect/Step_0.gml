@@ -131,18 +131,7 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+20 and UberCon
     {race = other.race
     crown = other.crown}
 	with UberCont {
-		if (scrIsGamemode(42))
-		{
-			opt_gamemode[array_length(opt_gamemode)] = 25;
-			var file = file_text_open_read(opt_custom_survival);
-			var text = "";
-			while (!file_text_eof(file))
-			{
-				text += file_text_readln(file);
-			}
-			file_text_close(file);
-			customSurvivalArena = json_parse(text);
-		}
+		scrLoadCustomSurvivalArena();
 		lastwishused=false;
 		routeString = "";
 		time_frame = 0;
@@ -275,9 +264,15 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+20 and UberCon
 	{
 		if num == other.num
 		{
-			camera_set_view_pos(view_camera[0],
-			x - camera_get_view_width(view_camera[0])*0.5,
-			y - camera_get_view_height(view_camera[0])*0.5);
+			with Menu
+			{
+				camTargetX = other.x + other.camX - (camera_get_view_width(view_camera[0])*0.5);
+				camTargetY = other.y + other.camY + 8 - (camera_get_view_height(view_camera[0])*0.5);
+				camX = camera_get_view_x(view_camera[0]);
+				camY = camera_get_view_y(view_camera[0]);
+				camLerp = 0;
+				alarm[3] = 1;
+			}
 		}
 	}
 }

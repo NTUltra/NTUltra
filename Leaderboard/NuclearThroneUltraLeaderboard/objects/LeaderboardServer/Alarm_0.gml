@@ -45,12 +45,12 @@ if day != yesterday
 		}
 		weekSeed = byteSeed;
 		random_set_seed(weekSeed);
-		weekGamemode = irandom_range(1,37);
+		weekGamemode = [irandom_range(1,41),0,0];
 		//Manual gamemode injection here
 		weeklyOption = [];
 		if weekGamemode == 26//Daily race
 			weekGamemode = 1;
-		switch (weekGamemode)
+		switch (weekGamemode[0])
 		{
 			case 1://One weapon only
 				weeklyOption[0] = irandom_range(1,maxwep);
@@ -59,24 +59,62 @@ if day != yesterday
 					weeklyOption[0] = irandom_range(1,maxwep);
 				}
 			break;
+			case 3://NO HUD
+				weekGamemode = [3,15,18];//NO HUD + NO MUTATIONS + NO ELITE POPO
+			break
+			case 4://WAll is lava
+				weekGamemode = [6, 40, 0]//CLAUSTROPHOBIA +1 VS 1
+			break;
+			case 12://ZOMBIES
+				weekGamemode = [12, 39, 0];
+			break;
+			case 15://NO mutations
+				weekGamemode = [19,16,4]; //DISC ROOM, SPIKE TRAPS, WALL IS LAVA
+				weeklyOption[0] = irandom_range(1,100);//Disc amount
+				weeklyOption[1] = irandom_range(1,20);//Disc damage
+			break;
+			case 16://SPIKE TRAPS
+				weekGamemode = [34, 30, 43]//HARD MODE + Ultra mutation start + Multi-Crown
+			break;
 			case 17://CHEATS
-				weekGamemode = 34;//Hard mode
+				weekGamemode = [34,32,0];//Hard mode + one hit wonder
+			break;
+			case 18: //NO ELITE IDPD
+				weekGamemode = [25, 41, 30];//Survival arnea + Double enemy HP + Ultra mutation start
 			break;
 			case 19://Disc room
 				weeklyOption[0] = irandom_range(1,100);//Disc amount
 				weeklyOption[1] = irandom_range(1,20);//Disc damage
 			break;
-			case 35://God frog
-				weekGamemode = 34;//Hard mode (infinite levels)
+			case 21://Loop start
+				weekGamemode = [21, 36, 43]//Loop Start + ultra mod start + multi crown
 			break;
 			case 26://Daily race
-				weekGamemode = 25;//all mutations infinite levels
+				weekGamemode = [22, 28, 0];//infinite levels + all mutations 
 			break;
 			case 27://Daily score
-				weekGamemode = 25;//Survival arena
+				weekGamemode = [41, 40, 30];//1 vs 1 + double enemy HP + ultra mutation start
 			break;
-			case 37:
-				weekGamemode = 39;//Gore galore
+			case 35://God frog
+				weekGamemode = [34, 29, 39];//Hard mode Infinite levels, Gore galore
+			break;
+			
+			case 37://Weekly
+				weekGamemode = [20, 34, 36];//Agoraphobia + Hard mode + ultra mod start
+			break;
+			case 38://Seeded
+				weekGamemode = [41, 29, 0] //Double enemy HP + Infinite ammo
+			break
+			case 39://Gore galore
+				weekGamemode = [5, 32, 0] //1HP equality + one hit wonder
+			break;
+			case 40://1vs1
+				weekGamemode = [6, 22, 43]//Claustophobia + Infinite levels + multi crown
+			break;
+			case 41://Double enemy HP
+				weekGamemode = [6, 19, 9]//Claustophobia + Disc room + casual mode
+				weeklyOption[0] = irandom_range(1,100);//Disc amount
+				weeklyOption[1] = irandom_range(1,20);//Disc damage
 			break;
 		}
 		var fileName = file_find_first("w*", 0);

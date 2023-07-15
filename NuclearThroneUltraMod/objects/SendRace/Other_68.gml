@@ -30,9 +30,10 @@ if (type == network_type_data) {
 				buffer_write(sendBuffer,buffer_u16,UberCont.runRace[6]);//wep
 				buffer_write(sendBuffer,buffer_u16,UberCont.runRace[7]);//bwep
 				buffer_write(sendBuffer,buffer_u16,UberCont.runRace[8]);//cwep
-				buffer_write(sendBuffer,buffer_u8,UberCont.runRace[9]);//crown
-				buffer_write(sendBuffer,buffer_u8,UberCont.runRace[10]);//Ultra mutation 255 is none
-				buffer_write(sendBuffer,buffer_string,UberCont.runRace[11]);//List of mutations
+				buffer_write(sendBuffer,buffer_string,UberCont.runRace[9]);//crown
+				buffer_write(sendBuffer,buffer_u8,UberCont.runRace[10]);//Ultra Mod
+				buffer_write(sendBuffer,buffer_u8,UberCont.runRace[11]);//Ultra mutation 255 is none
+				buffer_write(sendBuffer,buffer_string,UberCont.runRace[12]);//List of mutations
 				network_send_packet(serverSocket, sendBuffer, buffer_get_size(sendBuffer));
 				buffer_delete(sendBuffer);
 			}

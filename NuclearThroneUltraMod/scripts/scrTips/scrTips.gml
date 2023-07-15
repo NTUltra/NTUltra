@@ -336,7 +336,7 @@ function scrTips() {
 	"Try to stay close to radiation","don't do drugs kids","Doctor used to work in the labs","nasty experiments","The mutation doctor","every single mutation is better!","get vaccinated")
 
 	if Player.race = 26//GOOD OL' HUMPHRY
-	tip = choose("Rusty old soldier","Grandpa","When Humphry pulls out a gun","The real deal","Old and experienced"
+	tip = choose("Rusty old soldier","Grandpa","When Humphry pulls out a gun","The real deal","Old and experienced","fallout shelter"
 	,"Any projectile in one shot#counts as one hit","When one of multiple projectiles#fire in one shot/burst#hits an enemy it counts as a hit"
 	,"Out of the fallout shelter","focus and discipline","experience","shrink and slow projectiles","active costs unequipped weapon type ammo",
 	"with years of experience#humphry has mastered the art#of shrinking bullets","good o'l humphry was the first mutant","one and only mutant#without side effects","super soldier"

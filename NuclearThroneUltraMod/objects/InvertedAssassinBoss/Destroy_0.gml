@@ -1,6 +1,6 @@
 if dropItem
 {
-scrDrop(20,0)
+scrDrop(40,0)
 scrDrop(100,0)
 }
 if !playedWinSound

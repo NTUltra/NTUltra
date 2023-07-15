@@ -69,7 +69,12 @@ team = other.team
 reload+=3;
 }
 if reload>0
-{reload-=1;}
+{
+	if UberCont.normalGameSpeed == 60
+		reload -= 0.5;
+	else
+		reload -= 1;
+	}
 else reload=0;
 
 if alarm[3]>0//move in circles

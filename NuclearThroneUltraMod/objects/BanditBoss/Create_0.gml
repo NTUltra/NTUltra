@@ -50,7 +50,7 @@ other.cam=false;
 if UberCont.opt_gamemode != 25
 	existTime = 40;
 
-if cam
+if cam && (!instance_exists(Player) || (instance_exists(Player) && Player.area != 2))
 instance_create(x,y,DramaCamera);
 
 scrAddDrops(2);

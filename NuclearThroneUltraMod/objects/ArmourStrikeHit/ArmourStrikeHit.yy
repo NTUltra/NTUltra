@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprArmourStrikeEnd",
-    "path": "sprites/sprArmourStrikeEnd/sprArmourStrikeEnd.yy",
+    "name": "sprArmourStrikeEndOld",
+    "path": "sprites/sprArmourStrikeEndOld/sprArmourStrikeEndOld.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -68,20 +68,22 @@ if (type == network_type_data) {
 		case NETDATA.STARTWEEKLY:
 			show_debug_message("Weekly start");
 			var socket = buffer_read(buffer, buffer_u16);
-			var sendBuffer = buffer_create(5,buffer_grow,1);
+			var sendBuffer = buffer_create(6,buffer_grow,1);
 			buffer_write(sendBuffer,buffer_u8,NETDATA.STARTWEEKLY);
 			buffer_write(sendBuffer,buffer_u16,weekSeed);
-			buffer_write(sendBuffer,buffer_u16,weekGamemode);
-			switch (weekGamemode)
-			{
-				case 1://One weapon only
+			show_debug_message("send: " + string(weekGamemode));
+			buffer_write(sendBuffer,buffer_u8,weekGamemode[0]);
+			buffer_write(sendBuffer,buffer_u8,weekGamemode[1]);
+			buffer_write(sendBuffer,buffer_u8,weekGamemode[2]);
+				if (array_contains(weekGamemode, 1))//One weapon only
+				{
 					buffer_write(sendBuffer,buffer_u16,weeklyOption[0]);
-				break;
-				case 19://Disc room
+				}
+				if (array_contains(weekGamemode, 19))//Disc room
+				{
 					buffer_write(sendBuffer,buffer_u16,weeklyOption[0]);
 					buffer_write(sendBuffer,buffer_u8,weeklyOption[1]);
-				break;
-			}
+				}
 			network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
 			buffer_delete(sendBuffer);
 		break;
@@ -135,9 +137,11 @@ if (type == network_type_data) {
 				newScore[8] = buffer_read(buffer,buffer_u16);//wep
 				newScore[9] = buffer_read(buffer,buffer_u16);//bwep
 				newScore[10] = buffer_read(buffer,buffer_u16);//cwep
-				newScore[11] = buffer_read(buffer,buffer_u8);//crown
-				newScore[12] = buffer_read(buffer,buffer_u8);//ultra mutation 255 is none
-				newScore[13] = buffer_read(buffer,buffer_string);//List of mutations
+				newScore[11] = buffer_read(buffer,buffer_string);//crown
+				show_debug_message("CROWN: " + newScore[11]);
+				newScore[12] = buffer_read(buffer,buffer_u8);//ultra mod
+				newScore[13] = buffer_read(buffer,buffer_u8);//ultra mutation 255 is none
+				newScore[14] = buffer_read(buffer,buffer_string);//List of mutations
 			}
 			else
 			{
@@ -148,9 +152,10 @@ if (type == network_type_data) {
 				newScore[6] = buffer_read(buffer,buffer_u16);//wep
 				newScore[7] = buffer_read(buffer,buffer_u16);//bwep
 				newScore[8] = buffer_read(buffer,buffer_u16);//cwep
-				newScore[9] = buffer_read(buffer,buffer_u8);//crown
-				newScore[10] = buffer_read(buffer,buffer_u8);//ultra mutation 255 is none
-				newScore[11] = buffer_read(buffer,buffer_string);//List of mutations
+				newScore[9] = buffer_read(buffer,buffer_string);//crown
+				newScore[10] = buffer_read(buffer,buffer_u8);//ultra mod
+				newScore[11] = buffer_read(buffer,buffer_u8);//ultra mutation 255 is none
+				newScore[12] = buffer_read(buffer,buffer_string);//List of mutations
 				var sendBuffer = buffer_create(1,buffer_fixed,1);
 				buffer_write(sendBuffer,buffer_u8,NETDATA.CONFIRMRACE);
 				network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));

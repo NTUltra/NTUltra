@@ -25,16 +25,17 @@ function scrEndBoss() {
 			//runRace[4] = Player.loops;
 			runRace[3] = Player.race;
 			runRace[4] = Player.bskin;
-			if getUltraMutation() != 255 || array_length(runScore) <= 10
+			if getUltraMutation() != 255 || array_length(runScore) <= 11
 				runRace[5] = Player.altUltra;
 			runRace[6] = Player.wep;
 			runRace[7] = Player.bwep;
 			runRace[8] = Player.cwep;
-			runRace[9] = Player.crown;
-			if getUltraMutation() != 255 || array_length(runScore) <= 10
+			runRace[9] = string_replace_all(string(Player.crown)," ","");
+			runRace[10] = Player.ultramod;
+			if getUltraMutation() != 255 || array_length(runScore) <= 11
 			{
-				runRace[10] = getUltraMutation();
-				runRace[11] = scrGetAllMutations();
+				runRace[11] = getUltraMutation();
+				runRace[12] = scrGetAllMutations();
 			}
 			useSeed = false;
 			opt_gamemode = [0];

@@ -69,6 +69,7 @@ char[9].spr_menu = sprChickenMenuSelected
 char[9].spr_to = sprChickenMenuSelect
 char[9].spr_from = sprChickenMenuDeselect
 char[9].spr_slct = sprChickenMenu
+char[9].num = 9;
 with char[9]
 instance_create(x,y-24,TV)
 }
@@ -82,6 +83,13 @@ char[24].spr_to = sprElementorMenuSelect
 char[24].spr_from = sprElementorMenuDeselect
 char[24].spr_slct = sprElementorMenu
 char[24].num = 24
+with ElementorHead
+	instance_destroy();
+with instance_create(x,y,ElementorHeadMenu)
+{
+	myElementor = other.char[24];
+	depth = myElementor.depth - 1;
+}
 //char[24].depth--;
 }
 
@@ -233,6 +241,7 @@ dir += 1
 if UberCont.race_have[5] = 1{
 char[5].x = 0;
 char[5].y = 0;
+char[5].camX = 128;
 char[5].sprite_index = sprPlantMenu
 char[5].spr_menu = sprPlantMenuSelected
 char[5].spr_to = sprPlantMenuSelect
@@ -275,6 +284,7 @@ instance_create(x,y-32,TV)
 if UberCont.race_have[10] = 1{
 char[10].x = 20;
 char[10].y = 40;
+char[10].camX = 64;
 char[10].sprite_index = sprRebelMenu
 char[10].spr_menu = sprRebelMenuSelected
 char[10].spr_to = sprRebelMenuSelect
@@ -284,6 +294,7 @@ char[10].spr_slct = sprRebelMenu}
 if UberCont.race_have[11] = 1{//Hunter
 char[11].x = -0;
 char[11].y = 74;
+char[11].camX = 128;
 char[11].sprite_index = sprHunterMenu
 char[11].spr_menu = sprHunterMenuSelected
 char[11].spr_to = sprHunterMenuSelect//Select?
@@ -394,6 +405,8 @@ char[25].spr_slct = sprMutationDoctorMenu}
 if UberCont.race_have[26] = 1{
 char[26].x = 48;
 char[26].y = 8;
+char[26].camX = 128;
+char[16].camY = 8;
 char[26].image_speed = 0.3;//Humphry is a slow man
 char[26].sprite_index = sprHumphryMenu
 char[26].spr_menu = sprHumphryMenuSelected
@@ -425,6 +438,11 @@ scrGameModes();
 
 updatepage=0;
 openRemapper = false;
+camX = 0;
+camY = 0;
+camTargetX = 0;
+camTargetY = 0;
+camLerp = 0;
 //JOYPAD STUFF
 /*
 pick = 0

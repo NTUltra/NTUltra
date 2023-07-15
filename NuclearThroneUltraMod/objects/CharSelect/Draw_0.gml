@@ -42,16 +42,29 @@ if Menu.race = image_index
 {
     draw_sprite(sprSelected,-1,x,yyy)
     draw_sprite(sprite_index,-1,x+2,yyy-2)
+	if num == 24 && instance_exists(ElementorHeadMenu)
+	{
+		draw_sprite_ext(sprCharSelectElementorHead,0,x+2,yyy-2,1,1,0,ElementorHeadMenu.col,1);	
+	}
 	depth = normalDepth - 10;
     
     if Menu.mouseover != image_index
-    draw_sprite_ext(sprite_index,-1,x+2,yyy-2,1,1,0,c_black,0.05)
+	{
+		draw_sprite_ext(sprite_index,-1,x+2,yyy-2,1,1,0,c_white,0.05);
+	}
 }
 else
 {
-    draw_sprite(sprite_index,-1,x,yyy)
     if UberCont.race_have[num] != 1
-    draw_sprite(sprCharSelectLocked,num,x,yyy)
+		draw_sprite(sprCharSelectLocked,num,x,yyy)
+	else
+	{
+		draw_sprite(sprite_index,-1,x,yyy)
+		if num == 24 && instance_exists(ElementorHeadMenu)
+		{
+			draw_sprite_ext(sprCharSelectElementorHead,0,x,yyy,1,1,0,ElementorHeadMenu.col,1);
+		}
+	}
     
     if Menu.mouseover != image_index
 	{

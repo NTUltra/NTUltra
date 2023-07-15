@@ -44,8 +44,18 @@ function scrCrownAnimation(takenCrown){
 			spr_walk = sprCrown9Walk
 		break;
 		case 11://Reincarnation
-			spr_idle = sprCrown10Idle
-			spr_walk = sprCrown10Walk
+			if instance_exists(Player) && Player.crownvisits <= 0 && !scrIsGamemode(26) && !scrIsGamemode(27) && !scrIsGamemode(37)
+			{
+				spr_idle = sprCrownFrogIdle
+				spr_walk = sprCrownFrogWalk
+				alarm[3] = 90;
+				
+			}
+			else
+			{
+				spr_idle = sprCrown10Idle
+				spr_walk = sprCrown10Walk
+			}
 		break;
 		case 12://Inversion
 			spr_idle = sprCrown11Idle

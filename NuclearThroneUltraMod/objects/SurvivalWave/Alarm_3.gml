@@ -1,7 +1,21 @@
 /// @description Teller
 var xx = centerX + spawnX[posItell]+random_range(24,-24);
 var yy = centerY + spawnY[posItell]+random_range(24,-24);
-if variable_struct_exists(wave[spawnItell],"xx")
+var ranPosX = false;
+var ranPosY = false;
+if variable_struct_exists(wave[spawnItell],"echo")
+{
+	if variable_struct_exists(wave[spawnItell],"noX") && wave[spawnItell].noX
+	{
+		ranPosX = true;
+	}
+	if variable_struct_exists(wave[spawnItell],"noY") && wave[spawnItell].noY
+	{
+		ranPosY = true;
+	}
+	
+}
+if variable_struct_exists(wave[spawnItell],"xx") && !ranPosX
 {
 	xx = wave[spawnItell].xx;
 }
@@ -9,7 +23,7 @@ else
 {
 	wave[spawnItell].xx = xx;	
 }
-if variable_struct_exists(wave[spawnItell],"yy")
+if variable_struct_exists(wave[spawnItell],"yy") && !ranPosY
 {
 	yy = wave[spawnItell].yy;
 }

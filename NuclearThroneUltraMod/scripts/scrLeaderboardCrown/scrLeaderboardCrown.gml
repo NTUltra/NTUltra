@@ -94,6 +94,12 @@ function scrLeaderboardCrown(takenCrown){
 		case 31://Bounty
 			return sprCrown30Idle;
 		break;
+		case 32://MISFORTUNE
+			return sprCrown31Idle;
+		break;
+		case 33://ECHO
+			return sprCrown32Idle
+		break;
 	}
-	return sprSharpStress;
+	return sprCrownFrogIdle;
 }

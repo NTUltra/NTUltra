@@ -28,7 +28,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"92f75b0b-e0e7-41fe-9e0e-7bef60959d26","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 4,
+  "origin": 9,
   "parent": {
     "name": "Viking",
     "path": "folders/Sprites/Player/Custom/Viking.yy",
@@ -70,7 +70,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 13,
-    "yorigin": 11,
+    "yorigin": 14,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

@@ -5,9 +5,8 @@ if isPaused == 1
 if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_exists(Player) && (keyboard_check_pressed(ord("R")) || gamepad_button_check(0,gp_face3)) )//(gamepad_button_check(0,gp_stickl) && gamepad_button_check(0,gp_stickr)) )
 {
 	debug("QUICK RESTART");
-	scrEndOfRun();
-	with SurvivalWave
-		instance_destroy();
+	//scrEndOfRun(); already run in player destroy
+	
 	instance_activate_all();
 	alarm[2] = 1;//Some objects are only accessible after a frame
 	//audio_stop_all();
@@ -22,6 +21,11 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 		skeletonlives = 0;
 		ultra_got[87] = 0;
 		instance_destroy()
+	}
+	if (scrIsGamemode(42))
+	{
+		if !scrIsGamemode(25)
+			opt_gamemode[array_length(opt_gamemode)] = 25;
 	}
 	snd_play(sndMutant0Cnfm, 0, false, false)
 	race = UberCont.racepick
@@ -46,7 +50,8 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 		instance_destroy();
 	with PlayerSpawn
 		instance_destroy();
-	
+	with SurvivalWave
+		instance_destroy();
 	with instance_create(x,y,GenCont)
 	{race = other.race
 	crown = other.crown}

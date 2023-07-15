@@ -21,10 +21,10 @@ function scrRestart() {
 		instance_destroy();
 	if !instance_exists(PlayerSpawn) && UberCont.goToLeaderboard
 	{
+		debug("GO TO LEADERBOARD");
 		room_goto(romLeaderboard);
 		with UberCont
 		{
-			goToLeaderboard = false;
 			opt_gamemode = [0];
 		}
 		audio_stop_all();
