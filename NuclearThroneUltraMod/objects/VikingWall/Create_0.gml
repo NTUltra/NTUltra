@@ -1,6 +1,6 @@
 var area;
 phaseable = false;
-alarm[2] = 210;
+alarm[2] = 160;
 blink = 15;
 if instance_exists(Player)
 { 
@@ -199,6 +199,60 @@ case 120:
 topspr=sprWall120Top;
 outspr=sprWall120Out;
 sprite_index=sprWall120Bot;
+break;
+
+case 121:
+topspr=sprWall121Top;
+outspr=sprWall121Out;
+sprite_index=sprWall121Bot;
+break;
+
+case 122:
+topspr=sprWall122Top;
+outspr=sprWall122Out;
+sprite_index=sprWall122Bot;
+break;
+
+case 123:
+topspr=sprWall123Top;
+outspr=sprWall123Out;
+sprite_index=sprWall123Bot;
+break;
+
+case 124:
+topspr=sprWall124Top;
+outspr=sprWall124Out;
+sprite_index=sprWall124Bot;
+break;
+
+case 125:
+topspr=sprWall125Top;
+outspr=sprWall125Out;
+sprite_index=sprWall125Bot;
+break;
+
+case 126:
+topspr=sprWall126Top;
+outspr=sprWall126Out;
+sprite_index=sprWall126Bot;
+break;
+
+case 127:
+topspr=sprWall127Top;
+outspr=sprWall127Out;
+sprite_index=sprWall127Bot;
+break;
+
+case 128:
+topspr=sprWall128Top;
+outspr=sprWall128Out;
+sprite_index=sprWall128Bot;
+break;
+
+case 129:
+topspr=sprWall129Top;
+outspr=sprWall129Out;
+sprite_index=sprWall129Bot;
 break;
 
 default:

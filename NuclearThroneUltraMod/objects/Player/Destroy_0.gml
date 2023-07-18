@@ -705,8 +705,8 @@ with instance_create(x,y,DataRef)
 	bskin = other.bskin;
 	ultimategamble = other.ultimategamble;
 	wep = other.wep;
-	bwep = other.wep;
-	cwep = other.wep;
+	bwep = other.bwep;
+	cwep = other.cwep;
 	queueshot = other.queueshot;
 	bqueueshot = other.bqueueshot;
 	cqueueshot = other.cqueueshot;

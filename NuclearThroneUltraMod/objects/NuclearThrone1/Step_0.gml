@@ -139,7 +139,11 @@ if isInverted
 			for (var i = 0; i < amountOfWalls; i++) {
 				with hitWalls[| i] {
 					instance_destroy();
-					instance_create(x,y,FloorExplo);
+					with instance_create(x,y,FloorExplo)
+					{
+						alarm[3] = 0;
+						canSpawnSwarm = false;
+					}
 				}
 			}
 			ds_list_clear(hitWalls);

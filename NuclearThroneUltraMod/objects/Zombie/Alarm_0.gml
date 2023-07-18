@@ -129,7 +129,7 @@ repeat(clamp(Player.loops + 1, 1, 10))
 	with instance_create(x,y,chosenZombie)
 	{
 		wasResurrected = true;
-		raddrop = ceil(raddrop*0.5);
+		raddrop = floor(raddrop*0.25);
 		existTime = 20;
 		alarm[1] *= 0.2;
 	}

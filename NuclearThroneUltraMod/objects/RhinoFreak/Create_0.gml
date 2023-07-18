@@ -22,3 +22,5 @@ alarm[1] = 20+random(10)
 
 walk = 0
 
+with instance_create(x,y,WallBreak)
+	canSpawnSwarm = false;

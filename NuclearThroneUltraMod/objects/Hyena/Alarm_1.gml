@@ -16,7 +16,8 @@ if target > 0
 			{
 				if collision_line(x,y,other.target.x,other.target.y,Wall,0,0) < 0
 				{
-					direction = point_direction(x,y,other.target.x,other.target.y);
+					speed -= 0.4;
+					motion_add(point_direction(x,y,other.target.x,other.target.y),0.5);
 					speed += 1;
 					walk += 4;
 					if alarm[1] > 3

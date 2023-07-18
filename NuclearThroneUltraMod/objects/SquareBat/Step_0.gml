@@ -31,7 +31,10 @@ else
 	{
 		walk -= 1
 		motion_add(direction,0.8)
-		
+		if target > -1 && instance_exists(target)
+		{
+			motion_add(point_direction(x,y,target.x,target.y),0.5);
+		}
 	}
 	
 	if instance_exists(Floor) && !collision_point(x,y,Floor,false,false) || place_meeting(x,y,Wall)

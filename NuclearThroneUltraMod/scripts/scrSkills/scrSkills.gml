@@ -52,7 +52,7 @@ function scrSkills() {
 
 	if instance_exists(Player)
 	{
-		if Player.race=18 || Player.race = 24
+		if Player.race == 18
 		{
 			skill_name[2] = "EXTRA WINGS"
 			skill_text[2] = "MORE SPEED#CLOSE DODGES SOMETIMES DROP ITEMS#CAN'T BE DISPLACES BY ENEMIES"

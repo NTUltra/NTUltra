@@ -41,6 +41,9 @@
     "name": "sprNothingBeamStretch",
     "path": "sprites/sprNothingBeamStretch/sprNothingBeamStretch.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskNothingBeam",
+    "path": "sprites/mskNothingBeam/mskNothingBeam.yy",
+  },
   "visible": true,
 }

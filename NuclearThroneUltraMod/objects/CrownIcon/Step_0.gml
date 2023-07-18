@@ -220,6 +220,8 @@ if crown == 11
 			var wc2 = cwepmod2;
 			var wc3 = cwepmod3;
 			var wpu = weaponspickedup;
+			
+			var c = crown;
 			if level > 9
 				hasReachedUltra = true;
 			instance_destroy();
@@ -239,7 +241,7 @@ if crown == 11
 			freeAmmoRound = 1;
 			ultimategamble = true;
 			race = other.race
-			crown = other.crown
+			crown = c;
 			lastarea = other.lastarea;
 			lastwishused = false;
 			area = other.area//other.lastarea;
@@ -356,7 +358,7 @@ if crown == 28
 }
 if oldcrown == 29
 {
-	//Crown of greed
+	//Crown of purity
 	with Player
 	{
 		var wantHealth = 0
@@ -370,6 +372,7 @@ if oldcrown == 29
 			wantHealth += 1;
 			
 		maxhealth -= wantHealth;
+		isPureHealthBoost = 0;
 	}
 }
 }

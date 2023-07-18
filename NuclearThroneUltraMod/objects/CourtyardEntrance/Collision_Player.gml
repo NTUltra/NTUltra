@@ -1,5 +1,5 @@
 /// @description Exit
-if KeyCont.key_pick[other.p] = 1
+if KeyCont.key_pick[other.p] = 1 && !instance_exists(Throne2)
 {
 	snd_play(sndPortalOld);
 	KeyCont.key_pick[Player.p] = 2;

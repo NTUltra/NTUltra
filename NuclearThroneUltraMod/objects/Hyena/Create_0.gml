@@ -18,7 +18,7 @@ if loops > 4
 	maxSpeed = 5;
 
 acc = 0.6;
-accCharge = 1.8;
+accCharge = 1.7;
 spr_idle = sprHyenaIdle
 spr_eat = sprHyenaEat;
 spr_walk = sprHyenaWalk

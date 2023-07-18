@@ -610,25 +610,31 @@ if (tookHit)
 		if ((damageTaken > 0 /*&& prevhealth < maxhealth) || (my_health <= 0 &&  armour < 1*/))
 		{
 			isAlkaline = false;
-			if race == 25//Doctor buff
-				damageTaken = ceil(damageTaken*1.25);
-			if (skill_got[9]) //Second stomache
+			
+			if my_health < maxhealth
 			{
-				damageTaken *= 2;
-				with instance_create(x,y,HealFX)
+				if race == 25//Doctor buff
+					damageTaken = ceil(damageTaken*1.25);
+				if (skill_got[9]) //Second stomache
 				{
-					sprite_index = sprHealBigFX;
-					depth = other.depth - 1;	
+					damageTaken *= 2;
+					with instance_create(x,y,HealFX)
+					{
+						sprite_index = sprHealBigFX;
+						depth = other.depth - 1;	
+					}
 				}
+				else
+				{
+					with instance_create(x,y,HealFX)
+					{
+						depth = other.depth - 1;	
+					}
+				}
+				my_health = min(maxhealth,prevhealth+damageTaken);
 			}
 			else
-			{
-				with instance_create(x,y,HealFX)
-				{
-					depth = other.depth - 1;	
-				}
-			}
-			my_health = min(maxhealth,prevhealth+damageTaken);
+				my_health = prevhealth;
 			resetPrevHealth = true;
 			
 			with instance_create(x,y,SharpTeeth)

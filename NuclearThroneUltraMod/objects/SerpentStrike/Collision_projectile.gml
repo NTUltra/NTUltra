@@ -1,17 +1,10 @@
-if instance_exists(Player)
+if other.team != 2
 {
-	if Player.ultra_got[61] && !Player.altUltra
+	with other
 	{
-		if other.team != 2
-		{
-			with other
-			{
-				if other.isGrenade
-					instance_destroy(id,false);
-				else
-					instance_destroy();
-			}
-		}
+		if other.isGrenade
+			instance_destroy(id,false);
+		else
+			instance_destroy();
 	}
 }
-

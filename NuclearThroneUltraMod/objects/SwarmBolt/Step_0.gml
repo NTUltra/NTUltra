@@ -3,11 +3,11 @@ scrBoltTrail(c_white,0.05,0.8);
 if !instance_exists(Player)
 {instance_destroy();exit;}
 
+motion_add(direction,3);//the force that pulls it away from the direction?
 if instance_exists(enemy)
 {
 //if Player.skill_got[19]//eagle eyes
 //{
-motion_add(direction,3);//the force that pulls it away from the direction?
 if collision_line(x,y,instance_nearest(x,y,enemy).x,instance_nearest(x,y,enemy).y,Wall,0,0) < 0 && ( alarm[0]<1 || Player.skill_got[19] )
 target=instance_nearest(x,y,enemy);
 else

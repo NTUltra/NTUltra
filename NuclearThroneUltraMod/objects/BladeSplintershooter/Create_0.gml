@@ -8,3 +8,4 @@ ang = 0;
 alarm[0] = 1;
 alarm[1] = 2;
 alarm[2] = 3;
+alarm[4] = 90;

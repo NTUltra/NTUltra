@@ -186,7 +186,7 @@ function scrPopEnemies1vs1(area, subarea, loops){
 		else if subarea == 2
 		{
 			enem = BigBadBat;
-			buff = 1.4*clamp(1+loops*0.5,1,10);
+			buff = 1.05;
 		}
 	}
 	else if area == 111 // Inverted Crystal Caves
@@ -205,7 +205,7 @@ function scrPopEnemies1vs1(area, subarea, loops){
 		else if subarea == 2
 		{
 			enem = InvertedBigBadBat;
-			buff = 1.4*clamp(1+loops*0.5,1,10);
+			buff = 1.05;
 		}
 	}
 	else if area == 115 // Cursed Crystal Caves
@@ -379,8 +379,8 @@ function scrPopEnemies1vs1(area, subarea, loops){
 		else if subarea == 3
 		{
 			enem = noone;
-			buff = 1.1*clamp(1+loops*0.5,1,10);
-			sBuff = 1.1;
+			buff = 1;
+			sBuff = 1;
 		}
 	}
 	else if area == 118 // Inverted Palace
@@ -397,8 +397,8 @@ function scrPopEnemies1vs1(area, subarea, loops){
 		else if subarea == 3
 		{
 			enem = noone;
-			buff = 1.1*clamp(1+loops*0.5,1,10);
-			sBuff = 1.1;
+			buff = 1;
+			sBuff = 1;
 		}
 	}
 	else if area == 10 // Savanna

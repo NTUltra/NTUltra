@@ -1,5 +1,5 @@
 function scrDrawHUD() {
-	if UberCont.opt_gamemode!=3 {//NO HUD gamemode
+	if !scrIsGamemode(3) {//NO HUD gamemode
 
 	draw_set_font(fntM)
 	draw_set_halign(fa_center)
@@ -450,7 +450,7 @@ function scrDrawHUD() {
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+112,__view_get( e__VW.YView, 0 )+16,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+15,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+111,__view_get( e__VW.YView, 0 )+17,col,1)
-	if (mouse_x > wxx && mouse_x < wxx+ss && mouse_y < wyy+ss && mouse_y > wyy)
+	if (UberCont.opt_hud_des && mouse_x > wxx && mouse_x < wxx+ss && mouse_y < wyy+ss && mouse_y > wyy)
 	{
 		scrDrawHelp("  " + string(dataRef.wep_area[dataRef.cwep])
 		+ "\n" + dataRef.wep_name[dataRef.cwep]);
@@ -541,7 +541,7 @@ function scrDrawHUD() {
 	var wxx = __view_get( e__VW.XView, 0 )+67;
 	var wyy = __view_get( e__VW.YView, 0 )+16;
 	var ss = 20;
-	if (mouse_x > wxx && mouse_x < wxx+ss && mouse_y < wyy+ss && mouse_y > wyy)
+	if (UberCont.opt_hud_des && mouse_x > wxx && mouse_x < wxx+ss && mouse_y < wyy+ss && mouse_y > wyy)
 	{
 		scrDrawHelp("  " + string(dataRef.wep_area[dataRef.bwep])
 		+ "\n" + dataRef.wep_name[dataRef.bwep]);
@@ -636,7 +636,7 @@ function scrDrawHUD() {
 	var wxx = __view_get( e__VW.XView, 0 )+24;
 	var wyy = __view_get( e__VW.YView, 0 )+16;
 	var ss = 20;
-	if (mouse_x > wxx && mouse_x < wxx+ss && mouse_y < wyy+ss && mouse_y > wyy)
+	if (UberCont.opt_hud_des && mouse_x > wxx && mouse_x < wxx+ss && mouse_y < wyy+ss && mouse_y > wyy)
 	{
 		scrDrawHelp("  " + string(dataRef.wep_area[dataRef.wep])
 		+ "\n" + dataRef.wep_name[dataRef.wep]);

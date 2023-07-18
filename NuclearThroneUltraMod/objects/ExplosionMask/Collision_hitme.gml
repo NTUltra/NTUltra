@@ -1,5 +1,9 @@
-if other.team == 2 && instance_exists(Player) && (UberCont.opt_gamemode != 9 || other.sprite_index != other.spr_hurt) 
+var ezMode = scrIsGamemode(9)
+if other.team == 2 && instance_exists(Player) && (!ezMode || other.sprite_index != other.spr_hurt) 
 {
+	var dealDmg = dmg;
+	if ezMode
+		dealDmg *= 0.5;
 	with other
 	{
 		var immunelimit = 5;
@@ -22,19 +26,19 @@ if other.team == 2 && instance_exists(Player) && (UberCont.opt_gamemode != 9 || 
 			alarm[4]=50;
 			if my_health > immunelimit
 			{
-				if my_health-other.dmg < immunelimit
+				if my_health-dealDmg < immunelimit
 					my_health = immunelimit
 				else
 				{
 					dealtDamage = true;
-					my_health -= other.dmg
+					my_health -= dealDmg
 				}
 			}
 		}
 		else
 		{
 			dealtDamage = true;
-			my_health -= other.dmg;
+			my_health -= dealDmg;
 		}
 		if dealtDamage
 		{
@@ -54,6 +58,7 @@ if other.team == 2 && instance_exists(Player) && (UberCont.opt_gamemode != 9 || 
 			}
 			Sleep(10)
 			BackCont.shake += 2
+			scrForcePosition60fps();
 		}
 		if scrIsGamemode(9)//CASUAL MODE
 			instance_destroy();

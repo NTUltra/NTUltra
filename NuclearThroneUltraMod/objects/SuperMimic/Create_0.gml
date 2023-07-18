@@ -4,7 +4,7 @@ meleedamage = 4
 mySize = 0
 
 event_inherited()
-
+friction = 0.4;
 spr_idle = sprSuperMimicIdle
 spr_walk = sprSuperMimicFire
 spr_hurt = sprSuperMimicHurt

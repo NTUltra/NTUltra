@@ -431,7 +431,7 @@ function scrUltras(altOverride = false) {
 
 	    //VIKING 
 	    ultra_name[61] = "MEGA SERPENT ARMOUR STRIKE"
-	    ultra_text[61] = "TRIPLE SERPENT ARMOUR STRIKE#ARMOUR STRIKE DESTROYS PROJECTILES#GAIN 1 ARMOUR WHEN YOU KILL A BOSS"
+	    ultra_text[61] = "TRIPLE SERPENT ARMOUR STRIKE#GAIN 1 ARMOUR WHEN YOU KILL A BOSS"
 	    ultra_tips[61] = "break down the walls!"
 		
 		if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || ((scrKrakenWeapons(Player.wep) || scrKrakenWeapons(Player.bwep)) && instance_exists(UltraIcon))))
@@ -468,7 +468,7 @@ function scrUltras(altOverride = false) {
 		}
 		
 	    ultra_name[63] = "COLD HEART"
-	    ultra_text[63] = "ARMOUR STRIKE USES 3HP#INSTEAD OF ARMOUR##ARMOUR STRIKE FREEZES ENEMIES##WHILE YOU HAVE ARMOUR#INCREASE PRIMARY FIRERATE BY 30%"//"ARMOUR STRIKE FREEZES ENEMIES#AND DEALS MORE DAMAGE#WHEN YOU HAVE NO MORE ARMOUR#YOU CAN USE 2HP TO USE AN ARMOUR STRIKE"
+	    ultra_text[63] = "ARMOUR STRIKE USES 3HP#INSTEAD OF ARMOUR##ARMOUR STRIKE FREEZES ENEMIES##WHILE YOU HAVE ARMOUR#INCREASE PRIMARY FIRERATE BY 20%"//"ARMOUR STRIKE FREEZES ENEMIES#AND DEALS MORE DAMAGE#WHEN YOU HAVE NO MORE ARMOUR#YOU CAN USE 2HP TO USE AN ARMOUR STRIKE"
 	    ultra_tips[63] = "hearth strike"
     
 	    ultra_name[64] = "BLANK ARMOUR"

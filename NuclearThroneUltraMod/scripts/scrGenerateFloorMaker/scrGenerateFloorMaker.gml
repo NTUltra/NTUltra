@@ -74,7 +74,9 @@ function scrGenerateFloorMaker(limiter) {
 		{
 			goal=45+s;
 			if Player.area == 9 && Player.subarea == 3
-				goal = 310;
+				goal = 290;
+			if Player.area == 118 && Player.subarea == 3
+				goal = 250;
 		}
 	}
 	if scrIsGamemode(25) //Survival arena
@@ -86,76 +88,7 @@ function scrGenerateFloorMaker(limiter) {
 	if instance_exists(InvertedBigMachine) || instance_exists(BigMachine)
 		goal = 0
 	endPieceSpawned = false;
-	/*
-	if instance_number(Floor)<2
-	{
 
-	//safe spawns
-	/*instance_create(x,y-32,Floor)
-	instance_create(x-32,y-32,Floor)
-	instance_create(x+32,y-32,Floor)
-	instance_create(x,y-64,Floor)
-	instance_create(x,y-96,Floor)
-	instance_create(x+32,y-96,Floor)
-	instance_create(x-32,y-96,Floor)
-	instance_create(x-64,y-96,Floor)*/
-	/*
-	if !place_meeting(x-32,y,NOWALLSHEREPLEASE)// && Player.race = 16 && Player.skill_got[5]
-	{
-	myx = x-32+choose(0,16)
-	myy = y-32+choose(0,16)
-	instance_create(myx,myy,Wall)
-	instance_create(x,y,NOWALLSHEREPLEASE)
-
-	myx = x+32+choose(0,16)
-	myy = y-32+choose(0,16)
-	instance_create(myx,myy,Wall)
-	instance_create(x,y,NOWALLSHEREPLEASE)
-
-	myx = x-32+choose(0,16)
-	myy = y+32+choose(0,16)
-	instance_create(myx,myy,Wall)
-	instance_create(x,y,NOWALLSHEREPLEASE)
-
-	myx = x+32+choose(0,16)
-	myy = y+32+choose(0,16)
-	instance_create(myx,myy,Wall)
-	instance_create(x,y,NOWALLSHEREPLEASE)
-
-
-
-
-	myx = x-64+choose(0,16)
-	myy = y-64+choose(0,16)
-	instance_create(myx,myy,Wall)
-	instance_create(x,y,NOWALLSHEREPLEASE)
-
-	myx = x+64+choose(0,16)
-	myy = y-64+choose(0,16)
-	instance_create(myx,myy,Wall)
-	instance_create(x,y,NOWALLSHEREPLEASE)
-
-	myx = x-64+choose(0,16)
-	myy = y+64+choose(0,16)
-	instance_create(myx,myy,Wall)
-	instance_create(x,y,NOWALLSHEREPLEASE)
-
-	myx = x+64+choose(0,16)
-	myy = y+64+choose(0,16)
-	instance_create(myx,myy,Wall)
-	instance_create(x,y,NOWALLSHEREPLEASE)
-	}
-
-
-
-
-	with GenCont{
-	PlayerStartX=x;
-	PlayerStartY=y-32;}
-
-	}*/
-
-	//instance_create(x,y,Floor) NEed test data on this
 
 	if (scrIsGamemode(25) && !instance_exists(Vlambeer))
 	{

@@ -9,18 +9,19 @@ var oldx, oldy;
 oldx = x
 oldy = y
 aimDir += (sin(ammo*0.1)*2);
-if instance_exists(target)
+if ammo < 160 && instance_exists(target)
 {
 	var dif = angle_difference(point_direction(x,y,target.x,target.y), image_angle);
 	if (point_distance(x,y,target.x,target.y) < 96 && abs(dif) < 32)
     {
-		aimDir += dif*0.6;
+		aimDir += dif*0.5;
     }
 	else
 	{
 		aimDir += dif * 0.002;
 	}
 }
+aimDir += angle_difference(originalAngle,aimDir)*0.01;
 var walls = ds_list_create();
 	var al = instance_place_list(x,y,Wall,walls,false)
 	for (var i = 0; i < al; i++) {
@@ -54,6 +55,7 @@ if ammo > 0
 	//image_index += 0.4/ammo
 	with instance_create(x,y,SerpentStrike)
 	{
+		originalAngle = other.originalAngle;
 		dmg = other.dmg;
 		sprite_index = other.sprite_index;
 		sprHead = other.sprHead;

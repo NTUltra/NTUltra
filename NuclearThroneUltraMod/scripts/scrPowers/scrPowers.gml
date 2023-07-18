@@ -207,7 +207,7 @@ function scrPowers() {
 					numberOfEnems = instance_number(IDPDVan);
 			    with Corpse
 			    {
-					if image_speed = 0 and (instance_number(enemy) > numberOfEnems or instance_exists(Portal)) and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+					if image_speed = 0 and (instance_number(enemy) > numberOfEnems) and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 			        {
         
 			        if !audio_is_playing(sndNecromancerRevive)
@@ -372,10 +372,11 @@ function scrPowers() {
 	    {
 			myHead = instance_create(x,y,SerpentStrikeAnimateHead);
 			image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+			originalAngle = image_angle;
 			if dcos(image_angle) < 0
 				flipped = -1;
 			team = other.team;
-			dmg *= 1+Player.level*0.09;//0.1
+			dmg *= 1+Player.level*0.2;//0.1
 			if other.spr_idle = sprMutant16DIdle
 			{
 				sprOutline = sprKrakenStrikeOutline;
@@ -396,56 +397,81 @@ function scrPowers() {
 			currentFrameAmount = 0;
 			
 		}
-    /*
-	    with instance_create(x,y,ArmourStrike)
-	    {
-			image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
-	    Originalangle=image_angle;
-	    team = other.team
-	    ammo = 100;
-	    event_perform(ev_alarm,0)
-	    visible = 0
-	    with instance_create(x,y,ArmourStrikeStart)
-	    {
-	    image_angle = other.image_angle
-	    image_yscale=3;
-	    }
-		}*/
     
 	    if ultra_got[61] && !Player.altUltra//MEGA ARMOUR STRIKE
 	    {
     
-	    with instance_create(x,y,ArmourStrike)
-	    {image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)-20
-	    Originalangle=image_angle;
-	    team = other.team
-	    ammo = 100;
-	    event_perform(ev_alarm,0)
-	    visible = 0
-	    with instance_create(x,y,ArmourStrikeStart)
-	    {
-	    image_angle = other.image_angle
-	    image_yscale=3;
-	    }}
+		    with instance_create(x,y,SerpentStrike)
+		    {
+				perFrame -= 2;
+				myHead = instance_create(x,y,SerpentStrikeAnimateHead);
+				with myHead
+					image_speed += 0.1;
+				image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)-30;
+				originalAngle = image_angle+20;
+				if dcos(image_angle) < 0
+					flipped = -1;
+				team = other.team;
+				dmg *= 1+Player.level*0.2;//0.1
+				if other.spr_idle = sprMutant16DIdle
+				{
+					sprOutline = sprKrakenStrikeOutline;
+					if other.ultra_got[63] {
+						sprite_index = sprFrostKrakenStrikeHead;
+						sprHead = sprFrostKrakenStrike;
+					}
+					else
+					{
+						sprHead = sprKrakenStrikeHead;
+						sprite_index = sprKrakenStrike;
+					}
+				} else if other.ultra_got[63] {
+					sprite_index = sprFrostSerpentStrike;
+					sprHead = sprFrostSerpentStrikeHead;
+				}
+				event_perform(ev_alarm,0);
+				currentFrameAmount = 0;
+			
+			}
     
-	    with instance_create(x,y,ArmourStrike)
-	    {image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+20
-	    Originalangle=image_angle;
-	    team = other.team
-	    ammo = 100;
-	    event_perform(ev_alarm,0)
-	    visible = 0
-	    with instance_create(x,y,ArmourStrikeStart)
-	    {
-	    image_angle = other.image_angle
-	    image_yscale=3;
-	    }}
+		    with instance_create(x,y,SerpentStrike)
+		    {
+				perFrame -= 1;
+				myHead = instance_create(x,y,SerpentStrikeAnimateHead);
+				with myHead
+					image_speed -= 0.1;
+				image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+30;
+				originalAngle = image_angle-20;
+				if dcos(image_angle) < 0
+					flipped = -1;
+				team = other.team;
+				dmg *= 1+Player.level*0.2;//0.1
+				if other.spr_idle = sprMutant16DIdle
+				{
+					sprOutline = sprKrakenStrikeOutline;
+					if other.ultra_got[63] {
+						sprite_index = sprFrostKrakenStrikeHead;
+						sprHead = sprFrostKrakenStrike;
+					}
+					else
+					{
+						sprHead = sprKrakenStrikeHead;
+						sprite_index = sprKrakenStrike;
+					}
+				} else if other.ultra_got[63] {
+					sprite_index = sprFrostSerpentStrike;
+					sprHead = sprFrostSerpentStrikeHead;
+				}
+				event_perform(ev_alarm,0);
+				currentFrameAmount = 0;
+			
+			}
     
     
-	    BackCont.viewx2 += lengthdir_x(-8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-	    BackCont.viewy2 += lengthdir_y(-8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-	    BackCont.shake += 22
-		snd_play_2d(sndVikingArmourStrikeUpg,0,true);
+		    BackCont.viewx2 += lengthdir_x(-8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+		    BackCont.viewy2 += lengthdir_y(-8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+		    BackCont.shake += 22
+			snd_play_2d(sndVikingArmourStrikeUpg,0,true);
 	    }
 		else
 			snd_play_2d(sndVikingArmourStrike,0,true);
@@ -592,7 +618,7 @@ function scrPowers() {
 			var numberOfEnems = 0;
 			if instance_exists(IDPDVan)
 				numberOfEnems = instance_number(IDPDVan);
-			if  (instance_number(enemy) > numberOfEnems or instance_exists(Portal))
+			if  (instance_number(enemy) > numberOfEnems)
 			with Corpse
 			{
 				if image_speed = 0 && x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
@@ -1650,9 +1676,10 @@ function scrPowers() {
 		var numberOfEnems = 0;
 		if instance_exists(IDPDVan)
 			numberOfEnems = instance_number(IDPDVan);
+		if  (instance_number(enemy) > numberOfEnems)
 		with Corpse
 		{
-			if image_speed = 0 and (instance_number(enemy) > numberOfEnems or instance_exists(Portal)) and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+			if image_speed = 0 and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 			{
 				didKill = true;
 			instance_destroy()

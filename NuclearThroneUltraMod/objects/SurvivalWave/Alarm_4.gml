@@ -8,7 +8,7 @@ if instance_exists(Player)
 	{
 		if (point_distance(cx,cy,x,y) > 400)
 		{
-			my_health = 0;	
+			instance_destroy(id,false);
 		}
 	}
 	if (point_distance(cx,cy,Player.x,Player.y) > 400)

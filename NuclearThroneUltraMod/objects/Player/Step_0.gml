@@ -932,7 +932,7 @@ if (!instance_exists(LevCont))
 		}
 		if (ultra_got[63] && armour > 0)//VIKING COLD HEART
 		{
-			reload -= 0.3;
+			reload -= 0.2;
 		}
 	
 		scr60fpsReload();
@@ -2018,9 +2018,12 @@ if(race != 18)
 	{
 		x -= hspeed*friction;
 		var h = sign(hspeed);
-		while(!place_meeting(x+h,y,WallHitMe))
+		var hi = 0;
+		var maxh = hspeed;
+		while(!place_meeting(x+h,y,WallHitMe) && hi < maxh)
 		{
 			x += h;
+			hi ++;
 		}
 		hspeed = 0;
 	}
@@ -2028,9 +2031,12 @@ if(race != 18)
 	{
 		y -= vspeed*friction;
 		var v = sign(vspeed);
-		while(!place_meeting(x,y+v,WallHitMe))
+		var vi = 0;
+		var maxv = hspeed;
+		while(!place_meeting(x,y+v,WallHitMe) && vi < maxv)
 		{
 			y += v;
+			vi ++;
 		}
 		vspeed = 0;
 	}

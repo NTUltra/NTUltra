@@ -3,7 +3,7 @@ alarm[1] = actTime + random(actTime)
 scrTarget()
 if target > 0 {
 	var dis = point_distance(target.x, target.y, x, y);
-    if dis > 48  && dis < 200{
+    if dis > 48  && dis < 200 {
 		var ran = random(10);
 		
 		
@@ -36,10 +36,13 @@ if target > 0 {
 			if ran < 4.5
 				walk = actTime + random_range(-4,6);
 		} else if ran > 8
+		{
+			direction = point_direction(x,y,target.x,target.y) + random_range(10,-10);
 			walk = actTime + random_range(-4,6);
+		}
 		
     }
-    else {
+    else if random(10) < 3 {
         direction = point_direction(target.x, target.y, x, y) + random(20) - 10
         speed = 0.4
         walk = 40 + random(10)

@@ -6976,7 +6976,10 @@ function scrFire2() {
 	case 443:
 
 	snd_play_fire(sndSawedOffShotgun)
-
+	with instance_create(x,y,Bullet2)
+	{motion_add(aimDirection,8+random(4))
+	image_angle = direction
+	team = other.team}
 	repeat(18)
 	{
 	with instance_create(x,y,Bullet2)

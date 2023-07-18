@@ -87,7 +87,7 @@ if other.team != team && team != 0
 		{
 			if  alarm[3] < 1
 			{
-				meleeimmunity=hurtDuration;
+				meleeimmunity = hurtDuration;
 			    if (other.my_health<=0 || actuallyDead)
 			    {
 			    }

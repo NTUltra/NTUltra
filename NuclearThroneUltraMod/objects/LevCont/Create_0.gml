@@ -578,7 +578,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
     }
     if instance_exists(Player)//EXTRA WINGS JOKE!
     {
-	    if Player.race=18 || Player.race=24
+	    if Player.race=18
 	    with SkillIcon
 	    {
 	        if skill=2//extra feet

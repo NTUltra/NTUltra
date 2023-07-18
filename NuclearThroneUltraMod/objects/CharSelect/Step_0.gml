@@ -12,6 +12,7 @@ button = 0
 //y+34 moet 24
 if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+20 and UberCont.mouse__y > y and UberCont.mouse__y < y+24 and image_index != racemax+1 and image_speed = 0 && UberCont.race_have[num]==1
 {
+	randomize();
     if Menu.race = num
     {
     with Menu
@@ -272,6 +273,15 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+20 and UberCon
 				camY = camera_get_view_y(view_camera[0]);
 				camLerp = 0;
 				alarm[3] = 1;
+			}
+			if num == 14
+			{
+				debug("PANDA FOOD");
+				alarm[1] = 15;	
+			}
+			else
+			{
+				alarm[1] = 0;	
 			}
 		}
 	}

@@ -18,7 +18,7 @@ if !surface_exists(surf)
 }
 surface_set_target(surf);
 draw_clear_alpha(c_black,0);
-var xx = 1
+var xx = 10
 var yy = scroll - totalHeight;
 var selectedModeCol = make_colour_rgb(100,42,140);
 repeat(3)
@@ -35,6 +35,8 @@ repeat(3)
 		if i == gamemodenr
 			strin += " *";
 		var h = string_height(strin);
+		if isThisValidGamemodeToUnlock(gamemodeOrder[i])
+			draw_sprite(sprIsValidGamemode,0,xx-10,yy);
 		if ((hoverOverGamemode && UberCont.mouse__y-y > yy && UberCont.mouse__y-y < yy + h) || (gamemodenr == i
 		&& (instance_exists(HoldToAddRemoveGamemode) || instance_exists(HoldToReplaceGamemode))))
 		{
