@@ -101,7 +101,7 @@ if target > 0 && alarm[6] < 1 && alarm[7] < 1 {
 		            alarm[3] = actTime;
 		            alarm[4] = 14+actTime;
 		        } else {
-		            direction = point_direction(x, y, target.x, target.y)
+					motion_add(2,point_direction(x, y, target.x, target.y));
 		            walk = actTime + random(actTime);
 		            alarm[1] = walk;
 		        }

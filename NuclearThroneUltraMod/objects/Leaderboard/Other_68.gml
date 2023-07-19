@@ -27,7 +27,7 @@ if (type == network_type_data) {
 			if array_length(UberCont.runScore) > 1
 			{
 				debug("send score: ",string(UberCont.runScore));
-				var sendBuffer = buffer_create(25,buffer_grow,1);
+				var sendBuffer = buffer_create(29,buffer_grow,1);
 				if UberCont.isWeekly
 				{
 					buffer_write(sendBuffer,buffer_u8,NETDATA.WEEKLY);
@@ -50,20 +50,21 @@ if (type == network_type_data) {
 				else
 					buffer_write(sendBuffer,buffer_u16,UberCont.dailyDay);//This is the day I started my run
 				buffer_write(sendBuffer,buffer_u64,UberCont.runScore[0]);//Kills
-				buffer_write(sendBuffer,buffer_string,UberCont.runScore[1]);//Name
-				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[2]);//area
-				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[3]);//subarea
-				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[4]);//loops technically limited to loop 255
-				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[5]);//race
-				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[6]);//bskin
-				buffer_write(sendBuffer,buffer_bool,UberCont.runScore[7]);//altUltra
-				buffer_write(sendBuffer,buffer_u16,UberCont.runScore[8]);//wep
-				buffer_write(sendBuffer,buffer_u16,UberCont.runScore[9]);//bwep
-				buffer_write(sendBuffer,buffer_u16,UberCont.runScore[10]);//cwep
-				buffer_write(sendBuffer,buffer_string,UberCont.runScore[11]);//crown
-				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[12]);//Ultramod
-				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[13]);//Ultra mutation 255 is none
-				buffer_write(sendBuffer,buffer_string,UberCont.runScore[14]);//List of mutations
+				buffer_write(sendBuffer,buffer_u64,UberCont.runScore[1]);//UserId
+				buffer_write(sendBuffer,buffer_string,UberCont.runScore[2]);//Name
+				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[3]);//area
+				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[4]);//subarea
+				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[5]);//loops technically limited to loop 255
+				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[6]);//race
+				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[7]);//bskin
+				buffer_write(sendBuffer,buffer_bool,UberCont.runScore[8]);//altUltra
+				buffer_write(sendBuffer,buffer_u16,UberCont.runScore[9]);//wep
+				buffer_write(sendBuffer,buffer_u16,UberCont.runScore[10]);//bwep
+				buffer_write(sendBuffer,buffer_u16,UberCont.runScore[11]);//cwep
+				buffer_write(sendBuffer,buffer_string,UberCont.runScore[12]);//crown
+				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[13]);//Ultramod
+				buffer_write(sendBuffer,buffer_u8,UberCont.runScore[14]);//Ultra mutation 255 is none
+				buffer_write(sendBuffer,buffer_string,UberCont.runScore[15]);//List of mutations
 				network_send_packet(serverSocket, sendBuffer, buffer_get_size(sendBuffer));
 				buffer_delete(sendBuffer);
 			}
@@ -77,9 +78,10 @@ if (type == network_type_data) {
 				buffer_write(sendBuffer,buffer_u16,UberCont.weeklyWeek);
 				buffer_write(sendBuffer,buffer_string,UberCont.encrypted_data.ctot_weeklies_score[0]);//Send UID
 				buffer_write(sendBuffer,buffer_u64,UberCont.runRace[0]);//Time
-				buffer_write(sendBuffer,buffer_string,UberCont.runRace[1]);//Name
-				buffer_write(sendBuffer,buffer_u8,UberCont.runRace[2]);//race
-				buffer_write(sendBuffer,buffer_u8,UberCont.runRace[3]);//bskin
+				buffer_write(sendBuffer,buffer_u64,UberCont.runRace[1]);//User id
+				buffer_write(sendBuffer,buffer_string,UberCont.runRace[2]);//Name
+				buffer_write(sendBuffer,buffer_u8,UberCont.runRace[3]);//race
+				buffer_write(sendBuffer,buffer_u8,UberCont.runRace[4]);//bskin
 				network_send_packet(serverSocket, sendBuffer, buffer_get_size(sendBuffer));
 				buffer_delete(sendBuffer);
 			}

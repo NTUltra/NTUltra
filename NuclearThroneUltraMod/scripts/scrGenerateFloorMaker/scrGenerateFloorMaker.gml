@@ -78,6 +78,10 @@ function scrGenerateFloorMaker(limiter) {
 			if Player.area == 118 && Player.subarea == 3
 				goal = 250;
 		}
+		else if scrIsGamemode(20)//big levels
+		{
+			goal *= 2;
+		}
 	}
 	if scrIsGamemode(25) //Survival arena
 	{

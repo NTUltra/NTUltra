@@ -6,7 +6,7 @@ var outcol = make_colour_rgb(51,20,60);
 if enablePopUp == 1
 {
 	//Weapon popup
-	var ww = 102;
+	var ww = 108;
 	var offset = 0.5;
 	if (real(popupEntry[popUpIndex+2]) != 0)//Three weapons
 	{

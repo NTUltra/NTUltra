@@ -13,7 +13,8 @@ function scrGetWeapons() {
 	}
 
 	clipboard_set_text(txt)
-
+	
+	steam_shutdown();
 	game_end()
 
 

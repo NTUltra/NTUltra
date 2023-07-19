@@ -1,4 +1,5 @@
 recursionCheck = 0;
+steam_update();
 if isPaused == 1
 {
 //QUICK RESTART
@@ -128,6 +129,7 @@ if ( keyboard_check_pressed(ord("Q")) or ( gamepad_button_check(0,gp_shoulderr) 
 		UberCont.opt_gamemode = [0];	
 	}
 	scrSave();
+	steam_shutdown();
 	game_end()
 }
 }
@@ -144,9 +146,15 @@ if instance_exists(KeyCont) && !instance_exists(StartDaily) && (keyboard_check_p
 			opt_gamemode = [0];
 		scrSave();
 		if !instance_exists(OptionSelect)
+		{
+			steam_shutdown();
 			game_end()
+		}
 		else if OptionSelect.selected = 0 and CreditsSelect.selected = 0 and StatsSelect.selected = 0 and OptionSelect2.selected = 0 and UpdateSelect.selected = 0
+		{
+			steam_shutdown();
 			game_end()
+		}
 		else if !instance_exists(PlayerSpawn) && !instance_exists(Player) && !instance_exists(StartDaily)
 		{
 			scrRestart()

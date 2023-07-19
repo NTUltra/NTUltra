@@ -18,7 +18,7 @@ if (type == network_type_data) {
 			UberCont.totalDailies = buffer_read(buffer, buffer_u16);
 			UberCont.totalWeeklies = buffer_read(buffer, buffer_u16);
 			UberCont.weeklyWeek = UberCont.totalWeeklies;
-			if latestVersion != UberCont.updateVersion
+			if latestVersion != UberCont.updateVersion || !gotSteam
 			{
 				alarm[0] = min(alarm[0],1);
 			}
@@ -62,6 +62,7 @@ if (type == network_type_data) {
 			}
 			room_goto(romGame);
 			with UberCont {
+				/*
 				if scrIsGamemode(26) {
 					var al = array_length(encrypted_data.ctot_dailies_race_seed);
 				    encrypted_data.ctot_dailies_race_seed[al] = todaysSeed;
@@ -69,7 +70,7 @@ if (type == network_type_data) {
 				    encrypted_data.ctot_dailies_race_time[al] = -1;
 				    encrypted_data.dailies_race_day[al] = today;
 					scrSaveEncrypted();
-				} else if scrIsGamemode(27) {
+				} else */if scrIsGamemode(27) {
 					todaysSeed += 1;
 					seed = UberCont.todaysSeed;
 				    var al = array_length(encrypted_data.ctot_dailies_score_seed);

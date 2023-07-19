@@ -17,25 +17,26 @@ function scrEndBoss() {
 		    }
 			scrSaveEncrypted();
 			runRace[0] = round(time_frame);
-			runRace[1] = encrypted_data.username;
+			runRace[1] = encrypted_data.userid;
+			runRace[2] = encrypted_data.username;
 			//Route string
-			runRace[2] = routeString;
+			runRace[3] = routeString;
 			//runRace[2] = Player.area;
 			//runRace[3] = Player.subarea;
 			//runRace[4] = Player.loops;
-			runRace[3] = Player.race;
-			runRace[4] = Player.bskin;
-			if getUltraMutation() != 255 || array_length(runScore) <= 11
-				runRace[5] = Player.altUltra;
-			runRace[6] = Player.wep;
-			runRace[7] = Player.bwep;
-			runRace[8] = Player.cwep;
-			runRace[9] = string_replace_all(string(Player.crown)," ","");
-			runRace[10] = Player.ultramod;
-			if getUltraMutation() != 255 || array_length(runScore) <= 11
+			runRace[4] = Player.race;
+			runRace[5] = Player.bskin;
+			if getUltraMutation() != 255 || array_length(runRace) <= 12
+				runRace[6] = Player.altUltra;
+			runRace[7] = Player.wep;
+			runRace[8] = Player.bwep;
+			runRace[9] = Player.cwep;
+			runRace[10] = string_replace_all(string(Player.crown)," ","");
+			runRace[11] = Player.ultramod;
+			if getUltraMutation() != 255 || array_length(runRace) <= 12
 			{
-				runRace[11] = getUltraMutation();
-				runRace[12] = scrGetAllMutations();
+				runRace[12] = getUltraMutation();
+				runRace[13] = scrGetAllMutations();
 			}
 			useSeed = false;
 			opt_gamemode = [0];

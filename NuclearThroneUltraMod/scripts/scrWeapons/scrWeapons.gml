@@ -2297,9 +2297,9 @@ function scrWeapons() {
 
 	wep_name[208] = "MINI PLASMA SHOTGUN"
 	wep_type[208] = 5
-	wep_auto[208] = 0
+	wep_auto[208] = 1
 	wep_load[208] = 20
-	wep_cost[208] = 5
+	wep_cost[208] = 4
 	wep_sprt[208] = sprMiniPlasmaShotgun
 	wep_area[208] = 6
 	wep_text[208] = "as requested"
@@ -2752,7 +2752,7 @@ function scrWeapons() {
 	wep_load[249] = 10
 	wep_cost[249] = 2
 	wep_sprt[249] = sprHeavySlugger
-	wep_area[249] = 8
+	wep_area[249] = 9
 	wep_text[249] = "such weight"
 	wep_swap[249] = sndSwapShotgun
 	wep_rad[249] = 0;
@@ -4847,11 +4847,11 @@ function scrWeapons() {
 	wep_swap[437] = sndSwapShotgun
 	wep_rad[437] = 0;
 	
-	wep_name[438] = "EFFICIENT HEAVY SLUGGER"
+	wep_name[438] = "HEAVY FLUGGER"
 	wep_type[438] = 2
 	wep_auto[438] = 0
 	wep_load[438] = 24
-	wep_cost[438] = 1
+	wep_cost[438] = 3
 	wep_sprt[438] = sprEfficientHeavySlugger
 	wep_area[438] = 12
 	wep_text[438] = "slow but ammo efficient"
@@ -6899,7 +6899,7 @@ function scrWeapons() {
 	wep_load[624] = 45
 	wep_cost[624] = 10
 	wep_sprt[624] = sprSuperHeavyNader
-	wep_area[624] = 11
+	wep_area[624] = 12
 	wep_text[624] = "hi there"
 	wep_swap[624] = sndSwapExplosive
 	wep_rad[624] = 0;

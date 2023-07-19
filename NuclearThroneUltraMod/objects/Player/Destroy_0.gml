@@ -559,23 +559,24 @@ else if !reincarnate
 				leaderboardType = LEADERBOARD.SCORE;
 				goToLeaderboard = true;
 				runScore[0] = max(0,other.kills);
-				runScore[1] = encrypted_data.username;
-				runScore[2] = other.area;
-				runScore[3] = other.subarea;
-				runScore[4] = other.loops;
-				runScore[5] = other.race;
-				runScore[6] = other.bskin;
-				if getUltraMutation() != 255 || array_length(runScore) <= 13
-					runScore[7] = other.altUltra;
-				runScore[8] = other.wep;
-				runScore[9] = other.bwep;
-				runScore[10] = other.cwep;
-				runScore[11] = string_replace_all(string(other.crown)," ","");
-				runScore[12] = other.ultramod;
-				if getUltraMutation() != 255 || array_length(runScore) <= 13//Keep ultra display after using lives
+				runScore[1] = encrypted_data.userid;
+				runScore[2] = encrypted_data.username;
+				runScore[3] = other.area;
+				runScore[4] = other.subarea;
+				runScore[5] = other.loops;
+				runScore[6] = other.race;
+				runScore[7] = other.bskin;
+				if getUltraMutation() != 255 || array_length(runScore) <= 14
+					runScore[8] = other.altUltra;
+				runScore[9] = other.wep;
+				runScore[10] = other.bwep;
+				runScore[11] = other.cwep;
+				runScore[12] = string_replace_all(string(other.crown)," ","");
+				runScore[13] = other.ultramod;
+				if getUltraMutation() != 255 || array_length(runScore) <= 14//Keep ultra display after using lives
 				{
-					runScore[13] = getUltraMutation();
-					runScore[14] = scrGetAllMutations();
+					runScore[14] = getUltraMutation();
+					runScore[15] = scrGetAllMutations();
 				}
 				debug("POST SCOORE: ",runScore);
 				canRestart = true;
@@ -606,15 +607,16 @@ else if !reincarnate
 					var tf = round(VanFan.time_frame);
 					debug("tf: ", tf);
 					debug("data: ", encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)]);
-					if (tf > encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)])
-					{
+					//if (tf > encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)])
+					//{
 						encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)] = tf;
 						scrSaveEncrypted();
 						runRace[0] = tf;
-						runRace[1] = encrypted_data.username;
-						runRace[2] = Player.race;
-						runRace[3] = Player.bskin;
-					}
+						runRace[1] = encrypted_data.userid;
+						runRace[2] = encrypted_data.username;
+						runRace[3] = Player.race;
+						runRace[4] = Player.bskin;
+					//}
 				}
 				else
 				{
@@ -622,33 +624,34 @@ else if !reincarnate
 					debug("kills: ", other.kills);
 					debug("data: ", encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)]);
 					//Also in UltraIcon to set ultra,
-					if (scrIsWeeklyScoreHigher(other.kills))
-					{
+					//if (scrIsWeeklyScoreHigher(other.kills))
+					//{
 						encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)] = other.kills;
 						scrSaveEncrypted();
 						runScore[0] = max(0,other.kills);
-						runScore[1] = encrypted_data.username;
+						runScore[1] = encrypted_data.userid;
+						runScore[2] = encrypted_data.username;
 						if scrIsGamemode(25) //Survival area
-							runScore[2] = 116;
+							runScore[3] = 116;
 						else
-							runScore[2] = other.area;
-						runScore[3] = other.subarea;
-						runScore[4] = other.loops;
-						runScore[5] = other.race;
-						runScore[6] = other.bskin
-						if getUltraMutation() != 255 || array_length(runScore) <= 13
-							runScore[7] = other.altUltra;
-						runScore[8] = other.wep;
-						runScore[9] = other.bwep;
-						runScore[10] = other.cwep;
-						runScore[11] = string_replace_all(string(other.crown)," ","");
-						runScore[12] = other.ultramod;
-						if getUltraMutation() != 255 || array_length(runScore) <= 13
+							runScore[3] = other.area;
+						runScore[4] = other.subarea;
+						runScore[5] = other.loops;
+						runScore[6] = other.race;
+						runScore[7] = other.bskin
+						if getUltraMutation() != 255 || array_length(runScore) <= 14
+							runScore[8] = other.altUltra;
+						runScore[9] = other.wep;
+						runScore[10] = other.bwep;
+						runScore[11] = other.cwep;
+						runScore[12] = string_replace_all(string(other.crown)," ","");
+						runScore[13] = other.ultramod;
+						if getUltraMutation() != 255 || array_length(runScore) <= 14
 						{
-							runScore[13] = getUltraMutation();
-							runScore[14] = scrGetAllMutations();
+							runScore[14] = getUltraMutation();
+							runScore[15] = scrGetAllMutations();
 						}
-					}
+					//}
 				}
 			}
 		}

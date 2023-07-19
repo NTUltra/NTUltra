@@ -1,121 +1,40 @@
-Moved down ultra assault shotgun a couple of tiers
-Moved down ultra heavy slugger a couple of tiers
-Moved down ultra triple machinegun two tiers
-Added sharpstress back into the pool of mutations for one hit wonder gamemode
-Fixed and optimized rogue portalstrike mini ammo chests (would come from portalstrike cannisters that were opened by portals)
-Proto portals now also have a smaller immune range
-Triple assault rifle now costs 8 ammo instead of 9 (thats 1 bullet for free) And tis firerate is 1 frame faster.
-POP POP on YV now increases the projectile speed of the shots fired
-Reviving/respawning upon death now makes you lose your crown
-Crown of death now makes big boom when you die
 
-Humphry active addition:
-Humphry's active will now also stun/confuse/freeze enemies for a very short time. This will halt them in place and delay their actions by 0.33 seconds
-(The humphry active can now be used while there are no enemy projectiles on screen).
+1.4.3 (Hotfix)
+- Fixes macOS IDE build|compile bug (forces CRLF to LF conversion of scriptUtils.sh)
 
-Buffed Humphry ultra D added:
-Active stuns enemies for longer
+1.4.1 (Hotfix)
+- Fixes paths containing special characters on windows IDE.
 
-Buffed rogue ultra A added these things:
-Enemies can now drop portalstrike ammo (chance increases if you have lower portalstrike ammo and/or any droprate buffs)
-Using portalstrike heals (will heal 1HP per portalstrike, 2HP with second stomach)
+1.4.0
+- This is a compatibility version ready to work with LTSr1
+NOTE: The github repo will on be compatible with latest Stable, to use in LTS import
+		the release version local package or use the marketplace asset.
 
-Buffed Rogue Ultra B
-Blast armour can now scale with each time it is triggered in an area. (this scaling is infinite) Though at some point it wont spawn more explosions and instead scale the damage (mostly because that is more usefull at that point and to prevent lag).
+v1.3.1 (Hotfix)
+- Fixed Windows binaries were incorrectly build in Debug mode.
 
-Changed Rebel Ultra C
-Changed name: Everyone get in here to Every is connected.
-The droprate increase is lowered significantly (25% per ally)
-The allies themselves have a much higher chance to drop weapons (2%)
-Allies drop 8 more rads
-Added effect:
-Allies cast lasers towards each other.
-The intention is not to nerf or buff this ultra but just make it more fun and have some more synergies with other mutation/builds
-Increased tier of auto splinter spear launcher
-Explosive blade guns now lasts much longer before dissapearing
-Since homing applies to both weapons on steroids the effectiveness of homing is toned down a tiny bit.
-Enemies are now more likely to target Yung cuz's buddies instead of yung cuz
-Enemies can now target Rebel's allies and will prioritize that if they are closer to them, Same goes for Fish Ultra C (buddy cop).
+v1.3.0
+- Recompiled macOS dylibs now using release mode
+- Updated extension options 
+- Updated script control system version 2.0
 
-Impact wrists now works on Rebel's allies
-Rebel Ultra D (stronger ally bullets) Now gives the ally bullets a slightly different sprite
-When you reach ultra as rebel your allies will now spawn bullets upon death
-Rebel Allies now wield a different gun when you have thronebutt
-Newly spawned rebel allies now die faster when the purple end of area portal is spawned.
-C-skin rebel now has unique C-skin allies
-Frost & Flame SMG are lowered 1 tier
-Added some more deflected projectile sprites
-Removed freezeframes/sleep on melee weapons
-More enemies will now spawn in hardmode and Ultra bandits can spawn in every single area
-Not all bandits are replaced with ultra bandits in the desert now in hardmode (preloop).
-Popo and vans will now spawn immediatly on hard mode
-Boss invasions will now start on loop 1 in hard mode
-Chicken's bleed timer no longer increases while she is in a portal
-Capped ballmoms speed scaling
-Ballmom now requires an additional two second before it can deal melee damage to you ( am not 100% sure if ballmom would actually spawn on top of you but I'm guessing because she can move so fast she would reach you before you actually fully spawned in)
-Splinter pistol now fires 1 frame faster
-The big balls/squares on the inverted throne are now faster. (Since the throne runs at you almost constantly the balls have to travel further for the items to reach you)
-Reduced projectile speed boost for hunter slightly
-Lowered maximum projectile speed overall to prevent some clipping.
-When you use crown of sloth and you have a very low difficulty the amount of enemies will still act as if you have a higher difficulty. This "backup difficulty" will scale with loop.
-Almost doubled long arms melee scaling!
-Long arms now mentions that it scales aswell
-Lightning damage now stacks much better + 200%
-iFrame skipper / damage stacking now also applied to ultra lightning
-Increased health ballboss
-Ballboss goes to their next phases a little earlier (in health comparison)
-BallBoss is now harder in hard mode
-Lightning pistol now drops earlier
-increased fire rate lightning smg
-mini lightning pistol now has more range
-Increased accuracy of lightning a tiny bit
-Lightning pistol now has more range
-Lightning rifle now has more range and fires a tiny bit faster
-Increased range of lightning shotgun
-Increased damage of lightning it now deals 5 damage instead of 4. (This will result in lightning dealing usually a total of 15 - 20 damage, in retail this is 7 or 14)
-Lightning now forks! (energy brain increases how often forks a little)
-Atom's Electron ultra increases forking by much more
-Energy brain is now more effective on lightning causing the lightning to last even logner and will now increase the damage by 1
-Atom's electron ultra is now much more effective making lightning much much longer and increasing damage by 2
-Atom's electron ultra ammo reduction on energy weapons is now much more effective previously it did not work on anything that costed 1 or less ammo. And it would only return one ammo on anything else. Now it will return 20% ammo
-Reduced recoil on laser minigun
-Made some minor changes to lightning causing it to spawn in a little slower, this is to prevent a rare infinite loop crash that has been haunting me for 6 years. The effect will not be very noticable
-Increased effectiveness of flames damage stacking, this change also allows for Atoms electron ultra to increase lightning length much more
-Atom's Neutron ultra now also returns ammo in percentages, meaning it is no logner required for your explosive weapon to cost more than 1 ammo and it can return more than 1 ammo aswell, it will be based on cost.
-Made some tweaks to the end of the crystal caves wave in survival arena you fucking noobs (jk it was too much of a difficulty spike <3).
-Survival Arena now has a reroll station at the end of the palace wave
-Anomaly is now disabled in survival arena (it didn't do anything)
-Added a new inverted sewers wave in survival arena (ballmom galore)
-Removed out of combat speedboost from gamemode survival arena
-Increased damage by 5 for heavy sledgehammer
+v1.2.3 (Hotfix)
+- Fixed crashing bug on load using IDE 2023.1.0.xxx
 
+v1.2.2 (Hotfix)
+- Fixed Windows binaries were incorrectly build in Debug mode.
 
-Fixed a bug where the weapons you unlocked were actuall unlocked for the wrong character
-Fixed a bug where darkness would not return after the ultramod challenge
-Fixed a bug where the save station could be unlocked by killing an invading protomind
-Fixed rogue's blastarmour being able to get triggered every single frame eventhough you did not take damage theres a short delay now
-Fixed a bug where proto portals and inverted portals would reduce the lifespan of rebel allies.
-Fixed a bug where the two allies that spawn at the start of a level with Rebel Ultra A were not having the lore-correct names.
-Fixed a bug where you would not be taken to a crownvaul if the crownvault opened while you were respawning
-Fixed a bug where loading a hard mode run would spawn in the chests you get at the start of the gamemode
-Made a small adjustment to the use of seed when selecting mutations (seed was used when you were loading a saved run, should now still be consistent but more random if you get multiple mutations in a row)
-Fixed a bug where the portal would not spawn if the Player had died
-Fixed a bug where the closing of crownvault parts could occur without the player actually touching the portal meaning they could softlock themselves.
-Fixed some projectiles going into negative speed when using crown of sloth
-Crown of reincarnation no longer has legs
-Fixed a bug where a headless chicken could crash the game as soon as she died while exiting a portal
-Fixed a bug where survival arena shit could spawn in the character select menu
-Fixed a bug where swapping weapons while on a weaponmod would not change the weapon mod description
-Fixed a bug where YV popping a shotgun rifle could cause on of the two ammo types to go into negative, should also be fixed for other types of ammo swapping weapons like the explosive/energy thundercrack. Now if prevents it going below 0 ammo so in theory if you poppop this gun you can get free shots, which is not a bug its a feature.
-Fixed a bug where reincarnating using crown of reincarnation or dieing to ultimate gamble would not reset last wish properly
-Fixed inverted vulcano skipping a crownvault
-Fixed a bug where boss invasions were skippable
-Fixed a bug where the new dragon fight entrance could not be connected to the start of the area
-Fixed a bug where a fourth speedweaponmod would only be applied if you had power craving
-Fixed a bug where boss spawns such as big bandit were cummulatively delayed untill enough enemies died
-Fixed a bug where the throne could be moved easily upon wakeup
-Fixed a bug where killing enemies so fucking hard and fast that it could crash the game I guess.
-Fixed a bug where homing mod on steroid's secondary weapon would not apply.
-Maybe fixed another case where enemy targeting fails?
-Fixed a bug where extra feet could trigger its item drops while you are in a portal
-Fixed a bug where popo could spawn before a survival arena wave was started
+v1.2.1 (Hotfix)
+- Fixed Ubuntu export binary hash checking
+
+v1.2.0
+- Added new changelog file to demo (please log further changes here)
+- Fixed bug when running Steamworks on YYC via Steam
+- Changed 'Debug' extension option. It now supports:
+	* Auto which will automatically disable debug for exported projects
+	* Enabled that will keep debug enabled even on exported projects
+- Extension options steam SDK path now allows relative paths (use forwardslash as delimiter)
+- Bumped required GM version to 2023.1
+- Added new scripts to provide better debug information to the console log
+- There is no support for macOS VM exports
+- Fixed minor bugs

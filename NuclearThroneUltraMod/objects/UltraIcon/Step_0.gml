@@ -1016,23 +1016,23 @@ instance_destroy();
 	
 	with UberCont {
 	if (isWeekly) {
-		if (scrIsWeeklyScoreHigher(Player.kills)) {
-			runScore[7] = Player.altUltra;
-			runScore[13] = getUltraMutation();
-			runScore[14] = scrGetAllMutations();
-		}
+		//if (scrIsWeeklyScoreHigher(Player.kills)) {
+			runScore[8] = Player.altUltra;
+			runScore[14] = getUltraMutation();
+			runScore[15] = scrGetAllMutations();
+		//}
 	}
 	else if (scrIsGamemode(27)) // && !instance_exists(StartDaily))
 	{
-		runScore[7] = Player.altUltra;
-		runScore[13] = getUltraMutation();
-		runScore[14] = scrGetAllMutations();
+		runScore[8] = Player.altUltra;
+		runScore[14] = getUltraMutation();
+		runScore[15] = scrGetAllMutations();
 	}
 	else if (scrIsGamemode(26)) // && !instance_exists(StartDaily))
 	{
-		runScore[5] = Player.altUltra;
-		runScore[11] = getUltraMutation();
-		runScore[12] = scrGetAllMutations();
+		runScore[6] = Player.altUltra;
+		runScore[12] = getUltraMutation();
+		runScore[13] = scrGetAllMutations();
 	}
 }
 }

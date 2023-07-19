@@ -2307,9 +2307,10 @@ function scrFire2() {
 
 	snd_play_fire(sndCrossbow)
 
-	with instance_create(x,y,GoldenExplosiveBolt)
+	with instance_create(x,y,ExplosiveBolt)
 	{motion_add(aimDirection,22)
 	image_angle = direction
+	sprite_index = sprGoldenExplosiveBolt
 	team = other.team}
 
 	BackCont.viewx2 += lengthdir_x(40,aimDirection+180)*UberCont.opt_shake
@@ -2737,6 +2738,7 @@ function scrFire2() {
 	case 298:
 		with UberCont
 			scrSave();
+		steam_shutdown();
 		game_end();
 	break;
 	//ULTRA WAVE GUN

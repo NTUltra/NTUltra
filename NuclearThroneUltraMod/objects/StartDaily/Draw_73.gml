@@ -9,6 +9,7 @@ false);
 draw_set_halign(fa_left);
 draw_set_valign(fa_bottom);
 draw_set_colour(c_white);
+
 if latestVersion != UberCont.updateVersion
 {
 	if alarm[0] < 1
@@ -22,6 +23,20 @@ if latestVersion != UberCont.updateVersion
 	if keyboard_check_pressed(vk_enter)
 	{
 		url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod");	
+	}
+}
+else if (!gotSteam)
+{
+	if alarm[0] < 1
+	draw_text(camera_get_view_x(view_camera[0])+4,
+	camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) - 2,
+	"[ESC] CANCEL");
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_middle);
+	draw_text(xx,yy,string_hash_to_newline("PLEASE LOG INTO STEAM#AND HAVE STEAM OPEN IN THE BACKGROUND#THEN RESTART THE GAME##[PRESS ENTER] DOWNLOAD STEAM"));
+	if keyboard_check_pressed(vk_enter)
+	{
+		url_open("https://store.steampowered.com/about/");	
 	}
 }
 else if alarm[3] > 0

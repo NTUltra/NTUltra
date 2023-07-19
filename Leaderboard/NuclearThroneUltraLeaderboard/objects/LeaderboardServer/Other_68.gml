@@ -118,44 +118,44 @@ if (type == network_type_data) {
 			}
 			var newScore = [];
 			newScore[0] = buffer_read(buffer, buffer_u64);//Kills / frame time
-			newScore[1] = buffer_read(buffer,buffer_string);//Username
-			show_debug_message("USERNAME: " + newScore[1]);
+			newScore[1] = buffer_read(buffer, buffer_u64);//User Id
+			newScore[2] = buffer_read(buffer,buffer_string);//Username
+			show_debug_message("USERNAME: " + newScore[2]);
 			if gm == 8
 			{
 				//Van Fan
-				newScore[2] = buffer_read(buffer,buffer_u8)//race
-				newScore[3] = buffer_read(buffer,buffer_u8)//bskin
+				newScore[3] = buffer_read(buffer,buffer_u8)//race
+				newScore[4] = buffer_read(buffer,buffer_u8)//bskin
 			}
 			else if isScore
 			{
-				newScore[2] = buffer_read(buffer,buffer_u8)//area
-				newScore[3] = buffer_read(buffer,buffer_u8)//subarea
-				newScore[4] = buffer_read(buffer,buffer_u8)//loops technically limited to loop 255
-				newScore[5] = buffer_read(buffer,buffer_u8)//race
-				newScore[6] = buffer_read(buffer,buffer_u8)//bskin
-				newScore[7] = buffer_read(buffer,buffer_bool)//altUltra
-				newScore[8] = buffer_read(buffer,buffer_u16);//wep
-				newScore[9] = buffer_read(buffer,buffer_u16);//bwep
-				newScore[10] = buffer_read(buffer,buffer_u16);//cwep
-				newScore[11] = buffer_read(buffer,buffer_string);//crown
-				show_debug_message("CROWN: " + newScore[11]);
-				newScore[12] = buffer_read(buffer,buffer_u8);//ultra mod
-				newScore[13] = buffer_read(buffer,buffer_u8);//ultra mutation 255 is none
-				newScore[14] = buffer_read(buffer,buffer_string);//List of mutations
+				newScore[3] = buffer_read(buffer,buffer_u8)//area
+				newScore[4] = buffer_read(buffer,buffer_u8)//subarea
+				newScore[5] = buffer_read(buffer,buffer_u8)//loops technically limited to loop 255
+				newScore[6] = buffer_read(buffer,buffer_u8)//race
+				newScore[7] = buffer_read(buffer,buffer_u8)//bskin
+				newScore[8] = buffer_read(buffer,buffer_bool)//altUltra
+				newScore[9] = buffer_read(buffer,buffer_u16);//wep
+				newScore[10] = buffer_read(buffer,buffer_u16);//bwep
+				newScore[11] = buffer_read(buffer,buffer_u16);//cwep
+				newScore[12] = buffer_read(buffer,buffer_string);//crown
+				newScore[13] = buffer_read(buffer,buffer_u8);//ultra mod
+				newScore[14] = buffer_read(buffer,buffer_u8);//ultra mutation 255 is none
+				newScore[15] = buffer_read(buffer,buffer_string);//List of mutations
 			}
 			else
 			{
-				newScore[2] = buffer_read(buffer,buffer_string)//Route
-				newScore[3] = buffer_read(buffer,buffer_u8)//race
-				newScore[4] = buffer_read(buffer,buffer_u8)//bskin
-				newScore[5] = buffer_read(buffer,buffer_bool)//altUltra
-				newScore[6] = buffer_read(buffer,buffer_u16);//wep
-				newScore[7] = buffer_read(buffer,buffer_u16);//bwep
-				newScore[8] = buffer_read(buffer,buffer_u16);//cwep
-				newScore[9] = buffer_read(buffer,buffer_string);//crown
-				newScore[10] = buffer_read(buffer,buffer_u8);//ultra mod
-				newScore[11] = buffer_read(buffer,buffer_u8);//ultra mutation 255 is none
-				newScore[12] = buffer_read(buffer,buffer_string);//List of mutations
+				newScore[3] = buffer_read(buffer,buffer_string)//Route
+				newScore[4] = buffer_read(buffer,buffer_u8)//race
+				newScore[5] = buffer_read(buffer,buffer_u8)//bskin
+				newScore[6] = buffer_read(buffer,buffer_bool)//altUltra
+				newScore[7] = buffer_read(buffer,buffer_u16);//wep
+				newScore[8] = buffer_read(buffer,buffer_u16);//bwep
+				newScore[9] = buffer_read(buffer,buffer_u16);//cwep
+				newScore[10] = buffer_read(buffer,buffer_string);//crown
+				newScore[11] = buffer_read(buffer,buffer_u8);//ultra mod
+				newScore[12] = buffer_read(buffer,buffer_u8);//ultra mutation 255 is none
+				newScore[13] = buffer_read(buffer,buffer_string);//List of mutations
 				var sendBuffer = buffer_create(1,buffer_fixed,1);
 				buffer_write(sendBuffer,buffer_u8,NETDATA.CONFIRMRACE);
 				network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
@@ -195,20 +195,46 @@ if (type == network_type_data) {
 					fileName = dailyRaceSaveFileString;
 				}
 			}
-			var scoreLeaderboard = "";
 			ini_open(fileName);
 				//Get existing
 				var i = 0;
+				var canAddToList = true;
 				if (file_exists(fileName))
 				{
 					while(ini_key_exists(stringChecker,i))
 					{
 						var newEntry = ini_read_string(stringChecker,i,"");
-						show_debug_message(newEntry);
 						//First entry must be kills
 						var killsString = string_copy(newEntry,1,string_pos(" ",newEntry));
-						ds_list_add(scoreSorter,real(killsString));
-						ds_list_add(scoreList,newEntry);
+						var uuid = real(string_split(newEntry," ")[1]);
+						var kills = real(killsString);
+						var replaceScore = false;
+						if uuid == newScore[1]
+						{
+							show_debug_message("ENTRY ALREADY EXISTS");
+							if isWeekly
+							{
+								show_debug_message(string(newScore[0]));
+								show_debug_message(kills);
+								if newScore[0] <= kills
+								{
+									canAddToList = false;
+								}
+								else
+								{
+									replaceScore = true;	
+								}
+							}
+							else
+							{
+								canAddToList = false;
+							}
+						}
+						if (!replaceScore)
+						{
+							ds_list_add(scoreSorter,kills);
+							ds_list_add(scoreList,newEntry);
+						}
 						i++;
 						//split on _ then split on | and take second entry thats the kills
 					}
@@ -237,9 +263,12 @@ if (type == network_type_data) {
 					}
 				}
 				//And add the new one
-				ds_list_add(scoreSorter,newScore[0]);
-				ds_list_add(scoreList,scoreString);
-				show_debug_message("ADD NEW SCORE ");
+				if canAddToList
+				{
+					show_debug_message("ADD NEW SCORE ");
+					ds_list_add(scoreSorter,newScore[0]);
+					ds_list_add(scoreList,scoreString);
+				}
 				var al = ds_list_size(scoreSorter);
 				//Sorting algorithm (bubble)
 				for (var i = al; i >= 0; i--)
@@ -264,16 +293,24 @@ if (type == network_type_data) {
 				if (file_exists(fileName))
 					ini_section_delete(stringChecker);
 				var al = ds_list_size(scoreList);
+				var scoreLeaderboard = "";
+				var readableLeaderboard = "";
 				for (var i = 0; i < al; i++)
 				{
-					scoreLeaderboard += scoreList[| i]+"|";
+					var nextScore = scoreList[| i]+"|";
+					scoreLeaderboard += nextScore;
 					ini_write_string(stringChecker,i,scoreList[| i]);
+					
+					var nextScoreArray = string_split(nextScore," ",false,2);
+					show_debug_message(string(nextScoreArray));
+					readableLeaderboard += nextScoreArray[0] + " " + nextScoreArray[2];
+					show_debug_message(readableLeaderboard);
 				}
 				
 			ini_close();
 			var sendBuffer = buffer_create(8,buffer_grow,1);
 			buffer_write(sendBuffer,buffer_u8,NETDATA.LEADERBOARD);
-			buffer_write(sendBuffer,buffer_string,scoreLeaderboard);
+			buffer_write(sendBuffer,buffer_string,readableLeaderboard);
 			buffer_write(sendBuffer,buffer_string,string_split(string_replace(fileName,"ntultra",""),"_")[1]);
 			buffer_write(sendBuffer,buffer_u16,0);//Page
 			show_debug_message("TOTAL PAGES: " + string(ceil(totalScoreEntries/10)-1));
@@ -362,7 +399,11 @@ if (type == network_type_data) {
 				var j = 0;
 				while(ini_key_exists(stringChecker,i) && j < 10)
 				{
-					scoreLeaderboard += ini_read_string(stringChecker,i,"")+"|";
+					var nextScore = ini_read_string(stringChecker,i,"")+"|";
+					var nextScoreArray = string_split(nextScore," ",false,2);
+					show_debug_message(string(nextScoreArray));
+					scoreLeaderboard += nextScoreArray[0] + " " + nextScoreArray[2];
+					show_debug_message(scoreLeaderboard);
 					i++;
 					j++;
 				}

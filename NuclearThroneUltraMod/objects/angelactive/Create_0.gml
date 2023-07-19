@@ -22,3 +22,7 @@ if instance_exists(Player)
 	Player.alarm[3] += 14;
 }
 image_speed = image_number/alarm[0];
+while image_speed < 0.1
+{
+	image_speed *= 2;	
+}

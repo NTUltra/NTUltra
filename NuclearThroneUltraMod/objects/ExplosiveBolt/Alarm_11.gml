@@ -28,6 +28,8 @@ if um == ultramods.plasmaBolt
 	snd_play_fire(sndRocket);
 	with instance_create(x,y,RocketExplosive)
 	{
+		if other.sprite_index == sprGoldenExplosiveBolt
+			sprite_index = sprGoldenRocket
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;

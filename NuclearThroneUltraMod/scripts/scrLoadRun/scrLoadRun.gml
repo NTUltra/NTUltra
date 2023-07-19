@@ -41,6 +41,8 @@ function scrLoadRun(){
 				Player.lastsubarea = encryptedRun.lastsubarea;
 				Player.loops = encryptedRun.loops;
 				UberCont.lastSaveLoop = encryptedRun.loops;
+				if !is_array(encryptedRun.crown)
+					encryptedRun.crown = [encryptedRun.crown]
 				Player.crown = encryptedRun.crown;
 				GenCont.crown = encryptedRun.crown;
 				if !is_array(GenCont.crown)
@@ -116,8 +118,11 @@ function scrLoadRun(){
 				Player.rogueammomax = encryptedRun.rogueammomax;
 				Player.ultraNow = encryptedRun.ultraNow;
 				UberCont.opt_gamemode = encryptedRun.gamemode;
+				if !is_array(UberCont.opt_gamemode)
+					UberCont.opt_gamemode = [UberCont.opt_gamemode]
 				if scrIsGamemode(26) || scrIsGamemode(27) || scrIsGamemode(37)
 					UberCont.opt_gamemode = [0];
+				
 				UberCont.killedBoss = encryptedRun.killedBoss;
 				UberCont.collectedRewards = encryptedRun.collectedRewards;
 				UberCont.enableReroll = encryptedRun.enableReroll;

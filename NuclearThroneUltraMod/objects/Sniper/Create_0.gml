@@ -5,7 +5,7 @@ mySize = 1
 
 event_inherited()
 
-if scrIsHardMode() && random(2) < 1//HARD MODE
+if instance_exists(Player) && Player.area != 1 && scrIsHardMode() && random(2) < 1//HARD MODE
 {
 	instance_destroy(id,false);
 	instance_create(x,y,UltraSniper);

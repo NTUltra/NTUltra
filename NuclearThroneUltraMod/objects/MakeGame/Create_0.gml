@@ -1,5 +1,5 @@
 //preventing players from pirating
-/*
+
 if (!file_exists("amb106.ogg")||
 !file_exists("amb0.ogg")||
 !file_exists("amb0b.ogg")||
@@ -60,6 +60,7 @@ if (!file_exists("amb106.ogg")||
 show_error("\n\nFiles missing!\nPlace .exe and data.win into your Nuclear Throne local folder\n\n"+
 "make sure it is located next to the music files\n"+
 "\n\n",true);
+steam_shutdown();
 game_end();
 exit;
 }

@@ -336,7 +336,7 @@ if scrIsGamemode(6) && !((Player.area = 6 || Player.area = 112) && Player.subare
 goal=70+s;
 
 if scrIsGamemode(20) && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//big levels
-goal=300+s;
+goal *= 2;
 
 }
 if scrIsGamemode(25)//Survival Arena

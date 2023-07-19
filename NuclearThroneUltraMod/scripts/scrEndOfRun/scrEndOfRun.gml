@@ -59,6 +59,5 @@ function scrEndOfRun(){
 		vansSlapped = 0;
 		lastSaveLoop = -1;
 		levelIncrease = 0;
-		isWeekly = false;
 	}
 }

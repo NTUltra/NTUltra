@@ -36,7 +36,9 @@ repeat(3)
 			strin += " *";
 		var h = string_height(strin);
 		if isThisValidGamemodeToUnlock(gamemodeOrder[i])
+		{
 			draw_sprite(sprIsValidGamemode,0,xx-10,yy);
+		}
 		if ((hoverOverGamemode && UberCont.mouse__y-y > yy && UberCont.mouse__y-y < yy + h) || (gamemodenr == i
 		&& (instance_exists(HoldToAddRemoveGamemode) || instance_exists(HoldToReplaceGamemode))))
 		{

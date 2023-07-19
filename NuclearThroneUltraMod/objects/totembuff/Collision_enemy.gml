@@ -1,5 +1,5 @@
 /// @description Buff it
-if !array_contains(buffList,other.id)
+if other.object_index != IDPDVan && other.object_index != IDPDVanVertical && !array_contains(buffList,other.id)
 {
 	buffList[array_length(buffList)] = other.id;
 	with other

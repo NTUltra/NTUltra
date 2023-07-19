@@ -14,6 +14,8 @@ if um == ultramods.plasmaBolt
 	with instance_create(x,y,PlasmaBall)
 	{
 		nomscale += 0.3;
+		acc += 8;
+		dmg ++;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -49,7 +51,7 @@ if um == ultramods.plasmaBolt
 	{
 		dmg ++;
 		defaultPierce += 32;
-		image_yscale += 0.4;
+		image_yscale += 0.7;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;

@@ -1459,12 +1459,12 @@ if (ultra_got[42])//HUNTER ULTRA B Homing projectiles
 	homeBoost += 2.5;
 if skill_got[19]
 {
-	homeBoost += 0.5;
+	homeBoost += 0.6;
 	if race == 25
 		homeBoost += 0.1;
 }
 ///homing projectiles mod
-var modHomeBoost = 0.23;
+var modHomeBoost = 0.24;
 if skill_got[30] == 1
 	modHomeBoost += 0.14;
 if ultra_got[65]
@@ -1494,6 +1494,9 @@ if wepmod4 == 13
 
 if homeBoost > 0
 {
+	var dt = 1;
+	if UberCont.normalGameSpeed == 60
+		dt = 0.5;
     with projectile
     {
         if (team == other.team && speed > 0)
@@ -1507,7 +1510,8 @@ if homeBoost > 0
 		            {
 						var d = point_direction(x,y,t.x,t.y)
 						var ad = angle_difference(d,direction);
-						homeBoost *= 1 + (speed *0.008);
+						homeBoost *= 1 + (speed *0.005);
+						homeBoost *= dt;
 		                if (ad > 2)
 		                {
 							direction+=homeBoost;

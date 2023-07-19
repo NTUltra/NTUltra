@@ -403,7 +403,10 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 			}
 
 			if wep == 298//golden oops gun
+			{
+				steam_shutdown();
 				game_end();
+			}
 
 
 			snd_play(wep_swap[wep])

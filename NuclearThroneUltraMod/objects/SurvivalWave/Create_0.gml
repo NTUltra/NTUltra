@@ -20,4 +20,3 @@ spawnY[3] = 96;
 posIlength = 3;
 if !scrIsGamemode(25)
 	persistent = false;
-debug("Survival", UberCont.opt_gamemode);
