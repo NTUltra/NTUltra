@@ -58,8 +58,12 @@ if instance_exists(Player)
 	    }
 	}
 	//PLAYER START POSITION
-	Player.x = 10016
-	Player.y = 10016
+	with Player
+	{
+		x = 10016
+		y = 10016
+		scrForcePosition60fps();
+	}
 	if (Player.area == 9 || Player.area == 118) && Player.subarea == 3
 		Player.y -= 64;
 	if scrIsGamemode(25)
@@ -70,12 +74,17 @@ if instance_exists(Player)
 		{
 			x = SurvivalArenaStarter.x;
 			y = SurvivalArenaStarter.y-128;
+			scrForcePosition60fps();
 		}
 	}
 	else if Player.subarea == 2 && (Player.area==6 || Player.area == 112)//Labs boss
 	{
-	Player.x = 10016+96;
-	Player.y = 10016+128;
+		with Player
+		{
+			x = 10016+96;
+			y = 10016+128;
+			scrForcePosition60fps();
+		}
 	}
 	else if Player.area == 100 && scrIsGamemode(36) && Player.crownvisits == 0 && instance_exists(SurvivalArenaStarter)//Ultra mod start
 	{
@@ -121,11 +130,13 @@ if instance_exists(Player)
 			x = f.x+o;
 			y = f.y+o;
 		}
+		scrForcePosition60fps();
 	}
 	with Crown
 	{
 		x = Player.x;
 		y = Player.y;
+		scrForcePosition60fps();
 	}
 }
 

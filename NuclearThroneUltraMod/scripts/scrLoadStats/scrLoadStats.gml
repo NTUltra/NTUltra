@@ -46,6 +46,12 @@ function scrLoadStats() {
 		ctot_ultra_taken[dir] = ini_read_real("STATS","ctotultrataken" + string(dir),0);
 		dir ++;
 	}
+	dir = 0;
+	repeat(maxsecretultra)
+	{
+		ctot_secret_ultra_taken[dir] = ini_read_real("STATS","ctotsecretultrataken" + string(dir),0);
+		dir++;
+	}
 
 
 	tot_time = real(string_digits(ini_read_real("STATS","tottime",0)));

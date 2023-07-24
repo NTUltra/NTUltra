@@ -214,9 +214,18 @@ if (type == network_type_data) {
 							show_debug_message("ENTRY ALREADY EXISTS");
 							if isWeekly
 							{
-								show_debug_message(string(newScore[0]));
-								show_debug_message(kills);
 								if newScore[0] <= kills
+								{
+									canAddToList = false;
+								}
+								else
+								{
+									replaceScore = true;	
+								}
+							}
+							else if !isScore
+							{
+								if newScore[0] >= kills//New time is higher than existing time?
 								{
 									canAddToList = false;
 								}

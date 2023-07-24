@@ -159,7 +159,6 @@ with UberCont {
 		}
 	    else if scrIsGamemode(26) {
 			instance_create(0,0,StartDaily);
-	        canRestart = false;
         
 	    }
 	    else if scrIsGamemode(27) {
@@ -263,7 +262,7 @@ cwepmod1 = 0;
 cwepmod2 = 0;
 cwepmod3 = 0;
 cwepmod4 = 0;
-ultra_got[31] = 0;
+ultra_got[109] = 0;//Initialize ultra array
 scrCrowns()
 scrUltras()
 

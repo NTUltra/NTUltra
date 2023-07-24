@@ -587,7 +587,7 @@ function scrPopulate() {
         }
     }
     //populate pizza sewers
-    if Player.area = 102 && !scrIsGamemode(40){
+    if Player.area = 102 && !scrIsGamemode(40) {
 
         with enemy
         instance_destroy()

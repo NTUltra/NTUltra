@@ -3,11 +3,11 @@ instance_activate_all()
 isPaused = 0
 //audio_stop_all();
 if instance_exists(Player)
-kills=Player.kills
+	kills = Player.kills
 with Player
 {
 	skeletonlives = 0;
 	ultra_got[87] = 0;
-	instance_destroy()
+	instance_destroy(id, false)
 }
 scrRestart()

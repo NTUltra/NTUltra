@@ -5,45 +5,33 @@ if hover
 		image_index = 0;
 	with Weekly
 		image_index = 0;
-	if !dailyDone {
-		if scrIsGamemode(26)
+	if scrIsGamemode(26)
+	{
+		dailyDone = false;
+		with UberCont
 		{
-			dailyDone = false;
-			with UberCont
-			{
-				useSeed = false;
-				canRestart = true;
-				seedText = "";
-				opt_gamemode = previous_gamemode;
-			}
-			image_index = 0;
+			useSeed = false;
+			canRestart = true;
+			seedText = "";
+			opt_gamemode = previous_gamemode;
+			isWeekly = false;
 		}
-		else
-		{
-			image_index = 1;
-			with UberCont
-			{
-				seed = todaysSeed + 1;
-				//seedText = seed;
-				useSeed = true;
-				canRestart = false;
-				if opt_gamemode != 37 && opt_gamemode != 26 && opt_gamemode != 27
-					previous_gamemode = opt_gamemode;
-				opt_gamemode = [26];
-			}
-			
-		}
+		image_index = 0;
 	}
 	else
 	{
+		image_index = 1;
 		with UberCont
 		{
-			goToLeaderboard = true;
-			runScore = [];
-			runRace = [];
-			opt_gamemode = previous_gamemode;
-			leaderboardType = LEADERBOARD.RACE;
+			seed = todaysSeed + 1;
+			//seedText = seed;
+			useSeed = true;
+			canRestart = true;
+			if opt_gamemode != 37 && opt_gamemode != 26 && opt_gamemode != 27
+				previous_gamemode = opt_gamemode;
+			opt_gamemode = [26];
+			isWeekly = false;
 		}
-		scrRestart();
+			
 	}
 }

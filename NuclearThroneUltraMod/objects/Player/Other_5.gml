@@ -24,7 +24,7 @@ else
 scrNextLevel();//odd
 }
 */
-var cameFromOuterSpace = area == 100 || area == 104 || scrIsInInvertedArea();
+var cameFromOuterSpace = (area == 100 || area == 104 || scrIsInInvertedArea());
 scrNextLevel();
 if UberCont.killedInvertedThrone2 && !cameFromOuterSpace && UberCont.collectedInversionShards < 3 && scrIsInInvertedArea()
 {
@@ -308,12 +308,12 @@ if looping && area != 104
 	            }
 	        }
             
-	        if loops == 2 && UberCont.opt_gamemode != 15//not no mutations gamemode
+	        if loops == 2 && !scrIsGamemode(15)//not no mutations gamemode
 	        {
 				UberCont.levelIncrease ++;
 				maxlevel++;
 	        }
-			else if loops = 10 && UberCont.opt_gamemode != 15
+			else if loops = 10 && !scrIsGamemode(15)
 	        {
 				UberCont.levelIncrease ++;
 				maxlevel++;

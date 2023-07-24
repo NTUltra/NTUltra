@@ -49,28 +49,22 @@ if (type == network_type_data) {
 		case NETDATA.STARTDAILY:
 			UberCont.todaysSeed = buffer_read(buffer, buffer_u16);
 			UberCont.seed = UberCont.todaysSeed;
+			debug("SET SEED: ", UberCont.seed);
 			UberCont.dailyDay = buffer_read(buffer, buffer_u16);
 			SetSeed();
-			UberCont.randomDailyMod = irandom_range(1,18);
-			UberCont.chestRan = 10;
-			network_destroy(serverSocket);
-			instance_destroy();
-			with Player
+			if scrIsGamemode(27)
 			{
-				subarea = 0;
-				nochest = -1;
-			}
-			room_goto(romGame);
-			with UberCont {
-				/*
-				if scrIsGamemode(26) {
-					var al = array_length(encrypted_data.ctot_dailies_race_seed);
-				    encrypted_data.ctot_dailies_race_seed[al] = todaysSeed;
-					encrypted_data.daily_race_dates[al] = UberCont.today;
-				    encrypted_data.ctot_dailies_race_time[al] = -1;
-				    encrypted_data.dailies_race_day[al] = today;
-					scrSaveEncrypted();
-				} else */if scrIsGamemode(27) {
+				UberCont.randomDailyMod = irandom_range(1,18);
+				UberCont.chestRan = 10;
+				network_destroy(serverSocket);
+				instance_destroy();
+				with Player
+				{
+					subarea = 0;
+					nochest = -1;
+				}
+				room_goto(romGame);
+				with UberCont {
 					todaysSeed += 1;
 					seed = UberCont.todaysSeed;
 				    var al = array_length(encrypted_data.ctot_dailies_score_seed);
@@ -81,6 +75,11 @@ if (type == network_type_data) {
 					scrSaveEncrypted();
 				}
 			}
+			else
+			{
+				alarm[3] = 1;
+				alarm[1] += 1;
+			}
 		break;
 		case NETDATA.STARTWEEKLY:
 			debug("YES WEEKLY DATA");
@@ -89,7 +88,7 @@ if (type == network_type_data) {
 			UberCont.seed = UberCont.todaysSeed;
 			UberCont.opt_gamemode = [];
 			UberCont.opt_gamemode = [37,buffer_read(buffer, buffer_u8)];
-			var i = 1;
+			var i = 2;
 			repeat(2)
 			{
 				var nextGm = buffer_read(buffer, buffer_u8);
@@ -99,6 +98,7 @@ if (type == network_type_data) {
 				}
 				i++;
 			}
+			#region gamemode handling
 			debug("GAMEMODES ", UberCont.opt_gamemode);
 			if scrIsGamemode(1)//One weapon only
 			{
@@ -287,6 +287,7 @@ if (type == network_type_data) {
 					crownvisits = -1;
 				}
 			}
+			#endregion
 			alarm[3] = 90;
 			alarm[1] += 120;
 			

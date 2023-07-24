@@ -1,7 +1,7 @@
-function scrUnlockBSkin(raceIndex, unlockText, requiredGamemode) {
+function scrUnlockBSkin(raceIndex, unlockText, requiredGamemode = 0) {
 	//GAMEMODE UNLOCKABLE raceIndex=gamemode
 	//raceIndex,unlock requirement, gamemode
-	if (UberCont.race_bskin[raceIndex] == 0 && (scrIsGamemode(requiredGamemode) && (isValidGamemodeToUnlock(requiredGamemode))))
+	if (UberCont.race_bskin[raceIndex] == 0 && ((requiredGamemode == 0 || scrIsGamemode(requiredGamemode)) && (isValidGamemodeToUnlock(requiredGamemode))))
 	{
 	UberCont.race_bskin[raceIndex]=1
 

@@ -2,7 +2,7 @@
 exit;
 seedI++;
 alarm[1] = sequenceDelay;
-if (seedI >= array_length(seed) && UberCont.opt_gamemode != 27 && UberCont.opt_gamemode != 26)
+if (seedI >= array_length(seed) && !scrIsGamemode(27) && !scrIsGamemode(26))
 {
 	seedI = 0;
 	var inputSeed = get_string("LEVEL GENERATION SEED","GIVE ME YOUR SEED");

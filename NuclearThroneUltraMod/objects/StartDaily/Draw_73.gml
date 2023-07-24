@@ -39,7 +39,7 @@ else if (!gotSteam)
 		url_open("https://store.steampowered.com/about/");	
 	}
 }
-else if alarm[3] > 0
+else if !scrIsGamemode(26) && alarm[3] > 0
 {
 	draw_text(camera_get_view_x(view_camera[0])+4,
 	camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) - 2,
@@ -53,7 +53,8 @@ else if alarm[3] > 0
 	));
 	if scrIsGamemode(19)
 	{
-		draw_text(xx,yy,string_hash_to_newline("##"+"DISCS: " + UberCont.opt_discs + "#DAMAGE: " + UberCont.opt_discdamage));
+		alarm[3] += 0.1;
+		draw_text(xx,yy,string_hash_to_newline("######"+"DISCS: " + string(UberCont.opt_discs) + "#DAMAGE: " + string(UberCont.opt_discdamage)));
 	}
 }
 else

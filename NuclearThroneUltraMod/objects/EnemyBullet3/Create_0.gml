@@ -8,5 +8,5 @@ typ = 1 //0 = nothing, 1 = deflectable, 2 = destructable
 dmg = 2;
 if scrIsGamemode(9)//CASUAL MODE
 	dmg = 1;
-else if UberCont.opt_gamemode != 34//HARD MODE
+else if !scrIsGamemode(34)//HARD MODE
 	alarm[3] = 5;

@@ -13,7 +13,7 @@ else if sprite_index = sprAllyEAppear
 	spr_idle = sprAllyEIdle
 	sprite_index = spr_idle
 }
-alarm[1] = 8+random(6)
+alarm[1] = 10+irandom(6)
 
 
 if !instance_exists(target)
@@ -42,16 +42,16 @@ if target != noone && target.team != 2 && target.my_health > 0
 		wkick = 4
 		with instance_create(x,y,AllyBullet)
 		{
-			motion_add(other.gunangle+random(20)-10,9)
+			motion_add(other.gunangle+random(20)-10,8)
 			image_angle = direction
 			team = other.team
 		}
 		if instance_exists(Player)
 		{
 			if Player.skill_got[5] = 1
-			alarm[1] = 4
+				alarm[1] = 5
 			else
-			alarm[1] = 9
+				alarm[1] = 10
 		}
 	}
 	else

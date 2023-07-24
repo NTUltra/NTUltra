@@ -326,7 +326,7 @@ function scrNextLevel() {
 				lastarea = 9;
 				lastsubarea = 2;
 				inverted=false
-				if !UberCont.hasLeveledUp
+				if race == 21 && !UberCont.hasLeveledUp
 				{
 					scrUnlockBSkin(21,"FOR REACHING THE PALACE#WITHOUT LEVELING UP#AS HORROR",0);	
 				}
@@ -357,7 +357,7 @@ function scrNextLevel() {
 				lastarea = 9;
 				subarea = 2;
 				inverted=false;
-				if !UberCont.hasLeveledUp
+				if race == 21 && !UberCont.hasLeveledUp
 				{
 					scrUnlockBSkin(21,"FOR REACHING THE PALACE#WITHOUT LEVELING UP#AS HORROR",0);	
 				}
@@ -440,7 +440,7 @@ function scrNextLevel() {
 				{
 					area = 9
 					subarea = 1;
-					if !UberCont.hasLeveledUp
+					if race == 21 && !UberCont.hasLeveledUp
 					{
 						scrUnlockBSkin(21,"FOR REACHING THE PALACE#WITHOUT LEVELING UP#AS HORROR",0);	
 					}

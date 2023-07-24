@@ -30,6 +30,7 @@ if instance_exists(Ally) && instance_number(Ally) > 1
 				}
 			}
 		}
+		alarm[1] += 1;
 	}
 }
-alarm[3] = 42;
+alarm[3] = 40;

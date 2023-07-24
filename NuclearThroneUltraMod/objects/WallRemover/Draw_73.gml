@@ -42,7 +42,9 @@ if radius > 1000
 	radius += 5;
 	opacity -= 0.1;
 	if opacity < 0
-		instance_destroy();
+	{
+		visible = false;
+	}
 }
 else
 {

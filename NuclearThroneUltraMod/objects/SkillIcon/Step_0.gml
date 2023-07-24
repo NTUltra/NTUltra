@@ -13,7 +13,7 @@ scrUnlockCharacter(24,"FOR TAKING HEAVY HEART")
 }
 if skill = 1
 {
-	if Player.ultra_got[62] && Player.altUltra
+	if Player.ultra_got[62] && Player.altUltra//Living armour
 	{
 		Player.maxarmour += 4;
 		Player.armour += 4;
@@ -238,8 +238,12 @@ else if skill=27//patience
 }
 else if skill == 33 //GLASS ARM CANNON
 {
-
-	if Player.race=25
+	if Player.ultra_got[62] && Player.altUltra //Living armour
+	{
+		Player.maxarmour -= 2;
+		Player.armour -= 2;
+	}
+	else if Player.race=25
 	{
 		Player.maxhealth -= 1
 		if Player.my_health > Player.maxhealth

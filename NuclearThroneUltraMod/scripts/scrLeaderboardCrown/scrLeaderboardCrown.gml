@@ -4,6 +4,8 @@
 function scrLeaderboardCrown(takenCrown){
 	switch (takenCrown)
 	{
+		case 1://None
+			return mskPickupThroughWall;
 		case 2://Life
 			return sprCrown1Idle;
 		break;

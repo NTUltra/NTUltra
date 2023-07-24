@@ -278,10 +278,22 @@ function scrDrawBloom() {
 			draw_sprite_ext(sprGammaGuts,other.wave,x,y,1.8,1.8,image_angle,c_white,ba+0.02)
 		}
 	}
-		if scrIsCrown(21) && my_health >= floor(maxhealth*0.75)//Crown of risk
-		with Crown
+		if scrIsCrown(21)
 		{
-			draw_sprite_ext(sprRiskActive,other.wave,x,y,1.1,1.1,image_angle,c_white,ba+0.1)
+			var mh = maxhealth;
+			var h = my_health;
+			if ultra_got[62] && altUltra//Living armour
+			{
+				mh = maxarmour
+				h = armour;
+			}
+			if h >= floor(mh*0.75)//Crown of risk
+			{
+				with Crown
+				{
+					draw_sprite_ext(sprRiskActive,other.wave,x,y,1.1,1.1,image_angle,c_white,ba+0.1)
+				}
+			}
 		}
 		
 		if ultra_got[94]
@@ -443,8 +455,8 @@ function scrDrawBloom() {
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with Explosion
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
-	with Bolt
-	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
+	//with Bolt
+	//draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with MeatExplosion
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with BulletHit

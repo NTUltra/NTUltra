@@ -92,39 +92,44 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 			if scrIsCrown(20) && ammoMultiple > 0//Crown of protection
 			{
 				ammoMultiple -= 2;
-				my_health += 1;
-				var num = 1;
-				if skill_got[9]//Second stomache
+				if Player.ultra_got[62] && Player.altUltra //Living armour
 				{
-					num = 2;
-					snd_play(sndHealthPickupUpg,0,true);
-					with instance_create(x,y,HealFX)
+					scrArmourPickup(1);
+				}
+				else
+				{
+					my_health += 1;
+					var num = 1;
+					if skill_got[9]//Second stomache
 					{
-						sprite_index = sprHealBigFX;
+						num = 2;
+						snd_play(sndHealthPickupUpg,0,true);
+						with instance_create(x,y,HealFX)
+						{
+							sprite_index = sprHealBigFX;
+						}
+					}
+					else
+					{
+						snd_play(sndHealthPickup,0,true);
+						instance_create(x,y,HealFX);
+					}
+					if UberCont.opt_ammoicon
+					{
+						dir = instance_create(x,y,PopupText)
+						dir.sprt = sprHPIconPickup;
+						dir.mytext = "+"+string(num)
+						if my_health > maxhealth
+							dir.mytext += "#OVERHEAL!"
+					}
+					else
+					{
+						dir = instance_create(x,y,PopupText)
+						dir.mytext = "+"+string(num)+" HP"
+						if my_health > maxhealth
+							dir.mytext += "#OVERHEAL!"
 					}
 				}
-				else
-				{
-					snd_play(sndHealthPickup,0,true);
-					instance_create(x,y,HealFX);
-				}
-				if UberCont.opt_ammoicon
-				{
-					dir = instance_create(x,y,PopupText)
-					dir.sprt = sprHPIconPickup;
-					dir.mytext = "+"+string(num)
-					if my_health > maxhealth
-						dir.mytext += "#OVERHEAL!"
-				}
-				else
-				{
-					dir = instance_create(x,y,PopupText)
-					dir.mytext = "+"+string(num)+" HP"
-					if my_health > maxhealth
-						dir.mytext += "#OVERHEAL!"
-				}
-				
-				
 			}
 			
 			if ammoMultiple > 0{

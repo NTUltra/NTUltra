@@ -422,6 +422,10 @@ function scrSkills() {
 		skill_text[33] = "27% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE ON BIG HEALTHPOOLS##-1 MAX HP"
 	else
 		skill_text[33] = "27% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE ON BIG HEALTHPOOLS##-2 MAX HP"
+	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
+	{
+		skill_text[33] = "27% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE ON BIG HEALTHPOOLS##-2 MAX ARMOUR"
+	}
 	skill_tips[33] = "fragile"
 	skill_msnd[33] =  sndMutGlassArmCannon
 	if instance_exists(Player) 

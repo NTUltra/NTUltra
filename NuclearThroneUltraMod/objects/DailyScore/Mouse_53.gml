@@ -15,6 +15,7 @@ if hover
 				canRestart = true;
 				seedText = "";
 				opt_gamemode = previous_gamemode;
+				isWeekly = false;
 			}
 			image_index = 0;
 		}
@@ -30,6 +31,7 @@ if hover
 				if opt_gamemode != 37 && opt_gamemode != 26 && opt_gamemode != 27
 					previous_gamemode = opt_gamemode;
 				opt_gamemode = [27];
+				isWeekly = false;
 			}
 			
 		}
@@ -43,6 +45,7 @@ if hover
 			runRace = [];
 			opt_gamemode = previous_gamemode;
 			leaderboardType = LEADERBOARD.SCORE;
+			isWeekly = false;
 		}
 		scrRestart();
 	}

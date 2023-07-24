@@ -1,5 +1,5 @@
-function scrUnlockCSkin(raceIndex, unlockText, requiredGamemode) {
-	if UberCont.race_cskin[raceIndex] == 0 && (scrIsGamemode(requiredGamemode) && (isValidGamemodeToUnlock(requiredGamemode)))
+function scrUnlockCSkin(raceIndex, unlockText, requiredGamemode = 0) {
+	if UberCont.race_cskin[raceIndex] == 0 && ((requiredGamemode == 0 || scrIsGamemode(requiredGamemode)) && (isValidGamemodeToUnlock(requiredGamemode)))
 	{
 	UberCont.race_cskin[raceIndex]=1
 

@@ -11,12 +11,18 @@ function scrCrowns() {
 
 	crown_name[2] = "[CROWN OF LIFE]"
 	//crown_text[2] = "RESET LIFE TO MAX HP# AT THE END OF EACH LEVEL#NO HP DROPS"
-	crown_text[2] = "NO HEALTH DROPS#AT THE END OF EACH AREA#RESET HP TO MAX HP#IF YOU ALREADY HAVE MAX HP#OVERHEAL 1HP"
+	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+		crown_text[2] = "NO ARMOUR DROPS#AT THE END OF EACH AREA#RESET ARMOUR TO MAX ARMOUR"
+	else
+		crown_text[2] = "NO HEALTH DROPS#AT THE END OF EACH AREA#RESET HP TO MAX HP#IF YOU ALREADY HAVE MAX HP#OVERHEAL 1HP"
 	crown_used[2] = 0
 	crown_tips[2] = "life"
 
 	crown_name[3] = "[CROWN OF DEATH]"
-	crown_text[3] = "-1 MAX HP#BIGGER EXPLOSIONS"
+	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+		crown_text[3] = "-1 MAX ARMOUR#BIGGER EXPLOSIONS"
+	else
+		crown_text[3] = "-1 MAX HP#BIGGER EXPLOSIONS"
 	crown_used[3] = 0
 	crown_tips[3] = "nothing goes unpunished"
 
@@ -30,7 +36,7 @@ function scrCrowns() {
 	crown_used[5] = 0
 	crown_tips[5] = "guns are your friend"
 
-	crown_name[6] = "[CROWN OF HATRED]"//THIS ONE SUCKS
+	crown_name[6] = "[CROWN OF HATRED]"
 	crown_text[6] = "LOSE HEALTH & GAIN RADIATION OVER TIME"
 	crown_used[6] = 0
 	crown_tips[6] = "something is wrong"
@@ -69,7 +75,7 @@ function scrCrowns() {
 	crown_used[12] = 0
 	crown_tips[12] = "looking for the blue stuff"
 
-	crown_name[13] = "[CROWN OF NATURAL SELECTION]"
+	crown_name[13] = "[CROWN OF SELECTION]"
 	crown_text[13] = "HIGHER DROPRATE#ENEMIES DROP NO RADS"
 	crown_used[13] = 0
 	crown_tips[13] = "don't need rads"
@@ -114,9 +120,17 @@ function scrCrowns() {
 	
 	crown_name[20] = "[CROWN OF PROTECTION]"
 	if instance_exists(Player) && Player.skill_got[9]
+	{
 		crown_text[20] = "WEAPON DROPS (OVER) HEAL 2HP#INSTEAD OF GIVING AMMO";
+		if Player.ultra_got[62] && Player.altUltra//Living armour
+			crown_text[20] = "WEAPON DROPS GIVE 2 ARMOUR#INSTEAD OF GIVING AMMO";
+	}
 	else
+	{
 		crown_text[20] = "WEAPON DROPS (OVER) HEAL 1HP#INSTEAD OF GIVING AMMO"
+		if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+			crown_text[20] = "WEAPON DROPS GIVE 1 ARMOUR#INSTEAD OF GIVING AMMO";
+	}
 	crown_used[20] = 0
 	crown_tips[20] = "stay safe"//Always use protection..  that joke is too predictable
 	
@@ -174,12 +188,16 @@ function scrCrowns() {
 	//Daily
 	crown_name[30] = "[CROWN OF MERCENARY]"
 	crown_text[30] = "+2 MAX HP# AT THE END OF EACH AREA#LOSE 20 KILLS"
+	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+		crown_text[30] = "+2 MAX ARMOUR# AT THE END OF EACH AREA#LOSE 20 KILLS"
 	crown_used[30] = 0
 	crown_tips[30] = "there is no crime worse than tax fraud"
 	
 	//Mercenary
 	crown_name[31] = "[CROWN OF BOUNTY]"
 	crown_text[31] = "-2 MAX HP# AT THE END OF EACH AREA#GAIN 20 KILLS"
+	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+		crown_text[31] = "-2 MAX ARMOUR# AT THE END OF EACH AREA#GAIN 20 KILLS"
 	crown_used[31] = 0
 	crown_tips[31] = "no pain no gain"
 	

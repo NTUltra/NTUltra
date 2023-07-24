@@ -2,13 +2,14 @@
 serverSocket = -1;
 latestVersion = UberCont.updateVersion;
 gotSteam = false;
+debug("START DAILY");
 with UberCont
 {
 	if (steam_initialised())
 	{
 		debug("steam initialized");
 		other.gotSteam = true;
-		encrypted_data.username = steam_get_persona_name();
+		encrypted_data.username = string_replace_all(steam_get_persona_name()," ","@&");
 		encrypted_data.userid = steam_get_user_steam_id();
 		#region oldlogin
 		/*

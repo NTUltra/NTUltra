@@ -67,7 +67,7 @@ else
 {
 
 if amountofenemies>=16//is amount of enemies lower than or equal  previous amount - 8
-scrUnlockCSkin(16,"FOR KILLING 16 ENEMIES IN A ROW#USING ONE ARMOUR STRIKE",0);
+	scrUnlockCSkin(16,"FOR KILLING 16 ENEMIES IN A ROW#USING ONE ARMOUR STRIKE",0);
 
 with instance_create(x+lengthdir_x(image_xscale/2,image_angle),y+lengthdir_y(image_xscale/2,image_angle),ArmourStrikeHit)
 {

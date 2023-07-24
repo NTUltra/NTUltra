@@ -8,14 +8,14 @@ if instance_exists(Player)
 	{
 		if (point_distance(cx,cy,x,y) > 400)
 		{
-			instance_destroy(id,false);
+			my_health = 0;
 		}
 	}
 	if (point_distance(cx,cy,Player.x,Player.y) > 400)
 	{
 		with enemy
 		{
-			my_health = 0;
+			instance_destroy(id,false);
 		}
 		with projectile
 		{

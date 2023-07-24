@@ -1,5 +1,6 @@
 /// @description Just switched gm check dailies
 dailyDone = false;
+/*
 if (gamemodeOrder[gamemodenr] == 26)
 {
 	if (array_length(UberCont.encrypted_data.daily_race_dates) > 0)
@@ -23,7 +24,7 @@ if (gamemodeOrder[gamemodenr] == 26)
 			image_index = 0;
 	}
 }
-else if (gamemodeOrder[gamemodenr] == 27)
+else */if (gamemodeOrder[gamemodenr] == 27)
 {
 	if (array_length(UberCont.encrypted_data.daily_score_dates) > 0)
 	{

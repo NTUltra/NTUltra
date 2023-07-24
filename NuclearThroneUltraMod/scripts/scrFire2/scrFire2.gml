@@ -4991,7 +4991,7 @@ function scrFire2() {
 	var target;
 	target=instance_nearest(x+lengthdir_x(80,direction),y+lengthdir_y(80,direction),enemy);// nearest in direction of cursor
 
-	if instance_exists(target)
+	if instance_exists(target) && target.team != team
 	{
 	        if!(collision_line(x,y,target.x,target.y,Wall,false,true) )//No walls between player and target?
 	        {
@@ -7086,7 +7086,7 @@ function scrFire2() {
 	var target;
 	target=instance_nearest(x+lengthdir_x(80,direction),y+lengthdir_y(80,direction),enemy);// nearest in direction of cursor
 
-	if instance_exists(target)
+	if instance_exists(target) && target.team != team
 	{
 	        if!(collision_line(x,y,target.x,target.y,Wall,false,true) )//No walls between player and target?
 	        {

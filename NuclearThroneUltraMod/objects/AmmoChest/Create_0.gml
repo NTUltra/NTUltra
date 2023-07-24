@@ -4,7 +4,7 @@ if object_index != AmmoChestMystery
 {
 	if instance_exists(Player)
 	{
-		if UberCont.opt_gamemode != 25 && random(4) < 1 && !place_meeting(x,y,Player) && !(Player.area == 9 && Player.subarea == 3) && !instance_exists(SurvivalWave)
+		if !scrIsGamemode(25) && random(4) < 1 && !place_meeting(x,y,Player) && !(Player.area == 9 && Player.subarea == 3) && !instance_exists(SurvivalWave)
 		{
 			instance_destroy(id,false);
 			instance_create(x,y,AmmoChestMystery);

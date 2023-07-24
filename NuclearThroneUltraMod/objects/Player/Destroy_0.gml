@@ -584,7 +584,7 @@ else if !reincarnate
 			else if (scrIsGamemode(26) && !instance_exists(StartDaily))
 			{
 				useSeed = false;
-				opt_gamemode = [0];
+				//opt_gamemode = [0];
 				leaderboardType = LEADERBOARD.RACE;
 				goToLeaderboard = true;
 				canRestart = true;

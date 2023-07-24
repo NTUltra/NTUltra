@@ -111,8 +111,8 @@ function scrDarkness() {
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),24,0)
 	with BigMachine
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 )+32,110+random(3),0)
-	with Corpse
-	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),max(0,100-image_index*40),0)
+	//with Corpse
+	//draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),max(0,100-image_index*40),0)
 	with CrownPickup
 	{
 		draw_sprite_ext(sprCrownLightWhite,0,x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 )+32,1,1,0,c_white,0.2)

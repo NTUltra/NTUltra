@@ -12,7 +12,7 @@ function scrDrop(itemdrop, weapondrop) {
 		}
 		var rebelBuff = 0;
 		if Player.ultra_got[39] && !Player.altUltra
-			rebelBuff = instance_number(Ally)*0.15;
+			rebelBuff = instance_number(Ally)*0.1;
 		if itemdrop >= 100
 			dropRateBuff = 0.07;
 		else

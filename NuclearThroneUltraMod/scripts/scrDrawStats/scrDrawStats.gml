@@ -117,6 +117,34 @@ function scrDrawStats() {
 			dir ++;
 		}
 	}
+	ultrastats += "###"
+	ultraWhiteEnter += "##SECRET ULTRAS";
+	ultranames += "###";
+	var maxSecretUltra = UberCont.maxsecretultra
+	for (i = 1; i < maxSecretUltra; i++) {
+		if (i == 26)
+		{
+			ultrastats += string(UberCont.ctot_secret_ultra_taken[i])+"#";
+			totUltras += UberCont.ctot_secret_ultra_taken[i];
+			if UberCont.ctot_secret_ultra_taken[i] < 1
+			{
+				ultranames += scrCensorString(UberCont.secret_ultra_name[i]);
+				ultranames += "#"
+			}
+			else
+				ultranames += UberCont.secret_ultra_name[i]+"#";
+		}
+		ultrastats += string(UberCont.ctot_secret_ultra_taken[i])+"#";
+		totUltras += UberCont.ctot_secret_ultra_taken[i];
+		if UberCont.ctot_secret_ultra_taken[i] < 1
+		{
+			ultranames += scrCensorString(UberCont.secret_ultra_name[i]);
+			ultranames += "#"
+		}
+		else
+			ultranames += UberCont.secret_ultra_name[i]+"#";
+		ultraWhiteEnter+="#";
+	}
 	if totUltras > 999
 	{
 		totUltras = string(totUltras);
@@ -147,7 +175,30 @@ function scrDrawStats() {
 	+ ultraWhiteEnter;
 	stxt2 = ""
 
+	var takenCrowns = UberCont.ctot_crown_taken
+	var stxt1c = "CROWNS TAKEN#"
+	var txt1c = "#"
+	var txt2c = "#"
+	for (var i = 0; i < crownmax + secretcrownmax; i++) {
+		var totCrown = 0;
+		for (var j = 0; j < racemax; j++) {
+			totCrown += takenCrowns[j,i];
+		}
+		stxt1b += "#";
+		if i > crownmax && totCrown < 1
+		{
+			txt1c += scrCensorString(string_replace(string_replace(string_replace(crown_name[i],"[",""),"]",""),"CROWN OF ",""));
+			txt1c += "#";
+		}
+		else
+		{
+			txt1c += string_replace(string_replace(string_replace(crown_name[i],"[",""),"]",""),"CROWN OF ","")+"#";
+		}
+		txt2c += string(totCrown) + "#";
+	}
 	
+		#region olddaily
+	/*
 	var scoreDayList = UberCont.encrypted_data.dailies_score_day;
 	var scoreScoreList = UberCont.encrypted_data.ctot_dailies_score_score;
 	var al = array_length(scoreDayList);
@@ -190,8 +241,10 @@ function scrDrawStats() {
 			txt2c += string(rt)+"#";
 		}
 	}
-	
-	var xOffsetL = -69
+	*/
+		#endregion
+
+	var xOffsetL = -32//69
 	var xOffset = 135;
 	var yOffset = string_height(txt1)*25//190;//string_height(txt1);
 	var bspc = 2;

@@ -28,11 +28,12 @@ if UberCont.start_wep_have[wep,race] == 1
 var xo = 0;
 if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
 	xo = 108;
-if race != 0 && UberCont.mouse__x > __view_get( e__VW.XView, 0 )+xo+300-10 and UberCont.mouse__x < __view_get( e__VW.XView, 0 )+xo+300+12 and UberCont.mouse__y > __view_get( e__VW.YView, 0 )+arrowOpenerY-12 and UberCont.mouse__y < __view_get( e__VW.YView, 0 )+arrowOpenerY+10
+var spacebar = keyboard_check_pressed(vk_space);
+if race != 0 && (spacebar || UberCont.mouse__x > __view_get( e__VW.XView, 0 )+xo+300-10 and UberCont.mouse__x < __view_get( e__VW.XView, 0 )+xo+300+12 and UberCont.mouse__y > __view_get( e__VW.YView, 0 )+arrowOpenerY-12 and UberCont.mouse__y < __view_get( e__VW.YView, 0 )+arrowOpenerY+10)
 {
     wepopenscale=1.5;
     
-    if mouse_check_button_pressed(mb_left)
+    if spacebar || mouse_check_button_pressed(mb_left)
     {
         if (wepmenuopen) {
 			snd_play_2d(sndClickBack);

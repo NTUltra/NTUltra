@@ -164,11 +164,11 @@ function scrPopChests() {
 			
 		if Player.area = 100
 		{
-		if instance_exists(Crown){
+		if instance_exists(Crown) && Player.loops > 0{
 			with instance_furthest(Player.x,Player.y,WeaponChest)
 			{
 				instance_destroy(id,false);
-				if UberCont.opt_gamemode != 26 && UberCont.opt_gamemode != 27 && isValidGamemodeToUnlock()//not daykrt
+				if !scrIsGamemode(26) && !scrIsGamemode(27) && isValidGamemodeToUnlock()//not dayly
 				if Player.skill_got[23] //OPEN MIND
 				{
 					instance_create(x,y-24,ProtoChest)
@@ -262,7 +262,7 @@ function scrPopChests() {
 	{
 		if Player.loops > 1 && Player.level >= 10 && (Player.subarea == 1 || (Player.subarea == 2 && Player.skill_got[23]))
 			scrCreateMissingChest(UltraChest,1);
-		if UberCont.canSpawnInversionShards && scrIsInInvertedArea() && UberCont.canSpawnInversionShards && Player.area != 100 && Player.area != 104
+		if UberCont.canSpawnInversionShards && scrIsInInvertedArea() && Player.area != 100 && Player.area != 104
 		{
 			var mindis = 64
 			do {

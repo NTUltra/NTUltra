@@ -7,7 +7,7 @@ if um == ultramods.bulletShotgun
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = other.speed+4;
+		speed = other.speed+14;
 		team = other.team;
 		alarm[11] = 0;
 	}
@@ -26,6 +26,7 @@ else if um == ultramods.bulletPlasma
 	with instance_create(x,y,BouncerPlasmaBall)
 	{
 		dmg = other.dmg - 1;
+		nomscale -= 0.2;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -47,7 +48,7 @@ else if um == ultramods.bulletPlasma
 	{
 		laserhit=2;
 		sprite_index=sprBouncingLaser;
-		image_yscale -= 0.12
+		image_yscale -= 0.15
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;
@@ -56,16 +57,19 @@ else if um == ultramods.bulletPlasma
 	}
 } else if um == ultramods.boltBullet
 {
+	UberCont.ultramodSwap = false;
 	instance_destroy(id,false);
 	snd_play_fire(sndSplinterGun)
 	with instance_create(x,y,BouncerBolt)
 	{
 		dmg = other.dmg
+		image_speed = 0.6;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = other.speed+12;
+		speed = other.speed+14;
 		team = other.team;
 		alarm[11] = 0;
 	}
+	UberCont.ultramodSwap = true;
 }

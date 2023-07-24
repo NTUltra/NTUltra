@@ -3,7 +3,7 @@ instance_create(x,y,WallBreak);
 with instance_create(x,y,SmallExplosion)
 {
 	team=other.team;
-	if UberCont.opt_gamemode != 34
+	if !scrIsGamemode(34)
 	{
 		dmg=3;
 		with myExplosionMask

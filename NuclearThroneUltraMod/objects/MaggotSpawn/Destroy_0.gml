@@ -4,6 +4,5 @@ speed /=5
 
 event_inherited()
 
-scrDrop(80,0)
-scrDrop(0,35)
+scrDrop(80,35)
 

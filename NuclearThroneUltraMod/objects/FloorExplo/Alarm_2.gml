@@ -48,13 +48,20 @@ if instance_exists(Player) && Player.skill_got[26]
 	{
 		var rebelBuff = 0;
 		if Player.ultra_got[39] && !Player.altUltra
-			rebelBuff = instance_number(Ally)*0.15;
+			rebelBuff = instance_number(Ally)*0.1;
 		var dropRateBuff = Player.skill_got[4]*(0.45+Player.betterrabbitpaw) 
 		+ rebelBuff
 		+ (Player.skill_got[28]*(Player.rage*0.0011))
 		if scrIsCrown(21) //Crown of risk
 		{
-			if Player.my_health >= floor(Player.maxhealth*0.75)
+			var mh = Player.maxhealth;
+			var h = Player.my_health;
+			if Player.ultra_got[62] && Player.altUltra//Living armour
+			{
+				mh = Player.maxarmour
+				h = Player.armour;
+			}
+			if h >= floor(mh*0.75)
 			{
 				dropRateBuff += 0.6;
 			}

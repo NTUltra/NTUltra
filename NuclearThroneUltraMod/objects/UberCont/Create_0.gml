@@ -5,7 +5,7 @@ version = 000//23 is final probably
 encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
-updateVersion = "BETA 30.18";
+updateVersion = "BETA 30.20";
 subUpdateVersion = ""
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
@@ -186,3 +186,5 @@ gmwidth = 1;
 customSurvivalArena = [];
 justQuit = false;
 scrSaveCustomSurvivalArenaTemplate();
+
+pauseimg = sprSharpStress;

@@ -24,13 +24,23 @@ if other.team == 2 && instance_exists(Player) && (!ezMode || other.sprite_index 
 		if immune = 1
 		{
 			alarm[4]=50;
-			if my_health > immunelimit
+			if ultra_got[62] && altUltra && armour > immunelimit//Living armour
 			{
+				dealtDamage = true;
+				if armour-dealDmg < immunelimit
+					armour = immunelimit
+				else
+				{
+					armour -= 1
+				}
+			}
+			else if my_health > immunelimit
+			{
+				dealtDamage = true;
 				if my_health-dealDmg < immunelimit
 					my_health = immunelimit
 				else
 				{
-					dealtDamage = true;
 					my_health -= dealDmg
 				}
 			}
@@ -47,7 +57,7 @@ if other.team == 2 && instance_exists(Player) && (!ezMode || other.sprite_index 
 			image_index = 0
 			var knockbackDir = point_direction(other.x,other.y,x,y);
 			motion_add(knockbackDir,6);
-			if UberCont.opt_gamemode != 34//HARD MODE
+			if !scrIsGamemode(34)//HARD MODE
 			repeat(4)
 			{
 				if !place_meeting(x+lengthdir_x(2,knockbackDir),y+lengthdir_y(2,knockbackDir),Wall)

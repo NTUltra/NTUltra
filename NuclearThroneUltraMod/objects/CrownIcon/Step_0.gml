@@ -104,21 +104,43 @@ with UberCont
 //CROWN OF DEATH
 if oldcrown = 3
 {
-Player.maxhealth += 1
-UberCont.maxHpIncrease ++;
+	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+	{
+		Player.maxarmour += 1
+	}
+	else
+	{
+		Player.maxhealth += 1
+		UberCont.maxHpIncrease ++;
+	}
 }
 //Crown of mercenary
 if oldcrown = 30
 {
-	var am = clamp(Player.maxhealth-2,0,2);
-	Player.maxhealth -= am;
-	UberCont.maxHpIncrease -= am;
+	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+	{
+		var am = clamp(Player.maxarmour-2,0,2);
+		Player.maxarmour -= am;
+	}
+	else
+	{
+		var am = clamp(Player.maxhealth-2,0,2);
+		Player.maxhealth -= am;
+		UberCont.maxHpIncrease -= am;
+	}
 }
 //CROWN OF BOUNTY
 if oldcrown = 31
 {
-Player.maxhealth += 2
-UberCont.maxHpIncrease += 2;
+	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+	{
+		Player.maxarmour += 2
+	}
+	else
+	{
+		Player.maxhealth += 2
+		UberCont.maxHpIncrease += 2;
+	}
 }
 //DO STUFF
 
@@ -159,22 +181,45 @@ if crown = 8 && !Player.tookDestiny
 //CROWN OF DEATH
 if crown = 3 && Player.maxhealth > 1
 {
-Player.maxhealth -= 1
-UberCont.maxHpIncrease --;
+	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+	{
+		Player.maxarmour -= 1	
+	}
+	else
+	{
+		Player.maxhealth -= 1
+		UberCont.maxHpIncrease --;
+	}
 }
 //CROWN OF MERCENARY
 if crown = 30
 {
-	Player.maxhealth += 2
-	Player.my_health += 2;
-	UberCont.maxHpIncrease += 2;
+	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+	{
+		Player.maxarmour += 2;
+		Player.armour += 2;
+	}
+	else
+	{
+		Player.maxhealth += 2
+		Player.my_health += 2;
+		UberCont.maxHpIncrease += 2;
+	}
 }
 //CROWN OF BOUNTY
 if crown = 31
 {
-	var am = clamp(Player.maxhealth-2,0,2);
-	Player.maxhealth -= am;
-	UberCont.maxHpIncrease -= am;
+	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+	{
+		var am = clamp(Player.maxarmour-2,0,2);
+		Player.maxarmour -= am;
+	}
+	else
+	{
+		var am = clamp(Player.maxhealth-2,0,2);
+		Player.maxhealth -= am;
+		UberCont.maxHpIncrease -= am;
+	}
 }
 
 if crown!=4//not crown of haste

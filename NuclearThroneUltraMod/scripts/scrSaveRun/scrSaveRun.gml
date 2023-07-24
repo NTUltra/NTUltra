@@ -1,6 +1,7 @@
 function scrSaveRun() {
 	with UberCont
 	{
+		useSeed = true;
 		lastSaveLoop = Player.loops;
 		encrypted_run_data = {
 			area: Player.area,
@@ -124,6 +125,7 @@ function scrSaveRun() {
 			phoenixrevives: Player.phoenixrevives,
 			globalMutationsChosen: UberCont.globalMutationsChosen,
 			canMultiCrown: UberCont.canMultiCrown,
+			randomDailyMod: UberCont.randomDailyMod,
 		};
 		var saveString = json_stringify(encrypted_run_data);
 		var hash = sha1_string_utf8(saveString);

@@ -239,6 +239,7 @@ if (type == network_type_data) {
 					entryIndex = string_pos_ext(" ",scoreEntry,entryIndex);
 					entryIndex++;
 				}
+				scoreEntryList[1] = string_replace_all(scoreEntryList[1],"@&"," ");//Translate giberish into spaces
 				startIndex = string_pos_ext("|",receivedLeaderboard,startIndex);
 				startIndex++;
 				if leaderboardType == LEADERBOARD.RACE || leaderboardType == LEADERBOARD.VANFAN

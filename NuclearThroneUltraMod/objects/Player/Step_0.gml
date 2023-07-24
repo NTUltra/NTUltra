@@ -474,15 +474,17 @@ if !instance_exists(LevCont) and visible = 1
 		    instance_create(Player.x,Player.y,HPPickup);
 			thing = instance_create(x,y,PopupText)
 			thing.mytext = "HEALTH!";
+			
+			instance_create(x + dcos(dangle)*24,y + dsin(dangle)*24,HealthChest);
+			thing = instance_create(x + dcos(dangle)*24,y + dsin(dangle)*24,PopupText);
+			thing.mytext = "MORE HEALTH!";
 		    }
 		if (keyboard_check_pressed(ord("H")))
 		    {
 			
 			var dangle = random(1)*360;
 			/*
-		    instance_create(x + dcos(dangle)*24,y + dsin(dangle)*24,HealthChest);
-			thing = instance_create(x + dcos(dangle)*24,y + dsin(dangle)*24,PopupText);
-			thing.mytext = "MORE HEALTH!";
+		    
 			*/
 			hard++;
 			thing = instance_create(x + dcos(dangle)*24,y + dsin(dangle)*24,PopupText);
@@ -716,21 +718,39 @@ if !instance_exists(LevCont) and visible = 1
 			decay -= 0.5;
 		else
 			decay -= 1
-	if decay <= 0 and my_health > 1 && alarm[3]<1
-	{
-	Sleep(30)
-	my_health -= 1;
-	exception = true;
+	
+		if decay <= 0 && alarm[3]<1
+		{
+			if my_health > 1
+			{
+				Sleep(30)
+				my_health -= 1;
+				exception = true;
 
 
-	sprite_index = spr_hurt
-	image_index = 0
-	snd_play(snd_hurt, hurt_pitch_variation)
+				sprite_index = spr_hurt
+				image_index = 0
+				snd_play(snd_hurt, hurt_pitch_variation)
 
-	scrRaddrop(20)//used to be 12
+				scrRaddrop(20)//used to be 12
 
-	decay = 300
-	}
+				decay = 300
+			} else if ultra_got[62] && altUltra && armour > 1//Living armour
+			{
+				Sleep(30)
+				armour -= 1;
+				exception = true;
+
+
+				sprite_index = spr_hurt
+				image_index = 0
+				snd_play(snd_hurt, hurt_pitch_variation)
+
+				scrRaddrop(20)//used to be 12
+
+				decay = 300
+			}
+		}
 	}
 }//End of gencont
 
@@ -1063,7 +1083,9 @@ if (!instance_exists(LevCont))
 		{
 			//nerves of steel g  STRESS
 			var reduction = 0;
-			if race = 25
+			if ultra_got[62] && altUltra//Living armour 
+				reduction = (1-(armour/maxarmour))*0.68
+			else if race = 25
 			{
 				reduction = (1-(my_health/maxhealth))*0.62
 			}
@@ -1275,7 +1297,7 @@ if instance_exists(SurvivalWave)
 			other.outOfCombat = false;
 	}
 }
-if outOfCombat && UberCont.opt_gamemode != 25
+if outOfCombat && !scrIsGamemode(25)
 	maxSpeed += 1;
 //CAP SPEED
 var por = instance_place(x,y,Portal);
@@ -1293,7 +1315,7 @@ else if race == 23 && ultra_got[92] == 0
 }
 else if speed > maxSpeed
 	speed = maxSpeed
-if outOfCombat && UberCont.opt_gamemode != 25
+if outOfCombat && !scrIsGamemode(25)
 	maxSpeed -= 1;
 if wep == 531
 {

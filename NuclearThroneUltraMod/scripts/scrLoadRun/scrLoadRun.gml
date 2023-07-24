@@ -249,6 +249,8 @@ function scrLoadRun(){
 					UberCont.globalMutationsChosen = encryptedRun.globalMutationsChosen;
 				if variable_struct_exists(encryptedRun, "canMultiCrown")
 					UberCont.canMultiCrown = encryptedRun.canMultiCrown;
+				if variable_struct_exists(encryptedRun, "randomDailyMod")
+					UberCont.randomDailyMod = encryptedRun.randomDailyMod;
 				
 					
 			}

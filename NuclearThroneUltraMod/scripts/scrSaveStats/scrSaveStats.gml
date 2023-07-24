@@ -48,6 +48,12 @@ function scrSaveStats() {
 		ini_write_real("STATS","ctotultrataken" + string(dir),ctot_ultra_taken[dir]);
 		dir ++;
 	}
+	dir = 0;
+	repeat(maxsecretultra)
+	{
+		ini_write_real("STATS","ctotsecretultrataken" + string(dir),ctot_secret_ultra_taken[dir]);
+		dir ++;
+	}
 
 	ini_write_real("STATS","tottime",string(tot_time));
 }

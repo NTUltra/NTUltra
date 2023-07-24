@@ -3377,7 +3377,7 @@ function scrFire() {
 	var target;
 	target=instance_nearest(x+lengthdir_x(80,direction),y+lengthdir_y(80,direction),enemy);// nearest in direction of cursor
 
-	if instance_exists(target)
+	if instance_exists(target) && target.team != team
 	{
 	        if!(collision_line(x,y,target.x,target.y,Wall,false,true) )//No walls between player and target?
 	        {
@@ -4091,7 +4091,7 @@ function scrFire() {
 	break;
 
 
-	//LINE OF BLOOD
+	//BLOOD LINE
 	case 164:
 
 	snd_play_fire(sndBloodLauncher)
@@ -4104,7 +4104,7 @@ function scrFire() {
 
 	BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
-	BackCont.shake += 8
+	BackCont.shake += 2
 	wkick = 8
 
 	break;

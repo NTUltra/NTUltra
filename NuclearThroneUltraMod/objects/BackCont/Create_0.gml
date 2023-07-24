@@ -60,7 +60,7 @@ if instance_exists(Player)
 		}
 		i ++;
 	}
-	if (UberCont.opt_gamemode != 9 &&  (loops > 9 || (scrIsHardMode() && loops > 3)))
+	if (!scrIsGamemode(9) &&  (loops > 9 || (scrIsHardMode() && loops > 3)))
 	{
 		if scrIsHardMode()
 			bulletHellLoops = loops + 6;

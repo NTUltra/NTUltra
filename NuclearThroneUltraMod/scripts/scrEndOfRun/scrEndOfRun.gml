@@ -35,7 +35,7 @@ function scrEndOfRun(){
 		globalMutationsChosen = 0;
 		canSave = false;
 		canMultiCrown = false;
-		if opt_gamemode != 39
+		if !scrIsGamemode(38)
 			useSeed = false;
 		canSpawnInversionShards = false;
 		collectedInversionShards = 0;

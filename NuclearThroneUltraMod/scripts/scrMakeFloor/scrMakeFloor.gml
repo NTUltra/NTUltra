@@ -120,7 +120,10 @@ function scrMakeFloor(limiter) {
 	        for(yy=-1;yy<10;yy+=1){
         
 				if xx==4 && yy==0
+				{
+					debug("create big m");
 					instance_create(x+32*xx,y+32*yy,BigMachine);//the boss
+				}
         
 		        if xx==0 && yy==0
 		        {

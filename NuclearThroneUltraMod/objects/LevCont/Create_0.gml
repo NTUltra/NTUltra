@@ -92,7 +92,7 @@ if dir<12
 				crown = 32;
 			else if scrIsCrown(33) || Player.consecutiveCrownVisits > 1 
 				crown = 33;
-			else if Player.wep_type[Player.wep] == 4 && Player.wep_type[Player.bwep] == 4 && UberCont.opt_gamemode != 4//Crown of freedom secret 2 explosive weps
+			else if Player.wep_type[Player.wep] == 4 && Player.wep_type[Player.bwep] == 4 && !scrIsGamemode(4)//Crown of freedom secret 2 explosive weps
 				crown = 25;
 			else if Player.wep_type[Player.wep] == 5 && Player.wep_type[Player.bwep] == 5//Crown of energy
 				crown = 26;
@@ -258,7 +258,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+72,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
 		    skill = other.skill4
 			
-			if Player.wep == 0 && Player.bwep == 0 && Player.race != 14 && UberCont.opt_gamemode != 14//not fish only partner and not panda
+			if Player.wep == 0 && Player.bwep == 0 && Player.race != 14 && !scrIsGamemode(14)//not fish only partner and not panda
 			with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+120,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
 		    skill = 109
 		    }
@@ -457,7 +457,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 		}
 		if gotNoSkills
 		{
-			if UberCont.opt_gamemode != 28//This mode allows unlocks getting ultras easy is too powerfull
+			if !scrIsGamemode(28)//This mode allows unlocks getting ultras easy is too powerfull
 			{
 				gotNoSkills = true;
 				for (var i = 0; i <= Player.maxultra; i++) {

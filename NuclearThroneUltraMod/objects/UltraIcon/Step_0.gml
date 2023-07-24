@@ -213,6 +213,7 @@ else if skill == 106//Hands secret ultras
 			ultra_text[106] = "FIERY HANDS#MORE FIRE DAMAGE#HOMING FIRE#EVEN MORE FIRE DAMAGE#WHILE IN INVERTED AREAS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
 			ultra_tips[106] = "secret b-skin ultra mutation"
 			with Player {
+				altUltra = true;
 				spr_idle=sprMutant27BIdle;
 				spr_walk=sprMutant27BWalk;
 				spr_hurt=sprMutant27BHurt;
@@ -228,6 +229,7 @@ else if skill == 106//Hands secret ultras
 			ultra_text[106] = "EXPLOSIVE HANDS#HAND IS SLOWER#NORMAL HAND SPEED IN INVERTED AREAS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
 			ultra_tips[106] = "secret c-skin ultra mutation"
 			with Player {
+				altUltra = true;
 				spr_idle=sprMutant27CIdle;
 				spr_walk=sprMutant27CWalk;
 				spr_hurt=sprMutant27CHurt;
@@ -254,6 +256,7 @@ else if skill == 4
 			spr_walk=sprMutant1CWalk;
 			spr_hurt=sprMutant1CHurt;
 			spr_dead=sprMutant1CDead;
+			altUltra = true;
 		}
 		else
 			scrWeaponAdjustCost(0.95);
@@ -401,7 +404,7 @@ else if skill == 61 && (scrKrakenWeapons(Player.wep) || scrKrakenWeapons(Player.
 		spr_dead=sprMutant16DDead;
 	}
 }
-else if skill == 72 && ((Player.maxhealth < 8 && UberCont.opt_gamemode != 9) || (scrIsGamemode(9) && Player.maxhealth < 8 + UberCont.casualModeHPIncrease) || Player.unlockAlternativeUltras)
+else if skill == 72 && ((Player.maxhealth < 8 && !scrIsGamemode(9)) || (scrIsGamemode(9) && Player.maxhealth < 8 + UberCont.casualModeHPIncrease) || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -561,7 +564,7 @@ else if skill==62
 	
 	with Player {
 		//No health mutations
-		if (unlockAlternativeUltras || (race == 16 && !skill_got[14] && !skill_got[22] && !skill_got[7] && !skill_got[36] && !scrIsCrown(20) && !skill_got[32] && !skill_got[31]))
+		if (unlockAlternativeUltras || (race == 16 &&!skill_got[7] && !skill_got[36] && !skill_got[32] && !skill_got[31]))
 		{
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			altUltra = true;
@@ -995,14 +998,27 @@ race = Player.race
 snd_play_2d(sndMut);
 instance_destroy();
 
-	if skill <= UberCont.maxultra
+	//if skill <= UberCont.maxultra
 	with UberCont
 	{
-		ctot_ultra_taken[other.skill] += 1;
+		debug("other.skill ", other.skill);
+		if Player.altUltra && scrTranslateUltraToSecretStat(other.skill,Player.bskin) != -1 || other.skill == 109
+		{
+			ctot_secret_ultra_taken[scrTranslateUltraToSecretStat(other.skill,Player.bskin)] += 1;
+		}
+		else
+		{
+			ctot_ultra_taken[other.skill] += 1;
+		}
 		var difTaken = 0;
 		for (var i = 0; i < maxultra + 1; i++) {
-		    // code here
 			if (ctot_ultra_taken[i] > 0)
+			{
+				difTaken ++;	
+			}
+		}
+		for (var i = 0; i < maxsecretultra; i++) {
+			if (ctot_secret_ultra_taken[i] > 0)
 			{
 				difTaken ++;	
 			}

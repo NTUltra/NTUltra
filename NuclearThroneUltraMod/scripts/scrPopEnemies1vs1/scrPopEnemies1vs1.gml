@@ -9,7 +9,9 @@ function scrPopEnemies1vs1(area, subarea, loops){
 		!(area == 9 && subarea == 3) &&
 		!(area == 118 && subarea == 3) &&
 		!(area == 4 && subarea == 2) &&
-		!(area == 111 && subarea == 2)
+		!(area == 111 && subarea == 2) &&
+		!(area == 6 && subarea == 2) &&
+		!(area == 112 && subarea == 2)
 	)
 	{
 		debug("Empty area");
@@ -278,6 +280,7 @@ function scrPopEnemies1vs1(area, subarea, loops){
 		else if subarea == 2
 		{
 			enem = noone;
+			sBuff = 1;
 			buff = 1.1*clamp(1+loops*0.5,1,10);
 		}
 	}
@@ -292,6 +295,7 @@ function scrPopEnemies1vs1(area, subarea, loops){
 		else if subarea == 3
 		{
 			enem = noone;
+			sBuff = 1;
 			buff = 1.1*clamp(1+loops*0.5,1,10);
 		}
 	}
@@ -479,7 +483,7 @@ function scrPopEnemies1vs1(area, subarea, loops){
 			sBuff = 1.4;
 		}
 	}
-	else if area == 102 // Mansion
+	else if area == 103 // Mansion
 	{
 		enem = SuperFireBaller;
 	}
@@ -487,7 +491,7 @@ function scrPopEnemies1vs1(area, subarea, loops){
 	{
 		enem = InvertedSuperFireBaller;
 	}
-	else if area == 103 // Pizza
+	else if area == 102 // Pizza
 	{
 		enem = Turtle;
 	}

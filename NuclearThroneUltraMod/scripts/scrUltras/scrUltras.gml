@@ -90,7 +90,7 @@ function scrUltras(altOverride = false) {
 	    ultra_text[13] = "BLOW UP LOW HP ENEMIES"// originally doesn't work with scarier face
 	    ultra_tips[13] = "5hp == death"
 		
-		if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (Player.maxhealth == 1 && UberCont.opt_gamemode != 5 && instance_exists(UltraIcon))))
+		if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (Player.maxhealth == 1 && !scrIsGamemode(5) && instance_exists(UltraIcon))))
 		{
 			ultra_name[13] = "DEATH STARE"
 			ultra_text[13] = "LOOKING AT ENEMIES SLOWLY KILLS THEM#ENEMIES ARE SCARED OF YOU"
@@ -460,10 +460,10 @@ function scrUltras(altOverride = false) {
 		    ultra_tips[62] = "tank up"
 	    }
 		//IF no health mutations
-		if altOverride || (instance_exists(Player) && Player.race == 16 && (Player.altUltra || Player.unlockAlternativeUltras || (!Player.skill_got[14] && !Player.skill_got[22] && !Player.skill_got[7] && !Player.skill_got[36] && !scrIsCrown(20) && !Player.skill_got[32] && !Player.skill_got[31] && instance_exists(UltraIcon))))
+		if altOverride || (instance_exists(Player) && Player.race == 16 && (Player.altUltra || Player.unlockAlternativeUltras || (!Player.skill_got[7] && !Player.skill_got[36] && !Player.skill_got[32] && !Player.skill_got[31] && instance_exists(UltraIcon))))
 		{
 			ultra_name[62] = "LIVING ARMOUR"
-			ultra_text[62] = "REPLACE ALL YOUR HEALTH WITH ARMOUR##HEALTH DROPS BECOME ARMOUR DROPS##(SECOND STOMACH DOUBLES ARMOUR#FROM ARMOUR DROPS)"
+			ultra_text[62] = "REPLACE ALL YOUR HEALTH WITH ARMOUR##HEALTH DROPS BECOME ARMOUR DROPS##(SECOND STOMACH DOUBLES ARMOUR#FROM ARMOUR DROPS)#(HEALING MUTATIONS DO NOT REGENERATE ARMOUR)"
 			ultra_tips[62] = "iron woman"
 		}
 		
@@ -529,7 +529,7 @@ function scrUltras(altOverride = false) {
 		
 		//Have less than default max hp
 		if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (
-		((Player.maxhealth < 8 && UberCont.opt_gamemode != 9) || (scrIsGamemode(9) && Player.maxhealth < 8 + UberCont.casualModeHPIncrease))
+		((Player.maxhealth < 8 && !scrIsGamemode(9)) || (scrIsGamemode(9) && Player.maxhealth < 8 + UberCont.casualModeHPIncrease))
 		&& instance_exists(UltraIcon))))
 		{
 			ultra_name[72] = "MIRROR"
@@ -815,7 +815,6 @@ function scrUltras(altOverride = false) {
 	repeat(maxultra+2)
 	{ultra_got[dir] = 0
 	dir += 1}
-
-
-
+	
+	scrSecretUltraStat();
 }

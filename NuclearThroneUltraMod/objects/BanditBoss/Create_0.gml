@@ -47,7 +47,7 @@ with BanditBoss
 if id!=other.id
 other.cam=false;
 }
-if UberCont.opt_gamemode != 25
+if !!scrIsGamemode(25)
 	existTime = 40;
 
 if cam && (!instance_exists(Player) || (instance_exists(Player) && Player.area != 2))

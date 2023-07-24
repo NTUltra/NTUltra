@@ -75,7 +75,7 @@ else if skill == 61 && (Player.unlockAlternativeUltras || scrKrakenWeapons(Playe
 {
 	sprite_index=sprCaptainOfTheKraken;
 }
-else if skill == 62 && (Player.unlockAlternativeUltras || (Player.race == 16 && !Player.skill_got[14] && !Player.skill_got[22] && !Player.skill_got[7] && !Player.skill_got[36] && !scrIsCrown(20) && !Player.skill_got[32] && !Player.skill_got[31]))
+else if skill == 62 && (Player.unlockAlternativeUltras || (Player.race == 16 && !Player.skill_got[7] && !Player.skill_got[36] && !Player.skill_got[32] && !Player.skill_got[31]))
 {
 	sprite_index = sprLivingArmour;
 }
@@ -87,7 +87,7 @@ else if skill == 68 && (Player.unlockAlternativeUltras || scrHasMorphMod() || sc
 {
 	sprite_index = sprEnginuity;
 }
-else if skill == 72 && (Player.unlockAlternativeUltras || ((Player.maxhealth < 8 && UberCont.opt_gamemode != 9) || (scrIsGamemode(9) && Player.maxhealth < 8 + UberCont.casualModeHPIncrease)))
+else if skill == 72 && (Player.unlockAlternativeUltras || ((Player.maxhealth < 8 && !scrIsGamemode(9)) || (scrIsGamemode(9) && Player.maxhealth < 8 + UberCont.casualModeHPIncrease)))
 {
 	sprite_index=sprMirror;
 }

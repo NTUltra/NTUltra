@@ -1,6 +1,7 @@
-persistent = true
 if (visible)
 {
+	if other.sprite_index == sprProtoPortalDormant ||  other.sprite_index == sprInvertedPortalDormant
+		exit;
 	snd_play(sndWepPortal,0.1,false,true,1,false,false);
 	visible = false;
 	speed = 0;
@@ -12,4 +13,5 @@ if (visible)
 		depth = portalDepth - 1;
 	}
 }
+persistent = true
 dontteleport=true;

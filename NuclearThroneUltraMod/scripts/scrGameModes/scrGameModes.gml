@@ -114,7 +114,7 @@ function scrGameModes() {
 	gamemode_have[15] = 0;
 	gamemode_tip[15] = "WHO NEEDS TO MUTATE?";
 	gamemode_description[15] = "";
-	gamemode_nocombo[15] = [24,26,27,28,35,37,8];
+	gamemode_nocombo[15] = [22, 24,26,27,28,35,37,8];
 
 	gamemode[16] = "SPIKE TRAPS";//
 	gamemode_unlock[16] = "REACH CRYSTAL CAVES ON 400% SCREENSHAKE";
@@ -163,7 +163,7 @@ function scrGameModes() {
 	gamemode_have[22] = 0;
 	gamemode_tip[22] = "LEVEL 50 HERE I COME!";
 	gamemode_description[22] = "\nYOU LEVEL UP SLOWER BUT THERE IS NO LEVEL CAP ALLOWING YOU TO GET EVERY MUTATION AND ALL YOUR ULTRA MUTATIONS";
-	gamemode_nocombo[22] = [26,27,37,8];
+	gamemode_nocombo[22] = [15,26,27,37,8];
 	
 	gamemode[23] = "RANDOM CHARACTER#IN EACH AREA";
 	gamemode_unlock[23] = "PLAY EVERY CHARACTER";

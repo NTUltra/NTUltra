@@ -18,7 +18,23 @@ if other.team != team && (image_index<5)
 						immunelimit = maxhealth;
 						
 				}
-				if my_health > immunelimit
+				if ultra_got[62] && altUltra && armour > immunelimit//Living armour
+				{
+					if armour-1 < immunelimit
+						armour = immunelimit
+					else
+					{
+						armour -= 1;
+						other.dealtDamage = true;
+						snd_play(snd_hurt, hurt_pitch_variation)
+						instance_create(x,y,FrozenPlayer);
+						frozen=10;
+						getFrozen=0;
+						sprite_index = spr_hurt
+						image_index = 0
+					}
+				}
+				else if my_health > immunelimit
 				{
 					if my_health-2 < immunelimit
 						my_health = immunelimit

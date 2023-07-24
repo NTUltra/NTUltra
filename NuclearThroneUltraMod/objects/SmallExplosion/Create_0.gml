@@ -4,7 +4,7 @@ BackCont.shake -= 5;
 team = -1
 with myExplosionMask
 {
-	if UberCont.opt_gamemode != 34 && UberCont.opt_gamemode != 9//NORMAL MODE
+	if !scrIsGamemode(34) && !scrIsGamemode(9)//NORMAL MODE
 	{
 		dmg = 4;
 	}
