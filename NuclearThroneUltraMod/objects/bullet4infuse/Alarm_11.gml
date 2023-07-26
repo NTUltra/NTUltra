@@ -2,7 +2,7 @@
 var um = GetPlayerUltramod()
 if um == ultramods.bulletShotgun
 {
-	with instance_create(x,y,Bullet5)
+	with instance_create(x,y,Bullet5Infuse)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;

@@ -290,7 +290,7 @@ function scrFire2() {
 	with instance_create(x,y,FlameWaveBurst)
 	{
 	creator = other.id
-	ammo = 7
+	ammo = 8
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -1320,6 +1320,7 @@ function scrFire2() {
 	with instance_create(x,y,MegaLaser)
 	{image_angle = aimDirection+(random(2)-1)*other.accuracy
 	team = other.team
+	defaultPierce += 32;
 	image_yscale+=0.2;
 	isUltra=true;
 	event_perform(ev_alarm,0)
@@ -1327,6 +1328,7 @@ function scrFire2() {
 	with instance_create(x,y,MegaLaser)
 	{image_angle = aimDirection+(random(2)-1)+7*other.accuracy
 	team = other.team
+	defaultPierce += 32;
 	image_yscale+=0.2;
 	isUltra=true;
 	event_perform(ev_alarm,0)
@@ -1334,6 +1336,7 @@ function scrFire2() {
 	with instance_create(x,y,MegaLaser)
 	{image_angle = aimDirection+(random(2)-1)+14*other.accuracy
 	team = other.team
+	defaultPierce += 32;
 	image_yscale+=0.2;
 	isUltra=true;
 	event_perform(ev_alarm,0)
@@ -1341,6 +1344,7 @@ function scrFire2() {
 	with instance_create(x,y,MegaLaser)
 	{image_angle = aimDirection+(random(2)-1)-7*other.accuracy
 	team = other.team
+	defaultPierce += 32;
 	image_yscale+=0.2;
 	isUltra=true;
 	event_perform(ev_alarm,0)
@@ -1348,6 +1352,7 @@ function scrFire2() {
 	with instance_create(x,y,MegaLaser)
 	{image_angle = aimDirection+(random(2)-1)-14*other.accuracy
 	team = other.team
+	defaultPierce += 32;
 	image_yscale+=0.2;
 	isUltra=true;
 	event_perform(ev_alarm,0)
@@ -1973,10 +1978,11 @@ function scrFire2() {
 	with instance_create(x,y,Laser)
 	{image_angle = aimDirection+(random(2)-1)*other.accuracy
 	team = other.team
-	event_perform(ev_alarm,0)
 	laserhit=3;
 	sprite_index=sprBouncingLaser;
-	image_yscale -= 0.14}
+	image_yscale -= 0.14
+	event_perform(ev_alarm,0)
+	}
 
 	BackCont.viewx2 += lengthdir_x(3,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(3,aimDirection+180)*UberCont.opt_shake
@@ -1996,10 +2002,11 @@ function scrFire2() {
 	with instance_create(x,y,Laser)
 	{image_angle = aimDirection+(random(8)-4)*other.accuracy
 	team = other.team
-	event_perform(ev_alarm,0)
 	laserhit=4;
 	sprite_index=sprBouncingLaser;
-	image_yscale -= 0.14}
+	image_yscale -= 0.14
+	event_perform(ev_alarm,0)
+	}
 
 	BackCont.viewx2 += lengthdir_x(3,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(3,aimDirection+180)*UberCont.opt_shake
@@ -2747,7 +2754,7 @@ function scrFire2() {
 	with instance_create(x,y,UltraWaveBurst)
 	{
 	creator = other.id
-	ammo = 7
+	ammo = 8
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -2788,6 +2795,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
 		dmg = 25;
+		wallPierce *= 0.5;
 		sprite_index=sprUltraSlash;
 		longarms = 0
 		if instance_exists(Player)
@@ -2807,6 +2815,7 @@ function scrFire2() {
 			with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 			{
 				dmg = 25;
+				wallPierce *= 0.5;
 				sprite_index=sprUltraSlash;
 				longarms = 0
 				if instance_exists(Player)
@@ -12225,6 +12234,23 @@ function scrFire2() {
 	wkick = 5
 
 	break
+	
+	//MINI ROCKET GUN
+	case 632:
+
+	snd_play_fire(sndMachinegun)
+
+	with instance_create(x,y,RocketMini)
+	{motion_add(aimDirection+(random(14)-7)*other.accuracy,14 + (instance_number(RocketMini) % 2))
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 8
+	wkick = 4
+
+	break;
 	
 	}//end of switch part 2!
 }

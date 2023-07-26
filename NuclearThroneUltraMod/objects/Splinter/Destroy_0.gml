@@ -6,7 +6,7 @@ event_inherited();
 if isGaseous
 {
 	repeat(2)
-	with instance_create(x,y,ToxicThrowerGas)
+	with instance_create(x,y,theGass)
 	{
 		image_xscale -= 0.1
 		image_yscale -= 0.1

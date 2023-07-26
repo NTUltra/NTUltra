@@ -4,10 +4,7 @@
   "name": "UltraSplinter",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"hitme","path":"objects/hitme/hitme.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"Wall","path":"objects/Wall/Wall.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":11,"eventType":2,"isDnD":false,},
   ],
   "managed": true,
@@ -17,8 +14,8 @@
     "path": "folders/Objects/Projectiles.yy",
   },
   "parentObjectId": {
-    "name": "projectile",
-    "path": "objects/projectile/projectile.yy",
+    "name": "Splinter",
+    "path": "objects/Splinter/Splinter.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -36,12 +33,12 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprSplinter",
-    "path": "sprites/sprSplinter/sprSplinter.yy",
+    "name": "sprUltraSplinter",
+    "path": "sprites/sprUltraSplinter/sprUltraSplinter.yy",
   },
   "spriteMaskId": {
-    "name": "mskBolt",
-    "path": "sprites/mskBolt/mskBolt.yy",
+    "name": "mskSplinter",
+    "path": "sprites/mskSplinter/mskSplinter.yy",
   },
   "visible": true,
 }

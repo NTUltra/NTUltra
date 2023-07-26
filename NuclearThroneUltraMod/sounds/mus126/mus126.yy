@@ -10,7 +10,7 @@
   "bitRate": 192,
   "compression": 1,
   "conversionMode": 0,
-  "duration": 31.428917,
+  "duration": 30.71406,
   "parent": {
     "name": "Music & amb",
     "path": "folders/Sounds/Music & amb.yy",

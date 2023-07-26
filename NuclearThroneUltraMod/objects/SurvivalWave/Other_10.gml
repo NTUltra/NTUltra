@@ -192,6 +192,7 @@ switch (waveNumber)
 		}
 	break;
 	case 15://mansion
+		snd_play_2d(sndVenuz);
 		if instance_exists(TopCont)
 			TopCont.darkness = 0;
 		song = mus103;
@@ -329,6 +330,31 @@ switch (waveNumber)
 				sprite_index = sprFloor127B;
 			else
 				sprite_index = sprFloor127;
+		}
+	break;
+	case 27://Ìnverted Mansion
+	snd_play_2d(sndVenuz);
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
+		song = mus103;
+		with Floor
+		{
+			if styleb
+				sprite_index = sprFloor125B;
+			else
+				sprite_index = sprFloor125;
+		}
+	break;
+	case 28://Courtyard
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
+		song = mus128;
+		with Floor
+		{
+			if styleb
+				sprite_index = sprFloor128B;
+			else
+				sprite_index = sprFloor128;
 		}
 	break;
 }
@@ -3409,12 +3435,204 @@ repeat(1+loops)
 			i++;
 		break;
 		#endregion
-		/*
+		
 		#region wave 15 YV mansion
 		case 15:
+			wave[i] = {
+				obj: YVStatue,
+				time: 1,
+				xx: centerX,
+				yy: centerY-64
+			};
+			i++;
+			repeat(4)
+			{
+				wave[i] = {
+				obj: Molesarge,
+				time: 2,
+				};
+				i++;
+			}
+			var width = 400;
+			for(var xxx = 128; xxx < width; xxx += 16)
+			{
+				wave[i] = {
+					obj: SmallWallBreak,
+					time: 1,
+					xx: centerX+xxx,
+					yy: centerY,
+				};
+				i++;
+				wave[i] = {
+					obj: Molefish,
+					time: 1,
+					xx: centerX+xxx,
+					yy: centerY,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: BigWallBreak,
+				time: 20,
+				xx: centerX + width + 32,
+				yy: centerY,
+			};
+			i++;
+			for(var xxx = -128; xxx > -width; xxx -= 16)
+			{
+				wave[i] = {
+					obj: SmallWallBreak,
+					time: 1,
+					xx: centerX+xxx,
+					yy: centerY,
+				};
+				i++;
+				wave[i] = {
+					obj: Molefish,
+					time: 1,
+					xx: centerX+xxx,
+					yy: centerY,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: BigWallBreak,
+				time: 10,
+				xx: centerX - width - 32,
+				yy: centerY,
+			};
+			i++;
+			wave[i] = {
+				obj: Jock,
+				time: 2,
+				xx: centerX - width - 32,
+				yy: centerY,
+			};
+			i++;
+			wave[i] = {
+				obj: Jock,
+				time: 2,
+				xx: centerX + width + 32,
+				yy: centerY,
+			};
+			i++;
+			repeat(4)
+			{
+				wave[i] = {
+				obj: Molesarge,
+				time: 2,
+				};
+				i++;
+			}
+			repeat(8)
+			{
+				wave[i] = {
+				obj: Molefish,
+				time: 2,
+				};
+				i++;
+			}
+			repeat(3)
+			{
+				wave[i] = {
+					obj: Molefish,
+					time: 2,
+					xx: centerX - width - 32,
+					yy: centerY,
+				};
+				i++;
+			}
+			repeat(3)
+			{
+				wave[i] = {
+					obj: Molefish,
+					time: 2,
+					xx: centerX + width + 32,
+					yy: centerY,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: Jock,
+				time: 60,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			wave[i] = {
+				obj: GiantGoldenWeaponChest,
+				time: 120,
+				xx: centerX,
+				yy: centerY+64,
+			};
+			i++;
+			wave[i] = {
+				obj: BigDisc,
+				time: 60,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			repeat(4)
+			{
+				wave[i] = {
+				obj: Molesarge,
+				time: 2,
+				};
+				i++;
+			}
+			repeat(8)
+			{
+				wave[i] = {
+				obj: Molefish,
+				time: 2,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: Jock,
+				time: 20,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			for(var xxx = 128; xxx < width; xxx += 16)
+			{
+				wave[i] = {
+					obj: Molesarge,
+					time: 1,
+					xx: centerX+xxx,
+					yy: centerY,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: UltraSniper,
+				time: 20,
+				xx: centerX + width + 32,
+				yy: centerY,
+			};
+			i++;
+			for(var xxx = -128; xxx > -width; xxx -= 16)
+			{
+				wave[i] = {
+					obj: Molesarge,
+					time: 1,
+					xx: centerX+xxx,
+					yy: centerY,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: UltraSniper,
+				time: 20,
+				xx: centerX - width - 32,
+				yy: centerY,
+			};
+			i++;
 		break;
 		#endregion
-				
+		/*
 		#region wave 16 Inverted labs
 		case 16:
 		break;
@@ -3467,6 +3685,14 @@ repeat(1+loops)
 		
 		#region wave 26 Inverted Graveyard
 		case 26:
+		break;
+		
+		#region wave 27 Inverted Mansion
+		case 27:
+		break;
+		
+		#region wave 28 Courtyard
+		case 28:
 		break;
 		#endregion
 		*/

@@ -3299,7 +3299,7 @@ function scrWeapons() {
 	wep_name[299] = "ULTRA WAVE GUN"
 	wep_type[299] = 2
 	wep_auto[299] = 0
-	wep_load[299] = 14
+	wep_load[299] = 15
 	wep_cost[299] = 3
 	wep_sprt[299] = sprUltraWaveGun
 	wep_area[299] = 20
@@ -6980,6 +6980,17 @@ function scrWeapons() {
 	wep_text[631] = "always strike thrice"
 	wep_swap[631] = sndSwapEnergy
 	wep_rad[631] = 25;
+	
+	wep_name[632] = "MINI ROCKET GUN"
+	wep_type[632] = 4
+	wep_auto[632] = 1
+	wep_load[632] = 5
+	wep_cost[632] = 0.5
+	wep_sprt[632] = sprMiniRocketGun
+	wep_area[632] = 7
+	wep_text[632] = ""
+	wep_swap[632] = sndSwapExplosive
+	wep_rad[632] = 0;
 
 	maxwep = array_length(wep_name)-1;
 

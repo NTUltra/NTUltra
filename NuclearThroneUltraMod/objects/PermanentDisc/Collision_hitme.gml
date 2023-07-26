@@ -1,4 +1,4 @@
-if other.team = 2
+if other.team == 2
 {with other
 {
 if sprite_index != spr_hurt

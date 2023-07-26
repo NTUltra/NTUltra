@@ -877,7 +877,7 @@ function scrFire() {
 	with instance_create(x,y,WaveBurst)
 	{
 	creator = other.id
-	ammo = 7
+	ammo = 8
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -2807,6 +2807,7 @@ function scrFire() {
 	with instance_create(x,y,Laser)
 	{image_angle = aimDirection+(random(2)-1)*other.accuracy
 	team = other.team
+	defaultPierce *= 2;
 	image_yscale+=0.2;
 	isUltra=true;
 	event_perform(ev_alarm,0)
@@ -2815,6 +2816,7 @@ function scrFire() {
 	{image_angle = aimDirection+(random(2)-1)+7*other.accuracy
 	team = other.team
 	image_yscale+=0.2;
+	defaultPierce *= 2;
 	isUltra=true;
 	event_perform(ev_alarm,0)
 	}
@@ -2822,6 +2824,7 @@ function scrFire() {
 	{image_angle = aimDirection+(random(2)-1)+14*other.accuracy
 	team = other.team
 	image_yscale+=0.2;
+	defaultPierce *= 2;
 	isUltra=true;
 	event_perform(ev_alarm,0)
 	}
@@ -2829,6 +2832,7 @@ function scrFire() {
 	{image_angle = aimDirection+(random(2)-1)-7*other.accuracy
 	team = other.team
 	image_yscale+=0.2;
+	defaultPierce *= 2;
 	isUltra=true;
 	event_perform(ev_alarm,0)
 	}
@@ -2836,6 +2840,7 @@ function scrFire() {
 	{image_angle = aimDirection+(random(2)-1)-14*other.accuracy
 	team = other.team
 	image_yscale+=0.2;
+	defaultPierce *= 2;
 	isUltra=true;
 	event_perform(ev_alarm,0)
 	}
@@ -2859,6 +2864,7 @@ function scrFire() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
 	dmg = 26;
+	wallPierce *= 0.5;
 	sprite_index=sprUltraSlash;
 	longarms = 0
 	if instance_exists(Player)
@@ -2869,6 +2875,7 @@ function scrFire() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+60*Player.accuracy),Slash)
 	{
 	dmg = 23
+	wallPierce *= 0.5;
 	sprite_index=sprUltraSlash;
 	longarms = 0
 	if instance_exists(Player)
@@ -2879,6 +2886,7 @@ function scrFire() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-60*Player.accuracy),Slash)
 	{
 	dmg = 23
+	wallPierce *= 0.5;
 	sprite_index=sprUltraSlash;
 	longarms = 0
 	if instance_exists(Player)

@@ -83,7 +83,7 @@ if(instance_exists(Player)){
 
 var dir;
 dir = 0
-var pierce = 64;
+var pierce = defaultPierce;
 var modBoost = 12;
 with Player
 {

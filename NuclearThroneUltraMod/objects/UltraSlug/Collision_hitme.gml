@@ -2,7 +2,7 @@ if other.team != team and other.my_health > 0
 {instance_destroy()
 
 	var hits = ds_list_create();
-	var range = 28;
+	var range = 26;
 	if instance_exists(Player) && Player.skill_got[15] //Shotgun shoulder
 	{
 		range += 12;

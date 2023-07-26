@@ -32,7 +32,14 @@ if place_meeting(x,y,Player) && !used
 		with Player
 		{
 			scrLoseSkill(other.skillIndex);
-			rad = GetPlayerMaxRad() * 0.5;
+			if (scrCheckUltra(wep_name[wep]) || 	scrCheckUltra(wep_name[bwep]) || scrCheckUltra(wep_name[bwep]))
+			{
+				rad = GetPlayerMaxRad() * 0.75;
+			}
+			else
+			{
+				rad = GetPlayerMaxRad() * 0.5;	
+			}
 		}
 	}
 }

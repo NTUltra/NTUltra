@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprDisc",
-    "path": "sprites/sprDisc/sprDisc.yy",
+    "name": "sprPermaDisc",
+    "path": "sprites/sprPermaDisc/sprPermaDisc.yy",
   },
   "spriteMaskId": {
     "name": "mskDisc",

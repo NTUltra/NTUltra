@@ -475,8 +475,8 @@ if !instance_exists(LevCont) and visible = 1
 			thing = instance_create(x,y,PopupText)
 			thing.mytext = "HEALTH!";
 			
-			instance_create(x + dcos(dangle)*24,y + dsin(dangle)*24,HealthChest);
-			thing = instance_create(x + dcos(dangle)*24,y + dsin(dangle)*24,PopupText);
+			instance_create(x,y,HealthChest);
+			thing = instance_create(x,y,PopupText);
 			thing.mytext = "MORE HEALTH!";
 		    }
 		if (keyboard_check_pressed(ord("H")))

@@ -11,14 +11,14 @@ y = creator.y
 
 with instance_create(x,y,Bullet2)
 {
-motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(4)-2+sin(other.ammo/2)*16,15)
+motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(4)-2+sin(other.ammo/2)*16,16)
 image_angle = direction
 team = other.team
 scrCopyWeaponMod(other);
 }
 with instance_create(x,y,Bullet2)
 {
-motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(4)-2-sin(other.ammo/2)*16,15)
+motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(4)-2-sin(other.ammo/2)*16,16)
 image_angle = direction
 team = other.team
 scrCopyWeaponMod(other);

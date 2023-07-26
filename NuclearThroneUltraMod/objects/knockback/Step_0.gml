@@ -1,5 +1,8 @@
 /// @description Move the shithead through walls and everything
-lerpTime -= lerpCalcBack;
+if UberCont.normalGameSpeed == 60
+	lerpTime -= lerpCalcBack*0.5;
+else
+	lerpTime -= lerpCalcBack;
 if target > 0 && instance_exists(target)
 {
 	with target
@@ -10,6 +13,7 @@ if target > 0 && instance_exists(target)
 		mask_index = mskPickupThroughWall;
 		x = lerp(other.pushX,other.pushStartX,other.lerpTime);
 		y = lerp(other.pushY,other.pushStartY,other.lerpTime);
+		scrForcePosition60fps();
 		mask_index = msk;
 		var walls = ds_list_create();
 		var al = instance_place_list(x,y,Wall,walls,false)

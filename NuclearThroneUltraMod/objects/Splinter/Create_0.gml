@@ -6,6 +6,7 @@ dmg = 4;
 trailColour = c_white;
 alarm[11] = 1;
 isGaseous = false;
+theGass = ToxicThrowerGas;
 if instance_exists(Player)
 {
 	//FROG POTENCY

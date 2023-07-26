@@ -53,9 +53,9 @@ if um == ultramods.plasmaBolt
 		isog = false;
 		image_angle = other.direction;
 		team = other.team
-		event_perform(ev_alarm,0)
 		laserhit=3;
 		sprite_index=sprBouncingLaser;
+		event_perform(ev_alarm,0)
 	}
 	instance_destroy(id,false);
 } else if um == ultramods.shotgunBolt

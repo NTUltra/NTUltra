@@ -25,3 +25,4 @@ pushSpeed = 20;
 grabbingPickup = false;
 spr_closing = sprHandClosing;
 spr_close = sprHandClose;
+alarm[5] = 1;

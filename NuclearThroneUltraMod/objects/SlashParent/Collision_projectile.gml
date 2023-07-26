@@ -20,10 +20,18 @@ if team != other.team
 		with other
 			event_user(15);
 	}
-	else if other.typ = 2
+	else if other.typ == 2
 	{
 		with other
 			instance_destroy()
+	}
+	else if other.typ == 3
+	{
+		with other
+		{
+			x = xprevious;
+			y = yprevious;
+		}
 	}
 }
 
