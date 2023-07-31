@@ -126,7 +126,7 @@ else if skill == 47 && Player.race == 12 && (!Player.skill_got[1] && Player.skil
 		ultra_tips[47] = "pay up"
 	}
 }
-else if skill == 50 && Player.race == 13 && Player.crown > Player.crownmax
+else if skill == 50 && Player.race == 13 && (scrHasASecretCrown() || Player.unlockAlternativeUltras)
 {
 	with Player
 	{

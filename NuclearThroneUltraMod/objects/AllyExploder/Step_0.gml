@@ -24,7 +24,7 @@ right = 1
 else if hspeed < 0
 right = -1
 
-speed = 3
+speed = maxSpeed
 
 if instance_exists(enemy)
 {

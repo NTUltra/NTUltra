@@ -209,9 +209,9 @@ switch (waveNumber)
 		with Floor
 		{
 			if styleb
-				sprite_index = sprFloor106B;
+				sprite_index = sprFloor110B;
 			else
-				sprite_index = sprFloor106;
+				sprite_index = sprFloor110;
 		}
 	break;
 	case 17://inv frozen
@@ -3632,12 +3632,122 @@ repeat(1+loops)
 			i++;
 		break;
 		#endregion
-		/*
+		
 		#region wave 16 Inverted labs
 		case 16:
+		repeat(4)
+		{
+		wave[i] = {
+				obj: InvertedRhinoFreak,
+				time: 2,
+			};
+		i++;
+		}
+		var width = 415;
+		var wround = 416;
+		for(var xxx = 128; xxx < width; xxx += 32)
+		{
+			wave[i] = {
+				obj: WallReplaceFloorInvLabs,
+				time: 1,
+				xx: centerX+xxx,
+				yy: centerY,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		var xxx = wround;
+		for(var yyy = 0; yyy <= width+32; yyy += 32)
+		{
+			wave[i] = {
+				obj: WallReplaceFloorInvLabs,
+				time: 1,
+				xx: centerX+xxx,
+				yy: centerY+yyy,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		wave[i] = {
+				obj: UltraSniper,
+				time: 1,
+				xx: centerX+width+8,
+				yy: centerY+width+8,
+				canSpawnInWall: true,
+			};
+			i++;
+		var yyy = wround;
+		for(var xxx = 0; xxx <= width; xxx += 32)
+		{
+			wave[i] = {
+				obj: WallReplaceFloorInvLabs,
+				time: 1,
+				xx: centerX+xxx,
+				yy: centerY+yyy,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		for(var yyy = 128; yyy < width; yyy += 32)
+		{
+			wave[i] = {
+				obj: WallReplaceFloorInvLabs,
+				time: 1,
+				xx: centerX,
+				yy: centerY+yyy,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		for(var xxx = 128; xxx < width; xxx += 32)
+		{
+			wave[i] = {
+				obj: InvertedFreak,
+				time: 1,
+				xx: centerX+xxx+16,
+				yy: centerY+16,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		var xxx = wround;
+		for(var yyy = 0; yyy <= width; yyy += 32)
+		{
+			wave[i] = {
+				obj: InvertedFreak,
+				time: 1,
+				xx: centerX+xxx+16,
+				yy: centerY+yyy+16,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		var yyy = wround;
+		for(var xxx = 0; xxx <= width; xxx += 32)
+		{
+			wave[i] = {
+				obj: InvertedFreak,
+				time: 1,
+				xx: centerX+xxx+16,
+				yy: centerY+yyy+16,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		for(var yyy = 128; yyy <= width; yyy += 32)
+		{
+			wave[i] = {
+				obj: InvertedFreak,
+				time: 1,
+				xx: centerX+16,
+				yy: centerY+yyy+16,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
 		break;
 		#endregion
-				
+				/*
 		#region wave 17 Inverted Frozen city
 		case 17:
 		break;

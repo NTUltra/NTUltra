@@ -579,7 +579,7 @@ function scrMakeFloor(limiter) {
 		var circleHeight = 10;
 		var circleWidth = 10;
 		//Elementor thronebutt generate more cover
-		var genExtraCover = instance_exists(Player) && Player.race == 24 && Player.skill_got[5];
+		var genExtraCover = false//instance_exists(Player) && Player.race == 24 && Player.skill_got[5];
 		for (var iy = 0; iy < circleHeight; iy ++) {
 			for (var ix = 0; ix < circleWidth; ix ++) {
 				if !(iy == 0 && ix == 0) &&

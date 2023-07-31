@@ -18,7 +18,7 @@ snd_melee = sndRhinoFreakMelee
 
 
 //behavior
-alarm[1] = 20+random(10)
+alarm[1] = 40+random(10)
 
 walk = 0
 

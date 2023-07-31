@@ -1,5 +1,5 @@
 audio_stop_sound(snd)
-if (alarm[11] < 1)
+if (alarm[11] < 1 || GetPlayerUltramod() != ultramods.rocketBolt)
 {
 	snd_play(sndExplosionL)
 	if !ultramodded

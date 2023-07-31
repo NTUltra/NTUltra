@@ -1,7 +1,7 @@
 repeat(bullets)
 {
 with instance_create(x,y,Bullet5)
-{motion_add(random(360),8+random(8))
+{motion_add(random(360),12+random(10))
 image_angle = direction
 team = other.team
 }

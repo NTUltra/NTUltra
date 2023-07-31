@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "sprMutant14BHurt",
   "bbox_bottom": 15,
-  "bbox_left": 2,
-  "bbox_right": 15,
+  "bbox_left": 1,
+  "bbox_right": 16,
   "bbox_top": 1,
   "bboxMode": 0,
   "collisionKind": 0,
@@ -22,6 +22,7 @@
   "height": 18,
   "HTile": false,
   "layers": [
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"97d0b475-90cf-438a-9967-4fd1801d90c7","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3e12fff5-4c3a-45a5-98d4-a0dc10b2335a","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,

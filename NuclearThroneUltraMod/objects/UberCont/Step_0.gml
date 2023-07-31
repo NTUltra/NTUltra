@@ -171,6 +171,7 @@ pauseimg = sprite_create_from_surface(application_surface,0,0,surface_get_width(
 //with Cursor
 //instance_destroy();
 instance_deactivate_all(1)
+instance_activate_object(UnlockPopup);
 //instance_activate_object(BackCont);
 instance_activate_object(MusCont);
 instance_activate_object(FPSHACK);

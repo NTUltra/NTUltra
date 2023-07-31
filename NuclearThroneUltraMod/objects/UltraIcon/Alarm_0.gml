@@ -59,7 +59,7 @@ else if skill == 47 && Player.race == 12 && (Player.unlockAlternativeUltras || !
 {
 	sprite_index = sprGreenTeam;
 }
-else if skill == 50 && Player.race == 13 && (Player.unlockAlternativeUltras || Player.crown > Player.crownmax)
+else if skill == 50 && Player.race == 13 && (scrHasASecretCrown() || Player.unlockAlternativeUltras)
 {
 	sprite_index = sprSAS;
 }
