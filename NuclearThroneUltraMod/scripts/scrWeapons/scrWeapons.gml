@@ -6991,6 +6991,29 @@ function scrWeapons() {
 	wep_text[632] = ""
 	wep_swap[632] = sndSwapExplosive
 	wep_rad[632] = 0;
+	
+	wep_name[633] = "BURNING BLACK SWORD"
+	wep_type[633] = 0
+	wep_auto[633] = 0
+	wep_load[633] = 13//16 usual
+	wep_cost[633] = 0
+	wep_sprt[633] = sprBurningBlackSword
+	wep_area[633] = -1
+	wep_text[633] = "phoenix rises"
+	wep_swap[633] = sndSwapSword
+	wep_rad[633] = 0;
+	
+	wep_name[634] = "BURNING DARK SWORD"
+	wep_type[634] = 0
+	wep_auto[634] = 0
+	wep_load[634] = 23//16 usual
+	wep_cost[634] = 0
+	wep_sprt[634] = sprBurningDarkSword
+	wep_area[634] = -1
+	wep_text[634] = "phoenix burning"
+	wep_swap[634] = sndSwapSword
+	wep_rad[634] = 0;
+	
 
 	maxwep = array_length(wep_name)-1;
 

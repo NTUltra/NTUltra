@@ -573,15 +573,15 @@ if !instance_exists(LevCont) and visible = 1
 		bleed = 0
 		if bskin=2
 		{
-		spr_idle = sprMutant9CIdle
-		spr_hurt = sprMutant9CHurt
-		spr_walk = sprMutant9CWalk
+			spr_idle = sprMutant9CIdle
+			spr_hurt = sprMutant9CHurt
+			spr_walk = sprMutant9CWalk
 		}
 		else if bskin=1
 		{
-		spr_idle = sprMutant9BIdle
-		spr_hurt = sprMutant9BHurt
-		spr_walk = sprMutant9BWalk
+			spr_idle = sprMutant9BIdle
+			spr_hurt = sprMutant9BHurt
+			spr_walk = sprMutant9BWalk
 			if altUltra && ultra_got[35] {
 				spr_idle = sprMutant9EIdle
 				spr_hurt = sprMutant9EHurt

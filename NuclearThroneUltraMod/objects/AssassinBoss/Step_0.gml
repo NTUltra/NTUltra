@@ -45,7 +45,7 @@ if (alarm[4] < 0) {
 	{
 		walk -= 1
 		motion_add(direction,3)
-		if target > 0
+		if target > 0 && instance_exists(target)
 		mp_potential_step(target.x,target.y,2,false)
 	}
 
@@ -64,7 +64,7 @@ if (alarm[4] < 0) {
 
 	//hes firing at me!
 	if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<60 && aggression <= 180 && alarm[2] < 1 {
-		if mouse_check_button_pressed(mb_left) and target > 0
+		if mouse_check_button_pressed(mb_left) && target > 0 && instance_exists(target)
 		{
 			if point_distance(x,y,target.x,target.y) < 64
 			direction = point_direction(x,y,target.x,target.y)
@@ -78,7 +78,7 @@ if (alarm[4] < 0) {
 	}
 
 
-	if target > 0 && alarm[0] > 0//we just smacked dat
+	if alarm[0] > 0 && target > 0 && instance_exists(target)//we just smacked dat
 	{
 		motion_add(point_direction(x,y,target.x,target.y)+180+random(40)-20,3)
 		walk = alarm[0]
@@ -125,7 +125,7 @@ if (alarm[4] < 0) {
 		        wepangle = -wepangle
 		        motion_add(projectiledir,6)
 		    }
-		    else if random(12)<1 && alarm[2] < 1 && aggression < 300
+		    else if random(12)<1 && alarm[2] < 1 && aggression < 300 && instance_exists(Floor) && target > 0 && instance_exists(target)
 		    {//TELEPORT
 			    with instance_nearest(x + (random(2) - 1) * (random(64)+64),y + (random(2) - 1) * (random(64)+64),Floor)
 			    {
@@ -152,12 +152,12 @@ if (alarm[4] < 0) {
 						self.assx = other.x+o;
 						self.assy = other.y+o;
 					}
-					scrForcePosition60fps();
 				    repeat(5){
 					    with instance_create(other.x,other.y,Smoke)
 					    motion_add(random(360),1+random(3))
 					}
 			    }
+				scrForcePosition60fps();
 		    }
 		    else if alarm[2] < 1 && aggression < 300
 		    {//dodge it
@@ -167,7 +167,7 @@ if (alarm[4] < 0) {
 				alarm[6] += 2
 		    }
 	    }
-	} else if aggression > 180 && target > 0 && point_distance(x, y, target.x, target.y) > 200 {
+	} else if aggression > 180 && target > 0 && instance_exists(target) && point_distance(x, y, target.x, target.y) > 200 {
 		do
 		{
 			with instance_nearest(target.x + (random(2) - 1) * (random(32)+96),target.y + (random(2) - 1) * (random(32)+96),Floor)
@@ -193,7 +193,6 @@ if (alarm[4] < 0) {
 					self.assx = other.x+o;
 					self.assy = other.y+o;
 				}
-				scrForcePosition60fps();
 				repeat(5){
 					with instance_create(other.x,other.y,Smoke)
 					motion_add(random(360),1+random(3))
@@ -201,6 +200,7 @@ if (alarm[4] < 0) {
 			}
 		}
 		until (point_distance(x,y,target.x,target.y) > 64)
+		scrForcePosition60fps();
 	}
 } else if sprite_index != spr_hurt {
 	sprite_index = spr_stunned;
@@ -216,7 +216,7 @@ if alarm[2] > 0 && alarm[2] < 20
 {
 	walk = 0;
 	speed *= 0;
-	if (target > 0)
+	if target > 0 && instance_exists(target)
 	{
 		var dir = point_direction(x,y,target.x,target.y);
 		motion_add(dir,1);

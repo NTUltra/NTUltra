@@ -291,7 +291,8 @@ function scrDrawBloom() {
 			{
 				with Crown
 				{
-					draw_sprite_ext(sprRiskActive,other.wave,x,y,1.1,1.1,image_angle,c_white,ba+0.1)
+					if crown == 21
+						draw_sprite_ext(sprRiskActive,other.wave,x,y,1.1,1.1,image_angle,c_white,ba+0.1)
 				}
 			}
 		}

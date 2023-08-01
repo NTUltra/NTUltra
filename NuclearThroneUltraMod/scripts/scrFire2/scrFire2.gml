@@ -12252,5 +12252,139 @@ function scrFire2() {
 
 	break;
 	
+	//BURNING BLACK SWORD
+	case 633:
+	snd_play(sndFlare,0.02);
+	var am = 12;
+	if my_health>0
+	snd_play_fire(choose(sndSword1,sndSword2))
+	else
+	{
+		snd_play_fire(sndBlackSwordMega)
+		reload -= wep_load[wep]*0.25;
+	}
+
+	instance_create(x,y,Dust)
+
+	move_contact_solid(aimDirection,5)
+
+	instance_create(x,y,Dust)
+
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),FlameSlash)
+	{
+		longarms = 0
+		if instance_exists(Player)
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection,2+longarms)
+		image_angle = direction
+		dmg = 14;
+			if instance_exists(Player)
+			{
+
+				if Player.my_health <= 0
+				{
+					am += 4;
+					dmg=70//80 in retail
+					sprite_index=sprMegaFireSlash
+					mask_index=mskMegaSlash;
+				}
+			}
+		team = other.team
+	}
+	var len = 32 + ((Player.skill_got[13]+bettermelee)*20);
+	var angStep = (120*accuracy) / am;
+	var aimDir = aimDirection - (angStep*(am*0.5));
+	var fx = x + lengthdir_x(len,aimDir);
+	var fy = y + lengthdir_y(len,aimDir);
+	var t = team;
+	repeat(am)
+	{
+		with instance_create(fx,fy,Flame)
+		{
+			motion_add(aimDir,3+random(1))
+			//image_angle = direction
+			team = t
+		}
+		aimDir += angStep;
+		fx = x + lengthdir_x(len,aimDir);
+		fy = y + lengthdir_y(len,aimDir);
+	}
+	wepangle = -wepangle
+	BackCont.viewx2 += lengthdir_x(9,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(9,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 2
+	wkick = -6
+
+	break;
+
+	//BURNING DARK SWORD
+	case 634:
+	snd_play(sndFlare,0.02);
+	if my_health>0
+	snd_play_fire(choose(sndSword1,sndSword2))
+	else
+	{
+		snd_play_fire(sndBloodCannonLoop);
+		snd_play_fire(sndBlackSwordMega);
+		reload -= wep_load[wep]*0.25;
+	}
+
+	instance_create(x,y,Dust)
+
+	move_contact_solid(aimDirection,5)
+
+	instance_create(x,y,Dust)
+	var am = 18;
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*19,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*19,aimDirection),FlameSlash)
+	{
+		sprite_index = sprMegaFireSlash;
+		mask_index = mskMegaSlash;
+		dmg = 19;
+		if instance_exists(Player)
+		{
+
+		if Player.my_health <= 0
+		{
+			am += 4;
+			dmg=80;
+			sprite_index=sprMegaFireDarkSwordSlash;
+			mask_index=mskMegaDarkSwordSlash;
+		}
+
+		}
+		longarms = 0
+		if instance_exists(Player)
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection,2+longarms)
+		image_angle = direction
+		team = other.team
+	}
+	var len = 32 + ((Player.skill_got[13]+bettermelee)*20);
+	var angStep = (140*accuracy) / am;
+	var aimDir = aimDirection - (angStep*(am*0.5));
+	var fx = x + lengthdir_x(len,aimDir);
+	var fy = y + lengthdir_y(len,aimDir);
+	var t = team;
+	repeat(am)
+	{
+		with instance_create(fx,fy,Flame)
+		{
+			motion_add(aimDir,4+random(2))
+			//image_angle = direction
+			team = t
+		}
+		aimDir += angStep;
+		fx = x + lengthdir_x(len,aimDir);
+		fy = y + lengthdir_y(len,aimDir);
+	}
+	wepangle = -wepangle
+	speed = -speed*0.5
+	BackCont.viewx2 += lengthdir_x(10,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(10,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 3
+	wkick = -7
+
+	break;
+	
 	}//end of switch part 2!
 }

@@ -15,7 +15,7 @@ if instance_exists(Player)
 
 if Player.my_health <= 0
 {
-	dmg=100//80 in retail wUT DE FUK ERDEPPOL U CRAZY MDRFKER
+	dmg=100
 	sprite_index=sprMegaDarkSwordSlash;
 	mask_index=mskMegaDarkSwordSlash;
 }

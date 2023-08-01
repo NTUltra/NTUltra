@@ -4,7 +4,7 @@
 event_inherited();
 dmg = 4;
 team = 1;
-typ = 3;
+typ = 4;
 image_speed = 0.4;
 image_angle = 90*irandom(3)
 

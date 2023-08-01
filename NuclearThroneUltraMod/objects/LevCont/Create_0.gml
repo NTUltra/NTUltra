@@ -76,7 +76,7 @@ if dir<12
 		crown = other.dir
 		if crown == 0 
 		{
-			if scrIsCrown(8) && Player.tookDestiny
+			if scrIsCrown(8) && Player.tookDestiny && !UberCont.canMultiCrown//Sloth
 				crown = 8;
 			else if scrIsCrown(25) && !UberCont.canMultiCrown
 				crown = 25;
@@ -86,21 +86,25 @@ if dir<12
 				crown = 27;
 			else if scrIsCrown(28) && !UberCont.canMultiCrown
 				crown = 28;
-			else if scrIsCrown(29) && !UberCont.canMultiCrown//Purity
+			else if scrIsCrown(29) && !UberCont.canMultiCrown
 				crown = 29;
-			else if (scrIsCrown(32) && !UberCont.canMultiCrown) || scrIsCrown(22) //Luck to misfortune
+			else if (scrIsCrown(32) && !UberCont.canMultiCrown)
 				crown = 32;
-			else if scrIsCrown(33) || Player.consecutiveCrownVisits > 1 
+			else if (scrIsCrown(33) && !UberCont.canMultiCrown)
 				crown = 33;
-			else if Player.wep_type[Player.wep] == 4 && Player.wep_type[Player.bwep] == 4 && !scrIsGamemode(4)//Crown of freedom secret 2 explosive weps
+			else if scrIsCrown(22) && !scrIsCrown(32)//Luck to misfortune
+				crown = 32
+			else if Player.consecutiveCrownVisits > 1 && !scrIsCrown(33)
+				crown = 33;
+			else if Player.wep_type[Player.wep] == 4 && Player.wep_type[Player.bwep] == 4 && !scrIsGamemode(4) && !scrIsCrown(25)//Crown of freedom secret 2 explosive weps
 				crown = 25;
-			else if Player.wep_type[Player.wep] == 5 && Player.wep_type[Player.bwep] == 5//Crown of energy
+			else if Player.wep_type[Player.wep] == 5 && Player.wep_type[Player.bwep] == 5 && !scrIsCrown(26)//Crown of energy
 				crown = 26;
-			else if scrIsCrown(7)
+			else if scrIsCrown(7) && !scrIsCrown(28)
 				crown = 28;
-			else if scrCanWeDisco()
+			else if scrCanWeDisco() && !scrIsCrown(27)
 				crown = 27;
-			else if Player.wepmod1 != 0 || Player.bwepmod1 != 0//Purity
+			else if (Player.wepmod1 != 0 || Player.bwepmod1 != 0 || Player.cwepmod1 != 0) && !scrIsCrown(29)//Purity
 				crown = 29;
 		}
 		else if crown == 8 && Player.tookDestiny//Crown of sloth secret

@@ -218,13 +218,13 @@ switch (waveNumber)
 		if instance_exists(TopCont)
 			TopCont.darkness = 0;
 		song = mus101;
-		Player.area = 101;
+		Player.area = 107;
 		with Floor
 		{
 			if styleb
-				sprite_index = sprFloor101B;
+				sprite_index = sprFloor107B;
 			else
-				sprite_index = sprFloor101;
+				sprite_index = sprFloor107;
 		}
 	break;
 	case 18://jungle
@@ -355,6 +355,30 @@ switch (waveNumber)
 				sprite_index = sprFloor128B;
 			else
 				sprite_index = sprFloor128;
+		}
+	break;
+	case 29://Inv Palace
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
+		song = mus7b;
+		with Floor
+		{
+			if styleb
+				sprite_index = sprFloor118B;
+			else
+				sprite_index = sprFloor118;
+		}
+	break;
+	case 30://Inv Throne II
+		if instance_exists(TopCont)
+			TopCont.darkness = 0;
+		song = musBoss4B;
+		with Floor
+		{
+			if styleb
+				sprite_index = sprFloor120;
+			else
+				sprite_index = sprFloor120;
 		}
 	break;
 }
@@ -3676,6 +3700,30 @@ repeat(1+loops)
 				canSpawnInWall: true,
 			};
 			i++;
+		wave[i] = {
+				obj: InvertedGoldNecromancer,
+				time: 1,
+				xx: centerX+width+8,
+				yy: centerY+width+8,
+				canSpawnInWall: true,
+			};
+			i++;
+		wave[i] = {
+			obj: InvertedTurret,
+			time: 10,
+			xx: centerX+width*0.5+8,
+			yy: centerY+width+8,
+			canSpawnInWall: true,
+		};
+		i++;
+		wave[i] = {
+			obj: InvertedTurret,
+			time: 10,
+			xx: centerX+width*0.5+8,
+			yy: centerY+8,
+			canSpawnInWall: true,
+		};
+		i++;
 		var yyy = wround;
 		for(var xxx = 0; xxx <= width; xxx += 32)
 		{
@@ -3745,14 +3793,445 @@ repeat(1+loops)
 			};
 			i++;
 		}
-		break;
-		#endregion
-				/*
-		#region wave 17 Inverted Frozen city
-		case 17:
+		///////
+		for(var xxx = 128; xxx < width; xxx += 32)
+		{
+			wave[i] = {
+				obj: WallReplaceFloorInvLabs,
+				time: 1,
+				xx: centerX-xxx,
+				yy: centerY,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		var xxx = wround;
+		for(var yyy = 0; yyy <= width+32; yyy += 32)
+		{
+			wave[i] = {
+				obj: WallReplaceFloorInvLabs,
+				time: 1,
+				xx: centerX-xxx,
+				yy: centerY-yyy,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		wave[i] = {
+				obj: UltraSniper,
+				time: 1,
+				xx: centerX-width+8,
+				yy: centerY-width+8,
+				canSpawnInWall: true,
+			};
+			i++;
+		wave[i] = {
+				obj: InvertedGoldNecromancer,
+				time: 1,
+				xx: centerX-width+8,
+				yy: centerY-width+8,
+				canSpawnInWall: true,
+			};
+			i++;
+		wave[i] = {
+			obj: InvertedTurret,
+			time: 10,
+			xx: centerX-width*0.5+8,
+			yy: centerY-width+8,
+			canSpawnInWall: true,
+		};
+		i++;
+		wave[i] = {
+			obj: InvertedTurret,
+			time: 10,
+			xx: centerX-width*0.5+8,
+			yy: centerY+8,
+			canSpawnInWall: true,
+		};
+		i++;
+		var yyy = wround;
+		for(var xxx = 0; xxx <= width; xxx += 32)
+		{
+			wave[i] = {
+				obj: WallReplaceFloorInvLabs,
+				time: 1,
+				xx: centerX-xxx,
+				yy: centerY-yyy,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		for(var yyy = 128; yyy < width; yyy += 32)
+		{
+			wave[i] = {
+				obj: WallReplaceFloorInvLabs,
+				time: 1,
+				xx: centerX,
+				yy: centerY-yyy,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		for(var xxx = 128; xxx < width; xxx += 32)
+		{
+			wave[i] = {
+				obj: InvertedFreak,
+				time: 1,
+				xx: centerX-xxx+16,
+				yy: centerY+16,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		var xxx = wround;
+		for(var yyy = 0; yyy <= width; yyy += 32)
+		{
+			wave[i] = {
+				obj: InvertedFreak,
+				time: 1,
+				xx: centerX-xxx+16,
+				yy: centerY-yyy+16,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		var yyy = wround;
+		for(var xxx = 0; xxx <= width; xxx += 32)
+		{
+			wave[i] = {
+				obj: InvertedFreak,
+				time: 1,
+				xx: centerX-xxx+16,
+				yy: centerY-yyy+16,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		for(var yyy = 128; yyy <= width; yyy += 32)
+		{
+			wave[i] = {
+				obj: InvertedFreak,
+				time: 1,
+				xx: centerX+16,
+				yy: centerY-yyy+16,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		repeat(4)
+		{
+			wave[i] = {
+					obj: InvertedNecromancer,
+					time: 30,
+				};
+			i++;
+		}
+		wave[i] = {
+			obj: InvertedRhinoFreak,
+			time: 120,
+			xx: centerX,
+			yy: centerY,
+			canSpawnInWall: true,
+		};
+		i++;
+		var technoroomwidth = 192;
+		for(var xxx = 0; xxx < technoroomwidth; xxx += 32)
+		{
+			for(var yyy = 0; yyy < technoroomwidth; yyy += 32)
+			{
+				wave[i] = {
+					obj: WallReplaceFloorInvLabs,
+					time: 1,
+					xx: centerX-width + xxx,
+					yy: centerY-width + yyy,
+					canSpawnInWall: true,
+				};
+				i++;
+			}
+		}
+		wave[i] = {
+			obj: InvertedTechnomancer,
+			time: 90,
+			xx: centerX-width + 80,
+			yy: centerY-width + 80,
+			canSpawnInWall: true,
+		};
+		i++;
+		var technoroomwidth = 192;
+		for(var xxx = 0; xxx < technoroomwidth; xxx += 32)
+		{
+			for(var yyy = 0; yyy < technoroomwidth; yyy += 32)
+			{
+				wave[i] = {
+					obj: WallReplaceFloorInvLabs,
+					time: 1,
+					xx: centerX+width - xxx,
+					yy: centerY+width - yyy,
+					canSpawnInWall: true,
+				};
+				i++;
+			}
+		}
+		wave[i] = {
+			obj: InvertedTechnomancer,
+			time: 90,
+			xx: centerX+width - 80,
+			yy: centerY+width - 80,
+			canSpawnInWall: true,
+		};
+		i++;
+		wave[i] = {
+			obj: InvertedTechnomancer,
+			time: 60,
+			xx: centerX,
+			yy: centerY,
+			canSpawnInWall: true,
+		};
+		i++;
+		repeat(8)
+		{
+			wave[i] = {
+					obj: InvertedFreak,
+					time: 30,
+				};
+			i++;
+		}
 		break;
 		#endregion
 				
+		#region wave 17 Inverted Frozen city
+		case 17:
+		repeat(8)
+		{
+			wave[i] = {
+				obj: InvertedDiscGuy,
+				time: 2,
+			};
+			i++;
+		}
+		wave[i] = {
+			obj: InvertedGoldSnowTank,
+			time: 60,
+			xx: centerX,
+			yy: centerY,
+		};
+		i++;
+		var width = 384;
+		var height = 128
+		for(var xxx = 128; xxx < width; xxx += 32)
+		{
+			wave[i] = {
+				obj: WallReplaceFloorInvFrozenCity,
+				time: 1,
+				xx: centerX+xxx,
+				yy: centerY-height,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		for(var xxx = 128; xxx < width; xxx += 32)
+		{
+			wave[i] = {
+				obj: WallReplaceFloorInvFrozenCity,
+				time: 1,
+				xx: centerX+xxx,
+				yy: centerY+height,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		for(var xxx = 128; xxx < width; xxx += 32)
+		{
+			wave[i] = {
+				obj: WallReplaceFloorInvFrozenCity,
+				time: 1,
+				xx: centerX-xxx,
+				yy: centerY-height,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		for(var xxx = 128; xxx < width; xxx += 32)
+		{
+			wave[i] = {
+				obj: WallReplaceFloorInvFrozenCity,
+				time: 1,
+				xx: centerX-xxx,
+				yy: centerY+height,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		for(var yyy = -height; yyy <= height; yyy += 32)
+		{
+			wave[i] = {
+				obj: WallReplaceFloorInvFrozenCity,
+				time: 1,
+				xx: centerX+width,
+				yy: centerY+yyy,
+				canSpawnInWall: true,
+			};
+			i++;
+			wave[i] = {
+				obj: WallReplaceFloorInvFrozenCity,
+				time: 1,
+				xx: centerX+width+32,
+				yy: centerY+yyy,
+				canSpawnInWall: true,
+			};
+			i++;
+			wave[i] = {
+				obj: WallReplaceFloorInvFrozenCity,
+				time: 1,
+				xx: centerX+width+64,
+				yy: centerY+yyy,
+				canSpawnInWall: true,
+			};
+			i++;
+			wave[i] = {
+				obj: InvertedSnowBot,
+				time: 1,
+				xx: centerX+width+48,
+				yy: centerY+yyy+16,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		for(var yyy = -height; yyy <= height; yyy += 32)
+		{
+			wave[i] = {
+				obj: WallReplaceFloorInvFrozenCity,
+				time: 1,
+				xx: centerX-width,
+				yy: centerY+yyy,
+				canSpawnInWall: true,
+			};
+			i++;
+			wave[i] = {
+				obj: WallReplaceFloorInvFrozenCity,
+				time: 1,
+				xx: centerX-width-32,
+				yy: centerY+yyy,
+				canSpawnInWall: true,
+			};
+			i++;
+			wave[i] = {
+				obj: WallReplaceFloorInvFrozenCity,
+				time: 1,
+				xx: centerX-width-64,
+				yy: centerY+yyy,
+				canSpawnInWall: true,
+			};
+			i++;
+			wave[i] = {
+				obj: InvertedWolf,
+				time: 1,
+				xx: centerX-width-48,
+				yy: centerY+yyy+16,
+				canSpawnInWall: true,
+			};
+			i++;
+		}
+		repeat(4)
+		{
+			wave[i] = {
+				obj: InvertedSnowTank,
+				time: 10,
+			};
+			i++;
+		}
+		wave[i] = {
+			obj: AmmoChest,
+			time: 10,
+			xx: centerX,
+			yy: centerY,
+		};
+		i++;
+		wave[i] = {
+			obj: InvertedDiscGuy,
+			time: 90,
+			xx: centerX,
+			yy: centerY,
+		};
+		i++;
+		wave[i] = {
+			obj: InvertedBigDisc,
+			time: 60,
+			xx: centerX + width + 48,
+			yy: centerY,
+		};
+		i++;
+		wave[i] = {
+			obj: InvertedBigDisc,
+			time: 60,
+			xx: centerX - width - 48,
+			yy: centerY,
+		};
+		i++;
+		wave[i] = {
+			obj: InvertedBigDisc,
+			time: 120,
+			xx: centerX,
+			yy: centerY,
+		};
+		i++;
+		repeat(4)
+		{
+			wave[i] = {
+				obj: InvertedSnowBot,
+				time: 10,
+			};
+			i++;
+		}
+		wave[i] = {
+			obj: InvertedWolf,
+			time: 60,
+			xx: centerX,
+			yy: centerY,
+		};
+		i++;
+		var yyy = -height+16;
+		repeat(8)
+		{
+			wave[i] = {
+				obj: InvertedDiscGuy,
+				time: 5,
+				xx: centerX - width - 48,
+				yy: centerY + yyy,
+			};
+			i++;
+			yyy += 16;
+		}
+		var yyy = -height+16;
+		repeat(8)
+		{
+			wave[i] = {
+				obj: InvertedDiscGuy,
+				time: 5,
+				xx: centerX + width + 48,
+				yy: centerY + yyy,
+			};
+			i++;
+			yyy += 16;
+		}
+		repeat(4)
+		{
+			wave[i] = {
+				obj: InvertedDiscGuy,
+				time: 10,
+			};
+			i++;
+		}
+		wave[i] = {
+			obj: InvertedGoldSnowTank,
+			time: 60,
+			xx: centerX,
+			yy: centerY,
+		};
+		i++;
+		break;
+		#endregion
+		/*
 		#region wave 18 Jungle
 		case 18:
 		break;
@@ -3769,6 +4248,7 @@ repeat(1+loops)
 		#endregion
 				
 		#region wave 21 Pizza sewers
+		//Probably add technomancer here maybe
 		case 21:
 		break;
 		#endregion
@@ -3802,7 +4282,12 @@ repeat(1+loops)
 		break;
 		
 		#region wave 28 Courtyard
+		//Crown Glutton, Inverted Crown Glutton
 		case 28:
+		break;
+		#endregion
+		#region wave 29 Inverted Palace
+		case 29:
 		break;
 		#endregion
 		*/

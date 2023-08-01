@@ -56,12 +56,20 @@ if UberCont.public = 0 {
     }
 
     if keyboard_check_pressed(ord("1")) {
-        area = 1
-        subarea = 0
-        //inverted=true
+		if scrIsGamemode(25)
+		{
+			subarea = 15;
+			hard = 15 * 1.25;
+		}
+		else
+		{
+	        area = 1
+	        subarea = 0
+		}
         with enemy
         my_health = 0
         with instance_create(x, y, Portal) type = 1
+		
     }
 
     if keyboard_check_pressed(ord("2")) {

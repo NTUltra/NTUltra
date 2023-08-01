@@ -203,10 +203,10 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 			scrUnlockGameMode(2,"FOR PICKING UP A FAVOURABLE WEAPON")
 
 			//SKINS
-			if targetPickup.wep == 328//BLACK SWORD
+			if targetPickup.wep == 328 || targetPickup.wep == 633//BLACK SWORD
 			scrUnlockBSkin(9,"FOR PICKING UP THE BLACK SWORD",0);
 
-			if targetPickup.wep == 329//Dark sword
+			if targetPickup.wep == 329 || targetPickup.wep == 634//Dark sword
 			scrUnlockCSkin(9,"FOR TOUCHING DEATH ITSELF",0);
 
 			if scrToxicWeapons(targetPickup.wep, wep_name[targetPickup.wep]) && !targetPickup.pickedup && race = 23
@@ -855,68 +855,78 @@ if my_health <= 0 && armour < 1
 	}
 	else if race = 9 and bleed < 150
 	{
-		if bleed = 0
+		if bleed == 0
 		{
-		maxhealth-=2;
-		if maxhealth<0
-		{maxhealth=0}
+			bleed = 1;
+			maxhealth-=2;
+			if maxhealth<0
+			{maxhealth=0}
 
-		snd_play(sndChickenLoseHead)
-		snd_loop(sndChickenHeadlessLoop)
-		repeat(12){
-		with instance_create(x,y,BloodStreak){
-		motion_add(random(360),2+random(3))
-		image_angle = direction}}
-
-
-
-		if bskin=2
-		{
-		spr_idle = sprMutant9CHeadlessIdle
-		spr_hurt = sprMutant9CHeadlessHurt
-		spr_walk = sprMutant9CHeadlessWalk
-		}
-		else{
-		spr_idle = sprMutant9HeadlessIdle
-		spr_hurt = sprMutant9HeadlessHurt
-		spr_walk = sprMutant9HeadlessWalk
-		}
+			snd_play(sndChickenLoseHead)
+			snd_loop(sndChickenHeadlessLoop)
+			repeat(12){
+			with instance_create(x,y,BloodStreak){
+			motion_add(random(360),2+random(3))
+			image_angle = direction}}
 
 
-		with instance_create(x,y,MovingCorpse)
-		{
-		mySize = 2
-		mask_index = other.mask_index
-		motion_add(other.direction,other.speed)
-		speed += max(0,-other.my_health/5)
-		if other.bskin=2
-		sprite_index = mskPickupThroughWall;//invisible basicly
-		else if other.bskin=1
-		{
-			sprite_index = sprMutant9BHeadIdle;
-			if other.altUltra && other.ultra_got[35]
-				sprite_index = sprMutant9EHeadIdle;
-		}
-		else if other.bskin == 3
-		{
-			sprite_index = sprMutant9DHeadIdle;
-		}
-		else if other.bskin == 4
-		{
-			sprite_index = sprMutant9EHeadIdle;
-		}
-		else
-		{
-			sprite_index = sprMutant9HeadIdle;
-			if other.altUltra && other.ultra_got[35]
+
+			if bskin=2
+			{
+				spr_idle = sprMutant9CHeadlessIdle
+				spr_hurt = sprMutant9CHeadlessHurt
+				spr_walk = sprMutant9CHeadlessWalk
+			}
+			else {
+				if altUltra && ultra_got[35]
+				{
+					spr_idle = sprMutant9DHeadlessIdle
+					spr_hurt = sprMutant9DHeadlessHurt
+					spr_walk = sprMutant9DHeadlessWalk
+				}
+				else
+				{
+					spr_idle = sprMutant9HeadlessIdle
+					spr_hurt = sprMutant9HeadlessHurt
+					spr_walk = sprMutant9HeadlessWalk
+				}
+			}
+
+
+			with instance_create(x,y,MovingCorpse)
+			{
+			mySize = 2
+			mask_index = other.mask_index
+			motion_add(other.direction,other.speed)
+			speed += max(0,-other.my_health/5)
+			if other.bskin=2
+			sprite_index = mskPickupThroughWall;//invisible basicly
+			else if other.bskin=1
+			{
+				sprite_index = sprMutant9BHeadIdle;
+				if other.altUltra && other.ultra_got[35]
+					sprite_index = sprMutant9EHeadIdle;
+			}
+			else if other.bskin == 3
+			{
 				sprite_index = sprMutant9DHeadIdle;
-		}
-		image_xscale = other.right
-		if speed > 16
-		speed = 16
-		}
+			}
+			else if other.bskin == 4
+			{
+				sprite_index = sprMutant9EHeadIdle;
+			}
+			else
+			{
+				sprite_index = sprMutant9HeadIdle;
+				if other.altUltra && other.ultra_got[35]
+					sprite_index = sprMutant9DHeadIdle;
+			}
+			image_xscale = other.right
+			if speed > 16
+			speed = 16
+			}
 
-		Sleep(60)
+			Sleep(60)
 		}
 
 		if random(12) < 1{
@@ -926,9 +936,9 @@ if my_health <= 0 && armour < 1
 
 		if bleed > 100
 		{
-		with instance_create(x,y,BloodStreak){
-		motion_add(random(360),2+random(3))
-		image_angle = direction}
+			with instance_create(x,y,BloodStreak){
+			motion_add(random(360),2+random(3))
+			image_angle = direction}
 		}
 		if !instance_exists(LevCont) && !instance_exists(GenCont) && !place_meeting(x,y,Portal) && !instance_exists(SpiralCont)
 		{
