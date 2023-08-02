@@ -71,9 +71,20 @@ else if array_length(leaderboard) > 0
 			surface_free(surf);
 			xx += 74;
 			draw_sprite(scrLeaderboardRace(entry[5],entry[6],entry[7],entry[2]),0,xx,yy+3);
-			if (entry[5] == 24 && entry[6] == 0)
+			if (entry[5] == 24)
 			{
-				draw_sprite_ext(sprMutant24IdleHead,0,xx,yy+3,1,1,0,ElementorHead.col,1);
+				if entry[6] == 2
+				{
+					draw_sprite_ext(sprMutant24CIdleHead,0,xx,yy+3,1,1,0,ElementorHead.col,1);
+				}
+				else if entry[6] == 1
+				{
+					draw_sprite_ext(sprMutant24BIdleHead,0,xx,yy+3,1,1,0,ElementorHead.col,1);
+				}
+				else
+				{
+					draw_sprite_ext(sprMutant24IdleHead,0,xx,yy+3,1,1,0,ElementorHead.col,1);
+				}
 			}
 			xx += 20;
 			var area = scrAreaName(real(entry[2]),real(entry[3]),0);
@@ -167,9 +178,20 @@ else if array_length(leaderboard) > 0
 			xx += 127;
 			
 			draw_sprite(scrLeaderboardRace(entry[2],entry[3],false,9),0,xx,yy+3);
-			if (entry[2] == 24 && entry[3] == 0)
+			if (entry[2] == 24)
 			{
-				draw_sprite_ext(sprMutant24IdleHead,0,xx,yy+3,1,1,0,ElementorHead.col,1);
+				if entry[3] == 2
+				{
+					draw_sprite_ext(sprMutant24CIdleHead,0,xx,yy+3,1,1,0,ElementorHead.col,1);
+				}
+				else if entry[3] == 1
+				{
+					draw_sprite_ext(sprMutant24BIdleHead,0,xx,yy+3,1,1,0,ElementorHead.col,1);
+				}
+				else
+				{
+					draw_sprite_ext(sprMutant24IdleHead,0,xx,yy+3,1,1,0,ElementorHead.col,1);
+				}
 			}
 			xx += 9;
 		}	
@@ -217,9 +239,20 @@ else if array_length(leaderboard) > 0
 			xx += 96;
 			
 			draw_sprite(scrLeaderboardRace(entry[3],entry[4],bool(entry[5]),9),0,xx,yy+3);
-			if (entry[3] == 24 && entry[4] == 0)
+			if (entry[3] == 24)
 			{
-				draw_sprite_ext(sprMutant24IdleHead,0,xx,yy+3,1,1,0,ElementorHead.col,1);
+				if entry[4] == 2
+				{
+					draw_sprite_ext(sprMutant24CIdleHead,0,xx,yy+3,1,1,0,ElementorHead.col,1);
+				}
+				else if entry[4] == 1
+				{
+					draw_sprite_ext(sprMutant24BIdleHead,0,xx,yy+3,1,1,0,ElementorHead.col,1);
+				}
+				else
+				{
+					draw_sprite_ext(sprMutant24IdleHead,0,xx,yy+3,1,1,0,ElementorHead.col,1);
+				}
 			}
 			xx += 12;
 			

@@ -6,7 +6,7 @@ encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "BETA 30.20";
-subUpdateVersion = ".01"
+subUpdateVersion = ".02"
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
 /*
@@ -15,7 +15,6 @@ if public == 0
 */
 //DEBUG STUFF
 scrn = 0
-scrn_take = 0
 optY = 24;
 everything=69;
 unlocked=69;

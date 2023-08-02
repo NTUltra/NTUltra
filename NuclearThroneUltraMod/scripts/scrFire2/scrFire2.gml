@@ -2972,7 +2972,7 @@ function scrFire2() {
 	with instance_create(x,y,FrostFlare)
 	{
 	sticky = 0
-	motion_add(aimDirection+(random(14)-7)*other.accuracy,9)
+	motion_add(aimDirection+(random(14)-7)*other.accuracy,16)
 	image_angle = direction
 	team = other.team}
 
@@ -12383,6 +12383,61 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(10,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 3
 	wkick = -7
+
+	break;
+	
+	//DOUBLE SIDED BLADE
+	case 635:
+
+	snd_play_fire(choose(sndSword1,sndSword2))
+
+	instance_create(x,y,Dust)
+
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
+	{
+		dmg = 10
+		longarms = 0
+		if instance_exists(Player)
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection+15*other.accuracy,2+longarms)
+		image_angle = direction
+		team = other.team
+	}
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
+	{
+		dmg = 10
+		longarms = 0
+		if instance_exists(Player)
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection-15*other.accuracy,2+longarms)
+		image_angle = direction
+		team = other.team
+	}
+
+	wepangle = -wepangle
+	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 2
+	wkick = -6
+
+	break;
+	
+	//AUTO FROST FLARE GUN
+	case 636:
+
+	snd_play_fire(sndFlare)
+
+	with instance_create(x,y,FrostFlare)
+	{
+	sticky = 0
+	motion_add(aimDirection+(random(16)-8)*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(9,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(9,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 6
+	wkick = 5
 
 	break;
 	

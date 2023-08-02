@@ -21,15 +21,17 @@ if UberCont.normalGameSpeed == 60
 	totalSpeed += Speed*0.5;
 else
 	totalSpeed += Speed;
+totalSpeed = min(totalSpeed,maxspd);
 with creator
 {
 	var aimDir = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 	motion_add(aimDir,1);
 	speed = max(speed,4);
-	if !place_meeting(x + lengthdir_x(other.totalSpeed,aimDir),y,Wall)
-		x += lengthdir_x(other.totalSpeed,aimDir);
-	if !place_meeting(x,y + lengthdir_y(other.totalSpeed,aimDir),Wall)
-		y += lengthdir_y(other.totalSpeed,aimDir);
+	var tspd = other.totalSpeed;
+	if !place_meeting(x + lengthdir_x(tspd,aimDir),y,Wall) && !collision_line(x,y,x + lengthdir_x(tspd,aimDir),y,Wall,false,false)
+		x += lengthdir_x(tspd,aimDir);
+	if !place_meeting(x,y + lengthdir_y(tspd,aimDir),Wall) && !collision_line(x,y,x,y + lengthdir_y(tspd,aimDir),Wall,false,false)
+		y += lengthdir_y(tspd,aimDir);
 	with RocketSlash
 	{
 	x=other.x;

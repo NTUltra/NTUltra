@@ -63,7 +63,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d23c256c-43a2-4538-80e3-4bb749e9b15a","path":"sprites/sprMegaDarkSwordSlash/sprMegaDarkSwordSlash.yy",},},},"Disabled":false,"id":"cb28b77b-9da1-4e8c-ae15-c42b117d254a","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 0,
     "yorigin": 52,

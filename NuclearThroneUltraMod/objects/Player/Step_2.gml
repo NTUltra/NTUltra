@@ -618,14 +618,15 @@ if (tookHit)
 		if ((damageTaken > 0 /*&& prevhealth < maxhealth) || (my_health <= 0 &&  armour < 1*/))
 		{
 			isAlkaline = false;
-			
+			var healTaken = 0;
 			if my_health < maxhealth
 			{
+				healTaken = 1;
 				if race == 25//Doctor buff
-					damageTaken = ceil(damageTaken*1.25);
+					healTaken += 1
 				if (skill_got[9]) //Second stomache
 				{
-					damageTaken *= 2;
+					healTaken += 1;
 					with instance_create(x,y,HealFX)
 					{
 						sprite_index = sprHealBigFX;
@@ -639,7 +640,7 @@ if (tookHit)
 						depth = other.depth - 1;	
 					}
 				}
-				my_health = min(maxhealth,prevhealth+damageTaken);
+				my_health = min(maxhealth,prevhealth+healTaken);
 			}
 			else
 				my_health = prevhealth;
@@ -653,8 +654,10 @@ if (tookHit)
 			{
 				if my_health == maxhealth
 					pt.mytext = "MAX";
+				else if my_health > maxhealth
+					pt.mytext = "OVER MAX"
 				else
-					pt.mytext = "+"+string(damageTaken);
+					pt.mytext = "+"+string(healTaken);
 				
 				pt.sprt = sprHPIconPickup;
 			}
@@ -662,8 +665,10 @@ if (tookHit)
 			{
 				if my_health = maxhealth
 					pt.mytext = "MAX HP";
+				else if my_health > maxhealth
+					pt.mytext = "OVER MAX"
 				else
-					pt.mytext = "+"+string(damageTaken)+" HP";
+					pt.mytext = "+"+string(healTaken)+" HP";
 			}
 			Sleep(50);
 			alarm[3]=10;//duration of iframes

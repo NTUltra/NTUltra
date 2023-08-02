@@ -11,6 +11,7 @@ snd_play(sndVenuz)
 //automatic screenshot taking
 //if scrn_take = 1
 
-
-//screen_save("NTULTRA"+string(scrn)+".png");
-//scrn += 1
+/*
+screen_save("NTULTRA"+string(UberCont.scrn)+".png");
+UberCont.scrn += 1
+*/

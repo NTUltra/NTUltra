@@ -1,4 +1,4 @@
 event_inherited();
-Speed=2;
+Speed=1;
 
 totalSpeed = 2;

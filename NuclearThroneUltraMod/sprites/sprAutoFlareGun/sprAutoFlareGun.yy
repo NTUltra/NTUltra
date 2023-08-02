@@ -69,7 +69,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"11d1f9de-dca9-4fc8-ac08-ed0fd603bc65","path":"sprites/sprAutoFlareGun/sprAutoFlareGun.yy",},},},"Disabled":false,"id":"8280559b-5f1c-46d9-9851-416304f9c979","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 3,
     "yorigin": 4,

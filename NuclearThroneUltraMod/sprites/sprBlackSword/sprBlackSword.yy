@@ -69,7 +69,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"787e0442-7213-4f56-890d-ea6ae91cb0a1","path":"sprites/sprBlackSword/sprBlackSword.yy",},},},"Disabled":false,"id":"35776ec4-c7cd-4a43-a1c2-65ede461ae5a","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 5,
     "yorigin": 2,

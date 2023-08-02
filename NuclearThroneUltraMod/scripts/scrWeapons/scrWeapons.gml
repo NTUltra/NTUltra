@@ -2640,7 +2640,7 @@ function scrWeapons() {
 	wep_type[239] = 4
 	wep_auto[239] = 0
 	wep_load[239] = 23
-	wep_cost[239] = 2
+	wep_cost[239] = 1
 	wep_sprt[239] = sprRocketGlove
 	wep_area[239] = 12
 	wep_text[239] = "ROCKET PWUNCH!"
@@ -3090,7 +3090,7 @@ function scrWeapons() {
 	wep_name[280] = "GOLDEN ASSAULT PISTOL"
 	wep_type[280] = 1
 	wep_auto[280] = 0
-	wep_load[280] = 6
+	wep_load[280] = 7
 	wep_cost[280] = 2
 	wep_sprt[280] = sprGoldenAPistol
 	wep_area[280] = 18
@@ -6866,8 +6866,8 @@ function scrWeapons() {
 	wep_load[621] = 33
 	wep_cost[621] = 1
 	wep_sprt[621] = sprBouncerCrossbow
-	wep_area[621] = 1
-	wep_text[621] = ""
+	wep_area[621] = 2
+	wep_text[621] = "even if you miss"
 	wep_swap[621] = sndSwapBow
 	wep_rad[621] = 0;
 	
@@ -7013,6 +7013,28 @@ function scrWeapons() {
 	wep_text[634] = "phoenix burning"
 	wep_swap[634] = sndSwapSword
 	wep_rad[634] = 0;
+	
+	wep_name[635] = "DOUBLE SIDED BLADE"
+	wep_type[635] = 0
+	wep_auto[635] = 0
+	wep_load[635] = 12//16 usual
+	wep_cost[635] = 0
+	wep_sprt[635] = sprDoubleSidedBlade
+	wep_area[635] = 13
+	wep_text[635] = "duel edge"
+	wep_swap[635] = sndSwapSword
+	wep_rad[635] = 0;
+	
+	wep_name[636] = "AUTO FROST FLARE GUN"
+	wep_type[636] = 4
+	wep_auto[636] = 1
+	wep_load[636] = 10
+	wep_cost[636] = 1
+	wep_sprt[636] = sprAutoFrostFlareGun
+	wep_area[636] = 13
+	wep_text[636] = "light the ice"
+	wep_swap[636] = sndSwapFlame
+	wep_rad[636] = 0;
 	
 
 	maxwep = array_length(wep_name)-1;

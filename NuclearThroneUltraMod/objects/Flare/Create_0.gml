@@ -9,6 +9,6 @@ offy = random(2)-1
 
 image_speed = 0.4
 
-
+alarm[2] = 1;
 typ = 1 
 

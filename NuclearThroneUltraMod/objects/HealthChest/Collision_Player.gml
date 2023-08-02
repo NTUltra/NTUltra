@@ -67,16 +67,22 @@ if !instance_exists(GenCont)
 		var  mHpI = 1;
 		with other {
 			//OVERHEAL
-			if my_health + other.num > maxhealth
+			if my_health >= maxhealth
 			{
+				other.num = 1;
+				if skill_got[9]
+					other.num = 2;
+				my_health += other.num;
+				/*
 				var overheal = min(my_health,maxhealth) + other.num - maxhealth;
 				my_health += other.num-overheal;
 				my_health += ceil(overheal * 0.5);
 				other.num = ceil(other.num-(overheal*0.5));
+				*/
 			}
 			else
 			{
-				my_health += other.num;	
+				my_health = min(my_health + other.num, maxhealth);	
 			}
 			if race==9 || race=12//Chicken maxhealth regain
 			{
