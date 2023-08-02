@@ -16,14 +16,19 @@ cantHitTeam = -2;
 if instance_exists(Player)
 {//frog
 	//FROG POTENCY
-	if Player.ultra_got[92] && !Player.altUltra
-		dmg = 5;
+	//if Player.ultra_got[92] && !Player.altUltra
+	//	dmg = 5;
 	if Player.race=23
 	{
 		team = 2;
 		//the normal scale
-		image_xscale += 0.2
-		image_yscale += 0.2
+		image_xscale += 0.15
+		image_yscale += 0.15
+		if Player.skill_got[5]
+		{
+			image_xscale += 0.1;
+			image_yscale += 0.1;
+		}
 	}
 	else if Player.skill_got[12]
 	{
@@ -31,4 +36,5 @@ if instance_exists(Player)
 		image_yscale -= 0.1
 	}
 }
+alarm[2] = 2;
 alarm[1] = 10;

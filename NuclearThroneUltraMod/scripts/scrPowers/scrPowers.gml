@@ -2273,7 +2273,7 @@ function scrPowers() {
 					with instance_create(x,y,ToxicThrowerGas)
 					{
 						motion_add(random(360),1+random(1.8)+(other.skill_got[5]));
-						dmg += 1;
+						//dmg += 1;
 					}
 				}
 			}
@@ -3078,7 +3078,7 @@ function scrPowers() {
 				motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),18)
 				image_angle = direction
 				team = other.team
-				dmg += 1;
+				//dmg += 1;
 			}
 			repeat(toxicamount)
 			{
@@ -3100,18 +3100,19 @@ function scrPowers() {
 			with instance_create(x,y,ToxicThrowerGas)
 			{
 				motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),spd+2+(other.skill_got[5]*2));
-				dmg += 1;
+				//dmg += 1;
 			}
 			var counter = 0;
 			repeat(toxicamount)
 			{
 				counter ++;
-				if counter % 4 == 0
+				if counter % 4 - (skill_got[5]*2) == 0
 				{
 					with instance_create(x,y,ToxicThrowerGas)
 					{
+						speed = 0;
 						motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + random_range(-16,16),spd+1+random(2)+(other.skill_got[5]*2));
-						dmg += 1;
+						//dmg += 1;
 					}
 				}
 				else
@@ -3119,7 +3120,7 @@ function scrPowers() {
 					with instance_create(x,y,ToxicThrowerGas)
 					{
 						motion_add(random(360),spd+random(2)+(other.skill_got[5]*2));
-						dmg += 1;
+						//dmg += 1;
 					}
 				}
 			}

@@ -394,7 +394,7 @@ function scrRaces() {
 	race_acti[23] = "TOXIC GAS"
 	if random(1000) < 1
 		race_acti[23] = "SHIT & FART"
-	race_butt[23] = "TOXIC SPREADS FASTER#HOMING TOXIC"
+	race_butt[23] = "TOXIC SPREADS FASTER#TOXIC LASTS LONGER#HOMING TOXIC#ACTIVE SPAWNS TOXIC TOWARDS YOUR AIM"
 	//race_back[23] = "TOXIC GASS DEALS MORE DAMAGE (this is an ulta)";
 	race_lock[23] = "KILL BALL MOM"
 	race_have[23] = 0

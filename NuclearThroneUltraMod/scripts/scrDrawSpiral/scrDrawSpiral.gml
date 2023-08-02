@@ -37,7 +37,12 @@ function scrDrawSpiral() {
 		draw_sprite_ext(Player.spr_hurt,1,fishx,fishy,0.8+sin(image_angle/200)/5,0.8+sin(image_angle/200)/5,-image_angle*2,c_white,1)
 		if Player.race == 24 && instance_exists(ElementorHead) //Elemental Mushroom head
 		{
-			draw_sprite_ext(sprMutant24HurtHead,1,fishx,fishy,0.8+sin(image_angle/200)/5,0.8+sin(image_angle/200)/5,-image_angle*2,ElementorHead.col,1)
+			if Player.bskin == 2
+				draw_sprite_ext(sprMutant24CHurtHead,1,fishx,fishy,0.8+sin(image_angle/200)/5,0.8+sin(image_angle/200)/5,-image_angle*2,ElementorHead.col,1)
+			else if Player.bskin == 1
+				draw_sprite_ext(sprMutant24BHurtHead,1,fishx,fishy,0.8+sin(image_angle/200)/5,0.8+sin(image_angle/200)/5,-image_angle*2,ElementorHead.col,1)
+			else
+				draw_sprite_ext(sprMutant24HurtHead,1,fishx,fishy,0.8+sin(image_angle/200)/5,0.8+sin(image_angle/200)/5,-image_angle*2,ElementorHead.col,1)
 		}
 	}
 

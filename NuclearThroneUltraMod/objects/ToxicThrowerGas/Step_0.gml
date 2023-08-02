@@ -24,21 +24,3 @@ if fps60
 	image_angle -= rot*0.5;
 if image_xscale < 0.15
 instance_destroy()
-
-if instance_exists(Player) && instance_exists(enemy)
-{
-	var dir=point_direction(x,y,instance_nearest(x,y,enemy).x,instance_nearest(x,y,enemy).y)
-	if fps60
-		motion_add(dir,0.025);
-	else
-		motion_add(dir,0.05);
-if Player.race=23&&Player.skill_got[5]=1
-{
-	if fps60
-		motion_add(dir,0.55);
-	else
-		motion_add(dir,0.11);
-}
-
-}
-

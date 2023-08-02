@@ -14,15 +14,26 @@ team = 2
 typ = 0//2
 depth = 0;
 dmg=3;
+consumeAmount = 1;
 if instance_exists(Player)
 {
+	if Player.race=23
+	{
+		alarm[0] = 0;
+		if Player.skill_got[5]
+		{
+			image_xscale += 0.05;
+			image_yscale += 0.05;
+		}
+	}
 	//FROG POTENCY
+	/*
 	if Player.ultra_got[92] && !Player.altUltra
 	{
 		dmg=4;
 		image_xscale += 0.054;
 		image_yscale += 0.054;
-	}
+	}*/
 	if place_meeting(x,y,Wall)
 	{
 		var ground = instance_nearest(x,y,Floor);
@@ -33,4 +44,5 @@ if instance_exists(Player)
 	}
 }
 alarm[1] = 10;
+alarm[2] = 2;
 alarm[11] = 1;

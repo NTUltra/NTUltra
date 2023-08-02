@@ -17,7 +17,7 @@ function scrFire2() {
 	{image_angle = aimDirection+(random(30)-15)*other.accuracy
 	creator=other.id;
 	team = other.team
-	ammo = 16
+	ammo = 17
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)
@@ -53,7 +53,7 @@ function scrFire2() {
 	{image_angle = aimDirection+(random(40)-20)*other.accuracy
 	creator=other.id;
 	team = other.team
-	ammo = 16
+	ammo = 18
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)
@@ -3764,7 +3764,7 @@ function scrFire2() {
 	{image_angle = aimDirection+(random(30)-15)*other.accuracy
 	creator=other.id;
 	team = other.team
-	ammo = 8
+	ammo = 10
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)
@@ -3773,7 +3773,7 @@ function scrFire2() {
 	image_angle = other.image_angle
 	}
 
-	repeat(6){
+	repeat(4){
 	    with instance_create(x,y,FishBoost)
 	    {
 	    motion_add( aimDirection+random(60)-30,2+random(4) );
@@ -10934,7 +10934,7 @@ function scrFire2() {
 	{image_angle = aimDirection+(random(30)-15)*other.accuracy
 	creator=other.id;
 	team = other.team
-	ammo = 8
+	ammo = 10
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)
@@ -10943,7 +10943,7 @@ function scrFire2() {
 	image_angle = other.image_angle
 	}
 
-	repeat(6){
+	repeat(4){
 	    with instance_create(x,y,FishBoost)
 	    {
 	    motion_add( aimDirection+random(60)-30,2+random(4) );

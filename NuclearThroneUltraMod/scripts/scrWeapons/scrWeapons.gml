@@ -6511,7 +6511,7 @@ function scrWeapons() {
 	wep_name[589] = "GOLDEN KRAKEN PISTOL"
 	wep_type[589] = 4
 	wep_auto[589] = 0
-	wep_load[589] = 13
+	wep_load[589] = 14
 	wep_cost[589] = 1
 	wep_sprt[589] = sprGoldenKrakenPistol
 	wep_area[589] = 18

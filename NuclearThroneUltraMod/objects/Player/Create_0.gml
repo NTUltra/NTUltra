@@ -371,6 +371,7 @@ rogueammo = 1;
 rogueammomax = 3;
 toxicamount = 0;
 maxtoxicamount = 120;
+toxicConsume = 0;
 
 ammo[0] = 999
 ammo[1] = 0

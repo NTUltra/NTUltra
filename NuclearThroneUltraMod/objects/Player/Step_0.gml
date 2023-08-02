@@ -1309,7 +1309,7 @@ else if race == 23 && ultra_got[92] == 0
 {
 	//speed = clamp(speed,maxSpeed*0.8,maxSpeed);
 	if toxicamount > 0
-		speed *= 0.25;
+		speed *= 0.3;
 	else
 		speed = clamp(speed,maxSpeed*0.8,maxSpeed);
 }

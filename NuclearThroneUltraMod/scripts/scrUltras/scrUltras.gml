@@ -671,17 +671,12 @@ function scrUltras(altOverride = false) {
 	ultra_tips[91] = "I am the mother now"
 	
 	ultra_name[92] = "POTENCY"
-	ultra_text[92] = "NORMAL CONTROLS#MORE GAS DAMAGE"
+	ultra_text[92] = "NORMAL CONTROLS##WHILE IN COMBAT#SLOWLY CONSUME GASS TO HEAL"
 	ultra_tips[92] = "you can gas while moving"
 
 	    if instance_exists(Player)
 	    {
-		    if Player.race=19||Player.race=20||Player.race=21{//skeleton hog and horror
-			    ultra_name[92] = "POTENCY"
-			    ultra_text[92] = "MORE TOXIC GAS DAMAGE"
-			    ultra_tips[92] = "why'd you want to be gassy?"
-		    }
-		    else if  Player.race == 23 && (Player.altUltra || Player.unlockAlternativeUltras || (Player.wep_type[Player.wep] == 3 && Player.wep_type[Player.bwep] == 3 && instance_exists(UltraIcon))){
+		    if  Player.race == 23 && (Player.altUltra || Player.unlockAlternativeUltras || (Player.wep_type[Player.wep] == 3 && Player.wep_type[Player.bwep] == 3 && instance_exists(UltraIcon))){
 				ultra_name[92] = "SPIKE BALL"
 				ultra_text[92] = "NORMAL CONTROLS#EMIT SPLINTERS INSTEAD OF GASS#ALL SPLINTERS ARE GASEOUS"
 				ultra_tips[92] = "porkupain"
