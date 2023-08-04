@@ -34,6 +34,13 @@ if skill = 0
 		Player.skillsChosen -= 1;
 	}
 }
+else if skill == 1
+{
+	with Player
+	{
+		skill_text[23] = "EXTRA CHESTS SPAWN#SEE CONTENTS OF WEAPON CHESTS#INCREASE CONFISCATE CHANCE#BY 25%##OPENING CHESTS#FULLY RELOADS YOUR WEAPONS"	
+	}
+}
 else if skill == 9 && Player.race == 3 // Strange style
 {
 	if scrHasEyesMutations() || Player.unlockAlternativeUltras

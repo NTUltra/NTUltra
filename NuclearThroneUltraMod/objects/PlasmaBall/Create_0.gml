@@ -35,11 +35,6 @@ if instance_exists(Player)
 		}
 		image_xscale = nomscale;
 		image_yscale = nomscale;
-		
-		if Player.betterlaserbrain > 1
-		{
-			dmg += 1;
-		}
 	}
 	if Player.race=11
     {

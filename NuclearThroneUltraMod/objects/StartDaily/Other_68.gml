@@ -56,6 +56,7 @@ if (type == network_type_data) {
 			{
 				UberCont.randomDailyMod = irandom_range(1,18);
 				UberCont.chestRan = 10;
+				UberCont.popoRan = 0;
 				network_destroy(serverSocket);
 				instance_destroy();
 				with Player
@@ -92,10 +93,7 @@ if (type == network_type_data) {
 			repeat(2)
 			{
 				var nextGm = buffer_read(buffer, buffer_u8);
-				if (nextGm != 0)
-				{
-					UberCont.opt_gamemode[i] = nextGm;
-				}
+				UberCont.opt_gamemode[i] = nextGm;
 				i++;
 			}
 			#region gamemode handling

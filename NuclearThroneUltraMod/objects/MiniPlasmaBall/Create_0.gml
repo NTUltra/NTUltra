@@ -1,6 +1,6 @@
 event_inherited();
 hitShrink += 0.4;
-dmg = -4
-acc += 3;
+dmg -= 3
+acc += 4;
 maxSpeed += 4;
 ptime = 3;

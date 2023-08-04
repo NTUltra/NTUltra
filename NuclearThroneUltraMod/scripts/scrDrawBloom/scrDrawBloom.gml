@@ -135,7 +135,7 @@ function scrDrawBloom() {
 	with DiscoBall
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with PlasmaBall
-	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
+	draw_sprite_ext(sprite_index,-1,x,y,image_xscale*2,image_yscale*2,image_angle,c_white,ba)
 	with BouncerPlasmaBall
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with BouncerPlasmaBallBig
@@ -149,7 +149,7 @@ function scrDrawBloom() {
 	with PlasmaFX
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with MiniPlasmaBall
-	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
+	draw_sprite_ext(sprite_index,-1,x,y,image_xscale*2,image_yscale*2,image_angle,c_white,ba)
 	with LaserCannon
 	draw_sprite_ext(sprite_index,-1,x,y,image_xscale*2,image_yscale*2,image_angle,c_white,ba)
 	with Lightning
@@ -196,9 +196,9 @@ function scrDrawBloom() {
 	with PlasmaHuge
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with PlasmaImpact
-	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
+	draw_sprite_ext(sprite_index,-1,x,y,image_xscale*2,image_yscale*2,image_angle,c_white,ba)
 	with MiniPlasmaImpact
-	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
+	draw_sprite_ext(sprite_index,-1,x,y,image_xscale*2,image_yscale*2,image_angle,c_white,ba)
 	with EnemyBullet3
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with EnemyBullet5

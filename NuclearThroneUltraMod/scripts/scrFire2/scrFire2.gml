@@ -9741,11 +9741,11 @@ function scrFire2() {
 
 
 	with instance_create(x,y,SplitSeekerBolt)
-	{motion_add(aimDirection+(random(20)-10)-10*other.accuracy,2+random(3))
+	{motion_add(aimDirection+(random(20)-10)-10*other.accuracy,4+random(3))
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,SplitSeekerBolt)
-	{motion_add(aimDirection+(random(20)-10)+10*other.accuracy,2+random(3))
+	{motion_add(aimDirection+(random(20)-10)+10*other.accuracy,4+random(3))
 	image_angle = direction
 	team = other.team}
 
@@ -11058,7 +11058,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection+(random(10)-5)*other.accuracy,3+longarms)
+	motion_add(aimDirection+(random(10)-5)*other.accuracy,5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -12438,6 +12438,60 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(9,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 6
 	wkick = 5
+
+	break;
+	
+	//SPLIT SEEKER PISTOL
+	case 637:
+
+	snd_play_fire(sndSeekerPistol)
+
+
+	with instance_create(x,y,SplitSeekerBolt)
+	{motion_add(aimDirection+(random(20)-10)*other.accuracy,4+random(3))
+	image_angle = direction
+	team = other.team}
+
+
+	BackCont.viewx2 += lengthdir_x(15,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(15,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3
+	wkick -= 3
+
+	break;
+	
+	//FIRE CHAIN GUN
+	case 638:
+	snd_play_fire(sndFlare);
+	snd_play_fire(sndHeavyCrossbow)
+
+	with instance_create(x,y,ChainFire)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(40,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(40,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 6
+	wkick = 4
+
+	break;
+	
+	//FROST CHAIN GUN
+	case 639:
+	snd_play_fire(sndHeavyNader);
+	snd_play_fire(choose(sndFrostShot1,sndFrostShot2));
+	snd_play_fire(sndHeavyCrossbow)
+
+	with instance_create(x,y,ChainFireFrost)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,26)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(45,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(45,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 8
+	wkick = 4
 
 	break;
 	

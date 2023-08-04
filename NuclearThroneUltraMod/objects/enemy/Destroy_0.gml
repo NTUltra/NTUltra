@@ -17,8 +17,8 @@ if!(MorphMe){
 		image_xscale = other.right
 
 		
-		if speed > 17
-			speed = 17
+		if speed > 16
+			speed = 16
 		if instance_exists(Player)
 		{
 			var impactWrist = false;
@@ -30,7 +30,7 @@ if!(MorphMe){
 				alarm[0] = 2;
 				speed = max(speed+7.3,8.3)//9.3
 				if Player.race=25
-					speed+=1.2;
+					speed += 1.2;
 			}
 			else if speed > 17
 			speed = 17

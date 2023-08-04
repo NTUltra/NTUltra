@@ -581,7 +581,7 @@ function scrWeapons() {
 	wep_load[52] = 25
 	wep_cost[52] = 1
 	wep_sprt[52] = sprFlareGun
-	wep_area[52] = 7
+	wep_area[52] = 6
 	wep_text[52] = "signal for help"
 	wep_swap[52] = sndSwapFlame
 	wep_rad[52] = 0;
@@ -1065,7 +1065,7 @@ function scrWeapons() {
 
 	wep_name[96] = "HYPER BOUNCER RIFLE"
 	wep_type[96] = 1
-	wep_auto[96] = 1
+	wep_auto[96] = 0
 	wep_load[96] = 14
 	wep_cost[96] = 5
 	wep_sprt[96] = sprHyperBouncerRifle
@@ -2059,7 +2059,7 @@ function scrWeapons() {
 	wep_load[186] = 10
 	wep_cost[186] = 1
 	wep_sprt[186] = sprAutoSeekerPistol
-	wep_area[186] = 9
+	wep_area[186] = 10
 	wep_text[186] = "eagle eyes + bolt marrow#allows seekers to bounce off walls"
 	wep_swap[186] = sndSwapBow
 	wep_rad[186] = 0;
@@ -4256,7 +4256,7 @@ function scrWeapons() {
 	wep_name[384] = "MINI PLASMA GUN"
 	wep_type[384] = 5
 	wep_auto[384] = 1
-	wep_load[384] = 9
+	wep_load[384] = 10
 	wep_cost[384] = 1
 	wep_sprt[384] = sprMiniPlasmaGun
 	wep_area[384] = 2
@@ -6035,12 +6035,12 @@ function scrWeapons() {
 	wep_swap[545] = sndSwapBow
 	wep_rad[545] = 0;
 	
-	wep_name[546] = "SPLIT SEEKER PISTOL"
+	wep_name[546] = "SPLIT SEEKER RIFLE"
 	wep_type[546] = 3
 	wep_auto[546] = 0
 	wep_load[546] = 26
 	wep_cost[546] = 2
-	wep_sprt[546] = sprSplitSeekerPistol
+	wep_sprt[546] = sprSplitSeekerRifle
 	wep_area[546] = 8
 	wep_text[546] = "got ya now"
 	wep_swap[546] = sndSwapBow
@@ -7035,6 +7035,39 @@ function scrWeapons() {
 	wep_text[636] = "light the ice"
 	wep_swap[636] = sndSwapFlame
 	wep_rad[636] = 0;
+	
+	wep_name[637] = "SPLIT SEEKER PISTOL"
+	wep_type[637] = 3
+	wep_auto[637] = 0
+	wep_load[637] = 30
+	wep_cost[637] = 1
+	wep_sprt[637] = sprSplitSeekerPistol
+	wep_area[637] = 5
+	wep_text[637] = "got ya now"
+	wep_swap[637] = sndSwapBow
+	wep_rad[637] = 0;
+	
+	wep_name[638] = "FIRE CHAIN GUN"
+	wep_type[638] = 3
+	wep_auto[638] = 0
+	wep_load[638] = 29
+	wep_cost[638] = 3
+	wep_sprt[638] = sprFireChainGun
+	wep_area[638] = 16
+	wep_text[638] = "captured in hell"
+	wep_swap[638] = sndSwapBow
+	wep_rad[638] = 0;
+	
+	wep_name[639] = "FROST CHAIN GUN"
+	wep_type[639] = 3
+	wep_auto[639] = 0
+	wep_load[639] = 31
+	wep_cost[639] = 3
+	wep_sprt[639] = sprFrostChainGun
+	wep_area[639] = 20
+	wep_text[639] = "imprisoned in hellheim"
+	wep_swap[639] = sndSwapBow
+	wep_rad[639] = 0;
 	
 
 	maxwep = array_length(wep_name)-1;

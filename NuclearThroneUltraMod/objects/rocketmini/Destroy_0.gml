@@ -1,8 +1,6 @@
 /// @description Small explosion
-alarm[11] = 10;
-event_inherited()
-snd_play(sndExplosionS)
-with instance_create(x+hspeed,y+vspeed,SmallExplosion)
+if (alarm[11] < 1 || GetPlayerUltramod() != ultramods.rocketBolt)
 {
-	dmg = 4;	
+	snd_play(sndExplosionS)
+	instance_create(x+hspeed,y+vspeed,SmallExplosion)
 }

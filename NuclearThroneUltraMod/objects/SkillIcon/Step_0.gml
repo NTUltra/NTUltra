@@ -270,7 +270,6 @@ else if skill == 35//PUFFY CHEEKS
 		reload = lowa;
 		breload = lowb;
 		creload = lowc;
-			
 	}
 }
 if skill == 5 && Player.altUltra && Player.ultra_got[51]

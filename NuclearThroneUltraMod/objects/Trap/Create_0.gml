@@ -11,3 +11,4 @@ if Player.loops>1//loop 2 yo
 loop=true;
 }
 
+alarm[1] = 1;

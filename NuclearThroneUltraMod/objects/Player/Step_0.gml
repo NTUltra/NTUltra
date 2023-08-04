@@ -879,7 +879,11 @@ if (rad > mr)
 	}
 }
 
-//reload stuff
+//reload stuff per frame
+//Do not halve any reload happening outside of this
+prev60reload = reload;
+prev60breload = breload;
+prev60creload = creload;
 var lowa = 0;
 var lowb = 0;
 var lowc = 0;
@@ -2004,7 +2008,7 @@ if hammerheadcounter > 0
 
 			alarm[5]=12;//timer before hammerhead continuation stops
 			
-			if hammerheadtimer > 8 || instance_exists(SheepStorm)
+			if hammerheadtimer > 5 || instance_exists(SheepStorm)
 			{
 				hammerheadcounter --;
 				var debrisAmount = 2;
@@ -2022,7 +2026,7 @@ if hammerheadcounter > 0
 					debrisAmount += 2;
 					debrisMultiply += 1;
 				}
-				instance_create(x,y,WallBreak);
+				instance_create(x+hspeed,y+vspeed,WallBreakHammerHead);
 				//More debris
 				repeat(debrisAmount)
 				with instance_create(x+8+random(8)-4,y+8+random(8)-4,Debris)

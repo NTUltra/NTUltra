@@ -3,7 +3,7 @@ if !instance_exists(GenCont)
 {
 	with Player {
 		nochest = 0;
-		scrChestAbsorbingPores(Player);
+		scrChestOpenMindReload(Player);
 	}
 	if !oneweponly
 	{

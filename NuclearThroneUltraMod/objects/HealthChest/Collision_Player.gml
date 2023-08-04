@@ -1,7 +1,7 @@
 if !instance_exists(GenCont)
 {
 
-
+	scrChestOpenMindReload(other);
 	//Unlock chicken
 	scrUnlockCharacter(9,"FOR OPENING UP A BIG HP CHEST")
 

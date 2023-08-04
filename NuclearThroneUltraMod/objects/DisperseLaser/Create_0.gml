@@ -11,13 +11,7 @@ time=1;
 alarm[0]=time;
 
 
-dmg=1;
-
-if instance_exists(Player)
-{
-if Player.skill_got[17] = 1
-dmg=2+Player.betterlaserbrain;
-}
+dmg = 2;
 
 /* */
 /*  */

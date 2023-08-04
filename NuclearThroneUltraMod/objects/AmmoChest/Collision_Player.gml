@@ -23,7 +23,7 @@ if mediumchest==0{
 		type = other.wep_type[other.wep]
 	
 	var t = type;
-	scrChestAbsorbingPores(other);
+	scrChestOpenMindReload(other);
 	with other
 	{
 		ammo[t] += typ_ammo[t]*2

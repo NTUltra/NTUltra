@@ -1,4 +1,4 @@
-
+SetSeedPopoSpawn();
 if instance_exists(Player)
 {
 	if Player.loops > 3 && random(3) < 1

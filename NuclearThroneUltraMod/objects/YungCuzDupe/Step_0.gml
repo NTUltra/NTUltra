@@ -67,7 +67,7 @@ if hammerheadcounter > 0
 
 			alarm[5]=12;//timer before hammerhead continuation stops
 			
-			if hammerheadtimer > 8
+			if hammerheadtimer > 5
 			{
 				hammerheadcounter --;
 				var debrisAmount = 4;

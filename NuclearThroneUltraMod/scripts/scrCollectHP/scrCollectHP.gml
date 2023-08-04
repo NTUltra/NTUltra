@@ -54,7 +54,7 @@ function scrCollectHP(num = 2){
 				}
 				*/
 				speed = 6;
-				scrRaddrop(4);
+				scrRaddrop(3);
 			}	
 		if Player.race=25 && random(5)<3//mutation smith/doctor
 		num = 5

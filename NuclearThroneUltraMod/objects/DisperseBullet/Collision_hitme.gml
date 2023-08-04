@@ -3,10 +3,19 @@ if other.team != team and other.my_health > 0
 	alarm[0] += 1;
 with other
 {
-    my_health -= 1
-    if instance_exists(Player){
-    if Player.ultra_got[28]//roids ultra d
-    {my_health -=2;}}
+	if UberCont.normalGameSpeed == 60
+	{
+		my_health -= other.dmg * 0.5;
+		if instance_exists(Player) && Player.ultra_got[28]//roids ultra d
+	    {my_health -= 0.5;}
+	}
+	else
+	{
+		my_health -= other.dmg;
+		if instance_exists(Player) && Player.ultra_got[28]//roids ultra d
+	    {my_health -= 1;}
+	}
+    
     sprite_index = spr_hurt
     image_index = 0
     motion_add(other.direction,2)

@@ -9,20 +9,24 @@ target=0;
 dmg = 9;
 ee = false
 bm = false;
+constAcc = 1;
+maxSpeed = 6;
+acc = 1;
+bm = 0;
+ee = 0
 if instance_exists(Player){
 	if Player.skill_got[21] = 1//bolt marrow
 	{
-		bm = true;
+		bm = 1;
 		dmg ++;
 		friction+=0.1;
 	}
 	if Player.skill_got[19] {
-		ee = true;	
+		ee = 1;
 	}
 
 alarm[0]=4
 
 }
-maxSpeed = 6;
-acc = 1;
+
 alarm[11] = 1;

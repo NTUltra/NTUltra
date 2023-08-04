@@ -1,4 +1,5 @@
 /// @description Spawn popo
+SetSeedPopoSpawn();
 mySize=2;
 if dropFreaks
 {

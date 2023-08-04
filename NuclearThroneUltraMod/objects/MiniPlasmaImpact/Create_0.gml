@@ -1,4 +1,4 @@
-image_speed = 0.7
+image_speed = 1.2;
 
 BackCont.shake += 2
 Mod1=0;
@@ -7,7 +7,7 @@ Mod3=0;
 Mod4=0;
 wepFire=0;
 team = 2
-dmg=1;
+dmg = 0.5;
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1

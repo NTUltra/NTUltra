@@ -1,6 +1,7 @@
 function scrDrop(itemdrop, weapondrop) {
 	var canHealth = 1;
 	var dropRateBuff = 0;
+	var rabbit = 0;
 	if instance_exists(Player)
 	{
 		var mh = Player.maxhealth;
@@ -17,7 +18,8 @@ function scrDrop(itemdrop, weapondrop) {
 			dropRateBuff = 0.07;
 		else
 			dropRateBuff = 0;
-		dropRateBuff += 0.93 + (Player.skill_got[4]*(0.35+Player.betterrabbitpaw))
+		rabbit = (Player.skill_got[4]*(0.35+Player.betterrabbitpaw));
+		dropRateBuff += 0.93 + rabbit
 		+ rebelBuff
 		+ (Player.skill_got[28]*(Player.rage*0.0011))//max is 60%
 		if scrIsCrown(21) //Crown of risk
@@ -119,7 +121,18 @@ function scrDrop(itemdrop, weapondrop) {
 	{
 		if random(Player.rogueammomax) > Player.rogueammo && random(180) < min(itemdrop * dropRateBuff, 180)
 		{
-			instance_create(x+random(4)-2,y+random(4)-2,RoguePickup);
+			with instance_create(x,y,RoguePickup)
+			{
+				if (rabbit > 0 && random(1) < rabbit+0.1)
+				{
+					with instance_create(x,y,RabbitPawFX)
+					{
+						speed = other.speed;
+						direction = other.direction;
+						friction = other.friction;
+					}
+				}	
+			}
 		}
 	}
 	need = 0
@@ -145,28 +158,35 @@ function scrDrop(itemdrop, weapondrop) {
 			confDroprate += 0.15;
 		}
 		confDroprate *= 0.28;
+		
 		if confDropChanceIndex < 0
+		{
 			var ran = random(100);
+			var ranReroll = random(100);
+		}
 		else
+		{
 			var ran = confDropChance[confDropChanceIndex];
+			var ranReroll = confDropChance[confDropChanceIndex - 1];
+		}
 
 	    if (itemdrop > 0 && ran < min((itemdrop*0.5) * ((need*0.25) + confDroprate), 110))//rage=0.001
 	    {
 		    if ( scrIsCrown(2) && Player.canHeal && random(mh) > h || random(100) < 10) and random(3) < 2 and random(1) <= canHealth
 			{
-				instance_create(x+random(4)-2,y+random(4)-2,HealthChest)
+				instance_create(x,y,HealthChest)
 			//return true;
 			}
 		    else if !scrIsCrown(5)
 			{
-				instance_create(x+random(4)-2,y+random(4)-2,AmmoChest)
+				instance_create(x,y,AmmoChest)
 			//return true;
 			}
 			//return false;
 	    }
-	    else if confDropChance[confDropChanceIndex - 1] < ((itemdrop*0.1)+weapondrop*0.75) * confDroprate
+	    else if ranReroll < ((itemdrop*0.1)+weapondrop*0.75) * confDroprate
 	    {
-			instance_create(x+random(4)-2,y+random(4)-2,WeaponChest);
+			instance_create(x,y,WeaponChest);
 			//return true;
 	    }
 		confDropChanceIndex -= 2;
@@ -180,7 +200,17 @@ function scrDrop(itemdrop, weapondrop) {
 	{//0.3 for each ally Rebel has REBEL ULTRA C?
 		if random(mh) > h and random(3) < 2 and !scrIsCrown(2) and Player.canHeal and random(1) <= canHealth
 		{
-			instance_create(x+random(4)-2,y+random(4)-2,HPPickup)
+			with instance_create(x,y,HPPickup) {
+				if (rabbit > 0 && random(1) < rabbit+0.1)
+				{
+					with instance_create(x,y,RabbitPawFX)
+					{
+							speed = other.speed;
+							direction = other.direction;
+							friction = other.friction;
+						}
+				}
+			}
 			return true;
 		}
 		else
@@ -189,13 +219,34 @@ function scrDrop(itemdrop, weapondrop) {
 			{
 				if random(mh) > h and random(3) < 2 and !scrIsCrown(2) and Player.canHeal and random(1) <= canHealth
 				{
-					instance_create(x+random(4)-2,y+random(4)-2,HPPickup)
+					
+					with instance_create(x,y,HPPickup) {
+						if (rabbit > 0 && random(1) < rabbit+0.1)
+						{
+							with instance_create(x,y,RabbitPawFX)
+							{
+								speed = other.speed;
+								direction = other.direction;
+								friction = other.friction;
+							}
+						}
+					}
 					return true;
 				}
 			}
 			else
 			{
-				instance_create(x+random(4)-2,y+random(4)-2,AmmoPickup)
+				with instance_create(x,y,AmmoPickup) {
+					if (rabbit > 0 && random(1) < rabbit+0.1)
+					{
+						with instance_create(x,y,RabbitPawFX)
+						{
+							speed = other.speed;
+							direction = other.direction;
+							friction = other.friction;
+						}
+					}
+				}
 				return true;
 			}
 		}
@@ -208,7 +259,7 @@ function scrDrop(itemdrop, weapondrop) {
 	if ran < min(weapondrop*(dropRateBuff * 0.25), 100)
 	{
 		//drop weps
-		with instance_create(x+random(4)-2,y+random(4)-2,WepPickup)
+		with instance_create(x,y,WepPickup)
 		{
 		scrWeapons()
 		SetSeedWeapon();

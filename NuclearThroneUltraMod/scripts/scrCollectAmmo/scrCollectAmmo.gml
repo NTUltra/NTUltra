@@ -21,7 +21,7 @@ function scrCollectAmmo(gain_multiplier = 1){
 	if Player.skill_got[36]
 	{
 		speed = 6;
-		scrRaddrop(4);
+		scrRaddrop(3);
 	}
 	var randomAmmo = true;
 

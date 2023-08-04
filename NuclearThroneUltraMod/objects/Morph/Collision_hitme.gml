@@ -10,7 +10,7 @@ if other.team != team
 				my_health -= other.dmg
 		    sprite_index = spr_hurt
 		    image_index = 0
-		    BackCont.shake += 0.5
+		    BackCont.shake += 0.3
 		    }
 	}
 }

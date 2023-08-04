@@ -24,8 +24,6 @@ with Player
 		breload = lowb;
 		creload = lowc;
 		
-		
-		
 		if ultra_got[29] && altUltra//ROBOT EXCLUSIVE TASTE
 		{
 			maxhealth += 4;
@@ -65,7 +63,7 @@ with Player
 			else
 			instance_create(x,y,AmmoPickup)}
 		}
-		var r = 5;
+		var r = 4;
 		
 		var hasUltra = false;
 		if ultra_got[30]

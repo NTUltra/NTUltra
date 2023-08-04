@@ -98,7 +98,7 @@ else if um == ultramods.laserBolt
 		proj = LaserToxic
 	with instance_create(x,y,proj)
 	{
-		image_yscale -= 0.34;
+		image_yscale -= 0.1;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;

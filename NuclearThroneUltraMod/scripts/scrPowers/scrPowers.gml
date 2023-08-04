@@ -1531,7 +1531,7 @@ function scrPowers() {
 		if ultra_got[32]
 		{
 			//Force shot
-			var cost = wep_cost[wep]*4
+			var cost = wep_cost[wep]*(4-skill_got[5])
 			if wep_cost[wep] == 0
 			{
 				wep_cost[wep] = clamp(round(wep_area[wep] * 1.5),6,40);	

@@ -154,6 +154,24 @@ if instance_exists(Player)
 	    }    
 	    if skill_got[26]//HAMMER HEAD
 	    {
+			if hammerheadcounter > 0
+			{
+				snd_play(sndHammerHeadEnd);
+				hammerheadcounter = ceil(hammerheadcounter*0.75);
+				scrRaddrop(hammerheadcounter);
+				repeat(hammerheadcounter)
+				{
+					hammerheadcounter --;
+					if (hammerheadcounter > 0)
+					{
+						scrDrop(4,2);
+					}
+					else
+					{
+						scrDrop(35,12);
+					}
+				}
+			}
 			hammerheadcounter = 30;
 			if race=25
 			{

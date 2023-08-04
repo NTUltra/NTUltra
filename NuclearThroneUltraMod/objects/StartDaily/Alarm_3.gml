@@ -3,6 +3,7 @@ UberCont.useSeed = true;
 SetSeed();
 UberCont.randomDailyMod = irandom_range(1,18);
 UberCont.chestRan = 10
+UberCont.popoRan = 0;
 network_destroy(serverSocket);
 instance_destroy();
 with Player

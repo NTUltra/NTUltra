@@ -14,45 +14,52 @@ if instance_exists(Player)
 		if ultra_got[83]
 			add += 2;
 		rad += add;
-		if skill_got[36] && canHeal
+		if skill_got[36]
 		{
-			radPickedUp += add;
-			if radPickedUp > maxRadPickedUp
+			var radd = add*0.4;
+			reload -= radd;
+			breload -= radd;
+			creload -= radd;
+			if canHeal
 			{
-				radPickedUp -= maxRadPickedUp;
-				instance_create(x,y,HealAbsorbingPores);
-				var num = 1;
-				if skill_got[9]
+				radPickedUp += add;
+				if radPickedUp > maxRadPickedUp
 				{
-					num = 2;
-					snd_play(sndAbsorbingPoresHealUpg);
-				}
-				else
-					snd_play(sndAbsorbingPoresHeal);
+					radPickedUp -= maxRadPickedUp;
+					instance_create(x,y,HealAbsorbingPores);
+					var num = 1;
+					if skill_got[9]
+					{
+						num = 2;
+						snd_play(sndAbsorbingPoresHealUpg);
+					}
+					else
+						snd_play(sndAbsorbingPoresHeal);
 				
-				if UberCont.opt_ammoicon
-				{
-					dir = instance_create(x,y,PopupText)
-					dir.sprt = sprHPIconPickup;
-					dir.mytext = "+"+string(num)
-					if Player.my_health = Player.maxhealth
-					dir.mytext = "MAX"
-					else if Player.my_health > Player.maxhealth
-					dir.mytext = "OVER MAX"
+					if UberCont.opt_ammoicon
+					{
+						dir = instance_create(x,y,PopupText)
+						dir.sprt = sprHPIconPickup;
+						dir.mytext = "+"+string(num)
+						if Player.my_health = Player.maxhealth
+						dir.mytext = "MAX"
+						else if Player.my_health > Player.maxhealth
+						dir.mytext = "OVER MAX"
+					}
+					else
+					{
+						dir = instance_create(x,y,PopupText)
+						dir.mytext = "+"+string(num)+" HP"
+						if Player.my_health = Player.maxhealth
+						dir.mytext = "MAX HP"
+						else if Player.my_health > Player.maxhealth
+						dir.mytext = "OVER MAX HP"
+					}
+					if my_health + num <= maxhealth
+						my_health += num
+					else// if Player.crown != 2
+						my_health = max(my_health,maxhealth);
 				}
-				else
-				{
-					dir = instance_create(x,y,PopupText)
-					dir.mytext = "+"+string(num)+" HP"
-					if Player.my_health = Player.maxhealth
-					dir.mytext = "MAX HP"
-					else if Player.my_health > Player.maxhealth
-					dir.mytext = "OVER MAX HP"
-				}
-				if my_health + num <= maxhealth
-					my_health += num
-				else// if Player.crown != 2
-					my_health = max(my_health,maxhealth);
 			}
 		}
 	}

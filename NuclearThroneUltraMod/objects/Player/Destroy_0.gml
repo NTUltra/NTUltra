@@ -749,4 +749,5 @@ with instance_create(x,y,DataRef)
 	humphrySkill = other.humphrySkill;
 	drawempty = 0;
 	drawlowhp = 0;
+	spr_idle = other.spr_idle;
 }

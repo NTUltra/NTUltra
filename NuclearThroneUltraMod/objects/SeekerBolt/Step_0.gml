@@ -1,9 +1,7 @@
 scrBoltTrail(theColour,0.1,1.5);
-var ee = false;
-var bm = false;
 if !instance_exists(Player)
 {instance_destroy();exit;}
-motion_add(direction,1);
+motion_add(direction,constAcc);
 if instance_exists(enemy)
 {
 //if ee//eagle eyes

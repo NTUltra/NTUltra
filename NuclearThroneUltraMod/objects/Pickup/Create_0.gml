@@ -1,4 +1,5 @@
 /// @description Init
+depth = -2;
 if instance_exists(Player)
 if Player.skill_got[3]
 	{

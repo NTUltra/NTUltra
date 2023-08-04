@@ -10,6 +10,6 @@ typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 alarm[1]=5.5;
 time=1;
 alarm[0]=5;
-
+dmg = 2;
 /* */
 /*  */

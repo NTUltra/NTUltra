@@ -66,8 +66,16 @@ if alarm[5] > 0
 		
 	if alarm[5] < wazerDuration - tellTime
 	{
-		image_angle += wazerRotation;
-		wazerDirection += wazerRotation;
+		if UberCont.normalGameSpeed == 60
+		{
+			image_angle += wazerRotation*0.5;
+			wazerDirection += wazerRotation*0.5;
+		}
+		else
+		{
+			image_angle += wazerRotation;
+			wazerDirection += wazerRotation;
+		}
 	}
 	if instance_exists(Wall)
 	{

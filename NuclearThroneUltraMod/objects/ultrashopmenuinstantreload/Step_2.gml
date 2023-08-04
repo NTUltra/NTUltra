@@ -26,7 +26,6 @@ if KeyCont.key_spec[Player.p] != 1 && KeyCont.key_spec[Player.p] != 2
 		{
 			with Player
 			{
-			
 				reload = lowa;
 				breload = lowb;
 				creload = lowc;

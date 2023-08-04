@@ -143,11 +143,8 @@ function scrPopChests() {
 		}
 		
 		wepChestGol = gol;
-		if(Player.skill_got[23]){//OPEN MIND
-			if Player.race=25
-				wepChestGol += choose(1,1,0,0,0,0);
-			else
-				wepChestGol += choose(1,0,0,0,0,0);
+		if(Player.skill_got[23] && Player.race == 25){//OPEN MIND
+			wepChestGol += choose(1,0,0,0,0,0);
 		}
 	
 		if scrIsCrown(15)//CROWN OF CHOICE

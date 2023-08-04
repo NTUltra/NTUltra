@@ -9,7 +9,7 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 time=1;
 alarm[0]=time;
-
+dmg = 2;
 owner = -1;
 
 /* */
