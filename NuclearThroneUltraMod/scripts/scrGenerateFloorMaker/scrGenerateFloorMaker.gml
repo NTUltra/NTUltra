@@ -104,7 +104,7 @@ function scrGenerateFloorMaker(limiter) {
 		if canCount
 			fc ++;
 	}
-	while ( fc <= goal && limiter < 1000)
+	while ( fc <= goal && limiter < 800)//1000
 	{
 		fc = 0;
 		with Floor{

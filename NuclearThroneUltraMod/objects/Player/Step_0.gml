@@ -1380,7 +1380,7 @@ if ultra_got[59] && altUltra
 	ds_list_destroy(floors);
 	mask_index = msk;
 }
-if (!outOfCombat && skill_got[2]==0 && race!=18 && race!=24 && race != 15 and !instance_exists(LevCont) and !instance_exists(FloorMaker))
+if (!outOfCombat && !skill_got[2] && race!=18 && race != 15 and !instance_exists(LevCont) and !instance_exists(FloorMaker))
 {
 	if ((area = 5 || area = 107) and !instance_exists(LevCont) and !instance_exists(FloorMaker))
 	{
@@ -1421,19 +1421,18 @@ if (!outOfCombat && skill_got[2]==0 && race!=18 && race!=24 && race != 15 and !i
 					hotfloor+=1;
 		        if hotfloor>39//time before crisping
 		        {
-		        with instance_create(x,y,TrapFire){//burn!
-		        team=1;}
-		        hotfloor=0;//allright you've burned now continue
+			        with instance_create(x,y,TrapFire){//burn!
+			        team=1;}
+			        hotfloor=0;//allright you've burned now continue
         
-		        //GAMEMODE UNLOCKABLE WALL IS LAVA
-		        scrUnlockGameMode(4,"FOR STANDING IN LAVA");
+			        //GAMEMODE UNLOCKABLE WALL IS LAVA
+			        scrUnlockGameMode(4,"FOR STANDING IN LAVA");
 		        }
 				friction = 0.45
 		    }
 			else if ground.sprite_index == sprFloor108Explo || ground.sprite_index == sprInvertedFloorLava
 		    {
-			    if skill_got[2]==0
-					friction = 0.1
+				friction = 0.1
     
 			    //when player isn't frozen increase the time that determines when it should get frozeen
 			    if frozen<1

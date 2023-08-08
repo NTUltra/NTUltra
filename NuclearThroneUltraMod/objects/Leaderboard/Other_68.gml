@@ -300,7 +300,7 @@ if (type == network_type_data) {
 				if (scoreEntryList[lastIndex] != "" && string_replace_all(scoreEntryList[lastIndex],"-","") != scoreEntryList[lastIndex])
 					scoreEntryList[lastIndex] = string_split(mutationsString,"-",true);
 				else
-					scoreEntryList[lastIndex] = "";
+					scoreEntryList[lastIndex] = [];
 				leaderboard[j] = scoreEntryList;
 				j++;
 			}

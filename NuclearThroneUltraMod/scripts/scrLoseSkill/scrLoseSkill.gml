@@ -159,7 +159,7 @@ function scrLoseSkill(skillIndex){
 			metabolism = 0;
 		break;
 		case 39: //ALIENT INTESTINES
-			alienTail = 0;
+			alienIntestines = 0;
 		break;
 				
 	}

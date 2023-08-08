@@ -148,5 +148,9 @@ function scrCrownAnimation(takenCrown){
 			spr_idle = sprCrown32Idle
 			spr_walk = sprCrown32Walk
 		break;
+		case 34://Time
+			spr_idle = sprCrown33Idle
+			spr_walk = sprCrown33Walk
+		break;
 	}
 }

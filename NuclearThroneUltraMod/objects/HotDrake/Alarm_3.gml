@@ -1,4 +1,3 @@
-with (HotDrake) {
 if atk=1//breath fire pls
 {
     alarm[2]=36;//fire breather
@@ -70,5 +69,3 @@ appear=true;
 }
 
 image_speed=0.4;
-
-}

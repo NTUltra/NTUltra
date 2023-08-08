@@ -171,6 +171,38 @@ if crown == 2 && !canReAdd
 	Player.my_health = max(Player.maxhealth,Player.my_health + overheal);
 	*/
 }
+//CROWN OF TIME
+
+if crown == 34
+{
+	if Player.skill_got[5]
+		Player.rewinds = 2;
+	else
+		Player.rewinds = 1;
+	with TimeRewinder
+		instance_destroy();
+	with UberCont
+	{
+		if !useSeed && seed == 0
+			seed = irandom(4294967295);
+		useSeed = true;
+	}
+	with instance_create(x,y,TimeRewinder) {
+		rewinds = Player.rewinds;
+		my_health = Player.my_health;
+		maxhealth = Player.maxhealth;
+		ammo = Player.ammo;
+		area = Player.lastarea;
+		subarea = Player.lastsubarea;
+		lastarea = Player.lastarea;
+		lastsubarea = Player.lastsubarea;
+		hard = Player.hard;
+		oasis = Player.oasis;
+		inverted = Player.inverted;
+		freeAmmoRound = Player.freeAmmoRound;
+		fromCribToVault = Player.fromCribToVault;
+	}
+}
 //CROWN OF DESTINY
 if crown = 8 && !Player.tookDestiny
 {
@@ -356,6 +388,11 @@ if crown == 12
 		if race == 27
 			invertedchance = 100;
     }
+}
+//Crown of time
+if oldcrown == 34
+{
+	Player.rewinds = 0;	
 }
 //Crown of popo
 if oldcrown == 16

@@ -987,7 +987,7 @@ if scrIsCrown(23)//Crown of speed
 		speed *= 1.2;
 	}
 }
-else if scrIsCrown(24)//Crown of sloth
+if scrIsCrown(24)//Crown of sloth
 {
 	with enemy
 	{

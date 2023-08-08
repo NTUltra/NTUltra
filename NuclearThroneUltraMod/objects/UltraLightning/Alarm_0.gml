@@ -16,7 +16,8 @@ if isog && ultraMod == ultramods.lightningKraken
 		ultra = true;
 		sprite_index=sprUltraTentacle;
 		scrCopyWeaponMod(other);
-		dmg = 10;
+		dmg = 6;
+		image_yscale += 0.3;
 		if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 		{
 			dmg += 1;

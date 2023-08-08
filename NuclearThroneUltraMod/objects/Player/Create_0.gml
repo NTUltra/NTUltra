@@ -1,3 +1,4 @@
+
 /*if instance_number(Player) > 1
 {
 instance_destroy()
@@ -30,7 +31,9 @@ isPureHealthBoost = 0;
 hunterEye = 0;
 hunterEyeMax = 200;
 sheepFakeouts = 0;
-alienTail = 0;
+rewinds = 0;
+alienIntestines = 0;
+alienDir = 5;
 charpoints = 0;
 freeAmmoRound = 0;
 hogWep[0] = 0;

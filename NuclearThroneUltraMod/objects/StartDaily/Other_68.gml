@@ -193,11 +193,9 @@ if (type == network_type_data) {
 				with Player
 				{
 					wep = 0;
-					race = 1;
 					ultra_got[3] = 1;
 					if !instance_exists(Partner)
 						instance_create(x,y,Partner);
-					scrLoadRace();
 				}
 			}
 			if scrIsGamemode(15)//No mutations

@@ -7,7 +7,8 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 {
 	debug("QUICK RESTART");
 	//scrEndOfRun(); already run in player destroy
-	
+	with FPSHACKMenu
+		instance_destroy();
 	instance_activate_all();
 	alarm[2] = 1;//Some objects are only accessible after a frame
 	//audio_stop_all();
@@ -81,6 +82,8 @@ or gamepad_button_check(0,gp_face2) or gamepad_button_check(0,gp_start) or gamep
 with option
 instance_destroy()
 
+with FPSHACKMenu
+	instance_destroy();
 instance_activate_all()
 
 //with TopCont
@@ -102,6 +105,9 @@ if (keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4)) && !in
 {
 	if isWeekly
 		opt_gamemode = [0];
+		
+	with FPSHACKMenu
+	instance_destroy();
 	instance_activate_all()
 	isPaused = 0
 	alarm[4] = 0;
@@ -170,11 +176,24 @@ pauseimg = sprite_create_from_surface(application_surface,0,0,surface_get_width(
 //cursor_sprite=sprCrosshair
 //with Cursor
 //instance_destroy();
+/*
+with FPSHACK
+{
+	var al = ds_list_size(forcePositions)
+	for (var i = 0; i < al; i++)
+	{
+		instance_activate_object(forcePositions[| i]);
+	}
+}*/
+if instance_exists(FPSHACK)
+	instance_create(x,y,FPSHACKMenu);
 instance_deactivate_all(1)
 instance_activate_object(UnlockPopup);
+instance_activate_object(FPSHACKMenu);
 //instance_activate_object(BackCont);
 instance_activate_object(MusCont);
-instance_activate_object(FPSHACK);
+
+//instance_activate_object(FPSHACK);
 //instance_activate_object(TopCont);//hmm?
 instance_activate_object(Cursor);
 optY = 24;

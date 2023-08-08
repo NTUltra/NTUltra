@@ -212,17 +212,14 @@ function scrCrowns() {
 	crown_text[33] = "YOUR WEAPONS FIRE TWICE#RELOAD TIME IS ALMOST DOUBLED"
 	crown_used[33] = 0
 	crown_tips[33] = "duplication"
-	/*
-		CROWN OF ENTROPY
-		
-		CROWN OF DUPPLETES
-		EVERYTHING DEALS DOUBLE DAMAGE
-		CROWN OF SPATIAL ANOMALY
-		REMOVE YOUR PASSIVE, WHENEVER YOU USE YOUR ACTIVE TENTACLES SPAWN AT YOUR CROSSHAIR
-	*/
 	
-	crownmax = 23//+11
-	secretcrownmax = 11;
+	crown_name[34] = "[CROWN OF TIME]"
+	crown_text[34] = "REPLACE YOUR ACTIVE WITH REWIND:#RESET TIME#TO THE START OF THE CURRENT AREA##CAN BE USED ONCE EACH AREA#TWICE IF YOU HAVE THRONEBUTT"
+	crown_used[34] = 0
+	crown_tips[34] = "again"
+	
+	crownmax = 23//+12
+	secretcrownmax = 12;
 
 
 

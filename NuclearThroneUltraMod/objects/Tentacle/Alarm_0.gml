@@ -38,12 +38,11 @@ if isog && GetPlayerUltramod() == ultramods.lightningKraken
 isog = false;
 if target == noone && instance_exists(enemy)
 {
-	target = instance_nearest(x,y,enemy);
+	target = instance_nearest(x+lengthdir_x(12,image_angle),y+lengthdir_y(12,image_angle),enemy);
 }
 var oldx, oldy;
 oldx = x
 oldy = y
-var hitElementorWall = false;
 if instance_exists(Player){
 	if Player.skill_got[19] == 1
 	{accuracy-=3;}
@@ -60,23 +59,35 @@ if instance_exists(Player){
 	accuracy-=modBoost;
 	if Mod4=13
 	accuracy-=modBoost;
-	if !Player.ultra_got[93] && place_meeting(x,y,VikingWall)
-		hitElementorWall = true;
 }
 if accuracy<0
 accuracy=0;
 
 direction = image_angle+(random(accuracy)-(accuracy*0.5))//30 - 15
 speed = 4
-if target != noone && instance_exists(target) && target.team != team
+if target != noone && instance_exists(target) && target.team != team && target.my_health > 0
 {
 	if !collision_line(x,y,target.x,target.y,Wall,false,false) && point_distance(x,y,target.x,target.y) < 170-accuracy//120
 		motion_add(point_direction(x,y,target.x,target.y),1.6-(accuracy*0.05))//1
 }
 image_angle = direction
 speed = 0
+var i = 0;
+var dis = 9 + random(3);
+var canPhase = instance_exists(Player) && Player.ultra_got[93];
+while (i < dis)
+{
+	x += lengthdir_x(1,direction);
+	y += lengthdir_y(1,direction);
+	var wall = instance_place(x,y,Wall);
+	if ((wall != noone && wall.object_index != WallHitMe) || (!canPhase && place_meeting(x,y,VikingWall)))
+	{
+		i = dis;
+		direction += 180+random_range(-30,30);
+	}
+	i ++;
+}
 
-move_contact_solid(direction,8+random(4))
 speed = 0
 var ammoDecrease = 1;
 	var modBoost = 0.06;
@@ -101,23 +112,6 @@ var ammoDecrease = 1;
 	if Mod4 == 11
 		ammoDecrease -= modBoost;
 ammo -= ammoDecrease;
-
-if hitElementorWall
-{
-	x = xprevious
-	y = yprevious
-	direction += 180+random_range(-20,20)
-}
-else
-{
-	var wall = instance_place(x,y,Wall)
-	if hitElementorWall || wall != noone && wall.object_index != WallHitMe
-	{
-		x = xprevious
-		y = yprevious
-		direction += 180+random_range(-20,20)
-	}
-}
 image_xscale = -point_distance(x,y,oldx,oldy)*0.25;
 if round(ammo) > 0
 {
@@ -151,7 +145,9 @@ if round(ammo) > 0
 			{
 				motion_add(other.direction+random(60)-30,other.speed );
 			}
-			snd_play(choose(sndRoll,sndWater1,sndWater2));
+			var chosenAudio = choose(sndRoll,sndWater1,sndWater2);
+			if !audio_is_playing(chosenAudio)
+				snd_play(chosenAudio,0.01);
 			alarm[0] = 1;
 		}
 	}

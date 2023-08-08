@@ -11,21 +11,21 @@ if instance_exists(Player)
 {
     if Player.race=11
     {
-    speed+=0.5;
-    if speed>5
-    {
-    speed=5;
-    }
+		speed+=0.5;
+	    if speed>5
+	    {
+			speed=5;
+	    }
     }
     else if(speed>4)
     {speed=4;}
 	if scrIsCrown(23)//Crown of speed
 	{
-		speed += 2;	
+		speed = min(speed+2,7)
 	}
 	if scrIsCrown(24) && speed > 3//Crown of sloth
 	{
-		speed = 3;
+		speed = min(speed-1,3)
 	}
 }
 else if(speed>4)

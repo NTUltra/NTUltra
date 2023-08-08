@@ -204,18 +204,25 @@ else if skill = 18//last wish
 	}
 
 }
-else if skill = 5 && Player.race = 1//thronebut for fish
+else if skill = 5
 {
-	with Player//update the ammo values
-		scrWeapons();
+	if Player.race = 1//thronebut for fish
+	{
+		with Player//update the ammo values
+			scrWeapons();
+	}
+	if Player.race = 16//VIKING
+	{
+		Player.maxarmour+=1;
+		Player.freeArmourStrike = true;
+		Player.armour+=1;//kindness here
+	}
+	if scrIsCrown(34)
+	{
+		Player.rewinds = 2;
+	}
 }
-else if skill = 5 && Player.race = 16//VIKING
-{
-	Player.maxarmour+=1;
-	Player.freeArmourStrike = true;
-	Player.armour+=1;//kindness here
-}
-else if skill = 19{
+else if skill = 19 {
 	scrApplyEagleEyes();
 }
 else if skill==25{

@@ -1,8 +1,8 @@
 if other.team != team and other.my_health > 0&&other.id != creator//the thing I hit must not be myself
 {
-	var hit = other;
+	//var hit = other;
 	var meatDmg = meatDmgReduction;
-	var s = max(0,other.mySize*1.5);
+	//var s = max(0,other.mySize*1.5);
 	with other//enemy
 	{
 		if sprite_index != spr_hurt
@@ -15,6 +15,7 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 			//motion_add(other.image_angle,4)
 			if other.alarm[1] < 1
 			{
+				/*
 				if other.ion=true {
 					with Tentacle
 						alarm[1] = bloodDelay;
@@ -32,7 +33,7 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 					}
 				}
 				else
-				{
+				{*/
 					with Tentacle
 						alarm[1] = 10;
 					snd_play(sndMeatExplo,0,true)
@@ -43,14 +44,14 @@ if other.team != team and other.my_health > 0&&other.id != creator//the thing I 
 					{
 						motion_add(random(360),3);
 					}
-				}
+				//}
 			}
-			if team != 0 && s < 6 {
-				direction = other.direction
-				var theS = 7/s;
-				motion_add(direction,theS*0.75);
-				x += lengthdir_x(theS,direction);
-				y += lengthdir_y(theS,direction);
+			if team != 0 {
+				var pullD = other.direction+180;
+				//var theS = 7/s;
+				motion_add(pullD,5);
+				x += lengthdir_x(1,pullD);
+				y += lengthdir_y(1,pullD);
 				if team != 0 && alarm[1] > 1
 					alarm[1] ++;
 				if place_meeting(x,y,Wall)

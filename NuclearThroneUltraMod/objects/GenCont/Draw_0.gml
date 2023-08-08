@@ -66,7 +66,7 @@ draw_set_color(c_gray)
 //Area text
 var xx = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5
 var yy = (__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.5)-9// + (string_height(text)*0.5);
-yy -= string_height(string_hash_to_newline(theText))*0.5;
+yy -= 32;
 draw_set_valign(fa_top);
 if upsideDown
 {

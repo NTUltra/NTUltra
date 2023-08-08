@@ -48,7 +48,7 @@ function scrDrawLeaderboardUltra(xx, yy, entry, raceIndex, bskinIndex, altUltraI
 			popUpIndex = [raceIndex, bskinIndex, altUltraIndex, ultraIndex];
 		}
 	}
-	else if entry[ultraIndex+1] != ""
+	else if array_length(entry[ultraIndex+1]) > 0
 	{
 		scrDrawLeaderboardMutation(xx + 8,yy,entry,ultraIndex+1);
 	}

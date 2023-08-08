@@ -67,7 +67,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"922f0270-525e-4a3a-aa6b-2cf3d7ca50d9","path":"sprites/sprMutant16CDead/sprMutant16CDead.yy",},},},"Disabled":false,"id":"33af4a05-8a82-47b2-9d9c-258d0d65e72c","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 11,
     "yorigin": 15,

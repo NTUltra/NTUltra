@@ -6,7 +6,7 @@ function scrPopulate() {
 	
 	var hard = Player.hard;
 	if scrIsCrown(24)//Crown of sloth backup difficulty
-		hard = max(8 + (Player.loops*3),hard);
+		hard = max(9 + (Player.loops*3),hard);
     //setting area and spawning some enemies
     with Floor {
 	if object_index != FloorExplo

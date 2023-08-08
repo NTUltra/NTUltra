@@ -3870,28 +3870,30 @@ function scrFire2() {
 	snd_play_fire(choose(sndWater1,sndWater2) );
 
 	repeat(8){
-	with instance_create(x,y,Tentacle)
-	{
-	sprite_index=sprUltraTentacle;
-	ultra=true;
-	creator=other.id;
-	dmg=10;//10+irandom(4)
-	if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
-	{
-		dmg += 1;
-	}
-	image_angle = aimDirection+(random(60)-30)*other.accuracy
-	team = other.team
-	ammo = 52//24
-	event_perform(ev_alarm,0)
-	visible = 0
-	with instance_create(x,y,LightningSpawn)
-	{
-	sprite_index=sprTentacleSpawn
-	image_angle = other.image_angle
-	}
+		with instance_create(x,y,Tentacle)
+		{
+			sprite_index=sprUltraTentacle;
+			ultra=true;
+			creator=other.id;
+			dmg = 6;//10+irandom(4)
+			if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
+			{
+				dmg += 1;
+			}
+			image_angle = aimDirection+(random(60)-30)*other.accuracy
+			team = other.team
+			ammo = 50//24
+			image_yscale += 0.3;
+			event_perform(ev_alarm,0)
+			visible = 0
+			with instance_create(x,y,LightningSpawn)
+			{
+			sprite_index=sprTentacleSpawn
+			image_angle = other.image_angle
+			}
 
-	}}
+		}
+	}
 
 	repeat(12){
 	    with instance_create(x,y,FishBoost)

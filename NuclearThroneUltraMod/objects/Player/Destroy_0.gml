@@ -171,7 +171,7 @@ with instance_create(x,y,PlayerDead)
 	snd_dead = other.snd_dead;
 	alarm[0] = 2;
 }
-if !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
+if wep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 	with instance_create(x,y,WepPickupForOneWepOnly)
 	{
 		scrWeapons()

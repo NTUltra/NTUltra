@@ -13,7 +13,8 @@ homing= false;
 }
 
 wave=0;
-
+sprite_index=sprShield
+spr_disappear=sprShieldDisappear;
 if instance_exists(Player)
 {
 
@@ -57,11 +58,6 @@ if instance_exists(Player)
 	{
 	sprite_index=sprShieldB
 	spr_disappear=sprShieldBDisappear;
-	}
-	else
-	{
-	sprite_index=sprShield
-	spr_disappear=sprShieldDisappear;
 	}
 }
 

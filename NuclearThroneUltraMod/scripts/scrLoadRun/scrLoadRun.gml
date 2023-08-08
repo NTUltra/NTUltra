@@ -67,7 +67,6 @@ function scrLoadRun(){
 				Player.typ_amax[5] = encryptedRun.maxammo[5];
 				var targetLength = array_length(Player.skill_got);
 				Player.skill_got = encryptedRun.skill_got;
-				debug(targetLength);
 				while (array_length(Player.skill_got) < targetLength)
 				{
 					Player.skill_got[array_length(Player.skill_got)] = 0;
@@ -256,8 +255,6 @@ function scrLoadRun(){
 					UberCont.canMultiCrown = encryptedRun.canMultiCrown;
 				if variable_struct_exists(encryptedRun, "randomDailyMod")
 					UberCont.randomDailyMod = encryptedRun.randomDailyMod;
-				
-					
 			}
 			with Player
 			{

@@ -83,7 +83,7 @@ if instance_exists(Player){
 	}
 	else if target == noone && instance_exists(enemy)
 	{
-		target = instance_nearest(x,y,enemy);
+		target = instance_nearest(x+lengthdir_x(12,image_angle),y+lengthdir_y(12,image_angle),enemy);
 	}
 }
 else{
@@ -99,17 +99,31 @@ speed = 4
 if instance_exists(target)
 {
 	//var dir = instance_nearest(x+lengthdir_x(80,direction),y+lengthdir_y(80,direction),target)
-	if point_distance(x,y,target.x,target.y) < 150-accuracy*2
+	if target.my_health > 0 && !collision_line(x,y,target.x,target.y,Wall,false,false) && point_distance(x,y,target.x,target.y) < 150-accuracy*2
 		motion_add(point_direction(x,y,target.x,target.y),1.5-(accuracy*0.04))
 }
 image_angle = direction
 speed = 0
 
 //move_contact_solid(direction,7+random(4))
-move_contact_solid(direction,8);
+//move_contact_solid(direction,8);
+var i = 0;
+var dis = 8;
+var canPhase = instance_exists(Player) && Player.ultra_got[93];
+while (i < dis)
+{
+	x += lengthdir_x(1,direction);
+	y += lengthdir_y(1,direction);
+	var wall = instance_place(x,y,Wall);
+	if ((wall != noone && wall.object_index != WallHitMe) || (!canPhase && place_meeting(x,y,VikingWall)))
+	{
+		i = dis;
+		direction += 180+random_range(-20,20);
+	}
+	i ++;
+}
 speed = 0
-image_xscale = -point_distance(x,y,oldx,oldy)/2
-var hitElementorWall = false;
+image_xscale = -point_distance(x,y,oldx,oldy)*0.5;
 var ammoDecrease = 1;
 if team == 2
 {
@@ -134,10 +148,11 @@ if team == 2
 		ammoDecrease -= modBoost;
 	if Mod4 == 11
 		ammoDecrease -= modBoost;
-	if !Player.ultra_got[93] && place_meeting(x,y,VikingWall)
-		hitElementorWall = true;
+	//if !Player.ultra_got[93] && place_meeting(x,y,VikingWall)
+	//	hitElementorWall = true;
 }
 ammo -= ammoDecrease;
+/*
 if hitElementorWall
 {
 	x = xprevious
@@ -153,7 +168,7 @@ else
 		y = yprevious
 		direction += 180+random_range(-20,20)
 	}
-}
+}*/
 
 if round(ammo) > 0
 {

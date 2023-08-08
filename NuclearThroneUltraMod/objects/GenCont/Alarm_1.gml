@@ -14,7 +14,7 @@ if instance_exists(Player)
 	}
 	if Player.area = 100{
 	snd_play_2d(Player.snd_valt)}
-	else if Player.subarea = 1{
+	else if Player.subarea == 1{
 	snd_play_2d(Player.snd_wrld)}
 	if Player.race = 6
 	{

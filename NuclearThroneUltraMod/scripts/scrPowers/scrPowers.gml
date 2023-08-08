@@ -3,46 +3,50 @@ function scrPowers() {
 	var keepRace = race;
 	if ultra_got[50] && altUltra
 	{
-		race = fakeRace;	
+		race = fakeRace;
 	}
-	if skill_got[39] && alienTail < 400
+	if scrIsCrown(34)
+		race = 0;
+	if skill_got[39] && alienIntestines < 400
 	{
 		if UberCont.normalGameSpeed == 60
 		{
-			if alienTail < 90
-				alienTail += 0.5;
+			if alienIntestines < 60
+				alienIntestines += 0.5;
 			else
-				alienTail += 0.25;
+				alienIntestines += 0.25;
 		}
 		else
 		{
-			if alienTail < 90
-				alienTail += 1;
+			if alienIntestines < 60
+				alienIntestines += 1;
 			else
-				alienTail += 0.5;
+				alienIntestines += 0.5;
 		}
-			
 	}
 	/////SHIT PRESSED////////
 	if KeyCont.key_spec[p] = 1
 	{
-		if alienTail > 2
+		if rewinds > 0
+			scrRewindTime();
+		if alienIntestines > 2
 		{
+			alienDir *= -1;
 			var ys = 0;
 			snd_play(choose(sndWater1,sndWater2) ,0.1);
-			if alienTail > 30
+			if alienIntestines > 30
 				snd_play_fire(sndRoll);
-			if alienTail > 55
-				snd_play_fire(sndBloodLauncher);
-			if alienTail > 120
+			if alienIntestines > 120
 			{
 				ys += 0.1;
 				snd_play(sndBloodHammer,0.1);
 			}
+			else if alienIntestines > 60
+				snd_play_fire(sndBloodLauncher);
 			var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
-			BackCont.shake += alienTail*0.2;
+			BackCont.shake += alienIntestines*0.2;
 			var i = 0;
-			repeat(lerp(1,12,min(1,alienTail / 200)))
+			repeat(lerp(1,12,min(1,alienIntestines / 200)))
 			{
 				with instance_create(x,y,Tentacle)
 				{
@@ -50,7 +54,7 @@ function scrPowers() {
 					image_angle = aimDirection+(random(30)-15)*other.accuracy
 					creator=other.id;
 					team = other.team
-					ammo = lerp(5,25,min(1,other.alienTail/200)) + i
+					ammo = lerp(5,25,min(1,other.alienIntestines/200)) + i
 					event_perform(ev_alarm,0)
 					visible = 0
 					with instance_create(x,y,LightningSpawn)
@@ -68,7 +72,7 @@ function scrPowers() {
 				i++;
 			}
 			i = 0;
-			repeat(lerp(0,24,min(1,alienTail / 400)))
+			repeat(lerp(0,24,min(1,alienIntestines / 300)))
 			{
 				with instance_create(x,y,Tentacle)
 				{
@@ -76,7 +80,7 @@ function scrPowers() {
 					image_angle = random(360);
 					creator=other.id;
 					team = other.team
-					ammo = lerp(4,22,min(1,other.alienTail/250)) + i
+					ammo = lerp(4,22,min(1,other.alienIntestines/250)) + i
 					event_perform(ev_alarm,0)
 					visible = 0
 					with instance_create(x,y,LightningSpawn)
@@ -93,7 +97,7 @@ function scrPowers() {
 				}
 				i++;
 			}
-			alienTail = 0;
+			alienIntestines = 0;
 		}
 		
 	if race = 26//Good O'l Humphry
@@ -464,6 +468,11 @@ function scrPowers() {
 				flipped = -1;
 			team = other.team;
 			dmg *= 1+Player.level*0.2;//0.1
+			if other.bskin == 1
+			{
+				sprite_index = sprSerpentStrikeB;
+				sprHead = sprSerpentStrikeHeadB;
+			}
 			if other.spr_idle = sprMutant16DIdle
 			{
 				sprOutline = sprKrakenStrikeOutline;
@@ -2006,10 +2015,7 @@ function scrPowers() {
 	////////KEY RELEASE////////
 	if KeyCont.key_spec[p] == 3
 	{
-		if race == 1 && sound_isplaying(sndFishRollUpgLoop)
-		{
-			audio_stop_sound(sndFishRollUpgLoop);	
-		}
+		audio_stop_sound(sndFishRollUpgLoop);	
 		if race == 23
 		{
 			audio_stop_sound(sndFrogLoop) 

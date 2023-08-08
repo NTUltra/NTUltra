@@ -3761,13 +3761,13 @@ function scrWeapons() {
 	wep_name[341] = "ULTRA KRAKEN LAUNCHER"
 	wep_type[341] = 4
 	wep_auto[341] = 0
-	wep_load[341] = 42
-	wep_cost[341] = 7
+	wep_load[341] = 36
+	wep_cost[341] = 6
 	wep_sprt[341] = sprUltraKrakenCannon
 	wep_area[341] = 25
 	wep_text[341] = "true power of the ocean"
 	wep_swap[341] = sndSwapDragon
-	wep_rad[341] = 18;
+	wep_rad[341] = 16;
 
 	wep_name[342] = "KRAKEN ION CANNON"
 	wep_type[342] = 4
@@ -7074,7 +7074,7 @@ function scrWeapons() {
 	wep_auto[640] = 1
 	wep_load[640] = 20
 	wep_cost[640] = 2.5
-	wep_sprt[640] = sprMiniRocketGun
+	wep_sprt[640] = sprMiniRocketShotgun
 	wep_area[640] = 12
 	wep_text[640] = ""
 	wep_swap[640] = sndSwapExplosive
@@ -7085,7 +7085,7 @@ function scrWeapons() {
 	wep_auto[641] = 1
 	wep_load[641] = 4
 	wep_cost[641] = 1
-	wep_sprt[641] = sprBeamShotgun
+	wep_sprt[641] = sprSuperBeamShotgun
 	wep_area[641] = 15
 	wep_text[641] = "leaking"
 	wep_swap[641] = sndSwapShotgun
@@ -7096,7 +7096,7 @@ function scrWeapons() {
 	wep_auto[642] = 1
 	wep_load[642] = 4
 	wep_cost[642] = 1
-	wep_sprt[642] = sprBeamShotgun
+	wep_sprt[642] = sprUltraBeamShotgun
 	wep_area[642] = 22
 	wep_text[642] = "leaking"
 	wep_swap[642] = sndSwapShotgun

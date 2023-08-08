@@ -6,7 +6,7 @@ their collision can be NORMAL, PIERCING or PIERCING AT OVERKILL (piercing checks
 their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
 they have a FORCE and can be 0 or DIRECTIONAL */
 
-accuracy=10;
+accuracy = 8;//10
 ion=false;
 typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflects
 dmg = 2;
@@ -20,11 +20,11 @@ if instance_exists(Player)
 {
 	if Player.skill_got[19]==1
 	{
-	accuracy=5;
+		accuracy = 5;
 	}
 	if Player.race=24//Elementor's passive
 	{
-		image_yscale += 0.1;
+		image_yscale += 0.2;
 		accuracy -= 2;
 	}
 	if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
@@ -47,5 +47,5 @@ isog = true;
 canBeMoved = false;
 isLaser = false;
 UberCont.recursionCheck ++;
-alarm[2] = 4;
+alarm[2] = 5;
 final = 0;

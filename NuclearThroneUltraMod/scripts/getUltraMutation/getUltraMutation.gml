@@ -4,6 +4,7 @@
 function getUltraMutation(){
 	with Player
 	{
+		var isFishMode = scrIsGamemode(14);
 		//Horror
 		if race == 21
 		{
@@ -14,7 +15,10 @@ function getUltraMutation(){
 		repeat(4)
 		{
 			if ultra_got[i]
-				return i;
+			{
+				if !(isFishMode && i == 14)
+					return i;
+			}
 			i++;
 		}
 		if ultra_got[109]//Trash secret

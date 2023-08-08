@@ -25,7 +25,7 @@ if instance_exists(Player)
 	}
 	if scrIsCrown(24) && speed > 3//Crown of sloth
 	{
-		speed = 3
+		speed = max(speed-1,3)
 	}
 }
 else if(speed>4)

@@ -63,7 +63,7 @@ if prevhealth > my_health
 					dmgTaken *= 1 + part;
 			}
 		}
-		my_health -= damageDeal;
+		my_health -= prevhealth - dmgTaken;
 		if UberCont.opt_dmgindicator
 	    {
 	        var offset = sprite_height*0.5;

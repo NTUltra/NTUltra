@@ -1,5 +1,6 @@
 room_speed=UberCont.normalGameSpeed;
 SetSeed();
+
 if scrIsGamemode(8)
 {
 	with Floor

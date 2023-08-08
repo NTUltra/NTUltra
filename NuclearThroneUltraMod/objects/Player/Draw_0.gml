@@ -1,4 +1,18 @@
 var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+if alienIntestines > 0
+{
+	if alienIntestines > 180
+	{
+		draw_sprite_ext(sprAlienIntestines3,wave,x,y,1,1,alienIntestines*alienDir,c_white,1);
+	}
+	else if alienIntestines > 80
+	{
+		draw_sprite_ext(sprAlienIntestines2,wave,x,y,1,1,alienIntestines*alienDir,c_white,1);
+	}else if alienIntestines > 30
+	{
+		draw_sprite_ext(sprAlienIntestines1,wave,x,y,1,1,alienIntestines*alienDir,c_white,1);
+	}
+}
 if ultra_got[75] && speed < 1
 {
 	shader_set(shdDrawWhite);

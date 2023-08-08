@@ -116,8 +116,6 @@ else if enablePopUp == 3
 	var muts = popupEntry[popUpIndex[3]+1];
 	var al = array_length(muts);
 	var i = 0;
-	debug("muts: ", muts);
-	debug(al);
 	if muts != undefined
 	{
 		repeat(al)

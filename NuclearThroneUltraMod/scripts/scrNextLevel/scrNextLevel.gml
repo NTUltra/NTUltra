@@ -1,5 +1,35 @@
 /// @description areas regular
 function scrNextLevel() {
+	if scrIsCrown(34)
+	{
+		if skill_got[5]
+			rewinds = 2;
+		else
+			rewinds = 1;
+		with TimeRewinder
+		{
+			other.rewinds = rewinds;
+			instance_destroy();
+		}
+		if rewinds > 0
+		{
+			with instance_create(x,y,TimeRewinder) {
+				rewinds = other.rewinds;
+				my_health = other.my_health;
+				maxhealth = other.maxhealth;
+				ammo = other.ammo;
+				area = other.area;
+				lastarea = other.lastarea;
+				lastsubarea = other.lastsubarea;
+				subarea = other.subarea;
+				hard = other.hard;
+				oasis = other.oasis;
+				inverted = other.inverted;
+				freeAmmoRound = other.freeAmmoRound;
+				fromCribToVault = other.fromCribToVault;
+			}
+		}
+	}
 	freeAmmoRound = max(0,freeAmmoRound-1);
 	var prevHard = hard;
 	if scrIsGamemode(25)//Survival

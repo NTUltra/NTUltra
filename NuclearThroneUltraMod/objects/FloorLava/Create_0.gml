@@ -37,4 +37,4 @@ area=BackCont.area;
 
 if area=108
 sprite_index=sprInvertedFloorLava;
-
+alarm[1] = 10;

@@ -63,7 +63,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4df450c5-1e7f-4211-bccd-ba8d1613b00a","path":"sprites/sprUltraTentacle/sprUltraTentacle.yy",},},},"Disabled":false,"id":"7ca81a21-655c-4a3d-a0a5-c3e56f36b033","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 2,
     "yorigin": 2,
