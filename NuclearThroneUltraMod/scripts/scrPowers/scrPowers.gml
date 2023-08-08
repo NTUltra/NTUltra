@@ -5,9 +5,96 @@ function scrPowers() {
 	{
 		race = fakeRace;	
 	}
+	if skill_got[39] && alienTail < 400
+	{
+		if UberCont.normalGameSpeed == 60
+		{
+			if alienTail < 90
+				alienTail += 0.5;
+			else
+				alienTail += 0.25;
+		}
+		else
+		{
+			if alienTail < 90
+				alienTail += 1;
+			else
+				alienTail += 0.5;
+		}
+			
+	}
 	/////SHIT PRESSED////////
 	if KeyCont.key_spec[p] = 1
 	{
+		if alienTail > 2
+		{
+			var ys = 0;
+			snd_play(choose(sndWater1,sndWater2) ,0.1);
+			if alienTail > 30
+				snd_play_fire(sndRoll);
+			if alienTail > 55
+				snd_play_fire(sndBloodLauncher);
+			if alienTail > 120
+			{
+				ys += 0.1;
+				snd_play(sndBloodHammer,0.1);
+			}
+			var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+			BackCont.shake += alienTail*0.2;
+			var i = 0;
+			repeat(lerp(1,12,min(1,alienTail / 200)))
+			{
+				with instance_create(x,y,Tentacle)
+				{
+					image_yscale += ys;
+					image_angle = aimDirection+(random(30)-15)*other.accuracy
+					creator=other.id;
+					team = other.team
+					ammo = lerp(5,25,min(1,other.alienTail/200)) + i
+					event_perform(ev_alarm,0)
+					visible = 0
+					with instance_create(x,y,LightningSpawn)
+					{
+						sprite_index=sprTentacleSpawn
+						image_angle = other.image_angle
+						direction = image_angle;
+						speed = 1;
+					}
+					with instance_create(x,y,FishBoost)
+					{
+						motion_add( aimDirection+random(60)-30,2+random(4) );
+					}
+				}
+				i++;
+			}
+			i = 0;
+			repeat(lerp(0,24,min(1,alienTail / 400)))
+			{
+				with instance_create(x,y,Tentacle)
+				{
+					image_yscale += ys;
+					image_angle = random(360);
+					creator=other.id;
+					team = other.team
+					ammo = lerp(4,22,min(1,other.alienTail/250)) + i
+					event_perform(ev_alarm,0)
+					visible = 0
+					with instance_create(x,y,LightningSpawn)
+					{
+						sprite_index=sprTentacleSpawn
+						image_angle = other.image_angle
+						direction = image_angle;
+						speed = 1;
+					}
+					with instance_create(x,y,FishBoost)
+					{
+						motion_add( aimDirection+random(60)-30,2+random(4) );
+					}
+				}
+				i++;
+			}
+			alienTail = 0;
+		}
 		
 	if race = 26//Good O'l Humphry
 	{
@@ -1584,8 +1671,12 @@ function scrPowers() {
 		alarm[3] += rollIframe;
 		snd_play_2d(sndRoll)
 		mask_index = mskPickupThroughWall;
-		if skill_got[5] = 1
-			snd_play_2d(sndFishRollUpg)
+		if skill_got[5]
+		{
+			snd_play_2d(sndFishRollUpg);
+			if !audio_is_playing(sndFishRollUpgLoop)
+				snd_loop(sndFishRollUpgLoop);
+		}
 
 		instance_create(x,y,Dust)
 	}
@@ -1915,6 +2006,10 @@ function scrPowers() {
 	////////KEY RELEASE////////
 	if KeyCont.key_spec[p] == 3
 	{
+		if race == 1 && sound_isplaying(sndFishRollUpgLoop)
+		{
+			audio_stop_sound(sndFishRollUpgLoop);	
+		}
 		if race == 23
 		{
 			audio_stop_sound(sndFrogLoop) 

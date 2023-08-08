@@ -109,19 +109,28 @@ else if enablePopUp == 3
 	var xr = xx + ww;
 	var xl = xxx;
 	var yyy = yy + 12;
+	debug(popupEntry);
+	debug("AND NOW");
+	debug(popupEntry[popUpIndex[3]+1]);
+	debug("PI: ", popUpIndex);
 	var muts = popupEntry[popUpIndex[3]+1];
 	var al = array_length(muts);
 	var i = 0;
-	repeat(al)
+	debug("muts: ", muts);
+	debug(al);
+	if muts != undefined
 	{
-		draw_sprite(sprSkillIconHUD, muts[i], xxx, yyy);
-		xxx += 18;
-		if xxx >= xr
+		repeat(al)
 		{
-			xxx = xl
-			yyy += 18;
+			draw_sprite(sprSkillIconHUD, muts[i], xxx, yyy);
+			xxx += 18;
+			if xxx >= xr
+			{
+				xxx = xl
+				yyy += 18;
+			}
+			i++;
 		}
-		i++;
 	}
 }
 else if enablePopUp == 4

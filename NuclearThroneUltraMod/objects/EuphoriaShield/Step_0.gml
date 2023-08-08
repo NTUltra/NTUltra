@@ -2,7 +2,7 @@ if instance_exists(owner)
 {
 	x=owner.x;
 	y=owner.y;
-	if owner.myShield != id
+	if owner.myShield != id || owner.alarm[3] < 1
 	{
 		with owner.myShield
 		{

@@ -356,15 +356,9 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 				{
 					tx = x;
 					ty = y;
-					alarm[3] = max(alarm[3],6);
-					if myShield == -1 || !instance_exists(myShield)
-					{
-						myShield = instance_create(x,y,EuphoriaShield);
-						with myShield
-						{
-							owner = other.id;
-						}
-					}
+					alarm[3] = max(alarm[3],4);
+					snd_hurt = sndDamageNegate;
+					scrGiveEuphoriaShield();
 				}
 				with instance_create(tx,ty,WepPickup)
 				{
@@ -473,6 +467,27 @@ if skill_got[2] && tookHit && !exception
 	extrafeetalarm = 30;
 	extrafeetdodged = false;
 }
+if skill_got[38] && tookHit && alarm[3] < 1 && alarm[1] < 1
+{
+	metabolism += 1;
+	if metabolism > 3
+	{
+		metabolism = 0;
+		my_health = prevhealth;
+		alarm[3] += 20;
+		audio_stop_sound(snd_hurt);
+		snd_hurt = sndDamageNegate;
+		snd_play(snd_hurt);
+		scrGiveEuphoriaShield();
+		if skill_got[12] //Euphoria
+			alarm[3] += 24;
+		if race == 25//Doctor
+			scrCollectAmmo(1.75);
+		else
+			scrCollectAmmo(1.5);
+		tookHit = false;
+	}
+}
 
 //Crown of Greed
 if scrIsCrown(18) && !exception
@@ -566,6 +581,23 @@ armour=maxarmour;
 }
 if alarm[3] > 0/*|| lag>0 *//*&&my_health!=maxhealth*/&& !exception
 {
+	if spr_hurt
+	{
+		if canAnimateDuringImmune > -1 && canAnimateDuringImmune < 3
+		{
+			if UberCont.normalGameSpeed == 60
+				canAnimateDuringImmune += image_speed * 0.5;
+			else
+				canAnimateDuringImmune += image_speed;
+		}
+		else 
+		{
+			if speed > 0
+				sprite_index = spr_walk;
+			else
+				sprite_index = spr_idle;
+		}
+	}
 	if tookHit
 	{
 		my_health = prevhealth;
@@ -645,6 +677,10 @@ if (tookHit)
 			else
 				my_health = prevhealth;
 			resetPrevHealth = true;
+			alarm[3] += 15;
+			canAnimateDuringImmune = 0;
+			snd_hurt = sndDamageNegate;
+			scrGiveEuphoriaShield();
 			
 			with instance_create(x,y,SharpTeeth)
 				owner=other.id;
@@ -680,21 +716,19 @@ if (tookHit)
 		{
 			resetPrevHealth = true;
 			if race=25
-				alarm[3]=30;
+				alarm[3]=max(30,alarm[3]);
 			else
-				alarm[3]=26;//duration
-			myShield = instance_create(x,y,EuphoriaShield);
-			with myShield
-			{
-				owner = other.id;
-			}
+				alarm[3]=max(alarm[3],24);//duration
+			canAnimateDuringImmune = 0;
+			snd_hurt = sndDamageNegate;
+			scrGiveEuphoriaShield();
 		}
 	}
 }
 
 /* */
 ///strong spirit justasheep
-if(my_health<=0 && maxhealth>0)
+if(my_health <= 0 && maxhealth > 0)
 {
 
     if skill_got[25]//strong spirit
@@ -702,9 +736,11 @@ if(my_health<=0 && maxhealth>0)
     if strongspirit==true&&strongspiritused==false
     {
     snd_play(sndStrongSpiritLost);
-    my_health=1;
+    my_health = 1;
 	Sleep(50);
-    alarm[1]=20;//invincibility 
+	alarm[3] += 20;
+	snd_hurt = sndDamageNegate;
+	scrGiveEuphoriaShield();
     strongspiritused=true;
     strongspirit=false;
     }
@@ -713,26 +749,14 @@ if(my_health<=0 && maxhealth>0)
     {
     humphrySkill=0;
 	snd_play_2d(sndProtectiveMustache,0,true);
-	alarm[3] = max(alarm[3],20);
-	if myShield == -1 || !instance_exists(myShield)
-	{
-		myShield = instance_create(x,y,EuphoriaShield);
-		with myShield
-		{
-			owner = other.id;
-		}
-	}
+	alarm[3] += 20;
+	snd_hurt = sndDamageNegate;
+	scrGiveEuphoriaShield();
 	with PlayerAlarms
 			alarm[7] = 20;
-    my_health=1;
-    alarm[1]=20;//invincibility 
+    my_health = 1;
+	alarm[3] += 20;
     }
-    
-    if(alarm[1]>0)
-    {
-        my_health=1;
-    }
-
 }
 
 
@@ -836,12 +860,9 @@ if my_health <= 0 && armour < 1
 		my_health = maxhealth;
 		prevhealth = maxhealth;
 		snd_play_2d(sndPhoenixChicken);
-		myShield = instance_create(x,y,EuphoriaShield)
-		with myShield
-		{
-			owner = other.id
-		}
-		alarm[3] = 60 + (phoenixrevives*5);
+		snd_hurt = sndDamageNegate;
+		scrGiveEuphoriaShield();
+		alarm[3] = max(alarm[3],60 + (phoenixrevives*5));
 		snd_play(sndFlameCannonEnd,0.1,true);
 		var ang = direction + 180;
 		var am = min(44,23 + (phoenixrevives*2));

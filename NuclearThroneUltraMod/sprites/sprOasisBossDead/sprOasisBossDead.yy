@@ -77,7 +77,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e3c18cb7-670c-4f30-a3ee-8d0181718771","path":"sprites/sprOasisBossDead/sprOasisBossDead.yy",},},},"Disabled":false,"id":"8cc57e4d-5171-4179-bf04-726c920b2aea","IsCreationKey":false,"Key":10.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 32,
     "yorigin": 32,

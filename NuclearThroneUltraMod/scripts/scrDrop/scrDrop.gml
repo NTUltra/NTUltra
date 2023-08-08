@@ -18,7 +18,7 @@ function scrDrop(itemdrop, weapondrop) {
 			dropRateBuff = 0.07;
 		else
 			dropRateBuff = 0;
-		rabbit = (Player.skill_got[4]*(0.35+Player.betterrabbitpaw));
+		rabbit = (Player.skill_got[4]*(0.34+Player.betterrabbitpaw));
 		dropRateBuff += 0.93 + rabbit
 		+ rebelBuff
 		+ (Player.skill_got[28]*(Player.rage*0.0011))//max is 60%

@@ -285,9 +285,9 @@ if (type == network_type_data) {
 					for (var j = al; j > al-i; j--)
 					{
 						if (scoreSorter[| j] > scoreSorter[| j-1]) {
-							var swapper = scoreList[| j];
-							scoreList[| j] = scoreList[| j - 1]
-							scoreList[| j - 1] = swapper;
+							//var swapper = scoreList[| j];
+							//scoreList[| j] = scoreList[| j - 1]
+							//scoreList[| j - 1] = swapper;
 							var swapperScore = scoreSorter[| j];
 							scoreSorter[| j] = scoreSorter[| j - 1]
 							scoreSorter[| j - 1] = swapperScore;
@@ -297,14 +297,18 @@ if (type == network_type_data) {
 				//Reverse the list for races
 				show_debug_message("sorting: "+ string(isScore));
 				if !isScore
-					ds_list_sort(scoreList,false);
+					ds_list_sort(scoreSorter,false);
+				for (var j = al; j > al-i; j--)
+				{
+					scoreList[| j][0] = scoreSorter[| j];
+				}
 				//Rewrite!
 				if (file_exists(fileName))
 					ini_section_delete(stringChecker);
 				var al = ds_list_size(scoreList);
 				var scoreLeaderboard = "";
 				var readableLeaderboard = "";
-				for (var i = 0; i < al; i++)
+				for (var i = 00; i < al; i++)
 				{
 					var nextScore = scoreList[| i]+"|";
 					scoreLeaderboard += nextScore;
@@ -315,8 +319,9 @@ if (type == network_type_data) {
 					readableLeaderboard += nextScoreArray[0] + " " + nextScoreArray[2];
 					show_debug_message(readableLeaderboard);
 				}
-				
 			ini_close();
+			ds_list_destroy(scoreSorter);
+			ds_list_destroy(scoreList);
 			var sendBuffer = buffer_create(8,buffer_grow,1);
 			buffer_write(sendBuffer,buffer_u8,NETDATA.LEADERBOARD);
 			buffer_write(sendBuffer,buffer_string,readableLeaderboard);

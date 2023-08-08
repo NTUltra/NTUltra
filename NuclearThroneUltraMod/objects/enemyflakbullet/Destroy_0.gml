@@ -4,10 +4,11 @@ if team == 2
 {
 	proj = Bullet2;
 }
+var l = min(3,loops);
 repeat(6)
 {
 	with instance_create(x, y, proj) {
-	    motion_add(ang, 9)
+	    motion_add(ang, 9+l)
 	    image_angle = direction
 	    team = other.team
 	}

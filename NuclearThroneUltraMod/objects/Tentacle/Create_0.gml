@@ -9,12 +9,13 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 accuracy=10;
 ion=false;
 typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflects
-dmg=4;
+dmg = 2;
 image_speed = 0.3;
 target=noone;
-bloodDelay = 15;
+bloodDelay = 20;
 meatDmgReduction = 1;
 alarm[1] = 10;
+image_yscale = 0.5;
 if instance_exists(Player)
 {
 	if Player.skill_got[19]==1
@@ -23,7 +24,7 @@ if instance_exists(Player)
 	}
 	if Player.race=24//Elementor's passive
 	{
-		dmg += 1;
+		image_yscale += 0.1;
 		accuracy -= 2;
 	}
 	if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
@@ -31,7 +32,7 @@ if instance_exists(Player)
 		image_speed-=0.1;
 		dmg += 1;
 		alarm[1] = 8;
-		bloodDelay = 10;
+		bloodDelay = 16;
 		meatDmgReduction = 0;
 		image_yscale += 0.1;
 	}
@@ -46,3 +47,5 @@ isog = true;
 canBeMoved = false;
 isLaser = false;
 UberCont.recursionCheck ++;
+alarm[2] = 4;
+final = 0;

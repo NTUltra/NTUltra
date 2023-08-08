@@ -41,6 +41,7 @@ if alarm[1] > 1 && alarm[1] < 3
 if prevhealth > my_health
 {
 	var dmgTaken = prevhealth - my_health;//Damage increase
+	//var ogDmgTaken = dmgTaken;
 	if super
 	{
 		//Negate healing
@@ -54,34 +55,17 @@ if prevhealth > my_health
 		if Player.race == 26//HUMPHRY mr damage
 		{
 			dmgTaken = scrHumphryDamage(dmgTaken);
-			my_health = prevhealth - dmgTaken;
 		}
 		if Player.ultra_got[105]
 		{
 			dmgTaken = scrHandsDamageBuff(dmgTaken);
-			my_health = prevhealth - dmgTaken;
 		}
 		if Player.ultra_got[29] && Player.altUltra && Player.bwep == 0
 		{
 			dmgTaken = dmgTaken*1.20;
-			my_health = prevhealth - dmgTaken;
-		}
-		if (Player.ultra_got[71] == 1) //ANGEL Ultra tranquility
-		{
-		    if Player.my_health >= Player.maxhealth
-		    {
-				dmgTaken *= 1.75;
-			    repeat(max(1,ceil(dmgTaken*0.2)))
-			    {
-					with instance_create(x+random(16)-8,y+random(16)-8,Feather)
-						motion_add(random(360),5+random(10) );
-				}
-				my_health = prevhealth - dmgTaken;
-		    }
 		}
 		if ( (Player.skill_got[5] = 1) && (Player.race=11))//HUNTER THRONE BUTT
 		{
-			var dmgTaken = prevhealth-my_health;
 			if dmgTaken > 0
 			{
 				var resultDmgTaken = dmgTaken;
@@ -100,23 +84,41 @@ if prevhealth > my_health
 				dmgTaken = resultDmgTaken;
 			}
 		}
-
 		//HUNTERS A ULTRA
-		if (Player.ultra_got[41]==1 )
+		if (Player.ultra_got[41])
 		{
 			if(point_distance(x,y,Player.x,Player.y)<100)
 		    {
 				var damageDeal = dmgTaken * point_distance(x,y,Player.x,Player.y)*0.001;
-				my_health -= damageDeal//point_distance(x,y,Player.x,Player.y)/82;//82;
 		    }
 		    else
 		    {
 				var damageDeal = dmgTaken * point_distance(x,y,Player.x,Player.y)*0.0026;
-				my_health -= damageDeal;//point_distance(x,y,Player.x,Player.y)/29//28;
 		    }
 			dmgTaken += damageDeal;
 		}
-		
+		if (Player.skill_got[37]) //ECSTATIC FISTS
+		{
+			var part = 0.25;
+			if Player.race == 25 //Doctor
+				part = 0.3;
+			if Player.ultra_got[62] && Player.altUltra && Player.armour > 0 && Player.maxarmour > 0
+			{
+				//Living armour
+				if Player.maxarmour > 1
+					dmgTaken *= 1 + (((Player.armour - 1) / max(Player.maxarmour - 1,2)) * part);
+				else
+					dmgTaken *= 1 + part;
+			}
+			else if Player.my_health > 0 && Player.maxhealth > 0
+			{
+				if Player.maxhealth > 1
+					dmgTaken *= 1 + (((Player.my_health - 1) / max(Player.maxhealth - 1,2)) * part);
+				else
+					dmgTaken *= 1 + part;
+			}
+		}
+		my_health = prevhealth - dmgTaken;
 		if UberCont.opt_dmgindicator
 	    {
 			var offset = sprite_height*0.5;

@@ -1,7 +1,8 @@
 ///scrCollectAmmo();
 // /@description
 ///@param
-function scrCollectAmmo(gain_multiplier = 1){
+function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = false) {
+	var type = 0;
 	with Player
 	{
 		var pt = wep_type[wep];//primary ammo type
@@ -115,9 +116,9 @@ function scrCollectAmmo(gain_multiplier = 1){
 	if scrIsGamemode(9) //Casual mode
 		extra +=1;
 
-	if cursed
+	if isCursed
 	gain_multiplier += 0.5
-	if supercursed
+	if isSuperCursed
 	gain_multiplier += 0.5
 
 	Player.ammo[type] += floor((Player.typ_ammo[type]+extra) * gain_multiplier)

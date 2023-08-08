@@ -45,7 +45,7 @@ function scrDrawHUD() {
 		var hx = 20;
 		if dataRef.skill_got[36] //Absorbing pores
 			hx = 22;
-		draw_sprite(sprHealthBar,2,__view_get( e__VW.XView, 0 )+hx,__view_get( e__VW.YView, 0 )+4)
+		draw_sprite(sprHealtBarMetabolism,dataRef.metabolism,__view_get( e__VW.XView, 0 )+hx,__view_get( e__VW.YView, 0 )+4)
 		if dataRef.maxhealth!=0{
 		draw_sprite_ext(sprHealthFill,2,__view_get( e__VW.XView, 0 )+hx+2,__view_get( e__VW.YView, 0 )+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
 		draw_sprite_ext(sprHealthFill,1,__view_get( e__VW.XView, 0 )+hx+2,__view_get( e__VW.YView, 0 )+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
@@ -53,6 +53,10 @@ function scrDrawHUD() {
 		if ((dataRef.sprite_index = dataRef.spr_hurt and dataRef.image_index < 1 and !instance_exists(Portal)) or dataRef.lsthealth < dataRef.my_health) and !instance_exists(GenCont) and !instance_exists(LevCont)
 		draw_sprite_ext(sprHealthFill,0,__view_get( e__VW.XView, 0 )+hx+2,__view_get( e__VW.YView, 0 )+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
 		}
+		if dataRef.metabolism == 3
+			draw_sprite(sprHealtBarMetabolismFull,0,__view_get( e__VW.XView, 0 )+hx,__view_get( e__VW.YView, 0 )+4)
+		//if dataRef.alarm[3] > 0
+		//	draw_sprite(sprHealtBarImmune,0,__view_get( e__VW.XView, 0 )+hx,__view_get( e__VW.YView, 0 )+4)
 	}
 	else
 	{

@@ -1,6 +1,5 @@
 /// @description Init
-updateVersion = "BETA 30.20";
-updateVersion = "BETA 30.21";
+updateVersion = "BETA 30.22";
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;
 maxwep = 609;

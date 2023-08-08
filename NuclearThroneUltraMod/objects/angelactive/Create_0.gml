@@ -19,7 +19,7 @@ team = 2;
 if instance_exists(Player)
 {
 	team=Player.team;
-	Player.alarm[3] += 14;
+	Player.alarm[3] += 13;
 }
 image_speed = image_number/alarm[0];
 while image_speed < 0.1

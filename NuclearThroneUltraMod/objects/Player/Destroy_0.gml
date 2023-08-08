@@ -575,8 +575,8 @@ else if !reincarnate
 				runScore[13] = other.ultramod;
 				if getUltraMutation() != 255 || array_length(runScore) <= 14//Keep ultra display after using lives
 				{
-					runScore[14] = getUltraMutation();
-					runScore[15] = scrGetAllMutations();
+					runScore[14] = getUltraMutation();//Its possible to start with an ultra such as fish's buddy, but then have no new mutations.
+					runScore[15] = scrGetAllMutations();//Can be empty what then
 				}
 				debug("POST SCOORE: ",runScore);
 				canRestart = true;
@@ -750,4 +750,5 @@ with instance_create(x,y,DataRef)
 	drawempty = 0;
 	drawlowhp = 0;
 	spr_idle = other.spr_idle;
+	metabolism = other.metabolism;
 }

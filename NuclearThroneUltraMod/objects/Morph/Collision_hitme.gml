@@ -3,7 +3,8 @@ if other.team != team
 	with other
 	{
 		if(object_index!=Sheep&&object_index!=ExplosiveSheep){
-		    snd_play(snd_hurt, hurt_pitch_variation,true)
+		    if sprite_index != spr_hurt
+				snd_play(snd_hurt, hurt_pitch_variation,true)
 		    if UberCont.normalGameSpeed == 60
 				my_health -= other.dmg * 0.5;
 			else

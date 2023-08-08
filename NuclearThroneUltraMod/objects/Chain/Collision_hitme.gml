@@ -11,7 +11,7 @@ if candmg and other.team != team
 				my_health -= other.dmg;
 			sprite_index = spr_hurt
 			image_index = 0
-			motion_add(other.direction,6)
+			motion_add(point_direction(other.x,other.y,x,y),3)
 		}
 	}
 }

@@ -11,6 +11,8 @@ if (other.team != 2 && (mySize >= other.mySize-1 or impactWrist) and speed > 2)
 				snd_play(sndExplosionS,0.1,true);
 				instance_create(x,y,MeatExplosion);
 			}
+			if point_distance(Player.x,Player.y,other.x,other.y) > 350
+				dmg *= 0.5;
 		}
 	
 		with other
@@ -29,10 +31,10 @@ if (other.team != 2 && (mySize >= other.mySize-1 or impactWrist) and speed > 2)
 			}
 			sprite_index = spr_hurt
 			image_index = 0
-			motion_add(other.direction,other.speed*0.35)
+			motion_add(other.direction,other.speed*0.25)//0.35
 			snd_play(snd_hurt, hurt_pitch_variation)
 		}
-		speed *= 0.5;
+		speed *= 0.4;
 	}
 	else
 	{

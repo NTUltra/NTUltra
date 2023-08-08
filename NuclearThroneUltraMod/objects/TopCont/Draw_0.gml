@@ -251,6 +251,7 @@ with Statue
 }
 with Notice{draw_self();}
 with EuphoriaShield{draw_self();}
+with EuphoriaShieldEnd{draw_self();}
 with CampChar
 {
 	draw_self();

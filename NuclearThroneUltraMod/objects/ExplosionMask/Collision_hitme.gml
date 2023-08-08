@@ -10,7 +10,7 @@ if other.team == 2 && instance_exists(Player) && (!ezMode || other.sprite_index 
 		var dealtDamage = false;
 		var immune;
 		immune = 0
-		if Player.skill_got[14] = 1{
+		if object_index == Player && Player.skill_got[14] = 1{
 			immune = 1
 
 			if Player.race=25//Mutation smith
@@ -50,7 +50,7 @@ if other.team == 2 && instance_exists(Player) && (!ezMode || other.sprite_index 
 			dealtDamage = true;
 			my_health -= dealDmg;
 		}
-		if dealtDamage
+		if dealtDamage && alarm[3] < 1
 		{
 			snd_play(snd_hurt, hurt_pitch_variation)
 			sprite_index = spr_hurt

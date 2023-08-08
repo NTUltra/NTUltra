@@ -1,7 +1,7 @@
 image_angle = direction
 
 
-if speed < 3 and sprite_index != sprBullet9Disappear
+if speed < 2 and sprite_index != sprBullet9Disappear
 {
 sprite_index = sprBullet9Disappear
 image_index = 0

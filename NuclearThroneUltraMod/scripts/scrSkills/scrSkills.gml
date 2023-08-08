@@ -1,5 +1,5 @@
 function scrSkills() {
-	maxskill = 36;
+	maxskill = 39;
 
 
 	dir = 0
@@ -212,12 +212,12 @@ function scrSkills() {
 	skill_name[11] = "SCARIER FACE"
 	if isHand
 		skill_name[11] = "SCARIER NAIL"
-	skill_text[11] = "20% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE ON BIG HEALTHPOOLS"
+	skill_text[11] = "20% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS"
 	skill_tips[11] = "mirrors will break"
 	skill_msnd[11] =  sndMutScarierFace
 	if instance_exists(Player) && Player.race = 25
 	{
-		skill_text[11] = "22% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE ON BIG HEALTHPOOLS"
+		skill_text[11] = "22% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS"
 	}
 
 	skill_name[12] = "EUPHORIA"
@@ -419,12 +419,12 @@ function scrSkills() {
 	
 	skill_name[33] = "GLASS ARM CANNON"//Metroid reference I guess
 	if isDoctor
-		skill_text[33] = "27% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE ON BIG HEALTHPOOLS##-1 MAX HP"
+		skill_text[33] = "27% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-1 MAX HP"
 	else
-		skill_text[33] = "27% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE ON BIG HEALTHPOOLS##-2 MAX HP"
+		skill_text[33] = "27% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-2 MAX HP"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
-		skill_text[33] = "27% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE ON BIG HEALTHPOOLS##-2 MAX ARMOUR"
+		skill_text[33] = "27% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-2 MAX ARMOUR"
 	}
 	skill_tips[33] = "fragile"
 	skill_msnd[33] =  sndMutGlassArmCannon
@@ -470,6 +470,48 @@ function scrSkills() {
 	skill_tips[36] = "osmosis"
 	skill_msnd[36] =  sndMutAbsorbingPores
 	
+	
+	skill_name[37] = "ECSTACTIC FISTS"//REJUVINATED SKIN
+	skill_text[37] = "ALL DAMAGE TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR HEALTH IS#+25% AT MAX HP"
+	if isDoctor
+		skill_text[37] = "ALL DAMAGE TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR HEALTH IS#+30% AT MAX HP"
+	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
+	{
+		skill_text[37] = "ALL DAMAGE TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR ARMOUR IS#+25% AT MAX ARMOUR"
+		if isDoctor
+			skill_text[37] = "ALL DAMAGE TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR ARMOUR IS#+30% AT MAX ARMOUR"
+	}
+	skill_tips[37] = "glock those gun"
+	skill_msnd[37] =  sndMutEcstaticFists
+	
+	skill_name[38] = "ENRICHED METABOLISM"
+	skill_text[38] = "NEGATE EVERY FOURTH HIT YOU TAKE#AND GET AMMO INSTEAD"
+	if isDoctor
+			skill_text[38] = "NEGATE EVERY FOURTH HIT YOU TAKE#AND GET (MORE) AMMO INSTEAD"
+	skill_tips[38] = "delicious"
+	skill_msnd[38] =  sndMutEnrichedMetabolism
+	
+	skill_name[39] = "ALIEN INTESTINES"
+	skill_text[39] = "WHENEVER YOU TRY TO USE YOUR ACTIVE#TENTACLES COME OUT OF YOUR BODY!##MORE POWERFUL THE LONGER#YOU WAIT BETWEEN USES"
+	skill_tips[39] = "spatial anomaly"
+	skill_msnd[39] =  sndMutAlienIntestines
+		
+	/*
+		DAMAGE INCREASING MUTATION (GOOD AS DAMAGE INCREASE OUTSIDE OF FIRERATE INCREASE)
+		SHOOTING A WALL TEMPORARILY INCREASES DAMAGE YOU DEAL (STACKS)
+		DAMAGE IS INCREASED BASED ON YOUR HEALTH. +50% AT MAX HP
+		CONSTANT AMMO REGEN MUTATION (GOOD AS AMMO REGEN ON BOSS FIGHTS)
+		SOMETHING SOMETHING WHENEVER YOU USE YOUR ACTIVE SOMETHING SOMETHING
+		SOMETHING SOMETHING FIRES YOUR WEAPON
+		
+		skill_name[39] = "ALIEN TAIL"SPATIAL ANOMALY
+		skill_text[39] = "WHENEVER YOU TRY TO USE YOUR ACTIVE#TENTACLES SPAWN AT YOUR CROSSHAIR"
+		WHEVER YOU USE YOUR ACTIVE, SOMETHING YOU ARE OKE WITH DOING CONSTANTLY BUT DONT FEEL PRESSURED TO DO CONSTANTLY
+		WHENENEVER YOU USE YOUR ACTIVE TENTACLES COME OUT OF YOUR BODY#MORE AND LONGER TENTACLES IF YOU DONT USE YOUR ACTIVE FOR A WHILE
+		WHENEVER YOU USE YOUR ACTIVE TENTACLES COME OUT OF YOUR BODY#MORE POWERFULL IF YOU WAIT BETWEEN ACTIVE USES
+		skill_tips[39] = ""
+		skill_msnd[39] =  sndPartyHorn
+	*/
 	/*
 	skill_name[33] = "THRONE BACK"
 	skill_text[33] = "UPGRADES YOUR PASSIVE ABILITY"
@@ -479,10 +521,10 @@ function scrSkills() {
 	skill_msnd[33] =  sndMutThronebutt
 	*/
 	
-	skill_name[37] = "NOTHING"
-	skill_text[37] = "THERE ARE NO MORE MUTATIONS LEFT!"
-	skill_tips[37] = ""
-	skill_msnd[37] =  sndPartyHorn
+	skill_name[40] = "NOTHING"
+	skill_text[40] = "THERE ARE NO MORE MUTATIONS LEFT!"
+	skill_tips[40] = ""
+	skill_msnd[40] =  sndPartyHorn
 
 
 }

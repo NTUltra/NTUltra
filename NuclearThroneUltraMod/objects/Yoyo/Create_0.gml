@@ -5,3 +5,4 @@ dist = 0
 image_speed=1;
 distrange=20;
 dmg = 8;
+alarm[1] = 1;

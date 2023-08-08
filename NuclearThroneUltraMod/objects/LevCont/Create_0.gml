@@ -373,7 +373,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 		}
 	}
     scrSkills()//maybe dont run this when ultra
-    if (Player.skillsChosen == 7 && !Player.useGuarenteedReroll)//Fake pocession of patience
+    if (Player.guarenteedReroll > 0)//Fake pocession of patience
 	{
 		Player.skill_got[27] = 1;
 	}
@@ -493,9 +493,8 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
     
     if Player.race == 21 || Player.phoenixrevives > 6//Horror
     {
-    if Player.ultra_got[73] || (Player.skillsChosen == 7 && !Player.useGuarenteedReroll)//Melting ultra A patience
+    if Player.ultra_got[73] || (Player.guarenteedReroll > 0)//Melting ultra A patience
 	{
-		Player.useGuarenteedReroll = true;
 		Player.skill_got[27] = 0;
 		with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-140,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
 			skill = 27
@@ -522,9 +521,8 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
     
     }
     else{
-	    if Player.ultra_got[73] || (Player.skillsChosen == 7 && !Player.useGuarenteedReroll)//Melting ultra A patience
+	    if Player.ultra_got[73] || (Player.guarenteedReroll > 0)//Melting ultra A patience
 	    {
-			Player.useGuarenteedReroll = true;
 			Player.skill_got[27] = 0;
 		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-96,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
 				skill = 27
@@ -567,10 +565,8 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 	    }
 	    else  
 	    {
-    
-	    if Player.ultra_got[73] || (Player.skillsChosen == 7 && !Player.useGuarenteedReroll)//Melting ultra A patience
+	    if Player.ultra_got[73] || (/*Player.skillsChosen == 7 && */Player.guarenteedReroll > 0)//Melting ultra A patience
 	    {
-			Player.useGuarenteedReroll = true;
 			Player.skill_got[27] = 0;
 		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
 				skill = 27

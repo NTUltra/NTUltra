@@ -225,6 +225,9 @@ else if skill==25{
 else if skill=27//patience
 {	with Player
 	{
+		if guarenteedReroll > 0
+			guarenteedReroll -= 1;
+ 
 		if race=25
 		{
 			skillpoints++;

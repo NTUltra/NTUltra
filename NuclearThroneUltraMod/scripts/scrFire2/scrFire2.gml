@@ -3157,7 +3157,7 @@ function scrFire2() {
 	creator = other.id
 	//ammo = 9
 	chargetime = 2
-	costtime = 14
+	costtime = 16
 	team = other.team
 	event_perform(ev_alarm,0)
 	event_perform(ev_alarm,1) 
@@ -4293,7 +4293,8 @@ function scrFire2() {
 
 
 	with instance_create(x,y,Tentacle)
-	{image_angle = aimDirection+(random(30)-15)*other.accuracy
+	{
+		image_angle = aimDirection+(random(30)-15)*other.accuracy
 	creator=other.id;
 	team = other.team
 	ammo = 16
@@ -12492,6 +12493,71 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(45,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 8
 	wkick = 4
+
+	break;
+	
+	//MINI ROCKET SHOTGUN
+	case 640:
+
+	snd_play_fire(sndShotgun);
+	snd_play_fire(sndRocket);
+
+	with instance_create(x,y,RocketMini)
+	{motion_add(aimDirection+(random(8)-4)-5*other.accuracy,16 + (instance_number(RocketMini) % 2))
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,RocketMini)
+	{motion_add(aimDirection+(random(8)-4)-10*other.accuracy,16 + (instance_number(RocketMini) % 2))
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,RocketMini)
+	{motion_add(aimDirection+(random(8)-4)+5*other.accuracy,16 + (instance_number(RocketMini) % 2))
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,RocketMini)
+	{motion_add(aimDirection+(random(8)-4)+10*other.accuracy,16 + (instance_number(RocketMini) % 2))
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,RocketMini)
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,16 + (instance_number(RocketMini) % 2))
+	image_angle = direction
+	team = other.team}
+	
+
+	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 8
+	wkick = 4
+
+	break;
+	
+	//SUPER BEAM SHOTGUN
+	case 641:
+
+	//snd_play_fire(sndEraser)
+	with instance_create(x,y,SuperBeamShotgunBurst)
+	{
+	creator = other.id
+	ammo = 5
+	time = 1
+	team = other.team
+	event_perform(ev_alarm,0) 
+	}
+
+	break;
+	
+	//ULTRA BEAM SHOTGUN
+	case 642:
+
+	//snd_play_fire(sndEraser)
+	with instance_create(x,y,UltraBeamShotgunBurst)
+	{
+	creator = other.id
+	ammo = 6
+	time = 2
+	team = other.team
+	event_perform(ev_alarm,0) 
+	}
 
 	break;
 	

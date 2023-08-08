@@ -11,7 +11,6 @@ if other.team != team && team != 0
 				contactDmg = 8//dmg dealt by gamma guts
 			else
 				contactDmg = 7//dmg dealt by gamma guts (if you want to change it also change it in AngelActive
-			
 		}
 		if race == 15 //Atom
 		{
@@ -19,7 +18,7 @@ if other.team != team && team != 0
 			if ultra_got[58]
 				contactDmg += 6;
 		}
-		if contactDmg > 0 && PlayerAlarms2.alarm[3] < 1
+		if contactDmg > 0 && PlayerAlarms2.alarm[3] < 1 && !justAsheep
 		{
 			if UberCont.normalGameSpeed == 60
 			{
@@ -56,9 +55,26 @@ if other.team != team && team != 0
 						actuallyDead = true;	
 					}
 				}
-				if other.ultra_got[71] && other.my_health >= other.maxhealth
+				if other.skill_got[37] //&& other.my_health >= other.maxhealth
 			    {
-					dmgTaken = dmgTaken * 1.75;
+					var part = 0.25;
+					if other.race == 25 //Doctor
+						part = 0.3;
+					if ultra_got[62] && other.altUltra && other.armour > 0 && other.maxarmour > 0
+					{
+						//Living armour
+						if other.maxarmour > 1
+							dmgTaken *= 1 + (((other.armour - 1) / max(other.maxarmour - 1,2)) * part);
+						else
+							dmgTaken *= 1 + part;
+					}
+					else if other.my_health > 0 && other.maxhealth > 0
+					{
+						if other.maxhealth > 1
+							dmgTaken *= 1 + (((other.my_health - 1) / max(other.maxhealth - 1,2)) * part);
+						else
+							dmgTaken *= 1 + part;
+					}
 					if my_health - dmgTaken <= 0
 					{
 						actuallyDead = true;	

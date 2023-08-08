@@ -1,5 +1,4 @@
 event_inherited();
-type = 0;
 isArmour = false;
 if sprite_index == sprAmmo {
 	var curselevel = 0;

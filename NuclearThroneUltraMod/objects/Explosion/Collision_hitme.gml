@@ -3,7 +3,8 @@ if other.team != team && other.team!=2
 	with other
 	{
 		scrModHit();
-		snd_play(snd_hurt, hurt_pitch_variation)
+		if sprite_index != spr_hurt
+			snd_play(snd_hurt, hurt_pitch_variation,true)
 
 		if instance_exists(Player)
 		{

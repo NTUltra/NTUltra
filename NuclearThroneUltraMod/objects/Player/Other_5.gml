@@ -761,7 +761,7 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		maxCash = other.maxCash;
 		canHeal = other.canHeal;
 		lastEnemyKilled = other.lastEnemyKilled;
-		useGuarenteedReroll = other.useGuarenteedReroll;
+		guarenteedReroll = other.guarenteedReroll;
 		phoenixrevives = other.phoenixrevives;
 		cwepmod2 = other.cwepmod2
 		cwepmod3 = other.cwepmod3

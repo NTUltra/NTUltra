@@ -9,7 +9,7 @@ if scrIsGamemode(29) || cheatyinfiniteammo || freeAmmoRound > 0//Infinite ammo
 	alarm[2] = 2;
 if unkillable
 {
-	alarm[1] = 2;
+	alarm[3] = 2;
 }
 if !instance_exists(LevCont) and visible = 1
 {
@@ -163,8 +163,13 @@ if !instance_exists(LevCont) and visible = 1
 		{if sprite_index != spr_hurt
 		sprite_index = spr_walk}
 		if sprite_index = spr_hurt
-		{if image_index > 2
-		sprite_index = spr_idle}
+		{
+			if image_index > 2
+			{
+				sprite_index = spr_idle;
+				canAnimateDuringImmune = -1;
+			}
+		}
 
 		if skill_got[5] = 1
 		{
@@ -338,13 +343,13 @@ if !instance_exists(LevCont) and visible = 1
 				thing = instance_create(x,y,PopupText)
 				thing.mytext = "NOT UNKILLABLE!";
 				unkillable = false;
-				alarm[1] = 1;
+				alarm[3] = 1;
 				snd_play(sndStrongSpiritLost)
 			} else {
 				thing = instance_create(x,y,PopupText)
 				thing.mytext = "UNKILLABLE!";
 				unkillable = true;
-				alarm[1] = 2;
+				alarm[3] = 2;
 				snd_play(sndStrongSpiritGain)
 			}
 		}
@@ -1256,7 +1261,7 @@ else if lstCash > cash
 {
 	lstCash -= 0.5;	
 }
-if sprite_index != spr_hurt and lsthealth > my_health && alarm[3] < 1
+if sprite_index != spr_hurt and lsthealth > my_health// && alarm[3] < 1
 {
 	//if drawlowhp < 30 and my_health <= 4 && !audio_is_playing(snd_lowh)
 	//	snd_play_2d(snd_lowh, 0, true,false,10)
@@ -1906,17 +1911,6 @@ if race==18&& !instance_exists(LevCont)// && !instance_exists(Portal)
     if flyduration>25//&&random(2)<1
     {with instance_create(x+random(16)-8,y+random(16)-8,Feather)
     motion_add(random(360),5+random(10) );}
-    
-if ultra_got[71]//tranquility
-{
-	if UberCont.normalGameSpeed == 60
-		tranquilitydelay -= 0.5;
-	else
-		tranquilitydelay--;
-
-if tranquilitydelay <=0
-tranquilitydelay=0;
-}
     
 }
 

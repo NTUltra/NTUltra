@@ -225,6 +225,8 @@ function scrDrawBloom() {
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with EuphoriaShield
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
+	with EuphoriaShieldEnd
+	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with Disc
 	draw_sprite_ext(sprite_index,-1,xprevious,yprevious,1,1,image_angle,c_white,ba)
 	with MiniFlameCannonBall

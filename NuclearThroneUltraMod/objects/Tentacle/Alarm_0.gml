@@ -70,17 +70,14 @@ direction = image_angle+(random(accuracy)-(accuracy*0.5))//30 - 15
 speed = 4
 if target != noone && instance_exists(target) && target.team != team
 {
-if point_distance(x,y,target.x,target.y) < 170-accuracy//120
-motion_add(point_direction(x,y,target.x,target.y),1.6-(accuracy*0.05))//1
+	if !collision_line(x,y,target.x,target.y,Wall,false,false) && point_distance(x,y,target.x,target.y) < 170-accuracy//120
+		motion_add(point_direction(x,y,target.x,target.y),1.6-(accuracy*0.05))//1
 }
 image_angle = direction
 speed = 0
 
 move_contact_solid(direction,8+random(4))
 speed = 0
-image_xscale = -point_distance(x,y,oldx,oldy)/4
-
-
 var ammoDecrease = 1;
 	var modBoost = 0.06;
 	with Player
@@ -121,12 +118,14 @@ else
 		direction += 180+random_range(-20,20)
 	}
 }
-
+image_xscale = -point_distance(x,y,oldx,oldy)*0.25;
 if round(ammo) > 0
 {
 	image_index += 0.4/max(1,ceil(ammo));
 	with instance_create(x,y,Tentacle)
 	{
+		final = 1;
+		image_yscale = min(other.image_yscale + 0.05,2);
 		target = other.target;
 		alarm[1] = other.alarm[1];
 		scrCopyWeaponMod(other);
@@ -141,8 +140,22 @@ if round(ammo) > 0
 		ammo = other.ammo
 		team = other.team
 		image_index = other.image_index
-		event_perform(ev_alarm,0);
+		if ammo % 8 != 0
+		{
+			event_perform(ev_alarm,0);
+		}
+		else
+		{
+			BackCont.shake ++;
+			with instance_create(x,y,FishBoost)
+			{
+				motion_add(other.direction+random(60)-30,other.speed );
+			}
+			snd_play(choose(sndRoll,sndWater1,sndWater2));
+			alarm[0] = 1;
+		}
 	}
+	final = 0;
 }
 else
 {

@@ -2,7 +2,8 @@
 snd_play(sndFlakCannon)
 with instance_create(x,y,EnemyFlakBullet)
 {
-	motion_add(other.gunangle,8+random(2))
+	loops += other.loops;
+	motion_add(other.gunangle,other.pspeed+random(2))
 	image_angle = direction
 	team = other.team
 }

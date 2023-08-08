@@ -6,7 +6,7 @@ function scrDecideCurse(){
 	var curse = 0;
 	if instance_exists(Player)
 	{
-		if Player.area == 115
+		if Player.area == 115 || Player.area == 128 || Player.area == 129
 		{
 			curse = 1
 			return curse;

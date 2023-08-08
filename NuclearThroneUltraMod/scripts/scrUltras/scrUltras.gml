@@ -520,8 +520,12 @@ function scrUltras(altOverride = false) {
 	    ultra_tips[70] = "emo style"
     
 	    ultra_name[71] = "TRANQUILITY"
-	    ultra_text[71] = "WHEN AT OR ABOVE FULL HEALTH#YOU DEAL 50% MORE DAMAGE"
-	    ultra_tips[71] = "experience tranquility"
+		/*
+			ultra_text[71] = "WHEN AT OR ABOVE FULL HEALTH#YOU DEAL 50% MORE DAMAGE"
+			WHENEVER YOU ARE IMMUNE YOU FIRE PROJECTILES AT ENEMIES
+		*/
+		ultra_text[71] = "WHENEVER YOU ARE IMMUNE#YOU FIRE PROJECTILES#AT ENEMIES"
+	    ultra_tips[71] = "no one can hurt me"
     
 	    ultra_name[72] = "ASCENT"
 	    ultra_text[72] = "YOU CAN FLY OVER WALLS FOREVER#ALSO DEFLECT ON YOUR RETICLE"

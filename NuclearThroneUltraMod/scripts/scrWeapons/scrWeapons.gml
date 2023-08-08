@@ -1245,7 +1245,7 @@ function scrWeapons() {
 	wep_load[112] = 5
 	wep_cost[112] = 0
 	wep_sprt[112] = sprInfinityPistol
-	wep_area[112] = 12
+	wep_area[112] = 10
 	wep_text[112] = "trusty new revolver"
 	wep_swap[112] = sndSwapPistol
 	wep_rad[112] = 0;
@@ -1256,7 +1256,7 @@ function scrWeapons() {
 	wep_load[113] = 4
 	wep_cost[113] = 0
 	wep_sprt[113] = sprInfinityMachinegun
-	wep_area[113] = 18
+	wep_area[113] = 14
 	wep_text[113] = "endless"
 	wep_swap[113] = sndSwapMachinegun
 	wep_rad[113] = 0;
@@ -1674,7 +1674,7 @@ function scrWeapons() {
 	wep_load[151] = 19//18
 	wep_cost[151] = 0
 	wep_sprt[151] = sprInfinityShotgun
-	wep_area[151] = 18
+	wep_area[151] = 14
 	wep_text[151] = "eternal"
 	wep_swap[151] = sndSwapShotgun
 	wep_rad[151] = 0;
@@ -1685,7 +1685,7 @@ function scrWeapons() {
 	wep_load[152] = 24//25
 	wep_cost[152] = 0
 	wep_sprt[152] = sprInfinityCrossbow
-	wep_area[152] = 18
+	wep_area[152] = 14
 	wep_text[152] = "forever"
 	wep_swap[152] = sndSwapBow
 	wep_rad[152] = 0;
@@ -2664,7 +2664,7 @@ function scrWeapons() {
 	wep_load[241] = 21//22
 	wep_cost[241] = 0
 	wep_sprt[241] = sprInfinitySlugger
-	wep_area[241] = 18
+	wep_area[241] = 14
 	wep_text[241] = "8"
 	wep_swap[241] = sndSwapShotgun
 	wep_rad[241] = 0;
@@ -2675,7 +2675,7 @@ function scrWeapons() {
 	wep_load[242] = 9//10
 	wep_cost[242] = 0
 	wep_sprt[242] = sprInfinityLaserGun
-	wep_area[242] = 18
+	wep_area[242] = 14
 	wep_text[242] = "boundlessness"
 	wep_swap[242] = sndSwapEnergy
 	wep_rad[242] = 0;
@@ -3673,7 +3673,7 @@ function scrWeapons() {
 	wep_name[333] = "HYPER GATLING BAZOOKA"
 	wep_type[333] = 4
 	wep_auto[333] = 1
-	wep_load[333] = 1
+	wep_load[333] = 3
 	wep_cost[333] = 0.5
 	wep_sprt[333] = sprHyperGatlingBazooka
 	wep_area[333] = 12
@@ -4171,7 +4171,7 @@ function scrWeapons() {
 	wep_load[376] = 3
 	wep_cost[376] = 0
 	wep_sprt[376] = sprInfinitySmartGun
-	wep_area[376] = 22
+	wep_area[376] = 20
 	wep_text[376] = "think forever"
 	wep_swap[376] = sndSwapMachinegun
 	wep_rad[376] = 0;
@@ -5249,7 +5249,7 @@ function scrWeapons() {
 	wep_load[474] = 18
 	wep_cost[474] = 1
 	wep_sprt[474] = sprFrazer
-	wep_area[474] = 11
+	wep_area[474] = 13
 	wep_text[474] = "frost flame"
 	wep_swap[474] = sndSwapFlame
 	wep_rad[474] = 0;
@@ -5821,7 +5821,7 @@ function scrWeapons() {
 	wep_load[526] = 12
 	wep_cost[526] = 0
 	wep_sprt[526] = sprInfinityJackHammer
-	wep_area[526] = 19
+	wep_area[526] = 17
 	wep_text[526] = "never stop hammer time"
 	wep_swap[526] = sndSwapMotorized
 	wep_rad[526] = 0;
@@ -6522,7 +6522,7 @@ function scrWeapons() {
 	wep_name[590] = "TERMITE INJECTOR"
 	wep_type[590] = 0
 	wep_auto[590] = 0
-	wep_load[590] = 19
+	wep_load[590] = 18
 	wep_cost[590] = 0
 	wep_sprt[590] = sprTermiteInjector
 	wep_area[590] = 14
@@ -6907,8 +6907,8 @@ function scrWeapons() {
 	wep_name[625] = "DOUBLE ENERGY LANCE"
 	wep_type[625] = 5
 	wep_auto[625] = 0
-	wep_load[625] = 18
-	wep_cost[625] = 4
+	wep_load[625] = 17
+	wep_cost[625] = 3.5
 	wep_sprt[625] = sprDoubleEnergyLance
 	wep_area[625] = 14
 	wep_text[625] = "it be that way sometimes"
@@ -6987,7 +6987,7 @@ function scrWeapons() {
 	wep_load[632] = 5
 	wep_cost[632] = 0.5
 	wep_sprt[632] = sprMiniRocketGun
-	wep_area[632] = 7
+	wep_area[632] = 8
 	wep_text[632] = ""
 	wep_swap[632] = sndSwapExplosive
 	wep_rad[632] = 0;
@@ -7068,6 +7068,39 @@ function scrWeapons() {
 	wep_text[639] = "imprisoned in hellheim"
 	wep_swap[639] = sndSwapBow
 	wep_rad[639] = 0;
+	
+	wep_name[640] = "MINI ROCKET SHOTGUN"
+	wep_type[640] = 4
+	wep_auto[640] = 1
+	wep_load[640] = 20
+	wep_cost[640] = 2.5
+	wep_sprt[640] = sprMiniRocketGun
+	wep_area[640] = 12
+	wep_text[640] = ""
+	wep_swap[640] = sndSwapExplosive
+	wep_rad[640] = 0;
+	
+	wep_name[641] = "SUPER BEAM SHOTGUN"
+	wep_type[641] = 2
+	wep_auto[641] = 1
+	wep_load[641] = 4
+	wep_cost[641] = 1
+	wep_sprt[641] = sprBeamShotgun
+	wep_area[641] = 15
+	wep_text[641] = "leaking"
+	wep_swap[641] = sndSwapShotgun
+	wep_rad[641] = 0;
+	
+	wep_name[642] = "ULTRA BEAM SHOTGUN"
+	wep_type[642] = 2
+	wep_auto[642] = 1
+	wep_load[642] = 4
+	wep_cost[642] = 1
+	wep_sprt[642] = sprBeamShotgun
+	wep_area[642] = 22
+	wep_text[642] = "leaking"
+	wep_swap[642] = sndSwapShotgun
+	wep_rad[642] = 5;
 	
 
 	maxwep = array_length(wep_name)-1;

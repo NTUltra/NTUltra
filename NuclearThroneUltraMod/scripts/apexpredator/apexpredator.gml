@@ -13,9 +13,10 @@ function ApexPredator(){
 					owner = other.id;
 				}
 			}
-			if alarm[3] < 90
+			snd_hurt = sndDamageNegate;
+			if alarm[3] < 70
 			{
-				alarm[3] += 1 + (Player.speed*1.5);
+				alarm[3] += 1 + (Player.speed*1.4);
 				if skill_got[5]
 					alarm[3] += 1;
 				if skill_got[2]

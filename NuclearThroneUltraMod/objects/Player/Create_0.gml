@@ -18,7 +18,8 @@ radPickedUp = 0;
 maxRadPickedUp = 100;
 saveLoaded = false;
 outOfCombat = false;
-useGuarenteedReroll = false;
+guarenteedReroll = 1;
+metabolism = 0;
 restarted = false;
 hurt_pitch_variation = 0;
 reachedUltra = false;
@@ -29,6 +30,7 @@ isPureHealthBoost = 0;
 hunterEye = 0;
 hunterEyeMax = 200;
 sheepFakeouts = 0;
+alienTail = 0;
 charpoints = 0;
 freeAmmoRound = 0;
 hogWep[0] = 0;
@@ -625,7 +627,6 @@ flyduration = 0;
 flymax = 50;
 
 
-tranquilitydelay = 0;
 
 moddelay = 0;
 
@@ -714,6 +715,7 @@ if scrCheckGold(wep_name[wep])
 	onlyusemegold = true;
 isAlkaline = true;
 myShield = -1;
+canAnimateDuringImmune = -1;
 if scrIsGamemode(25) && !instance_exists(SurvivalWave)
 {
 	instance_create(x,y,SurvivalWave);	

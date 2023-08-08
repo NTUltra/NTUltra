@@ -44,7 +44,7 @@ if  target != noone
 	else if point_distance(target.x,target.y,x,y) < 70 && alarm[5] < 1
 	{//SMACK THAT ANYWAYS WE CAN GO THROUGH WALLS FK THAT SHIT
 		if alarm[5] < 1 {
-			alarm[2]=12-smackdelayReduction//the delay that everyone wants its longer here cause you wont expect this
+			alarm[2]=14-smackdelayReduction//the delay that everyone wants its longer here cause you wont expect this
 			instance_create(x,y,Notice);
 			instance_create(x+5,y,Notice);
 			instance_create(x-5,y,Notice);
