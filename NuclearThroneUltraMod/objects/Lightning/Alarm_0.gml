@@ -96,10 +96,10 @@ oldx = x
 oldy = y
 direction = image_angle+((random(branch)-branch*0.5)*simpleAccuracy)//30-15   24-12
 speed = 4
-if instance_exists(target)
+if instance_exists(target) && target != noone && target.team != team && target.my_health > 0
 {
 	//var dir = instance_nearest(x+lengthdir_x(80,direction),y+lengthdir_y(80,direction),target)
-	if target.my_health > 0 && !collision_line(x,y,target.x,target.y,Wall,false,false) && point_distance(x,y,target.x,target.y) < 150-accuracy*2
+	if !collision_line(x,y,target.x,target.y,Wall,false,false) && point_distance(x,y,target.x,target.y) < 150-accuracy*2
 		motion_add(point_direction(x,y,target.x,target.y),1.5-(accuracy*0.04))
 }
 image_angle = direction
@@ -175,7 +175,7 @@ if round(ammo) > 0
 	image_index += 0.4/max(1,ceil(ammo));
 	with instance_create(x,y,object_index)
 	{
-		target = other.target;
+		//target = other.target;
 		isog = other.isog;
 		branch = other.branch;
 		fork = other.fork;

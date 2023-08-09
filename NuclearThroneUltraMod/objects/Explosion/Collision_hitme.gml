@@ -9,9 +9,9 @@ if other.team != team && other.team!=2
 		if instance_exists(Player)
 		{
 			if UberCont.normalGameSpeed == 60
-				my_health -= (other.dmg + Player.ultra_got[57]*5) * 0.5//atom ultra
+				my_health -= (other.dmg + Player.ultra_got[57]*4) * 0.5//atom ultra
 			else
-				my_health -= other.dmg + Player.ultra_got[57] * 5//atom ultra
+				my_health -= other.dmg + Player.ultra_got[57] * 4//atom ultra
 		}
 		else
 		{

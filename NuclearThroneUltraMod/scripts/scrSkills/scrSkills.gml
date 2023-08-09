@@ -37,6 +37,8 @@ function scrSkills() {
 	skill_tips[0] = ""
 
 	skill_name[1] = "RHINO SKIN"
+	if !UberCont.useSeed && random(200) < 1
+		skill_name[1] = "JUGGERNOG";
 	if isDoctor
 		skill_text[1] = "+5 MAX HP"
 	else
@@ -173,7 +175,7 @@ function scrSkills() {
 	skill_tips[8] = "skin glows"
 	skill_msnd[8] =  sndMutGammaGuts
 
-	if random(200)<1
+	if !UberCont.useSeed && random(200) < 1
 	{
 	skill_name[9] = "SECOND TUMMY"
 	skill_text[9] = "OMNOMNOMNOM"

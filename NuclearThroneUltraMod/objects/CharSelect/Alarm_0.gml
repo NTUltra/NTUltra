@@ -7,6 +7,3 @@ image_index = racemax+1
 image_speed = 0
 
 visible = 1
-
-normalDepth = depth - 1;
-lowerDepth = depth;

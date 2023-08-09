@@ -1,6 +1,9 @@
 var ezMode = scrIsGamemode(9)
-if other.team == 2 && instance_exists(Player) && (!ezMode || other.sprite_index != other.spr_hurt) 
+if alarm[0] < 1 && other.team == 2 && instance_exists(Player) && (!ezMode || other.sprite_index != other.spr_hurt) 
 {
+	if UberCont.normalGameSpeed == 60
+		alarm[0] = 1;
+	//Deals double damage in 60fps?
 	var dealDmg = dmg;
 	if ezMode
 		dealDmg *= 0.5;
@@ -8,10 +11,9 @@ if other.team == 2 && instance_exists(Player) && (!ezMode || other.sprite_index 
 	{
 		var immunelimit = 5;
 		var dealtDamage = false;
-		var immune;
-		immune = 0
-		if object_index == Player && Player.skill_got[14] = 1{
-			immune = 1
+		var immune = false
+		if object_index == Player && Player.skill_got[14]{
+			immune = true
 
 			if Player.race=25//Mutation smith
 				immunelimit=6;
@@ -21,7 +23,7 @@ if other.team == 2 && instance_exists(Player) && (!ezMode || other.sprite_index 
 		}
 
 
-		if immune = 1
+		if immune
 		{
 			alarm[4]=50;
 			if ultra_got[62] && altUltra && armour > immunelimit//Living armour

@@ -38,6 +38,7 @@ if race != 0 && (spacebar || UberCont.mouse__x > __view_get( e__VW.XView, 0 )+xo
         if (wepmenuopen) {
 			snd_play_2d(sndClickBack);
             wepmenuopen = false;
+			ultraOpen = false;
 			crownIcons = [];
 			/*
 			with CrownIcon
@@ -49,25 +50,6 @@ if race != 0 && (spacebar || UberCont.mouse__x > __view_get( e__VW.XView, 0 )+xo
         } else {
 			snd_play_2d(sndClick);
             wepmenuopen = true;
-			//BackCont.viewx2 = (Menu.char[Menu.race].x-__view_get( e__VW.WView, 0 )/2);
-			//BackCont.viewy2 = (Menu.char[Menu.race].y-__view_get( e__VW.HView, 0 )/2);
-			/*
-			var dir = 0
-			repeat(crownmax+1)
-			{
-			if dir<10
-			{crownIcons[dir] = instance_create(__view_get( e__VW.XView, 0 )+18+dir*32,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-50,CrownIcon)//24
-			with crownIcons[dir]
-				crown = dir
-			}
-			else
-			{crownIcons[dir] = instance_create(__view_get( e__VW.XView, 0 )+18+(dir-9)*32,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-16,CrownIcon)//24
-			with crownIcons[dir]
-				crown = dir
-			}
-			dir += 1}
-			with CharSelect
-				visible = false;*/
         }
     }
 } else {
@@ -141,6 +123,20 @@ if race != 0 && UberCont.mouse__x > sx-24 and UberCont.mouse__x < sx and UberCon
 else
 scale=1;
 
+if race != 0 && UberCont.mouse__x > sx-24 - 24 and UberCont.mouse__x < sx - 24 and UberCont.mouse__y > __view_get( e__VW.YView, 0 )+60-12 and UberCont.mouse__y < __view_get( e__VW.YView, 0 )+60+12
+{
+	ultraScale=1.4;
+
+	if mouse_check_button_pressed(mb_left)
+	{
+		snd_play_2d(choose(sndMenuASkin,sndMenuBSkin));
+		ultraOpen = !ultraOpen;
+	}
+
 }
-sx = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-135;
+else
+	ultraScale = 1;
+
+}
+sx = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-sxo;
 imageIndex += 0.5;

@@ -10,7 +10,7 @@
   "bitRate": 192,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.0,
+  "duration": 0.405351,
   "parent": {
     "name": "Crystal",
     "path": "folders/Sounds/Player/Crystal.yy",

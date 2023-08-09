@@ -10,7 +10,7 @@
   "bitRate": 192,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.0,
+  "duration": 0.517347,
   "parent": {
     "name": "Fish",
     "path": "folders/Sounds/Player/Fish.yy",

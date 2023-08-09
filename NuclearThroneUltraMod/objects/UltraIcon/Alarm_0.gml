@@ -46,7 +46,7 @@ else if skill == 35 && Player.race == 9 && (Player.unlockAlternativeUltras || sc
 	sprite_index = sprReverseFocus;	
 }
 else if skill == 39 && Player.race == 10 && (Player.unlockAlternativeUltras || (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep]) || 
-(!Player.skill_got[1] && !Player.skill_got[7] && !Player.skill_got[9]&& !Player.skill_got[25])
+(!Player.skill_got[32] && !Player.skill_got[7] && !Player.skill_got[9]&& !Player.skill_got[36])
 ))
 {
 	sprite_index = sprBigRebel;
@@ -55,7 +55,7 @@ else if skill == 43 && Player.race == 11 && (Player.unlockAlternativeUltras || P
 {
 	sprite_index = sprSniperEye;
 }
-else if skill == 47 && Player.race == 12 && (Player.unlockAlternativeUltras || !Player.skill_got[1] && Player.skill_got[3])
+else if skill == 47 && Player.race == 12 && (Player.unlockAlternativeUltras || ((Player.skill_got[36] && Player.skill_got[3]) || scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep])))
 {
 	sprite_index = sprGreenTeam;
 }
@@ -91,7 +91,7 @@ else if skill == 68 && Player.race == 17 && (Player.unlockAlternativeUltras || s
 {
 	sprite_index = sprEnginuity;
 }
-else if skill == 72 && Player.race == 18 && (Player.unlockAlternativeUltras || ((Player.maxhealth < 8 && !scrIsGamemode(9)) || (scrIsGamemode(9) && Player.maxhealth < 8 + UberCont.casualModeHPIncrease)))
+else if skill == 72 && Player.race == 18 && (Player.unlockAlternativeUltras || ((Player.maxhealth < 8 && !scrIsGamemode(9)) || (scrIsGamemode(9) && Player.maxhealth < 8 + UberCont.casualModeHPIncrease) || scrIsCrown(32)))
 {
 	sprite_index=sprMirror;
 }
@@ -99,7 +99,7 @@ else if skill == 74 && Player.race == 19 && (Player.unlockAlternativeUltras || s
 {
 	sprite_index = sprReminisce;
 }
-else if skill == 76 && Player.race == 19 && (Player.unlockAlternativeUltras || Player.ultimategamble=true)
+else if skill == 76 && Player.race == 19 && (Player.unlockAlternativeUltras || Player.ultimategamble==true)
 {
 	sprite_index = sprUltimateGamble;
 }
@@ -115,7 +115,7 @@ else if skill == 92 && Player.race == 23 && (Player.unlockAlternativeUltras || P
 {
 	sprite_index = sprSpikedFrog;
 }
-else if skill == 96 && Player.race == 24 && (Player.unlockAlternativeUltras || (scrIsCrown(11) || scrIsCrown(25) || Player.skill_got[2]) && !Player.skill_got[17])
+else if skill == 96 && Player.race == 24 && (Player.unlockAlternativeUltras || (scrIsCrown(11) || scrIsCrown(25)) && !Player.skill_got[17])
 {
 	sprite_index = sprAirLord;
 }

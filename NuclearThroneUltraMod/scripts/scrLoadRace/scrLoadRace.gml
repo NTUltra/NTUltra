@@ -653,15 +653,15 @@ function scrLoadRace() {
 	switch (race)
 	{
 	case 0:
-	snd_hurt=sndMutant1Hurt
-	snd_dead=sndMutant1Dead
-	snd_lowa=sndMutant1LowA;
-	snd_lowh=sndMutant1LowH;
-	snd_crwn=sndMutant1Crwn;
-	snd_chst=sndMutant1Chst;
-	snd_wrld=sndMutant1Wrld;
-	snd_thrn=sndMutant1Thrn;
-	snd_valt=sndMutant1Valt;
+	snd_hurt=sndMutant1Hurt;	//Got hit
+	snd_dead=sndMutant1Dead;	//Got dead
+	snd_lowa=sndMutant1LowA;	//Got low ammo
+	snd_lowh=sndMutant1LowH;	//Got low health
+	snd_crwn=sndMutant1Crwn;	//Got crown
+	snd_chst=sndMutant1Chst;	//Got chest
+	snd_wrld=sndMutant1Wrld;	//Got first subarea
+	snd_thrn=sndMutant1Thrn;	//Got secret area
+	snd_valt=sndMutant1Valt;	//Got crown vault
 	break;
 	case 1:
 	snd_hurt=sndMutant1Hurt

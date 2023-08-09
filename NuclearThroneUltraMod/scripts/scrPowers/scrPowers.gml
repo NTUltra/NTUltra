@@ -1791,13 +1791,20 @@ function scrPowers() {
 			instance_create(x,y,MeltSplat)
 			if Player.skill_got[5] = 1
 			{
+				if mySize > 4
+				{
+					ang = random(360)
+					instance_create(x+lengthdir_x(70,ang),y+lengthdir_y(70,ang),MeatExplosion)
+					instance_create(x+lengthdir_x(70,ang+120),y+lengthdir_y(70,ang+120),MeatExplosion)
+					instance_create(x+lengthdir_x(70,ang+240),y+lengthdir_y(70,ang+240),MeatExplosion)
+				}
 				ang = random(360)
-				if mySize > 1
+				if mySize > 2
 				{
 					instance_create(x,y,MeatExplosion);
-					instance_create(x+lengthdir_x(44,ang),y+lengthdir_y(24,ang),MeatExplosion)
-					instance_create(x+lengthdir_x(44,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
-					instance_create(x+lengthdir_x(44,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
+					instance_create(x+lengthdir_x(44,ang),y+lengthdir_y(44,ang),MeatExplosion)
+					instance_create(x+lengthdir_x(44,ang+120),y+lengthdir_y(44,ang+120),MeatExplosion)
+					instance_create(x+lengthdir_x(44,ang+240),y+lengthdir_y(44,ang+240),MeatExplosion)
 				}
 				else
 				{
@@ -1807,7 +1814,7 @@ function scrPowers() {
 				}
 				
 			}
-			else if mySize>1
+			else if mySize > 3
 			{
 				ang = random(360)
 				instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)

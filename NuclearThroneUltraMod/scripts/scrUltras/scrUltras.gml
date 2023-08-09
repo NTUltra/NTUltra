@@ -269,7 +269,7 @@ function scrUltras(altOverride = false) {
 	    ultra_text[39] = "ALLIES CAST LASERS TOWARDS EACH OTHER#THE MORE ALLIES YOU HAVE#THE HIGHER YOUR DROP RATE IS#ALIES DROP MORE RESOURCES#WHEN THEY DIE"
 	    ultra_tips[39] = "hurt stone"
 		
-		if altOverride || (instance_exists(Player) &&  Player.race == 10 && (Player.altUltra || Player.unlockAlternativeUltras || (scrCheckUltra(Player.wep_name[Player.wep]) || (!Player.skill_got[1] && !Player.skill_got[7] && !Player.skill_got[9]&& !Player.skill_got[25]) || scrCheckUltra(Player.wep_name[Player.bwep]) && instance_exists(UltraIcon))))
+		if altOverride || (instance_exists(Player) &&  Player.race == 10 && (Player.altUltra || Player.unlockAlternativeUltras || (scrCheckUltra(Player.wep_name[Player.wep]) || (!Player.skill_got[32] && !Player.skill_got[7] && !Player.skill_got[9]&& !Player.skill_got[36]) || scrCheckUltra(Player.wep_name[Player.bwep]) && instance_exists(UltraIcon))))
 		{
 			ultra_name[39] = "BIG REBEL"
 		    ultra_text[39] = "+40 MAX HP!#YOU CAN'T HEAL#EVERY LOOP RESET HP TO FULL#ALLIES COST AMMO"
@@ -321,7 +321,7 @@ function scrUltras(altOverride = false) {
 		
 		//Pluto and no rhino skin?
 		if altOverride || (instance_exists(Player) &&  Player.race == 12 && (Player.altUltra || Player.unlockAlternativeUltras || (
-		!Player.skill_got[1] && Player.skill_got[3]
+		((Player.skill_got[36] && Player.skill_got[3]) || scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep]))
 		&& instance_exists(UltraIcon))))
 		{
 			ultra_name[47] = "GREEN TEAM"
@@ -533,7 +533,7 @@ function scrUltras(altOverride = false) {
 		
 		//Have less than default max hp
 		if altOverride || (instance_exists(Player) &&  Player.race == 18 && (Player.altUltra || Player.unlockAlternativeUltras || (
-		((Player.maxhealth < 8 && !scrIsGamemode(9)) || (scrIsGamemode(9) && Player.maxhealth < 8 + UberCont.casualModeHPIncrease))
+		((Player.maxhealth < 8 && !scrIsGamemode(9)) || (scrIsGamemode(9) && Player.maxhealth < 8 + UberCont.casualModeHPIncrease)) || scrIsCrown(32)
 		&& instance_exists(UltraIcon))))
 		{
 			ultra_name[72] = "MIRROR"

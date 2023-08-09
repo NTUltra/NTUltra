@@ -65,7 +65,7 @@ accuracy=0;
 
 direction = image_angle+(random(accuracy)-(accuracy*0.5))//30 - 15
 speed = 4
-if target != noone && instance_exists(target) && target.team != team && target.my_health > 0
+if instance_exists(target) && target != noone && instance_exists(target) && target.team != team && target.my_health > 0
 {
 	if !collision_line(x,y,target.x,target.y,Wall,false,false) && point_distance(x,y,target.x,target.y) < 170-accuracy//120
 		motion_add(point_direction(x,y,target.x,target.y),1.6-(accuracy*0.05))//1

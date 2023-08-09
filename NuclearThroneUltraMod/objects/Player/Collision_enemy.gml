@@ -60,7 +60,7 @@ if other.team != team && team != 0
 					var part = 0.25;
 					if other.race == 25 //Doctor
 						part = 0.3;
-					if ultra_got[62] && other.altUltra && other.armour > 0 && other.maxarmour > 0
+					if other.ultra_got[62] && other.altUltra && other.armour > 0 && other.maxarmour > 0
 					{
 						//Living armour
 						if other.maxarmour > 1

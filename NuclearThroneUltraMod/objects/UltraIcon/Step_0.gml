@@ -122,7 +122,7 @@ else if skill == 43 && Player.race == 11 && (Player.skill_got[19] && Player.skil
 		ultra_tips[43] = "proper eyesight"
 	}
 }
-else if skill == 47 && Player.race == 12 && (!Player.skill_got[1] && Player.skill_got[3] || Player.unlockAlternativeUltras)
+else if skill == 47 && Player.race == 12 && (((Player.skill_got[36] && Player.skill_got[3]) || scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep])) || Player.unlockAlternativeUltras)
 {
 	with Player
 	{
@@ -360,7 +360,7 @@ else if skill == 35 && Player.race == 9 && (scrIsCrown(12) || Player.unlockAlter
 	}
 }
 else if skill == 39 && Player.race == 10 && (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep]) ||
-(!Player.skill_got[1] && !Player.skill_got[7] && !Player.skill_got[9]&& !Player.skill_got[25]) || Player.unlockAlternativeUltras)
+(!Player.skill_got[32] && !Player.skill_got[7] && !Player.skill_got[9]&& !Player.skill_got[36]) || Player.unlockAlternativeUltras)
 {
 	with Player {
 		scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
@@ -411,7 +411,7 @@ else if skill == 61 && Player.race == 16 && (scrKrakenWeapons(Player.wep) || scr
 		spr_dead=sprMutant16DDead;
 	}
 }
-else if skill == 72 && Player.race == 18 && ((Player.maxhealth < 8 && !scrIsGamemode(9)) || (scrIsGamemode(9) && Player.maxhealth < 8 + UberCont.casualModeHPIncrease) || Player.unlockAlternativeUltras)
+else if skill == 72 && Player.race == 18 && ((Player.maxhealth < 8 && !scrIsGamemode(9)) || (scrIsGamemode(9) && Player.maxhealth < 8 + UberCont.casualModeHPIncrease) || scrIsCrown(32) || Player.unlockAlternativeUltras)
 {
 	with Player
 	{

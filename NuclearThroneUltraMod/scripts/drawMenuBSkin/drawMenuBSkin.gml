@@ -2,7 +2,7 @@
 // /@description
 ///@param
 function drawMenuBSkin(skin,race,theColour){
-	var xx = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-60
+	var xx = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-48
 	var yy = __view_get( e__VW.YView, 0 )+68
 	if (skin == 1)
 	{
