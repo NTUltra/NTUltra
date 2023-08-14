@@ -19,7 +19,7 @@ if um == ultramods.bulletShotgun
 	snd_play_fire(sndSplinterGun)
 	with instance_create(x,y,Splinter)
 	{
-		dmg -= choose(0,1,1,1);
+		dmg -= choose(0,1);
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -40,6 +40,7 @@ else if um == ultramods.laserBullet
 	instance_destroy(id,false);
 	with instance_create(x,y,Laser)
 	{
+		defaultPierce -= 8;
 		image_yscale -= 0.4;
 		scrCopyWeaponMod(other);
 		isog = false;
@@ -60,6 +61,7 @@ else if um == ultramods.bulletPlasma
 	}
 	with instance_create(x,y,MiniPlasmaBall)
 	{
+		acc ++;
 		scrCopyWeaponMod(other);
 		ptime = 6;
 		direction = other.direction;

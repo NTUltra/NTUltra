@@ -41,6 +41,9 @@ with Player
 		scrForcePosition60fps();
 	}
 }
+var dis = 248;
+if scrIsGamemode(6)
+	dis = 48;
 with Floor
 {
 	spawnarea = 129;
@@ -50,7 +53,7 @@ with Floor
 			sprite_index = sprFloor129B;
 		else
 			sprite_index = sprFloor129;
-		if point_distance(x, y, Player.x, Player.y) > 256
+		if point_distance(x, y, Player.x, Player.y) > dis
 			scrPopEnemies();
 	}
 }

@@ -42,8 +42,20 @@ if place_meeting(x,y+vspeed,Wall)
 }
 if (hitWall)
 {
+	//speed -= acc*dt;
 	image_xscale -= wallScale*dt;
 	image_yscale -= wallScale*dt;
 	instance_create(x,y,Dust);
 	event_user(3);
+	if alarm[4] < 1
+	{
+		alarm[4] = 2;
+		var maxDis = 5;
+		while place_meeting(x,y,Wall) && maxDis > 0
+		{
+			x += lengthdir_x(1,direction);
+			y += lengthdir_y(1,direction);
+			maxDis--;
+		}
+	}
 }

@@ -32,6 +32,10 @@ with other
 	{
 		if !audio_is_playing(snd_hurt)
 			snd_play(snd_hurt,0,false);
+		if UberCont.normalGameSpeed == 60
+			contactDmg *= 0.25;
+		else
+			contactDmg *= 0.5;
 		my_health -= contactDmg;
 		sprite_index = spr_hurt
 		image_index = 0

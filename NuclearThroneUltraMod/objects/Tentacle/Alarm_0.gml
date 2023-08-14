@@ -3,37 +3,75 @@ if UberCont.recursionCheck > 28
 	alarm[0] = 1;
 	exit;
 }
-if isog && GetPlayerUltramod() == ultramods.lightningKraken
+if isog && team == 2
 {
-	snd_play(choose(sndSpark1,sndSpark2),0.1,true)
-	if ultra
+	var um = GetPlayerUltramod()
+	if um == ultramods.lightningKraken
 	{
-		with instance_create(x,y,UltraLightning)
-		{image_angle =other.image_angle
-			scrCopyWeaponMod(other);
-		team = other.team
-		ammo = other.ammo
-		isog = false;
-		alarm[0] = 1;
-		visible = 0
-		with instance_create(x,y,LightningSpawn)
-		image_angle = other.image_angle}
+		snd_play(choose(sndSpark1,sndSpark2),0.1,true)
+		if ultra
+		{
+			with instance_create(x,y,UltraLightning)
+			{image_angle =other.image_angle
+				scrCopyWeaponMod(other);
+			team = other.team
+			ammo = other.ammo
+			isog = false;
+			alarm[0] = 1;
+			visible = 0
+			with instance_create(x,y,LightningSpawn)
+			image_angle = other.image_angle}
+		}
+		else
+		{
+			with instance_create(x,y,Lightning)
+			{image_angle =other.image_angle
+				scrCopyWeaponMod(other);
+			team = other.team
+			ammo = other.ammo
+			isog = false;
+			alarm[0] = 1;
+			visible = 0
+			with instance_create(x,y,LightningSpawn)
+			image_angle = other.image_angle}
+		}
+		instance_destroy(id,false);
+		exit;
 	}
-	else
+	else if um == ultramods.krakenMelee && instance_exists(Player)
 	{
-		with instance_create(x,y,Lightning)
-		{image_angle =other.image_angle
-			scrCopyWeaponMod(other);
-		team = other.team
-		ammo = other.ammo
-		isog = false;
-		alarm[0] = 1;
-		visible = 0
-		with instance_create(x,y,LightningSpawn)
-		image_angle = other.image_angle}
+		UberCont.ultramodSwap = false;
+		var ddd = 4;
+		var obj = LanceShank;
+		if ultra {
+			snd_play_fire(sndUltraShovel);
+			obj = UltraLanceShank;
+			ddd = 12;
+		}
+		
+		snd_play_fire(choose(sndSword1,sndSword2));
+		var am = ceil(ammo / 10);
+		var xx = x;
+		var yy = y;
+		repeat(am)
+		{
+			with instance_create(xx,yy,obj)
+			{
+				dmg = ddd;
+				longarms = 0
+				if instance_exists(Player)
+					longarms = (Player.skill_got[13]+Player.bettermelee)*3
+				motion_add(other.image_angle,4+longarms)
+				image_angle = direction
+				team = other.team
+			}
+			xx += lengthdir_x(56+((Player.skill_got[13]+Player.bettermelee)*14),image_angle);
+			yy += lengthdir_y(56+((Player.skill_got[13]+Player.bettermelee)*14),image_angle);
+		}
+		instance_destroy(id,false);
+		UberCont.ultramodSwap = true;
+		exit;
 	}
-	instance_destroy(id,false);
-	exit;
 }
 isog = false;
 if target == noone && instance_exists(enemy)
@@ -127,7 +165,6 @@ if round(ammo) > 0
 		sprite_index=other.sprite_index;
 		ion=other.ion;
 		accuracy=other.accuracy;
-		creator=other.creator;
 		dmg=other.dmg;
 		direction = other.direction
 		image_angle = direction
@@ -145,9 +182,9 @@ if round(ammo) > 0
 			{
 				motion_add(other.direction+random(60)-30,other.speed );
 			}
-			var chosenAudio = choose(sndRoll,sndWater1,sndWater2);
+			var chosenAudio = choose(sndRoll,sndWater1,sndWater2,sndTentacle,sndTentacle2);
 			if !audio_is_playing(chosenAudio)
-				snd_play(chosenAudio,0.01);
+				snd_play(chosenAudio,0.02);
 			alarm[0] = 1;
 		}
 	}

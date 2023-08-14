@@ -1,5 +1,6 @@
 /// @description ultramod
 var um = GetPlayerUltramod();
+/*
 if um == ultramods.toxicFire
 {
 	with instance_create(x,y,Flame)
@@ -13,12 +14,13 @@ if um == ultramods.toxicFire
 		alarm[11] = 0;
 	}
 	instance_destroy(id,false);
-} else if um == ultramods.toxicSwarm
+} else */if um == ultramods.toxicSwarm
 {
 	with instance_create(x,y,SwarmBolt)
 	{
 		scrCopyWeaponMod(other);
 		hits -= 1;
+		mxSpd -=1;
 		direction = other.direction;
 		image_angle = direction;
 		speed = other.speed;

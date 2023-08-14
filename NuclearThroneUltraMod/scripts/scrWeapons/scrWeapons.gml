@@ -7102,6 +7102,28 @@ function scrWeapons() {
 	wep_swap[642] = sndSwapShotgun
 	wep_rad[642] = 5;
 	
+	wep_name[643] = "BLOOD PLASMA RIFLE"
+	wep_type[643] = 5
+	wep_auto[643] = 1
+	wep_load[643] = 14
+	wep_cost[643] = 4
+	wep_sprt[643] = sprPlasmaRifle
+	wep_area[643] = 10
+	wep_text[643] = "actual plasma"
+	wep_swap[643] = sndSwapEnergy
+	wep_rad[643] = 0;
+	
+	wep_name[644] = "BLOOD PLASMA GUN"
+	wep_type[644] = 5
+	wep_auto[644] = 1
+	wep_load[644] = 18
+	wep_cost[644] = 1
+	wep_sprt[644] = sprPlasmaGun
+	wep_area[644] = 6
+	wep_text[644] = "destroys projectiles"
+	wep_swap[644] = sndSwapEnergy
+	wep_rad[644] = 0;
+	
 
 	maxwep = array_length(wep_name)-1;
 

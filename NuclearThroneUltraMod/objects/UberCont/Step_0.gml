@@ -185,11 +185,12 @@ with FPSHACK
 		instance_activate_object(forcePositions[| i]);
 	}
 }*/
-if instance_exists(FPSHACK)
-	instance_create(x,y,FPSHACKMenu);
+
 instance_deactivate_all(1)
 instance_activate_object(UnlockPopup);
-instance_activate_object(FPSHACKMenu);
+if instance_exists(FPSHACK)
+	instance_create(x,y,FPSHACKMenu);
+//instance_activate_object(FPSHACKMenu);
 //instance_activate_object(BackCont);
 instance_activate_object(MusCont);
 

@@ -974,7 +974,7 @@ function scrPowers() {
 			    {
 				    var extra=0;
 				    if scrIsCrown(4)
-				    extra += 1
+						extra += 1
     
 				    ammo[wep_type[wep]] += round((typ_ammo[wep_type[wep]]* (1.5+skill_got[5]) +extra))
 
@@ -1042,10 +1042,10 @@ function scrPowers() {
 					//HEAL
 					if !(ultra_got[72] && altUltra)
 					{
-				        var num = 2
+				        var num = 1
 				        if Player.skill_got[9] = 1//secund tummy
 						{
-							num = 4
+							num = 2
 							with instance_create(x,y,HealFX)
 							{
 								sprite_index = sprHealBigFX;
@@ -1061,12 +1061,12 @@ function scrPowers() {
 						}
 				        //RUSH CROWN
 				        if scrIsCrown(4)
-				        num += 1
+							num += 1
         
 				        snd_play_2d(sndHealthPickup)
 				        my_health += num
 				        if my_health > maxhealth
-				        my_health = maxhealth
+							my_health = maxhealth
         
 				        if UberCont.opt_ammoicon
 						{

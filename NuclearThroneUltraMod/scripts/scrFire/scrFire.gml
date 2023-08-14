@@ -1814,7 +1814,6 @@ function scrFire() {
 	BackCont.viewy2 += lengthdir_y(3,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 2
 	wkick = 5
-	resetSpeed=false;
 
 	break;
 

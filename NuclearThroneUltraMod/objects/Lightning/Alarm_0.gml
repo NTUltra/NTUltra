@@ -16,20 +16,9 @@ if instance_exists(Player){
 			with instance_create(x,y,Tentacle)
 			{image_angle = other.image_angle;
 				scrCopyWeaponMod(other);
-				if instance_exists(Implosion)
-				{
-					creator = Implosion.id;
-				}
-				else if instance_exists(ElectroBall)
-				{
-					creator = instance_nearest(x,y,ElectroBall);	
-				}
-				else {
-					creator = Player.id;	
-				}
-			team = other.team
-			ammo = other.ammo
-			isog = false;
+				team = other.team
+				ammo = other.ammo
+				isog = false;
 			alarm[0] = 1;
 			visible = 0
 			with instance_create(x,y,LightningSpawn)

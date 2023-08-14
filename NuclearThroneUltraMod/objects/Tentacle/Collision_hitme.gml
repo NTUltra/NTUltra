@@ -1,4 +1,4 @@
-if other.team != team and other.my_health > 0&&other.id != creator//the thing I hit must not be myself
+if other.team != team and other.my_health > 0//the thing I hit must not be myself
 {
 	//var hit = other;
 	var meatDmg = meatDmgReduction;

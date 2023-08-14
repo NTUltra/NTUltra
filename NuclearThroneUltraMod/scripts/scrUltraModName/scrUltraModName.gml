@@ -21,9 +21,9 @@ function scrUltraModName(um){
 			umn[0] = "LIGHTNING";
 			umn[1] = "KRAKEN";
 		break;
-		case ultramods.toxicFire:
-			umn[0] = "TOXIC";
-			umn[1] = "FIRE";
+		case ultramods.krakenMelee://toxic fire
+			umn[0] = "KRAKEN";
+			umn[1] = "MELEE";
 		break;
 		
 		case ultramods.shotgunElectro:

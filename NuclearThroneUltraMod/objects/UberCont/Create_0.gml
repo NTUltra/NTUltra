@@ -98,7 +98,7 @@ enum ultramods {
 	bulletShotgun,
 	laserBullet,
 	lightningKraken,
-	toxicFire,
+	krakenMelee,//toxicFire,
 	
 	shotgunElectro,
 	plasmaBolt,

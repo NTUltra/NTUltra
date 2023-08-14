@@ -92,7 +92,7 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+20 and UberCon
     snd_cnfm=sndMutant23Cnfm;
     break;
     case 24:
-    snd_cnfm=sndMutant24Slct;
+    snd_cnfm=sndMutant24NewSlct;
     break;
     case 25:
     snd_cnfm=sndRavenLand;
@@ -234,7 +234,7 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+20 and UberCon
     snd_slct=sndMutant23Slct;
     break;
     case 24:
-    snd_slct=sndMutant24Slct;
+    snd_slct=sndMutant24NewSlct;
     break;
     case 25:
     snd_slct=sndRavenLift;

@@ -14,7 +14,7 @@ shk = 5;
 if UberCont.ultramodSwap
 {
 	var um = GetPlayerUltramod()
-	if um == ultramods.bloodMelee
+	if um == ultramods.bloodMelee || um == ultramods.krakenMelee
 	{
 		mask_index = mskPickupThroughWall;
 		visible = false;

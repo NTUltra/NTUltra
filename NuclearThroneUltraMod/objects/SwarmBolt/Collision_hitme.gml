@@ -1,6 +1,5 @@
 if speed > 1 and other.team != team
 {
-	
 	with other
 	{
 		if sprite_index != spr_hurt

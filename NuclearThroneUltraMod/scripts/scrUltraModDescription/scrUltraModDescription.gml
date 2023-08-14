@@ -36,10 +36,9 @@ function scrUltraModDescription(um){
 			umn = @"SWAPS
 			LIGHTNING <WITH> KRAKEN"
 		break;
-		case ultramods.toxicFire:
+		case ultramods.krakenMelee:
 			umn = @"SWAPS
-			TOXIC <WITH> FIRE
-			ULTRA TOXIC <WITH> ULTRA FIRE"
+			KRAKEN <WITH> MELEE"
 		break;
 		case ultramods.shotgunElectro:
 			umn = @"SWAPS

@@ -61,7 +61,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7379fbc0-72f6-4b50-9398-645e51498be7","path":"sprites/sprMutant24BHurtOld/sprMutant24BHurtOld.yy",},},},"Disabled":false,"id":"25ce73c0-62c7-46f7-b38a-ce991955f0ff","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 9,
     "yorigin": 12,

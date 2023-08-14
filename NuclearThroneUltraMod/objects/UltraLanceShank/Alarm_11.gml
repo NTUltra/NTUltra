@@ -2,32 +2,91 @@
 var acc = 1;
 if instance_exists(Player)
 	acc = Player.accuracy*0.5;
-var ol = 8+speed;
-var xx = x + lengthdir_x(ol,image_angle+180);
-var yy = y + lengthdir_y(ol,image_angle+180);
-snd_play(sndBloodPistol,0.1,true);
-var spawn = HeavyBloodBullet;
-if sprite_index = sprUltraShank || sprite_index == sprUltraLanceSlash
-	spawn = UltraBloodBullet;
-with instance_create(xx,yy,spawn)
+var um = GetPlayerUltramod()
+if um == ultramods.bloodMelee
 {
-	dmg = ceil(other.dmg*0.4);
-	scrCopyWeaponMod(other);
-	direction = other.direction-5;
-	image_angle = direction;
-	speed = 14+other.speed;
-	team = other.team;
-	alarm[11] = 0;
+	var ol = 8+speed;
+	var xx = x + lengthdir_x(ol,image_angle+180);
+	var yy = y + lengthdir_y(ol,image_angle+180);
+	snd_play(sndBloodPistol,0.1,true);
+	with instance_create(xx,yy,UltraBloodBullet)
+	{
+		dmg = ceil(other.dmg*0.5);
+		scrCopyWeaponMod(other);
+		direction = other.direction-5;
+		image_angle = direction;
+		speed = 14+other.speed;
+		team = other.team;
+		alarm[11] = 0;
+	}
+	with instance_create(xx,yy,UltraBloodBullet)
+	{
+		dmg = ceil(other.dmg*0.5);
+		scrCopyWeaponMod(other);
+		direction = other.direction+5;
+		image_angle = direction;
+		speed = 14+other.speed;
+		team = other.team;
+		alarm[11] = 0;
+	}
 }
-with instance_create(xx,yy,spawn)
+else // if um == ultramods.krakenMelee
 {
-	dmg = ceil(other.dmg*0.4);
-	scrCopyWeaponMod(other);
-	direction = other.direction+5;
-	image_angle = direction;
-	speed = 14+other.speed;
-	team = other.team;
-	alarm[11] = 0;
+	snd_play_fire(sndBloodLauncher);
+	snd_play_fire(choose(sndWater1,sndWater2));
+	var am = 6 + speed + dmg;
+	var ddd = ceil(other.dmg*0.16);
+	with instance_create(x,y,Tentacle)
+	{
+		sprite_index=sprUltraTentacle;
+		ultra=true;
+		image_yscale += 0.3;
+		isog = false;
+		dmg = ddd;//6 dmg = 1dmg
+		image_angle = other.image_angle;
+		team = other.team
+		ammo = am
+		event_perform(ev_alarm,0)
+		visible = 0
+		with instance_create(x,y,LightningSpawn)
+		{
+		sprite_index=sprTentacleSpawn
+		image_angle = other.image_angle
+		}
+
+		repeat(ddd){
+			with instance_create(x,y,FishBoost)
+			{
+				motion_add( other.image_angle+random(60)-30,2+random(4) );
+			}
+		}
+	}
+	var am = round(2 + speed*0.5 + dmg*0.5);
+	var ddd = ceil(other.dmg*0.16);
+	with instance_create(x,y,Tentacle)
+	{
+		sprite_index=sprUltraTentacle;
+		ultra=true;
+		image_yscale += 0.3;
+		isog = false;
+		dmg = ddd;//6 dmg = 1dmg
+		image_angle = other.image_angle+(choose(10,-10)*acc);
+		team = other.team
+		ammo = am
+		event_perform(ev_alarm,0)
+		visible = 0
+		with instance_create(x,y,LightningSpawn)
+		{
+		sprite_index=sprTentacleSpawn
+		image_angle = other.image_angle
+		}
+
+		repeat(ddd){
+			with instance_create(x,y,FishBoost)
+			{
+				motion_add( other.image_angle+random(60)-30,2+random(4) );
+			}
+		}
+	}
 }
-		
 instance_destroy(id,false);

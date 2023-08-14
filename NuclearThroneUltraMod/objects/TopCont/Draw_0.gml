@@ -270,7 +270,8 @@ with InvertedGuardianBulletSpawn
 }
 with GhettoBlast
 {
-	draw_self();	
+	if visible
+		draw_self();	
 }
 
 //Flying enemies

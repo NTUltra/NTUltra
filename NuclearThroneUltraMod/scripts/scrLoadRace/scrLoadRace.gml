@@ -917,15 +917,15 @@ function scrLoadRace() {
 	snd_valt=sndMutant23Valt;
 	break;
 	case 24://
-	snd_hurt=sndMutant24Hurt
-	snd_dead=sndMutant24Hurt
-	snd_lowa=sndMutant24LowA;
-	snd_lowh=sndMutant24LowH;
-	snd_crwn=sndMutant24Crwn;
-	snd_chst=sndMutant24Chst;
-	snd_wrld=sndMutant24Wrld;
-	snd_thrn=sndMutant24Chst;
-	snd_valt=sndMutant24Chst;
+	snd_hurt=sndMutant24NewHurt
+	snd_dead=sndMutant24NewDead
+	snd_lowa=sndMutant24NewLowA;
+	snd_lowh=sndMutant24NewLowH;
+	snd_crwn=sndMutant24NewCrwn;
+	snd_chst=sndMutant24NewChst;
+	snd_wrld=sndMutant24NewWrld;
+	snd_thrn=sndMutant24NewCrwn;
+	snd_valt=sndMutant24NewValt;
 	break;
 	case 25://
 	snd_hurt=sndRavenHit

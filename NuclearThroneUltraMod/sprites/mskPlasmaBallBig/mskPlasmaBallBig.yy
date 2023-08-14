@@ -13,7 +13,6 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"170406cb-97a7-48c2-9a9b-c56f3fd9de82",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"51ddc9ff-0c5a-4c03-aab2-19169cacd9d7",},
   ],
   "gridX": 0,
@@ -44,7 +43,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 2.0,
+    "length": 1.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -55,8 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"170406cb-97a7-48c2-9a9b-c56f3fd9de82","path":"sprites/mskPlasmaBallBig/mskPlasmaBallBig.yy",},},},"Disabled":false,"id":"5adc2dda-0e34-43da-b716-34ca7e71bae5","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"51ddc9ff-0c5a-4c03-aab2-19169cacd9d7","path":"sprites/mskPlasmaBallBig/mskPlasmaBallBig.yy",},},},"Disabled":false,"id":"3d9d3860-b6c9-4592-b119-f3c52cfbaf4f","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"51ddc9ff-0c5a-4c03-aab2-19169cacd9d7","path":"sprites/mskPlasmaBallBig/mskPlasmaBallBig.yy",},},},"Disabled":false,"id":"3d9d3860-b6c9-4592-b119-f3c52cfbaf4f","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

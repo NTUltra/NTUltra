@@ -10378,7 +10378,7 @@ function scrFire2() {
 	repeat(18)
 	{
 	with instance_create(x,y,Bullet5)
-	{motion_add(aimDirection+(random(80)-40)*other.accuracy,8+random(6))//7 5
+	{motion_add(aimDirection+(random(80)-40)*other.accuracy,10+random(6))//7 5
 	image_angle = direction
 	team = other.team}
 	}
@@ -12560,6 +12560,51 @@ function scrFire2() {
 	team = other.team
 	event_perform(ev_alarm,0) 
 	}
+
+	break;
+	
+	//BLOOD PLASMA RIFLE
+	case 643:
+	with instance_create(x,y,BloodPlasmaBurst)
+	{
+	creator = other.id
+	ammo = 4;
+	maxAmmo = ammo;
+	time = 1
+	team = other.team
+	event_perform(ev_alarm,0) 
+	}
+	
+
+	motion_add(aimDirection+180,3)
+	BackCont.viewx2 += lengthdir_x(3,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(3,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 2
+	wkick = 5
+
+	break;
+	
+	//BLOOD PLASMA GUN
+	case 644:
+
+	if Player.skill_got[17] = 1
+	snd_play_fire(sndBloodPlasmaUpg)
+	else
+	snd_play_fire(sndBloodPlasma)
+
+	with instance_create(x+lengthdir_x(6,aimDirection),y+lengthdir_y(6,aimDirection),BloodPlasmaBall)
+	{
+		motion_add(aimDirection+(random(7)-3.5*other.accuracy),16)
+		image_angle = direction
+		team = other.team
+	}
+
+	motion_add(aimDirection+180,1.5)
+	BackCont.viewx2 += lengthdir_x(4,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 5
+	resetSpeed=false;
 
 	break;
 	

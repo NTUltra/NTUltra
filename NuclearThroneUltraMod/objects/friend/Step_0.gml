@@ -26,6 +26,8 @@ with Portal
 {
 	if type == 4
 		bigPortal = id;
+	else if bigPortal == noone
+		bigPortal = id;
 }
 if bigPortal != noone && collision_line(x,y,bigPortal.x,bigPortal.y,Wall,false,false) == noone
 {

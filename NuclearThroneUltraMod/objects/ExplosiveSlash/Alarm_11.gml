@@ -2,22 +2,9 @@
 
 // Inherit the parent event
 event_inherited();
-snd_play(sndBloodHammer,0.1,true)
-var xx = x + lengthdir_x(24,image_angle-20);
-var yy = y + lengthdir_y(24,image_angle-20);
-with instance_create(xx,yy,MeatExplosion)
-{
-	direction = other.direction;
-	speed = other.speed;
-	team = other.team;
-	alarm[11] = 0;
-}
-xx = x + lengthdir_x(24,image_angle+20);
-yy = y + lengthdir_y(24,image_angle+20);
-with instance_create(xx,yy,MeatExplosion)
-{
-	direction = other.direction;
-	speed = other.speed;
-	team = other.team;
-	alarm[11] = 0;
-}
+var xx = x + lengthdir_x(48,image_angle-20);
+var yy = y + lengthdir_y(48,image_angle+20);
+instance_create(xx,yy,Explosion);
+var xx = x + lengthdir_x(48,image_angle+20);
+var yy = y + lengthdir_y(48,image_angle+20);
+instance_create(xx,yy,Explosion);
