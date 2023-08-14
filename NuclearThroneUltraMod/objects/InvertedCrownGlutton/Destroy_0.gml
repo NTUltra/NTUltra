@@ -48,3 +48,7 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 snd_play(sndVaultBossWin);
 }
 
+if instance_exists(Wall) && !instance_exists(WallRemover)
+{
+	instance_create(x,y,WallRemover);	
+}

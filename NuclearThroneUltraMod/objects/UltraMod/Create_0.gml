@@ -9,3 +9,4 @@ maxUltramod = UberCont.maxUltramod;
 swapper = 1;
 alarm[3] = 60;
 holdExplainTimer = 0;
+alarm[6] = 5;

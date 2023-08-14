@@ -234,10 +234,13 @@ function scrPopProps() {
 		}
 	}
 	if spawnarea = 8 && !place_meeting(x,y,Wall){//CUSTOM
-	if random(2)<1
-	instance_create(x+16,y+16,CandyCane);
-	else
-	instance_create(x+16,y+16,Mushroom);
+		if random(3)<2
+			instance_create(x+16,y+16,Candy);
+		else
+			instance_create(x+16,y+16,Mushroom);
+	}
+	if spawnarea = 109 && !place_meeting(x,y,Wall){//CUSTOM
+		instance_create(x+16,y+16,InvertedCandy);
 	}
 	if spawnarea = 100 && !place_meeting(x,y,Wall) && !place_meeting(x,y,TorchKiller)
 	instance_create(x+16,y+16,Torch)

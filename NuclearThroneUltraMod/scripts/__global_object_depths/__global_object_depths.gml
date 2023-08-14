@@ -1253,7 +1253,7 @@ function __global_object_depths() {
 	global.__objectNames[588] = "Cactus";
 	global.__objectNames[589] = "Coral";
 	global.__objectNames[590] = "WaterPlant";
-	global.__objectNames[591] = "CandyCane";
+	global.__objectNames[591] = "Candy";
 	global.__objectNames[592] = "Mushroom";
 	global.__objectNames[593] = "BigMushroom";
 	global.__objectNames[594] = "BloodStreak";
