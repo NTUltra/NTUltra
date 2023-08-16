@@ -124,7 +124,7 @@ if UberCont.public = 0 {
     }
 
     if keyboard_check_pressed(ord("9")) {
-        area = 10
+        area = 130
         subarea = 0
         with enemy
         my_health = 0

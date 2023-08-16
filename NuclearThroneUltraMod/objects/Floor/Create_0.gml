@@ -176,6 +176,12 @@ break;
 case 129:
 sprite_index=sprFloor129B;
 break;
+case 130:
+sprite_index=sprFloor130B;
+break;
+case 131:
+sprite_index=sprFloor131B;
+break;
 default:
 sprite_index=sprFloor0B;
 break;
@@ -304,6 +310,12 @@ sprite_index=sprFloor128;
 break;
 case 129:
 sprite_index=sprFloor129;
+break;
+case 130:
+sprite_index=sprFloor130;
+break;
+case 131:
+sprite_index=sprFloor131;
 break;
 default:
 sprite_index=sprFloor0;

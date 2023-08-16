@@ -155,6 +155,12 @@ break;
 case 129:
 sprite_index=sprFloor129Explo;
 break;
+case 130:
+sprite_index=sprFloor130Explo;
+break;
+case 131:
+sprite_index=sprFloor131Explo;
+break;
 default:
 sprite_index=sprFloor0Explo;
 break;

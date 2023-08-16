@@ -12,13 +12,13 @@ if area == 1 || area == 105 || area == 10 || area == 7 || area == 108 || area ==
 	snd_wallbreak = sndWallBreakRock;
 else if area == 2 || area == 110 || area == 3 || area == 106 || area == 5 || area == 107
 	snd_wallbreak = sndWallBreakScrap;
-else if area == 2 || area == 110 || area == 3 || area == 106
+else if area == 2 || area == 110 || area == 3 || area == 106 || area == 126 || area == 127
 	snd_wallbreak = sndWallBreakRock;
 else if area == 4 || area == 115 || area == 111
 	snd_wallbreak = sndWallBreakCrystal;
 else if area == 6 || area == 112
 	snd_wallbreak = sndWallBreakLabs;
-else if area == 8 || area == 109 || area == 9 || area == 100 || area == 116
+else if area == 8 || area == 109 || area == 9 || area == 100 || area == 116 || area == 128 || area == 129 || area == 130
 	snd_wallbreak = sndWallBreakBrick;
 else if area == 114 || area == 117
 	snd_wallbreak = sndWallBreakJungle;

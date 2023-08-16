@@ -448,6 +448,55 @@ function scrMakeFloor(limiter) {
 		}
 	} 
 	
+	//Factory
+	if area == 130 || area == 131{
+		if random(9) < 1
+		{
+			instance_create(x,y,Floor)
+			instance_create(x+32,y,Floor)
+			instance_create(x-32,y,Floor)
+			instance_create(x,y+32,Floor)
+			instance_create(x,y-32,Floor)
+			instance_create(x+32,y+32,Floor)
+			instance_create(x+32,y-32,Floor)
+			instance_create(x-32,y-32,Floor)
+			instance_create(x-32,y+32,Floor)
+			x += lengthdir_x(32,direction)
+			y += lengthdir_y(32,direction)
+		}
+		else {
+			instance_create(x,y,Floor)
+			instance_create(x,y+32,Floor)
+			if random(2) < 1
+			{
+				if choose(true,false)
+				{
+					instance_create(x,y,Floor)
+					instance_create(x,y+32,Floor)
+				}
+				else
+				{
+					instance_create(x,y,Floor)
+					instance_create(x,y-32,Floor)
+				}
+			}
+			else
+			{
+				if choose(true,false)
+				{
+					instance_create(x+32,y,Floor)
+					instance_create(x,y,Floor)
+					instance_create(x,y+32,Floor)
+				}
+				else
+				{
+					instance_create(x,y,Floor)
+					instance_create(x-32,y,Floor)
+					instance_create(x,y+32,Floor)
+				}
+			}
+		}
+	}
 	//savanna
 	if area = 10 || area == 121{ if random(5) < 2
 	{instance_create(x,y,Floor)

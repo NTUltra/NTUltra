@@ -57,7 +57,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"90100c70-4a95-48b1-99c0-e4852ff96fad","path":"sprites/mskOasisBoss/mskOasisBoss.yy",},},},"Disabled":false,"id":"ae369bfa-e82f-4e47-ba74-2998efa0cf41","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 32,
     "yorigin": 32,

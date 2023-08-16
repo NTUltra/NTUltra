@@ -153,6 +153,12 @@ if instance_exists(Player)
 			case 129:
 				__background_set_colour( make_color_rgb(33, 4, 4) )
 			break;
+			case 130:
+				__background_set_colour( make_color_rgb(12,12,12) )
+			break;
+			case 131:
+				__background_set_colour( make_color_rgb(12,12,12) )
+			break;
 		}
 	}
 	else
@@ -254,6 +260,10 @@ if instance_exists(Player)
 			__background_set_colour( make_color_rgb(44, 43, 19) )
 		else if Player.area == 129//Inverted Crown Courtyard
 			__background_set_colour( make_color_rgb(58, 34, 46) )
+		else if Player.area == 130//Factory
+			__background_set_colour( make_color_rgb(26,70,59) )
+		else if Player.area == 131//Inverted Factory
+			__background_set_colour( make_color_rgb(58, 34, 46) )
 	}
 }
 else
@@ -330,7 +340,8 @@ if Player.area == 126 || Player.area == 127
 goal = 120+s;
 if Player.area == 128 || Player.area == 129
 goal = 150+s;
-
+if Player.area == 130 || Player.area == 131
+goal = 130+s;
 
 if scrIsGamemode(6) && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels
 goal=70+s;
