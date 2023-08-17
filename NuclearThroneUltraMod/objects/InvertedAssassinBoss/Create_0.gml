@@ -40,7 +40,7 @@ wepflip = 1
 dodge=0;
 dodgethis=-1;
 
-MorphMe=false;
+morphMe=0;
 frozen=false;
 prevhealth=my_health;
 

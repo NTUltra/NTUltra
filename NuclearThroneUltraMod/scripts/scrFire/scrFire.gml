@@ -993,7 +993,7 @@ function scrFire() {
 	//GOLDEN REVOLVER
 	case 39:
 
-	snd_play_fire(sndPistol)
+	snd_play_fire(sndGoldPistol)
 
 	with instance_create(x,y,Shell)
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
@@ -1686,7 +1686,6 @@ function scrFire() {
 	time = 3
 	team = other.team
 	event_perform(ev_alarm,0) 
-	explosive=2;
 	}
 
 	break;
@@ -1757,7 +1756,7 @@ function scrFire() {
 	ammo = 5
 	time = 3
 	team = other.team
-	explosive=3;
+	morphType = 2;
 	}
 
 	break;
@@ -2341,7 +2340,6 @@ function scrFire() {
 	ammo = 3
 	time = 3
 	team = other.team
-	explosive=2;
 	}
 
 	break;
@@ -4244,10 +4242,10 @@ function scrFire() {
 
 	snd_play_fire(sndShotgun)
 
-	repeat(7)
+	repeat(6)
 	{
 	with instance_create(x,y,Bullet7)
-	{motion_add(aimDirection+(random(40)-20)*other.accuracy,9+random(6))
+	{motion_add(aimDirection+(random(44)-22)*other.accuracy,9+random(6))
 	image_angle = direction
 	team = other.team}
 	}
@@ -4265,10 +4263,10 @@ function scrFire() {
 
 	snd_play_fire(sndDoubleShotgun)
 
-	repeat(14)
+	repeat(13)
 	{
 	with instance_create(x,y,Bullet7)
-	{motion_add(aimDirection+(random(50)-30)*other.accuracy,9+random(6))
+	{motion_add(aimDirection+(random(54)-27)*other.accuracy,9+random(6))
 	image_angle = direction
 	team = other.team}
 	}
@@ -4289,10 +4287,10 @@ function scrFire() {
 	snd_play_fire(sndDoubleShotgun)
 	snd_play_fire(sndShotgun)
 
-	repeat(28)
+	repeat(27)
 	{
 	with instance_create(x,y,Bullet7)
-	{motion_add(aimDirection+(random(50)-30)*other.accuracy,9+random(6))
+	{motion_add(aimDirection+(random(54)-27)*other.accuracy,9+random(6))
 	image_angle = direction
 	team = other.team}
 	}

@@ -2,7 +2,7 @@ friction = 0.45
 image_speed = 0.4
 totemBuffed = false;
 super = false;
-MorphMe=false;
+morphMe=0;
 frozen=false;
 maxSpeed = 16;
 existTime = 30;
@@ -157,7 +157,7 @@ name="YOU?"
 
 
 //enemy
-MorphMe=false;
+morphMe=0;
 frozen=false;
 prevhealth=my_health;
 

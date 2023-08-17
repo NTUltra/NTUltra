@@ -7,7 +7,8 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 event_inherited();
 team = 2;
 typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
-explosive=1;
+morphType = 1;
+//0 normal 1 explosive 2 ultra 3 golden
 canBeMoved = false;
 isLaser = false;
 direction=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
@@ -21,9 +22,9 @@ range = 100;
 range += (40*Player.skill_got[19]);
 detectRange = 48;
 detectRange += (16*Player.skill_got[19]);
-isUltra = false;
 lineWidth = 2;
 bloomColour = make_color_rgb(255,50,255);
 if Player.skill_got[17]
 	lineWidth = 3;
 alarm[0] = 2;
+isGold = false;

@@ -1,4 +1,4 @@
-MorphMe=true;
+morphMe=true;
 event_inherited()
 scrDrop(20,10)
 

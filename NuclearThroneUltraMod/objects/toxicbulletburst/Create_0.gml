@@ -1,4 +1,4 @@
 /// @description init
 event_inherited();
-snd = sndMachinegun;
+snd = sndMachinegunToxic;
 ultramodded = false;

@@ -1088,7 +1088,7 @@ function scrWeapons() {
 	wep_name[98] = "MORPH-O-PISTOL"
 	wep_type[98] = 5
 	wep_auto[98] = 0
-	wep_load[98] = 22
+	wep_load[98] = 23
 	wep_cost[98] = 1
 	wep_sprt[98] = sprMorphOPistol
 	wep_area[98] = 3
@@ -1880,7 +1880,7 @@ function scrWeapons() {
 	wep_name[170] = "DIRECTOR SHOTGUN"
 	wep_type[170] = 2
 	wep_auto[170] = 0
-	wep_load[170] = 18
+	wep_load[170] = 19
 	wep_cost[170] = 1
 	wep_sprt[170] = sprDirectorShotgun
 	wep_area[170] = 3//1
@@ -2144,7 +2144,7 @@ function scrWeapons() {
 	wep_name[194] = "KRAKEN GUN"
 	wep_type[194] = 4
 	wep_auto[194] = 0
-	wep_load[194] = 15//10
+	wep_load[194] = 14//10
 	wep_cost[194] = 2
 	wep_sprt[194] = sprKrakenGun
 	wep_area[194] = 4
@@ -2155,7 +2155,7 @@ function scrWeapons() {
 	wep_name[195] = "BIG KRAKEN GUN"
 	wep_type[195] = 4
 	wep_auto[195] = 0
-	wep_load[195] = 22//10
+	wep_load[195] = 21//10
 	wep_cost[195] = 2.5
 	wep_sprt[195] = sprBigKrakenGun
 	wep_area[195] = 6
@@ -2166,7 +2166,7 @@ function scrWeapons() {
 	wep_name[196] = "KRAKEN LAUNCHER"
 	wep_type[196] = 4
 	wep_auto[196] = 0
-	wep_load[196] = 30
+	wep_load[196] = 28
 	wep_cost[196] = 3
 	wep_sprt[196] = sprKrakenLauncher
 	wep_area[196] = 11
@@ -3071,7 +3071,7 @@ function scrWeapons() {
 	wep_load[278] = 32
 	wep_cost[278] = 0
 	wep_sprt[278] = sprGoldenShovel
-	wep_area[278] = 20//4 originally?
+	wep_area[278] = 20
 	wep_text[278] = "gold digger"
 	wep_swap[278] = sndSwapHammer
 	wep_rad[278] = 0;
@@ -7106,10 +7106,10 @@ function scrWeapons() {
 	wep_type[643] = 5
 	wep_auto[643] = 1
 	wep_load[643] = 14
-	wep_cost[643] = 4
-	wep_sprt[643] = sprPlasmaRifle
+	wep_cost[643] = 3.5
+	wep_sprt[643] = sprBloodPlasmaRifle
 	wep_area[643] = 10
-	wep_text[643] = "actual plasma"
+	wep_text[643] = "energetic blood"
 	wep_swap[643] = sndSwapEnergy
 	wep_rad[643] = 0;
 	
@@ -7118,12 +7118,66 @@ function scrWeapons() {
 	wep_auto[644] = 1
 	wep_load[644] = 18
 	wep_cost[644] = 1
-	wep_sprt[644] = sprPlasmaGun
+	wep_sprt[644] = sprBloodPlasmaGun
 	wep_area[644] = 6
-	wep_text[644] = "destroys projectiles"
+	wep_text[644] = "actual plasma"
 	wep_swap[644] = sndSwapEnergy
 	wep_rad[644] = 0;
 	
+	wep_name[645] = "GOLDEN BLOOD RIFLE"
+	wep_type[645] = 1
+	wep_auto[645] = 1
+	wep_load[645] = 2
+	wep_cost[645] = 1
+	wep_sprt[645] = sprGoldenBloodRifle
+	wep_area[645] = 17
+	wep_text[645] = "holy blood"
+	wep_swap[645] = sndSwapMachinegun
+	wep_rad[645] = 0;
+	
+	wep_name[646] = "GOLDEN MORPH-O-PISTOL"
+	wep_type[646] = 5
+	wep_auto[646] = 0
+	wep_load[646] = 22
+	wep_cost[646] = 1
+	wep_sprt[646] = sprGoldenMorphOPistol
+	wep_area[646] = 19
+	wep_text[646] = "golden grazers"
+	wep_swap[646] = sndSwapEnergy
+	wep_rad[646] = 0;
+	
+	wep_name[647] = "GOLDEN DIRECTOR SHOTGUN"
+	wep_type[647] = 2
+	wep_auto[647] = 0
+	wep_load[647] = 18
+	wep_cost[647] = 1
+	wep_sprt[647] = sprGoldenDirectorShotgun
+	wep_area[647] = 19//1
+	wep_text[647] = "in control"
+	wep_swap[647] = sndSwapShotgun
+	wep_rad[647] = 0;
+	
+	wep_name[648] = "TOXIC REVOLVER"
+	wep_type[648] = 1
+	wep_auto[648] = 0
+	wep_load[648] = 7
+	wep_cost[648] = 1
+	wep_sprt[648] = sprToxicRevolver
+	wep_area[648] = 1
+	wep_text[648] = "gass pistol"
+	wep_swap[648] = sndSwapPistol
+	wep_rad[648] = 0;
+	
+	wep_name[649] = "GOLDEN TOXIC REVOLVER"
+	wep_type[649] = 1
+	wep_auto[649] = 0
+	wep_load[649] = 6
+	wep_cost[649] = 1
+	wep_sprt[649] = sprGoldenToxicRevolver
+	wep_area[649] = 17
+	wep_text[649] = "the stank gan"
+	wep_swap[649] = sndSwapPistol
+	wep_rad[649] = 0;
 
 	maxwep = array_length(wep_name)-1;
 

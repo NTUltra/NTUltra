@@ -1,4 +1,4 @@
-if!(MorphMe){
+if(morphMe == 0){
 
 	myCorpse = instance_create(x,y,MovingCorpse)
 
@@ -55,6 +55,23 @@ if!(MorphMe){
 else
 {
 	instance_create(x,y,PortalChecker);
+	if morphMe == 2
+	{
+		instance_create(x,y,ExplosiveSheep);
+	    //Unlock sheep
+	    scrUnlockCharacter(13,"FOR MORPHING AN ENEMY");
+	} else if morphMe == 4
+	{
+		instance_create(x,y,GoldSheep);
+	    //Unlock sheep
+	    scrUnlockCharacter(13,"FOR MORPHING AN ENEMY");	
+	}
+	else 
+	{
+		instance_create(x,y,Sheep);
+	    //Unlock sheep
+	    scrUnlockCharacter(13,"FOR MORPHING AN ENEMY");	
+	} 
 }
 
 //Sleep(15+mySize*10)

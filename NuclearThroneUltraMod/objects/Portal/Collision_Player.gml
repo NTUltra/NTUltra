@@ -154,7 +154,7 @@ with other
 inverted=true//take me to the inverted universe
 }
 
-if Player.area == 8 && Player.subarea < 2 && ( instance_exists(Sheep)||instance_exists(ExplosiveSheep) )
+if Player.area == 8 && Player.subarea < 2 && ( instance_exists(Sheep))
 {
 	Player.banditland=true;
 }

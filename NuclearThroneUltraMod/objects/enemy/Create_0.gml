@@ -5,7 +5,7 @@ right = choose(1,-1)
 my_health = maxhealth
 prevhealth=my_health;
 walk = 0;
-MorphMe=false;
+morphMe = 0;
 frozen=false;
 maxSpeed = 16;
 team = 1
@@ -29,6 +29,8 @@ if instance_exists(Player)
 		raddrop=0;
 	if Player.loops >1
 		raddrop*=0.8;
+	if Player.ultra_got[52]
+		morphMe = 1;
 }
 if place_meeting(x,y,enemy)
 {

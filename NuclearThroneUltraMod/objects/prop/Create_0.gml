@@ -1,3 +1,4 @@
+event_inherited();
 image_speed = 0.4;
 maxSpeed = 3;
 my_health = maxhealth

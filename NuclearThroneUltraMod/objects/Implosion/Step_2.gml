@@ -49,12 +49,6 @@ with Sheep
 x += lengthdir_x(1,point_direction(x,y,other.x,other.y))
 if place_free(x,y+lengthdir_y(1,point_direction(x,y,other.x,other.y)+180))
 y += lengthdir_y(1,point_direction(x,y,other.x,other.y))}}
-with ExplosiveSheep
-{if x > other.x-256 and x < other.x+256 and y > other.y-256 and y < other.y+256 and team != 2 and object_index != EnemyLaser
-{if place_free(x+lengthdir_x(1,point_direction(x,y,other.x,other.y)+180),y)
-x += lengthdir_x(1,point_direction(x,y,other.x,other.y))
-if place_free(x,y+lengthdir_y(1,point_direction(x,y,other.x,other.y)+180))
-y += lengthdir_y(1,point_direction(x,y,other.x,other.y))}}
 
 
 /*

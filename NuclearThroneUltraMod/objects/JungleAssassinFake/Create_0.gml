@@ -48,7 +48,7 @@ snd_dead = sndJungleAssassinDead
 
 dodge=0;
 
-MorphMe=false;
+morphMe=0;
 frozen=false;
 countKill = true;
 EnemyHealthAdjustments();

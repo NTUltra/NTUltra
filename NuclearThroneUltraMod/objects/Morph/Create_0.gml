@@ -39,7 +39,7 @@ if instance_exists(Player)
 		alarm[0] += 2;
 	}
 }
-
+morphType = 1;
 
 image_angle = random(360);
 rot = random_range(30,-30);

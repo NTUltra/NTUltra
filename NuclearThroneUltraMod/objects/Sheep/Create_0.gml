@@ -11,6 +11,7 @@ countKill = false;
 
 idle=true;
 spr_idle = sprSheepIdleA
+spr_idle_b = sprSheepIdleB;
 spr_walk = sprSheepWalk
 spr_hurt = sprSheepHurt
 spr_dead = sprSheepDead
@@ -23,7 +24,7 @@ my_health = maxhealth
 
 EnemyHealthAdjustments();
 
-
+morphMe = 10;//Can't be morphed or damaged by morph
 team = 0
 target = -1
 

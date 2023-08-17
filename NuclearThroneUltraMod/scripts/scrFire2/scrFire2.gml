@@ -17,7 +17,7 @@ function scrFire2() {
 	{image_angle = aimDirection+(random(30)-15)*other.accuracy
 	creator=other.id;
 	team = other.team
-	ammo = 17
+	ammo = 18
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)
@@ -53,7 +53,7 @@ function scrFire2() {
 	{image_angle = aimDirection+(random(40)-20)*other.accuracy
 	creator=other.id;
 	team = other.team
-	ammo = 18
+	ammo = 19
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)
@@ -3764,7 +3764,7 @@ function scrFire2() {
 	{image_angle = aimDirection+(random(30)-15)*other.accuracy
 	creator=other.id;
 	team = other.team
-	ammo = 10
+	ammo = 11
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)
@@ -7802,11 +7802,10 @@ function scrFire2() {
 	with instance_create(x,y,UltraRay)
 	{
 		team = other.team;
-	creator = other.id
-	ammo = 4
-	time = 3
-	team = other.team
-	explosive=2;
+		creator = other.id
+		ammo = 4
+		time = 3
+		team = other.team
 	}
 
 	break;
@@ -10241,7 +10240,7 @@ function scrFire2() {
 	//TOXIC MINIGUN
 	case 565:
 
-	snd_play_fire(sndMinigun)
+	snd_play_fire(sndToxicMinigun)
 	with instance_create(x,y,Shell)
 	motion_add(aimDirection+other.right*100+random(80)-40,3+random(2))
 
@@ -10937,7 +10936,7 @@ function scrFire2() {
 	{image_angle = aimDirection+(random(30)-15)*other.accuracy
 	creator=other.id;
 	team = other.team
-	ammo = 10
+	ammo = 12
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)
@@ -12605,6 +12604,101 @@ function scrFire2() {
 	BackCont.shake += 4
 	wkick = 5
 	resetSpeed=false;
+
+	break;
+	
+	//GOLDEN BLOOD RIFLE
+	case 645:
+
+	snd_play_fire(sndBloodPistol)
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+	with instance_create(x,y,BloodBullet)
+	{motion_add(aimDirection+(random(12)-6)*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 2.4
+	wkick = 2.5
+
+	break;
+	
+	//GOLDEN MORPH-O-PISTOL
+	case 646:
+		if !instance_exists(MorphSound)
+		instance_create(x,y,MorphSound)
+		with instance_create(x,y,Ray)
+		{
+			team = other.team;
+			creator = other.id
+			ammo = 3
+			time = 3
+			team = other.team
+			morphType = 4;
+		}
+
+	break;
+	
+	//GOLDEN DIRECTOR SHOTGUN
+	case 647:
+
+	snd_play_fire(sndGoldShotgun)
+
+	repeat(6)
+	{
+	with instance_create(x,y,Bullet7)
+	{motion_add(aimDirection+(random(44)-22)*other.accuracy,9+random(6))
+	image_angle = direction
+	team = other.team}
+	}
+
+	BackCont.viewx2 += lengthdir_x(13,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(13,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 8.5
+	wkick = 6
+
+	break;
+	
+	//TOXIC REVOLVER
+	case 648:
+
+	snd_play_fire(sndToxicRevolver)
+
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+	with instance_create(x,y,Bullet1Toxic)
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3.5
+	wkick = 3
+
+	break;
+	
+	//GOLDEN TOXICREVOLVER
+	case 649:
+
+	snd_play_fire(sndGoldenToxicRevolver)
+
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+	with instance_create(x,y,Bullet1Toxic)
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 5
+	wkick = 4
 
 	break;
 	

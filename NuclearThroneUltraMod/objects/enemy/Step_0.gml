@@ -1,19 +1,5 @@
-if (my_health <= 0)&&(object_index!=Sheep&&object_index!=ExplosiveSheep){
-if instance_exists(Player){
-if(place_meeting(x,y,Morph)) || Player.ultra_got[52]
-    {
-    MorphMe=true;
-    instance_create(x,y,Sheep);
-    //Unlock sheep
-    scrUnlockCharacter(13,"FOR MORPHING AN ENEMY");}
-else if(place_meeting(x,y,ExplosiveMorph))
-    {
-    MorphMe=true;
-    instance_create(x,y,ExplosiveSheep);
-    //Unlock sheep
-    scrUnlockCharacter(13,"FOR MORPHING AN ENEMY");}
-    else{MorphMe=false}
-instance_destroy()}
+if (my_health <= 0){
+	instance_destroy()
 }
 var overlap = instance_place(x,y,enemy);
 if overlap != noone
