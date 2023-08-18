@@ -68,7 +68,7 @@ if (wepmenuopen && !ultraOpen) {
 		draw_sprite_ext(sprite,imageIndex,xx,yy,1,1,0,col,1);
 		//draw_rectangle(l,t,r,b,true);
 		
-        wepx += 7 + spritewidth
+        wepx += 4 + spritewidth;
         wepiter++;
     } until (wepiter = UberCont.maxstartwep+1)
 	var xx = __view_get( e__VW.XView, 0 )+xo+302;

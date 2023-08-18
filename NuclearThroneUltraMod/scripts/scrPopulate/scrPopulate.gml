@@ -462,6 +462,10 @@ function scrPopulate() {
 				repeat(3)
 					scrPopEnemies()
 			}
+			if (scrIsGamemode(20) and random(3) < 1 && point_distance(x, y, Player.x, Player.y) > 240 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 290))
+			{
+				scrPopEnemies();
+			}
 			if scrIsGamemode(6)//Claustrophobia
 			{
 				if point_distance(x, y, Player.x, Player.y) > 110 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280)

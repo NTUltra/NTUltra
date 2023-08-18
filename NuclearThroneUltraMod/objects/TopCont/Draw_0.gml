@@ -2,52 +2,6 @@
 with BoltTrail
 draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,theColour,1);
 */
-with Wall
-{
-	draw_sprite_part_ext(outspr,outindex,l,r,w,h,x-4+l,y-12+r,1,1,c_white,1)//this draws white lines WHAT
-}
-with VikingWall
-{
-	if visible
-		draw_sprite_part_ext(outspr,outindex,l,r,w,h,x-4+l,y-12+r,1,1,c_gray,1)//this draws white lines WHAT
-}
-
-/*with Wall
-{
-
-//CORRECT
-if !place_free(x,y-16) and !place_free(x-16,y)
-draw_sprite_part(sprWall103Out2,-1,0,0,4,4,x-4,y-12)
-
-//CORRECT
-if !place_free(x,y-16) and !place_free(x+16,y)
-draw_sprite_part(sprWall103Out2,-1,20,0,4,4,x-4+20,y-12)
-
-
-if !place_free(x,y+16) and !place_free(x-16,y)
-draw_sprite_part(sprWall103Out2,-1,0,20,4,4,x-4,y-12+20)
-
-
-if !place_free(x,y+16) and !place_free(x+16,y)
-draw_sprite_part(sprWall103Out2,-1,20,20,4,4,x-4+20,y-12+20)
-}*/
-
-//with Wall
-//draw_sprite(outspr,outindex,x,y)
-
-/*mask test
-with enemy
-{
-if sprite_exists("mask_index") and mask_index != -1
-draw_sprite_ext(mask_index,-1,x,y,1,1,0,c_black,0.2)
-}
-
-with projectile
-{
-if sprite_exists("mask_index") and mask_index != -1
-draw_sprite_ext(mask_index,-1,x,y,1,1,image_angle,c_black,0.2)
-}*/
-
 with FrozenEnemy
 {
 image_alpha=0.5;
@@ -61,12 +15,12 @@ draw_self();
 
 with Top
 {
-if visible{
-draw_sprite(sprite_index,image_index,x+16,y-8)
-draw_sprite(sprite_index,image_index,x,y-8+16)
-draw_sprite(sprite_index,image_index,x+16,y-8+16)
-draw_sprite(sprite_index,image_index,x,y-8)
-}
+	if visible{
+		draw_sprite(sprite_index,image_index,x+16,y-8)
+		draw_sprite(sprite_index,image_index,x,y-8+16)
+		draw_sprite(sprite_index,image_index,x+16,y-8+16)
+		draw_sprite(sprite_index,image_index,x,y-8)
+	}
 }
 //draw_sprite_ext(sprite_index,-1,x,y-8,1,1,0,background_color,1)
 with TopSmall
@@ -75,11 +29,25 @@ draw_sprite(sprite_index,image_index,x,y-8)
 //draw_sprite_ext(sprite_index,-1,x,y-8,1,1,0,background_color,1)
 
 with Wall
-draw_sprite(topspr,topindex,x,y-8)
+{
+	draw_sprite_part_ext(outspr,outindex,l,r,w,h,x-4+l,y-12+r,1,1,c_white,1)
+}
+with Wall {
+	draw_sprite(topspr,topindex,x,y-8)
+}
 with VikingWall
 {
 	if visible
+	{
+		draw_sprite_part_ext(outspr,outindex,l,r,w,h,x-4+l,y-12+r,1,1,c_gray,1)
+	}
+}
+with VikingWall
+{
+	if visible
+	{
 		draw_sprite_ext(topspr,topindex,x,y-8,1,1,image_angle,c_gray,1)
+	}
 }
 if instance_exists(Spiral)
 	with Bones
@@ -94,29 +62,14 @@ draw_self();
 with RavenFly
 {
 draw_sprite_ext(sprite_index,-1,x,y+z,right,1,0,c_white,1)
-with Wall
-{
-	if x < other.x+32 and x > other.x-32 and y > other.y and y < other.y+64
-	draw_sprite(topspr,topindex,x,y-8)
-}
 }
 with InvertedRavenFly
 {
-draw_sprite_ext(sprite_index,-1,x,y+z,right,1,0,c_white,1)
-with Wall
-{
-if x < other.x+32 and x > other.x-32 and y > other.y and y < other.y+64
-draw_sprite(topspr,topindex,x,y-8)
-}
+	draw_sprite_ext(sprite_index,-1,x,y+z,right,1,0,c_white,1)
 }
 with LilHunterFly
 {
-draw_sprite_ext(sprite_index,-1,x,y+z,right,1,0,c_white,1)
-with Wall
-{
-if x < other.x+32 and x > other.x-32 and y > other.y and y < other.y+64
-draw_sprite(topspr,topindex,x,y-8)
-}
+	draw_sprite_ext(sprite_index,-1,x,y+z,right,1,0,c_white,1)
 }
 //Eagle eyes chest content
 if(instance_exists(Player)){
@@ -164,11 +117,7 @@ with GoldChest
 with StreetLight
 {
 draw_sprite_ext(sprite_index,-1,x,y,image_xscale,1,0,c_white,1)
-with Wall
-{
-if x < other.x+32 and x > other.x-32 and y > other.y and y < other.y+64
-draw_sprite(topspr,topindex,x,y-8)
-}
+
 }
 
 
@@ -176,11 +125,7 @@ draw_sprite(topspr,topindex,x,y-8)
 with CrystalShield
 {
 draw_sprite(sprite_index,-1,x+max(0,random(time/60)-2),y+max(0,random(time/90)-2))
-with Wall
-{
-if x < other.x+32 and x > other.x-32 and y > other.y-8 and y < other.y+64
-draw_sprite(topspr,topindex,x,y-8)
-}
+
 }
 
 with CrownPickup
@@ -447,8 +392,6 @@ if(point_distance(x,y,Player.x,Player.y)<100)
          draw_text(x,y+8,string(point_distance(x,y,Player.x,Player.y)))
 }
 */
-/*mask testwith Wall
-draw_sprite_ext(sprWall1Bot,-1,x,y,1,1,0,c_black,0.2)*/
 with Hand
 {
 	draw_self();	

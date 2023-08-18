@@ -11,7 +11,10 @@ snd_play_fire(sndPopgun)
 if (instance_exists(Player))
 {
 	var i = 0;
-    repeat(2)
+	var r = 1;
+	if ammo % 2 == 0
+		r ++;
+    repeat(r)
     {
 	    with instance_create(x,y,Bullet5)
 	    {

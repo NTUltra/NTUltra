@@ -5,7 +5,7 @@ function scrWeapons() {
 	wep_auto[0] = 0
 	wep_load[0] = 1
 	wep_cost[0] = 1
-	wep_sprt[0] = mskPickupThroughWall//just nothing
+	wep_sprt[0] = sprNoGun//just nothing
 	wep_area[0] = -1
 	wep_text[0] = ""
 	wep_swap[0] = sndSwapPistol
@@ -2771,7 +2771,7 @@ function scrWeapons() {
 	wep_name[251] = "YOYO GUN"
 	wep_type[251] = 3
 	wep_auto[251] = 1
-	wep_load[251] = 16
+	wep_load[251] = 17
 	wep_cost[251] = 2
 	wep_sprt[251] = sprYoyoGun
 	wep_area[251] = 3
@@ -3750,7 +3750,7 @@ function scrWeapons() {
 	wep_name[340] = "TRIDENT"
 	wep_type[340] = 0
 	wep_auto[340] = 0
-	wep_load[340] = 30
+	wep_load[340] = 26
 	wep_cost[340] = 0
 	wep_sprt[340] = sprTrident
 	wep_area[340] = 10
@@ -4564,7 +4564,7 @@ function scrWeapons() {
 	wep_name[412] = "LANCE"
 	wep_type[412] = 0
 	wep_auto[412] = 0
-	wep_load[412] = 17
+	wep_load[412] = 18
 	wep_cost[412] = 0
 	wep_sprt[412] = sprLance
 	wep_area[412] = 4
@@ -7084,7 +7084,7 @@ function scrWeapons() {
 	wep_type[641] = 2
 	wep_auto[641] = 1
 	wep_load[641] = 4
-	wep_cost[641] = 1
+	wep_cost[641] = 1.25
 	wep_sprt[641] = sprSuperBeamShotgun
 	wep_area[641] = 15
 	wep_text[641] = "leaking"
@@ -7185,10 +7185,43 @@ function scrWeapons() {
 	wep_load[650] = 15
 	wep_cost[650] = 2
 	wep_sprt[650] = sprUltraFlareGun
-	wep_area[650] = 21
+	wep_area[650] = 20
 	wep_text[650] = "green sign means go"
 	wep_swap[650] = sndSwapFlame
 	wep_rad[650] = 8;
+	
+	wep_name[651] = "GOLDEN LANCE"
+	wep_type[651] = 0
+	wep_auto[651] = 0
+	wep_load[651] = 17
+	wep_cost[651] = 0
+	wep_sprt[651] = sprGoldenLance
+	wep_area[651] = 19
+	wep_text[651] = "engarde"
+	wep_swap[651] = sndSwapSword
+	wep_rad[651] = 0;
+	
+	wep_name[652] = "SUPER TRIDENT"
+	wep_type[652] = 0
+	wep_auto[652] = 0
+	wep_load[652] = 30
+	wep_cost[652] = 0
+	wep_sprt[652] = sprSuperTrident
+	wep_area[652] = 15
+	wep_text[652] = "sea lord"
+	wep_swap[652] = sndSwapDragon
+	wep_rad[652] = 0;
+	
+	wep_name[653] = "GOLDEN YOYO GUN"
+	wep_type[653] = 3
+	wep_auto[653] = 1
+	wep_load[653] = 16
+	wep_cost[653] = 2
+	wep_sprt[653] = sprGoldenYoyoGun
+	wep_area[653] = 19
+	wep_text[653] = "jester"
+	wep_swap[653] = sndSwapBow
+	wep_rad[653] = 0;
 
 	maxwep = array_length(wep_name)-1;
 

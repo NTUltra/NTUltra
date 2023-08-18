@@ -1,7 +1,8 @@
 /// @description destroy wall
 
-if speed>3&&alarm[3]>0
+if speed>2&&alarm[3]>0
 {
+	acc *= 0.98;
     with other
     {
     instance_destroy()

@@ -7,12 +7,12 @@ if other.team != team && (!inArray || other.sprite_index != other.spr_hurt)
 	snd_play(sndRoll,0,true);
 	snd_play(sndBloodLauncher,0,true);
 
-	snd_play(choose(sndWater1,sndWater2) ,0,true);
+	snd_play(choose(sndWater1,sndWater2,sndTentacle,sndTentacle2) ,0,true);
 
 
 	with instance_create(x,y,Tentacle)
-	{image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(30)-15)
-	creator=other.id;
+	{
+		image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(30)-15)
 	team = other.team
 	ammo = 11
 	event_perform(ev_alarm,0)
@@ -23,11 +23,10 @@ if other.team != team && (!inArray || other.sprite_index != other.spr_hurt)
 	image_angle = other.image_angle
 	}
 
-	repeat(3){
 	    with instance_create(x,y,FishBoost)
 	    {
 	    motion_add( point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(60)-30,3);
-	    }}
+	    }
 
 	}
 	with other

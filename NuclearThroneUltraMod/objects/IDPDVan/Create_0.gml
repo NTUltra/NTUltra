@@ -23,7 +23,7 @@ loops = GetPlayerLoops();
 idle=true;
 right = 1;
 acc = 9 + min(16,loops);
-
+maxSpeed = 12;
 dropFreaks = false;
 /*
 if instance_exists(Player) && object_index != IDPDVanVertical

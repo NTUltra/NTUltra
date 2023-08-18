@@ -367,5 +367,6 @@ if random(300)<1
 kutgrap2=true;
 
 SetSeed();
+hasLimitReached = false;
 with instance_create(10000,10000,FloorMaker) {scrGenerateFloorMaker(0);}
 SetSeed();

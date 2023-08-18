@@ -698,7 +698,7 @@ function scrUltras(altOverride = false) {
 	    ultra_tips[94] = "ice ice CHAINREACTION BABY!"
     
 	    ultra_name[95] = "BURNING HOT"
-	    ultra_text[95] = "MORE FLAME DAMAGE#FIRE HOMES#FIRE TRAIL"
+	    ultra_text[95] = "FIRE TRAIL#MORE FLAME DAMAGE#FIRE HOMES"
 		//ultra_text[95] = "BURNING HOMING DEBRIS##YOUR WALLS CREATE#MORE DEBRIS WHEN DESTROYED#STRONGER FIRE WEAPONS#FIRE TRAIL"
 	    ultra_tips[95] = "spicy"
 		

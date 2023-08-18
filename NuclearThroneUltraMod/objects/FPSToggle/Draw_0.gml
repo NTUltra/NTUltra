@@ -9,8 +9,9 @@ if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x and UberCont.mo
 	if UberCont.normalGameSpeed == 30
 	{
 		UberCont.normalGameSpeed = 60;
-		if !instance_exists(FPSHACK) && !instance_exists(DeleteSave)
-			instance_create(x,y,FPSHACK);
+		//instance_activate_object(FPSHACK);
+		if !instance_exists(FPSHACKMenu) && !instance_exists(DeleteSave)
+			instance_create(x,y,FPSHACKMenu);
 	}
 	else
 	{

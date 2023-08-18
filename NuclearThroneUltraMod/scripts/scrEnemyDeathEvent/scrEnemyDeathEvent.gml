@@ -134,9 +134,13 @@ function scrEnemyDeathEvent(){
 			//RADS
 			if race == 4 && other.raddrop!=0
 				other.raddrop += 1
-
+			if scrIsGamemode(6) || scrIsGamemode(20)
+			{
+				other.raddrop = max(0, other.raddrop - choose(0,0,1));
+				other.raddrop = round(other.raddrop*0.8);
+			}
 			if isdoc
-			other.raddrop = round(other.raddrop*0.5);
+				other.raddrop = round(other.raddrop*0.5);
 
 			if ultra_got[15]//POWER OVERWHELMING! melting c ultra
 				other.raddrop += 2;

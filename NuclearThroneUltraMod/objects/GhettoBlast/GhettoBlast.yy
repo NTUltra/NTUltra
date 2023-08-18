@@ -43,5 +43,5 @@
     "name": "mskPickupThroughWall",
     "path": "sprites/mskPickupThroughWall/mskPickupThroughWall.yy",
   },
-  "visible": false,
+  "visible": true,
 }

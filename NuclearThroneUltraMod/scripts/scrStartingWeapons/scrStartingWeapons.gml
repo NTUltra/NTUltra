@@ -33,6 +33,12 @@ function scrStartingWeapons() {
 	start_wep[31]=567
 	start_wep[32]=589
 	start_wep[33]=617
+	start_wep[34]=645
+	start_wep[35]=646
+	start_wep[36]=647
+	start_wep[37]=649
+	start_wep[38]=651
+	start_wep[39]=653
 
 	var dir=1;
 
@@ -73,9 +79,15 @@ function scrStartingWeapons() {
 	start_wep_have[31,dir]=0
 	start_wep_have[32,dir]=0
 	start_wep_have[33,dir]=0
+	start_wep_have[34,dir]=0
+	start_wep_have[35,dir]=0
+	start_wep_have[36,dir]=0
+	start_wep_have[37,dir]=0
+	start_wep_have[38,dir]=0
+	start_wep_have[39,dir]=0
 
 	dir++;
 	}
 
-	maxstartwep=33;
+	maxstartwep=39;
 }

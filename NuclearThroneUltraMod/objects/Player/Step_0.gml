@@ -1264,8 +1264,8 @@ else if lstCash > cash
 }
 if sprite_index != spr_hurt and lsthealth > my_health// && alarm[3] < 1
 {
-	//if drawlowhp < 30 and my_health <= 4 && !audio_is_playing(snd_lowh)
-	//	snd_play_2d(snd_lowh, 0, true,false,10)
+	if drawlowhp < 30 and my_health <= 4 && !audio_is_playing(snd_lowh)
+		snd_play_2d(snd_lowh, 0, true,false,10)
 	drawlowhp = 30
 	lsthealth -= 0.5
 

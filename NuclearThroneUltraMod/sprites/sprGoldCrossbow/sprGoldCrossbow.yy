@@ -69,7 +69,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"aaebfa64-ca77-4124-9939-f65ac52d81e4","path":"sprites/sprGoldCrossbow/sprGoldCrossbow.yy",},},},"Disabled":false,"id":"8f00509d-f7ff-4d61-b05a-f1075f0f8ac6","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 3,
     "yorigin": 4,

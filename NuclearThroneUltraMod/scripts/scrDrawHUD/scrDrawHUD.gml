@@ -975,8 +975,8 @@ function scrDrawHUD() {
 
 	if dataRef.wep_type[dataRef.wep] > 0 && dataRef.ammo[dataRef.wep_type[dataRef.wep]] <= dataRef.typ_ammo[dataRef.wep_type[dataRef.wep]] and sin(wave) > 0 and dataRef.drawempty > 0
 	{
-	if dataRef.drawempty = 10 and dataRef.ammo[dataRef.wep_type[dataRef.wep]] > dataRef.typ_ammo[dataRef.wep_type[dataRef.wep]]-dataRef.wep_cost[dataRef.wep]
-	snd_play_2d(dataRef.snd_lowa,0,true,false,10);
+		if dataRef.drawempty == 10 and dataRef.ammo[dataRef.wep_type[dataRef.wep]] > dataRef.typ_ammo[dataRef.wep_type[dataRef.wep]]-dataRef.wep_cost[dataRef.wep]
+			snd_play_2d(dataRef.snd_lowa,0,true,false,10);
 	dataRef.drawempty -= 1
 
 	txt = "LOW ";//+string(dataRef.typ_name[dataRef.wep_type[dataRef.wep]])

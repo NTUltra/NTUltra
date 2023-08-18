@@ -15,6 +15,7 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":73,"eventType":8,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"chestprop","path":"objects/chestprop/chestprop.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"VikingWall","path":"objects/VikingWall/VikingWall.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -23,8 +24,8 @@
     "path": "folders/Objects/Enemies/IDPD/EliteIDPD.yy",
   },
   "parentObjectId": {
-    "name": "enemyCollisionWall",
-    "path": "objects/enemyCollisionWall/enemyCollisionWall.yy",
+    "name": "enemy",
+    "path": "objects/enemy/enemy.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

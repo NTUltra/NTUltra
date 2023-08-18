@@ -30,7 +30,11 @@ for (var i = 0; i < al; i++;)
 		draw_sprite_ext(toDraw.spr,toDraw.ii,dx,dy,toDraw.xscale,toDraw.yscale,ang,toDraw.col,toDraw.alpha);
 	//}
 }
-while ds_list_size(drawer) > 2000
+if fps_real < fps
+	amount -= 10;
+else if amount < maxAmount
+	amount+= 10;
+while ds_list_size(drawer) > amount
 	ds_list_delete(drawer,0);
 surface_reset_target();
 draw_surface_ext(surf,cx,cy,1,1,0,c_white,1);

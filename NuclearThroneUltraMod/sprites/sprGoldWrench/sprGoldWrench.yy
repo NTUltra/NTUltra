@@ -69,7 +69,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"57d711e8-132a-4fe1-adca-6d0e07be8a3d","path":"sprites/sprGoldWrench/sprGoldWrench.yy",},},},"Disabled":false,"id":"d7445f79-5b18-4734-9e92-310b8553106e","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 4,
     "yorigin": 6,

@@ -27,7 +27,7 @@ if instance_exists(Player)
 
 	if scrIsCrown(13)
 		raddrop=0;
-	if Player.loops >1
+	if Player.loops > 1
 		raddrop*=0.8;
 	if Player.ultra_got[52]
 		morphMe = 1;

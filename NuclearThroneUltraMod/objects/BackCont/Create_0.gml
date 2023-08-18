@@ -94,8 +94,6 @@ if instance_exists(Player)
 		alarm[3]=60;
 	//maxEnemyHealthInLevel=0;
 	}
-	//progression
-	alarm[4]=600;//10 seconds
 	
 	if ((Player.area == 9 || Player.area == 118) && Player.subarea == 3 || Player.area == 104 || Player.area == 128)
 	{
@@ -103,7 +101,7 @@ if instance_exists(Player)
 		alarm[1] = 0;
 	}
 }
-alarm[6] = 1000;
+alarm[4] = 10;//Temp
 if instance_exists(SurvivalArenaStarter)
 {
 	alarm[7] = 1;
