@@ -60,6 +60,7 @@ if instance_exists(Player)
 	//PLAYER START POSITION
 	with Player
 	{
+		wkick = 0;
 		x = 10016
 		y = 10016
 		scrForcePosition60fps();

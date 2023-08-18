@@ -30,7 +30,7 @@ if instance_exists(Player){
 
 	if Player.skill_got[19]==1
 	{
-		accuracy=9;
+		accuracy = 10;
 	}
 
 	if Player.ultra_got[59] && !Player.altUltra//atom electron ultra
@@ -42,10 +42,11 @@ if instance_exists(Player){
 	
 	if Player.race=24
 	{
-		dmg ++;
+		accuracy -= 2;
+		image_speed-=0.1;
 		fork --;
 	}
-
+	
 }
 
 isog = true;

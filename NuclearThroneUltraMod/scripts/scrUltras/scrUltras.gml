@@ -245,7 +245,7 @@ function scrUltras(altOverride = false) {
 	ultra_text[35] = "SLOW MOTION IS MUCH MORE EFFECTIVE#ON ENEMY PROJECTILES#(EVEN MORE EFFECTIVE WITH EUPHORIA)##SLOW MOTION COMPLETLY STOPS#YOUR PROJECTILES"
 	ultra_tips[35] = "so fast"
 	
-	if altOverride || (instance_exists(Player) &&  Player.race == 9 && ((scrIsCrown(12) && instance_exists(UltraIcon)) || Player.altUltra))
+	if altOverride || (instance_exists(Player) &&  Player.race == 9 && (((scrIsCrown(12) || scrIsCrown(34)) && instance_exists(UltraIcon)) || Player.altUltra))
 	{
 		ultra_name[35] = "SUCOF"
 		ultra_text[35] = "SELITCEJORP SESREVER EVITCA"//ACTIVE REVERSES PROJECTILES | EMIT SESREVER EVITCA
@@ -693,20 +693,22 @@ function scrUltras(altOverride = false) {
 	    ultra_tips[93] = "get to cover!"
     
 	    ultra_name[94] = "ICE COLD"
-	    ultra_text[94] = "STRONGER & HOMING DEBRIS#DEBRIS FREEZES ENEMIES##YOUR WALLS CREATE#MORE DEBRIS WHEN DESTROYED"
+	    ultra_text[94] = "COOL EVERYTHING NEAR YOU#STRONGER & HOMING DEBRIS#DEBRIS FREEZES ENEMIES##YOUR WALLS CREATE#MORE DEBRIS WHEN DESTROYED"
+		//ultra_text[94] = "YOUR PRESENCE COOLS DOWN EVERYTHING#STRONGER FROST WEAPONS#FLAMES BECOME FROST FLAMES#ENEMY FLAMES SHRINK CLOSE TO YOU#ENEMIES THAT TOUCH YOU FREEZE"
 	    ultra_tips[94] = "ice ice CHAINREACTION BABY!"
     
 	    ultra_name[95] = "BURNING HOT"
 	    ultra_text[95] = "MORE FLAME DAMAGE#FIRE HOMES#FIRE TRAIL"
+		//ultra_text[95] = "BURNING HOMING DEBRIS##YOUR WALLS CREATE#MORE DEBRIS WHEN DESTROYED#STRONGER FIRE WEAPONS#FIRE TRAIL"
 	    ultra_tips[95] = "spicy"
 		
-	    ultra_name[96] = "THUNDER BOMB"
-	    ultra_text[96] = "OCCASIONALLY PRODUCE LIGHTNING##WHEN USING LIGHTNING WEAPONS:#GAIN EXPLOSIVE AMMO##WHEN USING KRAKEN WEAPONS:#GAIN ENERGY AMMO"
+	    ultra_name[96] = "TSUNAMI"
+	    ultra_text[96] = "LIGHTNING AND KRAKEN ARE MIXED#OCCASIONALLY PRODUCE LIGHTNING/KRAKEN##WHEN USING LIGHTNING WEAPONS:#GAIN EXPLOSIVE AMMO##WHEN USING KRAKEN WEAPONS:#GAIN ENERGY AMMO"
 	    ultra_tips[96] = "you gain explosive ammo#when using a lightning weapon#you gain energy ammo#when using a kraken weapon"
 		
 		//CROWN OF REINCARNATION/FREEDOM
 		if altOverride || (instance_exists(Player) && (Player.race == 24 && (Player.altUltra || Player.unlockAlternativeUltras || (
-		(scrIsCrown(11) || scrIsCrown(25) || Player.skill_got[2]) && !Player.skill_got[17]
+		(Player.patience > 0 || Player.guarenteedReroll > 0)
 		&& instance_exists(UltraIcon)))))
 		{
 			ultra_name[96] = "AIR LORD"
@@ -737,7 +739,7 @@ function scrUltras(altOverride = false) {
 	ultra_tips[99] = "doctor necromancer"
     
 	ultra_name[100] = "SEDATIVES"
-	ultra_text[100] = "YOUR PROJECTILES PUT ENEMIES TO SLEEP#FOR A SHORT MOMENT#THRONE BUTT INCREASES#THE SLEEP DURATION"
+	ultra_text[100] = "YOUR PROJECTILES PUT ENEMIES TO SLEEP#FOR A SHORT MOMENT#THRONE BUTT INCREASES#THE SLEEP DURATION BY 20%"
 	ultra_tips[100] = "sleeping enemies don't react#for a moment"
 
 

@@ -15,6 +15,7 @@ accuracy=24;
 iframeskip = 0.07;
 fork = 7;
 branch = 15;
+canSwap = false;
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1{
@@ -36,7 +37,8 @@ if instance_exists(Player)
 	}
 	if Player.race=24
 	{
-		dmg ++;
+		accuracy -= 2;
+		image_speed-=0.1;
 		fork --;
 	}
 

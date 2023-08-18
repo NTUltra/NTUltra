@@ -199,6 +199,7 @@ if !instance_exists(LevCont) and visible = 1
 				{
 					angle = 0
 					roll = 0
+					audio_stop_sound(sndFishRollUpgLoop);
 				}
 			}
 		}
@@ -1382,87 +1383,156 @@ if ultra_got[59] && altUltra
 }
 if (!outOfCombat && !skill_got[2] && race!=18 && race != 15 and !instance_exists(LevCont) and !instance_exists(FloorMaker))
 {
-	if ((area = 5 || area = 107) and !instance_exists(LevCont) and !instance_exists(FloorMaker))
+	var ground = instance_position(x,y,Floor);
+	if ground != noone
 	{
+		var gs = ground.sprite_index;
+		//lava and frost
+		var isCold = ultra_got[94];
+		var isHot = ultra_got[95];
 		//SNOW & ICE TEST
-		if ((instance_nearest(x-16,y-16,Floor).styleb == 1)) // EXTRA FEET TEST
+		if (gs == sprFloor5B || gs == sprFloor107B) // Ice
+		{
 			friction = 0.1
-		else
-			friction = 0.45
-	}
-	else if (area == 4 || area == 115 || area == 111) and !instance_exists(LevCont) and !instance_exists(FloorMaker)
-	{
-		//SPIDER WEBS
-		var ground = instance_nearest(x-16,y-16,Floor);
-		if (ground != noone && ground.styleb == 1)
-		{
-			if (ground.sprite_index == sprFloor111B)
-				speed+=1;
-			else
-				friction = 1.8;
+			//Maybe melt it?
 		}
+		else if gs == sprFloor4B || gs == sprFloor115B //Spider webs
+			friction = 1.8;
 		else
 			friction = 0.45
-	} else if (area==7||area==108)
-	{//lava and frost
-		var ground = instance_position(x,y,FloorLava)
-		if ground == noone
-			ground = instance_position(x,y,FloorExplo)
-		if ground != noone
+		if (gs == sprFloor111B)
+			speed+=1;
+		
+		if isCold
 		{
-		    if ground.sprite_index == sprFloor7Explo || ground.sprite_index == sprFloorLava
-		    {
-			    if alarm[4]<=0
-					alarm[4]=4;
-    
-				if UberCont.normalGameSpeed == 60
-					hotfloor += 0.5;
-				else
-					hotfloor+=1;
-		        if hotfloor>39//time before crisping
-		        {
-			        with instance_create(x,y,TrapFire){//burn!
-			        team=1;}
-			        hotfloor=0;//allright you've burned now continue
-        
-			        //GAMEMODE UNLOCKABLE WALL IS LAVA
-			        scrUnlockGameMode(4,"FOR STANDING IN LAVA");
-		        }
-				friction = 0.45
-		    }
-			else if ground.sprite_index == sprFloor108Explo || ground.sprite_index == sprInvertedFloorLava
-		    {
-				friction = 0.1
-    
-			    //when player isn't frozen increase the time that determines when it should get frozeen
-			    if frozen<1
-				{
-					if UberCont.normalGameSpeed == 60
-						getFrozen += 0.5;
-					else
-						getFrozen+=1;
-				}
-    
-			    if getFrozen>24 && alarm[3] < 1
-			    {
-					my_health -= 1;
-					snd_play_2d(snd_hurt);
-				    instance_create(x,y,FrozenPlayer);
-				    frozen=15;
-				    getFrozen=0;
-			    }
-			}
-			else
+			if ground.sprite_index == sprFloor7Explo
 			{
-				friction = 0.45
+				with ground
+				{
+					alarm[1] = 0;
+					snd_play(choose(sndFrostShot1,sndFrostShot2),0.02)
+					sprite_index = sprFloor7BExplo;
+					var ang = random(360);
+					var am = 3;
+					var angstep = 360/am;
+					repeat(am)
+					{
+						with instance_create(x + 8,y + 8,IceFlame)
+						{
+							motion_add(ang,random(2)+2)
+							team = 2
+							ang += angstep;
+						}
+					}
+				}
+			}
+			else if ground.sprite_index == sprFloorLava {
+				with ground {
+					alarm[1] = 0;
+					sprite_index = sprFloorLavaB;
+					snd_play(choose(sndFrostShot1,sndFrostShot2),0.02)
+					var ang = random(360);
+					var am = 6;
+					var angstep = 360/am;
+					repeat(am)
+					{
+						with instance_create(x + 16,y + 16,IceFlame)
+						{
+							motion_add(ang,random(2)+3)
+							team = 2
+							ang += angstep;
+						}
+					}
+				}
+			}
+		}
+		if isHot
+		{
+			if ground.sprite_index == sprFloor108Explo
+			{
+				with ground
+				{
+					alarm[1] = 0;
+					snd_play(sndFlareExplode,0.02)
+					sprite_index = sprFloor108BExplo;
+					var ang = random(360);
+					var am = 3;
+					var angstep = 360/am;
+					repeat(am)
+					{
+						with instance_create(x + 8,y + 8,Flame)
+						{
+							motion_add(ang,random(2)+2)
+							team = 2
+							ang += angstep;
+						}
+					}
+				}
+			}
+			else if ground.sprite_index == sprInvertedFloorLava {
+				with ground {
+					alarm[1] = 0;
+					sprite_index = sprInvertedFloorLavaB;
+					snd_play(sndFlareExplode,0.02)
+					var ang = random(360);
+					var am = 6;
+					var angstep = 360/am;
+					repeat(am)
+					{
+						with instance_create(x + 16,y + 16,Flame)
+						{
+							motion_add(ang,random(2)+3)
+							team = 2
+							ang += angstep;
+						}
+					}
+				}
+			}
+		}
+		if ground.sprite_index == sprFloor7Explo || ground.sprite_index == sprFloorLava
+		{
+			if alarm[4]<=0
+				alarm[4]=4;
+    
+			if UberCont.normalGameSpeed == 60
+				hotfloor += 0.5;
+			else
+				hotfloor+=1;
+		    if hotfloor>39//time before crisping
+		    {
+			    with instance_create(x,y,TrapFire){//burn!
+			    team=1;}
+			    hotfloor=0;//allright you've burned now continue
+        
+			    //GAMEMODE UNLOCKABLE WALL IS LAVA
+			    scrUnlockGameMode(4,"FOR STANDING IN LAVA");
+		    }
+		}
+		else if ground.sprite_index == sprFloor108Explo || ground.sprite_index == sprInvertedFloorLava
+		{
+			friction = 0.1
+			//when player isn't frozen increase the time that determines when it should get frozeen
+			if frozen<1
+			{
+				if UberCont.normalGameSpeed == 60
+					getFrozen += 0.5;
+				else
+					getFrozen+=1;
+			}
+    
+			if getFrozen>24 && alarm[3] < 1
+			{
+				my_health -= 1;
+				snd_play_2d(snd_hurt);
+				instance_create(x,y,FrozenPlayer);
+				frozen=15;
 				getFrozen=0;
-				hotfloor=0
 			}
 		}
 		else
 		{
 			getFrozen=0;
-			hotfloor=0	
+			hotfloor=0
 		}
 	}
 }
@@ -1915,19 +1985,6 @@ if race==18&& !instance_exists(LevCont)// && !instance_exists(Portal)
 
 
 
-/* */
-///Elementor fire ultra
-
-if ultra_got[95]
-{
-with instance_create(x,y,Flame)
-{motion_add(other.direction+180+random(60)-30,0.4+random(2.5))
-team = other.team
-depth=+1;}
-
-}
-
-/* */
 ///moddelay
 if moddelay>0
 moddelay--;

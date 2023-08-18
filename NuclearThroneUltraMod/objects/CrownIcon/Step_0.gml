@@ -5,6 +5,7 @@ if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
 	x = xstart;
 if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+10 and UberCont.mouse__y < y+16 and UberCont.mouse__x > x-10 and UberCont.mouse__y > y-16)
 {
+	KeyCont.key_fire[p] = 0;
     with UberCont///UNLOCK CROWN
     {
 		crown_used[other.crown] += 1;

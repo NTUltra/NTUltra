@@ -23,3 +23,4 @@ gunangle = random(360)
 angleleft=false;
 alarm[1] = 30+random(90)
 
+alarm[3] = 10;

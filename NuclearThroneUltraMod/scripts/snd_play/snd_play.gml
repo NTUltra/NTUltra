@@ -64,7 +64,7 @@ function snd_play(sndId, randompitch = 0, cancelPrev = false, usesLocation = tru
 					audio_sound_pitch(audio_play_sound_on(emitter,sndId,loop,priority), specificPitch);
 				else
 					audio_sound_pitch(audio_play_sound_on(emitter,sndId,loop,priority), 1 + (random(randompitch)*2 - randompitch));
-				alarm[0] = room_speed * audio_sound_length(sndId);
+				alarm[0] = 30 * audio_sound_length(sndId);
 				if owner > 0
 					alarm[1] = 1;
 			}

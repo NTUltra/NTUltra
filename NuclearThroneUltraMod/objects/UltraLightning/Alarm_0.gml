@@ -147,21 +147,49 @@ if round(ammo) > 0
 	}
 	if round(ammo) % fork == 0//Forking lightning
 	{
-		with instance_create(x,y,UltraLightning)
+		if instance_exists(Player) && Player.ultra_got[96] && !Player.altUltra && choose(true,true,false)
 		{
-			isog = other.isog;
-			branch = clamp(other.branch*2.5,80,200);
-			fork = other.fork;
-			canUltraMod = other.canUltraMod;
-			dmg = other.dmg;
-			scrCopyWeaponMod(other);
-			accuracy = 5+(other.accuracy*3);
-			direction = other.direction+choose(80+random(30),-80+random(-30))
-			image_angle = direction
-			ammo = clamp(ceil(other.ammo*0.15),2,16);
-			team = other.team
-			image_index = other.image_index
-			event_perform(ev_alarm,0)
+			with instance_create(x,y,Tentacle)
+			{
+				sprite_index=sprUltraTentacle;
+				ultra=true;
+				image_yscale += 0.3;
+				dmg = 6;//10+irandom(4)
+				direction = other.direction+choose(80+random(30),-80+random(-30))
+				image_angle = direction
+				scrCopyWeaponMod(other);
+				team = other.team
+				ammo = clamp(round(other.ammo*0.34),2,16)+1;
+				isog = false;
+				fork = other.fork;
+				//branch = clamp(other.branch*2.5,80,200);
+				with instance_create(x,y,LightningSpawn)
+				{
+					sprite_index=sprTentacleSpawn
+					image_angle = other.image_angle
+				}
+				with instance_create(x,y,FishBoost)
+				{
+					motion_add(image_angle+random(60)-30,2+random(4) );
+				}
+				event_perform(ev_alarm,0)
+			}
+			with instance_create(x,y,UltraLightning)
+			{
+				isog = other.isog;
+				branch = clamp(other.branch*2.5,80,200);
+				fork = other.fork;
+				canUltraMod = other.canUltraMod;
+				dmg = other.dmg;
+				scrCopyWeaponMod(other);
+				accuracy = 5+(other.accuracy*3);
+				direction = other.direction+choose(80+random(30),-80+random(-30))
+				image_angle = direction
+				ammo = clamp(ceil(other.ammo*0.15),2,16);
+				team = other.team
+				image_index = other.image_index
+				event_perform(ev_alarm,0)
+			}
 		}
 	}
 }

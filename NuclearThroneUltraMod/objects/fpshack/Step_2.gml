@@ -34,8 +34,13 @@ for (var i = 0; i < al; i++)
 }
 ds_list_clear(forcePositions);
 //Individual timers
+if !instance_exists(GenCont) && !instance_exists(LevCont)
 with Player
 {
+	if wkick > 0
+		wkick += 0.5
+	if wkick < 0
+		wkick -= 0.5
 	if roll != 0
 		angle -= 25*right*max(1,(skill_got[2]*1.3))
 	if extrafeetalarm > 0

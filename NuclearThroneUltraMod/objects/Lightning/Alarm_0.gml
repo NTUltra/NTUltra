@@ -116,7 +116,7 @@ image_xscale = -point_distance(x,y,oldx,oldy)*0.5;
 var ammoDecrease = 1;
 if team == 2
 {
-	var modBoost = 0.06;
+	var modBoost = 0.055;
 	with Player
 	{
 		if ultra_got[59] && !altUltra
@@ -124,9 +124,9 @@ if team == 2
 			ammoDecrease -= 0.1;
 		}
 		if skill_got[17]
-			ammoDecrease -= 0.08;
+			ammoDecrease -= 0.07;
 		if skill_got[30] == 1//Power craving
-			modBoost = 0.09;
+			modBoost = 0.08;
 	}
 	//Projectile Speed
 	if Mod1 == 11
@@ -181,22 +181,49 @@ if round(ammo) > 0
 	}
 	if team == 2 && round(ammo) % fork == 0//Forking lightning
 	{
-		with instance_create(x,y,object_index)
+		if instance_exists(Player) && Player.ultra_got[96] && !Player.altUltra && choose(true,true,false)
 		{
-			target = other.target;
-			isog = other.isog;
-			fork = other.fork;
-			branch = clamp(other.branch*2.5,80,200);
-			canUltraMod = other.canUltraMod;
-			dmg = other.dmg;
-			scrCopyWeaponMod(other);
-			accuracy=other.accuracy*2;
-			direction = other.direction+choose(80+random(30),-80+random(-30))
-			image_angle = direction
-			ammo = clamp(round(other.ammo*0.34),2,16);
-			team = other.team
-			image_index = other.image_index
-			event_perform(ev_alarm,0)
+			with instance_create(x,y,Tentacle)
+			{
+				direction = other.direction+choose(80+random(30),-80+random(-30))
+				image_angle = direction
+				scrCopyWeaponMod(other);
+				team = other.team
+				ammo = clamp(round(other.ammo*0.34),2,16)+1;
+				isog = other.isog;
+				fork = other.fork;
+				//branch = clamp(other.branch*2.5,80,200);
+				with instance_create(x,y,LightningSpawn)
+				{
+					sprite_index=sprTentacleSpawn
+					image_angle = other.image_angle
+				}
+				with instance_create(x,y,FishBoost)
+				{
+					motion_add(image_angle+random(60)-30,2+random(4) );
+				}
+				event_perform(ev_alarm,0)
+			}
+		}
+		else
+		{
+			with instance_create(x,y,object_index)
+			{
+				target = other.target;
+				isog = other.isog;
+				fork = other.fork;
+				branch = clamp(other.branch*2.5,80,200);
+				canUltraMod = other.canUltraMod;
+				dmg = other.dmg;
+				scrCopyWeaponMod(other);
+				accuracy=other.accuracy*2;
+				direction = other.direction+choose(80+random(30),-80+random(-30))
+				image_angle = direction
+				ammo = clamp(round(other.ammo*0.34),2,16);
+				team = other.team
+				image_index = other.image_index
+				event_perform(ev_alarm,0)
+			}
 		}
 	}
 }

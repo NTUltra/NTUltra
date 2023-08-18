@@ -39,7 +39,10 @@ function scrPowers() {
 			if alienIntestines > 120
 			{
 				ys += 0.1;
-				snd_play(sndBloodHammer,0.1);
+				if alienIntestines > 240
+					snd_play(sndBloodCannon);
+				else
+					snd_play(sndBloodHammer,0.1);
 			}
 			else if alienIntestines > 60
 				snd_play_fire(sndBloodLauncher);
@@ -54,7 +57,7 @@ function scrPowers() {
 					image_angle = aimDirection+(random(30)-15)*other.accuracy
 					creator=other.id;
 					team = other.team
-					ammo = lerp(5,25,min(1,other.alienIntestines/200)) + i
+					ammo = lerp(4,25,min(1,other.alienIntestines/200)) + i
 					event_perform(ev_alarm,0)
 					visible = 0
 					with instance_create(x,y,LightningSpawn)
@@ -80,7 +83,7 @@ function scrPowers() {
 					image_angle = random(360);
 					creator=other.id;
 					team = other.team
-					ammo = lerp(4,22,min(1,other.alienIntestines/250)) + i
+					ammo = lerp(3,22,min(1,other.alienIntestines/250)) + i
 					event_perform(ev_alarm,0)
 					visible = 0
 					with instance_create(x,y,LightningSpawn)
@@ -1678,13 +1681,16 @@ function scrPowers() {
 		if skill_got[5]
 			rollIframe = 8;
 		alarm[3] += rollIframe;
-		snd_play_2d(sndRoll)
 		mask_index = mskPickupThroughWall;
 		if skill_got[5]
 		{
 			snd_play_2d(sndFishRollUpg);
 			if !audio_is_playing(sndFishRollUpgLoop)
 				snd_loop(sndFishRollUpgLoop);
+		}
+		else
+		{
+			snd_play_2d(sndRoll)
 		}
 
 		instance_create(x,y,Dust)
@@ -2022,7 +2028,6 @@ function scrPowers() {
 	////////KEY RELEASE////////
 	if KeyCont.key_spec[p] == 3
 	{
-		audio_stop_sound(sndFishRollUpgLoop);	
 		if race == 23
 		{
 			audio_stop_sound(sndFrogLoop) 
@@ -3270,6 +3275,9 @@ function scrPowers() {
 	{
 		lockoutElementor = false;	
 	}
+	}
+	else {
+		debug("END LOOP SFX?");	
 	}
 	race = keepRace;
 }

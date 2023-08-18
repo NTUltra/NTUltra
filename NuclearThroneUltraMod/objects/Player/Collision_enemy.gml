@@ -94,6 +94,31 @@ if other.team != team && team != 0
 				instance_create(x,y,GammaGutsBlast);
 			}
 		}
+		if ultra_got[94]//elementor coldheart
+		{
+			with other
+			{
+				if my_health > 0
+				{
+					if alarm[11]<1 {
+						frozen=true;
+						with instance_create(x,y,FrozenEnemy)
+						{
+							var s = min(2,other.mySize)
+							image_xscale=s*choose(1,-1);
+							image_yscale=s;
+							xx=other.x
+							yy=other.y
+							debrisAmount=choose(1,2);
+							owner=other.id;
+						}
+					alarm[11]+=20;
+					if alarm[1] > 0
+							alarm[1] += 10;
+					}
+				}
+			}
+		}
 	}
 
 	if other.meleedamage > 0 && other.existTime > 25 && !justAsheep//is it a melee enemy?

@@ -41,7 +41,7 @@ else if Player.race == 9 && skill == 33 && (Player.unlockAlternativeUltras || sc
 {
 	sprite_index = sprPhoenix;
 }
-else if skill == 35 && Player.race == 9 && (Player.unlockAlternativeUltras || scrIsCrown(12))//Crown of inversion
+else if skill == 35 && Player.race == 9 && (Player.unlockAlternativeUltras || (scrIsCrown(12) || scrIsCrown(34)))//Crown of inversion
 {
 	sprite_index = sprReverseFocus;	
 }
@@ -115,7 +115,7 @@ else if skill == 92 && Player.race == 23 && (Player.unlockAlternativeUltras || P
 {
 	sprite_index = sprSpikedFrog;
 }
-else if skill == 96 && Player.race == 24 && (Player.unlockAlternativeUltras || (scrIsCrown(11) || scrIsCrown(25)) && !Player.skill_got[17])
+else if skill == 96 && Player.race == 24 && (Player.unlockAlternativeUltras || (Player.patience > 0 || Player.guarenteedReroll > 0))
 {
 	sprite_index = sprAirLord;
 }

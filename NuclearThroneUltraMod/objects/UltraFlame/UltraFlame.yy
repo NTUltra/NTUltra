@@ -4,11 +4,8 @@
   "name": "UltraFlame",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"hitme","path":"objects/hitme/hitme.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"Wall","path":"objects/Wall/Wall.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":11,"eventType":2,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -17,8 +14,8 @@
     "path": "folders/Objects/Projectiles.yy",
   },
   "parentObjectId": {
-    "name": "projectile",
-    "path": "objects/projectile/projectile.yy",
+    "name": "Flame",
+    "path": "objects/Flame/Flame.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -39,6 +36,9 @@
     "name": "sprUltraFire",
     "path": "sprites/sprUltraFire/sprUltraFire.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskTrapFire",
+    "path": "sprites/mskTrapFire/mskTrapFire.yy",
+  },
   "visible": true,
 }

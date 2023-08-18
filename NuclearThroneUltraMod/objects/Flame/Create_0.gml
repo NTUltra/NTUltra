@@ -11,8 +11,9 @@ depth = 0;
 image_speed = 0.3+random(0.2)
 friction = 0.15
 image_angle = random(360)
+rotation = random_range(8,-8);
 alarm[2] = 1
-dmg=2;
+dmg = 2;
 
 if instance_exists(Player)
 {
@@ -22,21 +23,20 @@ if instance_exists(Player)
 		image_xscale += 0.1;
 		image_yscale += 0.1;
 		friction -= 0.02;
-		
+		image_speed -= 0.04;
 	}
-
 	if Player.ultra_got[95]
 	{
 		alarm[1] = 1;
 		dmg += 0.5;
-		image_xscale += 0.1;
-		image_yscale += 0.1;
+		image_speed -= 0.06;
 	}
 	if (Player.bskin == 1 && Player.ultra_got[106])
 	{
 		alarm[1] = 1;
 		image_xscale += 0.1;
 		image_yscale += 0.1;
+		image_speed -= 0.1;
 		dmg ++;
 		if scrIsInInvertedArea()
 			dmg ++;
@@ -44,3 +44,4 @@ if instance_exists(Player)
 
 }
 alarm[11] = 1;
+alarm[3] = 4;

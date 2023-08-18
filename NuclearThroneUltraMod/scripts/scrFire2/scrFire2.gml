@@ -3874,7 +3874,6 @@ function scrFire2() {
 		{
 			sprite_index=sprUltraTentacle;
 			ultra=true;
-			creator=other.id;
 			dmg = 6;//10+irandom(4)
 			if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 			{
@@ -3895,7 +3894,7 @@ function scrFire2() {
 		}
 	}
 
-	repeat(12){
+	repeat(8){
 	    with instance_create(x,y,FishBoost)
 	    {
 	    motion_add( aimDirection+random(60)-30,2+random(4) );
@@ -4487,6 +4486,7 @@ function scrFire2() {
     
 		x=UberCont.mouse__x;
 		y=UberCont.mouse__y;
+		scrForcePosition60fps();
 		BackCont.viewx2 += lengthdir_x(20,aimDirection+180)*UberCont.opt_shake
 		BackCont.viewy2 += lengthdir_y(20,aimDirection+180)*UberCont.opt_shake
 		BackCont.shake += 2    
@@ -11842,25 +11842,25 @@ function scrFire2() {
 	snd_play_fire(choose(sndWater1,sndWater2) );
 	var tentacleAim = - 30;
 	repeat(5)
-	with instance_create(x,y,Tentacle)
 	{
-		image_angle = aimDirection + tentacleAim*other.accuracy
-		creator=other.id;
-		team = other.team
-		ammo = 35
-		event_perform(ev_alarm,0)
-		visible = 0
-		with instance_create(x,y,LightningSpawn)
+		with instance_create(x,y,Tentacle)
 		{
-		sprite_index=sprTentacleSpawn
-		image_angle = other.image_angle
-		}
+			image_angle = aimDirection + tentacleAim*other.accuracy
+			team = other.team
+			ammo = 35
+			event_perform(ev_alarm,0)
+			with instance_create(x,y,LightningSpawn)
+			{
+			sprite_index=sprTentacleSpawn
+			image_angle = other.image_angle
+			}
 
-		repeat(6){
-		    with instance_create(x,y,FishBoost)
-		    {
-		    motion_add( aimDirection+random(60)-30,2+random(4) );
-		    }}
+			repeat(6){
+			    with instance_create(x,y,FishBoost)
+			    {
+			    motion_add( aimDirection+random(60)-30,2+random(4) );
+			    }}
+		}
 		aimDirection += 15
 	}
 
@@ -12699,6 +12699,25 @@ function scrFire2() {
 	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 5
 	wkick = 4
+
+	break;
+	
+	//ULTRA FLARE GUN
+	case 650:
+
+	snd_play_fire(sndFlare)
+	snd_play_fire(sndDragonStart)
+	with instance_create(x,y,UltraFlare)
+	{
+	sticky = 0
+	motion_add(aimDirection+(random(14)-7)*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 6
+	wkick = 6
 
 	break;
 	

@@ -12,7 +12,7 @@ function scrIgniteToxic(){
 			with instance_create(x,y,Flame) {
 				team = t;
 				direction = other.direction;
-				speed = other.speed;
+				speed = other.speed+1;
 			}
 		}
 		else
@@ -24,7 +24,7 @@ function scrIgniteToxic(){
 				with instance_create(x,y,TrapFire) {
 					team = t;
 					direction = other.direction;
-					speed = other.speed;
+					speed = other.speed+1;
 				}
 			}
 			else
@@ -36,7 +36,7 @@ function scrIgniteToxic(){
 					with instance_create(x,y,TrapFire) {
 						team = t;
 						direction = other.direction;
-						speed = other.speed;
+						speed = other.speed+1;
 					}
 				}
 			}
@@ -51,7 +51,7 @@ function scrIgniteToxic(){
 			with instance_create(x,y,Flame) {
 				team = vlam.team;
 				direction = other.direction;
-				speed = other.speed;
+				speed = other.speed+1;
 			}
 		}
 		else
@@ -63,7 +63,7 @@ function scrIgniteToxic(){
 				with instance_create(x,y,TrapFire) {
 					team = other.team;
 					direction = other.direction;
-					speed = other.speed;
+					speed = other.speed+1;
 				}
 			}
 			else
@@ -75,7 +75,7 @@ function scrIgniteToxic(){
 					with instance_create(x,y,TrapFire) {
 						team = vlam.team;
 						direction = other.direction;
-						speed = other.speed;
+						speed = other.speed+1;
 					}
 				}
 			}

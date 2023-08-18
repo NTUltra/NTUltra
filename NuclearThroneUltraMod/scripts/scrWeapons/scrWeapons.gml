@@ -7178,6 +7178,17 @@ function scrWeapons() {
 	wep_text[649] = "the stank gan"
 	wep_swap[649] = sndSwapPistol
 	wep_rad[649] = 0;
+	
+	wep_name[650] = "ULTRA FLARE GUN"
+	wep_type[650] = 4
+	wep_auto[650] = 1
+	wep_load[650] = 15
+	wep_cost[650] = 2
+	wep_sprt[650] = sprUltraFlareGun
+	wep_area[650] = 21
+	wep_text[650] = "green sign means go"
+	wep_swap[650] = sndSwapFlame
+	wep_rad[650] = 8;
 
 	maxwep = array_length(wep_name)-1;
 

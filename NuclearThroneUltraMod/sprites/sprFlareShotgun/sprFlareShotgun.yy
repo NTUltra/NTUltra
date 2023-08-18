@@ -69,7 +69,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"45428f54-e9e1-42ae-8751-8936928fd94f","path":"sprites/sprFlareShotgun/sprFlareShotgun.yy",},},},"Disabled":false,"id":"db3d9068-7c61-482e-a4dc-634d447a1b57","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 3,
     "yorigin": 4,

@@ -237,9 +237,9 @@ draw_set_blend_mode(bm_normal)
 */
 
 if wkick > 0
-wkick -= 1
+	wkick -= 1
 if wkick < 0
-wkick += 1
+	wkick += 1
 
 if race = 7
 {

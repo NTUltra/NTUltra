@@ -64,7 +64,7 @@ function scrCollectHP(num = 2){
 		}
 		else
 		{
-				snd_play(sndHealthPickup)
+			snd_play(sndHealthPickup)
 
 			instance_create(x,y,HealFX)
 		}

@@ -23,7 +23,6 @@ with Player
 		survivalSkills++;
 	if skill_got[36] == 1//Absorbing pores
 		survivalSkills++;
-	
 	if survivalSkills > 2
 	scrUnlockCharacter(18,"FOR TAKING#THREE SURVIVAL MUTATIONS")	
 }

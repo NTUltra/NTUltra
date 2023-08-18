@@ -1,3 +1,2 @@
 instance_destroy()
-	with instance_create(x,y,Smoke)
-		depth = other.depth + 2;
+	instance_create_depth(x,y,depth + 2,Smoke);

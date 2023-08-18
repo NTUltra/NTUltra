@@ -1,13 +1,13 @@
-if other.team != team
+if other.team != team && other.my_health > 0
 {
 instance_destroy()
-snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
 with other
 {
-my_health -= 10
-sprite_index = spr_hurt
-image_index = 0
-motion_add(other.direction,5)
+	snd_play(snd_hurt, hurt_pitch_variation,true)
+	my_health -= other.dmg
+	sprite_index = spr_hurt
+	image_index = 0
+	motion_add(other.direction,5)
 }
 }
 

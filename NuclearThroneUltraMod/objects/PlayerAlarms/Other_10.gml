@@ -6,7 +6,10 @@ if !instance_exists(SecretFinder)
 if instance_exists(Player)
 {
 	if Player.ultra_got[96] && !Player.altUltra
+	{
 		alarm[11] = 30;
+		lightning = choose(true,false);
+	}
 	if Player.ultra_got[16]
 	{
 		//Doomed Melting
@@ -75,6 +78,17 @@ if instance_exists(Player)
 		if Player.ultra_got[71]
 		{
 			alarm[8] = 1;
+		}
+		//Elementor frost ultra
+		if Player.ultra_got[94]
+		{
+			alarm[11] = 5;	
+		}
+		///Elementor fire ultra
+		if Player.ultra_got[95]
+		{
+			alarm[9] = 2;
+			alarm[10] = 10;
 		}
 	}
 	if Player.ultra_got[59] && Player.altUltra && !instance_exists(CorrosionDrawer)

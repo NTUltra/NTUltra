@@ -28,5 +28,5 @@ if instance_exists(Player){
 alarm[0]=4
 
 }
-
+alarm[1] = 1;
 alarm[11] = 1;

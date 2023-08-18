@@ -16,6 +16,9 @@ bloodDelay = 20;
 meatDmgReduction = 1;
 alarm[1] = 10;
 image_yscale = 0.5;
+fork = 0//6;
+branch = 0//20;
+canSwap = false;
 if instance_exists(Player)
 {
 	if Player.skill_got[19]==1
@@ -34,7 +37,12 @@ if instance_exists(Player)
 		alarm[1] = 8;
 		bloodDelay = 16;
 		meatDmgReduction = 0;
-		image_yscale += 0.1;
+		fork = 8;
+		image_yscale += 0.3;
+	}
+	if Player.ultra_got[96] && !Player.altUltra{
+		canSwap = true;
+		fork = 8;
 	}
 	//Kraken is fast take mods immediatly
 	Mod1=Player.wepmod1;

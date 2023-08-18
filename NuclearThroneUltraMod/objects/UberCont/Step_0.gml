@@ -10,6 +10,9 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 	with FPSHACKMenu
 		instance_destroy();
 	instance_activate_all();
+	if normalGameSpeed = 30
+		with FPSHACK
+			instance_destroy();
 	alarm[2] = 1;//Some objects are only accessible after a frame
 	//audio_stop_all();
 	alarm[4] = 0;
@@ -85,7 +88,9 @@ instance_destroy()
 with FPSHACKMenu
 	instance_destroy();
 instance_activate_all()
-
+if normalGameSpeed = 30
+	with FPSHACK
+		instance_destroy();
 //with TopCont
 //bloomAlpha=UberCont.opt_bloom;
 /*
@@ -105,10 +110,13 @@ if (keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4)) && !in
 {
 	if isWeekly
 		opt_gamemode = [0];
-		
+	
 	with FPSHACKMenu
 	instance_destroy();
 	instance_activate_all()
+	if normalGameSpeed = 30
+		with FPSHACK
+			instance_destroy();
 	isPaused = 0
 	alarm[4] = 0;
 	alarm[5] = 0;

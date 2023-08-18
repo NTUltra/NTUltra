@@ -6,3 +6,4 @@ typ = 2;
 dmg = 4;
 projectilePush = 0.23;
 hitEntities = [];
+alarm[1] = 2;

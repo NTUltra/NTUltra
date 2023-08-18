@@ -6,32 +6,29 @@ if(instance_exists(Player)){
 		//WEAPON MODS!
 		scrModHit();
 		//Sedatives
-		if Player.ultra_got[100] && team != other.team && my_health > 0
+		if Player.ultra_got[100] && team != other.team && my_health > 0 && other.wepFire != -1
 		{
 			target = -1;
 			walk = 0;
-			var amount = 1.25;
-			var backupAmount = 1.25;
+			var amount = 1;
 			if other.wepFire != 0
-				amount = Player.wep_load[other.wepFire];
+				amount = Player.wep_load[other.wepFire]*0.45;
 			if Player.skill_got[5]
 			{
-				amount *= 1.05;
-				backupAmount = 2;
+				amount *= 1.2;
 			}
-			else
-				amount *= 0.8;
+			var wp = other.wepFire;
+			with projectile
+			{
+				if wepFire == wp
+					wepFire = -1;
+			}
 			other.wepFire = 0;
 			if alarm[1] > 0
 			{
-				if alarm[1] < amount * 2
-				{
-					alarm[1] += amount;
-					alarm[11] += amount;
-				} else
-				{
-					alarm[1] += backupAmount;
-				}
+				speed *= 0.8;
+				alarm[1] += amount;
+				alarm[11] += amount;
 				with instance_create(x,y-6,SleepFX) {
 					depth = other.depth - 1;
 					alarm[0] = max(2,amount+1);
