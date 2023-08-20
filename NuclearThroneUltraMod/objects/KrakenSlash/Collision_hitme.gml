@@ -5,7 +5,7 @@ if other.team != team && (!inArray || other.sprite_index != other.spr_hurt)
 		hitEntities[array_length(hitEntities)] = other.id;
 	alarm[1] = hitDelay;
 	snd_play(sndRoll,0,true);
-	snd_play(sndBloodLauncher,0,true);
+	//snd_play(sndBloodLauncher,0,true);
 
 	snd_play(choose(sndWater1,sndWater2,sndTentacle,sndTentacle2) ,0,true);
 
@@ -14,7 +14,7 @@ if other.team != team && (!inArray || other.sprite_index != other.spr_hurt)
 	{
 		image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(30)-15)
 	team = other.team
-	ammo = 11
+	ammo = other.length
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)

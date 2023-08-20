@@ -8,7 +8,8 @@ if instance_exists(Player) && !instance_exists(SurvivalWave)
     ///
     with MusCont
     {
-    audio_stop_all()
+    //audio_stop_all()
+	audio_stop_sound(song);
     //optimise 
     
     //sound_discard(song)
@@ -59,6 +60,8 @@ if instance_exists(Player) && !instance_exists(SurvivalWave)
 		song = musBushBoxBoss;
 	else if area == 119 || area == 120
 		song = musBoss4B;
+	else if area == 126 || area == 127
+		song = musCrownGluttonBoss;
 	else if area == 128 || area == 129
 		song = musCrownGluttonBoss;
     snd_loop(song)
@@ -388,6 +391,18 @@ else if Player.area == 120
 	name = "INVERTED THRONE II";
 	if random(400) < 1
 		name = choose("THRONE III","END OF THE ROAD","TICKET TO 1 LESS VAN");
+}
+else if Player.area = 128
+{
+	name = "CURSED GRAVE FISH";
+	if random(100)<1
+		name = choose("CURSED GRAVE DIGGER");
+}
+else if Player.area = 129
+{
+	name = "INVERTED GRAVE FISH";
+	if random(80)<1
+		name = choose("INVERTED GRAVE DIGGER");
 }
 else if Player.area = 128
 {

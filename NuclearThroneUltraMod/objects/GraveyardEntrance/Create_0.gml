@@ -17,3 +17,4 @@ if scrIsHardMode()
 alarm[1] += 90;
 alarm[1] *= clamp(loops*1.3,1,4)//335//10 seconds 300
 instance_create(x,y,BigWallBreak);
+alarm[2] = 30;

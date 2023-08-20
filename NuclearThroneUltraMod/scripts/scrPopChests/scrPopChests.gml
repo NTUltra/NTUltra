@@ -1,7 +1,6 @@
 function scrPopChests() {
 	if instance_exists(Vlambeer) || instance_exists(MenuGen)
 		return;
-		
 	var ran = random(10);
 	//Special cases:
 	if scrIsGamemode(25)

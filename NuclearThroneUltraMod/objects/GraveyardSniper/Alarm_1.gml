@@ -20,4 +20,6 @@ if target > 0
 		else if target.x > x
 			right = 1
 	}
+	else
+		alarm[1] += actTime;
 }

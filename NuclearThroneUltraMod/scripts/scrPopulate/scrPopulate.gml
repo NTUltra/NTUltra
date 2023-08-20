@@ -505,6 +505,9 @@ function scrPopulate() {
 			if Player.loops > 11
 				instance_create(x, y, WantBoss)
 	    }
+		if (Player.area == 126 || Player.area == 127) {//Graveyard fish
+			instance_create(x,y,WantBoss);
+		}
 		if Player.area == 128 and Player.subarea == 2 {
 	        instance_create(x, y, WantBoss)//Crown Glutton
 	    }

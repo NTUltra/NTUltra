@@ -2300,7 +2300,7 @@ function scrFire() {
 	{
 		pspeed += 3;
 	creator = other.id
-	ammo = 6
+	ammo = 5
 	time = 2
 	team = other.team
 	event_perform(ev_alarm,0) 

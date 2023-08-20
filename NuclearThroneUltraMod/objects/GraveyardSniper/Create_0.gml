@@ -20,15 +20,15 @@ alarm[1] = 60+random(90)
 wkick = 0
 proj = EnemyBullet4;
 loops = GetPlayerLoops();
-tellTime = 5
-actTime = 20;
+tellTime = 7
+actTime = 25;
 maxAmmo = 4;
 ammo = maxAmmo;
-pspeed = 8;
+pspeed = 6.9;
 if loops > 0
 {
 	tellTime = 5;
 	actTime = 18;
-	pspeed = 10;
+	pspeed = 9;
 }
-alarm[0] = 1;
+alarm[3] = 10 + irandom(10);

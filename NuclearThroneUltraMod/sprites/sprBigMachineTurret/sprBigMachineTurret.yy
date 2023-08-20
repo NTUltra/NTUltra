@@ -57,7 +57,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"00c6249c-71a4-4a38-b110-911764e0cdba","path":"sprites/sprBigMachineTurret/sprBigMachineTurret.yy",},},},"Disabled":false,"id":"0f3f516b-2020-456a-8e92-d47e985ba6ad","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 6,
     "yorigin": 6,

@@ -91,6 +91,10 @@ if target > 0 && instance_exists(target)
 			    }
 			    else if other.area = 1
 			    instance_create(x,y,BanditBoss)
+				else if other.area == 126
+					instance_create(x,y,BecomeGraveyardFish);
+				else if other.area == 127
+					instance_create(x,y,BecomeInvertedGraveyardFish);
 			}
 
 		}

@@ -31,6 +31,8 @@ if !isOneWeaponOnlyModes() && !instance_exists(SurvivalWave) && !instance_exists
 		name = wep_name[wep]
 		ammo = 50
 		curse = 0;
+		if instance_exists(GraveyardEntrance)
+			curse = 1;
 		type = wep_type[wep]
 		sprite_index = wep_sprt[wep]
 	}

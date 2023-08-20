@@ -2,7 +2,16 @@ scrDrop(100,0);
 scrDrop(50,0);
 
 event_inherited()
-
+with Player
+{
+	curse = 0;
+	bcurse = 0;
+	ccurse = 0;
+}
+with myCorpse
+{
+	alarm[0] += 60;//Wait a little longer with spawning a portal	
+}
 scrBossKill();
 if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(BigFish) == 1
 with MusCont
@@ -23,4 +32,10 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 
 //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 
+}
+with InactiveRerollStation
+{
+	instance_create(x,y,Flicker);
+	instance_destroy();
+	instance_create(x,y,RerollStation);
 }

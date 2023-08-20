@@ -617,7 +617,10 @@ function scrMakeFloor(limiter) {
 	}
 	
 	if scrIsGamemode(8)
+	{
 		instance_destroy();
+		exit;
+	}
 	if scrIsGamemode(25) && !instance_exists(Vlambeer) && !instance_exists(MenuGen) && area != 0//Survival Arena
 	{
 		//instance_create(x,y,Floor)

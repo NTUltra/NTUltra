@@ -1,5 +1,5 @@
 /// @description Push the van
-if team != other.team && image_speed <= 0{
+if image_speed <= 0 && team != other.team {
 	with other
 	{
 		speed *= 0.9;

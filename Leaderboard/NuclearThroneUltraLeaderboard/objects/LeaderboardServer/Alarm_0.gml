@@ -35,6 +35,7 @@ if day != yesterday
 		show_debug_message("WEEK");
 		var weekchecker = date_inc_week(date_current_datetime(), -1);
 		var year = min(date_get_year(date_current_datetime()), date_get_year(weekchecker));//In case week crosses the year
+		/*
 		var seedweek = string(week) + string(year);
 		show_debug_message(week);
 		show_debug_message(seedweek);
@@ -43,7 +44,8 @@ if day != yesterday
 		for (var i = 0; i < byteSize; i++) {
 			byteSeed = (byteSeed + string_byte_at(seedweek, i)) << 1;
 		}
-		weekSeed = byteSeed;
+		weekSeed = byteSeed;*/
+		weekSeed = week*2 + year;
 		random_set_seed(weekSeed);
 		weekGamemode = [irandom_range(1,41),0,0];
 		//Manual gamemode injection here

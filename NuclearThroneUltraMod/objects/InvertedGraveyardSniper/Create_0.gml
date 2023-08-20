@@ -23,4 +23,4 @@ if loops > 0
 	actTime = 14;
 	pspeed = 12;
 }
-alarm[0] = 1;
+alarm[3] = 0;

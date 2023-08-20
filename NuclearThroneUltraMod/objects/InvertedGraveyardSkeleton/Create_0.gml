@@ -15,7 +15,7 @@ spr_dead = sprInvertedGraveyardSkeletonDead
 
 
 image_speed = 0.6;
-
+alarm[3] = 0; //Not cursed
 //behavior
 walk = 0
 alarm[1] = 30+random(90)

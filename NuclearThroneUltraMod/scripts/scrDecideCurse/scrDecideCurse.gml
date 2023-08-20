@@ -6,7 +6,7 @@ function scrDecideCurse(){
 	var curse = 0;
 	if instance_exists(Player)
 	{
-		if Player.area == 115 || Player.area == 128 || Player.area == 129
+		if Player.area == 115 || Player.area == 126
 		{
 			curse = 1
 			return curse;
@@ -17,7 +17,7 @@ function scrDecideCurse(){
 		instance_destroy(id,false);
 		instance_create(x,y,BigWeaponChest);
 		}
-		else if random(16)<1+Player.curse+Player.bcurse+Player.ccurse&&Player.hard>2{//8
+		else if object_index == WeaponChest && (Player.area == 127 || random(16)<1+Player.curse+Player.bcurse+Player.ccurse&&Player.hard>2){//8
 		curse = 0
 		instance_destroy(id,false);
 		instance_create(x,y,EliteWeaponChest);

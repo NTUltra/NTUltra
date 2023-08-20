@@ -185,7 +185,7 @@ function scrTips() {
 	"shovels that hate texas",
 	"axes that wear vests it")
 	if Player.area = 126
-	tip = choose("skeletons","graveyard","crawling bones","don't get overwhelmed","be wary of skeletons","the dead walk","sniper skeletons are stationary",choose("emo land","goth land","dark world","boneyard","cemetary","halloween"))
+	tip = choose("skeletons","graveyard","crawling bones","don't get overwhelmed","be wary of skeletons","the dead walk","sniper skeletons are stationary","kill the cursed fish to uncurse yourself",choose("emo land","goth land","dark world","boneyard","cemetary","halloween"))
 	if Player.area = 127
 	tip = choose("love & death","crowd","sprawling bones","the brink","for all that have fallen","crawl","bloodshed forever")
 	if Player.area = 128

@@ -99,7 +99,7 @@ if (type == network_type_data) {
 			var wantDay = buffer_read(buffer, buffer_u16);
 			show_debug_message("Sending to day: " + string(wantDay));
 			show_debug_message("Having total: " + string(totalDailies));
-			var gm = 0;
+			var gm = [];
 			var uid = "";
 			if isWeekly {
 				var findFile = file_find_first("w"+string(wantDay) + "_ntultraweekly*", 0);
@@ -110,8 +110,12 @@ if (type == network_type_data) {
 				else
 				{
 					//"w10_ntultraweekly12-02-1999-7.sav";
-					var gmn = string_copy(findFile,string_pos("+",findFile),2);
-					gm = string_replace(gmn,".","");
+					var gmn = string_copy(findFile,string_pos("+",findFile)+3,
+					string_length(findFile)-string_pos("+",findFile) - 8);
+					gmn = string_split(gmn,",",false);
+					gm[0] = real(gmn[0]);
+					gm[1] = real(gmn[1]);
+					gm[2] = real(gmn[2]);
 				}
 				show_debug_message("gamemode: " + string(gm));
 				uid = buffer_read(buffer, buffer_string);
@@ -120,8 +124,8 @@ if (type == network_type_data) {
 			newScore[0] = buffer_read(buffer, buffer_u64);//Kills / frame time
 			newScore[1] = buffer_read(buffer, buffer_u64);//User Id
 			newScore[2] = buffer_read(buffer,buffer_string);//Username
-			show_debug_message("USERNAME: " + newScore[2]);
-			if gm == 8
+			show_debug_message("GAMEMODE: " + string(gm));
+			if gm[0] == 8
 			{
 				//Van Fan
 				newScore[3] = buffer_read(buffer,buffer_u8)//race
@@ -263,7 +267,7 @@ if (type == network_type_data) {
 						{
 							//Already has an entry
 							var currentScore = string_copy(uid,1,string_pos(" ",uid));
-							if (newScore[0] > currentScore)
+							if (newScore[0] > currentScore)//If its van fan I guess it should be the other way around
 							{
 								ds_list_delete(scoreList, currentPos);
 								ds_list_delete(scoreSorter, currentPos);
@@ -280,28 +284,45 @@ if (type == network_type_data) {
 				}
 				var al = ds_list_size(scoreSorter);
 				//Sorting algorithm (bubble)
-				for (var i = al; i >= 0; i--)
+				if isScore
 				{
-					for (var j = al; j > al-i; j--)
+					for (var i = al; i >= 0; i--)
 					{
-						if (scoreSorter[| j] > scoreSorter[| j-1]) {
-							//var swapper = scoreList[| j];
-							//scoreList[| j] = scoreList[| j - 1]
-							//scoreList[| j - 1] = swapper;
-							var swapperScore = scoreSorter[| j];
-							scoreSorter[| j] = scoreSorter[| j - 1]
-							scoreSorter[| j - 1] = swapperScore;
+						for (var j = al; j > al-i; j--)
+						{
+							if (scoreSorter[| j] > scoreSorter[| j-1]) {
+								var swapper = scoreList[| j];
+								scoreList[| j] = scoreList[| j - 1]
+								scoreList[| j - 1] = swapper;
+								var swapperScore = scoreSorter[| j];
+								scoreSorter[| j] = scoreSorter[| j - 1]
+								scoreSorter[| j - 1] = swapperScore;
+							}
 						}
 					}
 				}
-				//Reverse the list for races
-				show_debug_message("sorting: "+ string(isScore));
-				if !isScore
-					ds_list_sort(scoreSorter,false);
+				else//Race reverse order
+				{
+					for (var i = al; i >= 0; i--)
+					{
+						for (var j = al; j > al-i; j--)
+						{
+							if (scoreSorter[| j] < scoreSorter[| j-1]) {
+								var swapper = scoreList[| j];
+								scoreList[| j] = scoreList[| j - 1]
+								scoreList[| j - 1] = swapper;
+								var swapperScore = scoreSorter[| j];
+								scoreSorter[| j] = scoreSorter[| j - 1]
+								scoreSorter[| j - 1] = swapperScore;
+							}
+						}
+					}
+				}
+					/*
 				for (var j = al; j > al-i; j--)
 				{
-					scoreList[| j][0] = scoreSorter[| j];
-				}
+					scoreList[| j] = scoreSorter[| j];
+				}*/
 				//Rewrite!
 				if (file_exists(fileName))
 					ini_section_delete(stringChecker);

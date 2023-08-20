@@ -281,7 +281,7 @@ if Player.area = 100
 		if (Player.loops > 0)
 		{
 			//Reroll station
-			if (instance_exists(Player) && Player.level > 1 && UberCont.enableReroll)
+			if (instance_exists(Player))
 			{
 				xx = x;
 				yy = y;
@@ -311,7 +311,12 @@ if Player.area = 100
 						if ((ix == s-1 || ix == 0) && (iy == s-1 || iy == 0))
 							instance_create(xx+16,yy+16,Torch);
 						else if (ix == 2 && iy == 2)
-							instance_create(xx+16,yy+16,RerollStation);
+						{
+							if UberCont.enableReroll
+								instance_create(xx+16,yy+16,RerollStation);
+							else
+								instance_create(xx+16,yy+16,InactiveRerollStation);
+						}
 						yy += ystep;
 					}
 					xx += xstep;
@@ -609,12 +614,33 @@ if Player.area=1
 
 if (scrIsInInvertedArea() || Player.area == 128) && Player.area != 120 && !(Player.area == 118 && Player.subarea == 3)
 {
-
-with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/4+random(128)-64+32,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/4+random(128)-64+32,Floor)
+var f = instance_furthest(Player.x,Player.y,Floor);
+with instance_nearest((f.x*3+Player.x)/4+random(128)-64+32,(f.y*3+Player.y)/4+random(128)-64+32,Floor)
 instance_create(x+16,y+16,WeaponMod)
 
 }
-
+if (Player.area == 126 || Player.area == 127)
+{
+	var f = instance_furthest(Player.x,Player.y,Floor);
+	with instance_nearest(f.x+(Player.x*0.5)+random(128)-64,f.y+(Player.y*0.5)+random(128)-64,Floor)
+	{
+		instance_create(x+16,y+16,WallBreak);
+		instance_create(x+16,y+16,InactiveRerollStation);
+		
+		instance_create(x,y-32,Floor)
+		instance_create(x,y+32,Floor)
+		instance_create(x-32,y,Floor)
+		instance_create(x+32,y,Floor)
+		instance_create(x-32,y-32,Floor)
+		instance_create(x-32,y+32,Floor)
+		instance_create(x+32,y-32,Floor)
+		instance_create(x+32,y+32,Floor)
+	
+		with Floor{
+		if point_distance(x,y,other.x,other.y) < 34
+		sprite_index = sprFloor100D}
+	}
+}
 
 
 if Player.area == 8 && Player.subarea == 1

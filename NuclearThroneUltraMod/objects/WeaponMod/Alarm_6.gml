@@ -23,4 +23,12 @@ var al = instance_place_list(x,y,prop,props,false);
 		}
 	}
 ds_list_destroy(props);
+var chestprops = ds_list_create();
+var al = instance_place_list(x,y,chestprop,chestprops,false);
+	for (var i = 0; i < al; i++) {
+		with chestprops[| i] {
+			instance_destroy(id,false);
+		}
+	}
+ds_list_destroy(chestprops);
 alarm[6] = 5;

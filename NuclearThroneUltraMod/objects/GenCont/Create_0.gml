@@ -279,7 +279,7 @@ if instance_exists(Player){
 var s = clamp(Player.loops*10,0,100);
 goal += s;
 if Player.area = 3 and Player.subarea = 3
-goal = 50+s
+goal = 70+s
 else if Player.area = 100
 goal = 40
 if Player.area = 103 || Player.area == 125

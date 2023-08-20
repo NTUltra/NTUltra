@@ -104,6 +104,8 @@ function scrShadows() {
 	draw_sprite(shd48,0,x-vx,y-vy-6)
 	with BigFish
 	draw_sprite(shd48,0,x-vx,y-vy)
+	with GraveyardFish
+	draw_sprite(shd48,0,x-vx,y-vy)
 	with BigFishStatue
 	draw_sprite(shd48,0,x-vx,y-vy)
 	with InvertedSnowTank

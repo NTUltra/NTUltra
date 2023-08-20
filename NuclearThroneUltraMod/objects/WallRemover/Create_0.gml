@@ -1,7 +1,6 @@
 /// @description Radius
 radius = 10;
 opacity = 1;
-copiedEnemies = ds_list_create();
 alarm[1] = 5;
 //Don't die to being outside area
 with enemy

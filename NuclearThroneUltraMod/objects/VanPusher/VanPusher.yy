@@ -35,6 +35,9 @@
     "name": "sprSlash",
     "path": "sprites/sprSlash/sprSlash.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskVanPusher",
+    "path": "sprites/mskVanPusher/mskVanPusher.yy",
+  },
   "visible": true,
 }

@@ -132,7 +132,9 @@ if (type == network_type_data) {
 					viewingWeeklyGamemode[1] = real(gmn[1]);
 					viewingWeeklyGamemode[2] = real(gmn[2]);
 					if viewingWeeklyGamemode[0] == 8
+					{
 						leaderboardType = LEADERBOARD.VANFAN;
+					}
 					else
 						leaderboardType = LEADERBOARD.SCORE;
 					leaderboardName[1] = "";
@@ -167,7 +169,9 @@ if (type == network_type_data) {
 				viewingWeeklyGamemode[1] = real(gmn[1]);
 				viewingWeeklyGamemode[2] = real(gmn[2]);
 				if viewingWeeklyGamemode[0] == 8
+				{
 					leaderboardType = LEADERBOARD.VANFAN;
+				}
 				else
 					leaderboardType = LEADERBOARD.SCORE;
 				leaderboardName[1] = "";

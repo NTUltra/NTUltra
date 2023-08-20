@@ -39,7 +39,6 @@ function scrNextLevel() {
 		hard+=1.25;
 		exit;
 	}
-
 	if area = 104//YV CRIB
 	{
 		if fromCribToVault

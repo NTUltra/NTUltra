@@ -18,8 +18,8 @@ if random(4) < 1
 
 
 	//var t = type;
-	with instance_create(x,y,Spiral)
-	{
+with instance_create(x,y,Spiral)
+{
 	image_xscale = 0
 	image_yscale = 0
 	depth = other.depth + other.image_angle

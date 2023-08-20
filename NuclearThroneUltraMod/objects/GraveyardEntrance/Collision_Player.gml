@@ -12,6 +12,11 @@ if my_health > 0
 		{
 			event_perform(ev_alarm,0) 
 		}
+		with Player {
+			curse = 1;
+			bcurse = 1;
+			ccurse = 1;
+		}
 		/*
 		with instance_create(x,y,Portal)
 		{

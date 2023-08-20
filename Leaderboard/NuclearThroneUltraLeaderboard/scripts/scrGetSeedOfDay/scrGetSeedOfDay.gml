@@ -1,7 +1,7 @@
 ///scrGetSeedOfDay();
 // /@description
 ///@param
-function scrGetSeedOfDay(dau){
+function scrGetSeedOfDay(day){
 	var byteSeed = 0;
 	var byteSize = string_byte_length(day);
 	for (var i = 0; i < byteSize; i++) {

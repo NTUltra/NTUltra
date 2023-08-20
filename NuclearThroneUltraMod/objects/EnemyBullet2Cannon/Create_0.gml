@@ -10,3 +10,5 @@ projectileAmount = 4;
 angleStep = 360/projectileAmount;
 projectileSpeed = 3.5;
 alarm[5] = 90;
+if GetPlayerLoops() > 3
+	projectileAmount = 8;

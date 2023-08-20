@@ -1054,8 +1054,8 @@ function scrWeapons() {
 
 	wep_name[95] = "BOUNCER ASSAULT RIFLE"
 	wep_type[95] = 1
-	wep_auto[95] = 0
-	wep_load[95] = 12
+	wep_auto[95] = 1
+	wep_load[95] = 13
 	wep_cost[95] = 3
 	wep_sprt[95] = sprBouncerAssaultRifle
 	wep_area[95] = 5
@@ -1065,8 +1065,8 @@ function scrWeapons() {
 
 	wep_name[96] = "HYPER BOUNCER RIFLE"
 	wep_type[96] = 1
-	wep_auto[96] = 0
-	wep_load[96] = 14
+	wep_auto[96] = 1
+	wep_load[96] = 12
 	wep_cost[96] = 5
 	wep_sprt[96] = sprHyperBouncerRifle
 	wep_area[96] = 9
@@ -4116,7 +4116,7 @@ function scrWeapons() {
 	
 	wep_name[373] = "VAN PUSHER"
 	wep_type[373] = 0
-	wep_auto[373] = 0
+	wep_auto[373] = 1
 	wep_load[373] = 8
 	wep_cost[373] = 0
 	wep_sprt[373] = sprVanPusher
@@ -6236,7 +6236,7 @@ function scrWeapons() {
 	wep_name[564] = "TOXIC ASSAULT RIFLE"
 	wep_type[564] = 1
 	wep_auto[564] = 0
-	wep_load[564] = 11
+	wep_load[564] = 13
 	wep_cost[564] = 4
 	wep_sprt[564] = sprToxicAssaultRifle
 	wep_area[564] = 4

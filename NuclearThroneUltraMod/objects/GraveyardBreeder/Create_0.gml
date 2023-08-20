@@ -17,8 +17,8 @@ snd_dead = sndRatKingDie
 
 //behavior
 vomitSpeed = 0.4;
-actTime = 23;
-maxAmmo = 6;
+actTime = 24;
+maxAmmo = 3;
 maxSpeed = 2;
 ammo = maxAmmo;
 walk = 0
@@ -28,7 +28,8 @@ loops = GetPlayerLoops();
 if loops > 0
 {
 	vomitSpeed = 0.6;
-	maxAmmo += 4;
+	maxAmmo += 7;
 	actTime = 16;
 }
 
+alarm[3] = 10 + irandom(10);

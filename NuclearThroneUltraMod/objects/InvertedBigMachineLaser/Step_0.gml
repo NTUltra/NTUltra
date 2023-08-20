@@ -21,3 +21,5 @@ alarm[0] = 2+random(4)
 }           }
 }
 
+if collision_point(x,y + vspeed,WallHitMe,false,false)
+	vspeed *= -1;

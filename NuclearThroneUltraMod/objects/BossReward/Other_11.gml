@@ -39,6 +39,11 @@ switch(array_length(UberCont.collectedRewards))
 	break;
 	case 3:
 		UberCont.enableReroll = true;
+		with InactiveRerollStation
+		{
+			instance_destroy();
+			instance_create(x,y,RerollStation);
+		}
 		snd_play(other.snd_crwn);
 	break;
 	case 4:

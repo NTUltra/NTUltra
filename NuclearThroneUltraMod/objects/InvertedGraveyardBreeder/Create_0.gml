@@ -24,3 +24,4 @@ if loops > 0
 	actTime = 14;
 }
 
+alarm[3] = 0;

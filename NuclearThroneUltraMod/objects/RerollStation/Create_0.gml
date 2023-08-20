@@ -6,3 +6,4 @@ name = "";
 skillIndex = irandom(maxskill);
 active = false;
 used = false;
+alarm[0] = 5;

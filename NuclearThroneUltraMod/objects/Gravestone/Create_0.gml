@@ -1,10 +1,11 @@
-maxhealth = 16
+maxhealth = 9;
 mySize = 1
-
+if GetPlayerLoops > 0
+	maxhealth = 15;
 
 
 event_inherited()
-
+scrInitDrops(1);
 var img;
 img = choose(1,2,3)
 shadowSprite = shd16;

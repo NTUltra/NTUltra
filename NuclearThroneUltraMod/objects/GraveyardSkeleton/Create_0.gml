@@ -1,8 +1,12 @@
 raddrop = 4
-maxhealth = 3
+maxhealth = 2;
 meleedamage = 3
 mySize = 1
-
+loops = GetPlayerLoops();
+if loops > 0
+{
+	maxhealth = 3;
+}
 event_inherited()
 droprate = 4;
 
@@ -20,9 +24,14 @@ image_speed = 0.6;
 //behavior
 walk = 0
 alarm[1] = 30+random(90)
-maxSpeed = 4.65;
-actTime = 9;
-loops = GetPlayerLoops();
+alarm[3] = 10 + irandom(10);
+maxSpeed = 3.8;//4.6
+actTime = 12;//9
+if loops > 0
+{
+	maxSpeed = 4.65;
+	actTime = 9;
+}
 if loops > 1
 {
 	maxSpeed = 5.1;

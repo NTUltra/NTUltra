@@ -68,7 +68,7 @@ function scrGenerateFloorMaker(limiter) {
 				s = -10;
 			}
 			else if Player.area == 126 || Player.area == 127
-				goal = 130+s
+				goal = 140+s
 			else if Player.area == 128 || Player.area == 129
 				goal = 140 + s;
 			else if Player.area == 130 || Player.area == 131
