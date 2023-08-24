@@ -13,7 +13,7 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"94ec2f19-9f82-4c45-8e55-c6d8969c0ab9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"adf27cdd-1f81-4a54-b9bd-22f4907fa36e",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6a5b3118-0722-401e-97c8-b662ebf4dd23",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7ff9c361-57ae-4020-9659-6a5df366b24b",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4b5dc4e4-3fc7-4652-853d-5c6992ea17d1",},
@@ -64,7 +64,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"94ec2f19-9f82-4c45-8e55-c6d8969c0ab9","path":"sprites/sprGraveyardFishDead/sprGraveyardFishDead.yy",},},},"Disabled":false,"id":"19a283a8-d8a1-4f3f-86e0-36c53bc897df","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"adf27cdd-1f81-4a54-b9bd-22f4907fa36e","path":"sprites/sprGraveyardFishDead/sprGraveyardFishDead.yy",},},},"Disabled":false,"id":"482bd00b-611a-426d-99a8-5f0325f83007","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6a5b3118-0722-401e-97c8-b662ebf4dd23","path":"sprites/sprGraveyardFishDead/sprGraveyardFishDead.yy",},},},"Disabled":false,"id":"ff609dda-0a2b-43f9-b44a-28d4d1b8e89d","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7ff9c361-57ae-4020-9659-6a5df366b24b","path":"sprites/sprGraveyardFishDead/sprGraveyardFishDead.yy",},},},"Disabled":false,"id":"f9bdcb0b-0beb-4c1f-b399-676c56193bc7","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4b5dc4e4-3fc7-4652-853d-5c6992ea17d1","path":"sprites/sprGraveyardFishDead/sprGraveyardFishDead.yy",},},},"Disabled":false,"id":"9bdcc4b1-30cf-4d71-af7e-c15bfe70f4a6","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},

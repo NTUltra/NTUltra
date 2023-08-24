@@ -27,9 +27,14 @@ with enemy {
 		var chosen = allFloors[irandom(i - 1)];
 		x = chosen[0];
 		y = chosen[1];
-		instance_create(x,y,Curse);
+		instance_create_depth(x,y,depth - 1, Curse);
 		scrForcePosition60fps();
 		if place_meeting(x,y,Wall)
 			instance_create(x,y,WallBreak);
+		if alarm[1] > 0
+			alarm[1] += 15;
 	}
+}
+with GraveyardSniper {
+	alarm[2] = 0;
 }

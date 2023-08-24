@@ -7,9 +7,8 @@ if target > 0
 		right = -1
 	else if target.x > x
 		right = 1
-	with instance_create(x+(lox*right),y,EnemyBullet1)
+	with instance_create(x+(lox*right),y,EnemyFireBullet)
 	{
-		sprite_index=sprFireBall;
 		motion_add(dir+random(12)-6,3.5)
 		image_angle = direction
 		team = other.team

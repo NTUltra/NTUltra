@@ -1,4 +1,4 @@
-alarm[1] = 10+random(10)//20 20
+alarm[1] = 10+random(9)//20 20
 control = 0
 
 if team=2

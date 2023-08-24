@@ -55,7 +55,7 @@ event_inherited();
 
 supercursed = false;
 as = 6;
-curseSpeed = 1;
+curseSpeed = 0.5;
 //if instance_exists(Player) && Player.skill_got[3]
 //	as = 8;
 if UberCont.normalGameSpeed == 60

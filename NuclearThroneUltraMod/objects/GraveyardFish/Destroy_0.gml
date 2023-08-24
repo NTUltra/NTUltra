@@ -8,6 +8,8 @@ with Player
 	bcurse = 0;
 	ccurse = 0;
 }
+if UberCont.area == 126 || UberCont.area == 127
+	scrDefeatedRequiredBoss(secretChallengeBosses.bigFish);
 with myCorpse
 {
 	alarm[0] += 60;//Wait a little longer with spawning a portal	

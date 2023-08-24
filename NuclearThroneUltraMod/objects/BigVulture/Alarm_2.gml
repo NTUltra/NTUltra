@@ -21,6 +21,9 @@ if corpseTarget > -1 && instance_exists(corpseTarget) && sprite_index != spr_hur
 			instance_destroy();	
 		}
 		corpseTarget = -1;
-		my_health = maxhealth;
+		if loops > 0
+			my_health = maxhealth;
+		else
+			my_health = min(my_health + 30, maxhealth);
 	}
 }

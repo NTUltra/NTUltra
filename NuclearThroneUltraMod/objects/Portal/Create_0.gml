@@ -74,7 +74,7 @@ if (instance_exists(CrownPed) && !inverted)
 }
 else if instance_exists(RerollStation)
 {
-	var n = instance_nearest(x,y,WeaponMod)
+	var n = instance_nearest(x,y,RerollStation)
 	if distance_to_object(n) < 128 {
 		if instance_exists(Floor)
 		{

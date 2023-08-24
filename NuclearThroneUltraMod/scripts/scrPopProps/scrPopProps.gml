@@ -18,22 +18,11 @@ function scrPopProps() {
 		
 	myx = x+choose(0,16)
 	myy = y+choose(0,16)
-	if !place_meeting(myx,myy,hitme) && !place_meeting(myx,myy,chestprop) && !place_meeting(myx,myy,RadChest) && !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(myx,myy,prop)
+	if !place_meeting(myx,myy,hitme) && !place_meeting(myx,myy,chestprop) && !place_meeting(myx,myy,RadChest) && !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(myx,myy,prop) && Player.area != 130 && Player.area != 131 and Player.area != 9 and Player.area != 118
 		instance_create(myx,myy,Wall)
 	instance_create(x,y,NOWALLSHEREPLEASE)
-	}//random(5)< 1
-
-/*
-	if random(10)<1  and !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(x,y,hitme) && !place_meeting(x,y,chestprop) && !place_meeting(x,y,prop)
-	{
-	myx = x+choose(0,16)
-	myy = y+choose(0,16)
-
-	if !place_meeting(myx,myy,hitme) && !place_meeting(myx,myy,chestprop) && !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(myx,myy,prop)
-		instance_create(myx,myy,Wall)
-	instance_create(x,y,NOWALLSHEREPLEASE)
-	}*/
-	if random(6) < 1 and !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(x,y,hitme) && !place_meeting(x,y,chestprop) && !place_meeting(x,y,RadChest) && !place_meeting(x,y,hitme)
+	}
+	if random(6) < 1 and !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(x,y,hitme) && !place_meeting(x,y,chestprop) && !place_meeting(x,y,RadChest) && !place_meeting(x,y,hitme) && Player.area != 130 && Player.area != 131
 	and Player.area != 100 and Player.area != 6 and Player.area != 9 and Player.area != 118 and Player.area != 112  and (Player.area !=5 or random(3) < 1) and Player.area != 102 and Player.area != 104
 	and !(Player.area = 8 && Player.subarea=3) and Player.area != 116//lill walls
 	{
@@ -179,20 +168,23 @@ function scrPopProps() {
 	else if !place_meeting(x,y,Wall)
 	instance_create(x+16,y+16,choose(Hydrant,Car))
 	}
-	if spawnarea = 6 and random(4) < 1 && !place_meeting(x,y,Wall)
+	if spawnarea == 6 and random(4) < 1 && !place_meeting(x,y,Wall)
 	instance_create(x+16,y+16,choose(Tube,Tube,Tube,Tube,MutantTube))
 
-	if spawnarea = 112 and random(4) < 1 && !place_meeting(x,y,Wall)
+	if spawnarea == 112 and random(4) < 1 && !place_meeting(x,y,Wall)
 	instance_create(x+16,y+16,choose(InvertedTube,InvertedTube,InvertedTube,InvertedTube,InvertedMutantTube))
 
-		if spawnarea = 126 && !place_meeting(x,y,Wall) { //CUSTOM
+		if spawnarea == 126 && !place_meeting(x,y,Wall) { //CUSTOM
 			instance_create(x+16,y+16,Gravestone);
 		}
-		if spawnarea = 127 && !place_meeting(x,y,Wall) { //CUSTOM
+		if spawnarea == 127 && !place_meeting(x,y,Wall) { //CUSTOM
 			instance_create(x+16,y+16,InvertedGravestone);
 		}
+		if spawnarea == 130 && !place_meeting(x,y,Wall) { //Factory
+			instance_create(x,y,Conveyor);
+		}
 		
-	    if spawnarea = 7 && !place_meeting(x,y,Wall){ //CUSTOM
+	    if spawnarea == 7 && !place_meeting(x,y,Wall){ //CUSTOM
 		    if random(60) < 1{
 				instance_create(x+16,y+16,BigSkull)
 			}
@@ -203,7 +195,7 @@ function scrPopProps() {
 				instance_create(x+16,y+16,VulcanoRock);
 			}
 		}
-		else if spawnarea = 108
+		else if spawnarea == 108
 		{
 			if random(60) < 1{
 				instance_create(x+16,y+16,InvertedBigSkull)

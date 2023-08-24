@@ -4,6 +4,7 @@ if place_meeting(x,y,Player) && !used
 {
 	if (!scrHasAnySkill())
 	{
+		name = "CAN'T REROLL";
 		exit;
 	}
 	if !active

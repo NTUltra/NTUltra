@@ -1,5 +1,5 @@
 raddrop = 75
-maxhealth = 200;
+maxhealth = 210;
 loops = GetPlayerLoops()
 if loops > 0
 	maxhealth = 350;
@@ -10,7 +10,7 @@ event_inherited()
 
 spr_idle = sprGraveyardFishIdle
 spr_walk = sprGraveyardFishWalk
-spr_charge = spr_walk;
+spr_chrg = spr_walk;
 spr_hurt = sprGraveyardFishHurt
 spr_dead = sprGraveyardFishDead
 spr_fire = sprGraveyardFishFire
@@ -40,7 +40,7 @@ if instance_exists(Player)
 	}
 }
 wkick = 0
-actTime = 16;
+actTime = 15;
 alarm[3] = 4 + irandom(8);
 dashDuration = 18;
 dashStart = 5;
@@ -60,7 +60,7 @@ isInverted = false;
 if loops > 0
 {
 	tellTime = 7;
-	actTime = 14;
+	actTime -= 2;
 	fireRate = 4;
 	maxAmmo ++;
 	acc += 1;

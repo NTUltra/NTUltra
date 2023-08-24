@@ -347,6 +347,10 @@ function scrShadows() {
 		draw_sprite(shd24,0,x-vx,y-vy)
 	with ScubaBandit
 		draw_sprite(shd24,0,x-vx,y-vy)
+	with SquareBot
+		draw_sprite(shd24,0,x-vx,y-vy)
+	with OctaBot
+		draw_sprite(shd24,0,x-vx,y-vy)
 	with JellyFish
 		draw_sprite(shd24,0,x-vx,y-vy+4)
 	with ToxicMushroomGuy

@@ -34,7 +34,7 @@ function snd_play(sndId, randompitch = 0, cancelPrev = false, usesLocation = tru
 		else if noOverlapWhenNear && audio_is_playing(sndId)
 		{
 			var nearest = instance_nearest(x,y,Sound)
-			if instance_exists(nearest) && point_distance(x,y,nearest.x,nearest.y) < 64
+			if instance_exists(nearest) && point_distance(x,y,nearest.x,nearest.y) < 80//64
 			{
 				if nearest.mySound == sndId
 				{

@@ -2,6 +2,7 @@ raddrop = 85
 maxhealth = 320//300
 if GetPlayerLoops() > 0
 	maxhealth = 430;
+maxhealth += clamp(20*loops,0,200);
 scrBossHealthBuff();
 meleedamage = 0
 mySize = 3

@@ -1,5 +1,5 @@
 /// @description Time to battle!!
-with instance_create(x,y,GraveyardFish) {
+with instance_create(x,y,InvertedGraveyardFish) {
 	image_xscale = other.image_xscale;
 	right = image_xscale;
 	speed = other.speed;

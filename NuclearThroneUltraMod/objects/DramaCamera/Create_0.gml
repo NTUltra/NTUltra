@@ -392,13 +392,13 @@ else if Player.area == 120
 	if random(400) < 1
 		name = choose("THRONE III","END OF THE ROAD","TICKET TO 1 LESS VAN");
 }
-else if Player.area = 128
+else if Player.area = 126
 {
 	name = "CURSED GRAVE FISH";
 	if random(100)<1
 		name = choose("CURSED GRAVE DIGGER");
 }
-else if Player.area = 129
+else if Player.area = 127
 {
 	name = "INVERTED GRAVE FISH";
 	if random(80)<1

@@ -28,8 +28,6 @@ motion_add(other.direction,4)
 }
 
 instance_destroy()
-with instance_create(x,y,BulletHit)
-sprite_index = sprEnemyBulletHit
 }
 
 

@@ -12,8 +12,8 @@ fireRate2 = 2;
 shooting2 = 0;
 chargeSpeed = 2.85;
 maxChargeSpeed = 12;
-
-maxChargeSpeed += clamp(GetPlayerLoops(),0,3)*0.5;
+loops = GetPlayerLoops();
+maxChargeSpeed += clamp(loops,0,3)*0.5;
 maxSpeed = 3;
 //behavior
 walk = 0
@@ -21,7 +21,7 @@ wkick = 0
 
 corpseTarget = -1;
 projectileSpeed = 7;
-projectileSpeed += clamp(GetPlayerLoops(),0,3)*0.5;
+projectileSpeed += clamp(loops,0,3)*0.5;
 
 alarm[1] = 40;
 alarm[2] = 1;

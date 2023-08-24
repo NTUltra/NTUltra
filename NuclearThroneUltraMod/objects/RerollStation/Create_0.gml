@@ -1,5 +1,5 @@
 /// @description Init
-depth = 7;
+depth = 6;
 image_speed = 0.4;
 scrSkills();
 name = "";

@@ -42,8 +42,8 @@
     "path": "sprites/sprGraveyardBreeder/sprGraveyardBreeder.yy",
   },
   "spriteMaskId": {
-    "name": "mskScorpion",
-    "path": "sprites/mskScorpion/mskScorpion.yy",
+    "name": "mskGraveyardBreeder",
+    "path": "sprites/mskGraveyardBreeder/mskGraveyardBreeder.yy",
   },
   "visible": true,
 }

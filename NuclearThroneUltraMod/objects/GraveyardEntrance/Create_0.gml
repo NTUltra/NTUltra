@@ -5,16 +5,16 @@ spr_idle = sprGraveyardEntrance;
 spr_hurt = sprGraveyardEntranceHurt
 
 spr_dead = sprGraveyardEntranceDead
-name = "?"
+name = "TOUCH?"
 
-event_inherited()
+event_inherited();
 canMoveOver = true;
 shadowSprite = shd24;
 shadowYoffset = - 8;
 snd_hurt = sndHitRock
-alarm[1] = 900;
+alarm[1] = 1100;
 if scrIsHardMode()
-alarm[1] += 90;
-alarm[1] *= clamp(loops*1.3,1,4)//335//10 seconds 300
+alarm[1] += 120;
+alarm[1] *= clamp(loops*1.3,1,4)
 instance_create(x,y,BigWallBreak);
 alarm[2] = 30;

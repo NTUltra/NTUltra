@@ -5,10 +5,7 @@ snd_play(sndScorpionFireStart);
 	projectileSpeed -= 1;
 	projectileAmount *= 0.5;
 	angleStep = 360/projectileAmount;
-	if projectileAmount == 2
-		sprayTimer = 10;
-	else
-		sprayTimer = 15;
+	projectileAmount = 2;
     motion_add(other.gunangle, other.projectileSpeed);
 	alarm[4] = 0;
     image_angle = direction

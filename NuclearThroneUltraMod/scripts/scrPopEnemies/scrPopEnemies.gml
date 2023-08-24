@@ -1235,7 +1235,7 @@ function scrPopEnemies() {
 			}
 			if r > 4
 			{
-				repeat(choose(1,2))
+				repeat(2)
 				instance_create(x + 16, y + 16, choose(GraveyardSkeleton))
 			}
 		    else
@@ -1252,7 +1252,7 @@ function scrPopEnemies() {
 			}
 			if r > 4
 			{
-				repeat(choose(1,2))
+				repeat(choose(1,1,2))
 				instance_create(x + 16, y + 16, choose(GraveyardSkeleton))
 			}
 		    else
@@ -1273,7 +1273,7 @@ function scrPopEnemies() {
 			}
 			if r > 4
 			{
-				repeat(3)
+				repeat(2)
 				instance_create(x + 16, y + 16, choose(InvertedGraveyardSkeleton))
 			}
 		    else
@@ -1290,12 +1290,83 @@ function scrPopEnemies() {
 			}
 			if r > 4
 			{
-				repeat(2)
+				repeat(choose(1,1,2))
 				instance_create(x + 16, y + 16, choose(InvertedGraveyardSkeleton))
 			}
 		    else
 			{
 		        instance_create(x + 16, y + 16, choose(theBandit,theBandit,BigMaggotInverted,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSniper))
+			}
+		}
+    }
+	
+	//FACTORY
+    if spawnarea = 130 {
+		if loops > 0
+		{
+		    var r = random(10);
+			if r > 8
+			{
+				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot,Sniper))
+			}
+			if r > 4
+			{
+				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot))
+			}
+		    else
+			{
+		        instance_create(x + 16, y + 16, choose(OctaBot,SquareBot))
+			}
+		}
+		else
+		{
+			var r = random(10);
+			if r > 7
+			{
+				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot,Sniper))
+			}
+			if r > 4
+			{
+				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot))
+			}
+		    else
+			{
+		        instance_create(x + 16, y + 16, choose(OctaBot,SquareBot))
+			}
+		}
+    }
+	//INVERTED Factory
+    else if spawnarea = 131 {
+		if loops > 0
+		{
+		    var r = random(10);
+			if r > 8
+			{
+				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot,Sniper))
+			}
+			if r > 4
+			{
+				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot))
+			}
+		    else
+			{
+		        instance_create(x + 16, y + 16, choose(OctaBot,SquareBot))
+			}
+		}
+		else
+		{
+			var r = random(10);
+			if r > 7
+			{
+				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot,Sniper))
+			}
+			if r > 4
+			{
+				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot))
+			}
+		    else
+			{
+		        instance_create(x + 16, y + 16, choose(OctaBot,SquareBot))
 			}
 		}
     }

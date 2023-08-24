@@ -5,6 +5,7 @@ event_inherited()
 
 raddrop = 5
 maxhealth = 1
+EnemyHealthAdjustments();
 meleedamage = 3
 droprate = 3;
 
@@ -14,16 +15,19 @@ spr_hurt = sprInvertedGraveyardSkeletonHurt
 spr_dead = sprInvertedGraveyardSkeletonDead
 
 
-image_speed = 0.6;
 alarm[3] = 0; //Not cursed
 //behavior
 walk = 0
 alarm[1] = 30+random(90)
-maxSpeed = 5;
-actTime = 7;
+maxSpeed = 4.1;
+actTime = 10;
 loops = GetPlayerLoops();
 if loops > 1
 {
 	maxSpeed = 5.4;
 	actTime = 4;
+} else if loops > 0
+{
+	maxSpeed = 5;
+	actTime = 7;
 }

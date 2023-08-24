@@ -12,7 +12,7 @@ my_health = 1;
 pickedup=false;
 
 oneweponly=false
-
+alarm[4] = 1;
 if isOneWeaponOnlyModes(){//one weapon only
 oneweponly=true;
 instance_destroy();

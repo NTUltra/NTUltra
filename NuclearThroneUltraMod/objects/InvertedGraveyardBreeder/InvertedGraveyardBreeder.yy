@@ -40,8 +40,8 @@
     "path": "sprites/sprInvertedGraveyardBreeder/sprInvertedGraveyardBreeder.yy",
   },
   "spriteMaskId": {
-    "name": "mskScorpion",
-    "path": "sprites/mskScorpion/mskScorpion.yy",
+    "name": "mskGraveyardBreeder",
+    "path": "sprites/mskGraveyardBreeder/mskGraveyardBreeder.yy",
   },
   "visible": true,
 }

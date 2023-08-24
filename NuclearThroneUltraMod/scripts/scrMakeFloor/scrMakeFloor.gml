@@ -450,52 +450,16 @@ function scrMakeFloor(limiter) {
 	
 	//Factory
 	if area == 130 || area == 131{
-		if random(9) < 1
-		{
-			instance_create(x,y,Floor)
-			instance_create(x+32,y,Floor)
-			instance_create(x-32,y,Floor)
-			instance_create(x,y+32,Floor)
-			instance_create(x,y-32,Floor)
-			instance_create(x+32,y+32,Floor)
-			instance_create(x+32,y-32,Floor)
-			instance_create(x-32,y-32,Floor)
-			instance_create(x-32,y+32,Floor)
-			x += lengthdir_x(32,direction)
-			y += lengthdir_y(32,direction)
-		}
-		else {
-			instance_create(x,y,Floor)
-			instance_create(x,y+32,Floor)
-			if random(2) < 1
-			{
-				if choose(true,false)
-				{
-					instance_create(x,y,Floor)
-					instance_create(x,y+32,Floor)
-				}
-				else
-				{
-					instance_create(x,y,Floor)
-					instance_create(x,y-32,Floor)
-				}
-			}
-			else
-			{
-				if choose(true,false)
-				{
-					instance_create(x+32,y,Floor)
-					instance_create(x,y,Floor)
-					instance_create(x,y+32,Floor)
-				}
-				else
-				{
-					instance_create(x,y,Floor)
-					instance_create(x-32,y,Floor)
-					instance_create(x,y+32,Floor)
-				}
-			}
-		}
+		instance_create(x,y,Floor)
+		instance_create(x,y + 32,Floor);
+		instance_create(x,y - 32,Floor);
+		instance_create(x + 32,y,Floor);
+		instance_create(x - 32,y,Floor);
+		
+		instance_create(x + 32,y + 32,Floor);
+		instance_create(x - 32,y + 32,Floor);
+		instance_create(x + 32,y - 32,Floor);
+		instance_create(x - 32,y - 32,Floor);
 	}
 	//savanna
 	if area = 10 || area == 121{ if random(5) < 2
@@ -738,6 +702,9 @@ function scrMakeFloor(limiter) {
 		}
 		else
 		trn = 0;
+	} else if area == 130 || area == 132
+	{
+		trn = 0;	
 	}
 	direction += trn
 	if ((area=7||area=108) && subarea=3) || area=104
@@ -804,14 +771,26 @@ function scrMakeFloor(limiter) {
 	if random(8) < 1
 	with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 	}
-	if area == 128 || area == 129
+	if area == 130 || area == 131
 	{
 		if random(15+instance_number(FloorMaker)) > 16
 		{
-		instance_destroy()
-		if point_distance(x,y,10016,10016) > 48{
-		instance_create(x+16,y+16,AmmoChest)
-		instance_create(x,y,Floor)}
+			instance_destroy()
+			if point_distance(x,y,10016,10016) > 48{
+			instance_create(x+16,y+16,AmmoChest)
+			instance_create(x,y,Floor)}
+		}
+		if random(4) < 1
+		with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
+	}
+	else if area == 128 || area == 129
+	{
+		if random(15+instance_number(FloorMaker)) > 16
+		{
+			instance_destroy()
+			if point_distance(x,y,10016,10016) > 48{
+			instance_create(x+16,y+16,AmmoChest)
+			instance_create(x,y,Floor)}
 		}
 		if random(8) < 1
 		with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};

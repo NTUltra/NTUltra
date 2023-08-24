@@ -11,7 +11,7 @@ function scrBoltTrail(col = c_white,shrinkrate = 0.1, trailscale = 1){
 			var dis = point_distance(other.x,other.y,other.xprevious,other.yprevious)
 			if dis  < 1
 			{
-				image_xscale = other.speed;
+				image_xscale = abs(x - xprevious)//other.speed;
 				image_angle = other.direction+180;
 			}
 			else

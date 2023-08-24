@@ -1,6 +1,7 @@
 event_inherited();
 raddrop = 50
 maxhealth = 550
+scrBossHealthBuff();
 EnemyHealthAdjustments();
 alarm[10] = 0;
 

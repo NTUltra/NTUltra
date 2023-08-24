@@ -5,7 +5,9 @@ if walk > 0
 	with other
 	{
 		instance_destroy()
-		instance_create(x,y,FloorExplo);
+		instance_create(x,y,FloorExplo)
+		//with instance_create(x,y,FloorExplo)
+			//alarm[3] = 0;
 	}
 	instance_create(x,y,BigWallBreak);
 }

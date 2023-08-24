@@ -29,12 +29,7 @@ else
 
 //instance_destroy()
 
-if sprite_index=sprFireBall
-{
-with instance_create(x,y,EBulletHit)
-sprite_index=sprFireBallHit;
-}
-else
+
 instance_create(x,y,EBulletHit)
 //with instance_create(x,y,BulletHit)
 //sprite_index = sprEnemyBulletHit

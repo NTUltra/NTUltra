@@ -21,6 +21,10 @@ if walk > 0
 		accc *= 0.5;
 	walk -= 1
 	motion_add(gunangle,accc);
+	if hspeed > 0
+		right = 1
+	else if hspeed < 0
+		right = -1
 }
 else if speed > 3
 	speed = 3;

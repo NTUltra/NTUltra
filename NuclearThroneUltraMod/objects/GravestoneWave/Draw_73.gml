@@ -16,6 +16,7 @@ if alarm[0] < 1
 			with instance_create(x + random(10) - 5,y + random(10) - 5,Curse)
 				depth = other.depth-1;
 			instance_create(x,y,Flicker);
+			BackCont.shake += 0.25;
 		}
 	}
 	ds_list_destroy(newcollision);
@@ -39,6 +40,7 @@ if alarm[0] < 1
 						with instance_create(x + random(10) - 5,y + random(10) - 5,Curse)
 							depth = other.depth-1;
 						instance_create(x+16,y+16,Flicker);
+						BackCont.shake += 0.25;
 					}
 				}
 			}

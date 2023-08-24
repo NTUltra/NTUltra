@@ -3,7 +3,9 @@
 // Inherit the parent event
 event_inherited();
 raddrop = 160
-maxhealth = 750
+maxhealth = 800
+scrBossHealthBuff();
+EnemyHealthAdjustments();
 easyCrystalLoss = false;
 normalCrystal = LightningCrystal;
 goldNormalCrystal = InvertedGoldCrystal;

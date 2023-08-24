@@ -18,15 +18,15 @@ with hitme
 		with Floor {
 			var xx = px;
 			var yy = py;
-			var n = instance_nearest(x,y,enemy);
+			var o = 16;
+			if object_index == FloorExplo
+				o = 8;
+			var n = instance_nearest(x+o,y+o,enemy);
 			if n != noone {
 				xx = n.x;
 				yy = n.y;
 			}
-			var o = 16;
-			if object_index == FloorExplo
-				o = 8;
-			if point_distance(x+o,y+o,xx,yy) > 80
+			if point_distance(x+o,y+o,xx,yy) > 90
 			{
 				allFloors[i] = [x+o,y+o];
 				i ++;
@@ -37,13 +37,13 @@ with hitme
 			if team == 2
 			{
 				if object_index == Player
-					alarm[3] += 15;
+					alarm[3] += 20;
 				instance_create(x,y,Flicker);
-				instance_create(x,y,Curse);
+				instance_create_depth(x,y,depth - 1, Curse);
 				var chosen = allFloors[irandom(i-1)];
 				x = chosen[0];
 				y = chosen[1];
-				repeat(4)
+				repeat(12)
 				with instance_create_depth(x + random(14) - 7,y + random(14) - 7,depth-1,Curse)
 				{
 					motion_add(other.direction, other.speed*0.5)
@@ -53,10 +53,19 @@ with hitme
 					instance_create(x,y,WallBreak);
 				with projectile
 				{
-					if team != other.team && point_distance(x,y,other.x,other.y) < 80
+					if team != other.team && point_distance(x,y,other.x,other.y) < 96
 					{
-						instance_destroy(id,false);	
+						instance_destroy(id,false);
 					}
+				}
+				with enemy
+				{
+					existTime = 10;
+					if alarm[1] > 0
+						alarm[1] += 20;
+				}
+				with GraveyardSniper {
+					alarm[2] = 0;
 				}
 			}
 		}

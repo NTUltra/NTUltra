@@ -1,4 +1,4 @@
-scrDrop(100,5)
+scrDrop(100,0)
 scrDrop(30,0)
 scrDrop(20,0)
 with GraveyardEntrance
@@ -32,7 +32,11 @@ if !isOneWeaponOnlyModes() && !instance_exists(SurvivalWave) && !instance_exists
 		ammo = 50
 		curse = 0;
 		if instance_exists(GraveyardEntrance)
+		{
+			with GraveyardEntrance
+				alarm[1] = 0;
 			curse = 1;
+		}
 		type = wep_type[wep]
 		sprite_index = wep_sprt[wep]
 	}

@@ -19,7 +19,7 @@ spr_dead = sprGraveyardSkeletonDead
 snd_hurt = sndMutant19Hurt
 snd_melee = sndRatMelee
 
-image_speed = 0.6;
+image_speed = 0.4;
 
 //behavior
 walk = 0
@@ -29,6 +29,7 @@ maxSpeed = 3.8;//4.6
 actTime = 12;//9
 if loops > 0
 {
+	image_speed = 0.6;
 	maxSpeed = 4.65;
 	actTime = 9;
 }

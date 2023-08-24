@@ -2,6 +2,7 @@ event_inherited()
 
 raddrop = 14
 maxhealth = 6
+EnemyHealthAdjustments();
 meleedamage = 0
 mySize = 1
 
@@ -16,7 +17,7 @@ tellTime = 4
 actTime = 17;
 maxAmmo = 6;
 ammo = maxAmmo;
-pspeed = 10;
+pspeed = 9;
 if loops > 0
 {
 	tellTime = 3;

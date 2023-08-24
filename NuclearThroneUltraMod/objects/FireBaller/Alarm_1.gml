@@ -9,9 +9,8 @@ if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 if random(3) < 1 && point_distance(x,y,target.x,target.y)<180
 {
 direction = point_direction(x,y,target.x,target.y)+180
-with instance_create(x,y,EnemyBullet1)
+with instance_create(x,y,EnemyFireBullet)
 {
-sprite_index=sprFireBall;
 motion_add(other.direction+180+random(12)-6,3)
 image_angle = direction
 team = other.team
