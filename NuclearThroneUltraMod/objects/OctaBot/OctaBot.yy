@@ -42,8 +42,8 @@
     "path": "sprites/sprOctaBotIdle/sprOctaBotIdle.yy",
   },
   "spriteMaskId": {
-    "name": "mskBandit",
-    "path": "sprites/mskBandit/mskBandit.yy",
+    "name": "mskOctaBot",
+    "path": "sprites/mskOctaBot/mskOctaBot.yy",
   },
   "visible": true,
 }

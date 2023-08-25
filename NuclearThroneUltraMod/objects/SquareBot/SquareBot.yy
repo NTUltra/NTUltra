@@ -35,8 +35,8 @@
     "path": "sprites/sprSquareBotIdle/sprSquareBotIdle.yy",
   },
   "spriteMaskId": {
-    "name": "mskBandit",
-    "path": "sprites/mskBandit/mskBandit.yy",
+    "name": "mskSquareBotIdle",
+    "path": "sprites/mskSquareBotIdle/mskSquareBotIdle.yy",
   },
   "visible": true,
 }

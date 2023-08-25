@@ -12,7 +12,7 @@ spr_idle = sprVanOpen
 spr_walk = sprVanDrive
 spr_hurt = sprVanHurt
 spr_dead = sprVanDead
-
+ignoreOverlap = true;
 existTime = 21;
 
 snd_hurt = sndVanHurt

@@ -6,6 +6,7 @@ maxhealth = 12
 meleedamage = 0
 mySize = 1
 target = -1
+ignoreOverlap = false;
 
 isInverted = false;
 wkick=false;

@@ -1,39 +1,42 @@
 if (my_health <= 0){
 	instance_destroy()
 }
-var overlap = instance_place(x,y,enemy);
-if overlap != noone
+if !ignoreOverlap
 {
-	if mySize <= overlap.mySize
+	var overlap = instance_place(x,y,enemy);
+	if overlap != noone
+	{
+		if mySize <= overlap.mySize
+		{
+			var getmeout = point_direction(overlap.x,overlap.y,x,y);
+			motion_add(getmeout,mySize)
+			direction += 1;
+		}
+	}
+	var overlap = instance_place(x,y,chestprop);
+	if overlap != noone
 	{
 		var getmeout = point_direction(overlap.x,overlap.y,x,y);
-		motion_add(getmeout,mySize)
+		motion_add(getmeout,0.8)
 		direction += 1;
 	}
-}
-var overlap = instance_place(x,y,chestprop);
-if overlap != noone
-{
-	var getmeout = point_direction(overlap.x,overlap.y,x,y);
-	motion_add(getmeout,0.8)
-	direction += 1;
-}
-var overlap = instance_place(x,y,prop);
-if overlap != noone
-{
-	var getmeout = point_direction(overlap.x,overlap.y,x,y);
-	motion_add(getmeout,0.6)
-	if UberCont.normalGameSpeed == 60
+	var overlap = instance_place(x,y,prop);
+	if overlap != noone
 	{
-		walk += 0.5;
-		direction += 0.5;
-	}
-	else
-	{
-		walk ++;
-		direction += 1;
-	}
+		var getmeout = point_direction(overlap.x,overlap.y,x,y);
+		motion_add(getmeout,0.6)
+		if UberCont.normalGameSpeed == 60
+		{
+			walk += 0.5;
+			direction += 0.5;
+		}
+		else
+		{
+			walk ++;
+			direction += 1;
+		}
 	
+	}
 }
 //WKICK
 if wkick!=false//variable_local_exists("wkick") = 1

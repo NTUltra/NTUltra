@@ -12,6 +12,7 @@ team = 1
 target = noone
 countKill = true;
 wasResurrected = false;
+ignoreOverlap = false;
 
 snd_hurt = sndHitFlesh
 snd_dead = sndEnemyDie

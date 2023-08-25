@@ -1307,15 +1307,15 @@ function scrPopEnemies() {
 		    var r = random(10);
 			if r > 8
 			{
-				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot,Sniper))
+				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot,WallBot,BigBot))
 			}
 			if r > 4
 			{
-				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot))
+				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot,WallBot))
 			}
 		    else
 			{
-		        instance_create(x + 16, y + 16, choose(OctaBot,SquareBot))
+		        instance_create(x + 16, y + 16, choose(OctaBot,SquareBot,WallBot))
 			}
 		}
 		else
@@ -1323,15 +1323,15 @@ function scrPopEnemies() {
 			var r = random(10);
 			if r > 7
 			{
-				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot,Sniper))
+				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot,WallBot,BigBot))
 			}
 			if r > 4
 			{
-				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot))
+				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot,WallBot))
 			}
 		    else
 			{
-		        instance_create(x + 16, y + 16, choose(OctaBot,SquareBot))
+		        instance_create(x + 16, y + 16, choose(OctaBot,SquareBot,WallBot))
 			}
 		}
     }

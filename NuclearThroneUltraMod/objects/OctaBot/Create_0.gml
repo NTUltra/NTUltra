@@ -17,10 +17,9 @@ snd_dead = sndExplosion
 //behavior
 walk = 0
 alarm[1] = 90;
-wkick = 0
 actTime = 90;
 originalAngle = 45;
 dir = choose(originalAngle,originalAngle + 90, originalAngle + 180, originalAngle + 270);
 acc = 1.2;
-maxSpeed = 4;
-projectileSpeed = 6;
+maxSpeed = 3.5;
+projectileSpeed = 4.5;
