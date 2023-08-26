@@ -6,9 +6,12 @@ var n = instance_nearest(x,y,Floor)
 if n != noone
 {
 	var d = point_direction(x,y,n.x,n.y);
+	move_outside_solid(d,64);
+	/*
 	while place_meeting(x,y,Wall)
 	{
 		x += lengthdir_x(4,d);
 		y += lengthdir_y(4,d);
 	}
+	*/
 }

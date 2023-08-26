@@ -416,6 +416,14 @@ else if Player.area = 129
 	if random(80)<1
 		name = choose("AGAIN!","CROWN AGAIN");
 }
+else if Player.area = 130
+{
+	name = "BOSS BOT";
+}
+else if Player.area = 131
+{
+	name = "INVERTED BOSS BOT";
+}
 
 }
 var n = name;

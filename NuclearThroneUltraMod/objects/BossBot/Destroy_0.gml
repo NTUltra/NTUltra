@@ -1,7 +1,10 @@
-scrDrop(20,0)
-
+scrDrop(100,0)
+scrDrop(50,0)
 event_inherited()
-
+with BecomeEnemyBulletDrops
+	instance_destroy();
+scrBossKill();
+instance_create(x,y-16,GoldChest);
 if existTime > 15
 {
 	

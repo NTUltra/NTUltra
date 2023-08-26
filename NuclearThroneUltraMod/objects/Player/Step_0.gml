@@ -2009,12 +2009,16 @@ if instance_exists(PlayerAlarms2) && PlayerAlarms2.alarm[1] < 1
 	if loops > 0
 	{
 		var healingAmount = 0.1;
+		var aggro = 1;
 		if UberCont.normalGameSpeed == 60
+		{
 			healingAmount = 0.05;
+			aggro = 0.5;
+		}
 		with enemy {
 			if super {
 				if alarm[1] > 3
-					alarm[1] -= 1;
+					alarm[1] -= aggro;
 				my_health = min(maxhealth,my_health + healingAmount);
 				speed *= 1.15;
 			}
@@ -2030,10 +2034,19 @@ if instance_exists(PlayerAlarms2) && PlayerAlarms2.alarm[1] < 1
 	}
 	else if scrIsCrown(10) //Crown of difficulty
 	{
+		var am = 1.25
+		//var s = 1.15;
+		if UberCont.normalGameSpeed == 60
+		{
+			am = 0.625;
+			//s = 0.575
+		}
 		with enemy
 		{
 			if alarm[1] > 3 && alarm[1] < 25
-				alarm[1] -= 1.25;
+			{
+				alarm[1] -= am;
+			}
 			speed *= 1.15;
 		}
 	}

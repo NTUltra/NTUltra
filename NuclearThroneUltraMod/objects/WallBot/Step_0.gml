@@ -8,6 +8,7 @@ if walk > 0 && alarm[2] < 1
 	{
 		dir += 180;
 		direction += 180;
+		walk -= 1
 		event_user(0);
 	}
 	else if collision_line(x + hspeed,y + vspeed,
@@ -24,6 +25,7 @@ if walk > 0 && alarm[2] < 1
 	{
 		dir += 180;
 		direction += 180;
+		walk -= 1
 		event_user(0);
 	}
 	walk -= 1

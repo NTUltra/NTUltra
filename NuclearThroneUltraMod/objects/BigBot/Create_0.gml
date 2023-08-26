@@ -4,7 +4,6 @@ meleedamage = 0
 mySize = 2
 
 event_inherited()
-image_speed = 0.5;
 spr_idle = sprBigBotIdle
 spr_walk = sprBigBotWalk
 spr_hurt = sprBigBotHurt
