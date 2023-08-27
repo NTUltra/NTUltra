@@ -1,10 +1,9 @@
 loops = GetPlayerLoops();
 maxhealth = 100 * clamp(loops*5,1,10)
 mySize = 1
-spr_idle = sprGraveyardEntrance;
-spr_hurt = sprGraveyardEntranceHurt
-
-spr_dead = sprGraveyardEntranceDead
+spr_idle = sprFactoryEntrance;
+spr_hurt = sprFactoryEntranceHurt
+spr_dead = sprFactoryEntranceDead
 name = "DEPOSIT WEAPON?"
 
 event_inherited();

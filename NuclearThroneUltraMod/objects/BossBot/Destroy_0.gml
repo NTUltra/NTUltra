@@ -7,7 +7,6 @@ scrBossKill();
 instance_create(x,y-16,GoldChest);
 if existTime > 15
 {
-	
 	with instance_create(x,y,GreenExplosion)
 		team = other.team
 	var ang = 0;
@@ -21,5 +20,22 @@ if existTime > 15
 		
 		ang += angStep;
 	}
-		
+}
+with WeaponDeposit {
+	with instance_create(other.x,other.y,WepPickup)
+	{
+		persistent = true;
+		scrWeapons()
+		wep = other.wep;
+		wepmod1 = other.wepmod1;
+		wepmod2 = other.wepmod2;
+		wepmod3 = other.wepmod3;
+		wepmod4 = other.wepmod4;
+		name = wep_name[wep]
+		ammo = 0
+		type = wep_type[wep]
+		curse = 0
+		sprite_index = wep_sprt[wep]
+	}
+	instance_destroy();
 }

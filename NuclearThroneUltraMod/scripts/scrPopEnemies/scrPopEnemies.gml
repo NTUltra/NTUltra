@@ -1301,21 +1301,51 @@ function scrPopEnemies() {
     }
 	
 	//FACTORY
-    if spawnarea = 130 {
+    if spawnarea = 130 || spawnarea == 131 || spawnarea == 132 || spawnarea == 133 || spawnarea == 134 {
+		var octaBot = OctaBot;
+		var squareBot = SquareBot;
+		var wallBot = WallBot;
+		var bigBot = BigBot;
+		if spawnarea == 131 // invertedd
+		{
+			octaBot = OctaBot;
+			squareBot = SquareBot;
+			wallBot = WallBot;
+			bigBot = BigBot;
+		}
+		else if spawnarea == 132 //Cursed
+		{
+			octaBot = OctaBot;
+			squareBot = SquareBot;
+			wallBot = WallBot;
+			bigBot = BigBot;
+		} else if spawnarea == 133 // Golden
+		{
+			octaBot = OctaBot;
+			squareBot = SquareBot;
+			wallBot = WallBot;
+			bigBot = BigBot;
+		} else if spawnarea == 134 //Ultra
+		{
+			octaBot = OctaBot;
+			squareBot = SquareBot;
+			wallBot = WallBot;
+			bigBot = BigBot;
+		}
 		if loops > 0
 		{
 		    var r = random(10);
 			if r > 8
 			{
-				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot,WallBot,BigBot))
+				instance_create(x + 16, y + 16, choose(octaBot,squareBot,wallBot,bigBot))
 			}
 			if r > 4
 			{
-				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot,WallBot))
+				instance_create(x + 16, y + 16, choose(octaBot,squareBot,wallBot))
 			}
 		    else
 			{
-		        instance_create(x + 16, y + 16, choose(OctaBot,SquareBot,WallBot))
+		        instance_create(x + 16, y + 16, choose(octaBot,squareBot,wallBot))
 			}
 		}
 		else
@@ -1323,50 +1353,15 @@ function scrPopEnemies() {
 			var r = random(10);
 			if r > 7
 			{
-				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot,WallBot,BigBot))
+				instance_create(x + 16, y + 16, choose(octaBot,squareBot,wallBot,bigBot))
 			}
 			if r > 4
 			{
-				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot,WallBot))
+				instance_create(x + 16, y + 16, choose(octaBot,squareBot,wallBot))
 			}
 		    else
 			{
-		        instance_create(x + 16, y + 16, choose(OctaBot,SquareBot,WallBot))
-			}
-		}
-    }
-	//INVERTED Factory
-    else if spawnarea = 131 {
-		if loops > 0
-		{
-		    var r = random(10);
-			if r > 8
-			{
-				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot,Sniper))
-			}
-			if r > 4
-			{
-				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot))
-			}
-		    else
-			{
-		        instance_create(x + 16, y + 16, choose(OctaBot,SquareBot))
-			}
-		}
-		else
-		{
-			var r = random(10);
-			if r > 7
-			{
-				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot,Sniper))
-			}
-			if r > 4
-			{
-				instance_create(x + 16, y + 16, choose(OctaBot,SquareBot))
-			}
-		    else
-			{
-		        instance_create(x + 16, y + 16, choose(OctaBot,SquareBot))
+		        instance_create(x + 16, y + 16, choose(octaBot,squareBot,wallBot))
 			}
 		}
     }

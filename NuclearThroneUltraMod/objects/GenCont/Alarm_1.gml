@@ -23,7 +23,7 @@ if instance_exists(Player)
 	snd_play_2d(sndVenuz)
 	}
 
-	if Player.area = 103 || Player.area == 125
+	if Player.area = 103 || Player.area == 125 || Player.area == 133
 	{
 	    //Player.area = 3
 	    //Player.subarea = 2
@@ -43,7 +43,24 @@ if instance_exists(Player)
 		instance_destroy(id,false);
 	    }
 	}
-
+	if Player.area == 115 || Player.area == 132
+	{
+		with WeaponChest
+	    {
+			instance_create(x,y,BigCursedWeaponChest)
+			instance_destroy(id,false);
+	    }
+	    with BigWeaponChest
+	    {
+			instance_create(x,y,BigCursedWeaponChest)
+			instance_destroy(id,false);
+	    }
+	    with EliteWeaponChest
+	    {
+			instance_create(x,y,BigCursedWeaponChest)
+			instance_destroy(id,false);
+	    }
+	}
 	if ( (Player.area = 101 && Player.area = 10)  && Player.subarea == 1) {
 	    with WeaponChest
 	    {

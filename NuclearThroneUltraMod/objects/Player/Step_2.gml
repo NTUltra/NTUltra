@@ -368,10 +368,10 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 					name = wep_name[wep];
 					type = wep_type[wep];
 					curse = other.curse;
-					wepmod1=other.wepmod1;
-					wepmod2=other.wepmod2;
-					wepmod3=other.wepmod3;
-					wepmod4=other.wepmod4;
+					wepmod1 = other.wepmod1;
+					wepmod2 = other.wepmod2;
+					wepmod3 = other.wepmod3;
+					wepmod4 = other.wepmod4;
 					//alarm[0] = 0; Can't heavy heart this? Let's try it this out first it seems fun
 					sprite_index = wep_sprt[wep]
 					ammo = 0
