@@ -41,6 +41,9 @@ with other
 			dir.theColour = c_red;
 		    dir.mytext = "WEAPON STOLEN!";
 			Sleep(100);
+			with Player {
+				snd_play(choose(snd_lowa,snd_lowh));	
+			}
 		    cwep=0;
 		}
 		else if bwep!=0 && other.wep == 0
@@ -58,6 +61,9 @@ with other
 		    dir.mytext = "WEAPON STOLEN!";
 			dir.theColour=c_red;
 			Sleep(100);
+			with Player {
+				snd_play(choose(snd_lowa,snd_lowh));	
+			}
 			if ultra_got[29] && altUltra//ROBOT EXCLUSIVE TASTE
 			{
 				maxhealth += 4;
@@ -120,6 +126,9 @@ with other
 	    dir.mytext = "WEAPON STOLEN!"
 	    dir.theColour=c_red;
 		Sleep(100);
+		with Player {
+			snd_play(choose(snd_lowa,snd_lowh));	
+		}
 	    cwep=0;
 	    }
     }
@@ -157,6 +166,9 @@ with other
 	    dir.mytext = "WEAPON STOLEN!"
 	    dir.theColour=c_red;
 		Sleep(100);
+		with Player {
+			snd_play(choose(snd_lowa,snd_lowh));	
+		}
 		if ultra_got[29] && altUltra//ROBOT EXCLUSIVE TASTE
 		{
 			maxhealth += 4;

@@ -181,7 +181,10 @@ function scrPopProps() {
 			instance_create(x+16,y+16,InvertedGravestone);
 		}
 		if spawnarea == 130 && !place_meeting(x,y,Wall) { //Factory
-			instance_create(x,y,Conveyor);
+			if random(3) < 2
+				instance_create(x,y,Conveyor);
+			else
+				instance_create(x,y,FactoryTerminal);
 		}
 		
 	    if spawnarea == 7 && !place_meeting(x,y,Wall){ //CUSTOM

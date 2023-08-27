@@ -16,6 +16,7 @@ if my_health > 0
 			curse = 1;
 			bcurse = 1;
 			ccurse = 1;
+			snd_play(choose(snd_lowa,snd_lowh));
 		}
 		/*
 		with instance_create(x,y,Portal)
