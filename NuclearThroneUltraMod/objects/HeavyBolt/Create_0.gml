@@ -6,3 +6,5 @@ piercedmg = 30;
 dmg = 50;
 if UberCont.ultramodSwap
 	event_user(0);
+xprev = x;
+yprev = y;

@@ -90,7 +90,13 @@ if instance_exists(Player)
 		    invertedportaldelay=45+inc;
 		    //area=107
 		    }
-			else if ( (area==126&&subarea<2)  )//Inv Graveyard
+			else if ( (area==126&&subarea<2)  )//Graveyard
+		    {
+		    invertedportalcounter=1;
+		    invertedportaldelay=45+inc;
+		    //area=107
+		    }
+			else if ( (area == 130&&subarea<3)  )//Factory
 		    {
 		    invertedportalcounter=1;
 		    invertedportaldelay=45+inc;

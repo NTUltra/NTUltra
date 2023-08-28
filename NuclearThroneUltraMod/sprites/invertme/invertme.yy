@@ -2,10 +2,10 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "invertme",
-  "bbox_bottom": 23,
-  "bbox_left": 9,
-  "bbox_right": 22,
-  "bbox_top": 11,
+  "bbox_bottom": 15,
+  "bbox_left": 0,
+  "bbox_right": 127,
+  "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,20 +13,20 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b4475767-7f9e-4b4f-996e-6c96928700ed",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b052554c-f048-4b1e-9911-b7dac27034f8",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 32,
+  "height": 16,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4a4bfb9e-36fe-4a89-adc7-e74139de3736","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"327bcdaa-0f55-4e07-a552-13a1d0df1746","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
   "parent": {
     "name": "Factory",
-    "path": "folders/Sprites/Enemies/Factory.yy",
+    "path": "folders/Sprites/Enviroment/Factory.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b4475767-7f9e-4b4f-996e-6c96928700ed","path":"sprites/invertme/invertme.yy",},},},"Disabled":false,"id":"84130d2a-4667-4b31-bec9-97cbc537160c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b052554c-f048-4b1e-9911-b7dac27034f8","path":"sprites/invertme/invertme.yy",},},},"Disabled":false,"id":"00274e79-1c2d-43ed-964d-8040237b1a2c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 32,
+  "width": 128,
 }

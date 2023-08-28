@@ -24,8 +24,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Factory",
+    "path": "folders/Objects/Enemies/Factory.yy",
   },
   "parentObjectId": {
     "name": "enemy",

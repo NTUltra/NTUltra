@@ -34,6 +34,9 @@
     "name": "sprTerminalMushroom",
     "path": "sprites/sprTerminalMushroom/sprTerminalMushroom.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskWepPickup",
+    "path": "sprites/mskWepPickup/mskWepPickup.yy",
+  },
   "visible": true,
 }

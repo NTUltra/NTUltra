@@ -8,3 +8,5 @@ alarm[11] = 0;
 alarm[4] = 5;
 typ = 3;
 friction = 0.1
+xprev = x;
+yprev = y;

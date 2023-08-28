@@ -49,6 +49,11 @@ case 126:sprite_index = sprDebris126; break;
 case 127:sprite_index = sprDebris127; break;
 case 128:sprite_index = sprDebris128; break;
 case 129:sprite_index = sprDebris129; break;
+case 130:sprite_index = sprDebris130; break;
+case 131:sprite_index = sprDebris131; break;
+case 132:sprite_index = sprDebris132; break;
+case 133:sprite_index = sprDebris103; break;
+case 134:sprite_index = sprDebris134; break;
 default: sprite_index = sprDebris0; break;
 }
 image_speed = 0

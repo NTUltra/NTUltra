@@ -27,4 +27,5 @@ trailColour = make_colour_rgb(0,255,0);
 //friction = 0.6
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable
 //thisBolt=instance_number(Bolt)+instance_number(ToxicBolt)+instance_number(Splinter);
-
+xprev = x;
+yprev = y;

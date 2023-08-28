@@ -1308,29 +1308,29 @@ function scrPopEnemies() {
 		var bigBot = BigBot;
 		if spawnarea == 131 // invertedd
 		{
-			octaBot = OctaBot;
-			squareBot = SquareBot;
-			wallBot = WallBot;
-			bigBot = BigBot;
+			octaBot = InvertedOctaBot;
+			squareBot = InvertedSquareBot;
+			wallBot = InvertedWallBot;
+			bigBot = InvertedBigBot;
 		}
 		else if spawnarea == 132 //Cursed
 		{
-			octaBot = OctaBot;
-			squareBot = SquareBot;
-			wallBot = WallBot;
-			bigBot = BigBot;
+			octaBot = CursedOctaBot;
+			squareBot = CursedSquareBot;
+			wallBot = CursedWallBot;
+			bigBot = CursedBigBot;
 		} else if spawnarea == 133 // Golden
 		{
-			octaBot = OctaBot;
-			squareBot = SquareBot;
-			wallBot = WallBot;
-			bigBot = BigBot;
+			octaBot = GoldenOctaBot;
+			squareBot = GoldenSquareBot;
+			wallBot = GoldenWallBot;
+			bigBot = GoldenBigBot;
 		} else if spawnarea == 134 //Ultra
 		{
-			octaBot = OctaBot;
-			squareBot = SquareBot;
-			wallBot = WallBot;
-			bigBot = BigBot;
+			octaBot = UltraOctaBot;
+			squareBot = UltraSquareBot;
+			wallBot = UltraWallBot;
+			bigBot = UltraBigBot;
 		}
 		if loops > 0
 		{

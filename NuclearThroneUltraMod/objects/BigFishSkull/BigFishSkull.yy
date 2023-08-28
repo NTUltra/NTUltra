@@ -39,6 +39,9 @@
     "name": "sprBigFishSkull",
     "path": "sprites/sprBigFishSkull/sprBigFishSkull.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskWepPickup",
+    "path": "sprites/mskWepPickup/mskWepPickup.yy",
+  },
   "visible": true,
 }

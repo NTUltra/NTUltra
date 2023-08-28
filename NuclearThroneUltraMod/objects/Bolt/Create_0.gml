@@ -9,3 +9,5 @@ trailScale = 1;
 trailColour = c_white;
 if UberCont.ultramodSwap
 	event_user(0);
+xprev = x;
+yprev = y;

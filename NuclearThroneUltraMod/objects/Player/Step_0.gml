@@ -16,21 +16,24 @@ if !instance_exists(LevCont) and visible = 1
 	if roll = 0
 	{
 		var previousSpeed = max(1,speed);
+		var acc = acceleration;
+		if UberCont.normalGameSpeed == 60
+			acc *= 0.5;
 		if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
 		{
-			hspeed -= acceleration
+			hspeed -= acc
 		}
 		if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
 		{
-			hspeed += acceleration
+			hspeed += acc
 		}
 		if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
 		{
-			vspeed -= acceleration
+			vspeed -= acc
 		}
 		if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
 		{
-			vspeed += acceleration
+			vspeed += acc
 		}
 		if ultra_got[20] && altUltra
 		{

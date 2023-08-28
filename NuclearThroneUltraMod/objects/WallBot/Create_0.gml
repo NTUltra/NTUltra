@@ -6,8 +6,8 @@ mySize = 2
 
 // Inherit the parent event
 event_inherited();
-alarm[1] = 80;
-actTime = 90;
+alarm[1] = 90;
+actTime = 95;
 originalAngle = choose(0,90,180,270);
 dir = originalAngle + choose(90,-90);
 acc = 1.2;
@@ -40,4 +40,6 @@ switch originalAngle {
 		doCos = true;
 	break;
 }
+speed = 0;
 alarm[0] = 10;
+type = 0;

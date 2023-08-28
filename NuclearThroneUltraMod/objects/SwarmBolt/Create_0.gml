@@ -30,3 +30,5 @@ alarm[0]=6
 alarm[1] = 120;
 alarm[11] = 1;
 alarm[2] = 1;
+xprev = x;
+yprev = y;

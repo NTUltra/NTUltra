@@ -2,7 +2,7 @@ event_inherited()
 if charge
 {
 	imageIndex += 0.4;
-	if UberConcont.normalGameSpeed == 60
+	if UberCont.normalGameSpeed == 60
 		imageIndex -= 0.2;
 	if sprite_index != spr_hurt
 		sprite_index = spr_charge;

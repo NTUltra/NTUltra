@@ -23,3 +23,4 @@ dir = choose(originalAngle,originalAngle + 90, originalAngle + 180, originalAngl
 acc = 1.2;
 maxSpeed = 3.5;
 projectileSpeed = 4.5;
+type = 0;

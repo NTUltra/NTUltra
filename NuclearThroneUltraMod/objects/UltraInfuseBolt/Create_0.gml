@@ -9,3 +9,5 @@ offy = random(2)-1
 alarm[0]=120;
 alarm[11] = 1;
 dmg = 17;
+xprev = x;
+yprev = y;

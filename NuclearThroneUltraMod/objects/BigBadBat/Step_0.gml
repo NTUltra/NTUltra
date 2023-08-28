@@ -23,29 +23,38 @@ if instance_exists(Player)
 		right = -1
 	else if Player.x > x
 		right = 1
-	if (alarm[4] > 0 && (loops > 1 || alarm[4] mod 2 == 0))
+	if (alarm[4] > 0)
 	{
-		if sprite_index != spr_hurt
-			sprite_index = spr_fire;
-		//Spin attack
-		var dir = point_direction(x,y,Player.x,Player.y);
-		var odis = spinAttackDistance;
-		var xx = x + lengthdir_x(odis,dir+90);
-		var yy = y + lengthdir_y(odis,dir+90);
-		with instance_create(xx,yy,EnemyBullet1Square)
-        {
-        motion_add(dir,other.pSpeedSpinny)
-        image_angle = direction
-        team = other.team
-        }
-		xx = x + lengthdir_x(odis,dir-90);
-		yy = y + lengthdir_y(odis,dir-90);
-		with instance_create(xx,yy,EnemyBullet1Square)
-        {
-        motion_add(dir,other.pSpeedSpinny)
-        image_angle = direction
-        team = other.team
-        }
+		if UberCont.normalGameSpeed == 60
+			fireDelay -= 0.5;
+		else
+			fireDelay -= 1;
+		if (fireDelay <= 0)//&& (loops > 1 || alarm[4] mod 2 == 0))
+		{
+			if loops < 2
+				fireDelay = 1
+			if sprite_index != spr_hurt
+				sprite_index = spr_fire;
+			//Spin attack
+			var dir = point_direction(x,y,Player.x,Player.y);
+			var odis = spinAttackDistance;
+			var xx = x + lengthdir_x(odis,dir+90);
+			var yy = y + lengthdir_y(odis,dir+90);
+			with instance_create(xx,yy,EnemyBullet1Square)
+	        {
+	        motion_add(dir,other.pSpeedSpinny)
+	        image_angle = direction
+	        team = other.team
+	        }
+			xx = x + lengthdir_x(odis,dir-90);
+			yy = y + lengthdir_y(odis,dir-90);
+			with instance_create(xx,yy,EnemyBullet1Square)
+	        {
+	        motion_add(dir,other.pSpeedSpinny)
+	        image_angle = direction
+	        team = other.team
+	        }
+		}
 	}
 	if alarm[5] > 0
 	{

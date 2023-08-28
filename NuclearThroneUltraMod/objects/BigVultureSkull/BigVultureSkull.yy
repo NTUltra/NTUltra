@@ -38,6 +38,9 @@
     "name": "sprBigVultureSkull",
     "path": "sprites/sprBigVultureSkull/sprBigVultureSkull.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskWepPickup",
+    "path": "sprites/mskWepPickup/mskWepPickup.yy",
+  },
   "visible": true,
 }

@@ -184,7 +184,13 @@ function scrPopProps() {
 			if random(3) < 2
 				instance_create(x,y,Conveyor);
 			else
-				instance_create(x,y,FactoryTerminal);
+				instance_create(x+16,y+16,FactoryTerminal);
+		}
+		else if spawnarea == 131 && !place_meeting(x,y,Wall) { //Factory
+			if random(3) < 2
+				instance_create(x,y,InvertedConveyor);
+			else
+				instance_create(x+16,y+16,InvertedFactoryTerminal);
 		}
 		
 	    if spawnarea == 7 && !place_meeting(x,y,Wall){ //CUSTOM

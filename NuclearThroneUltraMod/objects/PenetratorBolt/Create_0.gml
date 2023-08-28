@@ -6,3 +6,5 @@ dmg = 18;
 dmgAdd = 18;
 if UberCont.ultramodSwap
 	event_user(0);
+xprev = x;
+yprev = y;

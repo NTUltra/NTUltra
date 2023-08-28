@@ -227,10 +227,19 @@ function scrNextLevel() {
 		if area == 126 && subarea > 0 && !inverted
 		{
 			// To scrapyard
-			debug("Go scrap");
 			area = 3;
 			lastarea = 3;
 			subarea = 1;
+			inverted = false;
+			exit;
+		}
+		//Graveyard
+		if ((area == 130 || area == 131 || area == 132 || area == 133) && subarea > 0 && !inverted)
+		{
+			// To inv palace
+			area = 118;
+			lastarea = 118;
+			subarea = 2;
 			inverted = false;
 			exit;
 		}
@@ -572,6 +581,11 @@ function scrNextLevel() {
 	if ( area == 126 && inverted )//inv Graveyard
 	{area=127;
 	lastarea=127;
+	subarea = 1;
+	}
+	if ( area == 130 && inverted )//to inv factory
+	{area=131;
+	lastarea=131;
 	subarea = 1;
 	}
 	if ( area == 114 && inverted )//inv Mushroom

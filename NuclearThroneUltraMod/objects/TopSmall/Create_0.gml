@@ -138,6 +138,15 @@ break;
 case 131:
 sprite_index=sprWall131Trans;
 break;
+case 132:
+sprite_index=sprWall132Trans;
+break;
+case 133:
+sprite_index=sprWall133Trans;
+break;
+case 134:
+sprite_index=sprWall134Trans;
+break;
 default:
 sprite_index=sprWall0Trans;
 break;

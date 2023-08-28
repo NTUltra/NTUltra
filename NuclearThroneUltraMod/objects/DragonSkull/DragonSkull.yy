@@ -38,6 +38,9 @@
     "name": "sprHotDrakeSkullIdleClosed",
     "path": "sprites/sprHotDrakeSkullIdleClosed/sprHotDrakeSkullIdleClosed.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskWepPickup",
+    "path": "sprites/mskWepPickup/mskWepPickup.yy",
+  },
   "visible": true,
 }

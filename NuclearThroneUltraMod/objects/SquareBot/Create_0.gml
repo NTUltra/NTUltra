@@ -2,7 +2,6 @@
 
 // Inherit the parent event
 event_inherited();
-alarm[1] -= 45;
 originalAngle = 0;
 spr_idle = sprSquareBotIdle;
 spr_walk = sprSquareBotWalk;

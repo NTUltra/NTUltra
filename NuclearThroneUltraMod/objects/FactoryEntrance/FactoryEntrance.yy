@@ -36,6 +36,9 @@
     "name": "sprFactoryEntrance",
     "path": "sprites/sprFactoryEntrance/sprFactoryEntrance.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskWepPickup",
+    "path": "sprites/mskWepPickup/mskWepPickup.yy",
+  },
   "visible": true,
 }

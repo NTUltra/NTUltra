@@ -157,7 +157,7 @@ if instance_exists(Player)
 				__background_set_colour( make_color_rgb(12,12,12) )
 			break;
 			case 131:
-				__background_set_colour( make_color_rgb(12,12,12) )
+				__background_set_colour( make_color_rgb(9,10,9) )
 			break;
 		}
 	}
@@ -263,7 +263,7 @@ if instance_exists(Player)
 		else if Player.area == 130//Factory
 			__background_set_colour( make_color_rgb(26,70,59) )
 		else if Player.area == 131//Inverted Factory
-			__background_set_colour( make_color_rgb(58, 34, 46) )
+			__background_set_colour( make_color_rgb(73, 26, 39) )
 	}
 }
 else

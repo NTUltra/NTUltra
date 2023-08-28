@@ -1,6 +1,12 @@
 /// @description Move it
 if other.team != 0 {
 	var s = acc/other.mySize;
+	if UberCont.normalGameSpeed == 60
+		s *= 0.5;
+	with other
+	{
+		scrForcePosition60fps();	
+	}
 	switch(image_angle)
 	{
 		case 0:
