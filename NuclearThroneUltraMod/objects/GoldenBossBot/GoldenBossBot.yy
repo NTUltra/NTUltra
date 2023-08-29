@@ -2,7 +2,9 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "GoldenBossBot",
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
@@ -29,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprBossBotIdle",
-    "path": "sprites/sprBossBotIdle/sprBossBotIdle.yy",
+    "name": "sprGoldenBossBotIdle",
+    "path": "sprites/sprGoldenBossBotIdle/sprGoldenBossBotIdle.yy",
   },
   "spriteMaskId": {
     "name": "mskBossBot",

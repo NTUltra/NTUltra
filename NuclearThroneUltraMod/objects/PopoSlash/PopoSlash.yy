@@ -38,9 +38,6 @@
     "name": "sprPopoSlash",
     "path": "sprites/sprPopoSlash/sprPopoSlash.yy",
   },
-  "spriteMaskId": {
-    "name": "mskEnemySlash",
-    "path": "sprites/mskEnemySlash/mskEnemySlash.yy",
-  },
+  "spriteMaskId": null,
   "visible": true,
 }

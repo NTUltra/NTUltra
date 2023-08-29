@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprInvertedOctaBotIdle",
-    "path": "sprites/sprInvertedOctaBotIdle/sprInvertedOctaBotIdle.yy",
+    "name": "sprCursedOctaBotIdle",
+    "path": "sprites/sprCursedOctaBotIdle/sprCursedOctaBotIdle.yy",
   },
   "spriteMaskId": {
     "name": "mskOctaBot",

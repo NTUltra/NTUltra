@@ -329,7 +329,7 @@ break;
 case 132:
 sprite_index=sprFloor132;
 break;
-case 132:
+case 133:
 sprite_index=sprFloor133;
 break;
 case 134:

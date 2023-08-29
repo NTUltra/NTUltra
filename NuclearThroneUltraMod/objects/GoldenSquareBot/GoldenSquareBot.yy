@@ -5,6 +5,7 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":2,"eventType":2,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -32,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprInvertedSquareBotIdle",
-    "path": "sprites/sprInvertedSquareBotIdle/sprInvertedSquareBotIdle.yy",
+    "name": "sprGoldenSquareBotIdle",
+    "path": "sprites/sprGoldenSquareBotIdle/sprGoldenSquareBotIdle.yy",
   },
   "spriteMaskId": {
     "name": "mskSquareBotIdle",

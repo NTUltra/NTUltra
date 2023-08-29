@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprInvertedBigBotIdle",
-    "path": "sprites/sprInvertedBigBotIdle/sprInvertedBigBotIdle.yy",
+    "name": "sprCursedBigBotIdle",
+    "path": "sprites/sprCursedBigBotIdle/sprCursedBigBotIdle.yy",
   },
   "spriteMaskId": {
     "name": "mskBigBot",

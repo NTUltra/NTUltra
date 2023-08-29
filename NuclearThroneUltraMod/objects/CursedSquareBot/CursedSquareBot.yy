@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprInvertedSquareBotIdle",
-    "path": "sprites/sprInvertedSquareBotIdle/sprInvertedSquareBotIdle.yy",
+    "name": "sprCursedSquareBotIdle",
+    "path": "sprites/sprCursedSquareBotIdle/sprCursedSquareBotIdle.yy",
   },
   "spriteMaskId": {
     "name": "mskSquareBotIdle",

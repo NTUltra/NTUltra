@@ -35,8 +35,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprSlash",
-    "path": "sprites/sprSlash/sprSlash.yy",
+    "name": "sprEnemySlash",
+    "path": "sprites/sprEnemySlash/sprEnemySlash.yy",
   },
   "spriteMaskId": {
     "name": "mskEnemySlash",

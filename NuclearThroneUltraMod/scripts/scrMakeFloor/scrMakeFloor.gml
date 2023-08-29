@@ -449,7 +449,7 @@ function scrMakeFloor(limiter) {
 	} 
 	
 	//Factory
-	if area == 130 || area == 131{
+	if area == 130 || area == 131 || area == 132 || area == 133 || area == 134{
 		instance_create(x,y,Floor)
 		instance_create(x,y + 32,Floor);
 		instance_create(x,y - 32,Floor);
@@ -702,7 +702,7 @@ function scrMakeFloor(limiter) {
 		}
 		else
 		trn = 0;
-	} else if area == 130 || area == 132
+	} else if area == 130 || area == 131 || area == 132 || area == 133 || area == 134
 	{
 		trn = 0;	
 	}
@@ -771,7 +771,7 @@ function scrMakeFloor(limiter) {
 	if random(8) < 1
 	with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 	}
-	if area == 130 || area == 131
+	if area == 130 || area == 131 || area == 132 || area == 133 || area == 134
 	{
 		if random(15+instance_number(FloorMaker)) > 16
 		{

@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprInvertedWallBotIdle",
-    "path": "sprites/sprInvertedWallBotIdle/sprInvertedWallBotIdle.yy",
+    "name": "sprCursedWallBotIdle",
+    "path": "sprites/sprCursedWallBotIdle/sprCursedWallBotIdle.yy",
   },
   "spriteMaskId": {
     "name": "mskWallBot",

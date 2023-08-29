@@ -968,10 +968,11 @@ function scrFire2() {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*10,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*10,aimDirection),Shank)
 	{
+		sprite_index = sprGoldenShank;
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection+(random(10)-5)*other.accuracy,3+longarms)
+	motion_add(aimDirection+(random(10)-5)*other.accuracy,4+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -3324,7 +3325,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection+(random(10)-5)*other.accuracy,3+longarms)
+	motion_add(aimDirection+(random(10)-5)*other.accuracy,4+longarms)
 	image_angle = direction
 	team = other.team}
 

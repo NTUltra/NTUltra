@@ -1,4 +1,4 @@
-/// @description Inverted!
+/// @description Cursed!
 
 // Inherit the parent event
 event_inherited();
@@ -12,9 +12,9 @@ actTime -= 2;
 projectileSpeed += 0.5;
 EnemyHealthAdjustments();
 
-spr_idle = sprInvertedBigBotIdle;
-spr_walk = sprInvertedBigBotWalk;
-spr_hurt = sprInvertedBigBotHurt;
-spr_dead = sprInvertedBigBotDead;
-spr_fire = sprInvertedBigBotFire;
+spr_idle = sprCursedBigBotIdle;
+spr_walk = sprCursedBigBotWalk;
+spr_hurt = sprCursedBigBotHurt;
+spr_dead = sprCursedBigBotDead;
+spr_fire = sprCursedBigBotFire;
 type = 1;

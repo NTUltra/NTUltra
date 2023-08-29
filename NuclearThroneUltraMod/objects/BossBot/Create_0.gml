@@ -13,7 +13,7 @@ spr_fire = sprBossBotFire;
 spr_actual_walk = spr_walk;
 spr_actual_idle = spr_idle;
 spr_charge = sprBossBotCharge;
-spr_charge_hurt = sprBallBossChargeHurt;
+spr_charge_hurt = sprBossBotChargeHurt;
 spr_actual_hurt = spr_hurt;
 spr_become_charge = sprBossBotBecomeBall;
 

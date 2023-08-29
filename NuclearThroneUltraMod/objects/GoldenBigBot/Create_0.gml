@@ -1,20 +1,18 @@
-/// @description Inverted!
+/// @description Golden!
 
 // Inherit the parent event
 event_inherited();
-raddrop += 10;
-image_speed += 0.1;
-fireDelay -= 10;
-maxhealth = 50;
-maxSpeed += 0.5;
+raddrop += 2;
+fireDelay = 40;
+maxhealth += 20;
+maxSpeed -= 0.25;
 acc += 0.2;
 actTime -= 2;
-projectileSpeed += 0.5;
+projectileSpeed += 3;
 EnemyHealthAdjustments();
 
-spr_idle = sprInvertedBigBotIdle;
-spr_walk = sprInvertedBigBotWalk;
-spr_hurt = sprInvertedBigBotHurt;
-spr_dead = sprInvertedBigBotDead;
-spr_fire = sprInvertedBigBotFire;
-type = 1;
+spr_idle = sprGoldenBigBotIdle;
+spr_walk = sprGoldenBigBotWalk;
+spr_hurt = sprGoldenBigBotHurt;
+spr_dead = sprGoldenBigBotDead;
+spr_fire = sprGoldenBigBotFire;

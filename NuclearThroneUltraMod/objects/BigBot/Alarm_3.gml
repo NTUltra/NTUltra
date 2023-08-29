@@ -19,6 +19,7 @@ if target > -1 && instance_exists(target) && point_distance(x,y,target.x,target.
 			}
 			ang += angStep;
 		}
+		ps -= 0.5;
 	}
 }
 alarm[4] = 3;

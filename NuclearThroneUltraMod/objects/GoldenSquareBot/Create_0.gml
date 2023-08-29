@@ -2,16 +2,14 @@
 
 // Inherit the parent event
 event_inherited();
-raddrop += 5;
-maxhealth = 15;
-maxSpeed += 0.5;
-acc += 0.2;
-actTime -= 10;
-projectileSpeed += 0.5;
+raddrop += 2;
+maxhealth += 10;
+maxSpeed -= 0.5;
+actTime -= 50;
+projectileSpeed = 3;
 EnemyHealthAdjustments();
-spr_idle = sprInvertedSquareBotIdle;
-spr_walk = sprInvertedSquareBotWalk;
-spr_hurt = sprInvertedSquareBotHurt;
-spr_dead = sprInvertedSquareBotDead;
-spr_fire = sprInvertedSquareBotFire;
-type = 1;
+spr_idle = sprGoldenSquareBotIdle;
+spr_walk = sprGoldenSquareBotWalk;
+spr_hurt = sprGoldenSquareBotHurt;
+spr_dead = sprGoldenSquareBotDead;
+spr_fire = sprGoldenSquareBotFire;

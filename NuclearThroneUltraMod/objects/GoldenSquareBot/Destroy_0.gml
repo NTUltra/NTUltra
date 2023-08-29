@@ -1,8 +1,8 @@
 if existTime > 15
 {
-with instance_create(x,y,PurpleExplosion)
+with instance_create(x,y,Explosion)
 	team = other.team
 }
-existTime = 20;
+existTime = 5;
 event_inherited()
 
