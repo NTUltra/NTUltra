@@ -2223,10 +2223,10 @@ function scrFire2() {
 
 	if !instance_exists(FlameSound)
 	instance_create(x,y,FlameSound)
-	with instance_create(x,y,FlameBurst)
+	with instance_create(x,y,GoldenFlameBurst)
 	{
 	creator = other.id
-	ammo = 12
+	ammo = 1
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 

@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Factory",
-    "path": "folders/Sprites/Enemies/Factory.yy",
+    "name": "Inverted",
+    "path": "folders/Sprites/Enemies/Factory/Inverted.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

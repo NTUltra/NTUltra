@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Factory",
-    "path": "folders/Sprites/Enemies/Factory.yy",
+    "name": "Regular",
+    "path": "folders/Sprites/Enemies/Factory/Regular.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

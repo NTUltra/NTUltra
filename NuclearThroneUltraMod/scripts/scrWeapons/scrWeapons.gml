@@ -3046,7 +3046,7 @@ function scrWeapons() {
 	wep_name[276] = "GOLDEN FLAMETHROWER"
 	wep_type[276] = 4
 	wep_auto[276] = 1
-	wep_load[276] = 9
+	wep_load[276] = 8
 	wep_cost[276] = 1
 	wep_sprt[276] = sprGoldenFlameThrower
 	wep_area[276] = 18
