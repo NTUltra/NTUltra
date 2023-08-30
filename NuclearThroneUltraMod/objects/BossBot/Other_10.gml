@@ -21,13 +21,13 @@ with instance_create(x,y,Shell)
 
 with instance_create(x,y,Shell)
 {
-	sprite_index = sprGoldShotgun;
+	sprite_index = other.wepspr;
 	hspeed -=3;
 }
 
 with instance_create(x,y,Shell)
 {
-	sprite_index = sprGoldShotgun;
+	sprite_index = other.wepspr;
 	hspeed +=3;
 }
 justCharged = true;

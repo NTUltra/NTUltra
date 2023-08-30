@@ -1,5 +1,6 @@
 raddrop = 40
 maxhealth = 600
+scrBossHealthBuff();
 meleedamage = 0
 mySize = 2
 
@@ -47,7 +48,7 @@ fireSecondary = false;
 right = image_xscale;
 justCharged = true;
 instance_create(x,y,BigWallBreak);
-alarm[6] = bowlingDuration;
+wepspr = sprGoldShotgun;
 if instance_exists(Player)
 {
 	var d = point_direction(x,y,Player.x,Player.y);
@@ -55,4 +56,5 @@ if instance_exists(Player)
 }
 else
 	direction = random(360);
+alarm[6] = bowlingDuration;
 event_user(1);

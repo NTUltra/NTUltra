@@ -321,6 +321,8 @@ if looping && area != 104
     
     
 	    //uncurse some shit
+		if (curse == 1 || bcurse == 1 || ccurse == 1)
+			snd_play_2d(sndUncurse);
 	    curse=0;
 	    bcurse=0;
 	    ccurse=0;
@@ -715,6 +717,9 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		curse = other.curse;
 		bcurse = other.bcurse;
 		ccurse = other.ccurse;
+		isPermanent = other.isPermanent;
+		isPermanentB = other.isPermanentB;
+		isPermanentC = other.isPermanentC;
 		wepmod1 = other.wepmod1;
 		wepmod2 = other.wepmod2;
 		wepmod3 = other.wepmod3;

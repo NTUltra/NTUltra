@@ -178,6 +178,7 @@ if wep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 		wep = other.wep
 		ammo = 50
 		curse = other.curse
+		isPermanent = other.isPermanent;
 		name = wep_name[wep]
 		type = wep_type[wep]
 		sprite_index = wep_sprt[wep]
@@ -199,6 +200,7 @@ if bwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 		wep = other.bwep
 		ammo = 50
 		curse = other.bcurse
+		isPermanent = other.isPermanentB;
 		name = wep_name[wep]
 		type = wep_type[wep]
 		sprite_index = wep_sprt[wep]
@@ -220,6 +222,7 @@ if cwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 		wep = other.cwep
 		ammo = 50
 		curse = other.ccurse
+		isPermanent = other.isPermanentC;
 		name = wep_name[wep]
 		type = wep_type[wep]
 		sprite_index = wep_sprt[wep]
@@ -727,6 +730,9 @@ with instance_create(x,y,DataRef)
 	curse = other.curse;
 	bcurse = other.bcurse;
 	ccurse = other.ccurse;
+	isPermanent = other.isPermanent;
+	isPermanentB = other.isPermanentB;
+	isPermanentC = other.isPermanentC;
 	wepmod1 = other.wepmod1;
 	wepmod2 = other.wepmod2;
 	wepmod3 = other.wepmod3;

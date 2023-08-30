@@ -1,0 +1,11 @@
+event_inherited();
+dmg = 5;
+owner = -1;
+length = 1;
+maxlength = 110;
+oDir = 0;
+rotation = choose(400,-400);
+alarm[0] = 1;
+tx = x;
+ty = y;
+followOwner = false;

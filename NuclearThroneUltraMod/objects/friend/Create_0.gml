@@ -57,7 +57,6 @@ betterpluto = 39;
 betterrabbitpaw = 0.0;
 betterrecyclegland = 0;
 betterboltmarrow = 0;
-humphySkill = 0;
 curse = 0;
 bcurse = 0;
 existTime = 30;

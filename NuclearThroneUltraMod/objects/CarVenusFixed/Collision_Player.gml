@@ -13,7 +13,7 @@ if KeyCont.key_pick[other.p] = 1
 	}
 	//with enemy
 	//	my_health = 0
-		
+	snd_play(sndUseCar);
 	with instance_create(x,y,Portal) 
 	{
 		type = 1

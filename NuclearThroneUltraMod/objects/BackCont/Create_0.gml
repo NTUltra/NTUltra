@@ -34,7 +34,7 @@ bulletHellLoops = loops;
 if scrIsHardMode()//HARD MODE
 	loops ++;
 canSpawnPopoThisManyTimes = 2 + loops;
-canSpawnPopoThisManyTimes = min(canSpawnPopoThisManyTimes,8);
+canSpawnPopoThisManyTimes = min(canSpawnPopoThisManyTimes,7);
 spawnedThisManyPopo = 0;
 
 wantVanAmount = 0;
@@ -95,7 +95,14 @@ if instance_exists(Player)
 	//maxEnemyHealthInLevel=0;
 	}
 	
-	if ((Player.area == 9 || Player.area == 118) && Player.subarea == 3 || Player.area == 104 || Player.area == 128)
+	if (
+		((Player.area == 9 || Player.area == 118)
+		&& Player.subarea == 3)
+		|| Player.area == 104 
+		|| Player.area == 128
+		|| Player.area == 100 || 
+		(Player.loops < 1 && (scrIsCrown(16) || !((Player.area == 9 || Player.area == 118) && Player.subarea == 2)))
+	)
 	{
 		//No popo no
 		alarm[1] = 0;

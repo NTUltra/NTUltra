@@ -328,6 +328,7 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 			if bwep = 0
 			{
 				bcurse = curse
+				isPermanentB = isPermanent;
 				if ultra_got[29] && altUltra && bwep == 0 && wep != 0//ROBOT EXCLUSIVE TASTE
 				{
 					maxhealth -= 4;
@@ -341,6 +342,7 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 			else if cwep = 0 && ultra_got[31]//robot ultra third wep
 			{
 				ccurse = curse
+				isPermanentC = isPermanent;
 				cwep = wep
 				cwepmod1 = wepmod1;
 				cwepmod2 = wepmod2;
@@ -368,6 +370,7 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 					name = wep_name[wep];
 					type = wep_type[wep];
 					curse = other.curse;
+					isPermanent = other.isPermanent;
 					wepmod1 = other.wepmod1;
 					wepmod2 = other.wepmod2;
 					wepmod3 = other.wepmod3;
@@ -380,6 +383,7 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 
 			wep = targetPickup.wep
 			curse = targetPickup.curse
+			isPermanent = targetPickup.isPermanent;
 			wepmod1 = targetPickup.wepmod1
 			wepmod2 = targetPickup.wepmod2
 			wepmod3 = targetPickup.wepmod3

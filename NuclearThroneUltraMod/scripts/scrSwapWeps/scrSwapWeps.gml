@@ -1,6 +1,6 @@
 function scrSwapWeps() {
 	//SWAP DA WEPS
-	var twep, treload, tqueueshot, twkick, twepflip, twepangle, tcan_shoot, tcurse,twepmod1,twepmod2,twepmod3,twepmod4;//temporary wep
+	var twep, treload, tqueueshot, twkick, twepflip, twepangle, tcan_shoot, tcurse,twepmod1,twepmod2,twepmod3,twepmod4, isPermanentT;//temporary wep
 	if ultra_got[31] && cwep!=0//robots third weapon robot is cool very cool
 	{
 	//save primary in temporary A B C A
@@ -12,6 +12,7 @@ function scrSwapWeps() {
 	treload=reload
 	tqueueshot=queueshot
 	twep=wep
+	isPermanentT=isPermanent;
 	//TMODIFIERS!
 	twepmod1=wepmod1;
 	twepmod2=wepmod2;
@@ -29,6 +30,7 @@ function scrSwapWeps() {
 	reload=breload
 	queueshot=bqueueshot
 	wep=bwep
+	isPermanent = isPermanentB;
 	//MODIFIERS!
 	wepmod1=bwepmod1;
 	wepmod2=bwepmod2;
@@ -45,6 +47,7 @@ function scrSwapWeps() {
 	breload=creload
 	bqueueshot=cqueueshot
 	bwep=cwep
+	isPermanentB = isPermanentC;
 	//BMODIFIERS!
 	bwepmod1=cwepmod1;
 	bwepmod2=cwepmod2;
@@ -61,6 +64,7 @@ function scrSwapWeps() {
 	creload=treload
 	cqueueshot=tqueueshot
 	cwep=twep
+	isPermanentC=isPermanentT;
 	//CMODIFIERS!
 	cwepmod1=twepmod1;
 	cwepmod2=twepmod2;
@@ -81,6 +85,7 @@ function scrSwapWeps() {
 	twepflip = wepflip
 	twepangle = wepangle 
 	tcan_shoot = can_shoot
+	isPermanentT=isPermanent;
 	//TMODIFIERS
 	twepmod1=wepmod1
 	twepmod2=wepmod2
@@ -88,6 +93,7 @@ function scrSwapWeps() {
 	twepmod4=wepmod4
 
 	wep = bwep
+	isPermanent = isPermanentB;
 	curse = bcurse
 	reload = breload
 	queueshot=bqueueshot
@@ -109,6 +115,7 @@ function scrSwapWeps() {
 	breload = treload
 	bqueueshot=tqueueshot
 	bwep = twep
+	isPermanentB = isPermanentT;
 	//BMODIFIERS
 	bwepmod1=twepmod1;
 	bwepmod2=twepmod2;

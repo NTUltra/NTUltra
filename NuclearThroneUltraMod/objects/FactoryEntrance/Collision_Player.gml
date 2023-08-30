@@ -20,6 +20,7 @@ if my_health > 0
 				with instance_create(other.x,other.y,WepPickup)
 				{
 					scrWeapons()
+					isPermanent = other.isPermanent;
 					wep = other.wep;
 					wepmod1 = other.wepmod1;
 					wepmod2 = other.wepmod2;
@@ -35,6 +36,7 @@ if my_health > 0
 			}
 			with instance_create(x,y,WeaponDeposit)
 			{
+				isPermanent = other.isPermanent;
 				wep = other.wep;
 				wepmod1 = other.wepmod1
 				wepmod2 = other.wepmod2;

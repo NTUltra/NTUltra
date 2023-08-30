@@ -1,17 +1,18 @@
 Player.nochest = 0
 SetSeedWeapon();
-repeat(25)//25 weps holy shit
+var al = array_length(weps)
+for (var i = 0; i < al; i++)
 {
-with instance_create(x+random(32)-16,y+random(32)-16,WepPickup)
-{
-scrWeapons()
-wep=scrDecideWep(6);
-name = wep_name[wep]
-ammo = 50
-curse = 0
-type = wep_type[wep]
-sprite_index = wep_sprt[wep]
-}
+	with instance_create(x+random(32)-16,y+random(32)-16,WepPickup)
+	{
+		scrWeapons()
+		wep = other.weps[i];
+		name = wep_name[wep]
+		ammo = 50
+		curse = 0
+		type = wep_type[wep]
+		sprite_index = wep_sprt[wep]
+	}
 }
 SetSeed();
 

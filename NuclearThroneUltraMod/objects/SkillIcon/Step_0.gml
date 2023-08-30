@@ -178,14 +178,15 @@ else if skill = 18//last wish
 	if Player.ammo[5] > Player.typ_amax[5]
 	Player.ammo[5] = Player.typ_amax[5]
 
-	if Player.curse = 1 or Player.bcurse = 1
+	if Player.curse = 1 or Player.bcurse = 1 or Player.ccurse = 1
 	{
-	repeat(10)
-	instance_create(Player.x+random(16)-8,Player.y+random(16)-8,Curse)
+		snd_play_2d(sndUncurse);
+		repeat(10)
+			instance_create(Player.x+random(16)-8,Player.y+random(16)-8,Curse)
 	}
 	Player.curse = 0
 	Player.bcurse = 0
-
+	Player.ccurse = 0;
 	if UberCont.lastwishused=false
 	{
 		UberCont.lastwishused = true;

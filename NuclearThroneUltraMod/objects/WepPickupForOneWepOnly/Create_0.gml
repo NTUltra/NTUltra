@@ -43,6 +43,7 @@ if instance_exists(Player)
 wepmod2=0;
 wepmod3=0;
 wepmod4=0;
+isPermanent = false;
 //name="IF YOU SEE THIS REPORT BUG TO @ERDEPPOL"
 
 /*  */

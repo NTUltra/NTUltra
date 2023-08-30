@@ -90,6 +90,15 @@ hogCurse[5] = 0;
 hogCurse[6] = 0;
 hogCurse[7] = 0;
 
+hogIsPermanent[0] = false;
+hogIsPermanent[1] = false;
+hogIsPermanent[2] = false;
+hogIsPermanent[3] = false;
+hogIsPermanent[4] = false;
+hogIsPermanent[5] = false;
+hogIsPermanent[6] = false;
+hogIsPermanent[7] = false;
+
 //3D audio
 audio_listener_orientation(0, 0, -1, 0, 1, 0);
 audio_falloff_set_model(audio_falloff_linear_distance);
@@ -247,13 +256,15 @@ scrSkills()
 scrWeapons();
 unlockAlternativeUltras = false;
 altUltra = false;
-altSkin = false;
 loops = 0;
 //RACE STUFF
 scrLoadRace();
 curse = 0
 bcurse = 0
 ccurse = 0
+isPermanent = false;
+isPermanentB = false;
+isPermanentC = false;
 //MODIFIERS!
 wepmod1 = 0;
 wepmod2 = 0;

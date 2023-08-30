@@ -101,6 +101,12 @@ function scrLoadRun(){
 				Player.curse = encryptedRun.curse;
 				Player.bcurse = encryptedRun.bcurse;
 				Player.ccurse = encryptedRun.ccurse;
+				if variable_struct_exists(encryptedRun, "isPermanent")
+					Player.isPermanent = encryptedRun.isPermanent;
+				if variable_struct_exists(encryptedRun, "isPermanent")
+					Player.isPermanentB = encryptedRun.isPermanentB;
+				if variable_struct_exists(encryptedRun, "isPermanent")
+					Player.isPermanentC = encryptedRun.isPermanentC;
 				Player.wepmod1 = encryptedRun.wepmod1;
 				Player.wepmod2 = encryptedRun.wepmod2;
 				Player.wepmod3 = encryptedRun.wepmod3;

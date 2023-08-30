@@ -630,7 +630,6 @@ function scrDrawHUD() {
 	wid = 32
 
 	wepcolour=c_white;
-
 	if dataRef.curse==1
 	wepcolour=make_colour_rgb(136,36,174);//curse
 	else if (scrCheckGold(dataRef.wep_name[dataRef.wep]))
@@ -666,8 +665,6 @@ function scrDrawHUD() {
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+22,__view_get( e__VW.YView, 0 )+16,wepcolour,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+17,wepcolour,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+15,wepcolour,1)
-	
-	
 	
 
 	var wwep = dataRef.wep;
@@ -705,6 +702,20 @@ function scrDrawHUD() {
 	else
 	{
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+16,loadedColour,1)	
+	}
+	
+	if dataRef.isPermanent
+	{
+		var xx = 4;
+		if dataRef.wepmod1 != 0
+			xx += 10;
+		if dataRef.wepmod2 != 0
+			xx += 10;
+		if dataRef.wepmod3 != 0
+			xx += 10;
+		if dataRef.wepmod4 != 0
+			xx += 10;
+		draw_sprite(sprInfiniteWeapon,0,__view_get( e__VW.XView, 0 )+xx,__view_get( e__VW.YView, 0 )+44);
 	}
 	
 	//Debug
@@ -1298,6 +1309,34 @@ function scrDrawHUD() {
 			draw_set_color(c_white)
 			draw_text(x,y-31,string_hash_to_newline(string(name)))
 			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+		}
+	}
+	with HintGiver {
+		var yy = y-18;
+		var xx = x-2;
+		if alarm[3] > 0
+		{
+			if hasASecret
+				draw_sprite(sprEPickup,UberCont.opt_gamepad,xx,yy-7)
+			
+			draw_set_color(c_black)
+			draw_text(xx,yy-30,string_hash_to_newline(string(hint)))
+			draw_text(xx+1,yy-30,string_hash_to_newline(string(hint)))
+			draw_text(xx+1,yy-31,string_hash_to_newline(string(hint)))
+			draw_set_color(c_white)
+			draw_text(xx,yy-31,string_hash_to_newline(string(hint)))
+		}
+		else if active && sprite_index == spr_idle && place_meeting(x,y,Player)
+		{
+			
+			draw_sprite(sprEPickup,UberCont.opt_gamepad,xx,yy-7)
+
+			draw_set_color(c_black)
+			draw_text(xx,yy-30,string_hash_to_newline(string(name)))
+			draw_text(xx+1,yy-30,string_hash_to_newline(string(name)))
+			draw_text(xx+1,yy-31,string_hash_to_newline(string(name)))
+			draw_set_color(c_white)
+			draw_text(xx,yy-31,string_hash_to_newline(string(name)))
 		}
 	}
 	with CrownVaultExit

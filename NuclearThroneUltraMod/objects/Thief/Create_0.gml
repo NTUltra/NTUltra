@@ -28,6 +28,7 @@ wepmod1=0;
 wepmod2=0;
 wepmod3=0;
 wepmod4=0;
+isPermanent = false;
 curse=0;
 
 

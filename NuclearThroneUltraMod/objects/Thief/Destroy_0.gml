@@ -22,6 +22,7 @@ if wep!=0
 	    wepmod2=other.wepmod2;
 	    wepmod3=other.wepmod3;
 		wepmod4=other.wepmod4;
+		isPermanent = other.isPermanent
 	    sprite_index = wep_sprt[wep]   
     }
 }

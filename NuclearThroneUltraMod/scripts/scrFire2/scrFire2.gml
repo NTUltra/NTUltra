@@ -4817,6 +4817,7 @@ function scrFire2() {
 		wepmod2=other.wepmod2;
 		wepmod3=other.wepmod3;
 		wepmod4=other.wepmod4;
+		isPermanent = other.isPermanent;
 		thrownByCuz = yc;
 		sprite_index = wep_sprt[wep]
 	}

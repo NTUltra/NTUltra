@@ -224,10 +224,11 @@ if !instance_exists(LevCont) and visible = 1
 	if UberCont.public==0 && !keyboard_check(vk_control) && !keyboard_check(vk_shift){
 	//hacks
 		if keyboard_check_pressed(ord("V")) {
+			isPermanent = true;
 			var dangle = random(1)*360;
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			//screen_save("explain"+string(scrn)+".png");
-			instance_create(x+64,y,BossBot);
+			instance_create(x+64,y,GoldenBossBot);
 			//scrn++;
 			/*
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)

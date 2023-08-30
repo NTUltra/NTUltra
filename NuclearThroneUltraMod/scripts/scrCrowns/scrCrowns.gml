@@ -213,6 +213,7 @@ function scrCrowns() {
 	crown_used[33] = 0
 	crown_tips[33] = "duplication"
 	
+	//take rush crown
 	crown_name[34] = "[CROWN OF TIME]"
 	crown_text[34] = "REPLACE YOUR ACTIVE WITH REWIND:#RESET TIME#TO THE START OF THE CURRENT AREA##CAN BE USED ONCE EACH AREA#TWICE IF YOU HAVE THRONEBUTT"
 	crown_used[34] = 0

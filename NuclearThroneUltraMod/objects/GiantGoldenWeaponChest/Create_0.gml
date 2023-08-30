@@ -4,4 +4,39 @@ event_inherited()
 //sprite_index = sprGiantGoldenChest
 mySize = 2;
 scrWeapons()
-
+var wepAmount = 25;
+weps = [];
+var i = 0;
+var newWep = 0;
+var highRange = 6;
+var lowRange = -2;
+if instance_exists(Player)
+{
+	if Player.race == 8//ROBOT
+	{
+		highRange += 1;
+		lowRange += 2;
+	}
+	if Player.ultra_got[29]
+	{
+		highRange += 1;
+		lowRange += 3;
+	}
+}
+repeat(wepAmount)
+{
+	SetSeedWeapon();
+	var tries = 0;//Prevent infinite loop eventhough I dont think its possible
+	do {
+		newWep = scrDecideWep(irandom_range(highRange,lowRange));
+		tries ++;
+	} until (!array_contains(weps,newWep) || tries > 3000)
+	weps[i] = newWep;
+	i++;
+}
+if instance_exists(Player)
+if instance_exists(Player) && !UberCont.start_wep_have_all[Player.race]
+{
+	weps[0] = scrDecideWepGold();
+}
+SetSeed();

@@ -1,6 +1,8 @@
 /// @description xxx
 visible = true;
 persistent = false;
+if isPermanent
+	persistent = true;
 if instance_exists(Player)
 {
 	x = Player.x;

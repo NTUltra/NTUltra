@@ -26,8 +26,8 @@ var wepAmount = 8;
 weps = [];
 var i = 0;
 var newWep = 0;
-var highRange = -1;
-var lowRange = -6;
+var highRange = 0;
+var lowRange = -5;
 if instance_exists(Player)
 {
 	if Player.race == 8//ROBOT
@@ -43,21 +43,21 @@ if instance_exists(Player)
 }
 repeat(wepAmount)
 {
+	SetSeedWeapon();
 	var tries = 0;//Prevent infinite loop eventhough I dont think its possible
 	do {
 		newWep = scrDecideWep(irandom_range(highRange,lowRange), 20, 0);
 		tries ++;
-	} until (!array_contains(weps,newWep) || tries > 5000)
+	} until (!array_contains(weps,newWep) || tries > 3000)
 	weps[i] = newWep;
 	i++;
 }
-debug(UberCont.start_wep_have_all);
-debug(Player.race);
 if instance_exists(Player)
 if instance_exists(Player) && !UberCont.start_wep_have_all[Player.race]
 {
 	weps[0] = scrDecideWepGold();
 }
+SetSeed();
 currentVisibleWep = 0;
 if instance_exists(Player) && Player.skill_got[23]
 	alarm[1] = 30;
