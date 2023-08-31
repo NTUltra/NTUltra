@@ -17,10 +17,10 @@ if target > 0 {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 and point_distance(x, y, target.x, target.y) < 320 {
         //CAN SEE
         direction = point_direction(x, y, target.x, target.y) + random(60) - 30
-        if (point_distance(x, y, target.x, target.y) < 128 && random(3) < 1) {
+        if (point_distance(x, y, target.x, target.y) < 164 && random(3) < 1) {
 			//IM CLOSE ENOUGH
             startJump();
-        } else if (point_distance(x, y, target.x, target.y) < 96 && random(4) < 3 && justjumped) {
+        } else if (point_distance(x, y, target.x, target.y) < 128 && random(4) < 3 && justjumped) {
 			//I FEEL LIKE CHAINING JUMPS
 			startJump();
         } else {

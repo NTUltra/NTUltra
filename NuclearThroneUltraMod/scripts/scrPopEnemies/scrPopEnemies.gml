@@ -292,17 +292,17 @@ function scrPopEnemies() {
 	        }
 	        else {
 	            if random(9) < 1
-	            instance_create(x + 16, y + 16, choose(Exploder, Ratking, Exploder, Ratking, Exploder, Ratking, MeleeFake, ToxicMushroomGuy, BuffGator))
+	            instance_create(x + 16, y + 16, choose(Exploder, Ratking, Exploder, Ratking, Exploder, Ratking, MeleeFake, ToxicMushroomGuy, BuffGator, GatorSmoke))
 	            else
 	                instance_create(x + 16, y + 16, choose(Gator, Rat, Rat, Rat, Rat, Rat, Rat, Bandit))
 	        }
 		} else {
 	        if styleb = 1 {
-	            instance_create(x + 16, y + 16, choose(Rat, Rat, Rat, GatorSmoke, BuffGator, Exploder))
+	            instance_create(x + 16, y + 16, choose(Rat, Rat, Rat, Rat, GatorSmoke, BuffGator, Exploder))
 	        }
 	        else {
 	            if random(9) < 1
-	            instance_create(x + 16, y + 16, choose(Exploder, Ratking, Exploder, Ratking, Exploder, Ratking, MeleeFake, BuffGator))
+	            instance_create(x + 16, y + 16, choose(Exploder, Ratking, Exploder, Ratking, Exploder, Ratking, MeleeFake, GatorSmoke))
 	            else
 	                instance_create(x + 16, y + 16, choose(Rat, Rat, Rat, Rat, Rat, Rat, Rat, Bandit))
 	        }
@@ -1363,6 +1363,14 @@ function scrPopEnemies() {
 			{
 		        instance_create(x + 16, y + 16, choose(octaBot,squareBot,wallBot))
 			}
+		}
+    }
+	if spawnarea == 135/* && subarea != 3 */{
+	    var ran = random(100);
+	    if ran > 25 {
+	        instance_create(x + 16, y + 16, choose(Grunt, Inspector, BuffPopo, SegwayPopo, Shielder))
+	    } else {
+			instance_create(x + 16, y + 16, choose(IDPDSpawn, EliteGrunt, EliteInspector, EliteShielder, Grunt))
 		}
     }
 

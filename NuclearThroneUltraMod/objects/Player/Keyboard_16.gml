@@ -16,42 +16,42 @@ if UberCont.public = 0 {
 	    with instance_create(x, y, Portal) type = 1
 	}
 	if keyboard_check_pressed(ord("3")) {
-	    area = 103
+	    area = 130
 	    subarea = 0
 	    with enemy
 	    my_health = 0
 	    with instance_create(x, y, Portal) type = 1
 	}
 	if keyboard_check_pressed(ord("4")) {
-	    area = 7
+	    area = 131
 	    subarea = 0
 	    with enemy
 	    my_health = 0
 	    with instance_create(x, y, Portal) type = 1
 	}
 	if keyboard_check_pressed(ord("5")) {
-	    area = 8
+	    area = 132
 	    subarea = 0
 	    with enemy
 	    my_health = 0
 	    with instance_create(x, y, Portal) type = 1
 	}
 	if keyboard_check_pressed(ord("6")) {
-	    area = 100
+	    area = 133
 	    subarea = 0
 	    with enemy
 	    my_health = 0
 	    with instance_create(x, y, Portal) type = 1
 	}
 	if keyboard_check_pressed(ord("7")) {
-	    area = 119
+	    area = 134
 	    subarea = -1
 	    with enemy
 	    my_health = 0
 	    with instance_create(x, y, Portal) type = 1
 	}
 	if keyboard_check_pressed(ord("8")) {
-	    area = 126
+	    area = 135
 	    subarea = 0
 	    with enemy
 	    my_health = 0

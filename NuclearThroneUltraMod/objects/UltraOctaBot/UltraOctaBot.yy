@@ -4,6 +4,8 @@
   "name": "UltraOctaBot",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":2,"eventType":2,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -31,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprInvertedOctaBotIdle",
-    "path": "sprites/sprInvertedOctaBotIdle/sprInvertedOctaBotIdle.yy",
+    "name": "sprUltraOctaBotIdle",
+    "path": "sprites/sprUltraOctaBotIdle/sprUltraOctaBotIdle.yy",
   },
   "spriteMaskId": {
     "name": "mskOctaBot",

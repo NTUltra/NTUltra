@@ -14,6 +14,7 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dc435b2d-661c-4c54-91ce-80f41dd23171",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9db5fe1d-2aaf-44a2-87d5-fdaf6af6ac0c",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9ba49c5f-3cbc-49af-8b7b-af2bf7e1e7e2",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b852bbb9-f656-43d8-8bf9-dd587acfa161",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"70d1e9aa-381e-44a3-aa85-7a18dcab4b54",},
@@ -46,7 +47,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 4.0,
+    "length": 5.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -58,9 +59,10 @@
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"dc435b2d-661c-4c54-91ce-80f41dd23171","path":"sprites/sprCursedBossBotFire/sprCursedBossBotFire.yy",},},},"Disabled":false,"id":"0a69b8d4-f7fb-4a6f-8535-e155581b65b9","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9ba49c5f-3cbc-49af-8b7b-af2bf7e1e7e2","path":"sprites/sprCursedBossBotFire/sprCursedBossBotFire.yy",},},},"Disabled":false,"id":"42434a18-4dec-4842-ba9e-1ce662b0f227","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b852bbb9-f656-43d8-8bf9-dd587acfa161","path":"sprites/sprCursedBossBotFire/sprCursedBossBotFire.yy",},},},"Disabled":false,"id":"f560c267-a048-4923-8470-c9462c5b82db","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"70d1e9aa-381e-44a3-aa85-7a18dcab4b54","path":"sprites/sprCursedBossBotFire/sprCursedBossBotFire.yy",},},},"Disabled":false,"id":"bd41fee8-34cd-4313-aae1-50e06ddf0dac","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9db5fe1d-2aaf-44a2-87d5-fdaf6af6ac0c","path":"sprites/sprCursedBossBotFire/sprCursedBossBotFire.yy",},},},"Disabled":false,"id":"51871714-95c4-46ad-ada0-62b063b78282","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9ba49c5f-3cbc-49af-8b7b-af2bf7e1e7e2","path":"sprites/sprCursedBossBotFire/sprCursedBossBotFire.yy",},},},"Disabled":false,"id":"42434a18-4dec-4842-ba9e-1ce662b0f227","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b852bbb9-f656-43d8-8bf9-dd587acfa161","path":"sprites/sprCursedBossBotFire/sprCursedBossBotFire.yy",},},},"Disabled":false,"id":"f560c267-a048-4923-8470-c9462c5b82db","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"70d1e9aa-381e-44a3-aa85-7a18dcab4b54","path":"sprites/sprCursedBossBotFire/sprCursedBossBotFire.yy",},},},"Disabled":false,"id":"bd41fee8-34cd-4313-aae1-50e06ddf0dac","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

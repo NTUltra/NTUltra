@@ -21,7 +21,7 @@ with instance_create(x,y,EnemyEraserBurst)
 mox=other.target.xprevious;
 moy=other.target.yprevious;
 creator = other.id
-ammo = 16
+ammo = 12
 time = 1
 team = other.team
 event_perform(ev_alarm,0) 

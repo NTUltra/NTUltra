@@ -23,6 +23,7 @@ function scrPopProps() {
 	instance_create(x,y,NOWALLSHEREPLEASE)
 	}
 	if random(6) < 1 and !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(x,y,hitme) && !place_meeting(x,y,chestprop) && !place_meeting(x,y,RadChest) && !place_meeting(x,y,hitme) && Player.area != 130 && Player.area != 131
+	 && Player.area != 132 && Player.area != 133 && Player.area != 134
 	and Player.area != 100 and Player.area != 6 and Player.area != 9 and Player.area != 118 and Player.area != 112  and (Player.area !=5 or random(3) < 1) and Player.area != 102 and Player.area != 104
 	and !(Player.area = 8 && Player.subarea=3) and Player.area != 116//lill walls
 	{
@@ -186,11 +187,29 @@ function scrPopProps() {
 			else
 				instance_create(x+16,y+16,FactoryTerminal);
 		}
-		else if spawnarea == 131 && !place_meeting(x,y,Wall) { //Factory
+		else if spawnarea == 131 && !place_meeting(x,y,Wall) { //Inverted Factory
 			if random(3) < 2
 				instance_create(x,y,InvertedConveyor);
 			else
 				instance_create(x+16,y+16,InvertedFactoryTerminal);
+		}
+		else if spawnarea == 132 && !place_meeting(x,y,Wall) { //Cursed Factory
+			if random(3) < 2
+				instance_create(x,y,CursedConveyor);
+			else
+				instance_create(x+16,y+16,CursedFactoryTerminal);
+		}
+		else if spawnarea == 133 && !place_meeting(x,y,Wall) { //Golden Factory
+			if random(3) < 2
+				instance_create(x,y,GoldenConveyor);
+			else
+				instance_create(x+16,y+16,GoldenFactoryTerminal);
+		}
+		else if spawnarea == 134 && !place_meeting(x,y,Wall) { //Ultra Factory
+			if random(3) < 2
+				instance_create(x,y,UltraConveyor);
+			else
+				instance_create(x+16,y+16,UltraFactoryTerminal);
 		}
 		
 	    if spawnarea == 7 && !place_meeting(x,y,Wall){ //CUSTOM

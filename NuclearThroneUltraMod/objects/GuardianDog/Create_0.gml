@@ -4,7 +4,7 @@ meleedamage = 6;
 mySize = 4;
 
 event_inherited()
-actTime = 10;
+actTime = 9;
 maxSpeed = 2;
 maxJumpSpeed = 8.1;
 jumpAcc = 0.4;

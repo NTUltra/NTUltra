@@ -25,5 +25,5 @@ wepangle2 = wepangle1*-1;
 actTime -= 5;
 maxSpeed += 0.5;
 projectileSpeed = 3;
-maxReload = 4;
+maxReload = 8;
 wepspr = sprGoldenSword;

@@ -1,17 +1,15 @@
-/// @description Faster and lower health
+/// @description Ultra
 
 // Inherit the parent event
 event_inherited();
-raddrop += 5;
-maxhealth = 15;
+raddrop += 20;
+maxhealth = 40;
 maxSpeed += 0.5;
 acc += 0.2;
-actTime -= 10;
-projectileSpeed += 0.5;
-EnemyHealthAdjustments();
-spr_idle = sprInvertedSquareBotIdle;
-spr_walk = sprInvertedSquareBotWalk;
-spr_hurt = sprInvertedSquareBotHurt;
-spr_dead = sprInvertedSquareBotDead;
-spr_fire = sprInvertedSquareBotFire;
-type = 1;
+actTime -= 50;
+projectileSpeed += 2;
+spr_idle = sprUltraSquareBotIdle;
+spr_walk = sprUltraSquareBotWalk;
+spr_hurt = sprUltraSquareBotHurt;
+spr_dead = sprUltraSquareBotDead;
+spr_fire = sprUltraSquareBotFire;

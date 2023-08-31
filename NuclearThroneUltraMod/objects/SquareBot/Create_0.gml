@@ -10,4 +10,4 @@ spr_dead = sprSquareBotDead;
 spr_fire = sprSquareBotFire;
 
 originalAngle = 0;
-dir = choose(originalAngle,originalAngle + 90, originalAngle + 180, originalAngle + 270);
+moveDir = choose(originalAngle,originalAngle + 90, originalAngle + 180, originalAngle + 270);

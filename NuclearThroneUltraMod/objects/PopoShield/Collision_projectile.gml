@@ -6,7 +6,7 @@ if other.typ =1
 	with other
 	{
 		team = other.team
-		direction = point_direction(other.x,other.y,x,y)
+		direction += 180;//point_direction(other.x,other.y,x,y)
 		image_angle = direction
 		speed = max(speed* 0.6,1);
 		event_user(15);

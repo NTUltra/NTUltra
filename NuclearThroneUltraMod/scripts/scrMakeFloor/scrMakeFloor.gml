@@ -462,16 +462,19 @@ function scrMakeFloor(limiter) {
 		instance_create(x - 32,y - 32,Floor);
 	}
 	//savanna
-	if area = 10 || area == 121{ if random(5) < 2
-	{instance_create(x,y,Floor)
-	instance_create(x+32,y,Floor)
-	instance_create(x-32,y,Floor)
-
-	}else 
-	{
-	instance_create(x,y,Floor)
-	instance_create(x,y+32,Floor)
-	}}
+	if area = 10 || area == 121{ 
+		if random(5) < 2
+		{
+			instance_create(x,y,Floor)
+			instance_create(x+32,y,Floor)
+			instance_create(x-32,y,Floor)
+		}
+		else 
+		{
+			instance_create(x,y,Floor)
+			instance_create(x,y+32,Floor)
+		}
+	}
 	
 	//jungle
 	if area = 114 || area == 123{
@@ -579,7 +582,24 @@ function scrMakeFloor(limiter) {
 			instance_create(x,y,Floor);
 		}
 	}
-	
+	//HQ
+	if area = 135{ 
+		if random(5) < 1
+		{
+			instance_create(x+32,y,Floor)
+			instance_create(x-32,y,Floor)
+			instance_create(x,y+32,Floor)
+			instance_create(x,y-32,Floor)
+			instance_create(x+32,y+32,Floor)
+			instance_create(x+32,y-32,Floor)
+			instance_create(x-32,y-32,Floor)
+			instance_create(x-32,y+32,Floor)
+		}
+		else 
+		{
+			instance_create(x,y,Floor)
+		}
+	}
 	if scrIsGamemode(8)
 	{
 		instance_destroy();
@@ -706,6 +726,8 @@ function scrMakeFloor(limiter) {
 	{
 		trn = 0;	
 	}
+	else if area == 135
+	trn = choose(0,0,0,0,0,0,0,0,0,0,90,-90)
 	direction += trn
 	if ((area=7||area=108) && subarea=3) || area=104
 		direction=0;
@@ -780,8 +802,16 @@ function scrMakeFloor(limiter) {
 			instance_create(x+16,y+16,AmmoChest)
 			instance_create(x,y,Floor)}
 		}
-		if random(4) < 1
-		with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
+		if random(3.5) < 1
+		{
+			with instance_create(x,y,FloorMaker) { 
+				limiter = scrGenerateFloorMaker(limiter)
+				while direction == other.direction
+				{
+					direction = choose(0,90,180,270);
+				}
+			};
+		}
 	}
 	else if area == 128 || area == 129
 	{
@@ -860,7 +890,7 @@ function scrMakeFloor(limiter) {
 	if random(4) < 1
 	with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 	}
-	if area = 5 || area = 107
+	if area = 5 || area = 107 || area == 135
 	{
 	if random(14+instance_number(FloorMaker)) > 15
 	{

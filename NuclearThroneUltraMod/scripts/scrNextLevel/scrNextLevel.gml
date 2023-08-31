@@ -234,7 +234,7 @@ function scrNextLevel() {
 			exit;
 		}
 		//Graveyard
-		if ((area == 130 || area == 131 || area == 132 || area == 133) && subarea > 0 && !inverted)
+		if ((area == 130 || area == 131 || area == 132 || area == 133 || area == 134) && subarea > 0 && !inverted)
 		{
 			// To inv palace
 			area = 118;
@@ -583,7 +583,7 @@ function scrNextLevel() {
 	lastarea=127;
 	subarea = 1;
 	}
-	if ( area == 130 && inverted )//to inv factory
+	if ( inverted && (area == 130 || area == 132 || area == 133 || area == 134) )//to inv factory
 	{area=131;
 	lastarea=131;
 	subarea = 1;

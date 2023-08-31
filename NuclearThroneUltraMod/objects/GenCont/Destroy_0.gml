@@ -96,7 +96,7 @@ if instance_exists(Player)
 		    invertedportaldelay=45+inc;
 		    //area=107
 		    }
-			else if ( (area == 130&&subarea<3)  )//Factory
+			else if ( ((area == 130 || area == 132 || area == 133 || area == 134) && subarea<3)  )//Factory
 		    {
 		    invertedportalcounter=1;
 		    invertedportaldelay=45+inc;

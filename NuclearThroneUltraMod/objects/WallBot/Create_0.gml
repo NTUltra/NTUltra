@@ -9,7 +9,7 @@ event_inherited();
 alarm[1] = 90;
 actTime = 95;
 originalAngle = choose(0,90,180,270);
-dir = originalAngle + choose(90,-90);
+moveDir = originalAngle + choose(90,-90);
 acc = 1.2;
 maxSpeed = 3.5;
 projectileSpeed = 5;
@@ -41,5 +41,5 @@ switch originalAngle {
 	break;
 }
 speed = 0;
-alarm[0] = 20;
+alarm[0] = 30;
 type = 0;

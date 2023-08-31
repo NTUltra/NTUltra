@@ -3,9 +3,9 @@
   "resourceVersion": "1.0",
   "name": "UltraWallBot",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":2,"eventType":2,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprInvertedWallBotIdle",
-    "path": "sprites/sprInvertedWallBotIdle/sprInvertedWallBotIdle.yy",
+    "name": "sprUltraWallBotIdle",
+    "path": "sprites/sprUltraWallBotIdle/sprUltraWallBotIdle.yy",
   },
   "spriteMaskId": {
     "name": "mskWallBot",

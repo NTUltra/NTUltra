@@ -1,5 +1,6 @@
 if !instance_exists(GenCont)
 {
+snd_play(sndCursedChest);
 scrChestOpenMindReload(other);
 Player.nochest = 0
 repeat(1+Player.ultra_got[25]){//ROIDS ULTRA A DOUBLE WEPS

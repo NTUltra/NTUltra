@@ -35,6 +35,9 @@
     "name": "sprFactoryTerminal",
     "path": "sprites/sprFactoryTerminal/sprFactoryTerminal.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskFactoryTerminal",
+    "path": "sprites/mskFactoryTerminal/mskFactoryTerminal.yy",
+  },
   "visible": true,
 }

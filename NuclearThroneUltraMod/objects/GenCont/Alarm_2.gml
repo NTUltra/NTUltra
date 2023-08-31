@@ -579,9 +579,10 @@ if Player.area = 100
 		}
 	}
 }
-else if Player.area > 2 and Player.subarea = 2 && Player.area!=101&&Player.area!=6 && Player.area!=128
+else if Player.area > 2 and Player.subarea = 2 && Player.area!=101&&Player.area!=6
 && Player.area!=102 && Player.area!=103 && Player.area != 125 && Player.area!=104 && Player.area != 4 && Player.area != 111
 && Player.area!=112 && Player.area!=113 && Player.area!=114 && Player.area != 123 && Player.area != 124 && Player.area != 117
+&& Player.area < 128
 && Player.area!=115 && Player.area!=116 && !scrIsGamemode(25)
 && !(Player.area == 9 && Player.loops > 9) && !(Player.area == 118 && Player.loops > 9)
 {
@@ -623,7 +624,7 @@ with instance_nearest((f.x*3+Player.x)/4+random(128)-64+32,(f.y*3+Player.y)/4+ra
 instance_create(x+16,y+16,WeaponMod)
 
 }
-if (Player.area == 126 || Player.area == 127)
+if (Player.area == 126 || Player.area == 127 || Player.area == 134)
 {
 	var f = instance_furthest(Player.x,Player.y,Floor);
 	with instance_nearest(f.x+(Player.x*0.5)+random(128)-64,f.y+(Player.y*0.5)+random(128)-64,Floor)

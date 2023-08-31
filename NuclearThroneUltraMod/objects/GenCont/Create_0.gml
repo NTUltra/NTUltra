@@ -159,6 +159,18 @@ if instance_exists(Player)
 			case 131:
 				__background_set_colour( make_color_rgb(9,10,9) )
 			break;
+			case 132:
+				__background_set_colour( make_color_rgb(20,5,25) )
+			break;
+			case 133:
+				__background_set_colour( make_color_rgb(60,22,24) )
+			break;
+			case 134:
+				__background_set_colour( make_color_rgb(17,51,5) )
+			break;
+			case 135:
+				__background_set_colour( make_color_rgb(26,20,18) )
+			break;
 		}
 	}
 	else
@@ -264,6 +276,14 @@ if instance_exists(Player)
 			__background_set_colour( make_color_rgb(26,70,59) )
 		else if Player.area == 131//Inverted Factory
 			__background_set_colour( make_color_rgb(73, 26, 39) )
+		else if Player.area == 132//Cursed Factory
+			__background_set_colour( make_color_rgb(49, 12, 63) )
+		else if Player.area == 133//Golden Factory
+			__background_set_colour( make_color_rgb(198, 138, 42) )
+		else if Player.area == 134//Ultra Factory
+			__background_set_colour( make_color_rgb(84, 66, 44) )
+		else if Player.area == 135//HQ
+			__background_set_colour( make_color_rgb(245, 250, 251) )
 	}
 }
 else
@@ -342,6 +362,8 @@ if Player.area == 128 || Player.area == 129
 goal = 150+s;
 if Player.area == 130 || Player.area == 131 || Player.area == 132 || Player.area == 133 || Player.area == 134//Factory
 goal = 130+s;
+if Player.area == 135
+goal = 120+s;
 
 if scrIsGamemode(6) && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels
 goal=70+s;

@@ -511,7 +511,7 @@ function scrPopulate() {
 		if Player.area == 128 and Player.subarea == 2 {
 	        instance_create(x, y, WantBoss)//Crown Glutton
 	    }
-		if (Player.area == 130 || Player.area == 131) {//Graveyard fish
+		if (Player.area == 130 || Player.area == 131 || Player.area == 132 || Player.area == 133 || Player.area == 134) {//Boss Bot
 			instance_create(x,y,WantBoss);
 		}
 		//spawn SEWER FISH boss

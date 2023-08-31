@@ -2,11 +2,11 @@
 
 event_inherited()
 
-if walk > 0 && alarm[2] < 1
+if walk > 0 && alarm[2] < 1 && alarm[3] < 1
 {
 	if place_meeting(x + hspeed, y + vspeed,WallHitMe)
 	{
-		dir += 180;
+		moveDir += 180;
 		direction += 180;
 		walk -= 1
 		event_user(0);
@@ -19,11 +19,11 @@ if walk > 0 && alarm[2] < 1
 		var accc = acc;
 		if UberCont.normalGameSpeed == 60
 			accc *= 0.5;
-		motion_add(dir,accc)
+		motion_add(moveDir,accc)
 	}
 	else
 	{
-		dir += 180;
+		moveDir += 180;
 		direction += 180;
 		walk -= 1
 		event_user(0);

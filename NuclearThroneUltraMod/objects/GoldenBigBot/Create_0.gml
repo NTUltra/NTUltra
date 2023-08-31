@@ -4,7 +4,7 @@
 event_inherited();
 raddrop += 2;
 fireDelay = 40;
-maxhealth += 20;
+maxhealth = 90;
 maxSpeed -= 0.25;
 acc += 0.2;
 actTime -= 2;

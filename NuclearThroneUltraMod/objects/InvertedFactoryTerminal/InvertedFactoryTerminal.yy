@@ -32,9 +32,12 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprFactoryTerminal",
-    "path": "sprites/sprFactoryTerminal/sprFactoryTerminal.yy",
+    "name": "sprInvertedFactoryTerminal",
+    "path": "sprites/sprInvertedFactoryTerminal/sprInvertedFactoryTerminal.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskFactoryTerminal",
+    "path": "sprites/mskFactoryTerminal/mskFactoryTerminal.yy",
+  },
   "visible": true,
 }

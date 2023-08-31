@@ -1,6 +1,8 @@
 /// @description Open chest
 if !instance_exists(GenCont)
 {
+	if curse 
+		snd_play(sndCursedChest);
 	with Player {
 		nochest = 0;
 		scrChestOpenMindReload(Player);
