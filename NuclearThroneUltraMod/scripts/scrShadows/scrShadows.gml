@@ -100,6 +100,8 @@ function scrShadows() {
 	draw_sprite(shd48,0,x-vx,y-vy)
 	with BigBot
 	draw_sprite(shd48,0,x-vx,y-vy + 6)
+	with BossBot
+	draw_sprite(shd48,0,x-vx,y-vy + 10)
 	with Salamander
 	draw_sprite(shd48,0,x-vx,y-vy-6)
 	with InvertedSalamander

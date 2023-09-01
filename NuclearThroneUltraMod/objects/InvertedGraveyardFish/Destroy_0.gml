@@ -6,5 +6,5 @@ event_inherited();
 with EnemyHomingTriangle {
 	instance_destroy();
 	with instance_create_depth(x,y,depth,EBulletHit)
-		sprite_index = ESquareBulletHit;
+		sprite_index = sprEnemyBulletHitSquare;
 }

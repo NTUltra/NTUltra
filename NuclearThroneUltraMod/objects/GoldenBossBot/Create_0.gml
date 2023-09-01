@@ -22,8 +22,10 @@ type = 3;
 wepflip = 1;
 wepangle1 = choose(-140,140)
 wepangle2 = wepangle1*-1;
-actTime -= 5;
-maxSpeed += 0.5;
+actTime -= 7;
+maxSpeed += 0.6;
+acc += 0.2;
 projectileSpeed = 3;
 maxReload = 8;
 wepspr = sprGoldenSword;
+event_user(1);

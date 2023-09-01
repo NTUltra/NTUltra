@@ -3,7 +3,7 @@ if instance_exists(target) && target > -1
 {
 	gunangle = point_direction(x,y,target.x,target.y);
 	snd_play(sndShotgun)
-	var ang = gunangle + 40;
+	var ang = gunangle + 25;
 	with instance_create(x,y,EnemyEraserBurst)
 	{
 		mox = x + lengthdir_x(64,ang);
@@ -16,5 +16,6 @@ if instance_exists(target) && target > -1
 	}
 	BackCont.shake += 1
 	bwkick = 8;
+	walk += 6;
 }
 fireSecondary = false;

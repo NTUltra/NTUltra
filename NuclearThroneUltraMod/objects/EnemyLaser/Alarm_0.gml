@@ -9,3 +9,4 @@ image_xscale = point_distance(x,y,xstart,ystart)*0.5
 instance_create(x,y,Smoke)
 //optimise  sleep(30);//the preventing of getting stuck in walls!?
 
+scrForcePosition60fps();

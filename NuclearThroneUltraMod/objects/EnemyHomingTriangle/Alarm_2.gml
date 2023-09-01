@@ -1,4 +1,3 @@
 ///@description Euphoria
 ApplyEuphoria();
-homingSpeed = speed;
-debug("Homing speed: ", homingSpeed);
+homingSpeed = min(speed,homingSpeed);

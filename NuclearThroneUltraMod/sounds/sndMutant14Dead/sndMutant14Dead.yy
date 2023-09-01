@@ -3,14 +3,14 @@
   "resourceVersion": "1.0",
   "name": "sndMutant14Dead",
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "agsfx",
+    "path": "audiogroups/agsfx",
   },
   "bitDepth": 1,
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 1.048413,
+  "duration": 1.01068,
   "parent": {
     "name": "Panda",
     "path": "folders/Sounds/Player/Panda.yy",

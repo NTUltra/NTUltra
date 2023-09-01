@@ -807,15 +807,15 @@ function scrLoadRace() {
 	snd_valt=sndSheep;
 	break;
 	case 14://panda
-	snd_hurt=sndRatHit
-	snd_dead=sndPanda
-	snd_lowa=sndPandaHit;
-	snd_lowh=sndPandaHit;
-	snd_crwn=sndPanda;
-	snd_chst=sndPanda;
-	snd_wrld=sndPanda;
-	snd_thrn=sndPanda;
-	snd_valt=sndPanda;
+	snd_hurt=sndMutant14Hurt
+	snd_dead=sndMutant14Dead
+	snd_lowa=sndMutant14LowH;//Todo
+	snd_lowh=sndMutant14LowH;
+	snd_crwn=sndMutant14Chst;//Todo
+	snd_chst=sndMutant14Chst;
+	snd_wrld=sndMutant14Wrld;
+	snd_thrn=sndMutant14Thrn;
+	snd_valt=sndMutant14Valt;
 	break;
 	case 15://Atom
 	snd_hurt=sndPlasma;

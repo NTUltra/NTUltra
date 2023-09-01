@@ -6,6 +6,7 @@ event_inherited();
 maxhealth = 500
 raddrop += 10;
 scrBossHealthBuff();
+EnemyHealthAdjustments();
 spr_idle = sprInvertedBossBotIdle;
 spr_walk = sprInvertedBossBotWalk;
 spr_hurt = sprInvertedBossBotHurt;
@@ -24,5 +25,6 @@ fireDelay -= 5;
 wepspr = sprInvEnemyEraser;
 bowlingDuration += 30;
 alarm[6] += 30;
-bowlingMaxSpeed += 4;
+bowlingMaxSpeed += 3;
 bowlingAcc += 2;
+event_user(1);

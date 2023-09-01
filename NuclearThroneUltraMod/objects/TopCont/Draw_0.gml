@@ -207,7 +207,8 @@ with ElementorHeadMenu
 }
 with EnemyBullet1Square
 {
-	draw_self();
+	if draw
+		draw_self();
 }
 with InvertedGuardianBulletSpawn
 {

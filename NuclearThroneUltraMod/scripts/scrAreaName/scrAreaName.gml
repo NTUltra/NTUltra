@@ -42,6 +42,32 @@ function scrAreaName(area,subarea,loops){
 			case 100://Crown vault
 				txt = "C";
 			break;
+			case 128://Crown Courtyard
+				txt = "CB";
+			break;
+			case 129://Crown Courtyard
+				txt = "CB";
+				upsideDown = true;
+			break;
+			case 130://Factory
+				txt = "9B_" + string(subarea);
+			break;
+			case 131://INV Factory
+				txt = "9B_" + string(subarea);
+				upsideDown = true;
+			break;
+			case 132://Cursed Factory
+				txt = "9C_" + string(subarea);
+			break;
+			case 133://Golden Factory
+				txt = "9D_" + string(subarea);
+			break;
+			case 134://Ultra Factory
+				txt = "9E_" + string(subarea);
+			break;
+			case 135://Headquarters Factory
+				txt = "HQ_" + string(subarea);
+			break;
 			case 116://Survival Arena
 				txt = string(subarea);
 			break;

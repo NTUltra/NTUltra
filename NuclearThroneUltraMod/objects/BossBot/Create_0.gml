@@ -5,7 +5,7 @@ meleedamage = 0
 mySize = 2
 
 event_inherited()
-
+existTime = 10;
 spr_idle = sprBossBotIdle;
 spr_walk = sprBossBotWalk;
 spr_hurt = sprBossBotHurt;
@@ -24,14 +24,13 @@ snd_melee = sndBowlingBallDissapear;
 //behavior
 walk = 0
 firstEntry = true;
-fireDelay = 25;
+fireDelay = 27;
 wkick = 0
 bwkick = 0;
-actTime = 5;
 projectileSpeed = 1.5;
 acc = 0.8;
 maxSpeed = 2.5;
-actTime = 60;
+actTime = 55;
 alarm[0] = 30;
 wallDir = 0;
 wallLength = 42;

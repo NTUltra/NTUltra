@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "sprUltraBallBossChargeHurt",
+  "name": "sprUltraBossBotChargeHurt",
   "bbox_bottom": 63,
   "bbox_left": 0,
   "bbox_right": 63,
@@ -34,7 +34,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "sprUltraBallBossChargeHurt",
+    "name": "sprUltraBossBotChargeHurt",
     "autoRecord": true,
     "backdropHeight": 1080,
     "backdropImageOpacity": 0.5,
@@ -56,9 +56,9 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9d368460-a488-40c2-8954-a6b305a47b8c","path":"sprites/sprUltraBallBossChargeHurt/sprUltraBallBossChargeHurt.yy",},},},"Disabled":false,"id":"36a4e87a-4e19-4f9b-b657-5dacb37c8959","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"07ca7c57-9cd5-4756-9ff5-b089d9b3cec6","path":"sprites/sprUltraBallBossChargeHurt/sprUltraBallBossChargeHurt.yy",},},},"Disabled":false,"id":"4c40331f-ec8c-4906-87a0-f3752c3355e6","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"172fb89b-34e3-44e3-abdc-29315fb90e2d","path":"sprites/sprUltraBallBossChargeHurt/sprUltraBallBossChargeHurt.yy",},},},"Disabled":false,"id":"fbbb6002-c9d9-4de0-8f2a-21d9eef7231c","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9d368460-a488-40c2-8954-a6b305a47b8c","path":"sprites/sprUltraBossBotChargeHurt/sprUltraBossBotChargeHurt.yy",},},},"Disabled":false,"id":"36a4e87a-4e19-4f9b-b657-5dacb37c8959","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"07ca7c57-9cd5-4756-9ff5-b089d9b3cec6","path":"sprites/sprUltraBossBotChargeHurt/sprUltraBossBotChargeHurt.yy",},},},"Disabled":false,"id":"4c40331f-ec8c-4906-87a0-f3752c3355e6","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"172fb89b-34e3-44e3-abdc-29315fb90e2d","path":"sprites/sprUltraBossBotChargeHurt/sprUltraBossBotChargeHurt.yy",},},},"Disabled":false,"id":"fbbb6002-c9d9-4de0-8f2a-21d9eef7231c","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

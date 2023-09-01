@@ -319,5 +319,5 @@ if laserhit>0// && random(3)<1
 //if sprite_index != sprBouncingLaserBounce
 //	instance_create(x,y,Smoke)
 alarm[0] = 2
-
+scrForcePosition60fps();
 image_xscale = point_distance(x,y,xstart,ystart)*0.5

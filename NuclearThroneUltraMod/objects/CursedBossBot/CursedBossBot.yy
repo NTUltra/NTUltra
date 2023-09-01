@@ -2,7 +2,15 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "CursedBossBot",
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":2,"eventType":2,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":3,"eventType":2,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":12,"eventType":7,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":13,"eventType":7,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":2,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
@@ -29,8 +37,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprBossBotIdle",
-    "path": "sprites/sprBossBotIdle/sprBossBotIdle.yy",
+    "name": "sprCursedBossBotIdle",
+    "path": "sprites/sprCursedBossBotIdle/sprCursedBossBotIdle.yy",
   },
   "spriteMaskId": {
     "name": "mskBossBot",

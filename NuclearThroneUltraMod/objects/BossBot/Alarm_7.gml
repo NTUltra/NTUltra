@@ -8,7 +8,7 @@ repeat(am)
 {
 	with instance_create(x,y,EnemyBullet1)
 	{
-		motion_add(ang,4);
+		motion_add(ang,3);
 		image_angle = direction
 		team = other.team
 	}
