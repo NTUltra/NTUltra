@@ -43,10 +43,13 @@ else
 	}
 	x = originX;
 	y = originY;
-	if target.x < x
-		right = -1
-	else if target.x > x
-		right = 1
+	if target > -1 && instance_exists(target)
+	{
+		if target.x < x
+			right = -1
+		else if target.x > x
+			right = 1
+	}
 	scrForcePosition60fps();
 	mask_index = mskCrownGluttonBoss;
 }

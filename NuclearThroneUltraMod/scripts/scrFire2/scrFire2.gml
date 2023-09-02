@@ -9774,7 +9774,7 @@ function scrFire2() {
 	repeat(20)
 	{
 	with instance_create(x,y,BloodBullet)
-	{motion_add(aimDirection+(random(80)-40)*other.accuracy,5+random(6))
+	{motion_add(aimDirection+(random(80)-40)*other.accuracy,5.5+random(6))
 	image_angle = direction
 	team = other.team}
 	}
