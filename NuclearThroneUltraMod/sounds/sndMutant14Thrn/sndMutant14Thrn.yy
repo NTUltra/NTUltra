@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 1.068118,
+  "duration": 1.006281,
   "parent": {
     "name": "Panda",
     "path": "folders/Sounds/Player/Panda.yy",

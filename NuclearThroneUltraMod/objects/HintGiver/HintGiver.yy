@@ -35,8 +35,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprHintGiverNPCAppear",
-    "path": "sprites/sprHintGiverNPCAppear/sprHintGiverNPCAppear.yy",
+    "name": "sprHintGiverNPCDisappear",
+    "path": "sprites/sprHintGiverNPCDisappear/sprHintGiverNPCDisappear.yy",
   },
   "spriteMaskId": {
     "name": "mskBigWepPickup",

@@ -1,6 +1,8 @@
 spr_idle = sprHintGiverNPCIdle
 spr_activate = sprHintGiverNPCAppear
 spr_deactivate = sprHintGiverNPCDisappear
+sprite_index = spr_deactivate;
+image_index = image_number - 1;
 image_speed = 0;
 active = false;
 name = "LISTEN?";

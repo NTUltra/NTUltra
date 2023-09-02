@@ -1231,7 +1231,7 @@ function scrPopEnemies() {
 		    var r = random(10);
 			if r > 8
 			{
-				instance_create(x + 16, y + 16, choose(GraveyardSniper,GraveyardBreeder,GraveyardSniper,GraveyardBreeder,choose(BuffMushroom, Spider, Spider, BigMaggot)))
+				instance_create(x + 16, y + 16, choose(GraveyardSniper,GraveyardBreeder,GraveyardSniper,GraveyardBreeder,choose(BuffMushroom, CursedSpider, CursedCrystal, BigMaggot)))
 			}
 			if r > 4
 			{
@@ -1240,7 +1240,7 @@ function scrPopEnemies() {
 			}
 		    else
 			{
-		        instance_create(x + 16, y + 16, choose(theBandit,theBandit,GraveyardSkeleton,GraveyardSkeleton,GraveyardSkeleton,GraveyardSkeleton,GraveyardSniper, BuffMushroom, Spider, Spider, BigMaggot))
+		        instance_create(x + 16, y + 16, choose(theBandit,theBandit,GraveyardSkeleton,GraveyardSkeleton,GraveyardSkeleton,GraveyardSkeleton,GraveyardSniper, BuffMushroom, CursedSpider, CursedSpider, BigMaggot))
 			}
 		}
 		else
@@ -1269,7 +1269,7 @@ function scrPopEnemies() {
 		    var r = random(10);
 			if r > 8
 			{
-				instance_create(x + 16, y + 16, choose(InvertedGraveyardSniper,InvertedGraveyardBreeder,InvertedGraveyardSniper,InvertedGraveyardBreeder,choose(InvertedBuffMushroom, InvertedSpider, InvertedSpider, BigMaggotInverted)))
+				instance_create(x + 16, y + 16, choose(InvertedGraveyardSniper,InvertedGraveyardBreeder,InvertedGraveyardSniper,InvertedGraveyardBreeder,choose(InvertedBuffMushroom, InvertedSpider, LightningCrystal, BigMaggotInverted)))
 			}
 			if r > 4
 			{
@@ -1306,12 +1306,16 @@ function scrPopEnemies() {
 		var squareBot = SquareBot;
 		var wallBot = WallBot;
 		var bigBot = BigBot;
+		var sniper = Sniper;
+		var palaceGuardian = PalaceGuardian;
 		if spawnarea == 131 // invertedd
 		{
 			octaBot = InvertedOctaBot;
 			squareBot = InvertedSquareBot;
 			wallBot = InvertedWallBot;
 			bigBot = InvertedBigBot;
+			sniper = InvertedSniper;
+			palaceGuardian = InvertedPalaceGuardian;
 		}
 		else if spawnarea == 132 //Cursed
 		{
@@ -1319,12 +1323,16 @@ function scrPopEnemies() {
 			squareBot = CursedSquareBot;
 			wallBot = CursedWallBot;
 			bigBot = CursedBigBot;
+			sniper = CursedSpider;
+			palaceGuardian = CursedCrystal;
 		} else if spawnarea == 133 // Golden
 		{
 			octaBot = GoldenOctaBot;
 			squareBot = GoldenSquareBot;
 			wallBot = GoldenWallBot;
 			bigBot = GoldenBigBot;
+			sniper = GoldenSniper;
+			palaceGuardian = GoldScorpion;
 		} else if spawnarea == 134 //Ultra
 		{
 			octaBot = UltraOctaBot;
@@ -1341,9 +1349,9 @@ function scrPopEnemies() {
 			}
 			if r > 4
 			{
-				instance_create(x + 16, y + 16, choose(octaBot,squareBot,wallBot))
+				instance_create(x + 16, y + 16, choose(octaBot,squareBot,wallBot,Sniper,PalaceGuardian))
 			}
-		    else
+		    else if r > 1 || instance_number(enemy) < 1
 			{
 		        instance_create(x + 16, y + 16, choose(octaBot,squareBot,wallBot))
 			}
@@ -1359,7 +1367,7 @@ function scrPopEnemies() {
 			{
 				instance_create(x + 16, y + 16, choose(octaBot,squareBot,wallBot))
 			}
-		    else
+		    else if r > 1 || instance_number(enemy) < 1
 			{
 		        instance_create(x + 16, y + 16, choose(octaBot,squareBot,wallBot))
 			}

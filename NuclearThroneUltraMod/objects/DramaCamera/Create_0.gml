@@ -60,10 +60,14 @@ if instance_exists(Player) && !instance_exists(SurvivalWave)
 		song = musBushBoxBoss;
 	else if area == 119 || area == 120
 		song = musBoss4B;
-	else if area == 126 || area == 127
-		song = musCrownGluttonBoss;
+	else if area == 126
+		song = musGraveyardFish;
+	else if area == 127
+		song = musInvGraveyardFish;
 	else if area == 128 || area == 129
 		song = musCrownGluttonBoss;
+	else if area == 130 || area == 131 || area == 132 || area == 133 || area == 134
+		song = musBossBot;
     snd_loop(song)
     snd_loop(amb)
     //audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);

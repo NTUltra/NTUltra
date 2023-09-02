@@ -98,7 +98,13 @@ if target > 0 && instance_exists(target)
 				else if other.area == 130
 					instance_create(x,y,BossBot);
 				else if other.area == 131
-					instance_create(x,y,BossBot);
+					instance_create(x,y,InvertedBossBot);
+				else if other.area == 132
+					instance_create(x,y,CursedBossBot);
+				else if other.area == 133
+					instance_create(x,y,GoldenBossBot);
+				else if other.area == 134
+					instance_create(x,y,UltraBossBot);
 			}
 
 		}

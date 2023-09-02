@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 
-maxhealth = 500
+maxhealth = 450
 raddrop += 10;
 scrBossHealthBuff();
 EnemyHealthAdjustments();
@@ -26,5 +26,5 @@ wepspr = sprInvEnemyEraser;
 bowlingDuration += 30;
 alarm[6] += 30;
 bowlingMaxSpeed += 3;
-bowlingAcc += 2;
+bowlingAcc += 1;
 event_user(1);

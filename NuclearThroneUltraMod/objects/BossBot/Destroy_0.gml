@@ -40,7 +40,7 @@ with WeaponDeposit {
 	}
 	instance_destroy();
 }
-if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(BigFish) == 1
+if !instance_exists(SurvivalWave) && !instance_exists(WantBoss)
 with MusCont
 {
 //optimise sound_discard(song)

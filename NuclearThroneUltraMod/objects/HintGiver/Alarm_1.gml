@@ -2,7 +2,7 @@
 alarm[1] = 10;
 if instance_exists(Player) && alarm[2] < 1
 {
-	if point_distance(x,y,Player.x,Player.y) < 100
+	if point_distance(x,y,Player.x,Player.y) < 96
 	{
 		alarm[2] = 20;
 	}

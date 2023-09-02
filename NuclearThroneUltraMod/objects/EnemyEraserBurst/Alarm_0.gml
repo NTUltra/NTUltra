@@ -20,7 +20,7 @@ if instance_exists(creator)
 			team = other.team
 			scrCopyWeaponMod(other);
 		}
-		boost += 0.5;
+		boost += 0.6;
 	}
 }
 

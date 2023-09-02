@@ -22,7 +22,7 @@ actTime -= 14;
 bowlingDuration += 20;
 alarm[6] += 20;
 bowlingMaxSpeed += 2.5;
-bowlingAcc += 2;
+bowlingAcc += 1;
 fireDelay += 4;
 event_user(1);
 raddrop = 160;

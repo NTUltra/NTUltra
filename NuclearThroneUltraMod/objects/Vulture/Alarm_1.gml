@@ -1,6 +1,6 @@
 ///@description AI
 //HEAL FROM CORPSES!
-alarm[1] = actTime + random(10)
+alarm[1] = actTime + random(12)
 
 scrTarget()
 if target > 0 {

@@ -1,6 +1,6 @@
 /// @description Fire gun 1
 snd_play(sndEraser)
-	var ang = gunangle - 25;
+	var ang = gunangle - 15;
 	with instance_create(x,y,EnemyEraserBurst)
 	{
 		mox = x + lengthdir_x(64,ang);

@@ -11,3 +11,4 @@ event_inherited()
 
 snd_hurt = sndHitMetal
 
+shadowYoffset = -1;

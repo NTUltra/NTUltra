@@ -21,13 +21,13 @@ typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 
 
 
-alarm[0]=80;
+alarm[0]=75;
 pierce = false;
 canHeavyHeart = false;
 if instance_exists(Player)
 {
 	if Player.skill_got[5] =1//thronebutt
-	alarm[0]=51;//return to hand
+		alarm[0]=52;//return to hand
 	
 	if Player.ultra_got[53] == 1
 		pierce = true;

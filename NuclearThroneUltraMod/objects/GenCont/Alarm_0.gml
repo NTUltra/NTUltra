@@ -59,13 +59,16 @@ scrPopulate()
 alarm[1] = 2
 if Player.area == 100
 {
-	with instance_furthest(Player.x,Player.y,Torch)
+	with instance_furthest(irandom_range(Player.x + 400,Player.x - 400),
+	irandom_range(Player.y + 400,Player.y - 400),Torch)
 	{
-		maxhealth = 100;
-		my_health = 100;
-		with instance_create_depth(x,y,depth - 1,HintGiver) {
-			owner = other.id;
+		if point_distance(x,y,Player.x,Player.y) > 128
+		{
+			maxhealth = 100;
+			my_health = 100;
+			with instance_create_depth(x,y,depth - 1,HintGiver) {
+				owner = other.id;
+			}
 		}
-		exit;
 	}
 }

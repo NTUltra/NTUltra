@@ -46,7 +46,7 @@ if scrIsGamemode(8) && area != 0
     exit;
 }
 
-if oldarea != area || area == 0 or !audio_is_playing(song) or audio_is_playing(musBoss1) or !audio_exists(song) || song == musBossWin {
+if oldarea != area || area == 0 or !audio_is_playing(song) or audio_is_playing(musBoss1) or !audio_exists(song) || song == musBossWin || song == musBoss10 || song == musBoss1{
 
     dir = 1
     deaths = 0
@@ -280,6 +280,42 @@ if oldarea != area || area == 0 or !audio_is_playing(song) or audio_is_playing(m
         song = mus129
 
         amb = amb100;
+    }
+	else if area == 130 {
+
+        song = mus130
+
+        amb = amb130;
+    }
+	else if area == 131 {
+
+        song = mus131
+
+        amb = amb131;
+    }
+	else if area == 132 {
+
+        song = mus131
+
+        amb = amb132;
+    }
+	else if area == 133 {
+
+        song = mus133
+
+        amb = amb133;
+    }
+	else if area == 134 {
+
+        song = mus134
+
+        amb = amb134;
+    }
+	else if area == 135 {
+
+        song = mus106
+
+        amb = amb106;
     }
 
 	if song != prevSong || amb != prevAmb

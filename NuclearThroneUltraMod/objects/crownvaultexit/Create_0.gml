@@ -17,3 +17,6 @@ instance_create(x+32,y-32,Floor);
 x += 16;
 y += 16;
 name = "EXIT";
+instance_create(x,y,TorchKiller);
+event_perform(ev_alarm,2);
+alarm[2] = 10;

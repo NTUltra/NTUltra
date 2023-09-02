@@ -39,3 +39,4 @@ wave=random(100);
 myWeaponPickup = noone;
 replaceModNr = 0;
 active = false;
+alarm[2] = 30;
