@@ -1,13 +1,13 @@
 raddrop = 120
-maxhealth = 300
+maxhealth = 290
+loops = GetPlayerLoops()
 if GetPlayerLoops() > 0
 	maxhealth = 400;
+maxhealth += clamp(20*loops,0,200);
 scrBossHealthBuff();
 meleedamage = 0
 mySize = 3
 
-if UberCont.loops>1
-maxhealth=290;
 
 event_inherited()
 

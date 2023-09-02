@@ -1,6 +1,7 @@
 raddrop = 85
 maxhealth = 320//300
-if GetPlayerLoops() > 0
+loops = GetPlayerLoops()
+if loops > 0
 	maxhealth = 430;
 maxhealth += clamp(20*loops,0,200);
 scrBossHealthBuff();
