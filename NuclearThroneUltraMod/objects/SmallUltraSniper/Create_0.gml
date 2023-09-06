@@ -1,6 +1,6 @@
 event_inherited()
 maxhealth = 12;
-raddrop = 13;
+raddrop = 20;
 EnemyHealthAdjustments();
 
 spr_idle = sprSmallUltraSniperIdle

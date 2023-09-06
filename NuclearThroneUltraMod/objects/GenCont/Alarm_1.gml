@@ -43,6 +43,24 @@ if instance_exists(Player)
 		instance_destroy(id,false);
 	    }
 	}
+	else if Player.area == 136
+	{
+		 with WeaponChest
+	    {
+			instance_create(x,y,UltraWeaponChest)
+			instance_destroy(id,false);
+	    }
+	    with BigWeaponChest
+	    {
+			instance_create(x,y,UltraWeaponChest)
+			instance_destroy(id,false);
+	    }
+	    with EliteWeaponChest
+	    {
+			instance_create(x,y,UltraWeaponChest)
+			instance_destroy(id,false);
+	    }
+	}
 	if Player.area == 115 || Player.area == 132
 	{
 		with WeaponChest

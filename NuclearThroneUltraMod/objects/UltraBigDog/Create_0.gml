@@ -1,7 +1,7 @@
 ///@description Init
 event_inherited()
-raddrop = 110;
-maxhealth = 1000;
+raddrop = 200;
+maxhealth = 1200;
 scrBossHealthBuff();
 EnemyHealthAdjustments();
 spr_idle = sprUltraBigDogIdle;

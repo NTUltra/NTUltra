@@ -1,7 +1,7 @@
 ///@description Fire
 event_inherited();
 maxhealth = 40;
-raddrop = 20;
+raddrop = 30;
 EnemyHealthAdjustments();
 spr_idle = sprUltraSalamanderIdle
 spr_walk = sprUltraSalamanderWalk

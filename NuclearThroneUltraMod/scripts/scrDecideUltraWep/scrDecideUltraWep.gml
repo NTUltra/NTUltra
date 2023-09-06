@@ -1,0 +1,28 @@
+function scrDecideUltraWep() {
+	if instance_exists(Player)
+	{
+		if scrIsGamemode(31)
+		{
+			//Melee only
+			return choose(118,369,431,478,487,507,510,301);
+		}
+		var maxTries = 1000;
+		if Player.race = 8
+			maxTries = 2000;
+		do 
+		{
+			wep = choose(114,115,116,117,118,120,121,193,199,244,248,289,297,299,
+			301,302,303,304,341,369,371,431,434,435,468,472,473,478,487,494,
+			503,504,506,507,510,513,524,530,582,618,631,642,650)
+			maxTries --;
+		}
+		until (((wep != Player.wep and wep != Player.bwep) or Player.race = 7)
+		|| maxTries <= 0)
+	}
+	else
+	wep = choose(114,115,116,117,118,120,121,193,199,244,248,289,297,299,
+			301,302,303,304,341,369,371,431,434,435,468,472,473,478,487,494,
+			503,504,506,507,510,513,524,530,582,618,631,642,650)
+	
+	return wep;
+}

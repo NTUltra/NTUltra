@@ -8,10 +8,6 @@ if my_health > 0
 		sprite_index = sprFactoryEntranceActive;
 		KeyCont.key_pick[Player.p] = 2;
 		mask_index = mskPickupThroughWall;
-		with instance_create(x,y,WantBoss)
-		{
-			event_perform(ev_alarm,0) 
-		}
 		with Player {
 			area = 130;
 			subarea = 0;

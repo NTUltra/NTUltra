@@ -625,7 +625,12 @@ if Player.area == 9 && Player.subarea == 1
 	with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/3+random(128)-64,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/3+random(128)-64,Floor)
 		instance_create(x+16,y+16,FactoryEntrance)
 }
-
+if Player.area == 3 && Player.subarea == 2
+{
+	if instance_exists(ProtoStatue)
+		with instance_furthest((f.x*3+ProtoStatue.x)/4+random(128)-64+32,(f.y*3+ProtoStatue.y)/4+random(128)-64+32,Floor)
+			instance_create(x+16,y+16,UltraScrapyardEntrance)
+}
 
 if (scrIsInInvertedArea() || Player.area == 128) && Player.area != 120 && !(Player.area == 118 && Player.subarea == 3)
 {

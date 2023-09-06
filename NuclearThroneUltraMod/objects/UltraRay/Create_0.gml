@@ -5,5 +5,5 @@ event_inherited();
 range = 160;
 range += (60*Player.skill_got[19]);
 bloomColour = make_color_rgb(55,255,50);
-morphType = 2;
+morphType = 3;
 //bloomColour = make_color_rgb(30,153,25);

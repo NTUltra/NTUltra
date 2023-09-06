@@ -13,7 +13,7 @@ with myExplosionMask
 if instance_exists(Player){
 	if Player.ultra_got[57]
 	{
-		dmg += 2;
+		dmg += 1;
 	}
 	if Player.ultra_got[57]//atom bomb
 	{

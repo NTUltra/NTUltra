@@ -12,7 +12,7 @@ if(instance_exists(creator)){
 		var n = instance_nearest(mx,my,enemy);
 		if (n.team != team && point_distance(x,y,n.x,n.y) < range)
 		{
-			if point_distance(mx,my,n.x,n.y) < detectRange && collision_line(x,y,n.x,n.y,Wall,0,0) < 0
+			if point_distance(mx,my,n.x,n.y) < detectRange && (morphType == 3 || collision_line(x,y,n.x,n.y,Wall,0,0) < 0)
 			{
 				direction = point_direction(x,y,n.x,n.y);
 				xx = n.x;
@@ -21,14 +21,17 @@ if(instance_exists(creator)){
 		}
 	}
 	image_angle = direction;
-	hit = collision_line_point(x,y,xx,yy,Wall,false,false);
-	if hit == noone && instance_exists(Player) && !Player.ultra_got[93]
+	if (morphType != 3)
 	{
-		var potentialHit
-		potentialHit = collision_line_point(x,y,xx,yy,VikingWall,false,false);
-		if potentialHit != noone
+		hit = collision_line_point(x,y,xx,yy,Wall,false,false);
+		if hit == noone && instance_exists(Player) && !Player.ultra_got[93]
 		{
-			hit = potentialHit
+			var potentialHit
+			potentialHit = collision_line_point(x,y,xx,yy,VikingWall,false,false);
+			if potentialHit != noone
+			{
+				hit = potentialHit
+			}
 		}
 	}
 }

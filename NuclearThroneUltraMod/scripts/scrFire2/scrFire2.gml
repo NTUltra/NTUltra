@@ -12906,9 +12906,9 @@ function scrFire2() {
 		motion_add(aimDirection+(random(4)-2)*other.accuracy,22)
 		image_angle = direction
 		team = other.team
+		if Player.skill_got[17]
+			speed *= 0.75;
 	}
-	if Player.skill_got[17]
-		speed *= 0.75;
 	BackCont.viewx2 += lengthdir_x(35,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(35,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 12
@@ -12932,13 +12932,126 @@ function scrFire2() {
 		motion_add(aimDirection+(random(4)-2)*other.accuracy,26)
 		image_angle = direction
 		team = other.team
+		
 	}
-	if Player.skill_got[17]
-		speed *= 0.75;
+	
 	BackCont.viewx2 += lengthdir_x(45,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(45,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 14
 	wkick = 7
+	break;
+	
+	//AORTA
+	case 658:
+
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+	if !instance_exists(AortaSound)
+		with instance_create(x,y,AortaSound)
+			creator = other.id;
+	var len = 6 * accuracy;
+	var w = lengthdir_x(len,aimDirection + 90);
+	var h = lengthdir_y(len,aimDirection + 90);
+	with instance_create(x + w*2,y + h*2,BloodBurst)
+	{
+		accuracy *= other.accuracy;
+		creator = other.id;
+		xOffset = w*2;
+		yOffset = h*2;
+		ammo = 3;
+		team = other.team
+		event_perform(ev_alarm,0);
+	}
+	with instance_create(x + w*-2,y + h*-2,BloodBurst)
+	{
+		accuracy *= other.accuracy;
+		creator = other.id;
+		xOffset = w*-2;
+		yOffset = h*-2;
+		ammo = 3;
+		team = other.team
+		event_perform(ev_alarm,0);
+	}
+	with instance_create(x + w,y + h,BloodBurst)
+	{
+		accuracy *= other.accuracy;
+		creator = other.id;
+		xOffset = w;
+		yOffset = h;
+		bloodType = HeavyBloodBullet;
+		ammo = 2;
+		team = other.team
+		event_perform(ev_alarm,0);
+	}
+	with instance_create(x - w,y - h,BloodBurst)
+	{
+		accuracy *= other.accuracy;
+		creator = other.id;
+		xOffset = -w;
+		yOffset = -h;
+		bloodType = HeavyBloodBullet;
+		ammo = 2;
+		team = other.team
+		event_perform(ev_alarm,0);
+	}
+
+	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 4
+
+	break;
+	
+	//THE ZYNDROXOOGEN
+	case 659:
+	snd_play_fire(sndDevastator);
+	snd_play_fire(sndDoubleShotgun)
+	snd_play_fire(sndCuber);
+	
+	
+	with instance_create(x,y,PlasmaMashup)
+	{
+		motion_add(aimDirection+(random(4)-2)*other.accuracy,3)
+		image_angle = direction
+		angle = direction;
+		team = other.team
+	}
+	var totalAng = 40 * accuracy;
+	var am = 5;
+	var angStep = totalAng/am;
+	var ang = (aimDirection - (totalAng*0.5)) - 5;
+	repeat(am)
+	{
+		with instance_create(x,y,Bullet2Explosive)
+		{
+			motion_add(ang,16);
+			image_angle = direction
+			team = other.team
+		}
+		ang += angStep;
+	}
+	ang = (aimDirection - (totalAng*0.5)) + 5;
+	repeat(am)
+	{
+		with instance_create(x,y,MorphBullet)
+		{
+			motion_add(ang,24);
+			image_angle = direction
+			team = other.team
+		}
+		ang += angStep;
+	}
+	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 6
+	wkick = 5
+	wep_swap[wep] = choose(sndSwapBow,sndSwapEnergy,sndSwapDragon,sndSwapMachinegun,sndSwapShotgun);
+	wkick = 6
+	if wep_type[wep] < 5
+		wep_type[wep] ++;
+	else 
+		wep_type[wep] = 1;
+		
 	break;
 	
 	}//end of switch part 2!

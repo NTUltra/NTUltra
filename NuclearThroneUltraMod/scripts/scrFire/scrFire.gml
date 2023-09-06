@@ -1,8 +1,13 @@
 function scrFire() {
-	if !instance_exists(Player)
+	if !instance_exists(Player) || instance_exists(SpiralCont)
 	exit;
 	if wep==0{
 		exit;}
+	with Bullet7
+	{
+		if !turned
+			exit;
+	}
 	IDKWID=false;
 	can_shoot = 0
 	reload = min(reload + wep_load[wep],wep_load[wep]);

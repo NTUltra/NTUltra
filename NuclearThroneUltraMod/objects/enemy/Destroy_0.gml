@@ -60,6 +60,11 @@ else
 		instance_create(x,y,ExplosiveSheep);
 	    //Unlock sheep
 	    scrUnlockCharacter(13,"FOR MORPHING AN ENEMY");
+	} else if morphMe == 3
+	{
+		instance_create(x,y,UltraSheep);
+	    //Unlock sheep
+	    scrUnlockCharacter(13,"FOR MORPHING AN ENEMY");	
 	} else if morphMe == 4
 	{
 		instance_create(x,y,GoldSheep);

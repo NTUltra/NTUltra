@@ -39,9 +39,19 @@ audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
 scrDrop(50,100)
 scrBossKill();
 Sleep(50)
-with instance_create(x,y,BigDogExplo)
+if object_index == UltraBigDog
 {
-	spr_dead = other.spr_dead;
+	with instance_create(x,y,BigDogExplo)
+	{
+		spr_dead = other.spr_dead;
+	}
+}
+else
+{
+	with instance_create(x,y,UltraBigDogExplode)
+	{
+		spr_dead = other.spr_dead;
+	}	
 }
 event_inherited()
 

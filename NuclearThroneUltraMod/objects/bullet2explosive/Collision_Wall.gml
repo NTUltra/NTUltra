@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description Boom
 
 var xx = x-(sign(hspeed)*8);
 var yy = y-(sign(vspeed)*8);

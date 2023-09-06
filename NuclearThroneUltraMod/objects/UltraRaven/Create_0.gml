@@ -1,5 +1,5 @@
 event_inherited();
-raddrop = 14;
+raddrop = 16;
 maxhealth = 25;
 EnemyHealthAdjustments();
 spr_idle = sprUltraRavenIdle;

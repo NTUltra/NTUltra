@@ -1549,7 +1549,10 @@ function scrDrawHUD() {
 	{
 		if place_meeting(x,y,Player)
 		{
-			explainTimer ++;
+			if UberCont.normalGameSpeed == 60
+				explainTimer += 0.5;
+			else
+				explainTimer ++;
 			var yy = y - 22;
 			draw_sprite(sprEPickup,UberCont.opt_gamepad,x,yy-2)
 		
@@ -1560,7 +1563,43 @@ function scrDrawHUD() {
 			draw_set_color(c_white)
 			draw_text(x,yy-1,string_hash_to_newline(string(name)))
 			
-			if explainTimer > 30
+			if explainTimer > 20
+			{
+				var mr = 620;
+				with dataRef
+					mr = GetPlayerMaxRad();
+				var helpText = "YOU HAVE " + string((Player.rad/mr)*100) + "% RADS";
+				yy = y + 14;
+				draw_set_color(c_black)
+				draw_text(x,yy,string_hash_to_newline(string(helpText)))
+				draw_text(x,yy,string_hash_to_newline(string(helpText)))
+				draw_text(x,yy-1,string_hash_to_newline(string(helpText)))
+				draw_set_color(c_white)
+				draw_text(x,yy-1,string_hash_to_newline(string(helpText)))
+			}
+		}
+		else
+			explainTimer = 0;
+	}
+	with UltraScrapyardEntrance
+	{
+		if place_meeting(x,y,Player)
+		{
+			if UberCont.normalGameSpeed == 60
+				explainTimer += 0.5;
+			else
+				explainTimer ++;
+			var yy = y - 22;
+			draw_sprite(sprEPickup,UberCont.opt_gamepad,x,yy-2)
+		
+			draw_set_color(c_black)
+			draw_text(x,yy,string_hash_to_newline(string(name)))
+			draw_text(x,yy,string_hash_to_newline(string(name)))
+			draw_text(x,yy-1,string_hash_to_newline(string(name)))
+			draw_set_color(c_white)
+			draw_text(x,yy-1,string_hash_to_newline(string(name)))
+			
+			if explainTimer > 20
 			{
 				var mr = 620;
 				with dataRef

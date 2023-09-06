@@ -5186,7 +5186,7 @@ function scrWeapons() {
 	wep_area[468] = 28
 	wep_text[468] = ""
 	wep_swap[468] = sndSwapEnergy
-	wep_rad[468] = 6;
+	wep_rad[468] = 7;
 	
 	wep_name[469] = "TOXIC-O-RAY"
 	wep_type[469] = 4
@@ -7238,22 +7238,22 @@ function scrWeapons() {
 	wep_type[655] = 1
 	wep_auto[655] = 0
 	wep_load[655] = 30
-	wep_cost[655] = 2
-	wep_sprt[655] = sprDirectorDragger
+	wep_cost[655] = 3
+	wep_sprt[655] = sprSharpStress
 	wep_area[655] = 17
 	wep_text[655] = "all will be given for all to be taken"
 	wep_swap[655] = sndSwapCursed
 	wep_rad[655] = 0;
 	
 	wep_name[656] = "THE SAFROODEN"
-	wep_type[656] = 3
+	wep_type[656] = 1
 	wep_auto[656] = 0
 	wep_load[656] = 35
-	wep_cost[656] = 3
-	wep_sprt[656] = sprDirectorDragger
+	wep_cost[656] = 4
+	wep_sprt[656] = sprSharpStress
 	wep_area[656] = 17
 	wep_text[656] = "arrow from hell"
-	wep_swap[656] = sndSwapBow
+	wep_swap[656] = sndSwapCursed
 	wep_rad[656] = 0;
 	
 	wep_name[657] = "BALLISTA"
@@ -7261,11 +7261,33 @@ function scrWeapons() {
 	wep_auto[657] = 0
 	wep_load[657] = 40
 	wep_cost[657] = 3
-	wep_sprt[657] = sprDirectorDragger
-	wep_area[657] = 15
+	wep_sprt[657] = sprSharpStress
+	wep_area[657] = 11
 	wep_text[657] = "ancient painbringer"
 	wep_swap[657] = sndSwapBow
 	wep_rad[657] = 0;
+	
+	wep_name[658] = "AORTA"
+	wep_type[658] = 5
+	wep_auto[658] = 1
+	wep_load[658] = 4
+	wep_cost[658] = 1
+	wep_sprt[658] = sprAorta
+	wep_area[658] = 13
+	wep_text[658] = "stream of red"
+	wep_swap[658] = sndSwapExplosive
+	wep_rad[658] = 0;
+	
+	wep_name[659] = "THE ZYNDROXOOGEN"
+	wep_type[659] = 1
+	wep_auto[659] = 1
+	wep_load[659] = 15
+	wep_cost[659] = 4
+	wep_sprt[659] = sprSharpStress
+	wep_area[659] = 17
+	wep_text[659] = "experiments"
+	wep_swap[659] = sndSwapCursed
+	wep_rad[659] = 0;
 
 	maxwep = array_length(wep_name)-1;
 

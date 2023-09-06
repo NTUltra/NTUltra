@@ -1,6 +1,6 @@
-/// @description xxx
+/// @description Init
 
 // Inherit the parent event
 event_inherited();
 
-morphType = 1;
+morphType = 2;
