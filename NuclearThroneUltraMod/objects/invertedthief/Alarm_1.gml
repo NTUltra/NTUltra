@@ -1,6 +1,6 @@
 //PRE LOOP
 alarm[1] = 20+random(10)
-
+canDodge = true;
 
 //LOOP
 if instance_exists(Player)

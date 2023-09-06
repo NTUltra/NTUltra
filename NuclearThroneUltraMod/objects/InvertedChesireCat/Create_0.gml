@@ -34,7 +34,6 @@ instance_create(x,y,InvertedChesireCatTail);
 
 ammo=8;
 
-dodge=0;
 friction = 0.8;
 
 myWazers = [];

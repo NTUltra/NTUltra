@@ -20,3 +20,4 @@ if instance_exists(Player)
 um = GetPlayerUltramod();
 xprev = x;
 yprev = y;
+hitEntities = [];

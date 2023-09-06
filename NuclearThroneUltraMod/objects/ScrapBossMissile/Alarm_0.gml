@@ -9,5 +9,5 @@ with instance_create(x,y,proj)
 
 
 
-alarm[0]=8+irandom(4);
+alarm[0]=14;
 

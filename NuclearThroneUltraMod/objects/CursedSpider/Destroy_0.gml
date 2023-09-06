@@ -9,6 +9,23 @@ if random(4) > 3 + generation/3 {
 		var dx = lengthdir_x(3, ang)
 		var dy = lengthdir_y(3, ang)
 		with instance_create(x + dx, y + dy, CursedSpider) {
+			existTime = 30;
+			alarm[1] = max(10,alarm[1] - 30);
+			if instance_exists(Player)
+			{
+				if Player.skill_got[29]	//Insomnia
+				{
+					alarm[1] += 60;
+					existTime = 0;
+					with instance_create(x,y,Snooze)
+					{
+						owner = other.id;
+						depth = other.depth - 1;
+						yoffset = 0;
+					}
+				}
+					
+			}
 			generation = 1 + other.generation;
 			raddrop = 0;
 		}

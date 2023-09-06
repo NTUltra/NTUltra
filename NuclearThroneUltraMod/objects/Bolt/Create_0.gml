@@ -11,3 +11,4 @@ if UberCont.ultramodSwap
 	event_user(0);
 xprev = x;
 yprev = y;
+hitEntities = [];

@@ -17,11 +17,12 @@ spr_hurt = sprMeleeHurt
 spr_dead = sprMeleeDead
 spr_walk = sprite_index
 
-event_inherited()
+event_inherited();
+EnemyHealthAdjustments();
 existTime = 0;
 image_speed = 0
 
-
+alarm[1] = 90 + irandom(60);
 //behavior
 walk = 0
 gunangle = random(360)
@@ -42,6 +43,11 @@ snd_hurt = sndHitFlesh
 snd_dead = sndEnemyDie
 
 dodge=0;
+
+wakeTime = 20;
+wakeRange = 80;
+wakeObject = MeleeBandit;
+wakeSound = sndAssassinGetUp;
 
 morphMe=0;
 frozen=false;

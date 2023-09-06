@@ -14,7 +14,6 @@ snd_melee = sndGoldScorpionMelee;
 snd_dead = sndFrogExplode
 
 walk=0;
-dodge=0;
 //behavior
 alarm[1] = 10+random(10)
 

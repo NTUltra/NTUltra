@@ -1,6 +1,6 @@
 alarm[1] = actTime+random(actTime)
 
-
+canDodge = true;
 if sprite_index != spr_hurt
 sprite_index = spr_idle
 scrTarget()

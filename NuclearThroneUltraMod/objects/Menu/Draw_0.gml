@@ -13,7 +13,7 @@ if widescreen > 0
 widescreen -= 8
 
 
-draw_sprite(sprLogo,-1,__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2)
+draw_sprite(sprLogo,-1,round(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5),round(__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.5))
 
 if image_index >= 14
 {

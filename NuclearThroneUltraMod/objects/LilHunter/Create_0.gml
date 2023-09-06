@@ -49,3 +49,4 @@ shadowdrawx=x;
 shadowdrawy=y;
 
 scrAddDrops(1);
+canDodge = false;

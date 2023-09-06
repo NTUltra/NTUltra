@@ -17,7 +17,11 @@ if close
 } else if rad > 23
 {
 with instance_create(xstart,ystart,Portal)
-type = 3
+{
+	type = 3
+	x = other.xstart;
+	y = other.ystart;
+}
 if instance_exists(Player)
 	Player.area = 100
 else if instance_exists(PlayerSpawn)

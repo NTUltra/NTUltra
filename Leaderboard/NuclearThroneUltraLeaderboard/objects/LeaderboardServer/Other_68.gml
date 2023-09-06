@@ -125,7 +125,7 @@ if (type == network_type_data) {
 			newScore[1] = buffer_read(buffer, buffer_u64);//User Id
 			newScore[2] = buffer_read(buffer,buffer_string);//Username
 			show_debug_message("GAMEMODE: " + string(gm));
-			if gm[0] == 8
+			if array_length(gm) > 0 && gm[0] == 8
 			{
 				//Van Fan
 				newScore[3] = buffer_read(buffer,buffer_u8)//race

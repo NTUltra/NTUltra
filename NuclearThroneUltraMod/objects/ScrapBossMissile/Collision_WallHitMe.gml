@@ -1,0 +1,9 @@
+/// @description Bounce
+move_bounce_solid(true)
+
+my_health -= 3
+sprite_index = spr_hurt
+image_index = 0
+
+if alarm[1] < 1
+		alarm[1] = explodeOnHitTime;

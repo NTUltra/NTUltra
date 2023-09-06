@@ -9,6 +9,7 @@ if (my_health <= 0 && lifes > 0 && fakeded < 0 && instance_number(enemy) - insta
 	image_index = 0;
 	fakeded = 80 + random(200);
 	dodge = 0;
+	canDodge = false;
 	alarm[1] = fakeded + 10;
 	alarm[2] = 0;
 	alarm[4] = 0;
@@ -52,19 +53,38 @@ if (alarm[4] < 0) {
 	if speed > 5.4
 	speed = 5.4
 
-	if dodge > 0
+	if dodge > -5
 	{
 		sprite_index=spr_walk;
-		move_contact_solid(direction,8)
-		dodge -= 1.4
-		alarm[1] += 0.5;
-		if (alarm[2] > 1)
-			alarm[2] += 0.5;
+		move_contact_solid(direction,9)
+		if UberCont.normalGameSpeed == 60
+		{
+			dodge -= 0.5
+			alarm[1] += 0.25;
+			if (alarm[2] > 1)
+				alarm[2] += 0.25;
+			if dodge > 0
+			{
+				if round(dodge) == dodge
+					sprite_index=spr_walk;
+				move_contact_solid(direction,4)
+			}
+		}
+		else
+		{
+			dodge -= 1;
+			alarm[1] += 0.5;
+			if (alarm[2] > 1)
+				alarm[2] += 0.5;
+			if dodge > 0
+			{
+				sprite_index=spr_walk;
+				move_contact_solid(direction,8)
+			}
+		}
 	}
-
-	//hes firing at me!
-	if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<60 && aggression <= 180 && alarm[2] < 1 {
-		if mouse_check_button_pressed(mb_left) && target > 0 && instance_exists(target)
+	else if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<60 && aggression <= 180 && alarm[2] < 1 {
+		if target > -1 && instance_exists(target) && instance_exists(Player) && Player.fired
 		{
 			if point_distance(x,y,target.x,target.y) < 64
 			direction = point_direction(x,y,target.x,target.y)
@@ -86,7 +106,7 @@ if (alarm[4] < 0) {
 
 
 	//Dodge bullet or hit it back
-	if instance_exists(projectile) && instance_exists(Player) && aggression < 300
+	if dodge <= -5 && canDodge && instance_exists(projectile) && instance_exists(Player) && aggression < 300
 	{
 	    dodgethis = instance_nearest(x,y,projectile);
 	    with instance_nearest(x,y,projectile)
@@ -167,7 +187,7 @@ if (alarm[4] < 0) {
 				alarm[6] += 2
 		    }
 	    }
-	} else if aggression > 180 && target > 0 && instance_exists(target) && point_distance(x, y, target.x, target.y) > 200 {
+	} else if canDodge && aggression > 180 && target > 0 && instance_exists(target) && point_distance(x, y, target.x, target.y) > 200 {
 		do
 		{
 			with instance_nearest(target.x + (random(2) - 1) * (random(32)+96),target.y + (random(2) - 1) * (random(32)+96),Floor)

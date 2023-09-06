@@ -1,4 +1,6 @@
 alarm[1] = 8+random(8)
+
+canDodge = true;
 if loop
 alarm[1]=2+random(4);
 scrTarget()

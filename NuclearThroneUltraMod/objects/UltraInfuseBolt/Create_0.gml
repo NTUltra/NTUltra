@@ -11,3 +11,4 @@ alarm[11] = 1;
 dmg = 17;
 xprev = x;
 yprev = y;
+hitEntities = [];

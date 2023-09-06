@@ -33,7 +33,7 @@ function scrRavenLift() {
 	            image_index = 0;
 	            nofly = 50;
 				alarm[2] = 0;
-	            instance_change(RavenFly, false);
+	            instance_change(ravenFly, false);
 	        }/*
 			else
 			{

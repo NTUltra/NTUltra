@@ -1,4 +1,0 @@
-scrRaddrop();
-
-event_inherited()
-

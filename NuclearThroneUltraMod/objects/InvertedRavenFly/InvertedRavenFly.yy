@@ -36,8 +36,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprInvertedRavenLift",
-    "path": "sprites/sprInvertedRavenLift/sprInvertedRavenLift.yy",
+    "name": "sprUltraRavenLift",
+    "path": "sprites/sprUltraRavenLift/sprUltraRavenLift.yy",
   },
   "spriteMaskId": {
     "name": "mskBandit",

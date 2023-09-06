@@ -46,6 +46,8 @@ function scrDarkness() {
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),64,0)
 	with ChesireCat
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),160+random(4),0)
+	with UltraBigDog
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),160+random(4),0)
 	with InvertedChesireCat
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),160+random(4),0)
 	with GraveyardFish
@@ -101,8 +103,8 @@ function scrDarkness() {
 	with DiscoBall
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),60+random(4),0)
 	//MORE BULLETS OR WHAT?
-	with TopDecal
-	draw_circle(x-__view_get( e__VW.XView, 0 )+16,y-__view_get( e__VW.YView, 0 )+16,32,0)
+	with TopDecalLight
+	draw_circle(x-__view_get( e__VW.XView, 0 )+(16*image_xscale),y-__view_get( e__VW.YView, 0 )+16,32,0)
 	with HyperCrystal
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),48,0)
 	with BallMom

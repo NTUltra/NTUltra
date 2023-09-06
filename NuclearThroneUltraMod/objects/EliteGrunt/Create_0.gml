@@ -43,6 +43,3 @@ else
 lastx = x
 lasty = y
 }
-
-dodge=0;
-

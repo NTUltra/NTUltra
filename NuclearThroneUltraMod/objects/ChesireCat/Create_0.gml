@@ -32,7 +32,6 @@ instance_create(x,y,ChesireCatTail);
 
 ammo=7;
 
-dodge=0;
 friction = 0.8;
 myWazer = -1;
 wazerDuration = 102;
@@ -52,7 +51,15 @@ if loops >= startLoop
 	if instance_exists(Player)
 	{
 		if Player.skill_got[29]	//Insomnia
+		{
 			alarm[6] += 100;
+			with instance_create(x,y,Snooze)
+			{
+				owner = other.id;
+				depth = other.depth - 1;
+				yoffset = 0;
+			}
+		}
 	}
 }
 gunangle = 0;

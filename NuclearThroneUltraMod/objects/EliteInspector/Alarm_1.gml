@@ -1,5 +1,5 @@
 alarm[1] = 10+random(10)//20 20
-
+canDodge = true;
 if random(3)<1
 control = 0
 

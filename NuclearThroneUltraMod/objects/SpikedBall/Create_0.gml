@@ -1,0 +1,11 @@
+event_inherited();
+depth = 0;
+typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
+dmg = 2;
+dist = 0
+image_speed=0.2;
+trailColour = make_colour_rgb(0,255,0);
+alarm[2] = 120;
+xprev = x;
+yprev = y;
+hitEntities = [];

@@ -47,4 +47,5 @@ shadowdraw=false;
 shadowdrawx=x;
 shadowdrawy=y;
 
+canDodge = false;
 scrAddDrops(1);

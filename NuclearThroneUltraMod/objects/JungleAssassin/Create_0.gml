@@ -15,7 +15,7 @@ spr_dead = sprJungleAssassinDead
 snd_hurt = sndJungleAssassinHurt
 snd_dead = sndJungleAssassinDead
 
-snd_play(sndJungleAssassinWake,0,true)
+snd_play(sndJungleAssassinWake);
 
 //behavior
 walk = 0
@@ -34,3 +34,4 @@ if loops > 0
 {
 	tellTime = 4;
 }
+canDodge = false;

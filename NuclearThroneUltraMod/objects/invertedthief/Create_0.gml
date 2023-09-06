@@ -17,3 +17,4 @@ stealWeaponOdds = 2;
 stealAmount = 3;
 if loops > 0
 	actTime = 4;
+canDodge = false;

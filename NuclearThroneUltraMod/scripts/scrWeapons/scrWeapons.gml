@@ -6094,7 +6094,7 @@ function scrWeapons() {
 	wep_type[551] = 1
 	wep_auto[551] = 1
 	wep_load[551] = 6
-	wep_cost[551] = 6
+	wep_cost[551] = 5
 	wep_sprt[551] = sprOGun
 	wep_area[551] = 27
 	wep_text[551] = "O"
@@ -6446,7 +6446,7 @@ function scrWeapons() {
 	wep_type[583] = 1
 	wep_auto[583] = 1
 	wep_load[583] = 4
-	wep_cost[583] = 16
+	wep_cost[583] = 14
 	wep_sprt[583] = sprOOOGun
 	wep_area[583] = 30
 	wep_text[583] = "O O O"
@@ -7222,6 +7222,50 @@ function scrWeapons() {
 	wep_text[653] = "jester"
 	wep_swap[653] = sndSwapBow
 	wep_rad[653] = 0;
+	
+	wep_name[654] = "DIRECTOR DRAGGER"
+	wep_type[654] = 2
+	wep_auto[654] = 0
+	wep_load[654] = 22
+	wep_cost[654] = 3
+	wep_sprt[654] = sprDirectorDragger
+	wep_area[654] = 9
+	wep_text[654] = "hand that drags you down"
+	wep_swap[654] = sndSwapShotgun
+	wep_rad[654] = 0;
+	
+	wep_name[655] = "THE CRENDOOKEN"
+	wep_type[655] = 1
+	wep_auto[655] = 0
+	wep_load[655] = 30
+	wep_cost[655] = 2
+	wep_sprt[655] = sprDirectorDragger
+	wep_area[655] = 17
+	wep_text[655] = "all will be given for all to be taken"
+	wep_swap[655] = sndSwapCursed
+	wep_rad[655] = 0;
+	
+	wep_name[656] = "THE SAFROODEN"
+	wep_type[656] = 3
+	wep_auto[656] = 0
+	wep_load[656] = 35
+	wep_cost[656] = 3
+	wep_sprt[656] = sprDirectorDragger
+	wep_area[656] = 17
+	wep_text[656] = "arrow from hell"
+	wep_swap[656] = sndSwapBow
+	wep_rad[656] = 0;
+	
+	wep_name[657] = "BALLISTA"
+	wep_type[657] = 3
+	wep_auto[657] = 0
+	wep_load[657] = 40
+	wep_cost[657] = 3
+	wep_sprt[657] = sprDirectorDragger
+	wep_area[657] = 15
+	wep_text[657] = "ancient painbringer"
+	wep_swap[657] = sndSwapBow
+	wep_rad[657] = 0;
 
 	maxwep = array_length(wep_name)-1;
 

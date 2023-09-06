@@ -4,8 +4,8 @@
 event_inherited();
 raddrop += 5;
 maxhealth = 20;
-maxSpeed += 0.5;
-acc += 0.2;
+maxSpeed -= 0.25;
+acc -= 0.1;
 actTime -= 15;
 EnemyHealthAdjustments();
 spr_idle = sprCursedOctaBotIdle;

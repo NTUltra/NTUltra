@@ -10,9 +10,12 @@ function scrBoltMarrow(reduc = 1, rangeChange = 0){
 			dir = instance_nearest(x,y,enemy)
 		    if dir.team != team && point_distance(x,y,dir.x,dir.y) < 24 + rangeChange + Player.betterboltmarrow
 		    {
-			    x = dir.x-hspeed*reduc
-			    y = dir.y-vspeed*reduc
-				scrForcePosition60fps();
+				if array_length(hitEntities) < 1 || !array_contains(hitEntities,dir)
+				{
+				    x = dir.x-hspeed*reduc
+				    y = dir.y-vspeed*reduc
+					scrForcePosition60fps();
+				}
 		    }
 		}
 	}

@@ -192,7 +192,4 @@ draw_text(xx+8,yy,string_hash_to_newline(string(stxt2)))
 }
 
 if alarm[1]>0
-draw_sprite_ext(pauseimg,0,__view_get( e__VW.XView, 0 ),yy,1,1,0,c_white,1)
-
-/* */
-/*  */
+	draw_sprite_ext(pauseimg,0,__view_get( e__VW.XView, 0 ),yy,1,1,0,c_white,1)

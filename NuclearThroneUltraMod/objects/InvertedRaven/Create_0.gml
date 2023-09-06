@@ -7,7 +7,7 @@ if UberCont.loops>1
 maxhealth=9;
 
 event_inherited()
-
+alarm[10] = 0;
 spr_idle = sprInvertedRavenIdle
 spr_walk = sprInvertedRavenWalk
 spr_hurt = sprInvertedRavenHurt

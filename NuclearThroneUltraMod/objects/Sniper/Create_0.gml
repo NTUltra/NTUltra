@@ -33,6 +33,6 @@ actTime = 25;
 if loops > 0
 {
 	tellTime = 22;
-	actTime = 10;
+	actTime = 15;
 }
 alarm[0] = 1;

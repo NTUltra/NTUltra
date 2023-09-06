@@ -1707,6 +1707,9 @@ function scrDrawHUD() {
 			} else if instance_exists(InvertedRavenFly)
 			{
 				t = InvertedRavenFly;
+			} else if instance_exists(UltraRavenFly)
+			{
+				t = UltraRavenFly;
 			} else if instance_exists(LilHunterFly)
 			{
 				t = LilHunterFly;

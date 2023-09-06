@@ -61,8 +61,13 @@ draw_self();
 
 with RavenFly
 {
-draw_sprite_ext(sprite_index,-1,x,y+z,right,1,0,c_white,1)
+	draw_sprite_ext(sprite_index,-1,x,y+z,right,1,0,c_white,1)
 }
+with UltraRavenFly
+{
+	draw_sprite_ext(sprite_index,-1,x,y+z,right,1,0,c_white,1)
+}
+
 with InvertedRavenFly
 {
 	draw_sprite_ext(sprite_index,-1,x,y+z,right,1,0,c_white,1)
@@ -209,6 +214,12 @@ with EnemyBullet1Square
 {
 	if draw
 		draw_self();
+}
+with ScrapBossMissile
+{
+	draw_sprite_ext(trailSprite,-1,x,y,1,1,direction,c_white,1)
+	if draw
+		draw_sprite_ext(sprite_index,-1,x,y,1,1,direction,c_white,1)
 }
 with InvertedGuardianBulletSpawn
 {

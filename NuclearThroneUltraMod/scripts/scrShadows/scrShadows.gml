@@ -457,6 +457,8 @@ function scrShadows() {
 	draw_sprite(shd48,0,x-vx,y-vy)
 	with RavenFly
 	draw_sprite(shd24,0,x-vx,y-vy)
+	with UltraRavenFly
+	draw_sprite(shd24,0,x-vx,y-vy)
 	with InvertedRavenFly
 	draw_sprite(shd24,0,x-vx,y-vy)
 	with LilHunter

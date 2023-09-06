@@ -228,7 +228,7 @@ if !instance_exists(LevCont) and visible = 1
 			var dangle = random(1)*360;
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			//screen_save("explain"+string(scrn)+".png");
-			instance_create(x+64,y,InvertedBossBot);
+			instance_create(x+200,y,UltraMeleeFake);
 			//scrn++;
 			/*
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
@@ -682,7 +682,7 @@ if !instance_exists(LevCont) and visible = 1
 			other.wkick = -2
 		}
 	}
-
+	fired = false;
 	if can_shoot == 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 	{
 		if wep_auto[wep] = 0 and clicked = 1

@@ -4,7 +4,7 @@ var xx = wave[spawnI].xx;
 var yy = wave[spawnI].yy;
 with instance_create(xx,yy,obj)
 {
-	#region insomnia
+	#region hypersomnia
 	if instance_exists(Player) && Player.skill_got[29]//Insomnia
 	{
 		if Player.race = 25

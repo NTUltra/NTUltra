@@ -192,7 +192,10 @@ else if instance_exists(Player) && !instance_exists(StartDaily)///PAUSE IN-GAME
 {
 kills=Player.kills
 hard=Player.hard;
-pauseimg = sprite_create_from_surface(application_surface,0,0,surface_get_width(application_surface),surface_get_height(application_surface),0,0,0,0)
+if instance_exists(TopCont) && TopCont.darkness == 1 && surface_exists(TopCont.dark)
+	pauseimg = sprite_create_from_surface(TopCont.dark,0,0,surface_get_width(TopCont.dark),surface_get_height(TopCont.dark),0,0,0,0);
+else
+	pauseimg = sprite_create_from_surface(application_surface,0,0,surface_get_width(application_surface),surface_get_height(application_surface),0,0,0,0);
 //cursor_sprite=sprCrosshair
 //with Cursor
 //instance_destroy();

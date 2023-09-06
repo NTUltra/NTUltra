@@ -16,3 +16,4 @@ hitTime = 10;
 alarm[11] = 1;
 xprev = x;
 yprev = y;
+hitEntities = [];

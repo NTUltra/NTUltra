@@ -415,7 +415,46 @@ function scrPopEnemies() {
 	        }
 		}
     }
-
+	//ULTRA SCRAPYARD
+    if spawnarea = 136 {
+		if loops > 0 {
+			if styleb = 1 && random(2) < 1 {
+				instance_create(x + 16, y + 16, choose(UltraMeleeBandit, ,UltraMeleeFake, UltraSalamander, UltraSalamander, UltraSalamander, UltraSalamander, choose(BuffGator,UltraSalamander)))
+	        }
+	        else {
+				if random(35) < 1
+				instance_create(x + 16, y + 16, PalaceGuardian)
+	            else if random(4) < 1
+	            instance_create(x + 16, y + 16, choose(UltraMeleeBandit, SmallUltraSniper, UltraMeleeFake, SmallUltraSniper, Gator, SmallUltraSniper, choose(BuffGator,SmallUltraSniper), Exploder, UltraSalamander))
+	            else {
+	                if random(10) < 1 {
+	                    if random(8) < 1 instance_create(x + 16, y + 16, Car)
+	                    //instance_create(x+16+random(4)-2,y+16+random(4)-2,Raven)
+	                    instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraRaven)
+	                }
+	                else
+	                    instance_create(x + 16, y + 16, choose(UltraRaven, UltraRaven, Bandit, BanditSquare))
+	            }
+	        }
+		} else {
+			if styleb = 1 && random(2) < 1 {
+				instance_create(x + 16, y + 16, choose(UltraMeleeFake, UltraSalamander, UltraSalamander, UltraSalamander, UltraSalamander, UltraSalamander))
+	        }
+	        else {
+	            if random(4) < 1
+	            instance_create(x + 16, y + 16, choose(UltraMeleeBandit, SmallUltraSniper, UltraMeleeFake, SmallUltraSniper, UltraMeleeFake, SmallUltraSniper, SmallUltraSniper, Exploder, UltraSalamander))
+	            else {
+	                if random(10) < 1 {
+	                    if random(8) < 1 instance_create(x + 16, y + 16, Car)
+	                    //instance_create(x+16+random(4)-2,y+16+random(4)-2,Raven)
+	                    instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraRaven)
+	                }
+	                else
+	                    instance_create(x + 16, y + 16, choose(UltraRaven, UltraRaven, Bandit, BanditSquare))
+	            }
+	        }
+		}
+    }
     //CAVES
     if spawnarea = 4  && (subarea == 1 || random(3) < 1){
 		var crystal = LaserCrystal

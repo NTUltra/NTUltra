@@ -8,15 +8,30 @@ if walk > 0
 	mp_potential_step(target.x,target.y,2,false)
 }
 
-if dodge > 0
+if dodge > -4
 {
-	sprite_index=spr_walk;
-	move_contact_solid(direction,3.2)
-	dodge -= 1
+	if UberCont.normalGameSpeed == 60
+	{
+		dodge -= 0.5
+		if dodge > 0
+		{
+			if round(dodge) == dodge
+				sprite_index=spr_walk;
+			move_contact_solid(direction,2)
+		}
+	}
+	else
+	{
+		dodge -= 1;
+		if dodge > 0
+		{
+			sprite_index=spr_walk;
+			move_contact_solid(direction,4)
+		}
+	}
 }
-
-if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y) < 64 and not alarm[2] > 0 {
-	if mouse_check_button_pressed(mb_left) and target > 0
+else if canDodge && point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y) < 64 and not alarm[2] > 0 {
+	if target > -1 && instance_exists(target) && instance_exists(Player) && Player.fired
 	{
 		if point_distance(x,y,target.x,target.y) < 48
 		direction = point_direction(x,y,target.x,target.y)

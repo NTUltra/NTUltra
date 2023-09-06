@@ -1,4 +1,4 @@
-alarm[1] = actTime+random(10)
+alarm[1] = actTime+random(actTime)
 
 
 scrTarget()

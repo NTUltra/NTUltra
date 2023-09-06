@@ -171,6 +171,9 @@ if instance_exists(Player)
 			case 135:
 				__background_set_colour( make_color_rgb(26,20,18) )
 			break;
+			case 136:
+				__background_set_colour( make_color_rgb(26,76,8) )
+			break;
 		}
 	}
 	else
@@ -284,6 +287,8 @@ if instance_exists(Player)
 			__background_set_colour( make_color_rgb(84, 66, 44) )
 		else if Player.area == 135//HQ
 			__background_set_colour( make_color_rgb(245, 250, 251) )
+		else if Player.area == 136//Ultra scrapyard
+			__background_set_colour( make_color_rgb(175, 143, 106) )
 	}
 }
 else
@@ -302,67 +307,67 @@ if Player.area = 3 and Player.subarea = 3
 goal = 70+s
 else if Player.area = 100
 goal = 40
-if Player.area = 103 || Player.area == 125
+else if Player.area = 103 || Player.area == 125
 goal = 130+s
 //if Player.area = 102
 //goal = 130+s
-if Player.area = 102
+else if Player.area = 102
 goal = 50+s
-if Player.area = 4
+else if Player.area = 4
 goal = 120
-if Player.area = 5
+else if Player.area = 5
 goal = 125+s
-if Player.area = 7
+else if Player.area = 7
 {
 goal = 130+s
 	if Player.subarea == 3
 		goal = 10;
 }
-if Player.area = 108 && Player.subarea<3//inverted vulcano
+else if Player.area = 108 && Player.subarea<3//inverted vulcano
 	goal = 140+s
 else if Player.area = 108 && Player.subarea==3
 {
 	goal = 10;
 }
-if Player.area = 104
+else if Player.area = 104
 goal=150+s
-if Player.area == 105//inverted desert
+else if Player.area == 105//inverted desert
 goal=130+s
-if Player.area == 106//inverted scrapyard
+else if Player.area == 106 || Player.area == 136//inverted scrapyard
 goal=120+s
-if Player.area == 8//Wonderland
+else if Player.area == 8//Wonderland
 goal = 130+s
-if Player.area == 9//Palace
+else if Player.area == 9//Palace
 goal = 130+s
-if Player.area == 118//Inverted Palace
+else if Player.area == 118//Inverted Palace
 goal = 130+s
-if Player.area == 10 || Player.area == 121//savanna
+else if Player.area == 10 || Player.area == 121//savanna
 goal = 110+s
-if Player.area == 109//inverted Wonderland
+else if Player.area == 109//inverted Wonderland
 goal=130+s
-if Player.area == 3
-goal = 90+s
-if Player.area == 107//inverted FrozenCity
+else if Player.area == 3
+goal = 100+s
+else if Player.area == 107//inverted FrozenCity
 goal=120+s;
-if Player.area == 101 || Player.area == 122//Oasis
+else if Player.area == 101 || Player.area == 122//Oasis
 goal=95+s;
-if (Player.area == 6 || Player.area = 112) && Player.subarea == 2//LABS BOSS
+else if (Player.area == 6 || Player.area = 112) && Player.subarea == 2//LABS BOSS
 goal=1;
-if Player.area == 113//Banditland
+else if Player.area == 113//Banditland
 goal=70+s;
-if Player.area == 114 || Player.area == 123//jungle
+else if Player.area == 114 || Player.area == 123//jungle
 goal=130+s;
-if Player.area == 117 || Player.area == 124//Mushroom land
+else if Player.area == 117 || Player.area == 124//Mushroom land
 goal=120+s;
-if Player.area == 119 || Player.area == 120
+else if Player.area == 119 || Player.area == 120
 goal = 60;
-if Player.area == 126 || Player.area == 127
+else if Player.area == 126 || Player.area == 127
 goal = 120+s;
-if Player.area == 128 || Player.area == 129
+else if Player.area == 128 || Player.area == 129
 goal = 150+s;
-if Player.area == 130 || Player.area == 131 || Player.area == 132 || Player.area == 133 || Player.area == 134//Factory
+else if Player.area == 130 || Player.area == 131 || Player.area == 132 || Player.area == 133 || Player.area == 134//Factory
 goal = 130+s;
-if Player.area == 135
+else if Player.area == 135
 goal = 120+s;
 
 if scrIsGamemode(6) && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels

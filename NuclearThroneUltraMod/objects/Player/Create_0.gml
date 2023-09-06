@@ -26,6 +26,7 @@ hurt_pitch_variation = 0;
 reachedUltra = false;
 canHeal = true;
 noHit = 0;
+fired = false;
 closedodges = 0;
 isPureHealthBoost = 0;
 hunterEye = 0;

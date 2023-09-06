@@ -92,25 +92,5 @@ if alarm[5] > 0
 	}
 }
 
-if dodge > 0
-{
-
-move_contact_solid(direction,0.4)
-dodge -= 1
-}
-
-if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<60&&mask_index!=mskPickupThroughWall&&sprite_index!=spr_fire&&sprite_index!=sprChesireCatLaser && instance_exists(Floor)&&target>0 && instance_exists(target){
-if mouse_check_button_pressed(mb_left) && point_distance(x,y,instance_nearest(x,y,Floor).x,instance_nearest(x,y,Floor).y)<32
-{
-//if point_distance(x,y,target.x,target.y) < 64
-//direction = point_direction(x,y,target.x,target.y)
-//else
-direction = point_direction(target.x+lengthdir_x(point_distance(x,y,target.x,target.y)*0.95,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),target.y+lengthdir_y(point_distance(x,y,target.x,target.y)*0.95,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+choose(90,-90)),x,y)//+choose(90,-90)
-dodge = 2
-
-
-}
-}
-
 if speed > maxSpeed
 	speed = maxSpeed;

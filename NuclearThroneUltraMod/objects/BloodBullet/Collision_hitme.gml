@@ -16,8 +16,8 @@ if other.team != team and other.my_health > 0
 			
 		snd_play(snd_hurt, hurt_pitch_variation,true)
 	}
-with(instance_create(x,y,BulletHit))
-{image_blend = make_color_rgb(174,58,45);}
+with(instance_create(x + hspeed,y + vspeed,BulletHit))
+{sprite_index = sprBloodBulletHit}
 
 scrRecycleGland(1);
 

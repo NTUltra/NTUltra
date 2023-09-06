@@ -26,3 +26,4 @@ bowlingAcc += 1;
 fireDelay += 4;
 event_user(1);
 raddrop = 160;
+wepspr = sprUltraBossBotGun

@@ -17,7 +17,7 @@ snd_dead = sndExplosion
 //behavior
 walk = 0
 alarm[1] = 90;
-actTime = 90;
+actTime = 100;
 originalAngle = 45;
 moveDir = choose(originalAngle,originalAngle + 90, originalAngle + 180, originalAngle + 270);
 acc = 1.2;

@@ -16,12 +16,15 @@ function scrGenerateFloorMaker(limiter) {
 			}
 			var s = clamp(Player.loops*8,0,50);
 			goal += s;
-			if Player.area = 3 and Player.subarea = 3
-			goal = 150+s//50
+			
+			if ((Player.area = 3 || Player.area == 136) and Player.subarea = 3)
+				goal = 150+s//50
+			else if Player.area == 3 || Player.area == 136
+				goal = 120+s;
 			else if Player.area = 4
-			goal = 120+s
+				goal = 120+s
 			else if Player.area = 5
-			goal = 160+s
+				goal = 160+s
 			else if Player.area = 7 || Player.area == 108
 			{
 				if Player.subarea == 3

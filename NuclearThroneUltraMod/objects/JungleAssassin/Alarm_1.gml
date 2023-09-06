@@ -1,4 +1,5 @@
 alarm[1] = actTime+random(actTime)
+canDodge = true;
 scrTarget()
 if target > 0
 {

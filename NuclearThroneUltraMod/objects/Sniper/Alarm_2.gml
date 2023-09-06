@@ -19,8 +19,8 @@ with instance_create(x,y,proj)
 team = other.team
 image_angle = direction
 firedbysniper=true;}
-if instance_exists(target)
-gunangle = point_direction(x,y,target.x,target.y)
+if instance_exists(target) && target > -1
+	gunangle = point_direction(x,y,target.x,target.y)
 if loops > 0
 alarm[1] = 30+random(5)
 else

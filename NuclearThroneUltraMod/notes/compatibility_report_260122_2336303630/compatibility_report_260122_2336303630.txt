@@ -3608,7 +3608,7 @@ Missing audiogroup for sound: 'sndMutLastWish' - setting to default audio group
 Missing audiogroup for sound: 'sndMutThronebutt' - setting to default audio group
 Missing audiogroup for sound: 'sndMut' - setting to default audio group
 Missing audiogroup for sound: 'sndMutHover' - setting to default audio group
-Missing audiogroup for sound: 'sndInsomnia' - setting to default audio group
+Missing audiogroup for sound: 'sndHypersomnia' - setting to default audio group
 Missing audiogroup for sound: 'sndToughShell' - setting to default audio group
 Missing audiogroup for sound: 'sndPowerCraving' - setting to default audio group
 Missing audiogroup for sound: 'sndSpawnAlly' - setting to default audio group

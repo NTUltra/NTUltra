@@ -1,6 +1,6 @@
 //PRE LOOP
 alarm[1] = actTime+random(actTime)
-
+canDodge = true;
 
 scrTarget()
 if stolen>0

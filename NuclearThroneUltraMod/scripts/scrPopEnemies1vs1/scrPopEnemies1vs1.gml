@@ -14,7 +14,6 @@ function scrPopEnemies1vs1(area, subarea, loops){
 		!(area == 112 && subarea == 2)
 	)
 	{
-		debug("Empty area");
 		with enemy
 			instance_destroy(id,false);
 		with becomenemy
@@ -560,6 +559,42 @@ function scrPopEnemies1vs1(area, subarea, loops){
 		{
 			enem = InvertedCourtyardGuardian;
 		}
+	}
+	else if area == 130 // Factory
+	{
+		enem = BossBot;
+		buff = 1.8*clamp(1+loops*0.5,1,10);
+		sBuff = 1.2;
+	}
+	else if area == 131 // Factory
+	{
+		enem = InvertedBossBot;
+		buff = 1.8*clamp(1+loops*0.5,1,10);
+		sBuff = 1.2;
+	}
+	else if area == 132 // Factory
+	{
+		enem = CursedBossBot;
+		buff = 1.8*clamp(1+loops*0.5,1,10);
+		sBuff = 1.2;
+	}
+	else if area == 133 // Factory
+	{
+		enem = GoldenBossBot;
+		buff = 1.8*clamp(1+loops*0.5,1,10);
+		sBuff = 1.2;
+	}
+	else if area == 134 // Factory
+	{
+		enem = UltraBossBot;
+		buff = 1.8*clamp(1+loops*0.5,1,10);
+		sBuff = 1.2;
+	}
+	else if area == 136 // Ultra scrapyard
+	{
+		buff = 1.5*clamp(1+loops*0.25,1,5);
+		enem = ScrapBoss;
+		sBuff = 1.2;	
 	}
 	
 	if enem != noone

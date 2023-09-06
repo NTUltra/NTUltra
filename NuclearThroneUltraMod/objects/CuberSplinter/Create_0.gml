@@ -10,3 +10,4 @@ typ = 3;
 friction = 0.1
 xprev = x;
 yprev = y;
+hitEntities = [];

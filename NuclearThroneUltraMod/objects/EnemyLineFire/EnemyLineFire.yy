@@ -38,5 +38,5 @@
     "path": "sprites/sprFlare/sprFlare.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

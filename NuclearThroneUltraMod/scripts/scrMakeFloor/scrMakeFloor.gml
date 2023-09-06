@@ -52,7 +52,7 @@ function scrMakeFloor(limiter) {
 		instance_create(x-32,y,Floor)
 		instance_create(x-32,y-32,Floor)
 	}
-	if area = 3 || area = 106 { if random(9) < 1 || ( subarea=3&&random(4)<1 )//random 8 scrapyard
+	if area = 3 || area = 106 || area == 136 { if random(9) < 1 || ( subarea=3&&random(5)<1 )//random 8 scrapyard
 	{
 		instance_create(x,y,Floor)
 		instance_create(x+32,y,Floor)
@@ -686,7 +686,7 @@ function scrMakeFloor(limiter) {
 	trn = choose(0,0,0,0,0,0,0,0,0,90,-90,90,-90,180)
 	if area = 2 or area = 102 or area = 110
 	trn = choose(0,0,0,0,0,0,0,0,90,-90,90,-90,180)
-	if area = 3 || area = 106
+	if area = 3 || area = 106 || area == 136
 	trn = choose(0,0,0,0,90,-90)
 	if area = 4 || area = 111 || area = 115
 	trn = choose(0,0,0,0,90,-90,180)
@@ -774,14 +774,14 @@ function scrMakeFloor(limiter) {
 
 	//instance_create(x,y,Floor)
 
-	if (trn = 180 or (abs(trn) = 90 and (area = 3 || area = 106 || (area == 9 && subarea != 3)
+	if (trn = 180 or (abs(trn) = 90 and (area = 3 || area = 106 || area == 136 || (area == 9 && subarea != 3)
 	|| (area == 118 && subarea != 3)))) and point_distance(x,y,10016,10016) > 48 and area != 104{
 	instance_create(x,y,Floor)
 	instance_create(x+16,y+16,WeaponChest)}
 
 
 	//BRANCHES
-	if area = 1 || area = 105 || area = 101 || area == 10 || area == 114 || area == 121 || area == 122 || area == 123
+	if area = 1 || area = 105 || area = 101 || area == 10 || area == 114 || area == 121 || area == 122 || area == 123 || area == 136
 	{
 	if random(19+instance_number(FloorMaker)) > 20
 	{

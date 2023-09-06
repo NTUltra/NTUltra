@@ -67,3 +67,4 @@ alarm[7] = afterImageDelay;
 smackdelayReduction = clamp(2 + ((GetPlayerLoops()-1)*3),0,10);
 deflectExhaustion = 0;
 scrAddDrops(1);
+canDodge = false;

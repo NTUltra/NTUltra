@@ -4,7 +4,7 @@ if alarm[11] < 1
 	scrBoltTrail();
 }
 
-if speed<1&&alarm[2]<1
+if speed<1&&alarm[2] > 30
 {
 alarm[3]=2;
 alarm[2]=10+random(20);//delay before destroying

@@ -4,10 +4,8 @@
 event_inherited();
 raddrop += 10;
 image_speed += 0.1;
-fireDelay -= 10;
+fireDelay -= 5;
 maxhealth = 60;
-maxSpeed += 1;
-acc += 0.2;
 actTime -= 2;
 EnemyHealthAdjustments();
 

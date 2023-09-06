@@ -37,6 +37,16 @@ if (Player.area = 3 and Player.subarea = 3)
 		scrSpawnMoreBosses(BecomeScrapBoss,1+clamp(floor((Player.loops-4)*0.5),1,3));
 	}
 }
+else if (Player.area = 136 and Player.subarea == 3)
+{
+	var n = instance_furthest(Player.x,Player.y,Floor)
+	instance_create(n.x+16, n.y+16,BecomeUltraBigDog);
+
+	var f = instance_furthest(n.x,n.y,Floor);
+	var d = point_direction(n.x,n.y,f.x,f.y);
+	var ds = point_distance(n.x,n.y,f.x,f.y)*0.6;
+	var nn = instance_nearest(n.x+lengthdir_x(ds,d),n.y+lengthdir_y(ds,d),Floor);
+}
 if Player.area == 101 and Player.subarea == 3
 {
 	if instance_exists(SunkenCar)

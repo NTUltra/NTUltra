@@ -13,3 +13,4 @@ instance_destroy();
 if place_meeting(x,y,enemy)
 instance_destroy();
 
+alarm[2] = 30;

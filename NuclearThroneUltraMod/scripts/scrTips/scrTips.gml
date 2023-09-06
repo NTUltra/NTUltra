@@ -52,7 +52,7 @@ function scrTips() {
 	"kraken pulls enemies towards you",
 	"doing alright",
 	"taking eagle eyes is for people with large brains",
-	"insomnia does not work on faking assassins",
+	"hypersomnia does not work on faking assassins",
 	"there are other worlds out there",
 	/*more rares*/choose("be kind","the original idea for#the name trashtalk#came from lars in a stream#he made a lot of the sounds#in ultra mod","if you ever get stuck#outside a level#walk far away#from the level to get teleported back","use wasd to move","don't get baited by items","ask and ye shall receive","you smell that?","sick build bro","what does your gun tell you?","don't get baited by items"
 	,"frog is voiced by#Jukio Kallio","don't be sorry#git gutter","kimchi",
@@ -278,7 +278,7 @@ function scrTips() {
 	,"shaun the sheep","sheeps don't harm people","shawarma","charge allows you#to move through#some projectiles",
 	"charge increases damage#the longer you charge it","while charging#at high speed#you don't take#contact damage","you are immune#while charging#at high speed",
 	"extra feet and gamma guts#buff your charge","eat grass","popo won't come for you#while passive is active","you don't take contact damage#while passive is active"
-	,"insomnia goes in effect#after your passive"
+	,"hypersomnia goes in effect#after your passive"
 	)
 
 	if Player.race = 14//panda

@@ -155,6 +155,13 @@ function scrPopulate() {
                 sprite_index = sprOasisTopDecal;
             }
 		}
+		else if spawnarea == 136
+		{
+			TopDecalsLight();
+			with TopDecal {
+                sprite_index = sprUltraScrapyardTopDecal;
+            }
+		}
 		else if spawnarea == 122
 		{
 			TopDecals();
@@ -168,19 +175,19 @@ function scrPopulate() {
         else if spawnarea = 9 {
             if instance_exists(GenCont) {
                 if !place_free(x - 32, y) and!place_free(x - 64, y) and place_free(x, y) and random(5) < 1 {
-                    instance_create(x - 64 + 16, y + 16, TopDecal)
+                    instance_create(x - 64 + 16, y + 16, TopDecalLight)
                 }
 
                 if !place_free(x + 32, y) and!place_free(x + 64, y) and place_free(x, y) and random(5) < 1 {
-                    instance_create(x + 64 + 16, y + 16, TopDecal)
+                    instance_create(x + 64 + 16, y + 16, TopDecalLight)
                 }
 
                 if !place_free(x, y + 32) and!place_free(x, y + 64) and place_free(x, y) and random(5) < 1 {
-                    instance_create(x + 16, y + 64 + 16, TopDecal)
+                    instance_create(x + 16, y + 64 + 16, TopDecalLight)
                 }
 
                 if !place_free(x, y - 32) and!place_free(x, y - 64) and place_free(x, y) and random(5) < 1 {
-                    instance_create(x + 16, y - 64 + 16, TopDecal)
+                    instance_create(x + 16, y - 64 + 16, TopDecalLight)
                 }
 
             }
@@ -373,7 +380,7 @@ function scrPopulate() {
         }
         if spawnarea = 4 // || spawnarea = 111
         {
-            TopDecals();
+            TopDecalsLight();
             GenBones();
             with Bones
 				sprite_index = sprCaveDecal;
@@ -382,7 +389,7 @@ function scrPopulate() {
             }
         }
         if spawnarea = 115 {
-            TopDecals();
+            TopDecalsLight();
             GenBones();
             with Bones
             sprite_index = sprCursedCaveDecal;

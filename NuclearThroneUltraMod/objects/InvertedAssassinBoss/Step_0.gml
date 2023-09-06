@@ -6,6 +6,7 @@ if (my_health <= 0 && lifes > 0 && fakeded < 0 && instance_number(enemy) - insta
 	sprite_index = spr_dead;
 	team = 2;
 	dodge = 0;
+	canDodge = false;
 	image_index = 0;
 	depth += 2;
 	fakeded = 80 + random(200);
@@ -61,19 +62,39 @@ if (alarm[4] < 0) {
 	if speed > 6.4
 	speed = 6.4
 
-	if dodge > 0
+	if dodge > -3
 	{
 		sprite_index=spr_walk;
 		move_contact_solid(direction,9)
-		dodge -= 1.2
-		alarm[1] += 0.35;
-		if (alarm[2] > 1)
-			alarm[2] += 0.35;
+		if UberCont.normalGameSpeed == 60
+		{
+			dodge -= 0.5
+			alarm[1] += 0.15;
+			if (alarm[2] > 1)
+				alarm[2] += 0.15;
+			if dodge > 0
+			{
+				if round(dodge) == dodge
+					sprite_index=spr_walk;
+				move_contact_solid(direction,4)
+			}
+		}
+		else
+		{
+			dodge -= 1;
+			alarm[1] += 0.3;
+			if (alarm[2] > 1)
+				alarm[2] += 0.3;
+			if dodge > 0
+			{
+				sprite_index=spr_walk;
+				move_contact_solid(direction,8)
+			}
+		}
+		
 	}
-
-	//hes firing at me!
-	if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<60 && aggression <= 180 && alarm[2] < 1 {
-		if mouse_check_button_pressed(mb_left) && target > 0 && instance_exists(target)
+	else if canDodge && point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<60 && aggression <= 180 && alarm[2] < 1 {
+		if target > -1 && instance_exists(target) && instance_exists(Player) && Player.fired
 		{
 			if point_distance(x,y,target.x,target.y) < 64
 			direction = point_direction(x,y,target.x,target.y)

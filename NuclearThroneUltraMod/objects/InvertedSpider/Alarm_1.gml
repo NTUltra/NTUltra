@@ -1,6 +1,6 @@
 scrTarget()
 alarm[1] = 5+random(10)
-
+canDodge = true;
 if instance_exists(Player)
 {
 if Player.loops>0

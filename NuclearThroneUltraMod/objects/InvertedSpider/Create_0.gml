@@ -28,3 +28,4 @@ maxSpeed = 5.2
 
 dodge=10;
 
+canDodge = false;

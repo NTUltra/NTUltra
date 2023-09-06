@@ -2227,7 +2227,7 @@ function scrFire2() {
 	with instance_create(x,y,GoldenFlameBurst)
 	{
 	creator = other.id
-	ammo = 1
+	ammo = 10
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -12848,6 +12848,97 @@ function scrFire2() {
 	BackCont.shake += 6.5
 	wkick = 5.1
 
+	break;
+	
+	//ERASER
+	case 654:
+
+	snd_play_fire(sndDoubleShotgun);
+	with instance_create(x,y,ShotgunEraserBurst)
+	{
+		thisAimDirection = aimDirection;
+		angle *= other.accuracy;
+		angleStep = angle/projectileAmount;
+		creator = other.id
+		ammo = 4
+		time = 1
+		team = other.team
+		event_perform(ev_alarm,0)
+	}
+
+	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 5
+	wkick = 6
+
+	break;
+	
+	//THE CRENDOOKEN
+	case 655:
+
+	snd_play_fire(sndClusterLauncher);
+	snd_play_fire(sndDiscgun);
+
+	with instance_create(x,y,SpikedBall)
+	{motion_add(aimDirection+(random(10)-5)*other.accuracy,12)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 10
+	wep_swap[wep] = choose(sndSwapBow,sndSwapEnergy,sndSwapExplosive,sndSwapMachinegun,sndSwapShotgun);
+	wkick = 6
+	if wep_type[wep] < 5
+		wep_type[wep] ++;
+	else 
+		wep_type[wep] = 1;
+
+	break;
+	
+	//THE SAFROODEN
+	case 656:
+	snd_play_fire(sndDragonStart)
+	snd_play_fire(sndHeavyCrossbow)
+
+	with instance_create(x,y,BallistaMashup)
+	{
+		motion_add(aimDirection+(random(4)-2)*other.accuracy,22)
+		image_angle = direction
+		team = other.team
+	}
+	if Player.skill_got[17]
+		speed *= 0.75;
+	BackCont.viewx2 += lengthdir_x(35,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(35,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 12
+	wkick = 7
+	wep_swap[wep] = choose(sndSwapBow,sndSwapEnergy,sndSwapDragon,sndSwapMachinegun,sndSwapShotgun);
+	wkick = 6
+	if wep_type[wep] < 5
+		wep_type[wep] ++;
+	else 
+		wep_type[wep] = 1;
+
+	break;
+	
+	//BALLISTA
+	case 657:
+	snd_play_fire(sndHeavyMachinegun);
+	snd_play_fire(sndHeavyCrossbow)
+	
+	with instance_create(x,y,Ballista)
+	{
+		motion_add(aimDirection+(random(4)-2)*other.accuracy,26)
+		image_angle = direction
+		team = other.team
+	}
+	if Player.skill_got[17]
+		speed *= 0.75;
+	BackCont.viewx2 += lengthdir_x(45,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(45,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 14
+	wkick = 7
 	break;
 	
 	}//end of switch part 2!

@@ -364,14 +364,14 @@ function scrSkills() {
 	skill_tips[28] = "dodge to kill"
 	skill_msnd[28] =  sndMutRage
 
-	skill_name[29] = "INSOMNIA"
+	skill_name[29] = "HYPERSOMNIA"
 	skill_text[29] = "ENEMIES DON'T ATTACK YOU#FOR A COUPLE OF SECONDS#AT THE START OF EACH AREA"
 	if instance_exists(Player) && (Player.race == 13)
 		skill_text[29] = "ENEMIES DON'T ATTACK YOU#FOR A COUPLE OF SECONDS#AFTER YOU ENGAGE FIRE"
 	if scrIsGamemode(25)
 		skill_text[29] = "ENEMIES DON'T ATTACK YOU#FOR A COUPLE OF SECONDS#WHEN THEY SPAWN IN"
 	skill_tips[29] = "sleep"
-	skill_msnd[29] =  sndInsomnia
+	skill_msnd[29] =  sndHypersomnia
 
 	skill_name[30] = "POWER CRAVING"
 	skill_text[30] = "EVERY WEAPON HAS ONE RANDOM WEAPON MOD#INCREASE MOD MAX BY ONE#INCREASE EFFECTIVENESS OF WEAPON MODS#MORE WEAPON MODS IN CROWNVAULT"

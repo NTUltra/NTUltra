@@ -10,5 +10,5 @@ if speed > 3.5
 speed = 3.5
 
 if nofly > 0
-nofly -= 0.5
+	nofly -= 0.5
 

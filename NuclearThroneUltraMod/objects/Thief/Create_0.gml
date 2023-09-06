@@ -48,3 +48,4 @@ stealAmount = 2;
 loops = GetPlayerLoops();
 if loops > 0
 	actTime = 7;
+canDodge = false;

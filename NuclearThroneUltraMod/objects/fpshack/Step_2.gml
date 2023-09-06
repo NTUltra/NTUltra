@@ -92,11 +92,13 @@ with BladeSplintershooter
 }
 with Raven
 {
-	nofly += 0.25;	
+	if nofly > 0.5
+		nofly += 0.25;	
 }
 with InvertedRaven
 {
-	nofly += 0.25;	
+	if nofly > 0.5
+		nofly += 0.25;	
 }
 with enemy
 {

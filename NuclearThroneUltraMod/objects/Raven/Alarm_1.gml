@@ -1,40 +1,22 @@
-alarm[1] = 22+random(12)
-
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1] = 17+random(10);
-}
+alarm[1] = actTime + random(actTime);
 
 scrTarget()
 if target > 0
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {
-if point_distance(target.x,target.y,x,y) > 80
+if point_distance(target.x,target.y,x,y) > minRange
 {
-if random(4) < 1 && point_distance(target.x,target.y,x,y) < 180
+if random(4) < 1 && point_distance(target.x,target.y,x,y) < maxRange
 {
-//FIRE
-alarm[2] = 1
-ammo = 3
-if instance_exists(Player)
-{
-if Player.loops>0
-ammo=6
-}
-gunangle = point_direction(x,y,target.x,target.y)
-alarm[1] = 20+random(5)
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1] = 10+random(5);
-
-}
+	//FIRE
+	alarm[2] = 1;
+	ammo = maxAmmo
+	gunangle = point_direction(x,y,target.x,target.y)
 }
 else
 {
-if random(4) < 1
+if random(5) < 1
 snd_play(sndRavenScreech)
 direction = point_direction(x,y,target.x,target.y)+random(90)-45
 speed = 0.4

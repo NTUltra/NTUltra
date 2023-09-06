@@ -3,11 +3,11 @@ function scrFire() {
 	exit;
 	if wep==0{
 		exit;}
-
 	IDKWID=false;
 	can_shoot = 0
 	reload = min(reload + wep_load[wep],wep_load[wep]);
 	queueshot = max(queueshot-1,0);
+	Player.fired = true;
 	if (Player.alarm[2]<1)//alarm = Fish Ultra B
 	{
 		ammo[wep_type[wep]] -= wep_cost[wep]

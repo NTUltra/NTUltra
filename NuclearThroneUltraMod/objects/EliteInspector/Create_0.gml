@@ -46,4 +46,4 @@ dodgethis=0;
 wepangle = choose(-140,140)
 wepflip = 1
 dodge=0;
-
+canDodge = false;

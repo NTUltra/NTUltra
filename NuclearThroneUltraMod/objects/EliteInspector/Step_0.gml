@@ -41,10 +41,10 @@ gunangle = direction
 }
 
 }
-else
+else if canDodge
 {
 if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<60{
-if mouse_check_button_pressed(mb_left) and target > 0
+if target > -1 && instance_exists(target) && instance_exists(Player) && Player.fired
 {
 if point_distance(x,y,target.x,target.y) < 64
 direction = point_direction(x,y,target.x,target.y)

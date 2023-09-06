@@ -19,7 +19,6 @@ spr_dead = sprInvertedMeleeDead
 snd_hurt = sndAssassinHit
 snd_dead = sndAssassinDie
 
-snd_play(sndAssassinGetUp)
 
 //behavior
 walk = 0
@@ -34,3 +33,4 @@ morphMe=0;
 frozen=false;
 prevhealth=my_health;
 
+canDodge = false;

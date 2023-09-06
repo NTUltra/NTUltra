@@ -16,6 +16,11 @@ spr_walk = sprScrapBossWalk
 spr_hurt = sprScrapBossHurt
 spr_dead = sprScrapBossDead
 spr_fire = sprScrapBossFire
+spr_intro = sprScrapBossIntro;
+spr_actual_idle = spr_idle;
+spr_actual_hurt = spr_hurt;
+spr_stop = sprScrapBossStop;
+spr_charge = sprScrapBossCharge;
 
 
 right = 1
@@ -64,4 +69,23 @@ with Raven
 scrRavenLift()
 }
 }
-
+acc = 0.5;
+maxSpeed = 2;
+maxSpinSpeed = 1;
+actTime = 10;
+loops = GetPlayerLoops();
+missileType = ScrapBossMissile;
+missileAmount = 3;
+fireRate = 6;
+turnSpeed = 4;
+if loops > 0
+{
+	actTime = 12;
+	missileAmount = 4;
+}
+if loops > 1
+{
+	fireRate = 5;
+	turnSpeed = 6;
+	maxSpinSpeed += 0.2;
+}
