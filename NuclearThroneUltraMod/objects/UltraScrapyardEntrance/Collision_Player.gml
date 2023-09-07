@@ -12,6 +12,7 @@ if my_health > 0
 	{
 		if Player.rad >= cost
 		{
+			scrRaddrop(10);
 			sprite_index = spr_active;
 			image_index = 0;
 			image_speed = 0.4;

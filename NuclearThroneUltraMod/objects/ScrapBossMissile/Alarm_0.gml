@@ -1,6 +1,6 @@
 /// @description loop shooting
 
-with instance_create(x,y,proj)
+with instance_create_depth(x,y,depth + 1,proj)
 {
 	motion_add(other.direction+random(20)-10,3)
 	image_angle = direction
@@ -9,5 +9,4 @@ with instance_create(x,y,proj)
 
 
 
-alarm[0]=14;
-
+alarm[0]=25;

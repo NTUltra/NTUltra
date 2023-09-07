@@ -27,19 +27,23 @@ if ammo > 0
 }
 if alarm[1] > 0 && spr_idle == spr_actual_idle && sprite_index != spr_hurt
 	sprite_index = spr_fire;
-if my_health < maxhealth/2 and sndhalfhp = 0
+if my_health < maxhealth*0.6 and sndhalfhp = 0
 {
+	event_user(2);
 snd_play(sndBigDogTaunt)
 sndhalfhp = 1
 }
 
 if !instance_exists(Player) and sndtaunt = 0
 {
-tauntdelay += 1
-if tauntdelay > 50
-{
-snd_play(sndBigDogTaunt)
-sndtaunt = 1
-}
+	if UberCont.normalGameSpeed == 60
+		tauntdelay += 0.5;
+	else
+		tauntdelay += 1
+	if tauntdelay > 50
+	{
+	snd_play(sndBigDogTaunt)
+	sndtaunt = 1
+	}
 }
 

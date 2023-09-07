@@ -12,8 +12,8 @@ do {
 		team = other.team
 	}
 	spd -= 0.25;
-	x += lengthdir_x(16,direction);
-	y += lengthdir_y(16,direction);
+	x += lengthdir_x(24,direction);
+	y += lengthdir_y(24,direction);
 }
 until dir > maxRange or place_meeting(x,y,Wall)
 

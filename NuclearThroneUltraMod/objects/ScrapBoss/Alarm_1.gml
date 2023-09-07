@@ -4,6 +4,7 @@ if ammo > 0
 }
 else
 {
+	event_user(3);
 	spr_hurt = spr_actual_hurt;
 	spr_idle = spr_stop;
 	image_index = 0

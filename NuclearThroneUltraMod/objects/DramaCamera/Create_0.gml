@@ -18,7 +18,7 @@ if instance_exists(Player) && !instance_exists(SurvivalWave)
 	var subarea = Player.subarea;
     if area = 1 || area = 105
     song = musBoss1;
-    if area = 3 || area = 106
+    if area = 3 || area = 106 || area == 136
 	{
 		if subarea == 1
 		{

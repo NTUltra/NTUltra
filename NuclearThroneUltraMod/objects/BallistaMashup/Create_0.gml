@@ -10,4 +10,4 @@ yprev = y;
 colX = x;
 colY = y;
 alarm[3] = 1;
-alarm[2] = 120;
+alarm[4] = 120;

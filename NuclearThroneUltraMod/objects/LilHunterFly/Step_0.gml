@@ -1,6 +1,9 @@
 if sprite_index = sprLilHunterLift
 {
-z -= 8//8
+	if UberCont.normalGameSpeed == 60
+		z -= 4;
+	else
+		z -= 8;
 if y+z < __view_get( e__VW.YView, 0 )-64 and -z > 160
 {
 if instance_exists(Player)
@@ -22,8 +25,10 @@ sprite_index = sprLilHunterLand
 }
 else if sprite_index = sprLilHunterLand
 {
-z += 10
-
+	if UberCont.normalGameSpeed == 60
+		z += 5;
+	else
+		z += 10;
 if z >= 0
 {
 

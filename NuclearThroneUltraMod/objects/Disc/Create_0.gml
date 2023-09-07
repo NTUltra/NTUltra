@@ -6,3 +6,4 @@ dmg = 6;
 dist = 0
 
 alarm[11] = 1;
+alarm[2] = 1;

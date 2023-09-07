@@ -66,7 +66,7 @@ if (type == network_type_data) {
 				}
 				room_goto(romGame);
 				with UberCont {
-					todaysSeed += 1;
+					seed += 2;
 					seed = UberCont.todaysSeed;
 				    var al = array_length(encrypted_data.ctot_dailies_score_seed);
 				    encrypted_data.ctot_dailies_score_seed[al] = todaysSeed;

@@ -419,13 +419,13 @@ function scrPopEnemies() {
     if spawnarea = 136 {
 		if loops > 0 {
 			if styleb = 1 && random(2) < 1 {
-				instance_create(x + 16, y + 16, choose(UltraMeleeBandit, ,UltraMeleeFake, UltraSalamander, UltraSalamander, UltraSalamander, UltraSalamander, choose(BuffGator,UltraSalamander)))
+				instance_create(x + 16, y + 16, choose(UltraMeleeFake, ,UltraSalamander, UltraSalamander, UltraSalamander, UltraSalamander, UltraSalamander, choose(PalaceGuardian,UltraSalamander)))
 	        }
 	        else {
 				if random(35) < 1
 				instance_create(x + 16, y + 16, PalaceGuardian)
 	            else if random(4) < 1
-	            instance_create(x + 16, y + 16, choose(UltraMeleeBandit, SmallUltraSniper, UltraMeleeFake, SmallUltraSniper, Gator, SmallUltraSniper, choose(BuffGator,SmallUltraSniper), Exploder, UltraSalamander))
+	            instance_create(x + 16, y + 16, choose(UltraMeleeBandit, SmallUltraSniper, UltraMeleeFake, SmallUltraSniper, UltraMeleeFake, SmallUltraSniper, choose(PalaceGuardian,SmallUltraSniper), Exploder, UltraSalamander))
 	            else {
 	                if random(10) < 1 {
 	                    if random(8) < 1 instance_create(x + 16, y + 16, Car)
@@ -1371,7 +1371,7 @@ function scrPopEnemies() {
 			wallBot = GoldenWallBot;
 			bigBot = GoldenBigBot;
 			sniper = GoldenSniper;
-			palaceGuardian = GoldScorpion;
+			palaceGuardian = GoldSnowTank;
 		} else if spawnarea == 134 //Ultra
 		{
 			octaBot = UltraOctaBot;

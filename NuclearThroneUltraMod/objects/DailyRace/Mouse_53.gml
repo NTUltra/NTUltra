@@ -23,7 +23,7 @@ if hover
 		image_index = 1;
 		with UberCont
 		{
-			seed = todaysSeed + 1;
+			seed = todaysSeed;
 			//seedText = seed;
 			useSeed = true;
 			canRestart = true;

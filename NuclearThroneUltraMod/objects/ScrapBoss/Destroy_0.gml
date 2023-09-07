@@ -41,31 +41,32 @@ scrBossKill();
 Sleep(50)
 if object_index == UltraBigDog
 {
-	with instance_create(x,y,BigDogExplo)
+	with instance_create(x,y,UltraBigDogExplode)
 	{
 		spr_dead = other.spr_dead;
 	}
 }
 else
 {
-	with instance_create(x,y,UltraBigDogExplode)
+	with instance_create(x,y,BigDogExplo)
 	{
 		spr_dead = other.spr_dead;
-	}	
+	}
+	//drop IDKWID?
+	if(random(1000)<1){
+	with instance_create(x,y,WepPickup)
+	{
+	scrWeapons()
+	wep =75
+	name = wep_name[wep]
+	ammo = 0
+	type = wep_type[wep]
+	curse = 0
+	sprite_index = wep_sprt[wep]
+	}}
 }
 event_inherited()
 
 
-//drop IDKWID?
-if(random(1000)<1){
-with instance_create(x,y,WepPickup)
-{
-scrWeapons()
-wep =75
-name = wep_name[wep]
-ammo = 0
-type = wep_type[wep]
-curse = 0
-sprite_index = wep_sprt[wep]
-}}
+
 

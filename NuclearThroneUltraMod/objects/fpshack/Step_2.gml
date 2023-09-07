@@ -58,79 +58,9 @@ with Player
 		blastArmourDelay += dt;
 	wave -= 0.4*dt;
 }
-with SnowFlake
-	wave -= 0.1;
-with WeaponMod
-	wave -= 0.2;
-with Disc
-{
-	dist -= dt;
-}
-with Blade
-{
-	dist -= dt;
-}
-with SplitBlade
-{
-	dist -= dt;
-}
-with SuperSplitBlade
-{
-	dist -= dt;
-}
-with UltraBlade
-{
-	dist -= dt;
-}
-with ChunkyBlade
-{
-	dist -= dt;
-}
-with BladeSplintershooter
-{
-	dist -= dt;
-}
-with Raven
-{
-	if nofly > 0.5
-		nofly += 0.25;	
-}
-with InvertedRaven
-{
-	if nofly > 0.5
-		nofly += 0.25;	
-}
 with enemy
 {
 	existTime -= dt;
 	if walk > 0
 		walk += dt;
-}
-with LilHunterFly {
-	if sprite_index = sprLilHunterLift
-	{
-		z -= 4;
-	}
-	else if sprite_index = sprLilHunterLand
-	{
-		z -= 5;	
-	}
-}
-with InvertedLilHunterFly {
-	if sprite_index = sprInvertedLilHunterLift
-	{
-		z -= 4;
-	}
-	else if sprite_index = sprInvertedLilHunterLand
-	{
-		z -= 5;	
-	}
-}
-with LilHunterDie
-{
-	direction -= 0.25;
-}
-with InvertedLilHunterDie
-{
-	direction -= 0.25;
 }

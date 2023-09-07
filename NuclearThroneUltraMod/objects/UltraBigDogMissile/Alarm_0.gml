@@ -12,4 +12,4 @@ with instance_create(x,y,ExploGuardianBullet)
 	image_angle = direction
 	team = other.team
 }
-alarm[0] = 12;
+alarm[0] = 20;

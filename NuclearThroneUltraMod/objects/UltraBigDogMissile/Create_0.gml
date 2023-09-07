@@ -7,6 +7,6 @@ spr_hurt = sprUltraBigDogMissileHurt;
 spr_dead = sprScrapBossMissileDead;
 acc = 0.125;
 maxSpeed = 2.3;
-alarm[0] = 10;
+alarm[0] = 30;
 explodeOnHitTime += 60;
 trailSprite = sprUltraBigDogMissileTrail;

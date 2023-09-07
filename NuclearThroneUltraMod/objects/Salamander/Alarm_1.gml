@@ -2,7 +2,7 @@ alarm[1] = actTime+random(actTime)
 scrTarget()
 if target > 0
 {
-	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(5) < 2
+	if point_distance(x,y,target.x,target.y) < maxRange && collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(5) < 2
 	{
 		ammo = maxAmmo;
 		alarm[2] = tellTime;

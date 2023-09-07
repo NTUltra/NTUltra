@@ -5598,7 +5598,7 @@ function scrWeapons() {
 	wep_name[506] = "ULTRA SWORD GUN"
 	wep_type[506] = 3
 	wep_auto[506] = 1
-	wep_load[506] = 10
+	wep_load[506] = 12
 	wep_cost[506] = 2
 	wep_sprt[506] = sprUltraSwordGun
 	wep_area[506] = 26
@@ -7236,11 +7236,11 @@ function scrWeapons() {
 	
 	wep_name[655] = "THE CRENDOOKEN"
 	wep_type[655] = 1
-	wep_auto[655] = 0
-	wep_load[655] = 30
+	wep_auto[655] = 1
+	wep_load[655] = 20
 	wep_cost[655] = 3
-	wep_sprt[655] = sprSharpStress
-	wep_area[655] = 17
+	wep_sprt[655] = sprCrendookenBullet
+	wep_area[655] = 14
 	wep_text[655] = "all will be given for all to be taken"
 	wep_swap[655] = sndSwapCursed
 	wep_rad[655] = 0;
@@ -7248,10 +7248,10 @@ function scrWeapons() {
 	wep_name[656] = "THE SAFROODEN"
 	wep_type[656] = 1
 	wep_auto[656] = 0
-	wep_load[656] = 35
+	wep_load[656] = 30
 	wep_cost[656] = 4
-	wep_sprt[656] = sprSharpStress
-	wep_area[656] = 17
+	wep_sprt[656] = sprCrossbow
+	wep_area[656] = 14
 	wep_text[656] = "arrow from hell"
 	wep_swap[656] = sndSwapCursed
 	wep_rad[656] = 0;
@@ -7261,19 +7261,19 @@ function scrWeapons() {
 	wep_auto[657] = 0
 	wep_load[657] = 40
 	wep_cost[657] = 3
-	wep_sprt[657] = sprSharpStress
+	wep_sprt[657] = sprBalista
 	wep_area[657] = 11
 	wep_text[657] = "ancient painbringer"
 	wep_swap[657] = sndSwapBow
 	wep_rad[657] = 0;
 	
 	wep_name[658] = "AORTA"
-	wep_type[658] = 5
+	wep_type[658] = 4
 	wep_auto[658] = 1
 	wep_load[658] = 4
 	wep_cost[658] = 1
 	wep_sprt[658] = sprAorta
-	wep_area[658] = 13
+	wep_area[658] = 15
 	wep_text[658] = "stream of red"
 	wep_swap[658] = sndSwapExplosive
 	wep_rad[658] = 0;
@@ -7282,12 +7282,14 @@ function scrWeapons() {
 	wep_type[659] = 1
 	wep_auto[659] = 1
 	wep_load[659] = 15
-	wep_cost[659] = 4
-	wep_sprt[659] = sprSharpStress
+	wep_cost[659] = 5
+	wep_sprt[659] = sprCrossbow
 	wep_area[659] = 17
 	wep_text[659] = "experiments"
 	wep_swap[659] = sndSwapCursed
 	wep_rad[659] = 0;
+	
+	//THE CHENDOKOOVEN
 
 	maxwep = array_length(wep_name)-1;
 

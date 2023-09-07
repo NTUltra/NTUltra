@@ -628,7 +628,7 @@ if Player.area == 9 && Player.subarea == 1
 if Player.area == 3 && Player.subarea == 2
 {
 	if instance_exists(ProtoStatue)
-		with instance_furthest((f.x*3+ProtoStatue.x)/4+random(128)-64+32,(f.y*3+ProtoStatue.y)/4+random(128)-64+32,Floor)
+		with instance_furthest(Player.x+random(128)-64+32,Player.y+random(128)-64+32,Floor)
 			instance_create(x+16,y+16,UltraScrapyardEntrance)
 }
 

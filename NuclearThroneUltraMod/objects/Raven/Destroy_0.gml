@@ -1,9 +1,11 @@
-scrDrop(15,0)
 
 event_inherited()
-if fps_real >= fps
-repeat(3+irandom(6))
+if object_index == Raven
 {
-instance_create(x,y,RavenFeather);
+	scrDrop(15,0)
+	if fps_real >= fps
+	repeat(3+irandom(6))
+	{
+	instance_create(x,y,RavenFeather);
+	}
 }
-

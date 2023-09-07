@@ -5326,6 +5326,7 @@ function scrFire2() {
 	with instance_create(x,y,BladeSplintershooter)
 	{motion_add(aimDirection+(random(10)-5)*other.accuracy,10)
 	image_angle = direction
+	ang = direction;
 	team = other.team}
 
 	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
@@ -12887,19 +12888,41 @@ function scrFire2() {
 	BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 10
-	wep_swap[wep] = choose(sndSwapBow,sndSwapEnergy,sndSwapExplosive,sndSwapMachinegun,sndSwapShotgun);
 	wkick = 6
 	if wep_type[wep] < 5
 		wep_type[wep] ++;
 	else 
 		wep_type[wep] = 1;
+	switch (wep_type[wep])
+	{
+		case 1:
+			wep_sprt[wep] = sprCrendookenBullet;
+			wep_swap[wep] = sndSwapMachinegun;
+		break;
+		case 2:
+			wep_sprt[wep] = sprCrendookenShotgun;
+			wep_swap[wep] = sndSwapShotgun;
+		break;
+		case 3:
+			wep_sprt[wep] = sprCrendookenBolt;
+			wep_swap[wep] = sndSwapBow;
+		break;
+		case 4:
+			wep_sprt[wep] = sprCrendookenExplosive;
+			wep_swap[wep] = sndSwapExplosive;
+		break;
+		case 5:
+			wep_sprt[wep] = sprCrendookenEnergy;
+			wep_swap[wep] = sndSwapEnergy;
+		break;
+	}
 
 	break;
 	
 	//THE SAFROODEN
 	case 656:
 	snd_play_fire(sndDragonStart)
-	snd_play_fire(sndHeavyCrossbow)
+	snd_play_fire(sndBalista)
 
 	with instance_create(x,y,BallistaMashup)
 	{
@@ -12924,8 +12947,7 @@ function scrFire2() {
 	
 	//BALLISTA
 	case 657:
-	snd_play_fire(sndHeavyMachinegun);
-	snd_play_fire(sndHeavyCrossbow)
+	snd_play_fire(sndBalista);
 	
 	with instance_create(x,y,Ballista)
 	{
@@ -13017,17 +13039,24 @@ function scrFire2() {
 		team = other.team
 	}
 	var totalAng = 40 * accuracy;
-	var am = 5;
+	var am = 6;
 	var angStep = totalAng/am;
 	var ang = (aimDirection - (totalAng*0.5)) - 5;
+	var ps = 15;
+	var i = 0;
 	repeat(am)
 	{
 		with instance_create(x,y,Bullet2Explosive)
 		{
-			motion_add(ang,16);
+			motion_add(ang,ps);
 			image_angle = direction
 			team = other.team
 		}
+		i++;
+		if i > 3
+			ps --;
+		else
+			ps ++;
 		ang += angStep;
 	}
 	ang = (aimDirection - (totalAng*0.5)) + 5;

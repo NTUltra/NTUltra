@@ -1,4 +1,6 @@
 function scrFire() {
+	IDKWID=false;
+	can_shoot = 0
 	if !instance_exists(Player) || instance_exists(SpiralCont)
 	exit;
 	if wep==0{
@@ -8,8 +10,6 @@ function scrFire() {
 		if !turned
 			exit;
 	}
-	IDKWID=false;
-	can_shoot = 0
 	reload = min(reload + wep_load[wep],wep_load[wep]);
 	queueshot = max(queueshot-1,0);
 	Player.fired = true;

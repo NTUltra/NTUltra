@@ -21,8 +21,10 @@ motion_add(random(360),random(3));
     }
 
 }
-
-wave+=0.4;
+if UberCont.normalGameSpeed == 60
+	wave += 0.2;
+else
+	wave+=0.4;
 
 if place_meeting(x,y,Player)
 {

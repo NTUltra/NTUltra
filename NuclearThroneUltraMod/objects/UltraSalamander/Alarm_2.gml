@@ -7,16 +7,12 @@ if ammo > 0
 	ammo -= 1
 	alarm[2] = 1
 	sprite_index = spr_fire
-	var decide = ammo % 2 == 0;
-	if decide
-		swapper = !swapper;
-	if !decide && swapper
-		with instance_create(x,y,EnemyBullet2)
-		{
-			motion_add(other.gunangle+random(4)-2,4)
-			team = other.team
-			image_angle = direction;
-		}
+	with instance_create(x,y,EnemyBullet2)
+	{
+		motion_add(other.gunangle+random(4)-2,4)
+		team = other.team
+		image_angle = direction;
+	}
 	walk=0;
 	speed=0;
 	if angleleft
@@ -29,5 +25,5 @@ else
 	audio_stop_sound(sndSalamanderFireLoop)
 	snd_play(sndSalamanderEndFire)
 	sprite_index = spr_idle
-	alarm[1] = actTime+random(actTime);
+	alarm[1] = actTime*2+random(actTime*2);
 }
