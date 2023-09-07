@@ -698,7 +698,7 @@ function scrNextLevel() {
 		hard -= 0.5;
 	}
 	if scrIsCrown(10)
-		hard ++;
+		hard += 0.5;
 	hard = max(0,hard);
 	scrAddToRoute(area);
 }

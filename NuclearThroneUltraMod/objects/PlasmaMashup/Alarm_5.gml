@@ -10,7 +10,7 @@ with instance_create(x,y,Splinter)
 }
 with instance_create(x,y,Splinter)
 {
-	motion_add(other.angle,22);
-	image_angle = direction + 180;
+	motion_add(other.angle + 180,22);
+	image_angle = direction;
 	team = other.team;
 }

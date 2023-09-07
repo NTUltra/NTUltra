@@ -18,6 +18,13 @@ if my_health > 0
 			ccurse = 1;
 			snd_play(choose(snd_lowa,snd_lowh));
 		}
+		repeat(12)
+		{
+			with instance_create_depth(other.x,other.y,depth - 1, Curse)
+			{
+				motion_add(random(360),1 + random(2));	
+			}
+		}
 		/*
 		with instance_create(x,y,Portal)
 		{

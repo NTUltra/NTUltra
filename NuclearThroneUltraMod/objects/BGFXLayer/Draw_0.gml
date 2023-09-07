@@ -31,9 +31,9 @@ for (var i = 0; i < al; i++;)
 	//}
 }
 if fps_real < fps
-	amount -= 10;
+	amount = max(amount - 20,0);
 else if amount < maxAmount
-	amount+= 10;
+	amount += 10;
 while ds_list_size(drawer) > amount
 	ds_list_delete(drawer,0);
 surface_reset_target();

@@ -162,6 +162,14 @@ else if Player.area = 3
 
 	}
 }
+else if Player.area = 136
+{
+//with instance_create(x,y,Drama)
+	if random(100)<1
+		name = choose("CHILD MAULTER","BABY MUNCHER");
+	else
+	name = "ULTRA BIG DOG";
+}
 else if Player.area = 106
 {
 //with instance_create(x,y,Drama)
@@ -428,7 +436,18 @@ else if Player.area = 131
 {
 	name = "INVERTED BOSS BOT";
 }
-
+else if Player.area = 132
+{
+	name = "CURSED BOSS BOT";
+}
+else if Player.area = 133
+{
+	name = "GOLDEN BOSS BOT";
+}
+else if Player.area = 134
+{
+	name = "ULTRA BOSS BOT";
+}
 }
 var n = name;
 with instance_create(x,y,Drama)

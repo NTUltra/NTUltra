@@ -7250,7 +7250,7 @@ function scrWeapons() {
 	wep_auto[656] = 0
 	wep_load[656] = 30
 	wep_cost[656] = 4
-	wep_sprt[656] = sprCrossbow
+	wep_sprt[656] = sprSafroodenBullet
 	wep_area[656] = 14
 	wep_text[656] = "arrow from hell"
 	wep_swap[656] = sndSwapCursed
@@ -7283,13 +7283,13 @@ function scrWeapons() {
 	wep_auto[659] = 1
 	wep_load[659] = 15
 	wep_cost[659] = 5
-	wep_sprt[659] = sprCrossbow
+	wep_sprt[659] = sprZyndroxoogenBullet
 	wep_area[659] = 17
 	wep_text[659] = "experiments"
 	wep_swap[659] = sndSwapCursed
 	wep_rad[659] = 0;
 	
-	//THE CHENDOKOOVEN
+	//THE CHENDOKOOVEN Misiles and seeker bolts that fire lasers bullets pellets
 
 	maxwep = array_length(wep_name)-1;
 

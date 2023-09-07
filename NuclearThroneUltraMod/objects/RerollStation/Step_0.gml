@@ -1,15 +1,14 @@
 /// @description Cycle through skills
-
 if place_meeting(x,y,Player) && !used
 {
 	if (!scrHasAnySkill())
 	{
+		active = true;
 		name = "CAN'T REROLL";
 		exit;
 	}
 	if !active
 	{
-		active = true;
 		var i = skillIndex + 1;
 		if i > maxskill
 			i = 0;
@@ -25,6 +24,7 @@ if place_meeting(x,y,Player) && !used
 		skillIndex = i;
 		name = "REROLL#"+skill_name[i];
 	}
+	active = true;
 	if KeyCont.key_pick[Player.p] = 1 && Player.maxhealth > 0
 	{
 		used = true;

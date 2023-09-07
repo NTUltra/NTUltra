@@ -1,7 +1,7 @@
 /// @description Open the chest
 if !instance_exists(GenCont)
 {
-	var cost = 310;//50% on level 10
+	var cost = 279//45% on level 10//310;//50% on level 10
 	if Player.skill_got[23]//Open mind
 		cost -= 62;//248//40%
 	if Player.race == 20

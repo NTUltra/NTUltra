@@ -10,6 +10,7 @@ if instance_exists(creator)
 //FIRING
 with instance_create(x,y,bloodType)
 {
+	dmg -= other.dmgreduc = 1;
 	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random_range(other.accuracy,-other.accuracy),12+other.boost)
 	image_angle = direction
 	team = other.team

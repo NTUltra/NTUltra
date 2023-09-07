@@ -1,7 +1,7 @@
 /// @description Go to Ultra Scrapyard
 if my_health > 0
 {
-	var cost = 465;//75% on level 10
+	var cost = 434//70%//465;//75% on level 10
 	if Player.race == 20
 		cost -= 62;
 	var mr = 620;

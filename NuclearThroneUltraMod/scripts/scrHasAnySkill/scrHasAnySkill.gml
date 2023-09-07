@@ -8,6 +8,8 @@ function scrHasAnySkill(){
 		{
 			if skill_got[dir]
 				return true;
+			dir++;
 		}
 	}
+	return false;
 }

@@ -4,6 +4,7 @@ if other.team != team and other.my_health > 0 && alarm[0] < 1
 	snd_play(sndExplosionS,0.1,true);
 	with instance_create(x+hspeed,y+vspeed,SmallExplosion)
 	{
+		dmg --;
 		scrCopyWeaponMod(other);	
 	}
 	instance_destroy()

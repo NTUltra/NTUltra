@@ -1175,7 +1175,7 @@ function scrDrawHUD() {
 
 	with RerollStation
 	{
-		if place_meeting(x,y,Player) && active
+		if place_meeting(x,y,Player) && !used
 		{
 			draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-8)
 

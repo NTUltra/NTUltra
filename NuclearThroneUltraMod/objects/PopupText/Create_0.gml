@@ -8,3 +8,4 @@ theColour=c_white;
 blink=true;
 sprt = mskPickupThroughWall;
 ii = 0;
+alarm[3] = 2;

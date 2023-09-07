@@ -33,21 +33,27 @@ if alarm[2] < 1
 				vspeed *= -1;
 			image_angle = direction;
 			x += lengthdir_x(1,direction);
-			y += lengthdir_y(1,direction);	
-			while collision_point(x,y,Wall,false,false)
+			y += lengthdir_y(1,direction);
+			var maxStep = 32;
+			var i = 0;
+			while collision_point(x,y,Wall,false,false) || i < maxStep
 			{
 				x += lengthdir_x(1,direction);
-				y += lengthdir_y(1,direction);	
+				y += lengthdir_y(1,direction);
+				i++;
 			}
 			bounce --;
 			snd_play(sndShotgunHitWall,0.1,true);
 		}
 		else
 		{
-			while !collision_point(x,y,Wall,false,false)
+			var maxStep = 32;
+			var i = 0;
+			while !collision_point(x,y,Wall,false,false) || i < maxStep
 			{
 				x += lengthdir_x(1,direction);
-				y += lengthdir_y(1,direction);	
+				y += lengthdir_y(1,direction);
+				i++;
 			}
 			snd_play(sndBoltHitWall,0.1,true,true,1,false,true,0.76)
 			alarm[3] = 2;

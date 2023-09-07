@@ -12888,7 +12888,7 @@ function scrFire2() {
 	BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 10
-	wkick = 6
+	wkick = 7
 	if wep_type[wep] < 5
 		wep_type[wep] ++;
 	else 
@@ -12935,14 +12935,34 @@ function scrFire2() {
 	BackCont.viewx2 += lengthdir_x(35,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(35,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 12
-	wkick = 7
-	wep_swap[wep] = choose(sndSwapBow,sndSwapEnergy,sndSwapDragon,sndSwapMachinegun,sndSwapShotgun);
 	wkick = 6
 	if wep_type[wep] < 5
 		wep_type[wep] ++;
 	else 
 		wep_type[wep] = 1;
-
+	switch (wep_type[wep])
+	{
+		case 1:
+			wep_sprt[wep] = sprSafroodenBullet;
+			wep_swap[wep] = sndSwapMachinegun;
+		break;
+		case 2:
+			wep_sprt[wep] = sprSafroodenShotgun;
+			wep_swap[wep] = sndSwapShotgun;
+		break;
+		case 3:
+			wep_sprt[wep] = sprSafroodenBolt;
+			wep_swap[wep] = sndSwapBow;
+		break;
+		case 4:
+			wep_sprt[wep] = sprSafroodenExplosive;
+			wep_swap[wep] = sndSwapExplosive;
+		break;
+		case 5:
+			wep_sprt[wep] = sprSafroodenEnergy;
+			wep_swap[wep] = sndSwapEnergy;
+		break;
+	}
 	break;
 	
 	//BALLISTA
@@ -13002,6 +13022,7 @@ function scrFire2() {
 		yOffset = h;
 		bloodType = HeavyBloodBullet;
 		ammo = 2;
+		dmgreduc = 1;
 		team = other.team
 		event_perform(ev_alarm,0);
 	}
@@ -13013,6 +13034,7 @@ function scrFire2() {
 		yOffset = -h;
 		bloodType = HeavyBloodBullet;
 		ammo = 2;
+		dmgreduc = 1;
 		team = other.team
 		event_perform(ev_alarm,0);
 	}
@@ -13033,15 +13055,15 @@ function scrFire2() {
 	
 	with instance_create(x,y,PlasmaMashup)
 	{
-		motion_add(aimDirection+(random(4)-2)*other.accuracy,3)
+		motion_add(aimDirection+(random(4)-2)*other.accuracy,5)
 		image_angle = direction
 		angle = direction;
 		team = other.team
 	}
-	var totalAng = 40 * accuracy;
-	var am = 6;
+	var totalAng = 30 * accuracy;
+	var am = 5;
 	var angStep = totalAng/am;
-	var ang = (aimDirection - (totalAng*0.5)) - 5;
+	var ang = (aimDirection - (totalAng*0.5)) - 1;
 	var ps = 15;
 	var i = 0;
 	repeat(am)
@@ -13053,34 +13075,62 @@ function scrFire2() {
 			team = other.team
 		}
 		i++;
-		if i > 3
+		if i > 2
 			ps --;
 		else
 			ps ++;
 		ang += angStep;
 	}
-	ang = (aimDirection - (totalAng*0.5)) + 5;
+	ang = (aimDirection - (totalAng*0.5)) + 1;
+	ps = 19;
+	i = 0;
 	repeat(am)
 	{
 		with instance_create(x,y,MorphBullet)
 		{
-			motion_add(ang,24);
+			motion_add(ang,ps);
 			image_angle = direction
 			team = other.team
 		}
+		i++;
+		if i > 2
+			ps -= 2;
+		else
+			ps += 2;
 		ang += angStep;
 	}
 	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 6
 	wkick = 5
-	wep_swap[wep] = choose(sndSwapBow,sndSwapEnergy,sndSwapDragon,sndSwapMachinegun,sndSwapShotgun);
-	wkick = 6
 	if wep_type[wep] < 5
 		wep_type[wep] ++;
 	else 
 		wep_type[wep] = 1;
-		
+	
+	switch (wep_type[wep])
+	{
+		case 1:
+			wep_sprt[wep] = sprZyndroxoogenBullet;
+			wep_swap[wep] = sndSwapMachinegun;
+		break;
+		case 2:
+			wep_sprt[wep] = sprZyndroxoogenShotgun;
+			wep_swap[wep] = sndSwapShotgun;
+		break;
+		case 3:
+			wep_sprt[wep] = sprZyndroxoogenBolt;
+			wep_swap[wep] = sndSwapBow;
+		break;
+		case 4:
+			wep_sprt[wep] = sprZyndroxoogenExplosive;
+			wep_swap[wep] = sndSwapExplosive;
+		break;
+		case 5:
+			wep_sprt[wep] = sprZyndroxoogenEnergy;
+			wep_swap[wep] = sndSwapEnergy;
+		break;
+	}
 	break;
 	
 	}//end of switch part 2!

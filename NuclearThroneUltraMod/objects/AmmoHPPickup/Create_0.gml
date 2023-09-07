@@ -35,18 +35,18 @@ if instance_exists(Player){
 	{
 		friction = 0.3;
 	}
-if scrIsCrown(4) { alarm[0] *= 0.34}
+	if scrIsCrown(4) { alarm[0] *= 0.35}
 
-if Player.race = 15{ alarm[0] *= 0.6}//atom
+	if Player.race = 15{ alarm[0] *= 0.6}//atomf
 
-if Player.ultra_got[59] && Player.altUltra
-{
-	alarm[0] *= 0.4;
-	rerolls = 3;
-}
-
-if Player.ultra_got[60]//Anti matter
-	atomUltraD = true;
+	if Player.ultra_got[59] && Player.altUltra
+	{
+		alarm[0] *= 0.4;
+		rerolls = 3;
+	}
+	alarm[0] = max(alarm[0],1);
+	if Player.ultra_got[60]//Anti matter
+		atomUltraD = true;
 }
 
 image_speed = 0
@@ -55,7 +55,7 @@ event_inherited();
 
 supercursed = false;
 as = 6;
-curseSpeed = 0.5;
+curseSpeed = 1;
 //if instance_exists(Player) && Player.skill_got[3]
 //	as = 8;
 if UberCont.normalGameSpeed == 60
