@@ -256,7 +256,11 @@ if looping && area != 104
 		ammo[5] = typ_amax[5];
 	
 	scrRegainOneLifePart();
-	
+	if skill_got[18] && !lastWishPrevent
+	{
+		snd_play_2d(sndStrongSpiritGain);
+		lastWishPrevent = true;
+	}
 	debug("Looping now");
 	if loops > 0 && scrIsHardMode()
 	{
@@ -701,6 +705,7 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		my_health = other.my_health;
 		strongspirit = other.strongspirit;
 		strongspiritused = other.strongspiritused;
+		lastWishPrevent = other.lastWishPrevent;
 		isAlkaline = other.isAlkaline;
 		rage = other.rage;
 		humphrySkill = other.humphrySkill;
@@ -775,6 +780,7 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		cwepmod4 = other.cwepmod4
 		patience = other.patience;
 		strongspirit = other.strongspirit;
+		lastWishPrevent = other.lastWishPrevent;
 		isAlkaline = other.isAlkaline;
 		humphrySkill = other.humphrySkill;
 		skillpoints = other.skillpoints;

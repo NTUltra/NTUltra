@@ -478,10 +478,10 @@ if skill_got[38] && tookHit && alarm[3] < 1 && alarm[1] < 1
 	{
 		metabolism = 0;
 		my_health = prevhealth;
-		alarm[3] += 20;
+		alarm[3] += 50;
 		audio_stop_sound(snd_hurt);
 		snd_hurt = sndDamageNegate;
-		snd_play(snd_hurt);
+		snd_play_2d(sndMetabolism);
 		scrGiveEuphoriaShield();
 		if skill_got[12] //Euphoria
 			alarm[3] += 24;
@@ -737,30 +737,42 @@ if(my_health <= 0 && maxhealth > 0)
 
     if skill_got[25]//strong spirit
     {
-    if strongspirit==true&&strongspiritused==false
-    {
-    snd_play(sndStrongSpiritLost);
-    my_health = 1;
-	Sleep(50);
-	alarm[3] += 20;
-	snd_hurt = sndDamageNegate;
-	scrGiveEuphoriaShield();
-    strongspiritused=true;
-    strongspirit=false;
-    }
+	    if strongspirit==true&&strongspiritused==false
+	    {
+	    snd_play(sndStrongSpiritLost);
+	    my_health = 1;
+		Sleep(50);
+		alarm[3] += 20;
+		snd_hurt = sndDamageNegate;
+		scrGiveEuphoriaShield();
+	    strongspiritused=true;
+	    strongspirit=false;
+	    }
     }
     if ultra_got[103] && humphrySkill >= 200 && (skill_got[25]=0||strongspiritused=true)//Humphry Protective mustache C
     {
-    humphrySkill=0;
-	snd_play_2d(sndProtectiveMustache,0,true);
-	alarm[3] += 20;
-	snd_hurt = sndDamageNegate;
-	scrGiveEuphoriaShield();
-	with PlayerAlarms
+	    humphrySkill=0;
+		snd_play_2d(sndProtectiveMustache,0,true);
+		alarm[3] += 20;
+		snd_hurt = sndDamageNegate;
+		scrGiveEuphoriaShield();
+		with PlayerAlarms
 			alarm[7] = 20;
-    my_health = 1;
-	alarm[3] += 20;
+	    my_health = 1;
+		alarm[3] += 20;
     }
+	if my_health <= 0 {
+		if lastWishPrevent {
+			my_health = maxhealth;
+			if race == 25
+				my_health += 3;
+			lastWishPrevent = false;
+			snd_hurt = sndDamageNegate;
+			snd_play_2d(sndMutLastWish);
+			scrGiveEuphoriaShield();
+			alarm[3] += 60;
+		}
+	}
 }
 
 

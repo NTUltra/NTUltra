@@ -233,7 +233,7 @@ function scrNextLevel() {
 			exit;
 		}
 		//Factory
-		if ((area == 130 || area == 131 || area == 132 || area == 133 || area == 134) && subarea > 0 && !inverted)
+		if ((area == 130 || area == 131 || area == 132 || area == 133 || area == 134) && subarea > 0)
 		{
 			// To inv palace
 			area = 118;

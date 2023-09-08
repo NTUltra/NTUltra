@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "sndBleh",
+  "name": "sndMetabolism",
   "audioGroupId": {
     "name": "agsfx",
     "path": "audiogroups/agsfx",
@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.684989,
+  "duration": 0.742834,
   "parent": {
     "name": "Fx",
     "path": "folders/Sounds/Fx.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "sndBleh.ogg",
+  "soundFile": "sndMetabolism.ogg",
   "type": 0,
   "volume": 1.0,
 }

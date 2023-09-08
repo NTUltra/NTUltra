@@ -107,6 +107,8 @@ function scrLoadRun(){
 					Player.isPermanentB = encryptedRun.isPermanentB;
 				if variable_struct_exists(encryptedRun, "isPermanent")
 					Player.isPermanentC = encryptedRun.isPermanentC;
+				if variable_struct_exists(encryptedRun, "lastWishPrevent")
+					Player.lastWishPrevent = encryptedRun.lastWishPrevent;
 				Player.wepmod1 = encryptedRun.wepmod1;
 				Player.wepmod2 = encryptedRun.wepmod2;
 				Player.wepmod3 = encryptedRun.wepmod3;

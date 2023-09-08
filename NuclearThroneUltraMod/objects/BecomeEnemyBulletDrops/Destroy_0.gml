@@ -1,2 +1,3 @@
 /// @description xxx
-scrDrop(5,0);
+if random(10) < 6
+	scrDrop(10,0);

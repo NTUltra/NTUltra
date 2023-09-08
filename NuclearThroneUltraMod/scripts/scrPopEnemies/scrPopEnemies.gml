@@ -419,7 +419,7 @@ function scrPopEnemies() {
     if spawnarea = 136 {
 		if loops > 0 {
 			if styleb = 1 && random(2) < 1 {
-				instance_create(x + 16, y + 16, choose(UltraMeleeFake, ,UltraSalamander, UltraSalamander, UltraSalamander, UltraSalamander, UltraSalamander, choose(PalaceGuardian,UltraSalamander)))
+				instance_create(x + 16, y + 16, choose(UltraMeleeFake, UltraSalamander, UltraSalamander, UltraSalamander, UltraSalamander, UltraSalamander, choose(PalaceGuardian,UltraSalamander)))
 	        }
 	        else {
 				if random(35) < 1

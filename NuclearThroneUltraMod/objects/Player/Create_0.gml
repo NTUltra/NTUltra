@@ -146,6 +146,7 @@ p = 0
 banditland = false;
 
 strongspiritregained = 0;
+lastWishPrevent = false;
 blastArmourDelay = 0;
 blastArmourPower = 3;
 

@@ -18,6 +18,7 @@ function scrCopyPlayData(){
 		hp: Player.my_health,
 		strongspirit: Player.strongspirit,
 		strongspiritused: Player.strongspiritused,
+		lastWishPrevent: Player.lastWishPrevent,
 		alkaline: Player.isAlkaline,
 		lastwishused: UberCont.lastwishused,
 		rage: Player.rage,

@@ -42,6 +42,10 @@ bwepmod1 = 0;
 bwepmod2 = 0;
 bwepmod3 = 0;
 bwepmod4 = 0;
+
+isPermanent = false;
+isPermanentB = false;
+isPermanentC = false;
 ammo[0] = 999
 ammo[1] = 999
 ammo[2] = 999

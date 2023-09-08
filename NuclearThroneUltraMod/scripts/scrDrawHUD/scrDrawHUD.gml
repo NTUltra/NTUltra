@@ -206,6 +206,8 @@ function scrDrawHUD() {
 			draw_sprite_ext(sprExtraLivesHud,dataRef.livesRegain[dix-1],__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-16*dix,__view_get( e__VW.YView, 0 )+36,1,1,0,c_white,1);
 	    }
 	}
+	if (dataRef.lastWishPrevent)
+		draw_sprite_ext(sprLastWishPrevent,0,__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-16,__view_get( e__VW.YView, 0 )+36,1,1,0,c_white,1);
 	dix ++
 	var sheepFakouts = dataRef.sheepFakeouts;
 	if sheepFakouts > 0

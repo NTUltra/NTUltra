@@ -391,11 +391,15 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 		rage = other.rage;
 		strongspirit = other.strongspirit;
 		strongspiritused = other.strongspiritused;
+		lastWishPrevent = other.lastWishPrevent;
 		isAlkaline = other.isAlkaline;
 		crown = other.crown;
 		wep = other.wep;
 		bwep = other.bwep;
 		cwep = other.cwep;
+		isPermanent = other.isPermanent;
+		isPermanentB = other.isPermanentB;
+		isPermanentC = other.isPermanentC;
 		wepmod1 = other.wepmod1;
 		wepmod2 = other.wepmod2;
 		wepmod3 = other.wepmod3;

@@ -121,6 +121,7 @@ with Player//Data to keep
 		rage = other.rage;
 		strongspirit = other.strongspirit;
 		strongspiritused = other.strongspiritused;
+		lastWishPrevent = other.lastWishPrevent;
 		isAlkaline = other.isAlkaline;
 		crown = other.crown;
 		wep = other.wep;
