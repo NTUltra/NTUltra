@@ -761,4 +761,5 @@ with instance_create(x,y,DataRef)
 	drawlowhp = 0;
 	spr_idle = other.spr_idle;
 	metabolism = other.metabolism;
+	lastWishPrevent = other.lastWishPrevent;
 }
