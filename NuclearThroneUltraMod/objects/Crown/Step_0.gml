@@ -1,10 +1,17 @@
 if instance_exists(Player)
-{if point_distance(x,y,Player.x,Player.y) > 96 
 {
-if speed > maxSpeed+1
-speed = maxSpeed+1
-mp_potential_step(targetx,targety,1,false)
-}
+	var dis = point_distance(x,y,Player.x,Player.y);
+	if dis > 350
+	{
+		x = Player.x;
+		y = Player.y;
+	}
+	if dis > 96 
+	{
+		if speed > maxSpeed+1
+			speed = maxSpeed+1
+		mp_potential_step(targetx,targety,1,false)
+	}
 else if speed > maxSpeed
 speed = maxSpeed
 }else if speed > maxSpeed

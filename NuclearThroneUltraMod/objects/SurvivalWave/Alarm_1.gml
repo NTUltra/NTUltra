@@ -42,12 +42,16 @@ if !scrIsGamemode(25)
 			}
 			yy += ystep;
 		}
+		instance_activate_object(Floor);
+		instance_activate_object(Wall);
+		instance_activate_object(Top);
+		instance_activate_object(TopSmall);
 		with Floor
 		{
 			if styleb
-			sprite_index = sprFloor100D;
+				sprite_index = sprFloor100D;
 			else
-			sprite_index = sprFloor100;
+				sprite_index = sprFloor100;
 		}
 		UberCont.crownVaultChallenge ++;
 		if UberCont.crownVaultChallenge > 2

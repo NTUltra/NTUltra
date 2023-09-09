@@ -1,4 +1,4 @@
-scrDrop(60,0)
+scrDrop(50,0)
 snd_play(sndExplosionL)
 with instance_create(x,y,GreenExplosion)
 	team = other.team;

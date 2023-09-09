@@ -422,7 +422,7 @@ function scrPowers() {
 						pt.mytext = "+"+string(h-1)+" HP";
 				}
 				Sleep(50);
-				alarm[3]=10;//duration of iframes
+				alarm[3] = max(alarm[3],10);//duration of iframes
 			}
 			else
 			{
@@ -453,7 +453,7 @@ function scrPowers() {
 		    sprite_index=spr_hurt;
 		    snd_play_2d(snd_hurt, hurt_pitch_variation);
 
-		    var raddrop=16;//13 An ally drops 5 rads
+		    var raddrop=15;//16 An ally drops 5 rads
 		    if skill_got[5]
 		    raddrop=26;//19
     

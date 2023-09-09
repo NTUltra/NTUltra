@@ -63,7 +63,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cf340567-5609-43c7-bae1-3cda58221cb6","path":"sprites/sprFloor2BBloom/sprFloor2BBloom.yy",},},},"Disabled":false,"id":"477c0f71-ddb0-4c61-9b98-3236aa39c5be","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 4,
     "yorigin": 4,

@@ -16,9 +16,9 @@ if instance_exists(Player){
 		repeat(fireExplosionAmount)
 		{
 		with instance_create(x,y,Flame)
-		{motion_add(ang,3+random(2))
+		{motion_add(ang,4+random(1))
 		team = other.team
-		move_contact_solid(direction,14)}
+		}
 		ang += angstep;
 		}
 	}

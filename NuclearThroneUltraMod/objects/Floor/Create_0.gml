@@ -1,4 +1,4 @@
-
+friction = 1;
 image_index = choose(0,0,0,0,0,0,0,1,2)
 image_speed = 0
 if random(500) < 1
@@ -64,6 +64,9 @@ sprite_index=sprFloor1B;
 break;
 case 2:
 sprite_index=sprFloor2B;
+with instance_create(x,y,FloorBloom) {
+	sprite_index = sprFloor2B;
+}
 break;
 case 3:
 sprite_index=sprFloor3B;
@@ -94,6 +97,9 @@ sprite_index=sprFloor100B;
 break;
 case 102:
 sprite_index=sprFloor102B;
+with instance_create(x,y,FloorBloom) {
+	sprite_index = sprFloor2B;
+}
 break;
 case 103:
 sprite_index=sprFloor103B;

@@ -45,6 +45,6 @@ if visible
 			dmg=6;
 	}
 	snd_play(sndMeatExplo,0.1,true)
-	BackCont.shake += 4
+	BackCont.shake += 3 - (BackCont.shake*0.1)
 }
 team = 2

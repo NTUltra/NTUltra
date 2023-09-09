@@ -13,9 +13,9 @@ image_angle=random(360);
 
 alarm[1]=120;
 snd_loop(sndFlamerLoop);
-dmg = 20;
+dmg = 16;
 fireAmount = 2;
-fireExplosionAmount = 12;
+fireExplosionAmount = 16;
 inverted = false;
 fireDelay = 2;
 bloomSprite = sprMiniFlameCannonBallBloom;

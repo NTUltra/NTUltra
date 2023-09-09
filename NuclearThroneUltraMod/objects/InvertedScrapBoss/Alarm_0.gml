@@ -36,27 +36,27 @@ with instance_create(x,y,EnemyMissile)
         }
         
         snd_play(sndBigDogMissile)
-repeat(2)
-{
-with instance_create(x,y,ScrapBossMissile)
-motion_add(random(360),2)
-}
+	repeat(2)
+	{
+		with instance_create(x,y,ScrapBossMissile)
+		motion_add(random(360),2)
+	}
 
 
-    if instance_exists(Player)
-    {
-    if Player.loops>0
-    {//fire an extra missile on loop
-        with instance_create(x,y,EnemyMissile)
-        {
-        team=other.team
-        motion_add(random(360),1)
-        image_angle=direction;
-        }
-    }
-    }
+	    if instance_exists(Player)
+	    {
+	    if Player.loops>0
+	    {//fire an extra missile on loop
+	        with instance_create(x,y,EnemyMissile)
+	        {
+	        team=other.team
+	        motion_add(random(360),1)
+	        image_angle=direction;
+	        }
+	    }
+	    }
 
-alarm[0] = 10
+	alarm[0] = 10
 }
 else
 {

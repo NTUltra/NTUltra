@@ -376,7 +376,10 @@ function scrDrawHUD() {
 	//SKILL ICONS
 	dix = 0;
 	dir = 0;
-	if dataRef.totalSkills > 12 - (max(-1,dataRef.maxarmour-1-dataRef.hudArmourSpace))
+	var extraSpace = 12;
+	if (UberCont.opt_sideart != sprite_get_number(sprSideArt) + 1)
+		extraSpace = 12 - (max(-1,dataRef.maxarmour-1-dataRef.hudArmourSpace))
+	if dataRef.totalSkills > extraSpace
 	{
 		var cdir = 0;
 		var fs = 0;
@@ -395,7 +398,7 @@ function scrDrawHUD() {
 	}
 	repeat(dataRef.maxskill+1)
 	{
-		if dataRef.skill_got[dir] = 1 && dix < 11 - (max(-1,dataRef.maxarmour-1-dataRef.hudArmourSpace))
+		if dataRef.skill_got[dir] = 1 && dix < extraSpace
 		{
 			var xx = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-12-16*dix;
 			var yy = __view_get( e__VW.YView, 0 )+12;

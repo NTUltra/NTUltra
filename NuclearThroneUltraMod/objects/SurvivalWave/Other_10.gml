@@ -1,4 +1,8 @@
 /// @description Start wave
+instance_activate_object(Floor);
+instance_activate_object(Wall);
+instance_activate_object(Top);
+instance_activate_object(TopSmall);
 event_user(3);
 if scrIsGamemode(42)
 {

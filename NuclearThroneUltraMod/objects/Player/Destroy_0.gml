@@ -319,7 +319,7 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 	loops = other.loops;
 	hard = other.hard;
 	kills = other.kills;
-	myCorpse = playerCorpse;
+	myCorpse = other.myCorpse;
 	level = max(other.boostLevel,other.level);
 	inverted = other.inverted;
 	crownvisits = other.crownvisits;

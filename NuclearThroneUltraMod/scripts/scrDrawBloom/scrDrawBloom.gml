@@ -417,13 +417,9 @@ function scrDrawBloom() {
 	draw_sprite_ext(sprEnemyLaserEnd,img,x,y,2,2,image_angle,c_white,ba)
 	}
 
-	with Floor
+	with FloorBloom
 	{
-	if sprite_index = sprFloor2B
-	draw_sprite_ext(sprFloor2BBloom,image_index,x,y,1,1,image_angle,c_white,ba)
-
-	if sprite_index = sprFloor102B
-	draw_sprite_ext(sprFloor102BBloom,image_index,x,y,1,1,image_angle,c_white,ba)
+		draw_sprite_ext(sprite_index,image_index,x,y,1,1,image_angle,c_white,ba)
 	}
 
 	with LaserCharge

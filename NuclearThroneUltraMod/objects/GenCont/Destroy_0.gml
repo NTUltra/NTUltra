@@ -235,7 +235,8 @@ if instance_exists(Player)
 				super = true;
 				raddrop *= 1.25;
 				maxhealth = my_health;
-				maxhealth *= 2;
+				var healthBuff = min(50, maxhealth);
+				maxhealth += healthBuff;
 				my_health = maxhealth;
 			}	
 		}

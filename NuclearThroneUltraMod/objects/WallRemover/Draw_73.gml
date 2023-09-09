@@ -2,6 +2,10 @@
 draw_set_alpha(opacity);
 draw_circle_colour(x,y,radius,c_red,c_red,true);
 draw_set_alpha(1);
+instance_activate_object(Floor);
+instance_activate_object(Wall);
+instance_activate_object(Top);
+instance_activate_object(TopSmall);
 var newcollision = ds_list_create();
 var al = collision_circle_list(x,y,radius,Wall,false,false,newcollision,false);
 for (var i = 0; i < al; i ++)

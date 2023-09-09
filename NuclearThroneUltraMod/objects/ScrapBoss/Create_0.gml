@@ -75,7 +75,7 @@ maxSpinSpeed = 1;
 actTime = 10;
 loops = GetPlayerLoops();
 missileType = ScrapBossMissile;
-missileAmount = 3;
+missileAmount = 2;
 fireRate = 6;
 turnSpeed = 4;
 if loops > 0

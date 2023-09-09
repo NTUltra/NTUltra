@@ -17,16 +17,17 @@ if team!=Player.team{//enemy
 	image_speed=0.5+random(0.2);}
 }
 else{
-BackCont.shake += 2
+	image_angle+=4;
+	BackCont.shake += 2
 	repeat(fireAmount)
 	{
 	with instance_create(x,y,Flame)
-	{motion_add(other.image_angle+random(10)-5,3+random(2))
+	{motion_add(other.image_angle+random(10)-5,4+random(2))
 	team = other.team
 	}
 
 	with instance_create(x,y,Flame)
-	{motion_add(other.image_angle+180+random(10)-5,3+random(2))
+	{motion_add(other.image_angle+180+random(10)-5,4+random(2))
 	team = other.team
 	}
 	}

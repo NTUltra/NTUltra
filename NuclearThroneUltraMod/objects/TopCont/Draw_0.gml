@@ -2,6 +2,7 @@
 with BoltTrail
 draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,theColour,1);
 */
+
 with FrozenEnemy
 {
 image_alpha=0.5;
@@ -12,43 +13,44 @@ with FrozenPlayer
 image_alpha=0.5;
 draw_self();
 }
-
-with Top
+if fps_real >= fps
 {
-	if visible{
-		draw_sprite(sprite_index,image_index,x+16,y-8)
-		draw_sprite(sprite_index,image_index,x,y-8+16)
-		draw_sprite(sprite_index,image_index,x+16,y-8+16)
-		draw_sprite(sprite_index,image_index,x,y-8)
-	}
-}
-//draw_sprite_ext(sprite_index,-1,x,y-8,1,1,0,background_color,1)
-with TopSmall
-draw_sprite(sprite_index,image_index,x,y-8)
-
-//draw_sprite_ext(sprite_index,-1,x,y-8,1,1,0,background_color,1)
-
-with Wall
-{
-	draw_sprite_part_ext(outspr,outindex,l,r,w,h,x-4+l,y-12+r,1,1,c_white,1)
-}
-with Wall {
-	draw_sprite(topspr,topindex,x,y-8)
-}
-with VikingWall
-{
-	if visible
+	with Top
 	{
-		draw_sprite_part_ext(outspr,outindex,l,r,w,h,x-4+l,y-12+r,1,1,c_gray,1)
+		if visible{
+			draw_sprite(sprite_index,image_index,x+16,y-8)
+			draw_sprite(sprite_index,image_index,x,y-8+16)
+			draw_sprite(sprite_index,image_index,x+16,y-8+16)
+			draw_sprite(sprite_index,image_index,x,y-8)
+		}
 	}
+
+	//draw_sprite_ext(sprite_index,-1,x,y-8,1,1,0,background_color,1)
+	with TopSmall
+	draw_sprite(sprite_index,image_index,x,y-8)
+	//draw_sprite_ext(sprite_index,-1,x,y-8,1,1,0,background_color,1)
 }
-with VikingWall
-{
-	if visible
+	with Wall
 	{
-		draw_sprite_ext(topspr,topindex,x,y-8,1,1,image_angle,c_gray,1)
+		draw_sprite_part_ext(outspr,outindex,l,r,w,h,x-4+l,y-12+r,1,1,c_white,1)
 	}
-}
+	with Wall {
+		draw_sprite(topspr,topindex,x,y-8)
+	}
+	with VikingWall
+	{
+		if visible
+		{
+			draw_sprite_part_ext(outspr,outindex,l,r,w,h,x-4+l,y-12+r,1,1,c_gray,1)
+		}
+	}
+	with VikingWall
+	{
+		if visible
+		{
+			draw_sprite_ext(topspr,topindex,x,y-8,1,1,image_angle,c_gray,1)
+		}
+	}
 if instance_exists(Spiral)
 	with Bones
 	draw_sprite_ext(sprite_index,-1,x,y,image_xscale,1,0,c_white,1)
@@ -156,8 +158,8 @@ with Player
 	{if point_distance(x,y,other.x,other.y) < 96
 	event_perform(ev_draw,0)}
 	}
-if race=18
-event_perform(ev_draw,0);//on top of all things cause I'm an angel!
+	if race=18
+		event_perform(ev_draw,0);//on top of all things cause I'm an angel!
 
 
 }
@@ -423,11 +425,12 @@ with EyesBrainWashFX
 }
 scrDrawBloom()
 
+scrDarkness()
 if darkness = 1 && surface_exists(dark)
 {draw_set_blend_mode(bm_subtract)
 draw_surface(dark,__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ))
-draw_set_blend_mode(bm_normal)}
-
+draw_set_blend_mode(bm_normal)
+}
 
 if !instance_exists(MenuGen) && !instance_exists(ThroneIISpiral)
 {

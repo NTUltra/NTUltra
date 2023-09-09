@@ -25,7 +25,7 @@ if other.team != team and other.my_health > 0 && (other.team!=2 || image_index<5
 	else if other.team != 2
 	{
 		with other
-			scrIframeSkipper(0.04);
+			scrIframeSkipper(0.03);
 	}
 	x += (other.x-x)*0.25+random(6)-3
 	y += (other.y-y)*0.25+random(6)-3

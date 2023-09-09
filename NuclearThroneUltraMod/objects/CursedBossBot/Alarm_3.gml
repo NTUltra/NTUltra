@@ -4,7 +4,7 @@ snd_play_fire(sndLaser);
 snd_play_fire(sndUltraLaserUpg);
 snd_play_fire(sndPlasmaHit);
 Sleep(40);
-scrDrop(6);
+scrDrop(6,0);
 var t = team;
 var al = array_length(laserTell);
 var angle = wallDir;

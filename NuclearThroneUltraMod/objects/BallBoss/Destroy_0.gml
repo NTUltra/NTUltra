@@ -35,6 +35,10 @@ if !instance_exists(InvaderBossSpawnPortal)
 	{
 		instance_create(x,y,SaveStation);
 	}
+	instance_activate_object(Floor);
+	instance_activate_object(Wall);
+	instance_activate_object(Top);
+	instance_activate_object(TopSmall);
 	with Floor
 	{
 		if !isArenaFloor

@@ -17,7 +17,7 @@ if instance_exists(Player)
 {
 	if Player.loops>0
 	{
-		alarm[0] = 30+random(60);
+		alarm[0] = 60+random(60);
 		explodeOnHitTime += 30;
 	}
 	proj = EnemyBullet1;

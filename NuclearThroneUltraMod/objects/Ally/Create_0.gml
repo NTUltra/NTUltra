@@ -1,4 +1,4 @@
-raddrop = 5
+raddrop = 4
 
 hurt_pitch_variation = 0;
 existTime = 0;
@@ -12,7 +12,10 @@ spr_dead = sprAllyDead
 if instance_exists(Player)
 {
 	if Player.skill_got[5]
+	{
 		gun = sprBetterAllyGun
+		raddrop += 1;
+	}
 	if Player.ultra_got[37]==1//Rebel Ultra A Personal Guard
 		maxhealth=30;
 	else

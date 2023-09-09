@@ -2659,12 +2659,12 @@ function scrFire() {
 	}
 	with instance_create(x,y,MiniFlameCannonBall)
 	{
-	motion_add(aimDirection+(random(8)-4)*other.accuracy,5)
+	motion_add(aimDirection+(random(8)-4)*other.accuracy,6)
 	team = other.team}
 
 	motion_add(aimDirection+180,2.5)
-	BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 10
 	wkick = 8
 
@@ -5002,7 +5002,7 @@ function scrFire() {
 					var speedAdd = 0;
 					if other.poppop
 					{
-						speed += 1.5;
+						speed += 1.25;
 						speed *= 1.15;
 					}
 					if other.skill_got[30] == 1

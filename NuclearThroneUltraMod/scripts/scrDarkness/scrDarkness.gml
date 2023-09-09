@@ -3,7 +3,7 @@ function scrDarkness() {
 	{
 
 	if !(surface_exists(dark) ){
-			dark = surface_create(__view_get( e__VW.WView, 0 ),__view_get( e__VW.HView, 0 ))
+		dark = surface_create(__view_get( e__VW.WView, 0 ),__view_get( e__VW.HView, 0 ))
 	}
 
 
@@ -16,7 +16,7 @@ function scrDarkness() {
 
 	draw_set_color(c_gray)
 
-	with Floor{if sprite_index = sprFloor2B or sprite_index = sprFloor102B
+	with FloorBloom{
 	draw_circle(x+16-__view_get( e__VW.XView, 0 ),y+16-__view_get( e__VW.YView, 0 ),32+random(4),0)}
 	with Player
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),130+random(4),0)

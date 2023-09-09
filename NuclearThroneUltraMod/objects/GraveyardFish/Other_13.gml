@@ -7,6 +7,11 @@ reachedHalfHealth = true;
 if tpTimes > 0
 	alarm[5] = 10 + irandom(20);
 tpTimes--;
+instance_activate_object(Floor);
+instance_activate_object(Wall);
+instance_activate_object(Top);
+instance_activate_object(TopSmall);
+instance_activate_object(enemyCollisionWall);
 with hitme
 {
 	if team == 2

@@ -6,6 +6,7 @@ holdExplainUltraModTimer = 0;
 holdExplainWepModTimer = 0;
 holdExplainMutation = 0;
 holdExplainGamemode = 0;
+right = 1;
 if !instance_exists(BGFXLayer)
 	instance_create(x,y,BGFXLayer);
 if !instance_exists(CorpseCollector)
@@ -23,7 +24,7 @@ if instance_exists(Player)
 		darkness = 1
 	if Player.ultra_got[11]//BRAIN STYLE
 		darkness = 0;
-	if Player.totalSkills > 13 - (max(-1,Player.maxarmour-1-Player.hudArmourSpace))
+	if !UberCont.opt_sideart != sprite_get_number(sprSideArt) + 1 && Player.totalSkills > 12 - (max(-1,Player.maxarmour-1-Player.hudArmourSpace))
 	{
 		alarm[1] = 1;
 		skillscrollmax = Player.totalSkills - floor(min(Player.totalSkills,40)/10);

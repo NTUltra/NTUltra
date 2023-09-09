@@ -41,6 +41,10 @@ with Player
 {
 	area = 5;	
 }
+instance_activate_object(Floor);
+instance_activate_object(Wall);
+instance_activate_object(Top);
+instance_activate_object(TopSmall);
 with Floor
 {
 	if styleb
