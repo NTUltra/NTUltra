@@ -1,5 +1,5 @@
-function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepAreaParam = 0, areaWepTries = 0) {
-	var wepTier = wepTierParam;
+function scrDecideWep(wepTierParam, maxTriesParam = 8, cursedParam = 0, minWepAreaParam = 0, areaWepTries = 0) {
+	var wepTier = wepTierParam - 1;
 	var maxTries = maxTriesParam;
 	var cursed = cursedParam;
 	var minWepArea = minWepAreaParam;
@@ -17,7 +17,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			if Player.race = 8
 			{
 				wepTier += 1
-				maxTries += 2;
+				maxTries += 4;
 			}
 			if !Player.altUltra && Player.ultra_got[29]==1//Refined taste
 			{
@@ -40,9 +40,15 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 					return scrDecideWepGold();	
 				}
 			}
-			if Player.hard + wepTier < 0
+			wepTier += Player.hard;
+			if wepTier < 0
 			{
 				wepTier = 0;
+			}
+			wepTier = max(1,wepTier);
+			if Player.race == 17
+			{
+				wepTier -= 1;
 			}
 			var triesForSpecificTier = 0;
 			var maxValidTierWep = 0;
@@ -50,11 +56,10 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			{
 				var tries = 0;
 				var tooBad = 0;
-				var h = max(1,Player.hard);
 				do {
 					wep = irandom(maxwep-1)+1;
 				//Non melee has been excluded, but not every tier has multiple melees so do some shit
-				if wep_area[wep]  <= h + wepTier && wep_area[wep] > wep_area[maxValidTierWep]
+				if wep_area[wep]  <= wepTier && wep_area[wep] > wep_area[maxValidTierWep]
 				{
 					maxValidTierWep = wep;
 				}
@@ -66,23 +71,23 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 					}
 				}
 				until (
-					(wep_area[wep] == h + wepTier-tooBad || triesForSpecificTier > maxTries || wep_area[wep] >= maxAreaGoodEnough)
-					&& wep_area[wep] >= minWepArea && wep_area[wep] <= h + wepTier
+					(wep_area[wep] == max(1,wepTier-tooBad) || triesForSpecificTier > maxTries || wep_area[wep] >= maxAreaGoodEnough)
+					&& wep_area[wep] >= minWepArea && wep_area[wep] <= wepTier
 				)
 			}
 			else
 			{
 				do {
 					wep = irandom(maxwep-1)+1;
-					if wep_area[wep]  <= Player.hard+wepTier && wep_area[wep] > wep_area[maxValidTierWep]
+					if wep_area[wep]  <= wepTier && wep_area[wep] > wep_area[maxValidTierWep]
 					{
 						maxValidTierWep = wep;
 					}
 					triesForSpecificTier++;
 				}
 				until (
-				(wep_area[wep] == Player.hard+wepTier || triesForSpecificTier > maxTries || wep_area[wep] >= maxAreaGoodEnough)
-				&& wep_area[wep] >= minWepArea && wep_area[wep] <= Player.hard+wepTier
+				(wep_area[wep] == wepTier || triesForSpecificTier > maxTries || wep_area[wep] >= maxAreaGoodEnough)
+				&& wep_area[wep] >= minWepArea && wep_area[wep] <= wepTier
 				&& ( (wep != Player.wep and wep != Player.bwep and wep != Player.cwep) || Player.race == 7/*roids can dual wield*/) 
 				)
 			}

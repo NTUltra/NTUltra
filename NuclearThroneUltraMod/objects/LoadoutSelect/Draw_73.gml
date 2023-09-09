@@ -28,7 +28,7 @@ if (hasNoMenuOpen()
 	var xxxx = camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])*0.5);
 	var am = 5;
 	//More than 5 ultras
-	draw_set_halign(fa_middle);
+	draw_set_halign(fa_center);
 	draw_set_valign(fa_top);
 	draw_text(xxxx,yyy-28,"ULTRA MUTATIONS");
 	switch (race)

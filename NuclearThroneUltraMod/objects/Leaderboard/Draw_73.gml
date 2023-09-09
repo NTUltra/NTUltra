@@ -1,5 +1,5 @@
 /// @description Draw popup weapon
-draw_set_halign(fa_middle);
+draw_set_halign(fa_center);
 draw_set_valign(fa_bottom);
 var bkcol = make_colour_rgb(68,29,94);//make_colour_rgb(51,20,60);//c_dkgray
 var outcol = make_colour_rgb(51,20,60);

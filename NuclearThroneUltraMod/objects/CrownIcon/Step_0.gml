@@ -310,6 +310,10 @@ if crown == 11
 
 		with Corpse
 		instance_destroy();
+		with CorpseCollector
+		{
+			ds_list_clear(corpses);	
+		}
 
 		instance_create(x,y,Player);
 

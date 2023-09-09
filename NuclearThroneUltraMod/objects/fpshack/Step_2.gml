@@ -10,7 +10,6 @@ with all
 {
 	//x = xprevious + (x - xprevious) * 0.5;
 	//y = yprevious + (y - yprevious) * 0.5;
-	
 	if speed > friction
 	{
 		//x -= hspeed*dt;

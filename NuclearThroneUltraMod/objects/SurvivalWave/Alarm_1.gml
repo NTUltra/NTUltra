@@ -10,6 +10,15 @@ if !scrIsGamemode(25)
 			instance_destroy(id,false);
 			instance_create(x,y,SurvivalPortal);
 		}
+		with CorpseCollector
+		{
+			var al = ds_list_size(corpses)
+			for (var i = 0; i < al; i++)
+			{
+				instance_create(corpses[| i].xx,corpses[| i].yy,SurvivalPortal);
+			}
+			ds_list_clear(corpses);
+		}
 		with WepPickup
 		{
 			motion_add(point_direction(other.centerX,other.centerY,x,y),8);

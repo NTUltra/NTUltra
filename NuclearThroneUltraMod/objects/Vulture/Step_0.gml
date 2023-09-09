@@ -3,7 +3,7 @@ if sprite_index = spr_hurt
 {
 	alarm[2] = 0;
 	alarm[3] = 0;
-	corpseTarget = -1;
+	corpseTarget = noone;
 }
 else if alarm[2] > 0
 	sprite_index = spr_eat;
@@ -16,7 +16,7 @@ motion_add(direction,0.8)
 if speed > maxSpeed
 speed = maxSpeed
 
-if corpseTarget > -1 && instance_exists(corpseTarget) && alarm[2] < 1
+if corpseTarget != noone && instance_exists(corpseTarget) && alarm[2] < 1
 {
 	if point_distance(x,y,corpseTarget.x,corpseTarget.y) < 24
 	{

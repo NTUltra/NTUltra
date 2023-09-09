@@ -11,7 +11,7 @@ function scrSpawnMoreBosses(theBoss,thisMany, mindis = 232){
 			if instance_exists(theBoss) && instance_number(theBoss) == thisMany
 				continue;
 			var n = instance_nearest(xx,yy,theBoss);
-			if point_distance(xx,yy,n.x,n.y) > mindis && point_distance(xx,yy,Player.x,Player.y > mindis)
+			if point_distance(xx,yy,n.x,n.y) > mindis * 0.75 && point_distance(xx,yy,Player.x,Player.y > mindis)
 			{
 				instance_create(xx,yy,theBoss)
 			}

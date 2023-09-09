@@ -3519,7 +3519,7 @@ function scrWeapons() {
 	wep_name[319] = "TOXIC ION CANNON"
 	wep_type[319] = 4
 	wep_auto[319] = 1
-	wep_load[319] = 14
+	wep_load[319] = 16
 	wep_cost[319] = 2
 	wep_sprt[319] = sprToxicIonCannon
 	wep_area[319] = 6
@@ -4847,7 +4847,7 @@ function scrWeapons() {
 	wep_swap[437] = sndSwapShotgun
 	wep_rad[437] = 0;
 	
-	wep_name[438] = "HEAVY FLUGGER"
+	wep_name[438] = "EFFICIENT HEAVY SLUGGER"
 	wep_type[438] = 2
 	wep_auto[438] = 0
 	wep_load[438] = 24
@@ -6830,8 +6830,8 @@ function scrWeapons() {
 	wep_name[618] = "ULTRA HAND CANNON"
 	wep_type[618] = 1
 	wep_auto[618] = 1
-	wep_load[618] = 12;
-	wep_cost[618] = 6;
+	wep_load[618] = 16;
+	wep_cost[618] = 8;
 	wep_sprt[618] = sprUltraHandCannon
 	wep_area[618] = 20
 	wep_text[618] = "such power in the palm of your hand"

@@ -1,4 +1,4 @@
-if instance_exists(FlameBurst)||instance_exists(Ray)//remove this later when beam gets a unique sound
+if instance_exists(FlameBurst)||instance_exists(GoldenFlameBurst)//remove this later when beam gets a unique sound
 timeout = 0
 else
 {

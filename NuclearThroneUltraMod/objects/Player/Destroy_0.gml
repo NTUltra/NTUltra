@@ -132,8 +132,8 @@ if race == 24
 		ang += 120;
 	}
 }
-var playerCorpse = instance_create(x,y,MovingCorpseDynamic)
-with playerCorpse
+myCorpse = instance_create(x,y,MovingCorpseDynamic)
+with myCorpse
 {
 	mySize = 1
 	mask_index = other.mask_index

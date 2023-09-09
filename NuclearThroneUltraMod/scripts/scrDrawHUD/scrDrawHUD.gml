@@ -1240,14 +1240,27 @@ function scrDrawHUD() {
 	{
 		if my_health > 0 && place_meeting(x,y,Player)
 		{
-			draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-7)
+			if (instance_exists(WantBoss) || instance_exists(AssassinBoss) || instance_exists(InvertedAssassinBoss))
+			{
+				var txt = "DEFEAT BOSS FIRST";
+				draw_set_color(c_black)
+				draw_text(x,y-30,txt)
+				draw_text(x+1,y-30,txt)
+				draw_text(x+1,y-31,txt)
+				draw_set_color(c_white)
+				draw_text(x,y-31,txt)
+			}
+			else
+			{
+				draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-7)
 
-			draw_set_color(c_black)
-			draw_text(x,y-30,string_hash_to_newline(string(name)))
-			draw_text(x+1,y-30,string_hash_to_newline(string(name)))
-			draw_text(x+1,y-31,string_hash_to_newline(string(name)))
-			draw_set_color(c_white)
-			draw_text(x,y-31,string_hash_to_newline(string(name)))
+				draw_set_color(c_black)
+				draw_text(x,y-30,string_hash_to_newline(string(name)))
+				draw_text(x+1,y-30,string_hash_to_newline(string(name)))
+				draw_text(x+1,y-31,string_hash_to_newline(string(name)))
+				draw_set_color(c_white)
+				draw_text(x,y-31,string_hash_to_newline(string(name)))
+			}
 			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 		}
 	}

@@ -85,7 +85,7 @@ var xx = lerp(
 __view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )*0.5) - gmwidth*0.5,
 __view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )*0.5) + gmwidth*0.5,
 gmScroll);
-	draw_set_halign(fa_middle)
+	draw_set_halign(fa_center)
 draw_text(xx,yyy+1,gamemodeScrollString)
 draw_text(xx,yyy+1,gamemodeScrollString)
 draw_text(xx,yyy,gamemodeScrollString)

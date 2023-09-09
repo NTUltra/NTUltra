@@ -1,4 +1,5 @@
 function scrDrawGameOver() {
+	
 	//GAME OVER
 	if instance_exists(PlayerSpawn) || instance_exists(Player)
 		return;
@@ -6,7 +7,8 @@ function scrDrawGameOver() {
 	draw_set_halign(fa_center)
 	draw_set_valign(fa_middle)
 	gameover = "";
-	
+	if gameovertime == 0
+		alarm[4] = 1;
 	var area = BackCont.area;
 	var subarea = BackCont.subarea
 	var loops = BackCont.loops;
@@ -35,7 +37,10 @@ function scrDrawGameOver() {
 	if UberCont.public = 1
 	gameover += "##MODDED EARLY ACCESS BUILD";
 */
-	gameover += "##GAME MODE : "+UberCont.gamemode[UberCont.opt_gamemode[0]];
+	if (array_length(UberCont.opt_gamemode) > 1)
+		gameover += "##GAME MODES :##";
+	else
+		gameover += "##GAME MODE :##";
 	
 	if (scrIsGamemode(8))
 	{
@@ -123,7 +128,7 @@ function scrDrawGameOver() {
 	}
 	if gameovertime > 20
 	{
-		var yy = string_height(string_hash_to_newline("A#A#A"))-4
+		var yy = string_height(string_hash_to_newline("A#A#A#A"))-4
 	draw_set_color(c_black)
 	draw_set_alpha(0.4)
 	draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ),0)
@@ -160,6 +165,31 @@ function scrDrawGameOver() {
 	draw_set_valign(fa_top)
 	}
 
-
-
+	if gameovertime > 25
+	{
+		var gamemodeScrollString = "";
+		var al = array_length(UberCont.opt_gamemode)
+		for (var i = 0; i < al; i++)
+		{
+			if (UberCont.opt_gamemode[i] != 0)
+			{
+				gamemodeScrollString += string_replace_all(UberCont.gamemode[UberCont.opt_gamemode[i]],"#"," ");
+				if i != al - 1
+					gamemodeScrollString += " + ";
+			}
+		}
+		var yyy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.5 + 12;
+		gmwidth = max(0,string_width(gamemodeScrollString) - __view_get( e__VW.WView, 0 ));
+		var xx = lerp(
+		__view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )*0.5) - gmwidth*0.5,
+		__view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )*0.5) + gmwidth*0.5,
+		gmScroll);
+		//draw_set_halign(fa_center)
+		draw_set_color(c_black)
+		draw_text(xx,yyy+1,gamemodeScrollString)
+		draw_text(xx,yyy+1,gamemodeScrollString)
+		draw_text(xx,yyy,gamemodeScrollString)
+		draw_set_color(c_white)
+		draw_text(xx,yyy,gamemodeScrollString)
+	}
 }

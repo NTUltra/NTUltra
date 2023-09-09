@@ -12,16 +12,16 @@ function scrPowers() {
 		if UberCont.normalGameSpeed == 60
 		{
 			if alienIntestines < 60
-				alienIntestines += 0.5;
+				alienIntestines += 0.4;
 			else
-				alienIntestines += 0.25;
+				alienIntestines += 0.2;
 		}
 		else
 		{
 			if alienIntestines < 60
-				alienIntestines += 1;
+				alienIntestines += 0.8;
 			else
-				alienIntestines += 0.5;
+				alienIntestines += 0.4;
 		}
 	}
 	/////SHIT PRESSED////////
@@ -57,7 +57,7 @@ function scrPowers() {
 					image_angle = aimDirection+(random(30)-15)*other.accuracy
 					creator=other.id;
 					team = other.team
-					ammo = lerp(4,25,min(1,other.alienIntestines/200)) + i
+					ammo = lerp(4,24,min(1,other.alienIntestines/200)) + i
 					event_perform(ev_alarm,0)
 					visible = 0
 					with instance_create(x,y,LightningSpawn)
@@ -75,7 +75,7 @@ function scrPowers() {
 				i++;
 			}
 			i = 0;
-			repeat(lerp(0,24,min(1,alienIntestines / 300)))
+			repeat(lerp(0,20,min(1,alienIntestines / 300)))
 			{
 				with instance_create(x,y,Tentacle)
 				{
@@ -83,7 +83,7 @@ function scrPowers() {
 					image_angle = random(360);
 					creator=other.id;
 					team = other.team
-					ammo = lerp(3,22,min(1,other.alienIntestines/250)) + i
+					ammo = lerp(3,21,min(1,other.alienIntestines/250)) + i
 					event_perform(ev_alarm,0)
 					visible = 0
 					with instance_create(x,y,LightningSpawn)
@@ -292,38 +292,65 @@ function scrPowers() {
 		if ultra_got[99]
 		{//necro doctor
     
-			if instance_exists(Corpse)
-			{
 			//snd_play_2d(sndNecromancerRevive)
 			        //audio_stop_sound(sndBouncerHitWall)
-		        var numberOfEnems = 0;
-				if instance_exists(IDPDVan)
-					numberOfEnems = instance_number(IDPDVan);
-			    with Corpse
-			    {
-					if image_speed = 0 and (instance_number(enemy) > numberOfEnems) and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-			        {
-        
-			        if !audio_is_playing(sndNecromancerRevive)
-			        {
-						audio_sound_pitch(sndNecromancerRevive,random_range(1.1,1.5))
-						audio_play_sound(sndNecromancerRevive,90,0)
-			        }
-        
-        
-        
-			        instance_destroy()
-			        with instance_create(x,y,BloodStreak)
-			        {
-			        motion_add(point_direction(Player.x,Player.y,x,y),8)
-			        image_angle = direction
-			        }
-        
-			        instance_create(x,y,Scorchmark)
-			        instance_create(x,y,AllyFreak);
-			        //instance_create(x,y,AllyFreak);
-			        }
-			    }
+			var markedForRev = false;
+		    var numberOfEnems = 0;
+			if instance_exists(IDPDVan)
+				numberOfEnems = instance_number(IDPDVan);
+			if (instance_number(enemy) > numberOfEnems)
+			{
+				with CorpseCollector
+				{
+					var al = ds_list_size(corpses)
+					var markForDelete = [];
+					var j = 0;
+					for (var i = 0; i < al; i++)
+					{
+						var corpse = corpses[| i];
+						var xx = corpse.xx;
+						var yy = corpse.yy;
+						if xx > __view_get( e__VW.XView, 0 ) and xx < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and yy > __view_get( e__VW.YView, 0 ) and yy < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+						{
+							with instance_create(x,y,BloodStreak)
+						    {
+								motion_add(point_direction(Player.x,Player.y,x,y),8)
+								image_angle = direction
+						    }
+							if corpse.mySize > 2
+								scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
+							else
+								scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
+						    instance_create(x,y,AllyFreak);
+							markedForRev = true;
+							markForDelete[j] = i;
+							j ++;
+						}
+					}
+					for (var i = 0; i < j; i++)
+					{
+						ds_list_delete(corpses,markForDelete[i]);
+					}
+				}
+				with Corpse
+				{
+					if image_speed = 0 and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+				    {
+					    instance_destroy()
+					    with instance_create(x,y,BloodStreak)
+					    {
+							motion_add(point_direction(Player.x,Player.y,x,y),8)
+							image_angle = direction
+					    }
+					    if mySize > 2
+							scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
+						else
+							scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
+					    instance_create(x,y,AllyFreak);
+				    }
+				}
+				if markedForRev
+					snd_play(sndNecromancerRevive);
 			}
 
 		}
@@ -718,81 +745,174 @@ function scrPowers() {
 			if instance_exists(IDPDVan)
 				numberOfEnems = instance_number(IDPDVan);
 			if  (instance_number(enemy) > numberOfEnems)
-			with Corpse
 			{
-				if image_speed = 0 && x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+				with CorpseCollector
 				{
-					corpseExist = true;
-					BackCont.shake += 2;
-					var splatDir = point_direction(Player.x,Player.y,x,y);
-					with instance_create(x,y,BloodStreak)
+					var al = ds_list_size(corpses)
+					var markForDelete = [];
+					var j = 0;
+					for (var i = 0; i < al; i++)
 					{
-						motion_add(splatDir,8)
-						image_angle = direction
-					}
-					scrAddToBGFXLayer(
-						sprBloodSplat,
-						irandom(sprite_get_number(sprBloodSplat)),
-						x + lengthdir_x(random_range(6,12),splatDir),
-						y + lengthdir_y(random_range(6,12),splatDir),
-						random_range(0.8,1),
-						random_range(0.8,1),
-						splatDir,
-						c_white,
-						1
-					);
-					instance_create(x,y,MeltSplat);
-					instance_destroy();
-					instance_create(x,y,Smoke);
-					var d = point_direction(other.x,other.y,x,y);
-					if other.skill_got[5]
-					{
-						BackCont.shake += 1;
-						if upTo > -1
-						snd_play(sndExplosionS);
+						var corpse = corpses[| i];
+						var xx = corpse.xx;
+						var yy = corpse.yy;
+						if xx > __view_get( e__VW.XView, 0 ) and xx < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and yy > __view_get( e__VW.YView, 0 ) and yy < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+						{
+							corpseExist = true;
+							BackCont.shake += 2;
+							var splatDir = point_direction(other.x,other.y,xx,yy);
+							with instance_create(xx,yy,BloodStreak)
+							{
+								motion_add(splatDir,8)
+								image_angle = direction
+							}
+							scrAddToBGFXLayer(
+								sprBloodSplat,
+								irandom(sprite_get_number(sprBloodSplat)),
+								xx + lengthdir_x(random_range(6,12),splatDir),
+								yy + lengthdir_y(random_range(6,12),splatDir),
+								random_range(0.8,1),
+								random_range(0.8,1),
+								splatDir,
+								c_white,
+								1
+							);
+							instance_destroy();
+							instance_create(xx,yy,Smoke);
+							var d = point_direction(other.x,other.y,xx,yy);
+							if skill_got[5]
+							{
+								BackCont.shake += 1;
+								if upTo > -1
+								snd_play(sndExplosionS);
 							
-						with instance_create(other.x,other.y,BloodBullet)
-						{
-							motion_add(d,15)
-							image_angle = direction+6;
-							team = 2
+								with instance_create(other.x,other.y,BloodBullet)
+								{
+									motion_add(d,15)
+									image_angle = direction+6;
+									team = 2
+								}
+								with instance_create(other.x,other.y,BloodBullet)
+								{
+									motion_add(d,15)
+									image_angle = direction-6;
+									team = 2
+								}
+								with instance_create(other.x,other.y,HeavyBloodBullet)
+								{
+						
+									motion_add(d+180,16)
+									image_angle = direction;
+									team = 2
+								}
+							}
+							else
+							{
+								with instance_create(xx,yy,BloodBullet)
+								{
+									motion_add(d+180,16)
+									image_angle = direction;
+									team = 2
+								}
+							}
+							if upTo > 0
+							{
+								snd_play(sndCorpseExplo);	
+							}
+					
+							with instance_create(other.x,other.y,HeavyBloodBullet)
+							{
+						
+								motion_add(d,19)
+								image_angle = direction;
+								team = 2
+							}
+							upTo--;
+							markForDelete[j] = i;
+							j ++;
 						}
-						with instance_create(other.x,other.y,BloodBullet)
+					}
+					for (var i = 0; i < j; i++)
+					{
+						ds_list_delete(corpses,markForDelete[i]);
+					}
+				}
+				with Corpse
+				{
+					if image_speed = 0 && x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+					{
+						corpseExist = true;
+						BackCont.shake += 2;
+						var splatDir = point_direction(Player.x,Player.y,x,y);
+						with instance_create(x,y,BloodStreak)
 						{
-							motion_add(d,15)
-							image_angle = direction-6;
-							team = 2
+							motion_add(splatDir,8)
+							image_angle = direction
 						}
+						scrAddToBGFXLayer(
+							sprBloodSplat,
+							irandom(sprite_get_number(sprBloodSplat)),
+							x + lengthdir_x(random_range(6,12),splatDir),
+							y + lengthdir_y(random_range(6,12),splatDir),
+							random_range(0.8,1),
+							random_range(0.8,1),
+							splatDir,
+							c_white,
+							1
+						);
+						instance_create(x,y,MeltSplat);
+						instance_destroy();
+						instance_create(x,y,Smoke);
+						var d = point_direction(other.x,other.y,x,y);
+						if other.skill_got[5]
+						{
+							BackCont.shake += 1;
+							if upTo > -1
+							snd_play(sndExplosionS);
+							
+							with instance_create(other.x,other.y,BloodBullet)
+							{
+								motion_add(d,15)
+								image_angle = direction+6;
+								team = 2
+							}
+							with instance_create(other.x,other.y,BloodBullet)
+							{
+								motion_add(d,15)
+								image_angle = direction-6;
+								team = 2
+							}
+							with instance_create(other.x,other.y,HeavyBloodBullet)
+							{
+						
+								motion_add(d+180,16)
+								image_angle = direction;
+								team = 2
+							}
+						}
+						else
+						{
+							with instance_create(x,y,BloodBullet)
+							{
+								motion_add(d+180,16)
+								image_angle = direction;
+								team = 2
+							}
+						}
+						if upTo > 0
+						{
+							snd_play(sndCorpseExplo);	
+						}
+					
 						with instance_create(other.x,other.y,HeavyBloodBullet)
 						{
 						
-							motion_add(d+180,16)
+							motion_add(d,19)
 							image_angle = direction;
 							team = 2
 						}
+						upTo--;
 					}
-					else
-					{
-						with instance_create(x,y,BloodBullet)
-						{
-							motion_add(d+180,16)
-							image_angle = direction;
-							team = 2
-						}
-					}
-					if upTo > 0
-					{
-						snd_play(sndCorpseExplo);	
-					}
-					
-					with instance_create(other.x,other.y,HeavyBloodBullet)
-					{
-						
-						motion_add(d,19)
-						image_angle = direction;
-						team = 2
-					}
-					upTo--;
 				}
 			}
 			if corpseExist
@@ -1783,55 +1903,124 @@ function scrPowers() {
 		if instance_exists(IDPDVan)
 			numberOfEnems = instance_number(IDPDVan);
 		if  (instance_number(enemy) > numberOfEnems)
-		with Corpse
 		{
-			if image_speed = 0 and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+			var gotButt = skill_got[5]
+			with CorpseCollector
 			{
-				didKill = true;
-			instance_destroy()
-			with instance_create(x,y,BloodStreak)
-			{
-			motion_add(point_direction(Player.x,Player.y,x,y),8)
-			image_angle = direction
-			}
-			instance_create(x,y,MeltSplat)
-			if Player.skill_got[5] = 1
-			{
-				if mySize > 4
+				var al = ds_list_size(corpses)
+				var markForDelete = [];
+				var j = 0;
+				for (var i = 0; i < al; i++)
 				{
-					ang = random(360)
-					instance_create(x+lengthdir_x(70,ang),y+lengthdir_y(70,ang),MeatExplosion)
-					instance_create(x+lengthdir_x(70,ang+120),y+lengthdir_y(70,ang+120),MeatExplosion)
-					instance_create(x+lengthdir_x(70,ang+240),y+lengthdir_y(70,ang+240),MeatExplosion)
-				}
-				ang = random(360)
-				if mySize > 2
-				{
-					instance_create(x,y,MeatExplosion);
-					instance_create(x+lengthdir_x(44,ang),y+lengthdir_y(44,ang),MeatExplosion)
-					instance_create(x+lengthdir_x(44,ang+120),y+lengthdir_y(44,ang+120),MeatExplosion)
-					instance_create(x+lengthdir_x(44,ang+240),y+lengthdir_y(44,ang+240),MeatExplosion)
-				}
-				else
-				{
-					instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
-					instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
-					instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)	
-				}
+					var corpse = corpses[| i];
+					var corpseSize = corpse.mySize;
+					var xx = corpse.xx;
+					var yy = corpse.yy;
+					if xx > __view_get( e__VW.XView, 0 ) and xx < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and yy > __view_get( e__VW.YView, 0 ) and yy < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+					{
+						didKill = true;
+						with instance_create(x,y,BloodStreak)
+						{
+							motion_add(point_direction(Player.x,Player.y,xx,yy),8)
+							image_angle = direction
+						}
+						if gotButt
+						{
+							scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
+							if corpseSize > 4
+							{
+								ang = random(360)
+								instance_create(xx+lengthdir_x(70,ang),yy+lengthdir_y(70,ang),MeatExplosion)
+								instance_create(xx+lengthdir_x(70,ang+120),yy+lengthdir_y(70,ang+120),MeatExplosion)
+								instance_create(xx+lengthdir_x(70,ang+240),yy+lengthdir_y(70,ang+240),MeatExplosion)
+							}
+							var ang = random(360)
+							if corpseSize > 2
+							{
+								instance_create(xx,yy,MeatExplosion);
+								instance_create(xx+lengthdir_x(44,ang),yy+lengthdir_y(44,ang),MeatExplosion)
+								instance_create(xx+lengthdir_x(44,ang+120),yy+lengthdir_y(44,ang+120),MeatExplosion)
+								instance_create(xx+lengthdir_x(44,ang+240),yy+lengthdir_y(44,ang+240),MeatExplosion)
+							}
+							else
+							{
+								instance_create(xx+lengthdir_x(24,ang),yy+lengthdir_y(24,ang),MeatExplosion)
+								instance_create(xx+lengthdir_x(24,ang+120),yy+lengthdir_y(24,ang+120),MeatExplosion)
+								instance_create(xx+lengthdir_x(24,ang+240),yy+lengthdir_y(24,ang+240),MeatExplosion)	
+							}
 				
+						}
+						else if corpseSize > 3
+						{
+							scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
+							var ang = random(360)
+							instance_create(xx+lengthdir_x(24,ang),yy+lengthdir_y(24,ang),MeatExplosion)
+							instance_create(xx+lengthdir_x(24,ang+120),yy+lengthdir_y(24,ang+120),MeatExplosion)
+							instance_create(xx+lengthdir_x(24,ang+240),yy+lengthdir_y(24,ang+240),MeatExplosion)
+						}
+						else
+						{
+							scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
+							instance_create(xx,yy,MeatExplosion)
+						}
+						markForDelete[j] = i;
+						j ++;
+					}
+				}
+				for (var i = 0; i < j; i++)
+				{
+					ds_list_delete(corpses,markForDelete[i]);
+				}
 			}
-			else if mySize > 3
+			with Corpse
 			{
-				ang = random(360)
-				instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
-				instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
-				instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
-			}
-			else
-				instance_create(x,y,MeatExplosion)
+				if image_speed = 0 and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+				{
+					didKill = true;
+					instance_destroy()
+					with instance_create(x,y,BloodStreak)
+					{
+					motion_add(point_direction(Player.x,Player.y,x,y),8)
+					image_angle = direction
+					}
+					instance_create(x,y,MeltSplat)
+					if gotButt
+					{
+						if mySize > 4
+						{
+							ang = random(360)
+							instance_create(x+lengthdir_x(70,ang),y+lengthdir_y(70,ang),MeatExplosion)
+							instance_create(x+lengthdir_x(70,ang+120),y+lengthdir_y(70,ang+120),MeatExplosion)
+							instance_create(x+lengthdir_x(70,ang+240),y+lengthdir_y(70,ang+240),MeatExplosion)
+						}
+						ang = random(360)
+						if mySize > 2
+						{
+							instance_create(x,y,MeatExplosion);
+							instance_create(x+lengthdir_x(44,ang),y+lengthdir_y(44,ang),MeatExplosion)
+							instance_create(x+lengthdir_x(44,ang+120),y+lengthdir_y(44,ang+120),MeatExplosion)
+							instance_create(x+lengthdir_x(44,ang+240),y+lengthdir_y(44,ang+240),MeatExplosion)
+						}
+						else
+						{
+							instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
+							instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
+							instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)	
+						}
+				
+					}
+					else if mySize > 3
+					{
+						ang = random(360)
+						instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
+						instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
+						instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
+					}
+					else
+						instance_create(x,y,MeatExplosion)
+				}
 			}
 		}
-		
 		
 		if ultra_got[13] && !altUltra {
 			with enemy {

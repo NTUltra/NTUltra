@@ -2,6 +2,10 @@ if mode == 0
 {
 	with Corpse
 		instance_destroy();
+	with CorpseCollector
+	{
+		ds_list_clear(corpses);	
+	}
 if image_index < image_number-1
 {
 image_index += 1

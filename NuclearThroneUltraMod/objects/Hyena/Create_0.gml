@@ -32,4 +32,4 @@ snd_melee = sndHyenaMelee
 //behavior
 walk = 0
 alarm[1] = 30+random(90)
-corpseTarget = -1;
+corpseTarget = noone;

@@ -9,7 +9,10 @@ right = 1
 else if hspeed < 0
 right = -1
 
-speed = maxSpeed;
+if instance_exists(GenCont)
+	speed = 0;
+else
+	speed = maxSpeed;
 
 if instance_exists(Player)
 {

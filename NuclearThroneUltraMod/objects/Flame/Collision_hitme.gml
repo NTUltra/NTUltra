@@ -3,19 +3,12 @@ if other.team != team and other.my_health > 0 && (other.team!=2 || image_index<5
 	if other.sprite_index != other.spr_hurt
 	{
 		if !audio_is_playing(sndBurn)
-		snd_play(sndBurn,0.01)
-
+			snd_play(sndBurn,0.01)
 		with other
 		{
-			if other.team!=2&&other.sprite_index=sprFireLilHunter//infamous blue fire
-				my_health-=1
-			else
-			{
-				my_health -= other.dmg;
-				sprite_index = spr_hurt
-				image_index = 0;
-			}
-
+			my_health -= other.dmg;
+			sprite_index = spr_hurt
+			image_index = 0;
 			motion_add(other.direction,0.4 + (other.speed*0.1))
 
 			if alarm[11]>0//frozen
@@ -28,14 +21,11 @@ if other.team != team and other.my_health > 0 && (other.team!=2 || image_index<5
 			}
 			snd_play(snd_hurt, hurt_pitch_variation,true)
 		}
-
-		if team!=2
-			instance_destroy();
 	}
 	else if other.team != 2
 	{
 		with other
-			scrIframeSkipper(0.05);
+			scrIframeSkipper(0.04);
 	}
 	x += (other.x-x)*0.25+random(6)-3
 	y += (other.y-y)*0.25+random(6)-3

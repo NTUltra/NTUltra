@@ -13,6 +13,7 @@ if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK) && !instance_exis
 with DataRef
 	instance_destroy();
 depth = 0;
+myCorpse = noone;
 previousUltra = -1;
 hudArmourSpace = 0;
 radPickedUp = 0;

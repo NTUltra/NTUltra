@@ -30,18 +30,33 @@ if target > 0 {
 			{
 				if my_health < maxhealth && instance_exists(Corpse)
 				{
-					corpseTarget = instance_nearest(x,y,Corpse);
-					if (collision_line(x,y,corpseTarget.x,corpseTarget.y,Wall,false,false) < 0)
+					if instance_exists(Corpse)
 					{
-						noCorpse = false;
-						direction = point_direction(x,y,corpseTarget.x,corpseTarget.y);
-						motion_add(direction,4);
-						walk = 20;
-						alarm[1] += walk;
+						corpseTarget = instance_nearest(x,y,Corpse);
+						if (collision_line(x,y,corpseTarget.x,corpseTarget.y,Wall,false,false) < 0)
+						{
+							noCorpse = false;
+							direction = point_direction(x,y,corpseTarget.x,corpseTarget.y);
+							motion_add(direction,4);
+							walk = 20;
+							alarm[1] += walk;
+						}
+						else
+						{
+							corpseTarget = noone;	
+						}
 					}
-					else
+					if noCorpse
 					{
-						corpseTarget = -1;	
+						corpseTarget = scrFindCorpse();
+						if corpseTarget != noone
+						{
+							noCorpse = false;
+							direction = point_direction(x,y,corpseTarget.x,corpseTarget.y);
+							motion_add(direction,4);
+							walk = 20;
+							alarm[1] += walk;
+						}	
 					}
 				}	
 			}
@@ -83,7 +98,7 @@ if target > 0 {
 			}
 			else
 			{
-				corpseTarget = -1;	
+				corpseTarget = noone;	
 			}
 		}
 		if noCorpse

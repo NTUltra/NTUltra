@@ -29,7 +29,7 @@ if instance_exists(Player)
 
 scrWeapons()
 SetSeedWeapon();
-wep = scrDecideWep(0, 10, curse)
+wep = scrDecideWep(0, 8, curse)
 SetSeed();
 
 if (mediumchest==1)

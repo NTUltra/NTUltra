@@ -19,7 +19,7 @@ maxSpeed = 3;
 walk = 0
 wkick = 0
 
-corpseTarget = -1;
+corpseTarget = noone;
 projectileSpeed = 7;
 projectileSpeed += clamp(loops,0,3)*0.5;
 

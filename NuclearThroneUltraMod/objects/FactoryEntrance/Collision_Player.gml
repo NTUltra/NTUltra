@@ -1,7 +1,7 @@
 /// @description Go to Factory
 if my_health > 0
 {
-	if KeyCont.key_pick[other.p] = 1
+	if KeyCont.key_pick[other.p] = 1 && !instance_exists(AssassinBoss) && !instance_exists(InvertedAssassinBoss) && !instance_exists(WantBoss)
 	{
 		spr_idle = sprFactoryEntranceActive;
 		spr_hurt = sprFactoryEntranceActiveHurt;

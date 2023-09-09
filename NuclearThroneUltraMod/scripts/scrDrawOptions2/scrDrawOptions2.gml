@@ -99,7 +99,7 @@ function scrDrawOptions2() {
 	__view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )*0.5) - gmwidth*0.5,
 	__view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )*0.5) + gmwidth*0.5,
 	gmScroll);
-		draw_set_halign(fa_middle)
+		draw_set_halign(fa_center)
 	draw_text(xx,yy+1,gamemodeScrollString)
 	draw_text(xx,yy+1,gamemodeScrollString)
 	draw_text(xx,yy,gamemodeScrollString)
@@ -113,7 +113,7 @@ function scrDrawOptions2() {
 	{
 	//scrWeapons();
 	with StartingWeaponUpDown{
-		draw_set_halign(fa_middle)
+		draw_set_halign(fa_center)
 		if wep=0
 		{
 			draw_text_color(x+8,y+16,string_hash_to_newline("RANDOM"),c_white,c_white,c_white,c_white,1);

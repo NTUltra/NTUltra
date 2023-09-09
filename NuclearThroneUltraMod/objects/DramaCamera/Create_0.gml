@@ -3,6 +3,9 @@ if instance_exists(InvaderBossSpawnPortal) || instance_exists(BossInvasionNoName
 	instance_destroy();
 	exit;
 }
+instance_activate_object(Floor);
+instance_activate_object(Wall);
+instance_activate_object(enemyCollisionWall);
 if instance_exists(Player) && !instance_exists(SurvivalWave)
 {
     ///
@@ -89,7 +92,10 @@ exit;}
 UberCont.hadBossIntro = true;
 urgent = 2
 alarm[0] = 2;
-
+with BackCont
+{
+	alarm[4] += 2;	
+}
 widescreen = 0
 
 

@@ -8,6 +8,8 @@ holdExplainMutation = 0;
 holdExplainGamemode = 0;
 if !instance_exists(BGFXLayer)
 	instance_create(x,y,BGFXLayer);
+if !instance_exists(CorpseCollector)
+	instance_create(x,y,CorpseCollector);
 if instance_exists(Player)
 {
 	if scrIsCrown(19)
@@ -42,3 +44,5 @@ wave = 0
 fogscroll = 0
 //depth = -5;
 gameoverText = "YOU DID NOT REACH THE NUCLEAR THRONE";
+gmwidth = 1;
+gmScroll = 0;

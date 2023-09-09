@@ -700,7 +700,7 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 	}
 
 	with Corpse
-	instance_destroy();
+		instance_destroy();
 
 	}
 	else if skill == 74//Reminisce secret skeleton Ultra B

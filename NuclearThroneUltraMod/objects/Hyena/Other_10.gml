@@ -8,13 +8,25 @@ snd_play(sndBloodlustProc);
 with corpseTarget
 {
 	repeat(3)
-	with instance_create(x,y,BloodStreak)
-	{
-		vspeed = - 2 - random(6);
-		hspeed = random_range(-4,4);
-		image_angle = direction
-	}
+		with instance_create(x,y,BloodStreak)
+		{
+			vspeed = - 2 - random(6);
+			hspeed = random_range(-4,4);
+			image_angle = direction
+			scrAddToBGFXLayer(
+				sprBloodSplat,
+				irandom(sprite_get_number(sprBloodSplat)),
+				x + lengthdir_x(random_range(8,14),image_angle),
+				y + lengthdir_y(random_range(8,14),image_angle),
+				random_range(0.8,1),
+				random_range(0.8,1),
+				image_angle,
+				c_white,
+				1
+			);
+		}
+	
 	instance_destroy();	
 }
-corpseTarget = -1;
+corpseTarget = noone;
 my_health = maxhealth;

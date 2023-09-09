@@ -228,7 +228,10 @@ if !instance_exists(LevCont) and visible = 1
 			var dangle = random(1)*360;
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			//screen_save("explain"+string(scrn)+".png");
-			instance_create(x+200,y,UltraMeleeFake);
+			instance_create(x+64,y,Necromancer);
+			instance_create(x+64,y,InvertedNecromancer);
+			instance_create(x+64,y,GoldNecromancer);
+
 			//scrn++;
 			/*
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
@@ -621,10 +624,9 @@ if !instance_exists(LevCont) and visible = 1
 				spr_walk = sprMutant9DWalk
 			}
 		}
-		
-		with Corpse {
-			if sprite_index == sprMutant9HeadIdle || sprite_index == sprMutant9BHeadIdle || sprite_index == sprMutant9DHeadIdle || sprite_index == sprMutant9EHeadIdle
-				instance_destroy();
+		with myCorpse {
+			//if sprite_index == sprMutant9HeadIdle || sprite_index == sprMutant9BHeadIdle || sprite_index == sprMutant9DHeadIdle || sprite_index == sprMutant9EHeadIdle
+			instance_destroy();
 		}
 	}
 

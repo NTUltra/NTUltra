@@ -108,9 +108,10 @@ if instance_exists(Player)
 		alarm[1] = 0;
 	}
 }
-alarm[4] = 10;//Temp
+alarm[4] = 120;//Temp
 if instance_exists(SurvivalArenaStarter)
 {
 	alarm[7] = 1;
 }
 alarm[9] = 1;
+enemyDeactivater = ds_list_create();

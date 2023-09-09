@@ -12124,6 +12124,7 @@ function scrFire2() {
 	with instance_create(hit[1]+lengthdir_x(4,aimDirection+180),hit[2]+lengthdir_y(4,aimDirection+180),Laser)
 	{image_angle = aimDirection+180
 	team = other.team
+	dmg ++;
 	event_perform(ev_alarm,0)
 	}
 

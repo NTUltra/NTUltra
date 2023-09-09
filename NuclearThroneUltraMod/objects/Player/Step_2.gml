@@ -478,13 +478,11 @@ if skill_got[38] && tookHit && alarm[3] < 1 && alarm[1] < 1
 	{
 		metabolism = 0;
 		my_health = prevhealth;
-		alarm[3] += 50;
+		alarm[3] = max(alarm[3] + 5, 25);
 		audio_stop_sound(snd_hurt);
 		snd_hurt = sndDamageNegate;
 		snd_play_2d(sndMetabolism);
 		scrGiveEuphoriaShield();
-		if skill_got[12] //Euphoria
-			alarm[3] += 24;
 		if race == 25//Doctor
 			scrCollectAmmo(1.75);
 		else
@@ -711,7 +709,6 @@ if (tookHit)
 					pt.mytext = "+"+string(healTaken)+" HP";
 			}
 			Sleep(50);
-			alarm[3]=10;//duration of iframes
 		}
 	}
 	if skill_got[12]//euphoria resistance?
@@ -720,9 +717,9 @@ if (tookHit)
 		{
 			resetPrevHealth = true;
 			if race=25
-				alarm[3]=max(30,alarm[3]);
+				alarm[3] = max(30,alarm[3]);
 			else
-				alarm[3]=max(alarm[3],24);//duration
+				alarm[3] = max(alarm[3],24);//duration
 			canAnimateDuringImmune = 0;
 			snd_hurt = sndDamageNegate;
 			scrGiveEuphoriaShield();
@@ -742,7 +739,7 @@ if(my_health <= 0 && maxhealth > 0)
 	    snd_play(sndStrongSpiritLost);
 	    my_health = 1;
 		Sleep(50);
-		alarm[3] += 20;
+		alarm[3] += 30;
 		snd_hurt = sndDamageNegate;
 		scrGiveEuphoriaShield();
 	    strongspiritused=true;
@@ -753,13 +750,12 @@ if(my_health <= 0 && maxhealth > 0)
     {
 	    humphrySkill=0;
 		snd_play_2d(sndProtectiveMustache,0,true);
-		alarm[3] += 20;
+		alarm[3] += 30;
 		snd_hurt = sndDamageNegate;
 		scrGiveEuphoriaShield();
 		with PlayerAlarms
 			alarm[7] = 20;
 	    my_health = 1;
-		alarm[3] += 20;
     }
 	if my_health <= 0 {
 		if lastWishPrevent {
@@ -934,8 +930,8 @@ if my_health <= 0 && armour < 1
 				}
 			}
 
-
-			with instance_create(x,y,MovingCorpse)
+			myCorpse = instance_create(x,y,MovingCorpse)
+			with myCorpse
 			{
 			mySize = 2
 			mask_index = other.mask_index

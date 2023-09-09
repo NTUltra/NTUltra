@@ -216,6 +216,54 @@ function scrDecideInvader(){
 					fb = sprFloor111B;
 					fe = sprFloor111Explo;
 				break
+				case 126://Graveyard
+					array_push(spawns,InvertedGraveyardSkeleton, InvertedGraveyardSniper, InvertedGraveyardSkeleton, InvertedGraveyardBreeder, BigMaggotInverted , InvertedGraveyardSkeleton, choose(InvertedSpider,InvertedBuffMushroom));
+					fa = sprFloor127;
+					fb = sprFloor127B;
+					fe = sprFloor127Explo;
+				break
+				case 127://INV Graveyard
+					array_push(spawns,GraveyardSkeleton, GraveyardSniper, GraveyardSkeleton, GraveyardBreeder, BigMaggot , GraveyardSkeleton, choose(Spider,BuffMushroom));
+					fa = sprFloor126;
+					fb = sprFloor126B;
+					fe = sprFloor126Explo;
+				break;
+				case 130://Factory
+					array_push(spawns,InvertedOctaBot, InvertedSniper, InvertedSquareBot, InvertedBigBot, InvertedPalaceGuardian , InvertedWallBot);
+					fa = sprFloor131;
+					fb = sprFloor131B;
+					fe = sprFloor131Explo;
+				break;
+				case 131://INV Factory
+					array_push(spawns,OctaBot, Sniper, SquareBot, BigBot, PalaceGuardian , WallBot);
+					fa = sprFloor130;
+					fb = sprFloor130B;
+					fe = sprFloor130Explo;
+				break;
+				case 132://Cursed Factory
+					array_push(spawns,GraveyardSkeleton, GraveyardSkeleton, GraveyardSkeleton, GraveyardBreeder, GraveyardSniper , CursedSpider);
+					fa = sprFloor126;
+					fb = sprFloor126B;
+					fe = sprFloor126Explo;
+				break;
+				case 133://Golden Factory
+					array_push(spawns,GoldNecromancer, GoldScorpion, choose(GoldCrystal, GoldHyena, GoldJungleFly), GoldTotem);
+					fa = sprFloor131;
+					fb = sprFloor131B;
+					fe = sprFloor131Explo;
+				break;
+				case 134://Ultra Factory
+					array_push(spawns,UltraRaven, UltraRaven, UltraRaven, UltraMeleeBandit, UltraMeleeBandit , UltraSalamander);
+					fa = sprFloor135;
+					fb = sprFloor135B;
+					fe = sprFloor135Explo;
+				break;
+				case 135://Ultra Scrapyard
+					array_push(spawns,UltraOctaBot, UltraSquareBot, UltraWallBot, UltraWallBot, UltraBigBot , choose(UltraOctaBot, UltraSquareBot));
+					fa = sprFloor134;
+					fb = sprFloor134B;
+					fe = sprFloor134Explo;
+				break;
 			}
 			
 			if array_length(spawns) > 0
@@ -299,8 +347,7 @@ function scrDecideInvader(){
 					scrSpawnInvaderBoss(1,InvertedHyperCrystal,sprFloor111,sprFloor111,sprFloor111Explo);
 				else
 					scrSpawnInvaderBoss(1,CursedHyperCrystal,sprFloor115,sprFloor115,sprFloor115Explo);
-			}
-			else if loops > 9 && (area == 9 || area == 118) && subarea == 2//Palace 7 - 2 replaces proto statue at loop 10
+			} else if loops > 9 && (area == 9 || area == 118) && subarea == 2//Palace 7 - 2 replaces proto statue at loop 10
 			{
 				scrSpawnInvaderBoss(clamp(floor((loops - 9)*0.25),1,2),BallBoss,sprFloor100,sprFloor100C,sprFloor100Explo);
 			}

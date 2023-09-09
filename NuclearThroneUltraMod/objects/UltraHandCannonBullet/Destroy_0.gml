@@ -1,5 +1,5 @@
 /// @description Explode into more bullets
-var am = 24;
+var am = 20;
 var angstep = 360/am;
 var ang = direction;
 repeat(am)

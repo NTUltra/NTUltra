@@ -621,6 +621,9 @@ function scrPopulate() {
         instance_destroy()
         with Corpse
         instance_destroy()
+		with CorpseCollector {
+			ds_list_clear(corpses);	
+		}
     }
 
     //PIZZA SEWER ENTRANCE

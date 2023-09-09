@@ -53,7 +53,7 @@ if ( (currentarea=105 || currentarea=106|| currentarea=107 || currentarea = 108 
 		PlayerSpawn.inverted = true;	
 	}
 	with Corpse
-	canspawnportal=false;
+		canspawnportal=false;
 }
 pullstrength=1;
 pullRange = 96
