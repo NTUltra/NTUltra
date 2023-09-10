@@ -6,6 +6,7 @@ for (var i = 0; i < al; i++)
 	instance_deactivate_object(forcePositions[| i]);
 }
 //Todo check for gencont
+instance_deactivate_object(Wall);
 with all
 {
 	//x = xprevious + (x - xprevious) * 0.5;
@@ -27,6 +28,7 @@ with all
 		i++;
 	}*/
 }
+instance_activate_object(Wall);
 for (var i = 0; i < al; i++)
 {
 	instance_activate_object(forcePositions[| i]);

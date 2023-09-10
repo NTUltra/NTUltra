@@ -142,6 +142,7 @@
     {"name":"Player","order":9,"path":"folders/Sprites/Player.yy",},
     {"name":"ElementorC","order":1,"path":"folders/Sprites/Player/Custom/Elementor/ElementorC.yy",},
     {"name":"Projectiles","order":10,"path":"folders/Sprites/Projectiles.yy",},
+    {"name":"Publish","order":15,"path":"folders/Sprites/Publish.yy",},
     {"name":"Shadows","order":11,"path":"folders/Sprites/Shadows.yy",},
     {"name":"tilesets","order":12,"path":"folders/Sprites/tilesets.yy",},
     {"name":"Weapons","order":13,"path":"folders/Sprites/Weapons.yy",},
@@ -155,7 +156,6 @@
     {"name":"Font","order":1,"path":"folders/YoYo Extensions Assets/Font.yy",},
     {"name":"Objects","order":2,"path":"folders/YoYo Extensions Assets/Objects.yy",},
     {"name":"Sprites","order":3,"path":"folders/YoYo Extensions Assets/Sprites.yy",},
-    {"name":"Publish","order":15,"path":"folders/Sprites/Publish.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"CursedCrystal","order":2,"path":"objects/CursedCrystal/CursedCrystal.yy",},

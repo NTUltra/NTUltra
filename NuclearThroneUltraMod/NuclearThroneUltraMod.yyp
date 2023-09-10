@@ -398,6 +398,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"disc","folderPath":"folders/Sprites/Projectiles/disc.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Doombots","folderPath":"folders/Sprites/Projectiles/Doombots.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Melee Atacks","folderPath":"folders/Sprites/Projectiles/Melee Atacks.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Publish","folderPath":"folders/Sprites/Publish.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Shadows","folderPath":"folders/Sprites/Shadows.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"tilesets","folderPath":"folders/Sprites/tilesets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Weapons","folderPath":"folders/Sprites/Weapons.yy",},
@@ -413,7 +414,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Font","folderPath":"folders/YoYo Extensions Assets/Font.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Objects","folderPath":"folders/YoYo Extensions Assets/Objects.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/YoYo Extensions Assets/Sprites.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Publish","folderPath":"folders/Sprites/Publish.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"Steamworks_Extension_Documentation.html","CopyToMask":0,"filePath":"datafiles",},
