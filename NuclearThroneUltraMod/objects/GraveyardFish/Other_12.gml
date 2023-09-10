@@ -5,10 +5,8 @@ var i = 0;
 var px = Player.x;
 var py = Player.y;
 instance_activate_object(Floor);
-instance_activate_object(Wall);
 instance_activate_object(Top);
 instance_activate_object(TopSmall);
-instance_activate_object(enemy);
 with Floor {
 	var o = 16;
 	if object_index == FloorExplo

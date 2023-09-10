@@ -1882,11 +1882,23 @@ function scrDrawHUD() {
 		{
 			scrDrawSecretFinder();
 		}
+		with GraveyardEntrance
+		{
+			scrDrawSecretFinder();
+		}
 		with MushroomLandEntrance
 		{
 			scrDrawSecretFinder();
 		}
-		with GraveyardEntrance
+		with FactoryEntrance
+		{
+			scrDrawSecretFinder();
+		}
+		with UltraScrapyardEntrance
+		{
+			scrDrawSecretFinder();
+		}
+		with PizzaEntrance
 		{
 			scrDrawSecretFinder();
 		}

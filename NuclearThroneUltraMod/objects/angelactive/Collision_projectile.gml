@@ -1,14 +1,14 @@
-if team != other.team && instance_exists(Player)
+if other.isGrenade
 {
-	if other.isGrenade
-	{
-		BackCont.shake += 1;
-		Sleep(5);
-		snd_play(sndRicochet,0.1,true);
-		with other
-			scrDeflectNade(point_direction(other.x,other.y,x,y));
-	}
-	else if other.typ == 1
+	BackCont.shake += 1;
+	Sleep(5);
+	snd_play(sndRicochet,0.1,true);
+	with other
+		scrDeflectNade(point_direction(other.x,other.y,x,y));
+}
+else if team != other.team && instance_exists(Player)
+{
+	if other.typ == 1
 	{
 		BackCont.shake += 1;
 		Sleep(5);

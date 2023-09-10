@@ -1,14 +1,15 @@
-if team != other.team
+if other.isGrenade
 {
-	if other.isGrenade
+	with other
 	{
-		with other
-		{
-			scrDeflectNade(other.direction);
-			BackCont.shake += 5;
-		}	
-	}
-	else if other.typ =1
+		scrDeflectNade(other.direction);
+		BackCont.shake += 5;
+	}	
+}
+else if team != other.team
+{
+	
+	if other.typ =1
 	{
 		BackCont.shake += 5;
 		with other

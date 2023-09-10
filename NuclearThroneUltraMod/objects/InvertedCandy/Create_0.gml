@@ -18,6 +18,7 @@ else
 	spr_idle = sprInvertedPepperMint
 	spr_hurt = sprInvertedPepperMintHurt
 	spr_dead = sprInvertedPepperMintDead
+	shadowYoffset = -2;
 }
 
 event_inherited()

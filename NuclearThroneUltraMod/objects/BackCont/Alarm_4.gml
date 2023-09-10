@@ -39,10 +39,12 @@ with TopSmall {
 	if point_distance(cx,cy,x,y) > 450
 		instance_deactivate_object(id);
 }
+/*
 with Wall {
 	if point_distance(cx,cy,x,y) > 450
 		instance_deactivate_object(id);
 }
+*/
 with projectile
 {
 	if point_distance(cx,cy,x,y) > 450

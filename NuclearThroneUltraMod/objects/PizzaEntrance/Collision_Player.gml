@@ -4,7 +4,7 @@ if image_index == 1 && !wentIn
 	if KeyCont.key_pick[other.p] = 1
 	{
 		wentIn = true;
-		name = "PIZZA TIME!!";
+		name = "#PIZZA TIME!!";
 		KeyCont.key_pick[Player.p] = 2;
 		with Player
 		{

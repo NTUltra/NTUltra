@@ -2,7 +2,11 @@ if !instance_exists(Player)
 {instance_destroy() exit;}
 if Player.sheepPower < Player.sheepPowerToHaveEffect
 exit;
-
+if other.isGrenade && Player.ultra_got[51] {
+	snd_play(sndRicochet,0.1,true);
+	with other
+		scrDeflectNade(point_direction(other.x,other.y,x,y));
+}
 if team != other.team
 {
 	Player.sheepPower -= projectileHitBrake;
@@ -20,13 +24,7 @@ if team != other.team
 	else if (Player.ultra_got[51]) {
 	    //deflect
 		BackCont.shake += 2;
-		if other.isGrenade
-		{
-			snd_play(sndRicochet,0.1,true);
-			with other
-				scrDeflectNade(point_direction(other.x,other.y,x,y));
-		}
-	    else if other.typ=1
+		if other.typ=1
 		{
 			with other
 			{

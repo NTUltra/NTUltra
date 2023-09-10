@@ -1,14 +1,14 @@
+if other.isGrenade
+{
+	with other
+		scrDeflectNade(direction+180);
+	snd_play(sndCrystalRicochet,0.1,true);
+	Sleep(10);
+	BackCont.shake += 5;
+}
 if team != other.team
 {
-	if other.isGrenade
-	{
-		with other
-			scrDeflectNade(direction+180);
-		snd_play(sndCrystalRicochet,0.1,true);
-		Sleep(10);
-		BackCont.shake += 5;
-	}
-	else if other.typ == 1
+	if other.typ == 1
 	{
 		snd_play(sndCrystalRicochet,0.1,true);
 		other.team = team

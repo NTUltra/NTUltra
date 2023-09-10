@@ -34,7 +34,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "sprUltraScrapyardEntrance",
+    "path": "sprites/sprUltraScrapyardEntrance/sprUltraScrapyardEntrance.yy",
+  },
   "spriteMaskId": {
     "name": "mskWepPickup",
     "path": "sprites/mskWepPickup/mskWepPickup.yy",

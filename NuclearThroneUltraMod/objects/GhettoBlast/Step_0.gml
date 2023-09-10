@@ -35,15 +35,15 @@ var al = instance_place_list(x,y,projectile,projs,false)
 for (var i = 0; i < al; i++) {
 	with projs[| i]
 	{
-		if team != other.team
+		if isGrenade
 		{
-			if isGrenade
-			{
-				scrDeflectNade(other.direction);
-				Sleep(10);
-				BackCont.shake += 5;
-			}
-			else if typ == 1
+			scrDeflectNade(other.direction);
+			Sleep(10);
+			BackCont.shake += 5;
+		}
+		else if team != other.team
+		{
+			if typ == 1
 			{
 				team = other.team
 				direction = other.image_angle
