@@ -313,15 +313,15 @@ function scrPowers() {
 						if xx > __view_get( e__VW.XView, 0 ) and xx < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and yy > __view_get( e__VW.YView, 0 ) and yy < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 						{
 							with instance_create(x,y,BloodStreak)
-						    {
+							{
 								motion_add(point_direction(Player.x,Player.y,x,y),8)
 								image_angle = direction
-						    }
+							}
 							if corpse.mySize > 2
 								scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
 							else
 								scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
-						    instance_create(x,y,AllyFreak);
+							instance_create(x,y,AllyFreak);
 							markedForRev = true;
 							markForDelete[j] = i;
 							j ++;
@@ -777,10 +777,9 @@ function scrPowers() {
 								c_white,
 								1
 							);
-							instance_destroy();
 							instance_create(xx,yy,Smoke);
 							var d = point_direction(other.x,other.y,xx,yy);
-							if skill_got[5]
+							if other.skill_got[5]
 							{
 								BackCont.shake += 1;
 								if upTo > -1
