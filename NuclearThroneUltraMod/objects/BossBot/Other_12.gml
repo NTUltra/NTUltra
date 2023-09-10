@@ -5,8 +5,8 @@ repeat(3)
 {
 	with instance_create(x,y,EnemyBullet3)
 	{
-		friction = 0.3;
-		motion_add(ang,8)
+		friction = 0.28;
+		motion_add(ang,9)
 		image_angle = direction
 		team = other.team
 	}

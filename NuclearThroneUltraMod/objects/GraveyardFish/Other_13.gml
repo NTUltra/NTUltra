@@ -11,7 +11,7 @@ instance_activate_object(Floor);
 instance_activate_object(Wall);
 instance_activate_object(Top);
 instance_activate_object(TopSmall);
-instance_activate_object(enemyCollisionWall);
+instance_activate_object(enemy);
 with hitme
 {
 	if team == 2

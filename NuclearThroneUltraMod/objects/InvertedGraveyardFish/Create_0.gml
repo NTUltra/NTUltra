@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 meleedamage = 5;
-maxhealth = 200;
+maxhealth = 230;
 loops = GetPlayerLoops()
 if loops > 0
 	maxhealth = 330;

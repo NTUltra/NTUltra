@@ -6,7 +6,7 @@ instance_activate_object(Floor);
 instance_activate_object(Wall);
 instance_activate_object(Top);
 instance_activate_object(TopSmall);
-instance_activate_object(enemyCollisionWall);
+instance_activate_object(enemy);
 /*
 var extra = 64;
 var left = camera_get_view_x(view_camera[0]) - extra;
@@ -24,7 +24,7 @@ if !instance_exists(GenCont)
 		}
 	}
 	ds_list_clear(enemyDeactivater);
-	with enemyCollisionWall {
+	with enemy {
 		if point_distance(cx,cy,x,y) > 350
 		{
 			speed = 0;

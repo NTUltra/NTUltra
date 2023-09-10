@@ -2,7 +2,7 @@
 var ang = random(360);
 alarm[8] = 1;
 with Player {
-	if sprite_index == spr_hurt || alarm[3] > 0
+	if ultra_got[71] && sprite_index == spr_hurt || alarm[3] > 0
 	{
 		snd_play(sndScorpionFire);
 		repeat(4)

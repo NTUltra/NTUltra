@@ -1,7 +1,7 @@
 /// @description Deflect gamemode
 if team != 2
 	exit;
-alarm[7] = 1;
+alarm[7] = 2;
 var deflectTeam = 2;
 var deflectDirection = 0;
 var deflected = false;
@@ -45,7 +45,7 @@ if deflected
 		//Deflect sprite
 		event_user(15);
 	}
-	else
+	else if typ != 0
 	{
 		instance_destroy();	
 	}

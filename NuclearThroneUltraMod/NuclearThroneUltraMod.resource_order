@@ -155,6 +155,7 @@
     {"name":"Font","order":1,"path":"folders/YoYo Extensions Assets/Font.yy",},
     {"name":"Objects","order":2,"path":"folders/YoYo Extensions Assets/Objects.yy",},
     {"name":"Sprites","order":3,"path":"folders/YoYo Extensions Assets/Sprites.yy",},
+    {"name":"Publish","order":15,"path":"folders/Sprites/Publish.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"CursedCrystal","order":2,"path":"objects/CursedCrystal/CursedCrystal.yy",},

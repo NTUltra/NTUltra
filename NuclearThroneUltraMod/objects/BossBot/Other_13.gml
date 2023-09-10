@@ -8,8 +8,8 @@ if instance_exists(target) && target > -1
 	{
 		with instance_create(x,y,EnemyBullet3)
 		{
-			friction = 0.3;
-			motion_add(ang,10)
+			friction = 0.28;
+			motion_add(ang,11)
 			image_angle = direction
 			team = other.team
 		}
