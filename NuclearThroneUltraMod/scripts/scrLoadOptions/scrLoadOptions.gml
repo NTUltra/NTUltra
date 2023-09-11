@@ -15,7 +15,7 @@ function scrLoadOptions() {
 	var w = sprite_get_width(customCrosshair);
 	var h = sprite_get_height(customCrosshair);
 	sprite_set_offset(customCrosshair,w*0.5,h*0.5);
-	opt_sideart = ini_read_real("OPTIONS","sideart",0);
+	opt_sideart = ini_read_real("OPTIONS","sideart",sprite_get_number(sprSideArt) + 1);
 	opt_custom_sideart = ini_read_string("OPTIONS","customsideart",0);
 	customSideArt = sprite_add(opt_custom_sideart,0,false,false,0,0);
 	opt_dmgindicator = ini_read_real("OPTIONS","dmgindicator",0);
