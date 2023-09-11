@@ -1,4 +1,4 @@
-if other.team != team and other.my_health > 0
+if other.team != team and team != 2 and other.my_health > 0
 {
 	if other.sprite_index != other.spr_hurt
 	{

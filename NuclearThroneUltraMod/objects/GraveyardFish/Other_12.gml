@@ -4,7 +4,6 @@ var allFloors = [];
 var i = 0;
 var px = Player.x;
 var py = Player.y;
-instance_activate_object(Floor);
 instance_activate_object(Top);
 instance_activate_object(TopSmall);
 with Floor {

@@ -36,7 +36,7 @@ if alarm[2] < 1
 			y += lengthdir_y(1,direction);
 			var maxStep = 32;
 			var i = 0;
-			while collision_point(x,y,Wall,false,false) || i < maxStep
+			while collision_point(x,y,Wall,false,false) && i < maxStep
 			{
 				x += lengthdir_x(1,direction);
 				y += lengthdir_y(1,direction);
@@ -49,7 +49,7 @@ if alarm[2] < 1
 		{
 			var maxStep = 32;
 			var i = 0;
-			while !collision_point(x,y,Wall,false,false) || i < maxStep
+			while !collision_point(x,y,Wall,false,false) && i < maxStep
 			{
 				x += lengthdir_x(1,direction);
 				y += lengthdir_y(1,direction);

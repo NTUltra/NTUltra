@@ -3,8 +3,6 @@
 ///@param
 function scrSpawnTechnomancer(Whatmancer){
 	var mindis = 232;
-	instance_activate_object(Floor);
-	instance_activate_object(Wall);
 	instance_activate_object(Top);
 	instance_activate_object(TopSmall);
 	var thisMany = 3;

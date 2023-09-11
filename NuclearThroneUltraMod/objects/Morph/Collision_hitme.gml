@@ -1,4 +1,4 @@
-if other.team != team && other.my_health > 0
+if other.team != 2 && other.my_health > 0
 {
 	with other
 	{

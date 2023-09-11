@@ -7289,6 +7289,17 @@ function scrWeapons() {
 	wep_swap[659] = sndSwapCursed
 	wep_rad[659] = 0;
 	
+	wep_name[660] = "SUCKER PUNCHER"
+	wep_type[660] = 2
+	wep_auto[660] = 0
+	wep_load[660] = 15
+	wep_cost[660] = 3
+	wep_sprt[660] = sprSuckerPuncher
+	wep_area[660] = 11
+	wep_text[660] = "left hook right hook"
+	wep_swap[660] = sndSwapShotgun
+	wep_rad[660] = 0;
+	
 	//THE CHENDOKOOVEN Misiles and seeker bolts that fire lasers bullets pellets
 
 	maxwep = array_length(wep_name)-1;

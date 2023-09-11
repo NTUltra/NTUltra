@@ -6,8 +6,6 @@ if instance_exists(BecomeBallBoss)
 	x = centerX;
 	y = centerY;
 }
-instance_activate_object(Floor);
-instance_activate_object(Wall);
 instance_activate_object(Top);
 instance_activate_object(TopSmall);
 if instance_exists(TopCont)

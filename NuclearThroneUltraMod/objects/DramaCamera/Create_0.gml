@@ -5,7 +5,6 @@ if instance_exists(InvaderBossSpawnPortal) || instance_exists(BossInvasionNoName
 }
 instance_activate_object(Top);
 instance_activate_object(TopSmall);
-instance_activate_object(Floor);
 if instance_exists(Player) && !instance_exists(SurvivalWave)
 {
     ///

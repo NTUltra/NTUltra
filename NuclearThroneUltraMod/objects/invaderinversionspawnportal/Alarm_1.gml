@@ -41,8 +41,6 @@ var fs = floorA;
 var fsb = floorB;
 var fse = floorE;
 
-instance_activate_object(Floor);
-instance_activate_object(Wall);
 instance_activate_object(Top);
 instance_activate_object(TopSmall);
 //Make a nice floor

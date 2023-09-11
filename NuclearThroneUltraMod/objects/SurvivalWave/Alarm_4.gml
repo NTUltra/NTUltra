@@ -40,8 +40,6 @@ if instance_exists(Player)
 			snd_loop(song);
 		}
 		snd_play_2d(Player.snd_lowh);
-		instance_activate_object(Floor);
-		instance_activate_object(Wall);
 		instance_activate_object(Top);
 		instance_activate_object(TopSmall);
 		with Floor

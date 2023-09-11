@@ -3,8 +3,6 @@
 ///@param
 function scrSpawnInvaderBoss(thisMany,whatBoss,thisFloorA,thisFloorB,thisFloorE,xOffset = 0,yOffset = 0){
 	var mindis = 200//232;
-	instance_activate_object(Floor);
-	instance_activate_object(Wall);
 	instance_activate_object(Top);
 	instance_activate_object(TopSmall);
 	if instance_exists(Player) && instance_exists(Floor)

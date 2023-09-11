@@ -773,3 +773,4 @@ enum LEADERBOARD {
 	VANFAN,
 };
 scrInitDrops(0);
+altFire = false;

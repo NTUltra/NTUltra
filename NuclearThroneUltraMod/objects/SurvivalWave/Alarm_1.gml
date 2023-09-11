@@ -42,8 +42,6 @@ if !scrIsGamemode(25)
 			}
 			yy += ystep;
 		}
-		instance_activate_object(Floor);
-		instance_activate_object(Wall);
 		instance_activate_object(Top);
 		instance_activate_object(TopSmall);
 		with Floor

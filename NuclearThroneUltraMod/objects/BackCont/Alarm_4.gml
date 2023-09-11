@@ -2,7 +2,7 @@
 alarm[4] = 20;
 var cx = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])*0.5;
 var cy = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])*0.5;
-instance_activate_object(Floor);
+//instance_activate_object(Floor);
 //instance_activate_object(Wall);
 instance_activate_object(Top);
 instance_activate_object(TopSmall);
@@ -50,7 +50,8 @@ with projectile
 	if point_distance(cx,cy,x,y) > 450
 		instance_destroy(id,false);
 }
+/*
 with Floor {
 	if point_distance(cx,cy,x,y) > 450//510
 		instance_deactivate_object(id);
-}
+}*/

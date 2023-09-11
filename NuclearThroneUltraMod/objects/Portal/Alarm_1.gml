@@ -40,8 +40,6 @@ if goTime
 	alarm[2] = 2;
 	image_index = 0;
 	image_speed = 0.8;
-	instance_activate_object(Wall);
-	instance_activate_object(Floor);
 	instance_create(x,y,WallBreak)
 	instance_create(x+16,y+16,WallBreak)
 	instance_create(x-16,y-16,WallBreak)
