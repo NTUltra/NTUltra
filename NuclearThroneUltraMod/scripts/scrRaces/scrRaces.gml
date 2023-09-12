@@ -198,7 +198,7 @@ function scrRaces() {
 	race_dskin[11] = 0
 	race_eskin[11] = 0
 	race_fskin[11] = 0
-	race_bskin_lock[11] = "REACH THE PALACE#PICKING UP A WEAPON#AS HUNTER"
+	race_bskin_lock[11] = "REACH THE PALACE#WITHOUT PICKING UP A WEAPON#AS HUNTER"
 	race_cskin_lock[11] = "KILL AN ULTRA SNIPER BOT#AS HUNTER"
 
 
@@ -413,7 +413,7 @@ function scrRaces() {
 	race_acti[24] = "TERRAFORM AT THE COST OF AMMO"//TERRAFORM
 	race_butt[24] = "CHEAPER TERRAFORM#YOUR WALLS DEFLECT ENEMY PROJECTILES"
 	//race_back[24] = "INCREASED CHANCE OF FINDING ELEMENTAL WEAPONS#LEVELS GENERATE MORE COVER";
-	race_lock[24] = "TAKE HEAVY HEART"//TAKE HEAVY HEART
+	race_lock[24] = "REACH MUSHROOM LAND"//TAKE HEAVY HEART
 	race_have[24] = 0
 	race_swep[24] = 337//MINI LIGHTNING PISTOL//102//FROST PISTOL
 	race_bskin[24] = 0

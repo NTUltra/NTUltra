@@ -10,6 +10,25 @@ var overlap = instance_place(x,y,prop);
 if overlap != noone
 {
 	var getmeout = point_direction(overlap.x,overlap.y,x,y);
-	motion_add(getmeout,0.6)
+	motion_add(getmeout,0.8)
 	direction += 1;
+}
+var overlap = instance_place(x,y,enemy);
+if overlap != noone && !overlap.ignoreOverlap
+{
+	var is60fps = UberCont.normalGameSpeed == 60;
+	with overlap
+	{
+		speed += 0.8;
+		if is60fps
+		{
+			direction += 1;
+			walk += 0.5;
+		}
+		else
+		{
+			direction += 2;
+			walk += 1;
+		}
+	}
 }

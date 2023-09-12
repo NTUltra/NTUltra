@@ -74,6 +74,9 @@ scrUnlockCharacter(10,"FOR REACHING THE FROZEN CITY");
 if area = 8//UNLOCK HORROR
 scrUnlockCharacter(21,"FOR REACHING WONDERLAND");
 
+if area == 117//UNLOCK ELEMENTOR
+scrUnlockCharacter(24,"FOR REACHING MUSHROOM LAND")
+
 //UNLOCK PANDA
 if area == 114
 {

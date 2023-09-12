@@ -11,7 +11,7 @@ spr_walk = sprGatorWalk
 spr_hurt = sprGatorHurt
 spr_dead = sprGatorDead
 
-morphMe=true;
+morphMe = 6;
 //behavior
 walk = 0
 gunangle = random(360)

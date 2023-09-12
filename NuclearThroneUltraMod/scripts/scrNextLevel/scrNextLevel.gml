@@ -129,7 +129,7 @@ function scrNextLevel() {
 	        area = 122
 	        subarea=3;
 			lastarea = 122;
-	        inverted=false;
+	        inverted = false;
 	        exit;
 	        }
 	        else
@@ -137,7 +137,7 @@ function scrNextLevel() {
 	        area = 7
 	        subarea = 2
 			lastarea = 7;
-			inverted=false
+			inverted = false
 	        exit;
 	        }
 	    }
@@ -150,7 +150,7 @@ function scrNextLevel() {
 		        //inverted big bush box
 		        area = 123
 		        subarea=2;
-		        inverted=false;
+		        inverted = false;
 		        exit;
 	        }
 	        else
@@ -159,7 +159,7 @@ function scrNextLevel() {
 		        area = 4
 				lastarea = 4;
 		        subarea = 2
-				inverted=false
+				inverted = false;
 		        exit;
 	        }
 	    }
@@ -171,7 +171,6 @@ function scrNextLevel() {
 		        area = 118
 		        subarea = 3;
 				lastarea = 118;
-		        inverted=false;
 		        exit;
 	        }
 	        else//inv palace to throne 2
@@ -183,7 +182,7 @@ function scrNextLevel() {
 				//LOOP
 		        area=1;
 		        subarea=1;
-				inverted=false
+				inverted = false;
 				looping=true;
 		        exit;*/
 	        }
@@ -193,7 +192,7 @@ function scrNextLevel() {
 	        area = 8//chesire cat
 			lastarea = 8;
 	        subarea=3;
-			inverted=false;
+			inverted = false;
 	        exit;
 	    }
 		//Jungle
@@ -204,14 +203,14 @@ function scrNextLevel() {
 			{
 				area = 115;
 				subarea = 1;
-				inverted=false;
+				inverted = false;
 			}
 			else
 			{
 				area = 4;
 				lastarea = 4;
 				subarea = 1;
-				inverted=false;
+				inverted = false;
 			}
 			exit;
 		}
@@ -267,7 +266,7 @@ function scrNextLevel() {
 		{
 			area = 101;
 			subarea = 2;
-			inverted=false;
+			inverted = false;
 		}
 	    if area = 105//bring to scrapyard inv desert or pizza
 	    {
@@ -277,14 +276,14 @@ function scrNextLevel() {
 	        //inverted big bandit
 	        area = 105
 	        subarea=3;
-	        inverted=false;
+	        inverted = false;
 	        exit;
 	        }
 	        else
 	        {
 	        area = 3
 	        subarea = 1
-			inverted=false
+			inverted = false;
 	        exit;
 	        }
 	    }
@@ -297,7 +296,7 @@ function scrNextLevel() {
 	        //inverted big dog
 	        area = 106
 	        subarea = 3;
-	        inverted=false;
+	        inverted = false;
 	        exit;
 	        }
 	        else//inv scrap to vulcano
@@ -305,7 +304,7 @@ function scrNextLevel() {
 	        area=7;
 	        subarea=1;
 			lastarea = 7;
-			inverted=false
+			inverted = false;
 	        exit;
 	        }
     
@@ -319,7 +318,7 @@ function scrNextLevel() {
 	        //inverted lil hunter
 	        area = 107
 	        subarea = 3;
-	        inverted=false;
+	        inverted = false;
 	        exit;
 	        }
 	        else//Inv frozen city to wonderland
@@ -328,7 +327,7 @@ function scrNextLevel() {
 			lastarea = 8;
 			lastsubarea = 2;
 	        subarea=2;
-			inverted=false
+			inverted = false;
 	        exit;
 	        }
     
@@ -342,7 +341,7 @@ function scrNextLevel() {
 	        //inverted purple dragon
 	        area = 108
 	        subarea = 3;
-	        inverted=false;
+	        inverted = false;
 	        exit;
 	        }
 	        else//Inverted vulcano bring to frozen city
@@ -350,7 +349,7 @@ function scrNextLevel() {
 	        area = 5;
 	        subarea = 2;
 			lastarea = 5;
-			inverted=false
+			inverted = false;
 	        exit;
 	        }
     
@@ -363,7 +362,7 @@ function scrNextLevel() {
 	        {
 	        area = 109
 	        subarea = 3;
-	        inverted=false;
+	        inverted = false;
 	        exit;
 	        }
 	        else//Skip one palace
@@ -372,7 +371,7 @@ function scrNextLevel() {
 		        subarea = 1;
 				lastarea = 9;
 				lastsubarea = 2;
-				inverted=false
+				inverted = false;
 				if race == 21 && !UberCont.hasLeveledUp
 				{
 					scrUnlockBSkin(21,"FOR REACHING THE PALACE#WITHOUT LEVELING UP#AS HORROR",0);	
@@ -386,7 +385,7 @@ function scrNextLevel() {
 		    area=103;
 		    subarea=1;
 		    lastarea=3;
-		    inverted=false;
+		    inverted = false;
 	    exit;
 	    }
     
@@ -396,14 +395,14 @@ function scrNextLevel() {
 			{
 				area = 111;
 				subarea = 2;
-				inverted=false;
+				inverted = false;
 			}
 			else//Skip one palace
 			{
 				area = 9;
 				lastarea = 9;
 				subarea = 2;
-				inverted=false;
+				inverted = false;
 				if race == 21 && !UberCont.hasLeveledUp
 				{
 					scrUnlockBSkin(21,"FOR REACHING THE PALACE#WITHOUT LEVELING UP#AS HORROR",0);	
@@ -419,7 +418,7 @@ function scrNextLevel() {
         
 		        area = 112
 		        subarea = 2;
-		        inverted=false;
+		        inverted = false;
 		        exit;
 	        }
 	        else//Inv labs to wonderlands 1
@@ -427,7 +426,7 @@ function scrNextLevel() {
 				area=8
 				lastarea = 8;
 				subarea=1;
-				inverted=false;
+				inverted = false;
 				exit;
 	        }
     
@@ -439,7 +438,7 @@ function scrNextLevel() {
 		    area=7
 		    subarea=1
 		    oasis=false
-			inverted=false;
+			inverted = false;
 	    exit;
 	    }
 		//Cursed caves to caves 2
@@ -447,7 +446,7 @@ function scrNextLevel() {
 		{
 			area = 4;
 			subarea = 2;
-			inverted=false;
+			inverted = false;
 			exit;
 		}
 		if area == 135//HQ I guess its impossible really
@@ -482,7 +481,7 @@ function scrNextLevel() {
 	{
 		if area < 9
 		{
-		    if inverted=false
+		    if inverted == false
 		    {
 				if area == 3
 				{
@@ -544,7 +543,8 @@ function scrNextLevel() {
 	if ( area=1 && oasis )
 	{area=101;
 	lastarea = 101;
-	subarea=1;}
+	subarea=1;
+	inverted = false;}
 
 	if ( area=3 && inverted )//inv scrap
 	{area=106;

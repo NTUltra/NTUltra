@@ -459,8 +459,8 @@ function scrPopEnemies1vs1(area, subarea, loops){
 		else if subarea == 3
 		{
 			enem = BigFish;
-			buff = 1.8*clamp(1+loops*0.5,1,10);
-			sBuff = 1.4;
+			buff = 1.4*clamp(1+loops*0.5,1,10);
+			sBuff = 1.2;
 		}
 	}
 	else if area == 122 // Inverted Oasis
@@ -530,11 +530,15 @@ function scrPopEnemies1vs1(area, subarea, loops){
 	}
 	else if area == 126 // Graveyard
 	{
-		enem = GraveyardBreeder;
+		enem = GraveyardFish;
+		buff = 1.2*clamp(1+loops*0.5,1,10);
+		sBuff = 1.1;
 	}
 	else if area == 127 // Inverted Graveyard
 	{
-		enem = InvertedGraveyardBreeder;
+		enem = InvertedGraveyardFish;
+		buff = 1.2*clamp(1+loops*0.5,1,10);
+		sBuff = 1.1;
 	}
 	else if area == 128 // Courtyard
 	{

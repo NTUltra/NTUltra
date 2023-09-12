@@ -31,7 +31,7 @@ intro = 0
 wkick = 0
 
 scrTarget()
-if target != noone
+if target > -1 && instance_exists(target)
 	gunangle = point_direction(x,y,target.x,target.y)
 
 sndhalfhp = 0

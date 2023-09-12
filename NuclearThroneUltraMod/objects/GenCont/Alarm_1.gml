@@ -61,6 +61,21 @@ if instance_exists(Player)
 			instance_destroy(id,false);
 	    }
 	}
+	else if Player.area == 113//Bandit land
+	{
+		 with WeaponChest
+	    {
+			instance_create(x,y+16,MorphWeaponChest)
+	    }
+	    with BigWeaponChest
+	    {
+			instance_create(x,y+16,MorphWeaponChest)
+	    }
+	    with EliteWeaponChest
+	    {
+			instance_create(x,y+16,MorphWeaponChest)
+	    }
+	}
 	if Player.area == 115 || Player.area == 132
 	{
 		with WeaponChest

@@ -7,11 +7,6 @@ Player.skillsChosen+=1;
 Player.skillpoints -= 1
 if skill != 37
 	Player.totalSkills ++;
-if skill = 0//heavy heart
-{
-//Unlock Elementor
-scrUnlockCharacter(24,"FOR TAKING HEAVY HEART")
-}
 if skill = 1
 {
 	if Player.ultra_got[62] && Player.altUltra//Living armour

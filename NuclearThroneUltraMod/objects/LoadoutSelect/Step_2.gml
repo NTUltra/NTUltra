@@ -20,7 +20,11 @@ if wep = 0
 	UberCont.start_wep[0] = race_swep[Menu.race];
 
 //Set the starting weapon
-if UberCont.start_wep_have[wep,race] == 1
+if wep == -1
+{
+	UberCont.selected_start_wep[race] = -1;
+}
+else if UberCont.start_wep_have[wep,race] == 1
 {
 	UberCont.cwep[race]=UberCont.start_wep[wep];
 	UberCont.selected_start_wep[race] = wep;

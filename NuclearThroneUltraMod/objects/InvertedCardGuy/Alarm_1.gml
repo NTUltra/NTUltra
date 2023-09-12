@@ -7,7 +7,7 @@ alarm[1] = 5+random(5);
 }
 
 scrTarget()
-if target != noone
+if target > -1 && instance_exists(target)
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {

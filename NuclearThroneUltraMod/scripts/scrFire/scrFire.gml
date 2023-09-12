@@ -5,11 +5,12 @@ function scrFire() {
 	exit;
 	if wep==0{
 		exit;}
-	with Bullet7
-	{
-		if !turned
-			exit;
-	}
+	if object_index == Player
+		with Bullet7
+		{
+			if !turned
+				exit;
+		}
 	reload = min(reload + wep_load[wep],wep_load[wep]);
 	queueshot = max(queueshot-1,0);
 	Player.fired = true;

@@ -97,6 +97,9 @@ if day != yesterday
 			case 27://Daily score
 				weekGamemode = [41, 40, 30];//1 vs 1 + double enemy HP + ultra mutation start
 			break;
+			case 33://All Deflector
+				weekGamemode = [25, 23, 22];//Survival arena, Random Character, Infinite leveling
+			break;
 			case 35://God frog
 				weekGamemode = [34, 29, 39];//Hard mode Infinite levels, Gore galore
 			break;

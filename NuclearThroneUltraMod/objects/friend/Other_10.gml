@@ -3,6 +3,14 @@ bskin = UberCont.skin[race];
 scrLoadRace();
 UberCont.start_wep[0]=race_swep[race];//Starting weapon 0 is different for each character
 wep = UberCont.start_wep[UberCont.selected_start_wep[race]];
+if (UberCont.selected_start_wep[race] == -1)
+{
+	do {wep = irandom(UberCont.maxstartwep);} until UberCont.start_wep_have[wep,race];
+	wep = UberCont.start_wep[wep];
+}
+else {
+	wep = UberCont.start_wep[UberCont.selected_start_wep[race]];
+}
 //Exclude some starting weapons
 if wep == 527 || wep == 224 || wep == 400 || wep == 589 || wep == 43 || wep == 567 || wep == 229 || wep == 286 || wep == 617
 {

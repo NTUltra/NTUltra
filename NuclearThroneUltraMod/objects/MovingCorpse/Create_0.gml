@@ -28,8 +28,10 @@ if instance_exists(Player){
 canspawnportal = true;
 alarm[0] = 30;
 alarm[4] = 40;
-with Corpse
+with CorpseCollector
 {
-	other.alarm[0] += sign(alarm[0]);	
+	px = other.x;
+	py = other.y;
+	alarm[0] = 60;
 }
 skidScale = 1;

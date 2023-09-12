@@ -32,7 +32,7 @@ if speed > 3.1
 speed = 3.1
 }
 
-if target > 0 && instance_exists(target) && target != noone && alarm[2] < 1
+if target > -1 && instance_exists(target) && alarm[2] < 1
 {
 if instance_exists(target)
 mp_potential_step(target.x,target.y,1.25,0)

@@ -2,8 +2,7 @@
 // /@description
 ///@param
 function scrTurnIntoPortalArea(shouldBeInverted = false){
-	instance_activate_object(Top);
-	instance_activate_object(TopSmall);
+	scrActivateAllOutOfRange();
 	with Top
 	{
 		instance_destroy(id,false);	

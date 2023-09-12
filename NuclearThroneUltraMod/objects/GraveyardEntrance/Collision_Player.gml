@@ -7,7 +7,7 @@ if my_health > 0
 		KeyCont.key_pick[Player.p] = 2;
 		mask_index = mskPickupThroughWall;
 		maxhealth = 200 * clamp(loops*5,1,10)
-		alarm[1] += 630;
+		alarm[1] += 700;
 		with instance_create(x,y,WantBoss)
 		{
 			event_perform(ev_alarm,0) 

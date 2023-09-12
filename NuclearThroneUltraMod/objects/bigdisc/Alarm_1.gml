@@ -1,7 +1,7 @@
 ///@description AI
 alarm[1] = actTime;
 scrTarget();
-if active && target > -1 && instance_exists(target) && target != noone && point_distance(x,y,target.x,target.y) < 250
+if active && target > -1 && instance_exists(target) && point_distance(x,y,target.x,target.y) < 250
 {
 	var ps = projectileSpeed;
 	with instance_create(x,y,EnemyDisc)

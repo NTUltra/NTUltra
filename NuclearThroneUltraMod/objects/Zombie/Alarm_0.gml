@@ -5,7 +5,7 @@ if !instance_exists(Player)
 var chosenZombie = GraveyardSkeleton;
 var ar = Player.area;
 if ar == 116//Survival arena
-	ar = subarea;
+	ar = Player.subarea;
 repeat(clamp(Player.loops + 1, 1, 10))
 {
 	switch (ar)

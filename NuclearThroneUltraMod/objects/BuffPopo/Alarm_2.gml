@@ -4,7 +4,7 @@ if team=2
 scrRogueTarget()
 else
 scrTarget();
-if target != noone
+if target > -1 && instance_exists(target)
 {
 	gunangle = point_direction(x,y,target.x-(target.hspeed*0.25),target.y-(target.vspeed*0.25));
 	if target.x < x

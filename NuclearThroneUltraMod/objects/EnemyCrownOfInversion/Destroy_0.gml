@@ -12,8 +12,7 @@ with Player
 {
 	area = 129;	
 }
-instance_activate_object(Top);
-instance_activate_object(TopSmall);
+scrActivateAllOutOfRange();
 with FloorExplo
 {
 	sprite_index = sprFloor129Explo;

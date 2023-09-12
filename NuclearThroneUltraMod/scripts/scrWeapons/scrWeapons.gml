@@ -2771,7 +2771,7 @@ function scrWeapons() {
 	wep_name[251] = "YOYO GUN"
 	wep_type[251] = 3
 	wep_auto[251] = 1
-	wep_load[251] = 17
+	wep_load[251] = 18
 	wep_cost[251] = 2
 	wep_sprt[251] = sprYoyoGun
 	wep_area[251] = 3
@@ -2903,7 +2903,7 @@ function scrWeapons() {
 	wep_name[263] = "ELECTRIC GUITAR"
 	wep_type[263] = 0
 	wep_auto[263] = 0
-	wep_load[263] = 12
+	wep_load[263] = 15
 	wep_cost[263] = 0
 	wep_sprt[263] = sprElectricGuitar
 	wep_area[263] = -1
@@ -3002,7 +3002,7 @@ function scrWeapons() {
 	wep_name[272] = "GHOST BLADE"
 	wep_type[272] = 0
 	wep_auto[272] = 0
-	wep_load[272] = 27
+	wep_load[272] = 26
 	wep_cost[272] = 0
 	wep_sprt[272] = sprGhostBlade
 	wep_area[272] = 20
@@ -3035,7 +3035,7 @@ function scrWeapons() {
 	wep_name[275] = "GHOST SHOVEL"
 	wep_type[275] = 0
 	wep_auto[275] = 0
-	wep_load[275] = 42
+	wep_load[275] = 39
 	wep_cost[275] = 0
 	wep_sprt[275] = sprGhostShovel
 	wep_area[275] = 22
@@ -6888,7 +6888,7 @@ function scrWeapons() {
 	wep_load[623] = 35
 	wep_cost[623] = 6
 	wep_sprt[623] = sprBouncerWaveCrossbow
-	wep_area[623] = 7
+	wep_area[623] = 8
 	wep_text[623] = "boink poink"
 	wep_swap[623] = sndSwapBow
 	wep_rad[623] = 0;

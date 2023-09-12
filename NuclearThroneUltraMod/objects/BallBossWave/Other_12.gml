@@ -6,8 +6,7 @@ if instance_exists(BecomeBallBoss)
 	x = centerX;
 	y = centerY;
 }
-instance_activate_object(Top);
-instance_activate_object(TopSmall);
+scrActivateAllOutOfRange();
 if instance_exists(TopCont)
 	TopCont.darkness = 0;
 song = musConfrontingMyself;

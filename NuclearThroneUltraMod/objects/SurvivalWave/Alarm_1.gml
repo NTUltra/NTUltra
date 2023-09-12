@@ -42,8 +42,8 @@ if !scrIsGamemode(25)
 			}
 			yy += ystep;
 		}
-		instance_activate_object(Top);
-		instance_activate_object(TopSmall);
+		scrActivateAllOutOfRange();
+		
 		with Floor
 		{
 			if styleb

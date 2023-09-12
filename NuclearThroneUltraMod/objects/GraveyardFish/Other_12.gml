@@ -4,8 +4,7 @@ var allFloors = [];
 var i = 0;
 var px = Player.x;
 var py = Player.y;
-instance_activate_object(Top);
-instance_activate_object(TopSmall);
+scrActivateAllOutOfRange();
 with Floor {
 	var o = 16;
 	if object_index == FloorExplo

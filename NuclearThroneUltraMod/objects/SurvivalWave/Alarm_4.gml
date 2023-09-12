@@ -40,8 +40,7 @@ if instance_exists(Player)
 			snd_loop(song);
 		}
 		snd_play_2d(Player.snd_lowh);
-		instance_activate_object(Top);
-		instance_activate_object(TopSmall);
+		scrActivateAllOutOfRange();
 		with Floor
 		{
 			if styleb

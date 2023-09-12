@@ -37,7 +37,8 @@ function scrRogueTarget() {
 	else
 	{target=-1;
 	instance_destroy();}
-
+	if target == noone
+		target = -1;
 
 
 }

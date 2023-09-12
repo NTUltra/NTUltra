@@ -114,4 +114,4 @@ if instance_exists(SurvivalArenaStarter)
 	alarm[7] = 1;
 }
 alarm[9] = 1;
-//enemyDeactivater = ds_list_create();
+enemyDeactivater = ds_list_create();

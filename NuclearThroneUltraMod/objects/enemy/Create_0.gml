@@ -9,10 +9,11 @@ morphMe = 0;
 frozen=false;
 maxSpeed = 16;
 team = 1
-target = noone
+target = -1
 countKill = true;
 wasResurrected = false;
 ignoreOverlap = false;
+gettingKnocked = 0;
 
 snd_hurt = sndHitFlesh
 snd_dead = sndEnemyDie

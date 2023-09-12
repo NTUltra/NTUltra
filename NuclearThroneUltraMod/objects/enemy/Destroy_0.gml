@@ -52,7 +52,7 @@ if(morphMe == 0){
 	}
 	snd_play(snd_dead, 0.1,true);
 }
-else
+else if morphMe != 6
 {
 	instance_create(x,y,PortalChecker);
 	if morphMe == 2

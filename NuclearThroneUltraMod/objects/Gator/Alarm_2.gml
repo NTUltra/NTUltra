@@ -1,7 +1,7 @@
 /// @description fire
 
 snd_play(sndShotgun)
-if target != noone
+if target > -1 && instance_exists(target)
 	gunangle = point_direction(x,y,target.x,target.y)
 repeat(6)
 {

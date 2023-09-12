@@ -1,4 +1,5 @@
 /// @description Create the walls around it
+scrActivateNear();
 var wall = Wall;
 if instance_exists(ThroneIISpiral)
 {

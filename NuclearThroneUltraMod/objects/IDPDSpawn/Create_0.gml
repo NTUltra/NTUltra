@@ -1,20 +1,29 @@
+friction = 1;
 if instance_exists(Player) && instance_exists(Floor)
 {
 
 if Player.area != 119 && (Player.area=100 || (Player.area == 9 && Player.subarea == 3))
 {
-instance_destroy()
-exit;
+	instance_destroy()
+	exit;
 }
-var tries = 100;
+var tries = 200;
 do {
-x = Player.x
-y = Player.y
-ang = random(360)
-x = Player.x+lengthdir_x(96+random(96),ang) y = Player.y+lengthdir_y(96+random(96),ang)
-dir = instance_nearest(x,y,Floor)
-x = dir.x+16; y = dir.y+16;
-tries--;
+	x = Player.x
+	y = Player.y
+	ang = random(360);
+	x = Player.x+lengthdir_x(96+random(128),ang);
+	y = Player.y+lengthdir_y(96+random(128),ang);
+	dir = instance_nearest(x,y,Floor)
+	if dir != noone {
+		var o = 16;
+		if dir.object_index == FloorExplo {
+			o = 8;
+		}
+		x = dir.x + o;
+		y = dir.y + o;
+	}
+	tries--;
 }
 until point_distance(x,y,Player.x,Player.y) > 64 and place_free(x,y) or tries < 0
 

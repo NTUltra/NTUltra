@@ -23,7 +23,7 @@ draw_set_valign(fa_top);
 if UberCont.isPaused=0
 {
 if UberCont.opt_shake=4
-draw_text(x+20,y,string_hash_to_newline("WHAT!!!"))
+draw_text(x+20,y,string_hash_to_newline("TRUE VLAMBEER"))
 else if UberCont.opt_shake>3
 draw_text(x+20,y,string_hash_to_newline("U GOT GUTS"))
 else if UberCont.opt_shake>2
@@ -32,16 +32,6 @@ else if UberCont.opt_shake >1.1
 draw_text(x+20,y,string_hash_to_newline("GO AHEAD"))
 else if UberCont.opt_shake == 1
 draw_text(x+20,y,string_hash_to_newline("VLAMBEER STYLE"))
-else if UberCont.opt_shake =0.3
-draw_text(x+20,y,string_hash_to_newline("HEY!"))
-else if UberCont.opt_shake =0.2
-draw_text(x+20,y,string_hash_to_newline("STOP!"))
-else if UberCont.opt_shake =0.1
-draw_text(x+20,y,string_hash_to_newline("NO!"))
-else if UberCont.opt_shake =0.0
-draw_text(x+20,y,string_hash_to_newline("OKE FINE"))
-else if UberCont.opt_shake <0.4
-draw_text(x+20,y,string_hash_to_newline("CAN'T HANDLE"))
 }
 
 

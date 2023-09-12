@@ -1,6 +1,6 @@
 if replace{exit;}
 
-morphMe=true;
+morphMe = 6;
 event_inherited()
 if !place_meeting(x,y,Morph)
 with instance_create(x,y,SnowTankExplo)

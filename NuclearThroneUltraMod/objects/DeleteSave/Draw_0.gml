@@ -33,7 +33,7 @@ var joke = "";
 var fh = 10;
 if mouse_check_button(mb_left) and UberCont.mouse__x > x and UberCont.mouse__x < x+8 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
 {
-	holdTimer -= 1.5/room_speed;
+	holdTimer -= 2/room_speed;
 	im = 1;
 	fh = floor(holdTimer);
 	if fh <= -5
@@ -62,7 +62,7 @@ if mouse_check_button(mb_left) and UberCont.mouse__x > x and UberCont.mouse__x <
 	}
 	else if fh == 0
 	{
-		
+		joke = " HOLD ON"
 	}
 	else if fh <= 1
 	{

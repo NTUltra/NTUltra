@@ -24,7 +24,7 @@ image_angle=0;
 
 
 }
-else if target != noone
+else if target > -1 && instance_exists(target)
 {
 //rolling
 motion_add(point_direction(x,y,target.x,target.y)+random(30)-15,0.4);

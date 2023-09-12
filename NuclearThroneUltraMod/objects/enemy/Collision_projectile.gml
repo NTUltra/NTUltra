@@ -1,23 +1,21 @@
-if(instance_exists(Player)){
-    
-    
-	if other.team != team //|| other.object_index==Disc || other.object_index==ToxicThrowerGas
+if(instance_exists(Player)) {
+	if other.team != team
 	{
 		//WEAPON MODS!
 		scrModHit();
 		//Sedatives
-		if Player.ultra_got[100] && team != other.team && my_health > 0 && other.wepFire != -1
+		var wp = other.wepFire;
+		if Player.ultra_got[100] && team != other.team && my_health > 0 && wp != -1
 		{
 			target = -1;
 			walk = 0;
 			var amount = 1;
-			if other.wepFire != 0
-				amount = Player.wep_load[other.wepFire]*0.45;
+			if wp != 0
+				amount = Player.wep_load[wp]*0.45;
 			if Player.skill_got[5]
 			{
 				amount *= 1.2;
 			}
-			var wp = other.wepFire;
 			with projectile
 			{
 				if wepFire == wp
@@ -38,11 +36,12 @@ if(instance_exists(Player)){
 		
 		//ROIDS KNOCKBACK
 		//Need to actually get hit some enemies kill themselves (maggot nest)
-		if Player.ultra_got[26]
+		if Player.ultra_got[26] && gettingKnocked < 1
 		{
+			gettingKnocked = 5;
 			BackCont.shake += 2
 			var shithead = id;
-			var s = 6;
+			var s = 2;
 			with Player
 			{
 				var al = 6;//weapon types total
@@ -59,6 +58,7 @@ if(instance_exists(Player)){
 			if !other.canBeMoved
 				md = other.image_angle;
 			d = md + (angle_difference(md,d)*0.5);
+			debug(s);
 			with instance_create(x,y,Knockback)
 			{
 				target = shithead;
@@ -66,15 +66,15 @@ if(instance_exists(Player)){
 				pushDirection = d;
 				pushStartX = target.x;
 				pushStartY = target.y;
-				var s = target.mySize;
-				if s == 4
-					s = 5;
-				pushX = target.x + lengthdir_x(pushStrength/max(1,s*0.5),pushDirection);
-				pushY = target.y + lengthdir_y(pushStrength/max(1,s*0.5),pushDirection);
+				var si = target.mySize;
+				if si == 4
+					si = 5;
+				pushStrength = pushStrength/max(1,si*0.5);
+				pushStrength = min(pushStrength,48);
+				pushX = target.x + lengthdir_x(pushStrength,pushDirection);
+				pushY = target.y + lengthdir_y(pushStrength,pushDirection);
 			}
 		}
 	}    
-   
- 
 }
 

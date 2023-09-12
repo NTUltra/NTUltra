@@ -2140,7 +2140,7 @@ function scrFire2() {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*19,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*19,aimDirection),GhostSlash)
 	{
-		dmg = 14;
+		dmg = 15;
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2156,7 +2156,7 @@ function scrFire2() {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*14,aimDirection+50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*14,aimDirection+50*Player.accuracy),GhostSlash)
 	{
-		dmg = 12;
+		dmg = 13;
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2172,7 +2172,7 @@ function scrFire2() {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*14,aimDirection-50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*14,aimDirection-50*Player.accuracy),GhostSlash)
 	{
-		dmg = 12;
+		dmg = 13;
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2184,7 +2184,7 @@ function scrFire2() {
 	var l = 24;
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*19+l,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*19+l,aimDirection),GhostSlash)
 	{
-		dmg = 14;
+		dmg = 15;
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2193,7 +2193,7 @@ function scrFire2() {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*14+l,aimDirection+50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*14+l,aimDirection+50*Player.accuracy),GhostSlash)
 	{
-		dmg = 12;
+		dmg = 13;
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2202,7 +2202,7 @@ function scrFire2() {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*14+l,aimDirection-50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*14+l,aimDirection-50*Player.accuracy),GhostSlash)
 	{
-		dmg = 12;
+		dmg = 13;
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -4191,6 +4191,7 @@ function scrFire2() {
 
 	instance_create(x,y,Dust)
 	instance_create(x,y,Smoke)
+	scrActivateAllOutOfRange();
 	var hitWall = false;
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
@@ -4223,6 +4224,7 @@ function scrFire2() {
 			}
 		}
 	}
+	scrForcePosition60fps();
 	x += lengthdir_x(1,aimDirection+180)
 	y += lengthdir_y(1,aimDirection+180)
 	xprevious = x;
@@ -6657,7 +6659,7 @@ function scrFire2() {
 		}
 		with projectile
 		{
-			if typ == 1 && canBeMoved
+			if typ == 1 || typ == 3 && canBeMoved
 			{
 				team = other.team;
 				if instance_exists(enemy)

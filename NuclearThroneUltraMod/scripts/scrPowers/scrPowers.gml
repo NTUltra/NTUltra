@@ -2025,7 +2025,7 @@ function scrPowers() {
 			with enemy {
 			if maxhealth<=6 and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 			{//melting ultra a brain capacity
-			morphMe=true;
+			morphMe = 6;
 			didKill = true;
 			instance_destroy()
 			with instance_create(x,y,BloodStreak)

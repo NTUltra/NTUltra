@@ -41,8 +41,7 @@ var fs = floorA;
 var fsb = floorB;
 var fse = floorE;
 
-instance_activate_object(Top);
-instance_activate_object(TopSmall);
+scrActivateAllOutOfRange();
 //Make a nice floor
 var s = clamp(instance_number(InvaderInversionSpawnPortal)+0.2,0.25,1);
 image_xscale/=s;

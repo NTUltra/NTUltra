@@ -11,13 +11,14 @@ if unkillable
 {
 	alarm[3] = 2;
 }
+var is60fps = (UberCont.normalGameSpeed == 60);
 if !instance_exists(LevCont) and visible = 1
 {
 	if roll = 0
 	{
 		var previousSpeed = max(1,speed);
 		var acc = acceleration;
-		if UberCont.normalGameSpeed == 60
+		if is60fps && (speed != 0)
 			acc *= 0.5;
 		if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
 		{
@@ -37,11 +38,18 @@ if !instance_exists(LevCont) and visible = 1
 		}
 		if ultra_got[20] && altUltra
 		{
+			var delta = 1;
+			var checkDelta = 4;
+			if (is60fps)
+			{
+				delta = 0.5;
+				checkDelta = 3;
+			}
 			var moving = false;
-			var extraacc = 1.5;
-			var braking = 0.4;
+			var extraacc = 1.5 * delta;
+			var braking = 0.4/delta;
 			if speed > 5.2
-				speed -= 3.5;
+				speed -= 3.5 * delta;
 			var multi = 0;//Diagonal movement is faster acceleration otherwise
 			if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
 			{
@@ -78,10 +86,10 @@ if !instance_exists(LevCont) and visible = 1
 			speed -= max(0,multi-extraacc);
 			if !moving
 			{
-				speed *= 0.4;
+				speed *= braking;
 			}
 			var msk = mask_index;
-			if (abs(speed - previousSpeed) > 4 && !instance_exists(RocketSlash) && !place_meeting(x+hspeed,y+vspeed,WallHitMe))
+			if (abs(speed - previousSpeed) > checkDelta && !instance_exists(RocketSlash) && !place_meeting(x+hspeed,y+vspeed,WallHitMe))
 			{
 				snd_play(sndGhettoBlast);
 				with instance_create(x+lengthdir_x(16,direction),y+lengthdir_y(16,direction),PlantSonicBoom)
@@ -228,10 +236,7 @@ if !instance_exists(LevCont) and visible = 1
 			var dangle = random(1)*360;
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			//screen_save("explain"+string(scrn)+".png");
-			instance_create(x+64,y,Necromancer);
-			instance_create(x+64,y,InvertedNecromancer);
-			instance_create(x+64,y,GoldNecromancer);
-
+			Sleep(100);
 			//scrn++;
 			/*
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
@@ -1284,13 +1289,13 @@ if  ultra_got[40]=1//Ultra D
 		{
 			canrebel = 0
 			//REBEL DEFENCE PASSIVE
-			ang = random(360)
+			var ang = random(360)
 			var angstep = 360/14;
 			repeat(14)
 			{
 				with instance_create(x,y,AllyBullet)
 				{
-					motion_add(other.ang,6)
+					motion_add(ang,6)
 					image_angle = direction
 					team = other.team
 				}
@@ -2113,12 +2118,12 @@ if hammerheadcounter > 0
 //COLLISION
 if(race != 18)
 {
-	if place_meeting(x+hspeed,y,WallHitMe)
+	var h = sign(hspeed);
+	if place_meeting(x+hspeed+h,y,WallHitMe)
 	{
-		x -= hspeed*friction;
-		var h = sign(hspeed);
+		//x -= hspeed;
 		var hi = 0;
-		var maxh = hspeed;
+		var maxh = hspeed + 2;
 		while(!place_meeting(x+h,y,WallHitMe) && hi < maxh)
 		{
 			x += h;
@@ -2126,12 +2131,12 @@ if(race != 18)
 		}
 		hspeed = 0;
 	}
-	if place_meeting(x,y+vspeed,WallHitMe)
+	var v = sign(vspeed);
+	if place_meeting(x,y+vspeed+v,WallHitMe)
 	{
-		y -= vspeed*friction;
-		var v = sign(vspeed);
+		//y -= vspeed;
 		var vi = 0;
-		var maxv = hspeed;
+		var maxv = hspeed + 2;
 		while(!place_meeting(x,y+v,WallHitMe) && vi < maxv)
 		{
 			y += v;

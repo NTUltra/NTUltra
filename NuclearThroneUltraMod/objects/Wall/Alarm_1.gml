@@ -10,6 +10,7 @@ exit;
 }
 
 */
+scrActivateNear();
 if place_meeting(x-16,y,Floor)
 l = 0
 else

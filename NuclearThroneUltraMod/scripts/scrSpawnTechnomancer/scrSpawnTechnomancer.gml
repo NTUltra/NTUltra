@@ -3,8 +3,7 @@
 ///@param
 function scrSpawnTechnomancer(Whatmancer){
 	var mindis = 232;
-	instance_activate_object(Top);
-	instance_activate_object(TopSmall);
+	scrActivateAllOutOfRange();
 	var thisMany = 3;
 	if instance_exists(Player)
 	{

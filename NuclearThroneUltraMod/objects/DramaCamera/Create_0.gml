@@ -3,8 +3,7 @@ if instance_exists(InvaderBossSpawnPortal) || instance_exists(BossInvasionNoName
 	instance_destroy();
 	exit;
 }
-instance_activate_object(Top);
-instance_activate_object(TopSmall);
+scrActivateAllOutOfRange();
 if instance_exists(Player) && !instance_exists(SurvivalWave)
 {
     ///

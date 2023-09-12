@@ -4,7 +4,7 @@ deflectExhaustion -= 2;
 if deflectExhaustion < 0
 deflectExhaustion = 0;
 scrTarget()
-if  target != noone
+if target > -1 && instance_exists(target)
 {
 	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 	{

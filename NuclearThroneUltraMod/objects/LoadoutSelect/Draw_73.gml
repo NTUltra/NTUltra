@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description Draw open menu
 if (hasNoMenuOpen()
  && race != 0 && ultraOpen)
 {

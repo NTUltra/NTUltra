@@ -1,6 +1,5 @@
 /// @description Start wave
-instance_activate_object(Top);
-instance_activate_object(TopSmall);
+scrActivateAllOutOfRange();
 event_user(3);
 if scrIsGamemode(42)
 {
@@ -1053,7 +1052,7 @@ repeat(1+loops)
 			{
 				wave[i] = {
 					obj: GoldCrystal,
-					time: 10
+					time: 30
 				};
 				i++;
 			}
