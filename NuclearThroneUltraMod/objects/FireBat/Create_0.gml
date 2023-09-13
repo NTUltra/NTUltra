@@ -4,6 +4,7 @@ meleedamage = 2
 mySize = 1
 
 event_inherited()
+fireProof = true;
 spr_idle = sprFireBatIdle
 spr_walk = sprFireBatIdle
 spr_hurt = sprFireBatHurt

@@ -44,3 +44,4 @@ if instance_exists(Player)
 	}
 }
 knockback = 7;
+alarm[3] = 1;

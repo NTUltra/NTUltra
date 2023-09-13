@@ -37,6 +37,7 @@ if other.team != team and other.my_health > 0
 		BackCont.shake += 2
 		with instance_create(x,y,Knockback)
 		{
+			pushStrength = 24;
 			target = direct;
 			pushDirection = other.direction;
 			pushStartX = target.x;

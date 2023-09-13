@@ -12,3 +12,5 @@ else
     shrinkRate = 0.1;
     theColour=c_white;
 
+right = 1;
+z = 0;

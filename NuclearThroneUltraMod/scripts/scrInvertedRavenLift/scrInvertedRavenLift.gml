@@ -33,7 +33,7 @@ function scrInvertedRavenLift() {
 	            image_index = 0;
 	            nofly = 50;
 				alarm[2] = 0;
-	            instance_change(InvertedRavenFly, false);
+				scrChangeRaven(InvertedRavenFly)
 	        }/*
 			else
 			{

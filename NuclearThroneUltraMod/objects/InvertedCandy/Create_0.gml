@@ -1,5 +1,6 @@
 maxhealth = 25
 mySize = 1
+event_inherited()
 var type = choose(1,2,3)
 if type == 1
 {
@@ -18,10 +19,9 @@ else
 	spr_idle = sprInvertedPepperMint
 	spr_hurt = sprInvertedPepperMintHurt
 	spr_dead = sprInvertedPepperMintDead
-	shadowYoffset = -2;
+	shadowYoffset = -4;
 }
 
-event_inherited()
 
 move_contact_solid(random(360),random(12))
 if !place_free(x,y+12)

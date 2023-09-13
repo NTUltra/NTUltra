@@ -11,16 +11,16 @@ if (keyboard_check_pressed(vk_up))
 	{
 		hundredPercentI = 0;
 	}
-	/*
-	if (seed[seedI] == vk_up)
+	
+	if (unlockRetailCharacters[unlockRetailCharactersI] == vk_up)
 	{
 		event_user(1);
 	}
 	else
 	{
-		seedI = 0;	
+		unlockRetailCharactersI = 0;	
 	}
-	*/
+	
 	if (disableSecret1[disableSecret1I] == vk_up)
 	{
 		event_user(3);
@@ -51,13 +51,13 @@ else if (keyboard_check_pressed(vk_down))
 		hundredPercentI = 0;
 	}
 	
-	if (seed[seedI] == vk_down)
+	if (unlockRetailCharacters[unlockRetailCharactersI] == vk_down)
 	{
 		event_user(1);
 	}
 	else
 	{
-		seedI = 0;	
+		unlockRetailCharactersI = 0;	
 	}
 	
 	if (disableSecret1[disableSecret1I] == vk_down)
@@ -90,13 +90,13 @@ else if (keyboard_check_pressed(vk_left))
 		hundredPercentI = 0;
 	}
 	
-	if (seed[seedI] == vk_left)
+	if (unlockRetailCharacters[unlockRetailCharactersI] == vk_left)
 	{
 		event_user(1);
 	}
 	else
 	{
-		seedI = 0;	
+		unlockRetailCharactersI = 0;	
 	}
 	
 	if (disableSecret1[disableSecret1I] == vk_left)
@@ -129,13 +129,13 @@ else if (keyboard_check_pressed(vk_right))
 		hundredPercentI = 0;
 	}
 	
-	if (seed[seedI] == vk_right)
+	if (unlockRetailCharacters[unlockRetailCharactersI] == vk_right)
 	{
 		event_user(1);
 	}
 	else
 	{
-		seedI = 0;	
+		unlockRetailCharactersI = 0;	
 	}
 	
 	if (disableSecret1[disableSecret1I] == vk_right)

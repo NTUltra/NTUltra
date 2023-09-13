@@ -31,6 +31,7 @@ mySize = 4
 
 
 event_inherited()
+fireProof = true;
 existTime = 30;
 alarm[10] = 0;
 /* THIS IN BEGIN STEP!

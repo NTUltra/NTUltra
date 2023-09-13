@@ -1,3 +1,5 @@
+right = 1;
+z = 0;
 if (place_meeting(x,y,FloorExplo))
 {
 	instance_destroy();

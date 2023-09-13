@@ -25,7 +25,7 @@ alarm[1]=4;
 
 typ = 3;//Cant be deflected or detroyed
 
-dmg=3;
+dmg=4;
 
 turned=false;
 

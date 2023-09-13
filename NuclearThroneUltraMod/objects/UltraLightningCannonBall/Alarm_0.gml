@@ -16,4 +16,19 @@ with instance_create(x,y,UltraLightning)
 }
 alarm[0] = 3+irandom(2);
 BackCont.shake += 4
-instance_create(x,y,BigWallBreak);
+var walls = ds_list_create();
+var ys = image_yscale;
+var xs = image_xscale;
+image_yscale = 12;
+image_xscale = 12;
+var al = instance_place_list(x,y,Wall,walls,false)
+for (var i = 0; i < al; i++) {
+	with instance_create(walls[| i].x,walls[| i].y,FloorExplo)
+		canSpawnSwarm = true;
+	instance_destroy(walls[| i]);
+}
+if al > 0
+	speed -= 1;
+image_yscale = ys;
+image_xscale = xs;
+ds_list_clear(walls);

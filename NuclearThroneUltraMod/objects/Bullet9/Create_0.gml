@@ -25,7 +25,7 @@ alarm[1]=4;
 
 //ShotgunShouldersType();
 typ = 3;
-dmg=3;
+dmg = 4;
 turned=false;
 
 alarm[0]=2;

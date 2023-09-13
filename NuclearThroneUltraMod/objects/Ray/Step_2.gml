@@ -33,6 +33,9 @@ if(instance_exists(creator)){
 				hit = potentialHit
 			}
 		}
+	} else {
+		hit[1] = xx;
+		hit[2] = yy;
 	}
 }
 

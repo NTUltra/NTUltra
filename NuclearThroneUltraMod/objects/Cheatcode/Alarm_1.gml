@@ -1,2 +1,2 @@
-/// @description sequence reset seed
-customSideArtI = 0;
+/// @description sequence reset unlock retail characters
+unlockRetailCharactersI = 0;

@@ -9,6 +9,7 @@ maxhealth=24;
 
 
 event_inherited()
+fireProof = true;
 spr_idle = sprInvertedSalamanderIdle
 spr_walk = sprInvertedSalamanderWalk
 spr_hurt = sprInvertedSalamanderHurt

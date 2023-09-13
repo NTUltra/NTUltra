@@ -9,6 +9,6 @@ image_angle = direction
 team = other.team
 }
 ammo -= 1
-alarm[2] = 2
+alarm[4] = 2
 }
 

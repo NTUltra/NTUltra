@@ -58,7 +58,6 @@ if(instance_exists(Player)) {
 			if !other.canBeMoved
 				md = other.image_angle;
 			d = md + (angle_difference(md,d)*0.5);
-			debug(s);
 			with instance_create(x,y,Knockback)
 			{
 				target = shithead;

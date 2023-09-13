@@ -258,7 +258,7 @@ function scrWeapons() {
 	wep_name[23] = "ASSAULT SLUGGER"
 	wep_type[23] = 2
 	wep_auto[23] = 0
-	wep_load[23] = 24
+	wep_load[23] = 32
 	wep_cost[23] = 3
 	wep_sprt[23] = sprAssaultSlugger
 	wep_area[23] = 5
@@ -889,7 +889,7 @@ function scrWeapons() {
 
 	wep_name[80] = "HUNTER SNIPER"
 	wep_type[80] = 1
-	wep_auto[80] = 0
+	wep_auto[80] = 1
 	wep_load[80] = 16
 	wep_cost[80] = 2
 	wep_sprt[80] = sprSniper
@@ -3485,7 +3485,7 @@ function scrWeapons() {
 
 	wep_name[316] = "HUNTER HEAVY SNIPER"
 	wep_type[316] = 1
-	wep_auto[316] = 0
+	wep_auto[316] = 1
 	wep_load[316] = 11
 	wep_cost[316] = 7
 	wep_sprt[316] = sprHeavySniper
@@ -5051,7 +5051,7 @@ function scrWeapons() {
 	wep_load[456] = 35
 	wep_cost[456] = 0
 	wep_sprt[456] = sprSuperScythe
-	wep_area[456] = 24
+	wep_area[456] = 23
 	wep_text[456] = "super scythe me"
 	wep_swap[456] = sndSwapHammer
 	wep_rad[456] = 0;
@@ -5796,7 +5796,7 @@ function scrWeapons() {
 	wep_name[524] = "ULTRA LIGHTNING STRIKER"
 	wep_type[524] = 5
 	wep_auto[524] = 0
-	wep_load[524] = 40
+	wep_load[524] = 38
 	wep_cost[524] = 8
 	wep_sprt[524] = sprUltraLightningStriker
 	wep_area[524] = 24
@@ -6741,7 +6741,7 @@ function scrWeapons() {
 	
 	wep_name[610] = "CUBER SNIPER"
 	wep_type[610] = 1
-	wep_auto[610] = 0
+	wep_auto[610] = 1
 	wep_load[610] = 12
 	wep_cost[610] = 5
 	wep_sprt[610] = sprCuberSniper
@@ -6752,7 +6752,7 @@ function scrWeapons() {
 	
 	wep_name[611] = "HEAVY CUBER SNIPER"
 	wep_type[611] = 1
-	wep_auto[611] = 0
+	wep_auto[611] = 1
 	wep_load[611] = 9
 	wep_cost[611] = 8
 	wep_sprt[611] = sprHeavyCuberSniper
@@ -7295,7 +7295,7 @@ function scrWeapons() {
 	wep_load[660] = 15
 	wep_cost[660] = 3
 	wep_sprt[660] = sprSuckerPuncher
-	wep_area[660] = 11
+	wep_area[660] = 10
 	wep_text[660] = "left hook right hook"
 	wep_swap[660] = sndSwapShotgun
 	wep_rad[660] = 0;

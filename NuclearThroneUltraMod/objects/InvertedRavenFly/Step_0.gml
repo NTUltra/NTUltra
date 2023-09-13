@@ -26,4 +26,5 @@ y += lengthdir_y(s,point_direction(x,y,targetx,targety))
 else
 	sprite_index = sprInvertedRavenLand;
 if my_health <= 0
-	instance_change(InvertedRaven,false)
+	scrChangeRaven(InvertedRaven)
+image_xscale = right;

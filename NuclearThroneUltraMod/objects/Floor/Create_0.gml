@@ -1,4 +1,6 @@
 friction = 1;
+right = 1;
+z = 0;
 image_index = choose(0,0,0,0,0,0,0,1,2)
 image_speed = 0
 if random(500) < 1
@@ -50,10 +52,10 @@ area=103;
 
 
 //sprite_index = sprFloorCV
+depth = 10
 
 if styleb = 1 and area != 0
 {
-depth = 9
 switch (area)
 {
 //case 0:
@@ -211,8 +213,6 @@ break;
 }
 else
 {
-	depth = 10;
-
 switch (area)
 {
 case 0:

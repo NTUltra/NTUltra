@@ -20,5 +20,18 @@ repeat(5) {
 		draw_set_alpha(1);
 		draw_set_blend_mode(bm_normal);
 	}
+	var hue = random(255);
+	var xxPrevious = xx;
+	var yyPrevious = yy;
+	xx = hit[1]
+	yy = hit[2]
+	draw_line_width_color(xxPrevious,yyPrevious,xx,yy,
+	lineWidth,make_color_hsv(hue,255,255),make_color_hsv(hue,255,255) );
+	draw_set_blend_mode(bm_add);
+	draw_set_alpha(0.2);
+	draw_line_width_color(xxPrevious,yyPrevious,xx,yy,
+	lineWidth*2,bloomColour,bloomColour);
+	draw_set_alpha(1);
+	draw_set_blend_mode(bm_normal);
 }
 draw_self();

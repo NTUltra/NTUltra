@@ -37,8 +37,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprBullet8",
-    "path": "sprites/sprBullet8/sprBullet8.yy",
+    "name": "sprBullet8HighDmg",
+    "path": "sprites/sprBullet8HighDmg/sprBullet8HighDmg.yy",
   },
   "spriteMaskId": {
     "name": "mskBullet1",

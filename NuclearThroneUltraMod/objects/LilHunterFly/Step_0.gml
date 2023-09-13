@@ -107,3 +107,4 @@ else
 {
 	sprite_index = sprLilHunterLift
 }
+image_xscale = right;

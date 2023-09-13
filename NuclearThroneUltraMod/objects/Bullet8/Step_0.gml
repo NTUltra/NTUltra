@@ -3,9 +3,10 @@ if instance_exists(Player){
 	{
 		Player.clicked=0;
 		turned=true;
+		dmg = 3;
+		sprite_index = sprBullet8;
 		if image_index < 3
 		{
-			sprite_index = sprBullet8;
 			image_index = 0;
 			image_speed = 1;
 

@@ -7,7 +7,7 @@ if random(3) < 1
 else
 {
 	ammo = 0
-	if random(4+instance_number(missileType)*0.5) < 1 and instance_exists(Player)
+	if random(4+instance_number(missileType)*0.75) < 1 and instance_exists(Player)
 	{
 		snd_play(sndBigDogMissile)
 		repeat(missileAmount)
@@ -19,7 +19,7 @@ else
 			}
 		}
 
-		alarm[0] = actTime	
+		alarm[0] = actTime*2
 	}
 	else
 	{

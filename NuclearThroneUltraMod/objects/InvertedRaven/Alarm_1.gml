@@ -10,7 +10,7 @@ if random(3) < 1 && point_distance(target.x,target.y,x,y) < 280
 {
 //FIRE
 alarm[2] = 1
-ammo = 5
+ammo = maxAmmo
 gunangle = point_direction(x,y,target.x,target.y)
 alarm[1] = 25+random(20)
 with InvertedRaven

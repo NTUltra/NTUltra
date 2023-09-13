@@ -63,20 +63,20 @@ draw_self();
 
 with RavenFly
 {
-	draw_sprite_ext(sprite_index,-1,x,y+z,right,1,0,c_white,1)
+	draw_sprite_ext(sprite_index,-1,x,y+z,image_xscale,1,0,c_white,1)
 }
 with UltraRavenFly
 {
-	draw_sprite_ext(sprite_index,-1,x,y+z,right,1,0,c_white,1)
+	draw_sprite_ext(sprite_index,-1,x,y+z,image_xscale,1,0,c_white,1)
 }
 
 with InvertedRavenFly
 {
-	draw_sprite_ext(sprite_index,-1,x,y+z,right,1,0,c_white,1)
+	draw_sprite_ext(sprite_index,-1,x,y+z,image_xscale,1,0,c_white,1)
 }
 with LilHunterFly
 {
-	draw_sprite_ext(sprite_index,-1,x,y+z,right,1,0,c_white,1)
+	draw_sprite_ext(sprite_index,-1,x,y+z,image_xscale,1,0,c_white,1)
 }
 //Eagle eyes chest content
 if(instance_exists(Player)){
@@ -216,6 +216,10 @@ with EnemyBullet1Square
 {
 	if draw
 		draw_self();
+}
+with Ray
+{
+	event_perform(ev_draw,0);
 }
 with ScrapBossMissile
 {

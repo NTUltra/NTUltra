@@ -1,6 +1,6 @@
 /// @description Break wall
-x -= hspeed
-y -= vspeed
+x -= hspeed * wallPierce
+y -= vspeed * wallPierce
 
 if walled = 0
 {

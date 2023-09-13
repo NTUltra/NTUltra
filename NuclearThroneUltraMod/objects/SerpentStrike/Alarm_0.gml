@@ -22,7 +22,7 @@ if ammo < 160 && instance_exists(target)
 	}
 }
 aimDir += angle_difference(originalAngle,aimDir)*0.01;
-var walls = ds_list_create();
+	var walls = ds_list_create();
 	var al = instance_place_list(x,y,Wall,walls,false)
 	for (var i = 0; i < al; i++) {
 		with instance_create(walls[| i].x,walls[| i].y,FloorExplo)

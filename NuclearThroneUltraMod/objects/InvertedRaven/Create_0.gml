@@ -7,6 +7,7 @@ if UberCont.loops>1
 maxhealth=9;
 
 event_inherited()
+maxAmmo = 5;
 alarm[10] = 0;
 spr_idle = sprInvertedRavenIdle
 spr_walk = sprInvertedRavenWalk
@@ -25,4 +26,6 @@ wkick = 0
 ammo = 3
 z = 0
 nofly = 30
-
+targetx = x;
+targety = y;
+ravenFly = InvertedRavenFly;

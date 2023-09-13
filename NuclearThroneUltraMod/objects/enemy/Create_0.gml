@@ -14,6 +14,7 @@ countKill = true;
 wasResurrected = false;
 ignoreOverlap = false;
 gettingKnocked = 0;
+fireProof = false;
 
 snd_hurt = sndHitFlesh
 snd_dead = sndEnemyDie

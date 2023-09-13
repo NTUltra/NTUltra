@@ -1,4 +1,6 @@
 var area;
+right = 1;
+z = 0;
 if instance_exists(Player) {
 	area = Player.area
 	if scrIsCrown(25)

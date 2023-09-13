@@ -10,7 +10,7 @@ image_speed = 1
 if instance_exists(Player){
 if KeyCont.key_fire[Player.p] = 1 && turned=false && alarm[0]<1 || (Player.race=7 &&  KeyCont.key_spec[Player.p] = 1 && alarm[0]<1 && turned=false)
 {
-dmg=3;
+dmg = 3;
 alarm[1]=2;
 
 speed+=8;

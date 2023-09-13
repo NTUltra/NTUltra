@@ -6,6 +6,7 @@ mySize = 2
 
 
 event_inherited()
+fireProof = true;
 spr_idle = sprSalamanderIdle
 spr_walk = sprSalamanderWalk
 spr_hurt = sprSalamanderHurt

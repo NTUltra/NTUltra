@@ -65,7 +65,7 @@ function scrAreaName(area,subarea,loops){
 			case 134://Ultra Factory
 				txt = "9E_" + string(subarea);
 			break;
-			case 135://Headquarters Factory
+			case 135://Headquarters
 				txt = "HQ_" + string(subarea);
 			break;
 			case 136://Ultra scrapyard

@@ -9,5 +9,6 @@ while place_meeting(x,y,Floor) || place_meeting(x,y,Wall)
 	x += lengthdir_x(6,d);
 	y += lengthdir_y(6,d);
 }
-
+x += lengthdir_x(4,d);
+y += lengthdir_y(4,d);
 scrForcePosition60fps();

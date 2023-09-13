@@ -44,7 +44,7 @@ alarm[1] = 20+random(10)
 alarm[2] = -1
 if x >__view_get( e__VW.XView, 0 ) and y > __view_get( e__VW.YView, 0 ) and x<__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 snd_play(sndRavenLand)
-instance_change(InvertedRaven,false)
+scrChangeRaven(InvertedRaven)
 //my_health=other.my_health;
 }
 }

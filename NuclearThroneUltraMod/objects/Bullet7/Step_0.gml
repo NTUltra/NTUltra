@@ -12,6 +12,7 @@ if instance_exists(Player){
 	{
 		Player.clicked=0;
 		turned=true;
+		dmg = 3;
 		if image_index < 3
 		{
 			sprite_index = sprBullet7;

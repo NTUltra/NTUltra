@@ -24,4 +24,7 @@ else if sprite_index = sprRavenFly
 else
 	sprite_index = sprRavenLand;
 if my_health <= 0
-	instance_change(Raven,false)
+{
+	scrChangeRaven(Raven);
+}
+image_xscale = right;

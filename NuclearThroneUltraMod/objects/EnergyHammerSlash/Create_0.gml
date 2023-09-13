@@ -17,3 +17,4 @@ walled = 0
 dmg=45//original 40
 shk = 7;
 
+alarm[3] = 0;

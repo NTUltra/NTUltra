@@ -7,6 +7,7 @@ if UberCont.loops>1
 maxhealth=16;
 
 event_inherited()
+fireProof = true;
 spr_idle = sprInvertedFireBatIdle
 spr_walk = sprInvertedFireBatIdle
 spr_hurt = sprInvertedFireBatHurt

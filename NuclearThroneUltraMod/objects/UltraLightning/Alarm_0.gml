@@ -45,8 +45,22 @@ if isog && ultraMod == ultramods.lightningKraken
 }
 	isog = false;
 //if !instance_exists(SmallWallBreak) || instance_number(SmallWallBreak) < 30
-	instance_create(x,y,SmallWallBreak);
+//	instance_create(x,y,SmallWallBreak);
+var walls = ds_list_create();
+var ys = image_yscale;
+image_yscale = 6;
+image_xscale = 6;
+var al = instance_place_list(x,y,Wall,walls,false)
+for (var i = 0; i < al; i++) {
+	with instance_create(walls[| i].x,walls[| i].y,FloorExplo)
+		canSpawnSwarm = true;
+	instance_destroy(walls[| i]);
+}
+image_yscale = ys;
+ds_list_clear(walls);
 var simpleAccuracy = 1;
+if al > 0
+	ammo -= 2;
 if instance_exists(Player)
 {
 	simpleAccuracy = Player.accuracy;
@@ -79,7 +93,7 @@ oldx = x
 oldy = y
 direction = image_angle+(random(branch)-branch*0.5)*simpleAccuracy//30 15
 speed = 4
-if instance_exists(target)
+if instance_exists(target) && dir != noone
 {
 if point_distance(x,y,dir.x,dir.y) < 165-accuracy*2
 	motion_add(point_direction(x,y,dir.x,dir.y),2.2-(accuracy*0.05))
@@ -93,7 +107,7 @@ x += lengthdir_x(l,direction);
 y += lengthdir_y(l,direction);
 
 speed = 0
-image_xscale = -point_distance(x,y,oldx,oldy)/2
+image_xscale = -point_distance(x,y,oldx,oldy)*0.5;
 
 var ammoDecrease = 1;
 if team == 2
@@ -141,9 +155,10 @@ if round(ammo) > 0
 		ammo = other.ammo;
 		team = other.team
 		image_index = other.image_index*0.5
-		if round(ammo) % 4 == 0//ultraMod == ultramods.lightningPellet && odd
-			alarm[0]=1;
-		else event_perform(ev_alarm,0);
+		//if round(ammo) % 5 == 0//ultraMod == ultramods.lightningPellet && odd
+		//	alarm[0]=1;
+		//else 
+		event_perform(ev_alarm,0);
 	}
 	if round(ammo) % fork == 0//Forking lightning
 	{
@@ -195,7 +210,7 @@ if round(ammo) > 0
 }
 else if ultraMod != ultramods.lightningPellet
 {
-	instance_create(x+lengthdir_x(image_xscale/2,image_angle),y+lengthdir_y(image_xscale/2,image_angle),LightningHit)
+	instance_create(x+lengthdir_x(image_xscale*0.5,image_angle),y+lengthdir_y(image_xscale*0.5,image_angle),LightningHit)
 }
 
 if ultraMod == ultramods.lightningPellet && alarm[0] < 1

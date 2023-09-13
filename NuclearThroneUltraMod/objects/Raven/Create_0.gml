@@ -37,3 +37,5 @@ if loops > 0
 	actTime -= 4;
 	projectileSpeed += 0.5;
 }
+targetx = x;
+targety = y;

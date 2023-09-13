@@ -58,3 +58,5 @@ with Floor {
 		instance_deactivate_object(id);
 	}
 }
+instance_activate_object(HotDrake);
+instance_activate_object(InvertedHotDrake);

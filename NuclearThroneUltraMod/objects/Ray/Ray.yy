@@ -41,5 +41,5 @@
     "name": "mskBullet1",
     "path": "sprites/mskBullet1/mskBullet1.yy",
   },
-  "visible": true,
+  "visible": false,
 }
