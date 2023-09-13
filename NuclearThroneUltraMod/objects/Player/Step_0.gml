@@ -236,6 +236,7 @@ if !instance_exists(LevCont) and visible = 1
 			var dangle = random(1)*360;
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			//screen_save("explain"+string(scrn)+".png");
+			instance_create(x+64,y,GoldNecromancer);
 			Sleep(100);
 			//scrn++;
 			/*
@@ -701,9 +702,9 @@ if !instance_exists(LevCont) and visible = 1
 			}
 			else
 			{
-				scrFire();
 				with YungCuzDupe
 					event_user(0);
+				scrFire();
 			}
     
 		clicked = 0
@@ -717,9 +718,10 @@ if !instance_exists(LevCont) and visible = 1
 			}
 			else
 			{
-				scrFire();
 				with YungCuzDupe
 					event_user(0);
+				scrFire();
+				
 			}
 		}
 	}
@@ -1243,9 +1245,9 @@ if (!instance_exists(LevCont))
 			}
 			else
 			{
-				scrFire();
 				with YungCuzDupe
 					event_user(0);
+				scrFire();
 			}
 			if reload > 0
 				can_shoot = 0;
@@ -1563,81 +1565,82 @@ reload = max(reload,lowa);
 breload = max(breload,lowb);
 creload = max(creload,lowc);
 
-
-var homeBoost = 0;
-
-if (ultra_got[42])//HUNTER ULTRA B Homing projectiles
-	homeBoost += 2.5;
-if skill_got[19]
+if (instance_exists(enemy))
 {
-	homeBoost += 0.6;
-	if race == 25
-		homeBoost += 0.1;
-}
-///homing projectiles mod
-var modHomeBoost = 0.24;
-if skill_got[30] == 1
-	modHomeBoost += 0.14;
-if ultra_got[65]
-	modHomeBoost += 0.14;
+	var homeBoost = 0;
 
-if race == 7//Steroids
-{
-	modHomeBoost -= 0.2;
-	if bwepmod1 == 13
-	homeBoost += modHomeBoost;
-	if bwepmod2 == 13
-		homeBoost += modHomeBoost;
-	if bwepmod3 == 13
-		homeBoost += modHomeBoost;
-	if bwepmod4 == 13
-		homeBoost += modHomeBoost;
-	homeBoost = max(0,homeBoost-0.2);
-}
-if wepmod1 == 13
-	homeBoost += modHomeBoost;
-if wepmod2 == 13
-	homeBoost += modHomeBoost;
-if wepmod3 == 13
-	homeBoost += modHomeBoost;
-if wepmod4 == 13
-	homeBoost += modHomeBoost;
+	if (ultra_got[42])//HUNTER ULTRA B Homing projectiles
+		homeBoost += 2.5;
+	if skill_got[19]
+	{
+		homeBoost += 0.7;
+		if race == 25
+			homeBoost += 0.1;
+	}
+	///homing projectiles mod
+	var modHomeBoost = 0.24;
+	if skill_got[30] == 1
+		modHomeBoost += 0.14;
+	if ultra_got[65]
+		modHomeBoost += 0.14;
 
-if homeBoost > 0
-{
-	var dt = 1;
-	if UberCont.normalGameSpeed == 60
-		dt = 0.5;
-    with projectile
-    {
-        if (team == other.team && speed > 0)
-        {
-	        if canBeMoved
+	if race == 7//Steroids
+	{
+		modHomeBoost -= 0.2;
+		if bwepmod1 == 13
+		homeBoost += modHomeBoost;
+		if bwepmod2 == 13
+			homeBoost += modHomeBoost;
+		if bwepmod3 == 13
+			homeBoost += modHomeBoost;
+		if bwepmod4 == 13
+			homeBoost += modHomeBoost;
+		homeBoost = max(0,homeBoost-0.2);
+	}
+	if wepmod1 == 13
+		homeBoost += modHomeBoost;
+	if wepmod2 == 13
+		homeBoost += modHomeBoost;
+	if wepmod3 == 13
+		homeBoost += modHomeBoost;
+	if wepmod4 == 13
+		homeBoost += modHomeBoost;
+
+	if homeBoost > 0
+	{
+		var dt = 1;
+		if UberCont.normalGameSpeed == 60
+			dt = 0.5;
+		var ogHomeBoost = homeBoost * dt;
+	    with projectile
+	    {
+	        if (team == other.team && speed > 0)
 	        {
-		        if instance_exists(enemy)
+		        if canBeMoved
 		        {
+		        
 					var t = instance_nearest(x,y,enemy)
-		            if collision_line(x,y,t.x,t.y,Wall,0,0) < 0// && point_distance(x,y,t.x,t.y) < 128
-		            {
+			        if collision_line(x,y,t.x,t.y,Wall,0,0) < 0// && point_distance(x,y,t.x,t.y) < 128
+			        {
+						homeBoost = ogHomeBoost;
 						var d = point_direction(x,y,t.x,t.y)
 						var ad = angle_difference(d,direction);
-						homeBoost *= 1 + (speed *0.005);
-						homeBoost *= dt;
-		                if (ad > 2)
-		                {
-							direction+=homeBoost;
-							image_angle+=homeBoost;
-		                }
-		                else if (ad < -2)
-		                {
-							direction-=homeBoost;
-							image_angle-=homeBoost;
-		                }
-		            }
-		        }
+						homeBoost *= (1 + (speed * 0.006));
+			            if (ad > 2)
+			            {
+							direction += homeBoost;
+							image_angle += homeBoost;
+			            }
+			            else if (ad < -2)
+			            {
+							direction -= homeBoost;
+							image_angle -= homeBoost;
+			            }
+			        }
+			    }
 	        }
-        }
-    }
+	    }
+	}
 }
 
 if (ultra_got[43] && !altUltra)//HUNTER ULTRA C Focused projectiles

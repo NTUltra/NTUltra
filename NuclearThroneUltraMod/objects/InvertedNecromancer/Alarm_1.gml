@@ -26,25 +26,40 @@ right = -1
 else if random(6) < 2
 {
 //REVIVE
-
-if instance_exists(Corpse)
-{
-crp = instance_nearest(x,y,Corpse)
-if collision_line(x,y,crp.x,crp.y,Wall,0,0) < 0
-{
-wkick = 5
-gunangle = point_direction(x,y,crp.x,crp.y)
-with crp
-{
-//instance_create(x,y,ReviveFX)
-//instance_change(Freak,true)
-with instance_nearest(x,y,Floor)
-instance_create(x+16+random(16)-8,y+16+random(16)-8,InvertedReviveArea);
-}
-snd_play(sndNecromancerRevive)
-alarm[1] = 10+random(20)
-}
-}
+	var noCorpse = true;
+	if instance_exists(Corpse)
+	{
+		crp = instance_nearest(x,y,Corpse)
+		if collision_line(x,y,crp.x,crp.y,Wall,0,0) < 0
+		{
+			noCorpse = false;
+			wkick = 5
+			gunangle = point_direction(x,y,crp.x,crp.y)
+			with crp
+			{
+				with instance_nearest(x,y,Floor)
+					instance_create(x+16+random(16)-8,y+16+random(16)-8,InvertedReviveArea);
+			}
+			snd_play(sndNecromancerRevive)
+			alarm[1] = 10+random(20)
+		}
+	}
+	if noCorpse
+	{
+		crp = scrFindCorpse();
+		if crp != noone
+		{
+			wkick = 5
+			gunangle = point_direction(x,y,crp.x,crp.y)
+			with crp
+			{
+				with instance_nearest(x,y,Floor)
+					instance_create(x+16+random(16)-8,y+16+random(16)-8,InvertedReviveArea);
+			}
+			snd_play(sndNecromancerRevive)
+			alarm[1] = 10+random(20)
+		}	
+	}
 }
 else if random(2)<1
 {

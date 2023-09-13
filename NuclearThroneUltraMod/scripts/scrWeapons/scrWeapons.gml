@@ -2991,7 +2991,7 @@ function scrWeapons() {
 	wep_name[271] = "FAT SMG"
 	wep_type[271] = 1
 	wep_auto[271] = 1
-	wep_load[271] = 3
+	wep_load[271] = 4
 	wep_cost[271] = 4
 	wep_sprt[271] = sprFatSmg
 	wep_area[271] = 20
@@ -4938,7 +4938,7 @@ function scrWeapons() {
 	wep_name[446] = "AUTO HAND CANNON"
 	wep_type[446] = 1
 	wep_auto[446] = 1
-	wep_load[446] = 3
+	wep_load[446] = 5
 	wep_cost[446] = 2
 	wep_sprt[446] = sprAutoHandCannon
 	wep_area[446] = 16
@@ -4949,10 +4949,10 @@ function scrWeapons() {
 	wep_name[447] = "AUTO MISSILE LAUNCHER"
 	wep_type[447] = 4
 	wep_auto[447] = 1
-	wep_load[447] = 8
+	wep_load[447] = 10
 	wep_cost[447] = 2.5
 	wep_sprt[447] = sprAutoMissileLauncher
-	wep_area[447] = 28
+	wep_area[447] = 27
 	wep_text[447] = "THIS IS METAL"
 	wep_swap[447] = sndSwapExplosive
 	wep_rad[447] = 0;
@@ -4961,7 +4961,7 @@ function scrWeapons() {
 	wep_type[448] = 1
 	wep_auto[448] = 1
 	wep_load[448] = 3
-	wep_cost[448] = 4
+	wep_cost[448] = 5
 	wep_sprt[448] = sprFatSmartGun
 	wep_area[448] = 26
 	wep_text[448] = "big brained"
@@ -5378,7 +5378,7 @@ function scrWeapons() {
 	wep_name[486] = "LIGHTNING JACKHAMMER"
 	wep_type[486] = 5
 	wep_auto[486] = 1
-	wep_load[486] = 4
+	wep_load[486] = 6
 	wep_cost[486] = 1
 	wep_sprt[486] = sprLightningJackHammer
 	wep_area[486] = 17
@@ -5502,7 +5502,7 @@ function scrWeapons() {
 	wep_load[497] = 33//42 normally
 	wep_cost[497] = 2
 	wep_sprt[497] = sprSuperSplinterGun
-	wep_area[497] = 8
+	wep_area[497] = 7
 	wep_text[497] = "this will hurt even more"
 	wep_swap[497] = sndSwapBow
 	wep_rad[497] = 0;

@@ -12,7 +12,6 @@ for (var i = 0; i < al; i++) {
 	}
 }
 ds_list_destroy(corpseList);
-var reviveCircle = id;
 with CorpseCollector
 {
 	var al = ds_list_size(corpses)
@@ -23,7 +22,7 @@ with CorpseCollector
 		var corpse = corpses[| i];
 		var xx = corpse.xx;
 		var yy = corpse.yy;
-		if collision_point(xx,yy,reviveCircle,false,false)
+		if collision_point(xx,yy,ReviveArea,true,false)
 		{
 			with other {
 				tx = xx;

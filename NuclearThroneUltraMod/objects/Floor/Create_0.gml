@@ -52,10 +52,10 @@ area=103;
 
 
 //sprite_index = sprFloorCV
-depth = 10
 
 if styleb = 1 and area != 0
 {
+	depth = 10;
 switch (area)
 {
 //case 0:
@@ -213,6 +213,7 @@ break;
 }
 else
 {
+	depth = 11;
 switch (area)
 {
 case 0:

@@ -29,6 +29,7 @@ else
 if random(4) < 1
 {
 	event_user(1);
+	alarm[1] += actTime;
 }
 else if random(2) < 1
 {

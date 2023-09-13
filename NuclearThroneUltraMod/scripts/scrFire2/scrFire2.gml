@@ -6405,7 +6405,7 @@ function scrFire2() {
 				owner = other.id;
 				team = other.team;
 				mywep = other.wep
-				alarm[0] = 1 + other.wep_load[mywep];
+				alarm[0] = 2 + other.wep_load[mywep];
 				owner = other.id;
 				camKick = 5;
 				camShake = 3;
@@ -6417,7 +6417,7 @@ function scrFire2() {
 			with PlayerWazer
 			{
 				if owner == other.id
-					alarm[0] = 1 + other.wep_load[other.wep];
+					alarm[0] = 2 + other.wep_load[other.wep];
 			}
 		}
 	}
@@ -6543,7 +6543,7 @@ function scrFire2() {
 				owner = other.id;
 				team = other.team;
 				mywep = other.wep
-				alarm[0] = 1 + other.wep_load[mywep];
+				alarm[0] = 2 + other.wep_load[mywep];
 				owner = other.id;
 				camKick = 5;
 				camShake = 3;
@@ -6555,7 +6555,7 @@ function scrFire2() {
 			with PlayerExplosionWazer
 			{
 				if owner == other.id
-					alarm[0] = 1 + other.wep_load[other.wep];
+					alarm[0] = 2 + other.wep_load[other.wep];
 			}
 		}
 	}
@@ -7086,7 +7086,7 @@ function scrFire2() {
 	{
 	creator = other.id
 	ammo = 2
-	time = 4
+	time = 5
 	team = other.team
 	event_perform(ev_alarm,0) 
 	}
@@ -7900,7 +7900,7 @@ function scrFire2() {
 	snd_play_fire(sndUltraShotgun);
 
 	with instance_create(x,y,UltraHeavySlug)
-	{motion_add(aimDirection+(random(8)-4)*other.accuracy,14)//16
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,15)//16
 	image_angle = direction
 	team = other.team}
 
@@ -8194,8 +8194,8 @@ function scrFire2() {
 	with instance_create(x,y,LightningJackhammerBurst)
 	{
 	creator = other.id
-	ammo = 4
-	time = 1
+	ammo = 3
+	time = 2
 	team = other.team
 	event_perform(ev_alarm,0) 
 	}
@@ -8389,7 +8389,7 @@ function scrFire2() {
 
 	repeat(5)
 	{
-	with instance_create(x,y,Bullet2)
+	with instance_create(x,y,Bullet2Heavy)
 	{motion_add(aimDirection+(random(30)-15)*other.accuracy,12+random(6))
 	image_angle = direction
 	team = other.team}
@@ -8615,7 +8615,7 @@ function scrFire2() {
 				owner = other.id;
 				team = other.team;
 				mywep = other.wep
-				alarm[0] = 1 + other.wep_load[mywep];
+				alarm[0] = 2 + other.wep_load[mywep];
 				owner = other.id;
 				camKick = 5;
 				camShake = 3;
@@ -8627,7 +8627,7 @@ function scrFire2() {
 			with PlayerUltraWazer
 			{
 				if owner == other.id
-					alarm[0] = 1 + other.wep_load[other.wep];
+					alarm[0] = 2 + other.wep_load[other.wep];
 			}
 		}
 	}
@@ -10346,7 +10346,7 @@ function scrFire2() {
 				owner = other.id;
 				team = other.team;
 				mywep = other.wep
-				alarm[0] = 1 + other.wep_load[mywep];
+				alarm[0] = 2 + other.wep_load[mywep];
 				owner = other.id;
 				camKick = 5;
 				camShake = 3;
@@ -10358,7 +10358,7 @@ function scrFire2() {
 			with PlayerToxicWazer
 			{
 				if owner == other.id
-					alarm[0] = 1 + other.wep_load[other.wep];
+					alarm[0] = 2 + other.wep_load[other.wep];
 			}
 		}
 	}
