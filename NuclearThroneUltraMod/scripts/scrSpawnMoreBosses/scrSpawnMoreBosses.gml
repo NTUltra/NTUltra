@@ -1,7 +1,7 @@
 ///scrSpawnMoreBosses();
 // /@description
 ///@param
-function scrSpawnMoreBosses(theBoss,thisMany, mindis = 232){
+function scrSpawnMoreBosses(theBoss,thisMany, mindis = 256){
 	//more dogs
 	do {
 		with Floor
@@ -17,7 +17,7 @@ function scrSpawnMoreBosses(theBoss,thisMany, mindis = 232){
 			}
 		}
 		mindis -= 32;
-	} until (instance_number(theBoss) == thisMany || mindis < 64)
+	} until (instance_number(theBoss) == thisMany || mindis <= 128)
 		
 	if !instance_exists(theBoss) || instance_number(theBoss) < thisMany
 	{

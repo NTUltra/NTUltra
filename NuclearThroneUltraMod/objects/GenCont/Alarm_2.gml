@@ -6,6 +6,7 @@ if !instance_exists(Player)
 		alarm[1] += 1;
 	exit;
 }
+scrActivateAllOutOfRange();
 SetSeed();
 scrDecideInvader();
 var spawnarea =  Player.area;

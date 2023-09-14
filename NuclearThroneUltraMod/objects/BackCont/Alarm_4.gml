@@ -21,7 +21,7 @@ for (var i = 0; i < al; i++)
 }
 ds_list_clear(enemyDeactivater);
 with enemy {
-	if point_distance(cx,cy,x,y) > 350
+	if point_distance(cx,cy,x,y) > 450
 	{
 		speed = 0;
 		instance_deactivate_object(id);
@@ -29,31 +29,31 @@ with enemy {
 	}
 }
 with Top {
-	if point_distance(cx,cy,x,y) > 440
+	if point_distance(cx,cy,x,y) > 540
 	{
 		instance_deactivate_object(id);
 	}
 }
 with TopSmall {
-	if point_distance(cx,cy,x,y) > 440
+	if point_distance(cx,cy,x,y) > 540
 	{
 		instance_deactivate_object(id);
 	}
 }
 
 with Wall {
-	if point_distance(cx,cy,x,y) > 440
+	if point_distance(cx,cy,x,y) > 540
 	{
 		instance_deactivate_object(id);
 	}
 }
 with projectile
 {
-	if point_distance(cx,cy,x,y) > 440
-		instance_destroy(id,false);
+	if point_distance(cx,cy,x,y) > 540
+		instance_destroy();
 }
 with Floor {
-	if point_distance(cx,cy,x,y) > 440//510
+	if point_distance(cx,cy,x,y) > 540//510
 	{
 		instance_deactivate_object(id);
 	}
