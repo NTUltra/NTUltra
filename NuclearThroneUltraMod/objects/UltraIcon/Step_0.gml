@@ -280,7 +280,7 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 			ultra_tips[6] = "cursed crystal"
 		}
 	}
-	else if skill == 23 && Player.race == 6 && (scrMeleeWeapons(Player.wep) && scrMeleeWeapons(Player.bwep) || Player.unlockAlternativeUltras)
+	else if skill == 23 && Player.race == 6 && ((scrMeleeWeapons(Player.wep) || Player.wep == 0) && (scrMeleeWeapons(Player.bwep) || Player.bwep == 0) || Player.unlockAlternativeUltras)
 	{
 		with Player
 		{

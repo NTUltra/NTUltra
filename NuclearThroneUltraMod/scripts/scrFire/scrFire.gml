@@ -4983,7 +4983,7 @@ function scrFire() {
 	5 blood
 	6 lightning
 	*/
-	if object_index == Player {
+	if object_index == Player || object_index == CloneShooter{
 		with projectile
 		{
 			if team == other.team//player projectile

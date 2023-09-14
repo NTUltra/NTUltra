@@ -25,7 +25,7 @@ else if skill == 20 &&  Player.race == 5 && (Player.unlockAlternativeUltras || s
 {
 	sprite_index = sprPlantSonicSpeed;
 }
-else if Player.race == 6 && skill == 23 && scrMeleeWeapons(Player.wep) && scrMeleeWeapons(Player.bwep)
+else if Player.race == 6 && skill == 23 && (Player.unlockAlternativeUltras || ((scrMeleeWeapons(Player.wep) || Player.wep == 0) && (scrMeleeWeapons(Player.bwep) || Player.bwep == 0)))
 {
 	sprite_index = sprYvBlasphemy;
 }

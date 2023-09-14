@@ -7017,7 +7017,7 @@ function scrWeapons() {
 	wep_name[635] = "DOUBLE SIDED BLADE"
 	wep_type[635] = 0
 	wep_auto[635] = 0
-	wep_load[635] = 12//16 usual
+	wep_load[635] = 13//16 usual
 	wep_cost[635] = 0
 	wep_sprt[635] = sprDoubleSidedBlade
 	wep_area[635] = 13

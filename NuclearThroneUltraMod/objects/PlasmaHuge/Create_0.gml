@@ -1,4 +1,5 @@
 event_inherited();
+wallScale -= 0.05;
 dmg = 22;
 balls = 4
 destroyScale += 0.2;

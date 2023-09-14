@@ -9,10 +9,10 @@ isAlkaline=false;
 hammerheadtimer=0;
 hammerheadcounter=0;
 skill_got = Player.skill_got;
-wepmod1 = 0;
-wepmod2 = 0;
-wepmod3 = 0;
-wepmod4 = 0;
+wepmod1 = Player.wepmod1;
+wepmod2 = Player.wepmod2;
+wepmod3 = Player.wepmod3;
+wepmod4 = Player.wepmod4;
 nearWall = false;
 scrWeapons()
 
@@ -121,8 +121,11 @@ prevhealth = maxhealth//lasthealth
 isAlkaline = false;
 returntoplayer=0;
 returntoplayerfast=0;
-
 depth = Player.depth - 1;
 theAim = 0;
 myShield = -1;
 image_angle = 0;
+
+ultra_got = Player.ultra_got;
+pSpeedBoost = Player.pSpeedBoost;
+poppop = Player.poppop;
