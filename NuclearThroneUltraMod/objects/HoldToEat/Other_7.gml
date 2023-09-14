@@ -75,8 +75,9 @@ with Player
 			wepmod2 = other.wepmod2;
 			wepmod3 = other.wepmod3;
 			wepmod4 = other.wepmod4;
+			isPermanent = other.isPermanent;
 			curse = other.curse;
-			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),11);
+			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),14);
 			wep = eatWep
 			spr_idle=wep_sprt[wep];
 

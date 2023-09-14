@@ -90,7 +90,7 @@ function scrSpawnEndLevelPortal(){
 					}
 			    }
         
-			    if Portal.inverted == true && canspawnportal == true && instance_exists(Floor)
+			    if Portal.inverted == true && canspawnportal && instance_exists(Floor)
 			    {
 					if instance_exists(Portal)
 					{

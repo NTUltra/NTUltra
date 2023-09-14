@@ -3,8 +3,8 @@ version = 000//23 is final probably
 encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
-updateVersion = "PR 30.01";
-subUpdateVersion = "BETA 8";
+updateVersion = "PR 30.02";
+subUpdateVersion = ".00";
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
 /*

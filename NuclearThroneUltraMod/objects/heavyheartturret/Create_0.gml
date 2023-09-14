@@ -89,6 +89,7 @@ wepright = 1
 queueshot = 0;
 bqueueshot = 0;
 cqueueshot = 0;
+
 }
 else
 instance_destroy();

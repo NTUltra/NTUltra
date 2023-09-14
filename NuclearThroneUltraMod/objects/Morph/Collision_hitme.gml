@@ -3,7 +3,7 @@ if other.team != 2
 	with other
 	{
 		if (morphMe != 10) {
-			if (other.my_health > 0)
+			if (my_health > 0)
 			{
 			    if sprite_index != spr_hurt
 					snd_play(snd_hurt, hurt_pitch_variation,true)
