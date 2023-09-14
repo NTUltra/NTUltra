@@ -37,10 +37,13 @@ function scrDrawGameOver() {
 	if UberCont.public = 1
 	gameover += "##MODDED EARLY ACCESS BUILD";
 */
+	var normalMode = scrIsOnlyNormalGamemode();
 	if (array_length(UberCont.opt_gamemode) > 1)
 		gameover += "##GAME MODES :##";
-	else
+	else if !normalMode
 		gameover += "##GAME MODE :##";
+	else
+		gameover += "##NORMAL MODE##";
 	
 	if (scrIsGamemode(8))
 	{
@@ -126,7 +129,7 @@ function scrDrawGameOver() {
 	snd_play(sndRestart)
 	scrRestart()
 	}
-	if gameovertime > 20
+	if gameovertime > 30
 	{
 		var yy = string_height(string_hash_to_newline("A#A#A#A"))-4
 		draw_set_color(c_black)
@@ -165,7 +168,7 @@ function scrDrawGameOver() {
 	draw_set_valign(fa_top)
 	}
 
-	if gameovertime > 25
+	if gameovertime > 30 && !normalMode
 	{
 		draw_set_valign(fa_top)
 		var gamemodeScrollString = "";
