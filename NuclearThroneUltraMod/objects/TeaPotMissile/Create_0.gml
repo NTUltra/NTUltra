@@ -4,7 +4,7 @@ meleedamage = 5
 mySize = 1
 
 event_inherited()
-
+wasResurrected = true;
 spr_idle = sprScrapBossMissileIdle
 spr_walk = sprScrapBossMissileIdle
 spr_hurt = sprScrapBossMissileHurt

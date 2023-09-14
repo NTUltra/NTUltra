@@ -41,12 +41,12 @@ if overlap != noone && !overlap.ignoreOverlap
 		speed += 0.8;
 		if is60fps
 		{
-			direction += 10;
+			direction += 5;
 			walk += 0.5;
 		}
 		else
 		{
-			direction += 5;
+			direction += 2.5;
 			walk += 1;
 		}
 	}

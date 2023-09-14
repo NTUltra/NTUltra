@@ -49,13 +49,13 @@ if actualLives < 1
 if ultra_got[40]==1
 {
 //REBEL DEFENCE PASSIVE
-ang = random(360)
+var ang = random(360)
 {
 repeat(28)
 {
 with instance_create(x,y,AllyBullet)
 {
-motion_add(other.ang,4)
+motion_add(ang,4)
 image_angle = direction
 team = other.team
 }

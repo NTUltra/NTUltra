@@ -334,9 +334,7 @@ else {
 	UberCont.start_wep[0]=race_swep[race];//Starting weapon 0 is different for each character
 	if (UberCont.selected_start_wep[race] == -1)
 	{
-		do {
-			wep = irandom(UberCont.maxstartwep);
-			} until UberCont.start_wep_have[wep,race];
+		do {wep = irandom(UberCont.maxstartwep);} until UberCont.start_wep_have[wep,race];
 		wep = UberCont.start_wep[wep];
 	}
     else {

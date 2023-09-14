@@ -8,7 +8,7 @@ function scrFire() {
 	if object_index == Player
 		with Bullet7
 		{
-			if !turned
+			if !turned && wepFire == other.wep
 				exit;
 		}
 	reload = min(reload + wep_load[wep],wep_load[wep]);

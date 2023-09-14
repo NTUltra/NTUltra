@@ -349,7 +349,7 @@ function scrDecideInvader(){
 					scrSpawnInvaderBoss(1,CursedHyperCrystal,sprFloor115,sprFloor115,sprFloor115Explo);
 			} else if loops > 9 && (area == 9 || area == 118) && subarea == 2//Palace 7 - 2 replaces proto statue at loop 10
 			{
-				scrSpawnInvaderBoss(clamp(floor((loops - 9)*0.25),1,2),BallBoss,sprFloor100,sprFloor100C,sprFloor100Explo);
+				scrSpawnInvaderBoss(clamp(floor((loops - 9)*0.25),1,2),UltraBigDog,sprFloor134,sprFloor134B,sprFloor133Explo);
 			}
 		}
 		//TODO Check inverted areas if possible

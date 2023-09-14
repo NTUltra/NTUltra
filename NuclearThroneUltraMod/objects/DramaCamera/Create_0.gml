@@ -98,7 +98,14 @@ widescreen = 0
 
 
 name="BOSS"
-if instance_exists(BallBoss)
+if instance_exists(UltraBigDog)
+{
+	if random(100)<1
+		name = choose("CHILD MAULTER","BABY MUNCHER");
+	else
+		name = "ULTRA BIG DOG";
+}
+else if instance_exists(BallBoss)
 {
 	name = "PROTO MIND";
 	if random(100)<1

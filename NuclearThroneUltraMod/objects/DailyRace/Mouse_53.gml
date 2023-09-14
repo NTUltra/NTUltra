@@ -27,7 +27,7 @@ if hover
 			//seedText = seed;
 			useSeed = true;
 			canRestart = true;
-			if opt_gamemode != 37 && opt_gamemode != 26 && opt_gamemode != 27
+			if !scrIsGamemode(37) && !scrIsGamemode(26) && !scrIsGamemode(27)
 				previous_gamemode = opt_gamemode;
 			opt_gamemode = [26];
 			isWeekly = false;

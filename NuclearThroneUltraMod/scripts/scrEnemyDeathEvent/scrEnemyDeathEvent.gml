@@ -305,11 +305,11 @@ function scrEnemyDeathEvent(){
 			if Player.ultra_got[16]
 				Player.lastEnemyKilled = object_index;
 		}
-		if instance_number(enemy) <= instance_number(IDPDVan)+1
+		if instance_number(enemy) <= instance_number(IDPDVan)+1 && !instance_exists(becomenemy)
 		{
 			snd_play(sndLastEnemy,0,true)
 		}
-		else if !wasResurrected && scrIsGamemode(12)
+		else if scrIsGamemode(12) && !wasResurrected
 		{
 			instance_create(x,y,Zombie);
 		}
