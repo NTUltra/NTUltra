@@ -20,6 +20,8 @@ if (type == network_type_data) {
 			UberCont.weeklyWeek = UberCont.totalWeeklies;
 			if latestVersion != UberCont.updateVersion || !gotSteam
 			{
+				UberCont.opt_gamemode = [0];
+				UberCont.isWeekly = false;
 				alarm[0] = min(alarm[0],1);
 			}
 			else if UberCont.isWeekly {

@@ -1501,7 +1501,7 @@ function scrPopEnemies() {
 		            instance_create(x + 16, y + 16, choose(PalaceGuardian, PalaceGuardian, CourtyardTank, CourtyardTank))
 		        }
 		        else {
-		            instance_create(x + 16, y + 16, choose(Raven, Raven, Raven, Exploder, CourtyardGuardian, GhostGuardian, CourtyardGuardian, CourtyardGuardian, CourtyardTank))
+		            instance_create(x + 16, y + 16, choose(Raven, Raven, UltraRaven, Exploder, CourtyardGuardian, GhostGuardian, CourtyardGuardian, CourtyardGuardian, CourtyardTank))
 		        }
 			}
 		} else
@@ -1512,7 +1512,7 @@ function scrPopEnemies() {
 		            instance_create(x + 16, y + 16, choose(CourtyardGuardian, CourtyardGuardian, CourtyardTank, CourtyardTank))
 		        }
 		        else {
-					instance_create(x + 16, y + 16, choose(Raven, Raven, Raven, Raven, Exploder, CourtyardGuardian, CourtyardGuardian, CourtyardGuardian, CourtyardTank))
+					instance_create(x + 16, y + 16, choose(Raven, Raven, Raven, UltraRaven, Exploder, CourtyardGuardian, CourtyardGuardian, CourtyardGuardian, CourtyardTank))
 		        }
 			}
 		}

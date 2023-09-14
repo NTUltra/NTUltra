@@ -1,5 +1,5 @@
 /// @description Flame
-alarm[2] = 2;
+alarm[2] = 3;
 with instance_create(x,y,Flame)
 {
 	speed = other.speed*0.25;

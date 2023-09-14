@@ -24,7 +24,9 @@ if instance_exists(Player){
 		alarm[3] = 0;
 	}
 }
-
+with CorpseCollector {
+	alarm[0] = max(60,alarm[0]);
+}
 alarm[0] = 30;
 alarm[4] = 40;
 
