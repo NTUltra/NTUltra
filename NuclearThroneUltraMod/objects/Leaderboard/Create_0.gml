@@ -8,7 +8,7 @@ with MusCont
 if !instance_exists(MusCont)
 {
 	snd_loop(amb0c);
-	audio_sound_gain(amb0c, max(0, sqrt(UberCont.opt_ambvol)), 0);
+	audio_sound_gain(amb0c, max(0, UberCont.opt_ambvol), 0);
 }
 with UberCont
 {

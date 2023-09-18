@@ -40,8 +40,8 @@
     "path": "sprites/sprExplosiveSlugBulletHighDamage/sprExplosiveSlugBulletHighDamage.yy",
   },
   "spriteMaskId": {
-    "name": "mskBullet2",
-    "path": "sprites/mskBullet2/mskBullet2.yy",
+    "name": "mskSlug",
+    "path": "sprites/mskSlug/mskSlug.yy",
   },
   "visible": true,
 }

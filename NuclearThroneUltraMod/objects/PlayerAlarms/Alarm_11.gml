@@ -3,7 +3,7 @@ if instance_exists(enemy)
 with Player
 {
 	if random(10)<6 && point_distance(x,y,instance_nearest(x,y,enemy).x,instance_nearest(x,y,enemy).y)<300 {//constant sparks annoy me so only if enemy is close
-		if (lightning)
+		if (other.lightning)
 		{
 			snd_play(choose(sndSpark1,sndSpark2),0.1);
 			repeat(irandom_range(1,4))
@@ -47,4 +47,5 @@ with Player
 		}
 	}
 }
+lightning = !lightning;
 alarm[11] = 30;

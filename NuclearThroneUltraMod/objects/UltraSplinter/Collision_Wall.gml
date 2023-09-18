@@ -1,27 +1,27 @@
-if canBounce
+/// @description BOUNC
+if wallHits < 1
 {
+	move_bounce_solid(true);
+	x -= lengthdir_x(14,image_angle);
+	y -= lengthdir_y(14,image_angle);
+	speed = clamp(speed*2,6,24);
+	image_angle = direction;
+	instance_create(x,y,Smoke);
+	wallHits ++;
+	image_angle = direction;
+	snd_play(sndShotgunHitWall,0.1,true);
 	if isGaseous
 	{
-		with instance_create(xprevious,yprevious,theGass)
+		with instance_create(x,y,ToxicThrowerGas)
 		{
 			image_xscale -= 0.1
 			image_yscale -= 0.1
-			team = other.team;
-			direction = other.direction + 180;
-			speed += 0.1;
-			if instance_exists(Player) && Player.skill_got[5]
-				speed += 0.1;
+			team = other.team;	
 		}
 	}
-	move_bounce_solid(false)
-	canBounce = false;
 }
-else if speed != 0
+else
 {
-	snd_play(sndBoltHitWall,0.1,true,true,1,false,true,0.76)
-	speed = 0
-	move_contact_solid(direction,16)
-	instance_create(x,y,Dust)
-	image_index = 2
+	event_inherited();	
 }
 

@@ -1,5 +1,5 @@
 //preventing players from pirating
-/*
+
 if (!file_exists("amb106.ogg")||
 !file_exists("amb0.ogg")||
 !file_exists("amb0b.ogg")||
@@ -70,6 +70,9 @@ if !audio_group_is_loaded(agsfx)
 	
 if !instance_exists(UberCont)
 instance_create(0,0,UberCont)
+
+if !instance_exists(GameRender)
+instance_create(0,0,GameRender)
 	
 room_goto(romGame)
 instance_destroy()

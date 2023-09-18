@@ -12,5 +12,5 @@ if image_yscale < 0.4
 }
 else
 {
-	image_yscale -= 0.13;
+	image_yscale -= 0.1;
 }

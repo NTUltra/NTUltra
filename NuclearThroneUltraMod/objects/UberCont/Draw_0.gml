@@ -7,8 +7,7 @@ var text = res[0];
 var upsideDown = res[1];
 
 //}
-
-draw_sprite_ext(pauseimg,0,__view_get( e__VW.XView, 0 ),yy,1,1,0,c_white,1)//0.35,
+draw_sprite_ext(pauseimg,0,__view_get( e__VW.XView, 0 ),yy,pauseimgScale,pauseimgScale,0,c_white,1)//0.35,
 draw_set_color(c_black)
 draw_set_blend_mode(bm_normal)
 draw_set_alpha(0.6)
@@ -55,12 +54,13 @@ else
 var fpsMode = "#OFF";
 	if UberCont.normalGameSpeed == 60
 		fpsMode = "#ON";
-txt1 = "######AUDIO#MUSIC VOLUME#SFX VOLUME#AMBIENT VOLUME#3D AUDIO##VISUALS#FULL SCREEN#CROSSHAIR#SIDE-ART/WIDESCREEN#DAMAGE INDICATORS#CAMERA FOLLOW AIM#HUD DESCRIPTION##OTHER#SCREEN SHAKE#FREEZE FRAMES#LOADING SPEED#CAPTURE MOUSE#BOSS INTROS#TIMER#60 FPS [BETA]"
+txt1 = "######AUDIO#MUSIC VOLUME#SFX VOLUME#AMBIENT VOLUME#3D AUDIO##VISUALS#FULL SCREEN#CROSSHAIR#SIDE-ART/WIDESCREEN#RESOLUTION SCALE#DAMAGE INDICATORS#CAMERA FOLLOW AIM#HUD DESCRIPTION#OTHER#SCREEN SHAKE#FREEZE FRAMES#LOADING SPEED#CAPTURE MOUSE#BOSS INTROS#TIMER#60 FPS [BETA]"
 txt2 = "#######"+string(scrAddZero(round(UberCont.opt_musvol*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_sfxvol*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_ambvol*100),2))
 +"%#"+string(scrOnOff(UberCont.opt_3d_audio))+"###"+string(scrOnOff(UberCont.opt_fulscrn))+"#"+string(UberCont.opt_crosshair+1)+"#"+sideAspect+"#"+
+string(UberCont.opt_resolution_scale) + "X#" +
 string(scrOnOff(UberCont.opt_dmgindicator))+"#"+string(scrOnOff(UberCont.opt_camera_follow))+"#"//
 +string(scrOnOff(UberCont.opt_hud_des))+
-"###"+string(scrAddZero(round(UberCont.opt_shake*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_freeze*100),2))+"%#"+loadspeed+string(scrOnOff(UberCont.opt_mousecp))+"#"+string(bossintro)+"#"+string(timer)+fpsMode
+"##"+string(scrAddZero(round(UberCont.opt_shake*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_freeze*100),2))+"%#"+loadspeed+string(scrOnOff(UberCont.opt_mousecp))+"#"+string(bossintro)+"#"+string(timer)+fpsMode
 
 
 
@@ -108,6 +108,8 @@ with CursorUpDown
 event_perform(ev_draw,0)
 with SideArtUpDown
 event_perform(ev_draw,0)
+with FreezeFrameUpDown
+event_perform(ev_draw,0)
 with DamageIndicatorToggle
 event_perform(ev_draw,0)
 with CameraFollowToggle
@@ -123,7 +125,7 @@ with ShakeUpDown
 event_perform(ev_draw,0)
 with MouseCPToggle
 event_perform(ev_draw,0)
-with FreezeFrameUpDown
+with ResolutionScaleUpDown
 event_perform(ev_draw,0)
 with LoadingScreenSpeedUpDown
 event_perform(ev_draw,0)
@@ -193,5 +195,5 @@ draw_text(xx+8,yy,string_hash_to_newline(string(stxt2)))
 
 if alarm[1]>0
 {
-	draw_sprite_ext(pauseimg,0,__view_get( e__VW.XView, 0 ),yy,1,1,0,c_white,1)
+	draw_sprite_ext(pauseimg,0,__view_get( e__VW.XView, 0 ),yy,pauseimgScale,pauseimgScale,0,c_white,1)
 }

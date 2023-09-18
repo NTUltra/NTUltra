@@ -39,9 +39,6 @@
     "name": "sprPotato",
     "path": "sprites/sprPotato/sprPotato.yy",
   },
-  "spriteMaskId": {
-    "name": "mskSlug",
-    "path": "sprites/mskSlug/mskSlug.yy",
-  },
+  "spriteMaskId": null,
   "visible": true,
 }

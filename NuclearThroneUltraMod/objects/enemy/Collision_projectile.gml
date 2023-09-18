@@ -11,11 +11,7 @@ if(instance_exists(Player)) {
 			walk = 0;
 			var amount = 1;
 			if wp != 0
-				amount = Player.wep_load[wp]*0.45;
-			if Player.skill_got[5]
-			{
-				amount *= 1.2;
-			}
+				amount = Player.wep_load[wp]*0.5;
 			with projectile
 			{
 				if wepFire == wp

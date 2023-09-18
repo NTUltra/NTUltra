@@ -2,6 +2,8 @@ viewx = 0
 viewy = 0
 viewx2 = 0
 viewy2 = 0
+prevViewX = 0;
+prevViewY = 0;
 prevviewx2 = 0
 prevviewy2 = 0
 smoothing = 0.2;
@@ -114,4 +116,3 @@ if instance_exists(SurvivalArenaStarter)
 	alarm[7] = 1;
 }
 alarm[9] = 1;
-enemyDeactivater = ds_list_create();

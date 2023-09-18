@@ -58,6 +58,8 @@ if !instance_exists(GenCont)
 		{
 			viewx = (viewx+cam.x*cam.urgent)/(1+cam.urgent)-vw
 			viewy = (viewy+cam.y*cam.urgent)/(1+cam.urgent)-vh
+			prevViewX = viewx;
+			prevViewY = viewy;
 		}
 	}
 }
@@ -105,6 +107,33 @@ if !instance_exists(Menu)
 	viewx2 = viewx2-(viewx2-viewx)*normalizationSpeed;
 	viewy2 = viewy2-(viewy2-viewy)*normalizationSpeed;
 }
-__view_set( e__VW.XView, 0, round(viewx2+(random(shake)-shake*0.5)*UberCont.opt_shake) );
-__view_set( e__VW.YView, 0, round(viewy2+(random(shake)-shake*0.5)*UberCont.opt_shake) );
-
+var xx = viewx2+(random(shake)-shake*0.5)*UberCont.opt_shake;
+var yy = viewy2+(random(shake)-shake*0.5)*UberCont.opt_shake;
+if UberCont.opt_resolution_scale > 1 && !instance_exists(LevCont)
+{
+	var difX = ((xx - prevViewX) * 0.1);
+	var difY = ((yy - prevViewY) * 0.1);
+	xx -= difX;
+	xx -= difY;
+	prevViewX = xx;
+	prevViewY = yy;
+	with GameRender
+	{
+		viewX = xx;
+		viewY = yy;
+	}
+	xx = round(xx);
+	yy = round(yy);
+}
+else
+{
+	xx = round(xx);
+	yy = round(yy);
+	with GameRender
+	{
+		viewX = xx;
+		viewY = yy;
+	}
+}
+__view_set( e__VW.XView, 0, xx );
+__view_set( e__VW.YView, 0, yy );

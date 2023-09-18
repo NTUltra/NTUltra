@@ -170,7 +170,7 @@ function scrSecretUltraStat() {
 	secret_ultra_name[20] = "QUICK SWAPPER"
 	secret_ultra_text[20] = "INCREASE WEAPON PICKUP RANGE##YOU DROP WEAPONS AT YOUR FEET##DROPPING A WEAPON#MAKES YOU IMMUNE FOR A SHORT DURATION##PORTALS SPIT OUT A NEW RANDOM WEAPON#UPON ENTERING AN AREA"
 	secret_ultra_tips[20] = "slide swapping!"
-	secret_ultra_hint[20] = "SINGLE ARNAMENT";
+	secret_ultra_hint[20] = "SINGLE ARMAMENT";
 	secret_ultra_unlk[20] = "HOLD ONLY ONE WEAPON";
 	//68
 	secret_ultra_name[21] = "ENGINUITY"
@@ -272,7 +272,7 @@ function scrSecretUltraStat() {
 	secret_ultra_name[32] = "BOOM HANDS!"
 	secret_ultra_text[32] = "EXPLOSIVE HANDS#HAND IS SLOWER#NORMAL HAND SPEED IN INVERTED AREAS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
 	secret_ultra_tips[32] = "secret c-skin ultra mutation"
-	secret_ultra_hint[32] = "CAPTAIN";
+	secret_ultra_hint[32] = "POPO";
 	secret_ultra_unlk[32] = "USE C-SKIN";
 	
 	//109

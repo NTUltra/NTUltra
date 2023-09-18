@@ -12,7 +12,7 @@ if instance_exists(Player)
 			audio_stop_sound(song);
 			song = musChimera1;
 			snd_loop(song);
-			audio_sound_gain(song, max(0, sqrt(UberCont.opt_musvol*1.05)), 0);
+			audio_sound_gain(song, clamp(UberCont.opt_musvol*1.05,0, 1), 0);
 		}
 	}
 	else

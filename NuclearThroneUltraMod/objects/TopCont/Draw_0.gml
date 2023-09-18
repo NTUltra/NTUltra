@@ -217,6 +217,10 @@ with EnemyBullet1Square
 	if draw
 		draw_self();
 }
+with SuckRad
+{
+	event_perform(ev_draw,0);
+}
 with Ray
 {
 	event_perform(ev_draw,0);

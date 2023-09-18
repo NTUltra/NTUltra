@@ -26,5 +26,5 @@ gunangle = random(360)
 alarm[1] = 2
 //alarm[0] = 24/0.4//intro animation which is cool af
 wkick = 0
-depth = 1;
+depth = -1;
 scrInitDrops(1);

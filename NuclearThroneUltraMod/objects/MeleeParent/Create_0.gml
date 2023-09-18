@@ -33,8 +33,8 @@ if instance_exists(Player)
 		if Player.ultra_got[97] && !Player.altUltra
 		{
 			wallPierce = 0.05;
-			image_xscale += 0.18;//0.1;
-			image_yscale += 0.18;//0.1;
+			image_xscale += 0.2;//0.1;
+			image_yscale += 0.2;//0.1;
 		}
 		
 	}

@@ -61,8 +61,8 @@ if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_numb
 		audio_stop_sound(song);
 		song = musBossWin
 		snd_play_2d(song)
-		audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
-		audio_sound_gain(song,max(0,sqrt(UberCont.opt_musvol)),0);
-		audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
+		audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
+		audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
+		audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
 
 	}

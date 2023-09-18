@@ -25,12 +25,6 @@ function scrDrawGameOver() {
 	}
 	//if BackCont.loops > 0 && UberCont.opt_gamemode != 8
 	//gameover += "#LOOPS: "+string(BackCont.loops)
-	/*
-	if UberCont.opt_shake != 1
-	gameover += "##PLAYING WITH "+string(round(UberCont.opt_shake*100))+"% SCREENSHAKE"
-	if UberCont.opt_freeze != 1
-	gameover += "##PLAYING WITH "+string(round(UberCont.opt_freeze*100))+"% FREEZEFRAMES"
-	*/
 /*
 	if UberCont.public = 0
 	gameover += "##MODDED EARLY ACCESS DEVELOPMENT BUILD"
@@ -182,7 +176,8 @@ function scrDrawGameOver() {
 					gamemodeScrollString += " + ";
 			}
 		}
-		var yyy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.5;
+		//var yyy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.5;
+		var yyy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2-string_height(string_hash_to_newline("A"))+16
 		gmwidth = max(0,string_width(gamemodeScrollString) - __view_get( e__VW.WView, 0 ));
 		var xx = lerp(
 		__view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )*0.5) - gmwidth*0.5,

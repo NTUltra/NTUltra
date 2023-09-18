@@ -31,12 +31,13 @@ function scrDrawOptions() {
 	if !openRemapper
 	{
 		txt0 = "#OPTIONS###########################PRESS [RIGHT CLICK] TO RETURN"
-		txt1 = "###AUDIO#MUSIC VOLUME#SFX VOLUME#AMBIENT VOLUME#3D AUDIO##VISUALS#FULL SCREEN#CROSSHAIR#SIDE-ART/WIDESCREEN#DAMAGE INDICATORS#CAMERA FOLLOW AIM#HUD DESCRIPTION##OTHER#SCREEN SHAKE#FREEZE FRAMES#LOADING SPEED#CAPTURE MOUSE#BOSS INTROS#TIMER#60 FPS [BETA]#DELETE SAVE#REMAP CONTROLS"
+		txt1 = "###AUDIO#MUSIC VOLUME#SFX VOLUME#AMBIENT VOLUME#3D AUDIO##VISUALS#FULL SCREEN#CROSSHAIR#SIDE-ART/WIDESCREEN#RESOLUTION SCALE#DAMAGE INDICATORS#CAMERA FOLLOW AIM#HUD DESCRIPTION#OTHER#SCREEN SHAKE#FREEZE FRAMES#LOADING SPEED#CAPTURE MOUSE#BOSS INTROS#TIMER#60 FPS [BETA]#DELETE SAVE#REMAP CONTROLS"
 		txt2 = "####"+string(scrAddZero(round(UberCont.opt_musvol*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_sfxvol*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_ambvol*100),2))
 		+"%#"+string(scrOnOff(UberCont.opt_3d_audio))+"###"+string(scrOnOff(UberCont.opt_fulscrn))+"#"+string(UberCont.opt_crosshair+1)+"#"+sideAspect +"#"+
+		string(UberCont.opt_resolution_scale) + "X#" +
 		string(scrOnOff(UberCont.opt_dmgindicator))+"#"+string(scrOnOff(UberCont.opt_camera_follow))+"#"//
 		+string(scrOnOff(UberCont.opt_hud_des))+
-		"###"+string(scrAddZero(round(UberCont.opt_shake*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_freeze*100),2))+"%#"+loadspeed+string(scrOnOff(UberCont.opt_mousecp))+"#"+string(bossintro)+"#"+string(timer)+fpsMode+"#HOLD#OPEN"
+		"##"+string(scrAddZero(round(UberCont.opt_shake*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_freeze*100),2))+"%#"+loadspeed+string(scrOnOff(UberCont.opt_mousecp))+"#"+string(bossintro)+"#"+string(timer)+fpsMode+"#HOLD#OPEN"
 		
 		stxt0 = "#OPTIONS"
 		stxt1 = "###AUDIO######VISUALS########OTHER####"
@@ -57,6 +58,8 @@ function scrDrawOptions() {
 		event_perform(ev_draw,0)
 		with SideArtUpDown
 		event_perform(ev_draw,0)
+		with ResolutionScaleUpDown
+		event_perform(ev_draw,0)
 		with DamageIndicatorToggle
 		event_perform(ev_draw,0)
 		with CameraFollowToggle
@@ -70,9 +73,9 @@ function scrDrawOptions() {
 
 		with ShakeUpDown
 		event_perform(ev_draw,0)
-		with MouseCPToggle
-		event_perform(ev_draw,0)
 		with FreezeFrameUpDown
+		event_perform(ev_draw,0)
+		with MouseCPToggle
 		event_perform(ev_draw,0)
 		with LoadingScreenSpeedUpDown
 		event_perform(ev_draw,0)

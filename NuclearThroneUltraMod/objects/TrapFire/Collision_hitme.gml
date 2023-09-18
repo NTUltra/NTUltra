@@ -15,7 +15,7 @@ if other.team != team and other.team != 0 && (other.team!=2 || image_index<5/*no
 					immunelimit=6;
 			
 				if ultra_got[97]//Mutation Doctor Ultra A
-					immunelimit=8;
+					immunelimit = 999;
 			
 			}
 		}

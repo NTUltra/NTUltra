@@ -61,3 +61,4 @@ if instance_exists(Player)
 	}
 }
 
+fadeNumber = 2;

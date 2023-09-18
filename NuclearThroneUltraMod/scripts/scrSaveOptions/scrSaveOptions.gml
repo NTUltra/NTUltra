@@ -30,6 +30,7 @@ function scrSaveOptions() {
 	ini_write_real("OPTIONS","bossintro",opt_bossintro);
 	ini_write_real("OPTIONS","timer",opt_timer);
 	ini_write_real("OPTIONS","fps",normalGameSpeed);
+	ini_write_real("OPTIONS","resolutionscale",opt_resolution_scale);
 	if normalGameSpeed < 30
 		normalGameSpeed = 30;
 	if scrIsGamemode(26) || scrIsGamemode(27) || scrIsGamemode(37) || isWeekly//Can't save daily

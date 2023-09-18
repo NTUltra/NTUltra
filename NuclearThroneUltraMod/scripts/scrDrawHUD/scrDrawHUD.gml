@@ -143,7 +143,11 @@ function scrDrawHUD() {
 		}
 		else
 		{
+			draw_set_colour(c_white);
 			draw_sprite(sprGamemodeHUD,0,__view_get( e__VW.XView, 0 )+4,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-2);
+			if scrIsGamemode(17) {
+				draw_text(__view_get( e__VW.XView, 0 )+64,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-8,string(fps_real));
+			}
 		}
 	}
 	if holdExplainGamemode > 0 

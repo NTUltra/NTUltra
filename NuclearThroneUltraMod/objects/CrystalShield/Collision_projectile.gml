@@ -1,3 +1,5 @@
+if sprite_index == spr_disappear && image_index > fadeNumber
+	exit;
 if other.isGrenade
 {
 	with other

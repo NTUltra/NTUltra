@@ -14,11 +14,12 @@ image_speed = 0.3;
 target=noone;
 bloodDelay = 20;
 meatDmgReduction = 1;
-alarm[1] = 10;
+bloodDelay = 6;
 image_yscale = 0.5;
 fork = 0//6;
 branch = 0//20;
 canSwap = false;
+alarm[2] = 5;
 if instance_exists(Player)
 {
 	if Player.skill_got[19]==1
@@ -34,7 +35,9 @@ if instance_exists(Player)
 	{
 		image_speed-=0.1;
 		dmg += 1;
-		alarm[1] = 8;
+		bloodDelay -= 2;
+		alarm[2] += 1;
+		// alarm[3] = 1;
 		bloodDelay = 16;
 		meatDmgReduction = 0;
 		fork = 8;
@@ -50,10 +53,10 @@ if instance_exists(Player)
 	Mod3=Player.wepmod3;
 	Mod4=Player.wepmod4;
 }
+alarm[1] = bloodDelay;
 ultra = false;
 isog = true;
 canBeMoved = false;
 isLaser = false;
 UberCont.recursionCheck ++;
-alarm[2] = 5;
 final = 0;

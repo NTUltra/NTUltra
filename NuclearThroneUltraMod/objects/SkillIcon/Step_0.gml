@@ -14,7 +14,7 @@ if skill = 1
 		Player.maxarmour += 4;
 		Player.armour += 4;
 	}
-	else if Player.race=25
+	else if Player.race == 25
 	{
 		Player.maxhealth += 5
 		Player.my_health += 5
@@ -33,7 +33,7 @@ else if skill = 2
 }
 else if skill = 3
 {
-	if Player.race=25//Plutonium hunger
+	if Player.race == 25//Plutonium hunger
 	{
 		Player.betterpluto = 106;
 	}
@@ -42,7 +42,7 @@ else if skill = 3
 		Player.betterpluto = 98;	
 	}
 }
-else if skill = 4 && Player.race=25//rabitpaw
+else if skill = 4 && Player.race == 25//rabitpaw
 {
 	Player.betterrabbitpaw+=0.04;
 }
@@ -67,7 +67,7 @@ else if skill = 10
 		Player.rogueammomax=4;
 	}
 	
-if Player.race=25
+if Player.race == 25
 {
 Player.typ_amax[1] = 255+Player.skill_got[10]*345
 Player.typ_amax[2] = 55+Player.skill_got[10]*55
@@ -87,9 +87,9 @@ Player.typ_amax[5] = 55+Player.skill_got[10]*44
 }
 else if skill = 13 && Player.race = 25//Long arms
 {
-	Player.bettermelee+=0.4;
+	Player.bettermelee += 0.4;
 	if Player.ultra_got[97] && !Player.altUltra
-		Player.bettermelee=0.4;
+		Player.bettermelee += 0.1;
 }
 else if skill= 16 && Player.race = 25//recycle gland
 {
@@ -107,7 +107,7 @@ Player.betterlaserbrain=1;
 }
 else if skill = 21//bolt marrow
 {
-Player.betterboltmarrow=7;
+Player.betterboltmarrow = 7;
 if Player.ultra_got[97] && !Player.altUltra
 Player.betterboltmarrow=20;
 }

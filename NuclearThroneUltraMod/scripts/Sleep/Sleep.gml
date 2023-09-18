@@ -1,4 +1,5 @@
 function Sleep(duration) {
+	exit;//Fuck freeze frames
 	//MY SCRIPT? sleep(argument0*UberCont.opt_freeze); //optimise make this a while loop for now I know it causes issues on other devices whatev
 	//var time = get_timer()/1000;
 	//while ((get_timer()/1000-time) < argument0*UberCont.opt_freeze){/*LOEPERDEPOEP*/}

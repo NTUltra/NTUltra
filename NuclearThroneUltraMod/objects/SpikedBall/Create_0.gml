@@ -9,3 +9,6 @@ alarm[2] = 120;
 xprev = x;
 yprev = y;
 hitEntities = [];
+if instance_exists(Player) && Player.skill_got[21] {
+	dist = -10;	
+}

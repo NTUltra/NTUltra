@@ -105,28 +105,33 @@ direction = image_angle+(random(accuracy)-(accuracy*0.5))//30 - 15
 speed = 4
 if instance_exists(target) && target != noone && instance_exists(target) && target.team != team && target.my_health > 0
 {
-	if !collision_line(x,y,target.x,target.y,Wall,false,false) && point_distance(x,y,target.x,target.y) < 170-accuracy//120
+	var dif = angle_difference(point_direction(x,y,target.x,target.y), image_angle);
+	if abs(dif) < 40 && !collision_line(x,y,target.x,target.y,Wall,false,false) && point_distance(x,y,target.x,target.y) < 170-accuracy//120
 		motion_add(point_direction(x,y,target.x,target.y),1.6-(accuracy*0.05))//1
 }
-image_angle = direction
-speed = 0
 var i = 0;
 var dis = 9 + random(3);
 var canPhase = instance_exists(Player) && Player.ultra_got[93];
+var sh = sign(hspeed);
+var sv = sign(vspeed);
 while (i < dis)
 {
 	x += lengthdir_x(1,direction);
 	y += lengthdir_y(1,direction);
-	var wall = instance_place(x,y,Wall);
-	if ((wall != noone && wall.object_index != WallHitMe) || (!canPhase && place_meeting(x,y,VikingWall)))
+	
+	var wall = instance_position(x + sh,y,Wall);
+	if ((wall != noone && wall.object_index != WallHitMe) || (!canPhase && collision_point(x + sign(hspeed),y,VikingWall,false,false)))
 	{
-		i = dis;
-		direction += 180+random_range(-30,30);
+		x -= sh;
+	}
+	wall = instance_position(x,y + sv,Wall);
+	if ((wall != noone && wall.object_index != WallHitMe) || (!canPhase && collision_point(x,y + sign(vspeed),VikingWall,false,false)))
+	{
+		y -= sv;
 	}
 	i ++;
 }
-
-speed = 0
+image_angle = point_direction(oldx,oldy,x,y);
 var ammoDecrease = 1;
 	var modBoost = 0.055;
 	with Player
@@ -151,11 +156,16 @@ ammo -= ammoDecrease;
 image_xscale = -point_distance(x,y,oldx,oldy)*0.25;
 if round(ammo) > 0
 {
-	image_index += 0.4/max(1,ceil(ammo));
 	with instance_create(x,y,Tentacle)
 	{
 		final = 1;
-		image_yscale = min(other.image_yscale + 0.05,2);
+		image_yscale = other.image_yscale + 0.04;
+		alarm[2] = other.alarm[2];
+		if image_yscale > 2
+		{
+			alarm[2] += (image_yscale - 2)*0.1;
+			image_yscale = 2;
+		}
 		target = other.target;
 		alarm[1] = other.alarm[1];
 		scrCopyWeaponMod(other);
@@ -183,6 +193,7 @@ if round(ammo) > 0
 			var chosenAudio = choose(sndRoll,sndWater1,sndWater2,sndTentacle,sndTentacle2);
 			if !audio_is_playing(chosenAudio)
 				snd_play(chosenAudio,0.02);
+			alarm[2] += 1;
 			alarm[0] = 1;
 		}
 	}
@@ -297,4 +308,4 @@ alarm[0] = 0;
 	with instance_create(x,y,FishBoost)
 	motion_add(other.direction+random(6)-3,1+random(2) );
 }
-
+speed = 0

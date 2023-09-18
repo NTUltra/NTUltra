@@ -50,5 +50,14 @@ repeat(am)
 	}
 	gunangle += angStep;
 }
-gunangle += turnSpeed*turn
+if ammo < usedMaxAmmo * 0.75
+	gunangle += turnSpeed*turn
 gunangle -= angStep*am;
+if ammo <= 0 && !instance_exists(missileType)
+{
+	with instance_create(x,y,missileType)
+	{
+		motion_add(other.gunangle + 180,2)
+		team = other.team;
+	}	
+}

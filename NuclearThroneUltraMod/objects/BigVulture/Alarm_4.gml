@@ -5,7 +5,7 @@ spr_hurt = sprBigVultureHurt;
 meleedamage = 0;
 
 image_angle = 0;
-speed = 3;
+speed = 2;
 image_index = 0;
 if random(3) < 1
 {

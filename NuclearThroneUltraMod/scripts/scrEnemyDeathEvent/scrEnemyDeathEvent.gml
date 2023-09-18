@@ -255,7 +255,7 @@ function scrEnemyDeathEvent(){
 			{
 				rage+=1;
 				if isdoc
-					rage += 0.25;
+					rage += 0.15;
 				if rage>500//MAX RAGE
 					rage=500;//340
 			}
@@ -266,13 +266,12 @@ function scrEnemyDeathEvent(){
 			    {
 			        if my_health <= 0
 			        {
-			        if race = 9 and bleed < 150
-			        {
-			            if bleed>0{
-			            bleed-=30;
-			            }
-			        }
-        
+				        if race = 9 and bleed < 150
+				        {
+				            if bleed>0{
+				            bleed-=30;
+				            }
+				        }
 			        }
 			    }
 		    }

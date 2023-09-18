@@ -259,7 +259,7 @@ if instance_exists(Player)
 			var t = 180;
 		    if race = 25
 		    {
-				t = 220;
+				t = 230;
 		    }
 			if !justAsheep
 			{

@@ -3,9 +3,12 @@ if opt_sideart == sprite_get_number(sprSideArt) + 1
 	exit;
 var ww = window_get_width();
 var wh = window_get_height()
-var s = ww/view_get_wport(0);
-s = min(s,wh/view_get_hport(0));
-var excesswidth = (ww - (view_get_wport(0)*s))*0.5
+var wp = view_get_wport(0);
+var hp = view_get_hport(0);
+var s = ww/wp;
+s = min(s,wh/hp);
+s /= UberCont.opt_resolution_scale;
+var excesswidth = (ww - (wp*s))*0.5
 var step = 64*s;
 if opt_sideart == sprite_get_number(sprSideArt) && sprite_exists(customSideArt)
 {

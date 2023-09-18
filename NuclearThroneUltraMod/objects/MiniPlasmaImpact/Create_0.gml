@@ -8,6 +8,10 @@ Mod4=0;
 wepFire=0;
 team = 2
 dmg = 0.5;
+confDropChanceIndex = -1;
+itemDropChanceIndex = -1;
+weaponDropChanceIndex = -1;
+hadSpeedApplied = false;
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1

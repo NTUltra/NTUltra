@@ -7,11 +7,11 @@ if alarm[0] < 1 && mouse_check_button(mb_left) and UberCont.mouse__x > x-2 and U
 UberCont.opt_sfxvol = round((UberCont.mouse__x-x)/5)*5/100
 with MusCont
 {
-audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
+audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
 
-audio_sound_gain(song,max(0,sqrt(max(0,UberCont.opt_musvol) )),0);
+audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
 
-audio_sound_gain(amb,max(0,sqrt(max(0,UberCont.opt_ambvol) )),0);
+audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
 
 //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 }
@@ -22,7 +22,7 @@ if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x+103 and UberCon
 	snd_play_2d(sndClick);
 if UberCont.opt_sfxvol > 0
 {
-	if UberCont.opt_sfxvol < 0.06
+	if UberCont.opt_sfxvol < 0.11
 		UberCont.opt_sfxvol -= 0.01
 	else
 		UberCont.opt_sfxvol -= 0.05
@@ -30,11 +30,11 @@ if UberCont.opt_sfxvol > 0
 UberCont.opt_sfxvol = max(0,UberCont.opt_sfxvol);
 with MusCont
 {
-audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
+audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
 
-audio_sound_gain(song,max(0,sqrt(max(0,UberCont.opt_musvol) )),0);
+audio_sound_gain(song,max(0,max(0,UberCont.opt_musvol) ),0);
 
-audio_sound_gain(amb,max(0,sqrt(max(0,UberCont.opt_ambvol) )),0);
+audio_sound_gain(amb,max(0,max(0,UberCont.opt_ambvol) ),0);
 
 //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 }
@@ -44,7 +44,7 @@ if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x+113 and UberCon
 	snd_play_2d(sndClick);
 if UberCont.opt_sfxvol < 1
 {
-	if UberCont.opt_sfxvol < 0.05
+	if UberCont.opt_sfxvol < 0.1
 		UberCont.opt_sfxvol += 0.01;
 	else
 		UberCont.opt_sfxvol += 0.05;
@@ -52,11 +52,11 @@ if UberCont.opt_sfxvol < 1
 UberCont.opt_sfxvol = min(1,UberCont.opt_sfxvol);
 with MusCont
 {
-audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
+audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
 
-audio_sound_gain(song,max(0,sqrt(max(0,UberCont.opt_musvol) )),0);
+audio_sound_gain(song,max(0,max(0,UberCont.opt_musvol) ),0);
 
-audio_sound_gain(amb,max(0,sqrt(max(0,UberCont.opt_ambvol) )),0);
+audio_sound_gain(amb,max(0,max(0,UberCont.opt_ambvol) ),0);
 
 //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 }

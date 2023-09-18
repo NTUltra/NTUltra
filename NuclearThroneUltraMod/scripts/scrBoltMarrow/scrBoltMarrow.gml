@@ -8,13 +8,18 @@ function scrBoltMarrow(reduc = 1, rangeChange = 0){
 		if speed > 0 and Player.skill_got[21]
 		{
 			dir = instance_nearest(x,y,enemy)
-		    if dir.team != team && point_distance(x,y,dir.x,dir.y) < 24 + rangeChange + Player.betterboltmarrow
+		    if dir.team != team && point_distance(x,y,dir.x,dir.y) < 23 + rangeChange + Player.betterboltmarrow
 		    {
 				if array_length(hitEntities) < 1 || !array_contains(hitEntities,dir)
 				{
-				    x = dir.x-hspeed*reduc
-				    y = dir.y-vspeed*reduc
-					scrForcePosition60fps();
+					var xx = dir.x - hspeed * reduc;
+					var yy = dir.y - vspeed * reduc
+					if !collision_line(xx,yy,dir.x,dir.y,Wall,false,false)
+					{
+					    x = xx
+					    y = yy
+						scrForcePosition60fps();
+					}
 				}
 		    }
 		}

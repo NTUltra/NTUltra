@@ -8,12 +8,12 @@ if instance_exists(Player) && Player.wep == 396
 		{
 			snd_loop(sndChubbyEmuSong);
 		}
-		audio_sound_gain(sndChubbyEmuSong, max(0, sqrt(UberCont.opt_musvol)), 0);
+		audio_sound_gain(sndChubbyEmuSong, max(0, UberCont.opt_musvol), 0);
 		with MusCont
 		{
 			audio_pause_sound(song);
 			audio_pause_sound(amb);
-			audio_sound_gain(song, max(0, sqrt(UberCont.opt_musvol)*2), 0);
+			audio_sound_gain(song, max(0, UberCont.opt_musvol*2), 0);
 		}
 	}
 	visible = true;
@@ -32,7 +32,7 @@ else if visible
 	audio_pause_sound(sndChubbyEmuSong);
 	with MusCont
 	{
-		audio_sound_gain(song, max(0, sqrt(UberCont.opt_musvol)), 0);
+		audio_sound_gain(song, max(0, UberCont.opt_musvol), 0);
 		audio_resume_sound(song);
 		audio_resume_sound(amb);
 	}

@@ -265,7 +265,7 @@ function scrUltras(altOverride = false) {
 	    ultra_text[38] = "SPAWN TWO ALLIES INSTEAD OF ONE"
 	    ultra_tips[38] = "more is better"
     
-	    ultra_name[39] = "EVERONE IS CONNECTED"
+	    ultra_name[39] = "EVERYONE IS CONNECTED"
 	    ultra_text[39] = "ALLIES CAST LASERS TOWARDS EACH OTHER#THE MORE ALLIES YOU HAVE#THE HIGHER YOUR DROP RATE IS#ALIES DROP MORE RESOURCES#WHEN THEY DIE"
 	    ultra_tips[39] = "hurt stone"
 		
@@ -437,7 +437,7 @@ function scrUltras(altOverride = false) {
 		if altOverride || (instance_exists(Player) &&  Player.race == 16 && (Player.altUltra || Player.unlockAlternativeUltras || ((scrKrakenWeapons(Player.wep) || scrKrakenWeapons(Player.bwep)) && instance_exists(UltraIcon))))
 		{
 			ultra_name[61] = "CAPTAIN OF THE KRAKEN"
-			ultra_text[61] = "KRAKEN WEAPONS DEAL MORE DAMAGE#TENTACLES ARE LONGER#KRAKEN WEAPONS COST 30% LESS AMMO"
+			ultra_text[61] = "KRAKEN WEAPONS DEAL MORE DAMAGE#TENTACLES ARE LONGER#KRAKEN WEAPONS COST 30% LESS AMMO##TENTACLE ARMOUR STRIKE"//TENTACLES DESTROY ALL ENEMY PROJECTILES <-- nope
 			ultra_tips[61] = "from the sea she came"
 		}
 		
@@ -731,15 +731,15 @@ function scrUltras(altOverride = false) {
 	}
     
 	ultra_name[98] = "PLAGUE DOCTOR"
-	ultra_text[98] = "YOUR ACTIVE CHANGES INTO#INFEST ENEMIES USING RADS#THRONE BUTT DECREASES RAD COST"
+	ultra_text[98] = "YOUR ACTIVE CHANGES INTO#INFEST ENEMIES USING RADS"
 	ultra_tips[98] = "I am here to heal you"
     
 	ultra_name[99] = "NECROMANCER"
-	ultra_text[99] = "YOUR ACTIVE CHANGES INTO#REVIVE CORPSES INTO ALLY FREAKS#THRONE BUTT INCREASES THE DAMAGE#THEY DEAL"
+	ultra_text[99] = "YOUR ACTIVE CHANGES INTO#REVIVE CORPSES INTO ALLY FREAKS"
 	ultra_tips[99] = "doctor necromancer"
     
 	ultra_name[100] = "SEDATIVES"
-	ultra_text[100] = "YOUR PROJECTILES PUT ENEMIES TO SLEEP#FOR A SHORT MOMENT#THRONE BUTT INCREASES#THE SLEEP DURATION BY 20%"
+	ultra_text[100] = "YOUR PROJECTILES PUT ENEMIES TO SLEEP#FOR A SHORT MOMENT"
 	ultra_tips[100] = "sleeping enemies don't react#for a moment"
 
 

@@ -19,7 +19,7 @@ if alarm[0] < 1 && other.team == 2 && instance_exists(Player) && (!ezMode || oth
 				immunelimit=6;
 
 			if Player.ultra_got[97] && !Player.altUltra//Mutation Doctor Ultra A
-				immunelimit=8;
+				immunelimit = 999;
 		}
 
 

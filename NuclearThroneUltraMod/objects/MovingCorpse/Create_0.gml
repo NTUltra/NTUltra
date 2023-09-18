@@ -7,6 +7,7 @@ impactWristed = false;
 if instance_exists(Player){
 	if Player.ultra_got[52] == 1{
 		friction=0.32;
+		dmg = 1.5;
 	}
 	if Player.skill_got[20] {
 		dmg = 2;

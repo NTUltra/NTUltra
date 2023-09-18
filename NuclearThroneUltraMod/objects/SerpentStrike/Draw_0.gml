@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description Draw head
 var ys = image_yscale * flipped
 if (alarm[0] > 0 || ammo <= 0)// && instance_exists(myHead)
 {

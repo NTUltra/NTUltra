@@ -16,11 +16,11 @@ with MusCont
 {
 	
 //audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
-audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
+audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
 
-audio_sound_gain(song,max(0,sqrt(max(0,UberCont.opt_musvol) )),0);
+audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
 
-audio_sound_gain(amb,max(0,sqrt(max(0,UberCont.opt_ambvol) )),0);
+audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
 
 //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 }
@@ -32,7 +32,7 @@ if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x+103 and UberCon
 	snd_play_2d(sndClick);
 if UberCont.opt_musvol > 0
 {
-	if UberCont.opt_musvol < 0.06
+	if UberCont.opt_musvol < 0.11
 		UberCont.opt_musvol -= 0.01
 	else
 		UberCont.opt_musvol -= 0.05
@@ -44,11 +44,11 @@ UberCont.opt_musvol = 0;
 with MusCont
 {
 //audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
-audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
+audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
 
-audio_sound_gain(song,max(0,sqrt(max(0,UberCont.opt_musvol) )),0);
+audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
 
-audio_sound_gain(amb,max(0,sqrt(max(0,UberCont.opt_ambvol) )),0);
+audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
 
 //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 }
@@ -58,7 +58,7 @@ if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x+113 and UberCon
 	snd_play_2d(sndClick);
 if UberCont.opt_musvol < 1
 {
-	if UberCont.opt_musvol < 0.05
+	if UberCont.opt_musvol < 0.1
 		UberCont.opt_musvol += 0.01;
 	else
 		UberCont.opt_musvol += 0.05;
@@ -70,12 +70,12 @@ UberCont.opt_musvol = 0;
 with MusCont
 {
 //audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
-audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
+audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
 
-audio_sound_gain(song,max(0,sqrt(max(0,UberCont.opt_musvol) )),0);
-audio_sound_gain(sndChubbyEmuSong, max(0, sqrt(UberCont.opt_musvol)), 0);
+audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
+audio_sound_gain(sndChubbyEmuSong, max(0, UberCont.opt_musvol), 0);
 
-audio_sound_gain(amb,max(0,sqrt(max(0,UberCont.opt_ambvol) )),0);
+audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
 
 //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 }

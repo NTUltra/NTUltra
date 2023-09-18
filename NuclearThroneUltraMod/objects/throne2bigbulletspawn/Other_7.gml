@@ -4,7 +4,7 @@ if target != noone
 {
 	var dir = point_direction(x,y,target.xprevious,target.yprevious);
 	dir += choose(random_range(25,55),random_range(-25,-55));
-	snd_play(sndBigBallFire);
+	snd_play(sndNothing2Ball);
 	var addspeed = point_distance(x,y,target.xprevious,target.yprevious)*0.0153;
 	addspeed = min(addspeed,16);
 	if typ == 2

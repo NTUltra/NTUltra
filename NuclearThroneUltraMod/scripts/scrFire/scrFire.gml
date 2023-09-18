@@ -5,7 +5,7 @@ function scrFire() {
 	exit;
 	if wep==0{
 		exit;}
-	if object_index == Player
+	if object_index == Player && Player.normalFire
 		with Bullet7
 		{
 			if !turned && wepFire == other.wep

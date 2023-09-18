@@ -16,13 +16,13 @@ if scrIsGamemode(25) && area != 0
 
 
     //audio_master_gain(max(0, sqrt(UberCont.opt_sfxvol)))
-	audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
+	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
 
-    audio_sound_gain(song, max(0, sqrt(UberCont.opt_musvol)), 0);
+    audio_sound_gain(song, max(0, UberCont.opt_musvol), 0);
 
-    audio_sound_gain(amb, max(0, sqrt(UberCont.opt_ambvol)), 0);
+    audio_sound_gain(amb, max(0, UberCont.opt_ambvol), 0);
 
-    audio_sound_gain(sndBossWin, max(0, sqrt(UberCont.opt_musvol)), 0);
+    audio_sound_gain(sndBossWin, max(0, UberCont.opt_musvol), 0);
 	
     exit;
 }
@@ -36,13 +36,13 @@ if scrIsGamemode(8) && area != 0
 		snd_loop(song)
 
     //audio_master_gain(max(0, sqrt(UberCont.opt_sfxvol)))
-	audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
+	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
 
-    audio_sound_gain(song, max(0, sqrt(UberCont.opt_musvol)), 0);
+    audio_sound_gain(song, max(0, UberCont.opt_musvol), 0);
 
-    audio_sound_gain(amb, max(0, sqrt(UberCont.opt_ambvol)), 0);
+    audio_sound_gain(amb, max(0, UberCont.opt_ambvol), 0);
 
-    audio_sound_gain(sndBossWin, max(0, sqrt(UberCont.opt_musvol)), 0);
+    audio_sound_gain(sndBossWin, max(0, UberCont.opt_musvol), 0);
     exit;
 }
 
@@ -338,12 +338,12 @@ if oldarea != area || area == 0 or !audio_is_playing(song) or audio_is_playing(m
 	}
 
     //audio_master_gain(max(0, sqrt(UberCont.opt_sfxvol)))
-	audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
+	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
 
-    audio_sound_gain(song, max(0, sqrt(UberCont.opt_musvol)), 0);
+    audio_sound_gain(song, max(0, UberCont.opt_musvol), 0);
 
-    audio_sound_gain(amb, max(0, sqrt(UberCont.opt_ambvol)), 0);
+    audio_sound_gain(amb, max(0, UberCont.opt_ambvol), 0);
 
-    audio_sound_gain(sndBossWin, max(0, sqrt(UberCont.opt_musvol)), 0);
+    audio_sound_gain(sndBossWin, max(0, UberCont.opt_musvol), 0);
     //audio_sound_gain(sndVaultBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 }

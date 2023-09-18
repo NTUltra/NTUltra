@@ -3,14 +3,18 @@ draw_set_halign(fa_left);
 if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x and UberCont.mouse__x < x+8 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
 {
 	snd_play_2d(sndClick);
-if UberCont.opt_shake > 0
-UberCont.opt_shake -= 0.1
+	if UberCont.opt_shake > 0
+		UberCont.opt_shake -= 0.1
+	else
+		UberCont.opt_shake = 4;
 }
 if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x+10 and UberCont.mouse__x < x+18 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
 {
 	snd_play_2d(sndClick);
-if UberCont.opt_shake < 4
-UberCont.opt_shake += 0.1
+	if UberCont.opt_shake < 4
+		UberCont.opt_shake += 0.1
+	else
+		UberCont.opt_shake = 0;
 }
 
 if UberCont.opt_freeze!=4

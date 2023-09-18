@@ -193,9 +193,16 @@ else if instance_exists(Player) && !instance_exists(StartDaily)///PAUSE IN-GAME
 kills=Player.kills
 hard=Player.hard;
 if instance_exists(TopCont) && TopCont.darkness == 0
+{
 	pauseimg = sprite_create_from_surface(application_surface,0,0,surface_get_width(application_surface),surface_get_height(application_surface),0,0,0,0);
+	pauseimgScale = 1/UberCont.opt_resolution_scale;
+}
 else
+{
 	pauseimg = sprDarkness;
+	pauseimgScale = 1;
+}
+	
 //cursor_sprite=sprCrosshair
 //with Cursor
 //instance_destroy();
@@ -210,16 +217,7 @@ with FPSHACK
 }*/
 
 instance_deactivate_all(1)
-instance_activate_object(UnlockPopup);
-if instance_exists(FPSHACK)
-	instance_create(x,y,FPSHACKMenu);
-//instance_activate_object(FPSHACKMenu);
-//instance_activate_object(BackCont);
-instance_activate_object(MusCont);
-
-//instance_activate_object(FPSHACK);
-//instance_activate_object(TopCont);//hmm?
-instance_activate_object(Cursor);
+scrActivateImportant();
 optY = 24;
 var xx = 10;
 instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+8,__view_get( e__VW.YView, 0 )+32+optY,MusVolSlider)
@@ -235,8 +233,9 @@ instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+xx+s
 instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+xx+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+120+optY,HighQualityToggle)
 //instance_create(view_xview+view_wview/2+10+string_width("OFF"),view_yview+136,GamePadToggle)
 //instance_create(view_xview+view_wview/2+10+string_width("100%"),view_yview+144,AutoAimUpDown)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("100%")),__view_get( e__VW.YView, 0 )+174+optY,ShakeUpDown)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("100%")),__view_get( e__VW.YView, 0 )+182+optY,FreezeFrameUpDown)
+instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("100%")),__view_get( e__VW.YView, 0 )+166+optY,ShakeUpDown)
+instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("100%")),__view_get( e__VW.YView, 0 )+174+optY,FreezeFrameUpDown)
+instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("16X")),__view_get( e__VW.YView, 0 )+182+optY,ResolutionScaleUpDown)
 instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("100%")),__view_get( e__VW.YView, 0 )+190+optY,LoadingScreenSpeedUpDown)
 instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+198+optY,MouseCPToggle)
 instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+206+optY,BossIntroToggle);

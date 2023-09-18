@@ -1,3 +1,3 @@
 /// @description Init
-holdTime = 10;
+holdTimer = 10;
 doneFor = false;

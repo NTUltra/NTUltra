@@ -110,7 +110,7 @@ with MusCont
 	audio_stop_sound(song);
 	song = asset_get_index(property.song);
 	snd_loop(song);
-	audio_sound_gain(song, max(0, sqrt(UberCont.opt_musvol)), 0);
+	audio_sound_gain(song, max(0, UberCont.opt_musvol), 0);
 }
 waveLength = array_length(wave);
 for (var w = 0; w < waveLength; w++) {

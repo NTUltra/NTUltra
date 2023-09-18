@@ -7,7 +7,12 @@ instance_create(x+random(12)-6,y+random(12)-6,Smoke);
 if skill_got[2]
 {
 	if extrafeetalarm>0
-		extrafeetalarm--;
+	{
+		if UberCont.normalGameSpeed == 60
+			extrafeetalarm -= 0.5;
+		else
+			extrafeetalarm--;
+	}
 
 	if extrafeetalarm == 11 && extrafeetdodged && alarm[3] < 1
 	{

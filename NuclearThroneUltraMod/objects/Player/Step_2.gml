@@ -465,6 +465,35 @@ if my_health < prevhealth
 		}
 	}
 }
+if skill_got[22]//Stress Sharp teeth part
+{
+	if tookHit && alarm[10]<1//I been hit
+	{
+		alarm[10]=30;
+		sharpteeth = prevhealth - my_health;
+		var multiplier = 2.5;
+		if race = 25
+			multiplier = 3//Sharp teeth's damage!
+		if scrIsGamemode(24) //SHARP STRESS GAMEMODE
+			multiplier *= level;
+		if scrIsCrown(18) //Crown of greed
+			multiplier *= 2
+		snd_play_2d(sndSharpTeeth);
+		with enemy {
+			if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+			{
+				snd_play(snd_hurt, hurt_pitch_variation,true)
+				Sleep(10)
+				my_health -= other.sharpteeth*multiplier//Sharp teeth's damage!
+				sprite_index = spr_hurt
+				image_index = 0
+				motion_add(other.direction,6)
+				with instance_create(x,y,SharpTeeth)
+					owner=other.id;
+			}
+		}
+	}
+}
 //Extra feet consider failed dodge
 if skill_got[2] && tookHit && !exception
 {
@@ -478,7 +507,7 @@ if skill_got[38] && tookHit && alarm[3] < 1 && alarm[1] < 1
 	{
 		metabolism = 0;
 		my_health = prevhealth;
-		alarm[3] = max(alarm[3] + 5, 25);
+		alarm[3] = max(alarm[3] + 5, 20);
 		audio_stop_sound(snd_hurt);
 		snd_hurt = sndDamageNegate;
 		snd_play_2d(sndMetabolism);
@@ -606,41 +635,6 @@ if alarm[3] > 0/*|| lag>0 *//*&&my_health!=maxhealth*/&& !exception
 	}
 }
 
-
-
-if skill_got[22]//Stress Sharp teeth part
-{
-if tookHit&&alarm[10]<1//I been hit
-{
-alarm[10]=30;
-sharpteeth = prevhealth - my_health - damageReduced;
-var multiplier = 2.5;
-if race = 25
-multiplier*=1.25//Sharp teeth's damage!
-if scrIsGamemode(24) //SHARP STRESS GAMEMODE
-	multiplier *= level;
-snd_play_2d(sndSharpTeeth);
-with enemy{
-	if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{
-	//if sprite_index!=spr_hurt{
-	snd_play(snd_hurt, hurt_pitch_variation,true)
-	Sleep(10)
-	my_health -= other.sharpteeth*multiplier//Sharp teeth's damage!
-	sprite_index = spr_hurt
-	image_index = 0
-	motion_add(other.direction,6)
-
-
-
-	with instance_create(x,y,SharpTeeth)
-	owner=other.id;
-	//}
-	}
-}
-
-}
-}
 var resetPrevHealth = false;
 if (tookHit)
 {
@@ -997,6 +991,7 @@ if scrIsCrown(23)//Crown of speed
 	with enemy
 	{
 		speed *= 1.2;
+		speed = min(speed * 1.2, speed + 4);
 	}
 }
 if scrIsCrown(24)//Crown of sloth

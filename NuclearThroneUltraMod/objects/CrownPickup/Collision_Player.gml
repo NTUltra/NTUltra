@@ -1,10 +1,12 @@
+if instance_exists(LevCont) || instance_exists(GenCont) || instance_exists(CrownIcon)
+	exit;
 if !UberCont.canMultiCrown
 	with Crown
 	{
 		instance_destroy();	
 	}
 instance_change(FakeCrown,true)
-Player.crownpoints += 1
+scrGiveCrownPoints(1);
 if Player.curse = 1 or Player.bcurse = 1 or Player.ccurse = 1
 {
 	if Player.curse != 0 || Player.bcurse != 0 || Player.ccurse != 0

@@ -5,7 +5,7 @@ function scrLuckyShot(){
 	var ran = 14;
 	if Player.race == 25
 		ran = 13;
-	if Player.skill_got[6] = 1 and random(ran) < 3
+	if Player.skill_got[6] = 1 and random(ran) < 3//0.214% 0.23%
     {
 		snd_play_2d(sndLuckyShotProc,0,true);
 	    with instance_create(Player.x,Player.y-8,HealFX)

@@ -44,7 +44,7 @@ with MusCont
 	audio_stop_sound(song);
 	song = other.song;
 	snd_loop(song);
-	audio_sound_gain(song, max(0, sqrt(UberCont.opt_musvol)), 0);
+	audio_sound_gain(song, max(0, UberCont.opt_musvol), 0);
 }
 var i = 0;
 wave[i] = {

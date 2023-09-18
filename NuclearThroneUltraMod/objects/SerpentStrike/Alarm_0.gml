@@ -12,13 +12,13 @@ aimDir += (sin(ammo*0.1)*2);
 if ammo < 160 && instance_exists(target)
 {
 	var dif = angle_difference(point_direction(x,y,target.x,target.y), image_angle);
-	if (point_distance(x,y,target.x,target.y) < 96 && abs(dif) < 32)
+	if (point_distance(x,y,target.x,target.y) < 108 && abs(dif) < 38)
     {
-		aimDir += dif*0.5;
+		aimDir += dif*0.53;
     }
 	else
 	{
-		aimDir += dif * 0.002;
+		aimDir += dif * 0.0023;
 	}
 }
 aimDir += angle_difference(originalAngle,aimDir)*0.01;
@@ -77,6 +77,34 @@ if ammo > 0
 		{
 			currentFrameAmount = perFrame;
 			alarm[0] = 1;
+		}
+	}
+	if (instance_exists(Player) && Player.ultra_got[61] && Player.altUltra && ammo *0.5 > 0)
+	{
+		if (round(ammo) % 14 == 0) {
+			with instance_create(x,y,Tentacle)
+			{
+				final = 1;
+				image_yscale = min(other.image_yscale + 0.04,2.2);
+				target = other.target;
+				alarm[1] = other.alarm[1];
+				scrCopyWeaponMod(other);
+				// sprite_index=other.sprite_index;
+				direction = other.direction
+				image_angle = direction
+				ammo = other.ammo * 0.5
+				team = other.team
+				image_index = other.image_index
+				BackCont.shake ++;
+				with instance_create(x,y,FishBoost)
+				{
+					motion_add(other.direction+random(60)-30,other.speed );
+				}
+				var chosenAudio = choose(sndRoll,sndWater1,sndWater2,sndTentacle,sndTentacle2);
+				if !audio_is_playing(chosenAudio)
+					snd_play(chosenAudio,0.02);
+				alarm[0] = 1;
+			}
 		}
 	}
 }

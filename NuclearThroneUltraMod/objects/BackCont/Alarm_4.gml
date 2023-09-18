@@ -1,5 +1,5 @@
 /// @description Object Optimizer
-var delay = 20;
+var delay = 25;
 alarm[4] = delay;
 var cx = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])*0.5;
 var cy = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])*0.5;
@@ -12,20 +12,20 @@ var top = camera_get_view_y(view_camera[0]) - extra;
 var bottom = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) + extra;
 instance_deactivate_region()
 */
-var al = ds_list_size(enemyDeactivater);
-for (var i = 0; i < al; i++)
+with EnemyDeactivater
 {
-	with enemyDeactivater[| i] {
-		instance_destroy();	
-	}
+	alarm[0] += 1;
+	instance_destroy();	
 }
-ds_list_clear(enemyDeactivater);
 with enemy {
 	if point_distance(cx,cy,x,y) > 450
 	{
 		speed = 0;
 		instance_deactivate_object(id);
-		ds_list_add(other.enemyDeactivater,instance_create(x,y,becomenemy));
+		with instance_create(x,y,EnemyDeactivater)
+		{
+			myEnemy = other.id;	
+		}
 	}
 }
 with Top {

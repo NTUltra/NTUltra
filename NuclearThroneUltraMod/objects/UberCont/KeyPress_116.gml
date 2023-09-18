@@ -6,5 +6,12 @@ snd_play_2d(sndClick);
 		UberCont.opt_fulscrn = 0
 
 	window_set_fullscreen(UberCont.opt_fulscrn)
+	if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+	{
+		scrEnableBigScreen();
+	}
+	else {
+		scrDisableBigScreen();	
+	}
 
 scrSave();

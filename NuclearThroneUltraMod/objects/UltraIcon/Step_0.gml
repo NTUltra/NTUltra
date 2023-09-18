@@ -434,7 +434,7 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 				song = mus107;//Don't play this as we are sneaking
 				amb = amb100;
 				snd_loop(amb);
-				audio_sound_gain(amb, max(0, sqrt(UberCont.opt_ambvol)), 0);
+				audio_sound_gain(amb, max(0, UberCont.opt_ambvol), 0);
 			}
 			visitedCrib = true;
 			altUltra = true;
@@ -503,7 +503,7 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 			{
 				if skill_got[13]//long arms
 				{
-					bettermelee=0.4;
+					bettermelee = 0.5;
 				}
 				if skill_got[16]//RecycleGland
 				{
@@ -516,6 +516,10 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 				if skill_got[21]//bolt marrow
 				{
 					betterboltmarrow = 10;
+				}
+				with Player
+				{
+					scrSkills();
 				}
 			}
 		}

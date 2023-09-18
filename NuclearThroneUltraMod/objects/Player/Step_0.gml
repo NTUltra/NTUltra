@@ -225,7 +225,6 @@ if !instance_exists(LevCont) and visible = 1
 	}
 	if alarm[4]>0//boiling veins
 	{
-	instance_create(x+random(12)-6,y+random(12)-6,Smoke);
 	}
 	//Cheats
 	var thing;
@@ -704,7 +703,9 @@ if !instance_exists(LevCont) and visible = 1
 			{
 				with YungCuzDupe
 					event_user(0);
+				normalFire = true;
 				scrFire();
+				normalFire = false;
 			}
     
 		clicked = 0
@@ -720,8 +721,9 @@ if !instance_exists(LevCont) and visible = 1
 			{
 				with YungCuzDupe
 					event_user(0);
+				normalFire = true;
 				scrFire();
-				
+				normalFire = false;
 			}
 		}
 	}
@@ -847,7 +849,7 @@ if (rad > mr)
 		rad -= mr;
 		level += 1
 
-		if level==7 && loops < 1 && race = 25 && (area < 4 || area == 105 || area == 110 || area == 106 || area == 103 || area == 102 || area == 101 || area == 10)
+		if level==7 && loops < 1 && race == 25 && (area < 4 || area == 105 || area == 110 || area == 106 || area == 103 || area == 102 || area == 101 || area == 10)
 			scrUnlockBSkin(25,"FOR REACHING LEVEL 7#BEFORE THE LABS#AS MUTATION DOCTOR",0);
 
 		repeat(level-6)
@@ -1102,15 +1104,15 @@ if (!instance_exists(LevCont))
 			}
 		}
 	
-		if skill_got[22] = 1
+		if skill_got[22]
 		{
 			//nerves of steel g  STRESS
 			var reduction = 0;
 			if ultra_got[62] && altUltra//Living armour 
 				reduction = (1-(armour/maxarmour))*0.68
-			else if race = 25
+			else if race == 25
 			{
-				reduction = (1-(my_health/maxhealth))*0.62
+				reduction = (1-(my_health/maxhealth))*0.635
 			}
 			else
 			{
@@ -1247,7 +1249,9 @@ if (!instance_exists(LevCont))
 			{
 				with YungCuzDupe
 					event_user(0);
+				normalFire = true;
 				scrFire();
+				normalFire = false;
 			}
 			if reload > 0
 				can_shoot = 0;
@@ -1504,8 +1508,8 @@ if (!outOfCombat && !skill_got[2] && race!=18 && race != 15 and !instance_exists
 		}
 		if ground.sprite_index == sprFloor7Explo || ground.sprite_index == sprFloorLava
 		{
-			if alarm[4]<=0
-				alarm[4]=4;
+			if alarm[4] <= 0
+				alarm[4] = 1;
     
 			if UberCont.normalGameSpeed == 60
 				hotfloor += 0.5;
@@ -1680,7 +1684,7 @@ if (ultra_got[43] && !altUltra)//HUNTER ULTRA C Focused projectiles
 if skill_got[25]//strong spirit
     {
     
-    if ( strongspiritused=false && my_health >= maxhealth || ( strongspiritused=false && my_health > round(maxhealth*0.75) && race = 25 ) )
+    if ( strongspiritused=false && my_health >= maxhealth || ( strongspiritused=false && my_health > round(maxhealth*0.75) && race == 25 ) )
     {
     //strongspiritused=false;
     if strongspirit=false
@@ -1748,50 +1752,38 @@ if typ!=0&&canBeMoved{
 if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 {
 	if extrafeetalarm > 0
-		extrafeetalarm--;
+	{
+		if UberCont.normalGameSpeed == 60
+			extrafeetalarm -= 0.5;
+		else
+			extrafeetalarm--;
+	}
 
 	if extrafeetalarm == 11 && extrafeetdodged && alarm[3] < 1
 	{
-		if race=25
+		closedodges ++;
+		if race == 26 && closedodges >= 20
 		{
-			with instance_create(x+10,y+5,RedirectFX)
-			{
-				sprite_index = sprExtraFeetCloseDodge;	
-			}
-			if scrDrop(75,5)
-				snd_play(sndExtraFeetDodge);
-			else
-				snd_play(sndExtraFeetDodgeFail);
-				
-			repeat(3)
-				with instance_create(x,y,Rad)
-				{
-					motion_add(random(360),4)
-				}
+			closedodges = -999;//Dont need this anymore
+			scrUnlockBSkin(26,"FOR PERFORMING 20 CLOSE DODGES#USING EXTRA FEET#AS HUMPHRY",0);	
 		}
+		with instance_create(x+10,y+5,RedirectFX)
+		{
+			sprite_index = sprExtraFeetCloseDodge;	
+		}
+		if scrDrop(75,5)
+			snd_play(sndExtraFeetDodge);
 		else
-		{
-			closedodges ++;
-			if race == 26 && closedodges >= 20
+			snd_play(sndExtraFeetDodgeFail);
+		
+		var am = 3;
+		if race == 25
+			am ++;
+		repeat(am)
+			with instance_create(x,y,Rad)
 			{
-				closedodges = -999;//Dont need this anymore
-				scrUnlockBSkin(26,"FOR PERFORMING 20 CLOSE DODGES#USING EXTRA FEET#AS HUMPHRY",0);	
+				motion_add(random(360),4)
 			}
-			with instance_create(x+10,y+5,RedirectFX)
-			{
-				sprite_index = sprExtraFeetCloseDodge;	
-			}
-			if scrDrop(75,4)
-				snd_play(sndExtraFeetDodge);
-			else
-				snd_play(sndExtraFeetDodgeFail);
-				
-			repeat(3)
-				with instance_create(x,y,Rad)
-				{
-					motion_add(random(360),4)
-				}
-		}
 	}
 	if instance_exists(projectile) && alarm[3] < 1
 	{
@@ -2000,9 +1992,13 @@ if race==18&& !instance_exists(LevCont)// && !instance_exists(Portal)
 
 
 ///moddelay
-if moddelay>0
-moddelay--;
-
+if moddelay > 0
+{
+	if is60fps
+		moddelay -= 0.5;
+	else
+		moddelay--;
+}
 /* */
 ///Rogue  heat
 if (RogueHeat==true)
@@ -2024,7 +2020,7 @@ if instance_exists(PlayerAlarms2) && PlayerAlarms2.alarm[1] < 1
 	{
 		var healingAmount = 0.1;
 		var aggro = 1;
-		if UberCont.normalGameSpeed == 60
+		if is60fps
 		{
 			healingAmount = 0.05;
 			aggro = 0.5;
@@ -2050,7 +2046,7 @@ if instance_exists(PlayerAlarms2) && PlayerAlarms2.alarm[1] < 1
 	{
 		var am = 1.25
 		//var s = 1.15;
-		if UberCont.normalGameSpeed == 60
+		if is60fps
 		{
 			am = 0.625;
 			//s = 0.575
@@ -2078,7 +2074,7 @@ if hammerheadcounter > 0
 		mask_index = msk;
 		if place_meeting(x+hspeed,y+vspeed,Wall)
 		{
-			if UberCont.normalGameSpeed == 60
+			if is60fps
 				hammerheadtimer += 0.5;
 			else
 				hammerheadtimer += 1;

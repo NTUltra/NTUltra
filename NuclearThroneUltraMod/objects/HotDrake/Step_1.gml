@@ -17,7 +17,7 @@ else if  alarm[5] < 1 && alarm[4] < 1 && point_distance(x,y,xstart,ystart) > 300
 	alarm[4]=40
 	//vanishing=0;
 }
-if (instance_number(enemy) <= 3 || instance_exists(SurvivalWave) || (instance_exists(Player) && point_distance(Player.x,Player.y,xstart,ystart) < 100)) && !instance_exists(GenCont) {
+if (instance_number(enemy) <= 3 + min(6,loops)|| instance_exists(SurvivalWave) || (instance_exists(Player) && point_distance(Player.x,Player.y,xstart,ystart) < 100)) && !instance_exists(GenCont)  && instance_number(becomenemy) < 2{
 	if awake==false{
 		with DragonShield
 			event_user(0);

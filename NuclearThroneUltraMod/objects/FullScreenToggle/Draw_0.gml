@@ -16,6 +16,13 @@ if UberCont.mouse__x > x and UberCont.mouse__x < x+8 and UberCont.mouse__y > y a
 			UberCont.opt_fulscrn = 0
 
 		window_set_fullscreen(UberCont.opt_fulscrn)
+		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+		{
+			scrEnableBigScreen();
+		}
+		else {
+			scrDisableBigScreen();	
+		}
 	}
 }
 x=round(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+10+string_width(string_hash_to_newline("OFF")))

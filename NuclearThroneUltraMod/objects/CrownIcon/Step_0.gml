@@ -103,7 +103,7 @@ with UberCont
 //if oldcrown = 8 
 //Player.skillpoints -= 1
 //CROWN OF DEATH
-if oldcrown = 3
+if oldcrown == 3
 {
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
 	{
@@ -212,7 +212,7 @@ if crown = 8 && !Player.tookDestiny
 	Player.tookDestiny = true;
 }
 //CROWN OF DEATH
-if crown = 3 && Player.maxhealth > 1
+if crown == 3 && Player.maxhealth > 1
 {
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
 	{
@@ -472,14 +472,6 @@ instance_destroy()
 if Player.crownpoints > 0 or Player.skillpoints > 0
 {
 	instance_create(x,y,LevCont);
-	if canReAdd
-	{
-		with CrownIcon
-		{
-			if crown == other.oldcrown
-				canReAdd = true;
-		}
-	}
 }
 else
 {

@@ -73,6 +73,10 @@ if my_health > 0
 				}
 			}
 			wep = 0;
+			if ultra_got[29] && altUltra && bwep != 0//ROBOT EXCLUSIVE TASTE
+			{
+				maxhealth += 4;
+			}
 			scrSwapWeps();
 			snd_play(choose(snd_lowa,snd_lowh));
 		}

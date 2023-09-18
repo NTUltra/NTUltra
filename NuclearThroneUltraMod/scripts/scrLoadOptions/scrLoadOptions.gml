@@ -35,6 +35,7 @@ function scrLoadOptions() {
 	opt_bossintro = ini_read_real("OPTIONS","bossintro",0);
 	opt_timer = ini_read_real("OPTIONS","timer",0);
 	normalGameSpeed = ini_read_real("OPTIONS","fps",30);
+	opt_resolution_scale = ini_read_real("OPTIONS","resolutionscale",1);
 	//Read array!??
 	var al = ini_read_real("OPTIONS","gamemodes",1);
 	opt_gamemode = [];

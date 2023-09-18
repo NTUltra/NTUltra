@@ -1209,10 +1209,10 @@ function scrWeapons() {
 	wep_name[109] = "BLOOD GLOVE"
 	wep_type[109] = 4
 	wep_auto[109] = 0
-	wep_load[109] = 20
+	wep_load[109] = 18
 	wep_cost[109] = 2
 	wep_sprt[109] = sprBloodGlove
-	wep_area[109] = 7
+	wep_area[109] = 6
 	wep_text[109] = "five point palm#exploding heart technique"
 	wep_swap[109] = sndSwapHammer
 	wep_rad[109] = 0;
@@ -6676,7 +6676,7 @@ function scrWeapons() {
 	wep_name[604] = "SPLINTER LANCE"
 	wep_type[604] = 0
 	wep_auto[604] = 0
-	wep_load[604] = 12
+	wep_load[604] = 13
 	wep_cost[604] = 0
 	wep_sprt[604] = sprSplinterLance
 	wep_area[604] = 14

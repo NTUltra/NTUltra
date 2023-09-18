@@ -15,36 +15,16 @@ if other.team != team and other.my_health > 0//the thing I hit must not be mysel
 			//motion_add(other.image_angle,4)
 			if other.alarm[1] < 1
 			{
-				/*
-				if other.ion=true {
-					with Tentacle
-						alarm[1] = bloodDelay;
-					snd_play(sndMeatExplo,0,true)
-					var dir = point_direction(UberCont.mouse__x,UberCont.mouse__y,hit.x,hit.y);
-					var dis = point_distance(UberCont.mouse__x,UberCont.mouse__y,hit.x,hit.y)*0.5;
-					var xx = UberCont.mouse__x+lengthdir_x(dis,dir);
-					var yy = UberCont.mouse__y+lengthdir_y(dis,dir);
-					with instance_create(xx,yy,MeatExplosion) {
-						dmg -= meatDmg;
-					}
-					with instance_create(x,y,FishBoost)
-					{
-						motion_add(random(360),3);
-					}
+				snd_play(sndMeatExplo,0,true)
+				with instance_create(x,y,MeatExplosion) {
+					dmg -= meatDmg;
 				}
-				else
-				{*/
-					with Tentacle
-						alarm[1] = 10;
-					snd_play(sndMeatExplo,0,true)
-					with instance_create(x,y,MeatExplosion) {
-						dmg -= meatDmg;
-					}
-					with instance_create(x,y,FishBoost)
-					{
-						motion_add(random(360),3);
-					}
-				//}
+				with instance_create(x,y,FishBoost)
+				{
+					motion_add(random(360),3);
+				}
+				other.bloodDelay += 1;
+				other.alarm[1] = other.bloodDelay;
 			}
 			if team != 0 {
 				var pullD = other.direction+180;
@@ -52,8 +32,8 @@ if other.team != team and other.my_health > 0//the thing I hit must not be mysel
 				motion_add(pullD,5);
 				x += lengthdir_x(1,pullD);
 				y += lengthdir_y(1,pullD);
-				if team != 0 && alarm[1] > 1
-					alarm[1] ++;
+				//if team != 0 && alarm[1] > 1
+				//	alarm[1] ++;
 				if place_meeting(x,y,Wall)
 				{	x = xprevious;
 					y = yprevious;
@@ -63,7 +43,7 @@ if other.team != team and other.my_health > 0//the thing I hit must not be mysel
 		else
 		{
 			scrIframeSkipper(0.08);
-			other.alarm[1] -= 0.05;
+			//other.alarm[1] -= 0.05;
 		}
 	}
 	

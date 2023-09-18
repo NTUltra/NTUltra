@@ -9,15 +9,22 @@ if other.team != team and other.my_health > 0
 		range += 12;
 		with instance_create(x,y,BulletHit)
 		{
-			sprite_index = sprHeavySlugHit
+			if other.object_index == UltraHeavySlug
+				sprite_index = sprUltraHeavySlugHit;
+			else
+				sprite_index = sprHeavySlugHit
 			image_xscale = 1.3;
 			image_yscale = 1.3;
 		}
 	}
 	else
 	{
-		with instance_create(x,y,BulletHit)
-			sprite_index = sprHeavySlugHit
+		if object_index == UltraHeavySlug
+			with instance_create(x,y,BulletHit)
+				sprite_index = sprUltraHeavySlugHit
+		else
+			with instance_create(x,y,BulletHit)
+				sprite_index = sprHeavySlugHit
 	}
 	var direct = other.id;
 	var al = collision_circle_list(x,y,range,hitme,false,false,hits,false)

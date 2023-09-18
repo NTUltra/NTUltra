@@ -2,6 +2,7 @@ friction = 0.4
 image_speed = 0
 motion_add(random(360),2);
 mySize = 1;
+spr_hurt = false;
 meleedamage = 0;
 team = 0;
 shadowSprite = shd24;

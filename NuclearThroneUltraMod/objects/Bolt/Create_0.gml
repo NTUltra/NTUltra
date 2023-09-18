@@ -4,7 +4,6 @@ typ = 2 //0 = normal, 1 = deflectable, 2 = destructable
 candmg=true;
 dmg = 20;
 boltStick = BoltStick;
-hitEntities = [];
 trailScale = 1;
 trailColour = c_white;
 if UberCont.ultramodSwap
@@ -12,3 +11,4 @@ if UberCont.ultramodSwap
 xprev = x;
 yprev = y;
 hitEntities = [];
+knockback = 6;

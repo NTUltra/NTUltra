@@ -40,14 +40,16 @@ function scrModHit() {
 		{
 		    if skill_got[30]//power craving
 			{
-				moddelay=16;
+				moddelay = 16;
+				if race == 25
+					moddelay = 13;
 				wepRate += 1;
 				itemRate += 1;
 				pc = true;
 			}
 		    else
 				moddelay=26;
-			if ultra_got[65] == 1
+			if ultra_got[65]
 			{
 				moddelay -= 4;
 				r = 2;

@@ -1,0 +1,11 @@
+/// @description Init
+lerpTime = 0;
+lerpSpeed = random_range(0.2,0.3);
+tx = Player.x;
+ty = Player.y;
+xx = x;
+yy = y;
+image_angle = point_direction(x,y,tx,ty);
+image_index = irandom(image_number);
+image_speed = 0;
+alarm[0] = 1;

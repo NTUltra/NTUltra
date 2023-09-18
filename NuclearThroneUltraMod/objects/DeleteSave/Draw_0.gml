@@ -80,11 +80,13 @@ if mouse_check_button(mb_left) and UberCont.mouse__x > x and UberCont.mouse__x <
 	{
 		joke = " BE CAREFUL";	
 	}
-	
 }
 else
 {
-holdTimer = 10;	
+	if holdTimer < 10
+		holdTimer += 4/room_speed;
+	else
+		holdTimer = 10;
 }
 
 draw_sprite(sprite_index,im,x,y)
@@ -92,5 +94,5 @@ draw_sprite(sprite_index,im,x,y)
 x=round(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+10+string_width(string_hash_to_newline("HOLD")))
 y=round(__view_get( e__VW.YView, 0 )+200)
 
-draw_text(x+10,y,string_hash_to_newline(string(fh)+joke))
+draw_text(x+14,y,string_hash_to_newline(string(fh)+joke))
 }

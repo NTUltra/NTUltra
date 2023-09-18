@@ -34,15 +34,15 @@ if other.team != team and other.my_health > 0 && instance_exists(myHead) && !arr
 		snd_play(snd_hurt, hurt_pitch_variation)
 	}
 
-if other.my_health<=0// && other.sprite_index!=other.spr_hurt
-{
-	amountofenemies++;
-	with SerpentStrike
-		amountofenemies=other.amountofenemies
-}
+	if other.my_health<=0// && other.sprite_index!=other.spr_hurt
+	{
+		amountofenemies++;
+		with SerpentStrike
+			amountofenemies=other.amountofenemies
+	}
 
 
-instance_create(x,y,Dust)
+	instance_create(x,y,Dust)
 
 }
 

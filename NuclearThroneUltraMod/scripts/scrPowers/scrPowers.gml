@@ -15,6 +15,10 @@ function scrPowers() {
 				alienIntestines += 0.4;
 			else
 				alienIntestines += 0.2;
+			if race == 25
+			{
+				alienIntestines += 0.05;	
+			}
 		}
 		else
 		{
@@ -22,7 +26,12 @@ function scrPowers() {
 				alienIntestines += 0.8;
 			else
 				alienIntestines += 0.4;
+			if race == 25
+			{
+				alienIntestines += 0.1;	
+			}
 		}
+		
 	}
 	/////SHIT PRESSED////////
 	if KeyCont.key_spec[p] = 1
@@ -347,36 +356,34 @@ function scrPowers() {
 						else
 							scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
 					    instance_create(x,y,AllyFreak);
+						markedForRev = true;
 				    }
 				}
 				if markedForRev
+				{
 					snd_play(sndNecromancerRevive);
+					scrDoctorThroneButt();
+				}
 			}
 
 		}
 		else if ultra_got[98]
 		{
 
-			if rad>21
+			if rad > 12
 			{
 				audio_stop_sound(sndMutant0Slct)
 				audio_sound_pitch(sndMutant0Slct,random_range(0.6,0.9))
 				audio_play_sound(sndMutant0Slct,90,0)
 				instance_create(UberCont.mouse__x,UberCont.mouse__y,Infect);
-				if skill_got[5]
-				{
-					rad -= 9;
-				}
-				else
-				{
-					rad-=16;
-				}
+				rad -= 12;
+				scrDoctorThroneButt();
 			}
 			else
 				scrEmptyRad();
 
 		}
-		else if alarm[3]<1 
+		else // if alarm[3]<1 
 		{
 		//Regular active  
 			if my_health == 1 && skill_got[32] && isAlkaline
@@ -385,7 +392,7 @@ function scrPowers() {
 				var h = 2;
 				if (skill_got[9]) //Second stomache
 				{
-					h = 4;
+					h = 3;
 					with instance_create(x,y,HealFX)
 					{
 						sprite_index = sprHealBigFX;
@@ -451,23 +458,19 @@ function scrPowers() {
 		    //if my_health<1&&strongspirit
 		    image_index=0;
 		    sprite_index=spr_hurt;
-		    snd_play_2d(snd_hurt, hurt_pitch_variation);
-
-		    var raddrop=15;//16 An ally drops 5 rads
-		    if skill_got[5]
-		    raddrop=26;//19
-    
-		    repeat(raddrop)
+		    snd_play_2d(snd_hurt_actual, hurt_pitch_variation);
+		    repeat(14)
 		    {
-		    with instance_create(x,y,Rad)
-		    {motion_add(other.direction,other.speed)
-		    motion_add(random(360),random(10*0.5)+3)
-		    repeat(speed)
-		    speed *= 0.9}
+			    with instance_create(x,y,Rad)
+			    {
+					motion_add(other.direction,other.speed)
+				    motion_add(random(360),random(5)+3)
+				    repeat(speed)
+				    speed *= 0.9
+				}
 		    }
+			scrDoctorThroneButt();
 		}
-    
-    
 	}
 
 	if race = 16 && ((armour > 0 && !ultra_got[63]) || (ultra_got[63] && my_health > 3) || freeArmourStrike)//Viking
@@ -538,7 +541,7 @@ function scrPowers() {
 				if dcos(image_angle) < 0
 					flipped = -1;
 				team = other.team;
-				dmg *= 1+Player.level*0.2;//0.1
+				dmg *= 1+Player.level*0.15;//0.1
 				if other.spr_idle = sprMutant16DIdle
 				{
 					sprOutline = sprKrakenStrikeOutline;
@@ -571,7 +574,7 @@ function scrPowers() {
 				if dcos(image_angle) < 0
 					flipped = -1;
 				team = other.team;
-				dmg *= 1+Player.level*0.2;//0.1
+				dmg *= 1+Player.level*0.15;//0.1
 				if other.spr_idle = sprMutant16DIdle
 				{
 					sprOutline = sprKrakenStrikeOutline;
@@ -2312,21 +2315,6 @@ function scrPowers() {
 						}
 					}
 				}
-				/*
-				if instance_exists(PopoNade)
-				{
-					var tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,PopoNade);
-					if tar.team != other.team
-					{
-						var dp = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y)
-						if dp < grabRange && dp < d0
-						{
-							d0 = dp;
-							resulttar = tar;
-							slappedProjectile = true;
-						}
-					}
-				}*/
 			}
 			if instance_exists(chestprop)
 			{
@@ -2477,7 +2465,7 @@ function scrPowers() {
 						lerpCalcBack = (lerpCalc/target.mySize)*0.8;
 						if target.meleedamage > other.skill_got[8]*7//Gamma guts
 						{
-							lerpCalcBack *= 0.8;
+							lerpCalcBack *= 0.75;
 						}
 					}
 					else//ULTRA D

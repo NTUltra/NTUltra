@@ -16,9 +16,9 @@ if instance_number(myKind) < 2 && !instance_exists(SurvivalWave) && !instance_ex
 				song = mus106b;
 		}
 		snd_loop(song)
-		audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
-		audio_sound_gain(song,max(0,sqrt(UberCont.opt_musvol)),0);
-		audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
+		audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
+		audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
+		audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
 	}
 }
 else if instance_number(myKind) == 2

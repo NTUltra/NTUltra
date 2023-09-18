@@ -6,6 +6,12 @@ maxhealth = 4
 event_inherited();
 image_speed = 0
 raddrop=25;
+spr_idle = sprRadChest
+spr_hurt = sprRadChestHurt
+spr_dead = sprRadChestCorpse
+snd_hurt = sndHitMetal
+hurt_pitch_variation = 0;
+my_health = maxhealth
 
 if instance_exists(Player)
 {
@@ -18,19 +24,10 @@ spr_dead = sprMoneyPileDead
 
 snd_hurt = sndHitPlant
 }
-else{
-spr_idle = sprRadChest
-spr_hurt = sprRadChestHurt
-spr_dead = sprRadChestCorpse
 
-snd_hurt = sndHitMetal
-}
-
-hurt_pitch_variation = 0;
 alarm[1] = 2;
 
 
-my_health = maxhealth
 /*
 if Player.race=4 && Player.my_health <= Player.maxhealth*0.5 and random(2) < 1//melting
 {

@@ -1,4 +1,5 @@
 scrTarget()
+firstAct = true;
 alarm[1] = 6+random(5)
 if target > 0
 {

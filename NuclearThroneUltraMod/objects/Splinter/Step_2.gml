@@ -8,10 +8,13 @@ if speed<1 && alarm[1] < 1
 }
 else if um == 0 || alarm[11] < 1
 {
-	scrBoltMarrow();
-	with scrBoltTrail(other.trailColour,0.11,0.75)
+	scrBoltMarrow(1,2);
+	with scrBoltTrail(trailColour,0.11,0.75)
 	{
 		image_speed -= 0.1;
 	}
 }
-
+if collision_line(xprev,yprev,x,y,Wall,false,false)
+{
+	event_user(1);
+}

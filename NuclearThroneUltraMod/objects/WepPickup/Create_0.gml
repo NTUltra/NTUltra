@@ -10,7 +10,7 @@ mySize = 1;
 team = 0;
 my_health = 1;
 pickedup=false;
-
+spr_hurt = false;
 oneweponly=false
 alarm[4] = 1;
 if isOneWeaponOnlyModes(){//one weapon only

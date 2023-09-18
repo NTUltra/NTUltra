@@ -12,10 +12,7 @@ if other.team != team && (image_index<5)
 					immunelimit = 5;
 
 					if race=25
-						immunelimit=6;
-			
-					if immunelimit > maxhealth
-						immunelimit = maxhealth;
+						immunelimit = 999;
 						
 				}
 				if ultra_got[62] && altUltra && armour > immunelimit//Living armour

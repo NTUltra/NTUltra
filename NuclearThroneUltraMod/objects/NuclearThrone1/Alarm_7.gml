@@ -3,7 +3,7 @@ with MusCont
 {
 	song = musBoss4A	
 	snd_loop(song);
-	audio_sound_gain(song,max(0,sqrt(UberCont.opt_musvol)),0);
+	audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
 }
 sprite_index = spr_activate;
 spr_idle = spr_activate;

@@ -3891,7 +3891,7 @@ function scrFire2() {
 			}
 			image_angle = aimDirection+(random(60)-30)*other.accuracy
 			team = other.team
-			ammo = 50//24
+			ammo = 45//24
 			image_yscale += 0.3;
 			event_perform(ev_alarm,0)
 			visible = 0
@@ -11857,7 +11857,7 @@ function scrFire2() {
 		{
 			image_angle = aimDirection + tentacleAim*other.accuracy
 			team = other.team
-			ammo = 35
+			ammo = 30
 			event_perform(ev_alarm,0)
 			with instance_create(x,y,LightningSpawn)
 			{

@@ -28,8 +28,5 @@ else
 }
 scrWeapons()
 SetSeedWeapon();
-if instance_exists(Player) && Player.hard > 13
-	wep=scrDecideWep(1, 1000, curse)
-else
-	wep=scrDecideWep(2, 1000, curse)
+wep = scrDecideWep(2, 1000, curse)
 SetSeed();

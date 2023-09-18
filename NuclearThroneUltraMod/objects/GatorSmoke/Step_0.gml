@@ -1,3 +1,4 @@
+event_inherited();
 if speed > 1
 speed = 1
 scrTarget()

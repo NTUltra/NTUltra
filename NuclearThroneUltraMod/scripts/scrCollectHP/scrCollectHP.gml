@@ -20,7 +20,7 @@ function scrCollectHP(num = 2){
 		else
 		{
 			dir = instance_create(x,y,PopupText)
-			dir.mytext = "+"+string(num)+" HP"
+			dir.mytext = "+"+string(num)+" ARMOUR"
 			if Player.armour >= Player.maxarmour
 			dir.mytext = "MAX ARMOUR"
 		}
@@ -56,7 +56,7 @@ function scrCollectHP(num = 2){
 				speed = 6;
 				scrRaddrop(3);
 			}	
-		if Player.race=25 && random(5)<3//mutation smith/doctor
+		if Player.race=25 && random(10)<5//mutation smith/doctor
 		num = 5
 		else
 		num = 4;

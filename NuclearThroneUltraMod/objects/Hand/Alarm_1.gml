@@ -39,7 +39,7 @@ if target > 0 && instance_exists(target)
 			snd_play(sndExplosion);
 			BackCont.viewx2 += lengthdir_x(8,point_direction(creator.x,creator.y,x,y)+180)*UberCont.opt_shake
 			BackCont.viewy2 += lengthdir_y(8,point_direction(creator.x,creator.y,x,y)+180)*UberCont.opt_shake
-			BackCont.shake += 25;
+			BackCont.shake += 22;
 			pushDirection = point_direction(creator.x,creator.y,target.x,target.y);
 			pushStartX = target.x;
 			pushStartY = target.y;

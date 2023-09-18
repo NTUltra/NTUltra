@@ -12,7 +12,7 @@ if KeyCont.key_pick[other.p] = 1
 	with Player
 	{
 		snd_play(snd_crwn);
-		crownpoints ++;
+		scrGiveCrownPoints(1);
 	}
 	UberCont.canMultiCrown = true;
 	Sleep(20);

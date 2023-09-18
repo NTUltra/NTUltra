@@ -23,4 +23,4 @@ if instance_exists(Player) && Player.skill_got[29]
 ang=0;
 
 walk = 0
-
+firstAct = false;

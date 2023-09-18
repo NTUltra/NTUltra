@@ -10,7 +10,7 @@ with MusCont
 {
 	audio_pause_sound(song);
 	audio_pause_sound(amb);
-	audio_sound_gain(song, max(0, sqrt(UberCont.opt_musvol)*2), 0);
+	audio_sound_gain(song, max(0, UberCont.opt_musvol*2), 0);
 }
 snd_loop(sndChubbyEmuSong);
 alphaOrigin = 0.25;
@@ -32,4 +32,4 @@ with instance_create(x,y,Flash)
 alarm[3] = audio_sound_length(sndChubbyEmuSong);
 sheep = ds_list_create();
 alarm[2] = 20;
-audio_sound_gain(sndChubbyEmuSong, max(0, sqrt(UberCont.opt_musvol)), 0);
+audio_sound_gain(sndChubbyEmuSong, max(0, UberCont.opt_musvol), 0);

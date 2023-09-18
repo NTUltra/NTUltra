@@ -1,5 +1,8 @@
 /// @description Gamme guts yo
-if instance_exists(Player)
+if !instance_exists(Player)
+	exit;
+if sprite_index == spr_disappear && image_index > fadeNumber
+	exit;
 var enem = other;
 if enem.team != team && team != 0
 with Player

@@ -7,7 +7,7 @@ if other.team != team && team != 0
 		var contactDmg = 0;
 		if skill_got[8]
 		{
-			if race==25
+			if race == 25
 				contactDmg = 8//dmg dealt by gamma guts
 			else
 				contactDmg = 7//dmg dealt by gamma guts (if you want to change it also change it in AngelActive

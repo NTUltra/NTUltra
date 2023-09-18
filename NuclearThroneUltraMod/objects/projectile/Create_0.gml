@@ -13,6 +13,7 @@ isLaser = false;
 isGrenade = false;
 typ = 0;
 wepFire = 0;
+spr_hurt = false;
 depth = -1;
 if scrIsGamemode(33)//All Deflector
 {

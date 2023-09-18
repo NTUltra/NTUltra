@@ -80,7 +80,7 @@ else
 			gotGunsCrown = true;
 		if didLoop && gotSkins && gotGunsCrown
 		{
-			draw_sprite(sprCharSelectCompleted,0,x,y);
+			draw_sprite(sprCharSelectCompleted,0,x,yyy + 3);
 			//draw_rectangle_color(x,yyy,x+15,yyy+23,gold,gold,gold,gold,true);
 		} else
 		{

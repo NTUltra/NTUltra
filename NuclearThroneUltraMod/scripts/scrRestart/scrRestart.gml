@@ -4,7 +4,7 @@ function scrRestart() {
 	scrEndOfRun();
 	with all
 	{
-		if id != UberCont.id and persistent = true && id != Cursor.id
+		if id != UberCont.id and persistent = true && id != Cursor.id && id != GameRender.id 
 		{
 			persistent = false
 			instance_destroy()
@@ -31,9 +31,9 @@ function scrRestart() {
 		with MusCont {
 			amb = amb0c;
 			snd_loop(amb);
-			audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
-		    audio_sound_gain(song,max(0,sqrt(UberCont.opt_musvol)),0);
-		    audio_sound_gain(amb,max(0,sqrt(UberCont.opt_ambvol)),0);
+			audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
+		    audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
+		    audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
 		}
 		debug("go to leaderboard");
 		exit;

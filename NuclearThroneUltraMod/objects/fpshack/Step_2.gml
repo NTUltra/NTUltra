@@ -44,17 +44,11 @@ with Player
 		wkick -= 0.5
 	if roll != 0
 		angle -= 25*right*max(1,(skill_got[2]*1.3))
-	if extrafeetalarm > 0
-		extrafeetalarm += dt;
 	if invertedportalcounter > 0
 		invertedportalcounter -= dt;
 	if flying > 0
 		flying += dt;
 	flyduration -= dt;
-	if moddelay > 0
-		moddelay += dt;
-	if extrafeetalarm > 0
-		extrafeetalarm += dt;
 	if race=22
 		blastArmourDelay += dt;
 	wave -= 0.4*dt;

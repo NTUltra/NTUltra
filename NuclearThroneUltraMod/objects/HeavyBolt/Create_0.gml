@@ -1,7 +1,6 @@
 event_inherited();
 friction = 0.1;
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable
-candmg=true;
 piercedmg = 30;
 dmg = 50;
 if UberCont.ultramodSwap
@@ -9,3 +8,4 @@ if UberCont.ultramodSwap
 xprev = x;
 yprev = y;
 hitEntities = [];
+knockback = 10;

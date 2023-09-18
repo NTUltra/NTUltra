@@ -158,10 +158,6 @@ secretlevelcount = 0;
 acceleration = 3;
 flipDir = 1;
 weaponspickedup = 0;
-freezeframe400 = true;
-screenshake400 = true;
-if UberCont.opt_freeze != 4
-freezeframe400 = false
 
 if UberCont.opt_shake != 4
 screenshake400 = false
@@ -226,7 +222,8 @@ else if instance_exists(PlayerSpawn)
 	crown = PlayerSpawn.crown;
 else
     crown = [1];
-
+debug("INIT ");
+currentCrowns = crown;
 //AREA STUFF
 area = 1
 subarea = 0
@@ -781,3 +778,4 @@ enum LEADERBOARD {
 };
 scrInitDrops(0);
 altFire = false;
+normalFire = false;
