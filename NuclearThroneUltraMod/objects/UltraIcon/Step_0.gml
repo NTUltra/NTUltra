@@ -1,6 +1,6 @@
 if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y < y+22 and UberCont.mouse__x > x-22 and UberCont.mouse__y > y-22) && (alarm[0]<1) ) || (exceptionclick && (alarm[0]<1))
 {
-	KeyCont.key_fire[p] = 0;
+	KeyCont.key_fire[p] = 2;
 	if Player.ultra_got[0] == 1 && !Player.altUltra && (skill < 29 || skill > 32)
 		Player.horrorEtaken = true;
 	var regularprocedure=true;
@@ -1013,8 +1013,7 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 		//if skill <= UberCont.maxultra
 		with UberCont
 		{
-			debug("other.skill ", other.skill);
-			if Player.altUltra && scrTranslateUltraToSecretStat(other.skill,Player.bskin) != -1 || other.skill == 109
+			if Player.altUltra && scrTranslateUltraToSecretStat(other.skill,Player.bskin) != -1
 			{
 				ctot_secret_ultra_taken[scrTranslateUltraToSecretStat(other.skill,Player.bskin)] += 1;
 			}

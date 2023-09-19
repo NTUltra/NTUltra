@@ -10,7 +10,10 @@ if KeyCont.key_spec[Player.p] != 1 && KeyCont.key_spec[Player.p] != 2
 {
     if (HogSpend())
 	{
-    instance_create(Player.x,Player.y,BigWeaponChest);
+		if !isOneWeaponOnlyModes()
+			instance_create(Player.x,Player.y,BigWeaponChest);
+		else
+			instance_create(Player.x,Player.y,AmmoChest);
     instance_create(Player.x,Player.y,WallBreak);
     }
 

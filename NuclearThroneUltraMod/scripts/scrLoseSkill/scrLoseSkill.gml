@@ -166,4 +166,7 @@ function scrLoseSkill(skillIndex){
 	level -= 1;
 	totalSkills--;
 	skillsChosen --;
+	with GameRender {
+		event_user(0);
+	}
 }

@@ -423,12 +423,10 @@ function scrSkills() {
 	
 	
 	skill_name[37] = "ECSTACTIC FISTS"//REJUVINATED SKIN
-	skill_text[37] = "ALL DAMAGE TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR HEALTH IS#+25% AT MAX HP"
+	skill_text[37] = "ALL DAMAGE TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR HEALTH IS#+30% AT MAX HP"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
-		skill_text[37] = "ALL DAMAGE TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR ARMOUR IS#+25% AT MAX ARMOUR"
-		if isDoctor
-			skill_text[37] = "ALL DAMAGE TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR ARMOUR IS#+30% AT MAX ARMOUR"
+		skill_text[37] = "ALL DAMAGE TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR ARMOUR IS#+30% AT MAX ARMOUR"
 	}
 	skill_tips[37] = "glock those gun"
 	skill_msnd[37] =  sndMutEcstaticFists

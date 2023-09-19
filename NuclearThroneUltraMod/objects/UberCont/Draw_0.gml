@@ -86,9 +86,9 @@ __view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )*0.5) - gmwidth*0.5,
 __view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )*0.5) + gmwidth*0.5,
 gmScroll);
 	draw_set_halign(fa_center)
+draw_text(xx+1,yyy+1,gamemodeScrollString)
+draw_text(xx+1,yyy+1,gamemodeScrollString)
 draw_text(xx,yyy+1,gamemodeScrollString)
-draw_text(xx,yyy+1,gamemodeScrollString)
-draw_text(xx,yyy,gamemodeScrollString)
 draw_set_color(c_gray)
 draw_text(xx,yyy,gamemodeScrollString)
 draw_set_halign(fa_left)
@@ -136,7 +136,6 @@ event_perform(ev_draw,0)
 with FPSToggle
 event_perform(ev_draw,0)
 
-draw_set_font(fntM)
 draw_set_valign(fa_top)
 //Top text...
 var xx = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5;

@@ -1,9 +1,10 @@
 function scrDrawGameOver() {
 	
 	//GAME OVER
-	if instance_exists(PlayerSpawn) || instance_exists(Player)
+	if !instance_exists(DataRef)
 		return;
-	draw_set_font(fntM)
+	var vx = 0;
+	var vy = 0;
 	draw_set_halign(fa_center)
 	draw_set_valign(fa_middle)
 	gameover = "";
@@ -60,54 +61,54 @@ function scrDrawGameOver() {
 
 	if (UberCont.canRestart && keyboard_check_pressed(ord("R")) ) and gameovertime > 30
 	{//QUICK RESTART
-	with SurvivalWave
-		instance_destroy();
-	snd_play(sndMutant0Cnfm)
-	race = UberCont.racepick
-	crown = [1]
-	with all
-	{
-	if id != UberCont.id and persistent = true && id != Cursor.id
-	{
-	persistent = false
-	instance_destroy()
-	}
-	}
-	scrRaces()
-	scrCrowns()
-	var ranChar = false;
-	with Player
-	{
-		//ultra_got[87] = 0;
-		//skeletonlives = 0;
-		instance_destroy();
-	}
-	if race = 0 || scrIsGamemode(23)
-	{
-		ranChar = true;
-		do race = 1+irandom(racemax-1) until race_have[race] = 1
-	}
-	if scrIsCrown(0)
-		crown = [ceil(random(crownmax))]
-	with instance_create(x,y,GenCont)
-	{race = other.race
-	crown = other.crown}
-	instance_create(x,y,Player);
-	with MusCont
-		instance_destroy()
-	instance_create(0,0,MusCont)
-	/*
-	with Player
-	{
-		nochest = 0;
-		randomlySelected = ranChar;
-		restarted = true;
-		skeletonlives = 0;
-	}*/
-	debug("GAMEOVER RESTART");
-	if !instance_exists(StartDaily)
-		room_restart()
-	exit;
+		with SurvivalWave
+			instance_destroy();
+		snd_play(sndMutant0Cnfm)
+		race = UberCont.racepick
+		crown = [1]
+		with all
+		{
+			if id != UberCont.id and persistent = true && id != Cursor.id && id != GameRender.id 
+			{
+				persistent = false
+				instance_destroy()
+			}
+		}
+		scrRaces()
+		scrCrowns()
+		var ranChar = false;
+		with Player
+		{
+			//ultra_got[87] = 0;
+			//skeletonlives = 0;
+			instance_destroy();
+		}
+		if race = 0 || scrIsGamemode(23)
+		{
+			ranChar = true;
+			do race = 1+irandom(racemax-1) until race_have[race] = 1
+		}
+		if scrIsCrown(0)
+			crown = [ceil(random(crownmax))]
+		with instance_create(x,y,GenCont)
+		{race = other.race
+		crown = other.crown}
+		instance_create(x,y,Player);
+		with MusCont
+			instance_destroy()
+		instance_create(0,0,MusCont)
+		/*
+		with Player
+		{
+			nochest = 0;
+			randomlySelected = ranChar;
+			restarted = true;
+			skeletonlives = 0;
+		}*/
+		debug("GAMEOVER RESTART");
+		if !instance_exists(StartDaily)
+			room_restart()
+		exit;
 	}
 	if (keyboard_check_pressed(vk_enter) or mouse_check_button_pressed(mb_left)) and gameovertime > 40 && !instance_exists(PlayerSpawn)
 	{
@@ -127,36 +128,36 @@ function scrDrawGameOver() {
 	{
 		var yy = string_height(string_hash_to_newline("A#A#A#A"))-4
 		draw_set_color(c_black)
-		draw_set_alpha(0.4)
-		draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ),0)
+		draw_set_alpha(0.8)
+		draw_rectangle(vx,vy,vx+__view_get( e__VW.WView, 0 ),vy+__view_get( e__VW.HView, 0 ),0)
 		draw_set_alpha(1)
-		draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2-string_height(string_hash_to_newline("A"))+1,string_hash_to_newline(string(gameover)))
-		draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+1,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2-string_height(string_hash_to_newline("A"))+1,string_hash_to_newline(string(gameover)))
-		draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+1,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2-string_height(string_hash_to_newline("A")),string_hash_to_newline(string(gameover)))
+		draw_text(vx+__view_get( e__VW.WView, 0 )/2,vy+__view_get( e__VW.HView, 0 )/2-string_height(string_hash_to_newline("A"))+1,string_hash_to_newline(string(gameover)))
+		draw_text(vx+__view_get( e__VW.WView, 0 )/2+1,vy+__view_get( e__VW.HView, 0 )/2-string_height(string_hash_to_newline("A"))+1,string_hash_to_newline(string(gameover)))
+		draw_text(vx+__view_get( e__VW.WView, 0 )/2+1,vy+__view_get( e__VW.HView, 0 )/2-string_height(string_hash_to_newline("A")),string_hash_to_newline(string(gameover)))
 	
 	
 		draw_set_color(c_white)
-		draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2-string_height(string_hash_to_newline("A")),string_hash_to_newline(string(gameover)))
+		draw_text(vx+__view_get( e__VW.WView, 0 )/2,vy+__view_get( e__VW.HView, 0 )/2-string_height(string_hash_to_newline("A")),string_hash_to_newline(string(gameover)))
 	
 	if upsideDown
 	{
 		draw_set_color(c_black)
-		draw_text_transformed(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2+1-yy,string_hash_to_newline(txt),-1,-1,0)
-		draw_text_transformed(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+1,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2+1-yy,string_hash_to_newline(txt),-1,-1,0)
-		draw_text_transformed(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+1,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2-yy,string_hash_to_newline(txt),-1,-1,0)
+		draw_text_transformed(vx+__view_get( e__VW.WView, 0 )/2,vy+__view_get( e__VW.HView, 0 )/2+1-yy,string_hash_to_newline(txt),-1,-1,0)
+		draw_text_transformed(vx+__view_get( e__VW.WView, 0 )/2+1,vy+__view_get( e__VW.HView, 0 )/2+1-yy,string_hash_to_newline(txt),-1,-1,0)
+		draw_text_transformed(vx+__view_get( e__VW.WView, 0 )/2+1,vy+__view_get( e__VW.HView, 0 )/2-yy,string_hash_to_newline(txt),-1,-1,0)
 	
 		draw_set_color(c_white)
-		draw_text_transformed(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2-yy,string_hash_to_newline(txt),-1,-1,0)
+		draw_text_transformed(vx+__view_get( e__VW.WView, 0 )/2,vy+__view_get( e__VW.HView, 0 )/2-yy,string_hash_to_newline(txt),-1,-1,0)
 	}
 	else
 	{
 		draw_set_color(c_black)
-		draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2+1-yy,string_hash_to_newline(txt))
-		draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+1,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2+1-yy,string_hash_to_newline(txt))
-		draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+1,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2-yy,string_hash_to_newline(txt))
+		draw_text(vx+__view_get( e__VW.WView, 0 )/2,vy+__view_get( e__VW.HView, 0 )/2+1-yy,string_hash_to_newline(txt))
+		draw_text(vx+__view_get( e__VW.WView, 0 )/2+1,vy+__view_get( e__VW.HView, 0 )/2+1-yy,string_hash_to_newline(txt))
+		draw_text(vx+__view_get( e__VW.WView, 0 )/2+1,vy+__view_get( e__VW.HView, 0 )/2-yy,string_hash_to_newline(txt))
 	
 		draw_set_color(c_white)
-		draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2-yy,string_hash_to_newline(txt))
+		draw_text(vx+__view_get( e__VW.WView, 0 )/2,vy+__view_get( e__VW.HView, 0 )/2-yy,string_hash_to_newline(txt))
 	}
 	
 	draw_set_valign(fa_top)
@@ -176,18 +177,18 @@ function scrDrawGameOver() {
 					gamemodeScrollString += " + ";
 			}
 		}
-		//var yyy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.5;
-		var yyy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2-string_height(string_hash_to_newline("A"))+16
+		//var yyy = vy+__view_get( e__VW.HView, 0 )*0.5;
+		var yyy = vy+__view_get( e__VW.HView, 0 )*0.5-string_height(string_hash_to_newline("A"))+16
 		gmwidth = max(0,string_width(gamemodeScrollString) - __view_get( e__VW.WView, 0 ));
 		var xx = lerp(
-		__view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )*0.5) - gmwidth*0.5,
-		__view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )*0.5) + gmwidth*0.5,
+		vx+(__view_get( e__VW.WView, 0 )*0.5) - gmwidth*0.5,
+		vx+(__view_get( e__VW.WView, 0 )*0.5) + gmwidth*0.5,
 		gmScroll);
 		//draw_set_halign(fa_center)
 		draw_set_color(c_black)
+		draw_text(xx+1,yyy+1,gamemodeScrollString)
+		draw_text(xx+1,yyy+1,gamemodeScrollString)
 		draw_text(xx,yyy+1,gamemodeScrollString)
-		draw_text(xx,yyy+1,gamemodeScrollString)
-		draw_text(xx,yyy,gamemodeScrollString)
 		draw_set_color(c_white)
 		draw_text(xx,yyy,gamemodeScrollString)
 	}

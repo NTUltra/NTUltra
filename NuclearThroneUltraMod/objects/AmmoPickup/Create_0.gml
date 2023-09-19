@@ -17,6 +17,19 @@ if sprite_index == sprAmmo {
 		{
 			curselevel --;	
 		}
+		if curselevel == 2 {
+			if random(2) < 1 {
+				cursed = true;
+				snd_play(sndCursedPickup);
+			}
+		} else if curselevel == 3 {
+			cursed = true;
+			snd_play(sndCursedPickup);
+			if random(4) < 1 {
+				supercursed = true;
+			}
+		}
+		
 		if scrIsCrown(32)//Misfortune
 		{
 			sprite_index = sprHPAmmo;
@@ -26,29 +39,18 @@ if sprite_index == sprAmmo {
 				sprite_index = sprArmourAmmo;
 			}
 		}
-	}
-	if curselevel == 2 {
-		if random(2) < 1 {
-			cursed = true;
-			snd_play(sndCursedPickup);
+		else
+		{
+			if cursed {
+				sprite_index = sprCursedAmmo
+				alarm[0] -= 100
+				alarm[3] = 5;
+			}
+			if supercursed {
+				sprite_index = sprSuperCursedAmmo
+				alarm[0] -= 40
+				alarm[3] = 5;
+			}
 		}
-	} else if curselevel == 3 {
-		cursed = true;
-		snd_play(sndCursedPickup);
-		if random(4) < 1 {
-			supercursed = true;
-		}
-	}
-
-	if cursed {
-		sprite_index = sprCursedAmmo
-		alarm[0] -= 100
-		alarm[3] = 5;
-	}
-
-	if supercursed {
-		sprite_index = sprSuperCursedAmmo
-		alarm[0] -= 40
-		alarm[3] = 5;
 	}
 }

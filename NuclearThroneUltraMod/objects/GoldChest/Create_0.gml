@@ -21,3 +21,8 @@ if aditionalwep != 315 && instance_exists(Player) && Player.area == 103
 event_inherited()
 curse = 0
 
+if isOneWeaponOnlyModes()
+{
+	instance_destroy(id,false);
+	instance_create(x,y,AmmoChest);
+}

@@ -39,4 +39,5 @@ distance = 128;
 ammo = maxammo;
 chance = 13;
 tempchance = 0;
+if object_index == InvertedCrownGlutton
 crowns = [EnemyCrownOfBlood,EnemyCrownOfEnergy,EnemyCrownOfSloth,EnemyCrownOfHaste,EnemyCrownOfEcho,EnemyCrownOfFreedom,EnemyCrownOfDisco];

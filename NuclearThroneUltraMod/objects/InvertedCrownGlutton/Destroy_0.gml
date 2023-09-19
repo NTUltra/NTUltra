@@ -19,7 +19,11 @@ if object_index == InvertedCrownGlutton
 		walk = 20;
 		team = other.team;
 		creator = other.id;
-	}	
+	}
+	if instance_exists(Wall) && !instance_exists(WallRemover)
+	{
+		instance_create(x,y,WallRemover);	
+	}
 	instance_create(x,y,TheMultiCrown);
 }
 
@@ -48,7 +52,3 @@ audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
 snd_play(sndVaultBossWin);
 }
 
-if instance_exists(Wall) && !instance_exists(WallRemover)
-{
-	instance_create(x,y,WallRemover);	
-}

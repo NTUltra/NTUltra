@@ -2,7 +2,6 @@
 // /@description
 ///@param
 function scrGiveCrownPoints(points = 1) {
-	debug("Give crown"); 
 	with Player
 	{
 		crownpoints += 1

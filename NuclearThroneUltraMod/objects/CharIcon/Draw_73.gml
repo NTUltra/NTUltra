@@ -13,7 +13,6 @@ else
 	draw_sprite_ext(sprite_index,char,x,y,1,1,0,c_black,0.05)
 }
 
-draw_set_font(fntM)
 draw_set_valign(fa_bottom)
 draw_set_halign(fa_right)
 

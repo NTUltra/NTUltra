@@ -1,10 +1,10 @@
 ///scrDrawSecretFinder();
 // /@description
 ///@param
-function scrDrawSecretFinder(){
-	var xx = x;
-	var yy = y;
-	var vx = camera_get_view_x(view_camera[0]);
+function scrDrawSecretFinder(ox, oy){
+	var xx = x - ox;
+	var yy = y - oy;
+	var vx = 0//camera_get_view_x(view_camera[0]);
 	var vw = camera_get_view_width(view_camera[0]);
 	var shouldDraw = false;
 	if xx >  vx + vw
@@ -17,7 +17,7 @@ function scrDrawSecretFinder(){
 		xx = vx+5;
 		shouldDraw = true;
 	}
-	var vy = camera_get_view_y(view_camera[0]);
+	var vy = 0//camera_get_view_y(view_camera[0]);
 	var vh = camera_get_view_height(view_camera[0]);
 	if yy >  vy + vh
 	{

@@ -763,3 +763,7 @@ with instance_create(x,y,DataRef)
 	metabolism = other.metabolism;
 	lastWishPrevent = other.lastWishPrevent;
 }
+with GameRender
+{
+	alarm[2] = 1;	
+}

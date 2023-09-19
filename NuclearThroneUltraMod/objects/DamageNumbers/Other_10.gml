@@ -73,7 +73,9 @@ draw_clear_alpha(c_black,0);
 		}
 	}
 surface_reset_target();
-	draw_surface(surf,x-(xx*0.5),y-(surface_get_height(surf)*0.5));
+var xxx = x - camera_get_view_x(view_camera[0]);
+var yyy = y - camera_get_view_y(view_camera[0]);
+	draw_surface(surf,xxx-(xx*0.5),yyy-(surface_get_height(surf)*0.5));
 /*
 //Debug square
 draw_rectangle(x-(xx*0.5),y-(surface_get_height(surf)*0.5),

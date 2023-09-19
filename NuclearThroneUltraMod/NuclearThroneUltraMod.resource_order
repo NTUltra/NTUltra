@@ -3042,6 +3042,7 @@
     {"name":"sprMutant20CHurt","order":7,"path":"sprites/sprMutant20CHurt/sprMutant20CHurt.yy",},
     {"name":"sprMutant20BWalk","order":1,"path":"sprites/sprMutant20BWalk/sprMutant20BWalk.yy",},
     {"name":"sprBigPandaSlash","order":49,"path":"sprites/sprBigPandaSlash/sprBigPandaSlash.yy",},
+    {"name":"shdDrawRed","order":1,"path":"shaders/shdDrawRed/shdDrawRed.yy",},
     {"name":"scrCanBecomeGold","order":34,"path":"scripts/scrCanBecomeGold/scrCanBecomeGold.yy",},
     {"name":"sprGoldCrystalHurt","order":28,"path":"sprites/sprGoldCrystalHurt/sprGoldCrystalHurt.yy",},
     {"name":"sprMutant14BIdle","order":5,"path":"sprites/sprMutant14BIdle/sprMutant14BIdle.yy",},

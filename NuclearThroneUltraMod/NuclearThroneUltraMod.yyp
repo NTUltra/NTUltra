@@ -3392,6 +3392,7 @@
     {"id":{"name":"sprMutant20CHurt","path":"sprites/sprMutant20CHurt/sprMutant20CHurt.yy",},},
     {"id":{"name":"sprMutant20BWalk","path":"sprites/sprMutant20BWalk/sprMutant20BWalk.yy",},},
     {"id":{"name":"sprBigPandaSlash","path":"sprites/sprBigPandaSlash/sprBigPandaSlash.yy",},},
+    {"id":{"name":"shdDrawRed","path":"shaders/shdDrawRed/shdDrawRed.yy",},},
     {"id":{"name":"scrCanBecomeGold","path":"scripts/scrCanBecomeGold/scrCanBecomeGold.yy",},},
     {"id":{"name":"sprGoldCrystalHurt","path":"sprites/sprGoldCrystalHurt/sprGoldCrystalHurt.yy",},},
     {"id":{"name":"sprMutant14BIdle","path":"sprites/sprMutant14BIdle/sprMutant14BIdle.yy",},},

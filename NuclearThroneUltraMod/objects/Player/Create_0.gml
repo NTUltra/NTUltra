@@ -10,6 +10,11 @@ if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK) && !instance_exis
 {
 	instance_create(x,y,FPSHACK);
 }*/
+with GameRender
+{
+	gameovertime = 0;
+	alarm[2] = 0;
+}
 with DataRef
 	instance_destroy();
 depth = 0;

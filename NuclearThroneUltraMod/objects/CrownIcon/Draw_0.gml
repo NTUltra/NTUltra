@@ -18,7 +18,6 @@ if (crown != 1 && scrIsCrown(crown))
 	var col = make_color_rgb(72,156,8);
 	draw_rectangle_color(x-12,y-16 - (hover*2),x+12+hover,y+15,col,col,col,col,true);	
 }
-draw_set_font(fntM)
 draw_set_valign(fa_bottom)
 draw_set_halign(fa_right)
 txt2 = "";

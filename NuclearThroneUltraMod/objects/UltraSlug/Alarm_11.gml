@@ -45,6 +45,9 @@ if um == ultramods.bulletShotgun
 	}
 } else if um == ultramods.shotgunBolt
 {
+	var acc = 1;
+	if instance_exists(Player)
+		acc = Player.accuracy;
 	snd_play_fire(sndUltraCrossbow);
 	instance_destroy(id,false);
 	with instance_create(x,y,UltraBolt)

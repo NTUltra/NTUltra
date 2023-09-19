@@ -23,7 +23,6 @@ function scrDrawCharSelect() {
 		showExplain = false;
 	//extra = 0
 	
-	draw_set_font(fntM)
 
 	draw_set_valign(fa_bottom)
 

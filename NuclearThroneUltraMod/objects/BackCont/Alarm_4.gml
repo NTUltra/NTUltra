@@ -60,3 +60,5 @@ with Floor {
 }
 instance_activate_object(HotDrake);
 instance_activate_object(InvertedHotDrake);
+instance_activate_object(NuclearThrone1);
+instance_activate_object(NuclearThrone1Side);

@@ -1,10 +1,13 @@
 if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+16 and UberCont.mouse__y < y+16 and UberCont.mouse__x > x-20 and UberCont.mouse__y > y-20)
 {
-	KeyCont.key_fire[p] = 0;
+	KeyCont.key_fire[p] = 2;
 	UberCont.globalMutationsChosen ++;
 Player.skill_got[skill] = 1
 Player.skillsChosen+=1;
 Player.skillpoints -= 1
+with GameRender {
+	event_user(0);
+}
 if skill != 37
 	Player.totalSkills ++;
 if skill = 1
@@ -332,4 +335,3 @@ with UberCont
 	scrSave();//Don't necesserily have to save here
 }
 }
-

@@ -56,7 +56,6 @@ function scrDrawCredits() {
 	}
 
 	
-	draw_set_font(fntM)
 	draw_set_valign(fa_top)
 	draw_set_halign(fa_center)
 

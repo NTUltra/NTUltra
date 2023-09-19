@@ -7,3 +7,8 @@ SetSeed();
 event_inherited()
 curse = 0
 
+if isOneWeaponOnlyModes()
+{
+	instance_destroy(id,false);
+	instance_create(x,y,WeaponChest);
+}

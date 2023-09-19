@@ -25,7 +25,6 @@ if candrawoutline && UberCont.ctot_skill_taken[skill] > 0
 */
 }
 
-draw_set_font(fntM)
 draw_set_valign(fa_bottom)
 draw_set_halign(fa_right)
 

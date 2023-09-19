@@ -24,11 +24,6 @@ if instance_exists(Player)
 		darkness = 1
 	if Player.ultra_got[11]//BRAIN STYLE
 		darkness = 0;
-	if !UberCont.opt_sideart != sprite_get_number(sprSideArt) + 1 && Player.totalSkills > 12 - (max(-1,Player.maxarmour-1-Player.hudArmourSpace))
-	{
-		alarm[1] = 1;
-		skillscrollmax = Player.totalSkills - floor(min(Player.totalSkills,40)/10);
-	}
 }
 if darkness = 1
 {
@@ -40,10 +35,11 @@ surface_set_target(dark)
 draw_clear(c_white)
 surface_reset_target()}
 
-gameovertime = 0
 wave = 0
 fogscroll = 0
 //depth = -5;
 gameoverText = "YOU DID NOT REACH THE NUCLEAR THRONE";
 gmwidth = 1;
 gmScroll = 0;
+
+hudSurface = -1;

@@ -1,15 +1,8 @@
 pick = 0
 canmove = 1
-skillscroll = 0;
-scroll = 0;
-holdExplainUltraModTimer = 0;
-holdExplainWepModTimer = 0;
-holdExplainMutation = 0;
-holdExplainGamemode = 0;
+
 __view_set( e__VW.XView, 0, 0 )
 __view_set( e__VW.YView, 0, 0 )
-wave = 0
-gameovertime = 0;
 audio_stop_sound(sndFrogLoop);
 audio_stop_sound(sndFrogLoopButt);
 audio_stop_sound(sndFishRollUpgLoop);
@@ -159,7 +152,6 @@ if Player.crownpoints > 0
 		}
 	}
 	dir += 1}
-	debug("current: ", Player.currentCrowns);
 	if (UberCont.canMultiCrown)
 		with CrownIcon
 		{

@@ -194,3 +194,6 @@ scrUnlockGameMode(25,"FOR GETTING RESURRECTED");
 
 instance_destroy();
 
+with GameRender {
+	event_user(0);
+}

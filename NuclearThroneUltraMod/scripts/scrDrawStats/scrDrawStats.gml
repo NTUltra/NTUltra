@@ -249,7 +249,6 @@ function scrDrawStats() {
 	var yOffset = string_height(txt1)*25//190;//string_height(txt1);
 	var bspc = 2;
 	
-	draw_set_font(fntM)
 	draw_set_valign(fa_top)
 	draw_set_halign(fa_center)
 	var xx = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5;

@@ -4,7 +4,7 @@ if instance_exists(InvaderBossSpawnPortal) || instance_exists(BossInvasionNoName
 	exit;
 }
 scrActivateAllOutOfRange();
-if instance_exists(Player) && !instance_exists(SurvivalWave)
+if !instance_exists(SurvivalWave)
 {
     ///
     with MusCont
@@ -15,8 +15,8 @@ if instance_exists(Player) && !instance_exists(SurvivalWave)
     
     //sound_discard(song)
     //sound_discard(amb)
-    var area = Player.area;
-	var subarea = Player.subarea;
+    var area = instance_exists(Player) ? Player.area : UberCont.area;
+	var subarea = instance_exists(Player) ? Player.subarea : UberCont.subarea;
     if area = 1 || area = 105
     song = musBoss1;
     if area = 3 || area = 106 || area == 136
@@ -113,9 +113,11 @@ else if instance_exists(BallBoss)
 		name = choose("BIG BALL","THE BALL BOSS","PROTO BALL","CIRCLE");	
 	}
 }
-else if instance_exists(Player)
+else
 {
-if (Player.area = 1 || ((Player.area == 10 || Player.area == 101) && instance_exists(BanditBoss)))
+	var area = instance_exists(Player) ? Player.area : UberCont.area;
+	var subarea = instance_exists(Player) ? Player.subarea : UberCont.subarea;
+if (area = 1 || ((area == 10 || area == 101) && instance_exists(BanditBoss)))
 {
 //with instance_create(x,y,Drama)
 	name = "BIG BANDIT";
@@ -124,7 +126,7 @@ if (Player.area = 1 || ((Player.area == 10 || Player.area == 101) && instance_ex
 		name = choose("BIG BITCH","HERE WE GO AGAIN","REBEL'S BROTHER","BIG DAD");	
 	}
 }
-else if Player.area = 105
+else if area = 105
 {
 //with instance_create(x,y,Drama)
 name = "INVERTED BIG BANDIT"
@@ -133,7 +135,7 @@ name = "INVERTED BIG BANDIT"
 		name = choose("BIG FUCK","SHITBAG","MISTER ASS","VARIETY STREAMER");
 	}
 }
-else if Player.area = 2
+else if area = 2
 {
 	name = "MOM";
 	if random(40)<1
@@ -143,7 +145,7 @@ else if Player.area = 2
 		"MISS. FROG#HAPPILY MARRIED","MOMMY BALL","YOUR MOM! HAHA");	
 	}
 }
-else if Player.area == 110
+else if area == 110
 {
 	name = "INVERTED MOM";
 	if random(40)<1
@@ -153,10 +155,10 @@ else if Player.area == 110
 		"MR. FROG#HAPPILY DIVORCED","DADDY BALL");	
 	}
 }
-else if Player.area = 3
+else if area = 3
 {
 //with instance_create(x,y,Drama)
-	if Player.subarea = 3
+	if subarea = 3
 	{
 	if random(100)<1
 	name = "BIG D."
@@ -173,7 +175,7 @@ else if Player.area = 3
 
 	}
 }
-else if Player.area = 136
+else if area = 136
 {
 //with instance_create(x,y,Drama)
 	if random(100)<1
@@ -181,10 +183,10 @@ else if Player.area = 136
 	else
 	name = "ULTRA BIG DOG";
 }
-else if Player.area = 106
+else if area = 106
 {
 //with instance_create(x,y,Drama)
-	if Player.subarea = 3
+	if subarea = 3
 	{
 	name = "INVERTED BIG DOG"
 	if random(200)<1
@@ -197,10 +199,10 @@ else if Player.area = 106
 		name = choose("THERE SHE IS!","BEST FRIEND","JUST WANT A HUG");
 	}
 }
-else if Player.area == 4
+else if area == 4
 {
 //with instance_create(x,y,Drama)
-	if Player.subarea == 1
+	if subarea == 1
 	{
 		name = "HYPER CRYSTAL";
 		if random(90)<1
@@ -213,9 +215,9 @@ else if Player.area == 4
 			name = choose("THE BIG BAD BAT","SQUARES!","BATMAN","BIG BAT");	
 	}
 }
-else if Player.area = 111
+else if area = 111
 {
-	if Player.subarea == 1
+	if subarea == 1
 	{
 		name = "INVERTED HYPER CRYSTAL";
 		if random(90)<1
@@ -228,29 +230,29 @@ else if Player.area = 111
 			name = choose("PURPLE BAT","THE BAT OF DEATH");	
 	}
 }
-else if Player.area = 115
+else if area = 115
 {
 	name = "CURSED HYPER CRYSTAL";
 	if random(90)<1
 		name = choose("A MISTAKE","PURPLE MENACE");
 }
-else if Player.area = 114
+else if area = 114
 {
 //with instance_create(x,y,Drama)
 name = "BUSH BOX"
 if random(70)<1
 	name = choose("BIG BUSH BOX BOSS","BUSH CUBE","BIG BAD BUSH BOX","BIG BUSH","BIG AGRASSIN","BUSHY BOX","PLANT","MISSING FLOWERS","IT'S THE BUSH BOX BOSS","S Q U A R E");
 }
-else if Player.area = 123
+else if area = 123
 {
 	//with instance_create(x,y,Drama)
 	name = "INVERTED BUSH BOX"
 	if random(200)<1
 		name = choose("GAY BUSH","PINK BUSH","BUSH BALL");
 }
-else if Player.area = 5
+else if area = 5
 {
-	if Player.subarea > 2
+	if subarea > 2
 	{
 		//with instance_create(x,y,Drama)
 		if random(1000)<1
@@ -258,33 +260,33 @@ else if Player.area = 5
 		else
 		name = "LIL HUNTER"
 	}
-	else// if Player.subarea == 2
+	else// if subarea == 2
 	{
 		name = "BIG DISC";
 		if random(600)<1
 		name= choose("BIG DIC","LARGE STAR","DUMB BOSS");
 	}
 }
-if Player.area = 107
+if area = 107
 {
 //with instance_create(x,y,Drama)
-	if Player.subarea > 2
+	if subarea > 2
 	{
 		if random(10000)<1
 		name= "HENKY!"
 		else
 		name = "INVERTED LIL HUNTER";
 	}
-	else// if Player.subarea == 2
+	else// if subarea == 2
 	{
 		name = "INVERTED BIG DISC";
 		if random(600)<1
 		name= choose("BROWN DISC","BIG OOPS");
 	}
 }
-else if Player.area = 6 
+else if area = 6 
 {
-	if Player.subarea == 2
+	if subarea == 2
 	{
 		name = "BIG MACHINE";
 		if random(120) < 1
@@ -297,9 +299,9 @@ else if Player.area = 6
 			name = choose("TECHROMANCER","LITTLE SHIT");
 	}
 }
-else if Player.area = 112
+else if area = 112
 {
-	if Player.subarea == 2
+	if subarea == 2
 	{
 		name = "INVERTED MACHINE"
 		if random(120) < 1
@@ -313,7 +315,7 @@ else if Player.area = 112
 	}
 
 }
-else if Player.area = 7
+else if area = 7
 {
 //with instance_create(x,y,Drama)
 
@@ -322,7 +324,7 @@ else if Player.area = 7
     else
     name = "PURPLE DRAGON"
 }
-else if Player.area = 108
+else if area = 108
 {
 //with instance_create(x,y,Drama)
 
@@ -331,10 +333,10 @@ else if Player.area = 108
     else
     name = "INVERTED DRAGON"
 }
-else if Player.area = 8
+else if area = 8
 {
 //with instance_create(x,y,Drama)
-if Player.subarea=2
+if subarea=2
     {
     name = "LIL HUNTER"
     }
@@ -348,33 +350,33 @@ if Player.subarea=2
 
     }
 }
-else if Player.area = 109
+else if area = 109
 {
 name = "INVERTED CHESHIRE CAT"
 }
-else if Player.area = 101
+else if area = 101
 {
 //with instance_create(x,y,Drama)
 name = "BIG FISH"
 if random(200) < 1
 		name = choose("HEY LOOK#IT'S FISH#FROM NUCLEAR THRONE","O'L BITEY");
 }
-else if Player.area = 122
+else if area = 122
 {
 //with instance_create(x,y,Drama)
 name = "INVERTED BIG FISH"
 if random(200) < 1
 		name = choose("GASS FISH","THAT'S MISTER#FISH FOR YOU!");
 }
-else if Player.area == 9
+else if area == 9
 {
 	name = "THE NUCLEAR THRONE";
 	if random(200) < 1
 		name = "SON OF A BITCH";
 }
-else if Player.area == 10
+else if area == 10
 {
-	 if Player.subarea == 2
+	 if subarea == 2
 	{
 		name = "MOM ON VACATION";
 		if random(100) < 1
@@ -388,9 +390,9 @@ else if Player.area == 10
 	}
 	
 }
-else if Player.area == 121
+else if area == 121
 {
-	if Player.subarea == 3
+	if subarea == 3
 	{
 		name = "INVERTED BIG VULTURE";
 		if random(200) < 1
@@ -403,59 +405,59 @@ else if Player.area == 121
 			name = choose("WE NOT SKIPPING THIS FIGHT","BALL MOM ON VACATION","MOMMY IN THE SUN","BIKINI");
 	}
 }
-else if Player.area == 119
+else if area == 119
 {
 	name = "THRONE II";
 	if random(400) < 1
 		name = choose("IT'S TIME","FIGHT ME","CTHULHU","BULLET HELL");
 }
-else if Player.area == 120
+else if area == 120
 {
 	name = "INVERTED THRONE II";
 	if random(400) < 1
 		name = choose("THRONE III","END OF THE ROAD","TICKET TO 1 LESS VAN");
 }
-else if Player.area = 126
+else if area = 126
 {
 	name = "CURSED GRAVE FISH";
 	if random(100)<1
 		name = choose("CURSED GRAVE DIGGER");
 }
-else if Player.area = 127
+else if area = 127
 {
 	name = "INVERTED GRAVE FISH";
 	if random(80)<1
 		name = choose("INVERTED GRAVE DIGGER");
 }
-else if Player.area = 128
+else if area = 128
 {
 	name = "CROWN GLUTTON";
 	if random(100)<1
 		name = choose("CROWN CROWN CROWN","MULTI CROWN");
 }
-else if Player.area = 129
+else if area = 129
 {
 	name = "INVERTED CROWN GLUTTON";
 	if random(80)<1
 		name = choose("AGAIN!","CROWN AGAIN");
 }
-else if Player.area = 130
+else if area = 130
 {
 	name = "BOSS BOT";
 }
-else if Player.area = 131
+else if area = 131
 {
 	name = "INVERTED BOSS BOT";
 }
-else if Player.area = 132
+else if area = 132
 {
 	name = "CURSED BOSS BOT";
 }
-else if Player.area = 133
+else if area = 133
 {
 	name = "GOLDEN BOSS BOT";
 }
-else if Player.area = 134
+else if area = 134
 {
 	name = "ULTRA BOSS BOT";
 }

@@ -41,7 +41,7 @@ if alarm[1] > 1 && alarm[1] < 3
 if prevhealth > my_health
 {
 	var dmgTaken = prevhealth - my_health;//Damage increase
-	//var ogDmgTaken = dmgTaken;
+	var ogDmgTaken = dmgTaken;
 	if super
 	{
 		//Negate healing
@@ -99,9 +99,9 @@ if prevhealth > my_health
 		}
 		if (Player.skill_got[37]) //ECSTATIC FISTS
 		{
-			var part = 0.25;
+			var part = 0.3;
 			if Player.race == 25 //Doctor
-				part = 0.3;
+				part = 0.35;
 			if Player.ultra_got[62] && Player.altUltra && Player.armour > 0 && Player.maxarmour > 0
 			{
 				//Living armour
@@ -116,6 +116,10 @@ if prevhealth > my_health
 					dmgTaken *= 1 + (((Player.my_health - 1) / max(Player.maxhealth - 1,2)) * part);
 				else
 					dmgTaken *= 1 + part;
+			}
+			if Player.my_health >= Player.maxhealth
+			{
+				instance_create(x,y,Smoke);	
 			}
 		}
 		my_health = prevhealth - dmgTaken;

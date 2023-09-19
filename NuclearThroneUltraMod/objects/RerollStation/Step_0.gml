@@ -47,6 +47,9 @@ if place_meeting(x,y,Player) && !used
 				rad = GetPlayerMaxRad() * 0.5;	
 			}
 		}
+		with GameRender {
+			event_user(0);
+		}
 	}
 }
 else

@@ -1,7 +1,6 @@
 draw_self();
 draw_set_color(c_dkgray)
 
-draw_set_font(fntM)
 draw_set_valign(fa_bottom)
 draw_set_halign(fa_right)
 

@@ -1,4 +1,4 @@
-if other.team != team and other.my_health > 0
+if alarm[11] < 1 && other.team != team and other.my_health > 0
 {instance_destroy()
 with other
 {

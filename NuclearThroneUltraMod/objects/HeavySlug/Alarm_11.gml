@@ -92,10 +92,10 @@ if um == ultramods.bulletShotgun
 {
 	snd_play_fire(sndHeavyCrossbow);
 	instance_destroy(id,false);
+	UberCont.ultramodSwap = false;
 	with instance_create(x,y,HeavyBolt)
 	{
 		dmg += 5;
-		piercedmg += 5;
 		scrCopyWeaponMod(other);
 		direction = other.direction
 		image_angle = direction;
@@ -118,6 +118,7 @@ else if um == ultramods.shotgunElectro
 	image_angle = direction}
 	with instance_create(x,y,ElectroBallBig)
 	{
+		dmg ++;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;

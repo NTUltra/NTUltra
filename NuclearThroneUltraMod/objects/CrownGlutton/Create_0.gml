@@ -1,4 +1,5 @@
 event_inherited();
+crowns = [];
 raddrop = 50
 maxhealth = 550
 scrBossHealthBuff();

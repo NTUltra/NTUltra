@@ -11,7 +11,7 @@ function scrDecideCurse(){
 			curse = 1
 			return curse;
 		}
-		if random(4) < Player.nochest && !instance_exists(BigWeaponChest)
+		if random(4) < Player.nochest && !instance_exists(BigWeaponChest) && !isOneWeaponOnlyModes()
 		{
 		curse = 0
 		instance_destroy(id,false);

@@ -64,3 +64,9 @@ if instance_exists(Player) && Player.skill_got[23]
 actionName = "% RADS TO OPEN"
 name = actionName;
 explainTimer = 0;
+
+if isOneWeaponOnlyModes()
+{
+	instance_destroy(id,false);
+	instance_create(x,y,RadChest);
+}

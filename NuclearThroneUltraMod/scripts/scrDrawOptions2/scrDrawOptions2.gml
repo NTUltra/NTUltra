@@ -58,7 +58,6 @@ function scrDrawOptions2() {
 
 
 
-	draw_set_font(fntM)
 	draw_set_valign(fa_top)
 	draw_set_halign(fa_center)
 	var yy = __view_get( e__VW.YView, 0 )-4;

@@ -1,7 +1,5 @@
 scrDrawSpiral()
-scrDrawHUD()
 
-draw_set_font(fntM)
 draw_set_halign(fa_center)
 draw_set_valign(fa_middle)
 
@@ -93,3 +91,4 @@ draw_set_valign(fa_middle)
 draw_text_ext(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.5,string_hash_to_newline("#####"+string_upper(tip)),s,w)
 draw_set_valign(fa_top)
 
+hudSurface = -1;

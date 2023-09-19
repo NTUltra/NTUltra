@@ -5,7 +5,7 @@ if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
 	x = xstart;
 if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+10 and UberCont.mouse__y < y+16 and UberCont.mouse__x > x-10 and UberCont.mouse__y > y-16)
 {
-	KeyCont.key_fire[p] = 0;
+	KeyCont.key_fire[p] = 2;
     with UberCont///UNLOCK CROWN
     {
 		crown_used[other.crown] += 1;
@@ -23,8 +23,7 @@ if crown = 0
 	crown = ceil(irandom(crownmax)+1)//Includes 24 crown of sloth
 }
 oldcrown = 1;
-if array_length(Player.crown) > 0
-	oldcrown = Player.crown[0];
+
 if (UberCont.canMultiCrown)
 {
 	if crown == 1
@@ -63,6 +62,8 @@ if (UberCont.canMultiCrown)
 }
 else
 {
+	if array_length(Player.crown) > 0
+		oldcrown = Player.crown[0];
 	with Crown
 		instance_destroy();
 	Player.crown = [crown]
@@ -205,7 +206,7 @@ if crown == 34
 	}
 }
 //CROWN OF DESTINY
-if crown = 8 && !Player.tookDestiny
+if crown == 8 && !Player.tookDestiny
 {
 	Player.skillpoints += 1
 	Player.skillsChosen -= 1;
@@ -225,7 +226,7 @@ if crown == 3 && Player.maxhealth > 1
 	}
 }
 //CROWN OF MERCENARY
-if crown = 30
+if crown == 30
 {
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
 	{
@@ -240,7 +241,7 @@ if crown = 30
 	}
 }
 //CROWN OF BOUNTY
-if crown = 31
+if crown == 31
 {
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
 	{
@@ -299,7 +300,7 @@ if crown == 11
 			var wc3 = cwepmod3;
 			var wpu = weaponspickedup;
 			
-			var c = crown;
+			var c = [crown];
 			if level > 9
 				hasReachedUltra = true;
 			instance_destroy();

@@ -1,8 +1,6 @@
 //draw_background(bakMut,view_xview,view_yview)
 scrDrawSpiral()
-scrDrawHUD()
 
-draw_set_font(fntM)
 draw_set_halign(fa_center)
 draw_set_valign(fa_bottom)
 //Higher border
