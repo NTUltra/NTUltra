@@ -1109,7 +1109,8 @@ function scrDrawHUD() {
 							var txa = tx + sw;
 							if curse > 0
 							{
-								//var col = draw_set_color(make_colour_rgb(136,36,174));
+								var col = draw_set_color(make_colour_rgb(136,36,174));
+								draw_set_colour(col);
 								var n = string_hash_to_newline(string(name));
 				
 								draw_text(xx+2,ny,n)
@@ -1857,6 +1858,45 @@ function scrDrawHUD() {
 	}
 	if instance_exists(SecretFinder)
 	{
-		scrDrawSecretFinder(ox,oy);
+		with BigVultureSkull
+		{
+			scrDrawSecretFinder(ox,oy);
+		}
+		with BigFishSkull
+		{
+			scrDrawSecretFinder(ox,oy);
+		}
+		with DragonSkull
+		{
+			scrDrawSecretFinder(ox,oy);
+		}
+		with JungleFrozenPlant
+		{
+			scrDrawSecretFinder(ox,oy);
+		}
+		with GraveyardEntrance
+        {
+            scrDrawSecretFinder(ox,oy);
+        }
+        with MushroomLandEntrance
+        {
+            scrDrawSecretFinder(ox,oy);
+        }
+        with GraveyardEntrance
+		{
+            scrDrawSecretFinder(ox,oy);
+        }
+        with FactoryEntrance
+        {
+            scrDrawSecretFinder(ox,oy);
+        }
+        with UltraScrapyardEntrance
+        {
+            scrDrawSecretFinder(ox,oy);
+        }
+        with PizzaEntrance
+        {
+            scrDrawSecretFinder(ox,oy);
+        }
 	}
 }
