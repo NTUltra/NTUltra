@@ -10,14 +10,6 @@ exit;
 }
 
 */
-var cx = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])*0.5;
-var cy = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])*0.5;
-if point_distance(cx,cy,x,y) > 400
-{
-	alarm[1] = 1;
-	exit;
-}
-
 if place_meeting(x-16,y,Floor)
 l = 0
 else

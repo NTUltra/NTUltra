@@ -17,7 +17,10 @@
     "name": "CrownVault",
     "path": "folders/Objects/CrownVault.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "NPC",
+    "path": "objects/NPC/NPC.yy",
+  },
   "persistent": true,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

@@ -13,6 +13,7 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c70f6baa-a892-4e75-92fa-c3ed08800903",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7c1c37a6-1c5f-4f52-ace2-75fbdab59aa4",},
   ],
   "gridX": 0,
@@ -43,7 +44,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 1.0,
+    "length": 2.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -54,7 +55,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7c1c37a6-1c5f-4f52-ace2-75fbdab59aa4","path":"sprites/sprHeavyFireNade/sprHeavyFireNade.yy",},},},"Disabled":false,"id":"c279503a-17a6-4284-a2e9-cffe47b60253","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c70f6baa-a892-4e75-92fa-c3ed08800903","path":"sprites/sprHeavyFireNade/sprHeavyFireNade.yy",},},},"Disabled":false,"id":"1e29dea9-1618-4c6e-9c01-d677fd2fd8cc","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7c1c37a6-1c5f-4f52-ace2-75fbdab59aa4","path":"sprites/sprHeavyFireNade/sprHeavyFireNade.yy",},},},"Disabled":false,"id":"c279503a-17a6-4284-a2e9-cffe47b60253","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

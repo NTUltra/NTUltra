@@ -13,7 +13,10 @@
     "name": "CrownVault",
     "path": "folders/Objects/CrownVault.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "All",
+    "path": "objects/All/All.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

@@ -13,7 +13,10 @@
     "name": "Ability",
     "path": "folders/Objects/Player/Ability.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "NPC",
+    "path": "objects/NPC/NPC.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

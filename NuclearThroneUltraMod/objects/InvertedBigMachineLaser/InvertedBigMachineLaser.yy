@@ -15,7 +15,10 @@
     "name": "Labs",
     "path": "folders/Objects/Enemies/Boss/Labs.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "NPC",
+    "path": "objects/NPC/NPC.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

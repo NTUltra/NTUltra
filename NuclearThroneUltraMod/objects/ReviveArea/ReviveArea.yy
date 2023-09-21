@@ -14,7 +14,10 @@
     "name": "Labs",
     "path": "folders/Objects/Enemies/Labs.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "All",
+    "path": "objects/All/All.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

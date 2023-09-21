@@ -13,7 +13,10 @@
     "name": "CrownCourtyard",
     "path": "folders/Objects/Enemies/CrownCourtyard.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "GravestoneWave",
+    "path": "objects/GravestoneWave/GravestoneWave.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

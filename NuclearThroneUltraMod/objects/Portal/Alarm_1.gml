@@ -12,14 +12,8 @@ if type == 3 || inverted
 			totalHp += my_health;
 		}
 	}
-	with EnemyDeactivater
-	{
-		totalHp += my_health;
-		if my_health > 0
-			numEn ++;
-	}
 	var atLeast = 30;
-	if totalHp < atLeast && !instance_exists(BigDisc) && !instance_exists(GraveyardFish) && numEn < 4// && !instance_exists(becomenemy)
+	if totalHp < atLeast && !instance_exists(BigDisc) && !instance_exists(GraveyardFish) && numEn < 4 && !instance_exists(becomenemy)
 	{
 		goTime = true;
 	}

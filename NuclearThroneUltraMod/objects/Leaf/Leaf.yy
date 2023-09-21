@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Ability",
-    "path": "folders/Objects/Player/Ability.yy",
+    "name": "FX",
+    "path": "folders/Objects/FX.yy",
   },
   "parentObjectId": {
     "name": "RavenFeather",

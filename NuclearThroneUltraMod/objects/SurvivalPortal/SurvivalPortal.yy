@@ -12,7 +12,10 @@
     "name": "SurvivalArena",
     "path": "folders/Objects/SurvivalArena.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "FX",
+    "path": "objects/FX/FX.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

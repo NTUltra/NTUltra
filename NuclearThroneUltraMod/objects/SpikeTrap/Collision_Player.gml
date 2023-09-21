@@ -1,6 +1,7 @@
 with other
-instance_destroy();
-
-with instance_create(x,y,BigDogExplo)
-	visible = false;
-
+{
+	my_health -= 4;
+	sprite_index = spr_hurt
+	image_index = 0
+	snd_play(snd_hurt, hurt_pitch_variation);
+}

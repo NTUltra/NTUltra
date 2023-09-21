@@ -1,18 +1,18 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "EnemySpawning",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
-  ],
+  "name": "FX",
+  "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemies",
-    "path": "folders/Objects/Enemies.yy",
+    "name": "Global",
+    "path": "folders/Objects/Global.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "All",
+    "path": "objects/All/All.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -30,5 +30,5 @@
   "solid": false,
   "spriteId": null,
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }

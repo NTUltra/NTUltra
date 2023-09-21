@@ -4191,7 +4191,6 @@ function scrFire2() {
 
 	instance_create(x,y,Dust)
 	instance_create(x,y,Smoke)
-	scrActivateAllOutOfRange();
 	var hitWall = false;
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{

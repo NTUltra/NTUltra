@@ -1,19 +1,3 @@
-/*THIS IS HOW IT SHOULD WORK
-
-damagers have a DAMAGE
-their collision can be NORMAL, PIERCING or PIERCING AT OVERKILL (piercing checks per frame)
-their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
-they have a FORCE and can be 0 or DIRECTIONAL */
-
-typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
-
-image_yscale = 1.25
-alarm[1] = 1;
-img = 0
+event_inherited();
 sprStart = sprPopoLaserStart;
 sprEnd = sprPopoLaserEnd;
-	dmg = 3;
-if scrIsGamemode(9)//Casual mode
-	dmg = 2;
-if scrIsHardMode()//HARD MODE
-	dmg = 4;

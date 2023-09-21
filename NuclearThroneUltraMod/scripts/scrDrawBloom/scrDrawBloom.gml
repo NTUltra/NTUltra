@@ -145,14 +145,7 @@ function scrDrawBloom() {
 	with Lightning
 	draw_sprite_ext(sprite_index,-1,x,y,image_xscale,image_yscale*2,image_angle,c_white,ba)
 
-	with ArmourStrike
-	draw_sprite_ext(sprite_index,-1,x,y,image_xscale,image_yscale*2,image_angle,c_white,ba)
 
-	with ArmourStrikeStart
-	draw_sprite_ext(sprArmourStrikeStartBloom,-1,x,y,image_xscale,image_yscale*2,image_angle,c_white,ba)
-
-	with ArmourStrikeHit
-	draw_sprite_ext(sprArmourStrikeEndBloom,-1,x,y,image_xscale,image_yscale*2,image_angle,c_white,ba)
 
 	with UltraLightning
 	draw_sprite_ext(sprite_index,-1,x,y,image_xscale,image_yscale*2,image_angle,c_white,ba)

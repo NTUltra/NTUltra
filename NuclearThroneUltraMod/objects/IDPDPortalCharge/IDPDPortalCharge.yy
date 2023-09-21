@@ -12,7 +12,10 @@
     "name": "IDPD",
     "path": "folders/Objects/Enemies/IDPD.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "FX",
+    "path": "objects/FX/FX.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

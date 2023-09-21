@@ -1,6 +1,6 @@
 raddrop = 9
 maxhealth = 10//20
-meleedamage = 2
+meleedamage = 3
 mySize = 1
 
 if UberCont.loops>1

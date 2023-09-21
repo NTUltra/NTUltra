@@ -1,5 +1,4 @@
 /// @description Alarms
-instance_deactivate_object(EnemyDeactivater);
 with all
 {
 	var i = 0;
@@ -11,5 +10,4 @@ with all
 		i++;
 	}
 }
-instance_activate_object(EnemyDeactivater);
 alarm[0] = 2;

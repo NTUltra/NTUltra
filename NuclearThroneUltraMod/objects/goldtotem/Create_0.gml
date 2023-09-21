@@ -35,8 +35,5 @@ if scrIsHardMode()//HARD MODE
 	alarm[2] = alarm[1];
 alarm[0] = 2;
 
-with instance_create(x,y,EnemySpawning)
-{
-	myEnemy = other.id;	
-}
+
 scrInitDrops(3);

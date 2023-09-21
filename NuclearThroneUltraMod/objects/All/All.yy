@@ -1,18 +1,15 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "EnemyDeactivater",
+  "name": "All",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemies",
-    "path": "folders/Objects/Enemies.yy",
+    "name": "Global",
+    "path": "folders/Objects/Global.yy",
   },
-  "parentObjectId": {
-    "name": "becomenemy",
-    "path": "objects/becomenemy/becomenemy.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

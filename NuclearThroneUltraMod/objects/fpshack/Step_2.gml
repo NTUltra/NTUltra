@@ -6,29 +6,18 @@ for (var i = 0; i < al; i++)
 	instance_deactivate_object(forcePositions[| i]);
 }
 //Todo check for gencont
-instance_deactivate_object(EnemyDeactivater);
-with all
+instance_deactivate_object(Wall);
+instance_deactivate_object(Floor);
+instance_deactivate_object(Top);
+instance_deactivate_object(TopSmall);
+with All
 {
-	//x = xprevious + (x - xprevious) * 0.5;
-	//y = yprevious + (y - yprevious) * 0.5;
-	if speed > friction
-	{
-		//x -= hspeed*dt;
-		//y -= vspeed*dt;
-		x = xprevious + ((x - xprevious) * dt);
-		y = yprevious + ((y - yprevious) * dt);
-		speed += friction*dt;
-	}
-	image_index = clamp(0,image_index - image_speed*dt,image_number);
-	/*
-	var i = 0;
-	repeat(13)
-	{
-		alarm[i] += dt;
-		i++;
-	}*/
+	scr60fpsHack();
 }
-instance_activate_object(EnemyDeactivater);
+instance_activate_object(Wall);
+instance_activate_object(Floor);
+instance_activate_object(Top);
+instance_activate_object(TopSmall);
 //instance_activate_object(Wall);
 for (var i = 0; i < al; i++)
 {

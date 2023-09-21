@@ -110,7 +110,6 @@ if instance_exists(Player)
 		alarm[1] = 0;
 	}
 }
-alarm[4] = 120;//Temp
 if instance_exists(SurvivalArenaStarter)
 {
 	alarm[7] = 1;

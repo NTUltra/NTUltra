@@ -13,7 +13,10 @@
     "name": "Ability",
     "path": "folders/Objects/Player/Ability.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "All",
+    "path": "objects/All/All.yy",
+  },
   "persistent": true,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

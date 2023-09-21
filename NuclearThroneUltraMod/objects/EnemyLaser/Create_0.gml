@@ -11,6 +11,8 @@ canBeMoved = false;
 isLaser = true;
 img = 0
 laserDecrease = 0.2;
+sprStart = sprEnemyLaserStart;
+sprEnd = sprEnemyLaserEnd;
 if instance_exists(Player) && Player.skill_got[12]
 {
 	laserDecrease = 0.3;
