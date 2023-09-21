@@ -44,7 +44,7 @@ function scrCrownAnimation(takenCrown){
 			spr_walk = sprCrown9Walk
 		break;
 		case 11://Reincarnation
-			if instance_exists(Player) && Player.crownvisits <= 0 && !scrIsGamemode(26) && !scrIsGamemode(27) && !scrIsGamemode(37)
+			if instance_exists(Player) && UberCont.canPickFrogCrown && !scrIsGamemode(26) && !scrIsGamemode(27) && !scrIsGamemode(37)
 			{
 				spr_idle = sprCrownFrogIdle
 				spr_walk = sprCrownFrogWalk

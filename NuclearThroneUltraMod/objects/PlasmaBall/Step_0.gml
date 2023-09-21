@@ -23,7 +23,7 @@ else
 	image_xscale = nomscale;
 	image_yscale = nomscale;
 }
-if speed < 2
+if speed < 1
 	instance_destroy();
 
 

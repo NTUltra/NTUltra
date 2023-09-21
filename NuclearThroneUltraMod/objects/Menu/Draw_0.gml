@@ -35,7 +35,7 @@ wave += 0.05
 if mode = 1
 {
 
-if CreditsSelect.selected = 0 and StatsSelect.selected = 0 and OptionSelect.selected = 0 and OptionSelect2.selected = 0 and UpdateSelect.selected = 0
+if CreditsSelect.selected = 0 and StatsSelect.selected = 0 and OptionSelect.selected = 0 and OptionSelect2.selected = 0// and UpdateSelect.selected = 0
 {
 scrDrawCharSelect()
 }
@@ -46,11 +46,11 @@ scrDrawStats()
 else if CreditsSelect.selected = 1
 {
 scrDrawCredits()
-}
+}/*
 else if UpdateSelect.selected = 1
 {
 scrDrawUpdate()
-}
+}*/
 else if OptionSelect.selected = 1
 {
 scrDrawOptions()

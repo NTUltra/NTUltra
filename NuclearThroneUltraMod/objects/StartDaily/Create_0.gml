@@ -1,8 +1,13 @@
 /// @description Start it
 serverSocket = -1;
 latestVersion = UberCont.updateVersion;
+myClientId = -1;
 gotSteam = false;
 debug("START DAILY");
+with UpdateChecker
+{
+	instance_destroy();	
+}
 with UberCont
 {
 	if (steam_initialised())

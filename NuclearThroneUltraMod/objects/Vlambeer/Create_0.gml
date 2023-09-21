@@ -1,4 +1,4 @@
-
+debug("create vlambeer");
 if instance_exists(Player)
 {
 	instance_destroy()
@@ -36,3 +36,4 @@ else
 	instance_create(64,96,Menu)
 }
 randomize();
+

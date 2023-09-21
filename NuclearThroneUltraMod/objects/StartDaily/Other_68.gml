@@ -26,9 +26,10 @@ if (type == network_type_data) {
 			}
 			else if UberCont.isWeekly {
 				debug("WEEKLY");
-				var sendBuffer = buffer_create(3,buffer_grow,1);
+				var sendBuffer = buffer_create(3,buffer_fixed,1);
 				buffer_write(sendBuffer,buffer_u8,NETDATA.STARTWEEKLY);
 				buffer_write(sendBuffer,buffer_u16,myClientId);
+				// buffer_write(sendBuffer,buffer_u64,encrypted_data.userid);
 				network_send_packet(serverSocket, sendBuffer, buffer_get_size(sendBuffer));
 				buffer_delete(sendBuffer);
 				with UberCont {
@@ -41,10 +42,15 @@ if (type == network_type_data) {
 			}
 			else
 			{
-				var sendBuffer = buffer_create(4,buffer_grow,1);
+				var sendBuffer = buffer_create(12,buffer_fixed,1);
 				buffer_write(sendBuffer,buffer_u8,NETDATA.STARTDAILY);
 				buffer_write(sendBuffer,buffer_u16,myClientId);
-				buffer_write(sendBuffer,buffer_string,date_date_string(date_current_datetime()));
+				buffer_write(sendBuffer,buffer_u64,UberCont.encrypted_data.userid);
+				if scrIsGamemode(27)//Daily score
+					buffer_write(sendBuffer,buffer_bool,true);
+				else//Race
+					buffer_write(sendBuffer,buffer_bool,false);
+				//buffer_write(sendBuffer,buffer_string,date_date_string(date_current_datetime()));
 				network_send_packet(serverSocket, sendBuffer, buffer_get_size(sendBuffer));
 			}
 		break;

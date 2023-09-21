@@ -1,3 +1,4 @@
+alarm[0] = 1;
 dist = random(135)+10
 angle = random(360)
 

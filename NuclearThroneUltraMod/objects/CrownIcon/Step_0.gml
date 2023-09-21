@@ -155,6 +155,8 @@ with Player
 //CROWN OF LIFE
 if crown == 2 && !canReAdd
 {
+	with UberCont
+		hasTakenCrownOfLife = true;
 	with Player
 	{
 		if my_health >= maxhealth
@@ -271,10 +273,10 @@ if crown != 25
 	}
 }
 
-//CROWN OF REINCARNATION
+//CROWN OF REINCARNATION/FROG
 if crown == 11
 {
-	if Player.crownvisits > 0
+	if Player.crownvisits > 0 && !UberCont.canPickFrogCrown
 	{
 		var hasReachedUltra = false;
 		with Player
@@ -366,8 +368,9 @@ if crown == 11
 		crown = other.crown}*/
 
 	}
-	else if !scrIsGamemode(26) && !scrIsGamemode(27) && !scrIsGamemode(37)
+	else if !scrIsGamemode(26) && !scrIsGamemode(27) && !scrIsGamemode(37) && UberCont.canPickFrogCrown
 	{
+		//FROG
 		with Player
 		{
 			if area == 100

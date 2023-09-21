@@ -6,7 +6,7 @@ for (var i = 0; i < al; i++)
 	instance_deactivate_object(forcePositions[| i]);
 }
 //Todo check for gencont
-//instance_deactivate_object(Wall);
+instance_deactivate_object(EnemyDeactivater);
 with all
 {
 	//x = xprevious + (x - xprevious) * 0.5;
@@ -28,6 +28,7 @@ with all
 		i++;
 	}*/
 }
+instance_activate_object(EnemyDeactivater);
 //instance_activate_object(Wall);
 for (var i = 0; i < al; i++)
 {
@@ -42,8 +43,6 @@ with Player
 		wkick += 0.5
 	if wkick < 0
 		wkick -= 0.5
-	if roll != 0
-		angle -= 25*right*max(1,(skill_got[2]*1.3))
 	if invertedportalcounter > 0
 		invertedportalcounter -= dt;
 	if flying > 0

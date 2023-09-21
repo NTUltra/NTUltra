@@ -1,4 +1,4 @@
-
+alarm[0] = 1;
 if type = 2
 image_angle += 2+sin(image_angle/300)*2+random(1)
 else if type = 5

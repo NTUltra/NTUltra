@@ -1,4 +1,11 @@
 {
   "FolderOrderSettings": [],
-  "ResourceOrderSettings": [],
+  "ResourceOrderSettings": [
+    {"name":"scrGetExistingScore","order":1,"path":"scripts/scrGetExistingScore/scrGetExistingScore.yy",},
+    {"name":"scrGetDailyFile","order":3,"path":"scripts/scrGetDailyFile/scrGetDailyFile.yy",},
+    {"name":"scrGetDailyRaceFile","order":5,"path":"scripts/scrGetDailyRaceFile/scrGetDailyRaceFile.yy",},
+    {"name":"scrGetWeeklyFile","order":4,"path":"scripts/scrGetWeeklyFile/scrGetWeeklyFile.yy",},
+    {"name":"scrRollWeapons","order":6,"path":"scripts/scrRollWeapons/scrRollWeapons.yy",},
+    {"name":"scrGetDailyNumber","order":2,"path":"scripts/scrGetDailyNumber/scrGetDailyNumber.yy",},
+  ],
 }

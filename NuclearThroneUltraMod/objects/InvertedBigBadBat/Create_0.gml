@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 raddrop = 70
-maxhealth = 350
+maxhealth = 450
 scrBossHealthBuff();
 rotationSpeed *= 1.05;
 EnemyHealthAdjustments();
@@ -27,3 +27,4 @@ distanceToTarget = maxDistanceToTarget;
 pSpeedAccurate = 3.2;
 pSpeedSpinny = 3.1;
 pSpeedJawbreaker = 4.6;
+myBat = InvertedSquareBat;

@@ -12,14 +12,14 @@ time = 0
 repeat(60)//(200)
 {
 with ThroneIISpiral
-event_perform(ev_step,0)
+event_perform(ev_alarm,0)
 
 with Spiral
-event_perform(ev_step,0)
+event_perform(ev_alarm,0)
 
 with SpiralDebris
-event_perform(ev_step,0)
+event_perform(ev_alarm,0)
 }
-
+alarm[0] = 1;
 active = 1
 

@@ -38,7 +38,7 @@ function scrLoadOptions() {
 	opt_resolution_scale = ini_read_real("OPTIONS","resolutionscale",1);
 	//Read array!??
 	var al = ini_read_real("OPTIONS","gamemodes",1);
-	opt_gamemode = [];
+	opt_gamemode = [0];
 	if al < 1
 		opt_gamemode = [0];
 	for (var i = 0; i < al; i ++)

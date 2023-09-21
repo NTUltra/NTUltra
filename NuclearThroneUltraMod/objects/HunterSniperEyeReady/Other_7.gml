@@ -1,2 +1,2 @@
 /// @description xxx
-alarm[0] = 2;
+instance_destroy();

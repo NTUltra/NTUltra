@@ -53,7 +53,7 @@ if fps_real >= fps
 	}
 if instance_exists(Spiral)
 	with Bones
-	draw_sprite_ext(sprite_index,-1,x,y,image_xscale,1,0,c_white,1)
+		draw_sprite_ext(sprite_index,-1,x,y,image_xscale,1,0,c_white,1)
 
 with TopDecal
 draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,0,c_white,1)
@@ -444,7 +444,7 @@ if !instance_exists(MenuGen) && !instance_exists(ThroneIISpiral)
 {
 	with Spiral
 	{
-		draw_sprite_ext(sprite_index,-1,__view_get( e__VW.XView, 0 )+x,__view_get( e__VW.YView, 0 )+y,image_xscale,image_yscale,image_angle,c_white,1)
-		draw_sprite_ext(sprite_index,-1,__view_get( e__VW.XView, 0 )+x,__view_get( e__VW.YView, 0 )+y,image_xscale,image_yscale,image_angle,c_black,0.8-image_xscale)
+		draw_sprite_ext(sprite_index,-1,__view_get( e__VW.XView, 0 )+x,__view_get( e__VW.YView, 0 )+y,image_xscale*2,image_yscale*2,image_angle,c_white,1)
+		draw_sprite_ext(sprite_index,-1,__view_get( e__VW.XView, 0 )+x,__view_get( e__VW.YView, 0 )+y,image_xscale*2,image_yscale*2,image_angle,c_black,0.8-image_xscale)
 	}
 }

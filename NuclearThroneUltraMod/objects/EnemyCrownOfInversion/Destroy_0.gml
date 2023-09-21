@@ -45,6 +45,8 @@ with Player
 var dis = 248;
 if scrIsGamemode(6)
 	dis = 48;
+
+var pExist = instance_exists(Player);
 with Floor
 {
 	spawnarea = 129;
@@ -54,7 +56,7 @@ with Floor
 			sprite_index = sprFloor129B;
 		else
 			sprite_index = sprFloor129;
-		if point_distance(x, y, Player.x, Player.y) > dis
+		if pExist && point_distance(x, y, Player.x, Player.y) > dis
 			scrPopEnemies();
 	}
 }

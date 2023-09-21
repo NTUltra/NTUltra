@@ -31,15 +31,10 @@ bwep=oneweponlywep;
 scrWeaponHold();
 }
 
-if (area!=100 && area !=104)
+if (area==100 || area ==104)
 {
-firedthislevel=false;
-movethislevel=false;
-}
-else
-{
-firedthislevel=true;
-movethislevel=true;
+	firedthislevel=true;
+	movethislevel=true;
 }
 portalstrikesusedthislevel=0;
 

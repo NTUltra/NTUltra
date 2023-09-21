@@ -1,4 +1,6 @@
 /// @description Black sword? and UNLOCKABLES
+with UberCont
+	canPickFrogCrown = false;
 consecutiveGoodBloodGambles = 0;
 if swapChar
 	exit;
@@ -235,6 +237,19 @@ if looping && area != 104
 {
 	my_health = maxhealth;
 	prevhealth = my_health;
+	if (ultra_got[77] && altUltra)
+	{
+		i = 0;
+		repeat(8)
+		{
+			var tier = wep_area[hogWep[i]]
+			if (tier < 0)
+				tier = 14;
+			my_health += tier*0.1;
+			my_health = floor(my_health);
+			i ++;
+		}
+	}
 	ammo[1] += 200;
 	ammo[2] += 20;
 	ammo[3] += 20;
@@ -274,8 +289,8 @@ if looping && area != 104
 	if race =3 && skill_got[19]
 	scrUnlockCSkin(3,"FOR LOOPING WITH EAGLE EYES#AS EYES",0);
 
-	if race = 4 && skill_got[1]=0 && skill_got[25]=0
-	scrUnlockBSkin(4,"FOR LOOPING WITHOUT#RHINO SKIN AND STRONG SPIRIT#AS MELTING",0);
+	if race = 4 && !skill_got[1] && !skill_got[25] && !UberCont.hasTakenCrownOfLife
+	scrUnlockBSkin(4,"FOR LOOPING WITHOUT#RHINO SKIN, STRONG SPIRIT#AND CROWN OF LIFE#AS MELTING",0);
 
 	if loops>1 && race = 4
 	scrUnlockCSkin(4,"FOR REACHING LOOP 3#AS MELTING ON 1HP EQUALITY",5);
@@ -625,7 +640,7 @@ if (area == 9 || area == 118) && race == 11 && weaponspickedup < 1
 	
 if movethislevel==false&&race=15 &&!instance_exists(MenuGen) &&!instance_exists(Menu) &&  !instance_exists(Vlambeer) && !instance_exists(CrownPickup)
 {//ATOM TELEPORT ONLY GAMEMODE UNLOCK
-scrUnlockGameMode(7,"FOR COMPLETING AN AREA WITHOUT WALKING")
+	scrUnlockGameMode(7,"FOR COMPLETING AN AREA WITHOUT WALKING")
 }
 
 //SKINS
@@ -635,7 +650,7 @@ scrUnlockBSkin(10,"FOR COMPLETING A MAIN AREA#ON LOOP#WITHOUT FIRING AS REBEL",0
 if ( firedthislevel=false && (race == 13) && area <100 && area != 10 && ( area>3 || loops>0 )  )
 scrUnlockCSkin(13,"FOR COMPLETING A MAIN AREA# AFTER THE SCRAPYARD#WITHOUT FIRING AS SHEEP",0);
 
-if ( firedthislevel=false && race = 15 && area <100 && area != 10 && ( area>2 || loops>0 )  )
+if ( firedthislevel=false && race = 15 && area <100 && area != 10 && ( area > 2 || loops>0 )  )
 scrUnlockBSkin(15,"FOR COMPLETING A MAIN AREA# AFTER THE SEWERS#WITHOUT FIRING AS ATOM",0);
 
 if ( firedthislevel=false && race = 21 && loops>0 )
@@ -643,6 +658,17 @@ scrUnlockCSkin(21,"FOR COMPLETING A MAIN AREA ON#USING ONLY THE BEAM",0);
 
 if ( firedthislevel=false && race = 24 && area < 100 && area != 10 && ( area > 2 || loops > 0 )  )
 scrUnlockCSkin(24,"FOR COMPLETING A MAIN AREA# AFTER THE SEWERS#WITHOUT FIRING AS ELEMENTOR",0);
+
+if (area!=100 && area !=104)
+{
+	firedthislevel=false;
+	movethislevel=false;
+}
+else
+{
+	firedthislevel=true;
+	movethislevel=true;
+}
 
 if (yungCuzCskin > 2)
 {

@@ -30,7 +30,7 @@ if instance_exists(Player)
 				if wep != 0
 				{
 					snd_play_2d(wep_swap[wep])
-					reload = max(reload,wep_load[wep]);//Add reload time
+					//reload = max(reload,wep_load[wep]);//Add reload time
 				}
 				else
 				{
@@ -47,6 +47,7 @@ if instance_exists(Player)
 				scrWeaponHold();
 			}
 		}
+		instance_destroy();
 	}
 	else
 	image_index=0;

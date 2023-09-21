@@ -443,6 +443,8 @@ camY = 0;
 camTargetX = 0;
 camTargetY = 0;
 camLerp = 0;
+
+firstEntry = true;
 //JOYPAD STUFF
 /*
 pick = 0

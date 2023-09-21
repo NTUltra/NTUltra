@@ -1,0 +1,85 @@
+///scrAlienIntestines();
+// /@description
+///@param
+function scrAlienIntestines(){
+	if alienIntestines > 2
+	{
+		alienDir *= -1;
+		var ys = 0;
+		snd_play(choose(sndWater1,sndWater2) ,0.1);
+		if alienIntestines > 30
+			snd_play_fire(sndRoll);
+		if alienIntestines > 120
+		{
+			ys += 0.1;
+			if alienIntestines > 240
+				snd_play(sndBloodCannon);
+			else
+				snd_play(sndBloodHammer,0.1);
+		}
+		else if alienIntestines > 60
+			snd_play_fire(sndBloodLauncher);
+		var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+		BackCont.shake += alienIntestines*0.2;
+		var i = 0;
+		repeat(lerp(1,12,min(1,alienIntestines / 200)))
+		{
+			with instance_create(x,y,Tentacle)
+			{
+				image_yscale += ys;
+				image_angle = aimDirection+(random(30)-15)*other.accuracy
+				creator=other.id;
+				team = other.team
+				ammo = lerp(4,25,min(1,other.alienIntestines/200)) + i
+				event_perform(ev_alarm,0)
+				visible = 0
+				with instance_create(x,y,LightningSpawn)
+				{
+					sprite_index=sprTentacleSpawn
+					image_angle = other.image_angle
+					direction = image_angle;
+					speed = 1;
+				}
+				with instance_create(x,y,FishBoost)
+				{
+					motion_add( aimDirection+random(60)-30,2+random(4) );
+				}
+			}
+			i++;
+		}
+		i = 0;
+		var am = lerp(0,24,min(1,alienIntestines / 300))
+		if am > 0
+		{
+			var ang = aimDirection + 180;
+			var angStep = 360/am;
+			repeat(am)
+			{
+				with instance_create(x,y,Tentacle)
+				{
+					image_yscale += ys;
+					image_angle = ang;
+					creator=other.id;
+					team = other.team
+					ammo = lerp(3,22,min(1,other.alienIntestines/250)) + i
+					event_perform(ev_alarm,0)
+					visible = 0
+					with instance_create(x,y,LightningSpawn)
+					{
+						sprite_index=sprTentacleSpawn
+						image_angle = other.image_angle
+						direction = image_angle;
+						speed = 1;
+					}
+					with instance_create(x,y,FishBoost)
+					{
+						motion_add(ang+random(60)-30,2+random(4) );
+					}
+				}
+				ang += angStep;
+				i++;
+			}
+		}
+		alienIntestines = 0;
+	}
+}

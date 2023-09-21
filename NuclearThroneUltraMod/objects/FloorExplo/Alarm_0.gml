@@ -1,4 +1,3 @@
-scrActivateNear();
 var ground = instance_place(x,y,Floor);
 if ground != noone && ground.id > id
 {

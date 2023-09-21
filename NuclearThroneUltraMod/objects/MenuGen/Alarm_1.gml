@@ -32,8 +32,9 @@ instance_destroy()
 with ChestOpen
 instance_destroy()
 
-with Vlambeer
-{
-mode = 1
-alarm[0] = 30
-}
+if instance_exists(Vlambeer)
+	with Vlambeer
+	{
+		mode = 1
+		alarm[0] = 30
+	}

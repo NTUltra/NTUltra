@@ -1,3 +1,4 @@
+alarm[0] = 1;
 x = xstart+lengthdir_x(dist*image_xscale,angle)
 y = ystart+lengthdir_y(dist*image_xscale,angle)
 //angle += turnspeed

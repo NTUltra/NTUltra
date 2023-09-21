@@ -49,6 +49,7 @@ enum NETDATA {
 	CONFIRMRACE,
 	STARTWEEKLY,
 	STARTDAILY,
+	CANIPARTICIPATE,
 }
 killScroll = 0;
 killScrollAdd = 0.01;

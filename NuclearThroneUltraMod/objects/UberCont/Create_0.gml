@@ -3,8 +3,8 @@ version = 000//23 is final probably
 encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
-updateVersion = "PR 30.02";
-subUpdateVersion = " BETA 3";
+updateVersion = "PR 30.02"//"PR 30.02";
+subUpdateVersion = " BETA 4";
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
 /*
@@ -149,6 +149,8 @@ levelIncrease = 0;
 savedSeed = 0;
 canSave = false;
 canMultiCrown = false;
+canPickFrogCrown = true;
+hasTakenCrownOfLife = false;
 encrypted_run_data = {}
 
 //Aim overwrite

@@ -2,7 +2,20 @@
 if instance_exists(GenCont) || instance_exists(StartDaily)
 	exit;
 if ultra_got[43] && altUltra && hunterEye < hunterEyeMax
+{
 	hunterEye += 1.5+(1.5*skill_got[5]);
+	if hunterEye >= hunterEyeMax
+	{
+		snd_play(choose(sndSpark1,sndSpark2));
+		with instance_create(x,y,HunterSniperEyeReady) {
+			if other.bskin == 1
+				sprite_index = sprHunterSniperEyeReadyB
+			else if other.bskin == 2
+				sprite_index = sprHunterSniperEyeReadyC
+			creator = other.id;	
+		}
+	}
+}
 if ultra_got[75] && speed < 1
 	alarm[3] = max(alarm[3],2);
 if scrIsGamemode(29) || cheatyinfiniteammo || freeAmmoRound > 0//Infinite ammo
@@ -165,7 +178,10 @@ if !instance_exists(LevCont) and visible = 1
 	{
 		//rolling
 		speed = 6.3*max(1,(skill_got[2]*1.3))//the rolling speed code is far below
-		angle += 50*right*max(1,(skill_got[2]*1.3))
+		if UberCont.normalGameSpeed == 60
+			angle += 25*right*max(1,(skill_got[2]*1.3))
+		else
+			angle += 50*right*max(1,(skill_got[2]*1.3))
 
 		if speed = 0
 		{if sprite_index != spr_hurt

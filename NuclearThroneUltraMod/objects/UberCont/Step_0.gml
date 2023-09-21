@@ -176,7 +176,7 @@ if instance_exists(KeyCont) && !instance_exists(StartDaily) && (keyboard_check_p
 			steam_shutdown();
 			game_end()
 		}
-		else if OptionSelect.selected = 0 and CreditsSelect.selected = 0 and StatsSelect.selected = 0 and OptionSelect2.selected = 0 and UpdateSelect.selected = 0
+		else if OptionSelect.selected = 0 and CreditsSelect.selected = 0 and StatsSelect.selected = 0 and OptionSelect2.selected = 0// and UpdateSelect.selected = 0
 		{
 			steam_shutdown();
 			game_end()

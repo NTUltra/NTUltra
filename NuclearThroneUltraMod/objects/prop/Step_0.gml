@@ -2,14 +2,30 @@
 var overlap = instance_place(x,y,chestprop);
 if overlap != noone
 {
-	speed += 0.8;
-	direction += 1;
+	if id < overlap.id
+	{
+		if !place_meeting(x+2,y,Wall)
+			x+=2;
+		with overlap
+		{
+			if !place_meeting(x-2,y,Wall)
+				x-=2;
+		}
+	}
 }
 var overlap = instance_place(x,y,prop);
 if overlap != noone
 {
-	speed += 0.8;
-	direction += 1;
+	if id < overlap.id
+	{
+		if !place_meeting(x,y+2,Wall)
+			y+=2;
+		with overlap
+		{
+			if !place_meeting(x,y-2,Wall)
+				y-=2;
+		}
+	}
 }
 var overlap = instance_place(x,y,enemy);
 if overlap != noone && !overlap.ignoreOverlap

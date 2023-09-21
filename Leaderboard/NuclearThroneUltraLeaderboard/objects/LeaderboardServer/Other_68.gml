@@ -29,38 +29,43 @@ if (type == network_type_data) {
 	var isWeekly = false;
 	var getScore = true;
 	var getWeekly = false;
+	show_debug_message("Data: " + string(data));
 	switch(data)
 	{
+		case NETDATA.CANIPARTICIPATE:
+			show_debug_message("CAN PARTICIPATE?");
+			var socket = buffer_read(buffer, buffer_u16);
+			var userId = buffer_read(buffer, buffer_u64);
+			var canParticipate = scrGetExistingScore(dailyScoreSaveFileString,userId);
+			var sendBuffer = buffer_create(2,buffer_fixed,1);
+			buffer_write(sendBuffer,buffer_u8,NETDATA.CANIPARTICIPATE);
+			buffer_write(sendBuffer,buffer_bool,canParticipate);
+			network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
+		break;
 		case NETDATA.STARTDAILY:
 			show_debug_message("Daily start");
 			var socket = buffer_read(buffer, buffer_u16);
-			var clientDay = buffer_read(buffer, buffer_string);
+			var userId = buffer_read(buffer, buffer_u64);
+			var isScoreRun = buffer_read(buffer,buffer_bool);
+			if (isScoreRun)
+			{
+				//REGISTER A MOCK SCORE
+				ini_open(dailyScoreSaveFileString);
+				var i = 0;
+				while(ini_key_exists("scorelb",i))
+					i ++;
+				ini_write_string("scorelb",i,
+					"x0 "+string(userId)+"   1 1 0 1 2 0 44 0 0 [1] 0 255  "
+				);
+				ini_close();
+			}
 			//Get correct seed and day based on user time
 			var sendBuffer = buffer_create(5,buffer_grow,1);
 			buffer_write(sendBuffer,buffer_u8,NETDATA.STARTDAILY);
-			var seed = scrGetSeedOfDay(clientDay);
+			var seed = scrGetSeedOfDay(day);
 			buffer_write(sendBuffer,buffer_u16,seed);
-			var dailyDay = 0;
-			//Find file with the clientDay then get the number of that file
-			var existingScoreFile = "";
-			existingScoreFile = file_find_first("*_ntultradailyscore" + clientDay + ".sav",0);
-			if (existingScoreFile != "")
-			{
-				dailyDay = real(
-					string_copy
-					(
-						existingScoreFile,
-						3,
-						string_last_pos("_ntultradailyscore",
-						existingScoreFile)-2
-					)
-				);
-			} else
-			{
-				dailyDay = totalDailies;
-				show_debug_message("Newest score");
-			}
-			file_find_close();
+			var dailyDay = scrGetDailyNumber();
+			fileName = file_find_first("w"+string(dailyDay) + "_ntultraweekly*", 0);
 			buffer_write(sendBuffer,buffer_u16,dailyDay);
 			network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
 			buffer_delete(sendBuffer);
@@ -208,10 +213,13 @@ if (type == network_type_data) {
 					while(ini_key_exists(stringChecker,i))
 					{
 						var newEntry = ini_read_string(stringChecker,i,"");
+						var firstChar = string_char_at(newEntry,0);
 						//First entry must be kills
 						var killsString = string_copy(newEntry,1,string_pos(" ",newEntry));
 						var uuid = real(string_split(newEntry," ")[1]);
-						var kills = real(killsString);
+						var kills = 0;
+						if firstChar != "x"
+							kills = real(killsString);
 						var replaceScore = false;
 						if uuid == newScore[1]
 						{
@@ -240,7 +248,12 @@ if (type == network_type_data) {
 							}
 							else
 							{
-								canAddToList = false;
+								if firstChar == "x" {
+									replaceScore = true;
+								} else
+								{
+									canAddToList = false;
+								}
 							}
 						}
 						if (!replaceScore)
@@ -337,8 +350,10 @@ if (type == network_type_data) {
 					
 					var nextScoreArray = string_split(nextScore," ",false,2);
 					show_debug_message(string(nextScoreArray));
-					readableLeaderboard += nextScoreArray[0] + " " + nextScoreArray[2];
-					show_debug_message(readableLeaderboard);
+					var firstChar = string_char_at(nextScore,0);
+					if firstChar != "x" {
+						readableLeaderboard += nextScoreArray[0] + " " + nextScoreArray[2];
+					}
 				}
 			ini_close();
 			ds_list_destroy(scoreSorter);
@@ -394,37 +409,18 @@ if (type == network_type_data) {
 			buffer_write(sendBuffer,buffer_u8,NETDATA.LEADERBOARD); 
 			var stringChecker = "scorelb";
 			var fileName;
-			var noFile = false;
+			noFile = false;
 			if getWeekly
 			{
-				fileName = file_find_first("w"+string(wantDailyNumber) + "_ntultraweekly*", 0);
 				stringChecker = "weeklylb";
-				if fileName == ""
-				{
-					noFile = true;
-					fileName = weeklySaveFileString;
-				}
+				fileName = scrGetWeeklyFile(wantDailyNumber);
 			}
 			else if getScore {
-				fileName = file_find_first("ds"+string(wantDailyNumber) + "_ntultradailyscore*", 0);
-				if fileName == ""
-				{
-					noFile = true;
-					fileName = file_find_first(string(wantDailyNumber) + "_ntultradailyrace*", 0);
-					fileName = string_replace(fileName, "_ntultradailyrace", "_ntultradailyscore");
-					//fileName = dailyScoreSaveFileString;
-				}
+				fileName = scrGetDailyFile(wantDailyNumber)
 			}
 			else {
-				fileName = file_find_first(string(wantDailyNumber) + "_ntultradailyrace*", 0);
 				stringChecker = "racelb";
-				if fileName == ""
-				{
-					noFile = true;
-					fileName = file_find_first("ds"+string(wantDailyNumber) + "_ntultradailyscore*", 0);
-					fileName = string_replace(fileName, "_ntultradailyscore", "_ntultradailyrace");
-					//fileName = dailyRaceSaveFileString;
-				}
+				fileName = scrGetDailyRaceFile(wantDailyNumber);
 			}
 			var scoreLeaderboard = "";
 			if (file_exists(fileName) && !noFile)
@@ -435,10 +431,11 @@ if (type == network_type_data) {
 				while(ini_key_exists(stringChecker,i) && j < 10)
 				{
 					var nextScore = ini_read_string(stringChecker,i,"")+"|";
-					var nextScoreArray = string_split(nextScore," ",false,2);
-					show_debug_message(string(nextScoreArray));
-					scoreLeaderboard += nextScoreArray[0] + " " + nextScoreArray[2];
-					show_debug_message(scoreLeaderboard);
+					var firstChar = string_char_at(nextScore,0);
+					if firstChar != "x" {
+						var nextScoreArray = string_split(nextScore," ",false,2);
+						scoreLeaderboard += nextScoreArray[0] + " " + nextScoreArray[2];
+					}
 					i++;
 					j++;
 				}

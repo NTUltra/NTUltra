@@ -26,17 +26,18 @@ depth = -6;
 repeat(60)//(200)
 {
 with SpiralCont
-event_perform(ev_step,0)
+event_perform(ev_alarm,0)
 
 with Spiral
-event_perform(ev_step,0)
+event_perform(ev_alarm,0)
 
 with SpiralDebris
-event_perform(ev_step,0)
+event_perform(ev_alarm,0)
 
 with SpiralStar
-event_perform(ev_step,0)
+event_perform(ev_alarm,0)
 }
 
 active = 1
 
+alarm[0] = 1;

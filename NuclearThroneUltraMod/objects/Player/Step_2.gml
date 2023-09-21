@@ -378,6 +378,8 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 					//alarm[0] = 0; Can't heavy heart this? Let's try it this out first it seems fun
 					sprite_index = wep_sprt[wep]
 					ammo = 0
+					if isPermanent
+						persistent = true;
 				}
 			}
 
@@ -793,7 +795,10 @@ audio_listener_position(x, y, depth*10);
 exception = false;
 if rollIframe > 0
 {
-	rollIframe --;
+	if UberCont.normalGameSpeed == 60
+		rollIframe -= 0.5;
+	else
+		rollIframe --;
 	mask_index = mskPlayer;
 	if place_meeting(x,y,WallHitMe)
 	{

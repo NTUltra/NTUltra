@@ -4,7 +4,7 @@ image_speed=0.4;
 
 mytext="";
 
-alarm[0]=150;
+alarm[0]=180;
 drawtext=false;
 depth = -9999999;
 yy=0;

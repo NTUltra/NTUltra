@@ -9,7 +9,7 @@ function scrSpawnBoss(whatBoss){
 	var xx = Player.x + lengthdir_x(dis,dir);
 	var yy = Player.y + lengthdir_y(dis,dir);
 	var n = instance_nearest(xx,yy,Floor);
-	while (point_distance(Player.x,Player.y,n.x,n.y) < 128 && am < 2) {
+	while (point_distance(Player.x,Player.y,n.x,n.y) < 160 && am < 2) {
 		am += 0.1
 		var dis = point_distance(Player.x,Player.y,far.x,far.y)*am;
 		var xx = Player.x + lengthdir_x(dis,dir);

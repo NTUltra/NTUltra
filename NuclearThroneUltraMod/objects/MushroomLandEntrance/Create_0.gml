@@ -5,7 +5,7 @@ spr_idle = sprMushroomStatue;
 spr_hurt = sprMushroomStatueHurt;
 spr_dead = sprMushroomStatueDead;
 
-name = "SACRIFICE WEAPON MODS"
+name = "SACRIFICE FIRST WEAPON MOD"
 
 event_inherited()
 canMoveOver = true;

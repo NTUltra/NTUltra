@@ -23,6 +23,10 @@ if hover
 		draw_set_colour(c_white);
 		draw_text(xx,yy,name);
 	}
+	var timeLeft = scrDayTimeLeft();
+	draw_set_halign(fa_right);
+	draw_text_colour(xx-4, yy, timeLeft,c_gray,c_gray,c_gray,c_gray,1);
+	draw_set_halign(fa_left);
 }
 
 if selected = 1

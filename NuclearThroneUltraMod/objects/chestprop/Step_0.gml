@@ -27,9 +27,13 @@ if overlap != noone
 {
 	if id < overlap.id
 	{
-		var getmeout = point_direction(overlap.x,overlap.y,x,y);
-		motion_add(getmeout,mySize)
-		direction += 1;
+		if !place_meeting(x,y+2,Wall)
+			y+=2;
+		with overlap
+		{
+			if !place_meeting(x,y-2,Wall)
+				y-=2;
+		}
 	}
 }
 var overlap = instance_place(x,y,enemy);

@@ -227,7 +227,6 @@ else if instance_exists(PlayerSpawn)
 	crown = PlayerSpawn.crown;
 else
     crown = [1];
-debug("INIT ");
 currentCrowns = crown;
 //AREA STUFF
 area = 1

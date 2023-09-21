@@ -9,8 +9,8 @@ function scrDrawHelp(txt){
 	var s = string_height("A");
 	draw_set_halign(fa_left)
 	draw_set_valign(fa_top)
-	var xx = __view_get( e__VW.XView, 0 )+110;
-	var yy = __view_get( e__VW.YView, 0 )+22;
+	var xx = /*__view_get( e__VW.XView, 0 )+*/110;
+	var yy = /*__view_get( e__VW.YView, 0 )+*/22;
 	draw_set_colour(c_black);
 	if !instance_exists(LevCont)
 	draw_set_alpha(0.4);

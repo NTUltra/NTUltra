@@ -9,8 +9,8 @@ __background_set_colour( make_color_rgb(106,122,175) )
 //x=64;
 //y=96;
 //64,96 is the campfire
-
-
+if !instance_exists(UpdateChecker)
+	instance_create(x,y,UpdateChecker);
 repeat(4)//3
 {
 repeat(5)//4

@@ -35,6 +35,8 @@ function scrEndOfRun(){
 		globalMutationsChosen = 0;
 		canSave = false;
 		canMultiCrown = false;
+		canPickFrogCrown = true;
+		hasTakenCrownOfLife = false;
 		if !scrIsGamemode(38)
 			useSeed = false;
 		canSpawnInversionShards = false;

@@ -36,6 +36,9 @@ enum NETDATA {
 	CONFIRMRACE,
 	STARTWEEKLY,
 	STARTDAILY,
+	CANIPARTICIPATE,
 }
 draw_set_font(fntM);
 alarm[1] = 120;
+noFile = false;
+reserver = "+*&$)"

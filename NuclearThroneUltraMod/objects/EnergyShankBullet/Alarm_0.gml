@@ -29,7 +29,7 @@ with instance_create(x,y,EnergyShank)
 {
 direction=random(360)
 ang = direction
-dmg = 6
+dmg = 5
 longarms = 0
 if instance_exists(Player)
 longarms = (Player.skill_got[13]+Player.bettermelee)*3

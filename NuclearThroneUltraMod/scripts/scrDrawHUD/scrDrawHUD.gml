@@ -18,7 +18,7 @@ function scrDrawHUD() {
 	var ox = viewX;
 	var oy = viewY;
 	var vx = 0//GameRender.viewX;//camera_get_view_x(view_camera[0]);
-	var vy = 0//GameRender.viewY;//camera_get_view_y(view_camera[0]);
+	var vy = -1//GameRender.viewY;//camera_get_view_y(view_camera[0]);
 	
 	///POPUP TEXT
 	with PopupText
@@ -234,139 +234,139 @@ function scrDrawHUD() {
 			var xx =vx+__view_get( e__VW.WView, 0 )-12-16*dix;
 			var yy =vy+20;
 			var s = 18;
-			if dir == 0 && dataRef.altUltra
+			if dir == 0 && dataRef.altUltra && dataRef.race == 21
 			{
 				draw_sprite_ext(sprCashFlowHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 4 && dataRef.bskin == 2
+			else if dir == 4 && dataRef.bskin == 2 && dataRef.race == 1
 			{
 				draw_sprite_ext(sprFishCanGunHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 6 && dataRef.altUltra
+			else if dir == 6 && dataRef.altUltra && dataRef.race == 2
 			{
 				draw_sprite_ext(sprCrystalCursedUltraHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 9 && dataRef.altUltra
+			else if dir == 9 && dataRef.altUltra && dataRef.race == 3
 			{
 				draw_sprite_ext(sprEyesStrangeStyleHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 13 && dataRef.altUltra
+			else if dir == 13 && dataRef.altUltra && dataRef.race == 4
 			{
 				draw_sprite_ext(sprDeathStareHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 20 && dataRef.altUltra
+			else if dir == 20 && dataRef.altUltra && dataRef.race == 5
 			{
 				draw_sprite_ext(sprPlantSonicSpeedHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 27 && dataRef.altUltra
+			else if dir == 27 && dataRef.altUltra && dataRef.race == 7
 			{
 				draw_sprite_ext(sprSteroidsPunchSwapHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 29 && dataRef.spr_idle == sprMutant8DIdle
+			else if dir == 29 && (dataRef.spr_idle == sprMutant8DIdle || dataRef.altUltra)  && dataRef.race == 8
 			{
 				draw_sprite_ext(sprExclusiveTasteHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 33 && dataRef.altUltra
+			else if dir == 33 && dataRef.altUltra && dataRef.race == 9
 			{
 				draw_sprite_ext(sprPhoenixHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 35 && dataRef.altUltra
+			else if dir == 35 && dataRef.altUltra && dataRef.race == 9
 			{
 				draw_sprite_ext(sprReverseFocusHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 39 && dataRef.altUltra
+			else if dir == 39 && dataRef.altUltra && dataRef.race == 10
 			{
 				draw_sprite_ext(sprBigRebelHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 43 && dataRef.altUltra
+			else if dir == 43 && dataRef.altUltra && dataRef.race == 11
 			{
 				draw_sprite_ext(sprSniperEyeHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 47 && dataRef.altUltra
+			else if dir == 47 && dataRef.altUltra && dataRef.race == 12
 			{
 				draw_sprite_ext(sprGreenTeamHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 50 && dataRef.altUltra
+			else if dir == 50 && dataRef.altUltra && dataRef.race == 13
 			{
 				draw_sprite_ext(sprSASHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 51 && dataRef.altUltra
+			else if dir == 51 && dataRef.altUltra && dataRef.race == 13
 			{
 				draw_sprite_ext(sprHypnotizeHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 55 && dataRef.altUltra
+			else if dir == 55 && dataRef.altUltra && dataRef.race == 14
 			{
 				draw_sprite_ext(sprInconsistentIncompatabilityHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 59 && dataRef.altUltra
+			else if dir == 59 && dataRef.altUltra && dataRef.race == 15
 			{
 				draw_sprite_ext(sprPathOfDestructionHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 61 && dataRef.altUltra
+			else if dir == 61 && dataRef.altUltra && dataRef.race == 16
 			{
 				draw_sprite_ext(sprCaptainOfTheKrakenHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 62 && dataRef.altUltra
+			else if dir == 62 && dataRef.altUltra && dataRef.race == 16
 			{
 				draw_sprite_ext(sprLivingArmourHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 66 && dataRef.altUltra
+			else if dir == 66 && dataRef.altUltra && dataRef.race == 17
 			{
 				draw_sprite_ext(sprQuickSwapperHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 68 && dataRef.altUltra
+			else if dir == 68 && dataRef.altUltra && dataRef.race == 17
 			{
 				draw_sprite_ext(sprEnginuityHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 72 && dataRef.altUltra
+			else if dir == 72 && dataRef.altUltra && dataRef.race == 18
 			{
 				draw_sprite_ext(sprMirrorHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 74 && dataRef.altUltra
+			else if dir == 74 && dataRef.altUltra && dataRef.race == 19
 			{
 				draw_sprite_ext(sprReminisceHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 77 && dataRef.altUltra
+			else if dir == 77 && dataRef.altUltra && dataRef.race == 20
 			{
 				draw_sprite_ext(sprHoardingThiefHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 96 && dataRef.altUltra
+			else if dir == 96 && dataRef.altUltra && dataRef.race == 24
 			{
 				draw_sprite_ext(sprAirLordHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 97 && dataRef.altUltra
+			else if dir == 97 && dataRef.altUltra && dataRef.race == 25
 			{
 				draw_sprite_ext(sprBeeKeeperHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 104 && dataRef.altUltra
+			else if dir == 104 && dataRef.altUltra && dataRef.race == 26
 			{
 				draw_sprite_ext(sprGrumpyLectureHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 106 && dataRef.bskin == 1
+			else if dir == 106 && dataRef.bskin == 1 && dataRef.race == 27
 			{
 				draw_sprite_ext(sprHothandsHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 106 && dataRef.bskin == 2
+			else if dir == 106 && dataRef.bskin == 2 && dataRef.race == 27
 			{
 				draw_sprite_ext(sprExplosiveHandsHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 76 && dataRef.ultimategamble == true
+			else if dir == 76 && dataRef.ultimategamble == true && dataRef.race == 19
 			{
 				draw_sprite_ext(sprUltimateGambleIconHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 23 && dataRef.altUltra
+			else if dir == 23 && dataRef.altUltra && dataRef.race == 6
 			{
 				draw_sprite_ext(sprYVBlasphemyHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 87 && dataRef.altUltra
+			else if dir == 87 && dataRef.altUltra && dataRef.race == 22
 			{
 				draw_sprite_ext(sprFreakRogueHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 92 && dataRef.altUltra
+			else if dir == 92 && dataRef.altUltra && dataRef.race == 23
 			{
 				draw_sprite_ext(sprSpikedFrogHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-		    else if !(dir=79 && dataRef.race=21){//Horror don't draw skeleton's ultra
+		    else {//if !(dir=79 && dataRef.race=21){//Horror don't draw skeleton's ultra
 				draw_sprite_ext(sprUltraIconHUD,dir,xx,yy,1,1,0,c_white,1);
 			}
 			if (mouse_x > xx && mouse_x < xx + s && mouse_y > yy && mouse_y < yy + s)
@@ -1109,8 +1109,7 @@ function scrDrawHUD() {
 							var txa = tx + sw;
 							if curse > 0
 							{
-								var col = draw_set_color(make_colour_rgb(136,36,174));
-								draw_set_colour(col);
+								draw_set_color(make_colour_rgb(136,36,174));
 								var n = string_hash_to_newline(string(name));
 				
 								draw_text(xx+2,ny,n)
@@ -1754,22 +1753,7 @@ function scrDrawHUD() {
 		var t = undefined;
 		if !instance_exists(enemy)
 		{
-			if instance_exists(RavenFly)
-			{
-				t = RavenFly;
-			} else if instance_exists(InvertedRavenFly)
-			{
-				t = InvertedRavenFly;
-			} else if instance_exists(UltraRavenFly)
-			{
-				t = UltraRavenFly;
-			} else if instance_exists(LilHunterFly)
-			{
-				t = LilHunterFly;
-			} else if instance_exists(InvertedLilHunterFly)
-			{
-				t = InvertedLilHunterFly;
-			} else if instance_exists(becomenemy) && becomenemy.object_index != WantBoss
+			if instance_exists(becomenemy) && becomenemy.object_index != WantBoss
 			{
 				t = becomenemy;
 			} else if instance_exists(CanSpawnBoss)

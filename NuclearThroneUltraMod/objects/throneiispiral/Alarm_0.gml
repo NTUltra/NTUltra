@@ -1,10 +1,10 @@
-
+alarm[0] = 1;
 image_angle += 8+sin(image_angle/300)*1
 
 time += 1
 
-x = room_width/2+sin(image_angle/921)*sin(image_angle/500)*80
-y = room_height/2+cos(image_angle/583)*sin(image_angle/500)*50
+x = room_width*0.5+sin(image_angle/921)*sin(image_angle/500)*80
+y = room_height*0.5+cos(image_angle/583)*sin(image_angle/500)*50
 
 if random(4) < 1
 {

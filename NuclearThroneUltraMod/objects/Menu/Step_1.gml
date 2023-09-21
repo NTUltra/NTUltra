@@ -6,6 +6,14 @@ if mode = 0
 if KeyCont.key_fire[p] = 1 && !instance_exists(Vlambeer)
 {
 mode = 1
+	if firstEntry
+	{
+		with UpdateChecker
+		{
+			event_user(0);	
+		}
+	}
+	firstEntry = false;
 with MusCont
 {
 	if alarm[0] > 0
@@ -36,7 +44,7 @@ instance_create(x,y,DailyScore);
 instance_create(x,y,DailyRace);
 instance_create(x,y,Weekly);
 instance_create(x,y,ViewLeaderboard);
-instance_create(x,y,UpdateSelect)
+//instance_create(x,y,UpdateSelect)
 instance_create(x,y,Cheatcode);
 //If savefile found
 var fileString ="ntultrarun1.sav";
@@ -73,8 +81,8 @@ if KeyCont.key_spec[p] = 1
 		instance_destroy()
 		with OptionSelect2
 		instance_destroy()
-		with UpdateSelect
-		instance_destroy()
+		//with UpdateSelect
+		//instance_destroy()
 		with GameModeUpDown
 		instance_destroy();
 		with GameModeReset
@@ -101,9 +109,10 @@ if KeyCont.key_spec[p] = 1
 			with option2
 				instance_destroy()
 		}
+		/*
 		with UpdateSelect {
 			alarm[0] = 1;
-		}
+		}*/
 		with CreditsSelect {
 			alarm[0] = 1;
 		}

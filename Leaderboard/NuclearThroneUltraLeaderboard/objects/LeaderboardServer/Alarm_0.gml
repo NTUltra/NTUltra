@@ -33,19 +33,11 @@ if day != yesterday
 	if week != lastweek
 	{
 		show_debug_message("WEEK");
+		//repeat(52)
+		//{
 		var weekchecker = date_inc_week(date_current_datetime(), -1);
 		var year = min(date_get_year(date_current_datetime()), date_get_year(weekchecker));//In case week crosses the year
-		/*
-		var seedweek = string(week) + string(year);
-		show_debug_message(week);
-		show_debug_message(seedweek);
-		var byteSeed = 0;
-		var byteSize = string_byte_length(seedweek);
-		for (var i = 0; i < byteSize; i++) {
-			byteSeed = (byteSeed + string_byte_at(seedweek, i)) << 1;
-		}
-		weekSeed = byteSeed;*/
-		weekSeed = week*2 + year;
+		weekSeed = week*4 + year;
 		random_set_seed(weekSeed);
 		weekGamemode = [irandom_range(1,41),0,0];
 		//Manual gamemode injection here
@@ -55,11 +47,7 @@ if day != yesterday
 		switch (weekGamemode[0])
 		{
 			case 1://One weapon only
-				weeklyOption[0] = irandom_range(1,maxwep);
-				while (weeklyOption[0] == 69 || weeklyOption[0] == 298 || weeklyOption[0] == 1)
-				{
-					weeklyOption[0] = irandom_range(1,maxwep);
-				}
+				weekOption[0] = scrRollWeapons();
 			break;
 			case 3://NO HUD
 				weekGamemode = [3,15,18];//NO HUD + NO MUTATIONS + NO ELITE POPO
@@ -67,8 +55,20 @@ if day != yesterday
 			case 4://WAll is lava
 				weekGamemode = [6, 40, 0]//CLAUSTROPHOBIA +1 VS 1
 			break;
+			case 7://ATOM TELEPORT ONLY + One eapon only + random areas
+				weekGamemode = [7, 1, 10];
+				weekOption[0] = scrRollWeapons();
+			break;
 			case 12://ZOMBIES
 				weekGamemode = [12, 39, 0];
+			break;
+			case 13: //ROCKET GLOVE + spike traps + no mutations
+				weekGamemode = [13, 16, 15];
+			break;
+			case 14: //Fish's partner + disc room
+				weekGamemode = [14 , 19, 0]
+				weeklyOption[0] = irandom_range(1,40);//Disc amount
+				weeklyOption[1] = irandom_range(1,5);//Disc damage
 			break;
 			case 15://NO mutations
 				weekGamemode = [19,16,4]; //DISC ROOM, SPIKE TRAPS, WALL IS LAVA
@@ -122,6 +122,9 @@ if day != yesterday
 				weeklyOption[1] = irandom_range(1,20);//Disc damage
 			break;
 		}
+		//week ++;
+		//show_debug_message(string(weekGamemode));
+		//}
 		var fileName = file_find_first("w*", 0);
 		totalWeeklies = defaultTotalWeeklies;
 		defaultTotalWeeklies = 0;

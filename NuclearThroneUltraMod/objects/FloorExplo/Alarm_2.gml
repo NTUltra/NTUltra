@@ -1,5 +1,11 @@
 /// @description Create the walls around it
-scrActivateNear();
+var cx = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])*0.5;
+var cy = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])*0.5;
+if point_distance(cx,cy,x,y) > 400
+{
+	alarm[2] = 2;
+	exit;
+}
 var wall = Wall;
 if instance_exists(ThroneIISpiral)
 {
@@ -99,3 +105,4 @@ if wall != WallHitMe
 	if !place_meeting(x+32,y+32,Floor) && !place_meeting(x+32,y+32,wall)
 		instance_create(x+32,y+32,Top)
 }
+event_perform(ev_alarm,0);

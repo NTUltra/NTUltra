@@ -16,7 +16,8 @@ else area = BackCont.area
 if area==104
 area=103;
 friction = 1;
-alarm[0]=1;
+alarm[0] = 1;
+alarm[1] = 2;
 if instance_exists(SurvivalWave)//scrIsGamemode(25) && !instance_exists(Vlambeer))
 {
 	topspr=sprWall116Top;
@@ -331,4 +332,3 @@ w = 24
 h = 24
 
 //event_perform(ev_alarm,1);
-alarm[1] = 1;

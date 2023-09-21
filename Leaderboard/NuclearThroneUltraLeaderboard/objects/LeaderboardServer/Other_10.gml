@@ -4,7 +4,9 @@ var scoreLeaderboard = "";
 var i = 0;
 while(ini_key_exists("scorelb",i))
 {
-	scoreLeaderboard += ini_read_string("scorelb",i,"")+"|";
+	var run = ini_read_string("scorelb",i,"")+"|";
+	if string_char_at(run,0) != "x"
+		scoreLeaderboard += run;
 	i++;
 }
 ini_close();

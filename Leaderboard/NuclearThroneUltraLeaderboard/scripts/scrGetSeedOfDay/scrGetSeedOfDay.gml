@@ -7,5 +7,5 @@ function scrGetSeedOfDay(day){
 	for (var i = 0; i < byteSize; i++) {
 		byteSeed = (byteSeed + string_byte_at(day, i)) << 1;
 	}
-	return byteSeed;
+	return byteSeed*2;
 }

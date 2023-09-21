@@ -1,6 +1,8 @@
 /// @description Object Optimizer
 var delay = 25;
 alarm[4] = delay;
+if instance_exists(GenCont)
+	exit;
 var cx = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])*0.5;
 var cy = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])*0.5;
 scrActivateAllOutOfRange();
@@ -14,51 +16,73 @@ instance_deactivate_region()
 */
 with EnemyDeactivater
 {
-	alarm[0] += 1;
-	instance_destroy();	
+	instance_destroy();
 }
 with enemy {
-	if point_distance(cx,cy,x,y) > 450
+	var dis = point_distance(cx,cy,x,y)
+	if dis > 330
 	{
-		speed = 0;
+		direction = point_direction(x,y,cx,cy);
 		instance_deactivate_object(id);
-		with instance_create(x,y,EnemyDeactivater)
+		instance_create(x,y,EnemyDeactivater)
+		if dis > 440 && !collision_point(x,y,Floor,false,false)
 		{
-			myEnemy = other.id;	
+			var n = instance_nearest(x,y,Floor)
+			if n != noone
+			{
+				x = n.x + 8;
+				y = n.y + 8;
+			}
 		}
 	}
 }
-with Top {
-	if point_distance(cx,cy,x,y) > 540
-	{
-		instance_deactivate_object(id);
-	}
-}
-with TopSmall {
-	if point_distance(cx,cy,x,y) > 540
-	{
-		instance_deactivate_object(id);
-	}
-}
-
-with Wall {
-	if point_distance(cx,cy,x,y) > 540
-	{
-		instance_deactivate_object(id);
-	}
-}
-with projectile
+if scrIsCrown(25)
 {
-	if point_distance(cx,cy,x,y) > 540
+	with Top
+	{
+		instance_destroy();	
+	}
+	with TopSmall {
 		instance_destroy();
+	}
+	with Wall {
+		instance_destroy();
+	}
+}
+else
+{
+	with Top {
+		if point_distance(cx,cy,x,y) > 440
+		{
+			instance_deactivate_object(id);
+		}
+	}
+	with TopSmall {
+		if point_distance(cx,cy,x,y) > 440
+		{
+			instance_deactivate_object(id);
+		}
+	}
+
+	with Wall {
+		if point_distance(cx,cy,x,y) > 440
+		{
+			instance_deactivate_object(id);
+		}
+	}
+	with projectile
+	{
+		if point_distance(cx,cy,x,y) > 440
+			instance_destroy();
+	}
 }
 with Floor {
-	if point_distance(cx,cy,x,y) > 540//510
+	if point_distance(cx,cy,x,y) > 440//510
 	{
 		instance_deactivate_object(id);
 	}
 }
 instance_activate_object(HotDrake);
 instance_activate_object(InvertedHotDrake);
-instance_activate_object(NuclearThrone1);
-instance_activate_object(NuclearThrone1Side);
+//instance_activate_object(NuclearThrone1);
+//instance_activate_object(NuclearThrone1Side);
