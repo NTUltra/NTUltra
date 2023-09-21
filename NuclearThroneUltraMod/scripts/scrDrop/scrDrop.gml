@@ -40,12 +40,11 @@ function scrDrop(itemdrop, weapondrop) {
 			weapondrop *= 1.09
 		}
 		var lps = Player.loops;
-		if lps > 1 && !scrIsCrown(5)
+		if lps > 0 && !scrIsCrown(5)
 		{
-			lps --;
-			repeat (min(lps,4))
+			repeat(min(lps,4))
 			{
-				canHealth *= 0.98;
+				canHealth *= 0.95;//0.98
 			}
 		}
 		if lps > 2

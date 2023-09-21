@@ -3995,7 +3995,7 @@ function scrWeapons() {
 	wep_load[362] = 24
 	wep_cost[362] = 1
 	wep_sprt[362] = sprSplinterBomb
-	wep_area[362] = 7
+	wep_area[362] = 6
 	wep_text[362] = "scrappy"
 	wep_swap[362] = sndSwapBow
 	wep_rad[362] = 0;

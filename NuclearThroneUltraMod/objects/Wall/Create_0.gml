@@ -17,7 +17,7 @@ if area==104
 area=103;
 friction = 1;
 alarm[0] = 1;
-alarm[1] = 2;
+alarm[1] = 1;
 if instance_exists(SurvivalWave)//scrIsGamemode(25) && !instance_exists(Vlambeer))
 {
 	topspr=sprWall116Top;

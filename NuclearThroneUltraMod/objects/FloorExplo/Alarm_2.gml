@@ -3,7 +3,7 @@ var cx = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0
 var cy = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])*0.5;
 if point_distance(cx,cy,x,y) > 400
 {
-	alarm[2] = 2;
+	alarm[2] = 1;
 	exit;
 }
 var wall = Wall;

@@ -24,14 +24,21 @@ with enemy {
 	{
 		direction = point_direction(x,y,cx,cy);
 		instance_deactivate_object(id);
-		instance_create(x,y,EnemyDeactivater)
-		if dis > 440 && !collision_point(x,y,Floor,false,false)
+		with instance_create(x,y,EnemyDeactivater) {
+			if other.team != 2 && other.object_index != IDPDVan && other.object_index != IDPDVanVertical {
+				my_health = other.my_health;
+			}
+		}
+		if dis > 440 && (collision_point(x,y,Wall,false,false) || !place_meeting(x,y,Floor))
 		{
 			var n = instance_nearest(x,y,Floor)
 			if n != noone
 			{
-				x = n.x + 8;
-				y = n.y + 8;
+				var o = 16;
+				if n.object_index == FloorExplo
+					o = 8;
+				x = n.x + o;
+				y = n.y + o;
 			}
 		}
 	}

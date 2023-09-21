@@ -1,8 +1,7 @@
 /// @description Go to Mushroomland
 if other.wepmod1 != 0
 {
-	
-	if KeyCont.key_pick[other.p] = 1
+	if KeyCont.key_pick[other.p] = 1 && !instance_exists(Technomancer)
 	{
 		KeyCont.key_pick[Player.p] = 2;
 		mask_index = mskPickupThroughWall
