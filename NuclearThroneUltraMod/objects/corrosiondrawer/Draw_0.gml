@@ -1,5 +1,8 @@
 /// @description xxx
-imageIndex += 0.4;
+if UberCont.normalGameSpeed == 60
+	image_index += 0.2;
+else
+	imageIndex += 0.4;
 var i = imageIndex;
 draw_set_blend_mode(bm_add);
 draw_set_alpha(0.5);

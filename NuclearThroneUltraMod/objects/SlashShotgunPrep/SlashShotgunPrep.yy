@@ -14,7 +14,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Bursts",
-    "path": "folders/Objects/Player/Ability/Bursts.yy",
+    "path": "folders/Objects/Projectiles/Bursts.yy",
   },
   "parentObjectId": {
     "name": "projectile",

@@ -47,7 +47,7 @@ function scrSkills() {
 	}
 	skill_tips[1] = "thick skin"
 	skill_msnd[1] =  sndMutRhinoSkin
-	skill_bons[1] = "";
+	skill_bons[1] = "+1 MAX HP";
 
 	skill_name[2] = "EXTRA FEET"
 	skill_text[2] = "MORE SPEED,#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES#DROP RESOURCES#CAN'T BE DISPLACES BY ENEMIES"//"MORE SPEED,#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES#DROP A WEAPON/ITEM & ALWAYS DROP RADS"
@@ -187,7 +187,7 @@ function scrSkills() {
 	skill_text[10] = "HIGHER AMMO MAX"
 	skill_tips[10] = "back muscle works like mini rabbit paw"
 	skill_msnd[10] =  sndMutBackMuscle
-	skill_bons[10] = "+10% AMMMO MAX";
+	skill_bons[10] = "+10% AMMO MAX";
 
 	skill_name[11] = "SCARIER FACE"
 	if isHand

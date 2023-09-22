@@ -46,10 +46,20 @@ else if !scrIsGamemode(26) && alarm[3] > 0
 	"[LMB] CONTINUE");
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
-	draw_text(xx,yy,string_hash_to_newline("GAMEMODE:#"+
-	UberCont.gamemode[UberCont.opt_gamemode[0]] + "#" +
-	UberCont.gamemode[UberCont.opt_gamemode[1]] + "#" +
-	UberCont.gamemode[UberCont.opt_gamemode[2]] + "#"
+	var gms = "";
+	if UberCont.opt_gamemode[0] != 0
+	{
+		gms += 	UberCont.gamemode[UberCont.opt_gamemode[0]] + "#";
+	}
+	if UberCont.opt_gamemode[1] != 0
+	{
+		gms += 	UberCont.gamemode[UberCont.opt_gamemode[1]] + "#";
+	}
+	if UberCont.opt_gamemode[2] != 0
+	{
+		gms += 	UberCont.gamemode[UberCont.opt_gamemode[2]] + "#";
+	}
+	draw_text(xx,yy,string_hash_to_newline("GAMEMODE:#"+ gms
 	));
 	if scrIsGamemode(19)
 	{

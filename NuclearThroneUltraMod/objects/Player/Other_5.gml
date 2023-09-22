@@ -1,6 +1,4 @@
 /// @description Black sword? and UNLOCKABLES
-with UberCont
-	canPickFrogCrown = false;
 consecutiveGoodBloodGambles = 0;
 if swapChar
 	exit;

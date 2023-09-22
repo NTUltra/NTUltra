@@ -37,20 +37,6 @@ viewingWeeklyGamemode = 0;
 scrWeapons();
 scrCrowns();
 scrUltras();
-//Data types
-enum NETDATA {
-	CLIENT_ID,
-	SCORE,
-	RACE,
-	WEEKLY,
-	LEADERBOARD,
-	LEADERBOARDRACE,
-	LEADERBOARDWEEKLY,
-	CONFIRMRACE,
-	STARTWEEKLY,
-	STARTDAILY,
-	CANIPARTICIPATE,
-}
 killScroll = 0;
 killScrollAdd = 0.01;
 alarm[2] = 20;

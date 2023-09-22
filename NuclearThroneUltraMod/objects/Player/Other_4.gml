@@ -136,6 +136,8 @@ if area=100
 	if crownvisits == -1
 		instance_create(0,0,PauseTimer);
 	crownvisits++;
+	with UberCont
+		canPickFrogCrown = false;
 	if !scrIsCrown(1) && array_contains(crown,prevCrown)
 	{
 		consecutiveCrownVisits ++;	

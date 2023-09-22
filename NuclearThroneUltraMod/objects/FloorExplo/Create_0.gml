@@ -15,6 +15,7 @@ if instance_exists(Player)
 	if !scrIsCrown(25) && !instance_exists(WallRemover)
 	{
 		event_perform(ev_alarm,2);
+		event_perform(ev_alarm,0);
 		//alarm[2] = 1;
 		//alarm[3] = 1;
 		//alarm[0] = 1;
@@ -24,6 +25,7 @@ else
 {
 	area = BackCont.area
 	event_perform(ev_alarm,2);
+	event_perform(ev_alarm,0);
 	//alarm[2] = 1;
 	//alarm[3] = 1;
 	//alarm[0] = 1;

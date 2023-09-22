@@ -1,5 +1,20 @@
 selected = 0
 
+//Data types
+enum NETDATA {
+	CLIENT_ID,
+	SCORE,
+	RACE,
+	WEEKLY,
+	LEADERBOARD,
+	LEADERBOARDRACE,
+	LEADERBOARDWEEKLY,
+	CONFIRMRACE,
+	STARTWEEKLY,
+	STARTDAILY,
+	CANIPARTICIPATE,
+}
+
 network_set_config(network_config_use_non_blocking_socket, 1);
 network_set_config(network_config_connect_timeout, 20000);
 serverSocket = network_create_socket(network_socket_tcp);

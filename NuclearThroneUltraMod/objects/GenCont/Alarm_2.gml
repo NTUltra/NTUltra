@@ -179,16 +179,23 @@ if (Player.loops > 0 && Player.area == 112 && Player.subarea == 1)
 if (Player.race=22 && Player.area!=100 && Player.area!=104 && !( (Player.area == 9 || Player.area == 118) && Player.subarea == 3))
 {
 
-var ammoWant = 1+Player.skill_got[23]+Player.skill_got[5];
-while (instance_number(RogueAmmoChest) < ammoWant)
-{
-	with instance_furthest(Player.x+random(128)-64,Player.y+random(128)-64,Floor)
+	var ammoWant = 1+Player.skill_got[23]+Player.skill_got[5];
+	while (instance_number(RogueAmmoChest) < ammoWant)
 	{
-		if !collision_point(x,y,RogueAmmoChest,false,false)
-			instance_create(x+16,y+16,RogueAmmoChest);
+		with instance_furthest(Player.x+random(128)-64,Player.y+random(128)-64,Floor)
+		{
+			if !collision_point(x,y,RogueAmmoChest,false,false)
+				instance_create(x+16,y+16,RogueAmmoChest);
+		}
 	}
-}
-
+	if Player.ultra_got[88]
+	{
+		with RogueAmmoChest
+		{
+			instance_destroy(id,false);
+			instance_create(x,y,RadChest);	
+		}
+	}
 }
 
 

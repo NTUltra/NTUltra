@@ -51,18 +51,21 @@ if (type == network_type_data) {
 			{
 				//REGISTER A MOCK SCORE
 				ini_open(dailyScoreSaveFileString);
-				var i = 0;
-				while(ini_key_exists("scorelb",i))
-					i ++;
-				ini_write_string("scorelb",i,
-					"x0 "+string(userId)+"   1 1 0 1 2 0 44 0 0 [1] 0 255  "
-				);
+					var i = 0;
+					while (ini_key_exists("scorelb",i))
+					{
+						i ++;
+					}
+					ini_write_string("scorelb",i,
+						"x0 "+string(userId)+"   1 1 0 1 2 0 44 0 0 [1] 0 255  "
+					);
 				ini_close();
 			}
 			//Get correct seed and day based on user time
-			var sendBuffer = buffer_create(5,buffer_grow,1);
-			date_get_day(day);
+			var sendBuffer = buffer_create(5,buffer_fixed,1);
+			buffer_write(sendBuffer,buffer_u8,NETDATA.STARTDAILY);
 			var seed = scrGetSeedOfDay(dayNumber);
+			show_debug_message(seed);
 			buffer_write(sendBuffer,buffer_u16,seed);
 			var dailyDay = scrGetDailyNumber();
 			fileName = file_find_first("w"+string(dailyDay) + "_ntultraweekly*", 0);

@@ -10,6 +10,3 @@ speed *= 0.8
 speed += wallbounce
 wallbounce *= 0.9
 instance_create(x,y,Dust)
-
-if speed > maxSpeed+1
-	speed = maxSpeed+0.5;

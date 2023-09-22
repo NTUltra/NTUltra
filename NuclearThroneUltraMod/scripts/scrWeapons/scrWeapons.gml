@@ -1583,7 +1583,7 @@ function scrWeapons() {
 	wep_name[143] = "LINE GRENADE"
 	wep_type[143] = 4
 	wep_auto[143] = 0
-	wep_load[143] = 15
+	wep_load[143] = 17
 	wep_cost[143] = 2
 	wep_sprt[143] = sprLineNader
 	wep_area[143] = 13
@@ -3753,7 +3753,7 @@ function scrWeapons() {
 	wep_load[340] = 26
 	wep_cost[340] = 0
 	wep_sprt[340] = sprTrident
-	wep_area[340] = 10
+	wep_area[340] = 11
 	wep_text[340] = "aqua fork"
 	wep_swap[340] = sndSwapDragon
 	wep_rad[340] = 0;
@@ -7061,8 +7061,8 @@ function scrWeapons() {
 	wep_name[639] = "FROST CHAIN GUN"
 	wep_type[639] = 3
 	wep_auto[639] = 0
-	wep_load[639] = 31
-	wep_cost[639] = 3
+	wep_load[639] = 32
+	wep_cost[639] = 3.5
 	wep_sprt[639] = sprFrostChainGun
 	wep_area[639] = 20
 	wep_text[639] = "imprisoned in hellheim"
@@ -7299,6 +7299,28 @@ function scrWeapons() {
 	wep_text[660] = "left hook right hook"
 	wep_swap[660] = sndSwapShotgun
 	wep_rad[660] = 0;
+	
+	wep_name[661] = "ROLL OUT THE BOOM!"
+	wep_type[661] = 5
+	wep_auto[661] = 0
+	wep_load[661] = 35
+	wep_cost[661] = 4
+	wep_sprt[661] = sprRollOutTheBoom
+	wep_area[661] = 14
+	wep_text[661] = "weapons that are full sentences"
+	wep_swap[661] = sndSwapShotgun
+	wep_rad[661] = 0;
+	
+	wep_name[662] = "PHOENIX"
+	wep_type[662] = 5
+	wep_auto[662] = 0
+	wep_load[662] = 17
+	wep_cost[662] = 2.5
+	wep_sprt[662] = sprPhoenixGun
+	wep_area[662] = 12
+	wep_text[662] = "fire bird"
+	wep_swap[662] = sndSwapDragon
+	wep_rad[662] = 0;
 	
 	//THE CHENDOKOOVEN Misiles and seeker bolts that fire lasers bullets pellets
 

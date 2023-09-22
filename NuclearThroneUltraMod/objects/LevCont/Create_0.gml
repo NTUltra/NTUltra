@@ -550,34 +550,34 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 	}
     else
     {
-    //CROWN OF DESTINYYYYYYY
-    if Player.race == 21 || Player.phoenixrevives > 6
-    {//horror
+	    //CROWN OF DESTINYYYYYYY
+	    if Player.race == 21 || Player.phoenixrevives > 6
+	    {//horror
     
-	chosenskill=choose(skill1,skill2,skill3,skill4)
+			chosenskill=choose(skill1,skill2,skill3,skill4)
 
-	with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-	skill = other.chosenskill
+			with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
+			skill = other.chosenskill
 
-	do{
-	otherchosenskill=choose(skill1,skill2,skill3,skill4)
-	}until (otherchosenskill!=chosenskill||otherchosenskill=32)
+			do{
+			otherchosenskill=choose(skill1,skill2,skill3,skill4)
+			}until (otherchosenskill!=chosenskill||otherchosenskill=32)
 
-	with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-	skill = other.otherchosenskill
+			with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
+			skill = other.otherchosenskill
 
 	    }
 	    else  
 	    {
-	    if Player.ultra_got[73] || (/*Player.skillsChosen == 7 && */Player.guarenteedReroll > 0)//Melting ultra A patience
-	    {
-			Player.skill_got[27] = 0;
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-				skill = 27
-	    }
+		    if Player.ultra_got[73] || (/*Player.skillsChosen == 7 && */Player.guarenteedReroll > 0)//Melting ultra A patience
+		    {
+				Player.skill_got[27] = 0;
+			    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-32,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
+					skill = 27
+		    }
     
-	    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-	    skill = choose(other.skill1,other.skill2,other.skill3,other.skill4);
+		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
+		    skill = choose(other.skill1,other.skill2,other.skill3,other.skill4);
 	    }
     
     }

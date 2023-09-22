@@ -16,8 +16,11 @@ x=Player.x;
 y=Player.y;
 var pd = Player.direction;
 image_angle=pd;
-
-imageIndex += 0.5;
+var is60fps = UberCont.normalGameSpeed == 60
+if is60fps
+	imageIndex += 0.25;
+else
+	imageIndex += 0.5;
 
 
 if (sp > Player.sheepPowerToHaveEffect)
@@ -50,24 +53,32 @@ if (sp > Player.sheepPowerToHaveEffect)
 		}
 		Sleep(5);
 	}
-	if Player.ultra_got[49]==1{
-	instance_create(x+random(16)-8,y+random(30)-15,Smoke);
-	}else{
-	instance_create(x+random(16)-8,y+random(30)-15,Dust);}
+	if Player.ultra_got[49]
+	{
+		instance_create(x+random(16)-8,y+random(30)-15,Smoke);
+	}
+	else
+	{
+		instance_create(x+random(16)-8,y+random(30)-15,Dust);
+	}
 
 	with BackCont{
-	if shake<2
-	shake += sp*0.2;
+		if shake < 2
+			shake += sp*0.2;
 	}
 	with Player
 	{
-		alarm[3]=2;//imunity
-		meleeimmunity = 3;
+		alarm[3]=max(alarm[3],2);//imunity
+		snd_hurt = sndDamageNegate;
+		meleeimmunity = max(meleeimmunity,2);
 	}
 }
 else
 {
-	alpha *= 0.5;
+	if is60fps
+		alpha *= 0.75;//aprox
+	else
+		alpha *= 0.5;
 	if (thresholdBroken)
 	{
 		thresholdBroken = false;

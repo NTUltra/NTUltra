@@ -24,3 +24,4 @@ if instance_exists(Player)
 else if instance_exists(BackCont) && BackCont.area=101 || BackCont.area == 122
 	sprite_index=sprBubble;
 
+alarm[0] = 2;

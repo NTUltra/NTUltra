@@ -72,10 +72,10 @@ if (type == network_type_data) {
 					subarea = 0;
 					nochest = -1;
 				}
-				room_goto(romGame);
 				with UberCont {
-					seed += 2;
-					seed = UberCont.todaysSeed;
+					seed += 4;
+					todaysSeed = seed;
+					debug("DOUBLE: ", seed);
 				    var al = array_length(encrypted_data.ctot_dailies_score_seed);
 				    encrypted_data.ctot_dailies_score_seed[al] = todaysSeed;
 					encrypted_data.daily_score_dates[al] = UberCont.today;
@@ -83,6 +83,7 @@ if (type == network_type_data) {
 				    encrypted_data.dailies_score_day[al] = today;
 					scrSaveEncrypted();
 				}
+				room_goto(romGame);
 			}
 			else
 			{

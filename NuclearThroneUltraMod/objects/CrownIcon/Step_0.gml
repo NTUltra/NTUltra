@@ -6,6 +6,8 @@ if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
 if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+10 and UberCont.mouse__y < y+16 and UberCont.mouse__x > x-10 and UberCont.mouse__y > y-16)
 {
 	KeyCont.key_fire[p] = 2;
+	with UberCont
+		canPickFrogCrown = false;
     with UberCont///UNLOCK CROWN
     {
 		crown_used[other.crown] += 1;
@@ -492,29 +494,36 @@ with FakeCrown
 	yy = y;
 	instance_destroy();
 }
-if crown != 1
-with instance_create(xx,yy,Crown)
-{	
-	crown = other.crown;
-	if other.canReAdd
-		newThing = 0;//Not new
-	if crown == 26
+	if crown != 1
 	{
-		instance_destroy();
-		with instance_create(x,y,CrownGunned)
+		with  Crown
 		{
+			if crown == other.crown
+				instance_destroy();
+		}
+		with instance_create(xx,yy,Crown)
+		{	
 			crown = other.crown;
-			scrCrownAnimation(crown);
+			if other.canReAdd
+				newThing = 0;//Not new
+			if crown == 26
+			{
+				instance_destroy();
+				with instance_create(x,y,CrownGunned)
+				{
+					crown = other.crown;
+					scrCrownAnimation(crown);
+				}
+			}
+			else
+			{
+				scrCrownAnimation(crown);
+				if crown == 33//ECHO
+					alarm[2] = 30;
+				else
+					alarm[2] = 0;
+			}
 		}
 	}
-	else
-	{
-		scrCrownAnimation(crown);
-		if crown == 33//ECHO
-			alarm[2] = 30;
-		else
-			alarm[2] = 0;
-	}
-}
 }
 

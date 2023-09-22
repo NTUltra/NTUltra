@@ -98,4 +98,3 @@ if wall != WallHitMe
 	if !place_meeting(x+32,y+32,Floor) && !place_meeting(x+32,y+32,wall)
 		instance_create(x+32,y+32,Top)
 }
-event_perform(ev_alarm,0);

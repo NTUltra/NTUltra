@@ -42,7 +42,7 @@ function scrLoadStats() {
 		dir ++;
 	}
 	dir = 0;
-	repeat(maxultra+1)
+	repeat(maxultra+2)
 	{
 		ctot_ultra_taken[dir] = ini_read_real("STATS","ctotultrataken" + string(dir),0);
 		dir ++;

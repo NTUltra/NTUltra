@@ -49,8 +49,8 @@ with UberCont
 		scrSaveEncrypted();
 	}
 }
-network_set_config(network_config_use_non_blocking_socket, 1);
-network_set_config(network_config_connect_timeout, 20000);
+//network_set_config(network_config_use_non_blocking_socket, 1);
+//network_set_config(network_config_connect_timeout, 20000);
 alarm[1] = 600;
 room_goto(romConnect);
 serverSocket = network_create_socket(network_socket_tcp);
@@ -61,6 +61,8 @@ var res = network_connect_async(serverSocket,string(serverIp),real(serverPort));
 if (res < 0) {
 	//FAIL
 	debug("CONNECTION FAIL");
+	UberCont.opt_gamemode = [0];
+	UberCont.isWeekly = false;
 } else
 {
 }

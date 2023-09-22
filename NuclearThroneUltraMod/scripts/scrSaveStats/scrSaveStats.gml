@@ -43,7 +43,7 @@ function scrSaveStats() {
 		dir ++;
 	}
 	dir = 0;
-	repeat(maxultra+1)
+	repeat(maxultra+2)
 	{
 		ini_write_real("STATS","ctotultrataken" + string(dir),ctot_ultra_taken[dir]);
 		dir ++;

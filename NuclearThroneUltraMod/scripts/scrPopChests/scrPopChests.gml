@@ -76,15 +76,7 @@ function scrPopChests() {
 			{
 				instance_create(xx-72,yy-64,WeaponChest);
 			}
-			if Player.ultra_got[88] == 1
-			{
-				with RogueAmmoChest
-				{
-					instance_destroy(id,false);
-					instance_create(x,y,RadChest);	
-				}
-			}
-			if Player.ultra_got[88] == 1
+			if Player.ultra_got[88]
 			{
 				with RogueAmmoChest
 				{

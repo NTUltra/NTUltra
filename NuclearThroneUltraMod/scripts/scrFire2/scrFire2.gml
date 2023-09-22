@@ -3843,7 +3843,7 @@ function scrFire2() {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),KrakenSlash)
 	{
-		dmg = 18//shovel is 12 is frostglove
+		dmg = 16//shovel is 12 is frostglove
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -13163,6 +13163,63 @@ function scrFire2() {
 	BackCont.shake += 12
 	wkick = 8
 
+	break;
+	
+	//ROLL OUT THE DOOM
+	case 661:
+	
+	snd_play_fire(sndHeavyNader);
+	var len = 12;
+	var ogx = x + lengthdir_x(len,aimDirection);
+	var ogy = y + lengthdir_y(len,aimDirection);
+	var xx = ogx;
+	var yy = ogy;
+	var ogStepRangeExtra = 24;
+	var stepRangeExtra = ogStepRangeExtra;
+	with instance_create(xx,yy,ExplosionQueueLine)
+	{
+		team = other.team;
+		theDirection = aimDirection;
+		stepRange += stepRangeExtra;
+	}
+	len = 20*accuracy;
+	repeat(4)
+	{
+		xx += lengthdir_x(len,aimDirection-110);
+		yy += lengthdir_y(len,aimDirection-110);
+		stepRangeExtra -= 6;
+		with instance_create(xx,yy,ExplosionQueueLine)
+		{
+			team = other.team;
+			theDirection = aimDirection;
+			stepRange += stepRangeExtra;
+		}
+	}
+	xx = ogx;
+	yy = ogy;
+	stepRangeExtra = ogStepRangeExtra;
+	repeat(4)
+	{
+		stepRangeExtra -= 6;
+		xx += lengthdir_x(len,aimDirection+110);
+		yy += lengthdir_y(len,aimDirection+110);
+		with instance_create(xx,yy,ExplosionQueueLine)
+		{
+			team = other.team;
+			theDirection = aimDirection;
+			stepRange += stepRangeExtra;
+		}
+	}
+	BackCont.viewx2 += lengthdir_x(24,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(24,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 12;
+	wkick = 9
+
+	break;
+	
+	//PHOENIX
+	case 662:
+		scrPhoenixGun(aimDirection);
 	break;
 	
 	}//end of switch part 2!
