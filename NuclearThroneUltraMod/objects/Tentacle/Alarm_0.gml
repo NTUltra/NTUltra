@@ -161,10 +161,10 @@ if round(ammo) > 0
 		final = 1;
 		image_yscale = other.image_yscale + 0.04;
 		alarm[2] = other.alarm[2];
-		if image_yscale > 2
+		if image_yscale > 2.4
 		{
 			alarm[2] += (image_yscale - 2)*0.1;
-			image_yscale = 2;
+			image_yscale = 2.4;
 		}
 		target = other.target;
 		alarm[1] = other.alarm[1];
