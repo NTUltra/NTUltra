@@ -31,7 +31,14 @@ for (var i = 0; i < al; i++;)
 	//}
 }
 if fps_real < fps
+{
 	amount = max(amount - 20,0);
+	if amount < 20
+	{
+		with FX
+			instance_destroy();
+	}
+}
 else if amount < maxAmount
 	amount += 10;
 while ds_list_size(drawer) > amount

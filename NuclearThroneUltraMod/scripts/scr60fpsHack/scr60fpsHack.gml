@@ -1,7 +1,7 @@
 ///scr60fpsHack();
 // /@description
 ///@param
-function scr60fpsHack(){
+function scr60fpsHack(dt){
 	//x = xprevious + (x - xprevious) * 0.5;
 	//y = yprevious + (y - yprevious) * 0.5;
 	if speed > friction

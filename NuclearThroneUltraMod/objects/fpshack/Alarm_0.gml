@@ -1,5 +1,5 @@
 /// @description Alarms
-with all
+with All
 {
 	var i = 0;
 	repeat(13)

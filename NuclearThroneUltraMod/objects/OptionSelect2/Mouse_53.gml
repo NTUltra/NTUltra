@@ -1,4 +1,4 @@
-if UberCont.mouse__x > x and UberCont.mouse__x < x+24 and UberCont.mouse__y > y and UberCont.mouse__y < y+24 and selected = 0 && hasNoMenuOpen()
+if UberCont.mouse__x > x and UberCont.mouse__x < x+24 and UberCont.mouse__y > y and UberCont.mouse__y < y+28 and selected = 0 && hasNoMenuOpen()
 {
 	snd_play_2d(sndClick);
 with option

@@ -1,8 +1,4 @@
-if fps_real < fps
-{
-	instance_destroy();
-	exit;
-}
+
 image_angle = random(360)
 motion_add(image_angle,random(2))
 friction = 0.3

@@ -1,8 +1,8 @@
 /// @description Init
-updateVersion = "PR 30.02";
+updateVersion = "PR 30.03";
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;
-maxwep = 609;
+maxwep = 660;
 network_set_config(network_config_use_non_blocking_socket, 1);
 if (hostSocket < 0) {
 	show_debug_message("FAILED TO HOST GAME\nTRY AGAIN LATER");	

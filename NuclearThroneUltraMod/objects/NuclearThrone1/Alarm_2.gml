@@ -14,7 +14,7 @@ if !riseStep
 else
 {
 	image_speed = 0.5;
-	alarm[3] = sprite_get_number(spr_activate)/image_speed;
+	alarm[3] = (sprite_get_number(spr_activate)*0.5)/image_speed;
 	snd_play_2d(sndNothingRise);
 	prevImageIndex = 1;
 	image_index = 1;

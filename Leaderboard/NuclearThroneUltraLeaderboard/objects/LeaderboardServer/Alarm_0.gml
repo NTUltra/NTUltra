@@ -2,6 +2,7 @@
 alarm[0] = 600;
 var yesterday = day;
 day = date_date_string(date_current_datetime());
+dayNumber = current_day;
 var lastweek = week;
 week = date_get_week(date_current_datetime());
 
@@ -25,7 +26,7 @@ if day != yesterday
 			totalDailies ++;
 	}
 	file_find_close();
-	todaySeed = scrGetSeedOfDay(day);
+	todaySeed = scrGetSeedOfDay(dayNumber);
 	dailyScoreSaveFileString="ds"+string(totalDailies) + "_ntultradailyscore"+string(day)+".sav";
 	dailyRaceSaveFileString=string(totalDailies) + "_ntultradailyrace"+string(day)+".sav";
 	scoreLeaderboardString = "";
@@ -37,7 +38,7 @@ if day != yesterday
 		//{
 		var weekchecker = date_inc_week(date_current_datetime(), -1);
 		var year = min(date_get_year(date_current_datetime()), date_get_year(weekchecker));//In case week crosses the year
-		weekSeed = week*4 + year;
+		weekSeed = week*100 + year;
 		random_set_seed(weekSeed);
 		weekGamemode = [irandom_range(1,41),0,0];
 		//Manual gamemode injection here

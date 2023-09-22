@@ -6,19 +6,10 @@ for (var i = 0; i < al; i++)
 	instance_deactivate_object(forcePositions[| i]);
 }
 //Todo check for gencont
-instance_deactivate_object(Wall);
-instance_deactivate_object(Floor);
-instance_deactivate_object(Top);
-instance_deactivate_object(TopSmall);
 with All
 {
-	scr60fpsHack();
+	scr60fpsHack(dt);
 }
-instance_activate_object(Wall);
-instance_activate_object(Floor);
-instance_activate_object(Top);
-instance_activate_object(TopSmall);
-//instance_activate_object(Wall);
 for (var i = 0; i < al; i++)
 {
 	instance_activate_object(forcePositions[| i]);

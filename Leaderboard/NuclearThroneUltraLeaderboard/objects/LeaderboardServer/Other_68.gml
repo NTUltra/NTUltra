@@ -61,8 +61,8 @@ if (type == network_type_data) {
 			}
 			//Get correct seed and day based on user time
 			var sendBuffer = buffer_create(5,buffer_grow,1);
-			buffer_write(sendBuffer,buffer_u8,NETDATA.STARTDAILY);
-			var seed = scrGetSeedOfDay(day);
+			date_get_day(day);
+			var seed = scrGetSeedOfDay(dayNumber);
 			buffer_write(sendBuffer,buffer_u16,seed);
 			var dailyDay = scrGetDailyNumber();
 			fileName = file_find_first("w"+string(dailyDay) + "_ntultraweekly*", 0);
