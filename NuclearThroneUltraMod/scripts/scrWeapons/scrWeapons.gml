@@ -2279,7 +2279,7 @@ function scrWeapons() {
 	wep_load[206] = 26
 	wep_cost[206] = 2
 	wep_sprt[206] = sprSmallMissileLauncher
-	wep_area[206] = 8
+	wep_area[206] = 9
 	wep_text[206] = "theres a bigger one"
 	wep_swap[206] = sndSwapExplosive
 	wep_rad[206] = 0;
@@ -2290,7 +2290,7 @@ function scrWeapons() {
 	wep_load[207] = 48
 	wep_cost[207] = 4
 	wep_sprt[207] = sprMissileLauncher
-	wep_area[207] = 10
+	wep_area[207] = 11
 	wep_text[207] = "you should really try eagle eyes#with this gun"
 	wep_swap[207] = sndSwapExplosive
 	wep_rad[207] = 0;
@@ -5070,7 +5070,7 @@ function scrWeapons() {
 	wep_name[458] = "LASER SHOVEL"
 	wep_type[458] = 5
 	wep_auto[458] = 0
-	wep_load[458] = 27
+	wep_load[458] = 25
 	wep_cost[458] = 5
 	wep_sprt[458] = sprLaserShovel
 	wep_area[458] = 16
@@ -5907,7 +5907,7 @@ function scrWeapons() {
 	wep_type[534] = 1
 	wep_auto[534] = 0
 	wep_load[534] = 170
-	wep_cost[534] = 130
+	wep_cost[534] = 135
 	wep_sprt[534] = sprSuperGyroBurster
 	wep_area[534] = 31
 	wep_text[534] = "bullets for months"
@@ -6984,7 +6984,7 @@ function scrWeapons() {
 	wep_name[632] = "MINI ROCKET GUN"
 	wep_type[632] = 4
 	wep_auto[632] = 1
-	wep_load[632] = 5
+	wep_load[632] = 6
 	wep_cost[632] = 0.5
 	wep_sprt[632] = sprMiniRocketGun
 	wep_area[632] = 8

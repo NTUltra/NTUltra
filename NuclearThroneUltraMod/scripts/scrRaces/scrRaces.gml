@@ -101,7 +101,7 @@ function scrRaces() {
 
 
 	race_name[6] = "[Y.V.]"
-	race_pass[6] = "HIGHER RATE OF FIRE"
+	race_pass[6] = "FASTER RELOAD SPEED"
 	race_acti[6] = "POP POP"
 	race_butt[6] = "BRRRAP"
 	//race_back[0] = "ADDITIONAL PROJECTILES FROM ACTIVE#PIERCE ENEMIES";
@@ -171,7 +171,7 @@ function scrRaces() {
 	race_name[10] = "[REBEL]"
 	race_pass[10] = "PORTALS HEAL"
 	race_acti[10] = "SPAWN ALLIES"
-	race_butt[10] = "HIGHER ALLY RATE OF FIRE"
+	race_butt[10] = "HIGHER ALLY FIRE RATE"
 	//race_back[10] = "FASTER ALLIES#ALLIES TELEPORT TO YOU#WHEN LOST";
 	race_lock[10] = "REACH FROZEN CITY TO UNLOCK"
 	race_have[10] = 0

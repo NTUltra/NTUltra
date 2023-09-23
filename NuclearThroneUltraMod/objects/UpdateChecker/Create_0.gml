@@ -33,4 +33,4 @@ if (res < 0) {
 newUpdateLerpTime = 0;
 updateSurface = -1;
 canShow = false;
-canParticipate = false;
+canParticipate = true;

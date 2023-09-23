@@ -111,10 +111,10 @@ function scrDrawHUD() {
 	//GAMEMODES
 	if (!scrIsOnlyNormalGamemode() && !instance_exists(LevCont))
 	{
-		var xx = vx;
-		var yy = vy+__view_get( e__VW.HView, 0 );
+		var xxx = camera_get_view_x(view_camera[0]);
+		var yyy = camera_get_view_y(view_camera[0]) + __view_get( e__VW.HView, 0 );
 		var s = 18;
-		if (mouse_x > xx && mouse_x < xx + s && mouse_y < yy && mouse_y > yy - s)
+		if (mouse_x > xxx && mouse_x < xxx + s && mouse_y < yyy && mouse_y > yyy - s)
 		{
 			holdExplainGamemode += 2;
 			if holdExplainGamemode > 10
@@ -233,6 +233,8 @@ function scrDrawHUD() {
 	    {
 			var xx =vx+__view_get( e__VW.WView, 0 )-12-16*dix;
 			var yy =vy+20;
+			var xxx = camera_get_view_x(view_camera[0]) + xx;
+			var yyy = camera_get_view_y(view_camera[0]) + yy;
 			var s = 18;
 			if dir == 0 && dataRef.altUltra && dataRef.race == 21
 			{
@@ -369,7 +371,7 @@ function scrDrawHUD() {
 		    else {//if !(dir=79 && dataRef.race=21){//Horror don't draw skeleton's ultra
 				draw_sprite_ext(sprUltraIconHUD,dir,xx,yy,1,1,0,c_white,1);
 			}
-			if (mouse_x > xx && mouse_x < xx + s && mouse_y > yy && mouse_y < yy + s)
+			if (mouse_x > xxx && mouse_x < xxx + s && mouse_y > yyy && mouse_y < yyy + s)
 			{
 				holdExplainMutation += 2;
 				if holdExplainMutation > 10
@@ -411,12 +413,14 @@ function scrDrawHUD() {
 		if dataRef.skill_got[dir] = 1 && dix < extraSpace
 		{
 			var xx = vx+__view_get( e__VW.WView, 0 )-10-16*dix;
+			var xxx = camera_get_view_x(view_camera[0]) + xx;
 			var yy = vy+12;
+			var yyy = camera_get_view_y(view_camera[0]) + yy;
 			var s = 8;
 			draw_sprite_ext(sprSkillIconHUD,dir,xx,yy+1,1,1,0,c_black,1)
 			draw_sprite_ext(sprSkillIconHUD,dir,xx,yy,1,1,0,c_white,1)
 			dix += 1
-			if (mouse_x > xx-s && mouse_x < xx + s && mouse_y > yy-s && mouse_y < yy + s)
+			if (mouse_x > xxx-s && mouse_x < xxx + s && mouse_y > yyy-s && mouse_y < yyy + s)
 			{
 				var ht;
 				if dir == 28//RAGE
@@ -464,12 +468,13 @@ function scrDrawHUD() {
 	var wxx = vx+110;
 	var wyy = vy+16;
 	var ss = 20;
-	
+	var xxx = camera_get_view_x(view_camera[0]) + wxx;
+	var yyy = camera_get_view_y(view_camera[0]) + wyy;
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+110,vy+16,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+112,vy+16,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+15,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+17,col,1)
-	if (UberCont.opt_hud_des && mouse_x > wxx && mouse_x < wxx+ss && mouse_y < wyy+ss && mouse_y > wyy)
+	if (UberCont.opt_hud_des && mouse_x > xxx && mouse_x < xxx+ss && mouse_y < yyy+ss && mouse_y > yyy)
 	{
 		scrDrawHelp("  " + string(dataRef.wep_area[dataRef.cwep])
 		+ "\n" + dataRef.wep_name[dataRef.cwep]);
@@ -559,8 +564,10 @@ function scrDrawHUD() {
 	col=make_colour_rgb(72,253,8);//ultra baby
 	var wxx = vx+67;
 	var wyy = vy+16;
+	var xxx = camera_get_view_x(view_camera[0]) + wxx;
+	var yyy = camera_get_view_y(view_camera[0]) + wyy;
 	var ss = 20;
-	if (UberCont.opt_hud_des && mouse_x > wxx && mouse_x < wxx+ss && mouse_y < wyy+ss && mouse_y > wyy)
+	if (UberCont.opt_hud_des && mouse_x > xxx && mouse_x < xxx+ss && mouse_y < yyy+ss && mouse_y > yyy)
 	{
 		scrDrawHelp("  " + string(dataRef.wep_area[dataRef.bwep])
 		+ "\n" + dataRef.wep_name[dataRef.bwep]);
@@ -653,8 +660,10 @@ function scrDrawHUD() {
 	wepcolour=make_colour_rgb(72,253,8);//ultra baby
 	var wxx = vx+24;
 	var wyy = vy+16;
+	var xxx = camera_get_view_x(view_camera[0]) + wxx;
+	var yyy = camera_get_view_y(view_camera[0]) + wyy;
 	var ss = 20;
-	if (UberCont.opt_hud_des && mouse_x > wxx && mouse_x < wxx+ss && mouse_y < wyy+ss && mouse_y > wyy)
+	if (UberCont.opt_hud_des && mouse_x > xxx && mouse_x < xxx+ss && mouse_y < yyy+ss && mouse_y > yyy)
 	{
 		scrDrawHelp("  " + string(dataRef.wep_area[dataRef.wep])
 		+ "\n" + dataRef.wep_name[dataRef.wep]);
@@ -751,7 +760,9 @@ function scrDrawHUD() {
 		var yy = vy+60
 		var h = 16*0.5;
 		var w = 24*0.5;
-		if (mouse_x > xx-w && mouse_x < xx+w && mouse_y < yy+h && mouse_y > yy-h)
+		var xxx = camera_get_view_x(view_camera[0]) + xx;
+		var yyy = camera_get_view_y(view_camera[0]) + yy;
+		if (mouse_x > xxx-w && mouse_x < xxx+w && mouse_y < yyy+h && mouse_y > yyy-h)
 		{
 			var umn = scrUltraModName(dataRef.ultramod);
 			holdExplainUltraModTimer++;
@@ -835,7 +846,9 @@ function scrDrawHUD() {
 	if dataRef.wepmod4 != 0
 	{
 		draw_sprite(sprModHUD,dataRef.wepmod4,xx,yy);
-		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
+		var xxx = camera_get_view_x(view_camera[0]) + xx;
+		var yyy = camera_get_view_y(view_camera[0]) + yy;
+		if (mouse_x > xxx && mouse_x < xxx+xs && mouse_y < yyy+xs && mouse_y > yyy)
 		{
 			noHover = false;
 			holdExplainWepModTimer++;
@@ -1579,7 +1592,7 @@ function scrDrawHUD() {
 					explainTimer += 0.5;
 				else
 					explainTimer ++;
-				var yy = y - 22;
+				var yy = y-oy - 22;
 				draw_sprite(sprEPickup,UberCont.opt_gamepad,x,yy-2)
 		
 				draw_set_color(c_black)

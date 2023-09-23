@@ -27,7 +27,7 @@ function scrUltras(altOverride = false) {
 	ultra_tips[3] = choose("I missed you partner","partner stays close to you#when you reload#if not it'll go out aggro","partner actively body blocks projectiles")
 
 	ultra_name[4] = "FISH CAN ROLL"
-	ultra_text[4] = "REDUCE AMMO/RAD COST BY 5%#INCREASED PRIMARY FIRE RATE#DEPENDING ON YOUR SPEED#MUCH MORE EFFECTIVE WHEN ROLLING"
+	ultra_text[4] = "REDUCE AMMO/RAD COST BY 5%#INCREASE PRIMARY RELOAD SPEED#DEPENDING ON YOUR SPEED#MUCH MORE EFFECTIVE WHEN ROLLING"
 	ultra_tips[4] = "is waterboost a thing now?"
 	
 	if instance_exists(Player) && Player.race == 1 && (Player.altUltra || Player.unlockAlternativeUltras || Player.bskin == 2)
@@ -142,7 +142,7 @@ function scrUltras(altOverride = false) {
 
 	    //Y.V. YUNG VENUZ YV
 	    ultra_name[21] = "IM A GUN GOD"
-	    ultra_text[21] = "40% HIGHER RATE OF FIRE#RELOAD SECONDARY AT 10% SPEED"
+	    ultra_text[21] = "+40% PRIMARY RELOAD SPEED#+10% SECONDARY RELOAD SPEED"
 	    ultra_tips[21] = "+40% higher rate of fire"
     
 	    ultra_name[22] = "BACK 2 BIZNIZ"
@@ -150,7 +150,7 @@ function scrUltras(altOverride = false) {
 	    ultra_tips[22] = "more pop"
     
 	    ultra_name[23] = "MAKE IT RAIN"
-	    ultra_text[23] = "REALLY HIGH SHOTGUN FIRE RATE#USED BULLET AMMO#CONVERTS TO SHOTGUN AMMO#(10 BULLET TO 1 SHOTGUN AMMO)"//"REALLY HIGH SHOTGUN FIRE RATE#USED SHOTGUN AMMO CONVERTS#TO BULLET AMMO"
+	    ultra_text[23] = "REALLY HIGH SHOTGUN RELOAD SPEED#USED BULLET AMMO#CONVERTS TO SHOTGUN AMMO#(10 BULLET TO 1 SHOTGUN AMMO)"//"REALLY HIGH SHOTGUN FIRE RATE#USED SHOTGUN AMMO CONVERTS#TO BULLET AMMO"
 	    ultra_tips[23] = "shells and bullets <3"
 		if altOverride || (instance_exists(Player) && Player.race == 6 && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && (scrMeleeWeapons(Player.wep) || Player.wep == 0) && (scrMeleeWeapons(Player.bwep) || Player.bwep == 0))))
 		{
@@ -160,7 +160,7 @@ function scrUltras(altOverride = false) {
 		}
     
 	    ultra_name[24] = "VERIFY VENUZ"
-	    ultra_text[24] = "EVERY OTHER POP POP ALSO FIRES#YOUR SECONDARY WEAPON#CAN POP FULL AUTO#RELOAD SECONDARY AT 50% SPEED"
+	    ultra_text[24] = "EVERY OTHER POP POP ALSO FIRES#YOUR SECONDARY WEAPON#CAN POP FULL AUTO#+50% SECONDARY RELOAD SPEED"
 	    ultra_tips[24] = "blood gamble"
     
 	//STEROIDS 
@@ -468,11 +468,11 @@ function scrUltras(altOverride = false) {
 		}
 		
 	    ultra_name[63] = "COLD HEART"
-	    ultra_text[63] = "ARMOUR STRIKE USES 3HP#INSTEAD OF ARMOUR##ARMOUR STRIKE FREEZES ENEMIES##WHILE YOU HAVE ARMOUR#INCREASE PRIMARY FIRERATE BY 20%"//"ARMOUR STRIKE FREEZES ENEMIES#AND DEALS MORE DAMAGE#WHEN YOU HAVE NO MORE ARMOUR#YOU CAN USE 2HP TO USE AN ARMOUR STRIKE"
+	    ultra_text[63] = "ARMOUR STRIKE USES 2HP#INSTEAD OF ARMOUR##ARMOUR STRIKE FREEZES ENEMIES##WHILE YOU HAVE ARMOUR#INCREASE PRIMARY FIRERATE BY 20%"//"ARMOUR STRIKE FREEZES ENEMIES#AND DEALS MORE DAMAGE#WHEN YOU HAVE NO MORE ARMOUR#YOU CAN USE 2HP TO USE AN ARMOUR STRIKE"
 	    ultra_tips[63] = "hearth strike"
     
 	    ultra_name[64] = "BLANK ARMOUR"
-	    ultra_text[64] = "WHENEVER YOU LOSE ARMOUR#YOU CLEAR ALL PROJECTILES#AND DEAL A MASSIVE AMOUNT OF DAMAGE#TO ALL ENEMIES ON SCREEN"
+	    ultra_text[64] = "WHENEVER YOU LOSE ARMOUR#TRIGGER SERPENT ARMOUR STRIKE#CLEAR ALL PROJECTILES#AND DEAL A MASSIVE AMOUNT OF DAMAGE#TO ALL ENEMIES ON SCREEN"
 	    ultra_tips[64] = "come at me bro"
     
 	//WEAPON SMITH WEAPONSMITH
@@ -496,7 +496,7 @@ function scrUltras(altOverride = false) {
 	}
 
 	ultra_name[67] = "ONE WITH THE GUN"
-	ultra_text[67] = "INCREASED FIRE RATE AND#REDUCED AMMO COST#FOR ALL WEAPONS EXCLUDING MELEE#DECREASED MELEE SWING RATE"
+	ultra_text[67] = "INCREASED RELOAD SPEED AND#REDUCED AMMO COST#FOR ALL WEAPONS EXCLUDING MELEE#DECREASED MELEE SWING RATE"
 	ultra_tips[67] = "new meta"
 
 	ultra_name[68] = "SCRAP FINDER"
@@ -610,7 +610,7 @@ function scrUltras(altOverride = false) {
 	    ultra_tips[79] = "are you that good?"
     
 	    ultra_name[80] = "GOLD DIGGER"
-	    ultra_text[80] = "SIGNIFICANTLY INCREASE#GOLDEN WEAPON FIRE RATE"
+	    ultra_text[80] = "SIGNIFICANTLY INCREASE#GOLDEN WEAPON RELOAD SPEED"
 	    ultra_tips[80] = "she take my money!#when I'm in need!"
     
     
@@ -749,7 +749,7 @@ function scrUltras(altOverride = false) {
 	    ultra_tips[101] = "learning quickly"
         
 	    ultra_name[102] = "RAPID MUSTACHE GROWTH"
-	    ultra_text[102] = "SKILL ALSO INCREASES FIRE RATE"
+	    ultra_text[102] = "SKILL ALSO INCREASES RELOAD SPEED"
 	    ultra_tips[102] = "quickdraw"
         
 	    ultra_name[103] = "PROTECTIVE FACIAL HAIR"

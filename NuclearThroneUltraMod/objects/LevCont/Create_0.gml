@@ -71,7 +71,7 @@ if Player.crownpoints > 0
 			crown = other.dir
 			if crown == 0 
 			{
-				if scrIsCrown(8) && Player.tookDestiny && !UberCont.canMultiCrown//Sloth
+				if scrIsCrown(8) && Player.tookDestiny && (!UberCont.canMultiCrown || scrIsCrown(24))//Sloth
 					crown = 8;
 				else if scrIsCrown(25) && !UberCont.canMultiCrown//Freedom
 					crown = 25;

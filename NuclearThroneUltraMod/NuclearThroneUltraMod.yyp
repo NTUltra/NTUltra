@@ -5647,6 +5647,7 @@
     {"id":{"name":"scrSaveCustomSurvivalArenaTemplate","path":"scripts/scrSaveCustomSurvivalArenaTemplate/scrSaveCustomSurvivalArenaTemplate.yy",},},
     {"id":{"name":"sprBowlingBall4","path":"sprites/sprBowlingBall4/sprBowlingBall4.yy",},},
     {"id":{"name":"sprExtraLivesHud","path":"sprites/sprExtraLivesHud/sprExtraLivesHud.yy",},},
+    {"id":{"name":"scrSerpentArmourStrike","path":"scripts/scrSerpentArmourStrike/scrSerpentArmourStrike.yy",},},
     {"id":{"name":"sndOasisBossHalfHP","path":"sounds/sndOasisBossHalfHP/sndOasisBossHalfHP.yy",},},
     {"id":{"name":"sprInvertedBuffMushroomGun","path":"sprites/sprInvertedBuffMushroomGun/sprInvertedBuffMushroomGun.yy",},},
     {"id":{"name":"sprLightningCrash","path":"sprites/sprLightningCrash/sprLightningCrash.yy",},},

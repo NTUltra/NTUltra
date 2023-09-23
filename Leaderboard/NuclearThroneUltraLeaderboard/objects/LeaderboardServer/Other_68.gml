@@ -65,7 +65,6 @@ if (type == network_type_data) {
 			var sendBuffer = buffer_create(5,buffer_fixed,1);
 			buffer_write(sendBuffer,buffer_u8,NETDATA.STARTDAILY);
 			var seed = scrGetSeedOfDay(dayNumber);
-			show_debug_message(seed);
 			buffer_write(sendBuffer,buffer_u16,seed);
 			var dailyDay = scrGetDailyNumber();
 			fileName = file_find_first("w"+string(dailyDay) + "_ntultraweekly*", 0);

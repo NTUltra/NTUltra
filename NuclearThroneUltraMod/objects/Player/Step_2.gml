@@ -603,7 +603,7 @@ if armour>0
 	resetPrevHealth = true;
 
 	scrBlankArmour();
-
+	scrSerpentArmourStrike();
 
 
 	}

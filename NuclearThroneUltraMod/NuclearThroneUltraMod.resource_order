@@ -5247,6 +5247,7 @@
     {"name":"scrSaveCustomSurvivalArenaTemplate","order":15,"path":"scripts/scrSaveCustomSurvivalArenaTemplate/scrSaveCustomSurvivalArenaTemplate.yy",},
     {"name":"sprBowlingBall4","order":33,"path":"sprites/sprBowlingBall4/sprBowlingBall4.yy",},
     {"name":"sprExtraLivesHud","order":6,"path":"sprites/sprExtraLivesHud/sprExtraLivesHud.yy",},
+    {"name":"scrSerpentArmourStrike","order":79,"path":"scripts/scrSerpentArmourStrike/scrSerpentArmourStrike.yy",},
     {"name":"sndOasisBossHalfHP","order":3,"path":"sounds/sndOasisBossHalfHP/sndOasisBossHalfHP.yy",},
     {"name":"sprInvertedBuffMushroomGun","order":21,"path":"sprites/sprInvertedBuffMushroomGun/sprInvertedBuffMushroomGun.yy",},
     {"name":"sprLightningCrash","order":371,"path":"sprites/sprLightningCrash/sprLightningCrash.yy",},

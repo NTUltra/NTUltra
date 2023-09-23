@@ -1,11 +1,5 @@
 darkness = 0
 dark=noone;
-skillscroll = 0;
-skillscrollmax = 0;
-holdExplainUltraModTimer = 0;
-holdExplainWepModTimer = 0;
-holdExplainMutation = 0;
-holdExplainGamemode = 0;
 right = 1;
 if !instance_exists(BGFXLayer)
 	instance_create(x,y,BGFXLayer);

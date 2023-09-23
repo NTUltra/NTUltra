@@ -35,9 +35,9 @@ else if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x+10 and Ube
 draw_set_valign(fa_top);
 
 //jokes now
-if UberCont.opt_resolution_scale == 2
+if UberCont.opt_resolution_scale == 4
 	draw_text(x+20,y,"PRESS F7\nTO REVERT")
-else if UberCont.opt_resolution_scale > 2
+else if UberCont.opt_resolution_scale > 4
 	draw_text(x+20,y,"WARNING MAY\nAFFECT\nPERFORMANCE")
 x=round(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+10+string_width("16X"))
 y=round(__view_get( e__VW.YView, 0 )+96+8)
