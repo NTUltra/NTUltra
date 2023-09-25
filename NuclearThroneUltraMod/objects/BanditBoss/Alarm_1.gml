@@ -10,7 +10,7 @@ alarm[1] = 10+random(30)//30+random(60)
 meleedamage = 0
 
 scrTarget()
-if target > 0
+if target != noone
 {
 if point_distance(x,y,target.x,target.y) < 240 or intro = 0
 {
@@ -75,7 +75,7 @@ alarm[1] = 30+random(60)
 meleedamage = 0
 
 scrTarget()
-if target > 0
+if target != noone
 {
 if point_distance(x,y,target.x,target.y) < 240 or intro = 0
 {
@@ -141,7 +141,7 @@ alarm[1] = 30+random(60)
 meleedamage = 0
 
 scrTarget()
-if target > 0
+if target != noone
 {
 if point_distance(x,y,target.x,target.y) < 240 or intro = 0
 {

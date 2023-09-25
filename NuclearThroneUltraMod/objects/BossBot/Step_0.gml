@@ -56,7 +56,7 @@ else
 				event_user(3);
 			}
 		}
-		if instance_exists(target) && target > -1
+		if target != noone && instance_exists(target)
 		{
 			gunangle = point_direction(x,y,target.x,target.y);
 			if target.x < x

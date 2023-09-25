@@ -1,7 +1,7 @@
 if ammo>0
 {
 
-if random(2)<1 && target > -1 && instance_exists(target)
+if random(2)<1 && target != noone && instance_exists(target)
 {
 	if team == 2
 		scrRogueTarget();

@@ -6,7 +6,7 @@ snd_play(sndScorpionFireStart);
     image_angle = direction
     team = other.team
 }
-if target > -1 && instance_exists(target) && choose(false,true)
+if target != noone && instance_exists(target) && choose(false,true)
 {
 	direction = point_direction(x, y, target.x, target.y);
 	walk = actTime*2;

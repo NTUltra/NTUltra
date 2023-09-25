@@ -26,7 +26,7 @@ else if sprite_index = sprUltraRavenLand
 				motion_add(random(360),3+random(1))
 		}
 		scrTarget()
-		if target > 0
+		if target != noone
 		{
 			with UltraRaven
 			{

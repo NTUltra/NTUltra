@@ -5,7 +5,7 @@ if speed < 2 && sprite_index != spr_fire
 else if jumpUp || jumpDown
 {
 	direction = jumpDir;
-	if target > 0
+	if target != noone
 		motion_add(point_direction(x,y,target.x,target.y),jumpAcc);
 	speed =	maxJumpSpeed;
 }

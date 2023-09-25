@@ -6,7 +6,7 @@ if walk > 0
 {
 walk -= 1
 motion_add(direction,1)
-if target > 0
+if target != noone
 mp_potential_step(target.x,target.y,2,false)
 }
 
@@ -26,7 +26,7 @@ if instance_exists(projectile)
 dodgethis=instance_nearest(x,y,projectile);
 
 if point_distance(x,y,dodgethis.x,dodgethis.y)<32&&dodgethis.team!=2{
-if target > 0
+if target != noone
 {
 if point_distance(x,y,target.x,target.y) < 64
 direction = point_direction(x,y,target.x,target.y)
@@ -44,7 +44,7 @@ gunangle = direction
 else if canDodge
 {
 if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<60{
-if target > -1 && instance_exists(target) && instance_exists(Player) && Player.fired
+if target != noone && instance_exists(target) && instance_exists(Player) && Player.fired
 {
 if point_distance(x,y,target.x,target.y) < 64
 direction = point_direction(x,y,target.x,target.y)

@@ -1,7 +1,7 @@
 /// @description Burp attack
 snd_play(sndBigBanditMeleeHit);
 snd_play(sndMinigun);
-if target > -1 && instance_exists(target)
+if target != noone && instance_exists(target)
 	gunangle = point_direction(x,y,target.x,target.y)
 sprite_index = spr_fire
 walk = 4+random(4)

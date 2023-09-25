@@ -1,7 +1,7 @@
 /// @description Cross bullet attack
 speed = 0;
 var ang = 0;
-if target > -1 && instance_exists(target) && crossAmmo == crossMaxAmmo
+if target != noone && instance_exists(target) && crossAmmo == crossMaxAmmo
 {
 	ang = point_direction(x,y,target.x,target.y);
 	crossAmmo--;

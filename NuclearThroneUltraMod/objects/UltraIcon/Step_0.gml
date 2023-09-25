@@ -517,9 +517,14 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 				{
 					betterboltmarrow = 10;
 				}
+				
 				with Player
 				{
+					var sk = [];
+					array_copy(sk,0,skill_got,0,array_length(skill_got));
 					scrSkills();
+					skill_got = [];
+					skill_got = sk;
 				}
 			}
 		}

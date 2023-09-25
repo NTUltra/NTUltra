@@ -2,7 +2,7 @@
 alarm[1] = actTime + random(actTime)
 
 scrTarget()
-if target > 0 {
+if target != noone {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 || (isInverted && random(4) < 1){
         if point_distance(target.x, target.y, x, y) > 64 {
             direction = point_direction(x, y, target.x, target.y) + random(180) - 90

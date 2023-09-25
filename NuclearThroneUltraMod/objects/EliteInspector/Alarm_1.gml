@@ -8,7 +8,7 @@ scrRogueTarget()
 else
 scrTarget();
 
-if target > 0
+if target != noone
 {
 	var othersControl = 0;
 	with EliteInspector

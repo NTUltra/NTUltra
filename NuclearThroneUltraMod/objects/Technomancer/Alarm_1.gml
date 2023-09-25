@@ -3,7 +3,7 @@ alarm[1] = 30+random(20)
 if inverted
 	alarm[1] -= 5;
 scrTarget()
-if target > 0
+if target != noone
 {
 	var dis = point_distance(x,y,target.x,target.y)
 	if !hasHadIntro && dis < 200

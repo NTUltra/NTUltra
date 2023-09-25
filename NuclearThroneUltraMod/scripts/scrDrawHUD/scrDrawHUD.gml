@@ -13,6 +13,9 @@ function scrDrawHUD() {
 	{
 		exit;
 	}
+	var dt = 1;
+	if UberCont.normalGameSpeed == 60
+		dt = 0.5;
 	draw_set_halign(fa_center)
 	draw_set_valign(fa_top)
 	var ox = viewX;
@@ -116,7 +119,7 @@ function scrDrawHUD() {
 		var s = 18;
 		if (mouse_x > xxx && mouse_x < xxx + s && mouse_y < yyy && mouse_y > yyy - s)
 		{
-			holdExplainGamemode += 2;
+			holdExplainGamemode += 2*dt;
 			if holdExplainGamemode > 10
 				holdExplainGamemode = 10;
 			if holdExplainGamemode >= 10
@@ -157,7 +160,7 @@ function scrDrawHUD() {
 		}
 	}
 	if holdExplainGamemode > 0 
-		holdExplainGamemode --;
+		holdExplainGamemode -= 1*dt;
 
 	//HEALTH TEXT
 	draw_set_halign(fa_center)
@@ -373,7 +376,7 @@ function scrDrawHUD() {
 			}
 			if (mouse_x > xxx && mouse_x < xxx + s && mouse_y > yyy && mouse_y < yyy + s)
 			{
-				holdExplainMutation += 2;
+				holdExplainMutation += 2*dt;
 				if holdExplainMutation > 10
 					holdExplainMutation = 10;
 				if holdExplainMutation >= 10
@@ -428,9 +431,19 @@ function scrDrawHUD() {
 				else
 					ht = "["+dataRef.skill_name[dir]+"]\n"+dataRef.skill_text[dir];
 				
-				holdExplainMutation +=2;
+				holdExplainMutation +=2*dt;
 				if holdExplainMutation >= 10
+				{
 					scrDrawHelp(ht);
+					if dataRef.race == 25 && dataRef.skill_bons[dir] != ""
+					{
+						//DOCTOR BONUS
+						txt = string_replace_all(ht,"#"," ");
+						var w = 206;
+						var s = string_height("A");
+						scrDrawHelp(dataRef.skill_bons[dir], string_height_ext(txt,s,w)+2,c_lime);
+					}
+				}
 				
 				if holdExplainMutation > 10
 					holdExplainMutation = 10;
@@ -441,7 +454,7 @@ function scrDrawHUD() {
 			dir = 0;
 	}
 	if holdExplainMutation > 0
-		holdExplainMutation --;
+		holdExplainMutation -= 1*dt;
 
 	var puffColour = make_colour_rgb(250,171,0);//make_colour_rgb(178,122,0);
 	var puffA = 0.8
@@ -765,7 +778,7 @@ function scrDrawHUD() {
 		if (mouse_x > xxx-w && mouse_x < xxx+w && mouse_y < yyy+h && mouse_y > yyy-h)
 		{
 			var umn = scrUltraModName(dataRef.ultramod);
-			holdExplainUltraModTimer++;
+			holdExplainUltraModTimer += 1*dt;
 			if holdExplainUltraModTimer > 30
 			{
 				scrDrawHelp(umn[0] + " <=> " + umn[1]+"\n"+scrUltraModDescription(dataRef.ultramod));
@@ -792,7 +805,7 @@ function scrDrawHUD() {
 		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
 		{
 			noHover = false;
-			holdExplainWepModTimer++;
+			holdExplainWepModTimer += 1*dt;
 			if holdExplainWepModTimer > 30
 			{
 				scrDrawHelp(scrWepModName(dataRef.wepmod1)
@@ -811,7 +824,7 @@ function scrDrawHUD() {
 		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
 		{
 			noHover = false;
-			holdExplainWepModTimer++;
+			holdExplainWepModTimer += 1*dt;
 			if holdExplainWepModTimer > 30
 			{
 				scrDrawHelp(scrWepModName(dataRef.wepmod2)
@@ -830,7 +843,7 @@ function scrDrawHUD() {
 		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
 		{
 			noHover = false;
-			holdExplainWepModTimer++;
+			holdExplainWepModTimer += 1*dt;
 			if holdExplainWepModTimer > 30
 			{
 				scrDrawHelp(scrWepModName(dataRef.wepmod3)
@@ -851,7 +864,7 @@ function scrDrawHUD() {
 		if (mouse_x > xxx && mouse_x < xxx+xs && mouse_y < yyy+xs && mouse_y > yyy)
 		{
 			noHover = false;
-			holdExplainWepModTimer++;
+			holdExplainWepModTimer += 1*dt;
 			if holdExplainWepModTimer > 30
 			{
 				scrDrawHelp(scrWepModName(dataRef.wepmod4)
@@ -1588,10 +1601,7 @@ function scrDrawHUD() {
 		{
 			if place_meeting(x,y,Player)
 			{
-				if UberCont.normalGameSpeed == 60
-					explainTimer += 0.5;
-				else
-					explainTimer ++;
+				explainTimer += 1*dt;
 				var yy = y-oy - 22;
 				draw_sprite(sprEPickup,UberCont.opt_gamepad,x,yy-2)
 		
@@ -1624,10 +1634,7 @@ function scrDrawHUD() {
 		{
 			if place_meeting(x,y,Player)
 			{
-				if UberCont.normalGameSpeed == 60
-					explainTimer += 0.5;
-				else
-					explainTimer ++;
+				explainTimer += 1*dt;
 				var yy = y - 22;
 				draw_sprite(sprEPickup,UberCont.opt_gamepad,x,yy-2)
 		
@@ -1669,7 +1676,7 @@ function scrDrawHUD() {
 				draw_set_color(c_white)
 				draw_text(x-ox+16,y-oy-1,string_hash_to_newline(string(modname)))
 				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
-				holdExplainTimer ++;
+				holdExplainTimer += 1*dt;
 				//Ultra mod destription
 				if holdExplainTimer > 30
 				{
@@ -1731,7 +1738,7 @@ function scrDrawHUD() {
 				draw_text(xx,yy-1,rstring)
 				draw_set_halign(fa_center)
 			
-				holdExplainTimer ++;
+				holdExplainTimer += 1*dt;
 				//Ultra mod destription
 				if holdExplainTimer > 30
 				{

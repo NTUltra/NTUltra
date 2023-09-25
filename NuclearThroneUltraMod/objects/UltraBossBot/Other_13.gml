@@ -1,5 +1,5 @@
 /// @description Fire gun 2
-if instance_exists(target) && target > -1
+if instance_exists(target) && target != noone
 {
 	gunangle = point_direction(x,y,target.x,target.y);
 	snd_play(sndCuber)

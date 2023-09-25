@@ -12,7 +12,7 @@ alarm[2] = 20;
 image_index = 0;
 imageIndex = 0;
 alarm[1] = 200;
-if target > 0
+if target != noone
 {
 	if target.x < x
 		right = -1

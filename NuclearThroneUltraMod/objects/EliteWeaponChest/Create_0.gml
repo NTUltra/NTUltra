@@ -1,6 +1,7 @@
 //event_inherited()
 mySize = 1;
 meleedamage = 0;
+spr_hurt = false;
 team = 0;
 my_health = 1;
 shadowSprite = shd24;

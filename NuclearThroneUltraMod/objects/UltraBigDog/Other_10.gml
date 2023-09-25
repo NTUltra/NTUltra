@@ -4,7 +4,7 @@ snd_play(sndEnemyFire)
 if ammo == usedMaxAmmo
 {
 	scrTarget();
-	if target > -1 && instance_exists(target)
+	if target != noone && instance_exists(target)
 	{
 		gunangle = point_direction(x,y,target.x,target.y);
 		var angStep = 360/24;
@@ -19,7 +19,7 @@ walk = 0
 scrTarget()
 var am = 17;
 var angStep = 360/24;
-if target > 0 && instance_exists(target)
+if target != noone && instance_exists(target)
 {
 	motion_add(point_direction(x,y,target.x,target.y)+turn*80,0.3);
 	var dis = point_distance(x,y,target.x,target.y);

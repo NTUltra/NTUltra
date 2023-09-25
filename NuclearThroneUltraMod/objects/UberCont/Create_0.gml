@@ -4,7 +4,8 @@ encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "PR 30.04"//"PR 30.02";
-subUpdateVersion = ".00";
+subUpdateVersion = ".01";
+serverIp =  "86.94.124.128";serverPort =  1414;
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
 /*

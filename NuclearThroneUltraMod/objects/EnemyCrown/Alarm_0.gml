@@ -22,7 +22,7 @@ motion_add(random(360),2)
 walk = 5+random(10)
 }
 
-if speed > 0 && creator.target > -1 && instance_exists(creator.target) && instance_exists(creator.target)
+if speed > 0 && creator.target != noone && instance_exists(creator.target) && instance_exists(creator.target)
 {
 if distance_to_object(creator.target) < 48
 {

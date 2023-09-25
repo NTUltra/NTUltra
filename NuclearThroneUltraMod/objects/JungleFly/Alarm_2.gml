@@ -14,7 +14,7 @@ with instance_create(x,y,Maggot)
 	charge = true;
 	alarm[1] = 0;
 }
-if (target > 0)
+if (target != noone)
 {
 	gunangle = point_direction(x,y,target.x,target.y);
 	direction = gunangle;

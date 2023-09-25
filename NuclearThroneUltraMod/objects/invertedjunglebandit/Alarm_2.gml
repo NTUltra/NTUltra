@@ -17,7 +17,7 @@ if gonnashoot > 0 {
         team = other.team
     }
 	scrTarget();
-	if target > 0{
+	if target != noone{
 		gunangle = point_direction(xprevious, yprevious, target.xprevious-target.hspeed, target.yprevious-target.vspeed)
 		if point_distance(target.x, target.y, x, y) > 160 {
 			gonnashoot = 0

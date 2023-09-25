@@ -8,7 +8,7 @@ alarm[4] = 5
 snd_play(sndBigBanditMelee)
 scrTarget()
 
-if target > 0
+if target != noone
 {
 gunangle = point_direction(x,y,target.x,target.y)
 motion_add(gunangle,10)

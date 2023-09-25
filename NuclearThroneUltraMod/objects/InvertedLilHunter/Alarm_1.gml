@@ -3,7 +3,7 @@ canDodge = true;
 if loop
 alarm[1]=2+random(4);
 scrTarget()
-if target > 0
+if target != noone
 {
 
 //HAS A TARGET

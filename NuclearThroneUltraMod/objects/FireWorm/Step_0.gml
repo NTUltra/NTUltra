@@ -12,7 +12,7 @@ motion_add(direction,acc)
 if alarm[2] > 0 
 {
 	scrTarget();
-	if target > 0
+	if target != noone
 	{
 		var dir = laserDirection - laserOffset;
 		if alarm[2] < laserDuration - tellTime

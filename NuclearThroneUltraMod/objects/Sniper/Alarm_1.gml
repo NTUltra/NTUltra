@@ -4,7 +4,7 @@ alarm[1] = actTime+random(actTime)
 scrTarget()
 if gonnafire = 0
 {
-if target > 0
+if target != noone
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {

@@ -12,7 +12,7 @@ else if !lowHP && my_health < maxhealth * 0.25
 	
 }
 scrTarget()
-if target > 0
+if target != noone
 {
 	var dis = point_distance(x,y,target.x,target.y);
 	if dis < 200 && !hasHadIntro

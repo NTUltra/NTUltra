@@ -8,7 +8,7 @@ alarm[1] = 10+random(10);
 }
 
 maxSpeed = 3
-if target > 0
+if target != noone
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and point_distance(x,y,target.x,target.y) < 96
 {

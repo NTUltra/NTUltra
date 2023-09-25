@@ -1,5 +1,5 @@
 /// @description Fire
-if target > -1 && instance_exists(target)
+if target != noone && instance_exists(target)
 {
 	walk = 0;
 	speed = 0;

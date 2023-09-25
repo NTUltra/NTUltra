@@ -1,6 +1,6 @@
 /// @description fire lasers
 scrTarget();
-if target > -1 && instance_exists(target) && point_distance(x,y,target.x,target.y) < 300
+if target != noone && instance_exists(target) && point_distance(x,y,target.x,target.y) < 300
 {
 	snd_play(sndLaser, 0.01,false,true,2,false,true,0.8,false, -1, 0, 120)
 	var ang = originalAngle;

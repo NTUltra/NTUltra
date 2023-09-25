@@ -28,7 +28,7 @@ else
 	}
 
 	scrTarget()
-	if target > 0
+	if target != noone
 	{
 		with Raven
 		{

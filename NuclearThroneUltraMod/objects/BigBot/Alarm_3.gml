@@ -1,7 +1,7 @@
 /// @description Fire
 snd_play(sndQuadMachinegun);
 scrTarget();
-if target > -1 && instance_exists(target) && point_distance(x,y,target.x,target.y) < 400
+if target != noone && instance_exists(target) && point_distance(x,y,target.x,target.y) < 400
 {
 	var ang = 0;
 	var angStep = 45;

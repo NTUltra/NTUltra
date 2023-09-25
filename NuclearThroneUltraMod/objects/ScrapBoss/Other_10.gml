@@ -7,7 +7,7 @@ if sprite_index != spr_hurt
 	sprite_index = spr_fire
 walk = 0
 scrTarget()
-if target > 0
+if target != noone
 	motion_add(point_direction(x,y,target.x,target.y)+turn*80,0.3)
 
 

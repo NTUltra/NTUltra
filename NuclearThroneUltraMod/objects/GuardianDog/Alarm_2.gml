@@ -8,7 +8,7 @@ image_index = 0;
 jumpUp = true;
 scrTarget()
 snd_play(sndDogGuardianJump);
-if target > 0
+if target != noone
 {
 	jumpDir = point_direction(x,y,target.x,target.y);
 	motion_add(jumpDir,7);

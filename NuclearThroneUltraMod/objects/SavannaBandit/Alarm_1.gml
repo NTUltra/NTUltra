@@ -3,7 +3,7 @@ if loops > 0 { //LOOP
     alarm[1] = 4 + random(8);
 
     scrTarget()
-    if target > 0 {
+    if target != noone {
         if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
             if point_distance(target.x, target.y, x, y) > 32 {
 				if random(3) < 1 && point_distance(target.x, target.y, x, y) < 180 {
@@ -59,7 +59,7 @@ else { //PRE LOOP
     alarm[1] = 8 + random(8)
 
     scrTarget()
-    if target > 0 {
+    if target != noone {
         if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
 			var dis = point_distance(target.x, target.y, x, y);
             if dis > 64 && dis < 200 {

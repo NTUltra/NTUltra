@@ -91,7 +91,7 @@ if loops > 6
 {
 	maxAmmo ++;	
 }
-if target > 0
+if target != noone
 	angle = point_direction(target.x,target.y,x,y);
 else
 	angle = random(360);

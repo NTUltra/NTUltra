@@ -1,7 +1,7 @@
 event_inherited()
 
 
-if sprite_index != spr_hurt and target > 0
+if sprite_index != spr_hurt and target != noone
 	motion_add(point_direction(x,y,target.x,target.y),acc)
 
 if sprite_index == spr_hurt

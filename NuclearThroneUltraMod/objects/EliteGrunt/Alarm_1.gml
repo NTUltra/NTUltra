@@ -9,7 +9,7 @@ else
 scrTarget();
 
 
-if target > 0 and roll = 0
+if target != noone and roll = 0
 {
 if target==Player
 {

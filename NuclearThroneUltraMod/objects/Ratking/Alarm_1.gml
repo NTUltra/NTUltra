@@ -1,6 +1,6 @@
 alarm[1] = 30+random(10)
 scrTarget()
-if target > 0
+if target != noone
 {
 walk = 10+random(10)
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and point_distance(x,y,target.x,target.y) < 180 && random(3) < 1

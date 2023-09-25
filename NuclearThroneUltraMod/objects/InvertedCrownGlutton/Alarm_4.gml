@@ -4,7 +4,7 @@ if ammo > 0
 	walk = 0;
 	speed = 0;
 	sprite_index = spr_idle;
-	if target > -1 && instance_exists(target)
+	if target != noone && instance_exists(target)
 	{
 		alarm[7] = 4;
 		alarm[1] += 10;
@@ -43,7 +43,7 @@ else
 	}
 	x = originX;
 	y = originY;
-	if target > -1 && instance_exists(target)
+	if target != noone && instance_exists(target)
 	{
 		if target.x < x
 			right = -1

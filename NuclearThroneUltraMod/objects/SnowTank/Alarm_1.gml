@@ -8,7 +8,7 @@ alarm[1] = 20+random(40);
 
 rest = 0
 scrTarget()
-if target > 0
+if target != noone
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {
@@ -16,7 +16,7 @@ if ammo <= 0 and random(3) < 1 and point_distance(x,y,target.x,target.y) > 64 an
 {
 snd_play(sndSnowTankAim)
 scrTarget()
-if target > 0
+if target != noone
 gunangle = point_direction(x,y,target.x,target.y)
 alarm[2] = 40
 

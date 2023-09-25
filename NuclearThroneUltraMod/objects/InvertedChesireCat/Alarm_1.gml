@@ -9,7 +9,7 @@ if sprite_index != spr_hurt
 sprite_index = spr_idle
 scrTarget()
 mask_index=mskChesireCat;
-if target > 0
+if target != noone
 {
 	var dis = point_distance(x,y,target.x,target.y)
 if dis < 240

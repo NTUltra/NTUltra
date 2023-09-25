@@ -8,7 +8,7 @@ spr_walk = spr_become_charge;
 sprite_index = spr_become_charge;
 image_index = 0;
 rotation = choose(20, -20);
-if target > -1 && instance_exists(target)
+if target != noone && instance_exists(target)
 	direction = point_direction(x,y,target.x,target.y);
 else
 	direction = random(360);

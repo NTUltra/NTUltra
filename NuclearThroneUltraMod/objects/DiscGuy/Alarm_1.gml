@@ -9,7 +9,7 @@ alarm[1] = 5+random(10);
 if sprite_index != spr_hurt
 sprite_index = spr_idle
 scrTarget()
-if target > 0
+if target != noone
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 1
 {

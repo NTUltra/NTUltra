@@ -1,6 +1,6 @@
 /// @description Stop spin Fire a rocket towards player if behind wall
 scrTarget();
-if target > -1 && instance_exists(target)
+if target != noone && instance_exists(target)
 {
 	if collision_line(x,y,target.x,target.y,Wall,false,false)
 	{

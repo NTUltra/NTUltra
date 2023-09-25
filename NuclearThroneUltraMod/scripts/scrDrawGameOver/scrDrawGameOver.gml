@@ -1,7 +1,7 @@
 function scrDrawGameOver() {
 	
 	//GAME OVER
-	if !instance_exists(DataRef)
+	if !instance_exists(DataRef) || !instance_exists(BackCont)
 		return;
 	var vx = 0;
 	var vy = 0;

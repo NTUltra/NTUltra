@@ -8,7 +8,7 @@ if instance_exists(enemy)
 target = instance_nearest(x,y,enemy)
 }
 
-if target > 0
+if target != noone
 {
 
 //GOT A TARGET

@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 
-if target > -1 && instance_exists(target) && !instance_exists(InvertedThrone2WaveSquareBullet)
+if target != noone && instance_exists(target) && !instance_exists(InvertedThrone2WaveSquareBullet)
 {
 	var am = 12;
 	var vdis = 80;

@@ -15,7 +15,7 @@ right = 1
 else if hspeed < 0
 right = -1
 }
-else if target > 0
+else if target != noone
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {

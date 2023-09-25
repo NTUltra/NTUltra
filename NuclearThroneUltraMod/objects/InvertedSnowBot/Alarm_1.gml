@@ -4,7 +4,7 @@ alarm[1] = actTime + random(actTime);
 scrTarget()
 meleedamage = 0
 sprite_index = spr_idle
-if target > 0
+if target != noone
 {
 //CHARGE ATTACK
 if point_distance(x,y,target.x,target.y) < 150 and random(2) < 1

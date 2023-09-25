@@ -1,7 +1,7 @@
 event_inherited()
 
 scrTarget()
-if target > 0
+if target != noone
 {
 if point_distance(x,y,target.x,target.y) < 48 and sprite_index = spr_hurt
 {

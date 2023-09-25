@@ -29,13 +29,10 @@ function scrSkills() {
 		}
 	}
 	skill_name[0] = "HEAVY HEART"
-	if isDoctor
-		skill_text[0] = "+52% WEAPON DROPRATE#EVERY ENEMY HAS A 6% CHANCE#TO DROP AN ADDITIONAL WEAPON#DROPPED WEAPONS FIRE AT ENEMIES"
-	else
-		skill_text[0] = "+50% WEAPON DROPRATE#EVERY ENEMY HAS A 4% CHANCE#TO DROP AN ADDITIONAL WEAPON#DROPPED WEAPONS FIRE AT ENEMIES"
+	skill_text[0] = "+50% WEAPON DROPRATE#EVERY ENEMY HAS A +4% CHANCE#TO DROP AN ADDITIONAL WEAPON#DROPPED WEAPONS FIRE AT ENEMIES"
 	skill_msnd[0] = sndMutHeavyHeart
 	skill_tips[0] = ""
-	skill_bons[0] = "+1 MAX HP";
+	skill_bons[0] = "+5% WEAPON DROPRATE#+2% ADDITIONAL WEAPON DROPRATE#";
 
 	skill_name[1] = "RHINO SKIN"
 	if !UberCont.useSeed && random(200) < 1

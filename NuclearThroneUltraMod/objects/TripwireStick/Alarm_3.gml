@@ -1,5 +1,5 @@
 //Step optimized
-if !doesNotMove && target > 0 && instance_exists(target)
+if !doesNotMove && target != noone && instance_exists(target)
 {
 x = target.x
 y = target.y

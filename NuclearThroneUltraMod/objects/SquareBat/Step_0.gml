@@ -2,7 +2,7 @@ event_inherited()
 
 if circleMode {
 	
-	if target > 0
+	if target != noone && instance_exists(target)
 	{
 		var lerpp = lp;
 		x += clamp(((target.x + lengthdir_x(circleDistance,angle))-x)*lerpp,-maxSpeed,maxSpeed);
@@ -31,7 +31,7 @@ else
 	{
 		walk -= 1
 		motion_add(direction,0.8)
-		if target > -1 && instance_exists(target)
+		if target != noone && instance_exists(target)
 		{
 			motion_add(point_direction(x,y,target.x,target.y),0.5);
 		}

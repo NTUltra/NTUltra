@@ -4840,7 +4840,7 @@ function scrWeapons() {
 	wep_type[437] = 2
 	wep_auto[437] = 0
 	wep_load[437] = 42
-	wep_cost[437] = 2
+	wep_cost[437] = 4
 	wep_sprt[437] = sprBoxSlugger
 	wep_area[437] = 18
 	wep_text[437] = ""

@@ -1,7 +1,7 @@
 ///scrDrawHelp();
 // /@description
 ///@param
-function scrDrawHelp(txt){
+function scrDrawHelp(txt, yOffset = 0, col = c_white){
 	if UberCont.opt_hud_des == 0
 		return "";
 	txt = string_replace_all(txt,"#"," ");
@@ -10,7 +10,7 @@ function scrDrawHelp(txt){
 	draw_set_halign(fa_left)
 	draw_set_valign(fa_top)
 	var xx = /*__view_get( e__VW.XView, 0 )+*/110;
-	var yy = /*__view_get( e__VW.YView, 0 )+*/22;
+	var yy = /*__view_get( e__VW.YView, 0 )+*/22 + yOffset;
 	draw_set_colour(c_black);
 	if !instance_exists(LevCont)
 	draw_set_alpha(0.6);
@@ -18,6 +18,6 @@ function scrDrawHelp(txt){
 	draw_set_alpha(1);
 	draw_set_colour(c_black);
 	draw_text_ext(xx+1,yy+1,txt,s,w);
-	draw_set_colour(c_white);
+	draw_set_colour(col);
 	draw_text_ext(xx,yy,txt,s,w);
 }

@@ -5,7 +5,7 @@ if instance_exists(Player)
 {
 	target = Player;	
 }
-if target > 0 && instance_exists(target)
+if target != noone && instance_exists(target)
 {
 	if !instance_exists(Wall)
 	{

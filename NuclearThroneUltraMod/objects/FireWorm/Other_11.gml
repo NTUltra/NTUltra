@@ -1,6 +1,6 @@
 /// @description Normal fireball
 scrTarget();
-if target > 0
+if target != noone
 {
 	var dir = point_direction(x, y, target.x, target.y);
 	if target.x < x

@@ -31,7 +31,7 @@ ammo=3;
 rolltime=15+random(40);
 freeze = 0
 scrTarget();
-if target > -1 && instance_exists(target)
+if target != noone && instance_exists(target)
 {
 lastx = target.x
 lasty = target.y

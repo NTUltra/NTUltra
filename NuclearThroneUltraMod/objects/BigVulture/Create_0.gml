@@ -37,7 +37,7 @@ snd_hurt = sndBigVultureHurt
 snd_dead = sndBigVultureDeath
 
 scrTarget();
-if target > 0
+if target != noone
 	direction = point_direction(x,y,target.x,target.y);
 else
 	direction = random(360);

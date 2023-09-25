@@ -25,7 +25,7 @@ spr_charge = sprScrapBossCharge;
 
 right = 1
 scrTarget()
-if target > -1 && instance_exists(target)
+if target != noone && instance_exists(target)
 gunangle = point_direction(x,y,target.x,target.y)
 else
 gunangle = 0

@@ -2,7 +2,7 @@
 
 alarm[1] = actTime + random(actTime)
 scrTarget()
-if target > 0 {
+if target != noone {
 	var lineOfSight = !collision_line(x, y, target.x, target.y, Wall, 0, 0)
 	var dis = point_distance(target.x, target.y, x, y)
 	with myShield

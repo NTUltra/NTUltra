@@ -18,7 +18,7 @@ else if random(2) < 1
 motion_add(random(360),2)
 walk = 5+random(10)
 }
-if creator.target > -1 && instance_exists(creator.target)
+if creator.target != noone && instance_exists(creator.target)
 {
 	var dir = creator.target;
 	if speed > 0

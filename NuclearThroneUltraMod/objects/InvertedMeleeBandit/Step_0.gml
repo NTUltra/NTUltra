@@ -4,7 +4,7 @@ if walk > 0
 {
 walk -= 1
 motion_add(direction,3)
-if target > 0
+if target != noone
 mp_potential_step(target.x,target.y,2,false)
 }
 
@@ -32,7 +32,7 @@ if dodge > -8
 	}
 }
 else if canDodge && point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<60{
-if target > -1 && instance_exists(target) && instance_exists(Player) && Player.fired
+if target != noone && instance_exists(target) && instance_exists(Player) && Player.fired
 {
 if point_distance(x,y,target.x,target.y) < 64
 direction = point_direction(x,y,target.x,target.y)

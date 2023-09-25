@@ -11,7 +11,7 @@ if walk > 0
 {
 	walk -= 1
 		motion_add(direction,1.2)
-	if target > -1 && instance_exists(target)
+	if target != noone && instance_exists(target)
 		motion_add(point_direction(x,y,target.x,target.y),0.1);
 
 }

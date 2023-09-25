@@ -4,7 +4,7 @@ if instance_exists(Player) {
 
         alarm[1] = 12 + random(15);
         scrTarget()
-        if target > 0 {
+        if target != noone {
             if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
                 if point_distance(target.x, target.y, x, y) > 32 {
 					if random(7) < 1 && point_distance(target.x, target.y, x, y) < 180 {
@@ -67,7 +67,7 @@ if instance_exists(Player) {
         alarm[1] = 20 + random(10)
 
         scrTarget()
-        if target > 0 {
+        if target != noone {
             if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
                 if point_distance(target.x, target.y, x, y) > 52 {
                     if random(4) < 1 {
@@ -129,7 +129,7 @@ else { //PRE LOOP
     alarm[1] = 20 + random(10)
 
     scrTarget()
-    if target > 0 {
+    if target != noone {
         if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
             if point_distance(target.x, target.y, x, y) > 52 {
                 if random(4) < 1 {

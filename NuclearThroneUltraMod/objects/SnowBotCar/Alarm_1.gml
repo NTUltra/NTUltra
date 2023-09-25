@@ -2,7 +2,7 @@ alarm[1] = 30
 scrTarget()
 meleedamage = 0
 sprite_index = spr_idle
-if target > 0
+if target != noone
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) == noone and random(2) < 1 and point_distance(x,y,target.x,target.y) <150
 {

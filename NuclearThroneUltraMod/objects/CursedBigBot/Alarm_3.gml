@@ -2,7 +2,7 @@
 snd_play(sndQuadMachinegun);
 snd_play(sndLaser, 0.01,false,true,2,false,true,0.8,false, -1, 0, 120)
 scrTarget();
-if target > -1 && instance_exists(target) && point_distance(x,y,target.x,target.y) < 400
+if target != noone && instance_exists(target) && point_distance(x,y,target.x,target.y) < 400
 {
 	var ang = 0;
 	var angStep = 45;

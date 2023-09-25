@@ -112,7 +112,7 @@ if day != yesterday
 				weekGamemode = [41, 29, 0] //Double enemy HP + Infinite ammo
 			break
 			case 39://Gore galore
-				weekGamemode = [5, 32, 0] //1HP equality + one hit wonder
+				weekGamemode = [5, 39, 16] //1HP equality + Gore galore + Spike traps
 			break;
 			case 40://1vs1
 				weekGamemode = [6, 22, 43]//Claustophobia + Infinite levels + multi crown

@@ -1,7 +1,7 @@
 ///@description AI
 alarm[1] = actTime + random(actTime);
 scrTarget()
-if target > 0 {
+if target != noone {
 	var dir = point_direction(x,y,target.x,target.y);
 	var dc = dcos(dir);
 	var tright = dc > 0;

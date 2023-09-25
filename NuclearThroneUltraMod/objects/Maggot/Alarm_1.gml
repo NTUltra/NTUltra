@@ -13,7 +13,7 @@ if instance_exists(Player)
 
 
 
-if target > 0
+if target != noone
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 direction = point_direction(x,y,target.x,target.y)+random(20)-10

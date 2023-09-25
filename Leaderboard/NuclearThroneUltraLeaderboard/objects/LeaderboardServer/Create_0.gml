@@ -1,5 +1,6 @@
 /// @description Init
 updateVersion = "PR 30.04";
+serverPort = 1414;
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;
 maxwep = 660;

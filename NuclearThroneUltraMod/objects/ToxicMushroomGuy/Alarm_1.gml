@@ -1,7 +1,7 @@
 ///@description AI
 alarm[1] = actTime + random(actTime)
 scrTarget()
-if target > 0 {
+if target != noone {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
         if random(3) < 1  && point_distance(x,y,target.x,target.y) < 200{
 			event_user(0);

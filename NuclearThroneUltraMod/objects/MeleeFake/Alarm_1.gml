@@ -1,6 +1,6 @@
 alarm[1] = 1;
 scrTarget()
-if target > 0
+if target != noone
 {
 	if point_distance(x,y,target.x,target.y) < wakeRange and !instance_exists(Portal) and collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 	{

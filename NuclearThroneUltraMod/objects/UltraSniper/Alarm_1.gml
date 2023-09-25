@@ -4,7 +4,7 @@ alarm[1] = actTime+random(actTime)
 scrTarget()
 if gonnafire = 0
 {
-	if target > 0
+	if target != noone
 	{
 		var dis = point_distance(target.x,target.y,x,y);
 		if dis < 350

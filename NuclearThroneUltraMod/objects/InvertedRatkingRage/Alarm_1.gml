@@ -1,6 +1,6 @@
 alarm[1] = 10+random(10)
 scrTarget()
-if target > 0
+if target != noone
 {
 if point_distance(x,y,target.x,target.y) < 90
 {

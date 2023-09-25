@@ -6,7 +6,7 @@ event_inherited()
 if walk > 0
 {
 	motion_add(direction,1.4)
-	if target > -1 && instance_exists(target)
+	if target != noone && instance_exists(target)
 		motion_add(point_direction(x,y,target.x,target.y),0.16);
 walk -= 1
 

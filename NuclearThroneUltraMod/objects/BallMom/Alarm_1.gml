@@ -55,7 +55,7 @@ if active
 			}
 		}
 	}
-	else if ran > 50 && target > 0
+	else if ran > 50 && target != noone
 	{
 		speed *= 0.5;
 		sprite_index = spr_fire;
@@ -70,7 +70,7 @@ if active
 }
 if random(2) >= 0.8
 {
-	if target > 0
+	if target != noone
 	{
 		if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 			direction = point_direction(x,y,target.x,target.y)+random(20)-10

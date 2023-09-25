@@ -1,6 +1,6 @@
 /// @description fire
 scrTarget();
-if target > -1 && instance_exists(target) && point_distance(x,y,target.x,target.y) < 300
+if target != noone && instance_exists(target) && point_distance(x,y,target.x,target.y) < 300
 {
 	snd_play(sndEraser)
 	var ang = originalAngle;

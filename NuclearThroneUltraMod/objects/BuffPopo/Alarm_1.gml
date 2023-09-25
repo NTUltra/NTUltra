@@ -7,7 +7,7 @@ scrRogueTarget()
 else
 scrTarget();
 
-if target > -1 && instance_exists(target)
+if target != noone && instance_exists(target)
 {
 	if instance_exists(Player) && target==Player.id
 	{

@@ -14,7 +14,7 @@ motion_add(direction,0.55)
 }
 
 
-if target > 0
+if target != noone
 {
 if instance_exists(target)
 mp_potential_step(target.x,target.y,0.4,0)

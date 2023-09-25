@@ -2,7 +2,7 @@ alarm[1] = actTime + random(actTime)
 
 
 scrTarget()
-if target > 0 {
+if target != noone {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
         if point_distance(target.x, target.y, x, y) > 48 and point_distance(target.x, target.y, x, y) < range {
 	        alarm[2] = tellTime;

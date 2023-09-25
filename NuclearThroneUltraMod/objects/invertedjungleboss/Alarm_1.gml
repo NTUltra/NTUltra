@@ -1,7 +1,7 @@
 ///@description AI
 alarm[1] = actTime + random(actTime);
 scrTarget()
-if target > 0 {
+if target != noone {
 	
 	var charged = false;
 	var ran = random(10);

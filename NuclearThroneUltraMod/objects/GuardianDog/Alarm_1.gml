@@ -12,7 +12,7 @@ scrTarget()
 walk = 0
 if jumpUp || jumpDown || fire
 exit;
-if target > 0 {
+if target != noone {
     //GOT TARGET
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 and point_distance(x, y, target.x, target.y) < 320 {
         //CAN SEE

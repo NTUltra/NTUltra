@@ -1,10 +1,10 @@
 function scrTarget() {
 	if target < 0 || !instance_exists(target) || target == noone
-		target = -1
+		target = noone
 
 	if instance_exists(Player)
 	{
-		if target == -1 && !Player.justAsheep
+		if target == noone && !Player.justAsheep
 		{
 			if instance_exists(Decoy)//Chickens vanish
 			{
@@ -96,11 +96,11 @@ function scrTarget() {
 		}
 		if target == Player.id && Player.justAsheep
 		{
-			target = -1;
+			target = noone;
 		}
 	}
 	else
-		target = -1;
+		target = noone;
 		
 	if target < 0 || !instance_exists(target) || target == noone
 		target = noone

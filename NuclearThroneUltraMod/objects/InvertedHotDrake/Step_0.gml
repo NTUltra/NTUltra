@@ -24,7 +24,7 @@ sprite_index= spr_prep;
 
 
 if alarm[2]>1{//breathe fire!
-if target > -1 && instance_exists(target)
+if target != noone && instance_exists(target)
 	direction = point_direction(x,y,target.xprevious,target.yprevious)
     BackCont.shake += 0.1
     

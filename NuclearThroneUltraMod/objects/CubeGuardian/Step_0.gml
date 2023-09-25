@@ -25,7 +25,7 @@ if charge
 		if (otherSucking < 2)
 		{
 			scrTarget();
-			if target > 0
+			if target != noone
 			{
 				var suckDir = point_direction(x,y,target.x,target.y);
 				var suckStrength = pullInStrength

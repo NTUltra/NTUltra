@@ -1,5 +1,5 @@
 //BOUNCER BULLETS
-if target > 0 && instance_exists(target)
+if target != noone && instance_exists(target)
 {
     gunangle = point_direction(x,y,target.x,target.y)+random(14)-7-30
     

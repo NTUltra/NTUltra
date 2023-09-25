@@ -2,7 +2,7 @@ event_inherited();
 if speed > 1
 speed = 1
 scrTarget()
-if target > 0 {
+if target != noone {
     if (point_distance(x, y, target.x, target.y) < 128 || collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0) && !instance_exists(Portal)
     timer += 1
     if alarm[2] < 1 && timer > 30 {

@@ -2,7 +2,7 @@
 alarm[1] = actTime+random(actTime)//10 5
 
 scrTarget()
-if target > 0
+if target != noone
 {
 //PLAYER EXISTS
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(5) < 4

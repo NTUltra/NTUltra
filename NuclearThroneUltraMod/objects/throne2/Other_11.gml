@@ -1,5 +1,5 @@
 /// @description Fire LASER big balls
-if target > -1 && instance_exists(target)
+if target != noone && instance_exists(target)
 {
 	if loops > random(3)
 	{

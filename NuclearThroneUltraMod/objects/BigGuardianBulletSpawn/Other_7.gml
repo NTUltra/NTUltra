@@ -1,6 +1,6 @@
 /// @description Spawn projectiles
 scrTarget();
-if target > -1 && instance_exists(target)
+if target != noone && instance_exists(target)
 {
 	var dir = point_direction(x,y,target.xprevious,target.yprevious);
 	snd_play(sndBigBallFire);

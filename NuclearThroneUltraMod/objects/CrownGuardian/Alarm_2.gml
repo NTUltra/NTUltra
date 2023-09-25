@@ -9,7 +9,7 @@ alarm[1] = 55
 scrAddDrops(1);
 scrDrop(20,0);
 scrTarget()
-if target > 0
+if target != noone
 gunangle = point_direction(x,y,target.x,target.y)
 
 with instance_create(x,y,EnemyBullet2)

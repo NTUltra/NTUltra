@@ -4,7 +4,7 @@ if !instance_exists(creator)
 	instance_destroy();
 	exit;
 }
-if target > 0 && instance_exists(target)
+if target != noone && instance_exists(target)
 {
 	x = lerp(creator.x,target.x,lerpTime);
 	y = lerp(creator.y,target.y,lerpTime);

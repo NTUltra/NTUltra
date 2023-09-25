@@ -4,7 +4,7 @@ if walk > 0
 {
 	walk -= 1
 	motion_add(direction,acc)
-	if target > 0
+	if target != noone
 		mp_potential_step(target.x,target.y,acc,false)
 }
 
@@ -31,8 +31,8 @@ if dodge > -dodgeCooldown
 	}
 }
 else if canDodge && point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y) < dodgeRange and not alarm[2] > 0 {
-	//if mouse_check_button_pressed(mb_left) and target > 0
-	if target > -1 && instance_exists(target) && instance_exists(Player) && Player.fired
+	//if mouse_check_button_pressed(mb_left) and target != noone
+	if target != noone && instance_exists(target) && instance_exists(Player) && Player.fired
 	{
 		event_user(0);
 	}

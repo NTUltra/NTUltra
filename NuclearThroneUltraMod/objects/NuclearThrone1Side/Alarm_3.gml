@@ -5,7 +5,7 @@ if owner > -1 && owner.fireTriShot && instance_exists(Player)
 {
 	alarm[3] = firerate;
 	scrTarget();
-	if target > -1 && instance_exists(target)
+	if target != noone && instance_exists(target)
 	{
 		snd_play_2d(sndNothingFire,random_range(00,0.004),true,true,2);
 		

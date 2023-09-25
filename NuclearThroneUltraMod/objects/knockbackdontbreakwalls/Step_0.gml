@@ -1,6 +1,6 @@
 /// @description Move the shithead
 lerpTime -= lerpCalcBack;
-if target > 0 && instance_exists(target)
+if target != noone && instance_exists(target)
 {
 	with target
 	{

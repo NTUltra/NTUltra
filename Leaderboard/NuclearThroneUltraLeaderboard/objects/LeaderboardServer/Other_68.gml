@@ -365,13 +365,18 @@ if (type == network_type_data) {
 			buffer_write(sendBuffer,buffer_string,readableLeaderboard);
 			buffer_write(sendBuffer,buffer_string,string_split(string_replace(fileName,"ntultra",""),"_")[1]);
 			buffer_write(sendBuffer,buffer_u16,0);//Page
-			show_debug_message("TOTAL PAGES: " + string(ceil(totalScoreEntries/10)-1));
 			if isWeekly
+			{
 				buffer_write(sendBuffer,buffer_u16,ceil(totalWeeklyEntries/10)-1);//Total pages
+			}
 			else if isScore
+			{
 				buffer_write(sendBuffer,buffer_u16,ceil(totalScoreEntries/10)-1);//Total pages
+			}
 			else
+			{
 				buffer_write(sendBuffer,buffer_u16,ceil(totalRaceEntries/10)-1);//Total pages
+			}
 			if isWeekly
 				buffer_write(sendBuffer,buffer_u16,totalWeeklies);//Daily number
 			else
@@ -425,11 +430,12 @@ if (type == network_type_data) {
 				fileName = scrGetDailyRaceFile(wantDailyNumber);
 			}
 			var scoreLeaderboard = "";
+			var i = page*10;
+			var j = 0;
 			if (file_exists(fileName) && !noFile)
 			{
 				ini_open(fileName);
-				var i = page*10;
-				var j = 0;
+				
 				while(ini_key_exists(stringChecker,i) && j < 10)
 				{
 					var nextScore = ini_read_string(stringChecker,i,"")+"|";
@@ -441,16 +447,27 @@ if (type == network_type_data) {
 					i++;
 					j++;
 				}
-				show_debug_message("amount of scores to show " + string(j));
+				while(ini_key_exists(stringChecker,i))
+					i++;
 				ini_close();
 			}
-				
-			var totalPages = ceil(totalScoreEntries/10) - 1;
+			
+			show_debug_message("total entries: " + string(i));
 			if getWeekly
-				totalPages = ceil(totalWeeklyEntries/10) - 1;
+			{
+				totalWeeklyEntries = i;
+			}
 			else if !getScore
-				totalPages = ceil(totalRaceEntries/10) - 1;
+			{
+				totalRaceEntries = i;
+			} 
+			else
+			{
+				totalScoreEntries = i;
+			}
+			var totalPages = ceil(i/10) - 1;
 			totalPages = max(0,totalPages);
+			show_debug_message(totalPages);
 			buffer_write(sendBuffer,buffer_string,scoreLeaderboard);
 			/*
 			if getScore
@@ -459,6 +476,7 @@ if (type == network_type_data) {
 				buffer_write(sendBuffer,buffer_string,string_split(string_replace(dailyRaceSaveFileString,"ntultra",""),"_")[1]);
 				*/
 			//if file_exists(fileName)
+			show_debug_message(fileName);
 			if fileName == ""
 				buffer_write(sendBuffer,buffer_string,"");
 			else

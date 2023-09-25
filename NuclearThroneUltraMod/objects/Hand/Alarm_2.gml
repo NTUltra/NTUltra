@@ -13,7 +13,7 @@ if touchpointX < x
 	image_xscale = -1
 else
 	image_xscale = 1;
-if target > 0 && instance_exists(target)
+if target != noone && instance_exists(target)
 {
 	var pd = pushDirection;
 	with target

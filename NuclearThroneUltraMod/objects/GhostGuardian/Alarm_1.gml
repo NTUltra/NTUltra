@@ -1,6 +1,6 @@
 alarm[1] = actTime+random(actTime)
 scrTarget()
-if target > 0
+if target != noone
 {
 	//GOT TARGET
 	var dis = point_distance(x,y,target.x,target.y);

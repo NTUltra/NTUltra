@@ -6,7 +6,7 @@ spr_walk = sprBigVultureChargeTell;
 speed = 0;
 snd_play(sndBigVultureChargeTell,0,false,false,10,false,false,0.82,false,id);
 scrTarget();
-if target > 0
+if target != noone
 {
 	direction = point_direction(x,y,target.x,target.y);
 	if target.x < x

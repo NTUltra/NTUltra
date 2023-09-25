@@ -3,7 +3,7 @@ if UberCont.normalGameSpeed == 60
 	lerpTime -= lerpCalcBack*0.5;
 else
 	lerpTime -= lerpCalcBack;
-if target > 0 && instance_exists(target)
+if target != noone && instance_exists(target)
 {
 	with target
 	{

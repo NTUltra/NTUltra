@@ -344,6 +344,8 @@ else if array_length(leaderboard) > 0
 					UberCont.weeklyWeek ++;
 				else
 					UberCont.dailyDay ++;
+					
+				page = 0;
 				event_user(0);
 				leaderboard = [];
 			}
@@ -389,6 +391,8 @@ else if array_length(leaderboard) > 0
 					UberCont.weeklyWeek --;
 				else
 					UberCont.dailyDay --;
+				
+				page = 0;
 				event_user(0);
 				leaderboard = [];
 			}
@@ -465,6 +469,8 @@ else if noBoard
 					UberCont.weeklyWeek ++;
 				else
 					UberCont.dailyDay ++;
+					
+				page = 0;
 				event_user(0);
 				leaderboard = [];
 			}
@@ -490,6 +496,8 @@ else if noBoard
 					UberCont.weeklyWeek --;
 				else
 					UberCont.dailyDay --;
+					
+				page = 0;
 				event_user(0);
 				leaderboard = [];
 			}
@@ -517,7 +525,6 @@ else if noBoard
 				leaderboardType = LEADERBOARD.WEEKLY;
 			else
 				leaderboardType = LEADERBOARD.RACE;
-			page = 0;
 			UberCont.weeklyWeek = UberCont.totalWeeklies;
 			UberCont.dailyDay = UberCont.totalDailies;
 			page = 0;

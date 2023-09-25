@@ -1,7 +1,7 @@
 /// @description die slowly
 alarm[1] = 2;
 scrTarget()
-if target > 0
+if target != noone
 {
 	if distance_to_object(target) < 64 and sprite_index != spr_hurt and sprite_index != spr_chrg
 	{

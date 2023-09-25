@@ -17,7 +17,7 @@ with instance_create(x,y,EnemyLineFire)
 	team = other.team
 }
 scrTarget();
-if target > 0
+if target != noone
 {
 	direction = point_direction(x,y,target.x,target.y);
 	motion_add(direction,0.8);

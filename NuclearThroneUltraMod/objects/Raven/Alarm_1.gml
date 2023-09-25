@@ -1,7 +1,7 @@
 alarm[1] = actTime + random(actTime);
 
 scrTarget()
-if target > 0
+if target != noone && instance_exists(target)
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {
@@ -24,7 +24,7 @@ walk = 20+random(10)
 gunangle = point_direction(x,y,target.x,target.y)
 
 scrTarget()
-if random(5) < 1 and target > 0
+if random(5) < 1 and target != noone
 {
 with Raven
 {

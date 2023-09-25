@@ -52,7 +52,7 @@ if loops > 4
 {
 	rotationSpeed *= 1.1;
 }
-if target > 0
+if target != noone
 	angle = point_direction(target.x,target.y,x,y);
 
 //get into position

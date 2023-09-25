@@ -9,7 +9,7 @@ if  collision_point(x,y,Floor,false,false) && onFloorFail < 3
 }
 onFloorFail = 0;
 scrTarget()
-if target > 0 {
+if target != noone {
 	var ran = random(100);
 	if ran > 90
 	{

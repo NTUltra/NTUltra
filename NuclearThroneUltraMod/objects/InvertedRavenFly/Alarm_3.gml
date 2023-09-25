@@ -1,6 +1,6 @@
 alarm[3] = 5+random(10)
 scrTarget()
-if target > 0
+if target != noone
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {

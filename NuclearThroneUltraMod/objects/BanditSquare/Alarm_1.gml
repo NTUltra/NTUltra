@@ -2,7 +2,7 @@
 alarm[1] = actTime+random(actTime);
 
 scrTarget()
-if target > 0
+if target != noone
 {
 if point_distance(target.x,target.y,x,y) > 32 && point_distance(target.x,target.y,x,y) < maxDetectRange
 {

@@ -1,6 +1,6 @@
 /// @description Aim
 scrTarget()
-if target > 0
+if target != noone
 {
 	//Leads shot!
 	var ran = irandom_range(27,30);

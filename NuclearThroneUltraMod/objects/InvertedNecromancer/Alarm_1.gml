@@ -7,7 +7,7 @@ alarm[1] = 8+random(8);
 }
 
 scrTarget()
-if target > 0
+if target != noone
 {
 //PLAYER EXISTS
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(5) < 4

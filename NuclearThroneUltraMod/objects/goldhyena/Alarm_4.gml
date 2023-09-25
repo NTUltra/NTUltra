@@ -2,7 +2,7 @@
 alarm[4] = 10;
 scrTarget();
 
-if (target > 0 && collision_line(x,y,target.x,target.y,Wall,0,0) < 0 &&
+if (target != noone && collision_line(x,y,target.x,target.y,Wall,0,0) < 0 &&
 point_distance(x,y,target.x,target.y) < 100)
 {
 	snd_play(sndToxicBoltGas,0.1);

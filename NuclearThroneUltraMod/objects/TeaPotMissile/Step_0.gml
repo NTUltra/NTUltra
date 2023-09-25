@@ -1,7 +1,7 @@
 event_inherited()
 
 //target = instance_nearest(x,y,Player)
-if sprite_index != spr_hurt and target > 0
+if sprite_index != spr_hurt and target != noone
 motion_add(point_direction(x,y,target.x,target.y),2)
 
 if sprite_index = spr_hurt
