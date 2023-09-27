@@ -28,7 +28,8 @@ function scrTurnIntoPortalArea(shouldBeInverted = false){
 		if !collision_point(x+8,y+8,Floor,false,false)//Angel can fly
 			instance_create(x,y,WallHitMe);
 	}
-	alarm[4] = 60;//Projectiles out side of view destroy
+	with Debris
+		instance_destroy(id,false);
 	var deepestDepths = 100;
 	var sprExplo = sprFloor0Explo;
 	var spr = sprFloor0;

@@ -14,7 +14,7 @@ for (var i = 0; i < al; i++)
 			scrDeflectNade(other.direction);
 			BackCont.shake += 2;
 		}	
-	} else if othr.typ == 2 {
+	} else if othr.typ == 2 && othr.team != 2{
 		BackCont.shake += 2;
 		with othr {
 			instance_destroy();

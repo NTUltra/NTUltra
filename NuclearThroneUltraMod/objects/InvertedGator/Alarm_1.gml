@@ -8,12 +8,12 @@ if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {
 if point_distance(target.x,target.y,x,y) > 48 and point_distance(target.x,target.y,x,y) < 130
 {
-	if random(2) < 1
+	if random(2) < 1 && existTime > 20
 	{
-		alarm[2]=9;
+		alarm[2]=10;
 		instance_create(x,y,Notice);
 
-		alarm[1] = actTime*2+random(actTime)
+		alarm[1] = 10 + actTime*2+random(actTime*2)
 	}
 	else if random(3) < 2 {
         direction = point_direction(x, y, target.x, target.y) + random(180) - 90

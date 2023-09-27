@@ -33,7 +33,9 @@ else //Destroy and not full, pink sheep
 	scrRaddrop(raddrop);
 	if instance_exists(Player) && Player.area == 5
 	{
-		instance_create(x,y,PinkSheep);	
+		with instance_create(x,y,PinkSheep) {
+			alarm[0] = 0;	
+		}
 	}
 }
 if instance_exists(Player)

@@ -13,7 +13,7 @@ if alarm[2] > 0
 		var lasd = 0
 		do {lasd += 1 lasx += lengthdir_x(2,ang) lasy += lengthdir_y(2,ang)}
 		until position_meeting(lasx,lasy,Wall) or lasd > 1000
-		draw_sprite_ext(sprLaserSight,-1,x,y,point_distance(x,y,lasx,lasy)*0.5+2,1,ang,c_white,1)
+		draw_sprite_ext(sprCurseLaserSight,-1,x,y,point_distance(x,y,lasx,lasy)*0.5+2,1,ang,c_white,1)
 		ang += 90;
 	}
 }

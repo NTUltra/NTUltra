@@ -1,3 +1,4 @@
+/// @description Decide boss and spawn
 x = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5
 y = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.5
 alarm[1] = 0;
@@ -72,8 +73,16 @@ if target != noone && instance_exists(target)
 			{
 			    if other.area=3 && other.loops>0 && instance_exists(Floor)//scrapyard
 			    {
-			    with instance_nearest(instance_furthest(x+random(120)-60,y+random(120)-60,Floor),instance_furthest(x+random(120)-60,y+random(120)-60,Floor),Floor)
-			    instance_create(x+16,y+16,AssassinBoss);
+					if scrIsGamemode(44)
+					{
+						with instance_nearest(instance_furthest(x+random(120)-60,y+random(120)-60,Floor),instance_furthest(x+random(120)-60,y+random(120)-60,Floor),Floor)
+							instance_create(x+16,y+16,GoldenBossBot);
+					}
+					else
+					{
+						with instance_nearest(instance_furthest(x+random(120)-60,y+random(120)-60,Floor),instance_furthest(x+random(120)-60,y+random(120)-60,Floor),Floor)
+							instance_create(x+16,y+16,AssassinBoss);
+					}
 			    }
 			    else if other.area=106 && other.loops>0 && instance_exists(Floor)//inverted scrapyard
 			    {
@@ -81,16 +90,26 @@ if target != noone && instance_exists(target)
 						instance_create(x+16,y+16,InvertedAssassinBoss);
 			    }
 			    else if other.area=101||other.area=2
-					instance_create(x,y,BigFish);//oasis
+				{
+					if scrIsGamemode(44)
+						instance_create(x,y,BanditBoss);
+					else
+						instance_create(x,y,BigFish);//oasis
+				}
 				else if other.area == 122 || other.area == 110
 					instance_create(x,y,InvertedBigFish);
 			    else if other.oasis=true
 			    {
-			    with instance_create(x,y,BanditBoss)
-			    {oasis=true;}
+				    with instance_create(x,y,BanditBoss)
+				    {oasis=true;}
 			    }
 			    else if other.area = 1
-			    instance_create(x,y,BanditBoss)
+				{
+					if scrIsGamemode(44)
+						instance_create(x,y,BecomeInvertedGraveyardFish);
+					else
+						instance_create(x,y,BanditBoss);
+				}
 				else if other.area == 126
 					instance_create(x,y,BecomeGraveyardFish);
 				else if other.area == 127

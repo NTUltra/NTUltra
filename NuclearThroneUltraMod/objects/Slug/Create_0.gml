@@ -17,7 +17,7 @@ if instance_exists(Player)
 			if Player.ultra_got[97] && !Player.altUltra
 			{
 				wallbounce+=4;
-				alarm[1]+=2;
+				alarm[1]+=4;
 			}
 		}
 	}

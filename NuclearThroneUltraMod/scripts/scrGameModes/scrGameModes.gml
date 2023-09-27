@@ -165,7 +165,7 @@ function scrGameModes() {
 	gamemode_description[22] = "\nYOU LEVEL UP SLOWER BUT THERE IS NO LEVEL CAP ALLOWING YOU TO GET EVERY MUTATION AND ALL YOUR ULTRA MUTATIONS";
 	gamemode_nocombo[22] = [15,26,27,37,8];
 	
-	gamemode[23] = "RANDOM CHARACTER#IN EACH AREA";
+	gamemode[23] = "RANDOM MUTANT#IN EACH AREA";
 	gamemode_unlock[23] = "PLAY EVERY CHARACTER";
 	gamemode_have[23] = 0;
 	gamemode_tip[23] = "MYSTERY MUTANT";
@@ -184,13 +184,13 @@ function scrGameModes() {
 	gamemode_have[25] = 0;
 	gamemode_tip[25] = "SURVIVAL ARENA!";
 	gamemode_description[25] = "SURVIVE IN A WAVE BASED ARENA";
-	gamemode_nocombo[25] = [6,8,10,18,20,21,26,27,36,37,40,42,43];
+	gamemode_nocombo[25] = [6,8,10,18,20,21,26,27,36,37,40,42,43,44,45];
 	gamemode[42] = "CUSTOM#SURVIVAL ARENA";
 	gamemode_unlock[42] = "REACH WAVE 4#IN SURVIVAL ARENA";
 	gamemode_have[42] = 0;
 	gamemode_tip[42] = "CUSTOM WAVES";
 	gamemode_description[42] = "\nLOAD IN A JSON FILE TO PLAY CUSTOMIZED WAVES IN SURVIVAL ARENA";
-	gamemode_nocombo[42] = [6,8,10,18,20,21,25,26,27,36,37,40,42,43];
+	gamemode_nocombo[42] = [6,8,10,18,20,21,25,26,27,36,37,40,42,43,44,45];
 	
 	gamemode[26] = "DAILY RACE";
 	gamemode_unlock[26] = "";
@@ -296,7 +296,7 @@ function scrGameModes() {
 	gamemode_have[40] = 0;
 	gamemode_tip[40] = "THERE CAN BE ONLY ONE";
 	gamemode_description[40] = "ONLY ONE ENEMY SPAWNS EACH AREA. BUT THE ENEMY IS BEEFED UP!";
-	gamemode_nocombo[40] = [25,42,26,27,37,8];
+	gamemode_nocombo[40] = [25,42,26,27,37,8,45];
 	
 	gamemode[41] = "DOUBLE ENEMY HP";
 	gamemode_unlock[41] = "PLAY A RUN WITH A COMBINATION OF TWO GAMEMODES";
@@ -311,6 +311,20 @@ function scrGameModes() {
 	gamemode_tip[43] = "CROWN CROWN CROWN CROWN";
 	gamemode_description[43] = "START WITH THE ABILITY TO EQUIP MULTIPLE CROWNS AT ONCE";
 	gamemode_nocombo[43] = [25,42,26,27,37,8];
+	
+	gamemode[44] = "(BETA) ALT SPAWNS";//
+	gamemode_unlock[44] = "DISCOVER 10 SECRET AREAS";
+	gamemode_have[44] = 0;
+	gamemode_tip[44] = "ALTERNATE TIMELINE";
+	gamemode_description[44] = "AREAS SPAWN DIFFERENT ENEMIES (STILL W.I.P.)";
+	gamemode_nocombo[44] = [26,27,37,8,25,42,45];
+	
+	gamemode[45] = "RANDOM SPAWNS";//
+	gamemode_unlock[45] = "VISIT OASIS, SAVANNA AND SCRAPYARD IN ONE RUN ON ALT-SPAWNS";
+	gamemode_have[45] = 0;
+	gamemode_tip[45] = "ALTERNATE TIMELINE";
+	gamemode_description[45] = "AREAS SPAWN RANDOM ENEMIES, CLASSIC LOOP! (STILL W.I.P. MIGHT ADD RANDOM BOSSES <3)";
+	gamemode_nocombo[45] = [26,27,37,8,25,42,44,40];
 	
 	/*
 	gamemode[43] = "ALTERNATIVE SPAWNS";
@@ -360,6 +374,8 @@ function scrGameModes() {
 	i++; gamemodeOrder[i] = 6;//Claustophobia
 	i++; gamemodeOrder[i] = 20;//Agoraphobia
 	i++; gamemodeOrder[i] = 40;//1vs1
+	i++; gamemodeOrder[i] = 44;//alt spawns
+	i++; gamemodeOrder[i] = 45;//random spawns
 	i++; gamemodeOrder[i] = 33;//all deflector
 	i++; gamemodeOrder[i] = 10;//random areas
 	i++; gamemodeOrder[i] = 23;//random chars

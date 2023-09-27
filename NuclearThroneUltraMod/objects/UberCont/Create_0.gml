@@ -3,9 +3,8 @@ version = 000//23 is final probably
 encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
-updateVersion = "PR 30.04"//"PR 30.02";
-subUpdateVersion = ".01";
-serverIp =  "86.94.124.128";serverPort =  1414;
+updateVersion = "PR 30.05"//"PR 30.02";
+subUpdateVersion = ".00";
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
 /*
@@ -79,7 +78,9 @@ leaderboardType = LEADERBOARD.SCORE;
 firstFloorMaker = true;
 seedOffset = 0;
 wallsBroken = 0;
-
+visitedScrap = false;
+visitedOasis = false;
+visitedSavanna = false;
 scrInit();
 window_set_min_width(640);
 window_set_min_height(480);

@@ -28,11 +28,7 @@ if target != noone && instance_exists(target)
 	direction = point_direction(x,y,target.xprevious,target.yprevious)
     BackCont.shake += 0.1
     
-if sprite_index=spr_hurt{//the prick hit me!
-sprite_index= spr_fire;
-image_speed=0;
-image_index=4;
-}
+
 
 if random(3)<1
 {

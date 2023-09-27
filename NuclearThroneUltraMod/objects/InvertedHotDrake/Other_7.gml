@@ -7,7 +7,12 @@ else if sprite_index=spr_fire
 {
 sprite_index=spr_idle
 }
-
+if sprite_index == spr_hurt && alarm[2] > 1
+{
+	sprite_index= spr_fire;
+	image_speed=0;
+	image_index=4;
+}
 if sprite_index=spr_prep && alarm[3]>0//prep
 {
 image_speed=0;

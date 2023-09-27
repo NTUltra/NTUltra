@@ -19,6 +19,7 @@ function scrLoadStats() {
 		cbst_diff[dir] = ini_read_real("STATS","cbstdiff"+string(dir),0);
 
 		cbst_loop[dir] = ini_read_real("STATS","cbstloop"+string(dir),0);
+		
 		var cir = 0;
 		ctot_all_crowns_taken[dir] = 0;
 		repeat(crownmax + secretcrownmax)
@@ -34,6 +35,13 @@ function scrLoadStats() {
 	}
 
 	ctot_walls_destroyed = ini_read_real("STATS","ctotwallsdestroyed",0);
+	tot_areas = [];
+	var i = 0;
+	while(ini_key_exists("STATS","totarea"+string(i))) {
+		debug("aaa",i);
+		tot_areas[i] = ini_read_real("STATS","totarea"+string(i),1);
+		i++;
+	}
 	
 	dir = 0;
 	repeat(maxskill+2)

@@ -163,9 +163,9 @@ secretlevelcount = 0;
 acceleration = 3;
 flipDir = 1;
 weaponspickedup = 0;
-
+screenshake400 = true;
 if UberCont.opt_shake != 4
-screenshake400 = false
+	screenshake400 = false
 with UberCont {
     if scrIsGamemode(17) //CHEATS
 		public = 0

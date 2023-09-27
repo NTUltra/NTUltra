@@ -575,7 +575,16 @@ if race=22
 		event_user(0);
 	}
 }
-
+if race == 25 && tookHit
+{
+	repeat(2 + (prevhealth - my_health))
+	{
+		with instance_create(x+random(16)-8,y+random(16)-8,RavenFeather)
+		{
+			image_index = 1;
+		}
+	}
+}
 /* */
 ///imunity codes
 if ultra_got[48]&&lag>0
@@ -603,7 +612,8 @@ if armour>0
 	resetPrevHealth = true;
 
 	scrBlankArmour();
-	scrSerpentArmourStrike();
+	if ultra_got[64]
+		scrSerpentArmourStrike();
 
 
 	}

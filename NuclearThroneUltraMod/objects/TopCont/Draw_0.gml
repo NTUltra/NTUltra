@@ -32,24 +32,28 @@ if fps_real >= fps
 }
 	with Wall
 	{
-		draw_sprite_part_ext(outspr,outindex,l,r,w,h,x-4+l,y-12+r,1,1,c_white,1)
+		draw_sprite_part_ext(outspr,outindex,l,r,w,h,x-4+l,y-12+r,1,1,colour,1);
 	}
 	with Wall {
-		draw_sprite(topspr,topindex,x,y-8)
+		draw_sprite_ext(topspr,topindex,x,y-8,1,1,image_angle,colour,1);
 	}
-	with VikingWall
+	with ElementorWallPhase
 	{
 		if visible
 		{
 			draw_sprite_part_ext(outspr,outindex,l,r,w,h,x-4+l,y-12+r,1,1,c_gray,1)
 		}
 	}
-	with VikingWall
+	with ElementorWallPhase
 	{
 		if visible
 		{
 			draw_sprite_ext(topspr,topindex,x,y-8,1,1,image_angle,c_gray,1)
 		}
+	}
+	with ElementorWallDisappear
+	{
+		draw_self();	
 	}
 if instance_exists(Spiral)
 	with Bones

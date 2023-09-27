@@ -9,6 +9,15 @@ function scrPopEnemies() {
 	{
 		return;
 	}
+	if scrIsGamemode(44)
+	{
+		scrPopEnemiesAlt();
+		return;	
+	}
+	if scrIsGamemode(45) && random(3) < 1
+	{
+		spawnarea = scrGetRandomArea();
+	}
     //DESERT
     if spawnarea = 1 or spawnarea = 0 // or spawnarea = 100
     {
@@ -1389,7 +1398,7 @@ function scrPopEnemies() {
 			}
 			if r > 4
 			{
-				instance_create(x + 16, y + 16, choose(octaBot,squareBot,wallBot,Sniper,PalaceGuardian))
+				instance_create(x + 16, y + 16, choose(octaBot,squareBot,wallBot,sniper,palaceGuardian))
 			}
 		    else if r > 1 || instance_number(enemy) < 1
 			{

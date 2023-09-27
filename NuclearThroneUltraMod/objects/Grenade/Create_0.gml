@@ -3,6 +3,7 @@ image_speed = 0;
 friction = 0.1
 alarm[1] = 6
 alarm[0] = 60
+alarm[6] = 10;
 blinkTime = 4;
 alarm[3] = alarm[0] - 12;
 isGrenade = true;

@@ -10,7 +10,7 @@
   "bitRate": 192,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.870748,
+  "duration": 0.861474,
   "parent": {
     "name": "Elementor",
     "path": "folders/Sounds/Player/Elementor.yy",

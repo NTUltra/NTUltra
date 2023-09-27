@@ -1,4 +1,9 @@
 function scrPopProps() {
+	var ar = Player.area;
+	if scrIsGamemode(45) && random(3) < 1
+	{
+		spawnarea = scrGetRandomArea();
+	}
 	if !place_meeting(x,y,Player) and !place_meeting(x,y,enemy) and !place_meeting(x,y,RadChest) and !place_meeting(x,y,AmmoChest) and !place_meeting(x,y,WeaponChest) and !place_meeting(x,y,MeleeFake) and !place_meeting(x,y,GatorSmoke) and !place_meeting(x,y,prop)
 	{
 
@@ -292,5 +297,5 @@ function scrPopProps() {
 	}
 
 
-
+	Player.area = ar;
 }

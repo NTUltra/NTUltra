@@ -13,7 +13,7 @@ if type == 3 || inverted
 		}
 	}
 	var atLeast = 30;
-	if totalHp < atLeast && !instance_exists(BigDisc) && !instance_exists(GraveyardFish) && numEn < 4 && !instance_exists(becomenemy)
+	if totalHp < atLeast && !instance_exists(BigDisc) && !instance_exists(GraveyardFish) && numEn < 4 && !instance_exists(WantBoss)
 	{
 		goTime = true;
 	}

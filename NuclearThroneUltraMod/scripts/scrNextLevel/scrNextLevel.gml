@@ -1,5 +1,6 @@
 /// @description areas regular
 function scrNextLevel() {
+	scrAddArea(area);
 	if scrIsCrown(34)
 	{
 		if skill_got[5]
@@ -700,5 +701,6 @@ function scrNextLevel() {
 	if scrIsCrown(10)
 		hard += 0.5;
 	hard = max(0,hard);
+	scrAddArea(area);
 	scrAddToRoute(area);
 }

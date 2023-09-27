@@ -9,7 +9,7 @@ function EnemyHealthAdjustments(){
 		if scrIsHardMode()
 			maxhealth *= 1.1;
 		if scrIsCrown(10)
-			maxhealth *= 1.2;//Crown of difficulty
+			maxhealth *= 1.15;//Crown of difficulty
 		
 		my_health = maxhealth;
 		//var hpReduction = 0;

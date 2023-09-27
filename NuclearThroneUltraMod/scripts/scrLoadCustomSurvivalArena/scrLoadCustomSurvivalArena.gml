@@ -18,6 +18,5 @@ function scrLoadCustomSurvivalArena(){
 			file_text_close(file);
 			customSurvivalArena = json_parse(text);
 		}
-		debug("NEW Arena: ", customSurvivalArena);
 	}
 }

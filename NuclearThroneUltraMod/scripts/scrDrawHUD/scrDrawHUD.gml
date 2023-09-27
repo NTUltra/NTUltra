@@ -219,7 +219,11 @@ function scrDrawHUD() {
 	    }
 	}
 	if (dataRef.lastWishPrevent)
+	{
 		draw_sprite_ext(sprLastWishPrevent,0,vx+__view_get( e__VW.WView, 0 )-16,vy+36,1,1,0,c_white,1);
+		if totalLives < 1
+			dix++;
+	}
 	dix ++
 	var sheepFakouts = dataRef.sheepFakeouts;
 	if sheepFakouts > 0

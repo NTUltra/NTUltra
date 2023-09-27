@@ -98,13 +98,12 @@ speed = 0
 //move_contact_solid(direction,8);
 var i = 0;
 var dis = 8;
-var canPhase = instance_exists(Player) && Player.ultra_got[93];
 while (i < dis)
 {
 	x += lengthdir_x(1,direction);
 	y += lengthdir_y(1,direction);
 	var wall = instance_place(x,y,Wall);
-	if ((wall != noone && wall.object_index != WallHitMe) || (!canPhase && place_meeting(x,y,VikingWall)))
+	if ((wall != noone && wall.object_index != WallHitMe) || (team != 2 && place_meeting(x,y,ElementorWallPhase)))
 	{
 		i = dis;
 		direction += 180+random_range(-20,20);

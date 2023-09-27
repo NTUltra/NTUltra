@@ -12,15 +12,6 @@ if owner > -1 && instance_exists(owner) && !ending {
 	x+lengthdir_x(300,image_angle),
 	y+lengthdir_y(300,image_angle),
 	Wall,true,true);
-	if instance_exists(VikingWall) && instance_exists(Player) && !Player.ultra_got[93]
-	{
-		var otherHit = collision_line_point(x,y,
-		x+lengthdir_x(300,image_angle),
-		y+lengthdir_y(300,image_angle),
-		VikingWall,true,true);
-		if point_distance(x,y,otherHit[1],otherHit[2]) < point_distance(x,y,hit[1],hit[2])
-			hit = otherHit;
-	}
 	BackCont.viewx2 = BackCont.viewx + lengthdir_x(camKick,image_angle+180)*UberCont.opt_shake
 	BackCont.viewy2 = BackCont.viewy + lengthdir_y(camKick,image_angle+180)*UberCont.opt_shake
 	BackCont.shake = max(BackCont.shake,camShake);

@@ -195,7 +195,7 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+20 and UberCon
     snd_slct=sndMutant10Slct;
     break;
     case 11:
-    snd_slct=sndSniperTarget;
+    snd_slct=sndHunterSlct;
     break;
     case 12:
     snd_slct=sndMutant12Slct;
@@ -204,16 +204,16 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+20 and UberCon
     snd_slct=sndSheep;
     break;
     case 14:
-    snd_slct=sndPanda;
+    snd_slct=sndMutant14Slct;
     break;
     case 15:
     snd_slct=sndHyperLightning;
     break;
     case 16:
-    snd_slct=sndHammer;
+    snd_slct=sndMutant16Slct;
     break;
     case 17:
-    snd_slct=sndGunSmithHit;
+    snd_slct=sndMutant17Slct;
     break;
     case 18:
     snd_slct=sndStatueCharge;
@@ -237,7 +237,7 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+20 and UberCon
     snd_slct=sndMutant24NewSlct;
     break;
     case 25:
-    snd_slct=sndRavenLift;
+    snd_slct=sndMutant25Slct; 
     break;
     case 26:
     snd_slct=sndMutant26Slct;

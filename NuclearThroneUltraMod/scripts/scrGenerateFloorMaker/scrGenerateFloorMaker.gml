@@ -18,7 +18,9 @@ function scrGenerateFloorMaker(limiter) {
 			goal += s;
 			
 			if ((Player.area = 3 || Player.area == 136) and Player.subarea = 3)
+			{
 				goal = 150+s//50
+			}
 			else if Player.area == 3 || Player.area == 136
 				goal = 120+s;
 			else if Player.area = 4
@@ -62,12 +64,20 @@ function scrGenerateFloorMaker(limiter) {
 				goal = 120+s
 			}
 			else if Player.area == 9 && Player.subarea == 3
-			goal = 350;
+			{
+				if scrIsGamemode(44)
+					goal = 110;
+				else
+					goal = 350;
+			}
 			else if Player.area == 118 && Player.subarea == 3
 			goal = 300;
 			else if Player.area == 119 || Player.area == 120
 			{
-				goal = 60;
+				if scrIsGamemode(44)
+					goal = 120;
+				else
+					goal = 60;
 				s = -10;
 			}
 			else if Player.area == 126 || Player.area == 127
@@ -201,7 +211,10 @@ function scrGenerateFloorMaker(limiter) {
 			instance_create(x+128,y,Floor)
 			instance_create(x-128,y,Floor)
 			instance_create(x+16,y+16,Carpet);
-			instance_create(x,y,NuclearThrone1);
+			if scrIsGamemode(44)
+				instance_create(x,y,ChesireCat);
+			else
+				instance_create(x,y,NuclearThrone1);
 		}
 		else if (Player.area == 118 && Player.subarea == 3)
 		{

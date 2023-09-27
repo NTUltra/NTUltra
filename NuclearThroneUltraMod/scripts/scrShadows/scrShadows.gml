@@ -15,12 +15,13 @@ function scrShadows() {
 	draw_clear_alpha(c_black,0)
 	with Wall
 	{
-	if collision_point(x+8,y+24,Floor,false,false)
-		draw_sprite_ext(outspr,outindex,x-vx,y+2+16-vy,1,-1,0,c_black,1)
+		if collision_point(x+8,y+24,Floor,false,false)
+			draw_sprite_ext(outspr,outindex,x-vx,y+2+16-vy,1,-1,0,c_black,1)
 	}
-	with VikingWall
+	with ElementorWallPhase
 	{
-		if !collision_point(x+8,y+24,Top,false,false) and !collision_point(x+8,y+24,TopSmall,false,false)
+		//if !collision_point(x+8,y+24,Top,false,false) and !collision_point(x+8,y+24,TopSmall,false,false)
+		if collision_point(x+8,y+24,Floor,false,false)
 			draw_sprite_ext(outspr,outindex,x-vx,y+2+16-vy,1,-1,0,c_black,1)
 	}
 	with Bones

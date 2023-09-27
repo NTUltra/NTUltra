@@ -76,10 +76,20 @@ motion_add(random(360),2+random(8) );
 if race = 18
 {
 
-repeat(10+irandom(5) )
+repeat(13 )
     {with instance_create(x+random(16)-8,y+random(16)-8,Feather)
     motion_add(random(360),5+random(10) );}
 
+}
+if race == 25
+{
+	repeat(13)
+	{
+		with instance_create(x+random(16)-8,y+random(16)-8,RavenFeather)
+		{
+			image_index = 1;
+		}
+	}
 }
 
 if race=11
@@ -302,6 +312,7 @@ instance_destroy();
 with instance_create(x,y,PlayerSpawn)//Data to keep
 {
 	//alarm[3]=300;//immunity
+	screenshake400 = other.screenshake400;
 	weaponspickedup = other.weaponspickedup;
 	onlyusemerevolver = other.onlyusemerevolver;
 	ultramod = other.ultramod;

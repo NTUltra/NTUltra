@@ -55,7 +55,7 @@ if curse=1//ITS CURSED YOU WOT!? LETS FIGHT!
 	if instance_exists(GuardianStatue)
 	{
 		with instance_nearest(x,y,GuardianStatue)
-			my_health = 0
+			alarm[1] = 30;
 	}
 
 }

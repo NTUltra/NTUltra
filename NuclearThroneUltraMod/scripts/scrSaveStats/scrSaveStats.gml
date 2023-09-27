@@ -35,7 +35,11 @@ function scrSaveStats() {
 	dir +=1;}
 	
 	ini_write_real("STATS","ctotwallsdestroyed",ctot_walls_destroyed);
-	
+	var al = array_length(tot_areas);
+	for(var i = 0; i < al; i++)
+	{
+		ini_write_real("STATS","totarea"+string(i),tot_areas[i]);
+	}
 	dir = 0;
 	repeat(maxskill+2)
 	{

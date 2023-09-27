@@ -69,7 +69,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5860ca0c-cae9-46d6-80de-45070be46e8c","path":"sprites/sprHotDrakeFlameCannonDead/sprHotDrakeFlameCannonDead.yy",},},},"Disabled":false,"id":"82f55bce-d77f-4bd5-88de-6b1f8560797c","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 10,
     "yorigin": 10,

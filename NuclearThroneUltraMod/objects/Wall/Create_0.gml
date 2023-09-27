@@ -1,6 +1,5 @@
 var area;
-right = 1;
-z = 0;
+colour = c_white;
 if instance_exists(Player)
 {
 	area = Player.area

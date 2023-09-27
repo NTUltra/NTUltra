@@ -1696,7 +1696,7 @@ function scrWeapons() {
 	wep_load[153] = 2
 	wep_cost[153] = 2
 	wep_sprt[153] = sprIncinerator
-	wep_area[153] = 15
+	wep_area[153] = 14
 	wep_text[153] = "firestarter"
 	wep_swap[153] = sndSwapFlame
 	wep_rad[153] = 0;
@@ -1795,7 +1795,7 @@ function scrWeapons() {
 	wep_load[162] = 2
 	wep_cost[162] = 3
 	wep_sprt[162] = sprMegaIncinerator
-	wep_area[162] = 18//15 quadripple machinegun
+	wep_area[162] = 17//15 quadripple machinegun
 	wep_text[162] = "senior firestarter"
 	wep_swap[162] = sndSwapShotgun
 	wep_rad[162] = 0;
@@ -3005,7 +3005,7 @@ function scrWeapons() {
 	wep_load[272] = 26
 	wep_cost[272] = 0
 	wep_sprt[272] = sprGhostBlade
-	wep_area[272] = 20
+	wep_area[272] = 18
 	wep_text[272] = "spooky"
 	wep_swap[272] = sndSwapSword
 	wep_rad[272] = 0;
@@ -3035,10 +3035,10 @@ function scrWeapons() {
 	wep_name[275] = "GHOST SHOVEL"
 	wep_type[275] = 0
 	wep_auto[275] = 0
-	wep_load[275] = 39
+	wep_load[275] = 38
 	wep_cost[275] = 0
 	wep_sprt[275] = sprGhostShovel
-	wep_area[275] = 22
+	wep_area[275] = 20
 	wep_text[275] = "digging up graves"
 	wep_swap[275] = sndSwapHammer
 	wep_rad[275] = 0;
@@ -3167,7 +3167,7 @@ function scrWeapons() {
 	wep_name[287] = "GOLDEN FLARE GUN"
 	wep_type[287] = 4
 	wep_auto[287] = 0
-	wep_load[287] = 23
+	wep_load[287] = 24
 	wep_cost[287] = 1
 	wep_sprt[287] = sprGoldenFlareGun
 	wep_area[287] = 18
@@ -3893,10 +3893,10 @@ function scrWeapons() {
 	wep_name[353] = "TERMITE GUN"
 	wep_type[353] = 1
 	wep_auto[353] = 1
-	wep_load[353] = 2
+	wep_load[353] = 4
 	wep_cost[353] = 1.5
 	wep_sprt[353] = sprTermiteGun
-	wep_area[353] = 10
+	wep_area[353] = 13
 	wep_text[353] = "termites eat enemy mutants"
 	wep_swap[353] = sndSwapMotorized
 	wep_rad[353] = 0;
@@ -5359,7 +5359,7 @@ function scrWeapons() {
 	wep_load[484] = 10
 	wep_cost[484] = 0
 	wep_sprt[484] = sprGhostDagger
-	wep_area[484] = 16
+	wep_area[484] = 15
 	wep_text[484] = "ghastly"
 	wep_swap[484] = sndSwapSword
 	wep_rad[484] = 0;
@@ -7301,7 +7301,7 @@ function scrWeapons() {
 	wep_rad[660] = 0;
 	
 	wep_name[661] = "ROLL OUT THE BOOM!"
-	wep_type[661] = 5
+	wep_type[661] = 4
 	wep_auto[661] = 0
 	wep_load[661] = 35
 	wep_cost[661] = 4
@@ -7312,7 +7312,7 @@ function scrWeapons() {
 	wep_rad[661] = 0;
 	
 	wep_name[662] = "PHOENIX"
-	wep_type[662] = 5
+	wep_type[662] = 4
 	wep_auto[662] = 0
 	wep_load[662] = 17
 	wep_cost[662] = 2.5

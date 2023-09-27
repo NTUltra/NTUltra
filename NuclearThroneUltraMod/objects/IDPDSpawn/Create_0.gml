@@ -11,7 +11,21 @@ var tries = 200;
 do {
 	x = Player.x
 	y = Player.y
-	ang = random(360);
+	if tries < 50 || instance_number(IDPDSpawn) > 3
+		ang = random(360);
+	else
+	{
+		var n = instance_nearest(Player.x,Player.y,enemy)
+		if n != noone
+			ang = Player.direction + 
+			(angle_difference(Player.direction,point_direction(Player.x,Player.y,n.x,n.y))*0.5) +
+			(angle_difference(Player.direction,point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y))*0.5) +
+			random_range(150,-150);//random(360);
+		else
+			ang = Player.direction + 
+			angle_difference(Player.direction,point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y))*0.5 +
+			random_range(150,-150);//random(360);
+	}
 	x = Player.x+lengthdir_x(96+random(128),ang);
 	y = Player.y+lengthdir_y(96+random(128),ang);
 	dir = instance_nearest(x,y,Floor)

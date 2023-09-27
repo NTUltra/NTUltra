@@ -774,15 +774,15 @@ function scrLoadRace() {
 	snd_valt=sndMutant10Valt;
 	break;
 	case 11://Hunter
-	snd_hurt=sndHunterHit
-	snd_dead=sndExplosionXL
-	snd_lowa=sndSniperHit;
-	snd_lowh=sndMutant8LowH;
-	snd_crwn=sndMutant8Crwn;
-	snd_chst=sndMutant8Chst;
-	snd_wrld=sndSniperTarget;
-	snd_thrn=sndSniperTarget;
-	snd_valt=sndSniperTarget;
+	snd_hurt=sndMutantHunterHurt
+	snd_dead=sndMutantHunterDead
+	snd_lowa=sndMutantHunterLowA;//DMUKGURFAH
+	snd_lowh=sndMutantHunterLowH;//VE SHO
+	snd_crwn=sndMutantHunterCrwn;
+	snd_chst=sndMutantHunterChst;
+	snd_wrld=sndMutantHunterWrld;
+	snd_thrn=sndMutantHunterThrn;
+	snd_valt=sndMutantHunterValt;//OA FHO we examine
 	break;
 	case 12://YC
 	snd_hurt=sndMutant12Hurt
@@ -829,28 +829,28 @@ function scrLoadRace() {
 	snd_valt=sndPlasmaBigExplodeUpg;
 	break;
 	case 16://Viking
-	snd_hurt=sndVikingHit
-	snd_dead=sndStatueHurt
-	snd_lowa=sndVikingLowA;
-	snd_lowh=sndVikingHit;
-	snd_crwn=sndLastEnemy;
-	snd_chst=sndStatueHurt;
-	snd_wrld=sndSnowTankPreShoot;
-	snd_thrn=sndStatueHurt;
-	snd_valt=sndSnowTankPreShoot;
+	snd_hurt=sndMutant16Hurt
+	snd_dead=sndMutant16Dead
+	snd_lowa=sndMutant16LowA;
+	snd_lowh=sndMutant16LowH;
+	snd_crwn=sndMutant16Crwn;
+	snd_chst=sndMutant16Chst;
+	snd_wrld=sndMutant16Wrld;
+	snd_thrn=sndMutant16Chst;
+	snd_valt=sndMutant16Valt;
 	break;
 	case 17://Gun smith
-	snd_hurt=sndGunSmithHit
-	snd_dead=sndGunSmithDeath
-	snd_lowa=sndGunSmithLowAmmo;
-	snd_lowh=sndGunSmithLowHP;
-	snd_crwn=sndGunSmithLowAmmo;
-	snd_chst=sndGunSmithStart;
-	snd_wrld=sndGunSmithStart;
-	snd_thrn=sndGunSmithStart;
-	snd_valt=sndGunSmithStart;
+	snd_hurt=sndMutant17Hurt
+	snd_dead=sndMutant17Dead
+	snd_lowa=sndMutant17LowA;
+	snd_lowh=sndMutant17LowH;
+	snd_crwn=sndMutant17Crwn;
+	snd_chst=sndMutant17Chst;
+	snd_wrld=sndMutant17Wrld;
+	snd_thrn=sndMutant17Thrn;
+	snd_valt=sndMutant17Valt;
 	break;
-	case 18://ANGEL
+	case 18://ANGEL 
 	snd_hurt=sndAngelHit
 	snd_dead=sprProtoStatueDoneDie
 	snd_lowa=sndScorpionDie;
@@ -928,15 +928,15 @@ function scrLoadRace() {
 	snd_valt=sndMutant24NewValt;
 	break;
 	case 25://
-	snd_hurt=sndRavenHit
-	snd_dead=sndRavenDie
-	snd_lowa=sndRavenLand;
-	snd_lowh=sndRavenLand;
-	snd_crwn=sndRavenLift;
-	snd_chst=sndRavenLift;
-	snd_wrld=sndRavenScreech;
-	snd_thrn=sndRavenScreech;
-	snd_valt=sndRavenLift;
+	snd_hurt=sndMutant25Hurt
+	snd_dead=sndMutant25Dead
+	snd_lowa=sndMutant25LowA;
+	snd_lowh=sndMutant25LowH;
+	snd_crwn=sndMutant25Crwn;
+	snd_chst=sndMutant25Chst;
+	snd_wrld=sndMutant25Wrld;
+	snd_thrn=sndMutant25Thrn;
+	snd_valt=sndMutant25Valt;
 	break;
 	case 26://
 	snd_hurt=sndMutant26Hurt

@@ -2060,11 +2060,13 @@ if instance_exists(PlayerAlarms2) && PlayerAlarms2.alarm[1] < 1
 	}
 	else if scrIsCrown(10) //Crown of difficulty
 	{
-		var am = 1.25
+		var am = 1.15
+		var s = 1.125
 		//var s = 1.15;
 		if is60fps
 		{
-			am = 0.625;
+			am = 0.575;
+			s *= 0.5;
 			//s = 0.575
 		}
 		with enemy
@@ -2073,12 +2075,19 @@ if instance_exists(PlayerAlarms2) && PlayerAlarms2.alarm[1] < 1
 			{
 				alarm[1] -= am;
 			}
-			speed *= 1.15;
+			speed *= s;
 		}
 	}
 }
 wave += 0.4;//Looping animations
-
+if instance_exists(ElementorWall) {
+	var wl = instance_place(x+hspeed+lengthdir_x(1,direction),y+vspeed+lengthdir_y(1,direction),ElementorWall);
+	if wl != noone
+	{
+		with wl
+			instance_destroy();
+	}
+}
 //Hammer head
 if hammerheadcounter > 0
 {

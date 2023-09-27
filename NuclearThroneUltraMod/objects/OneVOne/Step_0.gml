@@ -15,6 +15,6 @@ with projectile
 {
 	if canBeMoved && team != Player.team
 	{
-		speed *= 1.011;	
+		speed *= 1.01;	
 	}
 }

@@ -2724,19 +2724,51 @@ function scrPowers() {
 				yy=16*(UberCont.mouse__y div 16);
 				var l = 16;
 				var pd = point_direction(UberCont.mouse__x,UberCont.mouse__y,x,y);
-				while(place_meeting(xx,yy,hitme))
+				var hm = instance_place(xx,yy,hitme);
+				while(hm != noone && hm.team != 0)
 				{
+					hm = instance_place(xx,yy,hitme);
 					xx=16*((UberCont.mouse__x + lengthdir_x(l,pd)) div 16);
 					yy=16*((UberCont.mouse__y + lengthdir_y(l,pd)) div 16);
 					l += 8;
 				}
 				if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y) > 16 {
-				    if (place_meeting(xx,yy,Floor) && !scrIsCrown(25))&&!place_meeting(xx,yy,Wall)&&
-					!place_meeting(xx,yy,VikingWall)
+					var wl = instance_place(xx,yy,Wall);
+					var canReplaceWall = true;
+					if wl != noone && wl.object_index != ElementorWall
+					{
+						if place_meeting(xx-16,yy,Floor) || place_meeting(xx+16,yy,Floor) || place_meeting(xx,yy+16,Floor) || place_meeting(xx,yy-16,Floor)
+						{
+							with wl
+							{
+								instance_destroy(id,false);
+								instance_create(x,y,FloorExplo);
+							}
+						}
+						else
+						{
+							canReplaceWall = false;
+						}
+					}
+				    if (place_meeting(xx,yy,Floor) && !scrIsCrown(25))&&//!place_meeting(xx,yy,Wall)&&
+					!place_meeting(xx,yy,ElementorWall)
 				    {
-					    snd_play_2d(sndStatueHurt);
-					    with instance_create(xx,yy,VikingWall)
-					    alarm[0]=15;
+						BackCont.shake += 3;
+						repeat(3)
+						{
+							with instance_create(xx+8,yy+8,Dust)
+							{
+								motion_add(random(360),3+random(2));	
+							}
+						}
+					    with instance_create(xx,yy,ElementorWall)
+						{
+							with instance_create(x,y,ElementorWallDisappear) {
+								sprite_index = sprElementorWallCreate;	
+							}
+							snd_play(sndStatueHurt);
+							alarm[0]=15;
+						}
 						ammo[wepType] =  ammo[wepType] - cost;
 				    }
 				}
@@ -3289,11 +3321,11 @@ function scrPowers() {
 			instance_destroy(SheepStorm);
 		if skill_got[2]==1//extra feet
 		{
-		maxSpeed=4.5;
+			maxSpeed=4.5;
 		}
 		else
 		{
-		maxSpeed=4;
+			maxSpeed=4;
 		}
 	}
 	}

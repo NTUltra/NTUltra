@@ -16,6 +16,7 @@ snd_play(sndStatueCharge);
 with Player//Data to keep
 {
 	//bskin=other.bskin;
+	screenshake400 = other.screenshake400;
 	weaponspickedup = other.weaponspickedup;
 	onlyusemerevolver = other.onlyusemerevolver;
 	inverted = other.inverted;

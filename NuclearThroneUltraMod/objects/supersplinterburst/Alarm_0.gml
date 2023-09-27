@@ -21,11 +21,11 @@ if instance_exists(creator)
 	BackCont.viewx2 += lengthdir_x(15,d+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(15,d+180)*UberCont.opt_shake
 	BackCont.shake += 6
-	var am = max(3.5 - ammo);
+	var am = max(6 - ammo,2);
 	repeat(am) {
 		with instance_create(x,y,Splinter)//5 splinters
 		{
-			motion_add(d+(random(30)-15)*Player.accuracy,20+random(4))
+			motion_add(d+((random(6)-3.5)*(4-other.ammo))*Player.accuracy,20+random(4))
 			scrCopyWeaponMod(other);
 			image_angle = direction
 			team = other.team

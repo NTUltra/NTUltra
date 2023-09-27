@@ -1,4 +1,4 @@
-/// @description Inverted!
+/// @description Ultra!
 
 // Inherit the parent event
 event_inherited();
@@ -6,7 +6,7 @@ raddrop += 20;
 maxhealth = 100;
 maxSpeed += 1;
 acc += 0.2;
-actTime -= 20;
+actTime -= 10;
 projectileSpeed += 2;
 EnemyHealthAdjustments();
 

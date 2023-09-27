@@ -7,6 +7,14 @@ function scrDecideInvader(){
 		var area = Player.area;
 		var subarea = Player.subarea;
 		var loops = Player.loops;
+		if scrIsGamemode(45)
+		{
+			SetSeed();
+			if random(3) < 1
+			{
+				area = scrGetRandomArea();	
+			}
+		}
 		if scrIsHardMode()//Hard mode
 			loops += 1;
 		if loops > 1

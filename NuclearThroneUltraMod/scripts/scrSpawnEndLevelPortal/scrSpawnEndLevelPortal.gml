@@ -30,34 +30,73 @@ function scrSpawnEndLevelPortal(){
 					}
 					if dir != noone
 					{
-						if instance_exists(Player)
+						if !instance_exists(UltraBigDogExplode) && !instance_exists(UltraBigDog)
 						{
-							if Player.area == 119
+							if instance_exists(Player)
 							{
-								instance_create(dir.x+16,dir.y+16,BecomeThrone2);
-								scrTurnIntoPortalArea();
-								exit;
+								if Player.area == 119
+								{
+									if scrIsGamemode(44)
+									{
+										instance_create(dir.x+16,dir.y+16,UltraBigDog);
+										repeat(2 + min(8,BackCont.loops))
+										{
+											instance_create(dir.x+16,dir.y+16, PalaceGuardian);
+										}
+									}
+									else
+									{
+										instance_create(dir.x+16,dir.y+16,BecomeThrone2);
+									}
+									scrTurnIntoPortalArea();
+									exit;
+								}
+								else if Player.area == 120
+								{
+									if scrIsGamemode(44)
+									{
+										with instance_create(dir.x+16,dir.y+16,InvertedBigBadBat) {
+											my_health *= 2;	
+										}
+										repeat(1 + min(6,BackCont.loops))
+										{
+											instance_create(dir.x+16,dir.y+16, InvertedExploGuardian);
+										}
+									}
+									else
+									{
+										instance_create(dir.x+16,dir.y+16,BecomeInvertedThrone2);
+									}
+									scrTurnIntoPortalArea(true);
+									exit;
+								}
 							}
-							else if Player.area == 120
+							else
 							{
-								instance_create(dir.x+16,dir.y+16,BecomeInvertedThrone2);
-								scrTurnIntoPortalArea(true);
-								exit;
-							}
-						}
-						else
-						{
-							if BackCont.area == 119
-							{
-								instance_create(dir.x+16,dir.y+16,BecomeThrone2);
-								scrTurnIntoPortalArea();
-								exit;
-							}
-							else if BackCont.area == 120
-							{
-								instance_create(dir.x+16,dir.y+16,BecomeInvertedThrone2);
-								scrTurnIntoPortalArea(true);
-								exit;
+								if BackCont.area == 119
+								{
+									if scrIsGamemode(44)
+									{
+										instance_create(dir.x+16,dir.y+16,UltraBigDog);
+										repeat(2 + min(8,BackCont.loops))
+										{
+											instance_create(dir.x+16,dir.y+16, PalaceGuardian);
+										}
+									}
+									else
+									{
+										instance_create(dir.x+16,dir.y+16,BecomeThrone2);
+									}
+								
+									scrTurnIntoPortalArea();
+									exit;
+								}
+								else if BackCont.area == 120
+								{
+									instance_create(dir.x+16,dir.y+16,BecomeInvertedThrone2);
+									scrTurnIntoPortalArea(true);
+									exit;
+								}
 							}
 						}
 					    with instance_create(dir.x+16,dir.y+16,Portal)

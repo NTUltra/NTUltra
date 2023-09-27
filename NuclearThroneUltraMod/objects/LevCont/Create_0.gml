@@ -21,6 +21,8 @@ if Player.charpoints > 0
 	var xo = xx;
 	var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-60;
 	var num = 0
+	if !instance_exists(ElementorHeadMenu)
+		instance_create(x,y,ElementorHeadMenu);
 	repeat(racemax+1)
 	{
 		with instance_create(xx, yy, CharIcon)

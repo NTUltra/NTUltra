@@ -156,6 +156,14 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 			ultra_name[51] = "HYPNOTIZE"
 			ultra_text[51] = "ENEMIES REACT AND MOVE SLOWER##ACTIVE CHANGES INTO HYPNOSIS#HYPNOSIS RE-ACTIVATES YOUR PASSIVE#CAN BE USED 3 TIMES EACH AREA#THRONE BUTT INCREASES USES TO 5"
 			ultra_tips[51] = "no one expects a sheep to carry a gun"
+			if skill_got[2]==1//extra feet
+			{
+				maxSpeed=4.5;
+			}
+			else
+			{
+				maxSpeed=4;
+			}
 		}
 	}
 	else if skill == 55 && Player.race == 14 && ((Player.skill_got[13] || Player.skill_got[34] || Player.skill_got[20]) && !Player.skill_got[5] || Player.unlockAlternativeUltras)

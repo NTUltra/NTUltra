@@ -3,7 +3,14 @@ if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+16 and UberCont.mouse__y <
 	with Player
 	{
 		var keepRace = race;
-		race = other.char;
+		if other.char == 0
+		{
+			do {race = 1+irandom(racemax-1);} until UberCont.race_have[race] = 1
+		}
+		else
+		{
+			race = other.char;
+		}
 		bskin = UberCont.skin[race];
 		scrLoadRace();
 		fakeRace = race;

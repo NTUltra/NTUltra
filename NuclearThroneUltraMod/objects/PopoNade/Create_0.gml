@@ -3,6 +3,7 @@ friction = 0
 alarm[1] = 10
 alarm[0] = 90
 alarm[2] = 1;
+alarm[6] = 10;
 gotHit = false;
 team = 3;
 typ = 1;

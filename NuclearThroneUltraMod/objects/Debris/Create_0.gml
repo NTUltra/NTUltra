@@ -85,14 +85,16 @@ if instance_exists(Player)
 	}
 	if Player.skill_got[26]//Hammer head
 	{
-		dmgDivision -= 4;
+		dmgDivision -= 2;
 		speed *= 1.2;
-		s += 4.5;
+		alarm[1] = 0;
+		alarm[3] = 1;
+		s += 4;
 		sizeDiv = 0.8;
 		if Player.ultra_got[94]
 		{
 			//Its too much together
-			s -= 1;
+			s -= 0.75;
 			speed *= 0.95;
 		}
 	}

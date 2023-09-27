@@ -16,7 +16,7 @@ if other.team != team and other.my_health > 0
 	else
 	{
 		with instance_create(x,y,BulletHit)
-			sprite_index = sprHeavySlugHit
+			sprite_index = sprUltraSlugHit
 	}
 	var direct = other.id;
 	var al = collision_circle_list(x,y,range,hitme,false,false,hits,false)

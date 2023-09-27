@@ -136,7 +136,7 @@ function scrRaces() {
 
 	race_name[8] = "[ROBOT]"
 	race_pass[8] = "FINDS BETTER TECH"
-	race_acti[8] = "EAT WEAPONS"
+	race_acti[8] = "HOLD TO EAT WEAPONS"
 	race_butt[8] = "BETTER GUN NUTRITION"
 	//race_back[8] = "FIND EVEN BETTER WEAPONS";
 	race_lock[8] = "REACH SCRAPYARD TO UNLOCK"
@@ -153,7 +153,7 @@ function scrRaces() {
 
 	race_name[9] = "[CHICKEN]"
 	race_pass[9] = "HARD TO KILL"
-	race_acti[9] = "SLOW MOTION"
+	race_acti[9] = "HOLD FOR SLOW MOTION"
 	race_butt[9] = "NORMAL MOVEMENT SPEED#AND NORMAL FIRERATE#DURING SLOWMOTION"//"NORMAL RATE OF FIRE#DURING SLOW MOTION"
 	//race_back[9] = "NORMAL RATE OF FIRE#DURING SLOW MOTION (this IS AN ULTRA MAKE CHANGE)";
 	race_lock[9] = "OPEN A BIG HP CHEST"
@@ -300,7 +300,7 @@ function scrRaces() {
 	race_dskin[17] = 0
 	race_eskin[17] = 0
 	race_fskin[17] = 0
-	race_bskin_lock[17] = "COMBINE TWO#GOLDEN WEAPONS"
+	race_bskin_lock[17] = "HOLD TO COMBINE TWO#GOLDEN WEAPONS"
 	race_cskin_lock[17] = "ADD FOUR MODS#TO ONE WEAPON"
 
 
@@ -459,7 +459,7 @@ function scrRaces() {
 	
 	race_name[27] = "[HANDS]"
 	race_pass[27] = "HIGHER CHANCE FOR INVERTED PORTALS#INVERTED PORTALS (OVER) HEAL 2HP"
-	race_acti[27] = "PULL IN CHESTS & ENEMIES"
+	race_acti[27] = "HOLD/CLICK TO PULL IN CHESTS & ENEMIES"
 	race_butt[27] = "PUSH ENEMIES INSTEAD#YOUR HAND DEALS MORE DAMAGE"
 	//race_back[27] = "MORE DAMAGE OR SOMETHING";
 	race_lock[27] = "KILL THE INVERTED THRONE"

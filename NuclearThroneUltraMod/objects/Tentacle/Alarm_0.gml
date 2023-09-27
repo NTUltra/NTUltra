@@ -111,7 +111,6 @@ if instance_exists(target) && target != noone && instance_exists(target) && targ
 }
 var i = 0;
 var dis = 9 + random(3);
-var canPhase = instance_exists(Player) && Player.ultra_got[93];
 var sh = sign(hspeed);
 var sv = sign(vspeed);
 while (i < dis)
@@ -120,12 +119,12 @@ while (i < dis)
 	y += lengthdir_y(1,direction);
 	
 	var wall = instance_position(x + sh,y,Wall);
-	if ((wall != noone && wall.object_index != WallHitMe) || (!canPhase && collision_point(x + sign(hspeed),y,VikingWall,false,false)))
+	if ((wall != noone && wall.object_index != WallHitMe) )
 	{
 		x -= sh;
 	}
 	wall = instance_position(x,y + sv,Wall);
-	if ((wall != noone && wall.object_index != WallHitMe) || (!canPhase && collision_point(x,y + sign(vspeed),VikingWall,false,false)))
+	if ((wall != noone && wall.object_index != WallHitMe) )
 	{
 		y -= sv;
 	}

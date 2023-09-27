@@ -26,7 +26,7 @@ for(var i = 0; i < al; i ++)
 					instance_destroy();
         
 					}
-					until(place_free(x,y) || place_meeting(x,y,Wall) || !place_meeting(x,y,VikingWall) )
+					until(place_free(x,y) || place_meeting(x,y,Wall) || !place_meeting(x,y,ElementorWallPhase) )
 				}
 			}
 			else

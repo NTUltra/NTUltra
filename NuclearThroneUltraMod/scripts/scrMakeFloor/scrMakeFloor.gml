@@ -121,8 +121,28 @@ function scrMakeFloor(limiter) {
         
 				if xx==4 && yy==0
 				{
-					debug("create big m");
-					instance_create(x+32*xx,y+32*yy,BigMachine);//the boss
+					if scrIsGamemode(44) {
+						with instance_create(x+32*xx,y+32*yy,BigDisc)//the boss
+						{
+							maxSpeed -= 2;
+							acc -= 0.5;
+						}
+						with instance_create(x+32*xx,y+32*yy,PermanentDisc)
+						{
+							speed = 2;
+							direction = -10;
+							fire = true;
+						}
+						with instance_create(x+32*xx,y+32*yy,PermanentDisc)
+						{
+							speed = 2;
+							direction = 170;
+							fire = true;
+						}
+					}
+					else {
+						instance_create(x+32*xx,y+32*yy,BigMachine);//the boss
+					}
 				}
         
 		        if xx==0 && yy==0

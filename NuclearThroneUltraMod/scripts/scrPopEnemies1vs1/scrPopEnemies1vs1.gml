@@ -313,7 +313,8 @@ function scrPopEnemies1vs1(area, subarea, loops){
 		else if subarea == 3
 		{
 			enem = noone;
-			buff = 1.1*clamp(1+loops*0.5,1,10);
+			buff = 1.1*clamp(1+loops*0.25,1,5);
+			sBuff = 1.2;
 		}
 	}
 	else if area == 108 // Vulcano
