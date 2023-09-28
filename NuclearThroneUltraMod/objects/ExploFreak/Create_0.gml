@@ -23,3 +23,7 @@ if instance_exists(Player) && Player.skill_got[29]
 walk = 0
 
 firstAct = false;
+maxSpeed = 3;
+loops = GetPlayerLoops();
+if loops > 0
+	maxSpeed += 0.28;

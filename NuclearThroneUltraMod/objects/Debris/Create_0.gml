@@ -62,39 +62,35 @@ image_speed = 0
 image_index = random(4)
 image_angle = random(360)
 mySize = 1
-motion_add(random(360),3+random(2))
+motion_add(random(360),7+random(2))
 alarm[0] = 150+irandom(90)
 time = 10
 
-if speed > 0
-alarm[1] = random(10)/speed+1
+doFire = false;
 
-var s = 6;
+
+
 dmgDivision = 10;
 sizeDiv = 1;
 if instance_exists(Player)
 {
 	if Player.ultra_got[94]//elementor ultra Cold Heart
 	{
-		speed*=1.5
+		speed*=1.4
 		friction=0.17;
 		alarm[2] = 1;
 		image_xscale += 0.1;
 		image_yscale += 0.1;
-		s += 1;
 	}
 	if Player.skill_got[26]//Hammer head
 	{
 		dmgDivision -= 2;
 		speed *= 1.2;
-		alarm[1] = 0;
-		alarm[3] = 1;
-		s += 4;
+		speed = max(speed, 6);
 		sizeDiv = 0.8;
 		if Player.ultra_got[94]
 		{
 			//Its too much together
-			s -= 0.75;
 			speed *= 0.95;
 		}
 	}
@@ -104,7 +100,11 @@ if instance_exists(enemy)
 	var n = instance_nearest(x,y,enemy)
 	if n != noone && n.team != 2
 	{
-		speed *= 0.5;
-		motion_add(point_direction(x,y,n.x,n.y),speed+s);
+		var s = speed;
+		motion_add(point_direction(x,y,n.x,n.y),speed*0.6);
+		speed = s;
 	}
 }
+
+if speed > 0
+	alarm[1] = 1 + random(10)/speed+1

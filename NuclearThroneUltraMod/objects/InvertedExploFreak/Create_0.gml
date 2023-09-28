@@ -24,3 +24,8 @@ ang=0;
 
 walk = 0
 firstAct = false;
+
+maxSpeed = 3.1;
+loops = GetPlayerLoops();
+if loops > 0
+	maxSpeed += 0.22;

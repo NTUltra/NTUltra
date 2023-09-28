@@ -667,13 +667,13 @@ function scrWeapons() {
 	wep_rad[59] = 0;
 
 	//BELOW THIS IS MODDED by Juul (Erdeppol/CouchPotato)
-	wep_name[60] = "BLOOD SHOTGUN"
+	wep_name[60] = "BLOOD LAUNCHER SHOTGUN"
 	wep_type[60] = 4
-	wep_auto[60] = 0
-	wep_load[60] = 12
-	wep_cost[60] = 2
+	wep_auto[60] = 1
+	wep_load[60] = 20
+	wep_cost[60] = 3
 	wep_sprt[60] = sprBloodShotgun
-	wep_area[60] = 7
+	wep_area[60] = 10
 	wep_text[60] = "explosions from your heart"
 	wep_swap[60] = sndSwapExplosive
 	wep_rad[60] = 0;
@@ -4568,7 +4568,7 @@ function scrWeapons() {
 	wep_cost[412] = 0
 	wep_sprt[412] = sprLance
 	wep_area[412] = 4
-	wep_text[412] = ""
+	wep_text[412] = "poke"
 	wep_swap[412] = sndSwapSword
 	wep_rad[412] = 0;
 	

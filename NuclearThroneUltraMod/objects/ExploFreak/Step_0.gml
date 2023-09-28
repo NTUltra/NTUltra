@@ -12,34 +12,13 @@ if walk > 0
 		motion_add(direction,0.6)
 }
 
-if firstAct
-{
-	if instance_exists(Player)
-	{
-	    if Player.loops>0
-	    {
-	    if speed > 3.2
-	    speed = 3.2
-	    }
-	    else
-	    {
-	    if speed > 3
-	    speed = 3
-	    }
-	}
-	else
-	{
-		if speed > 3
-		speed = 3
-	}
-}
-else
-{
-	speed = 0;	
-}
+
 if firstAct && target != noone && instance_exists(target) && alarm[2] < 1
 {
 	if instance_exists(target)
 	mp_potential_step(target.x,target.y,1,0)
 }
-
+if speed > maxSpeed
+	speed = maxSpeed;
+if !firstAct
+	speed = 0;

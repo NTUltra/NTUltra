@@ -2718,59 +2718,40 @@ function scrPowers() {
 			{
 				var myMask = mask_index;
 				mask_index=mskWall;
-				var xx;
-				var yy;
-				xx=16*(UberCont.mouse__x div 16);
-				yy=16*(UberCont.mouse__y div 16);
-				var l = 16;
-				var pd = point_direction(UberCont.mouse__x,UberCont.mouse__y,x,y);
-				var hm = instance_place(xx,yy,hitme);
-				while(hm != noone && hm.team != 0)
+				var am = 1;
+				var i = 0;
+				if ultra_got[93] || ultra_got[94]
+					am = 5;
+				var placedWall = false;
+				var mx = UberCont.mouse__x;
+				var my = UberCont.mouse__y;
+				repeat(am)
 				{
-					hm = instance_place(xx,yy,hitme);
-					xx=16*((UberCont.mouse__x + lengthdir_x(l,pd)) div 16);
-					yy=16*((UberCont.mouse__y + lengthdir_y(l,pd)) div 16);
-					l += 8;
-				}
-				if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y) > 16 {
-					var wl = instance_place(xx,yy,Wall);
-					var canReplaceWall = true;
-					if wl != noone && wl.object_index != ElementorWall
+					placedWall = scrElementorPlaceWall(mx,my);
+					switch(i)
 					{
-						if place_meeting(xx-16,yy,Floor) || place_meeting(xx+16,yy,Floor) || place_meeting(xx,yy+16,Floor) || place_meeting(xx,yy-16,Floor)
-						{
-							with wl
-							{
-								instance_destroy(id,false);
-								instance_create(x,y,FloorExplo);
-							}
-						}
-						else
-						{
-							canReplaceWall = false;
-						}
+						case 0:
+							mx = UberCont.mouse__x + 16;
+							my = UberCont.mouse__y;
+						break;
+						case 1:
+							mx = UberCont.mouse__x - 16;
+							my = UberCont.mouse__y;
+						break;
+						case 2:
+							mx = UberCont.mouse__x;
+							my = UberCont.mouse__y + 16;
+						break;
+						case 3:
+							mx = UberCont.mouse__x;
+							my = UberCont.mouse__y - 16;
+						break;
 					}
-				    if (place_meeting(xx,yy,Floor) && !scrIsCrown(25))&&//!place_meeting(xx,yy,Wall)&&
-					!place_meeting(xx,yy,ElementorWall)
-				    {
-						BackCont.shake += 3;
-						repeat(3)
-						{
-							with instance_create(xx+8,yy+8,Dust)
-							{
-								motion_add(random(360),3+random(2));	
-							}
-						}
-					    with instance_create(xx,yy,ElementorWall)
-						{
-							with instance_create(x,y,ElementorWallDisappear) {
-								sprite_index = sprElementorWallCreate;	
-							}
-							snd_play(sndStatueHurt);
-							alarm[0]=15;
-						}
-						ammo[wepType] =  ammo[wepType] - cost;
-				    }
+					i++;
+				}
+				if (placedWall)
+				{
+					ammo[wepType] =  ammo[wepType] - cost;
 				}
 				mask_index=myMask;
 			}

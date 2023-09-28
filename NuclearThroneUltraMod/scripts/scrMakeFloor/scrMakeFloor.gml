@@ -108,7 +108,7 @@ function scrMakeFloor(limiter) {
 	} 
 
 
-	if area == 6 && subarea == 2 && !instance_exists(BigMachine)//LABS BOSS
+	if area == 6 && subarea == 2 && !instance_exists(BigMachine) && !instance_exists(BigDisc) && !instance_exists(InvertedBigDisc)//LABS BOSS
 	{
 	//if(fc>=goal){
 

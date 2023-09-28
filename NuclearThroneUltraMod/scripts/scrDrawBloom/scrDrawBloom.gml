@@ -287,7 +287,7 @@ function scrDrawBloom() {
 		{
 			if speed > 2
 			{
-				draw_sprite_ext(sprDebrisBloom,image_index,x,y,2,2,image_angle,c_white,ba)
+				draw_sprite_ext(sprDebrisBloom,image_index,x,y,2,2,image_angle,c_white,ba+0.1)
 			}
 		}
 	}

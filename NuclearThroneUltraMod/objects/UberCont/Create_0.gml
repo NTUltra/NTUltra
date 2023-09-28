@@ -158,7 +158,6 @@ encrypted_run_data = {}
 //Aim overwrite
 mouse__x = mouse_x;
 mouse__y = mouse_y;
-
 vansSlapped = 0;
 
 window_set_cursor(cr_none);

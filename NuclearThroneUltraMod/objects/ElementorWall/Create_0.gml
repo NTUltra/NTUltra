@@ -1,7 +1,7 @@
 var area;
 phaseable = false;
 colour = c_gray;
-alarm[2] = 160;
+alarm[2] = 90;
 blink = 15;
 if instance_exists(Player)
 { 

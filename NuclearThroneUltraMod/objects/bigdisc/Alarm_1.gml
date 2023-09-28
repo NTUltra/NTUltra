@@ -1,4 +1,5 @@
 ///@description AI
+firstEntry = true;
 alarm[1] = actTime;
 scrTarget();
 if active && target != noone && instance_exists(target) && point_distance(x,y,target.x,target.y) < 250

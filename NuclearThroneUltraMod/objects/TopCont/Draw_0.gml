@@ -37,11 +37,22 @@ if fps_real >= fps
 	with Wall {
 		draw_sprite_ext(topspr,topindex,x,y-8,1,1,image_angle,colour,1);
 	}
+	with ElementorWall
+	{
+		if !visible
+		{
+			draw_sprite(sprElementorWallBlink,0,x,y);
+		}
+	}
 	with ElementorWallPhase
 	{
 		if visible
 		{
 			draw_sprite_part_ext(outspr,outindex,l,r,w,h,x-4+l,y-12+r,1,1,c_gray,1)
+		}
+		else
+		{
+			draw_sprite(sprElementorWallBlink,0,x,y);
 		}
 	}
 	with ElementorWallPhase
@@ -49,6 +60,10 @@ if fps_real >= fps
 		if visible
 		{
 			draw_sprite_ext(topspr,topindex,x,y-8,1,1,image_angle,c_gray,1)
+		}
+		else
+		{
+			draw_sprite(sprElementorWallBlink,0,x,y);	
 		}
 	}
 	with ElementorWallDisappear

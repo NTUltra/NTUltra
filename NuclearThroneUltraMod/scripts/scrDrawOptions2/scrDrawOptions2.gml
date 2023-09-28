@@ -33,7 +33,7 @@ function scrDrawOptions2() {
 			gamemodeScrollString += " + ";
 	}
 	txt1 = "###RESET########"
-	txt2 = "#####"+string(gamemodename)+"######";
+	txt2 = "##### "+string(gamemodename)+"######";
 
 	stxt0 = "#GAMEMODE CONCOCTIONS#########################" + canUnlock //+ "##HOLD                                    ";
 	stxt1 = "###RESET##### ####### #### ####"
@@ -55,7 +55,6 @@ function scrDrawOptions2() {
 
 	//with WeaponDisplay
 	//event_perform(ev_draw,0)
-
 
 
 	draw_set_valign(fa_top)
@@ -83,13 +82,13 @@ function scrDrawOptions2() {
 	draw_set_halign(fa_left)
 
 	draw_set_color(c_black)
-	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+8,yy+1,string_hash_to_newline(string(txt2)))
-	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+9,yy+1,string_hash_to_newline(string(txt2)))
-	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+9,yy,string_hash_to_newline(string(txt2)))
+	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+12,yy+1,string_hash_to_newline(string(txt2)))
+	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+13,yy+1,string_hash_to_newline(string(txt2)))
+	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+13,yy,string_hash_to_newline(string(txt2)))
 	draw_set_color(c_gray)
-	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+8,yy,string_hash_to_newline(string(txt2)))
+	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+12,yy,string_hash_to_newline(string(txt2)))
 	draw_set_color(c_white)
-	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+8,yy,string_hash_to_newline(string(stxt2)))
+	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+12,yy,string_hash_to_newline(string(stxt2)))
 	
 	draw_set_color(c_black)
 	yy = __view_get( e__VW.YView, 0 ) + __view_get( e__VW.HView, 0 ) - 28;

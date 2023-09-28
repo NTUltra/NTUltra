@@ -16,3 +16,5 @@ if instance_exists(Player)
 		active = true;
 	}
 }
+if !firstEntry
+	speed = 0;

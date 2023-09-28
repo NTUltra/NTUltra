@@ -212,15 +212,34 @@ function scrGenerateFloorMaker(limiter) {
 			instance_create(x-128,y,Floor)
 			instance_create(x+16,y+16,Carpet);
 			if scrIsGamemode(44)
+			{
+				with Carpet
+				{
+					image_yscale = 0.5;	
+				}
 				instance_create(x,y,ChesireCat);
+			}
 			else
+			{
 				instance_create(x,y,NuclearThrone1);
+			}
 		}
 		else if (Player.area == 118 && Player.subarea == 3)
 		{
 			with instance_create(x+16,y+16,Carpet)
 				sprite_index = sprInvertedCarpet;
-			instance_create(x,y,InvertedNuclearThrone1);
+			if scrIsGamemode(44)
+			{
+				with Carpet
+				{
+					image_yscale = 0.5;	
+				}
+				instance_create(x,y,InvertedChesireCat);
+			}
+			else
+			{
+				instance_create(x,y,InvertedNuclearThrone1);
+			}
 		}
 		else if Player.race=22
 		{

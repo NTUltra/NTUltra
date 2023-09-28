@@ -1,5 +1,5 @@
 /// @description Spawn flames on projectiles
-alarm[10] = 6;
+var fireSpawned = 0;
 with projectile
 {
 	if team == 2 && wepFire != -1
@@ -18,5 +18,7 @@ with projectile
 			speed = other.speed * 0.5;
 			team = other.team
 		}
+		fireSpawned++;
 	}
 }
+alarm[10] = clamp(fireSpawned,1,15);

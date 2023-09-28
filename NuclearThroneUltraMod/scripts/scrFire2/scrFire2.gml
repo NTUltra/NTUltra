@@ -165,7 +165,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team
 	snd_hit=sndSledgeHit;}
@@ -232,7 +232,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -569,7 +569,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team
 	snd_hit=sndSledgeHit;}
@@ -599,7 +599,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -714,7 +714,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -764,7 +764,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -804,7 +804,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -977,7 +977,7 @@ function scrFire2() {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,2)
+	motion_add(aimDirection,2.5)
 	BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 1
@@ -1006,7 +1006,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -1212,7 +1212,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -1839,7 +1839,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -2071,7 +2071,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -2144,7 +2144,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -2249,7 +2249,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -2277,7 +2277,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),Slash)
@@ -2446,7 +2446,7 @@ function scrFire2() {
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2+longarms)
+		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -2463,7 +2463,7 @@ function scrFire2() {
 				longarms = 0
 				if instance_exists(Player)
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				motion_add(aimDirection,2+longarms)
+				motion_add(aimDirection,2.5+longarms)
 				image_angle = direction
 				team = other.team
 			}
@@ -2801,7 +2801,7 @@ function scrFire2() {
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2+longarms)
+		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -2821,7 +2821,7 @@ function scrFire2() {
 				longarms = 0
 				if instance_exists(Player)
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				motion_add(aimDirection,2+longarms)
+				motion_add(aimDirection,2.5+longarms)
 				image_angle = direction
 				team = other.team
 			}
@@ -3330,7 +3330,7 @@ function scrFire2() {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,4)
+	motion_add(aimDirection,3.5)
 	BackCont.viewx2 += lengthdir_x(14,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(14,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 2
@@ -3528,7 +3528,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -3563,7 +3563,7 @@ function scrFire2() {
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2+longarms)
+		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -3627,7 +3627,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -3803,7 +3803,7 @@ function scrFire2() {
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2+longarms)
+		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
 		team = t
 	}
@@ -3847,7 +3847,7 @@ function scrFire2() {
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2+longarms)
+		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
 		team = other.team
 		with instance_create(x,y,LightningSpawn)
@@ -4199,7 +4199,7 @@ function scrFire2() {
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2+longarms)
+		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -4217,7 +4217,7 @@ function scrFire2() {
 				longarms = 0
 				if instance_exists(Player)
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				motion_add(aimDirection,2+longarms)
+				motion_add(aimDirection,2.5+longarms)
 				image_angle = direction
 				team = other.team
 			}
@@ -4589,13 +4589,13 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	image_yscale = other.wepflip;//Line up animation with actual holding of weapon
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,2)
+	motion_add(aimDirection,2.5)
 	BackCont.viewx2 += lengthdir_x(10,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(10,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 4
@@ -5604,7 +5604,7 @@ function scrFire2() {
 			longarms = 0
 			if instance_exists(Player)
 			longarms = (Player.skill_got[13]+other.bettermelee)*3
-			motion_add(aimDirection,2+longarms)
+			motion_add(aimDirection,2.5+longarms)
 			image_angle = direction
 			team = t
 		}
@@ -6024,7 +6024,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,4+longarms)
+	motion_add(aimDirection,3.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -6284,7 +6284,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,4+longarms)
+	motion_add(aimDirection,3.5+longarms)
 	image_angle = direction
 	team = other.team
 	
@@ -7525,7 +7525,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 	
@@ -7994,7 +7994,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -8020,7 +8020,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -8080,13 +8080,13 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	image_yscale = other.wepflip;//Line up animation with actual holding of weapon
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,2)
+	motion_add(aimDirection,2.5)
 	BackCont.viewx2 += lengthdir_x(10,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(10,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 6
@@ -8151,7 +8151,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,4+longarms)
+	motion_add(aimDirection,3.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -8298,7 +8298,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -8368,7 +8368,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,4+longarms)
+	motion_add(aimDirection,3.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -8795,7 +8795,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -8843,7 +8843,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),EnergyHammerSlash)
@@ -8965,7 +8965,7 @@ function scrFire2() {
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2+longarms)
+		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -9219,7 +9219,7 @@ function scrFire2() {
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2+longarms)
+		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -9801,7 +9801,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -9827,7 +9827,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -9921,7 +9921,7 @@ function scrFire2() {
 	image_angle = direction
 	team = other.team}
 
-	motion_add(aimDirection,2)
+	motion_add(aimDirection,2.5)
 
 	BackCont.viewx2 += lengthdir_x(60,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(60,aimDirection)*UberCont.opt_shake
@@ -9943,7 +9943,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),Slash)
@@ -10637,7 +10637,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -10902,7 +10902,7 @@ function scrFire2() {
 	dmg = 10;
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,4+longarms)
+	motion_add(aimDirection,3.5+longarms)
 	image_angle = direction
 	team = other.team}
 	
@@ -10983,7 +10983,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -11011,12 +11011,12 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,4+longarms)
+	motion_add(aimDirection,3.5+longarms)
 	image_angle = direction
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,2)
+	motion_add(aimDirection,2.5)
 	BackCont.viewx2 += lengthdir_x(18,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(18,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 1
@@ -11074,7 +11074,6 @@ function scrFire2() {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,1)
 	BackCont.viewx2 += lengthdir_x(10,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(10,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 3
@@ -11099,11 +11098,11 @@ function scrFire2() {
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2+longarms)
+		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
 		team = other.team
 	}
-	motion_add(aimDirection,4)
+	motion_add(aimDirection,3)
 	wepangle = -wepangle
 	BackCont.viewx2 += lengthdir_x(13,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(13,aimDirection)*UberCont.opt_shake
@@ -11142,14 +11141,14 @@ function scrFire2() {
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2+longarms)
+		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
 		image_yscale = other.wepflip;//Line up animation with actual holding of weapon
 		team = other.team
 	}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,4)
+	motion_add(aimDirection,3.5)
 	BackCont.viewx2 += lengthdir_x(10,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(10,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 6
@@ -11210,7 +11209,7 @@ function scrFire2() {
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2+longarms)
+		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -11351,7 +11350,7 @@ function scrFire2() {
 	longarms = 0
 	if instance_exists(Player)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2+longarms)
+	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),SpikeSlash)
@@ -11395,7 +11394,7 @@ function scrFire2() {
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,4+longarms)
+		motion_add(aimDirection,3.5+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -11509,7 +11508,7 @@ function scrFire2() {
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2+longarms)
+		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
 		team = other.team}
 		
@@ -12026,14 +12025,14 @@ function scrFire2() {
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,4+longarms)
+		motion_add(aimDirection,3.5+longarms)
 		image_angle = direction
 		team = other.team}
 		ofAngle = -90;
 	}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,2)
+	motion_add(aimDirection,2.5)
 	BackCont.viewx2 += lengthdir_x(18,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(18,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 1
@@ -12286,7 +12285,7 @@ function scrFire2() {
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2+longarms)
+		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
 		dmg = 14;
 			if instance_exists(Player)
@@ -12366,7 +12365,7 @@ function scrFire2() {
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2+longarms)
+		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -12744,7 +12743,7 @@ function scrFire2() {
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,4+longarms)
+		motion_add(aimDirection,3.5+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -12772,7 +12771,7 @@ function scrFire2() {
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2+longarms)
+		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
 		team = other.team
 		with instance_create(x,y,LightningSpawn)

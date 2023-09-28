@@ -1416,6 +1416,7 @@ function scrPopEnemiesAlt() {
 
 	//PALACE
     if spawnarea == 9 {
+		if !subarea == 3 || random(5) < 1
 		if loops > 0 {
 			if styleb = 1 && random(8) < 2 {
 	            instance_create(x + 16, y + 16, choose(GuardianDog, GhostGuardian,PalaceGuardian))
@@ -1485,7 +1486,7 @@ function scrPopEnemiesAlt() {
 	{
 		if !instance_exists(IDPDSpawn) || (instance_number(IDPDSpawn) < clamp(loops + 1,2,4))
 			instance_create(x,y,IDPDSpawn);
-		else {
+		else if random(5) < 1 {
 			if spawnarea == 119
 				instance_create(x + 16, y + 16,PalaceGuardian);
 			else

@@ -509,7 +509,7 @@ if skill_got[38] && tookHit && alarm[3] < 1 && alarm[1] < 1
 	{
 		metabolism = 0;
 		my_health = prevhealth;
-		alarm[3] = max(alarm[3] + 5, 20);
+		alarm[3] = max(alarm[3] + 5, 15);
 		audio_stop_sound(snd_hurt);
 		snd_hurt = sndDamageNegate;
 		snd_play_2d(sndMetabolism);
@@ -723,9 +723,9 @@ if (tookHit)
 		{
 			resetPrevHealth = true;
 			if race=25
-				alarm[3] = max(30,alarm[3]);
+				alarm[3] = max(25,alarm[3]);
 			else
-				alarm[3] = max(alarm[3],24);//duration
+				alarm[3] = max(alarm[3],20);//duration
 			canAnimateDuringImmune = 0;
 			snd_hurt = sndDamageNegate;
 			instance_create(x,y,EuphoriaBlock);

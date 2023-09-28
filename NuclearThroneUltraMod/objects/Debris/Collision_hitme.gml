@@ -9,7 +9,7 @@ if /*size >= other.size-1 and */ speed > 2 && other.team != 2/* and other.sprite
 		if my_health > 0 && sprite_index != spr_chrg
 		{
 			actuallyDealtDamage = true;
-			dmgDealt = clamp(round(1+other.speed/dmgDiv)-(mySize*other.sizeDiv),1,5);
+			dmgDealt = clamp(round(1+other.speed/dmgDiv)-(mySize*other.sizeDiv),0.5,4);
 		    if instance_exists(Player)
 		    {
 			    if Player.ultra_got[94]//elementor coldheart

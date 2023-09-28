@@ -1,8 +1,8 @@
 holdUpArrow = max(0, holdUpArrow - 1);
 holdDownArrow = max(0, holdDownArrow - 1);
 
-var gmx = x - 190;
-var surfWidth = 180;
+var gmx = x - 194;
+var surfWidth = 185;
 var surfHeight = 159//167//175;
 var newClick = false;
 prevgamemodenr = gamemodenr;
@@ -177,7 +177,7 @@ else
 	{
 		str = string_hash_to_newline(gamemode_unlock[gamemodeOrder[gamemodenr]]);
 	}
-	var o = 32
+	var o = 44;//32
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 	draw_set_color(c_gray)

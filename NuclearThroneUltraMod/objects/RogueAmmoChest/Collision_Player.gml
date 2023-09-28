@@ -27,7 +27,7 @@ with other
 {
 	if ultra_got[85] == 1 || ultra_got[86] == 1 || ultra_got[87] == 1
 		event_user(0);
-	if ultra_got[87]
+	if ultra_got[87] && !altUltra
 		instance_create(x,y,RogueIDPDSpawn);
 }
 
