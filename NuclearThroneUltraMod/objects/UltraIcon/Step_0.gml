@@ -202,7 +202,7 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			altUltra = true;
 			ultra_name[92] = "SPIKE BALL"
-			ultra_text[92] = "NORMAL CONTROLS#EMIT SPLINTERS INSTEAD OF GASS#ALL SPLINTERS ARE GASSEOUS"
+			ultra_text[92] = "NORMAL CONTROLS#EMIT SPLINTERS INSTEAD OF GAS#ALL SPLINTERS ARE GASSEOUS"
 			ultra_tips[92] = "porkupine"
 		}
 	}

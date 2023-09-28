@@ -15,4 +15,4 @@ if selected = 1
 {
 draw_sprite(sprSelected,-1,x,y-48+Menu.widescreen)//48
 }
-draw_sprite_part(sprite_index,-1,8,4,16,24,x,y-48+Menu.widescreen)
+draw_sprite_part(sprite_index,image_index,8,4,16,24,x,y-48+Menu.widescreen)

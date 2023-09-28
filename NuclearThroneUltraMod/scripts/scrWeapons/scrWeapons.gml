@@ -7164,7 +7164,7 @@ function scrWeapons() {
 	wep_cost[648] = 1
 	wep_sprt[648] = sprToxicRevolver
 	wep_area[648] = 1
-	wep_text[648] = "gass pistol"
+	wep_text[648] = "gas pistol"
 	wep_swap[648] = sndSwapPistol
 	wep_rad[648] = 0;
 	

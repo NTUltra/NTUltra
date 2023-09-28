@@ -366,7 +366,7 @@ else if area = 122
 //with instance_create(x,y,Drama)
 name = "INVERTED BIG FISH"
 if random(200) < 1
-		name = choose("GASS FISH","THAT'S MISTER#FISH FOR YOU!");
+		name = choose("GAS FISH","THAT'S MISTER#FISH FOR YOU!");
 }
 else if area == 9
 {

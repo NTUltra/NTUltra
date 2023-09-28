@@ -151,7 +151,7 @@ if (UberCont.gamemode_have[gamemodeOrder[gamemodenr]] && !dailyDone)
 	{
 		event_user(1);
 	}
-	draw_text_ext_colour(x-16,y+24,gamemode_description[gamemodeOrder[gamemodenr]],8,132,c_gray,c_gray,c_gray,c_gray,1);
+	draw_text_ext_colour(x-16,y+26,gamemode_description[gamemodeOrder[gamemodenr]],8,132,c_gray,c_gray,c_gray,c_gray,1);
 }
 else
 {
@@ -177,7 +177,7 @@ else
 	{
 		str = string_hash_to_newline(gamemode_unlock[gamemodeOrder[gamemodenr]]);
 	}
-	var o = 44;//32
+	var o = 26;//32
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 	draw_set_color(c_gray)

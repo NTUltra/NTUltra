@@ -46,7 +46,7 @@
   "origin": 0,
   "parent": {
     "name": "SideArt",
-    "path": "folders/Sprites/Menu/SideArt.yy",
+    "path": "folders/Sprites/Enemies/Menu/Menu/SideArt.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

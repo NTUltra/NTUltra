@@ -1,7 +1,7 @@
 draw_sprite(sprite_index,-1,x,y)
 draw_set_color(c_gray)
 draw_rectangle(x,y+1,x+UberCont.opt_musvol*100,y+6,0)
-
+draw_set_color(c_white)
 //slider
 if alarm[0] < 1 && mouse_check_button(mb_left) and UberCont.mouse__x > x-2 and UberCont.mouse__x < x+100 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
 {

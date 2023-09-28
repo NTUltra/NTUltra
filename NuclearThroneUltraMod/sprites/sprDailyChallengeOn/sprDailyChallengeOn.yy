@@ -15,6 +15,8 @@
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ef79fc71-e7f2-45a5-b032-68de8204affa",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c37fd2b2-4f63-4ec1-b125-72af8fdc4cf9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d15af9bd-7b05-4e3c-9758-ca45af001fea",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2d5805b2-660c-4aab-807d-c97cb5a228ec",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -26,8 +28,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Menu",
-    "path": "folders/Sprites/Menu.yy",
+    "name": "Buttons",
+    "path": "folders/Sprites/Enemies/Menu/Buttons.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -44,7 +46,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 2.0,
+    "length": 4.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -57,6 +59,8 @@
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ef79fc71-e7f2-45a5-b032-68de8204affa","path":"sprites/sprDailyChallengeOn/sprDailyChallengeOn.yy",},},},"Disabled":false,"id":"82c2aac1-671c-43bd-bab9-4578533634b4","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c37fd2b2-4f63-4ec1-b125-72af8fdc4cf9","path":"sprites/sprDailyChallengeOn/sprDailyChallengeOn.yy",},},},"Disabled":false,"id":"3ba83f32-ce5f-4f83-a8a1-def07952222d","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d15af9bd-7b05-4e3c-9758-ca45af001fea","path":"sprites/sprDailyChallengeOn/sprDailyChallengeOn.yy",},},},"Disabled":false,"id":"e3013378-34c3-480d-bfc8-141e83683491","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2d5805b2-660c-4aab-807d-c97cb5a228ec","path":"sprites/sprDailyChallengeOn/sprDailyChallengeOn.yy",},},},"Disabled":false,"id":"e45543e5-3d22-4c17-8728-9f65a970ee7b","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

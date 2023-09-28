@@ -228,7 +228,7 @@ function scrSecretUltraStat() {
 	//FROG
 	//92
 	secret_ultra_name[27] = "SPIKE BALL"
-	secret_ultra_text[27] = "NORMAL CONTROLS#EMIT SPLINTERS INSTEAD OF GASS#ALL SPLINTERS ARE GASEOUS"
+	secret_ultra_text[27] = "NORMAL CONTROLS#EMIT SPLINTERS INSTEAD OF GAS#ALL SPLINTERS ARE GASEOUS"
 	secret_ultra_tips[27] = "porkupain"
 	secret_ultra_hint[27] = "SPIKE WIELDER";
 	secret_ultra_unlk[27] = "HOLD TWO BOLT-TYPE WEAPONS";

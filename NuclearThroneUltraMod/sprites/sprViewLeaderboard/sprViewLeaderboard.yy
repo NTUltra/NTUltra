@@ -14,7 +14,7 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3b6348ba-b28c-41f5-948e-bd39b615c2f7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a2cf760f-74a4-40cb-bae7-ed1d0e58d8f2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"168afef9-ea08-4d89-95ad-f332f4a906ef",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -26,8 +26,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Menu",
-    "path": "folders/Sprites/Menu.yy",
+    "name": "Buttons",
+    "path": "folders/Sprites/Enemies/Menu/Buttons.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -56,7 +56,7 @@
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3b6348ba-b28c-41f5-948e-bd39b615c2f7","path":"sprites/sprViewLeaderboard/sprViewLeaderboard.yy",},},},"Disabled":false,"id":"c71f1125-2fb8-4b06-bf82-6e028b30e11f","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a2cf760f-74a4-40cb-bae7-ed1d0e58d8f2","path":"sprites/sprViewLeaderboard/sprViewLeaderboard.yy",},},},"Disabled":false,"id":"a68327c2-4be0-4c27-babb-955979acc4c9","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"168afef9-ea08-4d89-95ad-f332f4a906ef","path":"sprites/sprViewLeaderboard/sprViewLeaderboard.yy",},},},"Disabled":false,"id":"7a5a34e9-3615-40b5-8f25-9a660cc957a7","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

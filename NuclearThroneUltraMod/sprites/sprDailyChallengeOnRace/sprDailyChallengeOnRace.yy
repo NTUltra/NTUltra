@@ -15,6 +15,8 @@
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"63c15050-5247-4506-804a-e161501d3750",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"933ca9dc-7ad4-45b8-b0cd-b6a5f683ed86",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9e677475-4e80-4dc4-8a2b-77da52cf3719",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bc123412-f677-4de8-b099-823fa84af07b",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -26,8 +28,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Menu",
-    "path": "folders/Sprites/Menu.yy",
+    "name": "Buttons",
+    "path": "folders/Sprites/Enemies/Menu/Buttons.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -44,7 +46,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 2.0,
+    "length": 4.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -57,6 +59,8 @@
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"63c15050-5247-4506-804a-e161501d3750","path":"sprites/sprDailyChallengeOnRace/sprDailyChallengeOnRace.yy",},},},"Disabled":false,"id":"c6734e68-6c5e-4a28-a607-bf3b14b60534","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"933ca9dc-7ad4-45b8-b0cd-b6a5f683ed86","path":"sprites/sprDailyChallengeOnRace/sprDailyChallengeOnRace.yy",},},},"Disabled":false,"id":"0efa65a3-3d71-4e88-b33f-d124ff063153","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9e677475-4e80-4dc4-8a2b-77da52cf3719","path":"sprites/sprDailyChallengeOnRace/sprDailyChallengeOnRace.yy",},},},"Disabled":false,"id":"01c115a5-7e5c-49a8-b748-ec9533ceb4e4","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bc123412-f677-4de8-b099-823fa84af07b","path":"sprites/sprDailyChallengeOnRace/sprDailyChallengeOnRace.yy",},},},"Disabled":false,"id":"c90aaee8-5eba-4ef1-8659-1beaa8d4bf4b","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

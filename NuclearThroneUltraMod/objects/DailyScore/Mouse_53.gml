@@ -21,7 +21,7 @@ if hover
 		}
 		else
 		{
-			image_index = 1;
+			image_index = 3;
 			with UberCont
 			{
 				seed = todaysSeed;

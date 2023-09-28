@@ -175,15 +175,25 @@ if instance_exists(KeyCont) && !instance_exists(StartDaily) && (keyboard_check_p
 		{
 			steam_shutdown();
 			game_end()
-		}
+		}/*
 		else if OptionSelect.selected = 0 and CreditsSelect.selected = 0 and StatsSelect.selected = 0 and OptionSelect2.selected = 0// and UpdateSelect.selected = 0
 		{
 			steam_shutdown();
 			game_end()
 		}
-		else if !instance_exists(PlayerSpawn) && !instance_exists(Player) && !instance_exists(StartDaily)
+		else */if !instance_exists(PlayerSpawn) && !instance_exists(Player) && !instance_exists(StartDaily)
 		{
-			scrRestart()
+			if instance_exists(Menu)
+			{
+				scrReturnMenu();
+				if Menu.mode == 1
+				{
+					steam_shutdown();
+					game_end()
+				}
+			}
+			else
+				scrRestart()
 		}
 	}
 	else if instance_exists(Vlambeer)

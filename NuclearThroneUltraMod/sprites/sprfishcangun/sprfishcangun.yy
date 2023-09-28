@@ -27,8 +27,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Menu",
-    "path": "folders/Sprites/Enemies/Menu.yy",
+    "name": "Ultras",
+    "path": "folders/Sprites/Enemies/Menu/Ultras.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

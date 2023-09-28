@@ -5,7 +5,7 @@ function scrWepModDescription(wm){
 	switch (wm)
 	{
 	case 1:
-	return "HITS OCCASIONALLY SPAWN TOXIC GASS"
+	return "HITS OCCASIONALLY SPAWN TOXIC GAS"
 	break;
 	case 2:
 	return "HITS OCCASIONALLY SPAWN EXPLOSIONS"

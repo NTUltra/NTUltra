@@ -1,5 +1,6 @@
-if UberCont.mouse__x > x and UberCont.mouse__x < x+24 and UberCont.mouse__y > y and UberCont.mouse__y < y+28 and selected = 0 && hasNoMenuOpen()
+if image_index == 1 and selected = 0 && hasNoMenuOpen()
 {
+	debug("OPEN GAMEMODE");
 	snd_play_2d(sndClick);
 with option
 	instance_destroy()

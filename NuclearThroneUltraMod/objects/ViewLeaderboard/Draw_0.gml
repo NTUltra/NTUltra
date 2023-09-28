@@ -4,6 +4,7 @@ y = __view_get( e__VW.YView, 0 )+12
 var xx = x - 22;
 if hover
 {
+	image_index = 1;
 	var name = "VIEW LEADERBOARD";
 	var yy = y+36;
 	draw_set_colour(c_black);
@@ -11,6 +12,10 @@ if hover
 	draw_text(xx,yy + 1,name);
 	draw_set_colour(c_white);
 	draw_text(xx,yy,name);
+}
+else
+{
+	image_index = 0;	
 }
 
 if selected = 1

@@ -38,7 +38,6 @@ function scrLoadStats() {
 	tot_areas = [];
 	var i = 0;
 	while(ini_key_exists("STATS","totarea"+string(i))) {
-		debug("aaa",i);
 		tot_areas[i] = ini_read_real("STATS","totarea"+string(i),1);
 		i++;
 	}
