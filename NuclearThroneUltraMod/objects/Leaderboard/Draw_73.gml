@@ -109,10 +109,6 @@ else if enablePopUp == 3
 	var xr = xx + ww;
 	var xl = xxx;
 	var yyy = yy + 12;
-	debug(popupEntry);
-	debug("AND NOW");
-	debug(popupEntry[popUpIndex[3]+1]);
-	debug("PI: ", popUpIndex);
 	var muts = popupEntry[popUpIndex[3]+1];
 	var al = array_length(muts);
 	var i = 0;

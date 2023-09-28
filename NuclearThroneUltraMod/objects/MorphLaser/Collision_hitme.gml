@@ -5,6 +5,8 @@ if other.team != team and other.my_health > 0
 	{
 		team = other.team;
 		alarm[0] -= 1;
+		if instance_exists(Player) && Player.skill_got[17]
+			alarm[0] -= 1;
 	}
 	
 	with other

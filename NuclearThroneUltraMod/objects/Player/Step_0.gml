@@ -1927,7 +1927,7 @@ display_mouse_set(mox,moy);
 
 /* */
 ///Angel flying through walls
-if race==18&& !instance_exists(LevCont)// && !instance_exists(Portal)
+if race==18 && !instance_exists(LevCont) && instance_exists(Wall)// && !instance_exists(Portal)
 {
 	if flying > 0
     {

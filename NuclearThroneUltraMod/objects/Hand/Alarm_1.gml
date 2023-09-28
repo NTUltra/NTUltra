@@ -58,7 +58,7 @@ if target != noone && instance_exists(target)
 		}
 		if grabbingPickup//or targeting projectile
 		{
-			target = -1;
+			target = noone;
 		}
 		else
 		{
@@ -75,7 +75,7 @@ if target != noone && instance_exists(target)
 				}
 				if (mySize > 2 && !other.push) || mySize > 4
 				{
-					other.target = -1;
+					other.target = noone;
 				}
 				if other.push
 				{

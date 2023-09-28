@@ -46,7 +46,7 @@ if target != noone && instance_exists(target)
 				snd_play(snd_hurt, hurt_pitch_variation,true)
 				image_index = 0
 				my_health -= other.dmg;
-				other.target = -1;
+				other.target = noone;
 				instance_create(x,y,WallBreak);
 				snd_play(sndImpWristKill);
 				BackCont.shake += 6;
@@ -66,7 +66,7 @@ if target != noone && instance_exists(target)
 		else
 		{
 			if alarm[11] > 0
-				other.target = -1;
+				other.target = noone;
 			else
 			{
 				
@@ -94,7 +94,7 @@ if target != noone && instance_exists(target)
 		}
 		if my_health <= 0
 		{
-			other.target = -1;
+			other.target = noone;
 		}
 	}
 }

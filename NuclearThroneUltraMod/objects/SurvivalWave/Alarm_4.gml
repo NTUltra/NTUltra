@@ -26,6 +26,22 @@ if instance_exists(Player)
 		{
 			instance_destroy(id,false)
 		}
+		with BigMachineLaser
+		{
+			instance_destroy(id,false);	
+		}
+		with BigMachineTurret
+		{
+			instance_destroy(id,false);	
+		}
+		with InvertedBigMachineLaser
+		{
+			instance_destroy(id,false);	
+		}
+		with InvertedBigMachineTurret
+		{
+			instance_destroy(id,false);	
+		}
 		with Player
 		{
 			area = 100;

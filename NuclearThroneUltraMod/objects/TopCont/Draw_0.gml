@@ -166,18 +166,18 @@ with Player
 {
 	if (KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2) and race = 9
 	{
-	draw_set_alpha(0.5)
-	draw_set_color(c_black)
-	draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ),0)
-	draw_set_alpha(1)
-	with hitme
-	{if visible && point_distance(x,y,other.x,other.y) < 96
-	event_perform(ev_draw,0)}
-	with projectile
-	{if point_distance(x,y,other.x,other.y) < 96
-	event_perform(ev_draw,0)}
+		draw_set_alpha(0.5)
+		draw_set_color(c_black)
+		draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ),0)
+		draw_set_alpha(1)
+		with hitme
+		{if visible && point_distance(x,y,other.x,other.y) < 96
+		event_perform(ev_draw,0)}
+		with projectile
+		{if point_distance(x,y,other.x,other.y) < 96
+		event_perform(ev_draw,0)}
 	}
-	if race=18
+	if race == 18 && !instance_exists(PlayerInPortal)
 		event_perform(ev_draw,0);//on top of all things cause I'm an angel!
 
 
@@ -466,4 +466,9 @@ if !instance_exists(MenuGen) && !instance_exists(ThroneIISpiral)
 		draw_sprite_ext(sprite_index,-1,__view_get( e__VW.XView, 0 )+x,__view_get( e__VW.YView, 0 )+y,image_xscale*2,image_yscale*2,image_angle,c_white,1)
 		draw_sprite_ext(sprite_index,-1,__view_get( e__VW.XView, 0 )+x,__view_get( e__VW.YView, 0 )+y,image_xscale*2,image_yscale*2,image_angle,c_black,0.8-image_xscale)
 	}
+}
+with SpikeTrap
+{
+	if image_index == 1
+		draw_self();
 }

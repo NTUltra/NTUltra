@@ -122,11 +122,13 @@ while (i < dis)
 	if ((wall != noone && wall.object_index != WallHitMe) )
 	{
 		x -= sh;
+		dis += 0.25;
 	}
 	wall = instance_position(x,y + sv,Wall);
 	if ((wall != noone && wall.object_index != WallHitMe) )
 	{
 		y -= sv;
+		dis += 0.25;
 	}
 	i ++;
 }

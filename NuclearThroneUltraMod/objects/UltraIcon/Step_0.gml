@@ -374,11 +374,11 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 		with Player {
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			altUltra = true;
-			maxhealth += 40;
-			my_health += 40;
+			maxhealth += 45;
+			my_health += 45;
 			prevhealth = my_health;
 			ultra_name[39] = "BIG REBEL"
-			ultra_text[39] = "+40 MAX HP!#YOU CAN'T HEAL#EVERY LOOP RESET HP TO FULL#ALLIES COST AMMO"
+			ultra_text[39] = "+45 MAX HP!#YOU CAN'T HEAL#EVERY LOOP RESET HP TO FULL#ALLIES COST AMMO"
 			ultra_tips[39] = "she is a maniac!"
 			canHeal = false;
 			scrUnlockAltSkin(race, bskin);

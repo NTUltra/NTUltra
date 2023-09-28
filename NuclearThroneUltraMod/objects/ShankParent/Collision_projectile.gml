@@ -4,7 +4,8 @@ if team != other.team
 	{
 		Sleep(40)
 		BackCont.shake += 3
-		instance_destroy();
+		with other
+			instance_destroy();
 	}
 	else if other.typ = 2 or other.typ = 1
 	{

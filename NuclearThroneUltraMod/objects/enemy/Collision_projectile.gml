@@ -7,7 +7,7 @@ if(instance_exists(Player)) {
 		var wp = other.wepFire;
 		if Player.ultra_got[100] && team != other.team && my_health > 0 && wp != -1
 		{
-			target = -1;
+			target = noone;
 			walk = 0;
 			var amount = 1;
 			if wp != 0

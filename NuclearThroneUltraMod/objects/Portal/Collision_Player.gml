@@ -2,7 +2,7 @@ if sprite_index == sprProtoPortalDormant || sprite_index == sprInvertedPortalDor
 	exit;
 if sprite_index != sprPortalSpawn && sprite_index != sprPinkPortalSpawn
 {
-if other.visible
+if !instance_exists(PlayerInPortal)
 {
 	other.visible = false;
 	with instance_create(x,y,PlayerInPortal)

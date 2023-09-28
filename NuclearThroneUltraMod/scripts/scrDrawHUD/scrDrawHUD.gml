@@ -976,6 +976,8 @@ function scrDrawHUD() {
 	{img = 2}
 	else if dataRef.wep_type[dataRef.bwep] = 1
 	{img = 1}
+	if dataRef.ammo[1] < 0
+		img = 3;
 	draw_sprite(sprBulletIconBG,img,vx+2,vy+ammoheight)
 	draw_sprite(sprBulletIcon,clamp(7-ceil((dataRef.ammo[1]/dataRef.typ_amax[1])*7),-1,7)+1,vx+2,vy+ammoheight)//36
 
@@ -988,6 +990,8 @@ function scrDrawHUD() {
 	{img = 2}
 	else if dataRef.wep_type[dataRef.bwep] = 2
 	{img = 1}
+	if dataRef.ammo[2] < 0
+		img = 3;
 	draw_sprite(sprShotIconBG,img,vx+12,vy+ammoheight)
 	draw_sprite(sprShotIcon,clamp(7-ceil((dataRef.ammo[2]/dataRef.typ_amax[2])*7),-1,7)+1,vx+12,vy+ammoheight)
 
@@ -1000,6 +1004,8 @@ function scrDrawHUD() {
 	{img = 2}
 	else if dataRef.wep_type[dataRef.bwep] = 3
 	{img = 1}
+	if dataRef.ammo[3] < 0
+		img = 3;
 	draw_sprite(sprBoltIconBG,img,vx+22,vy+ammoheight)
 	draw_sprite(sprBoltIcon,clamp(7-ceil((dataRef.ammo[3]/dataRef.typ_amax[3])*7),-1,7)+1,vx+22,vy+ammoheight)
 
@@ -1012,6 +1018,8 @@ function scrDrawHUD() {
 	{img = 2}
 	else if dataRef.wep_type[dataRef.bwep] = 4 
 	{img = 1}
+	if dataRef.ammo[4] < 0
+		img = 3;
 	draw_sprite(sprExploIconBG,img,vx+32,vy+ammoheight)
 	draw_sprite(sprExploIcon,clamp(7-ceil((dataRef.ammo[4]/dataRef.typ_amax[4])*7),-1,7)+1,vx+32,vy+ammoheight)
 
@@ -1024,6 +1032,8 @@ function scrDrawHUD() {
 	{img = 2}
 	else if dataRef.wep_type[dataRef.bwep] = 5 
 	{img = 1}
+	if dataRef.ammo[5] < 0
+		img = 3;
 	draw_sprite(sprEnergyIconBG,img,vx+42,vy+ammoheight)
 	draw_sprite(sprEnergyIcon,clamp(7-ceil((dataRef.ammo[5]/dataRef.typ_amax[5])*7),-1,7)+1,vx+42,vy+ammoheight)
 
@@ -1622,7 +1632,7 @@ function scrDrawHUD() {
 					with dataRef
 						mr = GetPlayerMaxRad();
 					var helpText = "YOU HAVE " + string((Player.rad/mr)*100) + "% RADS";
-					yy = y + 14;
+					yy = y - oy + 14;
 					draw_set_color(c_black)
 					draw_text(x-ox,yy,string_hash_to_newline(string(helpText)))
 					draw_text(x-ox,yy,string_hash_to_newline(string(helpText)))
@@ -1639,7 +1649,7 @@ function scrDrawHUD() {
 			if place_meeting(x,y,Player)
 			{
 				explainTimer += 1*dt;
-				var yy = y - 22;
+				var yy = y - oy - 22;
 				draw_sprite(sprEPickup,UberCont.opt_gamepad,x,yy-2)
 		
 				draw_set_color(c_black)
@@ -1655,7 +1665,7 @@ function scrDrawHUD() {
 					with dataRef
 						mr = GetPlayerMaxRad();
 					var helpText = "YOU HAVE " + string((Player.rad/mr)*100) + "% RADS";
-					yy = y + 14;
+					yy = y - oy + 14;
 					draw_set_color(c_black)
 					draw_text(x-ox,yy,string_hash_to_newline(string(helpText)))
 					draw_text(x-ox,yy,string_hash_to_newline(string(helpText)))

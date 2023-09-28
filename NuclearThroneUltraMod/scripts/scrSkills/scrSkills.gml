@@ -1,5 +1,5 @@
 function scrSkills() {
-	maxskill = 39;
+	maxskill = 40;
 
 
 	dir = 0
@@ -7,7 +7,6 @@ function scrSkills() {
 	{skill_got[dir] = 0
 	dir += 1}
 	
-	var isDoctor = false;
 	var isHand = false;
 	var betterWepSpecific = false;
 	var canCheckUltra = false;
@@ -15,10 +14,6 @@ function scrSkills() {
 	{
 		if variable_instance_exists(Player,"ultra_got")
 			canCheckUltra = true;
-		if Player.race == 25
-		{
-			isDoctor = true;
-		}
 		else if Player.race == 27
 		{
 			isHand = true;	
@@ -93,8 +88,6 @@ function scrSkills() {
 
 	skill_name[4] = "RABBIT PAW"
 	skill_text[4] = "35% MORE AMMO AND HEALTH DROPS#10% MORE WEAPONDROPS"
-	//if isDoctor
-	//	skill_text[4] = "40% MORE AMMO AND HEALTH DROPS#10% MORE WEAPONDROPS"
 	skill_tips[4] = "feeling lucky"
 	skill_msnd[4] =  sndMutRabbitPaw
 	skill_bons[4] = "+5% AMMO AND HEALTH DROPS";
@@ -416,7 +409,7 @@ function scrSkills() {
 		skill_text[36] = "AMMO AND HEALTH DROPS GIVE RADS##EVERY 100TH RAD HEALS 1HP#(HEALING DOUBLED BY SECOND STOMACH)##RADS RELOAD YOUR WEAPONS"
 	skill_tips[36] = "osmosis"
 	skill_msnd[36] =  sndMutAbsorbingPores
-	skill_bons[36] = "-10 RADS REQUIRED"
+	skill_bons[36] = "-5 RADS REQUIRED"
 	
 	
 	skill_name[37] = "ECSTACTIC FISTS"//REJUVINATED SKIN
@@ -440,6 +433,12 @@ function scrSkills() {
 	skill_tips[39] = "spatial anomaly"
 	skill_msnd[39] =  sndMutAlienIntestines
 	skill_bons[39] = "CHARGES FASTER"
+	
+	skill_name[40] = "BOUNCY FAT"
+	skill_text[40] = "IF YOU HAVE AMMO AND TAKE LETHAL DAMAGE#PREVENT IT AND LOSE#25% OF BASE TOTAL AMMO"
+	skill_tips[40] = "layer of fat"
+	skill_bons[40] = "-3% AMMO COST"
+	skill_msnd[40] =  sndMutBouncyFat;
 		
 	/*
 		DAMAGE INCREASING MUTATION (GOOD AS DAMAGE INCREASE OUTSIDE OF FIRERATE INCREASE)
@@ -466,10 +465,10 @@ function scrSkills() {
 	skill_msnd[33] =  sndMutThronebutt
 	*/
 	
-	skill_name[40] = "NOTHING"
-	skill_text[40] = "THERE ARE NO MORE MUTATIONS LEFT!"
-	skill_tips[40] = ""
-	skill_msnd[40] =  sndPartyHorn
+	skill_name[41] = "NOTHING"
+	skill_text[41] = "THERE ARE NO MORE MUTATIONS LEFT!"
+	skill_tips[41] = ""
+	skill_msnd[41] =  sndPartyHorn
 
 
 }

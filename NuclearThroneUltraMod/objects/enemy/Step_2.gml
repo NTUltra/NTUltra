@@ -97,29 +97,55 @@ if prevhealth > my_health
 		    }
 			dmgTaken += damageDeal;
 		}
-		if (Player.skill_got[37]) //ECSTATIC FISTS
+		if (Player.skill_got[37] || true) //ECSTATIC FISTS
 		{
 			var part = 0.3;
 			if Player.race == 25 //Doctor
 				part = 0.35;
+			var dmgBuff = 1;
 			if Player.ultra_got[62] && Player.altUltra && Player.armour > 0 && Player.maxarmour > 0
 			{
 				//Living armour
 				if Player.maxarmour > 1
-					dmgTaken *= 1 + (((Player.armour - 1) / max(Player.maxarmour - 1,2)) * part);
+					dmgBuff = 1 + (((Player.armour - 1) / max(Player.maxarmour - 1,2)) * part);
 				else
-					dmgTaken *= 1 + part;
+					dmgBuff = 1 + part;
 			}
 			else if Player.my_health > 0 && Player.maxhealth > 0
 			{
 				if Player.maxhealth > 1
-					dmgTaken *= 1 + (((Player.my_health - 1) / max(Player.maxhealth - 1,2)) * part);
+					dmgBuff = 1 + (((Player.my_health - 1) / max(Player.maxhealth - 1,2)) * part);
 				else
-					dmgTaken *= 1 + part;
+					dmgBuff = 1 + part;
 			}
-			if Player.my_health >= Player.maxhealth
+			dmgTaken *= dmgBuff;
+			if Player.my_health > Player.maxhealth
 			{
-				instance_create(x,y,Smoke);	
+				with instance_create_depth(x,y,depth - 1,ImpactFX)
+				{
+					var reduc = 0.03
+					var size = clamp(power(dmgTaken*reduc,0.5),0.2,2.5);
+					BackCont.shake += size*2;
+					sprite_index = sprEcstaticFXPlusUltra;	
+				}
+			}
+			else if Player.my_health == Player.maxhealth
+			{
+				with instance_create_depth(x,y,depth - 1,ImpactFX)
+				{
+					var reduc = 0.025;
+					var size = clamp(power(dmgTaken*reduc,0.5),0.2,2.5);
+					BackCont.shake += size*2;
+					sprite_index = sprEcstaticFX;	
+				}
+			} else if Player.my_health > ceil(Player.maxhealth*0.5)
+			{
+				with instance_create_depth(x,y,depth - 1,ImpactFX)
+				{
+					var reduc = 0.02;
+					var size = clamp(power(dmgTaken*reduc,0.5),0.2,2);
+					sprite_index = sprEcstaticFXMinor;	
+				}
 			}
 		}
 		my_health = prevhealth - dmgTaken;

@@ -4484,7 +4484,6 @@ function scrFire2() {
 	//ION TELEPORTER
 	case 358:
 	
-	if place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor) and not place_meeting(UberCont.mouse__x, UberCont.mouse__y, Wall) {
 		snd_play_fire(sndHyperLightning);
 		if alarm[3]<1
 		alarm[3]=max(3,alarm[3]);//imunity
@@ -4495,8 +4494,8 @@ function scrFire2() {
 			motion_add(random(360),1+random(3))
 		}
     
-		x=UberCont.mouse__x;
-		y=UberCont.mouse__y;
+		var xx=UberCont.mouse__x;
+		var yy=UberCont.mouse__y;
 		scrForcePosition60fps();
 		BackCont.viewx2 += lengthdir_x(20,aimDirection+180)*UberCont.opt_shake
 		BackCont.viewy2 += lengthdir_y(20,aimDirection+180)*UberCont.opt_shake
@@ -4507,7 +4506,7 @@ function scrFire2() {
 			telepower = 5;
 			snd_play_fire(sndLightningCannonEnd);
 			repeat(5) {
-				with instance_create(x,y,Lightning) {
+				with instance_create(xx,yy,Lightning) {
 					image_angle = aimDirection+(random(360))*other.accuracy
 					team = other.team
 					ammo = 6
@@ -4522,7 +4521,7 @@ function scrFire2() {
 				var ang = random(360)
 				repeat(6)
 				{
-					with instance_create(x,y,PlasmaBall) {
+					with instance_create(xx,yy,PlasmaBall) {
 						motion_add(ang,2);
 						image_angle = direction
 						originalDirection=ang;
@@ -4535,9 +4534,9 @@ function scrFire2() {
 		
 		snd_play_fire(sndLightning3);
 		repeat(telepower) {
-			instance_create(x+random(24)-12,y+random(24)-12,PlasmaImpact);
+			instance_create(xx+random(24)-12,yy+random(24)-12,PlasmaImpact);
 			
-			with instance_create(x,y,Lightning)
+			with instance_create(xx,yy,Lightning)
 				{image_angle = aimDirection+(random(360))*other.accuracy
 				team = other.team
 				ammo = 6
@@ -4548,13 +4547,13 @@ function scrFire2() {
 		}
 		
 		repeat(5) {
-			with instance_create(x,y,Smoke)
+			with instance_create(xx,yy,Smoke)
 			motion_add(random(360),1+random(3))
 		}
-	} else {
-		ammo[wep_type[358]] += wep_cost[358];
-		snd_play_fire(sndSpark1);
-	}
+		if race == 18 || (place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor) and not place_meeting(UberCont.mouse__x, UberCont.mouse__y, Wall)) {
+			x = xx;
+			y = yy;
+		}
 
 	break;
 

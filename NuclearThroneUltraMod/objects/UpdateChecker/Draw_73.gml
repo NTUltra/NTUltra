@@ -5,12 +5,15 @@ var yy = __view_get( e__VW.YView, 0 )-39+Menu.widescreen;
 if (notUpdated == "*")
 {
 	var utxt = "["+UberCont.updateVersion+UberCont.subUpdateVersion+"]"
-	draw_text_colour(xx,yy,
-	utxt + notUpdated ,c_white,c_white,c_white,c_white,1);
-	if (mouse_check_button_pressed(mb_left) && mouse_x > xx - 8 && mouse_x < xx + 8 && mouse_y > yy - 8 && mouse_y < yy + 8)
+	var col = c_white;
+	if (mouse_x > xx - 8 && mouse_x < xx + 8 && mouse_y > yy - 8 && mouse_y < yy + 2)
 	{
-		url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod");	
+		col = c_lime;
+		if mouse_check_button_pressed(mb_left)
+			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod");	
 	}
+	draw_text_colour(xx,yy,
+	utxt + notUpdated ,col,col,col,col,1);
 }
 var utxt = "["+UberCont.updateVersion+UberCont.subUpdateVersion+"]"
 draw_text_colour(xx,yy,

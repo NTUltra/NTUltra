@@ -1,5 +1,5 @@
 var loops = GetPlayerLoops();
-maxhealth = 30 * clamp(loops+1,1,4)
+maxhealth = 50 * clamp(loops+1,1,4)
 drawShadow = true;
 spr_idle = sprVenusCar
 spr_hurt = sprVenusCarHurt
@@ -14,3 +14,4 @@ drawShadow = false;
 image_xscale = 1
 
 alarm[1] = 2;
+instance_create(x,y,WallBreak);

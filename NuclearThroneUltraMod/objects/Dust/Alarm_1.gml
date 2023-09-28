@@ -1,3 +1,5 @@
+/// @description Grow rotate shrink
+alarm[1] = 1;
 image_xscale += growspeed
 image_yscale += growspeed
 
@@ -6,4 +8,3 @@ image_angle += rot
 
 if image_xscale < 0.04
 instance_destroy()
-

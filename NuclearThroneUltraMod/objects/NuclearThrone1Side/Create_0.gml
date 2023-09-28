@@ -28,7 +28,7 @@ spr_right_deactivated_hurt_link = sprNothingRightDeactivatedHurtLink;
 owner = -1;
 xOffset = 0;
 isLeft = true;
-target = -1;
+target = noone;
 
 walk = 0;
 spriteXscale = 1;

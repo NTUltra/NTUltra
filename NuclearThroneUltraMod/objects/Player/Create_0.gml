@@ -137,7 +137,7 @@ fired = false;
 poppop = false;
 rushcrownlevels = 0;
 consecutiveCrownVisits = 0;
-prevCrown = 0;
+prevCrown = [];
 portalstrikesusedthislevel = 0;
 toxicweaponsfound = 0;
 
@@ -299,7 +299,7 @@ if race == 7 && bskin == 2
 if race == 25
 {
 	//Better mutations
-	maxRadPickedUp = 90;
+	maxRadPickedUp = 95;
 }
 if race == 14//Panda
 {

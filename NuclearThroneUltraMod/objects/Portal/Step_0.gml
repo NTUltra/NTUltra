@@ -87,7 +87,10 @@ if alarm[1] < 1 && point_distance(x,y,Player.x,Player.y)<d
 
 if endgame < 100
 {
-endgame -= 1
+	if UberCont.normalGameSpeed == 60
+		endgame -= 0.5
+	else
+		endgame -= 1
 if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or sprite_index = sprPortalInverted ||  sprite_index = sprBigPortal || sprite_index == sprPinkPortal)
 {
 	image_index = 0
@@ -110,8 +113,8 @@ if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or
 		angle = 0
 		sprite_index = spr_idle;
 	}
-	with PlayerInPortal
-		instance_destroy();
+	//with PlayerInPortal
+	//	instance_destroy();
 }
 }
 if !instance_exists(Player) && !instance_exists(PlayerSpawn)

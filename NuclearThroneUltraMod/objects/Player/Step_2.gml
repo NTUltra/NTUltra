@@ -743,19 +743,22 @@ if(my_health <= 0 && maxhealth > 0)
     {
 	    if strongspirit==true&&strongspiritused==false
 	    {
-	    snd_play(sndStrongSpiritLost);
-	    my_health = 1;
-		Sleep(50);
-		alarm[3] += 30;
-		snd_hurt = sndDamageNegate;
-		scrGiveEuphoriaShield();
-	    strongspiritused=true;
-	    strongspirit=false;
+		    snd_play(sndStrongSpiritLost);
+		    my_health = 1;
+			BackCont.shake += 10;
+			Sleep(50);
+			alarm[3] += 30;
+			snd_hurt = sndDamageNegate;
+			scrGiveEuphoriaShield();
+		    strongspiritused=true;
+		    strongspirit=false;
 	    }
     }
     if ultra_got[103] && humphrySkill >= 200 && (skill_got[25]=0||strongspiritused=true)//Humphry Protective mustache C
     {
 	    humphrySkill=0;
+		Sleep(50);
+		BackCont.shake += 10;
 		snd_play_2d(sndProtectiveMustache,0,true);
 		alarm[3] += 30;
 		snd_hurt = sndDamageNegate;
@@ -764,8 +767,47 @@ if(my_health <= 0 && maxhealth > 0)
 			alarm[7] = 20;
 	    my_health = 1;
     }
+	//BOUNCY FAT
+	if (skill_got[40] && my_health <= 0 && maxhealth > 0 && scrHasAmmo())
+	{
+		alarm[3] += 10;
+		snd_hurt = sndDamageNegate;
+		scrGiveEuphoriaShield();
+		snd_play_2d(sndBounceFat);
+		repeat(3)
+		{
+			with instance_create_depth(x,y,depth,Dust)
+			{
+				speed += 2.5;
+				friction = 0.2;
+				image_xscale += 0.2;
+				image_yscale += 0.2;
+				growspeed += 0.06;
+				rot *= 1.5;
+				sprite_index = sprBubble;
+			}
+		}
+		BackCont.shake += 10;
+		Sleep(50);
+		my_health = 1;
+		var al = 6;//weapon types total
+		var takePercentage = 0.25; 
+		if race == 25
+			takePercentage = 0.22;
+		var baseammo;
+		baseammo[1] = 255 baseammo[2] = 55 baseammo[3] = 55 baseammo[4] = 55 baseammo[5] = 55
+		for (var i = 1; i < al; i++) {
+			ammo[i] = ammo[i] - (baseammo[i]*takePercentage);
+		}
+		if !scrHasAmmo()
+		{
+			scrEmpty();	
+		}
+	}
 	if my_health <= 0 {
 		if lastWishPrevent {
+			BackCont.shake += 20;
+			Sleep(100);
 			my_health = maxhealth;
 			if race == 25
 				my_health += 3;

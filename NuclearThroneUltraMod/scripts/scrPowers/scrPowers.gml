@@ -50,7 +50,7 @@ function scrPowers() {
 			var t1 = wep_type[wep];
 			var t2 = wep_type[bwep];
 			var al = 6;//weapon types total
-			var takePercentage = 0.01//0.015//1.5%%//0.0075;//0.75%
+			var takePercentage = 0.015//0.015//1.5%%//0.0075;//0.75%
 			for (var i = 1; i < al; i++) {
 				if (i != t1 && i != t2)
 				{

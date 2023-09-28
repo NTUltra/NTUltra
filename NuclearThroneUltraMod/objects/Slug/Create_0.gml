@@ -8,7 +8,7 @@ if instance_exists(Player)
 	if Player.skill_got[15] = 1
 	{
 		wallbounce = 8
-		friction = 0.7
+		friction = 0.6
 		alarm[1] += 3;
 		if Player.race=25
 		{
@@ -16,6 +16,7 @@ if instance_exists(Player)
 
 			if Player.ultra_got[97] && !Player.altUltra
 			{
+				friction -= 0.1;
 				wallbounce+=4;
 				alarm[1]+=4;
 			}

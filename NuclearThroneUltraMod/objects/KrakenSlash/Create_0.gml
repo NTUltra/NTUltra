@@ -12,16 +12,6 @@ if GetPlayerUltramod() == ultramods.krakenMelee
 }
 //hit=false;
 snd_wallhit=sndMeleeWall;
-snd_hit=sndLightning1;
 
-if instance_exists(Player){
-if Player.skill_got[17] = 1
-{
-snd_hit=sndLightning3
-image_speed = 0.2-(Player.betterlaserbrain*0.6)
-}
-else
-snd_hit=sndLightning1
-}
 
-length = 11;
+length = 12;

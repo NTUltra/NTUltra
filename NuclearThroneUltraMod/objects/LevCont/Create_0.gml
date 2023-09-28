@@ -73,40 +73,40 @@ if Player.crownpoints > 0
 			crown = other.dir
 			if crown == 0 
 			{
-				if scrIsCrown(8) && Player.tookDestiny && (!UberCont.canMultiCrown || scrIsCrown(24))//Sloth
+				if (scrIsCrown(8) && Player.tookDestiny && (!UberCont.canMultiCrown || scrIsCrown(24)))//Sloth
 					crown = 8;
-				else if scrIsCrown(25) && !UberCont.canMultiCrown//Freedom
+				else if (Player.wep_type[Player.wep] == 4 && Player.wep_type[Player.bwep] == 4 && !scrIsGamemode(4) && !scrIsCrown(25))//Crown of freedom secret 2 explosive weps
 					crown = 25;
-				else if scrIsCrown(26) && !UberCont.canMultiCrown//Energy
+				else if (Player.wep_type[Player.wep] == 5 && Player.wep_type[Player.bwep] == 5 && !scrIsCrown(26))//Crown of energy
 					crown = 26;
-				else if scrIsCrown(27) && !UberCont.canMultiCrown//Disco
-					crown = 27;
-				else if scrIsCrown(28) && !UberCont.canMultiCrown//Apocalypse
-					crown = 28;
-				else if (scrIsCrown(32) && !UberCont.canMultiCrown)//Misfortune
-					crown = 32;
-				else if (scrIsCrown(34) && !UberCont.canMultiCrown)//Time
-					crown = 34;
-				else if scrIsCrown(29) && !UberCont.canMultiCrown//Purity
-					crown = 29;
-				else if (scrIsCrown(33) && !UberCont.canMultiCrown)//Echo
+				else if (Player.consecutiveCrownVisits > 1 && !scrIsCrown(33))
 					crown = 33;
-				else if scrIsCrown(22) && !scrIsCrown(32)//Luck to misfortune
+				else if (scrIsCrown(22) && !scrIsCrown(32))//Luck to misfortune
 					crown = 32
-				else if scrIsCrown(7) && !scrIsCrown(28)//Blood to Apocalypse
-					crown = 28;
-				else if scrIsCrown(4) && !scrIsCrown(34)//Rush to Time
+				else if (scrIsCrown(4) && !scrIsCrown(34))//Rush to Time
 					crown = 34;
-				else if Player.consecutiveCrownVisits > 1 && !scrIsCrown(33)
-					crown = 33;
-				else if Player.wep_type[Player.wep] == 4 && Player.wep_type[Player.bwep] == 4 && !scrIsGamemode(4) && !scrIsCrown(25)//Crown of freedom secret 2 explosive weps
-					crown = 25;
-				else if Player.wep_type[Player.wep] == 5 && Player.wep_type[Player.bwep] == 5 && !scrIsCrown(26)//Crown of energy
-					crown = 26;
-				else if scrCanWeDisco() && !scrIsCrown(27)
-					crown = 27;
-				else if (Player.wepmod1 != 0 || Player.bwepmod1 != 0 || Player.cwepmod1 != 0) && !scrIsCrown(29)//Purity
+				else if (scrIsCrown(7) && !scrIsCrown(28))//Blood to Apocalypse
+					crown = 28;
+				else if ((Player.wepmod1 != 0 || Player.bwepmod1 != 0 || Player.cwepmod1 != 0) && !scrIsCrown(29))//Purity
 					crown = 29;
+				else if (scrIsCrown(27))//Disco
+					crown = 27;
+				else if (scrIsCrown(28))//Apocalypse
+					crown = 28;
+				else if (scrIsCrown(29))//Purity
+					crown = 29;
+				else if (scrIsCrown(32))//Misfortune
+					crown = 32;
+				else if (scrIsCrown(34))//Time
+					crown = 34;
+				else if (scrIsCrown(33))//Echo
+					crown = 33;
+				else if (scrIsCrown(25))//Freedom
+					crown = 25;
+				else if (scrIsCrown(26))//Energy
+					crown = 26;
+				else if (scrCanWeDisco() && !scrIsCrown(27))
+					crown = 27;
 			}
 			else if crown == 8 && Player.tookDestiny//Crown of sloth secret
 				crown = 24;

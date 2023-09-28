@@ -26,7 +26,7 @@ EnemyHealthAdjustments();
 
 morphMe = 10;//Can't be morphed or damaged by morph
 team = 0
-target = -1
+target = noone;
 
 snd_hurt = sndHitFlesh
 snd_dead = sndSheepDead

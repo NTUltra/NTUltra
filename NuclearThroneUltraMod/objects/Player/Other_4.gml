@@ -138,7 +138,16 @@ if area=100
 	crownvisits++;
 	with UberCont
 		canPickFrogCrown = false;
-	if !scrIsCrown(1) && array_contains(crown,prevCrown)
+	var hasSameCrown = false;
+	var al = array_length(prevCrown);
+	for (var i = 0; i < al; i ++)
+	{
+		if (array_contains(crown,prevCrown[i]))
+		{
+			hasSameCrown = true;
+		}
+	}
+	if !scrIsCrown(1) && hasSameCrown //array_contains(crown,prevCrown)
 	{
 		consecutiveCrownVisits ++;	
 	} else

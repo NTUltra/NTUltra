@@ -306,7 +306,7 @@ function scrDrawBloom() {
 	{
 		draw_sprite_ext(bloomSprite,imageIndex,x,y,(Player.sheepPower/10)+1,(Player.sheepPower/10)+1,image_angle,c_white,clamp(alpha*0.3,0.05,0.3));
 	}
-		if Player.ultra_got[41]==1
+		if Player.ultra_got[41]
 		{
 		    with enemy
 		    {
@@ -322,7 +322,7 @@ function scrDrawBloom() {
         
 		    }
 		}
-		if Player.ultra_got[105]==1
+		if Player.ultra_got[105]
 		{
 			var ab = 1;
 			var xs = 1;
