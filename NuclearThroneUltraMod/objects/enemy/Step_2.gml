@@ -97,7 +97,7 @@ if prevhealth > my_health
 		    }
 			dmgTaken += damageDeal;
 		}
-		if (Player.skill_got[37] || true) //ECSTATIC FISTS
+		if (Player.skill_got[37]) //ECSTATIC FISTS
 		{
 			var part = 0.3;
 			if Player.race == 25 //Doctor
