@@ -91,9 +91,8 @@ if instance_exists(Player)
 			alarm[10] = 10;
 		}
 	}
-	if Player.ultra_got[59] && Player.altUltra && !instance_exists(CorrosionDrawer)
+	if (((Player.ultra_got[59] && Player.altUltra) || Player.ultra_got[108]) && !instance_exists(CorrosionDrawer))
 	{
 		instance_create(x,y,CorrosionDrawer)
 	}
-	
 }

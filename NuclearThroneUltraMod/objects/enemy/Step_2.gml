@@ -134,7 +134,7 @@ if prevhealth > my_health
 				with instance_create_depth(x,y,depth - 1,ImpactFX)
 				{
 					var reduc = 0.025;
-					var size = clamp(power(dmgTaken*reduc,0.5),0.2,2.5);
+					var size = clamp(power(dmgTaken*reduc,0.5),0.15,2.5);
 					BackCont.shake += size*2;
 					sprite_index = sprEcstaticFX;	
 				}
@@ -143,7 +143,7 @@ if prevhealth > my_health
 				with instance_create_depth(x,y,depth - 1,ImpactFX)
 				{
 					var reduc = 0.02;
-					var size = clamp(power(dmgTaken*reduc,0.5),0.2,2);
+					var size = clamp(power(dmgTaken*reduc,0.5),0.15,2);
 					sprite_index = sprEcstaticFXMinor;	
 				}
 			}

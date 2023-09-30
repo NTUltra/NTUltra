@@ -194,6 +194,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 		{
 			if ((Player.race == 21 && Player.ultra_got[0] && !Player.altUltra) || Player.race != 21)
 			{
+				skillsChosen = 0;
 				instance_create(x,y,LevCont);
 				instance_destroy();
 			}

@@ -57,9 +57,9 @@ if other.team != team && team != 0
 				}
 				if other.skill_got[37] //&& other.my_health >= other.maxhealth
 			    {
-					var part = 0.25;
+					var part = 0.3;
 					if other.race == 25 //Doctor
-						part = 0.3;
+						part = 0.35;
 					if other.ultra_got[62] && other.altUltra && other.armour > 0 && other.maxarmour > 0
 					{
 						//Living armour

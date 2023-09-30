@@ -1608,8 +1608,6 @@ function scrPowers() {
 		}
 		roll = 1
 		rollIframe = 5;
-		if skill_got[5]
-			rollIframe = 6;
 		alarm[3] += rollIframe;
 		mask_index = mskPickupThroughWall;
 		if skill_got[5]
@@ -2160,7 +2158,7 @@ function scrPowers() {
 					slappedProjectile = false;
 				}
 			}
-			if ultra_got[108] && resulttar == -1
+			if resulttar == -1
 			{
 				//Allow pickups to be picked up
 				if instance_exists(WepPickup)
@@ -2173,6 +2171,9 @@ function scrPowers() {
 						slappedProjectile = false;
 					}
 				}
+			}
+			if ultra_got[108] && resulttar == -1
+			{
 				if instance_exists(Pickup) && resulttar == -1
 				{
 					tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,Pickup);
@@ -2192,6 +2193,10 @@ function scrPowers() {
 				BackCont.shake += 5;
 				with instance_create(x,y,Hand)
 				{
+					if other.ultra_got[108]
+					{
+						alarm[6] = 1;	
+					}
 					if other.ultra_got[107]
 					{
 						alarm[3] = 1;//Destroy projectiles

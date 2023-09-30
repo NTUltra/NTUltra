@@ -36,7 +36,7 @@ function scrDrawGameOver() {
 	if (array_length(UberCont.opt_gamemode) > 1)
 		gameover += "##GAME MODES :##";
 	else if !normalMode
-		gameover += "##GAME MODE :##";
+		gameover += "##GAME MODE :###";
 	else
 		gameover += "##NORMAL MODE##";
 	
@@ -50,11 +50,11 @@ function scrDrawGameOver() {
 	{
 		if UberCont.canRestart
 		{
-			gameover += "##[R] QUICK RESTART#[LEFT CLICK] MENU";
+			gameover += "###[R] QUICK RESTART#[LEFT CLICK] MENU";
 		}
 		else
 		{
-			gameover += "##[LEFT CLICK] MENU";
+			gameover += "###[LEFT CLICK] MENU";
 		}
 	}
 

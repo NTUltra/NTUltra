@@ -14,6 +14,7 @@ isGrenade = false;
 typ = 0;
 wepFire = 0;
 spr_hurt = false;
+my_health = 0;
 depth = -1;
 if scrIsGamemode(33)//All Deflector
 {

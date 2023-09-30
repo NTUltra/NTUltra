@@ -9,6 +9,7 @@ rotspeed = (random(1)+1)*choose(1,-1)
 mySize = 1;
 team = 0;
 my_health = 1;
+meleedamage = 0;
 pickedup=false;
 spr_hurt = false;
 oneweponly=false

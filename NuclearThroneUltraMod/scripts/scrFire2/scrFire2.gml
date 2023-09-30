@@ -5544,28 +5544,24 @@ function scrFire2() {
 		with instance_create(x+16,y+16,Flame)
 		{
 			motion_add(0,4)
-			dmg -= 1;
 			//image_angle = direction
 			team = t
 		}
 		with instance_create(x+16,y+16,Flame)
 		{
 			motion_add(90,4)
-			dmg -= 1;
 			//image_angle = direction
 			team = t
 		}
 		with instance_create(x+16,y+16,Flame)
 		{
 			motion_add(270,4)
-			dmg -= 1;
 			//image_angle = direction
 			team = t
 		}
 		with instance_create(x+16,y+16,Flame)
 		{
 			motion_add(180,4)
-			dmg -= 1;
 			//image_angle = direction
 			team = t
 		}

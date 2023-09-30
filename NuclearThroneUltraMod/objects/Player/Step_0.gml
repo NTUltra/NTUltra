@@ -1328,9 +1328,14 @@ if  ultra_got[40]=1//Ultra D
 	else
 		canrebel = 1
 }
+var tempMaxSpeed = 0;
+if ultra_got[108] && place_meeting(x,y,HandTrail)
+{
+	tempMaxSpeed += 1;
+}
 if wep == 531//Coffee makes you faster
 {
-	maxSpeed += 1;	
+	tempMaxSpeed += 1;
 }
 outOfCombat = (!instance_exists(enemy) || instance_number(enemy) <= instance_number(IDPDVan)) && !instance_exists(becomenemy)
 if instance_exists(SurvivalWave)
@@ -1341,7 +1346,9 @@ if instance_exists(SurvivalWave)
 	}
 }
 if outOfCombat && !scrIsGamemode(25)
-	maxSpeed += 1;
+	tempMaxSpeed += 1;
+	
+maxSpeed += tempMaxSpeed;
 //CAP SPEED
 var por = instance_place(x,y,Portal);
 if !visible || (por != noone && por.alarm[1] < 1 && por.sprite_index != sprPortalSpawn) || instance_exists(SpiralCont)
@@ -1358,12 +1365,7 @@ else if race == 23 && ultra_got[92] == 0
 }
 else if speed > maxSpeed
 	speed = maxSpeed
-if outOfCombat && !scrIsGamemode(25)
-	maxSpeed -= 1;
-if wep == 531
-{
-	maxSpeed -= 1;
-}
+maxSpeed -= tempMaxSpeed;
 
 if roll = 1
 {
@@ -1406,7 +1408,8 @@ if ultra_got[59] && altUltra
 			{
 				with corrosion
 				{
-					alarm[0] = 60;	
+					alarm[2] = 1;
+					alarm[0] = 60;
 				}
 			}
 		}
@@ -1569,6 +1572,7 @@ if (!outOfCombat && !skill_got[2] && race!=18 && race != 15 and !instance_exists
 		}
 	}
 }
+
 
 scr60fpsReload();
 if reload > 0

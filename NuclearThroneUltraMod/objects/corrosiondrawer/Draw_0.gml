@@ -1,14 +1,14 @@
-/// @description xxx
+/// @description Draw!
 if UberCont.normalGameSpeed == 60
-	image_index += 0.2;
+	imageIndex += 0.2;
 else
 	imageIndex += 0.4;
 var i = imageIndex;
 draw_set_blend_mode(bm_add);
-draw_set_alpha(0.5);
 with Corrosion
 {
-	draw_sprite(sprite_index,i,x,y);
+	draw_sprite_ext(sprite_index,i,x,y,1,1,0,c_white,alpha);
 }
-draw_set_alpha(1);
 draw_set_blend_mode(bm_normal);
+if imageIndex > 4
+	imageIndex = 0;

@@ -25,4 +25,7 @@ pushSpeed = 20;
 grabbingPickup = false;
 spr_closing = sprHandClosing;
 spr_close = sprHandClose;
+spr_hurt = false;
+my_health = 0;
+mySize = 1;
 alarm[5] = 1;

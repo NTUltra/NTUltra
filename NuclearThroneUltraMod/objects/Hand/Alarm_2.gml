@@ -92,7 +92,7 @@ if target != noone && instance_exists(target)
 				}
 			}
 		}
-		if my_health <= 0
+		if my_health <= 0//CRASH HERE
 		{
 			other.target = noone;
 		}

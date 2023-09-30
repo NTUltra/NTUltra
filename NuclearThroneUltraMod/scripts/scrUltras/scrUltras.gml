@@ -803,7 +803,7 @@ function scrUltras(altOverride = false) {
 	ultra_tips[107] = "consecutive normal punches"
     
 	ultra_name[108] = "DELICATE HANDS"
-	ultra_text[108] = "ALLOWS YOUR HAND TO COLLECT#RADS, PICKUPS AND WEAPONS#HAND IS FASTER#THE HAND IS EVEN FASTER#WHILE IN AN INVERTED AREA"
+	ultra_text[108] = "ALLOWS YOUR HAND TO COLLECT#RADS & PICKUPS##HAND LEAVES A TRAIL#THAT SPEEDS YOU UP AND SLOWS ENEMIES#INCLUDING PROJECTILES##HAND IS FASTER#THE HAND IS EVEN FASTER#WHILE IN AN INVERTED AREA"
 	ultra_tips[108] = "i shouldn't be level 10 to pick up ammo"
 	
 	maxultra = 108;
