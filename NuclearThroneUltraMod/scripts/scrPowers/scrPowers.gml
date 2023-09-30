@@ -1609,7 +1609,7 @@ function scrPowers() {
 		roll = 1
 		rollIframe = 5;
 		if skill_got[5]
-			rollIframe = 8;
+			rollIframe = 6;
 		alarm[3] += rollIframe;
 		mask_index = mskPickupThroughWall;
 		if skill_got[5]

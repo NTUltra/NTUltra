@@ -662,7 +662,29 @@ with instance_nearest((f.x*3+Player.x)/4+random(128)-64+32,(f.y*3+Player.y)/4+ra
 instance_create(x+16,y+16,WeaponMod)
 
 }
-if (Player.area == 126 || Player.area == 127 || Player.area == 134)
+if (Player.area == 126 || Player.area == 127)
+{
+	var f = instance_furthest(Player.x,Player.y,Floor);
+	with instance_nearest(f.x+(Player.x*0.5)+random(128)-64,f.y+(Player.y*0.5)+random(128)-64,Floor)
+	{
+		instance_create(x+16,y+16,WallBreak);
+		instance_create(x+16,y+16,InactivePatienceStation);
+		
+		instance_create(x,y-32,Floor)
+		instance_create(x,y+32,Floor)
+		instance_create(x-32,y,Floor)
+		instance_create(x+32,y,Floor)
+		instance_create(x-32,y-32,Floor)
+		instance_create(x-32,y+32,Floor)
+		instance_create(x+32,y-32,Floor)
+		instance_create(x+32,y+32,Floor)
+	
+		with Floor{
+		if point_distance(x,y,other.x,other.y) < 34
+		sprite_index = sprFloor100D}
+	}
+}
+if (Player.area == 134)
 {
 	var f = instance_furthest(Player.x,Player.y,Floor);
 	with instance_nearest(f.x+(Player.x*0.5)+random(128)-64,f.y+(Player.y*0.5)+random(128)-64,Floor)

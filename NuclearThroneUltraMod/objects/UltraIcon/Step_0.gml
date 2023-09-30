@@ -511,7 +511,7 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 			{
 				if skill_got[13]//long arms
 				{
-					bettermelee = 0.5;
+					bettermelee = 0.4;
 				}
 				if skill_got[16]//RecycleGland
 				{

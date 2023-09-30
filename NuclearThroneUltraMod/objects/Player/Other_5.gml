@@ -284,8 +284,8 @@ if looping && area != 104
 	if race =3 && skill_got[19]
 	scrUnlockCSkin(3,"FOR LOOPING WITH EAGLE EYES#AS EYES",0);
 
-	if race = 4 && !skill_got[1] && !skill_got[25] && !UberCont.hasTakenCrownOfLife
-	scrUnlockBSkin(4,"FOR LOOPING WITHOUT#RHINO SKIN, STRONG SPIRIT#AND CROWN OF LIFE#AS MELTING",0);
+	if race = 4 && !skill_got[1] && !skill_got[25] && !skill_got[40] && !UberCont.hasTakenCrownOfLife
+	scrUnlockBSkin(4,"FOR LOOPING WITHOUT#RHINO SKIN, STRONG SPIRIT#BOUNCY FAT AND CROWN OF LIFE#AS MELTING",0);
 
 	if loops>1 && race = 4
 	scrUnlockCSkin(4,"FOR REACHING LOOP 3#AS MELTING ON 1HP EQUALITY",5);

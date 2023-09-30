@@ -72,6 +72,10 @@ function scrDrawHUD() {
 	{
 		armourX = 7;
 	}
+	if instance_exists(BouncyFatFX)
+	{
+		draw_sprite(sprLoseAmmoHealth,BouncyFatFX.image_index,vx,vy);	
+	}
 
 
 	//VIKING ARMOUR
@@ -538,10 +542,18 @@ function scrDrawHUD() {
 	{
 	draw_set_halign(fa_left)
 	draw_set_color(c_black)
-	var cAmmo = string(round(dataRef.ammo[dataRef.wep_type[dataRef.cwep]]));
-	draw_text(vx+130,vy+22,cAmmo)
-	draw_text(vx+131,vy+22,cAmmo)
-	draw_text(vx+131,vy+21,cAmmo)
+	var cam = round(dataRef.ammo[dataRef.wep_type[dataRef.cwep]]);
+	var txx = 130;
+	if cam < 0
+	{
+		var cAmmo = string_replace(string(cam),"-","");
+		txx += 3;
+	}
+	else
+		var cAmmo = string(cam)
+	draw_text(vx+txx,vy+22,cAmmo)
+	draw_text(vx+txx+1,vy+22,cAmmo)
+	draw_text(vx+txx+1,vy+21,cAmmo)
 	if dataRef.wep_type[dataRef.wep] = dataRef.wep_type[dataRef.cwep]
 	draw_set_color(c_white)
 	else
@@ -555,7 +567,11 @@ function scrDrawHUD() {
 	}
 	if dataRef.ammo[dataRef.wep_type[dataRef.cwep]] <= 0
 	draw_set_color(c_dkgray)
-	draw_text(vx+130,vy+21,cAmmo)
+	if cam < 0
+	{
+		draw_sprite(sprMinus,0,vx+txx,vy+21);
+	}
+	draw_text(vx+txx,vy+21,cAmmo)
 	}
 	}
 
@@ -639,10 +655,18 @@ function scrDrawHUD() {
 	{
 	draw_set_halign(fa_left)
 	draw_set_color(c_black)
-	var bAmmo = string(round(dataRef.ammo[dataRef.wep_type[dataRef.bwep]]))
-	draw_text(vx+86,vy+22,bAmmo)
-	draw_text(vx+87,vy+22,bAmmo)
-	draw_text(vx+87,vy+21,bAmmo)
+	var bam = round(dataRef.ammo[dataRef.wep_type[dataRef.bwep]]);
+	var txx = 86;
+	if bam < 0
+	{
+		var bAmmo = string_replace(string(bam),"-","");
+		txx += 3;
+	}
+	else
+		var bAmmo = string(bam)
+	draw_text(vx+txx,vy+22,bAmmo)
+	draw_text(vx+txx+1,vy+22,bAmmo)
+	draw_text(vx+txx+1,vy+21,bAmmo)
 	if dataRef.race = 7 or dataRef.wep_type[dataRef.wep] = dataRef.wep_type[dataRef.bwep]
 	draw_set_color(c_white)
 	else
@@ -656,7 +680,11 @@ function scrDrawHUD() {
 	}
 	if dataRef.ammo[dataRef.wep_type[dataRef.bwep]] <= 0
 	draw_set_color(c_dkgray)
-	draw_text(vx+86,vy+21,bAmmo)
+	if bam < 0
+	{
+		draw_sprite(sprMinus,0,vx+txx,vy+21);
+	}
+	draw_text(vx+txx,vy+21,bAmmo)
 	}
 	}
 
@@ -886,19 +914,31 @@ function scrDrawHUD() {
 	}
 	if dataRef.wep_type[dataRef.wep] != 0
 	{
-	var aAmmo = string(round(dataRef.ammo[dataRef.wep_type[dataRef.wep]]))
+	var aam = round(dataRef.ammo[dataRef.wep_type[dataRef.wep]]);
+	var txx = 42;
+	if aam < 0
+	{
+		var aAmmo = string_replace(string(aam),"-","");
+		txx += 3;
+	}
+	else
+		var aAmmo = string(aam)
 	draw_set_halign(fa_left)
 	draw_set_color(c_black)
-	draw_text(vx+42,vy+22,aAmmo)
-	draw_text(vx+43,vy+22,aAmmo)
-	draw_text(vx+43,vy+21,aAmmo)
+	draw_text(vx+txx,vy+22,aAmmo)
+	draw_text(vx+txx+1,vy+22,aAmmo)
+	draw_text(vx+txx+1,vy+21,aAmmo)
 
 	draw_set_color(c_white)
 	if dataRef.ammo[dataRef.wep_type[dataRef.wep]] <= dataRef.typ_ammo[dataRef.wep_type[dataRef.wep]]
 	draw_set_color(c_red)
 	if dataRef.ammo[dataRef.wep_type[dataRef.wep]] <= 0
 	draw_set_color(c_dkgray)
-	draw_text(vx+42,vy+21,aAmmo)
+	if aam < 0
+	{
+		draw_sprite(sprMinus,0,vx+txx,vy+21);
+	}
+	draw_text(vx+txx,vy+21,aAmmo)
 	}
 
 
@@ -1268,6 +1308,21 @@ function scrDrawHUD() {
 				draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(name)))
 				draw_set_color(c_white)
 				draw_text(x-ox,y-oy-31,string_hash_to_newline(string(name)))
+				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+			}
+		}
+		with PatienceStation
+		{
+			if place_meeting(x,y,Player)
+			{
+				draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-12)
+
+				draw_set_color(c_black)
+				draw_text(x-ox,y-oy-48,string_hash_to_newline(string(name)))
+				draw_text(x-ox+1,y-oy-48,string_hash_to_newline(string(name)))
+				draw_text(x-ox+1,y-oy-49,string_hash_to_newline(string(name)))
+				draw_set_color(c_white)
+				draw_text(x-ox,y-oy-49,string_hash_to_newline(string(name)))
 				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 			}
 		}

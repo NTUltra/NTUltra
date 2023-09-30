@@ -13,7 +13,7 @@ if KeyCont.key_fire[Player.p] = 1 && turned=false && alarm[0]<1 || (Player.race=
 dmg = 3;
 alarm[1]=2;
 
-speed+=8;
+speed+=9;
 direction=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 scrRedirectFx();
 turned=true;

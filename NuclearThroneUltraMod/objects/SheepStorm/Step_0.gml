@@ -68,6 +68,8 @@ if (sp > Player.sheepPowerToHaveEffect)
 	}
 	with Player
 	{
+		with EuphoriaShield
+			instance_destroy();
 		alarm[3]=max(alarm[3],2);//imunity
 		snd_hurt = sndDamageNegate;
 		meleeimmunity = max(meleeimmunity,2);

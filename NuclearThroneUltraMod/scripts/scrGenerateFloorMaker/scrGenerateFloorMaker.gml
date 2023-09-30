@@ -211,7 +211,7 @@ function scrGenerateFloorMaker(limiter) {
 			instance_create(x+128,y,Floor)
 			instance_create(x-128,y,Floor)
 			instance_create(x+16,y+16,Carpet);
-			if scrIsGamemode(44)
+			if scrIsGamemode(44) || scrIsGamemode(6)
 			{
 				with Carpet
 				{
@@ -228,7 +228,7 @@ function scrGenerateFloorMaker(limiter) {
 		{
 			with instance_create(x+16,y+16,Carpet)
 				sprite_index = sprInvertedCarpet;
-			if scrIsGamemode(44)
+			if scrIsGamemode(44) || scrIsGamemode(6)
 			{
 				with Carpet
 				{

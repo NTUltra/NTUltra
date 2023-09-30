@@ -5544,24 +5544,28 @@ function scrFire2() {
 		with instance_create(x+16,y+16,Flame)
 		{
 			motion_add(0,4)
+			dmg -= 1;
 			//image_angle = direction
 			team = t
 		}
 		with instance_create(x+16,y+16,Flame)
 		{
 			motion_add(90,4)
+			dmg -= 1;
 			//image_angle = direction
 			team = t
 		}
 		with instance_create(x+16,y+16,Flame)
 		{
 			motion_add(270,4)
+			dmg -= 1;
 			//image_angle = direction
 			team = t
 		}
 		with instance_create(x+16,y+16,Flame)
 		{
 			motion_add(180,4)
+			dmg -= 1;
 			//image_angle = direction
 			team = t
 		}
@@ -13218,6 +13222,98 @@ function scrFire2() {
 	//PHOENIX
 	case 662:
 		scrPhoenixGun(aimDirection);
+	break;
+	
+	//MORPH-O-REVOLVER
+	case 663:
+
+	snd_play_fire(sndCuber);
+
+	repeat(2)
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+	with instance_create(x,y,MorphBullet)
+	{
+		motion_add(aimDirection+(random(12)-6)*other.accuracy,16)
+	image_angle = direction
+	team = other.team
+	}
+
+	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 2
+
+	break;
+	
+	//DOUBLE POP GUN
+	case 664:
+
+	snd_play_fire(sndPopgun)
+
+	repeat(2)
+	{
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(70)-35,2+random(2))
+	}
+
+	with instance_create(x,y,Bullet2)
+	{motion_add(aimDirection+10*other.accuracy+(random(12)-6)*other.accuracy,14+random(2))
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,Bullet2)
+	{motion_add(aimDirection-10*other.accuracy+(random(12)-6)*other.accuracy,14+random(2))
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3
+	wkick = 3
+
+	break;
+	
+	//ALTERNATOR
+	case 665:
+
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+	snd_play_fire(sndPopgun)
+	if altFire
+	{
+		with instance_create(x,y,Bullet6)
+		{motion_add(aimDirection+((random(12)-6)*other.accuracy),15)
+		image_angle = direction
+		team = other.team}
+	}
+	else
+	{
+		with instance_create(x,y,FreezeBullet)
+		{motion_add(aimDirection+((random(12)-6)*other.accuracy),16)
+		image_angle = direction
+		team = other.team}
+	}
+	altFire = !altFire;
+	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 2
+
+	break;
+	
+	//TELEPATHOR
+	case 666:
+
+	with instance_create(x,y,TelepathorBurst)
+	{
+		creator = other.id
+		ammo = 2
+		time = 5
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+
 	break;
 	
 	}//end of switch part 2!

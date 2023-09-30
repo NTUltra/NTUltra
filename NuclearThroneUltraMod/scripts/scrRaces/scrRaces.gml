@@ -18,7 +18,7 @@ function scrRaces() {
 	race_name[1] = "[FISH]"
 	race_pass[1] = "GETS MORE AMMO"
 	race_acti[1] = "DODGE ROLL"
-	race_butt[1] = "WATER BOOST#8 DODGE FRAMES#INSTEAD OF 5#GETS EVEN MORE AMMO#FROM AMMO PICKUPS";
+	race_butt[1] = "WATER BOOST#LAERGER DODGE WINDOW#GETS EVEN MORE AMMO#FROM AMMO PICKUPS";
 	//race_back[1] = "IF YOUR AMMO IS ABOVE 75%#INCREASE FIRE RATE#AND RELOAD SPEED";
 	race_lock[1] = "UNLOCKED FROM THE START"
 	race_have[1] = 1
@@ -79,7 +79,7 @@ function scrRaces() {
 	race_dskin[4] = 0
 	race_eskin[4] = 0
 	race_fskin[4] = 0
-	race_bskin_lock[4] = "LOOP WITHOUT#RHINO SKIN,#STRONG SPIRIT#AND CROWN OF LIFE#AS MELTING"
+	race_bskin_lock[4] = "LOOP WITHOUT#RHINO SKIN,#STRONG SPIRIT#BOUNCY FAT#AND CROWN OF LIFE#AS MELTING"
 	race_cskin_lock[4] = "REACH LOOP 3 ON#1HP EQUALITY#GAMEMODE#AS MELTING"
 
 

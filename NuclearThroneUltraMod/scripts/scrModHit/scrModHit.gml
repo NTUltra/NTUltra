@@ -34,8 +34,8 @@ function scrModHit() {
 		}
 		var r = 1;
 		var pc = false;
-		var itemRate = 9;
-		var wepRate = 6
+		var itemRate = 8;
+		var wepRate = 2
 		with Player
 		{
 		    if skill_got[30]//power craving
@@ -44,7 +44,7 @@ function scrModHit() {
 				if race == 25
 					moddelay = 13;
 				wepRate += 1;
-				itemRate += 1;
+				itemRate += 1.5;
 				pc = true;
 			}
 		    else

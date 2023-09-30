@@ -634,7 +634,7 @@ function scrWeapons() {
 
 	wep_name[57] = "LIGHTNING PISTOL"
 	wep_type[57] = 5
-	wep_auto[57] = 0
+	wep_auto[57] = 1
 	wep_load[57] = 8
 	wep_cost[57] = 1
 	wep_sprt[57] = sprLightningPistol
@@ -645,7 +645,7 @@ function scrWeapons() {
 
 	wep_name[58] = "LIGHTNING RIFLE"
 	wep_type[58] = 5
-	wep_auto[58] = 0
+	wep_auto[58] = 1
 	wep_load[58] = 23
 	wep_cost[58] = 2
 	wep_sprt[58] = sprLightningRifle
@@ -657,7 +657,7 @@ function scrWeapons() {
 
 	wep_name[59] = "LIGHTNING SHOTGUN"
 	wep_type[59] = 5
-	wep_auto[59] = 0
+	wep_auto[59] = 1
 	wep_load[59] = 25
 	wep_cost[59] = 4
 	wep_sprt[59] = sprLightningShotgun
@@ -821,7 +821,7 @@ function scrWeapons() {
 	wep_swap[73] = sndSwapEnergy
 	wep_rad[73] = 0;
 
-	wep_name[74] = "TRIPLE POPGUN"
+	wep_name[74] = "TRIPLE POP GUN"
 	wep_type[74] = 1
 	wep_auto[74] = 1
 	wep_load[74] = 2
@@ -1329,7 +1329,7 @@ function scrWeapons() {
 
 	wep_name[120] = "ULTRA LIGHTNING RIFLE"
 	wep_type[120] = 5
-	wep_auto[120] = 0
+	wep_auto[120] = 1
 	wep_load[120] = 14
 	wep_cost[120] = 3
 	wep_sprt[120] = sprUltraLightningRifle
@@ -1373,7 +1373,7 @@ function scrWeapons() {
 
 	wep_name[124] = "LIGHTNING HAMMER"
 	wep_type[124] = 0
-	wep_auto[124] = 0
+	wep_auto[124] = 1
 	wep_load[124] = 32
 	wep_cost[124] = 0
 	wep_sprt[124] = sprLightningHammer
@@ -1384,7 +1384,7 @@ function scrWeapons() {
 
 	wep_name[125] = "LIGHTNING SHOVEL"
 	wep_type[125] = 0
-	wep_auto[125] = 0
+	wep_auto[125] = 1
 	wep_load[125] = 48
 	wep_cost[125] = 0
 	wep_sprt[125] = sprLightningShovel
@@ -1593,7 +1593,7 @@ function scrWeapons() {
 
 	wep_name[144] = "HYPER LIGHTNING LAUNCHER"
 	wep_type[144] = 5
-	wep_auto[144] = 0
+	wep_auto[144] = 1
 	wep_load[144] = 24
 	wep_cost[144] = 3
 	wep_sprt[144] = sprLightningHyperRifle
@@ -2836,7 +2836,7 @@ function scrWeapons() {
 
 	wep_name[257] = "LIGHTNING CROSSBOW"
 	wep_type[257] = 3
-	wep_auto[257] = 0
+	wep_auto[257] = 1
 	wep_load[257] = 24
 	wep_cost[257] = 1.5
 	wep_sprt[257] = sprLightningCrossbow
@@ -3540,7 +3540,7 @@ function scrWeapons() {
 
 	wep_name[321] = "LIGHTNING SCREWDRIVER"
 	wep_type[321] = 0
-	wep_auto[321] = 0
+	wep_auto[321] = 1
 	wep_load[321] = 9
 	wep_cost[321] = 0
 	wep_sprt[321] = sprLightningScrewDriver
@@ -3716,7 +3716,7 @@ function scrWeapons() {
 
 	wep_name[337] = "MINI LIGHTNING PISTOL"
 	wep_type[337] = 5
-	wep_auto[337] = 0
+	wep_auto[337] = 1
 	wep_load[337] = 13
 	wep_cost[337] = 1
 	wep_sprt[337] = sprMiniLightningPistol
@@ -4409,7 +4409,7 @@ function scrWeapons() {
 	
 	wep_name[398] = "LIGHTNING LASER"//Tiny balls that explode into lightning on impact move fast fire fast
 	wep_type[398] = 5
-	wep_auto[398] = 0
+	wep_auto[398] = 1
 	wep_load[398] = 10
 	wep_cost[398] = 3
 	wep_sprt[398] = sprLightningLaserGun
@@ -5531,7 +5531,7 @@ function scrWeapons() {
 	
 	wep_name[500] = "LIGHTNING CANNON"
 	wep_type[500] = 5
-	wep_auto[500] = 0
+	wep_auto[500] = 1
 	wep_load[500] = 34//1.13 seconds
 	wep_cost[500] = 8
 	wep_sprt[500] = sprLightningCannon
@@ -5784,7 +5784,7 @@ function scrWeapons() {
 	
 	wep_name[523] = "LIGHTNING STRIKER"
 	wep_type[523] = 5
-	wep_auto[523] = 0
+	wep_auto[523] = 1
 	wep_load[523] = 38
 	wep_cost[523] = 4
 	wep_sprt[523] = sprLightningStriker
@@ -5795,7 +5795,7 @@ function scrWeapons() {
 	
 	wep_name[524] = "ULTRA LIGHTNING STRIKER"
 	wep_type[524] = 5
-	wep_auto[524] = 0
+	wep_auto[524] = 1
 	wep_load[524] = 38
 	wep_cost[524] = 8
 	wep_sprt[524] = sprUltraLightningStriker
@@ -5850,7 +5850,7 @@ function scrWeapons() {
 	
 	wep_name[529] = "LIGHTNING CRASH"
 	wep_type[529] = 5
-	wep_auto[529] = 0
+	wep_auto[529] = 1
 	wep_load[529] = 23
 	wep_cost[529] = 5
 	wep_sprt[529] = sprLightningCrash
@@ -6026,7 +6026,7 @@ function scrWeapons() {
 	
 	wep_name[545] = "SUPER LIGHTNING CROSSBOW"
 	wep_type[545] = 3
-	wep_auto[545] = 0
+	wep_auto[545] = 1
 	wep_load[545] = 38
 	wep_cost[545] = 6
 	wep_sprt[545] = sprSuperLightningCrossbow
@@ -6438,7 +6438,7 @@ function scrWeapons() {
 	wep_cost[582] = 8//9
 	wep_sprt[582] = sprUltraTripleHeavyMachinegun
 	wep_area[582] = 31
-	wep_text[582] = "triple machinegun, so much fun"
+	wep_text[582] = "knock them back!"
 	wep_swap[582] = sndSwapMachinegun
 	wep_rad[582] = 12;//21
 
@@ -6785,7 +6785,7 @@ function scrWeapons() {
 	
 	wep_name[614] = "SUPER LIGHTNING CANNON"
 	wep_type[614] = 5
-	wep_auto[614] = 0
+	wep_auto[614] = 1
 	wep_load[614] = 230
 	wep_cost[614] = 24
 	wep_sprt[614] = sprSuperLightningCannon
@@ -6972,7 +6972,7 @@ function scrWeapons() {
 	
 	wep_name[631] = "ULTRA LIGHTNING CANNON"
 	wep_type[631] = 5
-	wep_auto[631] = 0
+	wep_auto[631] = 1
 	wep_load[631] = 36//1.13 seconds
 	wep_cost[631] = 9
 	wep_sprt[631] = sprUltraLightningCannon
@@ -7321,6 +7321,50 @@ function scrWeapons() {
 	wep_text[662] = "fire bird"
 	wep_swap[662] = sndSwapDragon
 	wep_rad[662] = 0;
+	
+	wep_name[663] = "MORPH-O-REVOLVER"
+	wep_type[663] = 1
+	wep_auto[663] = 1
+	wep_load[663] = 8
+	wep_cost[663] = 2
+	wep_sprt[663] = sprMorphORevolver
+	wep_area[663] = 2
+	wep_text[663] = "sheep revolver"
+	wep_swap[663] = sndSwapPistol
+	wep_rad[663] = 0;
+	
+	wep_name[664] = "DOUBLE POP GUN"
+	wep_type[664] = 1
+	wep_auto[664] = 1
+	wep_load[664] = 3
+	wep_cost[664] = 2
+	wep_sprt[664] = sprDoublePopGun
+	wep_area[664] = 3
+	wep_text[664] = "duality"
+	wep_swap[664] = sndSwapMachinegun
+	wep_rad[664] = 0;
+	
+	wep_name[665] = "ALTERNATOR"
+	wep_type[665] = 1
+	wep_auto[665] = 1
+	wep_load[665] = 8
+	wep_cost[665] = 2
+	wep_sprt[665] = sprAlternator
+	wep_area[665] = 0
+	wep_text[665] = "frost and fire"
+	wep_swap[665] = sndSwapMachinegun
+	wep_rad[665] = 0;
+	
+	wep_name[666] = "TELEPATHOR"
+	wep_type[666] = 2
+	wep_auto[666] = 1
+	wep_load[666] = 10
+	wep_cost[666] = 2
+	wep_sprt[666] = sprTelepathor
+	wep_area[666] = 0
+	wep_text[666] = "telepathic shotgun"
+	wep_swap[666] = sndSwapShotgun
+	wep_rad[666] = 0;
 	
 	//THE CHENDOKOOVEN Misiles and seeker bolts that fire lasers bullets pellets
 

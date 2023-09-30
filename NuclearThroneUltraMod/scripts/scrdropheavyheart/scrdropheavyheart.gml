@@ -17,13 +17,13 @@ function scrDropHeavyHeart(){
 		spr_hurt = spr_idle;
 		if wep_type[wep]=0
 		{//melee
-			wepammo=3+irandom(2)
+			wepammo=2+irandom(2)
 			wepcost=1;
 		}
 		else
 		{
 			wepcost=max(0.1,wep_cost[wep])
-			wepammo=round(max(typ_ammo[wep_type[wep]]*1.2,wepcost));
+			wepammo=round(max(typ_ammo[wep_type[wep]]*1,wepcost));
 		}
 
 		reload=wep_load[wep];

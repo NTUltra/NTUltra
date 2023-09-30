@@ -90,9 +90,9 @@ Player.typ_amax[5] = 55+Player.skill_got[10]*44
 }
 else if skill = 13 && Player.race = 25//Long arms
 {
-	Player.bettermelee += 0.4;
+	Player.bettermelee = 0.2;
 	if Player.ultra_got[97] && !Player.altUltra
-		Player.bettermelee += 0.1;
+		Player.bettermelee += 0.2;
 }
 else if skill= 16 && Player.race = 25//recycle gland
 {

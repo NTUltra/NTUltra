@@ -36,7 +36,7 @@ if instance_exists(Player)
 	if Player.skill_got[17] = 1
 	{
 		alarm[0] += Player.betterlaserbrain;
-		alarm[0] += 2;
+		alarm[0] += 1;
 	}
 }
 morphType = 1;

@@ -1,5 +1,5 @@
 /// @description Init
-updateVersion = "PR 30.05";
+updateVersion = "PR 30.06";
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;
 maxwep = 660;

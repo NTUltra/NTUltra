@@ -37,7 +37,6 @@ else */if (gamemodeOrder[gamemodenr] == 27)
 			seed = todaysSeed;
 			//seedText = seed;
 			useSeed = true;
-			canRestart = false;
 		}
 		with DailyScore
 			image_index = 1;
@@ -57,7 +56,6 @@ else if gamemodeOrder[gamemodenr] == 37 {
 	with UberCont
 	{
 		isWeekly = true;
-		canRestart = true;
 		useSeed = true;
 	}
 }
@@ -68,7 +66,6 @@ else
 	{
 		isWeekly = false;
 		useSeed = false;
-		canRestart = true;
 		seedText = "";
 	}
 	with DailyScore

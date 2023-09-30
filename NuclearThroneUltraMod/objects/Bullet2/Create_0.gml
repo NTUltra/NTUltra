@@ -10,7 +10,7 @@ if instance_exists(Player)
 		shotgunshouldered = true;
 		friction = 0.4
 		wallbounce = 8
-		alarm[1]+=3;
+		alarm[1]+=4;
 
 		if Player.race=25
 		{

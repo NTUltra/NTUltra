@@ -6,7 +6,7 @@ if instance_exists(owner)
 	{
 		with owner.myShield
 		{
-			image_index = other.image_index;	
+			image_index = other.image_index;
 		}
 		instance_destroy();
 	}

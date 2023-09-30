@@ -1,5 +1,6 @@
 /// @description ultramod
 var um = GetPlayerUltramod()
+var spd = max(6,speed);
 if um == ultramods.boltBullet
 {
 	instance_destroy(id,false);

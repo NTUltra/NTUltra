@@ -67,21 +67,18 @@ function scrEnemyDeathEvent(){
 			//Heavy heart
 			if skill_got[0]
 			{
-				if isdoc
-					scrDrop(0,4);
-				else
-					scrDrop(0,2.7);
+				scrDrop(0,0.6);
 			}
 		}
 		
 		
 		if Player.race == 17
 		{
-			scrDrop(0,2);
+			scrDrop(0,1);
 		}
 		if Player.ultra_got[29] && !Player.altUltra//Refined taste
 		{
-			scrDrop(0,4);
+			scrDrop(0,2);
 		}
 		with Player
 		{

@@ -16,6 +16,8 @@ snd_play(sndStatueCharge);
 with Player//Data to keep
 {
 	//bskin=other.bskin;
+	seconds = other.seconds;
+	microseconds = other.microseconds;
 	screenshake400 = other.screenshake400;
 	weaponspickedup = other.weaponspickedup;
 	onlyusemerevolver = other.onlyusemerevolver;

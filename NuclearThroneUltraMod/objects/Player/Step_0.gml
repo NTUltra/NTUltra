@@ -2066,7 +2066,7 @@ if instance_exists(PlayerAlarms2) && PlayerAlarms2.alarm[1] < 1
 		if is60fps
 		{
 			am = 0.575;
-			s *= 0.5;
+			s = 1.0625;
 			//s = 0.575
 		}
 		with enemy

@@ -37,7 +37,7 @@ function scrDrop(itemdrop, weapondrop) {
 		{
 			itemdrop *= 0.975;
 			canHealth = 0.9;
-			weapondrop *= 1.09
+			weapondrop *= 1.05
 		}
 		var lps = Player.loops;
 		if lps > 0 && !scrIsCrown(5)
@@ -74,7 +74,7 @@ function scrDrop(itemdrop, weapondrop) {
 	if Player.skill_got[0]//heavy heart
 	{
 		if Player.race=25
-			weapondrop=(weapondrop*1.55);
+			weapondrop=(weapondrop*1.4);
 		else
 			weapondrop=(weapondrop*1.5);
 	}
@@ -255,7 +255,7 @@ function scrDrop(itemdrop, weapondrop) {
 		var ran = random(100);
 	else
 		var ran = weaponDropChance[weaponDropChanceIndex];
-	if ran < min(weapondrop*(dropRateBuff * 0.25), 100)
+	if ran < min(weapondrop*(dropRateBuff * 0.2), 100)
 	{
 		//drop weps
 		with instance_create(x,y,WepPickup)

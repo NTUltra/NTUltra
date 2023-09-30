@@ -24,10 +24,10 @@ function scrSkills() {
 		}
 	}
 	skill_name[0] = "HEAVY HEART"
-	skill_text[0] = "+50% WEAPON DROPRATE#EVERY ENEMY HAS A +4% CHANCE#TO DROP AN ADDITIONAL WEAPON#DROPPED WEAPONS FIRE AT ENEMIES"
+	skill_text[0] = "+40% WEAPON DROPRATE#EVERY ENEMY HAS A +1% CHANCE#TO DROP AN ADDITIONAL WEAPON##DROPPED WEAPONS FIRE AT ENEMIES"
 	skill_msnd[0] = sndMutHeavyHeart
-	skill_tips[0] = ""
-	skill_bons[0] = "+5% WEAPON DROPRATE#+2% ADDITIONAL WEAPON DROPRATE#";
+	skill_tips[0] = "guns got guns"
+	skill_bons[0] = "+10% WEAPON DROPRATE";
 
 	skill_name[1] = "RHINO SKIN"
 	if !UberCont.useSeed && random(200) < 1
@@ -87,7 +87,7 @@ function scrSkills() {
 	}
 
 	skill_name[4] = "RABBIT PAW"
-	skill_text[4] = "35% MORE AMMO AND HEALTH DROPS#10% MORE WEAPONDROPS"
+	skill_text[4] = "35% MORE AMMO AND HEALTH DROPS#5% MORE WEAPONDROPS"
 	skill_tips[4] = "feeling lucky"
 	skill_msnd[4] =  sndMutRabbitPaw
 	skill_bons[4] = "+5% AMMO AND HEALTH DROPS";
@@ -198,7 +198,7 @@ function scrSkills() {
 	skill_text[13] = "MORE MELEE RANGE AND SIZE"
 	skill_tips[13] = "more reach"
 	skill_msnd[13] =  sndMutLongArms
-	skill_bons[13] = "+40% RANGE";
+	skill_bons[13] = "+20% RANGE";
 	if betterWepSpecific
 		skill_bons[13] = "+60% RANGE +20% SIZE +20% WALL PIERCE";
 		
@@ -346,7 +346,7 @@ function scrSkills() {
 	skill_bons[29] = "+2 SLEEP SECONDS";
 
 	skill_name[30] = "POWER CRAVING"
-	skill_text[30] = "EVERY WEAPON HAS ONE RANDOM WEAPON MOD#INCREASE MOD MAX BY ONE#INCREASE EFFECTIVENESS OF WEAPON MODS#MORE WEAPON MODS IN CROWNVAULT"
+	skill_text[30] = "EVERY WEAPON HAS ONE RANDOM WEAPON MOD#INCREASE MOD MAX BY ONE#INCREASE EFFECTIVENESS OF WEAPON MODS#MORE WEAPON MODS IN CROWNVAULT##INCREASE INVERTED PORTAL CHANCE +10%"
 	skill_tips[30] = "maximum power"
 	skill_msnd[30] =  sndPowerCraving
 	skill_bons[30] = "-10% MOD DELAY";
@@ -435,9 +435,9 @@ function scrSkills() {
 	skill_bons[39] = "CHARGES FASTER"
 	
 	skill_name[40] = "BOUNCY FAT"
-	skill_text[40] = "IF YOU HAVE AMMO AND TAKE LETHAL DAMAGE#PREVENT IT AND LOSE#25% OF BASE TOTAL AMMO"
+	skill_text[40] = "IF YOU HAVE AMMO AND TAKE LETHAL DAMAGE#PREVENT IT AND LOSE#50% OF BASE TOTAL AMMO"
 	skill_tips[40] = "layer of fat"
-	skill_bons[40] = "-3% AMMO COST"
+	skill_bons[40] = "-5% AMMO COST"
 	skill_msnd[40] =  sndMutBouncyFat;
 		
 	/*

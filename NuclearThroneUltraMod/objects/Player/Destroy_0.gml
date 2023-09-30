@@ -312,6 +312,8 @@ instance_destroy();
 with instance_create(x,y,PlayerSpawn)//Data to keep
 {
 	//alarm[3]=300;//immunity
+	seconds = other.seconds;
+	microseconds = other.microseconds;
 	screenshake400 = other.screenshake400;
 	weaponspickedup = other.weaponspickedup;
 	onlyusemerevolver = other.onlyusemerevolver;

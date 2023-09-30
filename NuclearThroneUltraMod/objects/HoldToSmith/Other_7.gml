@@ -35,9 +35,16 @@ with Player
 	            //wep=0;
 	            //scrSwapWeps()
 	            if bcurse=1
-	            curse=1;
-	            bwep = 0
-	            wep=newwep;
+		            curse=1;
+		        bwep = 0
+				if wepmod1 == 0 && bwepmod1 != 0
+				{
+					wepmod1 = bwepmod1;
+					wepmod2 = bwepmod2;
+					wepmod3 = bwepmod3;
+					wepmod4 = bwepmod4;
+				}
+		        wep=newwep;
             
 	            can_shoot = 1
 	            reload = 0

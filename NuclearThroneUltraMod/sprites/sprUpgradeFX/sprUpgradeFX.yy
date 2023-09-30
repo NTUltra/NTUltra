@@ -83,7 +83,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cf08e1b9-fc39-4f61-8a2c-f3679322613e","path":"sprites/sprUpgradeFX/sprUpgradeFX.yy",},},},"Disabled":false,"id":"9a261af6-0424-4822-93d3-05bbedf72e97","IsCreationKey":false,"Key":13.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 25,
     "yorigin": 58,

@@ -21,7 +21,7 @@ if other.team != team and other.team != 2 and other.my_health > 0
 				    yy=other.y
 					owner=other.id;
 			    }
-			alarm[11]+=other.freezetime+15;
+			alarm[11]+=other.freezetime+10;
 			if alarm[1] > 0
 				alarm[1] += other.freezetime;
 

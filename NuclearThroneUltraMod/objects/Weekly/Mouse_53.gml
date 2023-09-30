@@ -14,7 +14,6 @@ if hover
 			//seedText = seed;
 			isWeekly = true;
 			useSeed = true;
-			canRestart = true;
 			if opt_gamemode != 37 && opt_gamemode != 26 && opt_gamemode != 27
 				previous_gamemode = opt_gamemode;
 			opt_gamemode = [37];
@@ -25,7 +24,6 @@ if hover
 		with UberCont
 		{
 			useSeed = false;
-			canRestart = true;
 			isWeekly = false;
 			seedText = "";
 			opt_gamemode = previous_gamemode;

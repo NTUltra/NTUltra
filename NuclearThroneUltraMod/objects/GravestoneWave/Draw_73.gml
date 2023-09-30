@@ -34,7 +34,7 @@ if alarm[0] < 1
 			for (var i = 0; i < al; i ++)
 			{
 				with newGraves[| i] {
-					if object_index != FloorExplo && random(10) < 1 && !place_meeting(x,y,Wall) && !place_meeting(x,y,InactiveRerollStation) && !place_meeting(x,y,prop)
+					if object_index != FloorExplo && random(10) < 1 && !place_meeting(x,y,Wall) && !place_meeting(x,y,InactivePatienceStation) && !place_meeting(x,y,prop)
 					{
 						instance_create(x+16,y+16,Gravestone)
 						with instance_create(x + random(10) - 5,y + random(10) - 5,Curse)

@@ -103,6 +103,8 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 					if skill_got[9]//Second stomache
 					{
 						num = 2;
+						if my_health < maxhealth
+							my_health ++;
 						snd_play(sndHealthPickupUpg,0,true);
 						with instance_create(x,y,HealFX)
 						{
@@ -774,6 +776,7 @@ if(my_health <= 0 && maxhealth > 0)
 		snd_hurt = sndDamageNegate;
 		scrGiveEuphoriaShield();
 		snd_play_2d(sndBounceFat);
+		instance_create(x,y,BouncyFatFX);
 		repeat(3)
 		{
 			with instance_create_depth(x,y,depth,Dust)
@@ -791,13 +794,13 @@ if(my_health <= 0 && maxhealth > 0)
 		Sleep(50);
 		my_health = 1;
 		var al = 6;//weapon types total
-		var takePercentage = 0.25; 
+		var takePercentage = 0.5; 
 		if race == 25
-			takePercentage = 0.22;
+			takePercentage = 0.45;
 		var baseammo;
 		baseammo[1] = 255 baseammo[2] = 55 baseammo[3] = 55 baseammo[4] = 55 baseammo[5] = 55
 		for (var i = 1; i < al; i++) {
-			ammo[i] = ammo[i] - (baseammo[i]*takePercentage);
+			ammo[i] = floor(ammo[i] - (baseammo[i]*takePercentage));
 		}
 		if !scrHasAmmo()
 		{
@@ -921,12 +924,12 @@ if my_health <= 0 && armour < 1
 				maxhealth ++;
 		}
 		rad = 0;
-		my_health = maxhealth;
-		prevhealth = maxhealth;
+		my_health = 1;
+		prevhealth = 1;
 		snd_play_2d(sndPhoenixChicken);
 		snd_hurt = sndDamageNegate;
 		scrGiveEuphoriaShield();
-		alarm[3] = max(alarm[3],60 + (phoenixrevives*5));
+		alarm[3] = max(alarm[3],50 + (phoenixrevives*5));
 		snd_play(sndFlameCannonEnd,0.1,true);
 		var ang = direction + 180;
 		var am = min(44,23 + (phoenixrevives*2));

@@ -2539,7 +2539,7 @@ function scrFire() {
 	repeat(20)
 	{
 	with instance_create(x,y,Bullet2)
-	{motion_add(aimDirection+(random(80)-40)*other.accuracy,6+random(6))
+	{motion_add(aimDirection+(random(80)-40)*other.accuracy,6+random(6.8))
 	image_angle = direction
 	team = other.team}
 	}
@@ -3333,7 +3333,7 @@ function scrFire() {
 
 	snd_play_fire(sndMachinegun)
 
-	repeat(3)
+	repeat(2)
 	{
 	with instance_create(x,y,Shell)
 	motion_add(aimDirection+other.right*100+random(70)-35,2+random(2))

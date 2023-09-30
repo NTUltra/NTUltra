@@ -167,6 +167,7 @@ screenshake400 = true;
 if UberCont.opt_shake != 4
 	screenshake400 = false
 with UberCont {
+	canRestart = true;
     if scrIsGamemode(17) //CHEATS
 		public = 0
     //Daily

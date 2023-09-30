@@ -18,10 +18,16 @@ wallbounce *= 0.9
 
 if shotgunshouldered
 {
-dmg=3;
-alarm[1]=3;
 	if sprite_index == sprBullet2
+	{
 		sprite_index = sprBullet2HighDmg;
+		dmg = 3;
+		alarm[1]=max(alarm[1],3);
+	}
+	else if sprite_index == sprBullet2Disappear
+	{
+		sprite_index = sprBullet2;
+	}
 }
 
 

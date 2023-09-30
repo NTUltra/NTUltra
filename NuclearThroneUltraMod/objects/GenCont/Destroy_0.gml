@@ -51,8 +51,25 @@ if instance_exists(Player)
 	    oasisskip+=1;}
 	    else oasisskip=-1;
 		SetSeed();
-		var inc = random(100);
-		if (random(100)<invertedchance+clamp(loops*2,0,20) || wep == 375 || bwep == 375 || cwep == 375)//Inversion magnet
+		var inc = random(120);
+		var ic = invertedchance;
+		if instance_exists(Player) && Player.skill_got[30]//Power craving
+			ic += 10;
+		with WepPickup
+		{
+			if wep == 375
+			{	
+				ic += 100;
+			}
+		}
+		with ThrowWep
+		{
+			if wep == 375
+			{	
+				ic += 100;
+			}
+		}
+		if (random(100)<ic+clamp(loops*2,0,20) || wep == 375 || bwep == 375 || cwep == 375)//Inversion magnet
 		{
 		    if ( (area=1&&subarea<3)  )
 		    {
