@@ -134,7 +134,10 @@ if place_meeting(x,y,Player)
 		with WeaponMod
 		{
 			image_speed=0.4;
-			mask_index=mskPickupThroughWall;}
+			mask_index=mskPickupThroughWall;
+			alarm[5] = 0;
+			alarm[6] = 0;
+		}
 
 			repeat(4)
 			instance_create(x,y,Smoke)

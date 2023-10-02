@@ -67,7 +67,7 @@ function scrEnemyDeathEvent(){
 			//Heavy heart
 			if skill_got[0]
 			{
-				scrDrop(0,0.6);
+				scrDrop(0,0.7);
 			}
 		}
 		

@@ -70,3 +70,4 @@ if isOneWeaponOnlyModes()
 	instance_destroy(id,false);
 	instance_create(x,y,RadChest);
 }
+alarm[6] = 5;

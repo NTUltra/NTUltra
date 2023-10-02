@@ -8,7 +8,6 @@ alarm[0] = 2;
 	with instance_create(x+lengthdir_x(-5+((longArms)*10),image_angle+90),y+lengthdir_y(-5+((longArms)*10),image_angle+90),SplinterLanceShank)
 	{
 		amount = 4;
-		dmg = 10;
 		longarms = 0
 		if instance_exists(Player)
 		longarms = (longArms)*3

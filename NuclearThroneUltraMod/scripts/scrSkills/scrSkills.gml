@@ -24,7 +24,7 @@ function scrSkills() {
 		}
 	}
 	skill_name[0] = "HEAVY HEART"
-	skill_text[0] = "+40% WEAPON DROPRATE#EVERY ENEMY HAS A +1% CHANCE#TO DROP AN ADDITIONAL WEAPON##DROPPED WEAPONS FIRE AT ENEMIES"
+	skill_text[0] = "+50% WEAPON DROPRATE#EVERY ENEMY HAS A +1% CHANCE#TO DROP AN ADDITIONAL WEAPON##DROPPED WEAPONS FIRE AT ENEMIES"
 	skill_msnd[0] = sndMutHeavyHeart
 	skill_tips[0] = "guns got guns"
 	skill_bons[0] = "+10% WEAPON DROPRATE";

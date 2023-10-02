@@ -3005,7 +3005,7 @@ function scrWeapons() {
 	wep_load[272] = 26
 	wep_cost[272] = 0
 	wep_sprt[272] = sprGhostBlade
-	wep_area[272] = 18
+	wep_area[272] = 16
 	wep_text[272] = "spooky"
 	wep_swap[272] = sndSwapSword
 	wep_rad[272] = 0;
@@ -3038,7 +3038,7 @@ function scrWeapons() {
 	wep_load[275] = 38
 	wep_cost[275] = 0
 	wep_sprt[275] = sprGhostShovel
-	wep_area[275] = 20
+	wep_area[275] = 18
 	wep_text[275] = "digging up graves"
 	wep_swap[275] = sndSwapHammer
 	wep_rad[275] = 0;
@@ -5321,10 +5321,10 @@ function scrWeapons() {
 	wep_rad[480] = 0;
 	
 	wep_name[481] = "EXPLOSION FLAIL"
-	wep_type[481] = 0
+	wep_type[481] = 4
 	wep_auto[481] = 0
 	wep_load[481] = 31
-	wep_cost[481] = 0
+	wep_cost[481] = 2
 	wep_sprt[481] = sprExplosionFlail
 	wep_area[481] = 12
 	wep_text[481] = ""
@@ -5359,7 +5359,7 @@ function scrWeapons() {
 	wep_load[484] = 10
 	wep_cost[484] = 0
 	wep_sprt[484] = sprGhostDagger
-	wep_area[484] = 15
+	wep_area[484] = 14
 	wep_text[484] = "ghastly"
 	wep_swap[484] = sndSwapSword
 	wep_rad[484] = 0;
@@ -5599,9 +5599,9 @@ function scrWeapons() {
 	wep_type[506] = 3
 	wep_auto[506] = 1
 	wep_load[506] = 12
-	wep_cost[506] = 2
+	wep_cost[506] = 3
 	wep_sprt[506] = sprUltraSwordGun
-	wep_area[506] = 26
+	wep_area[506] = 27
 	wep_text[506] = "we have gone too far!"
 	wep_swap[506] = sndSwapSword
 	wep_rad[506] = 12;
@@ -6687,7 +6687,7 @@ function scrWeapons() {
 	wep_name[605] = "STABINATOR"
 	wep_type[605] = 3
 	wep_auto[605] = 0
-	wep_load[605] = 49//60 normally
+	wep_load[605] = 50//60 normally
 	wep_cost[605] = 8
 	wep_sprt[605] = sprStabinator
 	wep_area[605] = 18

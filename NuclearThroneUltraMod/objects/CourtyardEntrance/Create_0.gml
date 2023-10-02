@@ -10,3 +10,4 @@ y += 16;
 name = "EXIT TO COURTYARD";
 nav = 0;
 textAngle = 0;
+alarm[6] = 5;

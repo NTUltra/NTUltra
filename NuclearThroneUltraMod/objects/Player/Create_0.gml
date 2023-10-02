@@ -668,8 +668,8 @@ if race = 16 {
     maxarmour = 2;
 }
 else {
-    armour = -1;
-    maxarmour = -1;
+    armour = 0;
+    maxarmour = 0;
 }
 
 //sheep

@@ -17,3 +17,4 @@ instance_create(x+16,y+16,WallBreak);
 instance_create(x-16,y,WallBreak);
 instance_create(x-16,y+16,WallBreak);
 
+alarm[6] = 5;

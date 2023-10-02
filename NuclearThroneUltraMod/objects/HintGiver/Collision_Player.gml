@@ -19,7 +19,7 @@ if active && sprite_index == spr_idle && KeyCont.key_pick[other.p] = 1
 		hasASecret = false;
 		event_perform(ev_alarm,3);
 	}
-	else
+	else if alarm[3] < 1
 	{
 		snd_play(sndCursedReminder,0,0,true,1,false,false,1);
 		alarm[3] = 90;

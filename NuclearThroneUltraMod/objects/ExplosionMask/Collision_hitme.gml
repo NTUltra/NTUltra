@@ -5,8 +5,6 @@ if alarm[0] < 1 && other.team == 2 && instance_exists(Player) && (!ezMode || oth
 		alarm[0] = 1;
 	//Deals double damage in 60fps?
 	var dealDmg = dmg;
-	if ezMode
-		dealDmg *= 0.5;
 	with other
 	{
 		var immunelimit = 5;
@@ -72,8 +70,8 @@ if alarm[0] < 1 && other.team == 2 && instance_exists(Player) && (!ezMode || oth
 			BackCont.shake += 2
 			scrForcePosition60fps();
 		}
-		if scrIsGamemode(9)//CASUAL MODE
-			instance_destroy();
 	}
+	if ezMode//CASUAL MODE
+		instance_destroy();
 }
 

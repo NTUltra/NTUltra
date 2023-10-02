@@ -1,5 +1,5 @@
 /// @description Update race
- with LoadoutSelect
+with LoadoutSelect
 {
 	if other.race == 0
 		wepmenuopen = false;

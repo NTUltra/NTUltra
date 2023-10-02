@@ -4,6 +4,8 @@ alarm[0] = sequenceDelay;
 if (hundredPercentI) >= array_length(hundredPercent)
 {
 	hundredPercentI = 0;
+	if !show_question("CHEAT CODE\nREPLACE SAVE FILE!?\nUNLOCK 100%?")
+		exit;
 	with UberCont
 	{
 	var dir=0;

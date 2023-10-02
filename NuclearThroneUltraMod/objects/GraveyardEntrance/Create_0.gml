@@ -18,3 +18,4 @@ alarm[1] += 120;
 alarm[1] *= clamp(loops*1.3,1,4)
 instance_create(x,y,BigWallBreak);
 alarm[2] = 30;
+alarm[6] = 5;

@@ -14,7 +14,7 @@ function scrGenerateFloorMaker(limiter) {
 				//Crown of opposite onto crown of disco
 				styleb = choose(1,1,1,1,1,1,0)
 			}
-			var s = clamp(Player.loops*8,0,50);
+			var s = clamp(Player.loops*5,0,30);
 			goal += s;
 			
 			if ((Player.area = 3 || Player.area == 136) and Player.subarea = 3)

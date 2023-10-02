@@ -1,11 +1,8 @@
 /// @description Atom neutron fire explosion
-repeat(irandom(2))
+with instance_create(x,y,Flame)
 {
-    with instance_create(x,y,Flame)
-    {team = 2
-    image_speed = 0.4+random(0.2);
-    motion_add(random(360),1+random(3));
+	team = 2
+	motion_add(random(360),2);
 	depth = other.depth + 1;
-    }
 }
 

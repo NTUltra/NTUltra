@@ -15,3 +15,4 @@ shadowYoffset = - 8;
 snd_hurt = sndHitRock
 instance_create(x,y,BigWallBreak);
 alarm[2] = 30;
+alarm[6] = 5;

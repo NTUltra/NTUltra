@@ -118,6 +118,14 @@ if oldcrown == 3
 		UberCont.maxHpIncrease ++;
 	}
 }
+//CROWN OF PROTECTION
+if oldcrown == 20
+{
+	with Player {
+		maxarmour --;
+		armour = min(armour, maxarmour);
+	}
+}
 //Crown of mercenary
 if oldcrown = 30
 {
@@ -144,6 +152,23 @@ if oldcrown = 31
 	{
 		Player.maxhealth += 2
 		UberCont.maxHpIncrease += 2;
+	}
+	if scrIsCrown(30)
+	{
+		var al = array_length(Player.crown);
+		//Remove
+		for (var i = 0; i < al; i++) {
+			if (Player.crown[i] == 30)
+			{
+				array_delete(Player.crown,i,1);
+				i = al;
+			}
+		}
+		with Crown
+		{
+			if crown == 30
+				instance_destroy();
+		}	
 	}
 }
 //DO STUFF
@@ -177,6 +202,7 @@ if crown == 2 && !canReAdd
 	Player.my_health = max(Player.maxhealth,Player.my_health + overheal);
 	*/
 }
+
 //CROWN OF TIME
 
 if crown == 34
@@ -227,6 +253,13 @@ if crown == 3 && Player.maxhealth > 1
 	{
 		Player.maxhealth -= 1
 		UberCont.maxHpIncrease --;
+	}
+}
+//CROWN OF PROTECTION
+if crown == 20
+{
+	with Player {
+		armour = min(armour, maxarmour);
 	}
 }
 //CROWN OF MERCENARY

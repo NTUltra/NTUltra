@@ -1,5 +1,5 @@
 event_inherited();
-friction = 0;
+friction = 0.1;
 trailColour = c_lime;
 dmg = 15//4 normal splinter
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable

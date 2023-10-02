@@ -32,6 +32,10 @@ mod3[]
 6 lightning
 7 kraken
 */
+mySize = 1;
+team = 0;
+my_health = 1;
+meleedamage = 0;
 wepmod1=0;
 if instance_exists(Player)
 {

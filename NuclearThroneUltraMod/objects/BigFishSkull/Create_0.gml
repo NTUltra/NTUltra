@@ -25,3 +25,5 @@ if loops < 1
 	alarm[2] = 1
 instance_create(x,y,WallBreak);
 name = "?"
+
+alarm[6] = 5;

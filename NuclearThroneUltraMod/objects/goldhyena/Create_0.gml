@@ -19,6 +19,6 @@ snd_hurt = sndGoldHyenaHurt
 actTime -= 5;
 maxSpeed +=0.5;
 acc += 0.2;
-accCharge += 0.7;
+accCharge += 0.4;
 healTime -= 5;
 firstGoAround = true;

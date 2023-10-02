@@ -12,3 +12,4 @@ canMoveOver = true;
 shadowSprite = shd24;
 shadowYoffset = - 8;
 instance_create(x,y,BigWallBreak);
+alarm[6] = 5;

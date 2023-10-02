@@ -4,10 +4,11 @@ alarm[1] = sequenceDelay;
 if (unlockRetailCharactersI >= array_length(unlockRetailCharacters))
 {
 	unlockRetailCharactersI = 0;
+	if !show_question("CHEAT CODE\nREPLACE SAVE FILE!?\nUNLOCK RETAIL CHARACTERS AND STARTING WEAPONS?")
+		exit;
 	with UberCont
 	{
 		var dir=0;
-
 		repeat(racemax+1)
 		{
 			if (dir == 1 ||
@@ -40,7 +41,6 @@ if (unlockRetailCharactersI >= array_length(unlockRetailCharacters))
 					}
 					cir ++;
 				}
-				dir++
 				var wepdir = 1;
 				repeat(maxstartwep)
 				{
@@ -61,7 +61,10 @@ if (unlockRetailCharactersI >= array_length(unlockRetailCharacters))
 					wepdir++;
 				}
 			}
+			dir++
 		}
+		debug("CHEAT RETAIL")
+		debug(race_have);
 		scrSave();
 	}
 	room_restart();

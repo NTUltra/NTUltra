@@ -119,18 +119,7 @@ function scrCrowns() {
 	crown_tips[19] = "friendly fire"
 	
 	crown_name[20] = "[CROWN OF PROTECTION]"
-	if instance_exists(Player) && Player.skill_got[9]
-	{
-		crown_text[20] = "WEAPON DROPS (OVER) HEAL 1HP#AND HEAL 1 ADDITIONAL HP#INSTEAD OF GIVING AMMO";
-		if Player.ultra_got[62] && Player.altUltra//Living armour
-			crown_text[20] = "WEAPON DROPS GIVE 2 ARMOUR#INSTEAD OF GIVING AMMO";
-	}
-	else
-	{
-		crown_text[20] = "WEAPON DROPS (OVER) HEAL 1HP#INSTEAD OF GIVING AMMO"
-		if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
-			crown_text[20] = "WEAPON DROPS GIVE 1 ARMOUR#INSTEAD OF GIVING AMMO";
-	}
+	crown_text[20] = "WEAPON DROPS GIVE 1 ARMOUR#INSTEAD OF GIVING AMMO#INCREASE ARMOUR MAX BY 1"
 	crown_used[20] = 0
 	crown_tips[20] = "stay safe"//Always use protection..  that joke is too predictable
 	

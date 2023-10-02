@@ -1,4 +1,19 @@
 function scrDrop(itemdrop, weapondrop) {
+	if weapondrop > 0
+	{
+		if instance_number(WepPickup) > 20
+			weapondrop = 0;
+		else if instance_number(WepPickup) > 5
+		{
+			weapondrop *= 0.5;
+			if instance_number(WepPickup) > 10
+			{
+				weapondrop *= 0.5;
+				if instance_number(WepPickup) > 14
+					weapondrop *= 0.5;
+			}
+		}
+	}
 	var canHealth = 1;
 	var dropRateBuff = 0;
 	var rabbit = 0;
@@ -74,9 +89,9 @@ function scrDrop(itemdrop, weapondrop) {
 	if Player.skill_got[0]//heavy heart
 	{
 		if Player.race=25
-			weapondrop=(weapondrop*1.4);
-		else
 			weapondrop=(weapondrop*1.5);
+		else
+			weapondrop=(weapondrop*1.6);
 	}
 	// adjusting for inflation ©2016
 	//weapondrop *= 1.01;//weapon

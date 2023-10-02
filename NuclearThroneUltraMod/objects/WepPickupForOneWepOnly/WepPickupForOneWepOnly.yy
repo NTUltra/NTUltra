@@ -32,8 +32,8 @@
   "solid": false,
   "spriteId": null,
   "spriteMaskId": {
-    "name": "mskWepPickup",
-    "path": "sprites/mskWepPickup/mskWepPickup.yy",
+    "name": "mskWepPickupBounce",
+    "path": "sprites/mskWepPickupBounce/mskWepPickupBounce.yy",
   },
   "visible": true,
 }

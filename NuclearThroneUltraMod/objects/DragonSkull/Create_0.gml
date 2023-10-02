@@ -22,3 +22,4 @@ alarm[1] = 120
 alarm[2]=2000 * clamp(loops*2,1,10)//90 seconds
 alarm[2] *= max(1,1+instance_number(BecomeScrapBoss)*0.5);
 closed = false;
+alarm[6] = 5;

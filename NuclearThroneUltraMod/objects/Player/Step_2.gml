@@ -92,10 +92,10 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 			if scrIsCrown(20) && ammoMultiple > 0//Crown of protection
 			{
 				ammoMultiple -= 2;
-				if Player.ultra_got[62] && Player.altUltra //Living armour
-				{
+				//if Player.ultra_got[62] && Player.altUltra //Living armour
+				//{
 					scrArmourPickup(1);
-				}
+				/*}
 				else
 				{
 					my_health += 1;
@@ -131,7 +131,7 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 						if my_health > maxhealth
 							dir.mytext += "#OVERHEAL!"
 					}
-				}
+				}*/
 			}
 			
 			if ammoMultiple > 0{

@@ -18,7 +18,7 @@ function scrDrawGameOver() {
 	var txt = res[0];
 	var upsideDown = res[1];
 	if (!scrIsGamemode(25) && !scrIsGamemode(8))
-		gameover = gameoverText+"##KILLS: "+string(BackCont.kills)+"###DIFFICULTY: "+string(BackCont.hard)
+		gameover = gameoverText+"##KILLS: "+string(BackCont.kills)+"####DIFFICULTY: "+string(BackCont.hard)
 	else if (scrIsGamemode(25))
 	{
 		txt = "";

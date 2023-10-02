@@ -20,7 +20,10 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 
 
-
+mySize = 1;
+team = 0;
+my_health = 1;
+meleedamage = 0;
 alarm[0]=75;
 pierce = false;
 canHeavyHeart = false;

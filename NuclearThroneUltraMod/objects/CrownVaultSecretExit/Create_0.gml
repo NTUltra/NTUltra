@@ -12,3 +12,4 @@ nav = 0;
 textScaleX = 1;
 textScaleY = 1;
 textAngle = 0;
+alarm[6] = 5;

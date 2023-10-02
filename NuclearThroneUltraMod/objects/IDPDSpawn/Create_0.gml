@@ -17,10 +17,13 @@ do {
 	{
 		var n = instance_nearest(Player.x,Player.y,enemy)
 		if n != noone
-			ang = Player.direction + 
-			(angle_difference(Player.direction,point_direction(Player.x,Player.y,n.x,n.y))*0.5) +
-			(angle_difference(Player.direction,point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y))*0.5) +
+		{
+			var nd = point_direction(Player.x,Player.y,n.x,n.y)
+			ang = nd + 
+			(angle_difference(Player.direction,nd)*0.5) +
+			(angle_difference(nd,point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y))*0.5) +
 			random_range(150,-150);//random(360);
+		}
 		else
 			ang = Player.direction + 
 			angle_difference(Player.direction,point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y))*0.5 +
@@ -50,4 +53,4 @@ alarm[0] = 40
 
 
 snd_play(sndIDPDPortalSpawn,0,true)
-
+instance_create(x,y,WallBreak);

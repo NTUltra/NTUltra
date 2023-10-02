@@ -2,6 +2,7 @@ if (hasNoMenuOpen()
  && race != 0)
 {
 	draw_set_halign(fa_left)
+	draw_set_valign(fa_top)
 	var xo = 0;
 
 	if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
@@ -138,13 +139,13 @@ if (hasNoMenuOpen()
 
 			draw_sprite(sprLocked,0,sx-50,__view_get( e__VW.YView, 0 )+90);
 			draw_set_halign(fa_right)
-			draw_text_color(sx-19,__view_get( e__VW.YView, 0 )+101+string_height(string_hash_to_newline(race_bskin_lock[race])),string_hash_to_newline(race_bskin_lock[race]),c_black,c_black,c_black,c_black,1);
-			draw_text_color(sx-19,__view_get( e__VW.YView, 0 )+99+string_height(string_hash_to_newline(race_bskin_lock[race])),string_hash_to_newline(race_bskin_lock[race]),c_black,c_black,c_black,c_black,1);
-			draw_text_color(sx-21,__view_get( e__VW.YView, 0 )+101+string_height(string_hash_to_newline(race_bskin_lock[race])),string_hash_to_newline(race_bskin_lock[race]),c_black,c_black,c_black,c_black,1);
-			draw_text_color(sx-21,__view_get( e__VW.YView, 0 )+99+string_height(string_hash_to_newline(race_bskin_lock[race])),string_hash_to_newline(race_bskin_lock[race]),c_black,c_black,c_black,c_black,1);
-			draw_text_color(sx-19,__view_get( e__VW.YView, 0 )+100+string_height(string_hash_to_newline(race_bskin_lock[race])),string_hash_to_newline(race_bskin_lock[race]),c_black,c_black,c_black,c_black,1);
-			draw_text_color(sx-21,__view_get( e__VW.YView, 0 )+100+string_height(string_hash_to_newline(race_bskin_lock[race])),string_hash_to_newline(race_bskin_lock[race]),c_black,c_black,c_black,c_black,1);
-			draw_text_color(sx-20,__view_get( e__VW.YView, 0 )+100+string_height(string_hash_to_newline(race_bskin_lock[race])),string_hash_to_newline(race_bskin_lock[race]),c_white,c_white,c_white,c_white,1);
+			draw_text_color(sx-19,__view_get( e__VW.YView, 0 )+101,string_hash_to_newline(race_bskin_lock[race]),c_black,c_black,c_black,c_black,1);
+			draw_text_color(sx-19,__view_get( e__VW.YView, 0 )+99,string_hash_to_newline(race_bskin_lock[race]),c_black,c_black,c_black,c_black,1);
+			draw_text_color(sx-21,__view_get( e__VW.YView, 0 )+101,string_hash_to_newline(race_bskin_lock[race]),c_black,c_black,c_black,c_black,1);
+			draw_text_color(sx-21,__view_get( e__VW.YView, 0 )+99,string_hash_to_newline(race_bskin_lock[race]),c_black,c_black,c_black,c_black,1);
+			draw_text_color(sx-19,__view_get( e__VW.YView, 0 )+100,string_hash_to_newline(race_bskin_lock[race]),c_black,c_black,c_black,c_black,1);
+			draw_text_color(sx-21,__view_get( e__VW.YView, 0 )+100,string_hash_to_newline(race_bskin_lock[race]),c_black,c_black,c_black,c_black,1);
+			draw_text_color(sx-20,__view_get( e__VW.YView, 0 )+100,string_hash_to_newline(race_bskin_lock[race]),c_white,c_white,c_white,c_white,1);
 			draw_set_halign(fa_left)
 			drawMenuBSkin(skin,race,c_black);
 		}
@@ -159,13 +160,13 @@ if (hasNoMenuOpen()
 
 			draw_sprite(sprLocked,0,sx-50,__view_get( e__VW.YView, 0 )+90);
 			draw_set_halign(fa_right)
-			draw_text_color(sx-19,__view_get( e__VW.YView, 0 )+101+string_height(string_hash_to_newline(race_cskin_lock[race])),string_hash_to_newline(race_cskin_lock[race]),c_black,c_black,c_black,c_black,1);
-			draw_text_color(sx-19,__view_get( e__VW.YView, 0 )+99+string_height(string_hash_to_newline(race_cskin_lock[race])),string_hash_to_newline(race_cskin_lock[race]),c_black,c_black,c_black,c_black,1);
-			draw_text_color(sx-21,__view_get( e__VW.YView, 0 )+101+string_height(string_hash_to_newline(race_cskin_lock[race])),string_hash_to_newline(race_cskin_lock[race]),c_black,c_black,c_black,c_black,1);
-			draw_text_color(sx-21,__view_get( e__VW.YView, 0 )+99+string_height(string_hash_to_newline(race_cskin_lock[race])),string_hash_to_newline(race_cskin_lock[race]),c_black,c_black,c_black,c_black,1);
-			draw_text_color(sx-19,__view_get( e__VW.YView, 0 )+100+string_height(string_hash_to_newline(race_cskin_lock[race])),string_hash_to_newline(race_cskin_lock[race]),c_black,c_black,c_black,c_black,1);
-			draw_text_color(sx-21,__view_get( e__VW.YView, 0 )+100+string_height(string_hash_to_newline(race_cskin_lock[race])),string_hash_to_newline(race_cskin_lock[race]),c_black,c_black,c_black,c_black,1);
-			draw_text_color(sx-20,__view_get( e__VW.YView, 0 )+100+string_height(string_hash_to_newline(race_cskin_lock[race])),string_hash_to_newline(race_cskin_lock[race]),c_white,c_white,c_white,c_white,1);
+			draw_text_color(sx-19,__view_get( e__VW.YView, 0 )+101,string_hash_to_newline(race_cskin_lock[race]),c_black,c_black,c_black,c_black,1);
+			draw_text_color(sx-19,__view_get( e__VW.YView, 0 )+99,string_hash_to_newline(race_cskin_lock[race]),c_black,c_black,c_black,c_black,1);
+			draw_text_color(sx-21,__view_get( e__VW.YView, 0 )+101,string_hash_to_newline(race_cskin_lock[race]),c_black,c_black,c_black,c_black,1);
+			draw_text_color(sx-21,__view_get( e__VW.YView, 0 )+99,string_hash_to_newline(race_cskin_lock[race]),c_black,c_black,c_black,c_black,1);
+			draw_text_color(sx-19,__view_get( e__VW.YView, 0 )+100,string_hash_to_newline(race_cskin_lock[race]),c_black,c_black,c_black,c_black,1);
+			draw_text_color(sx-21,__view_get( e__VW.YView, 0 )+100,string_hash_to_newline(race_cskin_lock[race]),c_black,c_black,c_black,c_black,1);
+			draw_text_color(sx-20,__view_get( e__VW.YView, 0 )+100,string_hash_to_newline(race_cskin_lock[race]),c_white,c_white,c_white,c_white,1);
 			draw_set_halign(fa_left)
 			drawMenuBSkin(skin,race,c_black);
 		}

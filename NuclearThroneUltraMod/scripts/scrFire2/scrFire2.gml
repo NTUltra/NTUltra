@@ -6403,7 +6403,7 @@ function scrFire2() {
 				owner = other.id;
 				team = other.team;
 				mywep = other.wep
-				alarm[0] = 2 + other.wep_load[mywep];
+				alarm[0] = 10;
 				owner = other.id;
 				camKick = 5;
 				camShake = 3;
@@ -6415,7 +6415,10 @@ function scrFire2() {
 			with PlayerWazer
 			{
 				if owner == other.id
+				{
+					alarm[6] += alarm[0] - 1;
 					alarm[0] = 2 + other.wep_load[other.wep];
+				}
 			}
 		}
 	}
@@ -6541,7 +6544,7 @@ function scrFire2() {
 				owner = other.id;
 				team = other.team;
 				mywep = other.wep
-				alarm[0] = 2 + other.wep_load[mywep];
+				alarm[0] = 8;
 				owner = other.id;
 				camKick = 5;
 				camShake = 3;
@@ -6553,7 +6556,10 @@ function scrFire2() {
 			with PlayerExplosionWazer
 			{
 				if owner == other.id
+				{
+					alarm[6] += alarm[0] - 1;
 					alarm[0] = 2 + other.wep_load[other.wep];
+				}
 			}
 		}
 	}
@@ -8613,7 +8619,7 @@ function scrFire2() {
 				owner = other.id;
 				team = other.team;
 				mywep = other.wep
-				alarm[0] = 2 + other.wep_load[mywep];
+				alarm[0] = 9;
 				owner = other.id;
 				camKick = 5;
 				camShake = 3;
@@ -8625,7 +8631,10 @@ function scrFire2() {
 			with PlayerUltraWazer
 			{
 				if owner == other.id
+				{
+					alarm[6] += alarm[0] - 1;
 					alarm[0] = 2 + other.wep_load[other.wep];
+				}
 			}
 		}
 	}
@@ -10344,7 +10353,7 @@ function scrFire2() {
 				owner = other.id;
 				team = other.team;
 				mywep = other.wep
-				alarm[0] = 2 + other.wep_load[mywep];
+				alarm[0] = 9;
 				owner = other.id;
 				camKick = 5;
 				camShake = 3;
@@ -10356,7 +10365,10 @@ function scrFire2() {
 			with PlayerToxicWazer
 			{
 				if owner == other.id
+				{
+					alarm[6] += alarm[0] - 1;
 					alarm[0] = 2 + other.wep_load[other.wep];
+				}
 			}
 		}
 	}
@@ -11309,9 +11321,9 @@ function scrFire2() {
 	{
 		image_angle = aimDirection+(random(2)-1)*other.accuracy
 		team = other.team
-		laserhit=40+(Player.skill_got[17]*5);
+		laserhit=35+(Player.skill_got[17]*5);
 		sprite_index=sprBouncingLaser;
-		image_yscale += 1.6
+		image_yscale += 1.5
 		event_perform(ev_alarm,0)
 	}
 

@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 actTime = 4;
-maxRange = 270;
+maxRange = 245;
 spr_idle = sprInvertedGhostGuardianWalk;
 spr_walk = sprInvertedGhostGuardianWalk;
 spr_hurt = sprInvertedGhostGuardianHurt;
