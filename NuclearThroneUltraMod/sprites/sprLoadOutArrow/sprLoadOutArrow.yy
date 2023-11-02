@@ -27,7 +27,7 @@
   "origin": 4,
   "parent": {
     "name": "Loadout",
-    "path": "folders/Sprites/Enemies/Menu/Loadout.yy",
+    "path": "folders/Sprites/Menu/Loadout.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

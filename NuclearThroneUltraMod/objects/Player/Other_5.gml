@@ -95,7 +95,9 @@ else if race=12//yung cuz reset max HP
 	if skill_got[1] == 1//Rhino skin
 		targetHealth += 4;
 	if skill_got[33] == 1//Glass arm cannon
-		targetHealth -= 2;
+		targetHealth = max(1,targetHealth-2);
+	if skill_got[41]//nerves of steel
+		targetHealth = max(1,targetHealth-3);
 	if scrIsGamemode(9)
 		targetHealth += UberCont.casualModeHPIncrease;
 	targetHealth += UberCont.maxHpIncrease;
@@ -209,12 +211,13 @@ if scrIsGamemode(10)//random areas
 {
 	SetSeed();
 	area = scrGetRandomArea();
-
-if rnglevelloop=18
-{loops+=1;
-rnglevelloop=0;}
-rnglevelloop+=1;
-subarea=choose(1,2,3);
+	if rnglevelloop==18
+	{
+		loops+=1;
+		rnglevelloop=0;
+	}
+	rnglevelloop+=1;
+	subarea=choose(1,2,3);
 }
 
 if race==21
@@ -284,8 +287,8 @@ if looping && area != 104
 	if race =3 && skill_got[19]
 	scrUnlockCSkin(3,"FOR LOOPING WITH EAGLE EYES#AS EYES",0);
 
-	if race = 4 && !skill_got[1] && !skill_got[25] && !skill_got[40] && !UberCont.hasTakenCrownOfLife
-	scrUnlockBSkin(4,"FOR LOOPING WITHOUT#RHINO SKIN, STRONG SPIRIT#BOUNCY FAT AND CROWN OF LIFE#AS MELTING",0);
+	if race = 4 && !skill_got[1] && !skill_got[25] && !skill_got[32] && !skill_got[40] && !UberCont.hasTakenCrownOfLife
+	scrUnlockBSkin(4,"FOR LOOPING WITHOUT#RHINO SKIN, STRONG SPIRIT#ALKALINE SALIVA#BOUNCY FAT AND CROWN OF LIFE#AS MELTING",0);
 
 	if loops>1 && race = 4
 	scrUnlockCSkin(4,"FOR REACHING LOOP 3#AS MELTING ON 1HP EQUALITY",5);
@@ -293,8 +296,8 @@ if looping && area != 104
 	if scrIsGamemode(14)
 	scrUnlockBSkin(1,"FOR LOOPING ON GAMEMODE:#FISH'S PARTNER ONLY",14);
 
-	if race = 14 && fired=false
-	scrUnlockCSkin(14,"FOR LOOPING BY ONLY THROWING WEAPONS#AND NOT USING THEM",0)
+	if race = 14 && !firedOnce=false
+		scrUnlockCSkin(14,"FOR LOOPING BY ONLY THROWING WEAPONS#AND NOT USING THEM",0)
 
 	looping=false;
 	    UberCont.ctot_loop[race] += 1
@@ -315,6 +318,8 @@ if looping && area != 104
 					targetHealth += 4;
 				if skill_got[33] == 1//Glass arm cannon
 					targetHealth = max(1,targetHealth-2);
+				if skill_got[41]//nerves of steel
+					targetHealth = max(1,targetHealth-3);
 				if scrIsGamemode(9)
 					targetHealth += UberCont.casualModeHPIncrease;
 				targetHealth += UberCont.maxHpIncrease;
@@ -696,6 +701,9 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 	with instance_create(x,y,Player)
 	{
 		swapChar = true;
+		rnglevelloop = other.rnglevelloop;
+		firedthislevel = other.firedthislevel;
+		firedOnce = other.firedOnce;
 		//Copy it all!
 		area = other.area
 		subarea = other.subarea;

@@ -16,6 +16,9 @@ snd_play(sndStatueCharge);
 with Player//Data to keep
 {
 	//bskin=other.bskin;
+	rnglevelloop = other.rnglevelloop;
+	firedthislevel = other.firedthislevel;
+	firedOnce = other.firedOnce;
 	seconds = other.seconds;
 	microseconds = other.microseconds;
 	screenshake400 = other.screenshake400;
@@ -162,7 +165,7 @@ with Player//Data to keep
 	{
 		with RerollStation
 			instance_destroy();
-		alarm[3]=max(230,29*boostLevel);//immunity
+		alarm[3]=max(200,25*boostLevel);//immunity
 		snd_hurt = sndDamageNegate;
 		myShield = instance_create(x,y,EuphoriaShield)
 		with myShield

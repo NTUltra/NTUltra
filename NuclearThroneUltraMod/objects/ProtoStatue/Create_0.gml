@@ -1,9 +1,9 @@
 maxhealth = 76//80
 mySize = 2
+rad = 0;
+close = false;
 if instance_exists(Player)
 {
-	rad = Player.crownrad
-	close=false;
 	///crown of natural selection no rads more items
 	if scrIsCrown(13)
 		rad=40;
@@ -11,11 +11,6 @@ if instance_exists(Player)
 		rad = 20;
 	if Player.loops > 0
 		maxhealth += 40;
-}
-else
-{
-	rad = 0;
-	close = false;
 }
 spr_idle = sprProtoStatueIdle
 spr_hurt = sprProtoStatueHurt

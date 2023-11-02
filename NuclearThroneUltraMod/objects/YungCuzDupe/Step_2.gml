@@ -153,7 +153,6 @@ if (my_health<prevhealth)
 					pt.mytext = "+"+string(damageTaken)+" HP";
 			}
 			
-			alarm[3]=10;//duration of iframes
 		}
 	}
 }

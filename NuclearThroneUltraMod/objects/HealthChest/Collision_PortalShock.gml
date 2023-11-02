@@ -20,6 +20,8 @@ with Player {
 			targetHealth += 4;
 		if skill_got[33]//Glass arm cannon
 			targetHealth = max(1,targetHealth-2);
+		if skill_got[41]//nerves of steel
+			targetHealth = max(1,targetHealth-3);
 		if scrIsGamemode(9)
 			targetHealth += UberCont.casualModeHPIncrease;
 		if skill_got[9] 

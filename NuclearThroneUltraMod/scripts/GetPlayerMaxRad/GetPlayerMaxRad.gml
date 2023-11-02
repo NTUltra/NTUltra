@@ -11,7 +11,7 @@ function GetPlayerMaxRad(){
 		multiplier *= 1.25;
 	}
 	if altUltra && ultra_got[33] {
-		multiplier *= max(1,0.5 + (phoenixrevives*0.5));
+		multiplier *= max(1,0.5 + (phoenixrevives*0.75));
 	}
 	if (level < boostLevel)
 	{

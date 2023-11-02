@@ -22,3 +22,4 @@ screenY = 0;
 screenX = 0;
 dataRef = noone;
 fourThreeScale = 1;
+imageIndex = 0;

@@ -30,7 +30,7 @@
   "origin": 4,
   "parent": {
     "name": "Ultras",
-    "path": "folders/Sprites/Enemies/Menu/Ultras.yy",
+    "path": "folders/Sprites/Menu/Ultras.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

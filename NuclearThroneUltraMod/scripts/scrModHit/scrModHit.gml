@@ -99,7 +99,7 @@ function scrModHit() {
 				case 2://EXPLODE!
 				snd_play(sndExplosionS,0,true);
 				with instance_create(other.x+lengthdir_x(16,random(360)),other.y+lengthdir_x(16,random(360)),SmallExplosion)//SMALL EXPLOSIONS CAUSE THIS IS OP AS FUCK
-					dmg --;
+					dmg -= choose(1, 1, 2);
 				break;
 
 				case 3://burn!

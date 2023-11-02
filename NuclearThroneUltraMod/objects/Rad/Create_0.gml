@@ -33,7 +33,7 @@ if Player.race = 15{ alarm[0] *= 0.6}//atom
 			motion_add(random(360),2+(Player.skill_got[5]));
 		} 
 	}
-	if Player.ultra_got[97] && Player.altUltra && random(3) < 2
+	if Player.ultra_got[97] && Player.altUltra //&& random(3) < 2
 	{
 		snd_play(sndSwarmRapid,0.1,true);
 		with instance_create(x,y,SwarmBolt)

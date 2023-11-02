@@ -35,6 +35,9 @@ function scrDrawCharSelect() {
 	txt2 = string(race_name[mouseover])+"#"+string(race_pass[mouseover])+"# "+string(race_acti[mouseover])
 	else
 	txt2 = "[LOCKED]#"+string(race_lock[mouseover])
+	
+	var colourDraw = txt2;
+	txt2 = scrReplaceAllColourCodes(txt2);
 
 	if mouseover = -1
 	drawx = __view_get( e__VW.XView, 0 )+14+race*22
@@ -66,8 +69,8 @@ function scrDrawCharSelect() {
 	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-13,string_hash_to_newline(string(txt2)))
 	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-13,string_hash_to_newline(string(txt2)))
 	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-14,string_hash_to_newline(string(txt2)))
-	draw_set_color(c_silver)
-	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14,string_hash_to_newline(string(txt2)))
+	draw_set_color(make_colour_rgb(160,160,160))
+	scrDrawTextColours(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14,colourDraw)
 	draw_set_color(c_white)
 
 	if mouseover = -1
@@ -83,9 +86,9 @@ function scrDrawCharSelect() {
 	img += 0.1
 
 	if mouseover = -1
-	draw_sprite(sprRMBIcon,-1,drawx+string_width(string_hash_to_newline(txt2))/2-string_width(string_hash_to_newline(race_acti[race]))-8,drawy-22)
+	draw_sprite(sprRMBIcon,-1,drawx+string_width(string_hash_to_newline(txt2))/2-string_width(string_hash_to_newline(scrReplaceAllColourCodes(race_acti[race])))-8,drawy-22)
 	else if UberCont.race_have[mouseover] = 1
-	draw_sprite(sprRMBIcon,-1,drawx+string_width(string_hash_to_newline(txt2))/2-string_width(string_hash_to_newline(race_acti[mouseover]))-8,drawy-22)
+	draw_sprite(sprRMBIcon,-1,drawx+string_width(string_hash_to_newline(txt2))/2-string_width(string_hash_to_newline(scrReplaceAllColourCodes(race_acti[mouseover])))-8,drawy-22)
 
 
 }

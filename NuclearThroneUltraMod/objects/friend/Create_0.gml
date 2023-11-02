@@ -54,6 +54,7 @@ ammo[4] = 999
 ammo[5] = 999
 rad = 999;
 
+
 //Unused but referenced
 bettermelee = 0;
 betterlaserbrain = 0;
@@ -68,6 +69,7 @@ existTime = 30;
 friction = 0.45
 maxSpeed = 4;
 accuracy = 1;
+altFire = true;
 dodgeOffset = choose(10,-10);
 event_user(0);
 alarm[1] = 30;

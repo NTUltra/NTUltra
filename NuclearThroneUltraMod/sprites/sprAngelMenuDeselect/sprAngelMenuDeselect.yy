@@ -43,7 +43,7 @@
   "origin": 9,
   "parent": {
     "name": "MenuChar",
-    "path": "folders/Sprites/Enemies/Menu/MenuChar.yy",
+    "path": "folders/Sprites/Menu/MenuChar.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

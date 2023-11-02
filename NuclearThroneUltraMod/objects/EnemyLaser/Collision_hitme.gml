@@ -4,6 +4,8 @@ if other.team != team and other.my_health > 0
 	{
 		if sprite_index!=spr_hurt
 		{
+			if object_index == Player
+				hitBy = other.sprite_index;
 			my_health -= other.dmg
 			sprite_index = spr_hurt
 			image_index = 0

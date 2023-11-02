@@ -36,7 +36,9 @@ rad=0;
 
 accuracy = 1;
 altFire = true;
-
+isPermanent = false;
+isPermanentB = false;
+isPermanentC = false;
 queueshot = 0;
 bqueueshot = 0;
 cqueueshot = 0;

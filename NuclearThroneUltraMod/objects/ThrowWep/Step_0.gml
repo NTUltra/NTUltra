@@ -43,6 +43,8 @@ if speed > 1
 	mask_index = sprite_index;
 	var hits = ds_list_create();
 	var al = instance_place_list(x,y,hitme,hits,false)
+	if al > 0 && instance_exists(Player) && Player.ultra_got[55]
+		scrDrop(28,0.02);
 	for (var i = 0; i < al; i++) {
 		with hits[| i]
 		{
@@ -64,13 +66,12 @@ if speed > 1
 					{
 					    if Player.ultra_got[55] = 1//ULTRA C PANDA
 					    {
-					    scrDrop(28,0.02);
-					    repeat(4)//16 is one ultra lazerpistol ammo
+							repeat(4)//16 is one ultra lazerpistol ammo
 					        {
-					        with instance_create(x,y,Rad)
-					        {motion_add(random(360),random(2)+3)
-					        repeat(speed)
-					        speed *= 0.9}
+						        with instance_create(x,y,Rad)
+						        {motion_add(random(360),random(2)+3)
+						        repeat(speed)
+						        speed *= 0.9}
 					        }
 					    }
 					}

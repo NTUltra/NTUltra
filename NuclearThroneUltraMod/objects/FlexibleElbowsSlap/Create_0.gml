@@ -1,0 +1,11 @@
+/// @description Init
+target = noone;
+owner = noone;
+offset = choose(20,-20);
+time = 0;
+followOwner = true;
+tx = x;
+ty = y;
+snd_play(sndChickenThrow);
+queue = 0;
+hook = 0;

@@ -45,7 +45,7 @@
   "origin": 4,
   "parent": {
     "name": "Logo",
-    "path": "folders/Sprites/Enemies/Menu/Logo.yy",
+    "path": "folders/Sprites/Menu/Logo.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

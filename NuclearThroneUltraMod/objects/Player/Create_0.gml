@@ -133,6 +133,7 @@ BackCont.alarm[4] = 10;
 canblacksword = false;
 phoenixrevives = 0;
 firedthislevel = false;
+firedOnce = false;
 fired = false;
 poppop = false;
 rushcrownlevels = 0;
@@ -593,7 +594,6 @@ nochest = -1
 
 bleed = 0
 decay = 600
-crownrad = 0
 
 rad = 0
 
@@ -783,4 +783,4 @@ enum LEADERBOARD {
 };
 scrInitDrops(0);
 altFire = false;
-normalFire = false;
+hitBy = noone;

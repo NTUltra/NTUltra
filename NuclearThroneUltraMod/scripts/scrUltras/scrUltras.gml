@@ -347,7 +347,7 @@ function scrUltras(altOverride = false) {
 	&& instance_exists(UltraIcon))))
 	{
 		ultra_name[50] = "CODENAME S.A.S. : SECRET AGENT SHEEP"
-		ultra_text[50] = "ENEMIES THAT DON'T KNOW YOU'RE THERE#TAKE 10X DAMAGE##EACH AREA#TAKE ON THE APPEARANCE#OF ANY CHARACTER#ENABLING YOU TO USE THEIR ACTIVE##SECRET GATEWAYS APPEAR#IN THE CROWN VAULT#CONNECTING SEVERAL AREAS"
+		ultra_text[50] = "ENEMIES THAT DON'T KNOW YOU'RE THERE#TAKE 10X DAMAGE##EACH AREA#TAKE ON THE APPEARANCE#OF ANY CHARACTER#ENABLING YOU TO USE THEIR ACTIVE#(NOT THEIR PASSIVE)##SECRET GATEWAYS APPEAR#IN THE CROWN VAULT#CONNECTING SEVERAL AREAS"
 		ultra_tips[50] = "S.A.S."
 	}
 	
@@ -726,7 +726,7 @@ function scrUltras(altOverride = false) {
 	if altOverride || (instance_exists(Player) &&  Player.race == 25 && (Player.altUltra || Player.unlockAlternativeUltras || (!Player.skill_got[13] && !Player.skill_got[16] && !Player.skill_got[17] && !Player.skill_got[15] && !Player.skill_got[14] && instance_exists(UltraIcon))))
 	{
 		ultra_name[97] = "BEEKEEPER"
-		ultra_text[97] = "SOME RADIATION SPAWNS SWARM BOLTS"
+		ultra_text[97] = "RADIATION SPAWNS SWARM BOLTS"
 		ultra_tips[97] = "retired to a farm"
 	}
     

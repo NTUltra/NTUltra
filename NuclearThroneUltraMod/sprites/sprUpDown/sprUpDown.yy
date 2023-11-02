@@ -26,7 +26,7 @@
   "origin": 9,
   "parent": {
     "name": "Buttons",
-    "path": "folders/Sprites/Enemies/Menu/Buttons.yy",
+    "path": "folders/Sprites/Menu/Buttons.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

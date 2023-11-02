@@ -52,12 +52,15 @@ image_yscale = 6;
 image_xscale = 6;
 var al = instance_place_list(x,y,Wall,walls,false)
 for (var i = 0; i < al; i++) {
-	with instance_create(walls[| i].x,walls[| i].y,FloorExplo)
+	if UberCont.recursionCheck < 29
 	{
-		canSpawnSwarm = true;
-		UberCont.recursionCheck ++;
+		with instance_create(walls[| i].x,walls[| i].y,FloorExplo)
+		{
+			canSpawnSwarm = true;
+			UberCont.recursionCheck ++;
+		}
+		instance_destroy(walls[| i]);
 	}
-	instance_destroy(walls[| i]);
 }
 image_yscale = ys;
 ds_list_clear(walls);

@@ -37,7 +37,7 @@ function scrWeapons() {
 	wep_name[3] = "WRENCH"
 	wep_type[3] = 0
 	wep_auto[3] = 0
-	wep_load[3] = 21
+	wep_load[3] = 20
 	wep_cost[3] = 0
 	wep_sprt[3] = sprWrench
 	wep_area[3] = 2
@@ -445,7 +445,7 @@ function scrWeapons() {
 	wep_name[40] = "GOLDEN WRENCH"
 	wep_type[40] = 0
 	wep_auto[40] = 0
-	wep_load[40] = 17
+	wep_load[40] = 18
 	wep_cost[40] = 0
 	wep_sprt[40] = sprGoldWrench
 	wep_area[40] = 17
@@ -2012,7 +2012,7 @@ function scrWeapons() {
 	wep_name[182] = "DIRECTOR ERASER"
 	wep_type[182] = 2
 	wep_auto[182] = 0
-	wep_load[182] = 20
+	wep_load[182] = 22
 	wep_cost[182] = 2
 	wep_sprt[182] = sprDirectorEraser
 	wep_area[182] = 7//6
@@ -2023,7 +2023,7 @@ function scrWeapons() {
 	wep_name[183] = "FLAME DIRECTOR ERASER"
 	wep_type[183] = 2
 	wep_auto[183] = 0
-	wep_load[183] = 22
+	wep_load[183] = 23
 	wep_cost[183] = 2
 	wep_sprt[183] = sprFlameDirectorEraser
 	wep_area[183] = 10//6
@@ -4677,7 +4677,7 @@ function scrWeapons() {
 	wep_load[422] = 17
 	wep_cost[422] = 0
 	wep_sprt[422] = sprSuperLance
-	wep_area[422] = 21
+	wep_area[422] = 20
 	wep_text[422] = "mine is longer"
 	wep_swap[422] = sndSwapSword
 	wep_rad[422] = 0;
@@ -5037,7 +5037,7 @@ function scrWeapons() {
 	wep_name[455] = "SCYTHE"
 	wep_type[455] = 0
 	wep_auto[455] = 0
-	wep_load[455] = 22
+	wep_load[455] = 20
 	wep_cost[455] = 0
 	wep_sprt[455] = sprScythe
 	wep_area[455] = 6
@@ -5048,10 +5048,10 @@ function scrWeapons() {
 	wep_name[456] = "SUPER SCYTHE"
 	wep_type[456] = 0
 	wep_auto[456] = 0
-	wep_load[456] = 35
+	wep_load[456] = 33
 	wep_cost[456] = 0
 	wep_sprt[456] = sprSuperScythe
-	wep_area[456] = 23
+	wep_area[456] = 22
 	wep_text[456] = "super scythe me"
 	wep_swap[456] = sndSwapHammer
 	wep_rad[456] = 0;
@@ -5256,8 +5256,8 @@ function scrWeapons() {
 	
 	wep_name[475] = "ACCELERATOR"
 	wep_type[475] = 1
-	wep_auto[475] = 0
-	wep_load[475] = 6
+	wep_auto[475] = 1
+	wep_load[475] = 7
 	wep_cost[475] = 2
 	wep_sprt[475] = sprAccelerator
 	wep_area[475] = 7
@@ -5442,10 +5442,10 @@ function scrWeapons() {
 	wep_rad[491] = 0;
 	
 	wep_name[492] = "SPLINTER MACE"
-	wep_type[492] = 0
+	wep_type[492] = 3
 	wep_auto[492] = 0
 	wep_load[492] = 22
-	wep_cost[492] = 0
+	wep_cost[492] = 1
 	wep_sprt[492] = sprSpikeMace
 	wep_area[492] = 6
 	wep_text[492] = "staple in some braincells"
@@ -6675,9 +6675,9 @@ function scrWeapons() {
 	
 	wep_name[604] = "SPLINTER LANCE"
 	wep_type[604] = 0
-	wep_auto[604] = 0
+	wep_auto[604] = 3
 	wep_load[604] = 13
-	wep_cost[604] = 0
+	wep_cost[604] = 1
 	wep_sprt[604] = sprSplinterLance
 	wep_area[604] = 14
 	wep_text[604] = ""
@@ -7366,7 +7366,83 @@ function scrWeapons() {
 	wep_swap[666] = sndSwapShotgun
 	wep_rad[666] = 0;
 	
-	//THE CHENDOKOOVEN Misiles and seeker bolts that fire lasers bullets pellets
+	wep_name[667] = "MICRO SMG"
+	wep_type[667] = 1
+	wep_auto[667] = 1
+	wep_load[667] = 2
+	wep_cost[667] = 0.5
+	wep_sprt[667] = sprMicroSMG
+	wep_area[667] = 3
+	wep_text[667] = "hitscan"
+	wep_swap[667] = sndSwapPistol
+	wep_rad[667] = 0;
+	
+	wep_name[668] = "MICRO SHOTGUN"
+	wep_type[668] = 2
+	wep_auto[668] = 1
+	wep_load[668] = 12
+	wep_cost[668] = 1
+	wep_sprt[668] = sprMicroShotgun
+	wep_area[668] = 2
+	wep_text[668] = "rapid fire shotgun"
+	wep_swap[668] = sndSwapShotgun
+	wep_rad[668] = 0;
+	
+	wep_name[669] = "SPIKE STAFF"
+	wep_type[669] = 3
+	wep_auto[669] = 1
+	wep_load[669] = 9
+	wep_cost[669] = 1.5
+	wep_sprt[669] = sprSpikeStaff
+	wep_area[669] = 5
+	wep_text[669] = "nail gun"
+	wep_swap[669] = sndSwapHammer
+	wep_rad[669] = 0;
+	
+	wep_name[670] = "NEEDLE"
+	wep_type[670] = 0
+	wep_auto[670] = 1
+	wep_load[670] = 11
+	wep_cost[670] = 0
+	wep_sprt[670] = sprNeedle
+	wep_area[670] = 1
+	wep_text[670] = "acupuncture"
+	wep_swap[670] = sndSwapSword
+	wep_rad[670] = 0;
+	
+	wep_name[671] = "SUPER NEEDLE"
+	wep_type[671] = 0
+	wep_auto[671] = 1
+	wep_load[671] = 12
+	wep_cost[671] = 0
+	wep_sprt[671] = sprSuperNeedle
+	wep_area[671] = 10
+	wep_text[671] = "acupuncture"
+	wep_swap[671] = sndSwapSword
+	wep_rad[671] = 0;
+	
+	wep_name[672] = "MICRO LAUNCHER"
+	wep_type[672] = 4
+	wep_auto[672] = 1
+	wep_load[672] = 7
+	wep_cost[672] = 1
+	wep_sprt[672] = sprMicroLauncher
+	wep_area[672] = 10
+	wep_text[672] = "mini railgun"
+	wep_swap[672] = sndSwapExplosive
+	wep_rad[672] = 0;
+	
+	wep_name[673] = "DROM"
+	wep_type[673] = 0
+	wep_auto[673] = 0
+	wep_load[673] = 19
+	wep_cost[673] = 0
+	wep_sprt[673] = sprDrom
+	wep_area[673] = 0
+	wep_text[673] = "badonk"
+	wep_swap[673] = sndSwapHammer
+	wep_rad[673] = 0;
+	
 
 	maxwep = array_length(wep_name)-1;
 

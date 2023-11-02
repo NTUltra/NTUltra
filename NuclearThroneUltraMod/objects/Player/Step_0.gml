@@ -61,7 +61,7 @@ if !instance_exists(LevCont) and visible = 1
 			var moving = false;
 			var extraacc = 1.5 * delta;
 			var braking = 0.4/delta;
-			if speed > 5.2
+			if speed > 5.1
 				speed -= 3.5 * delta;
 			var multi = 0;//Diagonal movement is faster acceleration otherwise
 			if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
@@ -719,9 +719,7 @@ if !instance_exists(LevCont) and visible = 1
 			{
 				with YungCuzDupe
 					event_user(0);
-				normalFire = true;
 				scrFire();
-				normalFire = false;
 			}
     
 		clicked = 0
@@ -737,9 +735,7 @@ if !instance_exists(LevCont) and visible = 1
 			{
 				with YungCuzDupe
 					event_user(0);
-				normalFire = true;
 				scrFire();
-				normalFire = false;
 			}
 		}
 	}
@@ -1035,9 +1031,10 @@ if (!instance_exists(LevCont))
 				else
 				snd_play(sndPlasmaReload,0,true)
 			}
-			
+			scrFlexibleElbowReload(wep);
 		}
 	}
+	/*
 	if skill_got[34]//FLEXIBLE ELBOWS
 	{
 		if (breload <= 0 || bwep == 0)
@@ -1049,6 +1046,7 @@ if (!instance_exists(LevCont))
 			reload -= 0.28;
 		}
 	}
+	*/
 	scr60fpsReload();
 	if (reload > lowa || breload > lowb || creload > lowc)
 	{
@@ -1118,6 +1116,7 @@ if (!instance_exists(LevCont))
 				scrSwapWeps();
 				bwepangle=roidsWepangle;//what a mess
 			}
+			scrFlexibleElbowReload(bwep);
 		}
 	
 		if skill_got[22]
@@ -1140,6 +1139,17 @@ if (!instance_exists(LevCont))
 			reload -= reduction
 			breload -= reduction*0.5;
 			creload -= reduction*0.5;
+		}
+		if skill_got[34] {
+			reload -= 0.1;
+			breload -= 0.1;
+			creload -= 0.1;
+			if race == 25
+			{
+				reload -= 0.035;
+				breload -= 0.035;
+				creload -= 0.035;
+			}
 		}
 		if bskin == 2 && ultra_got[4]//FISH CAN GUN secret ultra
 		{
@@ -1179,6 +1189,7 @@ if (!instance_exists(LevCont))
 			rageAccuracy = rage*0.0012//with 500 max this caps at 60%
 			accuracy=standartAccuracy+rageAccuracy;//standartAccuracy will be changed by eagle eyes so this scales with that.
 		}
+		/*
 		if skill_got[34]//FLEXIBLE ELBOWS
 		{
 			if race == 25
@@ -1192,6 +1203,7 @@ if (!instance_exists(LevCont))
 				creload -= 0.2;
 			}
 		}
+		*/
 		if skill_got[35]//PUFFY CHEEKS
 		{
 			breload -= 0.1;
@@ -1225,20 +1237,24 @@ if (!instance_exists(LevCont))
 		{
 			queueshot++;
 			scrPlayReloadSound(wep);
+			scrFlexibleElbowReload(wep);
 		} else if reload <= lowa && queueshot < 2
 		{
 			queueshot++;
 			scrPlayReloadSound(wep);
+			scrFlexibleElbowReload(wep);
 		}
 	
 		if breload <= lowb*0.5 && bqueueshot < 1
 		{
 			bqueueshot++;
 			scrPlayReloadSound(bwep);
+			scrFlexibleElbowReload(bwep);
 		} else if breload <= lowb && bqueueshot < 2
 		{
 			bqueueshot++;
 			scrPlayReloadSound(bwep);
+			scrFlexibleElbowReload(bwep);
 		}
 	
 		if creload <= lowc*0.5 && cqueueshot < 1
@@ -1249,6 +1265,7 @@ if (!instance_exists(LevCont))
 		{
 			cqueueshot++;
 			scrPlayReloadSound(cwep);
+			scrFlexibleElbowReload(cwep);
 		}
 	}
 	//Can we fire again? Two times in a frame? Or even more if you go negative reload
@@ -1265,9 +1282,7 @@ if (!instance_exists(LevCont))
 			{
 				with YungCuzDupe
 					event_user(0);
-				normalFire = true;
 				scrFire();
-				normalFire = false;
 			}
 			if reload > 0
 				can_shoot = 0;
@@ -1791,7 +1806,7 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 		{
 			sprite_index = sprExtraFeetCloseDodge;	
 		}
-		if scrDrop(75,5)
+		if scrDrop(75,5) != noone
 			snd_play(sndExtraFeetDodge);
 		else
 			snd_play(sndExtraFeetDodgeFail);
@@ -1931,84 +1946,94 @@ display_mouse_set(mox,moy);
 
 /* */
 ///Angel flying through walls
-if race==18 && !instance_exists(LevCont) && instance_exists(Wall)// && !instance_exists(Portal)
+if race==18
 {
-	if flying > 0
-    {
-	    flying--;
-	    if flying<1
-			mask_index = mskPlayer;
-    }
+	if !instance_exists(LevCont) && instance_exists(Wall)// && !instance_exists(Portal)
+	{
+		if flying > 0
+	    {
+		    flying--;
+		    if flying<1
+				mask_index = mskPlayer;
+	    }
 	
-    if instance_exists(Floor) && instance_exists(WallHitMe)
-    {
-     var ground = instance_nearest(x-8,y-8,Floor);
-	 var o = 16;
-	if ground.object_index == FloorExplo
-		o = 8;
-     var wall = instance_nearest(x,y,WallHitMe);
+	    if instance_exists(Floor) && instance_exists(WallHitMe)
+	    {
+	     var ground = instance_nearest(x-8,y-8,Floor);
+		 var o = 16;
+		if ground.object_index == FloorExplo
+			o = 8;
+	     var wall = instance_nearest(x,y,WallHitMe);
      
-        if !place_meeting(x,y,Floor)&&point_distance(x,y,wall.x,wall.y)>16&&point_distance(x,y,ground.x,ground.y)>28//OUT OF BOUNDS
-        {
-        motion_add(direction+180,speed);
-		if UberCont.normalGameSpeed == 60
-			motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.45);
-		else
-			motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.9);
-        //if point_distance(x,y,wall.x,wall.y)>17
-        //motion_add(direction,1);
-        }
-        
-	    //GET HURT when flying too long unless acent ultra D
-	    if ( ( !place_meeting(x,y,Floor) || flying>0 || mask_index=mskPickupThroughWall || place_meeting(x,y,WallHitMe) ) && !instance_exists(LevCont) && !(ultra_got[72] && !altUltra) )//NOT ASCND ULTRA
-	    {
-		    //var wall = instance_nearest(x,y,Wall);
+	        if !place_meeting(x,y,Floor)&&point_distance(x,y,wall.x,wall.y)>16&&point_distance(x,y,ground.x,ground.y)>28//OUT OF BOUNDS
+	        {
+	        motion_add(direction+180,speed);
 			if UberCont.normalGameSpeed == 60
-				motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.3);
+			{
+				motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.45);
+				motion_add(direction,speed*0.5);
+			}
 			else
-				motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.6);
-	    }
-	    else
+				motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.9);
+	        //if point_distance(x,y,wall.x,wall.y)>17
+	        //motion_add(direction,1);
+	        }
+        
+		    //GET HURT when flying too long unless acent ultra D
+		    if ( ( !place_meeting(x,y,Floor) || flying>0 || mask_index=mskPickupThroughWall || place_meeting(x,y,WallHitMe) ) && !instance_exists(LevCont) && !(ultra_got[72] && !altUltra) )//NOT ASCND ULTRA
+		    {
+			    //var wall = instance_nearest(x,y,Wall);
+				if UberCont.normalGameSpeed == 60
+					motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.3);
+				else
+					motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.6);
+		    }
+		    else
+		    {
+				flyduration=0;
+		    }
+		}
+		flyduration ++;
+	    if flyduration>flymax
 	    {
-			flyduration=0;
+			my_health--;
+			flyduration=20;
+	    snd_play(snd_hurt, hurt_pitch_variation);
+	    image_index=0;
+	    sprite_index=spr_hurt;
+	    repeat(5+irandom(5) )
+	    {with instance_create(x+random(16)-8,y+random(16)-8,Feather)
+	    motion_add(random(360),5+random(10) );}
+    
+
 	    }
+	    if flyduration = 15
+	    {
+	    snd_play(sndStatueDead);
+	    }
+	    if flyduration>10&&random(2)<1
+	    {
+	    instance_create(x+random(16)-8,y+random(8)-4,Feather);
+	    //snd_play(sndStatueCharge);
+	    if flyduration < 20
+	    audio_sound_pitch(sndStatueCharge,1-flyduration*0.01)
+	    else
+	    audio_sound_pitch(sndStatueCharge,1-20*0.01)
+    
+	    if !audio_is_playing(sndStatueCharge)
+	    audio_play_sound(sndStatueCharge,100,0)
+	    }
+	    if flyduration>25//&&random(2)<1
+	    {with instance_create(x+random(16)-8,y+random(16)-8,Feather)
+	    motion_add(random(360),5+random(10) );}
+    
 	}
-	flyduration ++;
-    if flyduration>flymax
-    {
-		my_health--;
-		flyduration=20;
-    snd_play(snd_hurt, hurt_pitch_variation);
-    image_index=0;
-    sprite_index=spr_hurt;
-    repeat(5+irandom(5) )
-    {with instance_create(x+random(16)-8,y+random(16)-8,Feather)
-    motion_add(random(360),5+random(10) );}
-    
-
-    }
-    if flyduration = 15
-    {
-    snd_play(sndStatueDead);
-    }
-    if flyduration>10&&random(2)<1
-    {
-    instance_create(x+random(16)-8,y+random(8)-4,Feather);
-    //snd_play(sndStatueCharge);
-    if flyduration < 20
-    audio_sound_pitch(sndStatueCharge,1-flyduration*0.01)
-    else
-    audio_sound_pitch(sndStatueCharge,1-20*0.01)
-    
-    if !audio_is_playing(sndStatueCharge)
-    audio_play_sound(sndStatueCharge,100,0)
-    }
-    if flyduration>25//&&random(2)<1
-    {with instance_create(x+random(16)-8,y+random(16)-8,Feather)
-    motion_add(random(360),5+random(10) );}
-    
+	else
+	{
+		flying = 0;
+		mask_index = mskPlayer;
+	}
 }
-
 
 
 ///moddelay
@@ -2144,6 +2169,7 @@ if hammerheadcounter > 0
 	mask_index = msk;
 }
 //COLLISION
+var hitWall = false;
 if(race != 18)
 {
 	var h = sign(hspeed);
@@ -2158,6 +2184,7 @@ if(race != 18)
 			hi ++;
 		}
 		hspeed = 0;
+		hitWall = true;
 	}
 	var v = sign(vspeed);
 	if place_meeting(x,y+vspeed+v,WallHitMe)
@@ -2171,10 +2198,31 @@ if(race != 18)
 			vi ++;
 		}
 		vspeed = 0;
+		hitWall = true;
 	}
 }
 else if place_meeting(x,y,WallHitMe)
 {	
+	hitWall = true;
 	flying = 2;
 	mask_index = mskPickupThroughWall;
+}
+if hitWall && sprite_index != spr_hurt && alarm[3] < 1 && hammerheadcounter < 1 && scrIsGamemode(4)
+{	
+	my_health -= 2;
+	snd_play_2d(snd_hurt_actual, hurt_pitch_variation);
+	sprite_index = spr_hurt;
+	image_index = 0;
+	var ang = direction;
+	snd_play(sndFlare);
+	repeat(6)
+	{
+		with instance_create(xprevious,yprevious,Flame)
+		{
+			team = other.team;
+			motion_add(ang,4);
+		}
+		ang += 60;
+	}
+	instance_create(x,y,WallBreak);
 }

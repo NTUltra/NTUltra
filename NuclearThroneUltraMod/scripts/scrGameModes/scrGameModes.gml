@@ -31,7 +31,7 @@ function scrGameModes() {
 	gamemode_unlock[4] = "GET HURT BY LAVA";
 	gamemode_have[4] = 0;
 	gamemode_tip[4] = "DON'T TOUCH THE WALLS";
-	gamemode_description[4] = "WALLS KILL YOU";
+	gamemode_description[4] = "WALLS HURT YOU";
 	gamemode_nocombo[4] = [26,27,37,8];
 
 	gamemode[5] = "1HP EQUALITY";//

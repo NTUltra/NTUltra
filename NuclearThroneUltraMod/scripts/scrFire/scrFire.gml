@@ -5,13 +5,17 @@ function scrFire() {
 	exit;
 	if wep==0{
 		exit;}
-	if object_index == Player && Player.normalFire
+	if object_index == Player && !instance_exists(YungCuzDupe)
 		with Bullet7
 		{
 			if !turned && wepFire == other.wep
 				exit;
 		}
 	reload = min(reload + wep_load[wep],wep_load[wep]);
+	if skill_got[41] && armour < maxarmour
+	{
+		reload *= 0.65;
+	}
 	queueshot = max(queueshot-1,0);
 	Player.fired = true;
 	if (Player.alarm[2]<1)//alarm = Fish Ultra B
@@ -382,7 +386,7 @@ function scrFire() {
 	snd_play_fire(sndCrossbow)
 
 	with instance_create(x,y,Bolt)
-	{motion_add(aimDirection+(random(12)-6)*other.accuracy,24)
+	{motion_add(aimDirection+(random(14)-7)*other.accuracy,24)
 	image_angle = direction
 	team = other.team}
 
@@ -5068,7 +5072,7 @@ function scrFire() {
 		}   
 
 	firedthislevel=true;
-
+	firedOnce = true;
 	fired=true;
 
 	}

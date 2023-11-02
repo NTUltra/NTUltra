@@ -135,6 +135,14 @@ if instance_exists(Player)
 			x = 10016+96;
 			y = 10016+128;
 			scrForcePosition60fps();
+			with enemy
+			{
+				if point_distance(x,y,other.x,other.y) < 96
+				{
+					instance_destroy(id,false);	
+				}
+				direction = point_direction(x,y,other.x,other.y)+180;
+			}
 		}
 	}
 	else if Player.area == 100 && scrIsGamemode(36) && Player.crownvisits == 0 && instance_exists(SurvivalArenaStarter)//Ultra mod start

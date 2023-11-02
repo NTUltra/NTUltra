@@ -26,6 +26,7 @@ function scrEnemyDeathEvent(){
 			{
 				cash = min(cash + 1,maxCash);
 			}
+			/*
 			if skill_got[34] //FLEXIBLE ELBOWS
 			{
 				var lowb = 0;
@@ -64,6 +65,7 @@ function scrEnemyDeathEvent(){
 					}
 				}
 			}
+			*/
 			//Heavy heart
 			if skill_got[0]
 			{
@@ -145,7 +147,7 @@ function scrEnemyDeathEvent(){
 				other.raddrop += 2;
 
 			if scrIsCrown(7)
-			other.raddrop=round(other.raddrop*0.65);
+				other.raddrop=round(other.raddrop*0.55);
 
 			if scrIsCrown(28)
 			{

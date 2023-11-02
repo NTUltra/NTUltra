@@ -3,7 +3,7 @@ if alarm[11] < 1
 	scrBoltMarrow();
 	scrBoltTrail(trailColour,0.1,trailScale);
 }
-if collision_line(xprev,yprev,x,y,Wall,false,false)
+if collision_line(xprev,yprev,x,y,Wall,false,false) || place_meeting(x,y,Wall)
 {
 	event_user(1);
 }

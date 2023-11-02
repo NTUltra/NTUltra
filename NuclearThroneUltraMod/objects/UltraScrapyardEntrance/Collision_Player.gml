@@ -19,8 +19,13 @@ if my_health > 0
 			with Player
 			{
 				rad -= cost;
-				area = 136;
-				subarea = 2;
+				lastarea = 136
+				lastsubarea = 2;
+				if area != 100
+				{
+					area = 136;
+					subarea = 2;
+				}
 			}
 			with instance_create(x,y,Portal)
 			{

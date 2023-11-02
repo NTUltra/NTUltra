@@ -6,12 +6,12 @@ if other.team != team and other.my_health > 0 && other.team!=2
 		{
 			if instance_exists(Player)
 			{
-			my_health -= other.dmg
+				my_health -= other.dmg
 
-			if Player.skill_got[17] && team == 2
-				snd_play(sndSpark2);
-			else
-				snd_play(sndSpark1);
+				if Player.skill_got[17] && team == 2
+					snd_play(sndSpark2);
+				else
+					snd_play(sndSpark1);
 			}
 			else
 				snd_play(sndSpark1);
@@ -31,11 +31,15 @@ if other.team != team and other.my_health > 0 && other.team!=2
 	}
 
 }
-else if other.team=2 && other.my_health > 0 && other.team!= team
+else if other.team==2 && other.my_health > 0 && other.team!= team
 {//Player damage
 		//ENEMY LIGHTNING
 	with other
 	{
+		if object_index == Player
+		{
+			hitBy = other.sprite_index;
+		}
 		if sprite_index != spr_hurt
 		{
 			my_health -= 3

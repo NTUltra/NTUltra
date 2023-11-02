@@ -312,6 +312,9 @@ instance_destroy();
 with instance_create(x,y,PlayerSpawn)//Data to keep
 {
 	//alarm[3]=300;//immunity
+	rnglevelloop = other.rnglevelloop;
+	firedthislevel = false;
+	firedOnce = false;
 	seconds = other.seconds;
 	microseconds = other.microseconds;
 	screenshake400 = other.screenshake400;
@@ -698,6 +701,7 @@ with KeyCont {
 }
 with instance_create(x,y,DataRef)
 {
+	hitBy = other.hitBy;
 	ultramod = other.ultramod;
 	ultra_got = other.ultra_got;
 	ultra_name = other.ultra_name;

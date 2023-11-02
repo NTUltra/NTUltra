@@ -52,7 +52,9 @@ if alarm[0] < 1 && other.team == 2 && instance_exists(Player) && (!ezMode || oth
 		}
 		if dealtDamage && alarm[3] < 1
 		{
-			snd_play(snd_hurt, hurt_pitch_variation)
+			snd_play(snd_hurt, hurt_pitch_variation);
+			if object_index == Player
+				hitBy = other.sprite_index;
 			sprite_index = spr_hurt
 			image_index = 0
 			var knockbackDir = point_direction(other.x,other.y,x,y);

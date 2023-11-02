@@ -153,13 +153,22 @@ function scrLoseSkill(skillIndex){
 			accuracy=standartAccuracy;
 		break;
 		case 33: //GLASS ARM CANNON
-			maxhealth += 2;//I guess you could have 3 hp as melting here but thats cool
+			if race == 25
+				maxhealth += 1;
+			else
+				maxhealth += 2;//I guess you could have 3 hp as melting here but thats cool
 		break;
 		case 38: //ENRICHED METABOLISM
 			metabolism = 0;
 		break;
 		case 39: //ALIENT INTESTINES
 			alienIntestines = 0;
+		break;
+		case 41: //NERVES OF STEEL
+			if race == 25
+				maxhealth += 2;
+			else
+				maxhealth += 3;//I guess you could have 3 hp as melting here but thats cool
 		break;
 				
 	}

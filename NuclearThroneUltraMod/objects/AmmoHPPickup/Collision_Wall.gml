@@ -1,5 +1,5 @@
 if instance_exists(Player){
-if !Player.ultra_got[12]
+	if !Player.ultra_got[12]
     {
 		move_bounce_solid(false)
     }
@@ -9,4 +9,7 @@ if !Player.ultra_got[12]
 		alarm[1]=10;
     }
 }
-
+else
+{
+	move_bounce_solid(false)	
+}

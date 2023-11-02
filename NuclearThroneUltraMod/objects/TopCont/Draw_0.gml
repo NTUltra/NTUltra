@@ -13,8 +13,6 @@ with FrozenPlayer
 image_alpha=0.5;
 draw_self();
 }
-if fps_real >= fps
-{
 	with Top
 	{
 		if visible{
@@ -29,7 +27,6 @@ if fps_real >= fps
 	with TopSmall
 	draw_sprite(sprite_index,image_index,x,y-8)
 	//draw_sprite_ext(sprite_index,-1,x,y-8,1,1,0,background_color,1)
-}
 	with Wall
 	{
 		draw_sprite_part_ext(outspr,outindex,l,r,w,h,x-4+l,y-12+r,1,1,colour,1);
@@ -236,6 +233,9 @@ with EnemyBullet1Square
 	if draw
 		draw_self();
 }
+with FlexibleElbowsSlap {
+	event_perform(ev_draw,0);
+}
 with SuckRad
 {
 	event_perform(ev_draw,0);
@@ -257,7 +257,7 @@ with InvertedGuardianBulletSpawn
 with GhettoBlast
 {
 	if visible
-		draw_self();	
+		draw_self();
 }
 
 //Flying enemies

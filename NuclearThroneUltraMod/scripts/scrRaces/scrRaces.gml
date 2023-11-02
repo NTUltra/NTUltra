@@ -16,9 +16,9 @@ function scrRaces() {
 
 
 	race_name[1] = "[FISH]"
-	race_pass[1] = "GETS MORE AMMO"
-	race_acti[1] = "DODGE ROLL"
-	race_butt[1] = "WATER BOOST#GETS EVEN MORE AMMO#FROM AMMO PICKUPS";
+	race_pass[1] = "GETS MORE <y>AMMO<y>"
+	race_acti[1] = "<w>DODGE ROLL<w>"
+	race_butt[1] = "<aq>WATER<aq> <w>BOOST<w>#GETS EVEN MORE <y>AMMO<y>#FROM <y>AMMO<y> PICKUPS";
 	//race_back[1] = "IF YOUR AMMO IS ABOVE 75%#INCREASE FIRE RATE#AND RELOAD SPEED";
 	race_lock[1] = "UNLOCKED FROM THE START"
 	race_have[1] = 1
@@ -33,9 +33,9 @@ function scrRaces() {
 
 
 	race_name[2] = "[CRYSTAL]"
-	race_pass[2] = "MORE MAX HP"
-	race_acti[2] = "SHIELD"
-	race_butt[2] = "LONGER SHIELD"
+	race_pass[2] = "MORE MAX <r>HP<r>"
+	race_acti[2] = "<p>SHIELD<p>"
+	race_butt[2] = "LONGER <p>SHIELD<p>"
 	//race_back[2] = "DAMAGE REDUCTION WHILE STANDING STILL";
 	race_lock[2] = "UNLOCKED FROM THE START"
 	race_have[2] = 1
@@ -51,8 +51,8 @@ function scrRaces() {
 
 	race_name[3] = "[EYES]"
 	race_pass[3] = "SEES IN THE DARK"
-	race_acti[3] = "TELEKINESIS"
-	race_butt[3] = "STRONGER TELEKINESIS"
+	race_acti[3] = "<w>TELEKINESIS<w>"
+	race_butt[3] = "STRONGER <w>TELEKINESIS<w>"
 	//race_back[3] = "ENEMIES CLOSE TO YOU TAKE DAMAGE";
 	race_lock[3] = "REACH SEWERS TO UNLOCK"
 	race_have[3] = 0
@@ -67,7 +67,7 @@ function scrRaces() {
 
 
 	race_name[4] = "[MELTING]"
-	race_pass[4] = "LESS MAX HP, MORE RADS"
+	race_pass[4] = "LESS MAX <r>HP<r>, MORE <g>RADS<g>"
 	race_acti[4] = "EXPLODE CORPSES"
 	race_butt[4] = "BIGGER CORPSE EXPLOSIONS"
 	//race_back[4] = "CORPSE EXPLOSIONS CAN GIVE DROPS";
@@ -79,14 +79,14 @@ function scrRaces() {
 	race_dskin[4] = 0
 	race_eskin[4] = 0
 	race_fskin[4] = 0
-	race_bskin_lock[4] = "LOOP WITHOUT#RHINO SKIN,#STRONG SPIRIT#BOUNCY FAT#AND CROWN OF LIFE#AS MELTING"
+	race_bskin_lock[4] = "LOOP WITHOUT#RHINO SKIN,#STRONG SPIRIT#ALKALINE SALIVA#BOUNCY FAT#AND CROWN OF LIFE#AS MELTING"
 	race_cskin_lock[4] = "REACH LOOP 3 ON#1HP EQUALITY#GAMEMODE#AS MELTING"
 
 
 	race_name[5] = "[PLANT]"
-	race_pass[5] = "IS FASTER"
-	race_acti[5] = "SNARE ENEMIES"
-	race_butt[5] = "SNARE IS SLIGHTLY BIGGER#SNARE FINISHES ENEMIES#UNDER 36% HP"
+	race_pass[5] = "IS <w>FASTER<w>"
+	race_acti[5] = "<w>SNARE<w> ENEMIES"
+	race_butt[5] = "<w>SNARE<w> IS SLIGHTLY BIGGER#<w>SNARE<w> FINISHES ENEMIES#UNDER 36% <r>HP<r>"
 	//race_back[5] = "ENEMIES KILLED WHILE SNARED GIVE MORE DROPS THIS IS AN ULTRA ";
 	race_lock[5] = "KILL 100 ENEMIES TO UNLOCK"
 	race_have[5] = 0
@@ -101,7 +101,7 @@ function scrRaces() {
 
 
 	race_name[6] = "[Y.V.]"
-	race_pass[6] = "FASTER RELOAD SPEED"
+	race_pass[6] = "FASTER <w>RELOAD SPEED<w>"
 	race_acti[6] = "POP POP"
 	race_butt[6] = "BRRRAP"
 	//race_back[0] = "ADDITIONAL PROJECTILES FROM ACTIVE#PIERCE ENEMIES";
@@ -118,9 +118,9 @@ function scrRaces() {
 
 
 	race_name[7] = "[STEROIDS]"
-	race_pass[7] = "IS LESS ACCURATE#ALL WEAPONS ARE FULLY AUTOMATIC"
-	race_acti[7] = "DUAL WIELDING"
-	race_butt[7] = "FIRING WITH ONE WEAPON#HAS A CHANCE TO#GIVE AMMO FOR THE OTHER#MORE EFFECTIVE WHEN#FIRING BOTH WEAPONS"
+	race_pass[7] = "IS LESS <w>ACCURATE<w>#ALL WEAPONS ARE FULLY AUTOMATIC"
+	race_acti[7] = "<w>DUAL WIELDING<w>"
+	race_butt[7] = "FIRING WITH ONE WEAPON#HAS A CHANCE TO#GIVE <y>AMMO<y> FOR THE OTHER#MORE EFFECTIVE WHEN#FIRING BOTH WEAPONS"
 	//race_back[7] = "MISSING INCREASES#FIRE RATE AND RELOAD SPEED";
 	race_lock[7] = "REACH LABS TO UNLOCK"
 	race_have[7] = 0
@@ -136,8 +136,8 @@ function scrRaces() {
 
 	race_name[8] = "[ROBOT]"
 	race_pass[8] = "FINDS BETTER TECH"
-	race_acti[8] = "HOLD TO EAT WEAPONS"
-	race_butt[8] = "BETTER GUN NUTRITION"
+	race_acti[8] = "HOLD TO <w>EAT WEAPONS<w>"
+	race_butt[8] = "BETTER GUN <g>NUTRITION<g>"
 	//race_back[8] = "FIND EVEN BETTER WEAPONS";
 	race_lock[8] = "REACH SCRAPYARD TO UNLOCK"
 	race_have[8] = 0
@@ -153,8 +153,8 @@ function scrRaces() {
 
 	race_name[9] = "[CHICKEN]"
 	race_pass[9] = "HARD TO KILL"
-	race_acti[9] = "HOLD FOR SLOW MOTION"
-	race_butt[9] = "NORMAL MOVEMENT SPEED#AND NORMAL FIRERATE#DURING SLOWMOTION"//"NORMAL RATE OF FIRE#DURING SLOW MOTION"
+	race_acti[9] = "HOLD FOR <w>SLOW MOTION<w>"
+	race_butt[9] = "NORMAL <w>MOVEMENT SPEED<w>#AND NORMAL <w>RELOAD SPEED<w>#DURING <w>SLOWMOTION<w>"//"NORMAL RATE OF FIRE#DURING SLOW MOTION"
 	//race_back[9] = "NORMAL RATE OF FIRE#DURING SLOW MOTION (this IS AN ULTRA MAKE CHANGE)";
 	race_lock[9] = "OPEN A BIG HP CHEST"
 	race_have[9] = 0
@@ -169,7 +169,7 @@ function scrRaces() {
 
 
 	race_name[10] = "[REBEL]"
-	race_pass[10] = "PORTALS HEAL"
+	race_pass[10] = "<p>PORTALS<p> <r>HEAL<r>"
 	race_acti[10] = "SPAWN ALLIES"
 	race_butt[10] = "HIGHER ALLY FIRE RATE"
 	//race_back[10] = "FASTER ALLIES#ALLIES TELEPORT TO YOU#WHEN LOST";
@@ -186,9 +186,9 @@ function scrRaces() {
 
 
 	race_name[11] = "[HUNTER]"
-	race_pass[11] = "HIGHER PROJECTILE VELOCITY#BETTER ACCURACY"
+	race_pass[11] = "HIGHER PROJECTILE <w>VELOCITY<w>#BETTER <w>ACCURACY<w>"
 	race_acti[11] = "MARK ENEMIES"
-	race_butt[11] = "MARKED ENEMIES#TAKE 20% MORE DAMAGE"
+	race_butt[11] = "<w>MARKED<w> ENEMIES#TAKE 20% MORE <w>DAMAGE<w>"
 	//race_back[11] = "MARKED ENEMIES THAT DIE#HAVE A HIGHER DROPRATE(this is an ultra?) MARKED ENEMIES THAT DIE#DECREATE RELOAD";
 	race_lock[11] = "DEFLECT A SNIPER SHOT#INTO THE SNIPER"
 	race_have[11] = 0
@@ -203,9 +203,9 @@ function scrRaces() {
 
 
 	race_name[12] = "[YUNG CUZ]"
-	race_pass[12] = "FIND MORE HP CHESTS#MORE DUPES = MORE AMMO FROM PICKUPS"
-	race_acti[12] = "DUPLICATE"
-	race_butt[12] = "GAIN EVEN MORE AMMO#DEPENDING ON NUMBER OF BUDDIES"
+	race_pass[12] = "FIND MORE <r>HP<r> CHESTS#MORE DUPES = MORE <y>AMMO<y> FROM PICKUPS"
+	race_acti[12] = "<w>DUPLICATE<w>"
+	race_butt[12] = "GAIN EVEN MORE <y>AMMO<y>#DEPENDING ON NUMBER OF DUPES"
 	//race_back[12] = "DECREASE COST OF BUDDY";
 	race_lock[12] = "KILL A MIMIC"
 	race_have[12] = 0
@@ -221,8 +221,8 @@ function scrRaces() {
 
 	race_name[13] = "[SHEEP]"
 	race_pass[13] = "ENEMIES DON'T ENGAGE FIRE UNTIL YOU DO"
-	race_acti[13] = "HOLD TO CHARGE"
-	race_butt[13] = "BETTER CHARGE#MORE CHARGE DAMAGE#MORE CHARGE CONTROL#FASTER CHARGE"
+	race_acti[13] = "HOLD TO <pi>CHARGE<pi>"
+	race_butt[13] = "BETTER <pi>CHARGE<pi>#MORE CHARGE DAMAGE#MORE CHARGE CONTROL#FASTER CHARGE"
 	//race_back[13] = "IDK MORPH DAMAGE";
 	race_lock[13] = "MORPH AN ENEMY"
 	race_have[13] = 0
@@ -237,8 +237,8 @@ function scrRaces() {
 
 
 	race_name[14] = "[PANDA]"
-	race_pass[14] = "SMALLER HITBOX#RANDOMIZE WEAPONS THROWN IN A PORTAL"//"PRIMARY WEAPON IS RANDOMIZED#TO ONE OF THE SAME TIER#EACH AREA#EXCEPT YOUR STARTING WEAPON"
-	race_acti[14] = "THROW WEAPONS"
+	race_pass[14] = "SMALLER HITBOX#<pi>RANDOMIZE<pi> WEAPONS THROWN IN A <p>PORTAL<p>"//"PRIMARY WEAPON IS RANDOMIZED#TO ONE OF THE SAME TIER#EACH AREA#EXCEPT YOUR STARTING WEAPON"
+	race_acti[14] = "<w>THROW<w> WEAPONS"
 	race_butt[14] = "SHORTER TELEPORT DELAY#MORE THROW DAMAGE"
 	//race_back[14] = "NO LONGER GET RANDOM WEP(is ultra change)";
 	race_lock[14] = "VISIT THE JUNGLE"
@@ -254,8 +254,8 @@ function scrRaces() {
 
 
 	race_name[15] = "[ATOM]"
-	race_pass[15] = "ITEMS DESPAWN QUICKER#YOU DEAL CONTACT DAMAGE"
-	race_acti[15] = "TELEPORT"
+	race_pass[15] = "ITEMS DESPAWN QUICKER#YOU DEAL <g>CONTACT DAMAGE<g>"
+	race_acti[15] = "<w>TELEPORT<w>"
 	race_butt[15] = "EXPLOSIVE TELEPORTATION"
 	//race_back[15] = "SHORT IMMUNITY TO CONTACT DAMAGE#AFTER TELEPORTING";
 	race_lock[15] = "TAKE CRYSTAL'S THRONE BUTT"
@@ -271,9 +271,9 @@ function scrRaces() {
 
 
 	race_name[16] = "[VIKING]"
-	race_pass[16] = "REDUCED MAX HP##PORTALS GIVE ARMOUR#TWO ARMOUR MAXIMUM"
-	race_acti[16] = "SERPENT ARMOUR STRIKE"//ARMOUR STRIKE
-	race_butt[16] = "INCREASE MAX ARMOUR BY ONE#FIRST ARMOUR STRIKE EACH AREA IS FREE"
+	race_pass[16] = "REDUCED <r>MAX HP<r>##<p>PORTALS<p> GIVE <gb>ARMOUR<gb>#TWO <gb>ARMOUR<gb> MAXIMUM"
+	race_acti[16] = "SERPENT <gb>ARMOUR<gb> <w>STRIKE<w>"//ARMOUR STRIKE
+	race_butt[16] = "INCREASE <gb>MAX ARMOUR<gb> BY ONE#FIRST <gb>ARMOUR<gb> <w>STRIKE<w> EACH AREA IS FREE"
 	//race_back[16] = "ARMOUR NOW GETS TAKEN WHEN#SUFFERING LETHAL DAMAGE";
 	race_lock[16] = "REGAIN STRONG SPIRIT 4 TIMES#IN ONE RUN"//"BREAK X AMOUNT OF WALLS"
 	race_have[16] = 0
@@ -288,7 +288,7 @@ function scrRaces() {
 
 
 	race_name[17] = "[WEAPONSMITH]"//WEAPON SMITH
-	race_pass[17] = "START WITH A RANDOM WEAPON MOD#ENEMIES DROP MORE WEAPONS#LOWER TIER WEAPONS"
+	race_pass[17] = "START WITH A RANDOM <w>WEAPON MOD<w>#ENEMIES DROP MORE WEAPONS#LOWER TIER WEAPONS"
 	race_acti[17] = "COMBINE AND UPGRADE WEAPONS"
 	race_butt[17] = "GET AN EVEN HIGHER#TIER WEAPON WHEN COMBINING WEAPONS"
 	//race_back[17] = "THE FIRST TIME YOU COMBINE#A WEAPON IN AN AREA#YOU DON'T LOSE THEM BUT INSTEAD DROP IT";
@@ -306,8 +306,8 @@ function scrRaces() {
 
 	race_name[18] = "[ANGEL]"
 	race_pass[18] = "FLY OVER WALLS"
-	race_acti[18] = "DEFLECT, IMMUNE & HEAL"
-	race_butt[18] = "#CHEAPER HEALING, IMMUNITY & DEFLECTING"
+	race_acti[18] = "<w>DEFLECT<w>, <aq>IMMUNE<aq> & <r>HEAL<r>"
+	race_butt[18] = "#CHEAPER <r>HEALING<r>, <aq>IMMUNITY<aq> & <w>DEFLECTING<w>"
 	//race_back[18] = "FLYING OVER WALLS DRAINS AMMO#INSTEAD OF HP";
 	race_lock[18] = "HAVE A SINGLE RUN WITH#ATLEAST THREE SURVIVAL MUTATIONS#(RHINO SKIN, ALKALINE SALIVA ETC.)"
 	race_have[18] = 0
@@ -322,9 +322,9 @@ function scrRaces() {
 
 
 	race_name[19] = "[SKELETON]"
-	race_pass[19] = "REDUCED MAX HP,#MOVES SLOWER,#LESS ACCURATE"
-	race_acti[19] = "BLOOD GAMBLE"
-	race_butt[19] = "BETTER BLOOD GAMBLE ODDS"
+	race_pass[19] = "REDUCED <r>MAX HP<r>,#MOVES SLOWER,#LESS ACCURATE"
+	race_acti[19] = "<r>BLOOD<r> <w>GAMBLE<w>"
+	race_butt[19] = "BETTER <r>BLOOD<r> <w>GAMBLE<w> ODDS"
 	//race_back[19] = "THE SLOWER YOU MOVE#THE FASTER YOU FIRE";
 	race_lock[19] = "DIE IN THE LABS AS MELTING"
 	race_have[19] = 0
@@ -339,9 +339,9 @@ function scrRaces() {
 
 
 	race_name[20] = "[BUSINESS HOG]"
-	race_pass[20] = "BOSSES DROP GOLDEN WEAPON CHESTS"
-	race_acti[20] = "HOLD FOR SHOP"
-	race_butt[20] = "20% DISCOUNT"
+	race_pass[20] = "BOSSES DROP <y>GOLDEN<y> WEAPON CHESTS"
+	race_acti[20] = "HOLD FOR <g>SHOP<g>"
+	race_butt[20] = "20% <w>DISCOUNT<w>"
 	//race_back[20] = "WEAPON CHESTS SOMETIME BECOME#GOLDEN WEAPON CHESTS";
 	race_lock[20] = "FIND AND STEAL#THE MONEY GUN"
 	race_have[20] = 0
@@ -356,9 +356,9 @@ function scrRaces() {
 
 
 	race_name[21] = "[HORROR]"
-	race_pass[21] = "EXTRA MUTATION CHOICE"//"BLAST ARMOUR, HEAT"
-	race_acti[21] = "RADIATION BEAM"//"PORTAL STRIKE"
-	race_butt[21] = "BEAM CHARGES QUICKER#BEAM HEALS#SOMETIMES MISSED BEAM#WILL DROP RADS"//"STRONGER PORTAL STRIKE"
+	race_pass[21] = "EXTRA <g>MUTATION<g> CHOICE"//"BLAST ARMOUR, HEAT"
+	race_acti[21] = "<g>RADIATION<g> BEAM"//"PORTAL STRIKE"
+	race_butt[21] = "BEAM CHARGES QUICKER#BEAM <r>HEALS<r>#SOMETIMES MISSED BEAM#WILL DROP <g>RADS<g>"//"STRONGER PORTAL STRIKE"
 	//race_back[21] = "BEAM CHARGES QUICKER#GIVES AMMO";
 	race_lock[21] = "REACH WONDERLAND"//"REACH PALACE"
 	race_have[21] = 0
@@ -373,9 +373,9 @@ function scrRaces() {
 
 
 	race_name[22] = "[ROGUE]"
-	race_pass[22] = "BLAST ARMOUR, HEAT"//"WALK FOREVER"
-	race_acti[22] = "PORTAL STRIKE"//"GASS, TOXIC IMMUNITY"
-	race_butt[22] = "STRONGER PORTAL STRIKE#MORE PORTAL STRIKE AMMO SPAWNS"//"GASS SPREADS FASTER"
+	race_pass[22] = "BLAST ARMOUR, <b>HEAT<b>"//"WALK FOREVER"
+	race_acti[22] = "<b>PORTAL STRIKE<b>"//"GASS, TOXIC IMMUNITY"
+	race_butt[22] = "STRONGER <b>PORTAL STRIKE<b>#MORE <b>PORTAL STRIKE AMMO<b> SPAWNS"//"GASS SPREADS FASTER"
 	//race_back[22] = "INCREASE MAXIMUM PORTAL STRIKE AMMO (this is an ult)";
 	race_lock[22] = "REACH THE THRONE"
 	race_have[22] = 0
@@ -390,11 +390,11 @@ function scrRaces() {
 
 
 	race_name[23] = "[FROG]"
-	race_pass[23] = "IMMUNE TO TOXIC";
-	race_acti[23] = "TOXIC GAS"
+	race_pass[23] = "IMMUNE TO <g>TOXIC<g>";
+	race_acti[23] = "HOLD AND RELEASE <g>TOXIC GAS<g>"
 	if random(1000) < 1
 		race_acti[23] = "SHIT & FART"
-	race_butt[23] = "TOXIC SPREADS FASTER#TOXIC LASTS LONGER#HOMING TOXIC#ACTIVE SPAWNS TOXIC TOWARDS YOUR AIM"
+	race_butt[23] = "<g>TOXIC<g> SPREADS FASTER#<g>TOXIC<g> LASTS LONGER#HOMING <g>TOXIC<g>#ACTIVE SPAWNS <g>TOXIC<g> TOWARDS YOUR AIM"
 	//race_back[23] = "TOXIC GASS DEALS MORE DAMAGE (this is an ulta)";
 	race_lock[23] = "KILL BALL MOM"
 	race_have[23] = 0
@@ -409,9 +409,9 @@ function scrRaces() {
 
 
 	race_name[24] = "[ELEMENTOR]"//ELEMENTAL
-	race_pass[24] = "STRONGER LIGHTNING,#FROST, FIRE AND KRAKEN"
-	race_acti[24] = "TERRAFORM AT THE COST OF AMMO"//TERRAFORM
-	race_butt[24] = "CHEAPER TERRAFORM#YOUR WALLS DEFLECT ENEMY PROJECTILES"
+	race_pass[24] = "STRONGER <b>LIGHTNING<b>,#<aq>FROST<aq>, <r>FIRE<r> AND <p>KRAKEN<p>"
+	race_acti[24] = "<w>TERRAFORM<w> AT THE COST OF <y>AMMO<y>"//TERRAFORM
+	race_butt[24] = "CHEAPER TERRAFORM#YOUR WALLS <w>DEFLECT<w> ENEMY PROJECTILES"
 	//race_back[24] = "INCREASED CHANCE OF FINDING ELEMENTAL WEAPONS#LEVELS GENERATE MORE COVER";
 	race_lock[24] = "REACH MUSHROOM LAND"//TAKE HEAVY HEART
 	race_have[24] = 0
@@ -426,9 +426,9 @@ function scrRaces() {
 
 
 	race_name[25] = "[DOCTOR]"//MUTATION SMITH
-	race_pass[25] = "ALL MUTATIONS ARE UPGRADED#GETS LESS RADIATION FROM ENEMIES"//SLIGHTLY BETTER MUTATIONS# LEVELS SLOWER
-	race_acti[25] = "CONVERT LIFE TO RADS"
-	race_butt[25] = "YOUR ACTIVE ALSO#DEALS DAMAGE TO ALL ENEMIES ON SCREEN#AND STEALS SOME OF THEIR RADS"
+	race_pass[25] = "ALL <g>MUTATIONS<g> ARE UPGRADED#GETS LESS <g>RADIATION<g> FROM ENEMIES"//SLIGHTLY BETTER MUTATIONS# LEVELS SLOWER
+	race_acti[25] = "CONVERT <r>LIFE<r> TO <g>RADS<g>"
+	race_butt[25] = "YOUR <w>ACTIVE<w> ALSO#DEALS DAMAGE TO ALL ENEMIES ON SCREEN#AND STEALS SOME OF THEIR <g>RADS<g>"
 	//race_back[25] = "LESS HP COST?";
 	race_lock[25] = "REACH LEVEL ULTRA"//REACH LEVEL ULTRA
 	race_have[25] = 0
@@ -442,9 +442,9 @@ function scrRaces() {
 	race_cskin_lock[25] = "PROFESSIONAL#SELFCARE"
 
 	race_name[26] = "[GOOD OL' HUMPHRY]"//RUSTY GRANDPA SOLDIER
-	race_pass[26] = "REDUCED MAX HP##DEALING DAMAGE BUILDS UP SKILL##SKILL INCREASES ALL DAMAGE DEALT##SKILL DECREASES OVER TIME#AND WHEN YOU TAKE DAMAGE#"//"HITTING SHOTS BUILDS SKILL#MISSING RESETS SKILL#UNTIL YOU HIT A SHOT AGAIN#SKILL INCREASES DAMAGE"
-	race_acti[26] = "STUN & SHRINK - COSTS 5 SKILL"//"SLOW AND SHRINK#ENEMY PROJECTILES#AT THE COST OF#unequipped AMMO"//DISCIPLINE those bullets
-	race_butt[26] = "#SKILL DECREASES SLOWER"
+	race_pass[26] = "REDUCED <r>MAX HP<r>##DEALING DAMAGE BUILDS UP <w>SKILL<w>##SKILL INCREASES ALL <w>DAMAGE DEALT<w>##SKILL DECREASES OVER TIME#AND WHEN YOU <aq>TAKE DAMAGE<aq>#"//"HITTING SHOTS BUILDS SKILL#MISSING RESETS SKILL#UNTIL YOU HIT A SHOT AGAIN#SKILL INCREASES DAMAGE"
+	race_acti[26] = "<w>STUN<w> & <w>SHRINK<w> - COSTS 5 <w>SKILL<w>"//"SLOW AND SHRINK#ENEMY PROJECTILES#AT THE COST OF#unequipped AMMO"//DISCIPLINE those bullets
+	race_butt[26] = "#<w>SKILL<w> DECREASES SLOWER"
 	//race_back[26] = "DECREASE COST OF ACTIVE";
 	race_lock[26] = "BEAT BIG FISH"
 	race_have[26] = 0
@@ -458,9 +458,9 @@ function scrRaces() {
 	race_cskin_lock[26] = "REACH 1000 SKILL!"
 	
 	race_name[27] = "[HANDS]"
-	race_pass[27] = "HIGHER CHANCE FOR INVERTED PORTALS#INVERTED PORTALS (OVER) HEAL 2HP"
-	race_acti[27] = "CLICK/HOLD GRAB CHESTS/WEAPONS/ENEMIES"
-	race_butt[27] = "PUSH ENEMIES INSTEAD#YOUR HAND DEALS MORE DAMAGE"
+	race_pass[27] = "HIGHER CHANCE FOR <w>INVERTED PORTALS<w>#<w>INVERTED PORTALS<w> (OVER) <r>HEAL<r> 2<r>HP<r>"
+	race_acti[27] = "CLICK/HOLD <w>GRAB<w> CHESTS/WEAPONS/ENEMIES"
+	race_butt[27] = "<w>PUSH<w> ENEMIES INSTEAD#YOUR HAND DEALS MORE DAMAGE"
 	//race_back[27] = "MORE DAMAGE OR SOMETHING";
 	race_lock[27] = "KILL THE INVERTED THRONE"
 	race_have[27] = 0

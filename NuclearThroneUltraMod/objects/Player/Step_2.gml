@@ -402,10 +402,12 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 				{
 					queueshot++;
 					scrPlayReloadSound(wep);
+					scrFlexibleElbowReload(wep);
 				} else if reload <= lowa && queueshot < 2
 				{
 					queueshot++;
 					scrPlayReloadSound(wep);
+					scrFlexibleElbowReload(wep);
 				}
 			}
 
@@ -600,30 +602,26 @@ resetPrevHealth = true;
 }
 }
 
-if race=16 || race = 17 || race = 19 || race = 20 || race = 21//Viking and Gunsmith use armour and Skeleton and businesshog actually
+//if race=16 || race = 17 || race = 19 || race = 20 || race = 21//Viking and Gunsmith use armour and Skeleton and businesshog actually
+//{
+if armour > 0
 {
-if armour>0
-{
+	if tookHit && my_health != maxhealth && alarm[3] < 1 && !exception
+	{
+		armour -= 1;
+		snd_play(sndLostArmour);
+		alarm[3]=max(alarm[3],5);//before your armour lowers again}
+		resetPrevHealth = true;
 
-	if tookHit&&my_health!=maxhealth&&alarm[3]<1&&!exception
-	{armour-=1;
-
-
-	snd_play(sndLostArmour);
-	alarm[3]=max(alarm[3],5);//before your armour lowers again}
-	resetPrevHealth = true;
-
-	scrBlankArmour();
-	if ultra_got[64]
-		scrSerpentArmourStrike();
-
-
+		scrBlankArmour();
+		if ultra_got[64]
+			scrSerpentArmourStrike();
 	}
-if armour>maxarmour
-armour=maxarmour;
+	if armour > maxarmour
+		armour = maxarmour;
 }
 
-}
+//}
 if alarm[3] > 0/*|| lag>0 *//*&&my_health!=maxhealth*/&& !exception
 {
 	if spr_hurt
@@ -687,10 +685,6 @@ if (tookHit)
 			else
 				my_health = prevhealth;
 			resetPrevHealth = true;
-			alarm[3] += 15;
-			canAnimateDuringImmune = 0;
-			snd_hurt = sndDamageNegate;
-			scrGiveEuphoriaShield();
 			
 			with instance_create(x,y,SharpTeeth)
 				owner=other.id;
@@ -929,7 +923,7 @@ if my_health <= 0 && armour < 1
 		snd_play_2d(sndPhoenixChicken);
 		snd_hurt = sndDamageNegate;
 		scrGiveEuphoriaShield();
-		alarm[3] = max(alarm[3],50 + (phoenixrevives*5));
+		alarm[3] = max(alarm[3],10 + (phoenixrevives*2));
 		snd_play(sndFlameCannonEnd,0.1,true);
 		var ang = direction + 180;
 		var am = min(44,23 + (phoenixrevives*2));

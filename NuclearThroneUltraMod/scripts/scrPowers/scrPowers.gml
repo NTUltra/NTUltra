@@ -358,7 +358,6 @@ function scrPowers() {
 						pt.mytext = "+"+string(h-1)+" HP";
 				}
 				Sleep(50);
-				alarm[3] = max(alarm[3],10);//duration of iframes
 			}
 			else
 			{
@@ -818,7 +817,6 @@ function scrPowers() {
 									pt.mytext = "+"+string(h-1)+" HP";
 							}
 							Sleep(50);
-							alarm[3]=10;//duration of iframes
 						}
 						else if skill_got[25] && strongspirit == true && strongspiritused == false
 						{

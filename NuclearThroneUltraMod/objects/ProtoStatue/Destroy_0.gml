@@ -38,6 +38,3 @@ else //Destroy and not full, pink sheep
 		}
 	}
 }
-if instance_exists(Player)
-Player.crownrad = 0
-

@@ -1,9 +1,9 @@
-/// @description xxx
+/// @description Ultramod
 
 // Inherit the parent event
 event_inherited();
 with instance_create(x,y,EnergySwordBullet)
-{motion_add(aimDirection+(random(4)-2)*other.accuracy,16)
+{motion_add(other.direction,16)
 image_angle = direction
 dmg ++;
 team = other.team}

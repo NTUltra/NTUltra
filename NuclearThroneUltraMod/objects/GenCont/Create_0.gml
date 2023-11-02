@@ -24,11 +24,8 @@ if instance_exists(Player)
 		UberCont.savedSeed = random_get_seed();
 	}
 	with Player {
-
-
-    
-	x = 10016
-	y = 10016
+		x = 10016
+		y = 10016
 	}
 	if scrIsCrown(25)//Crown of freedom copy colour of floorexplo
 	{

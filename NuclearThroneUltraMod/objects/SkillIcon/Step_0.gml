@@ -150,6 +150,8 @@ else if skill = 18//last wish
 				targetHealth += 4;
 			if skill_got[33]//Glass arm cannon
 				targetHealth = max(1,targetHealth-2);
+			if skill_got[41]//nerves of steel
+				targetHealth = max(1,targetHealth-3);
 			if scrIsGamemode(9)
 				targetHealth += UberCont.casualModeHPIncrease;
 			targetHealth += UberCont.maxHpIncrease;
@@ -254,7 +256,7 @@ else if skill == 33 //GLASS ARM CANNON
 		Player.maxarmour -= 2;
 		Player.armour -= 2;
 	}
-	else if Player.race=25
+	else if Player.race == 25
 	{
 		Player.maxhealth -= 1
 		if Player.my_health > Player.maxhealth
@@ -268,6 +270,35 @@ else if skill == 33 //GLASS ARM CANNON
 	}
 	Player.exception = true;
 	//Dont die on me friend
+	Player.maxhealth = max(Player.maxhealth, 1);
+	Player.my_health = max(Player.my_health, 1);
+}
+else if skill == 41 //NERVES OF STEEL
+{
+	if Player.ultra_got[62] && Player.altUltra //Living armour
+	{
+		Player.maxarmour -= 2;
+		Player.armour = min(Player.armour,Player.maxarmour);
+	}
+	else
+	{
+		Player.maxarmour = max(1,Player.maxarmour + 1);
+		Player.armour += 1;
+		if Player.race == 25
+		{
+			Player.maxhealth -= 2
+			if Player.my_health > Player.maxhealth
+				Player.my_health -= 2
+		}
+		else
+		{
+			Player.maxhealth -= 3
+			if Player.my_health > Player.maxhealth
+				Player.my_health -= 3
+		}
+	}
+	Player.exception = true;
+	//Dont die on me friend?
 	Player.maxhealth = max(Player.maxhealth, 1);
 	Player.my_health = max(Player.my_health, 1);
 }

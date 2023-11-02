@@ -98,7 +98,7 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 			ultra_name[20] = "SONIC SPEED"
 			ultra_text[20] = "YOU CAN MOVE EXTREMELY FAST!#ACCELERATING OR DECCELERATING QUICKLY#CREATES A SONIC BOOM"
 			ultra_tips[20] = "SONIC BOOM!"
-			maxSpeed += 6;
+			maxSpeed += 5.5;
 		}
 	}
 	else if Player.race == 9 && skill == 33 && (scrHasFireWeapon() || Player.unlockAlternativeUltras)
@@ -829,7 +829,7 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 		with Player
 		{
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
-			altUltra = true;
+			// altUltra = true;
 			ultra_name[76] = "THE ULTIMATE GAMBLE"
 		    ultra_text[76] = "50% CHANCE TO DIE OR TO GET#TWO RANDOM ULTRA MUTATIONS#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
 		    ultra_tips[76] = "that went well!"

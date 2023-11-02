@@ -63,3 +63,5 @@ if UberCont.normalGameSpeed == 60
 	as *= 0.5;
 	curseSpeed *= 0.5;
 }
+if instance_exists(Wall)
+	alarm[2] = 5;

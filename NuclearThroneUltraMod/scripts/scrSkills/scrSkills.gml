@@ -1,5 +1,5 @@
 function scrSkills() {
-	maxskill = 40;
+	maxskill = 41;
 
 
 	dir = 0
@@ -24,7 +24,7 @@ function scrSkills() {
 		}
 	}
 	skill_name[0] = "HEAVY HEART"
-	skill_text[0] = "+50% WEAPON DROPRATE#EVERY ENEMY HAS A +1% CHANCE#TO DROP AN ADDITIONAL WEAPON##DROPPED WEAPONS FIRE AT ENEMIES"
+	skill_text[0] = "+50% <w>WEAPON DROPRATE<w>#EVERY ENEMY HAS A +1% CHANCE#TO DROP AN <w>ADDITIONAL WEAPON<w>##DROPPED WEAPONS <w>FIRE AT ENEMIES<w>"
 	skill_msnd[0] = sndMutHeavyHeart
 	skill_tips[0] = "guns got guns"
 	skill_bons[0] = "+10% WEAPON DROPRATE";
@@ -32,17 +32,17 @@ function scrSkills() {
 	skill_name[1] = "RHINO SKIN"
 	if !UberCont.useSeed && random(200) < 1
 		skill_name[1] = "JUGGERNOG";
-	skill_text[1] = "+4 MAX HP"
+	skill_text[1] = "+4 <r>MAX HP<r>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
-		skill_text[1] = "+4 MAX ARMOUR"
+		skill_text[1] = "+4 <gb>MAX ARMOUR<gb>"
 	}
 	skill_tips[1] = "thick skin"
 	skill_msnd[1] =  sndMutRhinoSkin
 	skill_bons[1] = "+1 MAX HP";
 
 	skill_name[2] = "EXTRA FEET"
-	skill_text[2] = "MORE SPEED,#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES#DROP RESOURCES#CAN'T BE DISPLACES BY ENEMIES"//"MORE SPEED,#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES#DROP A WEAPON/ITEM & ALWAYS DROP RADS"
+	skill_text[2] = "MORE <w>SPEED<w>,#WALK NORMAL ON ALL <w>TERRAIN<w>#CLOSE <w>DODGES<w> SOMETIMES#DROP <y>RES<y><g>OUR<g><r>CES<r>#CAN'T BE <w>DISPLACES<w> BY ENEMIES"//"MORE SPEED,#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES#DROP A WEAPON/ITEM & ALWAYS DROP RADS"
 	skill_tips[2] = choose("run forever","run forever","run forever","you can't be displaced#when you have extra feet");
 	skill_msnd[2] =  sndMutExtraFeet
 	skill_bons[2] = "SLIGHTLY MORE SPEED#+1 RAD ON DODGE";
@@ -59,24 +59,24 @@ function scrSkills() {
 				skill_name[2] = "EXTRA FINGERS"
 			if Player.race == 1
 			{
-				skill_text[2] = "FASTER ROLL#MORE WALK SPEED#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES DROP RESOURCES#CAN'T BE DISPLACES BY ENEMIES"
+				skill_text[2] = "FASTER <w>ROLL<w>#MORE WALK <w>SPEED<w>#WALK NORMAL ON ALL <w>TERRAIN<w>#CLOSE <w>DODGES<w> SOMETIMES DROP <y>RES<y><g>OUR<g><r>CES<r>#CAN'T BE <w>DISPLACES<w> BY ENEMIES"
 			}
 			else if Player.race == 13
 			{
 			
-				skill_text[2] = "FASTER CHARGE#MORE CHARGE CONTROL#MORE WALK SPEED,#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES DROP RESOURCES#CAN'T BE DISPLACES BY ENEMIES"
+				skill_text[2] = "FASTER <pi>CHARGE<pi>#MORE <pi>CHARGE<pi> <w>CONTROL<w>#MORE WALK <w>SPEED<w>,#WALK NORMAL ON ALL <w>TERRAIN<w>#CLOSE <w>DODGES<w> SOMETIMES DROP <y>RES<y><g>OUR<g><r>CES<r>#CAN'T BE <w>DISPLACES<w> BY ENEMIES"
 			}
 			else
 			{
 				if random(1000)<1
-					skill_text[2] = "BE FAST#YOU CAN'T BE SUCKED";
+					skill_text[2] = "BE <w>FAST<w>#YOU CAN'T BE <pi>SUCKED<pi>";
 			}
 		}
 	}
 	
 
 	skill_name[3] = "PLUTONIUM HUNGER"
-	skill_text[3] = "STRONGER ATTRACT POWER"
+	skill_text[3] = "STRONGER <g>ATTRACT<g> POWER"
 	skill_tips[3] = "need those rads"
 	skill_msnd[3] =  sndMutPluto
 	skill_bons[3] = "+10% RANGE";
@@ -87,7 +87,7 @@ function scrSkills() {
 	}
 
 	skill_name[4] = "RABBIT PAW"
-	skill_text[4] = "35% MORE AMMO AND HEALTH DROPS#5% MORE WEAPONDROPS"
+	skill_text[4] = "35% MORE <y>AMMO<y> AND <r>HEALTH<r> DROPS#5% MORE <w>WEAPONDROPS<w>"
 	skill_tips[4] = "feeling lucky"
 	skill_msnd[4] =  sndMutRabbitPaw
 	skill_bons[4] = "+5% AMMO AND HEALTH DROPS";
@@ -109,40 +109,33 @@ function scrSkills() {
 
 
 	skill_name[6] = "LUCKY SHOT"
-	skill_text[6] = "21% CHANCE KILLS REGENERATE AMMO"
+	skill_text[6] = "21% CHANCE KILLS REGENERATE <y>AMMO<y>"
 	skill_tips[6] = "ammo everywhere"
 	skill_msnd[6] =  sndMutLuckyShot
 	skill_bons[6] = "+2% CHANCE";
 	
 	
 	skill_name[7] = "BLOODLUST"
-	skill_text[7] = "7.7% CHANCE KILLS REGENERATE HP#BOSS KILLS ALWAYS HEAL"
+	skill_text[7] = "7.7% CHANCE KILLS REGENERATE <r>HP<r>#BOSS KILLS ALWAYS <r>HEAL<r>"
 	if scrIsHardMode()//HARD MODE
-		skill_text[7] = "7.2% CHANCE KILLS REGENERATE HP#BOSS KILLS ALWAYS HEAL"
+		skill_text[7] = "7.2% CHANCE KILLS REGENERATE <r>HP<r>#BOSS KILLS ALWAYS <r>HEAL<r>"
 	skill_tips[7] = "drink blood"
 	skill_msnd[7] =  sndMutBloodlust
 	skill_bons[7] = "+0.2% CHANCE";
 
 
 	skill_name[8] = "GAMMA GUTS"
+	skill_text[8] = "<w>ENEMIES<w> TOUCHING YOU TAKE DAMAGE#DONT TAKE DAMAGE FROM#ENEMIES THAT YOU KILL USING <g>GAMMA GUTS<g>#YOU TAKE 50% LESS <w>ENEMY CONTACT DAMAGE<w>"
 	if instance_exists(Player)
 	{
 		if Player.race == 13//Sheep
 		{
-			skill_text[8] = "CHARGE DEALS MORE DAMAGE#ENEMIES TOUCHING YOU TAKE DAMAGE#DONT TAKE DAMAGE FROM#ENEMIES THAT YOU KILL USING GAMMA GUTS#YOU TAKE 50% LESS ENEMY CONTACT DAMAGE"
+			skill_text[8] = "<pi>CHARGE<pi> DEALS MORE DAMAGE#<w>ENEMIES<w> TOUCHING YOU TAKE DAMAGE#DONT TAKE DAMAGE FROM#ENEMIES THAT YOU KILL USING <g>GAMMA GUTS<g>#YOU TAKE 50% LESS <w>ENEMY CONTACT DAMAGE<w>"
 		}
 		else if Player.race == 2//CRYSTAL
 		{
-			skill_text[8] = "ENEMIES TOUCHING YOU OR YOUR SHIELD#TAKE DAMAGE#DONT TAKE DAMAGE FROM#ENEMIES THAT YOU KILL USING GAMMA GUTS#YOU TAKE 50% LESS ENEMY CONTACT DAMAGE"
+			skill_text[8] = "<w>ENEMIES<w> TOUCHING YOU OR YOUR <p>SHIELD<p>#TAKE DAMAGE#DONT TAKE DAMAGE FROM#ENEMIES THAT YOU KILL USING <g>GAMMA GUTS<g>#YOU TAKE 50% LESS <w>ENEMY CONTACT DAMAGE<w>"
 		}
-		else
-		{
-			skill_text[8] = "ENEMIES TOUCHING YOU TAKE DAMAGE#DONT TAKE DAMAGE FROM#ENEMIES THAT YOU KILL USING GAMMA GUTS#YOU TAKE 50% LESS ENEMY CONTACT DAMAGE"
-		}
-	}
-	else
-	{
-		skill_text[8] = "ENEMIES TOUCHING YOU TAKE DAMAGE#DONT TAKE DAMAGE FROM#ENEMIES THAT YOU KILL USING GAMMA GUTS#YOU TAKE 50% LESS ENEMY CONTACT DAMAGE"
 	}
 	skill_tips[8] = "skin glows"
 	skill_msnd[8] =  sndMutGammaGuts
@@ -152,7 +145,7 @@ function scrSkills() {
 	if !UberCont.useSeed && random(200) < 1
 	{
 	skill_name[9] = "SECOND TUMMY"
-	skill_text[9] = "OMNOMNOMNOM"
+	skill_text[9] = "<r>OMNOMNOMNOM<r>"
 	skill_tips[9] = "omnomnomnom"
 	skill_msnd[9] =  sndMutSecondStomache
 	skill_bons[9] = "OMNOMNOMNOM";
@@ -160,9 +153,9 @@ function scrSkills() {
 	else
 	{
 		skill_name[9] = "SECOND STOMACH"
-		skill_text[9] = "DOUBLE HP FROM MEDKITS & MEDCHESTS#DOUBLE HP FROM MEDCHESTS,#ALKALINE SALIVA#AND ABSORBING PORES"
+		skill_text[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#DOUBLE <r>HP<r> FROM MEDCHESTS,#<g>ALKALINE SALIVA<g>#AND <g>ABSORBING PORES<g>"
 		if scrIsHardMode() //HARD MODE
-			skill_text[9] = "3 HP FROM MEDKITS#DOUBLE HP FROM MEDCHESTS,#ALKALINE SALIVA#AND ABSORBING PORES"
+			skill_text[9] = "3 <r>HP<r> FROM MEDKITS#DOUBLE <r>HP<r> FROM MEDCHESTS,#<g>ALKALINE SALIVA<g>#AND <g>ABSORBING PORES<g>"
 		skill_tips[9] = "stomach rumbles"
 		if isHand
 		{
@@ -174,7 +167,7 @@ function scrSkills() {
 	}
 
 	skill_name[10] = "BACK MUSCLE"
-	skill_text[10] = "HIGHER AMMO MAX"
+	skill_text[10] = "HIGHER <y>AMMO MAX<y>"
 	skill_tips[10] = "back muscle works like mini rabbit paw"
 	skill_msnd[10] =  sndMutBackMuscle
 	skill_bons[10] = "+10% AMMO MAX";
@@ -182,20 +175,20 @@ function scrSkills() {
 	skill_name[11] = "SCARIER FACE"
 	if isHand
 		skill_name[11] = "SCARIER NAIL"
-	skill_text[11] = "20% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS"
+	skill_text[11] = "20% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS"
 	skill_tips[11] = "mirrors will break"
 	skill_msnd[11] =  sndMutScarierFace
 	skill_bons[11] = "+2% LESS ENEMY HP";
 
 	skill_name[12] = "EUPHORIA"
-	skill_text[12] = "SLOWER ENEMY BULLETS#WHEN YOU GET HIT YOU GAIN#INVINCIBILITY FOR A SHORT MOMENT"
+	skill_text[12] = "SLOWER ENEMY BULLETS#WHEN YOU GET HIT YOU GAIN#<aq>INVINCIBILITY<aq> FOR A SHORT MOMENT"
 	skill_tips[12] = "time passes slowly"
 	skill_msnd[12] =  sndMutEuphoria
 	skill_bons[12] = "+10% IMMUNE TIME";
 
 
 	skill_name[13] = "LONG ARMS"
-	skill_text[13] = "MORE MELEE RANGE AND SIZE"
+	skill_text[13] = "MORE <w>MELEE<w> RANGE AND SIZE"
 	skill_tips[13] = "more reach"
 	skill_msnd[13] =  sndMutLongArms
 	skill_bons[13] = "+20% RANGE";
@@ -203,7 +196,7 @@ function scrSkills() {
 		skill_bons[13] = "+60% RANGE +20% SIZE +20% WALL PIERCE";
 		
 	skill_name[14] = "BOILING VEINS"
-	skill_text[14] = "NO DAMAGE FROM#EXPLOSIONS, FIRE AND FROST#WHEN UNDER 5HP"
+	skill_text[14] = "NO DAMAGE FROM#<w>EXPLOSIONS<w>, <w>FIRE<w> AND <w>FROST<w>#WHEN UNDER 5<r>HP<r>"
 	skill_tips[14] = "temperature is rising";
 	skill_msnd[14] =  sndMutBoilingVeins
 	skill_bons[14] = "UNDER 6HP";
@@ -214,7 +207,7 @@ function scrSkills() {
 	skill_name[15] = "SHOTGUN SHOULDERS"
 	if isHand
 		skill_name[15] = "SHOTGUN KNUCKLES"
-	skill_text[15] = "ALL YOUR BOUNCING PROJECTILES#BOUNCE FURTHER#SHELLS CAN'T BE DEFLECTED BY ENEMIES"//#BOUNCER BULLETS CAN BOUNCE#ONE ADDITIONAL TIME" effect is minor no need to tell?
+	skill_text[15] = "ALL YOUR <w>BOUNCING PROJECTILES<w>#BOUNCE FURTHER#<w>SHELLS<w> CAN'T BE <w>DEFLECTED<w> BY ENEMIES"//#BOUNCER BULLETS CAN BOUNCE#ONE ADDITIONAL TIME" effect is minor no need to tell?
 	skill_tips[15] = choose("shells are friends","shotgun shoulders\nextends close range damage\nfrom shotguns","shotgun shoulders\nincreases bouncer bullets bounces by 1","shotgun shoulders:\nincreases swordgun bounces")
 	skill_msnd[15] =  sndMutShotGunShoulders
 	skill_bons[15] = "+20% WALLBOUNCE";
@@ -222,7 +215,7 @@ function scrSkills() {
 		skill_bons[15] = "+20% CLOSE DAMAGE DURATION +75% WALLBOUNCE";
 
 	skill_name[16] = "RECYCLE GLAND"
-	skill_text[16] = "65% OF HIT BULLETS BECOME AMMO#BULLETS CAN'T BE DEFLECTED BY ENEMIES"
+	skill_text[16] = "65% OF HIT <w>BULLETS<w> BECOME <y>AMMO<y>#<w>BULLETS<w> CAN'T BE <w>DEFLECTED<w> BY ENEMIES"
 	skill_tips[16] = "no need to aim"
 	skill_msnd[16] =  sndMutRecycleGland
 	skill_bons[16] = "+5% CHANCE";
@@ -230,7 +223,7 @@ function scrSkills() {
 		skill_bons[16] = "+10% CHANCE";
 
 	skill_name[17] = "ENERGY BRAIN"
-	skill_text[17] = "ENERGY WEAPONS DEAL MORE DAMAGE"
+	skill_text[17] = "<g>ENERGY<g> WEAPONS DEAL MORE DAMAGE"
 	skill_tips[17] = "neurons everywhere"
 	skill_msnd[17] =  sndMutLaserBrain
 	skill_bons[17] = "+10% ENERGY DAMAGE";
@@ -240,14 +233,14 @@ function scrSkills() {
 	if UberCont.lastwishused=false
 	{
 	skill_name[18] = "LAST WISH"
-	skill_text[18] = "PREVENT LETHAL DAMAGE#AND RESET HEALTH TO MAX# ONCE PER LOOP##GET FULL HEALTH AND SOME AMMO"
+	skill_text[18] = "<aq>PREVENT<aq> LETHAL DAMAGE#AND RESET <r>HEALTH<r> TO MAX# ONCE PER LOOP##GET FULL <r>HEALTH<r> AND SOME <y>AMMO<y>"
 	skill_tips[18] = "listen"
 	skill_msnd[18] =  sndMutLastWish
 	}
 	else
 	{
 	skill_name[18] = "LAST WISH"
-	skill_text[18] = "PREVENT LETHAL DAMAGE#AND RESET HEALTH TO MAX# ONCE PER LOOP##GET FULL HEALTH AND SOME AMMO##REGAIN ONE PART OF YOUR LIFE"
+	skill_text[18] = "<aq>PREVENT<aq> <w>LETHAL DAMAGE<w>#AND RESET HEALTH TO MAX# ONCE PER LOOP##GET FULL <r>HEALTH<r> AND SOME <y>AMMO<y>##REGAIN ONE PART OF YOUR <w>LIFE<w>"
 	skill_tips[18] = "listen"
 	skill_msnd[18] =  sndMutLastWish
 	}
@@ -255,21 +248,21 @@ function scrSkills() {
 
 	skill_name[19] = "EAGLE EYES"
 	if random(500) < 1
-		skill_text[19] = "BETTER ACCURACY#SMALL AIM ASSIST/HOMING#SEE CONTENTS OF WEAPON CHESTS#SEE FURTHER#SHOW WEAPON TIER#SHOW DAMAGE INDICATORS#INCREASE LUCK#MORE DAMAGE#FASTER FIRE RATE#INSTANTLY LOOP#INCREASE MAX LEVEL BY 5#MORE RAD DROPS#EVERY KILL OVERHEALS FOR 6HP#GET TWO ULTRA MUTATIONS#SIT ON THE THRONE#EVERY ENEMY MORPHS INTO A CHICKEN#THE CHICKEN WILL DROP#A HIGH TIER WEAPON#GET QUAD SPC#IT COSTS 2 AMMO#AIRHORN.WAV EVERYTIME YOU SHOOT"
+		skill_text[19] = "BETTER <w>ACCURACY<w>#SMALL <w>AIM ASSIST<w>/<w>HOMING<w>#SEE CONTENTS OF WEAPON CHESTS#SEE FURTHER#SHOW WEAPON TIER#SHOW DAMAGE INDICATORS#INCREASE <aq>LU<aq><g>CK<g>#MORE DAMAGE#FASTER <w>FIRE RATE<w>#INSTANTLY <w>LOOP<w>#INCREASE MAX <g>LEVEL<g> BY 5#MORE <g>RAD<g> DROPS#EVERY KILL <r>OVERHEALS<r> FOR 6<r>HP<r>#GET TWO <g>ULTRA MUTATIONS<g>#SIT ON THE <p>THRONE<p>#EVERY ENEMY MORPHS INTO A CHICKEN#THE <w>CHICKEN<w> WILL DROP#A HIGH TIER WEAPON#GET <b>QUAD SPC<b>#IT COSTS 2 AMMO#<pi>AIRHORN.WAV<pi> EVERYTIME YOU SHOOT"
 	else
-		skill_text[19] = "BETTER ACCURACY#SMALL AIM ASSIST/HOMING#SEE FURTHER";
+		skill_text[19] = "BETTER <w>ACCURACY<w>#SMALL <w>AIM ASSIST<w>/<w>HOMING<w>#SEE FURTHER";
 	skill_tips[19] = "every shot connects"
 	skill_msnd[19] =  sndMutEagleEyes
 	skill_bons[19] = "+4% ACCURACY +5% HOMING";
 
 	skill_name[20] = "IMPACT WRISTS"
-	skill_text[20] = "CORPSES FLY & HIT HARDER#FAST CORPSES CAN DESTROY WALLS"
+	skill_text[20] = "<w>CORPSES<w> FLY & HIT HARDER#FAST CORPSES CAN DESTROY WALLS"
 	skill_tips[20] = "see them fly"
 	skill_msnd[20] =  sndMutImpactWrists
 	skill_bons[20] = "+15% CORPSE SPEED";
 
 	skill_name[21] = "BOLT MARROW"
-	skill_text[21] = "HOMING BOLTS#BETTER BOLT PIERCE"
+	skill_text[21] = "HOMING <w>BOLTS<w>#BETTER <w>BOLT<w> PIERCE"
 	skill_tips[21] = "bolts everywhere"
 	skill_msnd[21] =  sndMutBoltMarrow
 	skill_bons[21] = "+15% HOMING";
@@ -283,16 +276,16 @@ function scrSkills() {
 	}
 	else
 	{
-		skill_text[22] = "WHENEVER YOU TAKE DAMAGE#DEAL DAMAGE TO ALL ENEMIES ON SCREEN#RELOAD YOUR WEAPONS#AS HP GETS LOWER"
+		skill_text[22] = "WHENEVER YOU TAKE DAMAGE#DEAL DAMAGE TO ALL ENEMIES ON SCREEN#<w>RELOAD<w> YOUR WEAPONS#AS <r>HP<r> GETS LOWER"
 	}
 	skill_tips[22] = "ultimate low health hybrid"
 	skill_msnd[22] =  sndMutSharpStress
-	skill_bons[22] = "+7% RELOAD SPEED +15% DAMAGE";
+	skill_bons[22] = "+5% RELOAD SPEED +15% DAMAGE";
 
 	skill_name[23] = "OPEN MIND"
-	skill_text[23] = "EXTRA CHESTS SPAWN#SEE CONTENTS OF WEAPON CHESTS##OPENING CHESTS#FULLY RELOADS YOUR WEAPONS"
+	skill_text[23] = "EXTRA <w>CHESTS<w> SPAWN#SEE CONTENTS OF WEAPON <w>CHESTS<w>##OPENING <w>CHESTS<w>#FULLY <w>RELOADS<w> YOUR WEAPONS"
 	if canCheckUltra && Player.ultra_got[1]
-		skill_text[23] = "EXTRA CHESTS SPAWN#SEE CONTENTS OF WEAPON CHESTS#INCREASE CONFISCATE CHANCE#BY 25%##OPENING CHESTS#FULLY RELOADS YOUR WEAPONS"
+		skill_text[23] = "EXTRA <w>CHESTS<w> SPAWN#SEE CONTENTS OF WEAPON <w>CHESTS<w>#INCREASE <g>CONFISCATE<g> CHANCE#BY 25%##OPENING <w>CHESTS<w>#FULLY <w>RELOADS<w> YOUR WEAPONS"
 	skill_tips[23] = "open mind also increases rad canisters"
 	skill_msnd[23] =  sndMutOpenMind
 	skill_bons[23] = "+20% CHANCE FOR AN#EXTRA WEAPON CHEST";
@@ -301,7 +294,7 @@ function scrSkills() {
 	skill_name[24] = "TRIGGER PRINGELS"
 	else
 	skill_name[24] = "TRIGGER FINGERS"
-	skill_text[24] = "EACH KILL#RELOADS YOUR WEAPONS#BY 40% OF REMAINING RELOAD"
+	skill_text[24] = "EACH KILL#<w>RELOADS<w> YOUR WEAPONS#BY 40% OF REMAINING <w>RELOAD<w>"
 	skill_tips[24] = "keep killing"
 	skill_msnd[24] =  sndMutTriggerfingers
 	skill_bons[24] = "+5% RELOAD";
@@ -310,43 +303,43 @@ function scrSkills() {
 		skill_name[25] = "BELIEVE!"
 	else
 		skill_name[25] = "STRONG SPIRIT"
-	skill_text[25] = "DENIES LETHAL BLOWS ONCE PER AREA#RECHARGES WHEN AT FULL HEALTH"
+	skill_text[25] = "<aq>PREVENT<aq> <w>LETHAL DAMAGE<w> ONCE PER AREA#RECHARGES WHEN AT FULL <r>HP<r>"
 	skill_tips[25] = "denied"
 	skill_msnd[25] =  sndMutStrongSpirit
-	skill_bons[25] = "RECHARGES WHEN AT 75% HEALTH";
+	skill_bons[25] = "RECHARGES WHEN AT 75% HP";
 
 	skill_name[26] = "HAMMER HEAD"
-	skill_text[26] = "PUSH THROUGH A LIMITED NUMBER OF WALLS#FIND RESOURCES IN WALLS#STRONGER WALL DEBRIS##UNUSED WALLBREAKS#GIVE RESOURCES NEXT AREA"
+	skill_text[26] = "PUSH THROUGH A LIMITED NUMBER OF <w>WALLS<w>#FIND <y>RES<y><g>OUR<g><r>CES<r> IN WALLS#STRONGER <w>WALL DEBRIS<w>##UNUSED WALLBREAKS#GIVE <y>RES<y><g>OUR<g><r>CES<r> NEXT AREA"
 	skill_tips[26] = "hello welcome to my#minecraft let's play"
 	skill_msnd[26] =  sndMutHammerHead
 	skill_bons[26] = "PUSH THROUGH 5 MORE WALLS";
 
 	skill_name[27] = "PATIENCE"
-	skill_text[27] = "CHOOSE A MUTATION NEXT AREA"
+	skill_text[27] = "CHOOSE A <g>MUTATION<g> NEXT AREA"
 	skill_tips[27] = "wait"
 	skill_msnd[27] =  sndMutPatience
 	skill_bons[27] = "CHOOSE RIGHT AWAY";
 
 
 	skill_name[28] = "RAGE"
-	skill_text[28] = "EACH KILL INCREASES:#DROPRATE, ALL WEAPON RELOAD SPEED#AND DECREASES ACCURACY SLIGHTLY##LOSE 50 RAGE EACH TIME YOU GET HIT"
+	skill_text[28] = "EACH <w>KILL<w> INCREASES:#<w>DROPRATE<w>, ALL WEAPON <w>RELOAD SPEED<w>#AND DECREASES <w>ACCURACY<w> SLIGHTLY##LOSE 50 <r>RAGE<r> EACH TIME YOU GET HIT"
 	skill_tips[28] = "dodge to kill"
 	skill_msnd[28] =  sndMutRage
 	skill_bons[28] = "GAIN 15% MORE RAGE";
 	
 
 	skill_name[29] = "HYPERSOMNIA"
-	skill_text[29] = "ENEMIES DON'T ATTACK YOU#FOR A COUPLE OF SECONDS#AT THE START OF EACH AREA"
+	skill_text[29] = "<w>ENEMIES<w> DON'T ATTACK YOU#FOR A COUPLE OF SECONDS#AT THE START OF EACH AREA"
 	if instance_exists(Player) && (Player.race == 13)
-		skill_text[29] = "ENEMIES DON'T ATTACK YOU#FOR A COUPLE OF SECONDS#AFTER YOU ENGAGE FIRE"
+		skill_text[29] = "<w>ENEMIES<w> DON'T ATTACK YOU#FOR A COUPLE OF SECONDS#AFTER YOU ENGAGE FIRE"
 	if scrIsGamemode(25)
-		skill_text[29] = "ENEMIES DON'T ATTACK YOU#FOR A COUPLE OF SECONDS#WHEN THEY SPAWN IN"
+		skill_text[29] = "<w>ENEMIES<w> DON'T ATTACK YOU#FOR A COUPLE OF SECONDS#WHEN THEY SPAWN IN"
 	skill_tips[29] = "sleep"
 	skill_msnd[29] =  sndHypersomnia
 	skill_bons[29] = "+2 SLEEP SECONDS";
 
 	skill_name[30] = "POWER CRAVING"
-	skill_text[30] = "EVERY WEAPON HAS ONE RANDOM WEAPON MOD#INCREASE MOD MAX BY ONE#INCREASE EFFECTIVENESS OF WEAPON MODS#MORE WEAPON MODS IN CROWNVAULT##INCREASE INVERTED PORTAL CHANCE +10%"
+	skill_text[30] = "EVERY WEAPON HAS ONE RANDOM <w>WEAPON MOD<w>#INCREASE <w>MOD MAX<w> BY ONE#INCREASE EFFECTIVENESS OF <w>WEAPON MODS<w>#MORE <w>WEAPON MODS<w> IN <g>CROWNVAULT<g>##INCREASE <w>INVERTED<w> PORTAL CHANCE +10%"
 	skill_tips[30] = "maximum power"
 	skill_msnd[30] =  sndPowerCraving
 	skill_bons[30] = "-10% MOD DELAY";
@@ -355,23 +348,23 @@ function scrSkills() {
 	skill_name[31] = "TURTLE SHELL"
 	else
 	skill_name[31] = "TOUGH SHELL"
-	skill_text[31] = "EVERYTHING THAT DEALS#MORE THAN 1 DAMAGE TO YOU#DEALS ONE LESS DAMAGE"
+	skill_text[31] = "EVERYTHING THAT DEALS#MORE THAN 1 <w>DAMAGE<w> TO YOU#DEALS ONE LESS <w>DAMAGE<w>"
 	skill_tips[31] = "damage reduction!"
 	skill_msnd[31] =  sndToughShell
 	skill_bons[31] = "EVERYTHING THAT DEALS#MORE THAN 4 DAMAGE TO YOU#DEALS TWO LESS DAMAGE";
 	
 	skill_name[32] = "ALKALINE SALIVA"
-	skill_text[32] = "FIRST HIT YOU TAKE IN AN AREA#HEALS YOU INSTEAD (1HP)#(2HP) IF YOU HAVE SECOND STOMACH"
+	skill_text[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD (1<r>HP<r>)#(2HP) IF YOU HAVE SECOND STOMACH"
 	skill_tips[32] = "alkaline saliva prevents lethal damage if thats the first hit you take"
 	skill_msnd[32] =  sndMutAlkalineSaliva
 	skill_bons[32] = "+1 HP HEALING";
 	
 	
 	skill_name[33] = "GLASS ARM CANNON"//Metroid reference I guess
-	skill_text[33] = "27% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-2 MAX HP"
+	skill_text[33] = "27% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-2 <r>MAX HP<r>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
-		skill_text[33] = "27% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-2 MAX ARMOUR"
+		skill_text[33] = "27% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-2 <gb>MAX ARMOUR<gb>"
 	}
 	skill_tips[33] = "fragile"
 	skill_msnd[33] =  sndMutGlassArmCannon
@@ -379,12 +372,12 @@ function scrSkills() {
 	{
 		if (Player.race == 4 && Player.maxhealth <= 2 && UberCont.ctot_skill_taken[33] <= 0)
 		{
-			skill_text[33] = "27% LESS ENEMY HP#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-2 MAX HP#TAKING THIS WONT KILL YOU <3"	
+			skill_text[33] = "27% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-2 <r>MAX HP<r>#<pi>TAKING THIS WONT KILL YOU<pi> <r><3<r>"	
 		}
 	}
 	skill_bons[33] = "-1 MAX HP INSTEAD";
 	
-	
+	/* OLD
 	skill_name[34] = "FLEXIBLE ELBOWS"
 	skill_text[34] = "RELOAD YOUR SECONDARY AT 20% SPEED##IF YOUR SECONDARY IS RELOADED:#INCREASE PRIMARY FIRERATE BY 30%##IF NOT:#EVERY ENEMY HAS A 10% CHANCE#TO DROP AN ADDITIONAL ITEM"
 	if instance_exists(Player) && Player.cwep != 0
@@ -392,55 +385,77 @@ function scrSkills() {
 	skill_tips[34] = "looting and shooting"
 	skill_msnd[34] =  sndMutFlexibleElbows
 	skill_bons[34] = "+5% SECONDARY RELOAD#+2% DROP CHANCE";
+	*/
+	skill_name[34] = "FLEXIBLE ELBOWS"
+	skill_text[34] = "+10% <w>RELOAD SPEED<w> ON ALL WEAPONS##WHENEVER YOU <w>RELOAD<w> A WEAPON#ROLL FOR A CHANCE#TO <w>SLAP<w> <y>RES<y><g>OUR<g><r>CES<r>#OUT OF A NEARBY ENEMY#CHANCE DEPENDS ON BASE RELOAD TIME"
+	skill_tips[34] = "looting and shooting"
+	skill_msnd[34] =  sndMutFlexibleElbows
+	skill_bons[34] = "+4% RELOAD SPEED";
 	
 	
 	skill_name[35] = "PUFFY CHEEKS"
-	skill_text[35] = "YOU CAN PREEMPTIVELY RELOAD#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 60% RELOAD SPEED##+10% SECONDARY RELOAD SPEED"
+	skill_text[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 60% <w>RELOAD SPEED<w>##+10% SECONDARY <w>RELOAD SPEED<w>"
 	if instance_exists(Player) && Player.cwep != 0
-		skill_text[35] = "YOU CAN PREEMPTIVELY RELOAD#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 60% RELOAD SPEED##+10% OFFHAND RELOAD SPEED"
+		skill_text[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 60% <w>RELOAD SPEED<w>##+10% <w>OFFHAND RELOAD SPEED<w>"
 	skill_tips[35] = "big round cheeks"
 	skill_msnd[35] =  sndMutPuffyCheeks
 	skill_bons[35] = "+10% EXTRA SHOT LOAD SPEED";
 	
 	skill_name[36] = "ABSORBING PORES"
 	if scrIsHardMode()
-		skill_text[36] = "AMMO AND HEALTH DROPS GIVE RADS##EVERY 140TH RAD HEALS 1HP#(HEALING DOUBLED BY SECOND STOMACH)##RADS RELOAD YOUR WEAPONS"
+		skill_text[36] = "<y>AMMO<y> AND <r>HP<r> DROPS GIVE <g>RADS<g>##EVERY 140TH <g>RAD<g> <r>HEALS<r> 1<r>HP<r>#(HEALING DOUBLED BY SECOND STOMACH)##<g>RADS<g> <w>RELOAD<w> YOUR WEAPONS"
 	else
-		skill_text[36] = "AMMO AND HEALTH DROPS GIVE RADS##EVERY 100TH RAD HEALS 1HP#(HEALING DOUBLED BY SECOND STOMACH)##RADS RELOAD YOUR WEAPONS"
+		skill_text[36] = "<y>AMMO<y> AND <r>HP<r> DROPS GIVE <g>RADS<g>##EVERY 100TH <g>RAD<g> <r>HEALS<r> 1<r>HP<r>#(HEALING DOUBLED BY SECOND STOMACH)##<g>RADS<g> <w>RELOAD<w> YOUR WEAPONS"
 	skill_tips[36] = "osmosis"
 	skill_msnd[36] =  sndMutAbsorbingPores
 	skill_bons[36] = "-5 RADS REQUIRED"
 	
 	
 	skill_name[37] = "ECSTACTIC FISTS"//REJUVINATED SKIN
-	skill_text[37] = "ALL DAMAGE TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR HEALTH IS#+30% AT MAX HP"
+	skill_text[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <r>HEALTH<r> IS#+30% AT <r>MAX HP<r>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
-		skill_text[37] = "ALL DAMAGE TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR ARMOUR IS#+30% AT MAX ARMOUR"
+		skill_text[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <gb>ARMOUR<gb> IS#+30% AT <gb>MAX ARMOUR<gb>"
 	}
 	skill_tips[37] = "glock those gun"
 	skill_msnd[37] =  sndMutEcstaticFists
 	skill_bons[37] = "+5% DAMAGE INCREASE"
 	
 	skill_name[38] = "ENRICHED METABOLISM"
-	skill_text[38] = "NEGATE EVERY FOURTH HIT YOU TAKE#AND GET AMMO INSTEAD"
+	skill_text[38] = "<aq>NEGATE<aq> EVERY FOURTH HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD"
 	skill_tips[38] = "delicious"
 	skill_msnd[38] =  sndMutEnrichedMetabolism
 	skill_bons[38] = "+25% AMMO"
 	
 	skill_name[39] = "ALIEN INTESTINES"
-	skill_text[39] = "WHENEVER YOU TRY TO USE YOUR ACTIVE#TENTACLES COME OUT OF YOUR BODY!##MORE POWERFUL THE LONGER#YOU WAIT BETWEEN USES"
+	skill_text[39] = "WHENEVER YOU TRY TO USE YOUR <g>ACTIVE<g>#<p>TENTACLES<p> COME OUT OF YOUR BODY!##MORE POWERFUL THE LONGER#YOU WAIT BETWEEN USES"
 	skill_tips[39] = "spatial anomaly"
 	skill_msnd[39] =  sndMutAlienIntestines
 	skill_bons[39] = "CHARGES FASTER"
 	
 	skill_name[40] = "BOUNCY FAT"
-	skill_text[40] = "IF YOU HAVE AMMO AND TAKE LETHAL DAMAGE#PREVENT IT AND LOSE#50% OF BASE TOTAL AMMO"
+	skill_text[40] = "IF YOU HAVE <y>AMMO<y> AND TAKE LETHAL DAMAGE#<aq>PREVENT<aq> IT AND LOSE#50% OF BASE TOTAL <y>AMMO<y>"
 	skill_tips[40] = "layer of fat"
 	skill_bons[40] = "-5% AMMO COST"
 	skill_msnd[40] =  sndMutBouncyFat;
+	
+	skill_name[41] = "NERVES OF STEEL"
+	skill_text[41] = "REPLACE 3 <r>HEALTH<r> WITH 1 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#REDUCE TOTAL <w>RELOAD TIME<w> BY 35%#<w>ENEMIES<w> HAVE A CHANCE TO DROP <gb>ARMOUR<gb>"
+	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
+	{
+		skill_text[41] = "LOSE 2 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#REDUCE TOTAL <w>RELOAD TIME<w> BY 35%#<w>ENEMIES<w> HAVE A SMALL CHANCE TO DROP <gb>ARMOUR<gb>"
+	}
+	skill_tips[41] = "conduit of power"
+	skill_bons[41] = "-2 HEALTH INSTEAD"
+	skill_msnd[41] =  sndMutNervesOfSteel;
 		
 	/*
+		NERVES OF STEEL / ADRENALINE
+		REPLACE 3 HEALTH WITH 1 ARMOUR
+		
+		WHENEVER YOU ARE MISSING ARMOUR
+		REDUCE TOTAL RELOAD TIME BY 20%
+		
 		DAMAGE INCREASING MUTATION (GOOD AS DAMAGE INCREASE OUTSIDE OF FIRERATE INCREASE)
 		SHOOTING A WALL TEMPORARILY INCREASES DAMAGE YOU DEAL (STACKS)
 		DAMAGE IS INCREASED BASED ON YOUR HEALTH. +50% AT MAX HP
@@ -465,10 +480,10 @@ function scrSkills() {
 	skill_msnd[33] =  sndMutThronebutt
 	*/
 	
-	skill_name[41] = "NOTHING"
-	skill_text[41] = "THERE ARE NO MORE MUTATIONS LEFT!"
-	skill_tips[41] = ""
-	skill_msnd[41] =  sndPartyHorn
+	skill_name[42] = "NOTHING"
+	skill_text[42] = "THERE ARE <w>NO MORE<w> <g>MUTATIONS<g> LEFT!"
+	skill_tips[42] = ""
+	skill_msnd[42] =  sndPartyHorn
 
 
 }

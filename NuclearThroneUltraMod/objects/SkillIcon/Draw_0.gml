@@ -29,6 +29,8 @@ draw_set_valign(fa_bottom)
 draw_set_halign(fa_right)
 
 txt2 = string(skill_name[skill])+"#"+string(skill_text[skill])
+var fulltxt = txt2;
+txt2 = scrReplaceAllColourCodes(txt2);
 if UberCont.mouse__x > x-16 and UberCont.mouse__x < x+16 and UberCont.mouse__y > y-20 and UberCont.mouse__y < y+20
 {
 
@@ -51,27 +53,27 @@ draw_set_alpha(1)
 
 // draw_sprite_ext(sprMenuPointer,0,x,drawy-12,1,1,0,c_white,0.8)
 
-draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-13,string_hash_to_newline(string(txt2)))
-draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-13,string_hash_to_newline(string(txt2)))
-draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-14,string_hash_to_newline(string(txt2)))
-draw_set_color(c_silver)
-draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14,string_hash_to_newline(string(txt2)))
+//draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-13,string_hash_to_newline(string(txt2)))
+//draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-13,string_hash_to_newline(string(txt2)))
+//draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-14,string_hash_to_newline(string(txt2)))
+draw_set_color(make_colour_rgb(160,160,160));
+scrDrawTextColours(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14,string(fulltxt))
 draw_set_color(c_white)
 draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14-string_height(string_hash_to_newline(txt2))+string_height(string_hash_to_newline(skill_name[skill])),string_hash_to_newline(string(skill_name[skill])))
 
 if Player.race == 25 && skill_bons[skill] != ""
 {
-	var bonusTxt = skill_bons[skill];
-	drawy += string_height(string_hash_to_newline(bonusTxt));
+	var bonusTxt = string_hash_to_newline(skill_bons[skill]);
+	drawy += string_height(bonusTxt);
 	draw_set_color(c_black)
 	draw_set_alpha(0.8)
-	draw_rectangle(drawx-string_width(string_hash_to_newline(txt2))/2-2,drawy-14-string_height(string_hash_to_newline(bonusTxt)),drawx+string_width(string_hash_to_newline(txt2))/2+2,drawy-10,0)
+	draw_rectangle(drawx-string_width(string_hash_to_newline(txt2))/2-2,drawy-14-string_height(bonusTxt),drawx+string_width(string_hash_to_newline(txt2))/2+2,drawy-10,0)
 	draw_set_alpha(1)
-	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-13,string_hash_to_newline(string(bonusTxt)))
-	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-13,string_hash_to_newline(string(bonusTxt)))
-	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-14,string_hash_to_newline(string(bonusTxt)))
+	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-13,"["+bonusTxt+"]")
+	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-13,"["+bonusTxt+"]")
+	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-14,"["+bonusTxt+"]")
 	draw_set_color(c_lime)
-	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14,string_hash_to_newline(string(bonusTxt)))
+	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14,"["+bonusTxt+"]")
 }
 }
 //draw_text(x,y-32,string(skill)); // just to show the skillnumber

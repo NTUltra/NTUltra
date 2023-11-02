@@ -10,5 +10,5 @@ wkick += 1
 if wkick=0
 sprite_index=spr_idle;
 
-if collision_point(x,y + vspeed*2,WallHitMe,false,false)
+if collision_point(x,y + vspeed*2,WallHitMe,false,false) || y > ystart + 400 || y < ystart - 200
 	vspeed *= -1;

@@ -337,6 +337,8 @@ if crown == 11
 			var wc3 = cwepmod3;
 			var wpu = weaponspickedup;
 			
+			var rngloop = rnglevelloop;
+			
 			var c = [crown];
 			if level > 9
 				hasReachedUltra = true;
@@ -357,6 +359,7 @@ if crown == 11
 
 		with Player//Data to keep
 		{
+			rnglevelloop = rngloop;
 			weaponspickedup = wpu;
 			freeAmmoRound = 1;
 			ultimategamble = true;

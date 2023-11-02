@@ -19,6 +19,10 @@ wepmod1 = Player.wepmod1;
 wepmod2 = Player.wepmod2;
 wepmod3 = Player.wepmod3;
 wepmod4 = Player.wepmod4;
+altFire = true;
+isPermanent = false;
+isPermanentB = false;
+isPermanentC = false;
 nearWall = false;
 //scrRaces()
 //scrSkills()

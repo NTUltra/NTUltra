@@ -1,4 +1,5 @@
 function scrDrop(itemdrop, weapondrop) {
+	var pickup = noone;
 	if weapondrop > 0
 	{
 		if instance_number(WepPickup) > 20
@@ -135,7 +136,8 @@ function scrDrop(itemdrop, weapondrop) {
 	{
 		if random(Player.rogueammomax) > Player.rogueammo && random(180) < min(itemdrop * dropRateBuff, 180)
 		{
-			with instance_create(x,y,RoguePickup)
+			pickup = instance_create(x,y,RoguePickup)
+			with pickup
 			{
 				if (rabbit > 0 && random(1) < rabbit+0.1)
 				{
@@ -188,19 +190,19 @@ function scrDrop(itemdrop, weapondrop) {
 	    {
 		    if ( scrIsCrown(2) && Player.canHeal && random(mh) > h || random(100) < 10) and random(3) < 2 and random(1) <= canHealth
 			{
-				instance_create(x,y,HealthChest)
+				pickup = instance_create(x,y,HealthChest)
 			//return true;
 			}
 		    else if !scrIsCrown(5)
 			{
-				instance_create(x,y,AmmoChest)
+				pickup = instance_create(x,y,AmmoChest)
 			//return true;
 			}
 			//return false;
 	    }
 	    else if ranReroll < ((itemdrop*0.1)+weapondrop*0.75) * confDroprate
 	    {
-			instance_create(x,y,WeaponChest);
+			pickup = instance_create(x,y,WeaponChest);
 			//return true;
 	    }
 		confDropChanceIndex -= 2;
@@ -212,20 +214,43 @@ function scrDrop(itemdrop, weapondrop) {
 		var ran = itemDropChance[itemDropChanceIndex];
 	if itemdrop > 0 && ran < min(itemdrop * (need + dropRateBuff), 100)
 	{//0.3 for each ally Rebel has REBEL ULTRA C?
-		if random(mh) > h and random(3) < 2 and !scrIsCrown(2) and Player.canHeal and random(1) <= canHealth
-		{
-			with instance_create(x,y,HPPickup) {
+		//Nerves of Steel
+		if (instance_exists(Player) && Player.skill_got[41] && Player.armour < Player.maxarmour && random(100) < (12 - Player.armour) ) {
+			pickup = instance_create(x,y,HPPickup) 
+			with pickup {
+				isArmour = true;
+				sprite_index = sprArmourPickup;
+				if scrIsCrown(32)//Misfortune
+				{
+					sprite_index = sprArmourAmmo;
+				}
 				if (rabbit > 0 && random(1) < rabbit+0.1)
 				{
 					with instance_create(x,y,RabbitPawFX)
 					{
-							speed = other.speed;
-							direction = other.direction;
-							friction = other.friction;
-						}
+						speed = other.speed;
+						direction = other.direction;
+						friction = other.friction;
+					}
 				}
 			}
-			return true;
+			return pickup;
+		}
+		else if random(mh) > h and random(3) < 2 and !scrIsCrown(2) and Player.canHeal and random(1) <= canHealth
+		{
+			pickup = instance_create(x,y,HPPickup) 
+			with pickup {
+				if (rabbit > 0 && random(1) < rabbit+0.1)
+				{
+					with instance_create(x,y,RabbitPawFX)
+					{
+						speed = other.speed;
+						direction = other.direction;
+						friction = other.friction;
+					}
+				}
+			}
+			return pickup;
 		}
 		else
 		{
@@ -233,8 +258,8 @@ function scrDrop(itemdrop, weapondrop) {
 			{
 				if random(mh) > h and random(3) < 2 and !scrIsCrown(2) and Player.canHeal and random(1) <= canHealth
 				{
-					
-					with instance_create(x,y,HPPickup) {
+					pickup = instance_create(x,y,HPPickup) 
+					with pickup {
 						if (rabbit > 0 && random(1) < rabbit+0.1)
 						{
 							with instance_create(x,y,RabbitPawFX)
@@ -245,12 +270,13 @@ function scrDrop(itemdrop, weapondrop) {
 							}
 						}
 					}
-					return true;
+					return pickup;
 				}
 			}
 			else
 			{
-				with instance_create(x,y,AmmoPickup) {
+				pickup = instance_create(x,y,AmmoPickup) 
+				with pickup {
 					if (rabbit > 0 && random(1) < rabbit+0.1)
 					{
 						with instance_create(x,y,RabbitPawFX)
@@ -261,7 +287,7 @@ function scrDrop(itemdrop, weapondrop) {
 						}
 					}
 				}
-				return true;
+				return pickup;
 			}
 		}
 	}
@@ -273,7 +299,8 @@ function scrDrop(itemdrop, weapondrop) {
 	if ran < min(weapondrop*(dropRateBuff * 0.2), 100)
 	{
 		//drop weps
-		with instance_create(x,y,WepPickup)
+		pickup = instance_create(x,y,WepPickup)
+		with pickup
 		{
 		scrWeapons()
 		SetSeedWeapon();
@@ -282,11 +309,11 @@ function scrDrop(itemdrop, weapondrop) {
 		type = wep_type[wep]
 		ammo = 50
 		curse = 0
-		sprite_index = wep_sprt[wep]
+		sprite_index = wep_sprt[wep];
 		}
-		return true;
+		return pickup;
 	}
 	weaponDropChanceIndex --;
 	}
-	return false;
+	return pickup;
 }

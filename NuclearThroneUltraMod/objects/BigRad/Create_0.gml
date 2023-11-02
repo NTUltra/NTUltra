@@ -28,7 +28,6 @@ if Player.race = 15{ alarm[0] /= 2}//atom
 		with instance_create(x,y,SwarmBolt)
 		{
 			team = 2;
-			hits = 1;
 			motion_add(random(360),2);
 		}
 	}

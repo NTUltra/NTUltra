@@ -28,11 +28,11 @@ else
 {
 	with Player
 	{
-	depth = -2
-	visible = 1
-	x = 10016
-	y = 10016
-	angle = 0
+		depth = -2
+		visible = 1
+		x = 10016
+		y = 10016
+		angle = 0
 	}
 }
 

@@ -330,8 +330,8 @@ function scrTips() {
 
 	if Player.race = 24//ELEMENTOR
 	tip = choose("The elements will destroy you","The avatar","meditating","Floaty","Very down to earth","SOLID! play!",
-	"Floating guns","No hands required","Your walls do not stop against lasers","Walls can get destroyed#when enemies get very close"
-	,"Elementor can fly over lava","Elementor moves normally over all terrain")//"You can only place walls#against other walls","Create walls from other walls",
+	"Floating guns","No hands required","Your walls do not stop against lasers","Walls can get destroyed#when enemies get very close",
+	"Mushroom power","the elements")//"You can only place walls#against other walls","Create walls from other walls",
 
 	if Player.race = 25//DOCTOR
 	tip = choose("Efficient rad intake","Underleveled?","Second opinion","Trust me,#I'm a doctor","You can use that extra limb#to walk faster","That mutation seems good to me",

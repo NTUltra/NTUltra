@@ -17,6 +17,8 @@ draw_set_valign(fa_bottom)
 draw_set_halign(fa_right)
 
 txt2 = race_name[char]+"#"+race_acti[char]+"#"+race_pass[char];
+var colourDraw = txt2;
+txt2 = scrReplaceAllColourCodes(txt2);
 if hover
 {
 
@@ -40,8 +42,8 @@ draw_sprite_ext(sprMenuPointer,0,x,drawy-12,1,1,0,c_white,0.8)
 draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-13,string_hash_to_newline(string(txt2)))
 draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-13,string_hash_to_newline(string(txt2)))
 draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-14,string_hash_to_newline(string(txt2)))
-draw_set_color(c_silver)
-draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14,string_hash_to_newline(string(txt2)))
+draw_set_color(make_colour_rgb(160,160,160))
+scrDrawTextColours(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14,string(colourDraw))
 draw_set_color(c_white)
 draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14-string_height(string_hash_to_newline(txt2))+string_height(string_hash_to_newline(race_name[char])),string_hash_to_newline(string(race_name[char])))
 }

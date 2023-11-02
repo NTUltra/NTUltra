@@ -14,7 +14,6 @@ with instance_create(x,y,Smoke)
 motion_add(random(360),random(4))
 }
 
-Sleep(50)
 dir = 0
 do {dir += 1 x += lengthdir_x(4,direction) y += lengthdir_y(4,direction)
 

@@ -5,6 +5,8 @@ function scrDrawHelp(txt, yOffset = 0, col = c_white){
 	if UberCont.opt_hud_des == 0
 		return "";
 	txt = string_replace_all(txt,"#"," ");
+	//var colTxt = txt;
+	txt = scrReplaceAllColourCodes(txt);
 	var w = 206;
 	var s = string_height("A");
 	draw_set_halign(fa_left)
@@ -18,6 +20,9 @@ function scrDrawHelp(txt, yOffset = 0, col = c_white){
 	draw_set_alpha(1);
 	draw_set_colour(c_black);
 	draw_text_ext(xx+1,yy+1,txt,s,w);
+	draw_text_ext(xx,yy+1,txt,s,w);
+	draw_text_ext(xx+1,yy,txt,s,w);
 	draw_set_colour(col);
 	draw_text_ext(xx,yy,txt,s,w);
+	//scrDrawTextColoursExt(xx,yy,colTxt,s,w);
 }

@@ -5,8 +5,9 @@ function scrDrawGameOver() {
 		return;
 	var vx = 0;
 	var vy = 0;
-	draw_set_halign(fa_center)
-	draw_set_valign(fa_middle)
+	var wh = camera_get_view_width(0)*0.5;
+	var h = camera_get_view_height(0);
+	var hh = h*0.5;
 	gameover = "";
 	if gameovertime == 0
 		alarm[4] = 1;
@@ -18,11 +19,11 @@ function scrDrawGameOver() {
 	var txt = res[0];
 	var upsideDown = res[1];
 	if (!scrIsGamemode(25) && !scrIsGamemode(8))
-		gameover = gameoverText+"##KILLS: "+string(BackCont.kills)+"####DIFFICULTY: "+string(BackCont.hard)
+		gameover = gameoverText+"##KILLS: "+string(BackCont.kills)+"#DIFFICULTY: "+string(BackCont.hard)
 	else if (scrIsGamemode(25))
 	{
 		txt = "";
-		gameover = "KILLS: "+string(BackCont.kills)+"#WAVE: "+string(BackCont.subarea)+"#DIFFICULTY: "+string(BackCont.hard)
+		gameover = "WAVE: "+string(BackCont.subarea)+"##KILLS: "+string(BackCont.kills)+"#DIFFICULTY: "+string(BackCont.hard)
 	}
 	//if BackCont.loops > 0 && UberCont.opt_gamemode != 8
 	//gameover += "#LOOPS: "+string(BackCont.loops)
@@ -33,28 +34,29 @@ function scrDrawGameOver() {
 	gameover += "##MODDED EARLY ACCESS BUILD";
 */
 	var normalMode = scrIsOnlyNormalGamemode();
+	var gmt = "";
 	if (array_length(UberCont.opt_gamemode) > 1)
-		gameover += "##GAME MODES :##";
+		gmt += "GAME MODES :";
 	else if !normalMode
-		gameover += "##GAME MODE :###";
+		gmt += "GAME MODE :";
 	else
-		gameover += "##NORMAL MODE##";
+		gmt += "NORMAL MODE";
 	
 	if (scrIsGamemode(8))
 	{
 		txt = "";
-		gameover += "##TIME SURVIVED: " + VanFan.txttime;
+		gameover += "#TIME SURVIVED: " + VanFan.txttime;
 	}
-	
+	var endText = "";
 	if gameovertime > 30
 	{
 		if UberCont.canRestart
 		{
-			gameover += "###[R] QUICK RESTART#[LEFT CLICK] MENU";
+			endText += "[R] QUICK RESTART -- [LEFT CLICK] MENU";
 		}
 		else
 		{
-			gameover += "###[LEFT CLICK] MENU";
+			endText += "[LEFT CLICK] MENU";
 		}
 	}
 
@@ -124,72 +126,118 @@ function scrDrawGameOver() {
 	snd_play(sndRestart)
 	scrRestart()
 	}
+	draw_set_valign(fa_top);
+	draw_set_halign(fa_center)
+	var yy = vy + 48;
 	if gameovertime > 30
 	{
-		var yy = string_height(string_hash_to_newline("A#A#A#A"))-4
 		draw_set_color(c_black)
-		draw_set_alpha(0.8)
+		draw_set_alpha(0.8);
 		draw_rectangle(vx,vy,vx+__view_get( e__VW.WView, 0 ),vy+__view_get( e__VW.HView, 0 ),0)
-		draw_set_alpha(1)
-		draw_text(vx+__view_get( e__VW.WView, 0 )/2,vy+__view_get( e__VW.HView, 0 )/2-string_height(string_hash_to_newline("A"))+1,string_hash_to_newline(string(gameover)))
-		draw_text(vx+__view_get( e__VW.WView, 0 )/2+1,vy+__view_get( e__VW.HView, 0 )/2-string_height(string_hash_to_newline("A"))+1,string_hash_to_newline(string(gameover)))
-		draw_text(vx+__view_get( e__VW.WView, 0 )/2+1,vy+__view_get( e__VW.HView, 0 )/2-string_height(string_hash_to_newline("A")),string_hash_to_newline(string(gameover)))
+		draw_set_alpha(1);
+		draw_rectangle(vx,vy+hh-16,vx+__view_get( e__VW.WView, 0 ),vy+hh + 16,0);
+		
+		draw_text(vx+wh,yy+1,string_hash_to_newline(string(gameover)))
+		draw_text(vx+wh+1,yy+1,string_hash_to_newline(string(gameover)))
+		draw_text(vx+wh+1,yy,string_hash_to_newline(string(gameover)))
+		
+		draw_text(vx+wh,vy+h-20,endText);
+		draw_text(vx+wh+1,vy+h+1-20,endText);
+		draw_text(vx+wh+1,vy+h-20,endText);
 	
 	
 		draw_set_color(c_white)
-		draw_text(vx+__view_get( e__VW.WView, 0 )/2,vy+__view_get( e__VW.HView, 0 )/2-string_height(string_hash_to_newline("A")),string_hash_to_newline(string(gameover)))
+		draw_text(vx+wh,yy,string_hash_to_newline(string(gameover)))
+		
+		draw_text(vx+wh,vy+h-20,endText);
+		
+		var yy = vy + hh - 32;
+		if upsideDown
+		{
+			draw_set_color(c_black)
+			draw_text_transformed(vx+wh,yy + 1,string_hash_to_newline(txt),-1,-1,0)
+			draw_text_transformed(vx+wh+1,yy + 1,string_hash_to_newline(txt),-1,-1,0)
+			draw_text_transformed(vx+wh+1,yy,string_hash_to_newline(txt),-1,-1,0)
 	
-	if upsideDown
-	{
-		draw_set_color(c_black)
-		draw_text_transformed(vx+__view_get( e__VW.WView, 0 )/2,vy+__view_get( e__VW.HView, 0 )/2+1-yy,string_hash_to_newline(txt),-1,-1,0)
-		draw_text_transformed(vx+__view_get( e__VW.WView, 0 )/2+1,vy+__view_get( e__VW.HView, 0 )/2+1-yy,string_hash_to_newline(txt),-1,-1,0)
-		draw_text_transformed(vx+__view_get( e__VW.WView, 0 )/2+1,vy+__view_get( e__VW.HView, 0 )/2-yy,string_hash_to_newline(txt),-1,-1,0)
+			draw_set_color(c_white)
+			draw_text_transformed(vx+wh,yy,string_hash_to_newline(txt),-1,-1,0)
+		}
+		else
+		{
+			draw_set_color(c_black)
+			draw_text(vx+wh,yy + 1,string_hash_to_newline(txt))
+			draw_text(vx+wh+1,yy + 1,string_hash_to_newline(txt))
+			draw_text(vx+wh+1,yy,string_hash_to_newline(txt))
 	
-		draw_set_color(c_white)
-		draw_text_transformed(vx+__view_get( e__VW.WView, 0 )/2,vy+__view_get( e__VW.HView, 0 )/2-yy,string_hash_to_newline(txt),-1,-1,0)
-	}
-	else
-	{
-		draw_set_color(c_black)
-		draw_text(vx+__view_get( e__VW.WView, 0 )/2,vy+__view_get( e__VW.HView, 0 )/2+1-yy,string_hash_to_newline(txt))
-		draw_text(vx+__view_get( e__VW.WView, 0 )/2+1,vy+__view_get( e__VW.HView, 0 )/2+1-yy,string_hash_to_newline(txt))
-		draw_text(vx+__view_get( e__VW.WView, 0 )/2+1,vy+__view_get( e__VW.HView, 0 )/2-yy,string_hash_to_newline(txt))
+			draw_set_color(c_white)
+			draw_text(vx+wh,yy,string_hash_to_newline(txt))
+		}
+		if instance_exists(DataRef) && DataRef.hitBy != noone
+		{
+			var xxx = vx + wh;
+			var yyy = vy + hh + 44;
+			var txt = "KILLED BY:";
+			draw_set_color(c_black)
+			draw_text(xxx,yyy+1,txt)
+			draw_text(xxx+1,yyy+1,txt)
+			draw_text(xxx+1,yyy,txt)
 	
-		draw_set_color(c_white)
-		draw_text(vx+__view_get( e__VW.WView, 0 )/2,vy+__view_get( e__VW.HView, 0 )/2-yy,string_hash_to_newline(txt))
-	}
-	
-	draw_set_valign(fa_top)
+			draw_set_color(c_white)
+			draw_text(xxx,yyy,txt)
+			var a = 1;
+			if sprite_get_number(DataRef.hitBy) > 2
+			{
+				a = image_number;
+				if UberCont.normalGameSpeed == 60
+					imageIndex += 0.4;
+				else
+					imageIndex += 0.8;
+				a = imageIndex;
+				if imageIndex > sprite_get_number(DataRef.hitBy)
+					imageIndex = 0;
+			}
+			draw_sprite(DataRef.hitBy,a,xxx,yyy + 32);
+		}
 	}
 
-	if gameovertime > 30 && !normalMode
+	if gameovertime > 30
 	{
-		draw_set_valign(fa_top)
-		var gamemodeScrollString = "";
-		var al = array_length(UberCont.opt_gamemode)
-		for (var i = 0; i < al; i++)
-		{
-			if (UberCont.opt_gamemode[i] != 0)
-			{
-				gamemodeScrollString += string_replace_all(UberCont.gamemode[UberCont.opt_gamemode[i]],"#"," ");
-				if i != al - 1
-					gamemodeScrollString += " + ";
-			}
-		}
-		//var yyy = vy+__view_get( e__VW.HView, 0 )*0.5;
-		var yyy = vy+__view_get( e__VW.HView, 0 )*0.5-string_height(string_hash_to_newline("A"))+16
-		gmwidth = max(0,string_width(gamemodeScrollString) - __view_get( e__VW.WView, 0 ));
-		var xx = lerp(
-		vx+(__view_get( e__VW.WView, 0 )*0.5) - gmwidth*0.5,
-		vx+(__view_get( e__VW.WView, 0 )*0.5) + gmwidth*0.5,
-		gmScroll);
-		//draw_set_halign(fa_center)
+		var yyy = vy+hh + 20;
 		draw_set_color(c_black)
-		draw_text(xx+1,yyy+1,gamemodeScrollString)
-		draw_text(xx+1,yyy+1,gamemodeScrollString)
-		draw_text(xx,yyy+1,gamemodeScrollString)
+		draw_text(vx + wh+1,yyy+1,gmt)
+		draw_text(vx + wh+1,yyy+1,gmt)
+		draw_text(vx + wh+1,yyy,gmt)
+		
 		draw_set_color(c_white)
-		draw_text(xx,yyy,gamemodeScrollString)
+		draw_text(vx + wh,yyy,gmt)
+		if !normalMode
+		{
+			var gamemodeScrollString = "";
+			var al = array_length(UberCont.opt_gamemode)
+			for (var i = 0; i < al; i++)
+			{
+				if (UberCont.opt_gamemode[i] != 0)
+				{
+					gamemodeScrollString += string_replace_all(UberCont.gamemode[UberCont.opt_gamemode[i]],"#"," ");
+					if i != al - 1
+						gamemodeScrollString += " + ";
+				}
+			}
+			//var yyy = vy+__view_get( e__VW.HView, 0 )*0.5;
+			gmwidth = max(0,string_width(gamemodeScrollString) - camera_get_view_width(0));
+			var xx = lerp(
+			vx+(wh) - gmwidth*0.5,
+			vx+(wh) + gmwidth*0.5,
+			gmScroll);
+			//
+			draw_set_color(c_black)
+			draw_text(xx,yyy+1+9,gamemodeScrollString)
+			draw_text(xx+1,yyy+1+9,gamemodeScrollString)
+			draw_text(xx+1,yyy+9,gamemodeScrollString)
+			draw_set_color(c_white)
+			draw_text(xx,yyy+9,gamemodeScrollString)
+		}
 	}
+	draw_set_halign(fa_left)
+
 }

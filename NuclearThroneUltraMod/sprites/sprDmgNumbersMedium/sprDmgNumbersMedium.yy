@@ -35,7 +35,7 @@
   "origin": 0,
   "parent": {
     "name": "Menu",
-    "path": "folders/Sprites/Enemies/Menu/Menu.yy",
+    "path": "folders/Sprites/Menu/Menu.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
