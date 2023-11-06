@@ -569,7 +569,7 @@ function scrPopEnemies() {
 				instance_create(x + 16, y + 16,DiscGuy);
 			}
 		} else {
-			if random(4) > 1
+			if random(3) > 1
 			instance_create(x + 16, y + 16, choose(SnowBot, SnowBot, SnowBot, SnowTank, Wolf, Wolf, DiscGuy, BanditSquare))
 			else if instance_number(enemy) < 1
 			{
@@ -1162,14 +1162,14 @@ function scrPopEnemies() {
 		        }
 			}
 		}
-		else if subarea != 2 || random(2) < 1
+		else if subarea != 2 || random(3) < 2
 		{
 	        if styleb = 1 && random(2) < 1 {
-	            instance_create(x + 16, y + 16, choose(JungleAssassinFake, JungleAssassinFake, JungleAssassinFake, JungleAssassinFake, JungleAssassinFake, JungleFly,MaggotSpawn,MaggotSpawn))
+	            instance_create(x + 16, y + 16, choose(JungleAssassinFake, JungleAssassinFake, JungleAssassinFake, JungleAssassinFake, JungleAssassinFake, JungleFly,JungleGorilla,MaggotSpawn,MaggotSpawn))
 	        }
 	        else {
 	            if random(4) < 1
-	            instance_create(x + 16, y + 16, choose(JungleAssassin, JungleBandit, JungleAssassinFake, JungleAssassinFake, JungleAssassinFake, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleFly))
+	            instance_create(x + 16, y + 16, choose(JungleAssassin, JungleBandit, JungleAssassinFake, JungleAssassinFake, JungleAssassinFake, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleGorilla, JungleFly))
 	            else {
 	                if random(30) < 1 {
 						instance_create(x,y,BigWallBreak);
@@ -1179,7 +1179,7 @@ function scrPopEnemies() {
 	                    instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, JungleBandit)
 	                }
 	                else {
-	                    instance_create(x + 16, y + 16, choose(JungleFly, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit));
+	                    instance_create(x + 16, y + 16, choose(JungleFly, JungleGorilla, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit));
 	                }
 	            }
 	        }

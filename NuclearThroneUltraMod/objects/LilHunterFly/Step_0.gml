@@ -8,7 +8,7 @@ if y+z < __view_get( e__VW.YView, 0 )-64 and -z > 160
 {
 if instance_exists(Player)
 {
-	var ground = instance_nearest(Player.xprevious+16+random(64-32),Player.yprevious+16+random(64-32),Floor);
+	var ground = instance_nearest(Player.xprevious+16+random(96)-48,Player.yprevious+16+random(96)-48,Floor);
 	var o = 16;
 	if ground.object_index == FloorExplo
 		o = 8;
@@ -45,11 +45,23 @@ repeat(am)
 	with instance_create(x,y,TrapFire)//Trapfire
 	{
 		sprite_index = sprFireLilHunter
-		motion_add(ang,2.75+random(0.4))
+		motion_add(ang,3)
 		image_angle = direction
 		team = other.team
 	}
+	
 ang += angstep;
+}
+var ang = random(360);
+repeat(6)
+{
+	with instance_create(x,y,EnemyBouncerBullet)
+	{
+	motion_add(ang,2)
+	image_angle = direction;
+	team = other.team
+	}
+	ang+= 60;
 }
 var lps = GetPlayerLoops()
 if lps > 3

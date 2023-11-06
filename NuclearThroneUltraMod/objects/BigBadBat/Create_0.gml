@@ -11,6 +11,7 @@ spr_walk = sprBigBadBatIdle
 spr_hurt = sprBigBadBatHurt
 spr_dead = sprBigBadBatDead
 spr_fire = sprBigBadBatFire;
+spr_chrg = spr_fire
 
 snd_hurt = sndHitFlesh
 snd_dead = sndFrogExplode
@@ -21,8 +22,8 @@ lowHealthReached = false;
 alarm[1] = 30;
 rotationSpeed = choose(1.8,-1.8);
 speedUp = 4;
-minDistanceToTarget = 90;
-maxDistanceToTarget = 132;
+minDistanceToTarget = 80;
+maxDistanceToTarget = 130;
 distanceToTarget = maxDistanceToTarget;
 maxAmmo = 3;
 ammo = maxAmmo;
@@ -30,11 +31,11 @@ fireRate = 8;
 lp = 0.15;
 spinAttackDuration = 40;
 spinAttackDistance = 72;
-pSpeedAccurate = 3;
+pSpeedAccurate = 3.2;
 pSpeedSpinny = 3;
 pSpeedJawbreaker = 4.5;
 fireOffset = 40;
-laserDuration = 80;
+laserDuration = 60;
 laserOffset = 36;
 myLasers = [];
 ticksBeforeSpiral = 2;
@@ -44,6 +45,7 @@ scrTarget();
 angle = random(360);
 myBat = SquareBat;
 loops = GetPlayerLoops();
+reachHalfHealth = false;
 if loops > 2
 {
 	rotationSpeed *= 1.1;

@@ -473,7 +473,7 @@ if my_health < prevhealth
 }
 if skill_got[22]//Stress Sharp teeth part
 {
-	if tookHit && alarm[10]<1//I been hit
+	if tookHit && alarm[10] < 1 && alarm[3] < 1//I been hit
 	{
 		alarm[10]=30;
 		sharpteeth = prevhealth - my_health;
@@ -486,7 +486,7 @@ if skill_got[22]//Stress Sharp teeth part
 			multiplier *= 2
 		snd_play_2d(sndSharpTeeth);
 		with enemy {
-			if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+			if team != other.team && x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 			{
 				snd_play(snd_hurt, hurt_pitch_variation,true)
 				Sleep(10)

@@ -5,6 +5,21 @@ instance_create(x+lengthdir_x(12,ang),y+lengthdir_y(12,ang),Explosion)
 instance_create(x+lengthdir_x(12,ang+120),y+lengthdir_y(12,ang+180),Explosion)
 instance_create(x+lengthdir_x(12,ang+240),y+lengthdir_y(12,ang+180),Explosion)
 
+var ang = random(360);
+var am = 18;
+var angstep = 360/18;
+repeat(am)
+{
+	with instance_create(x,y,TrapFire)//Trapfire
+	{
+		sprite_index = sprFireLilHunter
+		motion_add(ang,3.5)
+		image_angle = direction
+		team = other.team
+	}
+	ang += angstep;
+}
+
 with instance_create(x,y,MovingCorpse)
 {
 mySize = 1

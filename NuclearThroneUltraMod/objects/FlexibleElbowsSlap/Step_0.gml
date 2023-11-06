@@ -7,6 +7,12 @@ if time == 1
 	BackCont.viewy2 += lengthdir_y(19,hk+180)*UberCont.opt_shake;
 	
 	followOwner = false;
+	with scrDrop(15,2)
+	{
+		x = tx;
+		y = ty;
+		motion_add(hk+180,6);
+	}
 	with target
 	{
 		snd_play(sndExplosion);
@@ -20,16 +26,13 @@ if time == 1
 		scrForcePosition60fps();
 		if speed > maxSpeed+1
 			speed = maxSpeed+1;
-		with scrDrop(15,2)
-		{
-			motion_add(hk+180,6);
-		}
+		
 		var stalker = (instance_exists(Player) && Player.ultra_got[81])
-		repeat(4)
+		repeat(6)
 		{
 			with instance_create(x,y,Dust)
 			{
-				motion_add(hk+180+random_range(30,-30),2+random(3));
+				motion_add(hk+180+random_range(30,-30),2+random(4));
 			}	
 		}
 		repeat(1+irandom(2))

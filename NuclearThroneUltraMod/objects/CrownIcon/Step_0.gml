@@ -259,7 +259,8 @@ if crown == 3 && Player.maxhealth > 1
 if crown == 20
 {
 	with Player {
-		armour = min(armour, maxarmour);
+		maxarmour = max(maxarmour + 1, 1);
+		armour = clamp(armour, 1, maxarmour);
 	}
 }
 //CROWN OF MERCENARY

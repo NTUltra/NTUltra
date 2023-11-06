@@ -1,13 +1,14 @@
-alarm[1] = 7+random(7)
+alarm[1] = 6+random(7)
 canDodge = true;
 if loop
 alarm[1]=2+random(4);
 scrTarget()
 if target != noone
 {
-
+motion_add(point_direction(x,y,target.x,target.y),3);
 //HAS A TARGET
-if random(35) < 1 or (point_distance(x,y,target.x,target.y) < 64 and random(5) < 1) or (point_distance(x,y,target.x,target.y) > 160 and random(16) < 1)
+var dis = point_distance(x,y,target.x,target.y)
+if random(35) < 1 or (dis < 64 and random(5) < 1) or (dis > 160 and random(16) < 1)
 {
 //FLY
 
@@ -15,11 +16,19 @@ sprite_index = sprInvertedLilHunterLiftStart
 image_index = 0
 instance_change(InvertedLilHunterFly,false)
 snd_play_2d(sndLilHunterLaunch)
+	if random(6) < 1
+	{
+		snd_play_2d(sndLilHunterSummon)
+		with Player
+		{
+			instance_create(x,y,IDPDSpawn);
+		}	
+	}
 }
 else
 {
 //DON'T FLY
-if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
+if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 || (dis < 250 && random(10) < 2)
 {
 //CAN SEE
 
@@ -29,26 +38,25 @@ if random(2) < 1
 
 if point_distance(x,y,target.x,target.y) < 96 && random(2)<1
 {
-//CLOSE RANGE
-gunangle = point_direction(x,y,target.x,target.y)+random(60)-30
+	//CLOSE RANGE
+	gunangle = point_direction(x,y,target.x,target.y)+random(60)-30
 
-snd_play(sndEnemyFire)
-wkick = 8
-ang=gunangle-80;
-repeat(9+irandom(loop))
-{
-with instance_create(x,y,EnemyBullet1)
-{
-motion_add(other.ang,2+random(2))
-image_angle = direction
-team = other.team
+	snd_play(sndEnemyFire)
+	wkick = 8
+	ang=gunangle-80;
+	repeat(9+irandom(min(8,loop)))
+	{
+		with instance_create(x,y,EnemyBullet1)
+		{
+		motion_add(other.ang,2+random(2))
+		image_angle = direction
+		team = other.team
+		}
+		ang+=160/(9+(irandom(min(8,loop))))
+	}
 }
-ang+=160/(9+(irandom(loop)))
-}
-}
-else if random(5)<1
+else if random(4)<1
 {
-
     //BOUNCER BULLETS circle
     gunangle = point_direction(x,y,target.x,target.y)+random(14)-7+30
     
@@ -66,22 +74,23 @@ else if random(5)<1
     }
     ang+=120/(5+(irandom(loop)*2))
     }
-    alarm[4]=6;
+	alarm[1] += 4;
+    alarm[4]=5;
 
 }
 else if point_distance(x,y,target.x,target.y) > 130 && random(4)<1
 {
-//LONG SNIPE MISSILE
-gunangle = point_direction(x,y,target.x,target.y)+random(10)-5
+	//LONG SNIPE MISSILE
+	gunangle = point_direction(x,y,target.x,target.y)+random(10)-5
 
-snd_play(sndEnemyFire)
-wkick = 8
+	snd_play(sndEnemyFire)
+	wkick = 8
     
     with instance_create(x,y,EnemyMissile)
     {
-    motion_add(other.gunangle,2+random(2))
-    image_angle = direction
-    team = other.team
+	    motion_add(other.gunangle,2+random(2))
+	    image_angle = direction
+	    team = other.team
     }
     
 }
@@ -96,7 +105,7 @@ repeat(10+irandom(loop))
 {
 with instance_create(x,y,EnemyBullet5)
 {
-motion_add(other.gunangle,6+random(4))
+motion_add(other.gunangle,6.5+random(4))
 image_angle = direction
 team = other.team
 }

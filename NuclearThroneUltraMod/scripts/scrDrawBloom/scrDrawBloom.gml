@@ -313,7 +313,11 @@ function scrDrawBloom() {
 
 	with SheepStorm
 	{
-		draw_sprite_ext(bloomSprite,imageIndex,x,y,(Player.sheepPower/10)+1,(Player.sheepPower/10)+1,image_angle,c_white,clamp(alpha*0.3,0.05,0.3));
+		draw_sprite_ext(bloomSprite,imageIndex,x,y,image_xscale + 0.2,image_yscale + 0.2,image_angle,c_white,clamp(alpha*0.3,0.05,0.3));
+	}
+	with SheepChargeProjectile
+	{
+		draw_sprite_ext(bloomSprite,imageIndex,x,y,image_xscale + 0.2,image_yscale + 0.2,image_angle,c_white,alpha);
 	}
 		if Player.ultra_got[41]
 		{

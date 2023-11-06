@@ -2,7 +2,8 @@ if other.team != team
 {
 	with other
 	{
-		snd_play(snd_hurt, hurt_pitch_variation,true)
+		if sprite_index != spr_hurt
+			snd_play(snd_hurt, hurt_pitch_variation,true)
 		my_health -= other.dmg
 		sprite_index = spr_hurt
 		image_index = 0

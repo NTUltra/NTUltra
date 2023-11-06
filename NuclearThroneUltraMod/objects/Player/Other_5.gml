@@ -287,7 +287,7 @@ if looping && area != 104
 	if race =3 && skill_got[19]
 	scrUnlockCSkin(3,"FOR LOOPING WITH EAGLE EYES#AS EYES",0);
 
-	if race = 4 && !skill_got[1] && !skill_got[25] && !skill_got[32] && !skill_got[40] && !UberCont.hasTakenCrownOfLife
+	if race = 4 && !skill_got[1] && !skill_got[25] && !skill_got[32] && !skill_got[40] && !skill_got[41] && !UberCont.hasTakenCrownOfLife
 	scrUnlockBSkin(4,"FOR LOOPING WITHOUT#RHINO SKIN, STRONG SPIRIT#ALKALINE SALIVA#BOUNCY FAT AND CROWN OF LIFE#AS MELTING",0);
 
 	if loops>1 && race = 4
@@ -296,7 +296,7 @@ if looping && area != 104
 	if scrIsGamemode(14)
 	scrUnlockBSkin(1,"FOR LOOPING ON GAMEMODE:#FISH'S PARTNER ONLY",14);
 
-	if race = 14 && !firedOnce=false
+	if race = 14 && !firedOnce
 		scrUnlockCSkin(14,"FOR LOOPING BY ONLY THROWING WEAPONS#AND NOT USING THEM",0)
 
 	looping=false;
@@ -822,15 +822,31 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		ultimategamble = other.ultimategamble;
 		totalSkills = other.totalSkills;
 		scrWeaponHold();
-		
 		//Re-apply some mutations
+		
 		if ultra_got[39] && altUltra
 			maxhealth = 40;
 		if skill_got[1]
 			maxhealth += 4;
-		if skill_got[33]
+		if skill_got[33]//Glass arm cannon
 			maxhealth -= 2;
+		if skill_got[41]//Nerves of steel
+		{
+			maxhealth -= 3;
+			armour = other.armour;
+			maxarmour = max(1,Player.maxarmour + 1);
+		}
+		if scrIsCrown(20)
+		{
+			armour = other.armour;
+			maxarmour = other.maxarmour;
+		}
+		if race == 16
+		{
+			armour = min(armour + 1, maxarmour);	
+		}
 		my_health = other.my_health;
+		maxhealth = max(maxhealth, 1);
 		if ultra_got[62] && altUltra
 			maxhealth = 1;
 			
@@ -852,10 +868,7 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		if skill_got[19] {
 			scrApplyEagleEyes();
 		}
-		if race == 16
-		{
-			armour = min(armour + 1, maxarmour);	
-		}
+		
 	}
 	UberCont.crown_start[UberCont.racepick] = cs;
 	instance_destroy(id,false);

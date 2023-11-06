@@ -1,7 +1,7 @@
 if !instance_exists(Player)
 {instance_destroy() exit;}
 if Player.sheepPower < Player.sheepPowerToHaveEffect
-exit;
+	exit;
 if other.isGrenade && Player.ultra_got[51] {
 	snd_play(sndRicochet,0.1,true);
 	with other
@@ -9,8 +9,8 @@ if other.isGrenade && Player.ultra_got[51] {
 }
 if team != other.team
 {
-	Player.sheepPower -= projectileHitBrake;
-	Player.speed -=1;
+	Player.sheepPower -= projectileHitBrake*other.dmg;
+	Player.speed *= 0.4;
 	Sleep(2);
 	BackCont.viewx2 += lengthdir_x(1,direction)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(1,direction)*UberCont.opt_shake

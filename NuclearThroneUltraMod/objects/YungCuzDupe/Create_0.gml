@@ -7,7 +7,8 @@ hardshell=true;
 isAlkaline=false;
 hammerheadtimer=0;
 hammerheadcounter=0;
-if Player.skill_got[26]//HAMMER HEAD
+skill_got = Player.skill_got;
+if skill_got[26]//HAMMER HEAD
 {
 	hammerheadcounter = 20;
 	if Player.race=25//Doctor but that doesn't really work right
@@ -128,21 +129,16 @@ strongspirit=Player.strongspirit;//false
 strongspiritused=Player.strongspiritused;//false
 
 maxhealth = 8;
-if Player.skill_got[1]//rhino skin
+if skill_got[1]//rhino skin
 maxhealth=12;
-if Player.skill_got[33]//GLASS ARM CANNON
+if skill_got[33]//GLASS ARM CANNON
 maxhealth-=2;
 
 my_health = maxhealth
 prevhealth = maxhealth//lasthealth
 
-if Player.skill_got[14]{
-skill_got[14] = 1}
-else{
-skill_got[14] = 0}//boiling veins
 
-
-if Player.skill_got[32]
+if skill_got[32]
 	isAlkaline = true;
 returntoplayer=0;
 returntoplayerfast=0;

@@ -39,7 +39,7 @@ function scrStartingWeapons() {
 	start_wep[37]=649
 	start_wep[38]=651
 	start_wep[39]=653
-
+	//39 + 11 char specific starting
 	var dir=1;
 
 	repeat(racemax+1)

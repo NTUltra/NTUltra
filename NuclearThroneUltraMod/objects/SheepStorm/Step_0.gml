@@ -3,14 +3,15 @@ if instance_exists(Player)
 var sp = Player.sheepPower;
 alpha = clamp((sp-2)/Player.sheepPowerToHaveEffect,0.1,1);
 
-
 image_xscale=((sp)*0.1)+1;
 image_yscale=((sp)*0.1)+1;
-if image_xscale>1.7
-image_xscale=1.7;
-
-if image_yscale>1.7
-image_yscale=1.7;
+if image_xscale>1.8
+{
+	image_xscale=1.8;
+	image_yscale=1.8;
+}
+maxReach = max(maxReach,sp);
+maxScale = max(image_yscale,maxScale);
 
 x=Player.x;
 y=Player.y;
@@ -25,7 +26,6 @@ else
 
 if (sp > Player.sheepPowerToHaveEffect)
 {
-	//Player.meleeimmunity = 10;
 	if (!thresholdBroken)
 	{
 		BackCont.shake += 5;
@@ -70,9 +70,9 @@ if (sp > Player.sheepPowerToHaveEffect)
 	{
 		with EuphoriaShield
 			instance_destroy();
-		alarm[3]=max(alarm[3],2);//imunity
+		alarm[3]=max(alarm[3],1);//imunity
 		snd_hurt = sndDamageNegate;
-		meleeimmunity = max(meleeimmunity,2);
+		meleeimmunity = max(meleeimmunity,1);
 	}
 }
 else
@@ -84,9 +84,15 @@ else
 	if (thresholdBroken)
 	{
 		thresholdBroken = false;
+		with Player
+		{
+			sheepPower = -1;
+		}
 		audio_stop_sound(sndSheepLoopUpg);
 		audio_stop_sound(sndSheepLoop);
 	}
 }
 }
-else{instance_destroy();}
+else{
+	instance_destroy();
+	}

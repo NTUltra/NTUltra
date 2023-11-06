@@ -99,9 +99,9 @@ if prevhealth > my_health
 		}
 		if (Player.skill_got[37]) //ECSTATIC FISTS
 		{
-			var part = 0.3;
+			var part = 0.34;
 			if Player.race == 25 //Doctor
-				part = 0.35;
+				part = 0.4;
 			var dmgBuff = 1;
 			if Player.ultra_got[62] && Player.altUltra && Player.armour > 0 && Player.maxarmour > 0
 			{
@@ -119,6 +119,7 @@ if prevhealth > my_health
 					dmgBuff = 1 + part;
 			}
 			dmgTaken *= dmgBuff;
+			dmgTaken = dmgTaken - frac(dmgTaken*10)*0.1
 			if Player.my_health > Player.maxhealth
 			{
 				with instance_create_depth(x,y,depth - 1,ImpactFX)

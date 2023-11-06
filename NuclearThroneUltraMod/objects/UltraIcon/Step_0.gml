@@ -610,8 +610,8 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 					armour=0;
 					maxarmour=0;
 				}
-				armour+=2;
-				maxarmour+=2;
+				maxarmour = max(maxarmour + 2, 2);
+				armour = clamp(armour + 2, 2, maxarmour);
 			}
 		}
 	}
@@ -632,8 +632,8 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 		{
 			//Gunsmith armoursmith
 		    with Player {
-				maxarmour=3;
-				armour=2;
+				maxarmour = max(maxarmour + 3, 3);
+				armour = clamp(armour + 3, 3, maxarmour);
 		    }
 		}
 	}
@@ -654,8 +654,8 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 	{
 	    with Player
 	    {
-	    maxarmour=2;
-	    armour=0;
+			maxarmour = max(maxarmour + 2, 2);
+			armour = max(armour,0);
 	    }
 	}
 	else if skill == 73//REDEMPTION Skeleton Ultra A

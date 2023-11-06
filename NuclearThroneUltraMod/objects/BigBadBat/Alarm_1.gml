@@ -1,5 +1,11 @@
 ///@description AI
 alarm[1] = actTime + random(actTime);
+if !reachHalfHealth && my_health < maxhealth
+{
+	reachHalfHealth = true;
+	pSpeedAccurate += 0.5;
+	actTime -= 2;
+}
 if instance_exists(Player) {
 	var ran = random(100);
 	if ran > 90
@@ -27,6 +33,10 @@ if instance_exists(Player) {
 	{
 		//EXPLOSIVE WAZER BOI
 		event_user(3);
+	}
+	else
+	{
+		instance_create(Player.x,Player.y,EnemyIon);	
 	}
 	if ran < 10
 	{

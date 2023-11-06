@@ -238,6 +238,18 @@ function scrDrawGameOver() {
 			draw_text(xx,yyy+9,gamemodeScrollString)
 		}
 	}
+	with UberCont
+	{
+		draw_set_valign(fa_top)
+		draw_set_halign(fa_center)
+		var formatString = "0:00:00:00";
+		var yy = vy+__view_get( e__VW.HView, 0 )-string_height(string_hash_to_newline(finalTime));
+		draw_text_colour(vx+__view_get( e__VW.WView, 0 )-string_width(string_hash_to_newline(formatString))*0.5+1,yy,string_hash_to_newline(finalTime),c_black
+		,c_black,c_black,c_black,1);
+		draw_text_colour(vx+__view_get( e__VW.WView, 0 )-string_width(string_hash_to_newline(formatString))*0.5,yy,string_hash_to_newline(finalTime),c_black
+		,c_black,c_black,c_black,1);
+		draw_text_colour(vx+__view_get( e__VW.WView, 0 )-string_width(string_hash_to_newline(formatString))*0.5,yy-1,string_hash_to_newline(finalTime),c_white
+		,c_white,c_white,c_white,1);	
+	}
 	draw_set_halign(fa_left)
-
 }

@@ -5,11 +5,11 @@ if target != noone && instance_exists(target)
     
     snd_play(sndBouncerFlakExplo)//(sndEnemyFire)
     wkick = 8
-    repeat(3)
+    repeat(5)
     {
     with instance_create(x,y,EnemyBouncerBullet)
     {
-    motion_add(other.gunangle+random(20)-10,2+random(3))
+    motion_add(other.gunangle+random(20)-10,3+random(4))
     image_angle = direction
     team = other.team
     }

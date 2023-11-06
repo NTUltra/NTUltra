@@ -73,9 +73,10 @@ sy + lengthdir_y(we,hook+slapAng-90),
 false);
 if !followOwner
 	draw_circle(sx,sy,we,false);
-instance_create(sx,sy,Dust)
-var ii = lerp(0,sprite_get_number(sprFlexibleElbowSlap)-1,clamp(time-0.5,0,1));
+else
+	instance_create(sx,sy,Dust)
 
+var ii = lerp(0,sprite_get_number(sprFlexibleElbowSlap)-1,clamp(time-0.5,0,1));
 draw_sprite_ext(sprFlexibleElbowSlap,
 ii,
 sx,sy,we*0.25,sign(offset)*we*0.25,hook+slapAng,c_lime,1);

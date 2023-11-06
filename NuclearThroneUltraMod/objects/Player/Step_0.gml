@@ -16,8 +16,21 @@ if ultra_got[43] && altUltra && hunterEye < hunterEyeMax
 		}
 	}
 }
-if ultra_got[75] && speed < 1
-	alarm[3] = max(alarm[3],2);
+if ultra_got[75] && speed == 0
+{
+	alarm[3] = max(alarm[3],1);
+	meleeimmunity = max(1,meleeimmunity);
+	if alarm[3] <= 1
+	{
+		if myShield > -1 && instance_exists(myShield)
+		{
+			with myShield
+			{
+				instance_destroy();
+			}
+		}
+	}
+}
 if scrIsGamemode(29) || cheatyinfiniteammo || freeAmmoRound > 0//Infinite ammo
 	alarm[2] = 2;
 if unkillable
@@ -254,11 +267,11 @@ if !instance_exists(LevCont) and visible = 1
 			isPermanent = true;
 			Sleep(100);
 			//scrn++;
-			/*
+			
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			instance_create(f.x + 16,f.y + 16,UltraSniper)
+			instance_create(f.x + 16,f.y + 16,JungleGorilla)
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "Ultra Sniper";*/
+			thing.mytext = "Gorilla";
 		}
 		if keyboard_check_pressed(ord("C")) {
 			var dangle = random(1)*360;

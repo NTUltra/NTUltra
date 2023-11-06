@@ -16,6 +16,8 @@ draw_set_valign(fa_bottom)
 draw_set_halign(fa_right)
 
 txt2 = string(ultra_name[skill])+"#"+string(ultra_text[skill])
+var fulltxt = txt2;
+txt2 = scrReplaceAllColourCodes(txt2);
 if UberCont.mouse__x > x-16 and UberCont.mouse__x < x+16 and UberCont.mouse__y > y-20 and UberCont.mouse__y < y+20
 {
 
@@ -35,12 +37,12 @@ draw_set_alpha(1)
 
 
 draw_sprite_ext(sprMenuPointer,0,x,drawy-12,1,1,0,c_white,0.8)
-
+/*
 draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-13,string_hash_to_newline(string(txt2)))
 draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-13,string_hash_to_newline(string(txt2)))
-draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-14,string_hash_to_newline(string(txt2)))
-draw_set_color(c_silver)
-draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14,string_hash_to_newline(string(txt2)))
+draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-14,string_hash_to_newline(string(txt2)))*/
+draw_set_color(make_colour_rgb(160,160,160));
+scrDrawTextColours(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14,string(fulltxt))
 draw_set_color(c_white)
 draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14-string_height(string_hash_to_newline(txt2))+string_height(string_hash_to_newline(ultra_name[skill])),string_hash_to_newline(string(ultra_name[skill])))
 }

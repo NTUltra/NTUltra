@@ -376,8 +376,10 @@ function scrShadows() {
 		draw_sprite(shd24,0,x-vx,y-vy)
 	with JungleFly
 		draw_sprite(shd32,0,x-vx,y-vy+4)
-	with Thief
-		draw_sprite_ext(shd24,0,x-vx,y-vy,1,1,0,c_white,alpha);
+	with JungleFly
+		draw_sprite(shd32,0,x-vx,y-vy+4)
+	with JungleGorilla
+		draw_sprite(shdJungleGorilla,0,x-vx,y-vy)
 	with BoneFish
 		draw_sprite(shd24,0,x-vx,y-vy)
 	with DiscGuy

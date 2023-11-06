@@ -1,4 +1,4 @@
-/// @description Go to Graveyard
+/// @description Get patience
 if KeyCont.key_pick[other.p] = 1
 {
 	sprite_index = sprInactivePatienceStation;
@@ -8,6 +8,6 @@ if KeyCont.key_pick[other.p] = 1
 	BackCont.shake += 50;
 	snd_play(sndUltraGrenadeSuck);
 	with Player {
-		guarenteedReroll ++;
+		guarenteedReroll += 2;
 	}
 }

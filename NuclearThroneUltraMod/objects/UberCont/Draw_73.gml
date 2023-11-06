@@ -1,33 +1,41 @@
 /// @description Timer
-var ts = string(floor(time_microseconds))
-microseconds=ts
-if time_microseconds<10
-{microseconds="0"+ts;}
-
-secondsstring=string(time_seconds)
-if time_seconds<10
-{secondsstring="0"+string(time_seconds);}
-
-minutesstring=string(time_minutes)
-if time_minutes<10
-{minutesstring="0"+string(time_minutes);}
-var formatString = "0:00:00:00";
-if time_hours >= 1
+if !instance_exists(Player) && !instance_exists(PlayerSpawn)
 {
-	formatString = "0:00:00:00";
-	if time_hours >= 10
-	{
-		formatString = "00:00:00:00";
-		if time_hours >= 100
-		{
-			formatString = "000:00:00:00";
-		}
-	}
-	txttime = string(time_hours)+":"+minutesstring+":"+secondsstring+":"+microseconds;
+	txttime = finalTime;
+	var formatString = "0:00:00:00";
 }
 else
 {
-	txttime = minutesstring+":"+secondsstring+":"+microseconds;
+	var ts = string(floor(time_microseconds))
+	microseconds=ts
+	if time_microseconds<10
+	{microseconds="0"+ts;}
+
+	secondsstring=string(time_seconds)
+	if time_seconds<10
+	{secondsstring="0"+string(time_seconds);}
+
+	minutesstring=string(time_minutes)
+	if time_minutes<10
+	{minutesstring="0"+string(time_minutes);}
+	var formatString = "0:00:00:00";
+	if time_hours >= 1
+	{
+		formatString = "0:00:00:00";
+		if time_hours >= 10
+		{
+			formatString = "00:00:00:00";
+			if time_hours >= 100
+			{
+				formatString = "000:00:00:00";
+			}
+		}
+		txttime = string(time_hours)+":"+minutesstring+":"+secondsstring+":"+microseconds;
+	}
+	else
+	{
+		txttime = minutesstring+":"+secondsstring+":"+microseconds;
+	}
 }
 if !instance_exists(Menu)&&!instance_exists(Vlambeer) && !instance_exists(UnlockPopup) && opt_timer=1 && !instance_exists(Leaderboard)
 {

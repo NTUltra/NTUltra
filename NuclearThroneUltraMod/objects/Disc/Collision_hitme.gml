@@ -14,7 +14,11 @@ if other.team != team
 			if team==2//player
 			{
 				if my_health<=0//dead
+				{
 					scrUnlockGameMode(19,"FOR DOING AN OOPSIE");
+					if other.object_index == Player
+						hitBy = other.sprite_index;
+				}
 			}
 		}
 	}

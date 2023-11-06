@@ -5,8 +5,8 @@ if instance_exists(Player)
 var num = 1;
 if scrIsCrown(4)
 	num += 1
-if Player.ultra_got[85]=1//ROGUE SUPER PORTAL STRIKE ULTRA
-	num*=2;
+//if Player.ultra_got[85]=1//ROGUE SUPER PORTAL STRIKE ULTRA
+//	num*=2;
 with Player
 {
 	if skill_got[36]

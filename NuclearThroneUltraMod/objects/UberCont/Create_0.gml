@@ -3,7 +3,7 @@ version = 000//23 is final probably
 encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
-updateVersion = "PR 30.09"//"PR 30.02";
+updateVersion = "PR 30.10"//"PR 30.02";
 subUpdateVersion = ".00";
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
@@ -49,6 +49,7 @@ time_minutes=0;
 minutesstring="";
 time_hours=0;
 txttime="00:00:00:00";
+finalTime = txttime;
 
 lastwishused=false;
 kills = 0;

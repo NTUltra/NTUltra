@@ -8,7 +8,7 @@ function scrFlexibleElbowReload(wp){
 		var slapped = noone;
 		while (loader > 0)
 		{
-			if (random(46) < loader)
+			if (random(47) < loader)
 			{
 				if slapped != noone
 				{
@@ -29,7 +29,7 @@ function scrFlexibleElbowReload(wp){
 					}
 				}
 			}
-			loader -= 46;
+			loader -= 47;
 		}
 	}
 }

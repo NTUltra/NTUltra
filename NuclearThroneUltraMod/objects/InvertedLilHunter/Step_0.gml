@@ -33,7 +33,7 @@ if dodge > -2
 }
 else if canDodge && target != noone && instance_exists(target) && instance_exists(Player) && Player.fired
 {
-if point_distance(x,y,target.x,target.y) < 64
+if point_distance(x,y,target.x,target.y) < 32
 direction = point_direction(x,y,target.x,target.y)+180
 else
 direction = point_direction(target.x+lengthdir_x(point_distance(x,y,target.x,target.y)*0.95,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),target.y+lengthdir_y(point_distance(x,y,target.x,target.y)*0.95,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),x,y)+random(60)-30

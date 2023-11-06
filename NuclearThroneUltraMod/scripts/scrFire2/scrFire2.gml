@@ -163,7 +163,7 @@ function scrFire2() {
 	else
 	dmg = 16//rench4//sledge16
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -230,7 +230,7 @@ function scrFire2() {
 		image_yscale -= 0.15;
 	dmg = 4
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -567,7 +567,7 @@ function scrFire2() {
 	mask_index = mskBigAxeSlash;
 	dmg = 10//25//shovel is 8 sledge = 16
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -597,7 +597,7 @@ function scrFire2() {
 	image_xscale *= 0.8;
 	image_yscale *= 0.8;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -705,14 +705,11 @@ function scrFire2() {
 
 	dmg = 12//4 wrench
 
-	if instance_exists(Player)
-	{
 	if Player.skill_got[17] = 1//laserbrain
 	dmg = 17
-	}
 
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -762,7 +759,7 @@ function scrFire2() {
 	{
 	dmg=23;//25 for normal
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -802,7 +799,7 @@ function scrFire2() {
 	{
 	dmg = 8
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -970,7 +967,7 @@ function scrFire2() {
 	{
 		sprite_index = sprGoldenShank;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection+(random(10)-5)*other.accuracy,4+longarms)
 	image_angle = direction
@@ -1004,7 +1001,7 @@ function scrFire2() {
 	snd_hit=sndGuitarHit;
 	dmg = 28
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -1210,7 +1207,7 @@ function scrFire2() {
 	{
 	image_speed=0;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -1837,7 +1834,7 @@ function scrFire2() {
 	snd_hit=sndGuitarHit;
 	dmg = 24//26
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -2060,7 +2057,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20+32,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20+32,aimDirection),GhostSlash)
 	{
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,6+longarms)
 	image_angle = direction
@@ -2069,7 +2066,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),GhostSlash)
 	{
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -2142,7 +2139,7 @@ function scrFire2() {
 	{
 		dmg = 15;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -2158,7 +2155,7 @@ function scrFire2() {
 	{
 		dmg = 13;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection+50*other.accuracy,2+longarms)
 	image_angle = direction
@@ -2174,7 +2171,7 @@ function scrFire2() {
 	{
 		dmg = 13;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection-50*other.accuracy,2+longarms)
 	image_angle = direction
@@ -2186,7 +2183,7 @@ function scrFire2() {
 	{
 		dmg = 15;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,3+longarms)
 	image_angle = direction
@@ -2195,7 +2192,7 @@ function scrFire2() {
 	{
 		dmg = 13;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection+50*other.accuracy,3+longarms)
 	image_angle = direction
@@ -2204,7 +2201,7 @@ function scrFire2() {
 	{
 		dmg = 13;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection-50*other.accuracy,3+longarms)
 	image_angle = direction
@@ -2247,7 +2244,7 @@ function scrFire2() {
 	sprite_index=sprGoldenHeavySlash
 	dmg = 24//sledge is 16
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -2275,7 +2272,7 @@ function scrFire2() {
 	sprite_index=sprGoldenSlash;
 	dmg = 10
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -2285,7 +2282,7 @@ function scrFire2() {
 	sprite_index=sprGoldenSlash;
 	dmg = 10
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection+50*other.accuracy,2+longarms)
 	image_angle = direction
@@ -2295,7 +2292,7 @@ function scrFire2() {
 	sprite_index=sprGoldenSlash;
 	dmg = 10
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection-50*other.accuracy,2+longarms)
 	image_angle = direction
@@ -2444,7 +2441,7 @@ function scrFire2() {
 		sprite_index=sprGoldenSlash
 		dmg = 9
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
@@ -2461,7 +2458,7 @@ function scrFire2() {
 				sprite_index=sprGoldenSlash
 				dmg = 8
 				longarms = 0
-				if instance_exists(Player)
+				
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.5+longarms)
 				image_angle = direction
@@ -2570,7 +2567,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 	{
 		longarms = 0
-		if instance_exists(Player)
+		
 			longarms = (Player.skill_got[13]+other.bettermelee)*2
 		motion_add(aimDirection,1+longarms)
 		image_angle = aimDirection
@@ -2585,7 +2582,7 @@ function scrFire2() {
 			with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 			{
 			longarms = 0
-			if instance_exists(Player)
+			
 				longarms = (Player.skill_got[13]+other.bettermelee)*2
 			motion_add(aimDirection,1+longarms)
 			image_angle = aimDirection
@@ -2799,7 +2796,7 @@ function scrFire2() {
 		wallPierce *= 0.5;
 		sprite_index=sprUltraSlash;
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
@@ -2819,7 +2816,7 @@ function scrFire2() {
 				wallPierce *= 0.5;
 				sprite_index=sprUltraSlash;
 				longarms = 0
-				if instance_exists(Player)
+				
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.5+longarms)
 				image_angle = direction
@@ -3323,7 +3320,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*10,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*10,aimDirection),LightningShank)
 	{
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection+(random(10)-5)*other.accuracy,4+longarms)
 	image_angle = direction
@@ -3526,7 +3523,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),BlackSwordSlash)
 	{
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -3561,7 +3558,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*19,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*19,aimDirection),DarkSwordSlash)
 	{
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
@@ -3625,7 +3622,7 @@ function scrFire2() {
 	{
 		dmg = 22;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -3635,7 +3632,7 @@ function scrFire2() {
 	{
 		dmg = 17;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection-50*Player.accuracy,2+longarms)
 	image_angle = direction
@@ -3645,7 +3642,7 @@ function scrFire2() {
 	{
 		dmg = 17;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection+50*Player.accuracy,2+longarms)
 	image_angle = direction
@@ -3801,7 +3798,7 @@ function scrFire2() {
 	{
 		dmg = 16//shovel is 12 is frostglove
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
@@ -3845,7 +3842,7 @@ function scrFire2() {
 	{
 		dmg = 16//shovel is 12 is frostglove
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
@@ -4197,7 +4194,7 @@ function scrFire2() {
 		dmg = 18;
 		sprite_index=sprHeavySlash;
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
@@ -4215,7 +4212,7 @@ function scrFire2() {
 				dmg = 16;
 				sprite_index=sprHeavySlash;
 				longarms = 0
-				if instance_exists(Player)
+				
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.5+longarms)
 				image_angle = direction
@@ -4586,7 +4583,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Flail)
 	{
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -4784,7 +4781,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*10,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*10,aimDirection),UltraShank)
 	{
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection+(random(10)-5)*other.accuracy,9+longarms)
 	image_angle = direction
@@ -4919,7 +4916,7 @@ function scrFire2() {
 	{
 		motion_add(aimDirection+(random(12)-6)*other.accuracy,5)
 		longarms = 0
-		if instance_exists(Player)
+		
 			longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,3+longarms)
 		image_angle = direction
@@ -4986,7 +4983,7 @@ function scrFire2() {
 		dmg = 3;
 		
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection+(random(10)-5)*other.accuracy,2+longarms)
 	image_angle = direction
@@ -5058,7 +5055,7 @@ function scrFire2() {
 	{
 		dmg = 10
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDir,1+longarms)
 		image_angle = direction
@@ -5601,7 +5598,7 @@ function scrFire2() {
 		{
 			dmg = 16//shovel is 12 is frostglove
 			longarms = 0
-			if instance_exists(Player)
+			
 			longarms = (Player.skill_got[13]+other.bettermelee)*3
 			motion_add(aimDirection,2.5+longarms)
 			image_angle = direction
@@ -6021,7 +6018,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x(5+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(5+((Player.skill_got[13]+bettermelee)*20),aimDirection),LanceShank)
 	{
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,3.5+longarms)
 	image_angle = direction
@@ -6281,7 +6278,7 @@ function scrFire2() {
 	{
 		dmg = 12;
 	longarms = 0
-	if instance_exists(Player)
+	
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,3.5+longarms)
 	image_angle = direction
@@ -6618,7 +6615,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x(6+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(6+((Player.skill_got[13]+bettermelee)*20),aimDirection),UltraLanceShank)
 	{
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,5+longarms)
 	image_angle = direction
@@ -7011,7 +7008,7 @@ function scrFire2() {
 	repeat(18)
 	{
 	with instance_create(x,y,Bullet2)
-	{motion_add(aimDirection+(random(80)-40)*other.accuracy,7+random(5))
+	{motion_add(aimDirection+(random(80)-40)*other.accuracy,7+random(6))
 	image_angle = direction
 	team = other.team}
 	}
@@ -7439,7 +7436,7 @@ function scrFire2() {
 	speed = other.speed*0.5;
 	direction = other.direction;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = Player.skill_got[13]+other.bettermelee
 	image_angle = direction
 	image_xscale = 1+(longarms*0.12);
@@ -7469,7 +7466,7 @@ function scrFire2() {
 		speed = other.speed*0.5;
 		direction = other.direction;
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = Player.skill_got[13]+other.bettermelee
 		image_angle = direction
 		image_xscale = 1+(longarms*0.12);
@@ -7483,7 +7480,7 @@ function scrFire2() {
 		speed = other.speed*0.5;
 		direction = other.direction;
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = Player.skill_got[13]+other.bettermelee
 		image_angle = direction
 		image_xscale = 1+(longarms*0.12);
@@ -7528,7 +7525,7 @@ function scrFire2() {
 	{
 		dmg = 20;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -7548,7 +7545,7 @@ function scrFire2() {
 	{
 		dmg = 17;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection-50*other.accuracy,2+longarms)
 	image_angle = direction
@@ -7564,7 +7561,7 @@ function scrFire2() {
 	{
 		dmg = 17;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection+50*other.accuracy,2+longarms)
 	image_angle = direction
@@ -7997,7 +7994,7 @@ function scrFire2() {
 	sprite_index=sprVeryHeavySlash;
 	dmg = 50//shovel is 8
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -8023,7 +8020,7 @@ function scrFire2() {
 	{
 	dmg = 60//energy hammer is 50
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -8083,7 +8080,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),ExplosionFlail)
 	{
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -8154,7 +8151,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x(30+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(30+((Player.skill_got[13]+bettermelee)*20),aimDirection),GhostShank)
 	{
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,3.5+longarms)
 	image_angle = direction
@@ -8163,7 +8160,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x(2+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(2+((Player.skill_got[13]+bettermelee)*20),aimDirection),GhostShank)
 	{
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,3+longarms)
 	image_angle = direction
@@ -8301,7 +8298,7 @@ function scrFire2() {
 	{
 	dmg = 5
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -8371,7 +8368,7 @@ function scrFire2() {
 		else
 		dmg = 9
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,3.5+longarms)
 	image_angle = direction
@@ -8690,7 +8687,7 @@ function scrFire2() {
 		sprite_index=sprUltraSlash;
 		dmg = 30
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,3+longarms)
 		image_angle = direction
@@ -8801,7 +8798,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x(3+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(3+(Player.skill_got[13]+bettermelee)*20,aimDirection),BigPandaSlash)
 	{
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -8849,7 +8846,7 @@ function scrFire2() {
 	dmg = 27
 	sprite_index=sprVeryHeavySlash;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -8859,7 +8856,7 @@ function scrFire2() {
 	dmg = 23
 	sprite_index=sprVeryHeavySlash;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection+50*other.accuracy,2+longarms)
 	image_angle = direction
@@ -8869,7 +8866,7 @@ function scrFire2() {
 	dmg = 23
 	sprite_index=sprVeryHeavySlash;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection-50*other.accuracy,2+longarms)
 	image_angle = direction
@@ -8971,7 +8968,7 @@ function scrFire2() {
 		image_yscale -= 0.15;
 		dmg = 4;
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
@@ -9225,7 +9222,7 @@ function scrFire2() {
 		dmg = 16
 		sprite_index = sprVeryHeavySlash
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
@@ -9236,7 +9233,7 @@ function scrFire2() {
 		dmg = 12
 		sprite_index = sprHeavySlash
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection+50*other.accuracy,2+longarms)
 		image_angle = direction
@@ -9247,7 +9244,7 @@ function scrFire2() {
 		dmg = 12
 		sprite_index = sprHeavySlash
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection-50*other.accuracy,2+longarms)
 		image_angle = direction
@@ -9257,7 +9254,7 @@ function scrFire2() {
 	{
 		dmg = 8
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection-120*other.accuracy,2+longarms)
 		image_angle = direction
@@ -9267,7 +9264,7 @@ function scrFire2() {
 	{
 		dmg = 8
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection+120*other.accuracy,2+longarms)
 		image_angle = direction
@@ -9277,7 +9274,7 @@ function scrFire2() {
 	{
 		dmg = 6;
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection+choose(180*other.accuracy,-180*other.accuracy),2+longarms)
 		image_angle = direction
@@ -9807,7 +9804,7 @@ function scrFire2() {
 	{
 		owner = other.id;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -9833,7 +9830,7 @@ function scrFire2() {
 	{
 		owner = other.id;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -9949,7 +9946,7 @@ function scrFire2() {
 	{
 	dmg = 10
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -9958,7 +9955,7 @@ function scrFire2() {
 	{
 	dmg = 8
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection+50*other.accuracy,2+longarms)
 	image_angle = direction
@@ -9967,7 +9964,7 @@ function scrFire2() {
 	{
 	dmg = 8
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection-50*other.accuracy,2+longarms)
 	image_angle = direction
@@ -10394,10 +10391,10 @@ function scrFire2() {
 	snd_play_fire(sndUltraShotgun)
 	snd_play_fire(sndSawedOffShotgun)
 
-	repeat(18)
+	repeat(19)
 	{
 	with instance_create(x,y,Bullet5)
-	{motion_add(aimDirection+(random(80)-40)*other.accuracy,10+random(6))//7 5
+	{motion_add(aimDirection+(random(80)-40)*other.accuracy,11+random(6))//7 5
 	image_angle = direction
 	team = other.team}
 	}
@@ -10646,7 +10643,7 @@ function scrFire2() {
 		sprite_index = sprHeavySlash;
 	dmg = 16
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -10911,7 +10908,7 @@ function scrFire2() {
 	{
 	longarms = 0
 	dmg = 10;
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,3.5+longarms)
 	image_angle = direction
@@ -10992,7 +10989,7 @@ function scrFire2() {
 	{
 		owner = other.id;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -11020,7 +11017,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x(5+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(5+((Player.skill_got[13]+bettermelee)*20),aimDirection),EnergyLanceShank)
 	{
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,3.5+longarms)
 	image_angle = direction
@@ -11050,7 +11047,7 @@ function scrFire2() {
 	speed = other.speed*0.5;
 	direction = other.direction;
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = Player.skill_got[13]+other.bettermelee
 	image_angle = direction
 	image_xscale = 1+(longarms*0.12);
@@ -11078,7 +11075,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*10,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*10,aimDirection),ExplosiveShank)
 	{
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection+(random(10)-5)*other.accuracy,5+longarms)
 	image_angle = direction
@@ -11105,9 +11102,9 @@ function scrFire2() {
 
 	with instance_create(x+lengthdir_x(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),BigPandaSlash)
 	{
-		dmg = 7;
+		dmg = 8;
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
@@ -11150,7 +11147,7 @@ function scrFire2() {
 	{
 		dmg = 15;
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
@@ -11212,13 +11209,13 @@ function scrFire2() {
 	{
 		owner = other.id;
 		dmg = 22
-		if instance_exists(Player) && Player.ultra_got[16]
+		 && Player.ultra_got[16]
 		{
 			dmg +=2;
 		}
 
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
@@ -11228,12 +11225,12 @@ function scrFire2() {
 	{
 		owner = other.id;
 		dmg = 18
-		if instance_exists(Player) && Player.ultra_got[16]
+		 && Player.ultra_got[16]
 		{
 			dmg +=2;
 		}
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection+50*other.accuracy,2+longarms)
 		image_angle = direction
@@ -11243,12 +11240,12 @@ function scrFire2() {
 	{
 		owner = other.id;
 		dmg = 18
-		if instance_exists(Player) && Player.ultra_got[16]
+		 && Player.ultra_got[16]
 		{
 			dmg +=2;
 		}
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection-50*other.accuracy,2+longarms)
 		image_angle = direction
@@ -11359,7 +11356,7 @@ function scrFire2() {
 	{
 	dmg = 25
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -11368,7 +11365,7 @@ function scrFire2() {
 	{
 	dmg = 22
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection+50*other.accuracy,2+longarms)
 	image_angle = direction
@@ -11377,7 +11374,7 @@ function scrFire2() {
 	{
 	dmg = 22
 	longarms = 0
-	if instance_exists(Player)
+	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection-50*other.accuracy,2+longarms)
 	image_angle = direction
@@ -11403,7 +11400,7 @@ function scrFire2() {
 	{
 		dmg = 14;
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,3.5+longarms)
 		image_angle = direction
@@ -11517,7 +11514,7 @@ function scrFire2() {
 		{
 		dmg = 6
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
@@ -11527,7 +11524,7 @@ function scrFire2() {
 		{
 		dmg = 6
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection+30*other.accuracy,2+longarms)
 		image_angle = direction
@@ -11537,7 +11534,7 @@ function scrFire2() {
 		{
 		dmg = 6
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection-30*other.accuracy,2+longarms)
 		image_angle = direction
@@ -11547,7 +11544,7 @@ function scrFire2() {
 		{
 		dmg = 6
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection+50*other.accuracy,2+longarms)
 		image_angle = direction
@@ -11557,7 +11554,7 @@ function scrFire2() {
 		{
 		dmg = 6
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection-50*other.accuracy,2+longarms)
 		image_angle = direction
@@ -12034,7 +12031,7 @@ function scrFire2() {
 		,EnergyLanceShank)
 		{
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,3.5+longarms)
 		image_angle = direction
@@ -12294,12 +12291,12 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),FlameSlash)
 	{
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
 		dmg = 14;
-			if instance_exists(Player)
+			
 			{
 
 				if Player.my_health <= 0
@@ -12361,7 +12358,7 @@ function scrFire2() {
 		sprite_index = sprMegaFireSlash;
 		mask_index = mskMegaSlash;
 		dmg = 19;
-		if instance_exists(Player)
+		
 		{
 
 		if Player.my_health <= 0
@@ -12374,7 +12371,7 @@ function scrFire2() {
 
 		}
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
@@ -12418,7 +12415,7 @@ function scrFire2() {
 	{
 		dmg = 10
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection+15*other.accuracy,2+longarms)
 		image_angle = direction
@@ -12428,7 +12425,7 @@ function scrFire2() {
 	{
 		dmg = 10
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection-15*other.accuracy,2+longarms)
 		image_angle = direction
@@ -12752,7 +12749,7 @@ function scrFire2() {
 	{
 		sprite_index = sprGoldenLanceSlash;
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,3.5+longarms)
 		image_angle = direction
@@ -12780,7 +12777,7 @@ function scrFire2() {
 	{
 		dmg = 20
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
@@ -12800,7 +12797,7 @@ function scrFire2() {
 		dmg = 18
 		length += 2;
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection+40*other.accuracy,2+longarms)
 		image_angle = direction
@@ -12820,7 +12817,7 @@ function scrFire2() {
 		dmg = 18
 		length += 2;
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection-40*Player.accuracy,2+longarms)
 		image_angle = direction
@@ -13380,7 +13377,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),SmallSlash)
 	{
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
@@ -13408,7 +13405,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),SmallSlash)
 	{
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.3+longarms)
 		image_angle = direction
@@ -13417,7 +13414,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*10,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*10,aimDirection),NarrowShank)
 	{
 		longarms = 0
-		if instance_exists(Player)
+		
 			longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection+(random(10)-5)*other.accuracy,9+longarms)
 		image_angle = direction
@@ -13439,7 +13436,7 @@ function scrFire2() {
 	with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),SmallSlash)
 	{
 		longarms = 0
-		if instance_exists(Player)
+		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.3+longarms)
 		image_angle = direction
@@ -13458,7 +13455,7 @@ function scrFire2() {
 		{
 			dmg += 3;
 			longarms = 0
-			if instance_exists(Player)
+			
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 			motion_add(aimDirection+(random(10)-5)*other.accuracy,9+longarms)
 			image_angle = direction
@@ -13507,7 +13504,7 @@ function scrFire2() {
 		{
 			dmg -= 1;
 			longarms = 0
-			if instance_exists(Player)
+			
 			longarms = (Player.skill_got[13]+other.bettermelee)*3
 			motion_add(aimDirection+oA,2.3+longarms)
 			image_angle = direction

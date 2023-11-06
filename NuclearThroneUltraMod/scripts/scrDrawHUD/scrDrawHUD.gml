@@ -72,6 +72,8 @@ function scrDrawHUD() {
 	{
 		armourX = 7;
 	}
+	if dataRef.race == 22
+		armourX += 12;
 	if instance_exists(BouncyFatFX)
 	{
 		draw_sprite(sprLoseAmmoHealth,BouncyFatFX.image_index,vx,vy);	
@@ -83,8 +85,8 @@ function scrDrawHUD() {
 	var dir=0;
 	repeat(armour)
 	{
-	dir++;
-	draw_sprite(sprArmour,0,vx+armourX+(15*dir),vy+4);
+		dir++;
+		draw_sprite(sprArmour,0,vx+armourX+(15*dir),vy+4);
 	}
 
 
@@ -111,8 +113,8 @@ function scrDrawHUD() {
 		}
 		else if dataRef.ultra_got[87] && dataRef.altUltra
 			spr = sprFreakRogueAmmoHUD;
-		draw_sprite(spr,0,vx+116,vy+11)
-		draw_sprite(spr,dataRef.rogueammo,vx+116,vy+11)
+		draw_sprite(spr,0,vx+115,vy+11)
+		draw_sprite(spr,dataRef.rogueammo,vx+115,vy+11)
 	}
 
 	//GAMEMODES

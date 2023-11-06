@@ -316,6 +316,10 @@ function scrSkills() {
 
 	skill_name[27] = "PATIENCE"
 	skill_text[27] = "CHOOSE A <g>MUTATION<g> NEXT AREA"
+	if instance_exists(Player) && Player.guarenteedReroll > 0
+	{
+		skill_text[27] = "CHOOSE A <g>MUTATION<g> NEXT AREA#REROLLS LEFT: "+ string(Player.guarenteedReroll);
+	}
 	skill_tips[27] = "wait"
 	skill_msnd[27] =  sndMutPatience
 	skill_bons[27] = "CHOOSE RIGHT AWAY";
@@ -412,10 +416,10 @@ function scrSkills() {
 	
 	
 	skill_name[37] = "ECSTACTIC FISTS"//REJUVINATED SKIN
-	skill_text[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <r>HEALTH<r> IS#+30% AT <r>MAX HP<r>"
+	skill_text[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <r>HEALTH<r> IS#+35% AT <r>MAX HP<r>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
-		skill_text[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <gb>ARMOUR<gb> IS#+30% AT <gb>MAX ARMOUR<gb>"
+		skill_text[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <gb>ARMOUR<gb> IS#+35% AT <gb>MAX ARMOUR<gb>"
 	}
 	skill_tips[37] = "glock those gun"
 	skill_msnd[37] =  sndMutEcstaticFists

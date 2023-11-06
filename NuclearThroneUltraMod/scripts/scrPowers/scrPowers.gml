@@ -12,9 +12,9 @@ function scrPowers() {
 		if UberCont.normalGameSpeed == 60
 		{
 			if alienIntestines < 60
-				alienIntestines += 0.5;
+				alienIntestines += 0.4;
 			else
-				alienIntestines += 0.25;
+				alienIntestines += 0.2;
 			if race == 25
 			{
 				alienIntestines += 0.05;	
@@ -23,9 +23,9 @@ function scrPowers() {
 		else
 		{
 			if alienIntestines < 60
-				alienIntestines += 1;
+				alienIntestines += 0.8;
 			else
-				alienIntestines += 0.5;
+				alienIntestines += 0.4;
 			if race == 25
 			{
 				alienIntestines += 0.1;	
@@ -41,7 +41,7 @@ function scrPowers() {
 		scrAlienIntestines();
 		
 		
-	if race = 26//Good O'l Humphry
+	if race == 26//Good O'l Humphry
 	{
 		var insufficientFunds = true;
 		var failText = "NOT ENOUGH AMMO";
@@ -210,7 +210,7 @@ function scrPowers() {
 		}
 	}
 
-	if race = 23 //Frog
+	if race == 23 //Frog
 	{
 	if skill_got[5]=1
 	{
@@ -224,7 +224,7 @@ function scrPowers() {
 	}
 	}
 
-	if race = 25//Mutation doctor
+	if race == 25//Mutation doctor
 	{
 
 		if ultra_got[99]
@@ -401,7 +401,7 @@ function scrPowers() {
 		}
 	}
 
-	if race = 16 && ((armour > 0 && !ultra_got[63]) || (ultra_got[63] && my_health > 2) || freeArmourStrike)//Viking
+	if race == 16 && ((armour > 0 && !ultra_got[63]) || (ultra_got[63] && my_health > 2) || freeArmourStrike)//Viking
 	{
 	    //63
 		if freeArmourStrike
@@ -420,7 +420,7 @@ function scrPowers() {
 	}
 
 
-	if race = 22 && !altUltra //Rogue
+	if race == 22 && !altUltra //Rogue
 	{
 		var radcost = 95;//Cost is also in portal
 		var useRad = ultra_got[88] == 1
@@ -467,7 +467,7 @@ function scrPowers() {
 
 	}
 
-	if race = 21//horror
+	if race == 21//horror
 	{
 		horrordelay = false;
 		if UberCont.normalGameSpeed == 60
@@ -541,12 +541,12 @@ function scrPowers() {
 	}
 
 
-	if race = 20 //business hog
+	if race == 20 //business hog
 	{
 	instance_create(x,y,ShopWheel);
 	}
 
-	if race = 19//Skeleton
+	if race == 19//Skeleton
 	{
 		if ultra_got[74] && altUltra//Skeleton alt ultra
 		{
@@ -896,7 +896,7 @@ function scrPowers() {
 		}
 	}
 
-	if race = 18//ANGEL
+	if race == 18//ANGEL
 	{
 	    if wep_type[wep] != 0
 	    {
@@ -1072,6 +1072,7 @@ function scrPowers() {
 			if PlayerAlarms.alarm[8] > 0
 			{
 				PlayerAlarms.hasTriedToTeleport = true;
+				race = keepRace;
 				return;	
 			}
 			PlayerAlarms.alarm[8] = 6;
@@ -1553,7 +1554,7 @@ function scrPowers() {
 	}
 
 	//ROBOT
-	if race = 8
+	if race == 8
 	{
 		if ultra_got[32]
 		{
@@ -1595,7 +1596,7 @@ function scrPowers() {
 	}
 
 	//FISH
-	if race = 1
+	if race == 1
 	{
 		if speed < 0.4
 			direction = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
@@ -1638,7 +1639,7 @@ function scrPowers() {
 	var ammoRebel = false;
 	if altUltra && Player.ultra_got[39]
 		ammoRebel = true;
-	if race = 10 and (!ammoRebel && (my_health > 2 || (race = 10 && !(instance_exists(Ally)) && my_health > 1) && alarm[3]<1)) || (ammoRebel && ammo[wep_type[wep]] >= typ_ammo[wep_type[wep]]*1.5)
+	if race == 10 and (!ammoRebel && (my_health > 2 || (race == 10 && !(instance_exists(Ally)) && my_health > 1) && alarm[3]<1)) || (ammoRebel && ammo[wep_type[wep]] >= typ_ammo[wep_type[wep]]*1.5)
 	{
 		canrebel = 1
 		if ammoRebel
@@ -1696,13 +1697,13 @@ function scrPowers() {
 	}
 
 	//CRYSTAL
-	if race = 2 and !instance_exists(CrystalShield)//Change this ability to longer lasting shield.
+	if race == 2 and !instance_exists(CrystalShield)//Change this ability to longer lasting shield.
 	{
 		instance_create(x,y,CrystalShield)
 	}
 
 	//MELTING
-	if race = 4
+	if race == 4
 	{
 		var didKill = false;
 		var numberOfEnems = 0;
@@ -1884,7 +1885,7 @@ function scrPowers() {
 	}
 
 	//PLANT
-	if race = 5 && !ultra_got[19]
+	if race == 5 && !ultra_got[19]
 	{
 		var poppedSeed = false;
 		if skill_got[5]
@@ -2327,7 +2328,7 @@ function scrPowers() {
 		image_speed=0.6;
 	}
 
-	if race = 23 //Frog
+	if race == 23 //Frog
 	{
 
 	//if ultra_got[92]=0
@@ -2774,7 +2775,7 @@ function scrPowers() {
 
 
 	//CHICKEN constant
-	if race = 9 && !(instance_exists(GenCont))
+	if race == 9 && !(instance_exists(GenCont))
 	{
 		room_speed=24;//15
 		if UberCont.normalGameSpeed == 60
@@ -2892,7 +2893,7 @@ function scrPowers() {
 	}
 
 	//STEROIDS
-	if race = 7 and bwep != 0 //and wep != 0
+	if race == 7 and bwep != 0 //and wep != 0
 	{
 		if !ultra_got[27] || altUltra
 			scrSwapWeps()
@@ -2927,7 +2928,7 @@ function scrPowers() {
 	}
 
 	//MIND CONTROL
-	if race = 3
+	if race == 3
 	{
 		if !audio_is_playing(sndEyesLoop) snd_loop(sndEyesLoop)
 
@@ -3042,40 +3043,41 @@ function scrPowers() {
 					sheepPower += 0.09;
 			}
 		}
-		else
+		else if sheepPower > 0
 		{
 			if is60fps
-				sheepPower = max(0, sheepPower - (0.4*0.5));
+				sheepPower = sheepPower - (0.4*0.5);
 			else
-				sheepPower = max(0, sheepPower - 0.4);
-		}
-		//speed=10;
-		var moveBoost = (skill_got[2]*1.4) + (skill_got[5]*1.4) + (ultra_got[5]*2.3);
-		if (is60fps)
-		{
-			//Move in opposite direction to reduce control
-			if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
-			hspeed += (2.2-moveBoost)*0.5
-			if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
-			hspeed -= (2.2-moveBoost)*0.5
-			if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
-			vspeed += (2.2-moveBoost)*0.5
-			if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
-			vspeed -= (2.2-moveBoost)*0.5
-			motion_add(direction,(3.5)*0.5);
-		}
-		else
-		{
-			//Move in opposite direction to reduce control
-			if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
-			hspeed += 2.2-moveBoost
-			if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
-			hspeed -= 2.2-moveBoost
-			if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
-			vspeed += 2.2-moveBoost
-			if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
-			vspeed -= 2.2-moveBoost
-			motion_add(direction,3.5);
+				sheepPower = sheepPower - 0.4;
+			sheepPower = max(sheepPower,0);
+			//speed=10;
+			var moveBoost = (skill_got[2]*1.4) + (skill_got[5]*1.4) + (ultra_got[5]*2.3);
+			if (is60fps)
+			{
+				//Move in opposite direction to reduce control
+				if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+				hspeed += (2.2-moveBoost)*0.5
+				if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+				hspeed -= (2.2-moveBoost)*0.5
+				if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+				vspeed += (2.2-moveBoost)*0.5
+				if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+				vspeed -= (2.2-moveBoost)*0.5
+				motion_add(direction,(3.5)*0.5);
+			}
+			else
+			{
+				//Move in opposite direction to reduce control
+				if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+				hspeed += 2.2-moveBoost
+				if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+				hspeed -= 2.2-moveBoost
+				if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+				vspeed += 2.2-moveBoost
+				if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+				vspeed -= 2.2-moveBoost
+				motion_add(direction,3.5);
+			}
 		}
 	}
 	}//END OF HOLD RMB
@@ -3083,7 +3085,7 @@ function scrPowers() {
 	{
 	audio_stop_sound(sndEyesLoop) audio_stop_sound(sndEyesLoopUpg) audio_stop_sound(sndChickenLoop)
 
-	if race = 9 //CHICKEN reset time
+	if race == 9 //CHICKEN reset time
 	{
 	room_speed=UberCont.normalGameSpeed;
 
@@ -3158,7 +3160,7 @@ function scrPowers() {
 	}
 	else if KeyCont.key_spec[p] != 1 and KeyCont.key_spec[p] != 2
 	{
-	if race = 20 
+	if race == 20 
 	{
 	with ShopWheel
 	alarm[0]=1;
@@ -3292,26 +3294,39 @@ function scrPowers() {
 	}
 	else if race==13 && !(ultra_got[51] && altUltra)
 	{
-	if KeyCont.key_spec[p] != 1 && KeyCont.key_spec[p] != 2 || !instance_exists(SheepStorm)//Sheep reset speed
-	{
-		//with SheepStorm
-		//	instance_destroy();
-
-		if UberCont.normalGameSpeed == 60
-			sheepPower = max(0, sheepPower - 5);
-		else
-			sheepPower = max(0, sheepPower - 10);
-		if sheepPower < 1
-			instance_destroy(SheepStorm);
-		if skill_got[2]==1//extra feet
+		if KeyCont.key_spec[p] != 1 && KeyCont.key_spec[p] != 2 || !instance_exists(SheepStorm)//Sheep reset speed
 		{
-			maxSpeed=4.5;
+			//with SheepStorm
+			//	instance_destroy();
+			if sheepPower > 0
+			{
+				if UberCont.normalGameSpeed == 60
+					sheepPower = max(0, sheepPower - 5);
+				else
+					sheepPower = max(0, sheepPower - 10);
+			}
+			else
+			{
+				if UberCont.normalGameSpeed == 60
+					sheepPower += 0.2*0.5;
+				else
+					sheepPower += 0.2;
+				sheepPower = min(sheepPower,0);
+			}
+			if sheepPower < 1
+				instance_destroy(SheepStorm);
+			else
+			{
+				if skill_got[2]==1//extra feet
+				{
+					maxSpeed=4.5;
+				}
+				else
+				{
+					maxSpeed=4;
+				}
+			}
 		}
-		else
-		{
-			maxSpeed=4;
-		}
-	}
 	}
 	else if race == 24 && KeyCont.key_spec[p] != 1 && KeyCont.key_spec[p] != 2
 	{

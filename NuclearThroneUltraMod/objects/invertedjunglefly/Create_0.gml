@@ -1,6 +1,6 @@
 event_inherited()
 raddrop = 16
-meleedamage = 2
+meleedamage = 6
 maxhealth = 30
 EnemyHealthAdjustments()
 spr_idle = sprInvertedJungleFlyIdle

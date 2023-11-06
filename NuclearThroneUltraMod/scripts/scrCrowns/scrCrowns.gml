@@ -208,6 +208,14 @@ function scrCrowns() {
 	crown_used[34] = 0
 	crown_tips[34] = "again"
 	
+	//have no melee
+	/*
+	crown_name[35] = "[CROWN OF DROWNING]"
+	crown_text[35] = "DOUBLE AMMO COST#+4 MAX HP#WHENEVER YOU RUN OUT OF AMMO#HEAL 3HP"
+	crown_used[35] = 0
+	crown_tips[35] = "again"
+	*/
+	
 	crownmax = 23//+12
 	secretcrownmax = 12;
 
