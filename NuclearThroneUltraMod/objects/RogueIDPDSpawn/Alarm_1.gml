@@ -79,14 +79,30 @@ if random(4)<1+min(loops-1,2) && loops>0//elite
     }
     if dir = 4
     {
-    with instance_create(x+random(4)-2,y+random(4)-2,SegwayPopo)
+    with instance_create(x+random(4)-2,y+random(4)-2,choose(ExploderPopo,BuffPopo,SegwayPopo))
     {
 		team=2;
 	    mask_index=mskAlly;
-	    spr_idle=sprRogueSegwayIDPDIdle;
-	    spr_walk=sprRogueSegwayIDPDWalk;
-	    spr_hurt=sprRogueSegwayIDPDHurt;
-	    spr_dead=sprRogueSegwayIDPDDead;
+	    
+		if object_index == SegwayPopo
+		{
+			spr_idle=sprRogueSegwayIDPDIdle;
+		    spr_walk=sprRogueSegwayIDPDWalk;
+		    spr_hurt=sprRogueSegwayIDPDHurt;
+		    spr_dead=sprRogueSegwayIDPDDead;
+		} else if object_index == BuffPopo
+		{
+			spr_idle=sprRogueBuffPopoIdle;
+		    spr_walk=sprRogueBuffPopoWalk;
+		    spr_hurt=sprRogueBuffPopoHurt;
+		    spr_dead=sprRogueBuffPopoDead;
+		}
+		{
+			spr_idle=sprRogueExploderPopo;
+		    spr_walk=sprRogueExploderPopoWalk;
+		    spr_hurt=sprRogueExploderPopoHurt;
+		    spr_dead=sprRogueExploderPopoDead;
+		}
 	    if instance_exists(Player)
 			motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,5)
 	    else
@@ -100,16 +116,7 @@ if random(4)<1+min(loops-1,2) && loops>0//elite
 
 //NORMAL
 
-dir = choose(1,1,1,1,5,5,5,2,2,3,3,3,4,4,4);//1,1,2,3,4
-
-
-if instance_exists(Player)
-{
-	if(Player.loops<1&&Player.area<2)//no shielders in desert start
-	{
-		dir = choose(1,1,1,5,5,1,3,3,4);//less chance inspector
-	}
-}
+dir = choose(1,1,1,6,6,5,5,2,2,3,3,4,4);//1,1,2,3,4
 
 
 if dir = 1
@@ -195,5 +202,20 @@ else if dir = 5
 			motion_add(random(360),4)
 	}	
 }
-
+else if dir = 6
+{
+	with instance_create(x+random(4)-2,y+random(4)-2,ExploderPopo)
+	{
+		team=2;
+		mask_index=mskAlly;
+		spr_idle=sprRogueExploderPopo;
+		spr_walk=sprRogueExploderPopoWalk;
+		spr_hurt=sprRogueExploderPopoHurt;
+		spr_dead=sprRogueExploderPopoDead;
+		if instance_exists(Player)
+			motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,4)
+		else
+			motion_add(random(360),4)
+	}	
+}
 

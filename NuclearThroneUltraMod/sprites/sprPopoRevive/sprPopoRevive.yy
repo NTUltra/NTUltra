@@ -34,7 +34,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e5a99408-d9d1-4082-b97e-a2e663c2b07e","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 4,
+  "origin": 9,
   "parent": {
     "name": "IDPDFreak",
     "path": "folders/Sprites/Enemies/IDPD/IDPDFreak.yy",
@@ -82,7 +82,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 24,
-    "yorigin": 24,
+    "yorigin": 38,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

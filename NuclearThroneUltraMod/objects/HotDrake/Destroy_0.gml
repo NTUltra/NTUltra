@@ -37,18 +37,6 @@ with instance_create(x,y+96,TrapFire)
 if audio_is_playing(sndDragonLoop)
 audio_stop_sound(sndDragonLoop)
 
-//drop Time Thrower?
-if(random(600)<1){
-with instance_create(x,y,WepPickup)
-{
-scrWeapons()
-wep =177
-name = wep_name[177]
-ammo = 0
-type = wep_type[177]
-curse = 0
-sprite_index = wep_sprt[177]
-}}
 with Hand
 {
 	if target == other.id || place_meeting(x,y,other.id) || point_distance(x,y,other.x,other.y) < 128

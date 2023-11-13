@@ -8,7 +8,6 @@ if instance_exists(creator)
 x = creator.x
 y = creator.y
 //FIRING
-snd_play_fire(sndWaveGun)
 
 with instance_create(x,y,Bullet6)
 {
@@ -28,7 +27,7 @@ scrCopyWeaponMod(other);
 BackCont.viewx2 += lengthdir_x(2,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 BackCont.viewy2 += lengthdir_y(2,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 BackCont.shake += 3
-creator.wkick = 7}
+creator.wkick = 6}
 
 
 if ammo <= 0

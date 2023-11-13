@@ -6,8 +6,6 @@ if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
 if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+10 and UberCont.mouse__y < y+16 and UberCont.mouse__x > x-10 and UberCont.mouse__y > y-16)
 {
 	KeyCont.key_fire[p] = 2;
-	with UberCont
-		canPickFrogCrown = false;
     with UberCont///UNLOCK CROWN
     {
 		crown_used[other.crown] += 1;
@@ -562,5 +560,7 @@ with FakeCrown
 			}
 		}
 	}
+	with UberCont
+		canPickFrogCrown = false;
 }
 

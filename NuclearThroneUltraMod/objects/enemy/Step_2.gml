@@ -17,21 +17,22 @@ if alarm[1] > 1 && alarm[1] < 3
 
 	if instance_exists(Player)
 	{
-		if Player.race!=3 && !(KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2)
+		if Player.race != 3 && !(KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2)
 		{
-		x=xprevious;
-		y=yprevious;
-
-		if sprite_index!=spr_hurt && Player.race=24//Elementor's passive
-		{
-			my_health-=0.5;
-			snd_play(snd_hurt, hurt_pitch_variation);
-			sprite_index=spr_hurt
+			x=xprevious;
+			y=yprevious;
+			if sprite_index != spr_hurt && Player.race=24//Elementor's passive
+			{
+				if UberCont.normalGameSpeed == 60
+					my_health -= 0.25;
+				else
+					my_health -= 0.5;
+				snd_play(snd_hurt, hurt_pitch_variation);
+				sprite_index=spr_hurt
+			}
 		}
-
-		}
-	speed=0;
-	target=-1;
+	speed = 0;
+	target = -1;
 	//image_speed=0;
 	}
 }

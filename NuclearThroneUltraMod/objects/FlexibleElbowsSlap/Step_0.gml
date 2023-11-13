@@ -9,8 +9,8 @@ if time == 1
 	followOwner = false;
 	with scrDrop(15,2)
 	{
-		x = tx;
-		y = ty;
+		x = other.tx;
+		y = other.ty;
 		motion_add(hk+180,6);
 	}
 	with target

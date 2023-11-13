@@ -2,37 +2,44 @@ function scrSaveStats() {
 
 	var dir; dir=0
 	repeat(racemax+1){
-	ini_write_real("STATS","ctotkill"+string(dir),ctot_kill[dir]);
+		ini_write_real("STATS","ctotkill"+string(dir),ctot_kill[dir]);
 
-	ini_write_real("STATS","ctottime"+string(dir),ctot_time[dir]);
+		ini_write_real("STATS","ctottime"+string(dir),ctot_time[dir]);
 
-	ini_write_real("STATS","ctotdead"+string(dir),ctot_dead[dir]);
+		ini_write_real("STATS","ctotdead"+string(dir),ctot_dead[dir]);
 	
-	ini_write_real("STATS","ctotplayed"+string(dir),ctot_played[dir]);
+		ini_write_real("STATS","ctotplayed"+string(dir),ctot_played[dir]);
 
-	ini_write_real("STATS","ctotloop"+string(dir),ctot_loop[dir]);
+		ini_write_real("STATS","ctotloop"+string(dir),ctot_loop[dir]);
 
-	ini_write_real("STATS","cbstkill"+string(dir),cbst_kill[dir]);
+		ini_write_real("STATS","cbstkill"+string(dir),cbst_kill[dir]);
 
-	ini_write_real("STATS","cbsttime"+string(dir),cbst_time[dir]);
+		ini_write_real("STATS","cbsttime"+string(dir),cbst_time[dir]);
 
-	ini_write_real("STATS","cbstdiff"+string(dir),cbst_diff[dir]);
+		ini_write_real("STATS","cbstdiff"+string(dir),cbst_diff[dir]);
 
-	ini_write_real("STATS","cbstloop"+string(dir),cbst_loop[dir]);
+		ini_write_real("STATS","cbstloop"+string(dir),cbst_loop[dir]);
 	
-	var cir = 0;
-	ctot_all_crowns_taken[dir] = 0;
-	repeat(crownmax + secretcrownmax)
-	{
-		ini_write_real("STATS","ctotcrownstaken"+string(dir)+"-"+string(cir),ctot_crown_taken[dir,cir]);
-		if (cir > 1)
+		var cir = 0;
+		ctot_all_crowns_taken[dir] = 0;
+		repeat(crownmax + secretcrownmax)
 		{
-			ctot_all_crowns_taken[dir] += ctot_crown_taken[dir,cir];
+			ini_write_real("STATS","ctotcrownstaken"+string(dir)+"-"+string(cir),ctot_crown_taken[dir,cir]);
+			if (cir > 1)
+			{
+				ctot_all_crowns_taken[dir] += ctot_crown_taken[dir,cir];
+			}
+			cir ++;
 		}
-		cir ++;
+		/*
+		cir = 0;
+		repeat(maxwep + 1)
+		{
+			ini_write_real("STATS","wep_found"+string(dir)+"-"+string(cir),wep_found[dir,cir]);
+			cir ++;
+		}*/
+		dir +=1;
 	}
-	
-	dir +=1;}
 	
 	ini_write_real("STATS","ctotwallsdestroyed",ctot_walls_destroyed);
 	var al = array_length(tot_areas);

@@ -170,6 +170,9 @@ function scrLoseSkill(skillIndex){
 			else
 				maxhealth += 3;//I guess you could have 3 hp as melting here but thats cool
 		break;
+		case 42: //TAIL END
+			betterTail = 1.5;
+		break;
 				
 	}
 	level -= 1;

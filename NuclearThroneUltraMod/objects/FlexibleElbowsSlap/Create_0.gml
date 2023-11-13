@@ -9,3 +9,4 @@ ty = y;
 snd_play(sndChickenThrow);
 queue = 0;
 hook = 0;
+scrInitDrops(1);

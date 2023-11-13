@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "sprJungleGorillaWalk",
   "bbox_bottom": 44,
-  "bbox_left": 10,
+  "bbox_left": 8,
   "bbox_right": 44,
   "bbox_top": 12,
   "bboxMode": 0,

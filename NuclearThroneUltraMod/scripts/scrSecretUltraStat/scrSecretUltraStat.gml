@@ -63,7 +63,7 @@ function scrSecretUltraStat() {
 	secret_ultra_text[7] = "SWAPPING MAKES YOU SWING#WITH YOUR WEAPON#SWINGS DEFLECT PROJECTILES#AND DEAL DAMAGE"
 	secret_ultra_tips[7] = "GET KNOCKED OUT"
 	secret_ultra_hint[7] = "COPY WIELD";
-	secret_ultra_unlk[7] = "HOLD TWO OF THE SAME WEAPON";
+	secret_ultra_unlk[7] = "HOLD TWO OF THE SAME WEAPON TYPE";
 
 
 	//ROBOT 

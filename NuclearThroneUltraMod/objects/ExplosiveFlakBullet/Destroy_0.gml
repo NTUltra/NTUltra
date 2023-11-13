@@ -5,6 +5,7 @@ repeat(lines)
 {
 	with instance_create(x,y,ExplosionQueueLine)
 	{
+		amount = other.ammo;
 		theDirection = ang;
 	}
 	ang += angStep;

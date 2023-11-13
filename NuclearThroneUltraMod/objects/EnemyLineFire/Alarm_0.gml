@@ -8,7 +8,7 @@ with instance_create(x,y,TrapFire)
 {motion_add(random(360),0.4)
 team = other.team
 move_contact_solid(direction,0.3)
-ignoreHitme=true;}
+}
 
 
 }

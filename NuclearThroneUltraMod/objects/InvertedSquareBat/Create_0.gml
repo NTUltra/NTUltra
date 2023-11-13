@@ -6,12 +6,12 @@ spr_idle = sprInvertedSquareBatIdle
 spr_walk = sprInvertedSquareBatIdle
 spr_hurt = sprInvertedSquareBatHurt
 spr_dead = sprInvertedSquareBatDead
-raddrop = 10;
-maxhealth = 15;
+raddrop = 8;
+maxhealth = 18;
 my_health = maxhealth;
 EnemyHealthAdjustments();
-actTime = 15;
-maxSpeed = 4;
+actTime = 14;
+maxSpeed = 5;
 circleDistance = 70;
 projectileSpeed = 4.1;
 projectileSpeedCircle = 3.1;

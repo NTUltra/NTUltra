@@ -3,7 +3,7 @@
 maxcharge -= 1
 
 if maxcharge>0&&instance_exists(Player)
-alarm[0] = chargetime+max(0,Player.reload*0.2);
+alarm[0] = max(1,chargetime+max(0,Player.reload*0.2));
 else
 {
 //snd_play(sndFastRatExpire);

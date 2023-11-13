@@ -5,6 +5,7 @@ their collision can be NORMAL, PIERCING or PIERCING AT OVERKILL (piercing checks
 their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
 they have a FORCE and can be 0 or DIRECTIONAL */
 event_inherited();
+boosted = false;
 team = 2;
 typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 morphType = 1;

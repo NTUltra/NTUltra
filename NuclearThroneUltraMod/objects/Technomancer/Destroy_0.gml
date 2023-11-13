@@ -2,7 +2,12 @@ scrDrop(100,0)
 scrDrop(50,4)
 speed = 0;
 event_inherited()
+with Player
+{
+	if race = 7
+		scrUnlockBSkin(7,"FOR DEFEATING THE BIG MACHINE#ON LOOP AS STEROIDS",0); 
 
+}
 if instance_number(myKind) < 2 && !instance_exists(SurvivalWave) && !instance_exists(WantBoss)
 {
 	with MusCont

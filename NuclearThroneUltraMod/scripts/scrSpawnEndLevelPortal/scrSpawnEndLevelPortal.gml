@@ -30,7 +30,7 @@ function scrSpawnEndLevelPortal(){
 					}
 					if dir != noone
 					{
-						if !instance_exists(UltraBigDogExplode) && !instance_exists(UltraBigDog)
+						if !instance_exists(UltraBigDogExplode) && !instance_exists(UltraBigDog) && !instance_exists(InvertedBigBadBat)
 						{
 							if instance_exists(Player)
 							{

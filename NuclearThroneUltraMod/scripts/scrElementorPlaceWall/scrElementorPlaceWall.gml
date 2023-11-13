@@ -37,7 +37,7 @@ function scrElementorPlaceWall(mx, my){
 			{
 				with instance_create(xx+8,yy+8,Dust)
 				{
-					motion_add(random(360),3+random(2));	
+					motion_add(random(360),4+random(3));	
 				}
 			}
 			with instance_create(xx,yy,ElementorWall)

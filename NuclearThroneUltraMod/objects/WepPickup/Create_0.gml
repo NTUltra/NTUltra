@@ -13,6 +13,7 @@ meleedamage = 0;
 pickedup=false;
 spr_hurt = false;
 oneweponly=false
+dontteleport = true;
 alarm[4] = 1;
 if isOneWeaponOnlyModes(){//one weapon only
 oneweponly=true;

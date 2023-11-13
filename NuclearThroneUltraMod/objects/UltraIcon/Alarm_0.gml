@@ -29,7 +29,7 @@ else if Player.race == 6 && skill == 23 && (Player.unlockAlternativeUltras || ((
 {
 	sprite_index = sprYvBlasphemy;
 }
-else if skill == 27 &&  Player.race == 7 && (Player.unlockAlternativeUltras || (Player.wep == Player.bwep))
+else if skill == 27 &&  Player.race == 7 && (Player.unlockAlternativeUltras || (Player.wep_type[Player.wep] == Player.wep_type[Player.bwep]))
 {
 	sprite_index = sprSteroidsPunchSwap;
 }
@@ -119,7 +119,8 @@ else if skill == 96 && Player.race == 24 && (Player.unlockAlternativeUltras || (
 {
 	sprite_index = sprAirLord;
 }
-else if skill == 97 && Player.race == 25 && (Player.unlockAlternativeUltras || !Player.skill_got[13] && !Player.skill_got[16] && !Player.skill_got[17] && !Player.skill_got[15] && !Player.skill_got[14])
+else if skill == 97 && Player.race == 25 && (Player.unlockAlternativeUltras || !Player.skill_got[13] && !Player.skill_got[16]
+&& !Player.skill_got[17] && !Player.skill_got[15] && !Player.skill_got[14] && !Player.skill_got[42])
 {
 	sprite_index = sprBeeKeeper;
 }

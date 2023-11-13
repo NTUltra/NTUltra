@@ -1,5 +1,6 @@
+
 function scrSkills() {
-	maxskill = 41;
+	maxskill = 42;
 
 
 	dir = 0
@@ -116,12 +117,12 @@ function scrSkills() {
 	
 	
 	skill_name[7] = "BLOODLUST"
-	skill_text[7] = "7.7% CHANCE KILLS REGENERATE <r>HP<r>#BOSS KILLS ALWAYS <r>HEAL<r>"
+	skill_text[7] = "7.7% CHANCE KILLS REGENERATE <r>HP<r>#BOSS KILLS ALWAYS <r>HEAL<r>#ENEMIES YOU HEAL FROM EXPLODE IN <r>BLOOD</r>"
 	if scrIsHardMode()//HARD MODE
-		skill_text[7] = "7.2% CHANCE KILLS REGENERATE <r>HP<r>#BOSS KILLS ALWAYS <r>HEAL<r>"
+		skill_text[7] = "7.2% CHANCE KILLS REGENERATE <r>HP<r>#BOSS KILLS ALWAYS <r>HEAL<r>#ENEMIES YOU HEAL FROM EXPLODE IN <r>BLOOD</r>"
 	skill_tips[7] = "drink blood"
 	skill_msnd[7] =  sndMutBloodlust
-	skill_bons[7] = "+0.2% CHANCE";
+	skill_bons[7] = "+0.25% CHANCE";
 
 
 	skill_name[8] = "GAMMA GUTS"
@@ -207,12 +208,12 @@ function scrSkills() {
 	skill_name[15] = "SHOTGUN SHOULDERS"
 	if isHand
 		skill_name[15] = "SHOTGUN KNUCKLES"
-	skill_text[15] = "ALL YOUR <w>BOUNCING PROJECTILES<w>#BOUNCE FURTHER#<w>SHELLS<w> CAN'T BE <w>DEFLECTED<w> BY ENEMIES"//#BOUNCER BULLETS CAN BOUNCE#ONE ADDITIONAL TIME" effect is minor no need to tell?
+	skill_text[15] = "ALL YOUR <w>BOUNCING PROJECTILES<w>#BOUNCE FURTHER#<w>SHELLS<w> DEAL <r>SPLASH DAMAGE<r>#<w>SHELLS<w> CAN'T BE <pi>DEFLECTED<pi> BY ENEMIES"//#BOUNCER BULLETS CAN BOUNCE#ONE ADDITIONAL TIME" effect is minor no need to tell?
 	skill_tips[15] = choose("shells are friends","shotgun shoulders\nextends close range damage\nfrom shotguns","shotgun shoulders\nincreases bouncer bullets bounces by 1","shotgun shoulders:\nincreases swordgun bounces")
 	skill_msnd[15] =  sndMutShotGunShoulders
 	skill_bons[15] = "+20% WALLBOUNCE";
 	if betterWepSpecific
-		skill_bons[15] = "+20% CLOSE DAMAGE DURATION +75% WALLBOUNCE";
+		skill_bons[15] = "+75% WALLBOUNCE +50% SPLASH DAMAGE RANGE";
 
 	skill_name[16] = "RECYCLE GLAND"
 	skill_text[16] = "65% OF HIT <w>BULLETS<w> BECOME <y>AMMO<y>#<w>BULLETS<w> CAN'T BE <w>DEFLECTED<w> BY ENEMIES"
@@ -309,7 +310,7 @@ function scrSkills() {
 	skill_bons[25] = "RECHARGES WHEN AT 75% HP";
 
 	skill_name[26] = "HAMMER HEAD"
-	skill_text[26] = "PUSH THROUGH A LIMITED NUMBER OF <w>WALLS<w>#FIND <y>RES<y><g>OUR<g><r>CES<r> IN WALLS#STRONGER <w>WALL DEBRIS<w>##UNUSED WALLBREAKS#GIVE <y>RES<y><g>OUR<g><r>CES<r> NEXT AREA"
+	skill_text[26] = "PUSH THROUGH A LIMITED NUMBER OF <w>WALLS<w>#FIND <y>RES<y><g>OUR<g><r>CES<r> IN WALLS##UNUSED WALLBREAKS#GIVE <y>RES<y><g>OUR<g><r>CES<r> NEXT AREA"
 	skill_tips[26] = "hello welcome to my#minecraft let's play"
 	skill_msnd[26] =  sndMutHammerHead
 	skill_bons[26] = "PUSH THROUGH 5 MORE WALLS";
@@ -407,9 +408,9 @@ function scrSkills() {
 	
 	skill_name[36] = "ABSORBING PORES"
 	if scrIsHardMode()
-		skill_text[36] = "<y>AMMO<y> AND <r>HP<r> DROPS GIVE <g>RADS<g>##EVERY 140TH <g>RAD<g> <r>HEALS<r> 1<r>HP<r>#(HEALING DOUBLED BY SECOND STOMACH)##<g>RADS<g> <w>RELOAD<w> YOUR WEAPONS"
+		skill_text[36] = "<y>AMMO<y> AND <r>HP<r> DROPS GIVE <g>RADS<g>##EVERY 150TH <g>RAD<g> <r>HEALS<r> 1<r>HP<r>#(HEALING DOUBLED BY SECOND STOMACH)##<g>RADS<g> <w>RELOAD<w> YOUR WEAPONS"
 	else
-		skill_text[36] = "<y>AMMO<y> AND <r>HP<r> DROPS GIVE <g>RADS<g>##EVERY 100TH <g>RAD<g> <r>HEALS<r> 1<r>HP<r>#(HEALING DOUBLED BY SECOND STOMACH)##<g>RADS<g> <w>RELOAD<w> YOUR WEAPONS"
+		skill_text[36] = "<y>AMMO<y> AND <r>HP<r> DROPS GIVE <g>RADS<g>##EVERY 120TH <g>RAD<g> <r>HEALS<r> 1<r>HP<r>#(HEALING DOUBLED BY SECOND STOMACH)##<g>RADS<g> <w>RELOAD<w> YOUR WEAPONS"
 	skill_tips[36] = "osmosis"
 	skill_msnd[36] =  sndMutAbsorbingPores
 	skill_bons[36] = "-5 RADS REQUIRED"
@@ -452,7 +453,30 @@ function scrSkills() {
 	skill_tips[41] = "conduit of power"
 	skill_bons[41] = "-2 HEALTH INSTEAD"
 	skill_msnd[41] =  sndMutNervesOfSteel;
-		
+	
+	skill_name[42] = "THE TAIL'S END"
+	skill_text[42] = "<w>BURST<w> WEAPONS FIRE MORE#<w>CHARGE<w> WEAPONS CHARGE FASTER"
+	skill_tips[42] = "tail end includes flamethrowers and is concidered a weapon specific mutation"
+	skill_bons[42] = "+10% CHARGE RATE & BURST AMOUNT"
+	if betterWepSpecific
+		skill_bons[42] = "DOUBLE BURST & INSTA CHARGE"
+	skill_msnd[42] =  sndMutTailEnd;
+	/*
+	A SET OF SPECIAL SECRET WEAPON SPECIFIC MUTATIONS YOU HAVE TO DO SOME SORT OF PRE-LOOP CHALLENGE FOR, REPLACES ONE LEVEL/NORMAL MUTATION
+	or just add them to the set its nice to encounter them and take them based on your weapon instead of going out of your way to get them
+	skill_name[42] = "ADRENALINE RUSH"
+	skill_text[42] = "AUTOMATIC WEAPONS RELOAD FASTER AS AMMO GETS LOWER"
+	skill_tips[42] = "this includes flamethrowers!"
+	skill_bons[42] = "+5% RELOAD SPEED"
+	skill_msnd[42] =  sndMutBouncyFat;
+	
+	skill_name[43] = "CLICKY HEELS"
+	skill_text[43] = "SINGLE FIRE WEAPONS HAVE A CHANCE TO INSTANTLY RELOAD"
+	skill_tips[43] = "chance depends on reload time"
+	skill_bons[43] = "+5% CHANCE"
+	skill_msnd[43] =  sndMutBouncyFat;
+	*/
+	
 	/*
 		NERVES OF STEEL / ADRENALINE
 		REPLACE 3 HEALTH WITH 1 ARMOUR
@@ -484,10 +508,11 @@ function scrSkills() {
 	skill_msnd[33] =  sndMutThronebutt
 	*/
 	
-	skill_name[42] = "NOTHING"
-	skill_text[42] = "THERE ARE <w>NO MORE<w> <g>MUTATIONS<g> LEFT!"
-	skill_tips[42] = ""
-	skill_msnd[42] =  sndPartyHorn
+	skill_name[43] = "NOTHING"
+	skill_text[43] = "THERE ARE <w>NO MORE<w> <g>MUTATIONS<g> LEFT!"
+	skill_tips[43] = ""
+	skill_bons[43] = ""
+	skill_msnd[43] =  sndPartyHorn
 
 
 }

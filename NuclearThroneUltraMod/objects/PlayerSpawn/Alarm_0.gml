@@ -92,6 +92,7 @@ with Player//Data to keep
 		betterrabbitpaw = other.betterrabbitpaw;
 		betterrecyclegland = other.betterrecyclegland;
 		betterboltmarrow = other.betterboltmarrow;
+		betterTail = other.betterTail;
 		accuracy = other.accuracy;
 		standartAccuracy = other.standartAccuracy;
 		invertedchance = other.invertedchance;
@@ -165,7 +166,7 @@ with Player//Data to keep
 	{
 		with RerollStation
 			instance_destroy();
-		alarm[3]=max(200,25*boostLevel);//immunity
+		alarm[3]=max(120,20*boostLevel);//immunity
 		snd_hurt = sndDamageNegate;
 		myShield = instance_create(x,y,EuphoriaShield)
 		with myShield

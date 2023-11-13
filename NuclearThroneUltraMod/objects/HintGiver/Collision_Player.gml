@@ -10,6 +10,7 @@ if active && sprite_index == spr_idle && KeyCont.key_pick[other.p] = 1
 		Player.ccurse = 0;
 		Player.isPermanent = true;
 		hasASecret = false;
+		scrUnlockGameMode(46,"FOR COMPLETING THE QUEST#FROM A CURSED FIEND");
 		event_perform(ev_alarm,3);
 	}
 	else if (hasASecret && alarm[3] > 0)

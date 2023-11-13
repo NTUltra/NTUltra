@@ -12,7 +12,7 @@ with Player
 	if skill_got[36]
 	{
 		speed = 6;
-		scrRaddrop(4);
+		scrRaddrop(choose(2,3,3));
 	}	
 }
 Player.rogueammo+=num;

@@ -5,7 +5,7 @@ dmg = 17;
 amountOfPellets = 2;
 if instance_exists(Player)
 {
-	if Player.skill_got[15] = 1
+	if Player.skill_got[15]
 		amountOfPellets+=1;
 }
 hitEntities = [];

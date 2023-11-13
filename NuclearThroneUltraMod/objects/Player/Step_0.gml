@@ -269,7 +269,9 @@ if !instance_exists(LevCont) and visible = 1
 			//scrn++;
 			
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			instance_create(f.x + 16,f.y + 16,JungleGorilla)
+			instance_create(f.x + 16,f.y + 16,SquareBat)
+			instance_create(f.x + 16,f.y + 16,InvertedSquareBat)
+
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
 			thing.mytext = "Gorilla";
 		}
@@ -281,6 +283,7 @@ if !instance_exists(LevCont) and visible = 1
 			thing.mytext = "CURSE TOGGLE";
 		}
 		if keyboard_check_pressed(ord("B")) {
+			instance_create(x+16,y,InvertedExploGuardianBullet);
 			wepmod1 ++;
 			wepmod2 ++;
 			wepmod3 ++;
@@ -1844,7 +1847,7 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 			for (var j = 0; j < al; j++) {
 				with projectiles[| j]
 				{
-					if team!=other.team//NOT FROM PLAYA!? O_O
+					if dodgeAble && team != other.team//NOT FROM PLAYA!? O_O
 			        {                     
 						other.extrafeetalarm=23;//after some time we check if you've dodged this
 						other.extrafeetdodged=true;
@@ -2122,6 +2125,7 @@ if instance_exists(PlayerAlarms2) && PlayerAlarms2.alarm[1] < 1
 	}
 }
 wave += 0.4;//Looping animations
+tailWave += 0.4;
 if instance_exists(ElementorWall) {
 	var wl = instance_place(x+hspeed+lengthdir_x(1,direction),y+vspeed+lengthdir_y(1,direction),ElementorWall);
 	if wl != noone

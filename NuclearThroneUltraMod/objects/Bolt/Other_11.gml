@@ -3,7 +3,19 @@ if speed != 0
 {
 	snd_play(sndBoltHitWall,0.1,true,true,1,false,true,0.76)
 	speed = 0
-	x -= lengthdir_x(14,image_angle);
-	y -= lengthdir_y(14,image_angle);
+	var tries = 0
+	while place_meeting(x,y,Wall) && tries < 10
+	{
+		x -= lengthdir_x(2,image_angle);
+		y -= lengthdir_y(2,image_angle);
+		tries ++;
+	}
+	tries = 0;
+	while !place_meeting(x,y,Wall) && tries < 10
+	{
+		x += lengthdir_x(2,image_angle);
+		y += lengthdir_y(2,image_angle);
+		tries ++;
+	}
 	instance_create(x,y,Dust)
 }

@@ -44,7 +44,7 @@ if instance_exists(Player) && Player.skill_got[26]
 {
 	x += 8;
 	y += 8;
-	if !scrDrop(1.26,0.75)
+	if !scrDrop(1.27,0.75)
 	{
 		var rebelBuff = 0;
 		if Player.ultra_got[39] && !Player.altUltra

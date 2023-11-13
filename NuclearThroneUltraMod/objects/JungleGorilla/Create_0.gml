@@ -1,19 +1,20 @@
-raddrop = 10
+raddrop = 12
 maxhealth = 90
 meleedamage = 4
-mySize = 1
+mySize = 2
 
 event_inherited()
-
+hurt_pitch_variation = 0.03;
 spr_idle = sprJungleGorilla
 spr_walk = sprJungleGorillaWalk
 spr_hurt = sprJungleGorillaHurt
 spr_dead = sprJungleGorillaDead
 
-snd_hurt = sndFlyMelee
-snd_dead = sndFlyDead
+snd_hurt = sndGorillaHurt
+snd_dead = sndGorillaDead
+snd_melee = sndGorillaMelee;
 
-spr_gun = sprShotgun;
+spr_gun = sprJungleGorillaGun;
 //behavior
 walk = 0
 gunangle = random(360)
@@ -21,6 +22,16 @@ alarm[1] = 30+random(90)
 wkick = 0
 actTime = 12;
 
-acc = 0.8;
-maxSpeed = 3;
+acc = 1;
+maxSpeed = 3.4;
 gunX = -10;
+projectileSpeed = 7.1;
+projectileSpeedDif = 0.2;
+loops = GetPlayerLoops()
+if loops > 0
+{
+	projectileSpeed += 0.15;
+	actTime -= 2;
+}
+fireDelay = 3;
+deathProjectile = 9;

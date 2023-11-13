@@ -233,6 +233,10 @@ with EnemyBullet1Square
 	if draw
 		draw_self();
 }
+with ExploderPopoExplode
+{
+	event_perform(ev_draw,0);	
+}
 with FlexibleElbowsSlap {
 	event_perform(ev_draw,0);
 }
@@ -248,7 +252,9 @@ with ScrapBossMissile
 {
 	draw_sprite_ext(trailSprite,-1,x,y,1,1,direction,c_white,1)
 	if draw
-		draw_sprite_ext(sprite_index,-1,x,y,1,1,direction,c_white,1)
+		draw_sprite_ext(sprite_index,-1,x,y,1,1,direction,c_white,1);
+	else
+		draw_sprite_ext(spr_hurt,0,x,y,1.1,1.1,direction,c_white,1);
 }
 with InvertedGuardianBulletSpawn
 {
@@ -450,15 +456,21 @@ with EyesBrainWashFX
 {
 	event_user(0);	
 }
+with Player
+{
+	if ultra_got[94] && instance_exists(PlayerAlarms2)
+	{
+		draw_sprite_ext(sprElementorFreeze,0,x,y,image_xscale,image_yscale,0,c_white,
+		lerp(0.5,0.8,( 1 + PlayerAlarms2.alarm[11] ) / 6));
+	}
+}
 scrDrawBloom()
-
 scrDarkness()
 if darkness = 1 && surface_exists(dark)
 {draw_set_blend_mode(bm_subtract)
 draw_surface(dark,__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ))
 draw_set_blend_mode(bm_normal)
 }
-
 if !instance_exists(MenuGen) && !instance_exists(ThroneIISpiral)
 {
 	with Spiral

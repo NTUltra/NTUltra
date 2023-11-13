@@ -1,4 +1,5 @@
 /// @description xxx
+depth = -3;
 image_speed = 0.4;
 snd_play(sndRecGlandProc,0.1,true);
 image_xscale = choose(1,-2);

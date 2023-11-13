@@ -2,14 +2,16 @@ event_inherited();
 friction = 0.68;
 
 image_speed=0.3;
-
 wallbounce = 0
+dmg = 22;
+alarm[1] = 4;
 if instance_exists(Player)
 {
 if Player.skill_got[15] = 1
 {
 wallbounce = 4
 friction = 0.6;
+alarm[1] += 3;
 if Player.race=25
 {
 wallbounce = 5;
@@ -18,6 +20,7 @@ if Player.ultra_got[97] && !Player.altUltra
 {
 wallbounce+=5;
 friction = 0.4;
+alarm[1]+=4;
 }
 }
 }

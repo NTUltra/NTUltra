@@ -6,10 +6,17 @@ my_health = maxhealth;
 team = 2;
 image_speed = 0.4;
 hurt_pitch_variation = 0;
+armour = 0;
+maxarmour = 0;
 scrWeapons();
 scrUltras();
 scrSkills();
 scrRaces();
+if race == 16
+{
+	armour = 1;
+	maxarmour = 2;
+}
 //Give long arms
 skill_got[13] = 1;
 drawempty = 0;
@@ -62,6 +69,7 @@ betterpluto = 39;
 betterrabbitpaw = 0.0;
 betterrecyclegland = 0;
 betterboltmarrow = 0;
+betterTail = 1.5;
 curse = 0;
 bcurse = 0;
 existTime = 30;

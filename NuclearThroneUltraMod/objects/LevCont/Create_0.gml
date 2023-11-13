@@ -312,53 +312,26 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 	exit;    
     
     }//end of the ultra code
-    else if Player.ultra_got[73]{//*/ Skelly ultra A redemption patience all da time
-    
-    scrSkills()//maybe dont run this when ultra
-
-    
-    if scrSkillLeft(0,0,0,0) 
-	{
-    do skill1 = ceil(random(maxskill))
-    until Player.skill_got[skill1] = 0
-	}
-    else
-    skill1=maxskill+1
-    
-    if scrSkillLeft(0,0,0,skill1)
-	{
-    do skill2 = ceil(random(maxskill))
-    until skill2 != skill1 and Player.skill_got[skill2] = 0
-	}
-    else
-    skill2=maxskill+1
-    
-    if scrSkillLeft(0,0,skill2,skill1)
-	{
-    do skill3 = ceil(random(maxskill))
-    until skill3 != skill1 and skill3 != skill2 and Player.skill_got[skill3] = 0
-	}
-    else
-    skill3=maxskill+1
-    
-    if scrSkillLeft(0,skill3,skill2,skill1)
-	{
-    do skill4 = ceil(random(maxskill))
-    until skill4 != skill1 and skill4 != skill2 and skill4 != skill3 and Player.skill_got[skill4] = 0
-	}
-    else
-    skill4=maxskill+1
-	
-	if scrSkillLeft(skill4,skill3,skill2,skill1)  
-	{
-    do skill5 = ceil(random(maxskill))
-    until skill5 != skill1 and skill5 != skill2 and skill5 != skill3 and skill5 != skill4 and Player.skill_got[skill5] = 0
-	}
-    else
-    skill5=maxskill+1
-    
-    }
-    else{
+    /*else if Player.ultra_got[73]{// Skelly ultra A redemption patience all da time
+		//MUTATIONS
+	    scrSkills()//maybe dont run this when ultra
+		amountOfSkills = 5;
+	    skills = array_create(amountOfSkills,maxskill+1);
+		for (var i = 0; i < amountOfSkills; i++)
+		{
+			var newSkill = 0;
+			if scrSkillLeft(skills)
+			{
+				do newSkill = ceil(random(maxskill))
+					until (!Player.skill_got[newSkill] && !array_contains(skills,newSkill))
+				skills[i] = newSkill;
+			}
+			else
+			{
+				skills[i] = maxskill + 1;
+			}
+		}
+    }*/
 	//Get a regular mutation
     if scrIsGamemode(32) {
 		//No alkaline boiling veins and no strong spirit
@@ -384,68 +357,33 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 	{
 		Player.skill_got[27] = 1;
 	}
-    if scrSkillLeft(0,0,0,0) 
-	{
-    do skill1 = ceil(random(maxskill))
-    until Player.skill_got[skill1] = 0
-	}
-    else
-    skill1=maxskill+1
-    
-    if Player.heavyheart=3
-    {
-    skill1=0;
-    Player.heavyheart=-999;//never again
-    }
-    
-    if scrSkillLeft(0,0,0,skill1)
-	{
-    do skill2 = ceil(random(maxskill))
-    until skill2 != skill1 and Player.skill_got[skill2] = 0
-	}
-    else
-    skill2=maxskill+1
-    
-    if scrSkillLeft(0,0,skill2,skill1)
-	{
-    do skill3 = ceil(random(maxskill))
-    until skill3 != skill1 and skill3 != skill2 and Player.skill_got[skill3] = 0
-	}
-    else
-    skill3=maxskill+1
-    
-    if scrSkillLeft(0,skill3,skill2,skill1) 
-	{
-    do skill4 = ceil(random(maxskill))
-    until skill4 != skill1 and skill4 != skill2 and skill4 != skill3 and Player.skill_got[skill4] = 0
-	}
-    else
-    skill4=maxskill+1
-    
-    
-    if scrSkillLeft(skill4,skill3,skill2,skill1) 
-	{
-    do skill5 = ceil(random(maxskill))
-    until skill5 != skill1 and skill5 != skill2 and skill5 != skill3 and skill5 != skill4 and Player.skill_got[skill5] = 0
-	}
-    else
-    skill5=maxskill+1
-    
+	//MUTATIONS
+	scrSkills()//maybe dont run this when ultra
+	amountOfSkills = 6;
+	if scrIsCrown(8)
+		amountOfSkills = 2;
 	if Player.race == 21 || Player.phoenixrevives > 6//Horror
-    {
-		if scrSkillLeft(skill5,skill4,skill3,skill2,skill1) 
+		amountOfSkills ++;
+	skills = array_create(amountOfSkills,maxskill+1);
+	for (var i = 0; i < amountOfSkills; i++)
+	{
+		var newSkill = 0;
+		if scrSkillLeft(skills)
 		{
-	    do skill6 = ceil(random(maxskill))
-	    until skill6 != skill1 and skill6 != skill2 and skill6 != skill3 and skill6 != skill4 and skill6 != skill5 and Player.skill_got[skill6] = 0
+			do newSkill = ceil(random(maxskill))
+				until (!Player.skill_got[newSkill] && !array_contains(skills,newSkill))
+			skills[i] = newSkill;
 		}
-	    else
-	    skill6=maxskill+1
+		else
+		{
+			skills[i] = maxskill + 1;
+		}
+	}
+    if !Player.skill_got[0] && Player.heavyheart > 2
+    {
+		skills[0] = 0;
+		Player.heavyheart = 0;
     }
-    
-    }
-
-
-//}
 
 	if scrIsGamemode(28)//ALL MUTATION CHOICES
 	{
@@ -495,95 +433,31 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 		}
 		scrollWidth = max(scrollWidth,0);
 	}
-    else if !scrIsCrown(8)
-    {
-    
-    if Player.race == 21 || Player.phoenixrevives > 6//Horror
-    {
-    if Player.ultra_got[73] || (Player.guarenteedReroll > 0)//Melting ultra A patience
-	{
-		Player.skill_got[27] = 0;
-		with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-140,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-			skill = 27
-	}
-		
-    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-112,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-    skill = other.skill1
-    
-    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-72,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-    skill = other.skill2
-    
-    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-    skill = other.skill3
-    
-    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-    skill = other.skill4
-    
-    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+72,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-    skill = other.skill5
-	
-	
-	with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+112,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-    skill = other.skill6
-    
-    }
-    else{
-	    if Player.ultra_got[73] || (Player.guarenteedReroll > 0)//Melting ultra A patience
-	    {
-			Player.skill_got[27] = 0;
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-96,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-				skill = 27
-	    }
-    
-	    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-64,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-	    skill = other.skill1
-    
-	    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-32,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-	    skill = other.skill2
-    
-	    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-	    skill = other.skill3
-    
-	    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+32,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-	    skill = other.skill4
-	
-		with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+64,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-	    skill = other.skill5
-	    }
-	}
     else
     {
-	    //CROWN OF DESTINYYYYYYY
-	    if Player.race == 21 || Player.phoenixrevives > 6
-	    {//horror
-    
-			chosenskill=choose(skill1,skill2,skill3,skill4)
-
-			with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-			skill = other.chosenskill
-
-			do{
-			otherchosenskill=choose(skill1,skill2,skill3,skill4)
-			}until (otherchosenskill!=chosenskill||otherchosenskill=32)
-
-			with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-			skill = other.otherchosenskill
-
-	    }
-	    else  
+		var totalSkillsPositioning = amountOfSkills - 1;
+		if Player.ultra_got[73] || (Player.guarenteedReroll > 0)//Melting ultra A patience
 	    {
-		    if Player.ultra_got[73] || (/*Player.skillsChosen == 7 && */Player.guarenteedReroll > 0)//Melting ultra A patience
-		    {
-				Player.skill_got[27] = 0;
-			    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-32,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-					skill = 27
-		    }
-    
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-		    skill = choose(other.skill1,other.skill2,other.skill3,other.skill4);
+			totalSkillsPositioning ++;
+		    with instance_create(0,0,SkillIcon)
+			{
+				totalSkills = totalSkillsPositioning;
+				skillIndex = totalSkillsPositioning;
+				skill = 27
+				event_perform(ev_alarm,1);
+			}
 	    }
-    
-    }
+		for (var i = 0; i < amountOfSkills; i++)
+		{
+			with instance_create(0,0,SkillIcon)
+			{
+				totalSkills = totalSkillsPositioning;
+				skillIndex = i;
+				skill = other.skills[i];
+				event_perform(ev_alarm,1);
+			}
+		}
+	}
     if instance_exists(Player)//EXTRA WINGS JOKE!
     {
 	    if Player.race=18

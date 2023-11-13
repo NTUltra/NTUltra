@@ -17,15 +17,19 @@ with GameRender
 }
 with DataRef
 	instance_destroy();
+
+tailWave = 0;
+drawTail = false;
+drawTailIntro = 0;
 depth = 0;
 myCorpse = noone;
 previousUltra = -1;
 hudArmourSpace = 0;
 radPickedUp = 0;
-maxRadPickedUp = 100;
+maxRadPickedUp = 120;
 saveLoaded = false;
 outOfCombat = false;
-guarenteedReroll = 2;
+guarenteedReroll = 0;
 metabolism = 0;
 restarted = false;
 hurt_pitch_variation = 0;
@@ -122,7 +126,7 @@ horrorEtaken = false;
 patience = 0;
 patienceUsed = 0;
 raddrop = 0;
-hurtDuration = 13; //Additional iframes
+hurtDuration = 12; //Additional iframes
 hurtTime = 0;
 lockoutElementor = false; //When no ammo lockout ability for elementor
 mushroomhead = sprMutant24IdleHead;
@@ -252,6 +256,7 @@ betterpluto = 39;
 betterrabbitpaw = 0.0;
 betterrecyclegland = 0;
 betterboltmarrow = 0;
+betterTail = 1.5;
 
 scrRaces()
 bskin = UberCont.skin[race];
@@ -301,13 +306,16 @@ if race == 7 && bskin == 2
 if race == 25
 {
 	//Better mutations
-	maxRadPickedUp = 95;
+	maxRadPickedUp = 115;
 }
 if race == 14//Panda
 {
 	mask_index = mskPanda;	
 }
-
+if race == 21//Horror
+{
+	guarenteedReroll += 2;
+}
 if race == 24//Elementor
 {
 	with ElementorHead
@@ -325,9 +333,11 @@ if scrIsGamemode(14) //fish companion only
 }
 oneweponlywep = 0;
 //WEAPON STUFF!
-if scrIsGamemode(1) { //one weapon only game mode yo
-    if UberCont.opt_gm1wep - 1 == 0 {
-        wep = ceil(irandom(maxwep));
+if (scrIsGamemode(1) || scrIsGamemode(46)) && (UberCont.opt_gm1wep == 0 || UberCont.wep_found[race,UberCont.opt_gm1wep]){ //one weapon only game mode yo
+    if UberCont.opt_gm1wep == 0 {
+		do {
+			wep = ceil(irandom(maxwep));
+		} until (UberCont.wep_found[race,wep])
     }
     else {
         wep = UberCont.opt_gm1wep
@@ -475,7 +485,7 @@ if scrIsHardMode()//HARD MODE
 		hard = 3;
 		instance_create(x,y,HardModeChest);
 	}
-	maxRadPickedUp += 40;
+	maxRadPickedUp += 30;
 	//Also in startDaily
 }
 inverted = false; //for when entering inverted portals

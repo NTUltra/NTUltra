@@ -11,7 +11,6 @@ if ammo > 0
 	            {
 	            motion_add(other.gunangle+random(4)-2,9)
 	            team = other.team
-	            ignoreHitme=true;
 	            }
 	walk=0;
 	speed=0;

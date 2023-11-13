@@ -52,8 +52,8 @@ function snd_play(sndId, randompitch = 0, cancelPrev = false, usesLocation = tru
 		}
 		if playSound
 		{
-			with instance_create(x,y,Sound)
-			{
+			var sfx = instance_create(x,y,Sound)
+			with sfx {
 				depth = other.depth;
 				mySound = sndId;
 				emitter = audio_emitter_create();
@@ -68,6 +68,7 @@ function snd_play(sndId, randompitch = 0, cancelPrev = false, usesLocation = tru
 				if owner > 0
 					alarm[1] = 1;
 			}
+			return sfx;
 		}
 	}
 }

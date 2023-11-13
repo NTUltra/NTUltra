@@ -747,7 +747,7 @@ function scrWeapons() {
 	wep_name[67] = "SWORD GUN"
 	wep_type[67] = 3
 	wep_auto[67] = 1
-	wep_load[67] = 12
+	wep_load[67] = 14
 	wep_cost[67] = 2
 	wep_sprt[67] = sprSwordGun
 	wep_area[67] = 8
@@ -1954,13 +1954,13 @@ function scrWeapons() {
 	wep_swap[176] = sndSwapShotgun
 	wep_rad[176] = 0;
 
-	wep_name[177] = "TIMETHROWER"
-	wep_type[177] = 4
+	wep_name[177] = "TIMETHROWER (REMOVED)"
+	wep_type[177] = 0
 	wep_auto[177] = 1
 	wep_load[177] = 6
-	wep_cost[177] = 1
+	wep_cost[177] = 0
 	wep_sprt[177] = sprTimeThrower
-	wep_area[177] = -1
+	wep_area[177] = -2
 	wep_text[177] = "time is ticking"
 	wep_swap[177] = sndSwapFlame
 	wep_rad[177] = 0;
@@ -6663,10 +6663,10 @@ function scrWeapons() {
 	wep_rad[602] = 12;//7 for one shot normally
 	
 	wep_name[603] = "SPLINTER SHOVEL"
-	wep_type[603] = 0
+	wep_type[603] = 3
 	wep_auto[603] = 0
 	wep_load[603] = 27
-	wep_cost[603] = 0
+	wep_cost[603] = 2
 	wep_sprt[603] = sprSplinterShovel
 	wep_area[603] = 15
 	wep_text[603] = "nails to the wall"
@@ -7402,7 +7402,7 @@ function scrWeapons() {
 	wep_name[670] = "NEEDLE"
 	wep_type[670] = 0
 	wep_auto[670] = 1
-	wep_load[670] = 11
+	wep_load[670] = 10
 	wep_cost[670] = 0
 	wep_sprt[670] = sprNeedle
 	wep_area[670] = 1
@@ -7435,13 +7435,57 @@ function scrWeapons() {
 	wep_name[673] = "DROM"
 	wep_type[673] = 0
 	wep_auto[673] = 0
-	wep_load[673] = 19
+	wep_load[673] = 14
 	wep_cost[673] = 0
 	wep_sprt[673] = sprDrom
-	wep_area[673] = 0
+	wep_area[673] = 9
 	wep_text[673] = "badonk"
 	wep_swap[673] = sndSwapHammer
 	wep_rad[673] = 0;
+	
+	wep_name[674] = "SCYTHER"
+	wep_type[674] = 1
+	wep_auto[674] = 0
+	wep_load[674] = 15
+	wep_cost[674] = 6
+	wep_sprt[674] = sprScyther
+	wep_area[674] = 11
+	wep_text[674] = "Melee bullets"
+	wep_swap[674] = sndSwapMachinegun
+	wep_rad[674] = 0;
+	
+	wep_name[675] = "ULTRA ASSAULT RIFLE"
+	wep_type[675] = 1
+	wep_auto[675] = 1
+	wep_load[675] = 9
+	wep_cost[675] = 5
+	wep_sprt[675] = sprUltraAssaultRifle
+	wep_area[675] = 22
+	wep_text[675] = "ultra classic"
+	wep_swap[675] = sndSwapMachinegun
+	wep_rad[675] = 11;
+	
+	wep_name[676] = "MICRO ASSAULT RIFLE"
+	wep_type[676] = 1
+	wep_auto[676] = 1
+	wep_load[676] = 12
+	wep_cost[676] = 4
+	wep_sprt[676] = sprMicroAssaultRifle
+	wep_area[676] = 2
+	wep_text[676] = "accurate hitscan"
+	wep_swap[676] = sndSwapMachinegun
+	wep_rad[676] = 0;
+	
+	wep_name[677] = "SUPER MICRO ASSAULT RIFLE"
+	wep_type[677] = 1
+	wep_auto[677] = 1
+	wep_load[677] = 12
+	wep_cost[677] = 12
+	wep_sprt[677] = sprSuperMicroAssaultRifle
+	wep_area[677] = 12
+	wep_text[677] = "super hitscan"
+	wep_swap[677] = sndSwapMachinegun
+	wep_rad[677] = 0;
 	
 
 	maxwep = array_length(wep_name)-1;

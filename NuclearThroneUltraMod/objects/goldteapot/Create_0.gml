@@ -4,7 +4,7 @@
 event_inherited();
 alarm[0] = 0;
 raddrop = 50;
-maxhealth = 190;
+maxhealth = 200;
 EnemyHealthAdjustments();
 spr_idle = sprGoldTeaPotIdle;
 spr_walk = sprGoldTeaPotWalk;

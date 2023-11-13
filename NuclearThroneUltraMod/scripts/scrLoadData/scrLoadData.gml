@@ -39,20 +39,6 @@ function scrLoadData() {
 	protowepmod32 = ini_read_real("DATA","protowepmod32",0);
 	protowepmod42 = ini_read_real("DATA","protowepmod42",0);
 
-	oneweponly298 = ini_read_real("DATA","oneweponly298",0);
-	oneweponly311 =ini_read_real("DATA","oneweponly311",0);
-	oneweponly315 = ini_read_real("DATA","oneweponly315",0);
-	oneweponly329 = ini_read_real("DATA","oneweponly329",0);
-	oneweponly177 = ini_read_real("DATA","oneweponly177",0);
-	oneweponly192 = ini_read_real("DATA","oneweponly192",0);
-	oneweponly69 = ini_read_real("DATA","oneweponly69",0);
-	oneweponly75 = ini_read_real("DATA","oneweponly75",0);
-	oneweponly264 = ini_read_real("DATA","oneweponly264",0);
-	oneweponly328 = ini_read_real("DATA","oneweponly328",0);
-	oneweponly231 = ini_read_real("DATA","oneweponly231",0);
-	oneweponly263 = ini_read_real("DATA","oneweponly263",0);
-	oneweponly214 = ini_read_real("DATA","oneweponly214",0);
-	oneweponly316 = ini_read_real("DATA","oneweponly316",0);
 	seedModeSeed = ini_read_real("DATA","savedseed",-1);
 	seedModeSeedText = ini_read_string("DATA","savedseedtext","");
 	if scrIsGamemode(38)

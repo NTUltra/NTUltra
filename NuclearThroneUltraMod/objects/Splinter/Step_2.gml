@@ -1,3 +1,7 @@
+if collision_line(xprev,yprev,x,y,Wall,false,false)
+{
+	event_user(1);
+}
 if speed<1 && alarm[1] < 1
 {
 	alarm[1] = 10+random(20);//delay before destroying
@@ -13,8 +17,4 @@ else if um == 0 || alarm[11] < 1
 	{
 		image_speed -= 0.1;
 	}
-}
-if collision_line(xprev,yprev,x,y,Wall,false,false)
-{
-	event_user(1);
 }

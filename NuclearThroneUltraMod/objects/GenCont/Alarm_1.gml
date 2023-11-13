@@ -111,6 +111,7 @@ if instance_exists(Player)
 	with Player
 	{
 		wkick = 0;
+		alienIntestines = 0;
 		x = 10016
 		y = 10016
 		scrForcePosition60fps();

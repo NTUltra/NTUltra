@@ -44,10 +44,15 @@ function scrPopProps() {
 	instance_create(myx,myy,ToxicTrap)
 
 
-	if random(4) < 1 and point_distance(myx,myy,Player.x,Player.y) > 64 and spawnarea = 7 //RANDOM LAVA
-	instance_create(myx,myy,FloorExplo)
-	if random(16) < 1 and point_distance(myx,myy,Player.x,Player.y) > 128 and spawnarea = 7 &&Player.subarea!=2//RANDOM TRAP
-	instance_create(myx,myy,Trap)
+		if random(4) < 1 and point_distance(myx,myy,Player.x,Player.y) > 64 and spawnarea = 7 //RANDOM LAVA
+			instance_create(myx,myy,FloorExplo)
+		if random(16) < 1 and point_distance(myx,myy,Player.x,Player.y) > 128 and spawnarea = 7 &&Player.subarea!=2//RANDOM TRAP
+			instance_create(myx,myy,Trap)
+		
+		if random(4) < 1 and point_distance(myx,myy,Player.x,Player.y) > 64 and spawnarea = 108 //RANDOM LAVA
+			instance_create(myx,myy,FloorExplo)
+		if random(16) < 1 and point_distance(myx,myy,Player.x,Player.y) > 128 and spawnarea = 108 &&Player.subarea!=2//RANDOM TRAP
+			instance_create(myx,myy,FrostTrap)
 
 	}
 	

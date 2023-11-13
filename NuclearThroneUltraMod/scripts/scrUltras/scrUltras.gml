@@ -175,7 +175,7 @@ function scrUltras(altOverride = false) {
 	ultra_name[27] = "MIRROR HANDS"
 	ultra_text[27] = "RIGHT CLICK FIRES YOUR PRIMARY#SWAPPING <w>RELOADS<w> YOUR WEAPONS"
 	ultra_tips[27] = "auto pop pop"
-	if altOverride || (instance_exists(Player) &&  Player.race == 7 && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && (Player.wep == Player.bwep))))
+	if altOverride || (instance_exists(Player) &&  Player.race == 7 && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && (Player.wep_type[Player.wep] == Player.wep_type[Player.bwep]))))
 	{
 		//Need to update alt ultra description in ultraIcon
 		ultra_name[27] = "PUNCHSWAP"
@@ -680,13 +680,11 @@ function scrUltras(altOverride = false) {
 	    ultra_tips[93] = "get to cover!"
     
 	    ultra_name[94] = "ICE COLD"
-	    ultra_text[94] = "<aq>COOL<aq> EVERYTHING NEAR YOU#STRONGER & HOMING <w>DEBRIS<w>#<w>DEBRIS<w> <aq>FREEZES<aq> ENEMIES##YOUR <w>WALLS<w> CREATE#MORE <w>DEBRIS<w> WHEN DESTROYED#BIGGER <w>TERRAFORM<w>"
-		//ultra_text[94] = "YOUR PRESENCE COOLS DOWN EVERYTHING#STRONGER FROST WEAPONS#FLAMES BECOME FROST FLAMES#ENEMY FLAMES SHRINK CLOSE TO YOU#ENEMIES THAT TOUCH YOU FREEZE"
-	    ultra_tips[94] = "ice ice CHAINREACTION BABY!"
+	    ultra_text[94] = "<aq>COOL<aq> EVERYTHING NEAR YOU#<aq>ICE COLD<aq> <w>WALLS<w>"
+	    ultra_tips[94] = "cool down"
     
 	    ultra_name[95] = "BURNING HOT"
 	    ultra_text[95] = "<r>FIRE<r> TRAIL#MORE <r>FLAME<r> DAMAGE#<r>FIRE<r> HOMES"
-		//ultra_text[95] = "BURNING HOMING DEBRIS##YOUR WALLS CREATE#MORE DEBRIS WHEN DESTROYED#STRONGER FIRE WEAPONS#FIRE TRAIL"
 	    ultra_tips[95] = "spicy"
 		
 	    ultra_name[96] = "TSUNAMI"
@@ -710,7 +708,8 @@ function scrUltras(altOverride = false) {
 	ultra_tips[97] = "delicacy"
 	
 	//No weapon specific mutations (except for bolt marrow)
-	if altOverride || (instance_exists(Player) &&  Player.race == 25 && (Player.altUltra || Player.unlockAlternativeUltras || (!Player.skill_got[13] && !Player.skill_got[16] && !Player.skill_got[17] && !Player.skill_got[15] && !Player.skill_got[14] && instance_exists(UltraIcon))))
+	if altOverride || (instance_exists(Player) &&  Player.race == 25 && (Player.altUltra || Player.unlockAlternativeUltras || (!Player.skill_got[13] && !Player.skill_got[16] && !Player.skill_got[17]
+	&& !Player.skill_got[15] && !Player.skill_got[14] && !Player.skill_got[42] && instance_exists(UltraIcon))))
 	{
 		ultra_name[97] = "BEEKEEPER"
 		ultra_text[97] = "<g>RADIATION<g> SPAWNS <w>SWARM BOLTS<w>"

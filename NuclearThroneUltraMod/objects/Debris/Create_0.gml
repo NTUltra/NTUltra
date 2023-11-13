@@ -66,45 +66,10 @@ motion_add(random(360),7+random(2))
 alarm[0] = 150+irandom(90)
 time = 10
 
-doFire = false;
-
-
 
 dmgDivision = 10;
 sizeDiv = 1;
-if instance_exists(Player)
-{
-	if Player.ultra_got[94]//elementor ultra Cold Heart
-	{
-		speed*=1.4
-		friction=0.17;
-		alarm[2] = 1;
-		image_xscale += 0.1;
-		image_yscale += 0.1;
-	}
-	if Player.skill_got[26]//Hammer head
-	{
-		dmgDivision -= 2;
-		speed *= 1.2;
-		speed = max(speed, 6);
-		sizeDiv = 0.8;
-		if Player.ultra_got[94]
-		{
-			//Its too much together
-			speed *= 0.95;
-		}
-	}
-}
-if instance_exists(enemy)
-{
-	var n = instance_nearest(x,y,enemy)
-	if n != noone && n.team != 2
-	{
-		var s = speed;
-		motion_add(point_direction(x,y,n.x,n.y),speed*0.6);
-		speed = s;
-	}
-}
+
 
 if speed > 0
 	alarm[1] = 1 + random(10)/speed+1

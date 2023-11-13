@@ -208,7 +208,18 @@ if (hasNoMenuOpen()
 		var scl = 1.5;
 		if (UberCont.crown_start[Menu.race])
 			draw_sprite_ext(sprCrown0Idle,0,xx,yy,scl,scl,0,c_white,1);
-		if wep == -1
+		if scrIsGamemode(1) && wep_found[Menu.race,UberCont.opt_gm1wep]
+		{
+			if (UberCont.opt_gm1wep == 0)
+			{
+				var spr = sprAnyRandomWeapon;
+			}
+			else
+			{
+				var spr = wep_sprt[UberCont.opt_gm1wep];
+			}
+		}
+		else if wep == -1
 			var spr = sprRandomWeapon;
 		else
 			var spr = wep_sprt[UberCont.start_wep[wep]];

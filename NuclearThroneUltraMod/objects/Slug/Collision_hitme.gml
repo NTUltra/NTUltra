@@ -6,11 +6,35 @@ my_health -= other.dmg
 sprite_index = spr_hurt
 image_index = 0
 motion_add(other.direction,7)
+snd_play(snd_hurt, hurt_pitch_variation,true)
 scrForcePosition60fps();
 if speed > maxSpeed+1
 	speed = maxSpeed+1;
 }
-snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
+if shotgunshouldered
+{
+	var direct = other.id;
+	var hits = ds_list_create();
+	var al = collision_circle_list(x,y,24,hitme,false,false,hits,false)
+	for (var i = 0; i < al; i++) {
+		// code here
+		with hits[| i]
+		{
+			if id != direct && team != other.team && my_health > 0
+			{
+				my_health -= 5
+				sprite_index = spr_hurt
+				image_index = 0
+				motion_add(other.direction,5)
+				scrForcePosition60fps();
+				if speed > maxSpeed+1
+					speed = maxSpeed+1;
+				snd_play(snd_hurt, hurt_pitch_variation,true)
+			}
+		}
+	}
+	ds_list_destroy(hits);
+}
 with instance_create(x,y,BulletHit)
 sprite_index = sprSlugHit}
 

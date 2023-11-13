@@ -34,9 +34,9 @@ if other.team != team and other.my_health > 0
 		{
 			if team != other.team && my_health > 0
 			{
-				my_health -= other.dmg - 20
+				my_health -= other.dmg - 40
 				if id == direct
-					my_health -= 20;
+					my_health -= 40;
 				sprite_index = spr_hurt
 				image_index = 0
 				motion_add(other.direction,9)

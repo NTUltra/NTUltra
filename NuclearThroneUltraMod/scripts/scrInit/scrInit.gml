@@ -14,11 +14,6 @@ function scrInit() {
 	scrCrowns();
 	scrSkills();
 	scrUltras();
-	
-	scrLoad();
-	scrLegacyWeaponStart();
-	
-	
 	//Hey don't read this
 	encrypted_data = {
 		username: "",
@@ -34,6 +29,11 @@ function scrInit() {
 		secrets: [false,false,false,false,false,false,false,false,false,false],
 	};
 	scrLoadEncrypted();
+	scrWeapons();
+	
+	scrLoad();
+	scrLegacyWeaponStart();
+	
 	
 	//To those who missed it
 	if scrCheckOneGold()//do all characters have at least one golden weapon

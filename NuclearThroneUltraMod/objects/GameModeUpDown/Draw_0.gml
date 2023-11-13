@@ -87,12 +87,12 @@ draw_set_colour(c_white);
 surface_reset_target();
 draw_surface(surf,gmx,y);
 var o = 48;
-if (gamemodeOrder[gamemodenr]==1 && UberCont.gamemode_have[1])
+if (gamemodeOrder[gamemodenr]==1 && UberCont.gamemode_have[1]) || (gamemodeOrder[gamemodenr]==46 && UberCont.gamemode_have[46])
 {
 	if !instance_exists(StartingWeaponUpDown)
-		instance_create(x+o,y+24,StartingWeaponUpDown);
+		instance_create(x+o,y+16,StartingWeaponUpDown);
 }
-else{
+else {
 	with StartingWeaponUpDown
 		instance_destroy()
 }

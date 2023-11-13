@@ -1,5 +1,13 @@
 function scrLoadStats() {
 	var dir; dir=0;
+	var cir = 0;
+	repeat(maxwep + 1)
+	{
+		any_wep_found[cir] = ini_read_real("STATS","any_wep_found"+string(cir),0);
+		cir ++;
+	}
+	any_wep_found[0] = true;
+	any_wep_found[1] = true;
 	repeat(racemax+1){
 		//Stats per character yes we love stats #thronebutt.com
 		ctot_kill[dir] = ini_read_real("STATS","ctotkill"+string(dir),0);
@@ -20,7 +28,7 @@ function scrLoadStats() {
 
 		cbst_loop[dir] = ini_read_real("STATS","cbstloop"+string(dir),0);
 		
-		var cir = 0;
+		cir = 0;
 		ctot_all_crowns_taken[dir] = 0;
 		repeat(crownmax + secretcrownmax)
 		{
@@ -31,6 +39,16 @@ function scrLoadStats() {
 			}
 			cir ++;
 		}
+		cir = 0;
+		repeat(maxwep + 1)
+		{
+			wep_found[dir,cir] = ini_read_real("STATS","wep_found"+string(dir)+"-"+string(cir),0);
+			cir ++;
+		}
+		wep_found[dir,0] = true;
+		wep_found[dir,1] = true;
+		wep_found[dir,race_swep[dir]] = true;
+		any_wep_found[race_swep[dir]] = true;
 		dir +=1;
 	}
 

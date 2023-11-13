@@ -856,6 +856,7 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		betterrabbitpaw = other.betterrabbitpaw;
 		betterrecyclegland = other.betterrecyclegland;
 		betterboltmarrow = other.betterboltmarrow;
+		betterTail = other.betterTail;
 		if skill_got[2] {
 			scrApplyExtraFeet();
 		}

@@ -22,7 +22,7 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 	if Player.skill_got[36]
 	{
 		speed = 6;
-		scrRaddrop(3);
+		scrRaddrop(choose(2,3,3));
 	}
 	var randomAmmo = true;
 
@@ -90,11 +90,23 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 			}
 			else
 			{
-				type = choose(pt,st)
+				if pt == st && ran > 5.5//Ammo type is the same very slim chance to get completly random ammo
+					type = 0;
+				else
+					type = choose(pt,st);
 			}
 		}
-		else
-			type = pt
+		else {
+			//Single handed
+			if ran > 3
+			{
+				type = pt
+			}
+			else
+			{
+				type = choose(pt,st);
+			}
+		}
 	}
 
 	//Roids get loaded ultra
@@ -102,7 +114,7 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 	//type = pt;
 
 	if type == 0 || Player.ammo[type] > Player.typ_amax[type]
-	type = choose(1,2,3,4,5);
+		type = choose(1,2,3,4,5);
 
 	extra = 0
 	//RUSH CROWN
@@ -117,9 +129,9 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 		extra +=1;
 
 	if isCursed
-	gain_multiplier += 0.5
+		gain_multiplier += 0.5
 	if isSuperCursed
-	gain_multiplier += 0.5
+		gain_multiplier += 0.5
 
 	Player.ammo[type] += floor((Player.typ_ammo[type]+extra) * gain_multiplier)
 

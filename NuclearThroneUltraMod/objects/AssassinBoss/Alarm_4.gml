@@ -2,6 +2,7 @@
 
 with instance_nearest(instance_furthest(x+random(120)-60,y+random(120)-60,Floor).x,instance_furthest(x+random(120)-60,y+random(120)-60,Floor).y,Floor)
 {
+	alarm[8] += 60;
 	var o = 16;
 	if object_index == FloorExplo
 		o = 8;

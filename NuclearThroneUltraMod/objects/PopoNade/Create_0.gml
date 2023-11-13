@@ -1,7 +1,10 @@
 event_inherited();
 friction = 0
 alarm[1] = 10
-alarm[0] = 90
+alarm[0] = 60
+//loops = GetPlayerLoops();
+//if loops > 0
+
 alarm[2] = 1;
 alarm[6] = 10;
 gotHit = false;

@@ -44,18 +44,7 @@ function scrCollectHP(num = 2){
 				sprite_index = sprHealBigFX;
 			}
 			snd_play(sndHealthPickupUpg)
-			if Player.skill_got[36]
-			{
-				/*
-				var d = point_direction(x,y,other.x,other.y)
-				with instance_create(other.x + lengthdir_x(4,d),other.y + lengthdir_y(4,d),Rad)
-				{
-					motion_add(d,2);
-				}
-				*/
-				speed = 6;
-				scrRaddrop(3);
-			}	
+			
 		if Player.race=25 && random(10)<5//mutation smith/doctor
 		num = 5
 		else
@@ -68,7 +57,18 @@ function scrCollectHP(num = 2){
 
 			instance_create(x,y,HealFX)
 		}
-
+		if Player.skill_got[36]
+		{
+			/*
+			var d = point_direction(x,y,other.x,other.y)
+			with instance_create(other.x + lengthdir_x(4,d),other.y + lengthdir_y(4,d),Rad)
+			{
+				motion_add(d,2);
+			}
+			*/
+			speed = 6;
+			scrRaddrop(choose(2,3,3));
+		}
 		if scrIsGamemode(9) //Casual mode
 			num +=1;
 

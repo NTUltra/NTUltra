@@ -109,12 +109,16 @@ if other.team != team && team != 0
 							image_yscale=s;
 							xx=other.x
 							yy=other.y
-							debrisAmount=choose(1,2);
+							debrisAmount = 3;
 							owner=other.id;
 						}
-					alarm[11]+=20;
+						alarm[11]+=20;
 					if alarm[1] > 0
 							alarm[1] += 10;
+					}
+					else if alarm[1] > 0
+					{
+						alarm[1] += 10;
 					}
 				}
 			}

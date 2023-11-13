@@ -114,6 +114,13 @@ Player.betterboltmarrow = 7;
 if Player.ultra_got[97] && !Player.altUltra
 Player.betterboltmarrow=20;
 }
+else if skill == 42//Tail end
+{
+	if Player.race == 25
+		Player.betterTail = 1.6;
+	if Player.ultra_got[97] && !Player.altUltra
+		Player.betterTail = 2;
+}
 else if skill = 18//last wish
 {
 	if Player.race=25

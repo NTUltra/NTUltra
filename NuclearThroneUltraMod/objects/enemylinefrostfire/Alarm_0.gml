@@ -9,7 +9,7 @@ with instance_create(x,y,EnemyIceFlame)
 {motion_add(random(360),0.6)
 team = other.team
 move_contact_solid(direction,0.3)
-ignoreHitme=true;}
+}
 
 
 }

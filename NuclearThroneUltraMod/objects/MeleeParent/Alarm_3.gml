@@ -2,8 +2,10 @@
 alarm[3] = 1;
 if place_meeting(x,y,Wall)
 {
-	x -= hspeed*wallPierce;
-	y -= vspeed*wallPierce;
+	x -= min(3,hspeed)*wallPierce;
+	y -= min(3,vspeed)*wallPierce;
+	speed *= 0.9;
+	/*
 	if speed > 2
 	{
 		var msk = mask_index;
@@ -12,6 +14,7 @@ if place_meeting(x,y,Wall)
 		y += lengthdir_y(speed,image_angle)
 		mask_index = msk;
 	}
+	*/
 	if walled = 0
 	{
 		with instance_create(other.x+8,other.y+8,MeleeHitWall)

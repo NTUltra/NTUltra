@@ -3,10 +3,12 @@ friction = 0.8
 
 wallbounce = 0
 alarm[1] = 4;
+shotgunshouldered = false;
 if instance_exists(Player)
 {
 	if Player.skill_got[15] = 1
 	{
+		shotgunshouldered = true;
 		wallbounce = 8
 		friction = 0.6
 		alarm[1] += 3;

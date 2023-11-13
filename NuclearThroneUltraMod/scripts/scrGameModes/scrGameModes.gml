@@ -11,14 +11,14 @@ function scrGameModes() {
 	gamemode_have[1] = 0;
 	gamemode_tip[1] = "THERE CAN BE ONLY ONE WEAPON";
 	gamemode_description[1] = "";
-	gamemode_nocombo[1] = [2,11,13,14,26,27,31,37,8];
+	gamemode_nocombo[1] = [2,13,14,26,27,31,37,8,46];
 
 	gamemode[2] = "FAVOURABLE BUILD";//
 	gamemode_unlock[2] = "PICK UP A FAVOURABLE WEAPON";
 	gamemode_have[2] = 0;
 	gamemode_tip[2] = "FAVOURABLE BUILD!";
 	gamemode_description[2] = "ONLY GOOD WEAPONS DROP";
-	gamemode_nocombo[2] = [1,26,27,31,37,8];
+	gamemode_nocombo[2] = [1,46,26,27,31,37,8];
 
 	gamemode[3] = "NO HUD";//
 	gamemode_unlock[3] = "KILL A THIEF";
@@ -60,7 +60,7 @@ function scrGameModes() {
 	gamemode_have[8] = 0;
 	gamemode_tip[8] = "I AM FAN OF THE VAN";
 	gamemode_description[8] = "SURVIVE AGAINST AN ONSLAUGHT OF VANS, PUSH INCOMING VANS AWAY WITH YOUR FAN (WARNING FLASHING LIGHTS)";
-	gamemode_nocombo[8] = [1,2,4,5,6,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41];
+	gamemode_nocombo[8] = [1,46,2,4,5,6,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41];
 
 	gamemode[9] = "CASUAL MODE";//
 	gamemode_unlock[9] = "DIE ON 1-1";
@@ -100,14 +100,14 @@ function scrGameModes() {
 	gamemode_have[13] = 0;
 	gamemode_tip[13] = "ROCKET GLOVE!";
 	gamemode_description[13] = "\nNO MOVEMENT JUST A ROCKET GLOVE";
-	gamemode_nocombo[13] = [1,7,11,14,26,27,37,8];
+	gamemode_nocombo[13] = [1,46,7,11,14,26,27,37,8];
 
 	gamemode[14] = "FISH'S PARTNER";//
 	gamemode_unlock[14] = "TAKE FISH'S ULTRA: BUDDY COP";
 	gamemode_have[14] = 0;
 	gamemode_tip[14] = "YOU GOT THIS PARTNER";
 	gamemode_description[14] = "NO WEAPONS! JUST FISH'S PARTNER";
-	gamemode_nocombo[14] = [1,7,11,13,14,26,27,31,35,37,8];
+	gamemode_nocombo[14] = [1,46,7,11,13,14,26,27,31,35,37,8];
 
 	gamemode[15] = "NO MUTATIONS";//
 	gamemode_unlock[15] = "GET TO THE SCRAPYARD AT LEVEL 1";
@@ -197,14 +197,14 @@ function scrGameModes() {
 	gamemode_have[26] = 1;
 	gamemode_tip[26] = "GOTTA GO FAST";
 	gamemode_description[26] = "COMPETE FOR THE FASTEST TIME IN THE LEADERBOARD, TIME ENDS WHEN YOU KILL THRONE II";
-	gamemode_nocombo[26] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,0,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,43];
+	gamemode_nocombo[26] = [1,46,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,0,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,43];
 	
 	gamemode[27] = "DAILY SCORE";
 	gamemode_unlock[27] = "";
 	gamemode_have[27] = 1;
 	gamemode_tip[27] = "SWEATING";
 	gamemode_description[27] = "COMPETE FOR SCORE IN THE LEADERBOARD";
-	gamemode_nocombo[27] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,0,28,29,30,31,32,33,34,35,36,37,38,39,40,41,43];
+	gamemode_nocombo[27] = [1,46,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,0,28,29,30,31,32,33,34,35,36,37,38,39,40,41,43];
 	
 	gamemode[28] = "ALL MUTATION#CHOICES";
 	gamemode_unlock[28] = "TAKE EVERY REGULAR MUTATION#ATLEAST ONCE";
@@ -218,14 +218,14 @@ function scrGameModes() {
 	gamemode_have[29] = 0;
 	gamemode_tip[29] = "INFINITE AMMO!";
 	gamemode_description[29] = "";
-	gamemode_nocombo[29] = [1,26,27,37,8];
+	gamemode_nocombo[29] = [26,27,37,8];
 	
 	gamemode[30] = "ULTRA MUTATION#START";
 	gamemode_unlock[30] = "TAKE 20 DIFFERENT#ULTRA MUTATIONS";
 	gamemode_have[30] = 0;
 	gamemode_tip[30] = "START STRONG";
 	gamemode_description[30] = "\nSTART WITH AN ULTRA MUTATION";
-	gamemode_nocombo[30] = [1,26,27,35,37,8];
+	gamemode_nocombo[30] = [26,27,35,37,8];
 	
 	gamemode[31] = "MELEE ONLY";
 	//gamemode_description[31] = "YOU ONLY GET MELEE WEAPONS#START WITH LONG ARMS";
@@ -275,7 +275,7 @@ function scrGameModes() {
 	gamemode_have[37] = 1;
 	gamemode_tip[37] = "WHAT A WEEK";
 	gamemode_description[37] = "EACH WEEK OFFERS A DIFFERENT GAMEMODE. YOU CAN REPLAY THE WEEKLY THROUGHOUT THE WEEK TO IMPROVE YOUR SCORE";
-	gamemode_nocombo[37] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,27,28,29,30,31,32,33,34,35,36,0,38,39,40,41,43];
+	gamemode_nocombo[37] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,27,28,29,30,31,32,33,34,35,36,0,38,39,40,41,43,46];
 	
 	gamemode[38] = "SEEDED";
 	gamemode_unlock[38] = "USE PLANT'S SNARE#VERY RAPIDLY";
@@ -326,6 +326,13 @@ function scrGameModes() {
 	gamemode_description[45] = "AREAS SPAWN RANDOM ENEMIES, CLASSIC LOOP! (STILL W.I.P. MIGHT ADD RANDOM BOSSES <3)";
 	gamemode_nocombo[45] = [26,27,37,8,25,42,44,40];
 	
+	gamemode[46] = "ANY START WEAPON";//
+	gamemode_unlock[46] = "COMPLETE THE QUEST FROM A SUSPICIOUS CURSED FIEND IN THE CROWNVAULT";
+	gamemode_have[46] = 0;
+	gamemode_tip[46] = "WHATEVER YOU WANT";
+	gamemode_description[46] = "";
+	gamemode_nocombo[46] = [1,2,13,14,26,27,31,37,8];
+	
 	/*
 	gamemode[43] = "ALTERNATIVE SPAWNS";
 	gamemode_unlock[43] = "AQUIRE THE MULTI-CROWN";
@@ -364,6 +371,7 @@ function scrGameModes() {
 	i++; gamemodeOrder[i] = 3;//No HUD
 	i++; gamemodeOrder[i] = 39;//Gore galore
 	i++; gamemodeOrder[i] = 1;//One wep only
+	i++; gamemodeOrder[i] = 46;//Any weapon
 	i++; gamemodeOrder[i] = 31;//Melee only
 	i++; gamemodeOrder[i] = 2;//Favourable build
 	i++; gamemodeOrder[i] = 5;//1hp equality

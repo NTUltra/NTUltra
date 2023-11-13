@@ -9,14 +9,14 @@ if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(5) < 4
 {//SEE PLAYER & FLEE
 	if random(3) < 2 && point_distance(x,y,target.x,target.y) < 200
 	{
-	motion_add(point_direction(target.x,target.y,x,y)+random(80)-40,0.4)
-	walk = actTime*3+random(10)
-	alarm[1] = walk
-	gunangle = direction
-	if hspeed > 0
-	right = 1
-	else if hspeed < 0
-	right = -1
+		motion_add(point_direction(target.x,target.y,x,y)+random(80)-40,0.4)
+		walk = actTime*3+random(10)
+		alarm[1] = walk
+		gunangle = direction
+		if hspeed > 0
+			right = 1
+		else if hspeed < 0
+			right = -1
 	}
 	else
 	{

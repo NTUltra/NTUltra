@@ -6,8 +6,8 @@ alarm[1]=5;
 shotgunshouldered = false;
 if instance_exists(Player)
 {
-if Player.race==24
-	alarm[1] += 2;
+	if Player.race==24
+		alarm[1] += 2;
 	if Player.skill_got[15] = 1
 	{
 		shotgunshouldered = true;

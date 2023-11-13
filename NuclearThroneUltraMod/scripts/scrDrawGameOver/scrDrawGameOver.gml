@@ -135,7 +135,7 @@ function scrDrawGameOver() {
 		draw_set_alpha(0.8);
 		draw_rectangle(vx,vy,vx+__view_get( e__VW.WView, 0 ),vy+__view_get( e__VW.HView, 0 ),0)
 		draw_set_alpha(1);
-		draw_rectangle(vx,vy+hh-16,vx+__view_get( e__VW.WView, 0 ),vy+hh + 16,0);
+		// draw_rectangle(vx,vy+hh-16,vx+__view_get( e__VW.WView, 0 ),vy+hh + 16,0);
 		
 		draw_text(vx+wh,yy+1,string_hash_to_newline(string(gameover)))
 		draw_text(vx+wh+1,yy+1,string_hash_to_newline(string(gameover)))

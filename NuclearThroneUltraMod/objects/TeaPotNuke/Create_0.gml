@@ -10,8 +10,8 @@ spr_walk = sprTeaPotNuke
 spr_hurt = sprTeaPotNukeHurt
 spr_dead = sprScrapBossMissileDead
 
-
 scrTarget()
 ang = 0;
 
 
+alarm[0] = 20;

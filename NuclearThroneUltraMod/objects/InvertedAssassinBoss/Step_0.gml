@@ -163,7 +163,8 @@ if (alarm[4] < 0) {
 				alarm[6] += 2
 		    }
 	    }
-	} else if target != noone && instance_exists(target) && point_distance(x, y, target.x, target.y) > 200 && instance_exists(Floor){
+	} else if alarm[8] < 1 && target != noone && instance_exists(target) && point_distance(x, y, target.x, target.y) > 200 && instance_exists(Floor){
+		alarm[8] = 60;
 		do
 		{
 			with instance_nearest(target.x + (random(2) - 1) * (random(32)+80),target.y + (random(2) - 1) * (random(32)+80),Floor)

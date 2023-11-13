@@ -372,6 +372,7 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 		betterrabbitpaw = other.betterrabbitpaw;
 		betterrecyclegland = other.betterrecyclegland;
 		betterboltmarrow = other.betterboltmarrow;
+		betterTail = other.betterTail;
 		accuracy = other.accuracy;
 		standartAccuracy = other.standartAccuracy;
 		invertedchance = other.invertedchance;

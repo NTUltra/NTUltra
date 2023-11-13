@@ -5,6 +5,8 @@ if instance_exists(Player)
 	acc = Player.accuracy*0.5;
 	*/
 var um = GetPlayerUltramod()
+x = xprevious;
+y = yprevious;
 if um == ultramods.bloodMelee
 {
 	var ol = 8+speed;

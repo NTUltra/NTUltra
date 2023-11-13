@@ -44,20 +44,6 @@ function scrSaveData() {
 	ini_write_real("DATA","protowepmod32",protowepmod32);
 	ini_write_real("DATA","protowepmod42",protowepmod42);
 
-	ini_write_real("DATA","oneweponly298",oneweponly298);
-	ini_write_real("DATA","oneweponly311",oneweponly311);
-	ini_write_real("DATA","oneweponly315",oneweponly315);
-	ini_write_real("DATA","oneweponly329",oneweponly329);
-	ini_write_real("DATA","oneweponly177",oneweponly177);
-	ini_write_real("DATA","oneweponly192",oneweponly192);
-	ini_write_real("DATA","oneweponly69",oneweponly69);
-	ini_write_real("DATA","oneweponly75",oneweponly75);
-	ini_write_real("DATA","oneweponly264",oneweponly264);
-	ini_write_real("DATA","oneweponly328",oneweponly328);
-	ini_write_real("DATA","oneweponly231",oneweponly231);
-	ini_write_real("DATA","oneweponly263",oneweponly263);
-	ini_write_real("DATA","oneweponly214",oneweponly214);
-	ini_write_real("DATA","oneweponly316",oneweponly316);
 	ini_write_real("DATA","savedseed",seedModeSeed);
 	ini_write_string("DATA","savedseedtext",seedModeSeedText);
 }

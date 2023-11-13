@@ -6,7 +6,7 @@ function scrDrawBloom() {
 	draw_set_blend_mode(bm_add)
 	if instance_exists(Player){
 	with Bullet1
-	draw_sprite_ext(sprite_index,-1,x,y,image_xscale*2,image_yscale*2,image_angle,c_white,(Player.ultra_got[28]*0.3)+ba)//roids ultra d
+		draw_sprite_ext(sprite_index,-1,x,y,image_xscale*2,image_yscale*2,image_angle,c_white,(Player.ultra_got[28]*0.3)+ba)//roids ultra d
 	
 	with MicroBullet
 	{
@@ -290,15 +290,6 @@ function scrDrawBloom() {
 				}
 			}
 		}
-		
-		if ultra_got[94]
-		with Debris
-		{
-			if speed > 2
-			{
-				draw_sprite_ext(sprDebrisBloom,image_index,x,y,2,2,image_angle,c_white,ba+0.1)
-			}
-		}
 	}
 	with DeflectMelee
 	{
@@ -431,7 +422,7 @@ function scrDrawBloom() {
 	with LaserCharge
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with EnemyBullet1
-	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
+	draw_sprite_ext(sprite_index,-1,x,y,2,image_yscale*2,image_angle,c_white,ba)
 	with EnemyBullet1Square
 	draw_sprite_ext(sprite_index,-1,x,y,image_xscale*2,image_yscale*2,image_angle,c_white,ba)
 	with AllyBullet
@@ -449,11 +440,11 @@ function scrDrawBloom() {
 	with IDPDBullet
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with Explosion
-	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
+	draw_sprite_ext(sprite_index,-1,x,y,1.5,1.5,image_angle,c_white,ba)
 	//with Bolt
 	//draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with MeatExplosion
-	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
+	draw_sprite_ext(sprite_index,-1,x,y,1.5,1.5,image_angle,c_white,ba)
 	with BulletHit
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with EBulletHit

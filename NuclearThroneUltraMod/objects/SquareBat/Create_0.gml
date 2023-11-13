@@ -1,5 +1,5 @@
-raddrop = 6
-maxhealth = 22//20
+raddrop = 5
+maxhealth = 24//20
 meleedamage = 2
 mySize = 1
 
@@ -18,7 +18,7 @@ snd_melee = sndGoldScorpionMelee;
 walk = 0
 alarm[1] = 30+random(90)
 alarm[10] = 0;
-actTime = 19;
+actTime = 18;
 
 circleMode = false;
 circleDistance = 80;
@@ -27,6 +27,6 @@ rotationSpeed = choose(2,-2);
 projectileSpeed = 4;
 projectileSpeedCircle = 3;
 lp = 0.118;
-maxSpeed = 3;
+maxSpeed = 4;
 isInverted = false;
 myBat = InvertedSquareBat;

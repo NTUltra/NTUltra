@@ -1,4 +1,4 @@
-ammo -= 4
+ammo -= 1
 
 alarm[0] = time
 
@@ -14,14 +14,14 @@ yy=creator.y;
 //with instance_create(xx,yy,Shell)
 //motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180+random(50)-25,2+random(2))
 
-repeat(2){
+//repeat(2){
 	with instance_create(x,y,Splinter)//5 splinters
-	{motion_add(point_direction(x,y,other.mox,other.moy)+(random(3)-1.5)*Player.accuracy,20+random(4))
+	{motion_add(point_direction(x,y,other.mox,other.moy)+(random(other.totalAccuracy)-(other.totalAccuracy*0.5))*Player.accuracy,20+random(4))
 	image_angle = direction
 	team = other.team
 	scrCopyWeaponMod(other);
 	}
-}
+//}
 }
 
 

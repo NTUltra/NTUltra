@@ -145,8 +145,9 @@ if (alarm[4] < 0) {
 		        wepangle = -wepangle
 		        motion_add(projectiledir,6)
 		    }
-		    else if random(12)<1 && alarm[2] < 1 && aggression < 300 && instance_exists(Floor) && target != noone && instance_exists(target)
+		    else if alarm[8] < 1 && alarm[2] < 1 && aggression < 300 && instance_exists(Floor) && target != noone && instance_exists(target)
 		    {//TELEPORT
+				alarm[8] = 90;
 			    with instance_nearest(x + (random(2) - 1) * (random(64)+64),y + (random(2) - 1) * (random(64)+64),Floor)
 			    {
 					var o = 16;
@@ -187,7 +188,8 @@ if (alarm[4] < 0) {
 				alarm[6] += 2
 		    }
 	    }
-	} else if canDodge && aggression > 180 && target != noone && instance_exists(target) && point_distance(x, y, target.x, target.y) > 200 {
+	} else if alarm[8] < 1 && canDodge && aggression > 180 && target != noone && instance_exists(target) && point_distance(x, y, target.x, target.y) > 200 {
+		alarm[8] = 90;
 		do
 		{
 			with instance_nearest(target.x + (random(2) - 1) * (random(32)+96),target.y + (random(2) - 1) * (random(32)+96),Floor)

@@ -6,6 +6,7 @@ lines = 4;
 alarm[0] = 6;
 dmg = 5;
 alarm[1] = 2;
+ammo = 4;
 if instance_exists(Player)
 {
 	if Player.skill_got[15] = 1

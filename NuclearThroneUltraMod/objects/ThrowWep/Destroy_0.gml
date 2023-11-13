@@ -1,6 +1,5 @@
 with Player
 {
-
     if wep=0&&other.dontteleport==false
     {
 	    wep=other.wep;

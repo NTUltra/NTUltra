@@ -2,12 +2,7 @@ scrDrop(100,0);
 scrDrop(50,5);
 scrDrop(50,40);
 
-with Player
-{
-if race = 7  && loops>0
-scrUnlockBSkin(7,"FOR DEFEATING THE BIG MACHINE#ON LOOP AS STEROIDS",0); 
 
-}
 
 scrBossKill();
 

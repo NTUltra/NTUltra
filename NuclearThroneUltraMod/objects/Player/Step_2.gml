@@ -1,12 +1,29 @@
 /// @description WepPickup
-if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(LevCont)  && !instance_exists(SpiralCont){
+if instance_exists(WepPickup) || instance_exists(ThrowWep) && !instance_exists(GenCont) && !instance_exists(LevCont)  && !instance_exists(SpiralCont){
 
 	targetPickup = instance_nearest(x,y,WepPickup);
 	var prange = 36;
 	if ultra_got[66] && altUltra
 		prange = 48;
-	if targetPickup != noone && point_distance(x,y,targetPickup.x,targetPickup.y) < prange  && targetPickup.visible
+	if targetPickup == noone || point_distance(x,y,targetPickup.x,targetPickup.y) >= prange
+		targetPickup = instance_nearest(x,y,ThrowWep);
+	
+	if targetPickup != noone && point_distance(x,y,targetPickup.x,targetPickup.y) < prange  && targetPickup.visible && targetPickup.alarm[1] < 1
 	{
+		with UberCont
+		{
+			if (!wep_found[other.race, other.targetPickup.wep]) {
+				debug("SAVE WEP");
+				wep_found[other.race,other.targetPickup.wep] = true;
+				any_wep_found[other.targetPickup.wep] = true;
+				var saveFileString;
+				saveFileString="ntultra"+string(version)+".sav";
+				ini_open(saveFileString);
+					ini_write_real("STATS","wep_found"+string(other.race)+"-"+string(other.targetPickup.wep),1);
+					ini_write_real("STATS","any_wep_found"+string(other.targetPickup.wep),1);
+				ini_close();
+			}
+		}
 		var isGold = false;
 		if targetPickup.wep == 239//ROCKET GLOVE GM UNLOCK
 				scrUnlockGameMode(13,"FOR FINDING A ROCKET GLOVE")
@@ -218,114 +235,6 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 			scrUnlockBSkin(23,"BY USING 2 DIFFERENT TOXIC WEAPONS#IN ONE RUN AS FROG",0)
 			}
 
-			//some one wep only unlocks that odont really count as unlockables
-			if targetPickup.wep == 298//golden oops gun
-			{
-			with UberCont
-			{
-			oneweponly298=1
-			scrSave();
-			}
-			}
-			if targetPickup.wep == 315//moneygun
-			{
-				scrUnlockCharacter(20,"FOR STEALING THE MONEY GUN")
-			with UberCont
-			{
-			oneweponly315=1
-			scrSave();
-			}
-			}
-			if targetPickup.wep == 329//dark sword
-			{
-			with UberCont
-			{
-			oneweponly329=1
-			scrSave();
-			}
-			}
-			if targetPickup.wep == 177//time thrower
-			{
-			with UberCont
-			{
-			oneweponly177=1
-			scrSave();
-			}
-			}
-			if targetPickup.wep == 192//time bomb
-			{
-			with UberCont
-			{
-			oneweponly192=1
-			scrSave();
-			}
-			}
-			if targetPickup.wep == 69//oops gun
-			{
-			with UberCont
-			{
-			oneweponly69=1
-			scrSave();
-			}
-			}
-			if targetPickup.wep == 75//idkwid
-			{
-			with UberCont
-			{
-			oneweponly75=1
-			scrSave();
-			}
-			}
-			if targetPickup.wep == 264//broken ster gun
-			{
-			with UberCont
-			{
-			oneweponly298=1
-			scrSave();
-			}
-			}
-			if targetPickup.wep == 328//black sword
-			{
-			with UberCont
-			{
-			oneweponly328=1
-			scrSave();
-			}
-			}
-			if targetPickup.wep == 231//guitar
-			{
-			with UberCont
-			{
-			oneweponly231=1
-			scrSave();
-			}
-			}
-			if targetPickup.wep == 263//electric guitar
-			{
-			with UberCont
-			{
-			oneweponly263=1
-			scrSave();
-			}
-			}
-			if targetPickup.wep == 214//viking great axe
-			{
-			with UberCont
-			{
-			oneweponly214=1
-			scrSave();
-			}
-			}
-			if targetPickup.wep == 316//hunter heavy sniper
-			{
-			with UberCont
-			{
-			oneweponly316=1
-			scrSave();
-			}
-			}
-
-
 			snd_play(sndWeaponPickup)
 			if bwep = 0
 			{
@@ -433,7 +342,9 @@ if instance_exists(WepPickup) && !instance_exists(GenCont) && !instance_exists(L
 			//Done picking up
 			scrWeaponHold();
 			with targetPickup
-				instance_destroy()
+			{
+				instance_destroy(id,false)
+			}
 			}
 			if ( wep != 0 && bwep != 0 && cwep != 0 && scrMeleeWeapons(wep) && scrMeleeWeapons(bwep) && scrMeleeWeapons(cwep))
 			{
@@ -1045,8 +956,11 @@ if scrIsCrown(23)//Crown of speed
 {
 	with enemy
 	{
-		speed *= 1.2;
-		speed = min(speed * 1.2, speed + 4);
+		if speed < 10
+		{
+			speed *= 1.2;
+			speed = min(speed * 1.2, speed + 4);
+		}
 	}
 }
 if scrIsCrown(24)//Crown of sloth

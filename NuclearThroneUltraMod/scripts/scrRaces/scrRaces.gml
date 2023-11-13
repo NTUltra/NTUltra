@@ -130,7 +130,7 @@ function scrRaces() {
 	race_dskin[7] = 0
 	race_eskin[7] = 0
 	race_fskin[7] = 0
-	race_bskin_lock[7] = "DEFEAT#THE BIG MACHINE#ON LOOP AS STEROIDS"
+	race_bskin_lock[7] = "DEFEAT#TECHNOMANCER#AS STEROIDS"
 	race_cskin_lock[7] = "DEFEAT#INVERTED BIG MACHINE#AS STEROIDS"
 
 
@@ -199,7 +199,7 @@ function scrRaces() {
 	race_eskin[11] = 0
 	race_fskin[11] = 0
 	race_bskin_lock[11] = "REACH THE PALACE#WITHOUT PICKING UP A WEAPON#AS HUNTER"
-	race_cskin_lock[11] = "KILL AN ULTRA SNIPER BOT#AS HUNTER"
+	race_cskin_lock[11] = "KILL AN HARD MODE#ULTRA SNIPER BOT#AS HUNTER"
 
 
 	race_name[12] = "[YUNG CUZ]"
@@ -283,7 +283,7 @@ function scrRaces() {
 	race_dskin[16] = 0
 	race_eskin[16] = 0
 	race_fskin[16] = 0
-	race_bskin_lock[16] = "COMPLETE A LEVEL#WITH THE MAX AMOUNT#OF ARMOUR POSSIBLE#AS VIKING"
+	race_bskin_lock[16] = "COMPLETE A LEVEL#WITH THE 5 ARMOUR#AS VIKING"
 	race_cskin_lock[16] = "KILL 16 ENEMIES#IN ONE ARMOUR STRIKE"
 
 
@@ -306,7 +306,7 @@ function scrRaces() {
 
 	race_name[18] = "[ANGEL]"
 	race_pass[18] = "FLY OVER WALLS"
-	race_acti[18] = "<w>DEFLECT<w>, <aq>IMMUNE<aq> & <r>HEAL<r>"
+	race_acti[18] = "#<w>DEFLECT<w>, <aq>IMMUNE<aq> & <r>HEAL<r>#COSTS <y>AMMO<y>#COST REDUCED AT <r>FULL HEALTH<r>"
 	race_butt[18] = "#CHEAPER <r>HEALING<r>, <aq>IMMUNITY<aq> & <w>DEFLECTING<w>"
 	//race_back[18] = "FLYING OVER WALLS DRAINS AMMO#INSTEAD OF HP";
 	race_lock[18] = "HAVE A SINGLE RUN WITH#ATLEAST THREE SURVIVAL MUTATIONS#(RHINO SKIN, ALKALINE SALIVA ETC.)"

@@ -41,7 +41,7 @@ if skill_got[2]
 			for (var j = 0; j < al; j++) {
 				with projectiles[| j]
 				{
-					if team!=other.team//NOT FROM PLAYA!? O_O
+					if dodgeAble && team!=other.team//NOT FROM PLAYA!? O_O
 			        {                     
 						other.extrafeetalarm=23;//after some time we check if you've dodged this
 						other.extrafeetdodged=true;

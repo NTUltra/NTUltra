@@ -1,6 +1,8 @@
 with other
 {
-instance_destroy()
-instance_create(x,y,FloorExplo)
+	instance_destroy()
+	with instance_create(x,y,FloorExplo) {
+		canSpawnSwarm = true;	
+	}
 }
 

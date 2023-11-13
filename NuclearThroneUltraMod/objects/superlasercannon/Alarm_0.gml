@@ -1,8 +1,7 @@
 ammo -= 1
 
-alarm[0] = time
-image_xscale /= 2
-image_yscale /= 2
+image_xscale *= 0.5
+image_yscale *= 0.5
 
 
 if instance_exists(creator)
@@ -45,6 +44,5 @@ BackCont.shake += 6
 creator.wkick = 5}
 
 
-if ammo <= 0
-instance_destroy()
-
+if ammo > 0
+	alarm[0] = time

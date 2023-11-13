@@ -33,6 +33,10 @@ Player.ccurse = 0
 if Player.loops > 3 && !UberCont.hasFoughtInvadingThrone
 {
 	UberCont.hasFoughtInvadingThrone = true;
+	with CrownVaultExit
+		instance_destroy();
+	with CrownVaultSecretExit
+		instance_destroy();
 	scrTurnIntoPortalArea();
 	instance_create(x,y,BecomeThrone2);
 }

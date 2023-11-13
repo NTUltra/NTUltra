@@ -1,16 +1,13 @@
-raddrop = 0
+event_inherited();
 maxhealth = 16
-meleedamage = 5
-mySize = 1
-
-event_inherited()
-wasResurrected = true;
-spr_idle = sprScrapBossMissileIdle
-spr_walk = sprScrapBossMissileIdle
-spr_hurt = sprScrapBossMissileHurt
+EnemyHealthAdjustments();
+spr_idle = sprTeapotMissileIdle
+spr_walk = sprTeapotMissileIdle
+spr_hurt = sprTeapotMissileHurt
 spr_dead = sprScrapBossMissileDead
-
-
+explodeOnHitTime = 50;
+maxSpeed += 0.2;
 scrTarget()
 
 alarm[2] = 2;
+alarm[0] = 30;

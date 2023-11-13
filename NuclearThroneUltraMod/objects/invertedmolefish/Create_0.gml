@@ -1,10 +1,8 @@
-raddrop = 6
-maxhealth = 4
-meleedamage = 0
-mySize = 1
-
 event_inherited()
 
+raddrop = 6
+maxhealth = 4
+EnemyHealthAdjustments();
 spr_idle = sprInvertedMolefishIdle
 spr_walk = sprInvertedMolefishWalk
 spr_hurt = sprInvertedMolefishHurt

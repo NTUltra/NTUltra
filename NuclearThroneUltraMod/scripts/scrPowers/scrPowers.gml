@@ -2076,7 +2076,7 @@ function scrPowers() {
 						wepflip = other.wepflip;
 						wepright = other.wepright;
 						wep = other.wep;
-						theAim = point_direction(other.x,other.y,UberCont.mouse__x,UberCont.mouse__y);
+						theAim = dir + 180;
 						scrFire();
 						alarm[0] = wep_load[wep];
 						if reload < other.reload
@@ -2724,7 +2724,7 @@ function scrPowers() {
 				mask_index=mskWall;
 				var am = 1;
 				var i = 0;
-				if ultra_got[93] || ultra_got[94]
+				if ultra_got[93]
 					am = 5;
 				var placedWall = false;
 				var mx = UberCont.mouse__x;

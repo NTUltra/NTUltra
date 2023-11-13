@@ -39,6 +39,9 @@
     "name": "sprIceFlame",
     "path": "sprites/sprIceFlame/sprIceFlame.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskTrapFire",
+    "path": "sprites/mskTrapFire/mskTrapFire.yy",
+  },
   "visible": true,
 }

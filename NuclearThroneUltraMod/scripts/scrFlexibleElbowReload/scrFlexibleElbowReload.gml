@@ -8,7 +8,7 @@ function scrFlexibleElbowReload(wp){
 		var slapped = noone;
 		while (loader > 0)
 		{
-			if (random(47) < loader)
+			if (random(48) < loader)
 			{
 				if slapped != noone
 				{

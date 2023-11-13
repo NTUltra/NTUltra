@@ -164,6 +164,8 @@ function scrLoadRun(){
 				Player.betterrabbitpaw = encryptedRun.betterrabbitpaw;
 				Player.betterrecyclegland = encryptedRun.betterrecyclegland;
 				Player.betterboltmarrow = encryptedRun.betterboltmarrow;
+				if variable_struct_exists(encryptedRun, "maxspeed")
+					Player.betterTail = encryptedRun.betterTail;
 				Player.bskin = encryptedRun.bskin;
 				Player.accuracy = encryptedRun.accuracy;
 				Player.standartAccuracy = encryptedRun.standartAccuracy;

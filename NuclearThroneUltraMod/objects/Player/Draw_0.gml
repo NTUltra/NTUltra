@@ -1,16 +1,52 @@
 var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+if (drawTailIntro == 1) {
+	draw_sprite_ext(sprTailIntro,tailWave,x,y,-right,1,0,c_white,1);
+	if round(tailWave) == sprite_get_number(sprTailIntro)
+	{
+		tailWave = 0;
+		drawTailIntro = 0;
+		if !drawTail
+			drawTailIntro = 3;	
+	}
+}
+else if (drawTailIntro == 3) {
+	draw_sprite_ext(sprTailOutro,tailWave,x,y,-right,1,0,c_white,1);
+	if round(tailWave) == sprite_get_number(sprTailOutro)
+	{
+		tailWave = 0;
+		drawTailIntro = 0;
+		if drawTail
+			drawTailIntro = 1;
+	}
+} 
+else if drawTail || drawTailIntro == 2
+{
+	draw_sprite_ext(sprTailEnd,tailWave,x,y,-right,1,0,c_lime,1);
+	if round(tailWave) == sprite_get_number(sprTailEnd)
+	{
+		tailWave = 0;
+		if drawTailIntro == 2
+			drawTailIntro = 3;
+	} else if drawTailIntro == 2
+	{
+		if UberCont.normalGameSpeed == 60
+			tailWave += 0.1;
+		else
+			tailWave += 0.2;	
+	}
+}
 if alienIntestines > 0
 {
 	if alienIntestines > 180
 	{
-		draw_sprite_ext(sprAlienIntestines3,wave,x,y,1,1,alienIntestines*alienDir,c_white,1);
+		draw_sprite_ext(sprAlienIntestines3,wave,x,y,abs(right),image_yscale,alienIntestines*alienDir,c_white,1);
 	}
 	else if alienIntestines > 80
 	{
-		draw_sprite_ext(sprAlienIntestines2,wave,x,y,1,1,alienIntestines*alienDir,c_white,1);
+		draw_sprite_ext(sprAlienIntestines2,wave,x,y,abs(right),image_yscale,alienIntestines*alienDir,c_white,1);
 	}else if alienIntestines > 30
 	{
-		draw_sprite_ext(sprAlienIntestines1,wave,x,y,1,1,alienIntestines*alienDir,c_white,1);
+		draw_sprite_ext(sprAlienIntestines1,wave,x,y,abs(right),image_yscale,alienIntestines*alienDir,c_white,1);
 	}
 }
 if ultra_got[75] && speed == 0

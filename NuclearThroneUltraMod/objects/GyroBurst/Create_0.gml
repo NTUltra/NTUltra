@@ -5,7 +5,7 @@ RecycleGlandType();
 friction=0.1;
 image_speed=0.4;
 
-alarm[0]=235;
+alarm[0]=230;
 
 ang=random(360);
 

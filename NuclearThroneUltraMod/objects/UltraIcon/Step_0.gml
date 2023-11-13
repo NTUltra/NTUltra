@@ -315,7 +315,7 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 			}
 		}
 	}
-	else if skill == 27 && Player.race == 7 && (Player.wep == Player.bwep || Player.unlockAlternativeUltras)
+	else if skill == 27 && Player.race == 7 && (Player.wep_type[Player.wep] == Player.wep_type[Player.bwep] || Player.unlockAlternativeUltras)
 	{
 		with Player
 		{
@@ -498,7 +498,8 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 
 		with Player
 		{
-			if (race == 25 && (!skill_got[13] && !skill_got[16] && !skill_got[17] && !skill_got[15] && !skill_got[14] || unlockAlternativeUltras))
+			if (race == 25 && (!skill_got[13] && !skill_got[16] && !skill_got[17]
+			&& !skill_got[15] && !skill_got[14] && !skill_got[42] || unlockAlternativeUltras))
 			{
 				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 				//Secret Beekeeper ultra
@@ -525,7 +526,10 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 				{
 					betterboltmarrow = 10;
 				}
-				
+				if skill_got[42]//Tail end
+				{
+					betterTail = 2;
+				}
 				with Player
 				{
 					var sk = [];

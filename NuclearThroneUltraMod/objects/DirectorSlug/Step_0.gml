@@ -12,6 +12,7 @@ if instance_exists(Player){
 if KeyCont.key_fire[Player.p] = 1 && turned=false && alarm[0]<1 || (Player.race=7 &&  KeyCont.key_spec[Player.p] = 1 && alarm[0]<1 && turned=false)
 {
 sprite_index = sprDirectorSlugBullet;
+dmg = 20;
 image_index = 0;
 image_speed = 0.4;
 speed+=12;

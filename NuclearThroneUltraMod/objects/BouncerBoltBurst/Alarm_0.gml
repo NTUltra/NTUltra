@@ -14,7 +14,7 @@ with instance_create(x,y,BouncerBolt)//5 splinters
 {
 	if other.ultramodded
 		alarm[11] = 0;
-	motion_add(dir+random(8)-4,22)
+	motion_add(dir+random(8)-4,20)
 		scrCopyWeaponMod(other);
 	image_angle = direction
 	team = other.team

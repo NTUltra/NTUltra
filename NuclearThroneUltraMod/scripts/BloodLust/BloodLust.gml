@@ -5,7 +5,7 @@ function BloodLust(){
 	//SOME KILLS REGENERATE HEALTH
 	var chance = 7.7
 	if Player.race == 25
-		chance = 7.89;
+		chance = 7.95;
 	if scrIsHardMode()//HARD MODE
 		chance -= 0.5;
     if Player.skill_got[7] = 1 and Player.canHeal and random(100) <  chance//7.69% chance
@@ -17,8 +17,8 @@ function BloodLust(){
 		{
 			with instance_create(x,y,BloodStreak)
 			{
-			motion_add(splatDir,6 + other.mySize)
-			image_angle = direction
+				motion_add(splatDir,6 + other.mySize)
+				image_angle = direction
 			}
 			scrAddToBGFXLayer(
 				sprBloodSplat,
@@ -32,6 +32,17 @@ function BloodLust(){
 				1
 			);
 			splatDir += angStep;
+		}
+		splatDir = random(360);
+		repeat(3)
+		{
+			with instance_create(x,y,BloodBullet)
+			{
+				motion_add(splatDir,14);
+				image_angle = direction
+				team = other.team
+			}
+			splatDir += 120;
 		}
     	snd_play_2d(sndBloodlustProc,0,true);
 	    with instance_create(Player.x,Player.y-8,HealFX)

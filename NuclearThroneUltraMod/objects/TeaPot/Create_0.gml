@@ -1,5 +1,5 @@
 raddrop = 15
-maxhealth = 70
+maxhealth = 100
 meleedamage = 0
 mySize = 2
 
@@ -21,6 +21,8 @@ alarm[1] = 60+random(60)
 if instance_exists(Player)
 motion_add(point_direction(Player.x,Player.y,x,y),1)
 
-actTime = 20;
+maxSpeed = 2;
+actTime = 15;
+reachedHalfHealth = false;
 if GetPlayerLoops() > 0
 	actTime -= 5;

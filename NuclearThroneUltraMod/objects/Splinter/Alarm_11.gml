@@ -114,6 +114,7 @@ else if um == ultramods.laserBolt
 		proj = RocketMiniToxic
 	with instance_create(x,y,proj)
 	{
+		dmg = other.dmg;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;

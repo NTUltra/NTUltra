@@ -8,7 +8,6 @@ if ammo > 0
 			motion_add(other.gunangle+random(30)-15,3+random(4))
 			image_angle = direction
 			team = other.team
-			ignoreHitme=true;
 		}
 	alarm[2] = 1;
 	alarm[1] += 1;

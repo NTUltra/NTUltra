@@ -1,5 +1,5 @@
 /// @description Timer
-if !instance_exists(Player) && !instance_exists(PlayerSpawn)
+if !isPaused && !instance_exists(Player) && !instance_exists(PlayerSpawn)
 {
 	txttime = finalTime;
 	var formatString = "0:00:00:00";

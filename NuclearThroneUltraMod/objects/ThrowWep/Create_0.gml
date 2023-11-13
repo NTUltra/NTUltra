@@ -61,3 +61,7 @@ returnFX = true;
 stopSpeed = 1;
 thrownByCuz = false;
 scrInitDrops(1);
+
+pickedup = true;
+oneweponly = false;
+alarm[1] = 5;

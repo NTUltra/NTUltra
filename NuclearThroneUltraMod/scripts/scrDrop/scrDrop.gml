@@ -113,16 +113,17 @@ function scrDrop(itemdrop, weapondrop) {
 
 	if instance_exists(Player)
 	{
-		if Player.loops>0
+		var ls = Player.loops;
+		if ls > 0
 			itemdrop*=0.9;
 
-		if Player.loops>1
+		if ls > 1
 			itemdrop*=0.9;
 
-		if Player.loops>2
+		if ls > 2
 			itemdrop*=0.8;
 
-		if Player.loops>3
+		if ls > 3
 			itemdrop*=0.8;
 	}
 
@@ -134,7 +135,7 @@ function scrDrop(itemdrop, weapondrop) {
 
 	if Player.ultra_got[85]
 	{
-		if random(Player.rogueammomax) > Player.rogueammo && random(180) < min(itemdrop * dropRateBuff, 180)
+		if random(Player.rogueammomax) > Player.rogueammo && random(180) < min(itemdrop * dropRateBuff, 150)
 		{
 			pickup = instance_create(x,y,RoguePickup)
 			with pickup
@@ -154,15 +155,20 @@ function scrDrop(itemdrop, weapondrop) {
 	need = 0
 
 	if Player.ammo[Player.wep_type[Player.wep]] < Player.typ_amax[Player.wep_type[Player.wep]]*(0.2-(Player.skill_got[10]*0.04))
-		need += 0.73
+		need += 0.7//3
 	else if Player.ammo[Player.wep_type[Player.wep]] > Player.typ_amax[Player.wep_type[Player.wep]]*(0.6-(Player.skill_got[10]*0.1))
-		need += 0.08 else need += 0.36
+		need += 0.08 
+	else 
+		need += 0.3//6
 
-	if Player.bwep == 0 need += 0.36
+	if Player.bwep == 0 
+		need += 0.3//6
 	else if Player.ammo[Player.wep_type[Player.bwep]] < Player.typ_amax[Player.wep_type[Player.bwep]]*(0.2-(Player.skill_got[10]*0.04))
-		need += 0.73
+		need += 0.7//3
 	else if Player.ammo[Player.wep_type[Player.bwep]] > Player.typ_amax[Player.wep_type[Player.bwep]]*(0.6-(Player.skill_got[10]*0.1))
-		need += 0.08 else need += 0.36
+		need += 0.08
+	else 
+		need += 0.3//6
 	if random(mh) > h
 		need += 0.08;
 
@@ -215,7 +221,7 @@ function scrDrop(itemdrop, weapondrop) {
 	if itemdrop > 0 && ran < min(itemdrop * (need + dropRateBuff), 100)
 	{//0.3 for each ally Rebel has REBEL ULTRA C?
 		//Nerves of Steel
-		if (instance_exists(Player) && Player.skill_got[41] && Player.armour < Player.maxarmour && random(100) < (12 - Player.armour) ) {
+		if (instance_exists(Player) && Player.skill_got[41] && Player.armour < Player.maxarmour && random(100) < (7 - Player.armour) ) {
 			pickup = instance_create(x,y,HPPickup) 
 			with pickup {
 				isArmour = true;

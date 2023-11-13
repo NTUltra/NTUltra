@@ -13,4 +13,4 @@ with Player
 		}
 	}
 }
-alarm[3] = 8;
+alarm[3] = 9;

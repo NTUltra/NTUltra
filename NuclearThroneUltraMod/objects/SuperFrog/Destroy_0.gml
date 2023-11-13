@@ -6,10 +6,11 @@ instance_create(x,y,ToxicGas)
 
 snd_play(sndToxicBarrelGas)
 
-dir = random(360)
+dir = random(360);
+var angStep = 360/20
 repeat(20)
 {
-dir += 360/20
+dir += angStep
 with instance_create(x,y,EnemyBullet2)
 {
 motion_add(other.dir,4)

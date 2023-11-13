@@ -873,13 +873,13 @@ repeat(1+loops)
 			{
 				wave[i] = {
 					obj: Spider,
-					time: 6
+					time: 8
 				};
 				i++;
 			}
 			wave[i] = {
 				obj: Cocoon,
-				time: 5
+				time: 10
 			};
 			i++;
 			wave[i] = {
@@ -889,42 +889,42 @@ repeat(1+loops)
 			i++;
 			wave[i] = {
 				obj: SquareBat,
-				time: 10
+				time: 15
 			};
 			i++;
 			wave[i] = {
 				obj: SquareBat,
-				time: 10
+				time: 15
 			};
 			i++;
 			wave[i] = {
 				obj: FireBat,
-				time: 20
+				time: 30
 			};
 			i++;
 			wave[i] = {
 				obj: SquareBat,
-				time: 50
+				time: 60
 			};
 			i++;
 			repeat(3)
 			{
 				wave[i] = {
 					obj: Spider,
-					time: 6
+					time: 8
 				};
 				i++;
 			}
 			wave[i] = {
 				obj: LaserCrystal,
-				time: 20,
+				time: 30,
 				xx: centerX,
 				yy: centerY
 			};
 			i++;
 			wave[i] = {
 				obj: Cocoon,
-				time: 5
+				time: 10
 			};
 			i++;
 			wave[i] = {
@@ -943,7 +943,7 @@ repeat(1+loops)
 			{
 				wave[i] = {
 					obj: Spider,
-					time: 10
+					time: 15
 				};
 				i++;
 			}
@@ -954,7 +954,7 @@ repeat(1+loops)
 			i++;
 			wave[i] = {
 				obj: Cocoon,
-				time: 5,
+				time: 10,
 				xx: centerX,
 				yy: centerY
 			};
@@ -963,7 +963,7 @@ repeat(1+loops)
 			{
 				wave[i] = {
 					obj: Spider,
-					time: 10
+					time: 15
 				};
 				i++;
 			}
@@ -976,7 +976,7 @@ repeat(1+loops)
 			{
 				wave[i] = {
 					obj: SquareBat,
-					time: 10
+					time: 14
 				};
 				i++;
 			}
@@ -984,7 +984,7 @@ repeat(1+loops)
 			{
 				wave[i] = {
 					obj: LaserCrystal,
-					time: 15
+					time: 16
 				};
 				i++;
 			}
@@ -1006,20 +1006,20 @@ repeat(1+loops)
 			{
 				wave[i] = {
 					obj: Spider,
-					time: 5
+					time: 6
 				};
 				i++;
 			}
 			wave[i] = {
 				obj: GoldCrystal,
-				time: 130
+				time: 160
 			};
 			i++;
 			repeat(3)
 			{
 				wave[i] = {
 					obj: LaserCrystal,
-					time: 20
+					time: 22
 				};
 				i++;
 			}
@@ -1032,7 +1032,7 @@ repeat(1+loops)
 			{
 				wave[i] = {
 					obj: Spider,
-					time: 5
+					time: 7
 				};
 				i++;
 			}
@@ -1043,7 +1043,7 @@ repeat(1+loops)
 			i++;
 			wave[i] = {
 				obj: AmmoChest,
-				time: 90,
+				time: 140,
 				xx: centerX-32,
 				yy: centerY
 			};
@@ -1052,13 +1052,13 @@ repeat(1+loops)
 			{
 				wave[i] = {
 					obj: GoldCrystal,
-					time: 30
+					time: 32
 				};
 				i++;
 			}
 			wave[i] = {
 				obj: HealthChest,
-				time: 120,
+				time: 140,
 				xx: centerX,
 				yy: centerY-32
 			};

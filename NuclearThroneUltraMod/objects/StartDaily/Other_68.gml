@@ -107,12 +107,12 @@ if (type == network_type_data) {
 			}
 			#region gamemode handling
 			debug("GAMEMODES ", UberCont.opt_gamemode);
-			if scrIsGamemode(1)//One weapon only
+			if scrIsGamemode(1) || scrIsGamemode(46)//One weapon only
 			{
 				UberCont.opt_gm1wep = buffer_read(buffer,buffer_u16);
 				with Player
 				{
-					if UberCont.opt_gm1wep - 1 == 0 {
+					if UberCont.opt_gm1wep == 0 {
 					    wep = ceil(irandom(maxwep));
 					}
 					else {
@@ -279,7 +279,7 @@ if (type == network_type_data) {
 						hard = 3;
 						instance_create(x,y,HardModeChest);
 					}
-					maxRadPickedUp += 40;
+					maxRadPickedUp += 30;
 					//Also in Player create
 				}
 			}

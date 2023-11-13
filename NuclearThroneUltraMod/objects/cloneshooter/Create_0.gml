@@ -129,3 +129,6 @@ image_angle = 0;
 ultra_got = Player.ultra_got;
 pSpeedBoost = Player.pSpeedBoost;
 poppop = Player.poppop;
+firedOnce = Player.firedOnce;
+fired = Player.fired;
+firedthislevel = Player.firedthislevel;

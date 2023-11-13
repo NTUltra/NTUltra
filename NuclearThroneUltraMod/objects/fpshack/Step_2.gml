@@ -31,6 +31,7 @@ with Player
 	if race=22
 		blastArmourDelay += dt;
 	wave -= 0.4*dt;
+	tailWave -= 0.4*dt;
 }
 with enemy
 {

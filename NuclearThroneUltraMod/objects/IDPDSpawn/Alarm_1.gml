@@ -63,7 +63,7 @@ if random(4)<1+min(loops-1,2) && loops>0//elite
     }
     if dir = 4
     {
-    with instance_create(x+random(4)-2,y+random(4)-2,SegwayPopo)
+    with instance_create(x+random(4)-2,y+random(4)-2,choose(ExploderPopo,BuffPopo,SegwayPopo))
     {
 		scrSleepyPopo();
     if instance_exists(Player)
@@ -79,7 +79,7 @@ if random(4)<1+min(loops-1,2) && loops>0//elite
 
 //NORMAL
 
-dir = choose(1,1,1,1,5,5,5,2,2,3,3,3,4,4,4);//1,1,2,3,4
+dir = choose(1,1,1,6,6,5,5,2,2,3,3,4,4);//1,1,2,3,4
 
 
 if instance_exists(Player)
@@ -141,6 +141,17 @@ else if dir = 4
 else if dir = 5
 {
 	with instance_create(x+random(4)-2,y+random(4)-2,BuffPopo)
+	{
+		scrSleepyPopo();
+		if instance_exists(Player)
+			motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,4)
+		else
+			motion_add(random(360),4)
+	}	
+}
+else if dir = 6
+{
+	with instance_create(x+random(4)-2,y+random(4)-2,ExploderPopo)
 	{
 		scrSleepyPopo();
 		if instance_exists(Player)

@@ -1,0 +1,10 @@
+/// @description xxx
+naxTime = 15;
+alarm[0] = naxTime;
+targetX = x;
+targetY = y;
+distance = 0;
+dir = 0;
+ogCol = make_colour_rgb(0,255,255);
+col = ogCol;
+alarm[1] = 5;
