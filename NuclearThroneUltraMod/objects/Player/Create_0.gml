@@ -557,7 +557,7 @@ if race = 5 //Plant
 if race = 7 //roids secondary weapon
 {
     if scrIsGamemode(1) { //one weapon only game mode yo
-        if UberCont.opt_gm1wep - 1 == 0
+        if UberCont.opt_gm1wep == 0
 			bwep = irandom(maxwep);
         else
             bwep = UberCont.opt_gm1wep

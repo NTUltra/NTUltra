@@ -160,9 +160,11 @@ function scrDrawHUD() {
 		{
 			draw_set_colour(c_white);
 			draw_sprite(sprGamemodeHUD,0,vx+4,vy+__view_get( e__VW.HView, 0 )-2);
+			/*
 			if scrIsGamemode(17) {
 				draw_text(vx+64,vy+__view_get( e__VW.HView, 0 )-8,string(fps_real));
 			}
+			*/
 		}
 	}
 	if holdExplainGamemode > 0 
@@ -1417,14 +1419,15 @@ function scrDrawHUD() {
 			}
 		}
 		with HintGiver {
-			var yy = y-oy-18;
+			var h = string_height(string_hash_to_newline(string(hint)));
+			var yy = y-oy-18 - h
 			var xx = x-ox-2;
 			if place_meeting(x,y,Player)
 			{
 				if alarm[3] > 0
 				{
 					if hasASecret
-						draw_sprite(sprEPickup,UberCont.opt_gamepad,xx,yy-7)
+						draw_sprite(sprEPickup,UberCont.opt_gamepad,xx,yy-7 + h)
 			
 					draw_set_color(c_black)
 					draw_text(xx,yy-30,string_hash_to_newline(string(hint)))

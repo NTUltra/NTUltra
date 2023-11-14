@@ -9,5 +9,4 @@ if myShield > -1 && instance_exists(myShield)
 	}
 	alarm[3] += 2;
 }
-extrafeetalarm = 30;
 snd_hurt = snd_hurt_actual;

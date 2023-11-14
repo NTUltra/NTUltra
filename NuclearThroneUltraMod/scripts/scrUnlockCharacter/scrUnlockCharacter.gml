@@ -6,8 +6,9 @@ function scrUnlockCharacter(raceIndex, unlockText) {
 
 	with instance_create(x,y,UnlockPopup)
 	{
-	mytext=UberCont.race_name[raceIndex]+"#UNLOCKED#"
-	+unlockText;
+		mytext=UberCont.race_name[raceIndex]+"#UNLOCKED#"
+		+unlockText;
+		alarm[0] += string_length(unlockText);
 	}
 
 	with UberCont

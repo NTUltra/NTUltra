@@ -117,9 +117,9 @@ function scrSkills() {
 	
 	
 	skill_name[7] = "BLOODLUST"
-	skill_text[7] = "7.7% CHANCE KILLS REGENERATE <r>HP<r>#BOSS KILLS ALWAYS <r>HEAL<r>#ENEMIES YOU HEAL FROM EXPLODE IN <r>BLOOD</r>"
+	skill_text[7] = "7.7% CHANCE KILLS REGENERATE <r>HP<r>#BOSS KILLS ALWAYS <r>HEAL<r>#ENEMIES YOU HEAL FROM EXPLODE IN <r>BLOOD<r>"
 	if scrIsHardMode()//HARD MODE
-		skill_text[7] = "7.2% CHANCE KILLS REGENERATE <r>HP<r>#BOSS KILLS ALWAYS <r>HEAL<r>#ENEMIES YOU HEAL FROM EXPLODE IN <r>BLOOD</r>"
+		skill_text[7] = "7.2% CHANCE KILLS REGENERATE <r>HP<r>#BOSS KILLS ALWAYS <r>HEAL<r>#ENEMIES YOU HEAL FROM EXPLODE IN <r>BLOOD<r>"
 	skill_tips[7] = "drink blood"
 	skill_msnd[7] =  sndMutBloodlust
 	skill_bons[7] = "+0.25% CHANCE";

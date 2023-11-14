@@ -1,6 +1,7 @@
 if UberCont.recursionCheck > 28
 {
 	alarm[0] = 1;
+	image_index -= image_speed;
 	exit;
 }
 var ultraMod = -1

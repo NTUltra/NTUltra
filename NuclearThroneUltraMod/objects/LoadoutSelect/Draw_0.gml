@@ -4,7 +4,7 @@ if (hasNoMenuOpen()
 	draw_set_halign(fa_left)
 	draw_set_valign(fa_top)
 	var xo = 0;
-
+	var isOverwriteWeapon = (scrIsGamemode(1) || scrIsGamemode(46));
 	if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
 		xo = 108;
 	if (wepmenuopen && !ultraOpen) {
@@ -56,7 +56,7 @@ if (hasNoMenuOpen()
 			{
 				var col = make_colour_rgb(100, 100, 100);	
 			}
-			if selected
+			if !isOverwriteWeapon && selected
 			{
 				shader_set(shdDrawWhite);
 				draw_sprite_ext(sprite,imageIndex,xx+1,yy+1,1,1,0,c_white,1);
@@ -208,7 +208,7 @@ if (hasNoMenuOpen()
 		var scl = 1.5;
 		if (UberCont.crown_start[Menu.race])
 			draw_sprite_ext(sprCrown0Idle,0,xx,yy,scl,scl,0,c_white,1);
-		if scrIsGamemode(1) && wep_found[Menu.race,UberCont.opt_gm1wep]
+		if (isOverwriteWeapon && UberCont.wep_found[Menu.race,UberCont.opt_gm1wep])
 		{
 			if (UberCont.opt_gm1wep == 0)
 			{

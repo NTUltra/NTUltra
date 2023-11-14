@@ -16,8 +16,14 @@ if active && sprite_index == spr_idle && KeyCont.key_pick[other.p] = 1
 	else if (hasASecret && alarm[3] > 0)
 	{
 		snd_play(sndCursedChest);
+		Player.bcurse = 1;
 		Player.curse = 1;
+		Player.ccurse = 1;
 		hasASecret = false;
+		with CrownVaultExit
+			canUncurse = false;
+		with CrownPickup
+			canUncurse = false;
 		event_perform(ev_alarm,3);
 	}
 	else if alarm[3] < 1

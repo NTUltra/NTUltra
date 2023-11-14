@@ -40,7 +40,7 @@ function BloodLust(){
 			{
 				motion_add(splatDir,14);
 				image_angle = direction
-				team = other.team
+				team = 2;
 			}
 			splatDir += 120;
 		}

@@ -4232,17 +4232,233 @@ repeat(1+loops)
 		i++;
 		break;
 		#endregion
-		/*
+		
 		#region wave 18 Jungle
 		case 18:
-		break;
-		#endregion
-				
-		#region wave 19 Inverted caves
-		case 19:
+			repeat(7)
+			{
+				wave[i] = {
+					obj: JungleAssassinFake,
+					time: 15,
+				};
+				i++;
+			}
+			wave[i] = {
+					obj: JungleAssassinFake,
+					time: 150,
+				};
+				i++;
+			repeat(8)
+			{
+				wave[i] = {
+					obj: JungleBandit,
+					time: 10,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: JungleGorilla,
+				time: 150,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			repeat(4)
+			{
+				wave[i] = {
+					obj: JungleFly,
+					time: 15,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: MaggotSpawn,
+				time: 120,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			wave[i] = {
+				obj: JungleBoss,
+				time: 120,
+				xx: centerX + 128,
+				yy: centerY,
+			};
+			i++;
+			repeat(4)
+			{
+				wave[i] = {
+					obj: Bush,
+					time: 1,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: JungleFly,
+				time: 120,
+				xx: centerX - 64,
+				yy: centerY,
+			};
+			i++;
+			wave[i] = {
+				obj: JungleGorilla,
+				time: 240,
+				xx: centerX + 64,
+				yy: centerY,
+			};
+			i++;
+			repeat(4)
+			{
+				wave[i] = {
+					obj: JungleGorilla,
+					time: 20,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: Bush,
+				time: 5,
+				xx: centerX + 64,
+				yy: centerY,
+			};
+			i++;
+			wave[i] = {
+				obj: Bush,
+				time: 5,
+				xx: centerX - 64,
+				yy: centerY,
+			};
+			i++;
+			wave[i] = {
+				obj: Bush,
+				time: 5,
+				xx: centerX,
+				yy: centerY + 64,
+			};
+			i++;
+			wave[i] = {
+				obj: Bush,
+				time: 5,
+				xx: centerX,
+				yy: centerY - 64,
+			};
+			i++;
+			repeat(4)
+			{
+				wave[i] = {
+					obj: JungleFly,
+					time: 20,
+				};
+				i++;
+			}
 		break;
 		#endregion
 		
+		#region wave 19 Inverted caves
+		case 19:
+		repeat(4)
+		{
+			wave[i] = {
+				obj: InvertedSpider,
+				time: 5,
+			};
+			i++;
+		}
+		var xxx = 128;
+		repeat(32)
+		{
+			wave[i] = {
+				obj: WallReplaceFloorInvCave,
+				time: 2,
+				xx: centerX + xxx,
+				yy: centerY,
+				canSpawnInWall: true,
+			};
+			xxx += 32;
+			i++;
+		}
+		repeat(4)
+		{
+			wave[i] = {
+				obj: LaserCrystal,
+				time: 10,
+			};
+			i++;
+		}
+		repeat(12)
+		{
+			wave[i] = {
+				obj: InvertedSpider,
+				time: 1,
+				xx: centerX + xxx - 16,
+				yy: centerY + 16,
+				canSpawnInWall: true,
+			};
+			xxx -= 64;
+			i++;
+		}
+		repeat(4)
+		{
+			wave[i] = {
+				obj: InvertedFireBat,
+				time: 10,
+				xx: centerX + xxx - 16,
+				yy: centerY + 16,
+				canSpawnInWall: true,
+			};
+			xxx -= 64;
+			i++;
+		}
+		xxx -= 32;
+		repeat(8)
+		{
+			wave[i] = {
+				obj: InvertedSquareBat,
+				time: 20,
+				xx: centerX + xxx - 16,
+				yy: centerY + 16,
+				canSpawnInWall: true,
+			};
+			xxx += 64;
+			i++;
+		}
+		repeat(8)
+		{
+			wave[i] = {
+				obj: LightningCrystal,
+				time: 30,
+				xx: centerX + xxx - 16,
+				yy: centerY + 16,
+				canSpawnInWall: true,
+			};
+			xxx += 64;
+			i++;
+		}
+		wave[i] = {
+			obj: InvertedHyperCrystal,
+			time: 60,
+			xx: centerX + xxx - 16,
+			yy: centerY,
+		};
+		i++;
+		wave[i] = {
+			obj: InvertedBigBadBat,
+			time: 240,
+			xx: centerX,
+			yy: centerY,
+		};
+		i++;
+		repeat(4)
+		{
+			wave[i] = {
+				obj: InvertedGoldCrystal,
+				time: 10,
+			};
+			i++;
+		}
+		break;
+		#endregion
+		/*
 		#region wave 20 Oasis
 		case 20:
 		break;

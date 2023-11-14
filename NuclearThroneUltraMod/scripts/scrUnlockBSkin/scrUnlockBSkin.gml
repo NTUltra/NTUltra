@@ -7,8 +7,9 @@ function scrUnlockBSkin(raceIndex, unlockText, requiredGamemode = 0) {
 
 	with instance_create(x,y,UnlockPopup)
 	{
-	mytext=UberCont.race_name[raceIndex]+"#B-SKIN UNLOCKED#"
-	+unlockText;
+		mytext=UberCont.race_name[raceIndex]+"#B-SKIN UNLOCKED#"
+		+unlockText;
+		alarm[0] += string_length(unlockText);
 	}
 
 	with UberCont

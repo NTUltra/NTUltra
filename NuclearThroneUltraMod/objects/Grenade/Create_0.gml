@@ -15,3 +15,4 @@ sticky = 0;
 alarm[11] = 1;
 canExplodeBlade = false;
 gotHit = false;
+knockback = 10;

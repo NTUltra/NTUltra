@@ -23,3 +23,4 @@ instance_create(x,y,TorchKiller);
 event_perform(ev_alarm,2);
 alarm[2] = 10;
 alarm[6] = 5;
+canUncurse = true;

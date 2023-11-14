@@ -15,3 +15,5 @@ typ = 1
 alarm[0]=30;//Before storm start
 snd_loop(sndPortalLoop)
 
+duration = 1;
+time = 3;

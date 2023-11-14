@@ -13,7 +13,6 @@ if instance_exists(WepPickup) || instance_exists(ThrowWep) && !instance_exists(G
 		with UberCont
 		{
 			if (!wep_found[other.race, other.targetPickup.wep]) {
-				debug("SAVE WEP");
 				wep_found[other.race,other.targetPickup.wep] = true;
 				any_wep_found[other.targetPickup.wep] = true;
 				var saveFileString;
@@ -414,7 +413,7 @@ if skill_got[22]//Stress Sharp teeth part
 //Extra feet consider failed dodge
 if skill_got[2] && tookHit && !exception
 {
-	extrafeetalarm = 30;
+	extrafeetalarm = 35;
 	extrafeetdodged = false;
 }
 if skill_got[38] && tookHit && alarm[3] < 1 && alarm[1] < 1

@@ -328,7 +328,7 @@ if skill == 5 && Player.altUltra && Player.ultra_got[51]
 		sheepFakeouts = 5;
 	}
 }
-if skill==13||skill==14||skill==15||skill==16||skill==17||skill==21//wep specific
+if skill==13||skill==14||skill==15||skill==16||skill==17||skill==21||skill==42//wep specific
 {Player.heavyheart++;}
 
 with SkillIcon

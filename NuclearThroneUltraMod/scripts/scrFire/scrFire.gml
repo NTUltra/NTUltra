@@ -1416,13 +1416,15 @@ function scrFire() {
 
 
 	with instance_create(x,y,Lightning)
-	{image_angle = aimDirection+(random(20)-10)*other.accuracy
-	team = other.team
-	ammo = 16
-	event_perform(ev_alarm,0)
-	visible = 0
-	with instance_create(x,y,LightningSpawn)
-	image_angle = other.image_angle}
+	{
+		image_angle = aimDirection+(random(20)-10)*other.accuracy
+		team = other.team
+		ammo = 16
+		event_perform(ev_alarm,0)
+		visible = 0
+		with instance_create(x,y,LightningSpawn)
+			image_angle = other.image_angle
+	}
 
 	BackCont.viewx2 += lengthdir_x(3,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(3,aimDirection+180)*UberCont.opt_shake
@@ -1589,7 +1591,16 @@ function scrFire() {
 	sticky = 0
 	motion_add(aimDirection+(random(6)-3)*other.accuracy,5)
 	image_angle = direction
-	team = other.team}
+	team = other.team
+		if Player.skill_got[42]
+		{
+			duration = Player.betterTail;
+			time -= 1;
+			if Player.ultra_got[97] && !Player.altUltra
+				time = 1;
+			scrActivateTail(hasTailNow);
+		}
+	}
 
 	BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
@@ -2568,19 +2579,18 @@ function scrFire() {
 	case 107:
 
 	snd_play_fire(sndSawedOffShotgun)
-
-	repeat(20)
+	with instance_create(x,y,ShortgunBurst)
 	{
-	with instance_create(x,y,Bullet2)
-	{motion_add(aimDirection+(random(80)-40)*other.accuracy,6+random(6.8))
-	image_angle = direction
-	team = other.team}
+		creator = other.id
+		ammo = 2
+		time = 1
+		team = other.team
+		event_perform(ev_alarm,0) 
 	}
 
-	BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
-	BackCont.shake += 9
-	wkick = 7
+	BackCont.viewx2 += lengthdir_x(2,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(2,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 1
 
 	break;
 

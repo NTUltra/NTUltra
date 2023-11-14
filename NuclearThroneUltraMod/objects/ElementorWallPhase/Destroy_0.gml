@@ -1,4 +1,5 @@
 //repeat(2)
+if fps_real >= fps
 repeat(2)
 with instance_create(x+8+random(8)-4,y+8+random(8)-4,Debris)
 motion_add(random(360),random(1));

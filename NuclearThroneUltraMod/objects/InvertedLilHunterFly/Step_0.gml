@@ -53,15 +53,15 @@ repeat(am)
 	ang += angstep;
 }
 var ang = random(360);
-repeat(8)
+repeat(6)
 {
 	with instance_create(x,y,EnemyBouncerBullet)
 	{
-	motion_add(ang,2)
+	motion_add(ang,3)
 	image_angle = direction;
 	team = other.team
 	}
-	ang+= 45;
+	ang+= 60;
 }
 var lps = GetPlayerLoops()
 if lps > 3

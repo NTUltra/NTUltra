@@ -1,7 +1,7 @@
-alarm[1] = 6+random(7)
+alarm[1] = 5+random(8)
 canDodge = true;
 if loop
-alarm[1]=2+random(4);
+	alarm[1] -= 3;
 scrTarget()
 if target != noone
 {
@@ -44,15 +44,17 @@ if point_distance(x,y,target.x,target.y) < 96 && random(2)<1
 	snd_play(sndEnemyFire)
 	wkick = 8
 	ang=gunangle-80;
-	repeat(9+irandom(min(8,loop)))
+	var r = irandom(min(8,loop))
+	var angStep = 160/(6+r);
+	repeat(6+r)
 	{
-		with instance_create(x,y,EnemyBullet1)
+		with instance_create(x,y,EnemyBullet2)
 		{
-		motion_add(other.ang,2+random(2))
-		image_angle = direction
-		team = other.team
+			motion_add(other.ang,3)
+			image_angle = direction
+			team = other.team
 		}
-		ang+=160/(9+(irandom(min(8,loop))))
+		ang+=angStep;
 	}
 }
 else if random(4)<1
@@ -62,20 +64,21 @@ else if random(4)<1
     
     snd_play(sndBouncerShotgun)
     wkick = 8
-    ang=gunangle-60;
-    repeat(5+(irandom(loop)*2))
-    {
-    
-    with instance_create(x,y,EnemyBouncerBullet)
-    {
-    motion_add(other.ang,2+random(3))
-    image_angle = direction
-    team = other.team
-    }
-    ang+=120/(5+(irandom(loop)*2))
-    }
-	alarm[1] += 4;
-    alarm[4]=5;
+	ang = gunangle - 80;
+	var r = irandom(min(5,loop))
+	var angStep = 160/(5+r);
+	repeat(5+r)
+	{
+		with instance_create(x,y,EnemyBouncerBullet)
+		{
+			motion_add(other.ang,4)
+			image_angle = direction
+			team = other.team
+		}
+		ang+=angStep;
+	}
+	alarm[1] += 6;
+    alarm[4] = 4;
 
 }
 else if point_distance(x,y,target.x,target.y) > 130 && random(4)<1
@@ -96,20 +99,22 @@ else if point_distance(x,y,target.x,target.y) > 130 && random(4)<1
 }
 else
 {
-//LONG RANGE
-gunangle = point_direction(x,y,target.x,target.y)+random(36)-18
-
-snd_play(sndEnemyFire)
-wkick = 8
-repeat(10+irandom(loop))
-{
-with instance_create(x,y,EnemyBullet5)
-{
-motion_add(other.gunangle,6.5+random(4))
-image_angle = direction
-team = other.team
-}
-}
+	//LONG RANGE
+	gunangle = point_direction(x,y,target.x,target.y)+random(36)-18
+	snd_play(sndEnemyFire)
+	snd_play(sndEraser);
+	wkick = 8
+	var s = 5.5;
+	repeat(10+irandom(min(loop,3)))
+	{
+		with instance_create(x,y,EnemyBullet5)
+		{
+			motion_add(other.gunangle,s)
+			image_angle = direction
+			team = other.team
+		}
+		s+= 0.5;
+	}
 }
 
 
@@ -162,7 +167,7 @@ else if random(10) < 1
 //NO TARGET
 motion_add(random(360),0.4)
 walk = 8+random(4)
-alarm[1] = walk+10+random(30)
+alarm[1] = walk+random(30)
 gunangle = direction
 if hspeed > 0
 right = 1

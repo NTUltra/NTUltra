@@ -21,10 +21,16 @@ if KeyCont.key_pick[other.p] = 1 && !instance_exists(Throne2)
 		repeat(10)
 		instance_create(x+random(16)-8,y+random(16)-8,Curse)
 	}
-	if (Player.curse == 1 || Player.bcurse == 1 || Player.ccurse == 1)
-		snd_play_2d(sndUncurse);
-	Player.curse = 0
-	Player.bcurse = 0
-	Player.ccurse = 0
+	if (canUncurse)
+	{
+		if (Player.curse == 1 || Player.bcurse == 1 || Player.ccurse == 1)
+			snd_play_2d(sndUncurse);
+		Player.curse = 0
+		Player.bcurse = 0
+		Player.ccurse = 0
+	} else
+	{
+		snd_play(sndCursedReminder);
+	}
 	scrExitCrownVault();
 }

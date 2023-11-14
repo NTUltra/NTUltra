@@ -1,7 +1,7 @@
 ///scrDrawHelp();
 // /@description
 ///@param
-function scrDrawHelp(txt, yOffset = 0, col = c_white){
+function scrDrawHelp(txt, yOffset = 0, col = c_silver){
 	if UberCont.opt_hud_des == 0
 		return "";
 	txt = string_replace_all(txt,"#"," ");

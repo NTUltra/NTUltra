@@ -7,6 +7,7 @@ function scrUnlockCSkin(raceIndex, unlockText, requiredGamemode = 0) {
 	{
 		mytext=UberCont.race_name[raceIndex]+"#C-SKIN UNLOCKED#"
 		+unlockText;
+		alarm[0] += string_length(unlockText);
 	}
 
 	with UberCont

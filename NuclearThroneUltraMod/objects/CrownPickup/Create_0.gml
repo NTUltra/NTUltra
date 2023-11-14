@@ -115,3 +115,4 @@ if Player.loops > 3 && !UberCont.hasFoughtInvadingThrone
 	instance_create(x-32,y,BigWallBreak);
 	instance_create(x-32,y+32,BigWallBreak);
 }
+canUncurse = true;

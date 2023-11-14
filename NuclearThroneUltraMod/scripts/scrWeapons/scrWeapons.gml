@@ -4477,7 +4477,7 @@ function scrWeapons() {
 	wep_type[404] = 4
 	wep_auto[404] = 0
 	wep_load[404] = 48
-	wep_cost[404] = 4
+	wep_cost[404] = 5
 	wep_sprt[404] = sprMissileBombThrower
 	wep_area[404] = 11
 	wep_text[404] = "be very carefull"
@@ -7105,7 +7105,7 @@ function scrWeapons() {
 	wep_name[643] = "BLOOD PLASMA RIFLE"
 	wep_type[643] = 5
 	wep_auto[643] = 1
-	wep_load[643] = 14
+	wep_load[643] = 12
 	wep_cost[643] = 3.5
 	wep_sprt[643] = sprBloodPlasmaRifle
 	wep_area[643] = 10
@@ -7116,7 +7116,7 @@ function scrWeapons() {
 	wep_name[644] = "BLOOD PLASMA GUN"
 	wep_type[644] = 5
 	wep_auto[644] = 1
-	wep_load[644] = 18
+	wep_load[644] = 16
 	wep_cost[644] = 1
 	wep_sprt[644] = sprBloodPlasmaGun
 	wep_area[644] = 6
@@ -7262,7 +7262,7 @@ function scrWeapons() {
 	wep_load[657] = 40
 	wep_cost[657] = 3
 	wep_sprt[657] = sprBalista
-	wep_area[657] = 11
+	wep_area[657] = 12
 	wep_text[657] = "ancient painbringer"
 	wep_swap[657] = sndSwapBow
 	wep_rad[657] = 0;
@@ -7402,7 +7402,7 @@ function scrWeapons() {
 	wep_name[670] = "NEEDLE"
 	wep_type[670] = 0
 	wep_auto[670] = 1
-	wep_load[670] = 10
+	wep_load[670] = 9
 	wep_cost[670] = 0
 	wep_sprt[670] = sprNeedle
 	wep_area[670] = 1
@@ -7469,9 +7469,9 @@ function scrWeapons() {
 	wep_type[676] = 1
 	wep_auto[676] = 1
 	wep_load[676] = 12
-	wep_cost[676] = 4
+	wep_cost[676] = 3
 	wep_sprt[676] = sprMicroAssaultRifle
-	wep_area[676] = 2
+	wep_area[676] = 1
 	wep_text[676] = "accurate hitscan"
 	wep_swap[676] = sndSwapMachinegun
 	wep_rad[676] = 0;
@@ -7486,6 +7486,28 @@ function scrWeapons() {
 	wep_text[677] = "super hitscan"
 	wep_swap[677] = sndSwapMachinegun
 	wep_rad[677] = 0;
+	
+	wep_name[678] = "STICKY GRENADE REVOLVER"
+	wep_type[678] = 4
+	wep_auto[678] = 0
+	wep_load[678] = 22
+	wep_cost[678] = 2
+	wep_sprt[678] = sprStickyGrenadePistol
+	wep_area[678] = 4
+	wep_text[678] = "slimey"
+	wep_swap[678] = sndSwapExplosive
+	wep_rad[678] = 0;
+	
+	wep_name[679] = "STICKY GRENADE RIFLE"
+	wep_type[679] = 4
+	wep_auto[679] = 0
+	wep_load[679] = 18
+	wep_cost[679] = 3
+	wep_sprt[679] = sprStickyGrenadeRifle
+	wep_area[679] = 10
+	wep_text[679] = "stick and boomboom"
+	wep_swap[679] = sndSwapExplosive
+	wep_rad[679] = 0;
 	
 
 	maxwep = array_length(wep_name)-1;

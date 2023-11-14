@@ -4,7 +4,7 @@
 function scrLoseSkill(skillIndex){
 	skill_got[skillIndex] = 0;
 	if skillIndex==13||skillIndex==14||skillIndex==15
-	||skillIndex==16||skillIndex==17||skillIndex==21//wep specific
+	||skillIndex==16||skillIndex==17||skillIndex==21||skillIndex==42//wep specific
 	{heavyheart--;}
 	switch (skillIndex)
 	{

@@ -8,3 +8,5 @@ else
 
 alarm[0] = 2;
 alarm[1] = 1;
+forceSprite = sprFloor1;
+forceBstyle = false;

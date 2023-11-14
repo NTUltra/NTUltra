@@ -19,5 +19,5 @@ if KeyCont.key_pick[other.p] = 1
 	instance_destroy();
 	scrUnlockGameMode(43,"FOR AQUIRING THE MULTI-CROWN!");
 	with instance_create(x,y,UnlockPopup)
-			mytext="YOU CAN NOW EQUIP#MULTIPLE CROWNS#AT THE SAME TIME!";
+		mytext="YOU CAN NOW EQUIP#MULTIPLE CROWNS#AT THE SAME TIME!";
 }

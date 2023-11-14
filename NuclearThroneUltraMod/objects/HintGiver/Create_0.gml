@@ -20,12 +20,13 @@ hint = choose(
 owner = noone;
 alarm[4] = 30;
 alarm[1] = 120;
+alarm[5] = 120;
 hasASecret = false;
 hasCurse = false;
 if scrHasASecretCrown()
 {
 	hasASecret = true;
-	hint = "WANT ME TO CURSE YOUR WEAPON?";
+	hint = "WANT ME TO CURSE YOUR WEAPONS?";
 	if (Player.curse == 1 && (Player.bcurse == 1 || Player.curse == 1))
 	{
 		hasCurse = true;

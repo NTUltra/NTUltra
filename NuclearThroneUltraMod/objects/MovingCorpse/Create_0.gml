@@ -31,4 +31,5 @@ with CorpseCollector {
 alarm[0] = 30;
 alarm[4] = 40;
 alarm[5] = 1;
+alarm[6] = 4;
 skidScale = 1;

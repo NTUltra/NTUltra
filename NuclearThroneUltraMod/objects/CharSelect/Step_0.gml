@@ -207,7 +207,7 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+16 and UberCon
     snd_slct=sndMutant14Slct;
     break;
     case 15:
-    snd_slct=sndHyperLightning;
+    snd_slct=sndMutant15Slct;
     break;
     case 16:
     snd_slct=sndMutant16Slct;

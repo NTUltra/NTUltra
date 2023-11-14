@@ -35,6 +35,8 @@ function scrEndOfRun(){
 		globalMutationsChosen = 0;
 		canSave = false;
 		canMultiCrown = false;
+		if scrIsGamemode(43)
+			canMultiCrown = true;
 		canPickFrogCrown = true;
 		hasTakenCrownOfLife = false;
 		if !scrIsGamemode(38)

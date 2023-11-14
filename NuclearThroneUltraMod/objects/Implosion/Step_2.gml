@@ -1,54 +1,57 @@
+var s = 1;
+if UberCont.normalGameSpeed == 60
+	s = 0.5;
 with enemy
 {
 if object_index!=HotDrake{
 if x > other.x-256 and x < other.x+256 and y > other.y-256 and y < other.y+256
-{if place_free(x+lengthdir_x(1,point_direction(x,y,other.x,other.y)+180),y)
-x += lengthdir_x(1,point_direction(x,y,other.x,other.y))
-if place_free(x,y+lengthdir_y(1,point_direction(x,y,other.x,other.y)+180))
-y += lengthdir_y(1,point_direction(x,y,other.x,other.y))}}
+{if place_free(x+lengthdir_x(s,point_direction(x,y,other.x,other.y)+180),y)
+x += lengthdir_x(s,point_direction(x,y,other.x,other.y))
+if place_free(x,y+lengthdir_y(s,point_direction(x,y,other.x,other.y)+180))
+y += lengthdir_y(s,point_direction(x,y,other.x,other.y))}}
 }
 with chestprop
 {if x > other.x-256 and x < other.x+256 and y > other.y-256 and y < other.y+256
-{if place_free(x+lengthdir_x(1,point_direction(x,y,other.x,other.y)+180),y)
-x += lengthdir_x(1,point_direction(x,y,other.x,other.y))
-if place_free(x,y+lengthdir_y(1,point_direction(x,y,other.x,other.y)+180))
-y += lengthdir_y(1,point_direction(x,y,other.x,other.y))}}
+{if place_free(x+lengthdir_x(s,point_direction(x,y,other.x,other.y)+180),y)
+x += lengthdir_x(s,point_direction(x,y,other.x,other.y))
+if place_free(x,y+lengthdir_y(s,point_direction(x,y,other.x,other.y)+180))
+y += lengthdir_y(s,point_direction(x,y,other.x,other.y))}}
 with HPPickup
 {if x > other.x-256 and x < other.x+256 and y > other.y-256 and y < other.y+256
-{if place_free(x+lengthdir_x(1,point_direction(x,y,other.x,other.y)+180),y)
-x += lengthdir_x(1,point_direction(x,y,other.x,other.y))
-if place_free(x,y+lengthdir_y(1,point_direction(x,y,other.x,other.y)+180))
-y += lengthdir_y(1,point_direction(x,y,other.x,other.y))}}
+{if place_free(x+lengthdir_x(s,point_direction(x,y,other.x,other.y)+180),y)
+x += lengthdir_x(s,point_direction(x,y,other.x,other.y))
+if place_free(x,y+lengthdir_y(s,point_direction(x,y,other.x,other.y)+180))
+y += lengthdir_y(s,point_direction(x,y,other.x,other.y))}}
 with AmmoPickup
 {if x > other.x-256 and x < other.x+256 and y > other.y-256 and y < other.y+256
-{if place_free(x+lengthdir_x(1,point_direction(x,y,other.x,other.y)+180),y)
-x += lengthdir_x(1,point_direction(x,y,other.x,other.y))
-if place_free(x,y+lengthdir_y(1,point_direction(x,y,other.x,other.y)+180))
-y += lengthdir_y(1,point_direction(x,y,other.x,other.y))}}
+{if place_free(x+lengthdir_x(s,point_direction(x,y,other.x,other.y)+180),y)
+x += lengthdir_x(s,point_direction(x,y,other.x,other.y))
+if place_free(x,y+lengthdir_y(s,point_direction(x,y,other.x,other.y)+180))
+y += lengthdir_y(s,point_direction(x,y,other.x,other.y))}}
 with WepPickup
 {if x > other.x-256 and x < other.x+256 and y > other.y-256 and y < other.y+256
-{if place_free(x+lengthdir_x(1,point_direction(x,y,other.x,other.y)+180),y)
-x += lengthdir_x(1,point_direction(x,y,other.x,other.y))
-if place_free(x,y+lengthdir_y(1,point_direction(x,y,other.x,other.y)+180))
-y += lengthdir_y(1,point_direction(x,y,other.x,other.y))}}
+{if place_free(x+lengthdir_x(s,point_direction(x,y,other.x,other.y)+180),y)
+x += lengthdir_x(s,point_direction(x,y,other.x,other.y))
+if place_free(x,y+lengthdir_y(s,point_direction(x,y,other.x,other.y)+180))
+y += lengthdir_y(s,point_direction(x,y,other.x,other.y))}}
 with RadChest
 {if x > other.x-256 and x < other.x+256 and y > other.y-256 and y < other.y+256
-{if place_free(x+lengthdir_x(1,point_direction(x,y,other.x,other.y)+180),y)
-x += lengthdir_x(1,point_direction(x,y,other.x,other.y))
-if place_free(x,y+lengthdir_y(1,point_direction(x,y,other.x,other.y)+180))
-y += lengthdir_y(1,point_direction(x,y,other.x,other.y))}}
+{if place_free(x+lengthdir_x(s,point_direction(x,y,other.x,other.y)+180),y)
+x += lengthdir_x(s,point_direction(x,y,other.x,other.y))
+if place_free(x,y+lengthdir_y(s,point_direction(x,y,other.x,other.y)+180))
+y += lengthdir_y(s,point_direction(x,y,other.x,other.y))}}
 with projectile
 {if x > other.x-256 and x < other.x+256 and y > other.y-256 and y < other.y+256 and team != 2 and object_index != EnemyLaser
-{if place_free(x+lengthdir_x(1,point_direction(x,y,other.x,other.y)+180),y)
-x += lengthdir_x(1,point_direction(x,y,other.x,other.y))
-if place_free(x,y+lengthdir_y(1,point_direction(x,y,other.x,other.y)+180))
-y += lengthdir_y(1,point_direction(x,y,other.x,other.y))}}
+{if place_free(x+lengthdir_x(s,point_direction(x,y,other.x,other.y)+180),y)
+x += lengthdir_x(s,point_direction(x,y,other.x,other.y))
+if place_free(x,y+lengthdir_y(s,point_direction(x,y,other.x,other.y)+180))
+y += lengthdir_y(s,point_direction(x,y,other.x,other.y))}}
 with Sheep
 {if x > other.x-256 and x < other.x+256 and y > other.y-256 and y < other.y+256 and team != 2 and object_index != EnemyLaser
-{if place_free(x+lengthdir_x(1,point_direction(x,y,other.x,other.y)+180),y)
-x += lengthdir_x(1,point_direction(x,y,other.x,other.y))
-if place_free(x,y+lengthdir_y(1,point_direction(x,y,other.x,other.y)+180))
-y += lengthdir_y(1,point_direction(x,y,other.x,other.y))}}
+{if place_free(x+lengthdir_x(s,point_direction(x,y,other.x,other.y)+180),y)
+x += lengthdir_x(s,point_direction(x,y,other.x,other.y))
+if place_free(x,y+lengthdir_y(s,point_direction(x,y,other.x,other.y)+180))
+y += lengthdir_y(s,point_direction(x,y,other.x,other.y))}}
 
 
 /*
@@ -92,7 +95,7 @@ image_angle = other.image_angle
 
 }
 
-alarm[2]=6;//kraken rate.    
+alarm[2]=time * 2;//kraken rate.    
     }
     else
     {
@@ -114,7 +117,7 @@ alarm[2]=6;//kraken rate.
     image_angle = other.image_angle}
     
 
-alarm[2]=4;//lightning rate.
+alarm[2]= time + 1;//lightning rate.
     }
     
         Sleep(1)
@@ -131,6 +134,3 @@ with instance_create(x,y,FishBoost)
     }
 
 }
-
-/* */
-/*  */

@@ -46,6 +46,11 @@ for (var j = 0; j < al; j++) {
 }
 ds_list_destroy(floors);
 with instance_create(x,y,Floor) {
+	if other.forceBstyle
+	{
+		styleb = true;
+		sprite_index = other.forceSprite;
+	}
 	if !position_meeting(x-16,y-16,Floor) instance_create(x-16,y-16,Wall)
 	if !position_meeting(x,y-16,Floor) instance_create(x,y-16,Wall)
 	if !position_meeting(x+16,y-16,Floor) instance_create(x+16,y-16,Wall)

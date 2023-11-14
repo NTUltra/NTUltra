@@ -1810,7 +1810,7 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 			extrafeetalarm--;
 	}
 
-	if extrafeetalarm == 11 && extrafeetdodged && alarm[3] < 1
+	if extrafeetalarm == 15 && extrafeetdodged
 	{
 		closedodges ++;
 		if race == 26 && closedodges >= 20
@@ -1822,12 +1822,12 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 		{
 			sprite_index = sprExtraFeetCloseDodge;	
 		}
-		if scrDrop(75,5) != noone
+		if scrDrop(70,5) != noone
 			snd_play(sndExtraFeetDodge);
 		else
 			snd_play(sndExtraFeetDodgeFail);
 		
-		var am = 3;
+		var am = 2;
 		if race == 25
 			am ++;
 		repeat(am)
@@ -1849,8 +1849,9 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 				{
 					if dodgeAble && team != other.team//NOT FROM PLAYA!? O_O
 			        {                     
-						other.extrafeetalarm=23;//after some time we check if you've dodged this
+						other.extrafeetalarm=27;//after some time we check if you've dodged this
 						other.extrafeetdodged=true;
+						j = al;
 			        }
 				}
 			}

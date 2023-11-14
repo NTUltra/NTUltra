@@ -147,12 +147,33 @@ function scrDrawOptions2() {
 				var unlockedFor = "";
 				var maxInList = 7;
 				var maxCounter = 0;
+				var yy = y + 76;
+				var xx = x + 8;
+				var my = yy + 8;
+				draw_text_ext_colour(xx,yy,
+				"UNLOCKED FOR:",8,300,c_silver,c_silver,c_silver,c_silver,1);
 				repeat(UberCont.racemax)
 				{
-					if (maxCounter < maxInList && UberCont.wep_found[ri,wep])
+					if (maxCounter < maxInList && (UberCont.wep_found[ri,wep]))
 					{
 						unlockedFor	+= "\n"+UberCont.race_name[ri];
 						maxCounter ++;
+						if (mouse_x > xx - 64 && mouse_x < xx + 64 && mouse_y > my && mouse_y < my + 8)
+						{
+							alarm[0] = 20;
+							draw_text_ext_colour(xx,my,
+							UberCont.race_name[ri],8,300,c_white,c_white,c_white,c_white,1);
+							if mouse_check_button_pressed(mb_left) {
+								snd_play_2d(sndClick);
+								Menu.race = ri;
+							}
+						}
+						else
+						{
+							draw_text_ext_colour(xx,my,
+							UberCont.race_name[ri],8,300,c_gray,c_gray,c_gray,c_gray,1);
+						}
+						my += 8;
 					}
 					ri++;
 					if ri > UberCont.racemax
@@ -160,8 +181,7 @@ function scrDrawOptions2() {
 						ri = 1;	
 					}
 				}
-				draw_text_ext_colour(x+8,y+76,
-				"UNLOCKED FOR:" + unlockedFor,8,132,c_gray,c_gray,c_gray,c_gray,1);
+				
 			}
 		}
 		/*
