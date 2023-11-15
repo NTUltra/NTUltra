@@ -25,10 +25,11 @@ if (hasNoMenuOpen()
 	var yyy = camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])*0.5)-18;//-24
 	var yyyy = yyy + 24;
 	var titleNameSpace = 12;
-	var xxxx = camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])*0.5);
+	var xxxx = camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])*0.5) - 147;
 	var am = 5;
 	//More than 5 ultras
-	draw_set_halign(fa_center);
+	//draw_set_halign(fa_center);
+	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 	draw_text(xxxx,yyy-28,"ULTRA MUTATIONS");
 	switch (race)
@@ -88,7 +89,7 @@ if (hasNoMenuOpen()
 			if u > 25	//Horror is seperate
 				u --;
 			name = string_hash_to_newline(secret_ultra_name[u]);
-			text = string_hash_to_newline(secret_ultra_text[u]);
+			text = secret_ultra_text[u];
 			canShowThis = UberCont.ctot_secret_ultra_taken[u];
 			unlockHint = "HINT: " + secret_ultra_hint[u];
 			howToUnlock = "UNLOCK: " + secret_ultra_unlk[u]
@@ -161,7 +162,7 @@ if (hasNoMenuOpen()
 					unlockHint = "";
 					howToUnlock = "";
 					name = string_hash_to_newline(ultra_name[0]);
-					text = string_hash_to_newline(ultra_text[0]);
+					text = ultra_text[0];
 				break;
 				case 22:
 					drawSprite = sprFreakRogue;
@@ -190,7 +191,7 @@ if (hasNoMenuOpen()
 				case 9:
 					var u = 10;
 					name = string_hash_to_newline(secret_ultra_name[u]);
-					text = string_hash_to_newline(secret_ultra_text[u]);
+					text = secret_ultra_text[u];
 					canShowThis = UberCont.ctot_secret_ultra_taken[u];
 					unlockHint = "HINT: " + secret_ultra_hint[u];
 					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
@@ -199,7 +200,7 @@ if (hasNoMenuOpen()
 				case 13:
 					var u = 15;
 					name = string_hash_to_newline(secret_ultra_name[u]);
-					text = string_hash_to_newline(secret_ultra_text[u]);
+					text = secret_ultra_text[u];
 					canShowThis = UberCont.ctot_secret_ultra_taken[u];
 					unlockHint = "HINT: " + secret_ultra_hint[u];
 					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
@@ -208,7 +209,7 @@ if (hasNoMenuOpen()
 				case 16:
 					var u = 19;
 					name = string_hash_to_newline(secret_ultra_name[u]);
-					text = string_hash_to_newline(secret_ultra_text[u]);
+					text = secret_ultra_text[u];
 					canShowThis = UberCont.ctot_secret_ultra_taken[u];
 					unlockHint = "HINT: " + secret_ultra_hint[u];
 					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
@@ -217,7 +218,7 @@ if (hasNoMenuOpen()
 				case 17:
 					var u = 21;
 					name = string_hash_to_newline(secret_ultra_name[u]);
-					text = string_hash_to_newline(secret_ultra_text[u]);
+					text = secret_ultra_text[u];
 					canShowThis = UberCont.ctot_secret_ultra_taken[u];
 					unlockHint = "HINT: " + secret_ultra_hint[u];
 					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
@@ -226,7 +227,7 @@ if (hasNoMenuOpen()
 				case 19:
 					var u = 24;
 					name = string_hash_to_newline(secret_ultra_name[u]);
-					text = string_hash_to_newline(secret_ultra_text[u]);
+					text = secret_ultra_text[u];
 					canShowThis = UberCont.ctot_secret_ultra_taken[u];
 					unlockHint = "HINT: " + secret_ultra_hint[u];
 					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
@@ -235,7 +236,7 @@ if (hasNoMenuOpen()
 				case 21:
 					var u = 0;
 					name = string_hash_to_newline(secret_ultra_name[u]);
-					text = string_hash_to_newline(secret_ultra_text[u]);
+					text = secret_ultra_text[u];
 					canShowThis = UberCont.ctot_secret_ultra_taken[u];
 					unlockHint = "HINT: " + secret_ultra_hint[u];
 					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
@@ -244,7 +245,7 @@ if (hasNoMenuOpen()
 				case 27:
 					var u = 32;
 					name = string_hash_to_newline(secret_ultra_name[u]);
-					text = string_hash_to_newline(secret_ultra_text[u]);
+					text = secret_ultra_text[u];
 					canShowThis = UberCont.ctot_secret_ultra_taken[u];
 					unlockHint = "HINT: " + secret_ultra_hint[u];
 					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
@@ -255,7 +256,7 @@ if (hasNoMenuOpen()
 		else
 		{
 			var name = string_hash_to_newline(ultra_name[i]);
-			var text = string_hash_to_newline(ultra_text[i]);	
+			var text = ultra_text[i];	
 		}
 		#region render ultra text
 			var col = c_white;
@@ -271,7 +272,7 @@ if (hasNoMenuOpen()
 			draw_set_colour(c_white);
 			if (mouse_x < xxx + 12 && mouse_x > xxx - 12 && mouse_y > yyy - 12 && mouse_y < yyy + 12)
 			{
-				var bb = yyyy + titleNameSpace + string_height(text);
+				var bb = yyyy + titleNameSpace + string_height(string_hash_to_newline(scrReplaceAllColourCodes(text)));
 				if j > 3
 					bb += max(string_height(howToUnlock),string_height(unlockHint));
 				if bb > b
@@ -285,7 +286,7 @@ if (hasNoMenuOpen()
 				if !canShowThis || !canShow
 				{
 					draw_text(xxxx,yyyy,scrCensorString(name));
-					draw_text(xxxx,yyyy + titleNameSpace,scrCensorString(text));
+					draw_text(xxxx,yyyy + titleNameSpace,scrCensorString(scrReplaceAllColourCodes(text)));
 					if j > 3
 					{
 						draw_text_colour(xxxx,bb, unlockHint,c_gray,c_gray,c_gray,c_gray,1);
@@ -298,7 +299,9 @@ if (hasNoMenuOpen()
 						draw_text_colour(xxxx,bb,howToUnlock,c_gray,c_gray,c_gray,c_gray,1);
 					}
 					draw_text(xxxx,yyyy,name);
-					draw_text(xxxx,yyyy + titleNameSpace,text);
+					draw_set_color(make_colour_rgb(160,160,160));
+					scrDrawTextColours(xxxx,yyyy + titleNameSpace,text);
+					draw_set_colour(c_white);
 				}
 			}
 		#endregion

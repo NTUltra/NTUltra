@@ -12,16 +12,16 @@ scrWeapons();
 scrUltras();
 scrSkills();
 scrRaces();
-if race == 16
-{
-	armour = 1;
-	maxarmour = 2;
-}
 //Give long arms
 skill_got[13] = 1;
 drawempty = 0;
 p = 0;
 race = instance_number(Friend);
+if race == 16
+{
+	armour = 1;
+	maxarmour = 2;
+}
 gunangle = choose(0,180);
 wepflip = 1
 wkick = 0
