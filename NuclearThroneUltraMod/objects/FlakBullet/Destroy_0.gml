@@ -1,10 +1,11 @@
 repeat(bullets)
 {
-with instance_create(x,y,Bullet2)
-{motion_add(random(360),other.pSpeed+random(8))
-image_angle = direction
-team = other.team
-}
+	with instance_create(x,y,Bullet2)
+	{
+		motion_add(random(360),other.pSpeed+random(8))
+		image_angle = direction
+		team = other.team
+	}
 }
 Sleep(20)
 repeat(6)

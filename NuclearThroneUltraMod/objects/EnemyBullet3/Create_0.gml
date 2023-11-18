@@ -5,8 +5,8 @@ wallbounce = 0
 alarm[2] =1
 
 typ = 1 //0 = nothing, 1 = deflectable, 2 = destructable
-dmg = 2;
+dmg = 3;
 if scrIsGamemode(9)//CASUAL MODE
-	dmg = 1;
+	dmg = 2;
 else if !scrIsGamemode(34)//HARD MODE
 	alarm[3] = 5;

@@ -97,7 +97,7 @@ else if race=12//yung cuz reset max HP
 	if skill_got[33] == 1//Glass arm cannon
 		targetHealth = max(1,targetHealth-2);
 	if skill_got[41]//nerves of steel
-		targetHealth = max(1,targetHealth-3);
+		targetHealth = max(1,targetHealth-2);
 	if scrIsGamemode(9)
 		targetHealth += UberCont.casualModeHPIncrease;
 	targetHealth += UberCont.maxHpIncrease;
@@ -319,7 +319,7 @@ if looping && area != 104
 				if skill_got[33] == 1//Glass arm cannon
 					targetHealth = max(1,targetHealth-2);
 				if skill_got[41]//nerves of steel
-					targetHealth = max(1,targetHealth-3);
+					targetHealth = max(1,targetHealth-2);
 				if scrIsGamemode(9)
 					targetHealth += UberCont.casualModeHPIncrease;
 				targetHealth += UberCont.maxHpIncrease;
@@ -832,7 +832,7 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 			maxhealth -= 2;
 		if skill_got[41]//Nerves of steel
 		{
-			maxhealth -= 3;
+			maxhealth -= 2;
 			armour = other.armour;
 			maxarmour = max(1,Player.maxarmour + 1);
 		}

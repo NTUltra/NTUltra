@@ -501,9 +501,16 @@ function scrDrawHUD() {
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+17,col,1)
 	if (UberCont.opt_hud_des && mouse_x > xxx && mouse_x < xxx+ss && mouse_y < yyy+ss && mouse_y > yyy)
 	{
-		scrDrawHelp("  " + string(dataRef.wep_area[dataRef.cwep])
-		+ "\n" + dataRef.wep_name[dataRef.cwep]);
-		draw_sprite(sprWepTier,0,vx+118,vy+22);
+		if dataRef.wep_area[dataRef.wep] >= 0
+		{
+			scrDrawHelp("  " + string(dataRef.wep_area[dataRef.cwep])
+			+ "\n" + dataRef.wep_name[dataRef.cwep]);
+			draw_sprite(sprWepTier,0,vx+118,vy+22);
+		}
+		else
+		{
+			scrDrawHelp("\n" + dataRef.wep_name[dataRef.cwep]);
+		}
 	}
 	var wwep = dataRef.cwep;
 	var pcc = dataRef.cqueueshot;
@@ -606,9 +613,16 @@ function scrDrawHUD() {
 	var ss = 20;
 	if (UberCont.opt_hud_des && mouse_x > xxx && mouse_x < xxx+ss && mouse_y < yyy+ss && mouse_y > yyy)
 	{
-		scrDrawHelp("  " + string(dataRef.wep_area[dataRef.bwep])
-		+ "\n" + dataRef.wep_name[dataRef.bwep]);
-		draw_sprite(sprWepTier,0,vx+118,vy+22);
+		if dataRef.wep_area[dataRef.wep] >= 0
+		{
+			scrDrawHelp("  " + string(dataRef.wep_area[dataRef.bwep])
+			+ "\n" + dataRef.wep_name[dataRef.bwep]);
+			draw_sprite(sprWepTier,0,vx+118,vy+22);
+		}
+		else
+		{
+			scrDrawHelp("\n" + dataRef.wep_name[dataRef.bwep]);
+		}
 	}
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+67,vy+16,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+69,vy+16,col,1)
@@ -714,9 +728,16 @@ function scrDrawHUD() {
 	var ss = 20;
 	if (UberCont.opt_hud_des && mouse_x > xxx && mouse_x < xxx+ss && mouse_y < yyy+ss && mouse_y > yyy)
 	{
-		scrDrawHelp("  " + string(dataRef.wep_area[dataRef.wep])
-		+ "\n" + dataRef.wep_name[dataRef.wep]);
-		draw_sprite(sprWepTier,0,vx+118,vy+22);
+		if dataRef.wep_area[dataRef.wep] >= 0
+		{
+			scrDrawHelp("  " + string(dataRef.wep_area[dataRef.wep])
+			+ "\n" + dataRef.wep_name[dataRef.wep]);
+			draw_sprite(sprWepTier,0,vx+118,vy+22);
+		}
+		else
+		{
+			scrDrawHelp("\n" + dataRef.wep_name[dataRef.wep]);
+		}
 	}
 
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+24,vy+16+1,c_black,1)
@@ -1182,7 +1203,7 @@ function scrDrawHUD() {
 					var ny = yy-30;
 					//Eagle eyes weptier
 					var tier = string(wep_area[wep]);
-					if tier >= 0//eagle eyes
+					if wep_area[wep] >= 0//eagle eyes
 					{
 						var spaceBetweenStarAndText = 4;
 						var ty = yy-40;

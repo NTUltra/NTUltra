@@ -15,8 +15,8 @@
     "path": "folders/Objects/Projectiles/Charge.yy",
   },
   "parentObjectId": {
-    "name": "projectile",
-    "path": "objects/projectile/projectile.yy",
+    "name": "ChargeWeapons",
+    "path": "objects/ChargeWeapons/ChargeWeapons.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

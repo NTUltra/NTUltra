@@ -76,12 +76,6 @@ function scrCollectHP(num = 2){
 		//RUSH CROWN
 		if scrIsCrown(4)
 		num += 1
-		if scrIsHardMode()//HARD MODE
-		{
-			num = round(num*0.5);
-			if Player.skill_got[9] = 1
-				num ++;
-		}
 		if Player.my_health + num <= Player.maxhealth
 			Player.my_health += num
 		else// if Player.crown != 2

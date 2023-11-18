@@ -18,6 +18,7 @@ with GameRender
 with DataRef
 	instance_destroy();
 
+angelHeal = false;
 tailWave = 0;
 drawTail = false;
 drawTailIntro = 0;
@@ -485,7 +486,6 @@ if scrIsHardMode()//HARD MODE
 		hard = 3;
 		instance_create(x,y,HardModeChest);
 	}
-	maxRadPickedUp += 30;
 	//Also in startDaily
 }
 inverted = false; //for when entering inverted portals

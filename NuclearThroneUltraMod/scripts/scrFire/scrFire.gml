@@ -26,7 +26,10 @@ function scrFire() {
 	reload = min(reload + wep_load[wep],wep_load[wep]);
 	if Player.skill_got[41] && Player.armour < Player.maxarmour
 	{
-		reload *= 0.65;
+		if Player.race == 25
+			reload *= 0.6;
+		else
+			reload *= 0.65;
 	}
 	queueshot = max(queueshot-1,0);
 	Player.fired = true;
@@ -839,8 +842,6 @@ function scrFire() {
 	team = other.team}
 	with instance_create(x,y,SplinterBurst)
 	{
-		mox=UberCont.mouse__x;
-		moy=UberCont.mouse__y;
 		totalAccuracy = 16;
 		creator = other.id
 		ammo = 4
@@ -2180,8 +2181,6 @@ function scrFire() {
 
 	with instance_create(x,y,SplinterBurst)
 	{
-		mox=UberCont.mouse__x;
-		moy=UberCont.mouse__y;
 		totalAccuracy = 16;
 		creator = other.id
 		ammo = 2
@@ -2191,8 +2190,6 @@ function scrFire() {
 	}
 	with instance_create(x,y,SplinterBurst)
 	{
-		mox=UberCont.mouse__x;
-		moy=UberCont.mouse__y;
 		totalAccuracy = 9;
 		creator = other.id
 		ammo = 2
@@ -3353,8 +3350,6 @@ function scrFire() {
 	team = other.team}
 	with instance_create(x,y,SplinterBurst)
 	{
-		mox=UberCont.mouse__x;
-		moy=UberCont.mouse__y;
 		totalAccuracy = 19;
 		creator = other.id
 		ammo = 4
@@ -3552,8 +3547,6 @@ function scrFire() {
 	team = other.team}
 	with instance_create(x,y,SplinterBurst)
 	{
-		mox = UberCont.mouse__x;
-		moy = UberCont.mouse__y;
 		totalAccuracy = 16;
 		creator = other.id
 		ammo = 2
@@ -3563,8 +3556,6 @@ function scrFire() {
 	}
 	with instance_create(x,y,SplinterBurst)
 	{
-		mox = UberCont.mouse__x;
-		moy = UberCont.mouse__y;
 		totalAccuracy = 8;
 		creator = other.id
 		ammo = 2
@@ -3764,7 +3755,7 @@ function scrFire() {
 	{
 	creator = other.id
 	ammo = 5
-	time = 1
+	time = 2
 	team = other.team
 	event_perform(ev_alarm,0) 
 	}
@@ -3772,14 +3763,14 @@ function scrFire() {
 	break;
 
 
-	//HYPER BURST SLUGGER
+	//HYPER ASSAULT SLUGGER
 	case 150:
 
 	with instance_create(x,y,SlugBurst)
 	{
 	creator = other.id
 	ammo = 5
-	time = 1
+	time = 2
 	team = other.team
 	event_perform(ev_alarm,0) 
 	}
@@ -4355,7 +4346,7 @@ function scrFire() {
 
 	snd_play_fire(sndDirectorShotgun);
 	
-	with instance_create(x,y,DoubleShotgunBurst)
+	with instance_create(x,y,DoubleDirectorShotgunBurst)
 	{
 		creator = other.id
 		ammo = 2
@@ -4377,7 +4368,7 @@ function scrFire() {
 	case 172:
 
 	snd_play_fire(sndDoubleShotgun);
-	with instance_create(x,y,DoubleShotgunBurst)
+	with instance_create(x,y,DoubleDirectorShotgunBurst)
 	{
 		alarm[1] = 2;
 		creator = other.id

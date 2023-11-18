@@ -6,8 +6,6 @@ function BloodLust(){
 	var chance = 7.7
 	if Player.race == 25
 		chance = 7.95;
-	if scrIsHardMode()//HARD MODE
-		chance -= 0.5;
     if Player.skill_got[7] = 1 and Player.canHeal and random(100) <  chance//7.69% chance
     {
 		var splatDir = random(360);

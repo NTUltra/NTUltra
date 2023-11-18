@@ -937,18 +937,7 @@ function scrPowers() {
 		    }
 			else
 			{
-				var multiply = 1.75;
-				if skill_got[5]
-					multiply -= 0.5;
-				if (ultra_got[72] && altUltra)
-				{
-					multiply -= 0.7;
-					if skill_got[5]
-						multiply += 0.1;
-				}
-				else if my_health >= maxhealth
-					multiply -= 0.75;
-				multiply = max(0.2,multiply);
+				var multiply = 0.2;
 				var cost = round(typ_ammo[wep_type[wep]]*multiply);
 			    if ammo[wep_type[wep]]-cost >= 0
 			    {
@@ -956,6 +945,7 @@ function scrPowers() {
 					if ultra_got[72] {//Angel ascent
 						instance_create(x,y,AngelActiveMouse);	
 					}
+					snd_play(sndRicochet);//TEMP
 				    ammo[wep_type[wep]]-= cost//2.5?
 					if UberCont.opt_ammoicon
 					{
@@ -972,51 +962,56 @@ function scrPowers() {
 						dir.mytext = "-"+string(cost)+" "+string(other.typ_name[wep_type[other.wep]])
 					}
 					//HEAL
-					if !(ultra_got[72] && altUltra)
+					if (skill_got[5])
 					{
-				        var num = 1
-				        if Player.skill_got[9] = 1//secund tummy
+						angelHeal = !angelHeal;
+						if (angelHeal)
 						{
-							num = 2
-							with instance_create(x,y,HealFX)
+					        var num = 1
+							/*
+					        if Player.skill_got[9] = 1//secund tummy
 							{
-								sprite_index = sprHealBigFX;
-								depth = other.depth - 1;
+								num = 2
+								with instance_create(x,y,HealFX)
+								{
+									sprite_index = sprHealBigFX;
+									depth = other.depth - 1;
+								}
 							}
-						}
-						else
-						{
-							with instance_create(x,y,HealFX)
+							else
 							{
-								depth = other.depth - 1;
+								with instance_create(x,y,HealFX)
+								{
+									depth = other.depth - 1;
+								}
 							}
-						}
-				        //RUSH CROWN
-				        if scrIsCrown(4)
-							num += 1
+					        //RUSH CROWN
+					        if scrIsCrown(4)
+								num += 1
+							*/
+					        snd_play_2d(sndHealthPickup)
+					        my_health += num
+					        if my_health > maxhealth
+								my_health = maxhealth
         
-				        snd_play_2d(sndHealthPickup)
-				        my_health += num
-				        if my_health > maxhealth
-							my_health = maxhealth
-        
-				        if UberCont.opt_ammoicon
-						{
-							dir = instance_create(x,y,PopupText)
-							dir.sprt = sprHPIconPickup;
-							dir.mytext = "+"+string(num)
-							if my_health = maxhealth
-								dir.mytext = "MAX";
-						}
-						else
-						{
-							dir = instance_create(x,y,PopupText)
-							dir.mytext = "+"+string(num)+" HP"
-							if my_health = maxhealth
-								dir.mytext = "MAX HP";
+					        if UberCont.opt_ammoicon
+							{
+								dir = instance_create(x,y,PopupText)
+								dir.sprt = sprHPIconPickup;
+								dir.mytext = "+"+string(num)
+								if my_health = maxhealth
+									dir.mytext = "MAX";
+							}
+							else
+							{
+								dir = instance_create(x,y,PopupText)
+								dir.mytext = "+"+string(num)+" HP"
+								if my_health = maxhealth
+									dir.mytext = "MAX HP";
+							}
 						}
 					}
-			         Sleep(40)
+			         Sleep(40);
 			    }
 			    else
 			    {
@@ -1696,12 +1691,6 @@ function scrPowers() {
 		instance_create(x,y,Dust)
 	}
 
-	//CRYSTAL
-	if race == 2 and !instance_exists(CrystalShield)//Change this ability to longer lasting shield.
-	{
-		instance_create(x,y,CrystalShield)
-	}
-
 	//MELTING
 	if race == 4
 	{
@@ -2094,6 +2083,11 @@ function scrPowers() {
 		} else if race == 14 && PlayerAlarms2.alarm[7] < 1
 		{
 			scrPandaThrow();
+		}
+		//CRYSTAL
+		else if race == 2 and !instance_exists(CrystalShield)//Change this ability to longer lasting shield.
+		{
+			instance_create(x,y,CrystalShield)
 		}
 		//HANDS
 		if race == 27 && (!instance_exists(Hand) || (ultra_got[107] && instance_exists(Hand) && instance_number(Hand) < 2 || (scrIsInInvertedArea() && instance_number(Hand) < 2)))//Hands

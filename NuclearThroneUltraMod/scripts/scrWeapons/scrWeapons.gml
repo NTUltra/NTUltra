@@ -1132,7 +1132,7 @@ function scrWeapons() {
 	wep_name[102] = "FROST PISTOL"
 	wep_type[102] = 1
 	wep_auto[102] = 0
-	wep_load[102] = 10
+	wep_load[102] = 9
 	wep_cost[102] = 2
 	wep_sprt[102] = sprFrostPistol
 	wep_area[102] = 2
@@ -1649,10 +1649,10 @@ function scrWeapons() {
 	wep_name[149] = "HYPER ASSAULT SHOTGUN"
 	wep_type[149] = 2
 	wep_auto[149] = 0
-	wep_load[149] = 3
+	wep_load[149] = 15
 	wep_cost[149] = 4
 	wep_sprt[149] = sprHyperBurstShotgun
-	wep_area[149] = 13
+	wep_area[149] = 9
 	wep_text[149] = "hyper everything"
 	wep_swap[149] = sndSwapShotgun
 	wep_rad[149] = 0;
@@ -1663,7 +1663,7 @@ function scrWeapons() {
 	wep_load[150] = 20
 	wep_cost[150] = 4
 	wep_sprt[150] = sprHyperBurstSlugger
-	wep_area[150] = 11
+	wep_area[150] = 10
 	wep_text[150] = "where's your gatling slugger now?!"
 	wep_swap[150] = sndSwapShotgun
 	wep_rad[150] = 0;
@@ -3244,10 +3244,10 @@ function scrWeapons() {
 	wep_name[294] = "CHARGE SHOTGUN"
 	wep_type[294] = 2
 	wep_auto[294] = 0
-	wep_load[294] = 28
+	wep_load[294] = 26
 	wep_cost[294] = 1
 	wep_sprt[294] = sprChargeShotgun
-	wep_area[294] = 3
+	wep_area[294] = 5
 	wep_text[294] = "get a load of this"
 	wep_swap[294] = sndSwapShotgun
 	wep_rad[294] = 0;
@@ -3255,7 +3255,7 @@ function scrWeapons() {
 	wep_name[295] = "CHARGE LASER"
 	wep_type[295] = 5
 	wep_auto[295] = 0
-	wep_load[295] = 28
+	wep_load[295] = 30
 	wep_cost[295] = 1
 	wep_sprt[295] = sprChargeLaserGun
 	wep_area[295] = 3
@@ -4872,7 +4872,7 @@ function scrWeapons() {
 	wep_name[440] = "THE PENETRATOR"
 	wep_type[440] = 3
 	wep_auto[440] = 0
-	wep_load[440] = 40
+	wep_load[440] = 30
 	wep_cost[440] = 2
 	wep_sprt[440] = sprPenetrator
 	wep_area[440] = 6
@@ -5036,22 +5036,22 @@ function scrWeapons() {
 	
 	wep_name[455] = "SCYTHE"
 	wep_type[455] = 0
-	wep_auto[455] = 0
+	wep_auto[455] = 1
 	wep_load[455] = 20
 	wep_cost[455] = 0
 	wep_sprt[455] = sprScythe
-	wep_area[455] = 6
+	wep_area[455] = 5
 	wep_text[455] = "spin attack!"
 	wep_swap[455] = sndSwapHammer
 	wep_rad[455] = 0;
 	
 	wep_name[456] = "SUPER SCYTHE"
 	wep_type[456] = 0
-	wep_auto[456] = 0
+	wep_auto[456] = 1
 	wep_load[456] = 33
 	wep_cost[456] = 0
 	wep_sprt[456] = sprSuperScythe
-	wep_area[456] = 22
+	wep_area[456] = 21
 	wep_text[456] = "super scythe me"
 	wep_swap[456] = sndSwapHammer
 	wep_rad[456] = 0;
@@ -5928,7 +5928,7 @@ function scrWeapons() {
 	wep_name[536] = "SEEKER CANNON"
 	wep_type[536] = 3
 	wep_auto[536] = 0
-	wep_load[536] = 48
+	wep_load[536] = 46
 	wep_cost[536] = 8
 	wep_sprt[536] = sprSeekerCannon
 	wep_area[536] = 12
@@ -5939,7 +5939,7 @@ function scrWeapons() {
 	wep_name[537] = "SUPER SEEKER CANNON"
 	wep_type[537] = 3
 	wep_auto[537] = 0
-	wep_load[537] = 350
+	wep_load[537] = 340
 	wep_cost[537] = 22
 	wep_sprt[537] = sprSuperSeekerCannon
 	wep_area[537] = 18
@@ -5950,7 +5950,7 @@ function scrWeapons() {
 	wep_name[538] = "SUPER BLOOD CANNON"
 	wep_type[538] = 4
 	wep_auto[538] = 0
-	wep_load[538] = 350
+	wep_load[538] = 340
 	wep_cost[538] = 23
 	wep_sprt[538] = sprSuperBloodCannon
 	wep_area[538] = 19
@@ -5972,7 +5972,7 @@ function scrWeapons() {
 	wep_name[540] = "MISSILE CANNON"
 	wep_type[540] = 4
 	wep_auto[540] = 0
-	wep_load[540] = 55
+	wep_load[540] = 50
 	wep_cost[540] = 8
 	wep_sprt[540] = sprMissileCannon
 	wep_area[540] = 15
@@ -5983,7 +5983,7 @@ function scrWeapons() {
 	wep_name[541] = "SUPER MISSILE CANNON"
 	wep_type[541] = 4
 	wep_auto[541] = 0
-	wep_load[541] = 400
+	wep_load[541] = 380
 	wep_cost[541] = 26
 	wep_sprt[541] = sprSuperMissileCannon
 	wep_area[541] = 22
@@ -5994,7 +5994,7 @@ function scrWeapons() {
 	wep_name[542] = "KRAKEN CANNON"
 	wep_type[542] = 4
 	wep_auto[542] = 0
-	wep_load[542] = 54
+	wep_load[542] = 50
 	wep_cost[542] = 8
 	wep_sprt[542] = sprKrakenCannon
 	wep_area[542] = 14
@@ -6005,7 +6005,7 @@ function scrWeapons() {
 	wep_name[543] = "SUPER KRAKEN CANNON"
 	wep_type[543] = 4
 	wep_auto[543] = 0
-	wep_load[543] = 360
+	wep_load[543] = 350
 	wep_cost[543] = 25
 	wep_sprt[543] = sprSuperKrakenCannon
 	wep_area[543] = 22
@@ -6016,7 +6016,7 @@ function scrWeapons() {
 	wep_name[544] = "BOWLING BALL LAUNCHER"
 	wep_type[544] = 3
 	wep_auto[544] = 0
-	wep_load[544] = 45
+	wep_load[544] = 44
 	wep_cost[544] = 3
 	wep_sprt[544] = sprBowlingBallLauncher
 	wep_area[544] = 18
@@ -6225,7 +6225,7 @@ function scrWeapons() {
 	wep_name[563] = "SUPER ELECTRO CANNON"
 	wep_type[563] = 5
 	wep_auto[563] = 1
-	wep_load[563] = 340
+	wep_load[563] = 335
 	wep_cost[563] = 22
 	wep_sprt[563] = sprSuperElectroCannon
 	wep_area[563] = 22
@@ -7017,7 +7017,7 @@ function scrWeapons() {
 	wep_name[635] = "DOUBLE SIDED BLADE"
 	wep_type[635] = 0
 	wep_auto[635] = 0
-	wep_load[635] = 13//16 usual
+	wep_load[635] = 11//16 usual
 	wep_cost[635] = 0
 	wep_sprt[635] = sprDoubleSidedBlade
 	wep_area[635] = 13
@@ -7509,6 +7509,71 @@ function scrWeapons() {
 	wep_swap[679] = sndSwapExplosive
 	wep_rad[679] = 0;
 	
+	wep_name[680] = "POWBOW"
+	wep_type[680] = 3
+	wep_auto[680] = 0
+	wep_load[680] = 31
+	wep_cost[680] = 2
+	wep_sprt[680] = sprPowBow
+	wep_area[680] = 6
+	wep_text[680] = "hold [fire] to charge"
+	wep_swap[680] = sndSwapBow
+	wep_rad[680] = 0;
+	
+	wep_name[681] = "BROXTOOVEN"
+	wep_type[681] = 1
+	wep_auto[681] = 1
+	wep_load[681] = 22
+	wep_cost[681] = 3.5
+	wep_sprt[681] = sprBroxtoovenBullet
+	wep_area[681] = 5
+	wep_text[681] = "swaps between all ammo types"
+	wep_swap[681] = sndSwapBow
+	wep_rad[681] = 0;
+	
+	wep_name[682] = "ROPE KNIFE"
+	wep_type[682] = 0
+	wep_auto[682] = 1
+	wep_load[682] = 19
+	wep_cost[682] = 0
+	wep_sprt[682] = sprRopeKnife
+	wep_area[682] = 6
+	wep_text[682] = "whip"
+	wep_swap[682] = sndSwapSword
+	wep_rad[682] = 0;
+	
+	wep_name[683] = "EXPLOSIVE REVOLVER"
+	wep_type[683] = 1
+	wep_auto[683] = 0
+	wep_load[683] = 8
+	wep_cost[683] = 2
+	wep_sprt[683] = sprExplosiveRevolver
+	wep_area[683] = 5
+	wep_text[683] = "such power in a small gun"
+	wep_swap[683] = sndSwapMachinegun
+	wep_rad[683] = 0;
+	
+	wep_name[684] = "BOUNCER CANNON"
+	wep_type[684] = 1
+	wep_auto[684] = 0
+	wep_load[684] = 45
+	wep_cost[684] = 36
+	wep_sprt[684] = sprBouncerCannon
+	wep_area[684] = 11
+	wep_text[684] = "bounce and pounce"
+	wep_swap[684] = sndSwapMachinegun
+	wep_rad[684] = 0;
+	
+	wep_name[685] = "BOUNCER CHARGE LASER"
+	wep_type[685] = 5
+	wep_auto[685] = 0
+	wep_load[685] = 20
+	wep_cost[685] = 1
+	wep_sprt[685] = sprChargeLaserGun
+	wep_area[685] = 11
+	wep_text[685] = "charging railgun"
+	wep_swap[685] = sndSwapEnergy
+	wep_rad[685] = 0;
 
 	maxwep = array_length(wep_name)-1;
 

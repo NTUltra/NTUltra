@@ -5,25 +5,46 @@ var ds = 0;
 if ds_exists(myCrystals,ds_type_list)
 	ds = ds_list_size(myCrystals);
 var attacking = alarm[3] > 0;
+var is60fps = UberCont.normalGameSpeed == 60
 if ds > 0 
 {
 	var tx = x;
 	var ty = y;
 	var as = angleStep;
+	if is60fps
+		as *= 0.5;
 	var intro = alarm[2] > 0;
 	if intro || attacking
 	{
+		var r = 10;
+		if is60fps
+			r = 10;
 		if intro
-			gunangle += 20;
+		{
+			if is60fps
+				gunangle += 10;
+			else
+				gunangle += 20;
+		}
 		if ((alarm[2] < 20 || attacking) && crystalDis < maxCrystalDis)
-			crystalDis += 2;
-		else if isCursed && !attacking && random(10) < 1
+		{
+			if is60fps
+				crystalDis += 1;
+			else
+				crystalDis += 2;
+		}
+		else if isCursed && !attacking && random(r) < 1
 		{
 			gunangle += choose(60,120,-60,-120);	
 		}
 	}
 	else if !attacking
-		gunangle += 5;
+	{
+		if is60fps
+			gunangle += 2.5;
+		else
+			gunangle += 5;
+	}
 	var oDir = gunangle;
 	var l = crystalDis
 	for (var i = 0; i < ds; i++) {
@@ -76,7 +97,10 @@ speed = maxSpeed
 
 if !instance_exists(Player) && sndtaunt = 0
 {
-	tauntdelay += 1
+	if is60fps
+		tauntdelay += 0.5;
+	else
+		tauntdelay += 1
 	if tauntdelay > 50
 	{
 		snd_play_2d(sndHyperCrystalTaunt);

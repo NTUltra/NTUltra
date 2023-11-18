@@ -109,89 +109,114 @@ function scrDrawOptions2() {
 
 	if instance_exists(StartingWeaponUpDown)
 	{
-	//scrWeapons();
-	with StartingWeaponUpDown{
-		draw_set_halign(fa_center);
-		var yyy = y + 10;
-		var yy = y + 42;
-		draw_text_color(x+8,yyy,Menu.race_name[Menu.race],c_white,c_white,c_white,c_white,1);
-		if wep == 0
-		{
-			draw_text_color(x+8,y+18,"RANDOM",c_white,c_white,c_white,c_white,1);
-			UberCont.opt_gm1wep = wep;
-		}
-		else {
-			var locked = false;
-			var col = c_silver;
-			if (!UberCont.wep_found[Menu.race,wep])
+		with StartingWeaponUpDown {
+			draw_set_halign(fa_center);
+			var yyy = y + 10;
+			var yy = y + 42;
+			draw_text_color(x+8,yyy,Menu.race_name[Menu.race],c_ltgray,c_ltgray,c_ltgray,c_ltgray,1);
+			if wep == 0
 			{
-				locked = true;
-				col = c_dkgray;
-			}
-			else
-			{
+				draw_text_color(x+8,y+18,"RANDOM",c_white,c_white,c_white,c_white,1);
 				UberCont.opt_gm1wep = wep;
 			}
-			draw_ellipse_colour(x-16,yy-12,x+32,yy+14,col,col,false);
-			draw_sprite(wep_sprt[StartingWeaponUpDown.wep],0,round(x),yy);
-			draw_text_color(x+8,yyy + 8,string(StartingWeaponUpDown.wep),c_white,c_white,c_white,c_white,1);
-			draw_text_ext_color(x+8,y+36,
-			string_hash_to_newline("###"+string(StartingWeaponUpDown.wep_name[wep])),
-			8,128,
-			c_white,c_white,c_white,c_white,1);
-			
-			if locked
-			{
-				draw_sprite(sprLocked,0,round(x + 8),yy);
-				var ri = inList;
-				var unlockedFor = "";
-				var maxInList = 7;
-				var maxCounter = 0;
-				var yy = y + 76;
-				var xx = x + 8;
-				var my = yy + 8;
-				draw_text_ext_colour(xx,yy,
-				"UNLOCKED FOR:",8,300,c_silver,c_silver,c_silver,c_silver,1);
-				repeat(UberCont.racemax)
+			else {
+				var locked = false;
+				var superLocked = false;
+				var col = c_silver;
+				var wepCol = c_white;
+				var wepNameCol = c_white;
+				var wepName = string(wep) + ". " + wep_name[wep]
+				if (!UberCont.any_wep_found[wep])
 				{
-					if (maxCounter < maxInList && (UberCont.wep_found[ri,wep]))
+					superLocked = true;
+					col = c_black;
+					wepCol = c_gray;
+					wepNameCol = c_gray;
+					wepName = string(wep) + ". " + scrCensorString(wep_name[wep]);
+				}
+				if (!superLocked && !UberCont.wep_found[Menu.race,wep])
+				{
+					locked = true;
+					col = c_dkgray;
+					wepNameCol = c_white;
+					UberCont.opt_gm1wep = wep;	
+				}
+				draw_ellipse_colour(x-16,yy-12,x+32,yy+14,col,col,false);
+				draw_sprite_ext(wep_sprt[wep],0,round(x),yy,1,1,0,wepCol,1);
+				if (superLocked)
+				{
+					draw_sprite(sprLocked,0,round(x + 8),yy);	
+				}
+				draw_text_color(x+8,yyy + 8,wepName,wepNameCol,wepNameCol,wepNameCol,wepNameCol,1);
+				if wep_area[wep] >= 0
+				{
+					draw_sprite_ext(sprWepTier,0,x,y+64,1,1,0,wepNameCol,1);
+					draw_set_halign(fa_left)
+					draw_text_ext_color(x+2,y+37,
+					string_hash_to_newline("###"+string(wep_area[wep])),
+					8,128,
+					wepNameCol,wepNameCol,wepNameCol,wepNameCol,1);
+					draw_set_halign(fa_center)
+					if scrIsWeaponValidForUnlocks(wep)
 					{
-						unlockedFor	+= "\n"+UberCont.race_name[ri];
-						maxCounter ++;
-						if (mouse_x > xx - 64 && mouse_x < xx + 64 && mouse_y > my && mouse_y < my + 8)
-						{
-							alarm[0] = 20;
-							draw_text_ext_colour(xx,my,
-							UberCont.race_name[ri],8,300,c_white,c_white,c_white,c_white,1);
-							if mouse_check_button_pressed(mb_left) {
-								snd_play_2d(sndClick);
-								Menu.race = ri;
-							}
-						}
-						else
-						{
-							draw_text_ext_colour(xx,my,
-							UberCont.race_name[ri],8,300,c_gray,c_gray,c_gray,c_gray,1);
-						}
-						my += 8;
-					}
-					ri++;
-					if ri > UberCont.racemax
-					{
-						ri = 1;	
+						draw_sprite_ext(sprIsValidGamemode,1,x+16,y+61,1,1,0,wepNameCol,1);
 					}
 				}
-				
+				else if scrIsWeaponValidForUnlocks(wep)
+				{
+					draw_sprite_ext(sprIsValidGamemode,1,x+8,y+61,1,1,0,wepNameCol,1);
+				}
+			
+				if locked
+				{
+					var ri = inList;
+					var unlockedFor = "";
+					var maxInList = 7;
+					var maxCounter = 0;
+					var yy = y + 76;
+					var xx = x + 8;
+					var my = yy + 8;
+					draw_text_ext_colour(xx,yy,
+					"UNLOCKED FOR:",8,300,c_ltgray,c_ltgray,c_ltgray,c_ltgray,1);
+					repeat(UberCont.racemax)
+					{
+						if (maxCounter < maxInList && (UberCont.wep_found[ri,wep]))
+						{
+							unlockedFor	+= "\n"+UberCont.race_name[ri];
+							maxCounter ++;
+							if (mouse_x > xx - 64 && mouse_x < xx + 64 && mouse_y > my && mouse_y < my + 8)
+							{
+								alarm[0] = 20;
+								draw_text_ext_colour(xx,my,
+								UberCont.race_name[ri],8,300,c_white,c_white,c_white,c_white,1);
+								if mouse_check_button_pressed(mb_left) {
+									snd_play_2d(sndClick);
+									Menu.race = ri;
+								}
+							}
+							else
+							{
+								draw_text_ext_colour(xx,my,
+								UberCont.race_name[ri],8,300,c_gray,c_gray,c_gray,c_gray,1);
+							}
+							my += 8;
+						}
+						ri++;
+						if ri > UberCont.racemax
+						{
+							ri = 1;	
+						}
+					}
+				}
 			}
+			/*
+			else
+			{
+				draw_text_color(x,y+16,string_hash_to_newline(string(StartingWeaponUpDown.wep)),c_white,c_white,c_white,c_white,1);
+				draw_text_color(x,y+32,string_hash_to_newline("####"+"????"),c_white,c_white,c_white,c_white,1);
+			}*/
+			draw_set_halign(fa_left)
 		}
-		/*
-		else
-		{
-			draw_text_color(x,y+16,string_hash_to_newline(string(StartingWeaponUpDown.wep)),c_white,c_white,c_white,c_white,1);
-			draw_text_color(x,y+32,string_hash_to_newline("####"+"????"),c_white,c_white,c_white,c_white,1);
-		}*/
-		draw_set_halign(fa_left)
-	}
 	}
 
 

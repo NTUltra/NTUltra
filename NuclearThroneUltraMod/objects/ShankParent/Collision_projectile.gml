@@ -2,10 +2,13 @@ if team != other.team
 {
 	if other.isGrenade
 	{
-		Sleep(40)
-		BackCont.shake += 3
-		with other
-			instance_destroy();
+		if other.alarm[9] < 1
+		{
+			Sleep(40)
+			BackCont.shake += 3
+			with other
+				instance_destroy();
+		}
 	}
 	else if other.typ = 2 or other.typ = 1
 	{

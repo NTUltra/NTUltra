@@ -13,7 +13,7 @@ if other.team != team and other.my_health > 0 && alarm[0] < 1
 	}
 	if shotgunshouldered
 	{
-		scrSplashDamage(1, 16);
+		scrSplashDamage(1, 18);
 	}
 
 	snd_play(other.snd_hurt, other.hurt_pitch_variation,true)

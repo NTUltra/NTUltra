@@ -8,6 +8,8 @@ if !instance_exists(GenCont)
 	alarm[0] = 120;
 	if fps_real < fps
 	{
+		if visible
+			alarm[1] = 5;
 		visible = false;
 		with Top
 		{
@@ -17,9 +19,5 @@ if !instance_exists(GenCont)
 		{
 			instance_destroy();	
 		}
-	}
-	else
-	{
-		visible = true;
 	}
 }

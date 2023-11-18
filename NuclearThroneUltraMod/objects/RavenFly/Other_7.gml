@@ -7,17 +7,17 @@ else if sprite_index = sprRavenLand
 {
 if !place_meeting(x,y,Floor)
 {
-nofly = 0
-//Shuffle clsoer to floor to prevent softlock
-var n = instance_nearest(x,y,Floor)
-var o = 16;
-if n.object_index == FloorExplo
-	o = 8;
-var d = point_direction(x,y,n.x+o,n.y+o)
-x += lengthdir_x(3,d);
-y += lengthdir_y(3,d);
-scrRavenLift()
-
+	nofly = 0
+	//Shuffle clsoer to floor to prevent softlock
+	var n = instance_nearest(x,y,Floor)
+	var o = 16;
+	if n.object_index == FloorExplo
+		o = 8;
+	var d = point_direction(x,y,n.x+o,n.y+o)
+	x += lengthdir_x(3,d);
+	y += lengthdir_y(3,d);
+	scrForcePosition60fps();
+	scrRavenLift()
 }
 else
 {

@@ -503,7 +503,7 @@ function scrUltras(altOverride = false) {
 	    ultra_tips[69] = "guardian"
     
 	    ultra_name[70] = "DESCENT"
-	    ultra_text[70] = "INSTEAD OF <r>HEALING<r> YOUR ACTIVE#GIVES <y>AMMO<y> FOR YOUR PRIMARY#AT THE COST OF <r>HEALTH<r>#THRONE BUTT DOUBLES THE <r>AMMO<r>"
+	    ultra_text[70] = "AS AMMO LOWERS#INCREASE RELOAD SPEED AND DAMAGE"
 	    ultra_tips[70] = "emo style"
     
 	    ultra_name[71] = "TRANQUILITY"
@@ -524,7 +524,7 @@ function scrUltras(altOverride = false) {
 		&& instance_exists(UltraIcon))))
 		{
 			ultra_name[72] = "MIRROR"
-		    ultra_text[72] = "ACTIVE NO LONGER <r>HEALS<r>#ACTIVE COST IS ALWAYS REDUCED#(AS IF YOU ARE ON MAX HP)#ALSO <pi>DEFLECT<pi> ON YOUR RETICLE"
+		    ultra_text[72] = "YOUR ACTIVE IS NOW FREE#BUT IT HAS A COOLDOWN#THRONEBUTT NO LONGER HEALS#BUT INSTEAD REDUCES COOLDOWN##ALSO <pi>DEFLECT<pi> ON YOUR CROSSHAIR"
 		    ultra_tips[72] = "right back at ya"
 		}
 		

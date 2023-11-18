@@ -76,7 +76,37 @@ if instance_exists(Player)
 			instance_create(x,y+16,MorphWeaponChest)
 	    }
 	}
-	if Player.area == 115 || Player.area == 132
+	else if Player.area == 130 || Player.area == 131 || Player.area == 133 || Player.area == 134//Factory
+	{
+		with WeaponChest
+	    {
+			instance_create(x,y+16,BigWeaponChest)
+	    }
+	    with BigWeaponChest
+	    {
+			instance_create(x,y+16,BigWeaponChest)
+	    }
+	    with EliteWeaponChest
+	    {
+			instance_create(x,y+16,BigWeaponChest)
+	    }
+	}
+	else if Player.area == 132
+	{
+		with WeaponChest
+	    {
+			instance_create(x,y+16,BigCursedWeaponChest)
+	    }
+	    with BigWeaponChest
+	    {
+			instance_create(x,y+16,BigCursedWeaponChest)
+	    }
+	    with EliteWeaponChest
+	    {
+			instance_create(x,y+16,BigCursedWeaponChest)
+	    }
+	}
+	else if Player.area == 115
 	{
 		with WeaponChest
 	    {

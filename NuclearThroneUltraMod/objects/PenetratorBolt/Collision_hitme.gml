@@ -20,14 +20,14 @@ if (speed > 0 || alarm[1] > 0) && other.team != team
 			motion_add(other.direction+90,19)
 			image_angle = direction
 			team = other.team
-			alarm[2] = 2;
+			alarm[2] = 3;
 		}
 		with instance_create(xx,yy,Splinter)
 		{
 			motion_add(other.direction-90,19)
 			image_angle = direction
 			team = other.team
-			alarm[2] = 2;
+			alarm[2] = 3;
 		}
 		dmg += dmgAdd;
 	}

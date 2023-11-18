@@ -24,5 +24,5 @@ rate=16;
 creator.wkick = rate
 }
 
-audio_stop_sound(sndCharge);
+audio_stop_sound(sndChargeLong);
 

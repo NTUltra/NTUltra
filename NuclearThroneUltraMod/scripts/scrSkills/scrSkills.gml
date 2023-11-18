@@ -118,8 +118,6 @@ function scrSkills() {
 	
 	skill_name[7] = "BLOODLUST"
 	skill_text[7] = "7.7% CHANCE KILLS REGENERATE <r>HP<r>#BOSS KILLS ALWAYS <r>HEAL<r>#ENEMIES YOU HEAL FROM EXPLODE IN <r>BLOOD<r>"
-	if scrIsHardMode()//HARD MODE
-		skill_text[7] = "7.2% CHANCE KILLS REGENERATE <r>HP<r>#BOSS KILLS ALWAYS <r>HEAL<r>#ENEMIES YOU HEAL FROM EXPLODE IN <r>BLOOD<r>"
 	skill_tips[7] = "drink blood"
 	skill_msnd[7] =  sndMutBloodlust
 	skill_bons[7] = "+0.25% CHANCE";
@@ -155,8 +153,6 @@ function scrSkills() {
 	{
 		skill_name[9] = "SECOND STOMACH"
 		skill_text[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#DOUBLE <r>HP<r> FROM MEDCHESTS,#<g>ALKALINE SALIVA<g>#AND <g>ABSORBING PORES<g>"
-		if scrIsHardMode() //HARD MODE
-			skill_text[9] = "3 <r>HP<r> FROM MEDKITS#DOUBLE <r>HP<r> FROM MEDCHESTS,#<g>ALKALINE SALIVA<g>#AND <g>ABSORBING PORES<g>"
 		skill_tips[9] = "stomach rumbles"
 		if isHand
 		{
@@ -445,13 +441,13 @@ function scrSkills() {
 	skill_msnd[40] =  sndMutBouncyFat;
 	
 	skill_name[41] = "NERVES OF STEEL"
-	skill_text[41] = "REPLACE 3 <r>HEALTH<r> WITH 1 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#REDUCE TOTAL <w>RELOAD TIME<w> BY 35%#<w>ENEMIES<w> HAVE A CHANCE TO DROP <gb>ARMOUR<gb>"
+	skill_text[41] = "REPLACE 2 <r>HEALTH<r> WITH 1 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#REDUCE TOTAL <w>RELOAD TIME<w> BY 35%#<w>ENEMIES<w> HAVE A CHANCE TO DROP <gb>ARMOUR<gb>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
 		skill_text[41] = "LOSE 2 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#REDUCE TOTAL <w>RELOAD TIME<w> BY 35%#<w>ENEMIES<w> HAVE A SMALL CHANCE TO DROP <gb>ARMOUR<gb>"
 	}
 	skill_tips[41] = "conduit of power"
-	skill_bons[41] = "-2 HEALTH INSTEAD"
+	skill_bons[41] = "+5% RELOAD SPEED"
 	skill_msnd[41] =  sndMutNervesOfSteel;
 	
 	skill_name[42] = "THE TAIL'S END"

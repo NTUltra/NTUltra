@@ -246,6 +246,7 @@ function scrModHit() {
 						image_angle = direction
 						team = 2
 						alarm[0] = 5;
+						alarm[1] += 4;
 					}
 				}
 				break;

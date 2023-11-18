@@ -11,10 +11,7 @@ function isValidGamemodeToUnlock(exception = 0){
 		{
 			if (gm == 1 || gm == 46 )
 			{
-				if UberCont.wep_area[UberCont.opt_gm1wep] >= 5 || UberCont.wep_area[UberCont.opt_gm1wep] < 0
-				{
-					return false
-				}
+				return scrIsWeaponValidForUnlocks(UberCont.opt_gm1wep);
 			}
 			else 
 			{

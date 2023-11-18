@@ -17,7 +17,7 @@ var d = point_direction(x,y,n.x+o,n.y+o)
 x += lengthdir_x(3,d);
 y += lengthdir_y(3,d);
 scrInvertedRavenLift()
-
+scrForcePosition60fps();
 }
 else
 {

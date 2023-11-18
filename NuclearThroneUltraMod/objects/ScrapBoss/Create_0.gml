@@ -22,7 +22,7 @@ spr_actual_hurt = spr_hurt;
 spr_stop = sprScrapBossStop;
 spr_charge = sprScrapBossCharge;
 
-
+isHardMode = scrIsHardMode();
 right = 1
 scrTarget()
 if target != noone && instance_exists(target)

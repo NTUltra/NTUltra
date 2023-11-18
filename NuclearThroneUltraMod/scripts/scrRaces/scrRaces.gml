@@ -306,8 +306,8 @@ function scrRaces() {
 
 	race_name[18] = "[ANGEL]"
 	race_pass[18] = "FLY OVER WALLS"
-	race_acti[18] = "#<w>DEFLECT<w>, <aq>IMMUNE<aq> & <r>HEAL<r>#COSTS <y>AMMO<y>#COST REDUCED AT <r>FULL HEALTH<r>"
-	race_butt[18] = "#CHEAPER <r>HEALING<r>, <aq>IMMUNITY<aq> & <w>DEFLECTING<w>"
+	race_acti[18] = "#<aq>DEFLECT<aq> ALL DAMAGE#COSTS <y>AMMO<y>"
+	race_butt[18] = "ACTIVE ALSO <r>HEALS<r>#1<r>HP<r> EVERY OTHER USE"
 	//race_back[18] = "FLYING OVER WALLS DRAINS AMMO#INSTEAD OF HP";
 	race_lock[18] = "HAVE A SINGLE RUN WITH#ATLEAST THREE SURVIVAL MUTATIONS#(RHINO SKIN, ALKALINE SALIVA ETC.)"
 	race_have[18] = 0

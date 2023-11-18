@@ -5,4 +5,4 @@ dmg = 2;
 aimed = false;
 lp = 0;
 t = 0;
-col = c_white;
+col = c_yellow;

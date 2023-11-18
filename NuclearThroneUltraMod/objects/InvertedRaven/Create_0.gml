@@ -8,7 +8,6 @@ maxhealth=9;
 
 event_inherited()
 maxAmmo = 5;
-alarm[10] = 0;
 spr_idle = sprInvertedRavenIdle
 spr_walk = sprInvertedRavenWalk
 spr_hurt = sprInvertedRavenHurt

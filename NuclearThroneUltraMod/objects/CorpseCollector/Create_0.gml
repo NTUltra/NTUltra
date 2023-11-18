@@ -5,4 +5,5 @@ corpses = ds_list_create();
 px = x;
 py = y;
 alarm[0] = 120;
+disappearTime = 5;
 canspawnportal = true;

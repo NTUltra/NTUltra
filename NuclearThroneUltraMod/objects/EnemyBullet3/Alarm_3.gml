@@ -1,2 +1,2 @@
 /// @description Faloff
-dmg = 1;
+dmg -= 1;

@@ -16,5 +16,30 @@ if instance_exists(Player)
 	
 	alarm[1] = 6
 	scrForcePosition60fps();
+	with instance_place(x,y,hitme)
+	{
+		if other.team != team
+		{
+			if sprite_index != spr_hurt
+				snd_play(snd_hurt, hurt_pitch_variation,true)
+			my_health -= other.dmg
+			if instance_exists(Player){
+			if Player.ultra_got[28]//roids ultra d
+			{my_health -= 1;}}
+			sprite_index = spr_hurt
+			image_index = 0
+			motion_add(other.direction,3.5)
+			scrForcePosition60fps();
+			if speed > maxSpeed 
+				speed = maxSpeed;
+			
+			with other
+			{
+				mask_index = mskPickupThroughWall;
+				t += 0.3;
+				scrRecycleGland(0.5);
+			}
+		}
+	}
 	speed = 0
 }

@@ -14,7 +14,7 @@ if other.team != team and other.my_health > 0
 	}
 	if shotgunshouldered
 	{
-		scrSplashDamage(1, 16);
+		scrSplashDamage(1, 18);
 		with instance_create(x,y,BulletHit)
 			sprite_index = sprBullet7Hit;
 	}

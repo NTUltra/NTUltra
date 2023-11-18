@@ -24,7 +24,7 @@ function scrAlienIntestines(){
 		var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 		BackCont.shake += alienIntestines*0.2;
 		var i = 0;
-		var tentacleLength = lerp(4,25,min(1,other.alienIntestines/180));
+		var tentacleLength = lerp(4,24,min(1,other.alienIntestines/220));
 		repeat(lerp(1,12,min(1,alienIntestines / 200)))
 		{
 			with instance_create(x,y,Tentacle)
@@ -34,7 +34,7 @@ function scrAlienIntestines(){
 				creator = other.id;
 				team = other.team
 				ammo = tentacleLength + i*2
-				event_perform(ev_alarm,0)
+				event_perform(ev_alarm,0);
 				visible = 0
 				with instance_create(x,y,LightningSpawn)
 				{
@@ -54,7 +54,7 @@ function scrAlienIntestines(){
 		with instance_create(x,y,DelayedIntestines) {
 			aim = aimDirection;
 			scale = ys;
-			tl = lerp(3,24,min(1,other.alienIntestines/250)) 
+			tl = lerp(3,20,min(1,other.alienIntestines/250)) 
 			alienIntestines = other.alienIntestines;
 			team = other.team;
 			creator = other.id;

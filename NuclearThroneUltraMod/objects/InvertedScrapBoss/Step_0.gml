@@ -9,11 +9,12 @@ walk -= 1
 motion_add(direction,0.5)
 if target != noone
 motion_add(point_direction(x,y,target.x,target.y),0.5)
-sprite_index = spr_walk
+if sprite_index != spr_hurt
+	sprite_index = spr_walk
 if round(walk/10) = walk/10
 snd_play(sndBigDogWalk)
-if walk = 0
-sprite_index = spr_idle
+if walk = 0 && sprite_index != spr_hurt
+	sprite_index = spr_idle
 }
 
 if ammo > 0

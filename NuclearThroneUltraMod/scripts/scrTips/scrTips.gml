@@ -192,6 +192,20 @@ function scrTips() {
 	tip = choose("love & death","crowd","sprawling bones","the brink","for all that have fallen","crawl","bloodshed forever")
 	if Player.area = 128
 	tip = choose("crown crown crown crown","crown crown","more crowns","get crown","royalty","kings and queens of wasteland","watch out for the crowns")
+	if Player.area = 129
+	tip = choose("blood line","multi crown")
+	if Player.area = 130
+	tip = choose("factory","weapons here","robots","what are they building in there","beat the boss to get your gun back");
+	if Player.area = 131
+	tip = choose("inverted factory","this is not normal","automation");
+	if Player.area = 132
+	tip = choose("cursed factory","mistakes were built","cursed robots");
+	if Player.area = 133
+	tip = choose("golden factory","bling bling guns","gold digging");
+	if Player.area = 134
+	tip = choose("ultra factory","supreme technology","top of the line","ultra robots");
+	if Player.area = 135
+	tip = choose("this should not be here","not yet","end this");
 	}
 
 
@@ -206,7 +220,7 @@ function scrTips() {
 	tip = choose("last day before retirement","duty calls","it's ok to eat","gills on your neck","like kevin costner","rolling...","fish can play guitar")
 
 	if Player.race = 2
-	tip = choose("crystal can handle this","family","crystal does not like cheese","crystal is hard","crystal is tough","crystal rocks")
+	tip = choose("crystal can handle this","family","this is no problem","crystal is hard","crystal is tough","crystal rocks")
 
 	if Player.race = 3
 	tip = choose("eyes sees everything","don't blink","all these thoughts","eyes can't speak","telekinesis pushes bullets away","telekinesis pulls in enemies","look into me eyes!"

@@ -165,10 +165,7 @@ function scrLoseSkill(skillIndex){
 			alienIntestines = 0;
 		break;
 		case 41: //NERVES OF STEEL
-			if race == 25
-				maxhealth += 2;
-			else
-				maxhealth += 3;//I guess you could have 3 hp as melting here but thats cool
+			maxhealth += 2;
 		break;
 		case 42: //TAIL END
 			betterTail = 1.5;

@@ -17,7 +17,10 @@ if alarm[2] > 0
 		var dir = laserDirection - laserOffset;
 		if alarm[2] < laserDuration - tellTime
 		{
-			laserOffset -= (angleStep*laserDir);	
+			var s = (angleStep*laserDir);
+			if UberCont.normalGameSpeed == 60
+				s *= 0.5;
+			laserOffset -= s;
 		}
 		with myLaser {
 			x = other.x+(other.lox*other.right);
@@ -63,4 +66,4 @@ else
 }
 
 if speed > maxSpeed
-speed = maxSpeed;
+	speed = maxSpeed;

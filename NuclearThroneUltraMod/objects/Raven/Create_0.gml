@@ -13,7 +13,6 @@ spr_dead = sprRavenDead
 
 snd_hurt = sndRavenHit
 snd_dead = sndRavenDie
-alarm[10] = 0;
 //behavior
 walk = 0
 gunangle = random(360)

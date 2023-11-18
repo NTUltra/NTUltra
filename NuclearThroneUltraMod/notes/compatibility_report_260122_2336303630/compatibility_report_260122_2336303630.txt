@@ -3090,7 +3090,7 @@ Missing audiogroup for sound: 'sndUltraGrenade' - setting to default audio group
 Missing audiogroup for sound: 'sndUltraCrossbow' - setting to default audio group
 Missing audiogroup for sound: 'sndPotato' - setting to default audio group
 Missing audiogroup for sound: 'sndPartyHorn' - setting to default audio group
-Missing audiogroup for sound: 'sndCharge' - setting to default audio group
+Missing audiogroup for sound: 'sndChargeLong' - setting to default audio group
 Missing audiogroup for sound: 'sndDirector' - setting to default audio group
 Missing audiogroup for sound: 'sndGoldPickup' - setting to default audio group
 Missing audiogroup for sound: 'sndNothingBeamStart' - setting to default audio group
