@@ -891,8 +891,6 @@ function scrPowers() {
 			//ammo[t] += wep_cost[wep]//return ammo
 			rad = max(rad,wantRad);
 			can_shoot = 0;
-
-
 		}
 	}
 
@@ -900,126 +898,63 @@ function scrPowers() {
 	{
 	    if wep_type[wep] != 0
 	    {
-		    if ultra_got[70]//ULTRA B DECENT
-		    {
-			    if ( my_health-2>0 && ammo[wep_type[wep]] < typ_amax[wep_type[wep]]) && alarm[3]<1
-			    {
-				    var extra=0;
-				    if scrIsCrown(4)
-						extra += 1
-    
-				    ammo[wep_type[wep]] += round((typ_ammo[wep_type[wep]]* (1.5+skill_got[5]) +extra))
-
-				    if ammo[wep_type[wep]] > typ_amax[wep_type[wep]]
-				    ammo[wep_type[wep]] = typ_amax[wep_type[wep]]
-    
-    
-				    dir = instance_create(x,y,PopupText)
-				    dir.mytext = "+"+string( round((typ_ammo[wep_type[wep]]* (1.5+skill_got[5]) +extra )) )+" "+string(typ_name[wep_type[wep]]) 
-				    if ammo[wep_type[wep]] == typ_amax[wep_type[wep]]
-				    dir.mytext = "MAX "+string(typ_name[wep_type[wep]])
-    
-    
-				    my_health -= 2-skill_got[5];
-    
-				    //for rage and euphoria
-				    exception=true;
-				    if alarm[7]<1
-				    alarm[7]=12;//reset the exception in 12 steps
-    
-				    snd_play_2d(snd_hurt, hurt_pitch_variation)
-				    Sleep(40)
-					instance_create(x,y,AngelActive);
-					if ultra_got[72] {//Angel ascent
+		    
+			var multiply = 0.35;
+			var cost = typ_ammo[wep_type[wep]]*multiply;
+			if (ammo[wep_type[wep]]-cost >= 0) || (ultra_got[70] && ammo[wep_type[wep]] > 0)
+			{
+				instance_create(x,y,AngelActive);
+				if ultra_got[72] {
+					snd_play_2d(sndAngelActiveUpg,0.1,false,false,2,1);
+					if altUltra {//Angel mirror
 						instance_create(x,y,AngelActiveMouse);	
 					}
-			    }
-		    }
+				} else {
+					snd_play_2d(sndAngelActive,0.1,false,false,2,1);
+				}
+				ammo[wep_type[wep]]-= cost//2.5?
+				var heal = 0;
+				if ultra_got[70] && ammo[wep_type[wep]] <= 0
+				{
+					heal += 2;
+				}
+				if UberCont.opt_ammoicon
+				{
+					dir = instance_create(x,y,PopupText)
+					dir.sprt = sprAmmoIconsPickup
+					dir.ii = wep_type[wep]-1;
+					dir.theColour = c_red;
+					dir.mytext = "-"+string(round(cost));
+				}
+				else
+				{
+					dir = instance_create(x,y,PopupText)
+					dir.theColour = c_red;
+					dir.mytext = "-"+string(round(cost))+" "+string(other.typ_name[wep_type[other.wep]])
+				}
+				//HEAL
+				if (skill_got[5])
+				{
+					angelHeal = !angelHeal;
+					if (angelHeal)
+					{
+						heal ++;
+					}
+				}
+				if heal > 0
+				{
+					if heal > 2
+						snd_play_2d(sndHealthPickupUpg)
+					scrHeal(heal);
+				}
+			    Sleep(40);
+			}
 			else
 			{
-				var multiply = 0.2;
-				var cost = round(typ_ammo[wep_type[wep]]*multiply);
-			    if ammo[wep_type[wep]]-cost >= 0
-			    {
-					instance_create(x,y,AngelActive);
-					if ultra_got[72] {//Angel ascent
-						instance_create(x,y,AngelActiveMouse);	
-					}
-					snd_play(sndRicochet);//TEMP
-				    ammo[wep_type[wep]]-= cost//2.5?
-					if UberCont.opt_ammoicon
-					{
-						dir = instance_create(x,y,PopupText)
-						dir.sprt = sprAmmoIconsPickup
-						dir.ii = wep_type[wep]-1;
-						dir.theColour = c_red;
-						dir.mytext = "-"+string(cost);
-					}
-					else
-					{
-						dir = instance_create(x,y,PopupText)
-						dir.theColour = c_red;
-						dir.mytext = "-"+string(cost)+" "+string(other.typ_name[wep_type[other.wep]])
-					}
-					//HEAL
-					if (skill_got[5])
-					{
-						angelHeal = !angelHeal;
-						if (angelHeal)
-						{
-					        var num = 1
-							/*
-					        if Player.skill_got[9] = 1//secund tummy
-							{
-								num = 2
-								with instance_create(x,y,HealFX)
-								{
-									sprite_index = sprHealBigFX;
-									depth = other.depth - 1;
-								}
-							}
-							else
-							{
-								with instance_create(x,y,HealFX)
-								{
-									depth = other.depth - 1;
-								}
-							}
-					        //RUSH CROWN
-					        if scrIsCrown(4)
-								num += 1
-							*/
-					        snd_play_2d(sndHealthPickup)
-					        my_health += num
-					        if my_health > maxhealth
-								my_health = maxhealth
-        
-					        if UberCont.opt_ammoicon
-							{
-								dir = instance_create(x,y,PopupText)
-								dir.sprt = sprHPIconPickup;
-								dir.mytext = "+"+string(num)
-								if my_health = maxhealth
-									dir.mytext = "MAX";
-							}
-							else
-							{
-								dir = instance_create(x,y,PopupText)
-								dir.mytext = "+"+string(num)+" HP"
-								if my_health = maxhealth
-									dir.mytext = "MAX HP";
-							}
-						}
-					}
-			         Sleep(40);
-			    }
-			    else
-			    {
-				    snd_play_2d(sndEmpty);
-				    dir = instance_create(x,y,PopupText);
-					dir.theColour = c_red;
-				    dir.mytext = "NOT ENOUGH AMMO";
-			    }
+				snd_play_2d(sndEmpty);
+				dir = instance_create(x,y,PopupText);
+				dir.theColour = c_red;
+				dir.mytext = "NOT ENOUGH AMMO";
 			}
 		}
 		else

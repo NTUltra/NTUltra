@@ -35,8 +35,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprIDPDPortalStart",
-    "path": "sprites/sprIDPDPortalStart/sprIDPDPortalStart.yy",
+    "name": "sprRogueIDPDPortalStart",
+    "path": "sprites/sprRogueIDPDPortalStart/sprRogueIDPDPortalStart.yy",
   },
   "spriteMaskId": null,
   "visible": true,

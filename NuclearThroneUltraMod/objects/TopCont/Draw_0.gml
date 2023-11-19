@@ -443,6 +443,14 @@ with Hand
 {
 	draw_self();	
 }
+with AngelActive
+{
+	draw_self();	
+}
+with AngelReActive
+{
+	draw_self();	
+}
 with SerpentStrike
 {
 	event_perform(ev_draw,0);

@@ -7,7 +7,7 @@ motion_add(direction,0.9)
 }
 
 scrRoguePopo();
-
+scrWalkAwayFromNade();
 if speed > 4.3
 speed = 4.3
 

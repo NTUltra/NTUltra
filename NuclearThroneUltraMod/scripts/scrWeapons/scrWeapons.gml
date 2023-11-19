@@ -346,10 +346,10 @@ function scrWeapons() {
 	wep_name[31] = "TOXIC CROSSBOW"
 	wep_type[31] = 3
 	wep_auto[31] = 0
-	wep_load[31] = 29
+	wep_load[31] = 27
 	wep_cost[31] = 1
 	wep_sprt[31] = sprToxicBow
-	wep_area[31] = 4
+	wep_area[31] = 3
 	wep_text[31] = "hold breath while firing"
 	wep_swap[31] = sndSwapBow
 	wep_rad[31] = 0;
@@ -747,7 +747,7 @@ function scrWeapons() {
 	wep_name[67] = "SWORD GUN"
 	wep_type[67] = 3
 	wep_auto[67] = 1
-	wep_load[67] = 14
+	wep_load[67] = 18
 	wep_cost[67] = 2
 	wep_sprt[67] = sprSwordGun
 	wep_area[67] = 8
@@ -901,7 +901,7 @@ function scrWeapons() {
 	wep_name[81] = "SUPER SWORD GUN"
 	wep_type[81] = 3
 	wep_auto[81] = 1
-	wep_load[81] = 35
+	wep_load[81] = 38
 	wep_cost[81] = 7
 	wep_sprt[81] = sprSuperSwordGun
 	wep_area[81] = 18
@@ -1407,7 +1407,7 @@ function scrWeapons() {
 	wep_name[127] = "ENERGY SWORD GUN"
 	wep_type[127] = 5
 	wep_auto[127] = 1
-	wep_load[127] = 25
+	wep_load[127] = 27
 	wep_cost[127] = 3
 	wep_sprt[127] = sprEnergySwordGun
 	wep_area[127] = 18
@@ -2793,7 +2793,7 @@ function scrWeapons() {
 	wep_name[253] = "SHANK GUN"
 	wep_type[253] = 3
 	wep_auto[253] = 1
-	wep_load[253] = 12
+	wep_load[253] = 16
 	wep_cost[253] = 2
 	wep_sprt[253] = sprShankGun
 	wep_area[253] = 8
@@ -2804,7 +2804,7 @@ function scrWeapons() {
 	wep_name[254] = "SUPER SHANK GUN"
 	wep_type[254] = 3
 	wep_auto[254] = 1
-	wep_load[254] = 35
+	wep_load[254] = 37
 	wep_cost[254] = 7
 	wep_sprt[254] = sprSuperShankGun
 	wep_area[254] = 17
@@ -2815,7 +2815,7 @@ function scrWeapons() {
 	wep_name[255] = "ENERGY SHANK GUN"
 	wep_type[255] = 5
 	wep_auto[255] = 1
-	wep_load[255] = 25
+	wep_load[255] = 27
 	wep_cost[255] = 3
 	wep_sprt[255] = sprEnergyShankGun
 	wep_area[255] = 15
@@ -5301,7 +5301,7 @@ function scrWeapons() {
 	wep_name[479] = "FROST SWORD GUN"
 	wep_type[479] = 3
 	wep_auto[479] = 1
-	wep_load[479] = 15
+	wep_load[479] = 18
 	wep_cost[479] = 2.5
 	wep_sprt[479] = sprFrostSwordGun
 	wep_area[479] = 11
@@ -5598,7 +5598,7 @@ function scrWeapons() {
 	wep_name[506] = "ULTRA SWORD GUN"
 	wep_type[506] = 3
 	wep_auto[506] = 1
-	wep_load[506] = 12
+	wep_load[506] = 14
 	wep_cost[506] = 3
 	wep_sprt[506] = sprUltraSwordGun
 	wep_area[506] = 27
@@ -7559,7 +7559,7 @@ function scrWeapons() {
 	wep_load[684] = 45
 	wep_cost[684] = 36
 	wep_sprt[684] = sprBouncerCannon
-	wep_area[684] = 11
+	wep_area[684] = 12
 	wep_text[684] = "bounce and pounce"
 	wep_swap[684] = sndSwapMachinegun
 	wep_rad[684] = 0;

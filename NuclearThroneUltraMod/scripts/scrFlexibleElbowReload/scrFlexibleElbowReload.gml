@@ -8,7 +8,7 @@ function scrFlexibleElbowReload(wp){
 		var slapped = noone;
 		while (loader > 0)
 		{
-			if (random(52) < loader)
+			if (random(60) < loader)
 			{
 				if slapped != noone
 				{
@@ -18,14 +18,26 @@ function scrFlexibleElbowReload(wp){
 				}
 				else
 				{
-					var n = instance_nearest(x,y,enemy)
-					if n != noone && point_distance(x,y,n.x,n.y) < 164 {
-						slapped = instance_create(x,y,FlexibleElbowsSlap)
-						with slapped
+					var activationList = ds_list_create();
+					do {
+						var n = instance_nearest(x,y,enemy)
+						if n != noone && n.team == 2
 						{
-							target = n;
-							owner = other.id;
+							ds_list_add(activationList,n);
+							instance_deactivate_object(n);
 						}
+						if n != noone && n.team != 2 && point_distance(x,y,n.x,n.y) < 164 {
+							slapped = instance_create(x,y,FlexibleElbowsSlap)
+							with slapped
+							{
+								target = n;
+								owner = other.id;
+							}
+						}
+					} until (n == noone || n.team != 2)
+					var al = ds_list_size(activationList);
+					for (var i = 0; i < al; i++) {
+						instance_activate_object(activationList[| i]);
 					}
 				}
 			}

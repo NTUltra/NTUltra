@@ -7,8 +7,10 @@ motion_add(direction,0.8)
 }
 
 if Shielding=false
-scrRoguePopo();
-
+{
+	scrRoguePopo();
+	scrWalkAwayFromNade();
+}
 if speed > 3.5 && my_health > 0
 speed = 3.5
 

@@ -341,6 +341,8 @@ function scrSkills() {
 
 	skill_name[30] = "POWER CRAVING"
 	skill_text[30] = "EVERY WEAPON HAS ONE RANDOM <w>WEAPON MOD<w>#INCREASE <w>MOD MAX<w> BY ONE#INCREASE EFFECTIVENESS OF <w>WEAPON MODS<w>#MORE <w>WEAPON MODS<w> IN <g>CROWNVAULT<g>##INCREASE <w>INVERTED<w> PORTAL CHANCE +10%"
+	if scrIsGamemode(25)
+		skill_text[30] = "EVERY WEAPON HAS ONE RANDOM <w>WEAPON MOD<w>#INCREASE <w>MOD MAX<w> BY ONE#INCREASE EFFECTIVENESS OF <w>WEAPON MODS<w>#MORE <w>WEAPON MODS<w> IN BETWEEN WAVES"
 	skill_tips[30] = "maximum power"
 	skill_msnd[30] =  sndPowerCraving
 	skill_bons[30] = "-10% MOD DELAY";

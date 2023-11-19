@@ -1,7 +1,7 @@
 event_inherited()
 
 scrRoguePopo();
-
+scrWalkAwayFromNade();
 if walk > 0
 {
 walk -= 1

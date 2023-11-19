@@ -702,9 +702,18 @@ if(my_health <= 0 && maxhealth > 0)
 		if race == 25
 			takePercentage = 0.45;
 		var baseammo;
-		baseammo[1] = 255 baseammo[2] = 55 baseammo[3] = 55 baseammo[4] = 55 baseammo[5] = 55
+		baseammo[1] = 255 baseammo[2] = 55 baseammo[3] = 55 baseammo[4] = 55 baseammo[5] = 55;
+		var healed = 0;
 		for (var i = 1; i < al; i++) {
+			var wasAbove = (ammo[i] > 0);
 			ammo[i] = floor(ammo[i] - (baseammo[i]*takePercentage));
+			if ultra_got[70] && wasAbove && ammo[i] <= 0 {
+				healed++;
+			}
+		}
+		if healed > 0 {
+			scrHeal(healed);
+			snd_play_2d(sndHealthPickup);
 		}
 		if !scrHasAmmo()
 		{

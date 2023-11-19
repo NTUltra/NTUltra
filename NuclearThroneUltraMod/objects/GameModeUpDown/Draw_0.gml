@@ -99,7 +99,7 @@ else {
 if (gamemodeOrder[gamemodenr]==42 && UberCont.gamemode_have[42])
 {
 	if !instance_exists(CustomSurvivalWave) && !instance_exists(PlayerSpawn)
-		instance_create(x-10,y+72,CustomSurvivalWave);
+		instance_create(x-10,y+76,CustomSurvivalWave);
 }
 else
 {

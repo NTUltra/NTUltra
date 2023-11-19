@@ -929,14 +929,14 @@ repeat(1+loops)
 			i++;
 			wave[i] = {
 				obj: LightningCrystal,
-				time: 40,
+				time: 50,
 				xx: centerX,
 				yy: centerY
 			};
 			i++;
 			wave[i] = {
 				obj: LaserCrystal,
-				time: 100
+				time: 120
 			};
 			i++;
 			repeat(3)
@@ -954,7 +954,7 @@ repeat(1+loops)
 			i++;
 			wave[i] = {
 				obj: Cocoon,
-				time: 10,
+				time: 20,
 				xx: centerX,
 				yy: centerY
 			};
@@ -1052,7 +1052,7 @@ repeat(1+loops)
 			{
 				wave[i] = {
 					obj: GoldCrystal,
-					time: 32
+					time: 35
 				};
 				i++;
 			}
@@ -4458,12 +4458,98 @@ repeat(1+loops)
 		}
 		break;
 		#endregion
-		/*
+		
 		#region wave 20 Oasis
 		case 20:
+			//Big fish and Ballmom
+			wave[i] = {
+				obj: BigFish,
+				time: 120,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			repeat(15)
+			{
+				wave[i] = {
+					obj: BoneFish,
+					time: 4,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: BoneFish,
+				time: 120,
+			};
+			i++;
+			repeat(8)
+			{
+				wave[i] = {
+					obj: Crab,
+					time: 4,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: WallReplaceFloorMask,
+				time: 10,
+				xx: centerX,
+				yy: centerY,
+				canSpawnInWall: true,
+			};
+			i++;
+			wave[i] = {
+				obj: BoneFishAdder,
+				time: 120,
+				xx: centerX,
+				yy: centerY,
+				canSpawnInWall: true,
+			};
+			i++;
+			repeat(15)
+			{
+				wave[i] = {
+					obj: ScubaBandit,
+					time: 4,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: ScubaBandit,
+				time: 120,
+			};
+			i++;
+			wave[i] = {
+				obj: BallMom,
+				time: 60,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			repeat(3)
+			{
+				wave[i] = {
+					obj: Exploder,
+					time: 4,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: Exploder,
+				time: 220,
+			};
+			i++;
+			wave[i] = {
+				obj: BoneFishAdder,
+				time: 120,
+				xx: centerX - 16,
+				yy: centerY - 16,
+				canSpawnInWall: true,
+			};
+			i++;
 		break;
 		#endregion
-				
+		/*
 		#region wave 21 Pizza sewers
 		//Probably add technomancer here maybe
 		case 21:

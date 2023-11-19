@@ -1,7 +1,5 @@
 function scrTarget() {
-	if target < 0 || !instance_exists(target) || target == noone
-		target = noone
-
+	target = noone;
 	if instance_exists(Player)
 	{
 		if target == noone && !Player.justAsheep
@@ -13,17 +11,19 @@ function scrTarget() {
 			else {
 				target = instance_nearest(x,y,Player);
 				//Popo and enemies target each other?
-				var distanceToPlayer = point_distance(x,y,target.x,target.y);
-				if distanceToPlayer < 300 && instance_exists(Wall) && collision_line(x,y,target.x,target.y,Wall,false,false) < 0
+				if target != noone
 				{
-					if instance_exists(enemy) && instance_number(enemy) > 2
+					var distanceToPlayer = point_distance(x,y,target.x,target.y);
+					if distanceToPlayer < 300 && instance_exists(Wall) && collision_line(x,y,target.x,target.y,Wall,false,false) < 0
 					{
-						var nearest = instance_nearest_notme(x,y,enemy)
-						if instance_exists(nearest) && nearest != noone && nearest.team != team && nearest.team != 0 && point_distance(x,y,nearest.x,nearest.y) < distanceToPlayer
-							target = nearest;
+						if instance_exists(enemy) && instance_number(enemy) > 2
+						{
+							var nearest = instance_nearest_notme(x,y,enemy)
+							if instance_exists(nearest) && nearest != noone && nearest.team != team && nearest.team != 0 && point_distance(x,y,nearest.x,nearest.y) < distanceToPlayer
+								target = nearest;
+						}
 					}
 				}
-				
 			}
 		}
 		if Player.race == 12 && target == Player.id {
@@ -99,9 +99,7 @@ function scrTarget() {
 			target = noone;
 		}
 	}
-	else
-		target = noone;
 		
-	if target < 0 || !instance_exists(target) || target == noone
+	if target < 0 || !instance_exists(target)
 		target = noone
 }

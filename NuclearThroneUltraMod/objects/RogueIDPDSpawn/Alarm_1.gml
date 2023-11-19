@@ -1,22 +1,6 @@
 
 if instance_exists(Player)
 {
-	if Player.loops > 3 && random(3) < 1
-	{
-		snd_play(sndFreakPopoEnter,0,true);
-		repeat(2)
-		{
-			with instance_create(x+random(4)-2,y+random(4)-2,IDPDFreak)
-			{
-				scrSleepyPopo();
-				if instance_exists(Player)
-					motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,4)
-				else
-					motion_add(random(360),4)
-			}
-		}
-		exit;
-	}
 	var loops = UberCont.loops
 	if scrIsHardMode()  && Player.area > 1 && Player.loops != 1// HARD MODE
 		loops += 2;
@@ -32,13 +16,13 @@ if random(4)<1+min(loops-1,2) && loops>0//elite
     
     with instance_create(x+random(4)-2,y+random(4)-2,EliteGrunt)
     {
-		other.RogueIDPD=true
 	    team=2;
 	    mask_index=mskAlly;
 	    spr_idle=sprRogueEliteGruntIdle;
 	    spr_walk=sprRogueEliteGruntWalk;
 	    spr_hurt=sprRogueEliteGruntHurt;
 	    spr_dead=sprRogueEliteGruntDead;
+		scrBecomeRoguePopo();
 	    if instance_exists(Player)
 			motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,6)
 	    else
@@ -55,6 +39,7 @@ if random(4)<1+min(loops-1,2) && loops>0//elite
 	    spr_walk=sprRogueEliteShielderWalk;
 	    spr_hurt=sprRogueEliteShielderHurt;
 	    spr_dead=sprRogueEliteShielderDead;
+		scrBecomeRoguePopo();
 	    if instance_exists(Player)
 			motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,5)
 	    else
@@ -71,6 +56,7 @@ if random(4)<1+min(loops-1,2) && loops>0//elite
 	    spr_walk=sprRogueEliteInspectorWalk;
 	    spr_hurt=sprRogueEliteInspectorHurt;
 	    spr_dead=sprRogueEliteInspectorDead;
+		scrBecomeRoguePopo();
 	    if instance_exists(Player)
 			motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,5)
 	    else
@@ -103,6 +89,7 @@ if random(4)<1+min(loops-1,2) && loops>0//elite
 		    spr_hurt=sprRogueExploderPopoHurt;
 		    spr_dead=sprRogueExploderPopoDead;
 		}
+		scrBecomeRoguePopo();
 	    if instance_exists(Player)
 			motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,5)
 	    else
@@ -131,6 +118,7 @@ if dir = 1
 		    spr_walk=sprRogueGruntWalk;
 		    spr_hurt=sprRogueGruntHurt;
 		    spr_dead=sprRogueGruntDead;
+			scrBecomeRoguePopo();
 			if instance_exists(Player)
 				motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,4)
 			else
@@ -148,6 +136,7 @@ if dir = 2
 	    spr_walk=sprRogueShielderWalk;
 	    spr_hurt=sprRogueShielderHurt;
 	    spr_dead=sprRogueShielderDead;
+		scrBecomeRoguePopo();
 		if instance_exists(Player)
 			motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,4)
 		else
@@ -164,6 +153,7 @@ if dir = 3
 	    spr_walk=sprRogueInspectorWalk;
 	    spr_hurt=sprRogueInspectorHurt;
 	    spr_dead=sprRogueInspectorDead;
+		scrBecomeRoguePopo();
 		if instance_exists(Player)
 			motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,4)
 		else
@@ -180,6 +170,7 @@ else if dir = 4
 	    spr_walk=sprRogueSegwayIDPDWalk;
 	    spr_hurt=sprRogueSegwayIDPDHurt;
 	    spr_dead=sprRogueSegwayIDPDDead;
+		scrBecomeRoguePopo();
 		if instance_exists(Player)
 			motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,4)
 		else
@@ -196,6 +187,7 @@ else if dir = 5
 		spr_walk=sprRogueBuffPopoWalk;
 		spr_hurt=sprRogueBuffPopoHurt;
 		spr_dead=sprRogueBuffPopoDead;
+		scrBecomeRoguePopo();
 		if instance_exists(Player)
 			motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,4)
 		else
@@ -212,6 +204,7 @@ else if dir = 6
 		spr_walk=sprRogueExploderPopoWalk;
 		spr_hurt=sprRogueExploderPopoHurt;
 		spr_dead=sprRogueExploderPopoDead;
+		scrBecomeRoguePopo();
 		if instance_exists(Player)
 			motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,4)
 		else

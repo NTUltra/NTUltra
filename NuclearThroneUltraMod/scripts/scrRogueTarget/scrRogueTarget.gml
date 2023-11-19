@@ -1,15 +1,8 @@
 function scrRogueTarget() {
-	if instance_exists(Player)
-	{
-	if target<0||!instance_exists(target)||target=Player
-	target = noone
-	}
-	else
 	target = noone
 
 	if instance_exists(enemy)
 	{
-		target=noone;
 		//if target = -1
 		//{
 		var dir=0;
@@ -35,8 +28,9 @@ function scrRogueTarget() {
 
 	}
 	else
-	{target= noone;
-	instance_destroy();}
+	{
+		instance_destroy();
+	}
 
 
 }

@@ -1,5 +1,5 @@
 dist += 1
-scrBoltMarrow(0.9);
+scrBoltMarrow(0.8);
 scrBoltTrail(trailColour,0.05,2);
 
 image_angle -= 20;

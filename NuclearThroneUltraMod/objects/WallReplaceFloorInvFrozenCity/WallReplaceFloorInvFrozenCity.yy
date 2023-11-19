@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Projectiles",
-    "path": "folders/Objects/Projectiles.yy",
+    "name": "SurvivalArena",
+    "path": "folders/Objects/SurvivalArena.yy",
   },
   "parentObjectId": {
     "name": "WallReplaceFloor",

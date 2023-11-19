@@ -1,37 +1,32 @@
 snd_play(sndScrewdriver,0.2,true)
 
 instance_create(x,y,Dust)
-
-if instance_exists(Player){
-with instance_create(x+lengthdir_x((Player.skill_got[13]+Player.bettermelee)*10,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y((Player.skill_got[13]+Player.bettermelee)*10,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),Shank)
-{
-direction=random(360)
-ang = direction
-dmg = 4
-longarms = 0
+/*
+var n = instance_nearest(x,y,enemy);
+if n != noone
+	var aim = point_direction(x,y,n.x,n.y);
+else
+	var aim = random(360);
+*/
+var len = 1;
 if instance_exists(Player)
-longarms = (Player.skill_got[13]+Player.bettermelee)*3
-image_angle = direction
-motion_add(ang,2+longarms)
-team = other.team
-
-}
-}
-else{
-with instance_create(x,y,Shank)
 {
-direction=random(360)
-ang = direction
-dmg = 4
-longarms = 0
-if instance_exists(Player)
-longarms = (Player.skill_got[13]+Player.bettermelee)*3
-image_angle = direction
-motion_add(ang,2+longarms)
-team = other.team
+	len = (Player.skill_got[13]+Player.bettermelee)*10
+}
+with instance_create(x+lengthdir_x(len,image_angle),
+y+lengthdir_y(len,image_angle),Shank)
+{
+	direction = other.image_angle
+	ang = direction
+	dmg = 3
+	longarms = 0
+	if instance_exists(Player)
+	longarms = (Player.skill_got[13]+Player.bettermelee)*3
+	image_angle = direction
+	motion_add(ang,2+longarms)
+	team = other.team
 
 }
-}
 
-alarm[0]=2;
+alarm[0] = 2;
 

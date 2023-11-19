@@ -503,8 +503,8 @@ function scrUltras(altOverride = false) {
 	    ultra_tips[69] = "guardian"
     
 	    ultra_name[70] = "DESCENT"
-	    ultra_text[70] = "AS AMMO LOWERS#INCREASE RELOAD SPEED AND DAMAGE"
-	    ultra_tips[70] = "emo style"
+	    ultra_text[70] = "AS <y>AMMO<y> LOWERS#INCREASE <w>RELOAD SPEED<w>##WHEN YOU RUN OUT OF <y>AMMO<y>#HEAL 1<r>HP<r>##YOU CAN FIRE ANY WEAPON#AS LONG AS YOU HAVE MORE THAN 0 AMMO"
+	    ultra_tips[70] = "darkness"
     
 	    ultra_name[71] = "TRANQUILITY"
 		/*
@@ -515,7 +515,7 @@ function scrUltras(altOverride = false) {
 	    ultra_tips[71] = "no one can hurt me"
     
 	    ultra_name[72] = "ASCENT"
-	    ultra_text[72] = "YOU CAN FLY OVER <w>WALLS<w> FOREVER#ALSO <pi>DEFLECT<pi> ON YOUR <w>CROSSHAIR<w>"
+	    ultra_text[72] = "YOU CAN FLY OVER <w>WALLS<w> FOREVER#BIGGER <pi>DEFLECT<pi> AREA"
 	    ultra_tips[72] = "all you need is air"
 		
 		//Have less than default max hp
@@ -524,7 +524,7 @@ function scrUltras(altOverride = false) {
 		&& instance_exists(UltraIcon))))
 		{
 			ultra_name[72] = "MIRROR"
-		    ultra_text[72] = "YOUR ACTIVE IS NOW FREE#BUT IT HAS A COOLDOWN#THRONEBUTT NO LONGER HEALS#BUT INSTEAD REDUCES COOLDOWN##ALSO <pi>DEFLECT<pi> ON YOUR CROSSHAIR"
+		    ultra_text[72] = "SLIGHTLY LONGER <pi>DEFLECT<pi>#ALSO <pi>DEFLECT<pi> ON YOUR CROSSHAIR"
 		    ultra_tips[72] = "right back at ya"
 		}
 		

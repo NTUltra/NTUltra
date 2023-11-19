@@ -10,6 +10,7 @@ if (!instance_exists(GenCont) && !instance_exists(LevCont) && instance_exists(Fl
 		with instance_create(spawnfloor.x+16,spawnfloor.y+16,VanSpawn)
 		{
 			RogueIDPD=true;
+			sprite_index = sprRogueVanPortalStart;
 		}
 		spawnedFriendlyPopo = true;
 	}

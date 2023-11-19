@@ -38,6 +38,9 @@ if unkillable
 	alarm[3] = 2;
 }
 var is60fps = (UberCont.normalGameSpeed == 60);
+var representingCost = wep_cost[wep];
+if ultra_got[70]
+	representingCost = min(representingCost,0.5);
 if !instance_exists(LevCont) and visible = 1
 {
 	if roll = 0
@@ -692,24 +695,11 @@ if !instance_exists(LevCont) and visible = 1
 
 	if (KeyCont.key_fire[p] = 1 or keyfire = 1) and wep_auto[wep] = 0 and ((wep_type[wep] = 0 or wep_type[wep] = 1) or can_shoot == 1) and reload < 8//15 INPUT BUFFERING
 		clicked = 1
-
+	
 	if (KeyCont.key_fire[p] = 1 or keyfire = 1)
 	{
-		if  ammo[wep_type[wep]] < wep_cost[wep] && wep_type[wep] != 0  && alarm[2] < 1//alarm = Fish Ultra B
+		if  ammo[wep_type[wep]] < representingCost && wep_type[wep] != 0  && alarm[2] < 1//alarm = Fish Ultra B
 		{
-			/*
-		if wep == 29|| wep==60 || wep==61 || wep==83 || wep==84 || wep==132//|| wep==109//ALL THE BLOOD WEAPONS!
-		{//glove is not included because that shits just to buggy
-		//BLOOD LAUNCHER,Pistol,Shotgun,rifle,triple,bulletshotty
-		ammo[wep_type[wep]] += wep_cost[wep]
-		sprite_index = spr_hurt
-		image_index = 0
-		my_health -= 1
-		snd_play(snd_hurt, hurt_pitch_variation)
-		Sleep(40)
-		alarm[3]=0;//remove immunity from bloodglove
-		}
-		else*/
 			scrEmpty()
 		}
 		rad = max(rad,0);
@@ -722,7 +712,8 @@ if !instance_exists(LevCont) and visible = 1
 		}
 	}
 	fired = false;
-	if can_shoot == 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
+	if can_shoot == 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and 
+	((ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad >= wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 	{
 		if wep_auto[wep] = 0 and clicked = 1
 		{
@@ -756,9 +747,6 @@ if !instance_exists(LevCont) and visible = 1
 		}
 	}
 }
-
-	
-
 
 	//crown of hatred
 	if scrIsCrown(6)
@@ -1015,7 +1003,7 @@ if (!instance_exists(LevCont))
 			with CloneShooter
 				instance_destroy();
 		
-			if ammo[wep_type[wep]] < wep_cost[wep] and wep_type[wep] != 0
+			if ammo[wep_type[wep]] < representingCost and wep_type[wep] != 0
 				scrEmpty()
 
 			wepflip = -wepflip
@@ -1288,7 +1276,7 @@ if (!instance_exists(LevCont))
 	if (!IsShielding || ultra_got[7]==1) 
 	and wep_auto[wep] = 1 and (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
 	{
-		while can_shoot == 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
+		while can_shoot == 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and ((ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 		{
 			if ultra_got[44] == 1 && instance_exists(Marker)
 			{

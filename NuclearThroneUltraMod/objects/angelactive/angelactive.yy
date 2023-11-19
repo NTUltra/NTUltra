@@ -42,5 +42,5 @@
     "name": "mskAngelActive",
     "path": "sprites/mskAngelActive/mskAngelActive.yy",
   },
-  "visible": true,
+  "visible": false,
 }

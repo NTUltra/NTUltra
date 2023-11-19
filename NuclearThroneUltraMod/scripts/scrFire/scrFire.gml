@@ -36,11 +36,28 @@ function scrFire() {
 	if (Player.alarm[2]<1)//alarm = Fish Ultra B
 	{
 		ammo[wep_type[wep]] -= wep_cost[wep]
-		ammo[wep_type[wep]] = max(0,ammo[wep_type[wep]]);
+		//if Player.ultra_got[70]
+		//ammo[wep_type[wep]] = max(0,ammo[wep_type[wep]]);
 		rad -= wep_rad[wep]
 		rad = max(rad,0);
 	}
-
+	if Player.ultra_got[70]
+	{
+		with Player
+		{
+			var ammoPercentage = 0;
+			ammoPercentage += ammo[wep_type[wep]] / typ_amax[wep_type[wep]];
+			if skill_got[10] //BACK MUSCLE
+				ammoPercentage *= 1.4;
+			reload *= ammoPercentage;
+			if ammo[wep_type[wep]] <= 0
+			{
+				snd_play_2d(sndHealthPickup);
+				scrHeal(2);	
+			}
+		}
+		
+	}
 	if Player.ultra_got[4]//FISH ULTRA D rolling is good
 	{
 		if reload > 0 && Player.bskin != 2

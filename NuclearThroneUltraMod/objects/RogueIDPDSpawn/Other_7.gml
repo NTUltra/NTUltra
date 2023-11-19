@@ -1,6 +1,6 @@
-if sprite_index = sprIDPDPortalStart
-sprite_index = sprIDPDPortalCharge
+if sprite_index = sprRogueIDPDPortalStart
+sprite_index = sprRogueIDPDPortalCharge
 
-if sprite_index = sprIDPDPortalClose
+if sprite_index = sprRogueIDPDPortalClose
 instance_destroy()
 

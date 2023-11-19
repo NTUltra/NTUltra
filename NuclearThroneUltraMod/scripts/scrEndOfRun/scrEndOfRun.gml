@@ -5,8 +5,18 @@ function scrEndOfRun(){
 	//Also delete in alarm[2] in UberCont if object is deactivated during menuing
 	with ElementorHead
 		instance_destroy();
+	with WepPickup
+	{
+		instance_destroy();	
+	}
 	with ThrowWep
-		instance_destroy();
+	{
+		instance_destroy(id,false);	
+	}
+	with WeaponMod
+	{
+		instance_destroy(id,false);	
+	}
 	with FPSHACK
 		instance_destroy();
 	with SurvivalWave

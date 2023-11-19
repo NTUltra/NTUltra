@@ -9,6 +9,18 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 	//scrEndOfRun(); already run in player destroy
 	with FPSHACKMenu
 		instance_destroy();
+	with WepPickup
+	{
+		instance_destroy();	
+	}
+	with ThrowWep
+	{
+		instance_destroy(id,false);	
+	}
+	with WeaponMod
+	{
+		instance_destroy(id,false);	
+	}
 	instance_activate_all();
 	if normalGameSpeed = 30
 		with FPSHACK

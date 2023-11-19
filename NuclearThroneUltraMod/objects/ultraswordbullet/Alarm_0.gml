@@ -12,8 +12,12 @@ if instance_exists(enemy)
 }
 else
 	dir = random(360);
-if instance_exists(Player){
-with instance_create(x+lengthdir_x((Player.skill_got[13]+Player.bettermelee)*10,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y((Player.skill_got[13]+Player.bettermelee)*10,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),Slash)
+var len = 1;
+if instance_exists(Player)
+{
+	len = len
+}
+with instance_create(x+lengthdir_x(len,dir),y+lengthdir_y(len,dir),Slash)
 {
 	sprite_index=sprUltraSlash;
 	wallPierce *= 0.5;
@@ -28,23 +32,6 @@ motion_add(ang,2+longarms)
 team = other.team
 
 }
-}
-else{
-with instance_create(x,y,Slash)
-{
-	sprite_index=sprUltraSlash;
-	wallPierce *= 0.5;
-direction=dir
-ang = direction
-dmg = 12
-longarms = 0
-if instance_exists(Player)
-longarms = (Player.skill_got[13]+Player.bettermelee)*3
-image_angle = direction
-motion_add(ang,2+longarms)
-team = other.team
 
-}
-}
 alarm[0]=3;
 
