@@ -24,12 +24,13 @@ function scrFire() {
 		}
 	}
 	reload = min(reload + wep_load[wep],wep_load[wep]);
+	//Nerves of steel
 	if Player.skill_got[41] && Player.armour < Player.maxarmour
 	{
 		if Player.race == 25
-			reload *= 0.6;
+			reload *= 0.55;
 		else
-			reload *= 0.65;
+			reload *= 0.6;
 	}
 	queueshot = max(queueshot-1,0);
 	Player.fired = true;
@@ -4215,7 +4216,7 @@ function scrFire() {
 	with instance_create(x,y,SlashShotgunPrep)
 	{
 	snd_play_fire(sndSlugger)
-	motion_add(aimDirection+(random(6)-3)*other.accuracy,11+random(2));
+	motion_add(aimDirection+(random(6)-3)*other.accuracy,15);
 	image_angle=direction;
 	rate=1//for extra speed more bullets per step
 	Direction=aimDirection;
@@ -4246,7 +4247,7 @@ function scrFire() {
 	with instance_create(x,y,SlashShotgunPrep)
 	{
 	snd_play_fire(sndSlugger)
-	motion_add(aimDirection+(random(6)-3)*other.accuracy,11+random(2));
+	motion_add(aimDirection+(random(6)-3)*other.accuracy,15);
 	image_angle=direction;
 	rate=4//for extra speed more bullets per step
 	Direction=aimDirection;
@@ -4279,7 +4280,7 @@ function scrFire() {
 	with instance_create(x,y,SlashEraserPrep)
 	{
 	snd_play_fire(sndEraser)
-	motion_add(aimDirection+(random(6)-3)*other.accuracy,11+random(2));
+	motion_add(aimDirection+(random(6)-3)*other.accuracy,15);
 	image_angle=direction;
 	rate=1//for extra speed more bullets per step
 	Direction=aimDirection;

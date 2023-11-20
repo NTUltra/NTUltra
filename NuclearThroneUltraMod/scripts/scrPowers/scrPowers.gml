@@ -1504,24 +1504,37 @@ function scrPowers() {
 			{
 				//snd_play_2d(snd_lowa,0,true,false,10);
 				if !audio_is_playing(sndUltraEmpty)
-						snd_play(sndUltraEmpty)
+					snd_play_2d(sndUltraEmpty)
 				with instance_create(x,y,PopupText)
 				{
 					mytext = "NOT ENOUGH RADS"
 					theColour=c_red;
 				}
-				BackCont.shake += 5;
+				
 			}
 		}
-		else
+		else 
 		{
 			if instance_exists(HoldToEat)
 			{
 				with HoldToEat
 					instance_destroy();
 			}
-			if bwep != 0
-			instance_create(x,y,HoldToEat);
+			if !hasBeenEaten || isPermanent
+			{
+				if bwep != 0
+					instance_create(x,y,HoldToEat);
+			} else
+			{
+				if !audio_is_playing(sndPortalStrikeEmpty)
+					snd_play_2d(sndPortalStrikeEmpty);
+				with instance_create(x,y,PopupText)
+				{
+					mytext = "ALREADY EATEN"
+					theColour=c_red;
+				}
+				BackCont.shake += 5;
+			}
 		}
 	}
 

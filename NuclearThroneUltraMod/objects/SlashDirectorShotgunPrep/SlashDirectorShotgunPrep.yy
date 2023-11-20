@@ -36,8 +36,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprSlashDirectorShotgunpPrep",
-    "path": "sprites/sprSlashDirectorShotgunpPrep/sprSlashDirectorShotgunpPrep.yy",
+    "name": "sprSlashDirectorShotgunPrep",
+    "path": "sprites/sprSlashDirectorShotgunPrep/sprSlashDirectorShotgunPrep.yy",
   },
   "spriteMaskId": {
     "name": "mskFlakBullet",

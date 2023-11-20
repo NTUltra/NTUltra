@@ -29,6 +29,11 @@ wepmod2=0;
 wepmod3=0;
 wepmod4=0;
 isPermanent = false;
+isPermanentB = false;
+isPermanentC = false;
+hasBeenEaten = false;
+hasBeenEatenB = false;
+hasBeenEatenC = false;
 curse=0;
 
 

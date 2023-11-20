@@ -189,6 +189,7 @@ if wep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 		ammo = 50
 		curse = other.curse
 		isPermanent = other.isPermanent;
+		hasBeenEaten = other.hasBeenEaten;
 		name = wep_name[wep]
 		type = wep_type[wep]
 		sprite_index = wep_sprt[wep]
@@ -211,6 +212,7 @@ if bwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 		ammo = 50
 		curse = other.bcurse
 		isPermanent = other.isPermanentB;
+		hasBeenEaten = other.hasBeenEatenB;
 		name = wep_name[wep]
 		type = wep_type[wep]
 		sprite_index = wep_sprt[wep]
@@ -233,6 +235,7 @@ if cwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 		ammo = 50
 		curse = other.ccurse
 		isPermanent = other.isPermanentC;
+		hasBeenEaten = other.hasBeenEatenC;
 		name = wep_name[wep]
 		type = wep_type[wep]
 		sprite_index = wep_sprt[wep]
@@ -755,6 +758,9 @@ with instance_create(x,y,DataRef)
 	isPermanent = other.isPermanent;
 	isPermanentB = other.isPermanentB;
 	isPermanentC = other.isPermanentC;
+	hasBeenEaten = other.hasBeenEaten;
+	hasBeenEatenB = other.hasBeenEatenB;
+	hasBeenEatenC = other.hasBeenEatenC;
 	wepmod1 = other.wepmod1;
 	wepmod2 = other.wepmod2;
 	wepmod3 = other.wepmod3;

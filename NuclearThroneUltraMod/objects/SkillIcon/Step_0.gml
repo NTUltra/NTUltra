@@ -10,7 +10,7 @@ with GameRender {
 }
 if skill != 37
 	Player.totalSkills ++;
-if skill = 1
+if skill == 1
 {
 	if Player.ultra_got[62] && Player.altUltra//Living armour
 	{
@@ -26,6 +26,20 @@ if skill = 1
 	{
 		Player.maxhealth += 4
 		Player.my_health += 4
+	}
+
+}
+else if skill == 31//Tough shell
+{
+	if Player.ultra_got[62] && Player.altUltra//Living armour
+	{
+		Player.maxarmour += 1;
+		Player.armour += 1;
+	}
+	else
+	{
+		Player.maxhealth += 1
+		Player.my_health += 1
 	}
 
 }
@@ -155,6 +169,8 @@ else if skill = 18//last wish
 				targetHealth = 1;
 			if skill_got[1] == 1//Rhino skin
 				targetHealth += 4;
+			if skill_got[31]//Tough shell
+				targetHealth += 1;
 			if skill_got[33]//Glass arm cannon
 				targetHealth = max(1,targetHealth-2);
 			if skill_got[41]//nerves of steel
@@ -214,7 +230,7 @@ else if skill = 18//last wish
 	}
 
 }
-else if skill = 5
+else if skill == 5
 {
 	if Player.race = 1//thronebut for fish
 	{
@@ -232,7 +248,7 @@ else if skill = 5
 		Player.rewinds = 2;
 	}
 }
-else if skill = 19 {
+else if skill == 19 {
 	scrApplyEagleEyes();
 }
 else if skill==25{

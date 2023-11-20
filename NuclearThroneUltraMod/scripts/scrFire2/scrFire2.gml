@@ -1150,7 +1150,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x,y,SlashDirectorShotgunPrep)
 	{
 	snd_play_fire(sndSlugger)
-	motion_add(aimDirection+(random(6)-3)*other.accuracy,11+random(2));
+	motion_add(aimDirection+(random(6)-3)*other.accuracy,15);
 	image_angle=direction;
 	rate=10//for extra speed more bullets per step
 	Direction=aimDirection;
@@ -4878,6 +4878,7 @@ function scrFire2(hasTailNow) {
 		wepmod3=other.wepmod3;
 		wepmod4=other.wepmod4;
 		isPermanent = other.isPermanent;
+		hasBeenEaten = other.hasBeenEaten;
 		thrownByCuz = yc;
 		sprite_index = wep_sprt[wep]
 	}

@@ -32,6 +32,7 @@ with WeaponDeposit {
 		wepmod3 = other.wepmod3;
 		wepmod4 = other.wepmod4;
 		isPermanent = other.isPermanent;
+		hasBeenEaten = other.hasBeenEaten;
 		name = wep_name[wep]
 		ammo = 0
 		type = wep_type[wep]

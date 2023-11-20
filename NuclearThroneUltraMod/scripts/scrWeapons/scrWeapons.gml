@@ -5920,7 +5920,7 @@ function scrWeapons() {
 	wep_load[535] = 18
 	wep_cost[535] = 4
 	wep_sprt[535] = sprLaserCrash
-	wep_area[535] = 9
+	wep_area[535] = 8
 	wep_text[535] = "crash blast"
 	wep_swap[535] = sndSwapBow
 	wep_rad[535] = 0;
@@ -7569,7 +7569,7 @@ function scrWeapons() {
 	wep_auto[685] = 0
 	wep_load[685] = 20
 	wep_cost[685] = 1
-	wep_sprt[685] = sprChargeLaserGun
+	wep_sprt[685] = sprChargeBouncerLaserGun
 	wep_area[685] = 11
 	wep_text[685] = "charging railgun"
 	wep_swap[685] = sndSwapEnergy

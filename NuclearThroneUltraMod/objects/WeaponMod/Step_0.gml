@@ -96,6 +96,7 @@ if place_meeting(x,y,Player)
 					wepmod3=other.wepmod3;
 					wepmod4=other.wepmod4;
 					isPermanent = other.isPermanent;
+					hasBeenEaten = other.hasBeenEaten;
 				}
 				if curse == 1
 					snd_play(sndCursedReminder);

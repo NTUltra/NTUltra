@@ -121,6 +121,8 @@ strongspiritused=Player.strongspiritused;//false
 maxhealth = floor(6*1.5*Player.level);
 if Player.skill_got[1]//rhino skin
 maxhealth=floor(7*1.5*Player.level);
+if skill_got[31]//Tough shell
+maxhealth += 2;
 scrBossHealthBuff();
 
 my_health = maxhealth

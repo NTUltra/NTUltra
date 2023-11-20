@@ -23,7 +23,9 @@ with Player
 		survivalSkills++;
 	if skill_got[36] == 1//Absorbing pores
 		survivalSkills++;
-	if skill_got[40] == 1//Absorbing pores
+	if skill_got[40] == 1//Bouncy Fat
+		survivalSkills++;
+	if skill_got[41] == 1//Nerves of steel
 		survivalSkills++;
 	if survivalSkills > 2
 	scrUnlockCharacter(18,"FOR TAKING#THREE SURVIVAL MUTATIONS")	

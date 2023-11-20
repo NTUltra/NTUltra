@@ -27,6 +27,7 @@ if instance_exists(Player)
 				wepmod3 = hogWepmod3[i]
 				wepmod4 = hogWepmod4[i]
 				isPermanent = hogIsPermanent[i];
+				hasBeenEaten = hogHasBeenEaten[i];
 				if wep != 0
 				{
 					snd_play_2d(wep_swap[wep])

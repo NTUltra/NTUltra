@@ -11,6 +11,7 @@ function scrDropHeavyHeart(){
 		wepmod3 = other.wepmod3;
 		wepmod4 = other.wepmod4;
 		isPermanent = other.isPermanent;
+		hasBeenEaten = other.hasBeenEaten;
 		curse = other.curse;
 		wep = other.wep
 		spr_idle=wep_sprt[wep];

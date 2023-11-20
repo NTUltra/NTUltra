@@ -1,79 +1,83 @@
 function scrSwapWeps() {
 	//SWAP DA WEPS
-	var twep, treload, tqueueshot, twkick, twepflip, twepangle, tcan_shoot, tcurse,twepmod1,twepmod2,twepmod3,twepmod4, isPermanentT;//temporary wep
+	var twep, treload, tqueueshot, twkick, twepflip, twepangle, tcan_shoot, tcurse,twepmod1,twepmod2,twepmod3,twepmod4, isPermanentT, hasBeenEatenT;//temporary wep
 	if ultra_got[31] && cwep!=0//robots third weapon robot is cool very cool
 	{
-	//save primary in temporary A B C A
-	twkick=wkick
-	tcurse=curse
-	tcan_shoot=can_shoot
-	twepflip=wepflip
-	twepangle=wepangle
-	treload=reload
-	tqueueshot=queueshot
-	twep=wep
-	isPermanentT=isPermanent;
-	//TMODIFIERS!
-	twepmod1=wepmod1;
-	twepmod2=wepmod2;
-	twepmod3=wepmod3;
-	twepmod4=wepmod4;
+		//save primary in temporary A B C A
+		twkick=wkick
+		tcurse=curse
+		tcan_shoot=can_shoot
+		twepflip=wepflip
+		twepangle=wepangle
+		treload=reload
+		tqueueshot=queueshot
+		twep=wep
+		isPermanentT=isPermanent;
+		hasBeenEatenT = hasBeenEaten;
+		//TMODIFIERS!
+		twepmod1=wepmod1;
+		twepmod2=wepmod2;
+		twepmod3=wepmod3;
+		twepmod4=wepmod4;
 
 
 
-	//primary becomes secondary B B C A
-	wkick=bwkick
-	curse=bcurse
-	can_shoot=bcan_shoot
-	wepflip=bwepflip
-	wepangle=bwepangle
-	reload=breload
-	queueshot=bqueueshot
-	wep=bwep
-	isPermanent = isPermanentB;
-	//MODIFIERS!
-	wepmod1=bwepmod1;
-	wepmod2=bwepmod2;
-	wepmod3=bwepmod3;
-	wepmod4=bwepmod4;
+		//primary becomes secondary B B C A
+		wkick=bwkick
+		curse=bcurse
+		can_shoot=bcan_shoot
+		wepflip=bwepflip
+		wepangle=bwepangle
+		reload=breload
+		queueshot=bqueueshot
+		wep=bwep
+		isPermanent = isPermanentB;
+		hasBeenEaten = hasBeenEatenB;
+		//MODIFIERS!
+		wepmod1=bwepmod1;
+		wepmod2=bwepmod2;
+		wepmod3=bwepmod3;
+		wepmod4=bwepmod4;
 
 
-	//secondary becomes tertiary B C C A
-	bwkick=cwkick
-	bcurse=ccurse
-	bcan_shoot=ccan_shoot
-	bwepflip=cwepflip
-	bwepangle=cwepangle
-	breload=creload
-	bqueueshot=cqueueshot
-	bwep=cwep
-	isPermanentB = isPermanentC;
-	//BMODIFIERS!
-	bwepmod1=cwepmod1;
-	bwepmod2=cwepmod2;
-	bwepmod3=cwepmod3;
-	bwepmod4=cwepmod4;
+		//secondary becomes tertiary B C C A
+		bwkick=cwkick
+		bcurse=ccurse
+		bcan_shoot=ccan_shoot
+		bwepflip=cwepflip
+		bwepangle=cwepangle
+		breload=creload
+		bqueueshot=cqueueshot
+		bwep=cwep
+		isPermanentB = isPermanentC;
+		hasBeenEatenB = hasBeenEatenC;
+		//BMODIFIERS!
+		bwepmod1=cwepmod1;
+		bwepmod2=cwepmod2;
+		bwepmod3=cwepmod3;
+		bwepmod4=cwepmod4;
 
 
-	//tertiary becomes temporary B C A A
-	cwkick=twkick
-	ccurse=tcurse
-	ccan_shoot=tcan_shoot
-	cwepflip=twepflip
-	cwepangle=twepangle
-	creload=treload
-	cqueueshot=tqueueshot
-	cwep=twep
-	isPermanentC=isPermanentT;
-	//CMODIFIERS!
-	cwepmod1=twepmod1;
-	cwepmod2=twepmod2;
-	cwepmod3=twepmod3;
-	cwepmod4=twepmod4;
+		//tertiary becomes temporary B C A A
+		cwkick=twkick
+		ccurse=tcurse
+		ccan_shoot=tcan_shoot
+		cwepflip=twepflip
+		cwepangle=twepangle
+		creload=treload
+		cqueueshot=tqueueshot
+		cwep=twep
+		isPermanentC=isPermanentT;
+		hasBeenEatenC = hasBeenEatenT;
+		//CMODIFIERS!
+		cwepmod1=twepmod1;
+		cwepmod2=twepmod2;
+		cwepmod3=twepmod3;
+		cwepmod4=twepmod4;
 	
-	prevreload = reload;
-	prevbreload = breload;
-	prevcreload = creload;
+		prevreload = reload;
+		prevbreload = breload;
+		prevcreload = creload;
 	}
 	else//regular swapping
 	{
@@ -86,6 +90,7 @@ function scrSwapWeps() {
 	twepangle = wepangle 
 	tcan_shoot = can_shoot
 	isPermanentT=isPermanent;
+	hasBeenEatenT = hasBeenEaten;
 	//TMODIFIERS
 	twepmod1=wepmod1
 	twepmod2=wepmod2
@@ -116,6 +121,7 @@ function scrSwapWeps() {
 	bqueueshot=tqueueshot
 	bwep = twep
 	isPermanentB = isPermanentT;
+	hasBeenEatenB = hasBeenEatenT;
 	//BMODIFIERS
 	bwepmod1=twepmod1;
 	bwepmod2=twepmod2;

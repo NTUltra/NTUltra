@@ -111,6 +111,15 @@ hogIsPermanent[5] = false;
 hogIsPermanent[6] = false;
 hogIsPermanent[7] = false;
 
+hogHasBeenEaten[0] = false;
+hogHasBeenEaten[1] = false;
+hogHasBeenEaten[2] = false;
+hogHasBeenEaten[3] = false;
+hogHasBeenEaten[4] = false;
+hogHasBeenEaten[5] = false;
+hogHasBeenEaten[6] = false;
+hogHasBeenEaten[7] = false;
+
 //3D audio
 audio_listener_orientation(0, 0, -1, 0, 1, 0);
 audio_falloff_set_model(audio_falloff_linear_distance);
@@ -277,6 +286,9 @@ ccurse = 0
 isPermanent = false;
 isPermanentB = false;
 isPermanentC = false;
+hasBeenEaten = false;
+hasBeenEatenB = false;
+hasBeenEatenC = false;
 //MODIFIERS!
 wepmod1 = 0;
 wepmod2 = 0;

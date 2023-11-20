@@ -9,6 +9,7 @@ with Player
 	    wepmod3=other.wepmod3;
 	    wepmod4=other.wepmod4;
 		isPermanent = other.isPermanent;
+		hasBeenEaten = other.hasBeenEaten;
 		if (ultra_got[54] == 1 && wep_type[wep] != 0)
 		{
 			//dont start empty handed
@@ -30,6 +31,7 @@ with Player
 	    bwepmod3=other.wepmod3;
 	    bwepmod4=other.wepmod4;
 		isPermanent = other.isPermanent;
+		hasBeenEaten = other.hasBeenEaten;
 		if (ultra_got[54] == 1 && wep_type[bwep] != 0)
 		{
 			//dont start empty handed
@@ -63,6 +65,7 @@ with instance_create(x,y,WepPickupForOneWepOnly)
 	wepmod3=other.wepmod3;
 	wepmod4=other.wepmod4;
 	isPermanent = other.isPermanent;
+	hasBeenEaten = other.hasBeenEaten;
 	persistent=other.persistent;
 	if persistent
 		wasThrown = true;

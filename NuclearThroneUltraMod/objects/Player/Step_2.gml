@@ -239,6 +239,7 @@ if instance_exists(WepPickup) || instance_exists(ThrowWep) && !instance_exists(G
 			{
 				bcurse = curse
 				isPermanentB = isPermanent;
+				hasBeenEatenB = hasBeenEaten;
 				if ultra_got[29] && altUltra && bwep == 0 && wep != 0//ROBOT EXCLUSIVE TASTE
 				{
 					maxhealth -= 4;
@@ -253,6 +254,7 @@ if instance_exists(WepPickup) || instance_exists(ThrowWep) && !instance_exists(G
 			{
 				ccurse = curse
 				isPermanentC = isPermanent;
+				hasBeenEatenC = hasBeenEaten;
 				cwep = wep
 				cwepmod1 = wepmod1;
 				cwepmod2 = wepmod2;
@@ -281,6 +283,7 @@ if instance_exists(WepPickup) || instance_exists(ThrowWep) && !instance_exists(G
 					type = wep_type[wep];
 					curse = other.curse;
 					isPermanent = other.isPermanent;
+					hasBeenEaten = other.hasBeenEaten;
 					wepmod1 = other.wepmod1;
 					wepmod2 = other.wepmod2;
 					wepmod3 = other.wepmod3;
@@ -296,6 +299,7 @@ if instance_exists(WepPickup) || instance_exists(ThrowWep) && !instance_exists(G
 			wep = targetPickup.wep
 			curse = targetPickup.curse
 			isPermanent = targetPickup.isPermanent;
+			hasBeenEaten = targetPickup.hasBeenEaten;
 			wepmod1 = targetPickup.wepmod1
 			wepmod2 = targetPickup.wepmod2
 			wepmod3 = targetPickup.wepmod3

@@ -7,6 +7,7 @@ if other.team != team and other.my_health > 0 and (!onlyHitPlayerTeam || other.t
 		{
 			with other
 			{
+				hitBy = other.sprite_index;
 				sprite_index = spr_hurt
 				image_index = 0
 				my_health -= other.dmg

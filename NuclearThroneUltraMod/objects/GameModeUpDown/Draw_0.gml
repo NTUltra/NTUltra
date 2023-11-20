@@ -181,9 +181,9 @@ else
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 	draw_set_color(c_gray)
-	draw_text_ext(x+o,yy,str,8,128)
+	draw_text_ext(x+o,yy,str,8,124)
 	draw_set_color(c_white)
-	draw_text_ext(x+o,yy,str,8,128)
+	draw_text_ext(x+o,yy,str,8,124)
 	//draw_set_halign(fa_left);
 }
 

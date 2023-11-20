@@ -86,11 +86,16 @@ draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 )+__view_
 	if (!scrIsOnlyNormalGamemode())
 	{
 		//draw_text_color(__view_get( e__VW.XView, 0 )+32,__view_get( e__VW.YView, 0 )-40 + widescreen,string_hash_to_newline("GAMEMODE:#"+gamemode[UberCont.opt_gamemode[0]]),c_white,c_white,c_white,c_white,1);
-		var sw = 128;
+		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+			var sw = 216;
+		else
+			var sw = 118;
+		
 		if !surface_exists(gmSurf)
 		{
 			gmSurf = surface_create(sw,16);
-		}
+		} else if surface_get_width(gmSurf) != sw
+			surface_resize(gmSurf,sw,16);
 		var gamemodeScrollString = "";
 		var al = array_length(UberCont.opt_gamemode)
 		for (var i = 0; i < al; i++)

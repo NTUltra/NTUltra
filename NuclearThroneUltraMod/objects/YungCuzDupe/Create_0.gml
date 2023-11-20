@@ -24,6 +24,9 @@ altFire = true;
 isPermanent = false;
 isPermanentB = false;
 isPermanentC = false;
+hasBeenEaten = false;
+hasBeenEatenB = false;
+hasBeenEatenC = false;
 nearWall = false;
 //scrRaces()
 //scrSkills()
@@ -131,6 +134,8 @@ strongspiritused=Player.strongspiritused;//false
 maxhealth = 8;
 if skill_got[1]//rhino skin
 maxhealth=12;
+if skill_got[31]//Tough shell
+	maxhealth += 1;
 if skill_got[33]//GLASS ARM CANNON
 maxhealth-=2;
 

@@ -57,7 +57,7 @@ if Player.area!=104
 scrPopulate()
 
 alarm[1] = 2
-if Player.area == 100
+if Player.area == 100 && Player.crownvisits > 1
 {
 	with instance_furthest(irandom_range(Player.x + 400,Player.x - 400),
 	irandom_range(Player.y + 400,Player.y - 400),Torch)

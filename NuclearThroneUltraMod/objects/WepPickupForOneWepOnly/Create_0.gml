@@ -48,6 +48,7 @@ wepmod2=0;
 wepmod3=0;
 wepmod4=0;
 isPermanent = false;
+hasBeenEaten = false;
 //name="IF YOU SEE THIS REPORT BUG TO @ERDEPPOL"
 
 /*  */

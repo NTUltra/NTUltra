@@ -15,5 +15,5 @@ repeat(am)
 	ang += angstep;
 }
 	snd_play(sndExplosionS);
-	BackCont.shake += 5
+	BackCont.shake += 3;
 	

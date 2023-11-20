@@ -1,5 +1,5 @@
 /// @description Anything that drops rads runs this
-function scrRaddrop(amountOfRads = raddrop) {
+function scrRaddrop(amountOfRads = raddrop, xx = x, yy = y) {
 
 	if instance_exists(Player)
 	{
@@ -17,7 +17,7 @@ function scrRaddrop(amountOfRads = raddrop) {
 			var ang = random(360);
 			repeat(am)
 			{
-				with instance_create(x,y,HorrorBullet)
+				with instance_create(xx,yy,HorrorBullet)
 				{
 				motion_add(ang,8)
 				image_angle = direction

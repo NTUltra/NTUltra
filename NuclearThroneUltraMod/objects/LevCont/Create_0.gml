@@ -345,10 +345,13 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 			{
 				//not Rebel yung cuz, angel and skeleton
 				//Disable rhino skin, bloodlust second stomach and tough shell
+				//Bouncy fatt & Nerves of steel
 				skill_got[1] = 1;
 				skill_got[7] = 1;
 				skill_got[9] = 1;
 				skill_got[31] = 1;
+				skill_got[40] = 1;
+				skill_got[41] = 1;
 			}
 		}
 	}
@@ -493,6 +496,8 @@ if scrIsGamemode(32) {
 			skill_got[7] = 0;
 			skill_got[9] = 0;
 			skill_got[31] = 0;
+			skill_got[40] = 0;
+			skill_got[41] = 0;
 		}
 	}
 }

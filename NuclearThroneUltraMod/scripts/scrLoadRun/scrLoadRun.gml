@@ -103,10 +103,16 @@ function scrLoadRun(){
 				Player.ccurse = encryptedRun.ccurse;
 				if variable_struct_exists(encryptedRun, "isPermanent")
 					Player.isPermanent = encryptedRun.isPermanent;
-				if variable_struct_exists(encryptedRun, "isPermanent")
+				if variable_struct_exists(encryptedRun, "isPermanentB")
 					Player.isPermanentB = encryptedRun.isPermanentB;
-				if variable_struct_exists(encryptedRun, "isPermanent")
+				if variable_struct_exists(encryptedRun, "isPermanentC")
 					Player.isPermanentC = encryptedRun.isPermanentC;
+				if variable_struct_exists(encryptedRun, "hasBeenEaten")
+					Player.hasBeenEaten = encryptedRun.hasBeenEaten;
+				if variable_struct_exists(encryptedRun, "hasBeenEatenB")
+					Player.hasBeenEatenB = encryptedRun.hasBeenEatenB;
+				if variable_struct_exists(encryptedRun, "hasBeenEatenC")
+					Player.hasBeenEatenC = encryptedRun.hasBeenEatenC;
 				if variable_struct_exists(encryptedRun, "lastWishPrevent")
 					Player.lastWishPrevent = encryptedRun.lastWishPrevent;
 				Player.wepmod1 = encryptedRun.wepmod1;

@@ -39,6 +39,7 @@ function scrPandaThrow(){
 				wepmod3=other.wepmod3;
 				wepmod4=other.wepmod4;
 				isPermanent = other.isPermanent;
+				hasBeenEaten = other.hasBeenEaten;
     
 			}
 			else{
@@ -53,6 +54,7 @@ function scrPandaThrow(){
 			wepmod3=other.wepmod3;
 			wepmod4=other.wepmod4;
 			isPermanent = other.isPermanent;
+			hasBeenEaten = other.hasBeenEaten;
 			sprite_index = wep_sprt[wep]
 		}
 		BackCont.viewx2 += lengthdir_x(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake

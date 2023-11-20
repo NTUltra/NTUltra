@@ -94,6 +94,8 @@ else if race=12//yung cuz reset max HP
 		targetHealth = 1;
 	if skill_got[1] == 1//Rhino skin
 		targetHealth += 4;
+	if skill_got[31]//Tough shell
+		targetHealth += 1;
 	if skill_got[33] == 1//Glass arm cannon
 		targetHealth = max(1,targetHealth-2);
 	if skill_got[41]//nerves of steel
@@ -316,6 +318,8 @@ if looping && area != 104
 					targetHealth = 1;
 				if skill_got[1] == 1//Rhino skin
 					targetHealth += 4;
+				if skill_got[31]//Tough shell
+					targetHealth += 1;
 				if skill_got[33] == 1//Glass arm cannon
 					targetHealth = max(1,targetHealth-2);
 				if skill_got[41]//nerves of steel
@@ -756,6 +760,9 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		isPermanent = other.isPermanent;
 		isPermanentB = other.isPermanentB;
 		isPermanentC = other.isPermanentC;
+		hasBeenEaten = other.hasBeenEaten;
+		hasBeenEatenB = other.hasBeenEatenB;
+		hasBeenEatenC = other.hasBeenEatenC;
 		wepmod1 = other.wepmod1;
 		wepmod2 = other.wepmod2;
 		wepmod3 = other.wepmod3;
@@ -828,6 +835,8 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 			maxhealth = 40;
 		if skill_got[1]
 			maxhealth += 4;
+		if skill_got[31]//Tough shell
+			maxhealth += 1;
 		if skill_got[33]//Glass arm cannon
 			maxhealth -= 2;
 		if skill_got[41]//Nerves of steel
