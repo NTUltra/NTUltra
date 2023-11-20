@@ -36,8 +36,8 @@
     "path": "sprites/sprEnemyLaser/sprEnemyLaser.yy",
   },
   "spriteMaskId": {
-    "name": "mskLaser",
-    "path": "sprites/mskLaser/mskLaser.yy",
+    "name": "mskEnemyLaser",
+    "path": "sprites/mskEnemyLaser/mskEnemyLaser.yy",
   },
   "visible": true,
 }

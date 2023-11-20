@@ -4459,14 +4459,14 @@ repeat(1+loops)
 		break;
 		#endregion
 		
-		#region wave 20 Oasis
+		#region wave 20 Oasis & Inverted Oasis
 		case 20:
 			//Big fish and Ballmom
 			wave[i] = {
 				obj: BigFish,
 				time: 120,
 				xx: centerX,
-				yy: centerY,
+				yy: centerY-64,
 			};
 			i++;
 			repeat(15)
@@ -4541,12 +4541,70 @@ repeat(1+loops)
 			i++;
 			wave[i] = {
 				obj: BoneFishAdder,
-				time: 120,
+				time: 240,
 				xx: centerX - 16,
 				yy: centerY - 16,
 				canSpawnInWall: true,
 			};
 			i++;
+			wave[i] = {
+				obj: HealthChest,
+				time: 60,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			wave[i] = {
+				obj: ReplaceFloorWithInvOasis,
+				time: 15,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			repeat(4)
+			{
+				wave[i] = {
+					obj: InvertedCrab,
+					time: 10,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: InvertedBigFish,
+				time: 120,
+				xx: centerX,
+				yy: centerY+64,
+			};
+			i++;
+			wave[i] = {
+				obj: InvertedScubaAdder,
+				time: 120,
+				xx: centerX,
+				yy: centerY,
+				canSpawnInWall: true,
+			};
+			i++;
+			repeat(9)
+			{
+				wave[i] = {
+					obj: InvertedBoneFish,
+					time: 4,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: InvertedBoneFish,
+				time: 200,
+			};
+			i++;
+			repeat(8)
+			{
+				wave[i] = {
+					obj: InvertedCrab,
+					time: 4,
+				};
+				i++;
+			}
 		break;
 		#endregion
 		/*

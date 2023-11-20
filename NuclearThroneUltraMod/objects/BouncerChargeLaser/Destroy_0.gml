@@ -2,7 +2,7 @@ if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1
 	{
-		rate += 5 + (Player.betterlaserbrain*2);
+		rate += 4 + (Player.betterlaserbrain*2);
 	}
 	snd_play_fire(sndLaser)
 	if rate < 16
@@ -15,7 +15,7 @@ if instance_exists(Player)
 	}
 	else
 	{
-		rate += 3;
+		rate += 2;
 		instance_create(x,y,Smoke);
 		snd_play_fire(sndMegaLaser);
 	}

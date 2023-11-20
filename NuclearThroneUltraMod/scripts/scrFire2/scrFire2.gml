@@ -3792,7 +3792,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x,y,Lightning)
 	{image_angle = aimDirection+(random(30)-15)*other.accuracy
 	team = other.team
-	ammo = 10
+	ammo = 11
 	event_perform(ev_alarm,0)
 	visible = 0
 	with instance_create(x,y,LightningSpawn)
@@ -12675,7 +12675,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
-		dmg = 10
+		dmg = 12
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -12685,7 +12685,7 @@ function scrFire2(hasTailNow) {
 	}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
-		dmg = 10
+		dmg = 12
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -14129,16 +14129,16 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x,y,BouncerChargeLaser)
 	{
-		maxcharge=28;//maxrate
+		maxcharge=26;//maxrate
 		type = 5;
 		cost = 1;
 		creator = other.id
 		chargetime = 4;
-		costtime = 10;
+		costtime = 9;
 		team = other.team
 		if Player.skill_got[42]
 		{
-			chargetime = 2;
+			chargetime = 1;
 			rate += 4;
 			costtime *= Player.betterTail;
 			if Player.ultra_got[97] && !Player.altUltra

@@ -17,7 +17,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 12, cursedParam = 0, minWepA
 			if Player.race = 8
 			{
 				wepTier += 1
-				maxTries += 4;
+				maxTries += 5;
 			}
 			if !Player.altUltra && Player.ultra_got[29]==1//Refined taste
 			{

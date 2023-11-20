@@ -4312,7 +4312,7 @@ function scrFire() {
 	with instance_create(x,y,SlashShotgunPrep)
 	{
 	snd_play_fire(sndSlugger)
-	motion_add(aimDirection+(random(6)-3)*other.accuracy,16+random(2));
+	motion_add(aimDirection+(random(6)-3)*other.accuracy,18);
 	image_angle=direction;
 	rate=4//for extra speed more bullets per step
 	Direction=aimDirection;

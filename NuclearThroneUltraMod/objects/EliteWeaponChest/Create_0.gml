@@ -29,5 +29,5 @@ else
 }
 scrWeapons()
 SetSeedWeapon();
-wep = scrDecideWep(2, 1000, curse)
+wep = scrDecideWep(2, 4000, curse)
 SetSeed();

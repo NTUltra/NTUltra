@@ -362,8 +362,10 @@ else if Player.area == 128 || Player.area == 129
 goal = 150+s;
 else if Player.area == 130 || Player.area == 131 || Player.area == 132 || Player.area == 133 || Player.area == 134//Factory
 goal = 130+s;
-else if Player.area == 135
+else if Player.area == 135//Hq
 goal = 120+s;
+else if Player.area == 137//Void
+goal = 1;
 
 if scrIsGamemode(6) && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels
 goal=70+s;

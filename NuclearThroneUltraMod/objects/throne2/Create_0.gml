@@ -39,7 +39,7 @@ if instance_exists(Player)
 isInverted = false;
 rotationSpeed = choose(2,-2);
 speedUp = 4;
-minDistanceToTarget = 150;
+minDistanceToTarget = 120//150;
 maxDistanceToTarget = 180;
 distanceToTarget = maxDistanceToTarget;
 maxAmmo = 3;

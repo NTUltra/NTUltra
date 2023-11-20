@@ -178,6 +178,9 @@ break;
 case 136:
 sprite_index=sprFloor136Explo;
 break;
+case 137:
+sprite_index=sprFloor137Explo;
+break;
 default:
 sprite_index=sprFloor0Explo;
 break;

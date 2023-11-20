@@ -102,24 +102,38 @@ with Player
 		image_xscale = Player.right
 
 		
-
+		var shouldHeal = true;
 		if skill_got[5] = 1
 		{
 			snd_play_2d(sndRobotEatUpg)
 			r += 4;
 			if my_health < maxhealth && random(maxhealth-1) > my_health and !scrIsCrown(2)
+			{
 				instance_create(x,y,HPPickup);
+				shouldHeal = false;
+			}
 			else
+			{
 				instance_create(x,y,AmmoPickup);
+			}
 		}
 		else
+		{
 			snd_play_2d(sndRobotEat);
+			shouldHeal = false;
+		}
 			
 		if my_health < maxhealth && random(maxhealth-1) > my_health and !scrIsCrown(2)
-			instance_create(x,y,HPPickup)
+		{
+			instance_create(x,y,HPPickup);
+			shouldHeal = false;
+		}
 		else
 			instance_create(x,y,AmmoPickup)
-		
+		if shouldHeal {
+			scrHeal(1);
+			snd_play_2d(sndHealthPickup);
+		}
 		if ultra_got[29] || ultra_got[30] || ultra_got[31]
 			r += 2;
 		scrRaddrop(r);

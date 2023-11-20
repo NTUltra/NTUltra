@@ -58,8 +58,8 @@ if UberCont.public = 0 {
     if keyboard_check_pressed(ord("1")) {
 		if scrIsGamemode(25)
 		{
-			subarea = 15;
-			hard = 15 * 1.25;
+			subarea = 18;
+			hard = 18 * 1.25;
 		}
 		else
 		{
@@ -73,7 +73,7 @@ if UberCont.public = 0 {
     }
 
     if keyboard_check_pressed(ord("2")) {
-        area = 2
+        area = 137
         subarea = 0
         with enemy
         my_health = 0

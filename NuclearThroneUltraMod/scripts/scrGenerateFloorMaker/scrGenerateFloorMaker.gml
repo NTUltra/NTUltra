@@ -88,6 +88,8 @@ function scrGenerateFloorMaker(limiter) {
 				goal = 150 + s;
 			else if Player.area == 135//HQ
 				goal = 130 + s;
+			else if Player.area == 137//Void
+				goal = 1;
 			if scrIsGamemode(6)//small levels
 			{
 				goal=45+s;
@@ -260,7 +262,7 @@ function scrGenerateFloorMaker(limiter) {
 			if Player.area!=104 && Player.area!=100 && !instance_exists(RogueAmmoChest)
 				instance_create(x+16,y+16,RogueAmmoChest)
 		}
-		else if Player.area!=104 && Player.race != 25 && !(Player.area == 9 && Player.subarea ==3)&& !(Player.area == 118 && Player.subarea ==3)//Not mutation smith
+		else if Player.area!=104 && Player.area != 137 && Player.race != 25 && !(Player.area == 9 && Player.subarea ==3)&& !(Player.area == 118 && Player.subarea ==3)//Not mutation smith
 		instance_create(x+16,y+16,RadChest)
 		}
 	}

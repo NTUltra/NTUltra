@@ -23,14 +23,15 @@ function scrPopProps() {
 		
 	myx = x+choose(0,16)
 	myy = y+choose(0,16)
-	if !place_meeting(myx,myy,hitme) && !place_meeting(myx,myy,chestprop) && !place_meeting(myx,myy,RadChest) && !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(myx,myy,prop) && Player.area != 130 && Player.area != 131 and Player.area != 9 and Player.area != 118
+	if !place_meeting(myx,myy,hitme) && !place_meeting(myx,myy,chestprop) && !place_meeting(myx,myy,RadChest) && !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(myx,myy,prop)
+	&& Player.area != 130 && Player.area != 131 and Player.area != 9 and Player.area != 118 and Player.area != 137
 		instance_create(myx,myy,Wall)
 	instance_create(x,y,NOWALLSHEREPLEASE)
 	}
 	if random(6) < 1 and !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(x,y,hitme) && !place_meeting(x,y,chestprop) && !place_meeting(x,y,RadChest) && !place_meeting(x,y,hitme) && Player.area != 130 && Player.area != 131
 	 && Player.area != 132 && Player.area != 133 && Player.area != 134
 	and Player.area != 100 and Player.area != 6 and Player.area != 9 and Player.area != 118 and Player.area != 112  and (Player.area !=5 or random(3) < 1) and Player.area != 102 and Player.area != 104
-	and !(Player.area = 8 && Player.subarea=3) and Player.area != 116//lill walls
+	and !(Player.area = 8 && Player.subarea=3) and Player.area != 116 and Player.area != 137//lill walls
 	{
 	myx = x+choose(0,16)
 	myy = y+choose(0,16)

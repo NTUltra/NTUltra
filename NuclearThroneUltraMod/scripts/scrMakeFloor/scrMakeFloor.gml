@@ -620,6 +620,35 @@ function scrMakeFloor(limiter) {
 			instance_create(x,y,Floor)
 		}
 	}
+	
+	//Void
+	if area == 137 {
+		instance_create(x,y,Floor);
+		instance_create(x+32,y,Floor)
+		instance_create(x-32,y,Floor)
+		instance_create(x,y+32,Floor)
+		instance_create(x,y-32,Floor)
+		instance_create(x+32,y+32,Floor)
+		instance_create(x+32,y-32,Floor)
+		instance_create(x-32,y-32,Floor)
+		instance_create(x-32,y+32,Floor)
+		instance_create(x+64,y,Floor)
+		instance_create(x-64,y,Floor)
+		instance_create(x,y+64,Floor)
+		instance_create(x,y-64,Floor)
+		instance_create(x+64,y+32,Floor)
+		instance_create(x-64,y+32,Floor)
+		instance_create(x+32,y+64,Floor)
+		instance_create(x+32,y-64,Floor)
+		instance_create(x+64,y-32,Floor)
+		instance_create(x-64,y-32,Floor)
+		instance_create(x-32,y+64,Floor)
+		instance_create(x-32,y-64,Floor)
+		instance_create(x+64,y+64,Floor)
+		instance_create(x+64,y-64,Floor)
+		instance_create(x-64,y-64,Floor)
+		instance_create(x-64,y+64,Floor)
+	}
 	if scrIsGamemode(8)
 	{
 		instance_destroy();

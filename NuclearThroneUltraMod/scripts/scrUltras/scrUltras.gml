@@ -210,7 +210,7 @@ function scrUltras(altOverride = false) {
 		if altOverride || (instance_exists(Player) && !isOtherCharacter && Player.skill_got[23])//Has open mind
 			ultra_text[30] = "EATING WEAPONS HAS A 40% CHANCE#TO DROP <w>CHESTS<w>##EATING A WEAPON DROPS IT LIKE A TURRET#THE <w>TURRET<w> FIRES THE EATEN WEAPON##AUTO EAT WEAPONS LEFT IN THE LEVEL";
 		else
-			ultra_text[30] = "EATING WEAPONS HAS A 30% CHANCE#TO DROP <w>CHESTS<w>##EATING A WEAPON DROPS IT LIKE A TURRET#THE <w>TURRET<w> FIRES THE EATEN WEAPON##AUTO EAT WEAPONS LEFT IN THE LEVEL"
+			ultra_text[30] = "+20% <w>WEAPON DROPRATE<w>#EATING WEAPONS HAS A 30% CHANCE#TO DROP <w>CHESTS<w>##EATING A WEAPON DROPS IT LIKE A TURRET#THE <w>TURRET<w> FIRES THE EATEN WEAPON##AUTO EAT WEAPONS LEFT IN THE LEVEL"
 		ultra_tips[30] = "2% more chance for weapon chests"
     
 	    ultra_name[31] = "EXTRA STORAGE"

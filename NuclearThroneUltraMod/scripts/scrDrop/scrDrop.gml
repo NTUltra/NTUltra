@@ -86,13 +86,15 @@ function scrDrop(itemdrop, weapondrop) {
 	{
 		itemdrop *= 0.5;
 	}
-
+	if Player.ultra_got[30] {//Robot regurgitate
+		weapondrop *= 1.2;
+	}
 	if Player.skill_got[0]//heavy heart
 	{
-		if Player.race=25
-			weapondrop=(weapondrop*1.5);
-		else
+		if Player.race == 25
 			weapondrop=(weapondrop*1.6);
+		else
+			weapondrop=(weapondrop*1.5);
 	}
 	// adjusting for inflation ©2016
 	//weapondrop *= 1.01;//weapon

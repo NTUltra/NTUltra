@@ -17,6 +17,8 @@ function scrPopChests() {
 	{
 		if Player.area == 104//YV mansion
 			return;
+		if Player.area == 137//Void
+			return;
 		if ((Player.area == 6 || Player.area == 112) && Player.subarea == 2)
 		{
 			with RadChest

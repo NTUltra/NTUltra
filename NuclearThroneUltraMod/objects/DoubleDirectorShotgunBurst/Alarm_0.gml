@@ -9,7 +9,7 @@ y = creator.y
 	//FIRING
 	//snd_play_fire(sndShotgun)
 
-	repeat(7 - min(2,ammo))
+	repeat(8 - min(2,ammo))
 	{
 		with instance_create(x,y,Bullet7)
 		{

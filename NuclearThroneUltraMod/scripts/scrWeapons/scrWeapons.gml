@@ -638,7 +638,7 @@ function scrWeapons() {
 	wep_load[57] = 8
 	wep_cost[57] = 1
 	wep_sprt[57] = sprLightningPistol
-	wep_area[57] = 6
+	wep_area[57] = 5
 	wep_text[57] = "thunder"
 	wep_swap[57] = sndSwapEnergy
 	wep_rad[57] = 0;
@@ -646,7 +646,7 @@ function scrWeapons() {
 	wep_name[58] = "LIGHTNING RIFLE"
 	wep_type[58] = 5
 	wep_auto[58] = 1
-	wep_load[58] = 23
+	wep_load[58] = 21
 	wep_cost[58] = 2
 	wep_sprt[58] = sprLightningRifle
 	wep_area[58] = 9
@@ -1870,7 +1870,7 @@ function scrWeapons() {
 	wep_type[169] = 2
 	wep_auto[169] = 0
 	wep_load[169] = 60
-	wep_cost[169] = 11
+	wep_cost[169] = 10
 	wep_sprt[169] = sprSuperSpiralSlashShotgun
 	wep_area[169] = 12
 	wep_text[169] = "vomit"
@@ -2067,11 +2067,11 @@ function scrWeapons() {
 	wep_name[187] = "ASSAULT SEEKER SHOTGUN"
 	wep_type[187] = 3
 	wep_auto[187] = 0
-	wep_load[187] = 90
+	wep_load[187] = 85
 	wep_cost[187] = 9
 	wep_sprt[187] = sprAssaultSeekerShotgun
 	wep_area[187] = 13
-	wep_text[187] = "have you tried eagle eyes+bolt marrow?"
+	wep_text[187] = "bursting seekers"
 	wep_swap[187] = sndSwapBow
 	wep_rad[187] = 0;
 
@@ -7017,7 +7017,7 @@ function scrWeapons() {
 	wep_name[635] = "DOUBLE SIDED BLADE"
 	wep_type[635] = 0
 	wep_auto[635] = 0
-	wep_load[635] = 11//16 usual
+	wep_load[635] = 14//16 usual
 	wep_cost[635] = 0
 	wep_sprt[635] = sprDoubleSidedBlade
 	wep_area[635] = 13
