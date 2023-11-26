@@ -23,10 +23,14 @@ if target != noone
 	}
 
 }
-else if random(10) < 1
+else if random(8) < 1
 {
 	motion_add(random(360),0.4)
 	walk = actTime+random(actTime*2)
-	alarm[1] = walk+actTime;
+	alarm[1] = walk+actTime*3;
+}
+else
+{
+	alarm[1] = actTime * 3;
 }
 

@@ -15,7 +15,7 @@ function scrBasicRobotEat(xx,yy,eatWep){
 
 	if string_copy(wep_name[eatWep],0,4) = "GOLD"
 	{
-		if bskin=0//Robot secret golden skin
+		if object_index == Player && bskin=0//Robot secret golden skin
 		{
 			scrUnlockAltSkin(race, 0);
 			spr_idle=sprMutant8DIdle;

@@ -272,8 +272,7 @@ if !instance_exists(LevCont) and visible = 1
 			//scrn++;
 			
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			instance_create(f.x + 16,f.y + 16,SquareBat)
-			instance_create(f.x + 16,f.y + 16,InvertedSquareBat)
+			instance_create(f.x + 16,f.y + 16,SandWorm)
 
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
 			thing.mytext = "Gorilla";
@@ -2042,7 +2041,7 @@ if race==18
 
 
 ///moddelay
-if moddelay > 0
+if moddelay > -30*modQueue
 {
 	if is60fps
 		moddelay -= 0.5;

@@ -4,7 +4,7 @@
 function scrGiveCrownPoints(points = 1) {
 	with Player
 	{
-		crownpoints += 1
+		crownpoints += points
 		currentCrowns = [];
 		var al = array_length(crown);
 		for (var i = 0; i < al; i++) {

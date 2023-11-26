@@ -1,4 +1,6 @@
 /// @description Sheep deflect/destroy
+if !instance_exists(Player)
+	exit;
 if other.isGrenade && Player.ultra_got[51] {
 	snd_play(sndRicochet,0.1,true);
 	with other

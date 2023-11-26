@@ -25,38 +25,39 @@ function scrModHit() {
 	17 pickups
 	18 weps
 	*/
-	if instance_exists(Player) && Player.moddelay < 1
+	if instance_exists(Player)
+	while (Player.moddelay < 1)
 	{
 		if scrIsCrown(29)//Crown of purity
 		{
-			moddelay = 30;
+			moddelay += 30;
 			return;
 		}
 		var r = 1;
 		var pc = false;
 		var itemRate = 8;
 		var wepRate = 2
+		var len = 10;
 		with Player
 		{
 		    if skill_got[30]//power craving
 			{
-				moddelay = 16;
 				if race == 25
-					moddelay = 13;
+					moddelay += 15;
+				else
+					moddelay += 18;
 				wepRate += 1;
 				itemRate += 1.5;
+				len += 2;
 				pc = true;
 			}
 		    else
-				moddelay=26;
+				moddelay += 30;
 			if ultra_got[65]
 			{
 				moddelay -= 4;
 				r = 2;
 			}
-			/*if ultra_got[65] == 1//Weapon smith Ultra A
-				moddelay -= 10;*/
-    
 	    }
 		repeat(r)
 		with other {//PROJECTILE
@@ -166,7 +167,7 @@ function scrModHit() {
 							image_angle = random(360);
 						accuracy --;
 						team = other.team
-						ammo = 10
+						ammo = len + 2;
 						event_perform(ev_alarm,0)
 						visible = 0
 						with instance_create(x,y,LightningSpawn)
@@ -177,7 +178,7 @@ function scrModHit() {
 				case 7://TENTACLES!?
 				snd_play(sndRoll,0,true);
 				if !sound_isplaying(sndWater1) && !sound_isplaying(sndWater2)&&random(3)<1
-				snd_play(choose(sndWater1,sndWater2),0,true);
+					snd_play(choose(sndWater1,sndWater2),0,true);
 
 				with other {
 					var nearest = noone;
@@ -192,7 +193,7 @@ function scrModHit() {
 						accuracy --;
 						creator=other.id;
 						team = 2//Player.team
-						ammo = 10
+						ammo = len + 1;
 						event_perform(ev_alarm,0)
 						visible = 0
 						with instance_create(x,y,LightningSpawn)

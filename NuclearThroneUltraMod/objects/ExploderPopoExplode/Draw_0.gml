@@ -1,5 +1,5 @@
 /// @description Draw
-var t = min(1,(1+alarm[0])/naxTime);
+var t = min(1,(1+alarm[0])/maxTime);
 var d = lerp(distance,0,t);
 var r = 12;
 if t > 0.5

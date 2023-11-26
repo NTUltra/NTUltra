@@ -1,5 +1,5 @@
 function scrLoadStats() {
-	var dir; dir=0;
+	var dir = 0;
 	var cir = 0;
 	repeat(maxwep + 1)
 	{
@@ -8,6 +8,7 @@ function scrLoadStats() {
 	}
 	any_wep_found[0] = true;
 	any_wep_found[1] = true;
+	ctot_all_crowns_taken = array_create(racemax,0);
 	repeat(racemax+1){
 		//Stats per character yes we love stats #thronebutt.com
 		ctot_kill[dir] = ini_read_real("STATS","ctotkill"+string(dir),0);

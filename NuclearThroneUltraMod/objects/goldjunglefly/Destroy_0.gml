@@ -4,7 +4,8 @@
 event_inherited();
 if object_index == GoldJungleFly
 {
-	instance_create(x,y,MaggotExplosion);	
+	instance_create(x,y,MaggotExplosion);
+	instance_create(x,y,MaggotExplosion);
 	scrDrop(50,10);
 	instance_create(x,y,BigWallBreak);
 	var ang = random(360);

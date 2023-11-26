@@ -6,3 +6,4 @@ else if Player.bskin=1
 sprite_index=sprDecoyB;
 }
 team = -1;
+my_health = 2;

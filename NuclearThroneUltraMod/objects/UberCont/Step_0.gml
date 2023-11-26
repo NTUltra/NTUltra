@@ -73,6 +73,7 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 		instance_destroy();
 	with SurvivalWave
 		instance_destroy();
+	if !instance_exists(GenCont)
 	with instance_create(x,y,GenCont)
 	{race = other.race
 	crown = other.crown}
@@ -209,7 +210,9 @@ if instance_exists(KeyCont) && !instance_exists(StartDaily) && (keyboard_check_p
 		}
 	}
 	else if instance_exists(Vlambeer)
+	{
 		game_end()
+	}
 else if instance_exists(Player) && !instance_exists(StartDaily)///PAUSE IN-GAME
 {
 kills=Player.kills

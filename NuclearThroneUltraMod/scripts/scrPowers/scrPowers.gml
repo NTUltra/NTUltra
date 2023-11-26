@@ -1720,6 +1720,7 @@ function scrPowers() {
 			{
 				if (image_speed == 0 || alarm[6] < 1) and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 				{
+					var ang
 					didKill = true;
 					instance_destroy()
 					with instance_create(x,y,BloodStreak)
@@ -2369,13 +2370,12 @@ function scrPowers() {
 						else
 							horrorhealtime++;
 
-					    if horrorhealtime>115
+					    if horrorhealtime>70
 					    {
 						    if my_health<maxhealth
 						    {
 						        my_health++;
-        
-        
+								snd_play(sndHealthPickup);
 						        with instance_create(x,y,HealFX)
 									sprite_index=sprHorrorTB;
         
@@ -2446,16 +2446,15 @@ function scrPowers() {
 			else
 				horrorhealtime++;
 
-		    if horrorhealtime>115
+		    if horrorhealtime>70
 		    {
-			    if my_health<maxhealth
+			    if my_health < maxhealth
 			    {
 			        my_health++;
-        
-        
 			        with instance_create(x,y,HealFX)
-			        sprite_index=sprHorrorTB;
-        
+						sprite_index=sprHorrorTB;
+					snd_play(sndHealthPickup);
+					var dir;
 					if UberCont.opt_ammoicon
 					{
 						dir = instance_create(x,y,PopupText)

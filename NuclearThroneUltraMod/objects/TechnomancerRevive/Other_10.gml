@@ -3,6 +3,7 @@ with instance_create(tx,ty,ReviveFX)
 	sprite_index = sprNecroRevive;
 with instance_create(tx,ty,Necromancer)
 {
+	wasResurrected = true;
 	raddrop = 0;
 	countKill = false;
 	existTime = 30;

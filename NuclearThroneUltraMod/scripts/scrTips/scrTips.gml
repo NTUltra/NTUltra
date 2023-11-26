@@ -90,7 +90,8 @@ function scrTips() {
 	"panda can throw",
 	"chicken can slow down time",
 	"the more dangerous the weapon#the more damage it deals",
-	"everything changes"
+	"everything changes",
+	"buy the game!",
 	) )
 	}
 

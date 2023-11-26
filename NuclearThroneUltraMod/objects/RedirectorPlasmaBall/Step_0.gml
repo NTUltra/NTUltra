@@ -20,6 +20,7 @@ if instance_exists(Player){
 		image_xscale=nomscale
 		image_yscale=nomscale
 		turned=true;
+		dmg += 2;
 		image_angle = direction;
 
 	}

@@ -1,6 +1,6 @@
 function scrSaveStats() {
 
-	var dir; dir=0
+	var dir = 0;
 	repeat(racemax+1){
 		ini_write_real("STATS","ctotkill"+string(dir),ctot_kill[dir]);
 

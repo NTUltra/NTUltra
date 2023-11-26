@@ -312,7 +312,7 @@ function scrEnemyDeathEvent(){
 			instance_create(x,y,Zombie);
 		}
 	}
-	else{
+	else {
 		BackCont.kills += 1
 		UberCont.ctot_kill[UberCont.race] += 1
 	}

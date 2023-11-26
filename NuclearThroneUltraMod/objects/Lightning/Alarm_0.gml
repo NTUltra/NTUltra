@@ -62,7 +62,7 @@ if instance_exists(Player){
 
 	if team!=Player.team
 	{
-		scrTarget()
+		scrTarget();
 		if Player.ultra_got[43] && !Player.altUltra//hunter focused fire
 		{
 			if instance_exists(Marker)

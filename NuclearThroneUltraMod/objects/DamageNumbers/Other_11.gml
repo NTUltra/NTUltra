@@ -10,12 +10,12 @@ alarm[1] = 28+shake;
 col = make_colour_rgb(
 	lerp(239,255,lsize),
 	lerp(63,255,min(1,lsize*1.5)),
-	lerp(14,255,lsize),
+	lerp(14,255,lsize)
 	);
 outlineCol = make_colour_rgb(
 lerp(186,0,lsize),
 lerp(11,0,min(1,lsize*2)),
-lerp(11,0,min(1,lsize*2)),
+lerp(11,0,min(1,lsize*2))
 );
 useCol = c_black;
 useOutlineCol = c_black;

@@ -45,7 +45,7 @@ function scrSkills() {
 	skill_name[2] = "EXTRA FEET"
 	if !UberCont.useSeed && random(600) < 1
 		skill_name[2] = "SPEED UP"
-	skill_text[2] = "MORE <w>SPEED<w>,#WALK NORMAL ON ALL <w>TERRAIN<w>#CLOSE <w>DODGES<w> SOMETIMES#DROP <y>RES<y><g>OUR<g><r>CES<r>#CAN'T BE <w>DISPLACES<w> BY ENEMIES"//"MORE SPEED,#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES#DROP A WEAPON/ITEM & ALWAYS DROP RADS"
+	skill_text[2] = "MORE <w>SPEED<w>,#WALK NORMAL ON ALL <w>TERRAIN<w>#CLOSE <w>DODGES<w> SOMETIMES#DROP <y>RES<y><g>OUR<g><r>CES<r>#CAN'T BE <w>DISPLACED<w> BY ENEMIES"//"MORE SPEED,#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES#DROP A WEAPON/ITEM & ALWAYS DROP RADS"
 	skill_tips[2] = choose("run forever","run forever","run forever","you can't be displaced#when you have extra feet");
 	skill_msnd[2] =  sndMutExtraFeet
 	skill_bons[2] = "SLIGHTLY MORE SPEED#+1 RAD ON DODGE";
@@ -243,17 +243,17 @@ function scrSkills() {
 	
 	if UberCont.lastwishused=false
 	{
-	skill_name[18] = "LAST WISH"
-	skill_text[18] = "<aq>PREVENT<aq> LETHAL DAMAGE#AND RESET <r>HEALTH<r> TO MAX# ONCE PER LOOP##GET FULL <r>HEALTH<r> AND SOME <y>AMMO<y>"
-	skill_tips[18] = "listen"
-	skill_msnd[18] =  sndMutLastWish
+		skill_name[18] = "LAST WISH"
+		skill_text[18] = "GAIN 1 <w>LIFE<w>#<aq>PREVENT<aq> LETHAL DAMAGE#AND RESET <r>HEALTH<r> TO MAX# ONCE PER LOOP##GET FULL <r>HEALTH<r> AND SOME <y>AMMO<y>"
+		skill_tips[18] = "listen"
+		skill_msnd[18] =  sndMutLastWish
 	}
 	else
 	{
-	skill_name[18] = "LAST WISH"
-	skill_text[18] = "<aq>PREVENT<aq> <w>LETHAL DAMAGE<w>#AND RESET HEALTH TO MAX# ONCE PER LOOP##GET FULL <r>HEALTH<r> AND SOME <y>AMMO<y>##REGAIN ONE PART OF YOUR <w>LIFE<w>"
-	skill_tips[18] = "listen"
-	skill_msnd[18] =  sndMutLastWish
+		skill_name[18] = "LAST WISH"
+		skill_text[18] = "<aq>PREVENT<aq> <w>LETHAL DAMAGE<w>#AND RESET HEALTH TO MAX# ONCE PER LOOP##GET FULL <r>HEALTH<r> AND SOME <y>AMMO<y>##REGAIN ONE PART OF YOUR <w>LIFE<w>"
+		skill_tips[18] = "listen"
+		skill_msnd[18] =  sndMutLastWish
 	}
 	skill_bons[18] = "GET FULL AMMO#+3HP WHEN LETHAL IS PREVENTED";
 
@@ -439,7 +439,7 @@ function scrSkills() {
 	skill_bons[37] = "+5% DAMAGE INCREASE"
 	
 	skill_name[38] = "ENRICHED METABOLISM"
-	skill_text[38] = "<aq>NEGATE<aq> EVERY FOURTH HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD"
+	skill_text[38] = "<aq>NEGATE<aq> EVERY THIRD HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD"
 	skill_tips[38] = "delicious"
 	skill_msnd[38] =  sndMutEnrichedMetabolism
 	skill_bons[38] = "+25% AMMO"
@@ -490,6 +490,18 @@ function scrSkills() {
 	
 	skill_name[43] = "HOT HEAD"
 	skill_text[43] = "IDK"
+	skill_tips[43] = "A"
+	skill_bons[43] = "V"
+	skill_msnd[43] =  sndMutBouncyFat;
+	
+	skill_name[43] = "MELTING POT"(melting in a flower bud)
+	skill_text[43] = "LIGHTNING, KRAKEN, FIRE AND FROST#LEAVE BEHIND A RADIOACTIVE GOOP#THAT DAMAGES, SLOWS AND CONFUSES ENEMIES"
+	skill_tips[43] = "A"
+	skill_bons[43] = "V"
+	skill_msnd[43] =  sndMutBouncyFat;
+	
+	skill_name[43] = "COVER TOVER"
+	skill_text[43] = "YOU CAN SHOOT THROUGH PROPS AND SOME WALLS#PROPS ARE INDESTRUCTABLE"
 	skill_tips[43] = "A"
 	skill_bons[43] = "V"
 	skill_msnd[43] =  sndMutBouncyFat;

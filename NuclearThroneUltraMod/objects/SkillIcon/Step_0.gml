@@ -351,10 +351,10 @@ if Player.skillpoints > 0
 {
 instance_create(x,y,LevCont);
 }
-else
+else if !instance_exists(GenCont)
 {
-with instance_create(x,y,GenCont){
-race = Player.race;}
+	with instance_create(x,y,GenCont){
+	race = Player.race;}
 }
 snd_play_2d(skill_msnd[skill], 0, false, false)//skill_msnd no more array sorry but memory
 

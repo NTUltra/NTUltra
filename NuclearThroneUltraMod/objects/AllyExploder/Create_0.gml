@@ -1,5 +1,6 @@
 event_inherited();
 maxSpeed = 3;
+right = 1;
 image_speed = 0.4;
 raddrop = 5
 maxhealth = 5

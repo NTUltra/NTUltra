@@ -17,6 +17,7 @@ function scrSpawnSurvivalWaveReward(){
 			instance_create(x+70,y-64,RadChest);
 		}
 		//HEALTH CHEST
+		var ran = random(10);
 		var healthChestGol = 0;
 		if Player.race=4 && Player.my_health <= Player.maxhealth*0.5 and ran < 5
 		{

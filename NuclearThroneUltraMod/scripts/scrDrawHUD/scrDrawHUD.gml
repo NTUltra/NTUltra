@@ -63,7 +63,7 @@ function scrDrawHUD() {
 		if ((dataRef.sprite_index = dataRef.spr_hurt and dataRef.image_index < 1 and !instance_exists(Portal)) or dataRef.lsthealth < dataRef.my_health) and !instance_exists(GenCont) and !instance_exists(LevCont)
 		draw_sprite_ext(sprHealthFill,0,vx+hx+2,vy+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
 		}
-		if dataRef.metabolism == 3
+		if dataRef.metabolism == 2
 			draw_sprite(sprHealtBarMetabolismFull,0,vx+hx,vy+4)
 		//if dataRef.alarm[3] > 0
 		//	draw_sprite(sprHealtBarImmune,0,vx+hx,vy+4)

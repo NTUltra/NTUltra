@@ -3,7 +3,8 @@ with instance_create(tx,ty,ReviveFX)
 	sprite_index = sprGoldRevive;
 with instance_create(tx,ty,choose(Freak,ExploFreak))
 {
-	droprate = 7;
+	wasResurrected = true;
+	droprate = 6;
 	raddrop = 0;
 	countKill = false;
 	existTime = 30;

@@ -9746,7 +9746,7 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
-	//BLOOD BULLET SHOTGUN
+	//HEAVY BLOOD BULLET SHOTGUN
 	case 539:
 
 	snd_play_fire(sndSlugger)
@@ -9754,10 +9754,10 @@ function scrFire2(hasTailNow) {
 
 	repeat(7)
 	{
-	with instance_create(x,y,HeavyBloodBullet)
-	{motion_add(aimDirection+(random(40)-20)*other.accuracy,12+random(6))
-	image_angle = direction
-	team = other.team}
+		with instance_create(x,y,HeavyBloodBullet)
+		{motion_add(aimDirection+(random(32)-16)*other.accuracy,12+random(6))
+		image_angle = direction
+		team = other.team}
 	}
 
 	BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake

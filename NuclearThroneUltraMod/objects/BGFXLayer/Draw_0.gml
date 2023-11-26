@@ -37,6 +37,10 @@ if fps_real < fps
 	{
 		with FX
 			instance_destroy();
+		with GraveyardSkeleton
+		{
+			alarm[3] = 0;
+		}
 	}
 }
 else if amount < maxAmount

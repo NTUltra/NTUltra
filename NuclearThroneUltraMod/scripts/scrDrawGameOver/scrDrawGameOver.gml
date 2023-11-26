@@ -92,9 +92,10 @@ function scrDrawGameOver() {
 		}
 		if scrIsCrown(0)
 			crown = [ceil(random(crownmax))]
-		with instance_create(x,y,GenCont)
-		{race = other.race
-		crown = other.crown}
+		if !instance_exists(GenCont)
+			with instance_create(x,y,GenCont)
+			{race = other.race
+			crown = other.crown}
 		instance_create(x,y,Player);
 		with MusCont
 			instance_destroy()

@@ -25,7 +25,9 @@ if instance_exists(WepPickup) || instance_exists(ThrowWep) && !instance_exists(G
 		}
 		var isGold = false;
 		if targetPickup.wep == 239//ROCKET GLOVE GM UNLOCK
-				scrUnlockGameMode(13,"FOR FINDING A ROCKET GLOVE")
+			scrUnlockGameMode(13,"FOR FINDING A ROCKET GLOVE")
+		if targetPickup.wep == 315//ROCKET GLOVE GM UNLOCK
+			scrUnlockCharacter(20,"FOR FINDING AND STEALING#THE MONEY GUN")
 		//UNLOCK GOLDEN WEAPONf
 		if scrCheckGold(wep_name[targetPickup.wep])
 		{
@@ -423,15 +425,15 @@ if skill_got[2] && tookHit && !exception
 if skill_got[38] && tookHit && alarm[3] < 1 && alarm[1] < 1
 {
 	metabolism += 1;
-	if metabolism > 3
+	if metabolism > 2
 	{
 		metabolism = 0;
 		my_health = prevhealth;
-		alarm[3] = max(alarm[3] + 5, 15);
+		alarm[3] = alarm[3] + 5;
 		audio_stop_sound(snd_hurt);
 		snd_hurt = sndDamageNegate;
-		snd_play_2d(sndMetabolism);
-		scrGiveEuphoriaShield();
+		snd_play_2d(sndMetabolism,0.1);
+		//scrGiveEuphoriaShield();
 		if race == 25//Doctor
 			scrCollectAmmo(1.75);
 		else

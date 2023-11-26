@@ -5,12 +5,12 @@ if instance_exists(Player)
 {
 	with Crown
 	{
-	if newThing = 1{
-	newThing = 0
-	repeat(2)
-	instance_create(x,y,IDPDSpawn)
+		if newThing = 1 {
+		newThing = 0
+		repeat(2)
+		instance_create(x,y,IDPDSpawn)
 
-	}
+		}
 	}
 	if Player.area = 100{
 	snd_play_2d(Player.snd_valt)}

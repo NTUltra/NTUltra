@@ -16,14 +16,11 @@ else if sprite_index = sprAllyEAppear
 alarm[1] = 10+irandom(6)
 
 
-if !instance_exists(target)
-target = -1
-if (target = -1) || (random(8)<1)
+if (!instance_exists(target)) || (random(8)<1)
 {
 	if instance_exists(enemy)
-	target = instance_nearest(x,y,enemy)
+		target = instance_nearest(x,y,enemy)
 }
-
 
 
 if target != noone && instance_exists(target) && target.team != 2 && target.my_health > 0

@@ -2,7 +2,7 @@ raddrop = 2
 maxhealth = 5
 meleedamage = 3
 mySize = 1
-droprate = 7;
+droprate = 6;
 
 event_inherited()
 
@@ -21,3 +21,13 @@ alarm[1] = 40+random(50)
 
 walk = 0
 
+loops = GetPlayerLoops();
+acc = 0.5;
+maxSpeed = 4;
+if loops > 0
+{
+	maxSpeed = 4.8;
+	acc = 0.6;
+}
+fuseAmount = 0;
+shadowY = 0;

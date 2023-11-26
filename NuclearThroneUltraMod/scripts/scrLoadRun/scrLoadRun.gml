@@ -7,9 +7,10 @@ function scrLoadRun(){
 	{
 		UberCont.race = 1
 		UberCont.loadedRun = true;
-	    with instance_create(x,y,GenCont)
-	    {race = 1
-	    crown = [2]}
+		if !instance_exists(GenCont)
+		    with instance_create(x,y,GenCont)
+		    {race = 1
+		    crown = [2]}
 		with UberCont {
 			lastwishused=false;
 			routeString = "";

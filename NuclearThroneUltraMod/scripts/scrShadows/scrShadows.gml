@@ -220,6 +220,11 @@ function scrShadows() {
 	draw_sprite(shd32,0,x-vx,y-vy)
 	with BigMaggotInverted
 	draw_sprite(shd32,0,x-vx,y-vy)
+	with SandWorm
+	{
+		if sprite_index != spr_disappear_end && (sprite_index != spr_appear || image_index > 7)
+			draw_sprite_ext(shdSandWorm,0,x-vx,y-vy,image_xscale,image_yscale,0,c_white,1)
+	}
 	with CrownPed
 	draw_sprite(shd64B,0,x-vx,y-vy+8)
 	with WeaponMod
@@ -439,7 +444,7 @@ function scrShadows() {
 	with InvertedRaven
 	draw_sprite(shd24,0,x-vx,y-vy)
 	with Freak
-	draw_sprite(shd24,0,x-vx,y-vy)
+	draw_sprite(shd24,0,x-vx,y-vy + shadowY)
 	with Sapling
 	draw_sprite(shd24,0,x-vx,y-vy)
 	with AllyFreak

@@ -1018,10 +1018,10 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 		if regularprocedure
 		instance_create(x,y,LevCont)
 	}
-	else
+	else if !instance_exists(GenCont)
 	{
-	with instance_create(x,y,GenCont)
-	race = Player.race
+		with instance_create(x,y,GenCont)
+		race = Player.race
 	}
 
 	snd_play_2d(sndMut);

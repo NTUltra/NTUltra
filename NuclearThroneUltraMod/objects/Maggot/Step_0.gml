@@ -14,6 +14,7 @@ if charge
 	if sprite_index = spr_hurt
 	{
 		charge = false;
+		ignoreOverlap = false;
 		image_angle = 0;
 		alarm[1] = 10;
 	}

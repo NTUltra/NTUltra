@@ -3,6 +3,7 @@ dmg = 0;
 friction = 0.6;
 surf = -1;
 fadeHeight = 10;
+surfH = 8;
 middle = 5;
 fadeDir = choose(1.5,-1.5);
 alarm[6] = 1;

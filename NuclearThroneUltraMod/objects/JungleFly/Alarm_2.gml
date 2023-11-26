@@ -6,12 +6,15 @@ scrTarget()
 snd_play(sndFlyFire);
 with instance_create(x,y,Maggot)
 {
+	ignoreOverlap = true;
 	raddrop = 0;
+	existTime = 30;
 	countKill = false;
 	motion_add(other.gunangle+(random(28)-14),6)
 	image_angle = direction
 	team = other.team
 	charge = true;
+	wasResurrected = true;
 	alarm[1] = 0;
 }
 if (target != noone)

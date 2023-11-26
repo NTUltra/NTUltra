@@ -16,8 +16,9 @@ if instance_exists(Player)
 	else
 	{
 		instance_create(0,0,BackCont)
-		with instance_create(x,y,GenCont)
-			race = Player.race
+		if !instance_exists(GenCont)	
+			with instance_create(x,y,GenCont)
+				race = Player.race
 	}
 }
 else

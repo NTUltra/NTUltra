@@ -82,8 +82,8 @@ else
 with UberCont
 {
 	if usedRandom
-		ctot_crown_taken[Player.race,0] ++;
-	ctot_crown_taken[Player.race,other.crown] ++;
+		ctot_crown_taken[Player.race,0] += 1;
+	ctot_crown_taken[Player.race,other.crown] += 1;
 	var firstCrown = false;
 	if UberCont.ctot_all_crowns_taken[Player.race] == 0
 	{
@@ -514,10 +514,10 @@ if Player.crownpoints > 0 or Player.skillpoints > 0
 {
 	instance_create(x,y,LevCont);
 }
-else
+else if !instance_exists(GenCont)
 {
-with instance_create(x,y,GenCont)
-race = Player.race
+	with instance_create(x,y,GenCont)
+		race = Player.race
 }
 
 snd_play_2d(sndCrownRandom)

@@ -128,9 +128,10 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+16 and UberCon
     crown = ceil(random(crownmax))
 	draw_texture_flush();//mainly used to only remove the main menu texture page cause we don't need that while in game.
 	UberCont.race = race
-    with instance_create(x,y,GenCont)
-    {race = other.race
-    crown = other.crown}
+	if !instance_exists(GenCont)
+	    with instance_create(x,y,GenCont)
+	    {race = other.race
+	    crown = other.crown}
 	with UberCont {
 		scrLoadCustomSurvivalArena();
 		lastwishused=false;

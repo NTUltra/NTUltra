@@ -3980,7 +3980,7 @@ function scrWeapons() {
 	
 	wep_name[361] = "REWIRER"
 	wep_type[361] = 5
-	wep_auto[361] = 0
+	wep_auto[361] = 1
 	wep_load[361] = 10
 	wep_cost[361] = 2.5
 	wep_sprt[361] = sprRewirer
@@ -5961,8 +5961,8 @@ function scrWeapons() {
 	wep_name[539] = "HEAVY BLOOD BULLET SHOTGUN"
 	wep_type[539] = 1
 	wep_auto[539] = 0
-	wep_load[539] = 22
-	wep_cost[539] = 10
+	wep_load[539] = 18
+	wep_cost[539] = 9
 	wep_sprt[539] = sprHeavyBloodBulletShotgun
 	wep_area[539] = 8
 	wep_text[539] = "aorta"
@@ -6635,7 +6635,7 @@ function scrWeapons() {
 	wep_load[600] = 2
 	wep_cost[600] = 4.75
 	wep_sprt[600] = sprSeptupleShortPopGun
-	wep_area[600] = 13
+	wep_area[600] = 12
 	wep_text[600] = "how to increase the range?"
 	wep_swap[600] = sndSwapMachinegun
 	wep_rad[600] = 0;
@@ -6674,8 +6674,8 @@ function scrWeapons() {
 	wep_rad[603] = 0;
 	
 	wep_name[604] = "SPLINTER LANCE"
-	wep_type[604] = 0
-	wep_auto[604] = 3
+	wep_type[604] = 3
+	wep_auto[604] = 0
 	wep_load[604] = 13
 	wep_cost[604] = 1
 	wep_sprt[604] = sprSplinterLance

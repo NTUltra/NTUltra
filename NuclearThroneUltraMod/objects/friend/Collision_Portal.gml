@@ -2,6 +2,8 @@
 //instance_destroy();
 if visible && other.visible && other.alarm[1] < 1
 {
+	if other.sprite_index == sprProtoPortalDormant || other.sprite_index == sprInvertedPortalDormant
+		exit;
 	var portalDepth = other.depth;
 	with instance_create(x,y,ImpactFX)
 	{

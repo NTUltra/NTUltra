@@ -677,6 +677,7 @@ flymax = 50;
 
 
 moddelay = 0;
+modQueue = 2;
 
 rnglevelloop = 0;
 

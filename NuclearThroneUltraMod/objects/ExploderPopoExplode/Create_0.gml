@@ -1,6 +1,6 @@
 /// @description xxx
-naxTime = 15;
-alarm[0] = naxTime;
+maxTime = 15;
+alarm[0] = maxTime;
 targetX = x;
 targetY = y;
 distance = 0;

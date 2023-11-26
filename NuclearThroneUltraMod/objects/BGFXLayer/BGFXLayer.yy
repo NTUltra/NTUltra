@@ -14,10 +14,7 @@
     "name": "FX",
     "path": "folders/Objects/FX.yy",
   },
-  "parentObjectId": {
-    "name": "All",
-    "path": "objects/All/All.yy",
-  },
+  "parentObjectId": null,
   "persistent": true,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

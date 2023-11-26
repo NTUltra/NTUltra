@@ -20,7 +20,7 @@ with GraveyardEntrance
 		subarea = 0;	
 	}
 }
-if UberCont.area == 10 || Player.area == 121
+if UberCont.area == 10 || (instance_exists(Player) && Player.area == 121)
 	scrDefeatedRequiredBoss(secretChallengeBosses.bigVulture);
 if !isOneWeaponOnlyModes() && !instance_exists(SurvivalWave) && !instance_exists(InvaderBossSpawnPortal)
 {

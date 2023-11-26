@@ -29,6 +29,7 @@ if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+16 and UberCont.mouse__y <
 	}
 	else
 	{
+		if !instance_exists(GenCont)
 		with instance_create(x,y,GenCont){
 		race = Player.race;}
 	}
