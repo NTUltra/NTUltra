@@ -1,7 +1,7 @@
 /// @description shooot
 if instance_exists(SpiralCont)
 	alarm[1] += 30;
-snd_play_2d(sndNothingBeamStart);
+snd_play_2d(sndBigMachineShoot);
 
 ///shoot
 with instance_create(x+6,y+64,EnemyBullet5)

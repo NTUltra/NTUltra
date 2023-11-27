@@ -951,15 +951,16 @@ function scrLoadRace() {
 	break;
 	
 	case 27://
-	snd_hurt=sndMutant27Hurt
-	snd_dead=sndMutant27Dead
-	snd_lowa=sndMutant27LowA;
-	snd_lowh=sndMutant27LowH;//
-	snd_crwn=sndMutant27Crwn;
-	snd_chst=sndMutant27Chst;//chst
-	snd_wrld=sndMutant27Wrld;
-	snd_thrn=sndMutant27Thrn;//
-	snd_valt=sndMutant27Valt;
+	snd_hurt=sndMutant27HurtFinal;
+	snd_dead=sndMutant27DeadFinal;
+	snd_lowa=sndMutant27LowAFinal;
+	snd_lowh=sndMutant27LowHFinal;//
+	snd_crwn=sndMutant27CrwnFinal;
+	snd_chst=sndMutant27ChstFinal;//chst
+	snd_wrld=sndMutant27WrldFinal;
+	snd_thrn=sndMutant27ThrnFinal;//
+	snd_valt=sndMutant27ValtFinal;
+	snd_cpt=sndMutant27CptFinal;//Captain win (unused for now)
 	break;
 
 	}

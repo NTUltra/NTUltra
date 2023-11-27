@@ -79,7 +79,11 @@ function scrLoadStats() {
 		ctot_secret_ultra_taken[dir] = ini_read_real("STATS","ctotsecretultrataken" + string(dir),0);
 		dir++;
 	}
-
-
+	foundRoutes = [];
+	var al = ini_read_real("STATS","totalRoutesFound" ,0);
+	for (var i = 0; i < al; i++) {
+		foundRoutes[i] = ini_read_string("STATS","foundRoutes" + string(i),"1>2");
+	}
+	foundRoutes = array_unique(foundRoutes);
 	tot_time = real(string_digits(ini_read_real("STATS","tottime",0)));
 }

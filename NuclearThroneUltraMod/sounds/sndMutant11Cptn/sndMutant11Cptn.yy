@@ -10,7 +10,7 @@
   "bitRate": 192,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.0,
+  "duration": 5.269687,
   "parent": {
     "name": "Horror",
     "path": "folders/Sounds/Player/Horror.yy",

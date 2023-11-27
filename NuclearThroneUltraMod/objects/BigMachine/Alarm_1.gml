@@ -1,5 +1,5 @@
 /// @description shooot
-snd_play_2d(sndNothingBeamStart);
+snd_play_2d(sndBigMachineShoot);
 
 ///shoot
 with instance_create(x+6,y+64,EnemyBullet5)

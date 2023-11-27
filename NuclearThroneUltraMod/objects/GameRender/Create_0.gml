@@ -23,3 +23,35 @@ screenX = 0;
 dataRef = noone;
 fourThreeScale = 1;
 imageIndex = 0;
+route = [];
+allRoutes = [];
+routeIndex = 0;
+time = 0;
+loop = 0;
+routeColours = [
+c_white,
+c_blue,
+c_red,
+c_green,
+c_orange,
+c_maroon,
+c_navy,
+c_fuchsia,
+c_olive,
+c_purple,
+c_yellow,
+c_olive,
+c_aqua,
+c_lime];
+everyArea = [];
+var ii = 0;
+repeat(10){
+	everyArea[ii] = ii + 1;
+	ii++;
+}
+var jj = 100;
+repeat(40){
+	everyArea[ii] = jj;
+	jj++;
+	ii++;
+}

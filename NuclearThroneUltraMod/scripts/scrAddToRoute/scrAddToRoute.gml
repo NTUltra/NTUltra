@@ -11,9 +11,22 @@ function scrAddToRoute(area){
 	else
 		areaString += "N";//Normal
 	*/
-	if area != UberCont.previousRoute
+	with UberCont
 	{
-		UberCont.previousRoute = area;
-		UberCont.routeString +=  string(area) + ">";
+		if area != previousRoute
+		{
+			debug("end1");
+			if (!scrIsGamemode(10))
+			{
+				var routeComboString = string(previousRoute) + ">" + string(area);
+				if (!array_contains(foundRoutes,routeComboString))
+				{
+					foundRoutes[array_length(foundRoutes)] = routeComboString;
+					//scrSave();
+				}
+			}
+			previousRoute = area;
+			routeString +=  string(area) + ">";
+		}
 	}
 }

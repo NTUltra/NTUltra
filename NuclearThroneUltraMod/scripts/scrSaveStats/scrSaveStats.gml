@@ -65,6 +65,11 @@ function scrSaveStats() {
 		ini_write_real("STATS","ctotsecretultrataken" + string(dir),ctot_secret_ultra_taken[dir]);
 		dir ++;
 	}
-
+	foundRoutes = array_unique(foundRoutes);
+	var al = array_length(foundRoutes);
+	for (var i = 0; i < al; i++) {
+		ini_write_string("STATS","foundRoutes" + string(i),foundRoutes[i]);
+	}
+	ini_write_real("STATS","totalRoutesFound",string(al));
 	ini_write_real("STATS","tottime",string(tot_time));
 }

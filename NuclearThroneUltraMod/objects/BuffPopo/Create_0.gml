@@ -13,15 +13,15 @@ spr_dead = sprBuffPopoDead
 
 if male
 {
-snd_hurt = sndShielderHurtM
-snd_dead = sndShielderDeadM
-snd_play(sndGruntEnterM,0.01,true)
+snd_hurt = sndBuffPopoHurtM
+snd_dead = sndBuffPopoDeadM
+snd_play(sndBuffPopoEnterM,0.01,true)
 }
 else
 {
-snd_hurt = sndGruntHurtF
-snd_dead = sndGruntDeadF
-snd_play(sndGruntEnterF,0.01,true)
+snd_hurt = sndBuffPopoHurtF
+snd_dead = sndBuffPopoDeadF
+snd_play(sndBuffPopoEnterF,0.01,true)
 }
 
 team = 3

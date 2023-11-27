@@ -4366,7 +4366,7 @@ function scrWeapons() {
 	wep_name[394] = "FLAME AXE"
 	wep_type[394] = 0
 	wep_auto[394] = 0
-	wep_load[394] = 28
+	wep_load[394] = 26
 	wep_cost[394] = 0
 	wep_sprt[394] = sprFlameAxe
 	wep_area[394] = 10//10frost hammer
@@ -4831,7 +4831,7 @@ function scrWeapons() {
 	wep_load[436] = 18
 	wep_cost[436] = 2
 	wep_sprt[436] = sprBoxGun
-	wep_area[436] = 9
+	wep_area[436] = 8
 	wep_text[436] = ""
 	wep_swap[436] = sndSwapShotgun
 	wep_rad[436] = 0;
@@ -4842,7 +4842,7 @@ function scrWeapons() {
 	wep_load[437] = 42
 	wep_cost[437] = 4
 	wep_sprt[437] = sprBoxSlugger
-	wep_area[437] = 18
+	wep_area[437] = 16
 	wep_text[437] = ""
 	wep_swap[437] = sndSwapShotgun
 	wep_rad[437] = 0;
@@ -7574,6 +7574,17 @@ function scrWeapons() {
 	wep_text[685] = "charging railgun"
 	wep_swap[685] = sndSwapEnergy
 	wep_rad[685] = 0;
+	
+	wep_name[686] = "ORBITER"
+	wep_type[686] = 5
+	wep_auto[686] = 0
+	wep_load[686] = 12
+	wep_cost[686] = 2
+	wep_sprt[686] = sprLaserGun 
+	wep_area[686] = 3
+	wep_text[686] = "futuristic weaponry"
+	wep_swap[686] = sndSwapEnergy
+	wep_rad[686] = 0;
 
 	maxwep = array_length(wep_name)-1;
 

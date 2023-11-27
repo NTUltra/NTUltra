@@ -223,12 +223,22 @@ var modBoost = 12;
 		pierce += modBoost;
 	if Mod4 == 11
 		pierce += modBoost;
+var hit;
+do {
+	hit = instance_place(x,y,hitme);
+	x += lengthdir_x(1,image_angle);
+	y += lengthdir_y(1,image_angle);
+	dir += 1;
+}
+until ((dir > pierce && hit != noone && hit.team != team) || collision_point(x,y,Wall,false,false) || dir > 320)
+/*
 while !((place_meeting(x,y,hitme) and dir > pierce) or collision_point(x,y,Wall,false,false) or dir > 320)
 {
 	x += lengthdir_x(1,image_angle);
 	y += lengthdir_y(1,image_angle);
 	dir += 1;
 }
+*/
 if laserhit>0// && random(3)<1
 {
 	canSmoke = false;

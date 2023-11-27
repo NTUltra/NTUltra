@@ -14156,5 +14156,31 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
+	//ORBITER
+	case 686:
+
+	snd_play_fire(sndLaserCannonCharge)
+
+	with instance_create(x,y,LaserOrber)
+	{
+		creator = other.id
+		ammo = 2+(Player.skill_got[17]+other.betterlaserbrain)
+		time = 4
+		team = other.team
+		alarm[0] = 7//15 originally
+		alarm[1] = alarm[0] + ammo*time;
+		if Player.skill_got[42]
+		{
+			time = 2;
+			alarm[0] = max(1,alarm[0]*0.5);
+			if Player.ultra_got[97] && !Player.altUltra
+			{
+				alarm[0] = 1;
+				time = 1;
+			}
+		}
+	}
+	break;
+	
 	}//end of switch part 2!
 }

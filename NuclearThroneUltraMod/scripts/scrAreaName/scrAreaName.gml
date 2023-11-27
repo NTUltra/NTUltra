@@ -141,6 +141,12 @@ function scrAreaName(area,subarea,loops){
 				txt = "6_"+string(subarea);
 				upsideDown = true;
 			break;
+			case 115: //Cursed crystal caves cheese
+				txt = "6B_"+string(subarea);
+			break;
+			case 113: //Bandit land
+				txt = "5D_"+string(subarea);
+			break;
 			case 112: //Inverted labs
 				txt = "4_"+string(subarea);
 				upsideDown = true;

@@ -129,15 +129,14 @@ function scrDrawGameOver() {
 	}
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_center)
-	var yy = vy + 48;
+	var yy = vy + 44;//48
 	if gameovertime > 30
 	{
 		draw_set_color(c_black)
 		draw_set_alpha(0.8);
 		draw_rectangle(vx,vy,vx+__view_get( e__VW.WView, 0 ),vy+__view_get( e__VW.HView, 0 ),0)
 		draw_set_alpha(1);
-		// draw_rectangle(vx,vy+hh-16,vx+__view_get( e__VW.WView, 0 ),vy+hh + 16,0);
-		
+		draw_rectangle(vx,vy+hh-20,vx+__view_get( e__VW.WView, 0 ),vy+hh + 20,0);
 		draw_text(vx+wh,yy+1,string_hash_to_newline(string(gameover)))
 		draw_text(vx+wh+1,yy+1,string_hash_to_newline(string(gameover)))
 		draw_text(vx+wh+1,yy,string_hash_to_newline(string(gameover)))
@@ -148,6 +147,9 @@ function scrDrawGameOver() {
 	
 	
 		draw_set_color(c_white)
+		//draw_set_halign(fa_left)
+		var gotHover = scrDrawRoute();
+		//draw_set_halign(fa_center)
 		draw_text(vx+wh,yy,string_hash_to_newline(string(gameover)))
 		
 		draw_text(vx+wh,vy+h-20,endText);
@@ -197,13 +199,33 @@ function scrDrawGameOver() {
 				if imageIndex > sprite_get_number(DataRef.hitBy)
 					imageIndex = 0;
 			}
-			draw_sprite(DataRef.hitBy,a,xxx,yyy + 32);
+			draw_sprite(DataRef.hitBy,a,round(xxx),round(yyy) + 32);
+		}
+		if is_array(gotHover)
+		{
+			draw_set_valign(fa_top)
+			var tx = gotHover[2]
+			var w = round((string_width(gotHover[0]) * 0.5) + 1);
+			var th = round((string_height(gotHover[0]) * 0.5) + 1);
+			var tty = round(yy - 6);
+			if gotHover[1]
+			{
+				tty += 17;
+				tx -= 6;//Size
+				draw_rectangle_colour(tx-w-1,tty-th*2,tx+w,tty+1,c_black,c_black,c_black,c_black,false);
+				draw_text_transformed(tx,tty,gotHover[0],-1,-1,0);
+			}
+			else
+			{
+				draw_rectangle_colour(tx-w-1,tty-1,tx+w,tty+(th*2),c_black,c_black,c_black,c_black,false);
+				draw_text_transformed(tx,tty,gotHover[0],1,1,0);
+			}
 		}
 	}
 
 	if gameovertime > 30
 	{
-		var yyy = vy+hh + 20;
+		var yyy = vy+hh + 22;//20
 		draw_set_color(c_black)
 		draw_text(vx + wh+1,yyy+1,gmt)
 		draw_text(vx + wh+1,yyy+1,gmt)
