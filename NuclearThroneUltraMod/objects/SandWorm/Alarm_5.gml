@@ -20,6 +20,11 @@ if target != noone
 	with instance_create(x,y,BigWallBreak) {
 		mask_index = mskSandWormDig;
 	}
+	repeat(8)
+	with instance_create(x,y,Dust) {
+		motion_add(random(360),2+random(3));
+	}
+	
 }
 else
 {

@@ -532,6 +532,9 @@ function scrPopulate() {
 	        repeat(clamp(Player.loops + 1,1,6))
 	        instance_create(x, y, WantBoss)
 	    }
+		if (Player.area = 105 || Player.area == 1) && Player.subarea == 2 {
+	        instance_create(x, y, WantBoss)
+	    }
 		//Big vulture
 		if ( (Player.area == 10 || Player.area == 121) and Player.subarea = 3 ) {
 	        repeat(ceil(max(1,Player.loops*0.5)))

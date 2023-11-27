@@ -3,12 +3,13 @@ snd_play(sndBigMaggotUnburrowSand);
 mask_index = mskSandWorm;
 sprite_index = spr_idle;
 depth = -2;
-var walls = ds_list_create();
-var al = instance_place_list(x,y,Wall,walls,false)
-for (var i = 0; i < al; i++) {
-	instance_create(walls[| i].x,walls[| i].y,FloorExplo)
-	instance_destroy(walls[| i]);
+with instance_create(x,y,BigWallBreak) {
+	mask_index = mskSandWormDig;
 }
+repeat(8)
+	with instance_create(x,y,Dust) {
+		motion_add(random(360),2+random(3));
+	}
 alarm[1] = actTime;
 if (!hasStarted)
 {

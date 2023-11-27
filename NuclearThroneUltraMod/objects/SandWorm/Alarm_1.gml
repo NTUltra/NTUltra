@@ -2,6 +2,12 @@
 alarm[1] = actTime + random(actTime)
 scrTarget()
 var ran = random(10);
+with BigFishSkull {
+	if alarm[1] > 0
+	{
+		alarm[1] += other.alarm[1] - 1;
+	}
+}
 if target != noone {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
 		if (target.x < x && image_xscale > 0) || (target.x > x && image_xscale < 0) {

@@ -18,8 +18,14 @@ if !instance_exists(SurvivalWave)
     var area = instance_exists(Player) ? Player.area : UberCont.area;
 	var subarea = instance_exists(Player) ? Player.subarea : UberCont.subarea;
     if area = 1 || area = 105
-    song = musBoss1;
-    if area = 3 || area = 106 || area == 136
+	{
+		song = musBoss1;
+		if subarea == 2
+		{
+			song = musBoss3;
+		}
+	}
+    else if area = 3 || area = 106 || area == 136
 	{
 		if subarea == 1
 		{
@@ -98,7 +104,15 @@ widescreen = 0
 
 
 name="BOSS"
-if instance_exists(UltraBigDog)
+if instance_exists(InvertedSandWorm)
+{
+	name = "INVERTED SAND WORM";
+}
+else if instance_exists(SandWorm)
+{
+	name = "SAND WORM";
+}
+else if instance_exists(UltraBigDog)
 {
 	if random(100)<1
 		name = choose("CHILD MAULTER","BABY MUNCHER");

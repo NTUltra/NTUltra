@@ -15,7 +15,6 @@ function scrAddToRoute(area){
 	{
 		if area != previousRoute
 		{
-			debug("end1");
 			if (!scrIsGamemode(10))
 			{
 				var routeComboString = string(previousRoute) + ">" + string(area);

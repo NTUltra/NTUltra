@@ -4116,6 +4116,7 @@
     {"name":"sprNothingBeam","order":8,"path":"sprites/sprNothingBeam/sprNothingBeam.yy",},
     {"name":"sprCactus3Hurt","order":27,"path":"sprites/sprCactus3Hurt/sprCactus3Hurt.yy",},
     {"name":"sprCrown25DeadEnemy","order":107,"path":"sprites/sprCrown25DeadEnemy/sprCrown25DeadEnemy.yy",},
+    {"name":"InvertedSandWorm","order":40,"path":"objects/InvertedSandWorm/InvertedSandWorm.yy",},
     {"name":"sprMutant3DWalk","order":1,"path":"sprites/sprMutant3DWalk/sprMutant3DWalk.yy",},
     {"name":"sndHeavyCuber","order":52,"path":"sounds/sndHeavyCuber/sndHeavyCuber.yy",},
     {"name":"UltraMeleeFake","order":25,"path":"objects/UltraMeleeFake/UltraMeleeFake.yy",},

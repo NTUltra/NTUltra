@@ -1426,7 +1426,7 @@ function scrDrawHUD() {
 		}
 		with BigFishSkull
 		{
-			if place_meeting(x,y,Player) && loops > 0 && spr_idle = sprBigFishSkullOpen
+			if place_meeting(x,y,Player) && loops > 0 && spr_idle = sprBigFishSkullOpen && !instance_exists(SandWorm) && !instance_exists(WantBoss)
 			{
 				draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
 

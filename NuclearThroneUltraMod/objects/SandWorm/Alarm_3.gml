@@ -8,3 +8,7 @@ image_index = 0;
 mask_index = mskPickupThroughWall;
 alarm[4] = image_number/image_speed;
 alarm[1] += 90;
+repeat(8)
+	with instance_create(x + (xOffset*image_xscale),y,Dust) {
+		motion_add(random(360),2+random(3));
+	}

@@ -1,5 +1,5 @@
 /// @description Loop oasis
-if loops > 0 && spr_idle = sprBigFishSkullOpen
+if loops > 0 && spr_idle = sprBigFishSkullOpen && !instance_exists(WantBoss) && !instance_exists(SandWorm)
 {
 	if KeyCont.key_pick[other.p] = 1
 	{

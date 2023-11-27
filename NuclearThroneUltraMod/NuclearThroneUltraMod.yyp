@@ -4444,6 +4444,7 @@
     {"id":{"name":"sprNothingBeam","path":"sprites/sprNothingBeam/sprNothingBeam.yy",},},
     {"id":{"name":"sprCactus3Hurt","path":"sprites/sprCactus3Hurt/sprCactus3Hurt.yy",},},
     {"id":{"name":"sprCrown25DeadEnemy","path":"sprites/sprCrown25DeadEnemy/sprCrown25DeadEnemy.yy",},},
+    {"id":{"name":"InvertedSandWorm","path":"objects/InvertedSandWorm/InvertedSandWorm.yy",},},
     {"id":{"name":"sprMutant3DWalk","path":"sprites/sprMutant3DWalk/sprMutant3DWalk.yy",},},
     {"id":{"name":"sndHeavyCuber","path":"sounds/sndHeavyCuber/sndHeavyCuber.yy",},},
     {"id":{"name":"UltraMeleeFake","path":"objects/UltraMeleeFake/UltraMeleeFake.yy",},},

@@ -57,9 +57,13 @@ if target != noone && instance_exists(target)
 			{
 				instance_create(x,y,InvertedBigVulture);
 			}
-			else if other.area=105
+			else if other.area=105 && other.subarea == 3
 			{
 				instance_create(x,y,InvertedBanditBoss)
+			}
+			else if other.area=105
+			{
+				instance_create(x,y,InvertedSandWorm)
 			}
 			else if other.area == 128
 			{
@@ -103,6 +107,10 @@ if target != noone && instance_exists(target)
 				    with instance_create(x,y,BanditBoss)
 				    {oasis=true;}
 			    }
+				else if other.area == 1 && other.subarea == 2
+				{
+					instance_create(x,y,SandWorm)
+				}
 			    else if other.area = 1
 				{
 					if scrIsGamemode(44)
