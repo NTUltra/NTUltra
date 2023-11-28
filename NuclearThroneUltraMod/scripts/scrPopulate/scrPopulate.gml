@@ -532,7 +532,8 @@ function scrPopulate() {
 	        repeat(clamp(Player.loops + 1,1,6))
 	        instance_create(x, y, WantBoss)
 	    }
-		if (Player.area = 105 || Player.area == 1) && Player.subarea == 2 {
+		//Sandworm
+		if (Player.loops > 0 && (Player.area = 105 || Player.area == 1) && Player.subarea == 2) {
 	        instance_create(x, y, WantBoss)
 	    }
 		//Big vulture

@@ -1,14 +1,14 @@
 /// @description Portal
+alarm[0] = 60;
 if !instance_exists(GenCont)
 {
 	x = px;
 	y = py;
 	if !instance_exists(Player) || Player.area != 104
 		scrSpawnEndLevelPortal()
-	alarm[0] = 120;
 	if fps_real < fps
 	{
-		if visible
+		if visible && alarm[1] < 1
 			alarm[1] = 5;
 		visible = false;
 		with Top

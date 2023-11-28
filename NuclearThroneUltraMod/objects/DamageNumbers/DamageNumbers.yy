@@ -21,8 +21,8 @@
     "path": "folders/Objects.yy",
   },
   "parentObjectId": {
-    "name": "All",
-    "path": "objects/All/All.yy",
+    "name": "FX",
+    "path": "objects/FX/FX.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

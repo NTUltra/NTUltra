@@ -635,9 +635,9 @@ if (tookHit)
 		{
 			resetPrevHealth = true;
 			if race=25
-				alarm[3] = max(25,alarm[3]);
+				alarm[3] = max(23,alarm[3]);
 			else
-				alarm[3] = max(alarm[3],20);//duration
+				alarm[3] = max(alarm[3],18);//duration
 			canAnimateDuringImmune = 0;
 			snd_hurt = sndDamageNegate;
 			instance_create(x,y,EuphoriaBlock);

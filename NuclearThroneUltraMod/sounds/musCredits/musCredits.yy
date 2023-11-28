@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "musCredit",
+  "name": "musCredits",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -17,7 +17,7 @@
   },
   "preload": true,
   "sampleRate": 44100,
-  "soundFile": "musCredit.ogg",
+  "soundFile": "musCredits.ogg",
   "type": 1,
   "volume": 1.0,
 }

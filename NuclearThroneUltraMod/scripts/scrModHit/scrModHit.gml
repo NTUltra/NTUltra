@@ -30,7 +30,7 @@ function scrModHit() {
 	{
 		if scrIsCrown(29)//Crown of purity
 		{
-			moddelay += 30;
+			Player.moddelay += 30;
 			return;
 		}
 		var r = 1;

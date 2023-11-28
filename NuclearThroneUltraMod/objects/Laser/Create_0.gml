@@ -12,7 +12,7 @@ image_yscale = 1.37//1.2
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1
-		image_yscale = 1.94+(Player.betterlaserbrain*0.2)
+		image_yscale = 1.9+(Player.betterlaserbrain*0.2)
 }
 aimed=false;
 img = 0

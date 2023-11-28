@@ -117,7 +117,7 @@ else if skill= 16 && Player.race = 25//recycle gland
 }
 else if skill = 17 && Player.race = 25
 {
-Player.betterlaserbrain=1;
+Player.betterlaserbrain = 1;
 
 	if Player.ultra_got[97] && !Player.altUltra
 		Player.betterlaserbrain = 2;

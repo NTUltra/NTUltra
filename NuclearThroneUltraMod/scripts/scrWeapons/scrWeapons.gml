@@ -7392,7 +7392,7 @@ function scrWeapons() {
 	wep_type[669] = 3
 	wep_auto[669] = 1
 	wep_load[669] = 9
-	wep_cost[669] = 1.5
+	wep_cost[669] = 1
 	wep_sprt[669] = sprSpikeStaff
 	wep_area[669] = 5
 	wep_text[669] = "nail gun"
@@ -7578,9 +7578,9 @@ function scrWeapons() {
 	wep_name[686] = "ORBITER"
 	wep_type[686] = 5
 	wep_auto[686] = 0
-	wep_load[686] = 12
+	wep_load[686] = 14
 	wep_cost[686] = 2
-	wep_sprt[686] = sprLaserGun 
+	wep_sprt[686] = sprOrbiter 
 	wep_area[686] = 3
 	wep_text[686] = "futuristic weaponry"
 	wep_swap[686] = sndSwapEnergy
