@@ -8,6 +8,10 @@ if active && sprite_index == spr_idle && KeyCont.key_pick[other.p] = 1
 		Player.curse = 0;
 		Player.bcurse = 0;
 		Player.ccurse = 0;
+		if scrIsCrown(14) {
+			snd_play(sndHealthPickup);
+			scrHeal(1);	
+		}
 		Player.isPermanent = true;
 		hasASecret = false;
 		scrUnlockGameMode(46,"FOR COMPLETING THE QUEST#FROM A CURSED FIEND");

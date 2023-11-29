@@ -11,7 +11,9 @@ spr_walk = sprGhostGuardianWalk;
 spr_hurt = sprGhostGuardianHurt;
 spr_dead = sprGhostGuardianDead;
 
-
+snd_hurt = sndGuardianHurt;
+snd_dead = sndGuardianDead;
+snd_melee = sndDogGuardianMelee;
 //behavior
 alarm[10] = 0;
 alarm[1] = 30+random(90)

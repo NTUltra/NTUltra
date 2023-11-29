@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-stopSpeed = 0.18;
+stopSpeed = 0.2;//0.18
 owner = -1;
 dmg = 12;
 team = 1;

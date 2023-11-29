@@ -24,7 +24,13 @@ if KeyCont.key_pick[other.p] = 1 && !instance_exists(Throne2)
 	if (canUncurse)
 	{
 		if (Player.curse == 1 || Player.bcurse == 1 || Player.ccurse == 1)
+		{
 			snd_play_2d(sndUncurse);
+			if scrIsCrown(14) {
+				snd_play(sndHealthPickup);
+				scrHeal(1);	
+			}
+		}
 		Player.curse = 0
 		Player.bcurse = 0
 		Player.ccurse = 0

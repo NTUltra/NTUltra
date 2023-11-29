@@ -5,3 +5,4 @@ depth = 1;
 myConfusion = noone;
 wasResurrected = false;
 morphMe = 0;
+maxSpeed = 0;

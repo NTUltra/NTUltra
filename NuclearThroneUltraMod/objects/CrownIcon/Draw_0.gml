@@ -21,6 +21,7 @@ if (crown != 1 && scrIsCrown(crown))
 draw_set_valign(fa_bottom)
 draw_set_halign(fa_right)
 txt2 = "";
+var fulltxt = "";
 var preTxt = "";
 if (UberCont.canMultiCrown && crown != 1)
 {
@@ -32,6 +33,8 @@ if (UberCont.canMultiCrown && crown != 1)
 		txt2 = "RE-ADD#";
 }
 txt2 += string(crown_name[crown])+"#"+string(crown_text[crown])
+fulltxt = txt2;
+txt2 = scrReplaceAllColourCodes(txt2);
 if hover
 {
 
@@ -53,12 +56,13 @@ if hover
 
 
 	draw_sprite_ext(sprMenuPointer,0,x,drawy-12,1,1,0,c_white,0.8)
-
-	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-13,string_hash_to_newline(string(txt2)))
-	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-13,string_hash_to_newline(string(txt2)))
-	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-14,string_hash_to_newline(string(txt2)))
-	draw_set_color(c_silver)
-	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14,string_hash_to_newline(string(txt2)))
+/*
+	scrDrawTextColours(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-13,string_hash_to_newline(fulltxt))
+	scrDrawTextColours(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-13,string_hash_to_newline(fulltxt))
+	scrDrawTextColours(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-14,string_hash_to_newline(fulltxt))
+	draw_set_color(c_silver)*/
+	draw_set_color(make_colour_rgb(160,160,160));
+	scrDrawTextColours(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14,fulltxt)
 
 	if UberCont.crown_used[crown] > 0
 	{

@@ -72,6 +72,18 @@ if target != noone
 					speed = 0;
 					walk = 0;
 					alarm[1] += 15;
+					if place_meeting(x,y,Wall)
+					{
+						var n = instance_nearest(x,y,Floor)
+						if n != noone {
+							var o = 16;
+							if n.object_index == FloorExplo
+							{
+								o = 8;	
+							}
+							move_outside_solid(point_direction(x,y,n.x+o,n.y+o),16);
+						}
+					}
 				}
 			}
 			mask_index = msk;

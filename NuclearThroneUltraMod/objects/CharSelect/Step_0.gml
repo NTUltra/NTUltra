@@ -101,7 +101,7 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+16 and UberCon
     snd_cnfm=sndMutant26Cnfm;
     break;
 	case 27:
-    snd_cnfm=sndMutant27Cnfm;
+    snd_cnfm=sndMutant27CnfmFinal;
     break;
     
     }
@@ -244,7 +244,7 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+16 and UberCon
     snd_slct=sndMutant26Slct;
     break;
 	case 27:
-    snd_slct=sndMutant27Slct;
+    snd_slct=sndMutant27SlctFinal;
     break;
     
     }

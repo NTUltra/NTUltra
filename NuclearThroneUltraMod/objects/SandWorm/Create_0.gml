@@ -1,8 +1,8 @@
-raddrop = 50
-maxhealth = 300
-meleedamage = 20
+raddrop = 45
+maxhealth = 800
+meleedamage = 10
 mySize = 3
-
+scrBossHealthBuff();
 event_inherited()
 
 alarm[10] = 0;//Can be on no floor
@@ -16,10 +16,8 @@ yOffset = 42;
 alarm[1] = 300;
 alarm[5] = 30;
 hasStarted = false;
-
+reachedHalf = false;
 //Alteration
-
-
 spr_idle_actual = sprSandWorm;
 spr_idle = spr_idle_actual
 spr_walk = spr_idle_actual
@@ -29,8 +27,8 @@ spr_dead = sprSandWormDead
 spr_fire = sprSandWormAppear;
 spr_fire_simple = sprSandWormFire;
 spr_appear = sprSandWormAppear;
-spr_disappear_start = sprSandWomDisappearStart;
-spr_disappear_end = sprSandWomDisappearEnd;
+spr_disappear_start = sprSandWormDisappearStart;
+spr_disappear_end = sprSandWormDisappearEnd;
 spr_disappear_loop = sprSandWormDisappear
 spr_disappear_hurt = sprSandWormDisappearHurt;
 spr_turn_around = sprSandWormTurnAround;
@@ -45,3 +43,6 @@ spr_fire = spr_disappear_end;
 sprite_index = spr_disappear_end;
 image_index = image_number - 2;
 image_speed = 0;
+fireDelay = 5;
+angPart = 0.5;
+disappearDuration = 60;

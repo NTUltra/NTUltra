@@ -62,6 +62,7 @@ if target != noone && instance_exists(target)
 					}
 			}
 			ds_list_destroy(walls);
+			scrForcePosition60fps();
 		}
 		else
 		{
@@ -106,5 +107,9 @@ lerpTime -= lerpCalcBack;
 alarm[2] = 1;
 if lerpTime < 0 || lerpTime > 1
 {
+	if target != noone && grabAnItem {
+		target.x = creator.x;
+		target.y = creator.y;
+	}
 	instance_destroy();	
 }

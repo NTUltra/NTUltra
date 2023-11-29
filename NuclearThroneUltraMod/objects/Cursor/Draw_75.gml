@@ -6,5 +6,5 @@ s *= scale;
 draw_sprite_ext(sprite_index,image_index,device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),
 s,
 s,
-0,c_white,1);
+0,colour,1);
 

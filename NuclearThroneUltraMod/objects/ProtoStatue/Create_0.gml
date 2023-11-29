@@ -5,8 +5,8 @@ close = false;
 if instance_exists(Player)
 {
 	///crown of natural selection no rads more items
-	if scrIsCrown(13)
-		rad=40;
+	//if scrIsCrown(13)
+	//	rad=40;
 	if scrIsCrown(28)
 		rad = 20;
 	if Player.loops > 0

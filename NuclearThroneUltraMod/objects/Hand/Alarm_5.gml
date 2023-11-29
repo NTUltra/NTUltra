@@ -1,8 +1,8 @@
 /// @description Fuck up walls
 //instance_create(x,y,WallBreak);
 alarm[5] = 1;
-image_xscale = 2;
-image_yscale = 2;
+image_xscale = 1.5;
+image_yscale = 1.5;
 var walls = ds_list_create();
 var al = instance_place_list(x,y,Wall,walls,false)
 for (var j = 0; j < al; j++) {

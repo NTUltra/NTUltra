@@ -18,13 +18,13 @@ function scrDrawCredits() {
 	if creditpage == 0
 	{
 		
-		thanks = "#ADDITIONAL ART:#ricottakitten#Guru Jr#NotYourSagittarius##QA#AgentCucco#pLasma#Sourpuss#Guru Jr#Worm Chase/Wood Man#Mr. G & W jaB#Kaz!#skele##NT-UM WIKI#such a handsome#lass#Seymour Schlong##"
-		stxt2 = "######ADDITIONAL ART:#####QA:##########NT-UM WIKI:"
+		thanks = "#ADDITIONAL ART:#ricottakitten#Guru Jr#NotYourSagittarius##QA#AgentCucco#pLasma#Sourpuss#Guru Jr#Worm Chase/Wood Man#Mr. G & W jaB#Kaz!#skele#yokucasper#Tummy##NT-UM WIKI#such a handsome#lass#Seymour Schlong##"
+		stxt2 = "######ADDITIONAL ART:#####QA:############NT-UM WIKI:"
 		txt0 = "#NUCLEAR THRONE ULTRA#NUCLEAR THRONE BY VLAMBEER##MOD BY ERDEPPOL"
-		txt1 = "######ADDITIONAL CODE:#base4/spencers145##ART & SFX:#@larje100##ULTRA MUTATION ART:#Seymour Schlong#@tilde_bee#Lynzkar#skurleton#Lunarshards###Sourpuss##HUNTER & CHICKEN C:#NotYourSagittarius##"
+		txt1 = "######ADDITIONAL CODE:#base4/spencers145##ART & SFX:#@larje100##ULTRA MUTATION ART:#Seymour Schlong#@tilde_bee#Lynzkar#skurleton#Lunarshards###Sourpuss##HUNTER & CHICKEN C:#NotYourSagittarius##ADDITIONAL SFX#PolygonOni"
 		txt2 = "#####"+string(thanks)
 		stxt0 = "#NUCLEAR THRONE ULTRA###MOD    ERDEPPOL########################[PRESS SPACE FOR PAGE 2]"
-		stxt1 = "######ADDITIONAL CODE:###ART & SFX:###ULTRA MUTATION ART:#######CONCEPT ART:###HUNTER & CHICKEN C:####"//White text
+		stxt1 = "######ADDITIONAL CODE:###ART & SFX:###ULTRA MUTATION ART:#######CONCEPT ART:###HUNTER & CHICKEN C:###ADDITIONAL SFX"//White text
 	}
 	else if creditpage == 1
 	{

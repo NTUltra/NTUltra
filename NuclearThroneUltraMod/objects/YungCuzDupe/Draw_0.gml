@@ -59,6 +59,57 @@ draw_sprite_ext(sprLaserSightPlayer,-1,x,y,point_distance(x,y,lasx,lasy)/2+2,1,p
 
 
 //DRAW DA GUNZ
+if instance_exists(Player)
+{
+	alienIntestines = Player.alienIntestines;
+	var drawTailIntro = Player.drawTailIntro;
+	var drawTail = Player.drawTail;
+	var tailWave = Player.tailWave;
+	if (drawTailIntro == 1) {
+		draw_sprite_ext(sprTailIntro,tailWave,x,y,-right,1,0,c_white,1);
+		if round(tailWave) == sprite_get_number(sprTailIntro)
+		{
+			tailWave = 0;
+			drawTailIntro = 0;
+			if !drawTail
+				drawTailIntro = 3;	
+		}
+	}
+	else if (drawTailIntro == 3) {
+		draw_sprite_ext(sprTailOutro,tailWave,x,y,-right,1,0,c_white,1);
+		if round(tailWave) == sprite_get_number(sprTailOutro)
+		{
+			tailWave = 0;
+			drawTailIntro = 0;
+			if drawTail
+				drawTailIntro = 1;
+		}
+	} 
+	else if drawTail || drawTailIntro == 2
+	{
+		draw_sprite_ext(sprTailEnd,tailWave,x,y,-right,1,0,c_lime,1);
+		if round(tailWave) == sprite_get_number(sprTailEnd)
+		{
+			tailWave = 0;
+			if drawTailIntro == 2
+				drawTailIntro = 3;
+		}
+	}
+}
+if alienIntestines > 0
+{
+	if alienIntestines > 180
+	{
+		draw_sprite_ext(sprAlienIntestines3,wave,x,y,abs(right),image_yscale,alienIntestines*alienDir,c_white,1);
+	}
+	else if alienIntestines > 80
+	{
+		draw_sprite_ext(sprAlienIntestines2,wave,x,y,abs(right),image_yscale,alienIntestines*alienDir,c_white,1);
+	}else if alienIntestines > 30
+	{
+		draw_sprite_ext(sprAlienIntestines1,wave,x,y,abs(right),image_yscale,alienIntestines*alienDir,c_white,1);
+	}
+}
 
 if back = 1{
 draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(wepangle*(1-wkick/20))),y+lengthdir_y(-wkick,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(wepangle*(1-wkick/20))),1,wepright,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(wepangle*(1-wkick/20)),c_white,1)
@@ -112,9 +163,9 @@ draw_sprite_ext(sprGammaGuts,wave*0.4,x,y,1.1,1.1,image_angle,c_white,0.1)
 draw_set_blend_mode(bm_normal)
 
 if UberCont.normalGameSpeed == 60
-	wave += 0.5;
+	wave += 0.2;
 else
-	wave ++
+	wave += 0.4;
 
 if wkick > 0
 wkick -= 1

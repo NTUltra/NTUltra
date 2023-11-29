@@ -21,12 +21,24 @@ function scrDrawOneRoute(myRoute, myRouteIndex, myTime, overwriteRouteColour = f
 	var size = 2;
 	var routeColourIndex = 0;
 	var col;
+	var prevCol = c_white;
+	var prevInverted = false;
 	var routeCol;
+	var skipStep = 0;
+	var myLoop = 0;
 	for (var i = 0; i <= myRouteIndex; i++) {
+		
 		if (!overwriteRouteColour)
 		{
-			col = c_silver;
+			col = c_white;
 			routeCol = routeColours[routeColourIndex];
+			var opacity = 1/(loop + 1 - myLoop);
+			if loop != myLoop
+			{
+				opacity *= 0.75;
+				col = routeCol;
+			}
+			opacity = max(opacity,0.1);
 		}
 		else
 		{
@@ -131,7 +143,13 @@ function scrDrawOneRoute(myRoute, myRouteIndex, myTime, overwriteRouteColour = f
 				tx = ox + xstep * 7;
 				ty = oy;
 				if (!canDisconnect && !justSquares) {
+					skipStep = 1;
 					routeColourIndex ++;
+					myLoop += 1;
+					if (i == myRouteIndex && myTime == 1)
+					{
+						loop += 1;
+					}
 					if (routeColourIndex >= array_length(routeColours))
 					{
 						routeColourIndex = 0;
@@ -143,7 +161,11 @@ function scrDrawOneRoute(myRoute, myRouteIndex, myTime, overwriteRouteColour = f
 				ty = oy;
 				inverted = true;
 				if (!canDisconnect && !justSquares) {
+					skipStep = 1;
 					routeColourIndex ++;
+					if (i == myRouteIndex && myTime == 1)
+						loop += 1;
+					myLoop += 1;
 					if (routeColourIndex >= array_length(routeColours))
 					{
 						routeColourIndex = 0;
@@ -174,16 +196,24 @@ function scrDrawOneRoute(myRoute, myRouteIndex, myTime, overwriteRouteColour = f
 			case 135://HQ
 				if (!overwriteRouteColour)
 				{
+					if i == myRouteIndex
+						time = max(time,0.9);
 					col = make_colour_rgb(22,97,223);//Rogue Blue;
 					tx = tx-(size*3);
+					if (prevInverted)
+						tx -= (size*3)
 					ty = ty;
 				}
 			break;
 			case 100://Crown vault
-				if (!overwriteRouteColour)
+				if (!overwriteRouteColour && i != 0)
 				{
+					if i == myRouteIndex
+						time = max(time,0.9);
 					col = c_lime;
 					tx = tx-(size*3);
+					if (prevInverted)
+						tx -= (size*3)
 					ty = ty;
 				}
 			break;
@@ -286,29 +316,29 @@ function scrDrawOneRoute(myRoute, myRouteIndex, myTime, overwriteRouteColour = f
 				if overwriteRouteColour
 				{
 					col = make_colour_rgb(0,52,52);
-					
 				}
 				else
 				{
 					col = c_aqua;
 				}
 			}
-			draw_rectangle_colour(tx-size,ty-size,tx+size,ty+size,col,col,col,col,false);
 			draw_rectangle_colour(tx-size+1,ty-size+1,tx+size-1,ty+size-1,c_black,c_black,c_black,c_black,false);
+			draw_rectangle_colour(tx-size,ty-size,tx+size,ty+size,col,col,col,col,false);
 		}
-		else if (!canDisconnect || i % 2 == 1) {
+		else if skipStep != 0 && (!canDisconnect || i % 2 == 1) {
 			
 			if (i == myRouteIndex && myTime < 1) {
-				draw_line_colour(xx,yy,
+				draw_line_width_color(xx,yy,
 				lerp(xx,tx,myTime),
-				lerp(yy,ty,myTime),routeCol,routeCol);
+				lerp(yy,ty,myTime),3,routeCol,routeCol);
+				draw_rectangle_colour(xx-size,yy-size,xx+size,yy+size,prevCol,prevCol,prevCol,prevCol,false);
 			} else {
 				if (inverted)
 				{
 					tx += size * 3;
 					if overwriteRouteColour
 					{
-						col = make_colour_rgb(0,52,52);
+						col = make_colour_rgb(0,18,18);
 					}
 					else
 					{
@@ -317,13 +347,28 @@ function scrDrawOneRoute(myRoute, myRouteIndex, myTime, overwriteRouteColour = f
 					}
 				}
 				if (overwriteRouteColour) {
-					draw_line_dotted(xx,yy,tx,ty,routeCol);
+					draw_line_width_color(xx,yy,tx,ty,1,routeCol,routeCol);
 				}
 				else
 				{
-					draw_line_colour(xx,yy,tx,ty,routeCol,routeCol);
+					col = make_colour_hsv(color_get_hue(col),
+					colour_get_saturation(col)*opacity,
+					colour_get_value(col)*opacity);
+					routeCol = make_colour_hsv(color_get_hue(routeCol),
+					colour_get_saturation(routeCol),
+					colour_get_value(routeCol)*opacity);
+					//draw_line_colour(xx+1,yy+1,tx+1,ty+1,c_black,c_black);
+					if opacity < 1
+					{
+						draw_line_width_color(xx,yy,tx,ty,2,routeCol,routeCol);
+					}
+					else
+						draw_line_width_color(xx,yy,tx,ty,3,routeCol,routeCol);
 				}
+				draw_rectangle_colour(xx-size,yy-size,xx+size,yy+size,prevCol,prevCol,prevCol,prevCol,false);
+				//draw_rectangle_colour(tx+1-size,ty+1-size,tx+1+size,ty+1+size,c_black,c_black,c_black,c_black,false);
 				draw_rectangle_colour(tx-size,ty-size,tx+size,ty+size,col,col,col,col,false);
+				prevCol = col;
 			}
 		}/* else if (canDisconnect && i > 0) {
 			debug("impossible connection found: ", i);
@@ -346,6 +391,9 @@ function scrDrawOneRoute(myRoute, myRouteIndex, myTime, overwriteRouteColour = f
 				gotHover = [arString, area[1],tx];
 			}
 		}
+		prevInverted = inverted;
+		skipStep -= 1;
 	}
+	draw_set_colour(c_white);
 	return gotHover;
 }

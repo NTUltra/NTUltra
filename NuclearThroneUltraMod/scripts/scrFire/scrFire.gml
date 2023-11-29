@@ -3986,7 +3986,7 @@ function scrFire() {
 	case 159:
 
 	snd_play_fire(sndDoubleFireShotgun)
-	with instance_create(x,y,DoubleShotgunBurst)
+	with instance_create(x,y,DoubleFlameShotgunBurst)
 	{
 		alarm[1] = 2;
 		creator = other.id

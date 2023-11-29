@@ -7,6 +7,7 @@ x = xStart;
 vspeed *= 0.1;
 if walk <= 0 && speed > 1
 {
+	walk = -1;
 	if UberCont.normalGameSpeed == 60
 		speed = 0.5;
 	else

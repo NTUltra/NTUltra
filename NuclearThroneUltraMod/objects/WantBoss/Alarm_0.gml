@@ -45,6 +45,14 @@ if target != noone && instance_exists(target)
 			{
 				instance_create(x,y,BigBadBat);
 			}
+			else if other.area== 9 && other.subarea == 2
+			{
+				instance_create(x,y,WallCrawler);
+			}
+			else if other.area== 118 && other.subarea == 2
+			{
+				instance_create(x,y,InvertedWallCrawler);
+			}
 			else if other.area==111
 			{
 				instance_create(x,y,InvertedBigBadBat);

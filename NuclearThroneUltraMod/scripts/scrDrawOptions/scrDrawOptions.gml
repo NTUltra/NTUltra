@@ -54,8 +54,7 @@ function scrDrawOptions() {
 
 		with FullScreenToggle
 		event_perform(ev_draw,0)
-		with CursorUpDown
-		event_perform(ev_draw,0)
+		
 		with SideArtUpDown
 		event_perform(ev_draw,0)
 		with ResolutionScaleUpDown
@@ -88,6 +87,8 @@ function scrDrawOptions() {
 		with ToggleRemapper
 		event_perform(ev_draw,0)
 		with FPSToggle
+		event_perform(ev_draw,0)
+		with CursorUpDown
 		event_perform(ev_draw,0)
 	}
 	else

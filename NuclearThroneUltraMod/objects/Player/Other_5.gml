@@ -138,25 +138,63 @@ if scrIsCrown(2) && canHeal
 	my_health = max(maxhealth,my_health + overheal);
 	*/
 }
-else if scrIsCrown(30)
+if scrIsCrown(13)//Crown of drowning
+{
+	ammo[1] += 200;
+	ammo[2] += 20;
+	ammo[3] += 20;
+	ammo[4] += 20;
+	ammo[5] += 20;
+	if !ultra_got[26] {
+		if ammo[1] > typ_amax[1]
+		ammo[1] = typ_amax[1]
+
+		if ammo[2] > typ_amax[2]
+		ammo[2] = typ_amax[2]
+
+		if ammo[3] > typ_amax[3]
+		ammo[3] = typ_amax[3]
+
+		if ammo[4] > typ_amax[4]
+		ammo[4] = typ_amax[4]
+
+		if ammo[5] > typ_amax[5]
+		ammo[5] = typ_amax[5]
+	}
+}
+if scrIsCrown(30)
 {
 	kills = max(0,kills-20);
 }
-else if scrIsCrown(31)
+if scrIsCrown(31)
 {
 	kills += 20;
 }
-else if scrIsCrown(22)//Crown of luck
+if scrIsCrown(22)//Crown of luck
 {
-	
-	if ultra_got[62] && altUltra //Living armour
+	if scrIsCrown(2) && canHeal// + crown of life
 	{
-		armour = 1;
+		if ultra_got[62] && altUltra //Living armour
+		{
+			armour = max(1,round(maxarmour*0.5));
+		}
+		else
+		{
+			my_health = max(1,round(maxhealth*0.5));
+			prevhealth = my_health;
+		}
 	}
 	else
 	{
-		my_health = 1;
-		prevhealth = 1;
+		if ultra_got[62] && altUltra //Living armour
+		{
+			armour = 1;
+		}
+		else
+		{
+			my_health = 1;
+			prevhealth = 1;
+		}
 	}
 }
 //NOCHEST SHIT
@@ -332,13 +370,13 @@ if looping && area != 104
 		            maxhealth = min(maxhealth + 2,targetHealth);
 	            }
 	        }
-            
+            /*
 	        if loops == 2 && !scrIsGamemode(15)//not no mutations gamemode
 	        {
 				UberCont.levelIncrease ++;
 				maxlevel++;
 	        }
-			else if loops = 10 && !scrIsGamemode(15)
+			else */if loops = 10 && !scrIsGamemode(15)
 	        {
 				UberCont.levelIncrease ++;
 				maxlevel++;
@@ -843,7 +881,7 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		{
 			maxhealth -= 2;
 			armour = other.armour;
-			maxarmour = max(1,Player.maxarmour + 1);
+			maxarmour = max(1,other.maxarmour + 1);
 		}
 		if scrIsCrown(20)
 		{

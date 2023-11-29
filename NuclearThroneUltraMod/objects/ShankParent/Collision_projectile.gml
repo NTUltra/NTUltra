@@ -23,6 +23,5 @@ if team != other.team
 			y = yprevious;
 		}
 	}
-
 }
 

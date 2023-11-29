@@ -5,6 +5,7 @@ if walk > 0
 	walk -= 1
 	if walk <= 0
 	{
+		walk = -1;
 		alarm[4] = 5;
 	}
 	motion_add(chargeDirection,acc);

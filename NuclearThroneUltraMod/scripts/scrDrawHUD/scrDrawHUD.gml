@@ -1873,8 +1873,10 @@ function scrDrawHUD() {
 	//with Floor
 	//draw_rectangle(x,y,x+32,y+32,1)
 
-
-	if instance_exists(enemy) && instance_number(enemy) + instance_number(becomenemy) < instance_number(IDPDVan) + 2
+	var tx = dataRef.x;
+	var ty = dataRef.y
+	if instance_exists(enemy) && (point_distance(tx,ty,instance_nearest(tx,ty,enemy).x,instance_nearest(tx,ty,enemy).y) > 400 ||
+	instance_number(enemy) + instance_number(becomenemy) < instance_number(IDPDVan) + 2)
 	{
 		var t = undefined;
 		if !instance_exists(enemy)

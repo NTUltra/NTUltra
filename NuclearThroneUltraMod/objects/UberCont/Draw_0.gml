@@ -104,8 +104,6 @@ event_perform(ev_draw,0)
 
 with FullScreenToggle
 event_perform(ev_draw,0)
-with CursorUpDown
-event_perform(ev_draw,0)
 with SideArtUpDown
 event_perform(ev_draw,0)
 with FreezeFrameUpDown
@@ -134,6 +132,8 @@ event_perform(ev_draw,0)
 with TimerToggle
 event_perform(ev_draw,0)
 with FPSToggle
+event_perform(ev_draw,0)
+with CursorUpDown
 event_perform(ev_draw,0)
 
 draw_set_valign(fa_top)

@@ -5,3 +5,4 @@ with other
 	with instance_create(x,y,FloorExplo)
 		alarm[3] = 0;
 }
+speed *= 0.98;

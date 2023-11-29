@@ -12,7 +12,7 @@ spr_hurt = sprInvertedBigMachineHurt
 spr_dead = sprInvertedBigMachineDead
 
 snd_hurt = sndNothingHurtHigh
-snd_dead = sndNothingTaunt
+snd_dead = sndBigMachineDead
 
 //behavior
 gunangle = random(360)
@@ -82,3 +82,11 @@ friction=4;
 ammo=0;
 
 scrAddDrops(2);
+reachedHalfHealth = false;
+sndtaunt = 0;
+tauntdelay = 0;
+with Player {
+	x = other.x - 32;
+	y = other.y + 128;
+	scrForcePosition60fps();
+}

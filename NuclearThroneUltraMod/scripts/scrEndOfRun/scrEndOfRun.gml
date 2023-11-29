@@ -73,10 +73,9 @@ function scrEndOfRun(){
 					allRoutes[j] = routePart[1];
 					j++;
 				}
-				debug("ALL ROUTES");
-				debug(allRoutes);
 				route = string_split(other.routeString,">",true);
 				time = 0;
+				loop = 0;
 				routeIndex = 0;
 				loop = 0;
 			}

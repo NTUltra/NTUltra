@@ -2,6 +2,8 @@
 var ang = dissapearAttackAngle;
 var ps = disappearAttackProjectileSpeed;
 snd_play(sndScorpionFire);
+if audio_is_playing(sndBigMaggotUnburrowSand)
+	snd_play(sndBigMaggotUnburrowSand);
 repeat(disappearAttackAmount)
 {
 	with instance_create(x + (xOffset * image_xscale), y - 8, EnemyBullet2Curve) {
@@ -12,7 +14,7 @@ repeat(disappearAttackAmount)
 	}
 	ang += dissapearAttackAngleStep;
 }
-dissapearAttackAngle += dissapearAttackAngleStep*0.5;
+dissapearAttackAngle += dissapearAttackAngleStep*angPart;
 
 
 

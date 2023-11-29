@@ -7,7 +7,7 @@ function draw_line_dotted(xx,yy,tx,ty,col){
 	var ly = lengthdir_y(2,dir);
 	repeat(ceil(point_distance(xx,yy,tx,ty)*0.5))
 	{
-		draw_point_colour(round(xx),round(yy),col);
+		draw_point_colour(xx,yy,col);
 		xx += lx;
 		yy += ly;
 	}

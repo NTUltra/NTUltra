@@ -1,8 +1,8 @@
 ///scrHeal();
 // /@description
 ///@param
-function scrHeal(num = 1){
-	if Player.my_health + num <= Player.maxhealth
+function scrHeal(num = 1, canOverHeal = false){
+	if canOverHeal || Player.my_health + num <= Player.maxhealth
 		Player.my_health += num
 	else
 		Player.my_health = max(Player.my_health,Player.maxhealth);
@@ -14,7 +14,12 @@ function scrHeal(num = 1){
 		if Player.my_health = Player.maxhealth
 		dir.mytext = "MAX"
 		else if Player.my_health > Player.maxhealth
-		dir.mytext = "OVER MAX"
+		{
+			if canOverHeal
+				dir.mytext = "+"+string(num)+"#OVERHEAL!";
+			else
+				dir.mytext = "OVER MAX"
+		}
 	}
 	else
 	{
@@ -23,6 +28,11 @@ function scrHeal(num = 1){
 		if Player.my_health = Player.maxhealth
 		dir.mytext = "MAX HP"
 		else if Player.my_health > Player.maxhealth
-		dir.mytext = "OVER MAX HP"
+		{
+			if canOverHeal
+				dir.mytext = "+"+string(num)+"HP#OVERHEAL!";
+			else
+				dir.mytext = "OVER MAX HP"
+		}
 	}
 }

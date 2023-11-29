@@ -39,8 +39,14 @@ if unkillable
 }
 var is60fps = (UberCont.normalGameSpeed == 60);
 var representingCost = wep_cost[wep];
+
 if ultra_got[70]
 	representingCost = min(representingCost,0.5);
+else if scrIsCrown(13)//Crown of drowning
+{
+	representingCost *= 0.5;
+}
+
 if !instance_exists(LevCont) and visible = 1
 {
 	if roll = 0
@@ -271,11 +277,11 @@ if !instance_exists(LevCont) and visible = 1
 			Sleep(100);
 			//scrn++;
 			
-			instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			instance_create(f.x + 16,f.y + 16,SandWorm)
+			//instance_create(f.x + 16,f.y + 16,BigWallBreak)
+			instance_create(f.x + 16,f.y + 16,WallCrawler)
 
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "Gorilla";
+			thing.mytext = "Wall Crawler";
 		}
 		if keyboard_check_pressed(ord("C")) {
 			var dangle = random(1)*360;

@@ -25,10 +25,10 @@ function scrSkills() {
 		}
 	}
 	skill_name[0] = "HEAVY HEART"
-	skill_text[0] = "+50% <w>WEAPON DROPRATE<w>#EVERY ENEMY HAS A +1% CHANCE#TO DROP AN <w>ADDITIONAL WEAPON<w>##DROPPED WEAPONS <w>FIRE AT ENEMIES<w>"
+	skill_text[0] = "+50% <w>WEAPON DROP RATE<w>#EVERY ENEMY HAS A +1% CHANCE#TO DROP AN <w>ADDITIONAL WEAPON<w>##DROPPED WEAPONS <w>FIRE AT ENEMIES<w>"
 	skill_msnd[0] = sndMutHeavyHeart
 	skill_tips[0] = "guns got guns"
-	skill_bons[0] = "+10% WEAPON DROPRATE";
+	skill_bons[0] = "+10% WEAPON DROP RATE";
 
 	skill_name[1] = "RHINO SKIN"
 	if !UberCont.useSeed && random(200) < 1
@@ -144,6 +144,10 @@ function scrSkills() {
 		else if Player.race == 2//CRYSTAL
 		{
 			skill_text[8] = "<w>ENEMIES<w> TOUCHING YOU OR YOUR <p>SHIELD<p>#TAKE DAMAGE#DONT TAKE DAMAGE FROM#ENEMIES THAT YOU KILL USING <g>GAMMA GUTS<g>#YOU TAKE 50% LESS <w>ENEMY CONTACT DAMAGE<w>"
+		}
+		else if Player.race == 1//CRYSTAL
+		{
+			skill_text[8] = "<w>ENEMIES<w> TOUCHING YOU#TAKE DAMAGE#DONT TAKE DAMAGE FROM#<w>EXTENDED RANGE<w> WHEN <g>ROLLING<g>#ENEMIES THAT YOU KILL USING <g>GAMMA GUTS<g>#YOU TAKE 50% LESS <w>ENEMY CONTACT DAMAGE<w>"
 		}
 	}
 	skill_tips[8] = "skin glows"
@@ -337,7 +341,7 @@ function scrSkills() {
 
 
 	skill_name[28] = "RAGE"
-	skill_text[28] = "EACH <w>KILL<w> INCREASES:#<w>DROPRATE<w>, ALL WEAPON <w>RELOAD SPEED<w>#AND DECREASES <w>ACCURACY<w> SLIGHTLY##LOSE 50 <r>RAGE<r> EACH TIME YOU GET HIT"
+	skill_text[28] = "EACH <w>KILL<w> INCREASES:#<w>DROP RATE<w>, ALL WEAPON <w>RELOAD SPEED<w>#AND DECREASES <w>ACCURACY<w> SLIGHTLY##LOSE 50 <r>RAGE<r> EACH TIME YOU GET HIT"
 	skill_tips[28] = "dodge to kill"
 	skill_msnd[28] =  sndMutRage
 	skill_bons[28] = "GAIN 15% MORE RAGE";

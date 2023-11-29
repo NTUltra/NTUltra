@@ -108,7 +108,7 @@ if Player.crownpoints > 0
 				else if (scrCanWeDisco() && !scrIsCrown(27))
 					crown = 27;
 			}
-			else if crown == 8 && Player.tookDestiny//Crown of sloth secret
+			else if crown == 8 && Player.tookDestiny && !(UberCont.canMultiCrown && scrIsCrown(8))//Crown of sloth secret
 				crown = 24;
 			else if crown == 11
 			{
@@ -116,7 +116,7 @@ if Player.crownpoints > 0
 				{
 					//Crown of start
 					crown_name[11] = "[CROWN OF FROG]"
-					crown_text[11] = "START IN THE SEWERS"
+					crown_text[11] = "START IN THE <g>SEWERS<g>"
 					crown_used[11] = 0
 					crown_tips[11] = "quick start"
 					sprite_index = sprCrownSelectStart;

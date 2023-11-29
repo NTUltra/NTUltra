@@ -24,4 +24,8 @@ ammo--;
 
 if ammo>0
 alarm[1]=5;
-
+else if !reachedHalfHealth && my_health < maxhealth * 0.5
+{
+	reachedHalfHealth = true;
+	snd_play(sndBigMachineLowHP);
+}

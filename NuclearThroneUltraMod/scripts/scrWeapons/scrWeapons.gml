@@ -1509,7 +1509,7 @@ function scrWeapons() {
 	wep_load[136] = 3
 	wep_cost[136] = 1
 	wep_sprt[136] = sprSmartGun
-	wep_area[136] = 12
+	wep_area[136] = 11
 	wep_text[136] = "guns that think"
 	wep_swap[136] = sndSwapMachinegun
 	wep_rad[136] = 0;
@@ -7402,10 +7402,10 @@ function scrWeapons() {
 	wep_name[670] = "NEEDLE"
 	wep_type[670] = 0
 	wep_auto[670] = 1
-	wep_load[670] = 9
+	wep_load[670] = 10
 	wep_cost[670] = 0
 	wep_sprt[670] = sprNeedle
-	wep_area[670] = 1
+	wep_area[670] = 2
 	wep_text[670] = "acupuncture"
 	wep_swap[670] = sndSwapSword
 	wep_rad[670] = 0;
@@ -7621,6 +7621,10 @@ function scrWeapons() {
 					scrWeaponAdjustCost(0.85);
 				else
 					scrWeaponAdjustCost(0.95);
+			}
+			if scrIsCrown(13)
+			{
+				scrWeaponAdjustCost(2);
 			}
 		}
 	}

@@ -7,4 +7,5 @@ meleedamage = 0;
 team = 0;
 shadowSprite = shd24;
 my_health = 1;
+maxhealth = 1;
 alarm[0] = 10;

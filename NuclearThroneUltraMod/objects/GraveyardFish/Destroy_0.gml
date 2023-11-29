@@ -4,6 +4,16 @@ scrDrop(50,0);
 event_inherited()
 with Player
 {
+	if Player.curse = 1 or Player.bcurse = 1 or Player.ccurse = 1
+	{
+		if scrIsCrown(14) {
+			snd_play(sndHealthPickup);
+			scrHeal(1);	
+		}
+		snd_play_2d(sndUncurse);
+		repeat(10)
+			instance_create(Player.x+random(16)-8,Player.y+random(16)-8,Curse)
+	}
 	curse = 0;
 	bcurse = 0;
 	ccurse = 0;

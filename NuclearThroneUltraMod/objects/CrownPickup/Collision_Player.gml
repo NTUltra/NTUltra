@@ -20,7 +20,13 @@ if Player.curse = 1 or Player.bcurse = 1 or Player.ccurse = 1
 if (canUncurse)
 {
 	if (Player.curse == 1 || Player.bcurse == 1 || Player.ccurse == 1)
+	{
 		snd_play_2d(sndUncurse);
+		if scrIsCrown(14) {
+			snd_play(sndHealthPickup);
+			scrHeal(1);	
+		}
+	}
 	Player.curse = 0
 	Player.bcurse = 0
 	Player.ccurse = 0

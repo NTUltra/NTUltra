@@ -11,6 +11,10 @@ function scrLoadOptions() {
 	opt_crosshair = ini_read_real("OPTIONS","crosshair",0);
 	opt_crosshair_scale = ini_read_real("OPTIONS","crosshairscale",16);
 	opt_custom_crosshair = ini_read_string("OPTIONS","customcrosshair",0);
+	opt_crosshair_colour_r = ini_read_string("OPTIONS","crosshairColourr",255);
+	opt_crosshair_colour_g = ini_read_string("OPTIONS","crosshairColourg",255);
+	opt_crosshair_colour_b = ini_read_string("OPTIONS","crosshairColourb",255);
+	opt_crosshair_colour = make_colour_rgb(opt_crosshair_colour_r,opt_crosshair_colour_g,opt_crosshair_colour_b);
 	customCrosshair = sprite_add(opt_custom_crosshair,0,false,false,0,0);
 	if (sprite_exists(customCrosshair))
 	{

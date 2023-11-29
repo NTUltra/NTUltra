@@ -7,6 +7,6 @@ if myShield > -1 && instance_exists(myShield)
 	{
 		instance_destroy();
 	}
-	alarm[3] += 2;
+	alarm[3] += 1;
 }
 snd_hurt = snd_hurt_actual;

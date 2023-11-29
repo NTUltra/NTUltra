@@ -4,6 +4,7 @@ meleedamage = 0;
 spr_hurt = false;
 team = 0;
 my_health = 1;
+maxhealth = 1;
 shadowSprite = shd24;
 friction = 0.4
 image_speed = 0

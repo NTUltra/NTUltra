@@ -435,6 +435,16 @@ if crown == 12
 			invertedchance = 100;
     }
 }
+else if crown == 13
+{
+	with Player {
+		scrWeaponAdjustCost(2);
+	}
+}
+if oldcrown == 13
+{
+	scrWeaponAdjustCost(0.5);
+}
 //Crown of time
 if oldcrown == 34
 {

@@ -31,7 +31,7 @@ back = -1
 if Player.area = 5 and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(FloorMaker)
 {
 //SNOW & ICE TEST
-if ((instance_nearest(x-16,y-16,Floor).styleb == 1)&&(Player.skill_got[2]==0)) // EXTRA FEET TEST
+if ((instance_nearest(x-16,y-16,Floor).styleb == 1)&&(skill_got[2]==0)) // EXTRA FEET TEST
 friction = 0.1
 else
 friction = 0.45
@@ -39,7 +39,7 @@ friction = 0.45
 else if Player.area = 4 and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(FloorMaker)
 {
 //SPIDERWEBS
-if ((instance_nearest(x-16,y-16,Floor).styleb == 1)&&(Player.skill_got[2]==0))//EXTRA FEET TEST
+if ((instance_nearest(x-16,y-16,Floor).styleb == 1)&&(skill_got[2]==0))//EXTRA FEET TEST
 friction = 2
 else
 friction = 0.45
@@ -61,7 +61,7 @@ speed = Player.maxSpeed
 
 /* */
 ///tough shell
-if (Player.skill_got[31])
+if (skill_got[31])
 {
 if ( prevhealth > my_health && hardshell == true )
 {
@@ -94,17 +94,31 @@ if !instance_exists(Player){instance_destroy();exit;}
 
 if (my_health<prevhealth)
 {
-	if Player.skill_got[2]
+	if skill_got[2]
 	{
-		extrafeetalarm = 30;
+		extrafeetalarm = 35;
 		extrafeetdodged = false;
 	}
+	if skill_got[38] && alarm[3] < 1 && alarm[1] < 1
+	{
+		metabolism += 1;
+		if metabolism > 2
+		{
+			metabolism = 0;
+			my_health = prevhealth;
+			alarm[3] = alarm[3] + 2;
+			audio_stop_sound(snd_hurt);
+			snd_play_2d(sndMetabolism,0.1);
+			//scrGiveEuphoriaShield();
+			scrCollectAmmo(1);
+		}
+	}
 	//Took a hit?
-	if Player.skill_got[12]//euphoria resistance?
+	if skill_got[12]//euphoria resistance?
 	{
 		if !instance_exists(GenCont)&&(!instance_exists(myShield) || myShield == -1)&&!instance_exists(LevCont)
 		{
-		if Player.skill_got[28]//rage
+		if skill_got[28]//rage
 		{
 		if my_health<prevhealth//I been hit
 		rage=0;
@@ -160,7 +174,7 @@ if (my_health<prevhealth)
 if(my_health<=0)
 {
 
-    if Player.skill_got[25]//strong spirit
+    if skill_got[25]//strong spirit
     {
     if strongspirit==true&&strongspiritused==false
     {

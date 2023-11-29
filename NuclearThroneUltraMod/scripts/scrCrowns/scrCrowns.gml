@@ -12,84 +12,89 @@ function scrCrowns() {
 	crown_name[2] = "[CROWN OF LIFE]"
 	//crown_text[2] = "RESET LIFE TO MAX HP# AT THE END OF EACH LEVEL#NO HP DROPS"
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
-		crown_text[2] = "NO ARMOUR DROPS#AT THE END OF EACH AREA#RESET ARMOUR TO MAX ARMOUR"
+		crown_text[2] = "NO <gb>ARMOUR DROPS<gb>#AT THE END OF EACH AREA#RESET <gb>ARMOUR<gb> TO MAX <gb>ARMOUR<gb>"
 	else
-		crown_text[2] = "NO HEALTH DROPS#AT THE END OF EACH AREA#RESET HP TO MAX HP#IF YOU ALREADY HAVE MAX HP#OVERHEAL 1HP"
+		crown_text[2] = "NO <r>HEALTH<r> DROPS#AT THE END OF EACH AREA#RESET <r>HP<r> TO <r>MAX HP<r>#IF YOU ALREADY HAVE <r>MAX HP<r>#<w>OVERHEAL<w> 1<r>HP<r>"
 	crown_used[2] = 0
 	crown_tips[2] = "life"
 
 	crown_name[3] = "[CROWN OF DEATH]"
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
-		crown_text[3] = "-1 MAX ARMOUR#BIGGER EXPLOSIONS"
+		crown_text[3] = "-1 MAX <gb>ARMOUR<gb>#BIGGER EXPLOSIONS"
 	else
-		crown_text[3] = "-1 MAX HP#BIGGER EXPLOSIONS"
+		crown_text[3] = "-1 <r>MAX HP<r>#BIGGER <w>EXPLOSIONS<w>"
 	crown_used[3] = 0
 	crown_tips[3] = "nothing goes unpunished"
 
 	crown_name[4] = "[CROWN OF HASTE]"
-	crown_text[4] = "PICKUPS FADE FAST#ARE WORTH MORE"
+	crown_text[4] = "<y>PI<y><r>CKU<r><g>PS<g> FADE FAST#ARE WORTH MORE"
 	crown_used[4] = 0
 	crown_tips[4] = "no time for jokes"
 
 	crown_name[5] = "[CROWN OF GUNS]"
-	crown_text[5] = "NO AMMO DROPS#MORE WEAPON DROPS"
+	crown_text[5] = "NO <y>AMMO<y> DROPS#MORE <w>WEAPON<w> DROPS"
 	crown_used[5] = 0
 	crown_tips[5] = "guns are your friend"
 
 	crown_name[6] = "[CROWN OF HATRED]"
-	crown_text[6] = "LOSE HEALTH & GAIN RADIATION OVER TIME"
+	crown_text[6] = "LOSE <r>HEALTH<r> & GAIN <g>RADIATION<g> OVER TIME"
 	crown_used[6] = 0
 	crown_tips[6] = "something is wrong"
 
 	crown_name[7] = "[CROWN OF BLOOD]"
-	crown_text[7] = "MORE ENEMIES#LESS RADS"
+	crown_text[7] = "MORE <r>ENEMIES<r>#LESS <g>RADS<g>"
 	crown_used[7] = 0
 	crown_tips[7] = "bring it"
 
 	crown_name[8] = "[CROWN OF DESTINY]"
-	crown_text[8] = "FREE MUTATION#NARROW FUTURE"
+	crown_text[8] = "FREE <g>MUTATION<g>#NARROW <w>FUTURE<w>"
 	crown_used[8] = 0
 	crown_tips[8] = "no such thing as free will"
 
 	crown_name[9] = "[CROWN OF LOVE]"
-	crown_text[9] = "AMMO CHESTS ONLY"
+	crown_text[9] = "<y>AMMO<y> CHESTS ONLY"
 	crown_used[9] = 0
 	crown_tips[9] = "you really like these weapons"
 
 	crown_name[10] = "[CROWN OF DIFFICULTY]"
-	crown_text[10] = "WEAPON DROP TIER INCREASES#MORE EACH AREA#ENEMIES HAVE MORE HEALTH#AND ARE MORE AGGRESSIVE"
+	crown_text[10] = "<w>WEAPON<w> DROP <w>TIER<w> INCREASES#MORE EACH AREA#ENEMIES HAVE MORE <r>HEALTH<r>#AND ARE MORE <r>AGGRESSIVE<r>"
 	crown_used[10] = 0
 	crown_tips[10] = "acceleration"
 
 	crown_name[11] = "[CROWN OF REINCARNATION]"
-	crown_text[11] = "DIE AND BE REBORN#FOR ONE AREA YOU HAVE INFINITE AMMO"
+	crown_text[11] = "<w>DIE<w> AND BE <w>REBORN<w>#FOR ONE AREA YOU HAVE <w>INFINITE<w> <y>AMMO<y>"
 	if instance_exists(Player) && (Player.level > 8 || Player.boostLevel > 8)
 	{
-		crown_text[11] = "DIE AND BE REBORN#FOR ONE AREA YOU HAVE INFINITE AMMO#UNLOCK ALTERNATIVE ULTRA MUTATIONS"
+		crown_text[11] = "<w>DIE<w> AND BE <w>REBORN<w>#FOR ONE AREA YOU HAVE <w>INFINITE<w> <y>AMMO<y>#UNLOCK <w>ALTERNATIVE<w> <g>ULTRA MUTATIONS<g>"
 	}
 	crown_used[11] = 0
 	crown_tips[11] = "new born"
 
 	crown_name[12] = "[CROWN OF INVERSION]"
-	crown_text[12] = "HIGHER CHANCE FOR#INVERTED PORTALS TO APPEAR"
+	crown_text[12] = "HIGHER CHANCE FOR#<w>INVERTED PORTALS<w> TO APPEAR"
 	crown_used[12] = 0
 	crown_tips[12] = "looking for the blue stuff"
 
+	crown_name[13] = "[CROWN OF DROWNING]"
+	crown_text[13] = "DOUBLE <y>AMMO<y> COST#AT THE END OF EACH AREA#GAIN SOME <y>AMMO<y>#WHENEVER YOU RUN OUT OF <y>AMMO<y>#YOUR <y>CROWN<y> SUMMONS THE <pi>TINY<pi> <p>KRAKEN<p>"
+	crown_used[13] = 0
+	crown_tips[13] = "sinking"
+/*
 	crown_name[13] = "[CROWN OF SELECTION]"
-	crown_text[13] = "HIGHER DROPRATE#ENEMIES DROP NO RADS"
+	crown_text[13] = "HIGHER <w>DROPRATE<w>#ENEMIES DROP NO <g>RADS<g>"
 	crown_used[13] = 0
 	crown_tips[13] = "don't need rads"
-
+*/
 	crown_name[14] = "[CROWN OF CURSES]"
-	crown_text[14] = "MORE CURSED CHESTS"
+	crown_text[14] = "MORE <p>CURSED<p> CHESTS#<w>UNCURSING<w> (OVER)<r>HEALS<r> 1HP"
 	crown_used[14] = 0
 	crown_tips[14] = "something strange"
 	
 	crown_name[15] = "[CROWN OF CHOICE]"
 	if instance_exists(Player) && Player.ultra_got[31]
-		crown_text[15] = "REMOVE YOUR TERTIARY WEAPON#WHEN YOU GO THROUGH A PORTAL#MORE CHESTS#SLIGHTLY MORE WEAPON DROPS"
+		crown_text[15] = "REMOVE YOUR <pi>TERTIARY<pi> <w>WEAPON<w>#WHEN YOU GO THROUGH A <p>PORTAL<p>#<w>MORE CHESTS<w>#SLIGHTLY MORE <w>WEAPON<w> DROPS"
 	else
-		crown_text[15] = "REMOVE YOUR SECONDARY WEAPON#WHEN YOU GO THROUGH A PORTAL#MORE CHESTS#SLIGHTLY MORE WEAPON DROPS"
+		crown_text[15] = "REMOVE YOUR SECONDARY <w>WEAPON<w>#WHEN YOU GO THROUGH A <p>PORTAL<p>#<w>MORE CHESTS<w>#SLIGHTLY MORE <w>WEAPON<w> DROPS"
 	crown_used[15] = 0
 	crown_tips[15] = "this crown used to be in the game#but without the increased weapon droprate"
 /*
@@ -99,119 +104,119 @@ function scrCrowns() {
 	crown_tips[15] = "double crown of blood"
 */
 	crown_name[16] = "[CROWN OF POPO]"
-	crown_text[16] = "AN EXTRA VAN SPAWNS EACH AREA#POPO DROP RADS"
+	crown_text[16] = "AN EXTRA <b>VAN<b> SPAWNS EACH AREA#<b>POPO<b> DROP <g>RADS<g>"
 	crown_used[16] = 0
 	crown_tips[16] = "in love with da popo"
 
 	crown_name[17] = "[CROWN OF INDECISION]"
-	crown_text[17] = "REPLACE WEAPON MOD STATIONS#WITH ULTRA CHESTS"
+	crown_text[17] = "REPLACE <w>WEAPON MOD STATIONS<w>#WITH <g>ULTRA CHESTS<g>"
 	crown_used[17] = 0
 	crown_tips[17] = "diversity"
 
 	crown_name[18] = "[CROWN OF GREED]"
-	crown_text[18] = "YOU TAKE DOUBLE DAMAGE#INCREASE VALUE OF RADIATION"
+	crown_text[18] = "YOU TAKE <r>DOUBLE DAMAGE<r>#INCREASE <w>VALUE<w> OF <g>RADIATION<g>"
 	crown_used[18] = 0
 	crown_tips[18] = "crown of green"
 	
 	crown_name[19] = "[CROWN OF BLINDNESS]"
-	crown_text[19] = "EVERY AREA IS DARK#ENEMIES CAN HIT EACH OTHER"
+	crown_text[19] = "EVERY AREA IS <p>DARK<p>#ENEMIES CAN HIT EACH OTHER"
 	crown_used[19] = 0
 	crown_tips[19] = "friendly fire"
 	
 	crown_name[20] = "[CROWN OF PROTECTION]"
-	crown_text[20] = "WEAPON DROPS GIVE 1 ARMOUR#INSTEAD OF GIVING AMMO#INCREASE ARMOUR MAX BY 1"
+	crown_text[20] = "<w>WEAPON<w> DROPS GIVE 1 <gb>ARMOUR<gb>#INSTEAD OF GIVING <y>AMMO<y>#INCREASE <gb>ARMOUR<gb> MAX BY 1"
 	crown_used[20] = 0
 	crown_tips[20] = "stay safe"//Always use protection..  that joke is too predictable
 	
 	crown_name[21] = "[CROWN OF RISK]"
-	crown_text[21] = "70% HIGHER DROPRATE#WHEN ABOVE 75% MAX HP#50% LOWER DROPRATE#WHEN BELOW 75% MAX HP"
+	crown_text[21] = "70% HIGHER <w>DROP RATE<w>#WHEN ABOVE 75% <r>MAX HP<r>#50% LOWER <w>DROP RATE<w>#WHEN BELOW 75% <r>MAX HP<r>"
 	crown_used[21] = 0
 	crown_tips[21] = "a risk worth taking"
 	
 	crown_name[22] = "[CROWN OF LUCK]"
-	crown_text[22] = "START EACH AREA WITH 1 HP#25% CHANCE ANY ENEMY#SPAWNS IN WITH 10% HP"
+	crown_text[22] = "START EACH AREA WITH 1 <r>HP<r>#25% CHANCE ANY ENEMY#SPAWNS IN WITH 10% <r>HP<r>"
 	crown_used[22] = 0
 	crown_tips[22] = "crown of 1hp equality"
 	
 	crown_name[23] = "[CROWN OF SPEED]"
-	crown_text[23] = "ALL PROJECTILES ARE FASTER#EVERYONE MOVES SLIGHTLY FASTER"
+	crown_text[23] = "ALL PROJECTILES ARE <w>FASTER<w>#EVERYONE MOVES SLIGHTLY <w>FASTER<w>"
 	crown_used[23] = 0
 	crown_tips[23] = "gotta go fast"
 	
 	//Secret crown of destiny
 	crown_name[24] = "[CROWN OF SLOTH]"
-	crown_text[24] = "ALL PROJECTILES ARE SLOWER#EVERYONE MOVES SLIGHTLY SLOWER#EACH AREA THE DIFFICULTY#AND WEAPON TIER DECREASES#INSTEAD OF INCREASES"
+	crown_text[24] = "ALL PROJECTILES ARE <w>SLOWER<w>#EVERYONE MOVES SLIGHTLY <w>SLOWER<w>#EACH AREA THE <w>DIFFICULTY<w>#AND WEAPON <w>TIER<w> DECREASES#INSTEAD OF INCREASES"
 	crown_used[24] = 0
 	crown_tips[24] = "slow it down there buddy"
 	
 	//Secret crown two explosive weapons
 	crown_name[25] = "[CROWN OF FREEDOM]"
-	crown_text[25] = "WALLS DON'T EXIST"
+	crown_text[25] = "<w>WALLS<w> DON'T EXIST"
 	crown_used[25] = 0
 	crown_tips[25] = "remove all barriers"
 	
 	//Secret crown two energy weapons
 	crown_name[26] = "[CROWN OF ENERGY]"
-	crown_text[26] = "THE CROWN GETS A LASER PISTOL#AND FIGHTS WITH YOU#CONSTANT ION STRIKES RAIN DOWN UPON YOU"
+	crown_text[26] = "THE CROWN GETS A <g>LASER PISTOL<g>#AND FIGHTS WITH YOU#CONSTANT <g>ION STRIKES<g> RAIN DOWN UPON YOU"
 	crown_used[26] = 0
 	crown_tips[26] = "just give it a gun and it is fun"
 	
 	//Morph or disco
 	crown_name[27] = "[CROWN OF DISCO]"
-	crown_text[27] = "DANCE BABY DANCE!#WARNING FLASHING LIGHTS"
+	crown_text[27] = "<pi>DANCE BABY DANCE!<pi>#WARNING FLASHING LIGHTS"
 	crown_used[27] = 0
 	crown_tips[27] = "disco!"
 	
 	//COB
 	crown_name[28] = "[CROWN OF APOCALYPSE]"
-	crown_text[28] = "GORE GALORE!#ABSURD AMOUNT OF ENEMIES!#ALMOST NO RADS"
+	crown_text[28] = "<r>GORE GALORE!<r>#ABSURD AMOUNT OF <w>ENEMIES<w>!#ALMOST NO <g>RADS<g>"
 	crown_used[28] = 0
 	crown_tips[28] = "your death has been signed#when you gave in to your greed"
 	
 	//Weapon mods
 	crown_name[29] = "[CROWN OF PURITY]"
-	crown_text[29] = "DISABLE WEAPON MODS#FOR EACH WEAPON MOD ON A WEAPON#GAIN +1 MAX HP#WHILE HOLDING THAT WEAPON"
+	crown_text[29] = "DISABLE <w>WEAPON MODS<w>#FOR EACH <w>WEAPON MOD<w> ON A WEAPON#GAIN +1 <r>MAX HP<r>#WHILE HOLDING THAT WEAPON"
 	crown_used[29] = 0
 	crown_tips[29] = "pure"
 	
 	//Daily
 	crown_name[30] = "[CROWN OF MERCENARY]"
-	crown_text[30] = "+2 MAX HP# AT THE END OF EACH AREA#LOSE 20 KILLS"
+	crown_text[30] = "+2 <r>MAX HP<r># AT THE END OF EACH AREA#LOSE 20 <w>KILLS<w>"
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
-		crown_text[30] = "+2 MAX ARMOUR# AT THE END OF EACH AREA#LOSE 20 KILLS"
+		crown_text[30] = "+2 <gb>MAX ARMOUR<gb># AT THE END OF EACH AREA#LOSE 20 <w>KILLS<w>"
 	crown_used[30] = 0
 	crown_tips[30] = "there is no crime worse than tax fraud"
 	
 	//Mercenary
 	crown_name[31] = "[CROWN OF BOUNTY]"
-	crown_text[31] = "-2 MAX HP# AT THE END OF EACH AREA#GAIN 20 KILLS"
+	crown_text[31] = "-2 <r>MAX HP<r># AT THE END OF EACH AREA#GAIN 20 <w>KILLS<w>"
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
-		crown_text[31] = "-2 MAX ARMOUR# AT THE END OF EACH AREA#GAIN 20 KILLS"
+		crown_text[31] = "-2 <gb>MAX ARMOUR<gb># AT THE END OF EACH AREA#GAIN 20 <w>KILLS<w>"
 	crown_used[31] = 0
 	crown_tips[31] = "no pain no gain"
 	
 	//Luck
 	crown_name[32] = "[CROWN OF MISFORTUNE]"
-	crown_text[32] = "LOWER DROPRATE#PICKUPS GIVE BOTH HEALTH AND AMMO"
+	crown_text[32] = "LOWER <w>DROP RATE<w>#PICKUPS GIVE BOTH <r>HEALTH<r> AND <y>AMMO<y>"
 	crown_used[32] = 0
 	crown_tips[32] = "don't leave it up to chance"
 	
 	//Visit a vault twice with the same crown?
 	crown_name[33] = "[CROWN OF ECHO]"
-	crown_text[33] = "YOUR WEAPONS FIRE TWICE#RELOAD TIME IS ALMOST DOUBLED"
+	crown_text[33] = "YOUR WEAPONS FIRE <w>TWICE<w>#<w>RELOAD TIME<w> IS ALMOST <w>DOUBLED<w>"
 	crown_used[33] = 0
 	crown_tips[33] = "duplication"
 	
 	//take rush crown
 	crown_name[34] = "[CROWN OF TIME]"
-	crown_text[34] = "REPLACE YOUR ACTIVE WITH REWIND:#RESET TIME#TO THE START OF THE CURRENT AREA##CAN BE USED ONCE EACH AREA#TWICE IF YOU HAVE THRONEBUTT"
+	crown_text[34] = "REPLACE YOUR ACTIVE WITH <w>REWIND<w>:#RESET <p>TIME<p>#TO THE START OF THE CURRENT AREA##CAN BE USED ONCE EACH AREA#TWICE IF YOU HAVE <g>THRONEBUTT<g>"
 	crown_used[34] = 0
 	crown_tips[34] = "again"
 	
 	//have no melee
 	/*
 	crown_name[35] = "[CROWN OF DROWNING]"
-	crown_text[35] = "DOUBLE AMMO COST#+4 MAX HP#WHENEVER YOU RUN OUT OF AMMO#HEAL 3HP"
+	crown_text[35] = "DOUBLE <y>AMMO<y> COST#WHENEVER YOU RUN OUT OF AMMO#<r>HEAL<r> 4HP"
 	crown_used[35] = 0
 	crown_tips[35] = "again"
 	*/

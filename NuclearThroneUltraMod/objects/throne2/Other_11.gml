@@ -1,6 +1,7 @@
 /// @description Fire LASER big balls
 if target != noone && instance_exists(target)
 {
+	snd_play(sndBigBallFire);
 	if loops > random(3)
 	{
 		with instance_create(x,y,Throne2BigBulletSpawn)

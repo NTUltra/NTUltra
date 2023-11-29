@@ -9,6 +9,12 @@ with BigFishSkull {
 	}
 }
 if target != noone {
+	if reachedHalf && my_health < maxhealth*0.5
+	{
+		actTime -= 2;
+		reachedHalf = true;
+		event_user(0);
+	}
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
 		if (target.x < x && image_xscale > 0) || (target.x > x && image_xscale < 0) {
 			event_user(1);//Turn around	
@@ -49,6 +55,7 @@ if target != noone {
 			}
 			else
 			{
+				//DIG
 				event_user(0);
 			}
 		}

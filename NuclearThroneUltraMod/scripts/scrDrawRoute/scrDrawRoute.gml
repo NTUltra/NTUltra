@@ -4,7 +4,8 @@
 function scrDrawRoute(){
 	//To reveal all or not to reveal all?
 	//scrDrawOneRoute(everyArea,array_length(everyArea) - 1, 1, c_dkgray, false, true);
-	var discoveredNames = scrDrawOneRoute(allRoutes,array_length(allRoutes) - 1, 1, c_dkgray, true);
+	var discoveredNames = scrDrawOneRoute(allRoutes,array_length(allRoutes) - 1, 1, 
+	make_colour_rgb(16,16,16), true);
 	if array_length(route) < 1
 		return;
 	if UberCont.normalGameSpeed == 60

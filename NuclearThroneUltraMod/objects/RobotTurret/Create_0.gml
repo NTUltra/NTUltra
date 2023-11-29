@@ -3,6 +3,7 @@ my_health = maxhealth;
 meleedamage = 0
 mySize = 1
 event_inherited();
+maxSpeed = 3;
 scrWeapons();
 roll = 0;
 hurt_pitch_variation = 0.1;

@@ -2,7 +2,9 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "InvertedSandWorm",
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
@@ -10,8 +12,8 @@
     "path": "folders/Objects/Enemies.yy",
   },
   "parentObjectId": {
-    "name": "enemyCollisionWall",
-    "path": "objects/enemyCollisionWall/enemyCollisionWall.yy",
+    "name": "SandWorm",
+    "path": "objects/SandWorm/SandWorm.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -29,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprSandWorm",
-    "path": "sprites/sprSandWorm/sprSandWorm.yy",
+    "name": "sprInvertedSandWorm",
+    "path": "sprites/sprInvertedSandWorm/sprInvertedSandWorm.yy",
   },
   "spriteMaskId": {
     "name": "mskSandWorm",

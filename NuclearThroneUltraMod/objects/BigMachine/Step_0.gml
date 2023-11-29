@@ -17,3 +17,15 @@ alarm[0] = 2+random(4)
 }           }
 }
 
+if !instance_exists(Player) && sndtaunt = 0
+{
+	if is60fps
+		tauntdelay += 0.5;
+	else
+		tauntdelay += 1
+	if tauntdelay > 50
+	{
+		snd_play_2d(sndBigMachineWin);
+		sndtaunt = 1
+	}
+}

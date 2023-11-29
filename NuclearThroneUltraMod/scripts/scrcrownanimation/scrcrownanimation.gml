@@ -61,13 +61,17 @@ function scrCrownAnimation(takenCrown){
 			spr_idle = sprCrown11Idle
 			spr_walk = sprCrown11Walk
 		break;
-		case 13://Natural selection
+		case 13://Drowning
 			spr_idle = sprCrown12Idle
 			spr_walk = sprCrown12Walk
+			//Bubbles
+			alarm[4] = 5;
+			alarm[5] = 4;
 		break;
 		case 14://Curses
 			spr_idle = sprCrown13Idle
 			spr_walk = sprCrown13Walk
+			alarm[6] = 2;
 		break;
 		case 15://Choice
 			spr_idle = sprCrown14Idle

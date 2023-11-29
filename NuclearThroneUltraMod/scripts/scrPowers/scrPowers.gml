@@ -38,8 +38,14 @@ function scrPowers() {
 	{
 		if rewinds > 0
 			scrRewindTime();
+		var alien = alienIntestines*0.5;
 		scrAlienIntestines();
-		
+		var delay = 5;
+		with YungCuzDupe {
+			alienIntestines = alien;
+			alarm[6] = delay;
+			delay += 5;
+		}
 		
 	if race == 26//Good O'l Humphry
 	{
@@ -2051,6 +2057,7 @@ function scrPowers() {
 			var resulttar = -1;
 			var grabbedEnemy = false;
 			var slappedProjectile = false;
+			var itemGrab = false;
 			//Ultra target projectiles
 			if ultra_got[107]
 			{
@@ -2064,6 +2071,7 @@ function scrPowers() {
 						{
 							resulttar = tar;
 							slappedProjectile = true;
+							itemGrab = false;
 						}
 					}
 				}
@@ -2076,6 +2084,7 @@ function scrPowers() {
 				{
 					resulttar = tar;
 					slappedProjectile = false;
+					itemGrab = true;
 				}
 			}
 			if instance_exists(RadChest)
@@ -2086,6 +2095,7 @@ function scrPowers() {
 				{
 					resulttar = tar;
 					slappedProjectile = false;
+					itemGrab = true;
 				}
 			}
 			if instance_exists(enemy)
@@ -2098,6 +2108,7 @@ function scrPowers() {
 					grabbedEnemy = true;
 					resulttar = tar;
 					slappedProjectile = false;
+					itemGrab = false;
 				}
 			}
 			if resulttar == -1
@@ -2111,6 +2122,7 @@ function scrPowers() {
 					{
 						resulttar = tar;
 						slappedProjectile = false;
+						itemGrab = true;
 					}
 				}
 			}
@@ -2125,6 +2137,7 @@ function scrPowers() {
 						resulttar = tar;
 						targetPickup = true;
 						slappedProjectile = false;
+						itemGrab = true;
 					}
 				}
 			}
@@ -2196,6 +2209,11 @@ function scrPowers() {
 								lerpSpeed *= 1.5;
 							}
 						}
+					}
+					if (itemGrab)
+					{
+						grabAnItem = true;
+						lerpSpeed *= 2;
 					}
 					if slappedProjectile
 					{

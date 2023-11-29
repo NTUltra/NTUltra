@@ -3,8 +3,11 @@ image_speed = 0.4
 
 hurt_pitch_variation = 0;
 maxSpeed = Player.maxSpeed;
+alienIntestines = 0;
+alienDir = 5;
 hardshell=true;
 isAlkaline=false;
+metabolism = 0;
 hammerheadtimer=0;
 hammerheadcounter=0;
 skill_got = Player.skill_got;

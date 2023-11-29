@@ -31,6 +31,7 @@ if canSpawn
 				{
 					motion_add(angle,pspd);
 					image_angle = direction
+					image_speed *= 2;
 					team = other.team
 					owner = other.owner;
 				}

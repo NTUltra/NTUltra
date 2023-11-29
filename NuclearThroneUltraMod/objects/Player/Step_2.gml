@@ -429,7 +429,7 @@ if skill_got[38] && tookHit && alarm[3] < 1 && alarm[1] < 1
 	{
 		metabolism = 0;
 		my_health = prevhealth;
-		alarm[3] = alarm[3] + 5;
+		alarm[3] = alarm[3] + 2;
 		audio_stop_sound(snd_hurt);
 		snd_hurt = sndDamageNegate;
 		snd_play_2d(sndMetabolism,0.1);
@@ -635,9 +635,9 @@ if (tookHit)
 		{
 			resetPrevHealth = true;
 			if race=25
-				alarm[3] = max(23,alarm[3]);
+				alarm[3] = max(22,alarm[3]);
 			else
-				alarm[3] = max(alarm[3],18);//duration
+				alarm[3] = max(alarm[3],17);//duration
 			canAnimateDuringImmune = 0;
 			snd_hurt = sndDamageNegate;
 			instance_create(x,y,EuphoriaBlock);
@@ -788,6 +788,11 @@ if rollIframe > 0
 	if rollIframe > 0
 	{
 		mask_index = mskPickupThroughWall;	
+		var hitEnems = ds_list_create();
+		var al = collision_circle_list(x,y,22,enemy,false,false,hitEnems,false);
+		for (var i = 0; i < al; i++) {
+			scrContactDamageToEnemy(hitEnems[| i]);	
+		}
 	}
 }
 

@@ -15,7 +15,7 @@ function scrUltras(altOverride = false) {
 
 	//FISH
 	ultra_name[1] = "CONFISCATE"
-	ultra_text[1] = "ENEMIES SOMETIMES DROP <w>CHESTS<w>#(EFFECTED BY DROPRATE)#<g>OPEN MIND<g> INCREASES#CHANCE BY 10%"
+	ultra_text[1] = "ENEMIES SOMETIMES DROP <w>CHESTS<w>#(EFFECTED BY DROP RATE)#<g>OPEN MIND<g> INCREASES#CHANCE BY 10%"
 	ultra_tips[1] = "that's mine"
 
 	ultra_name[2] = "GUN WARRANT"
@@ -210,7 +210,7 @@ function scrUltras(altOverride = false) {
 		if altOverride || (instance_exists(Player) && !isOtherCharacter && Player.skill_got[23])//Has open mind
 			ultra_text[30] = "EATING WEAPONS HAS A 40% CHANCE#TO DROP <w>CHESTS<w>##EATING A WEAPON DROPS IT LIKE A TURRET#THE <w>TURRET<w> FIRES THE EATEN WEAPON##AUTO EAT WEAPONS LEFT IN THE LEVEL";
 		else
-			ultra_text[30] = "+15% <w>WEAPON DROPRATE<w>#EATING WEAPONS HAS A 30% CHANCE#TO DROP <w>CHESTS<w>##EATING A WEAPON DROPS IT LIKE A TURRET#THE <w>TURRET<w> FIRES THE EATEN WEAPON##AUTO EAT WEAPONS LEFT IN THE LEVEL"
+			ultra_text[30] = "+15% <w>WEAPON DROP RATE<w>#EATING WEAPONS HAS A 30% CHANCE#TO DROP <w>CHESTS<w>##EATING A WEAPON DROPS IT LIKE A TURRET#THE <w>TURRET<w> FIRES THE EATEN WEAPON##AUTO EAT WEAPONS LEFT IN THE LEVEL"
 		ultra_tips[30] = "2% more chance for weapon chests"
     
 	    ultra_name[31] = "EXTRA STORAGE"

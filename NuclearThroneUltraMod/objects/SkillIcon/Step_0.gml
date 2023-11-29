@@ -185,25 +185,30 @@ else if skill = 18//last wish
 	    }
 	}
 
-	Player.my_health = Player.maxhealth
+	Player.my_health = max(Player.my_health,Player.maxhealth);
+	if !Player.ultra_got[26] {
+		if Player.ammo[1] > Player.typ_amax[1]
+		Player.ammo[1] = Player.typ_amax[1]
 
-	if Player.ammo[1] > Player.typ_amax[1]
-	Player.ammo[1] = Player.typ_amax[1]
+		if Player.ammo[2] > Player.typ_amax[2]
+		Player.ammo[2] = Player.typ_amax[2]
 
-	if Player.ammo[2] > Player.typ_amax[2]
-	Player.ammo[2] = Player.typ_amax[2]
+		if Player.ammo[3] > Player.typ_amax[3]
+		Player.ammo[3] = Player.typ_amax[3]
 
-	if Player.ammo[3] > Player.typ_amax[3]
-	Player.ammo[3] = Player.typ_amax[3]
+		if Player.ammo[4] > Player.typ_amax[4]
+		Player.ammo[4] = Player.typ_amax[4]
 
-	if Player.ammo[4] > Player.typ_amax[4]
-	Player.ammo[4] = Player.typ_amax[4]
-
-	if Player.ammo[5] > Player.typ_amax[5]
-	Player.ammo[5] = Player.typ_amax[5]
+		if Player.ammo[5] > Player.typ_amax[5]
+		Player.ammo[5] = Player.typ_amax[5]
+	}
 
 	if Player.curse = 1 or Player.bcurse = 1 or Player.ccurse = 1
 	{
+		if scrIsCrown(14) {
+			snd_play(sndHealthPickup);
+			scrHeal(1);	
+		}
 		snd_play_2d(sndUncurse);
 		repeat(10)
 			instance_create(Player.x+random(16)-8,Player.y+random(16)-8,Curse)
@@ -211,6 +216,7 @@ else if skill = 18//last wish
 	Player.curse = 0
 	Player.bcurse = 0
 	Player.ccurse = 0;
+	
 	if UberCont.lastwishused=false
 	{
 		UberCont.lastwishused = true;

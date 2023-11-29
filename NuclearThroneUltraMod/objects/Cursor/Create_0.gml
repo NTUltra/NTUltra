@@ -10,4 +10,5 @@ var s = UberCont.opt_crosshair_scale;
 var sw = sprite_get_width(sprite_index);
 var sh = sprite_get_height(sprite_index);
 scale = s/max(sw,sh);
+colour = UberCont.opt_crosshair_colour;
 display_set_gui_maximise(1,1);

@@ -23,6 +23,14 @@ if team != other.team
 				instance_destroy();	
 			}
 		}
+		else if other.typ == 3
+		{
+			with other
+			{
+				x = xprevious;
+				y = yprevious;
+			}
+		}
 	}
 }
 

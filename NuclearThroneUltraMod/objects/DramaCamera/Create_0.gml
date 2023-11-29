@@ -4,7 +4,7 @@ if instance_exists(InvaderBossSpawnPortal) || instance_exists(BossInvasionNoName
 	exit;
 }
 scrActivateAllOutOfRange();
-if !instance_exists(SurvivalWave)
+if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exists(WallCrawler)
 {
     ///
     with MusCont
@@ -20,10 +20,6 @@ if !instance_exists(SurvivalWave)
     if area = 1 || area = 105
 	{
 		song = musBoss1;
-		if subarea == 2
-		{
-			song = musBoss3;
-		}
 	}
     else if area = 3 || area = 106 || area == 136
 	{
@@ -111,6 +107,14 @@ if instance_exists(InvertedSandWorm)
 else if instance_exists(SandWorm)
 {
 	name = "SAND WORM";
+}
+if instance_exists(WallCrawler)
+{
+	name = "WALL CRAWLER";
+}
+else if instance_exists(InvertedWallCrawler)
+{
+	name = "INVERTED WALL CRAWLER";
 }
 else if instance_exists(UltraBigDog)
 {

@@ -163,9 +163,18 @@ if instance_exists(Player)
 	{
 		with Player
 		{
-			x = 10016+96;
-			y = 10016+128;
-			scrForcePosition60fps();
+			if instance_exists(BigMachine)
+			{
+				x = BigMachine.x - 32;
+				y = BigMachine.y + 128;
+				scrForcePosition60fps();
+			}
+			if instance_exists(InvertedBigMachine)
+			{
+				x = InvertedBigMachine.x - 32;
+				y = InvertedBigMachine.y + 128;
+				scrForcePosition60fps();
+			}
 			with enemy
 			{
 				if point_distance(x,y,other.x,other.y) < 96

@@ -35,6 +35,7 @@ mod3[]
 mySize = 1;
 team = 0;
 my_health = 1;
+maxhealth = 1;
 meleedamage = 0;
 wepmod1=0;
 if instance_exists(Player)

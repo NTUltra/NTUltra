@@ -100,14 +100,14 @@ function scrDrop(itemdrop, weapondrop) {
 	//weapondrop *= 1.01;//weapon
 	//itemdrop *= 1.01;//1.16//item
 	//calculate need
-
+/*
 	if scrIsCrown(13)//no rads higher droprate crown
 	{
 		weapondrop *= 1.3;
 		itemdrop *= 1.3;
 		dropRateBuff += 0.3;
 	}
-
+*/
 	if scrIsGamemode(2){
 		weapondrop+=10
 		itemdrop+=10

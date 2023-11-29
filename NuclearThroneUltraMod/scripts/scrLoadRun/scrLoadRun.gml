@@ -155,6 +155,10 @@ function scrLoadRun(){
 				Player.boostLevel = encryptedRun.boostLevel;
 				if variable_struct_exists(encryptedRun, "routeString")
 					UberCont.routeString = encryptedRun.routeString;
+				if variable_struct_exists(encryptedRun, "previousRoute")
+					UberCont.previousRoute = encryptedRun.previousRoute;
+				else
+					UberCont.previousRoute = 100;
 				if variable_struct_exists(encryptedRun, "time_frame")
 					UberCont.time_frame = encryptedRun.time_frame;
 				UberCont.time_microseconds = encryptedRun.time_microseconds;
