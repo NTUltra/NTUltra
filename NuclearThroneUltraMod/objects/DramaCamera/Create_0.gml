@@ -108,7 +108,7 @@ else if instance_exists(SandWorm)
 {
 	name = "SAND WORM";
 }
-if instance_exists(WallCrawler)
+else if instance_exists(WallCrawler)
 {
 	name = "WALL CRAWLER";
 }

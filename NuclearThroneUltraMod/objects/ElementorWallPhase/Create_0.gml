@@ -4,7 +4,7 @@ alarm[2] = 160;
 blink = 15;
 if instance_exists(Player)
 { 
-	if Player.ultra_got[93]
+	if Player.ultra_got[93] && !Player.altUltra
 	{
 		phaseable = true;
 		solid = false;

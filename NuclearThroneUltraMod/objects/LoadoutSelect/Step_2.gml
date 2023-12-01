@@ -118,10 +118,6 @@ if race != 0 && UberCont.mouse__x > sx-24 and UberCont.mouse__x < sx and UberCon
 			UberCont.skin[race] = skin;
 		snd_play_2d(choose(sndMenuASkin,sndMenuBSkin));
 	}
-
-	with UberCont
-		scrSave();
-
 }
 else
 scale=1;

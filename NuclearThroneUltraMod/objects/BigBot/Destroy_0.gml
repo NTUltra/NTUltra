@@ -1,5 +1,5 @@
-scrDrop(30,10)
-
+scrDrop(35,10)
+scrDrop(15,0)
 event_inherited()
 
 if existTime > 15

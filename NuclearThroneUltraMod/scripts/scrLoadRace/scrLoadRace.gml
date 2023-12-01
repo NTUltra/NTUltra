@@ -1,4 +1,5 @@
 function scrLoadRace() {
+	snd_good = [];
 	//RACE STUFF not using the stupid functions
 	if bskin = 1
 	{
@@ -818,15 +819,15 @@ function scrLoadRace() {
 	snd_valt=sndMutant14Valt;
 	break;
 	case 15://Atom
-	snd_hurt=sndPlasma;
-	snd_dead=sndExplosionXL;
-	snd_lowa=sndSpark1;
-	snd_lowh=sndSpark2;
-	snd_crwn=sndAtomCrown;
-	snd_chst=sndPlasmaUpg;
-	snd_wrld=sndPlasmaBig;
-	snd_thrn=sndPlasmaBigExplode;
-	snd_valt=sndPlasmaBigExplodeUpg;
+	snd_hurt=sndMutant15Hurt;
+	snd_dead=sndMutant15Dead;
+	snd_lowa=sndMutant15LowA;
+	snd_lowh=sndMutant15LowH;
+	snd_crwn=sndMutant15Crwn;
+	snd_chst=sndMutant15Chst;
+	snd_wrld=sndMutant15Wrld;
+	snd_thrn=sndMutant15Thrn;
+	snd_valt=sndMutant15Valt;
 	break;
 	case 16://Viking
 	snd_hurt=sndMutant16Hurt
@@ -852,14 +853,14 @@ function scrLoadRace() {
 	break;
 	case 18://ANGEL 
 	snd_hurt=sndAngelHit
-	snd_dead=sprProtoStatueDoneDie
+	snd_dead=sndStatueDead
 	snd_lowa=sndScorpionDie;
 	snd_lowh=sndStatueDead;
-	snd_crwn=sprProtoStatueDone;
+	snd_crwn=sndStatueCharge;
 	snd_chst=sndStatueCharge;
-	snd_wrld=sprProtoStatueDone;
+	snd_wrld=sndStatueCharge;
 	snd_thrn=sndStatueCharge;
-	snd_valt=sprProtoStatueDone;
+	snd_valt=sndStatueCharge;
 	break;
 	case 19://SKELETON
 	snd_hurt=sndMutant19Hurt
@@ -951,16 +952,17 @@ function scrLoadRace() {
 	break;
 	
 	case 27://
-	snd_hurt=sndMutant27HurtFinal;
-	snd_dead=sndMutant27DeadFinal;
-	snd_lowa=sndMutant27LowAFinal;
-	snd_lowh=sndMutant27LowHFinal;//
-	snd_crwn=sndMutant27CrwnFinal;
-	snd_chst=sndMutant27ChstFinal;//chst
-	snd_wrld=sndMutant27WrldFinal;
-	snd_thrn=sndMutant27ThrnFinal;//
-	snd_valt=sndMutant27ValtFinal;
-	snd_cpt=sndMutant27CptFinal;//Captain win (unused for now)
+	snd_hurt=sndMutant27Hurt;
+	snd_dead=sndMutant27Dead;
+	snd_lowa=sndMutant27LowA;
+	snd_lowh=sndMutant27LowH;//
+	snd_crwn=sndMutant27Crwn;
+	snd_chst=sndMutant27Chst;//chst
+	snd_wrld=sndMutant27Wrld;
+	snd_thrn=sndMutant27Thrn;//
+	snd_valt=sndMutant27Valt;
+	snd_cpt=sndMutant27Cpt;//Captain win (unused for now)
+	snd_good=[sndMutant27Chst2,sndMutant27Chst3];
 	break;
 
 	}

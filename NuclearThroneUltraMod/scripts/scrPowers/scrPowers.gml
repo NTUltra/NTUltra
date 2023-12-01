@@ -12,9 +12,9 @@ function scrPowers() {
 		if UberCont.normalGameSpeed == 60
 		{
 			if alienIntestines < 60
-				alienIntestines += 0.4;
+				alienIntestines += 0.375;
 			else
-				alienIntestines += 0.2;
+				alienIntestines += 0.175;
 			if race == 25
 			{
 				alienIntestines += 0.05;	
@@ -23,9 +23,9 @@ function scrPowers() {
 		else
 		{
 			if alienIntestines < 60
-				alienIntestines += 0.8;
+				alienIntestines += 0.75;
 			else
-				alienIntestines += 0.4;
+				alienIntestines += 0.35;
 			if race == 25
 			{
 				alienIntestines += 0.1;	
@@ -142,12 +142,16 @@ function scrPowers() {
 					if (team!= other.team
 					&& x > other.x - 170 && x < other.x + 170 && y > other.y - 130 && y < other.y + 130)
 					{
-						if (image_xscale > 0.15 + buffActive && image_yscale > 0.2 && speed > 1)
+						if (image_xscale > 0.15 + buffActive && image_yscale > 0.2 && speed > 2)
 						{
 							image_xscale *= 0.75;
 							image_yscale *= 0.75;
 							effective = true;
-							speed *= 0.4;
+							speed = max(speed*0.4,2);
+							if canBeMoved {
+								x = xprevious;
+								y = yprevious;
+							}
 						} else if (other.ultra_got[104])
 						{
 							effective = true;
@@ -367,7 +371,11 @@ function scrPowers() {
 			}
 			else
 			{
-				my_health--;
+				if armour > 0
+					armour -= 1;
+				else
+					my_health -= 1;
+				hitBy = sprite_index;
 				exception=true;
 			    if my_health<=0 //KILL YOSELF USING ACTIVE
 			    {
@@ -419,6 +427,7 @@ function scrPowers() {
 	    else if ultra_got[63]
 	    {
 	        my_health -= 2;
+			hitBy = sprite_index;
 	        exception=true
 	    }
 	    scrBlankArmour();
@@ -754,7 +763,11 @@ function scrPowers() {
 				}
 				else
 				{
-					my_health -= 1;
+					if armour > 0
+						armour -= 1;
+					else
+						my_health -= 1;
+					hitBy = sprite_index;
 					exception=true;
 					var splatDir = random(360);
 					var rpt = 3;
@@ -920,9 +933,16 @@ function scrPowers() {
 				}
 				ammo[wep_type[wep]]-= cost//2.5?
 				var heal = 0;
-				if ultra_got[70] && ammo[wep_type[wep]] <= 0
+				if  ammo[wep_type[wep]] <= 0
 				{
-					heal += 2;
+					if scrIsCrown(13)
+					{
+						with Crown {
+							event_user(0);	
+						}
+					}
+					if ultra_got[70]
+						heal += 2;
 				}
 				if UberCont.opt_ammoicon
 				{
@@ -1037,7 +1057,10 @@ function scrPowers() {
 			    if alarm[3]<2
 					alarm[3]=2;//imunity
 			    instance_create(x,y,Teleport);
-			    snd_play_2d(sndHyperLightning);
+			    if skill_got[5]
+					snd_play_2d(sndAtomTeleportUpg,0.2,true);
+				else
+					snd_play_2d(sndAtomTeleport,0.2,true);
 			    repeat(5){
 				    with instance_create(x,y,Smoke)
 				    motion_add(random(360),1+random(3))
@@ -1091,7 +1114,10 @@ function scrPowers() {
 			    alarm[3]=2;//imunity
 			
 			    instance_create(x,y,Teleport);
-			    snd_play_2d(sndHyperLightning);
+				if skill_got[5]
+					snd_play_2d(sndAtomTeleportUpg,0.2,true);
+				else
+					snd_play_2d(sndAtomTeleport,0.2,true);
 			    repeat(5){
 			    with instance_create(x,y,Smoke)
 			    motion_add(random(360),1+random(3))}
@@ -1188,7 +1214,10 @@ function scrPowers() {
 				alarm[3]=max(4,alarm[3]);//imunity
 	
 			instance_create(x,y,Teleport);
-			snd_play_2d(sndHyperLightning);
+			if skill_got[5]
+				snd_play_2d(sndAtomTeleportUpg,0.2,true);
+			else
+				snd_play_2d(sndAtomTeleport,0.2,true);
 			repeat(5){
 			with instance_create(x,y,Smoke)
 			motion_add(random(360),1+random(3))}
@@ -1343,7 +1372,11 @@ function scrPowers() {
 			        if ultra_got[47] {
 						if !altUltra
 						{
-							my_health -= 2//1/8--->0.875
+							if armour > 0
+								armour -= 1;
+							else
+								my_health -= 2//1/8--->0.875
+							hitBy = sprite_index;
 						}
 						else
 						{
@@ -1356,6 +1389,7 @@ function scrPowers() {
 						maxhealth=percMax;//0.5
 						if my_health > maxhealth
 							my_health = max(1,my_health-lostHp,maxhealth);
+						hitBy = sprite_index;
 			        }
         
 			        sprite_index = spr_hurt
@@ -1384,7 +1418,11 @@ function scrPowers() {
 		        if ultra_got[47] {
 					if !altUltra
 					{
-						my_health -= 2//1/8--->0.875
+						if armour > 0
+							armour -= 1;
+						else
+							my_health -= 2//1/8--->0.875
+						hitBy = sprite_index;
 					}
 					else
 					{
@@ -1397,6 +1435,7 @@ function scrPowers() {
 					maxhealth=percMax;//0.5
 					if my_health > maxhealth
 						my_health = max(1,my_health-lostHp,maxhealth);
+					hitBy = sprite_index;
 		        }
         
 		        sprite_index = spr_hurt
@@ -1598,8 +1637,19 @@ function scrPowers() {
 		else
 		{
 			if !(instance_exists(Ally))
-			{my_health -=1;}
-			else{my_health -= 2;
+			{
+				if armour > 0
+					armour -= 1;
+				else
+					my_health -= 1;
+				hitBy = sprite_index;
+			}
+			else{
+				if armour > 0
+					armour -= 1;
+				else
+					my_health -= 2;
+				hitBy = sprite_index;
 			}
 			exception=true;
 			if alarm[7]<1
@@ -2640,7 +2690,7 @@ function scrPowers() {
 
 	if race==24
 	{
-		if ultra_got[96] && altUltra
+		if ultra_got[93] && altUltra
 		{
 			if !instance_exists(ElementorWind)
 			{
@@ -2683,7 +2733,7 @@ function scrPowers() {
 				mask_index=mskWall;
 				var am = 1;
 				var i = 0;
-				if ultra_got[93]
+				if ultra_got[93] && !altUltra
 					am = 5;
 				var placedWall = false;
 				var mx = UberCont.mouse__x;

@@ -169,7 +169,7 @@ if round(ammo) > 0
 	}
 	if round(ammo) % fork == 0//Forking lightning
 	{
-		if instance_exists(Player) && Player.ultra_got[96] && !Player.altUltra && choose(true,true,false)
+		if instance_exists(Player) && Player.ultra_got[96] && choose(true,true,false)
 		{
 			with instance_create(x,y,Tentacle)
 			{

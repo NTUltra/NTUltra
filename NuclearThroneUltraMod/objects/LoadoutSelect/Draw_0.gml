@@ -40,6 +40,7 @@ if (hasNoMenuOpen()
 					col = c_white;
 					if mouse_check_button_pressed(mb_left)
 					{
+						snd_play_2d(sndClick);
 						wep = wepiter;
 					}
 				}
@@ -205,14 +206,17 @@ if (hasNoMenuOpen()
 		var xx = __view_get( e__VW.XView, 0 )+xo+304;
 		var yy = __view_get( e__VW.YView, 0 )+174;
 		draw_sprite(sprMutationSplat,3,xx+24,yy+44);
+		yy -= 5;
 		var scl = 1.5;
+		var renderAny = true;
 		if (UberCont.crown_start[Menu.race])
-			draw_sprite_ext(sprCrown0Idle,0,xx,yy,scl,scl,0,c_white,1);
+			draw_sprite_ext(sprLoadoutCrown,0,xx,yy-4,2,2,0,c_white,1);
 		if (isOverwriteWeapon && UberCont.wep_found[Menu.race,UberCont.opt_gm1wep])
 		{
 			if (UberCont.opt_gm1wep == 0)
 			{
 				var spr = sprAnyRandomWeapon;
+				scl = 2;
 			}
 			else
 			{
@@ -220,12 +224,57 @@ if (hasNoMenuOpen()
 			}
 		}
 		else if wep == -1
+		{
 			var spr = sprRandomWeapon;
+			scl = 2;
+		}
 		else
-			var spr = wep_sprt[UberCont.start_wep[wep]];
-		var sprw = (sprite_get_xoffset(spr)*scl) - (sprite_get_width(spr)*scl);
-		draw_sprite_ext(spr,0,xx+sprw-8,yy,scl,scl,0,c_white,1);
+		{
+			renderAny = false;
+			//var spr = wep_sprt[UberCont.start_wep[wep]];
+			//var sprw = (sprite_get_xoffset(sprStartingWeapons)*scl) - (sprite_get_width(sprStartingWeapons)*scl);
+			var spriteIndex = wep;
+			if spriteIndex == 0
+			{
+				var uniqueStartingWeapons = 40;
+				if race == 6 || race == 12
+					spriteIndex = uniqueStartingWeapons;//YC YV
+				else if race == 9
+					spriteIndex = uniqueStartingWeapons + 1;//CHICKEN
+				else if race == 11
+					spriteIndex = uniqueStartingWeapons + 2;//HUNTER
+				else if race == 13
+					spriteIndex = uniqueStartingWeapons + 3;//Sheep
+				else if race == 27
+					spriteIndex = uniqueStartingWeapons + 4;//Hands
+				else if race == 14
+					spriteIndex = uniqueStartingWeapons + 5;//Panda
+				else if race == 15
+					spriteIndex = uniqueStartingWeapons + 6;//Atom
+				else if race == 16
+					spriteIndex = uniqueStartingWeapons + 7;//Viking
+				else if race == 18 || race == 19
+					spriteIndex = uniqueStartingWeapons + 8;//Angel skeleton
+				else if race == 20
+					spriteIndex = uniqueStartingWeapons + 9;//Hog
+				else if race == 22
+					spriteIndex = uniqueStartingWeapons + 10;//Rogue
+				else if race == 23
+					spriteIndex = uniqueStartingWeapons + 11;//Frog
+				else if race == 24
+					spriteIndex = uniqueStartingWeapons + 12;//Elementor
+				else if race == 26
+					spriteIndex = uniqueStartingWeapons + 13;//Humphry
+			}
+			
+			draw_sprite_ext(sprStartingWeapons,spriteIndex,xx - 48,yy- 2,-1,1,0,c_white,1);
+		}
+		if (renderAny)
+		{
+			var sprw = (sprite_get_xoffset(spr)*scl) - (sprite_get_width(spr)*scl);
+			draw_sprite_ext(spr,0,xx+sprw-8,yy-2,scl,scl,0,c_white,1);
+		}
+		
 	}
     draw_sprite_ext(sprLoadOutArrow,1,__view_get( e__VW.XView, 0 )+xo+300,__view_get( e__VW.YView, 0 )+arrowOpenerY,wepopenscale,wepopenscale,0,c_white,wepopenscale-0.1);
-
 }

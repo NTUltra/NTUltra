@@ -7,5 +7,5 @@ if (myWall != noone && instance_exists(myWall))
 	targetWalkOriginY = y;
 	targetWalkX = myWall.x + 8;
 	targetWalkY = myWall.y;
-	alarm[1] = max(alarm[1],(1/targetWalkSpeed) + actTime);
+	alarm[1] = max(1,1 + (1/targetWalkSpeed));
 }

@@ -25,4 +25,5 @@ if instance_exists(Wall)
 	sprite_index = spr_idle;
 	right = choose(1,-1);
 	targetWalkTime = 2;
+	alarm[1] += actTime;
 }

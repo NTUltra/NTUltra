@@ -87,6 +87,7 @@ if target != noone
 				}
 			}
 			mask_index = msk;
+			ds_list_destroy(freaks);
 		}
 	}
 }

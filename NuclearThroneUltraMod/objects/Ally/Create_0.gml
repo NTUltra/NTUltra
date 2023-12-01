@@ -1,5 +1,5 @@
 raddrop = 4
-
+depth = -2;
 hurt_pitch_variation = 0;
 existTime = 0;
 maxSpeed = 5.5;

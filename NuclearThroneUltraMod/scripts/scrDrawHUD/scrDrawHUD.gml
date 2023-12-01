@@ -43,6 +43,10 @@ function scrDrawHUD() {
 	{
 		event_user(0);	
 	}
+	with RageIndicator
+	{
+		event_user(0);	
+	}
 	with LevelUp
 	draw_sprite(sprite_index,-1,x-ox,y-oy)
 	
@@ -392,7 +396,16 @@ function scrDrawHUD() {
 				if holdExplainMutation > 10
 					holdExplainMutation = 10;
 				if holdExplainMutation >= 10
-					scrDrawHelp("["+dataRef.ultra_name[dir]+"]\n"+dataRef.ultra_text[dir]);
+				{
+					if (dir == 33 && dataRef.altUltra)
+					{
+						scrDrawHelp("["+dataRef.ultra_name[dir]+"][" + string(dataRef.phoenixrevives) + "]\n"+dataRef.ultra_text[dir]);
+					}
+					else
+					{
+						scrDrawHelp("["+dataRef.ultra_name[dir]+"]\n"+dataRef.ultra_text[dir]);
+					}
+				}
 			}
 			dix+=1
 			

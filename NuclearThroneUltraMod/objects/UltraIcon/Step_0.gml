@@ -177,7 +177,7 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 			ultra_tips[55] = "how does it do that"
 		}
 	}
-	else if skill == 59 && Player.race == 15 && (!Player.skill_got[17] && (scrIsCrown(4) || scrIsCrown(28)) || Player.unlockAlternativeUltras)
+	else if skill == 59 && Player.race == 15 && (!Player.skill_got[17] && (scrIsCrown(4) || scrIsCrown(28) || scrIsCrown(3)) || Player.unlockAlternativeUltras)
 	{
 		with Player
 		{
@@ -206,15 +206,15 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 			ultra_tips[92] = "porkupine"
 		}
 	}
-	else if skill == 96 && Player.race == 24 && ((Player.patience > 0 || Player.guarenteedReroll > 0) || Player.unlockAlternativeUltras)
+	else if skill == 93 && Player.race == 24 && ((Player.patience > 0 || Player.guarenteedReroll > 0 || Player.skill_got[27]) || Player.unlockAlternativeUltras)
 	{
 		with Player
 		{
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			altUltra = true;
-			ultra_name[96] = "AIR LORD"
-			ultra_text[96] = "YOUR ACTIVE CHANGES INTO#WIND PUSH#WIND PUSHES PROJECTILES AND ENEMIES#ENEMIES HITTING A WALL TAKE MORE DAMAGE#THRONE BUTT MAKES THE WIND STRONGER"
-			ultra_tips[96] = "blow"
+			ultra_name[93] = "AIR LORD"
+			ultra_text[93] = "YOUR ACTIVE CHANGES INTO#WIND PUSH#WIND PUSHES PROJECTILES AND ENEMIES#ENEMIES HITTING A WALL TAKE MORE DAMAGE#THRONE BUTT MAKES THE WIND STRONGER"
+			ultra_tips[93] = "blow"
 		}
 	}
 	else if skill == 106 && Player.race == 27//Hands secret ultras
@@ -404,7 +404,7 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 			}
 		}
 	}
-	else if skill == 61 && Player.race == 16 && (scrKrakenWeapons(Player.wep) || scrKrakenWeapons(Player.bwep) || Player.unlockAlternativeUltras)
+	else if skill == 61 && Player.race == 16 && (scrKrakenWeapons(Player.wep) || Player.skill_got[39] || Player.area == 101 || Player.area == 122 || scrKrakenWeapons(Player.bwep) || scrIsCrown(13) || Player.unlockAlternativeUltras)
 	{
 		with Player
 		{

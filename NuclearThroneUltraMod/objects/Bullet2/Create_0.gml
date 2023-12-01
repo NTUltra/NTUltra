@@ -9,6 +9,7 @@ if instance_exists(Player)
 	{
 		shotgunshouldered = true;
 		friction = 0.4
+		alarm[2] = 1;
 		wallbounce = 8
 		alarm[1]+=4;
 

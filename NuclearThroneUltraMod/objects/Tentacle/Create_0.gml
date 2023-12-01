@@ -38,7 +38,7 @@ if instance_exists(Player)
 		fork = 8;
 		image_yscale += 0.3;
 	}
-	if Player.ultra_got[96] && !Player.altUltra{
+	if Player.ultra_got[96]{
 		canSwap = true;
 		fork = 8;
 	}

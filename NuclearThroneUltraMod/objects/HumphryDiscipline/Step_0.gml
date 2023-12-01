@@ -9,3 +9,15 @@ else
 	if (alpha <=0)
 		instance_destroy();
 }
+with projectile
+{
+	if (team != 2 && canBeMoved
+	&& x > other.x - 170 && x < other.x + 170 && y > other.y - 130 && y < other.y + 130)
+	{
+		if canBeMoved {
+			x -= hspeed;
+			y -= vspeed;
+			//scrForcePosition60fps();
+		}
+	}
+}

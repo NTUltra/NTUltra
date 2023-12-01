@@ -14,7 +14,7 @@ if prevhealth > my_health
 		{
 			dmgTaken = scrHandsDamageBuff(dmgTaken);
 		}
-		if ( (Player.skill_got[5] = 1) && (Player.race=11))//HUNTER THRONE BUTT
+		if ( (Player.skill_got[5]) && (Player.race = 11))//HUNTER THRONE BUTT
 		{
 			if dmgTaken > 0
 			    with Marker
@@ -23,7 +23,7 @@ if prevhealth > my_health
 				    {
 					    if other.id=target.id
 					    {
-							other.my_health -= dmgTaken*0.2;
+							other.my_health -= dmgTaken*0.25;
 					    }
 				    }
         

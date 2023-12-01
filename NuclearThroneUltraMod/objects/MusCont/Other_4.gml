@@ -53,10 +53,6 @@ if oldarea != area || area == 0 or !audio_is_playing(song) or audio_is_playing(m
     repeat(UberCont.racemax)
     deaths += UberCont.ctot_dead[dir]
 
-    if (confirmSound) {
-        snd_play_2d(confirmSound);
-        confirmSound = false;
-    }
 	var prevSong = song;
 	var prevAmb = amb;
     if area = 0 {
@@ -317,7 +313,20 @@ if oldarea != area || area == 0 or !audio_is_playing(song) or audio_is_playing(m
 
         amb = amb106;
     }
+	
+	if (confirmSound) {
+        snd_play_2d(confirmSound);
+        confirmSound = false;
+    }
+    //audio_master_gain(max(0, sqrt(UberCont.opt_sfxvol)))
+	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
 
+    audio_sound_gain(song, max(0, UberCont.opt_musvol), 0);
+
+    audio_sound_gain(amb, max(0, UberCont.opt_ambvol), 0);
+
+    audio_sound_gain(sndBossWin, max(0, UberCont.opt_musvol), 0);
+	
 	if song != prevSong || amb != prevAmb
 	{
 	    audio_stop_all();
@@ -336,14 +345,5 @@ if oldarea != area || area == 0 or !audio_is_playing(song) or audio_is_playing(m
 		amb = amb0b;
 		snd_loop(amb);
 	}
-
-    //audio_master_gain(max(0, sqrt(UberCont.opt_sfxvol)))
-	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
-
-    audio_sound_gain(song, max(0, UberCont.opt_musvol), 0);
-
-    audio_sound_gain(amb, max(0, UberCont.opt_ambvol), 0);
-
-    audio_sound_gain(sndBossWin, max(0, UberCont.opt_musvol), 0);
     //audio_sound_gain(sndVaultBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 }

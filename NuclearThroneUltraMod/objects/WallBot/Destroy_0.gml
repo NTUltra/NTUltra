@@ -1,5 +1,5 @@
 /// @description Boom
-scrDrop(15,0)
+scrDrop(23,0)
 
 event_inherited()
 

@@ -397,6 +397,8 @@ function scrShadows() {
 		draw_sprite(shd24,0,x-vx,y-vy)
 	with Ally
 		draw_sprite(shd24,0,x-vx,y-vy-1)
+	with TinyKraken
+		draw_sprite(shd24,0,x-vx,y-vy)
 	with Grunt
 	draw_sprite(shd24,0,x-vx,y-vy)
 	with ExploderPopo

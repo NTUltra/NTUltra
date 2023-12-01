@@ -65,7 +65,7 @@ if prevhealth > my_health
 		{
 			dmgTaken = dmgTaken*1.20;
 		}
-		if ( (Player.skill_got[5] = 1) && (Player.race=11))//HUNTER THRONE BUTT
+		if ( (Player.skill_got[5]) && (Player.race == 11))//HUNTER THRONE BUTT
 		{
 			if dmgTaken > 0
 			{
@@ -76,8 +76,8 @@ if prevhealth > my_health
 				    {
 					    if other.id == target.id
 					    {
-							other.my_health -= dmgTaken*0.2;
-							resultDmgTaken += (dmgTaken*0.2);
+							other.my_health -= dmgTaken*0.25;
+							resultDmgTaken += (dmgTaken*0.25);
 					    }
 				    }
         

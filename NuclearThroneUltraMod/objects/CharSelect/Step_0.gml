@@ -65,10 +65,10 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+16 and UberCon
     snd_cnfm=sndPandaHit;
     break;
     case 15:
-    snd_cnfm=sndPlasma;
+    snd_cnfm=sndMutant15Cnfm;
     break;
     case 16:
-    snd_cnfm=sndSnowTankPreShoot;
+    snd_cnfm=false;
     break;
     case 17:
     snd_cnfm=sndGunSmithLowHP;
@@ -101,7 +101,7 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+16 and UberCon
     snd_cnfm=sndMutant26Cnfm;
     break;
 	case 27:
-    snd_cnfm=sndMutant27CnfmFinal;
+    snd_cnfm=sndMutant27Cnfm;
     break;
     
     }
@@ -244,7 +244,7 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+16 and UberCon
     snd_slct=sndMutant26Slct;
     break;
 	case 27:
-    snd_slct=sndMutant27SlctFinal;
+    snd_slct=sndMutant27Slct;
     break;
     
     }

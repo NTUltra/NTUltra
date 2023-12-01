@@ -7092,6 +7092,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	with instance_create(x,y,ShortgunBurst)
 	{
+		accuracy = 50;
 		creator = other.id
 		ammo = 2
 		time = 1
@@ -9294,18 +9295,21 @@ function scrFire2(hasTailNow) {
 	{
 		with instance_create(x,y,Lightning)
 		{
+			dmg -= 1;
 			image_angle = random(360);
 			accuracy = 60;
 			branch = 40;
 			iframeskip = max(0,iframeskip-0.04);
 			team = 2
-			ammo = 6;//24
+			ammo = 5;//24
 			event_perform(ev_alarm,0)
 			visible = 0
 			with instance_create(x,y,LightningSpawn)
 			{
 				alarm[0] = other.alarm[0];
-				image_angle = other.image_angle
+				image_angle = other.image_angle;
+				image_speed = 0;
+				visible = false;
 			}
 		}
 	}
@@ -10574,6 +10578,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	with instance_create(x,y,UltraShortgunBurst)
 	{
+		accuracy = 50;
 		creator = other.id
 		ammo = 2
 		time = 1
@@ -12950,7 +12955,7 @@ function scrFire2(hasTailNow) {
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
 	with instance_create(x,y,Bullet1Toxic)
-	{motion_add(aimDirection+(random(8)-4)*other.accuracy,16)
+	{motion_add(aimDirection+(random(6)-3)*other.accuracy,16)
 	image_angle = direction
 	team = other.team}
 

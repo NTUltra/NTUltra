@@ -100,7 +100,10 @@ if place_meeting(x,y,Player)
 				}
 				if curse == 1
 					snd_play(sndCursedReminder);
-				snd_play(snd_thrn);
+				if array_length(snd_good) > 0
+					snd_play(snd_good[irandom(array_length(snd_good)-1)]);
+				else
+					snd_play(snd_thrn);
 
 			    Sleep(100);
 			    //BackCont.viewx2 += lengthdir_x(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake

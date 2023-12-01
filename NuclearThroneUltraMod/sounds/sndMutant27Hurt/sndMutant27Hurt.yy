@@ -10,14 +10,14 @@
   "bitRate": 192,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.372094,
+  "duration": 2.394521,
   "parent": {
     "name": "Hands",
     "path": "folders/Sounds/Player/Hands.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "sndMutant27Hurt.ogg",
+  "soundFile": "sndMutant27Hurt.wav",
   "type": 0,
   "volume": 1.0,
 }

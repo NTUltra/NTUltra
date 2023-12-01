@@ -1,19 +1,18 @@
-if team != other.team and other.team != 2
+with other
 {
-	if (typ = 1 or typ = 2)
+	if team != 2 && team != other.team
 	{
-		if isGrenade
-			instance_destroy(id,false);
-		else
-			instance_destroy();
-	}
-	else if other.typ == 3
-	{
-		with other
+		if (typ = 1 or typ = 2)
+		{
+			if isGrenade
+				instance_destroy(id,false);
+			else
+				instance_destroy();
+		}
+		else if typ == 3
 		{
 			x = xprevious;
 			y = yprevious;
 		}
 	}
 }
-

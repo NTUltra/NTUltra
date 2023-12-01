@@ -15,8 +15,8 @@
     "path": "folders/Objects/Player/Ability.yy",
   },
   "parentObjectId": {
-    "name": "FX",
-    "path": "objects/FX/FX.yy",
+    "name": "All",
+    "path": "objects/All/All.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

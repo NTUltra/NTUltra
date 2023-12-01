@@ -12,7 +12,7 @@ for(var i = 0; i < al; i ++)
 	with proj[| i] {
 		if team == Player.team
 		{
-			if Player.ultra_got[93]
+			if Player.ultra_got[93] && !Player.altUltra
 			{
 				if typ!=0
 				{

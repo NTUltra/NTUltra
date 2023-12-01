@@ -8,6 +8,7 @@ if instance_exists(Player)
 {
 	if Player.skill_got[15] = 1
 	{
+		alarm[2] = 1;
 		shotgunshouldered = true;
 		wallbounce = 8
 		friction = 0.6

@@ -278,7 +278,7 @@ if !instance_exists(LevCont) and visible = 1
 			//scrn++;
 			
 			//instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			instance_create(f.x + 16,f.y + 16,WallCrawler)
+			instance_create(f.x + 16,f.y + 16,TinyKraken)
 
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
 			thing.mytext = "Wall Crawler";
@@ -752,48 +752,6 @@ if !instance_exists(LevCont) and visible = 1
 		}
 	}
 }
-
-	//crown of hatred
-	if scrIsCrown(6)
-	{
-		if UberCont.normalGameSpeed == 60
-			decay -= 0.5;
-		else
-			decay -= 1
-	
-		if decay <= 0 && alarm[3]<1
-		{
-			if my_health > 1
-			{
-				Sleep(30)
-				my_health -= 1;
-				exception = true;
-
-
-				sprite_index = spr_hurt
-				image_index = 0
-				snd_play(snd_hurt, hurt_pitch_variation)
-
-				scrRaddrop(20)//used to be 12
-
-				decay = 300
-			} else if ultra_got[62] && altUltra && armour > 1//Living armour
-			{
-				Sleep(30)
-				armour -= 1;
-				exception = true;
-
-
-				sprite_index = spr_hurt
-				image_index = 0
-				snd_play(snd_hurt, hurt_pitch_variation)
-
-				scrRaddrop(20)//used to be 12
-
-				decay = 300
-			}
-		}
-	}
 }//End of gencont
 
 //SWAP WEPS

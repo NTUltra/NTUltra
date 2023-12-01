@@ -188,7 +188,7 @@ function scrRaces() {
 	race_name[11] = "[HUNTER]"
 	race_pass[11] = "HIGHER PROJECTILE <w>VELOCITY<w>#BETTER <w>ACCURACY<w>"
 	race_acti[11] = "MARK ENEMIES"
-	race_butt[11] = "<w>MARKED<w> ENEMIES#TAKE 20% MORE <w>DAMAGE<w>"
+	race_butt[11] = "<w>MARKED<w> ENEMIES#TAKE 25% MORE <w>DAMAGE<w>"
 	//race_back[11] = "MARKED ENEMIES THAT DIE#HAVE A HIGHER DROPRATE(this is an ultra?) MARKED ENEMIES THAT DIE#DECREATE RELOAD";
 	race_lock[11] = "DEFLECT A SNIPER SHOT#INTO THE SNIPER"
 	race_have[11] = 0

@@ -8,7 +8,7 @@ function scrFlexibleElbowReload(wp){
 		var slapped = noone;
 		while (loader > 0)
 		{
-			if (random(60) < loader)
+			if (random(70) < loader)
 			{
 				if slapped != noone
 				{
@@ -39,9 +39,10 @@ function scrFlexibleElbowReload(wp){
 					for (var i = 0; i < al; i++) {
 						instance_activate_object(activationList[| i]);
 					}
+					ds_list_destroy(activationList);
 				}
 			}
-			loader -= 47;
+			loader -= 70;
 		}
 	}
 }

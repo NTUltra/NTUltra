@@ -10,7 +10,7 @@
   "bitRate": 192,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 1.027483,
+  "duration": 1.158646,
   "parent": {
     "name": "Hunter",
     "path": "folders/Sounds/Player/Hunter.yy",

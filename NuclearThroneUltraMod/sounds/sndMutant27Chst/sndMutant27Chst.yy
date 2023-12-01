@@ -10,14 +10,14 @@
   "bitRate": 192,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 1.348281,
+  "duration": 3.162792,
   "parent": {
     "name": "Hands",
     "path": "folders/Sounds/Player/Hands.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "sndMutant27Chst.ogg",
+  "soundFile": "sndMutant27Chst.wav",
   "type": 0,
   "volume": 1.0,
 }

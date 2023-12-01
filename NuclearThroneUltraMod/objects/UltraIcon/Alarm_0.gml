@@ -71,11 +71,11 @@ else if skill == 55 && Player.race == 14 && (Player.unlockAlternativeUltras || (
 {
 	sprite_index = sprInconsistentIncompatability;
 }
-else if skill == 59 && Player.race == 15 && (Player.unlockAlternativeUltras || (!Player.skill_got[17] && (scrIsCrown(4) || scrIsCrown(28))))
+else if skill == 59 && Player.race == 15 && (Player.unlockAlternativeUltras || (!Player.skill_got[17] && (scrIsCrown(4) || scrIsCrown(28) || scrIsCrown(3))))
 {
 	sprite_index = sprPathOfDestruction;
 }
-else if skill == 61 && Player.race == 16 && (Player.unlockAlternativeUltras || scrKrakenWeapons(Player.wep) || scrKrakenWeapons(Player.bwep))
+else if skill == 61 && Player.race == 16 && (Player.unlockAlternativeUltras || Player.skill_got[39] || Player.area == 101 || Player.area == 122 || scrKrakenWeapons(Player.wep) || scrIsCrown(13) || scrKrakenWeapons(Player.bwep))
 {
 	sprite_index=sprCaptainOfTheKraken;
 }
@@ -115,7 +115,7 @@ else if skill == 92 && Player.race == 23 && (Player.unlockAlternativeUltras || P
 {
 	sprite_index = sprSpikedFrog;
 }
-else if skill == 96 && Player.race == 24 && (Player.unlockAlternativeUltras || (Player.patience > 0 || Player.guarenteedReroll > 0))
+else if skill == 93 && Player.race == 24 && (Player.unlockAlternativeUltras || (Player.patience > 0 || Player.guarenteedReroll > 0))
 {
 	sprite_index = sprAirLord;
 }

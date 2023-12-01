@@ -4,7 +4,7 @@ if instance_exists(Player) {
 	{
 		colours = [];
 	}
-	if Player.ultra_got[93]
+	if Player.ultra_got[93] && !Player.altUltra
 	{
 		//Earth colours
 		colours = array_concat(colours,[
@@ -37,7 +37,7 @@ if instance_exists(Player) {
 			[97,102,49]
 		]);
 	}
-	if Player.ultra_got[96] && !Player.altUltra
+	if Player.ultra_got[96]
 	{
 		//Kraken & Lightning colours
 		colours = array_concat(colours,[
@@ -49,7 +49,7 @@ if instance_exists(Player) {
 			[102,102,102]
 		]);
 	}
-	if Player.ultra_got[96] && Player.altUltra
+	if Player.ultra_got[93] && Player.altUltra
 	{
 		//Air colours
 		colours = array_concat(colours,[

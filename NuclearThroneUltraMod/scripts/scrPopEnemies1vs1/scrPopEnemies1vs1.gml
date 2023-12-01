@@ -31,14 +31,19 @@ function scrPopEnemies1vs1(area, subarea, loops){
 	{
 		if subarea == 1
 		{
-			enem = BigMaggot;
-			sBuff = 1.8;
+			if loops > 0
+				enem = GoldScorpion;
+			else
+			{
+				enem = BigMaggot;
+				sBuff = 1.8;
+			}
 		}
 		else if subarea == 2
 		{
 			enem = Scorpion;
 			if loops > 0
-				enem = GoldScorpion;
+				enem = SandWorm;
 		}
 		else if subarea == 3
 		{
@@ -51,14 +56,19 @@ function scrPopEnemies1vs1(area, subarea, loops){
 	{
 		if subarea == 1
 		{
-			enem = BigMaggotInverted;
-			sBuff = 1.8;
+			if loops > 0
+				enem = InvertedGoldScorpion;
+			else
+			{
+				enem = BigMaggotInverted;
+				sBuff = 1.8;
+			}
 		}
 		else if subarea == 2
 		{
 			enem = InvertedScorpion;
 			if loops > 0
-				enem = InvertedGoldScorpion;
+				enem = SandWorm;
 		}
 		else if subarea == 3
 		{
@@ -373,7 +383,10 @@ function scrPopEnemies1vs1(area, subarea, loops){
 	{
 		if subarea == 1
 		{
-			enem = PalaceGuardian;
+			if loops > 0
+				enem = WallCrawler;
+			else	
+				enem = PalaceGuardian;
 		}
 		else if subarea == 2
 		{
@@ -391,7 +404,10 @@ function scrPopEnemies1vs1(area, subarea, loops){
 	{
 		if subarea == 1
 		{
-			enem = InvertedPalaceGuardian;
+			if loops > 0
+				enem = InvertedWallCrawler;
+			else
+				enem = InvertedPalaceGuardian;
 		}
 		else if subarea == 2
 		{

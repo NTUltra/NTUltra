@@ -70,7 +70,6 @@ if target != noone && instance_exists(target)
 				other.target = noone;
 			else
 			{
-				
 				var msk = mask_index;
 				mask_index = mskPickupThroughWall;
 				speed = 0;
@@ -91,9 +90,15 @@ if target != noone && instance_exists(target)
 				{
 					image_index += 0.25;
 				}
+				else if spr_hurt != false
+				{
+					sprite_index = spr_hurt;
+					snd_play(snd_hurt,hurt_pitch_variation,true);
+					my_health -= 0.5;
+				}
 			}
 		}
-		if my_health <= 0//CRASH HERE
+		if my_health <= 0
 		{
 			other.target = noone;
 		}
@@ -107,7 +112,7 @@ lerpTime -= lerpCalcBack;
 alarm[2] = 1;
 if lerpTime < 0 || lerpTime > 1
 {
-	if target != noone && grabAnItem {
+	if target != noone && instance_exists(target) && grabAnItem {
 		target.x = creator.x;
 		target.y = creator.y;
 	}

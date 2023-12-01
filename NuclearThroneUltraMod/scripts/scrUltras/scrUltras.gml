@@ -1,4 +1,4 @@
-function scrUltras(altOverride = false) {
+function scrUltras(altOverride = false, resetUltraGot = true) {
 	var isOtherCharacter = false;
 	// ULTRAS
 	ultra_name[0] = "TOTAL FORECALL"
@@ -417,12 +417,12 @@ function scrUltras(altOverride = false) {
 	
 	//NO ENERGY BRAIN & CROWN OF HASTE/APOCALYPSE
 	if altOverride || (instance_exists(Player) &&  Player.race == 15 && (Player.altUltra || Player.unlockAlternativeUltras || (
-	(!Player.skill_got[17] && (scrIsCrown(4) || scrIsCrown(28)))
+	(!Player.skill_got[17] && (scrIsCrown(4) || scrIsCrown(28) || scrIsCrown(3)))
 	&& instance_exists(UltraIcon))))
 	{
 		ultra_name[59] = "PATH OF DESTRUCTION"
 		ultra_text[59] = "EVERYWHERE YOU GO#YOU LEAVE BEHIND A TRAIL OF#DAMAGING <g>GOOP<g>##<w>PICKUPS<w> FADE FASTER#FADED PICKUPS <pi>REROLL<pi> INTO OTHER <w>PICKUPS<w>#PICKUPS CAN FADE/REROLL TWICE"
-		ultra_tips[59] = "always positive"
+		ultra_tips[59] = "breaking apart reality"
 	}
 	
 	ultra_name[60] = "ANTI MATTER"
@@ -434,7 +434,7 @@ function scrUltras(altOverride = false) {
 	    ultra_text[61] = "<w>TRIPLE SERPENT<w> <gb>ARMOUR<gb> <w>STRIKE<w>#GAIN 1 <gb>ARMOUR<gb> WHEN YOU KILL A BOSS"
 	    ultra_tips[61] = "break down the walls!"
 		
-		if altOverride || (instance_exists(Player) &&  Player.race == 16 && (Player.altUltra || Player.unlockAlternativeUltras || ((scrKrakenWeapons(Player.wep) || scrKrakenWeapons(Player.bwep)) && instance_exists(UltraIcon))))
+		if altOverride || (instance_exists(Player) &&  Player.race == 16 && (Player.altUltra || Player.unlockAlternativeUltras || ((scrKrakenWeapons(Player.wep) || Player.skill_got[39] || Player.area == 101 || Player.area == 122 || scrIsCrown(13) || scrKrakenWeapons(Player.bwep)) && instance_exists(UltraIcon))))
 		{
 			ultra_name[61] = "CAPTAIN OF THE KRAKEN"
 			ultra_text[61] = "<p>KRAKEN<p> WEAPONS DEAL MORE DAMAGE#<p>TENTACLES<p> ARE LONGER#<p>KRAKEN<p> WEAPONS COST 30% LESS <y>AMMO<y>##<p>TENTACLE<p> <gb>ARMOUR<gb> <w>STRIKE<w>"//TENTACLES DESTROY ALL ENEMY PROJECTILES <-- nope
@@ -503,7 +503,7 @@ function scrUltras(altOverride = false) {
 	    ultra_tips[69] = "guardian"
     
 	    ultra_name[70] = "DESCENT"
-	    ultra_text[70] = "AS <y>AMMO<y> LOWERS#INCREASE <w>RELOAD SPEED<w>##WHEN YOU RUN OUT OF <y>AMMO<y>#HEAL 1<r>HP<r>##YOU CAN FIRE ANY WEAPON#AS LONG AS YOU HAVE MORE THAN 0 AMMO"
+	    ultra_text[70] = "AS <y>AMMO<y> LOWERS#INCREASE <w>RELOAD SPEED<w>##WHEN YOU RUN OUT OF <y>AMMO<y>#HEAL 2<r>HP<r>##YOU CAN FIRE ANY WEAPON#AS LONG AS YOU HAVE MORE THAN 0 AMMO"
 	    ultra_tips[70] = "darkness"
     
 	    ultra_name[71] = "TRANQUILITY"
@@ -678,6 +678,16 @@ function scrUltras(altOverride = false) {
 	    ultra_name[93] = "EARTHBENDER"
 	    ultra_text[93] = "YOU AND YOUR PROJECTILES#PHASE THROUGH YOUR <w>WALLS<w>#BIGGER <w>TERRAFORM<w>"
 	    ultra_tips[93] = "get to cover!"
+		
+		//used patience
+		if altOverride || (instance_exists(Player) && (Player.race == 24 && (Player.altUltra || Player.unlockAlternativeUltras || (
+		(Player.patience > 0 || Player.guarenteedReroll > 0 || Player.skill_got[27])
+		&& instance_exists(UltraIcon)))))
+		{
+			ultra_name[93] = "AIR LORD"
+		    ultra_text[93] = "YOUR ACTIVE CHANGES INTO#<w>WIND<w> PUSH#<w>WIND<w> PUSHES PROJECTILES AND ENEMIES#ENEMIES HITTING A <w>WALL<w> TAKE MORE DAMAGE#THRONE BUTT MAKES THE WIND STRONGER"
+		    ultra_tips[93] = "blow"
+		}
     
 	    ultra_name[94] = "ICE COLD"
 	    ultra_text[94] = "<aq>COOL<aq> EVERYTHING NEAR YOU#<aq>ICE COLD<aq> <w>WALLS<w>"
@@ -690,16 +700,6 @@ function scrUltras(altOverride = false) {
 	    ultra_name[96] = "TSUNAMI"
 	    ultra_text[96] = "<b>LIGHTNING<b> AND <p>KRAKEN<p> ARE <b>MI<b><pi>X<pi><p>ED<p>#OCCASIONALLY PRODUCE <b>LIGHTNING<b>/<p>KRAKEN<p>##WHEN USING <b>LIGHTNING<b> WEAPONS:#GAIN <w>EXPLOSIVE<w> <y>AMMO<y>##WHEN USING <p>KRAKEN<p> WEAPONS:#GAIN <g>ENERGY<g> <y>AMMO<y>"
 	    ultra_tips[96] = "you gain explosive ammo#when using a lightning weapon#you gain energy ammo#when using a kraken weapon"
-		
-		//CROWN OF REINCARNATION/FREEDOM
-		if altOverride || (instance_exists(Player) && (Player.race == 24 && (Player.altUltra || Player.unlockAlternativeUltras || (
-		(Player.patience > 0 || Player.guarenteedReroll > 0)
-		&& instance_exists(UltraIcon)))))
-		{
-			ultra_name[96] = "AIR LORD"
-		    ultra_text[96] = "YOUR ACTIVE CHANGES INTO#<w>WIND<w> PUSH#<w>WIND<w> PUSHES PROJECTILES AND ENEMIES#ENEMIES HITTING A <w>WALL<w> TAKE MORE DAMAGE#THRONE BUTT MAKES THE WIND STRONGER"
-		    ultra_tips[96] = "blow"
-		}
     
 
 	//MUTATION SMITH 
@@ -799,9 +799,10 @@ function scrUltras(altOverride = false) {
 	ultra_tips[109] = "challenge run"
 
 	dir = 0
-	repeat(maxultra+2)
-	{ultra_got[dir] = 0
-	dir += 1}
+	if resetUltraGot
+		repeat(maxultra+2)
+		{ultra_got[dir] = 0
+		dir += 1}
 	
 	scrSecretUltraStat();
 }

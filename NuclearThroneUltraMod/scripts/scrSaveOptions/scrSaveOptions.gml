@@ -11,6 +11,9 @@ function scrSaveOptions() {
 	ini_write_real("OPTIONS","crosshair",opt_crosshair);
 	ini_write_real("OPTIONS","crosshairscale",opt_crosshair_scale);
 	ini_write_string("OPTIONS","customcrosshair",opt_custom_crosshair);
+	ini_write_real("OPTIONS","crosshairColourr",opt_crosshair_colour_r);
+	ini_write_real("OPTIONS","crosshairColourg",opt_crosshair_colour_g);
+	ini_write_real("OPTIONS","crosshairColourb",opt_crosshair_colour_b);
 	ini_write_real("OPTIONS","sideart",opt_sideart);
 	ini_write_string("OPTIONS","customsideart",opt_custom_sideart);
 	ini_write_real("OPTIONS","dmgindicator",opt_dmgindicator);

@@ -42,9 +42,17 @@ function scrFire() {
 		rad -= wep_rad[wep]
 		rad = max(rad,0);
 	}
-	if Player.ultra_got[70]
-	{
-		with Player
+	with Player {
+		if scrIsCrown(13)
+		{
+			if ammo[wep_type[wep]] <= 0
+			{
+				with Crown {
+					event_user(0);	
+				}
+			}
+		}
+		if ultra_got[70]
 		{
 			var ammoPercentage = 0;
 			ammoPercentage += ammo[wep_type[wep]] / typ_amax[wep_type[wep]];
@@ -57,7 +65,6 @@ function scrFire() {
 				scrHeal(2);	
 			}
 		}
-		
 	}
 	if Player.ultra_got[4]//FISH ULTRA D rolling is good
 	{
@@ -66,7 +73,7 @@ function scrFire() {
 		    reload-=speed*0.25
 		    if Player.roll = 1
 		    {
-				reload -= wep_load[wep]*0.6
+				reload -= wep_load[wep]*0.5
 		    }
 		}
 	}
@@ -4979,7 +4986,7 @@ function scrFire() {
 			rad += max(0,wep_rad[wep]*0.1);
 		}
     
-	    if Player.ultra_got[96] && !Player.altUltra//ULTRA D ELEMENTOR THUNDER BOMB
+	    if Player.ultra_got[96]//ULTRA D ELEMENTOR THUNDER BOMB
 	    {
     
 	    if scrLightningWeapons(wep) // You are holding a lightning weapon

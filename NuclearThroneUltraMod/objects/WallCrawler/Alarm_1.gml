@@ -32,18 +32,18 @@ if target != noone {
 	} else if dis < 400 {
 		if ran < 2 && dis < 260 && firstHit{
 			gunangle = point_direction(x, y, target.x, target.y)
-			var dis = 0;
+			var pdis = 0;
 			var xx = x;
 			var yy = y;
 			var msk = mask_index;
 			mask_index = mskBigGuardianBullet;
-			while (place_meeting(xx,yy,Wall) && dis < 32)
+			while (place_meeting(xx,yy,Wall) && pdis < 32)
 			{
 				xx += lengthdir_x(1,gunangle);
 				yy += lengthdir_y(1,gunangle);
-				dis += 1;
+				pdis += 1;
 			}
-			if dis < 32 && place_meeting(x,y,Floor)
+			if pdis < 32 && place_meeting(x,y,Floor)
 			{
 				snd_play(sndBigBallFire);
 	            with instance_create(x,y,Throne2BigBulletSpawn)
@@ -62,18 +62,18 @@ if target != noone {
         }
 		else if ran < 4 && dis < 260 && firstHit{
 			gunangle = point_direction(x, y, target.x, target.y)
-			var dis = 0;
+			var pdis = 0;
 			var xx = x;
 			var yy = y;
 			var msk = mask_index;
 			mask_index = mskBigGuardianBullet;
-			while (place_meeting(xx,yy,Wall) && dis < 32)
+			while (place_meeting(xx,yy,Wall) && pdis < 32)
 			{
 				xx += lengthdir_x(1,gunangle);
 				yy += lengthdir_y(1,gunangle);
-				dis += 1;
+				pdis += 1;
 			}
-			if dis < 32 && place_meeting(x,y,Floor)
+			if pdis < 32 && place_meeting(x,y,Floor)
 			{
 				snd_play(sndBigBallFire);
 	            with instance_create(xx,yy,BigGuardianBulletSpawn)
@@ -104,6 +104,7 @@ if target != noone {
 				owner = other.id;
 				motion_add(other.gunangle,other.projectileSpeed);
 			}
+			alarm[1] += 2;
         }
 		else if !instance_exists(Wall)
 		{

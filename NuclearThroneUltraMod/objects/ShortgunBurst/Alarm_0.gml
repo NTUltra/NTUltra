@@ -7,11 +7,13 @@ if instance_exists(creator)
 x = creator.x
 y = creator.y
 //FIRING
+var hacc = accuracy * 0.5;
+var acc = accuracy;
 repeat(projectileAmount)
 {
 	with instance_create(x,y,Bullet2)
 	{
-		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(70)-35)*other.creator.accuracy,other.projectileSpeed+random(6.5))
+		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(acc)-hacc)*other.creator.accuracy,other.projectileSpeed+random(6.5))
 		image_angle = direction
 		team = other.team
 		scrCopyWeaponMod(other);

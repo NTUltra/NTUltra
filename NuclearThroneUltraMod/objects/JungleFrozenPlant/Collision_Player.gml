@@ -7,7 +7,10 @@ if KeyCont.key_pick[other.p] = 1 && !used
 		KeyCont.key_pick[Player.p] = 2;
 		with other
 		{
-			snd_play(snd_thrn);
+			if array_length(snd_good) > 0
+				snd_play(snd_good[irandom(array_length(snd_good)-1)]);
+			else
+				snd_play(snd_thrn);
 			if area == 114
 			{
 				area = 5;

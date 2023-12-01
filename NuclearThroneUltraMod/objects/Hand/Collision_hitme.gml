@@ -10,7 +10,10 @@ if other.team != team  &&  other.my_health > 0
 				sprite_index = spr_hurt
 				image_index = 0
 			}
-			my_health -= other.dmg
+			if UberCont.normalGameSpeed == 60
+				my_health -= other.dmg;
+			else
+				my_health -= other.dmg;
 			motion_add(other.image_angle,6)
 		}
 		instance_create(x,y,Dust)

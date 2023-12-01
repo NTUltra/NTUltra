@@ -48,6 +48,11 @@ function scrLoadRun(){
 				GenCont.crown = encryptedRun.crown;
 				if !is_array(GenCont.crown)
 					GenCont.crown = [GenCont.crown];
+					
+				var al = array_length(Player.crown);
+				for (var i = 0; i < al; i++) {
+					scrSpawnCrown(x,y,Player.crown[i], true);
+				}
 				Player.ammo[0] = encryptedRun.ammo[0];
 				Player.ammo[1] = encryptedRun.ammo[1];
 				Player.ammo[2] = encryptedRun.ammo[2];
@@ -72,12 +77,15 @@ function scrLoadRun(){
 				{
 					Player.skill_got[array_length(Player.skill_got)] = 0;
 				}
-				var targetLength = array_length(Player.ultra_got);
+				// var targetLength = array_length(Player.ultra_got);
 				Player.ultra_got = encryptedRun.ultra_got;
+				debug("ULRAS1: ", Player.ultra_got);
+				/*
 				while (array_length(Player.ultra_got) < targetLength)
 				{
 					Player.ultra_got[array_length(Player.ultra_got)] = 0;
 				}
+				*/
 				Player.maxhealth = encryptedRun.maxhp;
 				Player.my_health = encryptedRun.hp;
 				Player.strongspirit = encryptedRun.strongspirit;
@@ -290,9 +298,7 @@ function scrLoadRun(){
 				scrWeapons();
 				scrWeaponHold();
 				//Some alt ultras need different descriptions
-				var ug = ultra_got;
-				scrUltras();
-				ultra_got = ug;
+				scrUltras(false, false);
 				var i = 0
 				repeat(maxskill+1)
 				{

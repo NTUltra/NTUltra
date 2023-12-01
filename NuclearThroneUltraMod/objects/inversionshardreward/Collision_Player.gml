@@ -11,6 +11,9 @@ if KeyCont.key_pick[other.p] = 1 && UberCont.collectedInversionShards > 2
 		UberCont.levelIncrease += 1;
 	}
 	snd_play(sndUltraGrenadeSuck);
-	snd_play(other.snd_thrn);
+	if array_length(other.snd_good) > 0
+		snd_play(other.snd_good[irandom(array_length(other.snd_good)-1)]);
+	else
+		snd_play(other.snd_thrn);
 	instance_create(x,y,Flash);
 }

@@ -6,6 +6,16 @@ function scrChestOpenMindReload(thePlayer){
 	var cy = y;
 	with thePlayer
 	{
+		if scrIsCrown(6)
+		{
+			scrRaddrop(18);
+			my_health -= 1;
+			sprite_index = spr_hurt;
+			image_index = 0;
+			snd_play(snd_hurt, hurt_pitch_variation);
+			Sleep(40);
+			hitBy = other.sprite_index;
+		}
 		if skill_got[23]//Open mind
 		{
 			snd_play(sndChestReload);

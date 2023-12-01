@@ -295,9 +295,6 @@ if crown == 31
 if crown!=4//not crown of haste
 Player.rushcrownlevels=0;
 
-//CROWN OF DECAY
-if crown == 6
-	Player.decay = 300
 
 if crown != 25
 {
@@ -443,7 +440,9 @@ else if crown == 13
 }
 if oldcrown == 13
 {
-	scrWeaponAdjustCost(0.5);
+	with Player {
+		scrWeaponAdjustCost(0.5);
+	}
 }
 //Crown of time
 if oldcrown == 34
@@ -546,29 +545,7 @@ with FakeCrown
 			if crown == other.crown
 				instance_destroy();
 		}
-		with instance_create(xx,yy,Crown)
-		{	
-			crown = other.crown;
-			if other.canReAdd
-				newThing = 0;//Not new
-			if crown == 26
-			{
-				instance_destroy();
-				with instance_create(x,y,CrownGunned)
-				{
-					crown = other.crown;
-					scrCrownAnimation(crown);
-				}
-			}
-			else
-			{
-				scrCrownAnimation(crown);
-				if crown == 33//ECHO
-					alarm[2] = 30;
-				else
-					alarm[2] = 0;
-			}
-		}
+		scrSpawnCrown(xx,yy,crown, canReAdd)
 	}
 	with UberCont
 		canPickFrogCrown = false;

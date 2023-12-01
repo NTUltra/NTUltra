@@ -30,6 +30,10 @@ with Ally
 {
 	my_health = 0;
 }
+with TinyKraken
+{
+	my_health = 0;
+}
 with YungCuzDupe
 {
 	my_health = 0;

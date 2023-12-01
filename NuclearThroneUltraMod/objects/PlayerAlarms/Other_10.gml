@@ -5,7 +5,7 @@ if !instance_exists(SecretFinder)
 	instance_create(x,y,SecretFinder);
 if instance_exists(Player)
 {
-	if Player.ultra_got[96] && !Player.altUltra
+	if Player.ultra_got[96]
 	{
 		alarm[11] = 30;
 		lightning = choose(true,false);

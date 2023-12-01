@@ -1,9 +1,9 @@
-var amount = 12;
+var amount = 10;
 if instance_exists(Player)
 {
 	if Player.ultra_got[72] {
 		if Player.altUltra {
-			amount += 4;
+			amount += 3;
 		} else {
 			image_xscale += 0.25;
 			image_yscale += 0.25;
@@ -12,6 +12,7 @@ if instance_exists(Player)
 }
 if instance_number(AngelActive) > 1
 {
+	amount -= 1;
 	var isActuallyStacking = false;
 	with AngelActive
 	{

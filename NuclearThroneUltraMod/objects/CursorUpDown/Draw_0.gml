@@ -141,7 +141,7 @@ if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > xx and UberCont.m
 	colourMenuOpen = !colourMenuOpen;
 	snd_play_2d(sndClick);
 }
-else if (mx > xx - 42 && mx < xx + 10 &&
+else if (colourMenuOpen && mx > xx - 42 && mx < xx + 10 &&
 	mouse_y > y - 20 && mouse_y < y+80)
 {	
 	if mouse_check_button(mb_left)

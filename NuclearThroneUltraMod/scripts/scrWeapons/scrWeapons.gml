@@ -1209,7 +1209,7 @@ function scrWeapons() {
 	wep_name[109] = "BLOOD GLOVE"
 	wep_type[109] = 4
 	wep_auto[109] = 0
-	wep_load[109] = 18
+	wep_load[109] = 16
 	wep_cost[109] = 2
 	wep_sprt[109] = sprBloodGlove
 	wep_area[109] = 6
@@ -2144,7 +2144,7 @@ function scrWeapons() {
 	wep_name[194] = "KRAKEN GUN"
 	wep_type[194] = 4
 	wep_auto[194] = 0
-	wep_load[194] = 14//10
+	wep_load[194] = 15//10
 	wep_cost[194] = 2
 	wep_sprt[194] = sprKrakenGun
 	wep_area[194] = 4
@@ -2224,7 +2224,7 @@ function scrWeapons() {
 	wep_load[201] = 10
 	wep_cost[201] = 3
 	wep_sprt[201] = sprSuperHotRevolver
-	wep_area[201] = choose(-2,-1,8,9)
+	wep_area[201] = -2
 	wep_text[201] = "try standing still with this gun"
 	wep_swap[201] = sndSwapSuperHot
 	wep_rad[201] = 0;
@@ -2235,7 +2235,7 @@ function scrWeapons() {
 	wep_load[202] = 16//10
 	wep_cost[202] = 8//6
 	wep_sprt[202] = sprSuperHotAssaultRifle
-	wep_area[202] = -1;//11//12
+	wep_area[202] = -2;//11//12
 	wep_text[202] = "SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!"
 	wep_swap[202] = sndSwapSuperHot
 	wep_rad[202] = 0;
@@ -2837,7 +2837,7 @@ function scrWeapons() {
 	wep_name[257] = "LIGHTNING CROSSBOW"
 	wep_type[257] = 3
 	wep_auto[257] = 1
-	wep_load[257] = 24
+	wep_load[257] = 26
 	wep_cost[257] = 1.5
 	wep_sprt[257] = sprLightningCrossbow
 	wep_area[257] = 5
@@ -3283,7 +3283,7 @@ function scrWeapons() {
 	wep_area[297] = 21
 	wep_text[297] = "green ball of green pellets"
 	wep_swap[297] = sndSwapExplosive
-	wep_rad[297] = 19;//14ultrashotgun
+	wep_rad[297] = 18;//14ultrashotgun
 
 	wep_name[298] = "GOLDEN OOPS GUN"
 	wep_type[298] = 1
@@ -4224,7 +4224,7 @@ function scrWeapons() {
 	wep_type[381] = 2
 	wep_auto[381] = 0
 	wep_load[381] = 300
-	wep_cost[381] = 40
+	wep_cost[381] = 50
 	wep_sprt[381] = sprMuchasPelotilla
 	wep_area[381] = 32
 	wep_text[381] = "cest bon"
@@ -4235,7 +4235,7 @@ function scrWeapons() {
 	wep_type[382] = 5
 	wep_auto[382] = 0
 	wep_load[382] = 300
-	wep_cost[382] = 40
+	wep_cost[382] = 50
 	wep_sprt[382] = sprMuchasLaser
 	wep_area[382] = 32
 	wep_text[382] = "beau"
@@ -4345,7 +4345,7 @@ function scrWeapons() {
 	wep_type[392] = 4
 	wep_auto[392] = 0
 	wep_load[392] = 300
-	wep_cost[392] = 40
+	wep_cost[392] = 50
 	wep_sprt[392] = sprMuchasFuego
 	wep_area[392] = 33
 	wep_text[392] = "en petit peu"
@@ -5214,7 +5214,7 @@ function scrWeapons() {
 	wep_type[471] = 4
 	wep_auto[471] = 0
 	wep_load[471] = 350
-	wep_cost[471] = 45
+	wep_cost[471] = 55
 	wep_sprt[471] = sprMuchasNieve
 	wep_area[471] = 33
 	wep_text[471] = "je ne parle pas de francais"
@@ -5808,7 +5808,7 @@ function scrWeapons() {
 	wep_type[525] = 5
 	wep_auto[525] = 0
 	wep_load[525] = 330
-	wep_cost[525] = 45
+	wep_cost[525] = 55
 	wep_sprt[525] = sprMuchasRayos
 	wep_area[525] = 33
 	wep_text[525] = "avec moi"
@@ -6203,7 +6203,7 @@ function scrWeapons() {
 	wep_name[561] = "SPLINTER SPEAR LAUNCHER"
 	wep_type[561] = 3
 	wep_auto[561] = 0
-	wep_load[561] = 26
+	wep_load[561] = 23
 	wep_cost[561] = 2
 	wep_sprt[561] = sprSplinterSpearLauncher
 	wep_area[561] = 7
@@ -7413,7 +7413,7 @@ function scrWeapons() {
 	wep_name[671] = "SUPER NEEDLE"
 	wep_type[671] = 0
 	wep_auto[671] = 1
-	wep_load[671] = 12
+	wep_load[671] = 13
 	wep_cost[671] = 0
 	wep_sprt[671] = sprSuperNeedle
 	wep_area[671] = 10
@@ -7545,7 +7545,7 @@ function scrWeapons() {
 	wep_name[683] = "EXPLOSIVE REVOLVER"
 	wep_type[683] = 1
 	wep_auto[683] = 0
-	wep_load[683] = 8
+	wep_load[683] = 9
 	wep_cost[683] = 2
 	wep_sprt[683] = sprExplosiveRevolver
 	wep_area[683] = 5

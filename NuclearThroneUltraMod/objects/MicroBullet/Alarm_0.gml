@@ -28,7 +28,7 @@ if instance_exists(Player)
 			{my_health -= 1;}}
 			sprite_index = spr_hurt
 			image_index = 0
-			motion_add(other.direction,3.5)
+			motion_add(other.direction,3)
 			scrForcePosition60fps();
 			if speed > maxSpeed 
 				speed = maxSpeed;

@@ -463,7 +463,7 @@ function scrPopulate() {
 				scrPopEnemies()
 			}
 				
-            if (scrIsCrown(28) and random(8 + min(40,hard)) < min(30,hard) and point_distance(x, y, Player.x, Player.y) > 100 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280))
+            if (scrIsCrown(28) and random(8 + min(40,hard)) < min(30,hard) and point_distance(x, y, Player.x, Player.y) > 180 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280))
             {    
 				repeat(3)
 					scrPopEnemies()
@@ -474,7 +474,7 @@ function scrPopulate() {
 			}
 			if scrIsGamemode(6)//Claustrophobia
 			{
-				if point_distance(x, y, Player.x, Player.y) > 110 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280)
+				if point_distance(x, y, Player.x, Player.y) > 100 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280)
 				{
 					//repeat(2)
 						scrPopEnemies();
@@ -511,7 +511,7 @@ function scrPopulate() {
 			if Player.loops > 11
 				instance_create(x, y, WantBoss)
 	    }
-		if (Player.area == 9 || Player.area == 118) and Player.subarea == 2 {
+		if Player.loops > 0 && (Player.area == 9 || Player.area == 118) && Player.subarea == 2 {
 	        instance_create(x, y, WantBoss)//Wall Crawler
 	    }
 		if (Player.area == 126 || Player.area == 127) {//Graveyard fish

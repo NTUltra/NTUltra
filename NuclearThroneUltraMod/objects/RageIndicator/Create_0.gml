@@ -1,0 +1,11 @@
+image_speed = 0.4
+depth = -5;
+rageNumber = 0;
+surfH = 0;
+maxSurfH = 10;
+surfW = 10;
+surf = -1;
+alarm[0] = 7;
+alarm[1] = 30;
+col = make_colour_rgb(255,255,255);
+colTime = -0.5;

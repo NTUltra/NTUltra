@@ -101,7 +101,7 @@ function scrDrawBloom() {
 	if instance_exists(Player)
 	{
 		with Rage{
-		draw_sprite_ext(sprite_index,image_index,x,y,2,2,image_angle,c_white,clamp(Player.rage*0.0022,0,1))}
+		draw_sprite_ext(bloomSpr,image_index,x,y,1,1,image_angle,c_white,clamp(Player.rage*0.0022,0,1))}
 
 		with AngelDeflect//ANGEL PROTECTOR ULTRA A
 		draw_sprite_ext(sprite_index,-1,x,y,1,1,image_angle,c_white,(ba*0.35)*Player.speed);
@@ -462,6 +462,8 @@ function scrDrawBloom() {
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with Flame
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
+	with RageIndicator
+	draw_sprite_ext(sprRageIndicatorBloom,image_index,x,y,1,1,image_angle,c_white,ba)
 	with IceFlame
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with IceCannonBall

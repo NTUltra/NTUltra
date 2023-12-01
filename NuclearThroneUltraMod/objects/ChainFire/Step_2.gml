@@ -5,7 +5,11 @@ if alarm[2] < 1
 		scrBoltMarrow();
 		instance_create(x,y,particle);
 	}
-	if collision_line(x,y,x+hspeed,y+hspeed,Wall,false,false)
+	var nx = x;
+	var ny = y;
+	nx = x + lengthdir_x(direction,speed);
+	ny = y + lengthdir_y(direction,speed);
+	if collision_line(x,y,nx,ny,Wall,false,false)
 	{
 		if bounce > 0
 		{
@@ -31,10 +35,12 @@ if alarm[2] < 1
 				hspeed *= -1;
 			if vc
 				vspeed *= -1;
+			else
+				hspeed *= -1;
 			image_angle = direction;
 			x += lengthdir_x(1,direction);
 			y += lengthdir_y(1,direction);
-			var maxStep = 32;
+			var maxStep = 38;//32
 			var i = 0;
 			while collision_point(x,y,Wall,false,false) && i < maxStep
 			{
@@ -47,21 +53,26 @@ if alarm[2] < 1
 		}
 		else
 		{
-			var maxStep = 32;
+			var maxStep = 30;
 			var i = 0;
-			while !collision_point(x,y,Wall,false,false) && i < maxStep
+			while (!collision_point(x,y,Wall,false,false) && i < maxStep)
 			{
 				x += lengthdir_x(1,direction);
 				y += lengthdir_y(1,direction);
 				i++;
 			}
-			snd_play(sndBoltHitWall,0.1,true,true,1,false,true,0.76)
-			alarm[3] = 2;
-			alarm[2] = 10+random(20);//delay before destroying
-			speed = 0
+			if i < maxStep
+			{
+				snd_play(sndBoltHitWall,0.1,true,true,1,false,true,0.76)
+				alarm[3] = 2;
+				alarm[2] = 10+random(20);//delay before destroying
+				speed = 0
+				x -= lengthdir_x(4,direction);
+				y -= lengthdir_y(4,direction);
+			}
 		}
+		scrForcePosition60fps();
 	}
-		
 	var dir = point_direction(cx,cy,x,y);
 	var xx = cx;
 	var yy = cy;

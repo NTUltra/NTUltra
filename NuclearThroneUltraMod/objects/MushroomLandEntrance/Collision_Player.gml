@@ -5,9 +5,13 @@ if other.wepmod1 != 0
 	{
 		KeyCont.key_pick[Player.p] = 2;
 		mask_index = mskPickupThroughWall
-		snd_play(other.snd_thrn);
+		
 		with other
 		{
+			if array_length(snd_good) > 0
+				snd_play(snd_good[irandom(array_length(snd_good)-1)]);
+			else
+				snd_play(snd_thrn);
 			wepmod1 = wepmod2;
 			wepmod2 = wepmod3;
 			wepmod3 = wepmod4;

@@ -4,6 +4,7 @@ if other.team != team and other.my_health > 0
 	{
 		if sprite_index != spr_hurt
 		{
+			snd_play(snd_hurt, hurt_pitch_variation,true)
 			if instance_exists(Player)
 			{
 				my_health -= other.dmg
@@ -17,7 +18,6 @@ if other.team != team and other.my_health > 0
 			scrIframeSkipper(other.iframeskip);
 		}
 	}
-	snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
 	instance_create(x,y,Smoke)
 }
 

@@ -150,7 +150,7 @@ function scrDrawOptions2() {
 				draw_text_color(x+8,yyy + 8,wepName,wepNameCol,wepNameCol,wepNameCol,wepNameCol,1);
 				if wep_area[wep] >= 0
 				{
-					draw_sprite_ext(sprWepTier,0,x,y+64,1,1,0,wepNameCol,1);
+					draw_sprite_ext(sprWepTier,0,x - 8,y+64,1,1,0,wepNameCol,1);
 					draw_set_halign(fa_left)
 					draw_text_ext_color(x+2,y+37,
 					string_hash_to_newline("###"+string(wep_area[wep])),

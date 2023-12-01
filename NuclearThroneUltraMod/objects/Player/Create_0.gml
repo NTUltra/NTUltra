@@ -17,7 +17,7 @@ with GameRender
 }
 with DataRef
 	instance_destroy();
-
+canCrownOfProtection = true;
 angelHeal = false;
 tailWave = 0;
 drawTail = false;
@@ -615,7 +615,6 @@ cwepflip = 1
 nochest = -1
 
 bleed = 0
-decay = 600
 
 rad = 0
 
@@ -645,6 +644,7 @@ fromCribToVault = false;
 meltingd = 0;
 lastEnemyKilled = noone;
 rage = 0;
+rageIndicator = 0;
 exception = false;
 sharpteeth = 0; //stress embedded
 crackshotsfired = 0; //hunter ultra d

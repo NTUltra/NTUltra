@@ -37,7 +37,8 @@ function scrCrowns() {
 	crown_tips[5] = "guns are your friend"
 
 	crown_name[6] = "[CROWN OF HATRED]"
-	crown_text[6] = "LOSE <r>HEALTH<r> & GAIN <g>RADIATION<g> OVER TIME"
+	// crown_text[6] = "LOSE <r>HEALTH<r> & GAIN <g>RADIATION<g> OVER TIME"
+	crown_text[6] = "TAKE <r>DAMAGE<r> WHEN OPENING A <w>CHEST<w>#AND GAIN <g>RADIATION<g>"
 	crown_used[6] = 0
 	crown_tips[6] = "something is wrong"
 
@@ -76,7 +77,7 @@ function scrCrowns() {
 	crown_tips[12] = "looking for the blue stuff"
 
 	crown_name[13] = "[CROWN OF DROWNING]"
-	crown_text[13] = "DOUBLE <y>AMMO<y> COST#AT THE END OF EACH AREA#GAIN SOME <y>AMMO<y>#WHENEVER YOU RUN OUT OF <y>AMMO<y>#YOUR <y>CROWN<y> SUMMONS THE <pi>TINY<pi> <p>KRAKEN<p>"
+	crown_text[13] = "DOUBLE <y>AMMO<y> COST#AT THE END OF EACH AREA#GAIN SOME <y>AMMO<y>#WHENEVER YOU RUN OUT OF <y>AMMO<y>#YOUR <y>CROWN<y> SUMMONS A <pi>TINY<pi> <p>KRAKEN<p>"
 	crown_used[13] = 0
 	crown_tips[13] = "sinking"
 /*
@@ -124,12 +125,16 @@ function scrCrowns() {
 	crown_tips[19] = "friendly fire"
 	
 	crown_name[20] = "[CROWN OF PROTECTION]"
-	crown_text[20] = "<w>WEAPON<w> DROPS GIVE 1 <gb>ARMOUR<gb>#INSTEAD OF GIVING <y>AMMO<y>#INCREASE <gb>ARMOUR<gb> MAX BY 1"
+	crown_text[20] = "EVERY OTHER <w>WEAPON<w> DROPS GIVE 1 <gb>ARMOUR<gb>#INSTEAD OF GIVING <y>AMMO<y>#INCREASE <gb>ARMOUR<gb> MAX BY 1"
 	crown_used[20] = 0
 	crown_tips[20] = "stay safe"//Always use protection..  that joke is too predictable
 	
 	crown_name[21] = "[CROWN OF RISK]"
-	crown_text[21] = "70% HIGHER <w>DROP RATE<w>#WHEN ABOVE 75% <r>MAX HP<r>#50% LOWER <w>DROP RATE<w>#WHEN BELOW 75% <r>MAX HP<r>"
+	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+		crown_text[21] = "70% HIGHER <w>DROP RATE<w>#WHEN ABOVE 75% <gb>MAX ARMOUR<gb>#50% LOWER <w>DROP RATE<w>#WHEN BELOW 75% <gb>MAX ARMOUR<gb>"
+	else
+		crown_text[21] = "70% HIGHER <w>DROP RATE<w>#WHEN ABOVE 75% <r>MAX HP<r>#50% LOWER <w>DROP RATE<w>#WHEN BELOW 75% <r>MAX HP<r>"
+	
 	crown_used[21] = 0
 	crown_tips[21] = "a risk worth taking"
 	
@@ -195,7 +200,7 @@ function scrCrowns() {
 	crown_used[31] = 0
 	crown_tips[31] = "no pain no gain"
 	
-	//Luck
+	//MISFORTUNE
 	crown_name[32] = "[CROWN OF MISFORTUNE]"
 	crown_text[32] = "LOWER <w>DROP RATE<w>#PICKUPS GIVE BOTH <r>HEALTH<r> AND <y>AMMO<y>"
 	crown_used[32] = 0

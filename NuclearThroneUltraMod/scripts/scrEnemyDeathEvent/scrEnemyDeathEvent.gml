@@ -257,21 +257,40 @@ function scrEnemyDeathEvent(){
 					rage += 0.15;
 				if rage>500//MAX RAGE
 					rage=500;//340
+				rageIndicator += 1;
+				if rageIndicator > 19
+				{
+					rageIndicator = 0;
+					BackCont.shake += 10;
+					with instance_create(x,y-20,RageIndicator)
+					{
+						direction = other.direction;
+						speed = other.speed * 0.5;
+						rageNumber = other.rage;
+						snd_play(sndRageIndicator);
+						motion_add(random(360),0.5);
+					}
+					with instance_create(x,y,Smoke)
+					{
+						motion_add(random(360),1);
+					}
+					with instance_create(x,y,Smoke)
+					{
+						motion_add(random(360),2);
+					}
+				}
 			}
 			//Chicken Ultra A harder to kill
 			if ultra_got[33] == 1
 		    {
-			    with Player
+			    if my_health <= 0
 			    {
-			        if my_health <= 0
-			        {
-				        if race = 9 and bleed < 150
-				        {
-				            if bleed>0{
-				            bleed-=30;
-				            }
+				    if race = 9 and bleed < 150
+				    {
+				        if bleed>0{
+				        bleed-=30;
 				        }
-			        }
+				    }
 			    }
 		    }
 		}
