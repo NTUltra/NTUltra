@@ -1,6 +1,6 @@
 event_inherited();
 raddrop = 30
-maxhealth = 80;
+maxhealth = 70;
 EnemyHealthAdjustments();
 alarm[0] = 1;
 spr_idle = sprInvertedTeaPotIdle

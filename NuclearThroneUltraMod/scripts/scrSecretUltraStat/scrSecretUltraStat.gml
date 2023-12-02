@@ -120,7 +120,7 @@ function scrSecretUltraStat() {
 	//SHEEP 
 	//50
 	secret_ultra_name[14] = "CODENAME S.A.S. : SECRET AGENT SHEEP"
-	secret_ultra_text[14] = "ENEMIES THAT DON'T KNOW YOU'RE THERE#TAKE 10X DAMAGE##EACH AREA#TAKE ON THE APPEARANCE#OF ANY <w>CHARACTER<w>#ENABLING YOU TO USE THEIR <w>ACTIVE<w>#(NOT THEIR PASSIVE)##<pi>SECRET GATEWAYS<pi> APPEAR#IN THE <g>CROWN VAULT<g>#CONNECTING SEVERAL AREAS"
+	secret_ultra_text[14] = "ENEMIES THAT DON'T KNOW YOU'RE THERE#TAKE 10X DAMAGE##EACH AREA#TAKE ON THE APPEARANCE#OF ANY <w>CHARACTER<w>#ENABLING YOU TO USE THEIR <w>ACTIVE<w>#(NOT THEIR PASSIVE)#<pi>SECRET GATEWAYS<pi> APPEAR#IN THE <g>CROWN VAULT<g>#CONNECTING SEVERAL AREAS"
 	secret_ultra_tips[14] = "S.A.S."
 	secret_ultra_hint[14] = "SECRET QUEEN";
 	secret_ultra_unlk[14] = "HAVE A SECRET CROWN";
@@ -256,8 +256,8 @@ function scrSecretUltraStat() {
 	secret_ultra_name[30] = "GRUMPY LECTURE"
 	secret_ultra_text[30] = "ACTIVE COSTS <w>UNEQUIPPED<w> <y>AMMO<y>#INSTEAD OF SKILL#ACTIVE <pi>DEFLECTS<pi> & DESTROYS#ALL ENEMY PROJECTILES"
 	secret_ultra_tips[30] = "teach them a lesson!"
-	secret_ultra_hint[30] = "REDIRECT";
-	secret_ultra_unlk[30] = "HOLD A DIRECTOR WEAPON";
+	secret_ultra_hint[30] = "DIRECTING TO ZERO";
+	secret_ultra_unlk[30] = "HAVE 0 SKILL OR\nHOLD A DIRECTOR WEAPON";
 		
 	//HANDS
 	//Secret B skin ultra

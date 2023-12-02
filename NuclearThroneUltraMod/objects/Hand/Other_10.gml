@@ -24,3 +24,5 @@ if instance_exists(Player) && Player.ultra_got[106]
 		}
 	}
 }
+if loseTarget
+	target = noone;

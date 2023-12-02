@@ -747,7 +747,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_tips[104] = "discipline those projectiles!"
 		
 		//Have any director weapon
-		if altOverride || (instance_exists(Player) &&  Player.race == 26 && (Player.altUltra || Player.unlockAlternativeUltras || (scrHasDirector() && instance_exists(UltraIcon))))
+		if altOverride || (instance_exists(Player) &&  Player.race == 26 && (Player.altUltra || Player.unlockAlternativeUltras || ((Player.humphrySkill < 1 || scrHasDirector()) && instance_exists(UltraIcon))))
 		{
 			ultra_name[104] = "GRUMPY LECTURE"
 			//TODO change to unequipped ammo

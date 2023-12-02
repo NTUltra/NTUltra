@@ -124,7 +124,7 @@ else if skill == 97 && Player.race == 25 && (Player.unlockAlternativeUltras || !
 {
 	sprite_index = sprBeeKeeper;
 }
-else if skill == 104 && Player.race == 26 && (Player.unlockAlternativeUltras || scrHasDirector())
+else if skill == 104 && Player.race == 26 && (Player.unlockAlternativeUltras || (Player.humphrySkill < 1 || scrHasDirector()))
 {
 	sprite_index = sprGrumpyLecture;
 }

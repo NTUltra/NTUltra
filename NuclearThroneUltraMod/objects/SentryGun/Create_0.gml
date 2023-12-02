@@ -1,3 +1,4 @@
+event_inherited();
 maxhealth = 10
 my_health = maxhealth
 meleedamage = 0

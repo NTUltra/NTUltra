@@ -1397,11 +1397,11 @@ function scrPopEnemies() {
 			{
 				instance_create(x + 16, y + 16, choose(octaBot,squareBot,wallBot,bigBot))
 			}
-			if r > 4
+			if r > 5
 			{
 				instance_create(x + 16, y + 16, choose(octaBot,squareBot,wallBot,sniper,palaceGuardian))
 			}
-		    else if r > 1 || instance_number(enemy) < 1
+		    else if r > 2 || instance_number(enemy) < 1
 			{
 		        instance_create(x + 16, y + 16, choose(octaBot,squareBot,wallBot))
 			}
@@ -1409,15 +1409,15 @@ function scrPopEnemies() {
 		else
 		{
 			var r = random(10);
-			if r > 7
+			if r > 8
 			{
 				instance_create(x + 16, y + 16, choose(octaBot,squareBot,wallBot,bigBot))
 			}
-			if r > 4
+			if r > 5
 			{
 				instance_create(x + 16, y + 16, choose(octaBot,squareBot,wallBot))
 			}
-		    else if r > 1 || instance_number(enemy) < 1
+		    else if r > 2 || instance_number(enemy) < 1
 			{
 		        instance_create(x + 16, y + 16, choose(octaBot,squareBot,wallBot))
 			}

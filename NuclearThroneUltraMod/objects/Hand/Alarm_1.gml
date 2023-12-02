@@ -32,9 +32,9 @@ if target != noone && instance_exists(target)
 		}
 		sprite_index = spr_closing;
 		image_index = 0;
-		snd_play(sndHandThrowGrab);
 		if push
 		{
+			snd_play(sndHandThrowTB,0.2);
 			Sleep(20);
 			snd_play(sndExplosion);
 			BackCont.viewx2 += lengthdir_x(8,point_direction(creator.x,creator.y,x,y)+180)*UberCont.opt_shake
@@ -51,6 +51,7 @@ if target != noone && instance_exists(target)
 		}
 		else
 		{
+			snd_play(sndHandThrowGrab,0.2);
 			Sleep(10);
 			BackCont.viewx2 += lengthdir_x(6,point_direction(creator.x,creator.y,x,y)+180)*UberCont.opt_shake
 			BackCont.viewy2 += lengthdir_y(6,point_direction(creator.x,creator.y,x,y)+180)*UberCont.opt_shake

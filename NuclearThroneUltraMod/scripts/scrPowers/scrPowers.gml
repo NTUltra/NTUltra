@@ -1617,9 +1617,12 @@ function scrPowers() {
 		//Lose target
 		with Hand
 		{
-			if !push
+			if !push && !grabAnItem
 			{
-				target = -1;
+				if alarm[1] > 0
+					loseTarget = true;
+				else
+					target = -1;
 			}
 		}
 	}

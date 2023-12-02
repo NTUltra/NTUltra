@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "sndHandThrowGrab",
+  "name": "sndHandThrowold",
   "audioGroupId": {
     "name": "agsfx",
     "path": "audiogroups/agsfx",
@@ -10,14 +10,14 @@
   "bitRate": 192,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.266667,
+  "duration": 0.377188,
   "parent": {
     "name": "Hands",
     "path": "folders/Sounds/Player/Hands.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "sndHandThrowGrab.wav",
+  "soundFile": "sndHandThrowold.ogg",
   "type": 0,
   "volume": 1.0,
 }

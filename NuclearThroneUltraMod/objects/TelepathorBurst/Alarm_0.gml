@@ -27,7 +27,7 @@ repeat (6)
 	{
 		if other.ultramodded
 			alarm[11] = 0;
-		motion_add(aimDirection,4.5)
+		motion_add(aimDirection,5)
 		scrCopyWeaponMod(other);
 
 		image_angle = direction

@@ -469,7 +469,7 @@ function scrMakeFloor(limiter) {
 	} 
 	
 	//Factory
-	if area == 130 || area == 131 || area == 132 || area == 133 || area == 134{
+	if area == 130 || area == 131 || area == 132 || area == 133 || area == 134 {
 		instance_create(x,y,Floor)
 		instance_create(x,y + 32,Floor);
 		instance_create(x,y - 32,Floor);

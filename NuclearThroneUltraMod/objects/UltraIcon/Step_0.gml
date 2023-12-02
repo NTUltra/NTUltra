@@ -542,7 +542,7 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 		}
 
 	}
-	else if skill == 104 && Player.race == 26 && (scrHasDirector() || Player.unlockAlternativeUltras)
+	else if skill == 104 && Player.race == 26 && ((Player.humphrySkill < 1 || scrHasDirector()) || Player.unlockAlternativeUltras)
 	{
 		with Player
 		{

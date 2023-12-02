@@ -17,4 +17,8 @@ with p {
 			i++;
 		}
 	}
+	with other
+	{
+		alarm[2] = 1;	
+	}
 }

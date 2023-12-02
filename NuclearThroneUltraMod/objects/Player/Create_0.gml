@@ -17,6 +17,7 @@ with GameRender
 }
 with DataRef
 	instance_destroy();
+humphrySkill = 0;
 canCrownOfProtection = true;
 angelHeal = false;
 tailWave = 0;
@@ -683,7 +684,6 @@ rnglevelloop = 0;
 
 heavyheart = 0;
 
-humphrySkill = 0;
 
 freeArmourStrike = false;
 if race = 16 {

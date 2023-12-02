@@ -74,6 +74,8 @@ function scrEndOfRun(){
 					j++;
 				}
 				route = string_split(other.routeString,">",true);
+				if array_length(route) == 1
+					route[1] = route[0];
 				time = 0;
 				loop = 0;
 				routeIndex = 0;

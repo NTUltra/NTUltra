@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "sndHunterHit",
+  "name": "sndHandThrowTB",
   "audioGroupId": {
     "name": "agsfx",
     "path": "audiogroups/agsfx",
@@ -10,14 +10,14 @@
   "bitRate": 192,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.581729,
+  "duration": 2.096875,
   "parent": {
-    "name": "Hunter",
-    "path": "folders/Sounds/Player/Hunter.yy",
+    "name": "Hands",
+    "path": "folders/Sounds/Player/Hands.yy",
   },
-  "preload": true,
+  "preload": false,
   "sampleRate": 44100,
-  "soundFile": "sndHunterHit.ogg",
+  "soundFile": "sndHandThrowTB.wav",
   "type": 0,
   "volume": 1.0,
 }
