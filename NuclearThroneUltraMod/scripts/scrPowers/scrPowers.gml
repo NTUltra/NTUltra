@@ -1733,6 +1733,7 @@ function scrPowers() {
 							if corpseSize > 4
 							{
 								ang = random(360)
+								scrSpawnBloodBullets(xx,yy,4,14);
 								instance_create(xx+lengthdir_x(70,ang),yy+lengthdir_y(70,ang),MeatExplosion)
 								instance_create(xx+lengthdir_x(70,ang+120),yy+lengthdir_y(70,ang+120),MeatExplosion)
 								instance_create(xx+lengthdir_x(70,ang+240),yy+lengthdir_y(70,ang+240),MeatExplosion)
@@ -1740,6 +1741,7 @@ function scrPowers() {
 							var ang = random(360)
 							if corpseSize > 2
 							{
+								scrSpawnBloodBullets(xx,yy,6,12);
 								instance_create(xx,yy,MeatExplosion);
 								instance_create(xx+lengthdir_x(44,ang),yy+lengthdir_y(44,ang),MeatExplosion)
 								instance_create(xx+lengthdir_x(44,ang+120),yy+lengthdir_y(44,ang+120),MeatExplosion)
@@ -1747,6 +1749,7 @@ function scrPowers() {
 							}
 							else
 							{
+								scrSpawnBloodBullets(xx,yy,5,10);
 								instance_create(xx+lengthdir_x(24,ang),yy+lengthdir_y(24,ang),MeatExplosion)
 								instance_create(xx+lengthdir_x(24,ang+120),yy+lengthdir_y(24,ang+120),MeatExplosion)
 								instance_create(xx+lengthdir_x(24,ang+240),yy+lengthdir_y(24,ang+240),MeatExplosion)	
@@ -1755,6 +1758,7 @@ function scrPowers() {
 						}
 						else if corpseSize > 3
 						{
+							scrSpawnBloodBullets(xx,yy,5,10);
 							scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
 							var ang = random(360)
 							instance_create(xx+lengthdir_x(24,ang),yy+lengthdir_y(24,ang),MeatExplosion)
@@ -1764,7 +1768,8 @@ function scrPowers() {
 						else
 						{
 							scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
-							instance_create(xx,yy,MeatExplosion)
+							instance_create(xx,yy,MeatExplosion);
+							scrSpawnBloodBullets(xx,yy,3,8);
 						}
 						markForDelete[j] = i;
 						j ++;
@@ -1787,11 +1792,12 @@ function scrPowers() {
 					motion_add(point_direction(Player.x,Player.y,x,y),8)
 					image_angle = direction
 					}
-					instance_create(x,y,MeltSplat)
 					if gotButt
 					{
+						scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
 						if mySize > 4
 						{
+							scrSpawnBloodBullets(x,y,4,12);
 							ang = random(360)
 							instance_create(x+lengthdir_x(70,ang),y+lengthdir_y(70,ang),MeatExplosion)
 							instance_create(x+lengthdir_x(70,ang+120),y+lengthdir_y(70,ang+120),MeatExplosion)
@@ -1800,6 +1806,7 @@ function scrPowers() {
 						ang = random(360)
 						if mySize > 2
 						{
+							scrSpawnBloodBullets(x,y,6,10);
 							instance_create(x,y,MeatExplosion);
 							instance_create(x+lengthdir_x(44,ang),y+lengthdir_y(44,ang),MeatExplosion)
 							instance_create(x+lengthdir_x(44,ang+120),y+lengthdir_y(44,ang+120),MeatExplosion)
@@ -1807,6 +1814,7 @@ function scrPowers() {
 						}
 						else
 						{
+							scrSpawnBloodBullets(x,y,5,8);
 							instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
 							instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
 							instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)	
@@ -1815,13 +1823,19 @@ function scrPowers() {
 					}
 					else if mySize > 3
 					{
+						scrSpawnBloodBullets(x,y,5,8);
+						scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
 						ang = random(360)
 						instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
 						instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
 						instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
 					}
 					else
-						instance_create(x,y,MeatExplosion)
+					{
+						scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
+						instance_create(x,y,MeatExplosion);
+						scrSpawnBloodBullets(x,y,3,7);
+					}
 				}
 			}
 		}

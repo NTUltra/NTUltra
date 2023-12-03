@@ -19,7 +19,7 @@ with instance_create(x,y,Tentacle)
 	}
 }
 randomAngle += randomAngleDir;
-alarm[2] = 5 + irandom(5);
+alarm[2] = rate + irandom(rate);
 with instance_create(x,y,Dust)
 {
 	sprite_index = sprBubble;

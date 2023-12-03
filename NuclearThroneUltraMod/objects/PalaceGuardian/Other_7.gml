@@ -47,7 +47,7 @@ else if (sprite_index == spr_disappear)
 else if (sprite_index == spr_appear || sprite_index == spr_hurt)
 {
 	fire = false;
-	meleedamage = 2;
+	meleedamage = 3;
 	sprite_index = spr_normal;
 	spr_idle = spr_normal;
 	spr_walk = spr_normal;

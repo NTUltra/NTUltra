@@ -14,7 +14,7 @@ snd_play(sndPartyHorn);
 
 if random(2000)<1
 {
-snd_play(Explosion);
+snd_play(sndExplosion);
 }
 
 if random(300)<1
@@ -46,9 +46,3 @@ if random(300)<1
 {
 snd_play(sndShielderHurtF);
 }
-
-if random(200)<1
-{
-snd_play(irandom(12870891370));
-}
-

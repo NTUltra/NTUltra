@@ -13,6 +13,7 @@ function EnemyHealthAdjustments(){
 		
 		my_health = maxhealth;
 		//var hpReduction = 0;
+		/*
 		if Player.skill_got[11]//Scarier face
 		{
 			/* Old additive
@@ -21,11 +22,12 @@ function EnemyHealthAdjustments(){
 			else
 				hpReduction += round(maxhealth*0.18)
 				*/
+			/*
 			if Player.race=25
 				my_health *= 0.8 + clamp(ogmaxhealth*0.00005,0,0.15);
 			else
 				my_health *= 0.78 + clamp(ogmaxhealth*0.00005,0,0.15);
-		}
+		}*/
 		if Player.skill_got[33] = 1//GLASS ARM CANNON
 		{
 			//hpReduction += round(maxhealth*0.25)

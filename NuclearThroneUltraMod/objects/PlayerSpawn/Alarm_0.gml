@@ -16,6 +16,7 @@ snd_play(sndStatueCharge);
 with Player//Data to keep
 {
 	//bskin=other.bskin;
+	gunGameKill = other.gunGameKill;
 	rnglevelloop = other.rnglevelloop;
 	firedthislevel = other.firedthislevel;
 	firedOnce = other.firedOnce;

@@ -1388,7 +1388,8 @@ function scrPopEnemies() {
 			squareBot = UltraSquareBot;
 			wallBot = UltraWallBot;
 			bigBot = UltraBigBot;
-			palaceGuardian = SmallUltraSniper;
+			palaceGuardian = Ratking;
+			sniper = Rat;
 		}
 		if loops > 0
 		{

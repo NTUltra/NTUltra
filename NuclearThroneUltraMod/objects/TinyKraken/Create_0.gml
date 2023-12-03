@@ -1,4 +1,4 @@
-raddrop = 5
+raddrop = 4
 hurt_pitch_variation = 0;
 existTime = 0;
 gun = sprBanditGun;
@@ -15,8 +15,19 @@ maxSpeed = 4.5;
 image_speed = 0.4
 friction = 0.4
 right = choose(1,-1)
-maxhealth = 20;
+ loops = GetPlayerLoops();
+maxhealth = 5;
 my_health = maxhealth
+rate = 7;
+actTime = 10;
+if loops > 0
+{
+	actTime = 7;
+	rate = 5;
+	raddrop += 1;
+	maxhealth = 17;
+	my_health = maxhealth
+}
 
 target = noone;
 team = 2

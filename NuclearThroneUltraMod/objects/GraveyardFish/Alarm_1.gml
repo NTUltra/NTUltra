@@ -11,7 +11,7 @@ if my_health <= maxhealth*0.6 && !reachedHalfHealth
 	event_user(3);	
 }
 scrTarget();
-if target != noone {
+if target != noone && instance_exists(target) {
 	var ran = random(10);
         if ran < 3.6 {
 			gunangle = point_direction(x, y, target.x, target.y);

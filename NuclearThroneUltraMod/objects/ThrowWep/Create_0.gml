@@ -42,7 +42,7 @@ if instance_exists(Player)
 	multiplier=(Player.ultra_got[53]*0.2)+1;//Ultra A
 	multiplier+=Player.skill_got[5]*0.2;
 
-	dmg=(11+2*Player.level)*multiplier
+	dmg=(11 + (1.5*Player.level))*multiplier
 }
 else
 	dmg=11;//22
@@ -64,4 +64,4 @@ scrInitDrops(1);
 
 pickedup = true;
 oneweponly = false;
-alarm[1] = 5;
+alarm[1] = 20;

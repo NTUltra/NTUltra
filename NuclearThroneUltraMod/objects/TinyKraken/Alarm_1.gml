@@ -1,4 +1,4 @@
-alarm[1] = 7+irandom(6);
+alarm[1] = actTime+irandom(actTime);
 with instance_create(x,y,FishBoost)
 {
 	motion_add(random(360),random(2));
@@ -50,6 +50,7 @@ if target != noone && instance_exists(target) && target.team != team && target.m
 					motion_add( point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(60)-30,2+random(4));
 			    }
 			}
+			alarm[1] += 4;
 		}
 		else
 		{

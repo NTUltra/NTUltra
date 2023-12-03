@@ -3,7 +3,7 @@ event_inherited()
 Sleep(20)
 BackCont.shake += 10;
 instance_create(x+hspeed,y+vspeed,WallBreak);
-var am = 4;
+var am = 6;
 var ang = fireRotation;
 var angStep = 360/am;
 repeat(am)

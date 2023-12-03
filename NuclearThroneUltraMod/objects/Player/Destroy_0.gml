@@ -342,6 +342,7 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 	level = max(other.boostLevel,other.level);
 	inverted = other.inverted;
 	crownvisits = other.crownvisits;
+	gunGameKill = other.gunGameKill;
 	if other.ultra_got[87] && other.altUltra && other.rogueammo > 0
 	{
 		skeletonlives = other.skeletonlives
@@ -717,6 +718,7 @@ with instance_create(x,y,DataRef)
 	skill_text = other.skill_text;
 	maxskill = other.maxskill;
 	totalSkills = other.totalSkills;
+	gunGameKill = other.gunGameKill;
 	rage = other.rage;
 	maxhealth = other.maxhealth;
 	my_health = 0;

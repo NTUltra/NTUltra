@@ -5,8 +5,8 @@ var yy = y - camera_get_view_y(view_camera[0]);
 draw_sprite(sprite_index,image_index,xx,yy);
 yy -= 24;
 if instance_exists(Player)
-	rageNumber = Player.rage;
-var strRage = string(rageNumber);
+	rageNumber = round(Player.rage);
+var strRage = string_digits(rageNumber);
 var step = 8//Sprite width + 2 for borders
 var am = string_length(strRage);
 xx = xx - step*(am*0.5);

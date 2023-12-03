@@ -21,13 +21,13 @@ if enablePopUp == 1
 	draw_rectangle_color(xx-ww,yy-wh,xx+ww,yy+wh,outcol,outcol,outcol,outcol,true);
 	
 	draw_sprite(wep_sprt[real(popupEntry[popUpIndex])],0,xx-ww*offset,yy+14);
-	draw_text_ext(xx-ww*offset,yy-2,wep_name[real(popupEntry[popUpIndex])],0,47);
+	draw_text_ext(xx-ww*offset,yy-2,wep_name[real(popupEntry[popUpIndex])],8,47);
 	draw_sprite(wep_sprt[real(popupEntry[popUpIndex+1])],0,xx+ww*offset,yy+14);
-	draw_text_ext(xx+ww*offset,yy-2,wep_name[real(popupEntry[popUpIndex+1])],0,47);
+	draw_text_ext(xx+ww*offset,yy-2,wep_name[real(popupEntry[popUpIndex+1])],8,47);
 	if (real(popupEntry[popUpIndex+2]) != 0)//Three weapons
 	{
 		draw_sprite(wep_sprt[real(popupEntry[popUpIndex+2])],0,xx,yy+14);
-		draw_text_ext(xx,yy-2,wep_name[real(popupEntry[popUpIndex+2])],0,47);
+		draw_text_ext(xx,yy-2,wep_name[real(popupEntry[popUpIndex+2])],8,47);
 	}
 	
 }
@@ -43,7 +43,7 @@ else if enablePopUp == 2
 	var al = array_length(popupEntry);
 	if al == 1
 	{
-		draw_text_ext(xx,yy-4,string_replace_all(string_replace_all(crown_name[popupEntry[0]],"[",""),"]",""),0,(ww*2)-2);
+		draw_text_ext(xx,yy-4,string_replace_all(string_replace_all(crown_name[popupEntry[0]],"[",""),"]",""),8,(ww*2)-2);
 		scrDrawLeaderboardCrown(popupEntry,xx,yy+8)
 	}
 	else
@@ -78,16 +78,16 @@ else if enablePopUp == 3
 	yy -= wh*0.5;
 	if popupEntry[popUpIndex[0]] == 1 && popupEntry[popUpIndex[1]] == 2 && popupEntry[popUpIndex[3]] == 4
 	{	
-		draw_text_ext(xx,yy-4,"FISH CAN GUN",0,(ww*2)-2);
+		draw_text_ext(xx,yy-4,"FISH CAN GUN",8,(ww*2)-2);
 	}
 	else if popupEntry[popUpIndex[0]] == 27 && popupEntry[popUpIndex[3]] == 106//race
 	{
 		if popupEntry[popUpIndex[1]] == 1//bskin
-			draw_text_ext(xx,yy-4,"HOT HANDS",0,(ww*2)-2);
+			draw_text_ext(xx,yy-4,"HOT HANDS",8,(ww*2)-2);
 		else if popupEntry[popUpIndex[1]] == 2
-			draw_text_ext(xx,yy-4,"BOOM HANDS",0,(ww*2)-2);
+			draw_text_ext(xx,yy-4,"BOOM HANDS",8,(ww*2)-2);
 		else
-			draw_text_ext(xx,yy-4,ultra_name[real(popupEntry[popUpIndex[3]])],0,(ww*2)-2);
+			draw_text_ext(xx,yy-4,ultra_name[real(popupEntry[popUpIndex[3]])],8,(ww*2)-2);
 	}
 	else
 	{
@@ -97,7 +97,7 @@ else if enablePopUp == 3
 			popUpAltUltra = popupEntry[popUpIndex[2]];
 			scrUltras(popupEntry[popUpIndex[2]]);
 		}
-		draw_text_ext(xx,yy-4,ultra_name[real(popupEntry[popUpIndex[3]])],0,(ww*2)-2);
+		draw_text_ext(xx,yy-4,ultra_name[real(popupEntry[popUpIndex[3]])],8,(ww*2)-2);
 	}
 	
 	scrDrawLeaderboardUltra(xx,yy+8,popupEntry,popUpIndex[0],popUpIndex[1],popUpIndex[2],popUpIndex[3]);

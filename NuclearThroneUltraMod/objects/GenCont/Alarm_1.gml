@@ -142,8 +142,13 @@ if instance_exists(Player)
 	{
 		wkick = 0;
 		alienIntestines = 0;
-		x = 10016
-		y = 10016
+		if !instance_exists(BigMachine) && !instance_exists(InvertedBigMachine)
+		{
+			x = 10016;
+			y = 10016;
+		}
+		alarm[3] = 60;
+		meleeimmunity = 60;
 		scrForcePosition60fps();
 	}
 	if (Player.area == 9 || Player.area == 118) && Player.subarea == 3

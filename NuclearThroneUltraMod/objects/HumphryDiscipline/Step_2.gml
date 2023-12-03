@@ -15,8 +15,8 @@ with projectile
 	&& x > other.x - 170 && x < other.x + 170 && y > other.y - 130 && y < other.y + 130)
 	{
 		if canBeMoved {
-			x -= hspeed;
-			y -= vspeed;
+			x = xprevious;
+			y = yprevious;
 			//scrForcePosition60fps();
 		}
 	}

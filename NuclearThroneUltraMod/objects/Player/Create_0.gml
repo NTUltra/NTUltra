@@ -17,7 +17,9 @@ with GameRender
 }
 with DataRef
 	instance_destroy();
+excessDamageDeal = 0;
 humphrySkill = 0;
+gunGameKill = 10;
 canCrownOfProtection = true;
 angelHeal = false;
 tailWave = 0;
@@ -725,20 +727,21 @@ if scrIsGamemode(11) //GUN GAME
     do {
         wep = irandom(maxwep);
     }
-    until(wep != 69 && wep != 0 && wep != 298 && wep_rad[wep] <= 0) //no oops gun and no no gun
+    until(wep != 69 && wep != 0 && wep != 298 && wep_rad[wep] <= 0&&wep_area[wep] > -2) //no oops gun and no no gun
 
     if race = 7 //roids
     {
         do {
             bwep = irandom(maxwep);
         }
-        until(bwep != 69 && bwep != 0 && wep != 298) //no oops gun and no no gun
+        until(bwep != 69 && bwep != 0 && wep != 298&&wep_area[bwep] > -2) //no oops gun and no no gun
     }
 
     if ammo[wep_type[wep]] < typ_ammo[wep_type[wep]] * 3 {
         ammo[wep_type[wep]] += typ_ammo[wep_type[wep]] * 3;
     }
-
+	wep_rad[wep] = 0;
+	scrWeaponHold();
 }
 
 if scrIsGamemode(8) { //VAN FAN

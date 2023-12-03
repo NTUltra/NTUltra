@@ -150,25 +150,49 @@ function scrDrawHUD() {
 		}
 		if UberCont.isWeekly
 		{
-			draw_sprite(sprWeeklyChallengeHUD,0,vx+4,vy+__view_get( e__VW.HView, 0 )-2);
+			draw_sprite(sprWeeklyChallengeHUD,0,vx+2,vy+__view_get( e__VW.HView, 0 )-2);
 		}
 		else if scrIsGamemode(26)
 		{
-			draw_sprite(sprDailyChallengeHUDRace,0,vx+4,vy+__view_get( e__VW.HView, 0 )-2);
+			draw_sprite(sprDailyChallengeHUDRace,0,vx+2,vy+__view_get( e__VW.HView, 0 )-2);
 		}
 		else if scrIsGamemode(27)
 		{
-			draw_sprite(sprDailyChallengeHUD,0,vx+4,vy+__view_get( e__VW.HView, 0 )-2);
+			draw_sprite(sprDailyChallengeHUD,0,vx+2,vy+__view_get( e__VW.HView, 0 )-2);
 		}
 		else
 		{
 			draw_set_colour(c_white);
-			draw_sprite(sprGamemodeHUD,0,vx+4,vy+__view_get( e__VW.HView, 0 )-2);
+			draw_sprite(sprGamemodeHUD,0,vx+2,vy+__view_get( e__VW.HView, 0 )-2);
 			/*
 			if scrIsGamemode(17) {
 				draw_text(vx+64,vy+__view_get( e__VW.HView, 0 )-8,string(fps_real));
 			}
 			*/
+		}
+		//GUN GAME
+		if scrIsGamemode(11)
+		{
+			var gx = vx + 16;
+			var gy = vy+__view_get( e__VW.HView, 0 )-22
+			var ggk = floor(dataRef.gunGameKill);
+			txt = string(ggk);
+			draw_set_halign(fa_left)
+			draw_sprite(sprGunGameKill,0,vx+2,gy-3)
+			draw_set_color(c_black)
+			draw_text(vx+15,gy,string_hash_to_newline(string(txt)))
+			draw_text(vx+15,gy+1,string_hash_to_newline(string(txt)))
+			draw_text(vx+16,gy+1,string_hash_to_newline(string(txt)))
+			if ggk == 3
+				draw_set_color(c_yellow);
+			else if ggk == 2
+				draw_set_color(c_orange);
+			else if ggk == 1
+				draw_set_colour(c_red);
+			else
+				draw_set_color(c_white)
+			draw_text(vx+16,gy,string_hash_to_newline(string(txt)))
+			draw_set_color(c_white)
 		}
 	}
 	if holdExplainGamemode > 0 
@@ -1017,27 +1041,23 @@ function scrDrawHUD() {
 	//GOOD O'L HUMPHRY SKILL
 	if dataRef.race=26
 	{
+		txt = string(floor(dataRef.humphrySkill));
+		draw_set_halign(fa_left)
+		draw_sprite(sprHumphrySkill,0,vx+2,vy+66)
+		draw_set_color(c_black)
+		draw_text(vx+15,vy+68,string_hash_to_newline(string(txt)))
+		draw_text(vx+15,vy+69,string_hash_to_newline(string(txt)))
+		draw_text(vx+16,vy+69,string_hash_to_newline(string(txt)))
 
-	txt = string(floor(dataRef.humphrySkill));
+		if instance_exists(PlayerAlarms) && PlayerAlarms.alarm[7] > 0 || (instance_exists(HumphryDiscipline) && !(dataRef.altUltra && dataRef.ultra_got[104]))
+			draw_set_color(c_red)
+		else
+			draw_set_color(c_white)
+		draw_text(vx+16,vy+68,string_hash_to_newline(string(txt)))
 
-
-	draw_set_halign(fa_left)
-
-	draw_sprite(sprHumphrySkill,0,vx+1,vy+66)
-	draw_set_color(c_black)
-	draw_text(vx+14,vy+68,string_hash_to_newline(string(txt)))
-	draw_text(vx+14,vy+69,string_hash_to_newline(string(txt)))
-	draw_text(vx+15,vy+69,string_hash_to_newline(string(txt)))
-
-	if instance_exists(PlayerAlarms) && PlayerAlarms.alarm[7] > 0 || (instance_exists(HumphryDiscipline) && !(dataRef.altUltra && dataRef.ultra_got[104]))
-		draw_set_color(c_red)
-	else
 		draw_set_color(c_white)
-	draw_text(vx+15,vy+68,string_hash_to_newline(string(txt)))
-
-	draw_set_color(c_white)
 	}
-
+	
 
 	var ammoheight;
 	ammoheight=31;//34

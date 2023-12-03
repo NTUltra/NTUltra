@@ -150,7 +150,18 @@ if prevhealth > my_health
 				}
 			}
 		}
-		my_health = prevhealth - dmgTaken;
+		if (Player.skill_got[11]) {
+			dmgTaken += Player.excessDamageDeal;
+			Player.excessDamageDeal = 0;
+			my_health = prevhealth - dmgTaken;
+			if (my_health < 0) {
+				Player.excessDamageDeal += my_health *-0.5;
+			}
+		}
+		else
+		{
+			my_health = prevhealth - dmgTaken;
+		}
 		if UberCont.opt_dmgindicator
 	    {
 			var offset = sprite_height*0.5;

@@ -266,7 +266,7 @@ function scrEnemyDeathEvent(){
 					{
 						direction = other.direction;
 						speed = other.speed * 0.5;
-						rageNumber = other.rage;
+						rageNumber = round(other.rage);
 						snd_play(sndRageIndicator);
 						motion_add(random(360),0.5);
 					}
@@ -298,23 +298,30 @@ function scrEnemyDeathEvent(){
 	    {
 	        with Player
 	        {
-			    do{
-			        wep=irandom(maxwep);
-			        }until(wep!=69&&wep!=0&& wep!=298)//no oops gun or no wep or golden oops
+				gunGameKill --;
+				if gunGameKill <= 0
+				{
+					if loops > 0
+						gunGameKill = 20;
+					else
+						gunGameKill = 10;
+					if wep != 0
+						do	{
+				        wep=irandom(maxwep);
+				        }until(wep!=69&&wep!=0&& wep!=298&&wep_area[wep] > -2)//no oops gun or no wep or golden oops
                 
-			        if race=7//roids
-			        {
-			            do{
-			            bwep=irandom(maxwep);
-			            }until(bwep!=69&&bwep!=0&&wep!=298)//no oops gun
-			        }
+				        if bwep != 0
+				        {
+				            do{
+				            bwep=irandom(maxwep);
+				            }until(bwep!=69&&bwep!=0&&wep!=298&&wep_area[bwep] > -2)//no oops gun
+				        }
                 
-			        if ammo[wep_type[wep]] < typ_ammo[wep_type[wep]]*3
-			        {ammo[wep_type[wep]]+=typ_ammo[wep_type[wep]]*3;}
-					
-			        if rad < wep_rad[wep] * 4
-						rad = wep_rad[wep] * 4;
-			    scrWeaponHold();
+				        if ammo[wep_type[wep]] < typ_ammo[wep_type[wep]]*3
+				        {ammo[wep_type[wep]]+=typ_ammo[wep_type[wep]]*3;}
+						wep_rad[wep] = 0;
+				    scrWeaponHold();
+				}
 	        }
 	    }
 		if instance_exists(Player)

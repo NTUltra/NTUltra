@@ -18,6 +18,7 @@ if target != noone
 	alarm[6] = image_number/image_speed;
 	depth = -10;
 	with instance_create(x,y,BigWallBreak) {
+		image_xscale = other.image_xscale;
 		mask_index = mskSandWormDig;
 	}
 	repeat(8)

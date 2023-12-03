@@ -19,7 +19,7 @@ alarm[0] = 2+random(4)
 
 if !instance_exists(Player) && sndtaunt = 0
 {
-	if is60fps
+	if UberCont.normalGameSpeed == 60
 		tauntdelay += 0.5;
 	else
 		tauntdelay += 1

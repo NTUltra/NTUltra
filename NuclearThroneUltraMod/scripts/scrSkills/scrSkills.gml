@@ -188,10 +188,14 @@ function scrSkills() {
 	skill_name[11] = "SCARIER FACE"
 	if isHand
 		skill_name[11] = "SCARIER NAIL"
-	skill_text[11] = "20% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS"
-	skill_tips[11] = "mirrors will break"
+	//skill_text[11] = "20% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS"
+	//50% OF EXCESS DAMAGE YOU DEAL#IS ADDED TO YOUR NEXT HIT
+	//+5%
+	skill_text[11] = "50% OF <w>EXCESS<w> <r>DAMAGE<r> YOU <w>DEAL<w>#IS ADDED TO THE <w>NEXT<w> <r>DAMAGE<r> YOU <w>DEAL<w>"
+	skill_tips[11] = "imprint fear"//"mirrors will break"
 	skill_msnd[11] =  sndMutScarierFace
-	skill_bons[11] = "+2% LESS ENEMY HP";
+	skill_bons[11] = "DID NOT IMPLEMENT THIS FOR THE BETA";
+	//skill_bons[11] = "+2% LESS ENEMY HP";
 
 	skill_name[12] = "EUPHORIA"
 	skill_text[12] = "SLOWER ENEMY BULLETS#WHEN YOU GET HIT YOU GAIN#<aq>INVINCIBILITY<aq> FOR A SHORT MOMENT"

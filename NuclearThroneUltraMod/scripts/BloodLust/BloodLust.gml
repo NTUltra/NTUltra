@@ -31,17 +31,7 @@ function BloodLust(){
 			);
 			splatDir += angStep;
 		}
-		splatDir = random(360);
-		repeat(3)
-		{
-			with instance_create(x,y,BloodBullet)
-			{
-				motion_add(splatDir,14);
-				image_angle = direction
-				team = 2;
-			}
-			splatDir += 120;
-		}
+		scrSpawnBloodBullets(x,y,3,14);
     	snd_play_2d(sndBloodlustProc,0,true);
 	    with instance_create(Player.x,Player.y-8,HealFX)
 	    {

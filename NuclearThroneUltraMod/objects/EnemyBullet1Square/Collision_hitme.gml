@@ -32,7 +32,9 @@ if other.team != team and other.my_health > 0 and (!onlyHitPlayerTeam || other.t
 	instance_destroy()
 
 	with instance_create_depth(x,y,depth,EBulletHit)
+	{
 		sprite_index = sprEnemyBulletHitSquare;
+	}
 	//with instance_create(x,y,BulletHit)
 	//sprite_index = sprEnemyBulletHit
 }
