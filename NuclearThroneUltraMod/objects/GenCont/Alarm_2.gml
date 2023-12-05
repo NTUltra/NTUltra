@@ -125,12 +125,12 @@ if Player.area = 123 and Player.subarea = 2 && !scrIsGamemode(40)
 	{
 		if scrIsGamemode(44)
 		{
-			repeat(clamp(floor((Player.loops-1)*0.2),1,3))
+			repeat(clamp(floor((Player.loops-1)*0.2),0,2))
 				instance_create(instance_furthest(Player.x,Player.y,Floor).x+132, instance_furthest(Player.x,Player.y,Floor).y+32,BigBadBat);
 		}
 		else
 		{
-			repeat(clamp(floor((Player.loops-1)*0.25),1,3))
+			repeat(clamp(floor((Player.loops-1)*0.25),0,3))
 				instance_create(instance_furthest(Player.x,Player.y,Floor).x+132, instance_furthest(Player.x,Player.y,Floor).y+32,LilHunter);
 		}
 	}

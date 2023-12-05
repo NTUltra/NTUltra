@@ -33,26 +33,23 @@ function scrPopProps() {
 	and Player.area != 100 and Player.area != 6 and Player.area != 9 and Player.area != 118 and Player.area != 112  and (Player.area !=5 or random(3) < 1) and Player.area != 102 and Player.area != 104
 	and !(Player.area = 8 && Player.subarea=3) and Player.area != 116 and Player.area != 137//lill walls
 	{
-	myx = x+choose(0,16)
-	myy = y+choose(0,16)
-	if !place_meeting(myx,myy,hitme) && !place_meeting(myx,myy,chestprop) && !place_meeting(myx,myy,RadChest) && !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(myx,myy,prop)
-		instance_create(myx,myy,Wall)
-	instance_create(x,y,NOWALLSHEREPLEASE)
-	if random(15) < 1 and point_distance(myx,myy,Player.x,Player.y) > 128 and (spawnarea = 3 || spawnarea == 121) && Player.subarea != 3
-		instance_create(myx,myy,Trap)
-	
-	if random(15) < 1 and point_distance(myx,myy,Player.x,Player.y) > 128 and (spawnarea = 2 || spawnarea == 110) && Player.loops > 1
-	instance_create(myx,myy,ToxicTrap)
-
-
-		if random(4) < 1 and point_distance(myx,myy,Player.x,Player.y) > 64 and spawnarea = 7 //RANDOM LAVA
-			instance_create(myx,myy,FloorExplo)
-		if random(16) < 1 and point_distance(myx,myy,Player.x,Player.y) > 128 and spawnarea = 7 &&Player.subarea!=2//RANDOM TRAP
-			instance_create(myx,myy,Trap)
+		myx = x+choose(0,16)
+		myy = y+choose(0,16)
+		if !place_meeting(myx,myy,hitme) && !place_meeting(myx,myy,chestprop) && !place_meeting(myx,myy,RadChest) && !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(myx,myy,prop)
+			instance_create(myx,myy,Wall)
 		
-		if random(4) < 1 and point_distance(myx,myy,Player.x,Player.y) > 64 and spawnarea = 108 //RANDOM LAVA
-			instance_create(myx,myy,FloorExplo)
-		if random(16) < 1 and point_distance(myx,myy,Player.x,Player.y) > 128 and spawnarea = 108 &&Player.subarea!=2//RANDOM TRAP
+		instance_create(x,y,NOWALLSHEREPLEASE)
+		if random(15) < 2 and point_distance(myx,myy,Player.x,Player.y) > 128 and (spawnarea = 3 || spawnarea == 121) && Player.subarea != 3
+			instance_create(myx,myy,Trap)
+	
+		if random(15) < 2 and point_distance(myx,myy,Player.x,Player.y) > 128 and (spawnarea = 2 || spawnarea == 110) && Player.loops > 1
+			instance_create(myx,myy,ToxicTrap)
+
+
+		if random(16) < 4 and point_distance(myx,myy,Player.x,Player.y) > 128 and spawnarea = 7 &&Player.subarea!=2//RANDOM TRAP
+			instance_create(myx,myy,VulcanoTrap)
+		
+		if random(16) < 4 and point_distance(myx,myy,Player.x,Player.y) > 128 and spawnarea = 108 &&Player.subarea!=2//RANDOM TRAP
 			instance_create(myx,myy,FrostTrap)
 
 	}

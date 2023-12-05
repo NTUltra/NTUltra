@@ -8,7 +8,7 @@ scrTarget()
 if target != noone {
 	var ran = random(10);
 	var dis = point_distance(target.x, target.y, x, y)
-	if dis < 96 && ran < 4
+	if dis < range && ran < 4
 	{
 		snd_play(snd_melee);
 		targetWalkTime = 2;

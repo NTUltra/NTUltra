@@ -422,7 +422,7 @@ function scrRaces() {
 	race_eskin[24] = 0
 	race_fskin[24] = 0
 	race_bskin_lock[24] = "BURN A FROZEN ENEMY#AS ELEMENTOR"
-	race_cskin_lock[24] = "COMPLETE A#MAIN AREA#AFTER THE SEWERS#WITHOUT FIRING#AS ELEMENTOR"
+	race_cskin_lock[24] = "SUMMON 4 TINY KRAKENS#IN ONE AREA#USING CROWN OF DROWNING#AS ELEMENTOR"
 
 
 	race_name[25] = "[DOCTOR]"//MUTATION SMITH

@@ -44,12 +44,14 @@ function scrLoadEncrypted(){
 			}
 			else
 			{
-				show_error("incorrect encrypted data",true);	
+				// show_error("incorrect encrypted data",true);
+				scrSaveEncrypted();
 			}
 		}
 		else
 		{
-			show_error("encrypted data lost integrity",false);	
+			//show_error("encrypted data lost integrity",false);
+			scrSaveEncrypted();
 		}
 	}
 	else

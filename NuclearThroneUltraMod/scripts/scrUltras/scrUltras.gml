@@ -245,7 +245,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_text[35] = "<w>SLOW MOTION<w> IS MUCH MORE EFFECTIVE#ON ENEMY PROJECTILES#(EVEN MORE EFFECTIVE WITH EUPHORIA)##SLOW MOTION COMPLETLY STOPS#YOUR PROJECTILES"
 	ultra_tips[35] = "so fast"
 	
-	if altOverride || (instance_exists(Player) &&  Player.race == 9 && (((scrIsCrown(12) || scrIsCrown(34)) && instance_exists(UltraIcon)) || Player.altUltra))
+	if altOverride || (instance_exists(Player) &&  Player.race == 9 && (((scrIsCrown(12) || scrIsCrown(34)) && instance_exists(UltraIcon)) || Player.altUltra || Player.unlockAlternativeUltras))
 	{
 		ultra_name[35] = "SUCOF"
 		ultra_text[35] = "SELITCEJORP <w>SESREVER<w> EVITCA"//ACTIVE REVERSES PROJECTILES | EMIT SESREVER EVITCA

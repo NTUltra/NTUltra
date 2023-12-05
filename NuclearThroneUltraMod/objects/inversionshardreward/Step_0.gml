@@ -2,4 +2,4 @@
 if UberCont.normalGameSpeed == 60
 	wave += 0.15
 else
-	wave += 3
+	wave += 0.3

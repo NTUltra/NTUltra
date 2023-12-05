@@ -41,7 +41,7 @@ else if Player.race == 9 && skill == 33 && (Player.unlockAlternativeUltras || sc
 {
 	sprite_index = sprPhoenix;
 }
-else if skill == 35 && Player.race == 9 && (Player.unlockAlternativeUltras || (scrIsCrown(12) || scrIsCrown(34)))//Crown of inversion
+else if skill == 35 && Player.race == 9 && (Player.unlockAlternativeUltras || scrIsCrown(12) || scrIsCrown(34))//Crown of inversion
 {
 	sprite_index = sprReverseFocus;	
 }

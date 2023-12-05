@@ -1,6 +1,6 @@
 /// @description More splosions
 if instance_exists(Player)
-	scrCrownOfDeath(1, 24);
+	scrCrownOfDeath(2, 22, 3);
 
 with instance_create(x,y,BigScorchMark) {
 	alarm[0] = 0;

@@ -32,6 +32,7 @@ acc = 0.8;
 maxSpeed = 4;
 myWall = noone;
 firstHit = false;
+range = 80;
 if instance_exists(Wall)
 {
 	var n = noone;

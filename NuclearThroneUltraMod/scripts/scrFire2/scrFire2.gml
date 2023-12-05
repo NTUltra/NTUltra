@@ -3852,7 +3852,7 @@ function scrFire2(hasTailNow) {
 	var t = team;
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),FrostSlash)
 	{
-		dmg = 16//shovel is 12 is frostglove
+		dmg = 20//shovel is 12 is frostglove
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -5660,7 +5660,7 @@ function scrFire2(hasTailNow) {
 
 		with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),FlameSlash)
 		{
-			dmg = 16//shovel is 12 is frostglove
+			dmg = 18//shovel is 12 is frostglove
 			longarms = 0
 			
 			longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -10174,6 +10174,7 @@ function scrFire2(hasTailNow) {
 		ammo = 3
 		time = 2
 		team = other.team
+		shake = 1.5;
 		event_perform(ev_alarm,0) 
 	}
 	with instance_create(x,y,Burst)
@@ -10182,6 +10183,7 @@ function scrFire2(hasTailNow) {
 		ammo = 3
 		time = 2
 		team = other.team
+		shake = 1.5;
 		event_perform(ev_alarm,0) 
 	}
 	with instance_create(x,y,Burst)
@@ -10191,6 +10193,7 @@ function scrFire2(hasTailNow) {
 		ammo = 3
 		time = 2
 		team = other.team
+		shake = 1.5;
 		event_perform(ev_alarm,0) 
 	}
 
@@ -11095,7 +11098,7 @@ function scrFire2(hasTailNow) {
 	alarm[1] = alarm[0] + ammo*time;
 		if Player.skill_got[42]
 		{
-			alarm[0] = max(1,alarm[0]*0.5);
+			alarm[0] = max(1,alarm[0]*0.25);
 			if Player.ultra_got[97] && !Player.altUltra
 				alarm[0] = 1;
 		}
@@ -14177,7 +14180,7 @@ function scrFire2(hasTailNow) {
 		if Player.skill_got[42]
 		{
 			time = 2;
-			alarm[0] = max(1,alarm[0]*0.5);
+			alarm[0] = max(1,alarm[0]*0.25);
 			if Player.ultra_got[97] && !Player.altUltra
 			{
 				alarm[0] = 1;
@@ -14185,6 +14188,70 @@ function scrFire2(hasTailNow) {
 			}
 		}
 	}
+	break;
+	
+	//TRIPLE BULLET LASER
+	case 687:
+		snd_play_fire(sndSniperFire);
+		snd_play_fire(sndHeavyRevolver);
+		snd_play_fire(sndQuadMachinegun);
+		snd_play_fire(sndUltraPistol);
+		var msk = mask_index;
+		mask_index = mskBullet1;
+		var aimDir = aimDirection+(random(6)-3)*accuracy;
+		var len = 16+(accuracy*2);
+		var xstep = lengthdir_x(len,aimDir);
+		var ystep = lengthdir_y(len,aimDir);
+		var bx = x;
+		var by = y;
+		var count = 0;
+		while (!place_meeting(bx,by,Wall) && count < 500 || count < 2)
+		{
+			with instance_create(bx,by,Bullet1)
+			{
+				motion_add(aimDir,14);
+				image_angle = direction
+				team = other.team
+			}
+			bx += xstep;
+			by += ystep;
+			count ++;
+		}
+		var offset = 6 * accuracy;
+		bx = x+lengthdir_x(offset+4,aimDirection+90);
+		by = y+lengthdir_y(offset+4,aimDirection+90);
+		while (!place_meeting(bx,by,Wall) && count < 500 || count < 2)
+		{
+			with instance_create(bx,by,Bullet1)
+			{
+				motion_add(aimDir,12);
+				image_angle = direction
+				team = other.team
+			}
+			bx += xstep;
+			by += ystep;
+			count ++;
+		}
+		bx = x+lengthdir_x(offset+4,aimDirection-90);
+		by = y+lengthdir_y(offset+4,aimDirection-90);
+		while (!place_meeting(bx,by,Wall) && count < 500 || count < 2)
+		{
+			with instance_create(bx,by,Bullet1)
+			{
+				motion_add(aimDir,12);
+				image_angle = direction
+				team = other.team
+			}
+			bx += xstep;
+			by += ystep;
+			count ++;
+		}
+		mask_index = msk;
+		BackCont.viewx2 += lengthdir_x(20,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(20,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 12
+		wkick = 7
+
 	break;
 	
 	}//end of switch part 2!

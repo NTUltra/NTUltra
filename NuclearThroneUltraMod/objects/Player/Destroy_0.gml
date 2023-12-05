@@ -716,6 +716,7 @@ with instance_create(x,y,DataRef)
 	skill_got = other.skill_got;
 	skill_name = other.skill_name;
 	skill_text = other.skill_text;
+	skill_bons = other.skill_bons;
 	maxskill = other.maxskill;
 	totalSkills = other.totalSkills;
 	gunGameKill = other.gunGameKill;

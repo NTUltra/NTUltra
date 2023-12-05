@@ -1,6 +1,6 @@
-if fire > 0 and !instance_exists(Portal)
+if fire > 0 and !instance_exists(Portal) && !instance_exists(Spiral)
 {
-fire -= 1
+	fire -= 1
 if side = 1||loop
 {
 	with instance_create(x-4,y+8,TrapFire)
@@ -32,3 +32,4 @@ if side = 0||loop
 if !position_meeting(x,y,Wall)
 	instance_destroy()
 
+alarm[1] = 1;

@@ -2,7 +2,7 @@ move_contact_solid(direction,16)
 
 
 dir = 0
-do {dir += 1 x += lengthdir_x(5,direction) y += lengthdir_y(5,direction)
+do {dir += 1 x += lengthdir_x(8,direction) y += lengthdir_y(8,direction)
 
 with instance_create(x,y,TrapFire)
 {motion_add(random(360),0.4)

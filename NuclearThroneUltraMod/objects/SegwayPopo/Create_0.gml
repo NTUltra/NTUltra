@@ -15,13 +15,15 @@ spr_dead = sprSegwayIDPDDead
 male=choose(false,true);
 if male
 {
-snd_hurt = sndGruntHurtM
-snd_dead = sndGruntDeadM
+snd_hurt = sndSegwayHurtM
+snd_dead = sndSegwayDeadM
+snd_play(sndSegwayEnterM,0.01,true)
 }
 else
 {
-snd_hurt = sndGruntHurtF
-snd_dead = sndGruntDeadF
+snd_hurt = sndSegwayHurtF
+snd_dead = sndSegwayDeadF
+snd_play(sndSegwayEnterF,0.01,true)
 }
 
 team = 3

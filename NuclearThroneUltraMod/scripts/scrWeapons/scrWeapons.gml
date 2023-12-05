@@ -2276,8 +2276,8 @@ function scrWeapons() {
 	wep_name[206] = "SMALL MISSILE LAUNCHER"
 	wep_type[206] = 4
 	wep_auto[206] = 0
-	wep_load[206] = 26
-	wep_cost[206] = 2
+	wep_load[206] = 28
+	wep_cost[206] = 2.25
 	wep_sprt[206] = sprSmallMissileLauncher
 	wep_area[206] = 9
 	wep_text[206] = "theres a bigger one"
@@ -3739,7 +3739,7 @@ function scrWeapons() {
 	wep_name[339] = "FROST AXE"
 	wep_type[339] = 0
 	wep_auto[339] = 0
-	wep_load[339] = 33
+	wep_load[339] = 30
 	wep_cost[339] = 0
 	wep_sprt[339] = sprFrostHammer
 	wep_area[339] = 10
@@ -4578,7 +4578,7 @@ function scrWeapons() {
 	wep_load[413] = 20
 	wep_cost[413] = 2
 	wep_sprt[413] = sprLeacherBow
-	wep_area[413] = 10
+	wep_area[413] = 11
 	wep_text[413] = "vampire"
 	wep_swap[413] = sndSwapBow
 	wep_rad[413] = 0;
@@ -7248,7 +7248,7 @@ function scrWeapons() {
 	wep_name[656] = "THE SAFROODEN"
 	wep_type[656] = 1
 	wep_auto[656] = 0
-	wep_load[656] = 30
+	wep_load[656] = 26
 	wep_cost[656] = 4
 	wep_sprt[656] = sprSafroodenBullet
 	wep_area[656] = 14
@@ -7493,7 +7493,7 @@ function scrWeapons() {
 	wep_load[678] = 22
 	wep_cost[678] = 2
 	wep_sprt[678] = sprStickyGrenadePistol
-	wep_area[678] = 4
+	wep_area[678] = 3
 	wep_text[678] = "slimey"
 	wep_swap[678] = sndSwapExplosive
 	wep_rad[678] = 0;
@@ -7504,7 +7504,7 @@ function scrWeapons() {
 	wep_load[679] = 18
 	wep_cost[679] = 3
 	wep_sprt[679] = sprStickyGrenadeRifle
-	wep_area[679] = 10
+	wep_area[679] = 9
 	wep_text[679] = "stick and boomboom"
 	wep_swap[679] = sndSwapExplosive
 	wep_rad[679] = 0;
@@ -7585,6 +7585,17 @@ function scrWeapons() {
 	wep_text[686] = "futuristic weaponry"
 	wep_swap[686] = sndSwapEnergy
 	wep_rad[686] = 0;
+	
+	wep_name[687] = "TRIPLE BULLET LASER"
+	wep_type[687] = 1
+	wep_auto[687] = 0
+	wep_load[687] = 18
+	wep_cost[687] = 30//36
+	wep_sprt[687] = sprTripleBulletLaser
+	wep_area[687] = 22
+	wep_text[687] = "stream of bullets"
+	wep_swap[687] = sndSwapMachinegun
+	wep_rad[687] = 0;
 
 	maxwep = array_length(wep_name)-1;
 

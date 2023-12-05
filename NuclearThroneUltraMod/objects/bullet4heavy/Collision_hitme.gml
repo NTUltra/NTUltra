@@ -52,7 +52,7 @@ if other.team != team and other.my_health > 0
 with instance_create(x,y,BulletHit)
 	sprite_index=sprUltraHeavyBulletHit;
 
-	scrRecycleGland(3);
+	scrRecycleGland(3,6);
 
 }
 

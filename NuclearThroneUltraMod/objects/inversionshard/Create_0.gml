@@ -1,6 +1,6 @@
 /// @description Init
 wave = 0;
-depth = 8
+depth = 7;
 name = "COLLECT?";
 instance_create(x,y,BigWallBreak);
 collected = false;

@@ -1,6 +1,5 @@
 pick = 0
 canmove = 1
-
 __view_set( e__VW.XView, 0, 0 )
 __view_set( e__VW.YView, 0, 0 )
 audio_stop_sound(sndFrogLoop);

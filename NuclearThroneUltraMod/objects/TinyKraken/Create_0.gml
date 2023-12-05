@@ -43,3 +43,11 @@ alarm[1] = 10;
 randomAngle = random(360);
 randomAngleDir = choose(40,60,-40,-60);
 alarm[2] = 10;
+
+with Player {
+	tinyKrakenSpawned += 1
+	if race == 24 && tinyKrakenSpawned == 4
+	{
+		scrUnlockCSkin(24,"FOR SUMMONING 4#TINY KRAKENS#IN ONE AREA",0);
+	}
+}

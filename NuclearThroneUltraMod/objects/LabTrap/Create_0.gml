@@ -1,6 +1,7 @@
 //side = choose(0,1)
 side=0;
-alarm[0] = 30+random(40)
+alarm[0] = 90;
+alarm[1] = 90;
 fire = 0
 instance_create(x,y,TrapScorchMark)
 if !place_meeting(x,y,Wall)

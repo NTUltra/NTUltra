@@ -271,14 +271,15 @@ if !instance_exists(LevCont) and visible = 1
 		if keyboard_check_pressed(ord("V")) {
 			isPermanent = true;
 			var dangle = random(1)*360;
-			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
+			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Wall);
 			//screen_save("explain"+string(scrn)+".png");
+			
 			isPermanent = true;
 			Sleep(100);
 			//scrn++;
 			
 			//instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			instance_create(f.x + 16,f.y + 16,TinyKraken)
+			instance_create(f.x,f.y,VulcanoTrap)
 
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
 			thing.mytext = "Wall Crawler";

@@ -17,7 +17,7 @@ if speed > maxSpeed+1
 instance_create(x,y,BulletHit)
 
 if !norecycle
-scrRecycleGland(cost);
+scrRecycleGland(cost,radCost);
 
 }
 

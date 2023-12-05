@@ -24,3 +24,4 @@ actTime -= 4;
 targetWalkSpeed = 0.5;
 wallDestroyedStunTime = 30;
 maxSpeed = 5;
+range += 16;

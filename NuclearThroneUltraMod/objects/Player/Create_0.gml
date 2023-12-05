@@ -20,6 +20,7 @@ with DataRef
 excessDamageDeal = 0;
 humphrySkill = 0;
 gunGameKill = 10;
+tinyKrakenSpawned = 0;
 canCrownOfProtection = true;
 angelHeal = false;
 tailWave = 0;

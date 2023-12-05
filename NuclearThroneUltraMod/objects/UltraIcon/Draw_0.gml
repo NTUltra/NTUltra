@@ -43,8 +43,12 @@ draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-13,string_h
 draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-14,string_hash_to_newline(string(txt2)))*/
 draw_set_color(make_colour_rgb(160,160,160));
 scrDrawTextColours(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14,string(fulltxt))
-draw_set_color(c_white)
+if sprite_index == sprUltraIcon
+	draw_set_color(c_white);
+else
+	draw_set_color(c_lime);
 draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14-string_height(string_hash_to_newline(txt2))+string_height(string_hash_to_newline(ultra_name[skill])),string_hash_to_newline(string(ultra_name[skill])))
+draw_set_color(c_white);
 }
 
 //draw_text(x,y-32,string(skill));

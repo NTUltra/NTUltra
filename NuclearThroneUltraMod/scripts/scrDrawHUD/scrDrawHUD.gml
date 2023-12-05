@@ -86,11 +86,12 @@ function scrDrawHUD() {
 
 	//VIKING ARMOUR
 	var armour = dataRef.armour;
+	var maxArmour = dataRef.maxarmour;
 	var dir=0;
-	repeat(armour)
+	repeat(maxArmour)
 	{
 		dir++;
-		draw_sprite(sprArmour,0,vx+armourX+(15*dir),vy+4);
+		draw_sprite(sprArmour,dir > armour ? 1 : 0,vx+armourX+(15*dir),vy+4);
 	}
 
 

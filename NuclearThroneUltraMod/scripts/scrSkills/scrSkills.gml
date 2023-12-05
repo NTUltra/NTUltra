@@ -234,7 +234,7 @@ function scrSkills() {
 		skill_bons[15] = "+75% WALLBOUNCE +50% SPLASH DAMAGE RANGE";
 
 	skill_name[16] = "RECYCLE GLAND"
-	skill_text[16] = "65% OF HIT <w>BULLETS<w> BECOME <y>AMMO<y>#<w>BULLETS<w> CAN'T BE <w>DEFLECTED<w> BY ENEMIES"
+	skill_text[16] = "65% OF HIT <w>BULLETS<w> BECOME <y>AMMO<y>#<w>BULLETS<w> CAN'T BE <pi>DEFLECTED<pi> BY ENEMIES"
 	skill_tips[16] = "no need to aim"
 	skill_msnd[16] =  sndMutRecycleGland
 	skill_bons[16] = "+5% CHANCE";
@@ -461,8 +461,8 @@ function scrSkills() {
 	skill_name[40] = "BOUNCY FAT"
 	skill_text[40] = "IF YOU HAVE <y>AMMO<y> AND TAKE LETHAL DAMAGE#<aq>PREVENT<aq> IT AND LOSE#50% OF BASE TOTAL <y>AMMO<y>"
 	skill_tips[40] = "layer of fat"
-	skill_bons[40] = "-5% AMMO COST"
 	skill_msnd[40] =  sndMutBouncyFat;
+	skill_bons[40] = "-5% AMMO COST"
 	
 	skill_name[41] = "NERVES OF STEEL"
 	skill_text[41] = "REPLACE 2 <r>HEALTH<r> WITH 1 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#REDUCE TOTAL <w>RELOAD TIME<w> BY 40%#<w>ENEMIES<w> HAVE A CHANCE TO DROP <gb>ARMOUR<gb>"
@@ -471,16 +471,16 @@ function scrSkills() {
 		skill_text[41] = "LOSE 2 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#REDUCE TOTAL <w>RELOAD TIME<w> BY 35%#<w>ENEMIES<w> HAVE A SMALL CHANCE TO DROP <gb>ARMOUR<gb>"
 	}
 	skill_tips[41] = "conduit of power"
-	skill_bons[41] = "+5% RELOAD SPEED"
 	skill_msnd[41] =  sndMutNervesOfSteel;
+	skill_bons[41] = "+5% RELOAD SPEED"
 	
 	skill_name[42] = "THE TAIL'S END"
 	skill_text[42] = "<w>BURST<w> WEAPONS FIRE MORE#<w>CHARGE<w> WEAPONS CHARGE FASTER"
 	skill_tips[42] = "tail end includes flamethrowers and is concidered a weapon specific mutation"
+	skill_msnd[42] =  sndMutTailEnd;
 	skill_bons[42] = "+10% CHARGE RATE & BURST AMOUNT"
 	if betterWepSpecific
 		skill_bons[42] = "DOUBLE BURST & INSTA CHARGE"
-	skill_msnd[42] =  sndMutTailEnd;
 	/*
 	A SET OF SPECIAL SECRET WEAPON SPECIFIC MUTATIONS YOU HAVE TO DO SOME SORT OF PRE-LOOP CHALLENGE FOR, REPLACES ONE LEVEL/NORMAL MUTATION
 	or just add them to the set its nice to encounter them and take them based on your weapon instead of going out of your way to get them
@@ -549,8 +549,8 @@ function scrSkills() {
 	skill_name[43] = "NOTHING"
 	skill_text[43] = "THERE ARE <w>NO MORE<w> <g>MUTATIONS<g> LEFT!"
 	skill_tips[43] = ""
-	skill_bons[43] = ""
 	skill_msnd[43] =  sndPartyHorn
+	skill_bons[43] = ""
 
 
 }

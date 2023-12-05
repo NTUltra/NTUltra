@@ -1,7 +1,7 @@
 ///scrCrownOfDeath();
 // /@description
 ///@param
-function scrCrownOfDeath(am = 3,dis = 26){
+function scrCrownOfDeath(am = 3,dis = 26, reduc = 2){
 	if scrIsCrown(3)//Crown of death
 	{
 		var ang = random(360);
@@ -10,7 +10,7 @@ function scrCrownOfDeath(am = 3,dis = 26){
 		{
 			with instance_create(x+lengthdir_x(dis,ang),y+lengthdir_y(dis,ang),SmallExplosion)
 			{
-				dmg -= 1;
+				dmg -= reduc;
 				alarm[0] = 0;
 				alarm[2] = 0;
 			}

@@ -19,12 +19,22 @@ Player.rogueammo+=num;
 if Player.rogueammo > Player.rogueammomax
 Player.rogueammo = Player.rogueammomax
 
-dir = instance_create(x,y,PopupText)
-
-if Player.rogueammo = Player.rogueammomax
-dir.mytext = "MAX PORTALSTRIKE"
-else
-dir.mytext = "+"+string(num)+" PORTALSTRIKE"
+var dir = instance_create(x,y,PopupText)
+if UberCont.opt_ammoicon
+{
+	dir.sprt = sprRogueAmmoIconPickup;
+	if other.rogueammo = other.rogueammomax
+		dir.mytext = "MAX"
+	else
+		dir.mytext = "+"+string(num)
+}
+else if UberCont.opt_ammoicon
+{
+	if other.rogueammo = other.rogueammomax
+	dir.mytext = "MAX PORTALSTRIKE"
+	else
+	dir.mytext = "+"+string(num)+" PORTALSTRIKE"
+}
 
 with Player
 {

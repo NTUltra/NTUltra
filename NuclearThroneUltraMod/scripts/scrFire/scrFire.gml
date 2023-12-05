@@ -28,9 +28,15 @@ function scrFire() {
 	if Player.skill_got[41] && Player.armour < Player.maxarmour
 	{
 		if Player.race == 25
-			reload *= 0.55;
+		{
+			//reload *= 0.55;
+			reload -= wep_load[wep]*0.35;
+		}
 		else
-			reload *= 0.6;
+		{
+			reload -= wep_load[wep]*0.4;
+			//reload *= 0.6;
+		}
 	}
 	queueshot = max(queueshot-1,0);
 	Player.fired = true;
@@ -88,7 +94,7 @@ function scrFire() {
 		var currentCrown = crown;
 		crown = [];
 		scrFire();
-		reload += wep_load[wep]*0.8;
+		reload += wep_load[wep]*0.9;
 		crown = currentCrown;
 	}
 	// ROIDS THRONE BUTT
@@ -1402,7 +1408,7 @@ function scrFire() {
 	alarm[1] = alarm[0] + ammo*time;
 		if Player.skill_got[42]
 		{
-			alarm[0] = max(1,alarm[0]*0.5);
+			alarm[0] = max(1,alarm[0]*0.25);
 			if Player.ultra_got[97] && !Player.altUltra
 				alarm[0] = 1;
 		}
@@ -5185,9 +5191,9 @@ function scrFire() {
 	fired=true;
 
 	}
-	var reloadBoost = 0.1;
+	var reloadBoost = 0.09;
 	if Player.skill_got[30] == 1
-		reloadBoost = 0.18;
+		reloadBoost = 0.16;
 	if Player.ultra_got[65]
 		reloadBoost += 0.05;
 	

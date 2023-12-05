@@ -1,5 +1,5 @@
 /// @description Prepare to spawn
-if !instance_exists(Player)
+if !instance_exists(Player) && !instance_exists(PlayerSpawn)
 	alarm[0] = 20;
 
 	BackCont.shake += 10;
