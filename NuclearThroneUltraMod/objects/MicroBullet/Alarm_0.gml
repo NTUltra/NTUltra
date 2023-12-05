@@ -1,6 +1,5 @@
 if instance_exists(Player)
 {
-
 	if (aimed=false && team == 2)
 	{
 		aimed=true;
@@ -8,11 +7,15 @@ if instance_exists(Player)
 	}
 
 	move_contact_solid(direction,16)
-
-	dir = 0
-	do {dir += 1 x += lengthdir_x(4,direction) y += lengthdir_y(4,direction)
+	x += lengthdir_x(8,direction);
+	y += lengthdir_y(8,direction);
+	var dir = 0
+	do {
+		dir += 1;
+		x += lengthdir_x(4,direction);
+		y += lengthdir_y(4,direction);
 	}
-	until dir > 150 or place_meeting(x,y,Wall) or place_meeting(x,y,hitme)
+	until dir > 150 or collision_point(x,y,Wall,false,false) or place_meeting(x,y,hitme)
 	
 	alarm[1] = 6
 	scrForcePosition60fps();
@@ -37,9 +40,9 @@ if instance_exists(Player)
 			{
 				mask_index = mskPickupThroughWall;
 				t += 0.3;
-				scrRecycleGland(0.5);
+				scrRecycleGland(cost,radCost);
 			}
 		}
 	}
-	speed = 0
+	speed = 0;
 }

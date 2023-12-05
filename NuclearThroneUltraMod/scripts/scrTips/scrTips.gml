@@ -8,6 +8,9 @@ function scrTips() {
 	{
 	//RANDOM
 	tip = choose(choose(
+	"all weapons are full auto\nbut tapping will make some fire faster",
+	"all weapons are auto",
+	"tapping fires some weapons quicker",
 	"HP will only drop when damaged",
 	"shotgun shoulders:\nincreases bouncer bullets bounces",
 	"shotgun shoulders:\nincreases sword gun bounces",

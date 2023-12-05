@@ -1,7 +1,7 @@
 /// @description Dig attack
 var ang = dissapearAttackAngle;
 var ps = disappearAttackProjectileSpeed;
-snd_play(sndScorpionFire);
+snd_play(sndSandWormFire);
 if audio_is_playing(sndBigMaggotUnburrowSand)
 	snd_play(sndBigMaggotUnburrowSand);
 repeat(disappearAttackAmount)

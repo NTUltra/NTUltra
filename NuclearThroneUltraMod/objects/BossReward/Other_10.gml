@@ -5,17 +5,17 @@ name = "";
 switch(array_length(UberCont.collectedRewards))
 {
 	case 0:
-	//One hit wonder
-		if scrIsGamemode(32)
-			name += "GAIN ONE MUTATION";
-		else
-			name += "GAIN 1 MAX HP";
+		name += "COLLECT TWO GUARANTEED RE-ROLLS";
 	break;
 	case 1:
 		name += "INCREASE THE VALUE OF RADIATION BY 15%";
 	break;
 	case 2:
-		name += "GAIN ONE LIFE";
+		//One hit wonder
+		if scrIsGamemode(32)
+			name += "GAIN ONE MUTATION";
+		else
+			name += "GAIN 1 MAX HP";
 	break;
 	case 3:
 		name += "UNLOCK THE MUTATION REROLL STATION";

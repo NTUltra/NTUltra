@@ -17,7 +17,7 @@ if instance_exists(Player){
 		}
 		if !isNearPortal
 		{
-			move_bounce_solid(true)
+			move_bounce_solid(false)
 			if instance_exists(Floor)
 			{
 				var f = instance_nearest(x,y,Floor);

@@ -35,8 +35,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprUltraBullet",
-    "path": "sprites/sprUltraBullet/sprUltraBullet.yy",
+    "name": "sprUltraMicroBulletExplode",
+    "path": "sprites/sprUltraMicroBulletExplode/sprUltraMicroBulletExplode.yy",
   },
   "spriteMaskId": {
     "name": "mskUltraBullet",

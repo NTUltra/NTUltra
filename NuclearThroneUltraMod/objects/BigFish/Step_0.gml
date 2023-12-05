@@ -57,7 +57,7 @@ function suck() {
 		}
 	}
 
-	direction = point_direction(x,y,target.xprevious,target.yprevious)
+	var dir = point_direction(x,y,target.xprevious,target.yprevious)
 	BackCont.shake += 0.5
 	speed=0;
 	if inverted
@@ -69,7 +69,7 @@ function suck() {
 		}
 	}
 	repeat(2) {
-		with instance_create(x+lengthdir_x(16+random(64),direction),y+lengthdir_y(16+random(64),direction),Dust)
+		with instance_create(x+lengthdir_x(16+random(64),dir),y+lengthdir_y(16+random(64),dir),Dust)
 		motion_add(point_direction(x,y,other.x,other.y),other.suckstrength+random(2))
 	}
 }

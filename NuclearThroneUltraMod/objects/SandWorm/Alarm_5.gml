@@ -12,6 +12,7 @@ if target != noone
 	x = target.x;
 	y = target.y;
 	snd_play(sndBigMaggotUnburrow);
+	snd_play(sndSandWormSpawn);
 	spr_fire = spr_appear;
 	sprite_index = spr_fire;
 	image_index = 0;

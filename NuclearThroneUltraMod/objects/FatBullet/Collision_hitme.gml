@@ -18,7 +18,7 @@ if speed > maxSpeed + 2
 with instance_create(x,y,BulletHit)
 sprite_index=sprHeavyBulletHit;
 
-scrRecycleGland(2);
+scrRecycleGland(cost,radCost);
 event_user(0);
 if other.team!=0
 hits--;

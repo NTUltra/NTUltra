@@ -1,5 +1,4 @@
-///@description Get prevhealth
-prevhealth=my_health;
+///@description ExistTime
 existTime ++;
 if gettingKnocked > 0
 {

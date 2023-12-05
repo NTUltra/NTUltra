@@ -9,3 +9,5 @@ dmg=7;
 typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 RecycleGlandType();
 alarm[11] = 1;
+xprev = x;
+yprev = y;

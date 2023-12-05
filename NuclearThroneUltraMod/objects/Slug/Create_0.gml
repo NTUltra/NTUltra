@@ -30,3 +30,6 @@ typ = 1
 ShotgunShouldersType();
 dmg = 24;
 alarm[11] = 1;
+
+imageXscale = 1;
+imageYscale = 1;

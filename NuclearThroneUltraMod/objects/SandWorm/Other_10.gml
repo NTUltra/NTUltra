@@ -7,6 +7,7 @@ if target != noone
 		mask_index = mskSandWormDig;
 	}
 	walk = 0;
+	snd_play(sndSandWormDig);
 	snd_play(sndBigMaggotBurrow);
 	spr_fire = spr_disappear_start;
 	sprite_index = spr_fire;

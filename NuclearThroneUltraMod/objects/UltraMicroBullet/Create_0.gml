@@ -1,0 +1,10 @@
+event_inherited();
+dmg = 5;
+width = 4;
+col = c_lime;
+image_xscale = 2;
+image_yscale = 2;
+cost = 1;
+radCost = 1;
+radCost = 0;
+borderWidth = 1;

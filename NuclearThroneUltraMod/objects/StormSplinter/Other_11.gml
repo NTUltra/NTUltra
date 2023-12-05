@@ -1,7 +1,7 @@
 /// @description BOUNCE AND LIGHTNING
 if wallHits < 1
 {
-	move_bounce_solid(true);
+	move_bounce_solid(false);
 	x -= lengthdir_x(14,image_angle);
 	y -= lengthdir_y(14,image_angle);
 	speed = clamp(speed*2,6,24);

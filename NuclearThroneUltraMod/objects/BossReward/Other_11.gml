@@ -3,6 +3,17 @@ scrUnlockGameMode(40,"FOR COLLECTING#A BOSS BOUNTY REWARD");
 switch(array_length(UberCont.collectedRewards))
 {
 	case 0:
+		with Player
+		{
+			guarenteedReroll += 2;
+		}
+		snd_play(other.snd_chst);
+	break;
+	case 1:
+		UberCont.radUp = true;
+		snd_play(other.snd_chst);
+	break;
+	case 2:
 		//One hit wonder
 		if scrIsGamemode(32)
 		{
@@ -20,20 +31,6 @@ switch(array_length(UberCont.collectedRewards))
 				my_health += 1;
 			}
 			UberCont.maxHpIncrease += 1
-		}
-		snd_play(other.snd_chst);
-	break;
-	case 1:
-		UberCont.radUp = true;
-		snd_play(other.snd_chst);
-	break;
-	case 2:
-		with Player
-		{
-			skeletonlives += 1;
-			livesRegain[array_length(livesRegain)] = 3;
-			if array_length(livesRegain) > 3
-				scrUnlockBSkin(19,"FOR HAVING FOUR LIVES",0);
 		}
 		snd_play(other.snd_chst);
 	break;

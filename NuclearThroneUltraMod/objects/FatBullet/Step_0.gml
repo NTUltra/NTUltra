@@ -1,20 +1,9 @@
-if instance_exists(Player)
+/// @description Collision Wall
+if collision_line_width(xprev,yprev,x,y,Wall,false,false,1)
 {
-	if speed>10
-		speed = 10;
-    if Player.race == 11
-    {
-		speed += 1;
-    }
-	if scrIsCrown(23)//Crown of speed
-	{
-		speed = max(speed+2,12)
-	}
-	if scrIsCrown(24) && speed > 8//Crown of sloth
-	{
-		speed = max(speed-2,8)
-	}
+	instance_destroy()
+	instance_create(xprev,yprev,Dust)
+	snd_play(sndHitWall,0.05,true,true,1,false,true,0.75);
 }
-else if speed>10
-speed=10;
-
+xprev = x;
+yprev = y;

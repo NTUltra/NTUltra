@@ -139,12 +139,13 @@ draw_rectangle_colour(xx,y+1,xx+4,y+5,col,col,col,col,false);
 if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > xx and UberCont.mouse__x < xx+8 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
 {
 	colourMenuOpen = !colourMenuOpen;
+	firstClick = true;
 	snd_play_2d(sndClick);
 }
 else if (colourMenuOpen && mx > xx - 42 && mx < xx + 10 &&
 	mouse_y > y - 20 && mouse_y < y+80)
 {	
-	if mouse_check_button(mb_left)
+	if mouse_check_button(mb_left) && !firstClick
 	{
 	
 		var my = clamp(mouse_y - y - 5,0,61);
@@ -152,24 +153,24 @@ else if (colourMenuOpen && mx > xx - 42 && mx < xx + 10 &&
 		var part = 1 - (my/61);
 		if mx > xx - 12
 		{
-			UberCont.opt_crosshair_colour_r = 255*part;
+			UberCont.opt_crosshair_colour_b = 255*part;
 		}
 		else if mx > xx - 23
 		{
 			UberCont.opt_crosshair_colour_g = 255*part;
 		} else
 		{
-			UberCont.opt_crosshair_colour_b = 255*part;
+			UberCont.opt_crosshair_colour_r = 255*part;
 		}
 		UberCont.opt_crosshair_colour = make_colour_rgb(UberCont.opt_crosshair_colour_r,UberCont.opt_crosshair_colour_g,UberCont.opt_crosshair_colour_b);
 		with Cursor {
 			colour = UberCont.opt_crosshair_colour;	
 		}
 	}
-	if mouse_wheel_up() {
+	if mouse_wheel_up() || keyboard_check_pressed(vk_up){
 		if mx > xx - 12
 		{
-			UberCont.opt_crosshair_colour_r = min(255,UberCont.opt_crosshair_colour_r + 1);
+			UberCont.opt_crosshair_colour_b = min(255,UberCont.opt_crosshair_colour_b + 1);
 		}
 		else if mx > xx - 23
 		{
@@ -177,17 +178,17 @@ else if (colourMenuOpen && mx > xx - 42 && mx < xx + 10 &&
 		}
 		else
 		{
-			UberCont.opt_crosshair_colour_b = min(255,UberCont.opt_crosshair_colour_b + 1);
+			UberCont.opt_crosshair_colour_r = min(255,UberCont.opt_crosshair_colour_r + 1);
 		}
 		UberCont.opt_crosshair_colour = make_colour_rgb(UberCont.opt_crosshair_colour_r,UberCont.opt_crosshair_colour_g,UberCont.opt_crosshair_colour_b);
 		with Cursor {
 			colour = UberCont.opt_crosshair_colour;	
 		}
 	}
-	else if mouse_wheel_down() {
+	else if mouse_wheel_down() || keyboard_check_pressed(vk_down) {
 		if mx > xx - 12
 		{
-			UberCont.opt_crosshair_colour_r = max(0,UberCont.opt_crosshair_colour_r - 1);
+			UberCont.opt_crosshair_colour_b = max(0,UberCont.opt_crosshair_colour_b - 1);
 		}
 		else if mx > xx - 23
 		{
@@ -195,13 +196,29 @@ else if (colourMenuOpen && mx > xx - 42 && mx < xx + 10 &&
 		}
 		else
 		{
-			UberCont.opt_crosshair_colour_b = max(0,UberCont.opt_crosshair_colour_b - 1);
+			UberCont.opt_crosshair_colour_r = max(0,UberCont.opt_crosshair_colour_r - 1);
 		}
 		UberCont.opt_crosshair_colour = make_colour_rgb(UberCont.opt_crosshair_colour_r,UberCont.opt_crosshair_colour_g,UberCont.opt_crosshair_colour_b);
 		with Cursor {
 			colour = UberCont.opt_crosshair_colour;	
 		}
 	}
+	var ctxt = "";
+	if mx > xx - 12
+	{
+		ctxt = UberCont.opt_crosshair_colour_b;
+	}
+	else if mx > xx - 23
+	{
+		ctxt = UberCont.opt_crosshair_colour_g;
+	}
+	else
+	{
+		ctxt = UberCont.opt_crosshair_colour_r;
+	}
+	draw_set_halign(fa_center);
+	draw_text(xx - 16,y+66,string(round(ctxt)));
+	draw_set_halign(fa_left);
 }
 else if mouse_check_button_pressed(mb_left)
 {
@@ -222,13 +239,15 @@ if colourMenuOpen
 		//draw_sprite_ext(sprScrollWIcon,0,xx + 1,y + 8,1,1,0,c_silver,1);
 	var t = y + 7;
 	var b = y + 63;
-	var r = lerp(b,t,UberCont.opt_crosshair_colour_r/255);
+	var r = lerp(b,t,UberCont.opt_crosshair_colour_b/255);
 	draw_line_colour(xx-2,r,xx-12,r,c_white,c_white);
 	var g = lerp(b,t,UberCont.opt_crosshair_colour_g/255);
 	draw_line_colour(xx-13,g,xx-23,g,c_white,c_white);
-	var bl = lerp(b,t,UberCont.opt_crosshair_colour_b/255);
+	var bl = lerp(b,t,UberCont.opt_crosshair_colour_r/255);
 	draw_line_colour(xx-24,bl,xx-34,bl,c_white,c_white);
-
+}
+if mouse_check_button_released(mb_left) {
+	firstClick = false;
 }
 x=round(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+10+string_width(string_hash_to_newline("00")))
 y=round(__view_get( e__VW.YView, 0 )+88)

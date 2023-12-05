@@ -17,6 +17,8 @@ with GameRender
 }
 with DataRef
 	instance_destroy();
+	
+autoFire = 0;
 excessDamageDeal = 0;
 humphrySkill = 0;
 gunGameKill = 10;
@@ -235,7 +237,9 @@ if scrIsGamemode(35)
 race = 23
 
 fakeRace = race;
-
+canMove = true;
+if scrIsGamemode(7) || scrIsGamemode(13)//ATom & rocket glove
+	canMove = false;
 team = 2
 mySize = 5
 

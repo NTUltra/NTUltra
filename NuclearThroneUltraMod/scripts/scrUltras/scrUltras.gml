@@ -150,7 +150,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_tips[22] = "more pop"
     
 	    ultra_name[23] = "MAKE IT RAIN"
-	    ultra_text[23] = "REALLY HIGH <w>SHOTGUN RELOAD SPEED<w>#USED <w>BULLET<w> <y>AMMO<y>#CONVERTS TO <w>SHOTGUN<w> <y>AMMO<y>#(10 BULLET TO 1 SHOTGUN AMMO)"//"REALLY HIGH SHOTGUN FIRE RATE#USED SHOTGUN AMMO CONVERTS#TO BULLET AMMO"
+	    ultra_text[23] = "REALLY HIGH <w>SHOTGUN RELOAD SPEED<w>#USED <w>BULLET<w> <y>AMMO<y>#CONVERTS TO <w>SHOTGUN<w> <y>AMMO<y>#(10 BULLET TO 1 SHOTGUN AMMO)##+10% <w>BULLET<w> WEAPON <w>RELOAD SPEED<w>"//"REALLY HIGH SHOTGUN FIRE RATE#USED SHOTGUN AMMO CONVERTS#TO BULLET AMMO"
 	    ultra_tips[23] = "shells and bullets <3"
 		if altOverride || (instance_exists(Player) && Player.race == 6 && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && (scrMeleeWeapons(Player.wep) || Player.wep == 0) && (scrMeleeWeapons(Player.bwep) || Player.bwep == 0))))
 		{

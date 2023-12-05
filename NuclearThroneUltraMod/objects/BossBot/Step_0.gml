@@ -17,7 +17,7 @@ if alarm[6] > 0
 	
 	if place_meeting(x+hspeed,y+vspeed,Wall)
 	{
-		move_bounce_solid(true);
+		move_bounce_solid(false);
 		var walls = ds_list_create();
 		var al = instance_place_list(x+hspeed,y+vspeed,Wall,walls,false)
 		for (var j = 0; j < al; j++) {

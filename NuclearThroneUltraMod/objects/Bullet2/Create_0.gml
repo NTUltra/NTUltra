@@ -32,3 +32,6 @@ ShotgunShouldersType();
 dmg=3;
 
 alarm[11] = 1;
+
+imageXscale = 1;
+imageYscale = 1;

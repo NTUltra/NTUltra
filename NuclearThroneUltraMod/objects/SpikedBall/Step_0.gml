@@ -7,7 +7,7 @@ var msk = mask_index;
 mask_index = mskBlade;
 if place_meeting(x,y,Wall)
 {
-	move_bounce_solid(true)
+	move_bounce_solid(false)
 	if dist > 80//Moves slower
 	{
 		instance_destroy()

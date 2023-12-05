@@ -1,2 +1,2 @@
 /// @description Bounce
-move_bounce_solid(true)
+move_bounce_solid(false)

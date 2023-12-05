@@ -29,4 +29,5 @@ alarm[1] = 2
 	scrForcePosition60fps();
 speed = 4
 }
+scrForcePosition60fps();
 

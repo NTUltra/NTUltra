@@ -96,3 +96,5 @@ if super {
 		team = other.team;
 	}	
 }
+///Damage indicator
+scrEnemyTakingDamage();

@@ -1,5 +1,5 @@
 /// @description Turnaround attack
-snd_play(sndFlyFire);
+snd_play(sndSandWormSpit);
 var ang = 0;
 if image_xscale < 0
 	ang = 180;

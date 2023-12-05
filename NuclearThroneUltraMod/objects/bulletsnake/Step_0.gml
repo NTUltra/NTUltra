@@ -1,4 +1,5 @@
 /// @description Coool sigzag
+event_inherited();
 if alarm[2] < 1
 {
 	x += lengthdir_x(sin(time)*offset,direction+angle);

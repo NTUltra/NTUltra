@@ -1,4 +1,4 @@
-if other.team != team and other.my_health > 0
+if other.team != team and other.my_health > 0 && alarm[0] < 1
 {
 	instance_destroy()
 	var hits = ds_list_create();

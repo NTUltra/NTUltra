@@ -15,5 +15,4 @@ if (!hasStarted)
 {
 	hasStarted = true;
 	instance_create(x,y,DramaCamera);
-	snd_play(sndSandWormSpawn);
 }

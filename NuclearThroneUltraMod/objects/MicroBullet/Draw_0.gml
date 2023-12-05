@@ -8,12 +8,12 @@ draw_set_alpha(lerp(1,0.5,lp));
 draw_line_width_colour(
 lerp(xstart,x,lp),
 lerp(ystart,y,lp),
-x,y,2 - lp,
+x,y,width - lp,
 col,col);
 draw_line_width_colour(
 lerp(xstart,x,lp),
 lerp(ystart,y,lp),
-x,y,2 - lp - 0.5,
+x,y,width - lp - borderWidth,
 c_white,c_white);
 
 

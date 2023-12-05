@@ -5,6 +5,7 @@ function scrFire() {
 	exit;
 	if wep==0{
 		exit;}
+		/*
 	if object_index == Player && !instance_exists(YungCuzDupe)
 	{
 		with Bullet7
@@ -22,7 +23,7 @@ function scrFire() {
 			if !turned && wepFire == other.wep
 				exit;
 		}
-	}
+	}*/
 	reload = min(reload + wep_load[wep],wep_load[wep]);
 	//Nerves of steel
 	if Player.skill_got[41] && Player.armour < Player.maxarmour
@@ -2243,7 +2244,7 @@ function scrFire() {
 	snd_play_fire(sndSlugger)
 
 	with instance_create(x,y,DirectorSlug)
-	{motion_add(aimDirection+(random(10)-5)*other.accuracy,9)
+	{motion_add(aimDirection+(random(10)-5)*other.accuracy,10)
 	image_angle = direction
 	team = other.team}
 
@@ -2824,7 +2825,7 @@ function scrFire() {
 	}
 
 	with instance_create(x,y,Bullet4)
-	{motion_add(aimDirection+(random(8)-4)*other.accuracy,16)
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,20)
 	image_angle = direction
 	team = other.team}
 
@@ -4976,11 +4977,12 @@ function scrFire() {
 	    {
 			if wep_type[wep] == 2 // You are holding a shotgun
 			{
-				reload -= wep_load[wep]*0.62;//shotgun speed
+				reload -= wep_load[wep]*0.6;//shotgun speed
 				//ammo[1] += wep_cost[wep]//bullet magic
 			}
 			else if wep_type[wep] == 1 // You are holding a bullet weapon
 			{
+				reload -= wep_load[wep]*0.1;//bullet speed
 				ammo[2] += wep_cost[wep] * 0.1;//Ten bullets is 1 shotgun pellet
 				ammo[2] = min(ammo[2],typ_amax[2]);
 			}

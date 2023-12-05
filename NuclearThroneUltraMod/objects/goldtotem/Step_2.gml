@@ -1,4 +1,6 @@
 /// @description Copy paste damage indicator from enemy code
+scrEnemyTakingDamage();
+/*
 ///Damage indicator
 
 if prevhealth > my_health
@@ -106,3 +108,4 @@ if prevhealth > my_health
 	}
 	prevhealth = my_health;
 }
+*/

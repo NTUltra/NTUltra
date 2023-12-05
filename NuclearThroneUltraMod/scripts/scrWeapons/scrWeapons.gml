@@ -6094,7 +6094,7 @@ function scrWeapons() {
 	wep_type[551] = 1
 	wep_auto[551] = 1
 	wep_load[551] = 6
-	wep_cost[551] = 5
+	wep_cost[551] = 4.5
 	wep_sprt[551] = sprOGun
 	wep_area[551] = 27
 	wep_text[551] = "O"
@@ -6446,7 +6446,7 @@ function scrWeapons() {
 	wep_type[583] = 1
 	wep_auto[583] = 1
 	wep_load[583] = 4
-	wep_cost[583] = 14
+	wep_cost[583] = 12
 	wep_sprt[583] = sprOOOGun
 	wep_area[583] = 30
 	wep_text[583] = "O O O"
@@ -7248,7 +7248,7 @@ function scrWeapons() {
 	wep_name[656] = "THE SAFROODEN"
 	wep_type[656] = 1
 	wep_auto[656] = 0
-	wep_load[656] = 26
+	wep_load[656] = 25
 	wep_cost[656] = 4
 	wep_sprt[656] = sprSafroodenBullet
 	wep_area[656] = 14
@@ -7596,6 +7596,39 @@ function scrWeapons() {
 	wep_text[687] = "stream of bullets"
 	wep_swap[687] = sndSwapMachinegun
 	wep_rad[687] = 0;
+	
+	wep_name[688] = "ULTRA FLUGGER"
+	wep_type[688] = 2
+	wep_auto[688] = 0
+	wep_load[688] = 19//22
+	wep_cost[688] = 2
+	wep_sprt[688] = sprUltraFlugger
+	wep_area[688] = 26
+	wep_text[688] = "radioactive"
+	wep_swap[688] = sndSwapShotgun
+	wep_rad[688] = 12;
+	
+	wep_name[689] = "ULTRA FAT SMG"
+	wep_type[689] = 1
+	wep_auto[689] = 1
+	wep_load[689] = 5
+	wep_cost[689] = 5
+	wep_sprt[689] = sprUltraFatSmg
+	wep_area[689] = 29
+	wep_text[689] = "rubber eggs"
+	wep_swap[689] = sndSwapPistol
+	wep_rad[689] = 6;
+	
+	wep_name[690] = "ULTRA MICRO SMG"
+	wep_type[690] = 1
+	wep_auto[690] = 1
+	wep_load[690] = 1
+	wep_cost[690] = 1
+	wep_sprt[690] = sprUltraMicroSMG
+	wep_area[690] = 19
+	wep_text[690] = "scanlines"
+	wep_swap[690] = sndSwapPistol
+	wep_rad[690] = 1;
 
 	maxwep = array_length(wep_name)-1;
 

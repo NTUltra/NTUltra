@@ -3,5 +3,5 @@
 //instance_destroy()
 //instance_create(x,y,FloorExplo)
 //}
-move_bounce_solid(true)
+move_bounce_solid(false)
 

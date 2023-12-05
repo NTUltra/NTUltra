@@ -13,3 +13,5 @@ dmg = 3;
 alarm[11] = 1;
 cost = 1;
 radCost = 0;
+xprev = xstart;
+yprev = ystart;

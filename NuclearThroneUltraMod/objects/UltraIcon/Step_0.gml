@@ -414,6 +414,7 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 			ultra_text[61] = "KRAKEN WEAPONS DEAL MORE DAMAGE#TENTACLES ARE LONGER#KRAKEN WEAPONS COST 20% LESS AMMO"
 			ultra_tips[61] = "from the sea she came"
 			scrUnlockAltSkin(race, 0);
+			bskin = 4;
 			spr_idle=sprMutant16DIdle;
 			spr_walk=sprMutant16DWalk;
 			spr_hurt=sprMutant16DHurt;

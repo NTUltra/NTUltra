@@ -1,7 +1,7 @@
 var olddir, oldspeed;
 olddir = direction
 oldspeed = speed
-move_bounce_solid(true)
+move_bounce_solid(false)
 
 motion_add(olddir,speed)
 speed = oldspeed

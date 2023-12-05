@@ -5,7 +5,8 @@ if speed > 6{
 snd_play(sndShotgunHitWall,0.05,true,true,1,false,true,0.75);
 }
 
-move_bounce_solid(true)
+move_bounce_solid(false)
+move_outside_solid(direction,8);
 speed *= 0.8
 if speed+wallbounce > 18
 speed = 18

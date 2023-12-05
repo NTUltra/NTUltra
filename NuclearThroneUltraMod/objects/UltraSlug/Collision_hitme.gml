@@ -8,12 +8,11 @@ if other.team != team and other.my_health > 0
 		range += 12;
 		with instance_create(x,y,BulletHit)
 		{
-			sprite_index = sprHeavySlugHit
+			sprite_index = sprUltraSlugHit
 			image_xscale = 1.3;
 			image_yscale = 1.3;
 		}
 	}
-	else
 	{
 		with instance_create(x,y,BulletHit)
 			sprite_index = sprUltraSlugHit
@@ -39,10 +38,5 @@ if other.team != team and other.my_health > 0
 			}
 		}
 	}
-
-
-with instance_create(x,y,BulletHit)
-	sprite_index = sprUltraSlugHit
-
 }
 

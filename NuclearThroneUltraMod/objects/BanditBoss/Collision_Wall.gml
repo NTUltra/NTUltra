@@ -9,5 +9,5 @@ if charge > 0 or intro = 0
 	}
 }
 else
-	move_bounce_solid(true)
+	move_bounce_solid(false)
 

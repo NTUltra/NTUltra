@@ -4,7 +4,7 @@ if speed > 6 {
 }
 
 Sleep(1)
-//move_bounce_solid(true)
+//move_bounce_solid(false)
 var maxSpeed = speed;
 speed *= 0.8
 speed += wallbounce

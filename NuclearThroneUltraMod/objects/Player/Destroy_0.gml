@@ -39,6 +39,8 @@ if ultra_got[87] && altUltra
 {
 	actualLives += rogueammo;
 }
+audio_stop_sound(sndHorrorLoop);
+audio_stop_sound(sndHorrorLoopTB);
 if actualLives < 1
 	with MusCont
 	{

@@ -1,5 +1,5 @@
 /// @description BOOM
-move_bounce_solid(true)
+move_bounce_solid(false)
 
 if dist > 60
 {

@@ -5,7 +5,7 @@ mask_index = mskBlade;
 instance_create(x,y,Dust);
 if place_meeting(x,y,Wall)
 {
-	move_bounce_solid(true);
+	move_bounce_solid(false);
 	mask_index = msk;
 	var walls = ds_list_create();
 	var al = instance_place_list(x,y,Wall,walls,false)

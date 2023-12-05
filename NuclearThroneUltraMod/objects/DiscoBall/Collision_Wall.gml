@@ -12,6 +12,6 @@ with instance_create(x,y,ElectroBallSpawn)
 image_angle = direction}
 
 }
-move_bounce_solid(true)
+move_bounce_solid(false)
 
 instance_create(other.x+8,other.y+8,WallBreak);

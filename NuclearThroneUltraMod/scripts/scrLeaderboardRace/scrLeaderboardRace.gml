@@ -11,6 +11,10 @@ function scrLeaderboardRace(race,bskin,altUltra,area){
 	{
 		bskin = 1;
 		altUltra = true;
+		if race == 16
+		{
+			return sprMutant16DIdle	
+		}
 	} else if bskin == 5
 	{
 		bskin = 2;
@@ -93,10 +97,6 @@ function scrLeaderboardRace(race,bskin,altUltra,area){
 	return sprMutant15BIdle;
 	break;
 	case 16:
-	if altUltra
-	{
-		return sprMutant16DIdle;
-	}
 	return sprMutant16BIdle;
 	break;
 	case 17:
@@ -201,10 +201,6 @@ function scrLeaderboardRace(race,bskin,altUltra,area){
 	return sprMutant15CIdle;
 	break;
 	case 16:
-	if altUltra
-	{
-		return sprMutant16DIdle;
-	}
 	return sprMutant16CIdle;
 	break;
 	case 17:
@@ -321,10 +317,6 @@ function scrLeaderboardRace(race,bskin,altUltra,area){
 	return sprMutant15Idle;
 	break;
 	case 16:
-	if altUltra
-	{
-		return sprMutant16DIdle;
-	}
 	return sprMutant16Idle;
 	break;
 	case 17:

@@ -1,6 +1,14 @@
 /// @description main
 if instance_exists(GenCont) || instance_exists(StartDaily)
 	exit;
+var is60fps = (UberCont.normalGameSpeed == 60);
+if autoFire > 0
+{
+	if is60fps
+		autoFire -= 0.5;
+	else
+		autoFire -= 1;
+}
 if ultra_got[43] && altUltra && hunterEye < hunterEyeMax
 {
 	hunterEye += 1.5+(1.5*skill_got[5]);
@@ -37,7 +45,6 @@ if unkillable
 {
 	alarm[3] = 2;
 }
-var is60fps = (UberCont.normalGameSpeed == 60);
 var representingCost = wep_cost[wep];
 
 if ultra_got[70]
@@ -49,162 +56,118 @@ else if scrIsCrown(13)//Crown of drowning
 
 if !instance_exists(LevCont) and visible = 1
 {
-	if roll = 0
+	if canMove
 	{
-		var previousSpeed = max(1,speed);
-		var acc = acceleration;
-		if is60fps && (speed != 0)
-			acc *= 0.5;
-		if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+		if roll = 0
 		{
-			hspeed -= acc
-		}
-		if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
-		{
-			hspeed += acc
-		}
-		if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
-		{
-			vspeed -= acc
-		}
-		if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
-		{
-			vspeed += acc
-		}
-		if ultra_got[20] && altUltra
-		{
-			var delta = 1;
-			var checkDelta = 4;
-			if (is60fps)
-			{
-				delta = 0.5;
-				checkDelta = 3;
-			}
-			var moving = false;
-			var extraacc = 1.5 * delta;
-			var braking = 0.4/delta;
-			if speed > 5.1
-				speed -= 3.5 * delta;
-			var multi = 0;//Diagonal movement is faster acceleration otherwise
+			var previousSpeed = max(1,speed);
+			var acc = acceleration;
+			if is60fps && (speed != 0)
+				acc *= 0.5;
 			if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
 			{
-				if hspeed > 0
-					hspeed *= braking;
-				hspeed -= extraacc
-				multi += extraacc;
-				moving = true;
+				hspeed -= acc
 			}
 			if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
 			{
-				if hspeed < 0
-					hspeed *= braking;
-				hspeed += extraacc
-				multi += extraacc;
-				moving = true;
+				hspeed += acc
 			}
 			if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
 			{
-				if vspeed > 0
-					vspeed *= braking;
-				vspeed -= extraacc
-				multi += extraacc;
-				moving = true;
+				vspeed -= acc
 			}
 			if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
 			{
-				if vspeed < 0
-					vspeed *= braking;
-				vspeed += extraacc
-				multi += extraacc;
-				moving = true;
+				vspeed += acc
 			}
-			speed -= max(0,multi-extraacc);
-			if !moving
+			if ultra_got[20] && altUltra
 			{
-				speed *= braking;
+				var delta = 1;
+				var checkDelta = 4;
+				if (is60fps)
+				{
+					delta = 0.5;
+					checkDelta = 3;
+				}
+				var moving = false;
+				var extraacc = 1.5 * delta;
+				var braking = 0.4/delta;
+				if speed > 5.1
+					speed -= 3.5 * delta;
+				var multi = 0;//Diagonal movement is faster acceleration otherwise
+				if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+				{
+					if hspeed > 0
+						hspeed *= braking;
+					hspeed -= extraacc
+					multi += extraacc;
+					moving = true;
+				}
+				if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+				{
+					if hspeed < 0
+						hspeed *= braking;
+					hspeed += extraacc
+					multi += extraacc;
+					moving = true;
+				}
+				if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+				{
+					if vspeed > 0
+						vspeed *= braking;
+					vspeed -= extraacc
+					multi += extraacc;
+					moving = true;
+				}
+				if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+				{
+					if vspeed < 0
+						vspeed *= braking;
+					vspeed += extraacc
+					multi += extraacc;
+					moving = true;
+				}
+				speed -= max(0,multi-extraacc);
+				if !moving
+				{
+					speed *= braking;
+				}
+				var msk = mask_index;
+				if (abs(speed - previousSpeed) > checkDelta && !instance_exists(RocketSlash) && !place_meeting(x+hspeed,y+vspeed,WallHitMe))
+				{
+					snd_play(sndGhettoBlast);
+					with instance_create(x+lengthdir_x(16,direction),y+lengthdir_y(16,direction),PlantSonicBoom)
+					{
+						motion_add(other.direction+180,other.speed+3)
+						image_angle = direction
+						team = other.team
+					}
+					with instance_create(x,y,PlantSonicBoom)
+					{
+						sprite_index = sprSpinSlash;
+						mask_index = mskSpinSlash;
+						image_angle = direction
+						team = other.team
+					}
+					with instance_create(x+lengthdir_x(16,direction+180),y+lengthdir_y(16,direction+180),PlantSonicBoom)
+					{
+						motion_add(other.direction,other.speed+3)
+						image_angle = direction
+						team = other.team
+					}
+				}
+				mask_index = msk;
+				if speed > maxSpeed
+				{
+					if !instance_exists(PlantCharge)
+					{
+						snd_play(sndSheepLoopStart);
+						instance_create(x,y,PlantCharge);	
+					}
+				}
 			}
-			var msk = mask_index;
-			if (abs(speed - previousSpeed) > checkDelta && !instance_exists(RocketSlash) && !place_meeting(x+hspeed,y+vspeed,WallHitMe))
-			{
-				snd_play(sndGhettoBlast);
-				with instance_create(x+lengthdir_x(16,direction),y+lengthdir_y(16,direction),PlantSonicBoom)
-				{
-					motion_add(other.direction+180,other.speed+3)
-					image_angle = direction
-					team = other.team
-				}
-				with instance_create(x,y,PlantSonicBoom)
-				{
-					sprite_index = sprSpinSlash;
-					mask_index = mskSpinSlash;
-					image_angle = direction
-					team = other.team
-				}
-				with instance_create(x+lengthdir_x(16,direction+180),y+lengthdir_y(16,direction+180),PlantSonicBoom)
-				{
-					motion_add(other.direction,other.speed+3)
-					image_angle = direction
-					team = other.team
-				}
-			}
-			mask_index = msk;
-			if speed > maxSpeed
-			{
-				if !instance_exists(PlantCharge)
-				{
-					snd_play(sndSheepLoopStart);
-					instance_create(x,y,PlantCharge);	
-				}
-			}
-		}
 
 	
-	if speed = 0
-	{if sprite_index != spr_hurt
-	sprite_index = spr_idle}
-	else
-	{if sprite_index != spr_hurt
-	sprite_index = spr_walk}
-	if sprite_index = spr_hurt
-	{	
-		if UberCont.normalGameSpeed == 60
-			hurtTime += 0.5;
-		else
-			hurtTime++;
-		if (image_index > 2 && hurtTime > hurtDuration)
-		{
-			sprite_index = spr_idle
-			hurtTime = 0;
-		}
-	}
-	if meleeimmunity > 0
-	{
-		if UberCont.normalGameSpeed == 60
-			meleeimmunity -= 0.5;
-		else
-			meleeimmunity--;
-	}
-	if UberCont.mouse__x < x
-		right = -1
-	else if UberCont.mouse__x > x
-		right = 1
-
-	if UberCont.mouse__y < y
-	back = 1
-	else if UberCont.mouse__y > y
-	back = -1
-
-		scrPowers();
-	}
-	else
-	{
-		//rolling
-		speed = 6.3*max(1,(skill_got[2]*1.3))//the rolling speed code is far below
-		if UberCont.normalGameSpeed == 60
-			angle += 25*right*max(1,(skill_got[2]*1.3))
-		else
-			angle += 50*right*max(1,(skill_got[2]*1.3))
-
 		if speed = 0
 		{if sprite_index != spr_hurt
 		sprite_index = spr_idle}
@@ -212,57 +175,105 @@ if !instance_exists(LevCont) and visible = 1
 		{if sprite_index != spr_hurt
 		sprite_index = spr_walk}
 		if sprite_index = spr_hurt
-		{
-			if image_index > 2
+		{	
+			if is60fps == 60
+				hurtTime += 0.5;
+			else
+				hurtTime++;
+			if (image_index > 2 && hurtTime > hurtDuration)
 			{
-				sprite_index = spr_idle;
-				canAnimateDuringImmune = -1;
+				sprite_index = spr_idle
+				hurtTime = 0;
 			}
 		}
-
-		if skill_got[5] = 1
+		if meleeimmunity > 0
 		{
-			var spd = speed;
-			speed = 0;
-			if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
-			hspeed -= 3
-			if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
-			hspeed += 3
-			if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
-			vspeed -= 3
-			if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
-			vspeed += 3
-			instance_create(x,y,FishBoost)
-			speed += spd;
-			/*if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
-			hspeed -= 3
-			if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
-			hspeed += 3
-			if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
-			vspeed -= 3
-			if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
-			vspeed += 3*/
-			if (angle > 360 or -angle > 360) 
+			if is60fps == 60
+				meleeimmunity -= 0.5;
+			else
+				meleeimmunity--;
+		}
+		if UberCont.mouse__x < x
+			right = -1
+		else if UberCont.mouse__x > x
+			right = 1
+
+		if UberCont.mouse__y < y
+		back = 1
+		else if UberCont.mouse__y > y
+		back = -1
+
+			scrPowers();
+		}
+		else
+		{
+			//rolling
+			speed = 6.3*max(1,(skill_got[2]*1.3))//the rolling speed code is far below
+			if is60fps == 60
+				angle += 25*right*max(1,(skill_got[2]*1.3))
+			else
+				angle += 50*right*max(1,(skill_got[2]*1.3))
+
+			if speed = 0
+			{if sprite_index != spr_hurt
+			sprite_index = spr_idle}
+			else
+			{if sprite_index != spr_hurt
+			sprite_index = spr_walk}
+			if sprite_index = spr_hurt
 			{
-				if !(KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2)
+				if image_index > 2
+				{
+					sprite_index = spr_idle;
+					canAnimateDuringImmune = -1;
+				}
+			}
+
+			if skill_got[5] = 1
+			{
+				var spd = speed;
+				speed = 0;
+				if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+				hspeed -= 3
+				if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+				hspeed += 3
+				if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+				vspeed -= 3
+				if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+				vspeed += 3
+				instance_create(x,y,FishBoost)
+				speed += spd;
+				/*if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+				hspeed -= 3
+				if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+				hspeed += 3
+				if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+				vspeed -= 3
+				if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+				vspeed += 3*/
+				if (angle > 360 or -angle > 360) 
+				{
+					if !(KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2)
+					{
+						angle = 0
+						roll = 0
+						audio_stop_sound(sndFishRollUpgLoop);
+					}
+				}
+			}
+			else{
+			instance_create(x+random(6)-3,y+random(6),Dust)
+				if angle > 360 or -angle > 360
 				{
 					angle = 0
 					roll = 0
-					audio_stop_sound(sndFishRollUpgLoop);
 				}
 			}
 		}
-		else{
-		instance_create(x+random(6)-3,y+random(6),Dust)
-			if angle > 360 or -angle > 360
-			{
-				angle = 0
-				roll = 0
-			}
-		}
 	}
-	if alarm[4]>0//boiling veins
+	else
 	{
+		scrPowers();	
 	}
 	//Cheats
 	var thing;
@@ -279,7 +290,7 @@ if !instance_exists(LevCont) and visible = 1
 			//scrn++;
 			
 			//instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			instance_create(f.x,f.y,VulcanoTrap)
+			instance_create(f.x,f.y,GoldTotem)
 
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
 			thing.mytext = "Wall Crawler";
@@ -575,7 +586,7 @@ if !instance_exists(LevCont) and visible = 1
 			thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,PopupText);
 			thing.mytext = "WEP";
 			instance_create(x,y,WeaponChest);
-			room_speed = UberCont.normalGameSpeed;
+			room_speed = is60fps;
 		}
 		if (keyboard_check_pressed(ord("I")))
 		    {
@@ -721,9 +732,9 @@ if !instance_exists(LevCont) and visible = 1
 	if can_shoot == 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and 
 	((ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad >= wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 	{
-		if wep_auto[wep] = 0 and clicked = 1
+		var holdKey = (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
+		if ((wep_auto[wep] = 0 and clicked = 1) || (autoFire < 1 && holdKey))
 		{
-
 			if ultra_got[44] == 1 && instance_exists(Marker)
 			{
 				scrCrackShotFire();
@@ -734,10 +745,10 @@ if !instance_exists(LevCont) and visible = 1
 					event_user(0);
 				scrFire();
 			}
-    
+    		autoFire = clamp(reload+5,4,25);
 		clicked = 0
 		}
-		if wep_auto[wep] = 1 and (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
+		else if wep_auto[wep] = 1 && holdKey
 		{
 		    
 			if ultra_got[44] == 1 && instance_exists(Marker)
@@ -1513,7 +1524,7 @@ if (!outOfCombat && !skill_got[2] && race!=18 && race != 15 and !instance_exists
 			if alarm[4] <= 0
 				alarm[4] = 1;
     
-			if UberCont.normalGameSpeed == 60
+			if is60fps == 60
 				hotfloor += 0.5;
 			else
 				hotfloor+=1;
@@ -1533,7 +1544,7 @@ if (!outOfCombat && !skill_got[2] && race!=18 && race != 15 and !instance_exists
 			//when player isn't frozen increase the time that determines when it should get frozeen
 			if frozen<1
 			{
-				if UberCont.normalGameSpeed == 60
+				if is60fps == 60
 					getFrozen += 0.5;
 				else
 					getFrozen+=1;
@@ -1616,7 +1627,7 @@ if (instance_exists(enemy))
 	if homeBoost > 0
 	{
 		var dt = 1;
-		if UberCont.normalGameSpeed == 60
+		if is60fps == 60
 			dt = 0.5;
 		var ogHomeBoost = homeBoost * dt;
 	    with projectile
@@ -1756,7 +1767,7 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 {
 	if extrafeetalarm > 0
 	{
-		if UberCont.normalGameSpeed == 60
+		if is60fps == 60
 			extrafeetalarm -= 0.5;
 		else
 			extrafeetalarm--;
@@ -1821,7 +1832,7 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 /* */
 ///time and unlock
 
-if UberCont.normalGameSpeed == 60
+if is60fps == 60
 	microseconds += 1.5;
 else
 	microseconds += 3;
@@ -1937,7 +1948,7 @@ if race==18
 	        if !place_meeting(x,y,Floor)&&point_distance(x,y,wall.x,wall.y)>16&&point_distance(x,y,ground.x,ground.y)>28//OUT OF BOUNDS
 	        {
 	        motion_add(direction+180,speed);
-			if UberCont.normalGameSpeed == 60
+			if is60fps == 60
 			{
 				motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.45);
 				motion_add(direction,speed*0.5);
@@ -1952,7 +1963,7 @@ if race==18
 		    if ( ( !place_meeting(x,y,Floor) || flying>0 || mask_index=mskPickupThroughWall || place_meeting(x,y,WallHitMe) ) && !instance_exists(LevCont) && !(ultra_got[72] && !altUltra) )//NOT ASCND ULTRA
 		    {
 			    //var wall = instance_nearest(x,y,Wall);
-				if UberCont.normalGameSpeed == 60
+				if is60fps == 60
 					motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.3);
 				else
 					motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.6);

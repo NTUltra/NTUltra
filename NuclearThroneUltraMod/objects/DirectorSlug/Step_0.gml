@@ -15,7 +15,7 @@ sprite_index = sprDirectorSlugBullet;
 dmg = 20;
 image_index = 0;
 image_speed = 0.4;
-speed+=12;
+speed+=13;
 direction=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 scrRedirectFx();
 turned=true;

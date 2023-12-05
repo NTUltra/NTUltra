@@ -1732,7 +1732,7 @@ function scrPowers() {
 							scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
 							if corpseSize > 4
 							{
-								ang = random(360)
+								var ang = random(360)
 								scrSpawnBloodBullets(xx,yy,4,14);
 								instance_create(xx+lengthdir_x(70,ang),yy+lengthdir_y(70,ang),MeatExplosion)
 								instance_create(xx+lengthdir_x(70,ang+120),yy+lengthdir_y(70,ang+120),MeatExplosion)
@@ -1784,7 +1784,7 @@ function scrPowers() {
 			{
 				if (image_speed == 0 || alarm[6] < 1) and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 				{
-					var ang
+					var ang;
 					didKill = true;
 					instance_destroy()
 					with instance_create(x,y,BloodStreak)
@@ -1794,7 +1794,7 @@ function scrPowers() {
 					}
 					if gotButt
 					{
-						scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
+						scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
 						if mySize > 4
 						{
 							scrSpawnBloodBullets(x,y,4,12);

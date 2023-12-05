@@ -2,16 +2,16 @@
 if wallsdestroyed<1 {
 	event_inherited();	
 } else {
-	x = xprevious;
-	y = yprevious;
-	speed = clamp(speed,12,18);
-	with instance_create(x+hspeed,y+vspeed,BoltWallBreak) {
-		image_angle = other.image_angle;	
+	
+	speed = clamp(speed,16,24);
+	var walls = ds_list_create();
+	var al = instance_place_list(x,y,Wall,walls,false)
+	for (var i = 0; i < al; i++) {
+		instance_create(walls[| i].x,walls[| i].y,FloorExplo)
+		instance_destroy(walls[| i]);
 	}
-	with other
-	{
-		instance_destroy();
-		instance_create(x,y,FloorExplo);
-	}
+	ds_list_destroy(walls);
+	x = xprev;
+	y = yprev;
 	wallsdestroyed-=1;	
 }

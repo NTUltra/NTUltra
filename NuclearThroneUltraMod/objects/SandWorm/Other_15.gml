@@ -8,7 +8,7 @@ if target != noone
 		image_xscale = other.image_xscale;
 		mask_index = mskSandWormDig;
 	}
-	snd_play(sndFlyFire);
+	snd_play(sndSandWormSpit);
 	var ang = point_direction(x+(xOffset*image_xscale),y-yOffset,target.x,target.y);
 	var ps = 5;
 	repeat(4)

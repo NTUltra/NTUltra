@@ -14,6 +14,6 @@ if walk > 0
 }
 else
 {
-	move_bounce_solid(true);
+	move_bounce_solid(false);
 	speed *= 0.5;
 }

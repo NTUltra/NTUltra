@@ -1,4 +1,4 @@
-move_bounce_solid(true)
+move_bounce_solid(false)
 bounces += 1
 if bounces > 5
  instance_destroy()

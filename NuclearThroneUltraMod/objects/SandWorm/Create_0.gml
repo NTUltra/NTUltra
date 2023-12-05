@@ -6,9 +6,9 @@ scrBossHealthBuff();
 event_inherited()
 
 alarm[10] = 0;//Can be on no floor
-snd_hurt = sndBigMaggotHit
-snd_dead = sndBigMaggotDie
-snd_melee = sndBigMaggotBite;
+snd_hurt = sndSandWormHurt;
+snd_dead = sndSandWormDead;
+snd_melee = sndSandWormBite;
 mask_index = mskPickupThroughWall;
 walk = 0
 xOffset = 12;

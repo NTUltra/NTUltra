@@ -3,7 +3,7 @@
 // Inherit the parent event
 if roll
 {
-	move_bounce_solid(true)	
+	move_bounce_solid(false)
 }
 else
 {

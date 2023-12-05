@@ -10,7 +10,7 @@ if sticky = 1 && speed > 0
 else if speed > 1
 {
 snd_play(sndGrenadeHitWall,0,true)
-move_bounce_solid(true)
+move_bounce_solid(false)
 speed *= 0.6
 instance_create(x,y,Dust)}
 

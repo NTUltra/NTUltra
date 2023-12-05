@@ -14,7 +14,7 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"222ea8fb-961a-4f8c-90c4-d7c7e18599e6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"100b29d1-7239-4f4b-8810-3ffb7fd96280",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dd309002-f099-400f-843e-42b7deeb5be9",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -55,8 +55,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"222ea8fb-961a-4f8c-90c4-d7c7e18599e6","path":"sprites/sprUltraBullet/sprUltraBullet.yy",},},},"Disabled":false,"id":"1bd8d95a-26d7-4f22-8128-9258d2acd898","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"100b29d1-7239-4f4b-8810-3ffb7fd96280","path":"sprites/sprUltraBullet/sprUltraBullet.yy",},},},"Disabled":false,"id":"4931e2c0-d7b0-4059-9e4b-a4ea35a0e66f","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"222ea8fb-961a-4f8c-90c4-d7c7e18599e6","path":"sprites/sprUltraBullet/sprUltraBullet.yy",},},},"Disabled":false,"id":"e02ddcd3-4b09-47cc-8805-42dcef730623","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"dd309002-f099-400f-843e-42b7deeb5be9","path":"sprites/sprUltraBullet/sprUltraBullet.yy",},},},"Disabled":false,"id":"0394cb60-cc1e-45e1-a661-498ce82118ab","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
