@@ -1,4 +1,6 @@
-if fire > 0 and !instance_exists(Portal) && !instance_exists(Spiral)
+alarm[1] = 1;
+
+if fire > 0 and !instance_exists(Portal) && !instance_exists(Spiral) && !instance_exists(LevCont) && !instance_exists(GenCont)
 {
 	fire -= 1
 if side = 1||loop
@@ -28,8 +30,8 @@ if side = 0||loop
 	}
 }
 }
+else
+alarm[1] = 30;
 
 if !position_meeting(x,y,Wall)
 	instance_destroy()
-
-alarm[1] = 1;

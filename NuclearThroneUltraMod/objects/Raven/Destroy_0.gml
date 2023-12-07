@@ -2,7 +2,7 @@
 event_inherited()
 if object_index == Raven
 {
-	scrDrop(15,0)
+	scrDrop(16,0)
 	if fps_real >= fps
 		repeat(3+irandom(6))
 		{

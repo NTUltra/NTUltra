@@ -1627,14 +1627,46 @@ function scrPowers() {
 	}
 	//REBEL
 	var ammoRebel = false;
-	if altUltra && Player.ultra_got[39]
+	var canSpawn = true;
+	if altUltra && Player.ultra_got[39] && wep_type[wep] != 0
+	{
 		ammoRebel = true;
-	if race == 10 and (!ammoRebel && (my_health > 2 || (race == 10 && !(instance_exists(Ally)) && my_health > 1) && alarm[3]<1)) || (ammoRebel && ammo[wep_type[wep]] >= typ_ammo[wep_type[wep]]*1.5)
+		if wep_type[wep] == 0 {
+			snd_play(sndEmpty)
+			dir = instance_create(x,y,PopupText)
+			dir.mytext = "THIS DOESN'T USE AMMO";
+			dir.theColour=c_red;
+			drawempty = 30
+			BackCont.shake += 5;
+			canSpawn = false;
+		}
+		else if ammo[wep_type[wep]] >= typ_ammo[wep_type[wep]]*1.5
+		{
+			canSpawn = true;
+		}
+		else
+		{
+			snd_play(sndEmpty)
+			dir = instance_create(x,y,PopupText)
+			dir.mytext = "NOT ENOUGH AMMO";
+			dir.theColour=c_red;
+			drawempty = 30
+			BackCont.shake += 5;
+			canSpawn = false;
+		}
+	}
+	if race == 10 && canSpawn and (!ammoRebel && (my_health > 2 || (race == 10 && !(instance_exists(Ally)) && my_health > 1) && alarm[3]<1)) || (ammoRebel)
 	{
 		canrebel = 1
 		if ammoRebel
 		{
 			ammo[wep_type[wep]] -= typ_ammo[wep_type[wep]]*1.5;
+			if ammo[wep_type[wep]] <= 0
+			{
+				with Crown {
+					event_user(0);	
+				}
+			}
 		}
 		else
 		{

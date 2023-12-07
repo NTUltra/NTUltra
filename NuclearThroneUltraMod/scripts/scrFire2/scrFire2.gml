@@ -6110,7 +6110,7 @@ function scrFire2(hasTailNow) {
 
 	instance_create(x,y,Dust)
 
-	with instance_create(x+lengthdir_x(5+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(5+((Player.skill_got[13]+bettermelee)*20),aimDirection),LanceShank)
+	with instance_create(x+lengthdir_x(4+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(4+((Player.skill_got[13]+bettermelee)*20),aimDirection),LanceShank)
 	{
 	longarms = 0
 	
@@ -13053,7 +13053,7 @@ function scrFire2(hasTailNow) {
 
 	instance_create(x,y,Dust)
 
-	with instance_create(x+lengthdir_x(5+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(5+((Player.skill_got[13]+bettermelee)*20),aimDirection),LanceShank)
+	with instance_create(x+lengthdir_x(4+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(4+((Player.skill_got[13]+bettermelee)*20),aimDirection),LanceShank)
 	{
 		sprite_index = sprGoldenLanceSlash;
 		longarms = 0

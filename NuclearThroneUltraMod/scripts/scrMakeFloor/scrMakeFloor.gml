@@ -829,7 +829,7 @@ function scrMakeFloor(limiter) {
 
 	//instance_create(x,y,Floor)
 
-	if (trn = 180 or (abs(trn) = 90 and (area = 3 || area = 106 || area == 136 || (area == 9 && subarea != 3)
+	if !instance_exists(WeaponChest) && (trn = 180 or (abs(trn) = 90 and (area = 3 || area = 106 || area == 136 || (area == 9 && subarea != 3)
 	|| (area == 118 && subarea != 3)))) and point_distance(x,y,10016,10016) > 48 and area != 104{
 	instance_create(x,y,Floor)
 	instance_create(x+16,y+16,WeaponChest)}
@@ -841,7 +841,7 @@ function scrMakeFloor(limiter) {
 	if random(19+instance_number(FloorMaker)) > 20
 	{
 	instance_destroy()
-	if point_distance(x,y,10016,10016) > 48{
+	if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
 	instance_create(x+16,y+16,AmmoChest)
 	instance_create(x,y,Floor)}
 	}
@@ -853,7 +853,7 @@ function scrMakeFloor(limiter) {
 		if random(15+instance_number(FloorMaker)) > 16
 		{
 			instance_destroy()
-			if point_distance(x,y,10016,10016) > 48{
+			if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
 			instance_create(x+16,y+16,AmmoChest)
 			instance_create(x,y,Floor)}
 		}
@@ -873,7 +873,7 @@ function scrMakeFloor(limiter) {
 		if random(15+instance_number(FloorMaker)) > 16
 		{
 			instance_destroy()
-			if point_distance(x,y,10016,10016) > 48{
+			if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
 			instance_create(x+16,y+16,AmmoChest)
 			instance_create(x,y,Floor)}
 		}
@@ -885,7 +885,7 @@ function scrMakeFloor(limiter) {
 	{
 		if random(19+instance_number(FloorMaker)) > 20
 		{
-		if point_distance(x,y,10016,10016) > 48{
+		if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
 		instance_create(x+16,y+16,AmmoChest)
 		instance_create(x,y,Floor)}
 		}
@@ -896,7 +896,7 @@ function scrMakeFloor(limiter) {
 	   if random(19+instance_number(FloorMaker)) > 20
 	   {
 	   instance_destroy()
-	   if point_distance(x,y,10016,10016) > 48{
+	   if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
 			if (random(4) <2)
 			instance_create(x+16,y+16,WeaponChest)
 			else
@@ -911,7 +911,7 @@ function scrMakeFloor(limiter) {
 	{
 	if random(14+instance_number(FloorMaker)) > 15
 	{
-	if point_distance(x,y,10016,10016) > 48{
+	if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
 	instance_create(x+16,y+16,AmmoChest)
 	instance_create(x,y,Floor)}
 	instance_destroy()
@@ -924,7 +924,7 @@ function scrMakeFloor(limiter) {
 	{
 	if random(39+instance_number(FloorMaker)) > 40
 	{
-	if point_distance(x,y,10016,10016) > 48
+	if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48
 	{
 	instance_create(x+16,y+16,AmmoChest)
 	instance_create(x,y,Floor)}
@@ -938,7 +938,7 @@ function scrMakeFloor(limiter) {
 	if random(9+instance_number(FloorMaker)) > 10
 	{
 	instance_destroy()
-	if point_distance(x,y,10016,10016) > 48{
+	if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
 	instance_create(x+16,y+16,AmmoChest)
 	instance_create(x,y,Floor)}
 	}
@@ -950,7 +950,7 @@ function scrMakeFloor(limiter) {
 	if random(14+instance_number(FloorMaker)) > 15
 	{
 	instance_destroy()
-	if point_distance(x,y,10016,10016) > 48{
+	if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
 	instance_create(x,y,Floor)
 	instance_create(x+16,y+16,AmmoChest)}
 	}
@@ -962,7 +962,7 @@ function scrMakeFloor(limiter) {
 	if random(21+instance_number(FloorMaker)) > 22
 	{
 	instance_destroy()
-	if point_distance(x,y,10016,10016) > 48
+	if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48
 	{
 	instance_create(x,y,Floor)
 	instance_create(x+16,y+16,AmmoChest)}
@@ -973,7 +973,7 @@ function scrMakeFloor(limiter) {
 
 	if area = 7 || area=108//CUSTOM
 	{
-	if random(14+instance_number(FloorMaker)) > 15
+	if !instance_exists(WeaponChest) && random(14+instance_number(FloorMaker)) > 15
 	{
 	if point_distance(x,y,10016,10016) > 48{
 	instance_create(x+16,y+16,AmmoChest)
@@ -990,7 +990,7 @@ function scrMakeFloor(limiter) {
 	if random(14) < 1
 	with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 
-	if point_distance(x,y,10016,10016) > 48{
+	if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
 	instance_create(x+16,y+16,AmmoChest)
 	instance_create(x,y,Floor)}
 	}
@@ -1000,7 +1000,7 @@ function scrMakeFloor(limiter) {
 	{
 	if random(9+instance_number(FloorMaker)) > 10
 	{
-	if point_distance(x,y,10016,10016) > 48{
+	if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
 	instance_create(x+16,y+16,AmmoChest)
 	instance_create(x,y,Floor)}
 	instance_destroy()
@@ -1011,7 +1011,7 @@ function scrMakeFloor(limiter) {
 
 	if area = 103 || area == 125//yv mansion
 	{
-	if random(31+instance_number(FloorMaker)) > 32
+	if !instance_exists(WeaponChest) && random(31+instance_number(FloorMaker)) > 32
 	{
 	instance_destroy()
 	if point_distance(x,y,10016,10016) > 48{

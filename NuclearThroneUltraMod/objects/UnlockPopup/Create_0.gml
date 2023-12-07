@@ -13,3 +13,7 @@ with UnlockPopup
 {
 	alarm[0] *= 0.75;
 }
+if instance_exists(GenCont)
+{
+	alarm[0] += GenCont.alarm[3];	
+}

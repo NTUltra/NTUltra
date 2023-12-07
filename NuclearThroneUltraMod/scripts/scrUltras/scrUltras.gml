@@ -272,7 +272,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		if altOverride || (instance_exists(Player) &&  Player.race == 10 && (Player.altUltra || Player.unlockAlternativeUltras || (scrCheckUltra(Player.wep_name[Player.wep]) || (!Player.skill_got[32] && !Player.skill_got[7] && !Player.skill_got[9]&& !Player.skill_got[36]) || scrCheckUltra(Player.wep_name[Player.bwep]) && instance_exists(UltraIcon))))
 		{
 			ultra_name[39] = "BIG REBEL"
-		    ultra_text[39] = "+40 MAX <r>HP<r>!#YOU CAN'T <r>HEAL<r>#EVERY LOOP RESET HP TO FULL#ALLIES COST <y>AMMO<y>"
+		    ultra_text[39] = "+45 MAX <r>HP<r>!#YOU CAN'T <r>HEAL<r>#EVERY LOOP RESET HP TO FULL#ALLIES COST <y>AMMO<y>"
 		    ultra_tips[39] = "she is a maniac!"
 		}
 		
