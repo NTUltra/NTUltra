@@ -65,6 +65,7 @@ function scrCopyPlayData(){
 		collectedRewards: UberCont.collectedRewards,
 		enableReroll: UberCont.enableReroll,
 		radUp: UberCont.radUp,
+		crownHeal: UberCont.crownHeal,
 		maxHpIncrease: UberCont.maxHpIncrease,
 		levelIncrease: UberCont.levelIncrease,
 		seed: UberCont.savedSeed,

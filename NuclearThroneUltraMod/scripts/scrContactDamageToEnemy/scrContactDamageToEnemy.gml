@@ -32,6 +32,12 @@ function scrContactDamageToEnemy(hitEnemy){
 				with hitEnemy
 				{
 					my_health -= contactDmg//dmg dealt by gamma guts
+					var dmgTaken = scrCallculateFinalDamage(contactDmg);
+					if my_health - dmgTaken <= 0
+					{
+						actuallyDead = true;	
+					}
+					/*
 					var dmgTaken = contactDmg
 					if other.race == 26//HUMPHRY mr damage
 					{
@@ -83,6 +89,7 @@ function scrContactDamageToEnemy(hitEnemy){
 							actuallyDead = true;	
 						}
 					}
+					*/
 					sprite_index = spr_hurt
 					image_index = 0
 					if meleedamage > 0

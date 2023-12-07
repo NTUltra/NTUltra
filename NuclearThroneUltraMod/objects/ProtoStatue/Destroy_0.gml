@@ -38,3 +38,8 @@ else //Destroy and not full, pink sheep
 		}
 	}
 }
+
+if UberCont.crownHeal
+{
+	scrHeal(1,true);	
+}

@@ -1,4 +1,4 @@
-scrDrop(20,2)
+scrDrop(20,5)
 
 event_inherited()
 

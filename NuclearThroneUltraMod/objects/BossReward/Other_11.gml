@@ -3,10 +3,13 @@ scrUnlockGameMode(40,"FOR COLLECTING#A BOSS BOUNTY REWARD");
 switch(array_length(UberCont.collectedRewards))
 {
 	case 0:
+		/*
 		with Player
 		{
 			guarenteedReroll += 2;
 		}
+		*/
+		UberCont.crownHeal = true;
 		snd_play(other.snd_chst);
 	break;
 	case 1:

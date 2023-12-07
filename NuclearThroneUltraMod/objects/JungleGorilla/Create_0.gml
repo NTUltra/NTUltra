@@ -1,5 +1,5 @@
 raddrop = 12
-maxhealth = 90
+maxhealth = 71
 meleedamage = 4
 mySize = 2
 
@@ -25,7 +25,7 @@ actTime = 12;
 acc = 1;
 maxSpeed = 3.4;
 gunX = -10;
-projectileSpeed = 7;
+projectileSpeed = 6.8;
 projectileSpeedDif = 0.2;
 loops = GetPlayerLoops()
 if loops > 0

@@ -301,7 +301,9 @@ if instance_exists(WepPickup) || instance_exists(ThrowWep) && !instance_exists(G
 						persistent = true;
 				}
 			}
-
+			if reload > 0{
+				scrFlexibleElbowReload(wep);
+			}
 			wep = targetPickup.wep
 			curse = targetPickup.curse
 			isPermanent = targetPickup.isPermanent;
@@ -311,6 +313,7 @@ if instance_exists(WepPickup) || instance_exists(ThrowWep) && !instance_exists(G
 			wepmod3 = targetPickup.wepmod3
 			wepmod4 = targetPickup.wepmod4
 			can_shoot = 1
+			
 			reload = min(reload,0)
 			queueshot = 0;
 			if skill_got[35]
@@ -686,9 +689,6 @@ if(my_health <= 0 && maxhealth > 0)
 	//BOUNCY FAT
 	if (skill_got[40] && my_health <= 0 && maxhealth > 0 && scrHasAmmo())
 	{
-		alarm[3] += 10;
-		snd_hurt = sndDamageNegate;
-		scrGiveEuphoriaShield();
 		snd_play_2d(sndBounceFat);
 		instance_create(x,y,BouncyFatFX);
 		repeat(3)

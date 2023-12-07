@@ -18,6 +18,7 @@ spr_dead = sprProtoStatueDoneDie
 alarm[1] = 1;
 
 event_inherited()
+maxSpeed = 0;
 canMoveOver = true;
 team=1;
 

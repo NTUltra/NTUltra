@@ -4,6 +4,11 @@ function scrDrawBloom() {
 	//exit;
 	
 	draw_set_blend_mode(bm_add)
+	if scrIsCrown(6) {
+		with chestprop {
+			draw_sprite_ext(sprite_index,1,c,y,1.5,1.5,image_angle,c_lime,ba);	
+		}
+	}
 	if instance_exists(Player){
 	with Bullet1
 		draw_sprite_ext(sprite_index,-1,x,y,image_xscale*2,image_yscale*2,image_angle,c_white,(Player.ultra_got[28]*0.3)+ba)//roids ultra d
@@ -83,7 +88,7 @@ function scrDrawBloom() {
 	with Bullet6//FLAME PELLETS
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with Bullet7//DIRECTOR
-	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
+	draw_sprite_ext(sprite_index,-1,x,y,1+imageXscale,1+imageYscale,image_angle,c_white,ba)
 	with DirectorGrenade//DIRECTOR
 	draw_sprite_ext(sprDirectorGrenadeBloom,0,x,y,2,2,image_angle,c_white,ba)
 	with RedirectFX//DIRECTOR
@@ -198,13 +203,7 @@ function scrDrawBloom() {
 	with EnemyBouncerBullet
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with Slug
-	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
-	with UltraSlug
-	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
-	with DirectorSlug
-	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
-	with HeavySlug
-	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
+	draw_sprite_ext(sprite_index,-1,x,y,1+imageXscale,1+imageYscale,image_angle,c_white,ba)
 	with SlashShotgunPrep
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with Ray

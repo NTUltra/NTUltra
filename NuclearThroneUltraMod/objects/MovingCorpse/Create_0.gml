@@ -1,12 +1,12 @@
 event_inherited();
-friction = 0.415
+friction = 0.42
 image_speed = 0.4
 depth = 7;
 dmg = 1;
 impactWristed = false;
 if instance_exists(Player){
 	if Player.ultra_got[52] == 1{
-		friction=0.32;
+		friction=0.33;
 		dmg = 1.5;
 	}
 	if Player.skill_got[20] {

@@ -4,9 +4,10 @@ var ang = 0;
 if image_xscale < 0
 	ang = 180;
 var ps = 5;
-repeat(4)
+scrDrop(5,0);
+repeat(5)
 {
-	with instance_create(x + (xOffset*image_xscale),y-yOffset,Maggot)
+	with instance_create(x + (xOffset*image_xscale),y-yOffset,myMaggot)
 	{
 		ignoreOverlap = true;
 		raddrop = 0;

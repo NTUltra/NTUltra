@@ -4,6 +4,16 @@ if alarm[2] > 0 || alarm[3] > 0
 {
 	exit;
 }
+if my_health < maxhealth && !reachedHalfHealth
+{
+	alarm[2] = 2;
+	actTime -= 4;
+	reachedHalfHealth = true;
+	wallDestroyedStunTime -= 5;
+	targetWalkSpeed += 0.2;
+	range += 16;
+	projectileSpeed += 0.5;
+}
 scrTarget()
 if target != noone {
 	var ran = random(10);

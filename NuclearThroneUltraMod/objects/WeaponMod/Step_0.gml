@@ -76,7 +76,7 @@ if place_meeting(x,y,Player)
 		}
 	}
 
-	if KeyCont.key_pick[Player.p] = 1 && Player.maxhealth > 0
+	if KeyCont.key_pick[Player.p] = 1// && Player.maxhealth > 0
 	{
 		KeyCont.key_pick[Player.p] = 2;
 		//get your weapon mod 

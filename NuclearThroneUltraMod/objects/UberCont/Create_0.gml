@@ -4,7 +4,7 @@ encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "PR 30.16"//"PR 30.02";
-subUpdateVersion = ".BETA 1";
+subUpdateVersion = ".BETA 3";
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
 /*
@@ -146,6 +146,7 @@ enum secretChallengeBosses {
 killedBoss = [];
 collectedRewards = [];
 enableReroll = false;
+crownHeal = false;
 radUp = false;
 maxHpIncrease = 0;
 levelIncrease = 0;

@@ -6,7 +6,7 @@ if !instance_exists(GenCont)
 	y = py;
 	if !instance_exists(Player) || Player.area != 104
 		scrSpawnEndLevelPortal()
-	if fps_real < fps
+	if !instance_exists(DramaCamera) && fps_real < fps
 	{
 		if visible && alarm[1] < 1
 			alarm[1] = 5;

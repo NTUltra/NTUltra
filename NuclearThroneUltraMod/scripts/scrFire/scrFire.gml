@@ -31,11 +31,11 @@ function scrFire() {
 		if Player.race == 25
 		{
 			//reload *= 0.55;
-			reload -= wep_load[wep]*0.35;
+			reload -= wep_load[wep]*0.49;
 		}
 		else
 		{
-			reload -= wep_load[wep]*0.4;
+			reload -= wep_load[wep]*0.45;
 			//reload *= 0.6;
 		}
 	}

@@ -74,9 +74,13 @@ if Player.crownpoints > 0
 			{
 				if (scrIsCrown(8) && Player.tookDestiny && (!UberCont.canMultiCrown || scrIsCrown(24)))//Sloth
 					crown = 8;
-				else if (Player.wep_type[Player.wep] == 4 && Player.wep_type[Player.bwep] == 4 && !scrIsGamemode(4) && !scrIsCrown(25))//Crown of freedom secret 2 explosive weps
+				else if (Player.wep_type[Player.wep] == 4 && 
+				((Player.bwep == 0 || Player.wep_type[Player.bwep] == 4) || (Player.wep_type[Player.cwep] == 4))
+				&& !scrIsGamemode(4) && !scrIsCrown(25))//Crown of freedom secret 2 explosive weps
 					crown = 25;
-				else if (Player.wep_type[Player.wep] == 5 && Player.wep_type[Player.bwep] == 5 && !scrIsCrown(26))//Crown of energy
+				else if (Player.wep_type[Player.wep] == 5 && 
+				((Player.bwep == 0 || Player.wep_type[Player.bwep] == 5) || (Player.wep_type[Player.cwep] == 5))
+				&& !scrIsCrown(26))//Crown of energy
 					crown = 26;
 				else if (Player.consecutiveCrownVisits > 1 && !scrIsCrown(33))
 					crown = 33;

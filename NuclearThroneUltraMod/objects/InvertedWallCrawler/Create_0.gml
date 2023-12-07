@@ -21,6 +21,7 @@ spr_expose_hurt = sprInvertedWallCrawlerExposedHurt;
 normalBullet = InvertedGuardianBulletSpawn;
 
 actTime -= 4;
+projectileSpeed += 0.3;
 targetWalkSpeed = 0.5;
 wallDestroyedStunTime = 30;
 maxSpeed = 5;

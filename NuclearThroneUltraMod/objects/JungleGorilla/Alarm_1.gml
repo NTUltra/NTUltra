@@ -6,7 +6,7 @@ if target != noone {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
 		var dir = point_direction(x, y, target.x, target.y);
 		var dis = point_distance(target.x, target.y, x, y);
-        if dis > 48 && dis < 240 {
+        if dis > 48 && dis < 210 {
             if ran < 7 {
 				if ran < 4
 					walk += actTime * 2;

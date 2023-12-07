@@ -465,7 +465,7 @@ function scrSkills() {
 	skill_bons[40] = "-5% AMMO COST"
 	
 	skill_name[41] = "NERVES OF STEEL"
-	skill_text[41] = "REPLACE 2 <r>HEALTH<r> WITH 1 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#REDUCE TOTAL <w>RELOAD TIME<w> BY 40%#<w>ENEMIES<w> HAVE A CHANCE TO DROP <gb>ARMOUR<gb>"
+	skill_text[41] = "REPLACE 2 <r>HEALTH<r> WITH 1 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#REDUCE TOTAL <w>RELOAD TIME<w> BY 45%#<w>ENEMIES<w> HAVE A CHANCE TO DROP <gb>ARMOUR<gb>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
 		skill_text[41] = "LOSE 2 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#REDUCE TOTAL <w>RELOAD TIME<w> BY 35%#<w>ENEMIES<w> HAVE A SMALL CHANCE TO DROP <gb>ARMOUR<gb>"

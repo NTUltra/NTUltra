@@ -16,7 +16,7 @@ if instance_exists(Player) && Player.ultra_got[47] && Player.altUltra
 {
 	d = 50;
 	w = 4;
-	raddrop = 20;
+	raddrop = 10;
 }
 scrDrop(d,w)
 scrRaddrop();

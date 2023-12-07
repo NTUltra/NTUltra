@@ -22,10 +22,10 @@ rate = 7;
 actTime = 10;
 if loops > 0
 {
-	actTime = 7;
+	actTime = 8;
 	rate = 5;
 	raddrop += 1;
-	maxhealth = 17;
+	maxhealth = 14;
 	my_health = maxhealth
 }
 

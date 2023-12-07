@@ -733,7 +733,7 @@ if !instance_exists(LevCont) and visible = 1
 	((ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad >= wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 	{
 		var holdKey = (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
-		if ((wep_auto[wep] = 0 and clicked = 1) || (autoFire < 1 && holdKey))
+		if ((wep_auto[wep] = 0 and clicked = 1) || (autoFire < 1 && holdKey && !scrIsChargeWeapon(wep)))
 		{
 			if ultra_got[44] == 1 && instance_exists(Marker)
 			{
@@ -745,7 +745,7 @@ if !instance_exists(LevCont) and visible = 1
 					event_user(0);
 				scrFire();
 			}
-    		autoFire = clamp(reload+5,4,25);
+    		autoFire = 5;
 		clicked = 0
 		}
 		else if wep_auto[wep] = 1 && holdKey
@@ -1160,12 +1160,12 @@ if (!instance_exists(LevCont))
 		{
 			//rage
 			var rageAccuracy;
-			var reduction = rage*0.002;//With 500 max this caps at 100% reload speed
+			var reduction = rage*0.003;//With 500 max this caps at 150% reload speed
 			reload -= reduction
 			breload -= reduction*0.4;
 			creload -= reduction*0.4;
 
-			rageAccuracy = rage*0.0012//with 500 max this caps at 60%
+			rageAccuracy = rage*0.0014//with 500 max this caps at 80%
 			accuracy=standartAccuracy+rageAccuracy;//standartAccuracy will be changed by eagle eyes so this scales with that.
 		}
 		/*

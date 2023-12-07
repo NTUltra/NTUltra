@@ -28,12 +28,10 @@ if(morphMe == 0){
 			{
 				impactWrist = true;
 				alarm[0] = 2;
-				speed = max(speed+7.3,8.3)//9.3
+				speed += 6;
 				if Player.race=25
-					speed += 1.2;
+					speed += 1;
 			}
-			else if speed > 17
-			speed = 17
 			if mySize > 0
 			{
 				if impactWrist
@@ -41,20 +39,24 @@ if(morphMe == 0){
 					speed /= (mySize*0.35);
 				}
 				else
-					speed /= mySize*0.82;
+					speed /= mySize*0.83;
 			}
-			
-			if Player.skill_got[20] && speed > 18
-				speed = 18
+			if Player.skill_got[20]
+			{
+				speed = clamp(speed,8 ,17);
+			}
 		}
 		else if mySize > 0
 			speed /= mySize*0.83
+			
+		speed = min(speed,17);
 	}
 	snd_play(snd_dead, 0.1,true);
 }
 else if morphMe != 6
 {
 	instance_create(x,y,PortalChecker);
+	debug("morph: ", morphMe);
 	if morphMe == 2
 	{
 		instance_create(x,y,ExplosiveSheep);

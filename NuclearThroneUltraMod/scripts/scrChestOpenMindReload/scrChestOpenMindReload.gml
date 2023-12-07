@@ -10,6 +10,7 @@ function scrChestOpenMindReload(thePlayer){
 		{
 			scrRaddrop(18);
 			my_health -= 1;
+			exception = true;
 			sprite_index = spr_hurt;
 			image_index = 0;
 			snd_play(snd_hurt, hurt_pitch_variation);
@@ -21,6 +22,18 @@ function scrChestOpenMindReload(thePlayer){
 			snd_play(sndChestReload);
 			with instance_create(cx,cy,HealAbsorbingPores)
 				sprite_index = sprAbsorbingPoresChest;
+			if reload > 0
+			{
+				scrFlexibleElbowReload(wep);	
+			}
+			if breload > 0
+			{
+				scrFlexibleElbowReload(bwep);
+			}
+			if creload > 0
+			{
+				scrFlexibleElbowReload(cwep);	
+			}
 			var lowa = 0;
 			var lowb = 0;
 			var lowc = 0;

@@ -2,7 +2,7 @@ if team != other.team
 {
 	with other
 	{
-		if (typ =1 or typ = 2)
+		if (typ == 1 or typ == 2 or typ == 3)
 		{
 			if isGrenade
 				instance_destroy(id,false);

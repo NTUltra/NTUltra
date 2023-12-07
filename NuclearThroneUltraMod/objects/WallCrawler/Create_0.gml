@@ -24,9 +24,9 @@ fallWalk = 0;
 gunangle = 0;
 alarm[1] = 30+random(90)
 wkick = 0
-actTime = 15;
+actTime = 16;
 
-projectileSpeed = 6;
+projectileSpeed = 5.8;
 fallOutDirection = 0;
 acc = 0.8;
 maxSpeed = 4;
@@ -63,3 +63,5 @@ targetWalkSpeed = 0.2;
 wallDestroyedStunTime = 40;
 
 normalBullet = GuardianBulletSpawn;
+
+reachedHalfHealth = false;

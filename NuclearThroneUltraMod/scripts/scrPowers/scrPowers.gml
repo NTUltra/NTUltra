@@ -11,8 +11,8 @@ function scrPowers() {
 	{
 		if UberCont.normalGameSpeed == 60
 		{
-			if alienIntestines < 60
-				alienIntestines += 0.375;
+			if alienIntestines < 40
+				alienIntestines += 0.3;
 			else
 				alienIntestines += 0.175;
 			if race == 25
@@ -22,8 +22,8 @@ function scrPowers() {
 		}
 		else
 		{
-			if alienIntestines < 60
-				alienIntestines += 0.75;
+			if alienIntestines < 40
+				alienIntestines += 0.6;
 			else
 				alienIntestines += 0.35;
 			if race == 25
@@ -31,7 +31,6 @@ function scrPowers() {
 				alienIntestines += 0.1;	
 			}
 		}
-		
 	}
 	/////SHIT PRESSED////////
 	if KeyCont.key_spec[p] = 1
@@ -437,7 +436,7 @@ function scrPowers() {
 
 	if race == 22 && !altUltra //Rogue
 	{
-		var radcost = 95;//Cost is also in portal
+		var radcost = 100;//Cost is also in portal
 		var useRad = ultra_got[88] == 1
 	if rogueammo > instance_number(PortalStrike) || (useRad && rad >= radcost*(1+instance_number(PortalStrike)))
 	{
@@ -751,7 +750,7 @@ function scrPowers() {
 		{
 			snd_play_2d(sndBloodGamble);
 		    //gamble some blood
-		    if (wep_cost[wep]/typ_ammo[wep_type[wep]] > random(1.05 - consecutiveGoodBloodGambles)*(1+(skill_got[5]*0.3333333333333333) )  )//If this is true take damage
+		    if (wep_cost[wep]/typ_ammo[wep_type[wep]] > random(1 - consecutiveGoodBloodGambles)*(1+(skill_got[5]*0.3333333333333333) )  )//If this is true take damage
 		    {//thronebutt adds 1/3 chance of not taking damage
 				consecutiveGoodBloodGambles = 0;
 				//Damnation
@@ -1330,7 +1329,7 @@ function scrPowers() {
 	if race==12
 	{
 		var canSpawn = true;
-		var radCost = 90;
+		var radCost = 110;
 		if ultra_got[47]
 		{
 			if !altUltra
@@ -1558,7 +1557,7 @@ function scrPowers() {
 				
 			}
 		}
-		else 
+		if !ultra_got[32] || ultra_got[31]
 		{
 			if instance_exists(HoldToEat)
 			{
@@ -1888,7 +1887,7 @@ function scrPowers() {
 		{
 			snd_play(sndExplosion);
 			if Player.skill_got[5] = 1
-				snd_play_2d(sndCorpseExploUpg)
+				snd_play_2d(choose(sndCorpseExploUpg,sndCorpseExploUpg,sndMeatExplo,sndCorpseExplo),0.1)
 			else
 				snd_play_2d(sndCorpseExplo)	
 		}

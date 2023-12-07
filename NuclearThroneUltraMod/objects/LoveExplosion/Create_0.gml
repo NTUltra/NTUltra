@@ -1,4 +1,5 @@
 /// @description xxx
+event_inherited();
 snd_play(sndExplosionL);
 image_speed = 0.4;
 step = 16;

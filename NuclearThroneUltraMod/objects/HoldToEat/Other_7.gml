@@ -24,7 +24,7 @@ with Player
 		breload = lowb;
 		creload = lowc;
 		
-		if ultra_got[29] && altUltra//ROBOT EXCLUSIVE TASTE
+		if ultra_got[29] && altUltra && cwep == 0//ROBOT EXCLUSIVE TASTE
 		{
 			maxhealth += 4;
 		}

@@ -149,6 +149,10 @@ function scrLoadRun(){
 				UberCont.collectedRewards = encryptedRun.collectedRewards;
 				UberCont.enableReroll = encryptedRun.enableReroll;
 				UberCont.radUp = encryptedRun.radUp;
+				if variable_struct_exists(encryptedRun, "crownHeal")
+					UberCont.crownHeal = encryptedRun.crownHeal;
+				else if UberCont.radUp
+					UberCont.crownHeal = true;
 				UberCont.maxHpIncrease = encryptedRun.maxHpIncrease;
 				UberCont.levelIncrease = encryptedRun.levelIncrease;
 				UberCont.savedSeed = encryptedRun.seed;

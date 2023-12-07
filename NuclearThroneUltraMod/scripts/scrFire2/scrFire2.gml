@@ -8613,7 +8613,12 @@ function scrFire2(hasTailNow) {
 	
 	//BOW
 	case 502:
-
+	with ChargeBow {
+		if scrChargeRelease()
+		{
+			instance_destroy();
+		}
+	}
 	with instance_create(x,y,ChargeBow)
 	{
 		maxcharge=3;//maxrate
@@ -8639,7 +8644,12 @@ function scrFire2(hasTailNow) {
 	
 	//ULTRA BOW
 	case 503:
-
+	with UltraChargeBow {
+		if scrChargeRelease()
+		{
+			instance_destroy();
+		}
+	}
 	with instance_create(x,y,UltraChargeBow)
 	{
 		maxcharge=3;//maxrate
@@ -10546,7 +10556,12 @@ function scrFire2(hasTailNow) {
 	
 	//GOLDEN BOW
 	case 567:
-
+	with ChargeBow {
+		if scrChargeRelease()
+		{
+			instance_destroy();
+		}
+	}
 	with instance_create(x,y,ChargeBow)
 	{
 		boltSprite = sprGoldBolt;
@@ -10782,6 +10797,12 @@ function scrFire2(hasTailNow) {
 	
 	//SUPER BOW
 	case 576:
+	with ChargeBow {
+		if scrChargeRelease()
+		{
+			instance_destroy();
+		}
+	}
 	if Player.skill_got[42]
 	{
 		scrActivateTail(hasTailNow);	
@@ -13926,7 +13947,12 @@ function scrFire2(hasTailNow) {
 	
 	//POW
 	case 680:
-	
+	with ChargePow {
+		if scrChargeRelease()
+		{
+			instance_destroy();
+		}
+	}
 	altFire = !altFire;
 	if altFire
 	{
@@ -14294,7 +14320,7 @@ function scrFire2(hasTailNow) {
 	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 6
-	wkick = 4
+	wkick = 5
 
 	break;
 	
@@ -14319,7 +14345,7 @@ function scrFire2(hasTailNow) {
 	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 2
-	wkick = 2
+	wkick = 5
 
 	break;
 	

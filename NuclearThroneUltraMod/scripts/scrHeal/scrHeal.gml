@@ -2,6 +2,8 @@
 // /@description
 ///@param
 function scrHeal(num = 1, canOverHeal = false){
+	if !Player.canHeal
+		exit;
 	if canOverHeal || Player.my_health + num <= Player.maxhealth
 		Player.my_health += num
 	else

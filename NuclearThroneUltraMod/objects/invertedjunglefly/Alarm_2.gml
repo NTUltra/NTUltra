@@ -5,6 +5,7 @@ snd_play(sndFlyFire);
 with instance_create(x,y,MaggotInverted)
 {
 	raddrop = 0;
+	ignoreOverlap = true;
 	countKill = false;
 	motion_add(other.gunangle+(random(28)-14),10)
 	image_angle = direction

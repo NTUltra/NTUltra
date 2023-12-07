@@ -65,6 +65,22 @@ if instance_exists(Player)
 				}
 			}
 		}
+		if ultra_got[88]//Ultra popo
+		{
+			var ac = accuracy;
+			with instance_create(x,y,UltraLightning)
+			{
+				image_angle = point_direction(other.x,other.y,UberCont.mouse__x,UberCont.mouse__y)+(random(40)-20)*ac
+				team = 2
+				ammo = 2+(add*2)+random(8)//60
+				///if Player.ultra_got[59]=1 
+				///ammo+=4;
+				event_perform(ev_alarm,0)
+				visible = 0
+				with instance_create(x,y,LightningSpawn)
+				image_angle = Player.image_angle
+			}
+		}
 	}
 	if Player.skill_got[3]//Pluto
 	{
@@ -75,22 +91,5 @@ if instance_exists(Player)
 	{
 	with instance_create(x,y,BulletHit)
 	sprite_index=sprEatRadPlut;
-	}
-
-	if Player.ultra_got[88] == 1
-	{
-		var ac = Player.accuracy;
-		with instance_create(x,y,UltraLightning)
-		{
-			image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(40)-20)*ac
-			team = 2
-			ammo = 5+random(9)//60
-			///if Player.ultra_got[59]=1 
-			///ammo+=4;
-			event_perform(ev_alarm,0)
-			visible = 0
-			with instance_create(x,y,LightningSpawn)
-			image_angle = Player.image_angle
-		}
 	}
 }

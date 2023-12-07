@@ -3508,10 +3508,10 @@ function scrWeapons() {
 	wep_name[318] = "SUPER TOXIC CROSSBOW"
 	wep_type[318] = 3
 	wep_auto[318] = 0
-	wep_load[318] = 34
+	wep_load[318] = 36
 	wep_cost[318] = 5
 	wep_sprt[318] = sprSuperToxicBow
-	wep_area[318] = 7
+	wep_area[318] = 6
 	wep_text[318] = "diarrhea"
 	wep_swap[318] = sndSwapBow
 	wep_rad[318] = 0;
@@ -7237,7 +7237,7 @@ function scrWeapons() {
 	wep_name[655] = "THE CRENDOOKEN"
 	wep_type[655] = 1
 	wep_auto[655] = 1
-	wep_load[655] = 20
+	wep_load[655] = 19
 	wep_cost[655] = 3
 	wep_sprt[655] = sprCrendookenBullet
 	wep_area[655] = 14

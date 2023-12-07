@@ -5,7 +5,8 @@ name = "";
 switch(array_length(UberCont.collectedRewards))
 {
 	case 0:
-		name += "COLLECT TWO GUARANTEED RE-ROLLS";
+		//name += "COLLECT TWO GUARANTEED RE-ROLLS";
+		name += "CROWNVAULTS (OVER)HEAL 1HP";
 	break;
 	case 1:
 		name += "INCREASE THE VALUE OF RADIATION BY 15%";

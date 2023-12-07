@@ -62,6 +62,22 @@ if instance_exists(Player)
 				}
 			}
 		}
+		if ultra_got[88] == 1
+		{
+			var ac = accuracy;
+			with instance_create(other.x,other.y,UltraLightning)
+			{
+				image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(40)-20)*ac
+				team = 2
+				ammo = 2+add+random(add)//60
+				///if Player.ultra_got[59]=1 
+				///ammo+=4;
+				event_perform(ev_alarm,0)
+				visible = 0
+				with instance_create(x,y,LightningSpawn)
+				image_angle = Player.image_angle
+			}
+		}
 	}
 	snd_play(sndRadPickup)
 

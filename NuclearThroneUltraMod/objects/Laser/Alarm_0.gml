@@ -256,7 +256,7 @@ if laserhit>0// && random(3)<1
 		x += lengthdir_x(1,image_angle+180) y += lengthdir_y(1,image_angle+180)
 	}
 	var hit = instance_place(x,y,hitme);
-	if hit != noone && hit.team != team
+	if hit != noone && hit.team != team && hit.team != 0
 	{
 		hitStyle = choose(1,2);	
 	}

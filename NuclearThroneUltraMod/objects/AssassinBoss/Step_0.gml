@@ -50,8 +50,7 @@ if (alarm[4] < 0) {
 		mp_potential_step(target.x,target.y,2,false)
 	}
 
-	if speed > 5.4
-	speed = 5.4
+	
 
 	if dodge > -5
 	{
@@ -244,5 +243,8 @@ if alarm[2] > 0 && alarm[2] < 20
 		motion_add(dir,1);
 	}
 }
+
+if speed > 5.4
+	speed = 5.4
 
 

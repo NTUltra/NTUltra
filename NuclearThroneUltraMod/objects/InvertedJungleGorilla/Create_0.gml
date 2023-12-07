@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 raddrop = 18
-maxhealth = 75;
+maxhealth = 61;
 EnemyHealthAdjustments();
 
 spr_idle = sprInvertedJungleGorilla;

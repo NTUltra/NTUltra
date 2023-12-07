@@ -193,7 +193,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		if altOverride || (instance_exists(Player) && Player.race == 8 && (Player.spr_idle == sprMutant8DIdle || Player.unlockAlternativeUltras))
 		{
 			ultra_name[29] = "EXCLUSIVE TASTE"
-			ultra_text[29] = "HOLDING ONLY ONE WEAPON WILL:#INCREASE DAMAGE DEALT TO ENEMIES BY 20%#RETURN 10% <y>AMMO<y>/<g>RAD<g> UPON FIRING#+15% <w>RELOAD SPEED<w> AND +4 MAX <r>HP<r>##AUTO EAT WEAPONS LEFT IN THE LEVEL";
+			ultra_text[29] = "HOLDING ONLY ONE WEAPON WILL:#INCREASE DAMAGE DEALT TO ultra_ENEMIES BY 20%#RETURN 10% <y>AMMO<y>/<g>RAD<g> UPON FIRING#+15% <w>RELOAD SPEED<w> AND +4 MAX <r>HP<r>##AUTO EAT WEAPONS LEFT IN THE LEVEL";
 		    ultra_tips[29] = "gold tastes good"
 		}
 		else
@@ -437,7 +437,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		if altOverride || (instance_exists(Player) &&  Player.race == 16 && (Player.altUltra || Player.unlockAlternativeUltras || ((scrKrakenWeapons(Player.wep) || Player.skill_got[39] || Player.area == 101 || Player.area == 122 || scrIsCrown(13) || scrKrakenWeapons(Player.bwep)) && instance_exists(UltraIcon))))
 		{
 			ultra_name[61] = "CAPTAIN OF THE KRAKEN"
-			ultra_text[61] = "<p>KRAKEN<p> WEAPONS DEAL MORE DAMAGE#<p>TENTACLES<p> ARE LONGER#<p>KRAKEN<p> WEAPONS COST 30% LESS <y>AMMO<y>##<p>TENTACLE<p> <gb>ARMOUR<gb> <w>STRIKE<w>"//TENTACLES DESTROY ALL ENEMY PROJECTILES <-- nope
+			ultra_text[61] = "<p>KRAKEN<p> WEAPONS DEAL MORE DAMAGE#<p>TENTACLES<p> ARE LONGER#<p>KRAKEN<p> WEAPONS COST 30% LESS <y>AMMO<y>##<p>TENTACLE<p> <gb>ARMOUR<gb> <w>STRIKE<w>#WHENEVER YOU LOSE <gb>ARMOURb>#SPAWN A <pi>TINY<pi> <p>KRAKEN<p>"//TENTACLES DESTROY ALL ENEMY PROJECTILES <-- nope
 			ultra_tips[61] = "from the sea she came"
 		}
 		

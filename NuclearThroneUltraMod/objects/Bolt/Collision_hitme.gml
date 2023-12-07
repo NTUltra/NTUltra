@@ -3,10 +3,12 @@ if candmg and other.team != team
 	if (!array_contains(hitEntities,other.id))
 	{
 		event_user(2);
+		var actualDmg =	scrCallculateFinalDamage(dmg);
 		if instance_exists(Player) && Player.skill_got[21]
-			var pierceDmg = dmg*0.75
+			var pierceDmg = actualDmg*0.75
 		else
-			var pierceDmg = dmg*0.5
+			var pierceDmg = actualDmg*0.5
+		
 		if other.my_health >= pierceDmg
 		{
 			instance_destroy();

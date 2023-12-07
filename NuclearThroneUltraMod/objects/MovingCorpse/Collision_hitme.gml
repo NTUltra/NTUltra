@@ -14,7 +14,7 @@ if (other.team != 2 && (mySize >= other.mySize-1 or impactWrist) and speed > 2)
 			if point_distance(Player.x,Player.y,other.x,other.y) > 350
 				dmg *= 0.5;
 		}
-	
+		speed *= 0.95;
 		with other
 		{
 			my_health -= max(1,floor(other.dmg+(other.mySize*0.25)+other.speed/5))
