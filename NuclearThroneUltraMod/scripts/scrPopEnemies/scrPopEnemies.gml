@@ -702,7 +702,7 @@ function scrPopEnemies() {
 	        else {
 	            var ran = random(100);
 	            if ran > 90 {
-	                repeat(10)
+	                repeat(9)
 	                instance_create(x + 12 + random(8), y + 12 + random(8), choose(InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak,
 	                    InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak, InvertedExploFreak, InvertedExploFreak, InvertedRhinoFreak, InvertedFreak, InvertedFreak, InvertedFreak))
 	            }

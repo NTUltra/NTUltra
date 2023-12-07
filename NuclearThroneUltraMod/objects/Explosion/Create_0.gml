@@ -35,7 +35,8 @@ else
 	motion_add(other.ang,6)
 	ang += angstep;
 	}
-	BackCont.shake += 7
+	if BackCont.shake < 20
+		BackCont.shake += 7
 }
 
 team = -1

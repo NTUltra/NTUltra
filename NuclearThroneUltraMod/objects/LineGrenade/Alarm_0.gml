@@ -16,8 +16,8 @@ motion_add(random(360),random(4))
 //instance_create(x,y,Explosion);
 Sleep(20)
 dir = 0
-do {dir += 1 x += lengthdir_x(24,direction) y += lengthdir_y(24,direction)
-if point_distance(x,y,Player.x,Player.y)>64
+do {dir += 1 x += lengthdir_x(28,direction) y += lengthdir_y(28,direction)
+if point_distance(x,y,Player.x,Player.y)>60
 {
 	var randir = random(360);
 	with instance_create(x+lengthdir_x(4,randir),y+lengthdir_y(4,randir),Explosion)
@@ -29,7 +29,7 @@ motion_add(random(360),random(2))
 }
 
 }
-until dir > 100 or place_meeting(x,y,Wall)
+until dir > 6 or place_meeting(x,y,Wall)
 alarm[1] = 2
 	scrForcePosition60fps();
 speed = 4

@@ -12,7 +12,9 @@ if other.team != team and other.my_health > 0//the thing I hit must not be mysel
 			if other.alarm[1] < 1
 			{
 				snd_play(sndMeatExplo,0,true)
-				instance_create(x,y,MeatExplosion);
+				with instance_create(x,y,MeatExplosion) {
+					dmg -= 1;
+				}
 				with instance_create(x,y,FishBoost)
 				{
 					motion_add(random(360),3);

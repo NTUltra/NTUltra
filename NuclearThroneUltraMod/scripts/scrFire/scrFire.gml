@@ -1826,7 +1826,7 @@ function scrFire() {
 	break;
 
 
-	//EXPLOSIVE MORPH-O-RAY
+	//EXPLOSIVE exMORPH-O-RAY
 	case 73:
 
 	if !instance_exists(MorphSound)
@@ -4206,11 +4206,19 @@ function scrFire() {
 	break;
 
 
-	//EXPLOSIVE BOW
+	//EXPLOSIVE CROSSBOW
 	case 165:
 
 	snd_play_fire(sndCrossbow)
-
+	altFire = !altFire;
+	if altFire
+	{
+		wep_type[165] = 3;
+	}
+	else
+	{
+		wep_type[165] = 4;
+	}
 	with instance_create(x,y,ExplosiveBolt)
 	{motion_add(aimDirection,22)
 	image_angle = direction

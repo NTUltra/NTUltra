@@ -54,3 +54,6 @@ frozen=false;
 countKill = true;
 EnemyHealthAdjustments();
 scrInitDrops(1);
+
+if place_meeting(x,y,ProtoStatue)
+	instance_destroy(id,false);

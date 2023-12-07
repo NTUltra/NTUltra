@@ -72,6 +72,10 @@ if instance_exists(Player) && !endPieceSpawned
 					{
 						instance_create(x+32*xx,y+32*yy,GiantGoldenWeaponChest)//crown of love?
 					}
+					if area==104 && xx==4 && yy==2 &&instance_exists(Player) && Player.skill_got[23]
+					{
+						instance_create(x+32*xx,y+32*yy,GiantGoldenWeaponChest)
+					}
 					if area==104 && xx==6 && yy==2
 					{
 						instance_create(x+32*xx,y+32*yy,GiantGoldenWeaponChest)

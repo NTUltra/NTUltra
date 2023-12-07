@@ -17,6 +17,13 @@ function scrElementorPlaceWall(mx, my){
 	}
 	if point_distance(x,y,mx,my) > 16 
 	{
+		if ultra_got[93]
+		{
+			with ElementorWall
+			{
+				mask_index = mskWall;	
+			}
+		}
 		var wl = instance_place(xx,yy,Wall);
 		if wl != noone && wl.object_index != ElementorWall
 		{
@@ -49,6 +56,13 @@ function scrElementorPlaceWall(mx, my){
 				alarm[0]=15;
 			}
 			placedWall = true;
+		}
+		if ultra_got[93]
+		{
+			with ElementorWall
+			{
+				mask_index = mskPickupThroughWall;	
+			}
 		}
 	}
 	return placedWall;

@@ -459,10 +459,6 @@ else {
     ammo[wep_type[wep]] = typ_ammo[wep_type[wep]] * 3
 }
 
-if scrIsGamemode(9)
-{
-	maxhealth += UberCont.casualModeHPIncrease;
-}
 maxSpeed = 4
 
 
@@ -598,7 +594,10 @@ if race = 11//HUNTER
 standartAccuracy = accuracy;
 
 
-
+if scrIsGamemode(9)
+{
+	maxhealth += UberCont.casualModeHPIncrease;
+}
 my_health = maxhealth
 lsthealth = maxhealth //lasthealth
 maxCash = 500;

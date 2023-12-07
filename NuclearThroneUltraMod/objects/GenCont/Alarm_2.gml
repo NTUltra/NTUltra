@@ -105,15 +105,31 @@ if Player.area = 106 and Player.subarea = 3 && !scrIsGamemode(40)
 
 if Player.area = 114 and Player.subarea = 2 && !scrIsGamemode(40)
 {
-	scrSpawnBoss(BecomeJungleBoss);
-	if (Player.loops > 4)
-		scrSpawnMoreBosses(BecomeJungleBoss,1+clamp(floor((Player.loops-4)*0.5),1,3));
+	if (scrIsGamemode(44)) {
+		scrSpawnBoss(BecomeScrapBoss);
+		if (Player.loops > 4)
+			scrSpawnMoreBosses(BecomeScrapBoss,1+clamp(floor((Player.loops-4)*0.5),1,3));
+	}
+	else
+	{
+		scrSpawnBoss(BecomeJungleBoss);
+		if (Player.loops > 4)
+			scrSpawnMoreBosses(BecomeJungleBoss,1+clamp(floor((Player.loops-4)*0.5),1,3));
+	}
 }
 if Player.area = 123 and Player.subarea = 2 && !scrIsGamemode(40)
 {
-	scrSpawnBoss(BecomeInvertedJungleBoss);
-	if (Player.loops > 4)
-		scrSpawnMoreBosses(BecomeInvertedJungleBoss,1+clamp(floor((Player.loops-4)*0.5),1,3));
+	if (scrIsGamemode(44)) {
+		scrSpawnBoss(BecomeInvertedScrapBoss);
+		if (Player.loops > 4)
+			scrSpawnMoreBosses(BecomeInvertedScrapBoss,1+clamp(floor((Player.loops-4)*0.5),1,3));
+	}
+	else
+	{
+		scrSpawnBoss(BecomeInvertedJungleBoss);
+		if (Player.loops > 4)
+			scrSpawnMoreBosses(BecomeInvertedJungleBoss,1+clamp(floor((Player.loops-4)*0.5),1,3));
+	}
 }
 	if (Player.area = 5 and Player.subarea = 3) && !scrIsGamemode(40)
 	instance_create(instance_furthest(Player.x,Player.y,Floor).x+16, instance_furthest(Player.x,Player.y,Floor).y+16,LilHunter)

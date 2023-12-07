@@ -58,3 +58,4 @@ wepmod4=0;
 isPermanent = false;
 hasBeenEaten = false;
 //name="IF YOU SEE THIS REPORT BUG TO @ERDEPPOL"
+alarm[5] = 10;

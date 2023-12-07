@@ -521,9 +521,9 @@ function scrMakeFloor(limiter) {
 		}
 	}
 	
-	//Mushroom land
+	//Mushroom swamp
 	if area = 117 || area == 124 {
-		if random(8) < 1
+		if random(9) < 1
 		{
 			instance_create(x,y,Floor)
 			instance_create(x+32,y,Floor)
@@ -729,7 +729,8 @@ function scrMakeFloor(limiter) {
 	} else instance_create(x,y,Floor)}
 
 
-
+	if instance_number(Floor) > 10
+	{
 	//HOW high the chances are for a certain turn (or no turn)
 	//if area = 1
 	trn = choose(0,0,0,0,0,0,0,0,0,90,-90,90,-90,180)
@@ -776,7 +777,12 @@ function scrMakeFloor(limiter) {
 		trn = 0;	
 	}
 	else if area == 135
-	trn = choose(0,0,0,0,0,0,0,0,0,0,90,-90)
+		trn = choose(0,0,0,0,0,0,0,0,0,0,90,-90)
+	}
+	else
+	{
+	trn = 0;	
+	}
 	direction += trn
 	if ((area=7||area=108) && subarea=3) || area=104
 		direction=0;

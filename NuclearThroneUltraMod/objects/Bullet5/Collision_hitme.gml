@@ -5,7 +5,7 @@ if other.team != team and other.my_health > 0 && alarm[0] < 1
 	var range = 12;
 	if instance_exists(Player) && Player.skill_got[15] //Shotgun shoulder
 	{
-		range += 6;
+		range += 8;
 	}
 	var direct = other.id;
 	var al = collision_circle_list(x,y,range,hitme,false,false,hits,false)

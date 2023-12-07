@@ -2,6 +2,7 @@ if !instance_exists(GenCont)
 {
 scrChestOpenMindReload(other);
 Player.nochest = 0
+var ang = random(360);
 repeat(1+Player.ultra_got[25]){//ROIDS ULTRA A DOUBLE WEPS
 with instance_create(x-8,y,WepPickup)
 {
@@ -12,7 +13,10 @@ ammo = 50
 curse = 0
 type = wep_type[wep]
 sprite_index = wep_sprt[wep]
+direction = ang;
+speed = 1.5;
 }
+ang += 120;
 with instance_create(x,y,WepPickup)//WE INCLUDE THE SECOND WEAPON TO DUPLICATE
 {
 scrWeapons()
@@ -22,7 +26,10 @@ ammo = 50
 curse = 0
 type = wep_type[wep]
 sprite_index = wep_sprt[wep]
+direction = ang;
+speed = 1.5;
 }
+ang += 120;
 }
 with instance_create(x+8,y,WepPickup)//THIS ONE IS SADLY NOT DUPLICATED CUS THAT BE OP
 {
@@ -33,6 +40,8 @@ ammo = 50
 curse = 0
 type = wep_type[wep]
 sprite_index = wep_sprt[wep]
+direction = ang;
+speed = 1.5;
 }
 
 

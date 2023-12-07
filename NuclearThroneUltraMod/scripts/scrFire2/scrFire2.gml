@@ -1460,7 +1460,15 @@ function scrFire2(hasTailNow) {
 	case 250:
 
 	snd_play_fire(sndCrossbow)
-
+	altFire = !altFire;
+	if altFire
+	{
+		wep_type[250] = 3;
+	}
+	else
+	{
+		wep_type[250] = 4;
+	}
 	with instance_create(x,y,ExplosiveBolt)
 	{motion_add(aimDirection+(random(16)-8)*other.accuracy,22)
 	image_angle = direction
@@ -2320,7 +2328,15 @@ function scrFire2(hasTailNow) {
 	case 279:
 
 	snd_play_fire(sndCrossbow)
-
+	altFire = !altFire;
+	if altFire
+	{
+		wep_type[279] = 3;
+	}
+	else
+	{
+		wep_type[279] = 4;
+	}
 	with instance_create(x,y,ExplosiveBolt)
 	{motion_add(aimDirection,22)
 	image_angle = direction

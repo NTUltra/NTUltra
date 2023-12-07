@@ -7359,7 +7359,7 @@ function scrWeapons() {
 	wep_type[666] = 2
 	wep_auto[666] = 1
 	wep_load[666] = 10
-	wep_cost[666] = 1.75
+	wep_cost[666] = 1.5
 	wep_sprt[666] = sprTelepathor
 	wep_area[666] = 0
 	wep_text[666] = "telepathic shotgun"

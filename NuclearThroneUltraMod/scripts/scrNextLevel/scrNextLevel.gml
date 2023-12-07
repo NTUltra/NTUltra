@@ -32,14 +32,6 @@ function scrNextLevel() {
 		}
 	}
 	freeAmmoRound = max(0,freeAmmoRound-1);
-	var prevHard = hard;
-	if scrIsGamemode(25)//Survival
-	{
-		area = 116;
-		subarea ++;
-		hard+=1.25;
-		exit;
-	}
 	if area = 104//YV CRIB
 	{
 		if fromCribToVault
@@ -48,15 +40,46 @@ function scrNextLevel() {
 			fromCribToVault = false;
 			exit;
 		}
-		area = lastarea;
-		if looping
+		else
 		{
-			room_restart();
-			exit;
+			area = lastarea;
+			subarea = lastsubarea;
 		}
-		subarea = lastsubarea;
-		//if subarea==1&&area!=9//LAST AREA
-		//	area+=1;
+	}
+	if race == 6 || race == 12 {//Yv's Crib? Yun cuz aswell
+		if level >= 10
+		{
+		    if (visitedCrib==false)
+			{
+				if area == 100
+				{
+					if !instance_exists(CrownPed)
+					{
+						//Next level should be crown
+						fromCribToVault = true;
+					}
+				}
+				else
+				{
+					lastarea = area;
+					lastsubarea = subarea;
+				}
+			    area = 104;
+			    visitedCrib = true;
+				if scrIsCrown(24)
+					hard += 1;
+				else
+					hard -= 1;
+		    }
+		}
+	}
+	var prevHard = hard;
+	if scrIsGamemode(25)//Survival
+	{
+		area = 116;
+		subarea ++;
+		hard+=1.25;
+		exit;
 	}
 	//show_message("inverted: "+ string(inverted)+"#area :"+string(area));
 	lastsubarea = subarea;
@@ -620,29 +643,6 @@ function scrNextLevel() {
 	if ( area==101 && inverted )//inv Oasis
 	{area=122;
 	lastarea=122;
-	}
-
-	if race=6||race=12{//Yv's Crib? Yun cuz aswell
-		if level >= 10
-		{
-		    if (visitedCrib==false)
-			{
-				if area == 100
-				{
-					if !instance_exists(CrownPed)
-					{
-						//Next level should be crown
-						fromCribToVault = true;
-					}
-				}
-			    area = 104;
-			    visitedCrib = true;
-				if scrIsCrown(24)
-					hard += 1;
-				else
-					hard -= 1;
-		    }
-		}
 	}
 
 	if (area=105 || area=106|| area=107 || area = 108 || area = 109 || area = 110 || area = 111 || area = 112 || area == 121 || area == 122 || area == 123 || area == 124 || area == 125)&&subarea<2//inverted

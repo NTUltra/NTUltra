@@ -33,7 +33,7 @@ with instance_create(x,y,ToxicThrowerGas)
 }
 
 }
-until dir > 100 or place_meeting(x,y,Wall)
+until dir > 64 or place_meeting(x,y,Wall)
 alarm[1] = 2
 	scrForcePosition60fps();
 speed = 4

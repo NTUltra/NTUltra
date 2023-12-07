@@ -50,4 +50,12 @@ sprite_index = sprFloor100}
 with instance_place(x,y,prop)
 	instance_destroy(id,false);
 //alarm[0] = 300;
+var fuks = ds_list_create();
 
+var al = instance_place_list(x,y,MeleeFake,fuks,false);
+for(var i = 0; i < al; i++)
+{
+	with fuks[| i] {
+		instance_destroy(id,false);	
+	}
+}

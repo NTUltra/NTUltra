@@ -9,6 +9,7 @@ if instance_exists(Player)
 	{
 		phaseable = true;
 		solid = false;
+		mask_index = mskPickupThroughWall;
 		alarm[1] = 1;
 	}
 area = Player.area

@@ -6,7 +6,9 @@ image_speed = 0;
 fireSpeed = 0;
 ang = random(360);
 fireSpeed = 0;
-spinRate = 4;
+spinRate = 3
+if GetPlayerLoops() > 0
+	spinRate += 1;
 myscorch = instance_create(x,y,TrapScorchMark)
 with myscorch {
 	sprite_index = spr360TrapScorchMark;

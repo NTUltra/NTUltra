@@ -1,4 +1,5 @@
-
+move_bounce_solid(false)
+speed += 0.8;
 if instance_exists(Player){
 	if Player.ultra_got[12]==0
     {
@@ -17,7 +18,6 @@ if instance_exists(Player){
 		}
 		if !isNearPortal
 		{
-			move_bounce_solid(false)
 			if instance_exists(Floor)
 			{
 				var f = instance_nearest(x,y,Floor);
