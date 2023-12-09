@@ -51,7 +51,7 @@ function scrNextLevel() {
 		{
 		    if (visitedCrib==false)
 			{
-				if area == 100
+				if area == 100 || area == 128 || area == 129
 				{
 					if !instance_exists(CrownPed)
 					{

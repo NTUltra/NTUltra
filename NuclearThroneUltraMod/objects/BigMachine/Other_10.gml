@@ -14,7 +14,7 @@ alarm[3]=105;//EXPOSURE TIME!
 	}
 	mask_index=mskBigMachineExposed;
 
-	snd_play_2d(sndBigMachineActivate);
+	snd_play_2d(sndBigMachineCharge);
 	alarm[1]=10;
 	ammo=4;
 	if instance_exists(Player)

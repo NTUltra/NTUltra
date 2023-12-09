@@ -27,7 +27,7 @@ if scrHasASecretCrown()
 {
 	hasASecret = true;
 	hint = "WANT ME TO CURSE YOUR WEAPONS?";
-	if (Player.curse == 1 && (Player.bcurse == 1 || Player.curse == 1))
+	if (Player.curse == 1 && (Player.bcurse == 1 || Player.ccurse == 1))
 	{
 		hasCurse = true;
 		hint = "I CAN MAKE THIS WEAPON\nPERMANENTLY COME WITH YOU\nTHROUGH PORTALS";

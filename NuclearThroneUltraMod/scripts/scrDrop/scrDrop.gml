@@ -37,7 +37,7 @@ function scrDrop(itemdrop, weapondrop) {
 		rabbit = (Player.skill_got[4]*(0.34+Player.betterrabbitpaw));
 		dropRateBuff += 0.93 + rabbit
 		+ rebelBuff
-		+ (Player.skill_got[28]*(Player.rage*0.0011))//max is 60%
+		+ (Player.skill_got[28]*(Player.rage*0.0001))//max is 50%
 		if scrIsCrown(21) //Crown of risk
 		{
 			if h >= floor(mh*0.75)

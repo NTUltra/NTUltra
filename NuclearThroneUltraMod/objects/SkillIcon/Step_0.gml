@@ -14,8 +14,8 @@ if skill == 1
 {
 	if Player.ultra_got[62] && Player.altUltra//Living armour
 	{
-		Player.maxarmour += 4;
-		Player.armour += 4;
+		Player.maxarmour += 2;
+		Player.armour += 2;
 	}
 	else if Player.race == 25
 	{

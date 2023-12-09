@@ -24,7 +24,7 @@ walk = 20+random(10)
 gunangle = point_direction(x,y,target.x,target.y)
 
 scrTarget()
-if random(5) < 1 and target != noone
+if random(5) < 1 and target != noone && instance_exists(Wall)
 {
 with Raven
 {

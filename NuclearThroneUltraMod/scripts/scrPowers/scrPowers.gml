@@ -421,9 +421,9 @@ function scrPowers() {
 		{
 			freeArmourStrike = false;
 		}
-	    else if armour>0 && !ultra_got[63]
+	    else if armour > 0 && (!ultra_got[63] || (ultra_got[62] && altUltra))
 	        armour--;
-	    else if ultra_got[63]
+	    else if ultra_got[63] && !(ultra_got[62] && altUltra)
 	    {
 	        my_health -= 2;
 			hitBy = sprite_index;
@@ -1628,7 +1628,7 @@ function scrPowers() {
 	//REBEL
 	var ammoRebel = false;
 	var canSpawn = true;
-	if altUltra && Player.ultra_got[39] && wep_type[wep] != 0
+	if altUltra && ultra_got[39] && wep_type[wep] != 0
 	{
 		ammoRebel = true;
 		if wep_type[wep] == 0 {
@@ -1655,7 +1655,7 @@ function scrPowers() {
 			canSpawn = false;
 		}
 	}
-	if race == 10 && canSpawn and (!ammoRebel && (my_health > 2 || (race == 10 && !(instance_exists(Ally)) && my_health > 1) && alarm[3]<1)) || (ammoRebel)
+	if race == 10 && canSpawn && ((!ammoRebel && (my_health > 2 || (race == 10 && !(instance_exists(Ally)) && my_health > 1) && alarm[3]<1)) || ammoRebel)
 	{
 		canrebel = 1
 		if ammoRebel

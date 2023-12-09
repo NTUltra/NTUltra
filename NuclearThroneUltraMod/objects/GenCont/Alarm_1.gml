@@ -5,7 +5,7 @@ if instance_exists(Player)
 {
 	with Crown
 	{
-		if newThing = 1 {
+		if newThing = 1 && Player.area != 104 {
 		newThing = 0
 		repeat(2)
 		instance_create(x,y,IDPDSpawn)

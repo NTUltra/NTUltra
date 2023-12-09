@@ -600,12 +600,13 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 				altUltra = true;
 				//maxhealth = round(maxhealth*0.5);
 				ultra_name[62] = "LIVING ARMOUR"
-				ultra_text[62] = "REPLACE ALL YOUR HEALTH WITH ARMOUR##HEALTH DROPS BECOME ARMOUR DROPS##(SECOND STOMACH DOUBLES ARMOUR#FROM ARMOUR DROPS)"
+				ultra_text[62] = "REPLACE 50% OF YOUR HEALTH WITH ARMOUR##HEALTH DROPS BECOME ARMOUR DROPS##(SECOND STOMACH DOUBLES ARMOUR#FROM ARMOUR DROPS)"
 				ultra_tips[62] = "iron woman"
-				maxarmour += maxhealth;
-				armour += maxhealth;
+				maxarmour += round(maxhealth*0.5);
+				armour += round(maxhealth*0.5);
 				maxhealth = 1;
 				my_health = 1;
+				prevhealth = 1;
 				hudArmourSpace = 6;
 			}
 			else

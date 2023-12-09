@@ -36,7 +36,7 @@ function scrSkills() {
 	skill_text[1] = "+4 <r>MAX HP<r>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
-		skill_text[1] = "+4 <gb>MAX ARMOUR<gb>"
+		skill_text[1] = "+2 <gb>MAX ARMOUR<gb>"
 	}
 	skill_tips[1] = "thick skin"
 	skill_msnd[1] =  sndMutRhinoSkin
@@ -459,13 +459,13 @@ function scrSkills() {
 	skill_bons[39] = "CHARGES FASTER"
 	
 	skill_name[40] = "BOUNCY FAT"
-	skill_text[40] = "IF YOU HAVE <y>AMMO<y> AND TAKE LETHAL DAMAGE#<aq>PREVENT<aq> IT AND LOSE#50% OF BASE TOTAL <y>AMMO<y>"
+	skill_text[40] = "IF YOU HAVE <y>AMMO<y> AND TAKE LETHAL DAMAGE#<aq>PREVENT<aq> IT AND LOSE#55% OF BASE TOTAL <y>AMMO<y>"
 	skill_tips[40] = "layer of fat"
 	skill_msnd[40] =  sndMutBouncyFat;
 	skill_bons[40] = "-5% AMMO COST"
 	
 	skill_name[41] = "NERVES OF STEEL"
-	skill_text[41] = "REPLACE 2 <r>HEALTH<r> WITH 1 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#REDUCE TOTAL <w>RELOAD TIME<w> BY 45%#<w>ENEMIES<w> HAVE A CHANCE TO DROP <gb>ARMOUR<gb>"
+	skill_text[41] = "REPLACE 2 <r>HEALTH<r> WITH 1 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#REDUCE TOTAL <w>RELOAD TIME<w> BY 45%#<w>ENEMIES<w> HAVE A VERY SMALL CHANCE TO DROP <gb>ARMOUR<gb>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
 		skill_text[41] = "LOSE 2 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#REDUCE TOTAL <w>RELOAD TIME<w> BY 35%#<w>ENEMIES<w> HAVE A SMALL CHANCE TO DROP <gb>ARMOUR<gb>"

@@ -4,7 +4,7 @@ function GetPlayerMaxRad(){
 	var multiplier = 62;
 	if (scrIsGamemode(22))//Slow leveling
 	{
-		multiplier *= 1.75;
+		multiplier *= 1.8;
 	}
 	else if scrIsHardMode()//HARD MODE
 	{

@@ -509,6 +509,7 @@ if oldcrown == 29
 			wantHealth += 1;
 			
 		maxhealth -= wantHealth;
+		maxhealth = max(maxhealth,1);
 		isPureHealthBoost = 0;
 	}
 }

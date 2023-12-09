@@ -110,50 +110,11 @@ if instance_exists(WepPickup) || instance_exists(ThrowWep) && !instance_exists(G
 			if scrIsCrown(20) && ammoMultiple > 0//Crown of protection
 			{
 				ammoMultiple -= 2;
-				//if Player.ultra_got[62] && Player.altUltra //Living armour
-				//{
 				if (canCrownOfProtection)
 				{
 					scrArmourPickup(1);
 				}
 				canCrownOfProtection = !canCrownOfProtection;
-				/*}
-				else
-				{
-					my_health += 1;
-					var num = 1;
-					if skill_got[9]//Second stomache
-					{
-						num = 2;
-						if my_health < maxhealth
-							my_health ++;
-						snd_play(sndHealthPickupUpg,0,true);
-						with instance_create(x,y,HealFX)
-						{
-							sprite_index = sprHealBigFX;
-						}
-					}
-					else
-					{
-						snd_play(sndHealthPickup,0,true);
-						instance_create(x,y,HealFX);
-					}
-					if UberCont.opt_ammoicon
-					{
-						dir = instance_create(x,y,PopupText)
-						dir.sprt = sprHPIconPickup;
-						dir.mytext = "+"+string(num)
-						if my_health > maxhealth
-							dir.mytext += "#OVERHEAL!"
-					}
-					else
-					{
-						dir = instance_create(x,y,PopupText)
-						dir.mytext = "+"+string(num)+" HP"
-						if my_health > maxhealth
-							dir.mytext += "#OVERHEAL!"
-					}
-				}*/
 			}
 			
 			if ammoMultiple > 0{
@@ -529,13 +490,17 @@ resetPrevHealth = true;
 //{
 if armour > 0
 {
-	if tookHit && my_health != maxhealth && alarm[3] < 1 && !exception
+	if tookHit && /*my_health != maxhealth && */alarm[3] < 1 && !exception
 	{
 		armour -= 1;
 		snd_play(sndLostArmour);
 		alarm[3]=max(alarm[3],5);//before your armour lowers again}
 		resetPrevHealth = true;
-
+		if skill_got[28] == 1
+		{
+			//rage = 0;
+			rage = max(floor(rage-50),0);
+		}
 		scrBlankArmour();
 		if ultra_got[64]
 			scrSerpentArmourStrike();
@@ -708,9 +673,9 @@ if(my_health <= 0 && maxhealth > 0)
 		Sleep(50);
 		my_health = 1;
 		var al = 6;//weapon types total
-		var takePercentage = 0.5; 
+		var takePercentage = 0.55; 
 		if race == 25
-			takePercentage = 0.45;
+			takePercentage = 0.51;
 		var baseammo;
 		baseammo[1] = 255 baseammo[2] = 55 baseammo[3] = 55 baseammo[4] = 55 baseammo[5] = 55;
 		var lostAmmo = 0;

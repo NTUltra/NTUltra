@@ -5907,7 +5907,7 @@ function scrWeapons() {
 	wep_type[534] = 1
 	wep_auto[534] = 0
 	wep_load[534] = 170
-	wep_cost[534] = 135
+	wep_cost[534] = 145
 	wep_sprt[534] = sprSuperGyroBurster
 	wep_area[534] = 31
 	wep_text[534] = "bullets for months"

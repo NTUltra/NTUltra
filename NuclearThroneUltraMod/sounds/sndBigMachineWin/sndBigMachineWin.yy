@@ -10,7 +10,7 @@
   "bitRate": 192,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 2.024042,
+  "duration": 1.688042,
   "parent": {
     "name": "TheThrone",
     "path": "folders/Sounds/Palace/TheThrone.yy",

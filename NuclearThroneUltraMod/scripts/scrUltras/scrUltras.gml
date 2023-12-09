@@ -450,7 +450,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		if altOverride || (instance_exists(Player) && Player.race == 16 && (Player.altUltra || Player.unlockAlternativeUltras || (!Player.skill_got[7] && !Player.skill_got[36] && !Player.skill_got[32] && !Player.skill_got[31] && instance_exists(UltraIcon))))
 		{
 			ultra_name[62] = "LIVING ARMOUR"
-			ultra_text[62] = "REPLACE ALL YOUR <r>HEALTH<r> WITH <gb>ARMOUR<gb>##<r>HEALTH<r> DROPS BECOME <gb>ARMOUR<gb> DROPS##(SECOND STOMACH DOUBLES ARMOUR#FROM ARMOUR DROPS)#(HEALING MUTATIONS DO NOT#REGENERATE ARMOUR)"
+			ultra_text[62] = "REPLACE 50% OF YOUR <r>HEALTH<r> WITH <gb>ARMOUR<gb>##<r>HEALTH<r> DROPS BECOME <gb>ARMOUR<gb> DROPS##(SECOND STOMACH DOUBLES ARMOUR#FROM ARMOUR DROPS)#(HEALING MUTATIONS DO NOT#REGENERATE ARMOUR)"
 			ultra_tips[62] = "iron woman"
 		}
 		
