@@ -116,7 +116,7 @@ function scrSkills() {
 	skill_name[6] = "LUCKY SHOT"
 	if !UberCont.useSeed && random(500)<1
 		skill_name[6] = "CASINO ROLL"
-	skill_text[6] = "21% CHANCE KILLS REGENERATE <y>AMMO<y>"
+	skill_text[6] = "20% CHANCE KILLS REGENERATE <y>AMMO<y>"
 	skill_tips[6] = "ammo everywhere"
 	skill_msnd[6] =  sndMutLuckyShot
 	skill_bons[6] = "+2% CHANCE";
@@ -386,10 +386,10 @@ function scrSkills() {
 	
 	
 	skill_name[33] = "GLASS ARM CANNON"//Metroid reference I guess
-	skill_text[33] = "27% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-2 <r>MAX HP<r>"
+	skill_text[33] = "26% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-1 <r>MAX HP<r>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
-		skill_text[33] = "27% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-2 <gb>MAX ARMOUR<gb>"
+		skill_text[33] = "26% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-1 <gb>MAX ARMOUR<gb>"
 	}
 	skill_tips[33] = "fragile"
 	skill_msnd[33] =  sndMutGlassArmCannon
@@ -397,10 +397,10 @@ function scrSkills() {
 	{
 		if (Player.race == 4 && Player.maxhealth <= 2 && UberCont.ctot_skill_taken[33] <= 0)
 		{
-			skill_text[33] = "27% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-2 <r>MAX HP<r>#<pi>TAKING THIS WONT KILL YOU<pi> <r><3<r>"	
+			skill_text[33] = "26% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-2 <r>MAX HP<r>#<pi>TAKING THIS WONT KILL YOU<pi> <r><3<r>"	
 		}
 	}
-	skill_bons[33] = "-1 MAX HP INSTEAD";
+	skill_bons[33] = "-2% ENEMY HP";
 	
 	/* OLD
 	skill_name[34] = "FLEXIBLE ELBOWS"
@@ -459,7 +459,7 @@ function scrSkills() {
 	skill_bons[39] = "CHARGES FASTER"
 	
 	skill_name[40] = "BOUNCY FAT"
-	skill_text[40] = "IF YOU HAVE <y>AMMO<y> AND TAKE LETHAL DAMAGE#<aq>PREVENT<aq> IT AND LOSE#55% OF BASE TOTAL <y>AMMO<y>"
+	skill_text[40] = "IF YOU HAVE <y>AMMO<y> AND TAKE LETHAL DAMAGE#<aq>PREVENT<aq> IT AND LOSE#70% OF BASE TOTAL <y>AMMO<y>#20% LESS FOR TYPES YOU'RE HOLDING"
 	skill_tips[40] = "layer of fat"
 	skill_msnd[40] =  sndMutBouncyFat;
 	skill_bons[40] = "-5% AMMO COST"

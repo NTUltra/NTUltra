@@ -9,7 +9,7 @@ spr_hurt = sprInvertedGoldWormHurt
 spr_dead = sprInvertedGoldWormDead
 spr_fire = sprInvertedGoldWormFire;
 
-actTime = 7;
+actTime = 8;
 maxSpeed = 2.4;
 acc = 0.8;
 tellTime = 25;

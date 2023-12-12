@@ -165,7 +165,7 @@ function scrRaces() {
 	race_eskin[9] = 0
 	race_fskin[9] = 0
 	race_bskin_lock[9] = "ACQUIRE#THE BLACK SWORD"
-	race_cskin_lock[9] = "AQUIRE#THE MOST POWERFUL SWORD#LOOP WITH#CHICKEN SWORD"
+	race_cskin_lock[9] = "ACQUIRE#THE DARK SWORD#LOOP WITH#CHICKEN SWORD"
 
 
 	race_name[10] = "[REBEL]"

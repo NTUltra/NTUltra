@@ -32,12 +32,6 @@ if instance_exists(GenCont)
 else
 	alarm[7] = 60;
 
-if scrIsGamemode(6) && instance_exists(Player) && !instance_exists(SurvivalWave)
-{
-Player.x=x;
-Player.y=y+124;
-}
-
 
 if instance_exists(Player)
 {
@@ -85,8 +79,11 @@ scrAddDrops(2);
 reachedHalfHealth = false;
 sndtaunt = 0;
 tauntdelay = 0;
-with Player {
-	x = other.x - 32;
-	y = other.y + 128;
-	scrForcePosition60fps();
+if instance_exists(Player) && !instance_exists(SurvivalWave)
+{
+	with Player {
+		x = other.x - 32;
+		y = other.y + 128;
+		scrForcePosition60fps();
+	}
 }

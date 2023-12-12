@@ -10,7 +10,12 @@ if hspeed > 0
 else if hspeed < 0
     right = -1
 if alarm[4] < 1
-	image_angle += spinRate;
+{
+	if UberCont.normalGameSpeed == 60
+		image_angle += spinRate*0.5;
+	else
+		image_angle += spinRate;
+}
 if array_length(myLasers) > 0
 {
 	if instance_exists(myLasers[0])

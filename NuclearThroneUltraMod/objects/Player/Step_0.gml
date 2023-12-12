@@ -176,7 +176,7 @@ if !instance_exists(LevCont) and visible = 1
 		sprite_index = spr_walk}
 		if sprite_index = spr_hurt
 		{	
-			if is60fps == 60
+			if is60fps
 				hurtTime += 0.5;
 			else
 				hurtTime++;
@@ -188,7 +188,7 @@ if !instance_exists(LevCont) and visible = 1
 		}
 		if meleeimmunity > 0
 		{
-			if is60fps == 60
+			if is60fps
 				meleeimmunity -= 0.5;
 			else
 				meleeimmunity--;
@@ -209,8 +209,8 @@ if !instance_exists(LevCont) and visible = 1
 		{
 			//rolling
 			speed = 6.3*max(1,(skill_got[2]*1.3))//the rolling speed code is far below
-			if is60fps == 60
-				angle += 25*right*max(1,(skill_got[2]*1.3))
+			if is60fps
+				angle += (50*right*max(1,(skill_got[2]*1.3)))*0.5
 			else
 				angle += 50*right*max(1,(skill_got[2]*1.3))
 
@@ -1524,7 +1524,7 @@ if (!outOfCombat && !skill_got[2] && race!=18 && race != 15 and !instance_exists
 			if alarm[4] <= 0
 				alarm[4] = 1;
     
-			if is60fps == 60
+			if is60fps
 				hotfloor += 0.5;
 			else
 				hotfloor+=1;
@@ -1544,7 +1544,7 @@ if (!outOfCombat && !skill_got[2] && race!=18 && race != 15 and !instance_exists
 			//when player isn't frozen increase the time that determines when it should get frozeen
 			if frozen<1
 			{
-				if is60fps == 60
+				if is60fps
 					getFrozen += 0.5;
 				else
 					getFrozen+=1;
@@ -1627,7 +1627,7 @@ if (instance_exists(enemy))
 	if homeBoost > 0
 	{
 		var dt = 1;
-		if is60fps == 60
+		if is60fps
 			dt = 0.5;
 		var ogHomeBoost = homeBoost * dt;
 	    with projectile
@@ -1767,7 +1767,7 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 {
 	if extrafeetalarm > 0
 	{
-		if is60fps == 60
+		if is60fps
 			extrafeetalarm -= 0.5;
 		else
 			extrafeetalarm--;
@@ -1832,7 +1832,7 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 /* */
 ///time and unlock
 
-if is60fps == 60
+if is60fps
 	microseconds += 1.5;
 else
 	microseconds += 3;
@@ -1948,7 +1948,7 @@ if race==18
 	        if !place_meeting(x,y,Floor)&&point_distance(x,y,wall.x,wall.y)>16&&point_distance(x,y,ground.x,ground.y)>28//OUT OF BOUNDS
 	        {
 	        motion_add(direction+180,speed);
-			if is60fps == 60
+			if is60fps
 			{
 				motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.45);
 				motion_add(direction,speed*0.5);
@@ -1963,7 +1963,7 @@ if race==18
 		    if ( ( !place_meeting(x,y,Floor) || flying>0 || mask_index=mskPickupThroughWall || place_meeting(x,y,WallHitMe) ) && !instance_exists(LevCont) && !(ultra_got[72] && !altUltra) )//NOT ASCND ULTRA
 		    {
 			    //var wall = instance_nearest(x,y,Wall);
-				if is60fps == 60
+				if is60fps
 					motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.3);
 				else
 					motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.6);

@@ -1745,6 +1745,7 @@ function scrFire() {
 
 	//kill player (This is actually really bad design but I don't care it only happens one in a milion so its funny)
 	Player.my_health=0;
+	Player.armour = 0;
 
 	BackCont.viewx2 += lengthdir_x(800,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(800,aimDirection+180)*UberCont.opt_shake

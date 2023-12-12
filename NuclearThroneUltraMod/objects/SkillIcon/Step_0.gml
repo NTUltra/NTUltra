@@ -172,7 +172,7 @@ else if skill = 18//last wish
 			if skill_got[31]//Tough shell
 				targetHealth += 1;
 			if skill_got[33]//Glass arm cannon
-				targetHealth = max(1,targetHealth-2);
+				targetHealth = max(1,targetHealth-1);
 			if skill_got[41]//nerves of steel
 				targetHealth = max(1,targetHealth-2);
 			if scrIsGamemode(9)
@@ -282,20 +282,14 @@ else if skill == 33 //GLASS ARM CANNON
 {
 	if Player.ultra_got[62] && Player.altUltra //Living armour
 	{
-		Player.maxarmour -= 2;
-		Player.armour -= 2;
-	}
-	else if Player.race == 25
-	{
-		Player.maxhealth -= 1
-		if Player.my_health > Player.maxhealth
-			Player.my_health -= 1
+		Player.maxarmour -= 1;
+		Player.armour -= 1;
 	}
 	else
 	{
-		Player.maxhealth -= 2
+		Player.maxhealth -= 1;
 		if Player.my_health > Player.maxhealth
-			Player.my_health -= 2
+			Player.my_health -= 1;
 	}
 	Player.exception = true;
 	//Dont die on me friend

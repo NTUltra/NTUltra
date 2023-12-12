@@ -842,6 +842,8 @@ function scrLoadRace() {
 	break;
 	case 17://Gun smith
 	snd_hurt=sndMutant17Hurt
+	if bskin == 0
+		snd_hurt = sndMutant17HurtA;
 	snd_dead=sndMutant17Dead
 	snd_lowa=sndMutant17LowA;
 	snd_lowh=sndMutant17LowH;

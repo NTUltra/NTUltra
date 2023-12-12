@@ -176,8 +176,8 @@ function scrSecretUltraStat() {
 	secret_ultra_name[21] = "ENGINUITY"
 	secret_ultra_text[21] = "YOUR ACTIVE BECOMES:#CHANGE YOUR WEAPON#INTO ONE OF THE SAME TIER#YOU CAN GO THROUGH#ALL AVAILABLE WEAPONS##WHENEVER YOU <w>CHANGE<w> OR <w>SWAP<w> WEAPONS#SPAWN <pi>MORPH<pi> ON YOUR <w>CROSSHAIR<w>"
 	secret_ultra_tips[21] = "moldable weapons"
-	secret_ultra_hint[21] = "REMOLD";
-	secret_ultra_unlk[21] = "HOLD A MORPH WEAPON";
+	secret_ultra_hint[21] = "REMORPH";
+	secret_ultra_unlk[21] = "HOLD A MORPH WEAPON OR MOD";
 	
 
 	//ANGEL

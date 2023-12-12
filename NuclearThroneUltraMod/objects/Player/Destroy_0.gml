@@ -74,7 +74,16 @@ motion_add(random(360),2+random(8) );
 }
 
 }
-
+if race == 17 && bskin == 0
+{
+	snd_play(sndPillarBreak);
+	repeat(3)
+	{
+		with instance_create(x,y,Dust) {
+			motion_add(random(360),1);	
+		}
+	}
+}
 if race = 18
 {
 

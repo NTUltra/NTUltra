@@ -22,7 +22,7 @@ mySecondLaser = -1;
 maxAmmo = 3;
 ammo = maxAmmo;
 fireRate = 3;
-actTime = 9;
+actTime = 10;
 /*
 actTime = 9;
 maxSpeed = 2.4;

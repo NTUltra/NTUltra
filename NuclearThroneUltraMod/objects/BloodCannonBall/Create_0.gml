@@ -10,7 +10,7 @@ typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 image_speed=0.4;
 alarm[0]=4;
 image_angle=random(360);
-dmg = 20;
+dmg = 17;
 ang = random(360);
 alarm[3] = 1;
 if instance_exists(Player){

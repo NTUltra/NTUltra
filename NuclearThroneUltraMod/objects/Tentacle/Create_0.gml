@@ -28,6 +28,7 @@ if instance_exists(Player)
 	{
 		image_yscale += 0.2;
 		accuracy -= 2;
+		sprite_index = sprTentacleUpg;
 	}
 	if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 	{

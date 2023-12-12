@@ -6,7 +6,7 @@ function scrDrawBloom() {
 	draw_set_blend_mode(bm_add)
 	if scrIsCrown(6) {
 		with chestprop {
-			draw_sprite_ext(sprite_index,1,c,y,1.5,1.5,image_angle,c_lime,ba);	
+			draw_sprite_ext(sprite_index,1,x,y,1.5,1.5,image_angle,c_lime,ba);	
 		}
 	}
 	if instance_exists(Player){

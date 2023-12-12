@@ -13,6 +13,7 @@ if other.team != team and other.my_health > 0//the thing I hit must not be mysel
 			{
 				snd_play(sndMeatExplo,0,true)
 				with instance_create(x,y,MeatExplosion) {
+					sprite_index = sprTentacleMeatExplosion;
 					dmg -= 1;
 				}
 				with instance_create(x,y,FishBoost)

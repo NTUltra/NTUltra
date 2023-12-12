@@ -17,19 +17,21 @@ dmg = 2;
 
 if instance_exists(Player)
 {
-	if Player.race=24
+	if Player.race == 24
 	{
 		dmg += 0.5;
 		image_xscale += 0.1;
 		image_yscale += 0.1;
 		friction -= 0.02;
 		image_speed -= 0.04;
+		sprite_index = sprTrapFireUpg;
 	}
 	if Player.ultra_got[95]
 	{
 		alarm[1] = 1;
 		dmg += 0.5;
 		image_speed -= 0.06;
+		sprite_index = sprTrapFireUpg;
 	}
 	if (Player.bskin == 1 && Player.ultra_got[106])
 	{
@@ -38,6 +40,7 @@ if instance_exists(Player)
 		image_yscale += 0.1;
 		image_speed -= 0.1;
 		dmg ++;
+		sprite_index = sprTrapFireUpg;
 		if scrIsInInvertedArea()
 			dmg ++;
 	}

@@ -45,6 +45,7 @@ if instance_exists(Player){
 		accuracy -= 2;
 		image_speed-=0.1;
 		fork --;
+		sprite_index = sprLightningUpg;
 	}
 	
 }

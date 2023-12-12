@@ -3563,7 +3563,7 @@ function scrWeapons() {
 	wep_name[323] = "THUNDER KRAKEN"
 	wep_type[323] = 5
 	wep_auto[323] = 0
-	wep_load[323] = 25
+	wep_load[323] = 23
 	wep_cost[323] = 2
 	wep_sprt[323] = sprThunderCrack
 	wep_area[323] = 9
@@ -5929,7 +5929,7 @@ function scrWeapons() {
 	wep_type[536] = 3
 	wep_auto[536] = 0
 	wep_load[536] = 46
-	wep_cost[536] = 8
+	wep_cost[536] = 6
 	wep_sprt[536] = sprSeekerCannon
 	wep_area[536] = 12
 	wep_text[536] = "seek and deploy"
@@ -7402,7 +7402,7 @@ function scrWeapons() {
 	wep_name[670] = "NEEDLE"
 	wep_type[670] = 0
 	wep_auto[670] = 1
-	wep_load[670] = 10
+	wep_load[670] = 11
 	wep_cost[670] = 0
 	wep_sprt[670] = sprNeedle
 	wep_area[670] = 2
@@ -7413,7 +7413,7 @@ function scrWeapons() {
 	wep_name[671] = "SUPER NEEDLE"
 	wep_type[671] = 0
 	wep_auto[671] = 1
-	wep_load[671] = 13
+	wep_load[671] = 16
 	wep_cost[671] = 0
 	wep_sprt[671] = sprSuperNeedle
 	wep_area[671] = 10

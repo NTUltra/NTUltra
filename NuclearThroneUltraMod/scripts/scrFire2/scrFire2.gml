@@ -1834,7 +1834,7 @@ function scrFire2(hasTailNow) {
 
 	instance_create(x,y,Dust)
 
-	move_contact_solid(aimDirection,4)
+	move_contact_solid(aimDirection,1)
 
 	instance_create(x,y,Dust)
 
@@ -1851,7 +1851,6 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 
 	wepangle = -wepangle
-	speed = -speed*0.5
 	BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 2
@@ -3468,7 +3467,7 @@ function scrFire2(hasTailNow) {
 		with instance_create(x,y,Lightning)
 		{image_angle = aimDirection+(random(30)-15)-30*other.accuracy
 		team = other.team
-		ammo = 12
+		ammo = 13
 		event_perform(ev_alarm,0)
 		visible = 0
 		with instance_create(x,y,LightningSpawn)
@@ -3498,7 +3497,7 @@ function scrFire2(hasTailNow) {
 	break;
 
 
-	//ICE CANNON
+	//FROST CANNON
 	case 324:
 
 	snd_play_fire(sndGrenade)
@@ -3507,7 +3506,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x,y,IceCannonBall)
 	{
 	image_angle=random(360);
-	motion_add(aimDirection+(random(8)-4)*other.accuracy,4)
+	motion_add(aimDirection+(random(8)-4)*other.accuracy,8)
 	team = other.team}
 
 	motion_add(aimDirection+180,2)

@@ -140,7 +140,7 @@ maxhealth=12;
 if skill_got[31]//Tough shell
 	maxhealth += 1;
 if skill_got[33]//GLASS ARM CANNON
-maxhealth-=2;
+	maxhealth -= 1;
 
 my_health = maxhealth
 prevhealth = maxhealth//lasthealth

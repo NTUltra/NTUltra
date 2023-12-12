@@ -31,7 +31,10 @@ function EnemyHealthAdjustments(){
 		if Player.skill_got[33] = 1//GLASS ARM CANNON
 		{
 			//hpReduction += round(maxhealth*0.25)
-			my_health *= 0.73 + clamp(ogmaxhealth*0.00005,0,0.15);
+			if Player.race == 25
+				my_health *= 0.72 + clamp(ogmaxhealth*0.00005,0,0.15);
+			else
+				my_health *= 0.74 + clamp(ogmaxhealth*0.00005,0,0.15);
 		}
 		if scrIsGamemode(9)//easy mode
 		{

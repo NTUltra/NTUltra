@@ -1873,7 +1873,7 @@ function scrPowers() {
 		
 		if ultra_got[13] && !altUltra {
 			with enemy {
-			if maxhealth<=6 and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+			if maxhealth <= 7 and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 			{//melting ultra a brain capacity
 			morphMe = 6;
 			didKill = true;
@@ -2812,9 +2812,19 @@ function scrPowers() {
 				}
 				if (placedWall)
 				{
-					ammo[wepType] =  ammo[wepType] - cost;
+					ammo[wepType] = ammo[wepType] - cost;
 				}
 				mask_index=myMask;
+				if (ammo[wepType] <= 0)
+				{
+					if scrIsCrown(13)
+					{
+						repeat(lostAmmo)
+							with Crown {
+								event_user(0);	
+							}
+					}
+				}
 			}
 			else
 			{

@@ -2,7 +2,7 @@
 draw_set_halign(fa_left)
 draw_set_valign(fa_top);
 draw_text(x,y-16,day);
-draw_text(x+256,y-16,"SEED:"+string(todaySeed));
+draw_text(x+256,y-16,"SEED:"+string(todaySeed)+" V:" + updateVersion);
 draw_text(x+64,y,scoreLeaderboardString);
 var yy = y;
 var i = 1;

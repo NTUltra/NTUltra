@@ -306,7 +306,7 @@ function scrGameModes() {
 	gamemode_nocombo[41] = [26,27,37,8,5];
 	
 	gamemode[43] = "MULTI-CROWN";
-	gamemode_unlock[43] = "AQUIRE THE MULTI-CROWN";
+	gamemode_unlock[43] = "ACQUIRE THE MULTI-CROWN";
 	gamemode_have[43] = 0;
 	gamemode_tip[43] = "CROWN CROWN CROWN CROWN";
 	gamemode_description[43] = "START WITH THE ABILITY TO EQUIP MULTIPLE CROWNS AT ONCE";
@@ -335,14 +335,14 @@ function scrGameModes() {
 	
 	/*
 	gamemode[43] = "ALTERNATIVE SPAWNS";
-	gamemode_unlock[43] = "AQUIRE THE MULTI-CROWN";
+	gamemode_unlock[43] = "ACQUIRE THE MULTI-CROWN";
 	gamemode_have[43] = 0;
 	gamemode_tip[43] = "CROWN CROWN CROWN CROWN";
 	gamemode_description[43] = "EACH AREA SPAWNS DIFFERENT ENEMIES";
 	gamemode_nocombo[43] = [25,42,26,27,37,8];
 	
 	gamemode[43] = "RANDOM SPAWNS";//TODO ADD IN RANDOM FLOORS AND WALLS WHEN GENERATING
-	gamemode_unlock[43] = "AQUIRE THE MULTI-CROWN";
+	gamemode_unlock[43] = "ACQUIRE THE MULTI-CROWN";
 	gamemode_have[43] = 0;
 	gamemode_tip[43] = "CROWN CROWN CROWN CROWN";
 	gamemode_description[43] = "OLD SCHOOL LOOP SPAWNS#COMPLETLY RANDOM ENEMIES";

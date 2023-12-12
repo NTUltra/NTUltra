@@ -34,13 +34,6 @@ with instance_create(x-64,y+32,BigMachineTurret)
 
 
 
-if scrIsGamemode(6) && instance_exists(Player) && !instance_exists(SurvivalWave)
-{
-Player.x=x;
-Player.y=y+132;
-}
-
-
 if instance_exists(Player)
 {
 if Player.loops>0
@@ -83,6 +76,7 @@ scrAddDrops(2);
 reachedHalfHealth = false;
 sndtaunt = 0;
 tauntdelay = 0;
+if instance_exists(Player) && !instance_exists(SurvivalWave)
 with Player {
 	x = other.x - 32;
 	y = other.y + 128;

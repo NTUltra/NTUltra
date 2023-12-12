@@ -37,6 +37,9 @@ else if image_xscale > 0.22 && alarm[11] < 1
 		        image_index = 0
 		        Sleep(10);
 		        BackCont.shake += 1
+				if object_index == Player {
+					hitBy = other.sprite_index;	
+				}
 	        }
 	    }
 	}

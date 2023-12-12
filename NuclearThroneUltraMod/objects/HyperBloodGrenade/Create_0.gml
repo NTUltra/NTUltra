@@ -3,7 +3,7 @@ alarm[0] = 1
 typ = 1 
 visible=false;
 aimed = false;
-dmg = 30;
+dmg = 25;
 pierceWall = false;
 if instance_exists(Player){
 	if Player.ultra_got[16]//Melting doomed

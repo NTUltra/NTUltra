@@ -32,6 +32,9 @@ with Player//Data to keep
 	livesRegain = other.livesRegain;
 	race = other.race
 	crown = other.crown
+	if scrIsCrown(20) {
+		maxarmour += 1;	
+	}
 	lastsubarea = other.lastsubarea;
 	lastarea = other.lastarea;
 	area = other.area//other.lastarea;

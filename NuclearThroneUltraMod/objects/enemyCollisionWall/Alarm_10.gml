@@ -1,23 +1,23 @@
 /// @description safety first enemy outside level
 
 
-if !instance_exists(GenCont){
-	if collision_point(x,y,Wall,false,true)//this may be a little intense
+if !instance_exists(GenCont) && instance_exists(Floor){
+	if !place_meeting(x,y,Floor)
 	{
-		with other
+		var cx = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])*0.5;
+		var cy = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])*0.5;
+		var n = instance_nearest(x,y,Floor)
+		var o = 16;
+		if n != noone
 		{
-			instance_destroy();
-			instance_create(x,y,FloorExplo);
+			if n.object_index == FloorExplo
+				o = 8;
+			x = n.x + o;
+			y = n.y + o;
 		}
-	}
-	else
-	{
-		if !place_meeting(x,y,Floor)
+		else
 		{
-			var cx = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])*0.5;
-			var cy = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])*0.5;
-			if point_distance(cx,cy,x,y) < 350
-				instance_destroy();
+			instance_destroy();	
 		}
 	}
 }
