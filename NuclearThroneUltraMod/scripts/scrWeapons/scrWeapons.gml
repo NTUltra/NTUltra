@@ -2783,7 +2783,7 @@ function scrWeapons() {
 	wep_type[252] = 3
 	wep_auto[252] = 1
 	wep_load[252] = 12
-	wep_cost[252] = 6
+	wep_cost[252] = 5
 	wep_sprt[252] = sprSuperYoyoGun
 	wep_area[252] = 7
 	wep_text[252] = "cutting edge technology"
@@ -4631,7 +4631,7 @@ function scrWeapons() {
 	wep_type[418] = 3
 	wep_auto[418] = 1
 	wep_load[418] = 26
-	wep_cost[418] = 8
+	wep_cost[418] = 7
 	wep_sprt[418] = sprSuperSpiralYoyoGun
 	wep_area[418] = 8
 	wep_text[418] = ""

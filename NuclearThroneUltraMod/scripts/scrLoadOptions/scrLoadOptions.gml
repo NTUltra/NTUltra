@@ -57,6 +57,7 @@ function scrLoadOptions() {
 		useSeed = true;	
 	}
 	opt_custom_survival = ini_read_string("OPTIONS","customsurvival","custom_survival_wave_template");
+	opt_show_mutation_details = ini_read_real("OPTIONS","show_mutation_details", 0);
 
 	//custom controls (ASCII)
 	opt_up = ini_read_real("OPTIONS","up",87);//W

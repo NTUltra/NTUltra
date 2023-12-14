@@ -69,3 +69,12 @@ if !(instance_exists(Player) && (Player.area == 2 || Player.area == 110))
 
 friction = 0.8;
 scrAddDrops(1);
+
+if instance_exists(Player) && Player.skill_got[29] {
+	alarm[1] += 60;
+	with instance_create(x,y,Snooze)
+	{
+		owner = other.id;
+		yoffset = other.sprite_height*0.5 - 4;
+	}
+}

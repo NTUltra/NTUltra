@@ -13,7 +13,8 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"56075db7-1845-449e-869f-33917b54efe0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f249605a-8c5e-4d26-a153-3f6614bfd9d0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"55af2345-4a61-4028-983d-4e7338f706b7",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -43,7 +44,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 1.0,
+    "length": 2.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -54,7 +55,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"56075db7-1845-449e-869f-33917b54efe0","path":"sprites/sprRMBIcon/sprRMBIcon.yy",},},},"Disabled":false,"id":"6f5b6e61-7764-4876-bd59-6a95c7f2dd69","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f249605a-8c5e-4d26-a153-3f6614bfd9d0","path":"sprites/sprRMBIcon/sprRMBIcon.yy",},},},"Disabled":false,"id":"cbc7fb08-b98f-4b84-a982-5295672c9cf8","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"55af2345-4a61-4028-983d-4e7338f706b7","path":"sprites/sprRMBIcon/sprRMBIcon.yy",},},},"Disabled":false,"id":"4979e189-72cd-4acc-9df3-b0a2f44468cc","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

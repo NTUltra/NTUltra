@@ -15,8 +15,6 @@ snd_dead = sndJungleAssassinDead
 //behavior
 snd_play(sndAssassinPretend);
 walk = 0
-alarm[1] = 30;
-alarm[2] = 5;
 maxChargeSpeed = 14;
 firstTime = true;
 maxSpeed = 3;

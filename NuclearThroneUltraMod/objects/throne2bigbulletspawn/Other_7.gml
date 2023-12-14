@@ -17,7 +17,7 @@ if target != noone
 				team = other.team;
 				x += lengthdir_x(8, dir);
 				y += lengthdir_y(8, dir);
-				motion_add(dir,3+random(1.6)+addspeed);
+				motion_add(dir,3.4+random(1.6)+addspeed);
 			}
 		}
 		else
@@ -28,7 +28,7 @@ if target != noone
 				team = other.team;
 				x += lengthdir_x(8, dir);
 				y += lengthdir_y(8, dir);
-				motion_add(dir,2.3+random(1.6)+addspeed);
+				motion_add(dir,2.8+random(1.6)+addspeed);
 			}
 		}
 	}

@@ -94,7 +94,7 @@ if mouseover != -1
 	draw_sprite(sprRMBIcon,-1,drawx+string_width(string_hash_to_newline(txt2))/2-string_width(string_hash_to_newline(scrReplaceAllColourCodes(race_acti[race])))-8,drawy-22)
 	else */
 	if mouseover != -1 && UberCont.race_have[mouseover] == 1
-		draw_sprite(sprRMBIcon,-1,drawx+string_width(string_hash_to_newline(txt2))/2-string_width(string_hash_to_newline(scrReplaceAllColourCodes(race_acti[mouseover])))-8,drawy-22)
+		draw_sprite(sprRMBIcon,0,drawx+string_width(string_hash_to_newline(txt2))/2-string_width(string_hash_to_newline(scrReplaceAllColourCodes(race_acti[mouseover])))-8,drawy-22)
 
 
 }

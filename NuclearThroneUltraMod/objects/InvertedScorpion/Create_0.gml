@@ -23,8 +23,11 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(90)
 replace=false;
+range = 180;
 if instance_exists(Player)
 {
+	if Player.loops > 0
+		range += 70;
 	if random(30) < 1 + min(26,Player.loops * 3) and (Player.subarea > 1 || Player.loops > 0)
 	{
 		replace=true;

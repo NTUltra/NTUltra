@@ -28,10 +28,11 @@ maxAmmo = 3;
 actTime = 18;
 projectileSpeed = 4;
 loops = GetPlayerLoops();
-minRange = 70;
+minRange = 60;
 maxRange = 180;
 if loops > 0
 {
+	minRange = 15;
 	ammo = 4;
 	actTime -= 4;
 	projectileSpeed += 0.5;

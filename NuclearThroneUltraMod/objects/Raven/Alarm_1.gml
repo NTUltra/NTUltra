@@ -41,7 +41,7 @@ scrRavenLift()
 }
 else
 {
-direction = point_direction(target.x,target.y,x,y)+random(20)-10
+direction = point_direction(target.x,target.y,x,y)+180+random(20)-10
 speed = 0.4
 walk = 40+random(10)
 gunangle = point_direction(x,y,target.x,target.y)

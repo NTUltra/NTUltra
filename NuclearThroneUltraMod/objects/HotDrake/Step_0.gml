@@ -19,7 +19,8 @@ if alarm[3]>0{
     with instance_create(x-16+random(12)-6,y+80+random(16),HotDrakePrepSmoke){
     motion_add(point_direction(x,y,other.x,other.y),1)
     }
-sprite_index= spr_prep;
+	if sprite_index != spr_hurt
+		sprite_index= spr_prep;
 }
 
 

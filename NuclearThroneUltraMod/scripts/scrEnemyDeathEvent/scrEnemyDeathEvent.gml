@@ -254,7 +254,7 @@ function scrEnemyDeathEvent(){
 			{
 				rage+=1;
 				if isdoc
-					rage += 0.15;
+					rage += 0.05;
 				if rage>500//MAX RAGE
 					rage=500;//340
 				rageIndicator += 1;

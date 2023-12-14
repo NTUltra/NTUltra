@@ -1,5 +1,16 @@
 alarm[1] = 9+random(8)
-
+if firstTime 
+{
+	firstTime = false;
+	if instance_exists(Player) && Player.skill_got[29] {
+		alarm[1] += 60;
+		with instance_create(x,y,Snooze)
+		{
+			owner = other.id;
+			yoffset = other.sprite_height*0.5 - 4;
+		}
+	}
+}
 if loops > 1
 	alarm[1]=7+random(10)
 

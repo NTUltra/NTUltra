@@ -2,7 +2,7 @@ alarm[1] = 20+random(10)
 scrTarget()
 if target != noone
 {
-	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(2) < 1  && point_distance(target.x,target.y,x,y)<220
+	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(2) < 1  && point_distance(target.x,target.y,x,y)<range
 	{
 		snd_play(sndGoldScorpionFire)
 		ammo = 30

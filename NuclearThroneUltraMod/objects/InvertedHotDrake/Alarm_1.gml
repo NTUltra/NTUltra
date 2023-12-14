@@ -1,14 +1,14 @@
 if awake{
-    alarm[1] = 10+random(10)
+    alarm[1] = 8+random(8)
     if sprite_index != spr_hurt //&& sprite_index != spr_fire i added this
     sprite_index = spr_idle
     scrTarget()
     
     if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1] = 4+random(5);
-}
+	{
+		if Player.loops>0
+			alarm[1] -= 4;
+	}
     
     if target != noone
     {
@@ -90,7 +90,7 @@ alarm[1] = 4+random(5);
     {
     image_index=0;
     sprite_index=spr_fire;
-    alarm[1]=12;
+    alarm[1]=10;
 
     direction = point_direction(x,y,target.x,target.y)//go to player
     BackCont.shake += 5
@@ -156,7 +156,7 @@ alarm[1] = 4+random(5);
     {
     image_index=0;
     sprite_index=spr_fire;
-    alarm[1]=8;
+    alarm[1]=10;
 
     direction = point_direction(x,y,target.x,target.y)//go to player
     BackCont.shake += 5

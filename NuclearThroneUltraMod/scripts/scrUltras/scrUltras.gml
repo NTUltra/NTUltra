@@ -82,7 +82,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[11] = "brain style works on bosses!"
 
 	ultra_name[12] = "PSYCHONAUT STYLE"//thats a refrence
-	ultra_text[12] = "TELEKINESIS ATTRACTS#<w>ITEM DROPS<w>, <g>RADS<g> & <w>WEAPONS<w>#THROUGH <w>WALLS<w>#INCREASED ITEM ATTRACTION SPEED"
+	ultra_text[12] = "TELEKINESIS ATTRACTS#<r>HP<r>/<y>AMMO<y> DROPS, <g>RADS<g> & <w>WEAPONS<w>#THROUGH <w>WALLS<w>#INCREASED <r>HP<r>/<y>AMMO<y> ATTRACTION SPEED"
 	ultra_tips[12] = "never miss a drop"
 
 	    //MELTING 

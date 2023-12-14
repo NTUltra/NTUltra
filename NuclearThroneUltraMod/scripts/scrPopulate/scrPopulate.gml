@@ -53,14 +53,14 @@ function scrPopulate() {
                     {
                         if random(4) < 1 || !instance_exists(enemy)
 							scrPopEnemies()
-						else if Player.loops > 0 && random(8) < Player.loops
+						else if Player.loops > 0 && random(6) < Player.loops
 							scrPopEnemies()
                     } else
                         scrPopEnemies()
                 }
 				
                 //spawn some more enemies on loop
-                if Player.loops > 0 && random(4) < Player.loops
+                if Player.loops > 0 && random(2) < Player.loops
 					scrPopEnemies();
 					
 				if Player.loops > 5 && random(15) < Player.loops - 7
@@ -119,7 +119,7 @@ function scrPopulate() {
 					}
 
                     //spawn some more enemies on loop
-                    if Player.loops > 0 && random(4) < Player.loops
+                    if Player.loops > 0 && random(2) < Player.loops
 					{
 						scrPopEnemies();
 						if Player.area != 1  && random(5) < Player.loops{

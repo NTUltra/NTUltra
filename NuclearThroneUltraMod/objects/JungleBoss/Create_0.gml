@@ -41,3 +41,13 @@ activeMeleDamage = 5;
 halfHealth = false;
 actTime = 14;
 alarm[10] = 0;
+
+if instance_exists(Player) && Player.skill_got[29] {
+	alarm[1] += 30;
+	alarm[2] += 30;
+	with instance_create(x,y,Snooze)
+	{
+		owner = other.id;
+		yoffset = other.sprite_height*0.5 - 4;
+	}
+}

@@ -205,7 +205,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 		if scrIsGamemode(28)//ALL MUTATION CHOICES
 		{
 			var xx = __view_get( e__VW.XView, 0 )+16;
-			var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24;
+			var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28;
 			var step = 31;
 			scrollWidth = step + (-(__view_get( e__VW.WView, 0 ))) - 8
 			scroll = 0;
@@ -235,46 +235,46 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 		    if Player.race == 21//horror
 		    {
 		    if (Player.ultra_got[skill1] == 0)
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-64,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
+		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-64,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
 		    skill = other.skill1
 	
 		    if (Player.ultra_got[skill2] == 0)
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-32,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
+		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-32,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
 		    skill = other.skill2
 	
 		    if (Player.ultra_got[skill3] == 0)
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
+		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
 		    skill = other.skill3
 	
 		    if (Player.ultra_got[skill4] == 0)
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+32,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
+		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+32,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
 		    skill = other.skill4
 	
 		    if (Player.ultra_got[0] == 0)
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+64,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
+		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+64,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
 		    skill = 0
     
 		    }
 		    else
 		    {
 			if (Player.ultra_got[skill1] == 0)
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-72,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
+		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-72,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
 		    skill = other.skill1
     
 			if (Player.ultra_got[skill2] == 0)
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
+		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
 		    skill = other.skill2
     
 			if (Player.ultra_got[skill3] == 0)
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
+		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
 		    skill = other.skill3
     
 			if (Player.ultra_got[skill4] == 0)
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+72,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
+		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+72,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
 		    skill = other.skill4
 			
 			if Player.wep == 0 && Player.bwep == 0 && Player.race != 14 && !scrIsGamemode(14)//not fish only partner and not panda
-			with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+120,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
+			with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+120,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
 		    skill = 109
 		    }
 		}
@@ -287,7 +287,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 			chosenskill=choose(skill1,skill2,skill3,skill4)
 			} until (Player.ultra_got[chosenskill] == 0)
 
-			with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
+			with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
 			{
 			skill = other.chosenskill}
  
@@ -297,14 +297,14 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 				otherchosenskill=choose(skill1,skill2,skill3,skill4)
 				}until (otherchosenskill!=chosenskill && Player.ultra_got[otherchosenskill] == 0 )
 
-				with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
+				with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
 				skill = other.otherchosenskill
 			}
 
 			}
 			else
 			{
-			with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
+			with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
 			skill = choose(other.skill1,other.skill2,other.skill3,other.skill4);
 			}
 		}
@@ -394,7 +394,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 	if scrIsGamemode(28)//ALL MUTATION CHOICES
 	{
 		var xx = __view_get( e__VW.XView, 0 )+16;
-		var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24;
+		var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28;
 		var step = 31;
 		scrollWidth = step + (-(__view_get( e__VW.WView, 0 ))) - 8
 		scroll = 0;

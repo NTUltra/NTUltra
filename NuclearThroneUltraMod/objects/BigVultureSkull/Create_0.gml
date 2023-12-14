@@ -1,5 +1,5 @@
 var loops = GetPlayerLoops();
-maxhealth = 90 * clamp(loops*5,1,10)
+maxhealth = 100 * clamp(loops*5,1,10)
 mySize = 1
 //if UberCont.public == 0//Temp only for dev build
 //{
@@ -18,7 +18,7 @@ event_inherited()
 canMoveOver = true;
 shadowSprite = shd48;
 snd_hurt = sndHitRock
-alarm[1]=380;
+alarm[1]=390;
 if scrIsHardMode() || scrIsGamemode(20)
 	alarm[1] += 60;
 alarm[1] *= clamp(loops*3,1,6)//335//10 seconds 300

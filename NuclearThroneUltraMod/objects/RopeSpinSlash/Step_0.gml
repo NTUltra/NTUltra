@@ -9,7 +9,7 @@ else {
 		x += lengthdir_x(8,direction);
 		y += lengthdir_y(8,direction);
 		scrForcePosition60fps();
-		motion_add(direction,1);
+		motion_add(direction,2);
 	}
 	event_inherited();
 }

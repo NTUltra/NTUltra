@@ -16,10 +16,15 @@ snd_dead = sndGoldScorpionDead;
 snd_melee = sndGoldScorpionMelee
 
 //behavior
+range = 200;
 ammo = 10
 walk = 0
 if instance_exists(Player)
+{
+	if Player.loops > 0
+		range += 70;
 	gunangle = point_direction(x,y,Player.x,Player.y);
+}
 else
 	gunangle = random(360)
 alarm[1] = 30+random(90)

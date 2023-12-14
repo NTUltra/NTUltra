@@ -6,7 +6,7 @@ raddrop += 10;
 image_speed += 0.1;
 fireDelay -= 5;
 maxhealth = 60;
-actTime -= 2;
+actTime -= 1;
 EnemyHealthAdjustments();
 
 spr_idle = sprCursedBigBotIdle;

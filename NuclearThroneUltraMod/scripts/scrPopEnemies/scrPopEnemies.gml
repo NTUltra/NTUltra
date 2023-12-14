@@ -1530,7 +1530,7 @@ function scrPopEnemies() {
     }
 	if spawnarea == 129{
 		if loops > 0 {
-			if instance_number(enemy) < 1 || random(100) < 40
+			if instance_number(enemy) < 1 || random(100) < 60
 			{
 		        if styleb = 1 {
 		            instance_create(x + 16, y + 16, choose(InvertedPalaceGuardian, InvertedPalaceGuardian, InvertedCourtyardTank, InvertedCourtyardTank))
@@ -1541,7 +1541,7 @@ function scrPopEnemies() {
 			}
 		} else
 		{
-			if instance_number(enemy) < 1 || random(100) < 40
+			if instance_number(enemy) < 1 || random(100) < 60
 			{
 		        if styleb = 1 {
 		            instance_create(x + 16, y + 16, choose(InvertedCourtyardGuardian, InvertedCourtyardGuardian, InvertedCourtyardTank, InvertedCourtyardTank))

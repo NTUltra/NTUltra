@@ -47,11 +47,11 @@ ammo = maxAmmo;
 crossMaxAmmo = 20;
 crossAmmo = 0;
 crossAmount = 8;
-crossPspeed =  6;
+crossPspeed =  7;
 
 fireRate = 10;
 lp = 0.05;//0.2
-pSpeedAccurate = 4;
+pSpeedAccurate = 4.5;
 image_xscale = 1;
 actTime = 17;
 scrTarget();
@@ -59,13 +59,18 @@ onFloorFail = 0;
 if instance_exists(Player) && Player.area == 100
 	loops = 0;
 if loops > 0
+{
 	actTime -= 3;
+	crossPspeed += 1;
+	actTime -= 1;
+}
 if loops > 2
 {
 	actTime -= 1;
 	rotationSpeed *= 1.1;
 	fireRate -= 1
 	crossPspeed += 1;
+	pSpeedAccurate += 0.5;
 }
 if loops > 3
 {

@@ -93,7 +93,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d91b44a2-7e73-4ba4-8301-5bf20ccb97bc","path":"sprites/sprChesireCatTailIntro/sprChesireCatTailIntro.yy",},},},"Disabled":false,"id":"c3de122b-e82a-4338-a371-8f3525e9c312","IsCreationKey":false,"Key":18.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 32,
     "yorigin": 24,

@@ -2,7 +2,7 @@ alarm[1] = 10+random(10)
 scrTarget()
 if target != noone
 {
-if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(2) < 1  && point_distance(target.x,target.y,x,y)<180
+if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(2) < 1  && point_distance(target.x,target.y,x,y)<range
 {
 ammo = 10
 alarm[2] = 1

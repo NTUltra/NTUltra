@@ -28,7 +28,10 @@ if candrawoutline && UberCont.ctot_skill_taken[skill] > 0
 draw_set_valign(fa_bottom)
 draw_set_halign(fa_right)
 
-txt2 = string(skill_name[skill])+"#"+string(skill_text[skill])
+if showDetail
+	txt2 = string(skill_name[skill])+"#"+string(skill_detail[skill])
+else	
+	txt2 = string(skill_name[skill])+"#"+string(skill_text[skill])
 var fulltxt = txt2;
 txt2 = scrReplaceAllColourCodes(txt2);
 if UberCont.mouse__x > x-16 and UberCont.mouse__x < x+16 and UberCont.mouse__y > y-20 and UberCont.mouse__y < y+20
@@ -77,3 +80,20 @@ if Player.race == 25 && skill_bons[skill] != ""
 }
 }
 //draw_text(x,y-32,string(skill)); // just to show the skillnumber
+if hover
+{
+	draw_set_color(c_white)
+	draw_set_halign(fa_left)
+	draw_set_valign(fa_bottom)
+	var xx = camera_get_view_x(view_camera[0]) + 8;
+	var yy = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]);
+	if alarm[2] > 0
+		draw_sprite(sprRMBIcon,1,xx,yy - 8);
+	else
+		draw_sprite(sprRMBIcon,0,xx,yy - 8);
+	
+	if showDetail
+		draw_text_colour(xx + 8,yy,"RMB TO HIDE DETAILED DESCRIPTION",c_gray,c_gray,c_gray,c_gray,1);
+	else
+		draw_text_colour(xx + 8,yy,"RMB TO SHOW DETAILED DESCRIPTION",c_gray,c_gray,c_gray,c_gray,1);
+}

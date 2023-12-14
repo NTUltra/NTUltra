@@ -1,5 +1,5 @@
 raddrop = 600
-maxhealth = 3000//2500
+maxhealth = 3400//2500
 if instance_exists(InvaderBossSpawnPortal)
 {
 	maxhealth = 900;
@@ -67,3 +67,4 @@ if scrIsHardMode()//HARD MODE
 	pSpeed += 0.4;
 	amountOfSpinBulletProjectiles += 1;
 }
+firstTime = true;

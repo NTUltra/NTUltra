@@ -30,7 +30,7 @@ canHeavyHeart = false;
 if instance_exists(Player)
 {
 	if Player.skill_got[5] =1//thronebutt
-		alarm[0]=52;//return to hand
+		alarm[0]=50;//return to hand
 	
 	if Player.ultra_got[53] == 1
 		pierce = true;
@@ -39,13 +39,13 @@ if instance_exists(Player)
 	var multiplier;
 	multiplier=1;
 
-	multiplier=(Player.ultra_got[53]*0.2)+1;//Ultra A
-	multiplier+=Player.skill_got[5]*0.2;
+	multiplier = (Player.ultra_got[53] * 0.2) + 1;//Ultra A
+	multiplier += Player.skill_got[5] * 0.2;
 
-	dmg=(11 + (1.5*Player.level))*multiplier
+	dmg = (10 + (1.5*Player.level)) * multiplier
 }
 else
-	dmg=11;//22
+	dmg = 10;//22
 
 dontteleport=false;
 returnFX = true;

@@ -25,7 +25,7 @@ speed /= mySize
 
 }
 
-scrDrop(34,9)
+scrDrop(30,15)
 
 BackCont.shake += 5
 

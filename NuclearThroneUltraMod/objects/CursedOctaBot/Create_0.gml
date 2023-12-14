@@ -6,7 +6,7 @@ raddrop += 5;
 maxhealth = 20;
 maxSpeed -= 0.25;
 acc -= 0.1;
-actTime -= 15;
+actTime -= 5;
 EnemyHealthAdjustments();
 spr_idle = sprCursedOctaBotIdle;
 spr_walk = sprCursedOctaBotWalk;

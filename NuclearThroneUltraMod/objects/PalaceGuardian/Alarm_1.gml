@@ -9,7 +9,7 @@ if target != noone
 {
 	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 	{
-		if random(5) < 3
+		if random(5) < 4
 		{
 			event_user(0);
 		}
@@ -28,7 +28,7 @@ if target != noone
 }
 else
 {
-	alarm[1] = 20;
+	alarm[1] = actTime;
 }
 
 if random(3) < 1 {

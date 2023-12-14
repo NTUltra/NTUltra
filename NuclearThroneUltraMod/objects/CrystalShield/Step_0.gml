@@ -29,10 +29,19 @@ Player.x = x;
 Player.y = y;
 Player.speed = 0;
 }
-time += 3
-if Player.skill_got[5]//thronebuttttt
-time-=2.5;
-if time > 220 and sprite_index != spr_disappear
+if UberCont.normalGameSpeed == 60
+{
+	time += 1.5
+	if Player.skill_got[5]//thronebuttttt
+		time -= 1.25;
+}
+else
+{
+	time += 3
+	if Player.skill_got[5]//thronebuttttt
+		time -= 2.5;
+}
+if time > 200 and sprite_index != spr_disappear
 {
 sprite_index = spr_disappear
 image_speed = 0.6
@@ -177,4 +186,3 @@ if UberCont.normalGameSpeed == 60
 	wave += 0.5;
 else
 	wave++;
-

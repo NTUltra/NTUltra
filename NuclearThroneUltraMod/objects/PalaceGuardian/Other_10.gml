@@ -26,4 +26,4 @@ with instance_create(x,y,GuardianBulletSpawn)
 motiondiff++;
 angle += 60;
 }
-alarm[1] = 20;
+alarm[1] = actTime;

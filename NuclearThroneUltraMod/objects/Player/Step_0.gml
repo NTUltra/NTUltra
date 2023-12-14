@@ -745,7 +745,7 @@ if !instance_exists(LevCont) and visible = 1
 					event_user(0);
 				scrFire();
 			}
-    		autoFire = 5;
+    		autoFire = 6;
 		clicked = 0
 		}
 		else if wep_auto[wep] = 1 && holdKey
@@ -1519,7 +1519,7 @@ if (!outOfCombat && !skill_got[2] && race!=18 && race != 15 and !instance_exists
 				}
 			}
 		}
-		if ground.sprite_index == sprFloor7Explo || ground.sprite_index == sprFloorLava
+		if !skill_got[14] && ground.sprite_index == sprFloor7Explo || ground.sprite_index == sprFloorLava
 		{
 			if alarm[4] <= 0
 				alarm[4] = 1;
@@ -1538,7 +1538,7 @@ if (!outOfCombat && !skill_got[2] && race!=18 && race != 15 and !instance_exists
 			    scrUnlockGameMode(4,"FOR STANDING IN LAVA");
 		    }
 		}
-		else if ground.sprite_index == sprFloor108Explo || ground.sprite_index == sprInvertedFloorLava
+		else if !skill_got[14] && ground.sprite_index == sprFloor108Explo || ground.sprite_index == sprInvertedFloorLava
 		{
 			friction = 0.1
 			//when player isn't frozen increase the time that determines when it should get frozeen
@@ -1722,12 +1722,12 @@ if skill_got[25]//strong spirit
 
 /* */
 ///Frozen
-if frozen>0
+if frozen>0 && !skill_got[14]
 {
-speed=0;
-x=xprevious;
-y=yprevious;
-frozen--;
+	speed=0;
+	x=xprevious;
+	y=yprevious;
+	frozen--;
 }
 
 /* */

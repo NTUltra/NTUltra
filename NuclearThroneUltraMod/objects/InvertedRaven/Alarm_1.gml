@@ -4,7 +4,7 @@ if target != noone
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {
-if point_distance(target.x,target.y,x,y) > 64
+if point_distance(target.x,target.y,x,y) > 15
 {
 if random(3) < 1 && point_distance(target.x,target.y,x,y) < 280
 {
@@ -43,7 +43,7 @@ scrInvertedRavenLift()
 }
 else
 {
-direction = point_direction(target.x,target.y,x,y)+random(20)-10
+direction = point_direction(target.x,target.y,x,y)+180+random(20)-10
 speed = 0.4
 walk = 40+random(10)
 gunangle = point_direction(x,y,target.x,target.y)

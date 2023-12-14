@@ -348,7 +348,7 @@ function scrTips() {
 
 	if Player.race = 24//ELEMENTOR
 	tip = choose("The elements will destroy you","The avatar","meditating","Floaty","Very down to earth","SOLID! play!",
-	"Floating guns","No hands required","Your walls do not stop against lasers","Walls can get destroyed#when enemies get very close",
+	"Floating guns","No hands required","Walls can get destroyed#when enemies get very close",
 	"Mushroom power","the elements")//"You can only place walls#against other walls","Create walls from other walls",
 
 	if Player.race = 25//DOCTOR

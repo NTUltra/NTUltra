@@ -37,7 +37,7 @@ function scrWepModName(wm){
 		case 16:
 		return "[MORPH]"
 		case 17:
-		return "[ITEM DROP]"
+		return "[HP/AMMO DROP]"
 		case 18:
 		return "[WEAPON DROP]"
 		default:

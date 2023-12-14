@@ -311,7 +311,7 @@ goal = 50+s
 else if Player.area = 4
 goal = 120
 else if Player.area = 5
-goal = 125+s
+goal = 150+s
 else if Player.area = 7
 {
 goal = 130+s
@@ -356,9 +356,9 @@ else if Player.area == 117 || Player.area == 124//Mushroom land
 goal=120+s;
 else if Player.area == 119 || Player.area == 120
 goal = 60;
-else if Player.area == 126 || Player.area == 127
-goal = 120+s;
-else if Player.area == 128 || Player.area == 129
+else if Player.area == 126 || Player.area == 127//Graveyard
+goal = 110+s;
+else if Player.area == 128 || Player.area == 129//Courtyard
 goal = 150+s;
 else if Player.area == 130 || Player.area == 131 || Player.area == 132 || Player.area == 133 || Player.area == 134//Factory
 goal = 130+s;

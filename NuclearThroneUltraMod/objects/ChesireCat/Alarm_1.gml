@@ -1,10 +1,21 @@
 ///@description AI
 alarm[1] = 11+random(10)
-
+if firstTime 
+{
+	firstTime = false;
+	if instance_exists(Player) && Player.skill_got[29] {
+		alarm[1] += 60;
+		with instance_create(x,y,Snooze)
+		{
+			owner = other.id;
+			yoffset = other.sprite_height*0.5 - 4;
+		}
+	}
+}
 if instance_exists(Player)
 {
 if Player.loops>1
-alarm[1]=4+random(6)
+alarm[1]=6+random(6)
 
 }
 

@@ -51,6 +51,7 @@ function scrSaveOptions() {
 		}
 	}
 	ini_write_string("OPTIONS","customsurvival",opt_custom_survival);
+	ini_write_real("OPTIONS","show_mutation_details",opt_show_mutation_details);
 
 	//custom controls
 	ini_write_real("OPTIONS","up",opt_up);

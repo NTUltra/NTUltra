@@ -53,15 +53,10 @@ if loops >= startLoop
 		if Player.skill_got[29]	//Insomnia
 		{
 			alarm[6] += 100;
-			with instance_create(x,y,Snooze)
-			{
-				owner = other.id;
-				depth = other.depth - 1;
-				yoffset = 0;
-			}
 		}
 	}
 }
 gunangle = 0;
 scrAddDrops(2);
 maxSpeed = 6;
+firstTime = true;

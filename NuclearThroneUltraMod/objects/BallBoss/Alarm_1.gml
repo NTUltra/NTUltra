@@ -1,6 +1,18 @@
 ///@description AI
 alarm[1] = actTime + random(actTime)
 scrTarget()
+if firstTime 
+{
+	firstTime = false;
+	if instance_exists(Player) && Player.skill_got[29] {
+		alarm[1] += 60;
+		with instance_create(x,y,Snooze)
+		{
+			owner = other.id;
+			yoffset = other.sprite_height*0.5 - 4;
+		}
+	}
+}
 if target != noone {
 	scrDrop(4,0);
 	var ran = random(100);
@@ -68,7 +80,7 @@ if !reachHalfHealth && my_health < maxhealth * 0.74
 		}
 	}
 }
-else if !reachLowHealth && my_health < maxhealth * 0.32
+else if !reachLowHealth && my_health < maxhealth * 0.35
 {
 	lineOfFireOffset -=5;
 	waveSpeed += 0.5;

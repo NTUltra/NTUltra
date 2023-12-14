@@ -131,9 +131,9 @@ function scrCrowns() {
 	
 	crown_name[21] = "[CROWN OF RISK]"
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
-		crown_text[21] = "70% HIGHER <w>DROP RATE<w>#WHEN ABOVE 75% <gb>MAX ARMOUR<gb>#50% LOWER <w>DROP RATE<w>#WHEN BELOW 75% <gb>MAX ARMOUR<gb>"
+		crown_text[21] = "70% HIGHER <r>HP<r>/<y>AMMO<y> <w>DROP RATE<w>#WHEN ABOVE 75% <gb>MAX ARMOUR<gb>#50% LOWER <r>HP<r>/<y>AMMO<y> <w>DROP RATE<w>#WHEN BELOW 75% <gb>MAX ARMOUR<gb>"
 	else
-		crown_text[21] = "70% HIGHER <w>DROP RATE<w>#WHEN ABOVE 75% <r>MAX HP<r>#50% LOWER <w>DROP RATE<w>#WHEN BELOW 75% <r>MAX HP<r>"
+		crown_text[21] = "70% HIGHER <r>HP<r>/<y>AMMO<y> <w>DROP RATE<w>#WHEN ABOVE 75% <r>MAX HP<r>#50% LOWER <r>HP<r>/<y>AMMO<y> <w>DROP RATE<w>#WHEN BELOW 75% <r>MAX HP<r>"
 	
 	crown_used[21] = 0
 	crown_tips[21] = "a risk worth taking"
