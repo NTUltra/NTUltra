@@ -7,8 +7,9 @@ crown = 0;
 
 image_speed = 0.4
 
-
+scrCrowns();
 alarm[1] = 30+random(90)
 alarm[0] = 10+random(10)
 maxSpeed = 2;
 walk = 0
+hoverTime = 0;

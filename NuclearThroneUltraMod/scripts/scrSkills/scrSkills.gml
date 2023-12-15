@@ -422,11 +422,11 @@ function scrSkills() {
 	
 	skill_name[33] = "GLASS ARM CANNON"//Metroid reference I guess
 	skill_text[33] = "26% LESS ENEMY <r>HP<r>#-1 <r>MAX HP<r>"
-	skill_detail[33] = "26% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-1 <r>MAX HP<r>"
+	skill_detail[33] = "26% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS#-1 <r>MAX HP<r>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
 		skill_text[33] = "26% LESS ENEMY <r>HP<r>#-1 <gb>MAX ARMOUR<gb>"
-		skill_detail[33] = "26% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-1 <gb>MAX ARMOUR<gb>"
+		skill_detail[33] = "26% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS#-1 <gb>MAX ARMOUR<gb>"
 	}
 	skill_tips[33] = "fragile"
 	skill_msnd[33] =  sndMutGlassArmCannon
@@ -523,7 +523,7 @@ function scrSkills() {
 	
 	skill_name[42] = "THE TAIL'S END"
 	skill_text[42] = "<w>BURST<w> WEAPONS FIRE MORE#<w>CHARGE<w> WEAPONS CHARGE MUCH FASTER"
-	skill_detail[42] = "<w>BURST<w> WEAPONS FIRE 50% MORE#<w>CHARGE<w> WEAPONS CHARGE 100% FASTER##INCLUDES THINGS LIKE:#FLAMETHROWERS, BOWS, LASER/ION CANNONS,#DOUBLE SHOTGUNS, SPLINTER GUNS ETC.#(WEAPON SPECIFIC MUTATION)"
+	skill_detail[42] = "<w>BURST<w> WEAPONS FIRE 50% MORE#<w>CHARGE<w> WEAPONS CHARGE 100% FASTER#INCREASE MAX CHARGE##INCLUDES THINGS LIKE:#FLAMETHROWERS, BOWS, LASER/ION CANNONS,#DOUBLE SHOTGUNS, SPLINTER GUNS ETC.#(WEAPON SPECIFIC MUTATION)"
 	skill_tips[42] = "tail is a weapon specific mutation"
 	skill_msnd[42] =  sndMutTailEnd;
 	skill_bons[42] = "+10% CHARGE RATE & BURST AMOUNT"

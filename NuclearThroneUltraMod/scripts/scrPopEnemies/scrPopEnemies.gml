@@ -298,7 +298,7 @@ function scrPopEnemies() {
     if spawnarea = 2 {
 		if loops > 0 {
 	        if styleb = 1 {
-	            instance_create(x + 16, y + 16, choose(Rat, Rat, Rat, Gator, BuffGator, Exploder))
+	            instance_create(x + 16, y + 16, choose(Rat, Rat, Rat, Gator, Gator,BuffGator, Exploder))
 	        }
 	        else {
 	            if random(9) < 1
@@ -308,7 +308,7 @@ function scrPopEnemies() {
 	        }
 		} else {
 	        if styleb = 1 {
-	            instance_create(x + 16, y + 16, choose(Rat, Rat, Rat, Rat, GatorSmoke, BuffGator, Exploder))
+	            instance_create(x + 16, y + 16, choose(Rat, Rat, Rat, GatorSmoke, GatorSmoke, BuffGator, Exploder))
 	        }
 	        else {
 	            if random(9) < 1
@@ -337,7 +337,7 @@ function scrPopEnemies() {
 	        }
 	        else {
 	            if random(9) < 1
-	            instance_create(x + 16, y + 16, choose(InvertedExploder, InvertedRatking, InvertedExploder, InvertedRatking, InvertedExploder, InvertedRatking, InvertedMeleeFake, InvertedBuffGator))
+	            instance_create(x + 16, y + 16, choose(InvertedExploder, InvertedRatking, InvertedExploder, InvertedRatking, InvertedExploder, InvertedRatking, InvertedMeleeFake, InvertedGator, InvertedBuffGator))
 	            else
 	                instance_create(x + 16, y + 16, choose(InvertedRat, InvertedRat, InvertedRat, InvertedRat, InvertedRat, InvertedRat, InvertedRat, BanditInverted))
 	        }

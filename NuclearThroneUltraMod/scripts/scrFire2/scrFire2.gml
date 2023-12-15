@@ -14364,5 +14364,65 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
+	//ULTRA TELEPATHOR
+	case 691:
+
+	with instance_create(x,y,UltraTelepathorBurst)
+	{
+		creator = other.id
+		ammo = 2
+		time = 7
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+
+	break;
+	
+	//ULTRA KRAKEN GRENADE LAUNCHER
+	case 692:
+
+	snd_play_fire(sndGrenade);
+	snd_play_fire(sndRoll);
+	snd_play_fire(sndBloodCannon);
+
+	snd_play_fire(choose(sndWater1,sndWater2) );
+	with instance_create(x,y,Tentacle)
+	{
+		sprite_index=sprUltraTentacle;
+		ultra=true;
+		dmg = 6;
+		if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
+		{
+			dmg += 1;
+		}
+		image_angle = aimDirection+(random(60)-30)*other.accuracy
+		team = other.team
+		ammo = 16//24
+		image_yscale += 0.3;
+		event_perform(ev_alarm,0)
+		visible = 0
+		with instance_create(x,y,LightningSpawn)
+		{
+		sprite_index=sprTentacleSpawn
+		image_angle = other.image_angle
+		}
+
+	}
+	with instance_create(x,y,UltraOceanBomb)
+	{
+	sticky = 0
+	motion_add(aimDirection+(random(6)-3)*other.accuracy,15)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(22,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(22,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 9
+	wkick = 8
+	
+	motion_add(aimDirection+180,2)
+
+	break;
+	
 	}//end of switch part 2!
 }

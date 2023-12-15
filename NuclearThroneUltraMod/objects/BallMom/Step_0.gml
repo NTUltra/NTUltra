@@ -9,7 +9,7 @@ right = 1
 else if hspeed < 0
 right = -1
 
-if instance_exists(GenCont)
+if instance_exists(GenCont) || instance_exists(Spiral)
 	speed = 0;
 else
 	speed = maxSpeed;

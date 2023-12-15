@@ -192,3 +192,4 @@ scrSaveCustomSurvivalArenaTemplate();
 
 pauseimg = sprSharpStress;
 pauseimgScale = 1;
+confirmState = 0;

@@ -3,94 +3,112 @@ steam_update();
 if isPaused == 1
 {
 //QUICK RESTART
-if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_exists(Player) && (keyboard_check_pressed(ord("R")) || gamepad_button_check(0,gp_face3)) )//(gamepad_button_check(0,gp_stickl) && gamepad_button_check(0,gp_stickr)) )
+if confirmState > 0 && (mouse_check_button_pressed(mb_right))
 {
-	debug("QUICK RESTART");
-	//scrEndOfRun(); already run in player destroy
-	with FPSHACKMenu
-		instance_destroy();
-	with WepPickup
+	confirmState = 0;
+}
+if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_exists(Player) && 
+(
+(keyboard_check_pressed(ord("R")) || gamepad_button_check(0,gp_face3)) ||
+(mouse_check_button_pressed(mb_left) && confirmState == 1)
+)
+)//(gamepad_button_check(0,gp_stickl) && gamepad_button_check(0,gp_stickr)) )
+{
+	if confirmState == 1
 	{
-		instance_destroy();	
-	}
-	with ThrowWep
-	{
-		instance_destroy(id,false);	
-	}
-	with WeaponMod
-	{
-		instance_destroy(id,false);	
-	}
-	instance_activate_all();
-	if normalGameSpeed = 30
-		with FPSHACK
+		confirmState = 0;
+		debug("QUICK RESTART");
+		//scrEndOfRun(); already run in player destroy
+		with FPSHACKMenu
 			instance_destroy();
-	else if !instance_exists(FPSHACK)
-	{
-		instance_create(x,y,FPSHACK);	
+		with WepPickup
+		{
+			instance_destroy();	
+		}
+		with ThrowWep
+		{
+			instance_destroy(id,false);	
+		}
+		with WeaponMod
+		{
+			instance_destroy(id,false);	
+		}
+		instance_activate_all();
+		if normalGameSpeed = 30
+			with FPSHACK
+				instance_destroy();
+		else if !instance_exists(FPSHACK)
+		{
+			instance_create(x,y,FPSHACK);	
+		}
+		alarm[2] = 1;//Some objects are only accessible after a frame
+		//audio_stop_all();
+		alarm[4] = 0;
+		alarm[5] = 0;
+		isPaused = 0
+		alarm[3] = 1;
+		with Player
+		{
+			other.kills = kills;
+			other.hard = hard;
+			skeletonlives = 0;
+			ultra_got[87] = 0;
+			instance_destroy()
+		}
+		if (scrIsGamemode(42))
+		{
+			if !scrIsGamemode(25)
+				opt_gamemode[array_length(opt_gamemode)] = 25;
+		}
+		snd_play(sndMutant0Cnfm, 0, false, false)
+		race = UberCont.racepick
+		crown = [1]
+		//scrRaces()
+		//scrCrowns()
+		var ranChar = false;
+		if race = 0 || scrIsGamemode(23)
+		{
+			ranChar = true;
+			do {race = 1+irandom(racemax-1);} until race_have[race] = 1
+		}
+		//if crown = 0
+		//crown = ceil(irandom(crownmax))
+		with WepPickup
+			instance_destroy();
+		with ThrowWep
+			instance_destroy();
+		with HardModeChest
+			instance_destroy();
+		with CrownIcon
+			instance_destroy();
+		with PlayerSpawn
+			instance_destroy();
+		with SurvivalWave
+			instance_destroy();
+		if !instance_exists(GenCont)
+		with instance_create(x,y,GenCont)
+		{race = other.race
+		crown = other.crown}
+		instance_create(x,y,Player)
+		with Player
+		{
+			randomlySelected = ranChar;
+			restarted = true;
+			nochest = -1;
+			skeletonlives = 0;
+		}
+		var loadedRun = UberCont.loadedRun;
+		if loadedRun
+			scrLoadRun();
+		else if !instance_exists(StartDaily)
+			room_restart()
+		exit;
 	}
-	alarm[2] = 1;//Some objects are only accessible after a frame
-	//audio_stop_all();
-	alarm[4] = 0;
-	alarm[5] = 0;
-	isPaused = 0
-	alarm[3] = 1;
-	with Player
+	else
 	{
-		other.kills = kills;
-		other.hard = hard;
-		skeletonlives = 0;
-		ultra_got[87] = 0;
-		instance_destroy()
+		confirmState = 1;
+		exit;
 	}
-	if (scrIsGamemode(42))
-	{
-		if !scrIsGamemode(25)
-			opt_gamemode[array_length(opt_gamemode)] = 25;
-	}
-	snd_play(sndMutant0Cnfm, 0, false, false)
-	race = UberCont.racepick
-	crown = [1]
-	//scrRaces()
-	//scrCrowns()
-	var ranChar = false;
-	if race = 0 || scrIsGamemode(23)
-	{
-		ranChar = true;
-		do {race = 1+irandom(racemax-1);} until race_have[race] = 1
-	}
-	//if crown = 0
-	//crown = ceil(irandom(crownmax))
-	with WepPickup
-		instance_destroy();
-	with ThrowWep
-		instance_destroy();
-	with HardModeChest
-		instance_destroy();
-	with CrownIcon
-		instance_destroy();
-	with PlayerSpawn
-		instance_destroy();
-	with SurvivalWave
-		instance_destroy();
-	if !instance_exists(GenCont)
-	with instance_create(x,y,GenCont)
-	{race = other.race
-	crown = other.crown}
-	instance_create(x,y,Player)
-	with Player
-	{
-		randomlySelected = ranChar;
-		restarted = true;
-		nochest = -1;
-		skeletonlives = 0;
-	}
-	var loadedRun = UberCont.loadedRun;
-	if loadedRun
-		scrLoadRun();
-	else if !instance_exists(StartDaily)
-		room_restart()
-	exit;
 }
 instance_activate_object(KeyCont)
 with KeyCont{

@@ -48,3 +48,4 @@ if visible
 	BackCont.shake += 3 - (BackCont.shake*0.1)
 }
 team = 2
+alarm[2] = 1;

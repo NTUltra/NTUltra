@@ -150,7 +150,8 @@ function scrCrowns() {
 	
 	//Secret crown of destiny
 	crown_name[24] = "[CROWN OF SLOTH]"
-	crown_text[24] = "ALL PROJECTILES ARE <w>SLOWER<w>#EVERYONE MOVES SLIGHTLY <w>SLOWER<w>#EACH AREA THE <w>DIFFICULTY<w>#AND WEAPON <w>TIER<w> DECREASES#INSTEAD OF INCREASES"
+	crown_text[24] = "ALL PROJECTILES ARE <w>SLOWER<w>#EVERYONE MOVES SLIGHTLY <w>SLOWER<w>";
+	//crown_text[24] = "ALL PROJECTILES ARE <w>SLOWER<w>#EVERYONE MOVES SLIGHTLY <w>SLOWER<w>#EACH AREA THE <w>DIFFICULTY<w>#AND WEAPON <w>TIER<w> DECREASES#INSTEAD OF INCREASES"
 	crown_used[24] = 0
 	crown_tips[24] = "slow it down there buddy"
 	

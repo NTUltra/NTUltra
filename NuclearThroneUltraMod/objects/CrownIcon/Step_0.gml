@@ -480,13 +480,13 @@ if oldcrown == 24
 {
 	//Crown of sloth
 	Player.pSpeedBoost += 0.12;
-	Player.maxSpeed += 0.25;
+	Player.maxSpeed += 0.3;
 }
 if crown == 24
 {
 	//Crown of sloth
 	Player.pSpeedBoost -= 0.12;
-	Player.maxSpeed -= 0.25;
+	Player.maxSpeed -= 0.3;
 }
 if crown == 28
 {

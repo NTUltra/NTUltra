@@ -290,7 +290,7 @@ if !instance_exists(LevCont) and visible = 1
 			//scrn++;
 			
 			//instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			instance_create(f.x,f.y,GoldTotem)
+			instance_create(f.x,f.y,VanSpawn)
 
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
 			thing.mytext = "Wall Crawler";

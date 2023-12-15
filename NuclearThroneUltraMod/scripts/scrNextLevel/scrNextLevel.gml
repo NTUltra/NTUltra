@@ -66,9 +66,10 @@ function scrNextLevel() {
 				}
 			    area = 104;
 			    visitedCrib = true;
+				/*
 				if scrIsCrown(24)
 					hard += 1;
-				else
+				else*/
 					hard -= 1;
 		    }
 		}
@@ -109,9 +110,11 @@ function scrNextLevel() {
 			lastarea = 124;
 	        subarea = 1;
 			inverted=true
+			/*
 			if scrIsCrown(24)
 				hard -= 1;
 			else
+			*/
 				hard += 1;
 	        exit;
 	        }
@@ -548,9 +551,11 @@ function scrNextLevel() {
 		{
 			area = 117;
 			subarea = 1;
+			/*
 			if scrIsCrown(24)
 				hard -= 1;
 			else
+			*/
 				hard += 1;
 		}
 		else if area == 9
@@ -649,24 +654,30 @@ function scrNextLevel() {
 	{
 		if area == 112//Inv labs normal labs skips one
 		{
+			/*
 			if scrIsCrown(24)
 				hard -= 1;
 			else
+			*/
 				hard += 1;
 		}
 		else
 		{
+			/*
 			if scrIsCrown(24)
 				hard -= 1.5;
 			else
+			*/
 				hard += 1.5;
 		}
 	}
 	else if area == 10 && subarea < 2
 	{
+		/*
 		if scrIsCrown(24)
 			hard -= 2;
 		else
+		*/
 			hard += 2;
 	}
 	else if (
@@ -681,16 +692,20 @@ function scrNextLevel() {
 	{
 		if area == 100 || area == 128 || area == 129
 		{
+			/*
 			if scrIsCrown(24)
 				hard -= 0.5;
 			else
+			*/
 				hard += 0.5;
 		}
 		else
 		{
+			/*
 			if scrIsCrown(24)
 				hard -= 1;
 			else
+			*/
 				hard += 1;
 		}
 	}

@@ -7579,7 +7579,7 @@ function scrWeapons() {
 	wep_type[686] = 5
 	wep_auto[686] = 0
 	wep_load[686] = 14
-	wep_cost[686] = 2
+	wep_cost[686] = 1.5
 	wep_sprt[686] = sprOrbiter 
 	wep_area[686] = 3
 	wep_text[686] = "futuristic weaponry"
@@ -7629,6 +7629,28 @@ function scrWeapons() {
 	wep_text[690] = "scanlines"
 	wep_swap[690] = sndSwapPistol
 	wep_rad[690] = 1;
+	
+	wep_name[691] = "ULTRA TELEPATHOR"
+	wep_type[691] = 2
+	wep_auto[691] = 1
+	wep_load[691] = 14
+	wep_cost[691] = 2
+	wep_sprt[691] = sprUltraTelepathor
+	wep_area[691] = 21
+	wep_text[691] = "ion shotgun"
+	wep_swap[691] = sndSwapShotgun
+	wep_rad[691] = 11;
+	
+	wep_name[692] = "ULTRA KRAKEN GRENADE LAUNCHER"
+	wep_type[692] = 4
+	wep_auto[692] = 0
+	wep_load[692] = 15
+	wep_cost[692] = 4
+	wep_sprt[692] = sprKrakenNader
+	wep_area[692] = 22
+	wep_text[692] = "green sea"
+	wep_swap[692] = sndSwapExplosive
+	wep_rad[692] = 22;
 
 	maxwep = array_length(wep_name)-1;
 

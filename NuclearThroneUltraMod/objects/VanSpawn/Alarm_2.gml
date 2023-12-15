@@ -1,13 +1,13 @@
-/// @description Deide dir
+/// @description Decide dir
 if instance_exists(Player)
 {
 	if vertical
 	{
-		if Player.y < y//right
+		if Player.y < y//Up
 		{
 			right = 1
 		}
-		else//left
+		else//Down
 		{
 			right = -1;
 		}

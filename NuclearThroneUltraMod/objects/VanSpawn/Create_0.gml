@@ -18,7 +18,8 @@ if instance_exists(Player) && instance_exists(Wall)
 image_speed = 0.4
 
 //if Player.loops>=1
-alarm[0] = 47 - min(GetPlayerLoops()*2,20);
+loops = GetPlayerLoops();
+alarm[0] = 47 - min(loops*2,20);
 
 snd_play(sndVanWarning);
 RogueIDPD=false;
@@ -27,3 +28,10 @@ right = 1;
 alarm[2] = 1;
 arrowSprite = sprVanPortalDirectionStart;
 dropFreaks = false;
+
+amountOfBullets = 4 + (clamp(loops*2,0,6));
+//xStep = 320 / (amountOfBullets - 1);
+//yStep = 240 / (amountOfBullets - 1);
+bulletStep = 450 / (amountOfBullets - 1);
+squareRight = 0;
+alarm[3] = 2;
