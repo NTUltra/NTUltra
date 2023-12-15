@@ -30,6 +30,6 @@ pSpeed = 3.6;
 if loops > 0
 {
 	actTime = 12;
-	maxDetectRange += 20;
+	maxDetectRange += 80;
 	pSpeed = 4.1;
 }

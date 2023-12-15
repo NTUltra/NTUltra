@@ -1353,6 +1353,7 @@
     {"name":"sprSnowBotIdle","order":13,"path":"sprites/sprSnowBotIdle/sprSnowBotIdle.yy",},
     {"name":"sprSnowBotHurt","order":14,"path":"sprites/sprSnowBotHurt/sprSnowBotHurt.yy",},
     {"name":"sprSnowBotFire","order":15,"path":"sprites/sprSnowBotFire/sprSnowBotFire.yy",},
+    {"name":"sndCacoonBreak","order":12,"path":"sounds/sndCacoonBreak/sndCacoonBreak.yy",},
     {"name":"sprSnowBotDead","order":16,"path":"sprites/sprSnowBotDead/sprSnowBotDead.yy",},
     {"name":"sprCursedBossBotIdle","order":26,"path":"sprites/sprCursedBossBotIdle/sprCursedBossBotIdle.yy",},
     {"name":"InfestElectroBall","order":302,"path":"objects/InfestElectroBall/InfestElectroBall.yy",},

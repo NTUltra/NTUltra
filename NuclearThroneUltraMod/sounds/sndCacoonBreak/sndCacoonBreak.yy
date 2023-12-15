@@ -1,0 +1,23 @@
+{
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "sndCacoonBreak",
+  "audioGroupId": {
+    "name": "agsfx",
+    "path": "audiogroups/agsfx",
+  },
+  "bitDepth": 1,
+  "bitRate": 192,
+  "compression": 0,
+  "conversionMode": 0,
+  "duration": 0.552562,
+  "parent": {
+    "name": "Enviroment",
+    "path": "folders/Sounds/Enviroment.yy",
+  },
+  "preload": false,
+  "sampleRate": 44100,
+  "soundFile": "sndCacoonBreak.wav",
+  "type": 0,
+  "volume": 1.0,
+}

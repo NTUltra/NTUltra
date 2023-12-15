@@ -2,11 +2,11 @@
 if instance_exists(Player) {
     if Player.loops > 0 { //LOOP
 
-        alarm[1] = 12 + random(15);
+        alarm[1] = 14 + random(15);
         scrTarget()
         if target != noone {
             if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
-                if point_distance(target.x, target.y, x, y) > 32 {
+                if point_distance(target.x, target.y, x, y) > 24 {
 					if random(7) < 1 && point_distance(target.x, target.y, x, y) < 180 {
 						snd_play(sndEnemyFire)
                         wkick = 4
@@ -29,7 +29,7 @@ if instance_exists(Player) {
                     }
                 }
                 else {
-                    direction = point_direction(target.x, target.y, x, y) + random(20) - 10
+                    direction = point_direction(target.x, target.y, x, y) + 180 + random(20) - 10
                     speed = 0.4
                     walk = 40 + random(10)
                     gunangle = point_direction(x, y, target.x, target.y)

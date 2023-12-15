@@ -1602,6 +1602,7 @@
     {"id":{"name":"sprSnowBotIdle","path":"sprites/sprSnowBotIdle/sprSnowBotIdle.yy",},},
     {"id":{"name":"sprSnowBotHurt","path":"sprites/sprSnowBotHurt/sprSnowBotHurt.yy",},},
     {"id":{"name":"sprSnowBotFire","path":"sprites/sprSnowBotFire/sprSnowBotFire.yy",},},
+    {"id":{"name":"sndCacoonBreak","path":"sounds/sndCacoonBreak/sndCacoonBreak.yy",},},
     {"id":{"name":"sprSnowBotDead","path":"sprites/sprSnowBotDead/sprSnowBotDead.yy",},},
     {"id":{"name":"sprCursedBossBotIdle","path":"sprites/sprCursedBossBotIdle/sprCursedBossBotIdle.yy",},},
     {"id":{"name":"InfestElectroBall","path":"objects/InfestElectroBall/InfestElectroBall.yy",},},

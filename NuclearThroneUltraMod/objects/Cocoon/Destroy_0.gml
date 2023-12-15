@@ -3,5 +3,6 @@ instance_create(x,y,Gator)
 else
 scrDrop(30,0)
 
-event_inherited()
+snd_play(sndCacoonBreak);
 
+event_inherited()
