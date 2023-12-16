@@ -1,12 +1,12 @@
 recursionCheck = 0;
 steam_update();
-if isPaused == 1
-{
-//QUICK RESTART
 if confirmState > 0 && (mouse_check_button_pressed(mb_right))
 {
 	confirmState = 0;
 }
+if isPaused == 1
+{
+//QUICK RESTART
 if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_exists(Player) && 
 (
 (keyboard_check_pressed(ord("R")) || gamepad_button_check(0,gp_face3)) ||
@@ -14,7 +14,7 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 )
 )//(gamepad_button_check(0,gp_stickl) && gamepad_button_check(0,gp_stickr)) )
 {
-	if confirmState == 1
+	if confirmState == 1 && mouse_check_button_pressed(mb_left)
 	{
 		confirmState = 0;
 		debug("QUICK RESTART");
@@ -145,49 +145,73 @@ alarm[3] = 1;
 audio_resume_all();
 }
 //RETURN TO MENU
-if (keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4)) && !instance_exists(PlayerSpawn) && !instance_exists(StartDaily)
+if (
+((keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4)) ||
+(mouse_check_button_pressed(mb_left) && confirmState == 2))
+&& !instance_exists(PlayerSpawn) && !instance_exists(StartDaily)
+)
 {
-	if isWeekly
-		opt_gamemode = [0];
+	if (confirmState == 2 && mouse_check_button_pressed(mb_left))
+	{
+		confirmState = 0;
+		if isWeekly
+			opt_gamemode = [0];
 	
-	with FPSHACKMenu
-		instance_destroy();
-	instance_activate_all()
-	if normalGameSpeed = 30
-		with FPSHACK
+		with FPSHACKMenu
 			instance_destroy();
-	else if !instance_exists(FPSHACK)
-	{
-		instance_create(x,y,FPSHACK);	
+		instance_activate_all()
+		if normalGameSpeed = 30
+			with FPSHACK
+				instance_destroy();
+		else if !instance_exists(FPSHACK)
+		{
+			instance_create(x,y,FPSHACK);	
+		}
+		isPaused = 0
+		alarm[4] = 0;
+		alarm[5] = 0;
+		alarm[3] = 1;
+		//audio_stop_all();
+		if instance_exists(Player)
+		kills=Player.kills
+		with Player
+		{
+			skeletonlives = 0;
+			ultra_got[87] = 0;
+			instance_destroy()
+		}
+		scrSave();
+		scrRestart()
+		debug("RETURN TO MENU PAUSED");
 	}
-	isPaused = 0
-	alarm[4] = 0;
-	alarm[5] = 0;
-	alarm[3] = 1;
-	//audio_stop_all();
-	if instance_exists(Player)
-	kills=Player.kills
-	with Player
+	else
 	{
-		skeletonlives = 0;
-		ultra_got[87] = 0;
-		instance_destroy()
+		confirmState = 2;
+		exit;
 	}
-	scrSave();
-	scrRestart()
-	debug("RETURN TO MENU PAUSED");
 }
 //QUIT
 if ( keyboard_check_pressed(ord("Q")) or ( gamepad_button_check(0,gp_shoulderr) && gamepad_button_check(0,gp_shoulderrb) 
-&& gamepad_button_check(0,gp_shoulderl) && gamepad_button_check(0,gp_shoulderlb) ) )
+&& gamepad_button_check(0,gp_shoulderl) && gamepad_button_check(0,gp_shoulderlb) ) ||
+(mouse_check_button_pressed(mb_left) && confirmState == 2)
+)
 {
-	if (UberCont.isWeekly)
+	if confirmState == 2 && mouse_check_button_pressed(mb_left)
 	{
-		UberCont.opt_gamemode = [0];	
+		confirmState = 0;
+		if (UberCont.isWeekly)
+		{
+			UberCont.opt_gamemode = [0];	
+		}
+		scrSave();
+		steam_shutdown();
+		game_end()
 	}
-	scrSave();
-	steam_shutdown();
-	game_end()
+	else
+	{
+		confirmState = 2;
+		exit;
+	}
 }
 }
 else
@@ -195,8 +219,12 @@ else
 
 //NOT PAUSED
 
-if instance_exists(KeyCont) && !instance_exists(StartDaily) && (keyboard_check_pressed(vk_escape)or KeyCont.key_paus[0] = 1 || (!instance_exists(Vlambeer)&&(!window_has_focus()) && public == 1) ) and !instance_exists(GenCont)
+if (instance_exists(KeyCont) && !instance_exists(StartDaily) && 
+(keyboard_check_pressed(vk_escape)or KeyCont.key_paus[0] = 1 || (!instance_exists(Vlambeer)&&(!window_has_focus()) && public == 1) ) and !instance_exists(GenCont)
+|| (confirmState == 3 && mouse_check_button_pressed(mb_left))
+)
 {
+	var endMe = false;
 	if keyboard_check_pressed(vk_escape) and instance_exists(Menu)
 	{
 		if isWeekly
@@ -204,8 +232,7 @@ if instance_exists(KeyCont) && !instance_exists(StartDaily) && (keyboard_check_p
 		scrSave();
 		if !instance_exists(OptionSelect)
 		{
-			steam_shutdown();
-			game_end()
+			endMe = true;
 		}/*
 		else if OptionSelect.selected = 0 and CreditsSelect.selected = 0 and StatsSelect.selected = 0 and OptionSelect2.selected = 0// and UpdateSelect.selected = 0
 		{
@@ -219,17 +246,30 @@ if instance_exists(KeyCont) && !instance_exists(StartDaily) && (keyboard_check_p
 				scrReturnMenu();
 				if Menu.mode == 1
 				{
-					steam_shutdown();
-					game_end()
+					endMe = true;
 				}
 			}
 			else
 				scrRestart()
 		}
+		
 	}
 	else if instance_exists(Vlambeer)
 	{
-		game_end()
+		endMe = true;
+	}
+	if endMe
+	{
+		if confirmState == 3 && mouse_check_button_pressed(mb_left)
+		{
+			steam_shutdown();
+			game_end()
+			confirmState = 0;
+		}
+		else
+		{
+			confirmState = 3;	
+		}
 	}
 else if instance_exists(Player) && !instance_exists(StartDaily)///PAUSE IN-GAME
 {

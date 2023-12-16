@@ -115,7 +115,7 @@ else if skill == 92 && Player.race == 23 && (Player.unlockAlternativeUltras || P
 {
 	sprite_index = sprSpikedFrog;
 }
-else if skill == 93 && Player.race == 24 && (Player.unlockAlternativeUltras || (Player.patience > 0 || Player.guarenteedReroll > 0))
+else if skill == 93 && Player.race == 24 && (Player.unlockAlternativeUltras || (Player.patience > 0 || Player.guarenteedReroll > 0 || Player.skill_got[27]))
 {
 	sprite_index = sprAirLord;
 }

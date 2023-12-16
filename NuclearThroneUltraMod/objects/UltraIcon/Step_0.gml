@@ -108,7 +108,7 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			altUltra = true;
 			ultra_name[33] = "PHOENIX"
-			ultra_text[33] = "WHILE YOU ARE ABOVE LEVEL 1#PREVENT THE LOSS OF YOUR HEAD#INSTEAD, REGAIN ALL YOUR HP#LOSE A LEVEL AND A RANDOM MUTATION##EVERYTIME YOUR DEATH IS PREVENTED#YOU PERMANENTLY BECOME STRONGER#AND YOU LEVEL UP SLOWER"
+			ultra_text[33] = "CAN NO LONGER BECOME <w>HEADLESS<w> INSTEAD#WHILE YOU ARE ABOVE <g>LEVEL<g> 1#<aq>PREVENT<aq> <w>DEATH<w>#LOSE A LEVEL AND A RANDOM <g>MUTATION<g>##EVERYTIME YOUR DEATH IS PREVENTED#YOU PERMANENTLY BECOME <w>STRONGER<w>#AND YOU <g>LEVEL<g> UP SLOWER"
 			ultra_tips[33] = "rise and rise again"
 		}
 	}
@@ -353,6 +353,7 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 			if bskin == 0 || bskin == 3
 			{
 				scrUnlockAltSkin(race, bskin);
+				bskin = 3;
 				spr_idle=sprMutant9DIdle;
 				spr_walk=sprMutant9DWalk;
 				spr_hurt=sprMutant9DHurt;
@@ -361,6 +362,7 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 			else if bskin == 1 || bskin == 4
 			{
 				scrUnlockAltSkin(race, bskin);
+				bskin = 4;
 				spr_idle=sprMutant9EIdle;
 				spr_walk=sprMutant9EWalk;
 				spr_hurt=sprMutant9EHurt;

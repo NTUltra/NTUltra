@@ -2939,31 +2939,31 @@ function scrPowers() {
 
 			if my_health > 0
 			{
-			if bskin=1
-			{
-			spr_walk = sprMutant9BThronebutt;
-			if ultra_got[35] && altUltra
-				spr_walk=sprMutant9EThronebutt;
-			}
-			else if bskin=2
-			spr_walk = sprMutant9CThronebutt;
-			else if bskin=3
-			spr_walk = sprMutant9DThronebutt;
-			else if bskin=4
-			spr_walk = sprMutant9EThronebutt;
-			else
-			{
-			spr_walk=sprMutant9Thronebutt;
-			if ultra_got[35] && altUltra
-				spr_walk=sprMutant9DThronebutt;
-			}
+				if bskin=1
+				{
+					spr_walk = sprMutant9BThronebutt;
+					if ultra_got[35] && altUltra
+						spr_walk=sprMutant9EThronebutt;
+				}
+				else if bskin=2
+					spr_walk = sprMutant9CThronebutt;
+				else if bskin=3
+					spr_walk = sprMutant9DThronebutt;
+				else if bskin=4
+					spr_walk = sprMutant9EThronebutt;
+				else
+				{
+					spr_walk=sprMutant9Thronebutt;
+					if ultra_got[35] && altUltra
+						spr_walk=sprMutant9DThronebutt;
+				}
 			}
 
 
 			if skill_got[2]==1//extra feet
 			{
 				//normal : 4.5
-			maxSpeed=5.625//6.3;//6.5// 4.5
+				maxSpeed=5.625//6.3;//6.5// 4.5
 			}
 			else
 			{
@@ -3200,24 +3200,24 @@ function scrPowers() {
 
 	if my_health > 0
 	{
-	if bskin=1
-	{
-	spr_walk = sprMutant9BWalk;
-	if ultra_got[35] && altUltra
-		spr_walk = sprMutant9EWalk;
-	}
-	else if bskin=2
-	spr_walk = sprMutant9CWalk;
-	else if bskin == 3
-	spr_walk = sprMutant9DWalk;
-	else if bskin == 4
-	spr_walk = sprMutant9EWalk;
-	else
-	{
-	spr_walk = sprMutant9Walk;
-	if ultra_got[35] && altUltra
-		spr_walk = sprMutant9DWalk;
-	}
+		if bskin=1
+		{
+			spr_walk = sprMutant9BWalk;
+			if ultra_got[35] && altUltra
+				spr_walk = sprMutant9EWalk;
+		}
+		else if bskin=2
+			spr_walk = sprMutant9CWalk;
+		else if bskin == 3
+			spr_walk = sprMutant9DWalk;
+		else if bskin == 4
+			spr_walk = sprMutant9EWalk;
+		else
+		{
+			spr_walk = sprMutant9Walk;
+			if ultra_got[35] && altUltra
+				spr_walk = sprMutant9DWalk;
+		}
 	}
 	if skill_got[5]//THRONE BUTT
 	{

@@ -5,5 +5,3 @@ image_index += 0.4
 
 if !place_meeting(x,y,Wall)
 image_angle += rotspeed*speed
-
-

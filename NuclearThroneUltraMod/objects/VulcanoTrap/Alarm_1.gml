@@ -18,7 +18,7 @@ else
 	image_index = 0;	
 }
 alarm[1] = 1;
-ang += 5;
+ang += spinRate;
 
 if !position_meeting(x,y,Wall)
 	instance_destroy()

@@ -11,4 +11,4 @@ time=1;
 alarm[0]=1;
 RecycleGlandType();
 norecycle = false;
-dmg = 2;
+dmg = 3;

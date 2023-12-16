@@ -34,11 +34,11 @@ right = 1
 lastx = target.x
 lasty = target.y
 //SEE PLAYER AND FAR ENOUGH AND NOT SHOUTING "FREEZE MOTHERFUCKER"
-if random(2) < 1 and freeze > 40 and point_distance(x,y,target.x,target.y)<64
+if random(2) < 1 and freeze > 40 and point_distance(x,y,target.x,target.y) < 70
 {
 ///SLASH
 instance_create(x,y,Notice);
-alarm[2]=8;
+alarm[2] = 8;
 alarm[1] = 20+random(10)
 walk+=10;
 direction = point_direction(x,y,target.x,target.y);

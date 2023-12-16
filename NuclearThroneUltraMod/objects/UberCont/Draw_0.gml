@@ -1,5 +1,4 @@
 var yy = __view_get( e__VW.YView, 0 );
-
 if isPaused == 1
 {
 	draw_sprite_ext(pauseimg,0,__view_get( e__VW.XView, 0 ),yy,pauseimgScale,pauseimgScale,0,c_white,1)//0.35,
@@ -10,34 +9,36 @@ if isPaused == 1
 	draw_set_alpha(1)
 	draw_rectangle(__view_get( e__VW.XView, 0 ),yy,__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),yy+48,0)
 	draw_rectangle(__view_get( e__VW.XView, 0 ),yy+__view_get( e__VW.HView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),yy+__view_get( e__VW.HView, 0 )-48,0)
-	if confirmState == 1//QQuick restart
+	if confirmState > 0//QQuick restart
 	{
-		draw_set_color(c_white)
+		draw_set_color(c_silver)
 		var xxx = camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])*0.5);
-		var yyy = camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])*0.5) - 16;
+		var yyy = camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])*0.5) + 32;
 		draw_set_halign(fa_center);
+		draw_set_valign(fa_bottom);
+		draw_set_font(fntB);
+		draw_text(xxx,yyy,"ARE       YOU       SURE\nYOU       WANT       TO\n ");
+		draw_set_color(c_white)
+		if confirmState == 1
+			draw_text(xxx,yyy,"RESTART?");
+		else
+			draw_text(xxx,yyy,"QUIT?");
+		draw_set_font(fntM);
+		draw_sprite_ext(sprLMBIcon,0,xxx - 36,yyy+12,1,1,0,c_white,1);
 		draw_set_valign(fa_middle);
-		draw_text(xxx,yyy,"ARE YOU SURE YOU WANT TO RESTART?");
-		draw_sprite_ext(sprRMBIcon,0,xxx - 29,yyy+12,-1,1,0,c_white,1);
+		draw_set_colour(c_black);
+		draw_text(xxx - 16,yyy+17,"YES");
+		draw_text(xxx - 15,yyy+17,"YES");
+		draw_text(xxx - 15,yyy+16,"YES");
+		draw_text(xxx + 16,yyy+17,"NO");
+		draw_text(xxx + 17,yyy+17,"NO");
+		draw_text(xxx + 17,yyy+16,"NO");
+		draw_set_colour(c_white);
 		draw_text(xxx - 16,yyy+16,"YES");
 		draw_text(xxx + 16,yyy+16,"NO");
 		draw_sprite_ext(sprRMBIcon,0,xxx + 25,yyy+12,1,1,0,c_white,1);
 		draw_set_halign(fa_left);
-		draw_set_valign(fa_top)
-	} else if confirmState == 2//Exit
-	{
-		draw_set_color(c_white)
-		var xxx = camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])*0.5);
-		var yyy = camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])*0.5) - 16;
-		draw_set_halign(fa_center);
-		draw_set_valign(fa_middle);
-		draw_text(xxx,yyy,"ARE YOU SURE YOU WANT TO QUIT?");
-		draw_sprite_ext(sprRMBIcon,0,xxx - 29,yyy+12,-1,1,0,c_white,1);
-		draw_text(xxx - 16,yyy+16,"YES");
-		draw_text(xxx + 16,yyy+16,"NO");
-		draw_sprite_ext(sprRMBIcon,0,xxx + 25,yyy+12,1,1,0,c_white,1);
-		draw_set_halign(fa_left);
-		draw_set_valign(fa_top)
+		draw_set_valign(fa_top);
 	}
 	else
 	{//OPTIONS

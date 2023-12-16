@@ -233,7 +233,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	if altOverride || (instance_exists(Player) &&  Player.race == 9 && (Player.altUltra || Player.unlockAlternativeUltras || (scrHasFireWeapon() && instance_exists(UltraIcon))))
 	{
 		ultra_name[33] = "PHOENIX"
-		ultra_text[33] = "WHILE YOU ARE ABOVE <g>LEVEL<g> 1#PREVENT THE LOSS OF YOUR HEAD#INSTEAD, REGAIN ALL YOUR <r>HP<r>#LOSE A LEVEL AND A RANDOM <g>MUTATION<g>##EVERYTIME YOUR DEATH IS PREVENTED#YOU PERMANENTLY BECOME <w>STRONGER<w>#AND YOU <g>LEVEL<g> UP SLOWER"
+		ultra_text[33] = "CAN NO LONGER BECOME <w>HEADLESS<w> INSTEAD#WHILE YOU ARE ABOVE <g>LEVEL<g> 1#<aq>PREVENT<aq> <w>DEATH<w>#LOSE A LEVEL AND A RANDOM <g>MUTATION<g>##EVERYTIME YOUR DEATH IS PREVENTED#YOU PERMANENTLY BECOME <w>STRONGER<w>#AND YOU <g>LEVEL<g> UP SLOWER"
 		ultra_tips[33] = "rise and rise again"
 	}
 

@@ -9,5 +9,5 @@ sprite_index = spr_idle}
 
 if my_health <= 0
 instance_destroy()
-
+if !place_meeting(x,y,Wall)
 speed = 0

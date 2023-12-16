@@ -16,7 +16,10 @@ with Player
 		else if curse = 1
 		{
 			curse = 0
-			my_health -= 7
+			if armour > 0
+				armour -= 1;
+			else
+				my_health -= 7
 			repeat(10)
 				instance_create(x+random(16)-8,y+random(16)-8,Curse)
 		}

@@ -4901,7 +4901,12 @@ function scrFire2(hasTailNow) {
 	BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 1
 	if curse
-		my_health -= 7;
+	{
+		if armour > 0
+			armour -= 1;
+		else
+			my_health -= 7;
+	}
 	//TOSSING CURSED WEAPONS!?
 	if object_index == Player && ultra_got[29] && altUltra && bwep != 0//ROBOT EXCLUSIVE TASTE
 	{
@@ -8439,8 +8444,12 @@ function scrFire2(hasTailNow) {
 	case 493:
 
 	snd_play_fire(sndSuperSlugger)
-
-	repeat(6)
+	
+	with instance_create(x,y,Bullet2Heavy)
+	{motion_add(aimDirection,14+random(6))
+	image_angle = direction
+	team = other.team}
+	repeat(5)
 	{
 		with instance_create(x,y,Bullet2Heavy)
 		{motion_add(aimDirection+(random(40)-20)*other.accuracy,14+random(6))

@@ -9,13 +9,10 @@ with p {
 	}
 	else
 	{
-		var maxtries = 48;
-		var i = 0;
-		while place_meeting(x,y,ProtoStatue) && i < maxtries
-		{
-			x += 2;
-			i++;
-		}
+		x = ProtoStatue.x - 16;
+		y = ProtoStatue.y - 16;
+		instance_create(x,y,WallBreak);
+		scrForcePosition60fps();
 	}
 	with other
 	{

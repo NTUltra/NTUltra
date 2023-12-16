@@ -12,4 +12,6 @@ if (speed < 4 && instance_exists(WepPickup)){
 	    } else motion_add(random(360), 2);
 	}
 }
+if speed > 8
+	speed = 8;
 alarm[5] = 1;

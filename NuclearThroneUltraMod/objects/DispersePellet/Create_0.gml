@@ -9,5 +9,5 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 ShotgunShouldersType();
 time=1;
-dmg = 2;
+dmg = 3;
 alarm[0]=time;

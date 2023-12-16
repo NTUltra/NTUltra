@@ -8,8 +8,14 @@ if instance_exists(creator)
 	y = creator.y
 	//FIRING
 	//snd_play_fire(sndShotgun)
-
-	repeat(15)
+	with instance_create(x,y,Bullet2Heavy)
+	{
+		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),13+other.ammo+random(7))
+		image_angle = direction
+		team = other.team
+		scrCopyWeaponMod(other);
+	}
+	repeat(14)
 	{
 		with instance_create(x,y,Bullet2Heavy)
 		{

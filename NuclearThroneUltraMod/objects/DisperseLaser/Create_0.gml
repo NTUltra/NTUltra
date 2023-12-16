@@ -11,7 +11,7 @@ time=1;
 alarm[0]=time;
 
 
-dmg = 2;
+dmg = 3;
 
 /* */
 /*  */

@@ -1,5 +1,41 @@
 /// @description Timer
-if !isPaused && !instance_exists(Player) && !instance_exists(PlayerSpawn)
+if confirmState == 3
+{
+	var yy = __view_get( e__VW.YView, 0 );
+	draw_set_color(c_black)
+	draw_set_blend_mode(bm_normal)
+	draw_set_alpha(0.6)
+	draw_rectangle(__view_get( e__VW.XView, 0 ),yy,__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),yy+__view_get( e__VW.HView, 0 ),0)
+	draw_set_alpha(1)
+	draw_rectangle(__view_get( e__VW.XView, 0 ),yy,__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),yy+48,0)
+	draw_rectangle(__view_get( e__VW.XView, 0 ),yy+__view_get( e__VW.HView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),yy+__view_get( e__VW.HView, 0 )-48,0)
+	draw_set_color(c_silver)
+	var xxx = camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])*0.5);
+	var yyy = camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])*0.5) + 32;
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_bottom);
+	draw_set_font(fntB);
+	draw_text(xxx,yyy,"ARE       YOU       SURE\nYOU       WANT       TO\n ");
+	draw_set_color(c_white)
+	draw_text(xxx,yyy,"QUIT       THE       GAME?");
+	draw_set_font(fntM);
+	draw_sprite_ext(sprLMBIcon,0,xxx - 36,yyy+12,1,1,0,c_white,1);
+	draw_set_valign(fa_middle);
+	draw_set_colour(c_black);
+	draw_text(xxx - 16,yyy+17,"YES");
+	draw_text(xxx - 15,yyy+17,"YES");
+	draw_text(xxx - 15,yyy+16,"YES");
+	draw_text(xxx + 16,yyy+17,"NO");
+	draw_text(xxx + 17,yyy+17,"NO");
+	draw_text(xxx + 17,yyy+16,"NO");
+	draw_set_colour(c_white);
+	draw_text(xxx - 16,yyy+16,"YES");
+	draw_text(xxx + 16,yyy+16,"NO");
+	draw_sprite_ext(sprRMBIcon,0,xxx + 25,yyy+12,1,1,0,c_white,1);
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
+}
+else if !isPaused && !instance_exists(Player) && !instance_exists(PlayerSpawn)
 {
 	txttime = finalTime;
 	var formatString = "0:00:00:00";

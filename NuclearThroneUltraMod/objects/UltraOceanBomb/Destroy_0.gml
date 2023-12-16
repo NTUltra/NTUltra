@@ -16,7 +16,7 @@ instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
 instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
 instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
 								
-var amount = 12;
+var amount = 13;
 var angle = image_angle;
 var angleStep = 360/amount;
 repeat(amount)

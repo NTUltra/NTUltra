@@ -7578,11 +7578,11 @@ function scrWeapons() {
 	wep_name[686] = "ORBITER"
 	wep_type[686] = 5
 	wep_auto[686] = 0
-	wep_load[686] = 14
-	wep_cost[686] = 1.5
+	wep_load[686] = 16
+	wep_cost[686] = 2
 	wep_sprt[686] = sprOrbiter 
 	wep_area[686] = 3
-	wep_text[686] = "futuristic weaponry"
+	wep_text[686] = "orbital strike"
 	wep_swap[686] = sndSwapEnergy
 	wep_rad[686] = 0;
 	
@@ -7644,9 +7644,9 @@ function scrWeapons() {
 	wep_name[692] = "ULTRA KRAKEN GRENADE LAUNCHER"
 	wep_type[692] = 4
 	wep_auto[692] = 0
-	wep_load[692] = 15
+	wep_load[692] = 16
 	wep_cost[692] = 4
-	wep_sprt[692] = sprKrakenNader
+	wep_sprt[692] = sprUltraKrakenNader
 	wep_area[692] = 22
 	wep_text[692] = "green sea"
 	wep_swap[692] = sndSwapExplosive

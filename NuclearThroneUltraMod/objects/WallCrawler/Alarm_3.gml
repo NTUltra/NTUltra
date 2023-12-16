@@ -15,6 +15,7 @@ if instance_exists(Wall)
 		x = myWall.x+8;
 		y = myWall.y;
 		snd_play(sndGuardianAppear,0.1);
+		scrForcePosition60fps();
 	}
 	else
 		alarm[3] = 1;
@@ -25,5 +26,5 @@ if instance_exists(Wall)
 	sprite_index = spr_idle;
 	right = choose(1,-1);
 	targetWalkTime = 2;
-	alarm[1] += actTime;
+	alarm[1] += actTime*4;
 }

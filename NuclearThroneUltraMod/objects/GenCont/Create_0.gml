@@ -5,6 +5,7 @@ if UberCont.opt_loading == 4
 	loadTime = 4;
 	room_speed = 999999;
 }
+crown = [1];
 alarm[3] = loadTime - 2;//Loading time;
 alarm[0] = loadTime - 1;
 alarm[2] = loadTime - 2;

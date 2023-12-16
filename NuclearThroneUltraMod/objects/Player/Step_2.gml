@@ -834,7 +834,7 @@ if my_health <= 0 && armour < 1
 		snd_play_2d(sndPhoenixChicken);
 		snd_hurt = sndDamageNegate;
 		scrGiveEuphoriaShield();
-		alarm[3] = max(alarm[3],10 + (phoenixrevives*2));
+		alarm[3] = max(alarm[3],5 + (phoenixrevives*2));
 		snd_play(sndFlameCannonEnd,0.1,true);
 		var ang = direction + 180;
 		var am = min(44,23 + (phoenixrevives*2));
@@ -851,7 +851,7 @@ if my_health <= 0 && armour < 1
 		Sleep(min(40,20 + (phoenixrevives*2)));
 		BackCont.shake += min(50,20 + (phoenixrevives*2));
 	}
-	else if race = 9 and bleed < 150
+	else if race = 9 and bleed < 150 and !(altUltra && ultra_got[33])
 	{
 		if bleed == 0
 		{
