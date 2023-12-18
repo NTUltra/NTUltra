@@ -15,6 +15,7 @@ typ = 0//2
 depth = 0;
 dmg=3;
 consumeAmount = 1;
+dodgeAble = false;
 if instance_exists(Player)
 {
 	if Player.race=23

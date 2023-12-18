@@ -20,7 +20,7 @@ if ammo < 1 && alarm[2] < 1 {
 		if i <= 250 {
 			x = dx
 			y = dy
-		
+			scrForcePosition60fps();
 			repeat(12)
 			with instance_create(x,y,Curse) {
 				depth = 1
@@ -40,6 +40,7 @@ if ammo < 1 && alarm[2] < 1 {
 			other.x = x + 16
 			other.y = y + 16
 		}
+		scrForcePosition60fps();
 		
 		repeat(12)
 		with instance_create(x,y,Curse) {

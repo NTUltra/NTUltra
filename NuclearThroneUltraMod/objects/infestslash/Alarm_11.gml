@@ -5,7 +5,7 @@ event_inherited();
 
 snd_play(sndMeatExplo,0.1,true);
 var xx = x + lengthdir_x(40,image_angle);
-var xx = y + lengthdir_y(40,image_angle);
+var yy = y + lengthdir_y(40,image_angle);
 var um = UberCont.ultramodSwap;
 UberCont.ultramodSwap = false;
 instance_create(xx,yy,MeatExplosion);

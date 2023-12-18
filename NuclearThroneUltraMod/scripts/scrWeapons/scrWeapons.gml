@@ -7651,6 +7651,17 @@ function scrWeapons() {
 	wep_text[692] = "green sea"
 	wep_swap[692] = sndSwapExplosive
 	wep_rad[692] = 22;
+	
+	wep_name[693] = "ULTRA ROPE KNIFE"
+	wep_type[693] = 0
+	wep_auto[693] = 1
+	wep_load[693] = 16
+	wep_cost[693] = 0
+	wep_sprt[693] = sprUltraRopeKnife
+	wep_area[693] = 20
+	wep_text[693] = "ultra whip"
+	wep_swap[693] = sndSwapSword
+	wep_rad[693] = 16;
 
 	maxwep = array_length(wep_name)-1;
 

@@ -60,3 +60,10 @@ draw_line_width(l,t,l,b,scale+1);
 draw_line_width(r - scale,t,r - scale,b,scale+1);
 */
 gpu_set_blendenable(true);
+if instance_exists(Player) && Player.race == 9 && (KeyCont.key_spec[0] == 1 || KeyCont.key_spec[0] == 2)
+{
+	//gpu_set_blendmode_ext(bm_inv_src_colour, bm_src_colour);
+	gpu_set_blendmode(bm_subtract);
+	draw_sprite_ext(sprRadial,0,l,t,(wp/256) * scale,(hp/256) * scale,0,c_white,1);
+	gpu_set_blendmode(bm_normal);
+}

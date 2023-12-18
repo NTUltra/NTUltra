@@ -571,7 +571,37 @@ if looping && area != 104
 		}
 
 	}
-	
+	//Rusty revolver to Ultra Revolver
+	if (wep == 56) {
+		if loops == 1
+		{
+			with instance_create(x,y,WepPickup)
+			{
+			persistent=true;
+			scrWeapons()
+			wep = 114
+			name = wep_name[wep]
+			ammo = 0
+			type = wep_type[wep]
+			curse = 0
+			sprite_index = wep_sprt[wep]
+			}
+		}
+		else
+		{
+			with instance_create(x,y,WepPickup)
+			{
+			persistent=true;
+			scrWeapons()
+			wep = 530
+			name = wep_name[wep]
+			ammo = 0
+			type = wep_type[wep]
+			curse = 0
+			sprite_index = wep_sprt[wep]
+			}
+		}
+	}
 	//DROP GUITAR?
 	if race=1
 	{
@@ -637,10 +667,10 @@ if looping && area != 104
 
 	}
     
-	    if loops > UberCont.cbst_loop[race]&&scrIsGamemode(0)
+	if loops > UberCont.cbst_loop[race]&&scrIsGamemode(0)
 			UberCont.cbst_loop[race] = loops//this doesn't get saved if gamemode is not normal mode
     
-	    if  UberCont.opt_gamemode!=10
+	if  !scrIsGamemode(10)
 	    {/*
 	        if loops>1
 	        {
@@ -657,7 +687,6 @@ if looping && area != 104
 	    }
     
 	subarea = 1
-    
 }
 
 

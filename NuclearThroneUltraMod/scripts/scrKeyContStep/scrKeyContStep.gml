@@ -6,8 +6,6 @@ function scrKeyContStep() {
 
 	repeat(players)
 	{
-	if UberCont.opt_gamemode!=7&&UberCont.opt_gamemode!=13//ATOM TELEPORT ONLY GM and rocket glove no walkin
-	{
 	//if gamepad[p] = -1
 	//{
 	//KEYBOARD CONTROLS FOR THIS DUDE
@@ -57,7 +55,6 @@ function scrKeyContStep() {
 	else{if key_east[p] = 3 key_east[p] = 0
 	else if key_east[p] !=0 key_east[p] = 3}
 
-	}//end of gm teleport only
 
 	//fire
 	if mouse_check_button(mb_left) or keyboard_check(vk_enter) or gamepad_button_check(p,gp_shoulderrb) or gamepad_button_check(p,gp_shoulderr){

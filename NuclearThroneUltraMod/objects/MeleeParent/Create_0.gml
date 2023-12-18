@@ -5,6 +5,7 @@ typ = 0 //0 = nothing, 1 = deflectable, 2 = destructable, 3 = deflectable 4 = la
 hits = 1;
 hitDelay = 8;
 hitEntities = [];
+longarms = 0;
 walled = 0
 friction = 0.1
 

@@ -13729,7 +13729,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),SmallSlash)
 	{
 		longarms = 0
-		
+		dmg = 3;
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.3+longarms)
 		image_angle = direction
@@ -13777,7 +13777,7 @@ function scrFire2(hasTailNow) {
 		py = yy;
 		with instance_create(xx,yy,NarrowShank)
 		{
-			dmg += 3;
+			dmg += 2;
 			longarms = 0
 			
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -14430,6 +14430,31 @@ function scrFire2(hasTailNow) {
 	wkick = 8
 	
 	motion_add(aimDirection+180,2)
+
+	break;
+	
+	//ULTRA ROPE KNIFE
+	case 693:
+
+	snd_play_fire(sndUltraRopeKnife)
+
+	instance_create(x,y,Smoke)
+
+	with instance_create(x+lengthdir_x(26+((Player.skill_got[13]+bettermelee)*12),aimDirection),y+lengthdir_y(26+((Player.skill_got[13]+bettermelee)*12),aimDirection),UltraRopeSpinSlash)
+	{
+		longarms = 0
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection,6+longarms)
+		image_angle = direction
+		team = other.team
+	}
+
+	wepangle = -wepangle
+	motion_add(aimDirection,6)
+	BackCont.viewx2 += lengthdir_x(14,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(14,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = -6
 
 	break;
 	

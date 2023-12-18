@@ -406,7 +406,7 @@ function scrSkills() {
 	skill_name[31] = "TURTLE SHELL"
 	else
 	skill_name[31] = "TOUGH SHELL"
-	skill_text[30] = "+1 <r>MAX HP<r>#<w>REDUCE INCOMING DAMAGE<w>"
+	skill_text[31] = "+1 <r>MAX HP<r>#<w>REDUCE INCOMING DAMAGE<w>"
 	skill_detail[31] = "+1 <r>MAX HP<r>#EVERYTHING THAT DEALS#MORE THAN 1 <w>DAMAGE<w> TO YOU#DEALS ONE LESS <w>DAMAGE<w>"
 	skill_tips[31] = "damage reduction!"
 	skill_msnd[31] =  sndToughShell

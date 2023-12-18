@@ -1,4 +1,5 @@
 /// @description Timer
+var formatString = "0:00:00:00";
 if confirmState == 3
 {
 	var yy = __view_get( e__VW.YView, 0 );
@@ -9,12 +10,16 @@ if confirmState == 3
 	draw_set_alpha(1)
 	draw_rectangle(__view_get( e__VW.XView, 0 ),yy,__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),yy+48,0)
 	draw_rectangle(__view_get( e__VW.XView, 0 ),yy+__view_get( e__VW.HView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),yy+__view_get( e__VW.HView, 0 )-48,0)
-	draw_set_color(c_silver)
 	var xxx = camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])*0.5);
 	var yyy = camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])*0.5) + 32;
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_bottom);
 	draw_set_font(fntB);
+	draw_set_color(c_black)
+	draw_text(xxx+1,yyy,"ARE       YOU       SURE\nYOU       WANT       TO\nQUIT");
+	draw_text(xxx+1,yyy+1,"ARE       YOU       SURE\nYOU       WANT       TO\nQUIT");
+	draw_text(xxx,yyy+1,"ARE       YOU       SURE\nYOU       WANT       TO\nQUIT");
+	draw_set_color(c_silver)
 	draw_text(xxx,yyy,"ARE       YOU       SURE\nYOU       WANT       TO\n ");
 	draw_set_color(c_white)
 	draw_text(xxx,yyy,"QUIT       THE       GAME?");
@@ -38,7 +43,6 @@ if confirmState == 3
 else if !isPaused && !instance_exists(Player) && !instance_exists(PlayerSpawn)
 {
 	txttime = finalTime;
-	var formatString = "0:00:00:00";
 }
 else
 {
@@ -73,7 +77,7 @@ else
 		txttime = minutesstring+":"+secondsstring+":"+microseconds;
 	}
 }
-if !instance_exists(Menu)&&!instance_exists(Vlambeer) && !instance_exists(UnlockPopup) && opt_timer=1 && !instance_exists(Leaderboard)
+if confirmState != 3 && !instance_exists(Menu)&&!instance_exists(Vlambeer) && !instance_exists(UnlockPopup) && opt_timer=1 && !instance_exists(Leaderboard)
 {
 draw_set_valign(fa_top)
 draw_set_halign(fa_center)

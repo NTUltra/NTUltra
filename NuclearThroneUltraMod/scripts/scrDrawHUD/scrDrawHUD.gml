@@ -897,7 +897,9 @@ function scrDrawHUD() {
 	if dataRef.wepmod1 != 0
 	{
 		draw_sprite(sprModHUD,dataRef.wepmod1,xx,yy);
-		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
+		var xxx = camera_get_view_x(view_camera[0]) + xx;
+		var yyy = camera_get_view_y(view_camera[0]) + yy;
+		if (mouse_x > xxx && mouse_x < xxx+xs && mouse_y < yyy+xs && mouse_y > yyy)
 		{
 			noHover = false;
 			holdExplainWepModTimer += 1*dt;
@@ -916,7 +918,9 @@ function scrDrawHUD() {
 	if dataRef.wepmod2 != 0
 	{
 		draw_sprite(sprModHUD,dataRef.wepmod2,xx,yy);
-		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
+		var xxx = camera_get_view_x(view_camera[0]) + xx;
+		var yyy = camera_get_view_y(view_camera[0]) + yy;
+		if (noHover && mouse_x > xxx && mouse_x < xxx+xs && mouse_y < yyy+xs && mouse_y > yyy)
 		{
 			noHover = false;
 			holdExplainWepModTimer += 1*dt;
@@ -935,7 +939,9 @@ function scrDrawHUD() {
 	if dataRef.wepmod3 != 0
 	{
 		draw_sprite(sprModHUD,dataRef.wepmod3,xx,yy);
-		if (mouse_x > xx && mouse_x < xx+xs && mouse_y < yy+xs && mouse_y > yy)
+		var xxx = camera_get_view_x(view_camera[0]) + xx;
+		var yyy = camera_get_view_y(view_camera[0]) + yy;
+		if (noHover && mouse_x > xxx && mouse_x < xxx+xs && mouse_y < yyy+xs && mouse_y > yyy)
 		{
 			noHover = false;
 			holdExplainWepModTimer += 1*dt;
@@ -956,7 +962,7 @@ function scrDrawHUD() {
 		draw_sprite(sprModHUD,dataRef.wepmod4,xx,yy);
 		var xxx = camera_get_view_x(view_camera[0]) + xx;
 		var yyy = camera_get_view_y(view_camera[0]) + yy;
-		if (mouse_x > xxx && mouse_x < xxx+xs && mouse_y < yyy+xs && mouse_y > yyy)
+		if (noHover && mouse_x > xxx && mouse_x < xxx+xs && mouse_y < yyy+xs && mouse_y > yyy)
 		{
 			noHover = false;
 			holdExplainWepModTimer += 1*dt;

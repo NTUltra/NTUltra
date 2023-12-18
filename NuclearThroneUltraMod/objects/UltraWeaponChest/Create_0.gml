@@ -1,6 +1,10 @@
 scrWeapons()
 SetSeedWeapon();
-wep = scrDecideUltraWep()
+weps[0] = scrDecideUltraWep()
+do {
+	weps[1] = scrDecideUltraWep()
+}
+until (weps[1] != weps[0]);
 mySize = 1;
 team = 0;
 SetSeed();

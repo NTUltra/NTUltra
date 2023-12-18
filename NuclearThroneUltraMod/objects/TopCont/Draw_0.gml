@@ -161,6 +161,7 @@ draw_sprite_ext(sprCrownLight,1,x,y,1,100,5,c_white,0.2)
 
 with Player
 {
+	/*
 	if (KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2) and race = 9
 	{
 		draw_set_alpha(0.5)
@@ -174,6 +175,7 @@ with Player
 		{if point_distance(x,y,other.x,other.y) < 96
 		event_perform(ev_draw,0)}
 	}
+	*/
 	if race == 18 && !instance_exists(PlayerInPortal)
 		event_perform(ev_draw,0);//on top of all things cause I'm an angel!
 
