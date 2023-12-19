@@ -21,6 +21,6 @@ sprite_index = spr_idle
 scrTarget()
 if target>0
 {
-gunangle = point_direction(x,y,target.xprevious,target.yprevious);
+gunangle = point_direction(x,y,target.x,target.y);
 }
-alarm[1] += 2;
+alarm[1] += 5;

@@ -14,6 +14,8 @@ image_index = 0
 snd_play(snd_hurt, hurt_pitch_variation)
 
 motion_add(other.direction,6)
+if object_index == Player
+	hitBy = other.sprite_index;
 }
 }
 

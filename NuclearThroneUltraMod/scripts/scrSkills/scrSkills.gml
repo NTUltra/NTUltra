@@ -83,7 +83,7 @@ function scrSkills() {
 
 	skill_name[3] = "PLUTONIUM HUNGER"
 	skill_text[3] = "STRONGER <g>ATTRACT<g> POWER"
-	skill_detail[3] = "MORE THAN DOUBLE ATTRACT RANGE#<r>HP<r>/<y>AMMO<y>/<g>RAD<g> DROPS MOVE TOWARDS YOU FASTER"
+	skill_detail[3] = "MORE THAN DOUBLE ATTRACT RANGE#<r>HP<r>/<y>AMMO<y>/<g>RAD<g> DROPS MOVE#TOWARDS YOU FASTER"
 	skill_tips[3] = "need those rads"
 	skill_msnd[3] =  sndMutPluto
 	skill_bons[3] = "+10% RANGE";

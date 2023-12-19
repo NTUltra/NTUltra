@@ -573,7 +573,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		
 		//Have heavy heart
 		if altOverride || (instance_exists(Player) &&  Player.race == 20 && (Player.race == 20 && (Player.altUltra || Player.unlockAlternativeUltras || (
-		(Player.skill_got[0])
+		(Player.skill_got[0] || scrIsCrown(5))
 		&& instance_exists(UltraIcon)))))
 		{
 			ultra_name[77] = "HOARDING THIEF"

@@ -750,7 +750,7 @@ function scrPowers() {
 		{
 			snd_play_2d(sndBloodGamble);
 		    //gamble some blood
-		    if (wep_cost[wep]/typ_ammo[wep_type[wep]] > random(1 - consecutiveGoodBloodGambles)*(1+(skill_got[5]*0.3333333333333333) )  )//If this is true take damage
+		    if (wep_cost[wep]/typ_ammo[wep_type[wep]] > random(1 - consecutiveGoodBloodGambles)*(1+(skill_got[5]*0.35) )  )//If this is true take damage
 		    {//thronebutt adds 1/3 chance of not taking damage
 				consecutiveGoodBloodGambles = 0;
 				//Damnation

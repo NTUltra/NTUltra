@@ -2,7 +2,7 @@
 //snd_play(sndDragonStop)
 snd_play(sndStatueHurt);
 mask_index=mskChesireCat;
-alarm[1] +=3;
+alarm[1] += 4;
 ammo-=1;
 ang = random(360)
 var ogAng = ang;

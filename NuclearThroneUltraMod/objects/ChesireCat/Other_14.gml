@@ -7,7 +7,7 @@ alarm[5] = wazerDuration+tellTime;
 if target != noone && instance_exists(target)
 	wazerDirection = point_direction(x,y,target.x,target.y) - wazerOffset;
 myWazer = instance_create(x,y,EnemyWazer);
-alarm[1] = wazerDuration + 2;
+alarm[1] = wazerDuration + 6;
 with myWazer {
 	team = other.team;
 	image_angle = other.wazerDirection;

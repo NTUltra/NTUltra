@@ -7,7 +7,7 @@ if (UberCont.isPaused == 0 && UberCont.mouse__x < x+16 and UberCont.mouse__y < y
 		hoverTime += 0.5;
 	else
 		hoverTime += 1;
-	if hoverTime > 6
+	if hoverTime > 12
 	{
 		draw_set_color(c_black);
 		draw_text(x,y-15,crown_name[crown]);

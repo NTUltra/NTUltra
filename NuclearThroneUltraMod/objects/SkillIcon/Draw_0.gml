@@ -93,7 +93,7 @@ if hover
 		draw_sprite(sprRMBIcon,0,xx,yy - 8);
 	
 	if showDetail
-		draw_text_colour(xx + 8,yy,"RMB TO HIDE DETAILED DESCRIPTION",c_gray,c_gray,c_gray,c_gray,1);
+		draw_text_colour(xx + 8,yy,"RMB TO HIDE DETAILS",c_gray,c_gray,c_gray,c_gray,1);
 	else
-		draw_text_colour(xx + 8,yy,"RMB TO SHOW DETAILED DESCRIPTION",c_gray,c_gray,c_gray,c_gray,1);
+		draw_text_colour(xx + 8,yy,"RMB TO SHOW DETAILS",c_gray,c_gray,c_gray,c_gray,1);
 }

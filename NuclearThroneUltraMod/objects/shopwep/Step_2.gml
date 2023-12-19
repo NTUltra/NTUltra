@@ -48,11 +48,9 @@ if instance_exists(Player)
 				scrWeaponHold();
 			}
 		}
-		instance_destroy();
+		// instance_destroy();
 	}
 	else
-	image_index=0;
-
-
+		image_index=0;
 }
 

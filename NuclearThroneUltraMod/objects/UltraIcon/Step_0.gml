@@ -434,7 +434,7 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 			ultra_tips[72] = "right back at ya"
 		}
 	}
-	else if skill == 77 && Player.race == 20 && (Player.skill_got[0] || Player.unlockAlternativeUltras)
+	else if skill == 77 && Player.race == 20 && (Player.skill_got[0] || Player.unlockAlternativeUltras || scrIsCrown(5))
 	{
 		with Player
 		{
@@ -836,8 +836,8 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 	    ultimategamble=2;
 		with Player
 		{
+			altUltra = true;
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
-			// altUltra = true;
 			ultra_name[76] = "THE ULTIMATE GAMBLE"
 		    ultra_text[76] = "50% CHANCE TO DIE OR TO GET#TWO RANDOM ULTRA MUTATIONS#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
 		    ultra_tips[76] = "that went well!"

@@ -103,7 +103,7 @@ else if skill == 76 && Player.race == 19 && (Player.unlockAlternativeUltras || P
 {
 	sprite_index = sprUltimateGamble;
 }
-else if skill == 77 && Player.race == 20 && (Player.unlockAlternativeUltras || Player.skill_got[0])
+else if skill == 77 && Player.race == 20 && (Player.unlockAlternativeUltras || Player.skill_got[0] || scrIsCrown(5))
 {
 	sprite_index = sprHoardingThief;
 }

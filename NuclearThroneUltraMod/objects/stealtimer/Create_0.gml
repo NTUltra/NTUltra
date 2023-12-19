@@ -1,2 +1,2 @@
 /// @description Steal Timer
-alarm[0] = 500;
+alarm[0] = 560;
