@@ -6,6 +6,8 @@ if gonnashoot > 0 {
 	
 	if ammo == 0 {
 		gonnashoot = 0;
+		alarm[2] += 6;
+		alarm[1] += 4;
 		exit;
 	}
 	snd_play(sndPopgun)

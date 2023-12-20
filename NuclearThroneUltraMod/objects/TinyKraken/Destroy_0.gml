@@ -1,4 +1,4 @@
-scrDrop(20,0);
+scrDrop(10,0);
 with instance_create(x,y,MovingCorpse)
 {
 	mySize = other.mySize

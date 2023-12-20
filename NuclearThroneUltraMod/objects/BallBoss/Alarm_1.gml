@@ -43,14 +43,21 @@ if target != noone {
 	}
 	else if ran > 50
 	{
-		scrDrop(20,0);
+		scrDrop(16,0);
 	}
 	else if ran > 40
 	{
 		//Side attack
 		event_user(3);
 	}
-
+	else if ran > 30
+	{
+		event_user(4);	
+	}
+	else if ran > 20 && reachLowHealth
+	{
+		event_user(5);
+	}
 }
 else if random(10) < 1 {
     motion_add(random(360), 0.9)
@@ -61,9 +68,10 @@ if !reachHalfHealth && my_health < maxhealth * 0.74
 	waveSpeed += 0.5;
 	lineOfFireOffset -= 5;
 	reachHalfHealth = true;
-	maxSpeed += 0.4;
+	maxSpeed += 0.3;
 	spinRate += 0.3;
-	actTime --;
+	actTime -= 2;
+	pSpeed += 0.3;
 	spinAttackFireRate -= 4;
 	spinAttackMaxAmmo ++;
 	amountOfSpinBulletProjectiles += 2;
@@ -91,8 +99,9 @@ else if !reachLowHealth && my_health < maxhealth * 0.35
 	spinAttackMaxAmmo ++;
 	maxSpeed += 0.25;
 	spinRate -= 0.18;
-	pSpeed ++;
+	pSpeed += 0.9;
 	amountOfSpinBulletProjectiles += 2;
+	instance_create(x,y,PortalEnviromentReplacerVoid);
 	with MusCont
 	{
 		audio_stop_sound(song);

@@ -15,7 +15,11 @@ repeat(am)
 	instance_create(xx,yy,Explosion);
 	dir += angstep;
 }
-
+instance_activate_all();
+with UberCont
+{
+	ds_list_clear(keepDeactive);	
+}
 with MusCont
 {
 	audio_stop_sound(song);

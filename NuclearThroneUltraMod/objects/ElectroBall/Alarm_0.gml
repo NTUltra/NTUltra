@@ -4,5 +4,5 @@ sprite_index=sprElectroEffect;
 motion_add(other.direction+random(30)-15,random(2))
 }
 
-alarm[0]=4;
+alarm[0]=5;
 

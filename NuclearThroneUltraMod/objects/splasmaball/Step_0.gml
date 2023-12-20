@@ -6,5 +6,5 @@ if UberCont.normalGameSpeed == 60
 if abs(angleDir > 1)
 {
 	direction += angleDir*dt;
-	angleDir -= 0.6*sign(angleDir)*dt;
+	angleDir -= 0.8*sign(angleDir)*dt;
 }

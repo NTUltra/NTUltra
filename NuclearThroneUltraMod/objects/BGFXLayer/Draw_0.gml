@@ -13,22 +13,8 @@ for (var i = 0; i < al; i++;)
 	var toDraw = drawer[| i];
 	var dx = toDraw.xx - cx
 	var dy = toDraw.yy - cy
-	//var hsw = toDraw.sw * 0.5;
-	//var hsh = toDraw.sh * 0.5;
 	var ang = toDraw.angle;
-	//var r = surface_get_width(surf);
-	//var b = surface_get_height(surf);
-	//on screen?
-	/*
-	if (
-		dx + lengthdir_x(hsw,ang) >= 0 
-		&& dx + lengthdir_x(hsw,ang+180) <= r
-		&& dy + lengthdir_y(hsh,ang) >= 0
-		&& dy + lengthdir_y(hsh,ang+180) <= b
-	)
-	{*/
 		draw_sprite_ext(toDraw.spr,toDraw.ii,dx,dy,toDraw.xscale,toDraw.yscale,ang,toDraw.col,toDraw.alpha);
-	//}
 }
 if fps_real < fps
 {

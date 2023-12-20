@@ -4,3 +4,4 @@ if isWeekly
 	opt_gamemode = [0];	
 }
 scrSave();
+ds_list_destroy(keepDeactive);

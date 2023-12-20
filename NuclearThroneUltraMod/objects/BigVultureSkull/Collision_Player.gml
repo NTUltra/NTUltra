@@ -26,6 +26,11 @@ if spr_idle == sprBigVultureSkullOpen
 			spr_idle = sprBigFishSkull;
 			sprite_index = sprBigFishSkull;
 		}
+		with instance_create(x,y,PortalEnviromentReplacer)
+		{
+			area = 10;
+			prevArea = 1;
+		}
 	}
 	
 }

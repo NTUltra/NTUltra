@@ -19,4 +19,4 @@ if spinAttackAmmo > 0
 	alarm[6] = spinAttackFireRate;
 	alarm[1] += spinAttackFireRate-2;
 }
-scrDrop(12,0);
+scrDrop(14,0);

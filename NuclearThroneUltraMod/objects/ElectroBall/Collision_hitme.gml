@@ -2,8 +2,6 @@ if other.team != team and other.my_health > 0 && !array_contains(hitEntities,oth
 {
 	hitEntities[array_length(hitEntities)] = other.id;
 	BackCont.shake += 2
-	image_xscale-=0.1;
-	image_yscale-=0.1;
 	with other
 	{
 		if sprite_index!=spr_hurt

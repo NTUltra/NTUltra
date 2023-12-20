@@ -2,6 +2,7 @@
 if audio_is_playing(sndSheepLoop)
 	audio_stop_sound(sndSheepLoop);
 instance_destroy();
+instance_create(x,y,PortalEnviromentReplacerVoid);
 with instance_create(x,y-6,BallBoss)
 {
 	anchorX = BallBossWave.centerX;

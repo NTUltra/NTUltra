@@ -88,5 +88,10 @@ if my_health > 0
 			pullstrength = 3;
 			alarm[1] = 1;
 		}
+		with instance_create(x,y,PortalEnviromentReplacer)
+		{
+			area = Player.area;
+			prevArea = 9;
+		}
 	}
 }

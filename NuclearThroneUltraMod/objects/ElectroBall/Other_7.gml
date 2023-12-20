@@ -1,3 +1,2 @@
-//instance_create(x,y,Dust)
-speed = 4
-
+/// @description Add soeed
+speed += 2;

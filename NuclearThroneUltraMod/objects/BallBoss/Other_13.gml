@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+scrRaddrop(14);
 if target != noone && instance_exists(target) && !instance_exists(InvertedThrone2WaveSquareBullet) && instance_exists(Player) && abs(Player.x - x) > 48
 {
 	var am = 12;

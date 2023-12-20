@@ -204,11 +204,11 @@ function scrSkills() {
 	//50% OF EXCESS DAMAGE YOU DEAL#IS ADDED TO YOUR NEXT HIT
 	//+5%
 	skill_text[11] = "SOME <w>EXCESS<w> <r>DAMAGE<r> TRANSFERS TO#THE NEXT <r>DAMAGE<r> YOU <w>DEAL<w>"; 
-	skill_detail[11] = "50% OF <w>EXCESS<w> <r>DAMAGE<r> YOU <w>DEAL<w>#IS ADDED TO THE <w>NEXT<w> <r>DAMAGE<r> YOU <w>DEAL<w>"
+	skill_detail[11] = "55% OF <w>EXCESS<w> <r>DAMAGE<r> YOU <w>DEAL<w>#IS ADDED TO THE <w>NEXT<w> <r>DAMAGE<r> YOU <w>DEAL<w>"
 	skill_tips[11] = "imprint fear"//"mirrors will break"
 	skill_msnd[11] =  sndMutScarierFace
 	skill_bons[11] = "DID NOT IMPLEMENT THIS FOR THE BETA";
-	//skill_bons[11] = "+2% LESS ENEMY HP";
+	skill_bons[11] = "+3% EXCESS DAMAGE";
 
 	skill_name[12] = "EUPHORIA"
 	skill_text[12] = "SLOWER ENEMY BULLETS#SHORT <aq>INVINCIBILITY<aq> UPON GETTING HIT";
@@ -421,12 +421,12 @@ function scrSkills() {
 	
 	
 	skill_name[33] = "GLASS ARM CANNON"//Metroid reference I guess
-	skill_text[33] = "26% LESS ENEMY <r>HP<r>#-1 <r>MAX HP<r>"
-	skill_detail[33] = "26% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS#-1 <r>MAX HP<r>"
+	skill_text[33] = "25% LESS ENEMY <r>HP<r>#-1 <r>MAX HP<r>"
+	skill_detail[33] = "25% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS#-1 <r>MAX HP<r>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
-		skill_text[33] = "26% LESS ENEMY <r>HP<r>#-1 <gb>MAX ARMOUR<gb>"
-		skill_detail[33] = "26% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS#-1 <gb>MAX ARMOUR<gb>"
+		skill_text[33] = "25% LESS ENEMY <r>HP<r>#-1 <gb>MAX ARMOUR<gb>"
+		skill_detail[33] = "25% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS#-1 <gb>MAX ARMOUR<gb>"
 	}
 	skill_tips[33] = "fragile"
 	skill_msnd[33] =  sndMutGlassArmCannon
@@ -434,7 +434,7 @@ function scrSkills() {
 	{
 		if (Player.race == 4 && Player.maxhealth <= 1 && UberCont.ctot_skill_taken[33] <= 0)
 		{
-			skill_detail[33] = "26% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-1 <r>MAX HP<r>#<pi>TAKING THIS WONT KILL YOU<pi> <r><3<r>"	
+			skill_detail[33] = "25% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-1 <r>MAX HP<r>#<pi>TAKING THIS WONT KILL YOU<pi> <r><3<r>"	
 		}
 	}
 	skill_bons[33] = "-2% ENEMY HP";

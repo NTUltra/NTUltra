@@ -13,7 +13,6 @@ image_speed = 0.5
 
 sprInactive = sprElectroBallBig;
 sprActive = sprElectroBallBigActive;
-resetSpeed=false;
 alarm[1]=1;
 alarm[0]=1;
 alarm[2] = 4;

@@ -14,6 +14,8 @@ if target != noone {
             //Fire
             if random(5) < 4 && ammo > 0 {
                 gunangle = point_direction(xprevious, yprevious, target.xprevious, target.yprevious)
+				if ammo == 0
+					alarm[2] += 6;
 				gonnashoot += 6;
 				with JungleBandit
 				{

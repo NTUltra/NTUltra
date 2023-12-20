@@ -122,7 +122,7 @@ draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 )+__view_
 
 	//draw_set_halign(fa_right)
 	//draw_text_color(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+65,string_hash_to_newline(string(UberCont.completionpercentage)+"% COMPLETE"),c_black,c_black,c_black,c_black,1);
-	draw_text_color(__view_get( e__VW.XView, 0 )+32,__view_get( e__VW.YView, 0 ) - 20 + widescreen,string(UberCont.completionpercentage)+"% COMPLETE",c_white,c_white,c_white,c_white,1);
+	draw_text_color(__view_get( e__VW.XView, 0 )+32,__view_get( e__VW.YView, 0 ) - 20 + widescreen,string(UberCont.completionpercentage)+"%\nCOMPLETE",c_white,c_white,c_white,c_white,1);
 	draw_set_halign(fa_right)
 	if UberCont.useSeed && UberCont.seedText != ""
 		draw_text_color(__view_get( e__VW.XView, 0 )+camera_get_view_width(view_camera[0])-8,__view_get( e__VW.YView, 0 ) - 9 + widescreen,+"SEED: "+string(UberCont.seedText),c_white,c_white,c_white,c_white,1);

@@ -12,17 +12,20 @@ function healMe(amount) {
 
 function suck() {
 	sprite_index=spr_fire;
-	suckstrength+=suckAcc;
+	var dt = 1;
+	if UberCont.normalGameSpeed == 60
+		dt = 0.5;
+	suckstrength+=suckAcc *dt;
 	with Player
 	{
 		if point_distance(x,y,other.x,other.y) < 240
 		{
 			if !skill_got[2] && collision_line(x,y,other.x,other.y, Wall, 0, 0) < 0
 			{
-				if place_free(x+lengthdir_x(other.suckstrength,point_direction(x,y,other.x,other.y)),y)
-					x += lengthdir_x(other.suckstrength,point_direction(x,y,other.x,other.y))
-				if place_free(x,y+lengthdir_y(other.suckstrength,point_direction(x,y,other.x,other.y)))
-					y += lengthdir_y(other.suckstrength,point_direction(x,y,other.x,other.y))
+				if place_free(x+lengthdir_x(other.suckstrength*dt,point_direction(x,y,other.x,other.y)),y)
+					x += lengthdir_x(other.suckstrength*dt,point_direction(x,y,other.x,other.y))
+				if place_free(x,y+lengthdir_y(other.suckstrength*dt,point_direction(x,y,other.x,other.y)))
+					y += lengthdir_y(other.suckstrength*dt,point_direction(x,y,other.x,other.y))
 			}
 		}
 		else 

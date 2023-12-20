@@ -22,6 +22,10 @@ if spr_idle == sprHotDrakeSkullIdleOpen
 			pullstrength = 3;
 			alarm[1] = 1;
 		}
-	
+		with instance_create(x,y,PortalEnviromentReplacer)
+		{
+			area = 7;
+			prevArea = 3;
+		}
 	}
 }

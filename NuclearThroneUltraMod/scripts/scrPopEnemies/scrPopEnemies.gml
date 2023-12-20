@@ -473,8 +473,8 @@ function scrPopEnemies() {
 		if loops > 0 {
 			if random(10) < 1
 			{
-				repeat(2+irandom(2))
-					instance_create(x + 16, y + 16, SquareBat)
+				instance_create(x + 12, y + 16, SquareBat)
+				instance_create(x + 20, y + 16, SquareBat)
 			}
 			else if random(11) < 1
 			{
@@ -488,8 +488,8 @@ function scrPopEnemies() {
 		} else {
 			if random(10) < 1
 			{
-				repeat(2+irandom(2))
-					instance_create(x + 16, y + 16, SquareBat)
+				instance_create(x + 12, y + 16, SquareBat)
+				instance_create(x + 20, y + 16, SquareBat)
 			}
 			else if random(10) < 1
 			{
@@ -524,8 +524,8 @@ function scrPopEnemies() {
 		if loops > 0 {
 			if random(10) < 1
 			{
-				repeat(2+irandom(2))
-					instance_create(x + 16, y + 16, InvertedSquareBat)
+				instance_create(x + 12, y + 16, InvertedSquareBat)
+				instance_create(x + 20, y + 16, InvertedSquareBat)
 			}
 			else if random(12) < 1
 			{
@@ -542,8 +542,8 @@ function scrPopEnemies() {
 		} else {
 			if random(10) < 1
 			{
-				repeat(2+irandom(2))
-					instance_create(x + 16, y + 16, InvertedSquareBat)
+				instance_create(x + 12, y + 16, InvertedSquareBat)
+				instance_create(x + 20, y + 16, InvertedSquareBat)
 			}
 			else if random(10) < 1
 			{

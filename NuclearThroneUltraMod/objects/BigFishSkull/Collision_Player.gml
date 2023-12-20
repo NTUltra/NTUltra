@@ -22,9 +22,10 @@ if loops > 0 && spr_idle = sprBigFishSkullOpen && !instance_exists(WantBoss) && 
 		with instance_create(x,y,WantBoss)
 		{oasis=true;
 		event_perform(ev_alarm,0) }
-		/*
-		with instance_create(x,y,Portal) 
-			type = 1*/
-
+		with instance_create(x,y,PortalEnviromentReplacer)
+		{
+			area = 101;
+			prevArea = 1;
+		}
 	}
 }

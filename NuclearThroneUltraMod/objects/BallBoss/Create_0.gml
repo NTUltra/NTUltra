@@ -1,5 +1,5 @@
 raddrop = 600
-maxhealth = 3400//2500
+maxhealth = 3450//2500
 if instance_exists(InvaderBossSpawnPortal)
 {
 	maxhealth = 900;
@@ -19,17 +19,17 @@ snd_hurt = sndPillarBreak
 snd_dead = sndPillarBreak
 
 //behavior
-alarm[1] = 170;
+alarm[1] = 150;
 wkick = 0
-actTime = 16;
+actTime = 15;
 myCompanions = [];
 amountOfProjectiles = 54//64;
 alarm[2] = 10;
-alarm[3] = 130;
+alarm[3] = 110;
 spinRate = 1.8;
-pSpeed = 3;
+pSpeed = 2.8;
 waveSpeed = 3.2;
-maxSpeed = 2.6;
+maxSpeed = 2.5;
 if instance_exists(Player) && Player.skill_got[12]
 {
 	spinRate -= 0.2;

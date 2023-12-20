@@ -55,8 +55,17 @@ if (alarm[4] < 0) {
 	{
 		walk -= 1
 		motion_add(direction,3)
-		if target != noone && instance_exists(target)
-			mp_potential_step(target.x,target.y,2,false)
+		if distance_to_object(target) > 40
+		{
+			if UberCont.normalGameSpeed == 60
+				mp_potential_step(target.x,target.y,0.5,false)
+			else
+				mp_potential_step(target.x,target.y,1,false)
+		}
+		else
+		{
+			motion_add(point_direction(x,y,target.x,target.y)+180,2.8)
+		}
 	}
 
 	
@@ -93,11 +102,8 @@ if (alarm[4] < 0) {
 		
 	}
 	else if canDodge && point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<60 && aggression <= 180 && alarm[2] < 1 {
-		if target != noone && instance_exists(target) && instance_exists(Player) && Player.fired
+		if target != noone && instance_exists(target) && instance_exists(Player) && Player.fired && distance_to_object(target) > 48
 		{
-			if point_distance(x,y,target.x,target.y) < 64
-			direction = point_direction(x,y,target.x,target.y)
-			else
 			direction = point_direction(target.x+lengthdir_x(point_distance(x,y,target.x,target.y)*0.95,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),target.y+lengthdir_y(point_distance(x,y,target.x,target.y)*0.95,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),x,y)+random(60)-30
 			dodge = 3;
 			walk = 4;

@@ -3530,8 +3530,8 @@ function scrWeapons() {
 	wep_name[320] = "DISPERSE BAZOOKA"
 	wep_type[320] = 4
 	wep_auto[320] = 1
-	wep_load[320] = 30
-	wep_cost[320] = 12
+	wep_load[320] = 45
+	wep_cost[320] = 10
 	wep_sprt[320] = sprDisperseBazooka
 	wep_area[320] = 20
 	wep_text[320] = "medicinal herb gun"
@@ -6222,7 +6222,7 @@ function scrWeapons() {
 	wep_swap[562] = sndSwapBow
 	wep_rad[562] = 0;
 	
-	wep_name[563] = "SUPER ELECTRO CANNON"
+	wep_name[563] = "SUPER ELECTRO CAexNNON"
 	wep_type[563] = 5
 	wep_auto[563] = 1
 	wep_load[563] = 335
@@ -6313,8 +6313,8 @@ function scrWeapons() {
 	wep_name[571] = "SUPER HEAVY SHOTGUN"
 	wep_type[571] = 2
 	wep_auto[571] = 0
-	wep_load[571] = 120
-	wep_cost[571] = 24
+	wep_load[571] = 100
+	wep_cost[571] = 22
 	wep_sprt[571] = sprHeavySuperShotgun
 	wep_area[571] = 27
 	wep_text[571] = "sooo many pellets"
@@ -7662,6 +7662,17 @@ function scrWeapons() {
 	wep_text[693] = "ultra whip"
 	wep_swap[693] = sndSwapSword
 	wep_rad[693] = 16;
+	
+	wep_name[694] = "ELECTRO CROSSBOW"
+	wep_type[694] = 5
+	wep_auto[694] = 1
+	wep_load[694] = 12
+	wep_cost[694] = 2
+	wep_sprt[694] = sprElectroGun
+	wep_area[694] = 10
+	wep_text[694] = "electronic wiring"
+	wep_swap[694] = sndSwapEnergy
+	wep_rad[694] = 0;
 
 	maxwep = array_length(wep_name)-1;
 

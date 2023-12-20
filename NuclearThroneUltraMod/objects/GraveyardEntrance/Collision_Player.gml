@@ -25,6 +25,12 @@ if my_health > 0
 				motion_add(random(360),1 + random(2));	
 			}
 		}
+		
+		with instance_create(x,y,PortalEnviromentReplacer)
+		{
+			area = 126;
+			prevArea = 10;
+		}
 		/*
 		with instance_create(x,y,Portal)
 		{

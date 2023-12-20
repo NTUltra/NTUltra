@@ -2,6 +2,12 @@ event_inherited()
 
 motion_add(targetDirection,0.8)
 
+if (firstTime && my_health < maxhealth) {
+	if UberCont.normalGameSpeed == 60
+		my_health += 1;
+	else
+		my_health += 2;
+}	
 if speed > maxSpeed
 speed = maxSpeed
 

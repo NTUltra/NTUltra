@@ -5,19 +5,21 @@ if circleMode {
 	if target != noone && instance_exists(target)
 	{
 		var lerpp = lp;
+		
+		var rt = rotationSpeed;
+		if (UberCont.normalGameSpeed == 60)
+		{
+			rt *= 0.5;
+		}
 		x += clamp(((target.x + lengthdir_x(circleDistance,angle))-x)*lerpp,-maxSpeed,maxSpeed);
 		y += clamp(((target.y + lengthdir_y(circleDistance,angle))-y)*lerpp,-maxSpeed,maxSpeed);
-		angle += rotationSpeed; 
+		angle += rt; 
+		if !collision_point(x,y,Floor,false,false)
+			angle += rt * 0.5;
 		if target.x < x
 			right = -1
 		else if target.x > x
 			right = 1
-		if (UberCont.normalGameSpeed == 60)
-		{
-			hspeed *= 2;
-			vspeed *= 2;
-			angle -= rotationSpeed*0.5;
-		}
 	}
 	else
 	{

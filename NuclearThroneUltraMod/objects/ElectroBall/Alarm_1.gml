@@ -11,7 +11,7 @@ if instance_exists(ElectroBall)
 		sprite_index=sprActive;
 
 			if !audio_is_playing(sndSpark1)&&!audio_is_playing(sndSpark2)
-			snd_play(choose(sndSpark1,sndSpark2))
+				snd_play(choose(sndSpark1,sndSpark2))
 			var ahead = 2;
 			var tx = target.x + (target.hspeed*ahead);
 			var ty = target.y + (target.vspeed*ahead);

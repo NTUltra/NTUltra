@@ -1,5 +1,5 @@
 snd_play(sndPlasmaHit,0.1,true)
-event_inherited()
+event_inherited();
 with instance_create(x,y,PlasmaImpact)
 {
 	dmg = other.dmg;
@@ -7,4 +7,3 @@ with instance_create(x,y,PlasmaImpact)
 	mask_index = mskElectroImpact;
 	scrCopyWeaponMod(other);
 }
-Sleep(10)

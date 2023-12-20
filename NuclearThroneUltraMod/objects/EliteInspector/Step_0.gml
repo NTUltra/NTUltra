@@ -64,10 +64,16 @@ speed = 3
 
 if instance_exists(Player)
 {
-if Player.speed > 0 or my_health < maxhealth
-freeze += 4
-if Player.can_shoot = 0
-freeze += 8
+	if instance_exists(Player)
+	{
+		var dt = 1;
+		if UberCont.normalGameSpeed == 60
+			dt = 0.5;
+		if Player.speed > 0 or my_health < maxhealth
+			freeze += 4 * dt
+		if Player.can_shoot = 0
+			freeze += 8 * dt;
+	}
 }
 
 if control = 1 && instance_exists(target)

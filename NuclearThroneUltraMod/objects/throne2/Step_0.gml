@@ -17,8 +17,6 @@ if instance_exists(Player) && crossAmmo < 1
 		right = 1
 	if (UberCont.normalGameSpeed == 60)
 	{
-		hspeed *= 2;
-		vspeed *= 2;
 		angle -= rotationSpeed*0.5;
 	}
 }

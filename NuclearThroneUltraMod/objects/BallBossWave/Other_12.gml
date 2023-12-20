@@ -14,12 +14,65 @@ with Floor
 {
 	if !isArenaFloor
 	{
+		/*
 		instance_create(x+16,y+16,Wall);	
 		instance_create(x,y,Wall);
 		instance_create(x,y+16,Wall);
-		instance_create(x+16,y,Wall);
+		instance_create(x+16,y,Wall);*/
+		with instance_place(x,y,prop)
+		{
+			instance_deactivate_object(id);
+			with UberCont {
+				ds_list_add(keepDeactive,other.id);
+			}
+		}
+		with UberCont {
+			ds_list_add(keepDeactive,other.id);
+		}
 	}
 }
+with CrownPed 
+{
+	instance_deactivate_object(id);
+	with UberCont {
+		ds_list_add(keepDeactive,other.id);	
+	}
+}
+with CrownVaultExit 
+{
+	instance_deactivate_object(id);
+	with UberCont {
+		ds_list_add(keepDeactive,other.id);	
+	}
+}
+with CrownVaultSecretExit 
+{
+	instance_deactivate_object(id);
+	with UberCont {
+		ds_list_add(keepDeactive,other.id);	
+	}
+}
+with CourtyardEntrance 
+{
+	instance_deactivate_object(id);
+	with UberCont {
+		ds_list_add(keepDeactive,other.id);	
+	}
+}
+with CrownPickup 
+{
+	instance_deactivate_object(id);
+	with UberCont {
+		ds_list_add(keepDeactive,other.id);	
+	}
+}
+with CrownGuardian {
+	instance_destroy(id,false);
+}
+with GuardianStatue {
+	instance_destroy(id,false);	
+}
+instance_create(x,y,AreaResetter);
 var openMind = false;
 if instance_exists(Player) && Player.skill_got[23]
 	openMind = true;
@@ -48,6 +101,13 @@ with MusCont
 }
 var i = 0;
 wave[i] = {
+	obj: PortalEnviromentReplacerSavanna,
+	time: 1,
+	xx: BigVultureStatue.x,
+	yy: BigVultureStatue.y
+};
+i++;
+wave[i] = {
 	obj: BigVulture,
 	time: 60,
 	xx: BigVultureStatue.x,
@@ -63,8 +123,15 @@ repeat(4)
 	i++;
 }
 wave[i] = {
+	obj: PortalEnviromentReplacerOasis,
+	time: 5,
+	xx: BigFishStatue.x,
+	yy: BigFishStatue.y
+};
+i++;
+wave[i] = {
 	obj: BigFish,
-	time: 120,
+	time: 110,
 	xx: BigFishStatue.x,
 	yy: BigFishStatue.y
 };
@@ -123,6 +190,36 @@ wave[i] = {
 	yy: centerY
 };
 i++
+wave[i] = {
+	obj: PortalEnviromentReplacerCrown,
+	time: 20,
+	xx: centerX,
+	yy: centerY
+};
+i++
+repeat(8)
+{
+	wave[i] = {
+		obj: CourtyardGuardian,
+		time: 10,
+	};
+	i++;
+}
+wave[i] = {
+	obj: PortalEnviromentReplacerCrown,
+	time: 20,
+	xx: centerX,
+	yy: centerY
+};
+i++
+repeat(4)
+{
+	wave[i] = {
+		obj: CourtyardTank,
+		time: 10,
+	};
+	i++;
+}
 if openMind
 {
 	wave[i] = {
@@ -143,21 +240,42 @@ i++;
 
 wave[i] = {
 	obj: ChesireCat,
-	time: 90,
+	time: 5,
 	xx: ChesireCatStatue.x,
 	yy: ChesireCatStatue.y
 };
 i++;
 wave[i] = {
-	obj: BigVulture,
-	time: 90,
+	obj: PortalEnviromentReplacerWonderland,
+	time: 85,
+	xx: ChesireCatStatue.x,
+	yy: ChesireCatStatue.y
+};
+i++;
+wave[i] = {
+	obj: PortalEnviromentReplacerSavanna,
+	time: 5,
 	xx: BigVultureStatue.x,
 	yy: BigVultureStatue.y
 };
 i++;
 wave[i] = {
+	obj: BigVulture,
+	time: 85,
+	xx: BigVultureStatue.x,
+	yy: BigVultureStatue.y
+};
+i++;
+wave[i] = {
+	obj: PortalEnviromentReplacerOasis,
+	time: 5,
+	xx: BigFishStatue.x,
+	yy: BigFishStatue.y
+};
+i++;
+wave[i] = {
 	obj: BigFish,
-	time: 180,
+	time: 175,
 	xx: BigFishStatue.x,
 	yy: BigFishStatue.y
 };
@@ -204,14 +322,14 @@ wave[i] = {
 i++;
 wave[i] = {
 	obj: AmmoChest,
-	time: 100,
+	time: 60,
 	xx: centerX+64,
 	yy: centerY+64
 };
 i++
 wave[i] = {
 	obj: HealthChest,
-	time: 100,
+	time: 30,
 	xx: centerX,
 	yy: centerY
 };
@@ -219,6 +337,20 @@ i++
 wave[i] = {
 	obj: BigDisc,
 	time: 170,
+	xx: centerX,
+	yy: centerY
+};
+i++;
+wave[i] = {
+	obj: PortalEnviromentReplacerCrown,
+	time: 10,
+	xx: centerX,
+	yy: centerY
+};
+i++;
+wave[i] = {
+	obj: CourtyardTank,
+	time: 10,
 	xx: centerX,
 	yy: centerY
 };
@@ -235,7 +367,14 @@ if openMind
 }
 wave[i] = {
 	obj: AssassinBoss,
-	time: 140,
+	time: 10,
+	xx: BigAssassinStatue.x,
+	yy: BigAssassinStatue.y
+};
+i++;
+wave[i] = {
+	obj: PortalEnviromentReplacerScrapyard,
+	time: 120,
 	xx: BigAssassinStatue.x,
 	yy: BigAssassinStatue.y
 };
@@ -280,10 +419,24 @@ if openMind
 	i++
 }
 wave[i] = {
-	obj: JungleBoss,
-	time: 140,
+	obj: PortalEnviromentReplacerJungle,
+	time: 5,
 	xx: BushBoxStatue.x,
 	yy: BushBoxStatue.y
+};
+i++;
+wave[i] = {
+	obj: JungleBoss,
+	time: 130,
+	xx: BushBoxStatue.x,
+	yy: BushBoxStatue.y
+};
+i++;
+wave[i] = {
+	obj: AreaResetter,
+	time: 30,
+	xx: centerX-64,
+	yy: centerY
 };
 i++;
 wave[i] = {
@@ -292,11 +445,12 @@ wave[i] = {
 	xx: centerX-64,
 	yy: centerY
 };
+i++;
 repeat(6)
 {
 	wave[i] = {
 		obj: JungleBandit,
-		time: 10,
+		time: 9,
 		xx: centerX,
 		yy: centerY
 	};
@@ -304,21 +458,28 @@ repeat(6)
 }
 wave[i] = {
 	obj: HealthChest,
-	time: 100,
+	time: 60,
 	xx: centerX+128,
 	yy: centerY+64
 };
 i++
 wave[i] = {
+	obj: PortalEnviromentReplacerJungle,
+	time: 5,
+	xx: centerX,
+	yy: centerY
+};
+i++;
+wave[i] = {
 	obj: JungleBandit,
-	time: 60,
+	time: 30,
 	xx: centerX,
 	yy: centerY
 };
 i++;
 wave[i] = {
 	obj: AmmoChest,
-	time: 60,
+	time: 30,
 	xx: centerX+64,
 	yy: centerY-64
 };
@@ -327,9 +488,17 @@ repeat(6)
 {
 	wave[i] = {
 		obj: JungleAssassin,
-		time: 10,
+		time: 9,
 		xx: centerX,
 		yy: centerY
+	};
+	i++;
+}
+repeat(4)
+{
+	wave[i] = {
+		obj: JungleAssassin,
+		time: 5,
 	};
 	i++;
 }
@@ -395,8 +564,15 @@ repeat(4)
 	i++;
 }
 wave[i] = {
+	obj: PortalEnviromentReplacerCave,
+	time: 5,
+	xx: HyperCrystalStatue.x,
+	yy: HyperCrystalStatue.y
+};
+i++;
+wave[i] = {
 	obj: HyperCrystal,
-	time: 200,
+	time: 180,
 	xx: HyperCrystalStatue.x,
 	yy: HyperCrystalStatue.y
 };
@@ -439,8 +615,15 @@ wave[i] = {
 };
 i++
 wave[i] = {
+	obj: PortalEnviromentReplacerCursedCave,
+	time: 5,
+	xx: HyperCrystalStatue.x,
+	yy: HyperCrystalStatue.y
+};
+i++;
+wave[i] = {
 	obj: CursedHyperCrystal,
-	time: 200,
+	time: 190,
 	xx: HyperCrystalStatue.x,
 	yy: HyperCrystalStatue.y
 };

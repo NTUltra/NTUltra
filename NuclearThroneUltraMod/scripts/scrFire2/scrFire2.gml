@@ -4090,7 +4090,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),ElectroBall)
 	{
-	motion_add(aimDirection+(random(8)-4)*other.accuracy,2)
+	motion_add(aimDirection+(random(8)-4)*other.accuracy,4)
 	image_angle = direction
 	team=other.team;
 
@@ -4119,7 +4119,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),ElectroBall)
 	{
-	motion_add(aimDirection+(random(16)-8)*other.accuracy,2)
+	motion_add(aimDirection+(random(16)-8)*other.accuracy,4)
 	image_angle = direction
 	team=other.team;
 
@@ -4171,7 +4171,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),ElectroBall)
 	{
-	motion_add(aimDirection+(random(8)-4)+24*other.accuracy,2)
+	motion_add(aimDirection+(random(8)-4)+24*other.accuracy,4)
 	image_angle = direction
 	team=other.team;
 
@@ -4183,7 +4183,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),ElectroBall)
 	{
-	motion_add(aimDirection+(random(8)-4)*other.accuracy,2)
+	motion_add(aimDirection+(random(8)-4)*other.accuracy,4)
 	image_angle = direction
 	team=other.team;
 
@@ -4195,7 +4195,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),ElectroBall)
 	{
-	motion_add(aimDirection+(random(8)-4)-24*other.accuracy,2)
+	motion_add(aimDirection+(random(8)-4)-24*other.accuracy,4)
 	image_angle = direction
 	team=other.team;
 
@@ -5723,7 +5723,7 @@ function scrFire2(hasTailNow) {
 
 		with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),ElectroBallBig)
 		{
-		motion_add(aimDirection+(random(8)-4)*other.accuracy,2)
+		motion_add(aimDirection+(random(8)-4)*other.accuracy,3)
 		image_angle = direction
 		team=other.team;
 
@@ -10420,7 +10420,7 @@ function scrFire2(hasTailNow) {
 
 		with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),ElectroBallHuge)
 		{
-		motion_add(aimDirection+(random(8)-4)*other.accuracy,1.8)
+		motion_add(aimDirection+(random(8)-4)*other.accuracy,2.5)
 		image_angle = direction
 		team=other.team;
 
@@ -14455,6 +14455,31 @@ function scrFire2(hasTailNow) {
 	BackCont.viewy2 += lengthdir_y(14,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 4
 	wkick = -6
+
+	break;
+	
+	//ELECTRO CROSSBOW
+	case 694:
+
+	snd_play_fire(sndCrossbow)
+	altFire = !altFire;
+	if altFire
+	{
+		wep_type[694] = 3;
+	}
+	else
+	{
+		wep_type[694] = 5;
+	}
+	with instance_create(x,y,ElectroBolt)
+	{motion_add(aimDirection,24)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(40,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(40,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 4
 
 	break;
 	

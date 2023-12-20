@@ -34,6 +34,10 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 			instance_destroy(id,false);	
 		}
 		instance_activate_all();
+		var al = ds_list_size(keepDeactive);
+		for (var i = 0; i < al; i++) {
+			instance_deactivate_object(keepDeactive[| i]);	
+		}
 		if normalGameSpeed = 30
 			with FPSHACK
 				instance_destroy();
@@ -122,7 +126,11 @@ instance_destroy()
 
 with FPSHACKMenu
 	instance_destroy();
-instance_activate_all()
+instance_activate_all();
+var al = ds_list_size(keepDeactive);
+for (var i = 0; i < al; i++) {
+	instance_deactivate_object(keepDeactive[| i]);	
+}
 if normalGameSpeed = 30
 	with FPSHACK
 		instance_destroy();
@@ -159,7 +167,11 @@ if (
 	
 		with FPSHACKMenu
 			instance_destroy();
-		instance_activate_all()
+		instance_activate_all();
+		var al = ds_list_size(keepDeactive);
+		for (var i = 0; i < al; i++) {
+			instance_deactivate_object(keepDeactive[| i]);	
+		}
 		if normalGameSpeed = 30
 			with FPSHACK
 				instance_destroy();
