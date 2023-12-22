@@ -30,20 +30,23 @@ if scrIsHardMode() //HARD MODE
 
 rerolls = 0;
 //RUSH CROWN
+loops = 0;
 if instance_exists(Player){
+	loops = Player.loops;
 	if Player.skill_got[3]
 	{
 		friction = 0.3;
 	}
 	if scrIsCrown(4) { alarm[0] *= 0.35}
 
-	if Player.race = 15{ alarm[0] *= 0.6}//atomf
+	if Player.race = 15{ alarm[0] *= 0.63}//atomf
 
 	if Player.ultra_got[59] && Player.altUltra
 	{
 		alarm[0] *= 0.4;
 		rerolls = 3;
 	}
+	alarm[0] *= 1 - min(0.3,loops*0.1);
 	alarm[0] = max(alarm[0],1);
 	if Player.ultra_got[60]//Anti matter
 		atomUltraD = true;

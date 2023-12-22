@@ -1,2 +1,2 @@
 /// @description Reduce dmg
-dmg -= 1;
+dmg -= dmgReduc;

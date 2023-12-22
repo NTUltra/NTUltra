@@ -153,7 +153,7 @@ function scrLoadRace() {
 	spr_idle=sprMutant25BIdle;
 	spr_walk=sprMutant25BWalk;
 	spr_hurt=sprMutant25BHurt;
-	spr_dead=sprMutant25Dead;
+	spr_dead=sprMutant25BDead;
 	break;
 	case 26:
 	spr_idle=sprMutant26BIdle;
@@ -259,7 +259,7 @@ function scrLoadRace() {
 	spr_dead=sprMutant14CDead;
 	break;
 	case 15:
-	spr_idle=sprMutant15CIdle;
+	spr_idle=sprMutant15CIdleOld;
 	spr_walk=sprMutant15CWalk;
 	spr_hurt=sprMutant15CHurt;
 	spr_dead=sprMutant15CDead;

@@ -12,15 +12,15 @@ if instance_exists(Player){
 	{
 		friction = 0.31;
 	}
-if Player.RadMony
-{
-sprite_index=sprBigRadMony;
-}
-if scrIsCrown(4) { alarm[0] /= 3}
+	if Player.RadMony
+	{
+	sprite_index=sprBigRadMony;
+	}
+	if scrIsCrown(4) { alarm[0] /= 3}
 
-if Player.race = 15{ alarm[0] /= 2}//atom
+	if Player.race = 15{ alarm[0] *= 0.63}//atom
 
-
+	alarm[0] *= 1 - min(0.3,Player.loops*0.1);
 	if Player.ultra_got[97] && Player.altUltra
 	{
 		snd_play(sndSwarm,0.1,true);

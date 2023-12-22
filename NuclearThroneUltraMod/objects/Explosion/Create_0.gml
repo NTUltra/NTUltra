@@ -9,6 +9,7 @@ weaponDropChanceIndex = -1;
 wepFire=0;
 dmg = 5;
 myExplosionMask = -1;
+myScorchMark = noone;
 var um = GetPlayerUltramod()
 if object_index != PopoExplosion && object_index != RogueExplosion && um == ultramods.bloodExplosionExplosion && UberCont.ultramodSwap
 {
@@ -55,7 +56,7 @@ if instance_exists(Player) {
 		scrCrownOfDeath();
 	}
 }
-
+motion_add(random(360),0.1);
 alarm[0]=3;
 
 

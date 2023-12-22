@@ -5,6 +5,7 @@ meleedamage = 0;
 maxhealth = 4
 event_inherited();
 image_speed = 0
+canOpenMind = true;
 raddrop=25;
 spr_idle = sprRadChest
 spr_hurt = sprRadChestHurt

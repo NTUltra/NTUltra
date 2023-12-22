@@ -290,7 +290,8 @@ if !instance_exists(LevCont) and visible = 1
 			//scrn++;
 			
 			//instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			instance_create(f.x,f.y,You)
+			repeat(4)
+			instance_create(f.x,f.y,Explosion)
 
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
 			thing.mytext = "Wall Crawler";
@@ -745,7 +746,7 @@ if !instance_exists(LevCont) and visible = 1
 					event_user(0);
 				scrFire();
 			}
-    		autoFire = 6;
+    		autoFire = max(wep_load[wep],6);
 		clicked = 0
 		}
 		else if wep_auto[wep] = 1 && holdKey
@@ -974,6 +975,7 @@ if (!instance_exists(LevCont))
 		scr60fpsReload();
 		if reload <= 0 && !can_shoot
 		{
+			autoFire = 5;
 			can_shoot = 1
 			with CloneShooter
 				instance_destroy();

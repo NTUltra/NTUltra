@@ -18,6 +18,7 @@ shadowXoffset = 0;
 myCorpse = -1;
 totemBuffed = false;
 wasResurrected = false;
+isSnooze = false;
 super = false;
 alarm[0] = 20;
 friction = 0.4;

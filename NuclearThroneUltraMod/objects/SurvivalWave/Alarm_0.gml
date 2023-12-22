@@ -13,24 +13,15 @@ with instance_create(xx,yy,obj)
 			{
 				alarm[1]+=25;
 	
-				with instance_create(x,y,Snooze)
-				{
-					owner = other.id;
-					yoffset = other.sprite_height*0.5 - 4;
-					depth = other.depth - 1;
-				}
+				scrGiveSnooze();
 			}
 		}
 		else
 		{
 			if alarm[1]>0
 			{
-		    alarm[1]+=20;
-				with instance_create(x,y,Snooze)
-				{
-					owner = other.id;
-					yoffset = other.sprite_height*0.5 - 4;
-				}
+				alarm[1]+=20;
+				scrGiveSnooze();
 			}
 		}
 	}

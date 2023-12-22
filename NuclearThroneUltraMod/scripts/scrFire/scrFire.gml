@@ -2315,8 +2315,8 @@ function scrFire() {
 	image_angle = direction
 	team = other.team}
 
-	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 3
 	wkick = 2
 
@@ -2826,7 +2826,7 @@ function scrFire() {
 	}
 
 	with instance_create(x,y,Bullet4)
-	{motion_add(aimDirection+(random(8)-4)*other.accuracy,20)
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,22)
 	image_angle = direction
 	team = other.team}
 

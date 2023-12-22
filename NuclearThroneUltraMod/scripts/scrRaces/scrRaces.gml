@@ -283,7 +283,7 @@ function scrRaces() {
 	race_eskin[15] = 0
 	race_fskin[15] = 0
 	race_bskin_lock[15] = "COMPLETE A#MAIN AREA#AFTER THE SEWERS#WITHOUT FIRING#AS ATOM"
-	race_cskin_lock[15] = "COMPLETE FIVE#LEVELS IN A ROW#USING CROWN OF HASTE#AS ATOM"
+	race_cskin_lock[15] = "COMPLETE FIVE#AREAS IN A ROW#USING CROWN OF HASTE#AS ATOM"
 
 
 	race_name[16] = "[VIKING]"

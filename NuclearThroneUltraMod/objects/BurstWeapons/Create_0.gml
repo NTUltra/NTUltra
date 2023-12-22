@@ -6,6 +6,7 @@ Mod4=0;
 wepFire=0;
 team = 0;
 boosted = false;
+ammo = 0;
 if instance_exists(Player)
 {
 	Mod1=Player.wepmod1;

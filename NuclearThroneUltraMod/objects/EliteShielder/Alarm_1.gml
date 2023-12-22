@@ -9,7 +9,7 @@ scrTarget();
 if target != noone
 {
 
-if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 && point_distance(x,y,target.x,target.y) > 300
+if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 && point_distance(x,y,target.x,target.y) < 400
 {
 //SEE TARGET
 gunangle = point_direction(x,y,target.x,target.y)

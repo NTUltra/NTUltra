@@ -21,6 +21,10 @@ if aditionalwep != 0
 		sprite_index = wep_sprt[other.aditionalwep]
 	}
 }
+if instance_exists(Player)
+{
+	scrChestOpenMindReload(Player);	
+}
 snd_play(sndWeaponChest)
 instance_destroy()
 

@@ -1,4 +1,5 @@
 if !instance_exists(Player){exit;}
+scrChestOpenMindReload(Player);	
 Player.nochest = 0
 repeat(1+Player.ultra_got[25]){//ROIDS ULTRA A DOUBLE WEPS
 with instance_create(x-8,y,WepPickup)

@@ -8,5 +8,7 @@ else
 if instance_exists(Vlambeer)
 {
 	alarm[2] = 0;
+	alarm[6] = 0;
+	alarm[7] = 0;
 	gameovertime = 0;
 }

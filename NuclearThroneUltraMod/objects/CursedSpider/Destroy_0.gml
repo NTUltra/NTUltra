@@ -17,12 +17,7 @@ if random(4) > 3 + generation/3 {
 				{
 					alarm[1] += 60;
 					existTime = 0;
-					with instance_create(x,y,Snooze)
-					{
-						owner = other.id;
-						depth = other.depth - 1;
-						yoffset = 0;
-					}
+					scrGiveSnooze(0);
 				}
 					
 			}

@@ -5933,7 +5933,7 @@ function scrWeapons() {
 	wep_sprt[536] = sprSeekerCannon
 	wep_area[536] = 12
 	wep_text[536] = "seek and deploy"
-	wep_swap[536] = sndSwapEnergy
+	wep_swap[536] = sndSwapBow
 	wep_rad[536] = 0;
 	
 	wep_name[537] = "SUPER SEEKER CANNON"
@@ -5944,7 +5944,7 @@ function scrWeapons() {
 	wep_sprt[537] = sprSuperSeekerCannon
 	wep_area[537] = 18
 	wep_text[537] = "SSC!"
-	wep_swap[537] = sndSwapEnergy
+	wep_swap[537] = sndSwapBow
 	wep_rad[537] = 0;
 	
 	wep_name[538] = "SUPER BLOOD CANNON"
@@ -5953,7 +5953,7 @@ function scrWeapons() {
 	wep_load[538] = 340
 	wep_cost[538] = 23
 	wep_sprt[538] = sprSuperBloodCannon
-	wep_area[538] = 19
+	wep_area[538] = 19 
 	wep_text[538] = "SBC!"
 	wep_swap[538] = sndSwapEnergy
 	wep_rad[538] = 0;
@@ -6479,9 +6479,9 @@ function scrWeapons() {
 	wep_type[586] = 4
 	wep_auto[586] = 0
 	wep_load[586] = 40//11
-	wep_cost[586] = 3
+	wep_cost[586] = 3.5
 	wep_sprt[586] = sprSuperClusterNader
-	wep_area[586] = 9
+	wep_area[586] = 10
 	wep_text[586] = ""
 	wep_swap[586] = sndSwapExplosive
 	wep_rad[586] = 0;
@@ -6985,7 +6985,7 @@ function scrWeapons() {
 	wep_type[632] = 4
 	wep_auto[632] = 1
 	wep_load[632] = 6
-	wep_cost[632] = 0.5
+	wep_cost[632] = 0.75
 	wep_sprt[632] = sprMiniRocketGun
 	wep_area[632] = 8
 	wep_text[632] = ""
@@ -7073,7 +7073,7 @@ function scrWeapons() {
 	wep_type[640] = 4
 	wep_auto[640] = 1
 	wep_load[640] = 20
-	wep_cost[640] = 2.5
+	wep_cost[640] = 2.75
 	wep_sprt[640] = sprMiniRocketShotgun
 	wep_area[640] = 12
 	wep_text[640] = ""

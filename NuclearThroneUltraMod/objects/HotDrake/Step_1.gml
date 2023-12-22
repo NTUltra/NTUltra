@@ -32,11 +32,7 @@ if (instance_number(enemy) <= 3 + min(6,loops)|| instance_exists(SurvivalWave) |
 	instance_create(x,y,DramaCamera);
 	if instance_exists(Player) && Player.skill_got[29] {
 		alarm[1] += 60;
-		with instance_create(x,y,Snooze)
-		{
-			owner = other.id;
-			yoffset = other.sprite_height*0.5 - 4;
-		}
+		scrGiveSnooze();
 	}
 	}
 }

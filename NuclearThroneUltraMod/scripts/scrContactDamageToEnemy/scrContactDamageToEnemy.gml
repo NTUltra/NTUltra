@@ -135,7 +135,7 @@ function scrContactDamageToEnemy(hitEnemy){
 			}
 		}
 
-		if hitEnemy.meleedamage > 0 && hitEnemy.existTime > 25 && !justAsheep//is it a melee enemy?
+		if hitEnemy.meleedamage > 0 && hitEnemy.existTime > 25 && !justAsheep && !hitEnemy.isSnooze//is it a melee enemy?
 		&& collision_line(x,y,hitEnemy.x,hitEnemy.y,Wall,false,false) == noone
 		{
 			if meleeimmunity < 1

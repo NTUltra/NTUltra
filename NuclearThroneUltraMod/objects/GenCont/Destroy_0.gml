@@ -271,12 +271,12 @@ if instance_exists(Player)
 				}
 			}
 		}
-	    if skill_got[29]//insomnia
+	    if skill_got[29]//hypersomnia insomnia
 	    {
-			var t = 200;
+			var t = 185;
 		    if race = 25
 		    {
-				t = 240;
+				t = 220;
 		    }
 			if !justAsheep
 			{
@@ -285,11 +285,8 @@ if instance_exists(Player)
 				    if alarm[1]>0
 					{
 						alarm[1]+=t;
-						with instance_create(x,y,Snooze)
-						{
-							owner = other.id;
-							yoffset = other.sprite_height*0.5 - 4;
-						}
+						scrGiveSnooze();
+						
 					}
 			    }
 			}

@@ -1,8 +1,9 @@
 /// @description Rotate
 if instance_exists(owner)
 {
+	var dt = UberCont.normalGameSpeed == 60 ? 0.5 : 1
 	distance = lerp(0,maxdistance,min(disLerp,1));
-	disLerp += 0.05;
+	disLerp += 0.05*dt;
 	image_angle = 0;
 	if dirStep = 0
 	{
@@ -78,16 +79,17 @@ if instance_exists(owner)
 	}
 	if rotationDirection == 1
 	{
-		lerpStep += min(0.3,rotateSpeed/distance);
+		lerpStep += min(0.3,rotateSpeed/distance)*dt;
 		if lerpStep > 1
-			lerpStep -= 1;
+			lerpStep -= 1*dt;
 	}
 	else
 	{
-		lerpStep -= min(0.3,rotateSpeed/distance);
+		lerpStep -= min(0.3,rotateSpeed/distance)*dt;
 		if lerpStep < 0
-			lerpStep += 1;
+			lerpStep += 1*dt;
 	}
+	scrForcePosition60fps();
 }
 else
 {

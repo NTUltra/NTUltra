@@ -1052,9 +1052,9 @@ function scrDrawHUD() {
 		draw_set_halign(fa_left)
 		draw_sprite(sprHumphrySkill,0,vx+2,vy+66)
 		draw_set_color(c_black)
-		draw_text(vx+15,vy+68,string_hash_to_newline(string(txt)))
-		draw_text(vx+15,vy+69,string_hash_to_newline(string(txt)))
+		draw_text(vx+17,vy+68,string_hash_to_newline(string(txt)))
 		draw_text(vx+16,vy+69,string_hash_to_newline(string(txt)))
+		draw_text(vx+17,vy+69,string_hash_to_newline(string(txt)))
 
 		if instance_exists(PlayerAlarms) && PlayerAlarms.alarm[7] > 0 || (instance_exists(HumphryDiscipline) && !(dataRef.altUltra && dataRef.ultra_got[104]))
 			draw_set_color(c_red)

@@ -15,12 +15,7 @@ if target != noone
 				if Player.skill_got[29]	//Insomnia
 				{
 					alarm[1] += 30;
-					with instance_create(x,y,Snooze)
-					{
-						owner = other.id;
-						depth = other.depth - 1;
-						yoffset = 0;
-					}
+					scrGiveSnooze();
 				}
 			}
 		}

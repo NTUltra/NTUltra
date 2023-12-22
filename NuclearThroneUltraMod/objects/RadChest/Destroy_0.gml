@@ -7,6 +7,10 @@ mask_index = other.mask_index
 sprite_index = other.spr_dead
 }
 scrRaddrop();
+if canOpenMind && instance_exists(Player)
+{
+	scrChestOpenMindReload(Player);
+}
 }
 
 repeat(4)

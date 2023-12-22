@@ -60,8 +60,8 @@ function scrDrop(itemdrop, weapondrop) {
 		{
 			repeat(min(lps,4))
 			{
-				itemdrop *= 0.9;
-				canHealth *= 0.95;//0.98
+				itemdrop *= 0.91;
+				canHealth *= 0.94;//0.98
 			}
 		}
 		if lps > 2
@@ -74,8 +74,8 @@ function scrDrop(itemdrop, weapondrop) {
 		}
 	if scrIsCrown(5)//crown of guns
 	{
-		weapondrop *= 1.4;
-		weapondrop += 8;
+		weapondrop *= 1.5;
+		weapondrop += 9;
 	}
 	else if scrIsCrown(15) //Crown of choice
 	{

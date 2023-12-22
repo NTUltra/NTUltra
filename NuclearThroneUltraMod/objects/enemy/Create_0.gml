@@ -12,6 +12,7 @@ team = 1
 target = noone
 countKill = true;
 wasResurrected = false;
+isSnooze = false;
 ignoreOverlap = false;
 gettingKnocked = 0;
 fireProof = false;

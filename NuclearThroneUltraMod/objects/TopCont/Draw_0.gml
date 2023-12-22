@@ -77,6 +77,10 @@ draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,0,c_white,1)
 with WaterMine
 draw_self();
 
+with AtomPulse
+{
+	event_perform(ev_draw,0);	
+}
 with RavenFly
 {
 	draw_sprite_ext(sprite_index,-1,x,y+z,image_xscale,1,0,c_white,1)

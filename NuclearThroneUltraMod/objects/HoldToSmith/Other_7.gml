@@ -37,28 +37,33 @@ with Player
 	            if bcurse=1
 		            curse=1;
 		        bwep = 0
-				if wepmod1 == 0 && bwepmod1 != 0
+				if wepmod1 == 0
 				{
 					wepmod1 = bwepmod1;
 					wepmod2 = bwepmod2;
 					wepmod3 = bwepmod3;
 					wepmod4 = bwepmod4;
+					
 				}
-				else if wepmod2 == 0 && bwepmod1 != 0
+				else if wepmod2 == 0
 				{
-					wepmod2 = bwepmod2;
-					wepmod3 = bwepmod3;
-					wepmod4 = bwepmod4;
+					wepmod2 = bwepmod1;
+					wepmod3 = bwepmod2;
+					wepmod4 = bwepmod3;
 				}
-				else if wepmod3 == 0 && bwepmod1 != 0
+				else if wepmod3 == 0
 				{
-					wepmod3 = bwepmod3;
-					wepmod4 = bwepmod4;
+					wepmod3 = bwepmod1;
+					wepmod4 = bwepmod2;
 				}
-				else if wepmod4 == 0 && bwepmod1 != 0
+				else if wepmod4 == 0
 				{
-					wepmod4 = bwepmod4;
+					wepmod4 = bwepmod1;
 				}
+				bwepmod1 = 0;
+				bwepmod2 = 0;
+				bwepmod3 = 0;
+				bwepmod4 = 0;
 		        wep=newwep;
             
 	            can_shoot = 1

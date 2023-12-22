@@ -118,9 +118,9 @@ triggerfinger=Player.triggerfinger;//0;
 strongspirit=Player.strongspirit;//false
 strongspiritused=Player.strongspiritused;//false
 
-maxhealth = floor(6*1.5*Player.level);
+maxhealth = max(20,floor(6*1.5*Player.level));
 if Player.skill_got[1]//rhino skin
-maxhealth=floor(7*1.5*Player.level);
+maxhealth=max(20,floor(7*1.5*Player.level));
 if skill_got[31]//Tough shell
 maxhealth += 2;
 scrBossHealthBuff();
@@ -144,7 +144,7 @@ instance_destroy();
 target=-1;
 walk = 0
 gunangle = random(360)
-alarm[1] = 10+random(40)
+alarm[1] = 30;
 
 instance_create(x,y,WallBreak);
 instance_create(x+16,y+16,WallBreak);
@@ -175,4 +175,8 @@ with Player
 		instance_create(other.x+5,other.y-16,Notice);	
 	}
 	justAsheep = false;	
+}
+if instance_exists(Player) && Player.skill_got[29] {
+	alarm[1] += 60;
+	scrGiveSnooze();
 }

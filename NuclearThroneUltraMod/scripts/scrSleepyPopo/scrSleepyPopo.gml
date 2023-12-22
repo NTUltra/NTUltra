@@ -7,12 +7,7 @@ function scrSleepyPopo(){
 		if Player.skill_got[29]//insomnia
 		{
 			alarm[1] += 45;
-			with instance_create(x,y,Snooze)
-			{
-				owner = other.id;
-				depth = other.depth - 1;
-				yoffset = 0;
-			}
+			scrGiveSnooze(0);
 		}
 	}
 }

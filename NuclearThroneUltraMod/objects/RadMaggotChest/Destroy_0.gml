@@ -1,6 +1,10 @@
 if my_health <= 0
 {
-instance_create(x,y,RadMaggotExplosion)
+instance_create(x,y,RadMaggotExplosion);
+if canOpenMind && instance_exists(Player)
+{
+	scrChestOpenMindReload(Player);
+}
 }
 
 repeat(4)

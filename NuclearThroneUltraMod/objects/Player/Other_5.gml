@@ -141,11 +141,11 @@ if scrIsCrown(2) && canHeal
 }
 if scrIsCrown(13)//Crown of drowning
 {
-	ammo[1] += 200;
-	ammo[2] += 20;
-	ammo[3] += 20;
-	ammo[4] += 20;
-	ammo[5] += 20;
+	ammo[1] += 150;
+	ammo[2] += 15;
+	ammo[3] += 15;
+	ammo[4] += 15;
+	ammo[5] += 15;
 	if !ultra_got[26] {
 		if ammo[1] > typ_amax[1]
 		ammo[1] = typ_amax[1]
@@ -744,7 +744,7 @@ else
 
 if (yungCuzCskin > 2)
 {
-	scrUnlockCSkin(12,"FOR COMPLETING 3 LEVELS IN A ROW#WITH 1 MAX HP",0);
+	scrUnlockCSkin(12,"FOR COMPLETING 3 AREAS IN A ROW#WITH 1 MAX HP",0);
 }
 
 

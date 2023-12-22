@@ -1,10 +1,30 @@
+var dx = x - other.x;
+var dy = y - other.y;
+var d = point_direction(0, 0, dx, dy);
 if UberCont.normalGameSpeed == 60
 {
-	x += lengthdir_x(0.5,point_direction(other.x,other.y,x,y))
-	y += lengthdir_y(0.5,point_direction(other.x,other.y,x,y))	
+	x += lengthdir_x(4,d);
+	y += lengthdir_y(4,d);
 }
 else
 {
-	x += lengthdir_x(1,point_direction(other.x,other.y,x,y))
-	y += lengthdir_y(1,point_direction(other.x,other.y,x,y))
+	x += lengthdir_x(8,d);
+	y += lengthdir_y(8,d);
 }
+if myScorchMark != noone
+{
+	with myScorchMark {
+		x = other.x;
+		y = other.y;
+		scrForcePosition60fps();
+	}
+}
+/*
+if myExplosionMask != noone && myExplosionMask != -1 && instance_exists(myExplosionMask) {
+	with myExplosionMask
+	{
+		x = other.x;
+		y = other.y;
+	}
+}
+*/

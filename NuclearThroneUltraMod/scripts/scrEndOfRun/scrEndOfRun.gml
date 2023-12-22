@@ -62,6 +62,7 @@ function scrEndOfRun(){
 		if instance_exists(GameRender) {
 			with GameRender
 			{
+				alarm[6] = 60;
 				var al = array_length(other.foundRoutes);
 				allRoutes = [];
 				var j = 0;

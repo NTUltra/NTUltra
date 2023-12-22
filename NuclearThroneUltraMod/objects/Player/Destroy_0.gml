@@ -451,6 +451,20 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 		spr_dead=other.spr_dead;
 		instance_create(x,y,ReviveRogue);
 		alarm[0] = 30;
+		//Purity
+		if scrIsCrown(29)
+		{
+			var wantHealth = 0
+			if wepmod1 != 0
+				wantHealth += 1;
+			if wepmod2 != 0 
+				wantHealth += 1;
+			if wepmod3 != 0
+				wantHealth += 1;
+			if wepmod4 != 0
+				wantHealth += 1;
+			maxhealth -= wantHealth;
+		}
 	}
 	else
 	{

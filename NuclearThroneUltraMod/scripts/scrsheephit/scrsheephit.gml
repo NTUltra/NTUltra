@@ -20,11 +20,7 @@ function scrSheepHit(){
 							if alarm[1]>0
 							{
 								alarm[1]+=200;
-								with instance_create(x,y,Snooze)
-								{
-									owner = other.id;
-									yoffset = other.sprite_height*0.5 - 4;
-								}
+								scrGiveSnooze();
 							}
 						}
 						with PlayerAlarms2

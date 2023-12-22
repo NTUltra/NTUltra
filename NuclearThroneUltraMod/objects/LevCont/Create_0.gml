@@ -5,6 +5,8 @@ __view_set( e__VW.YView, 0, 0 )
 audio_stop_sound(sndFrogLoop);
 audio_stop_sound(sndFrogLoopButt);
 audio_stop_sound(sndFishRollUpgLoop);
+scroll = 0;
+scrollWidth = 0;
 with UberCont
 {
 	if (useSeed)

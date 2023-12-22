@@ -84,3 +84,5 @@ repeat(40){
 	jj++;
 	ii++;
 }
+
+routeGlow = 0;

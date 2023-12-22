@@ -3103,6 +3103,15 @@ function scrPowers() {
 					y += lengthdir_y(ts,pd)
 			}
 		}
+		with Explosion
+		{
+			if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) && team != 2
+			{
+				var pd = point_direction(x,y,px,py)+od;
+				x += lengthdir_x(ts,pd)
+				y += lengthdir_y(ts,pd)
+			}
+		}
 
 		if ultra_got[9] == 1 && !altUltra {//eyes Projectile Style ULTRA A
 			scrProjectileStyle(team, px, py);

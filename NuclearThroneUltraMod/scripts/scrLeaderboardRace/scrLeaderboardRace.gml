@@ -198,7 +198,7 @@ function scrLeaderboardRace(race,bskin,altUltra,area){
 	return sprMutant14CIdle;
 	break;
 	case 15:
-	return sprMutant15CIdle;
+	return sprMutant15CIdleOld;
 	break;
 	case 16:
 	return sprMutant16CIdle;
@@ -317,6 +317,10 @@ function scrLeaderboardRace(race,bskin,altUltra,area){
 	return sprMutant15Idle;
 	break;
 	case 16:
+	if altUltra
+	{
+		return sprMutant16DIdle;
+	}
 	return sprMutant16Idle;
 	break;
 	case 17:

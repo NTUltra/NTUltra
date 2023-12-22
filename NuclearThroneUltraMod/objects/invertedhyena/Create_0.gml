@@ -7,16 +7,16 @@ raddrop = 15
 maxhealth = 7;
 meleedamage = 4;
 EnemyHealthAdjustments();
-maxSpeed = 4.6;
+maxSpeed = 4.2;
 actTime = 12;
 healTime = 12;
 if loops > 0
 {
-	maxSpeed = 5;
+	maxSpeed = 4.4;
 	actTime = 10;
 }
-if loops > 2
-	maxSpeed = 5.4;
+if loops > 3
+	maxSpeed = 4.7;
 	
 acc = 1.2;
 accCharge = 3;

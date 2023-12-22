@@ -1,11 +1,11 @@
 /// @description Open chest
-if !instance_exists(GenCont)
+if !instance_exists(GenCont) && instance_exists(Player)
 {
 	if curse 
 		snd_play(sndCursedChest);
+	scrChestOpenMindReload(Player);
 	with Player {
 		nochest = 0;
-		scrChestOpenMindReload(Player);
 	}
 	if !oneweponly
 	{

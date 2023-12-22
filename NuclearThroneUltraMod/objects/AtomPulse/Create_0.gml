@@ -8,5 +8,10 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 
 typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 dmg = 2;
-image_xscale = 0.25;
-image_yscale = 0.25;
+scale = 0.25;
+image_speed = 0.4;
+image_xscale = scale;
+image_yscale = scale;
+depth = -1
+radius = 12;
+opacity = 1;

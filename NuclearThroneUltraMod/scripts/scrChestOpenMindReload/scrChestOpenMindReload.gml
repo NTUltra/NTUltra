@@ -1,7 +1,7 @@
 ///scrChestOpenMindReload();
 // /@description
 ///@param
-function scrChestOpenMindReload(thePlayer){
+function scrChestOpenMindReload(thePlayer, dealDamageAnyway = false){
 	var cx = x;
 	var cy = y;
 	with thePlayer
@@ -9,13 +9,16 @@ function scrChestOpenMindReload(thePlayer){
 		if scrIsCrown(6)
 		{
 			scrRaddrop(18);
-			my_health -= 1;
-			exception = true;
-			sprite_index = spr_hurt;
-			image_index = 0;
-			snd_play(snd_hurt, hurt_pitch_variation);
-			Sleep(40);
-			hitBy = other.sprite_index;
+			if dealDamageAnyway || place_meeting(x,y,chestprop)
+			{
+				my_health -= 1;
+				exception = true;
+				sprite_index = spr_hurt;
+				image_index = 0;
+				snd_play(snd_hurt, hurt_pitch_variation);
+				Sleep(40);
+				hitBy = other.sprite_index;
+			}
 		}
 		if skill_got[23]//Open mind
 		{

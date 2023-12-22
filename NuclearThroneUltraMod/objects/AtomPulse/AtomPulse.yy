@@ -5,7 +5,7 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"hitme","path":"objects/hitme/hitme.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -33,12 +33,12 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprAtomUltraWave",
-    "path": "sprites/sprAtomUltraWave/sprAtomUltraWave.yy",
+    "name": "sprAtomPulse",
+    "path": "sprites/sprAtomPulse/sprAtomPulse.yy",
   },
   "spriteMaskId": {
-    "name": "mskAtomUltraWave",
-    "path": "sprites/mskAtomUltraWave/mskAtomUltraWave.yy",
+    "name": "mskAtomPulse",
+    "path": "sprites/mskAtomPulse/mskAtomPulse.yy",
   },
-  "visible": true,
+  "visible": false,
 }

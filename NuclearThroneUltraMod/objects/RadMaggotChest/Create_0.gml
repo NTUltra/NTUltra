@@ -6,7 +6,7 @@ team = 0
 mySize = 2
 
 maxhealth = 8
-
+canOpenMind = true;
 spr_idle = sprRadChestMaggot
 spr_hurt = sprRadChestMaggotHurt
 spr_dead = sprRadChestMaggotDead

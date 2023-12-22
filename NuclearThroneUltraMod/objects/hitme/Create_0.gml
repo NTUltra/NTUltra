@@ -4,5 +4,6 @@ existTime = 0;
 depth = 1;
 myConfusion = noone;
 wasResurrected = false;
+isSnooze = false;
 morphMe = 0;
 maxSpeed = 0;

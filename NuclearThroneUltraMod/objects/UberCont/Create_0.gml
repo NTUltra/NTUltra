@@ -5,6 +5,7 @@ public = 0 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "30.00"//"PR 30.02";
 subUpdateVersion = ".00";
+serverIp =  "86.94.124.128";serverPort =  1414;
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
 /*

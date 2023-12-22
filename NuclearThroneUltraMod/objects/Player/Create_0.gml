@@ -14,6 +14,8 @@ with GameRender
 {
 	gameovertime = 0;
 	alarm[2] = 0;
+	alarm[6] = 0;
+	alarm[7] = 0;
 }
 with DataRef
 	instance_destroy();
