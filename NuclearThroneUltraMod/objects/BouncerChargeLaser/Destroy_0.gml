@@ -17,6 +17,7 @@ if instance_exists(Player)
 	{
 		rate += 2;
 		instance_create(x,y,Smoke);
+		snd_play_fire(sndLaserUpg)
 		snd_play_fire(sndMegaLaser);
 	}
 	if instance_exists(creator)

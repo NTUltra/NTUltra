@@ -13,12 +13,13 @@ instance_destroy()
 	if other.my_health > 0
 	{
 		target = other.id
+		/*
 		x += (other.x - x)*0.75;
 		y += (other.y - y)*0.75;
 		with scrBoltTrail(trailColour,0.11,0.75)
 		{
 			image_speed -= 0.1;
-		}
+		}*/
 		with instance_create(x,y,BoltStick)
 		{
 			sprite_index = sprSplinterStick

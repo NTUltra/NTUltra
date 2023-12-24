@@ -642,6 +642,11 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 		    with Player {
 				maxarmour = max(maxarmour + 3, 3);
 				armour = clamp(armour + 3, 3, maxarmour);
+				if gotMinimumArmour
+				{
+					maxarmour -= 1;
+					gotMinimumArmour = false;
+				}
 		    }
 		}
 	}

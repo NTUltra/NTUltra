@@ -1346,6 +1346,7 @@ function scrDrawHUD() {
 		}
 		with BigVultureSkull
 		{
+			
 			if spr_idle == sprBigVultureSkullOpen && place_meeting(x,y,Player)
 			{
 				draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
@@ -1468,15 +1469,28 @@ function scrDrawHUD() {
 		{
 			if place_meeting(x,y,Player) && loops > 0 && spr_idle = sprBigFishSkullOpen && !instance_exists(SandWorm) && !instance_exists(WantBoss)
 			{
-				draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
+				if instance_exists(WantBoss) || instance_exists(SandWorm)
+				{
+					var txt = "KILL BOSS FIRST";
+					draw_set_color(c_black)
+					draw_text(x-ox,y-oy-30,string_hash_to_newline(string(txt)))
+					draw_text(x-ox+1,y-oy-30,string_hash_to_newline(string(txt)))
+					draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(txt)))
+					draw_set_color(c_white)
+					draw_text(x-ox,y-oy-31,string_hash_to_newline(string(txt)))
+				}
+				else
+				{
+					draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
 
-				draw_set_color(c_black)
-				draw_text(x-ox,y-oy-30,string_hash_to_newline(string(name)))
-				draw_text(x-ox+1,y-oy-30,string_hash_to_newline(string(name)))
-				draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(name)))
-				draw_set_color(c_white)
-				draw_text(x-ox,y-oy-31,string_hash_to_newline(string(name)))
-				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+					draw_set_color(c_black)
+					draw_text(x-ox,y-oy-30,string_hash_to_newline(string(name)))
+					draw_text(x-ox+1,y-oy-30,string_hash_to_newline(string(name)))
+					draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(name)))
+					draw_set_color(c_white)
+					draw_text(x-ox,y-oy-31,string_hash_to_newline(string(name)))
+					//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+				}
 			}
 		}
 		with HintGiver {

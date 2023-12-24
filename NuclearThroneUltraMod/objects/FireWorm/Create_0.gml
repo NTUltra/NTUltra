@@ -19,7 +19,7 @@ snd_melee = sndBigMaggotBite
 //behavior
 walk = 0
 alarm[1] = 30+random(90)
-actTime = 14;
+actTime = 15;
 maxSpeed = 2;
 acc = 0.6;
 myLaser = -1;

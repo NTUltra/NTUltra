@@ -4239,26 +4239,26 @@ repeat(1+loops)
 			{
 				wave[i] = {
 					obj: JungleAssassinFake,
-					time: 15,
+					time: 5,
 				};
 				i++;
 			}
 			wave[i] = {
-					obj: JungleAssassinFake,
-					time: 150,
-				};
-				i++;
+				obj: JungleAssassinFake,
+				time: 120,
+			};
+			i++;
 			repeat(8)
 			{
 				wave[i] = {
 					obj: JungleBandit,
-					time: 10,
+					time: 5,
 				};
 				i++;
 			}
 			wave[i] = {
 				obj: JungleGorilla,
-				time: 150,
+				time: 120,
 				xx: centerX,
 				yy: centerY,
 			};
@@ -4273,7 +4273,14 @@ repeat(1+loops)
 			}
 			wave[i] = {
 				obj: MaggotSpawn,
-				time: 120,
+				time: 90,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			wave[i] = {
+				obj: AmmoChest,
+				time: 5,
 				xx: centerX,
 				yy: centerY,
 			};
@@ -4464,7 +4471,7 @@ repeat(1+loops)
 			//Big fish and Ballmom
 			wave[i] = {
 				obj: BigFish,
-				time: 120,
+				time: 10,
 				xx: centerX,
 				yy: centerY-64,
 			};
@@ -4479,7 +4486,7 @@ repeat(1+loops)
 			}
 			wave[i] = {
 				obj: BoneFish,
-				time: 120,
+				time: 90,
 			};
 			i++;
 			repeat(8)
@@ -4496,6 +4503,13 @@ repeat(1+loops)
 				xx: centerX,
 				yy: centerY,
 				canSpawnInWall: true,
+			};
+			i++;
+			wave[i] = {
+				obj: AmmoChest,
+				time: 10,
+				xx: centerX,
+				yy: centerY,
 			};
 			i++;
 			wave[i] = {

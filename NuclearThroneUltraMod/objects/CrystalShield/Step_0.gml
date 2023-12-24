@@ -1,17 +1,16 @@
 if instance_exists(Player){
-if Player.ultra_got[6]=1 && !Player.altUltra{
-if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
-hspeed -= 3
-if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
-hspeed += 3
-if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
-vspeed -= 3
-if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
-vspeed += 3
+	if Player.ultra_got[6]=1 && !Player.altUltra{
+	if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+	hspeed -= 3
+	if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+	hspeed += 3
+	if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+	vspeed -= 3
+	if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+	vspeed += 3
 
-
-if speed > Player.maxSpeed/1.25
-speed = Player.maxSpeed/1.25
+	if speed > Player.maxSpeed*0.85
+		speed = Player.maxSpeed*0.85
 }
 if(sprite_index!=spr_disappear){//exit code as soon as the shield starts to dissapear
 if instance_exists(Player)

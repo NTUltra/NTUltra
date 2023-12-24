@@ -56,7 +56,6 @@ if(morphMe == 0){
 else if morphMe != 6
 {
 	instance_create(x,y,PortalChecker);
-	debug("morph: ", morphMe);
 	if morphMe == 2
 	{
 		instance_create(x,y,ExplosiveSheep);

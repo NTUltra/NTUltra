@@ -19,7 +19,7 @@ function scrRaces() {
 	race_name[1] = "[FISH]"
 	race_pass[1] = "GETS MORE <y>AMMO<y>"
 	race_acti[1] = "<w>DODGE ROLL<w>"
-	race_butt[1] = "<aq>WATER<aq> <w>BOOST<w>#MORE <y>AMMO<y>"
+	race_butt[1] = "<aq>WATER<aq> <w>BOOST<w>#MORE <y>AMMO<y> FROM DROPS"
 	race_butt_detail[1] = "<aq>WATER<aq> <w>BOOST<w>#UNLIMITED <w>ROLLING<w>#GET EVEN MORE <y>AMMO<y>#FROM <y>AMMO<y> PICKUPS";
 	//race_back[1] = "IF YOUR AMMO IS ABOVE 75%#INCREASE FIRE RATE#AND RELOAD SPEED";
 	race_lock[1] = "UNLOCKED FROM THE START"
@@ -112,7 +112,7 @@ function scrRaces() {
 	race_butt[6] = "BRRRAP"
 	race_butt_detail[6] = "ACTIVE FIRES 4 TIMES#INSTEAD OF 2";
 	//race_back[0] = "ADDITIONAL PROJECTILES FROM ACTIVE#PIERCE ENEMIES";
-	race_lock[6] = "REACH YV'S MANSION TO UNLOCK"
+	race_lock[6] = "REACH Y.V.'S MANSION TO UNLOCK"
 	race_have[6] = 0
 	race_swep[6] = 39
 	race_bskin[6] = 0
@@ -253,8 +253,8 @@ function scrRaces() {
 	race_name[14] = "[PANDA]"
 	race_pass[14] = "SMALLER HITBOX#<pi>RANDOMIZE<pi> WEAPONS THROWN IN A <p>PORTAL<p>"//"PRIMARY WEAPON IS RANDOMIZED#TO ONE OF THE SAME TIER#EACH AREA#EXCEPT YOUR STARTING WEAPON"
 	race_acti[14] = "<w>THROW<w> WEAPONS"
-	race_butt[14] = "SHORTER THROWN WEAPON TELEPORT DELAY#MORE THROW DAMAGE"
-	race_butt_detail[14] = "REDUCED THROWN WEAPON TELEPORT DELAY (0.83 SEC)#+20% MORE THROW DAMAGE"
+	race_butt[14] = "#SHORTER <w>THROWN<w> WEAPON RETURN DELAY#MORE <w>THROW<w> DAMAGE"
+	race_butt_detail[14] = "#REDUCED <w>THROWN<w> WEAPON RETURN DELAY (0.83 SEC)#+20% MORE <w>THROW<w> DAMAGE"
 	//race_back[14] = "NO LONGER GET RANDOM WEP(is ultra change)";
 	race_lock[14] = "VISIT THE JUNGLE"
 	race_have[14] = 0
@@ -300,7 +300,7 @@ function scrRaces() {
 	race_dskin[16] = 0
 	race_eskin[16] = 0
 	race_fskin[16] = 0
-	race_bskin_lock[16] = "COMPLETE A LEVEL#WITH 5 ARMOUR#AS VIKING"
+	race_bskin_lock[16] = "COMPLETE A LEVEL#WITH 4 ARMOUR#AS VIKING"
 	race_cskin_lock[16] = "KILL 16 ENEMIES#IN ONE ARMOUR STRIKE"
 
 
@@ -468,8 +468,8 @@ function scrRaces() {
 	race_cskin_lock[25] = "PROFESSIONAL#SELFCARE"
 
 	race_name[26] = "[GOOD OL' HUMPHRY]"//RUSTY GRANDPA SOLDIER
-	race_pass[26] = "REDUCED <r>MAX HP<r>##DEALING DAMAGE BUILDS UP <w>SKILL<w>##SKILL INCREASES ALL <w>DAMAGE DEALT<w>##SKILL DECREASES OVER TIME#AND WHEN YOU <aq>TAKE DAMAGE<aq>#"//"HITTING SHOTS BUILDS SKILL#MISSING RESETS SKILL#UNTIL YOU HIT A SHOT AGAIN#SKILL INCREASES DAMAGE"
-	race_acti[26] = "<w>STUN<w> & <w>SHRINK<w> - COSTS 5 <w>SKILL<w>"//"SLOW AND SHRINK#ENEMY PROJECTILES#AT THE COST OF#unequipped AMMO"//DISCIPLINE those bullets
+	race_pass[26] = "DEALING DAMAGE BUILDS UP <w>SKILL<w>##SKILL INCREASES ALL <w>DAMAGE DEALT<w>##SKILL DECREASES OVER TIME#AND WHEN YOU <aq>TAKE DAMAGE<aq>#"//"HITTING SHOTS BUILDS SKILL#MISSING RESETS SKILL#UNTIL YOU HIT A SHOT AGAIN#SKILL INCREASES DAMAGE"
+	race_acti[26] = "<w>HALT<w> - COSTS 5 <w>SKILL<w>"//"SLOW AND SHRINK#ENEMY PROJECTILES#AT THE COST OF#unequipped AMMO"//DISCIPLINE those bullets
 	race_butt[26] = "#<w>SKILL<w> DECREASES SLOWER"
 	race_butt_detail[26] = "#<w>SKILL<w> DECREASES 25% SLOWER#KEEP 5% MORE SKILL WHEN GETTING HIT"
 	//race_back[26] = "DECREASE COST OF ACTIVE";

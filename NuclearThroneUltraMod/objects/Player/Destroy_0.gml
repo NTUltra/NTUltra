@@ -354,6 +354,8 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 	inverted = other.inverted;
 	crownvisits = other.crownvisits;
 	gunGameKill = other.gunGameKill;
+	canCrownOfProtection = other.canCrownOfProtection;
+	gotMinimumArmour = other.gotMinimumArmour;
 	if other.ultra_got[87] && other.altUltra && other.rogueammo > 0
 	{
 		skeletonlives = other.skeletonlives

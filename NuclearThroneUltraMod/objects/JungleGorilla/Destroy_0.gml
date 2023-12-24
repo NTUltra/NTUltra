@@ -1,5 +1,5 @@
-scrDrop(25,10)
-
+scrDrop(30,15)
+scrDrop(10,0)
 event_inherited()
 snd_play(sndToxicBarrelGas)
 var dir = random(360);

@@ -1,5 +1,5 @@
 /// @description Fill in mask
-var s = 10000;
+var s = 10016;
 x = -s;
 y = -s;
 if instance_exists(Player)

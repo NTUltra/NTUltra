@@ -1,4 +1,9 @@
 /// @description Shoot
+
+//Leads shot!
+var xx = target.x + (target.hspeed*1.75)
+var yy = target.y + (target.vspeed*1.75)
+gunangle = point_direction(x, y, xx, yy);
 if (fuckyou)
 {
 	snd_play(sndRocket);

@@ -10,7 +10,7 @@
   "bitRate": 192,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.0,
+  "duration": 0.516893,
   "parent": {
     "name": "BusinessHog",
     "path": "folders/Sounds/Player/BusinessHog.yy",

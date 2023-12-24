@@ -50,6 +50,7 @@ if um == ultramods.bulletShotgun
 		acc = Player.accuracy;
 	snd_play_fire(sndUltraCrossbow);
 	instance_destroy(id,false);
+	UberCont.ultramodSwap = false;
 	with instance_create(x,y,UltraBolt)
 	{
 		scrCopyWeaponMod(other);

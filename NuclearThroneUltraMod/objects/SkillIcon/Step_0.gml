@@ -320,8 +320,10 @@ if (UberCont.mouse__x < x+16 and UberCont.mouse__y < y+16 and UberCont.mouse__x 
 			}
 			else
 			{
-				Player.maxarmour = max(1,Player.maxarmour + 1);
-				Player.armour += 1;
+				if Player.maxarmour < 1
+					Player.gotMinimumArmour = true;
+				Player.maxarmour = max(1,Player.maxarmour);
+				Player.armour = clamp(Player.armour + 1, 1, Player.maxarmour);
 				Player.maxhealth -= 2
 				if Player.my_health > Player.maxhealth
 					Player.my_health -= 2

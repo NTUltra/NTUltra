@@ -26,6 +26,7 @@ humphrySkill = 0;
 gunGameKill = 10;
 tinyKrakenSpawned = 0;
 canCrownOfProtection = true;
+gotMinimumArmour = false;
 angelHeal = false;
 tailWave = 0;
 drawTail = false;
@@ -564,7 +565,7 @@ if race == 19 //skeleton
     maxSpeed = 3.6
     accuracy = 1.2
 }
-if race == 26 || race == 16//Good O'l Humphry & Viking
+if race == 16//Good O'l Humphry & Viking
 {
 	maxhealth = 6;
 }

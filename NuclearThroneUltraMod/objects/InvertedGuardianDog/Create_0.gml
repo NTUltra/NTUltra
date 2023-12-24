@@ -8,8 +8,8 @@ maxhealth = 130
 my_health = maxhealth;
 EnemyHealthAdjustments();
 maxSpeed = 3;
-maxJumpSpeed = 8;
-jumpAcc = 0.6;
+maxJumpSpeed += 0.4;
+jumpAcc += 0.15;
 spr_normal = sprInvertedDogGuardianWalk;
 spr_idle = sprInvertedDogGuardianWalk
 spr_walk = sprInvertedDogGuardianWalk

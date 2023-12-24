@@ -10,8 +10,8 @@ function scrYVPower(){
 			isMelee = !isMelee;
 		if !isMelee
 		{
-			if ammo[wep_type[wep]] < wep_cost[wep]*(2+Player.skill_got[5]*2) and KeyCont.key_spec[p] = 1 and wep_type[wep] != 0
-			scrEmpty()
+			if ammo[wep_type[wep]] < wep_cost[wep]*(2/*+Player.skill_got[5]*2*/) and KeyCont.key_spec[p] = 1 and wep_type[wep] != 0
+				scrEmpty()
 
 			if rad-(wep_rad[wep]*(2+Player.skill_got[5]*2))<0
 			{//not enough radiation
@@ -20,7 +20,7 @@ function scrYVPower(){
 			other.wkick = -2
 			}
 
-			if ammo[wep_type[wep]] >= wep_cost[wep]*(2+Player.skill_got[5]*2) and rad>=wep_rad[wep]*(2+Player.skill_got[5]*2)
+			if ammo[wep_type[wep]] >= wep_cost[wep]*(2/*+Player.skill_got[5]*2*/) and rad>=wep_rad[wep]*(2+Player.skill_got[5]*2)
 			{
 			    if (Player.level>9){
 			    repeat(2+(Player.skill_got[5]+Player.ultra_got[22])*(1+Player.skill_got[5]))//ULTRA B

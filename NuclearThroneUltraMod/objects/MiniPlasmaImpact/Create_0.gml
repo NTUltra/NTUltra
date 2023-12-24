@@ -8,6 +8,7 @@ Mod4=0;
 wepFire=0;
 team = 2
 dmg = 0.5;
+canBeMoved = true;
 confDropChanceIndex = -1;
 itemDropChanceIndex = -1;
 weaponDropChanceIndex = -1;

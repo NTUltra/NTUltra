@@ -31,6 +31,7 @@ with Player
 	{
 		x = px + nextMoveX;
 		y = py + nextMoveY;
+		scrForcePosition60fps();
 	}
 }
 traveled += step;

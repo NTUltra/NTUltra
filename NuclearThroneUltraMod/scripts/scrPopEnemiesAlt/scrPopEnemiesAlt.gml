@@ -1,7 +1,11 @@
 function scrPopEnemiesAlt() {
 	var loops = 0;
+	var subarea = 1;
 	if instance_exists(Player)
+	{
 		loops = Player.loops;
+		subarea = Player.subarea;
+	}
 	if scrIsHardMode()//HARD MODE
 		loops ++;
 		
@@ -282,7 +286,8 @@ function scrPopEnemiesAlt() {
 	                    instance_create(x + 16 + random(4), y + 16 + random(4), choose(Exploder, Exploder, Exploder, Exploder, InvertedJellyFish, ToxicMushroom,InvertedBoneFish))
 	                    instance_create(x + 16 + random(4), y + 16 + random(4), choose(Exploder, Exploder, Exploder, Exploder, InvertedJellyFish, ToxicMushroom,InvertedBoneFish))
 	                }
-	                instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, choose(Exploder, Exploder, Exploder, InvertedJellyFish, InvertedJellyFish, ToxicMushroom, ToxicMushroom,InvertedPalaceGuardian,InvertedBoneFish))
+					else
+						instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, choose(Exploder, Exploder, Exploder, InvertedJellyFish, InvertedJellyFish, ToxicMushroom, ToxicMushroom,InvertedPalaceGuardian,InvertedBoneFish))
 	            }
 	        }
 		}

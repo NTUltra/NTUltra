@@ -40,5 +40,5 @@
     "name": "mskWallFloorReplacerLayout1",
     "path": "sprites/mskWallFloorReplacerLayout1/mskWallFloorReplacerLayout1.yy",
   },
-  "visible": true,
+  "visible": false,
 }

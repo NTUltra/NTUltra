@@ -288,6 +288,14 @@ function scrLoadRun(){
 					UberCont.canMultiCrown = encryptedRun.canMultiCrown;
 				if variable_struct_exists(encryptedRun, "randomDailyMod")
 					UberCont.randomDailyMod = encryptedRun.randomDailyMod;
+				if variable_struct_exists(encryptedRun, "canCrownOfProtection")
+					Player.canCrownOfProtection = encryptedRun.canCrownOfProtection;
+				else
+					Player.canCrownOfProtection = false;
+				if variable_struct_exists(encryptedRun, "gotMinimumArmour")
+					Player.gotMinimumArmour = encryptedRun.gotMinimumArmour;
+				else
+					Player.gotMinimumArmour = true;
 			}
 			with Player
 			{

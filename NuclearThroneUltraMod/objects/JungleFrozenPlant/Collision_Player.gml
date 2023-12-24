@@ -3,6 +3,11 @@ if KeyCont.key_pick[other.p] = 1 && !used
 {
 	if blood >= bloodNeeded
 	{
+		with instance_create(x,y,PortalEnviromentReplacer)
+		{
+			area = 5;
+			prevArea = 114;
+		}
 		used = true;
 		KeyCont.key_pick[Player.p] = 2;
 		with other
@@ -42,6 +47,12 @@ if KeyCont.key_pick[other.p] = 1 && !used
 	else
 	{
 		blood ++;
+		with instance_create(x,y,PortalEnviromentReplacer)
+		{
+			area = 5;
+			prevArea = 114;
+			maxRadius = 72;
+		}
 		if blood >= bloodNeeded
 		{
 			name = "ENTER?";	

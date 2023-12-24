@@ -35,5 +35,5 @@
     "name": "mskWallFloorReplacer",
     "path": "sprites/mskWallFloorReplacer/mskWallFloorReplacer.yy",
   },
-  "visible": true,
+  "visible": false,
 }

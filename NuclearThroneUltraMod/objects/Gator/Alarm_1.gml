@@ -6,10 +6,11 @@ if target != noone {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
         if point_distance(target.x, target.y, x, y) > 48 and point_distance(target.x, target.y, x, y) < 120 {
             if random(2) < 1 {
-                alarm[2] = 15;
+                alarm[2] = 14;
                 instance_create(x,y,Notice);
 				instance_create(x+5,y,Notice);
 				instance_create(x-5,y,Notice);
+				gunangle = point_direction(x,y,target.x,target.y)
                 alarm[1] = actTime*3
             }
             else if random(5) < 1 {

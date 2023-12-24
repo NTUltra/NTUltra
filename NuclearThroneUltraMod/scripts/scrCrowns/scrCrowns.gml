@@ -125,7 +125,7 @@ function scrCrowns() {
 	crown_tips[19] = "friendly fire"
 	
 	crown_name[20] = "[CROWN OF PROTECTION]"
-	crown_text[20] = "EVERY OTHER <w>WEAPON<w> DROPS GIVE 1 <gb>ARMOUR<gb>#INSTEAD OF GIVING <y>AMMO<y>#INCREASE <gb>ARMOUR<gb> MAX BY 1"
+	crown_text[20] = "EVERY OTHER <w>WEAPON<w> DROP GIVES 1 <gb>ARMOUR<gb>#INSTEAD OF GIVING <y>AMMO<y>"
 	crown_used[20] = 0
 	crown_tips[20] = "stay safe"//Always use protection..  that joke is too predictable
 	

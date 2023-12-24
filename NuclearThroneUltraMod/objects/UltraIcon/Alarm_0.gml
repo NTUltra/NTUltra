@@ -45,8 +45,9 @@ else if skill == 35 && Player.race == 9 && (Player.unlockAlternativeUltras || sc
 {
 	sprite_index = sprReverseFocus;	
 }
-else if skill == 39 && Player.race == 10 && (Player.unlockAlternativeUltras || (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep]) || 
-(!Player.skill_got[32] && !Player.skill_got[7] && !Player.skill_got[9]&& !Player.skill_got[36])
+else if skill == 39 && Player.race == 10 && (Player.unlockAlternativeUltras || 
+(scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep]) || 
+(!Player.skill_got[32] && !Player.skill_got[7] && !Player.skill_got[9] && !Player.skill_got[36])
 ))
 {
 	sprite_index = sprBigRebel;

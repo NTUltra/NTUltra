@@ -31,9 +31,9 @@ else
 {
 	wave[spawnItell].yy = yy;
 }
-instance_create(xx,yy,SurvivalPortal);
 if !variable_struct_exists(wave[spawnItell],"canSpawnInWall")
 	instance_create(xx,yy,WallBreak);
+instance_create(xx,yy,SurvivalPortal);
 spawnItell ++;
 if spawnItell < waveLength
 {

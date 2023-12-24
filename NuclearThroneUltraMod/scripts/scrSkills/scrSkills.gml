@@ -476,7 +476,7 @@ function scrSkills() {
 	skill_bons[36] = "-5 RADS REQUIRED"
 	
 	
-	skill_name[37] = "ECSTACTIC FISTS"//REJUVINATED SKIN
+	skill_name[37] = "ECSTATIC FISTS"//REJUVINATED SKIN
 	skill_text[37] = "YOU DEAL <w>MORE DAMAGE<w>#BASED ON HOW FULL YOUR <r>HEALTH<r> IS";
 	skill_detail[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <r>HEALTH<r> IS#+35% AT <r>MAX HP<r>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour

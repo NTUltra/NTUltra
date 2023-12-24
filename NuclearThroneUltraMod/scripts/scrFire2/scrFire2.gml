@@ -13825,7 +13825,7 @@ function scrFire2(hasTailNow) {
 	{
 		with instance_create(x+lengthdir_x(l,aimDirection),y+lengthdir_y(l,aimDirection),SmallSlash)
 		{
-			dmg += 2;
+			dmg += 3;
 			longarms = 0
 			longarms = (Player.skill_got[13]+other.bettermelee)*3;
 			motion_add(aimDirection,1+longarms);

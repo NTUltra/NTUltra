@@ -170,7 +170,7 @@ function scrTips() {
 	if Player.area = 119
 	tip = choose("friends","I will save you all!","never stop","return","loop","throne II","we're here");
 	if Player.area = 120
-	tip = choose("empty","nothingness","void","  "," ... ","it is time","no one here","beating this fight causes one less van spawn next loop","confuse the idpd");
+	tip = choose("empty","nothingness","void","  "," ... ","it is time","no one here");
 	if Player.area = 121
 	tip = choose("risk it","fast route","they are fast","colourful grass","watch yourself out there","inverted savanna")
 	if Player.area = 122

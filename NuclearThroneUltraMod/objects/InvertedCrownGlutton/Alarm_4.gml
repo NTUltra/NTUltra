@@ -52,5 +52,6 @@ else
 	}
 	scrForcePosition60fps();
 	mask_index = mskCrownGluttonBoss;
+	scrDrop(8,0);
 }
 ammo --;

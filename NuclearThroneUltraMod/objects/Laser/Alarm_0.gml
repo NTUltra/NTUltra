@@ -245,15 +245,17 @@ if laserhit>0// && random(3)<1
 	var hitStyle = 0;
 	var o = 1;
 	dir = 0;
-	while !(collision_point(x,y,Wall,false,false) or dir > 160)
+	/*
+	while (!collision_point(x,y,Wall,false,false) or dir > 160)
 	{
 		x += lengthdir_x(1,image_angle);
 		y += lengthdir_y(1,image_angle);
 		dir += 1;
-	}
-	while collision_point(x,y,Wall,false,false)//place_meeting(x,y,Wall)
+	}*/
+	while collision_point(x,y,Wall,false,false) && dir < 16//place_meeting(x,y,Wall)
 	{
-		x += lengthdir_x(1,image_angle+180) y += lengthdir_y(1,image_angle+180)
+		x += lengthdir_x(1,image_angle+180) y += lengthdir_y(1,image_angle+180);
+		dir ++;
 	}
 	var hit = instance_place(x,y,hitme);
 	if hit != noone && hit.team != team && hit.team != 0

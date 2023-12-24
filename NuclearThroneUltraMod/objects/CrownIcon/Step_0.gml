@@ -120,7 +120,10 @@ if oldcrown == 3
 if oldcrown == 20
 {
 	with Player {
-		maxarmour --;
+		if gotMinimumArmour && !skill_got[41]//Nerves of steel
+		{
+			maxarmour --;
+		}
 		armour = min(armour, maxarmour);
 	}
 }
@@ -129,7 +132,7 @@ if oldcrown = 30
 {
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
 	{
-		var am = clamp(Player.maxarmour-2,0,2);
+		var am = clamp(Player.maxarmour-1,0,1);
 		Player.maxarmour -= am;
 	}
 	else
@@ -144,7 +147,7 @@ if oldcrown = 31
 {
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
 	{
-		Player.maxarmour += 2
+		Player.maxarmour += 1
 	}
 	else
 	{
@@ -257,8 +260,11 @@ if crown == 3 && Player.maxhealth > 1
 if crown == 20
 {
 	with Player {
-		maxarmour = max(maxarmour + 1, 1);
-		armour = clamp(armour, 1, maxarmour);
+		if maxarmour < 1
+			gotMinimumArmour = true;
+		canCrownOfProtection = true;
+		maxarmour = max(maxarmour, 1);
+		armour = clamp(armour, 0, maxarmour);
 	}
 }
 //CROWN OF MERCENARY
@@ -266,7 +272,7 @@ if crown == 30
 {
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
 	{
-		Player.maxarmour += 2;
+		Player.maxarmour += 1;
 		Player.armour += 2;
 	}
 	else
@@ -281,7 +287,7 @@ if crown == 31
 {
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
 	{
-		var am = clamp(Player.maxarmour-2,0,2);
+		var am = clamp(Player.maxarmour-1,0,1);
 		Player.maxarmour -= am;
 	}
 	else

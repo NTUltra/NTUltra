@@ -10,7 +10,7 @@
   "bitRate": 192,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.0,
+  "duration": 0.314444,
   "parent": {
     "name": "YV",
     "path": "folders/Sounds/Player/YV.yy",

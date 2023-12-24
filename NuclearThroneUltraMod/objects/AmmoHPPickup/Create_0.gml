@@ -39,7 +39,7 @@ if instance_exists(Player){
 	}
 	if scrIsCrown(4) { alarm[0] *= 0.35}
 
-	if Player.race = 15{ alarm[0] *= 0.63}//atomf
+	if Player.race = 15{ alarm[0] *= 0.7}//atomf
 
 	if Player.ultra_got[59] && Player.altUltra
 	{

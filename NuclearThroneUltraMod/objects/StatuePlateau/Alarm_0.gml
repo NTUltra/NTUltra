@@ -5,8 +5,16 @@ while (place_meeting(x,y,WeaponMod))
 	with instance_place(x,y,WeaponMod)
 	{
 		if x < other.x
-			x -= 8;
+			x -= 4;
 		else
-			x += 8;
+			x += 4;
+		if place_meeting(x,y,WeaponMod)
+		{
+			with other
+			{
+				alarm[0] = 0;
+				exit;
+			}
+		}
 	}
 }

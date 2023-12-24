@@ -1,4 +1,5 @@
 image_speed = 0.4
+canBeMoved = true;
 Mod1=0;
 Mod2=0;
 Mod3=0;

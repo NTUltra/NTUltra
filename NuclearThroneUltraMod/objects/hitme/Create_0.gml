@@ -5,5 +5,7 @@ depth = 1;
 myConfusion = noone;
 wasResurrected = false;
 isSnooze = false;
+gettingKnocked = 0;
 morphMe = 0;
 maxSpeed = 0;
+right = 1;

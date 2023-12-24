@@ -12,7 +12,7 @@ raddrop += 2;
 maxhealth = 20
 my_health = maxhealth;
 EnemyHealthAdjustments();
-maxSpeed += 1.2
+maxSpeed += 1
 acc += 0.9;
 var am = array_length(myCompanions);
 for (var i = 0; i < am; i++) {

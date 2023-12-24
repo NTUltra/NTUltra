@@ -1,4 +1,4 @@
-var amount = 10;
+var amount = 11;
 if instance_exists(Player)
 {
 	if Player.ultra_got[72] {
@@ -12,7 +12,7 @@ if instance_exists(Player)
 }
 if instance_number(AngelActive) > 1
 {
-	amount -= 1;
+	amount -= 2;
 	var isActuallyStacking = false;
 	with AngelActive
 	{

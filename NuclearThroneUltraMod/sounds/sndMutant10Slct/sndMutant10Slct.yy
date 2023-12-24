@@ -10,7 +10,7 @@
   "bitRate": 192,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.0,
+  "duration": 1.379344,
   "parent": {
     "name": "Rebel",
     "path": "folders/Sounds/Player/Rebel.yy",

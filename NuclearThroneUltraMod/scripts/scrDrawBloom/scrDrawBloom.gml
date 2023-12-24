@@ -491,7 +491,7 @@ function scrDrawBloom() {
 		}
 		if super
 		{
-			draw_sprite_ext(sprite_index,image_index,x,y,image_xscale*theScale,image_yscale*theScale,image_angle,c_green,ba+0.2);
+			draw_sprite_ext(sprite_index,image_index,x,y,right*theScale,image_yscale*theScale,image_angle,c_green,ba+0.2);
 		}
 	}
 	draw_set_blend_mode(bm_normal)

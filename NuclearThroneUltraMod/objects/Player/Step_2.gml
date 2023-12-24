@@ -480,7 +480,6 @@ if tookHit&&my_health!=maxhealth&&alarm[3]<1&&!exception
 
 
 alarm[3] = max(alarm[3],15);//before your lag lowers again}
-resetPrevHealth = true;
 }
 }
 
@@ -492,8 +491,7 @@ if armour > 0
 	{
 		armour -= 1;
 		snd_play(sndLostArmour);
-		alarm[3]=max(alarm[3],5);//before your armour lowers again}
-		resetPrevHealth = true;
+		//alarm[3]=max(alarm[3],5);//before your armour lowers again}
 		if skill_got[28] == 1
 		{
 			//rage = 0;
@@ -533,7 +531,6 @@ if alarm[3] > 0/*|| lag>0 *//*&&my_health!=maxhealth*/&& !exception
 	}
 }
 
-var resetPrevHealth = false;
 if (tookHit)
 {
 	//Took a hit?
@@ -570,7 +567,6 @@ if (tookHit)
 			}
 			else
 				my_health = prevhealth;
-			resetPrevHealth = true;
 			
 			with instance_create(x,y,SharpTeeth)
 				owner=other.id;
@@ -603,7 +599,6 @@ if (tookHit)
 	{
 		if !instance_exists(GenCont)&&(!instance_exists(myShield) || myShield == -1)&&!instance_exists(LevCont)&&exception=false
 		{
-			resetPrevHealth = true;
 			if race=25
 				alarm[3] = max(22,alarm[3]);
 			else

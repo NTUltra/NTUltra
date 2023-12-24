@@ -3,9 +3,8 @@ image_speed = 0.5
 BackCont.shake += 4
 
 team = 2
-if fps_real >= fps
-	repeat(3)
-		instance_create(x,y,Smoke)
+repeat(3)
+	instance_create(x,y,Smoke)
 Mod1=0;
 Mod2=0;
 Mod3=0;
@@ -15,6 +14,7 @@ itemDropChanceIndex = -1;
 weaponDropChanceIndex = -1;
 wepFire=0;
 dmg = 5;
+canBeMoved = true;
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1

@@ -312,11 +312,11 @@ function scrGameModes() {
 	gamemode_description[43] = "START WITH THE ABILITY TO EQUIP MULTIPLE CROWNS AT ONCE";
 	gamemode_nocombo[43] = [25,42,26,27,37,8];
 	
-	gamemode[44] = "(BETA)ALT SPAWNS";//
+	gamemode[44] = "ALT SPAWNS";//
 	gamemode_unlock[44] = "DISCOVER 10 SECRET AREAS";
 	gamemode_have[44] = 0;
 	gamemode_tip[44] = "ALTERNATE TIMELINE";
-	gamemode_description[44] = "AREAS SPAWN DIFFERENT ENEMIES (STILL W.I.P.)";
+	gamemode_description[44] = "AREAS SPAWN DIFFERENT ENEMIES";
 	gamemode_nocombo[44] = [26,27,37,8,25,42,45];
 	
 	gamemode[45] = "RANDOM SPAWNS";//

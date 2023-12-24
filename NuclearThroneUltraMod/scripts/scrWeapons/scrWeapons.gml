@@ -792,7 +792,7 @@ function scrWeapons() {
 	wep_type[71] = 4
 	wep_auto[71] = 0
 	wep_load[71] = 34
-	wep_cost[71] = 4
+	wep_cost[71] = 5
 	wep_sprt[71] = sprSuperBazooka
 	wep_area[71] = 13
 	wep_text[71] = "\"JW could not resist\"#- Rami 2015"
@@ -957,7 +957,7 @@ function scrWeapons() {
 	wep_type[86] = 2
 	wep_auto[86] = 0
 	wep_load[86] = 40
-	wep_cost[86] = 10
+	wep_cost[86] = 9
 	wep_sprt[86] = sprSuperEraser
 	wep_area[86] = 14
 	wep_text[86] = "pencils"
@@ -1419,7 +1419,7 @@ function scrWeapons() {
 	wep_type[128] = 5
 	wep_auto[128] = 1
 	wep_load[128] = 50
-	wep_cost[128] = 15
+	wep_cost[128] = 13
 	wep_sprt[128] = sprSuperEnergySwordGun
 	wep_area[128] = 24
 	wep_text[128] = "this is nuts"
@@ -1782,7 +1782,7 @@ function scrWeapons() {
 	wep_type[161] = 2
 	wep_auto[161] = 0
 	wep_load[161] = 50
-	wep_cost[161] = 8
+	wep_cost[161] = 10
 	wep_sprt[161] = sprSuperFlameEraser
 	wep_area[161] = 16//14 SUPER ERASER
 	wep_text[161] = "vaporize"
@@ -2354,7 +2354,7 @@ function scrWeapons() {
 	wep_type[213] = 4
 	wep_auto[213] = 0
 	wep_load[213] = 90
-	wep_cost[213] = 12
+	wep_cost[213] = 9
 	wep_sprt[213] = sprSuperNukeLauncher
 	wep_area[213] = 13
 	wep_text[213] = "true power"
@@ -2607,7 +2607,7 @@ function scrWeapons() {
 	wep_type[236] = 3
 	wep_auto[236] = 1
 	wep_load[236] = 26
-	wep_cost[236] = 10
+	wep_cost[236] = 9
 	wep_sprt[236] = sprSuperHeavyAutoCrossbow
 	wep_area[236] = 28//thats the last weapon LABS LOOP
 	wep_text[236] = "this is just ridiculous!"
@@ -2717,7 +2717,7 @@ function scrWeapons() {
 	wep_type[246] = 3
 	wep_auto[246] = 1
 	wep_load[246] = 12
-	wep_cost[246] = 5//4
+	wep_cost[246] = 4.5
 	wep_sprt[246] = sprSuperSplitBladeGun
 	wep_area[246] = 17
 	wep_text[246] = "very sharp"
@@ -2783,7 +2783,7 @@ function scrWeapons() {
 	wep_type[252] = 3
 	wep_auto[252] = 1
 	wep_load[252] = 12
-	wep_cost[252] = 5
+	wep_cost[252] = 4
 	wep_sprt[252] = sprSuperYoyoGun
 	wep_area[252] = 7
 	wep_text[252] = "cutting edge technology"
@@ -2827,7 +2827,7 @@ function scrWeapons() {
 	wep_type[256] = 5
 	wep_auto[256] = 1
 	wep_load[256] = 50
-	wep_cost[256] = 14
+	wep_cost[256] = 12
 	wep_sprt[256] = sprSuperEnergyShankGun
 	wep_area[256] = 21
 	wep_text[256] = "new meta"
@@ -3090,7 +3090,7 @@ function scrWeapons() {
 	wep_name[280] = "GOLDEN ASSAULT PISTOL"
 	wep_type[280] = 1
 	wep_auto[280] = 0
-	wep_load[280] = 7
+	wep_load[280] = 8
 	wep_cost[280] = 2
 	wep_sprt[280] = sprGoldenAPistol
 	wep_area[280] = 18
@@ -4620,7 +4620,7 @@ function scrWeapons() {
 	wep_type[417] = 4
 	wep_auto[417] = 0
 	wep_load[417] = 44
-	wep_cost[417] = 8
+	wep_cost[417] = 7
 	wep_sprt[417] = sprSuperToxicCannon
 	wep_area[417] = 14
 	wep_text[417] = "so much gas"
@@ -4631,7 +4631,7 @@ function scrWeapons() {
 	wep_type[418] = 3
 	wep_auto[418] = 1
 	wep_load[418] = 26
-	wep_cost[418] = 7
+	wep_cost[418] = 4
 	wep_sprt[418] = sprSuperSpiralYoyoGun
 	wep_area[418] = 8
 	wep_text[418] = ""
@@ -4653,7 +4653,7 @@ function scrWeapons() {
 	wep_type[420] = 3
 	wep_auto[420] = 1
 	wep_load[420] = 26
-	wep_cost[420] = 5
+	wep_cost[420] = 4.5
 	wep_sprt[420] = sprSuperSpinnerYoyoGun
 	wep_area[420] = 11
 	wep_text[420] = "super dizzy"
@@ -5709,7 +5709,7 @@ function scrWeapons() {
 	wep_type[516] = 3
 	wep_auto[516] = 0
 	wep_load[516] = 33
-	wep_cost[516] = 8
+	wep_cost[516] = 7
 	wep_sprt[516] = sprSuperPenetrator
 	wep_area[516] = 14
 	wep_text[516] = "really hard penetration!"
@@ -5940,7 +5940,7 @@ function scrWeapons() {
 	wep_type[537] = 3
 	wep_auto[537] = 0
 	wep_load[537] = 340
-	wep_cost[537] = 22
+	wep_cost[537] = 21
 	wep_sprt[537] = sprSuperSeekerCannon
 	wep_area[537] = 18
 	wep_text[537] = "SSC!"
@@ -5951,7 +5951,7 @@ function scrWeapons() {
 	wep_type[538] = 4
 	wep_auto[538] = 0
 	wep_load[538] = 340
-	wep_cost[538] = 23
+	wep_cost[538] = 21
 	wep_sprt[538] = sprSuperBloodCannon
 	wep_area[538] = 19 
 	wep_text[538] = "SBC!"
@@ -5983,8 +5983,8 @@ function scrWeapons() {
 	wep_name[541] = "SUPER MISSILE CANNON"
 	wep_type[541] = 4
 	wep_auto[541] = 0
-	wep_load[541] = 380
-	wep_cost[541] = 26
+	wep_load[541] = 360
+	wep_cost[541] = 24
 	wep_sprt[541] = sprSuperMissileCannon
 	wep_area[541] = 22
 	wep_text[541] = "the world eater"
@@ -6005,8 +6005,8 @@ function scrWeapons() {
 	wep_name[543] = "SUPER KRAKEN CANNON"
 	wep_type[543] = 4
 	wep_auto[543] = 0
-	wep_load[543] = 350
-	wep_cost[543] = 25
+	wep_load[543] = 340
+	wep_cost[543] = 24
 	wep_sprt[543] = sprSuperKrakenCannon
 	wep_area[543] = 22
 	wep_text[543] = "mother of all kraken!"
@@ -6028,7 +6028,7 @@ function scrWeapons() {
 	wep_type[545] = 3
 	wep_auto[545] = 1
 	wep_load[545] = 38
-	wep_cost[545] = 6
+	wep_cost[545] = 6.5
 	wep_sprt[545] = sprSuperLightningCrossbow
 	wep_area[545] = 12
 	wep_text[545] = ""
@@ -6104,8 +6104,8 @@ function scrWeapons() {
 	wep_name[552] = "SUPER WRONG DIRECTION"
 	wep_type[552] = 3
 	wep_auto[552] = 0
-	wep_load[552] = 55
-	wep_cost[552] = 5
+	wep_load[552] = 50
+	wep_cost[552] = 4.5
 	wep_sprt[552] = sprSuperWrongDirection
 	wep_area[552] = 14
 	wep_text[552] = "lost completly"
@@ -6222,10 +6222,10 @@ function scrWeapons() {
 	wep_swap[562] = sndSwapBow
 	wep_rad[562] = 0;
 	
-	wep_name[563] = "SUPER ELECTRO CAexNNON"
+	wep_name[563] = "SUPER ELECTRO CANNON"
 	wep_type[563] = 5
 	wep_auto[563] = 1
-	wep_load[563] = 335
+	wep_load[563] = 330
 	wep_cost[563] = 22
 	wep_sprt[563] = sprSuperElectroCannon
 	wep_area[563] = 22
@@ -6325,7 +6325,7 @@ function scrWeapons() {
 	wep_type[572] = 1
 	wep_auto[572] = 0
 	wep_load[572] = 11
-	wep_cost[572] = 15//18
+	wep_cost[572] = 14//18
 	wep_sprt[572] = sprTripleHeavyAssaultRifle
 	wep_area[572] = 23
 	wep_text[572] = "some discount on these bullets"
@@ -6456,7 +6456,7 @@ function scrWeapons() {
 	wep_name[584] = "SUPER LASER CANNON"
 	wep_type[584] = 5
 	wep_auto[584] = 1
-	wep_load[584] = 25//32 originally
+	wep_load[584] = 24//32 originally
 	wep_cost[584] = 6
 	wep_sprt[584] = sprSuperLaserCannon
 	wep_area[584] = 21
@@ -6482,7 +6482,7 @@ function scrWeapons() {
 	wep_cost[586] = 3.5
 	wep_sprt[586] = sprSuperClusterNader
 	wep_area[586] = 10
-	wep_text[586] = ""
+	wep_text[586] = "strong handshake"
 	wep_swap[586] = sndSwapExplosive
 	wep_rad[586] = 0;
 	
@@ -6787,7 +6787,7 @@ function scrWeapons() {
 	wep_type[614] = 5
 	wep_auto[614] = 1
 	wep_load[614] = 230
-	wep_cost[614] = 24
+	wep_cost[614] = 22
 	wep_sprt[614] = sprSuperLightningCannon
 	wep_area[614] = 20
 	wep_text[614] = "storm bringer"
@@ -6798,7 +6798,7 @@ function scrWeapons() {
 	wep_type[615] = 4
 	wep_auto[615] = 0
 	wep_load[615] = 150
-	wep_cost[615] = 17
+	wep_cost[615] = 16
 	wep_sprt[615] = sprSuperFlameCannon
 	wep_area[615] = 19
 	wep_text[615] = "balls of fire"
@@ -6897,7 +6897,7 @@ function scrWeapons() {
 	wep_type[624] = 4
 	wep_auto[624] = 0
 	wep_load[624] = 45
-	wep_cost[624] = 10
+	wep_cost[624] = 9
 	wep_sprt[624] = sprSuperHeavyNader
 	wep_area[624] = 12
 	wep_text[624] = "hi there"
@@ -7248,7 +7248,7 @@ function scrWeapons() {
 	wep_name[656] = "THE SAFROODEN"
 	wep_type[656] = 1
 	wep_auto[656] = 0
-	wep_load[656] = 25
+	wep_load[656] = 22
 	wep_cost[656] = 4
 	wep_sprt[656] = sprSafroodenBullet
 	wep_area[656] = 14
@@ -7325,7 +7325,7 @@ function scrWeapons() {
 	wep_name[663] = "MORPH-O-REVOLVER"
 	wep_type[663] = 1
 	wep_auto[663] = 1
-	wep_load[663] = 8
+	wep_load[663] = 7
 	wep_cost[663] = 2
 	wep_sprt[663] = sprMorphORevolver
 	wep_area[663] = 2
@@ -7413,7 +7413,7 @@ function scrWeapons() {
 	wep_name[671] = "SUPER NEEDLE"
 	wep_type[671] = 0
 	wep_auto[671] = 1
-	wep_load[671] = 16
+	wep_load[671] = 15
 	wep_cost[671] = 0
 	wep_sprt[671] = sprSuperNeedle
 	wep_area[671] = 10
@@ -7435,7 +7435,7 @@ function scrWeapons() {
 	wep_name[673] = "DROM"
 	wep_type[673] = 0
 	wep_auto[673] = 0
-	wep_load[673] = 14
+	wep_load[673] = 16
 	wep_cost[673] = 0
 	wep_sprt[673] = sprDrom
 	wep_area[673] = 9
@@ -7590,7 +7590,7 @@ function scrWeapons() {
 	wep_type[687] = 1
 	wep_auto[687] = 0
 	wep_load[687] = 18
-	wep_cost[687] = 30//36
+	wep_cost[687] = 29//36
 	wep_sprt[687] = sprTripleBulletLaser
 	wep_area[687] = 22
 	wep_text[687] = "stream of bullets"

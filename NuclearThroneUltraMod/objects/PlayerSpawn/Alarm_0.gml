@@ -16,6 +16,8 @@ snd_play(sndStatueCharge);
 with Player//Data to keep
 {
 	//bskin=other.bskin;
+	canCrownOfProtection = other.canCrownOfProtection;
+	gotMinimumArmour = other.gotMinimumArmour;
 	gunGameKill = other.gunGameKill;
 	rnglevelloop = other.rnglevelloop;
 	firedthislevel = other.firedthislevel;
@@ -196,7 +198,7 @@ with Player//Data to keep
 		}
 		with instance_create(x,y,RespawnLightning)
 		{
-			amount = other.boostLevel-1;
+			amount = ceil((other.boostLevel-1)*0.5);
 		}
 	}
 }
