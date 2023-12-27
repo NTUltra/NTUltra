@@ -62,4 +62,11 @@ if instance_exists(Player)
 	    }
 	}
 }
+else
+	exit;
+with UberCont
+{
+	event_user(0);
+}
+alarm[1] = 1;
 depth = -25;

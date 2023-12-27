@@ -1,7 +1,7 @@
 draw_set_color(c_dkgray)
 //draw_rectangle(x-12,y-16,x+12,y+16,0)
 
-if UberCont.mouse__x > x-16 and UberCont.mouse__x < x+16 and UberCont.mouse__y > y-20 and UberCont.mouse__y < y+20
+if selected
 {
 draw_sprite(sprSkillSelected,-1,x,y)
 draw_sprite(sprite_index,skill,x+2,y-2)
@@ -18,7 +18,7 @@ draw_set_halign(fa_right)
 txt2 = string(ultra_name[skill])+"#"+string(ultra_text[skill])
 var fulltxt = txt2;
 txt2 = scrReplaceAllColourCodes(txt2);
-if UberCont.mouse__x > x-16 and UberCont.mouse__x < x+16 and UberCont.mouse__y > y-20 and UberCont.mouse__y < y+20
+if selected
 {
 
 drawx = x

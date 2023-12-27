@@ -7,6 +7,12 @@ audio_stop_sound(sndFrogLoopButt);
 audio_stop_sound(sndFishRollUpgLoop);
 scroll = 0;
 scrollWidth = 0;
+selectedIndex = -1;
+with KeyCont
+{
+	key_fire[0] = 2;
+	key_pick[0] = 2;	
+}
 with UberCont
 {
 	if (useSeed)
@@ -228,6 +234,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 			{
 				with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,yy,SkillIcon)
 				{
+					skillIndex = i;
 					skill = i;
 				}
 			}
@@ -407,6 +414,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 				gotNoSkills = false;
 				with instance_create(xx,yy,SkillIcon)
 				{
+					skillIndex = i;
 					skill = i;
 				}
 				xx += step;
@@ -435,6 +443,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 			{
 				with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,yy,SkillIcon)
 				{
+					skillIndex = i;
 					skill = i;
 				}
 			}

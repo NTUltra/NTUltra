@@ -3,6 +3,10 @@ instance_destroy()
 SetSeed();
 if instance_exists(Player)
 {
+	with UberCont {
+		area = Player.area;
+		subarea = Player.subarea;
+	}
 	with Crown
 	{
 		if newThing = 1 && Player.area != 104 {
@@ -142,6 +146,7 @@ if instance_exists(Player)
 	{
 		wkick = 0;
 		alienIntestines = 0;
+		sheepPower = 0;
 		// excessDamageDeal = 0;
 		if !instance_exists(BigMachine) && !instance_exists(InvertedBigMachine)
 		{

@@ -21,7 +21,12 @@ with Player
 			else
 				my_health -= 7
 			repeat(10)
-				instance_create(x+random(16)-8,y+random(16)-8,Curse)
+				instance_create(x+random(16)-8,y+random(16)-8,Curse);
+			hitBy = wep_sprt[wep];	
+			sprite_index = spr_hurt;
+			image_index = 0;
+			snd_play(snd_hurt, hurt_pitch_variation,true)
+			
 		}
 		reload = lowa;
 		breload = lowb;
@@ -73,7 +78,6 @@ with Player
 		
 		//AND NOW THE EAT LOGIC
 		scrBasicRobotEat(x,y,eatWep);
-		breload = min(breload,0);
 		//DONT NEED THIS IN AUTO EAT
 		if ultra_got[30] || ultra_got[29] || ultra_got[31]// || ultra_got[32]
 		{

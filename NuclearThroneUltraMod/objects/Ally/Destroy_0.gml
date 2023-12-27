@@ -1,10 +1,10 @@
-scrDrop(4,0)
+scrDrop(3,0)
 if instance_exists(Player)
 {
 	
 	if Player.ultra_got[39] && !Player.altUltra//everyone is connected
 	{
-		scrDrop(10,2);
+		scrDrop(8,2);
 		raddrop += 8;
 	}
 	//REBEL DEFENCE PASSIVE

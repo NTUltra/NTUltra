@@ -4,7 +4,10 @@ if !place_meeting(x,y,Floor)
 	var n = instance_nearest(x,y,Floor)
 	if n != noone
 	{
-		x = n.x+8;
-		y = n.y+8;
+		var o = 16;
+		if n.object_index == FloorExplo
+			o = 8;
+		x = n.x+o;
+		y = n.y+o;
 	}
 }

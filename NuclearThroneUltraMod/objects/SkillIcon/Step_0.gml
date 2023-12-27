@@ -1,7 +1,19 @@
 if (UberCont.mouse__x < x+16 and UberCont.mouse__y < y+16 and UberCont.mouse__x > x-20 and UberCont.mouse__y > y-20)
 {
+	with SkillIcon
+		selected = false;
+		
+	selected = true;
+	with UberCont
+	{
+		selectedIndex = other.skillIndex;	
+	}
+}
+if selected
+{
 	hover = true;
-	if mouse_check_button_pressed(mb_right) {
+	if KeyCont.key_spec[p] == 1{
+		KeyCont.key_spec[p] = 2;
 		with SkillIcon
 		{
 			showDetail = !showDetail;
@@ -13,9 +25,10 @@ if (UberCont.mouse__x < x+16 and UberCont.mouse__y < y+16 and UberCont.mouse__x 
 			snd_play_2d(sndClickBack);
 		UberCont.opt_show_mutation_details = showDetail;
 	}
-	else if KeyCont.key_fire[p] = 1
+	else if (KeyCont.key_fire[p] == 1 || KeyCont.key_pick[p] == 1) && (!mouse_check_button_pressed(mb_left) || (UberCont.mouse__x < x+16 and UberCont.mouse__y < y+16 and UberCont.mouse__x > x-20 and UberCont.mouse__y > y-20))
 	{
 		KeyCont.key_fire[p] = 2;
+		KeyCont.key_pick[p] = 2;
 		UberCont.globalMutationsChosen ++;
 		Player.skill_got[skill] = 1
 		Player.skillsChosen+=1;

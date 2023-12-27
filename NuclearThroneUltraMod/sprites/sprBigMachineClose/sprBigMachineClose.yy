@@ -69,7 +69,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6548a5d2-85af-4dd2-ae7a-0638fdf2246b","path":"sprites/sprBigMachineClose/sprBigMachineClose.yy",},},},"Disabled":false,"id":"a8b73aa5-135d-44ac-9b2b-807b92d916c5","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 79,
     "yorigin": 62,

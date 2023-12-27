@@ -85,14 +85,14 @@ if scrEnableLaserSight()
 		aimDir += 90*accuracy
 		do {lasd += 1 lasx += lengthdir_x(2,aimDir) lasy += lengthdir_y(2,aimDir)}
 		until position_meeting(lasx,lasy,Wall) or lasd > 1000
-		draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,1,aimDir,c_white,1)
+		draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,image_yscale,aimDir,c_white,1)
 		lasx = sx
 		lasy = sy
 		lasd = 0
 		var aimDir = aimDirection - 90*accuracy
 		do {lasd += 1 lasx += lengthdir_x(2,aimDir) lasy += lengthdir_y(2,aimDir)}
 		until position_meeting(lasx,lasy,Wall) or lasd > 1000
-		draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,1,aimDir,c_white,1)
+		draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,image_yscale,aimDir,c_white,1)
 		if wep == 552
 		{
 			lasx = sx
@@ -101,7 +101,7 @@ if scrEnableLaserSight()
 			var aimDir = aimDirection + 180
 			do {lasd += 1 lasx += lengthdir_x(2,aimDir) lasy += lengthdir_y(2,aimDir)}
 			until position_meeting(lasx,lasy,Wall) or lasd > 1000
-			draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,1,aimDir,c_white,1)
+			draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,image_yscale,aimDir,c_white,1)
 		}
 	}
 	else
@@ -113,7 +113,7 @@ if scrEnableLaserSight()
 		do {lasd += 1 lasx += lengthdir_x(2,aimDir) lasy += lengthdir_y(2,aimDir)}
 		until position_meeting(lasx,lasy,Wall) or lasd > 1000
 	
-		draw_sprite_ext(sprLaserSightPlayer,-1,x,y,point_distance(x,y,lasx,lasy)/2+2,1,aimDirection,c_white,1)
+		draw_sprite_ext(sprLaserSightPlayer,-1,x,y,point_distance(x,y,lasx,lasy)/2+2,image_yscale,aimDirection,c_white,1)
 	}
 }
 
@@ -152,14 +152,14 @@ if race = 7 and bwep != 0
 			aimDir += 90*accuracy
 			do {lasd += 1 lasx += lengthdir_x(2,aimDir) lasy += lengthdir_y(2,aimDir)}
 			until position_meeting(lasx,lasy,Wall) or lasd > 1000
-			draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,1,aimDir,c_white,1)
+			draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,image_yscale,aimDir,c_white,1)
 			lasx = sx
 			lasy = sy
 			lasd = 0
 			var aimDir = aimDirection - 90*accuracy
 			do {lasd += 1 lasx += lengthdir_x(2,aimDir) lasy += lengthdir_y(2,aimDir)}
 			until position_meeting(lasx,lasy,Wall) or lasd > 1000
-			draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,1,aimDir,c_white,1)
+			draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,image_yscale,aimDir,c_white,1)
 			if wep == 552
 			{
 				lasx = sx
@@ -168,7 +168,7 @@ if race = 7 and bwep != 0
 				var aimDir = aimDirection + 180
 				do {lasd += 1 lasx += lengthdir_x(2,aimDir) lasy += lengthdir_y(2,aimDir)}
 				until position_meeting(lasx,lasy,Wall) or lasd > 1000
-				draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,1,aimDir,c_white,1)
+				draw_sprite_ext(sprLaserSightPlayer,-1,sx,sy,point_distance(sx,sy,lasx,lasy)/2+2,image_yscale,aimDir,c_white,1)
 			}
 		}
 		else
@@ -178,7 +178,7 @@ if race = 7 and bwep != 0
 			lasd = 0
 			do {lasd += 1 lasx += lengthdir_x(2,aimDirection) lasy += lengthdir_y(2,aimDirection)}
 			until position_meeting(lasx,lasy,Wall) or lasd > 1000
-			draw_sprite_ext(sprLaserSightPlayer,-1,x,y-4,point_distance(x,y,lasx,lasy)/2+2,1,aimDirection,c_white,1)
+			draw_sprite_ext(sprLaserSightPlayer,-1,x,y-4,point_distance(x,y,lasx,lasy)/2+2,image_yscale,aimDirection,c_white,1)
 		}
 	}
 	draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),y+gunY-4+lengthdir_y(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),image_yscale,-bwepright,aimDirection+(bwepangle*(1-bwkick/20)),c_white,1)

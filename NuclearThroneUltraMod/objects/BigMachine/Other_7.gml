@@ -1,12 +1,7 @@
-if sprite_index=sprBigMachineIntro||sprite_index=sprBigMachineClose
+if sprite_index==spr_intro
 {
 image_index=0;
-spr_idle=sprBigMachineIdle;
-spr_walk=sprBigMachineIdle;
+spr_idle=spr_expose;
+spr_walk=spr_expose;
+mask_index = mskBigMachineProtectedExposed;
 }
-
-if sprite_index=sprBigMachineBecomeExposed || (sprite_index == sprBigMachineHurt && spr_idle == sprBigMachineBecomeExposed)
-{
-	event_user(0);
-}
-

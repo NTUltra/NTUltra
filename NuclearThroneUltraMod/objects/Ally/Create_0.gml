@@ -20,7 +20,7 @@ if instance_exists(Player)
 		maxhealth=30;
 	else
 		maxhealth = 12;
-	maxhealth += min(Player.loops,10);
+	maxhealth += min(Player.loops * 2,10);
 	if Player.ultra_got[39] && !Player.altUltra
 		alarm[3] = 30;
 	if Player.bskin == 2

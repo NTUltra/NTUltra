@@ -2,6 +2,12 @@ var yy = __view_get( e__VW.YView, 0 );
 if isPaused == 1
 {
 	draw_sprite_ext(pauseimg,0,__view_get( e__VW.XView, 0 ),yy,pauseimgScale,pauseimgScale,0,c_white,1)//0.35,
+	if isPausedInTheDark
+	{
+		draw_set_blend_mode(bm_subtract)
+		draw_sprite_ext(pauseDark,0,__view_get( e__VW.XView, 0 ),yy,1,1,0,c_white,1);
+		draw_set_blend_mode(bm_normal)
+	}
 	draw_set_color(c_black)
 	draw_set_blend_mode(bm_normal)
 	draw_set_alpha(0.6)
@@ -105,7 +111,7 @@ if isPaused == 1
 			if (UberCont.opt_gamemode[i] != 0)
 			{
 				gamemodeScrollString += string_replace_all(UberCont.gamemode[UberCont.opt_gamemode[i]],"#"," ");
-				if i != al - 1
+				if i != al - 1 && UberCont.opt_gamemode[i + 1] != 0
 					gamemodeScrollString += " + ";
 			}
 		}
@@ -221,8 +227,26 @@ if isPaused == 1
 		/////ALLRIGHT THATS OPTIONS
 	}
 }
-
+else if instance_exists(ShopWheel) && !instance_exists(TopCont){
+	draw_sprite_ext(pauseimg,0,__view_get( e__VW.XView, 0 ),yy,pauseimgScale,pauseimgScale,0,c_white,1);
+	if isPausedInTheDark
+	{
+		draw_set_blend_mode(bm_subtract)
+		draw_sprite_ext(pauseDark,0,__view_get( e__VW.XView, 0 ),yy,1,1,0,c_white,1);
+		draw_set_blend_mode(bm_normal)
+	}
+	draw_set_color(c_black)
+	draw_set_alpha(0.6)
+	draw_rectangle(__view_get( e__VW.XView, 0 ),yy,__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),yy+__view_get( e__VW.HView, 0 ),0)
+	draw_set_alpha(1)
+}
 if alarm[1]>0
 {
-	draw_sprite_ext(pauseimg,0,__view_get( e__VW.XView, 0 ),yy,pauseimgScale,pauseimgScale,0,c_white,1)
+	draw_sprite_ext(pauseimg,0,__view_get( e__VW.XView, 0 ),yy,pauseimgScale,pauseimgScale,0,c_white,1);
+	if isPausedInTheDark
+	{
+		draw_set_blend_mode(bm_subtract)
+		draw_sprite_ext(pauseDark,0,__view_get( e__VW.XView, 0 ),yy,1,1,0,c_white,1);
+		draw_set_blend_mode(bm_normal)
+	}
 }

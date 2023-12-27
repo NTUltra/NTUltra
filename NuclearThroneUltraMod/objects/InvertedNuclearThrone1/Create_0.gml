@@ -2,8 +2,9 @@
 
 // Inherit the parent event
 event_inherited();
-maxhealth = 1690//1700
+maxhealth = 1710//1700
 scrBossHealthBuff();
+EnemyHealthAdjustments();
 raddrop = 600;
 isInverted = true;
 aTime = 30;
@@ -30,7 +31,8 @@ spr_middle_hurt_link = sprInvertedNothingMiddleHurtLink;
 spr_middle_deactivated_hurt_link = sprInvertedNothingMiddleDeactivatedHurtLink
 
 with leftSide {
-	maxhealth = 600;
+	maxhealth = 670;
+	scrBossHealthBuff();
 	EnemyHealthAdjustments();
 	isInverted = true;
 	sprite_index = sprInvertedNothingLeft;
@@ -48,7 +50,8 @@ with leftSide {
 	
 }
 with rightSide {
-	maxhealth = 600;
+	maxhealth = 670;
+	scrBossHealthBuff();
 	EnemyHealthAdjustments();
 	isInverted = true;
 	sprite_index = sprInvertedNothingRight;

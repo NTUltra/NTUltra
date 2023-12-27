@@ -1,5 +1,7 @@
 loops = GetPlayerLoops();
-maxhealth = 100 * clamp(loops*3,1,5)
+maxhealth = 60;
+if loops > 0 || scrIsHardMode()
+	maxhealth = 95 * clamp(loops*3,1,5)
 mySize = 2
 
 spr_idle = sprBigFishSkullOpen
@@ -23,7 +25,7 @@ if instance_exists(Player) && Player.subarea != 1
 }
 if loops < 1
 	alarm[2] = 1
-instance_create(x,y,WallBreak);
+instance_create(x,y,BigWallBreak);
 name = "?"
 
 alarm[6] = 5;

@@ -23,7 +23,9 @@ if alarm[0] < 1 && other.team == 2 && instance_exists(Player) && (!ezMode || oth
 
 		if immune
 		{
-			alarm[4]=50;
+			with other
+				instance_destroy();
+			alarm[4] = 20;
 			if ultra_got[62] && altUltra && armour > immunelimit//Living armour
 			{
 				dealtDamage = true;

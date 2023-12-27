@@ -6,7 +6,7 @@ raddrop += 2
 maxhealth = 30
 my_health = maxhealth;
 EnemyHealthAdjustments();
-actTime = 10;
+actTime = 11;
 spr_idle = sprInvertedNewGuardianIdle;
 spr_walk = sprInvertedNewGuardianIdle;
 spr_normal = sprInvertedNewGuardianIdle;

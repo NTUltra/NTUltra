@@ -9,7 +9,7 @@ if target != noone
 {
 	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 	{
-		if random(5) < 4
+		if random(6) < 5
 		{
 			event_user(0);
 		}

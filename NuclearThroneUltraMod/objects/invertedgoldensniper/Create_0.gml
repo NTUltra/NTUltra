@@ -4,7 +4,7 @@
 event_inherited();
 alarm[0] = 0;
 tellTime -= 3;
-actTime -= 6;
+actTime -= 4;
 raddrop = 14
 maxhealth = 20
 my_health = maxhealth;

@@ -1,7 +1,7 @@
 function scrDrawGameOver() {
 	
 	//GAME OVER
-	if !instance_exists(DataRef) || !instance_exists(BackCont)
+	if !instance_exists(DataRef) || !instance_exists(BackCont) || instance_exists(PlayerSpawn) || instance_exists(ShopWheel)
 		return;
 	var vx = 0;
 	var vy = 0;
@@ -70,7 +70,7 @@ function scrDrawGameOver() {
 		crown = [1]
 		with all
 		{
-			if id != UberCont.id and persistent = true && id != Cursor.id && id != GameRender.id 
+			if id != UberCont.id and persistent = true && id != Cursor.id && id != GameRender.id && id != KeyCont.id 
 			{
 				persistent = false
 				instance_destroy()
@@ -242,7 +242,7 @@ function scrDrawGameOver() {
 				if (UberCont.opt_gamemode[i] != 0)
 				{
 					gamemodeScrollString += string_replace_all(UberCont.gamemode[UberCont.opt_gamemode[i]],"#"," ");
-					if i != al - 1
+					if i != al - 1 && UberCont.opt_gamemode[i + 1] != 0
 						gamemodeScrollString += " + ";
 				}
 			}
@@ -272,7 +272,7 @@ function scrDrawGameOver() {
 		draw_text_colour(vx+__view_get( e__VW.WView, 0 )-string_width(string_hash_to_newline(formatString))*0.5,yy,string_hash_to_newline(finalTime),c_black
 		,c_black,c_black,c_black,1);
 		draw_text_colour(vx+__view_get( e__VW.WView, 0 )-string_width(string_hash_to_newline(formatString))*0.5,yy-1,string_hash_to_newline(finalTime),c_white
-		,c_white,c_white,c_white,1);	
+		,c_white,c_white,c_white,1);
 	}
 	draw_set_halign(fa_left)
 }

@@ -4,8 +4,7 @@ encryptedVersion = 003;
 public = 0 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "30.00"//"PR 30.02";
-subUpdateVersion = "BETA 1";
-serverIp =  "";serverPort =  0;
+subUpdateVersion = "BETA 3";
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
 /*
@@ -28,9 +27,6 @@ tot_time = 0;
 opt_gamepad=0;//for interaction sprites
 opt_ammoicon = true;
 
-with KeyCont
-instance_destroy()
-instance_create(x,y,KeyCont)
 
 //this is for the menu
 area=0;
@@ -192,6 +188,8 @@ justQuit = false;
 scrSaveCustomSurvivalArenaTemplate();
 
 pauseimg = sprSharpStress;
+pauseDark = pauseimg;
+isPausedInTheDark = false;
 pauseimgScale = 1;
 confirmState = 0;
 keepDeactive = ds_list_create();

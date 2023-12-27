@@ -71,6 +71,9 @@ if !audio_group_is_loaded(agsfx)
 if !instance_exists(UberCont)
 instance_create(0,0,UberCont)
 
+if !instance_exists(KeyCont)
+instance_create(0,0,KeyCont)
+
 if !instance_exists(GameRender)
 instance_create(0,0,GameRender)
 	

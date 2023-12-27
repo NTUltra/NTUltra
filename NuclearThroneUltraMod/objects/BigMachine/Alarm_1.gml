@@ -1,4 +1,6 @@
 /// @description shooot
+if alarm[7] > 0
+	alarm[1] += 5;
 snd_play_2d(sndBigMachineShoot);
 
 ///shoot
@@ -23,9 +25,5 @@ image_angle = direction}
 ammo--;
 
 if ammo>0
-alarm[1]=5;
-else if !reachedHalfHealth && my_health < maxhealth * 0.5
-{
-	reachedHalfHealth = true;
-	snd_play(sndBigMachineLowHP);
-}
+alarm[1]=fireRate;
+

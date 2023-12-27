@@ -1,7 +1,7 @@
 event_inherited()
 
 
-if sprite_index=sprBigMachineBecomeExposed
+if sprite_index=spr_become_exposed
 {
 with instance_create(x+random(96)-48,y+random(96)-48,LaserCharge)
 {

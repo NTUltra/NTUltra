@@ -569,7 +569,7 @@ function scrPopEnemies() {
 				instance_create(x + 16, y + 16,DiscGuy);
 			}
 		} else {
-			if random(3) > 1
+			if random(4) > 1
 			instance_create(x + 16, y + 16, choose(SnowBot, SnowBot, SnowBot, SnowTank, Wolf, Wolf, DiscGuy, BanditSquare))
 			else if instance_number(enemy) < 1
 			{
@@ -593,7 +593,7 @@ function scrPopEnemies() {
 		}
 		else
 		{
-	        if random(3) < 2
+	        if random(4) < 2
 	        instance_create(x + 16, y + 16, choose(InvertedDiscGuy, InvertedSnowBot, InvertedSnowBot, InvertedSnowTank, InvertedWolf, InvertedWolf, InvertedDiscGuy))
 			else if instance_number(enemy) < 1
 			{

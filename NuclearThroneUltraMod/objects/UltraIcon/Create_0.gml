@@ -34,8 +34,8 @@ bwepmod2=Player.bwepmod2
 bwepmod3=Player.bwepmod3
 bwepmod4=Player.bwepmod4
 }
-
+skillIndex = instance_number(UltraIcon) - 1;
 exceptionclick=false;
-
+selected = false;
 
 

@@ -18,7 +18,7 @@ snd_dead = sndSalamanderDead
 snd_melee = sndSalamanderFire
 
 //behavior
-maxRange = 300;
+maxRange = 310;
 actTime = 25;
 ammo = 10
 acc = 0.6;

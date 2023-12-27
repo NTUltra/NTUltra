@@ -9,7 +9,7 @@ if ammo > 0
 		if ammo > 44 || ammo < 34
 	            with instance_create(x,y,TrapFire)
 	            {
-	            motion_add(other.gunangle+random(4)-2,9)
+	            motion_add(other.gunangle+random(4)-2,9.5)
 	            team = other.team
 	            }
 	walk=0;

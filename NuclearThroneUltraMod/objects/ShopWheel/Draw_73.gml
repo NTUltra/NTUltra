@@ -1,6 +1,6 @@
 /// @description Display rad percentage
 var rads = 0;
-with Player
+with DataRef
 {
 	rads = floor((rad/GetPlayerMaxRad())*100);
 }

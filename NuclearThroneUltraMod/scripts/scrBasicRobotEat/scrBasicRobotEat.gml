@@ -5,7 +5,7 @@ function scrBasicRobotEat(xx,yy,eatWep){
 	var r = 4;
 	if string_copy(wep_name[eatWep],0,5) = "ULTRA"
 	{
-		scrRaddrop(12);
+		scrRaddrop(12,xx,yy);
 		scrUnlockCSkin(8,"FOR EATING AN ULTRA WEAPON",0);
 	}
 	else if string_copy(wep_name[eatWep],0,5) = "HYPER" || eatWep = 131//heavy hyper shit

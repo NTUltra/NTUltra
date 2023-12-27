@@ -1,5 +1,6 @@
 room_speed=UberCont.normalGameSpeed*UberCont.opt_loading;
 loadTime = 60;
+
 if UberCont.opt_loading == 4
 {
 	loadTime = 4;
@@ -9,6 +10,11 @@ crown = [1];
 alarm[3] = loadTime - 2;//Loading time;
 alarm[0] = loadTime - 1;
 alarm[2] = loadTime - 2;
+with WepPickup
+{
+	speed = 0;
+	alarm[5] = other.loadTime;
+}
 with BackCont
 {
 	alarm[4] += other.loadTime + 5;	

@@ -16,8 +16,8 @@ with instance_create(x,y,BigDogExplo)
 snd_play(sndExplosionXL);
 
 
-mask_index=mskBigMachine;
-
+with myCore
+	instance_destroy();
 
 with InvertedBigMachineLaser
 instance_destroy();
@@ -25,8 +25,6 @@ instance_destroy();
 with InvertedBigMachineTurret
 instance_destroy();
 
-with BigMachineMask
-instance_destroy();
 
 with LabTrap
 instance_destroy();

@@ -40,7 +40,7 @@ if confirmState == 3
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 }
-else if !isPaused && !instance_exists(Player) && !instance_exists(PlayerSpawn)
+else if !isPaused && !instance_exists(Player) && !instance_exists(PlayerSpawn) && !instance_exists(ShopWheel)
 {
 	txttime = finalTime;
 }
@@ -77,7 +77,7 @@ else
 		txttime = minutesstring+":"+secondsstring+":"+microseconds;
 	}
 }
-if confirmState != 3 && !instance_exists(Menu)&&!instance_exists(Vlambeer) && !instance_exists(UnlockPopup) && opt_timer=1 && !instance_exists(Leaderboard)
+if confirmState != 3 && !instance_exists(Menu) && !instance_exists(Vlambeer) && !instance_exists(UnlockPopup) && opt_timer && !instance_exists(Leaderboard)
 {
 draw_set_valign(fa_top)
 draw_set_halign(fa_center)

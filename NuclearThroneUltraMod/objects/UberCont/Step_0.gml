@@ -1,6 +1,8 @@
 recursionCheck = 0;
 steam_update();
-if confirmState > 0 && (mouse_check_button_pressed(mb_right))
+if !instance_exists(KeyCont) || alarm[7] > 0 || instance_exists(ShopWheel)
+	exit;
+if confirmState > 0 && (mouse_check_button_pressed(mb_right) || KeyCont.key_spec[0] == 1|| gamepad_button_check(0,gp_face2))
 {
 	confirmState = 0;
 }
@@ -10,11 +12,11 @@ if isPaused == 1
 if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_exists(Player) && 
 (
 (keyboard_check_pressed(ord("R")) || gamepad_button_check(0,gp_face3)) ||
-(mouse_check_button_pressed(mb_left) && confirmState == 1)
+((mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)) && confirmState == 1)
 )
 )//(gamepad_button_check(0,gp_stickl) && gamepad_button_check(0,gp_stickr)) )
 {
-	if confirmState == 1 && mouse_check_button_pressed(mb_left)
+	if confirmState == 1 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1))
 	{
 		confirmState = 0;
 		debug("QUICK RESTART");
@@ -50,6 +52,7 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 		alarm[4] = 0;
 		alarm[5] = 0;
 		isPaused = 0
+		isPausedInTheDark = false;
 		alarm[3] = 1;
 		with Player
 		{
@@ -114,12 +117,10 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 		exit;
 	}
 }
-instance_activate_object(KeyCont)
-with KeyCont{
-scrKeyContStep()}
+// instance_activate_object(KeyCont)
 //RETURN TO GAME
-if instance_exists(KeyCont) && (keyboard_check_pressed(vk_escape) or keyboard_check_pressed(ord("P")) or keyboard_check_pressed(vk_f1) or mouse_check_button_pressed(mb_right) or KeyCont.key_back[0] = 1
-or gamepad_button_check(0,gp_face2) or gamepad_button_check(0,gp_start) or gamepad_button_check(0,gp_select))
+if (KeyCont.key_paus[0] = 1) ||
+(mouse_check_button_pressed(mb_right) || gamepad_button_check(0,gp_face2))
 {
 with option
 instance_destroy()
@@ -147,6 +148,7 @@ Cursor.image_index=UberCont.opt_crosshair;
 Cursor.image_index=UberCont.opt_crosshair;}
 */
 isPaused = 0
+isPausedInTheDark = false;
 alarm[4] = 0;
 alarm[5] = 0;
 alarm[3] = 1;
@@ -155,11 +157,11 @@ audio_resume_all();
 //RETURN TO MENU
 if (
 ((keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4)) ||
-(mouse_check_button_pressed(mb_left) && confirmState == 2))
+((mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)) && confirmState == 2))
 && !instance_exists(PlayerSpawn) && !instance_exists(StartDaily)
 )
 {
-	if (confirmState == 2 && mouse_check_button_pressed(mb_left))
+	if (confirmState == 2 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)))
 	{
 		confirmState = 0;
 		if isWeekly
@@ -180,6 +182,7 @@ if (
 			instance_create(x,y,FPSHACK);	
 		}
 		isPaused = 0
+		isPausedInTheDark = false;
 		alarm[4] = 0;
 		alarm[5] = 0;
 		alarm[3] = 1;
@@ -205,10 +208,10 @@ if (
 //QUIT
 if ( keyboard_check_pressed(ord("Q")) or ( gamepad_button_check(0,gp_shoulderr) && gamepad_button_check(0,gp_shoulderrb) 
 && gamepad_button_check(0,gp_shoulderl) && gamepad_button_check(0,gp_shoulderlb) ) ||
-(mouse_check_button_pressed(mb_left) && confirmState == 2)
+((mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)) && confirmState == 2)
 )
 {
-	if confirmState == 2 && mouse_check_button_pressed(mb_left)
+	if confirmState == 2 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1))
 	{
 		confirmState = 0;
 		if (UberCont.isWeekly)
@@ -231,13 +234,13 @@ else
 
 //NOT PAUSED
 
-if (instance_exists(KeyCont) && !instance_exists(StartDaily) && 
-(keyboard_check_pressed(vk_escape)or KeyCont.key_paus[0] = 1 || (!instance_exists(Vlambeer)&&(!window_has_focus()) && public == 1) ) and !instance_exists(GenCont)
-|| (confirmState == 3 && mouse_check_button_pressed(mb_left))
+if (!instance_exists(StartDaily) && 
+(KeyCont.key_paus[0] = 1 || (!instance_exists(Vlambeer)&&(!window_has_focus()) && public == 1) ) and !instance_exists(GenCont)
+|| (confirmState == 3 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)))
 )
 {
 	var endMe = false;
-	if keyboard_check_pressed(vk_escape) and instance_exists(Menu)
+	if KeyCont.key_paus[0] = 1 and instance_exists(Menu)
 	{
 		if isWeekly
 			opt_gamemode = [0];
@@ -272,7 +275,7 @@ if (instance_exists(KeyCont) && !instance_exists(StartDaily) &&
 	}
 	if endMe
 	{
-		if confirmState == 3 && mouse_check_button_pressed(mb_left)
+		if confirmState == 3 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1))
 		{
 			steam_shutdown();
 			game_end()
@@ -287,59 +290,10 @@ else if instance_exists(Player) && !instance_exists(StartDaily)///PAUSE IN-GAME
 {
 kills=Player.kills
 hard=Player.hard;
-if instance_exists(TopCont) && TopCont.darkness == 0
-{
-	pauseimg = sprite_create_from_surface(application_surface,0,0,surface_get_width(application_surface),surface_get_height(application_surface),0,0,0,0);
-	pauseimgScale = 1/UberCont.opt_resolution_scale;
-}
-else
-{
-	pauseimg = sprDarkness;
-	pauseimgScale = 1;
-}
-	
-//cursor_sprite=sprCrosshair
-//with Cursor
-//instance_destroy();
-/*
-with FPSHACK
-{
-	var al = ds_list_size(forcePositions)
-	for (var i = 0; i < al; i++)
-	{
-		instance_activate_object(forcePositions[| i]);
-	}
-}*/
-
-instance_deactivate_all(1)
-scrActivateImportant();
-optY = 24;
-var xx = 10;
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+8,__view_get( e__VW.YView, 0 )+32+optY,MusVolSlider)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+8,__view_get( e__VW.YView, 0 )+40+optY,SfxVolSlider)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+8,__view_get( e__VW.YView, 0 )+48+optY,AmbVolSlider)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+10+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+56+optY,ThreeDAudioToggle)
-
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+xx+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+80+optY,FullScreenToggle)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+xx+string_width(string_hash_to_newline("00")),__view_get( e__VW.YView, 0 )+80+optY,CursorUpDown)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+xx+string_width(string_hash_to_newline("0")),__view_get( e__VW.YView, 0 )+96+optY,SideArtUpDown)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+xx+string_width(string_hash_to_newline("100%")),__view_get( e__VW.YView, 0 )+104+optY,DamageIndicatorToggle)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+xx+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+112+optY,CameraFollowToggle)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+xx+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+120+optY,HighQualityToggle)
-//instance_create(view_xview+view_wview/2+10+string_width("OFF"),view_yview+136,GamePadToggle)
-//instance_create(view_xview+view_wview/2+10+string_width("100%"),view_yview+144,AutoAimUpDown)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("100%")),__view_get( e__VW.YView, 0 )+166+optY,ShakeUpDown)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("100%")),__view_get( e__VW.YView, 0 )+174+optY,FreezeFrameUpDown)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("16X")),__view_get( e__VW.YView, 0 )+182+optY,ResolutionScaleUpDown)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("100%")),__view_get( e__VW.YView, 0 )+190+optY,LoadingScreenSpeedUpDown)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+198+optY,MouseCPToggle)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+206+optY,BossIntroToggle);
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+214+optY,TimerToggle);
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+x+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+222+optY,FPSToggle);
-
+event_user(0);
+alarm[7] = 1;
 isPaused = 1
-alarm[4] = 1;
-audio_pause_all();
+
 }
 }
 }

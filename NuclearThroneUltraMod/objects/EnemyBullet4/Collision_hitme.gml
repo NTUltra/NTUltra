@@ -5,6 +5,7 @@ if other.sprite_index != other.spr_hurt
 {
 with other
 {
+	hitBy = other.sprite_index;
 sprite_index = spr_hurt
 image_index = 0
 my_health -= other.dmg

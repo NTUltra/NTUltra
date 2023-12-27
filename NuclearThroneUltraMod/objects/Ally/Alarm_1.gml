@@ -13,6 +13,11 @@ else if sprite_index = sprAllyEAppear
 	spr_idle = sprAllyEIdle
 	sprite_index = spr_idle
 }
+else if sprite_index = sprAllyGAppear
+{
+	spr_idle = sprAllyGIdle
+	sprite_index = spr_idle
+}
 alarm[1] = 10+irandom(6)
 
 

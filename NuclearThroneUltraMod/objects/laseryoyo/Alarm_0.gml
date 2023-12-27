@@ -1,5 +1,5 @@
 /// @description Laser!
-alarm[0] = 6;
+alarm[0] = 7;
 
 snd_play(snd);
 var accuracy = 1;

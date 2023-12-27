@@ -2,7 +2,7 @@
 if KeyCont.key_pick[other.p] = 1 && UberCont.collectedInversionShards > 2 
 && !UberCont.collectedInversionShardReward
 {
-	KeyCont.key_pick[Player.p] = 2;
+	KeyCont.key_pick[other.p] = 2;
 	UberCont.canSpawnInversionShards = false;
 	UberCont.collectedInversionShardReward = true;
 	with Player

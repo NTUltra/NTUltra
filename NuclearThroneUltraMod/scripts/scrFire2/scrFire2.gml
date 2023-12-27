@@ -6829,9 +6829,9 @@ function scrFire2(hasTailNow) {
 
 		snd_play_fire(sndWaveGun)
 		var aimDir = aimDirection+(random(12)-6)*accuracy
-		var s = 17
-		var am = 3;//am*am = 9
-		var offsetStep = 10*accuracy;
+		var s = 17.25
+		var am = 4;//am*am = 16
+		var offsetStep = 8*accuracy;
 		var offset = offsetStep*am*0.5;
 		var xx = x+lengthdir_x(offset,aimDir-90)+lengthdir_x(offset*0.5,aimDir+180);
 		var yy = y+lengthdir_y(offset,aimDir-90)+lengthdir_y(offset*0.5,aimDir+180);
@@ -7537,17 +7537,17 @@ function scrFire2(hasTailNow) {
 
 	instance_create(x,y,Dust)
 
-	with instance_create(x+hspeed,y+vspeed,SpinSlash)
+	with instance_create(x+hspeed+lengthdir_x(4+((Player.skill_got[13]+bettermelee)*8),aimDirection),y+vspeed+lengthdir_y(4+((Player.skill_got[13]+bettermelee)*8),aimDirection),SpinSlash)
 	{
 	dmg = 10
 	speed = other.speed*0.5;
 	direction = other.direction;
 	longarms = 0
-	
 	longarms = Player.skill_got[13]+other.bettermelee
+	motion_add(aimDirection,2+(longarms*2));
 	image_angle = direction
-	image_xscale = 1+(longarms*0.12);
-	image_yscale = 1+(longarms*0.12);
+	image_xscale = 1+(longarms*0.15);
+	image_yscale = 1+(longarms*0.15);
 	team = other.team
 	rotation *= sign(other.wepangle);
 	}
@@ -7568,30 +7568,32 @@ function scrFire2(hasTailNow) {
 
 	instance_create(x,y,Dust)
 
-	with instance_create(x+hspeed,y+vspeed,SpinSlash)
+	with instance_create(x+hspeed+lengthdir_x(4+((Player.skill_got[13]+bettermelee)*8),aimDirection),y+vspeed+lengthdir_y(4+((Player.skill_got[13]+bettermelee)*8),aimDirection),SpinSlash)
 	{
 		speed = other.speed*0.5;
 		direction = other.direction;
 		longarms = 0
 		
 		longarms = Player.skill_got[13]+other.bettermelee
+		motion_add(aimDirection,2+(longarms*2));
 		image_angle = direction
-		image_xscale = 1+(longarms*0.12);
-		image_yscale = 1+(longarms*0.12);
+		image_xscale = 1+(longarms*0.15);
+		image_yscale = 1+(longarms*0.15);
 		team = other.team
 		rotation *= sign(other.wepangle);
 	}
 	
-	with instance_create(x+hspeed,y+vspeed,SuperSpinSlash)
+	with instance_create(x+hspeed+lengthdir_x(4+((Player.skill_got[13]+bettermelee)*8),aimDirection),y+vspeed+lengthdir_y(4+((Player.skill_got[13]+bettermelee)*8),aimDirection),SuperSpinSlash)
 	{
 		speed = other.speed*0.5;
 		direction = other.direction;
 		longarms = 0
 		
 		longarms = Player.skill_got[13]+other.bettermelee
+		motion_add(aimDirection,2+(longarms*2));
 		image_angle = direction
-		image_xscale = 1+(longarms*0.12);
-		image_yscale = 1+(longarms*0.12);
+		image_xscale = 1+(longarms*0.14);
+		image_yscale = 1+(longarms*0.14);
 		team = other.team
 		rotation *= sign(other.wepangle);
 	}
@@ -11195,7 +11197,7 @@ function scrFire2(hasTailNow) {
 		{
 			motion_add(aimDirection+(random(30)-15)*other.accuracy,5)
 		}
-		repeat(12 + (Player.skill_got[17] * 4))
+		repeat(14 + (Player.skill_got[17] * 6))
 			with instance_create(x,y,Rad)
 			{
 				motion_add(aimDirection+(random(30)-15)*other.accuracy,4+random(4))
@@ -12611,7 +12613,7 @@ function scrFire2(hasTailNow) {
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
-		dmg = 14;
+		dmg = 15;
 			
 			{
 
@@ -12668,18 +12670,18 @@ function scrFire2(hasTailNow) {
 	move_contact_solid(aimDirection,5)
 
 	instance_create(x,y,Dust)
-	var am = 18;
+	var am = 20;
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*19,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*19,aimDirection),FlameSlash)
 	{
 		sprite_index = sprMegaFireSlash;
 		mask_index = mskMegaSlash;
-		dmg = 19;
+		dmg = 26;
 		
 		{
 
 		if Player.my_health <= 0
 		{
-			am += 4;
+			am += 8;
 			dmg=80;
 			sprite_index=sprMegaFireDarkSwordSlash;
 			mask_index=mskMegaDarkSwordSlash;
@@ -12694,7 +12696,7 @@ function scrFire2(hasTailNow) {
 		team = other.team
 	}
 	var len = 32 + ((Player.skill_got[13]+bettermelee)*20);
-	var angStep = (140*accuracy) / am;
+	var angStep = (160*accuracy) / am;
 	var aimDir = aimDirection - (angStep*(am*0.5));
 	var fx = x + lengthdir_x(len,aimDir);
 	var fy = y + lengthdir_y(len,aimDir);
@@ -13969,7 +13971,7 @@ function scrFire2(hasTailNow) {
 	break;
 	
 	
-	//POW
+	//POWBOW
 	case 680:
 	with ChargePow {
 		if scrChargeRelease()

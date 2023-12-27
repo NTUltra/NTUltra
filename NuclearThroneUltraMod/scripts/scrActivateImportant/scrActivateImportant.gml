@@ -2,6 +2,7 @@
 // /@description activates everything nearby, used to make sure floors and walls are checked within range even deactivated once
 ///@param range
 function scrActivateImportant(){
+	instance_activate_object(KeyCont);
 	instance_activate_object(GameRender);
 	instance_activate_object(UnlockPopup);
 	if instance_exists(FPSHACK)

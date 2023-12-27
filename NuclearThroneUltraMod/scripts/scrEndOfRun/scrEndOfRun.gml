@@ -29,7 +29,6 @@ function scrEndOfRun(){
 			array_delete(opt_gamemode,array_contains_get_index(opt_gamemode,25),1)
 			
 		}
-		debug("End gamemodes: ", opt_gamemode);
 		if array_length(opt_gamemode) == 2
 		{
 			scrUnlockGameMode(41,"FOR PLAYING TWO GAMEMODES");

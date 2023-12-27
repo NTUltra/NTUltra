@@ -18,6 +18,8 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":5,"eventType":2,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":6,"eventType":2,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":2,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":8,"eventType":2,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":11,"eventType":7,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -26,8 +28,8 @@
     "path": "folders/Objects/Enemies/Boss/Labs.yy",
   },
   "parentObjectId": {
-    "name": "enemyCollisionWall",
-    "path": "objects/enemyCollisionWall/enemyCollisionWall.yy",
+    "name": "enemy",
+    "path": "objects/enemy/enemy.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -49,8 +51,8 @@
     "path": "sprites/sprBigMachineIntro/sprBigMachineIntro.yy",
   },
   "spriteMaskId": {
-    "name": "mskBigMachine",
-    "path": "sprites/mskBigMachine/mskBigMachine.yy",
+    "name": "mskPickupThroughWall",
+    "path": "sprites/mskPickupThroughWall/mskPickupThroughWall.yy",
   },
   "visible": true,
 }

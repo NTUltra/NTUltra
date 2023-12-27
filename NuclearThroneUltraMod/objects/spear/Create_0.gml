@@ -11,3 +11,6 @@ if UberCont.ultramodSwap
 xprev = x;
 yprev = y;
 hitEntities = [];
+boltMarrow = false;
+if instance_exists(Player) && Player.skill_got[21]
+	boltMarrow = true;

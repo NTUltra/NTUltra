@@ -323,7 +323,7 @@ function scrGameModes() {
 	gamemode_unlock[45] = "VISIT OASIS, SAVANNA AND SCRAPYARD IN ONE RUN ON ALT-SPAWNS";
 	gamemode_have[45] = 0;
 	gamemode_tip[45] = "ALTERNATE TIMELINE";
-	gamemode_description[45] = "AREAS SPAWN RANDOM ENEMIES, CLASSIC LOOP! (STILL W.I.P. MIGHT ADD RANDOM BOSSES <3)";
+	gamemode_description[45] = "AREAS SPAWN RANDOM ENEMIES, CLASSIC LOOP!";
 	gamemode_nocombo[45] = [26,27,37,8,25,42,44,40];
 	
 	gamemode[46] = "ANY START WEAPON";//

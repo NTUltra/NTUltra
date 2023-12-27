@@ -1,6 +1,20 @@
-if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y < y+22 and UberCont.mouse__x > x-22 and UberCont.mouse__y > y-22) && (alarm[0]<1) ) || (exceptionclick && (alarm[0]<1))
+if (UberCont.mouse__x < x+22 and UberCont.mouse__y < y+22 and UberCont.mouse__x > x-22 and UberCont.mouse__y > y-22)
+{
+	with UltraIcon
+		selected = false;
+		
+	selected = true;
+	with UberCont
+	{
+		selectedIndex = other.skillIndex;	
+	}
+}
+if (selected && 
+((KeyCont.key_fire[p] == 1 || KeyCont.key_pick[p] == 1) && (!mouse_check_button_pressed(mb_left) || (UberCont.mouse__x < x+22 and UberCont.mouse__y < y+22 and UberCont.mouse__x > x-22 and UberCont.mouse__y > y-22)))
+&& ((alarm[0]<1) ) || (exceptionclick && (alarm[0]<1)))
 {
 	KeyCont.key_fire[p] = 2;
+	KeyCont.key_pick[p] = 2;
 	if Player.ultra_got[0] == 1 && !Player.altUltra && (skill < 29 || skill > 32)
 		Player.horrorEtaken = true;
 	var regularprocedure=true;
@@ -333,7 +347,7 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			altUltra = true;
 			ultra_name[29] = "EXCLUSIVE TASTE"
-			ultra_text[29] = "HOLDING ONLY ONE WEAPON WILL:#INCREASE DAMAGE DEALT TO ENEMIES BY 25%#RETURN 10% AMMO UPON FIRING#+15% FIRERATE AND +4 MAX HP##AUTO EAT WEAPONS LEFT IN THE LEVEL";
+			ultra_text[29] = "HOLDING ONLY ONE WEAPON WILL:#INCREASE DAMAGE DEALT TO ENEMIES BY 25%#RETURN 10% AMMO UPON FIRING#+15% FIRERATE AND +4 MAX HP";
 			ultra_tips[29] = "gold tastes good"
 			if bwep == 0//ROBOT EXCLUSIVE TASTE
 			{
@@ -376,11 +390,11 @@ if ( KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+22 and UberCont.mouse__y
 		with Player {
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			altUltra = true;
-			maxhealth += 45;
-			my_health += 45;
+			maxhealth += 50;
+			my_health += 50;
 			prevhealth = my_health;
 			ultra_name[39] = "BIG REBEL"
-			ultra_text[39] = "+45 MAX HP!#YOU CAN'T HEAL#EVERY LOOP RESET HP TO FULL#ALLIES COST AMMO"
+			ultra_text[39] = "+50 MAX HP!#YOU CAN'T HEAL#EVERY LOOP RESET HP TO FULL#ALLIES COST AMMO"
 			ultra_tips[39] = "she is a maniac!"
 			canHeal = false;
 			scrUnlockAltSkin(race, bskin);

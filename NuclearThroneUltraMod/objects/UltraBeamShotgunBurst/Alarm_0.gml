@@ -12,7 +12,7 @@ if (instance_exists(Player))
 {
 	var i = 0;
 	var r = 1;
-	if ammo % 2 == 0
+	if ammo % 3 == 0
 		r ++;
     repeat(r)
     {

@@ -112,6 +112,22 @@ if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or
 		roll = 0
 		angle = 0
 		sprite_index = spr_idle;
+		//ROBOT
+		if race = 8
+		{
+		    if (race == 8 && !ultra_got[32])//&& (Player.ultra_got[29]==1||Player.ultra_got[30]==1||Player.ultra_got[31]==1))
+		    {
+			    with WepPickup
+			    {
+					if !hasBeenEaten && !curse && !persistent
+					{
+						scrBasicRobotEat(other.x,other.y,wep);
+						instance_create(other.x,other.y,Smoke);
+					}
+				}
+		    instance_create(other.x,other.y,Smoke);
+		    }
+		} 
 	}
 	//with PlayerInPortal
 	//	instance_destroy();

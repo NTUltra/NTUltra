@@ -2,6 +2,8 @@
 // /@description
 ///@param
 function scrHeal(num = 1, canOverHeal = false){
+	if !instance_exists(Player)
+		exit;
 	if !Player.canHeal
 		exit;
 	if canOverHeal || Player.my_health + num <= Player.maxhealth
@@ -10,31 +12,31 @@ function scrHeal(num = 1, canOverHeal = false){
 		Player.my_health = max(Player.my_health,Player.maxhealth);
 	if UberCont.opt_ammoicon
 	{
-		dir = instance_create(x,y,PopupText)
-		dir.sprt = sprHPIconPickup;
-		dir.mytext = "+"+string(num)
+		var popupText = instance_create(x,y,PopupText)
+		popupText.sprt = sprHPIconPickup;
+		popupText.mytext = "+"+string(num)
 		if Player.my_health = Player.maxhealth
-		dir.mytext = "MAX"
+		popupText.mytext = "MAX"
 		else if Player.my_health > Player.maxhealth
 		{
 			if canOverHeal
-				dir.mytext = "+"+string(num)+"#OVERHEAL!";
+				popupText.mytext = "+"+string(num)+"#OVERHEAL!";
 			else
-				dir.mytext = "OVER MAX"
+				popupText.mytext = "OVER MAX"
 		}
 	}
 	else
 	{
-		dir = instance_create(x,y,PopupText)
-		dir.mytext = "+"+string(num)+" HP"
+		var popupText = instance_create(x,y,PopupText)
+		popupText.mytext = "+"+string(num)+" HP"
 		if Player.my_health = Player.maxhealth
-		dir.mytext = "MAX HP"
+		popupText.mytext = "MAX HP"
 		else if Player.my_health > Player.maxhealth
 		{
 			if canOverHeal
-				dir.mytext = "+"+string(num)+"HP#OVERHEAL!";
+				popupText.mytext = "+"+string(num)+"HP#OVERHEAL!";
 			else
-				dir.mytext = "OVER MAX HP"
+				popupText.mytext = "OVER MAX HP"
 		}
 	}
 }

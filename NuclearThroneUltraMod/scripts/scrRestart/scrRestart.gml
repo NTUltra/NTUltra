@@ -4,7 +4,7 @@ function scrRestart() {
 	scrEndOfRun();
 	with all
 	{
-		if id != UberCont.id and persistent = true && id != Cursor.id && id != GameRender.id 
+		if id != UberCont.id and persistent = true && id != Cursor.id && id != GameRender.id && id != KeyCont.id 
 		{
 			persistent = false
 			instance_destroy()

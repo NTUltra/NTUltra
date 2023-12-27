@@ -19,7 +19,10 @@ with GameRender
 }
 with DataRef
 	instance_destroy();
-	
+boil = 10;
+canPuffyCheek = 0;
+canPuffyCheekB = 0;
+canPuffyCheekC = 0;
 autoFire = 0;
 excessDamageDeal = 0;
 humphrySkill = 0;

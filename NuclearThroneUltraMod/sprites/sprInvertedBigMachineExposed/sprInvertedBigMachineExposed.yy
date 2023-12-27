@@ -63,7 +63,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"df801dad-e2e8-4b8c-93b1-a8d76dde6add","path":"sprites/sprInvertedBigMachineExposed/sprInvertedBigMachineExposed.yy",},},},"Disabled":false,"id":"300b1bfe-4dd2-4be4-8515-1ff08ae52f40","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 79,
     "yorigin": 62,

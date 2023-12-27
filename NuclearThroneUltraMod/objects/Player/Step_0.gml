@@ -2,6 +2,16 @@
 if instance_exists(GenCont) || instance_exists(StartDaily)
 	exit;
 var is60fps = (UberCont.normalGameSpeed == 60);
+if canPuffyCheek > 0 {
+	if is60fps
+		canPuffyCheek -= 0.5;
+	else
+		canPuffyCheek -= 1;
+}
+else
+{
+	canPuffyCheek = 0;	
+}
 if autoFire > 0
 {
 	if is60fps
@@ -62,23 +72,56 @@ if !instance_exists(LevCont) and visible = 1
 		{
 			var previousSpeed = max(1,speed);
 			var acc = acceleration;
+			var dedzone = 0.05;
 			if is60fps && (speed != 0)
 				acc *= 0.5;
 			if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
 			{
-				hspeed -= acc
+				var gp = gamepad_axis_value(p,gp_axislh);
+				if gp < -dedzone
+				{
+					if gp < -1+dedzone
+						gp = 1;
+					hspeed -= acc*abs(gp)
+				}
+				else
+					hspeed -= acc
 			}
 			if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
 			{
-				hspeed += acc
+				var gp = gamepad_axis_value(p,gp_axislh);
+				if gp > dedzone
+				{
+					if gp < 1-dedzone
+						gp = 1;
+					hspeed += acc*gp
+				}
+				else
+					hspeed += acc
 			}
 			if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
 			{
-				vspeed -= acc
+				var gp = gamepad_axis_value(p,gp_axislv);
+				if gp < -dedzone
+				{
+					if gp < -1+dedzone
+						gp = 1;
+					vspeed -= acc*abs(gp);
+				}
+				else
+					vspeed -= acc
 			}
 			if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
 			{
-				vspeed += acc
+				var gp = gamepad_axis_value(p,gp_axislv);
+				if gp > dedzone
+				{
+					if gp < 1-dedzone
+						gp = 1;
+					vspeed += acc*gp;
+				}
+				else
+					vspeed += acc;
 			}
 			if ultra_got[20] && altUltra
 			{
@@ -174,6 +217,17 @@ if !instance_exists(LevCont) and visible = 1
 		else
 		{if sprite_index != spr_hurt
 		sprite_index = spr_walk}
+		/*
+		//Want to do speed based walk animation but there are some actives that change this
+		if sprite_index == spr_walk
+		{
+			image_speed = clamp(speed*0.1,0.1,0.8);
+		}
+		else
+		{
+			image_speed = 0.4;	
+		}
+		*/
 		if sprite_index = spr_hurt
 		{	
 			if is60fps
@@ -208,6 +262,7 @@ if !instance_exists(LevCont) and visible = 1
 		else
 		{
 			//rolling
+			image_speed = 0.4;
 			speed = 6.3*max(1,(skill_got[2]*1.3))//the rolling speed code is far below
 			if is60fps
 				angle += (50*right*max(1,(skill_got[2]*1.3)))*0.5
@@ -749,9 +804,8 @@ if !instance_exists(LevCont) and visible = 1
     		autoFire = max(wep_load[wep],6);
 		clicked = 0
 		}
-		else if wep_auto[wep] = 1 && holdKey
+		else if wep_auto[wep] = 1 && holdKey && canPuffyCheek <= 0
 		{
-		    
 			if ultra_got[44] == 1 && instance_exists(Marker)
 			{
 				scrCrackShotFire();
@@ -975,7 +1029,7 @@ if (!instance_exists(LevCont))
 		scr60fpsReload();
 		if reload <= 0 && !can_shoot
 		{
-			autoFire = 5;
+			autoFire = 6;
 			can_shoot = 1
 			with CloneShooter
 				instance_destroy();
@@ -1105,14 +1159,14 @@ if (!instance_exists(LevCont))
 			//nerves of steel g  STRESS
 			var reduction = 0;
 			if ultra_got[62] && altUltra//Living armour 
-				reduction = (1-(armour/maxarmour))*0.68
+				reduction = (1-(armour/maxarmour))*0.7
 			else if race == 25
 			{
-				reduction = (1-(my_health/maxhealth))*0.635
+				reduction = (1-(my_health/maxhealth))*0.73
 			}
 			else
 			{
-				reduction = (1-(my_health/maxhealth))*0.68//*1//0.35 the original has 80% boost
+				reduction = (1-(my_health/maxhealth))*0.7//*1//0.35 the original has 80% boost
 			}
 			if scrIsGamemode(24)//SHARP STRESS GAMEMODE
 				reduction *= level;
@@ -1250,7 +1304,7 @@ if (!instance_exists(LevCont))
 		}
 	}
 	//Can we fire again? Two times in a frame? Or even more if you go negative reload
-	if (!IsShielding || ultra_got[7]==1) 
+	if (!IsShielding || ultra_got[7]==1) && canPuffyCheek <= 0
 	and wep_auto[wep] = 1 and (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
 	{
 		while can_shoot == 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and ((ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
@@ -1890,40 +1944,35 @@ microseconds=0;
 ///Gamepad aiming
 var h_point = gamepad_axis_value(0, gp_axisrh);
 var v_point = gamepad_axis_value(0, gp_axisrv);
-
-if ((h_point != 0) || (v_point != 0))
+var dedzone = 0.05;
+if ((abs(h_point) > dedzone) || (abs(v_point) > dedzone))
 {
-var dir = point_direction(0,0, h_point, v_point);
-//var dif = angle_difference(pdir, image_angle);
-//image_angle += median(-20, dif, 20);
+	if instance_exists(LevCont)
+	{
+		display_mouse_set(window_get_x()+(window_get_width()*0.5),window_get_y()+(window_get_height()*0.5));
+	}
+	else
+	{
+		var dir = point_direction(0,0, h_point, v_point);
+		var mox,moy;
+		var len;
+		len = lerp(0.1,0.35,clamp(point_distance(0,0,abs(h_point),abs(v_point)),0,1));
+		mox=(window_get_x()+window_get_width()*0.5)+lengthdir_x(window_get_height()*len,dir);
+		moy=(window_get_y()+window_get_height()*0.5)+lengthdir_y(window_get_height()*len,dir);
 
-
-
-var mox,moy;
-var len,dir;
-//if UberCont.opt_fulscrn=1
-//len=point_distance(Player.x,Player.y,target.x,target.y)*4
-//else{
-len=point_distance(x,y,gp_axisrh,gp_axisrv)*0.011;
-//len*=(window_get_height())*0.0037;
-//}
-
-//dir=point_direction(Player.x,Player.y,target.x,target.y);
-
-mox=(window_get_x()+window_get_width()*0.5)+lengthdir_x(len,dir);
-moy=(window_get_y()+window_get_height()*0.5)+lengthdir_y(len,dir);
-
-if mox > window_get_x()+window_get_width()
-mox = window_get_x()+window_get_width()-8;
-if mox < window_get_x()
-mox = window_get_x()+8;
-if moy > window_get_y()+window_get_height()
-moy = window_get_y()+window_get_height()-8;
-if moy < window_get_y()
-moy = window_get_y()+8;
-
-display_mouse_set(mox,moy);
-
+		if mox > window_get_x()+window_get_width()
+		mox = window_get_x()+window_get_width()-8;
+		if mox < window_get_x()
+		mox = window_get_x()+8;
+		if moy > window_get_y()+window_get_height()
+		moy = window_get_y()+window_get_height()-8;
+		if moy < window_get_y()
+		moy = window_get_y()+8;
+		var smoothing = 0.2;
+		if UberCont.normalGameSpeed == 60
+			smoothing = 0.4;
+		display_mouse_set(lerp(display_mouse_get_x(),mox,smoothing),lerp(display_mouse_get_y(),moy,smoothing));
+	}
 }
 
 /* */

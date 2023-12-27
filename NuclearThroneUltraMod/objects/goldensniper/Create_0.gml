@@ -3,8 +3,8 @@
 // Inherit the parent event
 event_inherited();
 alarm[0] = 0;
-tellTime -= 3;
-actTime -= 3;
+tellTime -= 2;
+actTime -= 2;
 raddrop = 12
 maxhealth = 23
 my_health = maxhealth;

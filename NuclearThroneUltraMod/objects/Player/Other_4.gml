@@ -160,7 +160,7 @@ if area=100
 
 if race=10//rebel hoody
 {
-    if bskin=1&&area=5||area=108//cold
+    if (bskin == 1 || bskin == 4) && (area == 5 || area == 108)//cold
     {
 		if altUltra
 		{

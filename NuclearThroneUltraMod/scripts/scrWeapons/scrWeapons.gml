@@ -3090,7 +3090,7 @@ function scrWeapons() {
 	wep_name[280] = "GOLDEN ASSAULT PISTOL"
 	wep_type[280] = 1
 	wep_auto[280] = 0
-	wep_load[280] = 8
+	wep_load[280] = 7
 	wep_cost[280] = 2
 	wep_sprt[280] = sprGoldenAPistol
 	wep_area[280] = 18
@@ -4311,7 +4311,7 @@ function scrWeapons() {
 	wep_name[389] = "DOUBLE LASER PISTOL"
 	wep_type[389] = 5
 	wep_auto[389] = 0
-	wep_load[389] = 14
+	wep_load[389] = 13
 	wep_cost[389] = 2
 	wep_sprt[389] = sprDoubleLaserGun
 	wep_area[389] = 5
@@ -4509,7 +4509,7 @@ function scrWeapons() {
 	wep_name[407] = "MORPH-O-LASER"
 	wep_type[407] = 5
 	wep_auto[407] = 0
-	wep_load[407] = 13
+	wep_load[407] = 11
 	wep_cost[407] = 2
 	wep_sprt[407] = sprMorphOLaser
 	wep_area[407] = 6
@@ -4828,19 +4828,19 @@ function scrWeapons() {
 	wep_name[436] = "BOX GUN"
 	wep_type[436] = 2
 	wep_auto[436] = 0
-	wep_load[436] = 18
+	wep_load[436] = 16
 	wep_cost[436] = 2
 	wep_sprt[436] = sprBoxGun
 	wep_area[436] = 8
-	wep_text[436] = ""
+	wep_text[436] = "[]"
 	wep_swap[436] = sndSwapShotgun
 	wep_rad[436] = 0;
 	
 	wep_name[437] = "BOX SLUGGER"
 	wep_type[437] = 2
 	wep_auto[437] = 0
-	wep_load[437] = 42
-	wep_cost[437] = 4
+	wep_load[437] = 40
+	wep_cost[437] = 5
 	wep_sprt[437] = sprBoxSlugger
 	wep_area[437] = 16
 	wep_text[437] = ""
@@ -4872,7 +4872,7 @@ function scrWeapons() {
 	wep_name[440] = "THE PENETRATOR"
 	wep_type[440] = 3
 	wep_auto[440] = 0
-	wep_load[440] = 30
+	wep_load[440] = 26
 	wep_cost[440] = 2
 	wep_sprt[440] = sprPenetrator
 	wep_area[440] = 6
@@ -4916,7 +4916,7 @@ function scrWeapons() {
 	wep_name[444] = "GOLDEN HAND CANNON"
 	wep_type[444] = 1
 	wep_auto[444] = 0
-	wep_load[444] = 16
+	wep_load[444] = 13
 	wep_cost[444] = 3
 	wep_sprt[444] = sprGoldenHandCannon
 	wep_area[444] = -1
@@ -4927,7 +4927,7 @@ function scrWeapons() {
 	wep_name[445] = "HAND CANNON"
 	wep_type[445] = 1
 	wep_auto[445] = 0
-	wep_load[445] = 18
+	wep_load[445] = 14
 	wep_cost[445] = 3
 	wep_sprt[445] = sprHandCannon
 	wep_area[445] = 2
@@ -5551,7 +5551,7 @@ function scrWeapons() {
 	wep_swap[501] = sndSwapPistol
 	wep_rad[501] = 0;
 	
-	wep_name[502] = "BOW"
+	wep_name[502] = "CHARGE BOW"
 	wep_type[502] = 3
 	wep_auto[502] = 0
 	wep_load[502] = 21
@@ -5562,7 +5562,7 @@ function scrWeapons() {
 	wep_swap[502] = sndSwapBow
 	wep_rad[502] = 0;
 	
-	wep_name[503] = "ULTRA BOW"
+	wep_name[503] = "ULTRA CHARGE BOW"
 	wep_type[503] = 3
 	wep_auto[503] = 0
 	wep_load[503] = 13//17
@@ -6266,7 +6266,7 @@ function scrWeapons() {
 	wep_swap[566] = sndSwapEnergy
 	wep_rad[566] = 0;
 	
-	wep_name[567] = "GOLDEN BOW"
+	wep_name[567] = "GOLDEN CHARGE BOW"
 	wep_type[567] = 3
 	wep_auto[567] = 0
 	wep_load[567] = 19
@@ -6365,7 +6365,7 @@ function scrWeapons() {
 	wep_swap[575] = sndSwapBow
 	wep_rad[575] = 0;
 	
-	wep_name[576] = "SUPER BOW"
+	wep_name[576] = "SUPER CHARGE BOW"
 	wep_type[576] = 3
 	wep_auto[576] = 0
 	wep_load[576] = 29
@@ -6709,7 +6709,7 @@ function scrWeapons() {
 	wep_name[607] = "DIRECTOR BOX GUN"
 	wep_type[607] = 1
 	wep_auto[607] = 0
-	wep_load[607] = 17
+	wep_load[607] = 16
 	wep_cost[607] = 20//fires 25 bullets
 	wep_sprt[607] = sprDirectorBoxGun
 	wep_area[607] = 12
@@ -7006,7 +7006,7 @@ function scrWeapons() {
 	wep_name[634] = "BURNING DARK SWORD"
 	wep_type[634] = 0
 	wep_auto[634] = 0
-	wep_load[634] = 23//16 usual
+	wep_load[634] = 20//16 usual
 	wep_cost[634] = 0
 	wep_sprt[634] = sprBurningDarkSword
 	wep_area[634] = -1
@@ -7039,7 +7039,7 @@ function scrWeapons() {
 	wep_name[637] = "SPLIT SEEKER PISTOL"
 	wep_type[637] = 3
 	wep_auto[637] = 0
-	wep_load[637] = 30
+	wep_load[637] = 28
 	wep_cost[637] = 1
 	wep_sprt[637] = sprSplitSeekerPistol
 	wep_area[637] = 5
@@ -7392,7 +7392,7 @@ function scrWeapons() {
 	wep_type[669] = 3
 	wep_auto[669] = 1
 	wep_load[669] = 9
-	wep_cost[669] = 1
+	wep_cost[669] = 0.75
 	wep_sprt[669] = sprSpikeStaff
 	wep_area[669] = 5
 	wep_text[669] = "nail gun"
@@ -7509,7 +7509,7 @@ function scrWeapons() {
 	wep_swap[679] = sndSwapExplosive
 	wep_rad[679] = 0;
 	
-	wep_name[680] = "POWBOW"
+	wep_name[680] = "CHARGE POWBOW"
 	wep_type[680] = 3
 	wep_auto[680] = 0
 	wep_load[680] = 31
@@ -7520,7 +7520,7 @@ function scrWeapons() {
 	wep_swap[680] = sndSwapBow
 	wep_rad[680] = 0;
 	
-	wep_name[681] = "BROXTOOVEN"
+	wep_name[681] = "THE BROXTOOVEN"
 	wep_type[681] = 1
 	wep_auto[681] = 1
 	wep_load[681] = 22
@@ -7666,7 +7666,7 @@ function scrWeapons() {
 	wep_name[694] = "ELECTRO CROSSBOW"
 	wep_type[694] = 5
 	wep_auto[694] = 1
-	wep_load[694] = 12
+	wep_load[694] = 13
 	wep_cost[694] = 2
 	wep_sprt[694] = sprElectroGun
 	wep_area[694] = 10

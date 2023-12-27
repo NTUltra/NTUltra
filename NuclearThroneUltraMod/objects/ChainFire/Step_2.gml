@@ -7,10 +7,12 @@ if alarm[2] < 1
 	}
 	var nx = x;
 	var ny = y;
-	nx = x + lengthdir_x(direction,speed);
-	ny = y + lengthdir_y(direction,speed);
-	if collision_line(x,y,nx,ny,Wall,false,false)
+	var xp = xprev;
+	var yp = yprev;
+	if collision_line(xp,yp,nx,ny,Wall,false,false)
 	{
+		x = xp;
+		y = yp;
 		if bounce > 0
 		{
 			var hs = sign(hspeed);
@@ -35,8 +37,6 @@ if alarm[2] < 1
 				hspeed *= -1;
 			if vc
 				vspeed *= -1;
-			else
-				hspeed *= -1;
 			image_angle = direction;
 			x += lengthdir_x(1,direction);
 			y += lengthdir_y(1,direction);
@@ -73,6 +73,8 @@ if alarm[2] < 1
 		}
 		scrForcePosition60fps();
 	}
+	xprev = x;
+	yprev = y;
 	var dir = point_direction(cx,cy,x,y);
 	var xx = cx;
 	var yy = cy;

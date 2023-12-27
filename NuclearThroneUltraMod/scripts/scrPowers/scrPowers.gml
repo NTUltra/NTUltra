@@ -12,7 +12,7 @@ function scrPowers() {
 		if UberCont.normalGameSpeed == 60
 		{
 			if alienIntestines < 40
-				alienIntestines += 0.3;
+				alienIntestines += 0.35;
 			else
 				alienIntestines += 0.175;
 			if race == 25
@@ -23,7 +23,7 @@ function scrPowers() {
 		else
 		{
 			if alienIntestines < 40
-				alienIntestines += 0.6;
+				alienIntestines += 0.7;
 			else
 				alienIntestines += 0.35;
 			if race == 25
@@ -557,7 +557,7 @@ function scrPowers() {
 
 	if race == 20 //business hog
 	{
-	instance_create(x,y,ShopWheel);
+		instance_create(x,y,ShopWheel);
 	}
 
 	if race == 19//Skeleton
@@ -914,13 +914,24 @@ function scrPowers() {
 
 	if race == 18//ANGEL
 	{
-	    if wep_type[wep] != 0
+		var useWep = bwep;
+		if useWep == 0 || wep_type[useWep] == 0
+			useWep = wep;
+		else
+		{
+			if !instance_exists(UseSecondaryAmmo)
+				instance_create(x,y,UseSecondaryAmmo);
+			else
+				with UseSecondaryAmmo
+					event_user(0);	
+		}
+	    if wep_type[useWep] != 0
 	    {
-		    
 			var multiply = 0.35;
-			var cost = typ_ammo[wep_type[wep]]*multiply;
-			if (ammo[wep_type[wep]]-cost >= 0) || (ultra_got[70] && ammo[wep_type[wep]] > 0)
+			var cost = typ_ammo[wep_type[useWep]]*multiply;
+			if (ammo[wep_type[useWep]]-cost >= 0) || (ultra_got[70] && ammo[wep_type[useWep]] > 0)
 			{
+				snd_hurt = sndDamageNegate;
 				instance_create(x,y,AngelActive);
 				if ultra_got[72] {
 					snd_play_2d(sndAngelActiveUpg,0.1,false,false,2,1);
@@ -930,9 +941,9 @@ function scrPowers() {
 				} else {
 					snd_play_2d(sndAngelActive,0.1,false,false,2,1);
 				}
-				ammo[wep_type[wep]]-= cost//2.5?
+				ammo[wep_type[useWep]]-= cost//2.5?
 				var heal = 0;
-				if  ammo[wep_type[wep]] <= 0
+				if  ammo[wep_type[useWep]] <= 0
 				{
 					if scrIsCrown(13)
 					{
@@ -947,7 +958,7 @@ function scrPowers() {
 				{
 					dir = instance_create(x,y,PopupText)
 					dir.sprt = sprAmmoIconsPickup
-					dir.ii = wep_type[wep]-1;
+					dir.ii = wep_type[useWep]-1;
 					dir.theColour = c_red;
 					dir.mytext = "-"+string(round(cost));
 				}
@@ -955,7 +966,7 @@ function scrPowers() {
 				{
 					dir = instance_create(x,y,PopupText)
 					dir.theColour = c_red;
-					dir.mytext = "-"+string(round(cost))+" "+string(other.typ_name[wep_type[other.wep]])
+					dir.mytext = "-"+string(round(cost))+" "+string(other.typ_name[wep_type[useWep]])
 				}
 				//HEAL
 				if (skill_got[5])
@@ -1628,31 +1639,46 @@ function scrPowers() {
 	//REBEL
 	var ammoRebel = false;
 	var canSpawn = true;
-	if altUltra && ultra_got[39] && wep_type[wep] != 0
+	var useWep = bwep;
+	if altUltra && ultra_got[39]
 	{
-		ammoRebel = true;
-		if wep_type[wep] == 0 {
-			snd_play(sndEmpty)
-			dir = instance_create(x,y,PopupText)
-			dir.mytext = "THIS DOESN'T USE AMMO";
-			dir.theColour=c_red;
-			drawempty = 30
-			BackCont.shake += 5;
-			canSpawn = false;
-		}
-		else if ammo[wep_type[wep]] >= typ_ammo[wep_type[wep]]*1.5
-		{
-			canSpawn = true;
-		}
+		if useWep == 0 || wep_type[useWep] == 0
+			useWep = wep;
 		else
 		{
-			snd_play(sndEmpty)
-			dir = instance_create(x,y,PopupText)
-			dir.mytext = "NOT ENOUGH AMMO";
-			dir.theColour=c_red;
-			drawempty = 30
-			BackCont.shake += 5;
-			canSpawn = false;
+			if !instance_exists(UseSecondaryAmmo)
+				instance_create(x,y,UseSecondaryAmmo);
+			else
+				with UseSecondaryAmmo
+					event_user(0);	
+		}
+		if wep_type[useWep] != 0
+		{
+			ammoRebel = true;
+			if wep_type[useWep] == 0 {
+				snd_play(sndEmpty)
+				dir = instance_create(x,y,PopupText)
+				dir.mytext = "THIS DOESN'T USE AMMO";
+				dir.theColour=c_red;
+				drawempty = 30
+				BackCont.shake += 5;
+				canSpawn = false;
+				ammoRebel = false;
+			}
+			else if ammo[wep_type[useWep]] >= typ_ammo[wep_type[useWep]]*1
+			{
+				canSpawn = true;
+			}
+			else
+			{
+				snd_play(sndEmpty)
+				dir = instance_create(x,y,PopupText)
+				dir.mytext = "NOT ENOUGH AMMO";
+				dir.theColour=c_red;
+				drawempty = 30
+				BackCont.shake += 5;
+				canSpawn = false;
+			}
 		}
 	}
 	if race == 10 && canSpawn && ((!ammoRebel && (my_health > 2 || (race == 10 && !(instance_exists(Ally)) && my_health > 1) && alarm[3]<1)) || ammoRebel)
@@ -1660,8 +1686,8 @@ function scrPowers() {
 		canrebel = 1
 		if ammoRebel
 		{
-			ammo[wep_type[wep]] -= typ_ammo[wep_type[wep]]*1.5;
-			if ammo[wep_type[wep]] <= 0
+			ammo[wep_type[useWep]] -= typ_ammo[wep_type[useWep]]*1;
+			if ammo[wep_type[useWep]] <= 0
 			{
 				with Crown {
 					event_user(0);	
@@ -3274,16 +3300,16 @@ function scrPowers() {
 		}
 	}
 	else if KeyCont.key_spec[p] != 1 and KeyCont.key_spec[p] != 2
-	{
+	{/*
 	if race == 20 
 	{
-	with ShopWheel
-	alarm[0]=1;
+		with ShopWheel
+			alarm[0]=1;
 
-	with ShopAmmo
-	alarm[0]=1;
+		with ShopAmmo
+			alarm[0]=1;
 	}
-	else if race==21 
+	else */if race==21 
 	{
 	audio_stop_sound(sndHorrorLoopTB);
 	audio_stop_sound(sndHorrorLoop);

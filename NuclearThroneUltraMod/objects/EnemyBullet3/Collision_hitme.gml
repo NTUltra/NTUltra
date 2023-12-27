@@ -8,6 +8,7 @@ if other.team != team and other.my_health > 0
 		{
 		    if sprite_index!=spr_hurt
 		    {
+				hitBy = other.sprite_index;
 				dealDmg = true;
 		    }
 		}

@@ -6,7 +6,7 @@ if instance_exists(Player)
 if place_meeting(x,y,ShopSelector)
 {
 image_index=1;
-if KeyCont.key_spec[Player.p] != 1 && KeyCont.key_spec[Player.p] != 2
+if ShopWheel.alarm[0] > 0
 {
 	if (HogSpend())
 	{

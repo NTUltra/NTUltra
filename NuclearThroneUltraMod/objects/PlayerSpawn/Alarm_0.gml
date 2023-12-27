@@ -34,8 +34,12 @@ with Player//Data to keep
 	livesRegain = other.livesRegain;
 	race = other.race
 	crown = other.crown
-	if scrIsCrown(20) {
-		maxarmour += 1;	
+	if scrIsCrown(20)  && maxarmour < 0{
+		maxarmour += 1;
+		gotMinimumArmour = true;
+	}
+	if scrIsCrown(13) {
+		scrWeaponAdjustCost(2);	
 	}
 	lastsubarea = other.lastsubarea;
 	lastarea = other.lastarea;
@@ -172,7 +176,7 @@ with Player//Data to keep
 	{
 		with RerollStation
 			instance_destroy();
-		alarm[3]=max(50,8*boostLevel);//immunity
+		alarm[3]=max(60,9*boostLevel);//immunity
 		snd_hurt = sndDamageNegate;
 		myShield = instance_create(x,y,EuphoriaShield)
 		with myShield
@@ -198,7 +202,7 @@ with Player//Data to keep
 		}
 		with instance_create(x,y,RespawnLightning)
 		{
-			amount = ceil((other.boostLevel-1)*0.5);
+			amount = ceil((other.boostLevel-1)*0.25);
 		}
 	}
 }

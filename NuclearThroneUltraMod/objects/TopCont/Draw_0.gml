@@ -2,7 +2,6 @@
 with BoltTrail
 draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,theColour,1);
 */
-
 with FrozenEnemy
 {
 image_alpha=0.5;
@@ -485,9 +484,23 @@ with Player
 scrDrawBloom()
 scrDarkness()
 if darkness = 1 && surface_exists(dark)
-{draw_set_blend_mode(bm_subtract)
-draw_surface(dark,__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ))
-draw_set_blend_mode(bm_normal)
+{
+	var drawDark = true;
+	with UberCont
+	{
+		if isPausedInTheDark
+		{
+			drawDark = false;
+			event_user(0);
+		}
+	}
+	if (drawDark)
+	{
+		draw_set_blend_mode(bm_subtract)
+		draw_surface(dark,__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ))
+		draw_set_blend_mode(bm_normal)
+	}
+	
 }
 if !instance_exists(MenuGen) && !instance_exists(ThroneIISpiral)
 {

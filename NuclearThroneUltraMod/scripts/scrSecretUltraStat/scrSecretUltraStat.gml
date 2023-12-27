@@ -69,7 +69,7 @@ function scrSecretUltraStat() {
 	//ROBOT 
 	//29
 	secret_ultra_name[8] = "EXCLUSIVE TASTE"
-	secret_ultra_text[8] = "HOLDING ONLY ONE WEAPON WILL:#INCREASE DAMAGE DEALT TO ENEMIES BY 20%#RETURN 10% <y>AMMO<y>/<g>RAD<g> UPON FIRING#+15% <w>RELOAD SPEED<w> AND +4 MAX <r>HP<r>##AUTO EAT WEAPONS LEFT IN THE LEVEL";
+	secret_ultra_text[8] = "HOLDING ONLY ONE WEAPON WILL:#INCREASE DAMAGE DEALT TO ENEMIES BY 20%#RETURN 10% <y>AMMO<y>/<g>RAD<g> UPON FIRING#+15% <w>RELOAD SPEED<w> AND +4 MAX <r>HP<r>";
 	secret_ultra_tips[8] = "gold tastes good"
 	secret_ultra_hint[8] = "EAT THE RICH";
 	secret_ultra_unlk[8] = "BE GOLDEN ROBOT\nBY EATING A GOLDEN WEAPON\nUSING A-SKIN";
@@ -93,7 +93,7 @@ function scrSecretUltraStat() {
 	//REBEL
 	//39
 	secret_ultra_name[11] = "BIG REBEL"
-	secret_ultra_text[11] = "+45 MAX <r>HP<r>!#YOU CAN'T <r>HEAL<r>#EVERY LOOP RESET HP TO FULL#ALLIES COST <y>AMMO<y>"
+	secret_ultra_text[11] = "+50 MAX <r>HP<r>!#YOU CAN'T <r>HEAL<r>#EVERY LOOP RESET HP TO FULL#ALLIES COST <y>AMMO<y>"
 	secret_ultra_tips[11] = "she is a maniac!"
 	secret_ultra_hint[11] = "ULTRA / ANTI-HEAL";
 	secret_ultra_unlk[11] = "HAVE NO HEALING MUTATIONS\nOR HOLD AN ULTRA WEAPON";

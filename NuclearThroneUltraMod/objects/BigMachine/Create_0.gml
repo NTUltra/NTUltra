@@ -1,5 +1,5 @@
 raddrop = 28
-maxhealth = 270;
+maxhealth = 500;
 scrBossHealthBuff();
 meleedamage = 0;
 mySize = 5
@@ -11,74 +11,49 @@ spr_walk = sprBigMachineIdle
 spr_hurt = sprBigMachineHurt
 spr_dead = sprBigMachineDead
 
+spr_intro = spr_idle;
+spr_become_close = sprBigMachineClose;
+spr_closed = sprBigMachineIdle;
+spr_hurt_normal = spr_hurt;
+spr_hurt_closed = sprBigMachineClosedHurt
+spr_become_exposed = sprBigMachineBecomeExposed;
+spr_expose = sprBigMachineExposed;
+
 snd_hurt = sndNothingHurtHigh
 snd_dead = sndBigMachineDead
 
 //behavior
-gunangle = random(360)
+gunangle = 0;
 
-alarm[1] = 0;
+alarm[1] = 900;
 if instance_exists(GenCont)
-	alarm[7] = GenCont.alarm[0] + 60;
+	alarm[7] = GenCont.alarm[0] + 30;
 else
-	alarm[7] = 60;
+	alarm[7] = 30;
 wkick = 0
 image_speed=0;
 
-instance_create(x+64,y+32,BigMachineTurret);
-
-with instance_create(x-64,y+32,BigMachineTurret)
-{
-	alarm[1] += 5;	
-}
 
 
 
-if instance_exists(Player)
-{
-if Player.loops>0
-{//LOOP
-with instance_create(x-32,y+32,BigMachineTurret)
-{
-	alarm[1] += 10;	
-}
-with instance_create(x+32,y+32,BigMachineTurret)
-{
-	alarm[1] += 15;	
-}
+loops = GetPlayerLoops();
 
-}
-}
-
-if instance_exists(Player)
-{
-if Player.loops>3
-{//LOOP
-	with instance_create(x-16,y-16,BigMachineTurret)
-	{
-		alarm[1] += 20;	
-	}
-	with instance_create(x+16,y-16,BigMachineTurret)
-	{
-		alarm[1] += 25;	
-	}
-}
-}
-
-
-//instance_create(x,y,BigMachineMask);
-
+event_user(1);
 friction=4;
 
 ammo=0;
 
 scrAddDrops(2);
-reachedHalfHealth = false;
 sndtaunt = 0;
 tauntdelay = 0;
-if instance_exists(Player) && !instance_exists(SurvivalWave)
-with Player {
-	x = other.x - 32;
-	y = other.y + 128;
-	scrForcePosition60fps();
+fireRate = 5;
+myCore = instance_create(x,y,BigMachineCore);
+with myCore {
+	myBody = other.id;	
 }
+
+exposeTime = 100;
+maxAmmo = 4 + clamp(loops,0,4);
+fireRate -= clamp(loops,0,3);
+if loops > 0
+	exposeTime = 70;

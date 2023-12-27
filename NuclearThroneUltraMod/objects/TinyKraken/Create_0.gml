@@ -18,12 +18,12 @@ right = choose(1,-1)
  loops = GetPlayerLoops();
 maxhealth = 5;
 my_health = maxhealth
-rate = 7;
+rate = 8;
 actTime = 10;
 if loops > 0
 {
 	actTime = 8;
-	rate = 5;
+	rate = 6;
 	raddrop += 1;
 	maxhealth = 14;
 	my_health = maxhealth

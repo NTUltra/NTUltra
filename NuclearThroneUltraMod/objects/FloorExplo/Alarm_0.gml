@@ -55,7 +55,7 @@ else
 		}
 		if canSpawnSwarm && instance_exists(Player)
 		{
-			if (Player.bskin == 0 || Player.altUltra) && Player.ultra_got[106] && !instance_exists(SpiralCont)
+			if (!Player.altUltra) && Player.ultra_got[106] && !instance_exists(SpiralCont)
 			{
 				var m = instance_nearest(x,y,Wall);
 				if m != noone

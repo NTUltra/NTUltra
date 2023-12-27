@@ -1,10 +1,9 @@
 /// @description close
-spr_idle=sprBigMachineClose;
-spr_walk=sprBigMachineClose;
-spr_hurt = sprBigMachineClosedHurt
+spr_idle=spr_become_close;
+spr_walk=spr_become_close;
+spr_hurt = spr_hurt_closed
 image_index=0;
-mask_index=mskBigMachine;
-
+alarm[8] = sprite_get_number(spr_idle)/image_speed;
 //my_health=100000;
 alarm[4]=90;//become exposed again
 

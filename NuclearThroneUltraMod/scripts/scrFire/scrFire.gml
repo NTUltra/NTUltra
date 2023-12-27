@@ -5,99 +5,85 @@ function scrFire() {
 	exit;
 	if wep==0{
 		exit;}
-		/*
-	if object_index == Player && !instance_exists(YungCuzDupe)
-	{
-		with Bullet7
-		{
-			if !turned && wepFire == other.wep
-				exit;
-		}
-		with Bullet8
-		{
-			if !turned && wepFire == other.wep
-				exit;
-		}
-		with DirectorSlug
-		{
-			if !turned && wepFire == other.wep
-				exit;
-		}
-	}*/
 	reload = min(reload + wep_load[wep],wep_load[wep]);
-	//Nerves of steel
-	if Player.skill_got[41] && Player.armour < Player.maxarmour
+	if (object_index == Player)
 	{
-		if Player.race == 25
+		if wep_load[wep] > 4 && reload < 0
 		{
-			//reload *= 0.55;
-			reload -= wep_load[wep]*0.49;
+			canPuffyCheek = 3;
 		}
-		else
+		//Nerves of steel
+		if skill_got[41] && armour < maxarmour
 		{
-			reload -= wep_load[wep]*0.45;
-			//reload *= 0.6;
-		}
-	}
-	queueshot = max(queueshot-1,0);
-	Player.fired = true;
-	if (Player.alarm[2]<1)//alarm = Fish Ultra B
-	{
-		ammo[wep_type[wep]] -= wep_cost[wep]
-		//if Player.ultra_got[70]
-		//ammo[wep_type[wep]] = max(0,ammo[wep_type[wep]]);
-		rad -= wep_rad[wep]
-		rad = max(rad,0);
-	}
-	with Player {
-		if scrIsCrown(13)
-		{
-			if ammo[wep_type[wep]] <= 0
+			if race == 25
 			{
-				with Crown {
-					event_user(0);	
+				//reload *= 0.55;
+				reload -= wep_load[wep]*0.49;
+			}
+			else
+			{
+				reload -= wep_load[wep]*0.45;
+				//reload *= 0.6;
+			}
+		}
+		queueshot = max(queueshot-1,0);
+		fired = true;
+		if (alarm[2]<1)//alarm = Fish Ultra B
+		{
+			ammo[wep_type[wep]] -= wep_cost[wep]
+			//if Player.ultra_got[70]
+			//ammo[wep_type[wep]] = max(0,ammo[wep_type[wep]]);
+			rad -= wep_rad[wep]
+			rad = max(rad,0);
+		}
+		with Player {
+			if scrIsCrown(13)
+			{
+				if ammo[wep_type[wep]] <= 0
+				{
+					with Crown {
+						event_user(0);	
+					}
+				}
+			}
+			if ultra_got[70]
+			{
+				var ammoPercentage = 0;
+				ammoPercentage += ammo[wep_type[wep]] / typ_amax[wep_type[wep]];
+				if skill_got[10] //BACK MUSCLE
+					ammoPercentage *= 1.4;
+				reload *= ammoPercentage;
+				if ammo[wep_type[wep]] <= 0
+				{
+					snd_play_2d(sndHealthPickup);
+					scrHeal(2);	
 				}
 			}
 		}
-		if ultra_got[70]
+		if Player.ultra_got[4]//FISH ULTRA D rolling is good
 		{
-			var ammoPercentage = 0;
-			ammoPercentage += ammo[wep_type[wep]] / typ_amax[wep_type[wep]];
-			if skill_got[10] //BACK MUSCLE
-				ammoPercentage *= 1.4;
-			reload *= ammoPercentage;
-			if ammo[wep_type[wep]] <= 0
+			if reload > 0 && Player.bskin != 2
 			{
-				snd_play_2d(sndHealthPickup);
-				scrHeal(2);	
+			    reload-=speed*0.25
+			    if Player.roll = 1
+			    {
+					reload -= wep_load[wep]*0.5
+			    }
 			}
 		}
-	}
-	if Player.ultra_got[4]//FISH ULTRA D rolling is good
-	{
-		if reload > 0 && Player.bskin != 2
-		{
-		    reload-=speed*0.25
-		    if Player.roll = 1
-		    {
-				reload -= wep_load[wep]*0.5
-		    }
+		if scrIsCrown(33){
+			//CROWN OF ECHO
+			var currentCrown = crown;
+			crown = [];
+			scrFire();
+			reload += wep_load[wep]*0.9;
+			crown = currentCrown;
 		}
 	}
 	var hasTailNow = false;
-	if instance_exists(Player)
-	{
-		hasTailNow = Player.drawTail;
-		Player.drawTail = false;
-	}
-	if scrIsCrown(33) && object_index == Player {
-		//CROWN OF ECHO
-		var currentCrown = crown;
-		crown = [];
-		scrFire();
-		reload += wep_load[wep]*0.9;
-		crown = currentCrown;
-	}
+	hasTailNow = Player.drawTail;
+	Player.drawTail = false;
+	
 	// ROIDS THRONE BUTT
 	//when firing both weapon more chance to giev other weapon ammo
 	if Player.ultra_got[25] && wep == bwep

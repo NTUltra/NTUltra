@@ -723,7 +723,7 @@ function scrDrawHUD() {
 	draw_text(vx+txx,vy+22,bAmmo)
 	draw_text(vx+txx+1,vy+22,bAmmo)
 	draw_text(vx+txx+1,vy+21,bAmmo)
-	if dataRef.race = 7 or dataRef.wep_type[dataRef.wep] = dataRef.wep_type[dataRef.bwep]
+	if dataRef.race = 7 or dataRef.wep_type[dataRef.wep] = dataRef.wep_type[dataRef.bwep] || instance_exists(UseSecondaryAmmo)
 	draw_set_color(c_white)
 	else
 	draw_set_color(c_silver)

@@ -23,7 +23,7 @@ if collision_point(x,y,Wall,false,false)
 		if n.object_index == FloorExplo
 			o = 8;
 		x = n.x+o;
-		y = n.y+0;
+		y = n.y+o;
 		scrForcePosition60fps();
 	}
 }

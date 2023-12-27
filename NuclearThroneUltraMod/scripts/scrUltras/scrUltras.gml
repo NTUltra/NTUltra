@@ -193,7 +193,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		if altOverride || (instance_exists(Player) && Player.race == 8 && (Player.spr_idle == sprMutant8DIdle || Player.unlockAlternativeUltras))
 		{
 			ultra_name[29] = "EXCLUSIVE TASTE"
-			ultra_text[29] = "HOLDING ONLY ONE WEAPON WILL:#INCREASE DAMAGE DEALT TO ENEMIES BY 20%#RETURN 10% <y>AMMO<y>/<g>RAD<g> UPON FIRING#+15% <w>RELOAD SPEED<w> AND +4 MAX <r>HP<r>##AUTO EAT WEAPONS LEFT IN THE LEVEL";
+			ultra_text[29] = "HOLDING ONLY ONE WEAPON WILL:#INCREASE DAMAGE DEALT TO ENEMIES BY 20%#RETURN 10% <y>AMMO<y>/<g>RAD<g> UPON FIRING#+15% <w>RELOAD SPEED<w> AND +4 MAX <r>HP<r>";
 		    ultra_tips[29] = "gold tastes good"
 		}
 		else
@@ -202,26 +202,26 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 			if isOtherCharacter
 				ultra_text[29] = "ONLY <w>HIGH TIER<w> WEAPON DROPS#EVERY ENEMY HAS A +1% CHANCE#TO DROP A WEAPON#INCREASE <w>RELOAD SPEED<w> BASED ON WEAPON TIER"
 			else
-				ultra_text[29] = "ONLY <w>HIGH TIER<w> WEAPON DROPS#EVERY ENEMY HAS A +1% CHANCE#TO DROP A WEAPON#INCREASE <w>RELOAD SPEED<w> BASED ON WEAPON TIER##AUTO EAT WEAPONS LEFT IN THE LEVEL"
+				ultra_text[29] = "ONLY <w>HIGH TIER<w> WEAPON DROPS#EVERY ENEMY HAS A +1% CHANCE#TO DROP A WEAPON#INCREASE <w>RELOAD SPEED<w> BASED ON WEAPON TIER"
 		    ultra_tips[29] = "delicacy"
 		}
 		
 		ultra_name[30] = "REGURGITATE"
 		if altOverride || (instance_exists(Player) && !isOtherCharacter && Player.skill_got[23])//Has open mind
-			ultra_text[30] = "EATING WEAPONS HAS A 40% CHANCE#TO DROP <w>CHESTS<w>##EATING A WEAPON DROPS IT LIKE A TURRET#THE <w>TURRET<w> FIRES THE EATEN WEAPON##AUTO EAT WEAPONS LEFT IN THE LEVEL";
+			ultra_text[30] = "EATING WEAPONS HAS A 40% CHANCE#TO DROP <w>CHESTS<w>##EATING A WEAPON DROPS IT LIKE A TURRET#THE <w>TURRET<w> FIRES THE EATEN WEAPON";
 		else
-			ultra_text[30] = "+15% <w>WEAPON DROP RATE<w>#EATING WEAPONS HAS A 30% CHANCE#TO DROP <w>CHESTS<w>##EATING A WEAPON DROPS IT LIKE A TURRET#THE <w>TURRET<w> FIRES THE EATEN WEAPON##AUTO EAT WEAPONS LEFT IN THE LEVEL"
+			ultra_text[30] = "+15% <w>WEAPON DROP RATE<w>#EATING WEAPONS HAS A 30% CHANCE#TO DROP <w>CHESTS<w>##EATING A WEAPON DROPS IT LIKE A TURRET#THE <w>TURRET<w> FIRES THE EATEN WEAPON"
 		ultra_tips[30] = "2% more chance for weapon chests"
     
 	    ultra_name[31] = "EXTRA STORAGE"
 		if isOtherCharacter
 			ultra_text[31] = "YOU CAN CARRY <w>THREE<w> WEAPONS"
 		else
-		ultra_text[31] = "YOU CAN CARRY <w>THREE<w> WEAPONS##<w>EATING<w> WEAPONS DOES <w>NOT CONSUME<w> THEM#AND INSTEAD <p>SENDS<p> THEM TO THE <w>NEXT AREA<w>#(CAN BE DONE ONLY ONCE PER WEAPON)##AUTO EAT WEAPONS LEFT IN THE LEVEL"
+		ultra_text[31] = "YOU CAN CARRY <w>THREE<w> WEAPONS##<w>EATING<w> WEAPONS DOES <w>NOT CONSUME<w> THEM#AND INSTEAD <p>SENDS<p> THEM TO THE <w>NEXT AREA<w>#(CAN BE DONE ONLY ONCE PER WEAPON)"
 	    ultra_tips[31] = "why not all three?"
     
 	    ultra_name[32] = "GUN EXTENSION"
-	    ultra_text[32] = "REPLACE ACTIVE WITH:#<w>FORCE SHOT<w>#YOUR ACTIVE FIRES YOUR WEAPON#AT THE COST OF <r>RADS<r> INSTEAD OF <y>AMMO<y>#COST IS DETERMINED BY <w>RELOAD TIME<w>##THRONEBUTT REDUCES COST"//"OCCASIONALLY PRODUCE LIGHTNING#EATING WEAPONS CREATES RADS & LIGHTNING##AUTO EAT WEAPONS LEFT IN LEVEL"
+	    ultra_text[32] = "REPLACE ACTIVE WITH:#<w>FORCE SHOT<w>#YOUR ACTIVE FIRES YOUR WEAPON#AT THE COST OF <r>RADS<r> INSTEAD OF <y>AMMO<y>#COST IS DETERMINED BY <w>RELOAD TIME<w>##THRONEBUTT REDUCES COST"
 	    ultra_tips[32] = "burping shots"
     
 	//CHICKEN 
@@ -276,7 +276,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		|| scrCheckUltra(Player.wep_name[Player.bwep])) && instance_exists(UltraIcon))))
 		{
 			ultra_name[39] = "BIG REBEL"
-		    ultra_text[39] = "+45 MAX <r>HP<r>!#YOU CAN'T <r>HEAL<r>#EVERY LOOP RESET HP TO FULL#ALLIES COST <y>AMMO<y>"
+		    ultra_text[39] = "+50 MAX <r>HP<r>!#YOU CAN'T <r>HEAL<r>#EVERY LOOP RESET HP TO FULL#ALLIES COST <y>AMMO<y>"
 		    ultra_tips[39] = "she is a maniac!"
 		}
 		
