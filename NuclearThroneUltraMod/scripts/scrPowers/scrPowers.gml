@@ -2291,9 +2291,9 @@ function scrPowers() {
 			}
 			if ultra_got[108] && resulttar == -1
 			{
-				if instance_exists(Pickup) && resulttar == -1
+				if instance_exists(AmmoHPPickup) && resulttar == -1
 				{
-					tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,Pickup);
+					tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,AmmoHPPickup);
 					var d4 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);
 					if (d4 < grabRange)
 					{

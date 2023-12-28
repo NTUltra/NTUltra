@@ -19,6 +19,3 @@ else
 }
 alarm[1] = 1;
 ang += spinRate;
-
-if !position_meeting(x,y,Wall)
-	instance_destroy()

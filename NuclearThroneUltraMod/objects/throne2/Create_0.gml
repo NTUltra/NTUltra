@@ -3,7 +3,7 @@ maxhealth = 1200
 loops = GetPlayerLoops();
 if scrIsHardMode()
 	maxhealth += 100;
-maxhealth += max(0,70*min(12,(loops-1)));
+maxhealth += max(0,80*min(12,(loops-1)));
 scrBossHealthBuff();
 meleedamage = 10
 mySize = 6;

@@ -16,6 +16,11 @@ if race == 7
 if gunangle <= 180
 	draw_sprite_ext(wep_sprt[wep],0,x+lengthdir_x(-wkick,gunangle+(wepangle*(1-wkick/20))),y+gunY+lengthdir_y(-wkick,gunangle+(wepangle*(1-wkick/20))),1,wepright,gunangle+(wepangle*(1-wkick/20)),c_white,1)
 	draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1)
+	if race == 24 && my_health > 0 && instance_exists(ElementorHead) //Elemental Mushroom head
+	{
+		mushroomhead = scrElementorMushroomHead();
+		draw_sprite_ext(mushroomhead,-1,x,y,right,image_yscale,image_angle,ElementorHead.col,1)
+	}
 if gunangle > 180
 	draw_sprite_ext(wep_sprt[wep],0,x+lengthdir_x(-wkick,gunangle+(wepangle*(1-wkick/20))),y+gunY+lengthdir_y(-wkick,gunangle+(wepangle*(1-wkick/20))),1,wepright,gunangle+(wepangle*(1-wkick/20)),c_white,1)
 	

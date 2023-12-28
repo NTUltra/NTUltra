@@ -61,7 +61,6 @@ if instance_exists(Player) {
 		]);
 	}
 	//colours = array_unique(colours);
-	debug("COLOURS: ", colours);
 	numberOfColours = array_length(colours) - 1;
 	currentColour = irandom(numberOfColours);
 	nextColour = irandom(numberOfColours);

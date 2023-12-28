@@ -44,11 +44,12 @@ else if !instance_exists(ThroneExplo)
 	if instance_exists(PopoNade)
 	{
 		var np = instance_nearest(x,y,PopoNade);
-		if np != noone
+		if np != noone && point_distance(x,y,np.x,np.y) < 64
 		{
 			motion_add(point_direction(x,y,np.x,np.y)+180+dodgeOffset,0.4);
 		}	
-	} else if instance_exists(projectile)
+	}
+	if instance_exists(projectile)
 	{
 		var np = instance_nearest(x,y,projectile);
 		if np != noone && np.team != team && point_distance(x,y,np.x,np.y) < 64

@@ -11,7 +11,8 @@ else {
 	wep = UberCont.start_wep[UberCont.selected_start_wep[race]];
 }
 //Exclude some starting weapons
-if wep == 527 || wep == 224 || wep == 400 || wep == 589 || wep == 43 || wep == 567 || wep == 229 || wep == 286 || wep == 617
+if (wep == 527 || wep == 224 || wep == 400 || wep == 589 || wep == 43 || wep == 567 || wep == 229 || wep == 286 || wep == 617
+|| (wep == 649 && instance_exists(Player) && Player.race != 23))
 {
 	wep = race_swep[race];
 }

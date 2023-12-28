@@ -76,7 +76,7 @@ function scrFire() {
 			var currentCrown = crown;
 			crown = [];
 			scrFire();
-			reload += wep_load[wep]*0.9;
+			reload += wep_load[wep]*0.94;
 			crown = currentCrown;
 		}
 	}

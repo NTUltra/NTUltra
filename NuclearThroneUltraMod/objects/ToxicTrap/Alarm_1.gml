@@ -27,7 +27,4 @@ fire -= 1
 		}
 }
 
-if !position_meeting(x,y,Wall)
-instance_destroy()
-
 alarm[1] = 1;

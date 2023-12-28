@@ -23,9 +23,12 @@ function scrModHit() {
 			alarm[1] += amount;
 			alarm[11] += amount;
 			with instance_create(x,y-6,SleepFX) {
+				if !other.isSnooze
+					owner = other.id;
 				depth = other.depth - 1;
 				alarm[0] = max(2,amount+1);
 			}
+			isSnooze = true;
 		}
 	}
 	//ROIDS KNOCKBACK

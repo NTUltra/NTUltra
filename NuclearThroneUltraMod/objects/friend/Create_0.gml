@@ -17,10 +17,16 @@ skill_got[13] = 1;
 drawempty = 0;
 p = 0;
 race = instance_number(Friend);
-if race == 16
+if race == 16//Viking
 {
 	armour = 1;
 	maxarmour = 2;
+}
+mushroomhead = sprMutant24IdleHead;
+if race == 24//Elementor
+{
+	if !instance_exists(ElementorHead)
+		instance_create(x,y,ElementorHead);	
 }
 gunangle = choose(0,180);
 wepflip = 1

@@ -14,4 +14,5 @@ if !place_meeting(x,y,Floor)
 		x = n.x+8;
 		y = n.y+8;
 	}
+	alarm[4] = 5;
 }

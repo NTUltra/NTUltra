@@ -85,6 +85,3 @@ if fire > 0
 			}
 	}
 }
-
-if !position_meeting(x,y,Wall)
-	instance_destroy()

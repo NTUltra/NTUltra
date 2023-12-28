@@ -15,3 +15,4 @@ with myscorch {
 }
 
 onDuration = 360/spinRate;
+alarm[2] = 3;

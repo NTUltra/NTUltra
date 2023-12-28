@@ -1,7 +1,7 @@
 //VERSION STUFF ETC.
 version = 000//23 is final probably
 encryptedVersion = 003;
-public = 0 //1 is no cheats and release
+public = 1 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "30.00"//"PR 30.02";
 subUpdateVersion = ".00";

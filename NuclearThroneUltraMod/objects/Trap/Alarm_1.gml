@@ -32,8 +32,4 @@ if side = 0||loop
 		}
 }
 }
-
-if !position_meeting(x,y,Wall)
-	instance_destroy()
-
 alarm[1] = 1;
