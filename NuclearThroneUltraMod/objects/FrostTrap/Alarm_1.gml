@@ -1,8 +1,8 @@
 alarm[1] = 1;
-if fire > 0 and !instance_exists(Portal)
+if fire > 0
 {
 	fire -= 1
-	if side = 1
+	if side = 1 || loop
 	{
 		if !position_meeting(x-4,y+8,Wall)
 			with instance_create(x-4,y+8,EnemyIceFlame)
@@ -30,10 +30,9 @@ if fire > 0 and !instance_exists(Portal)
 				dodgeAble = false;
 			}
 	}
-	if side = 0
+	if ((side = 0 || loop) && fire % 2 == 0)
 	{
 		alarm[1] = 2;
-		fire -= 1;
 		snd_play(choose(sndSpark1,sndSpark2),0.1);
 		if !position_meeting(x-4,y+8,Wall)
 			with instance_create(x-4,y+8,Lightning)

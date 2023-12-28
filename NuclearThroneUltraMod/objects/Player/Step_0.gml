@@ -1973,6 +1973,7 @@ if ((abs(h_point) > dedzone) || (abs(v_point) > dedzone))
 			smoothing = 0.4;
 		display_mouse_set(lerp(display_mouse_get_x(),mox,smoothing),lerp(display_mouse_get_y(),moy,smoothing));
 	}
+	UberCont.setAimThisFrame = true;
 }
 
 /* */

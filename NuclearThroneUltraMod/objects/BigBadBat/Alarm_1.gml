@@ -53,6 +53,10 @@ if instance_exists(Player) {
 		{
 			with instance_create(x,y,myBat)
 			{
+				raddrop = 0;
+				countKill = false;
+				alarm[1] *= 0.5;
+				existTime = 20;
 				motion_add(ang,4);	
 			}
 			ang += angStep;

@@ -286,7 +286,7 @@ function scrModHit() {
 					{
 						team=other.team;
 						direction=random(360);
-						hits -= 1;
+						hits = max(1,hits-1);
 					}
 				break;
 

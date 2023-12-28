@@ -1,4 +1,4 @@
-if fire > 0 && !instance_exists(Portal)
+if fire > 0
 {
 	image_index = 1;
 	fire -= 1

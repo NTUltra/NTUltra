@@ -7668,7 +7668,7 @@ function scrWeapons() {
 	wep_auto[694] = 1
 	wep_load[694] = 13
 	wep_cost[694] = 2
-	wep_sprt[694] = sprElectroGun
+	wep_sprt[694] = sprElectroCrossbow
 	wep_area[694] = 10
 	wep_text[694] = "electronic wiring"
 	wep_swap[694] = sndSwapEnergy

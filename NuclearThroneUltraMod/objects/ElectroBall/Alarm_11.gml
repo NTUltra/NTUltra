@@ -17,13 +17,13 @@ if um == ultramods.splinterElectro
 else if um == ultramods.shotgunElectro
 {
 	instance_destroy(id,false);
-	with instance_create(x,y,Bullet2)
+	with instance_create(x,y,Bullet2Heavy)
 	{
-		dmg += 1;
+		dmg -= 2;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = 11 + other.speed;
+		speed = 13 + other.speed;
 		team = other.team;
 		alarm[11] = 0;
 	}

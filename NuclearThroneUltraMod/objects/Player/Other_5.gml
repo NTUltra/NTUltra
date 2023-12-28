@@ -25,6 +25,7 @@ else
 scrNextLevel();//odd
 }
 */
+isInInverted = false;
 var cameFromOuterSpace = (area == 100 || area == 104 || scrIsInInvertedArea());
 scrNextLevel();
 if UberCont.killedInvertedThrone2 && !cameFromOuterSpace && UberCont.collectedInversionShards < 3 && scrIsInInvertedArea()
@@ -39,11 +40,7 @@ if race == 27 && canHeal
 {
 	if scrIsInInvertedArea()
 	{
-		var am = 3;
-		if ultra_got[106]
-			am = 5;
-		
-		my_health += am;
+		scrApplyHandsInversion();
 	}
 }
 if ultra_got[51] && altUltra

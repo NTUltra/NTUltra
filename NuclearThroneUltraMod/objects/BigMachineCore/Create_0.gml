@@ -4,8 +4,8 @@ scrBossHealthBuff();
 mySize = 5;
 meleedamage = 0;
 raddrop = 0;
-spr_idle = mskFloorMiddle;
-spr_walk = mskFloorMiddle;
+spr_idle = mskPickupThroughWall;
+spr_walk = mskPickupThroughWall;
 spr_hurt = sprBigMachineCoreHurt;
 spr_dead = mskPickupThroughWall;
 // Inherit the parent event

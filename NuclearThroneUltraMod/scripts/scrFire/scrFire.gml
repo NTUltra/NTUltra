@@ -3876,7 +3876,7 @@ function scrFire() {
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection+(random(16)-8)*other.accuracy,14+random(2))
+	{motion_add(aimDirection+(random(16)-8)*other.accuracy,14.25+random(2))
 	image_angle = direction
 	team = other.team}
 

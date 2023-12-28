@@ -10,7 +10,9 @@ if ShopWheel.alarm[0] > 0
 {
     if (HogSpend())
 	{
-    instance_create(Player.x,Player.y,WeaponMod);
+    with instance_create(Player.x,Player.y,WeaponMod) {
+		shouldClose = false;	
+	}
     instance_create(Player.x,Player.y,WallBreak);
     }
 

@@ -770,21 +770,21 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[105] = "let me touch you"
     
 	ultra_name[106] = "NEGATIVE ENVIROMENT"
-	ultra_text[106] = "WALLS CONTAIN SWARM BOLTS#<w>INVERTED PORTALS<w>#(OVER) <r>HEAL<r> YOU FOR 5 <r>HP<r>"
+	ultra_text[106] = "WALLS CONTAIN SWARM BOLTS#<w>INVERTED PORTALS<w>#(OVER) <r>HEAL<r> YOU FOR 4 <r>HP<r>"
 	ultra_tips[106] = "I'm a glass half empty kinda hand"
 	
 	if instance_exists(Player) && (Player.race == 27 && Player.bskin == 1)
 	{
 		//Secret B skin ultra
 		ultra_name[106] = "HOT HANDS!"
-		ultra_text[106] = "<r>FIERY<r> HANDS#MORE <r>FIRE<r> DAMAGE#HOMING <r>FIRE<r>#EVEN MORE <r>FIRE<r> DAMAGE#WHILE IN <w>INVERTED AREAS<w>#<w>INVERTED PORTALS<w>#(OVER) <r>HEAL YOU FOR 5 <r>HP<r>"
+		ultra_text[106] = "<r>FIERY<r> HANDS#MORE <r>FIRE<r> DAMAGE#HOMING <r>FIRE<r>#EVEN MORE <r>FIRE<r> DAMAGE#WHILE IN <w>INVERTED AREAS<w>#<w>INVERTED PORTALS<w>#(OVER) <r>HEAL YOU FOR 4 <r>HP<r>"
 		ultra_tips[106] = "secret b-skin ultra mutation"
 	}
 	else if instance_exists(Player) && (Player.race == 27 && Player.bskin == 2)
 	{
 		//Secret C skin ultra
 		ultra_name[106] = "BOOM HANDS!"
-		ultra_text[106] = "<w>EXPLOSIVE<w> HANDS#HAND IS SLOWER#NORMAL HAND SPEED IN <w>INVERTED AREAS<w>#<w>INVERTED PORTALS<w>#(OVER) <r>HEAL<r> YOU FOR 5 <r>HP<r>"
+		ultra_text[106] = "<w>EXPLOSIVE<w> HANDS#HAND IS SLOWER#NORMAL HAND SPEED IN <w>INVERTED AREAS<w>#<w>INVERTED PORTALS<w>#(OVER) <r>HEAL<r> YOU FOR 4 <r>HP<r>"
 		ultra_tips[106] = "secret c-skin ultra mutation"
 	}
 	

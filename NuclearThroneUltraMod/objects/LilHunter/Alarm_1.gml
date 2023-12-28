@@ -14,6 +14,8 @@ if random(35) < 1 or (dis < 64 and random(6) < 1) or (point_distance(x,y,target.
 //FLY
 sprite_index = sprLilHunterLiftStart
 image_index = 0
+with BoltStick
+	instance_destroy();
 instance_change(LilHunterFly,false)
 snd_play_2d(sndLilHunterLaunch)
 	if random(6) < 1
@@ -142,6 +144,8 @@ else if random(30)<1
 //CAN'T SEE FLY AWAY FLY
 sprite_index = sprLilHunterLiftStart
 image_index = 0
+with BoltStick
+	instance_destroy();
 instance_change(LilHunterFly,false)
 snd_play_2d(sndLilHunterLaunch)
 

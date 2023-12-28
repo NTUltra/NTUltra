@@ -44,9 +44,9 @@ if instance_exists(Player) && Player.skill_got[26]
 {
 	x += 8;
 	y += 8;
-	if !scrDrop(1.3,0.75)
+	if !scrDrop(1.5,0.8)
 	{
-		if random(100) < 7
+		if random(100) < 8
 		{
 			instance_create(x,y,Rad);
 		}

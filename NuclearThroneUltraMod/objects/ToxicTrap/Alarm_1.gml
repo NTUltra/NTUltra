@@ -1,4 +1,4 @@
-if fire > 0 and !instance_exists(Portal)
+if fire > 0
 {
 fire -= 1
 	if !position_meeting(x-4,y+8,Wall)

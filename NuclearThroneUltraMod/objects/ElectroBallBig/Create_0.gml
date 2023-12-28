@@ -17,3 +17,4 @@ alarm[1]=1;
 alarm[0]=1;
 alarm[2] = 4;
 alarm[11] = 0;
+balls = 8;

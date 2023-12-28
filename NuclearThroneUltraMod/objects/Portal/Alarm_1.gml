@@ -35,6 +35,26 @@ else
 }
 if goTime
 {
+	with Trap
+	{
+		alarm[0] = 0;
+		alarm[1] = 0;
+	}
+	with ToxicTrap
+	{
+		alarm[0] = 0;
+		alarm[1] = 0;
+	}
+	with FrostTrap
+	{
+		alarm[0] = 0;
+		alarm[1] = 0;
+	}
+	with VulcanoTrap
+	{
+		alarm[0] = 0;
+		alarm[1] = 0;
+	}
 	sprite_index = sprPortalSpawn;
 	visible = true;
 	alarm[0] = 1;

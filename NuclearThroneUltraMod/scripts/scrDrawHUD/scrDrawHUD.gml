@@ -1977,7 +1977,7 @@ function scrDrawHUD() {
 				yy = vy+5;
 				shouldDraw = true;
 			}
-			if shouldDraw
+			if shouldDraw && !instance_exists(NuclearThrone1)
 				draw_sprite(sprLastEnemyIndicator,0,xx,yy);
 		}
 	}

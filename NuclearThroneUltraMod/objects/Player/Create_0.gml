@@ -20,6 +20,7 @@ with GameRender
 with DataRef
 	instance_destroy();
 boil = 10;
+isInInverted = false;
 canPuffyCheek = 0;
 canPuffyCheekB = 0;
 canPuffyCheekC = 0;

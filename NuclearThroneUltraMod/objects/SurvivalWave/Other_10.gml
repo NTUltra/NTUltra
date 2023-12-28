@@ -116,7 +116,8 @@ switch (waveNumber)
 				sprite_index = sprFloor9;
 		}
 	break;
-	case 10:
+	case 10://inv desert
+		scrApplyHandsInversion();
 		if instance_exists(TopCont)
 			TopCont.darkness = 0;
 		//Clean up throne 2
@@ -172,6 +173,7 @@ switch (waveNumber)
 	break;
 	case 13://inv sewers
 		song = musInvertedSewers;
+		scrApplyHandsInversion();
 		with Floor
 		{
 			if styleb
@@ -181,6 +183,7 @@ switch (waveNumber)
 		}
 	break;
 	case 14://inv scrap
+		scrApplyHandsInversion();
 		if instance_exists(TopCont)
 			TopCont.darkness = 0;
 		song = mus3b;
@@ -206,6 +209,7 @@ switch (waveNumber)
 		}
 	break;
 	case 16://inv lab
+		scrApplyHandsInversion();
 		song = mus106b
 		with Floor
 		{
@@ -216,6 +220,7 @@ switch (waveNumber)
 		}
 	break;
 	case 17://inv frozen
+		scrApplyHandsInversion();
 		if instance_exists(TopCont)
 			TopCont.darkness = 0;
 		song = mus101;
@@ -241,6 +246,7 @@ switch (waveNumber)
 		}
 	break;
 	case 19://inv cave
+		scrApplyHandsInversion();
 		if instance_exists(TopCont)
 			TopCont.darkness = 0;
 		song = mus104;
@@ -254,6 +260,7 @@ switch (waveNumber)
 		}
 	break;
 	case 20://inv oasis
+		scrApplyHandsInversion();
 		song = mus101;
 		with Floor
 		{

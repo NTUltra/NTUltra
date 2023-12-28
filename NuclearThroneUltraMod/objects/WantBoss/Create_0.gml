@@ -14,11 +14,11 @@ area=BackCont.area;
 subarea=BackCont.subarea;
 loops = BackCont.loops
 }
-wantPart = 0.69;
+wantPart = 0.7;
 if (area == 4 || area == 111 || area == 103) && (subarea == 2 || area == 103)
-	wantPart = 0.4;
+	wantPart = 0.5;
 if area == 129
-	wantPart = 0.2;
+	wantPart = 0.25;
 oasis=false;
 tries = 0;
 alarm[0] = 120;

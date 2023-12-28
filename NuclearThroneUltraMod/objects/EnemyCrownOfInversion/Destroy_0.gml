@@ -10,7 +10,9 @@ with BackCont
 }
 with Player
 {
-	area = 129;	
+
+	area = 129;
+	scrApplyHandsInversion();
 }
 scrActivateAllOutOfRange();
 with FloorExplo

@@ -6,8 +6,8 @@ mySize = 4;
 event_inherited()
 actTime = 9;
 maxSpeed = 2;
-maxJumpSpeed = 8.4;
-jumpAcc = 0.45;
+maxJumpSpeed = 8.5;
+jumpAcc = 0.6;
 spr_normal = sprDogGuardianWalk;
 spr_idle = sprDogGuardianWalk
 spr_walk = sprDogGuardianWalk

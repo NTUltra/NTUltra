@@ -5,6 +5,8 @@ else
 {
 sprite_index = sprLilHunterLiftStart
 image_index = 0
+with BoltStick
+	instance_destroy();
 instance_change(LilHunterFly,false)
 
 snd_play_2d(sndLilHunterLaunch)
@@ -13,6 +15,8 @@ snd_play_2d(sndLilHunterLaunch)
 {
 sprite_index = sprLilHunterLiftStart
 image_index = 0
+with BoltStick
+	instance_destroy();
 instance_change(LilHunterFly,false)
 
 snd_play_2d(sndLilHunterLaunch)

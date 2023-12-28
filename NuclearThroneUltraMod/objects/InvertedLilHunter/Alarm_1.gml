@@ -14,6 +14,8 @@ if random(35) < 1 or (dis < 64 and random(5) < 1) or (dis > 160 and random(16) <
 
 sprite_index = sprInvertedLilHunterLiftStart
 image_index = 0
+with BoltStick
+	instance_destroy();
 instance_change(InvertedLilHunterFly,false)
 snd_play_2d(sndLilHunterLaunch)
 	if random(6) < 1
@@ -143,6 +145,8 @@ else if random(30)<1
 
 sprite_index = sprInvertedLilHunterLiftStart
 image_index = 0
+with BoltStick
+	instance_destroy();
 instance_change(InvertedLilHunterFly,false)
 snd_play_2d(sndLilHunterLaunch)
 
