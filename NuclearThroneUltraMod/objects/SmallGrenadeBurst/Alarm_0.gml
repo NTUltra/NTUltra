@@ -8,7 +8,7 @@ if instance_exists(creator)
 x = creator.x
 y = creator.y
 //FIRING
-snd_play_fire(sndGrenade)
+snd_play_fire(sndSmallGrenadeBurst)
 
 
 //repeat(3)

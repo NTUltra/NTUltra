@@ -57,6 +57,7 @@ if instance_exists(TopCont)
 	TopCont.darkness = 0;
 
 var i = 0;
+instance_create(x,y,AreaResetter);
 switch (UberCont.crownVaultChallenge)
 {
 	#region challenge 1
@@ -250,6 +251,13 @@ switch (UberCont.crownVaultChallenge)
 			i++;
 		};
 		wave[i] = {
+			obj: AreaResetter,
+			time: 1,
+			xx: centerX,
+			yy: centerY,
+		};
+		i++;
+		wave[i] = {
 			obj: Technomancer,
 			time: 90,
 			xx: centerX,
@@ -405,6 +413,13 @@ switch (UberCont.crownVaultChallenge)
 		};
 		i++;
 		wave[i] = {
+			obj: AreaResetter,
+			time: 1,
+			xx: centerX,
+			yy: centerY,
+		};
+		i++;
+		wave[i] = {
 			obj: Wolf,
 			time: 60,
 		};
@@ -517,6 +532,13 @@ switch (UberCont.crownVaultChallenge)
 		wave[i] = {
 			obj: Rat,
 			time: 140,
+		};
+		i++;
+		wave[i] = {
+			obj: AreaResetter,
+			time: 1,
+			xx: centerX,
+			yy: centerY,
 		};
 		i++;
 		repeat(4)

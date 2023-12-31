@@ -6,7 +6,7 @@ if instance_exists(creator)
 }
 var ys = scale;
 var tentacleLength = tl;
-var am = lerp(0,30,min(1,alienIntestines / 300))
+var am = lerp(1,24,min(1,alienIntestines / 320))
 if am > 0
 {
 	var i = 0;

@@ -1,7 +1,7 @@
 /// @description Keep track of owner
 if owner > 0 && instance_exists(owner)
 {
-	if owner.alarm[1] < 4
+	if owner.alarm[alarmIndex] < 4
 	{
 		instance_destroy();	
 	}

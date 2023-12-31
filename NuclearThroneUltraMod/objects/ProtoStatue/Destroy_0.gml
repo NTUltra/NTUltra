@@ -39,7 +39,7 @@ else //Destroy and not full, pink sheep
 	}
 }
 
-if UberCont.crownHeal || true
+if UberCont.crownHeal
 {
 	scrHeal(1,true);	
 }

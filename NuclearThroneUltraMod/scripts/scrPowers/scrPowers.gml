@@ -7,28 +7,28 @@ function scrPowers() {
 	}
 	if scrIsCrown(34)
 		race = 0;
-	if skill_got[39] && alienIntestines < 400
+	if skill_got[39] && alienIntestines < 330
 	{
 		if UberCont.normalGameSpeed == 60
 		{
-			if alienIntestines < 40
-				alienIntestines += 0.35;
+			if alienIntestines < 20
+				alienIntestines += 0.4;
 			else
-				alienIntestines += 0.175;
+				alienIntestines += 0.15;
 			if race == 25
 			{
-				alienIntestines += 0.05;	
+				alienIntestines += 0.035;	
 			}
 		}
 		else
 		{
-			if alienIntestines < 40
-				alienIntestines += 0.7;
+			if alienIntestines < 20
+				alienIntestines += 0.8;
 			else
-				alienIntestines += 0.35;
+				alienIntestines += 0.3;
 			if race == 25
 			{
-				alienIntestines += 0.1;	
+				alienIntestines += 0.07;	
 			}
 		}
 	}
@@ -36,7 +36,10 @@ function scrPowers() {
 	if KeyCont.key_spec[p] = 1
 	{
 		if rewinds > 0
+		{
 			scrRewindTime();
+			exit;
+		}
 		var alien = alienIntestines*0.5;
 		scrAlienIntestines();
 		var delay = 5;
@@ -914,22 +917,14 @@ function scrPowers() {
 
 	if race == 18//ANGEL
 	{
-		var useWep = bwep;
-		if useWep == 0 || wep_type[useWep] == 0
-			useWep = wep;
-		else
-		{
-			if !instance_exists(UseSecondaryAmmo)
-				instance_create(x,y,UseSecondaryAmmo);
-			else
-				with UseSecondaryAmmo
-					event_user(0);	
-		}
-	    if wep_type[useWep] != 0
+		var takePercentage = 0.35;
+		var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
+	    if wepType != 0
 	    {
-			var multiply = 0.35;
-			var cost = typ_ammo[wep_type[useWep]]*multiply;
-			if (ammo[wep_type[useWep]]-cost >= 0) || (ultra_got[70] && ammo[wep_type[useWep]] > 0)
+			if wepType != wep_type[bwep] && wepType != wep_type[wep]
+				takePercentage *= 3;
+			var cost = typ_ammo[wepType]*takePercentage;
+			if (ammo[wepType]-cost >= 0) || (ultra_got[70] && ammo[wepType] > 0)
 			{
 				snd_hurt = sndDamageNegate;
 				instance_create(x,y,AngelActive);
@@ -941,9 +936,9 @@ function scrPowers() {
 				} else {
 					snd_play_2d(sndAngelActive,0.1,false,false,2,1);
 				}
-				ammo[wep_type[useWep]]-= cost//2.5?
+				ammo[wepType]-= cost//2.5?
 				var heal = 0;
-				if  ammo[wep_type[useWep]] <= 0
+				if  ammo[wepType] <= 0
 				{
 					if scrIsCrown(13)
 					{
@@ -958,7 +953,7 @@ function scrPowers() {
 				{
 					dir = instance_create(x,y,PopupText)
 					dir.sprt = sprAmmoIconsPickup
-					dir.ii = wep_type[useWep]-1;
+					dir.ii = wepType-1;
 					dir.theColour = c_red;
 					dir.mytext = "-"+string(round(cost));
 				}
@@ -966,7 +961,7 @@ function scrPowers() {
 				{
 					dir = instance_create(x,y,PopupText)
 					dir.theColour = c_red;
-					dir.mytext = "-"+string(round(cost))+" "+string(other.typ_name[wep_type[useWep]])
+					dir.mytext = "-"+string(round(cost))+" "+string(other.typ_name[wepType])
 				}
 				//HEAL
 				if (skill_got[5])
@@ -1642,20 +1637,14 @@ function scrPowers() {
 	var useWep = bwep;
 	if altUltra && ultra_got[39]
 	{
-		if useWep == 0 || wep_type[useWep] == 0
-			useWep = wep;
-		else
-		{
-			if !instance_exists(UseSecondaryAmmo)
-				instance_create(x,y,UseSecondaryAmmo);
-			else
-				with UseSecondaryAmmo
-					event_user(0);	
-		}
-		if wep_type[useWep] != 0
+		var takePercentage = 0.75;
+		var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
+		if wepType != wep_type[bwep] && wepType != wep_type[wep]
+			takePercentage *= 3;
+		if wepType != 0
 		{
 			ammoRebel = true;
-			if wep_type[useWep] == 0 {
+			if wepType == 0 {
 				snd_play(sndEmpty)
 				dir = instance_create(x,y,PopupText)
 				dir.mytext = "THIS DOESN'T USE AMMO";
@@ -1665,7 +1654,7 @@ function scrPowers() {
 				canSpawn = false;
 				ammoRebel = false;
 			}
-			else if ammo[wep_type[useWep]] >= typ_ammo[wep_type[useWep]]*1
+			else if ammo[wepType] >= typ_ammo[wepType]*takePercentage
 			{
 				canSpawn = true;
 			}
@@ -1686,8 +1675,8 @@ function scrPowers() {
 		canrebel = 1
 		if ammoRebel
 		{
-			ammo[wep_type[useWep]] -= typ_ammo[wep_type[useWep]]*1;
-			if ammo[wep_type[useWep]] <= 0
+			ammo[wepType] -= typ_ammo[wepType]*takePercentage
+			if ammo[wepType] <= 0
 			{
 				with Crown {
 					event_user(0);	
@@ -2833,12 +2822,15 @@ function scrPowers() {
 		}
 		else if !lockoutElementor//Elementor
 		{
+			
 			var takePercentage = 0.045;//0.75%
 			if skill_got[5]
 			{
 				takePercentage = 0.035;//0.05%
 			}
 			var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
+			if wepType != wep_type[bwep] && wepType != wep_type[wep]
+				takePercentage *= 3;
 			var cost = typ_ammo[wepType]*takePercentage;
 			if (wepType != 0 && ammo[wepType] - cost > 0)
 			{

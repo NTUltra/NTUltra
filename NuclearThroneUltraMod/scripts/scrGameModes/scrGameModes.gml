@@ -80,7 +80,7 @@ function scrGameModes() {
 	gamemode_unlock[11] = "PICK UP 50 WEAPONS IN ONE RUN";
 	gamemode_have[11] = 0;
 	gamemode_tip[11] = "IT'S GUN GAME!";
-	gamemode_description[11] = "EVERY KILL GET A NEW RANDOM WEAPON";
+	gamemode_description[11] = "EVERY 10TH KILL (20TH ON LOOP) GET A NEW RANDOM WEAPON";
 	gamemode_nocombo[11] = [13,14,26,27,31,37,8];
 
 	gamemode[12] = "ZOMBIES";//

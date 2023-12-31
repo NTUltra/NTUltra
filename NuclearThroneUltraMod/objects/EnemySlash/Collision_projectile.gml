@@ -1,7 +1,7 @@
 if team != other.team && other.alarm[11] < 1
 {
 
-	if other.typ =1
+	if other.typ == 1 && other.canBeMoved
 	{
 		other.team = team
 		other.direction = image_angle

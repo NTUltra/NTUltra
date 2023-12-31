@@ -166,25 +166,11 @@ if (type == network_type_data) {
 			}
 			if scrIsGamemode(11)//Gun Game
 			{
+				UberCont.gunGameSeed = UberCont.todaysSeed + 4;
 				with Player
 				{
-					do {
-						wep = irandom(maxwep);
-					}
-					until(wep != 69 && wep != 0 && wep != 298) //no oops gun and no no gun
-
-					if race = 7 //roids
-					{
-						do {
-						    bwep = irandom(maxwep);
-						}
-						until(bwep != 69 && bwep != 0 && wep != 298) //no oops gun and no no gun
-					}
-
-					if ammo[wep_type[wep]] < typ_ammo[wep_type[wep]] * 3 {
-						ammo[wep_type[wep]] += typ_ammo[wep_type[wep]] * 3;
-					}
-					scrWeaponHold();
+					scrRollGunGame();
+					scrRollGunGame();
 				}
 			}
 			if scrIsGamemode(13)//ROCKET GLOVE

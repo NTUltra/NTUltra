@@ -86,11 +86,11 @@ function scrSpawnSurvivalWaveReward(){
 				instance_create(x-64,y-96,WeaponMod);
 			}
 		break;
-		case 10:
+		case 11:
 			if Player.level > 1
 				instance_create(x,y+96,RerollStation);
 		break;
-		case 11:
+		case 12:
 			if Player.skill_got[30]
 			{
 				with instance_create(x+64,y+96,WeaponMod)
@@ -102,7 +102,7 @@ function scrSpawnSurvivalWaveReward(){
 				instance_create(x-64,y-96,WeaponMod);
 			}
 		break;
-		case 12:
+		case 13:
 			with instance_create(x+64,y+96,WeaponMod)
 				image_xscale = -1;
 			instance_create(x-64,y+96,WeaponMod);

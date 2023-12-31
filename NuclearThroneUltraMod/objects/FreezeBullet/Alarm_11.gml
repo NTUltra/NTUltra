@@ -4,6 +4,7 @@ if um == ultramods.bulletShotgun
 {
 	with instance_create(x,y,FreezePellet)
 	{
+		dmg += 1;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;

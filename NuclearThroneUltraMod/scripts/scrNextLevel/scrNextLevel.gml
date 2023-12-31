@@ -79,7 +79,12 @@ function scrNextLevel() {
 	{
 		area = 116;
 		subarea ++;
-		hard+=1.25;
+		if subarea < 8
+			hard+=1.25;
+		else
+		{
+			hard += 0.75;
+		}
 		exit;
 	}
 	//show_message("inverted: "+ string(inverted)+"#area :"+string(area));

@@ -1,5 +1,3 @@
 event_inherited();
-
-dmg=4;
-
-alarm[11] = 0;
+friction -= 0.1;
+dmg = 4;

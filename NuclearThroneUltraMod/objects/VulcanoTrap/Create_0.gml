@@ -16,3 +16,12 @@ with myscorch {
 
 onDuration = 360/spinRate;
 alarm[2] = 3;
+
+if instance_exists(Player)
+{
+	if Player.skill_got[29]	//Hypersomnia
+	{
+		alarm[0] += 70;
+		scrGiveSnooze(0,0);
+	}
+}

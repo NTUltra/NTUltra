@@ -1,5 +1,5 @@
 /// @description main
-if instance_exists(GenCont) || instance_exists(StartDaily)
+if instance_exists(GenCont) || instance_exists(StartDaily) || instance_exists(LevCont)
 	exit;
 var is60fps = (UberCont.normalGameSpeed == 60);
 if canPuffyCheek > 0 {
@@ -840,7 +840,7 @@ if KeyCont.key_swap[p] = 1 and bwep != 0
 				with instance_create(x+lengthdir_x(13+(skill_got[13]*3),aim+180),y+lengthdir_y(13+(skill_got[13]*3),aim+180),RoidsSuperSwap)
 				{
 					wepSpr = other.wep_sprt[other.bwep];
-					motion_add(aim,1+(other.skill_got[13]*2))
+					motion_add(aim,2+(other.skill_got[13]*2))
 					image_angle = aim;
 					team = other.team
 					angle = image_angle-(60 * other.flipDir);
@@ -851,6 +851,7 @@ if KeyCont.key_swap[p] = 1 and bwep != 0
 		}
 		else //ROIDS MIRROR HANDS
 		{
+			/*
 			if reload < 0
 			{
 				var pci = reload/wep_load[wep];
@@ -869,6 +870,9 @@ if KeyCont.key_swap[p] = 1 and bwep != 0
 			}
 			else
 				breload *= 0.4;
+			*/
+			reload -= 10;
+			breload -= 10;
 		}
 	}
 	snd_play(wep_swap[wep])
@@ -1968,9 +1972,9 @@ if ((abs(h_point) > dedzone) || (abs(v_point) > dedzone))
 		moy = window_get_y()+window_get_height()-8;
 		if moy < window_get_y()
 		moy = window_get_y()+8;
-		var smoothing = 0.2;
+		var smoothing = 0.1;
 		if UberCont.normalGameSpeed == 60
-			smoothing = 0.4;
+			smoothing = 0.2;
 		display_mouse_set(lerp(display_mouse_get_x(),mox,smoothing),lerp(display_mouse_get_y(),moy,smoothing));
 	}
 	UberCont.setAimThisFrame = true;

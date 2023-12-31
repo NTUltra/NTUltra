@@ -31,6 +31,7 @@ with instance_create(x,y,MicroBullet)
 	direction = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+other.aimOffset;
 	image_angle = direction;
 	scrCopyWeaponMod(other);
+	event_perform(ev_alarm,0);
 
 image_angle = direction
 team = other.team

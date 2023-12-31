@@ -15,6 +15,7 @@ if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x and UberCont.mo
 			byteSeed = (byteSeed + string_byte_at(inputSeed, i)) << 1;
 		}
 		seed = byteSeed;
+		gunGameSeed = seed;
 		seedText = inputSeed;
 		seedModeSeed = seed;
 		seedModeSeedText = seedText;

@@ -7,6 +7,6 @@ else
 	fakeArea = BackCont.area;
 
 alarm[0] = 2;
-alarm[1] = 1;
+alarm[2] = 1;
 forceSprite = sprFloor1;
 forceBstyle = false;

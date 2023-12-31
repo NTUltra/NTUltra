@@ -2,10 +2,14 @@
 // /@description Take ammo from primary than if melee take from secondary otherwise take from other pools at random
 ///@param
 function TargetWepTypeForAmmoConsumption(takePercentage){
-	var wepType = wep_type[bwep];
-	if wepType == 0 || bwep == 0
+	var pt = wep_type[wep]
+	var bt = wep_type[bwep];
+	var wepType = bt;
+	var pcost = typ_ammo[pt]*takePercentage;
+	var bcost = typ_ammo[bt]*takePercentage;
+	if (wepType == 0 || bwep == 0 || ammo[bt] < bcost)
 	{
-		wepType = wep_type[wep]
+		wepType = pt;
 	}
 	else
 	{
@@ -15,14 +19,17 @@ function TargetWepTypeForAmmoConsumption(takePercentage){
 			with UseSecondaryAmmo
 				event_user(0);
 	}
-	if wepType == 0
+	if wepType == 0 || ammo[pt] < pcost
 	{
+		wepType = 0;
+		with UseSecondaryAmmo
+			instance_destroy();
 		var tryType = irandom_range(1,5);
 		
 		totalTries = 0;
-		while(totalTries <=5 && wepType == 0)
+		while(totalTries <= 5 && wepType == 0)
 		{
-			var cost = typ_amax[tryType]*takePercentage;
+			var cost = typ_ammo[tryType]*takePercentage*3;
 			if (ammo[tryType] - cost > 0)
 			{
 				wepType = tryType;
@@ -35,6 +42,8 @@ function TargetWepTypeForAmmoConsumption(takePercentage){
 					tryType = 1;
 			}
 		}
+		if wepType == 0
+			wepType = bt;
 	}
 	return wepType
 }

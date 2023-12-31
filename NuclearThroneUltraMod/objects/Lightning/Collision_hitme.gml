@@ -38,7 +38,7 @@ else if other.team==2 && other.my_health > 0 && other.team!= team
 	{
 		if object_index == Player
 		{
-			hitBy = other.sprite_index;
+			hitBy = sprLightningEnemyRepresent;
 		}
 		if sprite_index != spr_hurt
 		{

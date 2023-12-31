@@ -132,7 +132,7 @@ var al = ds_list_size(keepDeactive);
 for (var i = 0; i < al; i++) {
 	instance_deactivate_object(keepDeactive[| i]);	
 }
-if normalGameSpeed = 30
+if normalGameSpeed == 30
 	with FPSHACK
 		instance_destroy();
 else if !instance_exists(FPSHACK)
@@ -240,7 +240,7 @@ if (!instance_exists(StartDaily) &&
 )
 {
 	var endMe = false;
-	if KeyCont.key_paus[0] = 1 and instance_exists(Menu)
+	if KeyCont.key_paus[0] == 1 and instance_exists(Menu)
 	{
 		if isWeekly
 			opt_gamemode = [0];
@@ -273,7 +273,7 @@ if (!instance_exists(StartDaily) &&
 	{
 		endMe = true;
 	}
-	if endMe
+	if endMe || (confirmState == 3 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)))
 	{
 		if confirmState == 3 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1))
 		{

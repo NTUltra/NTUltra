@@ -45,6 +45,7 @@ function scrLoadData() {
 	{
 		useSeed = true;
 		seed = seedModeSeed;
+		gunGameSeed = seed;
 		seedText = seedModeSeedText;
 	}
 	var racedir=1;

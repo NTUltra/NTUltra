@@ -49,7 +49,11 @@ function scrEndOfRun(){
 		canPickFrogCrown = true;
 		hasTakenCrownOfLife = false;
 		if !scrIsGamemode(38)
+		{
 			useSeed = false;
+		}
+		nextGunGameWep = 0;
+		nextGunGameWepB = 0;
 		canSpawnInversionShards = false;
 		collectedInversionShards = 0;
 		collectedInversionShardReward = false;

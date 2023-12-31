@@ -16,7 +16,12 @@ function scrSpawnEndLevelPortal(){
 		if (!instance_exists(becomenemy) and 
 		!instance_exists(Menu) and !instance_exists(RadMaggotChest) and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(UltraIcon))
 		{
-			if !instance_exists(Portal)
+			var portalExists = false;
+			with Portal {
+				if type != 3 && !inverted
+					portalExists = true;
+			}
+			if !portalExists
 			{
 			    if !instance_exists(CrownPickup) && instance_exists(Floor)
 			    {

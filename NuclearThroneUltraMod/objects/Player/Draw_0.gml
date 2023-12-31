@@ -44,7 +44,7 @@ if alienIntestines > 0
 	else if alienIntestines > 80
 	{
 		draw_sprite_ext(sprAlienIntestines2,wave,x,y,abs(right),image_yscale,alienIntestines*alienDir,c_white,1);
-	}else if alienIntestines > 30
+	}else if alienIntestines > 25
 	{
 		draw_sprite_ext(sprAlienIntestines1,wave,x,y,abs(right),image_yscale,alienIntestines*alienDir,c_white,1);
 	}

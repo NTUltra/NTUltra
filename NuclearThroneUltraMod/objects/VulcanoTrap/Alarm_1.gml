@@ -11,7 +11,7 @@ if fire > 0
 		}
 	else
 		fireSpeed = 0;
-	fireSpeed = min(fireSpeed + 0.25, 7);
+	fireSpeed = min(fireSpeed + 0.25, 6.5);
 }
 else
 {

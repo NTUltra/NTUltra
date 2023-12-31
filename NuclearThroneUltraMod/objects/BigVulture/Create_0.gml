@@ -68,3 +68,4 @@ if !scrIsGamemode(25)
 	existTime = 40;
 
 scrAddDrops(2);
+

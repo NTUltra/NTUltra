@@ -9,7 +9,6 @@ function scrIsInInvertedArea(){
 		|| area  == 111 || area  == 112 || area  == 118 || area == 120 || area == 121 || area == 122
 		|| area == 123 || area == 124 || area == 125 || area == 127 || area == 129 || area == 131
 		{
-			Player.isInInverted = true;
 			return true;
 		}
 	}

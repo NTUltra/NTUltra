@@ -622,7 +622,15 @@ function scrFire2(hasTailNow) {
 	case 216:
 
 	snd_play_fire(sndGrenadeShotgun)
-
+	with instance_create(x,y,SmallShotgunGrenadeBurst)
+	{
+		creator = other.id
+		ammo = 2
+		time = 1
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+	/*
 	repeat(5)
 	{
 	with instance_create(x,y,SmallGrenade)
@@ -631,11 +639,11 @@ function scrFire2(hasTailNow) {
 	team = other.team
 	alarm[0] = 14//shorter fuse original 40 regular naddes 60
 	}
-	}
+	}*/
 
-	BackCont.viewx2 += lengthdir_x(13,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(13,aimDirection+180)*UberCont.opt_shake
-	BackCont.shake += 11
+	BackCont.viewx2 += lengthdir_x(3,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(3,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3
 	wkick = 7
 
 	break;
@@ -645,7 +653,16 @@ function scrFire2(hasTailNow) {
 	case 217:
 
 	snd_play_fire(sndGrenadeShotgun)
-
+	with instance_create(x,y,SmallShotgunGrenadeBurst)
+	{
+		randomAccuracy = 30;
+		creator = other.id
+		ammo = 2
+		time = 1
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+	/*
 	repeat(4)
 	{
 	with instance_create(x,y,SmallGrenade)
@@ -654,12 +671,12 @@ function scrFire2(hasTailNow) {
 	team = other.team
 	alarm[0] = 14//shorter fuse original 40 regular naddes 60
 	}
-	}
+	}*/
 
-	BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
-	BackCont.shake += 10
-	wkick = 7
+	BackCont.viewx2 += lengthdir_x(2,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(2,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 2
+	wkick = 6
 
 	break;
 
@@ -7814,7 +7831,7 @@ function scrFire2(hasTailNow) {
 	{
 		totalAccuracy = 18;
 		creator = other.id
-		ammo = 2
+		ammo = 4
 		time = 1
 		team = other.team
 		event_perform(ev_alarm,0) 
@@ -9014,7 +9031,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 	{
-	dmg = 27
+	dmg = 28
 	sprite_index=sprVeryHeavySlash;
 	longarms = 0
 	
@@ -9024,7 +9041,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),EnergyHammerSlash)
 	{
-	dmg = 23
+	dmg = 24
 	sprite_index=sprVeryHeavySlash;
 	longarms = 0
 	
@@ -9034,7 +9051,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-50*Player.accuracy),EnergyHammerSlash)
 	{
-	dmg = 23
+	dmg = 24
 	sprite_index=sprVeryHeavySlash;
 	longarms = 0
 	
@@ -11674,7 +11691,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),SpikeSlash)
 	{
-	dmg = 25
+	dmg = 20
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -11683,7 +11700,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),SpikeSlash)
 	{
-	dmg = 22
+	dmg = 16
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -11692,7 +11709,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-50*Player.accuracy),SpikeSlash)
 	{
-	dmg = 22
+	dmg = 16
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -13655,7 +13672,7 @@ function scrFire2(hasTailNow) {
 	if altFire
 	{
 		with instance_create(x,y,Shell)
-		motion_add(aimDirection+other.right*100+random(60)-30,2+random(2))
+		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 	}
 	altFire = !altFire;
 	with instance_create(x,y,MicroBullet)
@@ -13663,6 +13680,8 @@ function scrFire2(hasTailNow) {
 	direction = aimDirection+(random(30)-15)*other.accuracy;
 	image_angle = direction;
 	team = other.team
+	scrGiveProjectileStats();
+	event_perform(ev_alarm,0);
 	}
 
 	BackCont.viewx2 += lengthdir_x(4,aimDirection+180)*UberCont.opt_shake
@@ -13684,6 +13703,8 @@ function scrFire2(hasTailNow) {
 			direction = aimDirection+(random(44)-22)*other.accuracy;
 			image_angle = direction;
 			team = other.team
+			scrGiveProjectileStats();
+			event_perform(ev_alarm,0);
 		}
 	}
 
@@ -13805,9 +13826,11 @@ function scrFire2(hasTailNow) {
 	snd_play(sndMicroLauncher,0.03,true);
 	with instance_create(x,y,MicroNade)
 	{
-	direction = aimDirection+(random(6)-3)*other.accuracy;
-	image_angle = direction;
-	team = other.team
+		direction = aimDirection+(random(6)-3)*other.accuracy;
+		image_angle = direction;
+		team = other.team
+		scrGiveProjectileStats();
+		event_perform(ev_alarm,0);
 	}
 
 	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
@@ -14363,9 +14386,11 @@ function scrFire2(hasTailNow) {
 	altFire = !altFire;
 	with instance_create(x,y,UltraMicroBullet)
 	{
-	direction = aimDirection+(random(24)-12)*other.accuracy;
-	image_angle = direction;
-	team = other.team
+		direction = aimDirection+(random(24)-12)*other.accuracy;
+		image_angle = direction;
+		team = other.team
+		scrGiveProjectileStats();
+		event_perform(ev_alarm,0);
 	}
 
 	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
@@ -14482,6 +14507,110 @@ function scrFire2(hasTailNow) {
 	BackCont.viewy2 += lengthdir_y(40,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 4
 	wkick = 4
+
+	break;
+	
+	//FROST SHOTGUN
+	case 695:
+
+	snd_play_fire(sndShotgun)
+	with instance_create(x,y,FrostShotgunBurst)
+	{
+		creator = other.id
+		ammo = 2
+		time = 2
+		team = other.team
+		event_perform(ev_alarm,0)
+	}
+	BackCont.viewx2 += lengthdir_x(2,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(2,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 2
+	wkick = 7
+
+	break;
+	
+	//DOUBLE FROST SHOTGUN
+	case 696:
+
+	snd_play_fire(sndDoubleShotgun)
+	with instance_create(x,y,FrostShotgunBurst)
+	{
+		creator = other.id
+		ammo = 4
+		time = 2
+		team = other.team
+		event_perform(ev_alarm,0)
+	}
+	BackCont.viewx2 += lengthdir_x(2,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(2,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 2
+	wkick = 7
+
+	break;
+	
+	//FROST SHOTGUNNNER
+	case 697:
+
+	snd_play_fire(sndDoubleShotgun)
+	with instance_create(x,y,FrostShotgunBurst)
+	{
+		creator = other.id
+		projectileSpeed -= 2;
+		ammo = 5
+		time = 2
+		team = other.team
+		event_perform(ev_alarm,0)
+	}
+	BackCont.viewx2 += lengthdir_x(1,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(1,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 1
+	wkick = 5
+
+	break;
+	
+	//SPLINTER MACHINEGUN
+	case 698:
+	snd_play_fire(sndSplinterGun)
+	with instance_create(x,y,SplinterBurst)
+	{
+		totalAccuracy = 8;
+		creator = other.id
+		ammo = 2
+		time = 3
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+
+	BackCont.viewx2 += lengthdir_x(15,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(15,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3
+	wkick -= 3
+
+	break;
+	
+	//HAPPY BOOM STICK
+	case 699:
+
+	snd_play_fire(sndDiscHit);
+	snd_play_fire(sndHeavyNader);
+	altFire = !altFire;
+	if altFire
+	{
+		wep_type[699] = 3;
+	}
+	else
+	{
+		wep_type[699] = 4;
+	}
+	with instance_create(x,y,BoomStick)
+	{motion_add(aimDirection+(random(10)-5)*other.accuracy,17);
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(25,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(25,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 14
+	wkick = 7
 
 	break;
 	

@@ -772,7 +772,7 @@ function scrWeapons() {
 	wep_load[69] = 7
 	wep_cost[69] = 1
 	wep_sprt[69] = sprOopsGun
-	wep_area[69] = -1
+	wep_area[69] = -2
 	wep_text[69] = "suicidal"
 	wep_swap[69] = sndSwapPistol
 	wep_rad[69] = 0;
@@ -1624,7 +1624,7 @@ function scrWeapons() {
 	wep_swap[146] = sndSwapFlame
 	wep_rad[146] = 0;
 
-	wep_name[147] = "FROST SHOTGUN"
+	wep_name[147] = "FROST BULLET SHOTGUN"
 	wep_type[147] = 1
 	wep_auto[147] = 0
 	wep_load[147] = 22
@@ -2125,7 +2125,7 @@ function scrWeapons() {
 	wep_load[192] = 20
 	wep_cost[192] = 1
 	wep_sprt[192] = sprTimeLauncher
-	wep_area[192] = -1
+	wep_area[192] = -2
 	wep_text[192] = "feels like it is lagging"
 	wep_swap[192] = sndSwapExplosive
 	wep_rad[192] = 0;
@@ -2317,7 +2317,7 @@ function scrWeapons() {
 	wep_swap[209] = sndSwapEnergy
 	wep_rad[209] = 0;
 
-	wep_name[210] = "BIG MISSILE LAUNCHER"
+	wep_name[210] = "SUPER MISSILE LAUNCHER"
 	wep_type[210] = 4
 	wep_auto[210] = 0
 	wep_load[210] = 50
@@ -3291,7 +3291,7 @@ function scrWeapons() {
 	wep_load[298] = 7
 	wep_cost[298] = 1
 	wep_sprt[298] = sprGoldenOopsGun
-	wep_area[298] = -1
+	wep_area[298] = -2
 	wep_text[298] = "you are not supposed to live"
 	wep_swap[298] = sndSwapPistol
 	wep_rad[298] = 0;
@@ -3434,7 +3434,7 @@ function scrWeapons() {
 	wep_load[311] = 4
 	wep_cost[311] = 1
 	wep_sprt[311] = sprPotatoCannon
-	wep_area[311] = -1
+	wep_area[311] = -2
 	wep_text[311] = "look mummy its me"
 	wep_swap[311] = sndSwapMotorized
 	wep_rad[311] = 0;
@@ -4201,7 +4201,7 @@ function scrWeapons() {
 	wep_name[379] = "BULLET WALL"
 	wep_type[379] = 1
 	wep_auto[379] = 1
-	wep_load[379] = 14
+	wep_load[379] = 12
 	wep_cost[379] = 8
 	wep_sprt[379] = sprBulletWall
 	wep_area[379] = 12
@@ -4508,8 +4508,8 @@ function scrWeapons() {
 	
 	wep_name[407] = "MORPH-O-LASER"
 	wep_type[407] = 5
-	wep_auto[407] = 0
-	wep_load[407] = 11
+	wep_auto[407] = 1
+	wep_load[407] = 10
 	wep_cost[407] = 2
 	wep_sprt[407] = sprMorphOLaser
 	wep_area[407] = 6
@@ -7673,6 +7673,61 @@ function scrWeapons() {
 	wep_text[694] = "electronic wiring"
 	wep_swap[694] = sndSwapEnergy
 	wep_rad[694] = 0;
+	
+	wep_name[695] = "FROST SHOTGUN"
+	wep_type[695] = 2
+	wep_auto[695] = 0
+	wep_load[695] = 24
+	wep_cost[695] = 2
+	wep_sprt[695] = sprFrostShotgun
+	wep_area[695] = 6
+	wep_text[695] = "breezer"
+	wep_swap[695] = sndSwapShotgun
+	wep_rad[695] = 0;
+	
+	wep_name[696] = "DOUBLE FROST SHOTGUN"
+	wep_type[696] = 2
+	wep_auto[696] = 0
+	wep_load[696] = 32
+	wep_cost[696] = 4
+	wep_sprt[696] = sprFrostShotgun
+	wep_area[696] = 8
+	wep_text[696] = "breezer"
+	wep_swap[696] = sndSwapShotgun
+	wep_rad[696] = 0;
+	
+	wep_name[697] = "FROST SHOTGUNNER"
+	wep_type[697] = 2
+	wep_auto[697] = 1
+	wep_load[697] = 10
+	wep_cost[697] = 3
+	wep_sprt[697] = sprFrostShotgun
+	wep_area[697] = 15
+	wep_text[697] = "breezer"
+	wep_swap[697] = sndSwapShotgun
+	wep_rad[697] = 0;
+	
+	wep_name[698] = "SPLINTER MACHINEGUN"
+	wep_type[698] = 3
+	wep_auto[698] = 0
+	wep_load[698] = 6
+	wep_cost[698] = 0.5
+	wep_sprt[698] = sprSplinterMachinegun
+	wep_area[698] = 3
+	wep_text[698] = "this will hurt"
+	wep_swap[698] = sndSwapBow
+	wep_rad[698] = 0;
+	
+	wep_name[699] = "HAPPY BOOM STICK"
+	wep_type[699] = 3
+	wep_auto[699] = 0
+	wep_load[699] = 36
+	wep_cost[699] = 3
+	wep_sprt[699] = sprBoomStick
+	wep_area[699] = 14
+	wep_text[699] = "Happy cannonball"
+	wep_swap[699] = sndSwapBow
+	wep_rad[699] = 0;
 
 	maxwep = array_length(wep_name)-1;
 
@@ -7687,13 +7742,13 @@ function scrWeapons() {
 		}
 	}
 	//0 = melee 1 = bullets 2 = shells 3 = bolts 4 = explosives 5 = energy
-	typ_ammo[0] = 333 typ_ammo[1] = 32 typ_ammo[2] = 8 typ_ammo[3] = 7 typ_ammo[4] = 6 typ_ammo[5] = 10
+	typ_ammo[0] = 333 typ_ammo[1] = 33 typ_ammo[2] = 8 typ_ammo[3] = 7 typ_ammo[4] = 6 typ_ammo[5] = 10
 
 	if instance_exists(Player){
 		if Player.race = 1 {
-			typ_ammo[1] = 40 typ_ammo[2] = 10 typ_ammo[3] = 9 typ_ammo[4] = 8 typ_ammo[5] = 13
+			typ_ammo[1] = 41 typ_ammo[2] = 10 typ_ammo[3] = 9 typ_ammo[4] = 8 typ_ammo[5] = 13
 			if Player.skill_got[5] {//fish's new thronebutt
-				typ_ammo[1] = 48 typ_ammo[2] = 12 typ_ammo[3] = 11 typ_ammo[4] = 10 typ_ammo[5] = 15
+				typ_ammo[1] = 49 typ_ammo[2] = 12 typ_ammo[3] = 11 typ_ammo[4] = 10 typ_ammo[5] = 15
 			}
 		}
 		typ_amax[0] = 1000 typ_amax[1] = 255+Player.skill_got[10]*300 typ_amax[2] = 55+Player.skill_got[10]*44 typ_amax[3] = 55+Player.skill_got[10]*44 typ_amax[4] = 55+Player.skill_got[10]*44 typ_amax[5] = 55+Player.skill_got[10]*44

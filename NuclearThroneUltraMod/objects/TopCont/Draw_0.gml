@@ -329,6 +329,9 @@ with Blade
 with ChunkyBlade {
 	draw_self();	
 }
+with BoomStick {
+	draw_self();	
+}
 with SplitBlade {
 	draw_self();	
 }

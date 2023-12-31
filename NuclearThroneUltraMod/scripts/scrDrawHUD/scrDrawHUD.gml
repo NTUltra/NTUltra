@@ -194,6 +194,24 @@ function scrDrawHUD() {
 				draw_set_color(c_white)
 			draw_text(vx+16,gy,string_hash_to_newline(string(txt)))
 			draw_set_color(c_white)
+			var spr = dataRef.wep_sprt[UberCont.nextGunGameWep];
+			var alpha = lerp(0.1,1,clamp(dataRef.gunGameKill*0.2,0,1));
+			var gx = vx + 4;
+			gy -= 22;
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,24,28,gx+1,gy+1,c_white,1);
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,24,28,gx+1,gy-1,c_white,1);
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,24,28,gx-1,gy-1,c_white,1);
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,24,28,gx-1,gy+1,c_white,1);
+			draw_sprite_part_smart(spr,0,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,24,28,gx,gy,c_white,1);
+			
+			var spr = dataRef.wep_sprt[UberCont.nextGunGameWepB];
+			gx += 28;
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,24,28,gx+1,gy+1,c_white,1);
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,24,28,gx+1,gy-1,c_white,1);
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,24,28,gx-1,gy-1,c_white,1);
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,24,28,gx-1,gy+1,c_white,1);
+			draw_sprite_part_smart(spr,0,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,24,28,gx,gy,c_white,1);
+			
 		}
 	}
 	if holdExplainGamemode > 0 
@@ -1210,7 +1228,7 @@ function scrDrawHUD() {
 	
 	draw_set_halign(fa_center)
 
-	if instance_exists(Player)
+	if instance_exists(Player) && !instance_exists(GenCont) && !instance_exists(LevCont)
 	{
 		if instance_exists(Player.targetPickup) && Player.targetPickup != noone && Player.targetPickup.alarm[1] < 1
 		{

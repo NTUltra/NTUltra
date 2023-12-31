@@ -292,33 +292,15 @@ function scrEnemyDeathEvent(){
 		}
 	    if scrIsGamemode(11)//GUN GAME
 	    {
-	        with Player
-	        {
+			with Player
+			{
 				gunGameKill --;
 				if gunGameKill <= 0
 				{
-					if loops > 0
-						gunGameKill = 20;
-					else
-						gunGameKill = 10;
-					if wep != 0
-						do	{
-				        wep=irandom(maxwep);
-				        }until(wep!=69&&wep!=0&& wep!=298&&wep_area[wep] > -2)//no oops gun or no wep or golden oops
-                
-				        if bwep != 0
-				        {
-				            do{
-				            bwep=irandom(maxwep);
-				            }until(bwep!=69&&bwep!=0&&wep!=298&&wep_area[bwep] > -2)//no oops gun
-				        }
-                
-				        if ammo[wep_type[wep]] < typ_ammo[wep_type[wep]]*3
-				        {ammo[wep_type[wep]]+=typ_ammo[wep_type[wep]]*3;}
-						wep_rad[wep] = 0;
-				    scrWeaponHold();
+					scrRollGunGame();
 				}
-	        }
+			}
+			
 	    }
 		if instance_exists(Player)
 		{

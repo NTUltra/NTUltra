@@ -15,7 +15,7 @@ if target != noone {
             if random(5) < 4 && ammo > 0 {
                 gunangle = point_direction(xprevious, yprevious, target.xprevious, target.yprevious)
 				if ammo == 0
-					alarm[2] += 6;
+					alarm[2] += 7;
 				gonnashoot += 6;
 				with JungleBandit
 				{
@@ -24,7 +24,7 @@ if target != noone {
 				if gonnashoot > ammo
 					gonnashoot = ammo;
 				
-				direction = point_direction(x, y, target.x, target.y) + random(30) - 195
+				direction = point_direction(x, y, target.x, target.y) + random(30) - 15
 	            speed = 0.6
 	            walk = 10 + random(10)
             } else {

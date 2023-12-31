@@ -11,6 +11,7 @@ y + lengthdir_y(8,dir),OExplosion)
 	image_speed += 0.1;
 	cost = 0.5;
 	radCost = 0.5;
+	scrCopyWeaponMod(other);
 }
 snd_play(sndExplosionS,0.3,true,true);
 BackCont.shake += 1;

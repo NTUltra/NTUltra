@@ -52,7 +52,7 @@ else if image_xscale > 0.22 && alarm[11] < 1
 				if my_health < maxhealth && !outOfCombat
 				{
 					var n = instance_nearest(x,y,enemy)
-					if n != noone && point_distance(x,y,n.x,n.y) < 300 && (!instance_exists(Wall) || !collision_line(x,y,n.x,n.y,Wall,false,false))
+					if n != noone && n.team != 2 && n.object_index != IDPDVan && n.object_index != IDPDVanVertical && point_distance(x,y,n.x,n.y) < 300 && (!instance_exists(Wall) || !collision_line(x,y,n.x,n.y,Wall,false,false))
 					{
 						toxicConsume ++;
 						if toxicConsume > 80

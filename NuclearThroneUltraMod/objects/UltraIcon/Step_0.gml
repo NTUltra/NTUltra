@@ -607,10 +607,9 @@ if (selected &&
 	else if skill==62
 	{
 		//ARMOUR UP viking
-	
 		with Player {
 			//No health mutations
-			if race == 16 && (unlockAlternativeUltras || (race == 16 &&!skill_got[7] && !skill_got[36] && !skill_got[32] && !skill_got[31]))
+			if race == 16 && (unlockAlternativeUltras || (!skill_got[7] && !skill_got[36] && !skill_got[32] && !skill_got[31]))
 			{
 				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 				altUltra = true;
@@ -627,10 +626,10 @@ if (selected &&
 			}
 			else
 			{
-				if maxarmour < 1//skelly business hog
+				if gotMinimumArmour
 				{
-					armour=0;
-					maxarmour=0;
+					armour -= 1;
+					maxarmour -= 1;
 				}
 				maxarmour = max(maxarmour + 2, 2);
 				armour = clamp(armour + 2, 2, maxarmour);
@@ -855,7 +854,6 @@ if (selected &&
 	    ultimategamble=2;
 		with Player
 		{
-			altUltra = true;
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			ultra_name[76] = "THE ULTIMATE GAMBLE"
 		    ultra_text[76] = "50% CHANCE TO DIE OR TO GET#TWO RANDOM ULTRA MUTATIONS#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"

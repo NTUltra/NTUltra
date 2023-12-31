@@ -1,10 +1,7 @@
 raddrop = 9
-maxhealth = 6
-meleedamage = 2
+maxhealth = 9
+meleedamage = 3
 mySize = 1
-
-if UberCont.loops>1
-maxhealth=11;
 
 event_inherited()
 

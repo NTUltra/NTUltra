@@ -24,8 +24,8 @@ function scrAlienIntestines(){
 		var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 		BackCont.shake += alienIntestines*0.2;
 		var i = 0;
-		var tentacleLength = lerp(3,18,min(1,other.alienIntestines/220));
-		repeat(lerp(1,12,min(1,alienIntestines / 200)))
+		var tentacleLength = lerp(3,17,min(1,other.alienIntestines/220));
+		repeat(lerp(1,10,min(1,alienIntestines / 140)))
 		{
 			with instance_create(x,y,Tentacle)
 			{

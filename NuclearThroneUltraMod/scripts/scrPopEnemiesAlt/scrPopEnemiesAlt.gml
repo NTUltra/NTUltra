@@ -1231,33 +1231,33 @@ function scrPopEnemiesAlt() {
 		if loops > 0
 		{
 		    var r = random(10);
-			if r > 6
+			if r > 7
 			{
-				instance_create(x + 16, y + 16, choose(CursedCrystal,CursedSpider,InvertedGator,InvertedSnowTank))
+				instance_create(x + 16, y + 16, choose(CursedCrystal,CursedSpider,InvertedGator,InvertedDiscGuy,Maggot,MaggotInverted))
 			}
-			if r > 3
+			if r > 4
 			{
-				instance_create(x + 16, y + 16, choose(CursedBigBot,CursedCrystal,InvertedSnowTank))
+				instance_create(x + 16, y + 16, choose(CursedBigBot,CursedCrystal,InvertedDiscGuy,Maggot,MaggotInverted))
 			}
-		    else
+		    else if r  > 1 || !instance_exists(enemy)
 			{
-		        instance_create(x + 16, y + 16, choose(CursedSpider,CursedOctaBot,CursedOctaBot,CursedOctaBot,CursedSpider,CursedSpider,InvertedGator,InvertedBanditSquare,InvertedBanditSquare))
+		        instance_create(x + 16, y + 16, choose(CursedSpider,CursedOctaBot,CursedOctaBot,CursedOctaBot,CursedSpider,CursedSpider,InvertedGator,InvertedBanditSquare,InvertedBanditSquare,Maggot,MaggotInverted))
 			}
 		}
 		else
 		{
 			var r = random(10);
-			if r > 6
+			if r > 7
 			{
-				instance_create(x + 16, y + 16, choose(CursedCrystal,CursedSpider))
+				instance_create(x + 16, y + 16, choose(CursedCrystal,CursedSpider,Maggot,MaggotInverted))
 			}
-			if r > 3
+			if r > 4
 			{
-				instance_create(x + 16, y + 16, choose(CursedBigBot,CursedCrystal))
+				instance_create(x + 16, y + 16, choose(CursedBigBot,CursedCrystal,Maggot,MaggotInverted))
 			}
-		    else
+		    else if r  > 1 || !instance_exists(enemy)
 			{
-		        instance_create(x + 16, y + 16, choose(CursedSpider,CursedOctaBot,CursedOctaBot,CursedOctaBot,CursedSpider,CursedSpider))
+		        instance_create(x + 16, y + 16, choose(CursedSpider,CursedOctaBot,CursedOctaBot,CursedOctaBot,CursedSpider,CursedSpider,Maggot,MaggotInverted))
 			}
 		}
     }

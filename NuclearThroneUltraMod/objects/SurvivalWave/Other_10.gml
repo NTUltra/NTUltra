@@ -223,7 +223,7 @@ switch (waveNumber)
 		scrApplyHandsInversion();
 		if instance_exists(TopCont)
 			TopCont.darkness = 0;
-		song = mus101;
+		song = mus5b;
 		Player.area = 107;
 		with Floor
 		{
@@ -1568,6 +1568,11 @@ repeat(1+loops)
 		#endregion
 		#region wave 7 vulcano
 		case 7:
+			wave[i] = {
+				obj: Thief,
+				time: 15,
+			};
+			i++;
 			repeat(7)
 			{
 				wave[i] = {
@@ -1646,6 +1651,20 @@ repeat(1+loops)
 			wave[i] = {
 				obj: FireWorm,
 				time: 40,
+			};
+			i++;
+			wave[i] = {
+				obj: Wall,
+				time: 1,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			wave[i] = {
+				obj: VulcanoTrap,
+				time: 1,
+				xx: centerX,
+				yy: centerY,
 			};
 			i++;
 			wave[i] = {
@@ -2399,12 +2418,12 @@ repeat(1+loops)
 					obj: InvertedGoldScorpion,
 					xx: centerX,
 					yy: centerY,
-					time: 90,
+					time: 60,
 				};
 			i++;
 			wave[i] = {
 					obj: BanditInverted,
-					time: 60,
+					time: 30,
 				};
 			i++;
 			wave[i] = {
@@ -2811,7 +2830,29 @@ repeat(1+loops)
 			}
 			wave[i] = {
 				obj: GraveyardSniper,
-				time: 60,
+				time: 90,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			wave[i] = {
+				obj: BecomeGraveyardFish,
+				time: 5,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			repeat(4)
+			{
+				wave[i] = {
+					obj: Gravestone,
+					time: 5,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: Gravestone,
+				time: 30,
 				xx: centerX,
 				yy: centerY,
 			};
@@ -3593,7 +3634,7 @@ repeat(1+loops)
 			i++;
 			wave[i] = {
 				obj: GiantGoldenWeaponChest,
-				time: 120,
+				time: 110,
 				xx: centerX,
 				yy: centerY+64,
 			};
@@ -3601,29 +3642,6 @@ repeat(1+loops)
 			wave[i] = {
 				obj: BigDisc,
 				time: 60,
-				xx: centerX,
-				yy: centerY,
-			};
-			i++;
-			repeat(4)
-			{
-				wave[i] = {
-				obj: Molesarge,
-				time: 2,
-				};
-				i++;
-			}
-			repeat(8)
-			{
-				wave[i] = {
-				obj: Molefish,
-				time: 2,
-				};
-				i++;
-			}
-			wave[i] = {
-				obj: Jock,
-				time: 20,
 				xx: centerX,
 				yy: centerY,
 			};
@@ -3662,6 +3680,37 @@ repeat(1+loops)
 				yy: centerY,
 			};
 			i++;
+			repeat(8)
+			{
+				wave[i] = {
+				obj: Molesarge,
+				time: 2,
+				};
+				i++;
+			}
+			repeat(8)
+			{
+				wave[i] = {
+				obj: Molefish,
+				time: 2,
+				};
+				i++;
+			}
+			wave[i] = {
+				obj: Jock,
+				time: 90,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			wave[i] = {
+				obj: YVThiefStopper,
+				time: 20,
+				xx: centerX,
+				yy: centerY,
+			};
+			i++;
+			
 		break;
 		#endregion
 		
@@ -3707,7 +3756,7 @@ repeat(1+loops)
 				yy: centerY+width+8,
 				canSpawnInWall: true,
 			};
-			i++;
+		i++;
 		wave[i] = {
 				obj: InvertedGoldNecromancer,
 				time: 1,

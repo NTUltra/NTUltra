@@ -1,5 +1,5 @@
 /// @description WepPickup
-if instance_exists(WepPickup) || instance_exists(ThrowWep) && !instance_exists(GenCont) && !instance_exists(LevCont)  && !instance_exists(SpiralCont){
+if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists(GenCont) && !instance_exists(LevCont)  && !instance_exists(SpiralCont){
 
 	targetPickup = instance_nearest(x,y,WepPickup);
 	var prange = 36;
@@ -145,7 +145,7 @@ if instance_exists(WepPickup) || instance_exists(ThrowWep) && !instance_exists(G
 		if KeyCont.key_pick[p] = 1 && targetPickup.visible == true
 		{
 			KeyCont.key_pick[p] = 2;
-			if curse = 0 || targetPickup.curse == curse or bwep = 0 || (cwep = 0 && ultra_got[31])
+			if curse = 0 || targetPickup.curse == curse or bwep == 0 || (cwep == 0 && ultra_got[31])
 			{
 				if ultra_got[68] && !altUltra//Weapon smith scrapfinder
 				{
@@ -202,7 +202,7 @@ if instance_exists(WepPickup) || instance_exists(ThrowWep) && !instance_exists(G
 			}
 
 			snd_play(sndWeaponPickup)
-			if bwep = 0
+			if bwep == 0
 			{
 				bcurse = curse
 				isPermanentB = isPermanent;
@@ -217,7 +217,7 @@ if instance_exists(WepPickup) || instance_exists(ThrowWep) && !instance_exists(G
 				bwepmod3 = wepmod3;
 				bwepmod4 = wepmod4;
 			}
-			else if cwep = 0 && ultra_got[31]//robot ultra third wep
+			else if cwep == 0 && ultra_got[31]//robot ultra third wep
 			{
 				ccurse = curse
 				isPermanentC = isPermanent;
@@ -335,6 +335,7 @@ else
 var tookHit = false;
 if my_health < prevhealth
 {
+	tookDamageThisArea = true;
 	tookHit = true;
 	//Insakill
 	if !exception && alarm[3] < 1
@@ -491,7 +492,7 @@ if armour > 0
 	{
 		armour -= 1;
 		snd_play(sndLostArmour);
-		//alarm[3]=max(alarm[3],5);//before your armour lowers again}
+		alarm[3]=max(alarm[3],1);//before your armour lowers again}
 		if skill_got[28] == 1
 		{
 			//rage = 0;

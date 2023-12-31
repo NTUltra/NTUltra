@@ -4,4 +4,6 @@
 event_inherited();
 
 snd_play(sndExplosionS);
-instance_create(x,y,SmallExplosion);
+with instance_create(x,y,SmallExplosion) {
+	scrCopyWeaponMod(other);	
+}

@@ -8,7 +8,7 @@ while (x < s)
 	while (y < s)
 	{
 		if place_meeting(x,y,EnemySpawnMask) {
-			instance_create(x,y,BoneFish);
+			instance_create(x+16,y+16,BoneFish);
 		}
 		y += 32;
 	}

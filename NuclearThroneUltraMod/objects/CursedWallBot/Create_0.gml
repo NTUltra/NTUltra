@@ -9,6 +9,7 @@ acc += 0.2;
 actTime -= 5;
 projectileSpeed += 0.5;
 alarm[1] = 135;
+alarm[1] += irandom_range(-2,2);
 EnemyHealthAdjustments();
 spr_idle = sprCursedWallBotIdle;
 spr_walk = sprCursedWallBotWalk;
