@@ -174,7 +174,7 @@ function scrPowers() {
 			var confspr = sprEnemyConfusion;
 			if ultra_got[104] && !altUltra
 			{
-				duration += 12;
+				duration += 10;
 				confspr = sprEnemyUltraConfusion;
 			}
 			

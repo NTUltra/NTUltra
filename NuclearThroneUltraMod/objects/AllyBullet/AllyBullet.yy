@@ -4,9 +4,7 @@
   "name": "AllyBullet",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"hitme","path":"objects/hitme/hitme.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"Wall","path":"objects/Wall/Wall.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":11,"eventType":2,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":25,"eventType":7,"isDnD":false,},
@@ -18,8 +16,8 @@
     "path": "folders/Objects/Projectiles.yy",
   },
   "parentObjectId": {
-    "name": "projectile",
-    "path": "objects/projectile/projectile.yy",
+    "name": "Bullet1",
+    "path": "objects/Bullet1/Bullet1.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -41,8 +39,8 @@
     "path": "sprites/sprAllyBullet/sprAllyBullet.yy",
   },
   "spriteMaskId": {
-    "name": "mskEnemyBullet1",
-    "path": "sprites/mskEnemyBullet1/mskEnemyBullet1.yy",
+    "name": "mskAllyBullet",
+    "path": "sprites/mskAllyBullet/mskAllyBullet.yy",
   },
   "visible": true,
 }

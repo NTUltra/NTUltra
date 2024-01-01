@@ -27,13 +27,13 @@ if instance_exists(Player)
 	if Player.race == 26//HUMPHRY
 	{
 		humphryDelay = 8;
-		humphryAmount = 0.95;
+		humphryAmount = 0.94;
 		humphryConstantAmount = 1;
 		if Player.loops > 0
 			humphryDelay --;
 		if Player.skill_got[5]
 		{
-			humphryAmount = 0.96;
+			humphryAmount = 0.95;
 			humphryConstantAmount = 0;
 			humphryDelay += 2;
 		}

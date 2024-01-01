@@ -187,5 +187,10 @@ if random(40)<1 && !collision_point(x,y,Wall,false,false)
     scrDrop(90,1);
 }
 
-/* */
-/*  */
+if alarm[4] < 1
+{
+	if hspeed > 0
+		right = 1
+	else if hspeed < 0
+		right = -1
+}

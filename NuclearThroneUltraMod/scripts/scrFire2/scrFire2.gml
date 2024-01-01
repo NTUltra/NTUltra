@@ -14243,7 +14243,6 @@ function scrFire2(hasTailNow) {
 	case 686:
 
 	snd_play_fire(sndLaserCannonCharge)
-
 	with instance_create(x,y,LaserOrber)
 	{
 		creator = other.id
@@ -14576,7 +14575,7 @@ function scrFire2(hasTailNow) {
 		totalAccuracy = 8;
 		creator = other.id
 		ammo = 2
-		time = 3
+		time = 4
 		team = other.team
 		event_perform(ev_alarm,0) 
 	}
@@ -14612,6 +14611,34 @@ function scrFire2(hasTailNow) {
 	BackCont.shake += 14
 	wkick = 7
 
+	break;
+	
+	//BOMB LOBBER
+	case 700:
+	snd_play_fire(sndChickenThrow)
+	snd_play_fire(sndClusterLauncher)
+
+	with instance_create(x,y,LobGrenade)
+	{
+		accuracy = other.accuracy;
+	sticky = 0
+	motion_add(aimDirection+(random(6)-3)*other.accuracy,8)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,LobGrenade)
+	{
+		accuracy = other.accuracy;
+		alarm[2] -= 2;
+	sticky = 0
+	motion_add(aimDirection+(random(12)-6)*other.accuracy,6.25)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wepangle = -wepangle
+	wkick = -5
 	break;
 	
 	}//end of switch part 2!

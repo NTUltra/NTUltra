@@ -1,13 +1,14 @@
 /// @description Show crown name desc
 if UberCont.opt_hud_des == 0
 	exit;
-if (UberCont.isPaused == 0 && UberCont.mouse__x < x+16 and UberCont.mouse__y < y+16 and UberCont.mouse__x > x-16 and UberCont.mouse__y > y-16)
+var s = 14;
+if (UberCont.isPaused == 0 && UberCont.mouse__x < x+s and UberCont.mouse__y < y+s and UberCont.mouse__x > x-s and UberCont.mouse__y > y-s)
 {//name
 	if UberCont.normalGameSpeed == 60
 		hoverTime += 0.5;
 	else
 		hoverTime += 1;
-	if hoverTime > 20
+	if hoverTime > 25
 	{
 		draw_set_color(c_black);
 		draw_text(x,y-15,crown_name[crown]);

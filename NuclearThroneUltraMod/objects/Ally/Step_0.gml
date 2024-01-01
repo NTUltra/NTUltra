@@ -9,7 +9,7 @@ wkick -= 1
 if wkick < 0
 wkick += 1
 //}
-
+scrWalkAwayFromNade();
 
 //ANIMATE ME PLZ
 //optimise if variable_local_exists("spr_chrg") = 1

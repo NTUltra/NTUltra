@@ -2,35 +2,38 @@
 // /@description
 ///@param
 function scrGiveProjectileStats(){
-	Mod1=other.wepmod1;
-	Mod2=other.wepmod2;
-	Mod3=other.wepmod3;
-	Mod4=other.wepmod4;
+	if !instance_exists(Player)
+		return;
+	
+	Mod1=Player.wepmod1;
+	Mod2=Player.wepmod2;
+	Mod3=Player.wepmod3;
+	Mod4=Player.wepmod4;
 	if wepFire == 0
-		wepFire = other.wep;
+		wepFire = Player.wep;
 	if !hadSpeedApplied && canBeMoved//speed > 0
 	{
-		speed *= other.pSpeedBoost;
+		speed *= Player.pSpeedBoost;
 		hadSpeedApplied = true;
 		var speedBoost = 1.11;
 		var spda = 2;
 		var speedAdd = 0;
-		if other.poppop
+		if Player.poppop
 		{
 			speed *= 1.15;
 			speed += 1.25;
 		}
-		if other.skill_got[30] == 1
+		if Player.skill_got[30] == 1
 		{
 			speedBoost = 1.15;
 			spda = 3;
 		}
-		if other.ultra_got[65]
+		if Player.ultra_got[65]
 		{
 			speedBoost += 0.1;
 			spda += 1.8;
 		}
-		if other.race == 11
+		if Player.race == 11
 		{
 			speed *= 1.1;
 			speedAdd += 1.5;

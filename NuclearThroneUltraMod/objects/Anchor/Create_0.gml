@@ -1,4 +1,4 @@
-maxhealth = 50
+maxhealth = 30
 my_health = maxhealth;
 mySize = 3
 

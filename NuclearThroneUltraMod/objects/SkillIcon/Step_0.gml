@@ -235,7 +235,7 @@ if selected
 			{
 				if scrIsCrown(14) {
 					snd_play(sndHealthPickup);
-					scrHeal(1);	
+					scrHeal(1,true);	
 				}
 				snd_play_2d(sndUncurse);
 				repeat(10)

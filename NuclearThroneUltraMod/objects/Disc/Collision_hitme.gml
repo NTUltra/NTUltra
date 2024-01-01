@@ -8,7 +8,7 @@ if other.team != team
 			my_health -= other.dmg;
 			if team != 2
 			{
-				my_health -= 4;
+				my_health -= other.dmg;
 			}
 			sprite_index = spr_hurt
 			image_index = 0

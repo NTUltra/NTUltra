@@ -519,7 +519,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_tips[71] = "no one can hurt me"
     
 	    ultra_name[72] = "ASCENT"
-	    ultra_text[72] = "YOU CAN FLY OVER <w>WALLS<w> FOREVER#BIGGER <pi>DEFLECT<pi> AREA"
+	    ultra_text[72] = "YOU CAN FLY OVER <w>WALLS<w> FOREVER#BIGGER <pi>DEFLECT<pi> AREA##PICKING UP <p>CURSED<p> WEAPONS#<w>UNCURSES<w> THEM"
 	    ultra_tips[72] = "all you need is air"
 		
 		//Have less than default max hp
@@ -735,7 +735,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 
 	    //GOOD O'L HUMPHRY 
 	    ultra_name[101] = "EXPERIENCED"
-	    ultra_text[101] = "GAIN <w>TWO SKILL<w> INSTEAD OF ONE#PER HIT SHOT"
+	    ultra_text[101] = "GAIN DOUBLE <w>SKILL<w> WHEN YOU DEAL DAMAGE"
 	    ultra_tips[101] = "learning quickly"
         
 	    ultra_name[102] = "RAPID MUSTACHE GROWTH"
@@ -747,7 +747,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_tips[103] = "strong skillet"
         
 		ultra_name[104] = "DISCIPLINE"
-	    ultra_text[104] = "ACTIVE CAN <w>SHRINK<w>#ALL ENEMY PROJECTILES#INTO <p>NOTHINGNESS<p>#ACTIVE <w>STUNS<w> ENEMIES FOR LONGER"
+	    ultra_text[104] = "ACTIVE CAN <w>SHRINK<w>#ALL ENEMY PROJECTILES#INTO <p>NOTHINGNESS<p>#DOUBLE <w>STUN<w> DURATION"
 	    ultra_tips[104] = "discipline those projectiles!"
 		
 		//Have any director weapon

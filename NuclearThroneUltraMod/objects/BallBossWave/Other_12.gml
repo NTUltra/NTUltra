@@ -10,6 +10,10 @@ scrActivateAllOutOfRange();
 if instance_exists(TopCont)
 	TopCont.darkness = 0;
 song = musConfrontingMyself;
+with enemy
+{
+	instance_destroy(id,false);	
+}
 with Floor
 {
 	if !isArenaFloor
@@ -19,13 +23,18 @@ with Floor
 		instance_create(x,y,Wall);
 		instance_create(x,y+16,Wall);
 		instance_create(x+16,y,Wall);*/
-		with instance_place(x,y,prop)
-		{
-			instance_deactivate_object(id);
-			with UberCont {
-				ds_list_add(keepDeactive,other.id);
+		var props = ds_list_create();
+		var al = instance_place_list(x,y,Wall,props,false)
+		for (var i = 0; i < al; i++) {
+			with props[| i] {
+				instance_deactivate_object(id);
+				with UberCont {
+					ds_list_add(keepDeactive,other.id);
+				}
 			}
 		}
+		ds_list_destroy(props);
+		instance_deactivate_object(id);
 		with UberCont {
 			ds_list_add(keepDeactive,other.id);
 		}
@@ -39,6 +48,13 @@ with CrownPed
 	}
 }
 with CrownVaultExit 
+{
+	instance_deactivate_object(id);
+	with UberCont {
+		ds_list_add(keepDeactive,other.id);	
+	}
+}
+with RerollStation 
 {
 	instance_deactivate_object(id);
 	with UberCont {

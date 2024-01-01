@@ -60,7 +60,7 @@ function suck() {
 		}
 	}
 
-	var dir = point_direction(x,y,target.xprevious,target.yprevious)
+	var dir = point_direction(x,y,target.x,target.y)
 	BackCont.shake += 0.5
 	speed=0;
 	if inverted

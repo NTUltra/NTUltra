@@ -22,7 +22,7 @@ if overlap != noone
 			y+=2;
 		with overlap
 		{
-			if !place_meeting(x,y-2,Wall)
+			if canBeMoved && !place_meeting(x,y-2,Wall)
 				y-=2;
 		}
 	}

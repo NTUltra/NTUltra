@@ -1,8 +1,8 @@
 ammo -= 1
 
 image_xscale *= 0.5
-image_yscale *= 0.5
-
+image_xscale = max(image_xscale,0.4);
+image_yscale = image_xscale;
 
 if instance_exists(creator)
 {
@@ -25,17 +25,14 @@ acc = Player.accuracy;
 with instance_create(x,y,Laser)
 {image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + 15*acc;
 team = other.team
-image_xscale ++;
 event_perform(ev_alarm,0)}
 with instance_create(x,y,Laser)
 {image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) - 15*acc;
 team = other.team
-image_xscale ++;
 event_perform(ev_alarm,0)}
 with instance_create(x,y,Laser)
 {image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
 team = other.team
-image_xscale ++;
 event_perform(ev_alarm,0)}
 
 BackCont.viewx2 += lengthdir_x(6,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake

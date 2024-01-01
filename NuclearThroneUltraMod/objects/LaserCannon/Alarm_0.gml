@@ -1,8 +1,8 @@
 ammo -= 1
 
 image_xscale *= 0.5
-image_yscale *= 0.5
-
+image_xscale = max(image_xscale,0.4);
+image_yscale = image_xscale;
 
 if instance_exists(creator)
 {

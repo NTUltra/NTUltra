@@ -1,6 +1,6 @@
 Sleep(50)
 repeat(4)
-instance_create(x+random(32)-16,y+random(32)-16,PurpleExplosion)
+instance_create(x+random(24)-12,y+random(24)-12,PurpleExplosion)
 snd_play(sndExplosionL)
 
 

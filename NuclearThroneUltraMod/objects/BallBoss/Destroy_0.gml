@@ -18,8 +18,9 @@ repeat(am)
 instance_activate_all();
 with UberCont
 {
-	ds_list_clear(keepDeactive);	
+	ds_list_clear(keepDeactive);
 }
+instance_create(x,y,AreaResetter);
 with MusCont
 {
 	audio_stop_sound(song);
@@ -51,5 +52,14 @@ if !instance_exists(InvaderBossSpawnPortal)
 			}
 			ds_list_clear(walls);
 		}
+	}
+	with enemy
+	{
+		instance_destroy(id,false);	
+	}
+	with projectile
+	{
+		if team != 2
+			instance_destroy(id,false);
 	}
 }

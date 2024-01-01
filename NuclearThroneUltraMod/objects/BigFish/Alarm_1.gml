@@ -1,3 +1,4 @@
+/*
 function getMedianAngle(a1, a2) {
 	if abs(a1 - a2) >= 180 {
 		return (a1 + a2) / 2 - 180
@@ -10,7 +11,7 @@ function reverseAngle(angle) {
 		return angle + 180
 	}
 	return angle - 180
-}
+}*/
 
 function beginSuck() {
     sucking = true;
@@ -74,7 +75,7 @@ if target != noone && alarm[6] < 1 && alarm[7] < 1 {
 						other.walk = other.alarm[1]
 					var targetdir = point_direction(other.x, other.y, target.x, target.y)
 					var fishdir = point_direction(other.x, other.y, x, y)
-					direction = reverseAngle(getMedianAngle(targetdir, fishdir))
+					// direction = reverseAngle(getMedianAngle(targetdir, fishdir))
 				}
 			}
 			
@@ -100,6 +101,7 @@ if target != noone && alarm[6] < 1 && alarm[7] < 1 {
 		            sprite_index = spr_startfire
 		            alarm[3] = actTime;
 		            alarm[4] = 14+actTime;
+					motion_add(1,point_direction(x, y, target.x, target.y));
 		        } else {
 					motion_add(2,point_direction(x, y, target.x, target.y));
 		            walk = actTime + random(actTime);

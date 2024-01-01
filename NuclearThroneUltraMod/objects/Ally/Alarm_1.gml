@@ -18,10 +18,10 @@ else if sprite_index = sprAllyGAppear
 	spr_idle = sprAllyGIdle
 	sprite_index = spr_idle
 }
-alarm[1] = 10+irandom(6)
+alarm[1] = 10+irandom(6);
 
 
-if (!instance_exists(target)) || (random(8)<1)
+if (target == noone || !instance_exists(target)) || (random(8)<1)
 {
 	if instance_exists(enemy)
 		target = instance_nearest(x,y,enemy)
@@ -44,7 +44,7 @@ if target != noone && instance_exists(target) && target.team != 2 && target.my_h
 		wkick = 4
 		with instance_create(x,y,AllyBullet)
 		{
-			motion_add(other.gunangle+random(20)-10,8)
+			motion_add(other.gunangle+random(20)-10,9)
 			image_angle = direction
 			team = other.team
 		}
@@ -95,17 +95,21 @@ if target != noone && instance_exists(target) && target.team != 2 && target.my_h
 		right = -1
 	}
 }
-else if random(10) < 1
+else
 {
-	//GOT NO TARGET
-	motion_add(random(360),0.4)
-	walk = 18+random(10)
-	alarm[1] = walk+5
-	gunangle = direction
-	if hspeed > 0
-	right = 1
-	else if hspeed < 0
-	right = -1
+	if random(10) < 1
+	{
+		//GOT NO TARGET
+		motion_add(random(360),0.4)
+		walk = 18+random(10)
+		alarm[1] = walk+5
+		gunangle = direction
+		if hspeed > 0
+		right = 1
+		else if hspeed < 0
+		right = -1
+	}
+	target = noone;
 }
 if instance_exists(Player)
 if point_distance(x,y,Player.x,Player.y) > 52

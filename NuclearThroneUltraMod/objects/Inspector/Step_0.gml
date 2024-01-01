@@ -22,18 +22,23 @@ if Player.can_shoot = 0
 freeze += 3
 }
 
-if control = 1 && instance_exists(target)
+if control = 1
 {
-	with target
+	if team == 2
+		scrRogueTarget();
+	if target != noone && instance_exists(target)
 	{
-		if object_index != Player || !skill_got[2]
+		with target
 		{
-			if point_distance(x,y,other.x,other.y) < 220
+			if object_index != Player || !skill_got[2]
 			{
-				if place_free(x+lengthdir_x(1,point_direction(x,y,other.x,other.y)),y)
-					x += lengthdir_x(1,point_direction(x,y,other.x,other.y))
-				if place_free(x,y+lengthdir_y(1,point_direction(x,y,other.x,other.y)))
-					y += lengthdir_y(1,point_direction(x,y,other.x,other.y))
+				if point_distance(x,y,other.x,other.y) < 220
+				{
+					if place_free(x+lengthdir_x(1,point_direction(x,y,other.x,other.y)),y)
+						x += lengthdir_x(1,point_direction(x,y,other.x,other.y))
+					if place_free(x,y+lengthdir_y(1,point_direction(x,y,other.x,other.y)))
+						y += lengthdir_y(1,point_direction(x,y,other.x,other.y))
+				}
 			}
 		}
 	}

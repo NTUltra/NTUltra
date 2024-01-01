@@ -47,9 +47,6 @@ with Floor{
 if point_distance(x+16,y+16,other.x,other.y) < 34
 sprite_index = sprFloor100}
 
-with instance_place(x,y,prop)
-	instance_destroy(id,false);
-//alarm[0] = 300;
 var fuks = ds_list_create();
 
 var al = instance_place_list(x,y,MeleeFake,fuks,false);
@@ -59,3 +56,29 @@ for(var i = 0; i < al; i++)
 		instance_destroy(id,false);	
 	}
 }
+ds_list_clear(fuks);
+al = instance_place_list(x,y,InvertedMeleeFake,fuks,false);
+for(var i = 0; i < al; i++)
+{
+	with fuks[| i] {
+		instance_destroy(id,false);	
+	}
+}
+al = instance_place_list(x,y,JungleAssassinFake,fuks,false);
+for(var i = 0; i < al; i++)
+{
+	with fuks[| i] {
+		instance_destroy(id,false);	
+	}
+}
+ds_list_clear(fuks);
+al = instance_place_list(x,y,InvertedJungleAssassinFake,fuks,false);
+for(var i = 0; i < al; i++)
+{
+	with fuks[| i] {
+		instance_destroy(id,false);	
+	}
+}
+ds_list_destroy(fuks);
+
+canBeMoved = false;

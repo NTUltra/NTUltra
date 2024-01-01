@@ -1954,14 +1954,14 @@ function scrWeapons() {
 	wep_swap[176] = sndSwapShotgun
 	wep_rad[176] = 0;
 
-	wep_name[177] = "TIMETHROWER (REMOVED)"
-	wep_type[177] = 0
-	wep_auto[177] = 1
-	wep_load[177] = 6
-	wep_cost[177] = 0
-	wep_sprt[177] = sprTimeThrower
-	wep_area[177] = -2
-	wep_text[177] = "time is ticking"
+	wep_name[177] = "ENERGY BACKSTABBER"
+	wep_type[177] = 5
+	wep_auto[177] = 0
+	wep_load[177] = 25
+	wep_cost[177] = 3
+	wep_sprt[177] = sprEnergyBackstabber
+	wep_area[177] = 6
+	wep_text[177] = "telepathor energy lance"
 	wep_swap[177] = sndSwapFlame
 	wep_rad[177] = 0;
 
@@ -6415,7 +6415,7 @@ function scrWeapons() {
 	wep_load[580] = 17
 	wep_cost[580] = 1
 	wep_sprt[580] = sprToxicLauncher
-	wep_area[580] = 5
+	wep_area[580] = 4
 	wep_text[580] = "I used to hate this gun"
 	wep_swap[580] = sndSwapExplosive
 	wep_rad[580] = 0;
@@ -6426,7 +6426,7 @@ function scrWeapons() {
 	wep_load[581] = 26
 	wep_cost[581] = 2
 	wep_sprt[581] = sprHeavyToxicLauncher
-	wep_area[581] = 9
+	wep_area[581] = 8
 	wep_text[581] = ""
 	wep_swap[581] = sndSwapExplosive
 	wep_rad[581] = 0;
@@ -7709,8 +7709,8 @@ function scrWeapons() {
 	
 	wep_name[698] = "SPLINTER MACHINEGUN"
 	wep_type[698] = 3
-	wep_auto[698] = 0
-	wep_load[698] = 6
+	wep_auto[698] = 1
+	wep_load[698] = 8
 	wep_cost[698] = 0.5
 	wep_sprt[698] = sprSplinterMachinegun
 	wep_area[698] = 3
@@ -7728,6 +7728,17 @@ function scrWeapons() {
 	wep_text[699] = "Happy cannonball"
 	wep_swap[699] = sndSwapBow
 	wep_rad[699] = 0;
+	
+	wep_name[700] = "BOMB LOBBER"
+	wep_type[700] = 4
+	wep_auto[700] = 0
+	wep_load[700] = 27
+	wep_cost[700] = 2
+	wep_sprt[700] = sprBombLobber
+	wep_area[700] = 2
+	wep_text[700] = "you can yeet these over walls"
+	wep_swap[700] = sndSwapExplosive
+	wep_rad[700] = 0;
 
 	maxwep = array_length(wep_name)-1;
 

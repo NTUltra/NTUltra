@@ -6,6 +6,7 @@ raddrop=0;
 existTime = 0;
 team = 0
 canMoveOver = false;
+canBeMoved = true;
 myConfusion = noone;
 depth = 2;
 snd_hurt = sndHitPlant

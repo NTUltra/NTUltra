@@ -62,7 +62,7 @@ friction = 0.4
 right = choose(1,-1)
 my_health = maxhealth
 
-target = -1
+target = noone
 
 team = 2
 
@@ -96,5 +96,5 @@ name=choose(
 "Johan","Laura","Gertrude","Pierce","Noel","Cora","Rex","Ann","Hilary","Elisa","Jerry","Helen","Daphne","Shanon","Curt","Jeff","Seymour","Helly",
 "Carlos","Britta","Geoff","Dom","Matt","Matthew","Anna","Smith","Lucius","Britanny","Anita","Doug","Colin","Fernando","David","Shel","Spencer"
 );
-
+nameHover = 0;
 scrInitDrops(2);

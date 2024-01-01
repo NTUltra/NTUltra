@@ -4,6 +4,7 @@
 function scrCreateDataRef(){
 	with instance_create(x,y,DataRef)
 	{
+		hard = other.hard;
 		hitBy = other.hitBy;
 		ultramod = other.ultramod;
 		ultra_got = other.ultra_got;

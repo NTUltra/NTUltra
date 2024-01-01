@@ -4497,12 +4497,31 @@ function scrFire() {
 	break;
 
 
-	//TIMETHROWER
+	//REVERSE LANCER
 	case 177:
 
-	with instance_create(x + 16,y + 16,PopupText)
+	snd_play_fire(sndLaserCannonCharge)
+	BackCont.shake += 1
+	BackCont.viewx2 += lengthdir_x(2,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(2,aimDirection)*UberCont.opt_shake
+	wkick = 5;
+	with instance_create(x,y,EnergyBackStabber)
 	{
-		mytext = "NOTHING SORRY BRO";
+		creator = other.id
+		gotLongarms = Player.skill_got[13];
+		gotEnergyBrain = Player.skill_got[17];
+		bettermelee = Player.bettermelee;
+		ammo = 2+(gotEnergyBrain+Player.betterlaserbrain)
+		time = 4
+		team = other.team
+		alarm[0] = 15
+		alarm[1] = alarm[0] + ammo*time;
+			if Player.skill_got[42]
+			{
+				alarm[0] = max(1,alarm[0]*0.25);
+				if Player.ultra_got[97] && !Player.altUltra
+					alarm[0] = 1;
+			}
 	}
 
 	break;

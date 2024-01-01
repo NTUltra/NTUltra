@@ -238,6 +238,20 @@ with EnemyBullet1Square
 	if draw
 		draw_self();
 }
+with EnergyBackStabber
+{
+	draw_self();
+}
+with LobGrenade
+{
+	if !visible
+		event_perform(ev_draw,0);	
+}
+with DropGrenade
+{
+	if !visible
+		event_perform(ev_draw,0);	
+}
 with ExploderPopoExplode
 {
 	event_perform(ev_draw,0);	

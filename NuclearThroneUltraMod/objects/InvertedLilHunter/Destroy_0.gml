@@ -57,15 +57,3 @@ speed *= 0.9}
 }
 
 scrEnemyDeathEvent();
-//drop timebomb??
-if(random(50)<1){//2
-with instance_create(x,y,WepPickup)
-{
-scrWeapons()
-wep = 192
-name = wep_name[192]
-ammo = 0
-type = wep_type[192]
-curse = 0
-sprite_index = wep_sprt[192]
-}}

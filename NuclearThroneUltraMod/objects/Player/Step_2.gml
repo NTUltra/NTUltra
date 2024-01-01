@@ -267,6 +267,15 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 			}
 			wep = targetPickup.wep
 			curse = targetPickup.curse
+			if ultra_got[72] && !altUltra && curse != 0
+			{
+				snd_play_2d(sndUncurse);
+				if scrIsCrown(14) {
+					snd_play(sndHealthPickup);
+					scrHeal(1,true);
+				}
+				curse = 0;
+			}
 			isPermanent = targetPickup.isPermanent;
 			hasBeenEaten = targetPickup.hasBeenEaten;
 			wepmod1 = targetPickup.wepmod1

@@ -9,7 +9,6 @@ if !instance_exists(MenuGen)
     draw_clear_alpha(c_black,0);
 	scrDrawGameOver();
     scrDrawHUD();
-	
     surface_reset_target();
 	if UberCont.opt_sideart != sprite_get_number(sprSideArt) + 1
 	{

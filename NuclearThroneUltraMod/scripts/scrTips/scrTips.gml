@@ -271,7 +271,7 @@ function scrTips() {
 
 	if Player.race = 10//Rebel
 	tip = choose("forget the old days","change is coming","a new generation","it will get better","spawning new allies heals old ones","allies take damage over time","making babies hurts","where do these allies come from?"
-	,"allies gain +1 health each loop")
+	,"allies gain +1 health each loop","your ally's bullets trigger recycle gland","try ultra modding your ally's bullets")
 
 	if Player.race = 11//hunter
 	tip = choose("never miss",

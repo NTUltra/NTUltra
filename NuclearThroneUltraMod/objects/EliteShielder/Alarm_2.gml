@@ -1,11 +1,9 @@
 if ammo>0
 {
-
+	if team == 2
+		scrRogueTarget();
 	if random(2)<1 && target != noone && instance_exists(target)
 	{
-		if team == 2
-			scrRogueTarget();
-
 		gunangle = point_direction(x,y,target.x,target.y);
 	}
 

@@ -42,7 +42,7 @@ diag = true;
 gunangle = 0;
 lineOfFireOffset = 30;
 spinBulletAngle = 0;
-amountOfSpinBulletProjectiles = 10;
+amountOfSpinBulletProjectiles = 8;
 targetDirection = 0;
 if instance_exists(Player)
 	targetDirection = point_direction(x,y,Player.x,Player.y);

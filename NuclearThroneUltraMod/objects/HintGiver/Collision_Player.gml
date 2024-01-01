@@ -10,7 +10,7 @@ if active && sprite_index == spr_idle && KeyCont.key_pick[other.p] = 1
 		Player.ccurse = 0;
 		if scrIsCrown(14) {
 			snd_play(sndHealthPickup);
-			scrHeal(1);	
+			scrHeal(1,true);	
 		}
 		Player.isPermanent = true;
 		hasASecret = false;

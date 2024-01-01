@@ -10,7 +10,7 @@ if canPuffyCheek > 0 {
 }
 else
 {
-	canPuffyCheek = 0;	
+	canPuffyCheek = 0;
 }
 if autoFire > 0
 {
@@ -74,7 +74,10 @@ if !instance_exists(LevCont) and visible = 1
 			var acc = acceleration;
 			var dedzone = 0.05;
 			if is60fps && (speed != 0)
-				acc *= 0.5;
+			{
+				if (race != 23 || ultra_got[92] || speed > maxSpeed*0.75)
+					acc *= 0.5;
+			}
 			if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
 			{
 				var gp = gamepad_axis_value(p,gp_axislh);
@@ -1415,7 +1418,9 @@ else if race == 23 && ultra_got[92] == 0
 	if toxicamount > 0
 		speed *= 0.3;
 	else
-		speed = clamp(speed,maxSpeed*0.8,maxSpeed);
+	{
+		speed = clamp(speed,maxSpeed*0.75,maxSpeed);
+	}
 }
 else if speed > maxSpeed
 	speed = maxSpeed
@@ -1725,29 +1730,35 @@ if (ultra_got[43] && !altUltra)//HUNTER ULTRA C Focused projectiles
 {
     if instance_exists(Marker)
     {
+		var str = 3;
+		var ang = 4;
+		if UberCont.normalGameSpeed == 60
+		{
+			str = 1.5;
+			ang = 2;
+		}
 	    with projectile
 		{
 			//if (x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) 
 			 //and ProjectileCanBeMoved())
 			if speed > 0 && canBeMoved
 			{
-				var str = 2.0;
-				if place_free(x+lengthdir_x(str,point_direction(x,y,Marker.x,Marker.y)),y)
+				if !place_meeting(x+lengthdir_x(str,point_direction(x,y,Marker.x,Marker.y)),y,Wall)
 					x += lengthdir_x(str,point_direction(x,y,Marker.x,Marker.y))
-					if place_free(x,y+lengthdir_y(str,point_direction(x,y,Marker.x,Marker.y)))
+					if !place_meeting(x,y+lengthdir_y(str,point_direction(x,y,Marker.x,Marker.y)),Wall)
 						y += lengthdir_y(str,point_direction(x,y,Marker.x,Marker.y))
 
 				image_angle=direction;
 
 				if (direction<point_direction(x,y,Marker.x,Marker.y) )
 			    {
-					direction+=3;
-					image_angle+=3;
+					direction+=ang;
+					image_angle+=ang;
 			    }
 			    else if (direction>point_direction(x,y,Marker.x,Marker.y) )
 			    {
-					direction-=3;
-					image_angle-=3;
+					direction-=ang;
+					image_angle-=ang;
 			    }
 			}
 		}

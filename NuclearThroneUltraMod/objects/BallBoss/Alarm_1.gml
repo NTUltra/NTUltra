@@ -75,17 +75,31 @@ if !reachHalfHealth && my_health < maxhealth * 0.74
 	myShield = instance_create(x,y,BallBossShield);
 	myShield.x = x + lengthdir_x(shieldDistance,image_angle+90);
 	myShield.y = y + lengthdir_y(shieldDistance,image_angle+90);
+	var maxAm = 10;
+	var am = 0;
 	for (var i = 0; i < amountOfProjectiles; i++) {
 		with myCompanions[i]
 		{
 			time = 0;
 			startDistance = distance;
 			targetDistance -= 32;
+			if am < maxAm
+			{
+				var msk = mask_index;
+				mask_index = mskCourtyardGuardian
+				if !place_meeting(x,y,Wall) && place_meeting(x,y,Floor)
+				{
+					instance_create(x,y,CourtyardGuardian);
+					am ++;
+				}
+				mask_index = msk;
+			}
 		}
 	}
 }
 else if !reachLowHealth && my_health < maxhealth * 0.35
 {
+	my_health += 100;
 	lineOfFireOffset -=5;
 	waveSpeed += 0.5;
 	snd_play(sndBallBossLowHP,0,false,false,3,false,false,1,false);
@@ -106,12 +120,25 @@ else if !reachLowHealth && my_health < maxhealth * 0.35
 		audio_sound_gain(song, clamp(UberCont.opt_musvol*1.05,0, 1), 0);
 	}
 	alarm[3] = 1;
+	var maxAm = 10;
+	var am = 0;
 	for (var i = 0; i < amountOfProjectiles; i++) {
 		with myCompanions[i]
 		{
 			time = 0;
 			startDistance = distance;
 			targetDistance -= 10;
+			if am < maxAm
+			{
+				var msk = mask_index;
+				mask_index = mskCourtyardGuardian
+				if !place_meeting(x,y,Wall) && place_meeting(x,y,Floor)
+				{
+					instance_create(x,y,InvertedCourtyardGuardian);
+					am ++;
+				}
+				mask_index = msk;
+			}
 		}
 	}
 }

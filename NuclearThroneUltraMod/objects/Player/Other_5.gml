@@ -384,7 +384,13 @@ if looping && area != 104
     
 	    //uncurse some shit
 		if (curse == 1 || bcurse == 1 || ccurse == 1)
+		{
 			snd_play_2d(sndUncurse);
+			if scrIsCrown(14) {
+				snd_play(sndHealthPickup);
+				scrHeal(1,true);	
+			}
+		}
 	    curse=0;
 	    bcurse=0;
 	    ccurse=0;
@@ -811,6 +817,8 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		skeletonlives = other.skeletonlives;
 		patience = other.patience;
 		skillpoints = other.skillpoints;
+		crownpoints = other.crownpoints;
+		charpoints = other.charpoints;
 		level = other.level;
 		maxlevel = other.maxlevel;
 		rad = other.rad;
@@ -841,8 +849,8 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		cwepmod2 = other.cwepmod2;
 		cwepmod3 = other.cwepmod3;
 		cwepmod4 = other.cwepmod4;
-		rogueammo = other.rogueammo;
-		rogueammomax = other.rogueammomax;
+		rogueammo = max(rogueammo,other.rogueammo);
+		rogueammomax = max(rogueammomax,other.rogueammomax);
 		ultraNow = other.ultraNow;
 		horrorEtaken = other.horrorEtaken;
 		hogpoints = other.hogpoints;
@@ -894,6 +902,7 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		usedHogInvestment = other.usedHogInvestment;
 		ultimategamble = other.ultimategamble;
 		totalSkills = other.totalSkills;
+		gotMinimumArmour = other.gotMinimumArmour;
 		scrWeaponHold();
 		//Re-apply some mutations
 		
@@ -905,21 +914,32 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 			maxhealth += 1;
 		if skill_got[33]//Glass arm cannon
 			maxhealth -= 1;
+		if race == 16
+		{
+			armour = min(armour + 1, maxarmour);
+		}
 		if skill_got[41]//Nerves of steel
 		{
 			maxhealth -= 2;
-			armour = other.armour;
-			maxarmour = max(1,other.maxarmour + 1);
+			if race != 16
+			{
+				armour = other.armour;
+				maxarmour = other.maxarmour;
+			}
 		}
-		if scrIsCrown(20)
+		else if race != 16 && scrIsCrown(20)
 		{
 			armour = other.armour;
 			maxarmour = other.maxarmour;
 		}
-		if race == 16
+		if ultra_got[66] && !altUltra
 		{
-			armour = min(armour + 1, maxarmour);	
+			maxarmour += 3;
+			armour = other.armour;
+			if race == 16
+				armour = min(armour + 1, maxarmour);
 		}
+		//That armour smith ultra
 		my_health = other.my_health;
 		maxhealth = max(maxhealth, 1);
 		if ultra_got[62] && altUltra
@@ -944,7 +964,8 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		if skill_got[19] {
 			scrApplyEagleEyes();
 		}
-		
+		with instance_create(x,y,UnlockPopup)
+			mytext=other.race_name[other.race];
 	}
 	UberCont.crown_start[UberCont.racepick] = cs;
 	instance_destroy(id,false);
