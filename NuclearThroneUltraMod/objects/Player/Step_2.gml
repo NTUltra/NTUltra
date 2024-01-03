@@ -343,7 +343,6 @@ else
 var tookHit = false;
 if my_health < prevhealth
 {
-	tookDamageThisArea = true;
 	tookHit = true;
 	//Insakill
 	if !exception && alarm[3] < 1
@@ -498,6 +497,7 @@ if armour > 0
 {
 	if tookHit && /*my_health != maxhealth && */alarm[3] < 1 && !exception
 	{
+		tookDamageThisArea = true;
 		armour -= 1;
 		snd_play(sndLostArmour);
 		alarm[3]=max(alarm[3],1);//before your armour lowers again}
@@ -722,7 +722,7 @@ if(my_health <= 0 && maxhealth > 0)
 			snd_hurt = sndDamageNegate;
 			snd_play_2d(sndMutLastWish);
 			scrGiveEuphoriaShield();
-			alarm[3] += 60;
+			alarm[3] += 50;
 		}
 	}
 }
@@ -731,6 +731,7 @@ if(my_health <= 0 && maxhealth > 0)
 
 if my_health < prevhealth && exception=false// && alarm[3] < 1//I been hit
 {
+	tookDamageThisArea = true;
 	///rage
 	if skill_got[28] == 1
 	{

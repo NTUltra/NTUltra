@@ -4,6 +4,6 @@
 event_inherited();
 snd_play(sndToxicBoltGas,0.15,true);
 if choose(true,false)
-	instance_create(x+lengthdir_x(4,direction),y+lengthdir_y(4,direction),ToxicThrowerGas)
-instance_create(x+lengthdir_x(8,direction),y+lengthdir_y(8,direction),ToxicThrowerGas)
+	instance_create(x+lengthdir_x(6,direction+180),y+lengthdir_y(6,direction+180),ToxicThrowerGas)
+instance_create(x+lengthdir_x(2,direction+180),y+lengthdir_y(2,direction+180),ToxicThrowerGas)
 instance_create(x,y,ToxicThrowerGas)

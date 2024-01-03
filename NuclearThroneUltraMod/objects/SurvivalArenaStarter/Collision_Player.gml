@@ -19,4 +19,11 @@ else if KeyCont.key_pick[other.p] = 1
 			event_user(1);
 	}
 	image_speed = 0.5;
+	with SurvivalArenaSkipper
+	{
+		instance_destroy();
+	}
+}
+with SurvivalArenaSkipper {
+	overwritten = true;	
 }

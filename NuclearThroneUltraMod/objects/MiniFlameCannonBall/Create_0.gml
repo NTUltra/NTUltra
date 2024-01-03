@@ -13,7 +13,7 @@ image_angle=random(360);
 
 alarm[1]=120;
 snd_loop(sndFlamerLoop);
-dmg = 16;
+dmg = 18;
 fireAmount = 2;
 fireExplosionAmount = 16;
 inverted = false;

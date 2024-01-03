@@ -7614,6 +7614,7 @@
     {"name":"sprUltraSheepHurt","order":19,"path":"sprites/sprUltraSheepHurt/sprUltraSheepHurt.yy",},
     {"name":"mskBigWallBreak","order":16,"path":"sprites/mskBigWallBreak/mskBigWallBreak.yy",},
     {"name":"DoomBurst","order":25,"path":"objects/DoomBurst/DoomBurst.yy",},
+    {"name":"SurvivalArenaSkipper","order":17,"path":"objects/SurvivalArenaSkipper/SurvivalArenaSkipper.yy",},
     {"name":"NukeBurst","order":27,"path":"objects/NukeBurst/NukeBurst.yy",},
     {"name":"shd72","order":8,"path":"sprites/shd72/shd72.yy",},
     {"name":"SeekerShotgunBurst","order":29,"path":"objects/SeekerShotgunBurst/SeekerShotgunBurst.yy",},

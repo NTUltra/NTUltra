@@ -23,7 +23,7 @@ if instance_exists(Player)
 	maxhealth += min(Player.loops * 2,10);
 	if Player.ultra_got[39] && !Player.altUltra
 		alarm[3] = 30;
-	if Player.bskin == 2
+	if Player.bskin == 2 || Player.bskin == 5
 	{
 		if Player.altUltra
 		{
@@ -42,7 +42,7 @@ if instance_exists(Player)
 			spr_dead = sprAllyCDead
 		}
 	}
-	else if Player.altUltra
+	else if Player.altUltra || Player.bskin == 3
 	{
 		sprite_index = sprAllyEAppear;
 		spr_idle = sprAllyEAppear

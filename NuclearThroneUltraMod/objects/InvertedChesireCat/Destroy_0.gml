@@ -1,5 +1,6 @@
 event_inherited()
-
+if !instance_exists(SurvivalWave) && !scrIsCrown(19)
+	TopCont.darkness = 0;
 if alarm[5] >  0
 {
 	with myWazers[0]

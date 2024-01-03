@@ -54,7 +54,7 @@ if target != noone && alarm[6] < 1 && alarm[7] < 1 {
 		//BITE TACKLE SHIT YO! DANGER IN THE HOUSE!
 		snd_play(snd_tackle)
 		persistent_direction = point_direction(x, y, target.x, target.y)
-		alarm[1] += chargeTell + actTime*2;
+		alarm[1] += chargeTell + actTime*2 + 20;
 		alarm[4] = 0
 		alarm[3] = 0
 		alarm[5] = chargeTell + actTime*2;

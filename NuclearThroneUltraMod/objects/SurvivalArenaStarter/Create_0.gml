@@ -1,5 +1,5 @@
 /// @description Init
-depth = -2;
+depth = 0;
 image_speed = 0;
 var dis = 48;
 jumpScared = false;
@@ -9,6 +9,13 @@ if (scrIsGamemode(25))
 	{
 		name = "START WAVE "+string(Player.subarea);
 		scrSpawnSurvivalWaveReward();
+		if !Player.tookDamageThisArea && Player.subarea > 1 && Player.subarea < 5
+		{
+			instance_create(x,y + 16,SurvivalArenaSkipper);
+			y -= 16;
+			scrForcePosition60fps();
+		}
+		Player.tookDamageThisArea = false;
 	}
 	else
 	{

@@ -20,8 +20,8 @@ if candmg and other.team != team
 				image_index = 0
 				motion_add(other.direction,other.knockback + 2)
 			}
-			x += (other.x - x)*0.75;
-			y += (other.y - y)*0.75;
+			x += hspeed//(other.x - x)*0.75;
+			y += vspeed//(other.y - y)*0.75;
 			with scrBoltTrail(trailColour,0.11,0.75)
 			{
 				image_speed -= 0.1;

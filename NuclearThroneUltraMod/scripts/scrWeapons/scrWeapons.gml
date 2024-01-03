@@ -7248,7 +7248,7 @@ function scrWeapons() {
 	wep_name[655] = "THE CRENDOOKEN"
 	wep_type[655] = 1
 	wep_auto[655] = 1
-	wep_load[655] = 19
+	wep_load[655] = 18
 	wep_cost[655] = 3
 	wep_sprt[655] = sprCrendookenBullet
 	wep_area[655] = 14

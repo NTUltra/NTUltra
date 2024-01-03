@@ -8002,6 +8002,7 @@
     {"id":{"name":"sprUltraSheepHurt","path":"sprites/sprUltraSheepHurt/sprUltraSheepHurt.yy",},},
     {"id":{"name":"mskBigWallBreak","path":"sprites/mskBigWallBreak/mskBigWallBreak.yy",},},
     {"id":{"name":"DoomBurst","path":"objects/DoomBurst/DoomBurst.yy",},},
+    {"id":{"name":"SurvivalArenaSkipper","path":"objects/SurvivalArenaSkipper/SurvivalArenaSkipper.yy",},},
     {"id":{"name":"NukeBurst","path":"objects/NukeBurst/NukeBurst.yy",},},
     {"id":{"name":"shd72","path":"sprites/shd72/shd72.yy",},},
     {"id":{"name":"SeekerShotgunBurst","path":"objects/SeekerShotgunBurst/SeekerShotgunBurst.yy",},},

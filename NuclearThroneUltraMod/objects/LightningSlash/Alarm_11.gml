@@ -10,6 +10,5 @@ with instance_create(xx,yy,Lightning)
 team = other.team
 ammo = 10
 event_perform(ev_alarm,0)
-visible = 0
 with instance_create(x,y,LightningSpawn)
 image_angle = other.image_angle}
