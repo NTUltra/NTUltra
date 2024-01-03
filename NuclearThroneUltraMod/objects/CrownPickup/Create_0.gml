@@ -6,6 +6,7 @@ if instance_exists(Player)
 	visits = Player.crownvisits-1;
 if UberCont.canSave
 	visits = 0;
+depth = 0;
 instance_create(x-16-64,y-16,Floor)
 with instance_create(x-16-64,y-16-32,Floor)
 {

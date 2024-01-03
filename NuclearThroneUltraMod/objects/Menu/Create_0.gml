@@ -1,5 +1,6 @@
 //if !instance_exists(Cursor)
 //instance_create(0,0,Cursor);
+depth = -11;
 creditpage = 0;
 mode = 0
 mouseover = -1;

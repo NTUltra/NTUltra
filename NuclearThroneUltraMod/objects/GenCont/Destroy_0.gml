@@ -273,7 +273,7 @@ if instance_exists(Player)
 		}
 	    if skill_got[29]//hypersomnia insomnia
 	    {
-			var t = 185;
+			var t = 190;
 		    if race = 25
 		    {
 				t = 220;
@@ -298,7 +298,7 @@ if instance_exists(Player)
 		    with enemy
 		    {
 				if alarm[1]>0
-					alarm[1]+=50;
+					alarm[1] += 40;
 		    }
     
 	    }

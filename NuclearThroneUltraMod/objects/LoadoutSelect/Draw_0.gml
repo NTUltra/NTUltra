@@ -1,3 +1,4 @@
+var hoverWep = -1;
 if (hasNoMenuOpen()
  && race != 0)
 {
@@ -8,7 +9,12 @@ if (hasNoMenuOpen()
 	if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
 		xo = 108;
 	if (wepmenuopen && !ultraOpen) {
-	    draw_sprite(sprSplash,0,__view_get( e__VW.XView, 0 )+xo+77,__view_get( e__VW.YView, 0 )+49)
+		time += 0.3;
+		if time > 1
+			time = 1;
+	    draw_sprite(sprSplash,0,
+		lerp(__view_get( e__VW.XView, 0 )+xo+77+243,__view_get( e__VW.XView, 0 )+xo+77,time),
+		__view_get( e__VW.YView, 0 )+49)
 	    var wepiter = 0;
 	    var wepx = 148;
 	    var wepy = 85;
@@ -35,6 +41,7 @@ if (hasNoMenuOpen()
 			{
 				if (UberCont.mouse__x > l && UberCont.mouse__x < r && UberCont.mouse__y > t && UberCont.mouse__y < b)
 				{
+					hoverWep = wepiter;
 					xx += 1;
 					yy -= 2;
 					col = c_white;
@@ -84,18 +91,22 @@ if (hasNoMenuOpen()
 			}
 			wepScale = 2.5;
 		}
+		var yyy = yy;
 		if (wep == -1)
 		{
 			shader_set(shdDrawWhite);
-			draw_sprite_ext(sprRandomWeapon,0,xx+1,yy+1,wepScale,wepScale,0,c_white,1);
-			draw_sprite_ext(sprRandomWeapon,0,xx+1,yy-1,wepScale,wepScale,0,c_white,1);
-			draw_sprite_ext(sprRandomWeapon,0,xx-1,yy-1,wepScale,wepScale,0,c_white,1);
-			draw_sprite_ext(sprRandomWeapon,0,xx-1,yy+1,wepScale,wepScale,0,c_white,1);
+			draw_sprite_ext(sprRandomWeapon,0,xx+1,yyy+2,wepScale,wepScale,0,c_white,1);
+			draw_sprite_ext(sprRandomWeapon,0,xx+1,yyy,wepScale,wepScale,0,c_white,1);
+			draw_sprite_ext(sprRandomWeapon,0,xx-1,yyy,wepScale,wepScale,0,c_white,1);
+			draw_sprite_ext(sprRandomWeapon,0,xx-1,yyy+2,wepScale,wepScale,0,c_white,1);
 			shader_reset();
-			draw_sprite_ext(sprRandomWeapon,0,xx,yy,wepScale,wepScale,0,c_white,1);
+			draw_sprite_ext(sprRandomWeapon,0,xx,yyy+1,wepScale,wepScale,0,c_white,1);
 		}
 		else
-			draw_sprite_ext(sprRandomWeapon,0,xx,yy,wepScale,wepScale,0,make_colour_rgb(150, 150, 150),1);
+		{
+			//draw_sprite_ext(sprRandomWeaponOutline,0,xx,yy,wepScale,wepScale,0,make_colour_rgb(150, 150, 150),1);
+			draw_sprite_ext(sprRandomWeapon,0,xx,yyy+1,wepScale,wepScale,0,make_colour_rgb(150, 150, 150),1);
+		}
 		var xx = __view_get( e__VW.XView, 0 )+xo+302;
 		var yy = __view_get( e__VW.YView, 0 )+168//170;
 		var o = 10;
@@ -110,18 +121,22 @@ if (hasNoMenuOpen()
 				}
 				crownScale = 2.5;
 			}
+			var yyy = yy + 1;
 			if (UberCont.crown_start[Menu.race])
 			{
 				shader_set(shdDrawWhite);
-				draw_sprite_ext(sprLoadoutCrown,0,xx+1,yy+1,crownScale,crownScale,0,c_white,1);
-				draw_sprite_ext(sprLoadoutCrown,0,xx+1,yy-1,crownScale,crownScale,0,c_white,1);
-				draw_sprite_ext(sprLoadoutCrown,0,xx-1,yy-1,crownScale,crownScale,0,c_white,1);
-				draw_sprite_ext(sprLoadoutCrown,0,xx-1,yy+1,crownScale,crownScale,0,c_white,1);
+				draw_sprite_ext(sprLoadoutCrown,0,xx+1,yyy+2,crownScale,crownScale,0,c_white,1);
+				draw_sprite_ext(sprLoadoutCrown,0,xx+1,yyy,crownScale,crownScale,0,c_white,1);
+				draw_sprite_ext(sprLoadoutCrown,0,xx-1,yyy,crownScale,crownScale,0,c_white,1);
+				draw_sprite_ext(sprLoadoutCrown,0,xx-1,yyy+2,crownScale,crownScale,0,c_white,1);
 				shader_reset();
-				draw_sprite_ext(sprLoadoutCrown,0,xx,yy,crownScale,crownScale,0,c_white,1);
+				draw_sprite_ext(sprLoadoutCrown,0,xx,yyy+1,crownScale,crownScale,0,c_white,1);
 			}
 			else
-				draw_sprite_ext(sprLoadoutCrown,0,xx,yy,crownScale,crownScale,0,make_colour_rgb(150, 150, 150),1);
+			{
+				//draw_sprite_ext(sprLoadoutCrownOutline,0,xx,yy,crownScale,crownScale,0,make_colour_rgb(150, 150, 150),1);
+				draw_sprite_ext(sprLoadoutCrown,0,xx,yyy+1,crownScale,crownScale,0,make_colour_rgb(150, 150, 150),1);
+			}
 		}
 		else
 		{
@@ -203,14 +218,20 @@ if (hasNoMenuOpen()
 	}
 	else if !ultraOpen
 	{
+		time -= 0.3;
+		if time < 0
+			time = 0;
+		draw_sprite(sprSplash,0,
+		lerp(__view_get( e__VW.XView, 0 )+xo+77+243,__view_get( e__VW.XView, 0 )+xo+77,time),
+		__view_get( e__VW.YView, 0 )+49)
 		var xx = __view_get( e__VW.XView, 0 )+xo+304;
 		var yy = __view_get( e__VW.YView, 0 )+174;
-		draw_sprite(sprMutationSplat,3,xx+24,yy+44);
+		draw_sprite(sprMutationSplatBright,3,xx+24,yy+44);
 		yy -= 5;
 		var scl = 1.5;
 		var renderAny = true;
 		if (UberCont.crown_start[Menu.race])
-			draw_sprite_ext(sprLoadoutCrown,0,xx,yy-4,2,2,0,c_white,1);
+			draw_sprite_ext(sprLoadoutCrown,0,xx,yy + 2,2,2,0,c_white,1);
 		if (isOverwriteWeapon && UberCont.wep_found[Menu.race,UberCont.opt_gm1wep])
 		{
 			if (UberCont.opt_gm1wep == 0)
@@ -227,6 +248,7 @@ if (hasNoMenuOpen()
 		{
 			var spr = sprRandomWeapon;
 			scl = 2;
+			yy += 2;
 		}
 		else
 		{
@@ -277,4 +299,23 @@ if (hasNoMenuOpen()
 		
 	}
     draw_sprite_ext(sprLoadOutArrow,1,__view_get( e__VW.XView, 0 )+xo+300,__view_get( e__VW.YView, 0 )+arrowOpenerY,wepopenscale,wepopenscale,0,c_white,wepopenscale-0.1);
+}
+if hoverWep > -1
+{
+	var str = wep_name[UberCont.start_wep[hoverWep]];
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_bottom);
+	var xx = min(UberCont.mouse__x,camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - (string_width(str)*0.5) - 1);
+	var yy = UberCont.mouse__y - 10;
+	draw_rectangle_colour(
+	xx - (string_width(str)*0.5) - 2,
+	yy - string_height(str) - 1,
+	xx + (string_width(str)*0.5) + 1,
+	yy + 1,
+	c_black,c_black,c_black,c_black,false);
+	draw_text(
+	xx,
+	yy,str);
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
 }

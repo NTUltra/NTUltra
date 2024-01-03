@@ -16,11 +16,11 @@ if instance_exists(Player) && !RogueIDPD
 	{
 		if Player.x > x//right
 		{
-			squareRight = 1
+			squareRight = -1
 		}
 		else//left
 		{
-			squareRight =- 1;
+			squareRight = 1;
 		}
 	}
 }

@@ -517,7 +517,7 @@ function scrFire() {
 	snd_play_fire(sndRocket)
 
 	with instance_create(x,y,Rocket)
-	{motion_add(aimDirection+(random(4)-2)*other.accuracy,2)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,4)
 	image_angle = direction
 	team = other.team}
 
@@ -1440,7 +1440,6 @@ function scrFire() {
 		team = other.team
 		ammo = 16
 		event_perform(ev_alarm,0)
-		visible = 0
 		with instance_create(x,y,LightningSpawn)
 			image_angle = other.image_angle
 	}
@@ -1466,7 +1465,6 @@ function scrFire() {
 	team = other.team
 	ammo = 32
 	event_perform(ev_alarm,0)
-	visible = 0
 	with instance_create(x,y,LightningSpawn)
 	image_angle = other.image_angle}
 
@@ -1494,7 +1492,6 @@ function scrFire() {
 	ammo = 10+random(5)
 	iframeskip -= 0.03;
 	event_perform(ev_alarm,0)
-	visible = 0
 	with instance_create(x,y,LightningSpawn)
 	image_angle = other.image_angle}}
 
@@ -1600,7 +1597,6 @@ function scrFire() {
 	team = other.team
 	ammo = 7
 	event_perform(ev_alarm,0)
-	visible = 0
 	with instance_create(x,y,LightningSpawn)
 	image_angle = other.image_angle}
 	}
@@ -2482,7 +2478,6 @@ function scrFire() {
 	team = other.team
 	ammo = 14
 	event_perform(ev_alarm,0)
-	visible = 0
 	with instance_create(x,y,LightningSpawn)
 	image_angle = other.image_angle}
 
@@ -3011,7 +3006,6 @@ function scrFire() {
 	team = other.team
 	ammo = 48//60
 	event_perform(ev_alarm,0)
-	visible = 0
 	with instance_create(x,y,LightningSpawn)
 	image_angle = other.image_angle}
 
@@ -4885,26 +4879,33 @@ function scrFire() {
 	break;
 
 
-	//TIME BOM
+	//ULTRA BOMB LOBBER
 	case 192:
+	snd_play_fire(sndChickenThrow)
+	snd_play_fire(sndClusterLauncher)
 
-	snd_play_fire(sndGrenade)
-
-	with instance_create(x,y,TimeBomb)
+	with instance_create(x,y,UltraLobGrenade)
 	{
+		accuracy = other.accuracy;
 	sticky = 0
-	motion_add(aimDirection+(random(6)-3)*other.accuracy,10)
+	motion_add(aimDirection+(random(6)-3)*other.accuracy,6)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,LobGrenade)
+	{
+		accuracy = other.accuracy;
+		alarm[2] -= 2;
+	sticky = 0
+	motion_add(aimDirection+(random(12)-6)*other.accuracy,6.5)
 	image_angle = direction
 	team = other.team}
 
-	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
-	BackCont.shake += 2
-	wkick = 5
-
+	BackCont.viewx2 += lengthdir_x(16,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(16,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 6
+	wepangle = -wepangle
+	wkick = -7
 	break;
-
-
 	//ULTRA BLADE GUN
 	case 193:
 
@@ -5134,12 +5135,10 @@ function scrFire() {
 			{
 				scrGiveProjectileStats();
 			}
-		}   
-
-	firedthislevel=true;
-	firedOnce = true;
-	fired=true;
-
+		}
+		firedthislevel=true;
+		firedOnce = true;
+		fired=true;
 	}
 	var reloadBoost = 0.09;
 	if Player.skill_got[30] == 1

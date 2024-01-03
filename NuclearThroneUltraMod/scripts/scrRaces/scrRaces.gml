@@ -182,7 +182,7 @@ function scrRaces() {
 	race_pass[10] = "<p>PORTALS<p> <r>HEAL<r>"
 	race_acti[10] = "SPAWN ALLIES"
 	race_butt[10] = "HIGHER <w>ALLY RELOAD SPEED<w>"
-	race_butt_detail[10] = "+50% <w>ALLy RELOAD SPEED<w>";
+	race_butt_detail[10] = "+50% <w>ALLY RELOAD SPEED<w>";
 	//race_back[10] = "FASTER ALLIES#ALLIES TELEPORT TO YOU#WHEN LOST";
 	race_lock[10] = "REACH FROZEN CITY TO UNLOCK"
 	race_have[10] = 0

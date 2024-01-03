@@ -4,7 +4,6 @@ image_index = choose(0,0,0,0,0,0,0,1,2)
 image_speed = 0
 if random(500) < 1
 image_index = 3
-
 image_index += choose(0,4)
 canCount = true;
 var of = instance_place(x,y,Floor)

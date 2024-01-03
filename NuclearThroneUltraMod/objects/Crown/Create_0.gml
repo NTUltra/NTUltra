@@ -4,7 +4,7 @@ newThing = 1
 targetx = Player.x
 targety = Player.y
 crown = 0;
-
+depth = -1;
 image_speed = 0.4
 
 scrCrowns();

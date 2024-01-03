@@ -7,6 +7,7 @@ if instance_exists(Player)
 	{
 		mask_index = mskBigWepPickup;	
 	}
+	scrForcePosition60fps();
 }
 alarm[2] = 10;
 persistent = false;

@@ -157,12 +157,16 @@ function scrDrawBloom() {
 	with LaserCannon
 	draw_sprite_ext(sprite_index,-1,x,y,image_xscale*2,image_yscale*2,image_angle,c_white,ba)
 	with Lightning
-	draw_sprite_ext(sprite_index,-1,x,y,image_xscale,image_yscale*2,image_angle,c_white,ba)
-
-
-
-	with UltraLightning
-	draw_sprite_ext(sprite_index,-1,x,y,image_xscale,image_yscale*2,image_angle,c_white,ba)
+	{
+		var al = array_length(lightningList);
+		if al > 0 && alarm[0] < 1
+		{
+			for (var i = 0; i < al; i++) {
+				draw_sprite_ext(sprite_index,-1,lightningList[i].xx,lightningList[i].yy,lightningList[i].xs,image_yscale,lightningList[i].ang,c_white,ba + bloom)
+			}
+			draw_sprite_ext(sprLightningEnd,-1,lightningList[al-1].xx,lightningList[al-1].yy,1,image_yscale*0.5,lightningList[al-1].ang,c_white,ba)
+		}
+	}
 
 	with HorrorBeam
 	draw_sprite_ext(sprite_index,-1,x,y,image_xscale,image_yscale*2,image_angle,c_white,ba)

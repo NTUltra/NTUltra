@@ -14,7 +14,6 @@ with Player
 					team = other.team
 					ammo = irandom_range(5,12)
 					event_perform(ev_alarm,0)
-					visible = 0
 					with instance_create(x,y,LightningSpawn)
 						image_angle = other.image_angle
 				}

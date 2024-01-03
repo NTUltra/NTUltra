@@ -1,6 +1,6 @@
 room_speed=UberCont.normalGameSpeed*UberCont.opt_loading;
 loadTime = 60;
-
+depth = -100;
 if UberCont.opt_loading == 4
 {
 	loadTime = 4;

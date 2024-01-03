@@ -10,7 +10,7 @@ ultraScale = 1;
 wepopenscale=1;
 wep=0;
 imageIndex = 0;
-
+time = 0;
 wepmenuopen=false;
 
 skin=0;

@@ -21,6 +21,8 @@ if spr_idle == sprBigVultureSkullOpen
 			type = 1
 			pullstrength = 3;
 			alarm[1] = 1;
+			x = other.x;
+			y = other.y;
 		}
 		with BigFishSkull {
 			spr_idle = sprBigFishSkull;

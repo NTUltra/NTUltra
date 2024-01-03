@@ -28,6 +28,6 @@ scrBossFloor();
 active = false;
 lowHealth = false;
 acc = 2;
-discAmount = 6*clamp(GetPlayerLoops()-1,1,3);
+discAmount = round(6*clamp(GetPlayerLoops()-1,1,2));
 scrAddDrops(1);
 firstEntry = false;

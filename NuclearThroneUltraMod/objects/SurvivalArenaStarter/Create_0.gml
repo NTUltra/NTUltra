@@ -1,4 +1,5 @@
 /// @description Init
+depth = -2;
 image_speed = 0;
 var dis = 48;
 jumpScared = false;

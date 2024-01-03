@@ -63,7 +63,6 @@ else if um == ultramods.lightningPellet
 		ammo = 3+round(other.speed*0.8);
 		canUltraMod = false;
 		event_perform(ev_alarm,0)
-		visible = 0
 		with instance_create(x,y,LightningSpawn)
 		image_angle = other.image_angle
 	}

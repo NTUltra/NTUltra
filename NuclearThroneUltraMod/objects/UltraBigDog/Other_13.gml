@@ -6,7 +6,7 @@ if target != noone && instance_exists(target)
 	{
 		snd_play(sndRocket)
 		var rocketDir = point_direction(x,y,target.x,target.y);
-		with instance_create(x,y,JockRocket)
+		with instance_create(x,y,UltraBigDogRocket)
 		{
 			motion_add(rocketDir,2);
 			image_angle = direction

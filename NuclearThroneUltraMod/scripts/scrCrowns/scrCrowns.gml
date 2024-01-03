@@ -27,7 +27,7 @@ function scrCrowns() {
 	crown_tips[3] = "nothing goes unpunished"
 
 	crown_name[4] = "[CROWN OF HASTE]"
-	crown_text[4] = "<y>PI<y><r>CKU<r><g>PS<g> FADE FAST#ARE WORTH MORE"
+	crown_text[4] = "<y>RES<y><g>OUR<g><r>CES<r> FADE FAST#ARE WORTH MORE"
 	crown_used[4] = 0
 	crown_tips[4] = "no time for jokes"
 

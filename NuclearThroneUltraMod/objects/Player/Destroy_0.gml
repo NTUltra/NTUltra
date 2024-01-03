@@ -119,7 +119,6 @@ if race == 24
 			team = other.team
 			ammo = 8;
 		event_perform(ev_alarm,0)
-		visible = 0
 		with instance_create(x,y,LightningSpawn)
 		image_angle = other.image_angle}
 		with instance_create(x,y,Flame)
@@ -480,7 +479,7 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 			}
 			si++;
 		}
-		alarm[0]=60;
+		alarm[0] = 50;
 		alarm[1] = 5;
 		alarm[2] = 3;
 	}

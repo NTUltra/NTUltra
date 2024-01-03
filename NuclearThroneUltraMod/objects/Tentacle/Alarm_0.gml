@@ -13,7 +13,8 @@ if isog && team == 2
 		if ultra
 		{
 			with instance_create(x,y,UltraLightning)
-			{image_angle =other.image_angle
+			{
+				image_angle =other.image_angle
 				scrCopyWeaponMod(other);
 			team = other.team
 			ammo = other.ammo

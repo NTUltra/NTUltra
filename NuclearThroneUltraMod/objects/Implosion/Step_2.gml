@@ -112,7 +112,6 @@ alarm[2]=time * 2;//kraken rate.
     team = other.team
     ammo = 12+random(4);
     event_perform(ev_alarm,0)
-    visible = 0
     with instance_create(x,y,LightningSpawn)
     image_angle = other.image_angle}
     

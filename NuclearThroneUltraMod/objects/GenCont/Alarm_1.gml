@@ -228,9 +228,9 @@ if instance_exists(Player)
 		persistent = false;
 		x = Player.x;
 		y = Player.y;
+		speed = 0;
 		if instance_exists(Floor) && !collision_point(x,y,Floor,false,false)
 		{
-			speed *= 0.5;
 			var f = instance_nearest(x,y,Floor)
 			var o = 16;
 			if f.object_index == FloorExplo

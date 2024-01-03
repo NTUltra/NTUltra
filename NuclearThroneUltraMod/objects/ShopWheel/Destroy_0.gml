@@ -8,6 +8,6 @@ with UberCont
 		instance_deactivate_object(keepDeactive[| i]);	
 	}	
 }
-
+if instance_exists(Player) || instance_exists(PlayerSpawn)
 with DataRef
 	instance_destroy();

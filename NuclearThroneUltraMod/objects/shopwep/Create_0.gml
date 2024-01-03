@@ -17,5 +17,5 @@ if instance_exists(Player)
 }
 else
 {
-	instance_destroy();	
+	instance_destroy();
 }

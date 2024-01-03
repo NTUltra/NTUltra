@@ -9,22 +9,9 @@ if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(2) < 1 and poin
 
 gunangle = point_direction(x,y,target.x,target.y)+random(8)-4
 //SEE PLAYER
+alarm[3] = 7;
 
 
-spr_idle = sprSnowBotCarThrow
-spr_walk = sprInvertedSnowBotWalk
-spr_hurt = sprInvertedSnowBotHurt
-alarm[2] = 5/0.4
-sprite_index = spr_idle
-speed = 0
-image_index = 0
-snd_play(sndSnowBotThrow)
-instance_change(InvertedSnowBot,false)
-with instance_create(x,y,CarThrow)
-{
-team = other.team
-motion_add(other.gunangle,14)
-}
 
 }else if random(5) < 1
 {

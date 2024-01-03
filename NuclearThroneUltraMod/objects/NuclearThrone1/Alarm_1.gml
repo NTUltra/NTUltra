@@ -17,7 +17,7 @@ if target != noone && instance_exists(target)
 	{
 		fireTriShot = false;
 		badboyBuff = 0.5; //Player is a bad boy double the firerate
-		aTime *=0.5;
+		alarm[1] *= 0.5;
 		event_user(2);
 	}
 	

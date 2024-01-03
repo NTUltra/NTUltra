@@ -1,4 +1,5 @@
 /// @description Pause
+if instance_exists(Player)
 with UberCont
 {
 	with Player {

@@ -2118,7 +2118,7 @@ function scrWeapons() {
 	wep_text[191] = "this is mental!"
 	wep_swap[191] = sndSwapBow
 	wep_rad[191] = 0;
-
+/*
 	wep_name[192] = "TIME BOMB"
 	wep_type[192] = 4
 	wep_auto[192] = 0
@@ -2129,6 +2129,17 @@ function scrWeapons() {
 	wep_text[192] = "feels like it is lagging"
 	wep_swap[192] = sndSwapExplosive
 	wep_rad[192] = 0;
+*/
+	wep_name[192] = "ULTRA BOMB LOBBER"
+	wep_type[192] = 4
+	wep_auto[192] = 0
+	wep_load[192] = 25
+	wep_cost[192] = 3
+	wep_sprt[192] = sprUltraBombLobber
+	wep_area[192] = 22
+	wep_text[192] = "look out above"
+	wep_swap[192] = sndSwapExplosive
+	wep_rad[192] = 20;
 
 	wep_name[193] = "ULTRA BLADE GUN"
 	wep_type[193] = 3
@@ -2159,7 +2170,7 @@ function scrWeapons() {
 	wep_cost[195] = 2.5
 	wep_sprt[195] = sprBigKrakenGun
 	wep_area[195] = 6
-	wep_text[195] = "hentai gun"
+	wep_text[195] = "sentai gun"
 	wep_swap[195] = sndSwapDragon
 	wep_rad[195] = 0;
 
@@ -3189,7 +3200,7 @@ function scrWeapons() {
 	wep_name[289] = "ULTRA SLUGGER"
 	wep_type[289] = 2
 	wep_auto[289] = 0
-	wep_load[289] = 17//22
+	wep_load[289] = 15//22
 	wep_cost[289] = 2
 	wep_sprt[289] = sprUltraSlugger
 	wep_area[289] = 25
@@ -3553,7 +3564,7 @@ function scrWeapons() {
 	wep_type[322] = 4
 	wep_auto[322] = 1
 	wep_load[322] = 4
-	wep_cost[322] = 1
+	wep_cost[322] = 0.75
 	wep_sprt[322] = sprSnowDragon
 	wep_area[322] = 14
 	wep_text[322] = "cold breath"
@@ -3622,7 +3633,7 @@ function scrWeapons() {
 	wep_cost[328] = 0
 	wep_sprt[328] = sprBlackSword
 	wep_area[328] = -1
-	wep_text[328] = "chicken hates her sword"
+	wep_text[328] = "chicken fears her sword"
 	wep_swap[328] = sndSwapSword
 	wep_rad[328] = 0;
 

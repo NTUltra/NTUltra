@@ -1103,7 +1103,6 @@ function scrPowers() {
 						team = other.team
 						ammo = 6
 						event_perform(ev_alarm,0)
-						visible = 0
 						with instance_create(x,y,LightningSpawn)
 						image_angle = other.image_angle}
 			    }
@@ -1170,7 +1169,6 @@ function scrPowers() {
 					team = other.team
 					ammo = 6
 					event_perform(ev_alarm,0)
-					visible = 0
 					with instance_create(x,y,LightningSpawn)
 					image_angle = other.image_angle}
 			    }
@@ -1288,7 +1286,6 @@ function scrPowers() {
 							team = other.team
 							ammo = 8
 							event_perform(ev_alarm,0)
-							visible = 0
 							with instance_create(x,y,LightningSpawn)
 								image_angle = other.image_angle
 						}
@@ -1300,7 +1297,6 @@ function scrPowers() {
 							team = other.team
 							ammo = 6
 							event_perform(ev_alarm,0)
-							visible = 0
 							with instance_create(x,y,LightningSpawn)
 							image_angle = other.image_angle
 						}
@@ -1973,7 +1969,7 @@ function scrPowers() {
 		{
 			snd_play(sndExplosion);
 			if Player.skill_got[5] = 1
-				snd_play_2d(choose(sndCorpseExploUpg,sndCorpseExploUpg,sndMeatExplo,sndCorpseExplo),0.1)
+				snd_play_2d(choose(sndCorpseExploUpg,sndCorpseExploUpg,sndMeatExplo,sndCorpseExplo),0.05)
 			else
 				snd_play_2d(sndCorpseExplo)	
 		}
@@ -2876,10 +2872,9 @@ function scrPowers() {
 				{
 					if scrIsCrown(13)
 					{
-						repeat(lostAmmo)
-							with Crown {
-								event_user(0);	
-							}
+						with Crown {
+							event_user(0);	
+						}
 					}
 				}
 			}

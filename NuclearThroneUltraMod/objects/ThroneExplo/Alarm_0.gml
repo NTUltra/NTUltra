@@ -1,10 +1,21 @@
 /// @description Death
 Sleep(100)
-repeat(42)
-instance_create(x+random(160-rr)-80-(rr*0.5),y+random(160-rr)-80-(rr*0.5),explo)
+var spd = 0;
+var dir = 0;
+if instance_exists(Player)
+{
+	spd = 0.1;
+	dir = point_direction(x,y,Player.x,Player.y);
+	if sprite_index == sprNothing2Death || sprite_index == sprInvertedNothing2Death
+		dir += 180;
+}
+repeat(38)
+	with instance_create(x+random(160-rr)-80-(rr*0.5),y+random(160-rr)-80-(rr*0.5),explo)
+		motion_add(dir,spd);
 
-repeat(30)
-instance_create(x+random(200-rr)-100-(rr*0.5),y+random(200-rr)-100-(rr*0.5),explo)
+repeat(28)
+	with instance_create(x+random(200-rr)-100-(rr*0.5),y+random(200-rr)-100-(rr*0.5),explo)
+		motion_add(dir,spd);
 
 
 snd_play_2d(snd_death);
@@ -40,7 +51,6 @@ if sprite_index == sprNothing2Death || sprite_index == sprInvertedNothing2Death
 		speed = 16
 		}
 	}
-	debug("Still alive: ",instance_number(Friend))
 	if !instance_exists(SurvivalWave)
 	{
 		if ((!instance_exists(Friend) || instance_number(Friend) < UberCont.racemax-1 || UberCont.beatTheGame))

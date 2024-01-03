@@ -962,7 +962,7 @@ function scrFire2(hasTailNow) {
 	snd_play_fire(sndGoldRocket)
 
 	with instance_create(x,y,Rocket)
-	{motion_add(aimDirection+(random(4)-2)*other.accuracy,2)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,4)
 	image_angle = direction
 	team = other.team
 	snd = sndGoldRocketFly;
@@ -1389,7 +1389,6 @@ function scrFire2(hasTailNow) {
 	team = other.team
 	ammo = 26
 	event_perform(ev_alarm,0)
-	visible = 0
 	with instance_create(x,y,LightningSpawn)
 	image_angle = other.image_angle}
 
@@ -3486,7 +3485,6 @@ function scrFire2(hasTailNow) {
 		team = other.team
 		ammo = 13
 		event_perform(ev_alarm,0)
-		visible = 0
 		with instance_create(x,y,LightningSpawn)
 		image_angle = other.image_angle}
 
@@ -3495,7 +3493,6 @@ function scrFire2(hasTailNow) {
 		team = other.team
 		ammo = 12
 		event_perform(ev_alarm,0)
-		visible = 0
 		with instance_create(x,y,LightningSpawn)
 		image_angle = other.image_angle}
 
@@ -3826,7 +3823,6 @@ function scrFire2(hasTailNow) {
 	team = other.team
 	ammo = 11
 	event_perform(ev_alarm,0)
-	visible = 0
 	with instance_create(x,y,LightningSpawn)
 	image_angle = other.image_angle}
 
@@ -4045,7 +4041,6 @@ function scrFire2(hasTailNow) {
 	team = other.team
 	ammo = 6
 	event_perform(ev_alarm,0)
-	visible = 0
 	with instance_create(x,y,LightningSpawn)
 	image_angle = other.image_angle}
 	}
@@ -4429,7 +4424,6 @@ function scrFire2(hasTailNow) {
 	team = other.team
 	ammo = 16
 	event_perform(ev_alarm,0)
-	visible = 0
 	with instance_create(x,y,LightningSpawn)
 	image_angle = other.image_angle}
 
@@ -9344,26 +9338,30 @@ function scrFire2(hasTailNow) {
 	snd_play_fire(sndLightningCannonUpg);
 	var r = right;
 	var t = team;
+	var i = 0.1;
 	with Floor
 	{
-		with instance_create(x,y,Lightning)
+		if object_index != FloorExplo
 		{
-			dmg -= 1;
-			image_angle = random(360);
-			accuracy = 60;
-			branch = 40;
-			iframeskip = max(0,iframeskip-0.04);
-			team = 2
-			ammo = 5;//24
-			event_perform(ev_alarm,0)
-			visible = 0
-			with instance_create(x,y,LightningSpawn)
+			with instance_create(x,y,Lightning)
 			{
-				alarm[0] = other.alarm[0];
-				image_angle = other.image_angle;
-				image_speed = 0;
-				visible = false;
+				dmg -= 1;
+				image_angle = random(360);
+				accuracy = 60;
+				branch = 40;
+				iframeskip = max(0,iframeskip-0.04);
+				team = 2
+				ammo = 5;//24
+				alarm[0] = ceil(i);
+				with instance_create(x,y,LightningSpawn)
+				{
+					alarm[0] = other.alarm[0];
+					image_angle = other.image_angle;
+					image_speed = 0;
+					visible = false;
+				}
 			}
+			i += 0.1;
 		}
 	}
 	BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
@@ -9506,7 +9504,6 @@ function scrFire2(hasTailNow) {
 			team = other.team
 			ammo = 16;
 		event_perform(ev_alarm,0)
-		visible = 0
 		with instance_create(x,y,LightningSpawn)
 		image_angle = other.image_angle}
 		angg += angStep
@@ -9521,7 +9518,6 @@ function scrFire2(hasTailNow) {
 		team = other.team
 		ammo = 24;
 		event_perform(ev_alarm,0)
-		visible = 0
 		with instance_create(x,y,LightningSpawn)
 			image_angle = other.image_angle
 	}
@@ -9534,7 +9530,6 @@ function scrFire2(hasTailNow) {
 		team = other.team
 		ammo = 24;
 		event_perform(ev_alarm,0)
-		visible = 0
 		with instance_create(x,y,LightningSpawn)
 			image_angle = other.image_angle
 	}

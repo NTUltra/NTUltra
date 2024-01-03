@@ -1,9 +1,11 @@
-if UberCont.recursionCheck > 30
+if UberCont.recursionCheck > 28
 {
 	alarm[0] = 1;
-	image_index -= image_speed;
 	exit;
 }
+image_speed = imageSpeed;
+image_index = 0;
+visible = true;
 var ultraMod = -1
 var simpleAccuracy = 1.5;
 if instance_exists(Player){
@@ -15,22 +17,23 @@ if instance_exists(Player){
 		{
 			snd_play(choose(sndWater1,sndWater2),0.1,true);
 			with instance_create(x,y,Tentacle)
-			{image_angle = other.image_angle;
+			{
+				image_angle = other.image_angle;
 				scrCopyWeaponMod(other);
 				team = other.team
 				ammo = other.ammo
 				isog = false;
-			alarm[0] = 1;
-			visible = 0
-			with instance_create(x,y,LightningSpawn)
-			{
-			sprite_index=sprTentacleSpawn
-			image_angle = other.image_angle
-			}
-			repeat(3){
-			    with instance_create(x,y,FishBoost)
-			    {
-			    motion_add(image_angle+random(60)-30,2+random(4) );
+				alarm[0] = 1;
+				visible = 0
+				with instance_create(x,y,LightningSpawn)
+				{
+				sprite_index=sprTentacleSpawn
+				image_angle = other.image_angle
+				}
+				repeat(3){
+				    with instance_create(x,y,FishBoost)
+				    {
+				    motion_add(image_angle+random(60)-30,2+random(4) );
 			    }}
 
 			}
@@ -59,8 +62,57 @@ if instance_exists(Player){
 	}
 	if accuracy<0
 		accuracy=0;
-
-	if team!=Player.team
+}
+else{
+	instance_destroy();
+	exit;
+}
+if team == 2 && isog
+{
+	var modBoost = 1;//0.055;
+	with Player
+	{
+		if ultra_got[59] && !altUltra
+		{
+			//ammoDecrease -= 0.1;
+			other.ammo *= 1.2;
+			other.ammo += 2;
+		}
+		if skill_got[17]
+		{
+			//ammoDecrease -= 0.07;
+			other.ammo *= 1.1;
+			other.ammo += 2;
+		}
+		if skill_got[30] == 1//Power craving
+			modBoost = 2;
+	}
+	//Projectile Speed
+	if Mod1 == 11
+		other.ammo += modBoost;
+	if Mod2 == 11
+		other.ammo += modBoost;
+	if Mod3 == 11
+		other.ammo += modBoost;
+	if Mod4 == 11
+		other.ammo += modBoost;
+	//if !Player.ultra_got[93] && place_meeting(x,y,VikingWall)
+	//	hitElementorWall = true;
+}
+ammo = round(ammo);
+var xxx = x;
+var yyy = y;
+var xscale = 1;
+var angle = image_angle;
+direction = angle;
+var arI = 0;
+for(var i = ammo; i > 0; i -= 1)
+{
+	var oldx = xxx
+	var oldy = yyy
+	direction = direction+((random(branch)-branch*0.5)*simpleAccuracy)//simpleAccuracy 30-15   24-12
+	speed = 4
+	if team != 2
 	{
 		scrTarget();
 		if Player.ultra_got[43] && !Player.altUltra//hunter focused fire
@@ -73,117 +125,80 @@ if instance_exists(Player){
 	}
 	else if target == noone && instance_exists(enemy)
 	{
-		target = instance_nearest(x+lengthdir_x(12,image_angle),y+lengthdir_y(12,image_angle),enemy);
+		target = instance_nearest(xxx+lengthdir_x(12,angle),yyy+lengthdir_y(12,angle),enemy);
 	}
-}
-else{
-	instance_destroy();
-	exit;
-}
-	
-var oldx, oldy;
-oldx = x
-oldy = y
-direction = image_angle+((random(branch)-branch*0.5)*simpleAccuracy)//30-15   24-12
-speed = 4
-if instance_exists(target) && target != noone && target.team != team && target.my_health > 0
-{
-	//var dir = instance_nearest(x+lengthdir_x(80,direction),y+lengthdir_y(80,direction),target)
-	if !collision_line(x,y,target.x,target.y,Wall,false,false) && point_distance(x,y,target.x,target.y) < 150-accuracy*2
-		motion_add(point_direction(x,y,target.x,target.y),1.5-(accuracy*0.04))
-}
-image_angle = direction
-speed = 0
-
-//move_contact_solid(direction,7+random(4))
-//move_contact_solid(direction,8);
-var i = 0;
-var dis = 8;
-while (i < dis)
-{
-	x += lengthdir_x(1,direction);
-	y += lengthdir_y(1,direction);
-	var wall = instance_place(x,y,Wall);
-	if ((wall != noone && wall.object_index != WallHitMe) || (team != 2 && place_meeting(x,y,ElementorWallPhase)))
+	if instance_exists(target) && target != noone && target.team != team && target.my_health > 0
 	{
-		i = dis;
-		direction += 180+random_range(-20,20);
+		//var dir = instance_nearest(x+lengthdir_x(80,direction),y+lengthdir_y(80,direction),target)
+		if !collision_line(xxx,yyy,target.x,target.y,Wall,false,false) && point_distance(x,y,target.x,target.y) < 150-accuracy*2
+			motion_add(point_direction(xxx,yyy,target.x,target.y),1.5-(accuracy*0.04))
 	}
-	i ++;
-}
-speed = 0
-image_xscale = -point_distance(x,y,oldx,oldy)*0.5;
-var ammoDecrease = 1;
-if team == 2
-{
-	var modBoost = 0.055;
-	with Player
+	angle = direction
+	speed = 0
+	var j = 0;
+	var dis = 8;
+	while (j < dis)
 	{
-		if ultra_got[59] && !altUltra
+		xxx += lengthdir_x(1,direction);
+		yyy += lengthdir_y(1,direction);
+		var wall = instance_place(xxx,yyy,Wall);
+		if ((wall != noone && wall.object_index != WallHitMe) || (team != 2 && place_meeting(xxx,yyy,ElementorWallPhase)))
 		{
-			ammoDecrease -= 0.1;
+			j = dis;
+			direction += 180+random_range(-20,20);
 		}
-		if skill_got[17]
-			ammoDecrease -= 0.07;
-		if skill_got[30] == 1//Power craving
-			modBoost = 0.08;
+		j ++;
 	}
-	//Projectile Speed
-	if Mod1 == 11
-		ammoDecrease -= modBoost;
-	if Mod2 == 11
-		ammoDecrease -= modBoost;
-	if Mod3 == 11
-		ammoDecrease -= modBoost;
-	if Mod4 == 11
-		ammoDecrease -= modBoost;
-	//if !Player.ultra_got[93] && place_meeting(x,y,VikingWall)
-	//	hitElementorWall = true;
-}
-ammo -= ammoDecrease;
-/*
-if hitElementorWall
-{
-	x = xprevious
-	y = yprevious
-	direction += 180+random_range(-20,20)
-}
-else
-{
-	var wall = instance_place(x,y,Wall)
-	if hitElementorWall || wall != noone && wall.object_index != WallHitMe
+	speed = 0
+	xscale = -point_distance(xxx,yyy,oldx,oldy)*0.5;
+	if ultraMod == ultramods.lightningPellet
 	{
-		x = xprevious
-		y = yprevious
-		direction += 180+random_range(-20,20)
+		snd_play(sndPopgun,0.1,true);
+		var odd = false;
+		if i > 0
+		{
+			odd = round(i) % 3 == 0
+		}
+		with instance_create(xxx,yyy,Bullet2)
+		{
+			direction = other.direction;
+			if odd
+				direction += 90;
+			else
+				direction -= 90;
+			image_angle = direction;
+			speed = 7;
+			team = other.team;
+			alarm[11] = 0;
+		}
+		if i <= 0
+		{
+			with instance_create(xxx,yyy,Bullet2)
+			{
+				direction = other.direction;
+				image_angle = direction;
+				speed = 7;
+				team = other.team;
+				alarm[11] = 0;
+			}
+		}
+		instance_destroy(id,false);	
 	}
-}*/
-
-if round(ammo) > 0
-{
-	image_index += 0.4/max(1,ceil(ammo));
-	with instance_create(x,y,object_index)
+	else
 	{
-		//target = other.target;
-		isog = other.isog;
-		branch = other.branch;
-		fork = other.fork;
-		canUltraMod = other.canUltraMod;
-		dmg = other.dmg;
-		scrCopyWeaponMod(other);
-		accuracy=other.accuracy;
-		direction = other.direction
-		image_angle = direction
-		ammo = other.ammo
-		team = other.team
-		image_index = other.image_index
-		event_perform(ev_alarm,0)
+		lightningList[arI] = {
+			xx: xxx,
+			yy: yyy,
+			xs: xscale,
+			ang: angle,
+		};
+		arI += 1;
 	}
-	if team == 2 && round(ammo) % fork == 0//Forking lightning
+	if i > 0 && team == 2 && round(i) % fork == 0//Forking lightning
 	{
 		if instance_exists(Player) && Player.ultra_got[96] && choose(true,true,false)
 		{
-			with instance_create(x,y,Tentacle)
+			with instance_create(xxx,yyy,Tentacle)
 			{
 				direction = other.direction+choose(80+random(30),-80+random(-30))
 				image_angle = direction
@@ -207,7 +222,7 @@ if round(ammo) > 0
 		}
 		else
 		{
-			with instance_create(x,y,object_index)
+			with instance_create(xxx,yyy,object_index)
 			{
 				target = other.target;
 				isog = other.isog;
@@ -219,7 +234,7 @@ if round(ammo) > 0
 				accuracy=other.accuracy*2;
 				direction = other.direction+choose(80+random(30),-80+random(-30))
 				image_angle = direction
-				ammo = clamp(round(other.ammo*0.34),2,16);
+				ammo = clamp(round((i)*0.34),2,16);
 				team = other.team
 				image_index = other.image_index
 				event_perform(ev_alarm,0)
@@ -227,41 +242,8 @@ if round(ammo) > 0
 		}
 	}
 }
-else if ultraMod != ultramods.lightningPellet
+if ultraMod != ultramods.lightningPellet
 {
-	alarm[0] = 0;
-	instance_create(x+lengthdir_x(image_xscale/2,image_angle),y+lengthdir_y(image_xscale/2,image_angle),LightningHit)
+	instance_create(xxx,yyy,LightningHit);
+	event_perform(ev_alarm,2);
 }
-if ultraMod == ultramods.lightningPellet && alarm[0] < 1
-{
-	if isog
-	{
-		snd_play(sndPopgun,0.1,true);
-	}
-	var odd = false;
-	if ammo > 0
-		odd = round(ammo) % 3 == 0
-	with instance_create(x,y,Bullet2)
-	{
-		direction = other.direction;
-		if odd
-			direction += 90;
-		else
-			direction -= 90;
-		image_angle = direction;
-		speed = 7;
-		team = other.team;
-		alarm[11] = 0;
-	}
-	if ammo <= 0
-	with instance_create(x,y,Bullet2)
-	{
-		direction = other.direction;
-		image_angle = direction;
-		speed = 7;
-		team = other.team;
-		alarm[11] = 0;
-	}
-	instance_destroy(id,false);	
-}
-

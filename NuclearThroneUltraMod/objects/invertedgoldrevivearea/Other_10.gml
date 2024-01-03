@@ -22,7 +22,6 @@ with instance_create(tx,ty,choose(InvertedFreak,InvertedExploFreak))
 			team = other.team
 			ammo = l;
 			event_perform(ev_alarm,0)
-			visible = 0
 			with instance_create(x,y,LightningSpawn)
 			image_angle = other.image_angle
 		}

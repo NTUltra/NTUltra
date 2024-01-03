@@ -20,7 +20,7 @@ event_inherited()
 canMoveOver = true;
 shadowSprite = shd48;
 snd_hurt = sndHitRock
-alarm[1]=430;
+alarm[1]=470;
 if scrIsHardMode() || scrIsGamemode(20)
 	alarm[1] += 60;
 alarm[1] *= clamp(loops*2.5,1,6)//335//10 seconds 300

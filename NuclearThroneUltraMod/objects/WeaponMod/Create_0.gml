@@ -1,6 +1,7 @@
 image_speed=0;
 shouldClose = true;
 wepmod=scrMods();
+depth = 0;
 if instance_exists(WeaponMod) && instance_number(WeaponMod) > 1
 {
 	var nearest = instance_nearest_notme(x,y,WeaponMod);

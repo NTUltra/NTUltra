@@ -1,5 +1,5 @@
 /// @description Small Explosions
-alarm[2] = 3;
+alarm[2] = 4;
 var dir = random(360);
 var dis = random(96);
 var xx = x + lengthdir_x(dis,dir);

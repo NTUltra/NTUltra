@@ -6,6 +6,7 @@ if speed < 1
 		snd_play(sndUltraGrenadeSuck);
 		alarm[0] = 30 * audio_sound_length(sndUltraGrenadeSuck);
 		alarm[3] = alarm[0] - 12;
+		alarm[4] = 1;
 	}
 	var mask = mask_index;
 	mask_index = mskUltraGrenadeSuck;

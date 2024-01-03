@@ -10,7 +10,7 @@ if my_health > 0
 		alarm[1] += 700;
 		with instance_create(x,y,WantBoss)
 		{
-			event_perform(ev_alarm,0) 
+			event_perform(ev_alarm,0);
 		}
 		with Player {
 			curse = 1;

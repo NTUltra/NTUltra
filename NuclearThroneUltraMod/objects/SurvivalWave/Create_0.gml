@@ -1,4 +1,5 @@
 /// @description Init
+depth = -2;
 wave = [];
 waveNumber = 0;
 waveNumberOffset = 0;

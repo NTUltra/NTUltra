@@ -15,7 +15,6 @@ repeat(am)
 		team = other.team
 		ammo = 30;
 		event_perform(ev_alarm,0)
-		visible = 0
 		with instance_create(x,y,LightningSpawn)
 			image_angle = other.image_angle
 	}

@@ -20,12 +20,14 @@ if ShopWheel.alarm[0] > 0
 	{
 	    with instance_create(Player.x,Player.y,TemporaryBuff)
 	    {
-	    maxhp=Player.maxhealth;
-	    maxSpeed=Player.maxSpeed;
+			maxhp = 8;
+			maxSpeed = 2;
 	    }
-	    Player.maxhealth+=8;
-	    Player.my_health+=8;
-	    Player.maxSpeed+=2;
+		with Player {
+			maxhealth += 8;
+			my_health += 8;
+			maxSpeed += 2;
+		}
     }
 }
 }

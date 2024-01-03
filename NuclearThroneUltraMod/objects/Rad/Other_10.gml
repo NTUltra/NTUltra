@@ -76,7 +76,6 @@ if instance_exists(Player)
 				///if Player.ultra_got[59]=1 
 				///ammo+=4;
 				event_perform(ev_alarm,0)
-				visible = 0
 				with instance_create(x,y,LightningSpawn)
 				image_angle = Player.image_angle
 			}

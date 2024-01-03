@@ -5,11 +5,11 @@ if instance_exists(Player) and !instance_exists(GenCont) and !instance_exists(Le
 	spawnedThisManyPopo ++ ;
 	//chance that idpd stop spawning
 	if spawnedThisManyPopo < canSpawnPopoThisManyTimes
-		alarm[1] = 1000 - min(100,loops*10) + irandom(90);//500
+		alarm[1] = 1000 - min(90,loops*10) + irandom(90);//500
 
 	if  (instance_number(enemy) - instance_number(IDPDVan) > 3)
 	{
-		repeat(min(8,loops))    
+		repeat(min(7,loops))    
 		instance_create(Player.x,Player.y,IDPDSpawn)        
 
 		if scrIsCrown(16)//crown of popo

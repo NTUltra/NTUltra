@@ -20,6 +20,9 @@ motion_add(random(360),1+random(1))
 alarm[0] = 2+random(4)
 }           }
 }
-
-if collision_point(x,y + vspeed,WallHitMe,false,false) || y > ystart + 400 || y < ystart - 200
+if horizontal && collision_point(x + hspeed,y,WallHitMe,false,false) || x > xstart + 200 || x < xstart - 200
+{
+	hspeed *= -1;
+}
+else if collision_point(x,y + vspeed,WallHitMe,false,false) || y > ystart + 400 || y < ystart - 200
 	vspeed *= -1;

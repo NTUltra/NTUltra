@@ -1,2 +1,2 @@
-if speed < 16
+if speed < 24
 speed += 2;

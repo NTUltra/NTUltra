@@ -160,7 +160,6 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 					team = other.team
 					ammo = 16;
 					event_perform(ev_alarm,0)
-					visible = 0
 					with instance_create(x,y,LightningSpawn)
 					image_angle = other.image_angle}
 					angl += anglStep;

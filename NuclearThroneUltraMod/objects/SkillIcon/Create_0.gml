@@ -1,4 +1,5 @@
 scrSkills()
+depth = -102;
 p = 0
 skillIndex = 0;
 totalSkills = 1;

@@ -7,7 +7,7 @@ prevViewY = 0;
 prevviewx2 = 0
 prevviewy2 = 0
 smoothing = 0.2;
-
+depth = 5;
 shake = 0
 kills = 0
 enemiesInStartLevel=0;
@@ -86,15 +86,15 @@ if instance_exists(Player)
 		vanDelay *= 0.8;
 	}
 	wantVanAmount += UberCont.extraVan;
-	vanDelay = max(100,vanDelay - ((wantVanAmount-1)*40));
+	vanDelay = max(140,vanDelay - ((wantVanAmount-1)*40));
 	if scrIsCrown(10)//crown of difficulty
 	{
 		vanDelay*=0.7;
 	}
-	if Player.ultra_got[82]
+	if Player.ultra_got[82]//Anomaly
 	{
 		alarm[3]=60;
-	//maxEnemyHealthInLevel=0;
+		//maxEnemyHealthInLevel=0;
 	}
 	
 	if (

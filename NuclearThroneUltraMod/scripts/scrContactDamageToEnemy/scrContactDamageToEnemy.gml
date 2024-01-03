@@ -163,7 +163,12 @@ function scrContactDamageToEnemy(hitEnemy){
 					        motion_add(point_direction(hitEnemy.x,hitEnemy.y,x,y)+180,8)
         
 					        with hitEnemy
-					        move_contact_solid(point_direction(other.x,other.y,x,y)+180,4);
+							{
+								move_contact_solid(point_direction(other.x,other.y,x,y)+180,4);
+								speed = 0;
+								walk = min(walk,5);
+								alarm[1] += 10;
+							}
 				
 							if hitEnemy.object_index == IDPDVan
 							{
@@ -172,7 +177,7 @@ function scrContactDamageToEnemy(hitEnemy){
 								else
 									scrUnlockGameMode(8,"FOR GETTING HIT BY A VAN");
 							}
-        
+							
 					        Sleep(100)
 				        }
 				    }

@@ -1,5 +1,5 @@
 /// @description Explosions
-alarm[1] = 5;
+alarm[1] = 6;
 snd_play(sndExplosion);
 var dir = random(360);
 var dis = random(96);
