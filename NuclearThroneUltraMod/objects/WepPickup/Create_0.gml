@@ -1,4 +1,5 @@
 //with (other) {
+depth = 2;
 wasThrown = false;
 image_angle = random(360)
 image_speed = 0

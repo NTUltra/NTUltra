@@ -127,3 +127,5 @@ difficultyStep = 0;
 snd_loop(sndBecomeNothingIdle);
 foreverBeam = false;
 xStart = x;
+tookDamageThisFrame = 0;
+version = 2;

@@ -1,11 +1,18 @@
 /// @description Check if I die so disable me
+if my_health <= maxhealth * 0.5 && loops > 0 && !reachedHalfHealth && !disable
+{
+	reachedHalfHealth = true;
+	snd_play(sndNothingBeamWarn,0);
+	alarm[4] = laserTellTime;
+}
 if my_health <= 0 && !disable
 {
 	my_health = 99999;
+	/*
 	with NuclearThrone1
 	{
 		my_health -= 120;
-	}
+	}*/
 	disable = true;
 	BackCont.shake += 20;
 	BackCont.viewy2 += 40*UberCont.opt_shake;

@@ -7326,9 +7326,9 @@ function scrWeapons() {
 	wep_type[662] = 4
 	wep_auto[662] = 0
 	wep_load[662] = 17
-	wep_cost[662] = 2.5
+	wep_cost[662] = 3
 	wep_sprt[662] = sprPhoenixGun
-	wep_area[662] = 12
+	wep_area[662] = 13
 	wep_text[662] = "fire bird"
 	wep_swap[662] = sndSwapDragon
 	wep_rad[662] = 0;

@@ -4,7 +4,7 @@
   "name": "mskNothingSide",
   "bbox_bottom": 126,
   "bbox_left": 23,
-  "bbox_right": 127,
+  "bbox_right": 155,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 0,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 128,
+  "width": 156,
 }

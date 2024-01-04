@@ -1,5 +1,6 @@
 /// @description Init
 maxhealth = 700;
+loops = GetPlayerLoops()
 scrBossHealthBuff();
 disable = false;
 mySize = 8;
@@ -35,7 +36,7 @@ spriteXscale = 1;
 legXoffset = 0;
 projectileSpeed = 6;
 firerate = 7;
-firerate -= (min(GetPlayerLoops(),5)*0.5);
+firerate -= (min(loops,5)*0.5);
 maxAmmo = 8
 ammo = maxAmmo;
 //left side
@@ -44,6 +45,8 @@ gunangle[1] = 300;
 gunangle[2] = 330;
 angleI = 0;//random(array_length(gunangle)-1);
 badboyBuff = 1;
-loops = GetPlayerLoops()
-tookDamageThisFrame = false;
+tookDamageThisFrame = 0;
 walkAnim = 0;
+reachedHalfHealth = false;
+laserTellTime = 30;
+myLasers = ds_list_create();

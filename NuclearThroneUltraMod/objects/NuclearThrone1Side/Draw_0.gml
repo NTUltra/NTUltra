@@ -8,4 +8,15 @@ repeat (am)
 	yy += ys;
 }
 draw_sprite_ext(sprite_index,0,x,y,spriteXscale,1,0,c_white,1);
-//draw_sprite_ext(mask_index,image_index,x,y,image_xscale,image_yscale,image_angle,c_white,0.6);
+
+if alarm[4] > 0 || alarm[5] > 0
+{
+	var lasx = x
+	var lasy = y + 64;
+	var lasd = 0
+	do {lasd += 1 lasy += 2}
+	until position_meeting(lasx,lasy,Wall) or lasd > 1000
+	draw_sprite_ext(sprLaserSightThrone,-1,x-16,y,1,lasy+1,0,c_white,1)
+	draw_sprite_ext(sprLaserSightThrone,-1,x+16,y,1,lasy+1,0,c_white,1)
+	draw_sprite_ext(sprLaserSightThrone,-1,x,y,1,lasy+1,0,c_white,1)
+}

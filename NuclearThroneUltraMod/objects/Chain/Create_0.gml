@@ -3,7 +3,7 @@ friction = 0.2//0.6
 image_speed = 0;
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable
 candmg=true;
-dmg = 1;
+dmg = 0.5;
 if UberCont.ultramodSwap
 	event_user(0);
 
