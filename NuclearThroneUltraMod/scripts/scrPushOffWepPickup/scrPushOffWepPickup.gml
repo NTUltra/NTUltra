@@ -7,9 +7,12 @@ function scrPushOffWepPickup(){
 	if w != noone && point_distance(x,y,w.x,w.y) <= range
 	{
 		with w {
-			vspeed += 0.1;
-			if speed < 4
-				motion_add(direction,2);	
+			if canBeMoved
+			{
+				vspeed += 0.1;
+				if speed < 4
+					motion_add(direction,2);
+			}
 		}
 	}
 	alarm[6] = 1;

@@ -16,6 +16,7 @@ sprite_index = sprProtoChestOpen
 		sprite_index = wep_sprt[wep]
 		speed = 0;
 		alarm[5] = 0;
+		canBeMoved = false;
 	}
 	wep = 0;
 instance_create(x,y,FXChestOpen)

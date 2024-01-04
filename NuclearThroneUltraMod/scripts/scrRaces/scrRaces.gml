@@ -454,7 +454,7 @@ function scrRaces() {
 	race_pass[25] = "ALL <g>MUTATIONS<g> ARE UPGRADED#GETS LESS <g>RADIATION<g> FROM ENEMIES"//SLIGHTLY BETTER MUTATIONS# LEVELS SLOWER
 	race_acti[25] = "CONVERT <r>LIFE<r> TO <g>RADS<g>"
 	race_butt[25] = "YOUR <w>ACTIVE<w> ALSO#DEALS DAMAGE TO ALL ENEMIES ON SCREEN#AND STEALS SOME OF THEIR <g>RADS<g>"
-	race_butt_detail[22] = race_butt[22];
+	race_butt_detail[25] = race_butt[25];
 	//race_back[25] = "LESS HP COST?";
 	race_lock[25] = "REACH LEVEL ULTRA"//REACH LEVEL ULTRA
 	race_have[25] = 0
