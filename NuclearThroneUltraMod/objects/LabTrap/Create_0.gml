@@ -1,4 +1,5 @@
 //side = choose(0,1)
+depth = -8;
 side=0;
 alarm[0] = 90;
 alarm[1] = 90;

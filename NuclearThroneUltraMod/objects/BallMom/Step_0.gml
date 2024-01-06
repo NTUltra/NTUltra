@@ -10,7 +10,11 @@ else if hspeed < 0
 right = -1
 
 if instance_exists(GenCont) || instance_exists(Spiral)
+{
 	speed = 0;
+	if instance_exists(Player)
+		direction = point_direction(x,y,Player.x,Player.y) + 180;
+}
 else
 	speed = maxSpeed;
 

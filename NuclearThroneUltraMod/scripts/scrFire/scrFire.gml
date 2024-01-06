@@ -4942,7 +4942,7 @@ function scrFire() {
 	{
 		if  reload > 0 && scrMeleeWeapons(wep)
 	    {
-			reload -= wep_load[wep]*0.4;//0.6;
+			reload -= wep_load[wep]*0.45;//0.6;
 	    }
 	}
 	if Player.ultra_got[33] && Player.altUltra

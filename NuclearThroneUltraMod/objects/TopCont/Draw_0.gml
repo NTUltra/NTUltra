@@ -498,7 +498,8 @@ with Player
 		lerp(0.5,0.8,( 1 + PlayerAlarms2.alarm[11] ) / 6));
 	}
 }
-scrDrawBloom()
+if bloom
+	scrDrawBloom()
 scrDarkness()
 if darkness = 1 && surface_exists(dark)
 {

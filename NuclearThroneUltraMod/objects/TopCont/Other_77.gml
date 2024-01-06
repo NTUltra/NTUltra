@@ -1,0 +1,2 @@
+/// @description Bloom
+bloom = true;

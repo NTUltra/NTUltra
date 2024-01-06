@@ -93,11 +93,14 @@ snd_play(sndEliteInspectorEnd)
 
 wkick = 8
 with instance_create(x,y,PopoNade){
-motion_add(other.gunangle+random(20)-10,10)
-image_angle = direction
-team = other.team
-if team == 2
-	sprite_index = sprPopoNadeRogue;}
+	motion_add(other.gunangle+random(20)-10,10)
+	image_angle = direction
+		team = other.team
+		if team == 2
+		{
+			sprite_index = sprPopoNadeRogue;
+		}	
+	}
 }
 
 }

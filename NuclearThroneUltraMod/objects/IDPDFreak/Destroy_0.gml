@@ -14,9 +14,17 @@ if lifes > 0
 	repeat(am)
 	{
 		with instance_create(x,y,PopoNade){
+			team = other.team;
 			motion_add(ang,other.nadeSpeed)
 			image_angle = direction
 			team = other.team
+			if team == 2
+				sprite_index = sprPopoNadeRogue;
+			else if team == 4
+			{
+				sprite_index = sprPopoNadeFreak;
+				col = c_lime;
+			}
 		}
 		ang += angStep;
 	}

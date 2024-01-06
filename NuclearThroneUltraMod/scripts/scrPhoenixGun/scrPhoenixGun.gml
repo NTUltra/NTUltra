@@ -14,7 +14,7 @@ function scrPhoenixGun(aimDirection){
 	var tx = xx;
 	var ty = yy;
 	var s = 8;
-	var am = 17;
+	var am = 15;
 	var t = 1;
 	with instance_create(xx,yy,PhoenixBurst)
 	{

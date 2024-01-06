@@ -20,6 +20,7 @@ else
 
 with instance_create(x,y,Laser)
 {image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
+	scrCopyWeaponMod(other);
 team = other.team
 laserhit=1;
 sprite_index=sprBouncingLaser;

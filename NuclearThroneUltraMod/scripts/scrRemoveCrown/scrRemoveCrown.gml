@@ -84,7 +84,9 @@ function scrRemoveCrown(oldcrown){
 	//Crown of time
 	if oldcrown == 34
 	{
-		Player.rewinds = 0;	
+		Player.rewinds = 0;
+		with TimeRewinder
+			instance_destroy();
 	}
 	//Crown of popo
 	if oldcrown == 16

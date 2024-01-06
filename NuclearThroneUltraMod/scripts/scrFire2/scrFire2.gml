@@ -2768,7 +2768,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x,y,ChargeFlakCannon)
 	{
-		maxcharge = 18;//maxrate
+		maxcharge = 17;//maxrate
 		type = 2;
 		cost = 1;
 		creator = other.id
@@ -3020,7 +3020,7 @@ function scrFire2(hasTailNow) {
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
 	with instance_create(x,y,DisperseBullet)
-	{motion_add(aimDirection+(random(12)-6)*other.accuracy,14)
+	{motion_add(aimDirection+(random(12)-6)*other.accuracy,10)
 	image_angle = direction
 	team = other.team
 	time=2;
@@ -3062,7 +3062,7 @@ function scrFire2(hasTailNow) {
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
 	with instance_create(x,y,DisperseBullet)
-	{motion_add(aimDirection+(random(12)-6)*other.accuracy,14)
+	{motion_add(aimDirection+(random(12)-6)*other.accuracy,10)
 	image_angle = direction
 	team = other.team
 	time=1;
@@ -14208,7 +14208,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x,y,BouncerChargeLaser)
 	{
-		maxcharge=26;//maxrate
+		maxcharge=24;//maxrate
 		type = 5;
 		cost = 1;
 		creator = other.id

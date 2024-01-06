@@ -1,6 +1,7 @@
 darkness = 0
 dark=noone;
 right = 1;
+bloom = true;
 if !instance_exists(BGFXLayer)
 	instance_create(x,y,BGFXLayer);
 if !instance_exists(CorpseCollector)

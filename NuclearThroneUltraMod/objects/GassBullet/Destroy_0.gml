@@ -1,6 +1,6 @@
 /// @description GASS
 instance_create(x,y,WallBreak);
-repeat(10)
+repeat(8)
 {
 	with instance_create(x,y,ToxicGas)
 	{

@@ -1,5 +1,7 @@
 /// @description Copy override but dont destory in one wep only
+depth = 2;
 wasThrown = false;
+canBeMoved = true;
 ammo = 0;
 image_angle = random(360)
 image_speed = 0

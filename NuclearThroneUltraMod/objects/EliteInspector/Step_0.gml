@@ -1,7 +1,6 @@
 event_inherited()
 
 scrRoguePopo();
-scrWalkAwayFromNade();
 if walk > 0
 {
 walk -= 1
@@ -82,18 +81,22 @@ if control = 1
 		scrRogueTarget();
 	if target != noone && instance_exists(target)
 	{
+		var str = 1.75;
+		if UberCont.normalGameSpeed == 60
+			str *= 0.5;
 		with target
 		{
 			if object_index != Player || !skill_got[2]
 			{
 				if point_distance(x,y,other.x,other.y) < 220
 				{
-					if place_free(x+lengthdir_x(1.5,point_direction(x,y,other.x,other.y)),y)
-						x += lengthdir_x(1.5,point_direction(x,y,other.x,other.y))
-					if place_free(x,y+lengthdir_y(1.5,point_direction(x,y,other.x,other.y)))
-						y += lengthdir_y(1.5,point_direction(x,y,other.x,other.y))
+					if place_free(x+lengthdir_x(str,point_direction(x,y,other.x,other.y)),y)
+						x += lengthdir_x(str,point_direction(x,y,other.x,other.y))
+					if place_free(x,y+lengthdir_y(str,point_direction(x,y,other.x,other.y)))
+						y += lengthdir_y(str,point_direction(x,y,other.x,other.y))
 				}
 			}
 		}
 	}
+	
 }

@@ -4,7 +4,6 @@
   "name": "Sound",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":1,"eventType":2,"isDnD":false,},
   ],
@@ -15,8 +14,8 @@
     "path": "folders/Objects.yy",
   },
   "parentObjectId": {
-    "name": "All",
-    "path": "objects/All/All.yy",
+    "name": "AudioObject",
+    "path": "objects/AudioObject/AudioObject.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

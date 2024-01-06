@@ -20,8 +20,6 @@ snd_hurt = sndBallMamaHurt;
 //behavior
 alarm[1] = 40+random(40)
 
-if instance_exists(Player)
-motion_add(point_direction(Player.x,Player.y,x,y)+180,1)
 existTime = -60;
 close = 0
 active = false;

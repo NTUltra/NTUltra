@@ -12,7 +12,7 @@ projectileToSpawn = ExploGuardianBullet;
 projectileToSpawnSprite = sprGuardianBulletSpawn;
 hitSprite = sprGuardianBulletHit;
 loops = GetPlayerLoops();
-pSpeed = 8.8 + clamp((loops-1)*0.5,0,5);
+pSpeed = 8.9 + clamp((loops-1)*0.6,0,5);
 initialDelay = 9;
 initialDelay -= clamp(loops,0,5);
 scrInitDrops(1);

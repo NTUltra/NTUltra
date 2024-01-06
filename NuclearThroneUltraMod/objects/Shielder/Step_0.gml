@@ -9,7 +9,6 @@ motion_add(direction,0.8)
 if Shielding=false
 {
 	scrRoguePopo();
-	scrWalkAwayFromNade();
 }
 
 if speed > 3.5

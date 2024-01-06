@@ -1,6 +1,7 @@
 /// @description
 function scrPowers() {
 	var keepRace = race;
+	chickenFocusInUse = false;
 	if ultra_got[50] && altUltra
 	{
 		race = fakeRace;
@@ -38,6 +39,7 @@ function scrPowers() {
 		if rewinds > 0
 		{
 			scrRewindTime();
+			race = keepRace;
 			exit;
 		}
 		var alien = alienIntestines*0.5;
@@ -1322,9 +1324,9 @@ function scrPowers() {
 
 	if ultra_got[36]//CHICKEN VANISH
 	{
-	with instance_create(x,y,Decoy)
-	alarm[0]=80;//decoy duration
-	image_xscale=Player.right;
+		with instance_create(x,y,Decoy)
+			alarm[0]=80;//decoy duration
+		image_xscale=Player.right;
 	}
 
 	//YUNG CUZ
@@ -2894,8 +2896,21 @@ function scrPowers() {
 
 
 	//CHICKEN constant
-	if race == 9 && !(instance_exists(GenCont))
+	if race == 9 && chickenFocus > 0 && !(instance_exists(GenCont))
 	{
+		if chickenFocus == chickenFocusMax
+		{
+			with AudioObject
+			{
+				event_user(0);
+			}
+		}
+		if UberCont.normalGameSpeed == 60
+			chickenFocus -= chickenFocusCostRate*0.5;
+		else
+			chickenFocus -= chickenFocusCostRate;
+		chickenFocusDelayTime = chickenFocusDelay;
+		chickenFocusInUse = true;
 		room_speed=24;//15
 		if UberCont.normalGameSpeed == 60
 			room_speed = 48;
@@ -3107,7 +3122,7 @@ function scrPowers() {
 			ts = 1.3+(Player.skill_got[5]*1.1);
 		with projectile
 		{
-			if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) and team != 2 and canBeMoved
+			if canBeMoved && team != 2 && x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 			{
 				var pd = point_direction(x,y,px,py)+od;
 				if !place_meeting(x+lengthdir_x(ts,pd),y,Wall)
@@ -3213,47 +3228,49 @@ function scrPowers() {
 	{
 	audio_stop_sound(sndEyesLoop) audio_stop_sound(sndEyesLoopUpg) audio_stop_sound(sndChickenLoop)
 
-	if race == 9 //CHICKEN reset time
+	if race == 9//CHICKEN reset time
 	{
-	room_speed=UberCont.normalGameSpeed;
+		chickenFocusInUse = false;
+		debug("UNFOCUS");
+		room_speed=UberCont.normalGameSpeed;
 
-	with Decoy//CHICKEN VANISH
-	{instance_destroy();}
+		with Decoy//CHICKEN VANISH
+		{instance_destroy();}
 
-	if my_health > 0
-	{
-		if bskin=1
+		if my_health > 0
 		{
-			spr_walk = sprMutant9BWalk;
-			if ultra_got[35] && altUltra
-				spr_walk = sprMutant9EWalk;
-		}
-		else if bskin=2
-			spr_walk = sprMutant9CWalk;
-		else if bskin == 3
-			spr_walk = sprMutant9DWalk;
-		else if bskin == 4
-			spr_walk = sprMutant9EWalk;
-		else
-		{
-			spr_walk = sprMutant9Walk;
-			if ultra_got[35] && altUltra
+			if bskin=1
+			{
+				spr_walk = sprMutant9BWalk;
+				if ultra_got[35] && altUltra
+					spr_walk = sprMutant9EWalk;
+			}
+			else if bskin=2
+				spr_walk = sprMutant9CWalk;
+			else if bskin == 3
 				spr_walk = sprMutant9DWalk;
+			else if bskin == 4
+				spr_walk = sprMutant9EWalk;
+			else
+			{
+				spr_walk = sprMutant9Walk;
+				if ultra_got[35] && altUltra
+					spr_walk = sprMutant9DWalk;
+			}
 		}
-	}
-	if skill_got[5]//THRONE BUTT
-	{
-	        if skill_got[2]==1//extra feet
-	        {
-	        maxSpeed = 4.5;
-	        }
-	        else
-	        {
-	        maxSpeed = 4.0;
-	        }
-	        friction = 0.45
-	        image_speed = 0.4
-	}
+		if skill_got[5]//THRONE BUTT
+		{
+		        if skill_got[2]==1//extra feet
+		        {
+		        maxSpeed = 4.5;
+		        }
+		        else
+		        {
+		        maxSpeed = 4.0;
+		        }
+		        friction = 0.45
+		        image_speed = 0.4
+		}
 	}
 
 	}
@@ -3462,7 +3479,6 @@ function scrPowers() {
 	}
 	}
 	else {
-		debug("END LOOP SFX?");	
 	}
 	race = keepRace;
 }

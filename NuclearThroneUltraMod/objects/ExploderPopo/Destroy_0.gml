@@ -4,4 +4,11 @@ event_inherited()
 
 scrPopoDead();
 
-instance_create(x,y,PopoNade);
+with instance_create(x,y,PopoNade)
+{
+	team = other.team;
+	if team == 2
+	{
+		sprite_index = sprPopoNadeRogue;
+	}
+}

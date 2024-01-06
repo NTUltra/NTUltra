@@ -119,15 +119,16 @@ if scrIsCrown(2) && canHeal
 	}
 	else
 	{
+		/*
 		if my_health >= maxhealth
 		{
 			my_health = max(my_health,maxhealth);
 			my_health += 1;
 		}
 		else
-		{
+		{*/
 			my_health = max(my_health,maxhealth);
-		}
+		//}
 	}
 	/*
 	var toHeal = maxhealth - min(my_health,maxhealth);

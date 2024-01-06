@@ -1,5 +1,5 @@
 //event_inherited()
-depth = 1;
+depth = 3;
 mySize = 1;
 meleedamage = 0;
 spr_hurt = false;

@@ -1099,7 +1099,7 @@ function scrWeapons() {
 	wep_name[99] = "SUPER FLAK CANNON"
 	wep_type[99] = 2
 	wep_auto[99] = 0
-	wep_load[99] = 64
+	wep_load[99] = 62
 	wep_cost[99] = 8
 	wep_sprt[99] = sprSuperFlakCannon
 	wep_area[99] = 12//5.3
@@ -1781,7 +1781,7 @@ function scrWeapons() {
 	wep_name[161] = "SUPER FLAME ERASER"
 	wep_type[161] = 2
 	wep_auto[161] = 0
-	wep_load[161] = 50
+	wep_load[161] = 35
 	wep_cost[161] = 10
 	wep_sprt[161] = sprSuperFlameEraser
 	wep_area[161] = 16//14 SUPER ERASER
@@ -4773,7 +4773,7 @@ function scrWeapons() {
 	wep_name[430] = "SLUG CANNON"
 	wep_type[430] = 2
 	wep_auto[430] = 0
-	wep_load[430] = 32
+	wep_load[430] = 28
 	wep_cost[430] = 4
 	wep_sprt[430] = sprSlugCannon
 	wep_area[430] = 12
@@ -5933,7 +5933,7 @@ function scrWeapons() {
 	wep_sprt[535] = sprLaserCrash
 	wep_area[535] = 8
 	wep_text[535] = "crash blast"
-	wep_swap[535] = sndSwapBow
+	wep_swap[535] = sndSwapEnergy
 	wep_rad[535] = 0;
 	
 	wep_name[536] = "SEEKER CANNON"
@@ -7325,7 +7325,7 @@ function scrWeapons() {
 	wep_name[662] = "PHOENIX"
 	wep_type[662] = 4
 	wep_auto[662] = 0
-	wep_load[662] = 17
+	wep_load[662] = 18
 	wep_cost[662] = 3
 	wep_sprt[662] = sprPhoenixGun
 	wep_area[662] = 13
@@ -7427,7 +7427,7 @@ function scrWeapons() {
 	wep_load[671] = 15
 	wep_cost[671] = 0
 	wep_sprt[671] = sprSuperNeedle
-	wep_area[671] = 10
+	wep_area[671] = 12
 	wep_text[671] = "acupuncture"
 	wep_swap[671] = sndSwapSword
 	wep_rad[671] = 0;
@@ -7578,10 +7578,10 @@ function scrWeapons() {
 	wep_name[685] = "BOUNCER CHARGE LASER"
 	wep_type[685] = 5
 	wep_auto[685] = 0
-	wep_load[685] = 20
+	wep_load[685] = 21
 	wep_cost[685] = 1
 	wep_sprt[685] = sprChargeBouncerLaserGun
-	wep_area[685] = 11
+	wep_area[685] = 13
 	wep_text[685] = "charging railgun"
 	wep_swap[685] = sndSwapEnergy
 	wep_rad[685] = 0;

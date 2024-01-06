@@ -1,5 +1,5 @@
 /// @description Ultra lightning why not
-alarm[1] = 4;
+alarm[1] = 5;
 BackCont.shake += 4;
 with Player
 {

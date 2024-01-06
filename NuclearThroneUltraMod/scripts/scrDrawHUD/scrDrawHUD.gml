@@ -22,6 +22,9 @@ function scrDrawHUD() {
 	var oy = viewY;
 	var vx = 0//GameRender.viewX;//camera_get_view_x(view_camera[0]);
 	var vy = -1//GameRender.viewY;//camera_get_view_y(view_camera[0]);
+	var yo = 0;
+	if dataRef.race == 9
+		yo = 1;
 	
 	///POPUP TEXT
 	with PopupText
@@ -57,6 +60,7 @@ function scrDrawHUD() {
 	if !(dataRef.ultra_got[62] && dataRef.altUltra)
 	{
 		var hx = 20;
+		vy -= yo;
 		if dataRef.skill_got[36] //Absorbing pores
 			hx = 22;
 		draw_sprite(sprHealtBarMetabolism,dataRef.metabolism,vx+hx,vy+4)
@@ -69,6 +73,18 @@ function scrDrawHUD() {
 		}
 		if dataRef.metabolism == 2
 			draw_sprite(sprHealtBarMetabolismFull,0,vx+hx,vy+4)
+		
+		if dataRef.race == 9// Chicken
+		{
+			draw_sprite(sprChickenFocusBar,0,vx+hx,vy+16)
+			var focusIndex = 1;
+			if dataRef.chickenFocusInUse
+				focusIndex = 0;
+			else if dataRef.chickenFocusDelayTime > 0
+				focusIndex = 2;
+			draw_sprite_ext(sprChickenFocusBarFill,focusIndex,vx+hx+2,vy+18,clamp(84*(dataRef.chickenFocus/dataRef.chickenFocusMax),0,84),1,0,c_white,1)
+		}
+		vy += yo;
 		//if dataRef.alarm[3] > 0
 		//	draw_sprite(sprHealtBarImmune,0,vx+hx,vy+4)
 	}
@@ -218,6 +234,8 @@ function scrDrawHUD() {
 		holdExplainGamemode -= 1*dt;
 
 	//HEALTH TEXT
+	vy -= yo;
+	draw_set_valign(fa_top)
 	draw_set_halign(fa_center)
 	if !(dataRef.ultra_got[62] && dataRef.altUltra)
 	if (!((dataRef.sprite_index = dataRef.spr_hurt and dataRef.image_index < 1 and !instance_exists(Portal)) or dataRef.lsthealth < dataRef.my_health) or sin(wave) > 0) or instance_exists(GenCont) or instance_exists(LevCont)
@@ -229,8 +247,8 @@ function scrDrawHUD() {
 	draw_set_color(c_white)
 	draw_text(vx+23+44,vy+7,string_hash_to_newline(string(dataRef.my_health)+"/"+string(dataRef.maxhealth)))
 	}
+	vy += yo;
 	var wepcolour = c_white;
-	
 	//CASH BAR
 	if dataRef.ultra_got[0] && dataRef.altUltra
 	{
@@ -456,6 +474,7 @@ function scrDrawHUD() {
 	dir+=1;
 	}
 	//SKILL ICONS
+	vy -= yo;
 	dix = 0;
 	dir = 0;
 	var extraSpace = 12 - (max(-1,dataRef.maxarmour-1-dataRef.hudArmourSpace))
@@ -523,7 +542,8 @@ function scrDrawHUD() {
 	}
 	if holdExplainMutation > 0
 		holdExplainMutation -= 1*dt;
-
+	
+	vy += yo*4;
 	var puffColour = make_colour_rgb(250,171,0);//make_colour_rgb(178,122,0);
 	var puffA = 0.8
 	var loadColour = c_white//make_colour_rgb(255,225,200);//make_colour_rgb(255,174,0);
@@ -1062,7 +1082,6 @@ function scrDrawHUD() {
 	{
 		draw_sprite(sprUltraLevel,0,vx+rto,vy+16);
 	}
-
 	//GOOD O'L HUMPHRY SKILL
 	if dataRef.race=26
 	{

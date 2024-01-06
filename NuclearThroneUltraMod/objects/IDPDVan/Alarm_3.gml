@@ -3,7 +3,6 @@ SetSeedPopoSpawn();
 mySize=2;
 if dropFreaks
 {
-	snd_play(sndFreakPopoEnter);
 	instance_destroy();
 	exit;
 }

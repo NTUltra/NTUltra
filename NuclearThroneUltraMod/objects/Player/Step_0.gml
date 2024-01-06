@@ -261,6 +261,24 @@ if !instance_exists(LevCont) and visible = 1
 		back = -1
 
 			scrPowers();
+			if !chickenFocusInUse && chickenFocus < chickenFocusMax
+			{
+				if chickenFocusDelayTime <= 0
+				{
+					if UberCont.normalGameSpeed == 60
+						chickenFocus += chickenFocusReturnRate*0.5;
+					else
+						chickenFocus += chickenFocusReturnRate;
+					chickenFocus = min(chickenFocus,chickenFocusMax);
+				}
+				else
+				{
+					if UberCont.normalGameSpeed == 60
+						chickenFocusDelayTime -= chickenFocusDelayRate*0.5;
+					else
+						chickenFocusDelayTime -= chickenFocusDelayRate;
+				}
+			}
 		}
 		else
 		{
@@ -1886,6 +1904,7 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 						other.extrafeetalarm=27;//after some time we check if you've dodged this
 						other.extrafeetdodged=true;
 						j = al;
+						dodgeAble = false;
 			        }
 				}
 			}
@@ -2087,9 +2106,9 @@ if race==18
 if moddelay > -30*modQueue
 {
 	if is60fps
-		moddelay -= 0.5;
+		moddelay -= 0.375;
 	else
-		moddelay--;
+		moddelay -= 0.75;
 }
 /* */
 ///Rogue  heat

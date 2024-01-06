@@ -6,6 +6,7 @@ mySize = 1
 
 event_inherited()
 isInverted = false;
+ignoreOverlap = true;
 gunangle1 = 0;
 gunangle2 = 0;
 fireRate2 = 2;

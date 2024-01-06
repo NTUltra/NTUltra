@@ -281,17 +281,22 @@ if laserhit>0// && random(3)<1
 	}
 	if hitStyle != 0// && collision_point(x,y,Floor,false,false)
 	{
-		while place_meeting(x,y,Wall)
+		var maxDis = 8;
+		var dis = 0;
+		while dis < maxDis && collision_point(x,y,Wall,false,false)
 		{
 			x += lengthdir_x(1,image_angle+180); y += lengthdir_y(1,image_angle+180);
+			dis += 1;
 		}
 		BackCont.shake += 1.5
 		x += lengthdir_x(1,image_angle+180); y += lengthdir_y(1,image_angle+180);
 	    with instance_create(x,y,Laser)
 	    {
-			image_yscale = max(image_yscale,other.image_yscale);
+			image_yscale = max(image_yscale - 0.1, other.image_yscale - 0.1);
+			/*
 			if place_meeting(x,y,Wall)//Might not fit in this spot
-				image_yscale = other.image_yscale;
+				image_yscale = other.image_yscale - 0.1;
+			*/
 			if hitStyle == 2
 				image_angle = 180-other.image_angle;
 			else
@@ -306,9 +311,9 @@ if laserhit>0// && random(3)<1
 		    team = other.team
 			sprite_index=sprBouncingLaser;
 		    laserhit=other.laserhit-1;
-			dir = 0;
-			do {x += lengthdir_x(1,image_angle) y += lengthdir_y(1,image_angle) dir += 1}
-			until place_meeting(x,y,Wall) or dir > 320
+			//dir = 0;
+			//do {x += lengthdir_x(1,image_angle) y += lengthdir_y(1,image_angle) dir += 1}
+			//until place_meeting(x,y,Wall) or dir > 320
 			alarm[0] = 1;
 		}
 		laserhit=0;

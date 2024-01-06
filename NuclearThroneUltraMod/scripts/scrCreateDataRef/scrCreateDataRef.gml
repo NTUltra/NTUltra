@@ -87,5 +87,10 @@ function scrCreateDataRef(){
 		spr_idle = other.spr_idle;
 		metabolism = other.metabolism;
 		lastWishPrevent = other.lastWishPrevent;
+		chickenFocusMax = other.chickenFocusMax;
+		chickenFocusInUse = false;
+		chickenFocus = chickenFocusMax;
+		chickenFocusDelay = other.chickenFocusDelay;
+		chickenFocusDelayTime = 0;
 	}
 }

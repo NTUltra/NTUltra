@@ -1,5 +1,5 @@
 friction = 0.4
-depth = 1;
+depth = 3;
 image_speed = 0
 motion_add(random(360),2);
 mySize = 1;

@@ -55,16 +55,19 @@ if (alarm[4] < 0) {
 	{
 		walk -= 1
 		motion_add(direction,3)
-		if distance_to_object(target) > 40
+		if target != noone && instance_exists(target)
 		{
-			if UberCont.normalGameSpeed == 60
-				mp_potential_step(target.x,target.y,0.5,false)
+			if distance_to_object(target) > 40
+			{
+				if UberCont.normalGameSpeed == 60
+					mp_potential_step(target.x,target.y,0.5,false)
+				else
+					mp_potential_step(target.x,target.y,1,false)
+			}
 			else
-				mp_potential_step(target.x,target.y,1,false)
-		}
-		else
-		{
-			motion_add(point_direction(x,y,target.x,target.y)+180,2.8)
+			{
+				motion_add(point_direction(x,y,target.x,target.y)+180,2.8)
+			}
 		}
 	}
 

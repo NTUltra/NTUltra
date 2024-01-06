@@ -1,0 +1,2 @@
+/// @description Init
+wasMinipulated = false;

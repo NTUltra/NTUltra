@@ -47,3 +47,4 @@ wepangle = choose(-140,140)
 wepflip = 1
 dodge=0;
 canDodge = false;
+alarm[3] = 2;

@@ -192,11 +192,14 @@ snd_play(sndEliteGruntRocketFire);
 
 wkick = 8
 with instance_create(x,y,PopoMissile){
-motion_add(other.gunangle+random(10)-5,4)
+motion_add(other.gunangle+random(10)-5,5)
 image_angle = direction
 team = other.team
 	if team == 2
+	{
 		sprite_index = sprPopoNadeRogue;
+	}
+	
 }
 }
 

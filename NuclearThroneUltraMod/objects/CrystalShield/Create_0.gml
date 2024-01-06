@@ -17,10 +17,13 @@ sprite_index=sprShield
 spr_disappear=sprShieldDisappear;
 if instance_exists(Player)
 {
-
+	if(Player.ultra_got[8]==1)
+	{
+		time += 120;
+	}
 	if(Player.ultra_got[7]==1)
 	{
-	time += 60
+		time += 60
 	}
 	//else{
 	//Player.visible=false;}

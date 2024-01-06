@@ -54,7 +54,14 @@ if foundOne
 	else if tx > x
 		right = 1
 	if team != 2
-		instance_create(tx,ty,PopoNade);
+	{
+		with instance_create(tx,ty,PopoNade)
+		{
+			team = other.team;
+			if team == 2
+				sprite_index = sprPopoNadeRogue;
+		}
+	}
 	else
 	{
 		var sfx = snd_play(sndExplosion);

@@ -12,7 +12,7 @@ with Player
 		{
 			image_angle = langle;
 			team = 2
-			ammo = 12+random(6)//60
+			ammo = 10+random(6)//60
 			///if Player.ultra_got[59]=1 
 			///ammo+=4;
 			event_perform(ev_alarm,0)

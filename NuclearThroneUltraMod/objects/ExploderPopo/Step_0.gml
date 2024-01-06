@@ -7,7 +7,6 @@ if walk > 0
 }
 
 scrRoguePopo();
-scrWalkAwayFromNade();
 
 if speed > 3
 speed = 3

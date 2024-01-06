@@ -4,7 +4,7 @@ instance_create(x+random(12)-6,y+random(12)-6,Smoke);
 }
 
 ///extra feet dodging bonus
-if skill_got[2]
+if skill_got[2] && !instance_exists(LevCont) && instance_exists(Player) && !Player.outOfCombat
 {
 	if extrafeetalarm>0
 	{
@@ -14,17 +14,17 @@ if skill_got[2]
 			extrafeetalarm--;
 	}
 
-	if extrafeetalarm == 11 && extrafeetdodged && alarm[3] < 1
+	if extrafeetalarm == 30 && extrafeetdodged && alarm[3] < 1
 	{
 		with instance_create(x+10,y+5,RedirectFX)
 		{
 			sprite_index = sprExtraFeetCloseDodge;	
 		}
-		if scrDrop(70,4) != noone
+		if scrDrop(30,0) != noone
 			snd_play(sndExtraFeetDodge);
 		else
 			snd_play(sndExtraFeetDodgeFail);
-		repeat(3)
+		repeat(2)
 			with instance_create(x,y,Rad)
 			{
 				motion_add(random(360),4)
@@ -43,8 +43,9 @@ if skill_got[2]
 				{
 					if dodgeAble && team!=other.team//NOT FROM PLAYA!? O_O
 			        {                     
-						other.extrafeetalarm=23;//after some time we check if you've dodged this
+						other.extrafeetalarm=42;//after some time we check if you've dodged this
 						other.extrafeetdodged=true;
+						dodgeAble = false;
 			        }
 				}
 			}

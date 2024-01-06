@@ -58,7 +58,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_tips[7] = "the iron fist"
     
 	    ultra_name[8] = "VENGEFUL"
-	    ultra_text[8] = "<pi>DEFLECTED<pi> PROJECTILES#HOME IN ON ENEMIES#<aq>INVULNERABLE<aq> TO ALL DAMAGE#WHILE <p>SHIELDING<p>"
+	    ultra_text[8] = "SIGNIFICANTLY SHORTER <p>SHIELD<p>#<pi>DEFLECTED<pi> PROJECTILES#HOME IN ON ENEMIES#<aq>INVULNERABLE<aq> TO ALL DAMAGE#WHILE <p>SHIELDING<p>"
 	    ultra_tips[8] = "homing effects wear of#when you're not shielding"
 
 	//EYES 

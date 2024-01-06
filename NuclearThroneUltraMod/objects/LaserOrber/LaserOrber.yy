@@ -35,8 +35,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprPlasmaBall",
-    "path": "sprites/sprPlasmaBall/sprPlasmaBall.yy",
+    "name": "sprBouncingPlasmaBall",
+    "path": "sprites/sprBouncingPlasmaBall/sprBouncingPlasmaBall.yy",
   },
   "spriteMaskId": null,
   "visible": true,

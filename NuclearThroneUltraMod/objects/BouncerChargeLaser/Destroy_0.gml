@@ -4,12 +4,11 @@ if instance_exists(Player)
 	{
 		rate += 4 + (Player.betterlaserbrain*2);
 	}
-	snd_play_fire(sndLaser)
-	if rate < 16
+	if rate < 15
 	{
 		snd_play_fire(sndLaser)
 	}
-	else if rate < 26
+	else if rate < 24
 	{
 		snd_play_fire(sndLaserUpg)
 	}

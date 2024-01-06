@@ -325,6 +325,11 @@ instance_destroy();
 with instance_create(x,y,PlayerSpawn)//Data to keep
 {
 	//alarm[3]=300;//immunity
+	chickenFocusMax = other.chickenFocusMax;
+	chickenFocus = chickenFocusMax;
+	chickenFocusDelay = other.chickenFocusDelay;
+	chickenFocusDelayTime = 0;
+	chickenFocusInUse = false;
 	rnglevelloop = other.rnglevelloop;
 	firedthislevel = false;
 	firedOnce = false;

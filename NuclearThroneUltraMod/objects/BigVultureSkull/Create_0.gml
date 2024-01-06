@@ -1,7 +1,7 @@
 var loops = GetPlayerLoops();
 maxhealth = 50;
 if loops > 0 || scrIsHardMode()
-	maxhealth = 80 * clamp(loops*6,1,14)
+	maxhealth = 120 * clamp(loops*6,1,14)
 mySize = 1
 //if UberCont.public == 0//Temp only for dev build
 //{

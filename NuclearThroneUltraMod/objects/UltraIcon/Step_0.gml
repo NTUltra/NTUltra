@@ -687,63 +687,63 @@ if (selected &&
 	else if skill == 73//REDEMPTION Skeleton Ultra A
 	{
 
-	with GenCont
-	race=Player.race;
-	var newPlayer = instance_create(x,y,Player);
-	with Player
-	{
-		if id != newPlayer.id
+		with GenCont
+		race=Player.race;
+		var newPlayer = instance_create(x,y,Player);
+		with Player
 		{
-			instance_destroy(id,false);
-			with newPlayer//Data to keep
+			if id != newPlayer.id
 			{
-				race = other.race
-				crown = other.crown
-				lastarea = other.lastarea;
-				area = other.area//other.lastarea;
-				loops = other.loops;
-				hard = other.hard;
-				kills = other.kills;
-				subarea=other.subarea;
-				ultra_got[73]=1;//you picked redemption
-				skillpoints=max(0,other.level-2);
-				level=other.level;
+				instance_destroy(id,false);
+				with newPlayer//Data to keep
+				{
+					race = other.race
+					crown = other.crown
+					lastarea = other.lastarea;
+					area = other.area//other.lastarea;
+					loops = other.loops;
+					hard = other.hard;
+					kills = other.kills;
+					subarea=other.subarea;
+					ultra_got[73]=1;//you picked redemption
+					skillpoints=max(0,other.level-2);
+					level=other.level;
 
-				wep=other.wep
-				bwep=other.bwep
+					wep=other.wep
+					bwep=other.bwep
 
-				wepmod1=other.wepmod1
-				wepmod2=other.wepmod2
-				wepmod3=other.wepmod3
-				wepmod4=other.wepmod4
+					wepmod1=other.wepmod1
+					wepmod2=other.wepmod2
+					wepmod3=other.wepmod3
+					wepmod4=other.wepmod4
 
-				bwepmod1=other.bwepmod1
-				bwepmod2=other.bwepmod2
-				bwepmod3=other.bwepmod3
-				bwepmod4=other.bwepmod4
+					bwepmod1=other.bwepmod1
+					bwepmod2=other.bwepmod2
+					bwepmod3=other.bwepmod3
+					bwepmod4=other.bwepmod4
 			
-				cwepmod1=other.cwepmod1
-				cwepmod2=other.cwepmod2
-				cwepmod3=other.cwepmod3
-				cwepmod4=other.cwepmod4
+					cwepmod1=other.cwepmod1
+					cwepmod2=other.cwepmod2
+					cwepmod3=other.cwepmod3
+					cwepmod4=other.cwepmod4
 
-				//give the ammos
-				ammo[1] = typ_amax[1];
-				ammo[2] = typ_amax[2];
-				ammo[3] = typ_amax[3];
-				ammo[4] = typ_amax[4];
-				ammo[5] = typ_amax[5];
-				//event_perform(ev_other,ev_room_end);
+					//give the ammos
+					ammo[1] = typ_amax[1];
+					ammo[2] = typ_amax[2];
+					ammo[3] = typ_amax[3];
+					ammo[4] = typ_amax[4];
+					ammo[5] = typ_amax[5];
+					//event_perform(ev_other,ev_room_end);
 			
-				maxSpeed += 0.4;//Normal speed
-				accuracy = 1;//Normal accuracy
-				standartAccuracy = accuracy;
+					maxSpeed += 0.4;//Normal speed
+					accuracy = 1;//Normal accuracy
+					standartAccuracy = accuracy;
+				}
 			}
 		}
-	}
 
-	with Corpse
-		instance_destroy();
+		with Corpse
+			instance_destroy();
 
 	}
 	else if skill == 74//Reminisce secret skeleton Ultra B
@@ -1051,7 +1051,7 @@ if (selected &&
 		//if skill <= UberCont.maxultra
 		with UberCont
 		{
-			if Player.altUltra && scrTranslateUltraToSecretStat(other.skill,Player.bskin) != -1
+			if (Player.altUltra || Player.ultimategamble == 2) && scrTranslateUltraToSecretStat(other.skill,Player.bskin) != -1
 			{
 				ctot_secret_ultra_taken[scrTranslateUltraToSecretStat(other.skill,Player.bskin)] += 1;
 			}

@@ -146,6 +146,10 @@ function scrPopChests() {
 			healthChestGol += choose(0,0,0,0,0,1);
 			wepChestGol += 2;
 		}
+		if scrIsCrown(2)//CROWN OF LIFE
+		{
+			healthChestGol += choose(0,1);
+		}
 
 		if Player.my_health >= Player.maxhealth
 			healthChestGol --;

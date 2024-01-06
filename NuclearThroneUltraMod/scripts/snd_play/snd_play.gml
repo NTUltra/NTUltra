@@ -67,6 +67,8 @@ function snd_play(sndId, randompitch = 0, cancelPrev = false, usesLocation = tru
 				alarm[0] = 30 * audio_sound_length(sndId);
 				if owner > 0
 					alarm[1] = 1;
+				if instance_exists(Player) && Player.chickenFocusInUse
+					event_user(0);
 			}
 			return sfx;
 		}

@@ -630,7 +630,14 @@ cwepflip = 1
 nochest = -1
 
 bleed = 0
-
+chickenFocusMax = 100;
+chickenFocus = chickenFocusMax;
+chickenFocusCostRate = 2;
+chickenFocusReturnRate = 3;
+chickenFocusDelay = 9;
+chickenFocusDelayTime = 0;
+chickenFocusDelayRate = 1;
+chickenFocusInUse = false;
 rad = 0
 
 can_shoot = 1

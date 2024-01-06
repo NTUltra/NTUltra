@@ -74,7 +74,7 @@ if isPaused == 1
 		timer="OFF"
 
 
-		var d = " DIFFICULTY: "+string(hard);
+		var d = " DIFFICULTY/TIER: "+string(hard);
 
 		txt0 = "#OPTIONS############################CONTINUE [ESC] ------------ QUIT [ENTER]"
 
@@ -228,6 +228,7 @@ if isPaused == 1
 	}
 }
 else if instance_exists(ShopWheel) && !instance_exists(TopCont){
+	draw_set_alpha(1)
 	draw_sprite_ext(pauseimg,0,__view_get( e__VW.XView, 0 ),yy,pauseimgScale,pauseimgScale,0,c_white,1);
 	if isPausedInTheDark
 	{
@@ -242,6 +243,7 @@ else if instance_exists(ShopWheel) && !instance_exists(TopCont){
 }
 if alarm[1]>0
 {
+	draw_set_alpha(1)
 	draw_sprite_ext(pauseimg,0,__view_get( e__VW.XView, 0 ),yy,pauseimgScale,pauseimgScale,0,c_white,1);
 	if isPausedInTheDark
 	{

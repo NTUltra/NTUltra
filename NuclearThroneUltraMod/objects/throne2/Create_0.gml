@@ -3,7 +3,7 @@ maxhealth = 1200
 loops = GetPlayerLoops();
 if scrIsHardMode()
 	maxhealth += 100;
-maxhealth += max(0,80*min(12,(loops-1)));
+maxhealth += max(0,90*min(12,(loops-1)));
 scrBossHealthBuff();
 meleedamage = 10
 mySize = 6;
@@ -42,7 +42,7 @@ ammo = maxAmmo;
 crossMaxAmmo = 20;
 crossAmmo = 0;
 crossAmount = 8;
-crossPspeed =  7;
+crossPspeed =  7.1;
 
 fireRate = 10;
 lp = 0.05;//0.2
@@ -58,6 +58,10 @@ if loops > 0
 	actTime -= 3;
 	crossPspeed += 1;
 	actTime -= 1;
+}
+if loops > 1
+{
+	crossAmount += 1;	
 }
 if loops > 2
 {

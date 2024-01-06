@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 raddrop += 5;
-maxhealth = 15;
+maxhealth = 14;
 maxSpeed += 0.5;
 acc += 0.2;
 actTime -= 10;

@@ -85,20 +85,24 @@ if instance_exists(Player) && target==Player.id
     else if random(5+instance_number(PopoNade)*3) < 1 and grenades > 0 and freeze > 40 && d < 200
 	and ((point_distance(lastx,lasty,target.x,target.y) < 96 and point_distance(x,y,lastx,lasty) > 64)or random(12) < 1)
     {
-    //GRENADE
-    grenades -= 1
-    gunangle = point_direction(x,y,lastx,lasty)
-    if male
-    snd_play(sndGruntThrowNadeM)
-    else
-    snd_play(sndGruntThrowNadeF)
-    wkick = 8
-    with instance_create(x,y,PopoNade){
-    motion_add(other.gunangle+random(20)-10,10)
-    image_angle = direction
-    team = other.team
-	if team == 2
-		sprite_index = sprPopoNadeRogue}
+	    //GRENADE
+	    grenades -= 1
+	    gunangle = point_direction(x,y,lastx,lasty)
+	    if male
+	    snd_play(sndGruntThrowNadeM)
+	    else
+	    snd_play(sndGruntThrowNadeF)
+	    wkick = 8
+	    with instance_create(x,y,PopoNade)
+		{
+		    motion_add(other.gunangle+random(20)-10,10)
+		    image_angle = direction
+		    team = other.team
+			if team == 2
+			{
+				sprite_index = sprPopoNadeRogue
+			}
+		}
     }
     
     }

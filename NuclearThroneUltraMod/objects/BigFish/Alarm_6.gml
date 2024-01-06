@@ -1,5 +1,5 @@
 /// @description bite tackle
-alarm[7] = 20;
+alarm[7] = 18;
 
 snd_play(snd_dead)
 maxSpeed = chargeSpeed;

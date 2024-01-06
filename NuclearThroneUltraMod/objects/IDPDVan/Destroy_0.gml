@@ -1,4 +1,4 @@
-scrDrop(100,2)
+scrDrop(80,2)
 scrDrop(12,0)
 scrDrop(8,0)
 speed = 0;
@@ -27,7 +27,8 @@ if dropFreaks
 
 //GAMEMODE UNLOCKABLE NO ELITE POPO
 scrUnlockGameMode(18,"FOR DESTROYING A VAN");
-
+if RogueIDPD
+	team = 2;
 snd_play(sndExplosionL)
 var ang = random(360);
 var angStep = 360/3;
@@ -38,10 +39,19 @@ repeat(3)
 {
 	with instance_create(x+lengthdir_x(10,ang),y+lengthdir_y(10,ang),explo)
 	{
+		team = other.team;
+		if other.dropFreaks
+			team = 4;
 		if other.team == 2
 		{
 			sprite_index =sprPopoExploRogue;	
 			team = 2;
+		}
+		else if team == 4
+			sprite_index = sprPopoExploFreak;
+		with myExplosionMask
+		{
+			team = other.team;	
 		}
 	}
 	ang += angStep;
