@@ -1,6 +1,6 @@
 /// @description Radius
 draw_set_alpha(opacity);
-draw_circle_colour(x,y,radius,c_red,c_red,true);
+draw_circle_width_colour(x,y,radius,2,c_red);
 draw_set_alpha(1);
 var newcollision = ds_list_create();
 var al = collision_circle_list(x,y,radius,enemy,false,false,newcollision,false);

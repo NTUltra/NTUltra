@@ -6,7 +6,7 @@ add = !add;
 snd_play(sndMachinegun,0.1,true)
 
 with instance_create(x,y,DisperseBullet)
-{motion_add(other.image_angle+90+(random(6)-3),16)
+{motion_add(other.image_angle+90+(random(6)-3),14)
 image_angle = direction
 team = other.team
 time += t;
@@ -16,7 +16,7 @@ if random(6.2)<1
 
 
 with instance_create(x,y,DisperseBullet)
-{motion_add(other.image_angle-90+(random(6)-3),16)
+{motion_add(other.image_angle-90+(random(6)-3),14)
 image_angle = direction
 team = other.team
 if random(6.2)<1 

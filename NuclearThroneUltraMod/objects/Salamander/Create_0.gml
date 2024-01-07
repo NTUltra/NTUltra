@@ -19,7 +19,7 @@ snd_melee = sndSalamanderFire
 
 //behavior
 maxRange = 310;
-actTime = 25;
+actTime = 20;
 ammo = 10
 acc = 0.6;
 maxSpeed = 2;

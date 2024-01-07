@@ -1,2 +1,2 @@
 /// @description Draw a circle
-draw_circle_colour(x,y,radius,c_lime,c_lime,true);
+draw_circle_width_colour(x,y,radius,1,c_lime);

@@ -3,7 +3,11 @@
 ///@param
 function scrSplashDamage(dmg, range){
 	if instance_exists(Player) && Player.ultra_got[97] && !Player.altUltra
+	{
+		if team != Player.team
+			exit;
 		range *= 1.5;
+	}
 	var direct = other.id;
 	var hits = ds_list_create();
 	var al = collision_circle_list(x,y,range,hitme,false,false,hits,false)

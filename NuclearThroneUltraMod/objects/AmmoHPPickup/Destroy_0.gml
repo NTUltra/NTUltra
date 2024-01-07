@@ -6,5 +6,5 @@ if rerolls > 1
 		rerolls = other.rerolls - 1;
 } else if rerolls == 1
 {
-	instance_create(x,y,Rad);	
+	instance_create(x,y,Rad);
 }

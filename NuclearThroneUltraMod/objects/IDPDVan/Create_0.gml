@@ -5,6 +5,7 @@ mySize = 4
 RogueIDPD=false;
 scrCrownOfPopoRad(15);
 event_inherited()
+ignoreOverlap = true;
 scrAddDrops(2);
 depth  = 0;
 team=0;
@@ -12,7 +13,6 @@ spr_idle = sprVanOpen
 spr_walk = sprVanDrive
 spr_hurt = sprVanHurt
 spr_dead = sprVanDead
-ignoreOverlap = true;
 existTime = 21;
 
 snd_hurt = sndVanHurt
@@ -23,7 +23,7 @@ loops = GetPlayerLoops();
 idle=true;
 right = 1;
 acc = 9 + min(16,loops);
-maxSpeed = 12;
+maxSpeed = 12 + min (4, loops - 1);
 dropFreaks = false;
 /*
 if instance_exists(Player) && object_index != IDPDVanVertical

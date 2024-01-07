@@ -54,3 +54,22 @@ sprite_index=spr_walk;
 gunangle = point_direction(x,y,target.x,target.y);
 }}
 
+if (nearestPickup != noone && instance_exists(nearestPickup)
+&& nearestPickup.object_index != object_index
+&& collision_line(x,y,nearestPickup.x,nearestPickup.y,Wall,0,0) < 0
+&& point_distance(x,y,nearestPickup.x,nearestPickup.y) < 30)
+{
+	if nearestPickup.x < x
+		nearestPickup = -1
+	else if nearestPickup.x > x
+		nearestPickup = 1
+	speed = 0;
+	walk = 0;
+	
+	with nearestPickup
+	{
+		instance_destroy();
+		instance_create(x,y,SmallChestPickup);
+		snd_play(sndCursedPickupDisappear);
+	}
+}

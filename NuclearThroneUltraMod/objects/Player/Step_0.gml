@@ -358,19 +358,19 @@ if !instance_exists(LevCont) and visible = 1
 		if keyboard_check_pressed(ord("V")) {
 			isPermanent = true;
 			var dangle = random(1)*360;
-			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Wall);
+			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			//screen_save("explain"+string(scrn)+".png");
 			
 			isPermanent = true;
 			Sleep(100);
 			//scrn++;
 			
-			//instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			repeat(4)
-			instance_create(f.x,f.y,Explosion)
+			instance_create(f.x + 16,f.y + 16,BigWallBreak)
+			instance_create(f.x,f.y,UltraCrystal)
+			instance_create(f.x,f.y,UltraDiscGuy)
 
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "Wall Crawler";
+			thing.mytext = "Ultra Crystal Bot";
 		}
 		if keyboard_check_pressed(ord("C")) {
 			var dangle = random(1)*360;
@@ -932,6 +932,10 @@ if (rad > mr)
 		}*/
 		if level == 10 && !reachedUltra
 		{
+			if scrIsHardMode()
+			{
+				scrUnlockGameMode(47,"FOR REACHING LEVEL ULTRA#ON HARD MODE",34);
+			}
 			reachedUltra = true;
 			snd_play_2d(sndExplosionXXL);
 			instance_create(x,y,LevelUpUltra);
@@ -1978,7 +1982,7 @@ microseconds=0;
 ///Gamepad aiming
 var h_point = gamepad_axis_value(0, gp_axisrh);
 var v_point = gamepad_axis_value(0, gp_axisrv);
-var dedzone = 0.05;
+var dedzone = 0.01;
 if ((abs(h_point) > dedzone) || (abs(v_point) > dedzone))
 {
 	if instance_exists(LevCont)
@@ -2002,9 +2006,9 @@ if ((abs(h_point) > dedzone) || (abs(v_point) > dedzone))
 		moy = window_get_y()+window_get_height()-8;
 		if moy < window_get_y()
 		moy = window_get_y()+8;
-		var smoothing = 0.1;
-		if UberCont.normalGameSpeed == 60
-			smoothing = 0.2;
+		var smoothing = 1;
+		//if UberCont.normalGameSpeed == 60
+		//	smoothing = 0.45;
 		display_mouse_set(lerp(display_mouse_get_x(),mox,smoothing),lerp(display_mouse_get_y(),moy,smoothing));
 	}
 	UberCont.setAimThisFrame = true;

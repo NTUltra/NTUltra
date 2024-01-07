@@ -8,7 +8,7 @@ if instance_exists(Player) && Player.skill_got[12] == 1
 var t1 = instance_create(x + xx, y+yy,SmallThroneBeam)
 ds_list_add(myLasers,t1);
 if isInverted
-	with t2
+	with t1
 	{
 		image_xscale = 0.3;
 		depth = other.depth - 1;

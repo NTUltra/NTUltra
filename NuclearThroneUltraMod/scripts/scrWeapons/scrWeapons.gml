@@ -3035,7 +3035,7 @@ function scrWeapons() {
 	wep_name[274] = "INFUSER"
 	wep_type[274] = 3
 	wep_auto[274] = 0
-	wep_load[274] = 19
+	wep_load[274] = 17
 	wep_cost[274] = 1
 	wep_sprt[274] = sprNewInfuser
 	wep_area[274] = 5

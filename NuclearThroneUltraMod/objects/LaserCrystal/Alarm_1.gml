@@ -5,9 +5,9 @@ alarm[1] = actTime+random(actTime)//30 + 10
 scrTarget()
 if target != noone
 {
-if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and point_distance(x,y,target.x,target.y) < 160
+if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and point_distance(x,y,target.x,target.y) < 170
 {
-if point_distance(x,y,target.x,target.y) > 64
+if point_distance(x,y,target.x,target.y) > 50
 {
 	event_user(0);
 	ammo = maxAmmo
@@ -26,9 +26,9 @@ if point_distance(x,y,target.x,target.y) > 64
 else
 {
 if random(3) < 1
-direction = point_direction(x,y,target.x,target.y)
+	direction = point_direction(x,y,target.x,target.y)
 else
-direction = choose(direction,point_direction(x,y,target.x,target.y)+90+random(180))
+	direction = choose(direction,point_direction(x,y,target.x,target.y)+90+random(180))
 }
 }
 else if random(3) < 1

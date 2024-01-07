@@ -211,7 +211,7 @@ if instance_exists(Player)
 
 	    if ultra_got[48]//Yung Cuz Ultra D
 	    {
-	    lag=3;
+	    lag=2;
 	    }
     
 	    if ultra_got[2]=1//fish ultra B gun warrant

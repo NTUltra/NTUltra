@@ -106,6 +106,16 @@ else
 	with CustomSurvivalWave
 		instance_destroy();
 }
+if ((gamemodeOrder[gamemodenr] == 47 && UberCont.gamemode_have[47]) || (gamemodeOrder[gamemodenr] == 48 && UberCont.gamemode_have[48]))
+{
+	if !instance_exists(GamemodeCharacterUpDown)
+		instance_create(x-10,y+76,GamemodeCharacterUpDown);
+}
+else
+{
+	with GamemodeCharacterUpDown
+		instance_destroy();
+}
 if (gamemodeOrder[gamemodenr]==38 && UberCont.gamemode_have[38])
 {
 	if !instance_exists(SeedSetter) && !instance_exists(PlayerSpawn)

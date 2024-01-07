@@ -34,6 +34,10 @@ if gonnafire = 0
 						{
 							alarm[1] += actTime + tellTime;
 						}
+						with UltraCrystal
+						{
+							alarm[1] += actTime;
+						}
 						gonnafire = 1
 					}
 					else

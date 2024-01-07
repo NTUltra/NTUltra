@@ -1,23 +1,14 @@
+event_inherited()
 raddrop = 9
 maxhealth = 9
-meleedamage = 3
-mySize = 1
-
-event_inherited()
-
+EnemyHealthAdjustments();
 spr_idle = sprInvertedDiscGuyIdle
 spr_walk = sprInvertedDiscGuyWalk
 spr_hurt = sprInvertedDiscGuyHurt
 spr_dead = sprInvertedDiscGuyDead
 spr_fire = sprInvertedDiscGuyFire
-
-snd_dead = sndWolfDead;
-snd_hurt = sndSnowTankHurt;
-
-walk=0;
-//behavior
-alarm[1] = 30+random(30)
-
-if instance_exists(Player)
-motion_add(point_direction(Player.x,Player.y,x,y),1)
-
+actTime -= 1;
+discSpeed = 5;
+range = 300;
+maxSpeed = 3.2;
+acc = 1;

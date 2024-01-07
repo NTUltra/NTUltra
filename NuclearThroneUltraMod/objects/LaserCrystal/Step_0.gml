@@ -4,8 +4,8 @@ event_inherited()
 if sprite_index != spr_fire
 motion_add(direction,0.5)
 
-if speed > 1.5
-speed = 1.5
+if speed > maxSpeed
+speed = maxSpeed
 
 if alarm[2] > 6
 {

@@ -4,8 +4,8 @@ event_inherited()
 
 
 
-if speed>12
-speed=12;
+if speed>maxSpeed
+speed=maxSpeed;
 
 
 if speed<0.8 && idle

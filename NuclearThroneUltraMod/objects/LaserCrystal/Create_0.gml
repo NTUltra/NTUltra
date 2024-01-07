@@ -6,6 +6,14 @@ mySize = 2
 
 event_inherited()
 
+if scrIsHardMode() && (!instance_exists(UltraCrystal) || random(3) < 1) && 
+instance_exists(Player) && Player.area != 126 && Player.area != 127// && Player.area != 6 && Player.area != 124//HARD MODE
+{
+	//Not Graveyard inv grave
+	instance_destroy(id,false);
+	instance_create(x,y,UltraCrystal);
+}
+
 spr_idle = sprLaserCrystalIdle
 spr_walk = sprLaserCrystalIdle
 spr_hurt = sprLaserCrystalHurt
@@ -33,5 +41,5 @@ if loops > 0
 	actTime = 9;
 }
 droprate = 20;
-
+maxSpeed = 1.5;
 alarm[0] = 1;

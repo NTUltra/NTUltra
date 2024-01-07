@@ -3,6 +3,10 @@ if my_health > 0
 {
 	if KeyCont.key_pick[other.p] = 1
 	{
+		with Portal
+		{
+			instance_destroy();	
+		}
 		snd_play(sndCursedReminder,0,0,true,1,false,false,1);
 		KeyCont.key_pick[Player.p] = 2;
 		mask_index = mskPickupThroughWall;

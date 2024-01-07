@@ -63,7 +63,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3e885f48-023f-48b2-98ae-a4810bd9f2aa","path":"sprites/sprEnemyLaserStart/sprEnemyLaserStart.yy",},},},"Disabled":false,"id":"334adbe3-0d3e-4afe-b7b8-c4807c61c8c8","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 6,
     "yorigin": 6,

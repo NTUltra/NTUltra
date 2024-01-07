@@ -3,7 +3,7 @@ function scrKeyContStep() {
 
 	var p;
 	p = 0//player id
-	var dedzone = 0.05;
+	var dedzone = 0.01;
 	repeat(players)
 	{
 	//if gamepad[p] = -1

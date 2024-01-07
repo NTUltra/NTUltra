@@ -81,7 +81,12 @@ function scrDrawBloom() {
 	with BallBossShield
 	{
 		if visible
-			draw_sprite_ext(sprite_index,-1,x+lengthdir_x(image_angle+180,16),y+lengthdir_y(image_angle+180,16),2,2,image_angle,c_white,ba)
+		{
+			if object_index == BallBossShield
+				draw_sprite_ext(sprite_index,-1,x+lengthdir_x(image_angle+180,16),y+lengthdir_y(image_angle+180,16),2,2,image_angle,c_white,ba);
+			else
+				draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba);
+		}
 	}
 	with Bullet2//PELLETS
 	draw_sprite_ext(sprite_index,-1,x,y,1+imageXscale,1+imageYscale,image_angle,c_white,ba)
@@ -490,7 +495,7 @@ function scrDrawBloom() {
 		var theScale = 1.3;
 		if totemBuffed
 		{
-			draw_sprite_ext(sprite_index,image_index,x,y,image_xscale*theScale,image_yscale*theScale,image_angle,c_red,ba+0.2);
+			draw_sprite_ext(sprite_index,image_index,x,y,right*theScale,image_yscale*theScale,image_angle,c_red,ba+0.2);
 			theScale += 0.1;
 		}
 		if super

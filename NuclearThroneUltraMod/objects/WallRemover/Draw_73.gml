@@ -1,6 +1,6 @@
 /// @description Radius
 draw_set_alpha(opacity);
-draw_circle_colour(x,y,radius,c_red,c_red,true);
+draw_circle_width_colour(x,y,radius,3,c_red);
 draw_set_alpha(1);
 scrActivateAllOutOfRange();
 var newcollision = ds_list_create();

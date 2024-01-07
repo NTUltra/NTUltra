@@ -12,7 +12,11 @@ if KeyCont.key_pick[other.p] = 1
 		with other
 		{
 			inverted = false;
-			if area == 114
+			if area == 100
+			{
+				lastarea = 8;	
+			}
+			else if area == 114
 			{
 				area = 8;
 				subarea = 2;

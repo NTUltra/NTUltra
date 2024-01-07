@@ -11,5 +11,5 @@ else
 	r *= 1.1	
 }
 draw_set_alpha(opacity);
-draw_circle(x,y,r,true);
+draw_circle_width_colour(x,y,r,1,c_white);
 draw_set_alpha(1);

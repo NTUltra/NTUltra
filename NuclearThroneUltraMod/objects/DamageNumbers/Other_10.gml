@@ -21,7 +21,7 @@ else
 	useSize = size;
 }
 if !surface_exists(surf)
-	surf = surface_create(128,surfH);
+	surf = surface_create(128,max(1,surfH));
 surface_set_target(surf);
 draw_clear_alpha(c_black,0);
 	var xx = 1;

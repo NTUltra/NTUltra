@@ -43,7 +43,7 @@ persistent_direction = 0;
 actTime = 9;
 fishFireRate = 4;
 suckTime = 75;
-chargeSpeed = 7;
+chargeSpeed = 5;
 chargeDis = 75;
 chargeTell = 20;
 snd_play(sndOasisBossIntro);    

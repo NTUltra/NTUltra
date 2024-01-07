@@ -3,9 +3,9 @@ if alarm[0] < 1
 {
 	BackCont.shake += 0.5;
 	draw_set_alpha(opacity);
-	draw_circle_colour(x,y,radius,col2,col2,true);
-	draw_circle_colour(x,y,radius+1,col,col,true);
-	draw_circle_colour(x,y,radius+2,col2,col2,true);
+	draw_circle_width_colour(x,y,radius,1,col2);
+	draw_circle_width_colour(x,y,radius+1,1,col);
+	draw_circle_width_colour(x,y,radius+2,1,col2);
 	draw_set_alpha(1);
 	var pe = instance_exists(Player);
 	var newcollision = ds_list_create();

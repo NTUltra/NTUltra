@@ -15,7 +15,10 @@
     "name": "Projectiles",
     "path": "folders/Objects/Projectiles.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "projectile",
+    "path": "objects/projectile/projectile.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

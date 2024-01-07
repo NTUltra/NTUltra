@@ -37,8 +37,10 @@ if (area==100 || area ==104)
 	movethislevel=true;
 }
 portalstrikesusedthislevel=0;
-
-
+if (area == 9 || area == 118) && race == 21 && !UberCont.hasLeveledUp
+{
+	scrUnlockBSkin(21,"FOR REACHING THE PALACE#WITHOUT LEVELING UP#AS HORROR",0);	
+}
 if area = 2 && loops>0//UNLOCK LOOP START
 scrUnlockGameMode(21,"FOR REACHING SEWERS LOOP 1")
 

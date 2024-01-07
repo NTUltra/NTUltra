@@ -94,6 +94,9 @@ if alarm[7] > 0 {
 	
 	direction = persistent_direction;
 	motion_add(persistent_direction, chargeSpeed)
+	
+	if speed > chargeSpeed + maxSpeed
+		speed = chargeSpeed + maxSpeed;
 }
 
 if alarm[6] > 0 {

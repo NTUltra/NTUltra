@@ -325,6 +325,7 @@ instance_destroy();
 with instance_create(x,y,PlayerSpawn)//Data to keep
 {
 	//alarm[3]=300;//immunity
+	altUltra = false;
 	chickenFocusMax = other.chickenFocusMax;
 	chickenFocus = chickenFocusMax;
 	chickenFocusDelay = other.chickenFocusDelay;

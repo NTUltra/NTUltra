@@ -5,8 +5,10 @@ mySize = 1
 
 event_inherited()
 
-if instance_exists(Player) && Player.area != 1 && scrIsHardMode() && random(2) < 1//HARD MODE
+if scrIsHardMode() && (!instance_exists(UltraSniper) || random(3) < 1) && 
+instance_exists(Player) && Player.area != 1//HARD MODE
 {
+	//Not oasis desert and/or savanna
 	instance_destroy(id,false);
 	instance_create(x,y,UltraSniper);
 }

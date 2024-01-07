@@ -8,7 +8,7 @@ if other.typ == 1
 		team = other.team
 		direction += 180
 		image_angle = direction
-		speed = max(2,other.speed*0.6);
+		speed = max(2,other.speed*0.7);
 		event_user(15);
 	}
 }

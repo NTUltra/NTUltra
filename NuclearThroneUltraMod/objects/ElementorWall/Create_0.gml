@@ -3,6 +3,7 @@ phaseable = false;
 colour = c_gray;
 alarm[2] = 90;
 blink = 15;
+depth = 0;
 if instance_exists(Player)
 { 
 	if Player.ultra_got[93] && !Player.altUltra

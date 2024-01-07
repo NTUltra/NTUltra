@@ -353,6 +353,8 @@ function scrShadows() {
 		draw_sprite(shd24,0,x-vx,y-vy)
 	with Bandit
 		draw_sprite(shd24,0,x-vx,y-vy)
+	with UltraProtector
+		draw_sprite(shd24,0,x-vx,y-vy)
 	with UltraBandit
 		draw_sprite(shd24,0,x-vx,y-vy)
 	with ScubaBandit

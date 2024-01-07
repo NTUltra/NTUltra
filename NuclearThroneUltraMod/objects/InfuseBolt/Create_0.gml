@@ -8,7 +8,7 @@ offy = random(2)-1
 
 alarm[0]=120;
 
-dmg = 7;
+dmg = 8;
 dealtDamage = false;
 stickTarget = noone;
 hitTime = 10;

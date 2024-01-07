@@ -9,7 +9,7 @@ if target != noone && instance_exists(target)
 	if isThrone2
 	{
 		dir += choose(random_range(25,55),random_range(-25,-55));
-		addspeed *= 0.9;
+		addspeed *= 0.95;
 	}
 	if typ == 2
 	{
@@ -21,7 +21,7 @@ if target != noone && instance_exists(target)
 				team = other.team;
 				x += lengthdir_x(8, dir);
 				y += lengthdir_y(8, dir);
-				motion_add(dir,3.1+random(1.6)+addspeed);
+				motion_add(dir,max(5,3.1+random(1.6)+addspeed));
 				friction -= 0.01;
 			}
 		}
@@ -33,7 +33,7 @@ if target != noone && instance_exists(target)
 				team = other.team;
 				x += lengthdir_x(8, dir);
 				y += lengthdir_y(8, dir);
-				motion_add(dir,2.4+random(1.6)+addspeed);
+				motion_add(dir,max(5,2.4+random(1.6)+addspeed));
 			}
 		}
 	}
@@ -48,7 +48,7 @@ if target != noone && instance_exists(target)
 				team = other.team;
 				x += lengthdir_x(8, dir);
 				y += lengthdir_y(8, dir);
-				motion_add(dir,3.6+random(1.6)+addspeed);
+				motion_add(dir,max(5,3.6+random(1.6)+addspeed));
 			}
 		}
 		else
@@ -59,7 +59,7 @@ if target != noone && instance_exists(target)
 				team = other.team;
 				x += lengthdir_x(8, dir);
 				y += lengthdir_y(8, dir);
-				motion_add(dir,2.4+random(1.6)+addspeed);
+				motion_add(dir,max(5,2.4+random(1.6)+addspeed));
 			}
 		}
 	}

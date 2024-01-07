@@ -5,10 +5,6 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":1,"eventType":2,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"Wall","path":"objects/Wall/Wall.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -17,8 +13,8 @@
     "path": "folders/Objects/Enemies/FrozenCity.yy",
   },
   "parentObjectId": {
-    "name": "enemyCollisionWall",
-    "path": "objects/enemyCollisionWall/enemyCollisionWall.yy",
+    "name": "DiscGuy",
+    "path": "objects/DiscGuy/DiscGuy.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
