@@ -375,6 +375,7 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 	var al = array_length(livesRegain);
 	var tookLife = false;
 	race = other.race
+	copyPassive = other.copyPassive;
 	crown = other.crown
 	lastarea = other.lastarea;
 	lastsubarea = other.lastsubarea;

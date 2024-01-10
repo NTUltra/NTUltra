@@ -13,12 +13,15 @@ else
 {
 	myGuy = noone;
 	myGuy = instance_nearest_notme(x,y,enemy);
-	dis = point_distance(x,y,myGuy.x,myGuy.y);
-	if myGuy.team != team || myGuy.my_health <= 0 || dis > 200 || myGuy.object_index == UltraProtector
-		myGuy = noone;
 	if myGuy != noone
 	{
-		wkick = 4;
+		dis = point_distance(x,y,myGuy.x,myGuy.y);
+		if myGuy.team != team || myGuy.my_health <= 0 || dis > 200 || myGuy.object_index == UltraProtector
+			myGuy = noone;
+		if myGuy != noone
+		{
+			wkick = 4;
+		}
 	}
 }
 

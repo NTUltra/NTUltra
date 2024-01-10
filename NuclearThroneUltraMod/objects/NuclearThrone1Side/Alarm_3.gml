@@ -24,9 +24,9 @@ if owner > -1 && owner.fireTriShot && instance_exists(Player)
 					proj1 = InvertedExploGuardianSquareBullet;
 				}
 				if isLeft
-					odir = 0.1;
+					odir = 0.09;
 				else
-					odir = -0.1;
+					odir = -0.09;
 			}
 			else
 			{
@@ -69,9 +69,9 @@ if owner > -1 && owner.fireTriShot && instance_exists(Player)
 			{
 				proj = InvertedExploGuardianBullet;
 				if isLeft
-					odir = 0.1;
+					odir = 0.09;
 				else
-					odir = -0.1;
+					odir = -0.09;
 			}
 			repeat(3)
 			{

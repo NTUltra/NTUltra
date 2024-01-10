@@ -15,7 +15,7 @@ canMoveOver = true;
 snd_hurt = sndHitRock
 alarm[1]=830 * clamp(loops*1.3,1,4)//33 sec 900
 scrIsHardMode()
-	alarm[1] += 90;
+	alarm[1] += 120;
 if instance_exists(Player) && Player.subarea != 1
 {	
 	if loops == 0

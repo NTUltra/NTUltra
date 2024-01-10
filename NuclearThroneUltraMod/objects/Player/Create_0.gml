@@ -243,6 +243,9 @@ if scrIsGamemode(35)
 race = 23
 
 fakeRace = race;
+copyPassive = race;
+if scrIsGamemode(47)//Double active gamemode
+	copyPassive = UberCont.useRaceActive;
 canMove = true;
 if scrIsGamemode(7) || scrIsGamemode(13)//ATom & rocket glove
 	canMove = false;

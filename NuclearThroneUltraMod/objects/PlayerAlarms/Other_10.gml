@@ -23,7 +23,7 @@ if instance_exists(Player)
 		alarm[2] = stressLowCheck;
 	if Player.ultra_got[26] //GET LOADED
 		alarm[3] = 60;
-	if Player.race == 26//HUMPHRY
+	if Player.race == 26 || Player.copyPassive == 26//HUMPHRY
 	{
 		humphryDelay = 8;
 		humphryAmount = 0.94;

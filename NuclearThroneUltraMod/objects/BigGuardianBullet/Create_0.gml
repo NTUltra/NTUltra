@@ -13,4 +13,5 @@ friction = 0.09;
 projectileToSpawn = GuardianBulletSpawn;
 hitSprite = sprGuardianBulletHit;
 alarm[0] = 4;
+alarm[5] = 5;//secret cheat
 scrInitDrops(1);

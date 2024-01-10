@@ -44,6 +44,7 @@ function scrEndOfRun(){
 		globalMutationsChosen = 0;
 		canSave = false;
 		canMultiCrown = false;
+		useRaceActive = 1;
 		if scrIsGamemode(43)
 			canMultiCrown = true;
 		canPickFrogCrown = true;

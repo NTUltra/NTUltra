@@ -86,7 +86,7 @@ scrEnemyDeathEvent();
 
 if totemBuffed
 {
-	scrDrop(22,2);
+	scrDrop(18,2);
 }
 if super {
 	snd_play(sndNothingFire);

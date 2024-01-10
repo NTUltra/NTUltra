@@ -4,7 +4,7 @@ encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "30.06"//"PR 30.02";
-subUpdateVersion = ".BETA2";
+subUpdateVersion = ".01";
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
 /*
@@ -54,6 +54,7 @@ hard = 0;
 
 todaysSeed = -1;
 gunGameSeed = todaysSeed;
+useRaceActive = 1;
 nextGunGameWep = 0;
 nextGunGameWepB = 0;
 today = string(current_day) + "-" + string(current_month) + "-"+ string(current_year);

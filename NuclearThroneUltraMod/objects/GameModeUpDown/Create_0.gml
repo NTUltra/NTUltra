@@ -4,6 +4,7 @@ for (var i = 0; i < al; i++) {
 	if (UberCont.gamemodeOrder[i] == UberCont.opt_gamemode)
 		gamemodenr = i;
 }*/
+depth = -12;
 gamemodenr = 0;
 prevgamemodenr = 0;
 scrGameModes();

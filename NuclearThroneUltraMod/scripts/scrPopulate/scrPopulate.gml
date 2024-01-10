@@ -45,7 +45,7 @@ function scrPopulate() {
             exit;
         }
 
-        if random(10 + hard) < hard and point_distance(x, y, Player.x, Player.y) > 170 /*110*/ and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 300) //240
+        if random(10 + hard) < hard and point_distance(x, y, Player.x, Player.y) > 200 /*110*/ and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 300) //240
         {
             if ( ((spawnarea = 3 || spawnarea = 106) && Player.subarea = 3) || ((spawnarea = 5 || spawnarea = 112) && Player.subarea = 3) ) {
                 if !instance_exists(enemy) || random(3) < 2 {

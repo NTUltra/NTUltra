@@ -1,6 +1,7 @@
 /// @description More fucking
 var yy = 52;
 var xx = 16;
+snd_play(sndNothingBeamStart);
 if instance_exists(Player) && Player.skill_got[12] == 1
 {
 	xx -= 4;
@@ -36,7 +37,7 @@ if isInverted
 		depth = other.depth - 1;
 		team = other.team;
 		alarm[1] = 1;
-		angleDir = 1
+		angleDir = -1
 		sprBeam = sprInvertedNothingBeam;
 		sprBeamHit = sprInvertedNothingBeamHit;
 		sprite_index = sprInvertedNothingBeamStretch;

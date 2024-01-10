@@ -10,7 +10,7 @@ function scrPowers(raceOverwrite = -1) {
 		race = raceOverwrite;
 	else if scrIsGamemode(47)//Double active gamemode
 	{
-		scrPowers(UberCont.opt_gm_char_active);
+		scrPowers(UberCont.useRaceActive);
 	}
 	
 	if scrIsCrown(34)
@@ -2192,12 +2192,13 @@ function scrPowers(raceOverwrite = -1) {
 					}
 				}
 			}
-		} else if race == 14 && PlayerAlarms2.alarm[7] < 1
+		} 
+		else if race == 14 && PlayerAlarms2.alarm[7] < 1
 		{
 			scrPandaThrow();
 		}
 		//CRYSTAL
-		else if race == 2 and !instance_exists(CrystalShield)//Change this ability to longer lasting shield.
+		if race == 2 and !instance_exists(CrystalShield)//Change this ability to longer lasting shield.
 		{
 			instance_create(x,y,CrystalShield)
 		}
@@ -2972,7 +2973,7 @@ function scrPowers(raceOverwrite = -1) {
 			//spr_walk = sprMutant9Thronebutt;
 
 
-			if my_health > 0
+			if my_health > 0 && raceOverwrite == -1
 			{
 				if bskin=1
 				{
@@ -3243,7 +3244,7 @@ function scrPowers(raceOverwrite = -1) {
 		with Decoy//CHICKEN VANISH
 		{instance_destroy();}
 
-		if my_health > 0
+		if my_health > 0 && raceOverwrite == -1
 		{
 			if bskin=1
 			{
@@ -3331,7 +3332,7 @@ function scrPowers(raceOverwrite = -1) {
 			snd_play_2d(sndHorrorCashFlowEnd);
 		}
 	}
-	else if race==22 //rogue
+	if race==22 //rogue
 	{
 		with PortalStrike
 		{
@@ -3359,7 +3360,7 @@ function scrPowers(raceOverwrite = -1) {
 		    }
 		}
 	}
-	else if race == 23//FROG release
+	if race == 23//FROG release
 	{
 
 		if ultra_got[90]//intimacy
@@ -3428,7 +3429,7 @@ function scrPowers(raceOverwrite = -1) {
 
 		toxicamount=0;
 	}
-	else if ultra_got[19]//Plant Sprint
+	if ultra_got[19]//Plant Sprint
 	{
 
 	if skill_got[2]==1//extra feet
@@ -3443,7 +3444,7 @@ function scrPowers(raceOverwrite = -1) {
 	image_speed=0.4;
 
 	}
-	else if race==13 && !(ultra_got[51] && altUltra)
+	if race==13 && !(ultra_got[51] && altUltra)
 	{
 		if KeyCont.key_spec[p] != 1 && KeyCont.key_spec[p] != 2 || !instance_exists(SheepStorm)//Sheep reset speed
 		{
@@ -3479,12 +3480,10 @@ function scrPowers(raceOverwrite = -1) {
 			}
 		}
 	}
-	else if race == 24 && KeyCont.key_spec[p] != 1 && KeyCont.key_spec[p] != 2
+	if race == 24 && KeyCont.key_spec[p] != 1 && KeyCont.key_spec[p] != 2
 	{
 		lockoutElementor = false;	
 	}
-	}
-	else {
 	}
 	race = keepRace;
 }

@@ -62,9 +62,71 @@ if target != noone && instance_exists(target)
 		walk = alarm[1];
 		if walkDir == 0
 		{
-			walkDir = 0.85;
-			if y > ystart + 300
-				walkDir = 0.7;
+			walkDir = 0.84;
+		} else if walkDir > 0
+		{
+			if y > yReset + 600
+			{
+				with chestprop
+				{
+					if y < other.yReset + 500
+					{
+						instance_destroy(id,false);	
+					}
+				}
+				with Wall
+				{
+					if y < other.yReset + 500
+					{
+						instance_destroy(id,false);	
+					}
+				}
+				with Top
+				{
+					if y < other.yReset + 500
+					{
+						instance_destroy(id,false);	
+					}
+				}
+				with TopSmall
+				{
+					if y < other.yReset + 500
+					{
+						instance_destroy(id,false);	
+					}
+				}
+				with Floor
+				{
+					if y < other.yReset + 500
+					{
+						instance_destroy(id,false);	
+					}
+					else if y < other.yReset + 516
+					{
+						if object_index == FloorExplo
+							instance_create(x,y-16,Wall);
+						else
+						{
+							instance_create(x,y-16,Wall);
+							instance_create(x + 16,y-16,Wall);
+						}
+						instance_create(x,y-48,Top);
+					}
+				}
+				yReset = y;
+			}
+			if y > ystart + 1800
+				walkDir = 0.8;
+			else if y > ystart + 1400
+				walkDir = 0.9;
+			else if y > ystart + 1200
+				walkDir = 1;
+			else if y > ystart + 900
+				walkDir = 0.9;
+			else if y > ystart + 600
+				walkDir = 0.8;
+			else if y > ystart + 300
+				walkDir = 0.7;	
 		}
 	}
 }

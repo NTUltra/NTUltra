@@ -16,7 +16,7 @@ function scrEnemyTakingDamage(){
 		}
 		if instance_exists(Player)
 		{
-			if Player.race == 26//HUMPHRY mr damage
+			if Player.race == 26 || Player.copyPassive == 26//HUMPHRY mr damage
 			{
 				dmgTaken = scrHumphryDamage(dmgTaken);
 			}

@@ -7,7 +7,7 @@ scrBossHealthBuff();
 EnemyHealthAdjustments();
 raddrop = 600;
 isInverted = true;
-aTime = 30;
+aTime = 34;
 aTime -= min(GetPlayerLoops()*2,10);
 
 spr_idle = sprInvertedNothingOn;

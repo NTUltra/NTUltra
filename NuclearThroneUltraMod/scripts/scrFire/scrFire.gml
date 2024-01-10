@@ -4283,7 +4283,7 @@ function scrFire() {
 	with instance_create(x,y,SlashEraserPrep)
 	{
 	snd_play_fire(sndEraser)
-	motion_add(aimDirection+(random(6)-3)*other.accuracy,15);
+	motion_add(aimDirection+(random(6)-3)*other.accuracy,14);
 	image_angle=direction;
 	rate=1//for extra speed more bullets per step
 	Direction=aimDirection;

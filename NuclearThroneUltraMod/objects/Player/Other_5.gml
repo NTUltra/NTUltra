@@ -77,7 +77,7 @@ if race==10 && canHeal//Rebel pasive
 	if my_health<maxhealth
 		my_health += round((maxhealth-my_health)*0.5);
 }
-else if race=12//yung cuz reset max HP
+else if (race == 12 || (copyPassive == 12 && race != 9))//yung cuz reset max HP
 {
 	if maxhealth < 2
 	{

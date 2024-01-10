@@ -140,7 +140,20 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+16 and UberCon
 		time_microseconds=0;
 		time_seconds=0;
 		time_minutes=0;
-		time_hours=0;	
+		time_hours=0;
+		if scrIsGamemode(47)
+		{
+			if opt_gm_char_active == 0
+			{
+				do {useRaceActive = 1+irandom(racemax-1);} until (race_have[useRaceActive] = 1)
+				with instance_create(x,y,UnlockPopup)
+					mytext=other.race_name[other.useRaceActive];
+			}
+			else
+			{
+				useRaceActive = opt_gm_char_active
+			}
+		}
 	}
     instance_create(x,y,Player);
 	//Start settings save

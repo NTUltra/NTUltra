@@ -122,6 +122,31 @@ if !firstEntry && alarm[1] < 15
 }
 if isInverted
 {
+	var s = 0.1;
+	if UberCont.normalGameSpeed == 60
+		s = 0.05;
+	with BigGuardianBulletSpawn {
+		vspeed += s;
+		if x > other.x
+		{
+			x -= s;
+		}
+		else if x < other.x
+		{
+			x += s;	
+		}
+	}
+	with BigGuardianBullet {
+		vspeed += s;
+		if x > other.x
+		{
+			x -= s;
+		}
+		else if x < other.x
+		{
+			x += s;	
+		}
+	}
 	var msk = mask_index;
 	mask_index = mskInvertedNothingFuckWall;
 	var hitWalls = ds_list_create();

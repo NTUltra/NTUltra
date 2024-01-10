@@ -1,5 +1,5 @@
 ///AI
-alarm[1] = 7 + random(5);
+alarm[1] = 9 + random(4);
 scrTarget()
 if target != noone {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
@@ -10,7 +10,7 @@ if target != noone {
 				alarm[1] += 12;
 				if random(3) < 1
 				{
-					walk = alarm[1] + 1;
+					walk = alarm[1] + 2;
 					motion_add(gunangle + choose(90,-90),1);
 				}
 			}
@@ -20,14 +20,14 @@ if target != noone {
             else {
                 direction = point_direction(x, y, target.x, target.y) + random(180) - 90
                 speed = 0.8
-                walk = alarm[1] - 2;
+                walk = alarm[1] - 5;
                 gunangle = point_direction(x, y, target.x, target.y)
             }
         }
         else {
             direction = point_direction(target.x, target.y, x, y) + random(20) - 10
             speed = 0.6
-            walk = alarm[1] + 2
+            walk = alarm[1] + 3
             gunangle = point_direction(x, y, target.x, target.y)
         }
 

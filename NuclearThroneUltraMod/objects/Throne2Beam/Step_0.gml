@@ -9,8 +9,9 @@ if instance_exists(Throne2)
 if image_yscale < 40
 {
 	if UberCont.normalGameSpeed == 60
-		image_yscale += growRate * 0.5;
+		image_yscale += 1;
 	else
-		image_yscale += growRate;
-	yEnd = y + (image_yscale * sprite_get_height(sprite_index))
+		image_yscale += 2;
+	yEnd = y + lengthdir_y(image_yscale * sprite_get_height(sprite_index),image_angle - 90);
+	xEnd = x + lengthdir_x(image_yscale * sprite_get_height(sprite_index),image_angle - 90);
 }

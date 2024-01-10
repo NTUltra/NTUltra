@@ -745,7 +745,7 @@ if my_health < prevhealth && exception=false// && alarm[3] < 1//I been hit
 		//rage = 0;
 		rage = max(floor(rage-50),0);
 	}
-	if race == 26 && humphrySkill > 0//Humphry
+	if (race == 26 || copyPassive == 26) && humphrySkill > 0//Humphry
 	{
 		if skill_got[5]
 			humphrySkill *= 0.75;

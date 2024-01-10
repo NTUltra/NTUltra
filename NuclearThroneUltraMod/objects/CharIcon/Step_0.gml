@@ -14,6 +14,7 @@ if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+16 and UberCont.mouse__y <
 		bskin = UberCont.skin[race];
 		scrLoadRace();
 		fakeRace = race;
+		copyPassive = race;
 		race = keepRace;
 	}
 	snd_play_2d(sndClick);

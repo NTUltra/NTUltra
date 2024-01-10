@@ -11,12 +11,16 @@ draw_sprite_ext(sprite_index,0,x,y,spriteXscale,1,0,c_white,1);
 
 if alarm[4] > 0 || alarm[5] > 0
 {
+	var spr = sprLaserSightThrone;
+	if isInverted
+		spr = sprLaserSightInvThrone;
+	var yy = y + 18;
 	var lasx = x
-	var lasy = y + 64;
+	var lasy = yy
 	var lasd = 0
-	do {lasd += 1 lasy += 2}
+	do {lasd += 2 lasy += 2}
 	until position_meeting(lasx,lasy,Wall) or lasd > 1000
-	draw_sprite_ext(sprLaserSightThrone,-1,x-16,y,1,lasy+1,0,c_white,1)
-	draw_sprite_ext(sprLaserSightThrone,-1,x+16,y,1,lasy+1,0,c_white,1)
-	draw_sprite_ext(sprLaserSightThrone,-1,x,y,1,lasy+1,0,c_white,1)
+	draw_sprite_ext(spr,-1,x-16,yy,1,lasd+1,0,c_white,1)
+	draw_sprite_ext(spr,-1,x+16,yy,1,lasd+1,0,c_white,1)
+	draw_sprite_ext(spr,-1,x,yy,1,lasd+1,0,c_white,1)
 }

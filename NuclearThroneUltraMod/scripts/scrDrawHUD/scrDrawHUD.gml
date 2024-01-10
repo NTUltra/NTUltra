@@ -23,7 +23,7 @@ function scrDrawHUD() {
 	var vx = 0//GameRender.viewX;//camera_get_view_x(view_camera[0]);
 	var vy = -1//GameRender.viewY;//camera_get_view_y(view_camera[0]);
 	var yo = 0;
-	if dataRef.race == 9
+	if dataRef.race == 9 || dataRef.copyPassive == 9
 		yo = 1;
 	
 	///POPUP TEXT
@@ -74,7 +74,7 @@ function scrDrawHUD() {
 		if dataRef.metabolism == 2
 			draw_sprite(sprHealtBarMetabolismFull,0,vx+hx,vy+4)
 		
-		if dataRef.race == 9// Chicken
+		if dataRef.race == 9 || dataRef.copyPassive == 9// Chicken
 		{
 			draw_sprite(sprChickenFocusBar,0,vx+hx,vy+16)
 			var focusIndex = 1;
@@ -112,7 +112,7 @@ function scrDrawHUD() {
 
 
 	//ROGUE AMMO
-	if dataRef.race=22 && dataRef.ultra_got[88] != 1
+	if (dataRef.race=22 || dataRef.copyPassive == 22) && dataRef.ultra_got[88] != 1
 	{
 		var spr = sprRogueAmmoHUD;
 		if dataRef.ultra_got[85]=1
@@ -1083,7 +1083,7 @@ function scrDrawHUD() {
 		draw_sprite(sprUltraLevel,0,vx+rto,vy+16);
 	}
 	//GOOD O'L HUMPHRY SKILL
-	if dataRef.race=26
+	if dataRef.race == 26 || dataRef.copyPassive == 26
 	{
 		txt = string(floor(dataRef.humphrySkill));
 		draw_set_halign(fa_left)

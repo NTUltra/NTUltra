@@ -22,7 +22,7 @@ shadowSprite = shd48;
 snd_hurt = sndHitRock
 alarm[1]=470;
 if scrIsHardMode() || scrIsGamemode(20)
-	alarm[1] += 90;
+	alarm[1] += 120;
 alarm[1] *= clamp(loops*2.5,1,6)//335//10 seconds 300
 /*
 instance_create(x,y,WallBreak);
