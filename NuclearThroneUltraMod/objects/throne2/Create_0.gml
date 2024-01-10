@@ -127,4 +127,8 @@ if instance_exists(Player)
 		}
 	}
 }
-// isHard = false; Hard mode to skip loop?
+
+if scrIsHardMode()
+{
+	alarm[5] = alarm[1] + 60;	
+}

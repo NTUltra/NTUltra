@@ -5,11 +5,13 @@ if alarm[3]>5
     {
     motion_add(0,acc);
     direction=0;
+	myMovementDirection = 0;
     }
     else
     {
     motion_add(180,acc);
 	direction=180;
+	myMovementDirection = 180;
     }
 }
 

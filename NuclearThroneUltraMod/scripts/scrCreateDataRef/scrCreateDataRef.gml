@@ -92,5 +92,6 @@ function scrCreateDataRef(){
 		chickenFocus = chickenFocusMax;
 		chickenFocusDelay = other.chickenFocusDelay;
 		chickenFocusDelayTime = 0;
+		isMarksMan = other.isMarksMan;
 	}
 }

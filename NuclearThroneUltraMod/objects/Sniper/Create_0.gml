@@ -5,7 +5,7 @@ mySize = 1
 
 event_inherited()
 
-if scrIsHardMode() && (!instance_exists(UltraSniper) || random(3) < 1) && 
+if scrIsHardMode() && object_index != UltraSniper && (!instance_exists(UltraSniper) || random(5) < 1) && 
 instance_exists(Player) && Player.area != 1//HARD MODE
 {
 	//Not oasis desert and/or savanna

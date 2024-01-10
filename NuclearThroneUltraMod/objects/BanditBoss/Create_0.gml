@@ -2,7 +2,9 @@ raddrop = 30
 maxhealth = 100
 meleedamage = 0
 mySize = 3
-var loops = GetPlayerLoops();
+loops = GetPlayerLoops();
+if scrIsHardMode()
+	loops += 1;
 maxhealth += clamp(20*loops,0,200);
 scrBossHealthBuff();
 

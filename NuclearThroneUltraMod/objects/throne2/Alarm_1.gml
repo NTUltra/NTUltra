@@ -60,4 +60,6 @@ if !reachedHalfHP && my_health < maxhealth * 0.5
 	crossAmount ++;
 	maxAmmo ++;
 	snd_play(sndNothing2HalfHP);
+	if loops > 0
+		alarm[5] = 30;
 }

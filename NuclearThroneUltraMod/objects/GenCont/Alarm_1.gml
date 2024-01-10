@@ -80,6 +80,21 @@ if instance_exists(Player)
 			instance_create(x,y+16,MorphWeaponChest)
 	    }
 	}
+	else if Player.area == 122 && Player.subarea == 2//Inv oasis
+	{
+		 with WeaponChest
+	    {
+			instance_create(x,y+16,ToxicWeaponChest)
+	    }
+	    with BigWeaponChest
+	    {
+			instance_create(x,y+16,ToxicWeaponChest)
+	    }
+	    with EliteWeaponChest
+	    {
+			instance_create(x,y+16,ToxicWeaponChest)
+	    }
+	}
 	else if Player.area == 130 || Player.area == 131 || Player.area == 133 || Player.area == 134//Factory
 	{
 		with WeaponChest
@@ -262,4 +277,35 @@ with CrownPickup
 if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK)
 {
 	instance_create(x,y,FPSHACK);
+}
+if scrIsGamemode(48) {
+	var totalHealth = 30;//Get three extra shots
+	if GetPlayerLoops() > 0
+	{
+		totalHealth -= 20;
+		with enemy {
+			totalHealth += max(6,maxhealth);
+		}
+		with Player {
+			ammo[1] = totalHealth*0.095;
+		}
+	}
+	else
+	{
+		if Player.area == 1
+		{
+			totalHealth += 10;
+			with enemy {
+				totalHealth += max(10,maxhealth);
+			}
+		}
+		else
+			with enemy {
+				totalHealth += max(8,maxhealth);
+			}
+		with Player {
+			ammo[1] = totalHealth*0.1;
+		}
+	}
+	
 }

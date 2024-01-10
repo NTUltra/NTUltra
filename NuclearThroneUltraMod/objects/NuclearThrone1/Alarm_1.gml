@@ -29,10 +29,10 @@ if target != noone && instance_exists(target)
 		fireTriShot = false;
 		bigballs = false;
 	}
-	else if ((target.y - y > 250 && ran > 64) || ran > 97 || target.y - y > 180)
+	else if ((target.y - y > 240 && ran > 64) || ran > 95 || target.y - y > 180)
 	{
 		//below me
-		walk = alarm[1]-2;
+		walk = alarm[1]-1;
 		walkDir = 0.9;
 		if target.y - y > 280
 			walkDir += 0.4;

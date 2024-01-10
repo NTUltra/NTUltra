@@ -8,7 +8,7 @@ alarm[0] = 150+random(30)
 if scrIsGamemode(9) //CASUAL MODE
 	alarm[0] += 30;
 if scrIsHardMode() //HARD MODE
-	alarm[0] -= 10;
+	alarm[0] -= 20;
 
 //RUSH CROWN
 if instance_exists(Player){

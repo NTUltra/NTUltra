@@ -1,6 +1,10 @@
 image_speed=0;
 shouldClose = true;
 wepmod=scrMods();
+if instance_exists(Player) && Player.area == 122 && Player.subarea == 2
+{
+	wepmod = 1; //Toxic mod
+}	
 depth = 3;
 if instance_exists(WeaponMod) && instance_number(WeaponMod) > 1
 {

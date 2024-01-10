@@ -18,7 +18,7 @@ if myGuy != noone && instance_exists(myGuy) {
 	+ sprite_get_width(msk) * 0.5;
 	shieldY = myGuy.y - sprite_get_yoffset(msk)
 	+ sprite_get_height(msk) * 0.5;
-	shieldRadius = min(96,max(w,h) + 2);
+	shieldRadius = min(64,max(w*0.5,h*0.5) + 4);
 	var projs = ds_list_create();
 	var al = collision_circle_list(shieldX,shieldY,shieldRadius,projectile,false,false,projs,false)
 	for (var i = 0; i < al; i++)
@@ -29,8 +29,8 @@ if myGuy != noone && instance_exists(myGuy) {
 				if typ == 0 && !canBeMoved && isLaser
 				{
 					var dir = point_direction(x,y,other.shieldX,other.shieldY) + 180;
-					var xx = other.shieldX + lengthdir_x(shieldRadius,dir);
-					var yy = other.shieldY + lengthdir_y(shieldRadius,dir);
+					var xx = other.shieldX + lengthdir_x(other.shieldRadius,dir);
+					var yy = other.shieldY + lengthdir_y(other.shieldRadius,dir);
 					var d = point_distance(xstart,ystart,xx,yy) - 1;
 					x = xstart + lengthdir_x(d,image_angle);
 					y = ystart + lengthdir_y(d,image_angle);
@@ -92,5 +92,12 @@ if myGuy != noone && instance_exists(myGuy) {
 	else if alarm[6] < 1
 	{
 		alarm[6] = holdBulletTime;
+	}
+}
+else if myConnectionBullet != noone && instance_exists(myConnectionBullet)
+{
+	with myConnectionBullet
+	{
+		instance_destroy();	
 	}
 }

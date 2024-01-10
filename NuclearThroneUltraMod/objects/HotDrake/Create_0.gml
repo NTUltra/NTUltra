@@ -2,6 +2,8 @@ raddrop = 80
 maxhealth = 820
 scrBossHealthBuff();
 loops = GetPlayerLoops();
+scrIsHardMode()
+	loops += 1;
 if loops > 0
 {
 	with instance_create(x,y,DragonShield)

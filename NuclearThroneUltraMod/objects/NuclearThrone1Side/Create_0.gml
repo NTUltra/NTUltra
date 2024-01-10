@@ -1,6 +1,8 @@
 /// @description Init
 maxhealth = 700;
 loops = GetPlayerLoops()
+scrIsHardMode()
+	loops ++;
 scrBossHealthBuff();
 disable = false;
 mySize = 8;

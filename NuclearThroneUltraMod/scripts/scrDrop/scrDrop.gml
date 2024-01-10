@@ -61,7 +61,7 @@ function scrDrop(itemdrop, weapondrop) {
 			repeat(min(lps,4))
 			{
 				itemdrop *= 0.93;
-				canHealth *= 0.93;//0.98
+				canHealth *= 0.92;//0.98
 			}
 		}
 		if lps > 2

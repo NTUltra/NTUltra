@@ -747,7 +747,7 @@ function scrMakeFloor(limiter) {
 	if area == 8 || area == 109
 	trn = choose(0,0,0,0,0,180,0,0,90,90,-90,90,-90,180)
 	if ((area == 9 || area == 118) && subarea < 3)
-	trn = choose(0,0,0,0,0,0,0,0,0,90,-90,90,-90)
+	trn = choose(0,0,0,0,0,0,0,0,0,0,90,-90,90,-90)
 	else if ((area == 9 || area == 118) && subarea == 3)
 	trn = 0;
 	else if area == 100
@@ -888,7 +888,7 @@ function scrMakeFloor(limiter) {
 	{
 	   if random(19+instance_number(FloorMaker)) > 20
 	   {
-	   instance_destroy()
+	   // instance_destroy()
 	   if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
 			if (random(4) <2)
 			instance_create(x+16,y+16,WeaponChest)

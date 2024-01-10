@@ -48,121 +48,13 @@ function scrPopulate() {
         if random(10 + hard) < hard and point_distance(x, y, Player.x, Player.y) > 170 /*110*/ and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 300) //240
         {
             if ( ((spawnarea = 3 || spawnarea = 106) && Player.subarea = 3) || ((spawnarea = 5 || spawnarea = 112) && Player.subarea = 3) ) {
-                if random(3) < 1.3 {
-                    if scrIsGamemode(9) //easy mode
-                    {
-                        if random(4) < 1 || !instance_exists(enemy)
-							scrPopEnemies()
-						else if Player.loops > 0 && random(6) < Player.loops
-							scrPopEnemies()
-                    } else
-                        scrPopEnemies()
-                }
-				
-                //spawn some more enemies on loop
-                if Player.loops > 0 && random(2) < Player.loops
-					scrPopEnemies();
-					
-				if Player.loops > 5 && random(15) < Player.loops - 7
-					scrPopEnemies();
-					
-				if Player.loops > 10 && random(15) < Player.loops - 13
-					scrPopEnemies();
-				
-				if scrIsHardMode() && !scrIsGamemode(40)
-				{
-					var ran = random(130);
-					if ran < 10 && spawnarea != 100
-					{
-						scrPopEnemies();
-					}
-					else if ran < 15
-					{
-						instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraBandit);
-					}
-					else if spawnarea != 1  && spawnarea != 105 && spawnarea != 100//Not desert not crownvault
-					{
-						if ran < 18
-						{
-							instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraBandit);
-						}
-						else if spawnarea != 10 && spawnarea != 121 && spawnarea != 101 && spawnarea != 122//Not savanna oasis
-						{
-							if ran < 23
-							{
-								instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraSniper);
-							}
-							else if spawnarea != 2  && spawnarea != 110 && spawnarea != 3 && spawnarea != 106//no sewers & no scrap
-							{
-								if ran < 30
-								{
-									instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraCrystal);
-								}
-								else if spawnarea != 6 && spawnarea != 112 && spawnarea != 117 && spawnarea != 124 && spawnarea != 7 && spawnarea != 108
-								{
-									//Not mushroom vulcano or labs
-									if ran < 40
-									{
-										instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraDiscGuy);
-									}
-									//else if spawnarea != 5 && spawnarea != 107 && spawnarea != 114 && spawnarea != 123 && spawnarea != 108 && spawnarea != 109
-									//{
-										//Not jungle not frozen city not wonderland
-										else if ran < 55
-										{
-											instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraProtector);
-										}
-									//}
-								}
-							}
-						}
-					}
+                if !instance_exists(enemy) || random(3) < 2 {
+					scrSpawnSomeEnemies();
 				}
             }
             else {
-                if scrIsGamemode(9) //easy mode
-                {
-                    if random(4) < 1 || !instance_exists(enemy)
-                    scrPopEnemies()
-					else if Player.loops > 0
-						scrPopEnemies()
-                } else { //normal procedure
-                    scrPopEnemies()
-					
-					if scrIsHardMode() && spawnarea != 100 && spawnarea != 104 && !scrIsGamemode(40)
-					{
-						var ran = random(100);
-						if ran < 10
-						{
-							scrPopEnemies();
-						}
-						else if ran < 14
-						{
-							instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraBandit);
-						}
-						else if ran < 18 && (spawnarea != 1  && spawnarea != 10 && spawnarea != 101 || Player.loops > 0)
-						{
-							instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraSniper);
-						}
-					}
-
-                    //spawn some more enemies on loop
-                    if Player.loops > 0 && random(2) < Player.loops
-					{
-						scrPopEnemies();
-						if Player.area != 1  && random(5) < Player.loops{
-							scrPopEnemies();
-						}
-					}
-
-                    if Player.loops > 5 && random(15) < Player.loops - 7
-					scrPopEnemies();
-					
-					if Player.loops > 10 && random(15) < Player.loops - 13
-					scrPopEnemies();
-                }
+                scrSpawnSomeEnemies();
             }
-
         }
 	}
     }
@@ -525,8 +417,15 @@ function scrPopulate() {
 	{
 	    //spawn desert boss
 	    if Player.area = 1 and Player.subarea = 3 {
+			if scrIsHardMode()
+			{
+				repeat(clamp(Player.loops + 1,1,6) + 1)
+					instance_create(x, y, WantBoss)
+			}else
+			{
 	        repeat(clamp(Player.loops + 1,1,6))
 	        instance_create(x, y, WantBoss)
+			}
 	    }
 	
 		if Player.area = 4 and Player.subarea = 2 {
@@ -560,8 +459,12 @@ function scrPopulate() {
 
 	    //spawn INVERTED desert boss
 	    if Player.area = 105 and Player.subarea = 3 {
-	        repeat(clamp(Player.loops + 1,1,6))
-	        instance_create(x, y, WantBoss)
+			if scrIsHardMode()
+				repeat(clamp(Player.loops + 1,1,6) + 1)
+					instance_create(x, y, WantBoss)
+			else
+				repeat(clamp(Player.loops + 1,1,6))
+					instance_create(x, y, WantBoss)
 	    }
 		//Sandworm
 		if (Player.loops > 0 && (Player.area = 105 || Player.area == 1) && Player.subarea == 2) {
@@ -639,8 +542,9 @@ function scrPopulate() {
     //populate pizza sewers
     if Player.area = 102 && !scrIsGamemode(40) {
 
-        with enemy
-        instance_destroy()
+		if !scrIsHardMode()
+			with enemy
+	        instance_destroy(id,false)
 
         with instance_furthest(10016, 10016, Corpse) {
             repeat(4)

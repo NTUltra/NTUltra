@@ -27,7 +27,6 @@ function scrAddArea(theArea){
 					counter++;	
 				}
 			}
-			debug(counter);
 			if counter > 9
 			{
 				scrUnlockGameMode(44,"FOR FINDING 10 SECRET AREAS")	

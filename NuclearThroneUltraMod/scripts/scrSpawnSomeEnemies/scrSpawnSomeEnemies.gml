@@ -1,0 +1,73 @@
+///xxx();
+// /@description
+///@param
+function scrSpawnSomeEnemies(){
+	if scrIsGamemode(9) //easy mode
+    {
+        if random(4) < 1 || !instance_exists(enemy)
+			scrPopEnemies()
+		else if Player.loops > 0 && random(6) < Player.loops
+			scrPopEnemies()
+    } else
+        scrPopEnemies()
+				
+	//spawn some more enemies on loop
+	if Player.loops > 0 && random(2) < Player.loops
+		scrPopEnemies();
+					
+	if Player.loops > 5 && random(15) < Player.loops - 7
+		scrPopEnemies();
+					
+	if Player.loops > 10 && random(15) < Player.loops - 13
+		scrPopEnemies();
+				
+	if scrIsHardMode() && !scrIsGamemode(40) && spawnarea != 100 && spawnarea != 104
+	{
+		var ran = random(110 - min(40,Player.loops * 2));
+		if ran < 10
+		{
+			scrPopEnemies();
+		}
+		else if ran < 15
+		{
+			instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraBandit);
+		}
+		else if spawnarea != 1  && spawnarea != 105 && spawnarea != 100//Not desert not crownvault
+		{
+			if ran < 18
+			{
+				instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraBandit);
+			}
+			else if spawnarea != 10 && spawnarea != 121 && spawnarea != 101 && spawnarea != 122//Not savanna oasis
+			{
+				if ran < 23
+				{
+					instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraSniper);
+				}
+				else if spawnarea != 2  && spawnarea != 110 && spawnarea != 3 && spawnarea != 106//no sewers & no scrap
+				{
+					if ran < 30
+					{
+						instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraCrystal);
+					}
+					else if spawnarea != 6 && spawnarea != 112 && spawnarea != 117 && spawnarea != 124 && spawnarea != 7 && spawnarea != 108
+					{
+						//Not mushroom vulcano or labs
+						if ran < 35
+						{
+							instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraDiscGuy);
+						}
+						else if ran < 45
+						{
+							instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraProtector);
+						}
+							//else if spawnarea != 5 && spawnarea != 107 && spawnarea != 114 && spawnarea != 123 && spawnarea != 108 && spawnarea != 109
+						//{
+							//Not jungle not frozen city not wonderland
+						//}
+					}
+				}
+			}
+		}
+	}
+}

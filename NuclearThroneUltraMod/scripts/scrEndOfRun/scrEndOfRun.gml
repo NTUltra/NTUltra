@@ -48,6 +48,7 @@ function scrEndOfRun(){
 			canMultiCrown = true;
 		canPickFrogCrown = true;
 		hasTakenCrownOfLife = false;
+		hasTakenCrownOfProtection = false;
 		if !scrIsGamemode(38)
 		{
 			useSeed = false;
@@ -61,6 +62,9 @@ function scrEndOfRun(){
 		extraVan = 0;
 		hasFoughtInvadingThrone = false;
 		revivedCharacters = [];
+		duoPartner = [];
+		partnerTurn = 1;
+		partnerDied = false;
 		beatTheGame = false;
 		if instance_exists(GameRender) {
 			with GameRender

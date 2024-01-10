@@ -323,6 +323,7 @@ if selected
 			//Dont die on me friend
 			Player.maxhealth = max(Player.maxhealth, 1);
 			Player.my_health = max(Player.my_health, 1);
+			Player.prevhealth = Player.my_health;
 		}
 		else if skill == 41 //NERVES OF STEEL
 		{
@@ -340,6 +341,7 @@ if selected
 				Player.maxhealth -= 2
 				if Player.my_health > Player.maxhealth
 					Player.my_health -= 2
+				Player.prevhealth = Player.my_health;
 			}
 			Player.exception = true;
 			//Dont die on me friend?

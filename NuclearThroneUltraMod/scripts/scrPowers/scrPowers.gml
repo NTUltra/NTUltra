@@ -1,11 +1,18 @@
 /// @description
-function scrPowers() {
+function scrPowers(raceOverwrite = -1) {
 	var keepRace = race;
 	chickenFocusInUse = false;
 	if ultra_got[50] && altUltra
 	{
 		race = fakeRace;
 	}
+	if raceOverwrite > -1
+		race = raceOverwrite;
+	else if scrIsGamemode(47)//Double active gamemode
+	{
+		scrPowers(UberCont.opt_gm_char_active);
+	}
+	
 	if scrIsCrown(34)
 		race = 0;
 	if skill_got[39] && alienIntestines < 330
@@ -1777,7 +1784,7 @@ function scrPowers() {
 							if corpseSize > 4
 							{
 								var ang = random(360)
-								scrSpawnBloodBullets(xx,yy,4,14);
+								scrSpawnBloodBullets(xx,yy,4,14,-1);
 								with instance_create(xx+lengthdir_x(70,ang),yy+lengthdir_y(70,ang),MeatExplosion)
 									destroyAll = true;
 								with instance_create(xx+lengthdir_x(70,ang+120),yy+lengthdir_y(70,ang+120),MeatExplosion)
@@ -1788,7 +1795,7 @@ function scrPowers() {
 							var ang = random(360)
 							if corpseSize > 2
 							{
-								scrSpawnBloodBullets(xx,yy,6,12);
+								scrSpawnBloodBullets(xx,yy,6,12,-1);
 								with instance_create(xx,yy,MeatExplosion)
 									destroyAll = true;
 								with instance_create(xx+lengthdir_x(44,ang),yy+lengthdir_y(44,ang),MeatExplosion)
@@ -1800,7 +1807,7 @@ function scrPowers() {
 							}
 							else
 							{
-								scrSpawnBloodBullets(xx,yy,5,10);
+								scrSpawnBloodBullets(xx,yy,5,10,-1);
 								with instance_create(xx+lengthdir_x(24,ang),yy+lengthdir_y(24,ang),MeatExplosion)
 									destroyAll = true;
 								with instance_create(xx+lengthdir_x(24,ang+120),yy+lengthdir_y(24,ang+120),MeatExplosion)
@@ -1812,7 +1819,7 @@ function scrPowers() {
 						}
 						else if corpseSize > 3
 						{
-							scrSpawnBloodBullets(xx,yy,5,10);
+							scrSpawnBloodBullets(xx,yy,5,10,-1);
 							scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
 							var ang = random(360)
 							with instance_create(xx+lengthdir_x(24,ang),yy+lengthdir_y(24,ang),MeatExplosion)
@@ -1827,7 +1834,7 @@ function scrPowers() {
 							scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
 							with instance_create(xx,yy,MeatExplosion)
 								destroyAll = true;
-							scrSpawnBloodBullets(xx,yy,3,8);
+							scrSpawnBloodBullets(xx,yy,3,8,-1);
 						}
 						markForDelete[j] = i;
 						j ++;
@@ -1855,7 +1862,7 @@ function scrPowers() {
 						scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
 						if mySize > 4
 						{
-							scrSpawnBloodBullets(x,y,4,12);
+							scrSpawnBloodBullets(x,y,4,12,-1);
 							ang = random(360)
 							with instance_create(x+lengthdir_x(70,ang),y+lengthdir_y(70,ang),MeatExplosion)
 								destroyAll = true;
@@ -1867,7 +1874,7 @@ function scrPowers() {
 						ang = random(360)
 						if mySize > 2
 						{
-							scrSpawnBloodBullets(x,y,6,10);
+							scrSpawnBloodBullets(x,y,6,10,-1);
 							with instance_create(x,y,MeatExplosion)
 								destroyAll = true;
 							with instance_create(x+lengthdir_x(44,ang),y+lengthdir_y(44,ang),MeatExplosion)
@@ -1879,7 +1886,7 @@ function scrPowers() {
 						}
 						else
 						{
-							scrSpawnBloodBullets(x,y,5,8);
+							scrSpawnBloodBullets(x,y,5,8,-1);
 							with instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
 								destroyAll = true;
 							with instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
@@ -1891,7 +1898,7 @@ function scrPowers() {
 					}
 					else if mySize > 3
 					{
-						scrSpawnBloodBullets(x,y,5,8);
+						scrSpawnBloodBullets(x,y,5,8,-1);
 						scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
 						ang = random(360)
 						with instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
@@ -1906,7 +1913,7 @@ function scrPowers() {
 						scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
 						with instance_create(x,y,MeatExplosion)
 							destroyAll = true;
-						scrSpawnBloodBullets(x,y,3,7);
+						scrSpawnBloodBullets(x,y,3,7,-1);
 					}
 				}
 			}
@@ -3231,7 +3238,6 @@ function scrPowers() {
 	if race == 9//CHICKEN reset time
 	{
 		chickenFocusInUse = false;
-		debug("UNFOCUS");
 		room_speed=UberCont.normalGameSpeed;
 
 		with Decoy//CHICKEN VANISH

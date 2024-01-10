@@ -1,5 +1,5 @@
 function scrModHit() {
-	if !instance_exists(Player) || team != 2
+	if !instance_exists(Player) || team == 2
 		exit;
 	scrSheepHit();
 	//Sedatives

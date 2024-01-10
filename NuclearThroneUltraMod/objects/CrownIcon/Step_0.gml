@@ -111,16 +111,16 @@ if crown == 2 && !canReAdd
 	with UberCont
 		hasTakenCrownOfLife = true;
 	with Player
-	{
+	{/*
 		if my_health >= maxhealth
 		{
 			my_health = max(my_health,maxhealth);
 			my_health += 1;
 		}
 		else
-		{
+		{*/
 			my_health = max(my_health,maxhealth);
-		}
+		//}
 	}
 	/*
 	var toHeal = Player.maxhealth - min(Player.my_health,Player.maxhealth);
@@ -181,6 +181,8 @@ if crown == 3 && Player.maxhealth > 1
 //CROWN OF PROTECTION
 if crown == 20
 {
+	with UberCont
+		hasTakenCrownOfProtection = true;
 	with Player {
 		if maxarmour < 1
 			gotMinimumArmour = true;
@@ -279,7 +281,6 @@ if crown == 11
 		}
 
 		instance_create(x,y,Player);
-
 		with Player//Data to keep
 		{
 			rnglevelloop = rngloop;

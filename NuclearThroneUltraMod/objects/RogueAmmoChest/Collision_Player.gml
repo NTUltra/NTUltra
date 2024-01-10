@@ -2,7 +2,7 @@
 if !instance_exists(GenCont)
 {
 
-
+scrChestOpenMindReload(other, true);
 var num = 1;
 
 

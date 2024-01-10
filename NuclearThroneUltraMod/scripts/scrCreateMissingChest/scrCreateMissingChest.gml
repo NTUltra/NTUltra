@@ -2,6 +2,8 @@
 // /@description
 ///@param
 function scrCreateMissingChest(typeOfChest, chestGoal){
+	if scrIsGamemode(48)
+		return;
 	if !instance_exists(Player) || !instance_exists(Floor)
 		return;
 	var px = Player.x;

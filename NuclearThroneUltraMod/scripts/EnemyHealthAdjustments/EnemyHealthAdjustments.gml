@@ -10,7 +10,12 @@ function EnemyHealthAdjustments(){
 			maxhealth *= 1.1;
 		if scrIsCrown(10)
 			maxhealth *= 1.15;//Crown of difficulty
-		
+		if Player.isMarksMan {
+			if Player.loops > 0
+				Player.ammo[1] += max(0.5,maxhealth*0.095);
+			else
+				Player.ammo[1] += max(0.9,maxhealth*0.099);
+		}
 		my_health = maxhealth;
 		//var hpReduction = 0;
 		/*

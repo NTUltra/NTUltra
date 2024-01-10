@@ -12,7 +12,6 @@ function scrNextLevel() {
 			other.rewinds = rewinds;
 			instance_destroy();
 		}
-		debug("my race: ", race);
 		if rewinds > 0
 		{
 			with instance_create(x,y,TimeRewinder) {
@@ -712,7 +711,7 @@ function scrNextLevel() {
 	if scrIsCrown(10)
 		hard += 0.5;
 	if scrIsGamemode(34)//HARD
-		hard += 0.25;
+		hard += 0.1;
 	hard = max(0,hard);
 	scrAddArea(area);
 	scrAddToRoute(area);

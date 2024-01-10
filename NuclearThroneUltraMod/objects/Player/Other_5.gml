@@ -1,8 +1,8 @@
 /// @description Black sword? and UNLOCKABLES
-consecutiveGoodBloodGambles = 0;
-tinyKrakenSpawned = 0;
 if swapChar
 	exit;
+consecutiveGoodBloodGambles = 0;
+tinyKrakenSpawned = 0;
 if ultra_got[50] && altUltra
 	charpoints = 1;
 
@@ -326,8 +326,8 @@ if looping && area != 104
 	if race =3 && skill_got[19]
 	scrUnlockCSkin(3,"FOR LOOPING WITH EAGLE EYES#AS EYES",0);
 
-	if race = 4 && !skill_got[1] && !skill_got[25] && !skill_got[32] && !skill_got[40] && !skill_got[41] && !UberCont.hasTakenCrownOfLife
-	scrUnlockBSkin(4,"FOR LOOPING WITHOUT#RHINO SKIN, STRONG SPIRIT#ALKALINE SALIVA#BOUNCY FAT AND CROWN OF LIFE#AS MELTING",0);
+	if race = 4 && !skill_got[1] && !skill_got[25] && !skill_got[32] && !skill_got[40] && !skill_got[41] && !skill_got[18] && !skill_got[31] && !UberCont.hasTakenCrownOfLife && !UberCont.hasTakenCrownOfProtection
+	scrUnlockBSkin(4,"FOR LOOPING WITHOUT#SURVIVAL MUTATIONS AND CROWNS#AS MELTING",0);
 
 	if loops>1 && race = 4
 	scrUnlockCSkin(4,"FOR REACHING LOOP 3#AS MELTING ON 1HP EQUALITY",5);

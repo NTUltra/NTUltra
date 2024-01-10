@@ -4,7 +4,7 @@ with instance_create(tx,ty,ReviveFX)
 with instance_create(tx,ty,choose(Freak,ExploFreak))
 {
 	wasResurrected = true;
-	droprate = 6;
+	droprate = 4;
 	raddrop = 0;
 	countKill = false;
 	existTime = 30;

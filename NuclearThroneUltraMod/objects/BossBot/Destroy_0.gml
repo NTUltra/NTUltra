@@ -4,6 +4,16 @@ event_inherited()
 with BecomeEnemyBulletDrops
 	instance_destroy();
 scrBossKill();
+if object_index == BossBot {
+	with UberCont {
+		if isValidGamemodeToUnlock()
+		{
+			boss_bot_normal += 1;
+			scrHasUnlockedMarksMan();
+			scrSave();
+		}
+	}
+}
 instance_create(x,y-16,GoldChest);
 if existTime > 15
 {

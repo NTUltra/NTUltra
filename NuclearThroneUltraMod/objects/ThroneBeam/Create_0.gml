@@ -1,4 +1,4 @@
-
+event_inherited();
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 
 //image_yscale = 1.25

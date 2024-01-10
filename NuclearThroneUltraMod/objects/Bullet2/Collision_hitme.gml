@@ -25,13 +25,13 @@ if other.team != team and other.my_health > 0 && alarm[0] < 1
 			if speed > maxSpeed+2
 				speed = maxSpeed+2;
 		}
+		snd_play(snd_hurt, hurt_pitch_variation,true)
 	}
 	if shotgunshouldered
 	{
 		scrSplashDamage(1, 18);
 	}
 
-	snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
 	with instance_create(x,y,BulletHit)
 	{
 		if other.shotgunshouldered

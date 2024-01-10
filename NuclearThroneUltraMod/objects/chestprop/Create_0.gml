@@ -10,3 +10,7 @@ shadowSprite = shd24;
 my_health = 1;
 maxhealth = 1;
 alarm[0] = 10;
+if scrIsGamemode(48)
+{
+	instance_destroy(id,false);	
+}

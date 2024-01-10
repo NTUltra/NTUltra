@@ -296,6 +296,13 @@ function scrLoadRun(){
 					Player.gotMinimumArmour = encryptedRun.gotMinimumArmour;
 				else
 					Player.gotMinimumArmour = true;
+				/*
+				if variable_struct_exists(encryptedRun, "duoPartner1")
+				{
+					UberCont.duoPartner[0] = encryptedRun.duoPartner1;
+					UberCont.duoPartner[1] = encryptedRun.duoPartner2;
+					UberCont.partnerTurn = encryptedRun.partnerTurn;
+				}*/
 			}
 			with Player
 			{

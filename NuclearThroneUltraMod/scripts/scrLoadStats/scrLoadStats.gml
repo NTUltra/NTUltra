@@ -8,6 +8,12 @@ function scrLoadStats() {
 	}
 	any_wep_found[0] = true;
 	any_wep_found[1] = true;
+	boss_bot_normal = ini_read_real("STATS","boss_bot_normal",0);
+	boss_bot_inverted = ini_read_real("STATS","boss_bot_inverted",0);
+	boss_bot_cursed = ini_read_real("STATS","boss_bot_cursed",0);
+	boss_bot_golden = ini_read_real("STATS","boss_bot_golden",0);
+	boss_bot_ultra = ini_read_real("STATS","boss_bot_ultra",0);
+
 	ctot_all_crowns_taken = array_create(racemax,0);
 	repeat(racemax+1){
 		//Stats per character yes we love stats #thronebutt.com

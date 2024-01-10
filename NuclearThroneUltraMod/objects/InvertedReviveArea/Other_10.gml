@@ -1,6 +1,7 @@
 /// @description Revive with FIRE
 with instance_create(tx,ty,InvertedFreak)
 {
+	droprate = 4;
 	wasResurrected = true;
 	existTime = 30;
 	raddrop = 0;

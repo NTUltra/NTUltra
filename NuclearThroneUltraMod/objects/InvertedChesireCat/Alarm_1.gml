@@ -1,4 +1,4 @@
-alarm[1] = 9+random(8)
+alarm[1] = 13+random(6)
 if firstTime 
 {
 	firstTime = false;
@@ -8,7 +8,7 @@ if firstTime
 	}
 }
 if loops > 1
-	alarm[1]=7+random(10)
+	alarm[1]=10+random(6)
 
 
 drama=true;
@@ -40,7 +40,7 @@ if !place_meeting(x,y,Wall)&&place_meeting(x,y,Floor)
     snd_play(sndLaserCrystalCharge)
     gunangle = point_direction(x,y,target.x,target.y)
     sprite_index = spr_fire
-    alarm[1] = 20+random(15)
+    alarm[1] = 25+random(11)
     
     if random(4)<1 && !collision_point(x,y,Wall,false,false)
 	{

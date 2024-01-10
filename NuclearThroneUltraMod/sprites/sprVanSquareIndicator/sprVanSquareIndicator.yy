@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "sprVanSquareIndicator",
   "bbox_bottom": 9,
-  "bbox_left": 0,
+  "bbox_left": 2,
   "bbox_right": 17,
   "bbox_top": 0,
   "bboxMode": 0,

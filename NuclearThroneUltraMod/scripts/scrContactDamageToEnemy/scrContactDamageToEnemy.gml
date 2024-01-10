@@ -98,7 +98,7 @@ function scrContactDamageToEnemy(hitEnemy){
 						motion_add(point_direction(other.x,other.y,x,y),3)
 					scrSheepHit();
 				}
-				if (other.my_health <= 0 && skill_got[8] || actuallyDead)//gamma guts kill?
+				if (hitEnemy.my_health <= 0 && skill_got[8] || actuallyDead)//gamma guts kill?
 				{
 					snd_play(sndGammaGutsKill,0,true);
 					instance_create(x,y,GammaGutsBlast);

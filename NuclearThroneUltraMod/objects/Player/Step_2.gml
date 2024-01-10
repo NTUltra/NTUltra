@@ -495,7 +495,7 @@ alarm[3] = max(alarm[3],15);//before your lag lowers again}
 //{
 if armour > 0
 {
-	if tookHit && /*my_health != maxhealth && */alarm[3] < 1 && !exception
+	if tookHit && /*my_health != maxhealth && */alarm[3] < 1&& !exception
 	{
 		tookDamageThisArea = true;
 		armour -= 1;
@@ -682,11 +682,18 @@ if(my_health <= 0 && maxhealth > 0)
 		baseammo[1] = 255 baseammo[2] = 55 baseammo[3] = 55 baseammo[4] = 55 baseammo[5] = 55;
 		var lostAmmo = 0;
 		for (var i = 1; i < al; i++) {
+			if (ammo[i] < 0) {
+				takePercentage += 0.03;
+			}
+		}
+		for (var i = 1; i < al; i++) {
 			var wasAbove = (ammo[i] > 0);
 			var usePercentage = takePercentage;
 			if i == wep_type[wep] || i == wep_type[bwep] {
 				usePercentage -= 0.2;
 			}
+			if !wasAbove
+				usePercentage -= 0.05;
 			ammo[i] = floor(ammo[i] - (baseammo[i]*usePercentage));
 			if wasAbove && ammo[i] <= 0 {
 				lostAmmo++

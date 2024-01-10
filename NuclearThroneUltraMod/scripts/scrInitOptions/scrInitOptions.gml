@@ -24,9 +24,6 @@ function scrInitOptions() {
 	normalGameSpeed = 30;
 	//Gamemode stuff that doesn't get saved.
 	opt_gamemode = [0];
-	opt_gm1wep=1;
-	opt_gm_char = 0;
-	opt_gm_char_active = 0;
 
 	//more visual
 	opt_fitscrn = 0

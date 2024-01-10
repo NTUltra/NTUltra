@@ -14,6 +14,6 @@ with UltraCrystal
 }
 with UltraSniper
 {
-	alarm[1] += actTime;	
+	alarm[1] += actTime*2;	
 }
 alarm[3] = 10;

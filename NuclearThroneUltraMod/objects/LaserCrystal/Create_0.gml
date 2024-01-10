@@ -6,7 +6,7 @@ mySize = 2
 
 event_inherited()
 
-if scrIsHardMode() && (!instance_exists(UltraCrystal) || random(3) < 1) && 
+if scrIsHardMode() && object_index != UltraCrystal && (!instance_exists(UltraCrystal) || random(3) < 1) && 
 instance_exists(Player) && Player.area != 126 && Player.area != 127// && Player.area != 6 && Player.area != 124//HARD MODE
 {
 	//Not Graveyard inv grave

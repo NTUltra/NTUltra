@@ -42,6 +42,13 @@ function scrSaveStats() {
 	}
 	
 	ini_write_real("STATS","ctotwallsdestroyed",ctot_walls_destroyed);
+	
+	ini_write_real("STATS","boss_bot_normal",boss_bot_normal);
+	ini_write_real("STATS","boss_bot_inverted",boss_bot_inverted);
+	ini_write_real("STATS","boss_bot_cursed",boss_bot_cursed);
+	ini_write_real("STATS","boss_bot_golden",boss_bot_golden);
+	ini_write_real("STATS","boss_bot_ultra",boss_bot_ultra);
+
 	var al = array_length(tot_areas);
 	for(var i = 0; i < al; i++)
 	{

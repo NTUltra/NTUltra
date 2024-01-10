@@ -2,6 +2,8 @@
 // /@description
 ///@param
 function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = false) {
+	if scrIsGamemode(48)
+		return;
 	var type = 0;
 	with Player
 	{

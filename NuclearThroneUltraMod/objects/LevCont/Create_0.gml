@@ -354,6 +354,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 			skill_got[14] = 1;
 			skill_got[25] = 1;
 			skill_got[32] = 1;
+			skill_got[18] = 1;
 			if race != 10 && race != 12 && race != 18 && race != 19
 			{
 				//not Rebel yung cuz, angel and skeleton
@@ -366,6 +367,22 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 				skill_got[40] = 1;
 				skill_got[41] = 1;
 			}
+		}
+	}
+	if scrIsGamemode(48) {
+		with Player
+		{
+			//AMMO REGEN MUTS & wepspes and other useless ones
+			skill_got[6] =  1;
+			skill_got[10] = 1;
+			skill_got[13] = 1;
+			skill_got[15] = 1;
+			skill_got[16] = 1;
+			skill_got[17] = 1;
+			skill_got[21] = 1;
+			skill_got[23] = 1;
+			skill_got[40] = 1;
+			skill_got[42] = 1;
 		}
 	}
     scrSkills()//maybe dont run this when ultra
@@ -505,6 +522,7 @@ if scrIsGamemode(32) {
 		skill_got[14] = 0;
 		skill_got[25] = 0;
 		skill_got[32] = 0;
+		skill_got[18] = 0;
 		if race != 10 && race != 12 && race != 18 && race != 19
 		{
 			skill_got[1] = 0;
@@ -514,6 +532,22 @@ if scrIsGamemode(32) {
 			skill_got[40] = 0;
 			skill_got[41] = 0;
 		}
+	}
+}
+if scrIsGamemode(48) {
+	with Player
+	{
+		//AMMO REGEN MUTS & wepspes and other useless ones
+		skill_got[6] =  0;
+		skill_got[10] = 0;
+		skill_got[13] = 0;
+		skill_got[15] = 0;
+		skill_got[16] = 0;
+		skill_got[17] = 0;
+		skill_got[21] = 0;
+		skill_got[23] = 0;
+		skill_got[40] = 0;
+		skill_got[42] = 0;
 	}
 }
 SetSeed();

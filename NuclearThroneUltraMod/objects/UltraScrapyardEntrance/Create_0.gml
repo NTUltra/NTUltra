@@ -13,6 +13,10 @@ canMoveOver = true;
 shadowSprite = shd24;
 shadowYoffset = - 8;
 snd_hurt = sndHitRock
-instance_create(x,y,BigWallBreak);
 alarm[2] = 30;
 alarm[6] = 5;
+y -= 16;
+x -= 16;
+scrCreateSpace(3);
+y += 16;
+x += 16;

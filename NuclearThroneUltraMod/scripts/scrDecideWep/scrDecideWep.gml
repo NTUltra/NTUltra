@@ -1,4 +1,4 @@
-function scrDecideWep(wepTierParam, maxTriesParam = 12, cursedParam = 0, minWepAreaParam = 0, areaWepTries = 0) {
+function scrDecideWep(wepTierParam, maxTriesParam = 12, cursedParam = 0, minWepAreaParam = 0/*, areaWepTries = 0*/) {
 	var wepTier = wepTierParam - 1;
 	var maxTries = maxTriesParam;
 	var cursed = cursedParam;
@@ -84,6 +84,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 12, cursedParam = 0, minWepA
 		}
 		else
 		{
+			var infiniteTries = 9999;
 			do {
 				wep = irandom(maxwep-1)+1;
 				if wep_area[wep]  <= wepTier && wep_area[wep] > wep_area[maxValidTierWep]
@@ -91,11 +92,12 @@ function scrDecideWep(wepTierParam, maxTriesParam = 12, cursedParam = 0, minWepA
 					maxValidTierWep = wep;
 				}
 				triesForSpecificTier++;
+				infiniteTries --;
 			}
 			until (
 			(wep_area[wep] == wepTier || triesForSpecificTier > maxTries || wep_area[wep] >= maxAreaGoodEnough)
 			&& wep_area[wep] >= minWepArea && wep_area[wep] <= wepTier
-			&& ( (wep != dataRef.wep and wep != dataRef.bwep and wep != dataRef.cwep) || dataRef.race == 7/*roids can dual wield*/) 
+			&& ( infiniteTries < 1 || (wep != dataRef.wep and wep != dataRef.bwep and wep != dataRef.cwep && !scrIsWeaponOnGround(wep)) || dataRef.race == 7/*roids can dual wield*/) 
 			)
 		}
 		//Found a higher option than our result? Take that one
@@ -105,6 +107,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 12, cursedParam = 0, minWepA
 			wep = maxValidTierWep;
 		}
 		//Weapon already on the ground?
+		/*
 		if (areaWepTries < 20 && dataRef.race != 7)
 		{
 			var theTier = wepTierParam;
@@ -121,8 +124,9 @@ function scrDecideWep(wepTierParam, maxTriesParam = 12, cursedParam = 0, minWepA
 			if isOnGround
 				return scrDecideWep(theTier, maxTriesParam, cursedParam, minWepAreaParam, areaWepTries + 1);
 		}
+		*/
 	}
-	while (wep == 402 && !scrIsCrown(5))//Rolled gun gun? you must have crown of guns
+	while (wep == 402 && !(scrIsCrown(5) || dataRef.skill_got[0] ))//Rolled gun gun? you must have crown of guns or heavy heart
 	{
 		wep = scrDecideWep(wepTierParam, maxTriesParam, cursedParam, minWepAreaParam);
 	}

@@ -2,7 +2,7 @@ event_inherited()
 mySize = 2;
 team = 0;
 curse = 0
-sprite_index = sprWeaponChestBig
+sprite_index = sprCursedWeaponChest;
 instance_create(x,y,WallBreak);
 scrWeapons()
 SetSeedWeapon();

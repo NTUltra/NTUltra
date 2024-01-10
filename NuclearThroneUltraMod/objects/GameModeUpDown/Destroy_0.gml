@@ -13,6 +13,9 @@ instance_destroy();
 
 with CustomSurvivalWave
 instance_destroy();
-
+//with GamemodeCharacterUpDown
+//instance_destroy();
+with GamemodeCharacterActiveUpDown
+instance_destroy();
 if array_length(UberCont.opt_gamemode) < 1
 	UberCont.opt_gamemode = [0];

@@ -14,6 +14,8 @@ shadowSprite = shd32;
 canMoveOver = true;
 snd_hurt = sndHitRock
 alarm[1]=830 * clamp(loops*1.3,1,4)//33 sec 900
+scrIsHardMode()
+	alarm[1] += 90;
 if instance_exists(Player) && Player.subarea != 1
 {	
 	if loops == 0
@@ -25,7 +27,12 @@ if instance_exists(Player) && Player.subarea != 1
 }
 if loops < 1
 	alarm[2] = 1
-instance_create(x,y,BigWallBreak);
+// instance_create(x,y,BigWallBreak);
+y -= 16;
+x -= 16;
+scrCreateSpace(1);
+y += 16;
+x += 16;
 name = "?"
 
 alarm[6] = 5;

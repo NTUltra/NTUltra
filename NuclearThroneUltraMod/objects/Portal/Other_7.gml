@@ -1,3 +1,5 @@
+if alarm[3] > 0
+	exit;
 if sprite_index = sprPortalSpawn
 {
 	image_speed = 0.4;
@@ -40,8 +42,8 @@ if sprite_index = sprPortalDisappear or sprite_index = sprProtoPortalDisappear o
 		reload = lowa;
 		breload = lowb;
 		creload = lowc;
-	if my_health >= 0
-		canRestart = true;
+		if my_health >= 0
+			canRestart = true;
 	}
 	audio_stop_sound(sndPortalLoop)
 	if canRestart

@@ -1,4 +1,5 @@
 //with (other) {
+//wep = 0;
 depth = 2;
 wasThrown = false;
 canBeMoved = true;

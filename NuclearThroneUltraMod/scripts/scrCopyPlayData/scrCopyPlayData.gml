@@ -133,5 +133,10 @@ function scrCopyPlayData(){
 		globalMutationsChosen: UberCont.globalMutationsChosen,
 		canMultiCrown: UberCont.canMultiCrown,
 		randomDailyMod: UberCont.randomDailyMod,
+		/*
+		duoPartner1: UberCont.duoPartner[0],
+		duoPartner2: UberCont.duoPartner[1],
+		partnerTurn: UberCont.partnerTurn,
+		*/
 	}
 }

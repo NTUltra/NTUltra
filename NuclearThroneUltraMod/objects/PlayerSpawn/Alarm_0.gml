@@ -50,11 +50,11 @@ with Player//Data to keep
 	subarea= other.subarea;
 	boostLevel = other.level;
 	crownvisits = other.crownvisits;
-	ammo[1] = typ_ammo[1] * 3
-    ammo[2] = typ_ammo[2] * 3
-    ammo[3] = typ_ammo[3] * 3
-    ammo[4] = typ_ammo[4] * 3
-    ammo[5] = typ_ammo[5] * 3
+	ammo[1] = typ_ammo[1] * 2
+    ammo[2] = typ_ammo[2] * 2
+    ammo[3] = typ_ammo[3] * 2
+    ammo[4] = typ_ammo[4] * 2
+    ammo[5] = typ_ammo[5] * 2
 	event_perform(ev_alarm,0);
 	//event_perform(ev_other,ev_room_end);
 	visible=true;
@@ -176,7 +176,7 @@ with Player//Data to keep
 	{
 		with RerollStation
 			instance_destroy();
-		alarm[3]=max(60,9*boostLevel);//immunity
+		alarm[3]=max(50,8.5*boostLevel);//immunity
 		snd_hurt = sndDamageNegate;
 		myShield = instance_create(x,y,EuphoriaShield)
 		with myShield
@@ -202,8 +202,16 @@ with Player//Data to keep
 		}
 		with instance_create(x,y,RespawnLightning)
 		{
-			amount = ceil((other.boostLevel-1)*0.25);
+			amount = ceil((other.boostLevel-1)*0.2);
 		}
+	}
+	if scrIsGamemode(48)
+	{
+		ammo[1] = other.ammo[1];
+		ammo[2] = 0;
+		ammo[3] = 0;
+		ammo[4] = 0;
+		ammo[5] = 0;
 	}
 }
 scrUnlockGameMode(25,"FOR GETTING RESURRECTED");

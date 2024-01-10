@@ -1,24 +1,33 @@
 function scrDecideMorphWep() {
+	if scrIsGamemode(31)
+	{
+		//Melee only
+		instance_destroy(id,false);
+		//For now no toxic melee
+		return 593;
+		//return choose(198,495);
+	}
+	var tier = 3;
 	if instance_exists(Player)
 	{
-		if scrIsGamemode(31)
-		{
-			//Melee only
-			return choose(198,495);
-		}
-		var maxTries = 1000;
+		tier += Player.hard;
+	}
+		var maxTries = 5000;
 		if Player.race = 8
-			maxTries = 2000;
+		{
+			tier += 1;
+		}
+		if !Player.altUltra && Player.ultra_got[29]//Refined taste
+		{
+			wepTier += 2;
+		}
 		do 
 		{
-			wep = choose(70, 73, 98, 198, 307, 408, 468, 659, 495, 646, 663)
+			wep = choose(31,130,146,317,318,319,326,417,469,564,565,566,574,580,581,648,649)
 			maxTries --;
 		}
-		until (((wep != Player.wep and wep != Player.bwep) or Player.race = 7)
+		until (((wep_area[wep] <= tier && (wep != Player.wep and wep != Player.bwep)) or Player.race = 7)
 		|| maxTries <= 0)
-	}
-	else
-		wep = choose(70, 73, 98, 198, 307, 408, 468, 659, 495, 646, 663)
 	
 	return wep;
 }

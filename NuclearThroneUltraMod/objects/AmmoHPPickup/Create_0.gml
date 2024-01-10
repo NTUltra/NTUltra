@@ -26,13 +26,15 @@ atomUltraD = false;
 if scrIsGamemode(9) //CASUAL MODE
 	alarm[0] += 30;
 if scrIsHardMode() //HARD MODE
-	alarm[0] -= 10;
+	alarm[0] -= 20;
 
 rerolls = 0;
 //RUSH CROWN
 loops = 0;
 if instance_exists(Player){
 	loops = Player.loops;
+	scrIsHardMode()
+		alarm[0] *= 0.8;
 	if Player.skill_got[3]
 	{
 		friction = 0.3;

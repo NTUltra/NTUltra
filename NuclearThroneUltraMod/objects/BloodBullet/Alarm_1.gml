@@ -1,2 +1,2 @@
 /// @description Reduce dmg
-dmg -= dmgReduc;
+dmg = max(dmg - dmgReduc,1);

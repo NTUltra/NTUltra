@@ -39,10 +39,9 @@ if fire > 0
 			{
 				team = 0;
 				image_angle = 180;
-				ammo = 8
+				ammo = 7
 				dodgeAble = false;
 				event_perform(ev_alarm,0)
-				visible = 0
 				with instance_create(x,y,LightningSpawn)
 					image_angle = other.image_angle
 			}
@@ -51,10 +50,9 @@ if fire > 0
 			{
 				team = 0;
 				image_angle = 0;
-				ammo = 8
+				ammo = 7
 				dodgeAble = false;
 				event_perform(ev_alarm,0)
-				visible = 0
 				with instance_create(x,y,LightningSpawn)
 					image_angle = other.image_angle
 			}
@@ -64,10 +62,9 @@ if fire > 0
 			{
 				team = 0;
 				image_angle = 90;
-				ammo = 8
+				ammo = 7
 				dodgeAble = false;
 				event_perform(ev_alarm,0)
-				visible = 0
 				with instance_create(x,y,LightningSpawn)
 					image_angle = other.image_angle
 			}
@@ -76,10 +73,9 @@ if fire > 0
 			{
 				team = 0;
 				image_angle = 270;
-				ammo = 8
+				ammo = 7
 				dodgeAble = false;
 				event_perform(ev_alarm,0)
-				visible = 0
 				with instance_create(x,y,LightningSpawn)
 					image_angle = other.image_angle
 			}

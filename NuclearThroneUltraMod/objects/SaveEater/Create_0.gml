@@ -13,7 +13,6 @@ with UberCont
 		if ( file_exists(saveFileString) )
 		{
 			var deleted = file_delete(saveFileString);
-			debug("delete ",deleted);
 		}
 		v++
 	}
@@ -24,7 +23,6 @@ with UberCont
 		if (file_exists(saveFile))
 		{	
 			var deleted = file_delete(saveFile);
-			debug("delete 2 ",deleted);
 		}
 		v++
 	}

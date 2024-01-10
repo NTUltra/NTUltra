@@ -1692,18 +1692,27 @@ function scrFire2(hasTailNow) {
 	if wep_type[258]==2
 	{
 		snd_play_fire(sndShotgun)
-
+		with instance_create(x,y,DoubleShotgunBurst)
+		{
+		creator = other.id
+		ammo = 2
+		time = 1
+		amountOfProjectiles = 5;
+		team = other.team
+		event_perform(ev_alarm,0) 
+		}
+		/*
 		repeat(9)
 		{
 			with instance_create(x,y,Bullet2)
 			{motion_add(aimDirection+(random(24)-12)*other.accuracy,14+random(6))
 			image_angle = direction
 			team = other.team}
-		}
+		}*/
 
-		BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
-		BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
-		BackCont.shake += 9
+		BackCont.viewx2 += lengthdir_x(2,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(2,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 2
 		wkick = 6
 
 		wep_type[258]= 1;
@@ -9962,11 +9971,11 @@ function scrFire2(hasTailNow) {
 
 
 	with instance_create(x,y,SplitSeekerBolt)
-	{motion_add(aimDirection+(random(20)-10)-10*other.accuracy,4+random(3))
+	{motion_add(aimDirection+(random(20)-10)-6*other.accuracy,4+random(3))
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,SplitSeekerBolt)
-	{motion_add(aimDirection+(random(20)-10)+10*other.accuracy,4+random(3))
+	{motion_add(aimDirection+(random(20)-10)+6*other.accuracy,4+random(3))
 	image_angle = direction
 	team = other.team}
 
@@ -14634,6 +14643,61 @@ function scrFire2(hasTailNow) {
 	BackCont.shake += 4
 	wepangle = -wepangle
 	wkick = -5
+	break;
+	
+	//MARKSMAN
+	case 701:
+
+	snd_play_fire(sndPistol)
+
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+	with instance_create(x,y,BulletMarksMan)
+	{
+		motion_add(aimDirection,12)
+		image_angle = direction
+		team = other.team
+	}
+
+	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 6
+	wkick = 5
+
+	break;
+	
+	//SHOTTY SIDEARM
+	case 702:
+
+	snd_play_fire(sndShotgun)
+	snd_play_fire(sndDirectorShotgun)
+	
+	var ang = aimDirection - ((30 * accuracy)*0.5);
+	var angstep = (30*accuracy) / 5;
+	var ps = 0;
+	var i = 0;
+	repeat(5)
+	{
+		if i < 3
+			ps ++;
+		else
+			ps --;
+		i ++;
+		with instance_create(x,y,Bullet2MarksMan)
+		{
+			motion_add(ang,12 + ps);
+			image_angle = direction
+			team = other.team
+		}
+		ang += angstep;
+	}
+
+	BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 9
+	wkick = 7
+
 	break;
 	
 	}//end of switch part 2!

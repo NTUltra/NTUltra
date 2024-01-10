@@ -259,7 +259,33 @@ if cwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 		wepmod4 = other.cwepmod4;
 	}
 }
+if race == 23 //Frog explode!
+{
+	repeat(40)
+	instance_create(x,y,ToxicThrowerGas)
 
+	snd_play(sndToxicBarrelGas)
+
+	dir = random(360)
+	repeat(20)
+	{
+	dir += 360/20
+	with instance_create(x,y,EnemyBullet2)
+	{
+	motion_add(other.dir,4)
+	image_angle = direction
+	team = other.team
+	}
+	with instance_create(x,y,AcidStreak)
+	{
+	motion_add(other.dir,8)
+	image_angle = direction
+	}
+	}
+	snd_play(sndFrogExplode)
+
+	BackCont.shake += 20	
+}
 if race=15
 {
 Sleep(20)
@@ -325,6 +351,9 @@ instance_destroy();
 with instance_create(x,y,PlayerSpawn)//Data to keep
 {
 	//alarm[3]=300;//immunity
+	ammo = other.ammo;
+	ultra_got = [];
+	skill_got = [];
 	altUltra = false;
 	chickenFocusMax = other.chickenFocusMax;
 	chickenFocus = chickenFocusMax;
@@ -369,7 +398,6 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 		ultra_got = other.ultra_got;
 		level = other.level;
 		rad = other.rad;
-		ammo = other.ammo;
 		altUltra = other.altUltra;
 		rogueammo = other.rogueammo-1;
 		rogueammomax = other.rogueammomax;
@@ -494,251 +522,227 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 }
 else if !reincarnate
 {
-	with Crown
-		instance_destroy();
-	scrEndOfRun();
-	//Horror and atom bskin drop rads
-	if race == 21 || (race == 15 && bskin = 1)
+	if instance_number(Player) == 1
 	{
-		raddrop = rad;
-		scrRaddrop();
-	}
-	if race == 23 //Frog explode!
-	{
-		repeat(40)
-		instance_create(x,y,ToxicThrowerGas)
-
-		snd_play(sndToxicBarrelGas)
-
-		dir = random(360)
-		repeat(20)
+		with Crown
+			instance_destroy();
+		scrEndOfRun();
+		//Horror and atom bskin drop rads
+		if race == 21 || (race == 15 && bskin = 1)
 		{
-		dir += 360/20
-		with instance_create(x,y,EnemyBullet2)
+			raddrop = rad;
+			scrRaddrop();
+		}
+		//SAVE STUFF
+		if instance_exists(BackCont)
 		{
-		motion_add(other.dir,4)
-		image_angle = direction
-		team = other.team
+			BackCont.kills = kills
+			BackCont.area = area
+			BackCont.subarea = subarea
+			BackCont.hard = hard
+			BackCont.loops = loops
+			with TopCont
+			{
+				gameoverText = scrDecideGameoverText();	
+			}
 		}
-		with instance_create(x,y,AcidStreak)
+
+		with UberCont
 		{
-		motion_add(other.dir,8)
-		image_angle = direction
-		}
-		}
-		snd_play(sndFrogExplode)
-
-		BackCont.shake += 20	
-	}
-	//SAVE STUFF
-	if instance_exists(BackCont)
-	{
-		BackCont.kills = kills
-		BackCont.area = area
-		BackCont.subarea = subarea
-		BackCont.hard = hard
-		BackCont.loops = loops
-		with TopCont
-		{
-			gameoverText = scrDecideGameoverText();	
-		}
-	}
-
-	with UberCont
-	{
-	ctot_kill[other.race]+=other.kills
-	//ctot_time[other.race]+=time;
-	if other.my_health<1
-	ctot_dead[other.race] += 1
-
-	ctot_played[other.race] += 1;
-
-	ctot_loop[other.race]+=other.loops;
-
-	//best kills
-	if other.kills > cbst_kill[other.race]
-	cbst_kill[other.race] = other.kills
-
-	//best difficulty
-	if other.hard>cbst_diff[other.race]
-	cbst_diff[other.race]=other.hard
-
-	//best loops
-	if other.loops> cbst_loop[other.race]
-	cbst_loop[other.race]=other.loops
-
-	if other.randomlySelected
-	{
-		ctot_kill[0]+=other.kills
+		ctot_kill[other.race]+=other.kills
 		//ctot_time[other.race]+=time;
 		if other.my_health<1
-		ctot_dead[0] += 1
-	
-		ctot_played[0] += 1;
-	
-		ctot_loop[0]+=other.loops;
+		ctot_dead[other.race] += 1
+
+		ctot_played[other.race] += 1;
+
+		ctot_loop[other.race]+=other.loops;
 
 		//best kills
-		if other.kills > cbst_kill[0]
-			cbst_kill[0] = other.kills
+		if other.kills > cbst_kill[other.race]
+		cbst_kill[other.race] = other.kills
 
 		//best difficulty
-		if other.hard>cbst_diff[0]
-			cbst_diff[0]=other.hard
+		if other.hard>cbst_diff[other.race]
+		cbst_diff[other.race]=other.hard
 
 		//best loops
-		if other.loops> cbst_loop[0]
-			cbst_loop[0]=other.loops
-		
-	}
+		if other.loops> cbst_loop[other.race]
+		cbst_loop[other.race]=other.loops
 
-	var playedWithAll = true;
-		for (var i = 0; i <= racemax; i++) {
-		    // code here
-			if !ctot_played[i]
-			{
-				playedWithAll = false;
-				i = racemax + 1;
-			}
-		}
-		if (playedWithAll)
+		if other.randomlySelected
 		{
-			scrUnlockGameMode(23,"UNLOCKED FOR PLAYING#EVERY CHARACTER");
-		}
+			ctot_kill[0]+=other.kills
+			//ctot_time[other.race]+=time;
+			if other.my_health<1
+			ctot_dead[0] += 1
+	
+			ctot_played[0] += 1;
+	
+			ctot_loop[0]+=other.loops;
+
+			//best kills
+			if other.kills > cbst_kill[0]
+				cbst_kill[0] = other.kills
+
+			//best difficulty
+			if other.hard>cbst_diff[0]
+				cbst_diff[0]=other.hard
+
+			//best loops
+			if other.loops> cbst_loop[0]
+				cbst_loop[0]=other.loops
 		
-		//DAILY RUN
-		if actualLives < 1
-		{
-			if (scrIsGamemode(27) && !instance_exists(StartDaily))
-			{
-				encrypted_data.ctot_dailies_score_score[
-				array_length(encrypted_data.ctot_dailies_score_score)-1] = other.kills;
-				scrSaveEncrypted();
-				useSeed = false;
-				opt_gamemode = [0];
-				leaderboardType = LEADERBOARD.SCORE;
-				goToLeaderboard = true;
-				runScore[0] = max(0,other.kills);
-				runScore[1] = encrypted_data.userid;
-				runScore[2] = encrypted_data.username;
-				runScore[3] = other.area;
-				runScore[4] = other.subarea;
-				runScore[5] = other.loops;
-				runScore[6] = other.race;
-				runScore[7] = other.bskin;
-				if getUltraMutation() != 255 || array_length(runScore) <= 14
-					runScore[8] = other.altUltra;
-				runScore[9] = other.wep;
-				runScore[10] = other.bwep;
-				runScore[11] = other.cwep;
-				runScore[12] = string_replace_all(string(other.crown)," ","");
-				runScore[13] = other.ultramod;
-				if getUltraMutation() != 255 || array_length(runScore) <= 14//Keep ultra display after using lives
+		}
+
+		var playedWithAll = true;
+			for (var i = 0; i <= racemax; i++) {
+			    // code here
+				if !ctot_played[i]
 				{
-					runScore[14] = getUltraMutation();//Its possible to start with an ultra such as fish's buddy, but then have no new mutations.
-					runScore[15] = scrGetAllMutations();//Can be empty what then
+					playedWithAll = false;
+					i = racemax + 1;
 				}
-				debug("POST SCOORE: ",runScore);
-				canRestart = true;
 			}
-			else if (scrIsGamemode(26) && !instance_exists(StartDaily))
+			if (playedWithAll)
 			{
-				useSeed = false;
-				//opt_gamemode = [0];
-				leaderboardType = LEADERBOARD.RACE;
-				goToLeaderboard = true;
-				canRestart = true;
+				scrUnlockGameMode(23,"UNLOCKED FOR PLAYING#EVERY CHARACTER");
 			}
-			else if (isWeekly && !instance_exists(StartDaily)){
+		
+			//DAILY RUN
+			if actualLives < 1
+			{
+				if (scrIsGamemode(27) && !instance_exists(StartDaily))
+				{
+					encrypted_data.ctot_dailies_score_score[
+					array_length(encrypted_data.ctot_dailies_score_score)-1] = other.kills;
+					scrSaveEncrypted();
+					useSeed = false;
+					opt_gamemode = [0];
+					leaderboardType = LEADERBOARD.SCORE;
+					goToLeaderboard = true;
+					runScore[0] = max(0,other.kills);
+					runScore[1] = encrypted_data.userid;
+					runScore[2] = encrypted_data.username;
+					runScore[3] = other.area;
+					runScore[4] = other.subarea;
+					runScore[5] = other.loops;
+					runScore[6] = other.race;
+					runScore[7] = other.bskin;
+					if getUltraMutation() != 255 || array_length(runScore) <= 14
+						runScore[8] = other.altUltra;
+					runScore[9] = other.wep;
+					runScore[10] = other.bwep;
+					runScore[11] = other.cwep;
+					runScore[12] = string_replace_all(string(other.crown)," ","");
+					runScore[13] = other.ultramod;
+					if getUltraMutation() != 255 || array_length(runScore) <= 14//Keep ultra display after using lives
+					{
+						runScore[14] = getUltraMutation();//Its possible to start with an ultra such as fish's buddy, but then have no new mutations.
+						runScore[15] = scrGetAllMutations();//Can be empty what then
+					}
+					debug("POST SCOORE: ",runScore);
+					canRestart = true;
+				}
+				else if (scrIsGamemode(26) && !instance_exists(StartDaily))
+				{
+					useSeed = false;
+					//opt_gamemode = [0];
+					leaderboardType = LEADERBOARD.RACE;
+					goToLeaderboard = true;
+					canRestart = true;
+				}
+				else if (isWeekly && !instance_exists(StartDaily)){
 				
-				useSeed = false;
-				leaderboardType = LEADERBOARD.WEEKLY;
-				goToLeaderboard = true;
-				canRestart = true;
-				//Do I need to send the gamemode?
-				/*
-					Send gamemode and week to post it in ofcourse
-					check how daily does this.
-				*/
-				debug("weekly ", opt_gamemode);
-				if scrIsGamemode(8)// VAN FAN
-				{
-					//Check if this is your highest score
-					var tf = round(VanFan.time_frame);
-					debug("tf: ", tf);
-					debug("data: ", encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)]);
-					//if (tf > encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)])
-					//{
-						encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)] = tf;
-						scrSaveEncrypted();
-						runRace[0] = tf;
-						runRace[1] = encrypted_data.userid;
-						runRace[2] = encrypted_data.username;
-						runRace[3] = Player.race;
-						runRace[4] = Player.bskin;
-					//}
-				}
-				else
-				{
-					//Check if this is your highest score
-					debug("kills: ", other.kills);
-					debug("data: ", encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)]);
-					//Also in UltraIcon to set ultra,
-					//if (scrIsWeeklyScoreHigher(other.kills))
-					//{
-						encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)] = other.kills;
-						scrSaveEncrypted();
-						runScore[0] = max(0,other.kills);
-						runScore[1] = encrypted_data.userid;
-						runScore[2] = encrypted_data.username;
-						if scrIsGamemode(25) //Survival area
-							runScore[3] = 116;
-						else
-							runScore[3] = other.area;
-						runScore[4] = other.subarea;
-						runScore[5] = other.loops;
-						runScore[6] = other.race;
-						runScore[7] = other.bskin
-						if getUltraMutation() != 255 || array_length(runScore) <= 14
-							runScore[8] = other.altUltra;
-						runScore[9] = other.wep;
-						runScore[10] = other.bwep;
-						runScore[11] = other.cwep;
-						runScore[12] = string_replace_all(string(other.crown)," ","");
-						runScore[13] = other.ultramod;
-						if getUltraMutation() != 255 || array_length(runScore) <= 14
-						{
-							runScore[14] = getUltraMutation();
-							runScore[15] = scrGetAllMutations();
-						}
-					//}
+					useSeed = false;
+					leaderboardType = LEADERBOARD.WEEKLY;
+					goToLeaderboard = true;
+					canRestart = true;
+					//Do I need to send the gamemode?
+					/*
+						Send gamemode and week to post it in ofcourse
+						check how daily does this.
+					*/
+					debug("weekly ", opt_gamemode);
+					if scrIsGamemode(8)// VAN FAN
+					{
+						//Check if this is your highest score
+						var tf = round(VanFan.time_frame);
+						debug("tf: ", tf);
+						debug("data: ", encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)]);
+						//if (tf > encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)])
+						//{
+							encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)] = tf;
+							scrSaveEncrypted();
+							runRace[0] = tf;
+							runRace[1] = encrypted_data.userid;
+							runRace[2] = encrypted_data.username;
+							runRace[3] = Player.race;
+							runRace[4] = Player.bskin;
+						//}
+					}
+					else
+					{
+						//Check if this is your highest score
+						debug("kills: ", other.kills);
+						debug("data: ", encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)]);
+						//Also in UltraIcon to set ultra,
+						//if (scrIsWeeklyScoreHigher(other.kills))
+						//{
+							encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)] = other.kills;
+							scrSaveEncrypted();
+							runScore[0] = max(0,other.kills);
+							runScore[1] = encrypted_data.userid;
+							runScore[2] = encrypted_data.username;
+							if scrIsGamemode(25) //Survival area
+								runScore[3] = 116;
+							else
+								runScore[3] = other.area;
+							runScore[4] = other.subarea;
+							runScore[5] = other.loops;
+							runScore[6] = other.race;
+							runScore[7] = other.bskin
+							if getUltraMutation() != 255 || array_length(runScore) <= 14
+								runScore[8] = other.altUltra;
+							runScore[9] = other.wep;
+							runScore[10] = other.bwep;
+							runScore[11] = other.cwep;
+							runScore[12] = string_replace_all(string(other.crown)," ","");
+							runScore[13] = other.ultramod;
+							if getUltraMutation() != 255 || array_length(runScore) <= 14
+							{
+								runScore[14] = getUltraMutation();
+								runScore[15] = scrGetAllMutations();
+							}
+						//}
+					}
 				}
 			}
+			scrSave();
 		}
-		scrSave();
+		
+		//Lets unlock some shit
+		if my_health<=0
+			scrUnlockCharacter(4,"FOR DYING");//MELTING
+
+		if race = 4 && area = 6//SKELETON
+			scrUnlockCharacter(19,"FOR DYING IN THE LABS AS MELTING");
+
+		if UberCont.ctot_kill[race]>=100//UNLOCK PLANT
+			scrUnlockCharacter(5,"FOR GETTING OVER 100 KILLS");
+
+		if kills>=2000 && race = 5
+			scrUnlockCSkin(5,"FOR GETTING 2.000 KILLS#IN ONE RUN AS PLANT",0);
+		
+		scrCreateDataRef();
+		with GameRender
+		{
+			alarm[2] = 1;	
+		}
 	}
-
-
-	//Lets unlock some shit
-	if my_health<=0
-	scrUnlockCharacter(4,"FOR DYING");//MELTING
-
-	if race = 4 && area = 6//SKELETON
-	scrUnlockCharacter(19,"FOR DYING IN THE LABS AS MELTING");
-
-	if UberCont.ctot_kill[race]>=100//UNLOCK PLANT
-	scrUnlockCharacter(5,"FOR GETTING OVER 100 KILLS");
-
-	if kills>=2000 && race = 5
-	scrUnlockCSkin(5,"FOR GETTING 2.000 KILLS#IN ONE RUN AS PLANT",0);
+	
 }
 with KeyCont {
-	key_fire[0] = 0;
-	key_spec[0] = 0;
-}
-scrCreateDataRef();
-
-with GameRender
-{
-	alarm[2] = 1;	
+	key_fire[0] = 2;
+	key_spec[0] = 2;
 }

@@ -147,7 +147,10 @@ function scrDrawOptions2() {
 				{
 					draw_sprite(sprLocked,0,round(x + 8),yy);	
 				}
-				draw_text_color(x+8,yyy + 8,wepName,wepNameCol,wepNameCol,wepNameCol,wepNameCol,1);
+				if UberCont.opt_sideart != sprite_get_number(sprSideArt) + 1
+					draw_text_ext_color(x+8,yyy + 8,wepName,8,116,wepNameCol,wepNameCol,wepNameCol,wepNameCol,1);
+				else
+					draw_text_color(x+8,yyy + 8,wepName,wepNameCol,wepNameCol,wepNameCol,wepNameCol,1);
 				if wep_area[wep] >= 0
 				{
 					draw_sprite_ext(sprWepTier,0,x - 8,y+64,1,1,0,wepNameCol,1);

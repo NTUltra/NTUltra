@@ -26,7 +26,7 @@ discSpeed = 3.5;
 if loops > 0
 	actTime -= 4;
 	
-if scrIsHardMode() && (!instance_exists(UltraDiscGuy) || random(3) < 1) && 
+if scrIsHardMode() && object_index != UltraDiscGuy && (!instance_exists(UltraDiscGuy) || random(3) < 1) && 
 instance_exists(Player) && Player.area != 106 && Player.area != 125//HARD MODE
 {
 	//Not Inv scrap Inv Mansion

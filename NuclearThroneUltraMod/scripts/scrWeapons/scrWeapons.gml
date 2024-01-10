@@ -3035,7 +3035,7 @@ function scrWeapons() {
 	wep_name[274] = "INFUSER"
 	wep_type[274] = 3
 	wep_auto[274] = 0
-	wep_load[274] = 17
+	wep_load[274] = 15
 	wep_cost[274] = 1
 	wep_sprt[274] = sprNewInfuser
 	wep_area[274] = 5
@@ -3593,7 +3593,7 @@ function scrWeapons() {
 	wep_swap[324] = sndSwapExplosive
 	wep_rad[324] = 0;
 
-	wep_name[325] = "FROST FLAK CANNON"
+	wep_name[325] = "FROST BULLET FLAK CANNON"
 	wep_type[325] = 1
 	wep_auto[325] = 0
 	wep_load[325] = 30
@@ -7237,7 +7237,7 @@ function scrWeapons() {
 	wep_name[654] = "DIRECTOR DRAGGER"
 	wep_type[654] = 2
 	wep_auto[654] = 0
-	wep_load[654] = 23
+	wep_load[654] = 21
 	wep_cost[654] = 3
 	wep_sprt[654] = sprDirectorDragger
 	wep_area[654] = 10
@@ -7750,6 +7750,28 @@ function scrWeapons() {
 	wep_text[700] = "you can yeet these over walls"
 	wep_swap[700] = sndSwapExplosive
 	wep_rad[700] = 0;
+	
+	wep_name[701] = "MARKSMAN"
+	wep_type[701] = 1
+	wep_auto[701] = 0
+	wep_load[701] = 5
+	wep_cost[701] = 1
+	wep_sprt[701] = sprMarksMan
+	wep_area[701] = -2
+	wep_text[701] = "do not miss"
+	wep_swap[701] = sndSwapPistol
+	wep_rad[701] = 0;
+	
+	wep_name[702] = "SIDEARM SHOTTY"
+	wep_type[702] = 1
+	wep_auto[702] = 0
+	wep_load[702] = 14
+	wep_cost[702] = 2
+	wep_sprt[702] = sprSideArmShotty
+	wep_area[702] = -2
+	wep_text[702] = "hit your shots"
+	wep_swap[702] = sndSwapShotgun
+	wep_rad[702] = 0;
 
 	maxwep = array_length(wep_name)-1;
 

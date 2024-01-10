@@ -1,6 +1,8 @@
 /// @description start of the room
 //if area=104
 //visitedCrib=true
+
+//}
 swapChar = false;
 restarted = false;
 blastArmourPower = 3;

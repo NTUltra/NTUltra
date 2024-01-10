@@ -7,7 +7,10 @@ if instance_exists(Player)
 	spd = 0.1;
 	dir = point_direction(x,y,Player.x,Player.y);
 	if sprite_index == sprNothing2Death || sprite_index == sprInvertedNothing2Death
+	{
 		dir += 180;
+		spd += 0.1;
+	}
 }
 repeat(38)
 	with instance_create(x+random(160-rr)-80-(rr*0.5),y+random(160-rr)-80-(rr*0.5),explo)

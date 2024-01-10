@@ -64,7 +64,7 @@ function scrKeyContStep() {
 	else if key_fire[p] !=0 key_fire[p] = 3}
 
 	//special
-	if mouse_check_button(mb_right)  or gamepad_button_check(p,gp_shoulderlb){
+	if !instance_exists(UnPauseDelay) && (mouse_check_button(mb_right)  or gamepad_button_check(p,gp_shoulderlb)){
 	     if key_spec[p] = 1 key_spec[p] = 2
 	else if key_spec[p] !=2 key_spec[p] = 1}
 	else{if key_spec[p] = 3 key_spec[p] = 0

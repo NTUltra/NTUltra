@@ -219,8 +219,13 @@ with UberCont {
 }
 
 keyfire = 0
-
-if instance_exists(GenCont)
+if instance_exists(RaceCopier) {
+    race = RaceCopier.race;
+    with RaceCopier {
+        instance_destroy();
+    }
+}
+else if instance_exists(GenCont)
 race = GenCont.race
 else if instance_exists(CrownIcon)
 race = CrownIcon.race;
@@ -229,16 +234,9 @@ else if instance_exists(UltraIcon) {
 }
 else if instance_exists(PlayerSpawn)
 race = PlayerSpawn.race;
-else if instance_exists(RaceCopier) {
-    race = RaceCopier.race;
-    with RaceCopier {
-        instance_destroy();
-    }
-}
-else
+else 
     race = 19;
-
-
+debug("create a new guy with race: ", race);
 if scrIsGamemode(7) //ATOM TELEPORT ONLY GM
 race = 15;
 if scrIsGamemode(35)
@@ -283,7 +281,6 @@ betterrabbitpaw = 0.0;
 betterrecyclegland = 0;
 betterboltmarrow = 0;
 betterTail = 1.5;
-
 scrRaces()
 bskin = UberCont.skin[race];
 wep = 0;
@@ -444,33 +441,28 @@ maxtoxicamount = 120;
 toxicConsume = 0;
 
 ammo[0] = 999
-ammo[1] = 0
-ammo[2] = 0
-ammo[3] = 0
-ammo[4] = 0
-ammo[5] = 0
-if (race == 26) {
-    ammo[1] = typ_ammo[1];
-    ammo[2] = typ_ammo[2];
-    ammo[3] = typ_ammo[3];
-    ammo[4] = typ_ammo[4];
-    ammo[5] = typ_ammo[5];
-    ammo[wep_type[wep]] = typ_ammo[wep_type[wep]] * 3
-} else if UberCont.lastwishused = true {
-    ammo[1] = typ_ammo[1] * 3
-    ammo[2] = typ_ammo[2] * 3
-    ammo[3] = typ_ammo[3] * 3
-    ammo[4] = typ_ammo[4] * 3
-    ammo[5] = typ_ammo[5] * 3
+ammo[1] = typ_ammo[1];
+ammo[2] = typ_ammo[2];
+ammo[3] = typ_ammo[3];
+ammo[4] = typ_ammo[4];
+ammo[5] = typ_ammo[5];
+if UberCont.lastwishused = true {
+    ammo[1] = typ_ammo[1] * 2
+    ammo[2] = typ_ammo[2] * 2
+    ammo[3] = typ_ammo[3] * 2
+    ammo[4] = typ_ammo[4] * 2
+    ammo[5] = typ_ammo[5] * 2
 }
 else {
-    ammo[wep_type[wep]] = typ_ammo[wep_type[wep]] * 3
+    ammo[wep_type[wep]] = typ_ammo[wep_type[wep]] * 2
 }
 
 maxSpeed = 4
 
 
 maxlevel = 10 + UberCont.levelIncrease;
+scrIsHardMode()
+	maxlevel += 1;
 if scrIsGamemode(15) //no mutaitons gamemode
 maxlevel = 1;
 skillsChosen = 0
@@ -540,7 +532,8 @@ if scrIsGamemode(36)//Ultra mod start
     crownvisits = -1;
 	//instance_create(0,0,PauseTimer);
 }
-if UberCont.crown_start[r] && !instance_exists(PlayerSpawn) && !scrIsGamemode(25) && !instance_exists(CrownIcon){
+if UberCont.crown_start[r] && !instance_exists(PlayerSpawn) && !scrIsGamemode(25) && !instance_exists(CrownIcon) {
+	debug("CROWN START");
 	with Crown
 		instance_destroy();
 	with UberCont
@@ -813,3 +806,16 @@ enum LEADERBOARD {
 scrInitDrops(0);
 altFire = false;
 hitBy = noone;
+
+isMarksMan = false;
+if scrIsGamemode(48) {
+	ammo[1] = 0;
+	ammo[2] = 0;
+	ammo[3] = 0;
+	ammo[4] = 0;
+	ammo[5] = 0;
+	isMarksMan = true;
+	wep = 701;
+	bwep = 702;
+	scrWeaponHold();
+}

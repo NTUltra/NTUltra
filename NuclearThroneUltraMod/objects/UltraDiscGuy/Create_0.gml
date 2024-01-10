@@ -5,8 +5,9 @@ spr_walk = sprUltraDiscGuyWalk
 spr_hurt = sprUltraDiscGuyHurt
 spr_dead = sprUltraDiscGuyDead
 spr_fire = sprUltraDiscGuyFire
-maxhealth = 30
+maxhealth = 40
 EnemyHealthAdjustments();
 meleedamage = 6
 actTime -= 2;
-range = 350;
+range = 400;
+loops += 3;

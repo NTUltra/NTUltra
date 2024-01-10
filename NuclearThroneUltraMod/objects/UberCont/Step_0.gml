@@ -1,6 +1,6 @@
 recursionCheck = 0;
 steam_update();
-if !instance_exists(KeyCont) || alarm[7] > 0 || instance_exists(ShopWheel)
+if !instance_exists(KeyCont) || alarm[7] > 0 || instance_exists(ShopWheel) || alarm[8] > 0
 	exit;
 if confirmState > 0 && (mouse_check_button_pressed(mb_right) || KeyCont.key_spec[0] == 1|| gamepad_button_check(0,gp_face2))
 {
@@ -52,8 +52,13 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 		alarm[4] = 0;
 		alarm[5] = 0;
 		isPaused = 0
+		instance_create(x,y,UnPauseDelay);
 		isPausedInTheDark = false;
 		alarm[3] = 1;
+		with UberCont
+		{
+			partnerDied = true;	
+		}
 		with Player
 		{
 			other.kills = kills;
@@ -149,6 +154,7 @@ Cursor.image_index=UberCont.opt_crosshair;
 Cursor.image_index=UberCont.opt_crosshair;}
 */
 isPaused = 0
+instance_create(x,y,UnPauseDelay);
 isPausedInTheDark = false;
 alarm[4] = 0;
 alarm[5] = 0;
@@ -167,7 +173,10 @@ if (
 		confirmState = 0;
 		if isWeekly
 			opt_gamemode = [0];
-	
+		with UberCont
+		{
+			partnerDied = true;	
+		}
 		with FPSHACKMenu
 			instance_destroy();
 		instance_activate_all();
@@ -183,13 +192,18 @@ if (
 			instance_create(x,y,FPSHACK);	
 		}
 		isPaused = 0
+		instance_create(x,y,UnPauseDelay);
 		isPausedInTheDark = false;
 		alarm[4] = 0;
 		alarm[5] = 0;
 		alarm[3] = 1;
 		//audio_stop_all();
 		if instance_exists(Player)
-		kills=Player.kills
+			kills=Player.kills
+		with UberCont
+		{
+			partnerDied = true;	
+		}
 		with Player
 		{
 			skeletonlives = 0;

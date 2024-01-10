@@ -25,4 +25,4 @@ with instance_create(x,y,EnemyDisc)
 	team = other.team
 }
 walk=4;
-alarm[1] = actTime*3;
+alarm[1] = actTime*choose(3,4);

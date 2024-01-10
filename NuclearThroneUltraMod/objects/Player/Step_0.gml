@@ -1,6 +1,7 @@
 /// @description main
 if instance_exists(GenCont) || instance_exists(StartDaily) || instance_exists(LevCont)
 	exit;
+	
 var is60fps = (UberCont.normalGameSpeed == 60);
 if canPuffyCheek > 0 {
 	if is60fps
@@ -56,12 +57,17 @@ if unkillable
 	alarm[3] = 2;
 }
 var representingCost = wep_cost[wep];
-
+var ignoreAmmo = false;
 if ultra_got[70]
 	representingCost = min(representingCost,0.5);
 else if scrIsCrown(13)//Crown of drowning
 {
 	representingCost *= 0.5;
+}
+else if scrIsGamemode(48)
+{
+	representingCost = 0;
+	ignoreAmmo = true;
 }
 
 if !instance_exists(LevCont) and visible = 1
@@ -356,6 +362,7 @@ if !instance_exists(LevCont) and visible = 1
 	if UberCont.public==0 && !keyboard_check(vk_control) && !keyboard_check(vk_shift){
 	//hacks
 		if keyboard_check_pressed(ord("V")) {
+			
 			isPermanent = true;
 			var dangle = random(1)*360;
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
@@ -366,8 +373,8 @@ if !instance_exists(LevCont) and visible = 1
 			//scrn++;
 			
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			instance_create(f.x,f.y,UltraCrystal)
-			instance_create(f.x,f.y,UltraDiscGuy)
+			instance_create(f.x,f.y,Hyena)
+			instance_create(f.x,f.y,UltraProtector)
 
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
 			thing.mytext = "Ultra Crystal Bot";
@@ -807,11 +814,22 @@ if !instance_exists(LevCont) and visible = 1
 	}
 	fired = false;
 	if can_shoot == 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and 
-	((ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad >= wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
+	(ignoreAmmo || (ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad >= wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 	{
 		var holdKey = (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
 		if ((wep_auto[wep] = 0 and clicked = 1) || (autoFire < 1 && holdKey && !scrIsChargeWeapon(wep)))
 		{
+			if scrIsGamemode(48) && ammo[1] < 0
+			{
+				if armour > 0
+					armour -= 1;
+				else
+					my_health -= 2;
+				sprite_index = spr_hurt;
+				image_index = 0;
+				snd_play(snd_hurt);
+				exception = true;
+			}
 			if ultra_got[44] == 1 && instance_exists(Marker)
 			{
 				scrCrackShotFire();
@@ -823,7 +841,7 @@ if !instance_exists(LevCont) and visible = 1
 				scrFire();
 			}
     		autoFire = max(wep_load[wep],6);
-		clicked = 0
+			clicked = 0;
 		}
 		else if wep_auto[wep] = 1 && holdKey && canPuffyCheek <= 0
 		{
@@ -839,6 +857,7 @@ if !instance_exists(LevCont) and visible = 1
 			}
 		}
 	}
+	
 }
 }//End of gencont
 
@@ -934,7 +953,7 @@ if (rad > mr)
 		{
 			if scrIsHardMode()
 			{
-				scrUnlockGameMode(47,"FOR REACHING LEVEL ULTRA#ON HARD MODE",34);
+				scrUnlockGameMode(47,"FOR REACHING LEVEL ULTRA#ON HARD MODE");
 			}
 			reachedUltra = true;
 			snd_play_2d(sndExplosionXXL);
@@ -1336,7 +1355,7 @@ if (!instance_exists(LevCont))
 	if (!IsShielding || ultra_got[7]==1) && canPuffyCheek <= 0
 	and wep_auto[wep] = 1 and (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
 	{
-		while can_shoot == 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and ((ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
+		while can_shoot == 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and (ignoreAmmo || (ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 		{
 			if ultra_got[44] == 1 && instance_exists(Marker)
 			{
@@ -2280,7 +2299,10 @@ else if place_meeting(x,y,WallHitMe)
 }
 if hitWall && sprite_index != spr_hurt && alarm[3] < 1 && hammerheadcounter < 1 && scrIsGamemode(4)
 {	
-	my_health -= 2;
+	if armour > 0
+		armour -= 1;
+	else
+		my_health -= 2;
 	snd_play_2d(snd_hurt_actual, hurt_pitch_variation);
 	sprite_index = spr_hurt;
 	image_index = 0;

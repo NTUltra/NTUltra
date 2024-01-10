@@ -1,4 +1,4 @@
-alarm[1] = 14+random(5)
+alarm[1] = 12+random(5)
 Shielding=false;
 
 if team=2

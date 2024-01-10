@@ -54,7 +54,7 @@ with WepPickup
 	scrForcePosition60fps();
 }
 if Player.area!=104
-scrPopulate()
+	scrPopulate()
 
 alarm[1] = 2
 if Player.area == 100 && Player.crownvisits > 1

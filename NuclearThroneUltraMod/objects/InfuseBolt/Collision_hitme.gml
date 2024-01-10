@@ -16,5 +16,8 @@ if other.team != team && !dealtDamage
 
 
 	if alarm[0]>hitTime
-	alarm[0] = hitTime;
+	{
+		alarm[0] = hitTime;
+		alarm[1] = hitTime * 0.5;
+	}
 }

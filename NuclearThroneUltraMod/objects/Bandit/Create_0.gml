@@ -6,7 +6,7 @@ mySize = 1
 event_inherited()
 if scrIsHardMode()//HARD MODE
 {
-	if (!(instance_exists(Player) && Player.area == 1 && Player.loops < 1) || random(5) < 2)
+	if (!(instance_exists(Player) && Player.area == 1 && Player.loops < 1) || random(5) < 1)
 	{
 		instance_destroy(id,false);
 		instance_create(x,y,UltraBandit);

@@ -10,13 +10,13 @@ if !instance_exists(MenuGen)
 	scrDrawGameOver();
     scrDrawHUD();
     surface_reset_target();
-	if UberCont.opt_sideart != sprite_get_number(sprSideArt) + 1
+	/*if UberCont.opt_sideart != sprite_get_number(sprSideArt) + 1
 	{
 		var s = fourThreeScale * UberCont.opt_resolution_scale;
 	}
 	else
-	{
+	{*/
 		var s = display_get_gui_width()/camera_get_view_width(view_camera[0]);
-	}
+	//}
     draw_surface_ext(hudSurface,screenX,screenY,s,s,0,c_white,1);
 }

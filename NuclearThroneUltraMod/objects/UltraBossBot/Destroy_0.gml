@@ -29,6 +29,15 @@ existTime = 5;
 // Inherit the parent event
 event_inherited();
 
+with UberCont {
+	if isValidGamemodeToUnlock()
+	{
+		boss_bot_ultra += 1;
+		scrHasUnlockedMarksMan();
+		scrSave();
+	}
+}
+
 with myCorpse
 {
 	alarm[0] += 60;//Wait a little longer with spawning a portal	

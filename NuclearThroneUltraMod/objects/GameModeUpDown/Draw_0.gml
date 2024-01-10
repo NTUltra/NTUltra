@@ -106,14 +106,25 @@ else
 	with CustomSurvivalWave
 		instance_destroy();
 }
-if ((gamemodeOrder[gamemodenr] == 47 && UberCont.gamemode_have[47]) || (gamemodeOrder[gamemodenr] == 48 && UberCont.gamemode_have[48]))
+/*
+if (gamemodeOrder[gamemodenr] == 47 && UberCont.gamemode_have[47])
 {
 	if !instance_exists(GamemodeCharacterUpDown)
-		instance_create(x-10,y+76,GamemodeCharacterUpDown);
+		instance_create(x-10,y+84,GamemodeCharacterUpDown);
 }
 else
 {
 	with GamemodeCharacterUpDown
+		instance_destroy();
+}*/
+if (gamemodeOrder[gamemodenr] == 47 && UberCont.gamemode_have[48])
+{
+	if !instance_exists(GamemodeCharacterActiveUpDown)
+		instance_create(x-10,y+54,GamemodeCharacterActiveUpDown);
+}
+else
+{
+	with GamemodeCharacterActiveUpDown
 		instance_destroy();
 }
 if (gamemodeOrder[gamemodenr]==38 && UberCont.gamemode_have[38])
@@ -161,7 +172,10 @@ if (UberCont.gamemode_have[gamemodeOrder[gamemodenr]] && !dailyDone)
 	{
 		event_user(1);
 	}
-	draw_text_ext_colour(x-16,y+26,gamemode_description[gamemodeOrder[gamemodenr]],8,132,c_gray,c_gray,c_gray,c_gray,1);
+	var w = 132;
+	if UberCont.opt_sideart != sprite_get_number(sprSideArt) + 1
+		w -= 16;
+	draw_text_ext_colour(x-16,y+26,gamemode_description[gamemodeOrder[gamemodenr]],8,w,c_gray,c_gray,c_gray,c_gray,1);
 }
 else
 {

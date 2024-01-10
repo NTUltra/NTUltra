@@ -1,5 +1,7 @@
 raddrop = 9
 maxhealth = 255
+if GetPlayerLoops() < 1
+	maxhealth = 200;
 meleedamage = 20
 mySize = 4
 RogueIDPD=false;
@@ -25,6 +27,7 @@ right = 1;
 acc = 9 + min(16,loops);
 maxSpeed = 12 + min (4, loops - 1);
 dropFreaks = false;
+myMovementDirection = 0;
 /*
 if instance_exists(Player) && object_index != IDPDVanVertical
 {

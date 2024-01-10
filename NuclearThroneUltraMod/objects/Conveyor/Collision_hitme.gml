@@ -8,6 +8,10 @@ if other.team != 0 {
 	{
 		scrForcePosition60fps();	
 	}*/
+	if object_index == WallBot || object_index == InvertedWallBot
+	|| object_index == CursedWallBot || object_index == GoldenWallBot
+	|| object_index == UltraWallBot
+		exit;
 	switch(image_angle)
 	{
 		case 0:

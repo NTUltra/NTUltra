@@ -4,7 +4,7 @@ meleedamage = 0
 mySize = 1
 
 event_inherited()
-if scrIsHardMode() && random(2) < 1//HARD MODE
+if scrIsHardMode() && random(4) < 1//HARD MODE
 {
 	instance_destroy(id,false);
 	instance_create(x,y,UltraBandit);

@@ -84,7 +84,7 @@ function scrRaces() {
 	race_dskin[4] = 0
 	race_eskin[4] = 0
 	race_fskin[4] = 0
-	race_bskin_lock[4] = "LOOP WITHOUT#RHINO SKIN,#STRONG SPIRIT#ALKALINE SALIVA#BOUNCY FAT#NERVES OF STEEL#AND CROWN OF LIFE#AS MELTING"
+	race_bskin_lock[4] = "LOOP WITHOUT#RHINO SKIN,#STRONG SPIRIT#ALKALINE SALIVA#BOUNCY FAT#NERVES OF STEEL#TOUGH SHELL#LAST WISH#CROWN OF PROTECTION#AND CROWN OF LIFE#AS MELTING"
 	race_cskin_lock[4] = "REACH LOOP 3 ON#1HP EQUALITY#GAMEMODE#AS MELTING"
 
 
@@ -252,7 +252,7 @@ function scrRaces() {
 
 	race_name[14] = "[PANDA]"
 	race_pass[14] = "SMALLER HITBOX#<pi>RANDOMIZE<pi> WEAPONS THROWN IN A <p>PORTAL<p>"//"PRIMARY WEAPON IS RANDOMIZED#TO ONE OF THE SAME TIER#EACH AREA#EXCEPT YOUR STARTING WEAPON"
-	race_acti[14] = "<w>THROW<w> WEAPONS"
+	race_acti[14] = "CLICK/HOLD <w>THROW<w> WEAPONS"
 	race_butt[14] = "#SHORTER <w>THROWN<w> WEAPON RETURN DELAY#MORE <w>THROW<w> DAMAGE"
 	race_butt_detail[14] = "#REDUCED <w>THROWN<w> WEAPON RETURN DELAY (0.83 SEC)#+20% MORE <w>THROW<w> DAMAGE"
 	//race_back[14] = "NO LONGER GET RANDOM WEP(is ultra change)";
@@ -306,7 +306,7 @@ function scrRaces() {
 
 	race_name[17] = "[WEAPONSMITH]"//WEAPON SMITH
 	race_pass[17] = "START WITH A RANDOM <w>WEAPON MOD<w>#ENEMIES DROP MORE WEAPONS#LOWER TIER WEAPONS"
-	race_acti[17] = "COMBINE AND UPGRADE WEAPONS"
+	race_acti[17] = "UPGRADE WEAPONS"
 	race_butt[17] = "GET AN EVEN HIGHER#TIER WEAPON WHEN COMBINING WEAPONS"
 	race_butt_detail[17] = "GET AN EVEN HIGHER (+1)#TIER WEAPON WHEN COMBINING WEAPONS"
 	//race_back[17] = "THE FIRST TIME YOU COMBINE#A WEAPON IN AN AREA#YOU DON'T LOSE THEM BUT INSTEAD DROP IT";
@@ -324,7 +324,7 @@ function scrRaces() {
 
 	race_name[18] = "[ANGEL]"
 	race_pass[18] = "FLY OVER WALLS"
-	race_acti[18] = "#<aq>DEFLECT<aq> ALL DAMAGE#COSTS <y>AMMO<y>"
+	race_acti[18] = "<aq>DEFLECT<aq> ALL DAMAGE#COSTS <y>AMMO<y>"
 	race_butt[18] = "ACTIVE ALSO <r>HEALS<r>#1<r>HP<r> EVERY OTHER USE"
 	race_butt_detail[18] = race_butt[18];
 	//race_back[18] = "FLYING OVER WALLS DRAINS AMMO#INSTEAD OF HP";
@@ -486,7 +486,7 @@ function scrRaces() {
 	
 	race_name[27] = "[HANDS]"
 	race_pass[27] = "HIGHER CHANCE FOR <w>INVERTED PORTALS<w>#<w>INVERTED PORTALS<w> (OVER) <r>HEAL<r> 2<r>HP<r>"
-	race_acti[27] = "CLICK/HOLD <w>GRAB<w> CHESTS/WEAPONS/ENEMIES"
+	race_acti[27] = "CLICK/HOLD TO <w>GRAB<w>#CHESTS/WEAPONS/ENEMIES"
 	race_butt[27] = "<w>PUSH<w> ENEMIES INSTEAD#YOUR HAND DEALS MORE DAMAGE"
 	race_butt_detail[27] = race_butt[27];
 	//race_back[27] = "MORE DAMAGE OR SOMETHING";
