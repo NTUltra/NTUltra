@@ -19,7 +19,7 @@ function scrSecretUltraStat() {
 	//CRYSTAL 
 	//6
 	secret_ultra_name[2] = "CURSED"
-	secret_ultra_text[2] = "<w>TELEPORT<w> AFTER <p>SHIELDING<p>#<p>SHIELDING<p> FIRES <g>LASERS<g>"
+	secret_ultra_text[2] = "<w>TELEPORT<w> AFTER <p>SHIELDING<p>#<p>SHIELDING<p> FIRES <g>LASERS<g>##<aq>IMMUNE<aq> TO ENEMY CONTACT DAMAGE#WHILE <p>SHIELDED<p>"
 	secret_ultra_tips[2] = "cursed crystal"
 	secret_ultra_hint[2] = "CURSED";
 	secret_ultra_unlk[2] = "HOLD A CURSED WEAPON";

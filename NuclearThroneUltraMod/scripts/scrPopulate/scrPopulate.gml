@@ -544,9 +544,9 @@ function scrPopulate() {
 
 		if !scrIsHardMode()
 			with enemy
-	        instance_destroy(id,false)
+				instance_destroy(id,false)
 
-        with instance_furthest(10016, 10016, Corpse) {
+        with instance_furthest(10016, 10016, Floor) {
             repeat(4)
             instance_create(x + random(4) - 2, y + random(4) - 2, Turtle)
             instance_create(x, y, Rat)

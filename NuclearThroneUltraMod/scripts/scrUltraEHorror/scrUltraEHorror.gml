@@ -36,26 +36,34 @@ function scrUltraEHorror() {
 	if Player.ultra_got[0] && !Player.altUltra
 	{
 	    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-112,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-	    skill = 27//patience
+		{
+		    skill = 27//patience
+			skillIndex = 0;
+		}
 	}
 
 
 	with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-72,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
 	{skill = other.skill1
+		skillIndex = 1;
 	}
 	with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
 	{skill = other.skill2
+		skillIndex = 2
 	}
 	with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
 	{skill = other.skill3
+		skillIndex = 3
 	}
 	with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+72,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
 	{skill = other.skill4
+		skillIndex = 54
 	}
 	if Player.race=21
 	{
 	with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+112,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
 	{skill = other.skill5
+		skillIndex = 5
 	}
 	}
 
@@ -63,28 +71,38 @@ function scrUltraEHorror() {
 	else
 	{
 	//CROWN OF DESTINYYYYYYY
-	if Player.race=21
+	
 	{
 	//HORROR ULTRA E
 	if Player.ultra_got[0] && !Player.altUltra
 	{
 	    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-32,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
+		{
 	    skill = 27//patience
+		skillIndex = 0
+		}
 	}
 
 	with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
+	{
 	skill = other.skill1
+	skillIndex = 1
+	}
 
 	with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+32,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
 	{skill = other.skill2
+		skillIndex = 2
 	}
 
 
 	}
-	else
+	if Player.race=21
 	{
-	with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
-	skill = choose(other.skill1,other.skill2,other.skill3,other.skill4);
+		with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
+		{
+			skill = choose(other.skill3,other.skill4);
+			skillIndex = 3
+		}
 	}
 
 	}   

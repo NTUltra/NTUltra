@@ -56,7 +56,7 @@ function scrLoseSkill(skillIndex){
 		case 4: //RABBIT PAW
 			betterrabbitpaw = 0;
 		break;
-		case 5: //THRONE BUTT
+		case 5: //but BUTT
 			if race == 1//Fish lose extra value of ammo drops
 			{
 				typ_ammo[1] = 40 typ_ammo[2] = 10 typ_ammo[3] = 9 typ_ammo[4] = 8 typ_ammo[5] = 13

@@ -166,11 +166,11 @@ with Player//Data to keep
 		scrWeaponHold();
 		if skill_got[5]
 		{
-			my_health = maxhealth;
-			prevhealth = maxhealth;
+			my_health = round(maxhealth*0.5);
+			prevhealth = my_health;
 		}
 		event_user(0);
-		alarm[3] = 30;
+		alarm[3] = 20;
 	}
 	else
 	{

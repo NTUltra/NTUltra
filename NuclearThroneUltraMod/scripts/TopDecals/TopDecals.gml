@@ -2,7 +2,7 @@
 // /@description
 ///@param
 function TopDecals(){
-	if instance_exists(GenCont) && !place_meeting(x,y,TopDecal){
+	if instance_exists(GenCont) && !place_meeting(x,y,TopDecal) {
 		if !place_free(x-32,y) and !place_free(x-64,y) and place_free(x,y) and random(5) < 1
 		{
 		instance_create(x-64+16,y+16,TopDecal)

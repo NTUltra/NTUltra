@@ -132,7 +132,7 @@ function scrEnemyDeathEvent(){
 			if scrIsGamemode(6) || scrIsGamemode(20)//Claustrophobia Agoraphobia
 			{
 				other.raddrop = max(0, other.raddrop - 1);
-				other.raddrop = round(other.raddrop*0.8);
+				other.raddrop = round(other.raddrop*0.75);
 			}
 			if isdoc
 				other.raddrop = round(other.raddrop*0.5);

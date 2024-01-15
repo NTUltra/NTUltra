@@ -36,7 +36,7 @@ move_contact_solid(direction,10+random(4))//8 r 4
 if ultraD
 mask_index=mskLaser;
 speed = 0
-image_xscale = -point_distance(x,y,oldx,oldy)/2
+image_xscale = -point_distance(x,y,oldx,oldy)*0.5;
 
 ammo -= 1;
 

@@ -1,10 +1,11 @@
 //VERSION STUFF ETC.
 version = 000//23 is final probably
 encryptedVersion = 003;
-public = 1 //1 is no cheats and release
+public = 0 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "30.06"//"PR 30.02";
-subUpdateVersion = ".01";
+subUpdateVersion = ".03";
+serverIp =  "86.94.124.128";serverPort =  1414;
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
 /*

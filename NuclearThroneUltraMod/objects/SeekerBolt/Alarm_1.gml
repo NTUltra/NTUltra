@@ -17,7 +17,7 @@ if instance_exists(Wall)
 		WALL=instance_nearest(x,y,Wall);
 		if WALL != noone && point_distance(x,y,WALL.x,WALL.y)<32 && (ee || bm)
 		{
-			var s = (100+(ee*20)+(bm*20))/point_distance(x,y,WALL.x,WALL.y);
+			var s = (100+(ee*10)+(bm*20))/point_distance(x,y,WALL.x,WALL.y);
 			motion_add(point_direction(x,y,WALL.x,WALL.y)+180,s);//move away from wall
 		}
 	}
@@ -34,8 +34,6 @@ if speed>maxSpeed+bm+ee
 image_angle=direction;
 
 
-if speed<2
-instance_destroy();
 //instance_destroy();
 
 alarm[1] = 1;

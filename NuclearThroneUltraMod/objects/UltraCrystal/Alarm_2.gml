@@ -1,7 +1,7 @@
 ///@description Fire
 if ammo > 0
 {
-	var gunangleOffset = 4 * (maxAmmo - ammo)
+	var gunangleOffset = 3 * (maxAmmo - ammo)
 	with instance_create(x,y,EnemyLaser)
 	{
 		image_angle = other.gunangle+gunangleOffset+random(6)-3

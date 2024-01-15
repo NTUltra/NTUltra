@@ -175,7 +175,10 @@ function scrDrawBloom() {
 
 	with HorrorBeam
 	draw_sprite_ext(sprite_index,-1,x,y,image_xscale,image_yscale*2,image_angle,c_white,ba)
-
+	with HorrorBigBall
+	draw_sprite_ext(sprite_index,-1,x,y,image_xscale + 0.2,image_yscale + 0.2,image_angle,c_white,ba)
+	with BecomeHorrorBigBall
+	draw_sprite_ext(sprite_index,-1,x,y,image_xscale + 0.2,image_yscale + 0.2,image_angle,c_white,ba)
 	with FlakBullet
 	draw_sprite_ext(sprite_index,1,x,y,2,2,image_angle,c_white,ba)
 	with ExplosiveFlakBullet

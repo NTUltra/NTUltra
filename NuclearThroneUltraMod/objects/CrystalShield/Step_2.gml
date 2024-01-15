@@ -14,5 +14,9 @@ if (sprite_index != spr_disappear || image_number < 5)
 			alarm[3] = max(alarm[3],2);
 			meleeimmunity = max(meleeimmunity,2);
 		}
+		else if altUltra && ultra_got[6]
+		{
+			meleeimmunity = max(meleeimmunity,5);
+		}
 	}
 }

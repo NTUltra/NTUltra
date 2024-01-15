@@ -1,5 +1,10 @@
 function scrDrop(itemdrop, weapondrop) {
 	var pickup = noone;
+	if instance_exists(DropReducer)
+	{
+		var reductions = max(0,1 - (instance_number(DropReducer) * 0.2));
+		itemdrop *= reductions;
+	}
 	if weapondrop > 0
 	{
 		if instance_number(WepPickup) > 20
@@ -26,6 +31,10 @@ function scrDrop(itemdrop, weapondrop) {
 		{
 			mh = Player.maxarmour
 			h = Player.armour;
+		}
+		if instance_exists(WantHealth)
+		{
+			mh += (instance_number(WantHealth) * 0.1);
 		}
 		var rebelBuff = 0;
 		if Player.ultra_got[39] && !Player.altUltra
@@ -224,7 +233,9 @@ function scrDrop(itemdrop, weapondrop) {
 	{//0.3 for each ally Rebel has REBEL ULTRA C?
 		//Nerves of Steel
 		if (instance_exists(Player) && Player.skill_got[41] && Player.armour < Player.maxarmour && random(100) < (2.75 - Player.armour) ) {
-			pickup = instance_create(x,y,HPPickup) 
+			pickup = instance_create(x,y,HPPickup)
+			with WantHealth
+				instance_destroy();
 			with pickup {
 				isArmour = true;
 				sprite_index = sprArmourPickup;
@@ -246,7 +257,9 @@ function scrDrop(itemdrop, weapondrop) {
 		}
 		else if random(mh) > h and random(3) < 2 and !scrIsCrown(2) and Player.canHeal and random(1) <= canHealth
 		{
-			pickup = instance_create(x,y,HPPickup) 
+			pickup = instance_create(x,y,HPPickup)
+			with WantHealth
+				instance_destroy();
 			with pickup {
 				if (rabbit > 0 && random(1) < rabbit+0.1)
 				{
@@ -266,7 +279,9 @@ function scrDrop(itemdrop, weapondrop) {
 			{
 				if random(mh) > h and random(3) < 2 and !scrIsCrown(2) and Player.canHeal and random(1) <= canHealth
 				{
-					pickup = instance_create(x,y,HPPickup) 
+					pickup = instance_create(x,y,HPPickup)
+					with WantHealth
+						instance_destroy();
 					with pickup {
 						if (rabbit > 0 && random(1) < rabbit+0.1)
 						{
@@ -283,6 +298,15 @@ function scrDrop(itemdrop, weapondrop) {
 			}
 			else
 			{
+				if Player.canHeal && Player.my_health < Player.maxhealth
+				{
+					instance_create(x,y,WantHealth);
+				}
+				else
+				{
+					with WantHealth
+						instance_destroy();
+				}
 				pickup = instance_create(x,y,AmmoPickup) 
 				with pickup {
 					if (rabbit > 0 && random(1) < rabbit+0.1)

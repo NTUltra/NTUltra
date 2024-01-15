@@ -524,7 +524,13 @@ function scrPowers(raceOverwrite = -1) {
 			}
 			else
 			{
-
+				if !instance_exists(HorrorSuckDelay)
+					instance_create(x,y,HorrorSuckDelay);
+				else
+					with HorrorSuckDelay
+					{
+						alarm[0] = suckDelay;	
+					}
 				//First rad for game feel
 				if  UberCont.normalGameSpeed == 60
 					rad -= 0.5;
@@ -1053,7 +1059,7 @@ function scrPowers(raceOverwrite = -1) {
 		var d = 99999;
 		var mx = UberCont.mouse__x;
 		var my = UberCont.mouse__y;
-		if !scrIsCrown(25)
+		//if !scrIsCrown(25)
 			with Floor
 			{
 				if object_index != FloorExplo
@@ -1193,7 +1199,7 @@ function scrPowers(raceOverwrite = -1) {
 		{
 			var mx = UberCont.mouse__x;
 			var my = UberCont.mouse__y;
-			if !scrIsCrown(25)
+			//if !scrIsCrown(25)
 			if place_meeting(x,y,Floor)
 			{
 				var triedFloors = [];
@@ -2524,7 +2530,9 @@ function scrPowers(raceOverwrite = -1) {
 					horrordelay = !horrordelay;
 				}
 				else
+				{
 					cash --;
+				}
 				if !horrordelay
 				{
 					if horrorcharge=origincharge
@@ -2604,6 +2612,13 @@ function scrPowers(raceOverwrite = -1) {
 		}
 		else if rad>0
 		{
+			if !instance_exists(HorrorSuckDelay)
+				instance_create(x,y,HorrorSuckDelay);
+			else
+				with HorrorSuckDelay
+				{
+					alarm[0] = suckDelay;	
+				}
 
 		if horrorcharge=origincharge
 			snd_play_2d(sndHorrorBeam);
@@ -2611,9 +2626,9 @@ function scrPowers(raceOverwrite = -1) {
 		if horrorcharge<maxcharge
 		{
 			if  UberCont.normalGameSpeed == 60
-				horrorcharge += 0.1+(skill_got[5]*0.15);
+				horrorcharge += 0.1+(skill_got[5]*0.1);
 			else
-				horrorcharge += 0.2+(skill_got[5]*0.3);
+				horrorcharge += 0.2+(skill_got[5]*0.2);
 		}
 		if skill_got[5]
 		{
@@ -3053,6 +3068,7 @@ function scrPowers(raceOverwrite = -1) {
 			{
 			speed /= 4
 			scrFire()
+			scrFire()
 			clicked = 0
 			}
 			if wep_auto[wep] = 1
@@ -3323,7 +3339,33 @@ function scrPowers(raceOverwrite = -1) {
 	else */if race==21 
 	{
 	audio_stop_sound(sndHorrorLoopTB);
-	audio_stop_sound(sndHorrorLoop);
+	audio_stop_sound(sndHorrorLoop); 
+	if horrorcharge > origincharge*2
+	{
+		if horrorcharge < 10
+		{
+			snd_play(sndHorrorBallRelease);	
+		}
+		else
+		{
+			snd_play(sndHorrorBallReleaseUpg);	
+		}
+		var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+		BackCont.viewx2 += lengthdir_x(horrorcharge*0.75,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(horrorcharge*0.75,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += horrorcharge
+		with instance_create(x,y,BecomeHorrorBigBall)
+		{
+			team = other.team;
+			//Max is about 20
+			myPower = other.horrorcharge;
+			image_xscale = (0.1 + clamp(myPower*0.025,0,0.75))*2;
+			image_yscale = image_xscale;
+			direction = aimDirection;
+			speed = 1;
+			image_angle = direction;
+		}
+	}
 	horrorcharge=origincharge;
 		if ((audio_is_playing(sndHorrorCashFlow) || audio_is_playing(sndHorrorCashFlowTB)) && ultra_got[0] && altUltra)
 		{

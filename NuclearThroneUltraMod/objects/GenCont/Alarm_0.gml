@@ -15,7 +15,20 @@ if !position_meeting(x,y+32,Floor) instance_create(x,y+32,Wall)
 if !position_meeting(x+16,y+32,Floor) instance_create(x+16,y+32,Wall)
 if !position_meeting(x+32,y+32,Floor) instance_create(x+32,y+32,Wall)
 }
-
+if scrIsCrown(25)
+{	
+	with FloorExplo
+	{
+		if !place_meeting(x-16,y,Floor) && !place_meeting(x-16,y,WallHitMe)
+			instance_create(x-16,y,WallHitMe);
+		if !place_meeting(x+16,y,Floor) && !place_meeting(x+16,y,WallHitMe)
+			instance_create(x+16,y,WallHitMe);
+		if !place_meeting(x,y-16,Floor) && !place_meeting(x,y-16,WallHitMe)
+			instance_create(x,y-16,WallHitMe);
+		if !place_meeting(x,y+16,Floor) && !place_meeting(x,y+16,WallHitMe)
+			instance_create(x,y+16,WallHitMe);
+	}
+}
 /*with Wall
 {
 if place_meeting(x,y,Floor)

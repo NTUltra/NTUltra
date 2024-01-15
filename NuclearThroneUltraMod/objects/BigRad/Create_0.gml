@@ -28,11 +28,11 @@ if instance_exists(Player){
 	if Player.ultra_got[97] && Player.altUltra
 	{
 		snd_play(sndSwarm,0.1,true);
-		repeat(2)
+		repeat(8)
 		with instance_create(x,y,SwarmBolt)
 		{
 			team = 2;
-			motion_add(random(360),2);
+			direction = random(360);
 		}
 	}
 

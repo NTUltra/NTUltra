@@ -1825,10 +1825,10 @@ function scrWeapons() {
 	wep_name[165] = "EXPLOSIVE CROSSBOW"
 	wep_type[165] = 3
 	wep_auto[165] = 0
-	wep_load[165] = 25
+	wep_load[165] = 29
 	wep_cost[165] = 2
 	wep_sprt[165] = sprExplosiveBow
-	wep_area[165] = 6
+	wep_area[165] = 5
 	wep_text[165] = "the year of the bow"
 	wep_swap[165] = sndSwapBow
 	wep_rad[165] = 0;
@@ -2229,26 +2229,26 @@ function scrWeapons() {
 	wep_swap[200] = sndSwapHammer
 	wep_rad[200] = 0;
 
-	wep_name[201] = "SUPERHOT REVOLVER"
+	wep_name[201] = "MICRO PLASMA"
 	wep_type[201] = 1
-	wep_auto[201] = 0
-	wep_load[201] = 10
-	wep_cost[201] = 3
-	wep_sprt[201] = sprSuperHotRevolver
-	wep_area[201] = -2
-	wep_text[201] = "try standing still with this gun"
-	wep_swap[201] = sndSwapSuperHot
+	wep_auto[201] = 1
+	wep_load[201] = 14
+	wep_cost[201] = 1.5
+	wep_sprt[201] = sprIonCannon
+	wep_area[201] = 0
+	wep_text[201] = "hitscan plasma"
+	wep_swap[201] = sndSwapEnergy
 	wep_rad[201] = 0;
 
-	wep_name[202] = "SUPERHOT ASSAULT RIFLE"
-	wep_type[202] = 1
+	wep_name[202] = "KRAKEN TAIL"
+	wep_type[202] = 4
 	wep_auto[202] = 0
-	wep_load[202] = 16//10
-	wep_cost[202] = 8//6
-	wep_sprt[202] = sprSuperHotAssaultRifle
-	wep_area[202] = -2;//11//12
-	wep_text[202] = "SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!#SUPER! HOT!"
-	wep_swap[202] = sndSwapSuperHot
+	wep_load[202] = 18//10
+	wep_cost[202] = 1.5
+	wep_sprt[202] = sprKrakenPistol
+	wep_area[202] = 0
+	wep_text[202] = "wrong direction kraken gun"
+	wep_swap[202] = sndSwapDragon
 	wep_rad[202] = 0;
 
 	wep_name[203] = "FLAME WAVE GUN"
@@ -3090,7 +3090,7 @@ function scrWeapons() {
 	wep_name[279] = "GOLDEN EXPLOSIVE CROSSBOW"
 	wep_type[279] = 3
 	wep_auto[279] = 0
-	wep_load[279] = 23
+	wep_load[279] = 28
 	wep_cost[279] = 2
 	wep_sprt[279] = sprGoldenExplosiveBow
 	wep_area[279] = 20
@@ -5301,7 +5301,7 @@ function scrWeapons() {
 	wep_name[478] = "ULTRA LOLLIPOP"
 	wep_type[478] = 0
 	wep_auto[478] = 0
-	wep_load[478] = 32
+	wep_load[478] = 31
 	wep_cost[478] = 0
 	wep_sprt[478] = sprUltraLollipop
 	wep_area[478] = 27
@@ -7384,7 +7384,7 @@ function scrWeapons() {
 	wep_cost[667] = 0.5
 	wep_sprt[667] = sprMicroSMG
 	wep_area[667] = 3
-	wep_text[667] = "hitscan"
+	wep_text[667] = "rapid fire"
 	wep_swap[667] = sndSwapPistol
 	wep_rad[667] = 0;
 	
@@ -7732,10 +7732,10 @@ function scrWeapons() {
 	wep_name[699] = "HAPPY BOOM STICK"
 	wep_type[699] = 3
 	wep_auto[699] = 0
-	wep_load[699] = 36
+	wep_load[699] = 34
 	wep_cost[699] = 3
 	wep_sprt[699] = sprBoomStick
-	wep_area[699] = 14
+	wep_area[699] = 15
 	wep_text[699] = "Happy cannonball"
 	wep_swap[699] = sndSwapBow
 	wep_rad[699] = 0;
@@ -7772,6 +7772,83 @@ function scrWeapons() {
 	wep_text[702] = "hit your shots"
 	wep_swap[702] = sndSwapShotgun
 	wep_rad[702] = 0;
+	
+	wep_name[703] = "MICRO MACHINEGUN"
+	wep_type[703] = 1
+	wep_auto[703] = 1
+	wep_load[703] = 4
+	wep_cost[703] = 0.75
+	wep_sprt[703] = sprMicroSMG
+	wep_area[703] = 0
+	wep_text[703] = "hitscan"
+	wep_swap[703] = sndSwapPistol
+	wep_rad[703] = 0;
+	
+	wep_name[704] = "ROCKET CLAP"
+	wep_type[704] = 4
+	wep_auto[704] = 0
+	wep_load[704] = 24
+	wep_cost[704] = 2
+	wep_sprt[704] = sprMicroSMG
+	wep_area[704] = 0
+	wep_text[704] = "Clap the rockets"
+	wep_swap[704] = sndSwapExplosive
+	wep_rad[704] = 0;
+	
+	wep_name[705] = "GRENADE STRIKE LAUNCHER"
+	wep_type[705] = 4
+	wep_auto[705] = 0
+	wep_load[705] = 22
+	wep_cost[705] = 1
+	wep_sprt[705] = sprMicroSMG
+	wep_area[705] = 0
+	wep_text[705] = "be carefulL with that explosion line"
+	wep_swap[705] = sndSwapExplosive
+	wep_rad[705] = 0;
+	
+	wep_name[706] = "DENSE GUN"
+	wep_type[706] = 1
+	wep_auto[706] = 0
+	wep_load[706] = 24
+	wep_cost[706] = 10
+	wep_sprt[706] = sprHeavyRevolver
+	wep_area[706] = 0
+	wep_text[706] = "a dense amount of bullets"
+	wep_swap[706] = sndSwapPistol
+	wep_rad[706] = 0;
+	
+	wep_name[707] = "SMALL MISSILE BOMB"
+	wep_type[707] = 4
+	wep_auto[707] = 0
+	wep_load[707] = 30
+	wep_cost[707] = 2
+	wep_sprt[707] = sprMissileBombThrower
+	wep_area[707] = 1
+	wep_text[707] = "carepackage"
+	wep_swap[707] = sndSwapExplosive
+	wep_rad[707] = 0;
+	
+	wep_name[708] = "DOUBLE DISC GUN"
+	wep_type[708] = 3
+	wep_auto[708] = 1
+	wep_load[708] = 12
+	wep_cost[708] = 2
+	wep_sprt[708] = sprDiscGun
+	wep_area[708] = 4
+	wep_text[708] = "D.D.G."
+	wep_swap[708] = sndSwapBow
+	wep_rad[708] = 0;
+	
+	wep_name[709] = "TOXIC LASER RIFLE"
+	wep_type[709] = 5
+	wep_auto[709] = 1
+	wep_load[709] = 8
+	wep_cost[709] = 1
+	wep_sprt[709] = sprLaserRifle
+	wep_area[709] = 4
+	wep_text[709] = ""
+	wep_swap[709] = sndSwapEnergy
+	wep_rad[709] = 0;
 
 	maxwep = array_length(wep_name)-1;
 
@@ -7823,55 +7900,15 @@ function scrWeapons() {
 	
 	highest_wep_tier = 0;
 	// var highestTierWeapon = 0;
-	
 	for (var i = 0; i < maxwep+1; i++) {
 	    // code here
 		if wep_area[i] > highest_wep_tier
 		{
 			highest_wep_tier = wep_area[i];
-			// highestTierWeapon = i;
+			 //highestTierWeapon = i;
 		}
 	}
 	
 	//Debug how many weapons there are of each tier
-	/*
-	var amountPerTier = [];
-	var amountTypes = [];
-	var z = 0;
-	repeat(highest_wep_tier+1)
-	{
-		amountPerTier[z] = 0;
-		var w = 0;
-		repeat(6)
-		{
-			amountTypes[z][w] = 0;
-			w ++;
-		}
-		z ++;
-	}
-	for (var i = 0; i < maxwep+1; i++) {
-		if wep_area[i] >= 0
-		{
-			amountPerTier[wep_area[i]] += 1;
-			amountTypes[wep_area[i]][wep_type[i]] += 1;
-		}
-	}
-	debug(amountPerTier);
-	z = 0;
-	debug("__________________________________");
-	repeat(array_length(amountPerTier))
-	{
-		debug(string(z) + " : " + string(amountPerTier[z]));
-		var w= 0;
-		repeat(6)
-		{
-			//debug("t"+string(w)+" : " + string(amountTypes[z][w]));//Log amount of types per tier
-			w++;
-		}
-		z++;
-	}
-	debug("__________________________________");
-	//debug("The highest tier weapon is: ",highestTierWeapon);
-	//*/
-	
+	// scrExportWeapons();
 }

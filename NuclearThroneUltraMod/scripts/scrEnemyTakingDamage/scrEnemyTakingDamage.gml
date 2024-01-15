@@ -144,7 +144,7 @@ function scrEnemyTakingDamage(){
 				if (my_health < 0) {
 					var part = -0.8;
 					if Player.race == 25 //Doctor
-						part -= 0.3;
+						part -= 0.03;
 					Player.excessDamageDeal += my_health * part;
 				}
 			}

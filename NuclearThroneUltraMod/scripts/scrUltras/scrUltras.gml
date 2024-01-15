@@ -49,7 +49,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		if altOverride || (instance_exists(Player) && Player.race == 2 && (Player.altUltra || Player.unlockAlternativeUltras || ((Player.curse || Player.bcurse) && instance_exists(UltraIcon))))
 		{
 			ultra_name[6] = "CURSED"
-		    ultra_text[6] = "<w>TELEPORT<w> AFTER <p>SHIELDING<p>#<p>SHIELDING<p> FIRES <g>LASERS<g>"
+		    ultra_text[6] = "<w>TELEPORT<w> AFTER <p>SHIELDING<p>#<p>SHIELDING<p> FIRES <g>LASERS<g>##<aq>IMMUNE<aq> TO ENEMY CONTACT DAMAGE#WHILE <p>SHIELDED<p>"
 		    ultra_tips[6] = "cursed crystal"
 		}
     
@@ -375,7 +375,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	}
 
 	ultra_name[52] = "FLUFFY"//this is actually insane with impact wrists
-	ultra_text[52] = "<w>CORPSES<w> FLOAT#CORPSE COLLISION#CAN CAUSES <r>BLOOD<r> EXPLOSIONS#EVERYTHING THAT DIES#TURNS INTO A <pi>SHEEP<pi>"
+	ultra_text[52] = "<w>CORPSES<w> FLOAT#CORPSE COLLISION#CAN CAUSE <r>BLOOD<r> EXPLOSIONS#EVERYTHING THAT DIES#TURNS INTO A <pi>SHEEP<pi>"
 	ultra_tips[52] = "cannibalism"//morph gun creates two sheep cause logic (no balance)
 
 	    //PANDA 
@@ -643,7 +643,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		if altOverride || (instance_exists(Player) && (Player.race == 22 && (Player.altUltra || Player.unlockAlternativeUltras || (scrHasAnEmptyLife() && instance_exists(UltraIcon)))))
 		{
 			ultra_name[87] = "IMMORTAL POLICE"
-		    ultra_text[87] = "REPLACE PORTAL STRIKE WITH <g>REVIVE<g>#<g>REVIVE<g> USES <b>PORTAL STRIKE<b> AMMO#LOWER MAXIMUM <b>PORTAL STRIKE<b> AMMO BY 1#THRONE BUTT <g>REVIVES<g> YOU AT FULL <r>HP<r>#INSTEAD OF 1<r>HP<r>#PICKING UP PORTAL STRIKE AMMO#TRIGGERS BLAST ARMOUR"
+		    ultra_text[87] = "REPLACE PORTAL STRIKE WITH <g>REVIVE<g>#<g>REVIVE<g> USES <b>PORTAL STRIKE<b> AMMO#LOWER MAXIMUM <b>PORTAL STRIKE<b> AMMO BY 1#THRONE BUTT <g>REVIVES<g> YOU AT HALF <r>HP<r>#INSTEAD OF 1<r>HP<r>#PICKING UP PORTAL STRIKE AMMO#TRIGGERS BLAST ARMOUR"
 		    ultra_tips[87] = "rogue freak"
 		}
     

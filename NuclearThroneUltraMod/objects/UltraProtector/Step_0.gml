@@ -12,6 +12,8 @@ speed = maxSpeed
 if myGuy != noone && instance_exists(myGuy) {
 	gunangle = point_direction(x, y, myGuy.x, myGuy.y);
 	var msk = myGuy.mask_index;
+	if !sprite_exists(msk)
+		msk = myGuy.sprite_index;
 	var w = myGuy.bbox_right - myGuy.bbox_left;
 	var h = myGuy.bbox_bottom - myGuy.bbox_top;
 	shieldX = myGuy.x - sprite_get_xoffset(msk)

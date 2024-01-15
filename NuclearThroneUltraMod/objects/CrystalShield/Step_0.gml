@@ -64,8 +64,8 @@ image_index = 0
 		}
 	
 		var dir = 0;
-		var dirStep = 90;
-		repeat(4)
+		var dirStep = 45;
+		repeat(8)
 		{
 			with instance_create(x,y,Laser)
 			{
@@ -73,7 +73,7 @@ image_index = 0
 				team = other.team
 				event_perform(ev_alarm,0)
 			}
-		dir += dirStep;
+			dir += dirStep;
 		}
 	}
 }
@@ -92,6 +92,7 @@ if KeyCont.key_spec[p] = 3
 				x = mouse_x;
 				y = mouse_y;
 				snd_play_2d(sndCrystalTeleport);
+				scrForcePosition60fps();
 			}
 		}
 		if (canTeleport)
@@ -100,8 +101,8 @@ if KeyCont.key_spec[p] = 3
 			y = mouse_y;
 		}
 		var dir = 0;
-		var dirStep = 90;
-		repeat(4)
+		var dirStep = 45;
+		repeat(8)
 		{
 			with instance_create(x,y,Laser)
 			{
@@ -109,7 +110,7 @@ if KeyCont.key_spec[p] = 3
 				team = other.team
 				event_perform(ev_alarm,0)
 			}
-		dir += dirStep;
+			dir += dirStep;
 		}
 	}
 }}

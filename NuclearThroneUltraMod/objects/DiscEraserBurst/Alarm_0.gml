@@ -2,7 +2,7 @@ ammo -= projectileAmount
 
 alarm[0] = time
 
-
+BackCont.shake += 1
 if instance_exists(creator)
 {
 var xx;

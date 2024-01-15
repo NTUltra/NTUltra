@@ -80,6 +80,10 @@ if my_health > 0
 				maxhealth += 4;
 			}
 			scrSwapWeps();
+			with ChargeWeapons
+			{
+				instance_destroy();	
+			}
 			snd_play(choose(snd_lowa,snd_lowh));
 		}
 		with instance_create(x,y,Portal)

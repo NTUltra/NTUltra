@@ -2,6 +2,8 @@ if (UberCont.mouse__x < x+16 and UberCont.mouse__y < y+16 and UberCont.mouse__x 
 {
 	with SkillIcon
 		selected = false;
+	with UltraIcon
+		selected = false;
 		
 	selected = true;
 	with UberCont

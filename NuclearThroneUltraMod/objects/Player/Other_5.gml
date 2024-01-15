@@ -339,7 +339,7 @@ if looping && area != 104
 		scrUnlockCSkin(14,"FOR LOOPING BY ONLY THROWING WEAPONS#AND NOT USING THEM",0)
 
 	looping=false;
-	    UberCont.ctot_loop[race] += 1
+	UberCont.ctot_loop[race] += 1
 	    loops += 1
 	    if (ultra_got[73] == 1)
 		{

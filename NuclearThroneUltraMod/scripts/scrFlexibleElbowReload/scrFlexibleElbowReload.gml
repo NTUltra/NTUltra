@@ -4,19 +4,14 @@
 function scrFlexibleElbowReload(wp){
 	if skill_got[34]
 	{
-		var loader = wep_load[wep];
+		var loader = wep_load[wp];
 		var slapped = noone;
 		while (loader > 0)
 		{
 			if (random(80) < loader)
 			{
-				if slapped != noone
-				{
-					with slapped {
-						queue ++;
-					}
-				}
-				else
+				
+				if slapped == noone || !instance_exists(slapped)
 				{
 					var activationList = ds_list_create();
 					do {
@@ -40,6 +35,12 @@ function scrFlexibleElbowReload(wp){
 						instance_activate_object(activationList[| i]);
 					}
 					ds_list_destroy(activationList);
+				}
+				else
+				{
+					with slapped {
+						queue ++;
+					}
 				}
 			}
 			loader -= 80;

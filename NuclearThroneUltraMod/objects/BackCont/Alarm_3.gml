@@ -12,7 +12,12 @@ with enemy
 //retail is 140
 alarm[3] = 30;
 
-if totalEnemyHealth<=142&&!instance_exists(GenCont)&&!instance_exists(LevCont)&&instance_exists(enemy)&&!instance_exists(becomenemy)&&!instance_exists(WantBoss)
+var horrorBreak = 130 * min(2,1 + (loops*0.1));
+if scrIsHardMode()
+{
+	horrorBreak *= 1.15;
+}
+if totalEnemyHealth<=horrorBreak&&!instance_exists(GenCont)&&!instance_exists(LevCont)&&instance_exists(enemy)&&!instance_exists(becomenemy)&&!instance_exists(WantBoss)
 {
 with enemy
 {	

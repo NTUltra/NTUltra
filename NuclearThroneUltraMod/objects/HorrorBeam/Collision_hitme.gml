@@ -1,14 +1,13 @@
 if other.team != team and other.my_health > 0
 {
 	ammo=0;
-	dropRad = false;
 	if other.sprite_index != other.spr_hurt
 	{
 		with other
 		{
 			raddrop+=other.rad;
 			other.rad=0;
-			my_health -= clamp(floor(other.charge*0.65),1,12);
+			my_health -= clamp(floor(other.charge*0.25),1,4);
 			sprite_index = spr_hurt
 			image_index = 0
 			motion_add(other.image_angle,2+other.charge)

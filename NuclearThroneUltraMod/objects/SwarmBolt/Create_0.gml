@@ -8,9 +8,12 @@ target=0;
 
 hits=choose(1,2);
 mxSpd = 4;
+eagleEyed = 0;
+boltMarrowed = 0;
 if instance_exists(Player){
 if Player.skill_got[21] = 1//bolt marrow
 {
+	boltMarrowed = 1;
 	hits = 2;
 	mxSpd +=2;
 	if Player.race == 25
@@ -21,11 +24,12 @@ if Player.skill_got[21] = 1//bolt marrow
 }
 if Player.skill_got[19]//eagle eyes
 {
+	eagleEyed = 1;
 mxSpd+=1;
 friction+=0.05;
 }
 
-alarm[0]=6
+alarm[0] = 5
 }
 alarm[1] = 120;
 alarm[11] = 1;

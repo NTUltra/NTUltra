@@ -10,7 +10,6 @@ if scrIsGamemode(9) //CASUAL MODE
 if scrIsHardMode() //HARD MODE
 	alarm[0] -= 20;
 
-//RUSH CROWN
 if instance_exists(Player){
 	
 	if Player.skill_got[3]
@@ -21,6 +20,7 @@ if instance_exists(Player){
 	{
 	sprite_index=sprRadMony;
 	}
+	//RUSH CROWN
 	if scrIsCrown(4){ alarm[0] /= 3}
 
 	if Player.race = 15{ alarm[0] *= 0.7}//atom
@@ -42,7 +42,8 @@ if instance_exists(Player){
 		{
 			team = 2;
 			hits = 1;
-			motion_add(random(360),2);
+			alarm[0] = 3
+			direction = random(360);
 		}
 	}
 }

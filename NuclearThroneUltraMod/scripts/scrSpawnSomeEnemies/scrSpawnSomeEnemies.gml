@@ -68,6 +68,10 @@ function scrSpawnSomeEnemies(){
 					}
 				}
 			}
+			else if ran < 24
+			{
+				instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraProtector);
+			}
 		}
 	}
 }

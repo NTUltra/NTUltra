@@ -1,5 +1,7 @@
 /// @description Draw event
 speed = clamp(speed,1.5,6+size);
+if dmg > 9999
+	exit;
 var decimals = frac(dmg);
 var dmgs = string(floor(dmg));
 var useSize = size;

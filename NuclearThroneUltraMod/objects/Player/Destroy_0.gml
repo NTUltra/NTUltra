@@ -215,7 +215,7 @@ if wep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 
 if bwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 {
-	with instance_create(x,y,WepPickup)
+	with instance_create(x,y,WepPickupForOneWepOnly)
 	{
 		scrWeapons()
 		wep = other.bwep
@@ -238,7 +238,7 @@ if bwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 }
 if cwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 {
-	with instance_create(x,y,WepPickup)
+	with instance_create(x,y,WepPickupForOneWepOnly)
 	{
 		scrWeapons()
 		wep = other.cwep

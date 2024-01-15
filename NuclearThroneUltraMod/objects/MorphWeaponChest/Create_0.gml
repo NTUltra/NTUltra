@@ -1,6 +1,6 @@
 scrWeapons()
 SetSeedWeapon();
-wep = scrDecideMorphWep()
+wep = scrDecideToxicWep()
 mySize = 1;
 team = 0;
 SetSeed();

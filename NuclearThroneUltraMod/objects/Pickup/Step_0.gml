@@ -1,3 +1,5 @@
+if instance_exists(HorrorSuckDelay)
+	exit;
 var extraRange = 38;
 if instance_exists(Player) && (!cursed) {
 	var sped = 1;

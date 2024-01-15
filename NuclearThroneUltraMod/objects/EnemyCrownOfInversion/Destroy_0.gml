@@ -59,7 +59,9 @@ with Floor
 		else
 			sprite_index = sprFloor129;
 		if pExist && point_distance(x, y, Player.x, Player.y) > dis
-			scrPopEnemies();
+		{
+			scrSpawnSomeEnemies();
+		}
 	}
 }
 with MusCont

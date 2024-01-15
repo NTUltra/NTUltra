@@ -25,7 +25,7 @@ if instance_exists(Player)
 		alarm[3] = 30;
 	if Player.bskin == 2 || Player.bskin == 5
 	{
-		if Player.altUltra
+		if Player.altUltra || Player.bskin == 5
 		{
 			sprite_index = sprAllyGAppear;
 			spr_idle = sprAllyGAppear

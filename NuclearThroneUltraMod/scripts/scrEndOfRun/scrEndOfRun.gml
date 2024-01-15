@@ -15,7 +15,11 @@ function scrEndOfRun(){
 	}
 	with WeaponMod
 	{
-		instance_destroy(id,false);	
+		instance_destroy(id,false);
+	}
+	with WantHealth
+	{
+		instance_destroy(id,false);
 	}
 	with FPSHACK
 		instance_destroy();

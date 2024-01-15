@@ -166,7 +166,7 @@ if race=10//rebel hoody
 {
     if (bskin == 1 || bskin == 4) && (area == 5 || area == 108)//cold
     {
-		if altUltra
+		if altUltra || bskin == 4
 		{
 			spr_idle=sprMutant10HIdle;
 		    spr_walk=sprMutant10HWalk;
@@ -181,10 +181,10 @@ if race=10//rebel hoody
 		    spr_dead=sprMutant10DDead;
 		}
     }
-    else if bskin=1
+    else if bskin == 1 || bskin == 4
     {
 	    
-		if altUltra
+		if altUltra || bskin == 4
 		{
 			spr_idle=sprMutant10FIdle;
 		    spr_walk=sprMutant10FWalk;

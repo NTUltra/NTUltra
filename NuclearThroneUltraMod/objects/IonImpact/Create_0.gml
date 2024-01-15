@@ -1,4 +1,4 @@
-image_speed = 0.4
+image_speed = 0.5
 
 BackCont.shake += 4
 

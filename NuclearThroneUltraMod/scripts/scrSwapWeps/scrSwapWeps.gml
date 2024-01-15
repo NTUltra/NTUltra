@@ -150,18 +150,6 @@ function scrSwapWeps() {
 
 	scrWeaponHold();
 
-	if bwep=201||bwep=202||cwep=201||cwep=202//SUPERHOT reset speeds
-	{
-	with projectile
-	{
-	if typ!=0&&object_index!=Flame&&object_index!=TrapFire&&object_index!=HotDrakeFlameCannon&&object_index!=HotDrakeSplitBall&&object_index!=Bolt&&object_index!=Splinter&&object_index!=UltraBolt
-	{
-	    if speed<8
-	    speed=8;
-	}
-	}
-	}
-
 	drawempty = 30
 
 

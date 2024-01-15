@@ -31,7 +31,7 @@ do {
 	}
 	x = Player.x+lengthdir_x(96+random(128),ang);
 	y = Player.y+lengthdir_y(96+random(128),ang);
-	dir = instance_nearest(x,y,Floor)
+	dir = instance_nearest_not_one_of_these(x,y,Floor,[FloorExplo]);
 	if dir != noone {
 		var o = 16;
 		if dir.object_index == FloorExplo {

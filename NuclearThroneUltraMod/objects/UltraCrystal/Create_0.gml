@@ -12,7 +12,7 @@ spr_fire = sprUltraLaserCrystalFire
 
 //behavior
 droprate += 5;
-tellTime = 21;
+tellTime = 23;
 actTime -= 1;
 maxSpeed = 2.5;
 maxAmmo = 6;

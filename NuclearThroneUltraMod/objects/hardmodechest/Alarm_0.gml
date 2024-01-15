@@ -21,10 +21,6 @@ else
 					event_perform(ev_collision,Player)
 				}
 			}
-			with instance_create(x,y,HealthChest)
-			{
-				event_perform(ev_collision,Player)
-			}
 		}
 	}
 	alarm[1] = 30;

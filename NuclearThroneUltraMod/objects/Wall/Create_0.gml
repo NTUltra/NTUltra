@@ -7,10 +7,22 @@ if instance_exists(Player)
 	if scrIsCrown(25)
 	{	
 		instance_destroy(id,false);
-		if !place_meeting(x,y,FloorExplo)
+		if !place_meeting(x,y,Floor)
+		{
 			instance_create(x,y,FloorExplo);
+			/*
+			if !place_meeting(x-16,y,Floor) && !place_meeting(x-16,y,WallHitMe)
+				instance_create(x-16,y,WallHitMe);
+			if !place_meeting(x+16,y,Floor) && !place_meeting(x+16,y,WallHitMe)
+				instance_create(x+16,y,WallHitMe);
+			if !place_meeting(x,y-16,Floor) && !place_meeting(x,y-16,WallHitMe)
+				instance_create(x,y-16,WallHitMe);
+			if !place_meeting(x,y+16,Floor) && !place_meeting(x,y+16,WallHitMe)
+				instance_create(x,y+16,WallHitMe);
+			*/
+		}
 		exit;
-	}	
+	}
 }
 else area = BackCont.area
 if area==104

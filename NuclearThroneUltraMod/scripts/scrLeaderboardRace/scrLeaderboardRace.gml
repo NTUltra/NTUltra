@@ -59,7 +59,7 @@ function scrLeaderboardRace(race,bskin,altUltra,area){
 	case 9:
 	if altUltra
 	{
-		return sprMutant9DIdle;
+		return sprMutant9EIdle;
 	}
 	return sprMutant9BIdle;
 	break;

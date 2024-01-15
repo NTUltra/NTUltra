@@ -2,7 +2,7 @@ raddrop = 80
 maxhealth = 820
 scrBossHealthBuff();
 loops = GetPlayerLoops();
-scrIsHardMode()
+if scrIsHardMode()
 	loops += 1;
 if loops > 0
 {

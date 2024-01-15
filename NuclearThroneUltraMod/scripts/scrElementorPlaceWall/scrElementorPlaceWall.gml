@@ -36,7 +36,7 @@ function scrElementorPlaceWall(mx, my){
 				}
 			}
 		}
-		if (place_meeting(xx,yy,Floor) || scrIsCrown(25)) &&//!place_meeting(xx,yy,Wall)&&
+		if (place_meeting(xx,yy,Floor) /*|| scrIsCrown(25)*/) &&//!place_meeting(xx,yy,Wall)&&
 		!place_meeting(xx,yy,ElementorWall)
 		{
 			BackCont.shake += 3;

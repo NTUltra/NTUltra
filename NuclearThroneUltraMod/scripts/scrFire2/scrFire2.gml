@@ -251,38 +251,61 @@ function scrFire2(hasTailNow) {
 	break;
 
 
-	//SUPERHOT REVOLVER
+	//MICRO PLASMA
 	case 201:
 
-	snd_play_fire(sndHeavyRevolver)
-
-	with instance_create(x,y,Shell)
-	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
-
-	with instance_create(x,y,HeavyBullet)
-	{motion_add(aimDirection+(random(10)-5)*other.accuracy,16)
-	image_angle = direction
-	team = other.team}
+	snd_play(sndMicroLauncher,0.03,true);
+	with instance_create(x,y,MicroPlasma)
+	{
+		direction = aimDirection+(random(6)-3)*other.accuracy;
+		image_angle = direction;
+		team = other.team
+		scrGiveProjectileStats();
+		event_perform(ev_alarm,0);
+	}
 
 	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
-	BackCont.shake += 7
-	wkick = 6
+	BackCont.shake += 2
+	wkick = 5
 
 	break;
 
 
-	//SUPERHOT ASSAULT RIFLE
+	//KRAKEN TAIL
 	case 202:
 
-	with instance_create(x,y,HeavyBurst)
-	{
-	creator = other.id
-	ammo = 3
-	time = 4
+	snd_play_fire(sndRoll);
+	snd_play_fire(sndBloodLauncher);
+
+	snd_play_fire(choose(sndWater1,sndWater2) );
+
+
+	with instance_create(x,y,Tentacle)
+	{image_angle = aimDirection+180+(random(16)-8)*other.accuracy
+	creator=other.id;
 	team = other.team
-	event_perform(ev_alarm,0) 
+	ammo = 14
+	event_perform(ev_alarm,0)
+	visible = 0
+	with instance_create(x,y,LightningSpawn)
+	{
+	sprite_index=sprTentacleSpawn
+	image_angle = other.image_angle
 	}
+
+	repeat(4){
+	    with instance_create(x,y,FishBoost)
+	    {
+	    motion_add( aimDirection+180+random(60)-30,2+random(4) );
+	    }}
+
+	}
+
+	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 5
+	wkick = -5
 
 	break;
 
@@ -12227,7 +12250,7 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
-	//DISC ERASER
+	//raserRASER
 	case 620:
 
 	snd_play_fire(sndEraser)
@@ -12243,9 +12266,9 @@ function scrFire2(hasTailNow) {
 	event_perform(ev_alarm,0) 
 	}
 
-	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
-	BackCont.shake += 5
+	BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 6
 	wkick = 6
 
 	break;
@@ -14697,6 +14720,179 @@ function scrFire2(hasTailNow) {
 	BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 9
 	wkick = 7
+
+	break;
+	
+	//MICRO MACHINEGUN
+	case 703:
+
+	//snd_play_fire(sndPistol)
+	snd_play(sndMicroSmg,0.02,true);
+	if altFire
+	{
+		with instance_create(x,y,Shell)
+		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+	}
+	altFire = !altFire;
+	with instance_create(x,y,MicroBullet)
+	{
+	direction = aimDirection+(random(10)-5)*other.accuracy;
+	image_angle = direction;
+	team = other.team
+	scrGiveProjectileStats();
+	event_perform(ev_alarm,0);
+	}
+
+	BackCont.viewx2 += lengthdir_x(4,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 2
+	wkick = 2
+
+	break;
+	
+	//ROCKET CLAP
+	case 704:
+	
+	snd_play_fire(sndRocket)
+	with instance_create(x,y,RocketMiniClap)
+	{
+		motion_add(aimDirection,8)
+		image_yscale = -1;
+		direction += 30 * image_yscale * other.accuracy;
+		image_angle = direction
+		team = other.team
+	}
+	with instance_create(x,y,RocketMiniClap)
+	{
+		motion_add(aimDirection,8)
+		direction += 30 * image_yscale * other.accuracy;
+		image_angle = direction
+		team = other.team
+	}
+	altFire = !altFire;
+	BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 12
+	wkick = 8
+
+	break;
+	
+	//GRENADE STRIKE LAUNCHER
+	case 705:
+
+	snd_play_fire(sndClusterLauncher)
+
+	with instance_create(x,y,LineGrenadeBomb)
+	{
+		sticky = 0
+		motion_add(aimDirection+(random(6)-3)*other.accuracy,9)
+		image_angle = direction
+		team = other.team
+		if Player.skill_got[42]
+		{
+			ammo = ceil(ammo*Player.betterTail);
+			time -= 1;
+			scrActivateTail(hasTailNow);
+		}
+	}
+
+	BackCont.viewx2 += lengthdir_x(11,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(11,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 5
+
+	break;
+	
+	//DENSE GUN
+	case 706:
+
+	snd_play_fire(sndHeavyRevolver);
+	snd_play(sndClusterOpen);
+
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+	var am = 6;
+	var aim = aimDirection+(random(8)-4)*other.accuracy
+	var ang = aim;
+	var angStep = 60;
+	var spd = 14;
+	var len = 4 * accuracy;
+	with instance_create(x,y,Bullet1)
+	{motion_add(aim,spd)
+	image_angle = direction
+	team = other.team}
+	repeat(am)
+	{
+		with instance_create(x + lengthdir_x(len,ang),y + lengthdir_y(len,ang),Bullet1)
+		{motion_add(aim,spd)
+		image_angle = direction
+		team = other.team}
+		ang += angStep;
+	}
+
+	BackCont.viewx2 += lengthdir_x(15,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(15,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 10
+	wkick = 4
+
+	break
+		
+	//SMALL MISSILE BOMB
+	case 707:
+
+	snd_play_fire(sndClusterLauncher)
+
+	with instance_create(x,y,SmallMissileBomb)
+	{
+		sticky = 0
+		motion_add(aimDirection+(random(6)-3)*other.accuracy,8)
+		image_angle = direction
+		team = other.team
+		if Player.skill_got[42]
+		{
+			ammo = ceil(ammo*Player.betterTail);
+			time -= 1;
+			scrActivateTail(hasTailNow);
+		}
+	}
+
+	BackCont.viewx2 += lengthdir_x(11,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(11,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 5
+
+	break;
+	
+	//DOUBLE DISC GUN
+	case 708:
+
+	with instance_create(x,y,DiscBurst)
+	{
+		creator = other.id
+		ammo = 2//16
+		time = 6
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+	break;
+	
+	//TOXIC LASER RIFLE
+	case 709:
+
+	if Player.skill_got[17] = 1
+	snd_play_fire(sndLaserUpg)
+	else
+	snd_play_fire(sndLaser)
+	with instance_create(x,y,LaserToxic)
+	{image_angle = aimDirection+(random(10)-5)*other.accuracy
+	team = other.team
+	event_perform(ev_alarm,0)}
+
+	BackCont.viewx2 += lengthdir_x(3,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(3,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 2
+	wkick = 5
 
 	break;
 	

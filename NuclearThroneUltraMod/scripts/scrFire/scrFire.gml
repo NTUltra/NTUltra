@@ -112,7 +112,9 @@ function scrFire() {
 	{
 	    if KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2
 	    {
-	        if random(100)<((wep_cost[bwep]/typ_ammo[wep_type[bwep]])*0.69)*100
+	        if random(100)<(
+				(wep_cost[wep]/typ_ammo[wep_type[wep]])*0.69
+			)*100
 			{
     
 			    var wantAmmo = round(typ_ammo[wep_type[bwep]]*0.5);
@@ -1699,7 +1701,7 @@ function scrFire() {
 	//AUTO GRENADE LAUNCHER
 	case 68:
 
-	snd_play_fire(sndGrenade)
+	snd_play_fire(sndGreere)
 
 	with instance_create(x,y,Grenade)
 	{

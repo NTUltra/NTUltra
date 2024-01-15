@@ -1702,7 +1702,7 @@ if (instance_exists(enemy))
 			homeBoost += 0.1;
 	}
 	///homing projectiles mod
-	var modHomeBoost = 0.24;
+	var modHomeBoost = 0.25;
 	if skill_got[30] == 1
 		modHomeBoost += 0.14;
 	if ultra_got[65]
@@ -1840,37 +1840,6 @@ if frozen>0 && !skill_got[14]
 	x=xprevious;
 	y=yprevious;
 	frozen--;
-}
-
-/* */
-///Superhot
-if wep=201||wep=202
-{
-
-if speed<2
-{
-with projectile{
-
-if speed>2 && canBeMoved{
-speed*=0.1;}
-
-}
-
-with enemy
-speed*=0.1;
-
-}
-else{
-with projectile
-{
-if typ!=0&&canBeMoved{
-    if speed<8
-    {speed+=1;}
-    else
-    {speed=8;}
-    }
-}}
-
 }
 
 

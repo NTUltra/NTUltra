@@ -464,7 +464,7 @@ maxSpeed = 4
 
 
 maxlevel = 10 + UberCont.levelIncrease;
-scrIsHardMode()
+if scrIsHardMode()
 	maxlevel += 1;
 if scrIsGamemode(15) //no mutaitons gamemode
 maxlevel = 1;

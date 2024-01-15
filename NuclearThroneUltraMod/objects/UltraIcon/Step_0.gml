@@ -2,6 +2,8 @@ if (UberCont.mouse__x < x+22 and UberCont.mouse__y < y+22 and UberCont.mouse__x 
 {
 	with UltraIcon
 		selected = false;
+	with SkillIcon
+		selected = false;
 		
 	selected = true;
 	with UberCont
@@ -1051,7 +1053,7 @@ if (selected &&
 		//if skill <= UberCont.maxultra
 		with UberCont
 		{
-			if (Player.altUltra || Player.ultimategamble == 2) && scrTranslateUltraToSecretStat(other.skill,Player.bskin) != -1
+			if (Player.altUltra || Player.ultimategamble == 1) && scrTranslateUltraToSecretStat(other.skill,Player.bskin) != -1
 			{
 				ctot_secret_ultra_taken[scrTranslateUltraToSecretStat(other.skill,Player.bskin)] += 1;
 			}

@@ -30,7 +30,7 @@ if instance_exists(Player)
 	//bloodempty=0}
 
 	//if scrIsCrown(13)
-	//	raddrop=0;
+	//	ddrop=0;
 	if Player.loops > 1
 		raddrop*=0.8;
 	if Player.ultra_got[52]

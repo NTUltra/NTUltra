@@ -31,22 +31,12 @@ if scrIsGamemode(28)//ALL MUTATION CHOICES
 if KeyCont.key_west[0] == 1
 {
 	selectedIndex -= 1;
-	if instance_exists(SkillIcon)
+	if instance_exists(UltraIcon)
 	{
 		if selectedIndex < 0
-			selectedIndex = instance_number(SkillIcon) - 1;
-		with SkillIcon
 		{
-			if skillIndex == other.selectedIndex
-				selected = true;
-			else
-				selected = false;
+			selectedIndex = instance_number(UltraIcon) + instance_number(SkillIcon) - 1;
 		}
-	}
-	else
-	{
-		if selectedIndex < 0
-			selectedIndex = instance_number(UltraIcon) - 1;
 		with UltraIcon
 		{
 			if skillIndex == other.selectedIndex
@@ -55,24 +45,26 @@ if KeyCont.key_west[0] == 1
 				selected = false;
 		}
 	}
+	else if instance_exists(SkillIcon)
+	{
+		if selectedIndex < 0
+			selectedIndex = instance_number(SkillIcon) - 1;
+	}
+	with SkillIcon
+	{
+		if skillIndex == other.selectedIndex
+			selected = true;
+		else
+			selected = false;
+	}
+	
 }
 else if KeyCont.key_east[0] == 1
 {
 	selectedIndex += 1;
-	if instance_exists(SkillIcon)
+	if instance_exists(UltraIcon)
 	{
-		if selectedIndex > instance_number(SkillIcon) - 1
-			selectedIndex = 0;
-		with SkillIcon
-		{
-			if skillIndex == other.selectedIndex
-				selected = true;
-			else
-				selected = false;
-		}
-	} else if instance_exists(UltraIcon)
-	{
-		if selectedIndex > instance_number(UltraIcon) - 1
+		if selectedIndex > instance_number(UltraIcon) + instance_number(SkillIcon)- 1
 			selectedIndex = 0;
 		with UltraIcon
 		{
@@ -81,5 +73,17 @@ else if KeyCont.key_east[0] == 1
 			else
 				selected = false;
 		}
+	}
+	else if instance_exists(SkillIcon)
+	{
+		if selectedIndex > instance_number(SkillIcon) - 1
+			selectedIndex = 0;
+	}
+	with SkillIcon
+	{
+		if skillIndex == other.selectedIndex
+			selected = true;
+		else
+			selected = false;
 	}
 }

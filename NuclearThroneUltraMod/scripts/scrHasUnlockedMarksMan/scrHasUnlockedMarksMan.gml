@@ -15,6 +15,6 @@ function scrHasUnlockedMarksMan(){
 		difCount ++;
 	if difCount > 1
 	{
-		scrUnlockGameMode(48,"FOR KILLING TWO DIFFERENT TYPES OF BOSS BOTS!");
+		scrUnlockGameMode(48,"FOR KILLING TWO DIFFERENT#TYPES OF BOSS BOTS!");
 	}
 }
