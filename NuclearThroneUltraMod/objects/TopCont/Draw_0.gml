@@ -284,6 +284,22 @@ with GhettoBlast
 	if visible
 		draw_self();
 }
+with GhostEffect
+{
+	draw_self();
+}
+with GhostSlash
+{
+	draw_self();
+}
+with GhostShank
+{
+	draw_self();
+}
+with GhostSpearShank
+{
+	draw_self();
+}
 
 //Flying enemies
 with ChesireCatTail{

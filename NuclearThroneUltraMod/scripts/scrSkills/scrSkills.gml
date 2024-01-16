@@ -276,14 +276,14 @@ function scrSkills() {
 	if !UberCont.lastwishused
 	{
 		skill_name[18] = "LAST WISH"
-		skill_detail[18] = "GAIN 1 <w>LIFE<w>#<aq>PREVENT<aq> LETHAL DAMAGE#AND RESET <r>HEALTH<r> TO MAX# ONCE PER LOOP##GET FULL <r>HEALTH<r> AND SOME <y>AMMO<y>"
+		skill_detail[18] = "GAIN 1 <w>LIFE<w>#<aq>PREVENT<aq> LETHAL DAMAGE#AND RESET <r>HEALTH<r> TO MAX# ONCE PER LOOP##GET HALF <r>HEALTH<r> AND SOME <y>AMMO<y>"
 		skill_tips[18] = "listen"
 		skill_msnd[18] =  sndMutLastWish
 	}
 	else
 	{
 		skill_name[18] = "LAST WISH"
-		skill_detail[18] = "<aq>PREVENT<aq> <w>LETHAL DAMAGE<w>#AND RESET HEALTH TO MAX# ONCE PER LOOP##GET FULL <r>HEALTH<r> AND SOME <y>AMMO<y>##REGAIN ONE PART OF YOUR <w>LIFE<w>"
+		skill_detail[18] = "<aq>PREVENT<aq> <w>LETHAL DAMAGE<w>#AND RESET HEALTH TO MAX# ONCE PER LOOP##GET HALF <r>HEALTH<r> AND SOME <y>AMMO<y>##REGAIN ONE PART OF YOUR <w>LIFE<w>"
 		skill_tips[18] = "listen"
 		skill_msnd[18] =  sndMutLastWish
 	}
@@ -492,7 +492,7 @@ function scrSkills() {
 	skill_msnd[37] =  sndMutEcstaticFists
 	skill_bons[37] = "+5% DAMAGE INCREASE"
 	
-	skill_name[38] = "ENRICHED METABOLISM"
+	skill_name[38] = "mMETABOLISM"
 	skill_text[38] = "<aq>NEGATE<aq> EVERY THIRD HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD"
 	skill_detail[38] = "<aq>NEGATE<aq> EVERY THIRD HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD##ALLOWS SELF INFLICTED DAMAGE"
 	skill_tips[38] = "delicious"

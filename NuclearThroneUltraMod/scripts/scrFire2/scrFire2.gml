@@ -3696,9 +3696,11 @@ function scrFire2(hasTailNow) {
 	case 330:
 
 	snd_play_fire(sndGrenadeRifle)
-
+	
 	with instance_create(x,y,DoomGrenade)
 	{
+		if choose(true,false)
+		alarm[2] = 8;
 	walk=6+irandom(6);
 	motion_add(aimDirection+(random(6)-3)*other.accuracy,16)
 	team = other.team}
@@ -13534,7 +13536,7 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
-	//ROLL OUT THE DOOM
+	//ROLL OUT THE BOOM
 	case 661:
 	
 	snd_play_fire(sndHeavyNader);
@@ -13810,7 +13812,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),SmallSlash)
 	{
 		longarms = 0
-		
+		dmg += 2;
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.3+longarms)
 		image_angle = direction
@@ -13877,7 +13879,7 @@ function scrFire2(hasTailNow) {
 	{
 		with instance_create(x+lengthdir_x(l,aimDirection),y+lengthdir_y(l,aimDirection),SmallSlash)
 		{
-			dmg += 3;
+			dmg += 4;
 			longarms = 0
 			longarms = (Player.skill_got[13]+other.bettermelee)*3;
 			motion_add(aimDirection,1+longarms);
@@ -14894,6 +14896,180 @@ function scrFire2(hasTailNow) {
 	BackCont.shake += 2
 	wkick = 5
 
+	break;
+	
+	//TROP GUN
+	case 710:
+
+	snd_play_fire(choose(sndPopgun,sndMachinegun))
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+	var aim = aimDirection +(random(26)-13)*other.accuracy
+	with instance_create(x,y,Bullet1)
+	{motion_add(aim,14)
+	image_angle = direction
+	team = other.team}
+	var  len = 5*accuracy;
+	if collision_line(x,y,x + lengthdir_x(len,aim + 90),y + lengthdir_y(len,aim + 90),Wall,false,false)
+		len = 0;
+	with instance_create(x + lengthdir_x(len,aim + 90),y + lengthdir_y(len,aim + 90),Bullet2)
+	{motion_add(aim,16)
+	image_angle = direction
+	team = other.team}
+	var  len = 5*accuracy;
+	if collision_line(x,y,x + lengthdir_x(len,aim - 90),y + lengthdir_y(len,aim - 90),Wall,false,false)
+		len = 0;
+	with instance_create(x + lengthdir_x(len,aim - 90),y + lengthdir_y(len,aim - 90),Bullet2)
+	{motion_add(aim,16)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3
+	wkick = 2
+
+	break;
+	
+	//METAL PIPE
+	case 711:
+
+	snd_play_fire(sndMetalPipe)
+
+	instance_create(x,y,Dust)
+
+	with instance_create(x+lengthdir_x(2+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(2+((Player.skill_got[13]+bettermelee)*20),aimDirection),SmallSlash)
+	{
+	dmg = 9
+	longarms = 0
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection,2.5+longarms)
+	image_angle = direction
+	team = other.team}
+
+	wepangle = -wepangle
+	motion_add(aimDirection,1)
+	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 1
+	wkick = -3
+
+	break;
+	
+	//SPLINTER MINE LAUNCHER
+	case 712:
+
+	snd_play_fire(sndGrenadeRifle)
+	altFire = !altFire;
+	if altFire
+	{
+		wep_type[712] = 4;
+	}
+	else
+	{
+		wep_type[712] = 5;
+	}
+	with instance_create(x,y,SpikeMine)
+	{
+	sticky = 0
+	motion_add(aimDirection+(random(12)-6)*other.accuracy,5)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 2
+	wkick = 5
+
+	break;
+	
+	//FIRE CHAIN TRIPWIRE
+	case 713:
+
+	snd_play_fire(sndTripwireLauncher)
+
+	with instance_create(x,y,ChainTrapBolt)
+	{motion_add(aimDirection,24)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(13,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(13,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 4
+
+	break;
+	
+	//GHOST SPEAR
+	case 714:
+
+	snd_play_fire(sndGhostShank)
+	snd_play_fire(choose(sndSword1,sndSword2))
+	instance_create(x,y,Smoke)
+	instance_create(x,y,Dust)
+
+	repeat(4+irandom(3))
+	{
+		with instance_create(x,y,GhostEffect)
+			motion_add(aimDirection+(random(30)-15)*other.accuracy,3+random(4))
+	}
+	repeat(3)
+	{
+		with instance_create(x+lengthdir_x(58+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(58+((Player.skill_got[13]+bettermelee)*20),aimDirection),GhostEffect)
+			motion_add(aimDirection+(random(30)-15)*other.accuracy,3+random(4))
+	}
+	with instance_create(x+lengthdir_x(58+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(58+((Player.skill_got[13]+bettermelee)*20),aimDirection),GhostSpearShank)
+	{
+	longarms = 0
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection,3.5+longarms)
+	image_angle = direction
+	team = other.team}
+
+	with instance_create(x+lengthdir_x(2+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(2+((Player.skill_got[13]+bettermelee)*20),aimDirection),GhostSpearShank)
+	{
+	longarms = 0
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection,3+longarms)
+	image_angle = direction
+	team = other.team}
+
+	wepangle = -wepangle
+	motion_add(aimDirection,6)
+	BackCont.viewx2 += lengthdir_x(14,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(14,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 7
+	wkick = -7
+
+	break;
+	
+	//DOOM LOBBER
+	case 715:
+	snd_play_fire(sndChickenThrow)
+	snd_play_fire(sndHeavyNader)
+
+	with instance_create(x,y,LobDoomGrenade)
+	{
+		accuracy = other.accuracy;
+		alarm[2] += 1;
+	sticky = 0
+	motion_add(aimDirection+(random(6)-3)*other.accuracy,9)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,LobDoomGrenade)
+	{
+		accuracy = other.accuracy;
+		alarm[2] -= 3;
+	sticky = 0
+	motion_add(aimDirection+(random(12)-6)*other.accuracy,7.25)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wepangle = -wepangle
+	wkick = -5
 	break;
 	
 	}//end of switch part 2!

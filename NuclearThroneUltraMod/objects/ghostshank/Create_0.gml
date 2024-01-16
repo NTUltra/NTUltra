@@ -8,6 +8,6 @@ friction = 0.1
 
 snd_wallhit=sndMeleeWall;
 snd_hit=sndHitWall;
-
+wallPierce = 0;
 dmg=10;
 

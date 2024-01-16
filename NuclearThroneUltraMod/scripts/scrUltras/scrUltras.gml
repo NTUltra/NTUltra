@@ -615,7 +615,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[82] = "the anomaly meta"
 
 	ultra_name[83] = "MELTDOWN"
-	ultra_text[83] = "DOUBLE <g>RADIATION<g> CAPACITY#INCREASE <g>RADIATION<g> VALUE BY 20%"
+	ultra_text[83] = "INCREASE <g>RADIATION<g> VALUE BY 20%#REDUCE <g>BEAM<g> COST BY 15%#<g>ULTRA WEAPONS<g> COST 40% LESS <g>RADS<g>"
 	ultra_tips[83] = "freezeup"
 
 	ultra_name[84] = "POWER"
@@ -648,7 +648,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		}
     
 	    ultra_name[88] = "ULTRA POPO"
-	    ultra_text[88] = "<g>ULTRA<g> WEAPONS COST LESS <g>RADS<g>#<b>PORTAL STRIKE<b> COSTS <g>RADS<g> INSTEAD#REPLACE <b>PORTAL STRIKE<b> AMMO CHESTS#WITH <g>RAD<g> CANNISTERS#<b>BLAST ARMOUR<b> PRODUCES <g>RADS<g>#<g>RADS<g> SPAWN <g>ULTRA LIGHTNING<g>"
+	    ultra_text[88] = "<g>ULTRA<g> WEAPONS COST 30% LESS <g>RADS<g>#<b>PORTAL STRIKE<b> COSTS <g>RADS<g> INSTEAD#REPLACE <b>PORTAL STRIKE<b> AMMO CHESTS#WITH <g>RAD<g> CANNISTERS#<b>BLAST ARMOUR<b> PRODUCES <g>RADS<g>#<g>RADS<g> SPAWN <g>ULTRA LIGHTNING<g>"
 	    ultra_tips[88] = "I can do that better"
     
     

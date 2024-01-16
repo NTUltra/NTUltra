@@ -1,6 +1,6 @@
 snd_play(sndExplosion)
 instance_create(x,y,Explosion);
-
+snd_play(choose(sndDoomGuy1,sndDoomGuy2,sndDoomGuy3,sndDoomGuy4,sndDoomGuy5),0.1);
 ang = random(360)
 with instance_create(x+lengthdir_x(4,ang),y+lengthdir_y(2,ang),DoomGrenade)
 {
@@ -13,6 +13,7 @@ team=other.team;
 with instance_create(x+lengthdir_x(4,ang+240),y+lengthdir_y(2,ang+240),DoomGrenade)
 {
 team=other.team;
+alarm[2] = 8 + irandom(7);
 }
 
 instance_create(x,y,WallBreak);

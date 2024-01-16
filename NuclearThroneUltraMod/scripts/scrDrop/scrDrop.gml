@@ -3,6 +3,7 @@ function scrDrop(itemdrop, weapondrop) {
 	if instance_exists(DropReducer)
 	{
 		var reductions = max(0,1 - (instance_number(DropReducer) * 0.2));
+		debug("Reductions: " + string(reductions));
 		itemdrop *= reductions;
 	}
 	if weapondrop > 0
@@ -34,7 +35,18 @@ function scrDrop(itemdrop, weapondrop) {
 		}
 		if instance_exists(WantHealth)
 		{
-			mh += (instance_number(WantHealth) * 0.1);
+			if h >= mh
+			{
+				with WantHealth
+				{
+					instance_destroy();	
+				}
+			}
+			else
+			{
+				mh += (instance_number(WantHealth) * 0.1);
+				debug("WantHealth: " + string(mh));
+			}
 		}
 		var rebelBuff = 0;
 		if Player.ultra_got[39] && !Player.altUltra

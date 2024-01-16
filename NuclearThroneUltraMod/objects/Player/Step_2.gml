@@ -344,6 +344,7 @@ var tookHit = false;
 if my_health < prevhealth
 {
 	tookHit = true;
+	instance_create(x,y,DropReducer);
 	//Insakill
 	if !exception && alarm[3] < 1
 	{
@@ -722,14 +723,14 @@ if(my_health <= 0 && maxhealth > 0)
 		if lastWishPrevent {
 			BackCont.shake += 20;
 			Sleep(100);
-			my_health = maxhealth;
+			my_health = max(1,round(maxhealth*0.5));
 			if race == 25
 				my_health += 3;
 			lastWishPrevent = false;
 			snd_hurt = sndDamageNegate;
 			snd_play_2d(sndMutLastWish);
 			scrGiveEuphoriaShield();
-			alarm[3] += 50;
+			alarm[3] += 40;
 		}
 	}
 }
@@ -846,7 +847,7 @@ if my_health <= 0 && armour < 1
 		snd_play_2d(sndPhoenixChicken);
 		snd_hurt = sndDamageNegate;
 		scrGiveEuphoriaShield();
-		alarm[3] = max(alarm[3],5 + (phoenixrevives*2));
+		alarm[3] = max(alarm[3],1 + phoenixrevives);
 		snd_play(sndFlameCannonEnd,0.1,true);
 		var ang = direction + 180;
 		var am = min(44,23 + (phoenixrevives*2));

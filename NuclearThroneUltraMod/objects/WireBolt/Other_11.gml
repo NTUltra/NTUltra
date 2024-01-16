@@ -7,6 +7,7 @@ var yy = y + lengthdir_y(64,image_angle);
 var rayHit = collision_line_point(x,y,xx,yy,Wall,false,false);
 with instance_create(rayHit[1],rayHit[2],boltStick)
 {
+	scrCopyWeaponMod(other);
 	image_angle = other.image_angle;
 	fallAngle = image_angle;
 	target = theWall;

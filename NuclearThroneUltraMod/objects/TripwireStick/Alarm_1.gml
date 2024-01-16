@@ -23,6 +23,7 @@ if instance_exists(TripwireStick) && instance_number(TripwireStick) > 1
 					dir = dir + (random(4)-2)
 				with instance_create(xx,yy,Laser)
 				{
+					scrCopyWeaponMod(other);
 					image_angle = dir
 					team = other.team
 					event_perform(ev_alarm,0)

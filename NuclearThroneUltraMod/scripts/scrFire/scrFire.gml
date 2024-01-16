@@ -4940,11 +4940,11 @@ function scrFire() {
 	}
 
 
-	if Player.ultra_got[56]==1//PANDA Meditate rapid hands melee firerate
+	if Player.ultra_got[56]//PANDA Meditate rapid hands melee firerate
 	{
 		if  reload > 0 && scrMeleeWeapons(wep)
 	    {
-			reload -= wep_load[wep]*0.45;//0.6;
+			reload -= wep_load[wep]*0.4;//0.6;
 	    }
 	}
 	if Player.ultra_got[33] && Player.altUltra
@@ -5172,6 +5172,11 @@ function scrFire() {
 
 
 	if Player.ultra_got[88]//ROGUE ULTRA POPO ULTRA D
+	{
+		if wep_rad[wep]>0
+			rad+=wep_rad[wep]*0.3;
+	}
+	if Player.ultra_got[83]//HORROR MELTDOWN
 	{
 		if wep_rad[wep]>0
 			rad+=wep_rad[wep]*0.4;

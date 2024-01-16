@@ -10,7 +10,7 @@ if instance_exists(Player)
 		else if scrIsCrown(18)
 			add += 5;
 		if UberCont.radUp
-			add += 1.5;
+			add += 1;
 		if ultra_got[83]
 			add += 2;
 		rad += add;

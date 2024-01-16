@@ -532,10 +532,15 @@ function scrPowers(raceOverwrite = -1) {
 						alarm[0] = suckDelay;	
 					}
 				//First rad for game feel
+				var cost = 1;
+				if ultra_got[83]
+					cost = 0.85;
 				if  UberCont.normalGameSpeed == 60
-					rad -= 0.5;
-				else
-					rad--;
+				{
+					cost *= 0.5;
+					horrordelay = !horrordelay;
+				}
+				rad -= cost;
 
 			    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
 			    {
@@ -2683,23 +2688,20 @@ function scrPowers(raceOverwrite = -1) {
 
 			// this makes the beam more efficient
 			//if random(3)<2
+			var cost = 1;
+			if ultra_got[83]
+				cost = 0.85;
 			if  UberCont.normalGameSpeed == 60
 			{
-				rad -= 0.5;
+				cost *= 0.5;
 				horrordelay = !horrordelay;
 			}
-			else
-				rad--;
+			rad -= cost;
 			if !horrordelay
 			{
 				if horrorcharge>12&&random(2)<1
 				{
-					if  UberCont.normalGameSpeed == 60
-					{
-						rad -= 0.5;
-					}
-					else
-						rad--;
+					rad -= cost;
 				    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
 				    {
 				    bskin=other.bskin

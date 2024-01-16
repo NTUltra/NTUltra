@@ -10,9 +10,9 @@ if instance_exists(Player)
 		else if scrIsCrown(18)
 			add += 0.5;
 		if UberCont.radUp
-			add += 0.15;
+			add += 0.1;
 		if ultra_got[83]
-			add += 0.20;
+			add += 0.2;
 		rad += add;
 		snd_play_2d(sndRadPickup,0.05,true);
 	

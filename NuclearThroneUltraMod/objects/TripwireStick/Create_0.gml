@@ -1,4 +1,7 @@
 /// @description Init
+event_inherited();
+typ = 3;
+canBeMoved = false;
 target = -1;
 alarm[0] = 100;//lifetime
 alarm[1] = 10;
