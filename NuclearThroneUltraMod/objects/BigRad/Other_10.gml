@@ -8,7 +8,7 @@ if instance_exists(Player)
 		if scrIsCrown(4)
 			add += 1.8;
 		else if scrIsCrown(18)
-			add += 5;
+			add += 4;
 		if UberCont.radUp
 			add += 1;
 		if ultra_got[83]

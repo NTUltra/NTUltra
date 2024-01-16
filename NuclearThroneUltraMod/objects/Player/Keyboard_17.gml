@@ -73,7 +73,7 @@ if UberCont.public = 0 {
     }
 
     if keyboard_check_pressed(ord("2")) {
-        area = 137
+        area = 126
         subarea = 0
         with enemy
         my_health = 0
@@ -81,7 +81,7 @@ if UberCont.public = 0 {
     }
 
     if keyboard_check_pressed(ord("3")) {
-        area = 130
+        area = 3
         subarea = 0
         with enemy
         my_health = 0

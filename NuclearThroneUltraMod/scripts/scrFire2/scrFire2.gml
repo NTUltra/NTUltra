@@ -14987,7 +14987,16 @@ function scrFire2(hasTailNow) {
 	case 713:
 
 	snd_play_fire(sndTripwireLauncher)
-
+	
+	if altFire
+	{
+		wep_type[713] = 4;
+	}
+	else
+	{
+		wep_type[713] = 5;
+	}
+	
 	with instance_create(x,y,ChainTrapBolt)
 	{motion_add(aimDirection,24)
 	image_angle = direction
@@ -15070,6 +15079,25 @@ function scrFire2(hasTailNow) {
 	BackCont.shake += 4
 	wepangle = -wepangle
 	wkick = -5
+	break;
+	
+	//PLASMA LASER RIFLE
+	case 716:
+	snd_play(sndPlasma);
+	if Player.skill_got[17] = 1
+	snd_play_fire(sndLaserUpg)
+	else
+	snd_play_fire(sndLaser)
+	with instance_create(x,y,PlasmaLaser)
+	{image_angle = aimDirection+(random(10)-5)*other.accuracy
+	team = other.team
+	event_perform(ev_alarm,0)}
+
+	BackCont.viewx2 += lengthdir_x(4,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3
+	wkick = 5
+
 	break;
 	
 	}//end of switch part 2!

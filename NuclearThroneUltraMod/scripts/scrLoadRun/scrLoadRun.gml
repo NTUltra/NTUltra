@@ -284,6 +284,8 @@ function scrLoadRun(){
 					Player.phoenixrevives = encryptedRun.metabolism;
 				if variable_struct_exists(encryptedRun, "globalMutationsChosen")
 					UberCont.globalMutationsChosen = encryptedRun.globalMutationsChosen;
+				if variable_struct_exists(encryptedRun, "seedWeaponSmith")
+					UberCont.seedWeaponSmith = encryptedRun.seedWeaponSmith;
 				if variable_struct_exists(encryptedRun, "canMultiCrown")
 					UberCont.canMultiCrown = encryptedRun.canMultiCrown;
 				if variable_struct_exists(encryptedRun, "randomDailyMod")

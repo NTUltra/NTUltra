@@ -31,7 +31,7 @@ if selected
 	{
 		KeyCont.key_fire[p] = 2;
 		KeyCont.key_pick[p] = 2;
-		UberCont.globalMutationsChosen ++;
+		UberCont.globalMutationsChosen += 1414;
 		Player.skill_got[skill] = 1
 		Player.skillsChosen+=1;
 		Player.skillpoints -= 1

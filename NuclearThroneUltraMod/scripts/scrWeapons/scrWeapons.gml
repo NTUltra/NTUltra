@@ -1440,7 +1440,7 @@ function scrWeapons() {
 	wep_type[130] = 4
 	wep_auto[130] = 1
 	wep_load[130] = 4
-	wep_cost[130] = 1
+	wep_cost[130] = 0.75
 	wep_sprt[130] = sprToxicDragon
 	wep_area[130] = 10
 	wep_text[130] = "stinky breath"
@@ -2229,10 +2229,10 @@ function scrWeapons() {
 	wep_rad[200] = 0;
 
 	wep_name[201] = "MICRO PLASMA GUN"
-	wep_type[201] = 1
+	wep_type[201] = 5
 	wep_auto[201] = 1
-	wep_load[201] = 14
-	wep_cost[201] = 1.5
+	wep_load[201] = 13
+	wep_cost[201] = 1
 	wep_sprt[201] = sprMicroPlasmaGun
 	wep_area[201] = 0
 	wep_text[201] = "hitscan plasma"
@@ -7588,7 +7588,7 @@ function scrWeapons() {
 	wep_name[686] = "ORBITER"
 	wep_type[686] = 5
 	wep_auto[686] = 0
-	wep_load[686] = 17
+	wep_load[686] = 18
 	wep_cost[686] = 2
 	wep_sprt[686] = sprOrbiter 
 	wep_area[686] = 3
@@ -7819,8 +7819,8 @@ function scrWeapons() {
 	wep_name[707] = "SMALL MISSILE BOMB"
 	wep_type[707] = 4
 	wep_auto[707] = 0
-	wep_load[707] = 30
-	wep_cost[707] = 2
+	wep_load[707] = 35
+	wep_cost[707] = 2.5
 	wep_sprt[707] = sprSmallMissileBombThrower
 	wep_area[707] = 1
 	wep_text[707] = "carepackage"
@@ -7843,7 +7843,7 @@ function scrWeapons() {
 	wep_auto[709] = 1
 	wep_load[709] = 8
 	wep_cost[709] = 1
-	wep_sprt[709] = sprSharpStress
+	wep_sprt[709] = sprToxicLaserRifle
 	wep_area[709] = 4
 	wep_text[709] = "stinky tech"
 	wep_swap[709] = sndSwapEnergy
@@ -7854,7 +7854,7 @@ function scrWeapons() {
 	wep_auto[710] = 1
 	wep_load[710] = 8
 	wep_cost[710] = 3
-	wep_sprt[710] = sprSharpStress
+	wep_sprt[710] = sprTropGun
 	wep_area[710] = 0
 	wep_text[710] = "a little bit of something"
 	wep_swap[710] = sndSwapMachinegun
@@ -7865,7 +7865,7 @@ function scrWeapons() {
 	wep_auto[711] = 0
 	wep_load[711] = 13
 	wep_cost[711] = 0
-	wep_sprt[711] = sprSharpStress
+	wep_sprt[711] = sprMetalPipe
 	wep_area[711] = 0
 	wep_text[711] = "a little bit of something"
 	wep_swap[711] = sndSwapMachinegun
@@ -7876,7 +7876,7 @@ function scrWeapons() {
 	wep_auto[712] = 0
 	wep_load[712] = 35
 	wep_cost[712] = 2.5
-	wep_sprt[712] = sprSharpStress
+	wep_sprt[712] = sprSplinterMineLauncher
 	wep_area[712] = 0
 	wep_text[712] = "don't wait around for an enemy to walk into a trap"
 	wep_swap[712] = sndSwapExplosive
@@ -7887,7 +7887,7 @@ function scrWeapons() {
 	wep_auto[713] = 0
 	wep_load[713] = 12
 	wep_cost[713] = 1.5
-	wep_sprt[713] = sprSharpStress
+	wep_sprt[713] = sprTripFireChainGun
 	wep_area[713] = 13
 	wep_text[713] = "hell trap"
 	wep_swap[713] = sndSwapBow
@@ -7896,9 +7896,9 @@ function scrWeapons() {
 	wep_name[714] = "GHOST SPEAR"
 	wep_type[714] = 0
 	wep_auto[714] = 0
-	wep_load[714] = 21
+	wep_load[714] = 23
 	wep_cost[714] = 0
-	wep_sprt[714] = sprSharpStress
+	wep_sprt[714] = sprGhostSpear
 	wep_area[714] = 15
 	wep_text[714] = "piercing ghast"
 	wep_swap[714] = sndSwapSword
@@ -7909,11 +7909,22 @@ function scrWeapons() {
 	wep_auto[715] = 0
 	wep_load[715] = 25
 	wep_cost[715] = 4
-	wep_sprt[715] = sprSharpStress
+	wep_sprt[715] = sprDoomLobber
 	wep_area[715] = 13
-	wep_text[715] = "cute bots of doom"
+	wep_text[715] = "doom party"
 	wep_swap[715] = sndSwapExplosive
 	wep_rad[715] = 0;
+	
+	wep_name[716] = "PLASMA LASER RIFLE"
+	wep_type[716] = 5
+	wep_auto[716] = 1
+	wep_load[716] = 7
+	wep_cost[716] = 1.25
+	wep_sprt[716] = sprPlasmaLaserRifle
+	wep_area[716] = 11
+	wep_text[716] = "futuristic weaponry"
+	wep_swap[716] = sndSwapEnergy
+	wep_rad[716] = 0;
 
 	maxwep = array_length(wep_name)-1;
 

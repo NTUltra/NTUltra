@@ -74,7 +74,7 @@ if isPaused == 1
 		timer="OFF"
 
 
-		var d = " DIFFICULTY/TIER: "+string(hard);
+		var d = " TIER: "+string(hard);
 
 		txt0 = "#OPTIONS############################CONTINUE [ESC] ------------ QUIT [ENTER]"
 

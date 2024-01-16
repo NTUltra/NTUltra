@@ -12,7 +12,7 @@ if instance_exists(Player)
 }
 if instance_number(AngelActive) > 1
 {
-	amount -= 2;
+	amount -= 3;
 	var isActuallyStacking = false;
 	with AngelActive
 	{

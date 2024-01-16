@@ -92,6 +92,22 @@ if(instance_exists(Player)){
 				team = other.team
 				alarm[11] = 0;}
 			}
+			else if object_index == PlasmaLaser {
+				snd_play_fire(sndHeavyMachinegun);
+				repeat(2)
+				{
+				with instance_create(x,y,Smoke)
+				motion_add(direction+(random(30)-15),3+random(3))
+				}
+				with instance_create(x,y,FatPlasmaBullet)
+				{
+					motion_add(other.image_angle,16)
+					scrCopyWeaponMod(other);
+					image_angle = direction
+					team = other.team
+					alarm[11] = 0;
+				}
+			}
 			else
 			{
 				snd_play_fire(sndHeavyMachinegun);

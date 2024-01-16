@@ -191,22 +191,29 @@ function scrPowers(raceOverwrite = -1) {
 			{
 				effective = true;
 				speed = 0;
-				if alarm[1] > 0
-				{
-					alarm[11] += duration
-					alarm[1] += duration;
-				}
+				
 				if instance_exists(myConfusion)
 				{
+					var mydur = duration * 0.5;
 					with myConfusion
 					{
-						alarm[0] += duration;
+						alarm[0] += mydur;
 						image_speed = 0.4;
 						image_index = 0;
+					}
+					if alarm[1] > 0
+					{
+						alarm[11] += mydur
+						alarm[1] += mydur;
 					}
 				}
 				else
 				{
+					if alarm[1] > 0
+					{
+						alarm[11] += duration
+						alarm[1] += duration;
+					}
 					myConfusion = instance_create(x,y-8,HumphryConfuse)
 					with myConfusion {
 						myEnemy = other.id;
@@ -222,7 +229,17 @@ function scrPowers(raceOverwrite = -1) {
 			{
 				Sleep(40);
 				snd_play_2d(sndChickenStart);
-				instance_create(x,y,HumphryDiscipline);
+				if instance_exists(HumphryDiscipline)
+				{
+					with HumphryDiscipline
+					{
+						alarm[0] += 5;
+					}
+				}
+				else
+				{
+					instance_create(x,y,HumphryDiscipline);
+				}
 			}
 			else
 			{
@@ -532,9 +549,9 @@ function scrPowers(raceOverwrite = -1) {
 						alarm[0] = suckDelay;	
 					}
 				//First rad for game feel
-				var cost = 1;
+				var cost = 1.06;
 				if ultra_got[83]
-					cost = 0.85;
+					cost = 0.95;
 				if  UberCont.normalGameSpeed == 60
 				{
 					cost *= 0.5;
@@ -927,7 +944,7 @@ function scrPowers(raceOverwrite = -1) {
 			var wantRad = rad;
 			var wantAmmo = ammo[t]
 			scrFire();
-			reload -= wep_load[wep]//*0.25;
+			reload -= wep_load[wep]*0.75//*0.25;
 			ammo[t] = wantAmmo;
 			//ammo[t] += wep_cost[wep]//return ammo
 			rad = max(rad,wantRad);
@@ -2688,9 +2705,9 @@ function scrPowers(raceOverwrite = -1) {
 
 			// this makes the beam more efficient
 			//if random(3)<2
-			var cost = 1;
+			var cost = 1.06;
 			if ultra_got[83]
-				cost = 0.85;
+				cost = 0.95;
 			if  UberCont.normalGameSpeed == 60
 			{
 				cost *= 0.5;
@@ -2808,6 +2825,7 @@ function scrPowers(raceOverwrite = -1) {
 			audio_stop_sound(sndHorrorLoop);
 			audio_stop_sound(sndHorrorLoopTB);
 			snd_play_2d(sndHorrorEmpty);
+			scrEmptyRad();
 		}
 		rad = max(rad,0);
 	}
@@ -3342,7 +3360,7 @@ function scrPowers(raceOverwrite = -1) {
 	{
 	audio_stop_sound(sndHorrorLoopTB);
 	audio_stop_sound(sndHorrorLoop); 
-	if horrorcharge > origincharge*2
+	if skill_got[5] && horrorcharge > origincharge*2
 	{
 		if horrorcharge < 10
 		{
@@ -3358,6 +3376,10 @@ function scrPowers(raceOverwrite = -1) {
 		BackCont.shake += horrorcharge
 		with instance_create(x,y,BecomeHorrorBigBall)
 		{
+			if other.bskin = 1
+				sprite_index=sprBecomeHorrorBigBalB;
+			else if other.bskin = 2
+				sprite_index=sprBecomeHorrorBigBalC;
 			team = other.team;
 			//Max is about 20
 			myPower = other.horrorcharge;

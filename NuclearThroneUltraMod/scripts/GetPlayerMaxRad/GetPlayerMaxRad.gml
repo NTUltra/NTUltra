@@ -8,7 +8,7 @@ function GetPlayerMaxRad(){
 	}
 	else if scrIsHardMode()//HARD MODE
 	{
-		multiplier *= 1.25;
+		multiplier *= 1.3;
 	}
 	if level > 10
 	{

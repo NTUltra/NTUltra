@@ -458,7 +458,10 @@ function scrDrawBloom() {
 	with IDPDBullet
 	draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with Explosion
+	{
+		if visible
 	draw_sprite_ext(sprite_index,-1,x,y,1.5,1.5,image_angle,c_white,ba)
+	}
 	//with Bolt
 	//draw_sprite_ext(sprite_index,-1,x,y,2,2,image_angle,c_white,ba)
 	with MeatExplosion

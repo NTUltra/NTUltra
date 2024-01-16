@@ -46,6 +46,7 @@ function scrEndOfRun(){
 		enableReroll = false;
 		maxHpIncrease = 0;
 		globalMutationsChosen = 0;
+		seedWeaponSmith = 0;
 		canSave = false;
 		canMultiCrown = false;
 		useRaceActive = 1;

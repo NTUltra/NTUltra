@@ -3,6 +3,10 @@ instance_destroy();
 snd_play(sndExplosion);
 with instance_create(x,y,HorrorBigBall)
 {
+	if other.sprite_index == sprBecomeHorrorBigBalB
+		sprite_index = sprHorrorBigBallB;
+	else if other.sprite_index == sprBecomeHorrorBigBalC
+		sprite_index = sprHorrorBigBallC;
 	team = other.team;
 	//Max is about 20
 	myPower = other.myPower;

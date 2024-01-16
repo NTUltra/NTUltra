@@ -50,20 +50,25 @@ else
 {
 	with instance_create(x,y,BigDogExplo)
 	{
+		if other.object_index == InvertedScrapBoss
+			sprite_index = sprInvertedBigDogExplode;
 		spr_dead = other.spr_dead;
 	}
-	//drop IDKWID?
-	if(random(1000)<1){
-	with instance_create(x,y,WepPickup)
+	if loops == 1
 	{
-	scrWeapons()
-	wep =75
-	name = wep_name[wep]
-	ammo = 0
-	type = wep_type[wep]
-	curse = 0
-	sprite_index = wep_sprt[wep]
-	}}
+		//drop IDKWID?
+		if(random(1000)<1){
+		with instance_create(x,y,WepPickup)
+		{
+		scrWeapons()
+		wep =75
+		name = wep_name[wep]
+		ammo = 0
+		type = wep_type[wep]
+		curse = 0
+		sprite_index = wep_sprt[wep]
+		}}
+	}
 }
 event_inherited()
 

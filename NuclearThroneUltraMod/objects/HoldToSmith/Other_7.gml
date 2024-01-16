@@ -1,6 +1,12 @@
 /// @description COMBINE
 with Player
 {
+	with UberCont {
+		if useSeed {
+			random_set_seed(seed + seedWeaponSmith);
+			seedWeaponSmith += 1414;
+		}
+	}
 	if bwep!=0
 	{
 	    //var upgradechance = wep_area[wep]-wep_area[bwep];

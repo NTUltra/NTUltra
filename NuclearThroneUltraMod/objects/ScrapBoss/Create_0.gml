@@ -10,7 +10,7 @@ mySize = 3
 
 event_inherited()
 
-
+isInverted = false;
 spr_idle = sprScrapBossIdle
 spr_walk = sprScrapBossWalk
 spr_hurt = sprScrapBossHurt
@@ -68,6 +68,10 @@ with Raven
 {
 scrRavenLift()
 }
+with InvertedRaven
+{
+scrInvertedRavenLift()
+}
 }
 acc = 0.5;
 maxSpeed = 2;
@@ -80,7 +84,7 @@ fireRate = 6;
 turnSpeed = 4;
 if loops > 0
 {
-	actTime = 12;
+	actTime = 9;
 	missileAmount = 4;
 }
 if loops > 1

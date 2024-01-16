@@ -31,7 +31,8 @@ if instance_exists(ChainTripwireStick) && instance_number(ChainTripwireStick) > 
 	with instance_create(xx,yy,Flame)
 	{
 		scrCopyWeaponMod(other);
-		vspeed -= 1;
+		motion_add(other.image_angle - 90,2);
+		vspeed -= 3 + random(2);
 		team = other.team;	
 	}
 }

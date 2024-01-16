@@ -85,6 +85,8 @@ if my_health > 0
 				instance_destroy();	
 			}
 			snd_play(choose(snd_lowa,snd_lowh));
+			lastarea = area;
+			lastsubarea = subarea;
 		}
 		with instance_create(x,y,Portal)
 		{

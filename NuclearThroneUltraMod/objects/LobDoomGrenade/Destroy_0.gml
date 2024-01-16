@@ -1,6 +1,6 @@
 /// @description Replace me with a nice doomguy
 instance_create(x,y,Smoke);
-snd_play(choose(sndDoomGuy1,sndDoomGuy2,sndDoomGuy3,sndDoomGuy4,sndDoomGuy5),0.1);
+snd_play(choose(sndDoomGuy1,sndDoomGuy2,sndDoomGuy3,sndDoomGuy4,sndDoomGuy5),0.1,false,true,5,false,false,0.7);
 with instance_create(x,y,DoomGrenade)
 {
 	scrCopyWeaponMod(other);

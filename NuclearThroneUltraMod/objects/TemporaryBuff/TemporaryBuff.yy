@@ -34,7 +34,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "sprRageMaxBloom",
+    "path": "sprites/sprRageMaxBloom/sprRageMaxBloom.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

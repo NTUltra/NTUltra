@@ -492,7 +492,7 @@ function scrSkills() {
 	skill_msnd[37] =  sndMutEcstaticFists
 	skill_bons[37] = "+5% DAMAGE INCREASE"
 	
-	skill_name[38] = "mMETABOLISM"
+	skill_name[38] = "METABOLISM"
 	skill_text[38] = "<aq>NEGATE<aq> EVERY THIRD HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD"
 	skill_detail[38] = "<aq>NEGATE<aq> EVERY THIRD HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD##ALLOWS SELF INFLICTED DAMAGE"
 	skill_tips[38] = "delicious"

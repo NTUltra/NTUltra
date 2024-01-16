@@ -12,7 +12,7 @@ dmg = 5;
 myExplosionMask = -1;
 myScorchMark = noone;
 var um = GetPlayerUltramod()
-if object_index != PopoExplosion && object_index != RogueExplosion && um == ultramods.bloodExplosionExplosion && UberCont.ultramodSwap
+if um == ultramods.bloodExplosionExplosion && UberCont.ultramodSwap
 {
 	mask_index = mskPickupThroughWall;
 	visible = false;

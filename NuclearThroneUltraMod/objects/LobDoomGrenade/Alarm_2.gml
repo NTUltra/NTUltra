@@ -5,7 +5,7 @@ else
 {
 	alarm[4] = 4;
 	image_speed = 0.4;
-	snd_play(choose(sndDoomGuy1,sndDoomGuy2,sndDoomGuy3,sndDoomGuy4,sndDoomGuy5),0.1);
+	snd_play(choose(sndDoomGuy1,sndDoomGuy2,sndDoomGuy3,sndDoomGuy4,sndDoomGuy5),0.1,false,true,5,false,false,0.7);
 	with instance_create(x,y,DropDoomGrenade) {
 		direction = other.direction + (random_range(-10,10)*other.accuracy);
 		image_angle = direction;

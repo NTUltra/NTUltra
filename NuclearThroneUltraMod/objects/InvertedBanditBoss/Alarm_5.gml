@@ -17,14 +17,5 @@ with BanditBoss
 intro=1;
 
 intro = 1
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1]=10;
-else
-alarm[1] = 60;
-}
-else
-alarm[1] = 60
 }
 

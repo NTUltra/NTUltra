@@ -4,7 +4,7 @@ encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "30.07"//"PR 30.02";
-subUpdateVersion = ".BETA1";
+subUpdateVersion = ".00";
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
 /*
@@ -129,7 +129,8 @@ enum ultramods {
 maxUltramod = 16;
 ultramodSwap = true;
 casualModeHPIncrease = 2;
-globalMutationsChosen = 0;
+globalMutationsChosen = 0;//Seeding
+seedWeaponSmith = 0;
 
 hadBossIntro = false;
 snd_wallbreak = sndSilence;//sndWallBreak;

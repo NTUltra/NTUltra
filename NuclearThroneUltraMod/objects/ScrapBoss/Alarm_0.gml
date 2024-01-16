@@ -9,17 +9,9 @@ else
 	ammo = 0
 	if random(4+instance_number(missileType)*0.75) < 1 and instance_exists(Player)
 	{
-		snd_play(sndBigDogMissile)
-		repeat(missileAmount)
-		{
-			with instance_create(x,y,missileType)
-			{
-				motion_add(random(360),2)
-				team = other.team;
-			}
-		}
-
-		alarm[0] = actTime*2
+		event_user(3)
+		
+		
 	}
 	else
 	{

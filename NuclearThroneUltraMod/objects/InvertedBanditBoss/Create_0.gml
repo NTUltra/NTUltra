@@ -60,6 +60,6 @@ scrAddDrops(2);
 
 if instance_exists(Player) && Player.skill_got[29]
 {
-	alarm[1]+=30;
+	alarm[1]+=45;
 	scrGiveSnooze();
 }

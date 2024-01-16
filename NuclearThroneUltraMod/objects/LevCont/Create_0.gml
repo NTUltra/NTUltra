@@ -356,6 +356,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 			skill_got[32] = 1;
 			skill_got[18] = 1;
 			skill_got[38] = 1;
+			skill_got[40] = 1;
 			if race != 10 && race != 12 && race != 18 && race != 19
 			{
 				//not Rebel yung cuz, angel and skeleton
@@ -365,7 +366,6 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 				skill_got[7] = 1;
 				skill_got[9] = 1;
 				skill_got[31] = 1;
-				skill_got[40] = 1;
 				skill_got[41] = 1;
 			}
 		}
@@ -525,13 +525,13 @@ if scrIsGamemode(32) {
 		skill_got[32] = 0;
 		skill_got[18] = 0;
 		skill_got[38] = 0;
+		skill_got[40] = 0;
 		if race != 10 && race != 12 && race != 18 && race != 19
 		{
 			skill_got[1] = 0;
 			skill_got[7] = 0;
 			skill_got[9] = 0;
 			skill_got[31] = 0;
-			skill_got[40] = 0;
 			skill_got[41] = 0;
 		}
 	}

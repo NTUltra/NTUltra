@@ -344,7 +344,10 @@ var tookHit = false;
 if my_health < prevhealth
 {
 	tookHit = true;
-	instance_create(x,y,DropReducer);
+	if !exception
+	{
+		instance_create(x,y,DropReducer);
+	}
 	//Insakill
 	if !exception && alarm[3] < 1
 	{

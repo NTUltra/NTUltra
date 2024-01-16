@@ -2,8 +2,7 @@ function scrDrop(itemdrop, weapondrop) {
 	var pickup = noone;
 	if instance_exists(DropReducer)
 	{
-		var reductions = max(0,1 - (instance_number(DropReducer) * 0.2));
-		debug("Reductions: " + string(reductions));
+		var reductions = max(0.1,1 - (instance_number(DropReducer) * 0.2));
 		itemdrop *= reductions;
 	}
 	if weapondrop > 0
@@ -44,8 +43,7 @@ function scrDrop(itemdrop, weapondrop) {
 			}
 			else
 			{
-				mh += (instance_number(WantHealth) * 0.1);
-				debug("WantHealth: " + string(mh));
+				mh += (instance_number(WantHealth) * 0.05);
 			}
 		}
 		var rebelBuff = 0;

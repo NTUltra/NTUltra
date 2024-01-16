@@ -10,8 +10,7 @@ if target != noone {
             if ran < 7 {
 				if ran < 4
 					walk += actTime * 2;
-				
-				event_user(0);
+				alarm[4] = 5;
             }
             else {
                 direction = dir + (random(180) - 90)

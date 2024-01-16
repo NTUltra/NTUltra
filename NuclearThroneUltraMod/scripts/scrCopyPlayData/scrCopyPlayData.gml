@@ -131,6 +131,7 @@ function scrCopyPlayData(){
 		lastEnemyKilled: Player.lastEnemyKilled,
 		phoenixrevives: Player.phoenixrevives,
 		globalMutationsChosen: UberCont.globalMutationsChosen,
+		seedWeaponSmith: UberCont.seedWeaponSmith,
 		canMultiCrown: UberCont.canMultiCrown,
 		randomDailyMod: UberCont.randomDailyMod,
 		/*

@@ -11,4 +11,4 @@ snd_hit=sndHitWall;
 longarms = 0;
 dmg=12;
 wallPierce = 0;
-alarm[4] = 10;
+alarm[4] = 6;
