@@ -2592,6 +2592,7 @@
     {"id":{"name":"sprGoldenBigBotWalk","path":"sprites/sprGoldenBigBotWalk/sprGoldenBigBotWalk.yy",},},
     {"id":{"name":"sprRebelMenuDeselect","path":"sprites/sprRebelMenuDeselect/sprRebelMenuDeselect.yy",},},
     {"id":{"name":"sprInvertedVultureHurt","path":"sprites/sprInvertedVultureHurt/sprInvertedVultureHurt.yy",},},
+    {"id":{"name":"scrItteratePotentialRaceGamemodeLeaderboard","path":"scripts/scrItteratePotentialRaceGamemodeLeaderboard/scrItteratePotentialRaceGamemodeLeaderboard.yy",},},
     {"id":{"name":"sprEnemyBouncerRevolver","path":"sprites/sprEnemyBouncerRevolver/sprEnemyBouncerRevolver.yy",},},
     {"id":{"name":"sprLogMenu","path":"sprites/sprLogMenu/sprLogMenu.yy",},},
     {"id":{"name":"sprBouncerWaveCrossbow","path":"sprites/sprBouncerWaveCrossbow/sprBouncerWaveCrossbow.yy",},},

@@ -1,5 +1,5 @@
 /// @description Init
-updateVersion = "30.07";
+updateVersion = "I AM WORKING ON THE SERVER SORRY BRO";
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;
 maxwep = 660;
@@ -21,6 +21,8 @@ defaultTotalDailies = -1;
 defaultTotalWeeklies = -1;
 weekGamemode = -1;
 weeklyOption = [];
+biDailyGamemode = -1;
+biDailylyOption = [];
 event_perform(ev_alarm,0);
 event_user(0);
 
@@ -30,12 +32,15 @@ enum NETDATA {
 	SCORE,
 	RACE,
 	WEEKLY,
+	BIDAILYGAMEMODE,
 	LEADERBOARD,
 	LEADERBOARDRACE,
+	LEADERBOARDGAMEMODE,
 	LEADERBOARDWEEKLY,
 	CONFIRMRACE,
 	STARTWEEKLY,
 	STARTDAILY,
+	STARTBIDAILYGAMEMODE,
 	CANIPARTICIPATE,
 }
 draw_set_font(fntM);

@@ -276,14 +276,14 @@ function scrSkills() {
 	if !UberCont.lastwishused
 	{
 		skill_name[18] = "LAST WISH"
-		skill_detail[18] = "GAIN 1 <w>LIFE<w>#<aq>PREVENT<aq> LETHAL DAMAGE#AND RESET <r>HEALTH<r> TO MAX# ONCE PER LOOP##GET HALF <r>HEALTH<r> AND SOME <y>AMMO<y>"
+		skill_detail[18] = "GAIN 1 <w>LIFE<w>#<aq>PREVENT<aq> LETHAL DAMAGE#AND RESET <r>HEALTH<r> TO HALF# ONCE PER LOOP##GET FULL <r>HEALTH<r> AND SOME <y>AMMO<y> NOW"
 		skill_tips[18] = "listen"
 		skill_msnd[18] =  sndMutLastWish
 	}
 	else
 	{
 		skill_name[18] = "LAST WISH"
-		skill_detail[18] = "<aq>PREVENT<aq> <w>LETHAL DAMAGE<w>#AND RESET HEALTH TO MAX# ONCE PER LOOP##GET HALF <r>HEALTH<r> AND SOME <y>AMMO<y>##REGAIN ONE PART OF YOUR <w>LIFE<w>"
+		skill_detail[18] = "<aq>PREVENT<aq> <w>LETHAL DAMAGE<w>#AND RESET HEALTH TO HALF# ONCE PER LOOP##GET FULL <r>HEALTH<r> AND SOME <y>AMMO<y> NOW##REGAIN ONE PART OF YOUR <w>LIFE<w>"
 		skill_tips[18] = "listen"
 		skill_msnd[18] =  sndMutLastWish
 	}
@@ -308,7 +308,7 @@ function scrSkills() {
 
 	skill_name[21] = "BOLT MARROW"
 	skill_text[21] = "HOMING <w>BOLTS<w>#BETTER <w>BOLT<w> PIERCE"
-	skill_detail[21] = skill_text[21] + "#(WEAPON SPECIFIC MUTATION)";
+	skill_detail[21] = "HOMING <w>BOLT<w> TYPE WEAPONS#BETTER <w>BOLT<w> PIERCE#(WEAPON SPECIFIC MUTATION)";
 	skill_tips[21] = "bolts everywhere"
 	skill_msnd[21] =  sndMutBoltMarrow
 	skill_bons[21] = "+15% HOMING";

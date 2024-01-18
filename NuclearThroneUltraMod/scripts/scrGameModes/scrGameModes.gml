@@ -192,11 +192,11 @@ function scrGameModes() {
 	gamemode_description[42] = "\nLOAD IN A JSON FILE TO PLAY CUSTOMIZED WAVES IN SURVIVAL ARENA";
 	gamemode_nocombo[42] = [6,8,10,18,20,21,25,26,27,34,36,37,40,42,43,44,45,46];
 	
-	gamemode[26] = "DAILY RACE";
+	gamemode[26] = "BI-DAILY RACE/GAMEMODE";
 	gamemode_unlock[26] = "";
 	gamemode_have[26] = 1;
 	gamemode_tip[26] = "GOTTA GO FAST";
-	gamemode_description[26] = "COMPETE FOR THE FASTEST TIME IN THE LEADERBOARD, TIME ENDS WHEN YOU KILL THRONE II";
+	gamemode_description[26] = "ON ODD DAYS RACE COMPETE FOR THE FASTEST TIME IN THE LEADERBOARD, TIME ENDS WHEN YOU KILL THRONE II##ON EVEN DAYS PLAY ANOTHER GAMEMODE";
 	gamemode_nocombo[26] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,0,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48];
 	
 	gamemode[27] = "DAILY SCORE";
@@ -339,6 +339,7 @@ function scrGameModes() {
 	gamemode_tip[47] = "WHO AM I?";
 	gamemode_description[47] = "EQUIP A SECOND ACTIVE FROM ANY CHARACTER";
 	gamemode_nocombo[47] = [26,27,37,8];
+	
 	/*
 		for this
 		Create a new weapon called the Marskman

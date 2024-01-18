@@ -36,7 +36,7 @@ function scrSaveOptions() {
 	ini_write_real("OPTIONS","resolutionscale",opt_resolution_scale);
 	if normalGameSpeed < 30
 		normalGameSpeed = 30;
-	if scrIsGamemode(26) || scrIsGamemode(27) || scrIsGamemode(37) || isWeekly//Can't save daily
+	if scrIsGamemode(26) || scrIsGamemode(27) || scrIsGamemode(37) || isLeaderboardGamemode//Can't save daily
 	{
 		ini_write_real("OPTIONS","gamemodes",1);
 		ini_write_real("OPTIONS","gamemode0",0);

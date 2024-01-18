@@ -343,7 +343,10 @@ else if array_length(leaderboard) > 0
 				if viewingWeekly
 					UberCont.weeklyWeek ++;
 				else
+				{
 					UberCont.dailyDay ++;
+					scrItteratePotentialRaceGamemodeLeaderboard();
+				}
 					
 				page = 0;
 				event_user(0);
@@ -390,7 +393,10 @@ else if array_length(leaderboard) > 0
 				if viewingWeekly
 					UberCont.weeklyWeek --;
 				else
+				{
 					UberCont.dailyDay --;
+					scrItteratePotentialRaceGamemodeLeaderboard();
+				}
 				
 				page = 0;
 				event_user(0);
@@ -410,19 +416,35 @@ else if array_length(leaderboard) > 0
 	{
 		s = 1.25;
 		if mouse_check_button_pressed(mb_left) {
+			UberCont.weeklyWeek = UberCont.totalWeeklies;
+			UberCont.dailyDay = UberCont.totalDailies;
 			//Just get leaderboard
 			if viewingWeekly
 			{
 				leaderboardType = LEADERBOARD.SCORE;
 				viewingWeekly = false;
 			}
-			else if leaderboardType == LEADERBOARD.RACE
+			else if leaderboardType == LEADERBOARD.RACE || UberCont.viewDailyGamemode
+			{
 				leaderboardType = LEADERBOARD.WEEKLY;
+				UberCont.viewDailyGamemode = false;
+			}
 			else
+			{
 				leaderboardType = LEADERBOARD.RACE;
+				viewingWeekly = false;
+				if (UberCont.dailyDay % 2 == 0)
+				{
+					leaderboardType = LEADERBOARD.WEEKLY;
+					UberCont.viewDailyGamemode = true;
+				}
+				else 
+				{
+					UberCont.viewDailyGamemode = false
+				}
+			}
 			page = 0;
-			UberCont.weeklyWeek = UberCont.totalWeeklies;
-			UberCont.dailyDay = UberCont.totalDailies;
+			
 			page = 0;
 			event_user(0);
 			leaderboard = [];
@@ -468,7 +490,10 @@ else if noBoard
 				if viewingWeekly
 					UberCont.weeklyWeek ++;
 				else
+				{
 					UberCont.dailyDay ++;
+					scrItteratePotentialRaceGamemodeLeaderboard();
+				}
 					
 				page = 0;
 				event_user(0);
@@ -495,7 +520,10 @@ else if noBoard
 				if viewingWeekly
 					UberCont.weeklyWeek --;
 				else
+				{
 					UberCont.dailyDay --;
+					scrItteratePotentialRaceGamemodeLeaderboard();
+				}
 					
 				page = 0;
 				event_user(0);
@@ -515,18 +543,33 @@ else if noBoard
 	{
 		s = 1.25;
 		if mouse_check_button_pressed(mb_left) {
+			UberCont.weeklyWeek = UberCont.totalWeeklies;
+			UberCont.dailyDay = UberCont.totalDailies;
 			//Just get leaderboard
 			if viewingWeekly
 			{
 				viewingWeekly = false;
 				leaderboardType = LEADERBOARD.SCORE;
 			}
-			else if leaderboardType == LEADERBOARD.RACE
+			else if leaderboardType == LEADERBOARD.RACE || UberCont.viewDailyGamemode
+			{
 				leaderboardType = LEADERBOARD.WEEKLY;
+				UberCont.viewDailyGamemode = false;
+			}
 			else
+			{
 				leaderboardType = LEADERBOARD.RACE;
-			UberCont.weeklyWeek = UberCont.totalWeeklies;
-			UberCont.dailyDay = UberCont.totalDailies;
+				viewingWeekly = false;
+				if (UberCont.dailyDay % 2 == 0)
+				{
+					leaderboardType = LEADERBOARD.WEEKLY;
+					UberCont.viewDailyGamemode = true;
+				}
+				else
+				{
+					UberCont.viewDailyGamemode = false
+				}
+			}
 			page = 0;
 			event_user(0);
 			leaderboard = [];

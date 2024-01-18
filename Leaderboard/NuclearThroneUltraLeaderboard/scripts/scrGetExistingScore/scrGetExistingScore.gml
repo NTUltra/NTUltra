@@ -1,8 +1,7 @@
 ///scrHasExistingScore();
 // /@description
 ///@param
-function scrGetExistingScore(fileName,userId) {
-	var stringChecker = "scorelb";
+function scrGetExistingScore(fileName,userId,stringChecker = "scorelb") {
 	ini_open(fileName);
 	var i = 0;
 	if (file_exists(fileName))

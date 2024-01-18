@@ -62,7 +62,8 @@ if (res < 0) {
 	//FAIL
 	debug("CONNECTION FAIL");
 	UberCont.opt_gamemode = [0];
-	UberCont.isWeekly = false;
+	UberCont.isLeaderboardGamemode = false;
+	UberCont.viewDailyGamemode = false;
 } else
 {
 }

@@ -1,6 +1,7 @@
 if other.team != team
 {with other
 	{
+		speed -= 0.1;
 		if sprite_index != spr_hurt
 		{
 			snd_play(snd_hurt, hurt_pitch_variation)

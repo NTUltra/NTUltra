@@ -1082,7 +1082,7 @@ if (selected &&
 		}
 	
 		with UberCont {
-		if (isWeekly) {
+		if (isLeaderboardGamemode) {
 			//if (scrIsWeeklyScoreHigher(Player.kills)) {
 				runScore[8] = Player.altUltra;
 				runScore[14] = getUltraMutation();

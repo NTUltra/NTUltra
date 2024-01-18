@@ -645,16 +645,11 @@ else if !reincarnate
 					debug("POST SCOORE: ",runScore);
 					canRestart = true;
 				}
-				else if (scrIsGamemode(26) && !instance_exists(StartDaily))
-				{
-					useSeed = false;
-					//opt_gamemode = [0];
-					leaderboardType = LEADERBOARD.RACE;
-					goToLeaderboard = true;
-					canRestart = true;
-				}
-				else if (isWeekly && !instance_exists(StartDaily)){
-				
+				else if (isLeaderboardGamemode && !instance_exists(StartDaily)) {
+					if scrIsGamemode(26) {
+						UberCont.viewDailyGamemode = true;
+						debug("ITS A DAILY GAMEMODE");
+					}
 					useSeed = false;
 					leaderboardType = LEADERBOARD.WEEKLY;
 					goToLeaderboard = true;
@@ -717,6 +712,14 @@ else if !reincarnate
 							}
 						//}
 					}
+				}
+				else if (scrIsGamemode(26) && !instance_exists(StartDaily))
+				{
+					useSeed = false;
+					//opt_gamemode = [0];
+					leaderboardType = LEADERBOARD.RACE;
+					goToLeaderboard = true;
+					canRestart = true;
 				}
 			}
 			scrSave();

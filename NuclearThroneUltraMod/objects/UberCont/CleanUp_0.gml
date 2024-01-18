@@ -1,5 +1,5 @@
 /// @description Clean up maps and lists
-if isWeekly
+if isLeaderboardGamemode
 {
 	opt_gamemode = [0];	
 }

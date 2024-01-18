@@ -1,21 +1,30 @@
 instance_create(x,y,DiscTrail);
+alarm[1] = 1;
 
 
 dist += 1
+var dis = 15;
+var stopper = 1.25;
 
 if instance_exists(Player) and instance_exists(enemy)
 {
-	dir = instance_nearest(x,y,enemy)
-	if instance_exists(dir) && dir.team != team && speed > 0 and Player.skill_got[21] = 1 and point_distance(x,y,dir.x,dir.y) < 48 +Player.betterboltmarrow
+	if Player.skill_got[21]
 	{
-		x += lengthdir_x(4,point_direction(x,y,dir.x,dir.y))
-		y += lengthdir_y(4,point_direction(x,y,dir.x,dir.y))
+		stopper += 1;
+		dis += 39 + Player.betterboltmarrow;
+	}
+	dir = instance_nearest(x,y,enemy)
+	if instance_exists(dir) && dir.team != team && speed > 0 and point_distance(x,y,dir.x,dir.y) < dis
+	{
+		var dir = point_direction(x,y,dir.x,dir.y);
+		x += lengthdir_x(speed*0.5,dir)
+		y += lengthdir_y(speed*0.5,dir)
 	}
 }
 
-if dist>distrange
+if dist > distrange
 {
-	friction = 0.1;
+	friction = 0.2;
 	if instance_exists(Player)
 	{//return to player
 		motion_add(point_direction(x,y,Player.x,Player.y),0.8);
@@ -24,9 +33,12 @@ if dist>distrange
 			instance_destroy();
 			instance_create(x,y,DiscDisappear)
 		}
-
 	}
+	
+	if speed < stopper
+	{
+		alarm[1] = 2;
+	}	
 }
 
-image_angle+=20;
-alarm[1] = 1;
+image_angle += 20;

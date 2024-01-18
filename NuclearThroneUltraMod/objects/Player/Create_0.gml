@@ -202,7 +202,7 @@ with UberCont {
     //Daily
 	if !instance_exists(PlayerSpawn) && instance_number(Player) == 1 && !instance_exists(CrownIcon)
 	{
-		if isWeekly {
+		if isLeaderboardGamemode {
 			UberCont.opt_gamemode = [0];
 			instance_create(0,0,StartDaily);
 			// canRestart = false;

@@ -6,12 +6,15 @@ enum NETDATA {
 	SCORE,
 	RACE,
 	WEEKLY,
+	BIDAILYGAMEMODE,
 	LEADERBOARD,
 	LEADERBOARDRACE,
+	LEADERBOARDGAMEMODE,
 	LEADERBOARDWEEKLY,
 	CONFIRMRACE,
 	STARTWEEKLY,
 	STARTDAILY,
+	STARTBIDAILYGAMEMODE,
 	CANIPARTICIPATE,
 }
 
@@ -34,3 +37,5 @@ newUpdateLerpTime = 0;
 updateSurface = -1;
 canShow = false;
 canParticipate = true;
+canParticipateInGamemode = false;
+isRace = true;

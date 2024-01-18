@@ -5,7 +5,19 @@ if mode = 0
 //TITLE SCREEN
 if KeyCont.key_fire[p] = 1 && !instance_exists(Vlambeer)
 {
+
 mode = 1
+debug("scores: ", instance_number(DailyScore));
+instance_create(x,y,LoadoutSelect);
+instance_create(x,y,CreditsSelect)
+instance_create(x,y,StatsSelect)
+instance_create(x,y,QuitSelect);
+instance_create(x,y,OptionSelect)
+instance_create(x,y,OptionSelect2)
+instance_create(x,y,DailyScore);
+instance_create(x,y,DailyRace);
+instance_create(x,y,Weekly);
+instance_create(x,y,ViewLeaderboard);
 	if firstEntry
 	{
 		with UpdateChecker
@@ -34,16 +46,7 @@ repeat(racemax+1)
 	}
 	num += 1;
 }
-instance_create(x,y,LoadoutSelect);
-instance_create(x,y,CreditsSelect)
-instance_create(x,y,StatsSelect)
-instance_create(x,y,QuitSelect);
-instance_create(x,y,OptionSelect)
-instance_create(x,y,OptionSelect2)
-instance_create(x,y,DailyScore);
-instance_create(x,y,DailyRace);
-instance_create(x,y,Weekly);
-instance_create(x,y,ViewLeaderboard);
+
 //instance_create(x,y,UpdateSelect)
 instance_create(x,y,Cheatcode);
 //If savefile found

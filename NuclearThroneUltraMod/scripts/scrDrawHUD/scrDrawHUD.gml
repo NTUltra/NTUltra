@@ -165,7 +165,7 @@ function scrDrawHUD() {
 				scrDrawHelp(gamemodeScrollString);
 			}
 		}
-		if UberCont.isWeekly
+		if UberCont.isLeaderboardGamemode
 		{
 			draw_sprite(sprWeeklyChallengeHUD,0,vx+2,vy+__view_get( e__VW.HView, 0 )-2);
 		}

@@ -56,7 +56,7 @@ if unkillable
 {
 	alarm[3] = 2;
 }
-var representingCost = wep_cost[wep];
+var representingCost = round(wep_cost[wep]);
 var ignoreAmmo = false;
 if ultra_got[70]
 	representingCost = min(representingCost,0.5);
@@ -1697,7 +1697,7 @@ if (instance_exists(enemy))
 		homeBoost += 2.5;
 	if skill_got[19]
 	{
-		homeBoost += 0.7;
+		homeBoost += 0.75;
 		if race == 25
 			homeBoost += 0.1;
 	}

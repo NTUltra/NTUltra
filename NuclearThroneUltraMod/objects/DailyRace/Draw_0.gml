@@ -15,7 +15,7 @@ if hover
 	}
 	else
 	{
-		var name = "DAILY RACE";
+		var name = dailyName;
 		var yy = y+36;
 		draw_set_colour(c_black);
 		draw_text(xx+1,yy + 1,name);

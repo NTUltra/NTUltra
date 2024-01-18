@@ -21,10 +21,10 @@ if (type == network_type_data) {
 			if latestVersion != UberCont.updateVersion || !gotSteam
 			{
 				UberCont.opt_gamemode = [0];
-				UberCont.isWeekly = false;
+				UberCont.isLeaderboardGamemode = false;
 				alarm[0] = min(alarm[0],1);
 			}
-			else if UberCont.isWeekly {
+			else if UberCont.isLeaderboardGamemode {
 				debug("WEEKLY");
 				var sendBuffer = buffer_create(3,buffer_fixed,1);
 				buffer_write(sendBuffer,buffer_u8,NETDATA.STARTWEEKLY);
@@ -91,13 +91,17 @@ if (type == network_type_data) {
 				alarm[1] += 1;
 			}
 		break;
+		case NETDATA.STARTBIDAILYGAMEMODE:
+			UberCont.isLeaderboardGamemode = true;
+			UberCont.dailyDay = buffer_read(buffer, buffer_u16);
 		case NETDATA.STARTWEEKLY:
-			debug("YES WEEKLY DATA");
 			UberCont.todaysSeed = buffer_read(buffer, buffer_u16);
-			debug("the seed: ", UberCont.todaysSeed);
 			UberCont.seed = UberCont.todaysSeed;
 			UberCont.opt_gamemode = [];
-			UberCont.opt_gamemode = [37,buffer_read(buffer, buffer_u8)];
+			if (data == NETDATA.STARTBIDAILYGAMEMODE)
+				UberCont.opt_gamemode = [26,buffer_read(buffer, buffer_u8)];
+			else
+				UberCont.opt_gamemode = [37,buffer_read(buffer, buffer_u8)];
 			var i = 2;
 			repeat(2)
 			{

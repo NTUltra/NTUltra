@@ -2311,6 +2311,7 @@
     {"name":"sprGoldenBigBotWalk","order":19,"path":"sprites/sprGoldenBigBotWalk/sprGoldenBigBotWalk.yy",},
     {"name":"sprRebelMenuDeselect","order":32,"path":"sprites/sprRebelMenuDeselect/sprRebelMenuDeselect.yy",},
     {"name":"sprInvertedVultureHurt","order":11,"path":"sprites/sprInvertedVultureHurt/sprInvertedVultureHurt.yy",},
+    {"name":"scrItteratePotentialRaceGamemodeLeaderboard","order":11,"path":"scripts/scrItteratePotentialRaceGamemodeLeaderboard/scrItteratePotentialRaceGamemodeLeaderboard.yy",},
     {"name":"sprEnemyBouncerRevolver","order":44,"path":"sprites/sprEnemyBouncerRevolver/sprEnemyBouncerRevolver.yy",},
     {"name":"sprLogMenu","order":33,"path":"sprites/sprLogMenu/sprLogMenu.yy",},
     {"name":"sprBouncerWaveCrossbow","order":455,"path":"sprites/sprBouncerWaveCrossbow/sprBouncerWaveCrossbow.yy",},

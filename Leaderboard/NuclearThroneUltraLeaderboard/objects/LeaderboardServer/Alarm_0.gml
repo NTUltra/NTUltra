@@ -27,8 +27,13 @@ if day != yesterday
 	}
 	file_find_close();
 	todaySeed = scrGetSeedOfDay(dayNumber);
+	random_set_seed(todaySeed);
+	var gamemodeReturn = scrChooseGamemodes();
+	dayGamemode = gamemodeReturn[0];
+	dayOption = gamemodeReturn[1];
 	dailyScoreSaveFileString="ds"+string(totalDailies) + "_ntultradailyscore"+string(day)+".sav";
 	dailyRaceSaveFileString=string(totalDailies) + "_ntultradailyrace"+string(day)+".sav";
+	biDailyGamemodeSaveFileString = string(totalDailies) + "_ntultradailygamemode"+string(day)+"+"+string(dayGamemode)+".sav";
 	scoreLeaderboardString = "";
 	raceLeaderboardString = "";
 	if week != lastweek
@@ -40,89 +45,9 @@ if day != yesterday
 		var year = min(date_get_year(date_current_datetime()), date_get_year(weekchecker));//In case week crosses the year
 		weekSeed = week*100 + year;
 		random_set_seed(weekSeed);
-		weekGamemode = [irandom_range(1,41),0,0];
-		//Manual gamemode injection here
-		weeklyOption = [];
-		if weekGamemode == 26//Daily race
-			weekGamemode = 1;
-		switch (weekGamemode[0])
-		{
-			case 1://One weapon only
-				weekOption[0] = scrRollWeapons();
-			break;
-			case 3://NO HUD
-				weekGamemode = [3,15,18];//NO HUD + NO MUTATIONS + NO ELITE POPO
-			break
-			case 4://WAll is lava
-				weekGamemode = [6, 40, 0]//CLAUSTROPHOBIA +1 VS 1
-			break;
-			case 7://ATOM TELEPORT ONLY + One eapon only + random areas
-				weekGamemode = [7, 1, 10];
-				weekOption[0] = scrRollWeapons();
-			break;
-			case 12://ZOMBIES
-				weekGamemode = [12, 39, 0];
-			break;
-			case 13: //ROCKET GLOVE + spike traps + no mutations
-				weekGamemode = [13, 16, 15];
-			break;
-			case 14: //Fish's partner + disc room
-				weekGamemode = [14 , 19, 0]
-				weeklyOption[0] = irandom_range(1,40);//Disc amount
-				weeklyOption[1] = irandom_range(1,5);//Disc damage
-			break;
-			case 15://NO mutations
-				weekGamemode = [19,16,4]; //DISC ROOM, SPIKE TRAPS, WALL IS LAVA
-				weeklyOption[0] = irandom_range(1,100);//Disc amount
-				weeklyOption[1] = irandom_range(1,20);//Disc damage
-			break;
-			case 16://SPIKE TRAPS
-				weekGamemode = [34, 30, 43]//HARD MODE + Ultra mutation start + Multi-Crown
-			break;
-			case 17://CHEATS
-				weekGamemode = [34,32,0];//Hard mode + one hit wonder
-			break;
-			case 18: //NO ELITE IDPD
-				weekGamemode = [25, 41, 30];//Survival arnea + Double enemy HP + Ultra mutation start
-			break;
-			case 19://Disc room
-				weeklyOption[0] = irandom_range(1,100);//Disc amount
-				weeklyOption[1] = irandom_range(1,20);//Disc damage
-			break;
-			case 21://Loop start
-				weekGamemode = [21, 36, 43]//Loop Start + ultra mod start + multi crown
-			break;
-			case 26://Daily race
-				weekGamemode = [22, 28, 0];//infinite levels + all mutations 
-			break;
-			case 27://Daily score
-				weekGamemode = [41, 40, 30];//1 vs 1 + double enemy HP + ultra mutation start
-			break;
-			case 33://All Deflector
-				weekGamemode = [25, 23, 22];//Survival arena, Random Character, Infinite leveling
-			break;
-			case 35://God frog
-				weekGamemode = [34, 29, 39];//Hard mode Infinite levels, Gore galore
-			break;
-			
-			case 37://Weekly
-				weekGamemode = [20, 34, 36];//Agoraphobia + Hard mode + ultra mod start
-			break;
-			case 38://Seeded
-				weekGamemode = [41, 29, 0] //Double enemy HP + Infinite ammo
-			break
-			case 39://Gore galore
-				weekGamemode = [5, 39, 16] //1HP equality + Gore galore + Spike traps
-			break;
-			case 40://1vs1
-				weekGamemode = [6, 22, 43]//Claustophobia + Infinite levels + multi crown
-			break;
-			case 41://Double enemy HP
-				weekGamemode = [6, 19, 9]//Claustophobia + Disc room + casual mode
-				weeklyOption[0] = irandom_range(1,100);//Disc amount
-				weeklyOption[1] = irandom_range(1,20);//Disc damage
-			break;
-		}
+		var gamemodeReturn = scrChooseGamemodes();
+		weekGamemode = gamemodeReturn[0];
+		weeklyOption = gamemodeReturn[1];
 		//week ++;
 		//show_debug_message(string(weekGamemode));
 		//}

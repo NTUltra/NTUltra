@@ -55,7 +55,7 @@ else if gamemodeOrder[gamemodenr] == 37 {
 		image_index = 0;
 	with UberCont
 	{
-		isWeekly = true;
+		isLeaderboardGamemode = true;
 		useSeed = true;
 	}
 }
@@ -64,7 +64,8 @@ else
 	dailyDone = false;
 	with UberCont
 	{
-		isWeekly = false;
+		isLeaderboardGamemode = false;
+		viewDailyGamemode = false;
 		useSeed = false;
 		seedText = "";
 	}

@@ -14,6 +14,7 @@ totalScoreEntries = i;
 scoreLeaderboardString = scoreLeaderboard;
 scoreLeaderboardString = string_replace_all(scoreLeaderboardString,"|","\n");
 
+//Bi-Daily Race
 ini_open(dailyRaceSaveFileString);
 var raceLeaderboard = "";
 var i = 0;

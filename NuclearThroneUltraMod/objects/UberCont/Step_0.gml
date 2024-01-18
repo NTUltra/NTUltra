@@ -184,7 +184,7 @@ if (
 	if (confirmState == 2 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)))
 	{
 		confirmState = 0;
-		if isWeekly
+		if isLeaderboardGamemode
 			opt_gamemode = [0];
 		with UberCont
 		{
@@ -242,7 +242,7 @@ if ( keyboard_check_pressed(ord("Q")) or ( gamepad_button_check(0,gp_shoulderr) 
 	if confirmState == 2 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1))
 	{
 		confirmState = 0;
-		if (UberCont.isWeekly)
+		if (UberCont.isLeaderboardGamemode)
 		{
 			UberCont.opt_gamemode = [0];	
 		}
@@ -270,7 +270,7 @@ if (!instance_exists(StartDaily) &&
 	var endMe = false;
 	if KeyCont.key_paus[0] == 1 and instance_exists(Menu)
 	{
-		if isWeekly
+		if isLeaderboardGamemode
 			opt_gamemode = [0];
 		scrSave();
 		if !instance_exists(OptionSelect)

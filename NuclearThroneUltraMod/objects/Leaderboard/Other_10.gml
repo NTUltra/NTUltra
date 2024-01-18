@@ -2,9 +2,12 @@
 var sendBuffer = buffer_create(7,buffer_fixed,1);
 if viewingWeekly
 	leaderboardType = LEADERBOARD.WEEKLY
-if leaderboardType == LEADERBOARD.WEEKLY
+if (UberCont.viewDailyGamemode)
 {
-	viewingWeekly = true;
+	buffer_write(sendBuffer,buffer_u8,NETDATA.LEADERBOARDGAMEMODE);
+}
+else if leaderboardType == LEADERBOARD.WEEKLY
+{
 	buffer_write(sendBuffer,buffer_u8,NETDATA.LEADERBOARDWEEKLY);
 	buffer_write(sendBuffer,buffer_u16,myClientId);
 	buffer_write(sendBuffer,buffer_u16,page);

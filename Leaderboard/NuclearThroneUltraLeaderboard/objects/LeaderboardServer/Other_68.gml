@@ -37,9 +37,22 @@ if (type == network_type_data) {
 			var socket = buffer_read(buffer, buffer_u16);
 			var userId = buffer_read(buffer, buffer_u64);
 			var canParticipate = scrGetExistingScore(dailyScoreSaveFileString,userId);
-			var sendBuffer = buffer_create(2,buffer_fixed,1);
+			var sendBuffer = buffer_create(4,buffer_fixed,1);
 			buffer_write(sendBuffer,buffer_u8,NETDATA.CANIPARTICIPATE);
 			buffer_write(sendBuffer,buffer_bool,canParticipate);
+			var dailyDay = scrGetDailyNumber();
+			buffer_write(sendBuffer,buffer_u8,dailyDay);
+			if dailyDay % 2 == 0
+			{
+				//Daily gamemode
+				show_debug_message(biDailyGamemodeSaveFileString);
+				var canParticipate = scrGetExistingScore(biDailyGamemodeSaveFileString,userId,"gamemodelb");
+				show_debug_message(string(canParticipate));
+				buffer_write(sendBuffer,buffer_bool,canParticipate);
+			}
+			else {
+				buffer_write(sendBuffer,buffer_bool,true);	
+			}
 			network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
 		break;
 		case NETDATA.STARTDAILY:
@@ -47,7 +60,7 @@ if (type == network_type_data) {
 			var socket = buffer_read(buffer, buffer_u16);
 			var userId = buffer_read(buffer, buffer_u64);
 			var isScoreRun = buffer_read(buffer,buffer_bool);
-			if (isScoreRun)
+			if (isScoreRun)//Daily score
 			{
 				//REGISTER A MOCK SCORE
 				ini_open(dailyScoreSaveFileString);
@@ -61,42 +74,55 @@ if (type == network_type_data) {
 					);
 				ini_close();
 			}
-			//Get correct seed and day based on user time
-			var sendBuffer = buffer_create(5,buffer_fixed,1);
-			buffer_write(sendBuffer,buffer_u8,NETDATA.STARTDAILY);
-			var seed = scrGetSeedOfDay(dayNumber);
-			buffer_write(sendBuffer,buffer_u16,seed);
-			var dailyDay = scrGetDailyNumber();
-			fileName = file_find_first("w"+string(dailyDay) + "_ntultraweekly*", 0);
-			buffer_write(sendBuffer,buffer_u16,dailyDay);
-			network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
-			buffer_delete(sendBuffer);
+			if (!isScoreRun && dayNumber % 2 == 0)//IS DAILY GAMEMODE
+			{
+				//REGISTER A MOCK SCORE
+				ini_open(dailyScoreSaveFileString);
+					var i = 0;
+					while (ini_key_exists("gamemodelb",i))
+					{
+						i ++;
+					}
+					ini_write_string("gamemodelb",i,
+						"x0 "+string(userId)+"   1 1 0 1 2 0 44 0 0 [1] 0 255  "
+					);
+				ini_close();
+				var sendBuffer = buffer_create(6,buffer_grow,1);
+				buffer_write(sendBuffer,buffer_u8,NETDATA.STARTBIDAILYGAMEMODE);
+				var dailyDay = scrGetDailyNumber();
+				var seed = scrGetSeedOfDay(dayNumber);
+				buffer_write(sendBuffer,buffer_u16,dailyDay);
+				scrStartAGamemode(socket, sendBuffer, seed, dayGamemode, dayOption);
+				network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
+				buffer_delete(sendBuffer);
+			}
+			else//Daily & daily race
+			{
+				var sendBuffer = buffer_create(5,buffer_fixed,1);
+				buffer_write(sendBuffer,buffer_u8,NETDATA.STARTDAILY);
+				//Get correct seed and day based on user time
+				var seed = scrGetSeedOfDay(dayNumber);
+				buffer_write(sendBuffer,buffer_u16,seed);
+				var dailyDay = scrGetDailyNumber();
+				buffer_write(sendBuffer,buffer_u16,dailyDay);
+				network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
+				buffer_delete(sendBuffer);
+			}
 		break;
 		case NETDATA.STARTWEEKLY:
 			show_debug_message("Weekly start");
 			var socket = buffer_read(buffer, buffer_u16);
 			var sendBuffer = buffer_create(6,buffer_grow,1);
 			buffer_write(sendBuffer,buffer_u8,NETDATA.STARTWEEKLY);
-			buffer_write(sendBuffer,buffer_u16,weekSeed);
-			show_debug_message("send: " + string(weekGamemode));
-			buffer_write(sendBuffer,buffer_u8,weekGamemode[0]);
-			buffer_write(sendBuffer,buffer_u8,weekGamemode[1]);
-			buffer_write(sendBuffer,buffer_u8,weekGamemode[2]);
-				if (array_contains(weekGamemode, 1))//One weapon only
-				{
-					buffer_write(sendBuffer,buffer_u16,weeklyOption[0]);
-				}
-				if (array_contains(weekGamemode, 19))//Disc room
-				{
-					buffer_write(sendBuffer,buffer_u16,weeklyOption[0]);
-					buffer_write(sendBuffer,buffer_u8,weeklyOption[1]);
-				}
+			scrStartAGamemode(socket, sendBuffer, weekSeed, weekGamemode, weeklyOption);
 			network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
 			buffer_delete(sendBuffer);
 		break;
 		//Receiving score
 		case NETDATA.RACE:
 			isScore = false;
+		case NETDATA.BIDAILYGAMEMODE:
+			show_debug_message("WOW DAILY GM");
 		case NETDATA.WEEKLY:
 			if isScore
 				isWeekly = true;
@@ -104,19 +130,30 @@ if (type == network_type_data) {
 			//if isScore
 			var socket = buffer_read(buffer, buffer_u16);
 			var wantDay = buffer_read(buffer, buffer_u16);
-			show_debug_message("Sending to day: " + string(wantDay));
-			show_debug_message("Having total: " + string(totalDailies));
 			var gm = [];
 			var uid = "";
 			if isWeekly {
-				var findFile = file_find_first("w"+string(wantDay) + "_ntultraweekly*", 0);
+				var findFile;
+				if (data == NETDATA.BIDAILYGAMEMODE)
+				{
+					show_debug_message("WOW DAILY GM !!!");
+					findFile = file_find_first(string(wantDay) + "_ntultradailygamemode*", 0);
+				}
+				else
+				{
+					findFile = file_find_first("w"+string(wantDay) + "_ntultraweekly*", 0);
+				}
 				if findFile == ""
 				{
-					gm = weekGamemode;
+					if (data == NETDATA.BIDAILYGAMEMODE)
+						gm = dayGamemode;
+					else
+						gm = weekGamemode;
 				}
 				else
 				{
 					//"w10_ntultraweekly12-02-1999-7.sav";
+					//"95_ntultradailygamemode12-02-1999-7.sav";
 					var gmn = string_copy(findFile,string_pos("+",findFile)+3,
 					string_length(findFile)-string_pos("+",findFile) - 8);
 					gmn = string_split(gmn,",",false);
@@ -128,6 +165,7 @@ if (type == network_type_data) {
 				uid = buffer_read(buffer, buffer_string);
 			}
 			var newScore = [];
+			//ITS POSSIBLE SOMEONE TRYING TO POST SCORE FROM PREVIOUS VERSION OF THE GAME????
 			newScore[0] = buffer_read(buffer, buffer_u64);//Kills / frame time
 			newScore[1] = buffer_read(buffer, buffer_u64);//User Id
 			newScore[2] = buffer_read(buffer,buffer_string);//Username
@@ -182,12 +220,22 @@ if (type == network_type_data) {
 			var stringChecker = "scorelb"
 			var fileName;
 			if isWeekly {
-				fileName = file_find_first("w"+string(wantDay) + "_ntultraweekly*", 0);
-				show_debug_message("FILE1weekly: " + fileName);
-				stringChecker = "weeklylb"
+				if (data == NETDATA.BIDAILYGAMEMODE)
+				{
+					fileName = file_find_first(string(wantDay) + "_ntultradailygamemode*", 0);
+					stringChecker = "gamemodelb";
+				}
+				else
+				{
+					fileName = file_find_first("w"+string(wantDay) + "_ntultraweekly*", 0);
+					stringChecker = "weeklylb"
+				}
 				if fileName == ""
 				{
-					fileName = weeklySaveFileString;
+					if (data == NETDATA.BIDAILYGAMEMODE)
+						fileName = biDailyGamemodeSaveFileString;
+					else
+						fileName = weeklySaveFileString;
 				}
 			}
 			else if isScore {
@@ -226,7 +274,7 @@ if (type == network_type_data) {
 						if uuid == newScore[1]
 						{
 							show_debug_message("ENTRY ALREADY EXISTS");
-							if isWeekly
+							if (isWeekly && data != NETDATA.BIDAILYGAMEMODE)
 							{
 								if newScore[0] <= kills
 								{
@@ -267,13 +315,13 @@ if (type == network_type_data) {
 						//split on _ then split on | and take second entry thats the kills
 					}
 				}
-				if isWeekly
+				if isWeekly && data != NETDATA.BIDAILYGAMEMODE
 					totalWeeklyEntries = i + 1;
-				else if isScore
+				else if isScore && data != NETDATA.BIDAILYGAMEMODE
 					totalScoreEntries = i + 1;
 				else
 					totalRaceEntries = i + 1;
-				if isWeekly 
+				if isWeekly && data != NETDATA.BIDAILYGAMEMODE
 				{
 					if uid != ""
 					{
@@ -362,14 +410,15 @@ if (type == network_type_data) {
 			ds_list_destroy(scoreList);
 			var sendBuffer = buffer_create(8,buffer_grow,1);
 			buffer_write(sendBuffer,buffer_u8,NETDATA.LEADERBOARD);
+			show_debug_message(readableLeaderboard);
 			buffer_write(sendBuffer,buffer_string,readableLeaderboard);
 			buffer_write(sendBuffer,buffer_string,string_split(string_replace(fileName,"ntultra",""),"_")[1]);
 			buffer_write(sendBuffer,buffer_u16,0);//Page
-			if isWeekly
+			if isWeekly && data != NETDATA.BIDAILYGAMEMODE
 			{
 				buffer_write(sendBuffer,buffer_u16,ceil(totalWeeklyEntries/10)-1);//Total pages
 			}
-			else if isScore
+			else if isScore && data != NETDATA.BIDAILYGAMEMODE
 			{
 				buffer_write(sendBuffer,buffer_u16,ceil(totalScoreEntries/10)-1);//Total pages
 			}
@@ -377,7 +426,7 @@ if (type == network_type_data) {
 			{
 				buffer_write(sendBuffer,buffer_u16,ceil(totalRaceEntries/10)-1);//Total pages
 			}
-			if isWeekly
+			if isWeekly && data != NETDATA.BIDAILYGAMEMODE
 				buffer_write(sendBuffer,buffer_u16,totalWeeklies);//Daily number
 			else
 				buffer_write(sendBuffer,buffer_u16,totalDailies);//Daily number
@@ -392,6 +441,7 @@ if (type == network_type_data) {
 		case NETDATA.LEADERBOARDRACE:
 			getScore = false;
 			show_debug_message("leaderboard request race ");
+		case NETDATA.LEADERBOARDGAMEMODE:
 		case NETDATA.LEADERBOARDWEEKLY:
 			if getScore
 			{
@@ -405,7 +455,7 @@ if (type == network_type_data) {
 			var wantDailyNumber = buffer_read(buffer, buffer_u16);//Display per 10?
 			if wantDailyNumber == -1
 			{
-				if getWeekly
+				if getWeekly && data != NETDATA.LEADERBOARDGAMEMODE
 					wantDailyNumber = totalWeeklies;
 				else
 					wantDailyNumber = totalDailies;
@@ -417,7 +467,12 @@ if (type == network_type_data) {
 			var stringChecker = "scorelb";
 			var fileName;
 			noFile = false;
-			if getWeekly
+			if (data == NETDATA.LEADERBOARDGAMEMODE)
+			{
+				stringChecker = "gamemodelb";
+				fileName = scrGetDailyGamemodeFile(wantDailyNumber);
+			}
+			else if getWeekly
 			{
 				stringChecker = "weeklylb";
 				fileName = scrGetWeeklyFile(wantDailyNumber);
@@ -453,11 +508,11 @@ if (type == network_type_data) {
 			}
 			
 			show_debug_message("total entries: " + string(i));
-			if getWeekly
+			if getWeekly && data == NETDATA.LEADERBOARDGAMEMODE
 			{
 				totalWeeklyEntries = i;
 			}
-			else if !getScore
+			else if !getScore || data == NETDATA.LEADERBOARDGAMEMODE
 			{
 				totalRaceEntries = i;
 			} 
