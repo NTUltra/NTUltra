@@ -1701,7 +1701,7 @@ function scrFire() {
 	//AUTO GRENADE LAUNCHER
 	case 68:
 
-	snd_play_fire(sndGreere)
+	snd_play_fire(sndGrenade)
 
 	with instance_create(x,y,Grenade)
 	{

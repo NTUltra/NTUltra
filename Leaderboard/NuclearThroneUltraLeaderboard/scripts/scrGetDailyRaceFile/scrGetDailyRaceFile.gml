@@ -7,6 +7,7 @@ function scrGetDailyRaceFile(wantDailyNumber){
 	{
 		noFile = true;
 		fileName = file_find_first("ds"+string(wantDailyNumber) + "_ntultradailyscore*", 0);
+		// fileName = string_replace(fileName, "ds", "");
 		fileName = string_replace(fileName, "_ntultradailyscore", "_ntultradailyrace");
 		//fileName = dailyRaceSaveFileString;
 	}

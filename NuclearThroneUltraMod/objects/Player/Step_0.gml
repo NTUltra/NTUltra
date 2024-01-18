@@ -387,7 +387,7 @@ if !instance_exists(LevCont) and visible = 1
 			thing.mytext = "CURSE TOGGLE";
 		}
 		if keyboard_check_pressed(ord("B")) {
-			instance_create(x+16,y,InvertedExploGuardianBullet);
+			instance_create(x,y,WallBreak);
 			wepmod1 ++;
 			wepmod2 ++;
 			wepmod3 ++;

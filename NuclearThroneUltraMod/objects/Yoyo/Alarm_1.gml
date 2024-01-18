@@ -3,22 +3,24 @@ alarm[1] = 1;
 
 
 dist += 1
-var dis = 15;
-var stopper = 1.25;
+var dis = 18;
+var stopper = 1.2;
 
 if instance_exists(Player) and instance_exists(enemy)
 {
+	var homePower = 1;
 	if Player.skill_got[21]
 	{
+		homePower += 0.5;
 		stopper += 1;
 		dis += 39 + Player.betterboltmarrow;
 	}
 	dir = instance_nearest(x,y,enemy)
-	if instance_exists(dir) && dir.team != team && speed > 0 and point_distance(x,y,dir.x,dir.y) < dis
+	if dir != noone && instance_exists(dir) && dir.team != team && speed > 0 and point_distance(x,y,dir.x,dir.y) < dis
 	{
 		var dir = point_direction(x,y,dir.x,dir.y);
-		x += lengthdir_x(speed*0.5,dir)
-		y += lengthdir_y(speed*0.5,dir)
+		x += lengthdir_x(homePower + speed*0.5,dir)
+		y += lengthdir_y(homePower + speed*0.5,dir)
 	}
 }
 

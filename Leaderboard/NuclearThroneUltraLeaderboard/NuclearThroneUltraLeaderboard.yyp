@@ -37,6 +37,7 @@
     {"id":{"name":"scrGetExistingScore","path":"scripts/scrGetExistingScore/scrGetExistingScore.yy",},},
     {"id":{"name":"scrGetSeedOfDay","path":"scripts/scrGetSeedOfDay/scrGetSeedOfDay.yy",},},
     {"id":{"name":"scrChooseGamemodes","path":"scripts/scrChooseGamemodes/scrChooseGamemodes.yy",},},
+    {"id":{"name":"scrRollSpecificWeapon","path":"scripts/scrRollSpecificWeapon/scrRollSpecificWeapon.yy",},},
     {"id":{"name":"fntM","path":"fonts/fntM/fntM.yy",},},
     {"id":{"name":"scrGetDailyFile","path":"scripts/scrGetDailyFile/scrGetDailyFile.yy",},},
     {"id":{"name":"scrGetDailyRaceFile","path":"scripts/scrGetDailyRaceFile/scrGetDailyRaceFile.yy",},},

@@ -52,7 +52,7 @@ else if skill == 39 && Player.race == 10 && (Player.unlockAlternativeUltras ||
 {
 	sprite_index = sprBigRebel;
 }
-else if skill == 43 && Player.race == 11 && (Player.unlockAlternativeUltras || Player.skill_got[19] && Player.skill_got[17])
+else if skill == 43 && Player.race == 11 && (Player.unlockAlternativeUltras || scrCanHunterSniperEye())
 {
 	sprite_index = sprSniperEye;
 }

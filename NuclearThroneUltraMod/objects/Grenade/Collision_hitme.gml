@@ -1,10 +1,12 @@
 if other.team != team
 {
-	if sticky = 1
+	if sticky == 1
 	{
 		if speed > 0
 			snd_play(sndGrenadeStickWall)
 		speed = 0
+		stickTarget = other.id;
+		other.speed *= 0.5;
 		x = other.x+offx
 		y = other.y+offy
 	}

@@ -16,6 +16,10 @@ if target != noone {
                 gunangle = point_direction(xprevious, yprevious, target.xprevious, target.yprevious)
 				if ammo == 0
 					alarm[2] += 7;
+				else if ammo == maxAmmo
+				{
+					alarm[2] += 3;
+				}
 				gonnashoot += 6;
 				with JungleBandit
 				{

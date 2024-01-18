@@ -10,7 +10,7 @@ if um == ultramods.bloodExplosionExplosion
 		image_angle = other.image_angle;
 		speed = other.speed;
 		alarm[11] = 0;
-		destroyAll = true;
+		alarm[3] = 0;
 	}
 	UberCont.ultramodSwap = true;
 	instance_destroy(id,false);

@@ -110,6 +110,7 @@ if (alarm[4] < 0) {
 			direction = point_direction(target.x+lengthdir_x(point_distance(x,y,target.x,target.y)*0.95,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),target.y+lengthdir_y(point_distance(x,y,target.x,target.y)*0.95,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),x,y)+random(60)-30
 			dodge = 3;
 			walk = 4;
+			if sprite_index != spr_hurt
 			sprite_index = spr_walk;
 			gunangle = direction
 		}
@@ -230,5 +231,9 @@ if alarm[2] > 0 && alarm[2] < 20
 	}
 }
 
-if speed > 6.4
-	speed = 6.4
+if speed > 6.2
+	speed = 6.2
+if sprite_index == spr_hurt && speed > 5
+{
+	speed = 5;
+}

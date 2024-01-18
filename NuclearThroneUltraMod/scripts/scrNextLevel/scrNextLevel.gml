@@ -138,8 +138,8 @@ function scrNextLevel() {
 			//Inv scrapyard
 			area = 106
 			lastarea = 106;
-			subarea = 1;
-			inverted = false;
+			subarea = 2;
+			inverted = true;
 			exit;
 		}
 		if area == 125//Inv Mansion

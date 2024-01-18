@@ -228,7 +228,10 @@ function scrPowers(raceOverwrite = -1) {
 			if (effective)
 			{
 				Sleep(40);
-				snd_play_2d(sndChickenStart);
+				if ultra_got[104] && !altUltra
+					snd_play_2d(sndHumphryHaltUpg);
+				else
+					snd_play_2d(sndHumphryHalt);
 				if instance_exists(HumphryDiscipline)
 				{
 					with HumphryDiscipline

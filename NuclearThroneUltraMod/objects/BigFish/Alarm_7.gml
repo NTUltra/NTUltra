@@ -8,7 +8,7 @@ with BoneFish {
 		fish++;
 	}
 }
-
+alarm[1] = actTime * 2;
 if random(3) < 1 && fish < 2 {
 	image_index = 0
 	sprite_index = spr_startfire

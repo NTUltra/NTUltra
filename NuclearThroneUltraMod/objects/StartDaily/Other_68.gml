@@ -114,6 +114,7 @@ if (type == network_type_data) {
 			if scrIsGamemode(1) || scrIsGamemode(46)//One weapon only
 			{
 				UberCont.opt_gm1wep = buffer_read(buffer,buffer_u16);
+				debug(UberCont.opt_gm1wep);
 				with Player
 				{
 					if UberCont.opt_gm1wep == 0 {

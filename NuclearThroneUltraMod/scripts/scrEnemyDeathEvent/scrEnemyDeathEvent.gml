@@ -11,9 +11,27 @@ function scrEnemyDeathEvent(){
 		//PLANT ULTRA B KILLER
 		if Player.ultra_got[18] == 1
 		{
-			if place_meeting(x,y,Tangle)
+			var didSapling = false;
+			with Tangle {
+				var xScale = image_xscale;
+				var yScale = image_yscale;
+				image_xscale *= 2;
+				image_yscale *= 2;
+				if place_meeting(x,y,other.id)
+				{
+					didSapling = true;
+					instance_create(other.x,other.y,Sapling);
+				}
+				image_xscale = xScale;
+				image_yscale = yScale;
+			}
+			if !didSapling && instance_exists(TangleSeed)
 			{
-				instance_create(x,y,Sapling);
+				var n = instance_nearest(x,y,TangleSeed);
+				if n != noone && point_distance(x,y,n.x,n.y) < 32
+				{
+					instance_create(other.x,other.y,Sapling);
+				}
 			}
 		}
 		scrLuckyShot();
@@ -143,7 +161,7 @@ function scrEnemyDeathEvent(){
 				other.raddrop += 2;
 
 			if scrIsCrown(7)
-				other.raddrop=round(other.raddrop*0.55);
+				other.raddrop=round(other.raddrop*0.6);
 
 			if scrIsCrown(28)
 			{

@@ -498,7 +498,7 @@ function scrMakeFloor(limiter) {
 	
 	//jungle
 	if area = 114 || area == 123{
-		if random(8) < 1
+		if random(8) < 1 && instance_number(Floor) % 5 == 0 && instance_number(Floor) < goal * 0.75
 		{
 			instance_create(x,y,Floor)
 			instance_create(x+32,y,Floor)
@@ -755,7 +755,7 @@ function scrMakeFloor(limiter) {
 	else if area == 103 || area == 125
 	trn = choose(0,0,0,90,-90,180)
 	else if area == 114 || area == 123
-	trn = choose(0,0,0,0,0,90,-90,180)
+	trn = choose(0,0,0,0,0,0,0,90,-90,180)
 	else if area == 117 || area == 124
 	trn = choose(0,0,0,0,90,-90,180)
 	else if area == 119 || area == 120

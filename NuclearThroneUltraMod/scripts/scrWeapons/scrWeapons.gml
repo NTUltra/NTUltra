@@ -2782,7 +2782,7 @@ function scrWeapons() {
 	wep_type[251] = 3
 	wep_auto[251] = 1
 	wep_load[251] = 18
-	wep_cost[251] = 2
+	wep_cost[251] = 1.5
 	wep_sprt[251] = sprYoyoGun
 	wep_area[251] = 3
 	wep_text[251] = "away! and return!"
@@ -2902,7 +2902,7 @@ function scrWeapons() {
 	wep_name[262] = "SPIRAL YOYO GUN"
 	wep_type[262] = 3
 	wep_auto[262] = 1
-	wep_load[262] = 12
+	wep_load[262] = 20
 	wep_cost[262] = 6
 	wep_sprt[262] = sprSpiralYoyoGun
 	wep_area[262] = 6
@@ -7226,7 +7226,7 @@ function scrWeapons() {
 	wep_type[653] = 3
 	wep_auto[653] = 1
 	wep_load[653] = 16
-	wep_cost[653] = 2
+	wep_cost[653] = 1.5
 	wep_sprt[653] = sprGoldenYoyoGun
 	wep_area[653] = 19
 	wep_text[653] = "jester"
@@ -7925,6 +7925,28 @@ function scrWeapons() {
 	wep_text[716] = "futuristic weaponry"
 	wep_swap[716] = sndSwapEnergy
 	wep_rad[716] = 0;
+	
+	wep_name[717] = "BLOOD ROCKET GUN"
+	wep_type[717] = 4
+	wep_auto[717] = 1
+	wep_load[717] = 8
+	wep_cost[717] = 2
+	wep_sprt[717] = sprBoodRocketGun
+	wep_area[717] = 6
+	wep_text[717] = "bloody mary"
+	wep_swap[717] = sndSwapExplosive
+	wep_rad[717] = 0;
+	
+	wep_name[718] = "DOUBLE BLOOD ROCKET GUN"
+	wep_type[718] = 4
+	wep_auto[718] = 1
+	wep_load[718] = 10
+	wep_cost[718] = 3
+	wep_sprt[718] = sprDoubleBloodRocketGun
+	wep_area[718] = 11
+	wep_text[718] = "red rockets"
+	wep_swap[718] = sndSwapExplosive
+	wep_rad[718] = 0;
 
 	maxwep = array_length(wep_name)-1;
 
@@ -7986,5 +8008,5 @@ function scrWeapons() {
 	}
 	
 	//Debug how many weapons there are of each tier
-	// scrExportWeapons();
+	//scrExportWeapons();
 }

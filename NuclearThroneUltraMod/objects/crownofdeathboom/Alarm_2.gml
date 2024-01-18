@@ -8,8 +8,8 @@ repeat(am)
 	ang += angStep;
 }
 ang += angStep*0.5;
-dis += disPlus;
-am += amPlus;
+dis += disStep;
+am += amStep;
 rings --;
 if rings > 0
-	alarm[2] = 1;
+	alarm[2] = ringTime;

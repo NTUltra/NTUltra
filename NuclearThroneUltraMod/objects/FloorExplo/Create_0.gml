@@ -1,5 +1,6 @@
 right = 1;
 z = 0;
+wantWall = Wall;
 if (place_meeting(x,y,FloorExplo))
 {
 	instance_destroy();

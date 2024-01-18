@@ -1,4 +1,4 @@
-alarm[1] = 8+random(5)
+alarm[1] = 3+random(4)
 
 if !instance_exists(target)
 target = -1

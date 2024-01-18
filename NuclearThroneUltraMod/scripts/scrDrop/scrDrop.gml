@@ -2,7 +2,7 @@ function scrDrop(itemdrop, weapondrop) {
 	var pickup = noone;
 	if instance_exists(DropReducer)
 	{
-		var reductions = max(0.1,1 - (instance_number(DropReducer) * 0.2));
+		var reductions = max(0.1,1 - (instance_number(DropReducer) * 0.1));
 		itemdrop *= reductions;
 	}
 	if weapondrop > 0

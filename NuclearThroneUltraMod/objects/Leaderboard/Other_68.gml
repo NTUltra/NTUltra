@@ -19,26 +19,18 @@ if (type == network_type_data) {
 			UberCont.totalDailies = buffer_read(buffer, buffer_u16);
 			//Has a day passed?
 			UberCont.totalWeeklies = buffer_read(buffer, buffer_u16);
-			debug("TOTAL WEEKLIES ", UberCont.totalWeeklies);
-			debug("TOTAL DAILIES ", UberCont.totalDailies);
-			debug("isLeaderboardGamemode ", UberCont.isLeaderboardGamemode);
-			debug( "score :",UberCont.runScore);
-			debug( "rees :",UberCont.runRace);
 			if array_length(UberCont.runScore) > 1
 			{
 				debug("send score: ",string(UberCont.runScore));
 				var sendBuffer = buffer_create(29,buffer_grow,1);
 				if UberCont.isLeaderboardGamemode
 				{
-					
 					if UberCont.viewDailyGamemode//daily race
 					{
-						debug("SENDING AS DAILY GM");
 						buffer_write(sendBuffer,buffer_u8,NETDATA.BIDAILYGAMEMODE);
 					}
 					else
 					{
-						debug("SENDING AS WEEKLY");
 						buffer_write(sendBuffer,buffer_u8,NETDATA.WEEKLY);
 					}
 					viewingWeekly = true;
@@ -109,7 +101,6 @@ if (type == network_type_data) {
 		case NETDATA.SCORE:
 		break;
 		case NETDATA.LEADERBOARD:
-			debug("leaderboard received! ", leaderboardType);
 			//Allow continueation quicker
 			if alarm[1] > 3
 				alarm[1] = 3;
@@ -132,10 +123,8 @@ if (type == network_type_data) {
 					if !UberCont.viewDailyGamemode
 						viewingWeekly = true;
 					var displayWeek;
-					debug("Show weekly");
 					if UberCont.viewDailyGamemode
 					{
-						debug("Viewing daily gamemode");
 						leaderboardName[0] = UberCont.today;
 						displayWeek = string_replace(leaderboardTypeString,"dailygamemode","");
 					}
@@ -177,7 +166,6 @@ if (type == network_type_data) {
 					}
 				}
 			}
-			debug(leaderboardTypeString);
 			if string_count("weekly",leaderboardTypeString) > 0 || string_count("dailygamemode",leaderboardTypeString) > 0
 			{
 				viewingWeekly = true;
@@ -243,12 +231,10 @@ if (type == network_type_data) {
 				UberCont.weeklyWeek = buffer_read(buffer,buffer_u16);
 				if UberCont.totalWeeklies < UberCont.weeklyWeek
 					UberCont.totalWeeklies = UberCont.weeklyWeek;
-				debug("get totalweeklies: ", UberCont.totalWeeklies);
 			}
 			else
 			{
 				UberCont.dailyDay = buffer_read(buffer,buffer_u16);
-				debug("Receive daily day: ", UberCont.dailyDay);
 				if UberCont.totalDailies < UberCont.dailyDay
 					UberCont.totalDailies = UberCont.dailyDay;
 			}

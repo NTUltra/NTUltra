@@ -7,6 +7,7 @@ with instance_create(x,y,Smoke)
 
 with instance_create(x,y,SterNuke)
 {motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(4)-2),2)
-image_angle = direction
-team = other.team}
+image_angle = direction + 180
+team = other.team
+alarm[1] = 0;}
 

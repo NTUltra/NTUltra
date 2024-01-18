@@ -39,8 +39,8 @@ function scrEnemyTakingDamage(){
 					    {
 						    if other.id == target.id
 						    {
-								other.my_health -= dmgTaken*0.25;
-								resultDmgTaken += (dmgTaken*0.25);
+								other.my_health -= dmgTaken*0.3;
+								resultDmgTaken += (dmgTaken*0.3);
 						    }
 					    }
         

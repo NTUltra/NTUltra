@@ -9,7 +9,7 @@ if um == ultramods.plasmaRocket
 	}
 	with instance_create(x,y,MiniPlasmaBall)
 	{
-		dmg ++;
+		dmg += 2;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -26,6 +26,7 @@ if um == ultramods.plasmaRocket
 	with instance_create(x,y,Splinter)
 	{
 		scrCopyWeaponMod(other);
+		dmg = other.dmg + 1
 		direction = other.direction;
 		image_angle = direction;
 		speed = 24+other.speed;

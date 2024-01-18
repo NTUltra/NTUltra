@@ -444,8 +444,6 @@ else if array_length(leaderboard) > 0
 				}
 			}
 			page = 0;
-			
-			page = 0;
 			event_user(0);
 			leaderboard = [];
 		}

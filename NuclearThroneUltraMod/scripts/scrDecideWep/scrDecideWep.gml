@@ -3,12 +3,13 @@ function scrDecideWep(wepTierParam, maxTriesParam = 12, cursedParam = 0, minWepA
 	var maxTries = maxTriesParam;
 	var cursed = cursedParam;
 	var minWepArea = minWepAreaParam;
+	var dataRef;
 	if instance_exists(Player)
-		var dataRef = Player;
+		dataRef = Player;
 	else if instance_exists(PlayerSpawn)
-		var dataRef = PlayerSpawn;
+		dataRef = PlayerSpawn;
 	else if instance_exists(DataRef)
-		var dataRef = DataRef;
+		dataRef = DataRef;
 	else
 		return 0;
 	if scrIsGamemode(2) {

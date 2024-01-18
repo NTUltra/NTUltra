@@ -54,5 +54,6 @@ if sprite_index == sprAmmo {
 				alarm[3] = 5;
 			}
 		}
+		alarm[0] = max(alarm[0],15);
 	}
 }

@@ -1,5 +1,5 @@
 move_bounce_solid(false)
-
+speed *= 0.9;
 if dist > 50
 {
 instance_create(x,y,DiscDisappear)

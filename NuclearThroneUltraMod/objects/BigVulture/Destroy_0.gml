@@ -17,7 +17,7 @@ with GraveyardEntrance
 	with PlayerSpawn
 	{
 		area = 126;
-		subarea = 0;	
+		subarea = 0;
 	}
 }
 if UberCont.area == 10 || (instance_exists(Player) && Player.area == 121)

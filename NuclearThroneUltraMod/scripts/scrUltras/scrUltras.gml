@@ -112,12 +112,12 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
     
 	//PLANT 
 	ultra_name[17] = "TRAPPER"
-	ultra_text[17] = "BIG <w>SNARE<w>"
+	ultra_text[17] = "BIG <w>SNARE<w>##SNARE <r>DAMAGES<r> ENEMIES#WHEN IN YOUR LINE OF SIGHT"
 	ultra_tips[17] = "nowhere to hide"
 
 	ultra_name[18] = "KILLER"
-	ultra_text[18] = "ENEMIES KILLED ON <w>SNARE<w>#SPAWN <w>SAPLINGS<w>"
-	ultra_tips[18] = "aggression!"
+	ultra_text[18] = "ENEMIES KILLED NEAR <w>SNARE<w>#SPAWN <w>SAPLINGS<w>##SNARE <r>DAMAGES<r> ENEMIES#WHEN IN YOUR LINE OF SIGHT"
+	ultra_tips[18] = "eat the prey"
 /*
 	ultra_name[19] = "LEACHER"
 	ultra_text[19] = "ENEMIES STUCK ON SNARE#SOMETIMES HEAL YOU#ENEMIES KILLED ON SNARE#HAVE A CHANCE TO DROP ADDITIONAL ITEMS"
@@ -128,7 +128,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[19] = "nutritious"
 	
 	ultra_name[20] = "STEREO SNARES"
-	ultra_text[20] = "SPAWN TWO <w>SNARES<w>#SNARES DESTROY PROJECTILES"
+	ultra_text[20] = "SPAWN TWO <w>SNARES<w>#SNARES DESTROY ALL ENEMY PROJECTILES"
 	ultra_tips[20] = "better then original stereo snares"
 	
 	if altOverride || (instance_exists(Player) &&  Player.race == 5 && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && (scrIsCrown(23) && Player.skill_got[2]))))
@@ -299,10 +299,10 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[43] = "friendly fire?"
 	
 	//Eagle eyes and energy brain results in laser eye duh
-	if altOverride || (instance_exists(Player) &&  Player.race == 11 && (Player.altUltra || Player.unlockAlternativeUltras || (Player.skill_got[19] && Player.skill_got[17] && instance_exists(UltraIcon))))
+	if altOverride || (instance_exists(Player) &&  Player.race == 11 && (Player.altUltra || Player.unlockAlternativeUltras || (scrCanHunterSniperEye() && instance_exists(UltraIcon))))
 	{
 		ultra_name[43] = "SNIPER EYE"
-		ultra_text[43] = "REPLACE YOUR ACTIVE WITH A <w>SNIPER EYE<w>#THE EYE BREAKS <w>WALLS<w>#<w>PIERCES<w>, <w>STUNS<w> AND <w>DAMAGES<w> ENEMIES#DAMAGE INCREASES EACH PIERCE#MORE POWERFUL#THE LONGER YOU WAIT BETWEEN SHOTS#POWER SCALES FASTER#IF YOU HAVE THRONE BUTT##<w>FULLY CHARGED<w> EYE#<w>DESTROYS<w> ENEMY PROJECTILES"
+		ultra_text[43] = "REPLACE YOUR ACTIVE WITH A <w>SNIPER EYE<w>#THE EYE STUNS AND BREAKS <w>WALLS<w>#DAMAGE INCREASES EACH PIERCE#POWER SLOWLY SCALES#POWER SCALES FASTER#IF YOU HAVE THRONE BUTT##<w>FULLY CHARGED<w> EYE#<w>DESTROYS<w> ENEMY PROJECTILES"
 		ultra_tips[43] = "proper eyesight"
 	}
 	

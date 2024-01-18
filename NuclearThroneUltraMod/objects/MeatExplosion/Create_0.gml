@@ -3,6 +3,7 @@ typ = 3;
 image_speed = 0.4
 dmg = 4;
 destroyAll = false;
+motion_add(random(360),0.1);
 if instance_exists(Player) && Player.ultra_got[74] && Player.altUltra
 {
 	destroyAll = true;
@@ -28,8 +29,12 @@ if UberCont.ultramodSwap
 		visible = false;
 		alarm[11] = 1;
 	}
+	else if scrIsCrown(3)
+	{
+		alarm[3] = 6;
+	}
 }
-if visible
+if visible && object_index != SmallMeatExplosion
 {
 	dir = random(360)
 	var step = 360/3;
@@ -45,7 +50,7 @@ if visible
 			dmg=6;
 	}
 	snd_play(sndMeatExplo,0.1,true)
-	BackCont.shake += 3 - (BackCont.shake*0.1)
+	BackCont.shake += max(1,3 - (BackCont.shake*0.1))
 }
 team = 2
 alarm[2] = 1;

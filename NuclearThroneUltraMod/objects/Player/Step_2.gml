@@ -491,7 +491,7 @@ if tookHit&&my_health!=maxhealth&&alarm[3]<1&&!exception
 {lag-=1;
 
 
-alarm[3] = max(alarm[3],15);//before your lag lowers again}
+alarm[3] = max(alarm[3],14);//before your lag lowers again}
 }
 }
 
@@ -504,7 +504,7 @@ if armour > 0
 		tookDamageThisArea = true;
 		armour -= 1;
 		snd_play(sndLostArmour);
-		alarm[3]=max(alarm[3],1);//before your armour lowers again}
+		alarm[3]=max(alarm[3],2);//before your armour lowers again}
 		if skill_got[28] == 1
 		{
 			//rage = 0;
@@ -613,9 +613,9 @@ if (tookHit)
 		if !instance_exists(GenCont)&&(!instance_exists(myShield) || myShield == -1)&&!instance_exists(LevCont)&&exception=false
 		{
 			if race=25
-				alarm[3] = max(22,alarm[3]);
+				alarm[3] = max(20,alarm[3]);
 			else
-				alarm[3] = max(alarm[3],17);//duration
+				alarm[3] = max(alarm[3],16);//duration
 			canAnimateDuringImmune = 0;
 			snd_hurt = sndDamageNegate;
 			instance_create(x,y,EuphoriaBlock);
@@ -637,7 +637,7 @@ if(my_health <= 0 && maxhealth > 0)
 		    my_health = 1;
 			BackCont.shake += 10;
 			Sleep(50);
-			alarm[3] += 30;
+			alarm[3] += 24;
 			snd_hurt = sndDamageNegate;
 			scrGiveEuphoriaShield();
 		    strongspiritused=true;
@@ -650,7 +650,7 @@ if(my_health <= 0 && maxhealth > 0)
 		Sleep(50);
 		BackCont.shake += 10;
 		snd_play_2d(sndProtectiveMustache,0,true);
-		alarm[3] += 30;
+		alarm[3] += 28;
 		snd_hurt = sndDamageNegate;
 		scrGiveEuphoriaShield();
 		with PlayerAlarms
@@ -733,7 +733,7 @@ if(my_health <= 0 && maxhealth > 0)
 			snd_hurt = sndDamageNegate;
 			snd_play_2d(sndMutLastWish);
 			scrGiveEuphoriaShield();
-			alarm[3] += 40;
+			alarm[3] += 30;
 		}
 	}
 }

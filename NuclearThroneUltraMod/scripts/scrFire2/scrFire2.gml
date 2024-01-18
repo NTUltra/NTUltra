@@ -1835,44 +1835,18 @@ function scrFire2(hasTailNow) {
 
 	//SPIRAL YOYO GUN
 	case 262:
-
-	snd_play_fire(sndDiscgun)
-
-	with instance_create(x,y,Yoyo)
-	{motion_add(aimDirection+(random(10)-5)*other.accuracy,6)
-	image_angle = direction
-	team = other.team}
-
-	with instance_create(x,y,Yoyo)
-	{motion_add(aimDirection+(random(10)-5)*other.accuracy+60,6)
-	image_angle = direction
-	team = other.team}
-
-	with instance_create(x,y,Yoyo)
-	{motion_add(aimDirection+(random(10)-5)*other.accuracy+120,6)
-	image_angle = direction
-	team = other.team}
-
-	with instance_create(x,y,Yoyo)
-	{motion_add(aimDirection+(random(10)-5)*other.accuracy+180,6)
-	image_angle = direction
-	team = other.team}
-
-	with instance_create(x,y,Yoyo)
-	{motion_add(aimDirection+(random(10)-5)*other.accuracy+240,6)
-	image_angle = direction
-	team = other.team}
-
-	with instance_create(x,y,Yoyo)
-	{motion_add(aimDirection+(random(10)-5)*other.accuracy+300,6)
-	image_angle = direction
-	team = other.team}
-
-	BackCont.viewx2 += lengthdir_x(11,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(11,aimDirection+180)*UberCont.opt_shake
-	BackCont.shake += 12
-	wkick = 6
-
+	
+	with instance_create(x,y,SpiralYoyoBurst)
+	{
+		creator = other.id
+		ammo = 6
+		accuracy = other.accuracy;
+		angle = aimDirection;
+		time = 1
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+	
 	break;
 
 	//ELECTRIC GUITAR
@@ -15098,6 +15072,44 @@ function scrFire2(hasTailNow) {
 	BackCont.shake += 3
 	wkick = 5
 
+	break;
+	
+	//BLOOD ROCKET GUN
+	case 717:
+	snd_play_fire(sndRocket)
+	with instance_create(x,y,BloodRocketBurst)
+	{
+		creator = other.id
+		ammo = 2
+		time = 4
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+	break;
+	
+	//DOUBLE BLOOD ROCKET GUN
+	case 718:
+	snd_play_fire(sndRocket)
+	with instance_create(x,y,BloodRocketBurst)
+	{
+		creator = other.id
+		aimOffset = 4* other.accuracy;
+		ammo = 2
+		time = 4
+		team = other.team
+		accuracyRange = 10;
+		event_perform(ev_alarm,0) 
+	}
+	with instance_create(x,y,BloodRocketBurst)
+	{
+		creator = other.id
+		ammo = 2
+		aimOffset = -4 * other.accuracy;
+		time = 4
+		accuracyRange = 10;
+		team = other.team
+		alarm[0] = 2;
+	}
 	break;
 	
 	}//end of switch part 2!

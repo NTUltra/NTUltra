@@ -128,14 +128,14 @@ if (selected &&
 			ultra_tips[33] = "rise and rise again"
 		}
 	}
-	else if skill == 43 && Player.race == 11 && (Player.skill_got[19] && Player.skill_got[17] || Player.unlockAlternativeUltras)
+	else if skill == 43 && Player.race == 11 && (Player.unlockAlternativeUltras || scrCanHunterSniperEye())
 	{
 		with Player
 		{
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			altUltra = true;
 			ultra_name[43] = "SNIPER EYE"
-			ultra_text[43] = "REPLACE YOUR ACTIVE WITH A SNIPER EYE#THE EYE BREAKS WALLS#PIERCES, STUNS AND DAMAGES ENEMIES#DAMAGE INCREASES EACH PIERCE#MORE POWERFUL#THE LONGER YOU WAIT BETWEEN SHOTS#POWER SCALES FASTER#IF YOU HAVE THRONE BUTT##FULLY CHARGED EYE#DESTROYS ENEMY PROJECTILES"
+			ultra_text[43] = "REPLACE YOUR ACTIVE WITH A <w>SNIPER EYE<w>#THE EYE STUNS AND BREAKS <w>WALLS<w>#DAMAGE INCREASES EACH PIERCE#POWER SLOWLY SCALES#POWER SCALES FASTER#IF YOU HAVE THRONE BUTT##<w>FULLY CHARGED<w> EYE#<w>DESTROYS<w> ENEMY PROJECTILES"
 			ultra_tips[43] = "proper eyesight"
 		}
 	}

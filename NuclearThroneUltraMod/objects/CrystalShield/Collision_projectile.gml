@@ -3,7 +3,12 @@ if sprite_index == spr_disappear && image_index > fadeNumber
 if other.isGrenade
 {
 	with other
-		scrDeflectNade(direction+180);
+	{
+		if team == other.team
+			scrDeflectNade(direction);
+		else
+			scrDeflectNade(direction+180);
+	}
 	snd_play(sndCrystalRicochet,0.1,true);
 	Sleep(10);
 	BackCont.shake += 5;

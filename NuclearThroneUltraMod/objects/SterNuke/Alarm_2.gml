@@ -15,3 +15,5 @@ team = other.team
 event_perform(ev_alarm,0)
 }
 alarm[2] = 3;
+
+BackCont.shake+=2;

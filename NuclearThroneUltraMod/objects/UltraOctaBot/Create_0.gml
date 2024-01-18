@@ -6,7 +6,7 @@ raddrop += 20;
 maxhealth = 40;
 maxSpeed += 0.5;
 acc += 0.2;
-actTime -= 45;
+actTime -= 40;
 projectileSpeed += 2;
 EnemyHealthAdjustments();
 spr_idle = sprUltraOctaBotIdle;

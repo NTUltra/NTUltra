@@ -1,8 +1,8 @@
 /// @description Init
-updateVersion = "I AM WORKING ON THE SERVER SORRY BRO";
+updateVersion = "30.08";
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;
-maxwep = 660;
+maxwep = 718;
 network_set_config(network_config_use_non_blocking_socket, 1);
 if (hostSocket < 0) {
 	show_debug_message("FAILED TO HOST GAME\nTRY AGAIN LATER");	
@@ -32,16 +32,16 @@ enum NETDATA {
 	SCORE,
 	RACE,
 	WEEKLY,
-	BIDAILYGAMEMODE,
 	LEADERBOARD,
 	LEADERBOARDRACE,
-	LEADERBOARDGAMEMODE,
 	LEADERBOARDWEEKLY,
 	CONFIRMRACE,
 	STARTWEEKLY,
 	STARTDAILY,
-	STARTBIDAILYGAMEMODE,
 	CANIPARTICIPATE,
+	BIDAILYGAMEMODE,
+	STARTBIDAILYGAMEMODE,
+	LEADERBOARDGAMEMODE,
 }
 draw_set_font(fntM);
 alarm[1] = 120;

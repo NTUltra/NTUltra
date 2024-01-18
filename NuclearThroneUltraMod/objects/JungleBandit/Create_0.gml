@@ -24,7 +24,7 @@ ammo = maxAmmo;
 maxAmmo += min(GetPlayerLoops(),4);
 
 gonnashoot = 0
-actTime = 10;
+actTime = 11;
 alarm[2] = 30
 maxSpeed = 3.5;
 acc = 0.8;

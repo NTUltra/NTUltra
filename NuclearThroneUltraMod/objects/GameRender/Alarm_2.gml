@@ -1,6 +1,6 @@
 /// @description GameOver
 alarm[2] = 1;
-if !instance_exists(Player) and !instance_exists(GenCont) && !instance_exists(PlayerSpawn)
+if !instance_exists(Player) and !instance_exists(GenCont) && !instance_exists(PlayerSpawn) && !instance_exists(CrownOfDeathBoom)
 	gameovertime += 1
 else
 	gameovertime = 0;

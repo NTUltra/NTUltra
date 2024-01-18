@@ -35,6 +35,7 @@ if fakeded >= 0
 	exit;
 event_inherited()
 
+
 if (alarm[4] < 0) {
 	aggression += 1;
 	
@@ -101,7 +102,8 @@ if (alarm[4] < 0) {
 			direction = point_direction(target.x+lengthdir_x(point_distance(x,y,target.x,target.y)*0.95,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),target.y+lengthdir_y(point_distance(x,y,target.x,target.y)*0.95,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),x,y)+random(60)-30
 			dodge = 3;
 			walk = 4;
-			sprite_index = spr_walk;
+			if sprite_index != spr_hurt
+				sprite_index = spr_walk;
 			gunangle = direction
 		}
 	}
@@ -253,8 +255,10 @@ if alarm[2] > 0 && alarm[2] < 20
 		motion_add(dir,1);
 	}
 }
-
-if speed > 5.4
-	speed = 5.4
-
+if speed > 5.2
+	speed = 5.2
+if sprite_index == spr_hurt && speed > 4
+{
+	speed = 4;
+}
 

@@ -28,8 +28,8 @@ function scrCallculateFinalDamage(inputDamage){
 					{
 						if other.id == target.id
 						{
-							other.my_health -= dmgDeal*0.25;
-							resultdmgDeal += (dmgDeal*0.25);
+							other.my_health -= dmgDeal*0.3;
+							resultdmgDeal += (dmgDeal*0.3);
 						}
 					}
         

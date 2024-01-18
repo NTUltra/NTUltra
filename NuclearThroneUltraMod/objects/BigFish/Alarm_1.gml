@@ -54,7 +54,7 @@ if target != noone && alarm[6] < 1 && alarm[7] < 1 {
 		//BITE TACKLE SHIT YO! DANGER IN THE HOUSE!
 		snd_play(snd_tackle)
 		persistent_direction = point_direction(x, y, target.x, target.y)
-		alarm[1] += chargeTell + actTime*2 + 5;
+		alarm[1] += chargeTell + actTime*2 + 10;
 		alarm[4] = 0
 		alarm[3] = 0
 		alarm[5] = chargeTell + actTime*2;
@@ -66,7 +66,7 @@ if target != noone && alarm[6] < 1 && alarm[7] < 1 {
         } else if alarm[2] < 1 {
 			var anyfishsucking = false;
 			with BigFish {
-				if alarm[2] > 0 {
+				if id != other.id && alarm[2] > 0 {
 					// someone else sucking?
 					// walk away from where the player will travel to make it fair
 					anyfishsucking = true;
@@ -112,6 +112,7 @@ if target != noone && alarm[6] < 1 && alarm[7] < 1 {
     } else { //wall in between
 		maxSpeed = originalMaxspeed + 2
 		direction = point_direction(x, y, target.x, target.y);
+		persistent_direction = direction;
 		walk = actTime + random(actTime);
 		alarm[1] = walk;
 		if my_health < maxhealth //heal cause player is hiding

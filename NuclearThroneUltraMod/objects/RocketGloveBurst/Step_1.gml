@@ -28,9 +28,9 @@ with creator
 	motion_add(aimDir,1);
 	speed = max(speed,4);
 	var tspd = other.totalSpeed;
-	if !place_meeting(x + lengthdir_x(tspd,aimDir),y,Wall) && !collision_line(x,y,x + lengthdir_x(tspd,aimDir),y,Wall,false,false)
+	if !place_meeting(x + lengthdir_x(tspd,aimDir),y,WallHitMe) && !collision_line(x,y,x + lengthdir_x(tspd,aimDir),y,WallHitMe,false,false)
 		x += lengthdir_x(tspd,aimDir);
-	if !place_meeting(x,y + lengthdir_y(tspd,aimDir),Wall) && !collision_line(x,y,x,y + lengthdir_y(tspd,aimDir),Wall,false,false)
+	if !place_meeting(x,y + lengthdir_y(tspd,aimDir),WallHitMe) && !collision_line(x,y,x,y + lengthdir_y(tspd,aimDir),WallHitMe,false,false)
 		y += lengthdir_y(tspd,aimDir);
 	with RocketSlash
 	{

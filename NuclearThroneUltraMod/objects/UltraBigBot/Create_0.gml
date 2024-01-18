@@ -6,7 +6,7 @@ raddrop += 20;
 maxhealth = 100;
 maxSpeed += 1;
 acc += 0.2;
-actTime -= 10;
+actTime -= 5;
 projectileSpeed += 2;
 EnemyHealthAdjustments();
 

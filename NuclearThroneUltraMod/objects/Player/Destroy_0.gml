@@ -302,13 +302,7 @@ snd_play_2d(sndExplosionXL);
 //Crown of death
 if scrIsCrown(3)
 {
-	with instance_create(x,y,CrownOfDeathBoom)
-	{
-		race = other.race;
-		area = other.area;
-		inverted = other.inverted;
-		crown = other.crown;
-	}
+	instance_create(x,y,CrownOfDeathBoom);
 }
 if actualLives>0 && !reincarnate
 {
@@ -330,7 +324,7 @@ with enemy{
 		if place_free(x,y+lengthdir_y(4,point_direction(x,y,Player.x,Player.y)+180))
 		y += lengthdir_y(4,point_direction(x,y,Player.x,Player.y)+180)
 
-		my_health -= 24;
+		my_health -= 15;
 		sprite_index = spr_hurt
 		image_index = 0
 		//motion_add(other.direction,6)

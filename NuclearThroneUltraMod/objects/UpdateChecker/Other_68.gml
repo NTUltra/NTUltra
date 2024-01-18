@@ -64,21 +64,24 @@ if (type == network_type_data) {
 				else
 					sprite_index = sprDailyChallengeOn;
 			}
-			var dailyDay = buffer_read(buffer, buffer_u8);
-			canParticipateInGamemode = buffer_read(buffer, buffer_bool);
-			debug("Can race gamemode: ", canParticipateInGamemode);
-			if dailyDay % 2 == 0{
-				debug("YES POTATO");
-				isRace = false;
-				with DailyRace {
-					debug("RACE SWITCH TO");
-					dailyName = "BI-DAILY GAMEMODE"
-					isGamemode = true;
-					dailyDone = other.canParticipateInGamemode;
-					if dailyDone
-						sprite_index = sprDailyChallengeOnGM
-					else
-						sprite_index = sprDailyChallengeOffGM
+			if buffer_get_size(buffer) > 1
+			{
+				var dailyDay = buffer_read(buffer, buffer_u8);
+				canParticipateInGamemode = buffer_read(buffer, buffer_bool);
+				debug("Can race gamemode: ", canParticipateInGamemode);
+				if dailyDay % 2 == 0{
+					debug("YES POTATO");
+					isRace = false;
+					with DailyRace {
+						debug("RACE SWITCH TO");
+						dailyName = "DAILY GAMEMODE"
+						isGamemode = true;
+						dailyDone = other.canParticipateInGamemode;
+						if dailyDone
+							sprite_index = sprDailyChallengeOnGM
+						else
+							sprite_index = sprDailyChallengeOffGM
+					}
 				}
 			}
 			network_destroy(serverSocket);

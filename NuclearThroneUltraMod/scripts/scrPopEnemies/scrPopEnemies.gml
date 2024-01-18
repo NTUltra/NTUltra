@@ -1156,7 +1156,7 @@ function scrPopEnemies() {
 		                    instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, JungleBandit)
 		                }
 		                else {
-		                    instance_create(x + 16, y + 16, choose(JungleFly, JungleGorilla, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, Scorpion, BigMaggot, FireWorm, Scorpion,Maggot,FireWorm));
+		                    instance_create(x + 16, y + 16, choose(JungleFly, JungleAssassinFake, JungleGorilla, JungleAssassinFake, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, Scorpion, BigMaggot, FireWorm, Scorpion,Maggot,FireWorm));
 		                }
 		            }
 		        }
@@ -1179,7 +1179,7 @@ function scrPopEnemies() {
 	                    instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, JungleBandit)
 	                }
 	                else {
-	                    instance_create(x + 16, y + 16, choose(JungleFly, JungleGorilla, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit));
+	                    instance_create(x + 16, y + 16, choose(JungleFly, JungleAssassinFake, JungleGorilla, JungleAssassinFake, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit, JungleBandit));
 	                }
 	            }
 	        }
