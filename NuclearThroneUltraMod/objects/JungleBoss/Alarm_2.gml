@@ -17,6 +17,7 @@ repeat(am)
 {
 	with instance_create(x,y,spawnList[0])
 	{
+		countKill = false;
 		motion_add(ang,6);
 		alarm[1] *= 0.5;
 	}
@@ -30,6 +31,7 @@ repeat(am)
 {
 	with instance_create(x,y,spawnList[1])
 	{
+		countKill = false;
 		motion_add(ang,6);
 		alarm[1] *= 0.5;
 	}

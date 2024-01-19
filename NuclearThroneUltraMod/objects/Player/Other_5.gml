@@ -272,8 +272,7 @@ oasis=false;
 ///looping! ---------------------------
 if looping && area != 104
 {
-	my_health = maxhealth;
-	prevhealth = my_health;
+	//prevhealth = my_health;
 	if (ultra_got[77] && altUltra)
 	{
 		i = 0;
@@ -287,6 +286,7 @@ if looping && area != 104
 			i ++;
 		}
 	}
+	/*
 	ammo[1] += 200;
 	ammo[2] += 20;
 	ammo[3] += 20;
@@ -306,7 +306,7 @@ if looping && area != 104
 
 	if ammo[5] > typ_amax[5]
 		ammo[5] = typ_amax[5];
-	
+	*/
 	scrRegainOneLifePart();
 	if skill_got[18] && !lastWishPrevent
 	{

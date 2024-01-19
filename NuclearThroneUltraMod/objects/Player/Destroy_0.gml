@@ -346,8 +346,7 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 {
 	//alarm[3]=300;//immunity
 	ammo = other.ammo;
-	ultra_got = [];
-	skill_got = [];
+	ultra_got = array_create(array_length(other.ultra_got),false);
 	altUltra = false;
 	chickenFocusMax = other.chickenFocusMax;
 	chickenFocus = chickenFocusMax;

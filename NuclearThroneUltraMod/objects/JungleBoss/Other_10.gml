@@ -20,6 +20,7 @@ repeat(am)
 {
 	with instance_create(x,y,spawnList[toSpawnIndex])
 	{
+		countKill = false;
 		motion_add(ang,6);
 		alarm[1] *= 0.5;
 		if instance_exists(Player) && Player.skill_got[29] {

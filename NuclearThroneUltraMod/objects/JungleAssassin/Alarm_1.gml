@@ -7,7 +7,7 @@ if target != noone
 	if notBehindWall || isInverted
 	{
 		var dis = point_distance(target.x,target.y,x,y)
-		if dis < range
+		if dis < range && alarm[2] < 1
 		{
 			walk = 2;
 			alarm[2]=tellTime//the delay that everyone wants

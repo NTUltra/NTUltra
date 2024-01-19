@@ -28,8 +28,8 @@
     "path": "folders/Objects/Enemies/Boss/Savanna.yy",
   },
   "parentObjectId": {
-    "name": "enemy",
-    "path": "objects/enemy/enemy.yy",
+    "name": "enemyCollisionWall",
+    "path": "objects/enemyCollisionWall/enemyCollisionWall.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

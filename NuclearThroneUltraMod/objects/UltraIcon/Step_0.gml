@@ -446,7 +446,7 @@ if (selected &&
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			altUltra = true;
 			ultra_name[72] = "MIRROR"
-			ultra_text[72] = "ACTIVE NO LONGER HEALS#ACTIVE COST IS ALWAYS REDUCED#(AS IF YOU ARE ON MAX HP)#ALSO DEFLECT ON YOUR RETICLE"
+			ultra_text[72] = "SLIGHTLY LONGER <pi>DEFLECT<pi>#ALSO <pi>DEFLECT<pi> ON YOUR CROSSHAIR"
 			ultra_tips[72] = "right back at ya"
 		}
 	}

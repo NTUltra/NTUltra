@@ -970,12 +970,26 @@ if my_health <= 0 && armour < 1
 
 if scrIsCrown(23)//Crown of speed
 {
+	var multi = 1.2;
+	var add = 4;
+	if UberCont.normalGameSpeed == 60
+	{
+		multi = 1.1;
+		add = 2;
+	}
 	with enemy
 	{
-		if speed < 10
+		if speed < 10 
 		{
-			speed *= 1.2;
-			speed = min(speed * 1.2, speed + 4);
+			if walk > 0
+			{
+				speed += 2;	
+				speed *= 1.25;
+			}
+			else if speed > 2
+			{
+				speed *= 1.1
+			}
 		}
 	}
 }

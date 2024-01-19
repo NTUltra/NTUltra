@@ -8057,7 +8057,7 @@ function scrFire2(hasTailNow) {
 	snd_play_fire(sndNukeFire);
 
 	with instance_create(x,y,UltraRocket)
-	{motion_add(aimDirection+(random(4)-2)*other.accuracy,16)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,18)
 	image_angle = direction
 	team = other.team}
 	motion_add(aimDirection+180,2)

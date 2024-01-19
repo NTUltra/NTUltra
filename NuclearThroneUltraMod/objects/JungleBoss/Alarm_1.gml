@@ -66,6 +66,13 @@ if target != noone {
 			}
 		}
 	}
+	else
+	{
+		if speed < 2
+			speed = 0;
+		speed *= 0.3;
+		
+	}
 	if (!charged || ran < 2) && ran < 5
 	{
 		event_user(0);

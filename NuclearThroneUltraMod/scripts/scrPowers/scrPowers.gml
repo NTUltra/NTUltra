@@ -23,6 +23,8 @@ function scrPowers(raceOverwrite = -1) {
 				alienIntestines += 0.4;
 			else
 				alienIntestines += 0.15;
+			if loops > 0
+				alienIntestines += 0.02;
 			if race == 25
 			{
 				alienIntestines += 0.035;	
@@ -34,6 +36,8 @@ function scrPowers(raceOverwrite = -1) {
 				alienIntestines += 0.8;
 			else
 				alienIntestines += 0.3;
+			if loops > 0
+				alienIntestines += 0.04;
 			if race == 25
 			{
 				alienIntestines += 0.07;	
