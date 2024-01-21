@@ -110,13 +110,12 @@ function scrFire() {
 	}
 	if (Player.race=7 && Player.skill_got[5] && wep_cost[wep] > 0 && wep_cost[bwep] > 0)
 	{
-	    if KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2
-	    {
+//	    if KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2
+//	    {
 	        if random(100)<(
 				(wep_cost[wep]/typ_ammo[wep_type[wep]])*0.69
 			)*100
 			{
-    
 			    var wantAmmo = round(typ_ammo[wep_type[bwep]]*0.5);
 			    if (ammo[wep_type[bwep]] + wantAmmo >=typ_amax[wep_type[bwep]] && !ultra_got[26])
 			    {
@@ -148,7 +147,7 @@ function scrFire() {
 						dir.mytext = "MAX "+string(other.typ_name[wep_type[bwep]])
 				}
 			}
-
+/*
 	    }
 	    else
 	    {
@@ -187,7 +186,7 @@ function scrFire() {
 				}
 		    }
 	    }
-
+*/
 	}
 
 	drawempty = 10

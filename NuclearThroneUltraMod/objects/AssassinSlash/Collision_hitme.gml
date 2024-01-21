@@ -10,6 +10,8 @@ if other.team != team && !hit && other.sprite_index != other.spr_hurt
 		motion_add(other.direction,16)
 		Sleep(100)
 		BackCont.shake += 8
+		if object_index == Player
+			hitBy = other.sprite_index;
 	}
 }
 

@@ -58,7 +58,7 @@ with Floor
 			sprite_index = sprFloor129B;
 		else
 			sprite_index = sprFloor129;
-		if pExist && point_distance(x, y, Player.x, Player.y) > dis
+		if pExist && point_distance(x, y, Player.x, Player.y) > dis && !place_meeting(x,y,Wall)
 		{
 			scrSpawnSomeEnemies();
 		}

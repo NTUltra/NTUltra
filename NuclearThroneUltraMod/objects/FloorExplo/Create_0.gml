@@ -10,25 +10,36 @@ scrInitDrops(1);
 canCount = false;
 var area;
 canSpawnSwarm = true
-if !scrIsCrown(25) && !instance_exists(ThroneIISpiral) && !instance_exists(WallRemover) 
-	alarm[3] = 1;
-
-if instance_exists(Player) 
+if (!instance_exists(WallRemover))
 {
-	area = Player.area
-	event_perform(ev_alarm,2);
-	event_perform(ev_alarm,0);
+	if !scrIsCrown(25) && !instance_exists(ThroneIISpiral) && !instance_exists(WallRemover) 
+		alarm[3] = 1;
+
+	if instance_exists(Player) 
+	{
+		area = Player.area
+		event_perform(ev_alarm,2);
+		event_perform(ev_alarm,0);
 
 	
+	}
+	else 
+	{
+		area = BackCont.area
+		event_perform(ev_alarm,2);
+		event_perform(ev_alarm,0);
+	}
 }
-else 
+else
 {
-	area = BackCont.area
-	event_perform(ev_alarm,2);
-	event_perform(ev_alarm,0);
-	//alarm[2] = 1;
-	//alarm[3] = 1;
-	//alarm[0] = 1;
+	if instance_exists(Player) 
+	{
+		area = Player.area
+	}
+	else 
+	{
+		area = BackCont.area
+	}
 }
 if area==104
 area=103;

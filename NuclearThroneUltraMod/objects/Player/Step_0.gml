@@ -877,7 +877,7 @@ if KeyCont.key_swap[p] = 1 and bwep != 0
 			{
 				snd_play(sndPunchSwap,0.1,true);
 				var aim = point_direction(x,y,mouse_x,mouse_y);
-				with instance_create(x+lengthdir_x(13+(skill_got[13]*3),aim+180),y+lengthdir_y(13+(skill_got[13]*3),aim+180),RoidsSuperSwap)
+				with instance_create(x+lengthdir_x(15+(skill_got[13]*3),aim+180),y+lengthdir_y(15+(skill_got[13]*3),aim+180),RoidsSuperSwap)
 				{
 					wepSpr = other.wep_sprt[other.bwep];
 					motion_add(aim,2+(other.skill_got[13]*2))
