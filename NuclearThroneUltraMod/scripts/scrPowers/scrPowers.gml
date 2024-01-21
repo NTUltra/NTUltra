@@ -961,7 +961,7 @@ function scrPowers(raceOverwrite = -1) {
 
 	if race == 18//ANGEL
 	{
-		var takePercentage = 0.35;
+		var takePercentage = 0.4;
 		var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
 	    if wepType != 0
 	    {

@@ -1,39 +1,29 @@
 ///Populate
 SetSeed();
-with Floor
-{
-if !position_meeting(x-16,y-16,Floor) instance_create(x-16,y-16,Wall)
-if !position_meeting(x,y-16,Floor) instance_create(x,y-16,Wall)
-if !position_meeting(x+16,y-16,Floor) instance_create(x+16,y-16,Wall)
-if !position_meeting(x+32,y-16,Floor) instance_create(x+32,y-16,Wall)
-if !position_meeting(x+32,y,Floor) instance_create(x+32,y,Wall)
-if !position_meeting(x+32,y+16,Floor) instance_create(x+32,y+16,Wall)
-if !position_meeting(x-16,y,Floor) instance_create(x-16,y,Wall)
-if !position_meeting(x-16,y+16,Floor) instance_create(x-16,y+16,Wall)
-if !position_meeting(x-16,y+32,Floor) instance_create(x-16,y+32,Wall)
-if !position_meeting(x,y+32,Floor) instance_create(x,y+32,Wall)
-if !position_meeting(x+16,y+32,Floor) instance_create(x+16,y+32,Wall)
-if !position_meeting(x+32,y+32,Floor) instance_create(x+32,y+32,Wall)
-}
+var myWall = Wall;
 if scrIsCrown(25)
-{	
-	with FloorExplo
+{
+	myWall = FloorExplo;
+	with WallHitMe
 	{
-		if !place_meeting(x-16,y,Floor) && !place_meeting(x-16,y,WallHitMe)
-			instance_create(x-16,y,WallHitMe);
-		if !place_meeting(x+16,y,Floor) && !place_meeting(x+16,y,WallHitMe)
-			instance_create(x+16,y,WallHitMe);
-		if !place_meeting(x,y-16,Floor) && !place_meeting(x,y-16,WallHitMe)
-			instance_create(x,y-16,WallHitMe);
-		if !place_meeting(x,y+16,Floor) && !place_meeting(x,y+16,WallHitMe)
-			instance_create(x,y+16,WallHitMe);
+		instance_destroy(id,false);	
 	}
 }
-/*with Wall
+with Floor
 {
-if place_meeting(x,y,Floor)
-instance_destroy()
-}*/
+if !position_meeting(x-16,y-16,Floor) instance_create(x-16,y-16,myWall)
+if !position_meeting(x,y-16,Floor) instance_create(x,y-16,myWall)
+if !position_meeting(x+16,y-16,Floor) instance_create(x+16,y-16,myWall)
+if !position_meeting(x+32,y-16,Floor) instance_create(x+32,y-16,myWall)
+if !position_meeting(x+32,y,Floor) instance_create(x+32,y,myWall)
+if !position_meeting(x+32,y+16,Floor) instance_create(x+32,y+16,myWall)
+if !position_meeting(x-16,y,Floor) instance_create(x-16,y,myWall)
+if !position_meeting(x-16,y+16,Floor) instance_create(x-16,y+16,myWall)
+if !position_meeting(x-16,y+32,Floor) instance_create(x-16,y+32,myWall)
+if !position_meeting(x,y+32,Floor) instance_create(x,y+32,myWall)
+if !position_meeting(x+16,y+32,Floor) instance_create(x+16,y+32,myWall)
+if !position_meeting(x+32,y+32,Floor) instance_create(x+32,y+32,myWall)
+}
 
 if !instance_exists(Player)
 instance_create(10016,10016,Player)

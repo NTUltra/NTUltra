@@ -6,11 +6,10 @@ event_inherited()
 if walk > 0
 {
 	motion_add(direction,1.4)
-	if target != noone && instance_exists(target)
-		motion_add(point_direction(x,y,target.x,target.y),0.16);
-walk -= 1
-
+	walk -= 1
 }
+if target != noone && instance_exists(target)
+		motion_add(point_direction(x,y,target.x,target.y),0.16);
 if speed > 1 && !place_meeting(x,y,Floor) && instance_exists(Floor)
 {
 	var xx = x + lengthdir_x(64,direction);

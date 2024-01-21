@@ -127,10 +127,6 @@ function scrDrop(itemdrop, weapondrop) {
 		dropRateBuff += 0.3;
 	}
 */
-	if scrIsGamemode(2){
-		weapondrop+=10
-		itemdrop+=10
-	}
 
 	if instance_exists(Player)
 	{

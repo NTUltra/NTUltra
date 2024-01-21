@@ -24,7 +24,7 @@ alarm[0] = 200+random(30)
 atomUltraD = false;
 
 if scrIsGamemode(9) //CASUAL MODE
-	alarm[0] += 30;
+	alarm[0] += 20;
 if scrIsHardMode() //HARD MODE
 	alarm[0] -= 20;
 
@@ -39,7 +39,7 @@ if instance_exists(Player){
 	{
 		friction = 0.3;
 	}
-	if scrIsCrown(4) { alarm[0] *= 0.35}
+	if scrIsCrown(4) { alarm[0] *= 0.4}
 
 	if Player.race = 15{ alarm[0] *= 0.7}//atomf
 

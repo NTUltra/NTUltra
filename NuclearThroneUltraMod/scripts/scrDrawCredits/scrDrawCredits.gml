@@ -28,8 +28,8 @@ function scrDrawCredits() {
 	}
 	else if creditpage == 1
 	{
-		thanks = "###MUSIC USED:##Larje100#Inverted Sewers##Eric Chevalier#The lava stream#The lava tower#Lena Raine#Confronting Myself#Lena Raine &#Jukio Kalio#Reflections#T4N3#Namachuukei 68-Game#Set (SCC Ver)#Tucker Hux Marray#iwannabethecollector#Under Water (Mix)"
-		stxt2 = "######MUSIC USED:##Larje100###Eric Chevalier###Lena Raine##Lena Raine &#Jukio Kalio##T4N3###Tucker Hux Marray#iwannabethecollector#"
+		thanks = "###MUSIC USED:##Larje100#Inverted Sewers#Eric Chevalier#The lava stream#The lava tower#Lena Raine#Confronting Myself#Lena Raine &#Jukio Kalio#Reflections#T4N3#Namachuukei 68-Game#Set (SCC Ver)#Tucker Hux Marray#iwannabethecollector#Under Water (Mix)"
+		stxt2 = "######MUSIC USED:##Larje100##Eric Chevalier###Lena Raine##Lena Raine &#Jukio Kalio##T4N3###Tucker Hux Marray#iwannabethecollector#"
 		txt0 = "#NUCLEAR THRONE#A GAME BY VLAMBEER##MOD BY ERDEPPOL"
 		txt1 = "######DIRECTOR:#JAN WILLEM NIJMAN##PRODUCER:#RAMI ISMAIL##ART & ORIGINAL#CHARACTER DESIGN:#PAUL VEER##ORIGINAL MUSIC:#JUKIO KALLIO##SOUND DESIGN:#JOONAS TURNER##PROMOTIONAL ART:#JUSTIN CHAN##VOICE OF MR. VENUZ:#DOSEONE#"
 		txt2 = "###"+string(thanks)
@@ -46,8 +46,8 @@ function scrDrawCredits() {
 		{
 			url_open("https://twitter.com/Erdeppol");
 		}
-		thanks = "#MUSIC USED:##Plume, Fred Leonard#Laurent parisi#Crossing the swamp#David Fenn#Crooked Crow#Reaper's Battle#Christophe Heral#Plant Boss#Christopher Larkin#Nosk#Disasterpeace#Chimera"
-		stxt2 = "######MUSIC USED:##Plume, Fred Leonard#Laurent parisi##David Fenn###Christophe Heral##Christopher Larkin##Disasterpeace#"
+		thanks = "#MUSIC USED:##Plume, Fred Leonard#Laurent parisi#Crossing the swamp#David Fenn#Crooked Crow#Reaper's Battle#Christophe Heral#Plant Boss#Christopher Larkin#Nosk#Disasterpeace#Chimera#Splattie#IDPD Tank"
+		stxt2 = "######MUSIC USED:##Plume, Fred Leonard#Laurent parisi##David Fenn###Christophe Heral##Christopher Larkin##Disasterpeace##Splattie#"
 		txt0 = "#NUCLEAR THRONE ULTRA#NUCLEAR THRONE BY VLAMBEER##MOD BY ERDEPPOL"
 		txt1 = "######WEAPON LOADOUT ART:#VadimNRsha##AWESOME PEOPLE:#Burrinoo#Turtle Melon#Jodi#@ideaot/jasmine#Chubbyemu#SLEEPCYCLES#Kakujo#YellowAfterlife###@Erdeppol##NT-UM DISCORD"
 		txt2 = "#####"+string(thanks)

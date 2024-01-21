@@ -50,10 +50,10 @@ function healMe(amount) {
 }
 
 if target != noone && alarm[6] < 1 && alarm[7] < 1 {
+	persistent_direction = point_direction(x, y, target.x, target.y);
 	if point_distance(x,y,target.x,target.y) < chargeDis && random(2) < 3 {
 		//BITE TACKLE SHIT YO! DANGER IN THE HOUSE!
 		snd_play(snd_tackle)
-		persistent_direction = point_direction(x, y, target.x, target.y)
 		alarm[1] += chargeTell + actTime*2 + 10;
 		alarm[4] = 0
 		alarm[3] = 0

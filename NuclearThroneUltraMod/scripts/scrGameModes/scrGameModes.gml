@@ -192,7 +192,7 @@ function scrGameModes() {
 	gamemode_description[42] = "\nLOAD IN A JSON FILE TO PLAY CUSTOMIZED WAVES IN SURVIVAL ARENA";
 	gamemode_nocombo[42] = [6,8,10,18,20,21,25,26,27,34,36,37,40,42,43,44,45,46];
 	
-	gamemode[26] = "DAILY RACE/GAMEMODE";
+	gamemode[26] = "DAILY RACE/GM";
 	gamemode_unlock[26] = "";
 	gamemode_have[26] = 1;
 	gamemode_tip[26] = "GOTTA GO FAST";

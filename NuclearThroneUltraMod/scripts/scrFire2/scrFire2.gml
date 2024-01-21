@@ -14941,7 +14941,7 @@ function scrFire2(hasTailNow) {
 	}
 	else
 	{
-		wep_type[712] = 5;
+		wep_type[712] = 3;
 	}
 	with instance_create(x,y,SpikeMine)
 	{
@@ -14968,7 +14968,7 @@ function scrFire2(hasTailNow) {
 	}
 	else
 	{
-		wep_type[713] = 5;
+		wep_type[713] = 3;
 	}
 	
 	with instance_create(x,y,ChainTrapBolt)

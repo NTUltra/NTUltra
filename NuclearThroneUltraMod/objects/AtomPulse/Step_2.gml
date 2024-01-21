@@ -29,13 +29,13 @@ ds_list_destroy(newcollision);
 if UberCont.normalGameSpeed == 60
 {
 	scale += 0.025;
-	if scale > 0.8
+	if scale > 1
 		opacity -= 0.05;
 }
 else
 {
 	scale += 0.05
-	if scale > 0.8
+	if scale > 1
 		opacity -= 0.1;
 }
 /*

@@ -74,8 +74,8 @@ if ultra_got[62]//Viking armour up ultra
 if race==10 && canHeal//Rebel pasive
 {
 	//(maxhealth-my_health)/2
-	if my_health<maxhealth
-		my_health += round((maxhealth-my_health)*0.5);
+	if my_health < maxhealth
+		my_health += min(maxhealth, ceil((maxhealth-my_health)*0.5));
 }
 else if (race == 12 || (copyPassive == 12 && race != 9))//yung cuz reset max HP
 {
@@ -139,11 +139,11 @@ if scrIsCrown(2) && canHeal
 }
 if scrIsCrown(13)//Crown of drowning
 {
-	ammo[1] += 150;
-	ammo[2] += 15;
-	ammo[3] += 15;
-	ammo[4] += 15;
-	ammo[5] += 15;
+	ammo[1] += 50;
+	ammo[2] += 5;
+	ammo[3] += 5;
+	ammo[4] += 5;
+	ammo[5] += 5;
 	if !ultra_got[26] {
 		if ammo[1] > typ_amax[1]
 		ammo[1] = typ_amax[1]
@@ -768,6 +768,7 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 	{
 		iWillBecome = 1+irandom(racemax-1);
 	} until (UberCont.race_have[iWillBecome] = 1 && iWillBecome != 0);
+	UberCont.race = iWillBecome;
 	with instance_create(x,y,RaceCopier)
 	{
 		race = iWillBecome;

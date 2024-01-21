@@ -7,11 +7,6 @@ with other
 		canSpawnSwarm = c;
 		if !c
 			alarm[3] = 0;
-		if other.object_index == WallHitMe
-		{
-			wantWall = WallHitMe;
-			event_perform(ev_alarm,2);	
-		}
 	}
 }
 

@@ -373,11 +373,11 @@ if !instance_exists(LevCont) and visible = 1
 			//scrn++;
 			
 			instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			instance_create(f.x,f.y,Hyena)
-			instance_create(f.x,f.y,UltraProtector)
+			instance_create(f.x,f.y,IDPDTank)
+			instance_create(f.x,f.y + 192,IDPDTankDown)
 
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "Ultra Crystal Bot";
+			thing.mytext = "TANKS!";
 		}
 		if keyboard_check_pressed(ord("C")) {
 			var dangle = random(1)*360;
@@ -2098,9 +2098,9 @@ if race==18
 if moddelay > -30*modQueue
 {
 	if is60fps
-		moddelay -= 0.375;
+		moddelay -= 0.35;
 	else
-		moddelay -= 0.75;
+		moddelay -= 0.7;
 }
 /* */
 ///Rogue  heat

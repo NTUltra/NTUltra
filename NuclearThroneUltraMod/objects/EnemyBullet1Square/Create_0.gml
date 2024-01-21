@@ -1,4 +1,5 @@
 event_inherited();
+image_speed = 0.4;
 alarm[2] = 1
 onlyHitPlayerTeam = false;
 typ = 3 //0 = nothing, 1 = deflectable, 2 = destructable 3 = immune to melee

@@ -281,7 +281,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		}
 		
 	    ultra_name[40] = "DEFENSE"
-	    ultra_text[40] = "PORTALS <r>HEAL<r> ALL YOUR <r>HEALTH<r>#WHENEVER YOU TAKE DAMAGE YOU#SPAWN <w>DEFENSIVE BULLETS<w>#MORE ALLY BULLET DAMAGE"
+	    ultra_text[40] = "PORTALS <r>HEAL<r> ALL YOUR <r>HEALTH<r>#TAKING DAMAGE SPAWNS <w>BULLETS<w>#<aq>PREVENT<aq> <r>DEATH<r> BY SACRIFICING TWO ALLIES"
 	    ultra_tips[40] = "this was rebel's old passive"
     
 

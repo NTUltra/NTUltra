@@ -9,6 +9,7 @@ repeat(8)
 {
 	with instance_create(x, y, EnemyBullet2Curve) {
 	    motion_add(ang, 3);
+		curveSpeed -= 0.005;
 	    image_angle = direction
 	    team = other.team
 	}

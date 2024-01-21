@@ -4,7 +4,7 @@
 function scrSpawnSomeEnemies(){
 	if scrIsGamemode(9) //easy mode
     {
-        if random(4) < 1 || !instance_exists(enemy)
+        if random(2.5) < 1 || !instance_exists(enemy)
 			scrPopEnemies()
 		else if Player.loops > 0 && random(6) < Player.loops
 			scrPopEnemies()

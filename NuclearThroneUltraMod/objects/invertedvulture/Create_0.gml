@@ -22,6 +22,6 @@ if GetPlayerLoops() > 9
 	gunSpr = sprInvertedVultureBazooka;
 	fuckyou = true;
 }
-actTime = 10;
+actTime = 16;
 eatTime = 10;
 maxSpeed = 4;

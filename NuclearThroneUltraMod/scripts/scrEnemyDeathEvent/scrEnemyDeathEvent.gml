@@ -4,7 +4,7 @@
 function scrEnemyDeathEvent(){
 	if scrIsGamemode(9)//easy mode
 	{
-		raddrop*=1.5;
+		raddrop*=1.2;
 	}
 	if instance_exists(Player)
 	{

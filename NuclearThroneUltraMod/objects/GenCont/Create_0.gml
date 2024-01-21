@@ -355,6 +355,8 @@ else if Player.area == 101 || Player.area == 122//Oasis
 goal=95+s;
 else if (Player.area == 6 || Player.area = 112) && Player.subarea == 2//LABS BOSS
 goal=1;
+else if (Player.area == 6 || Player.area = 112)//LABS BOSS
+goal=110;
 else if Player.area == 113//Banditland
 goal=70+s;
 else if Player.area == 114 || Player.area == 123//jungle

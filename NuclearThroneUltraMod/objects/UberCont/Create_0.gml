@@ -3,8 +3,8 @@ version = 000//23 is final probably
 encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
-updateVersion = "30.08"
-subUpdateVersion = ".01";
+updateVersion = "30.09"
+subUpdateVersion = ".00";
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
 /*
@@ -16,6 +16,7 @@ scrn = 0
 optY = 24;
 everything=69;
 unlocked=69;
+ultraMenuOpen = false;
 
 //DEFAULT STUFF
 race = 0

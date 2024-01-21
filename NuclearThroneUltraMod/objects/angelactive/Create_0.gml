@@ -12,7 +12,7 @@ if instance_exists(Player)
 }
 if instance_number(AngelActive) > 1
 {
-	amount -= 3;
+	amount *= 0.5;
 	var isActuallyStacking = false;
 	with AngelActive
 	{
@@ -35,6 +35,6 @@ team = 2;
 if instance_exists(Player)
 {
 	team=Player.team;
-	Player.alarm[3] += amount + 1;
+	Player.alarm[3] += amount;
 }
 image_speed = (image_number-1)/alarm[0];

@@ -140,6 +140,11 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 if (KeyCont.key_paus[0] = 1) ||
 (mouse_check_button_pressed(mb_right) || gamepad_button_check(0,gp_face2))
 {
+	if ultraMenuOpen
+	{
+		ultraMenuOpen = false;
+		exit;
+	}
 	KeyCont.key_spec[0] = 2;
 with option
 instance_destroy()

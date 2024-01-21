@@ -16,7 +16,7 @@ if immune
 	if !active && !intro
 	{
 		if instance_exists(Player)
-		if (Player.y < y + 128) 
+		if (Player.y < y + 128 && !instance_exists(becomenemy) && !instance_exists(IDPDTank))
 		{
 			immune = false;
 			scrUnlockCharacter(22,"FOR REACHING THE THRONE#HAVE A SEAT");

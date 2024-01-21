@@ -40,7 +40,6 @@ if instance_exists(Player)
 	}
 	if scrIsCrown(25)
 	{
-		alarm[9] = 30;
 		alarm[4] = 30;
 	}
 	if instance_exists(ThroneIISpiral)//Crown of freedom

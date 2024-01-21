@@ -97,4 +97,7 @@ name=choose(
 "Carlos","Britta","Geoff","Dom","Matt","Matthew","Anna","Smith","Lucius","Britanny","Anita","Doug","Colin","Fernando","David","Shel","Spencer"
 );
 nameHover = 0;
+path = path_add();
+// currentPath = path;
+pathLength = 4;
 scrInitDrops(2);

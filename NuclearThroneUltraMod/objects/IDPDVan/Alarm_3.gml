@@ -220,3 +220,4 @@ else if dir = 5
     }
 
 my_health = min(my_health, maxhealth - 70);
+prevhealth = my_health;

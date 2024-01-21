@@ -1,4 +1,4 @@
-alarm[1] = 10+random(10)
+alarm[1] = 12+random(10)
 
 if instance_exists(Player)
 {

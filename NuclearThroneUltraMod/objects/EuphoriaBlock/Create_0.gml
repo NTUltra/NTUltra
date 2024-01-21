@@ -1,5 +1,5 @@
 /// @description Init
-image_speed = 0.4;
+image_speed = 0.5;
 /*
 //Na this is not intutive and not needed
 dmg = 0;

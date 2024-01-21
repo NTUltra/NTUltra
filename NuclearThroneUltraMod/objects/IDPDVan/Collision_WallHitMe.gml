@@ -5,8 +5,8 @@ if speed>2&&alarm[3]>0
 	acc *= 0.98;
     with other
     {
-    instance_destroy()
-    instance_create(x,y,FloorExplo)
+		instance_destroy()
+		instance_create(x,y,FloorExplo)
     }
 }
 else

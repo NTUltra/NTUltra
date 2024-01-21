@@ -10,7 +10,7 @@
   "bitRate": 192,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.0,
+  "duration": 0.769469,
   "parent": {
     "name": "EliteGrunt",
     "path": "folders/Sounds/IDPD sounds/Elite/EliteGrunt.yy",

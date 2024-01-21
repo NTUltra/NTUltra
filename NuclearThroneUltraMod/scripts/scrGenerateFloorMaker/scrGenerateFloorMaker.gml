@@ -54,6 +54,8 @@ function scrGenerateFloorMaker(limiter) {
 			goal = 140+s
 			else if (Player.area = 6||Player.area=112) && Player.subarea=2//LABS BOSS
 			goal = 1;
+			else if (Player.area = 6||Player.area=112)
+			goal = 110;
 			else if Player.area == 9 && Player.subarea < 3
 			goal = 130+s
 			else if Player.area == 118 && Player.subarea < 3
@@ -225,6 +227,8 @@ function scrGenerateFloorMaker(limiter) {
 			{
 				instance_create(x,y,NuclearThrone1);
 			}
+			if GetPlayerLoops() > 1
+				instance_create(x,y + 512, WantTank);
 			if scrIsGamemode(6)
 			{
 				with Carpet
@@ -249,6 +253,9 @@ function scrGenerateFloorMaker(limiter) {
 			{
 				instance_create(x,y,InvertedNuclearThrone1);
 			}
+			if GetPlayerLoops() > 1
+				instance_create(x,y + 512, WantTank);
+			// instance_create(x,y + 256, WantTank); No tank here hmmmm
 			if scrIsGamemode(6)
 			{
 				with Carpet

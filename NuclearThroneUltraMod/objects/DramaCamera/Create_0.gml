@@ -73,7 +73,7 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 	else if area == 130 || area == 131 || area == 132 || area == 133 || area == 134
 		song = musBossBot;
     snd_loop(song)
-    snd_loop(amb)
+    // snd_loop(amb)
     //audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
 	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
     

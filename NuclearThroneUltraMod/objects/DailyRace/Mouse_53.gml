@@ -5,7 +5,7 @@ if hover
 		image_index = 0;
 	with Weekly
 		image_index = 0;
-	if !dailyDone
+	if !dailyDone || isRace
 	{
 		if scrIsGamemode(26)
 		{

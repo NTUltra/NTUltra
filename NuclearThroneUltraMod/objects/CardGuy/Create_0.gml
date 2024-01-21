@@ -17,7 +17,7 @@ spr_dead = sprCardGuyDead
 walk = 0
 gunangle = random(360)
 alarm[1] = 90+random(90)
-actTime = 12;
+actTime = 13;
 
 if instance_exists(Player)
 {

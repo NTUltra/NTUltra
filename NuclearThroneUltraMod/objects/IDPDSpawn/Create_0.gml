@@ -2,7 +2,8 @@ friction = 1;
 if instance_exists(Player) && instance_exists(Floor)
 {
 
-if Player.area != 119 && (Player.area=100 || (Player.area == 9 && Player.subarea == 3))
+if !instance_exists(IDPDTank) &&
+Player.area != 119 && (Player.area=100 || (Player.area == 9 && Player.subarea == 3))
 {
 	instance_destroy()
 	exit;

@@ -175,6 +175,4 @@ function scrDrawOptions() {
 	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+8,__view_get( e__VW.YView, 0 ),string_hash_to_newline(string(stxt2)))
 
 
-
-
 }

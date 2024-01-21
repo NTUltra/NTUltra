@@ -17,6 +17,14 @@ with Player//Data to keep
 {
 	//bskin=other.bskin;
 	canCrownOfProtection = other.canCrownOfProtection;
+	if scrIsCrown(20)//Crown of protection re-apply
+	{
+		if maxarmour < 1
+				gotMinimumArmour = true;
+			canCrownOfProtection = true;
+			maxarmour = max(maxarmour, 1);
+			armour = clamp(armour, 0, maxarmour);
+	}
 	gotMinimumArmour = other.gotMinimumArmour;
 	gunGameKill = other.gunGameKill;
 	rnglevelloop = other.rnglevelloop;
@@ -176,7 +184,7 @@ with Player//Data to keep
 	{
 		with RerollStation
 			instance_destroy();
-		alarm[3]=max(50,8.5*boostLevel);//immunity
+		alarm[3]=max(30,8.5*boostLevel);//immunity
 		snd_hurt = sndDamageNegate;
 		myShield = instance_create(x,y,EuphoriaShield)
 		with myShield

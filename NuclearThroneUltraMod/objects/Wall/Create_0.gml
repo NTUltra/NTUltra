@@ -7,6 +7,8 @@ if instance_exists(Player)
 	if scrIsCrown(25)
 	{	
 		instance_destroy(id,false);
+		instance_create(x,y,WallHitMe);
+		/*
 		if !place_meeting(x,y,Floor)
 		{
 			instance_create(x,y,FloorExplo);
@@ -20,7 +22,7 @@ if instance_exists(Player)
 			if !place_meeting(x,y+16,Floor) && !place_meeting(x,y+16,WallHitMe)
 				instance_create(x,y+16,WallHitMe);
 			*/
-		}
+		//}
 		exit;
 	}
 }

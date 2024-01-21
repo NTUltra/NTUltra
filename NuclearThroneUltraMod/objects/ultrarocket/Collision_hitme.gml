@@ -1,7 +1,7 @@
 if other.team != team
 {
 	var actualDmg =	scrCallculateFinalDamage(dmg);
-	if other.my_health - actualDmg > -dmg*0.5
+	if other.my_health >= actualDmg * 0.5
 		instance_destroy();
 	with other
 	{

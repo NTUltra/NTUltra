@@ -24,26 +24,16 @@ if um == ultramods.bulletShotgun
 	instance_destroy(id,false);
 	with instance_create(x,y,Laser)
 	{
-		image_yscale += 0.2;
+		image_yscale += 0.1;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction-5;
 		team = other.team
 		event_perform(ev_alarm,0);
 	}
-	/*
 	with instance_create(x,y,Laser)
 	{
-		image_yscale += 0.2;
-		scrCopyWeaponMod(other);
-		isog = false;
-		image_angle = other.direction;
-		team = other.team
-		event_perform(ev_alarm,0);
-	}*/
-	with instance_create(x,y,Laser)
-	{
-		image_yscale += 0.2;
+		image_yscale += 0.1;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction+5;

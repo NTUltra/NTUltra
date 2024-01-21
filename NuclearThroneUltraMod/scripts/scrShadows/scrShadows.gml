@@ -57,6 +57,10 @@ function scrShadows() {
 		else
 			draw_sprite(shd96,0,x-vx,y-vy-8)
 	}
+	with IDPDTank
+	{
+		draw_sprite(shd96,0,x-vx,y-vy-8)
+	}
 	with BecomeScrapBoss
 	draw_sprite(shd96,0,x-vx,y-vy)
 	with BecomeInvertedScrapBoss

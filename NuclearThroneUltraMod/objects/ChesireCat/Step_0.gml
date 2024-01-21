@@ -11,10 +11,9 @@ if walk > 0
 {
 	walk -= 1
 		motion_add(direction,1.2)
-	if target != noone && instance_exists(target)
-		motion_add(point_direction(x,y,target.x,target.y),0.1);
-
 }
+if target != noone && instance_exists(target)
+		motion_add(point_direction(x,y,target.x,target.y),0.1);
 if speed > 1 && !place_meeting(x,y,Floor) && instance_exists(Floor)
 {
 	var xx = x + lengthdir_x(64,direction);

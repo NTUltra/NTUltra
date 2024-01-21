@@ -21,7 +21,7 @@ if instance_exists(Player){
 	sprite_index=sprRadMony;
 	}
 	//RUSH CROWN
-	if scrIsCrown(4){ alarm[0] /= 3}
+	if scrIsCrown(4){ alarm[0] *= 0.4}
 
 	if Player.race = 15{ alarm[0] *= 0.7}//atom
 	

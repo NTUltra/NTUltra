@@ -3,7 +3,14 @@ if !instance_exists(Player)
 	exit;
 if scrIsCrown(32)//Crown of misfortune
 {
-	scrCollectAmmo(1);
+	if scrIsCrown(5)//Crown of guns
+	{
+		scrCollectAmmo(0.5);
+	}
+	else
+	{
+		scrCollectAmmo(1);
+	}
 }
 scrCollectHP(2);
 instance_destroy()

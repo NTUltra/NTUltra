@@ -357,6 +357,18 @@ if my_health < prevhealth
 			my_health = 0;
 			prevhealth = 0;
 		}
+		else if ultra_got[40] && my_health <= 0 && instance_exists(Ally) && instance_number(Ally) > 1
+		{
+			with instance_nearest(x,y,Ally)
+			{
+				my_health = 0;
+				with instance_nearest_notme(x,y,Ally)
+				{
+					my_health = 0;
+				}
+			}
+			my_health = 1;
+		}
 		if phoenixrevives > 0
 		{
 			with instance_create(x,y,Flame)

@@ -16,6 +16,7 @@ isSnooze = false;
 ignoreOverlap = false;
 gettingKnocked = 0;
 fireProof = false;
+canBeBuffedHealed = true;
 
 snd_hurt = sndHitFlesh
 snd_dead = sndEnemyDie

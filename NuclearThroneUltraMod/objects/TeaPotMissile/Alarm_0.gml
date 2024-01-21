@@ -5,6 +5,7 @@ with instance_create(x, y, EnemyBullet2Curve) {
     motion_add(other.direction-90, 5);
     image_angle = direction
     team = other.team
+	curveSpeed -= 0.005;
 }
 
 with instance_create(x, y, EnemyBullet2Curve) {
@@ -12,4 +13,5 @@ with instance_create(x, y, EnemyBullet2Curve) {
     image_angle = direction
 	image_yscale = -1;
     team = other.team
+	curveSpeed -= 0.005;
 }

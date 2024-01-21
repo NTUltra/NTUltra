@@ -32,4 +32,4 @@ if instance_exists(TripwireStick) && instance_number(TripwireStick) > 1
 		}
 	}
 }
-alarm[1] = 12;
+alarm[1] = 15;

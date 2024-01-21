@@ -8,7 +8,7 @@ function scrChestOpenMindReload(thePlayer, dealDamageAnyway = false){
 	{
 		if scrIsCrown(6)
 		{
-			scrRaddrop(18);
+			scrRaddrop(17);
 			if dealDamageAnyway || place_meeting(x,y,chestprop)
 			{
 				my_health -= 1;

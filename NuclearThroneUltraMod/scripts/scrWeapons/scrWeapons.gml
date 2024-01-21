@@ -867,7 +867,7 @@ function scrWeapons() {
 	wep_name[78] = "HYPER SLUGGER"
 	wep_type[78] = 2
 	wep_auto[78] = 0
-	wep_load[78] = 10
+	wep_load[78] = 20
 	wep_cost[78] = 2
 	wep_sprt[78] = sprHyperSlugger
 	wep_area[78] = 14
@@ -2297,8 +2297,8 @@ function scrWeapons() {
 	wep_name[207] = "MISSILE LAUNCHER"
 	wep_type[207] = 4
 	wep_auto[207] = 0
-	wep_load[207] = 48
-	wep_cost[207] = 4
+	wep_load[207] = 50
+	wep_cost[207] = 4.5
 	wep_sprt[207] = sprMissileLauncher
 	wep_area[207] = 11
 	wep_text[207] = "you should really try eagle eyes#with this gun"
@@ -4849,11 +4849,11 @@ function scrWeapons() {
 	wep_name[437] = "BOX SLUGGER"
 	wep_type[437] = 2
 	wep_auto[437] = 0
-	wep_load[437] = 40
+	wep_load[437] = 45
 	wep_cost[437] = 5
 	wep_sprt[437] = sprBoxSlugger
 	wep_area[437] = 16
-	wep_text[437] = ""
+	wep_text[437] = "unwrap the gift"
 	wep_swap[437] = sndSwapShotgun
 	wep_rad[437] = 0;
 	

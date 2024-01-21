@@ -13,7 +13,7 @@ if instance_exists(creator)
 	y = creator.y
 	with instance_create(x,y,Yoyo)
 	{
-		motion_add(other.angle+(random(10)-5)*other.accuracy,6)
+		motion_add(other.angle+(random(10)-5)*other.accuracy,6.5)
 		image_angle = direction
 		scrCopyWeaponMod(other);
 		team = other.team

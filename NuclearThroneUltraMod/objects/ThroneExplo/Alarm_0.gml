@@ -10,6 +10,7 @@ if instance_exists(Player)
 	{
 		dir += 180;
 		spd += 0.1;
+		motion_add(dir,spd);
 	}
 }
 repeat(38)

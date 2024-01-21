@@ -10,17 +10,16 @@ scrInitDrops(1);
 canCount = false;
 var area;
 canSpawnSwarm = true
+if !scrIsCrown(25) && !instance_exists(ThroneIISpiral) && !instance_exists(WallRemover) 
+	alarm[3] = 1;
+
 if instance_exists(Player) 
 {
 	area = Player.area
-	if !scrIsCrown(25) && !instance_exists(WallRemover)
-	{
-		event_perform(ev_alarm,2);
-		event_perform(ev_alarm,0);
-		//alarm[2] = 1;
-		//alarm[3] = 1;
-		//alarm[0] = 1;
-	}
+	event_perform(ev_alarm,2);
+	event_perform(ev_alarm,0);
+
+	
 }
 else 
 {
@@ -50,7 +49,6 @@ image_index = choose(1,2,3,4)
 
 BackCont.shake += 1
 //if random(2)<1//not to much debris
-alarm[3] = 1;
 
 if !audio_is_playing(UberCont.snd_wallbreak)
 snd_play(UberCont.snd_wallbreak,0.05,true,true,1,false,false,0.6)

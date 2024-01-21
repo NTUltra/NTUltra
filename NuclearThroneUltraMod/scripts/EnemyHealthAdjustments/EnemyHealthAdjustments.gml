@@ -44,11 +44,12 @@ function EnemyHealthAdjustments(){
 		if scrIsGamemode(9)//easy mode
 		{
 			//hpReduction += round(maxhealth*0.2);
-			my_health *= 0.8;
+			my_health *= 0.9;
 		}
 		if scrIsCrown(22) && random(100 + floor(my_health*0.2)) < 25//Crown of luck
 		{
 			my_health = floor(my_health*0.1);
+			canBeBuffedHealed = false;
 			with instance_create(x,y,CrownOfLucked)
 			{
 				owner = other.id;

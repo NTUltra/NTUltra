@@ -73,7 +73,7 @@ function suck() {
 	}
 	repeat(2) {
 		with instance_create(x+lengthdir_x(16+random(64),dir),y+lengthdir_y(16+random(64),dir),Dust)
-		motion_add(point_direction(x,y,other.x,other.y),other.suckstrength+random(2))
+			motion_add(point_direction(x,y,other.x,other.y),other.suckstrength+random(2))
 	}
 }
 

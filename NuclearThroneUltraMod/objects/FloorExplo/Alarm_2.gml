@@ -1,12 +1,16 @@
 /// @description Create the walls around it
-if instance_exists(ThroneIISpiral)
+if instance_exists(ThroneIISpiral)/* || scrIsCrown(25)*/ || instance_exists(WallRemover)
 {
 	wantWall = WallHitMe;
-	sprite_index = sprFloor0Explo;
-	with instance_create(x,y,BackFloorSmall)
+	if (instance_exists(ThroneIISpiral))
 	{
-		depth = other.depth + 4;
+		sprite_index = sprFloor0Explo;
+		with instance_create(x,y,BackFloorSmall)
+		{
+			depth = other.depth + 4;
+		}
 	}
+	alarm[3] = 0;
 }
 if !place_meeting(x-16,y,Floor)
 instance_create(x-16,y,wantWall)

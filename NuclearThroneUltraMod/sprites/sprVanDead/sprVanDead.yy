@@ -63,7 +63,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"96d1aaf9-4f00-4321-9b94-d8c63f494df5","path":"sprites/sprVanDead/sprVanDead.yy",},},},"Disabled":false,"id":"3fcfd5ce-1482-41cf-9106-d7e9a7344c68","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 64,
     "yorigin": 64,

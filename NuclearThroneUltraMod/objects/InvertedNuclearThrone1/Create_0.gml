@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-maxhealth = 1710//1700
+maxhealth = 1720//1700
 scrBossHealthBuff();
 EnemyHealthAdjustments();
 raddrop = 600;

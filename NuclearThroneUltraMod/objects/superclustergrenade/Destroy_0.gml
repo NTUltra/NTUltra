@@ -1,9 +1,9 @@
 /// @description Boom
 snd_play(sndClusterOpen,0.05,true);
 var ang = random(360);
-var angstep = 360/6;
+var angstep = 360/5;
 var i = 0;
-repeat(6)
+repeat(5)
 {
 	with instance_create(x,y,ClusterGrenade)
 	{

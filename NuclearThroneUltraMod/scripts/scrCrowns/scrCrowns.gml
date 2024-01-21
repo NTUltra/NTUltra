@@ -202,7 +202,7 @@ function scrCrowns() {
 	crown_used[31] = 0
 	crown_tips[31] = "no pain no gain"
 	
-	//MISFORTUNE
+	//MISFORTUNE have luck
 	crown_name[32] = "[CROWN OF MISFORTUNE]"
 	crown_text[32] = "LOWER <w>DROP RATE<w>#PICKUPS GIVE BOTH <r>HEALTH<r> AND <y>AMMO<y>"
 	crown_used[32] = 0
