@@ -345,6 +345,7 @@ instance_destroy();
 with instance_create(x,y,PlayerSpawn)//Data to keep
 {
 	//alarm[3]=300;//immunity
+	canblacksword = other.canblacksword;
 	ammo = other.ammo;
 	ultra_got = array_create(array_length(other.ultra_got),false);
 	altUltra = false;
@@ -393,6 +394,7 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 		level = other.level;
 		rad = other.rad;
 		altUltra = other.altUltra;
+		disableAltUltra = other.disableAltUltra;
 		rogueammo = other.rogueammo-1;
 		rogueammomax = other.rogueammomax;
 		typ_ammo = other.typ_ammo;
@@ -643,7 +645,7 @@ else if !reincarnate
 						UberCont.viewDailyGamemode = true;
 						debug("ITS A DAILY GAMEMODE");
 					}
-					useSeed = false;
+					// useSeed = false;
 					leaderboardType = LEADERBOARD.WEEKLY;
 					goToLeaderboard = true;
 					canRestart = true;
@@ -705,10 +707,13 @@ else if !reincarnate
 							}
 						//}
 					}
+					if !scrIsGamemode(26) {
+						instance_create(x,y,SendWeekly);
+					}
 				}
 				else if (scrIsGamemode(26) && !instance_exists(StartDaily))
 				{
-					useSeed = false;
+					// useSeed = false;
 					//opt_gamemode = [0];
 					leaderboardType = LEADERBOARD.RACE;
 					goToLeaderboard = true;

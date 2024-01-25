@@ -4,7 +4,7 @@
 event_inherited();
 
 raddrop = 8
-maxhealth = 19
+maxhealth = 18
 my_health = maxhealth;
 EnemyHealthAdjustments();
 

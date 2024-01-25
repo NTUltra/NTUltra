@@ -45,6 +45,7 @@ function scrEndOfRun(){
 		collectedRewards = [];
 		enableReroll = false;
 		maxHpIncrease = 0;
+		highestReachedLevel = 0;
 		globalMutationsChosen = 0;
 		seedWeaponSmith = 0;
 		canSave = false;

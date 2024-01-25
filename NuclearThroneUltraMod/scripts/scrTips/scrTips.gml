@@ -7,14 +7,29 @@ function scrTips() {
 	if tiptype = 0
 	{
 	//RANDOM
-	tip = choose(choose(
+	tip = choose(
+	"always move",
+	"some enemies shoot through walls!",
+	"don't hold onto your early weapons for too long",
+	"swap your early weapons even when you mod them",
+	"tier display acts as a guideline for weapon power",
+	"Simple descriptions give you the jist of things",
+	"enable simple descriptions if you don't like reading",
+	"enable detailed descriptions if you'd like to know the stats",
 	"all weapons are full auto\nbut tapping will make some fire faster",
 	"all weapons are auto",
+	"every mutant has atleast 5 ultras!",
+	"alternative routes are generally faster but harder",
+	"alternative routes are harder",
+	"alternative routes are faster",
+	"each mutant has a secret ultra",
+	"don't forget to update your game <3",
 	"tapping fires some weapons quicker",
 	"HP will only drop when damaged",
 	"shotgun shoulders:\nincreases bouncer bullets bounces",
 	"shotgun shoulders:\nincreases sword gun bounces",
 	"Check out the Ultra mod wiki!",
+	"Check out the ultra mod discord!",
 	"When you respawn#you level up faster",
 	"explosives can destroy walls",
 	"melee weapons can deflect bullets",
@@ -25,7 +40,10 @@ function scrTips() {
 	"robots can digest anything",
 	"bandits like camping near explosives",
 	"not today",
+	"armour blocks a full hit of damage",
+	"everything has been rebalanced compared to retail",
 	"rosebud",
+	"inverted areas are optional",
 	"it's not fair, it's not right",
 	"watch out for dehydration",
 	"crystal can shield",
@@ -37,7 +55,7 @@ function scrTips() {
 	/*these are rare*/ choose("no","bob and weave","airhorn.wav","danger zone","no sex jokes","in and about"
 	,"the purple dragon","golden frog anyone?","Y.V. mony rad","the flying cat head","myth of time","sheeps are a thing","feedback is much appreciated","follow @erdeppol","I love you!",
 	"be nice#get bitches","fish can dodgeroll to prevent blood hammer self damage","I could go for a burger right now")
-	),choose(
+	,
 	"the I.D.P.D. is looking for you",
 	"Visiting inverted areas increases the quality of weapons that drop",
 	"gold weapons don't count towards#your progression percentage",
@@ -46,7 +64,7 @@ function scrTips() {
 	"if only you could talk to the monsters",
 	"steroids can dual wield",
 	"ammo chests always give#ammo for your primary weapon",
-	//"always wear dry socks",
+	"always wear dry socks",
 	"one fast firing weapon#one strong weapon",
 	"energy weapons use lots of ammo",
 	"elite wep chests drop weps#of the highest tier possible",
@@ -56,29 +74,41 @@ function scrTips() {
 	"war is hell",
 	"kraken pulls enemies towards you",
 	"doing alright",
+	"let's have fun!",
+	"be kind",
+	"don't get complacent",
+	"there are a ton of gamemodes to unlock and try",
+	"there are more than 700 weapons",
+	"director weapons can pierce shields/deflects",
+	"respect each other",
+	"damn squares",
+	"F5 to toggle full screen",
+	"F8 to toggle borderless window",
 	"taking eagle eyes is for people with large brains",
 	"hypersomnia does not work on faking assassins",
 	"there are other worlds out there",
-	/*more rares*/choose("be kind","the original idea for#the name trashtalk#came from lars in a stream#he made a lot of the sounds#in ultra mod","if you ever get stuck#outside a level#walk far away#from the level to get teleported back","use wasd to move","don't get baited by items","ask and ye shall receive","you smell that?","sick build bro","what does your gun tell you?","don't get baited by items"
-	,"frog is voiced by#Jukio Kallio","don't be sorry#git gutter","kimchi",
-	,"thematically inconsistent!","skeleton has#a fifth ultra mutation","don't be afraid to pick up new weapons",choose("28 EGGS FOR BREAKFAST","shit on my tits","never pick hanzo","microtransactions","if you are seeing this#you are fucking aswesome")/*super rare*/
-	)
-	),choose(
+	/*more rares*/choose("the original idea for#the name trashtalk#came from lars in a stream#he made a lot of the sounds#in ultra mod","if you ever get stuck#outside a level#walk far away#from the level to get teleported back","use wasd to move","don't get baited by items","ask and ye shall receive","you smell that?","sick build bro","what does your gun tell you?","don't get baited by items"
+	,"frog is voiced by#Jukio Kallio","don't be sorry#git gutter","kimchi","Lets have some fucking fun boyos!","kill is the mindfearer",
+	,"thematically inconsistent!","skeleton has#a fifth ultra mutation","don't be afraid to pick up new weapons","like and subsribe!",
+	choose("28 EGGS FOR BREAKFAST","shit on my tits","12th doctor is the best one","microtransactions","if you are seeing this#you are fucking aswesome"
+		,"guys seriously how do I nerf worm?")/*super rare*/
+	,"No I wont add a toxic immunity mutation","get that bag","yes girl"),
 	"don't worry about long-term effects","when near a portal you#don't take damage","don't die","nice",
 	"yung cuz definitely exists","venuz patrol",
 	"should not have done that","","thank you for playing","Some unused mutations are buffed","visit crownvaults twice#for weapon mods","death is near","good luck","are you ready?"
-	,"you can change the direction#of director projectiles#by clicking after firing")
-	,
-	choose("try new weapons",
+	,"you can change the direction#of director projectiles#by clicking after firing"
+	,"explosives can destroy traps",
+	"try new weapons",
 	"this mod has been build up#from update 19",
 	"don't be a dirty casual",
 	"humphry can't run",
 	"atom can teleport",
 	"fish can walk",
 	"git gud!",
+	"ammo chests prioritize primary weapon",
 	"don't trust fortune cookies",
-	"picking up a weapon#resets your reload time",
-	"gloves and kraken weapons#give you invincibility frames",
+	"picking up a weapon#reloads your weapon",
+	"gloves give you invincibility frames",
 	"welcome back",
 	"it's good to have you here",
 	"grab some coffee",
@@ -95,7 +125,20 @@ function scrTips() {
 	"the more dangerous the weapon#the more damage it deals",
 	"everything changes",
 	"buy the game!",
-	) )
+	"have a great day!",
+	"take care",
+	"respect yourself",
+	"don't let me tell you what to do",
+	"huff and puff",
+	"remember to drink water",
+	"stretching time!",
+	"good morning",
+	"good afternoon",
+	"good night",
+	"everything in moderation",
+	"blast some music",
+	"dead not dead",
+	)
 	}
 
 	if tiptype = 1
@@ -105,7 +148,7 @@ function scrTips() {
 	if Player.area = 0
 	tip = choose("it's dark here","your friends were here")
 	if Player.area = 1
-	tip = choose("welcome to the future","the wasteland calls you","scorching sun","watch out for maggots","let's do this","dust surrounds you","the wind hurts","use the skulls to go to a different area","today is the day")
+	tip = choose("welcome to the future","the wasteland calls you","scorching sun","watch out for maggots","let's do this","dust surrounds you","the wind hurts","use the skulls to go to a different area","today is the day","try destroying the skulls","many routes to take","here we go again","1-1 but sand")
 	if Player.area = 2
 	tip = choose("don't drink the water","the sewers stink","don't touch the frogs","don't eat the rat meat","danger","water dripping","sludge everywhere","frog loves to sing","the sludge")
 	if Player.area = 3
@@ -133,13 +176,13 @@ function scrTips() {
 	tip = choose("inferno","hell","its getting hot in here", "vulcano", "hot", "heat", "lava", "magma","lava damages over time",
 	"boiling veins protects you#against lava","don't stand#too long in lava","hot feet","tomato sauce","do not run away from a dragon fight!","do not flee from thy dragon")
 	if Player.area = 8
-	tip = choose("sweet","wonderland","evil cards","play your cards right","teapots of doom","cotton candy floors","do not eat the mushrooms",choose("I'm not even a fan of#alice in wonderland","non cannon","dumb shit","regrets"))
+	tip = choose("sweet","wonderland","evil cards","play your cards right","other world","this does not belong","teapots of doom","cotton candy floors","do not eat the mushrooms",choose("I'm not even a fan of#alice in wonderland","non cannon","dumb shit","regrets","this area was a mistake"))
 	if Player.area == 9
 	tip = choose("the palace","This place is old","nearly there","almost there","the time has come");
 	if Player.area = 118
 	tip = choose("the inverted palace","regular portals","greatness awaits","to evade","one more step");
 	if Player.area = 10
-	tip = choose("dry grass","savanna","they eat each other","they attack together","bring a good strating weapon","they heal off of corpses");
+	tip = choose("dry grass","savanna","they eat each other","they attack together","bring a good strating weapon","they heal off of corpses","this route is difficult!");
 	if Player.area = 106
 	tip = choose("inverted darkness","back to the other dimension","pls explain","inverted worlds are great","visit inverted world on loop","good luck getting through this"
 	,"white ravens")
@@ -174,13 +217,14 @@ function scrTips() {
 	if Player.area = 121
 	tip = choose("risk it","fast route","they are fast","colourful grass","watch yourself out there","inverted savanna")
 	if Player.area = 122
-	tip = choose("stinky water","something is not right","gas underwater?","toxic ocean","polder","dont drink this water")
+	tip = choose("stinky water","something is not right","gas underwater?","toxic ocean","polder","dont drink this water","only toxic here","100% toxic weapon mod","toxic weapon chest!")
 	if Player.area = 123
 	tip = choose("pink and blue jungle","inverted bush box moves straight","inverted jungle","though faster and more aggressive#enemies here have less hp and drop more rads","land of square");
 	if Player.area = 124
 	tip = choose("buff mushrooms hiding in the dark","lots of radiation here","dark mushrooms","lightning mushrooms","inside out mushrooms","don't eat the mushroom","in a shocking turn of events")
 	if Player.area = 125
 	tip = choose("if you hold two melee weapons#as yv while reaching ultra#you can choose a secret ultra","blue gold","who's mansion is this?",
+	"POPPOP increases projectile speed!",
 	"thanks melee god",
 	"maces for fake necklace",
 	"daggers that send textses",
@@ -319,8 +363,8 @@ function scrTips() {
 	,"rock hard","serpent strike","bitten by a radioactive serpent","armour strike damage scales#depending on your level","armour strike damage is more#when you are a higher level","3030")
 
 	if Player.race = 17//WEAPONSMITH
-	tip = choose("anvil","you keep the weapon mods#of the weapon you are holding#when upgrading","you upgrade one of your#two weapons at random",
-	"the weapon that gets upgraded#is chosen randomly","weaponsmith is a smoker","hide your face","liver damage","no trousers","weaponsmith is a metalhead")
+	tip = choose("anvil","you keep the weapon mods#when upgrading","you upgrade one of your#two weapons at random",
+	"the weapon that gets upgraded#is chosen randomly","weaponsmith used to be a smoker","hide your face","made of stone","no trousers","weaponsmith is a metalhead")
 
 	if Player.race = 18//ANGEL
 	tip = choose("ascend","the wall is not the enemy","fly over cars","you fly normally over all terrains","rogue guardian","you don't get pushed off of props",

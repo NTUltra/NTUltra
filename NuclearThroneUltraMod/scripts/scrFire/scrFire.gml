@@ -18,11 +18,11 @@ function scrFire() {
 			if race == 25
 			{
 				//reload *= 0.55;
-				reload -= wep_load[wep]*0.49;
+				reload -= wep_load[wep]*0.44;
 			}
 			else
 			{
-				reload -= wep_load[wep]*0.45;
+				reload -= wep_load[wep]*0.4;
 				//reload *= 0.6;
 			}
 		}
@@ -1088,7 +1088,7 @@ function scrFire() {
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
 	with instance_create(x,y,Bullet1)
-	{motion_add(aimDirection+(random(8)-4)*other.accuracy,16)
+	{motion_add(aimDirection+(random(6)-3)*other.accuracy,16)
 	image_angle = direction
 	team = other.team}
 
@@ -1729,6 +1729,7 @@ function scrFire() {
 	//kill player (This is actually really bad design but I don't care it only happens one in a milion so its funny)
 	Player.my_health=0;
 	Player.armour = 0;
+	Player.hitBy = Player.spr_dead;
 
 	BackCont.viewx2 += lengthdir_x(800,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(800,aimDirection+180)*UberCont.opt_shake
@@ -2206,7 +2207,7 @@ function scrFire() {
 	}
 	with instance_create(x,y,SplinterBurst)
 	{
-		totalAccuracy = 9;
+		totalAccuracy = 8;
 		creator = other.id
 		ammo = 2
 		time = 1

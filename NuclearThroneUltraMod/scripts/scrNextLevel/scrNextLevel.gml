@@ -1,6 +1,7 @@
 /// @description areas regular
 function scrNextLevel() {
 	scrAddArea(area);
+	scrAddToRoute(area);
 	if scrIsCrown(34)
 	{
 		if skill_got[5]

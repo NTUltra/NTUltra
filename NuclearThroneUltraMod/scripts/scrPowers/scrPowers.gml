@@ -22,7 +22,7 @@ function scrPowers(raceOverwrite = -1) {
 			if alienIntestines < 20
 				alienIntestines += 0.4;
 			else
-				alienIntestines += 0.15;
+				alienIntestines += 0.16;
 			if loops > 0
 				alienIntestines += 0.02;
 			if race == 25
@@ -35,7 +35,7 @@ function scrPowers(raceOverwrite = -1) {
 			if alienIntestines < 20
 				alienIntestines += 0.8;
 			else
-				alienIntestines += 0.3;
+				alienIntestines += 0.32;
 			if loops > 0
 				alienIntestines += 0.04;
 			if race == 25
@@ -293,7 +293,7 @@ function scrPowers(raceOverwrite = -1) {
 						var corpse = corpses[| i];
 						var xx = corpse.xx;
 						var yy = corpse.yy;
-						if xx > __view_get( e__VW.XView, 0 ) and xx < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and yy > __view_get( e__VW.YView, 0 ) and yy < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+						if point_distance(xx,yy,other.x,other.y) < 250//xx > __view_get( e__VW.XView, 0 ) and xx < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and yy > __view_get( e__VW.YView, 0 ) and yy < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 						{
 							with instance_create(xx,yy,BloodStreak)
 							{
@@ -317,8 +317,9 @@ function scrPowers(raceOverwrite = -1) {
 				}
 				with Corpse
 				{
-					if (image_speed == 0 || alarm[6] < 1) and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-				    {
+					if (image_speed == 0 || alarm[6] < 1) //and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+						&& point_distance(x,y,other.x,other.y) < 250
+					{
 					    instance_destroy()
 					    with instance_create(x,y,BloodStreak)
 					    {
@@ -628,7 +629,8 @@ function scrPowers(raceOverwrite = -1) {
 						var corpse = corpses[| i];
 						var xx = corpse.xx;
 						var yy = corpse.yy;
-						if xx > __view_get( e__VW.XView, 0 ) and xx < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and yy > __view_get( e__VW.YView, 0 ) and yy < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+						if //xx > __view_get( e__VW.XView, 0 ) and xx < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and yy > __view_get( e__VW.YView, 0 ) and yy < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+						point_distance(xx,yy,other.x,other.y) < 250
 						{
 							corpseExist = true;
 							BackCont.shake += 2;
@@ -710,7 +712,8 @@ function scrPowers(raceOverwrite = -1) {
 				}
 				with Corpse
 				{
-					if (image_speed == 0 || alarm[6] < 1) && x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+					if (image_speed == 0 || alarm[6] < 1) && //x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+						point_distance(x,y,other.x,other.y) < 250
 					{
 						corpseExist = true;
 						BackCont.shake += 2;
@@ -1805,7 +1808,7 @@ function scrPowers(raceOverwrite = -1) {
 					var corpseSize = corpse.mySize;
 					var xx = corpse.xx;
 					var yy = corpse.yy;
-					if xx > __view_get( e__VW.XView, 0 ) and xx < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and yy > __view_get( e__VW.YView, 0 ) and yy < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+					if point_distance(xx,yy,other.x,other.y) < 250//xx > __view_get( e__VW.XView, 0 ) and xx < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and yy > __view_get( e__VW.YView, 0 ) and yy < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 					{
 						didKill = true;
 						with instance_create(x,y,BloodStreak)
@@ -1882,7 +1885,8 @@ function scrPowers(raceOverwrite = -1) {
 			}
 			with Corpse
 			{
-				if (image_speed == 0 || alarm[6] < 1) and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+				if (image_speed == 0 || alarm[6] < 1) and x > __view_get( e__VW.XView, 0 ) //and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+					&& point_distance(x,y,other.x,other.y) < 250
 				{
 					var ang;
 					didKill = true;
@@ -1956,7 +1960,8 @@ function scrPowers(raceOverwrite = -1) {
 		
 		if ultra_got[13] && !altUltra {
 			with enemy {
-			if maxhealth <= 7 and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+			if maxhealth <= 7 and x > __view_get( e__VW.XView, 0 ) //and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+				&& point_distance(x,y,other.x,other.y) < 250
 			{//melting ultra a brain capacity
 			morphMe = 6;
 			didKill = true;
@@ -2961,9 +2966,13 @@ function scrPowers(raceOverwrite = -1) {
 			chickenFocus -= chickenFocusCostRate;
 		chickenFocusDelayTime = chickenFocusDelay;
 		chickenFocusInUse = true;
+		var slow = 0.4;
 		room_speed=24;//15
 		if UberCont.normalGameSpeed == 60
+		{
 			room_speed = 48;
+			slow = 0.2;
+		}
 		if (ultra_got[35])
 		{
 			if altUltra
@@ -2973,6 +2982,7 @@ function scrPowers(raceOverwrite = -1) {
 				{
 					x -= hspeed*pslow;
 					y -= vspeed*pslow;
+					speed += friction*pslow;
 				}
 			}
 			else
@@ -2993,6 +3003,7 @@ function scrPowers(raceOverwrite = -1) {
 					{
 						x -= hspeed*pslow;
 						y -= vspeed*pslow;
+						speed += friction*pslow;
 					}
 				}
 			}
@@ -3001,20 +3012,25 @@ function scrPowers(raceOverwrite = -1) {
 		{
 			with projectile
 			{
-				x -= hspeed*0.1;
-				y -= vspeed*0.1;
+				x -= hspeed*0.2;
+				y -= vspeed*0.2;
+				speed += friction * 0.2;
 			}
 		}
-
+		with enemy {
+			if alarm[1] > 1
+			{
+				alarm[1] += slow;
+				x -= hspeed*0.2;
+				y -= vspeed*0.2;
+			}
+		}
 		if instance_exists(Decoy)//CHICKEN VANISH
 		{
 			instance_create(x+irandom(8)-4,y+irandom(8)-4,Smoke);
 		}
 		if skill_got[5]//THRONE BUTT
 		{//Normal movement speed
-			//spr_walk = sprMutant9Thronebutt;
-
-
 			if my_health > 0 && raceOverwrite == -1
 			{
 				if bskin=1
@@ -3036,7 +3052,6 @@ function scrPowers(raceOverwrite = -1) {
 						spr_walk=sprMutant9DThronebutt;
 				}
 			}
-
 
 			if skill_got[2]==1//extra feet
 			{
@@ -3065,15 +3080,12 @@ function scrPowers(raceOverwrite = -1) {
 		else
 		{
 			reload += 0.1;
-		    if speed>maxSpeed-0.5//make chicken a lill slower in slow mo when no thronebutt
+		    if speed>maxSpeed-0.75//make chicken a lill slower in slow mo when no thronebutt
 		    {
-		    speed-=0.5;
+				speed-=0.75;
 		    }
 		}
-
-
 		if !audio_is_playing(sndChickenLoop) {snd_play_2d(sndChickenStart) snd_loop(sndChickenLoop)}
-
 	}
 
 	//STEROIDS
@@ -3173,7 +3185,8 @@ function scrPowers(raceOverwrite = -1) {
 			ts = 1.3+(Player.skill_got[5]*1.1);
 		with projectile
 		{
-			if canBeMoved && team != 2 && x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+			if canBeMoved && team != 2 //x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+			&& point_distance(x,y,other.x,other.y) < 250
 			{
 				var pd = point_direction(x,y,px,py)+od;
 				if !place_meeting(x+lengthdir_x(ts,pd),y,Wall)
@@ -3184,7 +3197,7 @@ function scrPowers(raceOverwrite = -1) {
 		}
 		with Explosion
 		{
-			if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) && team != 2
+			if point_distance(x,y,other.x,other.y) < 250//x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) && team != 2
 			{
 				var pd = point_direction(x,y,px,py)+od;
 				x += lengthdir_x(ts,pd)
@@ -3334,12 +3347,13 @@ function scrPowers(raceOverwrite = -1) {
 		{
 			if (
 				ps || 
-				(
+				point_distance(x,y,other.x,other.y) < 250
+				/*(
 					x > __view_get( e__VW.XView, 0 ) &&
 					x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) &&
 					y > __view_get( e__VW.YView, 0 ) &&
 					y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-				)
+				)*/
 			)
 			{
 				var d = 1.1 + tb;

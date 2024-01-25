@@ -1,6 +1,7 @@
 /// @description Start it
 serverSocket = -1;
 latestVersion = UberCont.updateVersion;
+UberCont.useSeed = true;
 myClientId = -1;
 gotSteam = false;
 debug("START DAILY");

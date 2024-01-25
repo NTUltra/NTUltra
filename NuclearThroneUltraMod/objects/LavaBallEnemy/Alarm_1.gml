@@ -1,6 +1,6 @@
 alarm[1] = 10+random(15)
 if sprite_index != spr_hurt
-sprite_index = spr_idle
+	sprite_index = spr_idle
 scrTarget()
 if target != noone
 {

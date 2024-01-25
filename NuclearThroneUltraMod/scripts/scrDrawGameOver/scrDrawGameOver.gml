@@ -121,7 +121,6 @@ function scrDrawGameOver() {
 			restarted = true;
 			skeletonlives = 0;
 		}*/
-		debug("GAMEOVER RESTART");
 		if !instance_exists(StartDaily)
 			room_restart()
 		exit;

@@ -81,6 +81,7 @@ with Player//Data to keep
 		ultra_got = other.ultra_got;
 		level = other.level;
 		altUltra = other.altUltra;
+		disableAltUltra = other.disableAltUltra;
 		rogueammo = other.rogueammo;
 		rogueammomax = other.rogueammomax;
 		rad = other.rad;

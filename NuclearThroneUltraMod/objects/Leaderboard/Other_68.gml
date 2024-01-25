@@ -13,6 +13,7 @@ if (type == network_type_data) {
 	{
 		case NETDATA.CLIENT_ID:
 		//SENDING SCORE
+		/*
 			debug("CLIENT ID");
 			myClientId = buffer_read(buffer, buffer_u16);
 			var latestVersion = buffer_read(buffer, buffer_string);
@@ -79,7 +80,7 @@ if (type == network_type_data) {
 				buffer_write(sendBuffer,buffer_u8,NETDATA.WEEKLY);
 				buffer_write(sendBuffer,buffer_u16,myClientId);
 				buffer_write(sendBuffer,buffer_u16,UberCont.weeklyWeek);
-				buffer_write(sendBuffer,buffer_string,UberCont.encrypted_data.ctot_weeklies_score[0]);//Send UID
+			buffer_write(sendBuffer,buffer_string,UberCont.encrypted_data.ctot_weeklies_score[0]);//Send UID
 				buffer_write(sendBuffer,buffer_u64,UberCont.runRace[0]);//Time
 				buffer_write(sendBuffer,buffer_u64,UberCont.runRace[1]);//User id
 				buffer_write(sendBuffer,buffer_string,UberCont.runRace[2]);//Name
@@ -97,6 +98,8 @@ if (type == network_type_data) {
 				event_user(0);
 			}
 			UberCont.runScore = [];
+		*/
+		scrSendScore(buffer);
 		break;
 		case NETDATA.SCORE:
 		break;

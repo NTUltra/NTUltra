@@ -345,17 +345,24 @@ function scrFire2(hasTailNow) {
 	{motion_add(aimDirection,25)
 	image_angle = direction
 	team = other.team}
-
-	repeat(2)
+	
+	with instance_create(x,y,SplinterBurst)
 	{
-	with instance_create(x,y,Splinter)
-	{motion_add(aimDirection+(random(20)-10)*other.accuracy,20+random(4))
-	image_angle = direction
-	team = other.team}
-	with instance_create(x,y,Splinter)
-	{motion_add(aimDirection+(random(10)-5)*other.accuracy,20+random(4))
-	image_angle = direction
-	team = other.team}
+		totalAccuracy = 20;
+		creator = other.id
+		ammo = 2
+		time = 1
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+	with instance_create(x,y,SplinterBurst)
+	{
+		totalAccuracy = 10;
+		creator = other.id
+		ammo = 2
+		time = 1
+		team = other.team
+		event_perform(ev_alarm,0) 
 	}
 
 	BackCont.viewx2 += lengthdir_x(40,aimDirection+180)*UberCont.opt_shake
@@ -6852,8 +6859,8 @@ function scrFire2(hasTailNow) {
 		var am = 4;//am*am = 16
 		var offsetStep = 8*accuracy;
 		var offset = offsetStep*am*0.5;
-		var xx = x+lengthdir_x(offset,aimDir-90)+lengthdir_x(offset*0.5,aimDir+180);
-		var yy = y+lengthdir_y(offset,aimDir-90)+lengthdir_y(offset*0.5,aimDir+180);
+		var xx = x+lengthdir_x(offset,aimDir-90)+lengthdir_x(offset,aimDir+180);
+		var yy = y+lengthdir_y(offset,aimDir-90)+lengthdir_y(offset,aimDir+180);
 		var msk = mask_index;
 		mask_index = mskBullet2;
 			repeat(am)
@@ -15110,6 +15117,89 @@ function scrFire2(hasTailNow) {
 		team = other.team
 		alarm[0] = 2;
 	}
+	break;
+	
+	//SNIPER SCYTHE
+	case 719:
+
+	snd_play_fire(choose(sndSword1,sndSword2))
+	snd_play_fire(sndHeavyCuber);
+	snd_play_fire(sndSniperFire);
+
+	instance_create(x,y,Dust)
+	repeat(5)
+	{
+		with instance_create(x,y,Shell)
+			motion_add(aimDirection+other.right*100+random(70)-35,2+random(2))
+	}
+	with instance_create(x+hspeed+lengthdir_x(4+((Player.skill_got[13]+bettermelee)*8),aimDirection),y+vspeed+lengthdir_y(4+((Player.skill_got[13]+bettermelee)*8),aimDirection),SpinSlash)
+	{
+		sprite_index = sprRedSpinSlash;
+		dmg = 15
+		speed = other.speed*0.5;
+		direction = other.direction;
+		longarms = 0
+		longarms = Player.skill_got[13]+other.bettermelee
+		motion_add(aimDirection,2+(longarms*2));
+		image_angle = direction
+		image_xscale = 1+(longarms*0.15);
+		image_yscale = 1+(longarms*0.15);
+		team = other.team
+		rotation *= sign(other.wepangle);
+	}
+	with instance_create(x+lengthdir_x(15+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(15+((Player.skill_got[13]+bettermelee)*20),aimDirection),LanceShank)
+	{
+		dmg = 10;
+		sprite_index = sprRedLanceSlash;
+		longarms = 0
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection,3.5+longarms)
+		image_angle = direction
+		team = other.team
+	}
+	with instance_create(x,y,PlayerSquareBullet)
+	{motion_add(aimDirection+(6*other.accuracy),18)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,PlayerSquareBullet)
+	{motion_add(aimDirection-(6*other.accuracy),18)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,PlayerHeavySquareBullet)
+	{motion_add(aimDirection,20)
+	image_angle = direction
+	team = other.team}
+	wepangle = -wepangle
+	wkick = 10
+	motion_add(aimDirection + 180,6)
+	BackCont.viewx2 += lengthdir_x(40,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(40,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 10
+	scrMoveContactSolid(aimDirection + 180,32);
+
+	break;
+	
+	//ROGUE VAN CANNON
+	case 720:
+	
+		snd_play_fire(sndPopgun);
+		snd_play_fire(sndPlasmaHit);
+		
+		with instance_create(x,y,VanCannon)
+		{
+			sprite_index = sprRogueVanPortalClose
+			alarm[0] = 0;
+			alarm[1] = 5;
+			image_speed = 0.8
+			snd_play(sndVanWarning,0.1);
+			direction = aimDirection+(random(16)-8)*other.accuracy;
+			image_angle = direction;
+			team = other.team;
+		}
+		BackCont.viewx2 += lengthdir_x(4,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 30
+		wkick = 8
 	break;
 	
 	}//end of switch part 2!

@@ -1,5 +1,5 @@
 if awake {
-    alarm[1] = 10+random(10)
+    alarm[1] = 12+random(10)
     if sprite_index != spr_hurt //&& sprite_index != spr_fire i added this
     sprite_index = spr_idle
     scrTarget()
@@ -40,7 +40,7 @@ if awake {
     with instance_create(x,y,TrapFire)
     {
     sprite_index = sprFireLilHunter
-    motion_add(other.direction+random(60)-30,4+random(6))
+    motion_add(other.direction+random(60)-30,4+random(4))
     image_angle = direction
     team = other.team
     }
@@ -49,7 +49,7 @@ if awake {
         with instance_create(x,y,MiniFlameCannonBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(22)-11),6+random(5))
+        motion_add(other.direction+(random(22)-11),3+random(4))
         team = other.team}
         }
     }
@@ -75,17 +75,17 @@ if awake {
         with instance_create(x,y,MiniFlameCannonBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(40)-20)+50,4.4)
+        motion_add(other.direction+(random(40)-20)+50,4)
         team = other.team}
         with instance_create(x,y,MiniFlameCannonBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(40)-20)-50,4.5)
+        motion_add(other.direction+(random(40)-20)-50,4)
         team = other.team}
         with instance_create(x,y,MiniFlameCannonBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(40)-20),4.5)
+        motion_add(other.direction+(random(40)-20),4)
         team = other.team}
     }
     else if point_distance(x,y,target.x,target.y)>70&&random(14) < 1//long SNIPE!
@@ -102,7 +102,7 @@ if awake {
     with instance_create(x,y,TrapFire)
     {
     sprite_index = sprFireLilHunter
-    motion_add(other.direction+random(60)-30,2+random(5))
+    motion_add(other.direction+random(60)-30,2+random(4))
     image_angle = direction
     team = other.team
     }
@@ -110,7 +110,7 @@ if awake {
         with instance_create(x,y,MiniFlameCannonBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(12)-6),7)
+        motion_add(other.direction+(random(12)-6),5.5)
         team = other.team}
     }
     else if random(8)<1 && point_distance(x,y,target.x,target.y)<200//breathe fire short range
@@ -169,7 +169,7 @@ if awake {
     with instance_create(x,y,TrapFire)
     {
     sprite_index = sprFireLilHunter
-    motion_add(other.direction+random(60)-30,4+random(6))
+    motion_add(other.direction+random(60)-30,4+random(5))
     image_angle = direction
     team = other.team
     }
@@ -178,7 +178,7 @@ if awake {
         with instance_create(x,y,MiniFlameCannonBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(22)-11),6+random(5))
+        motion_add(other.direction+(random(22)-11),5+random(4))
         team = other.team}
         }
     }
@@ -196,7 +196,7 @@ if awake {
     with instance_create(x,y,TrapFire)
     {
     sprite_index = sprFireLilHunter
-    motion_add(other.direction+random(60)-30,2+random(6))
+    motion_add(other.direction+random(60)-30,2+random(5))
     image_angle = direction
     team = other.team
     }
@@ -204,7 +204,7 @@ if awake {
         with instance_create(x,y,MiniFlameCannonBall)
         {
         image_angle=random(360);
-        motion_add(other.direction,2+random(4))
+        motion_add(other.direction,2+random(3))
         team = other.team}
     }
     

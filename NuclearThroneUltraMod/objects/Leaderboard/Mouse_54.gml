@@ -9,4 +9,5 @@ if alarm[1] < 1
 	UberCont.viewDailyGamemode = false;
 	network_destroy(serverSocket);
 	room_goto(romGame);
+	debug("EXIT WITH: ",UberCont.opt_gamemode);
 }

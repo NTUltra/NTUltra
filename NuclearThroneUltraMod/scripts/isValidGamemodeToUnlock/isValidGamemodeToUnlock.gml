@@ -10,7 +10,11 @@ function isValidGamemodeToUnlock(exception = 0){
 		|| gm == 32 || gm == 33 || gm == 34 || gm == 40 || gm == 39 || gm == 40 || gm == 41 || gm == 44
 		|| gm == 45 || gm == 48 || gm == exception)
 		{
-			if (gm == 1 || gm == 46 )
+			if gm == 22
+			{
+				return scrIsInfiniteLevelValid();
+			}
+			else if (gm == 1 || gm == 46 )
 			{
 				return scrIsWeaponValidForUnlocks(UberCont.opt_gm1wep);
 			}

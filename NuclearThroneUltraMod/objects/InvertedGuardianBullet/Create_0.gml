@@ -7,3 +7,4 @@ offset = 1;
 angle = 90;
 time = 1;
 tdir = 0.1;
+alarm[3] = 1;

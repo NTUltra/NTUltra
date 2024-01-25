@@ -1,7 +1,7 @@
 /// @description Optimization check
 alarm[3] = 90;
 
-if !instance_exists(GenCont) && !instance_exists(DramaCamera) && fps_real < fps
+if !instance_exists(GenCont) && !instance_exists(DramaCamera) && fps_real < min(48,fps)
 {
 	if visible && alarm[1] < 1
 	{

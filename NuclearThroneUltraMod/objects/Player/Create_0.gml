@@ -4,7 +4,7 @@
 instance_destroy()
 exit;
 }*/
-//scrn=0; //for screenshot taking character explain pic
+//scrn=0; //for screenshot takhuring character explain pic
 /*
 if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK) && !instance_exists(GenCont)
 {
@@ -150,7 +150,7 @@ horrorEtaken = false;
 patience = 0;
 patienceUsed = 0;
 raddrop = 0;
-hurtDuration = 13; //Additional iframes
+hurtDuration = 12; //Additional iframes
 hurtTime = 0;
 lockoutElementor = false; //When no ammo lockout ability for elementor
 mushroomhead = sprMutant24IdleHead;
@@ -209,7 +209,8 @@ with UberCont {
 		}
 	    else if scrIsGamemode(26) {
 			instance_create(0,0,StartDaily);
-        
+			if UberCont.isLeaderboardGamemode
+				canRestart = false;
 	    }
 	    else if scrIsGamemode(27) {
 			instance_create(0,0,StartDaily);
@@ -293,6 +294,11 @@ scrSkills()
 scrWeapons();
 unlockAlternativeUltras = false;
 altUltra = false;
+disableAltUltra = false;
+if scrIsGamemode(23)
+{
+	disableAltUltra = true;
+}
 loops = 0;
 //RACE STUFF
 scrLoadRace();
@@ -536,7 +542,6 @@ if scrIsGamemode(36)//Ultra mod start
 	//instance_create(0,0,PauseTimer);
 }
 if UberCont.crown_start[r] && !instance_exists(PlayerSpawn) && !scrIsGamemode(25) && !instance_exists(CrownIcon) {
-	debug("CROWN START");
 	with Crown
 		instance_destroy();
 	with UberCont
@@ -628,7 +633,7 @@ nochest = -1
 bleed = 0
 chickenFocusMax = 100;
 chickenFocus = chickenFocusMax;
-chickenFocusCostRate = 2;
+chickenFocusCostRate = 1;
 chickenFocusReturnRate = 3;
 chickenFocusDelay = 9;
 chickenFocusDelayTime = 0;

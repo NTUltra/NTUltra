@@ -1,6 +1,6 @@
 scrTarget()
 alarm[1] = 6+random(5)
-
+firstTime = false;
 if loops > 0
 {
 	alarm[1] -= 2;
@@ -28,7 +28,6 @@ if target != noone
 				for(var i = 0; i < al; i ++)
 				{
 					with freaks[| i] {
-						
 						if fuseAmount < 1
 						{
 							merged++;
@@ -71,6 +70,7 @@ if target != noone
 					shadowY = 2;
 					speed = 0;
 					walk = 0;
+					my_health += 2;
 					alarm[1] += 15;
 					if place_meeting(x,y,Wall)
 					{

@@ -33,7 +33,6 @@ if hover
 				isLeaderboardGamemode = false;
 				viewDailyGamemode = false;
 			}
-			
 		}
 	}
 	else

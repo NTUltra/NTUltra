@@ -6,7 +6,7 @@ if hover
 		goToLeaderboard = true;
 		runScore = [];
 		runRace = [];
-		opt_gamemode = previous_gamemode;
+		//opt_gamemode = previous_gamemode;
 		leaderboardType = LEADERBOARD.SCORE;
 		isLeaderboardGamemode = false;
 		viewDailyGamemode = false;

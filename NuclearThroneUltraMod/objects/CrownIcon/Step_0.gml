@@ -283,6 +283,7 @@ if crown == 11
 		instance_create(x,y,Player);
 		with Player//Data to keep
 		{
+			disableAltUltra = other.disableAltUltra;
 			rnglevelloop = rngloop;
 			weaponspickedup = wpu;
 			freeAmmoRound = 1;
@@ -322,7 +323,8 @@ if crown == 11
 			ammo[5] = typ_amax[5];
 	
 			scrWeaponHold();
-			unlockAlternativeUltras = hasReachedUltra;
+			if !disableAltUltra
+				unlockAlternativeUltras = hasReachedUltra;
 			//event_perform(ev_other,ev_room_end);
 		}
 		/*with instance_create(x,y,GenCont)

@@ -19,3 +19,4 @@ fireExplosionAmount = 16;
 inverted = false;
 fireDelay = 2;
 bloomSprite = sprMiniFlameCannonBallBloom;
+alarm[3] = 1;

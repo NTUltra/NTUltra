@@ -5,7 +5,7 @@ mySize = 1
 droprate = 5;
 
 event_inherited()
-
+firstTime = true;
 spr_idle = sprInvertedFreak1Idle
 spr_walk = sprInvertedFreak1Walk
 spr_hurt = sprInvertedFreak1Hurt

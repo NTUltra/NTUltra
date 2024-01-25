@@ -23,10 +23,15 @@ if (instance_number(enemy) <= 3 + min(6,loops)|| instance_exists(SurvivalWave) |
 			event_user(0);
 	x=xstart
 	y=ystart
+	scrForcePosition60fps();
 	alarm[1]=80;
 	meleedamage=7;
 	awake=true;
+	instance_create(xstart,ystart,DragonDance);
 	EnemyHealthAdjustments();
+	with VulcanoTrap {
+		instance_destroy();
+	}
 	//instance_create(x,y,HotDrakeLava);
 	mask_index=mskHotDrake;
 	instance_create(x,y,DramaCamera);

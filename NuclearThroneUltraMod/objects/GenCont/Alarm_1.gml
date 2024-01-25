@@ -26,7 +26,6 @@ if instance_exists(Player)
 	BackCont.shake += 5
 	snd_play_2d(sndVenuz)
 	}
-
 	if Player.area = 103 || Player.area == 125 || Player.area == 133
 	{
 	    //Player.area = 3
@@ -49,7 +48,7 @@ if instance_exists(Player)
 	}
 	else if Player.area == 136
 	{
-		 with WeaponChest
+		with WeaponChest
 	    {
 			instance_create(x,y,UltraWeaponChest)
 			instance_destroy(id,false);

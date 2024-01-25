@@ -23,10 +23,11 @@ function scrRestart() {
 	{
 		debug("GO TO LEADERBOARD");
 		room_goto(romLeaderboard);
+		/*
 		with UberCont
 		{
 			opt_gamemode = [0];
-		}
+		}*/
 		audio_stop_all();
 		with MusCont {
 			amb = amb0c;

@@ -126,7 +126,6 @@ else if array_length(leaderboard) > 0
 			xx += 48;
 			if (entry[11] != "[1]")
 			{
-				
 				scrDrawLeaderboardCrown(scrStringArrayToNumbersArray(entry[11]),xx,yy);
 			}
 			xx += 16;
@@ -581,8 +580,8 @@ else if noBoard
 else
 {
 	draw_sprite(sprite_index,image_index,
-	camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])*0.5),
-	camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])*0.5));
+	round(camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])*0.5)),
+	round(camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])*0.5)));
 }
 var yy = camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0]) - 8;
 draw_set_halign(fa_center);

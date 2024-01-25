@@ -11,7 +11,10 @@ function scrChestOpenMindReload(thePlayer, dealDamageAnyway = false){
 			scrRaddrop(17);
 			if dealDamageAnyway || place_meeting(x,y,chestprop)
 			{
-				my_health -= 1;
+				if armour > 0
+					armour -= 1;
+				else
+					my_health -= 1;
 				exception = true;
 				sprite_index = spr_hurt;
 				image_index = 0;

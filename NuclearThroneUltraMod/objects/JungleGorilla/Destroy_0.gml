@@ -1,4 +1,4 @@
-scrDrop(30,15)
+scrDrop(32,15)
 scrDrop(10,0)
 event_inherited()
 snd_play(sndToxicBarrelGas)
@@ -26,7 +26,7 @@ repeat(am)
 	dir += angStep
 	with instance_create(x,y,EnemyBullet2Curve)
 	{
-		motion_add(dir,5)
+		motion_add(dir,4.8)
 		image_angle = direction
 		team = other.team
 	}

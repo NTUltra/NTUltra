@@ -20,5 +20,5 @@ if !isRace
 	else
 		sprite_index = sprDailyChallengeOffGM
 }
-if scrIsGamemode(27)
+if scrIsGamemode(26)
 	image_index = 1;

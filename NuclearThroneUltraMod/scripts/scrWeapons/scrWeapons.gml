@@ -43,6 +43,7 @@ function scrWeapons() {
 	wep_text[3] = "ratchet"
 	wep_swap[3] = sndSwapHammer
 	wep_rad[3] = 0;
+	wep_popup[3] = "CAN DEFLECT BULLETS#EXCEPT SQUARES";
 
 
 	wep_name[4] = "MACHINEGUN"
@@ -154,6 +155,7 @@ function scrWeapons() {
 	wep_text[13] = "dig"
 	wep_swap[13] = sndSwapHammer
 	wep_rad[13] = 0;
+	wep_popup[13] = "MELEE DAMAGE#CAN STACK!";
 
 	wep_name[14] = "BAZOOKA"
 	wep_type[14] = 4
@@ -209,6 +211,7 @@ function scrWeapons() {
 	wep_text[18] = "we hereby sincerely apologize"
 	wep_swap[18] = sndSwapBow
 	wep_rad[18] = 0;
+	wep_popup[18] = "DISCS DEAL MORE DAMAGE#TO ENEMIES";
 
 	wep_name[19] = "LASER PISTOL"
 	wep_type[19] = 5
@@ -455,7 +458,7 @@ function scrWeapons() {
 	wep_name[41] = "GOLDEN MACHINEGUN"
 	wep_type[41] = 1
 	wep_auto[41] = 1
-	wep_load[41] = 5
+	wep_load[41] = 4.5
 	wep_cost[41] = 1
 	wep_sprt[41] = sprGoldMachinegun
 	wep_area[41] = 17
@@ -510,7 +513,7 @@ function scrWeapons() {
 	wep_name[46] = "CHICKEN SWORD"
 	wep_type[46] = 0
 	wep_auto[46] = 0
-	wep_load[46] = 25
+	wep_load[46] = 23
 	wep_cost[46] = 0
 	wep_sprt[46] = sprSword
 	wep_area[46] = -1
@@ -561,6 +564,7 @@ function scrWeapons() {
 	wep_text[50] = "burn burn burn"
 	wep_swap[50] = sndSwapFlame
 	wep_rad[50] = 0;
+	wep_popup[50] = "FIRE BURNS AWAY#TOXIC GAS";
 
 	wep_name[51] = "DRAGON"
 	wep_type[51] = 4
@@ -664,6 +668,7 @@ function scrWeapons() {
 	wep_text[59] = "hurricane"
 	wep_swap[59] = sndSwapEnergy
 	wep_rad[59] = 0;
+	wep_popup[59] = "LIGHTNING DAMAGE DOES STACKS";
 
 	//BELOW THIS IS MODDED by Juul (Erdeppol/CouchPotato)
 	wep_name[60] = "BLOOD LAUNCHER SHOTGUN"
@@ -687,6 +692,7 @@ function scrWeapons() {
 	wep_text[61] = "blood weapons destroy projectiles"
 	wep_swap[61] = sndSwapPistol
 	wep_rad[61] = 0;
+	wep_popup[61] = "BLOOD BULLETS#DESTROY PROJECTILES";
 
 	wep_name[62] = "POP GUN"
 	wep_type[62] = 1
@@ -698,6 +704,7 @@ function scrWeapons() {
 	wep_text[62] = "not the real one"
 	wep_swap[62] = sndSwapMachinegun
 	wep_rad[62] = 0;
+	wep_popup[62] = "FIRES SHELLS/PELLETS";
 
 	wep_name[63] = "BLACKHOLE GENERATOR"
 	wep_type[63] = 5
@@ -797,6 +804,7 @@ function scrWeapons() {
 	wep_text[71] = "\"JW could not resist\"#- Rami 2015"
 	wep_swap[71] = sndSwapExplosive
 	wep_rad[71] = 0;
+	wep_popup[71] = "STRONG HANDSHAKE!";
 
 	wep_name[72] = "GATLING BAZOOKA"
 	wep_type[72] = 4
@@ -841,6 +849,7 @@ function scrWeapons() {
 	wep_text[75] = "I don't know what it does"
 	wep_swap[75] = sndSwapMachinegun
 	wep_rad[75] = 0;
+	wep_popup[75] = "I DON'T KNOW WHAT IT DOES?!";
 
 	wep_name[76] = "PLASMA RIFLE"
 	wep_type[76] = 5
@@ -885,6 +894,7 @@ function scrWeapons() {
 	wep_text[79] = "SPC!"
 	wep_swap[79] = sndSwapEnergy
 	wep_rad[79] = 0;
+	wep_popup[79] = "SPC!";
 
 	wep_name[80] = "HUNTER SNIPER"
 	wep_type[80] = 1
@@ -929,6 +939,7 @@ function scrWeapons() {
 	wep_text[83] = "bloody hell"
 	wep_swap[83] = sndSwapMachinegun
 	wep_rad[83] = 0;
+	wep_popup[83] = "BLOOD BULLETS#DESTROY PROJECTILES";
 
 	wep_name[84] = "TRIPLE BLOOD RIFLE"
 	wep_type[84] = 1
@@ -940,6 +951,7 @@ function scrWeapons() {
 	wep_text[84] = "fueled by fleshwounds"
 	wep_swap[84] = sndSwapMachinegun
 	wep_rad[84] = 0;
+	wep_popup[61] = "BLOOD BULLETS#WORK WITH RECYCLE GLAND!";
 
 	wep_name[85] = "ERASER"
 	wep_type[85] = 2
@@ -995,6 +1007,7 @@ function scrWeapons() {
 	wep_text[89] = "control"
 	wep_swap[89] = sndSwapShotgun
 	wep_rad[89] = 0;
+	wep_popup[89] = "FIRE AGAIN TO#REDIRECT PROJECTILE!";
 
 	wep_name[90] = "ASSAULT PISTOL"
 	wep_type[90] = 1
@@ -1094,6 +1107,7 @@ function scrWeapons() {
 	wep_text[98] = "sheeps!"
 	wep_swap[98] = sndSwapEnergy
 	wep_rad[98] = 0;
+	wep_popup[98] = "TURNS ENEMIES#INTO SHEEP!";
 
 	wep_name[99] = "SUPER FLAK CANNON"
 	wep_type[99] = 2
@@ -1628,7 +1642,7 @@ function scrWeapons() {
 	wep_auto[147] = 0
 	wep_load[147] = 22
 	wep_cost[147] = 14
-	wep_sprt[147] = sprFrostShotgun
+	wep_sprt[147] = sprFrostBulletShotgun
 	wep_area[147] = 9
 	wep_text[147] = "breezer"
 	wep_swap[147] = sndSwapShotgun
@@ -1831,6 +1845,7 @@ function scrWeapons() {
 	wep_text[165] = "the year of the bow"
 	wep_swap[165] = sndSwapBow
 	wep_rad[165] = 0;
+	wep_popup[165] = "USES EXPLOSIVE#AND BOLT AMMO";
 
 	wep_name[166] = "SLASH SHOTGUN"
 	wep_type[166] = 2
@@ -1886,6 +1901,7 @@ function scrWeapons() {
 	wep_text[170] = "click, click again to change direction"
 	wep_swap[170] = sndSwapShotgun
 	wep_rad[170] = 0;
+	wep_popup[170] = "FIRE AGAIN TO#REDIRECT PROJECTILES!";
 
 	wep_name[171] = "DOUBLE DIRECTOR SHOTGUN"
 	wep_type[171] = 2
@@ -1897,6 +1913,7 @@ function scrWeapons() {
 	wep_text[171] = "I changed my mind"
 	wep_swap[171] = sndSwapShotgun
 	wep_rad[171] = 0;
+	wep_popup[171] = "DIRECTOR WEAPONS#CAN'T BE DEFLECTED";
 
 	wep_name[172] = "QUADRUPLE DIRECTOR SHOTGUN"
 	wep_type[172] = 2
@@ -1908,6 +1925,7 @@ function scrWeapons() {
 	wep_text[172] = "one direction"
 	wep_swap[172] = sndSwapShotgun
 	wep_rad[172] = 0;
+	wep_popup[172] = "FIRE AGAIN TO#REDIRECT PROJECTILES!";
 
 	wep_name[173] = "DIRECTOR RIFLE"
 	wep_type[173] = 1
@@ -1919,6 +1937,7 @@ function scrWeapons() {
 	wep_text[173] = "click to change direction!"
 	wep_swap[173] = sndSwapMachinegun
 	wep_rad[173] = 0;
+	wep_popup[173] = "FIRE AGAIN TO#REDIRECT PROJECTILES!";
 
 	wep_name[174] = "FLAME DIRECTOR SHOTGUN"
 	wep_type[174] = 2
@@ -1930,6 +1949,7 @@ function scrWeapons() {
 	wep_text[174] = "heatflow"
 	wep_swap[174] = sndSwapShotgun
 	wep_rad[174] = 0;
+	wep_popup[174] = "FIRE AGAIN TO#REDIRECT PROJECTILES!";
 
 	wep_name[175] = "DOUBLE FLAME DIRECTOR SHOTGUN"
 	wep_type[175] = 2
@@ -1941,6 +1961,7 @@ function scrWeapons() {
 	wep_text[175] = "two directions"
 	wep_swap[175] = sndSwapShotgun
 	wep_rad[175] = 0;
+	wep_popup[175] = "FIRE AGAIN TO#REDIRECT PROJECTILES!";
 
 	wep_name[176] = "QUADRUPLE FLAME DIRECTOR SHOTGUN"
 	wep_type[176] = 2
@@ -1952,6 +1973,7 @@ function scrWeapons() {
 	wep_text[176] = "condensed fire"
 	wep_swap[176] = sndSwapShotgun
 	wep_rad[176] = 0;
+	wep_popup[176] = "FIRE AGAIN TO#REDIRECT PROJECTILES!";
 
 	wep_name[177] = "ENERGY BACKSTABBER"
 	wep_type[177] = 5
@@ -2018,6 +2040,7 @@ function scrWeapons() {
 	wep_text[182] = "directing"
 	wep_swap[182] = sndSwapShotgun
 	wep_rad[182] = 0;
+	wep_popup[182] = "FIRE AGAIN TO#REDIRECT PROJECTILES!";
 
 	wep_name[183] = "FLAME DIRECTOR ERASER"
 	wep_type[183] = 2
@@ -2231,7 +2254,7 @@ function scrWeapons() {
 	wep_name[201] = "MICRO PLASMA GUN"
 	wep_type[201] = 5
 	wep_auto[201] = 1
-	wep_load[201] = 13
+	wep_load[201] = 11
 	wep_cost[201] = 1
 	wep_sprt[201] = sprMicroPlasmaGun
 	wep_area[201] = 0
@@ -2249,6 +2272,7 @@ function scrWeapons() {
 	wep_text[202] = "wrong direction kraken gun"
 	wep_swap[202] = sndSwapDragon
 	wep_rad[202] = 0;
+	wep_popup[202] = "TENTACLE BEHIND YOU!";
 
 	wep_name[203] = "FLAME WAVE GUN"
 	wep_type[203] = 2
@@ -2590,6 +2614,7 @@ function scrWeapons() {
 	wep_text[233] = "blades don't hurt you"
 	wep_swap[233] = sndSwapBow
 	wep_rad[233] = 0;
+	wep_popup[233] = "DOESN'T HURT YOU!";
 
 	wep_name[234] = "HEAVY AUTO CROSSBOW"
 	wep_type[234] = 3
@@ -2645,6 +2670,7 @@ function scrWeapons() {
 	wep_text[238] = "the blades split..."
 	wep_swap[238] = sndSwapBow
 	wep_rad[238] = 0;
+	wep_popup[238] = "TURNS ENEMIES#INTO SHEEP!";
 
 	wep_name[239] = "ROCKET GLOVE"
 	wep_type[239] = 4
@@ -2744,6 +2770,7 @@ function scrWeapons() {
 	wep_text[247] = "bomberman"
 	wep_swap[247] = sndSwapExplosive
 	wep_rad[247] = 0;
+	wep_popup[247] = "+";
 
 	wep_name[248] = "ULTRA POP GUN"
 	wep_type[248] = 1
@@ -2788,6 +2815,7 @@ function scrWeapons() {
 	wep_text[251] = "away! and return!"
 	wep_swap[251] = sndSwapBow
 	wep_rad[251] = 0;
+	wep_popup[251] = "DOES NOT HURT YOU!";
 
 	wep_name[252] = "SUPER YOYO GUN"
 	wep_type[252] = 3
@@ -2854,6 +2882,7 @@ function scrWeapons() {
 	wep_text[257] = "lightning jolt!"
 	wep_swap[257] = sndSwapBow
 	wep_rad[257] = 0;
+	wep_popup[257] = "USES ENERGY#ADN BOLT AMMO";
 
 	wep_name[258] = "SHOTGUN RIFLE"
 	wep_type[258] = 2
@@ -2876,6 +2905,7 @@ function scrWeapons() {
 	wep_text[259] = "make a decision, gun!"
 	wep_swap[259] = sndSwapMachinegun
 	wep_rad[259] = 0;
+	wep_popup[259] = "FIRES SHELLS/PELLETS#AND BULLETS";
 
 	wep_name[260] = "HYPER HEAVY SLUGGER"
 	wep_type[260] = 2
@@ -2898,6 +2928,7 @@ function scrWeapons() {
 	wep_text[261] = "hyper machinegun shoots through walls"
 	wep_swap[261] = sndSwapShotgun
 	wep_rad[261] = 0;
+	wep_popup[261] = "HITSCAN THROUGH WALLS!";
 
 	wep_name[262] = "SPIRAL YOYO GUN"
 	wep_type[262] = 3
@@ -2920,6 +2951,7 @@ function scrWeapons() {
 	wep_text[263] = "let's rock"
 	wep_swap[263] = sndSwapGuitar
 	wep_rad[263] = 0;
+	wep_popup[263] = "LET'S ROCK!";
 
 	wep_name[264] = "BROKEN STER GUN"
 	wep_type[264] = 4
@@ -2931,6 +2963,7 @@ function scrWeapons() {
 	wep_text[264] = "you broke the game"
 	wep_swap[264] = sndSwapExplosive
 	wep_rad[264] = 0;
+	wep_popup[264] = "REMEMBER";
 
 	wep_name[265] = "HEAVY MINIGUN"
 	wep_type[265] = 1
@@ -2964,6 +2997,7 @@ function scrWeapons() {
 	wep_text[267] = "CHUBBY GUN"
 	wep_swap[267] = sndSwapPistol
 	wep_rad[267] = 0;
+	wep_popup[267] = "PIERCES!";
 
 	wep_name[268] = "FAT MACHINEGUN"
 	wep_type[268] = 1
@@ -2975,6 +3009,7 @@ function scrWeapons() {
 	wep_text[268] = "BIG AND FAT"
 	wep_swap[268] = sndSwapMachinegun
 	wep_rad[268] = 0;
+	wep_popup[268] = "PIERCES!";
 
 	wep_name[269] = "BOUNCER LASER PISTOL"
 	wep_type[269] = 5
@@ -3019,6 +3054,7 @@ function scrWeapons() {
 	wep_text[272] = "spooky"
 	wep_swap[272] = sndSwapSword
 	wep_rad[272] = 0;
+	wep_popup[272] = "DESTROYS SQUARES!";
 
 	wep_name[273] = "GYRO BURSTER"
 	wep_type[273] = 1
@@ -3052,6 +3088,7 @@ function scrWeapons() {
 	wep_text[275] = "digging up graves"
 	wep_swap[275] = sndSwapHammer
 	wep_rad[275] = 0;
+	wep_popup[275] = "DESTROYS SQUARES!";
 
 	wep_name[276] = "GOLDEN FLAMETHROWER"
 	wep_type[276] = 4
@@ -3628,7 +3665,7 @@ function scrWeapons() {
 	wep_name[328] = "BLACK SWORD"
 	wep_type[328] = 0
 	wep_auto[328] = 0
-	wep_load[328] = 14//16 usual
+	wep_load[328] = 13//16 usual
 	wep_cost[328] = 0
 	wep_sprt[328] = sprBlackSword
 	wep_area[328] = -1
@@ -3800,6 +3837,7 @@ function scrWeapons() {
 	wep_text[343] = "the tentacle universe"
 	wep_swap[343] = sndSwapDragon
 	wep_rad[343] = 0;
+	wep_popup[343] = "NOT FROM THIS WORLD";
 
 	wep_name[344] = "ELECTRO GUN"
 	wep_type[344] = 5
@@ -3811,6 +3849,7 @@ function scrWeapons() {
 	wep_text[344] = "considered plasma & lightning"
 	wep_swap[344] = sndSwapEnergy
 	wep_rad[344] = 0;
+	wep_popup[344] = "LIGHTNING CONNECTS#THE ELECTRO BALLS";
 
 	wep_name[345] = "ELECTRO RIFLE"
 	wep_type[345] = 5
@@ -3899,6 +3938,7 @@ function scrWeapons() {
 	wep_text[352] = "the four ultra elements"
 	wep_swap[352] = sndSwapDragon
 	wep_rad[352] = 0;
+	wep_popup[352] = "ALL OF THE ELEMENTS!";
 
 	wep_name[353] = "TERMITE GUN"
 	wep_type[353] = 1
@@ -3910,6 +3950,7 @@ function scrWeapons() {
 	wep_text[353] = "termites eat enemy mutants"
 	wep_swap[353] = sndSwapMotorized
 	wep_rad[353] = 0;
+	wep_popup[353] = "TERMITES WORK WITH#RECYCLE GLAND";
 
 	wep_name[354] = "SUPER BOUNCER FLAK CANNON"
 	wep_type[354] = 1
@@ -3932,6 +3973,7 @@ function scrWeapons() {
 	wep_text[355] = "pincer attack"
 	wep_swap[355] = sndSwapShotgun
 	wep_rad[355] = 0;
+	wep_popup[355] = "EAGLE EYES#MAKES THIS MUCH MORE ACCURATE";
 	
 	wep_name[356] = "HEAVY GRENADE LAUNCHER"
 	wep_type[356] = 4
@@ -4065,6 +4107,7 @@ function scrWeapons() {
 	wep_text[367] = "I am the director"
 	wep_swap[367] = sndSwapExplosive
 	wep_rad[367] = 0;
+	wep_popup[367] = "FIRE AGAIN TO#REDIRECT PROJECTILE!";
 	
 	wep_name[368] = "KRAKEN GRENADE LAUNCHER"
 	wep_type[368] = 4
@@ -4160,6 +4203,7 @@ function scrWeapons() {
 		wep_text[375] = "100% beef"
 		wep_swap[375] = sndSelectUp
 		wep_rad[375] = 0;
+		wep_popup[375] = "100% BEEF!";
 	}
 	else
 	{
@@ -4172,7 +4216,8 @@ function scrWeapons() {
 		wep_area[375] = -1
 		wep_text[375] = "100% inversion"
 		wep_swap[375] = sndSwapSword
-		wep_rad[375] = 0;	
+		wep_rad[375] = 0;
+		wep_popup[375] = "100% INVERTED PORTAL CHANCE!";
 	}
 	
 	wep_name[376] = "INFINITY SMART GUN"
@@ -4207,6 +4252,7 @@ function scrWeapons() {
 	wep_text[378] = "<3"
 	wep_swap[378] = sndSwapExplosive
 	wep_rad[378] = 0;
+	wep_popup[378] = "CHANCE TO HEAL YOU!";
 	
 	wep_name[379] = "BULLET WALL"
 	wep_type[379] = 1
@@ -4406,6 +4452,7 @@ function scrWeapons() {
 	wep_swap[396] = sndSwapEnergy
 	wep_rad[396] = 0;
 	
+
 	wep_name[397] = "SWARM BOMB"
 	wep_type[397] = 3
 	wep_auto[397] = 0
@@ -4416,6 +4463,7 @@ function scrWeapons() {
 	wep_text[397] = "bee hive"
 	wep_swap[397] = sndSwapBow
 	wep_rad[397] = 0;
+	wep_popup[397] = "START THE PARTY!#WARNING FLASHING LIGHTS!"
 	
 	wep_name[398] = "LIGHTNING LASER"//Tiny balls that explode into lightning on impact move fast fire fast
 	wep_type[398] = 5
@@ -4471,6 +4519,7 @@ function scrWeapons() {
 	wep_text[402] = "a gun that shoots guns"
 	wep_swap[402] = sndSwapExplosive
 	wep_rad[402] = 0;
+	wep_popup[402] = "GUN GUN"
 	
 	wep_name[403] = "CLUSTER GRENADE LAUNCHER"
 	wep_type[403] = 4
@@ -4504,6 +4553,7 @@ function scrWeapons() {
 	wep_text[405] = "phase through walls"
 	wep_swap[405] = sndSwapPistol
 	wep_rad[405] = 0;
+	wep_popup[405] = "CAN SHOOT THROUGH WALLS";
 	
 	wep_name[406] = "CUBER RIFLE"
 	wep_type[406] = 1
@@ -4515,6 +4565,7 @@ function scrWeapons() {
 	wep_text[406] = "square bullets"
 	wep_swap[406] = sndSwapPistol
 	wep_rad[406] = 0;
+	wep_popup[406] = "CAN SHOOT THROUGH WALLS";
 	
 	wep_name[407] = "MORPH-O-LASER"
 	wep_type[407] = 5
@@ -4526,6 +4577,7 @@ function scrWeapons() {
 	wep_text[407] = "sheep blaser"
 	wep_swap[407] = sndSwapPistol
 	wep_rad[407] = 0;
+	wep_popup[407] = "SHEEP HAVE A HIGH#DROP RATE";
 	
 	wep_name[408] = "MORPH-O-RIFLE"
 	wep_type[408] = 1
@@ -4537,6 +4589,7 @@ function scrWeapons() {
 	wep_text[408] = "sheep shooter"
 	wep_swap[408] = sndSwapPistol
 	wep_rad[408] = 0;
+	wep_popup[408] = "SHEEP HAVE A HIGH#DROP RATE";
 	
 	wep_name[409] = "DIRECTOR PLASMA GUN"
 	wep_type[409] = 5
@@ -4548,6 +4601,7 @@ function scrWeapons() {
 	wep_text[409] = "curve ball"
 	wep_swap[409] = sndSwapEnergy
 	wep_rad[409] = 0;
+	wep_popup[409] = "FIRE AGAIN TO#REDIRECT PROJECTILE!";
 	
 	wep_name[410] = "DOUBLE BOUNCER LASER PISTOL"
 	wep_type[410] = 5
@@ -4592,6 +4646,7 @@ function scrWeapons() {
 	wep_text[413] = "vampire"
 	wep_swap[413] = sndSwapBow
 	wep_rad[413] = 0;
+	wep_popup[413] = "CHANCE TO HEAL YOU";
 	
 	wep_name[414] = "BUBBLER"
 	wep_type[414] = 4
@@ -4812,6 +4867,7 @@ function scrWeapons() {
 	wep_text[433] = "redirects all enemy bullets"
 	wep_swap[433] = sndSwapBow
 	wep_rad[433] = 0;
+	wep_popup[433] = "REDIRECTS ALL#ENEMY PROJECTILES";
 	
 	wep_name[434] = "ULTRA BLOOD RIFLE"
 	wep_type[434] = 1
@@ -5052,7 +5108,7 @@ function scrWeapons() {
 	wep_sprt[455] = sprScythe
 	wep_area[455] = 5
 	wep_text[455] = "spin attack!"
-	wep_swap[455] = sndSwapHammer
+	wep_swap[455] = sndSwapSword
 	wep_rad[455] = 0;
 	
 	wep_name[456] = "SUPER SCYTHE"
@@ -5063,7 +5119,7 @@ function scrWeapons() {
 	wep_sprt[456] = sprSuperScythe
 	wep_area[456] = 21
 	wep_text[456] = "super scythe me"
-	wep_swap[456] = sndSwapHammer
+	wep_swap[456] = sndSwapSword
 	wep_rad[456] = 0;
 	
 	wep_name[457] = "EXPLOSIVE ASSAULT RIFLE"
@@ -5186,6 +5242,7 @@ function scrWeapons() {
 	wep_text[467] = "10/10"
 	wep_swap[467] = sndSwapExplosive
 	wep_rad[467] = 0;
+	wep_popup[467] = "EXPLOSION IS A BURST";
 	
 	wep_name[468] = "ULTRA MORPH-O-RAY"
 	wep_type[468] = 5
@@ -5197,6 +5254,7 @@ function scrWeapons() {
 	wep_text[468] = ""
 	wep_swap[468] = sndSwapEnergy
 	wep_rad[468] = 7;
+	wep_popup[468] = "GOES THROUGH WALLS!";
 	
 	wep_name[469] = "TOXIC-O-RAY"
 	wep_type[469] = 4
@@ -5208,6 +5266,7 @@ function scrWeapons() {
 	wep_text[469] = "stinky sheep"
 	wep_swap[469] = sndSwapExplosive  
 	wep_rad[469] = 0;
+	wep_popup[469] = "RAY'S ARE BURST WEAPONS";
 	
 	wep_name[470] = "FROST LINE"
 	wep_type[470] = 4
@@ -5571,6 +5630,7 @@ function scrWeapons() {
 	wep_text[502] = "hold fire to charge#and deal more damage"
 	wep_swap[502] = sndSwapBow
 	wep_rad[502] = 0;
+	wep_popup[502] = "HOLD FIRE TO CHARGE#THEN RELEASE TO FIRE";
 	
 	wep_name[503] = "ULTRA CHARGE BOW"
 	wep_type[503] = 3
@@ -5890,6 +5950,7 @@ function scrWeapons() {
 	wep_text[531] = "I fucking love coffee man"
 	wep_swap[531] = sndSwapMachinegun
 	wep_rad[531] = 0;
+	wep_popup[531] = "MAKES YOU FASTER";
 	
 	wep_name[532] = "SUPER BOUNCER BAZOOKA"
 	wep_type[532] = 4
@@ -6559,7 +6620,7 @@ function scrWeapons() {
 	wep_sprt[592] = sprEnergyScythe
 	wep_area[592] = 10
 	wep_text[592] = "energy all around"
-	wep_swap[592] = sndSwapHammer
+	wep_swap[592] = sndSwapEnergy
 	wep_rad[592] = 0;
 	
 	wep_name[593] = "EXPLOSIVE SCREWDRIVER"
@@ -6570,7 +6631,7 @@ function scrWeapons() {
 	wep_sprt[593] = sprExplosiveScrewDriver
 	wep_area[593] = 9
 	wep_text[593] = "screwdriver will destroy it"
-	wep_swap[593] = sndSwapEnergy
+	wep_swap[593] = sndSwapExplosive
 	wep_rad[593] = 0;
 	
 	wep_name[594] = "HEAVY CLUB"
@@ -6825,6 +6886,7 @@ function scrWeapons() {
 	wep_text[616] = "bursting"
 	wep_swap[616] = sndSwapExplosive
 	wep_rad[616] = 0;
+	wep_popup[616] = "DIRECTOR WEAPONS#CAN'T BE DEFLECTED";
 	
 	wep_name[617] = "GOLDEN DISC GUN"
 	wep_type[617] = 3
@@ -6896,7 +6958,7 @@ function scrWeapons() {
 	wep_type[623] = 3
 	wep_auto[623] = 1
 	wep_load[623] = 35
-	wep_cost[623] = 6
+	wep_cost[623] = 5
 	wep_sprt[623] = sprBouncerWaveCrossbow
 	wep_area[623] = 8
 	wep_text[623] = "boink poink"
@@ -7254,6 +7316,7 @@ function scrWeapons() {
 	wep_text[655] = "all will be given for all to be taken"
 	wep_swap[655] = sndSwapCursed
 	wep_rad[655] = 0;
+	wep_popup[655] = "SWAPS BETWEEN ALL AMMO TYPES";
 	
 	wep_name[656] = "THE SAFROODEN"
 	wep_type[656] = 1
@@ -7265,6 +7328,7 @@ function scrWeapons() {
 	wep_text[656] = "arrow from hell"
 	wep_swap[656] = sndSwapCursed
 	wep_rad[656] = 0;
+	wep_popup[656] = "SWAPS BETWEEN ALL AMMO TYPES";
 	
 	wep_name[657] = "BALLISTA"
 	wep_type[657] = 3
@@ -7298,6 +7362,7 @@ function scrWeapons() {
 	wep_text[659] = "experiments"
 	wep_swap[659] = sndSwapCursed
 	wep_rad[659] = 0;
+	wep_popup[659] = "SWAPS BETWEEN ALL AMMO TYPES";
 	
 	wep_name[660] = "SUCKER PUNCHER"
 	wep_type[660] = 2
@@ -7342,6 +7407,7 @@ function scrWeapons() {
 	wep_text[663] = "sheep revolver"
 	wep_swap[663] = sndSwapPistol
 	wep_rad[663] = 0;
+	wep_popup[663] = "TURNS ENEMIES#INTO SHEEP!";
 	
 	wep_name[664] = "DOUBLE POP GUN"
 	wep_type[664] = 1
@@ -7364,6 +7430,7 @@ function scrWeapons() {
 	wep_text[665] = "frost and fire"
 	wep_swap[665] = sndSwapMachinegun
 	wep_rad[665] = 0;
+	wep_popup[665] = "FROST AND FIRE";
 	
 	wep_name[666] = "TELEPATHOR"
 	wep_type[666] = 2
@@ -7540,6 +7607,7 @@ function scrWeapons() {
 	wep_text[681] = "swaps between all ammo types"
 	wep_swap[681] = sndSwapBow
 	wep_rad[681] = 0;
+	wep_popup[681] = "SWAPS BETWEEN ALL AMMO TYPES";
 	
 	wep_name[682] = "ROPE KNIFE"
 	wep_type[682] = 0
@@ -7595,6 +7663,7 @@ function scrWeapons() {
 	wep_text[686] = "orbital strike"
 	wep_swap[686] = sndSwapEnergy
 	wep_rad[686] = 0;
+	wep_popup[686] = "CHARGE & BURST WEAPONS!";
 	
 	wep_name[687] = "TRIPLE BULLET LASER"
 	wep_type[687] = 1
@@ -7700,7 +7769,7 @@ function scrWeapons() {
 	wep_auto[696] = 0
 	wep_load[696] = 32
 	wep_cost[696] = 4
-	wep_sprt[696] = sprFrostShotgun
+	wep_sprt[696] = sprDoubleFrostShotgun
 	wep_area[696] = 8
 	wep_text[696] = "breezer"
 	wep_swap[696] = sndSwapShotgun
@@ -7711,11 +7780,12 @@ function scrWeapons() {
 	wep_auto[697] = 1
 	wep_load[697] = 10
 	wep_cost[697] = 3
-	wep_sprt[697] = sprFrostShotgun
+	wep_sprt[697] = sprFrostShotgunner
 	wep_area[697] = 15
 	wep_text[697] = "breezer"
 	wep_swap[697] = sndSwapShotgun
 	wep_rad[697] = 0;
+	wep_popup[697] = "FREEZING";
 	
 	wep_name[698] = "SPLINTER MACHINEGUN"
 	wep_type[698] = 3
@@ -7738,6 +7808,7 @@ function scrWeapons() {
 	wep_text[699] = "Happy cannonball"
 	wep_swap[699] = sndSwapBow
 	wep_rad[699] = 0;
+	wep_popup[699] = "HA HA HA# HA HA ";
 	
 	wep_name[700] = "BOMB LOBBER"
 	wep_type[700] = 4
@@ -7749,6 +7820,7 @@ function scrWeapons() {
 	wep_text[700] = "you can yeet these over walls"
 	wep_swap[700] = sndSwapExplosive
 	wep_rad[700] = 0;
+	wep_popup[700] = "CAN BE TOSSED OVER WALLS";
 	
 	wep_name[701] = "MARKSMAN"
 	wep_type[701] = 1
@@ -7786,13 +7858,14 @@ function scrWeapons() {
 	wep_name[704] = "ROCKET CLAP"
 	wep_type[704] = 4
 	wep_auto[704] = 0
-	wep_load[704] = 24
+	wep_load[704] = 20
 	wep_cost[704] = 2
 	wep_sprt[704] = sprRocketClap
 	wep_area[704] = 0
 	wep_text[704] = "Clap the rockets"
 	wep_swap[704] = sndSwapExplosive
 	wep_rad[704] = 0;
+	wep_popup[233] = "COLLIDING ROCKETS#CAUSE A BIGGER BOOM";
 	
 	wep_name[705] = "GRENADE STRIKE LAUNCHER"
 	wep_type[705] = 4
@@ -7804,17 +7877,19 @@ function scrWeapons() {
 	wep_text[705] = "be carefull with that explosion line"
 	wep_swap[705] = sndSwapExplosive
 	wep_rad[705] = 0;
+	wep_popup[705] = "DON'T BLOW YOURSELF UP!";
 	
 	wep_name[706] = "DENSE GUN"
 	wep_type[706] = 1
 	wep_auto[706] = 0
-	wep_load[706] = 24
+	wep_load[706] = 23
 	wep_cost[706] = 10
 	wep_sprt[706] = sprDenseGun
 	wep_area[706] = 0
 	wep_text[706] = "a dense amount of bullets"
 	wep_swap[706] = sndSwapPistol
 	wep_rad[706] = 0;
+	wep_popup[706] = "PACKED WITH BULLETS";
 	
 	wep_name[707] = "SMALL MISSILE BOMB"
 	wep_type[707] = 4
@@ -7859,6 +7934,7 @@ function scrWeapons() {
 	wep_text[710] = "a little bit of something"
 	wep_swap[710] = sndSwapMachinegun
 	wep_rad[710] = 0;
+	wep_popup[710] = "FIRES BULLETS#AND SHELLS/PELLETS";
 	
 	wep_name[711] = "METAL PIPE"
 	wep_type[711] = 0
@@ -7870,6 +7946,7 @@ function scrWeapons() {
 	wep_text[711] = "a little bit of something"
 	wep_swap[711] = sndSwapMachinegun
 	wep_rad[711] = 0;
+	wep_popup[711] = "CAN DEFLECT BULLETS#EXCEPT SQUARES";
 	
 	wep_name[712] = "SPLINTER MINE LAUNCHER"
 	wep_type[712] = 4
@@ -7947,9 +8024,37 @@ function scrWeapons() {
 	wep_text[718] = "red rockets"
 	wep_swap[718] = sndSwapExplosive
 	wep_rad[718] = 0;
+	
+	wep_name[719] = "RED SCYTHE"
+	wep_type[719] = 1
+	wep_auto[719] = 0
+	wep_load[719] = 30
+	wep_cost[719] = 5
+	wep_sprt[719] = sprSniperScythe
+	wep_area[719] = 13
+	wep_text[719] = "is that a reference to what I think it is?"
+	wep_swap[719] = sndSwapSword
+	wep_rad[719] = 0;
+	
+	wep_name[720] = "ROGUE VAN CANNON"
+	wep_type[720] = 4
+	wep_auto[720] = 0
+	wep_load[720] = 70
+	wep_cost[720] = 14
+	wep_sprt[720] = sprRogueVanCannon
+	wep_area[720] = -1
+	wep_text[720] = "rogue power"
+	wep_swap[720] = sndSwapExplosive
+	wep_rad[720] = 0;
 
 	maxwep = array_length(wep_name)-1;
-
+	var al = array_length(wep_popup)-1
+	for (var wi = 0; wi < maxwep; wi++) {
+		if (wi > al || !is_string(wep_popup[wi]))
+		{
+			wep_popup[wi] = "";
+		}
+	}
 	//Only melee
 	if ((scrIsGamemode(31)) && !instance_exists(MenuGen))
 	{

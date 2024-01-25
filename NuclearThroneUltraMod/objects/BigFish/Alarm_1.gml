@@ -54,6 +54,9 @@ if target != noone && alarm[6] < 1 && alarm[7] < 1 {
 	if point_distance(x,y,target.x,target.y) < chargeDis && random(2) < 3 {
 		//BITE TACKLE SHIT YO! DANGER IN THE HOUSE!
 		snd_play(snd_tackle)
+		instance_create(x-5,y,Notice);
+		instance_create(x,y,Notice);
+		instance_create(x+5,y,Notice);
 		alarm[1] += chargeTell + actTime*2 + 10;
 		alarm[4] = 0
 		alarm[3] = 0

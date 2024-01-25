@@ -28,5 +28,4 @@ if(my_health<1)
 	instance_destroy();
 }
 
-if alarm[0] > 0
-	my_health = maxhealth;
+

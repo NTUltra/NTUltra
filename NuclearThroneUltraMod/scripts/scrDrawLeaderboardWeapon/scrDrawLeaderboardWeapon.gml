@@ -16,9 +16,9 @@ function scrDrawLeaderboardWeapon(entry, startIndex,xx, yy){
 		//xx += 30;
 		draw_sprite(wep_sprt[real(entry[startIndex+1])],0,xx,yy);
 	}*/
-	var wepI = wep_sprt[real(entry[startIndex])];
+	var wepI = real(entry[startIndex]);
 	if wepI < array_length(wep_sprt)
-		draw_sprite(wepI,0,xx,yy);
+		draw_sprite(wep_sprt[wepI],0,xx,yy);
 	var w = 30*0.5;
 	var h = 22*0.5;
 	if (mouse_x > xx - w*0.5 && mouse_x < xx + w*1.5 && mouse_y > yy - h && mouse_y < yy + h)

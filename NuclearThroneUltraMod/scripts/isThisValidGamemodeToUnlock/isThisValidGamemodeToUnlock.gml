@@ -1,6 +1,9 @@
 ///isThisValidGamemodeToUnlock();
 // /@description returns true if a gamemode is valid for unlocking stuff
 function isThisValidGamemodeToUnlock(gm){
+	if (gm == 22) {
+		return scrIsInfiniteLevelValid();
+	}
 	if (gm == 1 || gm == 46) {
 		return scrIsWeaponValidForUnlocks(UberCont.opt_gm1wep);
 	} else if !(gm == 0 || gm == 12 || gm == 3 || gm == 4 || gm == 7 || gm == 19 || gm == 16

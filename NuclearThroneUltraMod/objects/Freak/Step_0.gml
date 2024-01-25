@@ -14,3 +14,6 @@ if walk > 0
 
 if speed > maxSpeed//4
 	speed = maxSpeed
+	
+if firstTime
+	speed = 0;

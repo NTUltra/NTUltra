@@ -1,4 +1,5 @@
 /// @description Init
+debug("ENTER WITH: ", UberCont.opt_gamemode);
 with MusCont
 {
 	amb = amb0c;

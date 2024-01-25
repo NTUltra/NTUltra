@@ -16,12 +16,12 @@ else if sprite_index = sprInvertedRavenLand
 }
 else if sprite_index = sprInvertedRavenFly
 {
-speed = 0
-var s = 6;
-	if UberCont.normalGameSpeed == 60
-		s = 3;
-x += lengthdir_x(s,point_direction(x,y,targetx,targety))
-y += lengthdir_y(s,point_direction(x,y,targetx,targety))
+	speed = 0
+	var s = 6;
+		if UberCont.normalGameSpeed == 60
+			s = 3;
+	x += lengthdir_x(s,point_direction(x,y,targetx,targety))
+	y += lengthdir_y(s,point_direction(x,y,targetx,targety))
 }
 else
 	sprite_index = sprInvertedRavenLand;

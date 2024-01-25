@@ -61,15 +61,15 @@ if alarm[0] < 1 && other.team == 2 && instance_exists(Player) && (!ezMode || oth
 			image_index = 0
 			var knockbackDir = point_direction(other.x,other.y,x,y);
 			motion_add(knockbackDir,6);
-			if !scrIsGamemode(34)//HARD MODE
-			repeat(4)
-			{
-				if !place_meeting(x+lengthdir_x(2,knockbackDir),y+lengthdir_y(2,knockbackDir),Wall)
+			if !scrIsGamemode(34)//NOT HARD MODE
+				repeat(7)
 				{
-					x += lengthdir_x(2,knockbackDir);
-					y += lengthdir_y(2,knockbackDir);
+					if !place_meeting(x+lengthdir_x(2,knockbackDir),y+lengthdir_y(2,knockbackDir),Wall)
+					{
+						x += lengthdir_x(2,knockbackDir);
+						y += lengthdir_y(2,knockbackDir);
+					}
 				}
-			}
 			Sleep(10)
 			BackCont.shake += 2
 			scrForcePosition60fps();

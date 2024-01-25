@@ -22,14 +22,14 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(90)
 wkick = 0
-maxDetectRange = 160;
+maxDetectRange = 150;
 maxSpeed = 3;
 loops = GetPlayerLoops();
-actTime = 17;
+actTime = 20;
 pSpeed = 3.6;
 if loops > 0
 {
-	actTime = 12;
-	maxDetectRange += 80;
+	actTime = 13;
+	maxDetectRange += 90;
 	pSpeed = 4.1;
 }

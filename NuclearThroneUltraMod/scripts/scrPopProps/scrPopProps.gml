@@ -39,17 +39,17 @@ function scrPopProps() {
 			instance_create(myx,myy,Wall)
 		
 		instance_create(x,y,NOWALLSHEREPLEASE)
-		if (point_distance(myx,myy,Player.x,Player.y) > 128 and (spawnarea = 3 || spawnarea == 121) && Player.subarea != 3) && (!instance_exists(Trap) || random(15 + instance_number(Trap)) < 2)
+		if (point_distance(myx,myy,Player.x,Player.y) > 128 and (spawnarea = 3 || spawnarea == 121) && Player.subarea != 3) && (!instance_exists(Trap) || random(16 + instance_number(Trap)) < 1)
 			instance_create(myx,myy,Trap)
 	
-		if (point_distance(myx,myy,Player.x,Player.y) > 128 and (spawnarea = 2 || spawnarea == 110) && Player.loops > 1) && (!instance_exists(ToxicTrap) || random(15 + instance_number(ToxicTrap)) < 2)
+		if (point_distance(myx,myy,Player.x,Player.y) > 128 and (spawnarea = 2 || spawnarea == 110) && Player.loops > 1) && (!instance_exists(ToxicTrap) || random(16 + instance_number(ToxicTrap)) < 1)
 			instance_create(myx,myy,ToxicTrap)
 
 
-		if (point_distance(myx,myy,Player.x,Player.y) > 128 and spawnarea = 7 &&Player.subarea!=2) && (!instance_exists(VulcanoTrap) || random(16 + instance_number(VulcanoTrap)) < 2)//RANDOM TRAP
+		if (point_distance(myx,myy,Player.x,Player.y) > 128 and spawnarea = 7 &&Player.subarea!=2) && (!instance_exists(VulcanoTrap) || random(17 + instance_number(VulcanoTrap)) < 1)//RANDOM TRAP
 			instance_create(myx,myy,VulcanoTrap)
 		
-		if  (point_distance(myx,myy,Player.x,Player.y) > 128 and spawnarea = 108 &&Player.subarea!=2) && (!instance_exists(FrostTrap) || random(16 + instance_number(FrostTrap)) < 2)//RANDOM TRAP
+		if  (point_distance(myx,myy,Player.x,Player.y) > 128 and spawnarea = 108 &&Player.subarea!=2) && (!instance_exists(FrostTrap) || random(17 + instance_number(FrostTrap)) < 1)//RANDOM TRAP
 			instance_create(myx,myy,FrostTrap)
 
 	}

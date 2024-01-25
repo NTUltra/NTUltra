@@ -733,7 +733,7 @@ function scrPopEnemies() {
 		                instance_create(x + 12 + random(8), y + 12 + random(8), choose(LavaBallEnemy, FireWorm, FireWorm, LavaBallEnemy, Salamander,SuperFireBaller,Sniper))
 		            }
 		            else if random(7) < 2
-		            instance_create(x + 16, y + 16, choose(FireBat, Thief, FireWorm, FireBat, FireBat, Bandit, BanditSquare, FireBat, FireBaller,Sniper,ExploFreak))
+		            instance_create(x + 16, y + 16, choose(FireBat, Thief, FireWorm, LavaBallEnemy, FireBat, Bandit, BanditSquare, FireBat, FireBaller,Sniper,ExploFreak))
 					else if instance_number(enemy) < 1
 					{
 						instance_create(x + 16, y + 16,LavaBallEnemy);
@@ -742,10 +742,10 @@ function scrPopEnemies() {
 		        {
 		            if random(5) < 1 {
 		                repeat(1+irandom(2))
-							instance_create(x + 12 + random(8), y + 12 + random(8), choose(FireBat, LavaBallEnemy, LavaBallEnemy, FireBat, Salamander, Bandit, BanditSquare,FireBaller))
+							instance_create(x + 12 + random(8), y + 12 + random(8), choose(FireBat, LavaBallEnemy, LavaBallEnemy, FireBat, LavaBallEnemy, Bandit, BanditSquare,LavaBallEnemy))
 		            }
 		            else if random(2) < 1.2
-						instance_create(x + 16, y + 16, choose(FireBat, FireBat, LavaBallEnemy, FireBat, FireBat, FireWorm, Salamander,SuperFireBaller,Sniper,ExploFreak))
+						instance_create(x + 16, y + 16, choose(FireBat, FireBat, LavaBallEnemy, LavaBallEnemy, FireBat, FireWorm, Salamander,SuperFireBaller,Sniper,ExploFreak))
 					else if instance_number(enemy) < 1
 					{
 						instance_create(x + 16, y + 16,LavaBallEnemy);
@@ -768,11 +768,11 @@ function scrPopEnemies() {
 		        } else //a style
 		        {
 		            if random(5) < 1 {
-						repeat(1+irandom(2))
-							instance_create(x + 12 + random(8), y + 12 + random(8), choose(FireBat, LavaBallEnemy, LavaBallEnemy, FireWorm, FireBat, Salamander, Bandit, BanditSquare))
+						repeat(2)
+							instance_create(x + 12 + random(8), y + 12 + random(8), choose(FireBat, LavaBallEnemy, LavaBallEnemy, LavaBallEnemy, FireBat, LavaBallEnemy, Bandit, BanditSquare))
 		            }
 		            else if random(2) < 1.2
-						instance_create(x + 16, y + 16, choose(FireBat, FireBat, LavaBallEnemy, FireWorm, FireWorm, FireWorm, Salamander))
+						instance_create(x + 16, y + 16, choose(FireBat, LavaBallEnemy, LavaBallEnemy, FireWorm, Salamander, choose(FireWorm,SuperFireBaller)))
 					else if instance_number(enemy) < 1
 					{
 						instance_create(x + 16, y + 16,LavaBallEnemy);
@@ -806,19 +806,12 @@ function scrPopEnemies() {
 		        } else //a style
 		        {
 		            if random(5) < 1 {
-		                if instance_exists(Player) {
-		                    repeat(1+irandom(2))
-								instance_create(x + 12 + random(8), y + 12 + random(8), choose(InvertedFireBat, InvertedLavaBallEnemy, InvertedLavaBallEnemy, InvertedFireWorm, InvertedFireBat, InvertedSalamander, 
-							BanditInverted, BanditSquare,InvertedFireBaller))
-		                }
-		                else { //dead Player
-		                    repeat(2)
-		                    instance_create(x + 12 + random(8), y + 12 + random(8), choose(InvertedFireBat, InvertedLavaBallEnemy, InvertedLavaBallEnemy, InvertedFireWorm, InvertedFireBat, InvertedSalamander, 
-							InvertedSalamander, BanditInverted, BanditSquare))
-		                }
+		                repeat(2)
+		                instance_create(x + 12 + random(8), y + 12 + random(8), choose(InvertedFireBat, InvertedLavaBallEnemy, InvertedLavaBallEnemy, InvertedLavaBallEnemy, InvertedFireBat, InvertedLavaBallEnemy, 
+						InvertedLavaBallEnemy, BanditInverted, BanditSquare))
 		            }
 		            else if random(2) < 1
-						instance_create(x + 16, y + 16, choose(InvertedFireBat, InvertedFireBat, InvertedLavaBallEnemy, InvertedFireWorm, InvertedFireWorm, InvertedWolf, InvertedSalamander,InvertedSuperFireBaller,InvertedScubaBandit))
+						instance_create(x + 16, y + 16, choose(InvertedFireBat, InvertedLavaBallEnemy, InvertedLavaBallEnemy, InvertedFireWorm, InvertedWolf, InvertedSalamander,InvertedSuperFireBaller,InvertedScubaBandit))
 					else if instance_number(enemy) < 1
 					{
 						instance_create(x + 16, y + 16,InvertedLavaBallEnemy);
@@ -847,12 +840,12 @@ function scrPopEnemies() {
 		                }
 		                else { //dead Player
 		                    repeat(2)
-		                    instance_create(x + 12 + random(8), y + 12 + random(8), choose(InvertedFireBat, InvertedLavaBallEnemy, InvertedLavaBallEnemy, InvertedFireWorm, InvertedFireBat, InvertedSalamander, 
-							InvertedSalamander, BanditInverted, BanditSquare))
+		                    instance_create(x + 12 + random(8), y + 12 + random(8), choose(InvertedFireBat, InvertedLavaBallEnemy, InvertedLavaBallEnemy, InvertedLavaBallEnemy, InvertedFireBat, InvertedLavaBallEnemy, 
+							InvertedLavaBallEnemy, BanditInverted, BanditSquare))
 		                }
 		            }
 		            else if random(2) < 1
-						instance_create(x + 16, y + 16, choose(InvertedFireBat, InvertedFireBat, InvertedLavaBallEnemy, InvertedFireWorm, InvertedFireWorm, InvertedFireWorm, InvertedSalamander))
+						instance_create(x + 16, y + 16, choose(InvertedFireBat, InvertedLavaBallEnemy, InvertedLavaBallEnemy, InvertedFireWorm, InvertedSalamander, choose(InvertedFireWorm,InvertedSuperFireBaller)))
 					else if instance_number(enemy) < 1
 					{
 						instance_create(x + 16, y + 16,InvertedLavaBallEnemy);

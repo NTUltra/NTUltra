@@ -109,7 +109,7 @@ if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and point_distance(x,y,tar
 if random(3) < 2
 {
 snd_play(sndBigBanditStartShoot)
-ammo = 20
+ammo = 18
 alarm[2] = 1
 alarm[6] = 10//aim again
 gunangle = point_direction(x,y,target.x,target.y)

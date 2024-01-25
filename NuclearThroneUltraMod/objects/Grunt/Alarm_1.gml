@@ -42,14 +42,14 @@ if instance_exists(Player) && target==Player.id
     snd_play(sndGruntFire)
     wkick = 4
     with instance_create(x,y,IDPDBullet){
-    motion_add(other.gunangle+random(6)-3,7.9)
-    image_angle = direction
-    team = other.team
-	if team == 2
-	{
-		sprite_index = sprIDPDBulletRogue
-		RecycleGlandType();
-	}
+	    motion_add(other.gunangle+random(6)-3,7.9)
+	    image_angle = direction
+	    team = other.team
+		if team == 2
+		{
+			sprite_index = sprIDPDBulletRogue
+			RecycleGlandType();
+		}
 	}
     
     alarm[1] = 3+random(2)
@@ -126,9 +126,15 @@ if random(2) < 1 and freeze > 40
 snd_play(sndGruntFire)
 wkick = 4
 with instance_create(x,y,IDPDBullet){
-motion_add(other.gunangle+random(6)-3,7.8)
-image_angle = direction
-team = other.team}
+	motion_add(other.gunangle+random(6)-3,7.8)
+	image_angle = direction
+	team = other.team
+	if team == 2
+	{
+		sprite_index = sprIDPDBulletRogue
+		RecycleGlandType();
+	}
+}
 
 alarm[1] = 3+random(2)
 }

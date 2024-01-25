@@ -1,5 +1,5 @@
-/// @description xxx
+/// @description Drop
 
 // Inherit the parent event
 event_inherited();
-scrDrop(5,0);
+scrDrop(8,0);

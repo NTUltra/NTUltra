@@ -1,10 +1,7 @@
-raddrop = 14
-maxhealth = 32//38//50
-meleedamage = 4
+raddrop = 13
+maxhealth = 10//32//38//50
+meleedamage = 6
 mySize = 1
-
-if UberCont.loops>1
-maxhealth=35;
 
 event_inherited()
 fireProof = true;
@@ -20,8 +17,7 @@ snd_hurt = sndHitRock;
 
 walk=0;
 //behavior
-alarm[1] = 10+random(10)
+alarm[1] = 30+random(60)
 
-if instance_exists(Player)
-motion_add(point_direction(Player.x,Player.y,x,y),1)
+alarm[3] = 1;
 

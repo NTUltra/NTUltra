@@ -1,5 +1,5 @@
 if awake{
-    alarm[1] = 8+random(8)
+    alarm[1] = 10+random(8)
     if sprite_index != spr_hurt //&& sprite_index != spr_fire i added this
     sprite_index = spr_idle
     scrTarget()
@@ -39,7 +39,7 @@ if awake{
     {
     with instance_create(x,y,EnemyIceFlame)
     {
-    motion_add(other.direction+random(60)-30,3+random(7))
+    motion_add(other.direction+random(60)-30,3+random(5))
     image_angle = direction
     team = other.team
     }
@@ -48,7 +48,7 @@ if awake{
         with instance_create(x,y,EnemyLightningBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(22)-11),4+random(5))
+        motion_add(other.direction+(random(22)-11),3+random(4))
         team = other.team}
         }
     }
@@ -65,7 +65,7 @@ if awake{
     {
     with instance_create(x,y,EnemyIceFlame)
     {
-    motion_add(other.direction+random(60)-30,2+random(5))
+    motion_add(other.direction+random(60)-30,2+random(4))
     image_angle = direction
     team = other.team
     }
@@ -73,17 +73,17 @@ if awake{
         with instance_create(x,y,EnemyLightningBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(40)-20)+50,4)
+        motion_add(other.direction+(random(40)-20)+50,3.5)
         team = other.team}
         with instance_create(x,y,EnemyLightningBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(40)-20)-50,4)
+        motion_add(other.direction+(random(40)-20)-50,3.5)
         team = other.team}
         with instance_create(x,y,EnemyLightningBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(40)-20),4)
+        motion_add(other.direction+(random(40)-20),3.5)
         team = other.team}
     }
     else if point_distance(x,y,target.x,target.y)>70&&random(14) < 1//long SNIPE!
@@ -99,7 +99,7 @@ if awake{
     {
     with instance_create(x,y,EnemyIceFlame)
     {
-    motion_add(other.direction+random(60)-30,2+random(6))
+    motion_add(other.direction+random(60)-30,2+random(5))
     image_angle = direction
     team = other.team
     }
@@ -107,7 +107,7 @@ if awake{
         with instance_create(x,y,EnemyLightningBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(12)-6),5+random(3))
+        motion_add(other.direction+(random(12)-6),3+random(3))
         team = other.team}
     }
     else if random(8)<1 && point_distance(x,y,target.x,target.y)<200//breathe fire short range
@@ -174,7 +174,7 @@ if awake{
         with instance_create(x,y,EnemyLightningBall)
         {
         image_angle=random(360);
-        motion_add(other.direction+(random(22)-11),4+random(5))
+        motion_add(other.direction+(random(22)-11),3+random(4))
         team = other.team}
         }
     }

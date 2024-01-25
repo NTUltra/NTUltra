@@ -23,7 +23,10 @@ if target != noone
 if speed > maxSpeed
 	speed = maxSpeed
 
+
 //I'm hurt I will bite now
 if instance_exists(Player) && sprite_index = spr_hurt
 	motion_add(point_direction(x,y,Player.x,Player.y),acc);
 
+if firstTime
+	speed = 0;

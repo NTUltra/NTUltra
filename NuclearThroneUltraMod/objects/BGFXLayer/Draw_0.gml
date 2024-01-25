@@ -16,7 +16,7 @@ for (var i = 0; i < al; i++;)
 	var ang = toDraw.angle;
 		draw_sprite_ext(toDraw.spr,toDraw.ii,dx,dy,toDraw.xscale,toDraw.yscale,ang,toDraw.col,toDraw.alpha);
 }
-if fps_real < fps
+if fps_real < min(48,fps)
 {
 	
 	amount = max(amount - 100,0);

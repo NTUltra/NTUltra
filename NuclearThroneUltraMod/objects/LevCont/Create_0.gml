@@ -357,6 +357,15 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 			skill_got[18] = 1;
 			skill_got[38] = 1;
 			skill_got[40] = 1;
+			ultra_got[19] = 1;
+			ultra_got[48] = 1;
+			ultra_got[33] = 1;
+			ultra_got[40] = 1;
+			ultra_got[62] = 1;
+			ultra_got[66] = 1;
+			ultra_got[75] = 1;
+			ultra_got[76] = 1;
+			ultra_got[103] = 1;
 			if race != 10 && race != 12 && race != 18 && race != 19
 			{
 				//not Rebel yung cuz, angel and skeleton
@@ -520,12 +529,22 @@ if scrIsGamemode(32) {
 		//No alkaline and no strong spirit
 		strongspirit = false;
 		strongspiritused = false;
+		skill_got[5] = 0;
 		skill_got[14] = 0;
 		skill_got[25] = 0;
 		skill_got[32] = 0;
 		skill_got[18] = 0;
 		skill_got[38] = 0;
 		skill_got[40] = 0;
+		ultra_got[19] = 0;
+		ultra_got[48] = 0;
+		ultra_got[33] = 0;
+		ultra_got[40] = 0;
+		ultra_got[62] = 0;
+		ultra_got[66] = 0;
+		ultra_got[75] = 0;
+		ultra_got[76] = 0;
+		ultra_got[103] = 0;
 		if race != 10 && race != 12 && race != 18 && race != 19
 		{
 			skill_got[1] = 0;

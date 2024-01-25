@@ -65,7 +65,7 @@ function scrCrowns() {
 
 	crown_name[11] = "[CROWN OF REINCARNATION]"
 	crown_text[11] = "<w>DIE<w> AND BE <w>REBORN<w>#FOR ONE AREA YOU HAVE <w>INFINITE<w> <y>AMMO<y>"
-	if instance_exists(Player) && (Player.level > 8 || Player.boostLevel > 8)
+	if instance_exists(Player) && !Player.disableAltUltra && (Player.level > 8 || Player.boostLevel > 8)
 	{
 		crown_text[11] = "<w>DIE<w> AND BE <w>REBORN<w>#FOR ONE AREA YOU HAVE <w>INFINITE<w> <y>AMMO<y>#UNLOCK <w>ALTERNATIVE<w> <g>ULTRA MUTATIONS<g>"
 	}

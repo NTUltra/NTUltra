@@ -3,8 +3,8 @@ version = 000//23 is final probably
 encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
-updateVersion = "30.09"
-subUpdateVersion = ".02";
+updateVersion = "30.10"
+subUpdateVersion = ".01";
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
 /*
@@ -205,3 +205,5 @@ keepDeactive = ds_list_create();
 duoPartner = [];
 partnerTurn = 1;//Turn for the one to take a pause
 partnerDied = false;
+keepRanChar = 0;
+highestReachedLevel = 0;

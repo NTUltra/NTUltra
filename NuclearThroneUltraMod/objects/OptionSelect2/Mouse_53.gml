@@ -1,6 +1,5 @@
 if image_index == 1 and selected = 0 && hasNoMenuOpen()
 {
-	debug("OPEN GAMEMODE");
 	snd_play_2d(sndClick);
 with option
 	instance_destroy()

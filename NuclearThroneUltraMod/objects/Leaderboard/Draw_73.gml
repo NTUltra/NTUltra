@@ -19,17 +19,22 @@ if enablePopUp == 1
 	var yy = scrPopUpStayInScreenY(wh);
 	draw_rectangle_color(xx-ww,yy-wh,xx+ww,yy+wh,bkcol,bkcol,bkcol,bkcol,false);
 	draw_rectangle_color(xx-ww,yy-wh,xx+ww,yy+wh,outcol,outcol,outcol,outcol,true);
-	
-	draw_sprite(wep_sprt[real(popupEntry[popUpIndex])],0,xx-ww*offset,yy+14);
-	draw_text_ext(xx-ww*offset,yy-2,wep_name[real(popupEntry[popUpIndex])],8,47);
-	draw_sprite(wep_sprt[real(popupEntry[popUpIndex+1])],0,xx+ww*offset,yy+14);
-	draw_text_ext(xx+ww*offset,yy-2,wep_name[real(popupEntry[popUpIndex+1])],8,47);
-	if (real(popupEntry[popUpIndex+2]) != 0)//Three weapons
+	var wepAll = array_length(wep_sprt);
+	if (real(popupEntry[popUpIndex]) < wepAll)
+	{
+		draw_sprite(wep_sprt[real(popupEntry[popUpIndex])],0,xx-ww*offset,yy+14);
+		draw_text_ext(xx-ww*offset,yy-2,wep_name[real(popupEntry[popUpIndex])],8,47);
+	}
+	if (real(popupEntry[popUpIndex+1]) < wepAll)
+	{
+		draw_sprite(wep_sprt[real(popupEntry[popUpIndex+1])],0,xx+ww*offset,yy+14);
+		draw_text_ext(xx+ww*offset,yy-2,wep_name[real(popupEntry[popUpIndex+1])],8,47);
+	}
+	if (real(popupEntry[popUpIndex+2]) != 0 && real(popupEntry[popUpIndex]) < wepAll)//Three weapons
 	{
 		draw_sprite(wep_sprt[real(popupEntry[popUpIndex+2])],0,xx,yy+14);
 		draw_text_ext(xx,yy-2,wep_name[real(popupEntry[popUpIndex+2])],8,47);
 	}
-	
 }
 else if enablePopUp == 2
 {

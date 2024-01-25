@@ -40,8 +40,8 @@
     "path": "sprites/sprSquareBatIdle/sprSquareBatIdle.yy",
   },
   "spriteMaskId": {
-    "name": "mskFireBat",
-    "path": "sprites/mskFireBat/mskFireBat.yy",
+    "name": "mskSquareBat",
+    "path": "sprites/mskSquareBat/mskSquareBat.yy",
   },
   "visible": true,
 }

@@ -422,21 +422,30 @@ if (selected &&
 			}
 		}
 	}
-	else if skill == 61 && Player.race == 16 && (scrKrakenWeapons(Player.wep) || Player.skill_got[39] || Player.area == 101 || Player.area == 122 || scrKrakenWeapons(Player.bwep) || scrIsCrown(13) || Player.unlockAlternativeUltras)
+	else if skill == 61
 	{
-		with Player
+		if Player.race == 16 && (scrKrakenWeapons(Player.wep) || Player.skill_got[39] || Player.area == 101 || Player.area == 122 || scrKrakenWeapons(Player.bwep) || scrIsCrown(13) || Player.unlockAlternativeUltras)
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
-			altUltra = true;
-			ultra_name[61] = "CAPTAIN OF THE KRAKEN"
-			ultra_text[61] = "KRAKEN WEAPONS DEAL MORE DAMAGE#TENTACLES ARE LONGER#KRAKEN WEAPONS COST 20% LESS AMMO"
-			ultra_tips[61] = "from the sea she came"
-			scrUnlockAltSkin(race, 0);
-			bskin = 4;
-			spr_idle=sprMutant16DIdle;
-			spr_walk=sprMutant16DWalk;
-			spr_hurt=sprMutant16DHurt;
-			spr_dead=sprMutant16DDead;
+			with Player
+			{
+				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+				altUltra = true;
+				ultra_name[61] = "CAPTAIN OF THE KRAKEN"
+				ultra_text[61] = "KRAKEN WEAPONS DEAL MORE DAMAGE#TENTACLES ARE LONGER#KRAKEN WEAPONS COST 20% LESS AMMO"
+				ultra_tips[61] = "from the sea she came"
+				scrUnlockAltSkin(race, 0);
+				bskin = 4;
+				spr_idle=sprMutant16DIdle;
+				spr_walk=sprMutant16DWalk;
+				spr_hurt=sprMutant16DHurt;
+				spr_dead=sprMutant16DDead;
+			}
+		}
+		else
+		{
+			with Player {
+				disableAltUltra = true;	
+			}
 		}
 	}
 	else if skill == 72 && Player.race == 18 && ((Player.maxhealth < 8 && !scrIsGamemode(9)) || (scrIsGamemode(9) && Player.maxhealth < 8 + UberCont.casualModeHPIncrease) || scrIsCrown(32) || Player.unlockAlternativeUltras)
@@ -481,22 +490,40 @@ if (selected &&
 			Player.rogueammo=8;
 		}
 	}
-	else if skill == 87 && Player.race == 22 && (scrHasAnEmptyLife() || Player.unlockAlternativeUltras)
+	else if skill == 87 
 	{
-		with Player
+		if Player.race == 22 && (scrHasAnEmptyLife() || Player.unlockAlternativeUltras)
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
-			altUltra = true;
-			ultra_name[87] = "IMMORTAL POLICE"
-			ultra_text[87] = "REPLACE PORTAL STRIKE WITH REVIVE#REVIVE USES PORTAL STRIKE AMMO#LOWER MAXIMUM PORTALSTRIKE AMMO BY 1#THRONE BUTT REVIVES YOU AT FULL HP#INSTEAD OF 1HP#PICKING UP PORTAL STRIKE AMMO#TRIGGERS BLAST ARMOUR"
-			ultra_tips[87] = "rogue freak"
-			rogueammomax --;
-			rogueammo = min(rogueammomax,rogueammo);
-			scrUnlockAltSkin(race, 0);
-			spr_idle=sprMutant22DIdle;
-			spr_walk=sprMutant22DWalk;
-			spr_hurt=sprMutant22DHurt;
-			spr_dead=sprMutant22DDead;
+			with Player
+			{
+				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+				altUltra = true;
+				ultra_name[87] = "IMMORTAL POLICE"
+				ultra_text[87] = "REPLACE PORTAL STRIKE WITH REVIVE#REVIVE USES PORTAL STRIKE AMMO#LOWER MAXIMUM PORTALSTRIKE AMMO BY 1#THRONE BUTT REVIVES YOU AT FULL HP#INSTEAD OF 1HP#PICKING UP PORTAL STRIKE AMMO#TRIGGERS BLAST ARMOUR"
+				ultra_tips[87] = "rogue freak"
+				rogueammomax --;
+				rogueammo = min(rogueammomax,rogueammo);
+				scrUnlockAltSkin(race, 0);
+				spr_idle=sprMutant22DIdle;
+				spr_walk=sprMutant22DWalk;
+				spr_hurt=sprMutant22DHurt;
+				spr_dead=sprMutant22DDead;
+			}
+		}
+		else
+		{
+			with instance_create(x,y,WepPickup)
+			{
+				scrWeapons()
+				wep = 720;
+				SetSeed();
+				name = wep_name[wep]
+				ammo = 50
+				curse = 0;
+				type = wep_type[wep]
+				sprite_index = wep_sprt[wep];
+				persistent = true;
+			}	
 		}
 	}
 	else if skill == 88 //ROGUE ULTRA POPO
@@ -529,6 +556,7 @@ if (selected &&
 			}
 			else
 			{
+				disableAltUltra = true;
 				if skill_got[13]//long arms
 				{
 					bettermelee = 0.4;
@@ -561,15 +589,23 @@ if (selected &&
 		}
 
 	}
-	else if skill == 104 && Player.race == 26 && ((Player.humphrySkill < 1 || scrHasDirector()) || Player.unlockAlternativeUltras)
+	else if skill == 104
 	{
-		with Player
+		if Player.race == 26 && ((Player.humphrySkill < 1 || scrHasDirector()) || Player.unlockAlternativeUltras)
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
-			altUltra = true;
-			ultra_name[104] = "GRUMPY LECTURE"
-			ultra_text[104] = "ACTIVE COSTS 50 SKILL TO USE#INSTEAD OF UNEQUIPPED AMMO#ACTIVE DEFLECTS & DESTROYS#ALL ENEMY PROJECTILES"
-			ultra_tips[104] = "teach them a lesson!"
+			with Player
+			{
+				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+				altUltra = true;
+				ultra_name[104] = "GRUMPY LECTURE"
+				ultra_text[104] = "ACTIVE COSTS 50 SKILL TO USE#INSTEAD OF UNEQUIPPED AMMO#ACTIVE DEFLECTS & DESTROYS#ALL ENEMY PROJECTILES"
+				ultra_tips[104] = "teach them a lesson!"
+			}
+		}
+		else {
+			with Player {
+				disableAltUltra = true;	
+			}
 		}
 	}
 	else if skill = 5//CRYSTAL FORTRESS ULTRA A
@@ -628,6 +664,7 @@ if (selected &&
 			}
 			else
 			{
+				disableAltUltra = true;
 				if gotMinimumArmour
 				{
 					armour -= 1;
@@ -655,6 +692,7 @@ if (selected &&
 		{
 			//Gunsmith armoursmith
 		    with Player {
+				disableAltUltra = true;
 				maxarmour = max(maxarmour + 3, 3);
 				armour = clamp(armour + 3, 3, maxarmour);
 				if gotMinimumArmour
@@ -675,6 +713,10 @@ if (selected &&
 				ultra_name[68] = "ENGINUITY"
 				ultra_text[68] = "YOUR ACTIVE BECOMES:#CHANGE YOUR WEAPON#INTO ONE OF THE SAME TIER#YOU CAN GO THROUGH#ALL AVAILABLE WEAPONS##WHENEVER YOU CHANGE OR SWAP WEAPONS#SPAWN MORPH ON YOUR CROSSHAIR"
 				ultra_tips[68] = "moldable weapons"
+			}
+			else
+			{
+				disableAltUltra = true;	
 			}
 		}
 	}
@@ -750,15 +792,24 @@ if (selected &&
 	}
 	else if skill == 74//Reminisce secret skeleton Ultra B
 	{
-		if Player.race == 19 && (scrHasBloodWeapon() || Player.unlockAlternativeUltras)
+		if Player.race == 19
 		{
-			with Player
+			if (scrHasBloodWeapon() || Player.unlockAlternativeUltras)
 			{
-				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
-				altUltra = true;
-				ultra_name[74] = "REMINISCE"
-				ultra_text[74] = "REPLACE ACTIVE WITH BLOOD SPLATTER#YOU SPAWN BLOOD TOWARDS NEARBY CORPSES#BLOOD CAN DESTROY ALL TYPES OF PROJECTILES##THRONEBUTT INCREASES AMOUNT OF BLOOD"
-				ultra_tips[74] = "i used to have skin and warm blood"
+				with Player
+				{
+					scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+					altUltra = true;
+					ultra_name[74] = "REMINISCE"
+					ultra_text[74] = "REPLACE ACTIVE WITH BLOOD SPLATTER#YOU SPAWN BLOOD TOWARDS NEARBY CORPSES#BLOOD CAN DESTROY ALL TYPES OF PROJECTILES##THRONEBUTT INCREASES AMOUNT OF BLOOD"
+					ultra_tips[74] = "i used to have skin and warm blood"
+				}
+			}
+			else
+			{
+				with Player {
+					disableAltUltra = true;	
+				}
 			}
 		}
 	}
@@ -975,6 +1026,8 @@ if (selected &&
 	    )
 	}*/
 	Player.skillpoints++;
+	if Player.altUltra
+		Player.unlockAlternativeUltras = true;
 	regularprocedure=false;
 	/*
 	1CONFISCATE

@@ -27,6 +27,5 @@ walk = 5
 alarm[1] = 2+random(10)
 
 alarm[0]=30+random(60);
-
-/* */
-/*  */
+if instance_exists(Player) &&  Player.ultra_got[28]//roids ultra d
+{dmg += 1;}

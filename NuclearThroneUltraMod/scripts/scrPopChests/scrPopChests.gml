@@ -310,7 +310,7 @@ function scrPopChests() {
 		}
 		with AmmoChest
 		{
-			if random(11) < 1 and (Player.area >= 2 or Player.loops >= 1)
+			if random(12) < 1 and (Player.area >= 2 or Player.loops >= 1)
 			{
 			instance_create(x,y,Mimic)
 			image_speed = 0.4
@@ -350,7 +350,7 @@ function scrPopChests() {
 
 		with HealthChest
 		{
-			if random(51) < 1 and (Player.area >= 2 or Player.loops >= 1)
+			if random(50) < 1 and (Player.area >= 2 or Player.loops >= 1)
 			{
 				instance_create(x,y,SuperMimic)
 				image_speed = 0.4

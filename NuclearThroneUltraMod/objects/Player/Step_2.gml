@@ -319,6 +319,13 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 			}
 			dir = instance_create(x,y,PopupText)
 			dir.mytext = string(wep_name[wep])+"!"
+			if array_length(wep_popup) > wep && is_string(wep_popup[wep]) {
+				with instance_create(x,y,PopupText)
+				{
+					theColour = c_silver;
+					mytext = other.wep_popup[other.wep];
+				}
+			}
 
 			//Done picking up
 			scrWeaponHold();
@@ -383,7 +390,7 @@ if skill_got[22]//Stress Sharp teeth part
 {
 	if tookHit && alarm[10] < 1 && alarm[3] < 1//I been hit
 	{
-		alarm[10]=30;
+		alarm[10]=25;
 		sharpteeth = prevhealth - my_health;
 		var multiplier = 2.5;
 		if race = 25
@@ -394,14 +401,16 @@ if skill_got[22]//Stress Sharp teeth part
 			multiplier *= 2
 		snd_play_2d(sndSharpTeeth);
 		with enemy {
-			if team != other.team && x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+			if team != other.team && //x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+			point_distance(x,y,other.x,other.y) < 250
 			{
 				snd_play(snd_hurt, hurt_pitch_variation,true)
 				Sleep(10)
 				my_health -= other.sharpteeth*multiplier//Sharp teeth's damage!
 				sprite_index = spr_hurt
 				image_index = 0
-				motion_add(other.direction,6)
+				motion_add(
+				point_direction(other.x,other.y,x,y),8);
 				with instance_create(x,y,SharpTeeth)
 					owner=other.id;
 			}
@@ -649,7 +658,7 @@ if(my_health <= 0 && maxhealth > 0)
 		    my_health = 1;
 			BackCont.shake += 10;
 			Sleep(50);
-			alarm[3] += 24;
+			alarm[3] += 20;
 			snd_hurt = sndDamageNegate;
 			scrGiveEuphoriaShield();
 		    strongspiritused=true;
@@ -662,11 +671,11 @@ if(my_health <= 0 && maxhealth > 0)
 		Sleep(50);
 		BackCont.shake += 10;
 		snd_play_2d(sndProtectiveMustache,0,true);
-		alarm[3] += 28;
+		alarm[3] += 15;
 		snd_hurt = sndDamageNegate;
 		scrGiveEuphoriaShield();
 		with PlayerAlarms
-			alarm[7] = 20;
+			alarm[7] = 10;
 	    my_health = 1;
     }
 	//BOUNCY FAT
@@ -691,9 +700,9 @@ if(my_health <= 0 && maxhealth > 0)
 		Sleep(50);
 		my_health = 1;
 		var al = 6;//weapon types total
-		var takePercentage = 0.70; 
+		var takePercentage = 0.71; 
 		if race == 25
-			takePercentage = 0.66;
+			takePercentage = 0.67;
 		var baseammo;
 		baseammo[1] = 255 baseammo[2] = 55 baseammo[3] = 55 baseammo[4] = 55 baseammo[5] = 55;
 		var lostAmmo = 0;
@@ -745,7 +754,7 @@ if(my_health <= 0 && maxhealth > 0)
 			snd_hurt = sndDamageNegate;
 			snd_play_2d(sndMutLastWish);
 			scrGiveEuphoriaShield();
-			alarm[3] += 30;
+			alarm[3] += 25;
 		}
 	}
 }

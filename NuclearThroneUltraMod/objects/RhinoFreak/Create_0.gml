@@ -4,7 +4,7 @@ meleedamage = 5
 mySize = 2
 
 event_inherited()
-
+firstTime = true
 spr_idle = sprRhinoFreakIdle
 spr_walk = sprRhinoFreakWalk
 spr_hurt = sprRhinoFreakHurt

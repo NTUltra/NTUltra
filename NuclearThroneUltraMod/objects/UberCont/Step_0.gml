@@ -1,6 +1,6 @@
 recursionCheck = 0;
 steam_update();
-if !instance_exists(KeyCont) || alarm[7] > 0 || instance_exists(ShopWheel) || alarm[8] > 0
+if !instance_exists(KeyCont) || alarm[7] > 0 || instance_exists(ShopWheel) || alarm[8] > 0 || instance_exists(SendWeekly)
 	exit;
 if confirmState > 0 && (mouse_check_button_pressed(mb_right) || KeyCont.key_spec[0] == 1|| gamepad_button_check(0,gp_face2))
 {
@@ -67,67 +67,15 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 			ultra_got[87] = 0;
 			instance_destroy()
 		}
-		if (scrIsGamemode(42))
+		if instance_exists(SendWeekly)
 		{
-			if !scrIsGamemode(25)
-				opt_gamemode[array_length(opt_gamemode)] = 25;
+			alarm[8] = 1;
+			exit;
 		}
-		snd_play(sndMutant0Cnfm, 0, false, false)
-		race = UberCont.racepick
-		crown = [1]
-		//scrRaces()
-		//scrCrowns()
-		var ranChar = false;
-		if race = 0 || scrIsGamemode(23)
+		else
 		{
-			ranChar = true;
-			do {race = 1+irandom(racemax-1);} until race_have[race] = 1
+			event_perform(ev_alarm,8);	
 		}
-		if scrIsGamemode(47)
-		{
-			if opt_gm_char_active == 0
-			{
-				do {useRaceActive = 1+irandom(racemax-1);} until (race_have[useRaceActive] = 1)
-				with instance_create(x,y,UnlockPopup)
-					mytext=other.race_name[other.useRaceActive];
-			}
-			else
-			{
-				useRaceActive = opt_gm_char_active
-			}
-		}
-		//if crown = 0
-		//crown = ceil(irandom(crownmax))
-		with WepPickup
-			instance_destroy();
-		with ThrowWep
-			instance_destroy();
-		with HardModeChest
-			instance_destroy();
-		with CrownIcon
-			instance_destroy();
-		with PlayerSpawn
-			instance_destroy();
-		with SurvivalWave
-			instance_destroy();
-		if !instance_exists(GenCont)
-		with instance_create(x,y,GenCont)
-		{race = other.race
-		crown = other.crown}
-		instance_create(x,y,Player)
-		with Player
-		{
-			randomlySelected = ranChar;
-			restarted = true;
-			nochest = -1;
-			skeletonlives = 0;
-		}
-		var loadedRun = UberCont.loadedRun;
-		if loadedRun
-			scrLoadRun();
-		else if !instance_exists(StartDaily)
-			room_restart()
-		exit;
 	}
 	else
 	{
@@ -189,8 +137,13 @@ if (
 	if (confirmState == 2 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)))
 	{
 		confirmState = 0;
+		/*
 		if isLeaderboardGamemode
+		{
 			opt_gamemode = [0];
+			debug("reset gm!");
+		}
+		*/
 		with UberCont
 		{
 			partnerDied = true;	
@@ -229,8 +182,15 @@ if (
 			instance_destroy()
 		}
 		scrSave();
-		scrRestart()
-		debug("RETURN TO MENU PAUSED");
+		if instance_exists(SendWeekly)
+		{
+			alarm[9] = 1;
+			exit;
+		}
+		else
+		{
+			event_perform(ev_alarm,9);	
+		}
 	}
 	else
 	{
@@ -276,7 +236,10 @@ if (!instance_exists(StartDaily) &&
 	if KeyCont.key_paus[0] == 1 and instance_exists(Menu)
 	{
 		if isLeaderboardGamemode
+		{
+			debug("reset gm menu!?");
 			opt_gamemode = [0];
+		}
 		scrSave();
 		if !instance_exists(OptionSelect)
 		{

@@ -298,6 +298,10 @@ function scrLoadRun(){
 					Player.gotMinimumArmour = encryptedRun.gotMinimumArmour;
 				else
 					Player.gotMinimumArmour = true;
+				if variable_struct_exists(encryptedRun, "highestReachedLevel")
+					UberCont.highestReachedLevel = encryptedRun.highestReachedLevel;
+				else
+					UberCont.highestReachedLevel = max(Player.level,Player.boostLevel);
 				/*
 				if variable_struct_exists(encryptedRun, "duoPartner1")
 				{

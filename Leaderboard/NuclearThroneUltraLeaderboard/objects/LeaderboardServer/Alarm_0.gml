@@ -44,7 +44,7 @@ if day != yesterday
 		//{
 		var weekchecker = date_inc_week(date_current_datetime(), -1);
 		var year = min(date_get_year(date_current_datetime()), date_get_year(weekchecker));//In case week crosses the year
-		weekSeed = week*100 + year;
+		weekSeed = week*1414 + year;
 		random_set_seed(weekSeed);
 		var gamemodeReturn = scrChooseGamemodes();
 		weekGamemode = gamemodeReturn[0];

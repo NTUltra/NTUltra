@@ -28,13 +28,13 @@ if random(8-ammo) < 1 and ammo > 0
     }
 	with instance_create(x,y,JockRocket)
 	{
-	motion_add(other.gunangle-30+random(20)-10,2.5)
+	motion_add(other.gunangle-10,2.5)
 	image_angle = direction
 	team = other.team
 	}
 	with instance_create(x,y,JockRocket)
 	{
-	motion_add(other.gunangle+30+random(20)-10,2.5)
+	motion_add(other.gunangle+10,2.5)
 	image_angle = direction
 	team = other.team
 	}

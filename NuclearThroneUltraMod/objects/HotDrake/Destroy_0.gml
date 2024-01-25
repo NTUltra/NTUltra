@@ -1,3 +1,8 @@
+
+with projectile {
+	if team == other.team
+		instance_destroy(id,false);	
+}
 with MusCont
 {
 

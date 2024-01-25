@@ -8,3 +8,5 @@ if GetPlayerLoops() > 2
 {
 	alarm[1] = 2;
 }
+
+alarm[2] = 1;

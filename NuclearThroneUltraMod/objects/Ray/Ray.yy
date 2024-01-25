@@ -15,8 +15,8 @@
     "path": "folders/Objects/Projectiles.yy",
   },
   "parentObjectId": {
-    "name": "projectile",
-    "path": "objects/projectile/projectile.yy",
+    "name": "BurstWeapons",
+    "path": "objects/BurstWeapons/BurstWeapons.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

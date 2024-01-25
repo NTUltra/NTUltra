@@ -7,7 +7,7 @@ var num = 1;
 
 
 if scrIsCrown(4)
-num += 1
+	num += 1
 //if other.ultra_got[85]=1//ROGUE SUPER PORTAL STRIKE ULTRA
 //num*=2;
 other.rogueammo+=num;

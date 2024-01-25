@@ -4,12 +4,13 @@
 function scrEyesTelekinesis(ps,tb,px,py){
 	if (
 		ps || 
-		(
+		/*(
 			x > __view_get( e__VW.XView, 0 ) &&
 			x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) &&
 			y > __view_get( e__VW.YView, 0 ) &&
 			y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-		)
+		)*/
+		point_distance(x,y,other.x,other.y) < 250
 	)
 	{
 		var d = 1 + tb;

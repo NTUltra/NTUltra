@@ -1,5 +1,4 @@
 /// @description ROGUE Ultra new captain
-debug("FRIENDLY POPO!?");
 if spawnedFriendlyPopo
 	exit;
 if (!instance_exists(GenCont) && !instance_exists(LevCont) && instance_exists(Floor))

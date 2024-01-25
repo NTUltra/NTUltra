@@ -875,6 +875,7 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		randomlySelected = other.randomlySelected;
 		inverted = other.inverted;
 		altUltra = other.altUltra;
+		disableAltUltra = true;
 		reachedUltra = other.reachedUltra;
 		tookDestiny = other.tookDestiny;
 		pSpeedBoost = other.pSpeedBoost;

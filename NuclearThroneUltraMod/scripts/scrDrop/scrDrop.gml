@@ -1,6 +1,7 @@
 function scrDrop(itemdrop, weapondrop) {
 	var pickup = noone;
-	if instance_exists(DropReducer)
+	var isHard = scrIsHardMode();
+	if instance_exists(DropReducer) && GetPlayerLoops() > 0 || isHard
 	{
 		var reductions = max(0.1,1 - (instance_number(DropReducer) * 0.1));
 		itemdrop *= reductions;
@@ -43,7 +44,10 @@ function scrDrop(itemdrop, weapondrop) {
 			}
 			else
 			{
-				mh += (instance_number(WantHealth) * 0.05);
+				if GetPlayerLoops() > 0
+					mh += (instance_number(WantHealth) * 0.05);
+				else
+					mh += (instance_number(WantHealth) * 0.1);
 			}
 		}
 		var rebelBuff = 0;
@@ -68,7 +72,7 @@ function scrDrop(itemdrop, weapondrop) {
 				dropRateBuff -= 0.5;
 			}
 		}
-		if scrIsHardMode() //HARD MODE
+		if isHard //HARD MODE
 		{
 			itemdrop *= 0.975;
 			canHealth = 0.9;

@@ -1,5 +1,5 @@
 /// @description FX
-if fps_real < fps
+if fps_real < min(48,fps)
 {
 	exit;
 }

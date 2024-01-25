@@ -36,4 +36,3 @@ else
 	instance_create(64,96,Menu)
 }
 randomize();
-

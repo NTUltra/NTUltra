@@ -1,6 +1,6 @@
-raddrop = 10
-maxhealth = 35//50
-meleedamage = 4
+raddrop = 9
+maxhealth = 12//50
+meleedamage = 6
 mySize = 1
 
 event_inherited()
@@ -17,8 +17,9 @@ snd_hurt = sndHitRock;
 
 walk=0;
 //behavior
-alarm[1] = 10+random(10)
+alarm[1] = 30+random(60)
 
-if instance_exists(Player)
-motion_add(point_direction(Player.x,Player.y,x,y),1)
-
+alarm[3] = 1;
+projectileSpeed = 2.5;
+if GetPlayerLoops() > 0
+projectileSpeed += 0.5;

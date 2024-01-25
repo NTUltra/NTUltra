@@ -75,4 +75,6 @@ else
 	snd_play(sndNecromancerRevive)
 	wkick = 5
 	alarm[1] = actTime*3+random(actTime*2)
+	walk = 0;
+	speed = 0;
 }

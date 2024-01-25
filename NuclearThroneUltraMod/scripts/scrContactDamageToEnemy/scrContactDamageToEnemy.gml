@@ -164,10 +164,12 @@ function scrContactDamageToEnemy(hitEnemy){
         
 					        with hitEnemy
 							{
-								move_contact_solid(point_direction(other.x,other.y,x,y)+180,4);
+								var away = point_direction(x,y,other.x,other.y)
+								move_contact_solid(away,4);
+								motion_add(away,8)
 								speed = 0;
 								walk = min(walk,5);
-								alarm[1] += 10;
+								alarm[1] += 15;
 							}
 				
 							if hitEnemy.object_index == IDPDVan

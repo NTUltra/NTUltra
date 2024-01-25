@@ -4,13 +4,16 @@ with Sniper
 	alarm[1] += 2;	
 }
 wkick = 7
+var angStep = 4;
+if loops < 1
+angStep = 2;
 with instance_create(x,y,proj)
-{motion_add(other.gunangle+4,16)
+{motion_add(other.gunangle+angStep,16)
 team = other.team
 image_angle = direction
 firedbysniper=true;}
 with instance_create(x,y,proj)
-{motion_add(other.gunangle-4,16)
+{motion_add(other.gunangle-angStep,16)
 team = other.team
 image_angle = direction
 firedbysniper=true;}

@@ -34,6 +34,9 @@
     "name": "sprInvertedSquareBatIdle",
     "path": "sprites/sprInvertedSquareBatIdle/sprInvertedSquareBatIdle.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskSquareBat",
+    "path": "sprites/mskSquareBat/mskSquareBat.yy",
+  },
   "visible": true,
 }

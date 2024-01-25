@@ -7,6 +7,7 @@ draw_set_halign(fa_right)
 
 if place_meeting(x,y,ShopSelector)
 {
+	image_index = 1;
 	depth = selected;
 
 	drawx = x
@@ -36,6 +37,7 @@ if place_meeting(x,y,ShopSelector)
 }
 else
 {
+	image_index = 0;
 	depth = unselected;	
 }
 

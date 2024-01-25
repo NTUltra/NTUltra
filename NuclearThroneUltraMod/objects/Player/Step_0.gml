@@ -937,8 +937,15 @@ if (rad > mr)
 	{
 		//rad -= level*60
 		rad -= mr;
-		level += 1
-
+		if scrIsGamemode(22) && isValidGamemodeToUnlock() && UberCont.highestReachedLevel + 1 > 19
+		{
+			with instance_create(x,y,UnlockPopup)
+			{
+				mytext="FROM NOW ON#UNLOCKS ARE DISABLED!";
+			}
+		}
+		level += 1;
+		UberCont.highestReachedLevel = max(UberCont.highestReachedLevel, level);
 		if level==7 && loops < 1 && race == 25 && (area < 4 || area == 105 || area == 110 || area == 106 || area == 103 || area == 102 || area == 101 || area == 10)
 			scrUnlockBSkin(25,"FOR REACHING LEVEL 7#BEFORE THE LABS#AS MUTATION DOCTOR",0);
 
@@ -1201,7 +1208,10 @@ if (!instance_exists(LevCont))
 			}
 			scrFlexibleElbowReload(bwep);
 		}
-	
+		if skill_got[41] && armour < maxarmour
+		{
+			reload -= 0.1;
+		}
 		if skill_got[22]
 		{
 			//nerves of steel g  STRESS

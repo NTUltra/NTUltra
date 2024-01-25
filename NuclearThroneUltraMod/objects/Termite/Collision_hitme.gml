@@ -19,6 +19,7 @@ if other.team != team && team!=0
 		motion_add(other.direction,10)
 		}
 		snd_play(sndMaggotBite);
+		scrRecycleGland(1);
 	}
 	else
 	{

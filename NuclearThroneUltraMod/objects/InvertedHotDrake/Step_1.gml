@@ -26,7 +26,15 @@ if (instance_number(enemy) <= 4 + min(6,loops) || instance_exists(SurvivalWave) 
 		alarm[1]=80;
 		meleedamage=8;
 		awake=true;
+		with instance_create(xstart,ystart,DragonDance) {
+			step -= 16;
+			projectileSpeed += 0.25;
+			spawnRate -= 10;
+		}
 		EnemyHealthAdjustments();
+		with FrostTrap {
+			instance_destroy();
+		}
 		//instance_create(x,y,HotDrakeLava);
 		mask_index=mskHotDrake;
 		instance_create(x,y,DramaCamera);

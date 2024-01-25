@@ -6,5 +6,5 @@ hover = false;
 if dailyDone
 	sprite_index = sprDailyChallengeOff;
 	
-if scrIsGamemode(26)
+if scrIsGamemode(27)
 	image_index = 1;

@@ -1,4 +1,4 @@
-function scrDecideWep(wepTierParam, maxTriesParam = 12, cursedParam = 0, minWepAreaParam = 0/*, areaWepTries = 0*/) {
+function scrDecideWep(wepTierParam, maxTriesParam = 6, cursedParam = 0, minWepAreaParam = 0/*, areaWepTries = 0*/) {
 	var wepTier = wepTierParam - 1;
 	var maxTries = maxTriesParam;
 	var cursed = cursedParam;
@@ -70,7 +70,8 @@ function scrDecideWep(wepTierParam, maxTriesParam = 12, cursedParam = 0, minWepA
 			{
 				maxValidTierWep = wep;
 			}
-			triesForSpecificTier++;
+			if wep_area[wep]  <= wepTier
+				triesForSpecificTier++;
 				if tries > 1000
 				{
 					triesForSpecificTier = 0;
@@ -92,7 +93,8 @@ function scrDecideWep(wepTierParam, maxTriesParam = 12, cursedParam = 0, minWepA
 				{
 					maxValidTierWep = wep;
 				}
-				triesForSpecificTier++;
+				if wep_area[wep]  <= wepTier
+					triesForSpecificTier++;
 				infiniteTries --;
 			}
 			until (

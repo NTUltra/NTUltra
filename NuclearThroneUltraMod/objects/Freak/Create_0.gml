@@ -4,7 +4,7 @@ meleedamage = 3
 mySize = 1
 droprate = 5.5;
 event_inherited()
-
+firstTime = true;
 spr_idle = sprFreak1Idle
 spr_walk = sprFreak1Walk
 spr_hurt = sprFreak1Hurt
