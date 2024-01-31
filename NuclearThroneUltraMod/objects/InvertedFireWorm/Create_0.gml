@@ -20,6 +20,5 @@ acc = 0.8;
 tellTime = 25;
 laserDuration = 65;
 laserOffsetMax = 40;
-maxRange = 200;
-maxRange += min(GetPlayerLoops()*20,400);
+maxRange += 20;
 isInverted = true;

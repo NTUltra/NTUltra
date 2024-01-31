@@ -40,8 +40,8 @@
     "path": "sprites/sprEnemyLightningBall/sprEnemyLightningBall.yy",
   },
   "spriteMaskId": {
-    "name": "mskMiniFlameCannonBall",
-    "path": "sprites/mskMiniFlameCannonBall/mskMiniFlameCannonBall.yy",
+    "name": "mskEnemyBullet1",
+    "path": "sprites/mskEnemyBullet1/mskEnemyBullet1.yy",
   },
   "visible": true,
 }

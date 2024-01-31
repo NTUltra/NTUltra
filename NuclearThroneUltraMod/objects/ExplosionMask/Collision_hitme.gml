@@ -25,7 +25,9 @@ if alarm[0] < 1 && other.team == 2 && instance_exists(Player) && (!ezMode || oth
 		{
 			with other
 				instance_destroy();
-			alarm[4] = 20;
+			boilingAmount = boilingMax;
+			if alarm[4] < 1
+				alarm[4] = 1;
 			if ultra_got[62] && altUltra && armour > immunelimit//Living armour
 			{
 				dealtDamage = true;
@@ -64,7 +66,7 @@ if alarm[0] < 1 && other.team == 2 && instance_exists(Player) && (!ezMode || oth
 			if !scrIsGamemode(34)//NOT HARD MODE
 				repeat(7)
 				{
-					if !place_meeting(x+lengthdir_x(2,knockbackDir),y+lengthdir_y(2,knockbackDir),Wall)
+					if !place_meeting(x+lengthdir_x(2,knockbackDir),y+lengthdir_y(2,knockbackDir),WallHitMe)
 					{
 						x += lengthdir_x(2,knockbackDir);
 						y += lengthdir_y(2,knockbackDir);

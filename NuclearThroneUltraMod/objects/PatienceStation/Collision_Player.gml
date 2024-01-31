@@ -8,6 +8,6 @@ if KeyCont.key_pick[other.p] = 1
 	BackCont.shake += 50;
 	snd_play(sndUltraGrenadeSuck);
 	with Player {
-		guarenteedReroll += 2;
+		guarenteedReroll += 3;
 	}
 }

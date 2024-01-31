@@ -40,14 +40,21 @@ if my_health < maxhealth*0.3
 	ps += 0.5;
 	am += 1;
 }
+if instance_exists(Player) && Player.area != 136
+	am -= 3;
+var i = 0;
 repeat(am)
 {
-	with instance_create_depth(x+lengthdir_x(24,gunangle),y+lengthdir_y(16,gunangle),depth + 2, ExploGuardianBullet)
+	var proj = ExploGuardianBullet;
+	if sndhalfhp == 1 && i % 3 == 0
+		proj = EnemyBullet1Square;
+	with instance_create_depth(x+lengthdir_x(24,gunangle),y+lengthdir_y(16,gunangle),depth + 2, proj)
 	{
 		motion_add(other.gunangle,ps);
 		image_angle = direction
 		team = other.team;
 	}
+	i++;
 	gunangle += angStep;
 }
 if ammo < usedMaxAmmo * 0.75

@@ -2,7 +2,7 @@
 scrTarget();
 if target != noone
 {
-	var dir = point_direction(x, y, target.x, target.y);
+	var dir = point_direction(x+(lox*right), y, target.x, target.y);
 	if target.x < x
 		right = -1
 	else if target.x > x
@@ -12,9 +12,9 @@ if target != noone
 		motion_add(dir+random(12)-6,3.5)
 		image_angle = direction
 		team = other.team
-		snd_play(sndFireballerFire, 0.05)
+		snd_play(sndFireballerFire, 0.05);
 	}
 	sprite_index = spr_fire;
 	alarm[3] = sprite_get_number(spr_fire)/image_speed;
-	alarm[1] -= 2;
+	alarm[1] -= 1;
 }

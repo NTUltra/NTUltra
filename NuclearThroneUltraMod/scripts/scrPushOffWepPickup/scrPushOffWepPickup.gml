@@ -9,9 +9,11 @@ function scrPushOffWepPickup(){
 		with w {
 			if canBeMoved
 			{
-				vspeed += 0.05;
 				if speed < 4
-					motion_add(direction,1.5);
+				{
+					motion_add(direction+1,1.5);
+					vspeed += 0.05;
+				}
 			}
 		}
 	}

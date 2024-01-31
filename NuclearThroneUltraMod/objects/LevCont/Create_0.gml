@@ -179,18 +179,55 @@ if Player.hogpoints > 1// && Player.area=105 && Player.subarea=1
 {
 	scrUnlockCSkin(20,"FOR SUCCESSFULLY USING#THE INVESTMENT ULTRA",0);
     scrUltras()
+	if scrIsGamemode(32) {
+		with Player {
+			ultra_got[19] = 1;
+			ultra_got[48] = 1;
+			ultra_got[33] = 1;
+			ultra_got[40] = 1;
+			ultra_got[62] = 1;
+			ultra_got[66] = 1;
+			ultra_got[75] = 1;
+			ultra_got[76] = 1;
+			ultra_got[103] = 1;	
+		}
+	}
     scrBusinessHogInvestment();
-    
+    if scrIsGamemode(32) {
+		with Player {
+			ultra_got[19] = 0;
+			ultra_got[48] = 0;
+			ultra_got[33] = 0;
+			ultra_got[40] = 0;
+			ultra_got[62] = 0;
+			ultra_got[66] = 0;
+			ultra_got[75] = 0;
+			ultra_got[76] = 0;
+			ultra_got[103] = 0;	
+		}
+	}
     exit;
 }
 else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !Player.horrorEtaken && Player.skillpoints == 1
 || Player.ultraNow))&&(Player.ultra_got[75]==0)//ULTRA! Player.level>9 not skelly redemption ultra a Player.skillsChosen>7
 {
 	Player.ultraNow = false;
+	if scrIsGamemode(32) {
+		with Player {
+			ultra_got[19] = 1;
+			ultra_got[48] = 1;
+			ultra_got[33] = 1;
+			ultra_got[40] = 1;
+			ultra_got[62] = 1;
+			ultra_got[66] = 1;
+			ultra_got[75] = 1;
+			ultra_got[76] = 1;
+			ultra_got[103] = 1;	
+		}
+	}
 	//UNLOCK MUTATION DOCTOR/SMITH
 	scrUnlockCharacter(25,"FOR GETTING AN ULTRA MUTATION");
-
-	if Player.ultra_got[0]=1 && !Player.altUltra && !Player.horrorEtaken//&&(Player.skillsChosen>7)
+	if Player.ultra_got[0] && !Player.altUltra && !Player.horrorEtaken && Player.skillpoints == 1//&&(Player.skillsChosen>7)
 	{
 		scrUltraEHorror();
 	}
@@ -244,48 +281,48 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 		{
 		    if Player.race == 21//horror
 		    {
-		    if (Player.ultra_got[skill1] == 0)
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-64,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
-		    skill = other.skill1
+			    if (Player.ultra_got[skill1] == 0)
+			    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-64,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
+			    skill = other.skill1
 	
-		    if (Player.ultra_got[skill2] == 0)
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-32,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
-		    skill = other.skill2
+			    if (Player.ultra_got[skill2] == 0)
+			    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-32,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
+			    skill = other.skill2
 	
-		    if (Player.ultra_got[skill3] == 0)
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
-		    skill = other.skill3
+			    if (Player.ultra_got[skill3] == 0)
+			    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
+			    skill = other.skill3
 	
-		    if (Player.ultra_got[skill4] == 0)
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+32,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
-		    skill = other.skill4
+			    if (Player.ultra_got[skill4] == 0)
+			    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+32,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
+			    skill = other.skill4
 	
-		    if (Player.ultra_got[0] == 0)
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+64,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
-		    skill = 0
+			    if (Player.ultra_got[0] == 0)
+			    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+64,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
+			    skill = 0
     
 		    }
 		    else
 		    {
-			if (Player.ultra_got[skill1] == 0)
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-72,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
-		    skill = other.skill1
+				if (Player.ultra_got[skill1] == 0)
+			    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-72,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
+			    skill = other.skill1
     
-			if (Player.ultra_got[skill2] == 0)
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
-		    skill = other.skill2
+				if (Player.ultra_got[skill2] == 0)
+			    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
+			    skill = other.skill2
     
-			if (Player.ultra_got[skill3] == 0)
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
-		    skill = other.skill3
+				if (Player.ultra_got[skill3] == 0)
+			    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
+			    skill = other.skill3
     
-			if (Player.ultra_got[skill4] == 0)
-		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+72,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
-		    skill = other.skill4
+				if (Player.ultra_got[skill4] == 0)
+			    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+72,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
+			    skill = other.skill4
 			
-			if Player.wep == 0 && Player.bwep == 0 && Player.race != 14 && !scrIsGamemode(14)//not fish only partner and not panda
-			with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+120,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
-		    skill = 109
+				if Player.wep == 0 && Player.bwep == 0 && Player.race != 14 && !scrIsGamemode(14)//not fish only partner and not panda
+				with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+120,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
+			    skill = 109
 		    }
 		}
 		else
@@ -321,7 +358,20 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 	}
 
 	pick = 0//ehm not necessary
-	canmove = 1    
+	canmove = 1
+	if scrIsGamemode(32) {
+		with Player {
+			ultra_got[19] = 0;
+			ultra_got[48] = 0;
+			ultra_got[33] = 0;
+			ultra_got[40] = 0;
+			ultra_got[62] = 0;
+			ultra_got[66] = 0;
+			ultra_got[75] = 0;
+			ultra_got[76] = 0;
+			ultra_got[103] = 0;	
+		}
+	}
 	exit;    
     
     }//end of the ultra code
@@ -357,15 +407,6 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 			skill_got[18] = 1;
 			skill_got[38] = 1;
 			skill_got[40] = 1;
-			ultra_got[19] = 1;
-			ultra_got[48] = 1;
-			ultra_got[33] = 1;
-			ultra_got[40] = 1;
-			ultra_got[62] = 1;
-			ultra_got[66] = 1;
-			ultra_got[75] = 1;
-			ultra_got[76] = 1;
-			ultra_got[103] = 1;
 			if race != 10 && race != 12 && race != 18 && race != 19
 			{
 				//not Rebel yung cuz, angel and skeleton
@@ -553,22 +594,6 @@ if scrIsGamemode(32) {
 			skill_got[31] = 0;
 			skill_got[41] = 0;
 		}
-	}
-}
-if scrIsGamemode(48) {
-	with Player
-	{
-		//AMMO REGEN MUTS & wepspes and other useless ones
-		skill_got[6] =  0;
-		skill_got[10] = 0;
-		skill_got[13] = 0;
-		skill_got[15] = 0;
-		skill_got[16] = 0;
-		skill_got[17] = 0;
-		skill_got[21] = 0;
-		skill_got[23] = 0;
-		skill_got[40] = 0;
-		skill_got[42] = 0;
 	}
 }
 SetSeed();

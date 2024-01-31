@@ -39,7 +39,7 @@ else if (!gotSteam)
 		url_open("https://store.steampowered.com/about/");	
 	}
 }
-else if !scrIsGamemode(26) && alarm[3] > 0
+else if (!scrIsGamemode(26) || UberCont.isLeaderboardGamemode) && alarm[3] > 0
 {
 	draw_text(camera_get_view_x(view_camera[0])+4,
 	camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) - 2,

@@ -1,4 +1,4 @@
-function scrDecideWep(wepTierParam, maxTriesParam = 6, cursedParam = 0, minWepAreaParam = 0/*, areaWepTries = 0*/) {
+function scrDecideWep(wepTierParam, maxTriesParam = 8, cursedParam = 0, minWepAreaParam = 0/*, areaWepTries = 0*/) {
 	var wepTier = wepTierParam - 1;
 	var maxTries = maxTriesParam;
 	var cursed = cursedParam;

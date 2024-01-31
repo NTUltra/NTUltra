@@ -1,7 +1,6 @@
 
 if instance_exists(Player){
 	if team!=Player.team{//enemy
-
 		repeat(8)
 		{
 		with instance_create(x,y,TrapFire)
@@ -11,6 +10,7 @@ if instance_exists(Player){
 
 	}
 	else{
+		snd_play(sndFlareExplode);
 		var ang = direction;
 		var angstep = 360/fireExplosionAmount;
 		repeat(fireExplosionAmount)
@@ -23,6 +23,5 @@ if instance_exists(Player){
 		}
 	}
 }
-snd_play(sndFlareExplode);
 audio_stop_sound(sndFlamerLoop)
 

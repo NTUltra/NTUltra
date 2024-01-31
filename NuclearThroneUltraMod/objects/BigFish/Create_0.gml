@@ -74,3 +74,4 @@ if instance_exists(Player) && Player.skill_got[29] {
 	alarm[1] += 60;
 	scrGiveSnooze();
 }
+instance_create(x,y,BigWallBreak);

@@ -56,6 +56,11 @@ function scrSerpentArmourStrike(){
 				flipped = -1;
 			team = other.team;
 			dmg *= 1+Player.level*0.1;//0.1
+			if other.bskin == 1
+			{
+				sprite_index = sprSerpentStrikeB;
+				sprHead = sprSerpentStrikeHeadB;
+			}
 			if other.spr_idle = sprMutant16DIdle
 			{
 				sprOutline = sprKrakenStrikeOutline;
@@ -88,7 +93,12 @@ function scrSerpentArmourStrike(){
 			if dcos(image_angle) < 0
 				flipped = -1;
 			team = other.team;
-			dmg *= 1+Player.level*0.15;//0.1
+			dmg *= 1+Player.level*0.1;//0.1
+			if other.bskin == 1
+			{
+				sprite_index = sprSerpentStrikeB;
+				sprHead = sprSerpentStrikeHeadB;
+			}
 			if other.spr_idle = sprMutant16DIdle
 			{
 				sprOutline = sprKrakenStrikeOutline;

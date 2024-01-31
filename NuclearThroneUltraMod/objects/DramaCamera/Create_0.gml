@@ -1,5 +1,5 @@
 depth = -99;
-if instance_exists(InvaderBossSpawnPortal) || instance_exists(BossInvasionNoName) || scrIsGamemode(40)
+if instance_exists(InvaderBossSpawnPortal) || instance_exists(BossInvasionNoName) || scrIsGamemode(40) || scrIsGamemode(44)
 {
 	instance_destroy();
 	exit;

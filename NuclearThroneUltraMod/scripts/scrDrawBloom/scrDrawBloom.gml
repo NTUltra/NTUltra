@@ -240,6 +240,8 @@ function scrDrawBloom() {
 	draw_sprite_ext(sprite_index,image_index,x,y,2,2,image_angle,c_white,ba)
 	with HotDrakeFlameCannon
 	draw_sprite_ext(sprHotDrakeFlameCannonBloom,image_index,x,y,2,2,image_angle,c_white,ba)
+	with Meteor
+	draw_sprite_ext(sprite_index,image_index,x,dy,scale*1.5,scale*1.5,image_angle,c_white,ba);
 	with HotDrakeSplitBall
 	draw_sprite_ext(sprHotDrakeSplitBallBloom,image_index,x,y,3,2,image_angle,c_white,ba)
 

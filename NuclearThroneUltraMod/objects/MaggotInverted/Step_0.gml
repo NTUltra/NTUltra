@@ -28,4 +28,6 @@ else
 {
 	if speed > maxSpeed
 		speed = maxSpeed
+	if firstTime
+		speed = 0;
 }

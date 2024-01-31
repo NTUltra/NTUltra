@@ -19,7 +19,7 @@ if target != noone
 			var msk = mask_index; 
 			mask_index = mskReviveArea;
 			var freaks = ds_list_create();
-			var al = instance_place_list(x,y,Freak,freaks,false);
+			var al = instance_place_list(x,y,InvertedFreak,freaks,false);
 			if al > 2
 			{
 				for(var i = 0; i < al; i ++)
@@ -59,6 +59,7 @@ if target != noone
 				fuseAmount = merged;
 				if merged > 0
 				{
+					my_health += 2;
 					sprite_index = spr_hurt;
 					image_index = 0;
 					image_xscale = 1.2;

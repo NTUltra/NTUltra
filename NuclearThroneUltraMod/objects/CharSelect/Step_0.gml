@@ -107,6 +107,8 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+16 and UberCon
     
 	with MusCont {
 		confirmSound = other.snd_cnfm;
+		audio_stop_sound(amb);
+		audio_stop_sound(song);
 	}
 	
     UberCont.racepick = Menu.race

@@ -4,7 +4,7 @@ meleedamage = 20
 mySize = 2
 
 event_inherited()
-
+firstTime = true;
 spr_idle = sprLightningCrystalIdle
 spr_walk = sprLightningCrystalIdle
 spr_hurt = sprLightningCrystalHurt

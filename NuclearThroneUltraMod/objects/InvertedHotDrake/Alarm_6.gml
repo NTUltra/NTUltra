@@ -10,7 +10,7 @@ with instance_create(x,y+96,EnemyIceFlame)
     team = other.team
     }
 }
-    repeat(10){
+    repeat(8){
     with instance_create(x,y,MiniFlameCannonBall)
         {
 			inverted= true;
@@ -19,8 +19,5 @@ with instance_create(x,y+96,EnemyIceFlame)
         team = other.team}}
     audio_stop_sound(sndDragonLoop)
     snd_play(sndExplosionXL);
+	event_user(0);
     alarm[1]=30;
-    //appearing=-1;
-    image_index=0;
-    sprite_index=spr_idle;
-

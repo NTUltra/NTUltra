@@ -19,10 +19,13 @@ if other.team != team and other.team != 0 && (other.team!=2 || image_index<5/*no
 			
 			}
 		}
-		if sprite_index != spr_hurt && !other.dealtDamage
+		if sprite_index != spr_hurt
 		{
 			if immune = 1
 			{
+				boilingAmount = boilingMax;
+				if alarm[4] < 1
+					alarm[4] = 1;
 				if my_health > immunelimit
 				{
 					snd_play(snd_hurt, hurt_pitch_variation)
@@ -54,5 +57,5 @@ if other.team != team and other.team != 0 && (other.team!=2 || image_index<5/*no
 			}
 		}
 	}
-	other.dealtDamage = true;
+	image_index = max(5,image_index);
 }

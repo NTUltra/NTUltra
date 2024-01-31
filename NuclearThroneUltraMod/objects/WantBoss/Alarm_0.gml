@@ -81,6 +81,38 @@ if target != noone && instance_exists(target)
 			{
 				instance_create(x,y,InvertedCrownGlutton);
 			}
+			else if scrIsGamemode(44) && other.area == 120
+			{
+				var n = instance_nearest(x,y,Corpse);
+				if n != noone
+				{
+					x = n.x;
+					y = n.y;
+				}
+				with instance_create(x+16,y+16,InvertedBigBadBat) {
+					my_health *= 2;	
+				}
+				repeat(1 + min(6,BackCont.loops))
+				{
+					instance_create(x+16,y+16, InvertedExploGuardian);
+				}
+				scrTurnIntoPortalArea(true);
+			}
+			else if scrIsGamemode(44) && other.area == 119
+			{
+				var n = instance_nearest(x,y,Corpse);
+				if n != noone
+				{
+					x = n.x;
+					y = n.y;
+				}
+				instance_create(x+16,y+16,UltraBigDog);
+				repeat(1 + min(6,BackCont.loops))
+				{
+					instance_create(x+16,y+16, PalaceGuardian);
+				}
+				scrTurnIntoPortalArea();
+			}
 			else
 			{
 			    if other.area=3 && other.loops>0 && instance_exists(Floor)//scrapyard

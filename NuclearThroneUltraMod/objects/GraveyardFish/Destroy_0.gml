@@ -18,6 +18,20 @@ with Player
 	bcurse = 0;
 	ccurse = 0;
 }
+with WepPickup
+{
+	curse = 0;	
+}
+with WeaponChest
+{
+	curse = 0;
+	if sprite_index == sprCursedChestBig
+		sprite_index = sprWeaponChestBig;
+	if sprite_index == sprCursedWeaponChest
+		sprite_index = sprWeaponChest;
+	if sprite_index == sprCursedEliteWeaponChest
+		sprite_index = sprEliteWepChest;
+}
 if UberCont.area == 126 || UberCont.area == 127
 	scrDefeatedRequiredBoss(secretChallengeBosses.bigFish);
 with myCorpse

@@ -73,7 +73,7 @@ if (type == network_type_data) {
 			if (!isScoreRun && dayNumber % 2 == 0)//IS DAILY GAMEMODE
 			{
 				//REGISTER A MOCK SCORE
-				ini_open(dailyScoreSaveFileString);
+				ini_open(biDailyGamemodeSaveFileString);
 					var i = 0;
 					while (ini_key_exists("gamemodelb",i))
 					{

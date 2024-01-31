@@ -24,3 +24,4 @@ acc = 0.7;
 maxSpeed = 2.5;
 maxSpinSpeed = 0.8;
 reachedVeryLowHP = false;
+instance_create(x,y,BigWallBreak);

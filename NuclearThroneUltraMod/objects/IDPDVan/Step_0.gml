@@ -4,8 +4,7 @@ event_inherited()
 
 
 
-if speed>maxSpeed
-speed=maxSpeed;
+
 
 
 if speed<0.8 && idle
@@ -51,3 +50,5 @@ for (var i = 0; i < al; i++) {
 		}
 	}
 }
+if speed>maxSpeed
+	speed=maxSpeed;

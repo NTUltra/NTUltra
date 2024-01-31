@@ -1,17 +1,17 @@
 /// @description Start a bullet party
 width = 320;
 height = 320;
-spawnRate = 140;
-alarm[0] = (spawnRate*0.5) + 1;
-alarm[1] = 1;
-step = 96;
-projectileSpeed = 1.75;
+spawnRate = 210;
+alarm[0] = 60 + (spawnRate*0.5) + 1;
+alarm[1] = 60;
+step = 112;
+projectileSpeed = 1.5;
 loops = GetPlayerLoops();
 if loops > 0
 {
-	spawnRate -= 20;
-	step -= 16;
-	projectileSpeed += 0.25;
+	spawnRate -= 60;
+	step -= 32;
+	projectileSpeed += 0.5;
 }
 /*
 var ang = 90;

@@ -124,7 +124,7 @@ function scrLoseSkill(skillIndex){
 		case 19: //EAGLE EYES
 			if race == 25
 			{
-				accuracy = standartAccuracy/0.24//0.3//in case you have build up rage use the standart
+				accuracy = standartAccuracy/0.25//0.3//in case you have build up rage use the standart
 				standartAccuracy = accuracy//new standart
 			}
 			else

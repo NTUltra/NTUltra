@@ -30,8 +30,8 @@ laserOffsetMax = 30;
 laserOffset = 0;
 laserDir = 1;
 angleStep = 1;
-maxRange = 180;
-maxRange += min(GetPlayerLoops()*20,400);
+maxRange = 160;
+maxRange += min(GetPlayerLoops()*30,300);
 lox = 16;//Laser offset X
 instance_create(x,y,BigWallBreak);
 isInverted = false;

@@ -41,7 +41,7 @@ else if random(6) < 2
 					instance_create(x+16+random(16)-8,y+16+random(16)-8,InvertedReviveArea);
 			}
 			snd_play(sndNecromancerRevive)
-			alarm[1] = 10+random(20)
+			alarm[1] = 12+random(20)
 		}
 	}
 	if noCorpse

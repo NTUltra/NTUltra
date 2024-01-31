@@ -18,8 +18,8 @@ snd_dead = sndSalamanderDead
 snd_melee = sndSalamanderFire
 
 //behavior
-maxRange = 310;
-actTime = 20;
+maxRange = 280;
+actTime = 25;
 ammo = 10
 acc = 0.6;
 maxSpeed = 2;
@@ -32,3 +32,10 @@ angleStep = 2;
 alarm[1] = 30+random(90)
 tellTime = 10;
 alarm[3] = 10;
+projectileSpeed = 8.8;
+if GetPlayerLoops() > 0
+{
+	actTime -= 7;
+	maxRange = 320;
+	projectileSpeed = 9.6;
+}

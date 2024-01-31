@@ -66,6 +66,10 @@ draw_self();
 	{
 		draw_self();	
 	}
+	with Teleport
+	{
+		event_perform(ev_draw,0);	
+	}
 if instance_exists(Spiral)
 	with Bones
 		draw_sprite_ext(sprite_index,-1,x,y,image_xscale,1,0,c_white,1)

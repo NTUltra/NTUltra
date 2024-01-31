@@ -10,8 +10,6 @@ else
 	if random(4+instance_number(missileType)*0.75) < 1 and instance_exists(Player)
 	{
 		event_user(3)
-		
-		
 	}
 	else
 	{

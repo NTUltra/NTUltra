@@ -9,16 +9,16 @@ var oldx, oldy;
 oldx = x
 oldy = y
 aimDir += (sin(ammo*0.1)*2);
-if ammo < 160 && instance_exists(target)
+if ammo < 150 && instance_exists(target)
 {
 	var dif = angle_difference(point_direction(x,y,target.x,target.y), image_angle);
 	if (point_distance(x,y,target.x,target.y) < 108 && abs(dif) < 38)
     {
-		aimDir += dif*0.53;
+		aimDir += dif*0.55;
     }
 	else
 	{
-		aimDir += dif * 0.0023;
+		aimDir += dif * 0.0025;
 	}
 }
 aimDir += angle_difference(originalAngle,aimDir)*0.01;

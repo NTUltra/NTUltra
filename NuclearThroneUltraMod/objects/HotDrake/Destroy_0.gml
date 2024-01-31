@@ -3,6 +3,10 @@ with projectile {
 	if team == other.team
 		instance_destroy(id,false);	
 }
+with DragonDance {
+	instance_destroy();	
+}
+audio_stop_sound(sndDragonLoop)
 with MusCont
 {
 

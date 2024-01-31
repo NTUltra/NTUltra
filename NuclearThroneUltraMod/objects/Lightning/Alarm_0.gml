@@ -99,14 +99,13 @@ if team == 2 && isog
 	//if !Player.ultra_got[93] && place_meeting(x,y,VikingWall)
 	//	hitElementorWall = true;
 }
-ammo = round(ammo);
 var xxx = x;
 var yyy = y;
 var xscale = 1;
 var angle = image_angle;
 direction = angle;
 var arI = 0;
-for(var i = ammo; i > 0; i -= 1)
+for(var i = floor(ammo); i > 0; i -= 1)
 {
 	var oldx = xxx
 	var oldy = yyy
@@ -194,7 +193,7 @@ for(var i = ammo; i > 0; i -= 1)
 		};
 		arI += 1;
 	}
-	if i > 0 && team == 2 && round(i) % fork == 0//Forking lightning
+	if i > 2 && team == 2 && round(i) % fork == 0//Forking lightning
 	{
 		if instance_exists(Player) && Player.ultra_got[96] && choose(true,true,false)
 		{
@@ -234,7 +233,7 @@ for(var i = ammo; i > 0; i -= 1)
 				accuracy=other.accuracy*2;
 				direction = other.direction+choose(80+random(30),-80+random(-30))
 				image_angle = direction
-				ammo = clamp(round((i)*0.34),2,16);
+				ammo = clamp(i*0.34,2,16);
 				team = other.team
 				image_index = other.image_index
 				event_perform(ev_alarm,0)

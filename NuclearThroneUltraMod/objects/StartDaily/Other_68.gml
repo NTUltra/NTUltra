@@ -23,8 +23,27 @@ if (type == network_type_data) {
 				UberCont.opt_gamemode = [0];
 				UberCont.isLeaderboardGamemode = false;
 				alarm[0] = min(alarm[0],1);
+				break;
 			}
-			else if UberCont.isLeaderboardGamemode {
+			var sendBuffer = buffer_create(11,buffer_fixed,1);
+			buffer_write(sendBuffer,buffer_u8,NETDATA.CANIPARTICIPATE);
+			buffer_write(sendBuffer,buffer_u16,myClientId);
+			buffer_write(sendBuffer,buffer_u64,UberCont.encrypted_data.userid);//UserId
+			network_send_packet(serverSocket, sendBuffer, buffer_get_size(sendBuffer));
+		break;
+		case NETDATA.CANIPARTICIPATE:
+			var canParticipateDailyScore = buffer_read(buffer, buffer_bool);
+			var canParticipateDailyGm = false;
+			var dailyDay = 1;
+			debug("CAN I PARTICIPATE? ",canParticipateDailyScore);
+			if buffer_get_size(buffer) > 1
+			{
+				dailyDay = buffer_read(buffer, buffer_u8);
+				canParticipateDailyGm = buffer_read(buffer, buffer_bool);
+				debug("GM! ",canParticipateDailyGm);
+			}
+			
+			if UberCont.isLeaderboardGamemode {
 				debug("WEEKLY");
 				var sendBuffer = buffer_create(3,buffer_fixed,1);
 				buffer_write(sendBuffer,buffer_u8,NETDATA.STARTWEEKLY);
@@ -42,6 +61,24 @@ if (type == network_type_data) {
 			}
 			else
 			{
+				debug("DAILY");
+				debug("day: ",dailyDay % 2);
+				debug("gm: ", !scrIsGamemode(27));
+				if (!scrIsGamemode(27) && dailyDay % 2 == 0)
+				{
+					debug("daily gm")
+					if !canParticipateDailyGm
+					{
+						//FAIL TO START DAILY GM
+						alarm[0] = min(alarm[0],1);
+						break;
+					}
+				}
+				else if !canParticipateDailyScore
+				{
+					alarm[0] = min(alarm[0],1);
+					break;
+				}
 				var sendBuffer = buffer_create(12,buffer_fixed,1);
 				buffer_write(sendBuffer,buffer_u8,NETDATA.STARTDAILY);
 				buffer_write(sendBuffer,buffer_u16,myClientId);
@@ -50,7 +87,6 @@ if (type == network_type_data) {
 					buffer_write(sendBuffer,buffer_bool,true);
 				else//Race
 					buffer_write(sendBuffer,buffer_bool,false);
-				//buffer_write(sendBuffer,buffer_string,date_date_string(date_current_datetime()));
 				network_send_packet(serverSocket, sendBuffer, buffer_get_size(sendBuffer));
 			}
 		break;

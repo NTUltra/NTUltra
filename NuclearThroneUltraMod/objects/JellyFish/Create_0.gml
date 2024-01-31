@@ -1,4 +1,4 @@
-raddrop = 14
+raddrop = 12
 maxhealth = 7//45
 meleedamage = 2
 mySize = 1
@@ -23,7 +23,7 @@ ammo = maxAmmo;
 alarm[1] = 30+random(90)
 maxSpeed = 2.5;
 loops = GetPlayerLoops();
-length = 4;
+length = 5;
 if loops > 0
 {
 	actTime = 6;

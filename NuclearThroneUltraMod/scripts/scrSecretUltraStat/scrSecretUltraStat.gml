@@ -84,7 +84,7 @@ function scrSecretUltraStat() {
 	secret_ultra_unlk[9] = "HOLD A FIRE WEAPON";
 	//35
 	secret_ultra_name[10] = "SUCOF"
-	secret_ultra_text[10] = "SELITCEJORP <w>SESREVER<w> EVITCA"//ACTIVE REVERSES PROJECTILES | EMIT SESREVER EVITCA
+	secret_ultra_text[10] = "EMIT <w>SESREVER<w> EVITCA"//ACTIVE REVERSES PROJECTILES | EMIT SESREVER EVITCA
 	secret_ultra_tips[10] = "reverse time"
 	secret_ultra_hint[10] = "OPPOSITES";
 	secret_ultra_unlk[10] = "HAVE CROWN OF INVERSION";

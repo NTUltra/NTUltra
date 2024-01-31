@@ -16,19 +16,19 @@ snd_play(sndSuperSlugger)
 	team = other.team
 	}with instance_create(x,y,EnemyBullet1)
 	{
-	motion_add(d - 6,3.5)
+	motion_add(d - 6,3.4)
 	image_angle = direction
 	team = other.team
 	}
 	with instance_create(x,y,EnemyBullet1)
 	{
-	motion_add(d + 6,3.5)
+	motion_add(d + 6,3.4)
 	image_angle = direction
 	team = other.team
 	}
 	with instance_create(x,y,EnemyBullet1Square)
 	{
-	motion_add(d,4)
+	motion_add(d,3.8)
 	image_angle = direction
 	team = other.team
 	}

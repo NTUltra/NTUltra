@@ -1,17 +1,6 @@
 scrTarget()
-alarm[1] = 30+random(20)
-
-if instance_exists(Player)
-{
-    if Player.loops>0
-    {//LOOP
-    alarm[1] = 10+random(10)
-    }
-}
-
-
-
-
+alarm[1] = actTime+random(actTime)
+firstTime = false;
 
 if target != noone
 {

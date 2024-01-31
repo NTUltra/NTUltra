@@ -1,4 +1,4 @@
 /// @description fish shoot timer
 
-alarm[3] = -1
+alarm[3] = 0;
 sprite_index = spr_endfire

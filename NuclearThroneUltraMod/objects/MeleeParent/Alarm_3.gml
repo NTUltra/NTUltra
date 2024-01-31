@@ -1,6 +1,7 @@
 /// @description Collision Wall
 alarm[3] = 1;
-if place_meeting(x,y,Wall)
+var w = instance_place(x,y,Wall)
+if w != noone
 {
 	x -= min(3,hspeed)*wallPierce;
 	y -= min(3,vspeed)*wallPierce;
@@ -17,7 +18,7 @@ if place_meeting(x,y,Wall)
 	*/
 	if walled = 0
 	{
-		with instance_create(other.x+8,other.y+8,MeleeHitWall)
+		with instance_create(w.x+8,w.y+8,MeleeHitWall)
 			image_angle = point_direction(other.x,other.y,x,y)
 		walled = 1
 		snd_play(snd_wallhit,0.05,true,true,1,false);

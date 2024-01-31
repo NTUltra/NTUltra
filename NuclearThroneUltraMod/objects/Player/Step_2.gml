@@ -322,6 +322,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 			if array_length(wep_popup) > wep && is_string(wep_popup[wep]) {
 				with instance_create(x,y,PopupText)
 				{
+					alarm[1] += 30;
 					theColour = c_silver;
 					mytext = other.wep_popup[other.wep];
 				}
@@ -524,8 +525,12 @@ if armour > 0
 	{
 		tookDamageThisArea = true;
 		armour -= 1;
+		sprite_index = spr_hurt;
+		image_index = 0;
+		canAnimateDuringImmune = 0;
+		hurtTime = 0;
 		snd_play(sndLostArmour);
-		alarm[3]=max(alarm[3],2);//before your armour lowers again}
+		alarm[3] = max(alarm[3],8);//before your armour lowers again}
 		if skill_got[28] == 1
 		{
 			//rage = 0;
@@ -542,7 +547,7 @@ if armour > 0
 //}
 if alarm[3] > 0/*|| lag>0 *//*&&my_health!=maxhealth*/&& !exception
 {
-	if spr_hurt
+	if sprite_index == spr_hurt
 	{
 		if canAnimateDuringImmune > -1 && canAnimateDuringImmune < 3
 		{
@@ -634,7 +639,7 @@ if (tookHit)
 		if !instance_exists(GenCont)&&(!instance_exists(myShield) || myShield == -1)&&!instance_exists(LevCont)&&exception=false
 		{
 			if race=25
-				alarm[3] = max(20,alarm[3]);
+				alarm[3] = max(18,alarm[3]);
 			else
 				alarm[3] = max(alarm[3],16);//duration
 			canAnimateDuringImmune = 0;
@@ -658,7 +663,7 @@ if(my_health <= 0 && maxhealth > 0)
 		    my_health = 1;
 			BackCont.shake += 10;
 			Sleep(50);
-			alarm[3] += 20;
+			alarm[3] += 18;
 			snd_hurt = sndDamageNegate;
 			scrGiveEuphoriaShield();
 		    strongspiritused=true;
@@ -754,7 +759,7 @@ if(my_health <= 0 && maxhealth > 0)
 			snd_hurt = sndDamageNegate;
 			snd_play_2d(sndMutLastWish);
 			scrGiveEuphoriaShield();
-			alarm[3] += 25;
+			alarm[3] += 23;
 		}
 	}
 }
@@ -871,7 +876,7 @@ if my_health <= 0 && armour < 1
 		snd_play_2d(sndPhoenixChicken);
 		snd_hurt = sndDamageNegate;
 		scrGiveEuphoriaShield();
-		alarm[3] = max(alarm[3],1 + phoenixrevives);
+		alarm[3] = clamp(1 + phoenixrevives,alarm[3],30);
 		snd_play(sndFlameCannonEnd,0.1,true);
 		var ang = direction + 180;
 		var am = min(44,23 + (phoenixrevives*2));

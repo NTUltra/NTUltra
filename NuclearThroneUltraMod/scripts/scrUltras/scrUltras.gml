@@ -156,7 +156,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_tips[22] = "more pop"
     
 	    ultra_name[23] = "MAKE IT RAIN"
-	    ultra_text[23] = "REALLY HIGH <w>SHOTGUN RELOAD SPEED<w>#USED <w>BULLET<w> <y>AMMO<y>#CONVERTS TO <w>SHOTGUN<w> <y>AMMO<y>#(10 BULLET TO 1 SHOTGUN AMMO)##+10% <w>BULLET<w> WEAPON <w>RELOAD SPEED<w>"//"REALLY HIGH SHOTGUN FIRE RATE#USED SHOTGUN AMMO CONVERTS#TO BULLET AMMO"
+	    ultra_text[23] = "+60% <w>SHOTGUN RELOAD SPEED<w>#USED <w>BULLET<w> <y>AMMO<y>#CONVERTS TO <w>SHOTGUN<w> <y>AMMO<y>#(10 BULLET TO 1 SHOTGUN AMMO)##+10% <w>BULLET<w> WEAPON <w>RELOAD SPEED<w>"//"REALLY HIGH SHOTGUN FIRE RATE#USED SHOTGUN AMMO CONVERTS#TO BULLET AMMO"
 	    ultra_tips[23] = "shells and bullets <3"
 		if altOverride || (instance_exists(Player) && Player.race == 6 && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && (scrMeleeWeapons(Player.wep) || Player.wep == 0) && (scrMeleeWeapons(Player.bwep) || Player.bwep == 0))))
 		{
@@ -254,7 +254,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	if altOverride || (instance_exists(Player) &&  Player.race == 9 && (((scrIsCrown(12) || scrIsCrown(34)) && instance_exists(UltraIcon)) || Player.altUltra || Player.unlockAlternativeUltras))
 	{
 		ultra_name[35] = "SUCOF"
-		ultra_text[35] = "SELITCEJORP <w>SESREVER<w> EVITCA"//ACTIVE REVERSES PROJECTILES | EMIT SESREVER EVITCA
+		ultra_text[35] = "EMIT <w>SESREVER<w> EVITCA"//ACTIVE REVERSES PROJECTILES | EMIT SESREVER EVITCA
 		ultra_tips[35] = "reverse time"
 	}
 

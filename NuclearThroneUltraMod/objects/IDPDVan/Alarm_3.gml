@@ -6,6 +6,7 @@ if dropFreaks
 	instance_destroy();
 	exit;
 }
+maxSpeed = 2;
 /*
 if team != 2
 team=3;

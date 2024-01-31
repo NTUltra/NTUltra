@@ -444,6 +444,9 @@ function scrPopulate() {
 		if (Player.area == 126 || Player.area == 127) {//Graveyard fish
 			instance_create(x,y,WantBoss);
 		}
+		if scrIsGamemode(44) && (Player.area == 120 || Player.area == 119) {
+	        instance_create(x, y, WantBoss)//Throne 2 replacements
+	    }
 		if Player.area == 128 and Player.subarea == 2 {
 	        instance_create(x, y, WantBoss)//Crown Glutton
 	    }
@@ -545,11 +548,14 @@ function scrPopulate() {
 		if !scrIsHardMode()
 			with enemy
 				instance_destroy(id,false)
-
-        with instance_furthest(10016, 10016, Floor) {
-            repeat(4)
-            instance_create(x + random(4) - 2, y + random(4) - 2, Turtle)
-            instance_create(x, y, Rat)
+        with Floor {
+			if point_distance(x,y,Player.x,Player.y) > 200 && !place_meeting(x,y,prop)
+			{
+				if instance_number(Turtle) < 4
+					instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, Turtle);
+				if !instance_exists(Rat)
+					instance_create(x + 16, y + 16, Rat);
+			}
         }
         with Rad
         instance_destroy()

@@ -24,4 +24,5 @@ if alarm[2] > 6
 	
 	
 }
-
+if firstTime
+	speed = 0;

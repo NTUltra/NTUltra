@@ -4,5 +4,6 @@ repeat(8)
 	{
 		existTime = 30;
 		wasResurrected = true;
+		firstTime = false;
 	}
 }

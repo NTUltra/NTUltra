@@ -5,13 +5,13 @@ if team!=Player.team{//enemy
 	var spawn = TrapFire;
 	if inverted
 		spawn = EnemyIceFlame;
-	with instance_create(x,y,spawn)
+	with instance_create_depth(x,y,depth + 1,spawn)
 	{motion_add(other.image_angle+random(10)-5,2)
 	team = other.team
 	image_speed=0.5+random(0.2);}
 
 
-	with instance_create(x,y,spawn)
+	with instance_create_depth(x,y,depth + 1,spawn)
 	{motion_add(other.image_angle+180+random(10)-5,2)
 	team = other.team
 	image_speed=0.5+random(0.2);}

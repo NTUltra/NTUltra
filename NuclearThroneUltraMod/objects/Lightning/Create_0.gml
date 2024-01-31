@@ -21,7 +21,7 @@ ammo = 0;
 if instance_exists(Player){
 	if Player.skill_got[17] = 1{
 		bloom += 0.1;
-		imageSpeed = 0.34-(Player.betterlaserbrain*0.06)
+		imageSpeed = 0.35-(Player.betterlaserbrain*0.06)
 		dmg ++;
 		fork --;
 		iframeskip += 0.01;

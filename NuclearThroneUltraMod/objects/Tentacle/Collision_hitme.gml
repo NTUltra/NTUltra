@@ -30,7 +30,7 @@ if other.team != team and other.my_health > 0//the thing I hit must not be mysel
 		}
 		else
 		{
-			scrIframeSkipper(0.07);
+			scrIframeSkipper(0.065);
 		}
 	}
 }

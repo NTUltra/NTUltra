@@ -104,7 +104,6 @@ if team == 2 && isog
 	if Mod4 == 11
 		other.ammo += modBoost;
 }
-ammo = round(ammo);
 var xxx = x;
 var yyy = y;
 var xscale = 1;
@@ -200,7 +199,7 @@ for(var i = ammo; i > 0; i -= 1)
 		};
 		arI += 1;
 	}
-	if i > 0 && team == 2 && round(i) % fork == 0//Forking lightning
+	if i > 2 && team == 2 && floor(i) % fork == 0//Forking lightning
 	{
 		if instance_exists(Player) && Player.ultra_got[96] && choose(true,true,false)
 		{
@@ -214,7 +213,7 @@ for(var i = ammo; i > 0; i -= 1)
 				sprite_index=sprUltraTentacle;
 				image_yscale += 0.3;
 				dmg = 6;
-				ammo = clamp(round(other.ammo*0.34),2,16)+1;
+				ammo = clamp(other.ammo*0.34,2,16)+1;
 				isog = other.isog;
 				fork = other.fork;
 				//branch = clamp(other.branch*2.5,80,200);
@@ -245,7 +244,7 @@ for(var i = ammo; i > 0; i -= 1)
 				direction = other.direction+choose(80+random(30),-80+random(-30))
 				image_angle = direction;
 				accuracy = 5+(other.accuracy*3);
-				ammo = clamp(round((i)*0.2),2,16);
+				ammo = clamp(i*0.2,2,16);
 				team = other.team
 				image_index = other.image_index
 				event_perform(ev_alarm,0)

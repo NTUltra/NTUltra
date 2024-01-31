@@ -16,6 +16,14 @@ if target != noone
 		snd_play(sndSalamanderCharge)
 		walk = 0;
 		event_user(0);
+		with Salamander
+		{
+			alarm[1] += 5;	
+		}
+		with FireWorm
+		{
+			alarm[1] += 5;	
+		}
 	}
 	else if random(8)<1
 	{

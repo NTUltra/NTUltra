@@ -10,5 +10,5 @@ with myCore
 	alarm[3] = other.alarm[3] + 5;
 }
 snd_play_2d(sndBigMachineCharge);
-alarm[1]=12;
+alarm[1]=13;
 ammo = maxAmmo;

@@ -8,7 +8,7 @@
 
 // Inherit the parent event
 event_inherited();
-raddrop = 120
+raddrop = 100
 maxhealth = 300
 loops = GetPlayerLoops()
 if GetPlayerLoops() > 0

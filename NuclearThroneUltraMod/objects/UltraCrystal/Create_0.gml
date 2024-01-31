@@ -15,5 +15,5 @@ droprate += 5;
 tellTime = 23;
 actTime -= 1;
 maxSpeed = 2.5;
-maxAmmo = 6;
+maxAmmo = 5;
 alarm[0] = 0;

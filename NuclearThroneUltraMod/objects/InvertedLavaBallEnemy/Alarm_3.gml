@@ -1,6 +1,6 @@
 /// @description e
 alarm[3] = 1;
-if alarm[2]>0&&target>0
+if alarm[2]>0&&target != noone && instance_exists(target)
 {
 
 direction = point_direction(x,y,target.xprevious,target.yprevious)

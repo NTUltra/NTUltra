@@ -248,7 +248,18 @@ if isPaused == 1
 		draw_sprite_ext(sprUltraInfo,0,
 		xx,
 		yy,ultraScale,ultraScale,0,c_white,ultraScale-0.1);
-		
+		xx = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])-8;
+		draw_set_halign(fa_right);
+		draw_set_valign(fa_bottom);
+		draw_set_color(c_gray)
+		draw_text(xx, camera_get_view_y(view_camera[0])+8,
+		"["+UberCont.updateVersion + UberCont.subUpdateVersion + "]" + UberCont.notUpdated);
+		draw_set_color(c_dkgray)
+		draw_text(xx, camera_get_view_y(view_camera[0])+8,
+		"["+UberCont.updateVersion + UberCont.subUpdateVersion + "]" + string_replace(UberCont.notUpdated,"*"," "));
+		draw_set_color(c_white)
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_top);
 	}
 }
 else if instance_exists(ShopWheel) && !instance_exists(TopCont){

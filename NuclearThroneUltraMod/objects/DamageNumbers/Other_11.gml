@@ -2,7 +2,7 @@
 fade = 0;
 alarm[5] = 0;
 alarm[2] = 1;
-var reduc = 0.02;//0.025
+var reduc = 0.01;//0.02 0.025
 size = clamp(power(dmg*reduc,0.5),0.2,2);
 lsize = min(1,(size + 0.1) * 0.5);
 shake = size * 5;

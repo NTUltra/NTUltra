@@ -664,7 +664,7 @@ function scrNextLevel() {
 				hard -= 1.5;
 			else
 			*/
-				hard += 1.5;
+				hard += 1.25;
 		}
 	}
 	else if area == 10 && subarea < 2
@@ -693,7 +693,7 @@ function scrNextLevel() {
 				hard -= 0.5;
 			else
 			*/
-				hard += 0.5;
+				hard += 0.25;
 		}
 		else
 		{

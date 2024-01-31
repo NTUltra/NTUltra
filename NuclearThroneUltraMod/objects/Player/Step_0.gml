@@ -237,13 +237,21 @@ if !instance_exists(LevCont) and visible = 1
 			image_speed = 0.4;	
 		}
 		*/
-		if sprite_index = spr_hurt
+		if sprite_index == spr_hurt
 		{	
 			if is60fps
 				hurtTime += 0.5;
 			else
 				hurtTime++;
-			if (image_index > 2 && hurtTime > hurtDuration)
+			if loops > 0
+			{
+				if (/*image_index > 2 && */hurtTime > hurtDurationLoop)
+				{
+					sprite_index = spr_idle
+					hurtTime = 0;
+				}
+			}
+			else if (/*image_index > 2 && */hurtTime > hurtDuration)
 			{
 				sprite_index = spr_idle
 				hurtTime = 0;
@@ -788,13 +796,21 @@ if !instance_exists(LevCont) and visible = 1
 	if( (!(IsShielding)||(ultra_got[7]==1))){
 	if (race == 7 || (altUltra && ultra_got[55]) || (altUltra && ultra_got[23] && scrMeleeWeapons(wep))) && wep != 0 {
 		//Roids always auto fire
-		wep_auto[wep] = 1
+		if wep_auto[wep] == 2
+			wep_auto[wep] = 3;
+		else
+			wep_auto[wep] = 1
 		if race == 7 && bwep != 0
-			wep_auto[bwep] = 1
+		{
+			if wep_auto[bwep] == 2
+				wep_auto[bwep] = 3;
+			else
+				wep_auto[bwep] = 1
+		}
 	}
 
 
-	if (KeyCont.key_fire[p] = 1 or keyfire = 1) and wep_auto[wep] = 0 and ((wep_type[wep] = 0 or wep_type[wep] = 1) or can_shoot == 1) and reload < 8//15 INPUT BUFFERING
+	if (KeyCont.key_fire[p] = 1 or keyfire = 1) and (wep_auto[wep] == 0 || wep_auto[wep] == 2) and ((wep_type[wep] = 0 or wep_type[wep] = 1) or can_shoot == 1) and reload < 8//15 INPUT BUFFERING
 		clicked = 1
 	
 	if (KeyCont.key_fire[p] = 1 or keyfire = 1)
@@ -817,7 +833,7 @@ if !instance_exists(LevCont) and visible = 1
 	(ignoreAmmo || (ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad >= wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 	{
 		var holdKey = (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
-		if ((wep_auto[wep] = 0 and clicked = 1) || (autoFire < 1 && holdKey && !scrIsChargeWeapon(wep)))
+		if (((wep_auto[wep] == 0 || wep_auto[wep] == 2) and clicked = 1) || (autoFire < 1 && holdKey && !scrIsChargeWeapon(wep)))
 		{
 			if scrIsGamemode(48) && ammo[1] < 0
 			{
@@ -843,7 +859,7 @@ if !instance_exists(LevCont) and visible = 1
     		autoFire = max(wep_load[wep],6);
 			clicked = 0;
 		}
-		else if wep_auto[wep] = 1 && holdKey && canPuffyCheek <= 0
+		else if (wep_auto[wep] = 1 || wep_auto[wep] == 3) && holdKey && canPuffyCheek <= 0
 		{
 			if ultra_got[44] == 1 && instance_exists(Marker)
 			{
@@ -1159,7 +1175,10 @@ if (!instance_exists(LevCont))
 			creload -= 0.1;
 		}
 		if race == 7
-			breload -= 1
+		{
+			reload += 0.1;
+			breload -= 0.9
+		}
 		scr60fpsReload();
 		if breload <= 0 && !bcan_shoot
 		{
@@ -1363,7 +1382,7 @@ if (!instance_exists(LevCont))
 	}
 	//Can we fire again? Two times in a frame? Or even more if you go negative reload
 	if (!IsShielding || ultra_got[7]==1) && canPuffyCheek <= 0
-	and wep_auto[wep] = 1 and (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
+	and (wep_auto[wep] = 1 || wep_auto[wep] == 3) and (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
 	{
 		while can_shoot == 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and (ignoreAmmo || (ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 		{
@@ -1527,160 +1546,225 @@ if ultra_got[59] && altUltra
 	ds_list_destroy(floors);
 	mask_index = msk;
 }
-if (!outOfCombat && !skill_got[2] && race!=18 && race != 15 and !instance_exists(LevCont) and !instance_exists(FloorMaker))
+if (!outOfCombat and !instance_exists(LevCont) and !instance_exists(FloorMaker))
 {
-	var ground = instance_position(x,y,Floor);
-	if ground != noone
+	var remainHotFloor = 0;
+	var remainFrostFloor = 0;
+	var grounds = ds_list_create();
+	var al = instance_position_list(x,y,Floor,grounds,false)
+	for (var i = 0; i < al; i ++)
 	{
-		var gs = ground.sprite_index;
-		//lava and frost
-		var isCold = ultra_got[94];
-		var isHot = ultra_got[95];
-		//SNOW & ICE TEST
-		if (gs == sprFloor5B || gs == sprFloor107B) // Ice
+		var ground = grounds[| i];
+		if ground != noone
 		{
-			friction = 0.1
-			//Maybe melt it?
-		}
-		else if gs == sprFloor4B || gs == sprFloor115B //Spider webs
-			friction = 1.8;
-		else
-			friction = 0.45
-		if (gs == sprFloor111B)
-			speed+=1;
-		
-		if isCold
-		{
-			if ground.sprite_index == sprFloor7Explo
+			var gs = ground.sprite_index;
+			//lava and frost
+			var isCold = ultra_got[94];
+			var isHot = ultra_got[95];
+			//SNOW & ICE TEST
+			if (!skill_got[2] && race!=18 && race != 15)
 			{
-				with ground
+				if (gs == sprFloor5B || gs == sprFloor107B) // Ice
 				{
-					alarm[1] = 0;
-					snd_play(choose(sndFrostShot1,sndFrostShot2),0.02)
-					sprite_index = sprFloor7BExplo;
-					var ang = random(360);
-					var am = 3;
-					var angstep = 360/am;
-					repeat(am)
-					{
-						with instance_create(x + 8,y + 8,IceFlame)
-						{
-							motion_add(ang,random(2)+2)
-							team = 2
-							ang += angstep;
-						}
-					}
+					friction = 0.1
+					//Maybe melt it?
 				}
-			}
-			else if ground.sprite_index == sprFloorLava {
-				with ground {
-					alarm[1] = 0;
-					sprite_index = sprFloorLavaB;
-					snd_play(choose(sndFrostShot1,sndFrostShot2),0.02)
-					var ang = random(360);
-					var am = 6;
-					var angstep = 360/am;
-					repeat(am)
-					{
-						with instance_create(x + 16,y + 16,IceFlame)
-						{
-							motion_add(ang,random(2)+3)
-							team = 2
-							ang += angstep;
-						}
-					}
-				}
-			}
-		}
-		if isHot
-		{
-			if ground.sprite_index == sprFloor108Explo
-			{
-				with ground
-				{
-					alarm[1] = 0;
-					snd_play(sndFlareExplode,0.02)
-					sprite_index = sprFloor108BExplo;
-					var ang = random(360);
-					var am = 3;
-					var angstep = 360/am;
-					repeat(am)
-					{
-						with instance_create(x + 8,y + 8,Flame)
-						{
-							motion_add(ang,random(2)+2)
-							team = 2
-							ang += angstep;
-						}
-					}
-				}
-			}
-			else if ground.sprite_index == sprInvertedFloorLava {
-				with ground {
-					alarm[1] = 0;
-					sprite_index = sprInvertedFloorLavaB;
-					snd_play(sndFlareExplode,0.02)
-					var ang = random(360);
-					var am = 6;
-					var angstep = 360/am;
-					repeat(am)
-					{
-						with instance_create(x + 16,y + 16,Flame)
-						{
-							motion_add(ang,random(2)+3)
-							team = 2
-							ang += angstep;
-						}
-					}
-				}
-			}
-		}
-		if !skill_got[14] && ground.sprite_index == sprFloor7Explo || ground.sprite_index == sprFloorLava
-		{
-			if alarm[4] <= 0
-				alarm[4] = 1;
-    
-			if is60fps
-				hotfloor += 0.5;
-			else
-				hotfloor+=1;
-		    if hotfloor>39//time before crisping
-		    {
-			    with instance_create(x,y,TrapFire){//burn!
-			    team=1;}
-			    hotfloor=0;//allright you've burned now continue
-        
-			    //GAMEMODE UNLOCKABLE WALL IS LAVA
-			    scrUnlockGameMode(4,"FOR STANDING IN LAVA");
-		    }
-		}
-		else if !skill_got[14] && ground.sprite_index == sprFloor108Explo || ground.sprite_index == sprInvertedFloorLava
-		{
-			friction = 0.1
-			//when player isn't frozen increase the time that determines when it should get frozeen
-			if frozen<1
-			{
-				if is60fps
-					getFrozen += 0.5;
+				else if gs == sprFloor4B || gs == sprFloor115B //Spider webs
+					friction = 1.8;
 				else
-					getFrozen+=1;
+					friction = 0.45
+				if (gs == sprFloor111B)
+					speed+=1;
 			}
-    
-			if getFrozen>24 && alarm[3] < 1
+		
+			if isCold
 			{
-				my_health -= 1;
-				snd_play_2d(snd_hurt);
-				instance_create(x,y,FrozenPlayer);
-				frozen=15;
-				getFrozen=0;
+				if gs == sprFloor7Explo
+				{
+					with ground
+					{
+						alarm[1] = 0;
+						snd_play(choose(sndFrostShot1,sndFrostShot2),0.02)
+						sprite_index = sprFloor7BExplo;
+						var ang = random(360);
+						var am = 3;
+						var angstep = 360/am;
+						repeat(am)
+						{
+							with instance_create(x + 8,y + 8,IceFlame)
+							{
+								motion_add(ang,random(2)+2)
+								team = 2
+								ang += angstep;
+							}
+						}
+					}
+				}
+				else if gs == sprFloorLava {
+					with ground {
+						alarm[1] = 0;
+						sprite_index = sprFloorLavaB;
+						snd_play(choose(sndFrostShot1,sndFrostShot2),0.02)
+						var ang = random(360);
+						var am = 6;
+						var angstep = 360/am;
+						repeat(am)
+						{
+							with instance_create(x + 16,y + 16,IceFlame)
+							{
+								motion_add(ang,random(2)+3)
+								team = 2
+								ang += angstep;
+							}
+						}
+					}
+				}
 			}
-		}
-		else
-		{
-			getFrozen=0;
-			hotfloor=0
+			if isHot
+			{
+				if gs == sprFloor108Explo
+				{
+					with ground
+					{
+						alarm[1] = 0;
+						snd_play(sndFlareExplode,0.02)
+						sprite_index = sprFloor108BExplo;
+						var ang = random(360);
+						var am = 3;
+						var angstep = 360/am;
+						repeat(am)
+						{
+							with instance_create(x + 8,y + 8,Flame)
+							{
+								motion_add(ang,random(2)+2)
+								team = 2
+								ang += angstep;
+							}
+						}
+					}
+				}
+				else if gs == sprInvertedFloorLava {
+					with ground {
+						alarm[1] = 0;
+						sprite_index = sprInvertedFloorLavaB;
+						snd_play(sndFlareExplode,0.02)
+						var ang = random(360);
+						var am = 6;
+						var angstep = 360/am;
+						repeat(am)
+						{
+							with instance_create(x + 16,y + 16,Flame)
+							{
+								motion_add(ang,random(2)+3)
+								team = 2
+								ang += angstep;
+							}
+						}
+					}
+				}
+			}
+			if gs == sprFloor7Explo || gs == sprFloorLava
+			{
+				if !skill_got[14]
+				{
+					if !skill_got[2] && race!=18 && race != 15
+					{
+						if is60fps
+							hotfloor += 0.5;
+						else
+							hotfloor += 1;
+						if hotfloor == round(hotfloor)
+						{
+							instance_create(x,y,Smoke);	
+						}
+					    if hotfloor>39//time before crisping
+					    {
+							snd_play_2d(sndBurn);
+							var am = 8;
+							var ang = random(360);
+							var angStep = 360/am;
+							repeat(am)
+							{
+							    with instance_create(x,y,Flame)
+								{
+									motion_add(ang,4);
+									team = 2;
+								}
+								ang += angStep;
+							}
+							my_health -= 1;
+							hitBy = sprLavaRepresent;
+						    hotfloor=0;//allright you've burned now continue
+        
+						    //GAMEMODE UNLOCKABLE WALL IS LAVA
+						    scrUnlockGameMode(4,"FOR STANDING IN LAVA");
+							snd_play_2d(snd_hurt);
+							sprite_index = spr_hurt;
+							image_index = 0;
+					    }
+						remainHotFloor = hotfloor;
+					}
+				}
+				else
+				{
+					boilingAmount = max(boilingAmount,boilingMax*0.5);
+					if alarm[4] < 1
+						alarm[4] = 1;
+				}
+			}
+			else if gs == sprFloor108Explo || gs == sprInvertedFloorLava
+			{
+				if (!skill_got[14])
+				{
+					if !skill_got[2] && race!=18 && race != 15
+					{
+						friction = 0.1
+						//when player isn't frozen increase the time that determines when it should get frozeen
+						if frozen<1
+						{
+							if is60fps
+								getFrozen += 0.5;
+							else
+								getFrozen+=1;
+						}
+						if getFrozen>24 && alarm[3] < 1
+						{
+							var am = 8;
+							var ang = random(360);
+							var angStep = 360/am;
+							repeat(am)
+							{
+							    with instance_create(x,y,IceFlame)
+								{
+									motion_add(ang,3.5);
+									team = 2;
+								}
+								ang += angStep;
+							}
+							my_health -= 1;
+							snd_play_2d(choose(sndFrost1,sndFrost2));
+							snd_play_2d(snd_hurt);
+							instance_create(x,y,FrozenPlayer);
+							hitBy = sprFrozenFloorRepresent;
+							frozen=15;
+							getFrozen=0;
+							sprite_index = spr_hurt;
+							image_index = 0;
+						}
+						remainFrostFloor = getFrozen;
+					}
+				}
+				else
+				{
+					boilingAmount = max(boilingAmount,boilingMax*0.5);
+					if alarm[4] < 1
+						alarm[4] = 1;
+				}
+			}
 		}
 	}
+	getFrozen = remainFrostFloor;
+	hotfloor = remainHotFloor;
 }
 
 
@@ -1707,7 +1791,7 @@ if (instance_exists(enemy))
 		homeBoost += 2.5;
 	if skill_got[19]
 	{
-		homeBoost += 0.75;
+		homeBoost += 0.8;
 		if race == 25
 			homeBoost += 0.1;
 	}

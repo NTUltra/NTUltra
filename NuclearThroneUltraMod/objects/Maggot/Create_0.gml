@@ -17,3 +17,11 @@ alarm[1] = 10+random(10)
 
 charge = false;
 loops = GetPlayerLoops();
+maxSpeed = 2;
+actTime = 25;
+firstTime = true;
+if loops > 0
+{
+	maxSpeed = 3;
+	actTime = 10;
+}

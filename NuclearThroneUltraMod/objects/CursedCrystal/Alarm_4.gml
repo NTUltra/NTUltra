@@ -1,6 +1,7 @@
 /// @description very fair teleport
 alarm[4] = 15 + random(45)
-
+if firstTime
+	exit;
 if ammo < 1 && alarm[2] < 1 {
 	if instance_exists(Player) {
 		var i = 0;

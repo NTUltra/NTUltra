@@ -33,9 +33,16 @@ function scrTips() {
 	"When you respawn#you level up faster",
 	"explosives can destroy walls",
 	"melee weapons can deflect bullets",
+	"extra feet prevents lava damage",
+	"flying characters can fly over lava",
 	"shotguns are great for close combat",
 	"assassins can pretend they're dead",
 	"fish can dodge roll",
+	"hover over HUD elements to see more info",
+	"hover over weapon in HUD#to show fire type",
+	"hover over your crown#to see what it is",
+	"impact wrists is crazy",
+	"ecstatic fists can give#even more damage increase#when you are overhealed",
 	"always keep one eye on your ammo",
 	"robots can digest anything",
 	"bandits like camping near explosives",
@@ -43,6 +50,7 @@ function scrTips() {
 	"armour blocks a full hit of damage",
 	"everything has been rebalanced compared to retail",
 	"rosebud",
+	"for handling some enemies its best to keep distance",
 	"inverted areas are optional",
 	"it's not fair, it's not right",
 	"watch out for dehydration",
@@ -51,11 +59,13 @@ function scrTips() {
 	"inverted enemies have less health",
 	"there is a cheatcode#to unlock everything",
 	"square bullets are immune to melee",
+	"some enemies are more vulnerable while charging",
 	"flashing effects can be turned off by setting screenshake and freezeframes to 0",
-	/*these are rare*/ choose("no","bob and weave","airhorn.wav","danger zone","no sex jokes","in and about"
+	/*these are rare*/ choose("no","bob and weave","airhorn.wav","danger zone","no sex jokes","in and about",
+	"obsidian throwing knife can one shot big bandit, if throwing during his charge","you have now seen all loading tips", "that previous loading tip sucked!"
 	,"the purple dragon","golden frog anyone?","Y.V. mony rad","the flying cat head","myth of time","sheeps are a thing","feedback is much appreciated","follow @erdeppol","I love you!",
-	"be nice#get bitches","fish can dodgeroll to prevent blood hammer self damage","I could go for a burger right now")
-	,
+	"be nice#get bitches","fish can dodgeroll to prevent blood hammer self damage","I could go for a burger right now",
+	"reach level ultra as yv with two melee weapons","double inversion magnet to loop!"),
 	"the I.D.P.D. is looking for you",
 	"Visiting inverted areas increases the quality of weapons that drop",
 	"gold weapons don't count towards#your progression percentage",
@@ -76,6 +86,7 @@ function scrTips() {
 	"doing alright",
 	"let's have fun!",
 	"be kind",
+	"scarier face has been changed",
 	"don't get complacent",
 	"there are a ton of gamemodes to unlock and try",
 	"there are more than 700 weapons",
@@ -84,29 +95,64 @@ function scrTips() {
 	"damn squares",
 	"F5 to toggle full screen",
 	"F8 to toggle borderless window",
+	"gamma guts halves contact damage taken",
+	"euphoria extends immunity duration",
+	"scarier face is real good with hard hitting weapons",
 	"taking eagle eyes is for people with large brains",
+	"almost all splinter guns are burst weapons",
 	"hypersomnia does not work on faking assassins",
+	"alternative areas are more difficult and optional but faster",
+	"fire and toxic gas cannot be deflected!",
+	"bring a ranged weapon to the volcano",
+	"have good balance of defensive and offensive mutations",
+	"try to fill a gap when choosing mutations",
+	"skill overcomes all",
+	"don't get greedy",
+	"don't make things harder for yourself",
+	"risk and reward!",
+	"all director weapons#deal more damage#before redirecting",
+	"bolt pierce is based on damage#and can be enhanced by damage buffs",
+	"damage buffs, buff all types of damage#such as corpse collision and gamma guts",
+	"don't get hit by red beachballs",
+	"square bullets go through walls",
+	"you'll get better overtime",
+	"mix it up!",
+	"and now...",
+	"don't listen to me",
+	"listen to me",
+	"please game",
+	"hang in there",
+	"swing in there",
+	"attack!",
+	"and for my next act...",
 	"there are other worlds out there",
-	/*more rares*/choose("the original idea for#the name trashtalk#came from lars in a stream#he made a lot of the sounds#in ultra mod","if you ever get stuck#outside a level#walk far away#from the level to get teleported back","use wasd to move","don't get baited by items","ask and ye shall receive","you smell that?","sick build bro","what does your gun tell you?","don't get baited by items"
-	,"frog is voiced by#Jukio Kallio","don't be sorry#git gutter","kimchi","Lets have some fucking fun boyos!","kill is the mindfearer",
-	,"thematically inconsistent!","skeleton has#a fifth ultra mutation","don't be afraid to pick up new weapons","like and subsribe!",
-	choose("28 EGGS FOR BREAKFAST","shit on my tits","12th doctor is the best one","microtransactions","if you are seeing this#you are fucking aswesome"
-		,"guys seriously how do I nerf worm?")/*super rare*/
-	,"No I wont add a toxic immunity mutation","get that bag","yes girl"),
+	/*more rares*/choose("if you ever get stuck#outside a level#walk far away#from the level to get teleported back","use wasd to move","don't get baited by items","ask and ye shall receive","you smell that?","sick build bro","what does your gun tell you?","don't get baited by items"
+	,"frog is voiced by#Jukio Kallio","don't be sorry#git gutter","kimchi","Lets have some fucking fun boyos!","kill is the mindfearer", "when life gets tough#remember#there is always#Nuclear Throne"
+	,"thematically inconsistent!","skeleton has#a fifth ultra mutation","don't be afraid to pick up new weapons","like and subsribe!","do a barrel loop!",
+	choose("28 EGGS FOR BREAKFAST","shit on my tits","12th doctor is the best one","microtransactions","if you are seeing this#you are fucking awesome","coldline texas",
+	,"my brother in christ#I dont even#have the time#to read this entire#loading screen tip#because the loading is#so fucking fast#fuck you#why you do this to me#are you expecting me to#take a screenshot of this#bullshit!"
+	,"trans rights","guys seriously how do I nerf worm?","shoutout to rayman redemption & redesigner!","you should own cats","the original idea for#the name trashtalk#came from Lars (& Jonas) in a stream#Lars made a lot of the sounds#in ultra mod#Jonas is the original sound designer")/*super rare*/
+	,"No I wont add a toxic immunity mutation","get that bag","yes girl","humphry can't run","1984"),
 	"don't worry about long-term effects","when near a portal you#don't take damage","don't die","nice",
 	"yung cuz definitely exists","venuz patrol",
-	"should not have done that","","thank you for playing","Some unused mutations are buffed","visit crownvaults twice#for weapon mods","death is near","good luck","are you ready?"
+	"should not have done that","thank you for playing","Some unused mutations are buffed","visit crownvaults twice#for weapon mods","death is near","good luck","are you ready?"
 	,"you can change the direction#of director projectiles#by clicking after firing"
 	,"explosives can destroy traps",
 	"try new weapons",
+	"enemies everywhere",
+	"shotgun shoulders deals splash damage!",
+	"recycle gland stops enemies from deflecting bullets",
+	"rebel ally bullets#can get recycled#using recycle gland",
 	"this mod has been build up#from update 19",
 	"don't be a dirty casual",
-	"humphry can't run",
-	"atom can teleport",
 	"fish can walk",
 	"git gud!",
+	"when something explodes#its probably best#not to hit it with a stick",
 	"ammo chests prioritize primary weapon",
+	"when you open an ammo chest#when near full on ammo#it will distribute the ammo#over your other ammo types",
 	"don't trust fortune cookies",
+	"doing great!",
+	"stay hydrated",
 	"picking up a weapon#reloads your weapon",
 	"gloves give you invincibility frames",
 	"welcome back",
@@ -116,6 +162,31 @@ function scrTips() {
 	"ever changing",
 	"try out other mods aswell!",
 	"free!",
+	"support indie game developers",
+	"always keep moving",
+	"use line of sight",
+	"having two of the same ammo type will make that ammo type likely to drop",
+	"having a melee weapon  that uses no ammo will make your ammo drops more random",
+	"burst weapons are weapons that fire multiple projectiles over time",
+	"energy brain almost doubles energy damage",
+	"some weapons use multiple types of ammo",
+	"some weapons use multiple projectile types",
+	"for some weapons you can stack up on different weapon specific mutations",
+	"don't get too comfortable with your current weapon setup",
+	"you can re-roll mutations",
+	"don't forget to swap your weapons out",
+	"use your active!",
+	"don't forget to use your active",
+	"leaving chests in an area has a chance to spawn a big weapon chest in the next area",
+	"try a different gamemode",
+	"there are a ton of gamemodes to unlock",
+	"you can view your available ultras in the options menu by pressing the green crown",
+	"angel can deflect contact damage",
+	"if you want to report a bug join the discord! <3",
+	"<3",
+	"secret ultras require a certain setup when you reach level ultra",
+	"there are secret crowns and a purple fiend who hints at how to unlock them",
+	"yes, you can have multiple crowns!",
 	"kraken is a water element",
 	"let's have fun",
 	"stress relief",
@@ -138,6 +209,19 @@ function scrTips() {
 	"everything in moderation",
 	"blast some music",
 	"dead not dead",
+	"expect the unexpected",
+	"you can loop (again)",
+	"secret ultras don't count towards 100%",
+	"gamemodes and skins count towards 100%",
+	"explosions are very dangerous",
+	"Nuclear Throne is very difficult#try casual mode for a more 'normal' difficulty",
+	"Hard mode has exclusive enemies, its brutal",
+	"yv car can be unlocked with not just a screwdriver",
+	"try wrench or needle on yv's car",
+	"some crowns have been changed",
+	"taking a crown unlocks crown start",
+	"the auto-fire system#lets you hold the trigger#but fire single trigger weapons#slightly slower",
+	"all weapons are full auto#but single fire weapons#fire faster when clicking"
 	)
 	}
 
@@ -300,7 +384,9 @@ function scrTips() {
 	"guns that wear vests it",
 	"venuz still not verified",
 	"no popo",
-	"pop pop")
+	"pop pop",
+	"pop pop has a slightly quicker reload speed#compared to normally firing twice",
+	"pop pop increases projectile velocity")
 
 	if Player.race = 7
 	tip = choose("time to flex","steroids could do pushups forever","steroids used to be a scientist","appreciate revolvers","get shots","get strong"
@@ -356,6 +442,7 @@ function scrTips() {
 
 	if Player.race = 15//Atom
 	tip = choose("molecules","don't touch each other","elite being","not an accurate#representation of reality","science bitch!","balance of the universe","telefrag",
+	"lava does not burn you because you fly","cobwebs dont slow you because you fly",
 	,"from the other side","inverted mutant","higher chance for inverted worlds","purple balls","split the atom","atoms for peace","Entropy","she blinded me with science","don't touch me")
 
 	if Player.race = 16//Viking
@@ -368,6 +455,7 @@ function scrTips() {
 
 	if Player.race = 18//ANGEL
 	tip = choose("ascend","the wall is not the enemy","fly over cars","you fly normally over all terrains","rogue guardian","you don't get pushed off of props",
+	"lava does not burn you because you fly","cobwebs dont slow you because you fly",
 	"I believe I can fly","don't serve gorillaman","angel can fly over lava","grow your wings","you can deflect melee damage","you can deflect contact damage","active costs less when#at or above full health",
 	"deflect can deal#gamma guts damage","you are immune while deflecting","you can deflect contact damage")
 
@@ -410,7 +498,8 @@ function scrTips() {
 	tip = choose("look ma! no face","don't get too touchy","proto","the only inverted mutant","pull my finger","hand from the other side",
 	"let's give each other a helping hand","reach out","what is on the other side?","GET OVER HERE!","walking backwards","strong handshake",
 	"you can grab through walls","your hand break walls","you can grab chests","some enemies are too heavy#to grab","your active gets +1 damage#when you reach level ultra"
-	,"you can hold your active to instantly target things with your hand","tap active again to let go")
+	,"you can hold your active to instantly target things with your hand","tap active again to let go",
+	"when hands pulls someone in they become more vulnerable to certain types of damage that check for enemy i-frames",)
 	
 	}
 

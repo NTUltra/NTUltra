@@ -6,10 +6,10 @@ if ammo > 0
 	ammo -= 1
 	alarm[2] = 1
 	sprite_index = spr_fire
-		if ammo > 44 || ammo < 32
+		if ammo > 45 || ammo < 30
 	            with instance_create(x,y,TrapFire)
 	            {
-	            motion_add(other.gunangle+random(4)-2,9.5)
+	            motion_add(other.gunangle+random(4)-2,other.projectileSpeed)
 	            team = other.team
 	            }
 	walk=0;

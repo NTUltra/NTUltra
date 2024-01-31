@@ -3844,15 +3844,15 @@ function scrFire() {
 	}
 
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection+(random(6)-3)*other.accuracy,14+random(2))
+	{motion_add(aimDirection+(random(6)-3)*other.accuracy,15+random(2))
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection+15*other.accuracy+(random(6)-3)*other.accuracy,14+random(2))
+	{motion_add(aimDirection+15*other.accuracy+(random(6)-3)*other.accuracy,15+random(2))
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection-15*other.accuracy+(random(6)-3)*other.accuracy,14+random(2))
+	{motion_add(aimDirection-15*other.accuracy+(random(6)-3)*other.accuracy,15+random(2))
 	image_angle = direction
 	team = other.team}
 
@@ -3896,11 +3896,11 @@ function scrFire() {
 	}
 
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection+6*other.accuracy+(random(6)-3)*other.accuracy,14+random(2))
+	{motion_add(aimDirection+6*other.accuracy+(random(6)-3)*other.accuracy,15+random(2))
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection-6*other.accuracy+(random(6)-3)*other.accuracy,14+random(2))
+	{motion_add(aimDirection-6*other.accuracy+(random(6)-3)*other.accuracy,15+random(2))
 	image_angle = direction
 	team = other.team}
 
@@ -4108,20 +4108,20 @@ function scrFire() {
 	}
 
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection+6*other.accuracy+(random(6)-3)*other.accuracy,14+random(2))
+	{motion_add(aimDirection+6*other.accuracy+(random(6)-3)*other.accuracy,16+random(2))
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection-6*other.accuracy+(random(6)-3)*other.accuracy,14+random(2))
+	{motion_add(aimDirection-6*other.accuracy+(random(6)-3)*other.accuracy,16+random(2))
 	image_angle = direction
 	team = other.team}
 
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection+18*other.accuracy+(random(6)-3)*other.accuracy,14+random(2))
+	{motion_add(aimDirection+18*other.accuracy+(random(6)-3)*other.accuracy,16+random(2))
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection-18*other.accuracy+(random(6)-3)*other.accuracy,14+random(2))
+	{motion_add(aimDirection-18*other.accuracy+(random(6)-3)*other.accuracy,16+random(2))
 	image_angle = direction
 	team = other.team}
 
@@ -5163,7 +5163,7 @@ function scrFire() {
 	if Player.ultra_got[80] == 1//business hog gold digger
 	{
 		if scrCheckGold(wep_name[wep])//string_copy(wep_name[wep],0,4) = "GOLD"&&loops<1
-		reload -= wep_load[wep]*0.6;
+			reload -= wep_load[wep]*0.6;
 	}
 
 

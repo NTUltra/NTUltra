@@ -43,10 +43,9 @@ scrTarget()
 function healMe(amount) {
     my_health += amount;
 	snd_play(sndHealthPickup);
-    with instance_create(x, y - 16, HealFX)
-    depth = -3;
+    instance_create(x, y - 16, HealFX)
     if my_health > maxhealth
-    my_health = maxhealth;
+		my_health = maxhealth;
 }
 
 if target != noone && alarm[6] < 1 && alarm[7] < 1 {
@@ -103,7 +102,8 @@ if target != noone && alarm[6] < 1 && alarm[7] < 1 {
 		            image_index = 0
 		            sprite_index = spr_startfire
 		            alarm[3] = actTime;
-		            alarm[4] = 14+actTime;
+		            alarm[4] = 10+actTime;
+					alarm[1] += actTime;
 					motion_add(1,point_direction(x, y, target.x, target.y));
 		        } else {
 					motion_add(2,point_direction(x, y, target.x, target.y));
@@ -118,13 +118,26 @@ if target != noone && alarm[6] < 1 && alarm[7] < 1 {
 		persistent_direction = direction;
 		walk = actTime + random(actTime);
 		alarm[1] = walk;
-		if my_health < maxhealth //heal cause player is hiding
+		if my_health < maxhealth && random(3) < 1//heal cause player is hiding
 	    {
 	        healMe(healAmount);
 	        repeat(5)
-	        instance_create(x + random(8) - 4, y + random(8) - 4, Dust);
+				instance_create(x + random(8) - 4, y + random(8) - 4, Dust);
 	        snd_play(sndWater2);
 	    }
+		else
+		{
+			//BITE TACKLE SHIT YO! DANGER IN THE HOUSE!
+			snd_play(snd_tackle)
+			instance_create(x-5,y,Notice);
+			instance_create(x,y,Notice);
+			instance_create(x+5,y,Notice);
+			alarm[1] += chargeTell + actTime*2 + 10;
+			alarm[4] = 0
+			alarm[3] = 0
+			alarm[5] = chargeTell + actTime*2;
+			alarm[6] = chargeTell
+		}
 	}
 } //no target\/
 else if random(5) < 1 {

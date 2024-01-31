@@ -263,7 +263,7 @@ if crown == 11
 			var wpu = weaponspickedup;
 			
 			var rngloop = rnglevelloop;
-			
+			var disableAltU = disableAltUltra;
 			var c = [crown];
 			if level > 9
 				hasReachedUltra = true;
@@ -283,7 +283,7 @@ if crown == 11
 		instance_create(x,y,Player);
 		with Player//Data to keep
 		{
-			disableAltUltra = other.disableAltUltra;
+			disableAltUltra = disableAltU;
 			rnglevelloop = rngloop;
 			weaponspickedup = wpu;
 			freeAmmoRound = 1;
@@ -337,6 +337,7 @@ if crown == 11
 		//FROG
 		with Player
 		{
+			hard += 1;
 			if area == 100
 				lastarea = 2;
 			else

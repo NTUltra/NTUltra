@@ -6,12 +6,11 @@ their collision can be NORMAL, PIERCING or PIERCING AT OVERKILL (piercing checks
 their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
 they have a FORCE and can be 0 or DIRECTIONAL */
 
-typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
+typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 image_speed=0.4;
 alarm[0]=10;
 image_angle=random(360);
 
 alarm[1]=120;
 
-/* */
-/*  */
+depth -= 1;

@@ -1,11 +1,7 @@
 raddrop = 12
-maxhealth = 11
+maxhealth = 9
 meleedamage = 2
 mySize = 1
-
-if UberCont.loops>1
-maxhealth=16;
-
 event_inherited()
 fireProof = true;
 spr_idle = sprInvertedFireBatIdle
@@ -26,10 +22,10 @@ if instance_exists(Player)
 motion_add(point_direction(Player.x,Player.y,x,y),1)
 
 canDodge = false;
-actTime = 8;
+actTime = 14;
 nukeIt = false;
 loops = GetPlayerLoops();
 if loops > 0
-	actTime = 9;
-if loops > 5
+	actTime = 10;
+if loops > 12
 	nukeIt = true;

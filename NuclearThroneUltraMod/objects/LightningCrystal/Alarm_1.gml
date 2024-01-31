@@ -1,5 +1,6 @@
 ///@description AI
 alarm[1] = 8+random(10)//30+r10
+firstTime = false;
 scrTarget()
 if target != noone
 {

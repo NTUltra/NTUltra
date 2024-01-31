@@ -14,3 +14,4 @@ if target != noone && instance_exists(target)
 		}
 	}
 }
+alarm[0] = actTime*2

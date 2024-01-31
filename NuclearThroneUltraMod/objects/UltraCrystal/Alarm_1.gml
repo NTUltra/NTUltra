@@ -1,10 +1,12 @@
 ///@description AI
+firstTime = false;
 alarm[1] = actTime + random(actTime)
 walk = max(walk,alarm[1]);
 scrTarget()
 if target != noone {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
-        if point_distance(target.x, target.y, x, y) > 32 {
+		var dis = point_distance(target.x, target.y, x, y);
+        if dis > 32  && dis < 400{
             if random(3) < 1 {
                 snd_play(sndEnemyFire)
                 wkick = 4

@@ -1,5 +1,6 @@
 if other.team != team && (image_index<5)
 {
+	image_index = max(5,image_index);
 	with other
 	{
 		if sprite_index != spr_hurt && !other.dealtDamage
@@ -10,7 +11,9 @@ if other.team != team && (image_index<5)
 				if skill_got[14] = 1
 				{
 					immunelimit = 5;
-
+					boilingAmount = boilingMax;
+					if alarm[4] < 1
+						alarm[4] = 1;
 					if race=25
 						immunelimit = 999;
 						

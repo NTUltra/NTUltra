@@ -1,5 +1,5 @@
 raddrop = 8
-maxhealth = 14//18
+maxhealth = 12//18
 meleedamage = 2
 mySize = 1
 
@@ -21,10 +21,10 @@ alarm[1] = 10+random(10)
 if instance_exists(Player)
 motion_add(point_direction(Player.x,Player.y,x,y),1)
 
-actTime = 10;
+actTime = 15;
 nukeIt = false;
 loops = GetPlayerLoops();
 if loops > 0
-	actTime = 9;
+	actTime = 11;
 if loops > 12
 	nukeIt = true;

@@ -15,8 +15,8 @@ function scrEnemyDeathEvent(){
 			with Tangle {
 				var xScale = image_xscale;
 				var yScale = image_yscale;
-				image_xscale *= 2;
-				image_yscale *= 2;
+				image_xscale *= 2.5;
+				image_yscale *= 2.5;
 				if place_meeting(x,y,other.id)
 				{
 					didSapling = true;
@@ -28,9 +28,17 @@ function scrEnemyDeathEvent(){
 			if !didSapling && instance_exists(TangleSeed)
 			{
 				var n = instance_nearest(x,y,TangleSeed);
-				if n != noone && point_distance(x,y,n.x,n.y) < 32
+				if n != noone && point_distance(x,y,n.x,n.y) < 48
 				{
-					instance_create(other.x,other.y,Sapling);
+					instance_create(x,y,Sapling);
+				}
+			}
+			if !didSapling && instance_exists(Tangle)
+			{
+				var n = instance_nearest(x,y,Tangle);
+				if n != noone && point_distance(x,y,n.x,n.y) < 64
+				{
+					instance_create(x,y,Sapling);
 				}
 			}
 		}

@@ -29,8 +29,7 @@ instance_create(x,y,WallBreak);
 var fbAng = 0;
 repeat(4)
 {
-	
-	var ps = 4;
+	var ps = 3;
 	repeat(4)
 	{
 		with instance_create(x,y,EnemyIceFlame)

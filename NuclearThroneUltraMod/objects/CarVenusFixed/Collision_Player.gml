@@ -16,6 +16,8 @@ if KeyCont.key_pick[other.p] = 1
 	snd_play(sndUseCar);
 	with instance_create(x,y,Portal) 
 	{
+		x = other.x;
+		y = other.y;
 		type = 1
 		alarm[1] = 1;
 	}

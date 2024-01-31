@@ -12,6 +12,7 @@ function scrDrawLeaderboardCrown(crowns, xx, yy){
 			j++;
 		}
 	}
+	if array_length(finalArray) > 0
 	draw_sprite(scrLeaderboardCrown(finalArray[max(0,
 					floor(
 						lerp(0, array_length(finalArray)-1, killScroll)

@@ -20,4 +20,5 @@ if alarm[2] > 8
 	alarm[0] = 2+random(4)
 	}           }
 }
-
+if firstTime
+	exit;

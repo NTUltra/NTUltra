@@ -15,7 +15,10 @@ if target != noone {
             if random(5) < 4 && ammo > 0 {
                 gunangle = point_direction(xprevious, yprevious, target.xprevious, target.yprevious)
 				if ammo == 0
-					alarm[2] += 7;
+				{
+					alarm[2] += 8;
+					instance_create(x,y,Notice);
+				}
 				else if ammo == maxAmmo
 				{
 					alarm[2] += 3;
@@ -38,6 +41,7 @@ if target != noone {
 
         }
         else {
+			ammo = maxAmmo;
             direction = point_direction(x,y,target.x, target.y) + random(20) - 10
             speed = 0.4
             walk = 20 + random(10)
@@ -49,21 +53,25 @@ if target != noone {
         else if target.x > x
         right = 1
     }
-    else if random(10) < 1 {
-        motion_add(point_direction(x, y, target.x, target.y), 0.4)
-        mp_potential_step(target.x, target.y, 0.8, false)
-        alarm[1] = walk + 10 + random(10)
-    }
-    else if random(4) < 1 {
-        motion_add(random(360), 0.4)
-        walk = 5 + random(10)
-        alarm[1] = walk + 5 + random(10)
-        gunangle = direction
-        if hspeed > 0
-        right = 1
-        else if hspeed < 0
-        right = -1
-    }
+	else
+	{
+		ammo = maxAmmo;
+	    if random(10) < 1 {
+	        motion_add(point_direction(x, y, target.x, target.y), 0.4)
+	        mp_potential_step(target.x, target.y, 0.8, false)
+	        alarm[1] = walk + 10 + random(10)
+	    }
+	    else if random(4) < 1 {
+	        motion_add(random(360), 0.4)
+	        walk = 5 + random(10)
+	        alarm[1] = walk + 5 + random(10)
+	        gunangle = direction
+	        if hspeed > 0
+	        right = 1
+	        else if hspeed < 0
+	        right = -1
+	    }
+	}
 }
 else if random(10) < 1 {
     motion_add(random(360), 0.4)

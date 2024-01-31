@@ -1,5 +1,5 @@
 /// @description Draw prepper
-if alarm[1] < 13
+if alarm[1] < 13 && alarm[1] > 1
 {
 	var yy = y;
 	var lasx = x

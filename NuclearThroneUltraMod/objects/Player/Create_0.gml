@@ -19,7 +19,8 @@ with GameRender
 }
 with DataRef
 	instance_destroy();
-boil = 10;
+boilingMax = 40;
+boilingAmount = 0;
 tookDamageThisArea = false;
 isInInverted = false;
 canPuffyCheek = 0;
@@ -150,7 +151,8 @@ horrorEtaken = false;
 patience = 0;
 patienceUsed = 0;
 raddrop = 0;
-hurtDuration = 12; //Additional iframes
+hurtDuration = 15; //Additional iframes
+hurtDurationLoop = 9;
 hurtTime = 0;
 lockoutElementor = false; //When no ammo lockout ability for elementor
 mushroomhead = sprMutant24IdleHead;

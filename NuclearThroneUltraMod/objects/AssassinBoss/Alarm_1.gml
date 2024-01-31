@@ -1,4 +1,4 @@
-alarm[1] = 4+random(5)
+alarm[1] = 6+random(5)
 canDodge = true;
 deflectExhaustion -= 2;
 if deflectExhaustion < 0

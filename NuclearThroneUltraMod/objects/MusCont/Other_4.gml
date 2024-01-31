@@ -1,4 +1,3 @@
-oldarea = area
 if instance_exists(Player)
 {
 	area = Player.area;
@@ -46,7 +45,7 @@ if scrIsGamemode(8) && area != 0
     exit;
 }
 
-if oldarea != area || area == 0 or !audio_is_playing(song) or audio_is_playing(musBoss1) or !audio_exists(song) || song == musBossWin || song == musBoss10 || song == musBoss1{
+if scrIsGamemode(10) || area == 0 or !audio_is_playing(song) or audio_is_playing(musBoss1) or !audio_exists(song) || song == musBossWin || song == musBoss10 || song == musBoss1 {
 
     dir = 1
     deaths = 0
@@ -164,7 +163,7 @@ if oldarea != area || area == 0 or !audio_is_playing(song) or audio_is_playing(m
 
         amb = amb102;
     }
-    if area == 103
+    if area == 103 || area == 125
 	{
 
         song = mus103;

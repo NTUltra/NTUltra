@@ -1,4 +1,4 @@
-if other.team != team and other.my_health > 0
+if other.team != team and other.my_health > 0 && image_index < 3
 {
 	instance_destroy()
 	with other

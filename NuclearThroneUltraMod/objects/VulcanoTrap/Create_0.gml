@@ -3,7 +3,6 @@ fire = 0
 alarm[1] = 1;
 depth = -8;
 image_speed = 0;
-fireSpeed = 0;
 ang = random(360);
 fireSpeed = 0;
 spinRate = 3

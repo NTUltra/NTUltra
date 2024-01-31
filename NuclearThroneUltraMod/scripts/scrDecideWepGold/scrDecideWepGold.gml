@@ -1,6 +1,16 @@
 function scrDecideWepGold() {
 	if instance_exists(Player)
 	{
+		var otherChestWeps = [];
+		var i = 0;
+		with GoldChest
+		{
+			if id != other.id
+			{
+				otherChestWeps[i] = wep;
+				i++;
+			}
+		}
 		if scrIsGamemode(31)
 		{
 			return choose(40,230,286,651);
@@ -17,7 +27,8 @@ function scrDecideWepGold() {
 				645,646,647,649,651,653)
 				maxTries --;
 			}
-			until (((wep != Player.wep and wep != Player.bwep) or Player.race = 7)
+			until ((!array_contains(otherChestWeps,wep) &&
+			((wep != Player.wep and wep != Player.bwep) or Player.race = 7))
 			&& UberCont.start_wep_have_all[Player.race] ||
 			scrCheckStartingWepUnlocked(wep,Player.race) > -1 ||
 			maxTries <= 0

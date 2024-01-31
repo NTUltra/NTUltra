@@ -11,8 +11,8 @@ if walk > 0
 	motion_add(point_direction(x,y,target.x,target.y),0.5)
 	if sprite_index != spr_hurt
 		sprite_index = spr_walk
-	if round(walk/10) = walk/10
-	snd_play(sndBigDogWalk)
+	if round(walk/10) == walk/10
+		snd_play(sndBigDogWalk,0,true)
 		if walk == 0 && sprite_index != spr_hurt
 			sprite_index = spr_idle
 }

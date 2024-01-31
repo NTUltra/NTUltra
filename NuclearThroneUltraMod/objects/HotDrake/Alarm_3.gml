@@ -3,7 +3,7 @@ if atk=1//breath fire pls
     alarm[2]=36;//fire breather
     snd_play(sndDragonStart);
     snd_loop(sndDragonLoop);
-    alarm[1]=36;
+    alarm[1]=40;
     image_index = 0
     sprite_index = spr_fire;
     
@@ -12,7 +12,7 @@ if atk=2//BLUE BALL OF FIRE!
 {
     image_index=0;
     sprite_index=spr_fire;
-    alarm[1]=10;
+    alarm[1]=15;
 	if (target != noone && instance_exists(target))
 		direction = point_direction(x,y,target.x,target.y)//backup backup
     BackCont.shake += 10
@@ -41,7 +41,7 @@ if atk=3//SPLIT BALL YO
 appear=true;
     image_index=0;
     sprite_index=spr_fire;
-    alarm[1]=11;
+    alarm[1]=15;
 	if (target != noone && instance_exists(target))
 		direction = point_direction(x,y,target.x,target.y)//BACK UP
     BackCont.shake += 10

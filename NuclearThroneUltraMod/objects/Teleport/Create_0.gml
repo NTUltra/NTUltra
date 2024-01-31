@@ -1,4 +1,4 @@
-alarm[0]=3;
+alarm[0]=5;
 c1 = make_color_rgb(56,0,106);
 c2 = make_color_rgb(200,101,255);
 if Player.bskin == 1

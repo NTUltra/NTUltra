@@ -23,7 +23,7 @@ function scrBusinessHogInvestment() {
 	    until (skill4 != skill1 and skill4 != skill2 and skill4 != skill3 and Player.ultra_got[skill4] = 0)
 
 
-	if Player.crown!=8
+	if !scrIsCrown(8)
 	{
 
 

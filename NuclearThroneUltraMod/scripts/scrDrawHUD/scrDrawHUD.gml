@@ -165,13 +165,16 @@ function scrDrawHUD() {
 				scrDrawHelp(gamemodeScrollString);
 			}
 		}
-		if UberCont.isLeaderboardGamemode
+		if scrIsGamemode(26)
+		{
+			if UberCont.isLeaderboardGamemode
+				draw_sprite(sprDailyChallengeHUDGamemode,0,vx+2,vy+__view_get( e__VW.HView, 0 )-2);
+			else
+				draw_sprite(sprDailyChallengeHUDRace,0,vx+2,vy+__view_get( e__VW.HView, 0 )-2);
+		}
+		else if UberCont.isLeaderboardGamemode
 		{
 			draw_sprite(sprWeeklyChallengeHUD,0,vx+2,vy+__view_get( e__VW.HView, 0 )-2);
-		}
-		else if scrIsGamemode(26)
-		{
-			draw_sprite(sprDailyChallengeHUDRace,0,vx+2,vy+__view_get( e__VW.HView, 0 )-2);
 		}
 		else if scrIsGamemode(27)
 		{
@@ -575,19 +578,7 @@ function scrDrawHUD() {
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+112,vy+16,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+15,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+17,col,1)
-	if (UberCont.opt_hud_des && mouse_x > xxx && mouse_x < xxx+ss && mouse_y < yyy+ss && mouse_y > yyy)
-	{
-		if dataRef.wep_area[dataRef.wep] >= 0
-		{
-			scrDrawHelp("  " + string(dataRef.wep_area[dataRef.cwep])
-			+ "\n" + dataRef.wep_name[dataRef.cwep]);
-			draw_sprite(sprWepTier,0,vx+118,vy+22);
-		}
-		else
-		{
-			scrDrawHelp("\n" + dataRef.wep_name[dataRef.cwep]);
-		}
-	}
+	
 	var wwep = dataRef.cwep;
 	var pcc = dataRef.cqueueshot;
 	var pci = 0;
@@ -624,7 +615,6 @@ function scrDrawHUD() {
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+16,loadedColour,1)	
 	}
 	
-	
 	if dataRef.wep_type[dataRef.cwep] != 0
 	{
 	draw_set_halign(fa_left)
@@ -660,6 +650,23 @@ function scrDrawHUD() {
 	}
 	draw_text(vx+txx,vy+21,cAmmo)
 	}
+	if (UberCont.opt_hud_des && mouse_x > xxx && mouse_x < xxx+ss && mouse_y < yyy+ss && mouse_y > yyy)
+	{
+		var wepName = dataRef.wep_name[dataRef.cwep];
+		wepName += scrTranslateWeaponAutoType(dataRef.wep_auto[dataRef.cwep]);
+		if dataRef.wep_area[dataRef.wep] >= 0
+		{
+			scrDrawHelp("  " + string(dataRef.wep_area[dataRef.cwep])
+			+ "\n" + wepName);
+			scrDrawHelp("\n" + string(dataRef.wep_name[dataRef.cwep]),0,c_white,true);
+			draw_sprite(sprWepTier,0,vx+118,vy+22);
+		}
+		else
+		{
+			scrDrawHelp("\n" + wepName);
+			scrDrawHelp("\n" + string(dataRef.wep_name[dataRef.cwep]),0,c_white,true);
+		}
+	}
 	}
 
 
@@ -687,19 +694,7 @@ function scrDrawHUD() {
 	var xxx = camera_get_view_x(view_camera[0]) + wxx;
 	var yyy = camera_get_view_y(view_camera[0]) + wyy;
 	var ss = 20;
-	if (UberCont.opt_hud_des && mouse_x > xxx && mouse_x < xxx+ss && mouse_y < yyy+ss && mouse_y > yyy)
-	{
-		if dataRef.wep_area[dataRef.wep] >= 0
-		{
-			scrDrawHelp("  " + string(dataRef.wep_area[dataRef.bwep])
-			+ "\n" + dataRef.wep_name[dataRef.bwep]);
-			draw_sprite(sprWepTier,0,vx+118,vy+22);
-		}
-		else
-		{
-			scrDrawHelp("\n" + dataRef.wep_name[dataRef.bwep]);
-		}
-	}
+	
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+67,vy+16,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+69,vy+16,col,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+68,vy+15,col,1)
@@ -742,7 +737,23 @@ function scrDrawHUD() {
 	{
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+68,vy+16,loadedColour,1)	
 	}
-
+	if (UberCont.opt_hud_des && mouse_x > xxx && mouse_x < xxx+ss && mouse_y < yyy+ss && mouse_y > yyy)
+	{
+		var wepName = dataRef.wep_name[dataRef.bwep];
+		wepName += scrTranslateWeaponAutoType(dataRef.wep_auto[dataRef.bwep]);
+		if dataRef.wep_area[dataRef.wep] >= 0
+		{
+			scrDrawHelp("  " + string(dataRef.wep_area[dataRef.bwep])
+			+ "\n" + wepName);
+			scrDrawHelp("\n" + string(dataRef.wep_name[dataRef.bwep]),0,c_white,true);
+			draw_sprite(sprWepTier,0,vx+118,vy+22);
+		}
+		else
+		{
+			scrDrawHelp("\n" + wepName);
+			scrDrawHelp("\n" + string(dataRef.wep_name[dataRef.bwep]),0,c_white,true);
+		}
+	}
 
 
 	if dataRef.wep_type[dataRef.bwep] != 0
@@ -802,19 +813,7 @@ function scrDrawHUD() {
 	var xxx = camera_get_view_x(view_camera[0]) + wxx;
 	var yyy = camera_get_view_y(view_camera[0]) + wyy;
 	var ss = 20;
-	if (UberCont.opt_hud_des && mouse_x > xxx && mouse_x < xxx+ss && mouse_y < yyy+ss && mouse_y > yyy)
-	{
-		if dataRef.wep_area[dataRef.wep] >= 0
-		{
-			scrDrawHelp("  " + string(dataRef.wep_area[dataRef.wep])
-			+ "\n" + dataRef.wep_name[dataRef.wep]);
-			draw_sprite(sprWepTier,0,vx+118,vy+22);
-		}
-		else
-		{
-			scrDrawHelp("\n" + dataRef.wep_name[dataRef.wep]);
-		}
-	}
+	
 
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+24,vy+16+1,c_black,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+22,vy+16+1,c_black,1)
@@ -836,7 +835,6 @@ function scrDrawHUD() {
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+17,wepcolour,1)
 	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+15,wepcolour,1)
 	
-
 	var wwep = dataRef.wep;
 	var pcc = dataRef.queueshot;
 	var pci = 0;
@@ -872,6 +870,23 @@ function scrDrawHUD() {
 	else
 	{
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+16,loadedColour,1)	
+	}
+	if (UberCont.opt_hud_des && mouse_x > xxx && mouse_x < xxx+ss && mouse_y < yyy+ss && mouse_y > yyy)
+	{
+		var wepName = dataRef.wep_name[dataRef.wep];
+		wepName += scrTranslateWeaponAutoType(dataRef.wep_auto[dataRef.wep]);
+		if dataRef.wep_area[dataRef.wep] >= 0
+		{
+			scrDrawHelp("  " + string(dataRef.wep_area[dataRef.wep])
+			+ "\n" + wepName);
+			scrDrawHelp("\n" + string(dataRef.wep_name[dataRef.wep]),0,c_white,true);
+			draw_sprite(sprWepTier,0,vx+118,vy+22);
+		}
+		else
+		{
+			scrDrawHelp("\n" + wepName);
+			scrDrawHelp("\n" + string(dataRef.wep_name[dataRef.wep]),0,c_white,true);
+		}
 	}
 	
 	if dataRef.isPermanent

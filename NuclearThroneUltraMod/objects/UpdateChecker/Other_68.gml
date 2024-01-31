@@ -28,6 +28,7 @@ if (type == network_type_data) {
 			{
 				notUpdated = "";	
 			}
+			UberCont.notUpdated = notUpdated;
 			if (steam_initialised())
 			{
 				//Ask if I can participate today
@@ -68,7 +69,7 @@ if (type == network_type_data) {
 			{
 				var dailyDay = buffer_read(buffer, buffer_u8);
 				canParticipateInGamemode = buffer_read(buffer, buffer_bool);
-				if dailyDay % 2 == 0{
+				if dailyDay % 2 == 0 {
 					isRace = false;
 					with DailyRace {
 						dailyName = "DAILY GAMEMODE"
@@ -84,5 +85,4 @@ if (type == network_type_data) {
 			network_destroy(serverSocket);
 		break;
 	}
-	
 }

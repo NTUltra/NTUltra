@@ -364,7 +364,7 @@ if (selected &&
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			altUltra = true;
 			ultra_name[35] = "SUCOF"
-			ultra_text[35] = "EMIT SESREVER EVICA"//ACTIVE REVERSES TIME
+			ultra_text[35] = "EMIT <w>SESREVER<w> EVICA"//ACTIVE REVERSES TIME
 			ultra_tips[35] = "reverse time"
 			if bskin == 0 || bskin == 3
 			{
@@ -960,7 +960,7 @@ if (selected &&
 	    until (skill4 != skill1 and skill4 != skill2 and skill4 != skill3 and Player.ultra_got[skill4] = 0)
 
 
-	if Player.crown!=8
+	if !scrIsCrown(8)
 	{
 
 	//HORROR ULTRA E

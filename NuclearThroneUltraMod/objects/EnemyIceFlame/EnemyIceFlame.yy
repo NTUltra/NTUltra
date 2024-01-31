@@ -42,8 +42,8 @@
     "path": "sprites/sprIceFlame/sprIceFlame.yy",
   },
   "spriteMaskId": {
-    "name": "mskEnemyBullet1",
-    "path": "sprites/mskEnemyBullet1/mskEnemyBullet1.yy",
+    "name": "mskTrapFireEnemy",
+    "path": "sprites/mskTrapFireEnemy/mskTrapFireEnemy.yy",
   },
   "visible": true,
 }

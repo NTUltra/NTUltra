@@ -1,7 +1,8 @@
-raddrop = 120
-maxhealth = 770
+raddrop = 110
+maxhealth = 570
 scrBossHealthBuff();
 loops = GetPlayerLoops();
+firstTimeDisappear= true;
 if scrIsHardMode()
 	loops += 1;
 if loops > 0
