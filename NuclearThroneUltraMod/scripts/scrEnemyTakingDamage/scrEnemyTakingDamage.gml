@@ -18,6 +18,8 @@ function scrEnemyTakingDamage(){
 		{
 			if Player.race == 26 || Player.copyPassive == 26//HUMPHRY mr damage
 			{
+				debug("GIVE:" ,dmgTaken);
+				debug("from: ",object_get_name(object_index));
 				dmgTaken = scrHumphryDamage(dmgTaken);
 			}
 			if Player.ultra_got[105]

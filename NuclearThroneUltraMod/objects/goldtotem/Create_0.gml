@@ -1,9 +1,11 @@
 maxhealth = 60
 meleedamage = 0
 mySize = 2
-prevhealth = 100;
 if GetPlayerLoops() < 1
 	maxhealth = 40
+my_health = maxhealth;
+EnemyHealthAdjustments()
+prevhealth = my_health;
 event_inherited()
 
 spr_idle = sprGoldTotem
