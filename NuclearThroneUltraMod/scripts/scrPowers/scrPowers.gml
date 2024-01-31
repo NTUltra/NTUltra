@@ -85,10 +85,10 @@ function scrPowers(raceOverwrite = -1) {
 		}
 		else {
 			failText = "NOT ENOUGH SKILL";
-			if humphrySkill >= 10//used to be 50//10%?
+			if humphrySkill >= 5//used to be 50//10%?
 			{
 				insufficientFunds = false;
-				humphrySkill -= 10;
+				humphrySkill -= 5;
 			}
 		}
 		

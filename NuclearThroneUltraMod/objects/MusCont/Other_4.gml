@@ -45,7 +45,7 @@ if scrIsGamemode(8) && area != 0
     exit;
 }
 
-if scrIsGamemode(10) || area == 0 or !audio_is_playing(song) or audio_is_playing(musBoss1) or !audio_exists(song) || song == musBossWin || song == musBoss10 || song == musBoss1 {
+//if scrIsGamemode(10) || area == 0 or !audio_is_playing(song) or audio_is_playing(musBoss1) or !audio_exists(song) || song == musBossWin || song == musBoss10 || song == musBoss1 {
 
     dir = 1
     deaths = 0
@@ -91,7 +91,7 @@ if scrIsGamemode(10) || area == 0 or !audio_is_playing(song) or audio_is_playing
     if area = 3 {
 
         if deaths > 50 and random(20) < 1
-        song = mus3b;
+			song = mus3b;
         else
             song = mus3;
 
@@ -345,4 +345,4 @@ if scrIsGamemode(10) || area == 0 or !audio_is_playing(song) or audio_is_playing
 		snd_loop(amb);
 	}
     //audio_sound_gain(sndVaultBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
-}
+//}

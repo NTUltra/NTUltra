@@ -9,6 +9,7 @@ function scrTips() {
 	//RANDOM
 	tip = choose(
 	"always move",
+	"you can combine multiple gamemodes!",
 	"some enemies shoot through walls!",
 	"don't hold onto your early weapons for too long",
 	"swap your early weapons even when you mod them",

@@ -25,7 +25,7 @@ if instance_exists(Player)
 		alarm[3] = 60;
 	if Player.race == 26 || Player.copyPassive == 26//HUMPHRY
 	{
-		humphryDelay = 8;
+		humphryDelay = 7;
 		humphryAmount = 0.94;
 		humphryConstantAmount = 1;
 		if Player.loops > 0
