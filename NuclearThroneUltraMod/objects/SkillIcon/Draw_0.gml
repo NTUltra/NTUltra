@@ -34,6 +34,8 @@ else
 	txt2 = string(skill_name[skill])+"#"+string(skill_text[skill])
 var fulltxt = txt2;
 txt2 = scrReplaceAllColourCodes(txt2);
+if instance_exists(Player) && Player.ultra_got[19] && Player.altUltra
+	txt2 = "KILL KILL KILL";
 if selected
 {
 
@@ -80,7 +82,7 @@ if Player.race == 25 && skill_bons[skill] != ""
 }
 }
 //draw_text(x,y-32,string(skill)); // just to show the skillnumber
-if hover
+if hover && !(instance_exists(Player) && Player.ultra_got[19] && Player.altUltra)
 {
 	draw_set_color(c_white)
 	draw_set_halign(fa_left)

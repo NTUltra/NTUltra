@@ -7,7 +7,7 @@ my_health = maxhealth;
 EnemyHealthAdjustments()
 prevhealth = my_health;
 event_inherited()
-
+team = 2;
 spr_idle = sprGoldTotem
 spr_walk = sprGoldTotem
 spr_hurt = sprGoldTotemHurt

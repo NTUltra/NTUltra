@@ -47,7 +47,7 @@ BackCont.shake += 1.12*sp*0.5;
 			}
 		    sprite_index = spr_hurt                                 //2*1=2*p<<ULTRA
 		    image_index = 0
-			scrSheepHit();
+			// scrSheepHit();
 		}
     }
 }}

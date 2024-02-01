@@ -760,7 +760,7 @@ function scrWeapons() {
 	wep_text[67] = "have you tried sword gun#with bolt marrow?#Or shotgun shoulders?"
 	wep_swap[67] = sndSwapSword
 	wep_rad[67] = 0;
-	wep_popup[67] = "works with nearly every#weapon specific mutation";
+	wep_popup[67] = "WORKS WITH NEARLY EVERY#WEAPON SPECIFIC MUTATION";
 
 	wep_name[68] = "AUTO GRENADE LAUNCHER"
 	wep_type[68] = 4
@@ -2840,7 +2840,7 @@ function scrWeapons() {
 	wep_text[253] = "long arms, bolt marrow and shotgun shoulders#all work on this gun"
 	wep_swap[253] = sndSwapSword
 	wep_rad[253] = 0;
-	wep_popup[253] = "works with nearly every#weapon specific mutation";
+	wep_popup[253] = "WORKS WITH NEARLY EVERY#WEAPON SPECIFIC MUTATION";
 
 	wep_name[254] = "SUPER SHANK GUN"
 	wep_type[254] = 3
@@ -2861,7 +2861,7 @@ function scrWeapons() {
 	wep_cost[255] = 3
 	wep_sprt[255] = sprEnergyShankGun
 	wep_area[255] = 15
-	wep_text[255] = "works with all weapon specific mutations"
+	wep_text[255] = "works with almost all weapon specific mutations"
 	wep_swap[255] = sndSwapEnergy
 	wep_rad[255] = 0;
 
@@ -4684,6 +4684,7 @@ function scrWeapons() {
 	wep_text[416] = ""
 	wep_swap[416] = sndSwapExplosive
 	wep_rad[416] = 0;
+	wep_popup[416] = "PIERCES LOW HEALTH ENEMIES!";
 	
 	wep_name[417] = "SUPER TOXIC CANNON"
 	wep_type[417] = 4
@@ -6733,7 +6734,7 @@ function scrWeapons() {
 	wep_cost[602] = 5//3
 	wep_sprt[602] = sprUltraHeavyRogueRifle
 	wep_area[602] = -1
-	wep_text[602] = ""
+	wep_text[602] = "rogue rocks!"
 	wep_swap[602] = sndSwapMachinegun
 	wep_rad[602] = 12;//7 for one shot normally
 	

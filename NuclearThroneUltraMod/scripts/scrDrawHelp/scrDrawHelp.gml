@@ -7,6 +7,8 @@ function scrDrawHelp(txt, yOffset = 0, col = c_silver,nosquare = false){
 	txt = string_replace_all(txt,"#"," ");
 	//var colTxt = txt;
 	txt = scrReplaceAllColourCodes(txt);
+	if instance_exists(Player) && Player.ultra_got[19] && Player.altUltra
+		txt = "KILL KILL KILL";
 	var w = 206;
 	var s = string_height("A");
 	draw_set_halign(fa_left)

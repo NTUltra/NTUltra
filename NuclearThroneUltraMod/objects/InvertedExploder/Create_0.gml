@@ -20,3 +20,4 @@ motion_add(point_direction(Player.x,Player.y,x,y),1)
 
 close = 0
 
+scrInitDrops(1);

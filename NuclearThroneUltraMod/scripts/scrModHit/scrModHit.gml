@@ -1,7 +1,7 @@
 function scrModHit() {
 	if !instance_exists(Player) || team == 2
 		exit;
-	scrSheepHit();
+	// scrSheepHit();
 	//Sedatives
 	var wp = other.wepFire;
 	if Player.ultra_got[100] && team != other.team && my_health > 0 && wp != -1

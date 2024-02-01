@@ -120,19 +120,25 @@ function scrEnemyDeathEvent(){
 			{
 				if justAsheep && instance_number(enemy) < BackCont.enemiesInStartLevel*0.7//if70% left enemies will notice you
 				{
-				    justAsheep = false;
-				    instance_create(x-5,y-16,Notice);
-				    instance_create(x+5,y-16,Notice);
-					if skill_got[29]//Insomnia
-						t = 200;
+					if (scrWasSpottedDoingCrime(true))
+					{
+					    justAsheep = false;
+					    instance_create(x-5,y-16,Notice);
+					    instance_create(x+5,y-16,Notice);
+						if skill_got[29]//Insomnia
+							t = 200;
+					}
 				}
 			}
 			else if (justAsheep && instance_number(enemy) < BackCont.enemiesInStartLevel*0.9) {
-				justAsheep = false;
-				instance_create(x-5,y-16,Notice);
-				instance_create(x+5,y-16,Notice);
-				if skill_got[29]//Insomnia
-					t = 200;
+				if (scrWasSpottedDoingCrime(true))
+				{
+					justAsheep = false;
+					instance_create(x-5,y-16,Notice);
+					instance_create(x+5,y-16,Notice);
+					if skill_got[29]//Insomnia
+						t = 200;
+				}
 			}
 			//Insomnia should not trigger again after first justASheep
 			if skill_got[29] && ultra_got[51] && altUltra && sheepFakeouts != 3 + skill_got[5]

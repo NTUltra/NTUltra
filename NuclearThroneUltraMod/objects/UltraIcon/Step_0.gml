@@ -105,6 +105,18 @@ if (selected &&
 			instance_create(x,y,DeathStare);
 		}
 	}
+	else if skill == 19 && Player.race == 5 && ((scrIsCrown(7) || scrIsCrown(28) || scrIsGamemode(39)) || Player.unlockAlternativeUltras)
+	{
+		with Player
+		{
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			altUltra = true;
+			ultra_name[19] = "KILL KILL KILL"
+			ultra_text[19] = "KILL KILL KILL"
+			ultra_tips[19] = "KILL KILL KILL"
+			canKillKillKill = true;
+		}
+	}
 	else if skill == 20 && Player.race == 5 && (scrIsCrown(23) && Player.skill_got[2] || Player.unlockAlternativeUltras)
 	{
 		with Player

@@ -3,6 +3,5 @@ if(instance_exists(Player)) {
 	{
 		//WEAPON MODS!
 		scrModHit();
-	}  
+	}
 }
-

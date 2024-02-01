@@ -233,7 +233,7 @@ if instance_exists(Player)
 				name = "Guard Weave";
 	    }
 	    if race == 13
-	    {justAsheep=true;
+	    {justAsheep = true;
 			with PlayerAlarms2
 			{
 				alarm[0] = 60;	

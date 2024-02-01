@@ -47,6 +47,7 @@ function scrCreateDataRef(){
 		breload = other.breload;
 		creload = other.creload;
 		wep_name = other.wep_name;
+		wep_auto = other.wep_auto;
 		wep_load = other.wep_load;
 		wep_type = other.wep_type;
 		wep_sprt = other.wep_sprt;

@@ -48,3 +48,4 @@ angPart = 0.5;
 disappearDuration = 50;
 myMaggot = Maggot;
 amountOfMaggots = 5;
+existTime = 30;

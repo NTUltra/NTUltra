@@ -14,7 +14,7 @@ if (UberCont.mouse__x < x+16 and UberCont.mouse__y < y+16 and UberCont.mouse__x 
 if selected
 {
 	hover = true;
-	if KeyCont.key_spec[p] == 1{
+	if KeyCont.key_spec[p] == 1 && !(instance_exists(Player) && Player.ultra_got[19] && Player.altUltra){
 		KeyCont.key_spec[p] = 2;
 		with SkillIcon
 		{

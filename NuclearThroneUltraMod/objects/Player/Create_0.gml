@@ -26,6 +26,7 @@ isInInverted = false;
 canPuffyCheek = 0;
 canPuffyCheekB = 0;
 canPuffyCheekC = 0;
+canKillKillKill = false;
 autoFire = 0;
 excessDamageDeal = 0;
 humphrySkill = 0;

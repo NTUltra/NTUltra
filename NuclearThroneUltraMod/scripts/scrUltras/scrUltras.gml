@@ -133,6 +133,14 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_text[19] = "REPLACE SNARE WITH <w>SPRINT<w>#KILLS MAKE YOU <aq>IMMUNE<aq>#FOR A SHORT DURATION#MOVING FASTER INCREASES THE DURATION#EFFECT CAN STACK WITH MULTIPLE KILLS#THRONE BUTT INCREASES THE DURATION"
 	ultra_tips[19] = "nutritious"
 	
+	if altOverride || (instance_exists(Player) &&  Player.race == 5 && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && (scrIsCrown(7) || scrIsCrown(28) || scrIsGamemode(39)))))
+	{
+		//EXTRA FEET OR CROWN OF SPEED
+		ultra_name[19] = "KILL KILL KILL"
+		ultra_text[19] = "YOUR ACTIVE CHANGES INTO <w>KILL KILL KILL<w>:#TARGET ONE ENEMY#DEAL AN <r>ABSURD<r> AMOUNT OF <r>DAMAGE<r> TO IT#AND ANY OF ITS <w>TYPE<w>#IF YOU HAVE <p>THRONEBUTT<p> ALSO <r>HEAL<r> 3 <r>HP<r>#CAN BE DONE ONCE PER AREA"
+		ultra_tips[19] = "KILL KILL KILL"
+	}
+	
 	ultra_name[20] = "STEREO SNARES"
 	ultra_text[20] = "SPAWN TWO <w>SNARES<w>#SNARES DESTROY ALL ENEMY PROJECTILES"
 	ultra_tips[20] = "better then original stereo snares"

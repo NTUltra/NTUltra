@@ -67,7 +67,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"07c619e6-31b1-4d92-a7e7-9dec8ead328c","path":"sprites/sprMutant8DWalk/sprMutant8DWalk.yy",},},},"Disabled":false,"id":"1eeca436-b4c7-4e2a-9e7e-65b0c8f95389","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 8,
     "yorigin": 5,

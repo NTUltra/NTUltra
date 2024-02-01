@@ -276,13 +276,19 @@ function scrSecretUltraStat() {
 	secret_ultra_unlk[32] = "USE C-SKIN";
 	
 	//109
-	secret_ultra_name[33] = "TRASH"
-	secret_ultra_text[33] = "<pi>DIE<pi> WHENEVER YOU TAKE DAMAGE"
-	secret_ultra_tips[33] = "challenge run"
-	secret_ultra_hint[33] = "";
-	secret_ultra_unlk[33] = "WIELD NO WEAPON";
+	secret_ultra_name[33] = "KILL KILL KILL"
+	secret_ultra_text[33] = "YYOUR ACTIVE CHANGES INTO <w>KILL KILL KILL<w>:#TARGET ONE ENEMY#DEAL AN <r>ABSURD<r> AMOUNT OF <r>DAMAGE<r> TO IT#AND ANY OF ITS <w>TYPE<w>#IF YOU HAVE <p>THRONEBUTT<p> ALSO <r>HEAL<r> 3 <r>HP<r>#CAN BE DONE ONCE PER AREA"
+	secret_ultra_tips[33] = "KILL KILL KILL"
+	secret_ultra_hint[33] = "KILL KILL KILL BLOOD BLOOD BLOOD";
+	secret_ultra_unlk[33] = "HAVE CROWN OF BLOOD/APOCALYPSE\nOR PLAY GORE GALORE GAMEMODE";
 
-	maxsecretultra = array_length(secret_ultra_name) - 1;
+	maxsecretultra = array_length(secret_ultra_name);
+	//109
+	secret_ultra_name[maxsecretultra + 1] = "TRASH"
+	secret_ultra_text[maxsecretultra + 1] = "<pi>DIE<pi> WHENEVER YOU TAKE DAMAGE"
+	secret_ultra_tips[maxsecretultra + 1] = "challenge run"
+	secret_ultra_hint[maxsecretultra + 1] = "";
+	secret_ultra_unlk[maxsecretultra + 1] = "WIELD NO WEAPON";
 	/*
 	var dir = 0
 	repeat(maxsecretultra)

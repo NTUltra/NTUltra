@@ -17,7 +17,7 @@ if instance_exists(Player){
 		xprev = x;
 		yprev = y;
 	}
-	if scrIsCrown(28) || scrIsGamemode(39)//Gore galore
+	if scrIsCrown(28) || scrIsGamemode(39) || (Player.ultra_got[19] && Player.altUltra)//Gore galore
 	{
 		bxprev = x;
 		byprev = y;

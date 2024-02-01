@@ -1,4 +1,4 @@
-if other.team != 2
+if other.team != 2 && alarm[0] > 3
 {
 	with other
 	{

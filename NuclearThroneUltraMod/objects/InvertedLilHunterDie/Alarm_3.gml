@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description fire
 alarm[3] = 1;
 with instance_create(x,y,TrapFire)//Trapfire
 {

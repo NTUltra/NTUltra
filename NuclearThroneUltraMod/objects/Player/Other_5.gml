@@ -5,7 +5,8 @@ consecutiveGoodBloodGambles = 0;
 tinyKrakenSpawned = 0;
 if ultra_got[50] && altUltra
 	charpoints = 1;
-
+if ultra_got[19] && altUltra
+	canKillKillKill = true;
 if (area == 1 || area == 101 || area == 10) && instance_exists(WepPickup)
 {
 	with WepPickup

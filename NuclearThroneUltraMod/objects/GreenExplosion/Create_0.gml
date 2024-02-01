@@ -6,7 +6,10 @@ event_inherited();
 dmg = 12;
 if myExplosionMask > 0
 with myExplosionMask {
-	dmg = other.dmg;
+	if GetPlayerLoops() < 1 && !scrIsHardMode()
+		dmg = 7;
+	else
+		dmg = other.dmg;
 }
 BackCont.shake += 4;//On top of normal explo
 depth --;

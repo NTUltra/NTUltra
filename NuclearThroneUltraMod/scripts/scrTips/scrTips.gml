@@ -1,5 +1,5 @@
 function scrTips() {
-	tiptype = choose(0,0,0,0,0,0,0,1,1,1,2,2,3,4,5,choose(0,6,0,0,1,1,2,2,3,4,5,6,6,6,7,7))
+	tiptype = choose(0,0,0,0,0,0,0,0,0,1,1,1,2,2,3,4,5,choose(0,6,0,0,1,1,2,2,3,4,5,5,6,6,7,7,7))
 
 	if !instance_exists(Player)
 	tiptype = 0
@@ -39,6 +39,7 @@ function scrTips() {
 	"shotguns are great for close combat",
 	"assassins can pretend they're dead",
 	"fish can dodge roll",
+	"use [space] or [Q] to swap weapons#instead of mouse wheel",
 	"hover over HUD elements to see more info",
 	"hover over weapon in HUD#to show fire type",
 	"hover over your crown#to see what it is",
@@ -57,6 +58,11 @@ function scrTips() {
 	"watch out for dehydration",
 	"crystal can shield",
 	"fear is the mindkiller",
+	"loading...",
+	"skip",
+	"that was crazy",
+	"keep it together",
+	"winnable",
 	"inverted enemies have less health",
 	"there is a cheatcode#to unlock everything",
 	"square bullets are immune to melee",
@@ -66,7 +72,7 @@ function scrTips() {
 	"obsidian throwing knife can one shot big bandit, if throwing during his charge","you have now seen all loading tips", "that previous loading tip sucked!"
 	,"the purple dragon","golden frog anyone?","Y.V. mony rad","the flying cat head","myth of time","sheeps are a thing","feedback is much appreciated","follow @erdeppol","I love you!",
 	"be nice#get bitches","fish can dodgeroll to prevent blood hammer self damage","I could go for a burger right now",
-	"reach level ultra as yv with two melee weapons","double inversion magnet to loop!"),
+	"reach level ultra as yv with two melee weapons","double inversion magnet to loop!","doe normaal man"),
 	"the I.D.P.D. is looking for you",
 	"Visiting inverted areas increases the quality of weapons that drop",
 	"gold weapons don't count towards#your progression percentage",
@@ -94,6 +100,8 @@ function scrTips() {
 	"director weapons can pierce shields/deflects",
 	"respect each other",
 	"damn squares",
+	"you can toggle mutation details using#[Right Mouse Button]",
+	"charge proto statues with radiation#then blow up the statue#to enter the crownvault",
 	"F5 to toggle full screen",
 	"F8 to toggle borderless window",
 	"gamma guts halves contact damage taken",
@@ -140,6 +148,7 @@ function scrTips() {
 	,"you can change the direction#of director projectiles#by clicking after firing"
 	,"explosives can destroy traps",
 	"try new weapons",
+	"plant can trap anything",
 	"enemies everywhere",
 	"shotgun shoulders deals splash damage!",
 	"recycle gland stops enemies from deflecting bullets",
@@ -148,7 +157,7 @@ function scrTips() {
 	"don't be a dirty casual",
 	"fish can walk",
 	"git gud!",
-	"when something explodes#its probably best#not to hit it with a stick",
+	"when something explodes#it's probably best#not to hit it with a stick",
 	"ammo chests prioritize primary weapon",
 	"when you open an ammo chest#when near full on ammo#it will distribute the ammo#over your other ammo types",
 	"don't trust fortune cookies",
@@ -192,7 +201,6 @@ function scrTips() {
 	"let's have fun",
 	"stress relief",
 	"just enjoy",
-	"panda can throw",
 	"chicken can slow down time",
 	"the more dangerous the weapon#the more damage it deals",
 	"everything changes",
@@ -365,7 +373,8 @@ function scrTips() {
 	if Player.race = 5
 	tip = choose("kill kill kill","death death death","blood blood blood","slay slay slay","fast fast fast","go go go","shoot shoot shoot","murder murder murder",
 	"eat eat eat","the apex predator","annihilate eliminate destroy","all shall die","plant is fast","no mercy","photosynthesizing...","plant can hold RMB to see further"
-	,"trap the enemy")
+	,"trap the enemy", "use active again#while seed is in mid-air#to instantly pop it","carnage","consume consume consume", "destroy destroy destroy",
+	"annihilate annihalte annihilate", "obliterate obliterate obliterate")
 
 	if Player.race = 6
 	tip = choose("yung venuz is so cool",
@@ -545,9 +554,14 @@ function scrTips() {
 	///GAMEMODE
 	if tiptype == 7
 		tip = UberCont.gamemode_tip[UberCont.opt_gamemode[irandom(array_length(UberCont.opt_gamemode)-1)]];
-		
-	if tip = ""
-	scrTips()
+	
+	if instance_exists(Player) && Player.ultra_got[19] && Player.altUltra
+	{
+		tip = "KILL KILL KILL";	
+	}
+	
+	if tip = "" || tip == undefined
+		scrTips();
 
 	tip = string(tip);
 }

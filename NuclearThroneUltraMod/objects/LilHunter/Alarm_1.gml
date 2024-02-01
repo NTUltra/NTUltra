@@ -1,8 +1,8 @@
-alarm[1] = 6+random(8)
+alarm[1] = 11+random(8)
 
 canDodge = true;
 if loop
-	alarm[1] -= 3;
+	alarm[1] -= 6;
 scrTarget()
 if target != noone
 {
@@ -49,9 +49,9 @@ if point_distance(x,y,target.x,target.y) < 96 && random(2)<1
 	ang = gunangle - 80;
 	repeat(6+r)
 	{
-		with instance_create(x,y,EnemyBullet2)
+		with instance_create(x,y,EnemyBullet1)
 		{
-			motion_add(other.ang,3.5)
+			motion_add(other.ang,3)
 			image_angle = direction
 			team = other.team
 		}
@@ -79,7 +79,7 @@ else if random(4)<1
 		}
 		ang+=angStep;
 	}
-	alarm[1] += 8;
+	alarm[1] += 7;
     alarm[4] = 4;
 
 }
@@ -169,7 +169,7 @@ else if random(10) < 1
 {
 //NO TARGET
 motion_add(random(360),0.4)
-walk = 8+random(4)
+walk = 10+random(4)
 alarm[1] = walk+random(30)
 gunangle = direction
 if hspeed > 0

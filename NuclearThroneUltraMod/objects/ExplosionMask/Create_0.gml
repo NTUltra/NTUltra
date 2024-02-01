@@ -1,6 +1,6 @@
 /// @description dmg
 image_speed = 0.4;
-dmg = 5;
+dmg = 4;
 if scrIsGamemode(9)//CASUAL MODE
 {
 	dmg = 4;
@@ -8,4 +8,6 @@ if scrIsGamemode(9)//CASUAL MODE
 }
 else if scrIsHardMode()//HARD MODE
 	dmg = 10;
+else if GetPlayerLoops() > 0
+	dmg = 5;
 owner = noone

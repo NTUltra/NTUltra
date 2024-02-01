@@ -63,7 +63,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c827d90d-ba18-43bf-9bbe-e3b95cd070e2","path":"sprites/sprMutant5Walk/sprMutant5Walk.yy",},},},"Disabled":false,"id":"7311242b-8488-49d7-bf09-6252e680a7fd","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 9,
     "yorigin": 10,

@@ -352,7 +352,7 @@ var tookHit = false;
 if my_health < prevhealth
 {
 	tookHit = true;
-	if !exception
+	if !exception && loops > 0
 	{
 		instance_create(x,y,DropReducer);
 	}

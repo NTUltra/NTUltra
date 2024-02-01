@@ -403,3 +403,7 @@ SetSeed();
 hasLimitReached = false;
 with instance_create(10000,10000,FloorMaker) {scrGenerateFloorMaker(0);}
 SetSeed();
+
+gmScroll = 0;
+gmwidth = 1;
+alarm[4] = 1;

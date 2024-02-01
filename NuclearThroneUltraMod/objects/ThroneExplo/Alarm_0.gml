@@ -9,8 +9,8 @@ if instance_exists(Player)
 	if sprite_index == sprNothing2Death || sprite_index == sprInvertedNothing2Death
 	{
 		dir += 180;
-		spd += 0.1;
-		motion_add(dir,spd);
+		spd += 0.2;
+		motion_add(dir,0.1);
 	}
 }
 repeat(38)

@@ -1948,43 +1948,85 @@ function scrPowers(raceOverwrite = -1) {
 	}
 
 	//PLANT
-	if race == 5 && !ultra_got[19]
+	if race == 5
 	{
-		var poppedSeed = false;
-		if skill_got[5]
-			snd_play_2d(sndPlantFireTB);
-		else
-			snd_play_2d(sndPlantFire);
-	    if ultra_got[20] && !Player.altUltra
-		{//STEREO SNARES
-		    with Tangle
-		    {
-				if instance_number(Tangle) > 1
+		if !ultra_got[19]
+		{
+			var poppedSeed = false;
+			if skill_got[5]
+				snd_play_2d(sndPlantFireTB);
+			else
+				snd_play_2d(sndPlantFire);
+		    if ultra_got[20] && !Player.altUltra
+			{//STEREO SNARES
+			    with Tangle
+			    {
+					if instance_number(Tangle) > 1
+						instance_destroy();
+				}
+			    with TangleSeed
+			    {
+					event_user(0);
+					if instance_number(Tangle) > 1
+					{
+						poppedSeed = true;
+					}
+				}
+		    }
+			else{
+				with Tangle
 					instance_destroy();
-			}
-		    with TangleSeed
-		    {
-				event_user(0);
-				if instance_number(Tangle) > 1
+				with TangleSeed
 				{
 					poppedSeed = true;
+					event_user(0);
 				}
 			}
-	    }
-		else{
-			with Tangle
-				instance_destroy();
-			with TangleSeed
-			{
-				poppedSeed = true;
-				event_user(0);
-			}
+			if !poppedSeed
+			with instance_create(x,y,TangleSeed)
+			{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),7)
+			image_angle = direction
+			team = other.team}
 		}
-		if !poppedSeed
-		with instance_create(x,y,TangleSeed)
-		{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),7)
-		image_angle = direction
-		team = other.team}
+		else if altUltra  && canKillKillKill {
+			var i = 0;
+			BackCont.shake += 10;
+			with instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy)
+			{
+				if team != 2 && point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y) < 48
+				{
+					other.canKillKillKill = false;
+					snd_play_2d(sndSharpTeeth);
+					with instance_create(x,y,SharpTeeth)
+					{
+						owner=other.id;
+						sprite_index = sprKillKillKill;
+					}
+					with object_index {
+						if team != 2
+						{
+							scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
+							repeat(mySize)
+								with instance_create(x,y,BloodStreak)
+								{
+									motion_add(random(360),8 + other.mySize)
+									image_angle = direction
+								}
+							my_health -= 300;
+							BackCont.shake += 2;
+							i += 1;
+							motion_add(point_direction(other.x,other.y,x,y),12);
+							with instance_create(x,y,SharpTeeth)
+								owner=other.id;
+						}
+					}
+					if i < 10
+						BackCont.shake += 20;
+					Sleep(100);
+				}
+			}
+			
+		}
 	}
 
 	scrYVPower();
@@ -2377,7 +2419,7 @@ function scrPowers(raceOverwrite = -1) {
 		if (race == 6 && (ultra_got[24] == 1 || (altUltra && ultra_got[23])) && wep_auto[wep] == 1)
 			scrYVPower();
 
-	if ultra_got[19]//Plant sprint
+	if ultra_got[19] && !altUltra//Plant sprint
 	{/*
 	if ultra_got[104]
 	{
@@ -3267,7 +3309,7 @@ function scrPowers(raceOverwrite = -1) {
 
 	}
 	else if ultra_got[10]=1{
-		var ps = ultra_got[19] && altUltra;
+		var ps = ultra_got[9] && altUltra;
 		var tb = skill_got[5];
 		var px = x;
 		var py = y;
@@ -3445,7 +3487,7 @@ function scrPowers(raceOverwrite = -1) {
 
 		toxicamount=0;
 	}
-	if ultra_got[19]//Plant Sprint
+	if ultra_got[19] && !altUltra//Plant Sprint
 	{
 
 	if skill_got[2]==1//extra feet

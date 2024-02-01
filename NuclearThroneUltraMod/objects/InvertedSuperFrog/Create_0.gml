@@ -26,6 +26,7 @@ close = 0
 
 alarm[2] = 5
 
+scrInitDrops(1);
 
 repeat(16)
 instance_create(x,y,ToxicGas)

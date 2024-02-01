@@ -6,10 +6,18 @@ function scrSheepHit(){
 		if justAsheep && other.team != 0 && other.team != team//|| scrCheckForAllParents(other.id, enemy))
 		{
 			if (((!ultra_got[50] || altUltra) || instance_number(enemy) == 1 || instance_exists(NuclearThrone1)) && instance_exists(PlayerAlarms2) && PlayerAlarms2.alarm[0] < 1) {
+				with other
+				{
+					if !(scrWasSpottedDoingCrime())
+						exit;
+					else
+					{
+						instance_create(x-5,y-16,Notice);
+						instance_create(x+5,y-16,Notice);	
+					}
+				}
 				//Sheep passive
 				justAsheep = false;
-				instance_create(other.x-5,other.y-16,Notice);
-				instance_create(other.x+5,other.y-16,Notice);
 				//NOW IF INSOMNIA GIVE ALL THE BADBOYS SOME TIME AGAIN put em too sleep
 				if skill_got[29]//Insomnia
 				{

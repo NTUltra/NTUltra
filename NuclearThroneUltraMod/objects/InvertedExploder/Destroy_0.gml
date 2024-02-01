@@ -1,6 +1,6 @@
 event_inherited()
-
-dir = random(360)
+scrDrop(5,0);
+var dir = random(360)
 
 
 var loop = false;
@@ -21,13 +21,13 @@ repeat(14)
     dir += 25
     with instance_create(x,y,EnemyBullet2)
     {
-    motion_add(other.dir,5)//4
+    motion_add(dir,5)//4
     image_angle = direction
     team = other.team
     }
     with instance_create(x,y,AcidStreak)
     {
-    motion_add(other.dir,8)
+    motion_add(dir,8)
     image_angle = direction
     }
     }
@@ -38,13 +38,13 @@ else{
     dir += 45
     with instance_create(x,y,EnemyBullet2)
     {
-    motion_add(other.dir,5)//4
+    motion_add(dir,5)//4
     image_angle = direction
     team = other.team
     }
     with instance_create(x,y,AcidStreak)
     {
-    motion_add(other.dir,8)
+    motion_add(dir,8)
     image_angle = direction
     }
     }

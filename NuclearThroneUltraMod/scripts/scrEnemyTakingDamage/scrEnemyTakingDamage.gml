@@ -192,6 +192,7 @@ function scrEnemyTakingDamage(){
 				}
 		    }
 		}
+		scrSheepHit();
 	}
 	prevhealth = my_health;
 }

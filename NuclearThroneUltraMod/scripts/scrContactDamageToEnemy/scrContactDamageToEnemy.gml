@@ -37,66 +37,13 @@ function scrContactDamageToEnemy(hitEnemy){
 					{
 						actuallyDead = true;	
 					}
-					/*
-					var dmgTaken = contactDmg
-					if other.race == 26//HUMPHRY mr damage
-					{
-						dmgTaken = scrHumphryDamage(dmgTaken);
-						if my_health - dmgTaken <= 0
-						{
-							actuallyDead = true;	
-						}
-					}
-					if other.ultra_got[105] && other.skill_got[8]
-					{
-						//Predict if its dead with the damage buff here.
-						dmgTaken = scrHandsDamageBuff(dmgTaken);
-						if my_health - dmgTaken <= 0
-						{
-							actuallyDead = true;	
-						}
-					}
-					if other.ultra_got[29] && other.altUltra && other.bwep == 0
-					{
-						dmgTaken = dmgTaken * 1.25;
-						if my_health - dmgTaken <= 0
-						{
-							actuallyDead = true;	
-						}
-					}
-					if other.skill_got[37] //&& hitEnemy.my_health >= hitEnemy.maxhealth
-				    {
-						var part = 0.3;
-						if other.race == 25 //Doctor
-							part = 0.35;
-						if other.ultra_got[62] && other.altUltra && other.armour > 0 && other.maxarmour > 0
-						{
-							//Living armour
-							if other.maxarmour > 1
-								dmgTaken *= 1 + (((other.armour - 1) / max(other.maxarmour - 1,2)) * part);
-							else
-								dmgTaken *= 1 + part;
-						}
-						else if other.my_health > 0 && other.maxhealth > 0
-						{
-							if other.maxhealth > 1
-								dmgTaken *= 1 + (((other.my_health - 1) / max(other.maxhealth - 1,2)) * part);
-							else
-								dmgTaken *= 1 + part;
-						}
-						if my_health - dmgTaken <= 0
-						{
-							actuallyDead = true;	
-						}
-					}
-					*/
 					sprite_index = spr_hurt
 					image_index = 0
 					if meleedamage > 0
 						motion_add(point_direction(other.x,other.y,x,y),0.4)
 					else
 						motion_add(point_direction(other.x,other.y,x,y),3)
-					scrSheepHit();
+					// scrSheepHit();
 				}
 				if (hitEnemy.my_health <= 0 && skill_got[8] || actuallyDead)//gamma guts kill?
 				{

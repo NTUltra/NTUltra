@@ -19,3 +19,8 @@ if !instance_exists(owner) {
 	else
 		instance_destroy();
 }
+else
+{
+	x = owner.x;
+	y = owner.y;	
+}

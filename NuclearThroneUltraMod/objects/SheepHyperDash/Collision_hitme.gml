@@ -12,7 +12,7 @@ with other
 	    sprite_index = spr_hurt;
 	    image_index = 0
 		motion_add(other.dashDir,20);
-		scrSheepHit();
+		// scrSheepHit();
 	}
 	
 }

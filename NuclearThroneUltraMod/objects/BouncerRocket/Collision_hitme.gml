@@ -1,18 +1,23 @@
 /// @description xxx
 if other.team != team
 {
-	instance_create(x+hspeed,y+vspeed,Explosion);
-	hspeed *= -1;
-	vspeed *= -1;
-	with other
+	//hspeed *= -1;
+	//vspeed *= -1;
+	if (!array_contains(hitEntities,other.id))
 	{
-		my_health -= 20
-		sprite_index = spr_hurt
-		image_index = 0
-		motion_add(other.direction,10)
+		var actualDmg =	scrCallculateFinalDamage(dmg);
+		var pierceDmg = actualDmg*0.5
+		if other.my_health < pierceDmg
+		{
+			instance_destroy();
+		}
+		hitEntities[array_length(hitEntities)] = other.id;
+		with other
+		{
+			my_health -= other.dmg
+			sprite_index = spr_hurt
+			image_index = 0
+			motion_add(other.direction,10)
+		}
 	}
-	snd_play(sndExplosion,0.1,true);
-	hits--;
-	if hits < 0
-		instance_destroy();
 }

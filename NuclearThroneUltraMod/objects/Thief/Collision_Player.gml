@@ -1,4 +1,6 @@
 /// @description steal shit
+if other.justAsheep
+	exit;
 if stolen<1
 {
 with other

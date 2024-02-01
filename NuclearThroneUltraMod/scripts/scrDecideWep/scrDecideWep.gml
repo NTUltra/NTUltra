@@ -1,4 +1,4 @@
-function scrDecideWep(wepTierParam, maxTriesParam = 8, cursedParam = 0, minWepAreaParam = 0/*, areaWepTries = 0*/) {
+function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepAreaParam = 0/*, areaWepTries = 0*/) {
 	var wepTier = wepTierParam - 1;
 	var maxTries = maxTriesParam;
 	var cursed = cursedParam;
@@ -80,7 +80,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 8, cursedParam = 0, minWepAr
 				}
 			}
 			until (
-				(wep_area[wep] == max(1,wepTier-tooBad) || triesForSpecificTier > maxTries || wep_area[wep] >= maxAreaGoodEnough)
+				(wep_area[wep] == max(1,wepTier-tooBad) || triesForSpecificTier > maxTries || (wep_area[wep] >= maxAreaGoodEnough && triesForSpecificTier > maxTries))
 				&& wep_area[wep] >= minWepArea && wep_area[wep] <= wepTier
 			)
 		}
@@ -98,7 +98,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 8, cursedParam = 0, minWepAr
 				infiniteTries --;
 			}
 			until (
-			(wep_area[wep] == wepTier || triesForSpecificTier > maxTries || wep_area[wep] >= maxAreaGoodEnough)
+			(wep_area[wep] == wepTier || triesForSpecificTier > maxTries || (wep_area[wep] >= maxAreaGoodEnough && triesForSpecificTier > maxTries))
 			&& wep_area[wep] >= minWepArea && wep_area[wep] <= wepTier
 			&& ( infiniteTries < 1 || (wep != dataRef.wep and wep != dataRef.bwep and wep != dataRef.cwep && !scrIsWeaponOnGround(wep)) || dataRef.race == 7/*roids can dual wield*/) 
 			)
