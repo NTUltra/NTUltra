@@ -34,7 +34,7 @@ repeat(4)
 	with instance_create(x,y,MiniFlameCannonBall)
 	{
 		image_angle=random(360);
-		motion_add(fbAng,3.5);
+		motion_add(fbAng,3.4);
 		team = other.team
 	}
 	fbAng += 90;

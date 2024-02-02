@@ -30,7 +30,7 @@ gunangle = point_direction(x,y,target.x,target.y)
 else
 gunangle = 0
 
-alarm[0] = 30
+alarm[0] = 20
 ammo = 15
 turn = choose(1,-1)
 walk = 0

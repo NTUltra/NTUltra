@@ -114,7 +114,7 @@ if (selected &&
 			ultra_name[19] = "KILL KILL KILL"
 			ultra_text[19] = "KILL KILL KILL"
 			ultra_tips[19] = "KILL KILL KILL"
-			canKillKillKill = true;
+			canKillKillKill = 2;
 		}
 	}
 	else if skill == 20 && Player.race == 5 && (scrIsCrown(23) && Player.skill_got[2] || Player.unlockAlternativeUltras)

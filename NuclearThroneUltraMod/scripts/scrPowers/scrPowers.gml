@@ -1988,41 +1988,28 @@ function scrPowers(raceOverwrite = -1) {
 			image_angle = direction
 			team = other.team}
 		}
-		else if altUltra  && canKillKillKill {
-			var i = 0;
+		else if altUltra  && canKillKillKill > 0 && !instance_exists(KillKill) {
 			BackCont.shake += 10;
 			with instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy)
 			{
 				if team != 2 && point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y) < 48
 				{
-					other.canKillKillKill = false;
+					other.canKillKillKill -= 1;
 					snd_play_2d(sndSharpTeeth);
-					with instance_create(x,y,SharpTeeth)
-					{
-						owner=other.id;
-						sprite_index = sprKillKillKill;
+					with instance_create(x,y,KillKill) {
+						owner = other.id;
+						target = other.object_index;
 					}
-					with object_index {
-						if team != 2
+					Sleep(50);
+					BackCont.shake += 10;
+					with other
+					{
+						if skill_got[5]
 						{
-							scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
-							repeat(mySize)
-								with instance_create(x,y,BloodStreak)
-								{
-									motion_add(random(360),8 + other.mySize)
-									image_angle = direction
-								}
-							my_health -= 300;
-							BackCont.shake += 2;
-							i += 1;
-							motion_add(point_direction(other.x,other.y,x,y),12);
-							with instance_create(x,y,SharpTeeth)
-								owner=other.id;
+							scrHeal(2)
+							snd_play(sndHealthPickup);
 						}
 					}
-					if i < 10
-						BackCont.shake += 20;
-					Sleep(100);
 				}
 			}
 			

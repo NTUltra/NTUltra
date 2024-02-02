@@ -67,3 +67,11 @@ if instance_exists(Player) && Player.chickenFocusInUse
 	draw_sprite_ext(sprRadial,0,l,t,(wp/256) * scale,(hp/256) * scale,0,c_white,1);
 	gpu_set_blendmode(bm_normal);
 }
+if instance_exists(KillKill) && KillKill.image_index > 2
+{
+	//gpu_set_blendmode_ext(bm_inv_src_colour, bm_src_colour);
+	gpu_set_blendmode(bm_subtract);
+	draw_sprite_ext(sprRadial,1,l,t,(wp/256) * scale,(hp/256) * scale,0,make_colour_rgb(0,255,255),
+	lerp(0.2,1,clamp((KillKill.image_index+1)/KillKill.image_number - 3,0,1)));
+	gpu_set_blendmode(bm_normal);
+}

@@ -27,15 +27,20 @@ if candrawoutline && UberCont.ctot_skill_taken[skill] > 0
 
 draw_set_valign(fa_bottom)
 draw_set_halign(fa_right)
-
+if instance_exists(Player) && Player.ultra_got[19] && Player.altUltra
+{
+	txt2 = "KILL KILL KILL";
+	skill_bons[skill] = "KILL KILL KILL";
+	skill_name[skill] = "KILL KILL KILL";
+	skill_text[skill] = "KILL KILL KILL";
+}
 if showDetail
 	txt2 = string(skill_name[skill])+"#"+string(skill_detail[skill])
 else	
 	txt2 = string(skill_name[skill])+"#"+string(skill_text[skill])
 var fulltxt = txt2;
 txt2 = scrReplaceAllColourCodes(txt2);
-if instance_exists(Player) && Player.ultra_got[19] && Player.altUltra
-	txt2 = "KILL KILL KILL";
+
 if selected
 {
 

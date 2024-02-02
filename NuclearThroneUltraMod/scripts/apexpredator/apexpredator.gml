@@ -2,7 +2,7 @@
 // /@description
 ///@param
 function ApexPredator(){
-	if Player.ultra_got[19] {
+	if Player.ultra_got[19] && !Player.altUltra {
 		with Player
 		{
 			if myShield == -1 || !instance_exists(myShield)

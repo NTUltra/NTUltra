@@ -9,6 +9,8 @@ function scrTips() {
 	//RANDOM
 	tip = choose(
 	"always move",
+	"green outline on mutations means#you have taken them before",
+	"try every mutation it will also unlock a gamemode",
 	"you can combine multiple gamemodes!",
 	"some enemies shoot through walls!",
 	"don't hold onto your early weapons for too long",
@@ -19,6 +21,8 @@ function scrTips() {
 	"enable detailed descriptions if you'd like to know the stats",
 	"all weapons are full auto\nbut tapping will make some fire faster",
 	"all weapons are auto",
+	"swap weapons for new ones",
+	"try some different weapon types",
 	"every mutant has atleast 5 ultras!",
 	"alternative routes are generally faster but harder",
 	"alternative routes are harder",
@@ -52,6 +56,7 @@ function scrTips() {
 	"armour blocks a full hit of damage",
 	"everything has been rebalanced compared to retail",
 	"rosebud",
+	"try some different crowns",
 	"for handling some enemies its best to keep distance",
 	"inverted areas are optional",
 	"it's not fair, it's not right",
@@ -93,6 +98,7 @@ function scrTips() {
 	"doing alright",
 	"let's have fun!",
 	"be kind",
+	"don't main anyone#just play everything!",
 	"scarier face has been changed",
 	"don't get complacent",
 	"there are a ton of gamemodes to unlock and try",
@@ -191,7 +197,6 @@ function scrTips() {
 	"try a different gamemode",
 	"there are a ton of gamemodes to unlock",
 	"you can view your available ultras in the options menu by pressing the green crown",
-	"angel can deflect contact damage",
 	"if you want to report a bug join the discord! <3",
 	"<3",
 	"secret ultras require a certain setup when you reach level ultra",
@@ -355,7 +360,8 @@ function scrTips() {
 	//CHARACTER BASED
 
 	if Player.race = 0
-	tip = choose("random shifts shapes","clearly the most powerful","never the same","shapeless","passive: anything","active: anything","noone compares","random...")
+	tip = choose("random shifts shapes","clearly the most powerful","never the same","shapeless","passive: anything","active: anything","noone compares","random..."
+	,"roll extends gamma guts range")
 
 	if Player.race = 1
 	tip = choose("last day before retirement","duty calls","it's ok to eat","gills on your neck","like kevin costner","rolling...","fish can play guitar")
@@ -467,7 +473,8 @@ function scrTips() {
 	tip = choose("ascend","the wall is not the enemy","fly over cars","you fly normally over all terrains","rogue guardian","you don't get pushed off of props",
 	"lava does not burn you because you fly","cobwebs dont slow you because you fly",
 	"I believe I can fly","don't serve gorillaman","angel can fly over lava","grow your wings","you can deflect melee damage","you can deflect contact damage","active costs less when#at or above full health",
-	"deflect can deal#gamma guts damage","you are immune while deflecting","you can deflect contact damage")
+	"deflect can deal#gamma guts damage","you are immune while deflecting","you can deflect contact damage",
+	"angel can deflect contact damage")
 
 	if Player.race = 19//SKELETON
 	tip = choose("hard","dusty","dry","nothing...","bones","blood gamble chance#depends on ammo cost","survive","do not give up","keep going","the body has 69 bones")
