@@ -932,7 +932,7 @@ if my_health <= 0 && armour < 1
 				}
 			}
 
-			myCorpse = instance_create(x,y,MovingCorpse)
+			myCorpse = instance_create(x,y,MovingCorpseDynamic)
 			with myCorpse
 			{
 			mySize = 2

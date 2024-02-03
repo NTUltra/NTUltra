@@ -241,9 +241,9 @@ if race = 3 and (KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2)
 {
 draw_sprite_ext(sprMindPower,wave,x,y,right,1,0,c_white,1)
 }
-else if ultra_got[10]=1
+else if ultra_got[10] && !altUltra
 {
-draw_sprite_ext(sprMonsterStyle,wave,x,y,right,1,0,c_white,1)
+	draw_sprite_ext(sprMonsterStyle,wave,x,y,right,1,0,c_white,1)
 }
 //else if ultra_got[11]=1// keep the animations goin on brainwashed enemies
 //{wave+=1;}

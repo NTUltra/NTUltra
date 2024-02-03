@@ -7,3 +7,4 @@ image_speed=0;
 
 image_xscale=choose(1,-1);
 
+depth = -9;

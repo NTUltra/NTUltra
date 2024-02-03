@@ -835,17 +835,6 @@ if !instance_exists(LevCont) and visible = 1
 		var holdKey = (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
 		if (((wep_auto[wep] == 0 || wep_auto[wep] == 2) and clicked = 1) || (autoFire < 1 && holdKey && !scrIsChargeWeapon(wep)))
 		{
-			if scrIsGamemode(48) && ammo[1] < 0
-			{
-				if armour > 0
-					armour -= 1;
-				else
-					my_health -= 2;
-				sprite_index = spr_hurt;
-				image_index = 0;
-				snd_play(snd_hurt);
-				exception = true;
-			}
 			if ultra_got[44] == 1 && instance_exists(Marker)
 			{
 				scrCrackShotFire();
@@ -1037,6 +1026,8 @@ if (!instance_exists(LevCont))
 	if reload > lowa
 	{
 		reload -= 1
+		if race == 7
+			reload += 0.1;
 		if curse {
 			reload -= 0.05;	
 		}
@@ -1176,7 +1167,6 @@ if (!instance_exists(LevCont))
 		}
 		if race == 7
 		{
-			reload += 0.1;
 			breload -= 0.9
 		}
 		scr60fpsReload();

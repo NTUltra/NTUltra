@@ -1,4 +1,5 @@
 alarm[0] = 1;
+depth = -7;
 dist = random(135)+10
 angle = random(360)
 turnspeed = random(8)-4

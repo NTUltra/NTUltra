@@ -17,9 +17,17 @@ else if skill == 9 && Player.race == 3 && (Player.unlockAlternativeUltras || scr
 {
 	sprite_index = sprEyesStrangeStyle;
 }
+else if skill == 10 && Player.race == 3 && (Player.unlockAlternativeUltras || (Player.skill_got[8] && scrIsCrown(1)))
+{
+	sprite_index = sprVoidStyle;
+}
 else if skill == 13 && Player.race == 4 && (Player.unlockAlternativeUltras || Player.maxhealth == 1)
 {
 	sprite_index = sprDeathStare;
+}
+else if skill == 19 &&  Player.race == 5 && (Player.unlockAlternativeUltras || scrIsCrown(7) || scrIsCrown(28) || scrIsGamemode(39))
+{
+	sprite_index = sprPlantKillKillKill;
 }
 else if skill == 20 &&  Player.race == 5 && (Player.unlockAlternativeUltras || scrIsCrown(23) && Player.skill_got[2])
 {

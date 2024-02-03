@@ -1,4 +1,5 @@
 var area;
+depth = 7;
 if instance_exists(SpiralCont) || instance_exists(GenCont)
 {
 	instance_destroy();

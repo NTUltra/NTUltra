@@ -13,26 +13,30 @@ with Player
 		with enem
 	    {
 			var dmg = 3;
+			var mover = 6;
 			if Player.race == 25
 				dmg = 4;
-	    if (my_health - dmg<=0)//gamma guts kill?
-	    {
-			my_health -= dmg
-			snd_play(sndGammaGutsKill,0,true);
-			with instance_create(x,y,GammaGutsBlast)
-			{
-				image_xscale = 1.5;
-				image_yscale = 1.5;
-			}
+		    if (my_health - dmg<=0)//gamma guts kill?
+		    {
+				my_health -= dmg
+				snd_play(sndGammaGutsKill,0,true);
+				with instance_create(x,y,GammaGutsBlast)
+				{
+					image_xscale = 1.5;
+					image_yscale = 1.5;
+				}
 
-	    } else if UberCont.normalGameSpeed == 60
-			my_health -= dmg * 0.5;
-		else
-			my_health -= dmg
-	    sprite_index = spr_hurt
-	    image_index = 0
-		if meleedamage == 0
-			motion_add(point_direction(other.x,other.y,x,y),6)
+		    } else if UberCont.normalGameSpeed == 60
+			{
+				my_health -= dmg * 0.5;
+				mover *= 0.5;
+			}
+			else
+				my_health -= dmg
+		    sprite_index = spr_hurt
+		    image_index = 0
+			if meleedamage == 0
+				motion_add(point_direction(other.x,other.y,x,y),mover)
     
 	    }
 	}

@@ -335,9 +335,17 @@ function scrDrawHUD() {
 			{
 				draw_sprite_ext(sprEyesStrangeStyleHUD,0,xx,yy,1,1,0,c_white,1);
 			}
+			else if dir == 10 && dataRef.altUltra && dataRef.race == 3
+			{
+				draw_sprite_ext(sprVoidStyleHUD,0,xx,yy,1,1,0,c_white,1);
+			}
 			else if dir == 13 && dataRef.altUltra && dataRef.race == 4
 			{
 				draw_sprite_ext(sprDeathStareHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 19 && dataRef.altUltra && dataRef.race == 5
+			{
+				draw_sprite_ext(sprPlantKillKillKillHUD,0,xx,yy,1,1,0,c_white,1);
 			}
 			else if dir == 20 && dataRef.altUltra && dataRef.race == 5
 			{

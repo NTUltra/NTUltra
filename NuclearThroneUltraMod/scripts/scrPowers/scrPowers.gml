@@ -1995,7 +1995,7 @@ function scrPowers(raceOverwrite = -1) {
 				if team != 2 && point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y) < 48
 				{
 					other.canKillKillKill -= 1;
-					snd_play_2d(sndSharpTeeth);
+					snd_play_2d(sndPlantKillKillKill,0,false,false,1);
 					with instance_create(x,y,KillKill) {
 						owner = other.id;
 						target = other.object_index;
@@ -3085,86 +3085,123 @@ function scrPowers(raceOverwrite = -1) {
 	//MIND CONTROL
 	if race == 3
 	{
-		if !audio_is_playing(sndEyesLoop) snd_loop(sndEyesLoop)
-
-		if !sound_isplaying(sndEyesLoopUpg) and Player.skill_got[5] =1 snd_loop(sndEyesLoopUpg)
 		var px = x;
 		var py = y;
 		var od = 180;
 		var ps = ultra_got[9] && altUltra;
 		var tb = skill_got[5];
 		var pp = ultra_got[12];
-		with chestprop
+		if ultra_got[10] && altUltra
 		{
-			scrEyesTelekinesis(ps,tb,px,py);
-		}
-		with Pickup
-		{
-			scrEyesTelekinesisThroughWalls(ps,pp,tb,px,py);
-		}
-		with RadChest
-		{
-			scrEyesTelekinesis(ps,tb,px,py);
-		}
-		with WepPickup
-		{
-			scrEyesTelekinesisThroughWalls(ps,pp,tb,px,py);
-		}
-	
-		if altUltra && ultra_got[9]
-		{
-			px = mouse_x;
-			py = mouse_y;
-			od = 0;
-			if !instance_exists(EyesCrosshair)
+			if (!instance_exists(VoidStyle))
 			{
-				instance_create(mouse_x,mouse_y,EyesCrosshair);	
-			}
-			else
-			{
-				with EyesCrosshair
+				var dis = 48;
+				snd_play(sndVoidStyle);
+				with enemy
 				{
-					x = mouse_x;
-					y = mouse_y;
+					if (point_distance(x,y,other.x,other.y) > dis)
+					{
+						scrEyesTelekinesis(true,tb*2 + 4,px,py);
+						motion_add(point_direction(x,y,px,py),8 + tb);
+					}
+				}
+				with projectile
+				{
+					if canBeMoved && team != other.team && point_distance(x,y,other.x,other.y) > dis
+					{
+						var spd = speed;
+						var minSpeed = min(spd,2);
+						scrEyesTelekinesis(true,tb*2 + 4,px,py);
+						motion_add(point_direction(x,y,px,py),8 + tb);
+						image_angle = direction;
+						speed = spd;
+					}
+				}
+				with instance_create(x,y,VoidStyle)
+				{
+					owner = other.id;
+					team = other.team;
 				}
 			}
 		}
-		with enemy
+		else
 		{
-			scrEyesTelekinesis(ps,tb,px,py);
-		}
-		with Sheep
-		{
-			scrEyesTelekinesis(ps,tb,px,py);
-		}
+			if !audio_is_playing(sndEyesLoop) snd_loop(sndEyesLoop)
 
-		var ts = 1.05+(Player.skill_got[5]*1.1);
-		if ultra_got[9] == 1 && altUltra
-			ts = 1.3+(Player.skill_got[5]*1.1);
-		with projectile
-		{
-			if canBeMoved && team != 2 //x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-			&& point_distance(x,y,other.x,other.y) < 250
+			if !sound_isplaying(sndEyesLoopUpg) and Player.skill_got[5] =1 snd_loop(sndEyesLoopUpg)
+			
+			with chestprop
 			{
-				var pd = point_direction(x,y,px,py)+od;
-				if !place_meeting(x+lengthdir_x(ts,pd),y,Wall)
+				scrEyesTelekinesis(ps,tb,px,py);
+			}
+			with Pickup
+			{
+				scrEyesTelekinesisThroughWalls(ps,pp,tb,px,py);
+			}
+			with RadChest
+			{
+				scrEyesTelekinesis(ps,tb,px,py);
+			}
+			with WepPickup
+			{
+				scrEyesTelekinesisThroughWalls(ps,pp,tb,px,py);
+			}
+	
+			if altUltra && ultra_got[9]
+			{
+				px = mouse_x;
+				py = mouse_y;
+				od = 0;
+				if !instance_exists(EyesCrosshair)
+				{
+					instance_create(mouse_x,mouse_y,EyesCrosshair);	
+				}
+				else
+				{
+					with EyesCrosshair
+					{
+						x = mouse_x;
+						y = mouse_y;
+					}
+				}
+			}
+			with enemy
+			{
+				scrEyesTelekinesis(ps,tb,px,py);
+			}
+			with Sheep
+			{
+				scrEyesTelekinesis(ps,tb,px,py);
+			}
+
+			var ts = 1.05+(Player.skill_got[5]*1.1);
+			if ultra_got[9] == 1 && altUltra
+				ts = 1.3+(Player.skill_got[5]*1.1);
+			with projectile
+			{
+				if canBeMoved && team != 2 //x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+				&& point_distance(x,y,other.x,other.y) < 250
+				{
+					var pd = point_direction(x,y,px,py)+od;
+					if !place_meeting(x+lengthdir_x(ts,pd),y,Wall)
+						x += lengthdir_x(ts,pd)
+					if !place_meeting(x,y+lengthdir_y(ts,pd),Wall)
+						y += lengthdir_y(ts,pd)
+				}
+			}
+			with Explosion
+			{
+				if point_distance(x,y,other.x,other.y) < 250//x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) && team != 2
+				{
+					var pd = point_direction(x,y,px,py)+od;
 					x += lengthdir_x(ts,pd)
-				if !place_meeting(x,y+lengthdir_y(ts,pd),Wall)
 					y += lengthdir_y(ts,pd)
+				}
 			}
-		}
-		with Explosion
-		{
-			if point_distance(x,y,other.x,other.y) < 250//x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) && team != 2
-			{
-				var pd = point_direction(x,y,px,py)+od;
-				x += lengthdir_x(ts,pd)
-				y += lengthdir_y(ts,pd)
-			}
-		}
 
-		if ultra_got[9] == 1 && !altUltra {//eyes Projectile Style ULTRA A
-			scrProjectileStyle(team, px, py);
+			if ultra_got[9] == 1 && !altUltra {//eyes Projectile Style ULTRA A
+				scrProjectileStyle(team, px, py);
+			}
 		}
 	}
 
@@ -3295,7 +3332,7 @@ function scrPowers(raceOverwrite = -1) {
 	}
 
 	}
-	else if ultra_got[10]=1{
+	else if ultra_got[10] && !altUltra{
 		var ps = ultra_got[9] && altUltra;
 		var tb = skill_got[5];
 		var px = x;

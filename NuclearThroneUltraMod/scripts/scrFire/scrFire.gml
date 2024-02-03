@@ -8,6 +8,17 @@ function scrFire() {
 	reload = min(reload + wep_load[wep],wep_load[wep]);
 	if (object_index == Player)
 	{
+		if scrIsGamemode(48) && ammo[1] < 0
+		{
+			if armour > 0
+				armour -= 1;
+			else
+				my_health -= 2;
+			sprite_index = spr_hurt;
+			image_index = 0;
+			snd_play(snd_hurt);
+			exception = true;
+		}
 		if wep_load[wep] > 4 && reload < 0
 		{
 			canPuffyCheek = 3;
@@ -1092,9 +1103,9 @@ function scrFire() {
 	image_angle = direction
 	team = other.team}
 
-	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
-	BackCont.shake += 4
+	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3.4
 	wkick = 4
 
 	break;

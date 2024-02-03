@@ -420,7 +420,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 			}
 		}
 	}
-	if scrIsGamemode(48) {
+	if scrIsGamemode(48) {//Marksman
 		with Player
 		{
 			//AMMO REGEN MUTS & wepspes and other useless ones
@@ -596,4 +596,20 @@ if scrIsGamemode(32) {
 		}
 	}
 }
+if scrIsGamemode(48) {//Marksman
+		with Player
+		{
+			//AMMO REGEN MUTS & wepspes and other useless ones
+			skill_got[6] =  0;
+			skill_got[10] = 0;
+			skill_got[13] = 0;
+			skill_got[15] = 0;
+			skill_got[16] = 0;
+			skill_got[17] = 0;
+			skill_got[21] = 0;
+			skill_got[23] = 0;
+			skill_got[40] = 0;
+			skill_got[42] = 0;
+		}
+	}
 SetSeed();

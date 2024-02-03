@@ -75,3 +75,15 @@ if instance_exists(KillKill) && KillKill.image_index > 2
 	lerp(0.2,1,clamp((KillKill.image_index+1)/KillKill.image_number - 3,0,1)));
 	gpu_set_blendmode(bm_normal);
 }
+if instance_exists(VoidStyle) && VoidStyle.image_index < 8
+{
+	gpu_set_blendmode(bm_subtract);
+	var a = 1;
+	var voidTime = 0;
+	if VoidStyle.existTime > 0
+		voidTime = sin((VoidStyle.existTime/(VoidStyle.totalTime*0.5))*1.57);
+	a = lerp(0,1,clamp(voidTime,0,1));
+	if a > 0
+	draw_sprite_ext(sprRadial,0,l,t,(wp/256) * scale,(hp/256) * scale,0,c_white,a);
+	gpu_set_blendmode(bm_normal);
+}

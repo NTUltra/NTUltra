@@ -76,11 +76,17 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_name[10] = "MONSTER STYLE"
 	ultra_text[10] = "WHEN NOT USING ACTIVE#PUSH ENEMIES AWAY"
 	ultra_tips[10] = "repellent"
+	if altOverride || (instance_exists(Player) && (Player.altUltra || Player.unlockAlternativeUltras || (Player.skill_got[8] && scrIsCrown(1) && instance_exists(UltraIcon))))
+	{
+		ultra_name[10] = "VOID STYLE"
+		ultra_text[10] = "YOUR ACTIVE CHANGES INTO <p>VOID<p> <w>PULL<w>#BURST PULL ALL <r>ENEMIES<r>#AND <r>ENEMY<r> <w>PROJECTILES<w> TOWARDS YOU#CREATE A <p>VOID<p> <w>CIRCLE<w> AROUND YOURSELF#THAT CONSUMES PROJECTILES#AND DEALS DAMAGE TO ENEMIES"
+		ultra_tips[10] = "see into the void"
+	}
 
 	ultra_name[11] = "BRAIN STYLE"
 	ultra_text[11] = "FULLY SEE IN THE <p>DARK<p>#SOME ENEMIES ATTACK OTHER ENEMIES"
 	ultra_tips[11] = "brain style works on bosses!"
-
+	
 	ultra_name[12] = "PSYCHONAUT STYLE"//thats a refrence
 	ultra_text[12] = "TELEKINESIS ATTRACTS#<r>HP<r>/<y>AMMO<y> DROPS, <g>RADS<g> & <w>WEAPONS<w>#THROUGH <w>WALLS<w>#INCREASED <r>HP<r>/<y>AMMO<y> ATTRACTION SPEED"
 	ultra_tips[12] = "never miss a drop"

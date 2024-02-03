@@ -1,5 +1,10 @@
 if visible
 {
+	with other
+	{
+		if sprite_index == sprProtoPortalDormant || sprite_index == sprInvertedPortalDormant
+			exit;
+	}
 	persistent = true
 	var portalDepth = - 5;
 	if instance_exists(Portal)

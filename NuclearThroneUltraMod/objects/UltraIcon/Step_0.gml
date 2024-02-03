@@ -94,6 +94,16 @@ if (selected &&
 			}
 		}
 	}
+	else if skill == 10 && Player.race == 3 && Player.skill_got[8] && scrIsCrown(1)// Void style
+	{
+		with Player {
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			altUltra = true;
+			ultra_name[10] = "VOID STYLE"
+			ultra_text[10] = "YOUR ACTIVE CHANGES INTO <p>VOID<p> <w>PULL<w>#BURST PULL ALL <r>ENEMIES<r>#AND <r>ENEMY<r> <w>PROJECTILES<w> TOWARDS YOU#CREATE A <p>VOID<p> <w>CIRCLE<w> AROUND YOURSELF#THAT CONSUMES PROJECTILES#AND DEALS DAMAGE TO ENEMIES"
+			ultra_tips[10] = "see into the void"
+		}
+	}
 	else if skill == 13 &&  Player.race == 4 && (Player.maxhealth == 1 || Player.unlockAlternativeUltras)
 	{
 		with Player {

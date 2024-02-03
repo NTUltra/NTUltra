@@ -2672,7 +2672,6 @@ function scrWeapons() {
 	wep_text[238] = "the blades split..."
 	wep_swap[238] = sndSwapBow
 	wep_rad[238] = 0;
-	wep_popup[238] = "TURNS ENEMIES#INTO SHEEP!";
 
 	wep_name[239] = "ROCKET GLOVE"
 	wep_type[239] = 4
@@ -5338,6 +5337,7 @@ function scrWeapons() {
 	wep_text[475] = "damage increases as bullet exists longer"
 	wep_swap[475] = sndSwapPistol
 	wep_rad[475] = 0;
+	wep_popup[475] = "MORE DAMAGE AT RANGE";
 	
 	wep_name[476] = "AUTO ACCELERATOR"
 	wep_type[476] = 1

@@ -1,10 +1,10 @@
-
+depth = 7;
 image_angle = random(360)
 motion_add(image_angle,random(2))
 friction = 0.3
 image_speed = 0
 image_index = irandom(5)
-
+depth = 1;
 image_xscale = 0.7
 image_yscale = 0.7
 rot = 1 + random_range(-3,3);

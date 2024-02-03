@@ -1,6 +1,5 @@
 /// @description MAIN
 with owner {
-	snd_play(sndExplosionXXL);
 	scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
 	repeat(mySize)
 		with instance_create(x,y,BloodStreak)

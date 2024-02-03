@@ -9,7 +9,7 @@ function scrDeflectNade(deflectDirection){
 		
 		alarm[8] = 15;
 		gotHit = true;
-		team=other.team;
+		team = other.team;
 		direction = deflectDirection;
 		speed = 12
 		friction = 0.1

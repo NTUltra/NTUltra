@@ -33,6 +33,7 @@ function scrTranslateUltraToSecretStat(chosenUltra, bskin) {
 		case 97: return 29;
 		case 104: return 30;
 		case 19: return 33;
+		case 10: return 34;
 		case 106:
 			if bskin == 1
 				return 31;

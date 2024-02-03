@@ -6,7 +6,7 @@ scrRogueTarget()
 else
 scrTarget();
 
-if target != noone
+if target != noone && instance_exists(target)
 {
 
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 && point_distance(x,y,target.x,target.y) < 400

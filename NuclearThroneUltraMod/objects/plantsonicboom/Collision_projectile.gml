@@ -21,7 +21,7 @@ else if team != other.team
 		with other
 			event_user(15);
 	}
-	else
+	else if typ != 0
 	{
 		snd_play(sndProjectileDestroy,0.1,true);
 		BackCont.shake += 1;

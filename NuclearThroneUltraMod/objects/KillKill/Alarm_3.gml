@@ -1,5 +1,6 @@
 /// @description Shake Shake
-BackCont.shake += 3;
+BackCont.shake += 6;
+var dir = 0;
 if instance_exists(Player)
 {
 	dir = point_direction(x,y,Player.x,Player.y);	

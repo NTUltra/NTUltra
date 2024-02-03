@@ -2,5 +2,5 @@
 
 // Inherit the parent event
 event_inherited();
-dmg = 2;
+dmg = 3;
 image_speed = 0.4;
