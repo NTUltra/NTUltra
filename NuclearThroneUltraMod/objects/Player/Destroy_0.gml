@@ -385,6 +385,7 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 	gunGameKill = other.gunGameKill;
 	canCrownOfProtection = other.canCrownOfProtection;
 	gotMinimumArmour = other.gotMinimumArmour;
+	freeArmourStrike = other.freeArmourStrike;
 	if other.ultra_got[87] && other.altUltra && other.rogueammo > 0
 	{
 		skeletonlives = other.skeletonlives

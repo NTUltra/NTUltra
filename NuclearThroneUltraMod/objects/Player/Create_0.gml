@@ -192,7 +192,14 @@ microseconds = 0;
 seconds = 0;
 movethislevel = false;
 secretlevelcount = 0;
-acceleration = 3;
+newMovement = true;
+acceleration = 3;//3
+brakingFriction = 0.25;
+vSlide = 0;
+hSlide = 0;
+wallSlideSpeed = 0.4;
+wallSlideTime = 0.02;
+slideEnd = 0.05;
 flipDir = 1;
 weaponspickedup = 0;
 screenshake400 = true;
@@ -734,7 +741,8 @@ if race == 6 || race == 20 {
     RadMony = true; //this will be a small chance
 }
 SetSeed();
-friction = 0.45
+myFriction = 0.45;
+friction = myFriction
 image_speed = 0.4
 // I AM A CHEATER ammo[5] = 99 wep = 19
 

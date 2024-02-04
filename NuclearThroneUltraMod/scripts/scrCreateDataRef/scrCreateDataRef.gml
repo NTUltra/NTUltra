@@ -27,6 +27,7 @@ function scrCreateDataRef(){
 		armour = 0;
 		maxarmour = other.maxarmour;
 		hudArmourSpace = other.hudArmourSpace;
+		freeArmourStrike = other.freeArmourStrike;
 		race = other.race;
 		copyPassive = other.copyPassive;
 		rogueammo = other.rogueammo;

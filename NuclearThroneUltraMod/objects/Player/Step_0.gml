@@ -69,7 +69,6 @@ else if scrIsGamemode(48)
 	representingCost = 0;
 	ignoreAmmo = true;
 }
-
 if !instance_exists(LevCont) and visible = 1
 {
 	if canMove
@@ -131,6 +130,13 @@ if !instance_exists(LevCont) and visible = 1
 				}
 				else
 					vspeed += acc;
+			}
+			if (newMovement)
+			{
+				if is60fps && speed > brakingFriction * 0.5
+					speed -= brakingFriction * 0.5
+				else if !is60fps && speed > brakingFriction
+					speed -= brakingFriction;	
 			}
 			if ultra_got[20] && altUltra
 			{
@@ -370,7 +376,7 @@ if !instance_exists(LevCont) and visible = 1
 	if UberCont.public==0 && !keyboard_check(vk_control) && !keyboard_check(vk_shift){
 	//hacks
 		if keyboard_check_pressed(ord("V")) {
-			
+			newMovement = !newMovement;
 			isPermanent = true;
 			var dangle = random(1)*360;
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
@@ -380,12 +386,12 @@ if !instance_exists(LevCont) and visible = 1
 			Sleep(100);
 			//scrn++;
 			
-			instance_create(f.x + 16,f.y + 16,BigWallBreak)
-			instance_create(f.x,f.y,IDPDTank)
-			instance_create(f.x,f.y + 192,IDPDTankDown)
 
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "TANKS!";
+			if newMovement
+			thing.mytext = "newMovement: " ;
+			else
+			thing.mytext = "OLD Movement: " ;
 		}
 		if keyboard_check_pressed(ord("C")) {
 			var dangle = random(1)*360;
@@ -1562,7 +1568,7 @@ if (!outOfCombat and !instance_exists(LevCont) and !instance_exists(FloorMaker))
 				else if gs == sprFloor4B || gs == sprFloor115B //Spider webs
 					friction = 1.8;
 				else
-					friction = 0.45
+					friction = myFriction
 				if (gs == sprFloor111B)
 					speed+=1;
 			}
@@ -2313,12 +2319,21 @@ if hammerheadcounter > 0
 }
 //COLLISION
 var hitWall = false;
+if vspeed != 0
+	vSlide = vspeed;
+if hspeed != 0
+	hSlide = hspeed;
+var vs = sign(vSlide);
+var hs = sign(hSlide);
+var slideDis = 2;
 if(race != 18)
 {
+	var dt = 1;
+	if is60fps
+		dt = 0.5;
 	var h = sign(hspeed);
 	if place_meeting(x+hspeed+h,y,WallHitMe)
 	{
-		//x -= hspeed;
 		var hi = 0;
 		var maxh = hspeed + 2;
 		while(!place_meeting(x+h,y,WallHitMe) && hi < maxh)
@@ -2327,12 +2342,27 @@ if(race != 18)
 			hi ++;
 		}
 		hspeed = 0;
+		var abV = abs(vSlide);
+		if (abV < 0.5)
+		{
+			var sv = sign(vSlide);
+			var vstep = wallSlideSpeed * sign(vSlide);
+			if !place_meeting(x,y + vstep,WallHitMe)
+				y += vstep;
+			if abV > slideEnd
+			{
+				vSlide -= wallSlideTime * sv * dt;
+			}
+			else
+			{
+				vSlide = 0;	
+			}
+		}
 		hitWall = true;
 	}
 	var v = sign(vspeed);
 	if place_meeting(x,y+vspeed+v,WallHitMe)
 	{
-		//y -= vspeed;
 		var vi = 0;
 		var maxv = hspeed + 2;
 		while(!place_meeting(x,y+v,WallHitMe) && vi < maxv)
@@ -2342,6 +2372,22 @@ if(race != 18)
 		}
 		vspeed = 0;
 		hitWall = true;
+		var abH = abs(hSlide);
+		if (abH < 0.5)
+		{
+			var sh = sign(hSlide);
+			var hstep = wallSlideSpeed * sh;
+			if !place_meeting(x + hstep,y,WallHitMe)
+				x += hstep;
+			if abH > slideEnd
+			{
+				hSlide -= wallSlideTime * sh * dt;
+			}
+			else
+			{
+				hSlide = 0;	
+			}
+		}
 	}
 }
 else if place_meeting(x,y,WallHitMe)
@@ -2349,6 +2395,11 @@ else if place_meeting(x,y,WallHitMe)
 	hitWall = true;
 	flying = 2;
 	mask_index = mskPickupThroughWall;
+}
+if !hitWall
+{
+	vSlide = 0;
+	hSlide = 0;
 }
 if hitWall && sprite_index != spr_hurt && alarm[3] < 1 && hammerheadcounter < 1 && scrIsGamemode(4)
 {	

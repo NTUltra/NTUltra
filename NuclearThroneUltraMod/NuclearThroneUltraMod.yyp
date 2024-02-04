@@ -3958,6 +3958,7 @@
     {"id":{"name":"sprNewGuardianIdle","path":"sprites/sprNewGuardianIdle/sprNewGuardianIdle.yy",},},
     {"id":{"name":"EnemyCrownOfDeath","path":"objects/EnemyCrownOfDeath/EnemyCrownOfDeath.yy",},},
     {"id":{"name":"sprExplosiveWazerRifle","path":"sprites/sprExplosiveWazerRifle/sprExplosiveWazerRifle.yy",},},
+    {"id":{"name":"sprSerpentHUD","path":"sprites/sprSerpentHUD/sprSerpentHUD.yy",},},
     {"id":{"name":"InvertedVulture","path":"objects/InvertedVulture/InvertedVulture.yy",},},
     {"id":{"name":"scrHasAllStartingWeapons","path":"scripts/scrHasAllStartingWeapons/scrHasAllStartingWeapons.yy",},},
     {"id":{"name":"mskShank","path":"sprites/mskShank/mskShank.yy",},},

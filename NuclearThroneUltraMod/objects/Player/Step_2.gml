@@ -605,7 +605,7 @@ if (tookHit)
 				my_health = min(maxhealth,prevhealth+healTaken);
 			}
 			else
-				my_health = prevhealth;
+				my_health += damageTaken;
 			
 			with instance_create(x,y,SharpTeeth)
 				owner=other.id;

@@ -3648,6 +3648,7 @@
     {"name":"sprNewGuardianIdle","order":4,"path":"sprites/sprNewGuardianIdle/sprNewGuardianIdle.yy",},
     {"name":"EnemyCrownOfDeath","order":19,"path":"objects/EnemyCrownOfDeath/EnemyCrownOfDeath.yy",},
     {"name":"sprExplosiveWazerRifle","order":289,"path":"sprites/sprExplosiveWazerRifle/sprExplosiveWazerRifle.yy",},
+    {"name":"sprSerpentHUD","order":25,"path":"sprites/sprSerpentHUD/sprSerpentHUD.yy",},
     {"name":"InvertedVulture","order":7,"path":"objects/InvertedVulture/InvertedVulture.yy",},
     {"name":"scrHasAllStartingWeapons","order":32,"path":"scripts/scrHasAllStartingWeapons/scrHasAllStartingWeapons.yy",},
     {"name":"mskShank","order":6,"path":"sprites/mskShank/mskShank.yy",},

@@ -109,7 +109,11 @@ function scrDrawHUD() {
 		dir++;
 		draw_sprite(sprArmour,dir > armour ? 1 : 0,vx+armourX+(15*dir),vy+4);
 	}
-
+	if dataRef.race == 16 && dataRef.skill_got[5]
+	{
+		dir++;
+		draw_sprite(sprSerpentHUD,dataRef.freeArmourStrike ? 0 : 1,vx+armourX+(15*dir),vy+4);
+	}
 
 	//ROGUE AMMO
 	if (dataRef.race=22 || dataRef.copyPassive == 22) && dataRef.ultra_got[88] != 1
