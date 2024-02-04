@@ -7,7 +7,7 @@ if other.team != team && (!inArray || other.sprite_index != other.spr_hurt)
 	alarm[1] = hitDelay;
 	with other
 	{
-		my_health-=other.dmg;
+		my_health -= other.dmg;
 		snd_play(snd_hurt, hurt_pitch_variation)
 		sprite_index = spr_hurt
 		image_index = 0

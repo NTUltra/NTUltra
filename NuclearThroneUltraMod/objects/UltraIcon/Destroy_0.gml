@@ -6,6 +6,6 @@ if instance_exists(Player)
 	}
 	if (scrIsGamemode(30) && Player.level == 1 && Player.skillsChosen > -1)
 	{
-		Player.skillsChosen=-1;
+		Player.skillsChosen = 0;
 	}
 }

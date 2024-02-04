@@ -3,7 +3,7 @@ if other.team != team && other.team!=2
 	with other
 	{
 		if other.team != 0
-			scrModHit();
+			scrModHit(other);
 		if sprite_index != spr_hurt
 			snd_play(snd_hurt, hurt_pitch_variation,true)
 
@@ -19,7 +19,7 @@ if other.team != team && other.team!=2
 			if UberCont.normalGameSpeed == 60
 				my_health -= other.dmg * 0.5;
 			else
-				my_health-=other.dmg;
+				my_health -= other.dmg;
 		}
 
 		sprite_index = spr_hurt

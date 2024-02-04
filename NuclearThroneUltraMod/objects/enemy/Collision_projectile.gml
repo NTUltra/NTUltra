@@ -1,7 +1,5 @@
-if(instance_exists(Player)) {
-	if other.team != team
-	{
-		//WEAPON MODS!
-		scrModHit();
-	}
+/// @description Weapon mod and others
+if team != other.team
+{
+	scrModHit(other);	
 }

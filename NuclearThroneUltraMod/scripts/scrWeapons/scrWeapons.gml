@@ -2091,7 +2091,7 @@ function scrWeapons() {
 	wep_name[187] = "ASSAULT SEEKER SHOTGUN"
 	wep_type[187] = 3
 	wep_auto[187] = 2
-	wep_load[187] = 85
+	wep_load[187] = 65
 	wep_cost[187] = 9
 	wep_sprt[187] = sprAssaultSeekerShotgun
 	wep_area[187] = 13
@@ -3613,7 +3613,7 @@ function scrWeapons() {
 	wep_name[323] = "THUNDER KRAKEN"
 	wep_type[323] = 5
 	wep_auto[323] = 0
-	wep_load[323] = 23
+	wep_load[323] = 20
 	wep_cost[323] = 2
 	wep_sprt[323] = sprThunderCrack
 	wep_area[323] = 9
@@ -5041,7 +5041,7 @@ function scrWeapons() {
 	wep_name[449] = "POP WALL"
 	wep_type[449] = 2
 	wep_auto[449] = 0
-	wep_load[449] = 14
+	wep_load[449] = 8
 	wep_cost[449] = 2
 	wep_sprt[449] = sprPopWall
 	wep_area[449] = 12
@@ -6962,8 +6962,8 @@ function scrWeapons() {
 	wep_name[623] = "BOUNCER WAVE CROSSBOW"
 	wep_type[623] = 3
 	wep_auto[623] = 3
-	wep_load[623] = 35
-	wep_cost[623] = 5
+	wep_load[623] = 30
+	wep_cost[623] = 4.5
 	wep_sprt[623] = sprBouncerWaveCrossbow
 	wep_area[623] = 8
 	wep_text[623] = "boink poink"
@@ -8033,7 +8033,7 @@ function scrWeapons() {
 	wep_name[719] = "RED SCYTHE"
 	wep_type[719] = 0
 	wep_auto[719] = 1
-	wep_load[719] = 30
+	wep_load[719] = 25
 	wep_cost[719] = 0
 	wep_sprt[719] = sprSniperScythe
 	wep_area[719] = 13
@@ -8051,6 +8051,17 @@ function scrWeapons() {
 	wep_text[720] = "rogue power"
 	wep_swap[720] = sndSwapExplosive
 	wep_rad[720] = 0;
+	
+	wep_name[721] = "SPADER"
+	wep_type[721] = 0
+	wep_auto[721] = 2
+	wep_load[721] = 46
+	wep_cost[721] = 0
+	wep_sprt[721] = sprSpader
+	wep_area[721] = 11
+	wep_text[721] = "shoveling"
+	wep_swap[721] = sndSwapHammer
+	wep_rad[721] = 0;
 
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

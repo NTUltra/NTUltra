@@ -46,7 +46,7 @@ if instance_exists(Player)
 				scrRecycleGland(cost,radCost);
 			}
 			if team != 0
-				scrModHit();
+				scrModHit(other);
 		}
 	}
 	speed = 0;

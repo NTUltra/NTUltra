@@ -23,7 +23,7 @@ image_speed = 0.4;
 
 //behavior
 walk = 0
-alarm[1] = 30+random(90)
+alarm[1] = 110
 alarm[3] = 10 + irandom(10);
 maxSpeed = 3.8;//4.6
 actTime = 12;//9

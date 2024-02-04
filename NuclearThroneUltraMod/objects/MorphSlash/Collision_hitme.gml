@@ -17,7 +17,7 @@ if other.team != team && (!inArray || other.sprite_index != other.spr_hurt)
 
 	with other
 	{
-		my_health-=other.dmg;
+		my_health -= other.dmg;
 		instance_create(x,y,Morph);
 		snd_play(snd_hurt, hurt_pitch_variation)
 		sprite_index = spr_hurt

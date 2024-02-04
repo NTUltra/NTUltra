@@ -6,7 +6,7 @@ if instance_exists(Player)
 		sprite_index=sprRogueCExplosion;
 }
 
-dmg = 9;
+dmg = 10;
 
 //Crown of death
 if instance_exists(Player) && scrIsCrown(3) && object_index == RogueExplosion

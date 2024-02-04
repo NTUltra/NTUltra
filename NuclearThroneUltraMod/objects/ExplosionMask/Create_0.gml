@@ -1,6 +1,7 @@
 /// @description dmg
 image_speed = 0.4;
 dmg = 4;
+isEasy = false;
 if scrIsGamemode(9)//CASUAL MODE
 {
 	dmg = 4;

@@ -1,3 +1,8 @@
+raddrop = 2
+maxhealth = 100
+meleedamage = 0
+mySize = 1
+event_inherited();
 friction = 0.45
 image_speed = 0.4
 totemBuffed = false;

@@ -20,6 +20,7 @@ if instance_exists(Player) && Player.ultra_got[106]
 		snd_play(sndIDPDNadeExplo,0.1,true);
 		var d = point_direction(creator.x,creator.y,touchpointX,touchpointY);
 		with instance_create(x+lengthdir_x(24,d),y+lengthdir_y(24,d),RogueExplosion) {
+			dmg -= 1;
 			sprite_index=sprRogueExplosion;
 		}
 	}

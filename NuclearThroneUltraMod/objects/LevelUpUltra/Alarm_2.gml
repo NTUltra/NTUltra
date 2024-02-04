@@ -1,6 +1,6 @@
 /// @description BIg lightning
 BackCont.shake += 10;
-Sleep(20);
+Sleep(30);
 with Player
 {
 	snd_play_2d(sndThunder);

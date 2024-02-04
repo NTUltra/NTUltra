@@ -9,6 +9,7 @@ function scrTips() {
 	//RANDOM
 	tip = choose(
 	"always move",
+	"you can swap cursed weapons#with other cursed weapons",
 	"green outline on mutations means#you have taken them before",
 	"try every mutation it will also unlock a gamemode",
 	"you can combine multiple gamemodes!",

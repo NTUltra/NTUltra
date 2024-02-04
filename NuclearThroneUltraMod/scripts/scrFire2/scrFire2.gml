@@ -9027,7 +9027,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 	{
-	dmg = 28
+	dmg = 30
 	sprite_index=sprVeryHeavySlash;
 	longarms = 0
 	
@@ -9037,7 +9037,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),EnergyHammerSlash)
 	{
-	dmg = 24
+	dmg = 26
 	sprite_index=sprVeryHeavySlash;
 	longarms = 0
 	
@@ -9047,7 +9047,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-50*Player.accuracy),EnergyHammerSlash)
 	{
-	dmg = 24
+	dmg = 26
 	sprite_index=sprVeryHeavySlash;
 	longarms = 0
 	
@@ -15115,7 +15115,7 @@ function scrFire2(hasTailNow) {
 	}
 	break;
 	
-	//SNIPER SCYTHE
+	//RED SCYTHE
 	case 719:
 
 	snd_play_fire(choose(sndSword1,sndSword2))
@@ -15196,6 +15196,20 @@ function scrFire2(hasTailNow) {
 		BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake
 		BackCont.shake += 30
 		wkick = 8
+	break;
+	
+	//SPADER
+	case 721:
+
+	with instance_create(x,y,ShovelBurst)
+	{
+		creator = other.id
+		ammo = 6
+		time = 3
+		team = other.team
+		event_perform(ev_alarm,0)
+	}
+
 	break;
 	
 	}//end of switch part 2!

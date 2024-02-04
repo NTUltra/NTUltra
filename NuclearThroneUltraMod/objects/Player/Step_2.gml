@@ -1,4 +1,51 @@
 /// @description WepPickup
+/*
+if instance_number(projectile) < instance_number(enemy)
+{
+	with projectile {
+		if other.team == team
+		{
+			var enems = ds_list_create();
+			x += hspeed;
+			y += vspeed;
+			var al = instance_place_list(x,y,enemy,enems,false);
+			for (var i = 0; i < al; i++)
+			{
+				//WEAPON MODS!
+				with enems[| i]
+				{
+					scrModHit(other);
+				}
+			}
+			x -= hspeed;
+			y -= vspeed;
+		}
+	}
+}
+else
+{
+	with enemy
+	{
+		if other.team != team
+		{
+			var xScale = image_xscale;
+			var yScale = image_yscale;
+			image_xscale *= 4;
+			image_yscale *= 4;
+			var projectiles = ds_list_create();
+			var al = instance_place_list(x,y,projectile,projectiles,false);
+			debug("low enemy ",al);
+			for (var i = 0; i < al; i++)
+			{
+				//WEAPON MODS!
+				scrModHit(projectiles[| i]);
+			}
+			image_xscale = xScale;
+			image_yscale = yScale;
+		}
+	}
+}
+*/
 if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists(GenCont) && !instance_exists(LevCont)  && !instance_exists(SpiralCont){
 
 	targetPickup = instance_nearest(x,y,WepPickup);

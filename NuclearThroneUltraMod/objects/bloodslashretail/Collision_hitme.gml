@@ -11,7 +11,7 @@ if other.team != team
 		alarm[1] = hitDelay;
 		with other
 		{
-			my_health-=other.dmg;
+			my_health -= other.dmg;
 			if other.alarm[2] < 1
 				instance_create(x,y,MeatExplosion);
 			snd_play(snd_hurt, hurt_pitch_variation)

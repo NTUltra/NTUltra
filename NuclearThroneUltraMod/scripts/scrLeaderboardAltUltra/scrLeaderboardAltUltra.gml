@@ -12,8 +12,14 @@ function scrLeaderboardAltUltra(ultraMutation){
 		case 9:
 		return sprEyesStrangeStyleHUD;
 		break;
+		case 10:
+		return sprVoidStyleHUD;
+		break;
 		case 13:
 		return sprDeathStareHUD;
+		break;
+		case 19:
+		return sprPlantKillKillKillHUD;
 		break;
 		case 20:
 		return sprPlantSonicSpeedHUD;

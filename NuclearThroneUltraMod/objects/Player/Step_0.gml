@@ -1452,6 +1452,7 @@ if  ultra_got[40]=1//Ultra D
 		canrebel = 1
 }
 var tempMaxSpeed = 0;
+tempMaxSpeed += 0.1;//A minor speed boost to all for the game feel
 if ultra_got[108] && place_meeting(x,y,HandTrail)
 {
 	tempMaxSpeed += 1;
@@ -1956,7 +1957,7 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 		{
 			sprite_index = sprExtraFeetCloseDodge;	
 		}
-		if scrDrop(70,5) != noone
+		if scrDrop(60,5) != noone
 			snd_play(sndExtraFeetDodge);
 		else
 			snd_play(sndExtraFeetDodgeFail);

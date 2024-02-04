@@ -30,6 +30,12 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 	draw_text(xxxx,yyy-28,"ULTRA MUTATIONS");
 	switch (race)
 	{
+		case 3:		//Eyes
+			am ++;
+		break;
+		case 5:		//Plant
+			am ++;
+		break;
 		case 9:		//Chicken
 			am ++;
 		break;
@@ -184,6 +190,24 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 		{
 			switch (race)
 			{
+				case 3:
+					var u = 34;
+					name = string_hash_to_newline(secret_ultra_name[u]);
+					text = secret_ultra_text[u];
+					canShowThis = UberCont.ctot_secret_ultra_taken[u];
+					unlockHint = "HINT: " + secret_ultra_hint[u];
+					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
+					drawSprite = sprVoidStyle;
+				break;
+				case 5:
+					var u = 33;
+					name = string_hash_to_newline(secret_ultra_name[u]);
+					text = secret_ultra_text[u];
+					canShowThis = UberCont.ctot_secret_ultra_taken[u];
+					unlockHint = "HINT: " + secret_ultra_hint[u];
+					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
+					drawSprite = sprPlantKillKillKill;
+				break;
 				case 9:
 					var u = 10;
 					name = string_hash_to_newline(secret_ultra_name[u]);

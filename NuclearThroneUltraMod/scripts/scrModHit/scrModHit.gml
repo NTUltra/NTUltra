@@ -1,10 +1,10 @@
-function scrModHit() {
+function scrModHit(projectileRef) {
 	if !instance_exists(Player) || team == 2
 		exit;
 	// scrSheepHit();
 	//Sedatives
-	var wp = other.wepFire;
-	if Player.ultra_got[100] && team != other.team && my_health > 0 && wp != -1
+	var wp = projectileRef.wepFire;
+	if Player.ultra_got[100] && team != projectileRef.team && my_health > 0 && wp != -1
 	{
 		target = noone;
 		walk = 0;
@@ -16,7 +16,7 @@ function scrModHit() {
 			if wepFire == wp
 				wepFire = -1;
 		}
-		other.wepFire = 0;
+		projectileRef.wepFire = 0;
 		if alarm[1] > 0
 		{
 			speed *= 0.6;
@@ -50,9 +50,9 @@ function scrModHit() {
 		}
 		s += (unequippedAmmoPercentage*4);
 		var d = point_direction(x,y,Player.x,Player.y) + 180;
-		var md = other.direction;
-		if !other.canBeMoved
-			md = other.image_angle;
+		var md = projectileRef.direction;
+		if !projectileRef.canBeMoved
+			md = projectileRef.image_angle;
 		d = md + (angle_difference(md,d)*0.5);
 		with instance_create(x,y,Knockback)
 		{
@@ -129,7 +129,7 @@ function scrModHit() {
 			}
 	    }
 		repeat(r)
-		with other {//PROJECTILE
+		with projectileRef {//PROJECTILE
 
 			var newfrost = true;
 			var myFrost = noone;
@@ -238,7 +238,6 @@ function scrModHit() {
 						team = other.team
 						ammo = len + 2;
 						event_perform(ev_alarm,0)
-						visible = 0
 						with instance_create(x,y,LightningSpawn)
 						image_angle = other.image_angle
 					}

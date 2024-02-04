@@ -3,7 +3,7 @@ if other.team != team
 	with other
 	{
 		if other.team != 0
-			scrModHit();
+			scrModHit(other);
 		if sprite_index != spr_hurt
 			snd_play(snd_hurt, hurt_pitch_variation,true)
 		if UberCont.normalGameSpeed == 60
