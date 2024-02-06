@@ -13,7 +13,7 @@ with other {
 		{
 			dmg *= 0.5;
 		}
-		my_health -= dmg;
+		DealDamage(dmg,true);
 		if sprite_index != spr_hurt
 			snd_play(snd_hurt, hurt_pitch_variation,true)
 		sprite_index = spr_hurt

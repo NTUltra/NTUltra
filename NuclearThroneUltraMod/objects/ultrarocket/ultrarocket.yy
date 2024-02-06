@@ -43,6 +43,9 @@
     "name": "sprUltraRocket",
     "path": "sprites/sprUltraRocket/sprUltraRocket.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskRocket",
+    "path": "sprites/mskRocket/mskRocket.yy",
+  },
   "visible": true,
 }

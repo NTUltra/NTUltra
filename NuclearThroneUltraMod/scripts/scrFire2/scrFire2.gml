@@ -976,7 +976,7 @@ function scrFire2(hasTailNow) {
 	{
 		totalAccuracy = 15;
 		creator = other.id
-		ammo = 2
+		ammo = 5
 		time = 1
 		team = other.team
 		event_perform(ev_alarm,0) 
@@ -996,7 +996,7 @@ function scrFire2(hasTailNow) {
 	snd_play_fire(sndGoldRocket)
 
 	with instance_create(x,y,Rocket)
-	{motion_add(aimDirection+(random(4)-2)*other.accuracy,4)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,6)
 	image_angle = direction
 	team = other.team
 	snd = sndGoldRocketFly;
@@ -2929,9 +2929,34 @@ function scrFire2(hasTailNow) {
 	//ULTRA SPLINTER GUN
 	case 302:
 
-	snd_play_fire(sndUltraCrossbow)
-	snd_play_fire(sndSplinterGun)
-
+	with instance_create(x,y,UltraSplinterBurst)
+	{
+		totalAccuracy = 18;
+		creator = other.id
+		ammo = 3
+		time = 1
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+	with instance_create(x,y,UltraSplinterBurst)
+	{
+		totalAccuracy = 6;
+		creator = other.id
+		ammo = 3
+		time = 1
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+	with instance_create(x,y,UltraSplinterBurst)
+	{
+		totalAccuracy = 12;
+		creator = other.id
+		ammo = 2
+		time = 2
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+	/*
 	with instance_create(x,y,UltraSplinter)//6 splinters
 	{motion_add(aimDirection+(random(6)-3)*other.accuracy,20+random(4))
 	image_angle = direction
@@ -2951,11 +2976,11 @@ function scrFire2(hasTailNow) {
 	image_angle = direction
 	team = other.team}
 	}
-
-	BackCont.viewx2 += lengthdir_x(20,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(20,aimDirection+180)*UberCont.opt_shake
-	BackCont.shake += 6
-	wkick -= 6
+	*/
+	BackCont.viewx2 += lengthdir_x(5,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(5,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 2
+	wkick = -8
 
 	break;
 
@@ -3761,13 +3786,13 @@ function scrFire2(hasTailNow) {
 
 	break;
 
-	//HYPERGATLING BAZOOKA
+	//HYPER GATLING BAZOOKA
 	case 333:
 
 	snd_play_fire(sndRocket)
 
 	with instance_create(x,y,Rocket)
-	{motion_add(aimDirection+(random(26)-13)*other.accuracy,2)
+	{motion_add(aimDirection+(random(26)-13)*other.accuracy,14 - (instance_number(Rocket) % 3))
 	image_angle = direction
 	team = other.team}
 
@@ -4511,6 +4536,7 @@ function scrFire2(hasTailNow) {
 	}
 	with instance_create(x+ldx,y+ldy,EraserBurst)
 	{
+		projectileSpeed = 12;
 		projectileAmount = 3;
 		mox=UberCont.mouse__x + ldx;
 		moy=UberCont.mouse__y + ldy;
@@ -4531,6 +4557,7 @@ function scrFire2(hasTailNow) {
 	}
 	with instance_create(x+ldx,y+ldy,EraserBurst)
 	{
+		projectileSpeed = 12;
 		projectileAmount = 3;
 		mox=UberCont.mouse__x + ldx;
 		moy=UberCont.mouse__y + ldy;
@@ -5371,6 +5398,7 @@ function scrFire2(hasTailNow) {
 	}
 	with instance_create(x+ldx,y+ldy,EraserBurst)
 	{
+		projectileSpeed = 12.25;
 		projectileAmount = 3;
 		mox=UberCont.mouse__x + ldx;
 		moy=UberCont.mouse__y + ldy;
@@ -5391,6 +5419,7 @@ function scrFire2(hasTailNow) {
 	}
 	with instance_create(x+ldx,y+ldy,EraserBurst)
 	{
+		projectileSpeed = 12.25;
 		projectileAmount = 3;
 		mox=UberCont.mouse__x + ldx;
 		moy=UberCont.mouse__y + ldy;
@@ -7826,7 +7855,7 @@ function scrFire2(hasTailNow) {
 	{
 		totalAccuracy = 18;
 		creator = other.id
-		ammo = 4
+		ammo = 5
 		time = 1
 		team = other.team
 		event_perform(ev_alarm,0) 
@@ -8050,7 +8079,7 @@ function scrFire2(hasTailNow) {
 	snd_play_fire(sndNukeFire);
 
 	with instance_create(x,y,UltraRocket)
-	{motion_add(aimDirection+(random(4)-2)*other.accuracy,18)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,20)
 	image_angle = direction
 	team = other.team}
 	motion_add(aimDirection+180,2)
@@ -8554,7 +8583,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x,y,SuperSplinterBurst)
 	{
 		creator = other.id
-		ammo = 4
+		ammo = 5
 		maxammo = ammo;
 		time = 2;
 		team = other.team
@@ -9595,23 +9624,23 @@ function scrFire2(hasTailNow) {
 	motion_add(aimDirection+180,4)
 
 	with instance_create(x,y,BouncerRocket)
-	{motion_add(aimDirection+(random(8)-4)*other.accuracy,2)
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,3)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,BouncerRocket)
-	{motion_add(aimDirection+10*other.accuracy+(random(4)-2)*other.accuracy,2)
+	{motion_add(aimDirection+10*other.accuracy+(random(4)-2)*other.accuracy,3)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,BouncerRocket)
-	{motion_add(aimDirection+20*other.accuracy+(random(4)-2)*other.accuracy,2)
+	{motion_add(aimDirection+20*other.accuracy+(random(4)-2)*other.accuracy,3)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,BouncerRocket)
-	{motion_add(aimDirection-10*other.accuracy+(random(4)-2)*other.accuracy,2)
+	{motion_add(aimDirection-10*other.accuracy+(random(4)-2)*other.accuracy,3)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,BouncerRocket)
-	{motion_add(aimDirection-20*other.accuracy+(random(4)-2)*other.accuracy,2)
+	{motion_add(aimDirection-20*other.accuracy+(random(4)-2)*other.accuracy,3)
 	image_angle = direction
 	team = other.team}
 
@@ -13201,7 +13230,7 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
-	//ERASER
+	//DIRECTOR DRAGGER
 	case 654:
 
 	snd_play_fire(sndDoubleShotgun);
@@ -14575,7 +14604,6 @@ function scrFire2(hasTailNow) {
 	
 	//SPLINTER MACHINEGUN
 	case 698:
-	snd_play_fire(sndSplinterGun)
 	with instance_create(x,y,SplinterBurst)
 	{
 		totalAccuracy = 8;

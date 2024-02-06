@@ -10,7 +10,7 @@ function scrDoctorThroneButt(){
 			{
 				snd_play(snd_hurt, hurt_pitch_variation,true)
 				Sleep(5)
-				my_health -= 3;
+				DealDamage(3);
 				sprite_index = spr_hurt
 				image_index = 0
 				motion_add(other.direction,6)

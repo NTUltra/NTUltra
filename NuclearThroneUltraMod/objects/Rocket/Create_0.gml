@@ -9,3 +9,5 @@ alarm[0] = 1;
 ultramodded = true;
 alarm[11] = 1;
 dmg = 20;
+xprev = x;
+yprev = y;

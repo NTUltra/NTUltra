@@ -41,5 +41,5 @@ switch originalAngle {
 	break;
 }
 speed = 0;
-alarm[0] = 30;
+alarm[0] = 20;
 type = 0;

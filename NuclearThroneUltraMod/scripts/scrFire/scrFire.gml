@@ -529,7 +529,7 @@ function scrFire() {
 	snd_play_fire(sndRocket)
 
 	with instance_create(x,y,Rocket)
-	{motion_add(aimDirection+(random(4)-2)*other.accuracy,4)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,6)
 	image_angle = direction
 	team = other.team}
 
@@ -865,7 +865,6 @@ function scrFire() {
 
 	//SPLINTER GUN
 	case 30:
-	snd_play_fire(sndSplinterGun)
 	with instance_create(x,y,Splinter)//5 splinters
 	{motion_add(aimDirection+(random(6)-3)*other.accuracy,20+random(4))
 	image_angle = direction
@@ -874,7 +873,7 @@ function scrFire() {
 	{
 		totalAccuracy = 16;
 		creator = other.id
-		ammo = 4
+		ammo = 5
 		time = 1
 		team = other.team
 		event_perform(ev_alarm,0) 
@@ -1776,23 +1775,23 @@ function scrFire() {
 	motion_add(aimDirection+180,4)
 
 	with instance_create(x,y,Rocket)
-	{motion_add(aimDirection+(random(8)-4)*other.accuracy,2)
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,4)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Rocket)
-	{motion_add(aimDirection+10*other.accuracy+(random(4)-2)*other.accuracy,2)
+	{motion_add(aimDirection+10*other.accuracy+(random(4)-2)*other.accuracy,4)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Rocket)
-	{motion_add(aimDirection+20*other.accuracy+(random(4)-2)*other.accuracy,2)
+	{motion_add(aimDirection+20*other.accuracy+(random(4)-2)*other.accuracy,4)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Rocket)
-	{motion_add(aimDirection-10*other.accuracy+(random(4)-2)*other.accuracy,2)
+	{motion_add(aimDirection-10*other.accuracy+(random(4)-2)*other.accuracy,4)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Rocket)
-	{motion_add(aimDirection-20*other.accuracy+(random(4)-2)*other.accuracy,2)
+	{motion_add(aimDirection-20*other.accuracy+(random(4)-2)*other.accuracy,4)
 	image_angle = direction
 	team = other.team}
 
@@ -1810,7 +1809,7 @@ function scrFire() {
 	snd_play_fire(sndRocket)
 
 	with instance_create(x,y,Rocket)
-	{motion_add(aimDirection+(random(6)-3)*other.accuracy,2)
+	{motion_add(aimDirection+(random(6)-3)*other.accuracy,9 - (instance_number(Rocket) % 3))
 	image_angle = direction
 	team = other.team}
 
@@ -3368,8 +3367,6 @@ function scrFire() {
 	//AUTO SPLINTER GUN
 	case 133:
 
-	snd_play_fire(sndSplinterGun)
-
 	with instance_create(x,y,Splinter)//5 splinters
 	{motion_add(aimDirection+(random(10)-5)*other.accuracy,20+random(4))
 	image_angle = direction
@@ -3378,7 +3375,7 @@ function scrFire() {
 	{
 		totalAccuracy = 19;
 		creator = other.id
-		ammo = 4
+		ammo = 5
 		time = 1
 		team = other.team
 		event_perform(ev_alarm,0) 
@@ -3565,7 +3562,6 @@ function scrFire() {
 	case 139:
 
 	snd_play_fire(sndCrossbow)
-	snd_play_fire(sndSplinterGun)
 
 	with instance_create(x+lengthdir_x(2,aimDirection),y+lengthdir_y(2,aimDirection),Bolt)
 	{motion_add(aimDirection,25)

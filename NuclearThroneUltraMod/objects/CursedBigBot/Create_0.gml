@@ -15,3 +15,4 @@ spr_hurt = sprCursedBigBotHurt;
 spr_dead = sprCursedBigBotDead;
 spr_fire = sprCursedBigBotFire;
 type = 1;
+inRange = false;

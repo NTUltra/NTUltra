@@ -17,7 +17,7 @@ audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
 }
 scrBossKill();
 scrDrop(200,0)
-scrDrop(20,5)
+scrDrop(20,40)
 instance_create(x,y,Explosion)
 if !place_meeting(x,y,Morph)
 with instance_create(x,y,LilHunterDie)

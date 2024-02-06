@@ -14,12 +14,12 @@ yy=creator.y;
 repeat(projectileAmount) {
 		with instance_create(x,y,Bullet2)
 		{
-			motion_add(point_direction(x,y,other.mox,other.moy),12+other.boost)
+			motion_add(point_direction(x,y,other.mox,other.moy),other.projectileSpeed+other.boost)
 			image_angle = direction
 			team = other.team
 			scrCopyWeaponMod(other);
 		}
-		boost+= 0.5;
+		boost += 0.5;
 	}
 }
 if ammo < 1

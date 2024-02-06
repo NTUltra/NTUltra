@@ -3,7 +3,7 @@ if sprite_index != sprAmmoChestOpen
 	exit;
 
 alarm[0] = 30;
-if instance_exists(Player) && !instance_exists(AmmoChest)
+if instance_exists(Player) && !instance_exists(AmmoChest) && instance_exists(enemy)
 {
 	var wep = Player.wep;
 	var t = Player.wep_type[wep];

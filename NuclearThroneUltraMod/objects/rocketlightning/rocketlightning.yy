@@ -34,6 +34,9 @@
     "name": "sprLightningRocket",
     "path": "sprites/sprLightningRocket/sprLightningRocket.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskRocket",
+    "path": "sprites/mskRocket/mskRocket.yy",
+  },
   "visible": true,
 }

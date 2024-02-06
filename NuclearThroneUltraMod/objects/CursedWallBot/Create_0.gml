@@ -16,3 +16,4 @@ spr_walk = sprCursedWallBotWalk;
 spr_hurt = sprCursedWallBotHurt;
 spr_dead = sprCursedWallBotDead;
 spr_fire = sprCursedWallBotFire;
+inRange = false;

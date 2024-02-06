@@ -4,7 +4,7 @@ image_speed = 0.8;
 BackCont.shake += 1
 typ = 0;
 team = 2
-dmg=1;
+dmg = 1;
 alarm[0] = 8;
 if UberCont.ultramodSwap
 {

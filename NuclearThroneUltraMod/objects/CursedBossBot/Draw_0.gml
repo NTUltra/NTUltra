@@ -9,9 +9,9 @@ if alarm[3] > 0
 		var lasx = xx
 		var lasy = yy
 		var lasd = 0
-		do {lasd += 1 lasx += lengthdir_x(2,wallDir) lasy += lengthdir_y(2,wallDir)}
+		do {lasd += 3 lasx += lengthdir_x(6,wallDir) lasy += lengthdir_y(6,wallDir)}
 		until position_meeting(lasx,lasy,Wall) or lasd > 1000
-		draw_sprite_ext(sprLaserSight,-1,xx,yy,point_distance(xx,yy,lasx,lasy)*0.5+2,1,wallDir,c_white,1)
+		draw_sprite_ext(sprCurseLaserSight,-1,xx,yy,point_distance(xx,yy,lasx,lasy)*0.5+2,1,wallDir,c_white,1)
 	}
 }
 // Inherit the parent event

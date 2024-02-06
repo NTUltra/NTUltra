@@ -1,9 +1,15 @@
-repeat(2)
-instance_create(x+random(30)-15,y+random(30)-15,Explosion)
-
+var ang = random(360)
 repeat(3)
-instance_create(x+choose(random_range(8,16),random_range(-8,-16))
-,y+choose(random_range(8,16),random_range(-8,-16)),SmallExplosion)
+{
+	instance_create(x+lengthdir_x(10,ang),y+lengthdir_y(10,ang),Explosion)
+	ang += 120;
+}
+ang += 60
+repeat(3)
+{
+	instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),SmallExplosion)
+	ang += 120;
+}
 
 instance_create(x,y+6,Scorchmark)
 event_inherited()

@@ -40,7 +40,7 @@ if other.team != team and other.team != 0 && (other.team!=2 || image_index<5/*no
 						image_index = 0
 						Sleep(10)
 						BackCont.shake += 3
-						my_health -= 2
+						DealDamage(2)
 					}
 				}
 			}
@@ -53,7 +53,7 @@ if other.team != team and other.team != 0 && (other.team!=2 || image_index<5/*no
 				Sleep(10)
 				BackCont.shake += 3
 				snd_play(snd_hurt, hurt_pitch_variation)
-				my_health -= 2
+				DealDamage(2);
 			}
 		}
 	}

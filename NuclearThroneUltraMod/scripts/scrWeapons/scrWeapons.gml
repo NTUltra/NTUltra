@@ -3381,7 +3381,7 @@ function scrWeapons() {
 
 	wep_name[302] = "ULTRA SPLINTER GUN"
 	wep_type[302] = 3
-	wep_auto[302] = 2
+	wep_auto[302] = 3
 	wep_load[302] = 18
 	wep_cost[302] = 1
 	wep_sprt[302] = sprUltraSplinterGun
@@ -3723,7 +3723,7 @@ function scrWeapons() {
 	wep_name[333] = "HYPER GATLING BAZOOKA"
 	wep_type[333] = 4
 	wep_auto[333] = 1
-	wep_load[333] = 3
+	wep_load[333] = 7
 	wep_cost[333] = 0.5
 	wep_sprt[333] = sprHyperGatlingBazooka
 	wep_area[333] = 12
@@ -3972,7 +3972,7 @@ function scrWeapons() {
 	wep_load[355] = 17
 	wep_cost[355] = 1
 	wep_sprt[355] = sprJawbreaker
-	wep_area[355] = 1
+	wep_area[355] = 1.25
 	wep_text[355] = "pincer attack"
 	wep_swap[355] = sndSwapShotgun
 	wep_rad[355] = 0;
@@ -4305,7 +4305,7 @@ function scrWeapons() {
 	wep_type[383] = 2
 	wep_auto[383] = 2
 	wep_load[383] = 16
-	wep_cost[383] = 1
+	wep_cost[383] = 1.25
 	wep_sprt[383] = sprGoldenJawbreaker
 	wep_area[383] = 17
 	wep_text[383] = "shiny jaw"
@@ -4381,8 +4381,8 @@ function scrWeapons() {
 	wep_name[390] = "JAWSPLITTER"
 	wep_type[390] = 3
 	wep_auto[390] = 2
-	wep_load[390] = 16
-	wep_cost[390] = 1
+	wep_load[390] = 19
+	wep_cost[390] = 1.25
 	wep_sprt[390] = sprJawSplitter
 	wep_area[390] = 1
 	wep_text[390] = "cheekbone hitter"
@@ -4392,8 +4392,8 @@ function scrWeapons() {
 	wep_name[391] = "GOLDEN JAWSPLITTER"
 	wep_type[391] = 3
 	wep_auto[391] = 2
-	wep_load[391] = 17
-	wep_cost[391] = 1
+	wep_load[391] = 18
+	wep_cost[391] = 1.25
 	wep_sprt[391] = sprGoldenJawSplitter
 	wep_area[391] = 17
 	wep_text[391] = "golden jaw"
@@ -6899,7 +6899,7 @@ function scrWeapons() {
 	wep_load[617] = 7
 	wep_cost[617] = 1
 	wep_sprt[617] = sprGoldenDiscGun
-	wep_area[617] = -1
+	wep_area[617] = 18
 	wep_text[617] = "what could go wrong"
 	wep_swap[617] = sndSwapBow
 	wep_rad[617] = 0;

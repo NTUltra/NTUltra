@@ -10,7 +10,7 @@ if other.team != team && other.team != 2
 			with other
 			instance_destroy()
 			snd_play(snd_hurt, hurt_pitch_variation)
-			my_health -= other.dmg
+			DealDamage(other.dmg);
 			sprite_index = spr_hurt
 			image_index = 0
 			BackCont.shake += 1
@@ -32,7 +32,7 @@ else if image_xscale > 0.22 && alarm[11] < 1
 		        with other
 		        instance_destroy()
 		        snd_play(snd_hurt, hurt_pitch_variation)
-		        my_health -= 2
+		        DealDamage(2);
 		        sprite_index = spr_hurt
 		        image_index = 0
 		        Sleep(10);

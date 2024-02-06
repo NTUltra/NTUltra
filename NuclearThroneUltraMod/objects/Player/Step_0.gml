@@ -1960,16 +1960,19 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 		if scrDrop(60,5) != noone
 			snd_play(sndExtraFeetDodge);
 		else
+		{
 			snd_play(sndExtraFeetDodgeFail);
+			var am = 2;
+			if race == 25
+				am ++;
+			repeat(am)
+				with instance_create(x,y,Rad)
+				{
+					motion_add(random(360),4)
+				}
+		}
 		
-		var am = 2;
-		if race == 25
-			am ++;
-		repeat(am)
-			with instance_create(x,y,Rad)
-			{
-				motion_add(random(360),4)
-			}
+		
 	}
 	if instance_exists(projectile) && alarm[3] < 1
 	{

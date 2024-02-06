@@ -14,7 +14,7 @@ if other.team != team
 		hitEntities[array_length(hitEntities)] = other.id;
 		with other
 		{
-			my_health -= other.dmg
+			DealDamage(other.dmg);
 			sprite_index = spr_hurt
 			image_index = 0
 			motion_add(other.direction,10)

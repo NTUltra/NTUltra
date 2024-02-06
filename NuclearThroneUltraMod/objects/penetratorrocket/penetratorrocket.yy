@@ -3,9 +3,9 @@
   "resourceVersion": "1.0",
   "name": "PenetratorRocket",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"Explosion","path":"objects/Explosion/Explosion.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"hitme","path":"objects/hitme/hitme.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"ExplosionMask","path":"objects/ExplosionMask/ExplosionMask.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -36,6 +36,9 @@
     "name": "sprPenetratorRocket",
     "path": "sprites/sprPenetratorRocket/sprPenetratorRocket.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "mskRocket",
+    "path": "sprites/mskRocket/mskRocket.yy",
+  },
   "visible": true,
 }

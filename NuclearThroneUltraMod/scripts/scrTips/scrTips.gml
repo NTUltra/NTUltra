@@ -9,11 +9,16 @@ function scrTips() {
 	//RANDOM
 	tip = choose(
 	"always move",
+	"secret ultras require a specific type of#crown, weapon, or mutation#when you reach level ultra",
+	"secret ultras all require a specific setup#when you reach level ultra",
+	"idpd grunts can roll",
+	"fish can play guitar",
 	"you can swap cursed weapons#with other cursed weapons",
 	"green outline on mutations means#you have taken them before",
 	"try every mutation it will also unlock a gamemode",
 	"you can combine multiple gamemodes!",
 	"some enemies shoot through walls!",
+	"don't worry",
 	"don't hold onto your early weapons for too long",
 	"swap your early weapons even when you mod them",
 	"tier display acts as a guideline for weapon power",
@@ -22,6 +27,7 @@ function scrTips() {
 	"enable detailed descriptions if you'd like to know the stats",
 	"all weapons are full auto\nbut tapping will make some fire faster",
 	"all weapons are auto",
+	"where is that last geezer",
 	"swap weapons for new ones",
 	"try some different weapon types",
 	"every mutant has atleast 5 ultras!",
@@ -257,7 +263,7 @@ function scrTips() {
 	if Player.area = 5
 	tip = choose("wear a scarf","they used to have electricity","miss the sun","civilization","walk softly",choose("cold potatoes","there is a pink sheep nearby","there is no yeti","there is no yeti","there is no yeti","lill hunter is a bitch"))
 	if Player.area = 6
-	tip = choose("beep boop","nerds","don't push any buttons","randa","almost halfway there","where they're made")
+	tip = choose("beep boop","nerds","don't push any buttons","randa","almost halfway there","where they're made","explosion freaks can merge")
 	if Player.area = 100
 	tip = choose("aw yes","take a crown to uncurse your weapon","there is value here","visit this place atleast twice","let's hope its not toxic again",
 	"old torches","you can get 3 mods#on a single weapon","mods stack","take a crown to unlock#crown start for this character","most weapon mods benefit from#weapon specific mutations","a weapon you mod will always come through the portal, you can pick it up next area",

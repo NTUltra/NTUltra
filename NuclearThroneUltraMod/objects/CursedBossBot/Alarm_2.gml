@@ -16,7 +16,7 @@ if alarm[6] < 1
 	{
 		with Floor
 		{
-			if object_index != FloorExplo {
+			if object_index != FloorExplo && point_distance(x,y,other.x,other.y) < 300{
 				if collision_point(x + 16,y - 2,Wall,false,false)//Down
 				{
 					other.laserTell[i] = [x + 16, y + 2];
@@ -27,7 +27,7 @@ if alarm[6] < 1
 	} else {
 		with Floor
 		{
-			if object_index != FloorExplo {
+			if object_index != FloorExplo && point_distance(x,y,other.x,other.y) < 300 {
 				if collision_point(x - 2,y + 16,Wall,false,false)//Right
 				{
 					other.laserTell[i] = [x + 2, y + 16];

@@ -94,7 +94,7 @@ if (selected &&
 			}
 		}
 	}
-	else if skill == 10 && Player.race == 3 && Player.skill_got[8] && scrIsCrown(1)// Void style
+	else if skill == 10 && Player.race == 3 && (Player.skill_got[8] && scrIsCrown(1) || Player.unlockAlternativeUltras)// Void style
 	{
 		with Player {
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);

@@ -45,14 +45,14 @@ if alarm[0] < 1 && other.team == 2 && instance_exists(Player) && (!ezMode || oth
 					my_health = immunelimit
 				else
 				{
-					my_health -= dealDmg
+					DealDamage(dealDmg)
 				}
 			}
 		}
 		else
 		{
 			dealtDamage = true;
-			my_health -= dealDmg;
+			DealDamage(dealDmg);
 			other.dmg -= 1;
 		}
 		if dealtDamage && alarm[3] < 1
