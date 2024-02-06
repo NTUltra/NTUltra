@@ -5,7 +5,7 @@ if team != other.team
 	{
 		if sprite_index != spr_hurt
 		{
-			my_health -= other.dmg;
+			DealDamage(other.dmg);
 		}
 	}
 	speed *= 0.999;

@@ -4,7 +4,7 @@ if speed > 1 and other.team != team
 	{
 		if sprite_index != spr_hurt
 		{
-			my_health -= other.dmg
+			DealDamage(other.dmg)
 			sprite_index = spr_hurt
 			image_index = 1;
 			motion_add(other.direction,4)

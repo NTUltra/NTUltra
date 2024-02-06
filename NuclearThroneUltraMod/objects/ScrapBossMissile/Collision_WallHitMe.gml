@@ -1,7 +1,7 @@
 /// @description Bounce
 move_bounce_solid(false)
 
-my_health -= 3
+DealDamage(3,false,false);
 sprite_index = spr_hurt
 image_index = 0
 

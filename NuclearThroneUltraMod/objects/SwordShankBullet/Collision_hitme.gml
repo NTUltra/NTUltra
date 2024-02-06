@@ -7,16 +7,16 @@ if other.team != team and other.my_health > 0
 			snd_play(snd_hurt, hurt_pitch_variation,true)
 		if (!array_contains(other.hitEntities,id))
 		{
-			my_health -= ceil(other.dmg*10);
+			DealDamage(ceil(other.dmg*10));
 			if my_health > 0
 				other.speed -= 1;
 		}
 		else
 		{
 			if is60fps
-				my_health -= other.dmg * 0.5;
+				DealDamage(other.dmg * 0.5, true);
 			else
-				my_health -= other.dmg;
+				DealDamage(other.dmg, true);
 			with other
 			{
 				if is60fps

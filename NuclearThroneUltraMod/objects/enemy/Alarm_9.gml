@@ -1,6 +1,6 @@
 /// @description infected
 alarm[9]=7;
-my_health -= 4
+DealDamage(4)
 sprite_index = spr_hurt
 image_index = 0
 motion_add(random(360),2)

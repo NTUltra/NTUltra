@@ -18,7 +18,7 @@ with enemy
 					{
 					    sprite_index = spr_hurt;
 						image_index = 0;
-						my_health -= other.meleedamage;
+						DealDamage(other.meleedamage);
 						snd_play(snd_hurt, hurt_pitch_variation);
 					}
 					i = al;

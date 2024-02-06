@@ -319,7 +319,7 @@ if selected
 			{
 				Player.maxhealth -= 1;
 				if Player.my_health > Player.maxhealth
-					Player.my_health -= 1;
+					Player.DealDamage(1);
 			}
 			Player.exception = true;
 			//Dont die on me friend
@@ -342,7 +342,7 @@ if selected
 				Player.armour = clamp(Player.armour + 1, 1, Player.maxarmour);
 				Player.maxhealth -= 2
 				if Player.my_health > Player.maxhealth
-					Player.my_health -= 2
+					Player.DealDamage(2)
 				Player.prevhealth = Player.my_health;
 			}
 			Player.exception = true;

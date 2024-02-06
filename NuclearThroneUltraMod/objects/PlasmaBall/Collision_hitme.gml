@@ -5,7 +5,7 @@ if other.team != team and other.my_health > 0
 		scrPlasmaPush();
 		with other
 		{
-			my_health -= other.dmg
+			DealDamage(other.dmg)
 			sprite_index = spr_hurt
 			image_index = 0
 			scrForcePosition60fps();

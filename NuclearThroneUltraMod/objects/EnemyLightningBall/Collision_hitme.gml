@@ -3,9 +3,9 @@ if other.team != team and other.my_health > 0
 with other
 {
 if object_index!=Player
-my_health -= 8
+DealDamage(8)
 else
-my_health -= 3
+DealDamage(3)
 
 sprite_index = spr_hurt
 image_index = 0

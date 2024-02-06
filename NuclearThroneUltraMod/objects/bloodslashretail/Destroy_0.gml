@@ -11,7 +11,7 @@ if !hitEnemy && owner != -1 && instance_exists(owner)
 	{
 		if alarm[3] < 1 && my_health > 1
 		{
-			my_health -= 1;
+			DealDamage(1);
 			snd_play(sndBloodHurt);
 			instance_create(x,y,MeatExplosion);
 			snd_play(snd_hurt);

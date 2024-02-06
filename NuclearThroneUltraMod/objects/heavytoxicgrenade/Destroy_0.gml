@@ -12,7 +12,7 @@ for (var i = 0; i < al; i++) {
 			if sprite_index != spr_hurt
 			{
 				snd_play(snd_hurt, hurt_pitch_variation);
-				my_health -= 10
+				DealDamage(10);
 				speed = 0;
 				walk *= 0.5;
 				sprite_index = spr_hurt

@@ -13,7 +13,7 @@ function scrFire() {
 			if armour > 0
 				armour -= 1;
 			else
-				my_health -= 2;
+				DealDamage(2);
 			sprite_index = spr_hurt;
 			image_index = 0;
 			snd_play(snd_hurt);

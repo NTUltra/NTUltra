@@ -40,7 +40,7 @@ if other.team != team && (image_index<5)
 						my_health = immunelimit
 					else
 					{
-						my_health -= 2
+						DealDamage(2)
 						other.dealtDamage = true;
 						snd_play(snd_hurt, hurt_pitch_variation)
 						instance_create(x,y,FrozenPlayer);

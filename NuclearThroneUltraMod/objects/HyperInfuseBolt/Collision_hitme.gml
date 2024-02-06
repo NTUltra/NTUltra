@@ -11,7 +11,7 @@ with other
 {
     if sprite_index!=spr_hurt
     {
-    my_health -= 10
+    DealDamage(10);
     sprite_index = spr_hurt
     image_index = 0
     motion_add(other.direction,3)

@@ -5,7 +5,7 @@ if speed > 1 and other.team != team
 	{
 		with other
 		{
-			my_health -= other.dmg
+			DealDamage(other.dmg)
 			sprite_index = spr_hurt
 			image_index = 0
 			snd_play(snd_hurt, hurt_pitch_variation,true)

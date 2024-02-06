@@ -18,7 +18,7 @@ if time == 1
 		snd_play(sndExplosion);
 		snd_play(sndSlap,0.03);
 		instance_create(x,y,ImpactFX);
-		my_health -= 10;
+		DealDamage(10);
 		sprite_index = spr_hurt;
 		snd_play(snd_hurt, hurt_pitch_variation,true);
 		image_index = 0

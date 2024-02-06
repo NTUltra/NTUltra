@@ -9,7 +9,7 @@ if other.team != team
 		alarm[1] = hitDelay;
 		with other
 		{
-			my_health -= other.dmg;
+			DealDamage(other.dmg);
 			var ang = other.image_angle;
 			repeat(3)
 			{

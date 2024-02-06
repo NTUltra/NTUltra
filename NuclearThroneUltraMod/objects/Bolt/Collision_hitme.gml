@@ -15,7 +15,7 @@ if candmg and other.team != team
 			with other
 			{
 				snd_play(snd_hurt, hurt_pitch_variation,true)
-				my_health -= other.dmg
+				DealDamage(other.dmg)
 				sprite_index = spr_hurt
 				image_index = 0
 				motion_add(other.direction,other.knockback + 2)
@@ -41,7 +41,7 @@ if candmg and other.team != team
 			with other
 			{
 				snd_play(snd_hurt, hurt_pitch_variation,true)
-				my_health -= other.dmg;
+				DealDamage(other.dmg);
 				sprite_index = spr_hurt
 				image_index = 0
 				motion_add(other.direction,other.knockback)

@@ -7,6 +7,6 @@ with Portal
 	}
 	
 }
-my_health -= 1
+DealDamage(1)
 instance_create(x,y,Smoke)
 

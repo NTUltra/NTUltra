@@ -4,7 +4,7 @@ with other
 {snd_play(sndPartyHorn);
     if sprite_index!=spr_hurt
     {
-    my_health -= 40
+	DealDamage(40)
     sprite_index = spr_hurt
     image_index = 0
     motion_add(other.direction,60)

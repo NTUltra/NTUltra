@@ -7,7 +7,7 @@ for (var j = 0; j < al; j++) {
 	{
 		if team != 2 && team != 0 and my_health > 0
 		{
-			my_health -= 1;
+			DealDamage(1);
 			if !audio_is_playing(sndGammaGutsProc)
 				snd_play(sndGammaGutsProc);
 			instance_create(x,y,Smoke)

@@ -2,10 +2,11 @@ if other.team != team and other.my_health > 0 and other.object_index!=Player
 {instance_destroy()
 with other
 {
-my_health -= other.dmg
 if instance_exists(Player){
 if Player.ultra_got[28]//roids ultra d
-{my_health -=2;}}
+{other.dmg += 2}}
+DealDamage(other.dmg)
+
 //freeze bitch!
 if alarm[11]<1&&my_health>0{
 frozen=true;
@@ -42,10 +43,11 @@ else if other.team != team and other.my_health > 0
 instance_destroy()
 with other
 {
-my_health -= other.dmg
-if instance_exists(Player){
+	if instance_exists(Player){
 if Player.ultra_got[28]//roids ultra d
-{my_health -=2;}}
+{other.dmg += 2;}}
+DealDamage(other.dmg)
+
 //freeze bitch!
 if frozen<1&&my_health>0{
     with instance_create(x,y,FrozenPlayer)

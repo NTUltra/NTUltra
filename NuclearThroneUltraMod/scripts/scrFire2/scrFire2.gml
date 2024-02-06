@@ -4963,7 +4963,7 @@ function scrFire2(hasTailNow) {
 		if armour > 0
 			armour -= 1;
 		else
-			my_health -= 7;
+			DealDamage(7);
 	}
 	//TOSSING CURSED WEAPONS!?
 	if object_index == Player && ultra_got[29] && altUltra && bwep != 0//ROBOT EXCLUSIVE TASTE

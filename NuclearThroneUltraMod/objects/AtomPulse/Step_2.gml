@@ -11,9 +11,9 @@ for (var i = 0; i < al; i ++)
 		if team != other.team && my_health > 0 && team != 0
 		{
 			if UberCont.normalGameSpeed == 60
-				my_health -= other.dmg * 0.5;
+				DealDamage(other.dmg * 0.5, true);
 			else
-				my_health -= other.dmg;
+				DealDamage(other.dmg, true);
 			if sprite_index != spr_hurt
 			{
 				snd_play(snd_hurt, hurt_pitch_variation,true)

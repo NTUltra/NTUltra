@@ -47,7 +47,7 @@ function scrSheepHit(){
 					var dmgTaken = prevhealth - my_health;//Damage increase
 					BackCont.shake += dmgTaken*2;
 					Sleep(dmgTaken);
-					my_health -= dmgTaken * 9;
+					DealDamage(dmgTaken * 9);// Not entirely sure about this one
 				}
 			}
 		}

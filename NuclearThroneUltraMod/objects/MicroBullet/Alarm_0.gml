@@ -25,10 +25,10 @@ if instance_exists(Player)
 		{
 			if sprite_index != spr_hurt
 				snd_play(snd_hurt, hurt_pitch_variation,true)
-			my_health -= other.dmg
+			DealDamage(other.dmg)
 			if instance_exists(Player){
 			if Player.ultra_got[28]//roids ultra d
-			{my_health -= 1;}}
+			{DealDamage(1);}}
 			sprite_index = spr_hurt
 			image_index = 0
 			if team != 0

@@ -36,7 +36,7 @@ with other
 			contactDmg *= 0.25;
 		else
 			contactDmg *= 0.5;
-		my_health -= contactDmg;
+		DealDamage(contactDmg, true);
 		sprite_index = spr_hurt
 		image_index = 0
 		motion_add(point_direction(other.x,other.y,x,y),3)

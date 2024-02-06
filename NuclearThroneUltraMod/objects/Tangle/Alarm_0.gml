@@ -16,7 +16,7 @@ if sprite_index == sprTangleUpg
 					}
 				}
 				ds_list_destroy(tangle);
-				my_health -= 2;
+				DealDamage(2);
 				sprite_index = spr_hurt;
 				image_index = 0;
 				snd_play(snd_hurt, hurt_pitch_variation,true);

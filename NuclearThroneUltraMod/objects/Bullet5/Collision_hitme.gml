@@ -15,9 +15,9 @@ if other.team != team and other.my_health > 0 && alarm[0] < 1
 		{
 			if team != other.team && my_health > 0
 			{
-				my_health -= max(0,other.dmg - 4)
+				DealDamage(max(0,other.dmg - 4))
 				if id == direct
-					my_health -= 6;
+					DealDamage(6);
 				sprite_index = spr_hurt
 				image_index = 0
 				motion_add(other.direction,4)

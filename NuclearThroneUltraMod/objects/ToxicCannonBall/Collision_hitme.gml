@@ -4,7 +4,7 @@ speed*=0.82;
 with other
 {
 if sprite_index!= spr_hurt{
-my_health -= other.dmg;
+DealDamage(other.dmg);
 sprite_index = spr_hurt
 image_index = 0}
 motion_add(other.direction,2)
@@ -18,7 +18,7 @@ speed*=0.8;
 with other
 {
 if sprite_index!= spr_hurt{
-my_health -= 4
+DealDamage(4)
 sprite_index = spr_hurt
 image_index = 0}
 motion_add(other.direction,2)

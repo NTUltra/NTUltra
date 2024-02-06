@@ -21,7 +21,7 @@ function scrSplashDamage(dmg, range){
 		{
 			if id != direct && team != other.team && my_health > 0
 			{
-				my_health -= dmg
+				DealDamage(dmg)
 				sprite_index = spr_hurt
 				image_index = 0
 				motion_add(other.direction,2.5)

@@ -45,7 +45,7 @@ if target != noone && instance_exists(target)
 				sprite_index = spr_hurt
 				snd_play(snd_hurt, hurt_pitch_variation,true)
 				image_index = 0
-				my_health -= other.dmg;
+				DealDamage(other.dmg);
 				other.target = noone;
 				instance_create(x,y,WallBreak);
 				snd_play(sndImpWristKill);
@@ -94,7 +94,7 @@ if target != noone && instance_exists(target)
 				{
 					sprite_index = spr_hurt;
 					snd_play(snd_hurt,hurt_pitch_variation,true);
-					my_health -= 0.5;
+					DealDamage(0.5);
 				}
 			}
 		}

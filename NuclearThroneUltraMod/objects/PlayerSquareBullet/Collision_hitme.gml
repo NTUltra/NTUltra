@@ -4,11 +4,11 @@ if other.team != team and other.my_health > 0 && alarm[0] < 1
 	instance_destroy()
 	with other
 	{
-		my_health -= other.dmg
 		if instance_exists(Player){
 			if Player.ultra_got[28]//roids ultra d
-			{my_health -=2;}
+			{other.dmg += 2;}
 		}
+		DealDamage(other.dmg)
 		sprite_index = spr_hurt
 		image_index = 0
 		motion_add(other.direction,8)

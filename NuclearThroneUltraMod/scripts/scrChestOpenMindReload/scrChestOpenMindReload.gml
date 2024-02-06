@@ -14,7 +14,7 @@ function scrChestOpenMindReload(thePlayer, dealDamageAnyway = false){
 				if armour > 0
 					armour -= 1;
 				else
-					my_health -= 1;
+					DealDamage(1);
 				exception = true;
 				sprite_index = spr_hurt;
 				image_index = 0;

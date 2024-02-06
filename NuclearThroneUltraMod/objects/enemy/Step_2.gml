@@ -24,9 +24,9 @@ if alarm[1] > 1 && alarm[1] < 3
 			if sprite_index != spr_hurt && Player.race=24//Elementor's passive
 			{
 				if UberCont.normalGameSpeed == 60
-					my_health -= 0.25;
+					DealDamage(0.25,true);
 				else
-					my_health -= 0.5;
+					DealDamage(0.5,true);
 				snd_play(snd_hurt, hurt_pitch_variation);
 				sprite_index=spr_hurt
 			}

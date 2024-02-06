@@ -3,7 +3,7 @@ if other.team != team && other.my_health > 0 && !array_contains(hitEntities, oth
 	hitEntities[array_length(hitEntities)] = other.id;
 	with other
 	{
-		my_health -= other.dmg * other.myPower;
+		DealDamage(other.dmg * other.myPower);
 		if sprite_index != spr_hurt
 		{
 			snd_play(snd_hurt, hurt_pitch_variation,true)	

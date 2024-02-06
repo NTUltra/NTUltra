@@ -2,7 +2,7 @@ if alarm[11] < 1 && other.team != team and other.my_health > 0
 {instance_destroy()
 with other
 {
-my_health -= other.dmg
+DealDamage(other.dmg)
 sprite_index = spr_hurt
 image_index = 0
 motion_add(other.direction,7)
@@ -22,7 +22,7 @@ if shotgunshouldered
 		{
 			if id != direct && team != other.team && my_health > 0
 			{
-				my_health -= 5
+				DealDamage(5);
 				sprite_index = spr_hurt
 				image_index = 0
 				motion_add(other.direction,5)

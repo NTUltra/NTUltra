@@ -6,7 +6,7 @@ with other
 		if other.alarm[0] < 1 &&  !array_contains(other.hitEntities,id) {
 			hitEntities[array_length(hitEntities)] = other.id;
 			other.alarm[0] = 15;
-			my_health -= 2;
+			DealDamage(2);
 			sprite_index = spr_hurt;
 			image_index = 0;
 			snd_play(snd_hurt, hurt_pitch_variation,true);

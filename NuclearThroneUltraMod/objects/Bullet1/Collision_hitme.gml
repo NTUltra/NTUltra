@@ -8,7 +8,7 @@ if other.team != team and other.my_health > 0
 			if sprite_index != spr_hurt
 			{
 				hitBy = other.sprite_index;
-				my_health -= other.dmg
+				DealDamage(other.dmg)
 				sprite_index = spr_hurt
 				image_index = 0
 				Sleep(20);
@@ -18,10 +18,10 @@ if other.team != team and other.my_health > 0
 		else
 		{
 			snd_play(snd_hurt, hurt_pitch_variation,true)
-			my_health -= other.dmg;
 			if instance_exists(Player){
 			if Player.ultra_got[28]//roids ultra d
-			{my_health -=2;}}
+			{other.dmg += 2;}}
+			DealDamage(other.dmg);
 			sprite_index = spr_hurt
 			image_index = 0
 			motion_add(other.direction,6)

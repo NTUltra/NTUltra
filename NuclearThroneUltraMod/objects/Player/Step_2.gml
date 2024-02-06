@@ -454,7 +454,7 @@ if skill_got[22]//Stress Sharp teeth part
 			{
 				snd_play(snd_hurt, hurt_pitch_variation,true)
 				Sleep(10)
-				my_health -= other.sharpteeth*multiplier//Sharp teeth's damage!
+				DealDamage(other.sharpteeth*multiplier)//Sharp teeth's damage!
 				sprite_index = spr_hurt
 				image_index = 0
 				motion_add(

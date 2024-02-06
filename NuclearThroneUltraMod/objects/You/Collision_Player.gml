@@ -4,7 +4,7 @@ if Player.skill_got[8] = 1//Dealing the damage with gamma guts
 {
 with other
     {
-    my_health -= 7//dmg dealt by gamma guts
+    DealDamage(7)//dmg dealt by gamma guts
     sprite_index = spr_hurt
     image_index = 0
     motion_add(point_direction(other.x,other.y,x,y),3)

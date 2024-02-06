@@ -4,7 +4,7 @@ if other.team != team
 	snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
 	with other
 	{
-		my_health -= 1
+		DealDamage(1)
 		sprite_index = spr_hurt
 		image_index = 0
 		motion_add(other.direction,7)

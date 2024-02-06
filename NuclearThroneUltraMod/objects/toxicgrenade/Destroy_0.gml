@@ -11,7 +11,7 @@ for (var i = 0; i < al; i++) {
 		if other.team != team
 		{
 			snd_play(snd_hurt, hurt_pitch_variation);
-			my_health -= 5
+			DealDamage(5)
 			speed = 0;
 			walk *= 0.5;
 			sprite_index = spr_hurt

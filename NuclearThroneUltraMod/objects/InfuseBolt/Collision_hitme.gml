@@ -8,7 +8,7 @@ if other.team != team && !dealtDamage
 	stickTarget = other;
 	with other
 	{
-	    my_health -= other.dmg
+	    DealDamage(other.dmg)
 	    sprite_index = spr_hurt
 	    image_index = 0
 	    motion_add(other.direction,3)

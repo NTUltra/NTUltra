@@ -47,7 +47,7 @@ var hits = ds_list_create();
 			hitEntities[array_length(hitEntities)] = hits[| i];
 			with hits[| i] {
 				snd_play(snd_hurt, hurt_pitch_variation,true)
-				my_health -= other.dmg;
+				DealDamage(other.dmg);
 				sprite_index = spr_hurt
 				image_index = 0
 				motion_add(other.direction,6)

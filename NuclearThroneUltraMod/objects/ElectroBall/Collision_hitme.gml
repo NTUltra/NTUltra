@@ -6,7 +6,7 @@ if other.team != team and other.my_health > 0 && !array_contains(hitEntities,oth
 	{
 		if sprite_index!=spr_hurt
 		{
-			my_health -= other.dmg
+			DealDamage(other.dmg)
 			sprite_index = spr_hurt
 			snd_play(snd_hurt, hurt_pitch_variation)
 			image_index = 0

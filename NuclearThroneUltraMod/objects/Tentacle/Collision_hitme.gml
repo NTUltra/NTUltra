@@ -6,7 +6,7 @@ if other.team != team and other.my_health > 0//the thing I hit must not be mysel
 		{
 			snd_play(snd_hurt, hurt_pitch_variation,true)
 			instance_create(other.x,other.y,FishBoost)
-			my_health -= other.dmg
+			DealDamage(other.dmg)
 			sprite_index = spr_hurt
 			image_index = 0
 			if other.alarm[1] < 1

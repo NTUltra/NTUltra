@@ -6,7 +6,7 @@ if other.team != team and other.my_health > 0 && (other.team!=2 || image_index<5
 			snd_play(sndBurn,0.01)
 		with other
 		{
-			my_health -= other.dmg;
+			DealDamage(other.dmg);
 			sprite_index = spr_hurt
 			image_index = 0;
 			motion_add(other.direction,0.4 + (other.speed*0.1))

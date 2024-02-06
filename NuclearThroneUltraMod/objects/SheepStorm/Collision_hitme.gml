@@ -25,7 +25,7 @@ BackCont.shake += 1.12*sp*0.5;
 			var deal = round((sp-1)*other.dmg);
 			if UberCont.normalGameSpeed == 60
 			{
-				my_health -= deal*0.5;
+				DealDamage(deal*0.5,false);
 				motion_add(other.image_angle,sp*1.5);
 				if (team != 0)
 				{
@@ -36,7 +36,7 @@ BackCont.shake += 1.12*sp*0.5;
 			}
 			else
 			{
-				my_health -= deal;
+				DealDamage(deal,false);
 				motion_add(other.image_angle,sp*3);
 				if (team != 0)
 				{

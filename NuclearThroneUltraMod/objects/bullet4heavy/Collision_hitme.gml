@@ -17,10 +17,13 @@ if other.team != team and other.my_health > 0
 		{
 			if team != other.team && my_health > 0
 			{
-				my_health -= max(0,other.dmg - 15) - roidBuff;
 				if id == direct
 				{
-					my_health -= 15 - roidBuff;
+					DealDamage(other.dmg - roidBuff);
+				}
+				else
+				{
+					DealDamage(max(0,other.dmg - 15) - roidBuff);
 				}
 				sprite_index = spr_hurt
 				image_index = 0

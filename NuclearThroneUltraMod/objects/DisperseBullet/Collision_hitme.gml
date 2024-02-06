@@ -5,15 +5,11 @@ with other
 {
 	if UberCont.normalGameSpeed == 60
 	{
-		my_health -= other.dmg * 0.5;
-		if instance_exists(Player) && Player.ultra_got[28]//roids ultra d
-	    {my_health -= 0.5;}
+		DealDamage(other.dmg * 0.5, true);
 	}
 	else
 	{
-		my_health -= other.dmg;
-		if instance_exists(Player) && Player.ultra_got[28]//roids ultra d
-	    {my_health -= 1;}
+		DealDamage(other.dmg, true);
 	}
     
     sprite_index = spr_hurt

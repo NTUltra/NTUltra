@@ -19,7 +19,7 @@ with Player
 			if armour > 0
 				armour -= 1;
 			else
-				my_health -= 7
+				DealDamage(7)
 			repeat(10)
 				instance_create(x+random(16)-8,y+random(16)-8,Curse);
 			hitBy = wep_sprt[wep];	

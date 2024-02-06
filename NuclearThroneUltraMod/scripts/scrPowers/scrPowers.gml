@@ -410,7 +410,7 @@ function scrPowers(raceOverwrite = -1) {
 				if armour > 0
 					armour -= 1;
 				else
-					my_health -= 1;
+					DealDamage(1);
 				hitBy = sprite_index;
 				exception=true;
 			    if my_health<=0 //KILL YOSELF USING ACTIVE
@@ -462,7 +462,7 @@ function scrPowers(raceOverwrite = -1) {
 	        armour--;
 	    else if ultra_got[63] && !(ultra_got[62] && altUltra)
 	    {
-	        my_health -= 2;
+	        DealDamage(2);
 			hitBy = sprite_index;
 	        exception=true
 	    }
@@ -815,7 +815,7 @@ function scrPowers(raceOverwrite = -1) {
 					if armour > 0
 						armour -= 1;
 					else
-						my_health -= 1;
+						DealDamage(1);
 					hitBy = sprite_index;
 					exception=true;
 					var splatDir = random(360);
@@ -1345,7 +1345,7 @@ function scrPowers(raceOverwrite = -1) {
 							if armour > 0
 								armour -= 1;
 							else
-								my_health -= 2//1/8--->0.875
+								DealDamage(2)//1/8--->0.875
 							hitBy = sprite_index;
 						}
 						else
@@ -1391,7 +1391,7 @@ function scrPowers(raceOverwrite = -1) {
 						if armour > 0
 							armour -= 1;
 						else
-							my_health -= 2//1/8--->0.875
+							DealDamage(2)//1/8--->0.875
 						hitBy = sprite_index;
 					}
 					else
@@ -1655,14 +1655,14 @@ function scrPowers(raceOverwrite = -1) {
 				if armour > 0
 					armour -= 1;
 				else
-					my_health -= 1;
+					DealDamage(1);
 				hitBy = sprite_index;
 			}
 			else{
 				if armour > 0
 					armour -= 1;
 				else
-					my_health -= 2;
+					DealDamage(2);
 				hitBy = sprite_index;
 			}
 			exception=true;

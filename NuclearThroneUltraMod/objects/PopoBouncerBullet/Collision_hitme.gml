@@ -6,7 +6,7 @@ if other.team != team and other.my_health > 0
 	{
 		if sprite_index != spr_hurt
 		{
-			my_health -= other.dmg;
+			DealDamage(other.dmg);
 			sprite_index = spr_hurt
 			image_index = 0
 			snd_play(snd_hurt, hurt_pitch_variation,true)

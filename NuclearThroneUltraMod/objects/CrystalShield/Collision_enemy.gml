@@ -18,7 +18,7 @@ with Player
 				dmg = 4;
 		    if (my_health - dmg<=0)//gamma guts kill?
 		    {
-				my_health -= dmg
+				DealDamage(dmg, true)
 				snd_play(sndGammaGutsKill,0,true);
 				with instance_create(x,y,GammaGutsBlast)
 				{
@@ -28,11 +28,11 @@ with Player
 
 		    } else if UberCont.normalGameSpeed == 60
 			{
-				my_health -= dmg * 0.5;
+				DealDamage(dmg * 0.5, true);
 				mover *= 0.5;
 			}
 			else
-				my_health -= dmg
+				DealDamage(dmg)
 		    sprite_index = spr_hurt
 		    image_index = 0
 			if meleedamage == 0

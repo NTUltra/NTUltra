@@ -984,7 +984,7 @@ if (rad > mr)
 			}
 			with enemy
 			{
-				my_health -= 10;
+				DealDamage(10);
 				if !audio_is_playing(snd_hurt)
 					snd_play(snd_hurt,hurt_pitch_variation,true);
 			}
@@ -1689,7 +1689,7 @@ if (!outOfCombat and !instance_exists(LevCont) and !instance_exists(FloorMaker))
 								}
 								ang += angStep;
 							}
-							my_health -= 1;
+							DealDamage(1);
 							hitBy = sprLavaRepresent;
 						    hotfloor=0;//allright you've burned now continue
         
@@ -1738,7 +1738,7 @@ if (!outOfCombat and !instance_exists(LevCont) and !instance_exists(FloorMaker))
 								}
 								ang += angStep;
 							}
-							my_health -= 1;
+							DealDamage(1);
 							snd_play_2d(choose(sndFrost1,sndFrost2));
 							snd_play_2d(snd_hurt);
 							instance_create(x,y,FrozenPlayer);
@@ -2410,7 +2410,7 @@ if hitWall && sprite_index != spr_hurt && alarm[3] < 1 && hammerheadcounter < 1 
 	if armour > 0
 		armour -= 1;
 	else
-		my_health -= 2;
+		DealDamage(2);
 	snd_play_2d(snd_hurt_actual, hurt_pitch_variation);
 	sprite_index = spr_hurt;
 	image_index = 0;

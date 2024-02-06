@@ -5,9 +5,9 @@ if other.team != team and other.my_health > 0
 		if sprite_index != spr_hurt
 			snd_play(snd_hurt, hurt_pitch_variation,true)
 		if UberCont.normalGameSpeed == 60
-			my_health -= other.dmg * 0.5;
+			DealDamage(other.dmg * 0.5, true);
 		else
-			my_health -= other.dmg
+			DealDamage(other.dmg,true);
 		
 		sprite_index = spr_hurt
 		image_index = 0

@@ -26,7 +26,7 @@ if instance_exists(Player)
 			if team != other.team
 			{
 				snd_play(snd_hurt, hurt_pitch_variation,true)
-				my_health -= other.dmg;
+				DealDamage(other.dmg);
 				other.dmg *= 2;
 				sprite_index = spr_hurt
 				image_index = 0

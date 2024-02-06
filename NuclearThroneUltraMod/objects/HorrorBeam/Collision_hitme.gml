@@ -8,7 +8,7 @@ if other.team != team and other.my_health > 0
 			raddrop+=other.rad;
 			with HorrorBeam
 				rad = 0;
-			my_health -= clamp(floor(other.charge*0.25),1,4);
+			DealDamage(clamp(floor(other.charge*0.25),1,4));
 			sprite_index = spr_hurt
 			image_index = 0
 			motion_add(other.image_angle,2+other.charge)

@@ -16,7 +16,7 @@ if target != noone && instance_exists(target)
 			y = yprevious;
 			other.lerpTime = -1;
 			snd_play(snd_hurt, hurt_pitch_variation,true)
-			my_health -= 20;
+			DealDamage(20);
 			sprite_index = spr_hurt
 			image_index = 0
 			direction += 180;

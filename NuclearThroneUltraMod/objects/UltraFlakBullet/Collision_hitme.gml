@@ -19,9 +19,9 @@ if other.team != team
 		{
 			if team != other.team && my_health > 0
 			{
-				my_health -= max(0,other.dmg - 20)
 				if id == direct
-					my_health -= 20;
+					other.dmg += 20;
+				DealDamage(other.dmg);
 				sprite_index = spr_hurt
 				image_index = 0
 				motion_add(other.direction,8)

@@ -1,7 +1,7 @@
 ///xxx();
 // /@description
 ///@param
-function DealDamage(theDamage, isPerFrame = false){
+function DealDamage(theDamage, isPerFrame = false,boostDamage = true){
 	//Add damage only if team is not 2(player)
-	my_health -= other.dmg;
+	DealDamage(other.dmg);
 }

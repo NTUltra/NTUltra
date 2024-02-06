@@ -14,3 +14,7 @@ cost = 2;
 radCost = 0;
 xprev = x;
 yprev = y;
+
+if instance_exists(Player){
+if Player.ultra_got[28]//roids ultra d
+{dmg += 1;}}

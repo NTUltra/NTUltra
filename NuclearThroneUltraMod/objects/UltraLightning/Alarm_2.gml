@@ -30,7 +30,7 @@ if al > 0 && alarm[0] < 1
 							{
 								if instance_exists(Player)
 								{
-									my_health -= other.dmg
+									DealDamage(other.dmg)
 
 									if Player.skill_got[17] && team == 2
 										snd_play(sndSpark2);
@@ -66,7 +66,7 @@ if al > 0 && alarm[0] < 1
 							}
 							if sprite_index != spr_hurt
 							{
-								my_health -= 3
+								DealDamage(3)
 								sprite_index = spr_hurt
 								image_index = 0
 								snd_play(snd_hurt, hurt_pitch_variation,true)

@@ -4,7 +4,7 @@ alarm[1] = 5;
 with owner
 {
 	snd_play(snd_hurt, hurt_pitch_variation,true)
-	my_health -= other.dmg;
+	DealDamage(other.dmg);
 	sprite_index = spr_hurt;
 	image_index = 0
 }

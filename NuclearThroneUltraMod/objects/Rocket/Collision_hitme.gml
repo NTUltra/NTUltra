@@ -6,7 +6,7 @@ if other.team != team
 
 		with other
 		{
-			my_health -= other.dmg
+			DealDamage(other.dmg)
 			sprite_index = spr_hurt
 			image_index = 0
 			motion_add(other.direction,10)
@@ -17,9 +17,9 @@ if other.team != team
 		with other
 		{
 			if UberCont.normalGameSpeed == 60
-				my_health -= 2;
+				DealDamage(2);
 			else
-				my_health -= 4;
+				DealDamage(4);
 			sprite_index = spr_hurt
 			image_index = 0
 		}

@@ -4,10 +4,10 @@ if other.team != team and other.my_health > 0
 	with other
 	{
 	if object_index!=Player
-		my_health -= other.dmg
+		DealDamage(other.dmg)
 	else if sprite_index != spr_hurt
 	{
-		my_health -= 3
+		DealDamage(3)
 		hitBy = other.sprite_index;
 	}
 

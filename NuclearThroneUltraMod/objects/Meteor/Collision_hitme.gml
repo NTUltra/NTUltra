@@ -5,7 +5,7 @@ if alarm[3] < 5 && other.team != team and other.my_health > 0
 	{
 		if sprite_index != spr_hurt
 		{
-			my_health -= 4
+			DealDamage(4)
 			sprite_index = spr_hurt
 			image_index = 0
 			motion_add(other.direction,8)

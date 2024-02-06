@@ -11,9 +11,9 @@ if other.team != team  &&  other.my_health > 0
 				image_index = 0
 			}
 			if UberCont.normalGameSpeed == 60
-				my_health -= other.dmg;
+				DealDamage(other.dmg);
 			else
-				my_health -= other.dmg;
+				DealDamage(other.dmg);
 			motion_add(other.image_angle,6)
 		}
 		instance_create(x,y,Dust)

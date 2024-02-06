@@ -12,7 +12,7 @@ if other.team != team && team!=0
 		image_index=1;
 		with other
 		{
-		my_health -= other.dmg
+		DealDamage(other.dmg)
 		sprite_index = spr_hurt
 		snd_play(snd_hurt, hurt_pitch_variation)
 		image_index = 0

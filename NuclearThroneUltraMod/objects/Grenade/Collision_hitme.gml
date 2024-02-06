@@ -15,7 +15,7 @@ if other.team != team
 		instance_destroy()
 		with other
 		{
-			my_health -= other.dmg;
+			DealDamage(other.dmg);
 			snd_play(snd_hurt, hurt_pitch_variation,true)
 			sprite_index = spr_hurt
 			image_index = 0
