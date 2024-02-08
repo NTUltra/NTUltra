@@ -31,7 +31,7 @@ function scrContactDamageToEnemy(hitEnemy){
 				snd_play(sndGammaGutsProc);
 				with hitEnemy
 				{
-					DealDamage(contactDmg)//dmg dealt by gamma guts
+					DealDamage(contactDmg,true,true,false)//dmg dealt by gamma guts
 					var dmgTaken = scrCallculateFinalDamage(contactDmg);
 					if my_health - dmgTaken <= 0
 					{
@@ -104,9 +104,9 @@ function scrContactDamageToEnemy(hitEnemy){
 					        image_index = 0
 					        snd_play(snd_hurt, hurt_pitch_variation)
 							if skill_got[8]
-								DealDamage(ceil(hitEnemy.meleedamage*0.5));
+								DealDamage(ceil(hitEnemy.meleedamage*0.5),false,false,false);
 							else
-								DealDamage(hitEnemy.meleedamage)
+								DealDamage(hitEnemy.meleedamage,false,false,false)
 					        motion_add(point_direction(hitEnemy.x,hitEnemy.y,x,y)+180,8)
         
 					        with hitEnemy

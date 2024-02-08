@@ -2,7 +2,7 @@
 snd_play(sndBreakIce);
 with owner
 {
-	DealDamage(max(other.debrisAmount + 1,3));
+	DealDamage(max(other.debrisAmount + 1,3),false,true,false);
 	sprite_index = spr_hurt;
 	image_index = 0;
 	snd_play(snd_hurt,hurt_pitch_variation);

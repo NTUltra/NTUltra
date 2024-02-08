@@ -119,8 +119,16 @@ if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or
 		    {
 			    with WepPickup
 			    {
-					if !hasBeenEaten && !curse && !persistent
+					var curseEater = (other.ultra_got[30] && other.altUltra)
+					if !hasBeenEaten && (!curse || curseEater) && !persistent
 					{
+						if curse && curseEater
+						{
+							scrHeal(1,true);
+							snd_play(sndCursedReminder);
+							snd_play(sndHealthPickup);
+							curse = 0;
+						}
 						scrBasicRobotEat(other.x,other.y,wep);
 						instance_create(other.x,other.y,Smoke);
 					}

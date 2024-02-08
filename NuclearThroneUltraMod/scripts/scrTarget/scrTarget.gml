@@ -77,23 +77,21 @@ function scrTarget() {
 			    }
 		    } 
 		}
-		else if Player.ultra_got[30] && target == Player.id {
-			if instance_exists(Turret){//Robot's turret
-			    with enemy
-			    {
-					var n =instance_nearest(x,y,Turret);
-					if n != noone
-				    if point_distance(x,y,Player.x,Player.y) < point_distance(x,y,n.x,n.y)
-				    {
-						target = instance_nearest(x,y,Player)
-					}
-				    else
-					{
-						target = n
-					}
-			    }
-		    } 
-		}
+		if instance_exists(RobotTurret){//Robot's turret
+			with enemy
+			{
+				var n =instance_nearest(x,y,RobotTurret);
+				if n != noone
+				if point_distance(x,y,Player.x,Player.y) < point_distance(x,y,n.x,n.y)
+				{
+					target = instance_nearest(x,y,Player)
+				}
+				else
+				{
+					target = n
+				}
+			}
+		} 
 		if target == Player.id && Player.justAsheep
 		{
 			target = noone;

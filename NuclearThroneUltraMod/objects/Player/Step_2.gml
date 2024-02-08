@@ -456,7 +456,7 @@ if skill_got[22]//Stress Sharp teeth part
 			{
 				snd_play(snd_hurt, hurt_pitch_variation,true)
 				Sleep(10)
-				DealDamage(other.sharpteeth*multiplier)//Sharp teeth's damage!
+				DealDamage(other.sharpteeth*multiplier,false,true,false)//Sharp teeth's damage!
 				sprite_index = spr_hurt
 				image_index = 0
 				motion_add(
@@ -733,7 +733,70 @@ if(my_health <= 0 && maxhealth > 0)
 	    my_health = 1;
     }
 	//BOUNCY FAT
-	if (skill_got[40] && my_health <= 0 && maxhealth > 0 && scrHasAmmo())
+	if my_health <= 0 && curseBotTeleport
+	{
+		curseBotTeleport = false;
+		snd_play_2d(sndCursedPickupDisappear);
+		snd_play_2d(sndHyperCrystalSearch);
+		var dis = 0;
+		var xx = x;
+		var yy = y;
+		var ang = random(360);
+		repeat(12)
+		{
+			with instance_create(x,y,Curse)
+			{
+				motion_add(ang,1+random(2));
+			}
+			ang += 30;
+		}
+		with Floor {
+			var o = 16;
+			if object_index == FloorExplo
+				o = 8;
+			var fx = x + o;
+			var fy = y + o;
+			var n = instance_nearest(fx,fy,enemy)
+			var newDis = point_distance(fx,fy,n.x,n.y)
+			if n != 2 && newDis > dis
+			{
+				dis = newDis;
+				xx = fx;
+				yy = fy;
+			}
+		}
+		x = xx;
+		y = yy;
+		scrForcePosition60fps();
+		repeat(12)
+		{
+			with instance_create(x,y,Curse)
+			{
+				motion_add(ang,1+random(2));
+			}
+			ang += 30;
+		}
+		snd_play(sndCursedPickup);
+		my_health = 1;
+		BackCont.shake += 10;
+		Sleep(50);
+		alarm[3] += 18;
+		snd_hurt = sndDamageNegate;
+		scrGiveEuphoriaShield();
+	}
+	else if my_health <= 0 && lastWishPrevent {
+		BackCont.shake += 20;
+		Sleep(100);
+		my_health = max(1,round(maxhealth*0.5));
+		if race == 25
+			my_health += 3;
+		lastWishPrevent = false;
+		snd_hurt = sndDamageNegate;
+		snd_play_2d(sndMutLastWish);
+		scrGiveEuphoriaShield();
+		alarm[3] += 20;
+	}
+	else if (skill_got[40] && my_health <= 0 && maxhealth > 0 && scrHasAmmo())
 	{
 		snd_play_2d(sndBounceFat);
 		instance_create(x,y,BouncyFatFX);
@@ -797,20 +860,7 @@ if(my_health <= 0 && maxhealth > 0)
 			scrEmpty();	
 		}
 	}
-	if my_health <= 0 {
-		if lastWishPrevent {
-			BackCont.shake += 20;
-			Sleep(100);
-			my_health = max(1,round(maxhealth*0.5));
-			if race == 25
-				my_health += 3;
-			lastWishPrevent = false;
-			snd_hurt = sndDamageNegate;
-			snd_play_2d(sndMutLastWish);
-			scrGiveEuphoriaShield();
-			alarm[3] += 23;
-		}
-	}
+	
 }
 
 

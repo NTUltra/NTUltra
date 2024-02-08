@@ -38,7 +38,6 @@ function scrScarierFace(theDamage, isPerFrame){
 			{
 				var halfPart = (1 - abs(part)) * 0.5;
 				part -= halfPart;
-				debug(part);
 			}
 			Player.excessDamageDeal += my_health * part;
 		}

@@ -409,6 +409,12 @@ function scrLoadRace() {
 		spr_hurt=sprMutant6EHurt;
 		spr_dead=sprMutant6EDead;
 		break;
+		case 8:
+		spr_idle=sprMutant8EIdle;
+		spr_walk=sprMutant8EWalk;
+		spr_hurt=sprMutant8EHurt;
+		spr_dead=sprMutant8EDead;
+		break;
 		case 9:
 		spr_idle=sprMutant9EIdle;
 		spr_walk=sprMutant9EWalk;

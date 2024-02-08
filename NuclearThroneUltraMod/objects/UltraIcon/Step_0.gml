@@ -401,6 +401,18 @@ if (selected &&
 			}
 		}
 	}
+	else if skill == 30 && Player.race == 8 && (Player.spr_idle == sprMutant8EIdle || Player.unlockAlternativeUltras)
+	{
+		with Player
+		{
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			altUltra = true;
+			curseBotTeleport = true;
+			ultra_name[30] = "CURSED TECHNOLOGY"
+			ultra_text[30] = "INSTALL <g>LASER<g> <w>DEFENSE<w> SYSTEM#<p>CURSED PICKUPS<p> ATTACK ENEMIES#EATING <p>CURSED WEAPONS<p> (OVER) <r>HEALS<r> <w>1<w><r>HP<r>##ONCE PER AREA:#WHEN TAKING <aq>LETHAL DAMAGE<aq>#<p>TELEPORT<p> AWAY FROM ENEMIES";
+		    ultra_tips[30] = "eating guns from other dimensions"
+		}
+	}
 	else if skill == 35 && Player.race == 9 && ((scrIsCrown(12) || scrIsCrown(34)) || Player.unlockAlternativeUltras)//CHICKEN REVERSE TIME
 	{
 		with Player

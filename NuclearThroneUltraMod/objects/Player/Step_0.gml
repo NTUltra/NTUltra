@@ -1127,7 +1127,8 @@ if (!instance_exists(LevCont))
 		{
 			autoFire = 6;
 			can_shoot = 1
-			canInfiniteFire = 1;
+			if ultra_got[21] && altUltra
+				canInfiniteFire = 1;
 			with CloneShooter
 				instance_destroy();
 		
@@ -1208,7 +1209,8 @@ if (!instance_exists(LevCont))
 		if breload <= 0 && !bcan_shoot
 		{
 			bcan_shoot = 1
-			canInfiniteFireB = 1;
+			if ultra_got[21] && altUltra	
+				canInfiniteFireB = 1;
 			if ultra_got[27] && !altUltra{
 				var roidsWepangle;//damage control
 				roidsWepangle=bwepangle;//steroids melee shit
@@ -1718,7 +1720,7 @@ if (!outOfCombat and !instance_exists(LevCont) and !instance_exists(FloorMaker))
 								}
 								ang += angStep;
 							}
-							DealDamage(1);
+							DealDamage(1,false,false,false);
 							hitBy = sprLavaRepresent;
 						    hotfloor=0;//allright you've burned now continue
         
@@ -1767,7 +1769,7 @@ if (!outOfCombat and !instance_exists(LevCont) and !instance_exists(FloorMaker))
 								}
 								ang += angStep;
 							}
-							DealDamage(1);
+							DealDamage(1,false,false,false);
 							snd_play_2d(choose(sndFrost1,sndFrost2));
 							snd_play_2d(snd_hurt);
 							instance_create(x,y,FrozenPlayer);
@@ -2439,7 +2441,7 @@ if hitWall && sprite_index != spr_hurt && alarm[3] < 1 && hammerheadcounter < 1 
 	if armour > 0
 		armour -= 1;
 	else
-		DealDamage(2);
+		DealDamage(2,false,false,false);
 	snd_play_2d(snd_hurt_actual, hurt_pitch_variation);
 	sprite_index = spr_hurt;
 	image_index = 0;
@@ -2455,4 +2457,26 @@ if hitWall && sprite_index != spr_hurt && alarm[3] < 1 && hammerheadcounter < 1 
 		ang += 60;
 	}
 	instance_create(x,y,WallBreak);
+}
+if skill_got[8] {
+	var gutsRange = ds_list_create();
+	var al = collision_circle_list(x,y,14 + (ultra_got[58] * 2),enemy,false,false,gutsRange,false);
+	var gutsDmg = 1;
+	if is60fps
+		gutsDmg = 0.5;
+	if al > 0
+		snd_play(sndGammaGutsSmall,0,true);
+	for (var i = 0; i < al; i ++)
+	{
+		with gutsRange[| i] {
+			DealDamage(gutsDmg,true,true,false);
+			sprite_index = spr_hurt
+			image_index = 0
+			if meleedamage > 0
+				motion_add(point_direction(other.x,other.y,x,y),0.4)
+			else
+				motion_add(point_direction(other.x,other.y,x,y),3)
+		}
+	}
+	ds_list_destroy(gutsRange);
 }

@@ -1,7 +1,7 @@
 /// @description Black sword? and UNLOCKABLES
 if swapChar
 	exit;
-if gunGod > 0
+if ultra_got[21] && altUltra && gunGod > 0
 {
 	gunGod = min(gunGod * 0.75, 600);
 	reload = gunGod * 0.5;

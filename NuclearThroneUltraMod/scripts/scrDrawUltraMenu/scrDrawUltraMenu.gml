@@ -39,6 +39,9 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 		case 6:		//YV
 			am += 2;
 		break;
+		case 8:		//ROBOT
+			am ++;
+		break;
 		case 9:		//Chicken
 			am ++;
 		break;
@@ -219,6 +222,15 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 					unlockHint = "HINT: " + secret_ultra_hint[u];
 					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
 					drawSprite = sprYvVenuzianAirhorn;
+				break;
+				case 8:
+					var u = 37;
+					name = string_hash_to_newline(secret_ultra_name[u]);
+					text = secret_ultra_text[u];
+					canShowThis = UberCont.ctot_secret_ultra_taken[u];
+					unlockHint = "HINT: " + secret_ultra_hint[u];
+					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
+					drawSprite = sprCursedTechonology;
 				break;
 				case 9:
 					var u = 10;

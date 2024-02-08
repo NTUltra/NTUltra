@@ -54,6 +54,10 @@ function scrLeaderboardRace(race,bskin,altUltra,area){
 	return sprMutant7BIdle;
 	break;
 	case 8:
+	if altUltra
+	{
+		return sprMutant8EIdle;
+	}
 	return sprMutant8BIdle;
 	break;
 	case 9:

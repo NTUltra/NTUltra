@@ -5,6 +5,12 @@ if !instance_exists(SecretFinder)
 	instance_create(x,y,SecretFinder);
 if instance_exists(Player)
 {
+	with Player {
+		if ultra_got[30] && altUltra
+		{
+			alarm[11] = 60;	
+		}
+	}
 	if Player.ultra_got[96]
 	{
 		alarm[11] = 30;

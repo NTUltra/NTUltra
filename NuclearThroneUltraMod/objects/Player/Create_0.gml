@@ -19,6 +19,8 @@ with GameRender
 }
 with DataRef
 	instance_destroy();
+curseBotAngle = 0;
+curseBotTeleport = false;
 gunGod = 0;
 gunGodFirst = false;
 gunGodFirstB = false;

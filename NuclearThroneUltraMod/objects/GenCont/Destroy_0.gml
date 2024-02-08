@@ -225,6 +225,9 @@ if instance_exists(Player)
 	    strongspiritused=false;
 	    }
 	    isAlkaline = true;
+		if ultra_got[30] && altUltra {
+			curseBotTeleport = true;	
+		}
 	    if ultra_got[37]==1//Personal Guard REBEL ULTRA A
 	    {
 			with instance_create(x,y,Ally)

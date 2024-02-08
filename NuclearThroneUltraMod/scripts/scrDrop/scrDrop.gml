@@ -109,7 +109,7 @@ function scrDrop(itemdrop, weapondrop) {
 	{
 		itemdrop *= 0.5;
 	}
-	if Player.ultra_got[30] {//Robot regurgitate
+	if Player.ultra_got[30] && !Player.altUltra {//Robot regurgitate
 		weapondrop *= 1.15;
 	}
 	if Player.skill_got[0]//heavy heart

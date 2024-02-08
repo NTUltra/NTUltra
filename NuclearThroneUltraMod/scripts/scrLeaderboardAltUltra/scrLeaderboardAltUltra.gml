@@ -39,6 +39,9 @@ function scrLeaderboardAltUltra(ultraMutation){
 		case 29:
 		return sprExclusiveTasteHUD
 		break;
+		case 30:
+		return sprCursedTechonologyHUD
+		break;
 		case 35:
 		return sprReverseFocusHUD;
 		break;

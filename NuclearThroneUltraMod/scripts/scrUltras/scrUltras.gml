@@ -245,7 +245,14 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		else
 			ultra_text[30] = "+15% <w>WEAPON DROP RATE<w>#EATING WEAPONS HAS A 30% CHANCE#TO DROP <w>CHESTS<w>##EATING A WEAPON DROPS IT LIKE A TURRET#THE <w>TURRET<w> FIRES THE EATEN WEAPON"
 		ultra_tips[30] = "2% more chance for weapon chests"
-    
+		
+		if altOverride || (instance_exists(Player) && Player.race == 8 && (Player.spr_idle == sprMutant8EIdle || Player.unlockAlternativeUltras))
+		{
+			ultra_name[30] = "CURSED TECHNOLOGY"
+			ultra_text[30] = "INSTALL <g>LASER<g> <w>DEFENSE<w> SYSTEM#<p>CURSED PICKUPS<p> ATTACK ENEMIES#EATING <p>CURSED WEAPONS<p> (OVER) <r>HEALS<r> <w>1<w><r>HP<r>##ONCE PER AREA:#WHEN TAKING <aq>LETHAL DAMAGE<aq>#<p>TELEPORT<p> AWAY FROM ENEMIES";
+		    ultra_tips[30] = "eating guns from other dimensions"
+		}
+		
 	    ultra_name[31] = "EXTRA STORAGE"
 		if isOtherCharacter
 			ultra_text[31] = "YOU CAN CARRY <w>THREE<w> WEAPONS"

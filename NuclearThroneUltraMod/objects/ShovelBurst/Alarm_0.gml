@@ -9,6 +9,10 @@ if instance_exists(creator)
 	//FIRING
 	if instance_exists(Player) {
 		var aimDir = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+		with creator
+		{
+			motion_add(aimDir,2);
+		}
 		var typeOfSlash = ammo % 3;
 		var spr = sprHeavySlash;
 		var wantDmg = 16;

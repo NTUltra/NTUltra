@@ -12,10 +12,9 @@ function scrBasicRobotEat(xx,yy,eatWep){
 	{
 		scrUnlockBSkin(8,"FOR EATING A HYPER WEAPON",0);
 	}
-
 	if string_copy(wep_name[eatWep],0,4) = "GOLD"
 	{
-		if object_index == Player && bskin=0//Robot secret golden skin
+		if object_index == Player && Player.spr_idle == sprMutant8Idle//Robot secret golden skin
 		{
 			scrUnlockAltSkin(race, 0);
 			spr_idle=sprMutant8DIdle;
@@ -114,7 +113,7 @@ function scrBasicRobotEat(xx,yy,eatWep){
 	instance_create(x,y,Smoke)
 
 	//ROBOT Ultra B Regurgitate
-	if Player.ultra_got[30]
+	if Player.ultra_got[30] && !Player.altUltra
 	{
 		if random(100) < 50 + (Player.skill_got[23]*10)//original 43% chance
 		{

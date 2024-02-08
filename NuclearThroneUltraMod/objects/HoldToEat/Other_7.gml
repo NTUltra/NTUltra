@@ -13,19 +13,36 @@ with Player
 			lowb = wep_load[bwep]*-2;
 			lowc = wep_load[cwep]*-2;
 		}
-		else if curse = 1
+		if curse = 1
 		{
 			curse = 0
-			if armour > 0
-				armour -= 1;
-			else
-				DealDamage(7)
+			snd_play(sndCursedReminder);
+			if spr_idle == sprMutant8Idle
+			{
+				scrUnlockAltSkin(race, 1);
+				spr_idle=sprMutant8EIdle;
+				spr_walk=sprMutant8EWalk;
+				spr_hurt=sprMutant8EHurt;
+				spr_dead=sprMutant8EDead;
+			}
 			repeat(10)
 				instance_create(x+random(16)-8,y+random(16)-8,Curse);
-			hitBy = wep_sprt[wep];	
-			sprite_index = spr_hurt;
-			image_index = 0;
-			snd_play(snd_hurt, hurt_pitch_variation,true)
+			if ultra_got[30] && altUltra
+			{
+				scrHeal(1,true);
+				snd_play(sndHealthPickup);
+			}
+			else
+			{
+				hitBy = wep_sprt[wep];
+				if armour > 0
+					armour -= 1;
+				else
+					DealDamage(7,false,false,false);
+				sprite_index = spr_hurt;
+				image_index = 0;
+				snd_play(snd_hurt, hurt_pitch_variation,true)
+			}
 			
 		}
 		reload = lowa;
@@ -45,7 +62,7 @@ with Player
 		scrSwapWeps()
 		bwep = 0}
 		
-		if ultra_got[30]
+		if ultra_got[30] && !altUltra
 		{
 			with instance_create(x,y,RobotTurret)
 			{

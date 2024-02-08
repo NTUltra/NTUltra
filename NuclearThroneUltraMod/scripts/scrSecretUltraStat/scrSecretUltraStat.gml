@@ -300,6 +300,12 @@ function scrSecretUltraStat() {
 	secret_ultra_hint[36] = "GODS DON'T DIE";
 	secret_ultra_unlk[36] = "DO NOT HAVE ANY#DEATH PREVENTION MUTATIONS";
 	
+	secret_ultra_name[37] = "CURSED TECHNOLOGY"
+	secret_ultra_text[37] = "INSTALL <g>LASER<g> <w>DEFENSE<w> SYSTEM#<p>CURSED PICKUPS<p> ATTACK ENEMIES#EATING <p>CURSED WEAPONS<p> (OVER) <r>HEALS<r> <w>1<w><r>HP<r>##ONCE PER AREA:#WHEN TAKING <aq>LETHAL DAMAGE<aq>#<p>TELEPORT<p> AWAY FROM ENEMIES"
+	secret_ultra_tips[37] = "eating guns from other dimensions"
+	secret_ultra_hint[37] = "SPOILED FOOD";
+	secret_ultra_unlk[37] = "BE CURSED ROBOT\nBY EATING A CURSED WEAPON\nUSING A-SKIN";
+	
 	maxsecretultra = array_length(secret_ultra_name);
 	//109
 	secret_ultra_name[maxsecretultra + 1] = "TRASH"

@@ -363,6 +363,10 @@ function scrDrawHUD() {
 			{
 				draw_sprite_ext(sprExclusiveTasteHUD,0,xx,yy,1,1,0,c_white,1);
 			}
+			else if dir == 30 && (dataRef.spr_idle == sprMutant8EIdle || dataRef.altUltra)  && dataRef.race == 8
+			{
+				draw_sprite_ext(sprCursedTechonologyHUD,0,xx,yy,1,1,0,c_white,1);
+			}
 			else if dir == 33 && dataRef.altUltra && dataRef.race == 9
 			{
 				draw_sprite_ext(sprPhoenixHUD,0,xx,yy,1,1,0,c_white,1);

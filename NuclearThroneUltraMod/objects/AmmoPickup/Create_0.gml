@@ -15,7 +15,7 @@ if sprite_index == sprAmmo {
 		if Player.ccurse {
 			curselevel++
 		}
-		if Player.skill_got[3] == 1
+		if Player.skill_got[3] == 1 && !(Player.ultra_got[30] && Player.altUltra)
 		{
 			curselevel --;	
 		}
@@ -47,11 +47,22 @@ if sprite_index == sprAmmo {
 				sprite_index = sprCursedAmmo
 				alarm[0] -= 100
 				alarm[3] = 5;
+				if Player.ultra_got[30] && Player.altUltra
+				{
+					alarm[4] = 10;
+					alarm[0] += 60;
+				}
 			}
 			if supercursed {
+				actTime -= 5;
 				sprite_index = sprSuperCursedAmmo
 				alarm[0] -= 40
 				alarm[3] = 5;
+				if Player.ultra_got[30] && Player.altUltra
+				{
+					alarm[4] = 10;
+					alarm[0] += 60;
+				}
 			}
 		}
 		alarm[0] = max(alarm[0],15);

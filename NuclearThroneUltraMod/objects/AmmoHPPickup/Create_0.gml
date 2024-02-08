@@ -70,3 +70,5 @@ if UberCont.normalGameSpeed == 60
 }
 if instance_exists(Wall)
 	alarm[2] = 5;
+actTime = 10;
+walk = 0;

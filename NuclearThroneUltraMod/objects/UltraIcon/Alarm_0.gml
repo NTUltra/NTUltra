@@ -53,6 +53,10 @@ else if skill == 29 &&  Player.race == 8 && (Player.unlockAlternativeUltras || P
 {
 	sprite_index = sprExclusiveTaste
 }
+else if skill == 30 &&  Player.race == 8 && (Player.unlockAlternativeUltras || Player.spr_idle == sprMutant8EIdle)
+{
+	sprite_index = sprCursedTechonology
+}
 else if Player.race == 9 && skill == 33 && (Player.unlockAlternativeUltras || scrHasFireWeapon())
 {
 	sprite_index = sprPhoenix;
