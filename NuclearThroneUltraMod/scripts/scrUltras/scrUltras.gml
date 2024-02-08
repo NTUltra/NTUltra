@@ -164,7 +164,12 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_name[21] = "IM A GUN GOD"
 	    ultra_text[21] = "+40% PRIMARY <w>RELOAD SPEED<w>#+10% SECONDARY <w>RELOAD SPEED<w>"
 	    ultra_tips[21] = "+40% higher rate of fire"
-    
+		if altOverride || (instance_exists(Player) && Player.race == 6 && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && scrDoesntHaveReloadMutation())))
+		{
+			ultra_name[21] = "VENUZIAN AIRHORN"
+			ultra_text[21] = "<w>INFINITE RELOAD SPEED!<w>#ALL RELOAD YOU CHEAT#WILL NEED TO BE RELOADED NEXT AREA##PICKING UP A WEAPON#NO LONGER RELOADS YOUR WEAPON";
+			ultra_tips[21] = "infinite trigger finger"
+		}
 	    ultra_name[22] = "BACK 2 BIZNIZ"
 	    ultra_text[22] = "FREE <w>POP POP<w> UPGRADE"
 	    ultra_tips[22] = "more pop"
@@ -182,6 +187,14 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_name[24] = "VERIFY VENUZ"
 	    ultra_text[24] = "EVERY OTHER <w>POP POP<w> ALSO FIRES#YOUR SECONDARY WEAPON#CAN POP FULL <w>AUTO<w>#+50% SECONDARY <w>RELOAD SPEED<w>"
 	    ultra_tips[24] = "blood gamble"
+		
+		if altOverride || (instance_exists(Player) && Player.race == 6 && (Player.altUltra || Player.unlockAlternativeUltras || (instance_exists(UltraIcon) && scrDoesntHaveDeathPrevention())))
+		{
+			ultra_name[24] = "GODS DON'T DIE"
+			ultra_text[24] = "WHEN BOTH YOUR GUNS ARE <w>RELOADED<w>#YOU ARE <aq>IMMUNE<aq>";
+			ultra_tips[24] = "gun god gun god gun god"
+		}
+		
     
 	//STEROIDS 
 	ultra_name[25] = "AMBIDEXTUROUS"

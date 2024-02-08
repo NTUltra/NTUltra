@@ -5,6 +5,7 @@ function scrCreateDataRef(){
 	with instance_create(x,y,DataRef)
 	{
 		hard = other.hard;
+		loops = other.loops;
 		hitBy = other.hitBy;
 		ultramod = other.ultramod;
 		ultra_got = other.ultra_got;

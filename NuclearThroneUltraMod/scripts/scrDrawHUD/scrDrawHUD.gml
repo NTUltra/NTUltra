@@ -451,9 +451,17 @@ function scrDrawHUD() {
 			{
 				draw_sprite_ext(sprUltimateGambleIconHUD,0,xx,yy,1,1,0,c_white,1);
 			}
+			else if dir == 21 && dataRef.altUltra && dataRef.race == 6
+			{
+				draw_sprite_ext(sprYvVenuzianAirhornHUD,0,xx,yy,1,1,0,c_white,1);
+			}
 			else if dir == 23 && dataRef.altUltra && dataRef.race == 6
 			{
 				draw_sprite_ext(sprYVBlasphemyHUD,0,xx,yy,1,1,0,c_white,1);
+			}
+			else if dir == 24 && dataRef.altUltra && dataRef.race == 6
+			{
+				draw_sprite_ext(sprYvGodsDontDieHUD,0,xx,yy,1,1,0,c_white,1);
 			}
 			else if dir == 87 && dataRef.altUltra && dataRef.race == 22
 			{
@@ -602,7 +610,12 @@ function scrDrawHUD() {
 		pci = 1+pci;
 		pci = pci-floor(pci)
 	}
-	if dataRef.creload > 0
+	if dataRef.creload > dataRef.wep_load[wwep]
+	{
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+16,c_red,1)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.creload,1-(dataRef.wep_load[dataRef.cwep]/dataRef.creload))),14,vx+111,vy+16,loadColour,loadA)
+	}
+	else if dataRef.creload > 0
 	{
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+16,c_black,1)
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[dataRef.cwep],1-(dataRef.creload/dataRef.wep_load[dataRef.cwep]))),14,vx+111,vy+16,loadColour,loadA)
@@ -723,7 +736,12 @@ function scrDrawHUD() {
 		pci = 1+pci;
 		pci = pci-floor(pci)
 	}
-	if dataRef.breload > 0
+	if dataRef.breload > dataRef.wep_load[wwep]
+	{
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+68,vy+16,c_red,1)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.breload,1-(dataRef.wep_load[wwep]/dataRef.breload))),14,vx+68,vy+16,loadColour,loadA)
+	}
+	else if dataRef.breload > 0
 	{
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+68,vy+16,c_black,1)
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-(dataRef.breload/dataRef.wep_load[wwep]))),14,vx+68,vy+16,loadColour,loadA)
@@ -858,7 +876,12 @@ function scrDrawHUD() {
 		pci = 1+pci;
 		pci = pci-floor(pci)
 	}
-	if dataRef.reload > 0
+	if dataRef.reload > dataRef.wep_load[wwep]
+	{
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+16,c_red,1)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.reload,1-(dataRef.wep_load[wwep]/dataRef.reload))),14,vx+23,vy+16,loadColour,loadA)
+	}
+	else if dataRef.reload > 0
 	{
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+16,c_black,1)
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-(dataRef.reload/dataRef.wep_load[wwep]))),14,vx+23,vy+16,loadColour,loadA)

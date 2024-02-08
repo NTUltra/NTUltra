@@ -36,6 +36,9 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 		case 5:		//Plant
 			am ++;
 		break;
+		case 6:		//YV
+			am += 2;
+		break;
 		case 9:		//Chicken
 			am ++;
 		break;
@@ -208,6 +211,15 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
 					drawSprite = sprPlantKillKillKill;
 				break;
+				case 6:
+					var u = 35;
+					name = string_hash_to_newline(secret_ultra_name[u]);
+					text = secret_ultra_text[u];
+					canShowThis = UberCont.ctot_secret_ultra_taken[u];
+					unlockHint = "HINT: " + secret_ultra_hint[u];
+					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
+					drawSprite = sprYvVenuzianAirhorn;
+				break;
 				case 9:
 					var u = 10;
 					name = string_hash_to_newline(secret_ultra_name[u]);
@@ -270,6 +282,25 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 					unlockHint = "HINT: " + secret_ultra_hint[u];
 					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
 					drawSprite = sprBoomHands;
+				break;
+			}
+		}
+		else if j == 6
+		{
+			switch (race)
+			{
+				case 6:
+					var u = 36;
+					name = string_hash_to_newline(secret_ultra_name[u]);
+					text = secret_ultra_text[u];
+					canShowThis = UberCont.ctot_secret_ultra_taken[u];
+					unlockHint = "HINT: " + secret_ultra_hint[u];
+					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
+					drawSprite = sprYvGodsDontDie;
+				break;
+				default: 
+					name = string_hash_to_newline(ultra_name[i]);
+					text = ultra_text[i];
 				break;
 			}
 		}

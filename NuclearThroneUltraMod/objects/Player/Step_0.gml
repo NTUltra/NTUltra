@@ -1,7 +1,35 @@
 /// @description main
 if instance_exists(GenCont) || instance_exists(StartDaily) || instance_exists(LevCont)
 	exit;
-	
+if ultra_got[21] && altUltra
+{
+	if canInfiniteFire
+	{
+		can_shoot = true;
+		if gunGodFirst
+		{
+			gunGodFirst = false;
+			BackCont.shake += 5
+			snd_play(sndVenuz)
+		}
+	}
+	if canInfiniteFireB
+	{
+		bcan_shoot = true;
+		if gunGodFirstB
+		{
+			gunGodFirstB = false;
+			BackCont.shake += 5
+			snd_play(sndVenuz)
+		}
+	}
+}
+gunGodImmune = false;
+if ultra_got[24] && altUltra && reload <= 0 && breload <= 0
+{
+	gunGodImmune = true;
+	alarm[3] = max(alarm[3],1);
+}
 var is60fps = (UberCont.normalGameSpeed == 60);
 if canPuffyCheek > 0 {
 	if is60fps
@@ -376,22 +404,24 @@ if !instance_exists(LevCont) and visible = 1
 	if UberCont.public==0 && !keyboard_check(vk_control) && !keyboard_check(vk_shift){
 	//hacks
 		if keyboard_check_pressed(ord("V")) {
-			newMovement = !newMovement;
+			// newMovement = !newMovement;
 			isPermanent = true;
 			var dangle = random(1)*360;
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			//screen_save("explain"+string(scrn)+".png");
 			
 			isPermanent = true;
-			Sleep(100);
 			//scrn++;
 			
 
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			if newMovement
-			thing.mytext = "newMovement: " ;
-			else
-			thing.mytext = "OLD Movement: " ;
+			thing.mytext = "FREEZE";
+			
+			Sleep(200);
+			//if newMovement
+			//thing.mytext = "newMovement: " ;
+			//else
+			//thing.mytext = "OLD Movement: " ;
 		}
 		if keyboard_check_pressed(ord("C")) {
 			var dangle = random(1)*360;
@@ -682,9 +712,7 @@ if !instance_exists(LevCont) and visible = 1
 		{
 			var dangle = random(1)*360;
 			thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,PopupText);
-			thing.mytext = "WEP";
-			instance_create(x,y,WeaponChest);
-			room_speed = is60fps;
+			thing.mytext = "FUCK OFF BRO";
 		}
 		if (keyboard_check_pressed(ord("I")))
 		    {
@@ -984,7 +1012,7 @@ if (rad > mr)
 			}
 			with enemy
 			{
-				DealDamage(10);
+				DealDamage(10,false,true,false);
 				if !audio_is_playing(snd_hurt)
 					snd_play(snd_hurt,hurt_pitch_variation,true);
 			}
@@ -1050,7 +1078,7 @@ if (!instance_exists(LevCont))
 		{//YV fire rate boost
 			reload -= 0.25//0.25
 		}
-		if ultra_got[21]//YV ULTRA A
+		if ultra_got[21] && !altUltra//YV ULTRA A
 		{
 			reload -=0.4;
 		}
@@ -1099,6 +1127,7 @@ if (!instance_exists(LevCont))
 		{
 			autoFire = 6;
 			can_shoot = 1
+			canInfiniteFire = 1;
 			with CloneShooter
 				instance_destroy();
 		
@@ -1138,7 +1167,7 @@ if (!instance_exists(LevCont))
 		}
 	}
 	/*
-	if skill_got[34]//FLEXIBLE ELBOWS
+	if skill_got[34]//FLEXIBLE ELBOWS OLD
 	{
 		if (breload <= 0 || bwep == 0)
 		{
@@ -1179,7 +1208,7 @@ if (!instance_exists(LevCont))
 		if breload <= 0 && !bcan_shoot
 		{
 			bcan_shoot = 1
-
+			canInfiniteFireB = 1;
 			if ultra_got[27] && !altUltra{
 				var roidsWepangle;//damage control
 				roidsWepangle=bwepangle;//steroids melee shit
@@ -1277,11 +1306,11 @@ if (!instance_exists(LevCont))
 				creload -= at;
 		
 		}
-		if ultra_got[24]// YV ultra D
+		if ultra_got[24] && !altUltra// YV ultra D
 		{
 			breload -= 0.6325;
 		}
-		if ultra_got[21]//YV ULTRA A
+		if ultra_got[21] && !altUltra//YV ULTRA A
 		{
 			breload -=0.1;//Small bonus
 		}
@@ -1392,7 +1421,7 @@ if (!instance_exists(LevCont))
 					event_user(0);
 				scrFire();
 			}
-			if reload > 0
+			if reload > 0 && !canInfiniteFire
 				can_shoot = 0;
 		}
 	}
@@ -1766,7 +1795,7 @@ if (!outOfCombat and !instance_exists(LevCont) and !instance_exists(FloorMaker))
 
 
 scr60fpsReload();
-if reload > 0
+if reload > 0 && !canInfiniteFire
 	can_shoot = 0
 else
 {

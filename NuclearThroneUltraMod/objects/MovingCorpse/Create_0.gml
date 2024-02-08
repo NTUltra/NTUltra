@@ -4,6 +4,7 @@ image_speed = 0.4
 depth = 7;
 dmg = 1;
 impactWristed = false;
+team = 0;
 if instance_exists(Player){
 	if Player.ultra_got[52] == 1{
 		friction=0.33;

@@ -11,7 +11,6 @@ if instance_exists(Player)
 	if scrIsCrown(19)
 	{
 		darkness = 1
-		alarm[2] = 2;
 	}
 	else if Player.area == 115 || round(Player.area*0.5) = Player.area*0.5 && Player.area != 10 &&Player.area!=118 &&Player.area!=106
 	&& Player.area != 114 && !scrIsGamemode(25) && Player.area!=104&&Player.area!=8&&Player.area!=108&&Player.area!=122

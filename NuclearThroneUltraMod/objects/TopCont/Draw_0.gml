@@ -546,9 +546,11 @@ if darkness = 1 && surface_exists(dark)
 	}
 	if (drawDark)
 	{
-		draw_set_blend_mode(bm_subtract)
+		//draw_set_blend_mode(bm_subtract)
+		gpu_set_blendmode(bm_subtract);
 		draw_surface(dark,__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ))
-		draw_set_blend_mode(bm_normal)
+		gpu_set_blendmode(bm_normal);
+		//draw_set_blend_mode(bm_normal)
 	}
 	
 }

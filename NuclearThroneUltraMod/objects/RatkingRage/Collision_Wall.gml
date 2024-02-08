@@ -1,7 +1,9 @@
-
-with other
+if walk > 0
 {
-	instance_destroy()
-	instance_create(x,y,FloorExplo);
+	with other
+	{
+		instance_destroy()
+		instance_create(x,y,FloorExplo);
+	}
+	speed *= 0.9;
 }
-speed *= 0.98;

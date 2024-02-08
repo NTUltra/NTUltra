@@ -6,8 +6,13 @@ function scrFire() {
 	if wep==0{
 		exit;}
 	reload = min(reload + wep_load[wep],wep_load[wep]);
-	if (object_index == Player)
+	if (object_index == Player || object_index == CloneShooter)
 	{
+		if ultra_got[21] && altUltra && reload > 0
+		{
+			gunGod += reload;
+			reload = 0;
+		}
 		if scrIsGamemode(48) && ammo[1] < 0
 		{
 			if armour > 0
@@ -4732,7 +4737,7 @@ function scrFire() {
 	BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 8
-	wkick -= 7
+	wkick = -7
 
 	break;
 
@@ -5210,7 +5215,4 @@ function scrFire() {
 
 	}
 	}
-
-
-
 }

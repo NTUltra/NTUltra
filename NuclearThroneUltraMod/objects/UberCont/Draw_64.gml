@@ -8,7 +8,7 @@ var hp = view_get_hport(0);
 var s = ww/wp;
 s = min(s,wh/hp);
 var excesswidth = (ww - (wp*s))*0.5
-var spriteScale = UberCont.opt_resolution_scale;
+var spriteScale = opt_resolution_scale;
 var step = 64 * s * spriteScale;
 if opt_sideart == sprite_get_number(sprSideArt) && sprite_exists(customSideArt)
 {

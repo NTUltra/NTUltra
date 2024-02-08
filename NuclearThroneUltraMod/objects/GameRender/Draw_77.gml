@@ -1,10 +1,13 @@
 /// @description Draw game
-gpu_set_blendenable(false);
+if !instance_exists(FreezeFrame)
+	gpu_set_blendenable(false);
 var w = (camera_get_view_width(view_camera[0]) * UberCont.opt_resolution_scale)
 var wp = view_get_wport(view_camera[0]);
 var hp = view_get_hport(view_camera[0]);
+var gotSideArt = false;
 if UberCont.opt_sideart != sprite_get_number(sprSideArt) + 1
 {
+	gotSideArt = true;
 	var ww = window_get_width();
 	var scale = ww/wp;
 	scale = min(scale,window_get_height()/hp);
@@ -43,10 +46,12 @@ draw_set_colour(c_black);
 //Top
 draw_rectangle(l,t,r,t-margin,false);
 //Bottom
+if !gotSideArt
 draw_rectangle(l,b,r,b-margin,false);
 //Left
 draw_rectangle(l,t,l-margin,b,false);
 //Right
+if !gotSideArt
 draw_rectangle(r,t,r-margin,b,false);
 draw_set_colour(c_white);
 /*

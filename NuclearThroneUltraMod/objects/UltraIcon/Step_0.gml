@@ -326,6 +326,17 @@ if (selected &&
 			ultra_tips[6] = "cursed crystal"
 		}
 	}
+	else if skill == 21 && Player.race == 6 && (scrDoesntHaveReloadMutation() || Player.unlockAlternativeUltras)
+	{
+		with Player
+		{
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			altUltra = true;
+			ultra_name[21] = "VENUZIAN AIRHORN"
+			ultra_text[21] = "<w>INFINITE RELOAD SPEED!<w>#ALL RELOAD YOU CHEAT#WILL NEED TO BE RELOADED NEXT AREA";
+			ultra_tips[21] = "infinite trigger finger"
+		}
+	}
 	else if skill == 23 && Player.race == 6 && ((scrMeleeWeapons(Player.wep) || Player.wep == 0) && (scrMeleeWeapons(Player.bwep) || Player.bwep == 0) || Player.unlockAlternativeUltras)
 	{
 		with Player
@@ -351,6 +362,17 @@ if (selected &&
 				spr_hurt=sprMutant6EHurt;
 				spr_dead=sprMutant6EDead;
 			}
+		}
+	}
+	else if skill == 24 && Player.race == 6 && (scrDoesntHaveDeathPrevention() || Player.unlockAlternativeUltras)
+	{
+		with Player
+		{
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			altUltra = true;
+			ultra_name[24] = "GODS DON'T DIE"
+			ultra_text[24] = "WHEN BOTH YOUR GUNS ARE <w>RELOADED<w>#YOU ARE <aq>IMMUNE<aq>";
+			ultra_tips[24] = "gun god gun god gun god"
 		}
 	}
 	else if skill == 27 && Player.race == 7 && (Player.wep_type[Player.wep] == Player.wep_type[Player.bwep] || Player.unlockAlternativeUltras)

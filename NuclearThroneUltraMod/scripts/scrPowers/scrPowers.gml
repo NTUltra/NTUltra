@@ -410,7 +410,7 @@ function scrPowers(raceOverwrite = -1) {
 				if armour > 0
 					armour -= 1;
 				else
-					DealDamage(1);
+					DealDamage(1,false,false,false);
 				hitBy = sprite_index;
 				exception=true;
 			    if my_health<=0 //KILL YOSELF USING ACTIVE
@@ -462,7 +462,7 @@ function scrPowers(raceOverwrite = -1) {
 	        armour--;
 	    else if ultra_got[63] && !(ultra_got[62] && altUltra)
 	    {
-	        DealDamage(2);
+	        DealDamage(2,false,false,false);
 			hitBy = sprite_index;
 	        exception=true
 	    }
@@ -815,7 +815,7 @@ function scrPowers(raceOverwrite = -1) {
 					if armour > 0
 						armour -= 1;
 					else
-						DealDamage(1);
+						DealDamage(1,false,false,false);
 					hitBy = sprite_index;
 					exception=true;
 					var splatDir = random(360);
@@ -1345,7 +1345,7 @@ function scrPowers(raceOverwrite = -1) {
 							if armour > 0
 								armour -= 1;
 							else
-								DealDamage(2)//1/8--->0.875
+								DealDamage(2,false,false,false)//1/8--->0.875
 							hitBy = sprite_index;
 						}
 						else
@@ -1391,7 +1391,7 @@ function scrPowers(raceOverwrite = -1) {
 						if armour > 0
 							armour -= 1;
 						else
-							DealDamage(2)//1/8--->0.875
+							DealDamage(2,false,false,false)//1/8--->0.875
 						hitBy = sprite_index;
 					}
 					else
@@ -1655,14 +1655,14 @@ function scrPowers(raceOverwrite = -1) {
 				if armour > 0
 					armour -= 1;
 				else
-					DealDamage(1);
+					DealDamage(1,false,false,false);
 				hitBy = sprite_index;
 			}
 			else{
 				if armour > 0
 					armour -= 1;
 				else
-					DealDamage(2);
+					DealDamage(2,false,false,false);
 				hitBy = sprite_index;
 			}
 			exception=true;
@@ -2403,7 +2403,7 @@ function scrPowers(raceOverwrite = -1) {
 			}
 		}
 		//YUNG VENUZ
-		if (race == 6 && (ultra_got[24] == 1 || (altUltra && ultra_got[23])) && wep_auto[wep] == 1)
+		if (race == 6 && ((ultra_got[24] && !altUltra) || (altUltra && ultra_got[23])) && wep_auto[wep] == 1)
 			scrYVPower();
 
 	if ultra_got[19] && !altUltra//Plant sprint

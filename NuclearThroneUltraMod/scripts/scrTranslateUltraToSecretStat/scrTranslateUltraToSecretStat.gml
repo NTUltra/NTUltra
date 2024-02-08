@@ -34,6 +34,8 @@ function scrTranslateUltraToSecretStat(chosenUltra, bskin) {
 		case 104: return 30;
 		case 19: return 33;
 		case 10: return 34;
+		case 21: return 35;
+		case 24: return 36;
 		case 106:
 			if bskin == 1
 				return 31;
@@ -42,6 +44,5 @@ function scrTranslateUltraToSecretStat(chosenUltra, bskin) {
 		case 109:
 			return maxsecretultra + 1;
 	}
-	debug("Return no secret stats");
 	return -1;
 }

@@ -68,7 +68,7 @@ if target != noone && instance_exists(target)
 				if team != 0 && team != other.team || object_index == IDPDVan || object_index == IDPDVanVertical
 				{
 					snd_play(snd_hurt, hurt_pitch_variation,true);
-					DealDamage(other.dmg)*2;
+					DealDamage(other.dmg*2);
 					if alarm[1] > 1
 						alarm[1] += 10;
 					sprite_index = spr_hurt;

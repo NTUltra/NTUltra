@@ -2,7 +2,6 @@ function scrShadows() {
 	//shadow works
 	//if UberCont.opt_camera_follow=0
 	//exit;
-
 	if !(surface_exists(shad) ){
 	shad = surface_create(__view_get( e__VW.WView, 0 ),__view_get( e__VW.HView, 0 ))
 	surface_set_target(shad)

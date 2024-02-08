@@ -5,7 +5,7 @@ if other.team != team && other.team != 2
 		snd_play(snd_hurt, hurt_pitch_variation)
 		if UberCont.normalGameSpeed == 60
 		{
-			DealDamage(other.dmg)*0.5;
+			DealDamage(other.dmg*0.5,true);
 			if alarm[1] > 0
 			{
 				alarm[1] += 1;
@@ -14,7 +14,7 @@ if other.team != team && other.team != 2
 		}
 		else
 		{
-			DealDamage(other.dmg)
+			DealDamage(other.dmg,true);
 			if alarm[1] > 0
 			{
 				alarm[1] += 2;	

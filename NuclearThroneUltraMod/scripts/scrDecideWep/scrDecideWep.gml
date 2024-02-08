@@ -100,7 +100,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			until (
 			(wep_area[wep] == wepTier || triesForSpecificTier > maxTries || (wep_area[wep] >= maxAreaGoodEnough && triesForSpecificTier > maxTries))
 			&& wep_area[wep] >= minWepArea && wep_area[wep] <= wepTier
-			&& ( infiniteTries < 1 || (wep != dataRef.wep and wep != dataRef.bwep and wep != dataRef.cwep && !scrIsWeaponOnGround(wep)) || dataRef.race == 7/*roids can dual wield*/) 
+			&& ( infiniteTries < 1 || (wep != dataRef.wep and wep != dataRef.bwep and wep != dataRef.cwep || dataRef.race == 7 && !scrIsWeaponOnGround(wep)) /*roids can dual wield*/) 
 			)
 		}
 		//Found a higher option than our result? Take that one

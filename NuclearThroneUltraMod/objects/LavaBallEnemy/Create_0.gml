@@ -20,6 +20,6 @@ walk=0;
 alarm[1] = 30+random(60)
 
 alarm[3] = 1;
-projectileSpeed = 2;
+projectileSpeed = 1.8;
 if GetPlayerLoops() > 0
-projectileSpeed += 0.5;
+projectileSpeed += 0.6;

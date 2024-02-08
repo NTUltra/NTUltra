@@ -1,7 +1,7 @@
 ///scrEnemyTakingDamage();
 // /@description
 ///@param
-function scrEnemyTakingDamage(){
+function scrEnemyTakingDamage() {
 	if prevhealth > my_health
 	{
 		var dmgTaken = prevhealth - my_health;//Damage increase
@@ -39,7 +39,7 @@ function scrEnemyTakingDamage(){
 					    {
 						    if other.id == target.id
 						    {
-								other.my_health //-= dmgTaken*0.3;
+								other.my_health -= dmgTaken*0.3;
 								resultDmgTaken += (dmgTaken*0.3);
 						    }
 					    }
@@ -113,45 +113,7 @@ function scrEnemyTakingDamage(){
 					}
 				}
 			}
-			if (Player.skill_got[11]) {
-				var pe = Player.excessDamageDeal;
-				BackCont.shake += min(pe*0.5,10);
-				if pe > 30 {
-					snd_play(sndExplosion,0.1);
-					instance_create(x,y,Smoke);
-					with instance_create(x,y,Smoke)
-					{
-						motion_add(other.direction,other.speed*0.25);	
-					}
-					with instance_create(x,y,Smoke)
-					{
-						motion_add(other.direction,other.speed*0.1);	
-					}
-				} else if pe > 10 {
-					snd_play(sndExplosionS,0.1);
-					if pe > 20
-					{
-						with instance_create(x,y,Smoke)
-						{
-							motion_add(other.direction,other.speed*0.1);	
-						}
-					}
-					instance_create(x,y,Smoke);
-				}
-				dmgTaken += pe;
-				Player.excessDamageDeal = 0;
-				my_health = prevhealth - dmgTaken;
-				if (my_health < 0) {
-					var part = -0.85;
-					if Player.race == 25 //Doctor
-						part -= 0.03;
-					Player.excessDamageDeal += my_health * part;
-				}
-			}
-			else
-			{
-				my_health = prevhealth - dmgTaken;
-			}
+			my_health = prevhealth - dmgTaken;
 			if UberCont.opt_dmgindicator
 		    {
 				var offset = sprite_height*0.5;

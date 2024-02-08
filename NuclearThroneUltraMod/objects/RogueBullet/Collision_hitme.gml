@@ -4,7 +4,7 @@ with other
 {
 	if instance_exists(Player){
 	if Player.ultra_got[28]//roids ultra d
-	{other.dmg}}
+	{other.dmg += 2;}}
 DealDamage(other.dmg)
 
 sprite_index = spr_hurt

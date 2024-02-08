@@ -13,7 +13,7 @@ else if array_length(leaderboard) > 0
 	draw_text(x + 16,y-16,leaderboardName[0]);
 	//draw_set_halign(fa_right);
 	//draw_text(camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 16,y-16,leaderboardName[1]);
-	var surf = surface_create(174,string_height(leaderboardName[1]));
+	var surf = surface_create(174,max(1,string_height(leaderboardName[1])));
 	surface_set_target(surf);
 	draw_clear_alpha(c_black,0.0);
 	var ux = 0;

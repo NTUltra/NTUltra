@@ -1,8 +1,10 @@
-
+if walk > 0
+{
 with other
 {
 	instance_destroy()
 	instance_create(x,y,FloorExplo)
 }
 
-speed *= 0.98;
+speed *= 0.9;
+}

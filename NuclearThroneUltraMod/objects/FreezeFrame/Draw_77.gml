@@ -1,7 +1,7 @@
 /// @description Draw pause
-if alarm[1] > 0
+if alarm[1] > 0 || alarm[2] > 0
 	exit;
-gpu_set_blendenable(true);
+gpu_set_blendenable(false);
 var w = (camera_get_view_width(view_camera[0]) * resolutionScale)
 var wp = view_get_wport(view_camera[0]);
 var hp = view_get_hport(view_camera[0]);
@@ -36,6 +36,7 @@ draw_sprite_ext
 	c_white,
 	1.0
 )
+gpu_set_blendenable(true);
 draw_sprite_ext
 (
 	hudimg,

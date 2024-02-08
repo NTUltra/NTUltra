@@ -19,7 +19,7 @@ with instance_create(x,y,Flash)
 }
 with enemy
 {
-	DealDamage(5);
+	DealDamage(5,false,true,false);
 	if !audio_is_playing(snd_hurt)
 		snd_play(snd_hurt,hurt_pitch_variation,true,true,1,false,false,0.7);
 }

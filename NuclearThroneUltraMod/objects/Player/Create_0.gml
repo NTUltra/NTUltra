@@ -19,6 +19,12 @@ with GameRender
 }
 with DataRef
 	instance_destroy();
+gunGod = 0;
+gunGodFirst = false;
+gunGodFirstB = false;
+gunGodImmune = false;
+canInfiniteFire = false
+canInfiniteFireB = false
 boilingMax = 40;
 boilingAmount = 0;
 tookDamageThisArea = false;

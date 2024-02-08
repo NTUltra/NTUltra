@@ -4,7 +4,7 @@ y = __view_get( e__VW.YView, 0 )+12
 var xx = x - 22;
 if hover
 {
-	if dailyDone {
+	if dailyDone && !isRace{
 		var name = "VIEW LEADERBOARD";
 		var yy = y+36;
 		draw_set_colour(c_black);

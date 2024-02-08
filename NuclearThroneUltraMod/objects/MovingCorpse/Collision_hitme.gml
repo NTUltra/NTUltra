@@ -17,7 +17,7 @@ if (other.team != 2 && (mySize >= other.mySize-1 or impactWrist) and speed > 2)
 		speed *= 0.95;
 		with other
 		{
-			DealDamage(max(1,floor(other.dmg+(other.mySize*0.25)+other.speed/5)));
+			DealDamage(max(1,floor(other.dmg+(other.mySize*0.25)+other.speed/5)),false,true,false);
 			if instance_exists(Player)
 			{
 				if impactWrist

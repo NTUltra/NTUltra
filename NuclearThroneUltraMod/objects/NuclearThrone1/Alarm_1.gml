@@ -5,6 +5,14 @@ if !active || intro || immune
 	alarm[1] = 30;
 	exit;
 }
+with UltraProtector
+{
+	if y < other.y
+	{
+		vspeed += 6;
+		walk += 5;
+	}
+}
 alarm[1] = aTime+random(10);
 var beamL = x - 20;
 var beamR = x + 20;

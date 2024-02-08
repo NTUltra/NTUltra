@@ -45,7 +45,7 @@ function scrYVPower(){
 			snd_play_2d(sndPopPop)
 
 
-			if Player.ultra_got[24]//YV ULTRA D
+			if Player.ultra_got[24] && !Player.altUltra//YV ULTRA D
 			{
 				scrSwapWeps()
 				if reload <= 0 && !scrMeleeWeapons(wep)

@@ -72,6 +72,7 @@ if (type == network_type_data) {
 				if dailyDay % 2 == 0 {
 					isRace = false;
 					with DailyRace {
+						isRace = false;
 						dailyName = "DAILY GAMEMODE"
 						isGamemode = true;
 						dailyDone = other.canParticipateInGamemode;

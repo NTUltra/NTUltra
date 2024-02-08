@@ -1,6 +1,18 @@
 /// @description Black sword? and UNLOCKABLES
 if swapChar
 	exit;
+if gunGod > 0
+{
+	gunGod = min(gunGod * 0.75, 600);
+	reload = gunGod * 0.5;
+	breload = gunGod * 0.5;
+	creload = gunGod * 0.5;
+	gunGod = 0;
+	gunGodFirst = true;
+	gunGodFirstB = true;
+	canInfiniteFire = false;
+	canInfiniteFireB = false;
+}
 consecutiveGoodBloodGambles = 0;
 tinyKrakenSpawned = 0;
 if ultra_got[50] && altUltra

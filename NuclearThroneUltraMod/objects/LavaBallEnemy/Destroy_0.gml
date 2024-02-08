@@ -20,7 +20,7 @@ repeat(am)
 {
 	with instance_create(x,y,TrapFire)
 	{
-		motion_add(ang,ps + 1.85)
+		motion_add(ang,ps + 1.8)
 		image_speed -= 0.05;
 		sprite_index = sprFireLilHunter
 		team = other.team
@@ -28,8 +28,8 @@ repeat(am)
 	ang += angStep;
 }
 instance_create(x,y,WallBreak);
-var fbAng = 45;
-repeat(4)
+var fbAng = 60;
+repeat(3)
 {
 	with instance_create(x,y,MiniFlameCannonBall)
 	{
@@ -37,5 +37,5 @@ repeat(4)
 		motion_add(fbAng,3.4);
 		team = other.team
 	}
-	fbAng += 90;
+	fbAng += 120;
 }

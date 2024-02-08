@@ -99,7 +99,7 @@ function scrContactDamageToEnemy(hitEnemy){
 				        if sprite_index != spr_hurt
 				        {
 					        snd_play(hitEnemy.snd_melee)
-							hitBy = hitEnemy.sprite_index;
+							hitBy = hitEnemy.spr_idle;
 					        sprite_index = spr_hurt
 					        image_index = 0
 					        snd_play(snd_hurt, hurt_pitch_variation)

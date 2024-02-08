@@ -49,7 +49,7 @@ if alienIntestines > 0
 		draw_sprite_ext(sprAlienIntestines1,wave,x,y,abs(right),image_yscale,alienIntestines*alienDir,c_white,1);
 	}
 }
-if ultra_got[75] && speed == 0
+if (gunGodImmune || (ultra_got[75] && speed == 0))
 {
 	shader_set(shdDrawWhite);
 		draw_sprite_ext(sprite_index,image_index,x+1,y+1,right,image_yscale,angle,c_white,1);

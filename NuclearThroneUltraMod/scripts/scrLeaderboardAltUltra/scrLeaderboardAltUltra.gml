@@ -24,6 +24,15 @@ function scrLeaderboardAltUltra(ultraMutation){
 		case 20:
 		return sprPlantSonicSpeedHUD;
 		break;
+		case 21:
+		return sprYvVenuzianAirhornHUD;
+		break;
+		case 23:
+		return sprYVBlasphemyHUD;
+		break;
+		case 24:
+		return sprYvGodsDontDieHUD;
+		break;
 		case 27:
 		return sprSteroidsPunchSwapHUD;
 		break;
@@ -83,9 +92,6 @@ function scrLeaderboardAltUltra(ultraMutation){
 		break;
 		case 104:
 		return sprGrumpyLectureHUD;
-		break;
-		case 23:
-		return sprYVBlasphemyHUD;
 		break;
 		default:
 		return -1;

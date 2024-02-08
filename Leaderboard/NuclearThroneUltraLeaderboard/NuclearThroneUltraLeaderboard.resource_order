@@ -4,6 +4,7 @@
     {"name":"scrStartAGamemode","order":7,"path":"scripts/scrStartAGamemode/scrStartAGamemode.yy",},
     {"name":"scrGetExistingScore","order":1,"path":"scripts/scrGetExistingScore/scrGetExistingScore.yy",},
     {"name":"scrChooseGamemodes","order":8,"path":"scripts/scrChooseGamemodes/scrChooseGamemodes.yy",},
+    {"name":"scrChooseGamemodesWeekly","order":11,"path":"scripts/scrChooseGamemodesWeekly/scrChooseGamemodesWeekly.yy",},
     {"name":"scrRollSpecificWeapon","order":10,"path":"scripts/scrRollSpecificWeapon/scrRollSpecificWeapon.yy",},
     {"name":"scrGetDailyFile","order":3,"path":"scripts/scrGetDailyFile/scrGetDailyFile.yy",},
     {"name":"scrGetDailyRaceFile","order":5,"path":"scripts/scrGetDailyRaceFile/scrGetDailyRaceFile.yy",},

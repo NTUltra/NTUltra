@@ -308,9 +308,6 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 						persistent = true;
 				}
 			}
-			if reload > 0{
-				scrFlexibleElbowReload(wep);
-			}
 			wep = targetPickup.wep
 			curse = targetPickup.curse
 			if ultra_got[72] && !altUltra && curse != 0
@@ -328,23 +325,28 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 			wepmod2 = targetPickup.wepmod2
 			wepmod3 = targetPickup.wepmod3
 			wepmod4 = targetPickup.wepmod4
-			can_shoot = 1
-			
-			reload = min(reload,0)
-			queueshot = 0;
-			if skill_got[35]
+			if (!(ultra_got[21] && altUltra))
 			{
-				var lowa = wep_load[wep]*-2;
-				if reload <= lowa*0.5 && queueshot < 1
-				{
-					queueshot++;
-					scrPlayReloadSound(wep);
+				if reload > 0{
 					scrFlexibleElbowReload(wep);
-				} else if reload <= lowa && queueshot < 2
+				}
+				can_shoot = 1
+				reload = min(reload,0)
+				queueshot = 0;
+				if skill_got[35]
 				{
-					queueshot++;
-					scrPlayReloadSound(wep);
-					scrFlexibleElbowReload(wep);
+					var lowa = wep_load[wep]*-2;
+					if reload <= lowa*0.5 && queueshot < 1
+					{
+						queueshot++;
+						scrPlayReloadSound(wep);
+						scrFlexibleElbowReload(wep);
+					} else if reload <= lowa && queueshot < 2
+					{
+						queueshot++;
+						scrPlayReloadSound(wep);
+						scrFlexibleElbowReload(wep);
+					}
 				}
 			}
 
