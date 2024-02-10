@@ -15,16 +15,20 @@ if sprite_index == sprAmmo {
 		if Player.ccurse {
 			curselevel++
 		}
-		if Player.skill_got[3] == 1 && !(Player.ultra_got[30] && Player.altUltra)
+		if (Player.ultra_got[30] && Player.altUltra)
 		{
-			curselevel --;	
+			curselevel ++;
+		}
+		else if Player.skill_got[3] == 1
+		{
+			curselevel --;
 		}
 		if curselevel == 2 {
 			if random(2) < 1 {
 				cursed = true;
 				snd_play(sndCursedPickup);
 			}
-		} else if curselevel == 3 {
+		} else if curselevel >= 3 {
 			cursed = true;
 			snd_play(sndCursedPickup);
 			if random(4) < 1 {
@@ -49,8 +53,8 @@ if sprite_index == sprAmmo {
 				alarm[3] = 5;
 				if Player.ultra_got[30] && Player.altUltra
 				{
-					alarm[4] = 10;
-					alarm[0] += 60;
+					alarm[4] = 5;
+					alarm[0] += 50;
 				}
 			}
 			if supercursed {
@@ -60,8 +64,8 @@ if sprite_index == sprAmmo {
 				alarm[3] = 5;
 				if Player.ultra_got[30] && Player.altUltra
 				{
-					alarm[4] = 10;
-					alarm[0] += 60;
+					alarm[4] = 5;
+					alarm[0] += 50;
 				}
 			}
 		}

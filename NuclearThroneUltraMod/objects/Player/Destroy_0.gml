@@ -324,7 +324,7 @@ with enemy{
 		if place_free(x,y+lengthdir_y(4,point_direction(x,y,Player.x,Player.y)+180))
 		y += lengthdir_y(4,point_direction(x,y,Player.x,Player.y)+180)
 
-		DealDamage(15);
+		DealDamage(10,false,true,false);
 		sprite_index = spr_hurt
 		image_index = 0
 		//motion_add(other.direction,6)

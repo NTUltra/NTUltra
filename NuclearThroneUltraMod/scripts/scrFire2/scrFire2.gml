@@ -15173,7 +15173,7 @@ function scrFire2(hasTailNow) {
 	}
 	with instance_create(x+lengthdir_x(15+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(15+((Player.skill_got[13]+bettermelee)*20),aimDirection),LanceShank)
 	{
-		dmg = 10;
+		dmg = 15;
 		sprite_index = sprRedLanceSlash;
 		longarms = 0
 		longarms = (Player.skill_got[13]+other.bettermelee)*3

@@ -8,10 +8,18 @@ var wepAmount = 25;
 weps = [];
 var i = 0;
 var newWep = 0;
-var highRange = 6;
+var highRange = 5;
 var lowRange = -2;
 if instance_exists(Player)
 {
+	if Player.area > 7
+		highRange -= 1;
+	if Player.area > 9
+		highRange -= 1;
+	if Player.area > 11
+		highRange -= 1;
+	if Player.area > 12
+		highRange -= 1;
 	if Player.race == 8//ROBOT
 	{
 		highRange += 1;

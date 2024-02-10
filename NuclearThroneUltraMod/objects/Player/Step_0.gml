@@ -24,23 +24,7 @@ if ultra_got[21] && altUltra
 		}
 	}
 }
-gunGodImmune = false;
-if ultra_got[24] && altUltra && reload <= 0 && breload <= 0
-{
-	gunGodImmune = true;
-	alarm[3] = max(alarm[3],1);
-}
 var is60fps = (UberCont.normalGameSpeed == 60);
-if canPuffyCheek > 0 {
-	if is60fps
-		canPuffyCheek -= 0.5;
-	else
-		canPuffyCheek -= 1;
-}
-else
-{
-	canPuffyCheek = 0;
-}
 if autoFire > 0
 {
 	if is60fps
@@ -99,9 +83,10 @@ else if scrIsGamemode(48)
 }
 if !instance_exists(LevCont) and visible = 1
 {
-	if canMove
+
+	if roll = 0
 	{
-		if roll = 0
+		if canMove
 		{
 			var previousSpeed = max(1,speed);
 			var acc = acceleration;
@@ -159,204 +144,210 @@ if !instance_exists(LevCont) and visible = 1
 				else
 					vspeed += acc;
 			}
-			if (newMovement)
+		}
+		if (newMovement)
+		{
+			if is60fps && speed > brakingFriction * 0.5
+				speed -= brakingFriction * 0.5
+			else if !is60fps && speed > brakingFriction
+				speed -= brakingFriction;	
+		}
+		if ultra_got[20] && altUltra
+		{
+			var delta = 1;
+			var checkDelta = 4;
+			if (is60fps)
 			{
-				if is60fps && speed > brakingFriction * 0.5
-					speed -= brakingFriction * 0.5
-				else if !is60fps && speed > brakingFriction
-					speed -= brakingFriction;	
+				delta = 0.5;
+				checkDelta = 3;
 			}
-			if ultra_got[20] && altUltra
+			var moving = false;
+			var extraacc = 1.5 * delta;
+			var braking = 0.4/delta;
+			if speed > 5.1
+				speed -= 3.5 * delta;
+			var multi = 0;//Diagonal movement is faster acceleration otherwise
+			if (canMove)
 			{
-				var delta = 1;
-				var checkDelta = 4;
-				if (is60fps)
-				{
-					delta = 0.5;
-					checkDelta = 3;
-				}
-				var moving = false;
-				var extraacc = 1.5 * delta;
-				var braking = 0.4/delta;
-				if speed > 5.1
-					speed -= 3.5 * delta;
-				var multi = 0;//Diagonal movement is faster acceleration otherwise
 				if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
-				{
-					if hspeed > 0
-						hspeed *= braking;
-					hspeed -= extraacc
-					multi += extraacc;
-					moving = true;
-				}
+			{
+				if hspeed > 0
+					hspeed *= braking;
+				hspeed -= extraacc
+				multi += extraacc;
+				moving = true;
+			}
 				if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
-				{
-					if hspeed < 0
-						hspeed *= braking;
-					hspeed += extraacc
-					multi += extraacc;
-					moving = true;
-				}
+			{
+				if hspeed < 0
+					hspeed *= braking;
+				hspeed += extraacc
+				multi += extraacc;
+				moving = true;
+			}
 				if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
-				{
-					if vspeed > 0
-						vspeed *= braking;
-					vspeed -= extraacc
-					multi += extraacc;
-					moving = true;
-				}
+			{
+				if vspeed > 0
+					vspeed *= braking;
+				vspeed -= extraacc
+				multi += extraacc;
+				moving = true;
+			}
 				if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+			{
+				if vspeed < 0
+					vspeed *= braking;
+				vspeed += extraacc
+				multi += extraacc;
+				moving = true;
+			}
+			}
+			speed -= max(0,multi-extraacc);
+			if !moving
+			{
+				speed *= braking;
+			}
+			var msk = mask_index;
+			if (abs(speed - previousSpeed) > checkDelta && !instance_exists(RocketSlash) && !place_meeting(x+hspeed,y+vspeed,WallHitMe))
+			{
+				snd_play(sndGhettoBlast);
+				with instance_create(x+lengthdir_x(16,direction),y+lengthdir_y(16,direction),PlantSonicBoom)
 				{
-					if vspeed < 0
-						vspeed *= braking;
-					vspeed += extraacc
-					multi += extraacc;
-					moving = true;
+					motion_add(other.direction+180,other.speed+3)
+					image_angle = direction
+					team = other.team
 				}
-				speed -= max(0,multi-extraacc);
-				if !moving
+				with instance_create(x,y,PlantSonicBoom)
 				{
-					speed *= braking;
+					sprite_index = sprSpinSlash;
+					mask_index = mskSpinSlash;
+					image_angle = direction
+					team = other.team
 				}
-				var msk = mask_index;
-				if (abs(speed - previousSpeed) > checkDelta && !instance_exists(RocketSlash) && !place_meeting(x+hspeed,y+vspeed,WallHitMe))
+				with instance_create(x+lengthdir_x(16,direction+180),y+lengthdir_y(16,direction+180),PlantSonicBoom)
 				{
-					snd_play(sndGhettoBlast);
-					with instance_create(x+lengthdir_x(16,direction),y+lengthdir_y(16,direction),PlantSonicBoom)
-					{
-						motion_add(other.direction+180,other.speed+3)
-						image_angle = direction
-						team = other.team
-					}
-					with instance_create(x,y,PlantSonicBoom)
-					{
-						sprite_index = sprSpinSlash;
-						mask_index = mskSpinSlash;
-						image_angle = direction
-						team = other.team
-					}
-					with instance_create(x+lengthdir_x(16,direction+180),y+lengthdir_y(16,direction+180),PlantSonicBoom)
-					{
-						motion_add(other.direction,other.speed+3)
-						image_angle = direction
-						team = other.team
-					}
-				}
-				mask_index = msk;
-				if speed > maxSpeed
-				{
-					if !instance_exists(PlantCharge)
-					{
-						snd_play(sndSheepLoopStart);
-						instance_create(x,y,PlantCharge);	
-					}
+					motion_add(other.direction,other.speed+3)
+					image_angle = direction
+					team = other.team
 				}
 			}
+			mask_index = msk;
+			if speed > maxSpeed
+			{
+				if !instance_exists(PlantCharge)
+				{
+					snd_play(sndSheepLoopStart);
+					instance_create(x,y,PlantCharge);	
+				}
+			}
+		}
 
 	
+	if speed = 0
+	{if sprite_index != spr_hurt
+	sprite_index = spr_idle}
+	else
+	{if sprite_index != spr_hurt
+	sprite_index = spr_walk}
+	/*
+	//Want to do speed based walk animation but there are some actives that change this
+	if sprite_index == spr_walk
+	{
+		image_speed = clamp(speed*0.1,0.1,0.8);
+	}
+	else
+	{
+		image_speed = 0.4;	
+	}
+	*/
+	if sprite_index == spr_hurt
+	{	
+		if is60fps
+			hurtTime += 0.5;
+		else
+			hurtTime++;
+		if loops > 0
+		{
+			if (/*image_index > 2 && */hurtTime > hurtDurationLoop)
+			{
+				sprite_index = spr_idle
+				hurtTime = 0;
+			}
+		}
+		else if (/*image_index > 2 && */hurtTime > hurtDuration)
+		{
+			sprite_index = spr_idle
+			hurtTime = 0;
+		}
+	}
+	if meleeimmunity > 0
+	{
+		if is60fps
+			meleeimmunity -= 0.5;
+		else
+			meleeimmunity--;
+	}
+	if UberCont.mouse__x < x
+		right = -1
+	else if UberCont.mouse__x > x
+		right = 1
+
+	if UberCont.mouse__y < y
+	back = 1
+	else if UberCont.mouse__y > y
+	back = -1
+
+		scrPowers();
+		if !chickenFocusInUse && chickenFocus < chickenFocusMax
+		{
+			if chickenFocusDelayTime <= 0
+			{
+				if UberCont.normalGameSpeed == 60
+					chickenFocus += chickenFocusReturnRate*0.5;
+				else
+					chickenFocus += chickenFocusReturnRate;
+				chickenFocus = min(chickenFocus,chickenFocusMax);
+			}
+			else
+			{
+				if UberCont.normalGameSpeed == 60
+					chickenFocusDelayTime -= chickenFocusDelayRate*0.5;
+				else
+					chickenFocusDelayTime -= chickenFocusDelayRate;
+			}
+		}
+	}
+	else
+	{
+		//rolling
+		image_speed = 0.4;
+		speed = 6.3*max(1,(skill_got[2]*1.3))//the rolling speed code is far below
+		if is60fps
+			angle += (50*right*max(1,(skill_got[2]*1.3)))*0.5
+		else
+			angle += 50*right*max(1,(skill_got[2]*1.3))
+
 		if speed = 0
 		{if sprite_index != spr_hurt
 		sprite_index = spr_idle}
 		else
 		{if sprite_index != spr_hurt
 		sprite_index = spr_walk}
-		/*
-		//Want to do speed based walk animation but there are some actives that change this
-		if sprite_index == spr_walk
+		if sprite_index = spr_hurt
 		{
-			image_speed = clamp(speed*0.1,0.1,0.8);
-		}
-		else
-		{
-			image_speed = 0.4;	
-		}
-		*/
-		if sprite_index == spr_hurt
-		{	
-			if is60fps
-				hurtTime += 0.5;
-			else
-				hurtTime++;
-			if loops > 0
+			if image_index > 2
 			{
-				if (/*image_index > 2 && */hurtTime > hurtDurationLoop)
-				{
-					sprite_index = spr_idle
-					hurtTime = 0;
-				}
-			}
-			else if (/*image_index > 2 && */hurtTime > hurtDuration)
-			{
-				sprite_index = spr_idle
-				hurtTime = 0;
+				sprite_index = spr_idle;
+				canAnimateDuringImmune = -1;
 			}
 		}
-		if meleeimmunity > 0
+
+		if skill_got[5] = 1
 		{
-			if is60fps
-				meleeimmunity -= 0.5;
-			else
-				meleeimmunity--;
-		}
-		if UberCont.mouse__x < x
-			right = -1
-		else if UberCont.mouse__x > x
-			right = 1
-
-		if UberCont.mouse__y < y
-		back = 1
-		else if UberCont.mouse__y > y
-		back = -1
-
-			scrPowers();
-			if !chickenFocusInUse && chickenFocus < chickenFocusMax
+			var spd = speed;
+			speed = 0;
+			if canMove
 			{
-				if chickenFocusDelayTime <= 0
-				{
-					if UberCont.normalGameSpeed == 60
-						chickenFocus += chickenFocusReturnRate*0.5;
-					else
-						chickenFocus += chickenFocusReturnRate;
-					chickenFocus = min(chickenFocus,chickenFocusMax);
-				}
-				else
-				{
-					if UberCont.normalGameSpeed == 60
-						chickenFocusDelayTime -= chickenFocusDelayRate*0.5;
-					else
-						chickenFocusDelayTime -= chickenFocusDelayRate;
-				}
-			}
-		}
-		else
-		{
-			//rolling
-			image_speed = 0.4;
-			speed = 6.3*max(1,(skill_got[2]*1.3))//the rolling speed code is far below
-			if is60fps
-				angle += (50*right*max(1,(skill_got[2]*1.3)))*0.5
-			else
-				angle += 50*right*max(1,(skill_got[2]*1.3))
-
-			if speed = 0
-			{if sprite_index != spr_hurt
-			sprite_index = spr_idle}
-			else
-			{if sprite_index != spr_hurt
-			sprite_index = spr_walk}
-			if sprite_index = spr_hurt
-			{
-				if image_index > 2
-				{
-					sprite_index = spr_idle;
-					canAnimateDuringImmune = -1;
-				}
-			}
-
-			if skill_got[5] = 1
-			{
-				var spd = speed;
-				speed = 0;
 				if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
 				hspeed -= 3
 				if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
@@ -365,39 +356,35 @@ if !instance_exists(LevCont) and visible = 1
 				vspeed -= 3
 				if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
 				vspeed += 3
-				instance_create(x,y,FishBoost)
-				speed += spd;
-				/*if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
-				hspeed -= 3
-				if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
-				hspeed += 3
-				if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
-				vspeed -= 3
-				if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
-				vspeed += 3*/
-				if (angle > 360 or -angle > 360) 
-				{
-					if !(KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2)
-					{
-						angle = 0
-						roll = 0
-						audio_stop_sound(sndFishRollUpgLoop);
-					}
-				}
 			}
-			else{
-			instance_create(x+random(6)-3,y+random(6),Dust)
-				if angle > 360 or -angle > 360
+			instance_create(x,y,FishBoost)
+			speed += spd;
+			/*if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+			hspeed -= 3
+			if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+			hspeed += 3
+			if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+			vspeed -= 3
+			if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+			vspeed += 3*/
+			if (angle > 360 or -angle > 360) 
+			{
+				if !(KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2)
 				{
 					angle = 0
 					roll = 0
+					audio_stop_sound(sndFishRollUpgLoop);
 				}
 			}
 		}
-	}
-	else
-	{
-		scrPowers();	
+		else{
+		instance_create(x+random(6)-3,y+random(6),Dust)
+			if angle > 360 or -angle > 360
+			{
+				angle = 0
+				roll = 0
+			}
+		}
 	}
 	//Cheats
 	var thing;
@@ -1053,6 +1040,32 @@ if skill_got[35]
 	lowa = wep_load[wep]*-2;
 	lowb = wep_load[bwep]*-2;
 	lowc = wep_load[cwep]*-2;
+}
+if ultra_got[24] && altUltra && reload <= lowa && breload <= lowb
+{
+	if (!gunGodImmune)
+	{
+		gunGodImmune = true;
+		alarm[3] = max(alarm[3],60);
+	}
+}
+else if gunGodImmune
+{
+	if alarm[3] > 1
+	{
+		alarm[3] = max(alarm[3] - 60,1);
+	}	
+	gunGodImmune = false;	
+}
+if canPuffyCheek > 0 {
+	if is60fps
+		canPuffyCheek -= 0.5;
+	else
+		canPuffyCheek -= 1;
+}
+else
+{
+	canPuffyCheek = 0;
 }
 //Can't reload while in loading shit, will automatically reload
 if (!instance_exists(LevCont))
@@ -2301,6 +2314,42 @@ if instance_exists(ElementorWall) {
 			instance_destroy();
 	}
 }
+if hammerheadDig > 0
+{
+	if hammerheadDig % 3 == 1
+	with instance_create(x,y + 4,Dust) {
+		motion_add(random(360),0.8);
+		vspeed -= 1;
+	}
+	if is60fps
+		hammerheadDig -= 0.5;
+	else
+		hammerheadDig += 1;
+	if (hammerheadDig <= 0)
+	{
+		snd_play(sndWallBreak);
+		var ang = random(360);
+		var am = 6;
+		var angStep = 360/am;
+		repeat(am)
+		{
+			with instance_create(x,y,Dust)
+			{
+				motion_add(ang,1.25);	
+			}
+			ang += angStep;
+		}
+		ang += angStep*0.5;
+		repeat(am)
+		{
+			with instance_create(x,y,Dust)
+			{
+				motion_add(ang,2.25);	
+			}
+			ang += angStep;
+		}
+	}	
+}
 //Hammer head
 if hammerheadcounter > 0
 {
@@ -2310,7 +2359,7 @@ if hammerheadcounter > 0
 	{
 		nearWall = true;
 		mask_index = msk;
-		if place_meeting(x+hspeed,y+vspeed,Wall)
+		if place_meeting(x+hspeed * 1.5,y+vspeed * 1.5,Wall)
 		{
 			if is60fps
 				hammerheadtimer += 0.5;
@@ -2322,6 +2371,32 @@ if hammerheadcounter > 0
 			if hammerheadtimer > 5 || instance_exists(SheepStorm)
 			{
 				hammerheadcounter --;
+				if (hammerheadDig <= 0)
+				{
+					snd_play(sndWallBreak);
+					var ang = random(360);
+					var am = 6;
+					var angStep = 360/am;
+					repeat(am)
+					{
+						with instance_create(x,y,Dust)
+						{
+							motion_add(ang,1);	
+						}
+						ang += angStep;
+					}
+					ang += angStep*0.5;
+					repeat(am)
+					{
+						with instance_create(x,y,Dust)
+						{
+							motion_add(ang,2);	
+						}
+						ang += angStep;
+					}
+				}
+				hammerheadDig = 40;
+				alarm[3] = max(alarm[3],42);
 				var debrisAmount = 2;
 				var debrisMultiply = 1.5;
 				if (hammerheadcounter > 0)

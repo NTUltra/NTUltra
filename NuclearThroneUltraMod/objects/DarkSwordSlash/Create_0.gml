@@ -8,7 +8,7 @@ friction = 0.1
 snd_wallhit=sndMeleeWall;
 snd_hit=sndHitWall;
 
-dmg=20//12 in retail
+dmg=22//12 in retail
 
 if instance_exists(Player)
 {

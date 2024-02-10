@@ -26,7 +26,7 @@ if (selected &&
 
 	if skill = 0
 	{
-		if Player.race == 21 && scrCheckGold(Player.wep_name[Player.wep]) || scrCheckGold(Player.wep_name[Player.bwep]) || Player.unlockAlternativeUltras
+		if Player.race == 21 && isAlternative
 		{
 			with Player
 			{
@@ -60,7 +60,7 @@ if (selected &&
 	}
 	else if skill == 9 && Player.race == 3 // Strange style
 	{
-		if scrHasEyesMutations() || Player.unlockAlternativeUltras
+		if isAlternative
 		{
 			with Player {
 				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
@@ -94,7 +94,7 @@ if (selected &&
 			}
 		}
 	}
-	else if skill == 10 && Player.race == 3 && (Player.skill_got[8] && scrIsCrown(1) || Player.unlockAlternativeUltras)// Void style
+	else if skill == 10 && Player.race == 3 && isAlternative// Void style
 	{
 		with Player {
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
@@ -104,7 +104,7 @@ if (selected &&
 			ultra_tips[10] = "see into the void"
 		}
 	}
-	else if skill == 13 &&  Player.race == 4 && (Player.maxhealth == 1 || Player.unlockAlternativeUltras)
+	else if skill == 13 && isAlternative
 	{
 		with Player {
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
@@ -115,7 +115,7 @@ if (selected &&
 			instance_create(x,y,DeathStare);
 		}
 	}
-	else if skill == 19 && Player.race == 5 && ((scrIsCrown(7) || scrIsCrown(28) || scrIsGamemode(39)) || Player.unlockAlternativeUltras)
+	else if skill == 19 && Player.race == 5 && isAlternative
 	{
 		with Player
 		{
@@ -127,7 +127,7 @@ if (selected &&
 			canKillKillKill = 2;
 		}
 	}
-	else if skill == 20 && Player.race == 5 && (scrIsCrown(23) && Player.skill_got[2] || Player.unlockAlternativeUltras)
+	else if skill == 20 && Player.race == 5 && isAlternative
 	{
 		with Player
 		{
@@ -139,7 +139,7 @@ if (selected &&
 			maxSpeed += 5.5;
 		}
 	}
-	else if Player.race == 9 && skill == 33 && (scrHasFireWeapon() || Player.unlockAlternativeUltras)
+	else if Player.race == 9 && skill == 33 && isAlternative
 	{
 		with Player
 		{
@@ -150,7 +150,7 @@ if (selected &&
 			ultra_tips[33] = "rise and rise again"
 		}
 	}
-	else if skill == 43 && Player.race == 11 && (Player.unlockAlternativeUltras || scrCanHunterSniperEye())
+	else if skill == 43 && Player.race == 11 && isAlternative
 	{
 		with Player
 		{
@@ -161,7 +161,7 @@ if (selected &&
 			ultra_tips[43] = "proper eyesight"
 		}
 	}
-	else if skill == 47 && Player.race == 12 && (((Player.skill_got[36] && Player.skill_got[3]) || scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep])) || Player.unlockAlternativeUltras)
+	else if skill == 47 && Player.race == 12 && isAlternative
 	{
 		with Player
 		{
@@ -172,7 +172,7 @@ if (selected &&
 			ultra_tips[47] = "pay up"
 		}
 	}
-	else if skill == 50 && Player.race == 13 && (scrHasASecretCrown() || Player.unlockAlternativeUltras)
+	else if skill == 50 && Player.race == 13 && isAlternative
 	{
 		with Player
 		{
@@ -184,7 +184,7 @@ if (selected &&
 			charpoints = 1;
 		}
 	}
-	else if skill == 51 && Player.race == 13 && (!Player.skill_got[2] && !Player.skill_got[8] || Player.unlockAlternativeUltras)
+	else if skill == 51 && Player.race == 13 && isAlternative
 	{
 		with Player
 		{
@@ -204,7 +204,7 @@ if (selected &&
 			}
 		}
 	}
-	else if skill == 55 && Player.race == 14 && ((Player.skill_got[13] || Player.skill_got[34] || Player.skill_got[20]) && !Player.skill_got[5] || Player.unlockAlternativeUltras)
+	else if skill == 55 && Player.race == 14 && isAlternative
 	{
 		with Player
 		{
@@ -215,7 +215,7 @@ if (selected &&
 			ultra_tips[55] = "how does it do that"
 		}
 	}
-	else if skill == 59 && Player.race == 15 && (!Player.skill_got[17] && (scrIsCrown(4) || scrIsCrown(28) || scrIsCrown(3)) || Player.unlockAlternativeUltras)
+	else if skill == 59 && Player.race == 15 && isAlternative
 	{
 		with Player
 		{
@@ -233,7 +233,7 @@ if (selected &&
 			alarm[3]=60;	
 		}
 	}
-	else if skill == 92 && Player.race == 23 && ( Player.wep_type[Player.wep] == 3 && Player.wep_type[Player.bwep] == 3 || Player.unlockAlternativeUltras)
+	else if skill == 92 && Player.race == 23 && isAlternative
 	{
 		with Player
 		{
@@ -244,7 +244,7 @@ if (selected &&
 			ultra_tips[92] = "porkupine"
 		}
 	}
-	else if skill == 93 && Player.race == 24 && ((Player.patience > 0 || Player.guarenteedReroll > 0 || Player.skill_got[27]) || Player.unlockAlternativeUltras)
+	else if skill == 93 && Player.race == 24 && isAlternative
 	{
 		with Player
 		{
@@ -259,7 +259,7 @@ if (selected &&
 	{
 		with Player
 		{
-			if bskin == 1 || (Player.unlockAlternativeUltras && other.randomHand == 1 && !bskin == 1)
+			if bskin == 1 || (isAlternative && other.randomHand == 1 && !bskin == 1)
 			{
 				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 				//Secret B skin ultra
@@ -275,7 +275,7 @@ if (selected &&
 					bskin = 1;
 				}
 			}
-			else if bskin == 2 || (Player.unlockAlternativeUltras && other.randomHand == 2 && !bskin == 2)
+			else if bskin == 2 || (isAlternative && other.randomHand == 2 && !bskin == 2)
 			{
 				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 				//Secret C skin ultra
@@ -301,7 +301,7 @@ if (selected &&
 	{
 		with Player
 		{
-			if Player.race == 1 && (bskin == 2 || Player.unlockAlternativeUltras)
+			if Player.race == 1 && isAlternative
 			{
 				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 				scrWeaponAdjustCost(0.85);
@@ -316,7 +316,7 @@ if (selected &&
 				scrWeaponAdjustCost(0.95);
 		}	
 	}
-	else if skill == 6 && Player.race == 2 && (Player.curse || Player.bcurse || Player.unlockAlternativeUltras)
+	else if (skill == 6 && Player.race == 2 && isAlternative)
 	{
 		with Player {
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
@@ -326,26 +326,20 @@ if (selected &&
 			ultra_tips[6] = "cursed crystal"
 		}
 	}
-	else if skill == 21 && Player.race == 6 && (scrDoesntHaveReloadMutation() || Player.unlockAlternativeUltras)
+	else if (skill == 21 && Player.race == 6 && isAlternative)
 	{
 		with Player
 		{
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
-			altUltra = true;
-			ultra_name[21] = "VENUZIAN AIRHORN"
-			ultra_text[21] = "<w>INFINITE RELOAD SPEED!<w>#ALL RELOAD YOU CHEAT#WILL NEED TO BE RELOADED NEXT AREA";
-			ultra_tips[21] = "infinite trigger finger"
+			altUltra = true;scrUltras(true);
 		}
 	}
-	else if skill == 23 && Player.race == 6 && ((scrMeleeWeapons(Player.wep) || Player.wep == 0) && (scrMeleeWeapons(Player.bwep) || Player.bwep == 0) || Player.unlockAlternativeUltras)
+	else if skill == 23 && Player.race == 6 && isAlternative
 	{
 		with Player
 		{
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
-			altUltra = true;
-			ultra_name[23] = "BLASPHEMY"
-			ultra_text[23] = "CAN NO LONGER POP POP GUNS#43% HIGHER MELEE SWING RATE#MELEE IS FULLY AUTOMATIC#CAN POP POP MELEE"
-			ultra_tips[23] = "why would you forsake us gun god?"
+			altUltra = true;scrUltras(true);
 			if bskin == 0//YV secret skin
 			{
 				scrUnlockAltSkin(race, bskin);
@@ -364,44 +358,35 @@ if (selected &&
 			}
 		}
 	}
-	else if skill == 24 && Player.race == 6 && (scrDoesntHaveDeathPrevention() || Player.unlockAlternativeUltras)
+	else if skill == 24 && Player.race == 6 && isAlternative
 	{
 		with Player
 		{
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
-			altUltra = true;
-			ultra_name[24] = "GODS DON'T DIE"
-			ultra_text[24] = "WHEN BOTH YOUR GUNS ARE <w>RELOADED<w>#YOU ARE <aq>IMMUNE<aq>";
-			ultra_tips[24] = "gun god gun god gun god"
+			altUltra = true;scrUltras(true);
 		}
 	}
-	else if skill == 27 && Player.race == 7 && (Player.wep_type[Player.wep] == Player.wep_type[Player.bwep] || Player.unlockAlternativeUltras)
+	else if skill == 27 && Player.race == 7 && isAlternative
 	{
 		with Player
 		{
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
-			altUltra = true;
-			ultra_name[27] = "PUNCHSWAP"
-			ultra_text[27] = "SWAPPING MAKES YOU SWING WITH YOUR WEAPON#SWINGS DEFLECT PROJECTILES AND DEALS DAMAGE"
-			ultra_tips[27] = "GET KNOCKED OUT"
+			altUltra = true;scrUltras(true);
 		}
 	}
-	else if skill == 29 && Player.race == 8 && (Player.spr_idle == sprMutant8DIdle || Player.unlockAlternativeUltras)
+	else if skill == 29 && Player.race == 8 && isAlternative
 	{
 		with Player
 		{
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
-			altUltra = true;
-			ultra_name[29] = "EXCLUSIVE TASTE"
-			ultra_text[29] = "HOLDING ONLY ONE WEAPON WILL:#INCREASE DAMAGE DEALT TO ENEMIES BY 25%#RETURN 10% AMMO UPON FIRING#+15% FIRERATE AND +4 MAX HP";
-			ultra_tips[29] = "gold tastes good"
+			altUltra = true;scrUltras(true);
 			if bwep == 0//ROBOT EXCLUSIVE TASTE
 			{
 				maxhealth += 4;
 			}
 		}
 	}
-	else if skill == 30 && Player.race == 8 && (Player.spr_idle == sprMutant8EIdle || Player.unlockAlternativeUltras)
+	else if skill == 30 && Player.race == 8 && isAlternative
 	{
 		with Player
 		{
@@ -413,7 +398,7 @@ if (selected &&
 		    ultra_tips[30] = "eating guns from other dimensions"
 		}
 	}
-	else if skill == 35 && Player.race == 9 && ((scrIsCrown(12) || scrIsCrown(34)) || Player.unlockAlternativeUltras)//CHICKEN REVERSE TIME
+	else if skill == 35 && Player.race == 9 && isAlternative//CHICKEN REVERSE TIME
 	{
 		with Player
 		{
@@ -442,8 +427,7 @@ if (selected &&
 			}
 		}
 	}
-	else if skill == 39 && Player.race == 10 && (scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep]) ||
-	(!Player.skill_got[32] && !Player.skill_got[7] && !Player.skill_got[9]&& !Player.skill_got[36]) || Player.unlockAlternativeUltras)
+	else if skill == 39 && Player.race == 10 && isAlternative
 	{
 		with Player {
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
@@ -480,7 +464,7 @@ if (selected &&
 	}
 	else if skill == 61
 	{
-		if Player.race == 16 && (scrKrakenWeapons(Player.wep) || Player.skill_got[39] || Player.area == 101 || Player.area == 122 || scrKrakenWeapons(Player.bwep) || scrIsCrown(13) || Player.unlockAlternativeUltras)
+		if Player.race == 16 && isAlternative
 		{
 			with Player
 			{
@@ -504,7 +488,7 @@ if (selected &&
 			}
 		}
 	}
-	else if skill == 72 && Player.race == 18 && ((Player.maxhealth < 8 && !scrIsGamemode(9)) || (scrIsGamemode(9) && Player.maxhealth < 8 + UberCont.casualModeHPIncrease) || scrIsCrown(32) || Player.unlockAlternativeUltras)
+	else if skill == 72 && Player.race == 18 && isAlternative
 	{
 		with Player
 		{
@@ -515,7 +499,7 @@ if (selected &&
 			ultra_tips[72] = "right back at ya"
 		}
 	}
-	else if skill == 77 && Player.race == 20 && (Player.skill_got[0] || Player.unlockAlternativeUltras || scrIsCrown(5))
+	else if skill == 77 && Player.race == 20 && isAlternative
 	{
 		with Player
 		{
@@ -548,7 +532,7 @@ if (selected &&
 	}
 	else if skill == 87 
 	{
-		if Player.race == 22 && (scrHasAnEmptyLife() || Player.unlockAlternativeUltras)
+		if Player.race == 22 && isAlternative
 		{
 			with Player
 			{
@@ -600,8 +584,7 @@ if (selected &&
 
 		with Player
 		{
-			if (race == 25 && (!skill_got[13] && !skill_got[16] && !skill_got[17]
-			&& !skill_got[15] && !skill_got[14] && !skill_got[42] || unlockAlternativeUltras))
+			if (race == 25 && other.isAlternative)
 			{
 				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 				//Secret Beekeeper ultra
@@ -647,7 +630,7 @@ if (selected &&
 	}
 	else if skill == 104
 	{
-		if Player.race == 26 && ((Player.humphrySkill < 1 || scrHasDirector()) || Player.unlockAlternativeUltras)
+		if Player.race == 26 && isAlternative
 		{
 			with Player
 			{
@@ -703,7 +686,7 @@ if (selected &&
 		//ARMOUR UP viking
 		with Player {
 			//No health mutations
-			if race == 16 && (unlockAlternativeUltras || (!skill_got[7] && !skill_got[36] && !skill_got[32] && !skill_got[31]))
+			if race == 16 && other.isAlternative
 			{
 				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 				altUltra = true;
@@ -733,7 +716,7 @@ if (selected &&
 	}
 	else if skill==66
 	{
-		if Player.race == 17 && (Player.bwep == 0 || Player.unlockAlternativeUltras)
+		if Player.race == 17 && isAlternative
 		{
 			with Player
 			{
@@ -762,7 +745,7 @@ if (selected &&
 	else if skill == 68 && Player.race == 17
 	{
 		with Player {
-			if (unlockAlternativeUltras || scrHasMorphMod() || scrHasMorphWeapon())
+			if other.isAlternative
 			{
 				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 				altUltra = true;
@@ -850,7 +833,7 @@ if (selected &&
 	{
 		if Player.race == 19
 		{
-			if (scrHasBloodWeapon() || Player.unlockAlternativeUltras)
+			if isAlternative
 			{
 				with Player
 				{
@@ -871,7 +854,7 @@ if (selected &&
 	}
 	else if skill == 76//skelly ultra D
 	{
-	    if Player.ultimategamble==false && !Player.unlockAlternativeUltras//skeleton lives
+	    if Player.ultimategamble==false && !isAlternative//skeleton lives
 	    {
 		    with Player
 		    {

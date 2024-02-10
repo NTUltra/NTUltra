@@ -38,7 +38,10 @@ else //Destroy and not full, pink sheep
 		}
 	}
 }
-
+if (instance_exists(Player) && Player.ultra_got[33] && !Player.altUltra)
+{
+	scrChickenRegen(1);
+}
 if UberCont.crownHeal
 {
 	scrHeal(1,true);	

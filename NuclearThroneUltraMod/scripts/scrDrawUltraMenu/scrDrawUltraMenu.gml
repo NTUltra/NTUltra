@@ -68,7 +68,6 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 	var i = ((race-1)*4) + 1;
 	var j = 0;
 	var canShow = (UberCont.ctot_ultra_taken[i] || UberCont.ctot_ultra_taken[i+1] || UberCont.ctot_ultra_taken[i+2] || UberCont.ctot_ultra_taken[i+3])
-	canShow = true;
 	var canShowThis = true;
 	repeat(am)
 	{

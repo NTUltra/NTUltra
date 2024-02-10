@@ -10,8 +10,8 @@ function scrFire() {
 	{
 		if ultra_got[21] && altUltra && reload > 0
 		{
-			gunGod += reload;
-			reload = 0;
+			gunGod += reload * 0.8;
+			reload = reload * 0.2;
 		}
 		if scrIsGamemode(48) && ammo[1] < 0
 		{

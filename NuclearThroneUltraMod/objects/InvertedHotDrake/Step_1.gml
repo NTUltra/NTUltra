@@ -28,7 +28,7 @@ if (instance_number(enemy) <= 4 + min(6,loops) || instance_exists(SurvivalWave) 
 		awake=true;
 		with instance_create(xstart,ystart,DragonDance) {
 			step -= 16;
-			projectileSpeed += 0.25;
+			projectileSpeed += 0.2;
 			spawnRate -= 10;
 		}
 		EnemyHealthAdjustments();

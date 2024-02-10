@@ -25,6 +25,7 @@ with Player//Data to keep
 			maxarmour = max(maxarmour, 1);
 			armour = clamp(armour, 0, maxarmour);
 	}
+	canblacksword = other.canblacksword;
 	gotMinimumArmour = other.gotMinimumArmour;
 	gunGameKill = other.gunGameKill;
 	rnglevelloop = other.rnglevelloop;

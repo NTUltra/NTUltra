@@ -3976,7 +3976,6 @@ function scrWeapons() {
 	wep_text[355] = "pincer attack"
 	wep_swap[355] = sndSwapShotgun
 	wep_rad[355] = 0;
-	wep_popup[355] = "EAGLE EYES#MAKES THIS MUCH MORE ACCURATE";
 	
 	wep_name[356] = "HEAVY GRENADE LAUNCHER"
 	wep_type[356] = 4

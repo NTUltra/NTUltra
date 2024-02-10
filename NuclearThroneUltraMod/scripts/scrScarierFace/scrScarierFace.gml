@@ -2,7 +2,7 @@
 // /@description
 ///@param
 function scrScarierFace(theDamage, isPerFrame){
-	if (Player.skill_got[11]) {
+	if (instance_exists(Player) && Player.skill_got[11]) {
 		my_health -= Player.excessDamageDeal;
 		var pe = Player.excessDamageDeal;
 		BackCont.shake += min(pe*0.5,10);

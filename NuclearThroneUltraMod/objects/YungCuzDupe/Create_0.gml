@@ -13,7 +13,7 @@ hammerheadcounter=0;
 skill_got = Player.skill_got;
 if skill_got[26]//HAMMER HEAD
 {
-	hammerheadcounter = 20;
+	hammerheadcounter = 25;
 	if Player.race=25//Doctor but that doesn't really work right
 	{
 		hammerheadcounter += 5;

@@ -289,13 +289,13 @@ function scrSecretUltraStat() {
 	secret_ultra_unlk[34] = "HAVE GAMMA GUTS AND NO CROWN";
 	
 	secret_ultra_name[35] = "VENUZIAN AIRHORN"
-	secret_ultra_text[35] = "<w>INFINITE RELOAD SPEED!<w>#ALL RELOAD YOU CHEAT#WILL NEED TO BE RELOADED NEXT AREA"
+	secret_ultra_text[35] = "NEAR <w>INFINITE RELOAD SPEED!<w>#ALL RELOAD YOU CHEAT#WILL NEED TO BE RELOADED NEXT AREA"
 	secret_ultra_tips[35] = "infinite trigger finger"
 	secret_ultra_hint[35] = "INNATE FIRE RATE";
 	secret_ultra_unlk[35] = "DO NOT HAVE MORE THAN ONE#RELOAD MUTATION";
 	
 	secret_ultra_name[36] = "GODS DON'T DIE"
-	secret_ultra_text[36] = "WHEN BOTH YOUR GUNS ARE <w>RELOADED<w>#YOU ARE <aq>IMMUNE<aq>"
+	secret_ultra_text[36] = "WHEN BOTH YOUR GUNS ARE <w>RELOADED<w>#YOU ARE <aq>IMMUNE<aq> FOR 2 SECONDS"
 	secret_ultra_tips[36] = "gun god gun god gun god"
 	secret_ultra_hint[36] = "GODS DON'T DIE";
 	secret_ultra_unlk[36] = "DO NOT HAVE ANY#DEATH PREVENTION MUTATIONS";

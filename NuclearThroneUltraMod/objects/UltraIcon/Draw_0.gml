@@ -23,6 +23,8 @@ if selected
 
 drawx = x
 drawy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-48
+if isAlternative
+	drawy -= 32;
 
 if drawx-string_width(string_hash_to_newline(txt2))/2-2 < __view_get( e__VW.XView, 0 )+2
 drawx = __view_get( e__VW.XView, 0 )+4+string_width(string_hash_to_newline(txt2))/2

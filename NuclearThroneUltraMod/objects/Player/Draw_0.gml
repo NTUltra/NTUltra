@@ -1,6 +1,11 @@
-var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+var yy = y;
+if hammerheadDig > 0
+{
+	yy += 6;
+}
+var aimDirection = point_direction(x,yy,UberCont.mouse__x,UberCont.mouse__y);
 if (drawTailIntro == 1) {
-	draw_sprite_ext(sprTailIntro,tailWave,x,y,-right,1,0,c_white,1);
+	draw_sprite_ext(sprTailIntro,tailWave,x,yy,-right,1,0,c_white,1);
 	if round(tailWave) == sprite_get_number(sprTailIntro)
 	{
 		tailWave = 0;
@@ -10,7 +15,7 @@ if (drawTailIntro == 1) {
 	}
 }
 else if (drawTailIntro == 3) {
-	draw_sprite_ext(sprTailOutro,tailWave,x,y,-right,1,0,c_white,1);
+	draw_sprite_ext(sprTailOutro,tailWave,x,yy,-right,1,0,c_white,1);
 	if round(tailWave) == sprite_get_number(sprTailOutro)
 	{
 		tailWave = 0;
@@ -21,7 +26,7 @@ else if (drawTailIntro == 3) {
 } 
 else if drawTail || drawTailIntro == 2
 {
-	draw_sprite_ext(sprTailEnd,tailWave,x,y,-right,1,0,c_lime,1);
+	draw_sprite_ext(sprTailEnd,tailWave,x,yy,-right,1,0,c_lime,1);
 	if round(tailWave) == sprite_get_number(sprTailEnd)
 	{
 		tailWave = 0;
@@ -39,23 +44,23 @@ if alienIntestines > 0
 {
 	if alienIntestines > 180
 	{
-		draw_sprite_ext(sprAlienIntestines3,wave,x,y,abs(right),image_yscale,alienIntestines*alienDir,c_white,1);
+		draw_sprite_ext(sprAlienIntestines3,wave,x,yy,abs(right),image_yscale,alienIntestines*alienDir,c_white,1);
 	}
 	else if alienIntestines > 80
 	{
-		draw_sprite_ext(sprAlienIntestines2,wave,x,y,abs(right),image_yscale,alienIntestines*alienDir,c_white,1);
+		draw_sprite_ext(sprAlienIntestines2,wave,x,yy,abs(right),image_yscale,alienIntestines*alienDir,c_white,1);
 	}else if alienIntestines > 25
 	{
-		draw_sprite_ext(sprAlienIntestines1,wave,x,y,abs(right),image_yscale,alienIntestines*alienDir,c_white,1);
+		draw_sprite_ext(sprAlienIntestines1,wave,x,yy,abs(right),image_yscale,alienIntestines*alienDir,c_white,1);
 	}
 }
-if (gunGodImmune || (ultra_got[75] && speed == 0))
+if ((gunGodImmune && alarm[3] > 0) || (ultra_got[75] && speed == 0))
 {
 	shader_set(shdDrawWhite);
-		draw_sprite_ext(sprite_index,image_index,x+1,y+1,right,image_yscale,angle,c_white,1);
-		draw_sprite_ext(sprite_index,image_index,x+1,y-1,right,image_yscale,angle,c_white,1);
-		draw_sprite_ext(sprite_index,image_index,x-1,y-1,right,image_yscale,angle,c_white,1);
-		draw_sprite_ext(sprite_index,image_index,x-1,y+1,right,image_yscale,angle,c_white,1);
+		draw_sprite_ext(sprite_index,image_index,x+1,yy+1,right,image_yscale,angle,c_white,1);
+		draw_sprite_ext(sprite_index,image_index,x+1,yy-1,right,image_yscale,angle,c_white,1);
+		draw_sprite_ext(sprite_index,image_index,x-1,yy-1,right,image_yscale,angle,c_white,1);
+		draw_sprite_ext(sprite_index,image_index,x-1,yy+1,right,image_yscale,angle,c_white,1);
 	shader_reset();
 }
 if wep_type[wep] = 0
@@ -69,7 +74,7 @@ else
 bwepright = right
 
 if bwep != 0 and race != 7
-draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*2,y,image_yscale,bwepright,90+15*right,c_silver,1)
+	draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*2,yy,image_yscale,bwepright,90+15*right,c_silver,1)
 
 if scrEnableLaserSight()
 {
@@ -79,7 +84,7 @@ if scrEnableLaserSight()
 		lasd = 0
 		var aimDir = aimDirection;
 		var sx = x + lengthdir_x(8,aimDir);
-		var sy = y + lengthdir_y(8,aimDir);
+		var sy = yy + lengthdir_y(8,aimDir);
 		lasx = sx
 		lasy = sy
 		aimDir += 90*accuracy
@@ -107,19 +112,19 @@ if scrEnableLaserSight()
 	else
 	{
 		lasx = x
-		lasy = y
+		lasy = yy
 		lasd = 0
 		var aimDir = aimDirection
 		do {lasd += 1 lasx += lengthdir_x(2,aimDir) lasy += lengthdir_y(2,aimDir)}
 		until position_meeting(lasx,lasy,Wall) or lasd > 1000
 	
-		draw_sprite_ext(sprLaserSightPlayer,-1,x,y,point_distance(x,y,lasx,lasy)/2+2,image_yscale,aimDirection,c_white,1)
+		draw_sprite_ext(sprLaserSightPlayer,-1,x,yy,point_distance(x,yy,lasx,lasy)/2+2,image_yscale,aimDirection,c_white,1)
 	}
 }
 
 if ultra_got[31]//draw robots third weapon on its back
 {
-draw_sprite_ext(wep_sprt[cwep],triggerfinger,x-right,y-2,image_xscale,bwepright,90+right*-15,c_white,1)
+draw_sprite_ext(wep_sprt[cwep],triggerfinger,x-right,yy-2,image_xscale,bwepright,90+right*-15,c_white,1)
 
 }
 //DUAL WIELDING
@@ -127,9 +132,9 @@ if ultra_got[27]=1 && !altUltra//copy primary
 {
 
 //first draw secondary on back of roids
-draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*4,y-2,image_xscale,-bwepright,90+right*30,c_white,1)
+draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*4,yy-2,image_xscale,-bwepright,90+right*30,c_white,1)
 
-draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+right,y-2,image_xscale,-bwepright,90+right*30,c_white,1)
+draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+right,yy-2,image_xscale,-bwepright,90+right*30,c_white,1)
 
 twep=bwep;//save secondary in third wepslot
 bwep=wep;//secondary slot will now be your primary
@@ -146,7 +151,7 @@ if race = 7 and bwep != 0
 			lasd = 0
 			var aimDir = aimDirection;
 			var sx = x + lengthdir_x(8,aimDir);
-			var sy = y-4 + lengthdir_y(8,aimDir);
+			var sy = yy-4 + lengthdir_y(8,aimDir);
 			lasx = sx
 			lasy = sy
 			aimDir += 90*accuracy
@@ -174,19 +179,19 @@ if race = 7 and bwep != 0
 		else
 		{
 			lasx = x
-			lasy = y-4
+			lasy = yy-4
 			lasd = 0
 			do {lasd += 1 lasx += lengthdir_x(2,aimDirection) lasy += lengthdir_y(2,aimDirection)}
 			until position_meeting(lasx,lasy,Wall) or lasd > 1000
-			draw_sprite_ext(sprLaserSightPlayer,-1,x,y-4,point_distance(x,y,lasx,lasy)/2+2,image_yscale,aimDirection,c_white,1)
+			draw_sprite_ext(sprLaserSightPlayer,-1,x,yy-4,point_distance(x,yy,lasx,lasy)/2+2,image_yscale,aimDirection,c_white,1)
 		}
 	}
-	draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),y+gunY-4+lengthdir_y(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),image_yscale,-bwepright,aimDirection+(bwepangle*(1-bwkick/20)),c_white,1)
+	draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),yy+gunY-4+lengthdir_y(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),image_yscale,-bwepright,aimDirection+(bwepangle*(1-bwkick/20)),c_white,1)
 	if bwep = 63 || wep = 343//Blackhole/Dimension Generator
 	{
 	if can_shoot = 1 and ammo[wep_type[wep]] >= wep_cost[wep]{
 
-	draw_sprite_ext(sprBlackHoleGeneration,triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(bwepangle*(1-wkick/20))),y+gunY-4+lengthdir_y(-bwkick,aimDirection+(bwepangle*(1-wkick/20))),image_yscale,-bwepright,aimDirection+(bwepangle*(1-wkick/20)),c_white,1)}}
+	draw_sprite_ext(sprBlackHoleGeneration,triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(bwepangle*(1-wkick/20))),yy+gunY-4+lengthdir_y(-bwkick,aimDirection+(bwepangle*(1-wkick/20))),image_yscale,-bwepright,aimDirection+(bwepangle*(1-wkick/20)),c_white,1)}}
 
 }
 
@@ -196,30 +201,51 @@ bwep=twep;//and return weapon
 }
 //DRAW DA GUNZ
 if back = 1 and (!(IsShielding)||(ultra_got[7]==1)){
-draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),y+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,1)
+draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),yy+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,1)
 
 if wep = 63 || wep = 343//Blackhole/Dimension Generator
 {
 if can_shoot = 1 and ammo[wep_type[wep]] >= wep_cost[wep]{
 
-draw_sprite_ext(sprBlackHoleGeneration,wave,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),y+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,1)
+draw_sprite_ext(sprBlackHoleGeneration,wave,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),yy+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,1)
 }}
 }
+var playerAlpha = 1;
 if instance_exists(Decoy) || rollIframe > 0 
-	draw_sprite_ext(sprite_index,-1,x,y,right,image_yscale,angle,c_white,0.4)//CHICKEN VANISHED OPACITY
-else
+	playerAlpha = 0.4;
+else if hammerheadDig <= 0
 {
-	draw_sprite_ext(sprite_index,-1,x,y,right,image_yscale,angle,c_white,1)//PLAYER GETS DRAWN HERE
+	draw_sprite_ext(sprite_index,-1,x,yy,right,image_yscale,angle,c_white,playerAlpha)//PLAYER GETS DRAWN HERE
 	if race == 24 && my_health > 0 && instance_exists(ElementorHead) //Elemental Mushroom head
 	{
 		mushroomhead = scrElementorMushroomHead();
-		draw_sprite_ext(mushroomhead,-1,x,y,right,image_yscale,angle,ElementorHead.col,1)
+		draw_sprite_ext(mushroomhead,-1,x,yy,right,image_yscale,angle,ElementorHead.col,playerAlpha)
 	}
+}
+else
+{
+	if !surface_exists(digSurface) {
+		digSurface = surface_create(2 + sprite_width,2 + (sprite_height * 0.5));
+	}
+	surface_set_target(digSurface);
+	draw_clear_alpha(c_black,0);
+	var xxx = 1 + surface_get_width(digSurface) * 0.5;
+	var yyy = 1 + sprite_height * 0.5;
+	draw_sprite_ext(sprite_index,-1,xxx,yyy,right,image_yscale,angle,c_white,playerAlpha)//PLAYER GETS DRAWN HERE
+	if race == 24 && my_health > 0 && instance_exists(ElementorHead) //Elemental Mushroom head
+	{
+		mushroomhead = scrElementorMushroomHead();
+		draw_sprite_ext(mushroomhead,-1,xxx,yyy,right,image_yscale,angle,ElementorHead.col,playerAlpha)
+	}
+	surface_reset_target()
+	draw_surface(digSurface,x - xxx,yy - yyy);
+	var ly = yy - yyy + surface_get_height(digSurface);
+	draw_sprite(sprPlayerDigLine,-1,x,ly);
 }
 
 //Alkaline Saliva
 if skill_got[32] && isAlkaline// && my_health < maxhealth && lag < 1 && armour < 1
-	draw_sprite_ext(sprAlkalineSaliva,wave,x,y,right,1,0,c_white,0.75);
+	draw_sprite_ext(sprAlkalineSaliva,wave,x,yy,right,1,0,c_white,0.75);
 
 if triggerfinger>0
 triggerfinger+=1;
@@ -228,22 +254,21 @@ if triggerfinger>7
 triggerfinger=0;
 
 if back = -1 and !(IsShielding){
-draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),y+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,1)
+draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),yy+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,1)
 if wep = 63 || wep = 343//Blackhole/Dimension Generator
 {
 if can_shoot = 1 and ammo[wep_type[wep]] >= wep_cost[wep]{
-draw_sprite_ext(sprBlackHoleGeneration,wave,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),y+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,1)
+draw_sprite_ext(sprBlackHoleGeneration,wave,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),yy+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,1)
 }}
 }
 
-
 if race = 3 and (KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2)
 {
-draw_sprite_ext(sprMindPower,wave,x,y,right,1,0,c_white,1)
+draw_sprite_ext(sprMindPower,wave,x,yy,right,1,0,c_white,1)
 }
 else if ultra_got[10] && !altUltra
 {
-	draw_sprite_ext(sprMonsterStyle,wave,x,y,right,1,0,c_white,1)
+	draw_sprite_ext(sprMonsterStyle,wave,x,yy,right,1,0,c_white,1)
 }
 //else if ultra_got[11]=1// keep the animations goin on brainwashed enemies
 //{wave+=1;}
@@ -252,21 +277,20 @@ if skill_got[25]=1//strong spirit draw this behind weps
 {
 if strongspiritused==false&&strongspirit
 {
-draw_sprite_ext(sprStrongSpirit,wave*0.4,x,y,right,1,0,c_white,1);
+draw_sprite_ext(sprStrongSpirit,wave*0.4,x,yy,right,1,0,c_white,1);
 }
 }
 
 if ultra_got[48]//yung cuz lives
 {
-draw_sprite_ext(sprYungCuzLives,lag,x,y-8,1,1,0,c_white,1);
+draw_sprite_ext(sprYungCuzLives,lag,x,yy-8,1,1,0,c_white,1);
 }
-
 /*
 draw_set_blend_mode(bm_add)
 
 if skill_got[8]//gamma guts
 {
-draw_sprite_ext(sprGammaGuts,wave*0.4,x,y,1.1,1.1,image_angle,c_white,0.1)
+draw_sprite_ext(sprGammaGuts,wave*0.4,x,yy,1.1,1.1,image_angle,c_white,0.1)
 }
 
 draw_set_blend_mode(bm_normal)
@@ -285,5 +309,5 @@ if bwkick < 0
 bwkick += 1
 }
 if nearWall
-	draw_sprite(sprHammerHeadNear,wave,x,y-16);
+	draw_sprite(sprHammerHeadNear,wave,x,yy-16);
 	

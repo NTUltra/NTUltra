@@ -4,13 +4,13 @@ height = 320;
 spawnRate = 210;
 alarm[0] = 60 + (spawnRate*0.5) + 1;
 alarm[1] = 60;
-step = 112;
+step = 128;
 projectileSpeed = 1.5;
 loops = GetPlayerLoops();
 if loops > 0
 {
 	spawnRate -= 60;
-	step -= 32;
+	step -= 48;
 	projectileSpeed += 0.5;
 }
 /*

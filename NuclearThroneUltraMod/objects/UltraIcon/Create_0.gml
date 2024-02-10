@@ -38,5 +38,5 @@ bwepmod4=Player.bwepmod4
 skillIndex = instance_number(UltraIcon) - 1;
 exceptionclick=false;
 selected = false;
-
-
+isAlternative = false;
+canAlt = false;

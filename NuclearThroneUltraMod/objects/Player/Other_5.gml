@@ -1,25 +1,13 @@
 /// @description Black sword? and UNLOCKABLES
 if swapChar
 	exit;
-if ultra_got[21] && altUltra && gunGod > 0
-{
-	gunGod = min(gunGod * 0.75, 600);
-	reload = gunGod * 0.5;
-	breload = gunGod * 0.5;
-	creload = gunGod * 0.5;
-	gunGod = 0;
-	gunGodFirst = true;
-	gunGodFirstB = true;
-	canInfiniteFire = false;
-	canInfiniteFireB = false;
-}
 consecutiveGoodBloodGambles = 0;
 tinyKrakenSpawned = 0;
 if ultra_got[50] && altUltra
 	charpoints = 1;
 if ultra_got[19] && altUltra
 	canKillKillKill = 2;
-if (area == 1 || area == 101 || area == 10) && instance_exists(WepPickup)
+if (area == 1 || area == 101 || area == 10 || area == 105 || area == 122 || area == 121) && instance_exists(WepPickup)
 {
 	with WepPickup
 	{
@@ -41,6 +29,29 @@ scrNextLevel();//odd
 isInInverted = false;
 var cameFromOuterSpace = (area == 100 || area == 104 || scrIsInInvertedArea());
 scrNextLevel();
+if ultra_got[21] && altUltra && gunGod > 0
+{
+	gunGod = min(gunGod * 0.75, 600);
+	if area != 100
+	{
+		if cwep != 0
+		{
+			reload = gunGod * 0.34;
+			breload = gunGod * 0.34;
+			creload = gunGod * 0.34;
+		}
+		else
+		{
+			reload = gunGod * 0.5;
+			breload = gunGod * 0.5;
+		}
+		gunGodFirst = true;
+		gunGodFirstB = true;
+		canInfiniteFire = false;
+		canInfiniteFireB = false;
+	}
+	gunGod = 0;
+}
 if UberCont.killedInvertedThrone2 && !cameFromOuterSpace && UberCont.collectedInversionShards < 3 && scrIsInInvertedArea()
 {
 	UberCont.canSpawnInversionShards = true;
@@ -361,27 +372,7 @@ if looping && area != 104
 			ultraNow = true;
 			skillsChosen --;
 		}
-	        if race==9//Chicken maxhealth regain on loop
-	        {
-				var targetHealth = 8;
-				if scrIsGamemode(5)
-					targetHealth = 1;
-				if skill_got[1] == 1//Rhino skin
-					targetHealth += 4;
-				if skill_got[31]//Tough shell
-					targetHealth += 1;
-				if skill_got[33]//Glass arm cannon
-					targetHealth = max(1,targetHealth-1);
-				if skill_got[41]//nerves of steel
-					targetHealth = max(1,targetHealth-2);
-				if scrIsGamemode(9)
-					targetHealth += UberCont.casualModeHPIncrease;
-				targetHealth += UberCont.maxHpIncrease;
-	            if maxhealth<targetHealth
-	            {
-		            maxhealth = min(maxhealth + 2,targetHealth);
-	            }
-	        }
+			scrChickenRegen(2);
             /*
 	        if loops == 2 && !scrIsGamemode(15)//not no mutations gamemode
 	        {
