@@ -360,8 +360,8 @@ function scrSkills() {
 	skill_bons[25] = "RECHARGES WHEN AT 75% HP";
 
 	skill_name[26] = "HAMMER HEAD"
-	skill_text[26] = "PUSH THROUGH SOME <w>WALLS<w>";
-	skill_detail[26] = "PUSH THROUGH A LIMITED NUMBER OF <w>WALLS<w>#FIND <y>RES<y><g>OUR<g><r>CES<r> IN WALLS##UNUSED WALLBREAKS#GIVE <y>RES<y><g>OUR<g><r>CES<r> NEXT AREA"
+	skill_text[26] = "<w>DIG<w> THROUGH SOME <w>WALLS<w>";
+	skill_detail[26] = "<w>DIG<w> THROUGH A LIMITED NUMBER OF <w>WALLS<w>#WHILE <w>DIGGING<w> YOU ARE <aq>IMMUNE<aq>#FIND <y>RES<y><g>OUR<g><r>CES<r> IN WALLS##UNUSED WALLBREAKS#GIVE <y>RES<y><g>OUR<g><r>CES<r> NEXT AREA"
 	skill_tips[26] = "hello welcome to my#minecraft let's play"
 	skill_msnd[26] =  sndMutHammerHead
 	skill_bons[26] = "PUSH THROUGH 5 MORE WALLS";

@@ -2324,7 +2324,7 @@ if hammerheadDig > 0
 	if is60fps
 		hammerheadDig -= 0.5;
 	else
-		hammerheadDig += 1;
+		hammerheadDig -= 1;
 	if (hammerheadDig <= 0)
 	{
 		snd_play(sndWallBreak);
@@ -2395,8 +2395,8 @@ if hammerheadcounter > 0
 						ang += angStep;
 					}
 				}
-				hammerheadDig = 40;
-				alarm[3] = max(alarm[3],42);
+				hammerheadDig = 30;
+				alarm[3] = max(alarm[3],31);
 				var debrisAmount = 2;
 				var debrisMultiply = 1.5;
 				if (hammerheadcounter > 0)

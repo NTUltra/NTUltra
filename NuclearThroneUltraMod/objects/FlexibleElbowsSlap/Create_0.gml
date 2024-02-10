@@ -10,3 +10,4 @@ snd_play(sndChickenThrow);
 queue = 0;
 hook = 0;
 scrInitDrops(1);
+team = 2;

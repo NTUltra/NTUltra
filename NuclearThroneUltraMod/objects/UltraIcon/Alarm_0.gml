@@ -1,7 +1,7 @@
 //delay before you can chose
 if skill == 82 && scrIsGamemode(25)
 	instance_destroy();
-if (!isAlternative)
+if (!isAlternative && !canAlt)
 {
 	with instance_create(x,y - 32,UltraIcon)
 	{
@@ -165,26 +165,16 @@ if canAlt
 	else if skill == 106 && Player.race == 27 && (((Player.unlockAlternativeUltras || isAlternative) && randomHand == 1 && !Player.bskin == 1) || Player.bskin == 1)
 	{
 		sprite_index = sprHotHands;
-		with Player {
-			ultra_name[106] = "HOT HANDS!"
-			ultra_text[106] = "FIERY HANDS#MORE FIRE DAMAGE#HOMING FIRE#EVEN MORE FIRE DAMAGE#WHILE IN INVERTED AREAS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
-			ultra_tips[106] = "secret b-skin ultra mutation"
-		}
 	}
 	else if skill == 106 && Player.race == 27 && (((Player.unlockAlternativeUltras || isAlternative) && randomHand == 2 && !Player.bskin == 2) || Player.bskin == 2)
 	{
 		sprite_index = sprBoomHands;
-		with Player {
-			ultra_name[106] = "BOOM HANDS!"
-			ultra_text[106] = "EXPLOSIVE HANDS#HAND IS SLOWER#NORMAL HAND SPEED IN INVERTED AREAS#INVERTED PORTALS#(OVER) HEAL YOU FOR 5 HP"
-			ultra_tips[106] = "secret c-skin ultra mutation"
-		}
 	}
 	if spr == sprite_index
 		instance_destroy();
 	else if skill != 106
 	{
 		isAlternative = true;
-		scrUltras(true);
+		scrUltras(true, false, randomHand);
 	}
 }

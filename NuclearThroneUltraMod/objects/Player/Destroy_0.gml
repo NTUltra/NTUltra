@@ -1,7 +1,7 @@
 //UNLOCK EASY MODE
 if area=1 && subarea=1 && loops=0 && my_health <= 0
 scrUnlockGameMode(9,"FOR DYING ON 1-1#YOU DID THAT ON PURPOSE")
-
+audio_stop_sound(sndFishRollUpgLoop);
 if scrCheckLoopAll()
 	scrUnlockCSkin(1,"FOR LOOPING WITH EVERY CHARACTER",0);
 
