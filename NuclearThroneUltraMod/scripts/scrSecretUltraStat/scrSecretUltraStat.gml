@@ -242,7 +242,7 @@ function scrSecretUltraStat() {
 	secret_ultra_unlk[28] = "USE PATIENCE\nOR HAVE A REROLL READY";
     
 
-	//MUTATION SMITH
+	//DOCTOR
 	//97
 	secret_ultra_name[29] = "BEEKEEPER"
 	secret_ultra_text[29] = "<g>RADIATION<g> SPAWNS <w>SWARM BOLTS<w>"
@@ -263,14 +263,14 @@ function scrSecretUltraStat() {
 	//Secret B skin ultra
 	//106
 	secret_ultra_name[31] = "HOT HANDS!"
-	secret_ultra_text[31] = "<r>FIERY<r> HANDS#MORE <r>FIRE<r> DAMAGE#HOMING <r>FIRE<r>#EVEN MORE <r>FIRE<r> DAMAGE#WHILE IN <w>INVERTED AREAS<w>#<w>INVERTED PORTALS<w>#(OVER) <r>HEAL YOU FOR 5 <r>HP<r>"
+	secret_ultra_text[31] = "<r>FIERY<r> HANDS#MORE <r>FIRE<r> DAMAGE#HOMING <r>FIRE<r>#EVEN MORE <r>FIRE<r> DAMAGE#WHILE IN <w>INVERTED AREAS<w>#<w>INVERTED PORTALS<w>#(OVER) <r>HEAL YOU FOR 4 <r>HP<r>"
 	secret_ultra_tips[31] = "secret b-skin ultra mutation"
 	secret_ultra_hint[31] = "HOT";
 	secret_ultra_unlk[31] = "USE B-SKIN";
 	//Secret C skin ultra
 	//106
 	secret_ultra_name[32] = "BOOM HANDS!"
-	secret_ultra_text[32] = "<w>EXPLOSIVE<w> HANDS#HAND IS SLOWER#NORMAL HAND SPEED IN <w>INVERTED AREAS<w>#<w>INVERTED PORTALS<w>#(OVER) <r>HEAL<r> YOU FOR 5 <r>HP<r>"
+	secret_ultra_text[32] = "<w>EXPLOSIVE<w> HANDS#HAND IS SLOWER#NORMAL HAND SPEED IN <w>INVERTED AREAS<w>#<w>INVERTED PORTALS<w>#(OVER) <r>HEAL<r> YOU FOR 4 <r>HP<r>"
 	secret_ultra_tips[32] = "secret c-skin ultra mutation"
 	secret_ultra_hint[32] = "POPO";
 	secret_ultra_unlk[32] = "USE C-SKIN";

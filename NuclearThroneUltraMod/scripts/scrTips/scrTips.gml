@@ -13,6 +13,8 @@ function scrTips() {
 	"secret ultras all require a specific setup#when you reach level ultra",
 	"idpd grunts can roll",
 	"fish can play guitar",
+	"after getting 100% you can get 200% completion!",
+	"for 200% completion you have to#find all alternative ultras#get all golden weapons#and loop on all characters",
 	"you can swap cursed weapons#with other cursed weapons",
 	"green outline on mutations means#you have taken them before",
 	"try every mutation it will also unlock a gamemode",
@@ -462,7 +464,7 @@ function scrTips() {
 	if Player.race = 14//panda
 	tip = choose("never let go of your bamboo","rng","portal magic","what is a panda doing here",
 	"don't want to be here","help me","if only hotline miami had a panda","panda used to be a pacifist",
-	"throw weapons to#conserve ammo","throw damage scales#with your level",
+	"throw weapons to#conserve ammo","throw damage scales#with your level","your thrown weapons will return to you",
 	,"fight to survive","manage your weapons!","killing is no fun","panda is unpredictable with weapons"
 	/*,"you can see your new weapon#while a level is generating","throw weapons#in a portal to keep them",
 	"if you like a weapon#you can throw it into a portal#to keep it"*/

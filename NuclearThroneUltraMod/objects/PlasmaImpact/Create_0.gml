@@ -12,7 +12,9 @@ Mod4=0;
 confDropChanceIndex = -1;
 itemDropChanceIndex = -1;
 weaponDropChanceIndex = -1;
-wepFire=0;
+wepFire = 0;
+hadSpeedApplied = false;
+poppop = false;
 dmg = 5;
 canBeMoved = true;
 if instance_exists(Player)

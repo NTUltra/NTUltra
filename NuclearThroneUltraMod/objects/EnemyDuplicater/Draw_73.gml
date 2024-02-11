@@ -10,31 +10,34 @@ for (var i = 0; i < al; i ++)
 	{
 		ds_list_add(copiedEnemies,newcollision[| i]);
 		with newcollision[| i] {
-			var splatDir = random(360);
-			var rpt = 1+mySize;
-			var angStep = 360 / rpt;
-			repeat(rpt)
+			if object_index != EnemyCrownOfInversion && object_index != CrownGlutton
 			{
-				with instance_create(x,y,BloodStreak)
+				var splatDir = random(360);
+				var rpt = 1+mySize;
+				var angStep = 360 / rpt;
+				repeat(rpt)
 				{
-				motion_add(splatDir,6 + other.mySize)
-				image_angle = direction
+					with instance_create(x,y,BloodStreak)
+					{
+					motion_add(splatDir,6 + other.mySize)
+					image_angle = direction
+					}
+					scrAddToBGFXLayer(
+						sprBloodSplat,
+						irandom(sprite_get_number(sprBloodSplat)),
+						x + lengthdir_x(random_range(4,8)+mySize,splatDir),
+						y + lengthdir_y(random_range(4,8)+mySize,splatDir),
+						random_range(0.8,1),
+						random_range(0.8,1),
+						splatDir,
+						c_white,
+						1
+					);
+					splatDir += angStep;
 				}
-				scrAddToBGFXLayer(
-					sprBloodSplat,
-					irandom(sprite_get_number(sprBloodSplat)),
-					x + lengthdir_x(random_range(4,8)+mySize,splatDir),
-					y + lengthdir_y(random_range(4,8)+mySize,splatDir),
-					random_range(0.8,1),
-					random_range(0.8,1),
-					splatDir,
-					c_white,
-					1
-				);
-				splatDir += angStep;
+				var newGuy = instance_create_depth(x,y,depth,object_index)
+				ds_list_add(other.copiedEnemies,newGuy);
 			}
-			var newGuy = instance_create_depth(x,y,depth,object_index)
-			ds_list_add(other.copiedEnemies,newGuy);
 		}
 	}
 }

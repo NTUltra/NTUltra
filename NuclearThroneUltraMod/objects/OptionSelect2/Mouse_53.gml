@@ -22,7 +22,7 @@ with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2
 
 
 }
-else if StatsSelect.selected = 1 or CreditsSelect.selected = 1 or OptionSelect.selected = 1// or UpdateSelect.selected = 1
+else if StatsSelect.selected = 1 or CreditsSelect.selected = 1 or OptionSelect.selected = 1 or UpdateChecker.selected = 1
 {
 alarm[0] = 2;
 with option2

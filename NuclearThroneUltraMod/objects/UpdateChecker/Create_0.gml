@@ -39,3 +39,4 @@ canShow = false;
 canParticipate = true;
 canParticipateInGamemode = false;
 isRace = true;
+updatepage = 0;

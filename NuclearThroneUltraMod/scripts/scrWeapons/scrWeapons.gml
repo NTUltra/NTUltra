@@ -3084,7 +3084,7 @@ function scrWeapons() {
 	wep_name[275] = "GHOST SHOVEL"
 	wep_type[275] = 0
 	wep_auto[275] = 0
-	wep_load[275] = 41
+	wep_load[275] = 42
 	wep_cost[275] = 0
 	wep_sprt[275] = sprGhostShovel
 	wep_area[275] = 18
@@ -5429,7 +5429,7 @@ function scrWeapons() {
 	wep_name[484] = "GHOST DAGGER"
 	wep_type[484] = 0
 	wep_auto[484] = 0
-	wep_load[484] = 12
+	wep_load[484] = 14
 	wep_cost[484] = 0
 	wep_sprt[484] = sprGhostDagger
 	wep_area[484] = 14
@@ -7977,7 +7977,7 @@ function scrWeapons() {
 	wep_name[714] = "GHOST SPEAR"
 	wep_type[714] = 0
 	wep_auto[714] = 0
-	wep_load[714] = 23
+	wep_load[714] = 25
 	wep_cost[714] = 0
 	wep_sprt[714] = sprGhostSpear
 	wep_area[714] = 15
@@ -8011,7 +8011,7 @@ function scrWeapons() {
 	wep_type[717] = 4
 	wep_auto[717] = 3
 	wep_load[717] = 8
-	wep_cost[717] = 2
+	wep_cost[717] = 1.5
 	wep_sprt[717] = sprBoodRocketGun
 	wep_area[717] = 6
 	wep_text[717] = "bloody mary"
@@ -8022,7 +8022,7 @@ function scrWeapons() {
 	wep_type[718] = 4
 	wep_auto[718] = 3
 	wep_load[718] = 10
-	wep_cost[718] = 3
+	wep_cost[718] = 2.5
 	wep_sprt[718] = sprDoubleBloodRocketGun
 	wep_area[718] = 11
 	wep_text[718] = "red rockets"

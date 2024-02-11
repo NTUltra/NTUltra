@@ -63,5 +63,9 @@ function scrReturnMenu(){
 		with StatsSelect {
 			alarm[0] = 1;
 		}
+		with UpdateChecker
+		{
+			alarm[0] = 1;	
+		}
 	}
 }

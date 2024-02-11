@@ -1,12 +1,17 @@
 /// @description Init
 depth = -2;
+hasPluto = false;
+suckDirection = 0;
+col = make_colour_rgb(190,255,8);
 if instance_exists(Player)
 if Player.skill_got[3]
 	{
-		alarm[2] = 2;	
+		hasPluto = true;
+		alarm[2] = 1;	
 	}
 	isGettingSucked = false;
-	
+xOrigin = x;
+yOrigin = y;
 cursed = false;
 mySize = 1;
 stepDis = 12;

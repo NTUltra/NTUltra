@@ -1766,7 +1766,6 @@ function scrFire() {
 	ammo = 5
 	time = 3
 	team = other.team
-	event_perform(ev_alarm,0) 
 	}
 
 	break;
@@ -5154,24 +5153,26 @@ function scrFire() {
 		firedOnce = true;
 		fired=true;
 	}
-	var reloadBoost = 0.09;
-	if Player.skill_got[30] == 1
-		reloadBoost = 0.16;
-	if Player.ultra_got[65]
-		reloadBoost += 0.05;
+	if !scrIsCrown(29)//Crown of purity
+	{
+		var reloadBoost = 0.09;
+		if Player.skill_got[30] == 1
+			reloadBoost = 0.16;
+		if Player.ultra_got[65]
+			reloadBoost += 0.05;
 	
-	if wepmod1==12
-		reload -= wep_load[wep]*reloadBoost
+		if wepmod1==12
+			reload -= wep_load[wep]*reloadBoost
 	
-	if wepmod2==12
-		reload -= wep_load[wep]*reloadBoost
+		if wepmod2==12
+			reload -= wep_load[wep]*reloadBoost
 
-	if wepmod3==12
-		reload -= wep_load[wep]*reloadBoost
+		if wepmod3==12
+			reload -= wep_load[wep]*reloadBoost
 
-	if wepmod4==12
-		reload -= wep_load[wep]*reloadBoost
-		
+		if wepmod4==12
+			reload -= wep_load[wep]*reloadBoost
+	}
 	if Player.ultra_got[80] == 1//business hog gold digger
 	{
 		if scrCheckGold(wep_name[wep])//string_copy(wep_name[wep],0,4) = "GOLD"&&loops<1

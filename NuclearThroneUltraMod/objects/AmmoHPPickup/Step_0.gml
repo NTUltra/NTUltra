@@ -25,6 +25,7 @@ if !supercursed || gotPluto {
 	if (cursed)
 	{
 		range *= 0.5;
+		range = max(range,20);
 		sped = 1;
 		levelEnded = false;
 	}
@@ -32,16 +33,18 @@ if !supercursed || gotPluto {
 	{
 		sped = 1;
 		range *= 0.25;
+		range = max(range,16);
 		levelEnded = false;
 	}
 	
 	repeat(sped)
 	{
 		if point_distance(x, y, Player.x, Player.y) < range or levelEnded {
-			if !place_meeting(x + lengthdir_x(as, point_direction(x, y, Player.x, Player.y)), y, Wall)
-				x += lengthdir_x(as, point_direction(x, y, Player.x, Player.y))
-			if !place_meeting(x, y + lengthdir_y(as, point_direction(x, y, Player.x, Player.y)), Wall)
-				y += lengthdir_y(as, point_direction(x, y, Player.x, Player.y))
+			suckDirection = point_direction(x, y, Player.x, Player.y)
+			if !place_meeting(x + lengthdir_x(as, suckDirection), y, Wall)
+				x += lengthdir_x(as, suckDirection)
+			if !place_meeting(x, y + lengthdir_y(as, suckDirection), Wall)
+				y += lengthdir_y(as, suckDirection)
 		    isGettingSucked = true;
 			if place_meeting(x,y,Player)
 			{
@@ -53,10 +56,11 @@ if !supercursed || gotPluto {
 
 		if instance_exists(Implosion) {
 		    if point_distance(x, y, Implosion.x, Implosion.y) < range or instance_exists(Implosion) {
-		        if Player.ultra_got[12] == 1 || place_free(x + lengthdir_x(as, point_direction(x, y, Implosion.x, Implosion.y)), y) || ((Player.ultra_got[12] == 1) && (KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2))
-		        x += lengthdir_x(as, point_direction(x, y, Implosion.x, Implosion.y))
-		        if Player.ultra_got[12] == 1 || place_free(x, y + lengthdir_y(as, point_direction(x, y, Implosion.x, Implosion.y))) || ((Player.ultra_got[12] == 1) && (KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2))
-		        y += lengthdir_y(as, point_direction(x, y, Implosion.x, Implosion.y))
+				suckDirection = point_direction(x, y, Implosion.x, Implosion.y);
+		        if Player.ultra_got[12] == 1 || place_meeting(x + lengthdir_x(as, suckDirection), y,Wall) || ((Player.ultra_got[12] == 1) && (KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2))
+		        x += lengthdir_x(as, suckDirection)
+		        if Player.ultra_got[12] == 1 || place_meeting(x, y + lengthdir_y(as, suckDirection),Wall) || ((Player.ultra_got[12] == 1) && (KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2))
+		        y += lengthdir_y(as, suckDirection)
 				
 				if place_meeting(x,y,Implosion)
 				{
@@ -66,10 +70,11 @@ if !supercursed || gotPluto {
 		}
 		else if (Player.ultra_got[108] && instance_exists(Hand) && point_distance(x, y, Hand.x, Hand.y) < range)
 		{
-			if place_free(x + lengthdir_x(as, point_direction(x, y, Hand.x, Hand.y)), y)
-				x += lengthdir_x(as, point_direction(x, y, Hand.x, Hand.y))
-	        if place_free(x, y + lengthdir_y(as, point_direction(x, y, Hand.x, Hand.y)))
-				y += lengthdir_y(as, point_direction(x, y, Hand.x, Hand.y))
+			suckDirection = point_direction(x, y, Hand.x, Hand.y);
+			if place_meeting(x + lengthdir_x(as, suckDirection), y,Wall)
+				x += lengthdir_x(as, suckDirection)
+	        if place_meeting(x, y + lengthdir_y(as, suckDirection),Wall)
+				y += lengthdir_y(as, suckDirection)
 			if place_meeting(x,y,Hand)
 			{
 				event_user(0);
@@ -80,10 +85,11 @@ if !supercursed || gotPluto {
 			var n = instance_nearest(x,y,YungCuzDupe);
 			if point_distance(x, y, n.x, n.y) < range
 			{
-				if place_free(x + lengthdir_x(as, point_direction(x, y, n.x, n.y)), y)
-					x += lengthdir_x(as, point_direction(x, y, n.x, n.y))
-			    if place_free(x, y + lengthdir_y(as, point_direction(x, y, n.x, n.y)))
-					y += lengthdir_y(as, point_direction(x, y, n.x, n.y))
+				suckDirection = point_direction(x, y, n.x, n.y);
+				if place_meeting(x + lengthdir_x(as, suckDirection), y,Wall)
+					x += lengthdir_x(as, suckDirection)
+			    if place_meeting(x, y + lengthdir_y(as, suckDirection),Wall)
+					y += lengthdir_y(as, suckDirection)
 				if place_meeting(x,y,YungCuzDupe)
 				{
 					event_user(0);
@@ -93,16 +99,16 @@ if !supercursed || gotPluto {
 	}
 } else {
 	if instance_exists(Player) {
-	    if point_distance(x, y, Player.x, Player.y) < 48 {//37
+		var dis = point_distance(x, y, Player.x, Player.y);
+	    if dis < 48 && dis > 16 {//37
 	        if !place_meeting(x + lengthdir_x(curseSpeed, point_direction(x, y, Player.x, Player.y)), y, Wall)
 	        x -= lengthdir_x(curseSpeed, point_direction(x, y, Player.x, Player.y))
 	        if !place_meeting(x, y + lengthdir_y(curseSpeed, point_direction(x, y, Player.x, Player.y)), Wall)
 	        y -= lengthdir_y(curseSpeed, point_direction(x, y, Player.x, Player.y))
-			
-			if place_meeting(x,y,Player)
-			{
-				event_user(0);	
-			}
+		}
+		if place_meeting(x,y,Player)
+		{
+			event_user(0);	
 		}
 	}
 }/*

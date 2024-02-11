@@ -691,14 +691,11 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	ultra_text[92] = "NORMAL <w>CONTROLS<w>##WHILE IN COMBAT#SLOWLY CONSUME <g>GAS<g> TO <r>HEAL<r>"
 	ultra_tips[92] = "you can gas while moving"
 
-	    if instance_exists(Player)
-	    {
-		    if  Player.race == 23 && Player.altUltra {
-				ultra_name[92] = "SPIKE BALL"
-				ultra_text[92] = "NORMAL <w>CONTROLS<w>#EMIT <w>SPLINTERS<w> INSTEAD OF <g>GAS<g>#ALL <w>SPLINTERS<w> ARE <g>GASEOUS<g>"
-				ultra_tips[92] = "porkupain"
-		    }
-	    }
+		if altOverride || (instance_exists(Player) && Player.race == 23 && Player.altUltra) {
+			ultra_name[92] = "SPIKE BALL"
+			ultra_text[92] = "NORMAL <w>CONTROLS<w>#EMIT <w>SPLINTERS<w> INSTEAD OF <g>GAS<g>#ALL <w>SPLINTERS<w> ARE <g>GASEOUS<g>"
+			ultra_tips[92] = "porkupain"
+		}
 
 	    //Elementor 
 	    ultra_name[93] = "EARTHBENDER"

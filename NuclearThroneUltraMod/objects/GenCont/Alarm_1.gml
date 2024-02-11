@@ -161,7 +161,7 @@ if instance_exists(Player)
 		wkick = 0;
 		alienIntestines = 0;
 		sheepPower = 0;
-		// excessDamageDeal = 0;
+		excessDamageDeal = 0;
 		if !instance_exists(BigMachine) && !instance_exists(InvertedBigMachine)
 		{
 			x = 10016;

@@ -6,6 +6,7 @@ confDropChanceIndex = -1;
 itemDropChanceIndex = -1;
 weaponDropChanceIndex = -1;
 hadSpeedApplied = false;
+poppop = false;
 dmg = 0;
 team = 2;
 canBeMoved = true;

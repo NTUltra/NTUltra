@@ -3,7 +3,9 @@ Mod1=0;
 Mod2=0;
 Mod3=0;
 Mod4=0;
-wepFire=0;
+wepFire = 0;
+hadSpeedApplied = true;
+poppop = false;
 team = 0;
 boosted = false;
 if instance_exists(Player)

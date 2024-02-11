@@ -80,36 +80,52 @@ function scrCompletionPercentage() {
 	if (percentage>=100)
 	{//100% unlock!
 		scrUnlockGameMode(17,"FOR UNLOCKING EVERYTHING!#CONGRATULATIONS! U R DA BEST! <3");
-		
+		var postEverything = 0;
+		var postUnlock = 0;
+		var postPercentage = 0;
 		
 		//Counting gold weapons post 100%
 		//Golden weapons
 		var countrace=1;
 		var countstartwep=1;
-		var totalStartWeps = 0;
 		gotAllGold = true;
 		repeat(racemax-1)
 		{
 			countstartwep=1;
 			repeat(maxstartwep-1)
 			{
+				postEverything += 1;
 				if start_wep_have[countstartwep,countrace] == 0
 				{
 					gotAllGold = false;
-					continue;
 				}
-				/*
 				else
 				{
-					unlocked++//If you want to count golds into percentage
-				}*/
-	
-				totalStartWeps++;
+					postUnlock += 1;
+				}
 				countstartwep++;
+			}
+			postEverything += 10;
+			if ctot_loop[countrace]>0
+			{
+				postUnlock += 10;
+			}
+			postEverything += 5;
+			if ctot_all_crowns_taken[countrace] > 0
+			{
+				postUnlock += 5;
 			}
 			countrace++;
 		}
-		//percentage=round( (unlocked/everything)*100 );//*/
+		for (var i = 0; i < maxsecretultra; i++) {
+			postEverything += 10;
+			if (ctot_secret_ultra_taken[i] > 0)
+			{
+				postUnlock += 10;
+			}
+		}
+		postPercentage = round( (postUnlock/postEverything)*100 );
+		percentage += postPercentage;
 	}
 	return percentage;
 }

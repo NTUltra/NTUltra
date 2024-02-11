@@ -4,11 +4,14 @@
 function scrGiveProjectileStats(){
 	if !instance_exists(Player)
 		return;
-	
-	Mod1=Player.wepmod1;
-	Mod2=Player.wepmod2;
-	Mod3=Player.wepmod3;
-	Mod4=Player.wepmod4;
+	if !scrIsCrown(29)//Crown of purity
+	{
+		Mod1=Player.wepmod1;
+		Mod2=Player.wepmod2;
+		Mod3=Player.wepmod3;
+		Mod4=Player.wepmod4;
+	}
+	poppop = Player.poppop;
 	if wepFire == 0
 		wepFire = Player.wep;
 	if !hadSpeedApplied && canBeMoved//speed > 0
@@ -18,7 +21,7 @@ function scrGiveProjectileStats(){
 		var speedBoost = 1.11;
 		var spda = 2;
 		var speedAdd = 0;
-		if Player.poppop
+		if poppop
 		{
 			speed *= 1.15;
 			speed += 1.25;
