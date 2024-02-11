@@ -150,10 +150,9 @@ function scrPopChests() {
 		{
 			healthChestGol += choose(0,1);
 		}
-
-		if Player.my_health >= Player.maxhealth
+		else if Player.my_health >= Player.maxhealth
 			healthChestGol --;
-		if Player.my_health >= 30
+		if Player.my_health >= 12
 			healthChestGol --;
 			
 		if Player.area = 100

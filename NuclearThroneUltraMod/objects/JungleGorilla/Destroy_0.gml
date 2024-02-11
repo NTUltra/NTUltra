@@ -11,7 +11,7 @@ repeat(am)
 	with instance_create(x,y,EnemyBullet2Curve)
 	{
 		image_yscale = -1;
-		motion_add(dir,5)
+		motion_add(dir,4.5)
 		image_angle = direction
 		team = other.team
 	}
@@ -26,7 +26,7 @@ repeat(am)
 	dir += angStep
 	with instance_create(x,y,EnemyBullet2Curve)
 	{
-		motion_add(dir,4.8)
+		motion_add(dir,4.3)
 		image_angle = direction
 		team = other.team
 	}

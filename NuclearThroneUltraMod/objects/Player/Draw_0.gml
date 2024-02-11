@@ -211,9 +211,9 @@ draw_sprite_ext(sprBlackHoleGeneration,wave,x+lengthdir_x(-wkick,aimDirection+(w
 }}
 }
 var playerAlpha = 1;
-if instance_exists(Decoy) || rollIframe > 0 
+if instance_exists(Decoy) || rollIframe > 0
 	playerAlpha = 0.4;
-else if hammerheadDig <= 0
+if hammerheadDig <= 0
 {
 	draw_sprite_ext(sprite_index,-1,x,yy,right,image_yscale,angle,c_white,playerAlpha)//PLAYER GETS DRAWN HERE
 	if race == 24 && my_health > 0 && instance_exists(ElementorHead) //Elemental Mushroom head

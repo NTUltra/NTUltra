@@ -17,11 +17,11 @@ if target != noone {
 				if ammo == 0
 				{
 					alarm[2] += 8;
-					instance_create(x,y,Notice);
 				}
 				else if ammo == maxAmmo
 				{
-					alarm[2] += 3;
+					instance_create(x,y,Notice);
+					alarm[2] += 5;
 				}
 				gonnashoot += 6;
 				with JungleBandit

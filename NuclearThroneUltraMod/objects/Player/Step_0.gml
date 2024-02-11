@@ -2547,10 +2547,16 @@ if skill_got[8] {
 			DealDamage(gutsDmg,true,true,false);
 			sprite_index = spr_hurt
 			image_index = 0
+			
 			if meleedamage > 0
-				motion_add(point_direction(other.x,other.y,x,y),0.4)
+				spd = 0.4;
 			else
-				motion_add(point_direction(other.x,other.y,x,y),3)
+				spd = 1;
+				
+			if is60fps
+				motion_add(point_direction(other.x,other.y,x,y),spd*0.5)
+			else
+				motion_add(point_direction(other.x,other.y,x,y),spd)
 		}
 	}
 	ds_list_destroy(gutsRange);

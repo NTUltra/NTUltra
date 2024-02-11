@@ -2301,8 +2301,8 @@ function scrWeapons() {
 	wep_name[205] = "PLASMA SHOTGUN"
 	wep_type[205] = 5
 	wep_auto[205] = 1
-	wep_load[205] = 29
-	wep_cost[205] = 7
+	wep_load[205] = 27
+	wep_cost[205] = 6
 	wep_sprt[205] = sprPlasmaShotGun
 	wep_area[205] = 10
 	wep_text[205] = ""
@@ -2411,7 +2411,7 @@ function scrWeapons() {
 	wep_name[215] = "VIKING AXE"
 	wep_type[215] = 0
 	wep_auto[215] = 0
-	wep_load[215] = 35
+	wep_load[215] = 34
 	wep_cost[215] = 0
 	wep_sprt[215] = sprVikingSmallAxe
 	wep_area[215] = -1
@@ -8061,6 +8061,17 @@ function scrWeapons() {
 	wep_text[721] = "shoveling"
 	wep_swap[721] = sndSwapHammer
 	wep_rad[721] = 0;
+	
+	wep_name[722] = "HEAVY SCREWDRIVER"
+	wep_type[722] = 0
+	wep_auto[722] = 0
+	wep_load[722] = 19
+	wep_cost[722] = 0
+	wep_sprt[722] = sprHeavyScrewDriver
+	wep_area[722] = 5
+	wep_text[722] = "solving big problems"
+	wep_swap[722] = sndSwapSword
+	wep_rad[722] = 0;
 
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

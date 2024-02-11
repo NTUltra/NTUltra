@@ -25,9 +25,9 @@ actTime = 15;
 acc = 1;
 maxSpeed = 3.4;
 gunX = -10;
-projectileSpeed = 6;
+projectileSpeed = 5.5;
 projectileSpeedDif = 0.2;
-deathProjectile = 7;
+deathProjectile = 6;
 loops = GetPlayerLoops()
 if loops > 0
 {

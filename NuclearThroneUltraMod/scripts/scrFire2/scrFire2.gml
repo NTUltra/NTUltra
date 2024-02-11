@@ -602,7 +602,7 @@ function scrFire2(hasTailNow) {
 		bleedAngle = aimDirection - (30 * sign(other.wepangle));
 	sprite_index=sprAxeSlash;
 	mask_index = mskBigAxeSlash;
-	dmg = 10//25//shovel is 8 sledge = 16
+	dmg = 12//25//shovel is 8 sledge = 16
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -632,7 +632,7 @@ function scrFire2(hasTailNow) {
 	{
 		shouldBleed = true;
 		bleedAngle = aimDirection - (30 * sign(other.wepangle));
-	dmg = 5//shovel is 8
+	dmg = 6//shovel is 8
 	image_xscale *= 0.8;
 	image_yscale *= 0.8;
 	longarms = 0
@@ -15237,6 +15237,31 @@ function scrFire2(hasTailNow) {
 		team = other.team
 		event_perform(ev_alarm,0)
 	}
+
+	break;
+	
+	//HEAVY SCREWDRIVER
+	case 722:
+
+	snd_play_fire(sndHeavyScrewdriver)
+
+	instance_create(x,y,Dust)
+
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*10,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*10,aimDirection),HeavyShank)
+	{
+		dmg = 24;
+	longarms = 0
+	longarms = (Player.skill_got[13]+other.bettermelee)*3
+	motion_add(aimDirection+(random(10)-5)*other.accuracy,4+longarms)
+	image_angle = direction
+	team = other.team}
+
+	wepangle = -wepangle
+	motion_add(aimDirection,3.5)
+	BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 1
+	wkick = -8
 
 	break;
 	

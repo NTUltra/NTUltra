@@ -28,8 +28,8 @@ repeat(am)
 	ang += angStep;
 }
 instance_create(x,y,WallBreak);
-var fbAng = 60;
-repeat(3)
+var fbAng = 45;
+repeat(4)
 {
 	with instance_create(x,y,MiniFlameCannonBall)
 	{
@@ -37,5 +37,5 @@ repeat(3)
 		motion_add(fbAng,3.4);
 		team = other.team
 	}
-	fbAng += 120;
+	fbAng += 90;
 }
