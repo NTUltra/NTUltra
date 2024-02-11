@@ -253,6 +253,7 @@ function scrDrawBloom() {
 	with WeaponCharge
 	draw_sprite_ext(sprite_index,image_index,x,y,2,2,image_angle,c_white,ba)
 
+	if !instance_exists(PlayerInPortal)
 	with Player
 	{/*
 		if race == 24
@@ -260,38 +261,38 @@ function scrDrawBloom() {
 			draw_sprite_ext(mushroomhead,-1,x,y+1,right*1.4,image_yscale*1.4,angle,ElementorHead.col,0.5)
 		}
 	else */if race=13 && (KeyCont.key_spec[p] = 1 || KeyCont.key_spec[p] = 2)
-	{
-	draw_sprite_ext(sprite_index,image_index,x,y,right,1,image_angle,c_white,(ultra_got[49]*2)*sheepPower/10);}
-	else if race = 9 and bskin
-	draw_sprite_ext(sprite_index,image_index,x,y,right*1.2,image_yscale*1.2,angle,c_white,ba)
-	if skill_got[36]//Absorbing Pores
-	{
-		//var aprs = lerp(0,0.7,radPickedUp*0.01);
-		//draw_sprite_ext(sprAbsorbingPoresRad,0,x,y,aprs,aprs,image_angle,c_white,min(aprs-0.3,0.4));
-		with HealAbsorbingPores
 		{
-			draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,0,c_white,0.5);
-		}
-	}
-	if skill_got[8]//gamma guts
-	{
-		if rollIframe > 0
+		draw_sprite_ext(sprite_index,image_index,x,y,right,1,image_angle,c_white,(ultra_got[49]*2)*sheepPower/10);}
+		else if race = 9 and bskin
+		draw_sprite_ext(sprite_index,image_index,x,y,right*1.2,image_yscale*1.2,angle,c_white,ba)
+		if skill_got[36]//Absorbing Pores
 		{
-			draw_sprite_ext(sprGammaGuts,wave,x,y,1.5,1.5,image_angle,c_white,ba);
+			//var aprs = lerp(0,0.7,radPickedUp*0.01);
+			//draw_sprite_ext(sprAbsorbingPoresRad,0,x,y,aprs,aprs,image_angle,c_white,min(aprs-0.3,0.4));
+			with HealAbsorbingPores
+			{
+				draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,0,c_white,0.5);
+			}
 		}
-		else
+		if skill_got[8]//gamma guts
 		{
-			draw_sprite_ext(sprGammaGuts,wave,x,y,1.1,1.1,image_angle,c_white,ba);
+			if rollIframe > 0
+			{
+				draw_sprite_ext(sprGammaGuts,wave,x,y,1.5,1.5,image_angle,c_white,ba);
+			}
+			else
+			{
+				draw_sprite_ext(sprGammaGuts,wave,x,y,1.1,1.1,image_angle,c_white,ba);
+			}
+			with CrystalShield
+			{
+				draw_sprite_ext(sprGammaGuts,other.wave,x,y,2.3,2.6,image_angle,c_white,ba+0.02)
+			}
+			with AngelActive
+			{
+				draw_sprite_ext(sprGammaGuts,other.wave,x,y,1.8,1.8,image_angle,c_white,ba+0.02)
+			}
 		}
-		with CrystalShield
-		{
-			draw_sprite_ext(sprGammaGuts,other.wave,x,y,2.3,2.6,image_angle,c_white,ba+0.02)
-		}
-		with AngelActive
-		{
-			draw_sprite_ext(sprGammaGuts,other.wave,x,y,1.8,1.8,image_angle,c_white,ba+0.02)
-		}
-	}
 		if scrIsCrown(21)
 		{
 			var mh = maxhealth;

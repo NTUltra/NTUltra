@@ -10,7 +10,7 @@ typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 //friction=0.4;
 dmg = 5;
 nomscale = 1;
-wallScale = 0.2;
+wallScale = 0.17;
 grow = 0.04;
 hitShrink = 0.4;
 destroyScale = 0.4;
@@ -21,7 +21,7 @@ if instance_exists(Player)
 	if Player.skill_got[17] = 1
 	{
 		nomscale += 0.4;
-		wallScale -= 0.05;
+		wallScale -= 0.04;
 		grow += 0.01;
 		destroyScale -= 0.05;
 		if Player.betterlaserbrain > 1

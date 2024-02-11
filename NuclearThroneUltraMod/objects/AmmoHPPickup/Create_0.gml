@@ -72,3 +72,4 @@ if instance_exists(Wall)
 	alarm[2] = 5;
 actTime = 10;
 walk = 0;
+suckOffset = 90;

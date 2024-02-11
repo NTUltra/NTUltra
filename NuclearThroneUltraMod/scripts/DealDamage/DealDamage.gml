@@ -8,7 +8,7 @@ function DealDamage(theDamage, isPerFrame = false,boostDamage = true, canMod = t
 	{
 		if other.team == 2
 		{
-			if canMod
+			if canMod && variable_instance_exists(other, "wepFire")
 				scrModHit(other);
 			if (boostDamage)
 				scrScarierFace(theDamage,isPerFrame)

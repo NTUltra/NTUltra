@@ -65,10 +65,7 @@ else
     
     if Menu.mouseover == image_index
 	{
-		var colll = make_color_rgb(72,253,8);// normal dark
-		var coll = make_color_rgb(72,156,8);// darker
-		var col = make_color_rgb(34,76,7); // darkest
-		//var gold = make_color_rgb(223,201,134);
+		var col = make_color_rgb(72,253,8);// normal dark
 		var didLoop = false;
 		var gotSkins = false;
 		var gotGuns = false;
