@@ -1104,14 +1104,14 @@ if scrIsCrown(23)//Crown of speed
 	}
 	with enemy
 	{
-		if speed < 10 
+		if speed < 10 && point_distance(x,y,other.x,other.y) < 450
 		{
 			if walk > 0
 			{
 				speed += 2;	
 				speed *= 1.25;
 			}
-			else if speed > 2
+			else if speed > 2 && speed < 4
 			{
 				speed *= 1.1
 			}

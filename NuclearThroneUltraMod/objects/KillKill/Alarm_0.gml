@@ -13,7 +13,7 @@ with owner {
 		vspeed = -14;
 		image_angle = direction
 	}
-	DealDamage(other.dmg);
+	DealDamage(other.dmg,false,true,false);
 	sprite_index = spr_hurt;
 	image_index = 0;
 	snd_play(snd_hurt);

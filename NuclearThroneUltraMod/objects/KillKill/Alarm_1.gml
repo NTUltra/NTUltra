@@ -10,7 +10,7 @@ with target {
 				motion_add(random(360),8 + other.mySize)
 				image_angle = direction
 			}
-		DealDamage(other.dmgAll);
+		DealDamage(other.dmgAll,false,true,false);
 		BackCont.shake += 2;
 		i += 1;
 		motion_add(point_direction(other.x,other.y,x,y),12);

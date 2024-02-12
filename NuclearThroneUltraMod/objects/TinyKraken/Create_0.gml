@@ -16,7 +16,7 @@ image_speed = 0.4
 friction = 0.4
 right = choose(1,-1)
  loops = GetPlayerLoops();
-maxhealth = 7;
+maxhealth = 8;
 my_health = maxhealth
 rate = 8;
 actTime = 10;
@@ -25,10 +25,17 @@ if loops > 0
 	actTime = 8;
 	rate = 6;
 	raddrop += 1;
-	maxhealth = 15;
+	maxhealth = 16;
+	if instance_number(TinyKraken) > 1
+		maxhealth = 13;
 	my_health = maxhealth
 }
-
+else if instance_number(TinyKraken) > 1
+{
+	maxhealth = 6;
+	my_health = maxhealth
+}
+	
 target = noone;
 team = 2
 

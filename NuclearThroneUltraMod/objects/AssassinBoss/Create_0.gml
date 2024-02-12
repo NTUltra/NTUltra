@@ -8,9 +8,11 @@ dropItem = true;
 
 event_inherited()
 
-
-spr_idle = sprAssassinBossSit
-spr_walk = sprAssassinBossDash
+spr_sit = sprAssassinBossSit;
+spr_idle_actual = sprAssassinBossIdle;
+spr_idle = spr_sit
+spr_walk_actual = sprAssassinBossDash;
+spr_walk = spr_sit
 spr_hurt = sprAssassinBossHurt
 spr_dead = sprAssassinBossDead
 spr_stunned = sprAssassinBossStunned
@@ -28,13 +30,12 @@ if instance_number(AssassinBoss) > 1
 snd_hurt = sndAssassinHit
 snd_dead = sndAssassinDie
 
-snd_play_2d(sndAssassinGetUp)
+snd_play_2d(sndAssassinPretend)
 
 //behavior
 walk = 0
 gunangle = random(360)
 alarm[1] = 20+random(40)
-alarm[3] = alarm[1];//change sprite to normal idle
 wepangle = choose(-140,140)
 wepflip = 1
 aggression = 0;
@@ -46,25 +47,34 @@ morphMe=0;
 frozen=false;
 prevhealth=my_health;
 
-instance_create(x,y,WallBreak);
-instance_create(x+16,y+16,WallBreak);
-instance_create(x+16,y-16,WallBreak);
-instance_create(x-16,y+16,WallBreak);
-instance_create(x-16,y-16,WallBreak);
+instance_create(x,y,BigWallBreak);
 
     repeat(8){
     with instance_create(x,y,Smoke)
     motion_add(random(360),1+random(2))}
-
+sprite_index = spr_sit;
+alarm[3] = image_number/image_speed;
 instance_create(x,y,DramaCamera);
 
 
 afterImage = ds_list_create();
 afterImageMax = 10;
 afterImageDelay = 4;
+run = false;
 afterImageDuration = afterImageDelay;
 alarm[7] = afterImageDelay;
-smackdelayReduction = clamp(2 + ((GetPlayerLoops()-1)*3),0,10);
-deflectExhaustion = 0;
+smackdelayReduction = clamp(4 + ((GetPlayerLoops()-1)*2),0,6);
 scrAddDrops(1);
 canDodge = false;
+deflectRate = 0;
+deflectTell = 0;
+maxSpeed = 5.4;
+acc = 3;
+smackMoveSpeed = 1;
+shifty = 3;
+smackRange = 8;
+smackSpeed = 3
+actTime = 6;
+spamDeflect = 0;
+dodgeDuration = 3;
+dodgeDelay = 15;

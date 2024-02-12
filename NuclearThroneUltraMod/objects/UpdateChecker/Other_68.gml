@@ -14,11 +14,10 @@ if (type == network_type_data) {
 		//SEND TIME
 			myClientId = buffer_read(buffer, buffer_u16);
 			latestVersion = buffer_read(buffer, buffer_string);
-			debug(latestVersion);
 			UberCont.totalDailies = buffer_read(buffer, buffer_u16);
 			UberCont.totalWeeklies = buffer_read(buffer, buffer_u16);
 			UberCont.weeklyWeek = UberCont.totalWeeklies;
-			if latestVersion != UberCont.updateVersion
+			if latestVersion != UberCont.updateVersion && latestVersion != UberCont.updateVersion + UberCont.subUpdateVersion
 			{
 				notUpdated = "*"
 				if canShow
@@ -68,8 +67,10 @@ if (type == network_type_data) {
 			if buffer_get_size(buffer) > 1
 			{
 				var dailyDay = buffer_read(buffer, buffer_u8);
+				debug("daily day:", dailyDay);
 				canParticipateInGamemode = buffer_read(buffer, buffer_bool);
 				if dailyDay % 2 == 0 {
+					debug("ITS NOT A RACE");
 					isRace = false;
 					with DailyRace {
 						isRace = false;

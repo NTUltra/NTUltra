@@ -1,8 +1,11 @@
-alarm[1] = 6+random(5)
+alarm[1] = actTime+random(actTime)
 canDodge = true;
-deflectExhaustion -= 2;
-if deflectExhaustion < 0
-deflectExhaustion = 0;
+if my_health <= maxhealth * 0.5 && !run
+{
+	run = true;
+	event_user(1);
+	exit;
+}
 scrTarget()
 if target != noone && instance_exists(target)
 {
@@ -10,53 +13,43 @@ if target != noone && instance_exists(target)
 	{
 		if random(4)<1//shift dodgy movement
 		{
-			move_contact_solid(direction+choose(90,-90),2+irandom(3))
+			move_contact_solid(direction+choose(90,-90),shifty)
 		}
 		
-		if point_distance(target.x,target.y,x,y) < 70 && point_distance(target.x,target.y,x,y) > 24 {//SMACK THAT
-			if alarm[5] < 1 {
-				alarm[2]=14-smackdelayReduction
-				instance_create(x,y,Notice);
-				instance_create(x+5,y,Notice);
-				instance_create(x-5,y,Notice);
-				alarm[1]=20-smackdelayReduction;
-				speed *= 0.1;
-			} else {
-				alarm[2]=18-smackdelayReduction
-				instance_create(x,y,Notice);
-				instance_create(x+5,y,Notice);
-				instance_create(x-5,y,Notice);
-				alarm[1]=30-smackdelayReduction;
-				speed *= 0.1;
-			}
-		}
-		else
-		{
-			motion_add(point_direction(target.x,target.y,x,y)+random(20)-10,4);
-			walk = 30+random(10)
-			gunangle = point_direction(x,y,target.x,target.y)
-		}
-
-		if target.x < x
-		right = -1
-		else if target.x > x
-		right = 1
-	}
-	else if point_distance(target.x,target.y,x,y) < 70 && alarm[5] < 1
-	{//SMACK THAT ANYWAYS WE CAN GO THROUGH WALLS FK THAT SHIT
-		if alarm[5] < 1 {
-			alarm[2]=25-smackdelayReduction//the delay that everyone wants its longer here cause you wont expect this
-			instance_create(x,y,Notice);
-			instance_create(x+5,y,Notice);
-			instance_create(x-5,y,Notice);
-			alarm[1]=22-smackdelayReduction;
-		} else {
-			alarm[2]=23-smackdelayReduction
+		if alarm[2] < 1 && alarm[11] < 1 && point_distance(target.x,target.y,x,y) < 70 && point_distance(target.x,target.y,x,y) > 24 {//SMACK THAT
+			gunangle = point_direction(x,y,target.x,target.y);
+			alarm[2]=20-smackdelayReduction
+			snd_play(sndAssassinGetUp);
 			instance_create(x,y,Notice);
 			instance_create(x+5,y,Notice);
 			instance_create(x-5,y,Notice);
 			alarm[1]=30-smackdelayReduction;
+			speed = smackMoveSpeed;
+			walk = 0;
+			dodge = 0;
 		}
+		else
+		{
+			motion_add(point_direction(target.x,target.y,x,y)+random(20)-10,acc);
+			walk = 30+random(10)
+			speed = maxSpeed - 1;
+			gunangle = point_direction(x,y,target.x,target.y)
+		}
+
+		if target.x < x
+			right = -1
+		else if target.x > x
+			right = 1
+	}
+	else if alarm[2] < 1 && alarm[11] < 1 && point_distance(target.x,target.y,x,y) < 70 && alarm[5] < 1
+	{//SMACK THAT ANYWAYS WE CAN GO THROUGH WALLS FK THAT SHIT
+		gunangle = point_direction(x,y,target.x,target.y)
+		alarm[2]=25-smackdelayReduction
+		snd_play(sndAssassinGetUp);
+		instance_create(x,y,Notice);
+		instance_create(x+5,y,Notice);
+		instance_create(x-5,y,Notice);
+		alarm[1]=30-smackdelayReduction;
 		
 	}
 	else if random(4) < 1
@@ -70,6 +63,15 @@ if target != noone && instance_exists(target)
 		right = 1
 		else if hspeed < 0
 		right = -1
+	}
+	else if random(3) < 1
+	{
+		event_user(0);
+		alarm[1] += actTime;
+	}
+	else
+	{
+		event_user(1);
 	}
 }
 else if random(10) < 1

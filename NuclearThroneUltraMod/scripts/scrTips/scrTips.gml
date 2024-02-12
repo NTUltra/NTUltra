@@ -458,7 +458,7 @@ function scrTips() {
 	,"shaun the sheep","sheeps don't harm people","shawarma","charge allows you#to move through#some projectiles",
 	"charge increases damage#the longer you charge it","while charging#at high speed#you don't take#contact damage","you are immune#while charging#at high speed",
 	"extra feet and gamma guts#buff your charge","eat grass","popo won't come for you#while passive is active","you don't take contact damage#while passive is active"
-	,"hypersomnia goes in effect#after your passive"
+	,"hypersomnia goes in effect#after your passive","pink lines indicate line of sight","when enemies see you kill they will attack you","when enemies see you deal damage they will attack"
 	)
 
 	if Player.race = 14//panda

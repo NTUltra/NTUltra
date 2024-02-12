@@ -137,9 +137,9 @@ triggerfinger=Player.triggerfinger;//0;
 strongspirit=Player.strongspirit;//false
 strongspiritused=Player.strongspiritused;//false
 
-maxhealth = 8;
+maxhealth = 6;
 if skill_got[1]//rhino skin
-maxhealth=12;
+maxhealth += 4;
 if skill_got[31]//Tough shell
 	maxhealth += 1;
 if skill_got[33]//GLASS ARM CANNON

@@ -13,12 +13,18 @@ if fakeded > 0
 		mask_index = mskBandit;
 		team = 1;
 		my_health = maxhealth;
-		deflectExhaustion = 0;
 		aggression = 0;
 		EnemyHealthAdjustments();
+		run = false;
 		alarm[1] = 60;
 		snd_play_2d(sndAssassinGetUp)
 		sprite_index = spr_respawn;
+		spr_idle = spr_respawn;
+		spr_walk = spr_respawn;
+		mask_index = mskPickupThroughWall;
+		image_index = 0;
+		alarm[3] = image_number/image_speed;
+		alarm[7] = alarm[3] + afterImageDelay;
 		if !audio_is_playing(musAssassinBoss) && !instance_exists(SurvivalWave)
 		{
 			with MusCont

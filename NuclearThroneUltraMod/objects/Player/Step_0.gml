@@ -399,7 +399,7 @@ if !instance_exists(LevCont) and visible = 1
 			
 			isPermanent = true;
 			//scrn++;
-			
+			instance_create(x,y,AssassinBoss);
 
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
 			thing.mytext = "FREEZE";

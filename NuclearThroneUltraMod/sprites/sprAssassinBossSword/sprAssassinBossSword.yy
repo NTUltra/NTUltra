@@ -57,7 +57,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a9df7b6e-1a3a-4573-93cb-b44f4915027a","path":"sprites/sprAssassinBossSword/sprAssassinBossSword.yy",},},},"Disabled":false,"id":"13872651-db5f-4f68-b44f-33e729719b0a","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 6,
     "yorigin": 4,

@@ -37,3 +37,4 @@ gmwidth = 1;
 gmScroll = 0;
 
 hudSurface = -1;
+bloomSurface = -1;

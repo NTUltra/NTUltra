@@ -17,7 +17,7 @@ else
 }
 wallbounce *= 0.9
 
-if shotgunshouldered
+if shotgunshouldered && speed > 2
 {
 	if sprite_index == sprBullet2
 	{

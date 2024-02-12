@@ -1,5 +1,6 @@
 event_inherited();
 raddrop = 1;
+countKill = false;
 maxhealth = 1
 meleedamage = 0
 mySize = 1

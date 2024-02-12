@@ -55,12 +55,12 @@ if instance_exists(Player)
 	    }
 	    with BigWeaponChest
 	    {
-			instance_create(x,y,UltraWeaponChest)
+			instance_create(x+1,y+1,UltraWeaponChest)
 			instance_destroy(id,false);
 	    }
 	    with EliteWeaponChest
 	    {
-			instance_create(x,y,UltraWeaponChest)
+			instance_create(x-1,y-1,UltraWeaponChest)
 			instance_destroy(id,false);
 	    }
 	}
@@ -70,26 +70,10 @@ if instance_exists(Player)
 	    {
 			instance_create(x,y+16,MorphWeaponChest)
 	    }
-	    with BigWeaponChest
-	    {
-			instance_create(x,y+16,MorphWeaponChest)
-	    }
-	    with EliteWeaponChest
-	    {
-			instance_create(x,y+16,MorphWeaponChest)
-	    }
 	}
 	else if Player.area == 122 && Player.subarea == 2//Inv oasis
 	{
-		 with WeaponChest
-	    {
-			instance_create(x,y+16,ToxicWeaponChest)
-	    }
-	    with BigWeaponChest
-	    {
-			instance_create(x,y+16,ToxicWeaponChest)
-	    }
-	    with EliteWeaponChest
+		with WeaponChest
 	    {
 			instance_create(x,y+16,ToxicWeaponChest)
 	    }
@@ -100,26 +84,10 @@ if instance_exists(Player)
 	    {
 			instance_create(x,y+16,BigWeaponChest)
 	    }
-	    with BigWeaponChest
-	    {
-			instance_create(x,y+16,BigWeaponChest)
-	    }
-	    with EliteWeaponChest
-	    {
-			instance_create(x,y+16,BigWeaponChest)
-	    }
 	}
 	else if Player.area == 132
 	{
 		with WeaponChest
-	    {
-			instance_create(x,y+16,BigCursedWeaponChest)
-	    }
-	    with BigWeaponChest
-	    {
-			instance_create(x,y+16,BigCursedWeaponChest)
-	    }
-	    with EliteWeaponChest
 	    {
 			instance_create(x,y+16,BigCursedWeaponChest)
 	    }
@@ -133,12 +101,12 @@ if instance_exists(Player)
 	    }
 	    with BigWeaponChest
 	    {
-			instance_create(x,y,BigCursedWeaponChest)
+			instance_create(x+1,y+1,BigCursedWeaponChest)
 			instance_destroy(id,false);
 	    }
 	    with EliteWeaponChest
 	    {
-			instance_create(x,y,BigCursedWeaponChest)
+			instance_create(x-1,y-1,BigCursedWeaponChest)
 			instance_destroy(id,false);
 	    }
 	}
@@ -150,7 +118,6 @@ if instance_exists(Player)
 	    }
 	    with BigWeaponChest
 	    {
-		    instance_create(x,y,EliteWeaponChest)
 		    instance_create(x+1,y+1,EliteWeaponChest)
 			instance_destroy(id,false);
 	    }

@@ -2,7 +2,7 @@ event_inherited()
 raddrop = 8
 maxhealth = 12
 EnemyHealthAdjustments();
-wakeTime = 8;
+wakeTime = 10;
 wakeObject = JungleAssassin;
 wakeSound = sndJungleAssassinWake;
 team = 1

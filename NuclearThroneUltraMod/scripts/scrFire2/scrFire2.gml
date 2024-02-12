@@ -2423,7 +2423,7 @@ function scrFire2(hasTailNow) {
 
 	snd_play_fire(sndShotgun)
 
-	repeat(8)
+	repeat(7)
 	{
 	with instance_create(x,y,Bullet1)
 	{motion_add(aimDirection+(random(36)-18)*other.accuracy,12+random(6))

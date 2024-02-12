@@ -8,7 +8,7 @@ with instance_create(x,y,RogueExplosion)
 {team=2;
 	with myExplosionMask
 		instance_destroy(id,false)}
-blastArmourDelay = 10;
+blastArmourDelay = 8;
 if ultra_got[86]//SUPER BLAST ARMOUR
 {
 	if blastArmourPower > 12

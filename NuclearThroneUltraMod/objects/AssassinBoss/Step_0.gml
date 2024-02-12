@@ -9,10 +9,15 @@ if (my_health <= 0 && lifes > 0 && fakeded < 0 && instance_number(enemy) - insta
 	image_index = 0;
 	fakeded = 80 + random(200);
 	dodge = 0;
+	run = false;
 	canDodge = false;
 	alarm[1] = fakeded + 10;
 	alarm[2] = 0;
 	alarm[4] = 0;
+	alarm[0] = 0;
+	alarm[3] = 0;
+	alarm[7] = 0;
+	ds_list_clear(afterImage);
 	mask_index = mskPickupThroughWall;
 	speed = 0;
 	lifes--;
@@ -34,210 +39,177 @@ if (my_health <= 0 && lifes > 0 && fakeded < 0 && instance_number(enemy) - insta
 if fakeded >= 0
 	exit;
 event_inherited()
-
-
-if (alarm[4] < 0) {
-	aggression += 1;
+if alarm[3] > 0
+{
+	speed = 0;
+	my_health = prevhealth;
+	exit;
+}
 	
-	if (instance_exists(Player) && point_distance(Player.x,Player.y,x,y) < 80) {
-		dodge = 0;
-	}
+
+		if UberCont.normalGameSpeed == 60
+			aggression += 0.5;
+		else
+			aggression += 1;
 	
-	if walk > 0
-	{
-		walk -= 1
-		motion_add(direction,3)
-		if target != noone && instance_exists(target)
+		if (target != noone && instance_exists(target) && point_distance(target.x,target.y,x,y) < 80) {
+			dodge = 0;
+		}
+	
+		if walk > 0 && alarm[2] < 1
 		{
-			if distance_to_object(target) > 48
+			walk -= 1
+			motion_add(direction,acc)
+			if target != noone && instance_exists(target)
 			{
-				if UberCont.normalGameSpeed == 60
-					mp_potential_step(target.x,target.y,0.5,false)
+				if distance_to_object(target) > 64
+				{
+					if UberCont.normalGameSpeed == 60
+						mp_potential_step(target.x,target.y,0.5,false)
+					else
+						mp_potential_step(target.x,target.y,1,false)
+				}
 				else
-					mp_potential_step(target.x,target.y,1,false)
+				{
+					motion_add(point_direction(x,y,target.x,target.y)+180,2.8)
+				}
+			}
+		
+		}
+
+	
+
+		if dodge > -dodgeDelay// && alarm[2] < 1
+		{
+			sprite_index=spr_walk;
+			if UberCont.normalGameSpeed == 60
+			{
+				dodge -= 0.5
+				alarm[1] += 0.25;
+				if (alarm[2] > 1)
+					alarm[2] += 0.25;
+				if dodge > 0
+				{
+					if round(dodge) == dodge
+						sprite_index=spr_walk;
+					move_contact_solid(direction,maxSpeed*0.5)
+				}
 			}
 			else
 			{
-				motion_add(point_direction(x,y,target.x,target.y)+180,2.8)
-			}
-		}
-		
-	}
-
-	
-
-	if dodge > -5
-	{
-		sprite_index=spr_walk;
-		move_contact_solid(direction,9)
-		if UberCont.normalGameSpeed == 60
-		{
-			dodge -= 0.5
-			alarm[1] += 0.25;
-			if (alarm[2] > 1)
-				alarm[2] += 0.25;
-			if dodge > 0
-			{
-				if round(dodge) == dodge
-					sprite_index=spr_walk;
-				move_contact_solid(direction,4)
-			}
-		}
-		else
-		{
-			dodge -= 1;
-			alarm[1] += 0.5;
-			if (alarm[2] > 1)
-				alarm[2] += 0.5;
-			if dodge > 0
-			{
-				sprite_index=spr_walk;
-				move_contact_solid(direction,8)
-			}
-		}
-	}
-	else if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<60 && aggression <= 180 && alarm[2] < 1 {
-		if target != noone && instance_exists(target) && instance_exists(Player) && Player.fired && distance_to_object(target) > 48
-		{
-			direction = point_direction(target.x+lengthdir_x(point_distance(x,y,target.x,target.y)*0.95,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),target.y+lengthdir_y(point_distance(x,y,target.x,target.y)*0.95,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),x,y)+random(60)-30
-			dodge = 3;
-			walk = 4;
-			if sprite_index != spr_hurt
-				sprite_index = spr_walk;
-			gunangle = direction
-		}
-	}
-
-
-	if alarm[0] > 0 && target != noone && instance_exists(target)//we just smacked dat
-	{
-		motion_add(point_direction(x,y,target.x,target.y)+180+random(40)-20,3)
-		walk = alarm[0]
-	}
-
-
-	//Dodge bullet or hit it back
-	if dodge <= -5 && canDodge && instance_exists(projectile) && instance_exists(Player) && aggression < 300
-	{
-	    dodgethis = instance_nearest(x,y,projectile);
-	    with instance_nearest(x,y,projectile)
-	    {
-			if team=2
-			other.dodgethis=id;
-	    }
-    
-	    if point_distance(x,y,dodgethis.x,dodgethis.y) < 64 && dodgethis.team=2
-	    {
-		    var forwardprojectilex = lengthdir_x(dodgethis.speed,dodgethis.direction);
-		    var forwardprojectiley = lengthdir_y(dodgethis.speed,dodgethis.direction);
-    
-		    //direction = point_direction(target.x+lengthdir_x(point_distance(x,y,target.x,target.y)*0.95,point_direction(x,y,forwardprojectilex,forwardprojectiley)),target.y+lengthdir_y(point_distance(x,y,target.x,target.y)*0.95,point_direction(x,y,forwardprojectilex,forwardprojectiley)),x,y)+random(60)-30
-		    var projectiledir = point_direction(x,y,dodgethis.x,dodgethis.y);
-    
-		    if point_distance(Player.x, Player.y, x, y) > 80 && random(2) < 1 && alarm[5] < 1 && (alarm[0]<1 || alarm[6] > 20) && alarm[2]<1 && projectiledir < gunangle+100 && projectiledir > gunangle-100 && dodgethis.typ!=0
-		    {//SMACK THAT PROJETILE BACK
-				//if (alarm[6] > 30) {
-					//var bro = instance_create(x,y,PopupText);
-					//bro.mytext = "BRO UR BUSTIN#MY BALLS HERE"
-				//}
-				
-		        with instance_create(x+lengthdir_x(2,projectiledir),y+lengthdir_y(2,projectiledir),AssassinSlash)
-		        {
-			        dmg=5;
-			        image_angle = other.gunangle
-			        motion_add(other.gunangle+random(10)-5,2.5)
-			        team = other.team
-		        }
-		        alarm[0] = 12
-				alarm[5] = 3 + deflectExhaustion;
+				dodge -= 1;
 				alarm[1] += 0.5;
-				deflectExhaustion += 2;
-		        snd_play(sndAssassinAttack)
-		        wepangle = -wepangle
-		        motion_add(projectiledir,6)
-		    }
-		    else if alarm[8] < 1 && alarm[2] < 1 && aggression < 300 && instance_exists(Floor) && target != noone && instance_exists(target)
-		    {//TELEPORT
-				alarm[8] = 90;
-			    with instance_nearest(x + (random(2) - 1) * (random(64)+64),y + (random(2) - 1) * (random(64)+64),Floor)
-			    {
-					var o = 16;
-					if object_index == FloorExplo
-						o = 8;
-					with other {
-						if place_meeting(other.x + o, other.y + o, Wall) {
-							alarm[1] = 1;
-							alarm[2] = 0;
-							exit;
-						}
+				if (alarm[2] > 1)
+					alarm[2] += 0.5;
+				if dodge > 0
+				{
+					sprite_index=spr_walk;
+					move_contact_solid(direction,maxSpeed)
+				}
+			}
+		}
+		else if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<60 && alarm[2] < 1 && alarm[0] < 1 && spamDeflect == 0{
+			if target != noone && instance_exists(target) && instance_exists(Player) && (Player.fired || target != Player) && distance_to_object(target) > 48
+			{
+				motion_add(point_direction(target.x+lengthdir_x(point_distance(x,y,target.x,target.y)*0.95,
+				point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),
+				target.y+lengthdir_y(point_distance(x,y,target.x,target.y)*0.95,
+				point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),x,y)+random(60)-30,4);
+				dodge = dodgeDuration;
+				walk = max(walk,dodgeDuration);
+				if sprite_index != spr_hurt
+					sprite_index = spr_walk;
+				gunangle = direction
+			}
+		}
+
+
+		if alarm[5] > 0 && target != noone && instance_exists(target)//we just smacked dat
+		{
+			motion_add(point_direction(x,y,target.x,target.y)+180+random(40)-20,3)
+			walk = max(walk,3);
+		}
+
+
+		//Dodge bullet or hit it back
+		if canDodge && instance_exists(projectile) && target != noone && instance_exists(target)
+		{
+		    dodgethis = noone
+			var dis = 90;
+			with projectile {
+				if team == 2 && point_distance(x,y,other.x,other.y) < dis
+				{
+					 other.dodgethis = id;
+					 dis = point_distance(x,y,other.x,other.y);
+				}
+			}
+    
+		    if dodgethis != noone 
+		    {
+			    var forwardprojectilex = lengthdir_x(dodgethis.speed,dodgethis.direction);
+			    var forwardprojectiley = lengthdir_y(dodgethis.speed,dodgethis.direction);
+				var tdis = point_distance(target.x, target.y, x, y);
+			    if alarm[2] < 1 && alarm[0] < 1 && alarm[11] < 1 && tdis > 64 && spamDeflect < 4
+			    {//SMACK THAT PROJECTILE BACK
+					if dodgethis.x < x
+						right = -1
+					else if dodgethis.x > x
+						right = 1
+					var projectiledir = point_direction(x,y,dodgethis.x,dodgethis.y);
+					gunangle = projectiledir;
+					if tdis < 128 {
+						walk += 9;
+						alarm[2] = 12 - deflectTell;
+						alarm[0] = 16 - deflectRate;
+						alarm[1] += 5;
+						alarm[8] = max(1,alarm[8] - 2);
+						speed += 1;
+						move_contact_solid(projectiledir+90,acc);
+						motion_add(point_direction(x,y,target.x,target.y)+30,acc);
 					}
-					var assx = other.x;
-					var assy = other.y;
-					
-					if point_distance(x + o, y + o,other.target.x,other.target.y) <= 64
-					continue;
-					
-				    other.x = x+o;
-				    other.y = y+o;
-					other.alarm[5] = 15;
-					with instance_create(assx,assy,AssassinTeleport) {
-						self.assx = other.x+o;
-						self.assy = other.y+o;
+					else
+					{
+						walk += 2;
+						alarm[2] = 1;
+						alarm[0] = 3;
+						alarm[1] += 1;
+						alarm[8] = max(1,alarm[8] - 1);
+						speed += 1;
+						move_contact_solid(projectiledir-90,acc);
+						motion_add(point_direction(x,y,target.x,target.y)-30,acc);
 					}
-				    repeat(5){
-					    with instance_create(other.x,other.y,Smoke)
-					    motion_add(random(360),1+random(3))
+					spamDeflect ++;
+					if spamDeflect == 3
+					{
+						alarm[8] = max(1,alarm[8] - 20);
+						direction = point_direction(x,y,target.x,target.y);
+						speed += 2;
+						walk += 10;
+						alarm[0] += 16;
+					}
+					snd_play(sndAssassinGetUp);
+					instance_create(x,y,Notice);
+			    }
+			    else if alarm[8] < 1 && alarm[2] < 1 && instance_exists(Floor)
+			    {//TELEPORT
+					if spamDeflect == 4
+					{
+						event_user(1);	
+					}
+					else {
+						event_user(0);
 					}
 			    }
-				scrForcePosition60fps();
+			    else if alarm[2] < 1
+			    {//dodge it
+				    direction = point_direction(x,y,forwardprojectilex,forwardprojectiley)+180+random(30)-15;
+				    dodge = dodgeDuration;
+			    }
 		    }
-		    else if alarm[2] < 1 && aggression < 300
-		    {//dodge it
-			    direction=point_direction(x,y,forwardprojectilex,forwardprojectiley)+180+random(30)-15;
-			    dodge = 4;
-			    alarm[0] += 1
-				alarm[6] += 2
-		    }
-	    }
-	} else if alarm[8] < 1 && canDodge && aggression > 180 && target != noone && instance_exists(target) && point_distance(x, y, target.x, target.y) > 200 {
-		alarm[8] = 90;
-		do
+		} else if alarm[8] < 1 && alarm[2] < 1 && canDodge && aggression > 180 && target != noone && instance_exists(target) && point_distance(x, y, target.x, target.y) > 200 
 		{
-			with instance_nearest(target.x + (random(2) - 1) * (random(32)+96),target.y + (random(2) - 1) * (random(32)+96),Floor)
-			{
-				var o = 16;
-				if object_index == FloorExplo
-					o = 8;
-				with other {
-					if place_meeting(other.x + o, other.y + o, Wall) {
-						continue;
-					}
-				}
-				var assx = other.x;
-				var assy = other.y;
-				
-				if point_distance(x + o, y + o,other.target.x,other.target.y) <= 64
-				continue;
-				
-				other.x = x+o;
-				other.y = y+o;
-				other.alarm[5] = 15;
-				with instance_create(assx,assy,AssassinTeleport) {
-					self.assx = other.x+o;
-					self.assy = other.y+o;
-				}
-				repeat(5){
-					with instance_create(other.x,other.y,Smoke)
-					motion_add(random(360),1+random(3))
-				}
-			}
+			event_user(0);
 		}
-		until (point_distance(x,y,target.x,target.y) > 64)
-		scrForcePosition60fps();
-	}
-} else if sprite_index != spr_hurt {
-	sprite_index = spr_stunned;
-}
 if target != noone
 {
 	if target.x < x
@@ -245,20 +217,18 @@ if target != noone
 	else
 		right = 1;
 }
-if alarm[2] > 0 && alarm[2] < 20
+if alarm[2] > 0
 {
-	walk = 0;
-	speed *= 0;
 	if target != noone && instance_exists(target) && point_distance(x,y,target.x,target.y) > 64
 	{
-		var dir = point_direction(x,y,target.x,target.y);
-		motion_add(dir,1);
+		direction = point_direction(x,y,target.x,target.y);
+		if point_distance(x,y,target.x,target.y) < 24
+			direction += 180;
 	}
 }
-if speed > 5.2
-	speed = 5.2
-if sprite_index == spr_hurt && speed > 4
+if speed > maxSpeed
+	speed = maxSpeed
+/*if sprite_index == spr_hurt && speed > 4
 {
 	speed = 4;
-}
-
+}*/

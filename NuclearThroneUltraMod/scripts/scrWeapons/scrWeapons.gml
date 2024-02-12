@@ -3868,7 +3868,7 @@ function scrWeapons() {
 	wep_name[346] = "AUTO BULLET SHOTGUN"
 	wep_type[346] = 1
 	wep_auto[346] = 1
-	wep_load[346] = 8
+	wep_load[346] = 6
 	wep_cost[346] = 6.25
 	wep_sprt[346] = sprAutoBulletShotgun
 	wep_area[346] = 8

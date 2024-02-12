@@ -2,10 +2,18 @@
 alarm[1] = actTime + random(actTime)
 if alarm[2] > 0
 	exit;
+
 scrTarget()
 if target != noone && instance_exists(target) {
+	
 	var dis = point_distance(target.x, target.y, x, y);
-    if dis > 48  && dis < 230 {
+	if dis > 450
+	{
+		direction = point_direction(x,y,target.x,target.y);
+		walk = 30;
+		speed = 3;
+	}
+    else if dis > 48  && dis < 230 {
 		var ran = random(10);
 		
 		

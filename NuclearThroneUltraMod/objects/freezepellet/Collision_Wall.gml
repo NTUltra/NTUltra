@@ -14,7 +14,7 @@ speed += wallbounce
 wallbounce *= 0.9
 instance_create(x,y,Dust)
 
-	if shotgunshouldered
+	if shotgunshouldered && speed > 2
 	{
 	dmg=4;
 	alarm[1]=3;

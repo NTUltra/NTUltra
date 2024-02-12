@@ -43,27 +43,19 @@ else if other.team != team and other.my_health > 0
 instance_destroy()
 with other
 {
-	if instance_exists(Player){
-if Player.ultra_got[28]//roids ultra d
-{other.dmg += 2;}}
-DealDamage(other.dmg)
 
-//freeze bitch!
-if frozen<1&&my_health>0{
-    with instance_create(x,y,FrozenPlayer)
-    {
-    //image_speed=0;
-    image_xscale=other.mySize*choose(1,-1);
-    image_yscale=other.mySize;
-    xx=other.x
-    yy=other.y
-    }
-frozen+=other.freezetime;
-}
-sprite_index = spr_hurt
-image_index = 0
-motion_add(other.direction,8)
-snd_play(snd_hurt, hurt_pitch_variation)
+	DealDamage(other.dmg,false,false,false)
+
+	//freeze bitch!
+	if frozen<1&&my_health>0{
+	    instance_create(x,y,FrozenPlayer)
+		frozen = 6;
+		getFrozen=0;
+	}
+	sprite_index = spr_hurt
+	image_index = 0
+	motion_add(other.direction,8)
+	snd_play(snd_hurt, hurt_pitch_variation)
 }
 
 instance_create(x,y,BulletHit)

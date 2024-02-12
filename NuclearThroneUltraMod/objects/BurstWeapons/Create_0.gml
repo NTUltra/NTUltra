@@ -5,6 +5,7 @@ Mod3=0;
 Mod4=0;
 wepFire = 0;
 hadSpeedApplied = true;
+canBeMoved = false;
 poppop = false;
 team = 0;
 boosted = false;

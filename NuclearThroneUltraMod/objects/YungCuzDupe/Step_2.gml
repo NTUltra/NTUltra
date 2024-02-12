@@ -126,9 +126,9 @@ if (my_health<prevhealth)
 
 		prevhealth=my_health;
 		if race=25
-		alarm[3]=35;
+		alarm[3]=17;
 		else
-		alarm[3]=30;//duration
+		alarm[3]=14;//duration
 		myShield = instance_create(x,y,EuphoriaShield);//make sure you change speed of animation aswell when changing duration
 		with myShield
 			owner = other.id;
@@ -140,32 +140,17 @@ if (my_health<prevhealth)
 		//Needs to be healable or lethal
 		if (damageTaken > 0 || my_health <= 0)
 		{
+			var healThis = 1;
 			isAlkaline = false;
 			if (skill_got[9]) //Second stomache
-				damageTaken *= 2;
-			my_health=min(maxhealth,prevhealth+damageTaken);
+				healThis *= 2;
+			my_health=min(maxhealth,prevhealth+healThis);
 			prevhealth = my_health;
 			with instance_create(x,y,HealFX)
 				depth = other.depth-1;
 			with instance_create(x,y,SharpTeeth)
 				owner=other.id;
-			snd_play(sndHealthPickup)
-			var pt = instance_create(x,y,PopupText)
-			if UberCont.opt_ammoicon
-			{
-				if my_health = maxhealth
-					pt.mytext = "MAX";
-				else
-					pt.mytext = "+"+string(damageTaken);
-				pt.sprt = sprHPIconPickup;
-			}
-			else
-			{
-				if my_health = maxhealth
-					pt.mytext = "MAX HP";
-				else
-					pt.mytext = "+"+string(damageTaken)+" HP";
-			}
+			snd_play(sndBloodlustProc)
 			
 		}
 	}
@@ -179,7 +164,7 @@ if(my_health<=0)
     if strongspirit==true&&strongspiritused==false
     {
     my_health=1;
-    alarm[1]=20;
+    alarm[1]=14;
     strongspiritused=true;
     strongspirit=false;
     }

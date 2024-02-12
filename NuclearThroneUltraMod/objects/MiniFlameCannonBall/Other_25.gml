@@ -1,2 +1,2 @@
 /// @description Got deflected
-sprite_index = sprMiniFlameCannon;
+sprite_index = sprMiniFlameCannonBall;

@@ -5,4 +5,5 @@ alarm[1] = alarm[0] + 7;
 dmg = 250;
 dmgAll = 100;
 target = noone;
+team = 2;
 alarm[3] = 1;

@@ -18,7 +18,7 @@ if (type == network_type_data) {
 			UberCont.totalDailies = buffer_read(buffer, buffer_u16);
 			UberCont.totalWeeklies = buffer_read(buffer, buffer_u16);
 			UberCont.weeklyWeek = UberCont.totalWeeklies;
-			if latestVersion != UberCont.updateVersion || !gotSteam
+			if !gotSteam || (latestVersion != UberCont.updateVersion && latestVersion != UberCont.updateVersion + UberCont.subUpdateVersion)
 			{
 				UberCont.opt_gamemode = [0];
 				UberCont.isLeaderboardGamemode = false;
@@ -42,7 +42,7 @@ if (type == network_type_data) {
 				canParticipateDailyGm = buffer_read(buffer, buffer_bool);
 				debug("GM! ",canParticipateDailyGm);
 			}
-			
+			debug(dailyDay);
 			if UberCont.isLeaderboardGamemode {
 				debug("WEEKLY");
 				var sendBuffer = buffer_create(3,buffer_fixed,1);
@@ -69,16 +69,18 @@ if (type == network_type_data) {
 					debug("daily gm")
 					if !canParticipateDailyGm
 					{
+						debug("FAIL");
 						//FAIL TO START DAILY GM
 						alarm[0] = min(alarm[0],1);
 						break;
 					}
 				}
-				else if !canParticipateDailyScore
+				else if !canParticipateDailyScore && scrIsGamemode(27)
 				{
 					alarm[0] = min(alarm[0],1);
 					break;
 				}
+				debug("GOOD TO GO");
 				var sendBuffer = buffer_create(12,buffer_fixed,1);
 				buffer_write(sendBuffer,buffer_u8,NETDATA.STARTDAILY);
 				buffer_write(sendBuffer,buffer_u16,myClientId);

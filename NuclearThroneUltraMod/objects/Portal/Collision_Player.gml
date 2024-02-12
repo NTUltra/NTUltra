@@ -37,6 +37,8 @@ with TinyKraken
 with YungCuzDupe
 {
 	my_health = 0;
+	isAlkaline = false;
+	strongspirit = false;
 }
 other.speed = 0;
 if endgame = 100

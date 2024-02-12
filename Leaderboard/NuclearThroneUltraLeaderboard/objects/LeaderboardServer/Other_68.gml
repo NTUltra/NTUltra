@@ -40,14 +40,18 @@ if (type == network_type_data) {
 			buffer_write(sendBuffer,buffer_u8,NETDATA.CANIPARTICIPATE);
 			buffer_write(sendBuffer,buffer_bool,canParticipate);
 			var dailyDay = scrGetDailyNumber();
+			show_debug_message("participation day:");
+			show_debug_message(dailyDay);
 			buffer_write(sendBuffer,buffer_u8,dailyDay);
 			if dailyDay % 2 == 0
 			{
+				show_debug_message("This is agm!");
 				//Daily gamemode
-				var canParticipate = scrGetExistingScore(biDailyGamemodeSaveFileString,userId,"gamemodelb");
-				buffer_write(sendBuffer,buffer_bool,canParticipate);
+				var canParticipateGm = scrGetExistingScore(biDailyGamemodeSaveFileString,userId,"gamemodelb");
+				buffer_write(sendBuffer,buffer_bool,canParticipateGm);
 			}
 			else {
+				show_debug_message("This is a race");
 				buffer_write(sendBuffer,buffer_bool,true);	
 			}
 			network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
@@ -70,7 +74,7 @@ if (type == network_type_data) {
 					);
 				ini_close();
 			}
-			if (!isScoreRun && dayNumber % 2 == 0)//IS DAILY GAMEMODE
+			if (!isScoreRun && scrGetDailyNumber() % 2 == 0)//IS DAILY GAMEMODE
 			{
 				//REGISTER A MOCK SCORE
 				ini_open(biDailyGamemodeSaveFileString);
@@ -94,6 +98,7 @@ if (type == network_type_data) {
 			}
 			else//Daily & daily race
 			{
+				show_debug_message("starting dialy race")
 				var sendBuffer = buffer_create(5,buffer_fixed,1);
 				buffer_write(sendBuffer,buffer_u8,NETDATA.STARTDAILY);
 				//Get correct seed and day based on user time

@@ -1,2 +1,0 @@
-spr_idle=sprInvertedAssassinBossIdle;
-

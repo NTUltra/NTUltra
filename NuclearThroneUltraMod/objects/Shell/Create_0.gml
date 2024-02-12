@@ -4,3 +4,4 @@ time = 10
 friction = 0.2
 image_speed=0;
 
+depth = 6;

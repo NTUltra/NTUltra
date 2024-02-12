@@ -10,7 +10,7 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_bottom);
 draw_set_colour(c_white);
 
-if latestVersion != UberCont.updateVersion
+if latestVersion != UberCont.updateVersion && latestVersion != UberCont.updateVersion + UberCont.subUpdateVersion
 {
 	if alarm[0] < 1
 	draw_text(camera_get_view_x(view_camera[0])+4,
@@ -18,7 +18,7 @@ if latestVersion != UberCont.updateVersion
 	"[ESC] CANCEL");
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
-	draw_text(xx,yy,string_hash_to_newline("YOU ARE NOT ON THE LATEST VERSION##YOUR VERSION: ["+UberCont.updateVersion+"]#LATEST VERSION: ["+latestVersion+
+	draw_text(xx,yy,string_hash_to_newline("YOU ARE NOT ON THE LATEST VERSION##YOUR VERSION: ["+UberCont.updateVersion+UberCont.subUpdateVersion+"]#LATEST VERSION: ["+latestVersion+
 	"]##PLEASE DOWNLOAD THE LATEST UPDATE#ON ITCH.IO [PRESS ENTER]#REPLACE YOUR CURRENT ULTRA MOD FILES#WITH THE NEW VERSION"));
 	if keyboard_check_pressed(vk_enter)
 	{
