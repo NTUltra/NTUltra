@@ -16,7 +16,7 @@ image_speed = 0.4
 friction = 0.4
 right = choose(1,-1)
  loops = GetPlayerLoops();
-maxhealth = 5;
+maxhealth = 7;
 my_health = maxhealth
 rate = 8;
 actTime = 10;
@@ -25,7 +25,7 @@ if loops > 0
 	actTime = 8;
 	rate = 6;
 	raddrop += 1;
-	maxhealth = 14;
+	maxhealth = 15;
 	my_health = maxhealth
 }
 

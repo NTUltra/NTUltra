@@ -7,7 +7,7 @@ dmg = 2;
 target=0;
 
 hits=choose(1,2);
-mxSpd = 4;
+mxSpd = 5;
 eagleEyed = 0;
 boltMarrowed = 0;
 if instance_exists(Player){

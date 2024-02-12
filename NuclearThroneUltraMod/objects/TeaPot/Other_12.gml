@@ -1,5 +1,5 @@
 /// @description Explosion
-scrDrop(20,4)
+scrDrop(20,0)
 with instance_create(x,y,Explosion)
 	team = other.team
 

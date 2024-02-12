@@ -21,7 +21,7 @@ audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
 repeat(2)
 scrDrop(100,0)
 
-scrDrop(0,10)
+scrDrop(0,50)
 
 scrBossKill();
 

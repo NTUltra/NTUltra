@@ -178,7 +178,7 @@ function scrModHit(projectileRef) {
 				with instance_create(other.x,other.y,Flame){
 					//image_speed = 0.5;//0.6 for regular flame from flame shotguns
 					motion_add(random(360),2+random(2))
-					team=other.team;
+					team=2;
 				}
 				break;
 
@@ -235,7 +235,7 @@ function scrModHit(projectileRef) {
 						else
 							image_angle = random(360);
 						accuracy --;
-						team = other.team
+						team = 2
 						ammo = len + 2;
 						event_perform(ev_alarm,0)
 						with instance_create(x,y,LightningSpawn)
@@ -286,7 +286,7 @@ function scrModHit(projectileRef) {
 					repeat(2)
 					with instance_create(other.x+lengthdir_x(4,random(360)),other.y+lengthdir_x(4,random(360)),SwarmBolt)
 					{
-						team=other.team;
+						team=2;
 						direction=random(360);
 						hits = max(1,hits-1);
 					}

@@ -1,4 +1,4 @@
-scrDrop(32,15)
+scrDrop(32,20)
 scrDrop(10,0)
 event_inherited()
 snd_play(sndToxicBarrelGas)

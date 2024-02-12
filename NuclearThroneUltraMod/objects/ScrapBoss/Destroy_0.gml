@@ -37,6 +37,7 @@ audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
 		}
 	}
 scrDrop(50,100)
+scrDrop(0,50)
 scrBossKill();
 Sleep(50)
 if object_index == UltraBigDog

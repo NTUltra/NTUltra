@@ -5,16 +5,19 @@ var ang = random(360)
 var angstep = 360/8;
 repeat(8)
 {
-instance_create(x+lengthdir_x(28,ang),y+lengthdir_y(28,ang),Explosion)
+with instance_create(x+lengthdir_x(28,ang),y+lengthdir_y(28,ang),Explosion)
+	scrCopyWeaponMod(other);
 ang += angstep
 }
 
-instance_create(x,y,Explosion)
+with instance_create(x,y,Explosion)
+	scrCopyWeaponMod(other);
 
 ang += angstep*0.5
 repeat(8)
 {
-instance_create(x+lengthdir_x(52,ang),y+lengthdir_y(52,ang),SmallExplosion)
+with instance_create(x+lengthdir_x(52,ang),y+lengthdir_y(52,ang),SmallExplosion)
+	scrCopyWeaponMod(other);
 ang += angstep
 }
 

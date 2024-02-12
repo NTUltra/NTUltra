@@ -1,5 +1,5 @@
-scrDrop(100,50)
-scrDrop(80,0)
+scrDrop(100,100)
+scrDrop(80,50)
 scrDrop(70,0)
 scrBossKill();
 event_inherited()

@@ -32,6 +32,14 @@ function scrScarierFace(theDamage, isPerFrame){
 		//my_health = prevhealth - dmgTaken;
 		if (my_health < 0) {
 			var part = -0.85;
+			
+			if my_health < - 90
+			{
+				part = -0.5;
+			} else if my_health < - 60
+			{
+				part = - 0.7;
+			}
 			if Player.race == 25 //Doctor
 				part -= 0.03;
 			if (isPerFrame && UberCont.normalGameSpeed == 60)

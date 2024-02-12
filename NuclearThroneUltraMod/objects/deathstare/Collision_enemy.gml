@@ -6,12 +6,12 @@ if other.team != 2 and other.my_health > 0
 		direction = point_direction(other.x,other.y,x,y);
 		if UberCont.normalGameSpeed == 60
 		{
-			DealDamage(0.5, true);
+			DealDamage(0.5, true,true,false);
 			motion_add(other.image_angle,1.5)
 		}
 		else
 		{
-			DealDamage(1, true);
+			DealDamage(1, true,true,false);
 			motion_add(other.image_angle,3)
 		}
 		

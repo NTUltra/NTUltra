@@ -63,7 +63,7 @@ else
 		}
 	}
     
-    if Menu.mouseover == image_index
+    if Menu.mouseover == image_index && num != 0
 	{
 		var col = make_color_rgb(72,253,8);// normal dark
 		var didLoop = false;
@@ -82,7 +82,7 @@ else
 		if UberCont.ctot_all_crowns_taken[num] > 0
 			gotCrowns = true;
 		var i = ((num-1)*4) + 1;
-		var gotAllUltras = (UberCont.ctot_ultra_taken[i] || UberCont.ctot_ultra_taken[i+1] || UberCont.ctot_ultra_taken[i+2] || UberCont.ctot_ultra_taken[i+3])
+		gotAllUltras = (UberCont.ctot_ultra_taken[i] || UberCont.ctot_ultra_taken[i+1] || UberCont.ctot_ultra_taken[i+2] || UberCont.ctot_ultra_taken[i+3])
 		if gotAllUltras
 		{
 			gotAllUltras = scrHasFoundAllSecretUltrasFor(num);

@@ -1,6 +1,6 @@
 scrDrop(100,0);
-scrDrop(50,5);
-scrDrop(50,40);
+scrDrop(50,90);
+scrDrop(50,25);
 
 
 

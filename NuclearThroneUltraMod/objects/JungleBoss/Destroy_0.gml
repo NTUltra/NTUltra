@@ -1,4 +1,5 @@
-scrDrop(100,50)
+scrDrop(100,100)
+scrDrop(0,50)
 event_inherited();
 scrBossKill();
 if UberCont.area == 114 || UberCont.area == 123
