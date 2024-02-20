@@ -31,7 +31,7 @@ if charge
 				var suckStrength = pullInStrength
 				if imageIndex > 14
 					suckStrength += 1.3;
-				if ((target.object_index != Player || !target.skill_got[2]) && collision_line(x,y,target.x,target.y,Wall,0,0) < 0)
+				if ((target.object_index != Player || (!target.skill_got[2] && target.roll == 0)) && collision_line(x,y,target.x,target.y,Wall,0,0) < 0)
 				{
 					with target
 					{

@@ -523,6 +523,7 @@ else if !reincarnate
 	{
 		with Crown
 			instance_destroy();
+			
 		scrEndOfRun();
 		//Horror and atom bskin drop rads
 		if race == 21 || (race == 15 && bskin = 1)

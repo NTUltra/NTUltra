@@ -11,7 +11,7 @@ if (UberCont.mouse__x < x+22 and UberCont.mouse__y < y+22 and UberCont.mouse__x 
 		selectedIndex = other.skillIndex;	
 	}
 }
-if (selected && 
+if (selected && visible &&
 ((KeyCont.key_fire[p] == 1 || KeyCont.key_pick[p] == 1) && (!mouse_check_button_pressed(mb_left) || (UberCont.mouse__x < x+22 and UberCont.mouse__y < y+22 and UberCont.mouse__x > x-22 and UberCont.mouse__y > y-22)))
 && ((alarm[0]<1) ) || (exceptionclick && (alarm[0]<1)))
 {
@@ -229,7 +229,7 @@ if (selected &&
 	{
 		with Player
 		{
-			if bskin == 1 || (isAlternative && other.randomHand == 1 && !bskin == 1)
+			if bskin == 1 || (other.isAlternative && other.randomHand == 1 && !bskin == 1)
 			{
 				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 				//Secret B skin ultra
@@ -243,7 +243,7 @@ if (selected &&
 					bskin = 1;
 				}
 			}
-			else if bskin == 2 || (isAlternative && other.randomHand == 2 && !bskin == 2)
+			else if bskin == 2 || (other.isAlternative && other.randomHand == 2 && !bskin == 2)
 			{
 				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 				with Player {
@@ -268,6 +268,7 @@ if (selected &&
 		{
 			if Player.race == 1 && other.isAlternative
 			{
+				debug("FISH CAN GUN");
 				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 				scrWeaponAdjustCost(0.85);
 				bskin = 2;

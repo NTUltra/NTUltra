@@ -12,7 +12,7 @@ function scrRogueTarget() {
 
 		dir+=10;
 		}
-		until(target>0&&target.team!=2&&target.object_index!=IDPDVan||dir>2000)
+		until((target>0&&target.team!=2&&target != noone && target.object_index!=IDPDVan && target.object_index!=IDPDVanVertical)||dir>2000)
 
 		if dir>2000
 		{

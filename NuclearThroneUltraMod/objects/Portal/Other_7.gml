@@ -42,6 +42,7 @@ if sprite_index = sprPortalDisappear or sprite_index = sprProtoPortalDisappear o
 		reload = lowa;
 		breload = lowb;
 		creload = lowc;
+		scrFullyReloadHogWeapons();
 		if my_health >= 0
 			canRestart = true;
 	}

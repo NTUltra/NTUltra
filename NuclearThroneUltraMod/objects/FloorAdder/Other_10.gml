@@ -1,7 +1,12 @@
 /// @description Fill in mask
 var s = 10016;
-x = -s;
-y = -s;
+var xs = x + s;
+var ys = y + s;
+var mxs = x - s;
+var mys = y - s;
+x = mxs;
+y = mys;
+debug("ADD FLOOR");
 if instance_exists(Player)
 {
 	var ca = Player.area;
@@ -12,9 +17,9 @@ else
 	var ca = BackCont.area;
 	BackCont.area = fakeArea;
 }
-while (x < s)
+while (x < xs)
 {
-	while (y < s)
+	while (y < ys)
 	{
 		if place_meeting(x,y,WallReplaceFloorMask) {
 			with instance_create(x,y,Floor) {
@@ -39,7 +44,7 @@ while (x < s)
 		}
 		y += 32;
 	}
-	y = -s;
+	y = mys;
 	x += 32;
 }
 if instance_exists(Player)

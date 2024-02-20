@@ -2,7 +2,7 @@
 alarm[4] = 15 + random(45)
 if firstTime
 	exit;
-if ammo < 1 && alarm[2] < 1 {
+if ammo < 1 && alarm[2] < 1 && !place_meeting(x,y,Tangle){
 	if instance_exists(Player) {
 		var i = 0;
 		do {

@@ -1,4 +1,5 @@
 event_inherited();
+typ = 4;
 dmg = 5;
 img = 0
 xEnd = x;

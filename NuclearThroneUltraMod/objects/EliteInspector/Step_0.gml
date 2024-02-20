@@ -86,7 +86,7 @@ if control = 1
 			str *= 0.5;
 		with target
 		{
-			if object_index != Player || !skill_got[2]
+			if object_index != Player || (!skill_got[2] && roll == 0)
 			{
 				if point_distance(x,y,other.x,other.y) < 220
 				{

@@ -1,6 +1,6 @@
 /// @description Start charge
 scrTarget();
-if target != noone
+if target != noone && !place_meeting(x,y,Tangle)
 {
 	with instance_create(x,y,BigWallBreak) {
 		image_xscale = other.image_xscale;

@@ -40,3 +40,4 @@ exceptionclick=false;
 selected = false;
 isAlternative = false;
 canAlt = false;
+alarm[1] = 4;

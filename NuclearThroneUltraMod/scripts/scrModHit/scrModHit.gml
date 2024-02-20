@@ -286,7 +286,7 @@ function scrModHit(projectileRef) {
 					repeat(2)
 					with instance_create(other.x+lengthdir_x(4,random(360)),other.y+lengthdir_x(4,random(360)),SwarmBolt)
 					{
-						team=2;
+						team = 2;
 						direction=random(360);
 						hits = max(1,hits-1);
 					}

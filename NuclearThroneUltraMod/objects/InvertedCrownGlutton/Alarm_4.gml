@@ -8,16 +8,19 @@ if ammo > 0
 	{
 		alarm[7] = 4;
 		alarm[1] += 10;
-		mask_index = mskPickupThroughWall;
-		var xxx = target.x + lengthdir_x(distance,gunangle);
-		var yyy = target.y + lengthdir_y(distance,gunangle);
-		with instance_create_depth(x,y,depth-1,CourtyardGuardianTeleport)
+		if !place_meeting(x,y,Tangle)
 		{
-			xx = xxx;
-			yy = yyy;
+			mask_index = mskPickupThroughWall;
+			var xxx = target.x + lengthdir_x(distance,gunangle);
+			var yyy = target.y + lengthdir_y(distance,gunangle);
+			with instance_create_depth(x,y,depth-1,CourtyardGuardianTeleport)
+			{
+				xx = xxx;
+				yy = yyy;
+			}
+			x = xxx;
+			y = yyy;
 		}
-		x = xxx;
-		y = yyy;
 		if target.x < x
 			right = -1
 	    else if target.x > x
@@ -35,14 +38,17 @@ else
 	speed = 0;
 	sprite_index = spr_idle;
 	alarm[1] = actTime*2.5;
-	mask_index = mskPickupThroughWall;
-	with instance_create_depth(x,y,depth-1,CourtyardGuardianTeleport)
+	if !place_meeting(x,y,Tangle)
 	{
-		xx = other.originX;
-		yy = other.originX;
+		mask_index = mskPickupThroughWall;
+		with instance_create_depth(x,y,depth-1,CourtyardGuardianTeleport)
+		{
+			xx = other.originX;
+			yy = other.originX;
+		}
+		x = originX;
+		y = originY;
 	}
-	x = originX;
-	y = originY;
 	if target != noone && instance_exists(target)
 	{
 		if target.x < x

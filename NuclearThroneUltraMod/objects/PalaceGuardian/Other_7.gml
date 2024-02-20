@@ -14,7 +14,7 @@ else if fire && sprite_index == spr_fire
 	image_index = 0;
 	//alarm[1] += 20;
 }
-else if (sprite_index == spr_disappear)
+else if (sprite_index == spr_disappear && !place_meeting(x,y,Tangle))
 {
 	fire = false;
 	if instance_exists(Floor) && instance_exists(Player) && !instance_exists(PlayerSpawn)

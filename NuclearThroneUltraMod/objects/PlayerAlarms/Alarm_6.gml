@@ -7,6 +7,8 @@ with Player
 		humphrySkill *= other.humphryAmount;
 		if humphrySkill > 1000
 			humphrySkill *= 0.9;
+		if humphrySkill > 2000
+			humphrySkill *= 0.7;
 		humphrySkill = max(0, humphrySkill - other.humphryConstantAmount);
 	}
 }

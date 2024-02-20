@@ -76,7 +76,7 @@ if gonnafire = 0
 						if tf.object_index == FloorExplo
 							o = 8;
 						dis = point_distance(target.x,target.y,tf.x+o,tf.y+o);
-						if dis > 256
+						if dis > 256 && !place_meeting(x,y,Tangle)
 						{
 							repeat(4)
 							{

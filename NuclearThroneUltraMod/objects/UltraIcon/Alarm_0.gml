@@ -89,7 +89,8 @@ if canAlt
 	{
 		sprite_index = sprSniperEye;
 	}
-	else if skill == 47 && Player.race == 12 && (Player.unlockAlternativeUltras || isAlternative || ((Player.skill_got[36] && Player.skill_got[3]) || scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep])))
+	else if skill == 47 && Player.race == 12 && (Player.unlockAlternativeUltras || isAlternative || 
+	((Player.skill_got[36] && Player.skill_got[3]) || scrCheckUltra(Player.wep_name[Player.wep]) || scrCheckUltra(Player.wep_name[Player.bwep])))
 	{
 		sprite_index = sprGreenTeam;
 	}

@@ -10,8 +10,8 @@
     "path": "folders/Objects/Projectiles/Melee.yy",
   },
   "parentObjectId": {
-    "name": "ShankParent",
-    "path": "objects/ShankParent/ShankParent.yy",
+    "name": "Shank",
+    "path": "objects/Shank/Shank.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

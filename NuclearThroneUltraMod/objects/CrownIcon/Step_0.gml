@@ -264,7 +264,6 @@ if crown == 11
 			
 			var rngloop = rnglevelloop;
 			var disableAltU = disableAltUltra;
-			var c = [crown];
 			if level > 9
 				hasReachedUltra = true;
 			instance_destroy();
@@ -283,13 +282,14 @@ if crown == 11
 		instance_create(x,y,Player);
 		with Player//Data to keep
 		{
+			crownpoints = 0;
 			disableAltUltra = disableAltU;
 			rnglevelloop = rngloop;
 			weaponspickedup = wpu;
 			freeAmmoRound = 1;
 			ultimategamble = true;
 			race = other.race
-			crown = c;
+			crown = [11];
 			lastarea = other.lastarea;
 			lastwishused = false;
 			area = other.area//other.lastarea;

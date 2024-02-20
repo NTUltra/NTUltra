@@ -327,7 +327,7 @@ function scrDrawHUD() {
 			{
 				draw_sprite_ext(sprCashFlowHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 4 && dataRef.bskin == 2 && dataRef.race == 1
+			else if dir == 4 && dataRef.altUltra && dataRef.race == 1
 			{
 				draw_sprite_ext(sprFishCanGunHUD,0,xx,yy,1,1,0,c_white,1);
 			}
@@ -359,11 +359,11 @@ function scrDrawHUD() {
 			{
 				draw_sprite_ext(sprSteroidsPunchSwapHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 29 && (dataRef.spr_idle == sprMutant8DIdle || dataRef.altUltra)  && dataRef.race == 8
+			else if dir == 29 && (dataRef.altUltra)  && dataRef.race == 8
 			{
 				draw_sprite_ext(sprExclusiveTasteHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 30 && (dataRef.spr_idle == sprMutant8EIdle || dataRef.altUltra)  && dataRef.race == 8
+			else if dir == 30 && (dataRef.altUltra)  && dataRef.race == 8
 			{
 				draw_sprite_ext(sprCursedTechonologyHUD,0,xx,yy,1,1,0,c_white,1);
 			}
@@ -443,15 +443,15 @@ function scrDrawHUD() {
 			{
 				draw_sprite_ext(sprGrumpyLectureHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 106 && dataRef.bskin == 1 && dataRef.race == 27
+			else if dir == 106 && dataRef.altUltra && dataRef.bskin == 1 && dataRef.race == 27
 			{
 				draw_sprite_ext(sprHothandsHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 106 && dataRef.bskin == 2 && dataRef.race == 27
+			else if dir == 106 && dataRef.altUltra && dataRef.bskin == 2 && dataRef.race == 27
 			{
 				draw_sprite_ext(sprExplosiveHandsHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 76 && dataRef.ultimategamble == true && dataRef.race == 19
+			else if dir == 76 && dataRef.altUltra && dataRef.race == 19
 			{
 				draw_sprite_ext(sprUltimateGambleIconHUD,0,xx,yy,1,1,0,c_white,1);
 			}

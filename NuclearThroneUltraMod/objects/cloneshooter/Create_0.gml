@@ -1,5 +1,6 @@
 mySize = 2;
 existTime = 0;
+altFire = false;
 depth = 1;
 myConfusion = noone;
 hurt_pitch_variation = 0;

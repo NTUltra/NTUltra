@@ -3997,6 +3997,7 @@
     {"name":"sprTermiteWalk","order":127,"path":"sprites/sprTermiteWalk/sprTermiteWalk.yy",},
     {"name":"sprEnemyMissile","order":128,"path":"sprites/sprEnemyMissile/sprEnemyMissile.yy",},
     {"name":"sprCursedConveyorA","order":46,"path":"sprites/sprCursedConveyorA/sprCursedConveyorA.yy",},
+    {"name":"scrFullyReloadHogWeapons","order":19,"path":"scripts/scrFullyReloadHogWeapons/scrFullyReloadHogWeapons.yy",},
     {"name":"sprFlugger","order":327,"path":"sprites/sprFlugger/sprFlugger.yy",},
     {"name":"sprInvertedSandWormTurnAround","order":47,"path":"sprites/sprInvertedSandWormTurnAround/sprInvertedSandWormTurnAround.yy",},
     {"name":"sprGoldenRocket","order":129,"path":"sprites/sprGoldenRocket/sprGoldenRocket.yy",},

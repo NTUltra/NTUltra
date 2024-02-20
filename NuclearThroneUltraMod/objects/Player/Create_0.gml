@@ -126,6 +126,24 @@ hogCurse[5] = 0;
 hogCurse[6] = 0;
 hogCurse[7] = 0;
 
+hogReload[0] = 0;
+hogReload[1] = 0;
+hogReload[2] = 0;
+hogReload[3] = 0;
+hogReload[4] = 0;
+hogReload[5] = 0;
+hogReload[6] = 0;
+hogReload[7] = 0;
+
+hogQueueshot[0] = 0;
+hogQueueshot[1] = 0;
+hogQueueshot[2] = 0;
+hogQueueshot[3] = 0;
+hogQueueshot[4] = 0;
+hogQueueshot[5] = 0;
+hogQueueshot[6] = 0;
+hogQueueshot[7] = 0;
+
 hogIsPermanent[0] = false;
 hogIsPermanent[1] = false;
 hogIsPermanent[2] = false;
@@ -255,7 +273,6 @@ else if instance_exists(PlayerSpawn)
 race = PlayerSpawn.race;
 else 
     race = 19;
-debug("create a new guy with race: ", race);
 if scrIsGamemode(7) //ATOM TELEPORT ONLY GM
 race = 15;
 if scrIsGamemode(35)
@@ -559,7 +576,7 @@ if scrIsGamemode(36)//Ultra mod start
     crownvisits = -1;
 	//instance_create(0,0,PauseTimer);
 }
-if UberCont.crown_start[r] && !instance_exists(PlayerSpawn) && !scrIsGamemode(25) && !instance_exists(CrownIcon) {
+if UberCont.crown_start[r] && !instance_exists(PlayerSpawn) && !scrIsGamemode(25) && !instance_exists(CrownIcon) && instance_number(Player) == 1{
 	with Crown
 		instance_destroy();
 	with UberCont

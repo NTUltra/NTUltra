@@ -1,6 +1,6 @@
 /// @description Draw pause
-if alarm[1] > 0 || alarm[2] > 0
-	exit;
+//if alarm[1] > 0
+//	exit;
 gpu_set_blendenable(false);
 var w = (camera_get_view_width(view_camera[0]) * resolutionScale)
 var wp = view_get_wport(view_camera[0]);

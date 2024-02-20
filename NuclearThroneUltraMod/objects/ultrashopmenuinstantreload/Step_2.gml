@@ -29,6 +29,7 @@ if ShopWheel.alarm[0] > 0
 				reload = lowa;
 				breload = lowb;
 				creload = lowc;
+				scrFullyReloadHogWeapons();
 			}
 	    }
 	}

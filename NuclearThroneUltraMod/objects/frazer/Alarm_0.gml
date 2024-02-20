@@ -42,6 +42,9 @@ for (var i = 0; i < al; i++)
 	yy += lengthdir_y(step,dir);
 }
 alarm[0] = 1;
+if GetPlayerUltramod() == ultramods.snowSwarm
+	alarm[0] = 9;
+
 }
 else
 {

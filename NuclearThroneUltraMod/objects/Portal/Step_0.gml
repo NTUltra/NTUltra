@@ -27,7 +27,7 @@ with WepPickup
 			y += lengthdir_y(other.pullstrength,point_direction(x,y,Portal.x,Portal.y))
 		image_angle -= 15*rotspeed
 
-		if point_distance(x,y,Portal.x,Portal.y) < 48 && visible
+		if /*point_distance(x,y,Portal.x,Portal.y) < 48 &&*/ visible
 		{
 			//mask_index = mskPickupThroughWall;
 			persistent = true;

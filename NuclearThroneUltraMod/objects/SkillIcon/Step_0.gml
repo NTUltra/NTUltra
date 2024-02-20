@@ -11,7 +11,7 @@ if (UberCont.mouse__x < x+16 and UberCont.mouse__y < y+16 and UberCont.mouse__x 
 		selectedIndex = other.skillIndex;	
 	}
 }
-if selected
+if selected && visible
 {
 	hover = true;
 	if KeyCont.key_spec[p] == 1 && !(instance_exists(Player) && Player.ultra_got[19] && Player.altUltra){
@@ -319,7 +319,7 @@ if selected
 			{
 				Player.maxhealth -= 1;
 				if Player.my_health > Player.maxhealth
-					Player.DealDamage(1);
+					Player.my_health -= 1;
 			}
 			Player.exception = true;
 			//Dont die on me friend
@@ -342,7 +342,7 @@ if selected
 				Player.armour = clamp(Player.armour + 1, 1, Player.maxarmour);
 				Player.maxhealth -= 2
 				if Player.my_health > Player.maxhealth
-					Player.DealDamage(2)
+					Player.my_health -= 2;
 				Player.prevhealth = Player.my_health;
 			}
 			Player.exception = true;

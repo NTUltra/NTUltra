@@ -14,7 +14,7 @@ if awake {
     {
     if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
     {
-	    if my_health<maxhealth*0.6&&(firstTimeDisappear||random(40)<1)
+	    if !place_meeting(x,y,Tangle) && (my_health<maxhealth*0.6&&(firstTimeDisappear||random(40)<1))
 	    {
 			firstTimeDisappear = false;
 	    sprite_index=spr_vanish

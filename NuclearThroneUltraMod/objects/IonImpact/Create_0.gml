@@ -11,10 +11,9 @@ weaponDropChanceIndex = -1;
 wepFire = 0;
 hadSpeedApplied = false;
 poppop = false;
-dmg = 5;
 canBeMoved = true;
 team = 2
-
+dmg = 5;
 repeat(3)
 instance_create(x,y,Smoke)
 

@@ -124,7 +124,7 @@ else if array_length(leaderboard) > 0
 			//7 = altultra
 			scrDrawLeaderboardWeapon(entry, 8, xx, yy);
 			xx += 48;
-			if (entry[11] != "[1]")
+			if (entry[11] != "[1]" && entry[11] != "")
 			{
 				scrDrawLeaderboardCrown(scrStringArrayToNumbersArray(entry[11]),xx,yy);
 			}

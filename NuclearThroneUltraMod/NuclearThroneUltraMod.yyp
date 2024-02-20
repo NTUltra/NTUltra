@@ -427,7 +427,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.2.108",
+    "IDEVersion": "2023.11.1.129",
   },
   "resources": [
     {"id":{"name":"CursedCrystal","path":"objects/CursedCrystal/CursedCrystal.yy",},},
@@ -4313,6 +4313,7 @@
     {"id":{"name":"sprTermiteWalk","path":"sprites/sprTermiteWalk/sprTermiteWalk.yy",},},
     {"id":{"name":"sprEnemyMissile","path":"sprites/sprEnemyMissile/sprEnemyMissile.yy",},},
     {"id":{"name":"sprCursedConveyorA","path":"sprites/sprCursedConveyorA/sprCursedConveyorA.yy",},},
+    {"id":{"name":"scrFullyReloadHogWeapons","path":"scripts/scrFullyReloadHogWeapons/scrFullyReloadHogWeapons.yy",},},
     {"id":{"name":"sprFlugger","path":"sprites/sprFlugger/sprFlugger.yy",},},
     {"id":{"name":"sprInvertedSandWormTurnAround","path":"sprites/sprInvertedSandWormTurnAround/sprInvertedSandWormTurnAround.yy",},},
     {"id":{"name":"sprGoldenRocket","path":"sprites/sprGoldenRocket/sprGoldenRocket.yy",},},

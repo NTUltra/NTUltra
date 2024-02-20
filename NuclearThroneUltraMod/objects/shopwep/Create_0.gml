@@ -13,6 +13,8 @@ yy = -sprite_get_yoffset(mask_index) + sprite_get_bbox_top(mask_index) + ((sprit
 if instance_exists(Player)
 {
 	wep = Player.hogWep[index];
+	reload = Player.hogReload[index];
+	queueshot = Player.hogQueueshot[index];
 	txt = wep_name[wep];
 }
 else

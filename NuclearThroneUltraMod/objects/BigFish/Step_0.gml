@@ -20,7 +20,7 @@ function suck() {
 	{
 		if point_distance(x,y,other.x,other.y) < 240
 		{
-			if !skill_got[2] && collision_line(x,y,other.x,other.y, Wall, 0, 0) < 0
+			if !skill_got[2] && roll != 1 && collision_line(x,y,other.x,other.y, Wall, 0, 0) < 0
 			{
 				if place_free(x+lengthdir_x(other.suckstrength*dt,point_direction(x,y,other.x,other.y)),y)
 					x += lengthdir_x(other.suckstrength*dt,point_direction(x,y,other.x,other.y))

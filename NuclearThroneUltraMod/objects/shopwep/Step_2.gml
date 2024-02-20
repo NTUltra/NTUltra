@@ -15,14 +15,18 @@ if place_meeting(x,y,ShopSelector)
 				if !(bwep == 0 && other.wep == 0) && KeyCont.key_spec[p] != 1 && KeyCont.key_spec[p] != 2// && hogWep[i] != 0
 				{
 					//Grab weapon (LMB)
+					if bwep == 0
+					{
+						scrSwapWeps();	
+					}
 					var hwep = wep;
 					var hcurse = curse;
 					var hwm1 = wepmod1;
 					var hwm2 = wepmod2;
 					var hwm3 = wepmod3;
 					var hwm4 = wepmod4;
-					other.wep = wep;
-			
+					var hr = reload;
+					var hq = queueshot;
 					wep = hogWep[i]
 					curse = hogCurse[i]
 					wepmod1 = hogWepmod1[i]
@@ -31,6 +35,7 @@ if place_meeting(x,y,ShopSelector)
 					wepmod4 = hogWepmod4[i]
 					isPermanent = hogIsPermanent[i];
 					hasBeenEaten = hogHasBeenEaten[i];
+					reload = hogReload[i];
 					if wep != 0
 					{
 						snd_play_2d(wep_swap[wep])
@@ -41,14 +46,18 @@ if place_meeting(x,y,ShopSelector)
 						snd_play_2d(wep_swap[hwep])
 						scrSwapWeps();
 					}
-			
+					scrWeaponHold();
+					other.wep = hwep;
+					other.reload = hr;
+					other.queueshot = hq;
 					hogWep[i] = hwep;
 					hogCurse[i]	= hcurse;
 					hogWepmod1[i] = hwm1;
 					hogWepmod2[i] = hwm2;
 					hogWepmod3[i] = hwm3;
 					hogWepmod4[i] = hwm4;
-					scrWeaponHold();
+					hogReload[i] = hr;
+					hogQueueshot[i] = hq;
 				}
 			}
 			instance_destroy();
