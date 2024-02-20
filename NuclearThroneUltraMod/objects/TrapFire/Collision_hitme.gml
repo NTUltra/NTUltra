@@ -5,16 +5,16 @@ if other.team != team and other.team != 0 && (other.team!=2 || image_index<5/*no
 		var immunelimit = 5;
 		var immune;
 		immune = 0
-		if object_index=Player//optimise variable_local_exists("skill_got")
+		if object_index=Player || object_index == YungCuzDupe//optimise variable_local_exists("skill_got")
 		{
-			if skill_got[14] = 1
+			if Player.skill_got[14] = 1
 			{
 				immune = 1
 
-				if race=25
+				if Player.race=25
 					immunelimit=6;
 			
-				if ultra_got[97]//Mutation Doctor Ultra A
+				if Player.ultra_got[97]//Mutation Doctor Ultra A
 					immunelimit = 999;
 			
 			}
@@ -23,9 +23,12 @@ if other.team != team and other.team != 0 && (other.team!=2 || image_index<5/*no
 		{
 			if immune = 1
 			{
-				boilingAmount = boilingMax;
-				if alarm[4] < 1
-					alarm[4] = 1;
+				if object_index == Player
+				{
+					boilingAmount = boilingMax;
+					if alarm[4] < 1
+						alarm[4] = 1;
+				}
 				if my_health > immunelimit
 				{
 					snd_play(snd_hurt, hurt_pitch_variation)

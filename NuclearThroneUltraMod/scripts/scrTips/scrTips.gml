@@ -315,7 +315,7 @@ function scrTips() {
 	if Player.area = 113
 	tip = choose("welcome to banditland","bandits with erasers","laserbandits","when the night falls","tonight bandit party","be afraid of the bandit")
 	if Player.area = 114
-	tip = choose("jungle","ugga bugga","wet grass","green","plants")
+	tip = choose("jungle","ugga bugga","wet grass","green","plants","extinct pandas","beware of the apex predator")
 	if Player.area = 115
 	tip = choose("cheese caves","cursed caves","gouda")//Fun fact I used to live in Gouda
 	if Player.area = 116
@@ -394,7 +394,7 @@ function scrTips() {
 	tip = choose("kill kill kill","death death death","blood blood blood","slay slay slay","fast fast fast","go go go","shoot shoot shoot","murder murder murder",
 	"eat eat eat","the apex predator","annihilate eliminate destroy","all shall die","plant is fast","no mercy","photosynthesizing...","plant can hold RMB to see further"
 	,"trap the enemy", "use active again#while seed is in mid-air#to instantly pop it","carnage","consume consume consume", "destroy destroy destroy",
-	"annihilate annihalte annihilate", "obliterate obliterate obliterate")
+	"annihilate annihalte annihilate", "obliterate obliterate obliterate","snare prevents enemies from teleporting!")
 
 	if Player.race = 6
 	tip = choose("yung venuz is so cool",

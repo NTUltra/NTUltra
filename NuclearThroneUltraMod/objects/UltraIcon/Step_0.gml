@@ -114,7 +114,7 @@ if (selected && visible &&
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			altUltra = true;
 			scrUltras(true, false);
-			canKillKillKill = 2;
+			canKillKillKill = 3;
 		}
 	}
 	else if skill == 20 && Player.race == 5 && isAlternative

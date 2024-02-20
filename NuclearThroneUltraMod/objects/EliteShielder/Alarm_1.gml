@@ -45,9 +45,12 @@ canshield=false;
 		} until x != dx && y != dy && !place_meeting(dx, dy, Wall) && point_distance(Player.x, Player.y, dx, dy) > 55 && point_distance(Player.x, Player.y, dx, dy) < 250 || i > 250
 
 		if i <= 250 {
-			x = dx
-			y = dy
-		
+			if !place_meeting(x,y,Tangle)
+			{
+				x = dx
+				y = dy
+			}
+			scrForcePosition60fps();
 			with instance_create(x,y,PopoShield)
 			{
 			team=other.team;
@@ -64,8 +67,11 @@ canshield=false;
 			
 			snd_play(sndEliteShielderShield);
 			Shielding=true;
-			xx=x;
-			yy=y;
+			if !place_meeting(x,y,Tangle)
+			{
+				xx=x;
+				yy=y;
+			}
 			alarm[1] = 55
 			speed = 0
 			walk = 0
@@ -129,10 +135,11 @@ until(canshield==true||dir>200)
 
 if dir>100||canshield=false
 	exit;
-	
-x = xx;
-y = yy;
-
+if !place_meeting(x,y,Tangle)
+{
+	x = xx;
+	y = yy;
+}
 
 snd_play(sndEliteShielderShield);
 

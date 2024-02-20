@@ -5,26 +5,29 @@ if other.team != team && (image_index<5)
 	{
 		if sprite_index != spr_hurt && !other.dealtDamage
 		{
-			if object_index == Player && frozen < 1
+			if (object_index == Player || object_index == YungCuzDupe) && frozen < 1
 			{
 				var immunelimit = 0;
-				if skill_got[14] = 1
+				if Player.skill_got[14] = 1
 				{
 					immunelimit = 5;
-					boilingAmount = boilingMax;
-					if alarm[4] < 1
-						alarm[4] = 1;
+					if object_index == Player
+					{
+						boilingAmount = boilingMax;
+						if alarm[4] < 1
+							alarm[4] = 1;
+					}
 					if race=25
 						immunelimit = 999;
 						
 				}
-				if ultra_got[62] && altUltra && armour > immunelimit//Living armour
+				if Player.ultra_got[62] && Player.altUltra && Player.armour > immunelimit//Living armour
 				{
-					if armour-1 < immunelimit
-						armour = immunelimit
+					if Player.armour-1 < immunelimit
+						Player.armour = immunelimit
 					else
 					{
-						armour -= 1;
+						Player.armour -= 1;
 						other.dealtDamage = true;
 						snd_play(snd_hurt, hurt_pitch_variation)
 						instance_create(x,y,FrozenPlayer);

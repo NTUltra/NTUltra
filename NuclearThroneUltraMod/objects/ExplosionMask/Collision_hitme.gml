@@ -19,9 +19,21 @@ if alarm[0] < 1 && other.team == 2 && instance_exists(Player) && (!ezMode || oth
 			if Player.ultra_got[97] && !Player.altUltra//Mutation Doctor Ultra A
 				immunelimit = 999;
 		}
-
-
-		if immune
+		if Player.skill_got[14] && object_index == YungCuzDupe
+		{
+			immunelimit = 5;
+			if my_health > immunelimit
+			{
+				dealtDamage = true;
+				if my_health - dealDmg < immunelimit
+					my_health = immunelimit
+				else
+				{
+					DealDamage(dealDmg)
+				}
+			}
+		}
+		else if immune
 		{
 			with other
 				instance_destroy();
@@ -53,7 +65,7 @@ if alarm[0] < 1 && other.team == 2 && instance_exists(Player) && (!ezMode || oth
 		{
 			dealtDamage = true;
 			DealDamage(dealDmg);
-			other.dmg -= 1;
+			other.dmg = max(other.dmg-1,1);
 		}
 		if dealtDamage && alarm[3] < 1
 		{

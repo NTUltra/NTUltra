@@ -6,7 +6,7 @@ tinyKrakenSpawned = 0;
 if ultra_got[50] && altUltra
 	charpoints = 1;
 if ultra_got[19] && altUltra
-	canKillKillKill = 2;
+	canKillKillKill = 3;
 if (area == 1 || area == 101 || area == 10 || area == 105 || area == 122 || area == 121) && instance_exists(WepPickup)
 {
 	with WepPickup

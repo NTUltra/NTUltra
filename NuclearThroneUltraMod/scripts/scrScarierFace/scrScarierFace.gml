@@ -32,14 +32,26 @@ function scrScarierFace(theDamage, isPerFrame){
 		//my_health = prevhealth - dmgTaken;
 		if (my_health < 0) {
 			var part = -0.8;
-			if my_health < - 100
+			if my_health < - 150
+			{
+				part = -0.05;
+			}
+			else if my_health < - 100
 			{
 				part = -0.1;
+			}
+			else if my_health < - 90
+			{
+				part = -0.3;
 			}
 			else if my_health < - 80
 			{
 				part = -0.5;
 			} else if my_health < - 50
+			{
+				part = - 0.6;
+			}
+			 else if my_health < - 40
 			{
 				part = - 0.7;
 			}

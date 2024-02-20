@@ -49,6 +49,8 @@ if instance_exists(Player) {
 	{
 		dmg += 3;
 	}
+	if Player.skill_got[14]
+		alarm[3] = 1;
 	if object_index == Explosion {
 		if Player.ultra_got[57]//atom bomb
 		{

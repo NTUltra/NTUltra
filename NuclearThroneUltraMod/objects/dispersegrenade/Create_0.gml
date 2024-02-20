@@ -5,7 +5,7 @@ damagers have a DAMAGE
 their collision can be NORMAL, PIERCING or PIERCING AT OVERKILL (piercing checks per frame)
 their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
 they have a FORCE and can be 0 or DIRECTIONAL */
-dmg = 3;
+dmg = 5;
 typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 alarm[1]=5.5;
 time=1;

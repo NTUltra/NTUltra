@@ -3,13 +3,13 @@ function scrDrawUpdate() {
 	//DRAW UPDATE
 	if widescreen > 0
 		widescreen -= 8
-	if keyboard_check_pressed(vk_space)
+	/*if keyboard_check_pressed(vk_space)
 	{
 	if updatepage=0
 	updatepage=1;
 	else
 	updatepage=0;
-	}
+	}*/
 
 	if updatepage=0
 	{
@@ -21,35 +21,36 @@ function scrDrawUpdate() {
 		{
 			url_open("https://twitter.com/Erdeppol");
 		}
-	var txt0 = @"#UPDATE [30.13.00]
+	var txt0 = @"#UPDATE [30.14.01]
 	
-	* TWO NEW SECRET ULTRAS FOR Y.V.
+	* FIXED A BUNCH OF BUGS
 	
-	* NEW SECRET SKIN FOR ROBOT
+	* PLANT'S SNARE NOW PREVENTS
+	ENEMY TELEPORTATION
 	
-	* NEW SECRET ULTRA FOR ROBOT
+	* BUFF BUSINESS HOG HOARDING THIEF
 	
-	* CHICKEN, HARDER TO KILL ADDED:
-	  CROWN VAULTS REGENERATE 1 MAX HP
+	
+	WEEKLY COMPETITION 1!!:
+	
+	COMPETE IN THE WEEKLY AND DAILIES
+	FROM 26/02/2024 TO 3/03/2024
+	TO GET YOUR WEAPON ADDED TO THE GAME!
+	* EVERY WINNER GETS ONE WEAPON ADDED
+	* TOP 4 WEEKLY.
+	* TOP 6 COMBINED DAILIES
+    This is for all types of dailies!
+	  1st = 3 points
+	  2nd = 2 points
+	  3th = 1 point
+	  Combined total of points for the week
+	  determines the top 6 dailies.
 	  
-	* VIKING AXE BUFFS
-	
-	* GAMMA GUTS NOW HAS INCREASED RANGE
-	
-	* HAMMER HEAD NOW LETS YOU DIG
-	AND BECOME IMMUNE
-	
-	* ALTERNATIVE/SECRET ULTRAS
-	ARE NOW UNLOCKED PERMANENTLY
-	AND NO LONGER REPLACE EXISTING ULTRAS
-	
-	* NEW WEAPON: HEAVY SCREWDRIVER
-	
+	MORE INFO IN THE DISCORD!
 	
 	PRESS [T] FOR UPDATES ON TWITTER
-	PRESS [D] TO JOIN THE DISCORD
-	
-	* PRESS [SPACE] FOR PAGE 2"
+	PRESS [D] TO JOIN THE DISCORD"
+	//* PRESS [SPACE] FOR PAGE 2"
 	}
 	else
 	{
