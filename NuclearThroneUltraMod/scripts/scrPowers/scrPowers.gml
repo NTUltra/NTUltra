@@ -218,7 +218,7 @@ function scrPowers(raceOverwrite = -1) {
 						alarm[11] += duration
 						alarm[1] += duration;
 					}
-					myConfusion = instance_create(x,y-8,HumphryConfuse)
+					myConfusion = instance_create(x,y-max(sprite_height*0.75,8),HumphryConfuse)
 					with myConfusion {
 						myEnemy = other.id;
 						image_xscale = choose(1,-1);

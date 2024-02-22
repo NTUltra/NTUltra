@@ -58,7 +58,6 @@ with other
 	snd_play(snd_hurt, hurt_pitch_variation)
 }
 
-instance_create(x,y,BulletHit)
 
 }
 

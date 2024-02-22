@@ -2891,7 +2891,7 @@ function scrWeapons() {
 	wep_type[258] = 2
 	wep_auto[258] = 2
 	wep_load[258] = 17
-	wep_cost[258] = 1
+	wep_cost[258] = 2
 	wep_sprt[258] = sprShotgunRifle1
 	wep_area[258] = 3
 	wep_text[258] = "true hybrid gun"
@@ -3756,10 +3756,10 @@ function scrWeapons() {
 	wep_name[336] = "FROST ASSAULT RIFLE"
 	wep_type[336] = 1
 	wep_auto[336] = 2
-	wep_load[336] = 14
+	wep_load[336] = 13
 	wep_cost[336] = 6
 	wep_sprt[336] = sprFrostARifle
-	wep_area[336] = 7
+	wep_area[336] = 6
 	wep_text[336] = "freeze burst"
 	wep_swap[336] = sndSwapMachinegun
 	wep_rad[336] = 0;
@@ -3970,9 +3970,9 @@ function scrWeapons() {
 	wep_type[355] = 2
 	wep_auto[355] = 2
 	wep_load[355] = 17
-	wep_cost[355] = 1
+	wep_cost[355] = 1.25
 	wep_sprt[355] = sprJawbreaker
-	wep_area[355] = 1.25
+	wep_area[355] = 1
 	wep_text[355] = "pincer attack"
 	wep_swap[355] = sndSwapShotgun
 	wep_rad[355] = 0;
@@ -8072,6 +8072,28 @@ function scrWeapons() {
 	wep_text[722] = "solving big problems"
 	wep_swap[722] = sndSwapSword
 	wep_rad[722] = 0;
+	
+	wep_name[723] = "FROST ASSAULT PISTOL"
+	wep_type[723] = 1
+	wep_auto[723] = 2
+	wep_load[723] = 10
+	wep_cost[723] = 6
+	wep_sprt[723] = sprFrostARifle
+	wep_area[723] = 4
+	wep_text[723] = "flash freeze"
+	wep_swap[723] = sndSwapMachinegun
+	wep_rad[723] = 0;
+	
+	wep_name[724] = "FROST POP GUN"
+	wep_type[724] = 1
+	wep_auto[724] = 1
+	wep_load[724] = 3
+	wep_cost[724] = 1
+	wep_sprt[724] = sprPopGun
+	wep_area[724] = 7
+	wep_text[724] = "quiver in freeze"
+	wep_swap[724] = sndSwapMachinegun
+	wep_rad[724] = 0;
 
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

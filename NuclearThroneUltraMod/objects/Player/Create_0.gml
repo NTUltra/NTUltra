@@ -17,6 +17,7 @@ with GameRender
 	alarm[6] = 0;
 	alarm[7] = 0;
 }
+moodSwing = true;//TEMP
 with DataRef
 	instance_destroy();
 curseBotAngle = 0;

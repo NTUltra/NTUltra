@@ -1729,11 +1729,12 @@ function scrFire2(hasTailNow) {
 		with instance_create(x,y,DoubleShotgunBurst)
 		{
 		creator = other.id
-		ammo = 2
-		time = 1
-		amountOfProjectiles = 5;
+		ammo = 3
+		time = 2
+		amountOfProjectiles = 3;
 		team = other.team
-		event_perform(ev_alarm,0) 
+		accuracy = 20;
+		event_perform(ev_alarm,0)
 		}
 		/*
 		repeat(9)
@@ -1751,21 +1752,21 @@ function scrFire2(hasTailNow) {
 
 		wep_type[258]= 1;
 		wep_sprt[258] = sprShotgunRifle2
-		wep_cost[258] = 5;
+		wep_cost[258] = 6;
 	}
 	else
 	{
 		with instance_create(x,y,Burst)
 		{
 			creator = other.id
-			ammo = 5
+			ammo = 6
 			time = 2
 			team = other.team
 			event_perform(ev_alarm,0) 
 		}
 		wep_type[258]=2;
 		wep_sprt[258] = sprShotgunRifle1
-		wep_cost[258] = 1.5;
+		wep_cost[258] = 2;
 	}
 
 	break;
@@ -1780,7 +1781,7 @@ function scrFire2(hasTailNow) {
 	{
 	creator = other.id
 	ammo = 2
-	time = 2
+	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
 	}
@@ -1788,6 +1789,7 @@ function scrFire2(hasTailNow) {
 	}
 	else
 	{
+		/*
 	snd_play_fire(sndMachinegun)
 	with instance_create(x,y,Shell)
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
@@ -1801,6 +1803,15 @@ function scrFire2(hasTailNow) {
 	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 3
 	wkick = 2
+	*/
+	with instance_create(x,y,Burst)
+	{
+	creator = other.id
+	ammo = 2
+	time = 1
+	team = other.team
+	event_perform(ev_alarm,0) 
+	}
 	wep_sprt[259] = sprBulletPopper1;
 	}
 
@@ -15262,6 +15273,39 @@ function scrFire2(hasTailNow) {
 	BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 1
 	wkick = -8
+
+	break;
+	
+	//FROST ASSAULT PISTOL
+	case 723:
+
+	with instance_create(x,y,FrostBurst)
+	{
+	creator = other.id
+	ammo = 2
+	time = 2
+	team = other.team
+	event_perform(ev_alarm,0) 
+	}
+
+	break;
+	
+	//FROST POP GUN
+	case 724:
+
+	snd_play_fire(choose(sndFrostShot1,sndFrostShot2))
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+	with instance_create(x,y,FreezePellet)
+	{motion_add(aimDirection+(random(16)-8)*other.accuracy,14.25+random(2))
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3
+	wkick = 3
 
 	break;
 	

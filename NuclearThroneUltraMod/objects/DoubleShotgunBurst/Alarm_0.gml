@@ -13,7 +13,7 @@ repeat(amountOfProjectiles)
 {
 	with instance_create(x,y,Bullet2)
 	{
-		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(50)-25)*other.creator.accuracy,13+other.ammo+random(5))
+		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(other.accuracy)-(other.accuracy*0.5))*other.creator.accuracy,13+other.ammo+random(5))
 		image_angle = direction
 		team = other.team
 		scrCopyWeaponMod(other);

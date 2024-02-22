@@ -534,6 +534,17 @@ function scrSkills() {
 	if betterWepSpecific
 		skill_bons[42] = "DOUBLE BURST & INSTA CHARGE"
 	/*
+	
+	skill_name[43] = "MOOD SWING"
+	skill_text[43] = "EXPLOSIONS <r>BURN<r>#<r>FIRE<r> SPREADS#<p>TENTACLES<p> AND <b>LIGHTNING<b> <w>STUN<w> ENEMIES#<aq>FROST<aq> BREAK INTO <w>ICICLES<w>"
+	skill_detail[43] = "EXPLOSIONS <r>BURN<r>#<r>FIRE<r> SPREADS TO NEARBY ENEMIES#<p>TENTACLES<p> AND <b>LIGHTNING<b> <w>STUN<w> ENEMIES#<aq>FROST<aq> BREAK INTO <w>ICICLES<w>";
+	skill_tips[43] = "feeling like an element"
+	skill_msnd[43] =  sndMutAlienIntestines
+	skill_bons[43] = "+FIRE RANGE, +ICICLES, LONGER STUN"
+	if betterWepSpecific
+		skill_bons[43] = "++FIRE RANGE, ++ICICLES, EVEN LONGER STUN#EXPLOSIONS ALSO SPAWN ICICLES"
+	
+	
 	A SET OF SPECIAL SECRET WEAPON SPECIFIC MUTATIONS YOU HAVE TO DO SOME SORT OF PRE-LOOP CHALLENGE FOR, REPLACES ONE LEVEL/NORMAL MUTATION
 	or just add them to the set its nice to encounter them and take them based on your weapon instead of going out of your way to get them
 	skill_name[42] = "ADRENALINE RUSH"
