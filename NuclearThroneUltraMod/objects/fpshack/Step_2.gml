@@ -28,8 +28,6 @@ with Player
 	if flying > 0
 		flying += dt;
 	flyduration -= dt;
-	if race=22
-		blastArmourDelay += dt;
 	wave -= 0.4*dt;
 	tailWave -= 0.4*dt;
 }

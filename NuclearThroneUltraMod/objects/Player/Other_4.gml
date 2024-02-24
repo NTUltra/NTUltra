@@ -122,7 +122,7 @@ secretlevelcount++
 
 if secretlevelcount=3
 {//UNLOCK RANDOM LEVELS GAMEMODE
-scrUnlockGameMode(10,"FOR GOING TO THREE SECRET LEVELS")
+scrUnlockGameMode(10,"FOR GOING TO THREE SECRET AREAS")
 }
 
 seconds=0;

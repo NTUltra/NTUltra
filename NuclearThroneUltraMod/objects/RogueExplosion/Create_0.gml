@@ -11,5 +11,5 @@ dmg = 10;
 //Crown of death
 if instance_exists(Player) && scrIsCrown(3) && object_index == RogueExplosion
 {
-	alarm[3] = 1;
+	alarm[4] = 1;
 }

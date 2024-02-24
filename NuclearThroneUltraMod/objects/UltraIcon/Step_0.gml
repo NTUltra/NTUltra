@@ -709,6 +709,10 @@ if (selected && visible &&
 	{
 	    with Player
 	    {
+			if gotMinimumArmour
+			{
+				maxarmour -= 1;
+			}
 			maxarmour = max(maxarmour + 2, 2);
 			armour = max(armour,0);
 	    }
@@ -900,6 +904,18 @@ if (selected && visible &&
 	    }
     
 	    }
+	}
+	else if skill == 80//GOLD DIGGER
+	{
+		with Player {
+			for (var i = 0; i < maxwep; i++) {
+				if wep_type[i] != 0 && scrCheckGold(wep_name[wep])
+				{
+					wep_cost[i] = wep_cost[i]*0.8;
+					wep_rad[i] = wep_rad[i]*0.8;
+				}
+			}
+		}
 	}
 	else if skill == 109
 	{

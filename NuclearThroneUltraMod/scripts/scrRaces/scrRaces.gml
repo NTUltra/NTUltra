@@ -292,7 +292,7 @@ function scrRaces() {
 	race_butt[16] = "INCREASE <gb>MAX ARMOUR<gb> BY ONE#FIRST <gb>ARMOUR<gb> <w>STRIKE<w> EACH AREA IS FREE"
 	race_butt_detail[16] = race_butt[16];
 	//race_back[16] = "ARMOUR NOW GETS TAKEN WHEN#SUFFERING LETHAL DAMAGE";
-	race_lock[16] = "REGAIN STRONG SPIRIT 4 TIMES#IN ONE RUN"//"BREAK X AMOUNT OF WALLS"
+	race_lock[16] = "REGAIN STRONG SPIRIT 3 TIMES#IN ONE RUN"//"BREAK X AMOUNT OF WALLS"
 	race_have[16] = 0
 	race_swep[16] = 215//MDRFKIN AXE BITCHES
 	race_bskin[16] = 0

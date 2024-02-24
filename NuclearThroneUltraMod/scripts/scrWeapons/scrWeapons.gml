@@ -2223,7 +2223,7 @@ function scrWeapons() {
 	wep_name[198] = "MORPH HAMMER"
 	wep_type[198] = 5
 	wep_auto[198] = 0
-	wep_load[198] = 24
+	wep_load[198] = 22
 	wep_cost[198] = 1
 	wep_sprt[198] = sprMorphHammer
 	wep_area[198] = 10
@@ -4042,6 +4042,7 @@ function scrWeapons() {
 	wep_text[361] = "connect the dots"
 	wep_swap[361] = sndSwapBow
 	wep_rad[361] = 0;
+	wep_popup[361] = "FIRES LASERS BETWEEN STICKS";
 	
 	wep_name[362] = "SPLINTER BOMB"
 	wep_type[362] = 3
@@ -5429,7 +5430,7 @@ function scrWeapons() {
 	wep_name[484] = "GHOST DAGGER"
 	wep_type[484] = 0
 	wep_auto[484] = 0
-	wep_load[484] = 14
+	wep_load[484] = 15
 	wep_cost[484] = 0
 	wep_sprt[484] = sprGhostDagger
 	wep_area[484] = 14
@@ -7973,11 +7974,12 @@ function scrWeapons() {
 	wep_text[713] = "hell trap"
 	wep_swap[713] = sndSwapBow
 	wep_rad[713] = 0;
+	wep_popup[713] = "TRAP BETWEEN FIRE STICKS";
 	
 	wep_name[714] = "GHOST SPEAR"
 	wep_type[714] = 0
 	wep_auto[714] = 0
-	wep_load[714] = 25
+	wep_load[714] = 27
 	wep_cost[714] = 0
 	wep_sprt[714] = sprGhostSpear
 	wep_area[714] = 15
@@ -8030,10 +8032,10 @@ function scrWeapons() {
 	wep_rad[718] = 0;
 	
 	wep_name[719] = "RED SCYTHE"
-	wep_type[719] = 0
+	wep_type[719] = 1
 	wep_auto[719] = 1
 	wep_load[719] = 25
-	wep_cost[719] = 0
+	wep_cost[719] = 10
 	wep_sprt[719] = sprSniperScythe
 	wep_area[719] = 13
 	wep_text[719] = "is that a reference to what I think it is?"
@@ -8078,7 +8080,7 @@ function scrWeapons() {
 	wep_auto[723] = 2
 	wep_load[723] = 10
 	wep_cost[723] = 6
-	wep_sprt[723] = sprFrostARifle
+	wep_sprt[723] = sprFrostAssaultPistol
 	wep_area[723] = 4
 	wep_text[723] = "flash freeze"
 	wep_swap[723] = sndSwapMachinegun
@@ -8089,7 +8091,7 @@ function scrWeapons() {
 	wep_auto[724] = 1
 	wep_load[724] = 3
 	wep_cost[724] = 1
-	wep_sprt[724] = sprPopGun
+	wep_sprt[724] = sprFrostPopGun
 	wep_area[724] = 7
 	wep_text[724] = "quiver in freeze"
 	wep_swap[724] = sndSwapMachinegun

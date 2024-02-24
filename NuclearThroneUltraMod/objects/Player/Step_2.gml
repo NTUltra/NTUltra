@@ -538,7 +538,6 @@ if (skill_got[31])
 ///Rogue blast armour
 if race=22
 {
-	blastArmourDelay --;
 	if tookHit//&&sprite_index=spr_hurt
 	{
 		event_user(0);

@@ -196,9 +196,9 @@ function scrCrowns() {
 	
 	//Mercenary
 	crown_name[31] = "[CROWN OF BOUNTY]"
-	crown_text[31] = "-2 <r>MAX HP<r># AT THE END OF EACH AREA#GAIN 20 <w>KILLS<w>"
+	crown_text[31] = "-2 <r>MAX HP<r># AT THE END OF EACH AREA#GAIN 40 <w>KILLS<w>"
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
-		crown_text[31] = "-2 <gb>MAX ARMOUR<gb># AT THE END OF EACH AREA#GAIN 20 <w>KILLS<w>"
+		crown_text[31] = "-2 <gb>MAX ARMOUR<gb># AT THE END OF EACH AREA#GAIN 40 <w>KILLS<w>"
 	crown_used[31] = 0
 	crown_tips[31] = "no pain no gain"
 	

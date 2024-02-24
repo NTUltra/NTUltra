@@ -1952,8 +1952,8 @@ if skill_got[25]//strong spirit
     strongspiritregained++;
     
     //UNLOCK VIKING
-    if strongspiritregained>3
-		scrUnlockCharacter(16,"FOR REGAINING STRONG SPIRIT 4 TIMES")
+    if strongspiritregained>2
+		scrUnlockCharacter(16,"FOR REGAINING STRONG SPIRIT 3 TIMES")
     
     }
     

@@ -11,6 +11,7 @@ team = 0;
 boosted = false;
 ammo = 0;
 time = 1;
+scrInitDrops(0);
 if instance_exists(Player)
 {
 	Mod1=Player.wepmod1;

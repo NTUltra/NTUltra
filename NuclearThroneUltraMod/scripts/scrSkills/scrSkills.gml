@@ -255,8 +255,8 @@ function scrSkills() {
 		skill_bons[15] = "+75% WALLBOUNCE +50% SPLASH DAMAGE RANGE";
 
 	skill_name[16] = "RECYCLE GLAND"
-	skill_text[16] = "SOME <y>BULLETS<y> BECOME <y>AMMO<y>";
-	skill_detail[16] = "65% OF HIT <y>BULLETS<y> BECOME <y>AMMO<y>#<w>BULLETS<w> CAN'T BE <pi>DEFLECTED<pi> BY ENEMIES#(WEAPON SPECIFIC MUTATION)";
+	skill_text[16] = "SOME <y>BULLETS<y> BECOME <y>AMMO<y>#HIT <w>BULLETS<w> DEAL <r>SPLASH DAMAGE<r>";
+	skill_detail[16] = "65% OF HIT <y>BULLETS<y> BECOME <y>AMMO<y>#HIT <w>BULLETS<w> DEAL <r>SPLASH DAMAGE<r>#<w>BULLETS<w> CAN'T BE <pi>DEFLECTED<pi> BY ENEMIES#(WEAPON SPECIFIC MUTATION)";
 	skill_tips[16] = "no need to aim"
 	skill_msnd[16] =  sndMutRecycleGland
 	skill_bons[16] = "+5% CHANCE";

@@ -17,7 +17,7 @@ with GameRender
 	alarm[6] = 0;
 	alarm[7] = 0;
 }
-moodSwing = true;//TEMP
+moodSwing = false;//TEMP
 with DataRef
 	instance_destroy();
 curseBotAngle = 0;
@@ -212,7 +212,6 @@ banditland = false;
 
 strongspiritregained = 0;
 lastWishPrevent = false;
-blastArmourDelay = 0;
 blastArmourPower = 3;
 
 microseconds = 0;

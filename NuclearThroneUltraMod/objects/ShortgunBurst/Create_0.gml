@@ -3,5 +3,5 @@
 // Inherit the parent event
 event_inherited();
 projectileAmount = 10;
-projectileSpeed = 6.25;
+projectileSpeed = 6.8;
 accuracy = 70;

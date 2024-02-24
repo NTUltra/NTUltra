@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description Swap
 var um = GetPlayerUltramod();
 if um == ultramods.shotgunBolt
 {

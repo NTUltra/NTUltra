@@ -44,10 +44,13 @@ with WepPickup
 
 	with Player
 	{
+		var pr = other.pullRange;
+		if skill_got[2]
+			pr *= 0.5;
 		var pt = instance_nearest(x,y,Portal);
 		if pt == other.id
 		{
-			if (point_distance(x,y,pt.x,pt.y) < other.pullRange*0.45 || t == 4) and collision_line(x,y,pt.x,pt.y,Wall,0,0) < 0
+			if (point_distance(x,y,pt.x,pt.y) < pr*0.45 || t == 4) and collision_line(x,y,pt.x,pt.y,Wall,0,0) < 0
 			{
 				if place_free(x+lengthdir_x(other.pullstrength,point_direction(x,y,pt.x,pt.y)),y)
 					x += lengthdir_x(other.pullstrength,point_direction(x,y,pt.x,pt.y))
@@ -61,7 +64,7 @@ with WepPickup
 				else
 					image_index = 1
 			}
-			else if (point_distance(x,y,pt.x,pt.y) < other.pullRange || t == 4) and collision_line(x,y,pt.x,pt.y,Wall,0,0) < 0
+			else if (point_distance(x,y,pt.x,pt.y) < pr || t == 4) and collision_line(x,y,pt.x,pt.y,Wall,0,0) < 0
 			{
 				if place_free(x+lengthdir_x(other.pullstrength*0.6,point_direction(x,y,pt.x,pt.y)),y)
 					x += lengthdir_x(other.pullstrength*0.6,point_direction(x,y,pt.x,pt.y))

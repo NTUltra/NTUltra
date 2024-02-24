@@ -385,7 +385,7 @@ function scrFire2(hasTailNow) {
 	repeat(5)
 	{
 	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),PlasmaBall)
-	{motion_add(aimDirection+(ang*other.accuracy),2)//40-20
+	{motion_add(aimDirection+(ang*other.accuracy),5)//40-20
 	image_angle = direction
 	team = other.team
 	}

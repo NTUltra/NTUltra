@@ -850,11 +850,11 @@ function scrPopEnemiesAlt() {
                 }
 				else if loops > 0 && random(8) < 1
 				{
-	                instance_create(x + 16, y + 16, choose(InvertedGuardianDog, InvertedExploGuardian, BanditSquare, Thief, GoldenOctaBot,GoldenWallBot,GoldenSquareBot,ExplosiveSheep, ExplosiveSheep))
+	                instance_create(x + 16, y + 16, choose(InvertedGuardianDog, InvertedExploGuardian, BanditSquare, Thief, Sheep, GoldenOctaBot,GoldenWallBot,GoldenSquareBot,ExplosiveSheep, ExplosiveSheep))
 				}
 				else if random(10) < 1
 				{
-					instance_create(x + 16, y + 16, choose(InvertedExploGuardian, InvertedExploGuardian, BanditSquare, Thief, GoldenOctaBot,GoldenWallBot,GoldenSquareBot,ExplosiveSheep, ExplosiveSheep))
+					instance_create(x + 16, y + 16, choose(InvertedExploGuardian, InvertedExploGuardian, BanditSquare, Thief, Sheep, GoldenOctaBot,GoldenWallBot,GoldenSquareBot,ExplosiveSheep, ExplosiveSheep))
 				}
 
             } else 
@@ -863,17 +863,17 @@ function scrPopEnemiesAlt() {
 				{
 					if styleb = 1 {
 	                    if random(3) < 1
-							instance_create(x + 16, y + 16, choose(InvertedGuardianDog, InvertedExploGuardian, BanditSquare, Thief, GoldenOctaBot,GoldenWallBot,GoldenSquareBot,ExplosiveSheep, ExplosiveSheep))
+							instance_create(x + 16, y + 16, choose(InvertedGuardianDog, InvertedExploGuardian, BanditSquare, Thief, Sheep, GoldenOctaBot,GoldenWallBot,GoldenSquareBot,ExplosiveSheep, ExplosiveSheep))
 	                }
 	                else {
 	                    if random(8) < 1
-	                    instance_create(x + 16, y + 16, choose(InvertedGuardianDog, InvertedExploGuardian, BanditSquare, Thief))
+	                    instance_create(x + 16, y + 16, choose(InvertedGuardianDog, InvertedExploGuardian, BanditSquare, Sheep, Thief))
 	                    else if random(4) < 2.5 {
 	                        instance_create(x + 16, y + 16, choose(InvertedExploGuardian, InvertedExploGuardian, InvertedExploGuardian, BanditSquare, BanditSquare, BanditSquare, Thief, Sheep,GoldenOctaBot,GoldenWallBot,GoldenSquareBot,))
 	                    }
 						else if instance_number(enemy) < 1
 						{
-							instance_create(x + 16, y + 16,Thief);
+							instance_create(x + 16, y + 16,Sheep);
 						}
 	                }
 				}
@@ -891,7 +891,7 @@ function scrPopEnemiesAlt() {
 	                    }
 						else if instance_number(enemy) < 1
 						{
-							instance_create(x + 16, y + 16,Thief);
+							instance_create(x + 16, y + 16,Sheep);
 						}
 	                }
 				}
@@ -945,7 +945,7 @@ function scrPopEnemiesAlt() {
 			if subarea = 3 && spawnarea = 109 //WE LOVE BOSSES! in case loop make sure irght area
 		    {
 		        if !instance_exists(BecomeInvertedJungleBoss) {
-		            instance_create(x + 16, y + 16, InvertedJungleBoss);
+		            instance_create(x + 16, y + 16, BecomeInvertedJungleBoss);
 		        }
 				normals = choose(true,true,false);
 		    }
@@ -1064,15 +1064,24 @@ function scrPopEnemiesAlt() {
 		if instance_number(enemy) < 1
 		{
 			repeat(3)
-				instance_create(x + 16, y + 16, MeleeFake);
+				with instance_create(x + choose(8,24), y + choose(8,24), MeleeFake)
+				{
+					raddrop = round(raddrop*0.5);
+				}
 		}
         else if styleb = 1 {
-            instance_create(x + 16, y + 16, choose(MeleeFake, InvertedMeleeFake, UltraMeleeFake, JungleAssassinFake,InvertedJungleAssassinFake))
+            with instance_create(x + 16, y + 16, choose(MeleeFake, InvertedMeleeFake, UltraMeleeFake, JungleAssassinFake,InvertedJungleAssassinFake))
+			{
+				raddrop = round(raddrop*0.5);
+			}
         }
         else {
             if random(20) < 1 {
-                repeat(1 + irandom(3))
-                instance_create(x + 16 + irandom(4) - 2, y + 16 + irandom(4) - 2, choose(MeleeFake, InvertedMeleeFake, UltraMeleeFake, JungleAssassinFake,InvertedJungleAssassinFake))
+                repeat(1 + irandom(2))
+                 with instance_create(x + choose(8,24), y + choose(8,24), choose(MeleeFake, InvertedMeleeFake, UltraMeleeFake, JungleAssassinFake,InvertedJungleAssassinFake))
+				 {
+					raddrop = round(raddrop*0.5);
+				 }
             }
             else {
                 if random(30) < 1 {
@@ -1083,11 +1092,14 @@ function scrPopEnemiesAlt() {
                     instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, choose(MeleeFake, InvertedMeleeFake, UltraMeleeFake, JungleAssassinFake,InvertedJungleAssassinFake))
                 }
                 else if random(20) < 1 {
-                    repeat(2 + irandom(6))
-                    instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, MeleeFake)
+                    repeat(2 + irandom(2))
+                    with instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, MeleeFake)
+					{
+						raddrop = round(raddrop*0.5);
+					 }
                 }
                 else
-                    instance_create(x + 16, y + 16, choose(MeleeFake, InvertedMeleeFake, UltraMeleeFake, JungleAssassinFake,InvertedJungleAssassinFake))
+                    instance_create(x + choose(8,24), y + choose(8,24), choose(MeleeFake, InvertedMeleeFake, UltraMeleeFake, JungleAssassinFake,InvertedJungleAssassinFake))
             }
         }
     }

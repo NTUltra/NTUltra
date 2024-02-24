@@ -265,7 +265,7 @@ function scrNextLevel() {
 			exit;
 		}
 		//Factory
-		if ((area == 130 || area == 131 || area == 132 || area == 133 || area == 134) && subarea > 0)
+		if ((area == 130 || area == 131 || area == 132 || area == 133 || area == 134) && subarea > 0 && !inverted)
 		{
 			// To inv palace
 			area = 118;
@@ -625,9 +625,10 @@ function scrNextLevel() {
 	subarea = 1;
 	}
 	if ( inverted && (area == 130 || area == 132 || area == 133 || area == 134) )//to inv factory
-	{area=131;
-	lastarea=131;
-	subarea = 1;
+	{
+		area=131;
+		lastarea=131;
+		subarea = 1;
 	}
 	if ( area == 114 && inverted )//inv Mushroom
 	{

@@ -41,7 +41,7 @@ if ultra_got[87] && altUltra
 }
 audio_stop_sound(sndHorrorLoop);
 audio_stop_sound(sndHorrorLoopTB);
-if actualLives < 1
+if actualLives < 1 && !reincarnate
 	with MusCont
 	{
 	if audio_exists(song)

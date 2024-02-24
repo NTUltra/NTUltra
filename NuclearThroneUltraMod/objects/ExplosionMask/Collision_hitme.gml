@@ -29,7 +29,7 @@ if alarm[0] < 1 && other.team == 2 && instance_exists(Player) && (!ezMode || oth
 					my_health = immunelimit
 				else
 				{
-					DealDamage(dealDmg)
+					DealDamage(dealDmg,true,false,false)
 				}
 			}
 		}
@@ -53,11 +53,14 @@ if alarm[0] < 1 && other.team == 2 && instance_exists(Player) && (!ezMode || oth
 			else if my_health > immunelimit
 			{
 				dealtDamage = true;
-				if my_health-dealDmg < immunelimit
+				if my_health - dealDmg < immunelimit
+				{
 					my_health = immunelimit
+					prevhealth = my_health;
+				}
 				else
 				{
-					DealDamage(dealDmg)
+					DealDamage(dealDmg,true,false,false)
 				}
 			}
 		}

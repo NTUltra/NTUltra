@@ -7,7 +7,6 @@ var msk = mask_index;
 mask_index = mskBlade;
 if place_meeting(x,y,Wall)
 {
-	move_bounce_solid(false)
 	if dist > 80//Moves slower
 	{
 		with instance_create(x,y,DiscDisappear)
@@ -16,8 +15,11 @@ if place_meeting(x,y,Wall)
 	}
 	else
 	{
-		snd_play(sndDiscBounce)
+		move_bounce_solid(true);
+		snd_play(sndDiscBounce);
+		scrForcePosition60fps();
 		with instance_create(x,y,DiscBounce)
-			image_angle = other.image_angle}
+			image_angle = other.image_angle
+	}
 }
 mask_index = msk;

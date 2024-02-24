@@ -1,4 +1,9 @@
 /// @description Let the battle begin!
+if instance_exists(WantBoss) || instance_exists(IDPDTank)
+{
+	alarm[2] = 60
+	exit;
+}
 with Player
 {
 	if justAsheep

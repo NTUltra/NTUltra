@@ -1,14 +1,13 @@
 /// @description ROGUE BLAST ARMOUR
-if blastArmourDelay > 0
+/*if blastArmourDelay > 0
 {
-	blastArmourDelay -= 2;
 	exit;
-}
+}*/
 with instance_create(x,y,RogueExplosion)
 {team=2;
 	with myExplosionMask
 		instance_destroy(id,false)}
-blastArmourDelay = 8;
+//blastArmourDelay = 2;
 if ultra_got[86]//SUPER BLAST ARMOUR
 {
 	if blastArmourPower > 12

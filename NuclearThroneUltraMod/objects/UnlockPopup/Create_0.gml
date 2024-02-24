@@ -17,3 +17,4 @@ if instance_exists(GenCont)
 {
 	alarm[0] += GenCont.alarm[3];	
 }
+alarm[0] = min(alarm[0],300);

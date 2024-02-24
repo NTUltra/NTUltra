@@ -94,204 +94,202 @@ if (KeyCont.key_paus[0] = 1) ||
 		exit;
 	}
 	KeyCont.key_spec[0] = 2;
-with option
-instance_destroy()
+	with option
+		instance_destroy()
 
-with FPSHACKMenu
-	instance_destroy();
-instance_activate_all();
-var al = ds_list_size(keepDeactive);
-for (var i = 0; i < al; i++) {
-	instance_deactivate_object(keepDeactive[| i]);	
-}
-if normalGameSpeed == 30
-	with FPSHACK
+	with FPSHACKMenu
 		instance_destroy();
-else if !instance_exists(FPSHACK)
-{
-	instance_create(x,y,FPSHACK);	
-}
-//with TopCont
-//bloomAlpha=UberCont.opt_bloom;
-/*
-if(instance_exists(Marker)){
-Cursor.image_index=UberCont.opt_crosshair;
-}else{
-Cursor.image_index=UberCont.opt_crosshair;}
-*/
-isPaused = 0
-instance_create(x,y,UnPauseDelay);
-isPausedInTheDark = false;
-alarm[4] = 0;
-alarm[5] = 0;
-alarm[3] = 1;
-audio_resume_all();
+	instance_activate_all();
+	var al = ds_list_size(keepDeactive);
+	for (var i = 0; i < al; i++) {
+		instance_deactivate_object(keepDeactive[| i]);	
+	}
+	if normalGameSpeed == 30
+		with FPSHACK
+			instance_destroy();
+	else if !instance_exists(FPSHACK)
+	{
+		instance_create(x,y,FPSHACK);	
+	}
+	//with TopCont
+	//bloomAlpha=UberCont.opt_bloom;
+	/*
+	if(instance_exists(Marker)){
+	Cursor.image_index=UberCont.opt_crosshair;
+	}else{
+	Cursor.image_index=UberCont.opt_crosshair;}
+	*/
+	isPaused = 0
+	instance_create(x,y,UnPauseDelay);
+	isPausedInTheDark = false;
+	alarm[4] = 0;
+	alarm[5] = 0;
+	alarm[3] = 1;
+	audio_resume_all();
 }
 //RETURN TO MENU
-if (
-((keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4)) ||
-((mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)) && confirmState == 2))
-&& !instance_exists(PlayerSpawn) && !instance_exists(StartDaily)
-)
-{
-	if (confirmState == 2 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)))
+	if (
+	((keyboard_check_pressed(vk_enter) or gamepad_button_check(0,gp_face4)) ||
+	((mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)) && confirmState == 2))
+	&& !instance_exists(PlayerSpawn) && !instance_exists(StartDaily)
+	)
 	{
-		confirmState = 0;
-		/*
-		if isLeaderboardGamemode
+		if (confirmState == 2 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)))
 		{
-			opt_gamemode = [0];
-			debug("reset gm!");
-		}
-		*/
-		with UberCont
-		{
-			partnerDied = true;	
-		}
-		with FPSHACKMenu
-			instance_destroy();
-		instance_activate_all();
-		var al = ds_list_size(keepDeactive);
-		for (var i = 0; i < al; i++) {
-			instance_deactivate_object(keepDeactive[| i]);	
-		}
-		if normalGameSpeed = 30
-			with FPSHACK
+			confirmState = 0;
+			/*
+			if isLeaderboardGamemode
+			{
+				opt_gamemode = [0];
+				debug("reset gm!");
+			}
+			*/
+			with UberCont
+			{
+				partnerDied = true;	
+			}
+			with FPSHACKMenu
 				instance_destroy();
-		else if !instance_exists(FPSHACK)
-		{
-			instance_create(x,y,FPSHACK);	
-		}
-		isPaused = 0
-		instance_create(x,y,UnPauseDelay);
-		isPausedInTheDark = false;
-		alarm[4] = 0;
-		alarm[5] = 0;
-		alarm[3] = 1;
-		//audio_stop_all();
-		if instance_exists(Player)
-			kills=Player.kills
-		with UberCont
-		{
-			partnerDied = true;	
-		}
-		with Player
-		{
-			skeletonlives = 0;
-			ultra_got[87] = 0;
-			instance_destroy()
-		}
-		scrSave();
-		if instance_exists(SendWeekly)
-		{
-			alarm[9] = 1;
-			exit;
+			instance_activate_all();
+			var al = ds_list_size(keepDeactive);
+			for (var i = 0; i < al; i++) {
+				instance_deactivate_object(keepDeactive[| i]);	
+			}
+			if normalGameSpeed = 30
+				with FPSHACK
+					instance_destroy();
+			else if !instance_exists(FPSHACK)
+			{
+				instance_create(x,y,FPSHACK);	
+			}
+			isPaused = 0
+			instance_create(x,y,UnPauseDelay);
+			isPausedInTheDark = false;
+			alarm[4] = 0;
+			alarm[5] = 0;
+			alarm[3] = 1;
+			//audio_stop_all();
+			if instance_exists(Player)
+				kills=Player.kills
+			with UberCont
+			{
+				partnerDied = true;	
+			}
+			with Player
+			{
+				skeletonlives = 0;
+				ultra_got[87] = 0;
+				instance_destroy()
+			}
+			scrSave();
+			if instance_exists(SendWeekly)
+			{
+				alarm[9] = 1;
+				exit;
+			}
+			else
+			{
+				event_perform(ev_alarm,9);	
+			}
 		}
 		else
 		{
-			event_perform(ev_alarm,9);	
+			confirmState = 2;
+			exit;
 		}
 	}
-	else
+	//QUIT
+	if ( keyboard_check_pressed(ord("Q")) or ( gamepad_button_check(0,gp_shoulderr) && gamepad_button_check(0,gp_shoulderrb) 
+	&& gamepad_button_check(0,gp_shoulderl) && gamepad_button_check(0,gp_shoulderlb) ) ||
+	((mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)) && confirmState == 2)
+	)
 	{
-		confirmState = 2;
-		exit;
-	}
-}
-//QUIT
-if ( keyboard_check_pressed(ord("Q")) or ( gamepad_button_check(0,gp_shoulderr) && gamepad_button_check(0,gp_shoulderrb) 
-&& gamepad_button_check(0,gp_shoulderl) && gamepad_button_check(0,gp_shoulderlb) ) ||
-((mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)) && confirmState == 2)
-)
-{
-	if confirmState == 2 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1))
-	{
-		confirmState = 0;
-		if (UberCont.isLeaderboardGamemode)
+		if confirmState == 2 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1))
 		{
-			UberCont.opt_gamemode = [0];	
+			confirmState = 0;
+			if (UberCont.isLeaderboardGamemode)
+			{
+				UberCont.opt_gamemode = [0];	
+			}
+			scrSave();
+			steam_shutdown();
+			game_end()
 		}
-		scrSave();
-		steam_shutdown();
-		game_end()
+		else
+		{
+			confirmState = 2;
+			exit;
+		}
 	}
-	else
-	{
-		confirmState = 2;
-		exit;
-	}
-}
 }
 else
 {
-
-//NOT PAUSED
-
-if (!instance_exists(StartDaily) && 
-(KeyCont.key_paus[0] = 1 || (!instance_exists(Vlambeer)&&(!window_has_focus()) && public == 1) ) and !instance_exists(GenCont)
-|| (confirmState == 3 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)))
-)
-{
-	var endMe = false;
-	if KeyCont.key_paus[0] == 1 and instance_exists(Menu)
+	//NOT PAUSED
+	if (!instance_exists(StartDaily) && !instance_exists(Vlambeer) && !instance_exists(GenCont) &&
+	(KeyCont.key_paus[0] = 1 || (!window_has_focus() && public == 1)
+	|| (confirmState == 3 && (mouse_check_button_pressed(mb_left) || 
+	KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)))
+	))
 	{
-		if isLeaderboardGamemode
+		var endMe = false;
+		if KeyCont.key_paus[0] == 1 and instance_exists(Menu)
 		{
-			debug("reset gm menu!?");
-			opt_gamemode = [0];
+			if isLeaderboardGamemode
+			{
+				opt_gamemode = [0];
+			}
+			scrSave();
+			if !instance_exists(OptionSelect)
+			{
+				endMe = true;
+			}/*
+			else if OptionSelect.selected = 0 and CreditsSelect.selected = 0 and StatsSelect.selected = 0 and OptionSelect2.selected = 0// and UpdateSelect.selected = 0
+			{
+				steam_shutdown();
+				game_end()
+			}
+			else */if !instance_exists(PlayerSpawn) && !instance_exists(Player) && !instance_exists(StartDaily)
+			{
+				if instance_exists(Menu)
+				{
+					scrReturnMenu();
+					if Menu.mode == 1
+					{
+						endMe = true;
+					}
+				}
+				else
+					scrRestart()
+			}
+		
 		}
-		scrSave();
-		if !instance_exists(OptionSelect)
+		else if instance_exists(Vlambeer)
 		{
 			endMe = true;
-		}/*
-		else if OptionSelect.selected = 0 and CreditsSelect.selected = 0 and StatsSelect.selected = 0 and OptionSelect2.selected = 0// and UpdateSelect.selected = 0
-		{
-			steam_shutdown();
-			game_end()
 		}
-		else */if !instance_exists(PlayerSpawn) && !instance_exists(Player) && !instance_exists(StartDaily)
+		if endMe || (confirmState == 3 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)))
 		{
-			if instance_exists(Menu)
+			if confirmState == 3 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1))
 			{
-				scrReturnMenu();
-				if Menu.mode == 1
-				{
-					endMe = true;
-				}
+				steam_shutdown();
+				game_end()
+				confirmState = 0;
 			}
 			else
-				scrRestart()
+			{
+				confirmState = 3;	
+			}
 		}
-		
-	}
-	else if instance_exists(Vlambeer)
-	{
-		endMe = true;
-	}
-	if endMe || (confirmState == 3 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)))
-	{
-		if confirmState == 3 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1))
+		else if instance_exists(Player) && !instance_exists(StartDaily)///PAUSE IN-GAME
 		{
-			steam_shutdown();
-			game_end()
-			confirmState = 0;
-		}
-		else
-		{
-			confirmState = 3;	
-		}
-	}
-else if instance_exists(Player) && !instance_exists(StartDaily)///PAUSE IN-GAME
-{
-kills=Player.kills
-hard=Player.hard;
-event_user(0);
-alarm[7] = 1;
-isPaused = 1
+		kills=Player.kills
+		hard=Player.hard;
+		event_user(0);
+		alarm[7] = 1;
+		isPaused = 1
 
-}
-}
+		}
+	}
 }
 
 ///Timer

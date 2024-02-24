@@ -623,7 +623,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	    ultra_tips[79] = "are you that good?"
     
 	    ultra_name[80] = "GOLD DIGGER"
-	    ultra_text[80] = "SIGNIFICANTLY INCREASE#<y>GOLDEN<y> WEAPON <w>RELOAD SPEED<w>"
+	    ultra_text[80] = "SIGNIFICANTLY INCREASE#<y>GOLDEN<y> WEAPON <w>RELOAD SPEED<w>#REDUCE <y>GOLDEN<y> WEAPON COST BY 20%"
 	    ultra_tips[80] = "she take my money!#when I'm in need!"
     
     

@@ -191,7 +191,7 @@ if scrIsCrown(30)
 }
 if scrIsCrown(31)
 {
-	kills += 20;
+	kills += 40;
 }
 if scrIsCrown(22)//Crown of luck
 {
@@ -299,13 +299,13 @@ if looping && area != 104
 	//prevhealth = my_health;
 	if (ultra_got[77] && altUltra)
 	{
-		i = 0;
+		var i = 0;
 		repeat(8)
 		{
 			var tier = wep_area[hogWep[i]]
 			if (tier < 0)
 				tier = 14;
-			my_health += tier*0.1;
+			my_health += tier*0.25;
 			my_health = floor(my_health);
 			i ++;
 		}

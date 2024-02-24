@@ -8,13 +8,13 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 friction = 0.4;
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 //friction=0.4;
-dmg = 5;
+dmg = 6;
 nomscale = 1;
 wallScale = 0.17;
 grow = 0.04;
 hitShrink = 0.4;
 destroyScale = 0.4;
-maxSpeed = 7;
+maxSpeed = 8;
 acc = 1;
 if instance_exists(Player)
 {
