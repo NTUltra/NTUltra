@@ -21,16 +21,19 @@ function scrDrawUpdate() {
 		{
 			url_open("https://twitter.com/Erdeppol");
 		}
-	var txt0 = @"#UPDATE [30.14.01]
+		if keyboard_check_pressed(ord("C"))
+		{
+			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/687611/301402");
+		}
+	var txt0 = @"#UPDATE [30.14.02]
 	
-	* FIXED A BUNCH OF BUGS
+	* FROST ASSAULT PISTOL
+	* FROST POP GUN
 	
-	* PLANT'S SNARE NOW PREVENTS
-	ENEMY TELEPORTATION
+	* RECYCLE GLAND NOW DEALS SPLASH DAMAGE
 	
-	* BUFF BUSINESS HOG HOARDING THIEF
-	
-	
+	* BUFFED SEVERAL WEAPONS
+
 	WEEKLY COMPETITION 1!!:
 	
 	COMPETE IN THE WEEKLY AND DAILIES
@@ -49,7 +52,8 @@ function scrDrawUpdate() {
 	MORE INFO IN THE DISCORD!
 	
 	PRESS [T] FOR UPDATES ON TWITTER
-	PRESS [D] TO JOIN THE DISCORD"
+	PRESS [D] TO JOIN THE DISCORD
+	PRESS [C] FOR FULL CHANGELOG"
 	//* PRESS [SPACE] FOR PAGE 2"
 	}
 	else
