@@ -67,8 +67,7 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 	var step = w/am;
 	var i = ((race-1)*4) + 1;
 	var j = 0;
-	var canShow = (UberCont.ctot_ultra_taken[i] || UberCont.ctot_ultra_taken[i+1] || UberCont.ctot_ultra_taken[i+2] || UberCont.ctot_ultra_taken[i+3])
-	var canShowThis = true;
+	var canShowThis = (UberCont.ctot_ultra_taken[i] || UberCont.ctot_ultra_taken[i+1] || UberCont.ctot_ultra_taken[i+2] || UberCont.ctot_ultra_taken[i+3])
 	repeat(am)
 	{
 		var drawIndex = i;
@@ -322,12 +321,12 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 		}
 		#region render ultra text
 			var col = c_white;
-			if !canShow || !canShowThis
+			if !canShowThis
 			{
 				col = c_dkgray;
 			}
 				draw_sprite_ext(drawSprite,drawIndex,xxx,yyy,1,1,0,col,1);
-			if !canShow || !canShowThis
+			if !canShowThis
 			{
 				draw_sprite(sprLocked,0,xxx,yyy);
 			}
@@ -345,7 +344,7 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 				}
 				if j > 3
 					bb -= max(string_height(howToUnlock),string_height(unlockHint));
-				if !canShowThis || !canShow
+				if !canShowThis
 				{
 					draw_text(xxxx,yyyy,scrCensorString(name));
 					draw_text(xxxx,yyyy + titleNameSpace,scrCensorString(scrReplaceAllColourCodes(text)));

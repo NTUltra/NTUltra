@@ -22,6 +22,9 @@ function scrChooseGamemodesWeekly(){
 		case 7://HARD MODE  + random areas + RANDOM SPAWNS
 			gamemode = [34, 10, 45];
 		break;
+		case 8://VAN FAN -> HARD MODE + MULTI CROWN
+			gamemode = [34, 43, 0];
+		break;
 		case 12://ZOMBIES + gore galore
 			gamemode = [12, 39, 0];
 		break;

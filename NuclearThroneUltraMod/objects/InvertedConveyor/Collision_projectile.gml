@@ -9,6 +9,7 @@ if other.team != 0 && other.canBeMoved{
 	}
 	var xc = x + 16;
 	var yc = y + 16;
+	other.direction += m;
 	switch(image_angle)
 	{
 		case 0:

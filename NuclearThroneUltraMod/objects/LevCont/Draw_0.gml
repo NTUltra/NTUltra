@@ -1,4 +1,6 @@
 //draw_background(bakMut,view_xview,view_yview)
+if !instance_exists(Player)
+	exit;
 scrDrawSpiral()
 
 draw_set_halign(fa_center)

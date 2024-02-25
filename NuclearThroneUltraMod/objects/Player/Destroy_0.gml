@@ -202,6 +202,7 @@ if wep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 		hasBeenEaten = other.hasBeenEaten;
 		name = wep_name[wep]
 		type = wep_type[wep]
+		pickedup = true;
 		sprite_index = wep_sprt[wep]
 		motion_add(other.direction,other.speed)
 		speed += max(0,-other.my_health/5)
@@ -221,6 +222,7 @@ if bwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 		wep = other.bwep
 		ammo = 50
 		curse = other.bcurse
+		pickedup = true;
 		isPermanent = other.isPermanentB;
 		hasBeenEaten = other.hasBeenEatenB;
 		name = wep_name[wep]

@@ -210,7 +210,7 @@ function scrRaces() {
 	race_dskin[11] = 0
 	race_eskin[11] = 0
 	race_fskin[11] = 0
-	race_bskin_lock[11] = "REACH THE PALACE#WITH ANY STARTING WEAPON#AS HUNTER"
+	race_bskin_lock[11] = "REACH THE PALACE#ONLY USING#ANY STARTING WEAPON#AS HUNTER"
 	race_cskin_lock[11] = "KILL AN HARD MODE#ULTRA SNIPER BOT#AS HUNTER"
 
 

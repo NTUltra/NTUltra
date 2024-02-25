@@ -715,7 +715,7 @@ if scrIsGamemode(32) && (area == 114 || area == 123)
 }
 if (area == 9 || area == 118) && race == 11 && weaponspickedup < 1
 {
-	scrUnlockBSkin(11,"FOR REACHING THE PALACE#WITHOUT PICKING UP A WEAPON#AS HUNTER",0);
+	scrUnlockBSkin(11,"FOR REACHING THE PALACE#WITH JUST YOUR STARTING WEAPON#AS HUNTER",0);
 }
 	
 if movethislevel==false&&race=15 &&!instance_exists(MenuGen) &&!instance_exists(Menu) &&  !instance_exists(Vlambeer) && !instance_exists(CrownPickup)

@@ -1130,7 +1130,7 @@ if (selected && visible &&
 				{
 					scrUnlockGameMode(30,"FOR TAKING#20 DIFFERENT#ULTRA MUTATIONS");	
 				}
-			scrSave();//Don't necesserily have to save here
+				scrSave();//Don't necesserily have to save here
 			}
 		}
 	
