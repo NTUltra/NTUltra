@@ -236,7 +236,7 @@ with UberCont {
     if scrIsGamemode(17) //CHEATS
 		public = 0
     //Daily
-	if !instance_exists(PlayerSpawn) && instance_number(Player) == 1 && !instance_exists(CrownIcon)
+	if !instance_exists(PlayerSpawn) && instance_number(Player) == 1 && !instance_exists(CrownIcon)  && !instance_exists(UltraIcon)
 	{
 		if isLeaderboardGamemode {
 			UberCont.opt_gamemode = [0];
@@ -576,7 +576,7 @@ if scrIsGamemode(36)//Ultra mod start
     crownvisits = -1;
 	//instance_create(0,0,PauseTimer);
 }
-if UberCont.crown_start[r] && !instance_exists(PlayerSpawn) && !scrIsGamemode(25) && !instance_exists(CrownIcon) && instance_number(Player) == 1{
+if UberCont.crown_start[r] && !instance_exists(PlayerSpawn) && !scrIsGamemode(25) && !instance_exists(CrownIcon) && !instance_exists(UltraIcon) && instance_number(Player) == 1{
 	with Crown
 		instance_destroy();
 	with UberCont

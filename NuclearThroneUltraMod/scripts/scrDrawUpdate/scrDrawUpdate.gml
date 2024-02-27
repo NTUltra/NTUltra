@@ -23,16 +23,14 @@ function scrDrawUpdate() {
 		}
 		if keyboard_check_pressed(ord("C"))
 		{
-			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/687611/301402");
+			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/689283/301500");
 		}
-	var txt0 = @"#UPDATE [30.14.02]
+	var txt0 = @"#UPDATE [30.15.00]
 	
-	* FROST ASSAULT PISTOL
-	* FROST POP GUN
-	
-	* RECYCLE GLAND NOW DEALS SPLASH DAMAGE
-	
-	* BUFFED SEVERAL WEAPONS
+	* NEW HUNTER ULTRA!
+	* HUNTER ULTRA B AND C COMBINED!
+	* MORE HUNTER BUFFS
+
 
 	WEEKLY COMPETITION 1!!:
 	

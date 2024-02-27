@@ -85,10 +85,13 @@ function scrPowers(raceOverwrite = -1) {
 		}
 		else {
 			failText = "NOT ENOUGH SKILL";
-			if humphrySkill >= 5//used to be 50//10%?
+			var cost = 8;
+			if ultra_got[104] && !altUltra
+				cost = 10;
+			if humphrySkill >= cost//used to be 50//10%?
 			{
 				insufficientFunds = false;
-				humphrySkill -= 5;
+				humphrySkill -= cost;
 			}
 		}
 		
@@ -344,7 +347,6 @@ function scrPowers(raceOverwrite = -1) {
 		}
 		else if ultra_got[98]
 		{
-
 			if rad > 12
 			{
 				audio_stop_sound(sndMutant0Slct)
@@ -473,7 +475,7 @@ function scrPowers(raceOverwrite = -1) {
 
 	if race == 22 && !altUltra //Rogue
 	{
-		var radcost = 100;//Cost is also in portal
+		var radcost = 120;//Cost is also in portal
 		var useRad = ultra_got[88] == 1
 	if rogueammo > instance_number(PortalStrike) || (useRad && rad >= radcost*(1+instance_number(PortalStrike)))
 	{
@@ -1453,7 +1455,7 @@ function scrPowers(raceOverwrite = -1) {
 				var takePercentage = 0.1;//10%
 				//var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
 				//var cost = typ_amax[wepType]*takePercentage;
-				var cost = 31;//5% on level 10
+				var cost = 33;//5% on level 10
 				if (rad >= cost)//(wepType != 0 && ammo[wepType] - cost > 0)
 				{
 					//ammo[wepType] =  ammo[wepType] - cost;
@@ -2043,7 +2045,7 @@ function scrPowers(raceOverwrite = -1) {
 			with instance_create(x+(right*2),y+0.5,HunterSniperEye)
 			{
 				image_angle = aimDirection;
-				dmg = clamp(round(he*0.25),3,50);
+				dmg = clamp(round(he*0.3),4,60);
 				image_yscale = clamp(he*0.015,0.5,2.5);
 				confuseTime = clamp(he*0.2,4,40);
 				var addTime = clamp(floor(he*0.025),0,5);

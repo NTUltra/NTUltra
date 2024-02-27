@@ -519,8 +519,9 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 }
 
 }
-else if !reincarnate
+else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 {
+	debug("FUCKIN END IT");
 	if instance_number(Player) == 1
 	{
 		with Crown
@@ -610,7 +611,7 @@ else if !reincarnate
 			}
 		
 			//DAILY RUN
-			if actualLives < 1
+			if actualLives < 1 && !other.reincarnate && instance_number(Player) == 1
 			{
 				if (scrIsGamemode(27) && !instance_exists(StartDaily))
 				{

@@ -3,39 +3,48 @@ if sticky = 1
 
 snd_play(sndExplosionL)
 
-instance_create(x,y,Explosion)
+with instance_create(x,y,Explosion)
+scrCopyWeaponMod(other);
 
 
-instance_create(x+32,y,Explosion)
+with instance_create(x+32,y,Explosion)
+scrCopyWeaponMod(other);
 
-instance_create(x+64,y,Explosion)
+with instance_create(x+64,y,Explosion)
+scrCopyWeaponMod(other);
 
 /*instance_create(x+8,y+6,SmallExplosion)
 instance_create(x+8,y-6,SmallExplosion)
 instance_create(x+24,y+6,SmallExplosion)
 instance_create(x+24,y-6,SmallExplosion)*/
 
-instance_create(x-32,y,Explosion)
+with instance_create(x-32,y,Explosion)
+scrCopyWeaponMod(other);
 
-instance_create(x-64,y,Explosion)
+with instance_create(x-64,y,Explosion)
+scrCopyWeaponMod(other);
 
 /*instance_create(x-8,y+6,SmallExplosion)
 instance_create(x-8,y-6,SmallExplosion)
 instance_create(x-24,y+6,SmallExplosion)
 instance_create(x-24,y-6,SmallExplosion)*/
 
-instance_create(x,y+32,Explosion)
+with instance_create(x,y+32,Explosion)
+scrCopyWeaponMod(other);
 
-instance_create(x,y+64,Explosion)
+with instance_create(x,y+64,Explosion)
+scrCopyWeaponMod(other);
 
 /*instance_create(x+6,y+8,SmallExplosion)
 instance_create(x-6,y+8,SmallExplosion)
 instance_create(x+6,y+24,SmallExplosion)
 instance_create(x-6,y+24,SmallExplosion)*/
 
-instance_create(x,y-32,Explosion)
+with instance_create(x,y-32,Explosion)
+scrCopyWeaponMod(other);
 
-instance_create(x,y-64,Explosion)
+with instance_create(x,y-64,Explosion)
+scrCopyWeaponMod(other);
 
 /*instance_create(x+6,y-8,SmallExplosion)
 instance_create(x-6,y-8,SmallExplosion)
@@ -54,7 +63,8 @@ instance_create(x+lengthdir_x(16,ang+240),y+lengthdir_y(18,ang+240),Explosion)*/
 else
 {
 snd_play(sndExplosion)
-instance_create(x,y,Explosion)
+with instance_create(x,y,Explosion)
+scrCopyWeaponMod(other);
 
 }
 

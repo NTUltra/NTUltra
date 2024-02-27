@@ -1,11 +1,11 @@
 function scrBossKill() {
 	if instance_exists(Player)
 	{
-		instance_create(x,y,WallBreak);
-		instance_create(x+16,y+16,WallBreak);
-		instance_create(x+16,y-16,WallBreak);
-		instance_create(x-16,y+16,WallBreak);
-		instance_create(x-16,y-16,WallBreak);
+		instance_create(x,y,WallBreakWallOnly);
+		instance_create(x+16,y+16,WallBreakWallOnly);
+		instance_create(x+16,y-16,WallBreakWallOnly);
+		instance_create(x-16,y+16,WallBreakWallOnly);
+		instance_create(x-16,y-16,WallBreakWallOnly);
 		if Player.ultra_got[77] && !Player.altUltra
 		{
 			instance_create(x,y,UltraChest);

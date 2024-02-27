@@ -178,7 +178,8 @@ if (type == network_type_data) {
 				{
 					viewingWeekly = false;
 					displayWeek = string_replace(leaderboardTypeString,"dailygamemode","");
-					leaderboardName[0] = UberCont.today
+					leaderboardName[0] = string_replace(leaderboardTypeString,"dailygamemode","");
+					leaderboardName[0] = string_split(leaderboardName[0],"+")[0];
 				}
 				else
 				{

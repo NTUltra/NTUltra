@@ -53,11 +53,11 @@ function scrEnemyTakingDamage() {
 			{
 				if(point_distance(x,y,Player.x,Player.y)<100)
 			    {
-					var damageDeal = dmgTaken * point_distance(x,y,Player.x,Player.y)*0.001;
+					var damageDeal = dmgTaken * point_distance(x,y,Player.x,Player.y)*0.0011;
 			    }
 			    else
 			    {
-					var damageDeal = dmgTaken * point_distance(x,y,Player.x,Player.y)*0.0026;
+					var damageDeal = dmgTaken * point_distance(x,y,Player.x,Player.y)*0.003;
 			    }
 				dmgTaken += damageDeal;
 			}

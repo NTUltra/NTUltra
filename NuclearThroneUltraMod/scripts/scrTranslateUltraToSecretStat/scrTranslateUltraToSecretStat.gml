@@ -43,7 +43,7 @@ function scrTranslateUltraToSecretStat(chosenUltra, bskin) {
 			else
 				return 32;
 		case 109:
-			return maxsecretultra + 1;
+			return maxsecretultra;
 	}
 	return -1;
 }

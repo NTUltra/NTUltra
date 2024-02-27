@@ -27,7 +27,7 @@ if loops > 0
 	raddrop += 1;
 	maxhealth = 16;
 	if instance_number(TinyKraken) > 1
-		maxhealth = 13;
+		maxhealth = 12;
 	my_health = maxhealth
 }
 else if instance_number(TinyKraken) > 1

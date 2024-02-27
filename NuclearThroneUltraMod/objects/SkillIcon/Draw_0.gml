@@ -46,7 +46,7 @@ if selected
 
 drawx = x
 drawy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-48
-if Player.race == 25 && skill_bons[skill] != ""
+if instance_exists(Player) && Player.race == 25 && skill_bons[skill] != ""
 	drawy -= string_height(string_hash_to_newline(skill_bons[skill]));
 
 if drawx-string_width(string_hash_to_newline(txt2))/2-2 < __view_get( e__VW.XView, 0 )+2
@@ -71,7 +71,7 @@ scrDrawTextColours(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14,s
 draw_set_color(c_white)
 draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14-string_height(string_hash_to_newline(txt2))+string_height(string_hash_to_newline(skill_name[skill])),string_hash_to_newline(string(skill_name[skill])))
 
-if Player.race == 25 && skill_bons[skill] != ""
+if instance_exists(Player) && Player.race == 25 && skill_bons[skill] != ""
 {
 	var bonusTxt = string_hash_to_newline(skill_bons[skill]);
 	drawy += string_height(bonusTxt);

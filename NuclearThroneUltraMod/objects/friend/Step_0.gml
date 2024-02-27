@@ -30,6 +30,7 @@ with Portal
 		bigPortal = id;
 }
 if bigPortal != noone && collision_line(x,y,bigPortal.x,bigPortal.y,Wall,false,false) == noone
+&& !(bigPortal.sprite_index == sprProtoPortalDormant || bigPortal.sprite_index == sprInvertedPortalDormant)
 {
 	alarm[1] = 0;
 	var dir = point_direction(x,y,bigPortal.x,bigPortal.y);

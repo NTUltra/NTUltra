@@ -20,7 +20,8 @@ spr_hurt = false;
 if UberCont.normalGameSpeed == 60
 	stepDis = 6;
 	
-if collision_point(x,y,Wall,false,false)
+var w = instance_position(x,y,Wall);
+if w != noone && w.object_index != WallHitMe
 {
 	var n = instance_nearest(x,y,Floor)
 	if n != noone

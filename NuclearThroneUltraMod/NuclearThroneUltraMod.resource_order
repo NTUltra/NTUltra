@@ -1214,6 +1214,7 @@
     {"name":"sprInvertedNecromancerIdle","order":28,"path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},
     {"name":"sprInvertedNecromancerDead","order":29,"path":"sprites/sprInvertedNecromancerDead/sprInvertedNecromancerDead.yy",},
     {"name":"sprReviveArea","order":30,"path":"sprites/sprReviveArea/sprReviveArea.yy",},
+    {"name":"sndHitscan","order":66,"path":"sounds/sndHitscan/sndHitscan.yy",},
     {"name":"mskReviveArea","order":31,"path":"sprites/mskReviveArea/mskReviveArea.yy",},
     {"name":"sprFloor132","order":26,"path":"sprites/sprFloor132/sprFloor132.yy",},
     {"name":"scrHasFoundAllSecretUltrasFor","order":44,"path":"scripts/scrHasFoundAllSecretUltrasFor/scrHasFoundAllSecretUltrasFor.yy",},

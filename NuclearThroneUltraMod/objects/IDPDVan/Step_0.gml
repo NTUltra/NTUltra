@@ -50,5 +50,6 @@ for (var i = 0; i < al; i++) {
 		}
 	}
 }
+ds_list_destroy(overlap);
 if speed>maxSpeed
 	speed=maxSpeed;

@@ -25,6 +25,14 @@ if instance_exists(Marker)
 }
 else
 {
-	mouse__x = mouse_x;
-	mouse__y = mouse_y;
+	var canAim = true;
+	with CloneShooter {
+		if hitscanMode && alarm[0] > 2
+			canAim = false;
+	}
+	if (canAim)
+	{
+		mouse__x = mouse_x;
+		mouse__y = mouse_y;
+	}
 }

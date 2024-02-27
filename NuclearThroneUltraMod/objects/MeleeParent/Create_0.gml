@@ -37,7 +37,6 @@ if instance_exists(Player)
 			image_xscale += 0.2;//0.1;
 			image_yscale += 0.2;//0.1;
 		}
-		
 	}
 	if Player.ultra_got[34]
 	{

@@ -7661,10 +7661,10 @@ function scrWeapons() {
 	wep_name[686] = "ORBITER"
 	wep_type[686] = 5
 	wep_auto[686] = 2
-	wep_load[686] = 18
+	wep_load[686] = 19
 	wep_cost[686] = 2
 	wep_sprt[686] = sprOrbiter 
-	wep_area[686] = 3
+	wep_area[686] = 4
 	wep_text[686] = "orbital strike"
 	wep_swap[686] = sndSwapEnergy
 	wep_rad[686] = 0;

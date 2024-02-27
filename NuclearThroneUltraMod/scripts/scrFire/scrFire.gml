@@ -204,7 +204,22 @@ function scrFire() {
 	    }
 */
 	}
-
+	if object_index == Player && (ultra_got[43] && !altUltra) {
+		with instance_create(x,y,CloneShooter) {
+			snd_play(sndHitscan,0.1,true);
+			alarm[2] = 4;
+			dmg = min(ceil(wep_load[wep]*0.5),9);
+			depth = other.depth + 1;
+			hitscanMode = true;
+			alarm[0] = wep_load[wep] + 4
+			offset = (random(12) - 6) * other.accuracy;
+			event_perform(ev_step,ev_step_end);
+			scrFire();
+			alarm[0] = wep_load[wep] + 4
+			alarm[1] = 1;
+		}
+		exit;
+	}
 	drawempty = 10
 
 	//IDKWID
@@ -214,13 +229,15 @@ function scrFire() {
 	    do{wep=round(random(maxwep))
 	    }until (wep!=69&&wep!=298)//not Oops gun pls and golden oops gun
 	}
-
+	var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 	if wep_type[wep] == 5 && !instance_exists(LaserBrainFX)
 	{
-		instance_create(x,y,LaserBrainFX);	
+		with instance_create(x,y,LaserBrainFX)
+		{
+			owner = other.id;	
+		}
 	}
 	
-	var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 	switch(wep)
 	{
 	//REVOLVER
@@ -1968,11 +1985,11 @@ function scrFire() {
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
 	with instance_create(x,y,Bullet1)
-	{motion_add(aimDirection+4,16)
+	{motion_add(aimDirection+4*other.accuracy,16)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Bullet1)
-	{motion_add(aimDirection-4,16)
+	{motion_add(aimDirection-4*other.accuracy,16)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Bullet1)
@@ -4989,11 +5006,10 @@ function scrFire() {
 				if !appliedBoost
 				{
 					appliedBoost = true;
-					dmg *= 1.25;
+					dmg *= 1.20;
 					dmg = ceil(dmg);
 					BackCont.shake += 2;
-					image_speed *= 0.5;
-					hits ++;
+					image_speed *= 0.75;
 				}
 			}
 		}

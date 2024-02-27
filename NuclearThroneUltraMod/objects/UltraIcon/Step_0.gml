@@ -426,6 +426,18 @@ if (selected && visible &&
 			}
 		}
 	}
+	else if skill == 43 && !isAlternative
+	{
+		with Player {
+			accuracy = 0.2;//Normal accuracy
+			standartAccuracy = accuracy;
+			if skill_got[19]
+			{
+				accuracy = 0;
+				standartAccuracy = accuracy;
+			}
+		}
+	}
 	else if skill == 61
 	{
 		if Player.race == 16 && isAlternative
@@ -808,14 +820,14 @@ if (selected && visible &&
 		    {
 				var currentLives = array_length(livesRegain);
 				var si = currentLives;
-			    skeletonlives += 3;
-				repeat(3)
+			    skeletonlives += 2;
+				repeat(2)
 				{
 					livesRegain[si] = 3;
 					si++;
 				}
-				if array_length(livesRegain) > 3
-					scrUnlockBSkin(19,"FOR HAVING FOUR LIVES",0);
+				if array_length(livesRegain) > 2
+					scrUnlockBSkin(19,"FOR HAVING THREE LIVES",0);
 			    ultimategamble=false;
 				maxSpeed += 0.4;//Normal speed
 				accuracy = 1;//Normal accuracy
@@ -829,7 +841,7 @@ if (selected && visible &&
 	    }
 	    else//ULTIMATE GAMBLE
 	    {
-	    if random(4+Player.skill_got[5])<1//Better odds with thronebutt
+	    if true || random(4+Player.skill_got[5])<1//Better odds with thronebutt
 	    {//you will die now
     
 			with GenCont
@@ -1120,7 +1132,7 @@ if (selected && visible &&
 						difTaken ++;	
 					}
 				}
-				for (var i = 0; i < maxsecretultra; i++) {
+				for (var i = 0; i < maxsecretultra + 1; i++) {
 					if (ctot_secret_ultra_taken[i] > 0)
 					{
 						difTaken ++;	

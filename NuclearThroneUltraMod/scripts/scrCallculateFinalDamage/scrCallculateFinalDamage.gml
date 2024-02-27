@@ -43,11 +43,11 @@ function scrCallculateFinalDamage(inputDamage){
 			var damageDeal = 0;
 			if(point_distance(other.x,other.y,x,y)<100)
 			{
-				damageDeal = dmgDeal * point_distance(other.x,other.y,x,y)*0.001;
+				damageDeal = dmgDeal * point_distance(other.x,other.y,x,y)*0.0011;
 			}
 			else
 			{
-				damageDeal = dmgDeal * point_distance(other.x,other.y,x,y)*0.0026;
+				damageDeal = dmgDeal * point_distance(other.x,other.y,x,y)*0.003;
 			}
 			dmgDeal += damageDeal;
 		}

@@ -1458,6 +1458,7 @@
     {"id":{"name":"sprInvertedNecromancerIdle","path":"sprites/sprInvertedNecromancerIdle/sprInvertedNecromancerIdle.yy",},},
     {"id":{"name":"sprInvertedNecromancerDead","path":"sprites/sprInvertedNecromancerDead/sprInvertedNecromancerDead.yy",},},
     {"id":{"name":"sprReviveArea","path":"sprites/sprReviveArea/sprReviveArea.yy",},},
+    {"id":{"name":"sndHitscan","path":"sounds/sndHitscan/sndHitscan.yy",},},
     {"id":{"name":"mskReviveArea","path":"sprites/mskReviveArea/mskReviveArea.yy",},},
     {"id":{"name":"sprFloor132","path":"sprites/sprFloor132/sprFloor132.yy",},},
     {"id":{"name":"sprFreakVanDeactivated","path":"sprites/sprFreakVanDeactivated/sprFreakVanDeactivated.yy",},},

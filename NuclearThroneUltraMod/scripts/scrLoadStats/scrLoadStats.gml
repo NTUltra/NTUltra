@@ -80,7 +80,7 @@ function scrLoadStats() {
 		dir ++;
 	}
 	dir = 0;
-	repeat(maxsecretultra)
+	repeat(maxsecretultra + 1)
 	{
 		ctot_secret_ultra_taken[dir] = ini_read_real("STATS","ctotsecretultrataken" + string(dir),0);
 		dir++;

@@ -142,7 +142,7 @@ if canAlt
 	{
 		sprite_index = sprHoardingThief;
 	}
-	else if skill == 87 && Player.race == 22 && scrHasAnEmptyLife()
+	else if skill == 87 && Player.race == 22 && (Player.unlockAlternativeUltras || isAlternative || scrHasAnEmptyLife())
 	{
 		sprite_index = sprFreakRogue;
 	}

@@ -15,8 +15,10 @@ wepmod2 = Player.wepmod2;
 wepmod3 = Player.wepmod3;
 wepmod4 = Player.wepmod4;
 nearWall = false;
+armour = Player.armour;
+maxarmour = Player.maxarmour;
 scrWeapons()
-
+dmg = 3;
 //extra feet items
 extrafeetalarm = 0;
 extrafeetdodged = false;
@@ -64,7 +66,7 @@ mySize = Player.mySize
 queueshot = 0;
 bqueueshot = 0;
 cqueueshot = 0;
-
+offset = 0;
 
 accuracy = Player.accuracy
 
@@ -133,3 +135,5 @@ poppop = Player.poppop;
 firedOnce = Player.firedOnce;
 fired = Player.fired;
 firedthislevel = Player.firedthislevel;
+
+hitscanMode = false;

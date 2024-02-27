@@ -1,4 +1,3 @@
-scrDrop(10,0);
 with instance_create(x,y,MovingCorpse)
 {
 	mySize = other.mySize
@@ -46,4 +45,8 @@ with instance_create(x,y,MovingCorpse)
 		speed /= mySize*0.82
 }
 snd_play(snd_dead,0,true)
-scrRaddrop(raddrop);
+if instance_number(TinyKraken) < 3
+{
+	scrDrop(10,0);
+	scrRaddrop(raddrop);
+}

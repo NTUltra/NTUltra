@@ -1,6 +1,6 @@
 /// @description safety first enemy outside level
 
-
+/*
 if !instance_exists(GenCont) && instance_exists(Floor){
 	if !place_meeting(x,y,Floor)
 	{
@@ -23,3 +23,4 @@ if !instance_exists(GenCont) && instance_exists(Floor){
 }
 alarm[10]=500;
 
+*/

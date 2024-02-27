@@ -323,16 +323,16 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 
 	//HUNTER 
 	ultra_name[41] = "SAFE DISTANCE"
-	ultra_text[41] = "THE <w>FURTHER AWAY<w> YOU ARE FROM AN ENEMY#THE MORE <w>DAMAGE<w> YOU DO TO IT"
+	ultra_text[41] = "THE <w>FURTHER AWAY<w> YOU ARE FROM AN ENEMY#THE MORE <w>DAMAGE<w> YOU DO TO IT#ENEMIES FAR AWAY ACT SLOWER"
 	ultra_tips[41] = "even if the indicator is not bright#you get a damage boost"
 
 	ultra_name[42] = "NEVER MISS"
-	ultra_text[42] = "YOUR PROJECTILES <w>HOME<w> IN ON ENEMIES"
+	ultra_text[42] = "YOUR PROJECTILES <w>HOME<w> IN ON ENEMIES##<w>ALL<w> PROJECTILES#<w>HOME<w> IN ON YOUR <w>MARKER<w>"
 	ultra_tips[42] = choose("eagle eyes improves#the homing strength","homing also works on lasers#and hyper slugger/launcher")
 
-	ultra_name[43] = "FOCUSED FIRE"
-	ultra_text[43] = "ENEMY AND YOUR PROJECTILES#<w>HOME<w> IN ON YOUR <w>MARKER<w>"
-	ultra_tips[43] = "friendly fire?"
+	ultra_name[43] = "SCAN LINE"
+	ultra_text[43] = "ALL YOUR WEAPONS ARE <w>HITSCAN<w>#+80% <w>ACCURACY<w>#(100% ACCURACY WITH EAGLE EYES)"
+	ultra_tips[43] = "scanned"
 	
 	//Eagle eyes and energy brain results in laser eye duh
 	if altOverride || (instance_exists(Player) &&  Player.race == 11 && (Player.altUltra))
@@ -372,7 +372,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	    ultra_tips[48] = "dead not dead"
     
 	//SHEEP 
-	ultra_name[49] = "UNSTOPPABLE"
+	ultra_name[49] = "HYPER CHARGE"
 	ultra_text[49] = "CHANGE CHARGE TO A POWERFUL <pi>HYPERDASH<pi>#THAT COSTS <g>RADS<g> TO USE#EXTRA FEET INCREASES RANGE#GAMMA GUTS INCREASES DAMAGE#THRONE BUTT INCREASES BOTH"
 	ultra_tips[49] = "the fluffy blur"
 
@@ -480,7 +480,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 		if altOverride || (instance_exists(Player) && Player.race == 16 && (Player.altUltra))
 		{
 			ultra_name[62] = "LIVING ARMOUR"
-			ultra_text[62] = "REPLACE 50% OF YOUR <r>HEALTH<r> WITH <gb>ARMOUR<gb>##<r>HEALTH<r> DROPS BECOME <gb>ARMOUR<gb> DROPS##(SECOND STOMACH DOUBLES ARMOUR#FROM ARMOUR DROPS)#(HEALING MUTATIONS DO NOT#REGENERATE ARMOUR)"
+			ultra_text[62] = "REPLACE 50% OF YOUR <r>HEALTH<r> WITH <gb>MAX ARMOUR<gb>##<r>HEALTH<r> DROPS BECOME <gb>ARMOUR<gb> DROPS##(SECOND STOMACH DOUBLES ARMOUR#FROM ARMOUR DROPS)#(HEALING MUTATIONS DO NOT#REGENERATE ARMOUR)"
 			ultra_tips[62] = "iron woman"
 		}
 		
@@ -584,7 +584,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	ultra_tips[75] = "hybrid character"
 
 	ultra_name[76] = "UNSTOPPABLE"
-	ultra_text[76] = "GAIN THREE <w>LIVES<w>"
+	ultra_text[76] = "GAIN TWO <w>LIVES<w>"
 	ultra_tips[76] = "never dead"
 	
 	if altOverride || (instance_exists(Player) &&  Player.race == 19 && Player.ultimategamble==true)
@@ -751,7 +751,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 
 	    //GOOD O'L HUMPHRY 
 	    ultra_name[101] = "EXPERIENCED"
-	    ultra_text[101] = "GAIN DOUBLE <w>SKILL<w> WHEN YOU DEAL DAMAGE"
+	    ultra_text[101] = "GAIN 150% <w>SKILL<w> WHEN YOU DEAL DAMAGE"
 	    ultra_tips[101] = "learning quickly"
         
 	    ultra_name[102] = "RAPID MUSTACHE GROWTH"
@@ -763,7 +763,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	    ultra_tips[103] = "strong skillet"
         
 		ultra_name[104] = "DISCIPLINE"
-	    ultra_text[104] = "ACTIVE CAN <w>SHRINK<w>#ALL ENEMY PROJECTILES#INTO <p>NOTHINGNESS<p>#DOUBLE <w>STUN<w> DURATION"
+	    ultra_text[104] = "SLIGHTLY INCREASE ACTIVE COST (+2 SKILL)#ACTIVE CAN <w>SHRINK<w>#ALL ENEMY PROJECTILES#INTO <p>NOTHINGNESS<p>#DOUBLE <w>STUN<w> DURATION"
 	    ultra_tips[104] = "discipline those projectiles!"
 		
 		//Have any director weapon

@@ -34,7 +34,7 @@ if autoFire > 0
 }
 if ultra_got[43] && altUltra && hunterEye < hunterEyeMax
 {
-	hunterEye += 1.5+(1.5*skill_got[5]);
+	hunterEye += 1.6+(1.6*skill_got[5]);
 	if hunterEye >= hunterEyeMax
 	{
 		snd_play(choose(sndSpark1,sndSpark2));
@@ -1827,7 +1827,7 @@ if (instance_exists(enemy))
 	var homeBoost = 0;
 
 	if (ultra_got[42])//HUNTER ULTRA B Homing projectiles
-		homeBoost += 2.5;
+		homeBoost += 2.75;
 	if skill_got[19]
 	{
 		homeBoost += 0.8;
@@ -1871,18 +1871,18 @@ if (instance_exists(enemy))
 		var ogHomeBoost = homeBoost * dt;
 	    with projectile
 	    {
-	        if (team == other.team && speed > 0)
+	        if ((team == other.team || object_index == Disc) && speed > 0)
 	        {
 		        if canBeMoved
 		        {
 		        
 					var t = instance_nearest(x,y,enemy)
-			        if collision_line(x,y,t.x,t.y,Wall,0,0) < 0// && point_distance(x,y,t.x,t.y) < 128
+			        if !collision_line(x,y,t.x,t.y,Wall,0,0)// && point_distance(x,y,t.x,t.y) < 128
 			        {
 						homeBoost = ogHomeBoost;
 						var d = point_direction(x,y,t.x,t.y)
 						var ad = angle_difference(d,direction);
-						homeBoost *= (1 + (speed * 0.006));
+						homeBoost *= (1 + (speed * 0.01));//0.006
 			            if (ad > 2)
 			            {
 							direction += homeBoost;
@@ -1900,7 +1900,7 @@ if (instance_exists(enemy))
 	}
 }
 
-if (ultra_got[43] && !altUltra)//HUNTER ULTRA C Focused projectiles
+if (ultra_got[42])//HUNTER ULTRA C Focused projectiles
 {
     if instance_exists(Marker)
     {
@@ -1915,7 +1915,7 @@ if (ultra_got[43] && !altUltra)//HUNTER ULTRA C Focused projectiles
 		{
 			//if (x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) 
 			 //and ProjectileCanBeMoved())
-			if speed > 0 && canBeMoved
+			if speed > 0 && canBeMoved && point_distance(x,y,Marker.x,Marker.y) < 128
 			{
 				if !place_meeting(x+lengthdir_x(str,point_direction(x,y,Marker.x,Marker.y)),y,Wall)
 					x += lengthdir_x(str,point_direction(x,y,Marker.x,Marker.y))

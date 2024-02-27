@@ -341,19 +341,46 @@ function scrDrawBloom() {
 	}
 		if Player.ultra_got[41]
 		{
-		    with enemy
-		    {
-				var minSize = min(3,mySize);
-		        if(point_distance(x - vx,y - vy,Player.x - vx,Player.y - vy)>100)
-		        {
-		        draw_sprite_ext(sprHunterUltraBMark,-1,x - vx,y - vy,minSize,minSize,image_angle,c_green,0.2);
-		        }
-		        else
-		        {
-		        draw_sprite_ext(sprHunterUltraBMark,-1,x - vx,y - vy,minSize,minSize,image_angle,c_green,0.05);
-		        }
-        
-		    }
+			if UberCont.normalGameSpeed == 60
+			{
+				with enemy
+			    {
+					var minSize = min(3,mySize);
+			        if(point_distance(x - vx,y - vy,Player.x - vx,Player.y - vy)>100)
+			        {
+						draw_sprite_ext(sprHunterUltraBMark,-1,x - vx,y - vy,minSize,minSize,image_angle,c_green,ba + 0.2);
+						if alarm[1] > 1
+						{
+							alarm[1] += 0.5
+							speed -= speed * 0.1;
+						}
+			        }
+			        else
+			        {
+						draw_sprite_ext(sprHunterUltraBMark,-1,x - vx,y - vy,minSize,minSize,image_angle,c_green,ba*0.8);
+			        }
+			    }
+			}
+			else
+			{
+			    with enemy
+			    {
+					var minSize = min(3,mySize);
+			        if(point_distance(x - vx,y - vy,Player.x - vx,Player.y - vy)>100)
+			        {
+						draw_sprite_ext(sprHunterUltraBMark,-1,x - vx,y - vy,minSize,minSize,image_angle,c_green,ba + 0.2);
+						if alarm[1] > 1
+						{
+							alarm[1] += 1;
+							speed -= speed * 0.2;
+						}
+			        }
+			        else
+			        {
+						draw_sprite_ext(sprHunterUltraBMark,-1,x - vx,y - vy,minSize,minSize,image_angle,c_green,ba*0.8);
+			        }
+			    }
+			}
 		}
 		if Player.ultra_got[105]
 		{

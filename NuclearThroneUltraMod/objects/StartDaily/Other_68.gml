@@ -321,6 +321,10 @@ if (type == network_type_data) {
 					crownvisits = -1;
 				}
 			}
+			if scrIsGamemode(43)//Multi-crown
+			{
+				UberCont.canMultiCrown = true;
+			}
 			#endregion
 			alarm[3] = 90;
 			alarm[1] += 120;

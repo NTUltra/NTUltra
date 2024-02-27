@@ -6,6 +6,15 @@ var vw = __view_get( e__VW.WView, 0 )*0.5;
 var vh = __view_get( e__VW.HView, 0 )*0.5;
 if !instance_exists(GenCont)
 {
+	var mx = UberCont.mouse__x;
+	var my = UberCont.mouse__y;
+	with CloneShooter {
+		if hitscanMode && alarm[0] > 2
+		{
+			mx = mouse_x;
+			my = mouse_y;
+		}
+	}
 	viewdist = 9
 
 	if Player.wep_type[Player.wep] = 0 or Player.wep_type[Player.wep] = 2
@@ -19,15 +28,15 @@ if !instance_exists(GenCont)
 
 	//if Player.my_health > 0
 	//{
-	viewx = ((Player.x-vw)*(viewdist-1)+(UberCont.mouse__x-vw))/viewdist
-	viewy = ((Player.y-vh)*(viewdist-1)+(UberCont.mouse__y-vh))/viewdist
+	viewx = ((Player.x-vw)*(viewdist-1)+(mx-vw))/viewdist
+	viewy = ((Player.y-vh)*(viewdist-1)+(my-vh))/viewdist
 	//}
 	if instance_exists(Tangle) and KeyCont.key_spec[Player.p] = 2 && Player.ultra_got[20]=0 && !Player.altUltra//stereo snares confusion
 	{
 		if Tangle.image_index > 2
 		{
-			viewx = (((Tangle.x+Player.x*1.5)/2.5-vw)*(viewdist-1)+(UberCont.mouse__x-vw))/viewdist
-			viewy = (((Tangle.y+Player.y*1.5)/2.5-vh)*(viewdist-1)+(UberCont.mouse__y-vh))/viewdist
+			viewx = (((Tangle.x+Player.x*1.5)/2.5-vw)*(viewdist-1)+(mx-vw))/viewdist
+			viewy = (((Tangle.y+Player.y*1.5)/2.5-vh)*(viewdist-1)+(my-vh))/viewdist
 		}
 	}
 	if instance_exists(NuclearThrone1)

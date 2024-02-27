@@ -591,6 +591,9 @@ if armour > 0
 	if armour > maxarmour
 		armour = maxarmour;
 }
+else if ultra_got[62] && altUltra {
+	my_health = 0;	
+}
 
 //}
 if alarm[3] > 0/*|| lag>0 *//*&&my_health!=maxhealth*/&& !exception

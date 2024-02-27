@@ -112,8 +112,8 @@ function scrRemoveCrown(oldcrown){
 	if oldcrown == 24
 	{
 		//Crown of sloth
-		Player.pSpeedBoost += 0.12;
-		Player.maxSpeed += 0.3;
+		Player.pSpeedBoost += 0.15;
+		Player.maxSpeed += 0.35;
 	}
 	if oldcrown == 29
 	{

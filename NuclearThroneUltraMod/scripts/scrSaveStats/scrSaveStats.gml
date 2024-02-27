@@ -67,7 +67,7 @@ function scrSaveStats() {
 		dir ++;
 	}
 	dir = 0;
-	repeat(maxsecretultra)
+	repeat(maxsecretultra + 1)
 	{
 		ini_write_real("STATS","ctotsecretultrataken" + string(dir),ctot_secret_ultra_taken[dir]);
 		dir ++;

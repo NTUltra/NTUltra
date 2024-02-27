@@ -86,7 +86,7 @@ oldy = y
 if instance_exists(Player){
 	if Player.skill_got[19] == 1
 	{accuracy-=3;}
-	if Player.ultra_got[43]&&instance_exists(Marker)//hunter focused fire
+	if Player.ultra_got[42]&&instance_exists(Marker)//hunter focused fire
 	{accuracy-=5;}
 	if Player.ultra_got[42]//hunter never miss
 	{accuracy-=6;}
