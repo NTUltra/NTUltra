@@ -18,21 +18,7 @@ if instance_exists(Player)
 		{
 			with hits[| i]
 			{
-				if alarm[11] < 1 && my_health > 0 {//this probably doesnt work cause iit takes the health off after this collision detection
-					frozen = true;
-					with instance_create(x,y,FrozenEnemy)
-					{
-						var s = min(2,other.mySize)
-						image_xscale=s*choose(1,-1);
-						image_yscale=s;
-						xx=other.x
-						yy=other.y
-						owner = other.id;
-					}
-					alarm[11] += 30;
-					if alarm[1] > 0
-						alarm[1] += 5;
-				}
+				scrFreezeTarget(10);
 			}
 		}
 		ds_list_clear(hits);

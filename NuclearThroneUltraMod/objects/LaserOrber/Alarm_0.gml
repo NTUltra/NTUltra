@@ -9,21 +9,37 @@ if instance_exists(creator)
 //FIRING
 if instance_exists(Player)
 {
-	if Player.skill_got[17] = 1
-		snd_play_fire(sndLaserCannonUpg)
+	if isUltra
+	{
+		if Player.skill_got[17] = 1
+			snd_play_fire(choose(sndUltraLaserUpg,sndLaserCannonUpg));
+		else
+			snd_play_fire(choose(sndUltraLaser,sndLaserCannon));
+	}
 	else
-		snd_play_fire(sndLaserCannon)
+	{
+		if Player.skill_got[17] = 1
+			snd_play_fire(sndLaserCannonUpg);
+		else
+			snd_play_fire(sndLaserCannon);
+	}
 }
 else
-	snd_play_fire(sndLaserCannon)
+	snd_play_fire(sndLaserCannon);
 
 
 with instance_create(x,y,Laser)
-{image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
+{image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + other.aimOffset
 	scrCopyWeaponMod(other);
 team = other.team
 laserhit=1;
 sprite_index=sprBouncingLaser;
+if other.isUltra
+{
+	sprite_index = sprUltraBouncingLaser;
+	laserhit = 3;
+	image_yscale += 0.25;
+}
 event_perform(ev_alarm,0)}
 
 BackCont.viewx2 += lengthdir_x(3,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake

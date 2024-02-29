@@ -37,7 +37,7 @@ if al > 0 && alarm[0] < 1
 									else
 										snd_play(sndSpark1);
 										
-									if (Player.moodSwing && team != 0)
+									if (Player.skill_got[43] && team != 0)
 									{
 										speed = 0;
 										var duration = 2;

@@ -7,7 +7,7 @@ if target != noone
 		image_xscale = -1
     else if target.x > x
 		image_xscale = 1
-	
+	right = image_xscale;
 	mask_index = mskSandWormAppear;
 	x = target.x;
 	y = target.y;

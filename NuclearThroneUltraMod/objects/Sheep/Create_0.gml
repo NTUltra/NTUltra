@@ -9,7 +9,8 @@ hurt_pitch_variation = 0.05;
 myConfusion = noone;
 existTime = 0;
 countKill = false;
-
+frozen = noone;
+morphMe = 0;
 idle=true;
 spr_idle = sprSheepIdleA
 spr_idle_b = sprSheepIdleB;

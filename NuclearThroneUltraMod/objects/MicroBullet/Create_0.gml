@@ -10,3 +10,4 @@ cost = 0.5;
 radCost = 0;
 radCost = 0;
 borderWidth = 0.5;
+middleColour = c_white;

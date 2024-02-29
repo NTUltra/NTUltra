@@ -16,7 +16,7 @@ function scrHasFireWeapon(){
 		|| wep == 462 || wep == 485 || wep == 501 || wep == 534
 		|| wep == 573 || wep == 574 || wep == 615 || wep == 665
 		|| wep == 633 || wep == 634 || wep == 638 || wep == 650
-		|| wep == 656 || wep == 662
+		|| wep == 656 || wep == 662 || wep == 713
 		
 		|| bwep == 50  || bwep == 51  || bwep == 52  || bwep == 110
 		|| bwep == 111 || bwep == 121 || bwep == 122 || bwep == 145
@@ -30,7 +30,7 @@ function scrHasFireWeapon(){
 		|| bwep == 462 || bwep == 485 || bwep == 501 || bwep == 534
 		|| bwep == 573 || bwep == 574 || bwep == 615 || bwep == 665
 		|| bwep == 633 || bwep == 634 || bwep == 638 || bwep == 650
-		|| bwep == 656 || bwep == 662
+		|| bwep == 656 || bwep == 662 || bwep == 713
 		
 		|| cwep == 50  || cwep == 51  || cwep == 52  || cwep == 110
 		|| cwep == 111 || cwep == 121 || cwep == 122 || cwep == 145
@@ -44,7 +44,7 @@ function scrHasFireWeapon(){
 		|| cwep == 462 || cwep == 485 || cwep == 501 || cwep == 534
 		|| cwep == 573 || cwep == 574 || cwep == 615 || cwep == 665
 		|| cwep == 633 || cwep == 634 || cwep == 638 || cwep == 650
-		|| cwep == 656 || cwep == 662
+		|| cwep == 656 || cwep == 662 || cwep == 713
 
 	}
 	return false;

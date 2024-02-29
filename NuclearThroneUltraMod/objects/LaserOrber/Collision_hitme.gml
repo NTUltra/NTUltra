@@ -6,9 +6,9 @@ with other
 	{
 		snd_play(snd_hurt, hurt_pitch_variation)
 		if UberCont.normalGameSpeed == 60
-			DealDamage(1);
+			DealDamage(other.dmg,true,true,true);
 		else
-			DealDamage(2)
+			DealDamage(other.dmg,true,true,true)
 		sprite_index = spr_hurt
 		image_index = 0
 		motion_add(point_direction(other.x,other.y,x,y),3)

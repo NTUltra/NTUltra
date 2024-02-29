@@ -401,8 +401,22 @@ if !instance_exists(LevCont) and visible = 1
 			//scrn++;
 
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "FREEZE";
-			Sleep(200);
+			thing.mytext = "FIRE EVERY GUN";
+			/*
+			wep = 0;
+			var i = 0;
+			repeat(maxwep)
+			{
+				wep = i;
+				if wep!=69&&wep!=298
+				{
+					ammo[wep_type[wep]] += wep_cost[wep];
+					reload = 0;
+					scrFire();
+				}
+				i++;
+			}
+			*/
 			//if newMovement
 			//thing.mytext = "newMovement: " ;
 			//else

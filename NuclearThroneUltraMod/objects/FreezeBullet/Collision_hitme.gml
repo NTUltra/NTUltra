@@ -8,21 +8,7 @@ if Player.ultra_got[28]//roids ultra d
 DealDamage(other.dmg)
 
 //freeze bitch!
-if alarm[11]<1&&my_health>0{
-frozen=true;
-    with instance_create(x,y,FrozenEnemy)
-    {
-		var s = min(2,other.mySize)
-	    image_xscale=s*choose(1,-1);
-	    image_yscale=s;
-	    xx=other.x
-	    yy=other.y
-		owner = other.id;
-    }
-alarm[11]+= other.freezetime+15;
-if alarm[1] > 1
-	alarm[1] += other.freezetime;
-}
+scrFreezeTarget(other.freezetime);
 sprite_index = spr_hurt
 image_index = 0
 motion_add(other.direction,8)

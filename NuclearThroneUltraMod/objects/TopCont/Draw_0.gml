@@ -4,8 +4,7 @@ draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_ang
 */
 with FrozenEnemy
 {
-image_alpha=0.5;
-draw_self();
+	event_perform(ev_draw,0);
 }
 with FrozenPlayer
 {

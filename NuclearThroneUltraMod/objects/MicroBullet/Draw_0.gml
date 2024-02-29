@@ -14,7 +14,7 @@ draw_line_width_colour(
 lerp(xstart,x,lp),
 lerp(ystart,y,lp),
 x,y,width - lp - borderWidth,
-c_white,c_white);
+middleColour,middleColour);
 
 
 draw_set_alpha(1);

@@ -55,29 +55,7 @@ function scrContactDamageToEnemy(hitEnemy){
 			{
 				with hitEnemy
 				{
-					if my_health > 0
-					{
-						if alarm[11]<1 {
-							frozen=true;
-							with instance_create(x,y,FrozenEnemy)
-							{
-								var s = min(2,other.mySize)
-								image_xscale=s*choose(1,-1);
-								image_yscale=s;
-								xx=other.x
-								yy=other.y
-								debrisAmount = 3;
-								owner=other.id;
-							}
-							alarm[11]+=20;
-						if alarm[1] > 0
-								alarm[1] += 10;
-						}
-						else if alarm[1] > 0
-						{
-							alarm[1] += 10;
-						}
-					}
+					scrFreezeTarget(20);
 				}
 			}
 		}

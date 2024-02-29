@@ -1,5 +1,5 @@
 /// @description Spreading more fire
-if instance_exists(Player) && Player.moodSwing
+if instance_exists(Player) && Player.skill_got[43]
 {
 	if instance_exists(enemy)
 	{

@@ -11,8 +11,8 @@ for (var i = 0; i < 8; i ++)
 	var xx = x;
 	var yy = y;
 	var dis = minDis;
-	var step = 8;
-	for (var j = 0; j < 8; j ++)
+	var step = 16;
+	for (var j = 0; j < 4; j ++)
 	{
 		var myAng = ang+random_range(30,-30);
 		var xx = x + lengthdir_x(dis,myAng);
@@ -20,6 +20,7 @@ for (var i = 0; i < 8; i ++)
 		if (collision_point(xx,yy,Floor,false,false))
 			with instance_create(xx,yy,Dust)
 			{
+				depth = 7;
 				motion_add(myAng + 180,	2 + random(3));
 			}
 		dis += step;

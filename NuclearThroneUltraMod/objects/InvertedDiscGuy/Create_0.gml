@@ -9,6 +9,6 @@ spr_dead = sprInvertedDiscGuyDead
 spr_fire = sprInvertedDiscGuyFire
 actTime -= 1;
 discSpeed = 5;
-range = 300;
+range = 260;
 maxSpeed = 3.2;
 acc = 1;

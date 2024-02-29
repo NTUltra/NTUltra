@@ -15,7 +15,7 @@ with instance_create(x,y,Bullet1)
 {
 	if other.ultramodded
 		alarm[11] = 0;
-motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+other.aimOffset+(random(4)-2*other.accuracy),16)
+motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(other.aimOffset+(random(4)-2)*other.accuracy),16)
 	scrCopyWeaponMod(other);
 
 image_angle = direction

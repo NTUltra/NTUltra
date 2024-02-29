@@ -38,7 +38,7 @@ function scrSpawnSomeEnemies(){
 			{
 				instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraBandit);
 			}
-			else if spawnarea != 10 && spawnarea != 121 && spawnarea != 101 && spawnarea != 122//Not savanna oasis
+			else if spawnarea != 10 && spawnarea != 121 && spawnarea != 101 && spawnarea != 122 && spawnarea != 102//Not savanna oasis pizza sewers
 			{
 				if ran < 23
 				{

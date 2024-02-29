@@ -6,25 +6,10 @@ if other.team != team and other.my_health > 0 && instance_exists(myHead) && !arr
 		DealDamage(other.dmg)
 		if instance_exists(Player)
 		{
-		
-		//freeze bitch!
-		if alarm[11]<1&&my_health>0&&Player.ultra_got[63]{
-		frozen=true;
-			with instance_create(x,y,FrozenEnemy)
-			{
-				var s = min(2,other.mySize);
-				image_xscale=s*choose(1,-1);
-				image_yscale=s;
-				xx=other.x
-				yy=other.y
-				owner=other.id;
+			//freeze bitch!
+			if alarm[11]<1&&my_health>0&&Player.ultra_got[63] {
+				scrFreezeTarget(15);
 			}
-		alarm[11]+=20;
-		if alarm[1] > 0
-			alarm[1] += 15;
-		}
-
-
 		}
 		sprite_index = spr_hurt
 		image_index = 0

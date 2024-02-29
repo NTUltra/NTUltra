@@ -20,7 +20,11 @@ if instance_exists(creator)
 		}
 	}
 	with creator {
-		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180,1)
+		if object_index != Player || !skill_got[2]
+		{
+			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180,1)
+			scrMoveContactSolid(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180, 4);
+		}
 		wkick = 9
 	}
 	BackCont.viewx2 += lengthdir_x(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake

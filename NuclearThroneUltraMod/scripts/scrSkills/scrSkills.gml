@@ -1,6 +1,6 @@
 
 function scrSkills() {
-	maxskill = 42;
+	maxskill = 43;
 
 
 	dir = 0
@@ -48,7 +48,7 @@ function scrSkills() {
 	if !UberCont.useSeed && random(600) < 1
 		skill_name[2] = "SPEED UP"
 	skill_text[2] = "WALK <w>FASTER<w>"
-	skill_detail[2] = "MORE <w>SPEED<w>,#WALK NORMAL ON ALL <w>TERRAIN<w>#CLOSE <w>DODGES<w> SOMETIMES#DROP <y>RES<y><g>OUR<g><r>CES<r>#CAN'T BE <w>DISPLACED<w> BY ENEMIES"//"MORE SPEED,#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES#DROP A WEAPON/ITEM & ALWAYS DROP RADS"
+	skill_detail[2] = "MORE <w>SPEED<w>,#WALK NORMAL ON ALL <w>TERRAIN<w>#CLOSE <w>DODGES<w> SOMETIMES#DROP <y>RES<y><g>OUR<g><r>CES<r>#CAN'T BE <w>DISPLACED<w> BY ENEMIES#NEGATE WEAPON RECOIL"//"MORE SPEED,#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES#DROP A WEAPON/ITEM & ALWAYS DROP RADS"
 	skill_tips[2] = choose("run forever","run forever","run forever","you can't be displaced#when you have extra feet");
 	skill_msnd[2] =  sndMutExtraFeet
 	skill_bons[2] = "SLIGHTLY MORE SPEED#+1 RAD ON DODGE";
@@ -533,18 +533,17 @@ function scrSkills() {
 	skill_bons[42] = "+10% CHARGE RATE & BURST AMOUNT"
 	if betterWepSpecific
 		skill_bons[42] = "DOUBLE BURST & INSTA CHARGE"
-	/*
 	
 	skill_name[43] = "MOOD SWING"
-	skill_text[43] = "EXPLOSIONS <r>BURN<r>#<r>FIRE<r> SPREADS#<p>TENTACLES<p> AND <b>LIGHTNING<b> <w>STUN<w> ENEMIES#<aq>FROST<aq> BREAK INTO <w>ICICLES<w>"
-	skill_detail[43] = "EXPLOSIONS <r>BURN<r>#<r>FIRE<r> SPREADS TO NEARBY ENEMIES#<p>TENTACLES<p> AND <b>LIGHTNING<b> <w>STUN<w> ENEMIES#<aq>FROST<aq> BREAK INTO <w>ICICLES<w>";
+	skill_text[43] = "EXPLOSIONS <r>BURN<r>#<r>FIRE<r> SPREADS#<p>TENTACLES<p> AND <b>LIGHTNING<b> <w>STUN<w> ENEMIES#<aq>FROST<aq> BREAKS INTO <w>ICICLES<w>"
+	skill_detail[43] = "EXPLOSIONS <r>BURN<r>#<r>FIRE<r> SPREADS TO NEARBY ENEMIES#<p>TENTACLES<p> AND <b>LIGHTNING<b> <w>STUN<w> ENEMIES#STUNNED ENEMIES DONT ACT OR MOVE#<aq>FROST<aq> BREAKS INTO <w>ICICLES<w>#ICICLES CAN ONCE AGAIN FREEZE";
 	skill_tips[43] = "feeling like an element"
 	skill_msnd[43] =  sndMutAlienIntestines
 	skill_bons[43] = "+FIRE RANGE, +ICICLES, LONGER STUN"
 	if betterWepSpecific
-		skill_bons[43] = "++FIRE RANGE, ++ICICLES, EVEN LONGER STUN#EXPLOSIONS ALSO SPAWN ICICLES"
+		skill_bons[43] = "ALL EFFECTS OCCUR ON ALL ELEMENTS"
 	
-	
+	/*
 	A SET OF SPECIAL SECRET WEAPON SPECIFIC MUTATIONS YOU HAVE TO DO SOME SORT OF PRE-LOOP CHALLENGE FOR, REPLACES ONE LEVEL/NORMAL MUTATION
 	or just add them to the set its nice to encounter them and take them based on your weapon instead of going out of your way to get them
 	skill_name[42] = "ADRENALINE RUSH"
@@ -609,12 +608,12 @@ function scrSkills() {
 	skill_msnd[33] =  sndMutThronebutt
 	*/
 	
-	skill_name[43] = "NOTHING"
-	skill_text[43] = "THERE ARE <w>NO MORE<w> <g>MUTATIONS<g> LEFT!"
-	skill_detail[43] = skill_text[43];
-	skill_tips[43] = "you have all mutations!"
-	skill_msnd[43] =  sndPartyHorn
-	skill_bons[43] = "EVEN MORE NOTHING <3"
+	skill_name[maxskill + 1] = "NOTHING"
+	skill_text[maxskill + 1] = "THERE ARE <w>NO MORE<w> <g>MUTATIONS<g> LEFT!"
+	skill_detail[maxskill + 1] = skill_text[maxskill + 1];
+	skill_tips[maxskill + 1] = "you have all mutations!"
+	skill_msnd[maxskill + 1] =  sndPartyHorn
+	skill_bons[maxskill + 1] = "EVEN MORE NOTHING <3"
 
 
 }

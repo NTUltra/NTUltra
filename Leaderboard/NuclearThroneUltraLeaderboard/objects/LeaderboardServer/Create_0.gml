@@ -23,6 +23,8 @@ weekGamemode = -1;
 weeklyOption = [];
 biDailyGamemode = -1;
 biDailylyOption = [];
+totalHitsCounter = [];
+hitsCounter = 0;
 event_perform(ev_alarm,0);
 event_user(0);
 
@@ -46,3 +48,4 @@ enum NETDATA {
 draw_set_font(fntM);
 alarm[1] = 120;
 noFile = false;
+x += 64;//Show me hits

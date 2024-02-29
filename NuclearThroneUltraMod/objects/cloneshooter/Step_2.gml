@@ -46,6 +46,11 @@ if instance_exists(Player)
 				if 	team == Player.team
 					playerIsBursting = true;
 			}
+			with ChargeWeapons
+			{
+				if 	team == Player.team
+					playerIsBursting = true;
+			}
 			if !playerIsBursting {
 				alarm[0] = 2;
 			}

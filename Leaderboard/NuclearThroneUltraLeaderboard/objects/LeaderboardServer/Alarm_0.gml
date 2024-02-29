@@ -8,6 +8,8 @@ week = date_get_week(date_current_datetime());
 
 if day != yesterday
 {
+	totalHitsCounter[array_length(totalHitsCounter)] = hitsCounter;
+	hitsCounter = 0;
 	var fileName = file_find_first("ds*", 0);
 	totalDailies = defaultTotalDailies;
 	defaultTotalDailies = 0;

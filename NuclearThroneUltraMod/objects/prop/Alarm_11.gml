@@ -1,2 +1,2 @@
 /// @description TIME FROZEN
-frozen=false;
+frozen=noone;

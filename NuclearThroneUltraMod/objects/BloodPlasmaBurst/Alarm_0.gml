@@ -36,6 +36,14 @@ BackCont.viewx2 += lengthdir_x(6,point_direction(x,y,UberCont.mouse__x,UberCont.
 BackCont.viewy2 += lengthdir_y(6,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 BackCont.shake += 3
 creator.wkick = 5
+with creator
+{
+	if object_index != Player || !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection + 180,0.6);
+		motion_add(aimDirection+180,0.6)
+	}	
+}
 }
 
 

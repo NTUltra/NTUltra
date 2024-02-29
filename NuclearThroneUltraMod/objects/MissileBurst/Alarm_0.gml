@@ -46,7 +46,11 @@ scrCopyWeaponMod(other);
 team = other.team}
 
 with creator{
-motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180,4)
+	if object_index != Player || !skill_got[2]
+	{
+		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180,4)
+		scrMoveContactSolid(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180, 10);
+	}
 wkick = 9}
 
 BackCont.viewx2 += lengthdir_x(28,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake

@@ -25,7 +25,14 @@ BackCont.shake += 8
 creator.wkick = 8
 }
 
-
+with creator
+{
+	if object_index != Player || !skill_got[2]
+	{
+		scrMoveContactSolid(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + 180,0.6);
+		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180,0.6)
+	}	
+}
 if ammo <= 0
 instance_destroy()
 

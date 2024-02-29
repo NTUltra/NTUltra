@@ -30,7 +30,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	ultra_text[4] = "REDUCE <y>AMMO<y>/<g>RAD<g> COST BY 5%#INCREASE PRIMARY <w>RELOAD SPEED<w>#DEPENDING ON YOUR <w>SPEED<w>#MUCH MORE EFFECTIVE WHEN <w>ROLLING<w>"
 	ultra_tips[4] = "is waterboost a thing now?"
 	
-	if instance_exists(Player) && Player.race == 1 && (Player.altUltra)
+	if altOverride || instance_exists(Player) && Player.race == 1 && (Player.altUltra)
 	{
 		ultra_name[4] = "FISH CAN GUN"
 		ultra_text[4] = "REDUCE <y>AMMO<y>/<g>RAD<g> COST BY 15%#THE MORE <y>AMMO<y> YOU HAVE#THE HIGHER YOUR <w>RELOAD SPEED<w>#DOES NOT HAVE AN EFFECT ON MELEE"
@@ -66,7 +66,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	ultra_text[9] = "HOLD YOUR PROJECTILES#HELD PROJECTILES <aq>BLOCK<aq>#ENEMY PROJECTILES"
 	ultra_tips[9] = "need more cannons"
 	
-	if altOverride || (instance_exists(Player) && Player.altUltra)
+	if altOverride || (instance_exists(Player) && Player.race == 3 && Player.altUltra)
 	{
 		ultra_name[9] = "STRANGE STYLE"
 		ultra_text[9] = "TELEKINESIS PULLS#ENEMIES AND PROJECTILES#TOWARDS YOUR <w>CROSSHAIR<w>#<w>INFINITE<w> TELEKINESIS RANGE#STRONGER PROJECTILE PUSH"
@@ -76,7 +76,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	ultra_name[10] = "MONSTER STYLE"
 	ultra_text[10] = "WHEN NOT USING ACTIVE#PUSH ENEMIES AWAY"
 	ultra_tips[10] = "repellent"
-	if altOverride || (instance_exists(Player) && Player.altUltra)
+	if altOverride || (instance_exists(Player) && Player.race == 3 && Player.altUltra)
 	{
 		ultra_name[10] = "VOID STYLE"
 		ultra_text[10] = "YOUR ACTIVE CHANGES INTO <p>VOID<p> <w>PULL<w>#BURST PULL ALL <r>ENEMIES<r>#AND <r>ENEMY<r> <w>PROJECTILES<w> TOWARDS YOU#CREATE A <p>VOID<p> <w>CIRCLE<w> AROUND YOURSELF#THAT CONSUMES PROJECTILES#AND DEALS DAMAGE TO ENEMIES"

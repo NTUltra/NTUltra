@@ -1271,7 +1271,7 @@ function scrWeapons() {
 	wep_load[113] = 4
 	wep_cost[113] = 0
 	wep_sprt[113] = sprInfinityMachinegun
-	wep_area[113] = 14
+	wep_area[113] = 13
 	wep_text[113] = "endless"
 	wep_swap[113] = sndSwapMachinegun
 	wep_rad[113] = 0;
@@ -1318,7 +1318,7 @@ function scrWeapons() {
 	wep_area[117] = 19
 	wep_text[117] = ""
 	wep_swap[117] = sndSwapEnergy
-	wep_rad[117] = 16;
+	wep_rad[117] = 15;
 
 	wep_name[118] = "ULTRA SHOVEL"
 	wep_type[118] = 0
@@ -1689,7 +1689,7 @@ function scrWeapons() {
 	wep_load[151] = 19//18
 	wep_cost[151] = 0
 	wep_sprt[151] = sprInfinityShotgun
-	wep_area[151] = 14
+	wep_area[151] = 13
 	wep_text[151] = "eternal"
 	wep_swap[151] = sndSwapShotgun
 	wep_rad[151] = 0;
@@ -1700,7 +1700,7 @@ function scrWeapons() {
 	wep_load[152] = 24//25
 	wep_cost[152] = 0
 	wep_sprt[152] = sprInfinityCrossbow
-	wep_area[152] = 14
+	wep_area[152] = 13
 	wep_text[152] = "forever"
 	wep_swap[152] = sndSwapBow
 	wep_rad[152] = 0;
@@ -2679,7 +2679,7 @@ function scrWeapons() {
 	wep_load[239] = 23
 	wep_cost[239] = 1
 	wep_sprt[239] = sprRocketGlove
-	wep_area[239] = 12
+	wep_area[239] = 11
 	wep_text[239] = "ROCKET PWUNCH!"
 	wep_swap[239] = sndSwapHammer
 	wep_rad[239] = 0;
@@ -2701,7 +2701,7 @@ function scrWeapons() {
 	wep_load[241] = 21//22
 	wep_cost[241] = 0
 	wep_sprt[241] = sprInfinitySlugger
-	wep_area[241] = 14
+	wep_area[241] = 13
 	wep_text[241] = "8"
 	wep_swap[241] = sndSwapShotgun
 	wep_rad[241] = 0;
@@ -2712,7 +2712,7 @@ function scrWeapons() {
 	wep_load[242] = 9//10
 	wep_cost[242] = 0
 	wep_sprt[242] = sprInfinityLaserGun
-	wep_area[242] = 14
+	wep_area[242] = 13
 	wep_text[242] = "boundlessness"
 	wep_swap[242] = sndSwapEnergy
 	wep_rad[242] = 0;
@@ -4768,7 +4768,7 @@ function scrWeapons() {
 	wep_load[424] = 8
 	wep_cost[424] = 1
 	wep_sprt[424] = sprWazerRifle
-	wep_area[424] = 13
+	wep_area[424] = 12
 	wep_text[424] = "an actual laser"
 	wep_swap[424] = sndSwapEnergy
 	wep_rad[424] = 0;
@@ -5044,7 +5044,7 @@ function scrWeapons() {
 	wep_load[449] = 8
 	wep_cost[449] = 2
 	wep_sprt[449] = sprPopWall
-	wep_area[449] = 12
+	wep_area[449] = 11
 	wep_text[449] = "pellets are closer together#with higher accuracy"
 	wep_swap[449] = sndSwapShotgun
 	wep_rad[449] = 0;
@@ -6998,7 +6998,7 @@ function scrWeapons() {
 	wep_load[626] = 8
 	wep_cost[626] = 5
 	wep_sprt[626] = sprBloodWall
-	wep_area[626] = 12
+	wep_area[626] = 11
 	wep_text[626] = "a wall of blood"
 	wep_swap[626] = sndSwapShotgun
 	wep_rad[626] = 0;
@@ -7454,7 +7454,7 @@ function scrWeapons() {
 	wep_load[667] = 2
 	wep_cost[667] = 0.5
 	wep_sprt[667] = sprMicroSMG
-	wep_area[667] = 3
+	wep_area[667] = 2
 	wep_text[667] = "rapid fire"
 	wep_swap[667] = sndSwapPistol
 	wep_rad[667] = 0;
@@ -7465,7 +7465,7 @@ function scrWeapons() {
 	wep_load[668] = 12
 	wep_cost[668] = 1
 	wep_sprt[668] = sprMicroShotgun
-	wep_area[668] = 2
+	wep_area[668] = 3
 	wep_text[668] = "rapid fire shotgun"
 	wep_swap[668] = sndSwapShotgun
 	wep_rad[668] = 0;
@@ -8096,6 +8096,61 @@ function scrWeapons() {
 	wep_text[724] = "quiver in freeze"
 	wep_swap[724] = sndSwapMachinegun
 	wep_rad[724] = 0;
+	
+	wep_name[725] = "ULTRA ORBITER"
+	wep_type[725] = 5
+	wep_auto[725] = 2
+	wep_load[725] = 16
+	wep_cost[725] = 4.25
+	wep_sprt[725] = sprUltraOrbiter 
+	wep_area[725] = 21
+	wep_text[725] = "from orbit"
+	wep_swap[725] = sndSwapEnergy
+	wep_rad[725] = 21;
+	
+	wep_name[726] = "FROST TELEPATHOR"
+	wep_type[726] = 2
+	wep_auto[726] = 3
+	wep_load[726] = 10
+	wep_cost[726] = 2
+	wep_sprt[726] = sprTelepathor
+	wep_area[726] = 7
+	wep_text[726] = "telepathic shotgun"
+	wep_swap[726] = sndSwapShotgun
+	wep_rad[726] = 0;
+	
+	wep_name[727] = "OLD RIFLE"
+	wep_type[727] = 1
+	wep_auto[727] = 0
+	wep_load[727] = 9
+	wep_cost[727] = 3
+	wep_sprt[727] = sprOldRifle
+	wep_area[727] = 1
+	wep_text[727] = "this gun came from someone who was on loop and died then it got old and rusted"
+	wep_swap[727] = sndSwapPistol
+	wep_rad[727] = 0;
+	
+	wep_name[728] = "MICRO GRENADE"
+	wep_type[728] = 4
+	wep_auto[728] = 1
+	wep_load[728] = 9
+	wep_cost[728] = 1.75
+	wep_sprt[728] = sprMicroGrenade
+	wep_area[728] = 1
+	wep_text[728] = "step 1: blow it up"
+	wep_swap[728] = sndSwapExplosive
+	wep_rad[728] = 0;
+	
+	wep_name[729] = "ICICLE GUN"
+	wep_type[729] = 5
+	wep_auto[729] = 3
+	wep_load[729] = 12
+	wep_cost[729] = 0.5
+	wep_sprt[729] = sprIcicleGun
+	wep_area[729] = 16
+	wep_text[729] = "ice shards"
+	wep_swap[729] = sndSwapFrost
+	wep_rad[729] = 0;
 
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

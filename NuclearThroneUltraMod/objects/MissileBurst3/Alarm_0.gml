@@ -44,7 +44,11 @@ image_angle = direction
 team = other.team}
 */
 with creator{
-motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180,4)
+	if object_index != Player || !skill_got[2]
+	{
+		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180,4)
+		scrMoveContactSolid(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180, 6);
+	}
 wkick = 6}
 
 BackCont.viewx2 += lengthdir_x(22,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake

@@ -50,7 +50,7 @@ wakeObject = MeleeBandit;
 wakeSound = sndAssassinGetUp;
 
 morphMe=0;
-frozen=false;
+frozen=noone;
 countKill = true;
 EnemyHealthAdjustments();
 scrInitDrops(1);

@@ -9,5 +9,5 @@ maxhealth = 40
 EnemyHealthAdjustments();
 meleedamage = 6
 actTime -= 2;
-range = 400;
+range = 300;
 loops += 3;

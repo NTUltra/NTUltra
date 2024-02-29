@@ -325,7 +325,7 @@ if laserhit>0// && random(3)<1
 			}*/
 			isog = false;
 		    team = other.team
-			sprite_index=sprBouncingLaser;
+			sprite_index=other.sprite_index;
 		    laserhit=other.laserhit-1;
 			//dir = 0;
 			//do {x += lengthdir_x(1,image_angle) y += lengthdir_y(1,image_angle) dir += 1}

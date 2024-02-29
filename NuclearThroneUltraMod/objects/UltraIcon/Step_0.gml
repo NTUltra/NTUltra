@@ -266,7 +266,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			if Player.race == 1 && other.isAlternative
+			if race == 1 && other.isAlternative
 			{
 				debug("FISH CAN GUN");
 				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
@@ -277,6 +277,7 @@ if (selected && visible &&
 				spr_hurt=sprMutant1CHurt;
 				spr_dead=sprMutant1CDead;
 				altUltra = true;
+				scrUltras(true, false);
 			}
 			else
 				scrWeaponAdjustCost(0.95);

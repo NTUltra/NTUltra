@@ -22,5 +22,13 @@ repeat(projectileAmount) {
 		boost += 0.5;
 	}
 }
+with creator
+{
+	if object_index != Player || !skill_got[2]
+	{
+		scrMoveContactSolid(point_direction(x,y,other.mox,other.moy) + 180,0.4);
+		motion_add(point_direction(x,y,other.mox,other.moy)+180,0.4)
+	}	
+}
 if ammo < 1
 	instance_destroy()

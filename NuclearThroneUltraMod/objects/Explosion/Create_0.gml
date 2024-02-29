@@ -60,6 +60,10 @@ if instance_exists(Player) {
 		}
 		scrCrownOfDeath();
 	}
+	if Player.skill_got[43]
+	{
+		 alarm[6] = 10;
+	}
 }
 motion_add(random(360),0.1);
 alarm[0]=3;

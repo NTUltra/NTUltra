@@ -1,4 +1,5 @@
 //shatter anim?
+if !audio_is_playing(sndBreakIce)
 snd_play(sndBreakIce);
 with owner
 {
@@ -15,7 +16,7 @@ repeat(debrisAmount){
 	}
 }
 
-if (instance_exists(Player) && Player.moodSwing)
+if (instance_exists(Player) && Player.skill_got[43])
 {
 	var am = debrisAmount * 3;
 	var angStep = 360/am;

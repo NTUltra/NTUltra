@@ -43,7 +43,8 @@ if instance_exists(Player)
 			{
 				mask_index = mskPickupThroughWall;
 				t += 0.3;
-				scrRecycleGland(cost,radCost);
+				if cost != 0
+					scrRecycleGland(cost,radCost);
 			}
 		}
 	}

@@ -23,6 +23,14 @@ y = creator.y
 	BackCont.viewy2 += lengthdir_y(13,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 	BackCont.shake += 9
 	creator.wkick = 8
+	with creator
+	{
+		if object_index != Player || !skill_got[2]
+		{
+			scrMoveContactSolid(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + 180,1);
+			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180,1)
+		}	
+	}
 }
 
 

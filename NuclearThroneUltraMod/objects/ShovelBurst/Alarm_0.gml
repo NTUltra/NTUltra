@@ -11,7 +11,11 @@ if instance_exists(creator)
 		var aimDir = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 		with creator
 		{
-			motion_add(aimDir,2);
+			if object_index != Player || !skill_got[2]
+			{
+				motion_add(aimDir,2);
+				scrMoveContactSolid(aimDir, 2);
+			}
 		}
 		var typeOfSlash = ammo % 3;
 		var spr = sprHeavySlash;

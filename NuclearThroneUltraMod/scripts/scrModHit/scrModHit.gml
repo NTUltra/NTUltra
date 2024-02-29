@@ -186,22 +186,7 @@ function scrModHit(projectileRef) {
 					//freeze bitch!
 				    if newfrost{
 				        with other{//enemy
-					        if alarm[11] < 1 && my_health > 0 {//this probably doesnt work cause iit takes the health off after this collision detection
-								frozen=true;
-					            with instance_create(x,y,FrozenEnemy)
-					            {
-									owner = other.id;
-						            var s = min(2,other.mySize)
-								    image_xscale=s*choose(1,-1);
-								    image_yscale=s;
-						            xx=other.x
-						            yy=other.y
-						            debrisAmount=4;
-					            }
-					        alarm[11]+=14;
-					        if alarm[1] > 0
-					            alarm[1] += 7;
-					        }
+							scrFreezeTarget(7);
 						}
 				        newfrost=false;
 				    }
