@@ -360,7 +360,7 @@ goal=110;
 else if Player.area == 113//Banditland
 goal=70+s;
 else if Player.area == 114 || Player.area == 123//jungle
-goal=130+s;
+goal=125+s;
 else if Player.area == 117 || Player.area == 124//Mushroom land
 goal=120+s;
 else if Player.area == 119 || Player.area == 120

@@ -6,7 +6,7 @@ else if (wepmod2==0)
 {wepmod2=wepmod;}
 else if (wepmod3==0)
 {wepmod3=wepmod;}
-else if instance_exists(Player) && Player.skill_got[30]&&wepmod4==0//power craving
+else if instance_exists(Player) && Player.skill_got[30] && wepmod4==0//power craving
 {
     wepmod4=wepmod;
     scrUnlockCSkin(17,"FOR ADDING FOUR MODS#TO ONE WEAPON",0);

@@ -146,7 +146,7 @@ if canAlt
 	{
 		sprite_index = sprFreakRogue;
 	}
-	else if skill == 92 && Player.race == 23 && (Player.unlockAlternativeUltras || isAlternative || Player.wep_type[Player.wep] == 3 && Player.wep_type[Player.bwep] == 3)
+	else if skill == 92 && Player.race == 23 && (Player.unlockAlternativeUltras || isAlternative || Player.wep_type[Player.wep] == 3 && (Player.wep_type[Player.bwep] == 3 || Player.bwep == 0))
 	{
 		sprite_index = sprSpikedFrog;
 	}

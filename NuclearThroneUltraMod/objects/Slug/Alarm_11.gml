@@ -63,7 +63,7 @@ else if um == ultramods.shotgunElectro
 	image_angle = direction}
 	with instance_create(x,y,ElectroBallBig)
 	{
-		balls = 6;
+		balls = 4;
 		dmgReduction = 2;
 		dmg = 3;
 		electroDelay = 16;

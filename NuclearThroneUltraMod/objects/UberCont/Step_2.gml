@@ -35,4 +35,8 @@ else
 		mouse__x = mouse_x;
 		mouse__y = mouse_y;
 	}
+	else
+	{
+		debug("CANT AIM");	
+	}
 }

@@ -27,7 +27,17 @@ function scrSpawnEndLevelPortal(){
 			    {
 					if instance_exists(Portal)
 					{
-						dir = instance_furthest(Portal.x,Portal.y,Floor);
+						dir = instance_furthest(x,y,Portal);
+						with Floor
+						{
+							if object_index != FloorExplo
+							{
+								var n = instance_nearest(x,y,Portal);
+								if n != noone && point_distance(n.x,n.y,x+16,y+16) > 128 {
+									dir = id;
+								}
+							}
+						}
 					}
 					else
 					{

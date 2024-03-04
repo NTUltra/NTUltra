@@ -9,7 +9,7 @@ if other.isGrenade && Player.ultra_got[51] {
 }
 if team != other.team
 {
-	Player.sheepPower -= projectileHitBrake*other.dmg;
+	Player.sheepPower -= projectileHitBrake*min(2,round(other.dmg*0.5));
 	Player.speed *= 0.4;
 	Sleep(2);
 	BackCont.viewx2 += lengthdir_x(1,direction)*UberCont.opt_shake
@@ -24,10 +24,11 @@ if team != other.team
 	else if (Player.ultra_got[51]) {
 	    //deflect
 		BackCont.shake += 2;
-		if other.typ=1
+		if other.typ == 1
 		{
 			with other
 			{
+				team = other.team;
 				snd_play(sndRicochet,0.1,true);
 				event_user(15);
 				if instance_exists(enemy)
@@ -45,11 +46,26 @@ if team != other.team
 					image_angle = other.direction
 			}
 		}
-	    else if other.typ=2 || Player.ultra_got[51]
-	    {
-		    with other
-				instance_destroy()
-	    }
+		else if other.typ == 0 && !other.canBeMoved
+		{
+			with other
+			{
+				var d = point_distance(xstart,ystart,other.x,other.y) - 1;
+				x = xstart + lengthdir_x(d,image_angle);
+				y = ystart + lengthdir_y(d,image_angle);
+				image_xscale = point_distance(x,y,xstart,ystart)*0.5
+			}
+			Player.sheepPower += 0.1;
+		}
+		else
+		{	with other
+				instance_destroy();	
+		}
+	} else if other.typ == 1
+	{
+		BackCont.shake += 1;
+		with other{
+		instance_destroy();}
 	}
 }
 

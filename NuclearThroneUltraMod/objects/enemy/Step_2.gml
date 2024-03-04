@@ -10,7 +10,7 @@ if alarm[1] > 1 && alarm[1] < 3
 	{
 		frozen = noone
 	}
-	else if alarm[11] < 10
+	else if alarm[11] < 4
 	{
 		frozen = noone;
 	}
@@ -19,19 +19,16 @@ if alarm[1] > 1 && alarm[1] < 3
 		var dt = 1;
 		if UberCont.normalGameSpeed == 60
 			dt = 0.5;
-		with All
+		var i = 0;
+		repeat(13)
 		{
-			var i = 0;
-			repeat(13)
+			if i != 1
 			{
-				if i != 1
-				{
-					var a = alarm_get(i);
-					if a > 0
-						alarm_set(i, max(2,a + dt));
-				}
-				i++;
+				var a = alarm_get(i);
+				if a > 0
+					alarm_set(i, max(2,a + dt));
 			}
+			i++;
 		}
 	}
 	if instance_exists(Player)
@@ -52,7 +49,8 @@ if alarm[1] > 1 && alarm[1] < 3
 		}
 	speed = 0;
 	target = -1;
-	walk = 0;
+	if mySize < 8
+		walk = 0;
 	//image_speed=0;
 	}
 }

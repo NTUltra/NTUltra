@@ -191,13 +191,32 @@ if (selected && visible &&
 			scrUltras(true, false);
 		}
 	}
-	else if skill == 59 && Player.race == 15 && isAlternative
+	else if skill == 59
 	{
-		with Player
+		if Player.race == 15 && isAlternative
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
-			altUltra = true;
-			scrUltras(true, false);
+			with Player
+			{
+				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+				altUltra = true;
+				scrUltras(true, false);
+			}
+		}
+		else
+		{
+			with Player {
+				for (var i = 0; i < maxwep; i++) {
+					if wep_type[i] != 0
+					{
+						if wep_type[i] = 1
+						{
+							wep_cost[i] *= 0.2;
+							wep_rad[i] *= 0.2;
+						}
+						wep_type[i] = 5;
+					}
+				}
+			}
 		}
 	}
 	else if skill == 82
@@ -268,7 +287,6 @@ if (selected && visible &&
 		{
 			if race == 1 && other.isAlternative
 			{
-				debug("FISH CAN GUN");
 				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 				scrWeaponAdjustCost(0.85);
 				bskin = 2;

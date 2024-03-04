@@ -8,10 +8,12 @@ if y+z < __view_get( e__VW.YView, 0 )-64 and -z > 160
 {
 if instance_exists(Player)
 {
-	var ground = instance_nearest(Player.xprevious+16+random(96)-48,Player.yprevious+16+random(96)-48,Floor);
+	var range = 96;
+	do {
+		var ground = instance_nearest(Player.xprevious+16+(random(range)-range*0.5),Player.yprevious+16+(random(range)-range*0.5),Floor);
+		range += 32;
+	}	until (ground.object_index != FloorExplo)
 	var o = 16;
-	if ground.object_index == FloorExplo
-		o = 8;
 	x = ground.x + o;
 	y = ground.y + o;
 	scrForcePosition60fps();

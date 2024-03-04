@@ -19,12 +19,11 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 			pa = pam;
 		if st == 0
 			sa = sam;
-		
 	}
 	if Player.skill_got[36]
 	{
 		speed = 6;
-		scrRaddrop(choose(2,3,3));
+		scrRaddrop(2);
 	}
 	var randomAmmo = true;
 
@@ -114,7 +113,10 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 	//Roids get loaded ultra
 	//if ( Player.ultra_got[26] && Player.wep!=0 )
 	//type = pt;
-
+	if Player.ultra_got[59] && !Player.altUltra
+	{
+		type = 5;
+	}
 	if type == 0 || Player.ammo[type] > Player.typ_amax[type]
 		type = choose(1,2,3,4,5);
 

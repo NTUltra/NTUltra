@@ -15,7 +15,7 @@ if instance_exists(Player)
 {
 	if Player.ultra_got[57]
 	{
-		dmg += 3;
+		dmg += 4;
 	}
 	if scrIsCrown(3) && object_index == PopoExplosion
 	{

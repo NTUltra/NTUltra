@@ -12,8 +12,15 @@ var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 BackCont.viewx2 += lengthdir_x(2,aimDirection+180)*UberCont.opt_shake
 BackCont.viewy2 += lengthdir_y(2,aimDirection+180)*UberCont.opt_shake
 BackCont.shake += 2
-creator.wkick = 5
-
+with creator
+{
+	wkick = 5
+	if object_index != Player || !skill_got[2]
+	{
+		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180,1)
+		scrMoveContactSolid(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180, 1);
+	}
+}
 with instance_create(x,y,Bullet2)
 {
 motion_add(aimDirection+random(4)-2+sin(other.ammo*2)*16*other.accuracy,17-other.ammo)

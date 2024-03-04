@@ -1,6 +1,6 @@
 /// @description Side waves
 alarm[2] = actTime;
-if instance_exists(Player) && !instance_exists(InvertedThrone2WaveSquareBullet)
+if instance_exists(Player) && !instance_exists(InvertedThrone2WaveSquareBullet) && !Player.justAsheep
 {
 	if point_distance(x,y,Player.x,Player.y) > 96 && abs(Player.x - x) > 48
 	{

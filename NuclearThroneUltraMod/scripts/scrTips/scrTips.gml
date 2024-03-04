@@ -459,6 +459,7 @@ function scrTips() {
 	"charge increases damage#the longer you charge it","while charging#at high speed#you don't take#contact damage","you are immune#while charging#at high speed",
 	"extra feet and gamma guts#buff your charge","eat grass","popo won't come for you#while passive is active","you don't take contact damage#while passive is active"
 	,"hypersomnia goes in effect#after your passive","pink lines indicate line of sight","when enemies see you kill they will attack you","when enemies see you deal damage they will attack"
+	,"sheep can tackle vans!","sheep is very good at taking out idpd vans"
 	)
 
 	if Player.race = 14//panda
@@ -523,7 +524,7 @@ function scrTips() {
 	,"Any projectile in one shot#counts as one hit","When one of multiple projectiles#fire in one shot/burst#hits an enemy it counts as a hit"
 	,"Out of the fallout shelter","focus and discipline","experience","shrink and slow projectiles","active costs unequipped weapon type ammo",
 	"with years of experience#humphry has mastered the art#of shrinking bullets","good o'l humphry was the first mutant","one and only mutant#without side effects","super soldier"
-	,"immortal soldier","overkill","S S S#Slow Shrink Stun")
+	,"immortal soldier","overkill","S S S#Slow Shrink Stun","active costs an additional 1% skill on loop")
 	
 	if Player.race = 27//HANDS
 	tip = choose("look ma! no face","don't get too touchy","proto","the only inverted mutant","pull my finger","hand from the other side",

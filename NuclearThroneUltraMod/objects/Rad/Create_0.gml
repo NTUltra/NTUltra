@@ -29,7 +29,7 @@ if instance_exists(Player){
 
 	if Player.ultra_got[89]
 	{
-		repeat(2)
+		repeat(choose(1,2,2))
 		with instance_create(x,y,ToxicThrowerGas)
 		{
 			motion_add(random(360),2+(Player.skill_got[5]));
@@ -40,8 +40,8 @@ if instance_exists(Player){
 		snd_play(sndSwarmRapid,0.1,true);
 		with instance_create(x,y,SwarmBolt)
 		{
+			hits += 1;
 			team = 2;
-			hits = 1;
 			alarm[0] = 3
 			direction = random(360);
 		}

@@ -22,9 +22,10 @@ if (hasNoMenuOpen()
 	    do {
 			var sprite = wep_sprt[UberCont.start_wep[wepiter]];
 	        spritewidth = sprite_get_width(sprite);
-	        if wepx + spritewidth > 320 {
-	            wepx = 148;
-	            wepy += 16;
+	        if (wepx + spritewidth > 320 ||
+			(wepy >= 160 && wepx + spritewidth > 280)){
+	            wepx = 147;
+	            wepy += 15;
 	        }
 	        var xx = __view_get( e__VW.XView, 0 )+xo+wepx;
 			var yy = __view_get( e__VW.YView, 0 )+wepy;
@@ -258,7 +259,7 @@ if (hasNoMenuOpen()
 			var spriteIndex = wep;
 			if spriteIndex == 0
 			{
-				var uniqueStartingWeapons = 40;
+				var uniqueStartingWeapons = 41;
 				if race == 6 || race == 12
 					spriteIndex = uniqueStartingWeapons;//YC YV
 				else if race == 9

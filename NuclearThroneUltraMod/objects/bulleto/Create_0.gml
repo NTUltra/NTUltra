@@ -9,7 +9,7 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 RecycleGlandType();
 norecycle=false;
-dmg = 10;
+dmg = 11;
 alarm[11] = 0;
 rotation = choose(30,-30);
 cost = 10;//actual cost is 6

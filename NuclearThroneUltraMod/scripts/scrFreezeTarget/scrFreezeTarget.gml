@@ -1,8 +1,7 @@
 ///scrFreezeTarget();
 // /@description
 ///@param
-function scrFreezeTarget(stunTime){
-	if my_health > 0{
+function scrFreezeTarget(stunTime,frostDamage = 2){
 		if frozen == noone
 		{
 			frozen = instance_create(x,y,FrozenEnemy);
@@ -20,13 +19,22 @@ function scrFreezeTarget(stunTime){
 		else
 		{
 			with frozen {
-				debrisAmount += 1;
+				debrisAmount = min(debrisAmount + 0.5, 6);
 			}
 		}
 		if alarm[1] > stunTime
 			stunTime *= 0.5;
-		alarm[11]+=stunTime + 5;
+		alarm[11] += stunTime + 5;
 		if alarm[1] > 0
 			alarm[1] += stunTime;
-	}
+		if mySize < 8
+		{
+			speed = 0;
+			walk = 0;
+		}
+		if (instance_exists(Player) && Player.skill_got[43] && Player.ultra_got[97] && !Player.altUltra && team != 0)
+		{
+			scrMoodSwingStun(7);
+			scrMoodSwingFlameSpread(24);
+		}
 }

@@ -11,7 +11,10 @@ yy=0;
 alarm[0] += instance_number(UnlockPopup);
 with UnlockPopup
 {
-	alarm[0] *= 0.75;
+	if alarm[0] > 5
+	{
+		alarm[0] *= 0.75;
+	}
 }
 if instance_exists(GenCont)
 {

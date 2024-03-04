@@ -6,7 +6,7 @@ with Player
 	{
 		humphrySkill *= other.humphryAmount;
 		if humphrySkill > 500
-			humphrySkill *= 0.95;
+			humphrySkill *= 0.9;
 		if humphrySkill > 1000
 			humphrySkill *= 0.85;
 		if humphrySkill > 2000

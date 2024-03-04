@@ -67,7 +67,7 @@ function scrCollectHP(num = 2){
 			}
 			*/
 			speed = 6;
-			scrRaddrop(choose(2,3,3));
+			scrRaddrop(2);
 		}
 		if scrIsGamemode(9) //Casual mode
 			num +=1;

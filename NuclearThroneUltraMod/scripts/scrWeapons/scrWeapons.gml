@@ -1383,7 +1383,7 @@ function scrWeapons() {
 	wep_sprt[123] = sprFrostGlove
 	wep_area[123] = 7
 	wep_text[123] = "cold hands"
-	wep_swap[123] = sndSwapHammer
+	wep_swap[123] = sndSwapFrost
 	wep_rad[123] = 0;
 
 	wep_name[124] = "LIGHTNING HAMMER"
@@ -1510,7 +1510,7 @@ function scrWeapons() {
 	wep_name[135] = "LOLLIPOP"
 	wep_type[135] = 0
 	wep_auto[135] = 0
-	wep_load[135] = 36
+	wep_load[135] = 37
 	wep_cost[135] = 0
 	wep_sprt[135] = sprLollipop
 	wep_area[135] = 16
@@ -3084,7 +3084,7 @@ function scrWeapons() {
 	wep_name[275] = "GHOST SHOVEL"
 	wep_type[275] = 0
 	wep_auto[275] = 0
-	wep_load[275] = 42
+	wep_load[275] = 44
 	wep_cost[275] = 0
 	wep_sprt[275] = sprGhostShovel
 	wep_area[275] = 18
@@ -3420,7 +3420,7 @@ function scrWeapons() {
 	wep_sprt[305] = sprSnowBlower
 	wep_area[305] = 10
 	wep_text[305] = "burn burn burn"
-	wep_swap[305] = sndSwapFlame
+	wep_swap[305] = sndSwapFrost
 	wep_rad[305] = 0;
 
 	wep_name[306] = "BULLET DISPERSE GUN"
@@ -3442,7 +3442,7 @@ function scrWeapons() {
 	wep_sprt[307] = sprFrostFlareGun
 	wep_area[307] = 8
 	wep_text[307] = "signal for yeti"
-	wep_swap[307] = sndSwapFlame
+	wep_swap[307] = sndSwapFrost
 	wep_rad[307] = 0;
 
 	wep_name[308] = "BULLET DISPERSE MACHINEGUN"
@@ -3607,7 +3607,7 @@ function scrWeapons() {
 	wep_sprt[322] = sprSnowDragon
 	wep_area[322] = 14
 	wep_text[322] = "cold breath"
-	wep_swap[322] = sndSwapDragon
+	wep_swap[322] = sndSwapFrost
 	wep_rad[322] = 0;
 
 	wep_name[323] = "THUNDER KRAKEN"
@@ -3629,7 +3629,7 @@ function scrWeapons() {
 	wep_sprt[324] = sprIceCannon
 	wep_area[324] = 18
 	wep_text[324] = "Iceball!"
-	wep_swap[324] = sndSwapExplosive
+	wep_swap[324] = sndSwapFrost
 	wep_rad[324] = 0;
 
 	wep_name[325] = "FROST BULLET FLAK CANNON"
@@ -3640,7 +3640,7 @@ function scrWeapons() {
 	wep_sprt[325] = sprFrostFlakCannon
 	wep_area[325] = 7
 	wep_text[325] = "Shards of pain"
-	wep_swap[325] = sndSwapExplosive
+	wep_swap[325] = sndSwapFrost
 	wep_rad[325] = 0;
 
 	wep_name[326] = "TOXIC CANNON"
@@ -4454,7 +4454,7 @@ function scrWeapons() {
 	wep_text[396] = "BRING YOUR OWN PARTY!"
 	wep_swap[396] = sndSwapEnergy
 	wep_rad[396] = 0;
-	
+	wep_popup[396] = "START THE PARTY!#WARNING FLASHING LIGHTS!"
 
 	wep_name[397] = "SWARM BOMB"
 	wep_type[397] = 3
@@ -4466,7 +4466,6 @@ function scrWeapons() {
 	wep_text[397] = "bee hive"
 	wep_swap[397] = sndSwapBow
 	wep_rad[397] = 0;
-	wep_popup[397] = "START THE PARTY!#WARNING FLASHING LIGHTS!"
 	
 	wep_name[398] = "LIGHTNING LASER"//Tiny balls that explode into lightning on impact move fast fire fast
 	wep_type[398] = 5
@@ -5280,7 +5279,7 @@ function scrWeapons() {
 	wep_sprt[470] = sprLineFrost
 	wep_area[470] = 15
 	wep_text[470] = "don't get in the line of fire"
-	wep_swap[470] = sndSwapFlame
+	wep_swap[470] = sndSwapFrost
 	wep_rad[470] = 0;
 	
 	wep_name[471] = "MUCHAS NIEVE"
@@ -5324,7 +5323,7 @@ function scrWeapons() {
 	wep_sprt[474] = sprFrazer
 	wep_area[474] = 13
 	wep_text[474] = "frost flame"
-	wep_swap[474] = sndSwapFlame
+	wep_swap[474] = sndSwapFrost
 	wep_rad[474] = 0;
 	
 	wep_name[475] = "ACCELERATOR"
@@ -5364,7 +5363,7 @@ function scrWeapons() {
 	wep_name[478] = "ULTRA LOLLIPOP"
 	wep_type[478] = 0
 	wep_auto[478] = 0
-	wep_load[478] = 31
+	wep_load[478] = 32
 	wep_cost[478] = 0
 	wep_sprt[478] = sprUltraLollipop
 	wep_area[478] = 27
@@ -5667,7 +5666,7 @@ function scrWeapons() {
 	wep_sprt[505] = sprFrostORay
 	wep_area[505] = 14
 	wep_text[505] = "breezy"
-	wep_swap[505] = sndSwapExplosive
+	wep_swap[505] = sndSwapFrost
 	wep_rad[505] = 0;
 	
 	wep_name[506] = "ULTRA SWORD GUN"
@@ -6092,7 +6091,7 @@ function scrWeapons() {
 	wep_name[544] = "BOWLING BALL LAUNCHER"
 	wep_type[544] = 3
 	wep_auto[544] = 0
-	wep_load[544] = 44
+	wep_load[544] = 45
 	wep_cost[544] = 3
 	wep_sprt[544] = sprBowlingBallLauncher
 	wep_area[544] = 18
@@ -6136,7 +6135,7 @@ function scrWeapons() {
 	wep_name[548] = "BLOOD HAMMER"
 	wep_type[548] = 0
 	wep_auto[548] = 0
-	wep_load[548] = 19
+	wep_load[548] = 20
 	wep_cost[548] = 0
 	wep_sprt[548] = sprBloodHammer
 	wep_area[548] = 10
@@ -6147,7 +6146,7 @@ function scrWeapons() {
 	wep_name[549] = "HEAVY BLOOD HAMMER"
 	wep_type[549] = 0
 	wep_auto[549] = 0
-	wep_load[549] = 18
+	wep_load[549] = 19
 	wep_cost[549] = 0
 	wep_sprt[549] = sprHeavyBloodHammer
 	wep_area[549] = 24
@@ -6278,7 +6277,7 @@ function scrWeapons() {
 	
 	wep_name[561] = "SPLINTER SPEAR LAUNCHER"
 	wep_type[561] = 3
-	wep_auto[561] = 0
+	wep_auto[561] = 3
 	wep_load[561] = 23
 	wep_cost[561] = 2
 	wep_sprt[561] = sprSplinterSpearLauncher
@@ -7110,7 +7109,7 @@ function scrWeapons() {
 	wep_sprt[636] = sprAutoFrostFlareGun
 	wep_area[636] = 13
 	wep_text[636] = "light the ice"
-	wep_swap[636] = sndSwapFlame
+	wep_swap[636] = sndSwapFrost
 	wep_rad[636] = 0;
 	
 	wep_name[637] = "SPLIT SEEKER PISTOL"
@@ -7143,7 +7142,7 @@ function scrWeapons() {
 	wep_sprt[639] = sprFrostChainGun
 	wep_area[639] = 20
 	wep_text[639] = "imprisoned in hellheim"
-	wep_swap[639] = sndSwapBow
+	wep_swap[639] = sndSwapFrost
 	wep_rad[639] = 0;
 	
 	wep_name[640] = "MINI ROCKET SHOTGUN"
@@ -8115,7 +8114,7 @@ function scrWeapons() {
 	wep_cost[726] = 2
 	wep_sprt[726] = sprTelepathor
 	wep_area[726] = 7
-	wep_text[726] = "telepathic shotgun"
+	wep_text[726] = "thinking about snow"
 	wep_swap[726] = sndSwapShotgun
 	wep_rad[726] = 0;
 	
@@ -8142,7 +8141,7 @@ function scrWeapons() {
 	wep_rad[728] = 0;
 	
 	wep_name[729] = "ICICLE GUN"
-	wep_type[729] = 5
+	wep_type[729] = 4
 	wep_auto[729] = 3
 	wep_load[729] = 12
 	wep_cost[729] = 0.5
@@ -8151,6 +8150,28 @@ function scrWeapons() {
 	wep_text[729] = "ice shards"
 	wep_swap[729] = sndSwapFrost
 	wep_rad[729] = 0;
+	
+	wep_name[730] = "FROST KNIFE"
+	wep_type[730] = 0
+	wep_auto[730] = 0
+	wep_load[730] = 18
+	wep_cost[730] = 0
+	wep_sprt[730] = sprFrostDagger
+	wep_area[730] = 4
+	wep_text[730] = "freeze the hearts of your enemies"
+	wep_swap[730] = sndSwapSword
+	wep_rad[730] = 0;
+	
+	wep_name[731] = "GOLDEN FROST KNIFE"
+	wep_type[731] = 0
+	wep_auto[731] = 0
+	wep_load[731] = 17
+	wep_cost[731] = 0
+	wep_sprt[731] = sprGoldenFrostDagger
+	wep_area[731] = -1
+	wep_text[731] = "elegantly cold hands"
+	wep_swap[731] = sndSwapSword
+	wep_rad[731] = 0;
 
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

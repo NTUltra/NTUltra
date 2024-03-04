@@ -41,7 +41,18 @@ if al > 0 && alarm[0] < 1
 									snd_play(sndSpark1);
 								sprite_index = spr_hurt
 								image_index = 0
-								motion_add(other.image_angle,4)
+								if (Player.skill_got[43] && team != 0)
+								{
+									scrMoodSwingStun(6);
+									if Player.ultra_got[97] && !Player.altUltra {
+										scrMoodSwingIcicle(2, id);
+										scrMoodSwingFlameSpread(24);
+									}
+								}
+								else
+								{
+									motion_add(other.image_angle,4)
+								}
 								scrForcePosition60fps();
 								if speed > maxSpeed+1
 									speed = maxSpeed+1;

@@ -11,10 +11,10 @@ with creator
 {
 	if object_index != Player || !skill_got[2]
 	{
-		scrMoveContactSolid(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + 180,0.05);
+		scrMoveContactSolid(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + 180,0.01);
 		if sprite_index == spr_idle
 		{
-			sprite_index = spr_walk;	
+			sprite_index = spr_walk;
 		}
 	}
 }

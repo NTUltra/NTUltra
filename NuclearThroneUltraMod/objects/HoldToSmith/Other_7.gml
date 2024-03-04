@@ -48,23 +48,30 @@ with Player
 					wepmod1 = bwepmod1;
 					wepmod2 = bwepmod2;
 					wepmod3 = bwepmod3;
-					wepmod4 = bwepmod4;
+					if skill_got[30]
+						wepmod4 = bwepmod4;
 					
 				}
 				else if wepmod2 == 0
 				{
 					wepmod2 = bwepmod1;
 					wepmod3 = bwepmod2;
-					wepmod4 = bwepmod3;
+					if skill_got[30]
+						wepmod4 = bwepmod3;
 				}
 				else if wepmod3 == 0
 				{
 					wepmod3 = bwepmod1;
-					wepmod4 = bwepmod2;
+					if skill_got[30]
+						wepmod4 = bwepmod2;
 				}
-				else if wepmod4 == 0
+				else if wepmod4 == 0 && skill_got[30]
 				{
 					wepmod4 = bwepmod1;
+				}
+				if skill_got[30] && wepmod4 != 0
+				{
+					scrUnlockCSkin(17,"FOR ADDING FOUR MODS#TO ONE WEAPON",0);
 				}
 				bwepmod1 = 0;
 				bwepmod2 = 0;

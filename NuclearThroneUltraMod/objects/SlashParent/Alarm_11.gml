@@ -61,6 +61,16 @@ else // if um == ultramods.krakenMelee
 		image_angle = other.image_angle;
 		team = other.team
 		ammo = am
+		if (other.sprite_index == sprUltraSlash || other.sprite_index == sprUltraBigSlash)
+		{
+			sprite_index=sprUltraTentacle;
+			ultra=true;
+			dmg += 1;
+		}
+		if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
+		{
+			dmg += 1;
+		}
 		event_perform(ev_alarm,0)
 		visible = 0
 		with instance_create(x,y,LightningSpawn)

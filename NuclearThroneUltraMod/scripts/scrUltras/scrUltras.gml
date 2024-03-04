@@ -388,7 +388,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	}
 	
 	ultra_name[51] = "IMPENETRABLE"
-	ultra_text[51] = "BETTER <pi>CHARGE<pi>!#CHARGING <pi>DEFLECTS<pi> ENEMY PROJECTILES"
+	ultra_text[51] = "BETTER <pi>CHARGE<pi>!#CHARGING <pi>DEFLECTS<pi> ENEMY PROJECTILES#CHARGE BLOCKS ALL TYPES OF PROJECTILES"
 	ultra_tips[51] = "what a beast"
 	
 	/* 
@@ -435,16 +435,15 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
     
 	//ATOM 
 	ultra_name[57] = "NEUTRON"
-	ultra_text[57] = "BIGGER <r>FIERY<r> <w>EXPLOSIONS<w>#<w>EXPLOSIONS<w> DEAL MORE DAMAGE#AGAINST ENEMIES#<w>EXPLOSIVE<w> WEAPONS COST 20% LESS <y>AMMO<y>"
+	ultra_text[57] = "BIGGER <w>EXPLOSIONS<w>#<w>EXPLOSIONS<w> DEAL MORE DAMAGE#AGAINST ENEMIES#<w>EXPLOSIVE<w> WEAPONS COST 20% LESS <y>AMMO<y>"
 	ultra_tips[57] = "NUCLEAR BOMB!"
 
 	ultra_name[58] = "PROTON"
 	ultra_text[58] = "YOU DEAL MORE <w>CONTACT DAMAGE<w>#DEAL DAMAGE TO ENEMIES NEAR YOU"
 	ultra_tips[58] = "always positive"
 	
-
 	ultra_name[59] = "ELECTRON"
-	ultra_text[59] = "<g>ENERGY<g> WEAPONS COST 20% LESS AMMO#<b>LIGHTNING<b> DOES MORE DAMAGE#AND TRAVELS FURTHER"
+	ultra_text[59] = "ALL WEAPONS USE <g>ENERGY<g> AMMO#<g>ENERGY<g> WEAPONS COST 20% LESS AMMO#AMMO DROPS PRIOTIZE ENERGY#<b>LIGHTNING<b> DOES MORE DAMAGE#AND TRAVELS FURTHER"
 	ultra_tips[59] = "that is electrifying!"
 	
 	//NO ENERGY BRAIN & CROWN OF HASTE/APOCALYPSE

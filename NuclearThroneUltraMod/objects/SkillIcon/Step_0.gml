@@ -27,7 +27,7 @@ if selected && visible
 			snd_play_2d(sndClickBack);
 		UberCont.opt_show_mutation_details = showDetail;
 	}
-	else if (KeyCont.key_fire[p] == 1 || KeyCont.key_pick[p] == 1) && (!mouse_check_button_pressed(mb_left) || (UberCont.mouse__x < x+16 and UberCont.mouse__y < y+16 and UberCont.mouse__x > x-20 and UberCont.mouse__y > y-20))
+	else if instance_exists(Player) && (KeyCont.key_fire[p] == 1 || KeyCont.key_pick[p] == 1) && (!mouse_check_button_pressed(mb_left) || (UberCont.mouse__x < x+16 and UberCont.mouse__y < y+16 and UberCont.mouse__x > x-20 and UberCont.mouse__y > y-20))
 	{
 		KeyCont.key_fire[p] = 2;
 		KeyCont.key_pick[p] = 2;
@@ -247,7 +247,7 @@ if selected && visible
 			Player.bcurse = 0
 			Player.ccurse = 0;
 	
-			if UberCont.lastwishused=false
+			if !UberCont.lastwishused
 			{
 				UberCont.lastwishused = true;
 				with Player
@@ -369,7 +369,7 @@ if selected && visible
 				sheepFakeouts = 5;
 			}
 		}
-		if skill==13||skill==14||skill==15||skill==16||skill==17||skill==21||skill==42//wep specific
+		if skill==13||skill==14||skill==15||skill==16||skill==17||skill==21||skill==42||skill==43//wep specific
 		{Player.heavyheart++;}
 
 		with SkillIcon

@@ -35,7 +35,11 @@ else if instance_number(TinyKraken) > 1
 	maxhealth = 6;
 	my_health = maxhealth
 }
-	
+if scrIsHardMode()
+{
+	maxhealth += 2;
+	my_health = maxhealth;
+}
 target = noone;
 team = 2
 

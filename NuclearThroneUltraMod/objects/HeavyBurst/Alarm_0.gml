@@ -23,7 +23,17 @@ scrCopyWeaponMod(other);
 BackCont.viewx2 += lengthdir_x(6,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 BackCont.viewy2 += lengthdir_y(6,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 BackCont.shake += 4
-creator.wkick = 6}
+creator.wkick = 6
+with creator
+{
+	wkick = 6
+	if object_index != Player || !skill_got[2]
+	{
+		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180,0.5)
+		scrMoveContactSolid(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180, 0.5);
+	}
+}
+}
 
 
 if ammo <= 0

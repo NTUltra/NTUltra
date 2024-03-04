@@ -13,7 +13,10 @@ if um == ultramods.bloodMelee
 	var xx = x + lengthdir_x(ol,image_angle+180);
 	var yy = y + lengthdir_y(ol,image_angle+180);
 	snd_play(sndBloodPistol,0.1,true);
-	with instance_create(xx,yy,HeavyBloodBullet)
+	var toSpawn = HeavyBloodBullet;
+	if sprite_index == sprUltraShank
+		toSpawn = UltraBloodBullet;
+	with instance_create(xx,yy,toSpawn)
 	{
 		dmg = ceil(other.dmg*0.7);
 		scrCopyWeaponMod(other);
@@ -34,6 +37,16 @@ else // if um == ultramods.krakenMelee
 		isog = false;
 		dmg = ddd;//6 dmg = 1dmg
 		image_angle = other.image_angle;
+		if other.sprite_index == sprUltraShank
+		{
+			sprite_index=sprUltraTentacle;
+			ultra=true;
+			dmg += 1;
+		}
+		if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
+		{
+			dmg += 1;
+		}
 		team = other.team
 		ammo = am
 		event_perform(ev_alarm,0)

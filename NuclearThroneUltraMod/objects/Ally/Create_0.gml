@@ -22,7 +22,10 @@ if instance_exists(Player)
 		maxhealth = 12;
 	loops = Player.loops;
 	if scrIsHardMode()
+	{
 		loops += 1;
+		maxhealth += 2;
+	}
 	maxhealth += min(loops * 2,10);
 	if Player.ultra_got[39] && !Player.altUltra
 		alarm[3] = 30;

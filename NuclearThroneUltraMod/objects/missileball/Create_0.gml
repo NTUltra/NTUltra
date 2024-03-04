@@ -7,7 +7,7 @@ their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
 they have a FORCE and can be 0 or DIRECTIONAL */
 image_speed = 0.4;
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
-dmg = 30;
+dmg = 32;
 image_speed = 0.5
 friction = 0;
 alarm[1] = 1;

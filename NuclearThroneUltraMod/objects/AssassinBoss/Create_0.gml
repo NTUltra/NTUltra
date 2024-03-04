@@ -44,7 +44,7 @@ dodge=0;
 dodgethis=-1;
 
 morphMe=0;
-frozen=noone;
+frozen = noone
 prevhealth=my_health;
 
 instance_create(x,y,BigWallBreak);

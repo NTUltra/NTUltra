@@ -25,11 +25,12 @@ function scrDrawUpdate() {
 		{
 			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/689283/301500");
 		}
-	var txt0 = @"#UPDATE [30.15.00]
+	var txt0 = @"#UPDATE [30.16.00]
 	
-	* NEW HUNTER ULTRA!
-	* HUNTER ULTRA B AND C COMBINED!
-	* MORE HUNTER BUFFS
+	* NEW MUTATION: MOOD SWING!
+	
+	* AND I WILL DO THE REST OF THIS
+	A LITTLE LATER
 
 
 	WEEKLY COMPETITION 1!!:

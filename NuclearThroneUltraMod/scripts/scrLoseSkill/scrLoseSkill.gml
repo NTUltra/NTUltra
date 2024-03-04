@@ -5,6 +5,7 @@ function scrLoseSkill(skillIndex){
 	skill_got[skillIndex] = 0;
 	if skillIndex==13||skillIndex==14||skillIndex==15
 	||skillIndex==16||skillIndex==17||skillIndex==21||skillIndex==42//wep specific
+	||skillIndex==43
 	{heavyheart--;}
 	switch (skillIndex)
 	{
@@ -173,7 +174,6 @@ function scrLoseSkill(skillIndex){
 		case 42: //TAIL END
 			betterTail = 1.5;
 		break;
-				
 	}
 	level -= 1;
 	totalSkills--;

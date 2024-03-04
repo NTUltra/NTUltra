@@ -13,4 +13,4 @@ direction = point_direction(x,y,target.x,target.y)+180
 				team = other.team
 			}
 			walk=4;
-			alarm[1] = actTime*2;
+			alarm[1] = actTime*3;

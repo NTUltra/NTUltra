@@ -22,12 +22,12 @@ BackCont.shake += 1.12*sp*0.5;
 	{
 		if my_health > 0
 		{
-			var deal = round((sp-1)*other.dmg);
+			var deal = max(3,round((sp-1)*other.dmg));
 			if UberCont.normalGameSpeed == 60
 			{
 				DealDamage(deal*0.5,false,true,false);
 				motion_add(other.image_angle,sp*1.5);
-				if (team != 0)
+				if (team != 0 && my_health - deal*0.5 > 0)
 				{
 					//Didnea care bout props yo
 					Player.sheepPower -= other.enemyHitbrake*0.5;
@@ -38,7 +38,7 @@ BackCont.shake += 1.12*sp*0.5;
 			{
 				DealDamage(deal,false,true,false);
 				motion_add(other.image_angle,sp*3);
-				if (team != 0)
+				if (team != 0 && my_health > 0)
 				{
 					//Didnea care bout props yo
 					Player.sheepPower -= other.enemyHitbrake;

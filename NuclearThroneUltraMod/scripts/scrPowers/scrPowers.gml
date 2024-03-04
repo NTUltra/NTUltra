@@ -87,7 +87,9 @@ function scrPowers(raceOverwrite = -1) {
 			failText = "NOT ENOUGH SKILL";
 			var cost = 8;
 			if ultra_got[104] && !altUltra
-				cost = 10;
+				cost = 10
+			if loops > 0
+				cost += (humphrySkill * 0.01);
 			if humphrySkill >= cost//used to be 50//10%?
 			{
 				insufficientFunds = false;
@@ -3060,15 +3062,27 @@ function scrPowers(raceOverwrite = -1) {
 		}
 		//if ammo[wep_type[wep]] < wep_cost[wep] and KeyCont.key_spec[p] = 1 and wep_type[wep] != 0
 		//	scrEmpty()
-
-		if can_shoot = 1 and ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)
+		var representingCost = round(wep_cost[wep]);
+		var ignoreAmmo = false;
+		if ultra_got[70]
+			representingCost = min(representingCost,0.5);
+		else if scrIsCrown(13)//Crown of drowning
+		{
+			representingCost = 0;
+		}
+		else if scrIsGamemode(48)
+		{
+			representingCost = 0;
+			ignoreAmmo = true;
+		}
+		if can_shoot = 1 and ((ignoreAmmo || ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)
 		{
 			if wep_auto[wep] = 0 and KeyCont.key_spec[p] = 1
 			{
-			speed /= 4
-			scrFire()
-			scrFire()
-			clicked = 0
+				speed /= 4
+				scrFire()
+				scrFire()
+				clicked = 0
 			}
 			if wep_auto[wep] == 1 || wep_auto[wep] == 3
 				scrFire()

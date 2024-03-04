@@ -484,12 +484,12 @@ maxtoxicamount = 120;
 toxicConsume = 0;
 
 ammo[0] = 999
-ammo[1] = typ_ammo[1];
-ammo[2] = typ_ammo[2];
-ammo[3] = typ_ammo[3];
-ammo[4] = typ_ammo[4];
-ammo[5] = typ_ammo[5];
-if UberCont.lastwishused = true {
+ammo[1] = round(typ_ammo[1]*0.85);
+ammo[2] = round(typ_ammo[2]*0.85);
+ammo[3] = round(typ_ammo[3]*0.85);
+ammo[4] = round(typ_ammo[4]*0.85);
+ammo[5] = round(typ_ammo[5]*0.85);
+if UberCont.lastwishused {
     ammo[1] = typ_ammo[1] * 2
     ammo[2] = typ_ammo[2] * 2
     ammo[3] = typ_ammo[3] * 2
@@ -497,7 +497,7 @@ if UberCont.lastwishused = true {
     ammo[5] = typ_ammo[5] * 2
 }
 else {
-    ammo[wep_type[wep]] = typ_ammo[wep_type[wep]] * 2
+    ammo[wep_type[wep]] = round(typ_ammo[wep_type[wep]] * 2.25)
 }
 
 maxSpeed = 4

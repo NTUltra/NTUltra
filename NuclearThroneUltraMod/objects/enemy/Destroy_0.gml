@@ -28,7 +28,7 @@ if(morphMe == 0){
 			{
 				impactWrist = true;
 				alarm[0] = 2;
-				speed += 6;
+				speed += 6.5;
 				if Player.race=25
 					speed += 1;
 			}
@@ -43,13 +43,13 @@ if(morphMe == 0){
 			}
 			if Player.skill_got[20]
 			{
-				speed = clamp(speed,8 ,17);
+				speed = clamp(speed,8 ,18);
 			}
 		}
 		else if mySize > 0
 			speed /= mySize*0.83
 			
-		speed = min(speed,17);
+		speed = min(speed,18);
 	}
 	snd_play(snd_dead, 0.1,true);
 }

@@ -56,7 +56,8 @@ with WepPickup
 					x += lengthdir_x(other.pullstrength,point_direction(x,y,pt.x,pt.y))
 				if place_free(x,y+lengthdir_y(other.pullstrength,point_direction(x,y,pt.x,pt.y)))
 					y += lengthdir_y(other.pullstrength,point_direction(x,y,pt.x,pt.y))
-				angle -= 30*right
+				if roll == 0
+					angle -= 30*right
 				sprite_index = spr_hurt
 				depth = -9
 				if UberCont.normalGameSpeed == 60

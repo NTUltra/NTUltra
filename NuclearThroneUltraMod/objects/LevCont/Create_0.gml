@@ -97,7 +97,7 @@ if Player.crownpoints > 0
 					crown = 32
 				else if (scrIsCrown(4) && !scrIsCrown(34))//Rush to Time
 					crown = 34;
-				else if (scrIsCrown(7) && !scrIsCrown(28))//Blood to Apocalypse
+				else if (scrIsCrown(7) && !scrIsCrown(28) && !(scrIsGamemode(26) && UberCont.isLeaderboardGamemode))//Blood to Apocalypse
 					crown = 28;
 				else if ((Player.wepmod1 != 0 || Player.bwepmod1 != 0 || Player.cwepmod1 != 0) && !scrIsCrown(29))//Purity
 					crown = 29;

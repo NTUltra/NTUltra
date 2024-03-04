@@ -5,6 +5,10 @@ function scrContactDamageToEnemy(hitEnemy){
 	if hitEnemy.team != team && team != 0
 	{
 		var actuallyDead = false;
+		if hitEnemy.frozen != noone || hitEnemy.alarm[11] > 0
+		{
+			actuallyDead = true;	
+		}
 		if hitEnemy.team != 0//Dealing the damage with gamma guts
 		{
 			var contactDmg = 0;

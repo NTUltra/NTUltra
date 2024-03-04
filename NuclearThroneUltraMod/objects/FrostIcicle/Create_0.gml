@@ -6,8 +6,8 @@ their collision can be NORMAL, PIERCING or PIERCING AT OVERKILL (piercing checks
 their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
 they have a FORCE and can be 0 or DIRECTIONAL */
 freezetime = 2;
+frostDamage = 2;
 dmg = 2;//normal bullet is 3 dmg
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
-debrisAmount = 2;
 alarm[11] = 0;
 ignoreMe = noone;

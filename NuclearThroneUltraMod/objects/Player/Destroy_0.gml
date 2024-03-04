@@ -5,12 +5,6 @@ audio_stop_sound(sndFishRollUpgLoop);
 if scrCheckLoopAll()
 	scrUnlockCSkin(1,"FOR LOOPING WITH EVERY CHARACTER",0);
 
-if !skill_got[18] && UberCont.lastwishused
-{
-	UberCont.lastwishused = false;
-	//dir= instance_create(x,y-8,PopupText)
-	//dir.mytext = "LAST WISH#CAN GIVE A LIFE AGAIN!";
-}
 if scrIsGamemode(8)
 {
 	with VanFan
@@ -521,7 +515,6 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 }
 else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 {
-	debug("FUCKIN END IT");
 	if instance_number(Player) == 1
 	{
 		with Crown
@@ -597,8 +590,9 @@ else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 		}
 
 		var playedWithAll = true;
-			for (var i = 0; i <= racemax; i++) {
+			for (var i = 1; i <= racemax; i++) {
 			    // code here
+				debug(ctot_played[i]);
 				if !ctot_played[i]
 				{
 					playedWithAll = false;
@@ -643,7 +637,7 @@ else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 						runScore[15] = scrGetAllMutations();//Can be empty what then
 					}
 					debug("POST SCOORE: ",runScore);
-					canRestart = true;
+					// canRestart = true;
 				}
 				else if (isLeaderboardGamemode && !instance_exists(StartDaily)) {
 					if scrIsGamemode(26) {
@@ -653,7 +647,7 @@ else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 					// useSeed = false;
 					leaderboardType = LEADERBOARD.WEEKLY;
 					goToLeaderboard = true;
-					canRestart = true;
+					// canRestart = true;
 					//Do I need to send the gamemode?
 					/*
 						Send gamemode and week to post it in ofcourse
@@ -722,7 +716,7 @@ else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 					//opt_gamemode = [0];
 					leaderboardType = LEADERBOARD.RACE;
 					goToLeaderboard = true;
-					canRestart = true;
+					// canRestart = true;
 				}
 			}
 			scrSave();

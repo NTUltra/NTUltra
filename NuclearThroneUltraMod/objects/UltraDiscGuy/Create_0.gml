@@ -8,6 +8,7 @@ spr_fire = sprUltraDiscGuyFire
 maxhealth = 40
 EnemyHealthAdjustments();
 meleedamage = 6
+discSpeed += 0.2;
 actTime -= 2;
 range = 300;
 loops += 3;

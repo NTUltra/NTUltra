@@ -18,8 +18,7 @@ if instance_exists(Player){
 	if Player.ultra_got[57]//atom bomb
 	{
 		alarm[2] = irandom_range(1,4);
-		//FIERY EXPLOSIONS
-		alarm[1]=11;
+		//BIGGER EXPLOSIONS
 	}
 	alarm[0] = 2;
 }

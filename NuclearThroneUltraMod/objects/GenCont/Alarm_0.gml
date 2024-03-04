@@ -50,12 +50,6 @@ x = Player.x
 y = Player.y
 scrForcePosition60fps();
 }
-with WepPickup
-{
-	x = Player.x
-	y = Player.y
-	scrForcePosition60fps();
-}
 if Player.area!=104
 	scrPopulate()
 

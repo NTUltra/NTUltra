@@ -63,3 +63,12 @@ if instance_exists(Player) && Player.skill_got[29]
 	alarm[8] += 30;
 	scrGiveSnooze();
 }
+with enemy
+{
+	if object_index != IDPDTankDown && object_index != IDPDTank
+	&& object_index != NuclearThrone1 && object_index != NuclearThrone1Side
+	&& object_index != InvertedNuclearThrone1 && object_index != NuclearThrone1Side
+	{
+		alarm[1] += 300;
+	}
+}

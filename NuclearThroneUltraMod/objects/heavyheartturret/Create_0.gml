@@ -96,6 +96,7 @@ if instance_exists(Player)
 	angle = Player.angle
 	bwepangle = Player.bwepangle
 	bwepflip = Player.bwepflip
+	skill_got = Player.skill_got;
 }
 else
 instance_destroy();

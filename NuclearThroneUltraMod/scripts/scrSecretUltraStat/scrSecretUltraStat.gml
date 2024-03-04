@@ -113,7 +113,7 @@ function scrSecretUltraStat() {
 	secret_ultra_name[13] = "GREEN TEAM"
 	secret_ultra_text[13] = "SPAWNING DUPES COSTS <g>RADS<g>#INSTEAD OF MAX <r>HP<r>#DUPES DROP MORE <y>RES<y><g>OUR<g><r>CES<r>"
 	secret_ultra_tips[13] = "pay up"
-	secret_ultra_hint[13] = "GREEN RICHES";
+	secret_ultra_hint[13] = "GREEN RADIATION";
 	secret_ultra_unlk[13] = "HAVE ABSORBING PORES\nAND PLUTONIUM HUNGER\nOR HOLD AN ULTRA WEAPON";
 
     
@@ -247,7 +247,7 @@ function scrSecretUltraStat() {
 	secret_ultra_name[29] = "BEEKEEPER"
 	secret_ultra_text[29] = "<g>RADIATION<g> SPAWNS <w>SWARM BOLTS<w>"
 	secret_ultra_tips[29] = "retired to a farm"
-	secret_ultra_hint[29] = "STING SPECIALIST";
+	secret_ultra_hint[29] = "BOLT SPECIALIST";
 	secret_ultra_unlk[29] = "HAVE NO WEAPON MUTATIONS\nEXCEPT FOR BOLT MARROW";
 
 

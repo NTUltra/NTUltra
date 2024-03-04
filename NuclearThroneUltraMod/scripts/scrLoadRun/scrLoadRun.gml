@@ -321,6 +321,30 @@ function scrLoadRun(){
 				scrLoadRunSkins(race,bskin,altUltra,area);//ALT ultra skins
 				//Some ultras change weapon stats:
 				scrWeapons();
+				if ultra_got[59] && !altUltra
+				{
+					for (var i = 0; i < maxwep; i++) {
+						if wep_type[i] != 0
+						{
+							if wep_type[i] = 1
+							{
+								wep_cost[i] *= 0.2;
+								wep_rad[i] *= 0.2;
+							}
+							wep_type[i] = 5;
+						}
+					}
+				}
+				if ultra_got[80]
+				{
+					for (var i = 0; i < maxwep; i++) {
+						if wep_type[i] != 0 && scrCheckGold(wep_name[wep])
+						{
+							wep_cost[i] = wep_cost[i]*0.8;
+							wep_rad[i] = wep_rad[i]*0.8;
+						}
+					}
+				}
 				scrWeaponHold();
 				//Some alt ultras need different descriptions
 				scrUltras(false, false);

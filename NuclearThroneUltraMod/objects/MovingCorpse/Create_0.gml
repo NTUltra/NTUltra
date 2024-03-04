@@ -27,7 +27,7 @@ if instance_exists(Player){
 	}
 }
 with CorpseCollector {
-	alarm[0] = max(60,alarm[0]);
+	alarm[0] = clamp(alarm[0] + 30,60,alarm[0]);
 }
 alarm[0] = 30;
 alarm[4] = 40;

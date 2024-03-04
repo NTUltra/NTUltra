@@ -1,4 +1,3 @@
-var deb = debrisAmount;
 if other.team != team and other.my_health > 0 and other.object_index!=Player && other.id != ignoreMe
 {
 	instance_destroy()
@@ -7,7 +6,8 @@ if other.team != team and other.my_health > 0 and other.object_index!=Player && 
 		snd_play(snd_hurt, hurt_pitch_variation,true);
 		DealDamage(other.dmg)
 		//freeze bitch!
-		scrFreezeTarget(other.freezetime);
+		if other.frostDamage > 0
+			scrFreezeTarget(other.freezetime, other.frostDamage);
 		sprite_index = spr_hurt
 		image_index = 0
 		speed = 0;

@@ -47,16 +47,15 @@ team = -1
 if instance_exists(Player) {
 	if Player.ultra_got[57]
 	{
-		dmg += 3;
+		dmg += 4;
 	}
 	if Player.skill_got[14]
 		alarm[3] = 1;
 	if object_index == Explosion {
 		if Player.ultra_got[57]//atom bomb
 		{
-			//FIERY EXPLOSIONS
+			//BIGGER EXPLOSIONS
 			alarm[2] = irandom_range(1,4);
-			alarm[1]=11;
 		}
 		scrCrownOfDeath();
 	}

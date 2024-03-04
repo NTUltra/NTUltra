@@ -42,9 +42,9 @@ if scrIsGamemode(25)
 }
 
 
-var area;
+var area = 1;
 if instance_exists(Player) area = Player.area 
-else area = BackCont.area
+else if instance_exists(BackCont) area = BackCont.area
 if area=104
 area=103;
 

@@ -536,10 +536,10 @@ function scrSkills() {
 	
 	skill_name[43] = "MOOD SWING"
 	skill_text[43] = "EXPLOSIONS <r>BURN<r>#<r>FIRE<r> SPREADS#<p>TENTACLES<p> AND <b>LIGHTNING<b> <w>STUN<w> ENEMIES#<aq>FROST<aq> BREAKS INTO <w>ICICLES<w>"
-	skill_detail[43] = "EXPLOSIONS <r>BURN<r>#<r>FIRE<r> SPREADS TO NEARBY ENEMIES#<p>TENTACLES<p> AND <b>LIGHTNING<b> <w>STUN<w> ENEMIES#STUNNED ENEMIES DONT ACT OR MOVE#<aq>FROST<aq> BREAKS INTO <w>ICICLES<w>#ICICLES CAN ONCE AGAIN FREEZE";
+	skill_detail[43] = "EXPLOSIONS <r>BURN<r>#<r>FIRE<r> SPREADS TO NEARBY ENEMIES#<p>TENTACLES<p> AND <b>LIGHTNING<b> <w>STUN<w> ENEMIES#STUNNED ENEMIES DONT ACT OR MOVE#<aq>FROST<aq> BREAKS INTO <w>ICICLES<w>#ICICLES CAN ONCE AGAIN FREEZE#(WEAPON SPECIFIC MUTATION)";
 	skill_tips[43] = "feeling like an element"
-	skill_msnd[43] =  sndMutAlienIntestines
-	skill_bons[43] = "+FIRE RANGE, +ICICLES, LONGER STUN"
+	skill_msnd[43] =  sndMutMoodSwing
+	skill_bons[43] = "+FIRE RANGE, LONGER STUN"
 	if betterWepSpecific
 		skill_bons[43] = "ALL EFFECTS OCCUR ON ALL ELEMENTS"
 	

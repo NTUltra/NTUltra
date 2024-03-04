@@ -11,7 +11,7 @@ else
 			opt_gamemode[array_length(opt_gamemode)] = 25;
 	}
 	snd_play(sndMutant0Cnfm, 0, false, false)
-	race = UberCont.racepick
+	race = racepick
 	crown = [1]
 	//scrRaces()
 	//scrCrowns()

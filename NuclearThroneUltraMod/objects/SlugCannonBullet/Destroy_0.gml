@@ -11,11 +11,13 @@ repeat(bullets)
 	ang += angstep;
 }
 Sleep(30)
-
-repeat(6)
+ang += angstep*0.5;
+repeat(bullets)
 {
-with instance_create(x,y,Smoke)
-motion_add(random(360),random(3))
+	with instance_create(x,y,Smoke)
+		motion_add(ang,random(3))
+	
+	ang += angstep;
 }
 
 BackCont.shake += 15

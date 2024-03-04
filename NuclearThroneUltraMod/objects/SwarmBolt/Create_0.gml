@@ -6,7 +6,7 @@ typ = 2 //0 = normal, 1 = deflectable, 2 = destructable
 dmg = 2;
 target=0;
 
-hits=choose(1,2);
+hits = choose(1,2);
 mxSpd = 5;
 eagleEyed = 0;
 boltMarrowed = 0;

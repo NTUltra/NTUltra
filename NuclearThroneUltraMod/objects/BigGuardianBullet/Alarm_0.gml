@@ -7,3 +7,4 @@ else
 {
 	alarm[0] = 4;
 }
+friction = 0.1;

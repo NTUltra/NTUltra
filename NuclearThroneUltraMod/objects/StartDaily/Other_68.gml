@@ -95,7 +95,6 @@ if (type == network_type_data) {
 		case NETDATA.STARTDAILY:
 			UberCont.todaysSeed = buffer_read(buffer, buffer_u16);
 			UberCont.seed = UberCont.todaysSeed;
-			debug("SET SEED: ", UberCont.seed);
 			UberCont.dailyDay = buffer_read(buffer, buffer_u16);
 			SetSeed();
 			if scrIsGamemode(27)
@@ -135,6 +134,7 @@ if (type == network_type_data) {
 		case NETDATA.STARTWEEKLY:
 			UberCont.todaysSeed = buffer_read(buffer, buffer_u16);
 			UberCont.seed = UberCont.todaysSeed;
+			UberCont.chestRan = 10;
 			UberCont.opt_gamemode = [];
 			if (data == NETDATA.STARTBIDAILYGAMEMODE)
 				UberCont.opt_gamemode = [26,buffer_read(buffer, buffer_u8)];

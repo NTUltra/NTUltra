@@ -30,7 +30,7 @@ wepflip = 1
 dodge=0;
 
 morphMe=0;
-frozen=false;
+frozen = noone;
 prevhealth=my_health;
 
 canDodge = false;

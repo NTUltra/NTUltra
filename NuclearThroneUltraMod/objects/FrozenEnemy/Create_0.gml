@@ -8,3 +8,6 @@ if instance_exists(Player) && Player.race == 24
 	sprite_index = sprFrozenUpg;	
 }
 depth = -1;
+alarm[0] = 2;
+alarm[1] = 1;
+ownerIsDead = true;

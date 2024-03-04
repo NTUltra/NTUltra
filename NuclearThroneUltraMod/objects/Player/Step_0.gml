@@ -74,7 +74,7 @@ if ultra_got[70]
 	representingCost = min(representingCost,0.5);
 else if scrIsCrown(13)//Crown of drowning
 {
-	representingCost *= 0.5;
+	representingCost = 0;
 }
 else if scrIsGamemode(48)
 {
@@ -402,6 +402,7 @@ if !instance_exists(LevCont) and visible = 1
 
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
 			thing.mytext = "FIRE EVERY GUN";
+			instance_create(x+32,y,UltraDiscGuy);
 			/*
 			wep = 0;
 			var i = 0;

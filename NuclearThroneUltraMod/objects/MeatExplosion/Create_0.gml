@@ -19,8 +19,7 @@ if UberCont.ultramodSwap
 		alarm[11] = 1;
 		if instance_exists(Player) && Player.ultra_got[57]
 		{
-			//FIERY EXPLOSIONS
-			alarm[1]=9;
+			dmg += 1;
 		}
 	}
 	else if um == ultramods.bloodMelee

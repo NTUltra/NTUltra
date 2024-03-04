@@ -9,7 +9,9 @@ else
 	{
 		if loops == 0
 		{
+			noChest = -1;
 			UberCont.chestRan = 10;
+			SetSeed();
 			if (!isOneWeaponOnlyModes())
 			{
 				with instance_create(x,y,BigWeaponChest)
@@ -23,5 +25,5 @@ else
 			}
 		}
 	}
-	alarm[1] = 30;
+	alarm[1] = 20;
 }

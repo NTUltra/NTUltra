@@ -32,6 +32,10 @@ function scrSpawnSomeEnemies(){
 		{
 			instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraBandit);
 		}
+		else if Player.loops > 1 && ran > 45 && ran < 55
+		{
+			instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraProtector);
+		}
 		else if spawnarea != 1  && spawnarea != 105 && spawnarea != 100//Not desert not crownvault
 		{
 			if ran < 18

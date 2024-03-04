@@ -6,23 +6,23 @@ image_index = 0
 sprite_index = spr_fire
 			
 snd_play(sndSuperDiscGun)
-with instance_create(x,y,EnemyDisc)
+with instance_create(x,y,EnemySquareDisc)
 {
 	motion_add(other.direction+180+(random(6)-3),other.discSpeed)
 	image_angle = direction
 	team = other.team
 }
-with instance_create(x,y,EnemyDisc)
+with instance_create(x,y,EnemySquareDisc)
 {
-	motion_add(other.direction+180 - 15+(random(6)-3),other.discSpeed)
+	motion_add(other.direction+180 - 17+(random(6)-3),other.discSpeed - 0.25)
 	image_angle = direction
 	team = other.team
 }
-with instance_create(x,y,EnemyDisc)
+with instance_create(x,y,EnemySquareDisc)
 {
-	motion_add(other.direction+180 + 15+(random(6)-3),other.discSpeed)
+	motion_add(other.direction+180 + 17+(random(6)-3),other.discSpeed)
 	image_angle = direction
 	team = other.team
 }
 walk=4;
-alarm[1] = actTime*choose(3,4);
+alarm[1] = actTime*4;

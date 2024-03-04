@@ -12,6 +12,22 @@ if (speed < 4 && instance_exists(WepPickup)){
 	    } else motion_add(random(360), 2);
 	}
 }
+else
+{
+	if instance_exists(Player) && !Player.ultra_got[12] && !collision_point(x,y,Floor,false,false)
+	{
+		var f = instance_nearest(x,y,Floor)
+		var o = 16;
+		if f != noone
+		{
+			if f.object_index == FloorExplo
+				o = 8;
+			x = f.x+o;
+			y = f.y+o;
+			scrForcePosition60fps();
+		}
+	}
+}
 if speed > 8
 	speed = 8;
 alarm[5] = 1;

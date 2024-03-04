@@ -75,7 +75,7 @@ else if enablePopUp == 3
 {
 	//Ultra popup
 	var ww = 76;
-	var wh = 40;
+	var wh = 54;
 	var xx = scrPopUpStayInScreenX(ww);
 	var yy = scrPopUpStayInScreenY(wh);
 	draw_rectangle_color(xx-ww,yy-wh,xx+ww,yy+wh,bkcol,bkcol,bkcol,bkcol,false);
@@ -113,7 +113,7 @@ else if enablePopUp == 3
 	var xxx = xx - ww;
 	var xr = xx + ww;
 	var xl = xxx;
-	var yyy = yy + 12;
+	var yyy = yy + 10;
 	var muts = popupEntry[popUpIndex[3]+1];
 	var al = array_length(muts);
 	var i = 0;
@@ -126,7 +126,7 @@ else if enablePopUp == 3
 			if xxx >= xr
 			{
 				xxx = xl
-				yyy += 18;
+				yyy += 17;
 			}
 			i++;
 		}

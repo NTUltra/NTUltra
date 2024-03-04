@@ -76,11 +76,19 @@ if (type == network_type_data) {
 						isRace = false;
 						dailyName = "DAILY GAMEMODE"
 						isGamemode = true;
-						dailyDone = other.canParticipateInGamemode;
+						dailyDone = !other.canParticipateInGamemode;
 						if dailyDone
-							sprite_index = sprDailyChallengeOnGM
+						{
+							sprite_index = sprDailyChallengeOffGM;
+							if scrIsGamemode(26)
+							{
+								UberCont.opt_gamemode = [0];
+							}
+						}
 						else
-							sprite_index = sprDailyChallengeOffGM
+						{
+							sprite_index = sprDailyChallengeOnGM;
+						}
 					}
 				}
 			}

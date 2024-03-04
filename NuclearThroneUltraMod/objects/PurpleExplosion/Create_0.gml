@@ -11,6 +11,6 @@ BackCont.shake += 2;//Additional shake
 if instance_exists(Player){
 	if Player.ultra_got[57]//atom bomb
 	{
-		dmg += 3;
+		dmg += 4;
 	}
 }

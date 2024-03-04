@@ -28,9 +28,10 @@ if instance_exists(Player){
 	if Player.ultra_got[97] && Player.altUltra
 	{
 		snd_play(sndSwarm,0.1,true);
-		repeat(8)
+		repeat(6)
 		with instance_create(x,y,SwarmBolt)
 		{
+			hits += 1;
 			team = 2;
 			direction = random(360);
 		}
@@ -39,7 +40,7 @@ if instance_exists(Player){
 	if Player.ultra_got[89]
 	{
 		snd_play(sndToxicBoltGas,0.1,true);
-		repeat(15)
+		repeat(10)
 		{
 
 		    with instance_create(x,y,ToxicThrowerGas)
