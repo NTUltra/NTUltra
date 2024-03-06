@@ -1,5 +1,5 @@
 /// @description Spawn guardianBullet dead
-instance_create(x,y,WallBreak);
+instance_create(x,y,WallBreakWallOnly);
 with instance_create(x,y,ScorpionBulletHit)
 {
 	sprite_index = other.hitSprite;

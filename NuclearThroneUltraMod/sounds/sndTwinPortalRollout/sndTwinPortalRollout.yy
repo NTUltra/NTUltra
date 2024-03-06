@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndTwinPortalRollout",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":4.5,
+  "name":"sndTwinPortalRollout",
+  "parent":{
+    "name":"Elite",
+    "path":"folders/Sounds/IDPD sounds/Elite.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndTwinPortalRollout.wav",
+  "type":0,
+  "volume":1.0,
+}

@@ -1,6 +1,8 @@
 var amount = 11;
 if instance_exists(Player)
 {
+	if GetPlayerLoops() > 0
+		amount -= 1;
 	if Player.ultra_got[72] {
 		if Player.altUltra {
 			amount += 3;

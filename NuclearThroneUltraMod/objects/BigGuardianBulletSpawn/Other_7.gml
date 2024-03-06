@@ -21,7 +21,7 @@ if target != noone && instance_exists(target)
 				team = other.team;
 				x += lengthdir_x(8, dir);
 				y += lengthdir_y(8, dir);
-				motion_add(dir,max(5,2.5+random(1.6)+addspeed));
+				motion_add(dir,max(5,2.4+random(1.6)+addspeed));
 				alarm[0] += 2;
 			}
 		}
@@ -48,7 +48,7 @@ if target != noone && instance_exists(target)
 				team = other.team;
 				x += lengthdir_x(8, dir);
 				y += lengthdir_y(8, dir);
-				motion_add(dir,max(5,3.3+random(1.6)+addspeed));
+				motion_add(dir,max(5,2.4+random(1.6)+addspeed));
 			}
 		}
 		else

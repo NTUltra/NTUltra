@@ -1316,7 +1316,7 @@ if (!instance_exists(LevCont))
 				creload -= 0.035;
 			}
 		}
-		if bskin == 2 && ultra_got[4]//FISH CAN GUN secret ultra
+		if altUltra && ultra_got[4]//FISH CAN GUN secret ultra
 		{
 			var t = wep_type[wep];
 			var m = 1.2;

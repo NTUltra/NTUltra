@@ -1,7 +1,7 @@
 /// @description Destroy projectiles
 with other
 {
-	if other.team != 2
+	if team != 2
 	{
 		if isGrenade
 		{

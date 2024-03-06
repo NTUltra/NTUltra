@@ -26,4 +26,4 @@ gunangle = random(360)
 candeflect = 0
 canfire = 1
 
-instance_create(x,y,WallBreak);
+instance_create(x,y,WallBreakWallOnly);

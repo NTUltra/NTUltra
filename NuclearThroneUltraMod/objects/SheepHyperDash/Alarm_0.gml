@@ -27,7 +27,7 @@ while(amountOfWalls > 0)
 ds_list_destroy(hitWalls);
 with Player
 {
-	if place_meeting(px + nextMoveX,py + nextMoveY,Floor)
+	if !instance_exists(WallHitMe) || place_meeting(px + nextMoveX,py + nextMoveY,Floor)
 	{
 		x = px + nextMoveX;
 		y = py + nextMoveY;

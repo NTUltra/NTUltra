@@ -15629,12 +15629,14 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	wepangle = -wepangle
 	wkick = 10
-	motion_add(aimDirection + 180,6)
 	BackCont.viewx2 += lengthdir_x(40,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(40,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 10
 	if !skill_got[2]
-	scrMoveContactSolid(aimDirection + 180,32);
+	{
+		scrMoveContactSolid(aimDirection + 180,32);
+		motion_add(aimDirection + 180,6)
+	}
 
 	break;
 	

@@ -16,6 +16,18 @@ snd_play(sndStatueCharge);
 with Player//Data to keep
 {
 	//bskin=other.bskin;
+	if instance_exists(WallHitMe)
+	{
+		var n = instance_nearest(x,y,Floor)
+		var o = 16;
+		if n != noone
+		{
+			if object_index == FloorExplo
+				o = 8;
+			x = n.x + o;
+			y = n.y + o;
+		}
+	}
 	canCrownOfProtection = other.canCrownOfProtection;
 	if scrIsCrown(20)//Crown of protection re-apply
 	{

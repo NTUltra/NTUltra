@@ -2,6 +2,8 @@
 // /@description
 ///@param
 function scrMoodSwingIcicle(am, hitTarget){
+	if hitTarget.team == 2
+		exit;
 	var angStep = 360/am;
 	var ang = random(360);
 	repeat(am)

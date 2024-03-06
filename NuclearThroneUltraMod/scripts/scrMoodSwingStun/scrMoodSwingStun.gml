@@ -2,18 +2,14 @@
 // /@description
 ///@param
 function scrMoodSwingStun(duration){
+	if team == 2
+		exit;
 	speed = 0;
 	if Player.race == 25
 		duration += 1;
-	if alarm[1] > 0 && alarm[1] < 30
-	{
-		alarm[11] += duration
-		alarm[1] += duration;
-		if mySize < 8
-			walk = 0;
-	}
 	if instance_exists(myConfusion)
 	{
+		duration = round(duration*0.5);
 		with myConfusion
 		{
 			alarm[0] += duration;
@@ -31,5 +27,12 @@ function scrMoodSwingStun(duration){
 			sprite_index = sprEnemyConfusion;
 			alarm[0] = duration;
 		}
+	}
+	if alarm[1] > 1 && alarm[1] < 25
+	{
+		alarm[11] += duration
+		alarm[1] += duration;
+		if mySize < 8
+			walk = 0;
 	}
 }

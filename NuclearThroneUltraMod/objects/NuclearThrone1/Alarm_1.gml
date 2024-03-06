@@ -28,8 +28,8 @@ if target != noone && instance_exists(target)
 		alarm[1] *= 0.5;
 		event_user(2);
 	}
-	
-	if target.y < y && ran > 50
+	walkDir = 0;
+	if target.y < y && ran > 50 || target.y - 64 < y
 	{
 		//Above me
 		walk = alarm[1];
@@ -37,12 +37,14 @@ if target != noone && instance_exists(target)
 		fireTriShot = false;
 		bigballs = false;
 	}
-	else if ((target.y - y > 170 && ran > 50) || ran > 90 || target.y - y > 220)
+	else if ((target.y - y > 170 && ran > 50) || ran > 90 || target.y - y > 210)
 	{
 		//below me
 		walk = alarm[1]-1;
-		walkDir = 0.9;
-		if target.y - y > 280
+		walkDir = 1.01;
+		if target.y - y > 260
+			walkDir += 0.4;
+		if target.y - y > 350
 			walkDir += 0.4;
 		fireTriShot = false;
 		bigballs = false;
@@ -123,18 +125,21 @@ if target != noone && instance_exists(target)
 				}
 				yReset = y;
 			}
-			if y > ystart + 1800
-				walkDir = 0.8;
-			else if y > ystart + 1400
-				walkDir = 0.9;
-			else if y > ystart + 1200
-				walkDir = 1;
-			else if y > ystart + 900
-				walkDir = 0.9;
-			else if y > ystart + 600
-				walkDir = 0.8;
-			else if y > ystart + 300
-				walkDir = 0.7;	
+			if walkDir >= 0 && walkDir <= 1
+			{
+				if y > ystart + 1800
+					walkDir = 0.8;
+				else if y > ystart + 1400
+					walkDir = 0.9;
+				else if y > ystart + 1200
+					walkDir = 1;
+				else if y > ystart + 900
+					walkDir = 0.9;
+				else if y > ystart + 600
+					walkDir = 0.8;
+				else if y > ystart + 300
+					walkDir = 0.7;
+			}
 		}
 	}
 }

@@ -49,6 +49,13 @@ if instance_exists(Player)
 			with ChargeWeapons
 			{
 				if 	team == Player.team
+				{
+					playerIsBursting = true;
+				}
+			}
+			with Wazer
+			{
+				if 	team == Player.team
 					playerIsBursting = true;
 			}
 			if !playerIsBursting {

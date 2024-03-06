@@ -23,32 +23,32 @@ function scrDrawUpdate() {
 		}
 		if keyboard_check_pressed(ord("C"))
 		{
-			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/689283/301500");
+			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/693507/301603");
 		}
-	var txt0 = @"#UPDATE [30.16.00]
+	var txt0 = @"#UPDATE [30.16.03]
 	
 	* NEW MUTATION: MOOD SWING!
 	
-	* AND I WILL DO THE REST OF THIS
-	A LITTLE LATER
-
-
-	WEEKLY COMPETITION 1!!:
+	* NEW WEAPONS:
+	  ULTRA ORBITER
+	  FROST TELEPATHOR
+	  OLD RIFLE
+	  MICRO GRENADE
+	  ICICLE GUN
+	  FROST KNIFE
+	  GOLDEN FROST KNIFE
 	
-	COMPETE IN THE WEEKLY AND DAILIES
-	FROM 26/02/2024 TO 03/03/2024
-	TO GET YOUR WEAPON ADDED TO THE GAME!
-	* EVERY WINNER GETS ONE WEAPON ADDED
-	* TOP 4 WEEKLY.
-	* TOP 6 COMBINED DAILIES
-    This is for all types of dailies!
-	  1st = 3 points
-	  2nd = 2 points
-	  3th = 1 point
-	  Combined total of points for the week
-	  determines the top 6 dailies.
-	  
-	MORE INFO IN THE DISCORD!
+	* EXTRA FEET NOW NEGATES RECOIL
+	
+	* ATOM ELECTRON BUFF
+	
+	* ANGEL TRANQUILITY BUFF
+	
+	* BUFFED SHEEP CHARGE
+	
+	* NERF/ADJUSTED ULTRA DISC GUYS
+	
+	* SEVERAL BUGFIXES & BALANCE CHANGES
 	
 	PRESS [T] FOR UPDATES ON TWITTER
 	PRESS [D] TO JOIN THE DISCORD

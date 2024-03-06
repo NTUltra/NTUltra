@@ -33,7 +33,7 @@ if !isDown
 {
 	
 	with Player {
-		if ((x > other.middleX + other.moveRange + 48) || (x < other.middleX - other.moveRange - 48)
+		if ((x > other.middleX + other.moveRange + 52) || (x < other.middleX - other.moveRange - 52)
 		|| (y < other.y) || (y > other.y + other.verticalDistanceBeteenTanks))
 		{
 			snd_play_2d(sndIonCharge);

@@ -10,7 +10,7 @@ else
 if friction == 0
 {
 	friction = 0.1;
-	speed += 0.2;
+	speed += 0.3;
 }
 else
 	friction += 0.01;

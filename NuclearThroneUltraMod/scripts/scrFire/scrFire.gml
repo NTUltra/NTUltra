@@ -2,7 +2,11 @@ function scrFire() {
 	IDKWID=false;
 	can_shoot = 0
 	if !instance_exists(Player) || instance_exists(SpiralCont)
-	exit;
+	{
+		clicked = 0;
+		can_shoot = 0;
+		exit;
+	}
 	if wep==0{
 		exit;}
 	reload = min(reload + wep_load[wep],wep_load[wep]);
@@ -76,9 +80,9 @@ function scrFire() {
 				}
 			}
 		}
-		if Player.ultra_got[4]//FISH ULTRA D rolling is good
+		if Player.ultra_got[4] && !Player.altUltra//FISH ULTRA D rolling is good
 		{
-			if reload > 0 && Player.bskin != 2
+			if reload > 0
 			{
 			    reload-=speed*0.25
 			    if Player.roll = 1
@@ -3319,7 +3323,11 @@ function scrFire() {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,6)
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection,2);
+		motion_add(aimDirection,6)
+	}
 	BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 2

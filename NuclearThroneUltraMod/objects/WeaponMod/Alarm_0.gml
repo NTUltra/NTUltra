@@ -49,18 +49,17 @@ if curse=1//ITS CURSED YOU WOT!? LETS FIGHT!
 		var f = instance_nearest(xx,yy,Floor);
 		instance_create(f.x+16,f.y+16,You);
 	}
-
-	with CrownVaultExit {
-		instance_create(x,y,BigWallBreak);
-		instance_create(x,y,GuardianStatue);
-		}//curse!
-
-	if instance_exists(GuardianStatue)
+	var ang = random(360);
+	repeat(4)
 	{
-		with instance_nearest(x,y,GuardianStatue)
-			alarm[1] = 30;
+		with instance_create(x,y,Curse) {
+			motion_add(ang,2);
+		}
+		ang += 90;
 	}
-
+	with CrownVaultExit {
+		alarm[3] = 30;
+	}//curse!
 }
 
 snd_play(sndThunder);

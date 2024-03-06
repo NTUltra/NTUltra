@@ -1,6 +1,6 @@
 {
-  "FolderOrderSettings": [],
-  "ResourceOrderSettings": [
+  "FolderOrderSettings":[],
+  "ResourceOrderSettings":[
     {"name":"scrStartAGamemode","order":7,"path":"scripts/scrStartAGamemode/scrStartAGamemode.yy",},
     {"name":"scrGetExistingScore","order":1,"path":"scripts/scrGetExistingScore/scrGetExistingScore.yy",},
     {"name":"scrChooseGamemodes","order":8,"path":"scripts/scrChooseGamemodes/scrChooseGamemodes.yy",},
