@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrDrawGameOver",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Menus",
-    "path": "folders/Scripts/Menus.yy",
+  "$GMScript":"",
+  "%Name":"scrDrawGameOver",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrDrawGameOver",
+  "parent":{
+    "name":"Menus",
+    "path":"folders/Scripts/Menus.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

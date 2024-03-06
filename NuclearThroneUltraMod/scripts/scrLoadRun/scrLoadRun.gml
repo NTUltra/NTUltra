@@ -18,7 +18,12 @@ function scrLoadRun(){
 			time_microseconds=0;
 			time_seconds=0;
 			time_minutes=0;
-			time_hours=0;	
+			time_hours=0;
+			useSeed = false;
+			isLeaderboardGamemode = false;
+			viewDailyGamemode = false;
+			seedText = "";
+			opt_gamemode = [0];
 		}
 	    instance_create(x,y,Player);
 		var file = file_text_open_read(fileString);
@@ -142,8 +147,24 @@ function scrLoadRun(){
 				UberCont.opt_gamemode = encryptedRun.gamemode;
 				if !is_array(UberCont.opt_gamemode)
 					UberCont.opt_gamemode = [UberCont.opt_gamemode]
-				if scrIsGamemode(26) || scrIsGamemode(27) || scrIsGamemode(37)
+				if scrIsGamemode(26) || scrIsGamemode(27)
+				{
 					UberCont.opt_gamemode = [0];
+					debug("GAMEMODE RESET");
+				}
+				else if scrIsGamemode(37) {
+					with UberCont
+					{
+						var al = array_length(opt_gamemode);
+						for (var i = 0; i < al; i++)
+						{
+							if opt_gamemode[i] == 37
+							{
+								opt_gamemode[i] = 0;
+							}
+						}
+					}
+				}
 				
 				UberCont.killedBoss = encryptedRun.killedBoss;
 				UberCont.collectedRewards = encryptedRun.collectedRewards;

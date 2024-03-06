@@ -20,4 +20,4 @@ repeat(am)
 	}
 	ang += angStep;
 }
-instance_create(x,y,BigWallBreak);
+instance_create(x,y,BigWallBreakWallOnly);

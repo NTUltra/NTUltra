@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrMeleeWeapons",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Weapons",
-    "path": "folders/Scripts/Weapons.yy",
+  "$GMScript":"",
+  "%Name":"scrMeleeWeapons",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrMeleeWeapons",
+  "parent":{
+    "name":"Weapons",
+    "path":"folders/Scripts/Weapons.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

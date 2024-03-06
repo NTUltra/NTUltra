@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrPlasmaStep",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ProjectileScripts",
-    "path": "folders/Scripts/Weapons/ProjectileScripts.yy",
+  "$GMScript":"",
+  "%Name":"scrPlasmaStep",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPlasmaStep",
+  "parent":{
+    "name":"ProjectileScripts",
+    "path":"folders/Scripts/Weapons/ProjectileScripts.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

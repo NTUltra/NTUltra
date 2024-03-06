@@ -1,5 +1,5 @@
 event_inherited()
-instance_create(x,y,WallBreak);
+instance_create(x,y,WallBreakWallOnly);
 var ang = direction;
 var angStep = 360/balls;
 repeat(balls)

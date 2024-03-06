@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrDrawOptions2",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Menus",
-    "path": "folders/Scripts/Menus.yy",
+  "$GMScript":"",
+  "%Name":"scrDrawOptions2",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrDrawOptions2",
+  "parent":{
+    "name":"Menus",
+    "path":"folders/Scripts/Menus.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

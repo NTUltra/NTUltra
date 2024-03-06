@@ -1,5 +1,5 @@
 /// @description No explosion but instead spikes
-instance_create(x,y,WallBreak);
+instance_create(x,y,WallBreakWallOnly);
 var accuracy = 1;
 if instance_exists(Player)
 {

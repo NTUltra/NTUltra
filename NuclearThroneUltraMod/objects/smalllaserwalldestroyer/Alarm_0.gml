@@ -9,4 +9,4 @@ while place_meeting(x,y,Wall) && point_distance(x,y,xstart,ystart) > 8
 image_xscale = max(2,point_distance(x,y,xstart,ystart)*0.5);
 penetration ++;
 if penetration % 3 != 0
-	instance_create(x,y,WallBreak);
+	instance_create(x,y,WallBreakWallOnly);

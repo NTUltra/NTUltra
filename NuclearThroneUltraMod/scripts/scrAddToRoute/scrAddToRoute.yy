@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrAddToRoute",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "LevelGen",
-    "path": "folders/Scripts/LevelGen.yy",
+  "$GMScript":"",
+  "%Name":"scrAddToRoute",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrAddToRoute",
+  "parent":{
+    "name":"LevelGen",
+    "path":"folders/Scripts/LevelGen.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

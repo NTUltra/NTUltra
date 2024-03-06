@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "DealDamage",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ProjectileScripts",
-    "path": "folders/Scripts/Weapons/ProjectileScripts.yy",
+  "$GMScript":"",
+  "%Name":"DealDamage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"DealDamage",
+  "parent":{
+    "name":"ProjectileScripts",
+    "path":"folders/Scripts/Weapons/ProjectileScripts.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -25,24 +25,8 @@ function scrSpawnEndLevelPortal(){
 			{
 			    if !instance_exists(CrownPickup) && instance_exists(Floor)
 			    {
-					if instance_exists(Portal)
-					{
-						dir = instance_furthest(x,y,Portal);
-						with Floor
-						{
-							if object_index != FloorExplo
-							{
-								var n = instance_nearest(x,y,Portal);
-								if n != noone && point_distance(n.x,n.y,x+16,y+16) > 128 {
-									dir = id;
-								}
-							}
-						}
-					}
-					else
-					{
-						dir = instance_nearest(x-16,y-16,Floor)
-					}
+					
+					dir = instance_nearest(x-16,y-16,Floor)
 					if dir != noone
 					{
 						if instance_exists(Player)
@@ -116,6 +100,16 @@ function scrSpawnEndLevelPortal(){
 					if instance_exists(Portal)
 					{
 						dir = instance_furthest(Portal.x,Portal.y,Floor);
+						with Floor
+						{
+							if object_index != FloorExplo
+							{
+								var n = instance_nearest(x,y,Portal);
+								if n != noone && point_distance(n.x,n.y,x+16,y+16) > 128 {
+									dir = id;
+								}
+							}
+						}
 					}
 					else
 					{

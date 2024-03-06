@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrTime",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Menus",
-    "path": "folders/Scripts/Menus.yy",
+  "$GMScript":"",
+  "%Name":"scrTime",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrTime",
+  "parent":{
+    "name":"Menus",
+    "path":"folders/Scripts/Menus.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

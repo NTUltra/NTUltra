@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrRedirectFx",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ProjectileScripts",
-    "path": "folders/Scripts/Weapons/ProjectileScripts.yy",
+  "$GMScript":"",
+  "%Name":"scrRedirectFx",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrRedirectFx",
+  "parent":{
+    "name":"ProjectileScripts",
+    "path":"folders/Scripts/Weapons/ProjectileScripts.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrDisableBigScreen",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Menus",
-    "path": "folders/Scripts/Menus.yy",
+  "$GMScript":"",
+  "%Name":"scrDisableBigScreen",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrDisableBigScreen",
+  "parent":{
+    "name":"Menus",
+    "path":"folders/Scripts/Menus.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

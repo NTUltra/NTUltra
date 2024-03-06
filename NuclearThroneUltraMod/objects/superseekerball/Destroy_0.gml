@@ -2,7 +2,7 @@ snd_play(sndSeekerShotgun,0.1,true)
 event_inherited()
 Sleep(20)
 BackCont.shake += 10;
-instance_create(x+hspeed,y+vspeed,WallBreak);
+instance_create(x+hspeed,y+vspeed,WallBreakWallOnly);
 var am = 6;
 var ang = fireRotation;
 var angStep = 360/am;

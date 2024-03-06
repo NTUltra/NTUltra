@@ -6,7 +6,7 @@ if object_index != SuperKrakenBall
 	snd_play(sndMeatExplo)
 	instance_create(x,y,MeatExplosion)
 	Sleep(10)
-	instance_create(x+hspeed,y+vspeed,WallBreak);
+	instance_create(x+lengthdir_x(12,direction),y+lengthdir_y(12,direction),WallBreakWallOnly);
 	var am = 6;
 	var ang = fireRotation;
 	var angStep = 360/am;

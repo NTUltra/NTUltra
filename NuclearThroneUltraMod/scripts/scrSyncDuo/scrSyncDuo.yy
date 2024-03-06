@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrSyncDuo",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Gamemode",
-    "path": "folders/Scripts/Gamemode.yy",
+  "$GMScript":"",
+  "%Name":"scrSyncDuo",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrSyncDuo",
+  "parent":{
+    "name":"Gamemode",
+    "path":"folders/Scripts/Gamemode.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

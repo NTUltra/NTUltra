@@ -46,9 +46,9 @@ if place_meeting(x,y,Wall)
 {
 timeinwall++;
 if timeinwall>30
-instance_create(x,y,WallBreak);
-instance_create(x+8,y+8,WallBreak);
-instance_create(x-8,y-8,WallBreak);
+instance_create(x,y,WallBreakWallOnly);
+instance_create(x+8,y+8,WallBreakWallOnly);
+instance_create(x-8,y-8,WallBreakWallOnly);
 }
 else
 timeinwall=0;

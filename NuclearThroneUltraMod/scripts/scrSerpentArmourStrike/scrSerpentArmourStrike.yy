@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrSerpentArmourStrike",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Player Character",
-    "path": "folders/Scripts/Player Character.yy",
+  "$GMScript":"",
+  "%Name":"scrSerpentArmourStrike",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrSerpentArmourStrike",
+  "parent":{
+    "name":"Player Character",
+    "path":"folders/Scripts/Player Character.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

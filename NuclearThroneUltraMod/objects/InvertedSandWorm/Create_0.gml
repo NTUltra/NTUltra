@@ -1,7 +1,7 @@
 /// @description Invurrrtut
 // Inherit the parent event
 event_inherited();
-maxhealth = 770;
+maxhealth = 550;
 raddrop = 54;
 scrBossHealthBuff();
 EnemyHealthAdjustments();

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrEyesTelekinesisThroughWalls",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Abilities",
-    "path": "folders/Scripts/Player Character/Abilities.yy",
+  "$GMScript":"",
+  "%Name":"scrEyesTelekinesisThroughWalls",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrEyesTelekinesisThroughWalls",
+  "parent":{
+    "name":"Abilities",
+    "path":"folders/Scripts/Player Character/Abilities.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

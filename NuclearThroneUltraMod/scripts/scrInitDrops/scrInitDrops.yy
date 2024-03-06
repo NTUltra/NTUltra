@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrInitDrops",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Player Character",
-    "path": "folders/Scripts/Player Character.yy",
+  "$GMScript":"",
+  "%Name":"scrInitDrops",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrInitDrops",
+  "parent":{
+    "name":"Player Character",
+    "path":"folders/Scripts/Player Character.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

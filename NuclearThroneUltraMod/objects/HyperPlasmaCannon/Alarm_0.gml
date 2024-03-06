@@ -24,7 +24,7 @@ motion_add(random(360),random(2))
 
 }
 until dir > 100 or place_meeting(x,y,Wall) or place_meeting(x,y,hitme)
-instance_create(x,y,WallBreak);
+instance_create(x,y,WallBreakWallOnly);
 alarm[1] = 2
 	scrForcePosition60fps();
 speed = 4

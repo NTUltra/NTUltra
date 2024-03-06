@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrSpawnBoss",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "LevelGen",
-    "path": "folders/Scripts/LevelGen.yy",
+  "$GMScript":"",
+  "%Name":"scrSpawnBoss",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrSpawnBoss",
+  "parent":{
+    "name":"LevelGen",
+    "path":"folders/Scripts/LevelGen.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

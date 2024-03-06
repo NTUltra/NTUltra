@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrCollectHP",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Mutations",
-    "path": "folders/Scripts/Mutations.yy",
+  "$GMScript":"",
+  "%Name":"scrCollectHP",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrCollectHP",
+  "parent":{
+    "name":"Mutations",
+    "path":"folders/Scripts/Mutations.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

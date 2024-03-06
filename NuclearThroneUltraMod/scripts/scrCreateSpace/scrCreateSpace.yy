@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrCreateSpace",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "LevelGen",
-    "path": "folders/Scripts/LevelGen.yy",
+  "$GMScript":"",
+  "%Name":"scrCreateSpace",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrCreateSpace",
+  "parent":{
+    "name":"LevelGen",
+    "path":"folders/Scripts/LevelGen.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

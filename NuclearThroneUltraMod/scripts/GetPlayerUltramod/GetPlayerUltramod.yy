@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "GetPlayerUltramod",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Player Character",
-    "path": "folders/Scripts/Player Character.yy",
+  "$GMScript":"",
+  "%Name":"GetPlayerUltramod",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GetPlayerUltramod",
+  "parent":{
+    "name":"Player Character",
+    "path":"folders/Scripts/Player Character.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

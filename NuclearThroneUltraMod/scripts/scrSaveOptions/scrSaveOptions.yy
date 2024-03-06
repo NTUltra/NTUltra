@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrSaveOptions",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Init loading&saving",
-    "path": "folders/Scripts/Init loading&saving.yy",
+  "$GMScript":"",
+  "%Name":"scrSaveOptions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrSaveOptions",
+  "parent":{
+    "name":"Init loading&saving",
+    "path":"folders/Scripts/Init loading&saving.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

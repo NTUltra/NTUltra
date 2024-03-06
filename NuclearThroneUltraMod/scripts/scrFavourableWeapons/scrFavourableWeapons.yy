@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrFavourableWeapons",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Unlocks",
-    "path": "folders/Scripts/Player Character/Unlocks.yy",
+  "$GMScript":"",
+  "%Name":"scrFavourableWeapons",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrFavourableWeapons",
+  "parent":{
+    "name":"Unlocks",
+    "path":"folders/Scripts/Player Character/Unlocks.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -22,8 +22,8 @@ if alarm[0] < 1
 }
 if (instance_exists(Player) && Player.skill_got[43])
 {
-	var am = round(debrisAmount * 2);
-	if alarm[0] > 0 || (instance_exists(owner) && owner != noone && owner.team == 0)
-		am = debrisAmount;
-	scrMoodSwingIcicle(am, owner);
+	//var am = round(debrisAmount * 2);
+	//if alarm[0] > 0 || (instance_exists(owner) && owner != noone && owner.team == 0)
+	//	am = debrisAmount;
+	scrMoodSwingIcicle(debrisAmount, owner);
 }

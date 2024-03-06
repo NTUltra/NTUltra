@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrDrawLeaderboardCrown",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Leaderboard",
-    "path": "folders/Scripts/Leaderboard.yy",
+  "$GMScript":"",
+  "%Name":"scrDrawLeaderboardCrown",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrDrawLeaderboardCrown",
+  "parent":{
+    "name":"Leaderboard",
+    "path":"folders/Scripts/Leaderboard.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

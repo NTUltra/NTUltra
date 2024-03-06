@@ -11,4 +11,4 @@ fire=false;
 
 minSpeed = 0.8;
 maxSpeed = random_range(minSpeed,3.5);
-instance_create(x,y,WallBreak);
+instance_create(x,y,WallBreakWallOnly);

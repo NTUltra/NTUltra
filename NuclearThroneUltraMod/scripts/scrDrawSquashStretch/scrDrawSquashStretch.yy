@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrDrawSquashStretch",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Fancy Aesthetics",
-    "path": "folders/Scripts/Fancy Aesthetics.yy",
+  "$GMScript":"",
+  "%Name":"scrDrawSquashStretch",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrDrawSquashStretch",
+  "parent":{
+    "name":"Fancy Aesthetics",
+    "path":"folders/Scripts/Fancy Aesthetics.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "SetSeedWeapon",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "LevelGen",
-    "path": "folders/Scripts/LevelGen.yy",
+  "$GMScript":"",
+  "%Name":"SetSeedWeapon",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SetSeedWeapon",
+  "parent":{
+    "name":"LevelGen",
+    "path":"folders/Scripts/LevelGen.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

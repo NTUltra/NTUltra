@@ -47,7 +47,7 @@ if target != noone && instance_exists(target)
 				image_index = 0
 				DealDamage(other.dmg);
 				other.target = noone;
-				instance_create(x,y,WallBreak);
+				instance_create(x,y,WallBreakWallOnly);
 				snd_play(sndImpWristKill);
 				BackCont.shake += 6;
 				BackCont.viewx2 += lengthdir_x(8,point_direction(other.creator.x,other.creator.y,x,y)+180)*UberCont.opt_shake

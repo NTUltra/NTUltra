@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrActivateAllOutOfRange",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Optimize",
-    "path": "folders/Scripts/Optimize.yy",
+  "$GMScript":"",
+  "%Name":"scrActivateAllOutOfRange",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrActivateAllOutOfRange",
+  "parent":{
+    "name":"Optimize",
+    "path":"folders/Scripts/Optimize.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

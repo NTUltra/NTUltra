@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrChangeRaven",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Enemy",
-    "path": "folders/Scripts/Enemy.yy",
+  "$GMScript":"",
+  "%Name":"scrChangeRaven",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrChangeRaven",
+  "parent":{
+    "name":"Enemy",
+    "path":"folders/Scripts/Enemy.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

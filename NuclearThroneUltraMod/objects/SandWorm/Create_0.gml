@@ -1,5 +1,5 @@
 raddrop = 45
-maxhealth = 650
+maxhealth = 600
 meleedamage = 10
 mySize = 3
 scrBossHealthBuff();

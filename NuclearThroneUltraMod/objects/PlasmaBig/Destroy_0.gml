@@ -5,7 +5,7 @@ snd_play(sndPlasmaBigExplodeUpg)
 else
 snd_play(sndPlasmaBigExplode)
 }
-instance_create(x,y,BigWallBreak);
+instance_create(x,y,BigWallBreakWallOnly);
 var ang = random(360)
 var angstep = 360/balls
 repeat(balls)

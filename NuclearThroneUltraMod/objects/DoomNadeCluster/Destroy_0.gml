@@ -16,7 +16,7 @@ team=other.team;
 alarm[2] = 8 + irandom(7);
 }
 
-instance_create(x,y,WallBreak);
+instance_create(x,y,WallBreakWallOnly);
 
 
 repeat(10)

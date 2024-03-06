@@ -1,5 +1,5 @@
 instance_create(x,y,Dust)
-instance_create(x,y,WallBreak)
+instance_create(x,y,WallBreakWallOnly)
 move_bounce_solid(false);
 if !shotgunShoulders
 {

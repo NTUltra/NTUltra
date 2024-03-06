@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrForcePosition60fps",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ProjectileScripts",
-    "path": "folders/Scripts/Weapons/ProjectileScripts.yy",
+  "$GMScript":"",
+  "%Name":"scrForcePosition60fps",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrForcePosition60fps",
+  "parent":{
+    "name":"ProjectileScripts",
+    "path":"folders/Scripts/Weapons/ProjectileScripts.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

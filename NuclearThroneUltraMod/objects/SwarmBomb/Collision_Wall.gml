@@ -1,3 +1,3 @@
 /// @description xxx
-instance_create(x,y,WallBreak);
+instance_create(x,y,WallBreakWallOnly);
 instance_destroy();	

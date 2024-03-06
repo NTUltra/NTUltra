@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrUnlockCSkin",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Unlocks",
-    "path": "folders/Scripts/Player Character/Unlocks.yy",
+  "$GMScript":"",
+  "%Name":"scrUnlockCSkin",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrUnlockCSkin",
+  "parent":{
+    "name":"Unlocks",
+    "path":"folders/Scripts/Player Character/Unlocks.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

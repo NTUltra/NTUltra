@@ -26,5 +26,5 @@ gunangle = 0;
 alarm[1] = 30+random(90)
 wkick = 0
 friction = 6;
-instance_create(x,y,WallBreak);
+instance_create(x,y,WallBreakWallOnly);
 depth = -2;

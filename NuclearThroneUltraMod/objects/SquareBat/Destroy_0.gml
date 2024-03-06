@@ -14,9 +14,9 @@ else
 }
 var dir = point_direction(x,y,xx,yy);
 if point_distance(x,y,xx,yy) > 28
-	instance_create(x+lengthdir_x(10,dir),y+lengthdir_y(10,dir),BigWallBreak);
+	instance_create(x+lengthdir_x(10,dir),y+lengthdir_y(10,dir),BigWallBreakWallOnly);
 else
-	instance_create(x+lengthdir_x(6,dir),y+lengthdir_y(6,dir),WallBreak);
+	instance_create(x+lengthdir_x(6,dir),y+lengthdir_y(6,dir),WallBreakWallOnly);
 
 event_inherited();
 if place_meeting(x,y,Floor) || place_meeting(x,y,FloorExplo)

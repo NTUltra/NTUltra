@@ -16,6 +16,8 @@ if fuseAmount > 0
 			countKill = false;
 			alarm[1] = 5;
 			direction = random(360);
+			speed = 2;
+			walk += 2;
 		}
 	}	
 }

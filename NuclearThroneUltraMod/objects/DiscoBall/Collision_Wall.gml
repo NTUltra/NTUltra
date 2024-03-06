@@ -14,4 +14,4 @@ image_angle = direction}
 }
 move_bounce_solid(false)
 
-instance_create(other.x+8,other.y+8,WallBreak);
+instance_create(other.x+8,other.y+8,WallBreakWallOnly);

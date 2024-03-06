@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrDropHeavyHeart",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Mutations",
-    "path": "folders/Scripts/Mutations.yy",
+  "$GMScript":"",
+  "%Name":"scrDropHeavyHeart",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrDropHeavyHeart",
+  "parent":{
+    "name":"Mutations",
+    "path":"folders/Scripts/Mutations.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

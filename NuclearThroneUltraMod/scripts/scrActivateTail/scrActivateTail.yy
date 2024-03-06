@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrActivateTail",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Mutations",
-    "path": "folders/Scripts/Mutations.yy",
+  "$GMScript":"",
+  "%Name":"scrActivateTail",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrActivateTail",
+  "parent":{
+    "name":"Mutations",
+    "path":"folders/Scripts/Mutations.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

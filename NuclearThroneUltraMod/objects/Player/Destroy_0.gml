@@ -592,7 +592,6 @@ else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 		var playedWithAll = true;
 			for (var i = 1; i <= racemax; i++) {
 			    // code here
-				debug(ctot_played[i]);
 				if !ctot_played[i]
 				{
 					playedWithAll = false;

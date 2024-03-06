@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrDecideMorphWep",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Player Character",
-    "path": "folders/Scripts/Player Character.yy",
+  "$GMScript":"",
+  "%Name":"scrDecideMorphWep",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrDecideMorphWep",
+  "parent":{
+    "name":"Player Character",
+    "path":"folders/Scripts/Player Character.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

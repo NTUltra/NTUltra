@@ -236,6 +236,11 @@ function scrSkills() {
 		skill_name[14] = "HOT HEAD"
 	skill_text[14] = "NO DAMAGE FROM#<w>EXPLOSIONS<w>, <w>FIRE<w> AND <w>FROST<w>#WHEN UNDER 5<r>HP<r>"
 	skill_detail[14] = "NO DAMAGE FROM#<w>EXPLOSIONS<w>, <w>FIRE<w>, <w>FROST<w>#AND YOU CAN'T BE <w>FROZEN<w>#WHEN UNDER 5<r>HP<r>#(WEAPON SPECIFIC MUTATION)";
+	if instance_exists(Player) && Player.race == 13
+	{
+			
+		skill_detail[14] = "NO DAMAGE FROM#<w>EXPLOSIONS<w>, <w>FIRE<w>, <w>FROST<w>#AND YOU CAN'T BE <w>FROZEN<w>#WHEN UNDER 5<r>HP<r>#LOSE LESS CHARGE FROM EXPLOSIONS#(WEAPON SPECIFIC MUTATION)";
+	}
 	skill_tips[14] = "temperature is rising";
 	skill_msnd[14] =  sndMutBoilingVeins
 	skill_bons[14] = "UNDER 6HP";

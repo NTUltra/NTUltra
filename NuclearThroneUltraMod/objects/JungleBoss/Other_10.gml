@@ -22,6 +22,7 @@ repeat(am)
 	{
 		countKill = false;
 		motion_add(ang,6);
+		walk += 2;
 		alarm[1] *= 0.5;
 		if instance_exists(Player) && Player.skill_got[29] {
 			alarm[1] += 15;

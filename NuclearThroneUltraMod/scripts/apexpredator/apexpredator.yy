@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "ApexPredator",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Mutations",
-    "path": "folders/Scripts/Mutations.yy",
+  "$GMScript":"",
+  "%Name":"ApexPredator",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ApexPredator",
+  "parent":{
+    "name":"Mutations",
+    "path":"folders/Scripts/Mutations.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

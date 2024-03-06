@@ -1,9 +1,11 @@
 {
-  "resourceType": "GMNotes",
-  "resourceVersion": "1.1",
-  "name": "changelog",
-  "parent": {
-    "name": "NuclearThroneUltraMod",
-    "path": "NuclearThroneUltraMod.yyp",
+  "$GMNotes":"",
+  "%Name":"changelog",
+  "name":"changelog",
+  "parent":{
+    "name":"NuclearThroneUltraMod",
+    "path":"NuclearThroneUltraMod.yyp",
   },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
 }

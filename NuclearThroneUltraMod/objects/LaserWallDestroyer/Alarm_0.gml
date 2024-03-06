@@ -92,4 +92,4 @@ instance_create(x,y,Smoke)
 
 penetration ++;
 if penetration % 4 == 0
-	instance_create(x,y,WallBreak);
+	instance_create(x,y,WallBreakWallOnly);

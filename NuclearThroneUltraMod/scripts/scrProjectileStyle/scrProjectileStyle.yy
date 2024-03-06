@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrProjectileStyle",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Abilities",
-    "path": "folders/Scripts/Player Character/Abilities.yy",
+  "$GMScript":"",
+  "%Name":"scrProjectileStyle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrProjectileStyle",
+  "parent":{
+    "name":"Abilities",
+    "path":"folders/Scripts/Player Character/Abilities.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

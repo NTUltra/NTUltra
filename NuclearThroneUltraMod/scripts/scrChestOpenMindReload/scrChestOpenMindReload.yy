@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrChestOpenMindReload",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Mutations",
-    "path": "folders/Scripts/Mutations.yy",
+  "$GMScript":"",
+  "%Name":"scrChestOpenMindReload",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrChestOpenMindReload",
+  "parent":{
+    "name":"Mutations",
+    "path":"folders/Scripts/Mutations.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,5 +1,5 @@
 event_inherited()
-instance_create(x,y,WallBreak);
+instance_create(x,y,BigWallBreakWallOnly);
 var ang = direction;
 var angStep = 360/4;
 repeat(4)

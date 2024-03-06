@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CapSpeed",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "BestScripts",
-    "path": "folders/Scripts/BestScripts.yy",
+  "$GMScript":"",
+  "%Name":"CapSpeed",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CapSpeed",
+  "parent":{
+    "name":"BestScripts",
+    "path":"folders/Scripts/BestScripts.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

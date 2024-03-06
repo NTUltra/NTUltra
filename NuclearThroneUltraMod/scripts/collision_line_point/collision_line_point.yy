@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "collision_line_point",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "BestScripts",
-    "path": "folders/Scripts/BestScripts.yy",
+  "$GMScript":"",
+  "%Name":"collision_line_point",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"collision_line_point",
+  "parent":{
+    "name":"BestScripts",
+    "path":"folders/Scripts/BestScripts.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

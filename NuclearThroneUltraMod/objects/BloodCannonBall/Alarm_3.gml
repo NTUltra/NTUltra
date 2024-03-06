@@ -3,6 +3,6 @@ if place_meeting(x,y,Wall)
 {
 	instance_destroy()
 	instance_create(x,y,Smoke)
-	instance_create(x,y,WallBreak)	
+	instance_create(x,y,WallBreakWallOnly)	
 }
 alarm[3] = 1;

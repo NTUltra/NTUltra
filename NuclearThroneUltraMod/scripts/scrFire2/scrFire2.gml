@@ -6780,7 +6780,7 @@ function scrFire2(hasTailNow) {
 				owner = other.id;
 				team = other.team;
 				mywep = other.wep
-				alarm[0] = 10;
+				alarm[0] = 11;
 				if Player.skill_got[42]
 				{
 					alarm[0] = ceil(alarm[0]*Player.betterTail);
@@ -6927,7 +6927,7 @@ function scrFire2(hasTailNow) {
 				owner = other.id;
 				team = other.team;
 				mywep = other.wep
-				alarm[0] = 8;
+				alarm[0] = 9;
 				if Player.skill_got[42]
 				{
 					alarm[0] = ceil(alarm[0]*Player.betterTail);

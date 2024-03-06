@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrShadows",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Fancy Aesthetics",
-    "path": "folders/Scripts/Fancy Aesthetics.yy",
+  "$GMScript":"",
+  "%Name":"scrShadows",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrShadows",
+  "parent":{
+    "name":"Fancy Aesthetics",
+    "path":"folders/Scripts/Fancy Aesthetics.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

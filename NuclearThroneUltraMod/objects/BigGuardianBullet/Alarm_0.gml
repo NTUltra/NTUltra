@@ -7,4 +7,10 @@ else
 {
 	alarm[0] = 4;
 }
-friction = 0.1;
+if friction == 0
+{
+	friction = 0.1;
+	speed += 0.2;
+}
+else
+	friction += 0.01;

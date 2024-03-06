@@ -4,7 +4,7 @@ if object_index != SuperMissileBall
 	snd_play(sndNukeExplosion,0.1,true)
 	instance_create(x,y,Explosion);
 	Sleep(10)
-	instance_create(x+hspeed,y+vspeed,WallBreak);
+	instance_create(x+hspeed,y+vspeed,WallBreakWallOnly);
 	var am = 5;
 	var ang = fireRotation;
 	var angStep = 360/am;

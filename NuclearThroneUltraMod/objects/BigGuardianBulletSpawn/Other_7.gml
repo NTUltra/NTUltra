@@ -22,7 +22,7 @@ if target != noone && instance_exists(target)
 				x += lengthdir_x(8, dir);
 				y += lengthdir_y(8, dir);
 				motion_add(dir,max(5,2.5+random(1.6)+addspeed));
-				friction -= 0.01;
+				alarm[0] += 2;
 			}
 		}
 		else
@@ -43,7 +43,7 @@ if target != noone && instance_exists(target)
 		{
 			with instance_create(x,y,InvertedBigGuardianSquareBullet)
 			{	
-				friction -= 0.01;
+				alarm[0] += 2;
 				owner = other.owner;
 				team = other.team;
 				x += lengthdir_x(8, dir);

@@ -7,6 +7,7 @@ function scrFreezeTarget(stunTime,frostDamage = 2){
 			frozen = instance_create(x,y,FrozenEnemy);
 			with frozen
 			{
+				debrisAmount = frostDamage;
 				spriteSize = max(other.sprite_width,other.sprite_height);
 				var s = min(2,other.mySize);
 				image_xscale=s*choose(1,-1);
@@ -19,14 +20,16 @@ function scrFreezeTarget(stunTime,frostDamage = 2){
 		else
 		{
 			with frozen {
-				debrisAmount = min(debrisAmount + 0.5, 6);
+				debrisAmount = min(debrisAmount + 0.25, 4);
 			}
 		}
 		if alarm[1] > stunTime
 			stunTime *= 0.5;
-		alarm[11] += stunTime + 5;
-		if alarm[1] > 0
+		if alarm[11] < 60
+			alarm[11] += stunTime + 5;
+		if alarm[1] > 0 && alarm[1] < 60
 			alarm[1] += stunTime;
+			
 		if mySize < 8
 		{
 			speed = 0;

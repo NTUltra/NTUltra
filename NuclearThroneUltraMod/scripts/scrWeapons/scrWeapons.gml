@@ -991,7 +991,7 @@ function scrWeapons() {
 	wep_name[88] = "SPLINTER PISTOL"
 	wep_type[88] = 3
 	wep_auto[88] = 2
-	wep_load[88] = 9
+	wep_load[88] = 8
 	wep_cost[88] = 1
 	wep_sprt[88] = sprSplinterPistol
 	wep_area[88] = 6
@@ -4764,7 +4764,7 @@ function scrWeapons() {
 	wep_name[424] = "WAZER RIFLE"
 	wep_type[424] = 5
 	wep_auto[424] = 3
-	wep_load[424] = 8
+	wep_load[424] = 9
 	wep_cost[424] = 1
 	wep_sprt[424] = sprWazerRifle
 	wep_area[424] = 12
@@ -4808,7 +4808,7 @@ function scrWeapons() {
 	wep_name[428] = "EXPLOSIVE WAZER RIFLE"
 	wep_type[428] = 4
 	wep_auto[428] = 3
-	wep_load[428] = 6
+	wep_load[428] = 7
 	wep_cost[428] = 1
 	wep_sprt[428] = sprExplosiveWazerRifle
 	wep_area[428] = 17

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrRecycleGland",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ProjectileScripts",
-    "path": "folders/Scripts/Weapons/ProjectileScripts.yy",
+  "$GMScript":"",
+  "%Name":"scrRecycleGland",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrRecycleGland",
+  "parent":{
+    "name":"ProjectileScripts",
+    "path":"folders/Scripts/Weapons/ProjectileScripts.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

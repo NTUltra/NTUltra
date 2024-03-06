@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrCensorString",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "BestScripts",
-    "path": "folders/Scripts/BestScripts.yy",
+  "$GMScript":"",
+  "%Name":"scrCensorString",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrCensorString",
+  "parent":{
+    "name":"BestScripts",
+    "path":"folders/Scripts/BestScripts.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

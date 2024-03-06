@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrGetChargeType",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Weapons",
-    "path": "folders/Scripts/Weapons.yy",
+  "$GMScript":"",
+  "%Name":"scrGetChargeType",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrGetChargeType",
+  "parent":{
+    "name":"Weapons",
+    "path":"folders/Scripts/Weapons.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

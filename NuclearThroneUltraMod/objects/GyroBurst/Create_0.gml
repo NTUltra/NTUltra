@@ -15,4 +15,4 @@ timeinwall=0;
 
 proj = Bullet1;
 pSpeed = 16;
-instance_create(x,y,SmallWallBreak);
+instance_create(x,y,SmallWallBreakWallOnly);
