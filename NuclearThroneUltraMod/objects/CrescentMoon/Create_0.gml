@@ -3,10 +3,10 @@ image_speed = 0;
 image_index = 0;
 type = 0;
 deflectSpeed = 12;
-deflectDuration = 14;
+deflectDuration = 15;
 tellDuration = 3;
-regenCooldown = 46;//Double seconds
-regenRate = 27;
+regenCooldown = 38;//Double seconds
+regenRate = 23;
 bloomSprite = sprCrescentMoonBloom;
 spr = sprCrescentMoon;
 dmg = 0;
@@ -14,8 +14,8 @@ if instance_exists(Player)
 {
 	if Player.race == 25//Doctor bonus
 	{
-		regenRate = 26;
-		regenCooldown = 43;
+		regenRate = 22;
+		regenCooldown = 36;
 	}
 	if Player.skill_got[8] {
 		bloomSprite = sprCrescentMoonBloomGamma;

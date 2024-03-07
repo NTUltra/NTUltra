@@ -61,7 +61,8 @@ else if um == ultramods.bulletPlasma
 	}
 	with instance_create(x,y,MiniPlasmaBall)
 	{
-		acc ++;
+		acc += 2;
+		maxSpeed += 4;
 		scrCopyWeaponMod(other);
 		ptime = 6;
 		direction = other.direction;

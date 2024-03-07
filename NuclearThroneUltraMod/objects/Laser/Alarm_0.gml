@@ -7,18 +7,24 @@ if(instance_exists(Player)){
 		{
 			with instance_create(x,y,Shell)
 			motion_add(other.image_angle+Player.right*100+random(50)-25,2+random(2))
+			with instance_create(x,y,Bullet1)
+				{motion_add(other.image_angle,20)
+					scrCopyWeaponMod(other);
+				image_angle = direction
+				team = other.team
+				alarm[11] = 0;}
 			if isExplosive
 			{
 				snd_play_fire(sndTripleMachinegun);
 				var acc = scrGetPlayerAccuracy();
 				with instance_create(x,y,Bullet1Explosive)
-				{motion_add(other.image_angle-(5*acc),14)
+				{motion_add(other.image_angle-(5*acc),18)
 					scrCopyWeaponMod(other);
 				image_angle = direction
 				team = other.team
 				alarm[11] = 0;}
 				with instance_create(x,y,Bullet1Explosive)
-				{motion_add(other.image_angle+(5*acc),14)
+				{motion_add(other.image_angle+(5*acc),18)
 					scrCopyWeaponMod(other);
 				image_angle = direction
 				team = other.team
@@ -30,14 +36,14 @@ if(instance_exists(Player)){
 				snd_play_fire(sndUltraPistol);
 				var acc = scrGetPlayerAccuracy();
 				with instance_create(x,y,Bullet4)
-				{motion_add(other.image_angle-(5*acc),16)
+				{motion_add(other.image_angle-(5*acc),22)
 					scrCopyWeaponMod(other);
 					dmg -= 2;
 				image_angle = direction
 				team = other.team
 				alarm[11] = 0;}
 				with instance_create(x,y,Bullet4)
-				{motion_add(other.image_angle+(5*acc),16)
+				{motion_add(other.image_angle+(5*acc),22)
 					scrCopyWeaponMod(other);
 					dmg -= 2;
 				image_angle = direction
@@ -51,7 +57,7 @@ if(instance_exists(Player)){
 				with instance_create(x,y,BouncerBurst)
 				{
 					ultramodded = true;
-					pspeed += 3;
+					pspeed += 4;
 					creator = Player
 					ammo = other.laserhit
 					time = 1
@@ -80,13 +86,13 @@ if(instance_exists(Player)){
 			{
 				snd_play_fire(sndCuber);
 				with instance_create(x,y,MorphBullet)
-				{motion_add(other.image_angle+5,18)
+				{motion_add(other.image_angle+5,20)
 					scrCopyWeaponMod(other);
 				image_angle = direction
 				team = other.team
 				alarm[11] = 0;}
 				with instance_create(x,y,MorphBullet)
-				{motion_add(other.image_angle-5,18)
+				{motion_add(other.image_angle-5,20)
 					scrCopyWeaponMod(other);
 				image_angle = direction
 				team = other.team
@@ -101,7 +107,7 @@ if(instance_exists(Player)){
 				}
 				with instance_create(x,y,FatPlasmaBullet)
 				{
-					motion_add(other.image_angle,16)
+					motion_add(other.image_angle,18)
 					scrCopyWeaponMod(other);
 					image_angle = direction
 					team = other.team
@@ -112,7 +118,7 @@ if(instance_exists(Player)){
 			{
 				snd_play_fire(sndHeavyMachinegun);
 				with instance_create(x,y,HeavyBullet)
-				{motion_add(other.image_angle,16)
+				{motion_add(other.image_angle,22)
 					scrCopyWeaponMod(other);
 				image_angle = direction
 				team = other.team

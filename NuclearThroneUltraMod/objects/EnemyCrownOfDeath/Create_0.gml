@@ -10,3 +10,4 @@ spr_hurt = sprCrown2HurtEnemy
 spr_dead = sprCrown2DeadEnemy
 fuse = 60;
 alarm[2] = fuse*2;
+alarm[3] = 40;

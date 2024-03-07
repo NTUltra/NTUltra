@@ -31,12 +31,21 @@ else if um == ultramods.plasmaRocket
 } else if um == ultramods.bulletPlasma
 {
 	snd_play_fire(sndHeavyMachinegun)
-	with instance_create(x,y,HeavyBullet)
+	with instance_create(x,y,Bullet1)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
 		speed = other.speed+12;
+		team = other.team;
+		alarm[11] = 0;
+	}
+	with instance_create(x,y,HeavyBullet)
+	{
+		scrCopyWeaponMod(other);
+		direction = other.direction;
+		image_angle = direction;
+		speed = other.speed+14;
 		team = other.team;
 		alarm[11] = 0;
 	}

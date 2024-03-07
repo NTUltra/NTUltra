@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scrCresentMoonAimAssist",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrCresentMoonAimAssist",
+  "parent":{
+    "name":"Mutations",
+    "path":"folders/Scripts/Mutations.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1855,6 +1855,7 @@
     {"name":"scrCreateDataRef","order":86,"path":"scripts/scrCreateDataRef/scrCreateDataRef.yy",},
     {"name":"scrCreateMissingChest","order":25,"path":"scripts/scrCreateMissingChest/scrCreateMissingChest.yy",},
     {"name":"scrCreateSpace","order":53,"path":"scripts/scrCreateSpace/scrCreateSpace.yy",},
+    {"name":"scrCresentMoonAimAssist","order":16,"path":"scripts/scrCresentMoonAimAssist/scrCresentMoonAimAssist.yy",},
     {"name":"scrCrownAnimation","order":57,"path":"scripts/scrCrownAnimation/scrCrownAnimation.yy",},
     {"name":"scrCrownOfDeath","order":60,"path":"scripts/scrCrownOfDeath/scrCrownOfDeath.yy",},
     {"name":"scrCrownOfPopoRad","order":7,"path":"scripts/scrCrownOfPopoRad/scrCrownOfPopoRad.yy",},

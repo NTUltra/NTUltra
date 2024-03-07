@@ -27,21 +27,17 @@ if holdTime > 6
 	BackCont.viewx2 += lengthdir_x(2,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(2,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 	BackCont.shake += 1
-	repeat(2)
-	{
 	with instance_create(x,y,IceFlame)
 	{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(10)-5)-(40*offset),9+random(3))
 	team = other.team
+	dmg += 1;
 	scrCopyWeaponMod(other);}
-	}
 
-	repeat(2)
-	{
 	with instance_create(x,y,Flame)
 	{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(10)-5)+(40*offset),9+random(3))
 	team = other.team
+	dmg += 1;
 	scrCopyWeaponMod(other);}
-	}
 	
 }
 if holdTime > 14
@@ -87,21 +83,17 @@ if holdTime > 30
 	scrCopyWeaponMod(other);}
 	}
 	
-	repeat(2)
-	{
 	with instance_create(x,y,IceFlame)
 	{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(10)-5)+(120*offset),9+random(3))
 	team = other.team
+	dmg += 1;
 	scrCopyWeaponMod(other);}
-	}
 
-	repeat(2)
-	{
 	with instance_create(x,y,Flame)
 	{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(10)-5)-(120*offset),9+random(3))
 	team = other.team
+	dmg += 1;
 	scrCopyWeaponMod(other);}
-	}
 	
 	with instance_create(x,y,IceFlame)
 	{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(10)-5)-(4*offset),9+random(3))

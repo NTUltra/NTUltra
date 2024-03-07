@@ -23,11 +23,16 @@ function scrDrawUpdate() {
 		}
 		if keyboard_check_pressed(ord("C"))
 		{
-			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/692391/301602");
+			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/694084/301700");
 		}
-	var txt0 = @"#UPDATE [30.16.04]
+	var txt0 = @"#UPDATE [30.17.00]
 	
-	* NEW MUTATION: MOOD SWING!
+	* NEW MUTATIONS:
+	  MOOD SWING
+	  
+	  SERENE DREAMS 
+	  (mutation art by Daph
+	  sounds by PolygonOni)
 	
 	* NEW WEAPONS:
 	  ULTRA ORBITER
@@ -39,16 +44,12 @@ function scrDrawUpdate() {
 	  GOLDEN FROST KNIFE
 	
 	* EXTRA FEET NOW NEGATES RECOIL
-	
 	* ATOM ELECTRON BUFF
-	
 	* ANGEL TRANQUILITY BUFF
-	
 	* BUFFED SHEEP CHARGE
-	
+	* BUFFED DOCTOR THRONEBUTT
+
 	* NERF/ADJUSTED ULTRA DISC GUYS
-	
-	* SEVERAL BUGFIXES & BALANCE CHANGES
 	
 	PRESS [T] FOR UPDATES ON TWITTER
 	PRESS [D] TO JOIN THE DISCORD

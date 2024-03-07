@@ -18,4 +18,4 @@ else
 	jumpDir = direction;
 	motion_add(direction,7);
 }
-alarm[3] = 10;
+alarm[3] = 9;

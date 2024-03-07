@@ -2113,6 +2113,7 @@
     {"id":{"name":"scrCreateDataRef","path":"scripts/scrCreateDataRef/scrCreateDataRef.yy",},},
     {"id":{"name":"scrCreateMissingChest","path":"scripts/scrCreateMissingChest/scrCreateMissingChest.yy",},},
     {"id":{"name":"scrCreateSpace","path":"scripts/scrCreateSpace/scrCreateSpace.yy",},},
+    {"id":{"name":"scrCresentMoonAimAssist","path":"scripts/scrCresentMoonAimAssist/scrCresentMoonAimAssist.yy",},},
     {"id":{"name":"scrCrownAnimation","path":"scripts/scrCrownAnimation/scrCrownAnimation.yy",},},
     {"id":{"name":"scrCrownOfDeath","path":"scripts/scrCrownOfDeath/scrCrownOfDeath.yy",},},
     {"id":{"name":"scrCrownOfPopoRad","path":"scripts/scrCrownOfPopoRad/scrCrownOfPopoRad.yy",},},

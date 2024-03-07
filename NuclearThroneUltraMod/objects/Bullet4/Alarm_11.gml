@@ -54,4 +54,29 @@ if um == ultramods.bulletShotgun
 		team = other.team;
 		alarm[11] = 0;
 	}
+}else if um == ultramods.bulletPlasma
+{
+	instance_destroy(id,false);
+	with Player
+	{
+		if skill_got[17] = 1
+			snd_play_fire(sndPlasmaBigUpg)
+		else
+			snd_play_fire(sndPlasmaBig)
+	}
+	with instance_create(x,y,PlasmaBig)
+	{
+		acc += 3;
+		maxSpeed += 6;
+		scrCopyWeaponMod(other);
+		ptime = 6;
+		balls = 1;
+		dmg -= 2;
+		direction = other.direction;
+		originalDirection = direction;
+		image_angle = direction;
+		speed = other.speed;
+		team = other.team;
+		alarm[11] = 0;
+	}
 }

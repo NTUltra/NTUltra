@@ -37,12 +37,14 @@ if um == ultramods.laserBullet
 	with Player
 	{
 		if skill_got[17] = 1
-			snd_play_fire(sndPlasmaBigUpg)
+			snd_play_fire(sndPlasmaUpg)
 		else
-			snd_play_fire(sndPlasmaBig)
+			snd_play_fire(sndPlasma)
 	}
 	with instance_create(x,y,PlasmaBall)
 	{
+		acc += 3;
+		maxSpeed += 6;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;

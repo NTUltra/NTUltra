@@ -14,9 +14,11 @@ if (deflectDurability < maxDeflect || alarm[1] > 0)
 			if typ == 1
 			{
 				team = 2
+				with other
+					var aimDirection = scrCresentMoonAimAssist(image_angle);
 				BackCont.shake += 2;
 				snd_play(sndRicochet,0.1,true);
-				direction = other.image_angle
+				direction = aimDirection
 				speed = max(other.deflectSpeed,speed + 2);
 				image_angle = direction;
 				with instance_create(other.x,other.y,Deflect)
@@ -32,6 +34,11 @@ if (deflectDurability < maxDeflect || alarm[1] > 0)
 				BackCont.shake += 1;
 				instance_destroy();
 				deflected = true;
+			}
+			else if typ == 3
+			{
+				x = xprevious;
+				y = yprevious;
 			}
 		}
 	}

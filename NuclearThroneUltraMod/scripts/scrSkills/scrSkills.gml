@@ -548,7 +548,7 @@ function scrSkills() {
 	if betterWepSpecific
 		skill_bons[43] = "ALL EFFECTS OCCUR ON ALL ELEMENTS"
 	
-	skill_name[44] = "SERENE DREAM"
+	skill_name[44] = "SERENE DREAMS"
 	skill_text[44] = "GET TWO ORBITING#<w>CRESCENT MOONS<w>#THAT <aq>DEFLECT<aq> PROJECTILES";
 	skill_detail[44] = "GET TWO ORBITING#<w>CRESCENT MOONS<w>#THAT <aq>DEFLECT<aq> A LIMITED AMOUNT#OF PROJECTILES#RECHARGES SLOWLY WHILE IN COMBAT#MOONS CAN DEAL DAMAGE WITH <g>GAMMA GUTS<g>";
 	skill_tips[44] = "the night sky protects me"

@@ -8,3 +8,5 @@ if target != noone && instance_exists(target) && point_distance(x,y,target.x,tar
 	var dir = point_direction(x,y,target.x,target.y)
 	motion_add(dir,0.8);
 }
+if alarm[3] > 0
+	my_health = maxhealth;
