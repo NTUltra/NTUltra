@@ -5919,6 +5919,7 @@
     {"id":{"name":"sprHorrorBeamSpawnB","path":"sprites/sprHorrorBeamSpawnB/sprHorrorBeamSpawnB.yy",},},
     {"id":{"name":"sprHorrorBeamSpawnC","path":"sprites/sprHorrorBeamSpawnC/sprHorrorBeamSpawnC.yy",},},
     {"id":{"name":"sprHorrorBigBall","path":"sprites/sprHorrorBigBall/sprHorrorBigBall.yy",},},
+    {"id":{"name":"mskHorrorBigBall","path":"sprites/mskHorrorBigBall/mskHorrorBigBall.yy",},},
     {"id":{"name":"sprHorrorBigBallB","path":"sprites/sprHorrorBigBallB/sprHorrorBigBallB.yy",},},
     {"id":{"name":"sprHorrorBigBallC","path":"sprites/sprHorrorBigBallC/sprHorrorBigBallC.yy",},},
     {"id":{"name":"sprHorrorBullet","path":"sprites/sprHorrorBullet/sprHorrorBullet.yy",},},

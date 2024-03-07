@@ -14,9 +14,6 @@
   "frames":[
     {"$GMSpriteFrame":"","%Name":"7b0ccb7e-422e-43c3-a4bb-7e0dfb69ea43","name":"7b0ccb7e-422e-43c3-a4bb-7e0dfb69ea43","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"6f8f321a-898c-4b7e-8976-0bfd1112b204","name":"6f8f321a-898c-4b7e-8976-0bfd1112b204","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"7ccc6eb0-3d36-43f6-9b74-73c8c71da735","name":"7ccc6eb0-3d36-43f6-9b74-73c8c71da735","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"33d9ad3b-a388-462a-bff0-247acbc97873","name":"33d9ad3b-a388-462a-bff0-247acbc97873","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"c70a53b9-787a-48fc-a67e-6712da202265","name":"c70a53b9-787a-48fc-a67e-6712da202265","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -53,7 +50,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":5.0,
+    "length":2.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -78,15 +75,6 @@
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6f8f321a-898c-4b7e-8976-0bfd1112b204","path":"sprites/sprCrescentMoonBloom/sprCrescentMoonBloom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"6f34c056-c34b-446e-8535-f50639c47d89","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7ccc6eb0-3d36-43f6-9b74-73c8c71da735","path":"sprites/sprCrescentMoonBloom/sprCrescentMoonBloom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"49b58419-4ed6-420f-8539-de486f9b2d52","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"33d9ad3b-a388-462a-bff0-247acbc97873","path":"sprites/sprCrescentMoonBloom/sprCrescentMoonBloom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0c654bed-1c20-43af-982a-af4846192f6f","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c70a53b9-787a-48fc-a67e-6712da202265","path":"sprites/sprCrescentMoonBloom/sprCrescentMoonBloom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9640c13b-773d-45ab-a40a-fdaa446b754b","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

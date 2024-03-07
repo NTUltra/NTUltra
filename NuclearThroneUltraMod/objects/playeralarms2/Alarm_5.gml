@@ -1,4 +1,5 @@
 /// @description Keep brainwash target
+if instance_exists(enemy) && instance_number(enemy) > 3
 with enemy
 {
 	if team >= 5 {

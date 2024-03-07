@@ -529,6 +529,10 @@ with Player
 		lerp(0.5,0.8,( 1 + PlayerAlarms2.alarm[11] ) / 6));
 	}
 }
+with CrescentMoon
+{
+	event_perform(ev_draw,0);	
+}
 if bloom
 	scrDrawBloom()
 scrDarkness()

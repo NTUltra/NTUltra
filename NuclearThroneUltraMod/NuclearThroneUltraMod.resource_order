@@ -5557,6 +5557,7 @@
     {"name":"sprHorrorBeamSpawnB","order":1,"path":"sprites/sprHorrorBeamSpawnB/sprHorrorBeamSpawnB.yy",},
     {"name":"sprHorrorBeamSpawnC","order":5,"path":"sprites/sprHorrorBeamSpawnC/sprHorrorBeamSpawnC.yy",},
     {"name":"sprHorrorBigBall","order":27,"path":"sprites/sprHorrorBigBall/sprHorrorBigBall.yy",},
+    {"name":"mskHorrorBigBall","order":31,"path":"sprites/mskHorrorBigBall/mskHorrorBigBall.yy",},
     {"name":"sprHorrorBigBallB","order":10,"path":"sprites/sprHorrorBigBallB/sprHorrorBigBallB.yy",},
     {"name":"sprHorrorBigBallC","order":8,"path":"sprites/sprHorrorBigBallC/sprHorrorBigBallC.yy",},
     {"name":"sprHorrorBullet","order":23,"path":"sprites/sprHorrorBullet/sprHorrorBullet.yy",},

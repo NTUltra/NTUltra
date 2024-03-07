@@ -1,6 +1,6 @@
 
 function scrSkills() {
-	maxskill = 43;
+	maxskill = 44;
 
 
 	dir = 0
@@ -547,6 +547,13 @@ function scrSkills() {
 	skill_bons[43] = "+FIRE RANGE, LONGER STUN"
 	if betterWepSpecific
 		skill_bons[43] = "ALL EFFECTS OCCUR ON ALL ELEMENTS"
+	
+	skill_name[44] = "SERENE DREAM"
+	skill_text[44] = "GET TWO ORBITING#<w>CRESCENT MOONS<w>#THAT <aq>DEFLECT<aq> PROJECTILES";
+	skill_detail[44] = "GET TWO ORBITING#<w>CRESCENT MOONS<w>#THAT <aq>DEFLECT<aq> A LIMITED AMOUNT#OF PROJECTILES#RECHARGES SLOWLY WHILE IN COMBAT";
+	skill_tips[44] = "the night sky protects me"
+	skill_msnd[44] =  sndMut;
+	skill_bons[44] = "+5% RECHARGE RATE"
 	
 	/*
 	A SET OF SPECIAL SECRET WEAPON SPECIFIC MUTATIONS YOU HAVE TO DO SOME SORT OF PRE-LOOP CHALLENGE FOR, REPLACES ONE LEVEL/NORMAL MUTATION

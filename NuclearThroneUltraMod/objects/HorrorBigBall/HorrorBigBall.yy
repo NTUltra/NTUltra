@@ -39,8 +39,8 @@
     "path":"sprites/sprHorrorBigBall/sprHorrorBigBall.yy",
   },
   "spriteMaskId":{
-    "name":"sprHorrorBigBall",
-    "path":"sprites/sprHorrorBigBall/sprHorrorBigBall.yy",
+    "name":"mskHorrorBigBall",
+    "path":"sprites/mskHorrorBigBall/mskHorrorBigBall.yy",
   },
   "visible":false,
 }

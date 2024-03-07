@@ -10,6 +10,13 @@ if instance_exists(Player)
 		{
 			alarm[11] = 60;	
 		}
+		if skill_got[44] && !instance_exists(CrescentMoon){
+			instance_create(x,y,CrescentMoon);
+			with instance_create(x,y,CrescentMoon)
+			{
+				type = 1;	
+			}
+		}
 	}
 	if Player.ultra_got[96]
 	{
