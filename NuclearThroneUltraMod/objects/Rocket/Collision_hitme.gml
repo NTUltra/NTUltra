@@ -1,6 +1,6 @@
 if other.team != team
 {
-	if other.team != 0
+	if other.team != 0 || other.object_index == IDPDVan || other.object_index == IDPDVanVertical
 	{
 		instance_destroy()
 

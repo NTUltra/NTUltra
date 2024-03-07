@@ -1,6 +1,6 @@
 
 function scrSkills() {
-	maxskill = 44;
+	maxskill = 43;
 
 
 	dir = 0

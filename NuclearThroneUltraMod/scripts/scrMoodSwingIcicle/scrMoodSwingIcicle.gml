@@ -2,7 +2,7 @@
 // /@description
 ///@param
 function scrMoodSwingIcicle(am, hitTarget){
-	if hitTarget.team == 2
+	if hitTarget != noone && instance_exists(hitTarget) && hitTarget.team == 2
 		exit;
 	var angStep = 360/am;
 	var ang = random(360);

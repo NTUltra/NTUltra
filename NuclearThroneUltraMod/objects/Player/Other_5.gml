@@ -387,17 +387,20 @@ if looping && area != 104
     
     
 	    //uncurse some shit
-		if (curse == 1 || bcurse == 1 || ccurse == 1)
+		if (!(ultra_got[30] && altUltra))
 		{
-			snd_play_2d(sndUncurse);
-			if scrIsCrown(14) {
-				snd_play(sndHealthPickup);
-				scrHeal(1,true);	
+			if (curse == 1 || bcurse == 1 || ccurse == 1)
+			{
+				snd_play_2d(sndUncurse);
+				if scrIsCrown(14) {
+					snd_play(sndHealthPickup);
+					scrHeal(1,true);	
+				}
 			}
+		    curse=0;
+		    bcurse=0;
+		    ccurse=0;	
 		}
-	    curse=0;
-	    bcurse=0;
-	    ccurse=0;
     
 	//drop VIKING GREAT AXE?
 	if race=16&&loops=1{

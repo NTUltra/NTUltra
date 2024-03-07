@@ -1,5 +1,5 @@
 /// @description Fix it up
-with Wall
+with WallHitMe
 {
 	instance_destroy(id,false);	
 }
@@ -18,6 +18,7 @@ with TopSmall
 {
 	instance_destroy();	
 }
+if !scrIsCrown(25)
 with Floor
 {
 	if object_index != FloorExplo

@@ -10,7 +10,7 @@ if instance_exists(Player)
 		{
 			alarm[11] = 60;	
 		}
-		if skill_got[44] && !instance_exists(CrescentMoon){
+		if false && skill_got[44] && !instance_exists(CrescentMoon){
 			instance_create(x,y,CrescentMoon);
 			with instance_create(x,y,CrescentMoon)
 			{
