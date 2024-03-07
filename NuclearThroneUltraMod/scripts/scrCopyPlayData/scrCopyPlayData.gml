@@ -8,7 +8,7 @@ function scrCopyPlayData(){
 		lastarea: Player.lastarea,
 		lastsubarea: Player.lastsubarea,
 		loops: Player.loops,
-		crown: Player.crown,
+		crown: array_unique(Player.crown),
 		ammo: [Player.ammo[0],Player.ammo[1],Player.ammo[2],Player.ammo[3],Player.ammo[4],Player.ammo[5]],
 		typ_ammo: [Player.typ_ammo[0],Player.typ_ammo[1],Player.typ_ammo[2],Player.typ_ammo[3],Player.typ_ammo[4],Player.typ_ammo[5]],
 		maxammo: [Player.typ_amax[0],Player.typ_amax[1],Player.typ_amax[2],Player.typ_amax[3],Player.typ_amax[4],Player.typ_amax[5]],

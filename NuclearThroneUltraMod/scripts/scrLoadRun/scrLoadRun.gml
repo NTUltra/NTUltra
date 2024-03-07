@@ -331,6 +331,9 @@ function scrLoadRun(){
 					UberCont.partnerTurn = encryptedRun.partnerTurn;
 				}*/
 			}
+			with HardModeChest {
+				instance_destroy(id,false);	
+			}
 			with Player
 			{
 				if race == 7 && bskin == 2

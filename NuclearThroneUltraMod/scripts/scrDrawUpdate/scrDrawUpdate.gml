@@ -25,7 +25,7 @@ function scrDrawUpdate() {
 		{
 			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/694084/301700");
 		}
-	var txt0 = @"#UPDATE [30.17.00]
+	var txt0 = @"#UPDATE [30.17.01]
 	
 	* NEW MUTATIONS:
 	  MOOD SWING

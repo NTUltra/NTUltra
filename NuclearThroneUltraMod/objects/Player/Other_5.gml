@@ -379,7 +379,7 @@ if looping && area != 104
 				UberCont.levelIncrease ++;
 				maxlevel++;
 	        }
-			else */if loops = 10 && !scrIsGamemode(15)
+			else */if loops == 10 && !scrIsGamemode(15)
 	        {
 				UberCont.levelIncrease ++;
 				maxlevel++;

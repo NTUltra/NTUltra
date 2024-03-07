@@ -1,5 +1,5 @@
 /// @description Init
-updateVersion = "30.17.00";
+updateVersion = "30.17.01";
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;
 maxwep = 718;
