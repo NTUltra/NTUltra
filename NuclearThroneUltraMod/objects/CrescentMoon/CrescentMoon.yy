@@ -43,9 +43,6 @@
     "name":"sprCrescentMoon",
     "path":"sprites/sprCrescentMoon/sprCrescentMoon.yy",
   },
-  "spriteMaskId":{
-    "name":"mskCrescendMoon",
-    "path":"sprites/mskCrescendMoon/mskCrescendMoon.yy",
-  },
+  "spriteMaskId":null,
   "visible":false,
 }

@@ -457,6 +457,7 @@
     {"name":"CourtyardTankShield","order":2,"path":"objects/CourtyardTankShield/CourtyardTankShield.yy",},
     {"name":"Crab","order":1,"path":"objects/Crab/Crab.yy",},
     {"name":"CreditsSelect","order":9,"path":"objects/CreditsSelect/CreditsSelect.yy",},
+    {"name":"CrescentMoon","order":86,"path":"objects/CrescentMoon/CrescentMoon.yy",},
     {"name":"Crown","order":1,"path":"objects/Crown/Crown.yy",},
     {"name":"CrownGlutton","order":9,"path":"objects/CrownGlutton/CrownGlutton.yy",},
     {"name":"CrownGuardian","order":2,"path":"objects/CrownGuardian/CrownGuardian.yy",},

@@ -547,6 +547,14 @@ function scrDrawBloom() {
 			draw_sprite_ext(sprite_index,image_index,x - vx,y - vy,right*theScale,image_yscale*theScale,image_angle,c_green,ba+0.2);
 		}
 	}
+	with CrescentMoon {
+		if sprite_index == sprCrescentMoonDeflecting
+		{
+			draw_sprite_ext(sprCrescentMoonBloom,0,x,y,image_xscale,image_yscale,image_angle,c_white,1);
+		} else if deflectDurability < maxDeflect {
+			draw_sprite_ext(sprCrescentMoonBloom,0,x,y,image_xscale,image_yscale,image_angle,c_white,ba);
+		}
+	}
 	surface_reset_target();
 	gpu_set_blendmode(bm_add);
 	draw_surface_ext(bloomSurface,vx,vy,1,1,0,c_white,0.3);
