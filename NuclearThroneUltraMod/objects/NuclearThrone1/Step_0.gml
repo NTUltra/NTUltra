@@ -60,11 +60,11 @@ else
 	{
 		walk --;
 		if UberCont.normalGameSpeed == 60
-			vspeed += walkDir*1.5;
+			vspeed += walkDir;
 		else
-			vspeed += walkDir*3;
-		if isInverted && vspeed > 0 && loops < 1
-			vspeed *= 0.83;
+			vspeed += walkDir*2;
+		//if isInverted && vspeed > 0 && loops < 1
+		//	vspeed *= 0.83;
 	}
 }
 if my_health < maxhealth*0.6 && difficultyStep < 1

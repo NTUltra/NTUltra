@@ -4,11 +4,15 @@
 
 hspeed = 0;
 x = xStart;
-vspeed *= 0.1;
-if walk <= 0 && speed > 0.75
+/*
+if UberCont.normalGameSpeed == 60
+	vspeed *= 0.2;
+else
+	vspeed *= 0.1;
+*/
+if walk <= 0 && speed > 1
 {
-	walk = -1;
-	speed = 0.75;
+	speed = 1;
 }
 if instance_exists(ThroneBeam) && !isInverted
 {
