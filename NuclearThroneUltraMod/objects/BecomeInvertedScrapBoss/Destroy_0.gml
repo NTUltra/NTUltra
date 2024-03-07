@@ -1,2 +1,2 @@
-instance_create(x,y,InvertedScrapBoss)
-
+with instance_create(x,y,InvertedScrapBoss)
+	existTime = 30;
