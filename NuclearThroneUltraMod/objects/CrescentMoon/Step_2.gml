@@ -1,12 +1,12 @@
 /// @description Orbit
-if instance_exists(Player)
+if instance_exists(owner) && owner != noone
 {
 	var len = 28;
-	image_angle = point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y);
+	image_angle = point_direction(owner.x,owner.y,UberCont.mouse__x,UberCont.mouse__y);
 	if type == 1
 		image_angle += 180;
-	x = Player.x + lengthdir_x(len,image_angle);
-	y = Player.y + lengthdir_y(len,image_angle);
+	x = owner.x + lengthdir_x(len,image_angle);
+	y = owner.y + lengthdir_y(len,image_angle);
 	scrForcePosition60fps();
 }
 else

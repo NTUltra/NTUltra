@@ -21,7 +21,10 @@ if instance_exists(ThroneBeam) && !isInverted
 if (intro && image_speed > 0)
 {
 	//Bullets can set image_index to 0 canceling our beautifull intro
-	prevImageIndex += image_speed
+	if UberCont.normalGameSpeed == 60
+		prevImageIndex += image_speed * 0.5;
+	else
+		prevImageIndex += image_speed
 	image_index = prevImageIndex;
 }
 else if active

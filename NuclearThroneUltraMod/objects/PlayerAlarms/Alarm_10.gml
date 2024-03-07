@@ -1,7 +1,7 @@
 /// @description MeltingD
 with Player
 {
-	if ultra_got[16] {
+	if ultra_got[16] && meltingd != noone && instance_exists(meltingd){
 		with meltingd
 		{
 			my_health = 0;

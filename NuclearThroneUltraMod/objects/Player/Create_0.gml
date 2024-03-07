@@ -700,7 +700,7 @@ hardshell = true;
 
 visitedCrib = false;
 fromCribToVault = false;
-meltingd = 0;
+meltingd = noone;
 lastEnemyKilled = noone;
 rage = 0;
 rageIndicator = 0;

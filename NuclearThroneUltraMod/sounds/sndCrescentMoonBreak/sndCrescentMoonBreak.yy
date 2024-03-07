@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndCrescentMoonBreak",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":1,
+  "conversionMode":0,
+  "duration":1.153854,
+  "name":"sndCrescentMoonBreak",
+  "parent":{
+    "name":"Mutations",
+    "path":"folders/Sounds/Mutations.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndCrescentMoonBreak.wav",
+  "type":0,
+  "volume":1.0,
+}

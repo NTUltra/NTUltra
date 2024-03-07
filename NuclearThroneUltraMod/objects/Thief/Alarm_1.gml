@@ -64,9 +64,9 @@ else if target != noone
 		speed = 5
 		walk = 30+random(10);
 		if nearestPickup.x < x
-			nearestPickup = -1
+			right = -1
 		else if nearestPickup.x > x
-			nearestPickup = 1
+			right = 1
 	}
 	else
 	{
@@ -89,9 +89,9 @@ right = 1
 		speed = 5
 		walk = 30+random(10);
 		if nearestPickup.x < x
-			nearestPickup = -1
+			right = -1
 		else if nearestPickup.x > x
-			nearestPickup = 1
+			right = 1
 	}
 	else if random(20) < 1
 	{

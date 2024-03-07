@@ -65,6 +65,8 @@ game_end();
 exit;
 }
 //*/
+randomize();
+debug("seed: ", random_get_seed());
 if !audio_group_is_loaded(agsfx)
 	audio_group_load(agsfx);
 	

@@ -5,6 +5,7 @@ if !active || intro || immune
 	alarm[1] = 30;
 	exit;
 }
+maxSpeed = 3;
 with UltraProtector
 {
 	if y < other.y
@@ -36,6 +37,7 @@ if target != noone && instance_exists(target)
 		walkDir = -1.5;
 		fireTriShot = false;
 		bigballs = false;
+		maxSpeed = 5;
 	}
 	else if ((target.y - y > 170 && ran > 50) || ran > 90 || target.y - y > 210)
 	{
@@ -43,11 +45,12 @@ if target != noone && instance_exists(target)
 		walk = alarm[1]-1;
 		walkDir = 1.01;
 		if target.y - y > 260
-			walkDir += 0.4;
+			walkDir += 0.3;
 		if target.y - y > 350
-			walkDir += 0.4;
+			walkDir += 0.3;
 		fireTriShot = false;
 		bigballs = false;
+		maxSpeed = 3 * walkDir;
 	}
 	else if target.x > beamL && target.x < beamR && ran > 55
 	{
@@ -139,6 +142,8 @@ if target != noone && instance_exists(target)
 					walkDir = 0.8;
 				else if y > ystart + 300
 					walkDir = 0.7;
+					
+				maxSpeed = 3.5 * walkDir;
 			}
 		}
 	}

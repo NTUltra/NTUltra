@@ -24,7 +24,10 @@ if other.race == 26
 }
 if other.race == 15//Atom can no longer teleport
 {
-	PlayerAlarms.alarm[8] += 200;	
+	with PlayerAlarms
+	{
+		alarm[8] += 200;
+	}
 }
 with Ally
 {

@@ -180,5 +180,5 @@ if isInverted
 	ds_list_destroy(hitWalls);
 	mask_index = msk;
 }
-if speed > 5
-	speed = 5;
+if speed > maxSpeed
+	speed = maxSpeed;

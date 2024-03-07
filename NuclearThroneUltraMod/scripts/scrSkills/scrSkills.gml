@@ -1,6 +1,6 @@
 
 function scrSkills() {
-	maxskill = 43;
+	maxskill = 44;
 
 
 	dir = 0
@@ -145,7 +145,7 @@ function scrSkills() {
 	if !UberCont.useSeed && random(800)<1
 		skill_name[8] = "SOCIAL DISTANCING"
 	skill_text[8] = "<w>ENEMIES<w> TOUCHING YOU TAKE DAMAGE#YOU TAKE LESS <w>ENEMY CONTACT DAMAGE<w>"
-	skill_detail[8] = "<w>ENEMIES<w> TOUCHING YOU TAKE DAMAGE#DON'T TAKE DAMAGE FROM#ENEMIES THAT YOU KILL USING <g>GAMMA GUTS<g>#YOU TAKE 50% LESS <w>ENEMY CONTACT DAMAGE<w>"
+	skill_detail[8] = "<w>ENEMIES<w> TOUCHING YOU TAKE DAMAGE#DON'T TAKE DAMAGE FROM#ENEMIES THAT YOU KILL USING <g>GAMMA GUTS<g>#YOU TAKE 50% LESS <w>ENEMY CONTACT DAMAGE<w>#ALLOWS <g>SERENE DREAMS<g> TO DEAL DAMAGE"
 	if instance_exists(Player)
 	{
 		if Player.race == 13//Sheep
@@ -550,9 +550,9 @@ function scrSkills() {
 	
 	skill_name[44] = "SERENE DREAM"
 	skill_text[44] = "GET TWO ORBITING#<w>CRESCENT MOONS<w>#THAT <aq>DEFLECT<aq> PROJECTILES";
-	skill_detail[44] = "GET TWO ORBITING#<w>CRESCENT MOONS<w>#THAT <aq>DEFLECT<aq> A LIMITED AMOUNT#OF PROJECTILES#RECHARGES SLOWLY WHILE IN COMBAT";
+	skill_detail[44] = "GET TWO ORBITING#<w>CRESCENT MOONS<w>#THAT <aq>DEFLECT<aq> A LIMITED AMOUNT#OF PROJECTILES#RECHARGES SLOWLY WHILE IN COMBAT#MOONS CAN DEAL DAMAGE WITH <g>GAMMA GUTS<g>";
 	skill_tips[44] = "the night sky protects me"
-	skill_msnd[44] =  sndMut;
+	skill_msnd[44] =  sndMutSereneDream;
 	skill_bons[44] = "+5% RECHARGE RATE"
 	
 	/*

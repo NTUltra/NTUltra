@@ -130,3 +130,4 @@ xStart = x;
 tookDamageThisFrame = 0;
 version = 2;
 yReset = y;
+maxSpeed = 3;

@@ -1,6 +1,5 @@
 image_speed = 0.4
 alarm[0] = 30;//47 - min(loops*2,20);
-snd_play(sndTwinPortalAppear);
 right = 1;
 myTank = IDPDTank;
 with MusCont

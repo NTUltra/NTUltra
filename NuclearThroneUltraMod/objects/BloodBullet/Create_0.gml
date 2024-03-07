@@ -7,7 +7,7 @@ their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
 they have a FORCE and can be 0 or DIRECTIONAL */
 
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
-
+ignoreMe = noone
 friction = 0.8
 dmg = 2;
 dmgReduc = 1;

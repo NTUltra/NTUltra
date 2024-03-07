@@ -16,11 +16,15 @@ if alarm[1] < 1 && sprite_index != sprCrescentMoonDeflecting && alarm[0] < 1
 	if canCooldown
 	{
 		regenTime -= 1;
-		if regenTime <= 0 && deflectDurability > 0
+		if regenTime <= 0 && deflectDurability > minDeflect
 		{
+			if deflectDurability >= maxDeflect
+				snd_play(sndCrescentMoonAppear);
+			else
+				snd_play(sndCrescentMoonReappear);
 			deflectDurability -= 1
 			regenTime = regenRate;
-			sprite_index = sprCrescentMoon;
+			sprite_index = spr;
 			image_index = deflectDurability;
 			alarm[3] = justRegenerated;
 			alarm[2] = justRegenerated;

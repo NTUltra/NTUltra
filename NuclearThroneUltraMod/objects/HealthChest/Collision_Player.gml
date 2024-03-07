@@ -38,7 +38,6 @@ if !instance_exists(GenCont)
 			sprite_index = sprPickupArmourPickup	
 		}
 		snd_play(sndArmourHeal);
-		instance_destroy()
 	}
 	else
 	{

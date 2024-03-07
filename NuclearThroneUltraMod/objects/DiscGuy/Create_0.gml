@@ -20,7 +20,7 @@ acc = 0.8;
 maxSpeed = 3;
 //behavior
 alarm[1] = 30+random(30)
-actTime = 14
+actTime = 15
 loops = GetPlayerLoops();
 discSpeed = 3.2;
 if scrIsHardMode() && object_index != UltraDiscGuy && (!instance_exists(UltraDiscGuy) || random(3) < 1) && 

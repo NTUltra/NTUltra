@@ -205,7 +205,14 @@ function scrModHit(projectileRef) {
 
 				case 5:
 					snd_play(sndMeatExplo,0,true);
-					instance_create(other.x+lengthdir_x(8,random(360)),other.y+lengthdir_x(8,random(360)),MeatExplosion)
+					instance_create(other.x+lengthdir_x(8,random(360)),other.y+lengthdir_x(8,random(360)),SmallMeatExplosion);
+					with instance_create(other.x,other.y,BloodBullet)
+					{
+						ignoreMe = other.id;
+						motion_add(random(360),8);
+						image_angle = direction
+						team = 2;
+					}
 				break;
 
 				case 6://ELECTROCUTION!

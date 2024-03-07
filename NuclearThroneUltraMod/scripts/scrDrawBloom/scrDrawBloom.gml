@@ -535,11 +535,11 @@ function scrDrawBloom() {
 	with BigRad
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
 	with CrescentMoon {
-		if sprite_index == sprCrescentMoonDeflecting
+		if sprite_index == sprCrescentMoonDeflecting || sprite_index == sprCrescentMoonGammaGutsing
 		{
-			draw_sprite_ext(sprCrescentMoonBloom,0,x - vx,y - vy,image_xscale+0.1,image_yscale+0.1,image_angle,c_white,1);
+			draw_sprite_ext(bloomSprite,0,x - vx,y - vy,image_xscale+0.1,image_yscale+0.1,image_angle,c_white,1);
 		} else if deflectDurability < maxDeflect {
-			draw_sprite_ext(sprCrescentMoonBloom,0,x - vx,y - vy,image_xscale,image_yscale,image_angle,c_white,ba);
+			draw_sprite_ext(bloomSprite,0,x - vx,y - vy,image_xscale,image_yscale,image_angle,c_white,ba);
 		}
 	}
 	with enemy

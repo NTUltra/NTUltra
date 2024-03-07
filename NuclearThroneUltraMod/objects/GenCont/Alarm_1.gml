@@ -3,6 +3,19 @@ instance_destroy()
 SetSeed();
 if instance_exists(Player)
 {
+	with Player {
+		if skill_got[44] && !instance_exists(CrescentMoon){
+			with instance_create(x,y,CrescentMoon)
+			{
+				owner = other.id;
+			}
+			with instance_create(x,y,CrescentMoon)
+			{
+				owner = other.id;
+				type = 1;	
+			}
+		}
+	}
 	with UberCont {
 		area = Player.area;
 		subarea = Player.subarea;

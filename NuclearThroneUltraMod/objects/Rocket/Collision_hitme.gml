@@ -17,9 +17,9 @@ if other.team != team
 		with other
 		{
 			if UberCont.normalGameSpeed == 60
-				DealDamage(3);
+				DealDamage(4);
 			else
-				DealDamage(6);
+				DealDamage(8);
 			sprite_index = spr_hurt
 			image_index = 0
 		}

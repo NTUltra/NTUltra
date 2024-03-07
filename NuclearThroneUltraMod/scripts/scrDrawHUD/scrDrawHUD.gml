@@ -1239,7 +1239,10 @@ function scrDrawHUD() {
 	{
 		if dataRef.drawempty == 10 and dataRef.ammo[dataRef.wep_type[dataRef.wep]] > dataRef.typ_ammo[dataRef.wep_type[dataRef.wep]]-dataRef.wep_cost[dataRef.wep]
 			snd_play_2d(dataRef.snd_lowa,0,true,false,10);
-	dataRef.drawempty -= 1
+	if UberCont.normalGameSpeed == 60
+		dataRef.drawempty -= 0.5;
+	else
+		dataRef.drawempty -= 1
 
 	txt = "LOW ";//+string(dataRef.typ_name[dataRef.wep_type[dataRef.wep]])
 	var noenuf = false;

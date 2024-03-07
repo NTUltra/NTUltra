@@ -11,7 +11,7 @@ function scrDeflectNade(deflectDirection){
 		gotHit = true;
 		team = other.team;
 		direction = deflectDirection;
-		speed = 12
+		speed = max(12,speed + 1);
 		friction = 0.1
 		BackCont.shake += 1;
 		with instance_create(x,y,Deflect)

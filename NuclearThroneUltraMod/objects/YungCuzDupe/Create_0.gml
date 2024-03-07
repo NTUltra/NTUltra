@@ -19,6 +19,29 @@ if skill_got[26]//HAMMER HEAD
 		hammerheadcounter += 5;
 	}
 }
+if skill_got[44]
+{
+	snd_play(sndCrescentMoonAppear,0.01);
+	with instance_create(x,y,CrescentMoon)
+	{
+		owner = other.id;
+		minDeflect = maxDeflect - 1;
+		deflectDurability = minDeflect;
+		image_index = deflectDurability;
+		alarm[3] = justRegenerated;
+		alarm[2] = justRegenerated;
+	}
+	with instance_create(x,y,CrescentMoon)
+	{
+		owner = other.id;
+		type = 1;
+		minDeflect = maxDeflect - 1;
+		deflectDurability = minDeflect;
+		image_index = deflectDurability;
+		alarm[3] = justRegenerated;
+		alarm[2] = justRegenerated;
+	}
+}
 wepmod1 = Player.wepmod1;
 wepmod2 = Player.wepmod2;
 wepmod3 = Player.wepmod3;

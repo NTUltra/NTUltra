@@ -59,9 +59,9 @@ if (nearestPickup != noone && instance_exists(nearestPickup)
 && point_distance(x,y,nearestPickup.x,nearestPickup.y) < 34)
 {
 	if nearestPickup.x < x
-		nearestPickup = -1
+		right = -1
 	else if nearestPickup.x > x
-		nearestPickup = 1
+		right = 1
 	speed = 0;
 	with nearestPickup
 	{

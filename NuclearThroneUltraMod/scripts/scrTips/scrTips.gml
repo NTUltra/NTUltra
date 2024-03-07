@@ -450,7 +450,8 @@ function scrTips() {
 	tip = choose("always in the shadow","yung cuz is so cool","the better shape",
 	"not immortal","how to kill a god","waka waka","buddies cost#half your MAX HP","noscope","golden tv"
 	,"mlg","prodigy","up n cmin","buddies return to you#when you stand still","\u0023yc",
-	"you have to get good","Buddies copy most mutations","yc is a god gamer","I'm number 1")
+	"you have to get good","Buddies copy most mutations","yc is a god gamer","I'm number 1",
+	"your dupes copy your mutations","your dupes also get your mutations#though sometimes a slightly worse version")
 
 	if Player.race = 13//sheep
 	tip = choose("BAAHHH","farmville","don't mess with me"

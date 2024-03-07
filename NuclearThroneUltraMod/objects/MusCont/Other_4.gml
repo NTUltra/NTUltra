@@ -342,6 +342,7 @@ if scrIsGamemode(8) && area != 0
 		audio_stop_sound(song);
 		audio_stop_sound(amb);
 		amb = amb0b;
+		audio_sound_gain(amb, max(0, UberCont.opt_ambvol), 0);
 		snd_loop(amb);
 	}
     //audio_sound_gain(sndVaultBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
