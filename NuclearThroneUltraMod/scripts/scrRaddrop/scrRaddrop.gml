@@ -19,7 +19,7 @@ function scrRaddrop(amountOfRads = raddrop, xx = x, yy = y) {
 			{
 				with instance_create(xx,yy,HorrorBullet)
 				{
-				motion_add(ang,8)
+				motion_add(ang,14)
 				image_angle = direction
 				team = Player.team
 				bskin=Player.bskin

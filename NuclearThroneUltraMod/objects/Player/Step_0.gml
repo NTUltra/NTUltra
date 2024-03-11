@@ -1286,7 +1286,7 @@ if (!instance_exists(LevCont))
 		}
 		if skill_got[41] && armour < maxarmour
 		{
-			reload -= 0.1;
+			reload -= 0.2;
 		}
 		if skill_got[22]
 		{

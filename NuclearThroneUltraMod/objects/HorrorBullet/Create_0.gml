@@ -6,7 +6,7 @@ their collision can be NORMAL, PIERCING or PIERCING AT OVERKILL (piercing checks
 their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
 they have a FORCE and can be 0 or DIRECTIONAL */
 
-typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
+typ = 3//0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 bskin=0;
 dmg = 4;
 if instance_exists(Player)
@@ -20,3 +20,6 @@ if instance_exists(Player)
 		sprite_index = sprHorrorCBullet;
 	}
 }
+cost = 0.5;
+norecycle = choose(true,false);
+radcost = 0;
