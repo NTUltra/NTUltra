@@ -217,6 +217,12 @@ if instance_exists(Player)
 	}
 	Player.drawempty = 30
 	Player.drawlowhp = 30
+	with ThrowWep
+	{
+		x = Player.x;
+		y = Player.y;
+		speed = 0;
+	}
 	with WepPickup
 	{
 		persistent = false;

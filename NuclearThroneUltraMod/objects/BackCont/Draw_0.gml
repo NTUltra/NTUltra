@@ -1,4 +1,4 @@
-//scrShadows()
+scrShadows()
 //draw
 //if UberCont.opt_camera_follow=1
 if surface_exists(shad)

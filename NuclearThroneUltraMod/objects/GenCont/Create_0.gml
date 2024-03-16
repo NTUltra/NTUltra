@@ -23,7 +23,30 @@ SetSeed();
 instance_create(0,0,TopCont)
 wave = 0
 skillscroll = 0;
-
+if audio_is_playing(sndFishRollUpgLoop)
+{
+	audio_stop_sound(sndFishRollUpgLoop);
+}
+if audio_is_playing(sndSheepLoop)
+{
+	audio_stop_sound(sndSheepLoop);
+}
+if audio_is_playing(sndSheepLoopUpg)
+{
+	audio_stop_sound(sndSheepLoopUpg);
+}
+if audio_is_playing(sndFrogLoop)
+{
+	audio_stop_sound(sndFrogLoop);
+}
+if audio_is_playing(sndFrogLoopButt)
+{
+	audio_stop_sound(sndFrogLoopButt);
+}
+if audio_is_playing(sndChickenLoop)
+{
+	audio_stop_sound(sndChickenLoop);
+}
 if instance_exists(Player)
 {
 	if !UberCont.useSeed && Player.area == 100

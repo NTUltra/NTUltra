@@ -101,7 +101,7 @@ else
 	touchpointX = x;
 	touchpointY = y;
 	lerpTime = 1;
-	lerpCalcBack = lerpCalc;
+	lerpCalcBack = lerpCalc * 1.5;
 	sprite_index = spr_closing;
 	image_index = 0;
 	alarm[2] = 4;	

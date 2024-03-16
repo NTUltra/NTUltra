@@ -10,7 +10,7 @@ function Sleep(duration) {
 		duration *= 2;
 	
 	duration *= UberCont.opt_freeze;
-	duration *= 0.1;
+	duration *= 0.15;
 	if !instance_exists(FreezeFrame)
 	{
 		with instance_create(x,y,FreezeFrame)
@@ -18,7 +18,7 @@ function Sleep(duration) {
 			alarm[0] = max(1,duration);
 		}
 	}
-	else if FreezeFrame.alarm[1] <= 0
+	else if FreezeFrame.alarm[1] > 0
 	{
 		with FreezeFrame
 		{

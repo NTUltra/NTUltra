@@ -9,6 +9,7 @@ function scrTips() {
 	//RANDOM
 	tip = choose(
 	"always move",
+	"secret ultras require a specific#crown, mutation, skin or weapon setup",
 	"secret ultras require a specific type of#crown, weapon, or mutation#when you reach level ultra",
 	"secret ultras all require a specific setup#when you reach level ultra",
 	"idpd grunts can roll",

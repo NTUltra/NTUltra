@@ -246,11 +246,6 @@ function scrFire2(hasTailNow) {
 	}
 
 	wepangle = -wepangle
-	if (!place_meeting(x + sign(hspeed),y + sign(vspeed),Wall))
-	{
-		x += sign(hspeed);
-		y += sign(vspeed);
-	}
 	BackCont.viewx2 += lengthdir_x(6,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(6,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 1

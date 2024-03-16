@@ -350,7 +350,7 @@ function scrFire() {
 	repeat(7)
 	{
 	with instance_create(x,y,Bullet2)
-	{motion_add(aimDirection+(random(40)-20)*other.accuracy,12+random(6))
+	{motion_add(aimDirection+(random(40)-20)*other.accuracy,13+random(5))
 	image_angle = direction
 	team = other.team}
 	}
@@ -895,7 +895,6 @@ function scrFire() {
 	{image_angle = aimDirection+(random(16)-8)*other.accuracy
 	team = other.team
 	event_perform(ev_alarm,0)}
-	motion_add(aimDirection+180,1)
 	BackCont.viewx2 += lengthdir_x(5,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(5,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 2
@@ -904,7 +903,7 @@ function scrFire() {
 	if !skill_got[2]
 	{
 		scrMoveContactSolid(aimDirection + 180,0.5);
-		motion_add(aimDirection+180,0.5)
+		motion_add(aimDirection+180,1)
 	}
 
 	break;
@@ -1192,7 +1191,7 @@ function scrFire() {
 	repeat(8)
 	{
 	with instance_create(x,y,Bullet2)
-	{motion_add(aimDirection+(random(40)-20)*other.accuracy,12+random(6))
+	{motion_add(aimDirection+(random(40)-20)*other.accuracy,13+random(5))
 	image_angle = direction
 	team = other.team}
 	}

@@ -106,7 +106,7 @@ if target != noone && instance_exists(target)
 }
 else
 {
-	lerpCalcBack = lerpCalc;	
+	lerpCalcBack = lerpCalc * 1.5;	
 }
 lerpTime -= lerpCalcBack;
 alarm[2] = 1;

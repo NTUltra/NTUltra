@@ -407,16 +407,24 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 			skill_got[18] = 1;
 			skill_got[38] = 1;
 			skill_got[40] = 1;
-			if race != 10 && race != 12 && race != 18 && race != 19
+			if race != 10 && race != 12 && race != 19
 			{
 				//not Rebel yung cuz, angel and skeleton
 				//Disable rhino skin, bloodlust second stomach and tough shell
-				//Bouncy fatt & Nerves of steel
+				//Bouncy fatt & Nerves of steel sharp stress
 				skill_got[1] = 1;
 				skill_got[7] = 1;
 				skill_got[9] = 1;
 				skill_got[31] = 1;
 				skill_got[41] = 1;
+				skill_got[22] = 1;
+			}
+			if race != 12
+			{
+				//YC
+				skill_got[7] = 1;// Bloodlust
+				skill_got[41] = 1;//Nerves of steel
+				skill_got[22] = 1;//Sharp Stress
 			}
 		}
 	}
@@ -586,13 +594,21 @@ if scrIsGamemode(32) {
 		ultra_got[75] = 0;
 		ultra_got[76] = 0;
 		ultra_got[103] = 0;
-		if race != 10 && race != 12 && race != 18 && race != 19
+		if race != 10 && race != 12 && race != 19
 		{
 			skill_got[1] = 0;
 			skill_got[7] = 0;
 			skill_got[9] = 0;
 			skill_got[31] = 0;
 			skill_got[41] = 0;
+			skill_got[22] = 0;
+		}
+		if race == 12
+		{
+			//YC
+			skill_got[7] = 0;// Bloodlust
+			skill_got[41] = 0;//Nerves of steel
+			skill_got[22] = 0;//Sharp Stress
 		}
 	}
 }

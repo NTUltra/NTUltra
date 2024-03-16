@@ -2392,7 +2392,7 @@ function scrPowers(raceOverwrite = -1) {
 					else if !grabbingPickup
 					{
 						lerpCalc = min(1,lerpSpeed/lerpDistance);//Consistent speed
-						lerpCalcBack = (lerpCalc/target.mySize)*0.8;
+						lerpCalcBack = (lerpCalc/target.mySize)*0.75;
 						if target.meleedamage > other.skill_got[8]*7//Gamma guts
 						{
 							lerpCalcBack *= 0.75;
