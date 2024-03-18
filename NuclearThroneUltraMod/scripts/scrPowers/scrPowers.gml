@@ -1596,7 +1596,7 @@ function scrPowers(raceOverwrite = -1) {
 				if alarm[1] > 0
 					loseTarget = true;
 				else
-					target = -1;
+					target = noone;
 			}
 		}
 	}

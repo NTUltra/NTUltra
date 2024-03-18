@@ -122,6 +122,7 @@ function scrCopyPlayData(){
 		extraVan: UberCont.extraVan,
 		killedInvertedThrone2: UberCont.killedInvertedThrone2,
 		hasFoughtInvadingThrone: UberCont.hasFoughtInvadingThrone,
+		tookUnstoppable: UberCont.tookUnstoppable,
 		revivedCharacters: UberCont.revivedCharacters,
 		beatTheGame: UberCont.beatTheGame,
 		spr_idle: Player.spr_idle,

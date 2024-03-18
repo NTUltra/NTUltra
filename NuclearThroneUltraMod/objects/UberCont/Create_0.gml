@@ -179,6 +179,7 @@ collectedInversionShardReward = false;
 extraVan = 0;
 killedInvertedThrone2 = false;
 hasFoughtInvadingThrone = false;
+tookUnstoppable = false;
 recursionCheck = 0;
 revivedCharacters = [];
 beatTheGame = false;

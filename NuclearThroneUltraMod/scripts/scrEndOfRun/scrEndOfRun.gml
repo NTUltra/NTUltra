@@ -44,6 +44,8 @@ function scrEndOfRun(){
 		killedBoss = [];
 		collectedRewards = [];
 		enableReroll = false;
+		crownHeal = false;
+		radUp = false;
 		maxHpIncrease = 0;
 		highestReachedLevel = 0;
 		globalMutationsChosen = 0;
@@ -68,6 +70,7 @@ function scrEndOfRun(){
 		killedInvertedThrone2 = false;
 		extraVan = 0;
 		hasFoughtInvadingThrone = false;
+		tookUnstoppable = false;
 		revivedCharacters = [];
 		duoPartner = [];
 		partnerTurn = 1;

@@ -21,7 +21,15 @@ else if team != other.team
 		with other
 			event_user(15);
 	}
-	else if typ != 0
+	else if other.typ == 3
+	{
+		with other
+		{
+			x = xprevious;
+			y = yprevious;
+		}
+	}
+	else if other.typ == 2
 	{
 		snd_play(sndProjectileDestroy,0.1,true);
 		BackCont.shake += 1;

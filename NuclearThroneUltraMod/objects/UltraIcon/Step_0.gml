@@ -833,7 +833,7 @@ if (selected && visible &&
 	}
 	else if skill == 76//skelly ultra D
 	{
-	    if Player.ultimategamble==false && !isAlternative//skeleton lives
+	    if !isAlternative//skeleton lives
 	    {
 		    with Player
 		    {
@@ -856,11 +856,11 @@ if (selected && visible &&
 					scrApplyEagleEyes();
 				}
 		    }
-    
+			UberCont.tookUnstoppable = true;
 	    }
 	    else//ULTIMATE GAMBLE
 	    {
-	    if true || random(4+Player.skill_got[5])<1//Better odds with thronebutt
+	    if random(4+Player.skill_got[5])<1//Better odds with thronebutt
 	    {//you will die now
     
 			with GenCont

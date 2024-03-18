@@ -26,6 +26,8 @@ if other.team != team and other.my_health > 0
 			image_index = 0
 			motion_add(other.direction,4)
 		}
+		if !norecycle
+			scrRecycleGland(cost,radCost);
 	}
 
 	instance_destroy()

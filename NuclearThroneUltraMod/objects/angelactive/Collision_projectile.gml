@@ -39,7 +39,7 @@ else if team != other.team && instance_exists(Player)
 			scrUnlockCSkin(18,"FOR DEFLECTING A PROJECTILE#THAT IS DEFLECTED BY A CROWN GUARDIAN#AS ANGEL",0);
 		}
 	}
-	else
+	else if other.typ != 4
 	{
 		BackCont.shake += 1;
 		Sleep(5);

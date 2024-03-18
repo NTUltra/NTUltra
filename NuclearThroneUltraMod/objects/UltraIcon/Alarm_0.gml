@@ -179,3 +179,7 @@ if canAlt
 		scrUltras(true, false, randomHand);
 	}
 }
+else if skill == 76 && Player.race == 19 && UberCont.tookUnstoppable
+{
+	instance_destroy();
+}

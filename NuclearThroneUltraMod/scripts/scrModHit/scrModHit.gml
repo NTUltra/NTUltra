@@ -17,7 +17,7 @@ function scrModHit(projectileRef) {
 				wepFire = -1;
 		}
 		projectileRef.wepFire = 0;
-		if alarm[1] > 0
+		if alarm[1] > 1 && alarm[1] < 30
 		{
 			speed *= 0.6;
 			alarm[1] += amount;

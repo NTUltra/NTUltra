@@ -92,7 +92,7 @@ function scrWeapons() {
 
 	wep_name[8] = "DOUBLE SHOTGUN"
 	wep_type[8] = 2
-	wep_auto[8] = 0
+	wep_auto[8] = 2
 	wep_load[8] = 28
 	wep_cost[8] = 2
 	wep_sprt[8] = sprSuperShotgun
@@ -533,7 +533,7 @@ function scrWeapons() {
 	wep_rad[47] = 0;
 
 	wep_name[48] = "ION CANNON"
-	wep_type[48] = 5
+	wep_type[48] = 4
 	wep_auto[48] = 3
 	wep_load[48] = 18
 	wep_cost[48] = 4
@@ -2376,7 +2376,7 @@ function scrWeapons() {
 	wep_rad[211] = 0;
 
 	wep_name[212] = "SUPER ION CANNON"
-	wep_type[212] = 5
+	wep_type[212] = 4
 	wep_auto[212] = 0
 	wep_load[212] = 40
 	wep_cost[212] = 15
@@ -2491,7 +2491,7 @@ function scrWeapons() {
 	wep_load[222] = 14
 	wep_cost[222] = 3
 	wep_sprt[222] = sprLaserSword
-	wep_area[222] = 10
+	wep_area[222] = 12
 	wep_text[222] = "how does this thing even work?"
 	wep_swap[222] = sndSwapEnergy
 	wep_rad[222] = 0;
@@ -2885,7 +2885,7 @@ function scrWeapons() {
 	wep_text[257] = "lightning jolt!"
 	wep_swap[257] = sndSwapBow
 	wep_rad[257] = 0;
-	wep_popup[257] = "USES ENERGY#ADN BOLT AMMO";
+	wep_popup[257] = "USES ENERGY#AND BOLT AMMO";
 
 	wep_name[258] = "SHOTGUN RIFLE"
 	wep_type[258] = 2
