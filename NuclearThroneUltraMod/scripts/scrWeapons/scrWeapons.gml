@@ -8172,6 +8172,39 @@ function scrWeapons() {
 	wep_text[731] = "elegantly cold hands"
 	wep_swap[731] = sndSwapSword
 	wep_rad[731] = 0;
+	
+	wep_name[732] = "BLOB GUN"
+	wep_type[732] = 4
+	wep_auto[732] = 0
+	wep_load[732] = 25
+	wep_cost[732] = 3.5
+	wep_sprt[732] = sprBlobGun
+	wep_area[732] = 7
+	wep_text[732] = "black ink can be ignited"
+	wep_swap[732] = sndSwapExplosive
+	wep_rad[732] = 0;
+	
+	wep_name[733] = "BLOB CANNON"
+	wep_type[733] = 4
+	wep_auto[733] = 0
+	wep_load[733] = 40
+	wep_cost[733] = 7.5
+	wep_sprt[733] = sprBlobCannon
+	wep_area[733] = 10
+	wep_text[733] = "the blob is real and it burns!"
+	wep_swap[733] = sndSwapExplosive
+	wep_rad[733] = 0;
+	
+	wep_name[734] = "MICRO MINIGUN"
+	wep_type[734] = 1
+	wep_auto[734] = 1
+	wep_load[734] = 0.5
+	wep_cost[734] = 0.5
+	wep_sprt[734] = sprMicroMinigun
+	wep_area[734] = 6
+	wep_text[734] = "size does not matter"
+	wep_swap[734] = sndSwapPistol
+	wep_rad[734] = 0;
 
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

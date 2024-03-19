@@ -15958,5 +15958,80 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
+	//BLOB GUN
+	case 732:
+
+	snd_play_fire(sndBlobFire);
+
+	with instance_create(x,y,BlobBall)
+	{
+		motion_add(aimDirection+(random(8)-4)*other.accuracy,8)
+		team = other.team
+	}
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection + 180,4);
+		motion_add(aimDirection+180,2)
+	}
+	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 8
+	wkick = 8
+
+	break;
+	
+	//BLOB CANNON
+	case 733:
+
+	snd_play_fire(sndBlobFire);
+
+	with instance_create(x,y,BlobCannonBall)
+	{
+		motion_add(aimDirection+(random(8)-4)*other.accuracy,7)
+		team = other.team
+	}
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection + 180,6);
+		motion_add(aimDirection+180,4)
+	}
+	BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 12
+	wkick = 8
+
+	break;
+	
+	//MICRO MINIGUN
+	case 734:
+
+	//snd_play_fire(sndPistol)
+	snd_play(sndMicroMinigun,0.03,true);
+	if altFire
+	{
+		with instance_create(x,y,Shell)
+		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+	}
+	altFire = !altFire;
+	with instance_create(x,y,MicroBullet)
+	{
+	direction = aimDirection+(random(32)-16)*other.accuracy;
+	image_angle = direction;
+	team = other.team
+	scrGiveProjectileStats();
+	event_perform(ev_alarm,0);
+	}
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection + 180,0.2);
+		motion_add(aimDirection+180,0.2)
+	}
+	BackCont.viewx2 += lengthdir_x(4,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 2
+	wkick = 2
+
+	break;
+	
 	}//end of switch part 2!
 }

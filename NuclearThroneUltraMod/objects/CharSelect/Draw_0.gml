@@ -83,6 +83,8 @@ else
 			gotCrowns = true;
 		var i = ((num-1)*4) + 1;
 		gotAllUltras = (UberCont.ctot_ultra_taken[i] || UberCont.ctot_ultra_taken[i+1] || UberCont.ctot_ultra_taken[i+2] || UberCont.ctot_ultra_taken[i+3])
+		if num == 21 && !gotAllUltras// Horror
+			gotAllUltras = UberCont.ctot_ultra_taken[0];
 		if gotAllUltras
 		{
 			gotAllUltras = scrHasFoundAllSecretUltrasFor(num);

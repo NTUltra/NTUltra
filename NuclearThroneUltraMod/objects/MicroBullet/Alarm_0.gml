@@ -34,7 +34,7 @@ if instance_exists(Player)
 			if team != 0
 			{
 				scrForcePosition60fps();
-				motion_add(other.direction,3)
+				motion_add(other.direction,2)
 				if speed > maxSpeed 
 					speed = maxSpeed;
 			}

@@ -14,6 +14,7 @@ function scrIgniteToxic(){
 				direction = other.direction;
 				speed = other.speed+1;
 			}
+			return true;
 		}
 		else
 		{
@@ -26,6 +27,7 @@ function scrIgniteToxic(){
 					direction = other.direction;
 					speed = other.speed+1;
 				}
+				return true;
 			}
 			else
 			{
@@ -38,6 +40,7 @@ function scrIgniteToxic(){
 						direction = other.direction;
 						speed = other.speed+1;
 					}
+					return true;
 				}
 			}
 		}
@@ -53,6 +56,7 @@ function scrIgniteToxic(){
 				direction = other.direction;
 				speed = other.speed+1;
 			}
+			return true;
 		}
 		else
 		{
@@ -65,6 +69,7 @@ function scrIgniteToxic(){
 					direction = other.direction;
 					speed = other.speed+1;
 				}
+				return true;
 			}
 			else
 			{
@@ -77,6 +82,7 @@ function scrIgniteToxic(){
 						direction = other.direction;
 						speed = other.speed+1;
 					}
+					return true;
 				}
 			}
 		}
