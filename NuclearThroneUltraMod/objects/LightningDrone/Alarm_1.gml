@@ -35,7 +35,7 @@ if instance_exists(enemy) {
 				with instance_create(x,y,LightningSpawn)
 					image_angle = other.image_angle
 			}
-		alarm[1] += actTime * 0.5;
+		alarm[1] += 3;
 		image_angle = dir;
 		if target.x > x
 			right = -1;

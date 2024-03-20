@@ -16078,5 +16078,61 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
+	//SCYTHER WALL DISPERSE GUN
+	case 737:
+		snd_play_fire(sndShotgun);
+		snd_play_fire(sndQuadMachinegun);
+		var msk = mask_index;
+		mask_index = mskBullet1;
+		var aimDir = aimDirection+(random(4)-2)*accuracy;
+		var len = 12+(accuracy*4);
+		var bx = x;
+		var by = y;
+		var xstep = lengthdir_x(len,aimDir+90);
+		var ystep = lengthdir_y(len,aimDir+90);
+		var count = 0;
+		while (!collision_line(x,y,bx,by,Wall,false,false) && count < 32 || count < 1)
+		{
+			instance_create(bx,by,Dust);
+			with instance_create(bx,by,ScytherDisperseBullet)
+			{
+				alarm[0] += count % 2;
+				time += 1 + count % 2;
+				motion_add(aimDir,9);
+				image_angle = direction
+				team = other.team
+			}
+			bx += xstep;
+			by += ystep;
+			count ++;
+		}
+		var xstep = lengthdir_x(len,aimDir-90);
+		var ystep = lengthdir_y(len,aimDir-90);
+		bx = x + xstep;
+		by = y + ystep;
+		count = 0;
+		while (!collision_line(x,y,bx,by,Wall,false,false) && count < 32 || count < 1)
+		{
+			instance_create(bx,by,Dust);
+			with instance_create(bx,by,ScytherDisperseBullet)
+			{
+				alarm[0] += count % 2;
+				time += 1 + count % 2;
+				motion_add(aimDir,9);
+				image_angle = direction
+				team = other.team
+			}
+			bx += xstep;
+			by += ystep;
+			count ++;
+		}
+		mask_index = msk;
+		BackCont.viewx2 += lengthdir_x(13,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(13,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 10
+		wkick = 7
+
+	break;
+	
 	}//end of switch part 2!
 }

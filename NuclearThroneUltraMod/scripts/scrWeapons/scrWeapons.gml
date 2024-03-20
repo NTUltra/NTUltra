@@ -5859,7 +5859,7 @@ function scrWeapons() {
 	wep_name[523] = "LIGHTNING STRIKER"
 	wep_type[523] = 5
 	wep_auto[523] = 3
-	wep_load[523] = 38
+	wep_load[523] = 37
 	wep_cost[523] = 4
 	wep_sprt[523] = sprLightningStriker
 	wep_area[523] = 11
@@ -5870,7 +5870,7 @@ function scrWeapons() {
 	wep_name[524] = "ULTRA LIGHTNING STRIKER"
 	wep_type[524] = 5
 	wep_auto[524] = 3
-	wep_load[524] = 38
+	wep_load[524] = 37
 	wep_cost[524] = 8
 	wep_sprt[524] = sprUltraLightningStriker
 	wep_area[524] = 24
@@ -8213,20 +8213,31 @@ function scrWeapons() {
 	wep_cost[735] = 10
 	wep_sprt[735] = sprScytherDisperseGun
 	wep_area[735] = 13
-	wep_text[735] = "its a wall of scythes"
+	wep_text[735] = "scythe bullet hell"
 	wep_swap[735] = sndSwapPistol
 	wep_rad[735] = 0;
 	
 	wep_name[736] = "LIGHTNING DRONE LAUNCHER"
 	wep_type[736] = 5
 	wep_auto[736] = 1
-	wep_load[736] = 45
+	wep_load[736] = 30
 	wep_cost[736] = 5
-	wep_sprt[736] = sprGyroBurster
+	wep_sprt[736] = sprLightningDroneLauncher
 	wep_area[736] = 17
 	wep_text[736] = "drone strike!"
 	wep_swap[736] = sndSwapPistol
 	wep_rad[736] = 0;
+	
+	wep_name[737] = "SCYTHER WALL DISPERSE GUN"
+	wep_type[737] = 1
+	wep_auto[737] = 1
+	wep_load[737] = 18
+	wep_cost[737] = 20
+	wep_sprt[737] = sprScytherWallDisperseGun
+	wep_area[737] = 23
+	wep_text[737] = "its a wall of scythes"
+	wep_swap[737] = sndSwapPistol
+	wep_rad[737] = 0;
 
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1
