@@ -15976,7 +15976,7 @@ function scrFire2(hasTailNow) {
 	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 8
-	wkick = 8
+	wkick = 7
 
 	break;
 	
@@ -15995,10 +15995,10 @@ function scrFire2(hasTailNow) {
 		scrMoveContactSolid(aimDirection + 180,6);
 		motion_add(aimDirection+180,4)
 	}
-	BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewx2 += lengthdir_x(16,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(16,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 12
-	wkick = 8
+	wkick = 9
 
 	break;
 	
@@ -16030,6 +16030,28 @@ function scrFire2(hasTailNow) {
 	BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 2
 	wkick = 2
+
+	break;
+	
+	//SCYTHER DISPERSE GUN
+	case 735:
+
+	snd_play_fire(sndHeavyRevolver)
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+	with instance_create(x,y,ScytherDisperseBullet)
+	{motion_add(aimDirection+(random(12)-6)*other.accuracy,10)
+	image_angle = direction
+	team = other.team
+	time=2;
+	event_perform(ev_alarm,0) 
+	}
+
+	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 5
+	wkick = 4
 
 	break;
 	

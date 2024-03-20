@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+norecycle = false;
 dmg = 5;
 image_speed -= 0.1;
 snd_wallhit = sndHitWall;

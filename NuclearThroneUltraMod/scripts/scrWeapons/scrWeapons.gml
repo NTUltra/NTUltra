@@ -8205,6 +8205,17 @@ function scrWeapons() {
 	wep_text[734] = "size does not matter"
 	wep_swap[734] = sndSwapPistol
 	wep_rad[734] = 0;
+	
+	wep_name[735] = "SCYTHER DISPERSE GUN"
+	wep_type[735] = 1
+	wep_auto[735] = 1
+	wep_load[735] = 12
+	wep_cost[735] = 10
+	wep_sprt[735] = sprBulletDisperseGun
+	wep_area[735] = 13
+	wep_text[735] = "its a wall of scythes"
+	wep_swap[735] = sndSwapPistol
+	wep_rad[735] = 0;
 
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

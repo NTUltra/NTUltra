@@ -2,5 +2,5 @@
 
 // Inherit the parent event
 event_inherited();
-
-scrRecycleGland(1);
+if !norecycle
+	scrRecycleGland(1);
