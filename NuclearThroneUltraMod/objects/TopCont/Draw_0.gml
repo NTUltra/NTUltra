@@ -241,6 +241,14 @@ with EnemyBullet1Square
 	if draw
 		draw_self();
 }
+with BoltTrailDrone
+{
+	event_perform(ev_draw,0);
+}
+with LightningDrone
+{
+	event_perform(ev_draw,0);
+}
 with EnergyBackStabber
 {
 	draw_self();

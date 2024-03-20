@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"sndBlobFire",
+  "%Name":"sndBlobFireL",
   "audioGroupId":{
     "name":"agsfx",
     "path":"audiogroups/agsfx",
@@ -10,7 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":1.245187,
-  "name":"sndBlobFire",
+  "name":"sndBlobFireL",
   "parent":{
     "name":"Explosive",
     "path":"folders/Sounds/Weapons/Explosive.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sndBlobFire.wav",
+  "soundFile":"sndBlobFireL.wav",
   "type":0,
   "volume":1.0,
 }

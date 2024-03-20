@@ -8202,7 +8202,7 @@ function scrWeapons() {
 	wep_cost[734] = 0.5
 	wep_sprt[734] = sprMicroMinigun
 	wep_area[734] = 6
-	wep_text[734] = "size does not matter"
+	wep_text[734] = ""
 	wep_swap[734] = sndSwapPistol
 	wep_rad[734] = 0;
 	
@@ -8211,11 +8211,22 @@ function scrWeapons() {
 	wep_auto[735] = 1
 	wep_load[735] = 12
 	wep_cost[735] = 10
-	wep_sprt[735] = sprBulletDisperseGun
+	wep_sprt[735] = sprScytherDisperseGun
 	wep_area[735] = 13
 	wep_text[735] = "its a wall of scythes"
 	wep_swap[735] = sndSwapPistol
 	wep_rad[735] = 0;
+	
+	wep_name[736] = "LIGHTNING DRONE LAUNCHER"
+	wep_type[736] = 5
+	wep_auto[736] = 1
+	wep_load[736] = 45
+	wep_cost[736] = 5
+	wep_sprt[736] = sprGyroBurster
+	wep_area[736] = 17
+	wep_text[736] = "drone strike!"
+	wep_swap[736] = sndSwapPistol
+	wep_rad[736] = 0;
 
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

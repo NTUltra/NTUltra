@@ -22,6 +22,7 @@ if my_health > 0
 			ccurse = 1;
 			snd_play(choose(snd_lowa,snd_lowh));
 			image_angle = 0;
+			angle = 0;
 		}
 		with WepPickup {
 			curse = 1;

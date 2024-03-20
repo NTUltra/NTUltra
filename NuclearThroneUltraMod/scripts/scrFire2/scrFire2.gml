@@ -15961,7 +15961,7 @@ function scrFire2(hasTailNow) {
 	//BLOB GUN
 	case 732:
 
-	snd_play_fire(sndBlobFire);
+	snd_play_fire(sndBlobFireS);
 
 	with instance_create(x,y,BlobBall)
 	{
@@ -15983,7 +15983,7 @@ function scrFire2(hasTailNow) {
 	//BLOB CANNON
 	case 733:
 
-	snd_play_fire(sndBlobFire);
+	snd_play_fire(sndBlobFireL);
 
 	with instance_create(x,y,BlobCannonBall)
 	{
@@ -16051,6 +16051,29 @@ function scrFire2(hasTailNow) {
 	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 5
+	wkick = 4
+
+	break;
+	
+	//LIGHTNING DRONE LAUNCHER
+	case 736:
+
+	snd_play_fire(sndClusterLauncher)
+
+	with instance_create(x,y,LightningDrone)
+	{
+		motion_add(aimDirection+(random(8)-4)*other.accuracy,4)
+		image_angle = direction;
+		team = other.team
+		if hspeed > 0
+			right = -1;
+		else
+			right = 1;
+	}
+
+	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 10
 	wkick = 4
 
 	break;
