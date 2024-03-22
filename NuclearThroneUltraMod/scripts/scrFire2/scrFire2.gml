@@ -3292,6 +3292,7 @@ function scrFire2(hasTailNow) {
 
 
 	//POTATO CANNON
+	/*
 	case 311:
 
 	ammo[1]-=10;
@@ -3356,7 +3357,126 @@ function scrFire2(hasTailNow) {
 	wkick = choose(-24,24);
 
 	break;
+*/
+	//Y.V.'S EXCALIBUR
+	case 311:
+		switch (wep_sprt[311])
+		{
+			case sprYVExcalibur1:
+				snd_play_fire(sndSword2)
+				instance_create(x,y,Dust)
+				with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),BigPandaSlash)
+				{
+					dmg = 24
+					sprite_index = sprExcaliburSlash;
+					mask_index = mskExcaliburSlash;
+					longarms = 0
+					longarms = (Player.skill_got[13]+other.bettermelee)*3
+					motion_add(aimDirection,2.5+longarms)
+					image_angle = direction
+					team = other.team
+				}
 
+				wepangle = -wepangle
+				if !skill_got[2]
+				{
+					motion_add(aimDirection,3)
+					scrMoveContactSolid(aimDirection,1)
+				}
+				BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
+				BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
+				BackCont.shake += 1
+				wkick = -4
+				wep_sprt[311] = sprYVExcalibur2;
+				reload -= wep_load[311] * 0.25;
+			break;
+			case sprYVExcalibur2:
+				snd_play_fire(sndHammer)
+				instance_create(x,y,Dust)
+				with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),BigPandaSlash)
+				{
+					dmg = 32
+					sprite_index = sprExcaliburBigSlash;
+					image_yscale = choose(1,-1);
+					mask_index = mskBigSlash;
+					longarms = 0
+					longarms = (Player.skill_got[13]+other.bettermelee)*3
+					motion_add(aimDirection,2.5+longarms)
+					image_angle = direction
+					team = other.team
+				}
+
+				wepangle = -wepangle
+				if !skill_got[2]
+				{
+					motion_add(aimDirection,3)
+					scrMoveContactSolid(aimDirection,4)
+				}
+				BackCont.viewx2 += lengthdir_x(16,aimDirection)*UberCont.opt_shake
+				BackCont.viewy2 += lengthdir_y(16,aimDirection)*UberCont.opt_shake
+				BackCont.shake += 10
+				wkick = -4
+				wep_sprt[311] = sprYVExcalibur3;
+			break;
+			case sprYVExcalibur3:
+				snd_play_fire(sndSword2)
+				instance_create(x,y,Dust)
+				with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),LanceShank)
+				{
+					dmg = 18
+					sprite_index = sprExcaliburBigShank;
+					mask_index = mskExcaliburBigShank;
+					image_yscale = choose(1,-1);
+					longarms = 0
+					longarms = (Player.skill_got[13]+other.bettermelee)*3
+					motion_add(aimDirection,4+longarms)
+					image_angle = direction
+					team = other.team
+				}
+
+				wepangle = -wepangle
+				if !skill_got[2]
+				{
+					motion_add(aimDirection,5)
+					scrMoveContactSolid(aimDirection,5)
+				}
+				BackCont.viewx2 += lengthdir_x(20,aimDirection)*UberCont.opt_shake
+				BackCont.viewy2 += lengthdir_y(20,aimDirection)*UberCont.opt_shake
+				BackCont.shake += 1
+				wkick = -4
+				wep_sprt[311] = sprYVExcalibur4;
+				reload -= wep_load[311] * 0.35;
+			break;
+			case sprYVExcalibur4:
+				snd_play_fire(sndFlail)
+				instance_create(x,y,Dust)
+				with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),ExcaliburHammerBoom)
+				{
+					dmg = 25
+					longarms = 0
+					longarms = (Player.skill_got[13]+other.bettermelee)*3
+					motion_add(aimDirection,2.5+longarms)
+					image_angle = direction
+					team = other.team
+				}
+
+				wepangle = -wepangle
+				if !skill_got[2]
+				{
+					motion_add(aimDirection,3)
+					scrMoveContactSolid(aimDirection,3)
+				}
+				BackCont.viewx2 += lengthdir_x(14,aimDirection)*UberCont.opt_shake
+				BackCont.viewy2 += lengthdir_y(14,aimDirection)*UberCont.opt_shake
+				BackCont.shake += 10
+				wkick = -8
+				wep_sprt[311] = sprYVExcalibur1;
+				reload += wep_load[311] * 0.5;
+			break;
+		}
+	
+	break;
+	
 	//ROGUE RIFLE
 	case 312:
 

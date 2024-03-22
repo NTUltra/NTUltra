@@ -3477,7 +3477,7 @@ function scrWeapons() {
 	wep_text[310] = "no sense was made"
 	wep_swap[310] = sndSwapEnergy
 	wep_rad[310] = 0;
-
+/*
 	wep_name[311] = "POTATO CANNON"
 	wep_type[311] = 5
 	wep_auto[311] = 1
@@ -3488,7 +3488,18 @@ function scrWeapons() {
 	wep_text[311] = "look mummy its me"
 	wep_swap[311] = sndSwapMotorized
 	wep_rad[311] = 0;
-
+*/
+	wep_name[311] = "Y.V.'S EXCALIBUR"
+	wep_type[311] = 0
+	wep_auto[311] = 0
+	wep_load[311] = 15
+	wep_cost[311] = 0
+	wep_sprt[311] = sprYVExcalibur1
+	wep_area[311] = -2
+	wep_text[311] = "weapon of a GOD"
+	wep_swap[311] = sndSwapHammer
+	wep_rad[311] = 0;
+	
 	wep_name[312] = "ROGUE RIFLE"
 	wep_type[312] = 1
 	wep_auto[312] = 2

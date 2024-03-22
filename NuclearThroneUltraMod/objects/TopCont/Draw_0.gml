@@ -20,7 +20,6 @@ draw_self();
 			draw_sprite(sprite_index,image_index,x,y-8)
 		}
 	}
-
 	//draw_sprite_ext(sprite_index,-1,x,y-8,1,1,0,background_color,1)
 	with TopSmall
 	draw_sprite(sprite_index,image_index,x,y-8)
@@ -290,11 +289,17 @@ with InvertedGuardianBulletSpawn
 {
 	draw_self();
 }
+with MeleeParent
+{
+	if visible
+		draw_self();	
+}
+/*
 with GhettoBlast
 {
 	if visible
 		draw_self();
-}
+}*/
 with GhostEffect
 {
 	draw_self();
