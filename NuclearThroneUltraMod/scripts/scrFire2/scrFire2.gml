@@ -3367,7 +3367,7 @@ function scrFire2(hasTailNow) {
 				instance_create(x,y,Dust)
 				with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),BigPandaSlash)
 				{
-					dmg = 24
+					dmg = 26
 					sprite_index = sprExcaliburSlash;
 					mask_index = mskExcaliburSlash;
 					longarms = 0
@@ -3415,7 +3415,7 @@ function scrFire2(hasTailNow) {
 				BackCont.viewx2 += lengthdir_x(16,aimDirection)*UberCont.opt_shake
 				BackCont.viewy2 += lengthdir_y(16,aimDirection)*UberCont.opt_shake
 				BackCont.shake += 10
-				wkick = -4
+				wkick = -5
 				wep_sprt[311] = sprYVExcalibur3;
 			break;
 			case sprYVExcalibur3:
@@ -3443,7 +3443,7 @@ function scrFire2(hasTailNow) {
 				BackCont.viewx2 += lengthdir_x(20,aimDirection)*UberCont.opt_shake
 				BackCont.viewy2 += lengthdir_y(20,aimDirection)*UberCont.opt_shake
 				BackCont.shake += 1
-				wkick = -4
+				wkick = -6
 				wep_sprt[311] = sprYVExcalibur4;
 				reload -= wep_load[311] * 0.35;
 			break;
@@ -3452,7 +3452,7 @@ function scrFire2(hasTailNow) {
 				instance_create(x,y,Dust)
 				with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),ExcaliburHammerBoom)
 				{
-					dmg = 25
+					dmg = 26
 					longarms = 0
 					longarms = (Player.skill_got[13]+other.bettermelee)*3
 					motion_add(aimDirection,2.5+longarms)

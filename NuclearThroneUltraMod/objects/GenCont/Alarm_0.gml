@@ -9,6 +9,34 @@ if scrIsCrown(25)
 		instance_destroy(id,false);	
 	}
 }
+if Player.area == 125 && Player.loops > 0
+{
+	var lowestFloorY = -9999;
+	var lowestFloor = noone;
+	with Floor {
+		if object_index != FloorExplo &&  y > lowestFloorY
+		{
+			lowestFloorY = y;
+			lowestFloor = id;
+		}
+	}
+	with lowestFloor
+	{
+		instance_create(x,y + 32,Floor);
+		instance_create(x,y + 64,Floor);
+		instance_create(x,y + 96,Floor);
+		instance_create(x,y + 128,Floor);
+		instance_create(x,y + 160,Floor);
+		instance_create(x + 32,y + 96,Floor);
+		instance_create(x + 32,y + 128,Floor);
+		instance_create(x + 32,y + 160,Floor);
+		instance_create(x - 32,y + 96,Floor);
+		instance_create(x - 32,y + 128,Floor);
+		instance_create(x - 32,y + 160,Floor);
+		instance_create(x,y + 128,Blasphemia);
+	}
+}
+	
 with Floor
 {
 if !position_meeting(x-16,y-16,Floor) instance_create(x-16,y-16,myWall)

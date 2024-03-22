@@ -62,7 +62,7 @@ else
 		with instance_create(x,y,WepPickup)
 		{
 		scrWeapons()
-		wep =75
+		wep = 75
 		name = wep_name[wep]
 		ammo = 0
 		type = wep_type[wep]

@@ -1919,6 +1919,22 @@ function scrDrawHUD() {
 			else
 				explainTimer = 0;
 		}
+		with Blasphemia
+		{
+			if place_meeting(x,y,Player)
+			{
+				var yy = y - oy - 22;
+				draw_sprite(sprEPickup,UberCont.opt_gamepad,x,yy-2)
+		
+				draw_set_color(c_black)
+				draw_text(x-ox,yy,string_hash_to_newline(string(name)))
+				draw_text(x-ox,yy,string_hash_to_newline(string(name)))
+				draw_text(x-ox,yy-1,string_hash_to_newline(string(name)))
+				draw_set_color(c_white)
+				draw_text(x-ox,yy-1,string_hash_to_newline(string(name)))
+			
+			}
+		}
 		with WeaponMod
 		{
 			if place_meeting(x,y,Player) && Player.wep != 0

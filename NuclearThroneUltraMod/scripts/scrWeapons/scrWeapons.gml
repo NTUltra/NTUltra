@@ -3489,14 +3489,14 @@ function scrWeapons() {
 	wep_swap[311] = sndSwapMotorized
 	wep_rad[311] = 0;
 */
-	wep_name[311] = "Y.V.'S EXCALIBUR"
+	wep_name[311] = "BLASPHEMIA"
 	wep_type[311] = 0
 	wep_auto[311] = 0
-	wep_load[311] = 15
+	wep_load[311] = 16
 	wep_cost[311] = 0
 	wep_sprt[311] = sprYVExcalibur1
 	wep_area[311] = -2
-	wep_text[311] = "weapon of a GOD"
+	wep_text[311] = "weapon of an inverted GOD"
 	wep_swap[311] = sndSwapHammer
 	wep_rad[311] = 0;
 	
