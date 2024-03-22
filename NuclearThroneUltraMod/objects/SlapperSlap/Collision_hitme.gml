@@ -35,6 +35,14 @@ if other.team != team && (!inArray || other.sprite_index != other.spr_hurt)
 				pushX = target.x + lengthdir_x(pushStrength/max(1,s*0.5),pushDirection);
 				pushY = target.y + lengthdir_y(pushStrength/max(1,s*0.5),pushDirection);
 			}
+			with instance_create(x,y,Dust)
+			{
+				motion_add(other.direction + 10,3);
+			}
+			with instance_create(x,y,Dust)
+			{
+				motion_add(other.direction - 10,3);
+			}
 		}
 		BackCont.shake += shk;
 		alarm[1] = hitDelay;

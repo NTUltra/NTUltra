@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-dmg = 9;
+dmg = 12;
 hits += 1;
 shouldBleed = false;
 bleedAngle = 0;

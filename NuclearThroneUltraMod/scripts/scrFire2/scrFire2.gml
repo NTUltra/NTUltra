@@ -618,7 +618,7 @@ function scrFire2(hasTailNow) {
 		bleedAngle = aimDirection - (30 * sign(other.wepangle));
 	sprite_index=sprAxeSlash;
 	mask_index = mskBigAxeSlash;
-	dmg = 12//25//shovel is 8 sledge = 16
+	dmg = 16//25//shovel is 8 sledge = 16
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -652,7 +652,7 @@ function scrFire2(hasTailNow) {
 	{
 		shouldBleed = true;
 		bleedAngle = aimDirection - (30 * sign(other.wepangle));
-	dmg = 6//shovel is 8
+	dmg = 8//shovel is 8
 	image_xscale *= 0.8;
 	image_yscale *= 0.8;
 	longarms = 0
@@ -5028,7 +5028,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Flail)
 	{
 	longarms = 0
-	dmg = 11;
+	dmg = 14;
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
@@ -5036,7 +5036,11 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,2.5)
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection,2);
+		motion_add(aimDirection,0.5)
+	}
 	BackCont.viewx2 += lengthdir_x(10,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(10,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 4
@@ -6538,7 +6542,11 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,8)
+	if !skill_got[2]
+	{
+		motion_add(aimDirection,7)
+		scrMoveContactSolid(aimDirection,1)
+	}
 	BackCont.viewx2 += lengthdir_x(14,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(14,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 1
@@ -8632,14 +8640,18 @@ function scrFire2(hasTailNow) {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),ExplosionFlail)
 	{
 	longarms = 0
-	dmg = 12;
+	dmg = 16;
 	if Player.skill_got[42]
 	{
 		ammo = ceil(ammo*Player.betterTail);
 		scrActivateTail(hasTailNow);
 	}
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2.5+longarms)
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection,2);
+		motion_add(aimDirection,0.5)
+	}
 	image_angle = direction
 	image_yscale = other.wepflip;//Line up animation with actual holding of weapon
 	team = other.team}
@@ -9403,7 +9415,11 @@ function scrFire2(hasTailNow) {
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2.5+longarms)
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection,2);
+		motion_add(aimDirection,0.5)
+	}
 	image_angle = direction
 	team = other.team}
 
@@ -9578,7 +9594,7 @@ function scrFire2(hasTailNow) {
 	{
 		image_xscale -= 0.15;
 		image_yscale -= 0.15;
-		dmg = 4;
+		dmg = 6;
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -11966,7 +11982,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),BigPandaSlash)
 	{
-		dmg = 10;
+		dmg = 16;
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -11974,7 +11990,11 @@ function scrFire2(hasTailNow) {
 		image_angle = direction
 		team = other.team
 	}
-	motion_add(aimDirection,3)
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection,2);
+		motion_add(aimDirection,1)
+	}
 	wepangle = -wepangle
 	BackCont.viewx2 += lengthdir_x(13,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(13,aimDirection)*UberCont.opt_shake
@@ -12028,7 +12048,11 @@ function scrFire2(hasTailNow) {
 	}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,3.5)
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection,3);
+		motion_add(aimDirection,0.5)
+	}
 	BackCont.viewx2 += lengthdir_x(10,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(10,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 6
@@ -16280,27 +16304,62 @@ function scrFire2(hasTailNow) {
 	//SLAPPER
 	case 739:
 
-	snd_play_fire(sndFlail)
+	snd_play_fire(sndSlapper)
 
 	instance_create(x,y,Dust)
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),SlapperSlap)
 	{
 		longarms = 0
-		dmg = 18;
+		dmg = 16;
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.5+longarms)
-		image_angle = direction - (20*other.accuracy*other.wepflip);
+		image_angle = direction - (5*other.accuracy*other.wepflip);
 		image_yscale = other.wepflip;//Line up animation with actual holding of weapon
 		team = other.team
 	}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,2.5)
-	BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
-	BackCont.shake += 6
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection,3);
+		motion_add(aimDirection,2)
+	}
+	BackCont.viewx2 += lengthdir_x(20,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(20,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 4
 	wkick = -5
+
+	break;
+	
+	//ttaTTE RIFLE
+	case 740:
+
+	with instance_create(x,y,BayonetteRifle)
+	{
+		maxcharge = 15;//maxrate
+		type = 2;
+		cost = 1;
+		creator = other.id
+		chargetime = 3;
+		costtime = 8
+		team = other.team
+		if Player.skill_got[42]
+		{
+			chargetime = 1;
+			rate += 2;
+			costtime *= Player.betterTail;
+			if Player.ultra_got[97] && !Player.altUltra
+			{
+				rate = maxcharge;
+				chargetime = 1;
+			}
+			maxcharge *= Player.betterTail;
+			scrActivateTail(hasTailNow);
+		}
+		event_perform(ev_alarm,0);
+		alarm[1] = costtime;
+	}
 
 	break;
 	

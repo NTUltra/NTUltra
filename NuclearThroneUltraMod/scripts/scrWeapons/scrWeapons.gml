@@ -8264,13 +8264,24 @@ function scrWeapons() {
 	wep_name[739] = "SLAPPER"
 	wep_type[739] = 0
 	wep_auto[739] = 0
-	wep_load[739] = 27
+	wep_load[739] = 25
 	wep_cost[739] = 0
-	wep_sprt[739] = sprFlail
-	wep_area[739] = 17
+	wep_sprt[739] = sprSlapper
+	wep_area[739] = 11
 	wep_text[739] = "knock them back!"
-	wep_swap[739] = sndSwapSword
+	wep_swap[739] = sndSwapHammer
 	wep_rad[739] = 0;
+	
+	wep_name[740] = "BAYONETTE RIFLE"
+	wep_type[740] = 2
+	wep_auto[740] = 0
+	wep_load[740] = 18
+	wep_cost[740] = 1
+	wep_sprt[740] = sprShotgun
+	wep_area[740] = 6
+	wep_text[740] = ""
+	wep_swap[740] = sndSwapShotgun
+	wep_rad[740] = 0;
 
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1
