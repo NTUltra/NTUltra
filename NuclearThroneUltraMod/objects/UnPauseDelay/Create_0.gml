@@ -1,2 +1,2 @@
 /// @description Init
-alarm[0] = 10;
+alarm[0] = 8;

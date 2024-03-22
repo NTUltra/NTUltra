@@ -10,3 +10,4 @@ morphMe = 0;
 maxSpeed = 0;
 right = 1;
 walk = 0;
+frozen = noone;

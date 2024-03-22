@@ -5,7 +5,7 @@ if other.team != team && (image_index<5)
 	{
 		if sprite_index != spr_hurt && !other.dealtDamage
 		{
-			if (object_index == Player || object_index == YungCuzDupe) && frozen < 1
+			if (object_index == Player) && frozen < 1
 			{
 				var immunelimit = 0;
 				if Player.skill_got[14] = 1
@@ -51,6 +51,53 @@ if other.team != team && (image_index<5)
 						getFrozen=0;
 						sprite_index = spr_hurt
 						image_index = 0
+					}
+				}
+			}
+			else
+			{
+				if object_index == YungCuzDupe && instance_exists(YungCuzDupe){
+					var immunelimit = 0;
+					if Player.skill_got[14] = 1
+					{
+						immunelimit = 5;
+						if object_index == Player
+						{
+							boilingAmount = boilingMax;
+							if alarm[4] < 1
+								alarm[4] = 1;
+						}
+						if race=25
+							immunelimit = 999;
+						
+					}
+					if Player.ultra_got[62] && Player.altUltra && Player.armour > immunelimit//Living armour
+					{
+						if Player.armour-1 < immunelimit
+							Player.armour = immunelimit
+						else
+						{
+							Player.armour -= 1;
+							other.dealtDamage = true;
+							snd_play(snd_hurt, hurt_pitch_variation)
+							sprite_index = spr_hurt
+							image_index = 0
+							scrFreezeTarget(5,0);
+						}
+					}
+					else if my_health > immunelimit
+					{
+						if my_health-2 < immunelimit
+							my_health = immunelimit
+						else
+						{
+							DealDamage(2)
+							other.dealtDamage = true;
+							snd_play(snd_hurt, hurt_pitch_variation)
+							sprite_index = spr_hurt
+							image_index = 0
+							scrFreezeTarget(5,0);
+						}
 					}
 				}
 			}

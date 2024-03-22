@@ -1,3 +1,4 @@
+event_inherited();
 raddrop = 4
 depth = -2;
 hurt_pitch_variation = 0;

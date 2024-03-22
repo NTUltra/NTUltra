@@ -1,5 +1,7 @@
 /// @description
 function scrPowers(raceOverwrite = -1) {
+	if (instance_exists(StartAreaBuffer) || instance_exists(UnPauseDelay))
+		exit;
 	var keepRace = race;
 	chickenFocusInUse = false;
 	if ultra_got[50] && altUltra

@@ -372,6 +372,10 @@ with Blade
 {
 	draw_self();	
 }
+with PingPongBall
+{
+	draw_self();	
+}
 with ChunkyBlade {
 	draw_self();	
 }

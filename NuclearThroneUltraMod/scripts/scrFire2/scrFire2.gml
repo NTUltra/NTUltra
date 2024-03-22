@@ -3456,7 +3456,8 @@ function scrFire2(hasTailNow) {
 					longarms = 0
 					longarms = (Player.skill_got[13]+other.bettermelee)*3
 					motion_add(aimDirection,2.5+longarms)
-					image_angle = direction
+					image_angle = direction;
+					image_yscale = other.wepflip;
 					team = other.team
 				}
 
@@ -16251,6 +16252,55 @@ function scrFire2(hasTailNow) {
 		BackCont.viewy2 += lengthdir_y(13,aimDirection+180)*UberCont.opt_shake
 		BackCont.shake += 10
 		wkick = 7
+
+	break;
+	
+	//PING PONG GUN
+	case 738:
+
+	snd_play_fire(sndPingPongFire)
+
+	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),PingPongBall)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,14)
+	image_angle = direction
+	team = other.team
+	fireRotation = direction;}
+
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection + 180,1);
+		motion_add(aimDirection+180,1)
+	}
+	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 6
+	break;
+	
+	//SLAPPER
+	case 739:
+
+	snd_play_fire(sndFlail)
+
+	instance_create(x,y,Dust)
+
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),SlapperSlap)
+	{
+		longarms = 0
+		dmg = 18;
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection,2.5+longarms)
+		image_angle = direction - (20*other.accuracy*other.wepflip);
+		image_yscale = other.wepflip;//Line up animation with actual holding of weapon
+		team = other.team
+	}
+
+	wepangle = -wepangle
+	motion_add(aimDirection,2.5)
+	BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 6
+	wkick = -5
 
 	break;
 	

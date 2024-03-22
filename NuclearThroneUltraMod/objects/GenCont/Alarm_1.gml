@@ -1,6 +1,7 @@
 /// @description Final and player position
 instance_destroy()
 SetSeed();
+instance_create(x,y,StartAreaBuffer);
 if instance_exists(Player)
 {
 	with Player {

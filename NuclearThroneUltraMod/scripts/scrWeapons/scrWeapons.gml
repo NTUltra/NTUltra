@@ -5418,7 +5418,7 @@ function scrWeapons() {
 	wep_name[482] = "BOOM-O-RAY"
 	wep_type[482] = 4
 	wep_auto[482] = 3
-	wep_load[482] = 7
+	wep_load[482] = 8
 	wep_cost[482] = 1.25
 	wep_sprt[482] = sprBoomORay
 	wep_area[482] = 14
@@ -6107,7 +6107,7 @@ function scrWeapons() {
 	wep_sprt[544] = sprBowlingBallLauncher
 	wep_area[544] = 18
 	wep_text[544] = "oke dude very funny"
-	wep_swap[544] = sndSwapEnergy
+	wep_swap[544] = sndSwapBow
 	wep_rad[544] = 0;
 	
 	wep_name[545] = "SUPER LIGHTNING CROSSBOW"
@@ -8249,6 +8249,28 @@ function scrWeapons() {
 	wep_text[737] = "its a wall of scythes"
 	wep_swap[737] = sndSwapPistol
 	wep_rad[737] = 0;
+	
+	wep_name[738] = "PING PONG GUN"
+	wep_type[738] = 3
+	wep_auto[738] = 1
+	wep_load[738] = 4
+	wep_cost[738] = 0.5
+	wep_sprt[738] = sprPingPongBallLauncher
+	wep_area[738] = 22
+	wep_text[738] = "pong"
+	wep_swap[738] = sndSwapBow
+	wep_rad[738] = 0;
+	
+	wep_name[739] = "SLAPPER"
+	wep_type[739] = 0
+	wep_auto[739] = 0
+	wep_load[739] = 27
+	wep_cost[739] = 0
+	wep_sprt[739] = sprFlail
+	wep_area[739] = 17
+	wep_text[739] = "knock them back!"
+	wep_swap[739] = sndSwapSword
+	wep_rad[739] = 0;
 
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

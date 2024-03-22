@@ -11,4 +11,8 @@ dmg = 17;
 image_speed = 0.5
 friction = 0;
 bounces = 6;
+if instance_exists(Player) && Player.skill_got[15]
+{
+	bounces += 1;	
+}
 sprite_index = choose(sprBowlingBall1,sprBowlingBall2,sprBowlingBall3,choose(sprBowlingBall4,sprBowlingBall5));

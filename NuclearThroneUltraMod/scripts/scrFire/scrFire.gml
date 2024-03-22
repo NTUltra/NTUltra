@@ -1,7 +1,7 @@
 function scrFire() {
 	IDKWID=false;
 	can_shoot = 0
-	if !instance_exists(Player) || instance_exists(SpiralCont)
+	if !instance_exists(Player) || instance_exists(StartAreaBuffer) || instance_exists(UnPauseDelay)
 	{
 		clicked = 0;
 		can_shoot = 0;
