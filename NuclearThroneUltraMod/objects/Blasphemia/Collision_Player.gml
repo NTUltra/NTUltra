@@ -9,7 +9,15 @@ if KeyCont.key_pick[other.p] == 1
 		repeat(6)
 		{
 			with instance_create(x,y,Dust) {
-				motion_add(ang,2);	
+				motion_add(ang,3);	
+			}
+			ang += 60;
+		}
+		ang += 30;
+		repeat(6)
+		{
+			with instance_create(x,y,Dust) {
+				motion_add(ang,5);	
 			}
 			ang += 60;
 		}
