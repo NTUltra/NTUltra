@@ -15,9 +15,10 @@ if instance_exists(Wall)
 	{
 		var WALL;
 		WALL=instance_nearest(x,y,Wall);
-		if WALL != noone && point_distance(x,y,WALL.x,WALL.y)<32 && (ee || bm)
+		var dis = point_distance(x,y,WALL.x + 8,WALL.y + 8);
+		if (ee || bm) &&WALL != noone && dis < 24 && dis > 10
 		{
-			var s = (100+(ee*10)+(bm*20))/point_distance(x,y,WALL.x,WALL.y);
+			var s = (80+(ee*10)+(bm*20))/point_distance(x,y,WALL.x,WALL.y);
 			motion_add(point_direction(x,y,WALL.x,WALL.y)+180,s);//move away from wall
 		}
 	}
@@ -25,7 +26,16 @@ if instance_exists(Wall)
 
 
 if target!=0 && target.team != team
-motion_add(point_direction(x,y,target.x,target.y),acc+(bm*2)+ee);
+{
+	motion_add(point_direction(x,y,target.x,target.y),acc+(bm*2)+ee);
+
+		if point_distance(x,y,target.x,target.y) < 14 + bm*12
+		{
+			var dir = point_direction(x,y,target.x,target.y);
+			x += lengthdir_x(4,dir);
+			y += lengthdir_y(4,dir);
+		}
+	}
 }
 if speed>maxSpeed+bm+ee
 	speed = max(maxSpeed+bm+ee,speed*0.7);

@@ -4,7 +4,15 @@ if instance_exists(creator)
 	if (scrCanChargeChargeGun())
 	{
 		rate ++;
-		snd_play(sndNadeAlmost,0,true,false,3,false,false,0.6,false,id,1+(rate/maxcharge));
+		snd_play(sndMeleeFlip,0,true,false,3,false,false,0.6,false,id,1+(rate/maxcharge));
+		if rate == 14
+		{
+			//snd_play(sndMeleeFlip);
+			with creator
+			{
+				wep_sprt[740] = sprBayonetteRifleActive;
+			}
+		}
 		creator.wkick = 1;
 		with instance_create(x+random(48)-24,y+random(48)-24,WeaponCharge)
 		{
@@ -22,4 +30,7 @@ if rate < maxcharge && instance_exists(Player)
 else
 {
 	alarm[1] = 0;
+	audio_stop_sound(sndChargeMedium);
+	audio_stop_sound(sndChargeShort);
+	audio_stop_sound(sndChargeLong);
 }

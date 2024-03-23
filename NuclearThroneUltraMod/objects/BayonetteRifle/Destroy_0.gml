@@ -38,9 +38,6 @@ else
 		}
 	}
 }
-	
-audio_stop_sound(sndChargeMedium);
-audio_stop_sound(sndChargeShort);
 if instance_exists(Player) && instance_exists(creator)
 {
 	if rate > 10
@@ -57,14 +54,16 @@ if instance_exists(Player) && instance_exists(creator)
 			team = other.team
 		}
 	}
-	BackCont.viewx2 += lengthdir_x(2+rate,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(2+rate,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+	if rate >= 13
+		rate += 4;
+	BackCont.viewx2 += lengthdir_x(2+rate,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(2+rate,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += rate
-	if rate>12
-		rate=12;
+	if rate>11
+		rate=11;
 
 	creator.wkick = rate
 }
-
+audio_stop_sound(sndChargeMedium);
+audio_stop_sound(sndChargeShort);
 audio_stop_sound(sndChargeLong);
-

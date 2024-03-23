@@ -16332,9 +16332,9 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
-	//ttaTTE RIFLE
+	//BAYONETTE RIFLE
 	case 740:
-
+	wep_sprt[740] = sprBayonetteRifle;
 	with instance_create(x,y,BayonetteRifle)
 	{
 		maxcharge = 15;//maxrate
@@ -16342,7 +16342,7 @@ function scrFire2(hasTailNow) {
 		cost = 1;
 		creator = other.id
 		chargetime = 3;
-		costtime = 8
+		costtime = 9
 		team = other.team
 		if Player.skill_got[42]
 		{
@@ -16361,6 +16361,28 @@ function scrFire2(hasTailNow) {
 		alarm[1] = costtime;
 	}
 
+	break;
+	
+	//PAPER CRAFT GUN
+	case 741:
+	snd_play_fire(sndPaperGun)
+	with instance_create(x,y,PaperCraft)
+	{
+		motion_add(aimDirection+((random(6)-3)*other.accuracy),8)
+		image_angle = direction
+		team = other.team
+		if hspeed > 0
+			right = 1;
+		else
+			right = -1;
+	}
+
+
+	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 6
+	wkick -= 3
+	
 	break;
 	
 	}//end of switch part 2!

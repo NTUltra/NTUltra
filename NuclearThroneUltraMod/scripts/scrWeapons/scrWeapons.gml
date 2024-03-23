@@ -7880,7 +7880,7 @@ function scrWeapons() {
 	wep_text[704] = "Clap the rockets"
 	wep_swap[704] = sndSwapExplosive
 	wep_rad[704] = 0;
-	wep_popup[233] = "COLLIDING ROCKETS#CAUSE A BIGGER BOOM";
+	wep_popup[704] = "COLLIDING ROCKETS#CAUSE A BIGGER BOOM";
 	
 	wep_name[705] = "GRENADE STRIKE LAUNCHER"
 	wep_type[705] = 4
@@ -8187,7 +8187,7 @@ function scrWeapons() {
 	wep_name[732] = "BLOB GUN"
 	wep_type[732] = 4
 	wep_auto[732] = 0
-	wep_load[732] = 25
+	wep_load[732] = 27
 	wep_cost[732] = 3.5
 	wep_sprt[732] = sprBlobGun
 	wep_area[732] = 7
@@ -8198,7 +8198,7 @@ function scrWeapons() {
 	wep_name[733] = "BLOB CANNON"
 	wep_type[733] = 4
 	wep_auto[733] = 0
-	wep_load[733] = 40
+	wep_load[733] = 42
 	wep_cost[733] = 7.5
 	wep_sprt[733] = sprBlobCannon
 	wep_area[733] = 10
@@ -8275,13 +8275,24 @@ function scrWeapons() {
 	wep_name[740] = "BAYONETTE RIFLE"
 	wep_type[740] = 2
 	wep_auto[740] = 0
-	wep_load[740] = 18
+	wep_load[740] = 20
 	wep_cost[740] = 1
-	wep_sprt[740] = sprShotgun
+	wep_sprt[740] = sprBayonetteRifle
 	wep_area[740] = 6
-	wep_text[740] = ""
+	wep_text[740] = "Wind up a stabbin'"
 	wep_swap[740] = sndSwapShotgun
 	wep_rad[740] = 0;
+	
+	wep_name[741] = "PAPER CRAFT GUN"
+	wep_type[741] = 3
+	wep_auto[741] = 0
+	wep_load[741] = 22
+	wep_cost[741] = 2.5
+	wep_sprt[741] = sprPaperGun
+	wep_area[741] = 8
+	wep_text[741] = "origami pro"
+	wep_swap[741] = sndSwapBow
+	wep_rad[741] = 0;
 
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1
