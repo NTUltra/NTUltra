@@ -5,7 +5,7 @@ if firstTime
 {
 	firstTime = false;
 	if instance_exists(Player) && Player.skill_got[29] {
-		alarm[1] += 60;
+		alarm[1] += 70;
 		scrGiveSnooze();
 	}
 }
@@ -89,7 +89,13 @@ if !reachHalfHealth && my_health < maxhealth * 0.74
 				mask_index = mskCourtyardGuardian
 				if !place_meeting(x,y,Wall) && place_meeting(x,y,Floor)
 				{
-					instance_create(x,y,CourtyardGuardian);
+					with instance_create(x,y,CourtyardGuardian) {
+						alarm[1] *= 0.75;
+						if instance_exists(Player) && Player.skill_got[29] {
+							alarm[1] += 40;
+							scrGiveSnooze();
+						}
+					}
 					am ++;
 				}
 				mask_index = msk;
@@ -134,7 +140,13 @@ else if !reachLowHealth && my_health < maxhealth * 0.35
 				mask_index = mskCourtyardGuardian
 				if !place_meeting(x,y,Wall) && place_meeting(x,y,Floor)
 				{
-					instance_create(x,y,InvertedCourtyardGuardian);
+					with instance_create(x,y,InvertedCourtyardGuardian) {
+						alarm[1] *= 0.75;
+						if instance_exists(Player) && Player.skill_got[29] {
+							alarm[1] += 40;
+							scrGiveSnooze();
+						}
+					}
 					am ++;
 				}
 				mask_index = msk;

@@ -23,8 +23,12 @@ if dis > 128//52
 		y = Player.y;
 	}
 	else
+	{
 		mp_potential_step(Player.x,Player.y,1,false)
+	}
 }
+else if target != noone && target>0 && instance_exists(target) && point_distance(x,y,target.x,target.y) < 128
+	mp_potential_step(target.x,target.y,3,false)
 
 
     if (Player.reload>0)//my partner is shooting
@@ -43,30 +47,29 @@ if alarm[2]>0 &&reload<1 && target>0 && instance_exists(target)
 
 with target
 {
-if place_meeting(x,y,PopoShield)
-{
-with other
-exit;
-}
-else if (object_index=CrownGuardian && canfire!=0)
-{
-with other
-exit;
-}
-}
+	if place_meeting(x,y,PopoShield)
+	{
+	with other
+	exit;
+	}
+	else if (object_index=CrownGuardian && canfire!=0)
+	{
+	with other
+	exit;
+	}
+	}
 
-snd_play(sndPartnerFire,0.05,true);
-gunangle = point_direction(x,y,target.x,target.y)
-wkick = 4
+	snd_play(sndPartnerFire,0.05,true);
+	gunangle = point_direction(x,y,target.x,target.y)
+	wkick = 4
 
-
-with instance_create(x,y,PartnerBullet)
-{
-motion_add(other.gunangle+(random(22)-11)*Player.accuracy,12)
-image_angle = direction
-team = other.team
-}
-reload+=3;
+	with instance_create(x,y,PartnerBullet)
+	{
+	motion_add(other.gunangle+(random(22)-11)*Player.accuracy,12)
+	image_angle = direction
+	team = other.team
+	}
+	reload+=3;
 }
 if reload>0
 {

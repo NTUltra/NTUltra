@@ -230,7 +230,7 @@ if instance_exists(Player)
 		x = Player.x;
 		y = Player.y;
 		speed = 0;
-		if instance_exists(Floor) && !collision_point(x,y,Floor,false,false)
+		if instance_exists(Floor) && !collision_point(x,y,Floor,false,false) || collision_point(x,y,Wall,false,false)
 		{
 			var f = instance_nearest(x,y,Floor)
 			var o = 16;

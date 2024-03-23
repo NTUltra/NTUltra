@@ -49,6 +49,7 @@ speed = maxSpeed
 if(alarm[0]>0)
 {
 	sprite_index=spr_idle;
+	my_health = maxhealth;
 }
 
 

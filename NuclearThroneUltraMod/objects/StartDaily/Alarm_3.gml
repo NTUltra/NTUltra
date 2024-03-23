@@ -2,6 +2,7 @@
 UberCont.useSeed = true;
 SetSeed();
 UberCont.randomDailyMod = irandom_range(1,18);
+UberCont.pandaRan = irandom(1000);
 UberCont.chestRan = 10
 UberCont.popoRan = 0;
 network_destroy(serverSocket);

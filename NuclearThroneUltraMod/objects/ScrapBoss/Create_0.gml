@@ -94,7 +94,7 @@ if loops > 1
 	maxSpinSpeed += 0.2;
 }
 if instance_exists(Player) && Player.skill_got[29] {
-	alarm[0] += 30;
+	alarm[0] += 60;
 	alarm[1] = alarm[0];
 	alarm[0] = 0;
 	scrGiveSnooze();

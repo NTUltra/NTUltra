@@ -1,6 +1,8 @@
 scrDrop(32,20)
 scrDrop(10,0)
 event_inherited()
+if !sleeping
+{
 snd_play(sndToxicBarrelGas)
 var dir = random(360);
 var am = deathProjectile;
@@ -30,4 +32,5 @@ repeat(am)
 		image_angle = direction
 		team = other.team
 	}
+}
 }

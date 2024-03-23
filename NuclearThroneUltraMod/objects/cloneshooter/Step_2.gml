@@ -58,6 +58,11 @@ if instance_exists(Player)
 				if 	team == Player.team
 					playerIsBursting = true;
 			}
+			with SpinnerYoyo
+			{
+				if 	team == Player.team
+					playerIsBursting = true;
+			}
 			if !playerIsBursting {
 				alarm[0] = 2;
 			}

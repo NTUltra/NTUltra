@@ -1,4 +1,5 @@
 alarm[1] = 6+random(12)
+sleeping = false;
 if sprite_index != spr_hurt
 sprite_index = spr_idle
 scrTarget()

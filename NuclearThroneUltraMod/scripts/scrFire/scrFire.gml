@@ -91,13 +91,13 @@ function scrFire() {
 			    }
 			}
 		}
-		if scrIsCrown(33){
+		if scrIsCrown(33) {
 			//CROWN OF ECHO
-			var currentCrown = crown;
-			crown = [];
+			var currentCrown = Player.crown;
+			Player.crown = [];
 			scrFire();
 			reload += wep_load[wep]*0.94;
-			crown = currentCrown;
+			Player.crown = currentCrown;
 		}
 	}
 	var hasTailNow = false;

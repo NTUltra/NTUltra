@@ -993,7 +993,7 @@ if (rad > mr)
 			scrUnlockBSkin(25,"FOR REACHING LEVEL 7#BEFORE THE LABS#AS MUTATION DOCTOR",0);
 
 		repeat(level-6)
-		instance_create(x,y,IDPDSpawn)
+			instance_create(x,y,IDPDSpawn)
 		/*
 		if level == 20
 		{
@@ -2261,10 +2261,18 @@ if moddelay > -30*modQueue
 ///Rogue  heat
 if (RogueHeat==true)
 {
-    if ( instance_exists(enemy) && instance_number(enemy) < BackCont.enemiesInStartLevel * 0.8 )
+	var numEn = 0;
+	with enemy
+	{
+		if team != 2 && object_index != IDPDVan && object_index != IDPDVanVertical
+		{
+			numEn ++;
+		}
+	}
+    if ( numEn > 2 && instance_exists(enemy) && instance_number(enemy) < BackCont.enemiesInStartLevel * 0.8 )
     {
-    instance_create(x,y,IDPDSpawn);
-    RogueHeat=false
+		instance_create(x,y,IDPDSpawn);
+	 RogueHeat=false
     }
 }
 

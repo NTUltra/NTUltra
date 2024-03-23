@@ -77,7 +77,7 @@ if target != noone && instance_exists(target) && target.team != 2 && target.my_h
 	else 
 	{
 		cantFightRightNow = true;
-		if random(5) < 4
+		if random(5) < 3
 		{
 			//CANT SEE TARGET
 			motion_add(random(360),0.4)
@@ -93,6 +93,10 @@ if target != noone && instance_exists(target) && target.team != 2 && target.my_h
 			right = 1
 			else if hspeed < 0
 			right = -1
+		}
+		else
+		{
+			alarm[1] += 2;	
 		}
 	}
 }

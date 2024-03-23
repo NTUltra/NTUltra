@@ -43,7 +43,7 @@ actTime = 14;
 alarm[10] = 0;
 
 if instance_exists(Player) && Player.skill_got[29] {
-	alarm[1] += 30;
-	alarm[2] += 30;
+	alarm[1] += 50;
+	alarm[2] += 50;
 	scrGiveSnooze();
 }

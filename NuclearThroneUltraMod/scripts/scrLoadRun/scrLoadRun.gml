@@ -315,6 +315,8 @@ function scrLoadRun(){
 					UberCont.canMultiCrown = encryptedRun.canMultiCrown;
 				if variable_struct_exists(encryptedRun, "randomDailyMod")
 					UberCont.randomDailyMod = encryptedRun.randomDailyMod;
+				if variable_struct_exists(encryptedRun, "pandaRan")
+					UberCont.pandaRan = encryptedRun.pandaRan;
 				if variable_struct_exists(encryptedRun, "canCrownOfProtection")
 					Player.canCrownOfProtection = encryptedRun.canCrownOfProtection;
 				else

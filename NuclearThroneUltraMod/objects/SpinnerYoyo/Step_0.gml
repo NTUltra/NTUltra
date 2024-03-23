@@ -2,15 +2,16 @@ instance_create(x,y,DiscTrail);
 var fps60 = UberCont.normalGameSpeed == 60;
 if followOwner 
 {
-	if owner > -1 && instance_exists(owner)
+	if owner != noone && owner > -1 && instance_exists(owner)
 	{
 		tx = owner.x;
 		ty = owner.y;
 	}
 	else
 	{
-		instance_destroy();
-		instance_create(x,y,DiscDisappear);	
+		//instance_destroy();
+		//instance_create(x,y,DiscDisappear);
+		followOwner = false;
 	}
 }
 x = tx + lengthdir_x(length,oDir);
@@ -45,7 +46,7 @@ if instance_exists(Player) and instance_exists(enemy)
 		home += modBoost;
 	if Mod4 == 13
 		home += modBoost;
-	if home > 0
+	if home > 0 && instance_exists(dir) && dir.team != team
 	{
 		if point_distance(x,y,dir.x,dir.y) < home
 		{/*
@@ -116,6 +117,6 @@ else if (length <= 2 && speed < 0)
 image_angle+=20;
 if instance_exists(Player) and instance_exists(enemy)
 {dir = instance_nearest(x,y,enemy)
-if speed > 0 and Player.skill_got[21] = 1 and point_distance(x,y,dir.x,dir.y) < 48 +Player.betterboltmarrow
+if instance_exists(dir) && dir.team != team && speed > 0 and Player.skill_got[21] = 1 and point_distance(x,y,dir.x,dir.y) < 48 +Player.betterboltmarrow
 {x += lengthdir_x(3,point_direction(x,y,dir.x,dir.y))
 y += lengthdir_y(3,point_direction(x,y,dir.x,dir.y))}}

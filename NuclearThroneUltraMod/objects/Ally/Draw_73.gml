@@ -7,7 +7,7 @@ if (UberCont.isPaused == 0 && UberCont.mouse__x < x+16 and UberCont.mouse__y < y
 		nameHover += 0.5;
 	else
 		nameHover += 1;
-	if nameHover > 25
+	if nameHover > 20
 	{
 		draw_set_color(c_white);
 		draw_text(x,y-16,name);

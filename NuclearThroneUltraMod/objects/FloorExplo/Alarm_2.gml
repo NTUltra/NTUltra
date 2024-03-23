@@ -47,7 +47,7 @@ if instance_exists(Player) && Player.skill_got[26] && !place_meeting(x,y,Wall)
 {
 	x += 8;
 	y += 8;
-	if !scrDrop(1.5,0.8)
+	if !scrDrop(1.5,0.7)
 	{
 		if random(100) < 8
 		{

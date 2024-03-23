@@ -14010,7 +14010,7 @@ function scrFire2(hasTailNow) {
 		team = other.team
 	}
 	var totalAng = 30 * accuracy;
-	var am = 5;
+	var am = 4;
 	var angStep = totalAng/am;
 	var ang = (aimDirection - (totalAng*0.5)) - 1;
 	var ps = 15;
@@ -16383,6 +16383,36 @@ function scrFire2(hasTailNow) {
 	BackCont.shake += 6
 	wkick -= 3
 	
+	break;
+	
+	//MAGGOT LAUNCHER
+	case 742:
+
+	with instance_create(x,y,AcidStreak)
+	{
+		motion_add(aimDirection+(random(30)-15)*other.accuracy,6 + random(3));
+		image_angle = direction;
+	}
+	snd_play(sndMaggotLauncherFire);
+	with instance_create(x,y,FriendlyMaggot)
+	{
+		ignoreOverlap = true;
+		raddrop = 0;
+		existTime = 30;
+		countKill = false;
+		motion_add(aimDirection+(random(16)-8)*other.accuracy,12)
+		image_angle = direction
+		team = other.team
+		charge = true;
+		wasResurrected = true;
+		alarm[1] = 0;
+	}
+
+	BackCont.viewx2 += lengthdir_x(11,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(11,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 2
+
 	break;
 	
 	}//end of switch part 2!

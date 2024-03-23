@@ -8293,6 +8293,17 @@ function scrWeapons() {
 	wep_text[741] = "origami pro"
 	wep_swap[741] = sndSwapBow
 	wep_rad[741] = 0;
+	
+	wep_name[742] = "MAGGOT LAUNCHER"
+	wep_type[742] = 1
+	wep_auto[742] = 1
+	wep_load[742] = 7
+	wep_cost[742] = 4
+	wep_sprt[742] = sprMaggotLauncher
+	wep_area[742] = 5
+	wep_text[742] = "fires maggots"
+	wep_swap[742] = sndSwapBow
+	wep_rad[742] = 0;
 
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

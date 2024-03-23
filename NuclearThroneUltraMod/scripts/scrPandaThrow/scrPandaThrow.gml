@@ -22,13 +22,16 @@ function scrPandaThrow(){
 			scrWeapons()
 			if other.ultra_got[54]=1
 			{
-				//primary
-				var prevwep;
-    
+				
+				if UberCont.useSeed
+				{
+					random_set_seed(UberCont.pandaRan * 10);
+					UberCont.pandaRan += 69;
+				}
 				//if wep_area[other.wep]==-1//handling starting weapons
 				//wep_area[other.wep]=1 THE LOOPHOLE
-    
-				prevwep=other.wep;
+    			//primary
+				var prevwep=other.wep;
     
 				do {wep = round(random(maxwep-1)+1)}
 				until (wep_area[wep] == wep_area[prevwep] && wep != 298 && wep != 373)

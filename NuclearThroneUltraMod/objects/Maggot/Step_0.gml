@@ -23,7 +23,7 @@ if charge
 		motion_add(direction,1);
 		speed = 6;
 		sprite_index = sprFiredMaggot;
-		image_angle = direction+180;
+		image_angle = direction;
 	}
 }
 else

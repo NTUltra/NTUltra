@@ -1923,7 +1923,7 @@ function scrDrawHUD() {
 		{
 			if place_meeting(x,y,Player)
 			{
-				var yy = y - oy - 22;
+				var yy = y - oy - 28;
 				draw_sprite(sprEPickup,UberCont.opt_gamepad,x,yy-2)
 		
 				draw_set_color(c_black)

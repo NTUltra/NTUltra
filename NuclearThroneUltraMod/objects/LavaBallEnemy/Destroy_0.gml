@@ -1,10 +1,13 @@
-scrDrop(15,0)
-snd_play(sndFlareExplode);
+
 event_inherited()
+scrDrop(15,0)
+if (!sleeping)
+{
 var ps = projectileSpeed;
 var ang = random(360);
 var am = 18;
 var angStep = 360/am;
+snd_play(sndFlareExplode);
 repeat(am)
 {
 	with instance_create(x,y,TrapFire)
@@ -38,4 +41,5 @@ repeat(4)
 		team = other.team
 	}
 	fbAng += 90;
+}
 }

@@ -24,7 +24,7 @@
   ],
   "name":"sprInvertedFiredMaggot",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"Maggots",
     "path":"folders/Sprites/Enemies/Maggots.yy",
@@ -80,7 +80,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":8,
-    "yorigin":8,
+    "yorigin":11,
   },
   "swatchColours":null,
   "swfPrecision":2.525,

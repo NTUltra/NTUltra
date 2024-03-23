@@ -25,7 +25,7 @@ repeat(am)
 		walk += 2;
 		alarm[1] *= 0.5;
 		if instance_exists(Player) && Player.skill_got[29] {
-			alarm[1] += 15;
+			alarm[1] += 40;
 			scrGiveSnooze();
 		}
 		raddrop = 0;

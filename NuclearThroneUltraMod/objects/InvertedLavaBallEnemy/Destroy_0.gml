@@ -1,4 +1,6 @@
 scrDrop(15,0)
+if (!sleeping)
+{
 snd_play(sndFlareExplode);
 event_inherited()
 var ang = random(360);
@@ -41,4 +43,5 @@ repeat(4)
 		ps += 1;
 	}
 	fbAng += 90;
+}
 }

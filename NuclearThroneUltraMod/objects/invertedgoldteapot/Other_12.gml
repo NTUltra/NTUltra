@@ -18,7 +18,8 @@ repeat(am)
 		team = other.team
 ang += angStep;
 }
-
+if !sleeping
+{
 var angstep = 30;
 var ang = random(360);
 repeat(12)
@@ -29,4 +30,5 @@ repeat(12)
 	    team = other.team
 	}
 	ang += angstep;
+}
 }

@@ -59,8 +59,8 @@ noYDir = 1;
 
 if instance_exists(Player) && Player.skill_got[29]
 {
-	alarm[1] += 30;
-	alarm[8] += 30;
+	alarm[1] += 50;
+	alarm[8] += 50;
 	scrGiveSnooze();
 }
 with enemy

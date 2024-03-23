@@ -26,6 +26,7 @@ if KeyCont.key_pick[other.p] == 1
 		KeyCont.key_pick[Player.p] = 2;
 		mask_index = mskPickupThroughWall;
 		BackCont.shake += 50;
+		Sleep(50);
 		with instance_create(x,y,WepPickup)
 		{
 			scrWeapons()

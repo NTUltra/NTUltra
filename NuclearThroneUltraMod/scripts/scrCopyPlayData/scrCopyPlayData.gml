@@ -135,6 +135,7 @@ function scrCopyPlayData(){
 		seedWeaponSmith: UberCont.seedWeaponSmith,
 		canMultiCrown: UberCont.canMultiCrown,
 		randomDailyMod: UberCont.randomDailyMod,
+		pandaRan: UberCont.pandaRan,
 		highestReachedLevel: UberCont.highestReachedLevel,
 		/*
 		duoPartner1: UberCont.duoPartner[0],

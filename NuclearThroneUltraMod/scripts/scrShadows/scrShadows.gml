@@ -69,7 +69,19 @@ function scrShadows() {
 	with BecomeInvertedScrapBoss
 	draw_sprite(shd96,0,x-vx,y-vy)
 	with Maggot
-	draw_sprite_ext(shd16,0,x-vx,y-vy,1,1,image_angle,c_white,1)
+	{
+		if charge
+			draw_sprite_ext(shd16,0,x-vx,y-vy,1,right,image_angle,c_white,1)
+		else
+			draw_sprite_ext(shd16,0,x-vx,y-vy,1,1,image_angle,c_white,1)
+	}
+	with FriendlyMaggot
+	{
+		if charge
+			draw_sprite_ext(shd16,0,x-vx,y-vy,1,right,image_angle,c_white,1)
+		else
+			draw_sprite_ext(shd16,0,x-vx,y-vy,1,1,image_angle,c_white,1)
+	}
 	with DoomGrenade
 	draw_sprite(shd8,0,x-vx,y-vy)
 	with Termite
@@ -91,7 +103,12 @@ function scrShadows() {
 	with InvertedCrownGlutton
 	draw_sprite(shd32,0,x-vx,y-vy+6)
 	with MaggotInverted
-	draw_sprite_ext(shd16,0,x-vx,y-vy,1,1,image_angle,c_white,1)
+	{
+		if charge
+			draw_sprite_ext(shd16,0,x-vx,y-vy,1,right,image_angle,c_white,1)
+		else
+			draw_sprite_ext(shd16,0,x-vx,y-vy,1,1,image_angle,c_white,1)
+	}
 	with Scorpion
 	draw_sprite(shd48,0,x-vx,y-vy)
 	with BallMom

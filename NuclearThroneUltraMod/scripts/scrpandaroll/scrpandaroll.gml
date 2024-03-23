@@ -2,6 +2,11 @@
 // /@description
 ///@param
 function scrPandaRoll(){
+	if UberCont.useSeed
+	{
+		random_set_seed(UberCont.pandaRan);
+		UberCont.pandaRan += 69;
+	}
 	var dir= 0;
 	var prevwep;
         

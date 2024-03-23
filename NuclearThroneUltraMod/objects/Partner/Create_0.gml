@@ -1,6 +1,12 @@
 if !instance_exists(Player){
 instance_destroy(); exit;}
 
+gammaGuts = false;
+dealingGuts = false;
+if Player.skill_got[8] {
+	gammaGuts = true;
+	alarm[5] = 1;
+}
 image_speed = 0.4
 friction = 0.4
 right = choose(1,-1)

@@ -20,8 +20,17 @@ if instance_exists(Player)
 {
 	if Player.race=22 && Player.area != 100 && !((Player.area == 9 || Player.area == 118) && Player.subarea == 3)//Rogue
 	{
-		repeat(1+irandom(3))
-			instance_create(x,y,IDPDSpawn);
+		var numEn = 0;
+		with enemy
+		{
+			if team != 2 && object_index != IDPDVan && object_index != IDPDVanVertical
+			{
+				numEn ++;
+			}
+		}
+		if numEn > 2
+			repeat(1+irandom(3))
+				instance_create(x,y,IDPDSpawn);
 	}
 
 //if Player.race=15//atom extra chance for invertedness and bosses ofcourse aswell

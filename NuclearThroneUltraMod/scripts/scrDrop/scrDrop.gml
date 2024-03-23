@@ -98,12 +98,12 @@ function scrDrop(itemdrop, weapondrop) {
 	if scrIsCrown(5)//crown of guns
 	{
 		weapondrop *= 1.65;
-		weapondrop += 10;
+		weapondrop += 8;
 	}
 	else if scrIsCrown(15) //Crown of choice
 	{
 		weapondrop*=1.15;
-		weapondrop+=4;
+		weapondrop += 4;
 	}
 	else if scrIsCrown(32)//Crown of Misfortune
 	{

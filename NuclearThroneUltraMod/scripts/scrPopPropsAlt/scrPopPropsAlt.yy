@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scrPopPropsAlt",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPopPropsAlt",
+  "parent":{
+    "name":"LevelGen",
+    "path":"folders/Scripts/LevelGen.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -276,10 +276,10 @@ if instance_exists(Player)
 		}
 	    if skill_got[29]//hypersomnia insomnia
 	    {
-			var t = 190;
+			var t = 200;
 		    if race = 25
 		    {
-				t = 220;
+				t = 230;
 		    }
 			if !justAsheep
 			{

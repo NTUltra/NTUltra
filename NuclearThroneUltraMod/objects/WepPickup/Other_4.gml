@@ -9,5 +9,6 @@ if instance_exists(Player)
 	}
 	scrForcePosition60fps();
 }
+speed = 0;
 alarm[2] = 10;
 persistent = false;

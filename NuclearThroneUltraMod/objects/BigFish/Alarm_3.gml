@@ -7,6 +7,13 @@ if instance_exists(Player) {
 		var angle = point_direction(x, y, Player.x, Player.y) + (random(2) - 1) * 10
 		motion_add(angle, 6)
 		raddrop = 0
+		countKill = false;
+		alarm[1] *= 0.75;
+		if instance_exists(Player) && Player.skill_got[29] {
+			alarm[1] += 60;
+			speed *= 0.75;
+			scrGiveSnooze();
+		}
 	}
 
 	image_index = 0

@@ -296,6 +296,10 @@ oasis=false;
 ///looping! ---------------------------
 if looping && area != 104
 {
+	if ultra_got[39] && altUltra
+	{
+		my_health = max(maxhealth,my_health);	
+	}
 	//prevhealth = my_health;
 	if (ultra_got[77] && altUltra)
 	{
@@ -915,8 +919,8 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		scrWeaponHold();
 		//Re-apply some mutations
 		
-		if ultra_got[39] && altUltra
-			maxhealth = 40;
+		if ultra_got[39] && altUltra//Big rebel
+			maxhealth += 50;
 		if skill_got[1]
 			maxhealth += 4;
 		if skill_got[31]//Tough shell

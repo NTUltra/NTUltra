@@ -78,7 +78,15 @@ function scrDrawBloom() {
 	with PartnerBullet
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
 	with Partner
-	draw_sprite_ext(sprPlasmaBall,0,x - vx,y - vy,1.5,1.5,image_angle,c_white,ba)
+	{
+		draw_sprite_ext(sprPlasmaBall,0,x - vx,y - vy,1,1,image_angle,c_white,ba);
+		if gammaGuts {
+			if dealingGuts
+				draw_sprite_ext(sprGammaGuts,0,x - vx,y - vy,1.5,1.5,image_angle,c_white,1);
+			else
+				draw_sprite_ext(sprGammaGuts,0,x - vx,y - vy,1.5,1.5,image_angle,c_white,ba);
+		}
+	}
 	with ToxicGas
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
 	with ToxicThrowerGas

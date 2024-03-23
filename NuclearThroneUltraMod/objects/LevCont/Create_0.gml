@@ -18,7 +18,7 @@ with UberCont
 {
 	if (useSeed)
 	{
-		random_set_seed(seed+UberCont.globalMutationsChosen);
+		random_set_seed(seed+(UberCont.globalMutationsChosen * 3));
 	}
 }
 if Player.charpoints > 0

@@ -21,3 +21,6 @@ alarm[1] = 30+random(60)
 
 alarm[3] = 1;
 
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

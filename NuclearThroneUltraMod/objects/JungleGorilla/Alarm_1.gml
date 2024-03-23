@@ -1,5 +1,6 @@
 ///@description AI
 alarm[1] = actTime + irandom(actTime);
+sleeping = false;
 scrTarget()
 if target != noone {
 	var ran = random(10);
