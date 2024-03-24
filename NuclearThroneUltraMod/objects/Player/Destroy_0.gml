@@ -543,55 +543,56 @@ else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 
 		with UberCont
 		{
-		ctot_kill[other.race]+=other.kills
-		//ctot_time[other.race]+=time;
-		if other.my_health<1
-		ctot_dead[other.race] += 1
-
-		ctot_played[other.race] += 1;
-
-		ctot_loop[other.race]+=other.loops;
-
-		//best kills
-		if other.kills > cbst_kill[other.race]
-		cbst_kill[other.race] = other.kills
-
-		//best difficulty
-		if other.hard>cbst_diff[other.race]
-		cbst_diff[other.race]=other.hard
-
-		//best loops
-		if other.loops> cbst_loop[other.race]
-		cbst_loop[other.race]=other.loops
-
-		if other.randomlySelected
-		{
-			ctot_kill[0]+=other.kills
+			var actualKills = other.kills - loadedKills;
+			var actualLoops = other.loops - loadedLoops;
+			ctot_kill[other.race] += actualKills
 			//ctot_time[other.race]+=time;
 			if other.my_health<1
-			ctot_dead[0] += 1
-	
-			ctot_played[0] += 1;
-	
-			ctot_loop[0]+=other.loops;
+				ctot_dead[other.race] += 1
+
+			ctot_played[other.race] += 1;
+
+			ctot_loop[other.race] += actualLoops;
 
 			//best kills
-			if other.kills > cbst_kill[0]
-				cbst_kill[0] = other.kills
+			if other.kills > cbst_kill[other.race]
+				cbst_kill[other.race] = other.kills
 
 			//best difficulty
-			if other.hard>cbst_diff[0]
-				cbst_diff[0]=other.hard
+			if other.hard>cbst_diff[other.race]
+				cbst_diff[other.race]=other.hard
 
 			//best loops
-			if other.loops> cbst_loop[0]
-				cbst_loop[0]=other.loops
-		
-		}
+			if other.loops> cbst_loop[other.race]
+				cbst_loop[other.race]=other.loops
 
-		var playedWithAll = true;
+			if other.randomlySelected
+			{
+				ctot_kill[0]+=actualKills
+				//ctot_time[other.race]+=time;
+				if other.my_health<1
+				ctot_dead[0] += 1
+	
+				ctot_played[0] += 1;
+	
+				ctot_loop[0]+=actualLoops;
+
+				//best kills
+				if other.kills > cbst_kill[0]
+					cbst_kill[0] = other.kills
+
+				//best difficulty
+				if other.hard>cbst_diff[0]
+					cbst_diff[0]=other.hard
+
+				//best loops
+				if other.loops> cbst_loop[0]
+					cbst_loop[0]=other.loops
+			}
+
+			var playedWithAll = true;
 			for (var i = 1; i <= racemax; i++) {
-			    // code here
+				// code here
 				if !ctot_played[i]
 				{
 					playedWithAll = false;

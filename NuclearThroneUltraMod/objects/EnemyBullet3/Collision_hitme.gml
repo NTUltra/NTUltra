@@ -6,7 +6,7 @@ if other.team != team and other.my_health > 0 && image_index < 3
 		var dealDmg = false;
 		if object_index == Player
 		{
-		    if sprite_index!=spr_hurt
+		    if sprite_index != spr_hurt
 		    {
 				hitBy = other.sprite_index;
 				dealDmg = true;

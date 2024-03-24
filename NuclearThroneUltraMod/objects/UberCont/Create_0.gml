@@ -160,6 +160,8 @@ canSave = false;
 canMultiCrown = false;
 canPickFrogCrown = true;
 hasTakenCrownOfLife = false;
+loadedLoops = 0;
+loadedKills = 0;
 encrypted_run_data = {}
 
 //Aim overwrite

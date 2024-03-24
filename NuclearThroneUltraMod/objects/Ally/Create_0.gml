@@ -10,14 +10,15 @@ spr_idle = sprAllyIdle;
 spr_walk = sprAllyWalk
 spr_hurt = sprAllyHurt
 spr_dead = sprAllyDead
-throwSpeed = 10;
+throwSpeed = 6;
 throwDamage = 6;
+throwDirection = direction;
 if instance_exists(Player)
 {
 	if Player.skill_got[20]
 	{
 		throwSpeed = 12;
-		throwDamage = 10;
+		throwDamage = 12;
 	}
 	if Player.skill_got[5]
 	{
@@ -71,7 +72,7 @@ mySize = 1
 
 
 
-image_speed = 0.4
+image_speed = 0.5
 friction = 0.4
 right = choose(1,-1)
 my_health = maxhealth
@@ -80,8 +81,8 @@ target = noone
 
 team = 2
 
-snd_hurt = sndBanditHit
-snd_dead = sndBanditDie
+snd_hurt = sndSilence;
+snd_dead = sndAllyDead
 snd_melee = sndMaggotBite
 
 //behavior
@@ -91,6 +92,7 @@ alarm[0] = (image_number-1)/image_speed//intro animation which is cool af
 alarm[4] = (7)/image_speed//Throw end
 alarm[5] = 1;
 alarm[1] = alarm[0] + 2;
+alarm[6] = alarm[4] - 2;
 throwStart = alarm[0] - 3;
 wkick = 0
 alarm[2] = 120

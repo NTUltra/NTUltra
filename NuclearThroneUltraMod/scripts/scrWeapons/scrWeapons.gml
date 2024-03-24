@@ -3492,7 +3492,7 @@ function scrWeapons() {
 	wep_name[311] = "BLASPHEMIA"
 	wep_type[311] = 0
 	wep_auto[311] = 0
-	wep_load[311] = 16
+	wep_load[311] = 15
 	wep_cost[311] = 0
 	wep_sprt[311] = sprYVExcalibur1
 	wep_area[311] = -2
@@ -6311,7 +6311,7 @@ function scrWeapons() {
 	wep_name[563] = "SUPER ELECTRO CANNON"
 	wep_type[563] = 5
 	wep_auto[563] = 1
-	wep_load[563] = 330
+	wep_load[563] = 320
 	wep_cost[563] = 22
 	wep_sprt[563] = sprSuperElectroCannon
 	wep_area[563] = 22

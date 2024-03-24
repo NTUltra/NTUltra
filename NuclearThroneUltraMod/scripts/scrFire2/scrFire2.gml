@@ -3358,7 +3358,7 @@ function scrFire2(hasTailNow) {
 
 	break;
 */
-	//Y.V.'S EXCALIBUR
+	//BLASPHEMIA
 	case 311:
 		switch (wep_sprt[311])
 		{
@@ -3367,7 +3367,7 @@ function scrFire2(hasTailNow) {
 				instance_create(x,y,Dust)
 				with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),BigPandaSlash)
 				{
-					dmg = 26
+					dmg = 28
 					sprite_index = sprExcaliburSlash;
 					mask_index = mskExcaliburSlash;
 					longarms = 0
@@ -3395,7 +3395,7 @@ function scrFire2(hasTailNow) {
 				instance_create(x,y,Dust)
 				with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),BigPandaSlash)
 				{
-					dmg = 32
+					dmg = 35
 					sprite_index = sprExcaliburBigSlash;
 					image_yscale = choose(1,-1);
 					mask_index = mskBigSlash;
@@ -3423,7 +3423,7 @@ function scrFire2(hasTailNow) {
 				instance_create(x,y,Dust)
 				with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),LanceShank)
 				{
-					dmg = 18
+					dmg = 24
 					sprite_index = sprExcaliburBigShank;
 					mask_index = mskExcaliburBigShank;
 					image_yscale = choose(1,-1);
@@ -3452,7 +3452,7 @@ function scrFire2(hasTailNow) {
 				instance_create(x,y,Dust)
 				with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),ExcaliburHammerBoom)
 				{
-					dmg = 26
+					dmg = 28
 					longarms = 0
 					longarms = (Player.skill_got[13]+other.bettermelee)*3
 					motion_add(aimDirection,2.5+longarms)
@@ -9424,20 +9424,19 @@ function scrFire2(hasTailNow) {
 
 	instance_create(x,y,Dust)
 	if !skill_got[2]
-	scrMoveContactSolid(aimDirection,1)
+	{
+		scrMoveContactSolid(aimDirection,2);
+		motion_add(aimDirection,0.5)
+	}
 
 	instance_create(x,y,Dust)
 
 	with instance_create(x+lengthdir_x(3+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(3+(Player.skill_got[13]+bettermelee)*20,aimDirection),BigPandaSlash)
 	{
 	longarms = 0
-	
+	motion_add(aimDirection,2.5+longarms)
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	if !skill_got[2]
-	{
-		scrMoveContactSolid(aimDirection,2);
-		motion_add(aimDirection,0.5)
-	}
+	
 	image_angle = direction
 	team = other.team}
 

@@ -58,6 +58,8 @@ function scrEndOfRun(){
 		canPickFrogCrown = true;
 		hasTakenCrownOfLife = false;
 		hasTakenCrownOfProtection = false;
+		loadedLoops = 0;
+		loadedKills = 0;
 		if !scrIsGamemode(38)
 		{
 			useSeed = false;

@@ -34,6 +34,7 @@ if Player.area == 125 && Player.loops > 0
 		instance_create(x - 32,y + 128,Floor);
 		instance_create(x - 32,y + 160,Floor);
 		instance_create(x,y + 128,Blasphemia);
+		instance_create(x,y + 128,NOWALLSHEREPLEASE);
 	}
 }
 	

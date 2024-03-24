@@ -13,9 +13,9 @@ function scrHumphryDamage(dmgTaken, applySkill = false){
 			Player.humphrySkill += dmgTaken;//This should be original damage so no other dmg buffs before this
 		}
 		//scrUnlockCSkin
-		if Player.humphrySkill >= 1000
+		if Player.humphrySkill >= 500
 		{
-			scrUnlockCSkin(26,"FOR REACHING 1000 SKILL", 0);
+			scrUnlockCSkin(26,"FOR REACHING 500 SKILL", 0);
 		}
 	}
 	return newDmg;

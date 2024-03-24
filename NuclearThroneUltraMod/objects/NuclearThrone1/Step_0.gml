@@ -22,10 +22,36 @@ if immune
 			scrUnlockCharacter(22,"FOR REACHING THE THRONE#HAVE A SEAT");
 		}
 	}
+	with enemy
+	{
+		if y < other.y + 32
+		{
+			if object_index != NuclearThrone1 && object_index != NuclearThrone1Side
+			&& object_index != InvertedNuclearThrone1
+			{
+				vspeed += 6;
+				walk += 5;
+				y = max(other.y + 32,y);
+			}
+		}
+	}
 	exit;
 }
 if !active
 {
+	with enemy
+	{
+		if y < other.y + 32
+		{
+			if object_index != NuclearThrone1 && object_index != NuclearThrone1Side
+			&& object_index != InvertedNuclearThrone1
+			{
+				vspeed += 6;
+				walk += 5;
+				y = max(other.y + 32,y);
+			}
+		}
+	}
 	speed = 0;
 	if (my_health < maxhealth)
 	{

@@ -1,19 +1,24 @@
 /// @description AI
-
+with enemy
+{
+	if y < other.y + 32
+	{
+		if object_index != NuclearThrone1 && object_index != NuclearThrone1Side
+		&& object_index != InvertedNuclearThrone1
+		{
+			vspeed += 6;
+			walk += 5;
+			y = max(other.y + 32,y);
+		}
+	}
+}
 if !active || intro || immune
 {
 	alarm[1] = 30;
 	exit;
 }
 maxSpeed = 3;
-with UltraProtector
-{
-	if y < other.y
-	{
-		vspeed += 6;
-		walk += 5;
-	}
-}
+
 alarm[1] = aTime+random(10);
 var beamL = x - 20;
 var beamR = x + 20;

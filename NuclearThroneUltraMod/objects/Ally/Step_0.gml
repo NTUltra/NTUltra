@@ -56,7 +56,10 @@ if(alarm[0]>0)
 	if alarm[0] > throwStart
 		speed = 0;
 	else if alarm[4] > 0
+	{
+		motion_add(throwDirection,throwSpeed * 0.75);
 		speed = throwSpeed;
+	}
 	if hspeed > 0
 		right = 1
 	else if hspeed < 0

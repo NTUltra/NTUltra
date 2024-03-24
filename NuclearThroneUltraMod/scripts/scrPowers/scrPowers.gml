@@ -68,6 +68,7 @@ function scrPowers(raceOverwrite = -1) {
 	{
 		var insufficientFunds = true;
 		var failText = "NOT ENOUGH AMMO";
+		var cost = 8;
 		if ultra_got[104] && altUltra
 		{
 			var t1 = wep_type[wep];
@@ -91,11 +92,10 @@ function scrPowers(raceOverwrite = -1) {
 			if ultra_got[104] && !altUltra
 				cost = 10
 			if loops > 0
-				cost += (humphrySkill * 0.01);
+				cost += (humphrySkill * 0.1);
 			if humphrySkill >= cost//used to be 50//10%?
 			{
 				insufficientFunds = false;
-				humphrySkill -= cost;
 			}
 		}
 		
@@ -197,7 +197,7 @@ function scrPowers(raceOverwrite = -1) {
 				duration += 10;
 				confspr = sprEnemyUltraConfusion;
 			}
-			
+			if !instance_exists(HumphryDiscipline) && !instance_exists(HumphryDelay)
 			with enemy
 			{
 				effective = true;
@@ -205,39 +205,40 @@ function scrPowers(raceOverwrite = -1) {
 				
 				if instance_exists(myConfusion)
 				{
-					var mydur = duration * 0.5;
-					with myConfusion
+					if alarm[1] > 1
 					{
-						alarm[0] += mydur;
-						image_speed = 0.4;
-						image_index = 0;
-					}
-					if alarm[1] > 0
-					{
+						var mydur = duration * 0.5;
+						with myConfusion
+						{
+							alarm[0] += mydur;
+							image_speed = 0.4;
+							image_index = 0;
+						}
 						alarm[11] += mydur
 						alarm[1] += mydur;
 					}
 				}
 				else
 				{
-					if alarm[1] > 0
+					if alarm[1] > 1
 					{
 						alarm[11] += duration
 						alarm[1] += duration;
-					}
-					myConfusion = instance_create(x,y-max(sprite_height*0.75,8),HumphryConfuse)
-					with myConfusion {
-						myEnemy = other.id;
-						image_xscale = choose(1,-1);
-						image_speed = 0.4;
-						sprite_index = confspr;
-						alarm[0] = duration;
+						myConfusion = instance_create(x,y-max(sprite_height*0.75,8),HumphryConfuse)
+						with myConfusion {
+							myEnemy = other.id;
+							image_xscale = choose(1,-1);
+							image_speed = 0.4;
+							sprite_index = confspr;
+							alarm[0] = duration;
+						}
 					}
 				}
 			}
 			
 			if (effective)
 			{
+				humphrySkill -= cost;
 				Sleep(40);
 				if ultra_got[104] && !altUltra
 					snd_play_2d(sndHumphryHaltUpg);
@@ -1705,14 +1706,17 @@ function scrPowers(raceOverwrite = -1) {
 			maxhealth = 12;
 			}
 		}
+		var tossAngle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
 		if Player.ultra_got[38]==1//Rebel Ultra B Riot
 		{
 			with instance_create(x,y,Ally) {
-				motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),throwSpeed);
+				throwDirection = tossAngle;
+				motion_add(throwDirection,throwSpeed);
 			}
 		}
 		with instance_create(x,y,Ally) {
-			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),throwSpeed);
+			throwDirection = tossAngle;
+			motion_add(throwDirection,throwSpeed);
 		}
 
 		Sleep(40)

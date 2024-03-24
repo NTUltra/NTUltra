@@ -482,7 +482,7 @@ function scrRaces() {
 	race_eskin[26] = 0
 	race_fskin[26] = 0
 	race_bskin_lock[26] = "PERFORM 20 CLOSE DODGES#USING EXTRA FEET#IN ONE RUN#AS HUMPHRY"//"COMPLETE A#MAIN AREA#AFTER THE SCRAPYARD#WITHOUT MISSING#AS GOOD OL'HUMPHRY"
-	race_cskin_lock[26] = "REACH 1000 SKILL!"
+	race_cskin_lock[26] = "REACH 500 SKILL!"
 	
 	race_name[27] = "[HANDS]"
 	race_pass[27] = "HIGHER CHANCE FOR <w>INVERTED PORTALS<w>#<w>INVERTED PORTALS<w> (OVER) <r>HEAL<r> 2<r>HP<r>"

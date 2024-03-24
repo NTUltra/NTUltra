@@ -46,6 +46,7 @@ function scrLoadRun(){
 				Player.lastarea = encryptedRun.lastarea;
 				Player.lastsubarea = encryptedRun.lastsubarea;
 				Player.loops = encryptedRun.loops;
+				UberCont.loadedLoops = Player.loops;
 				UberCont.lastSaveLoop = encryptedRun.loops;
 				if !is_array(encryptedRun.crown)
 					encryptedRun.crown = [encryptedRun.crown]
@@ -214,6 +215,7 @@ function scrLoadRun(){
 				Player.accuracy = encryptedRun.accuracy;
 				Player.standartAccuracy = encryptedRun.standartAccuracy;
 				Player.kills = encryptedRun.kills;
+				UberCont.loadedKills = Player.kills;
 				Player.invertedchance = encryptedRun.invertedchance;
 				Player.crownvisits = encryptedRun.crownvisits;
 				Player.hard = encryptedRun.hard;

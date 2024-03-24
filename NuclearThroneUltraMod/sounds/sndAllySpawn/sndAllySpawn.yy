@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"sndSpawnAlly",
+  "%Name":"sndAllySpawn",
   "audioGroupId":{
     "name":"agsfx",
     "path":"audiogroups/agsfx",
@@ -9,17 +9,17 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":2.250688,
-  "name":"sndSpawnAlly",
+  "duration":0.723344,
+  "name":"sndAllySpawn",
   "parent":{
-    "name":"Player",
-    "path":"folders/Sounds/Player.yy",
+    "name":"Regular",
+    "path":"folders/Sounds/Enemies/Regular.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sndSpawnAlly",
+  "soundFile":"sndAllySpawn.wav",
   "type":0,
   "volume":1.0,
 }

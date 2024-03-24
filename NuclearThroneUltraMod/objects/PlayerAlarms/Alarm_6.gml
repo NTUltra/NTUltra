@@ -5,11 +5,13 @@ with Player
 	if !outOfCombat
 	{
 		humphrySkill *= other.humphryAmount;
-		if humphrySkill > 500
+		if humphrySkill > 200
+			humphrySkill *= 0.95;
+		if humphrySkill > 300
 			humphrySkill *= 0.9;
-		if humphrySkill > 1000
+		if humphrySkill > 500
 			humphrySkill *= 0.85;
-		if humphrySkill > 2000
+		if humphrySkill > 1000
 			humphrySkill *= 0.7;
 		humphrySkill = max(0, humphrySkill - other.humphryConstantAmount);
 	}
