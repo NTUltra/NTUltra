@@ -5,13 +5,20 @@ hurt_pitch_variation = 0;
 existTime = 0;
 maxSpeed = 5.5;
 gun = sprBanditGun;
-spr_idle = sprAllyAppear
+spr_appear = sprAllyAppear;
+spr_idle = sprAllyIdle;
 spr_walk = sprAllyWalk
 spr_hurt = sprAllyHurt
 spr_dead = sprAllyDead
-
+throwSpeed = 10;
+throwDamage = 6;
 if instance_exists(Player)
 {
+	if Player.skill_got[20]
+	{
+		throwSpeed = 12;
+		throwDamage = 10;
+	}
 	if Player.skill_got[5]
 	{
 		gun = sprBetterAllyGun
@@ -34,16 +41,16 @@ if instance_exists(Player)
 	{
 		if Player.altUltra || Player.bskin == 5
 		{
-			sprite_index = sprAllyGAppear;
-			spr_idle = sprAllyGAppear
+			spr_appear = sprAllyGAppear;
+			spr_idle = sprAllyGIdle
 			spr_walk = sprAllyGWalk
 			spr_hurt = sprAllyGHurt
 			spr_dead = sprAllyGDead
 		}
 		else
 		{
-			sprite_index = sprAllyCAppear;
-			spr_idle = sprAllyCAppear
+			spr_appear = sprAllyCAppear;
+			spr_idle = sprAllyCIdle
 			spr_walk = sprAllyCWalk
 			spr_hurt = sprAllyCHurt
 			spr_dead = sprAllyCDead
@@ -51,14 +58,14 @@ if instance_exists(Player)
 	}
 	else if Player.altUltra || Player.bskin == 3
 	{
-		sprite_index = sprAllyEAppear;
-		spr_idle = sprAllyEAppear
+		spr_appear = sprAllyEAppear;
+		spr_idle = sprAllyEIdle
 		spr_walk = sprAllyEWalk
 		spr_hurt = sprAllyEHurt
 		spr_dead = sprAllyEDead
 	}
 }
-
+sprite_index = spr_appear;
 meleedamage = 0
 mySize = 1
 
@@ -80,8 +87,11 @@ snd_melee = sndMaggotBite
 //behavior
 walk = 0
 gunangle = random(360)
-alarm[1] = 24*1.4
-alarm[0] = 24*1.4//intro animation which is cool af
+alarm[0] = (image_number-1)/image_speed//intro animation which is cool af
+alarm[4] = (7)/image_speed//Throw end
+alarm[5] = 1;
+alarm[1] = alarm[0] + 2;
+throwStart = alarm[0] - 3;
 wkick = 0
 alarm[2] = 120
 with Portal

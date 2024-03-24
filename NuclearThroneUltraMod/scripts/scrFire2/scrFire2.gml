@@ -4575,15 +4575,23 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x,y,Shell)
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
-
+	var dmgAdd = 0;
+	if instance_exists(Player) && Player.ultra_got[28]//roids ultra d
+	{
+		dmgAdd += 2;
+	}
+	
 	repeat(3)
 	{
-	with instance_create(x,y,EnemyBullet2)
-	{motion_add(aimDirection+(random(16)-8)*other.accuracy,9+random(7))
-	image_angle = direction
-	team = other.team
-	event_perform(ev_alarm,11);
-	}
+		with instance_create(x,y,EnemyBullet2)
+		{
+			motion_add(aimDirection+(random(16)-8)*other.accuracy,9+random(7))
+			image_angle = direction
+			team = other.team
+			norecycle = false;
+			dmg += dmgAdd;
+			event_perform(ev_alarm,11);
+		}
 	}
 
 	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
@@ -4600,14 +4608,24 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x,y,Shell)
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
-
+	
+	var dmgAdd = 0;
+	if instance_exists(Player) && Player.ultra_got[28]//roids ultra d
+	{
+		dmgAdd += 2;
+	}
+	
 	repeat(5)
 	{
-	with instance_create(x,y,EnemyBullet2)
-	{motion_add(aimDirection+(random(26)-13)*other.accuracy,11+random(5))
-	image_angle = direction
-	team = other.team
-	event_perform(ev_alarm,11);}
+		with instance_create(x,y,EnemyBullet2)
+		{
+			motion_add(aimDirection+(random(26)-13)*other.accuracy,11+random(5))
+			image_angle = direction
+			team = other.team
+			norecycle = false;
+			dmg += dmgAdd;
+			event_perform(ev_alarm,11);
+		}
 	}
 
 	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake

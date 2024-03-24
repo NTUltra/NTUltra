@@ -3294,7 +3294,7 @@ function scrWeapons() {
 	wep_name[294] = "CHARGE SHOTGUN"
 	wep_type[294] = 2
 	wep_auto[294] = 0
-	wep_load[294] = 26
+	wep_load[294] = 24
 	wep_cost[294] = 1
 	wep_sprt[294] = sprChargeShotgun
 	wep_area[294] = 5
@@ -3305,7 +3305,7 @@ function scrWeapons() {
 	wep_name[295] = "CHARGE LASER"
 	wep_type[295] = 5
 	wep_auto[295] = 0
-	wep_load[295] = 30
+	wep_load[295] = 28
 	wep_cost[295] = 1
 	wep_sprt[295] = sprChargeLaserGun
 	wep_area[295] = 3
@@ -3316,7 +3316,7 @@ function scrWeapons() {
 	wep_name[296] = "CHARGE FLAK CANNON"
 	wep_type[296] = 2
 	wep_auto[296] = 0
-	wep_load[296] = 40
+	wep_load[296] = 37
 	wep_cost[296] = 1
 	wep_sprt[296] = sprChargeFlakCannon
 	wep_area[296] = 7
@@ -3525,7 +3525,7 @@ function scrWeapons() {
 	wep_name[314] = "CHARGE SPLINTERGUN"
 	wep_type[314] = 3
 	wep_auto[314] = 0
-	wep_load[314] = 25
+	wep_load[314] = 24
 	wep_cost[314] = 1
 	wep_sprt[314] = sprChargeSplinterGun
 	wep_area[314] = 9
@@ -8275,7 +8275,7 @@ function scrWeapons() {
 	wep_name[740] = "BAYONETTE RIFLE"
 	wep_type[740] = 2
 	wep_auto[740] = 0
-	wep_load[740] = 20
+	wep_load[740] = 18
 	wep_cost[740] = 1
 	wep_sprt[740] = sprBayonetteRifle
 	wep_area[740] = 6

@@ -37,6 +37,9 @@
     "name":"sprInvertedBigGuardianBullet",
     "path":"sprites/sprInvertedBigGuardianBullet/sprInvertedBigGuardianBullet.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"mskBigGuardianBullet",
+    "path":"sprites/mskBigGuardianBullet/mskBigGuardianBullet.yy",
+  },
   "visible":true,
 }

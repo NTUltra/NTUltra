@@ -23,6 +23,8 @@ function scrSpawnSomeEnemies(){
 				
 	if scrIsHardMode() && !scrIsGamemode(40) && spawnarea != 100 && spawnarea != 104
 	{
+		if (!(spawnarea == 7 && subarea == 3) && !(spawnarea == 118 && subarea == 3) || random(3) < 1 + Player.loops)
+		{
 		var ran = random(110 - min(40,Player.loops * 2));
 		if ran < 10
 		{
@@ -76,6 +78,7 @@ function scrSpawnSomeEnemies(){
 			{
 				instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraProtector);
 			}
+		}
 		}
 	}
 }

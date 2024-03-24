@@ -307,6 +307,11 @@ function scrSkills() {
 	skill_name[20] = "IMPACT WRISTS"
 	skill_text[20] = "<w>CORPSES<w> FLY & HIT HARDER";
 	skill_detail[20] = "<w>CORPSES<w> FLY & HIT HARDER#FAST CORPSES CAN DESTROY WALLS"
+	if instance_exists(Player) && (Player.race == 10)
+	{
+		skill_text[20] = "<w>CORPSES<w> FLY & HIT HARDER#TOSS <w>ALLIES<w> FURTHER";
+		skill_detail[20] = "<w>CORPSES<w> FLY & HIT HARDER#FAST CORPSES CAN DESTROY WALLS#TOSS <w>ALLIES<w> FURTHER#ALLIES DEAL MORE DAMAGE WHILE FLYING"
+	}
 	skill_tips[20] = "see them fly"
 	skill_msnd[20] =  sndMutImpactWrists
 	skill_bons[20] = "+15% CORPSE SPEED";

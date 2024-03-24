@@ -30,4 +30,6 @@ else
 alarm[1] = 30+random(90)
 
 
-
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

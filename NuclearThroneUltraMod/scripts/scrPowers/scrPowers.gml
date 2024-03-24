@@ -1707,9 +1707,13 @@ function scrPowers(raceOverwrite = -1) {
 		}
 		if Player.ultra_got[38]==1//Rebel Ultra B Riot
 		{
-		instance_create(x,y,Ally);
+			with instance_create(x,y,Ally) {
+				motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),throwSpeed);
+			}
 		}
-		instance_create(x,y,Ally)
+		with instance_create(x,y,Ally) {
+			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),throwSpeed);
+		}
 
 		Sleep(40)
 		instance_create(x,y,Dust)

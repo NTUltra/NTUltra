@@ -20,6 +20,9 @@ if instance_exists(ThroneBeam) && !isInverted
 }
 if (intro && image_speed > 0)
 {
+	speed = 0;
+	y = yStart;
+	x = xStart;
 	//Bullets can set image_index to 0 canceling our beautifull intro
 	if UberCont.normalGameSpeed == 60
 		prevImageIndex += image_speed * 0.5;
@@ -130,6 +133,12 @@ else if active
 			image_index = 0;
 		}
 	}
+}
+else
+{
+	speed = 0;
+	y = yStart;
+	x = xStart;
 }
 // Inherit the parent event
 event_inherited();

@@ -4,7 +4,7 @@ if team != other.team
 	{
 		if other.alarm[9] < 1
 		{
-			Sleep(40)
+			Sleep(30)
 			BackCont.shake += 3
 			with other
 				instance_destroy();

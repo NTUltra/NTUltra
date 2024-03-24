@@ -13,16 +13,16 @@ image_angle = direction
 }
 dir += 72
 }
-if existTime > 10
+if existTime > 10 && !sleeping
 {
 	repeat(44)
 	{
-	with instance_create(x,y,EnemyBullet2)
-	{
-		var ran = random(330);
-			motion_add(other.gunangle+choose(ran,-ran),3.25+random(2))
-		image_angle = direction
-		team = other.team
-	}
+		with instance_create(x,y,EnemyBullet2)
+		{
+			var ran = random(330);
+				motion_add(other.gunangle+choose(ran,-ran),3.25+random(2))
+			image_angle = direction
+			team = other.team
+		}
 	}
 }

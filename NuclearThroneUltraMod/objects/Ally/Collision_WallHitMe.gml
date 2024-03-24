@@ -4,6 +4,8 @@ oldspeed = speed
 move_bounce_solid(false)
 
 motion_add(olddir,speed)
+if alarm[4] > 0
+	throwSpeed *= 0.5;
 speed = oldspeed
 
 if hspeed > 0 and !place_free(x+hspeed,y)

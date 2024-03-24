@@ -231,9 +231,15 @@ if instance_exists(Player)
 	    if ultra_got[37]==1//Personal Guard REBEL ULTRA A
 	    {
 			with instance_create(x,y,Ally)
+			{
 				name = "Guard Bob";
+				throwSpeed = 0;
+			}
 			with instance_create(x,y,Ally)
+			{
 				name = "Guard Weave";
+				throwSpeed = 0;
+			}
 	    }
 	    if race == 13
 	    {justAsheep = true;
