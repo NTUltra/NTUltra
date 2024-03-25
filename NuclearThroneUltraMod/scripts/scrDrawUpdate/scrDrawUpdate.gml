@@ -23,31 +23,30 @@ function scrDrawUpdate() {
 		}
 		if keyboard_check_pressed(ord("C"))
 		{
-			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/694084/301700");
+			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/703317/301800");
 		}
-	var txt0 = @"#UPDATE [30.17.02]
-	
-	* NEW MUTATIONS:
-	  MOOD SWING
-	  
-	  SERENE DREAMS 
-	  (mutation art by Daph
-	  sounds by PolygonOni)
+	var txt0 = @"#UPDATE [30.18.01]
 	
 	* NEW WEAPONS:
-	  ULTRA ORBITER
-	  FROST TELEPATHOR
-	  OLD RIFLE
-	  MICRO GRENADE
-	  ICICLE GUN
-	  FROST KNIFE
-	  GOLDEN FROST KNIFE
+	  BLOB GUN
+	  BLON CANNON
+	  BAYONETTE RIFLE
+	  MICRO MINIGUN
+	  LIGHTNING DRONE LAUNCHER
+	  PING PONG GUN
+	  SCYTHER DISPERSE GUN
+	  SCYTHER WALL DIRSPERSE GUN
+	  PAPER CRAFT GUN
+	  SLAPPER
+	  BLASPHEMIA
+	  MAGGOT LAUNCHER
+	  
+	* FISH'S PARTNER CAN NOW USE
+	GAMMA GUTS
 	
-	* EXTRA FEET NOW NEGATES RECOIL
-	* ATOM ELECTRON BUFF
-	* ANGEL TRANQUILITY BUFF
-	* BUFFED SHEEP CHARGE
-	* BUFFED DOCTOR THRONEBUTT
+	* BUFFED HYPERSOMNIA
+	
+	* REBEL CAN NOW YEET ALLIES
 
 	* NERF/ADJUSTED ULTRA DISC GUYS
 	

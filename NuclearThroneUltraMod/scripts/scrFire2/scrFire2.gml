@@ -8665,17 +8665,18 @@ function scrFire2(hasTailNow) {
 		scrActivateTail(hasTailNow);
 	}
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	if !skill_got[2]
-	{
-		scrMoveContactSolid(aimDirection,2);
-		motion_add(aimDirection,0.5)
-	}
+	motion_add(aimDirection,2.5+longarms)
+	
 	image_angle = direction
 	image_yscale = other.wepflip;//Line up animation with actual holding of weapon
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,2.5)
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection,2);
+		motion_add(aimDirection,0.6)
+	}
 	BackCont.viewx2 += lengthdir_x(10,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(10,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 6
