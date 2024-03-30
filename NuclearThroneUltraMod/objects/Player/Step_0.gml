@@ -2094,10 +2094,12 @@ microseconds=0;
 		{
 			targetFloor = instance_furthest(Portal.x,Portal.y,Floor);
 		}
+		if targetFloor != noone
+		{
 		var tries = 400;
 		var msk = mask_index;
 		mask_index = mskWallBreak;
-		while ((place_meeting(targetFloor.x+16,targetFloor.y+16,prop) || place_meeting(targetFloor.x+16,targetFloor.y+16,chestprop) || place_meeting(x+16,y+16,Player)) && tries > 0)
+		while (targetFloor != noone && (place_meeting(targetFloor.x+16,targetFloor.y+16,prop) || place_meeting(targetFloor.x+16,targetFloor.y+16,chestprop) || place_meeting(x+16,y+16,Player)) && tries > 0)
 		{
 			tries--;
 			with targetFloor
@@ -2106,15 +2108,16 @@ microseconds=0;
 			}
 		}
 		mask_index = msk;
-    with instance_create(targetFloor.x+16, targetFloor.y+16,Portal)
-    {
-		inverted=true;
-		isPink = false;
-		sprite_index = sprPortalSpawn;
-		depth=0;
-    }
+	    with instance_create(targetFloor.x+16, targetFloor.y+16,Portal)
+	    {
+			inverted=true;
+			isPink = false;
+			sprite_index = sprPortalSpawn;
+			depth=0;
+	    }
     
-    invertedportalcounter=0;
+	    invertedportalcounter=0;
+		}
     }
     
     if invertedportalcounter>0
@@ -2173,38 +2176,41 @@ if race==18
 	    if instance_exists(Floor) && instance_exists(WallHitMe)
 	    {
 	     var ground = instance_nearest(x-8,y-8,Floor);
-		 var o = 16;
-		if ground.object_index == FloorExplo
-			o = 8;
-	     var wall = instance_nearest(x,y,WallHitMe);
+			if ground != noone
+			 {
+			 var o = 16;
+			if ground.object_index == FloorExplo
+				o = 8;
+		     var wall = instance_nearest(x,y,WallHitMe);
      
-	        if !place_meeting(x,y,Floor)&&point_distance(x,y,wall.x,wall.y)>16&&point_distance(x,y,ground.x,ground.y)>28//OUT OF BOUNDS
-	        {
-	        motion_add(direction+180,speed);
-			if is60fps
-			{
-				motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.45);
-				motion_add(direction,speed*0.5);
-			}
-			else
-				motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.9);
-	        //if point_distance(x,y,wall.x,wall.y)>17
-	        //motion_add(direction,1);
-	        }
-        
-		    //GET HURT when flying too long unless acent ultra D
-		    if ( ( !place_meeting(x,y,Floor) || flying>0 || mask_index=mskPickupThroughWall || place_meeting(x,y,WallHitMe) ) && !instance_exists(LevCont) && !(ultra_got[72] && !altUltra) )//NOT ASCND ULTRA
-		    {
-			    //var wall = instance_nearest(x,y,Wall);
+		        if !place_meeting(x,y,Floor)&&point_distance(x,y,wall.x,wall.y)>16&&point_distance(x,y,ground.x,ground.y)>28//OUT OF BOUNDS
+		        {
+		        motion_add(direction+180,speed);
 				if is60fps
-					motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.3);
+				{
+					motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.45);
+					motion_add(direction,speed*0.5);
+				}
 				else
-					motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.6);
-		    }
-		    else
-		    {
-				flyduration=0;
-		    }
+					motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.9);
+		        //if point_distance(x,y,wall.x,wall.y)>17
+		        //motion_add(direction,1);
+		        }
+        
+			    //GET HURT when flying too long unless acent ultra D
+			    if ( ( !place_meeting(x,y,Floor) || flying>0 || mask_index=mskPickupThroughWall || place_meeting(x,y,WallHitMe) ) && !instance_exists(LevCont) && !(ultra_got[72] && !altUltra) )//NOT ASCND ULTRA
+			    {
+				    //var wall = instance_nearest(x,y,Wall);
+					if is60fps
+						motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.3);
+					else
+						motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.6);
+			    }
+			    else
+			    {
+					flyduration=0;
+			    }
+			 }
 		}
 		flyduration ++;
 	    if flyduration>flymax

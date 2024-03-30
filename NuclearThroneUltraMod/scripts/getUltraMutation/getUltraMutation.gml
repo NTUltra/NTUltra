@@ -21,14 +21,6 @@ function getUltraMutation(){
 			}
 			i++;
 		}
-		if ultra_got[109]//Trash secret
-		{
-			return 109;	
-		}
-		else
-		{
-			return 255;
-		}
 		if (previousUltra != -1)
 		{
 			var noUltra = true;
@@ -45,5 +37,14 @@ function getUltraMutation(){
 			if noUltra
 				return previousUltra;
 		}
+		if ultra_got[109]//Trash secret
+		{
+			return 109;	
+		}
+		else
+		{
+			return 255;
+		}
 	}
+	return 255;
 }

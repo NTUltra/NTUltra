@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scrUpdateScore",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrUpdateScore",
+  "parent":{
+    "name":"Leaderboard",
+    "path":"folders/Scripts/Leaderboard.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

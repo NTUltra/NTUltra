@@ -30,6 +30,7 @@ if (type == network_type_data) {
 	var isWeekly = false;
 	var getScore = true;
 	var getWeekly = false;
+	var isUpdateSequence = false;
 	show_debug_message("Data: " + string(data));
 	switch(data)
 	{
@@ -120,11 +121,16 @@ if (type == network_type_data) {
 			buffer_delete(sendBuffer);
 		break;
 		//Receiving score
+		case NETDATA.UPDATEBIDAILYSCORE:
+		case NETDATA.UPDATEWEEKLYSCORE:
+		case NETDATA.UPDATESCORE:
+			isUpdateSequence = true;
 		case NETDATA.RACE:
+		if !isUpdateSequence
 			isScore = false;
 		case NETDATA.BIDAILYGAMEMODE:
 		case NETDATA.WEEKLY:
-			if isScore
+			if isScore && data != NETDATA.UPDATESCORE && data != NETDATA.UPDATEBIDAILYSCORE
 				isWeekly = true;
 		case NETDATA.SCORE:
 			//if isScore
@@ -134,7 +140,7 @@ if (type == network_type_data) {
 			var uid = "";
 			if isWeekly {
 				var findFile;
-				if (data == NETDATA.BIDAILYGAMEMODE)
+				if (data == NETDATA.BIDAILYGAMEMODE || data == NETDATA.UPDATEBIDAILYSCORE)
 				{
 					findFile = file_find_first(string(wantDay) + "_ntultradailygamemode*", 0);
 				}
@@ -144,7 +150,7 @@ if (type == network_type_data) {
 				}
 				if findFile == ""
 				{
-					if (data == NETDATA.BIDAILYGAMEMODE)
+					if (data == NETDATA.BIDAILYGAMEMODE || data == NETDATA.UPDATEBIDAILYSCORE)
 						gm = dayGamemode;
 					else
 						gm = weekGamemode;
@@ -219,7 +225,7 @@ if (type == network_type_data) {
 			var stringChecker = "scorelb"
 			var fileName;
 			if isWeekly {
-				if (data == NETDATA.BIDAILYGAMEMODE)
+				if (data == NETDATA.BIDAILYGAMEMODE || data == NETDATA.UPDATEBIDAILYSCORE)
 				{
 					fileName = file_find_first(string(wantDay) + "_ntultradailygamemode*", 0);
 					stringChecker = "gamemodelb";
@@ -231,7 +237,7 @@ if (type == network_type_data) {
 				}
 				if fileName == ""
 				{
-					if (data == NETDATA.BIDAILYGAMEMODE)
+					if (data == NETDATA.BIDAILYGAMEMODE || data == NETDATA.UPDATEBIDAILYSCORE)
 						fileName = biDailyGamemodeSaveFileString;
 					else
 						fileName = weeklySaveFileString;
@@ -268,11 +274,14 @@ if (type == network_type_data) {
 						var kills = 0;
 						if firstChar != "x"
 							kills = real(killsString);
+						//else
+						//	kills = real(string_copy(kills,1,string_length(kills)));
+						
 						var replaceScore = false;
 						if uuid == newScore[1]
 						{
 							show_debug_message("ENTRY ALREADY EXISTS");
-							if (isWeekly && data != NETDATA.BIDAILYGAMEMODE)
+							if (isWeekly && (data != NETDATA.BIDAILYGAMEMODE && data != NETDATA.UPDATEBIDAILYSCORE))
 							{
 								if newScore[0] <= kills
 								{
@@ -296,7 +305,7 @@ if (type == network_type_data) {
 							}
 							else
 							{
-								if firstChar == "x" {
+								if isUpdateSequence || firstChar == "x" {
 									replaceScore = true;
 								} else
 								{
@@ -313,13 +322,15 @@ if (type == network_type_data) {
 						//split on _ then split on | and take second entry thats the kills
 					}
 				}
-				if isWeekly && data != NETDATA.BIDAILYGAMEMODE
+				show_debug_message("UPDATE OR ADD SCORE:");
+				show_debug_message(string(newScore[0]));
+				if isWeekly && (data != NETDATA.BIDAILYGAMEMODE && data != NETDATA.UPDATEBIDAILYSCORE)
 					totalWeeklyEntries = i + 1;
-				else if isScore && data != NETDATA.BIDAILYGAMEMODE
+				else if isScore && (data != NETDATA.BIDAILYGAMEMODE && data != NETDATA.UPDATEBIDAILYSCORE)
 					totalScoreEntries = i + 1;
 				else
 					totalRaceEntries = i + 1;
-				if isWeekly && data != NETDATA.BIDAILYGAMEMODE
+				if isWeekly && (data != NETDATA.BIDAILYGAMEMODE && data != NETDATA.UPDATEBIDAILYSCORE)
 				{
 					if uid != ""
 					{
@@ -412,11 +423,11 @@ if (type == network_type_data) {
 			buffer_write(sendBuffer,buffer_string,readableLeaderboard);
 			buffer_write(sendBuffer,buffer_string,string_split(string_replace(fileName,"ntultra",""),"_")[1]);
 			buffer_write(sendBuffer,buffer_u16,0);//Page
-			if isWeekly && data != NETDATA.BIDAILYGAMEMODE
+			if isWeekly && (data != NETDATA.BIDAILYGAMEMODE && data != NETDATA.UPDATEBIDAILYSCORE)
 			{
 				buffer_write(sendBuffer,buffer_u16,ceil(totalWeeklyEntries/10)-1);//Total pages
 			}
-			else if isScore && data != NETDATA.BIDAILYGAMEMODE
+			else if isScore && (data != NETDATA.BIDAILYGAMEMODE && data != NETDATA.UPDATEBIDAILYSCORE)
 			{
 				buffer_write(sendBuffer,buffer_u16,ceil(totalScoreEntries/10)-1);//Total pages
 			}
@@ -424,7 +435,7 @@ if (type == network_type_data) {
 			{
 				buffer_write(sendBuffer,buffer_u16,ceil(totalRaceEntries/10)-1);//Total pages
 			}
-			if isWeekly && data != NETDATA.BIDAILYGAMEMODE
+			if isWeekly && (data != NETDATA.BIDAILYGAMEMODE && data != NETDATA.UPDATEBIDAILYSCORE)
 				buffer_write(sendBuffer,buffer_u16,totalWeeklies);//Daily number
 			else
 				buffer_write(sendBuffer,buffer_u16,totalDailies);//Daily number

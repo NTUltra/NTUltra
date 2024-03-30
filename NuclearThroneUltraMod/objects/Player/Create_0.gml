@@ -864,3 +864,8 @@ if scrIsGamemode(48) {
 	bwep = 702;
 	scrWeaponHold();
 }
+
+if scrToxicWeapons(wep, wep_name[wep])
+{
+	toxicweaponsfound += 1;	
+}

@@ -25,7 +25,7 @@ function scrDrawUpdate() {
 		{
 			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/703317/301800");
 		}
-	var txt0 = @"#UPDATE [30.18.01]
+	var txt0 = @"#UPDATE [30.18.02]
 	
 	* NEW WEAPONS:
 	  BLOB GUN
@@ -41,8 +41,8 @@ function scrDrawUpdate() {
 	  BLASPHEMIA
 	  MAGGOT LAUNCHER
 	  
-	* FISH'S PARTNER CAN NOW USE
-	GAMMA GUTS
+	* UPDATE SCORE MID
+	DAILY/WEEKLY RUN!
 	
 	* BUFFED HYPERSOMNIA
 	

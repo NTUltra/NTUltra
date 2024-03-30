@@ -5246,12 +5246,12 @@ function scrFire() {
 	    if scrKrakenWeapons(wep) // You are holding a kraken weapon
 	    {
     
-	    if (ammo[5] +round(wep_cost[wep]*0.6) >=typ_amax[5])//get energy ammo
-	    {
-	    ammo[5]=typ_amax[5];
-	    }
-	    else
-	    ammo[5] += round(wep_cost[wep]*0.6);
+		    if (ammo[5] +round(wep_cost[wep]*0.6) >=typ_amax[5])//get energy ammo
+		    {
+				ammo[5]=typ_amax[5];
+		    }
+		    else
+				ammo[5] += round(wep_cost[wep]*0.6);
     
 	    }
     

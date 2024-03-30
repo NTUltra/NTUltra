@@ -239,7 +239,6 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 
 			if targetPickup.wep == 329 || targetPickup.wep == 634//Dark sword
 			scrUnlockCSkin(9,"FOR TOUCHING DEATH ITSELF",0);
-
 			if scrToxicWeapons(targetPickup.wep, wep_name[targetPickup.wep]) && !targetPickup.pickedup && race = 23
 			{
 			toxicweaponsfound++;

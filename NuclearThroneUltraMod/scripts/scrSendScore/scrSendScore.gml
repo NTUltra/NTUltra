@@ -1,7 +1,7 @@
 ///xxx();
 // /@description
 ///@param
-function scrSendScore(buffer){
+function scrSendScore(buffer, perliminary = false){
 	debug("CLIENT ID");
 	myClientId = buffer_read(buffer, buffer_u16);
 	var latestVersion = buffer_read(buffer, buffer_string);
@@ -16,32 +16,47 @@ function scrSendScore(buffer){
 		{
 			if UberCont.viewDailyGamemode//daily race
 			{
-				buffer_write(sendBuffer,buffer_u8,NETDATA.BIDAILYGAMEMODE);
+				if perliminary
+					buffer_write(sendBuffer,buffer_u8,NETDATA.UPDATEBIDAILYSCORE);
+				else
+					buffer_write(sendBuffer,buffer_u8,NETDATA.BIDAILYGAMEMODE);
 			}
 			else
 			{
-				buffer_write(sendBuffer,buffer_u8,NETDATA.WEEKLY);
+				if perliminary
+					buffer_write(sendBuffer,buffer_u8,NETDATA.UPDATEWEEKLYSCORE);
+				else
+					buffer_write(sendBuffer,buffer_u8,NETDATA.WEEKLY);
 			}
 			viewingWeekly = true;
 			if object_index == Leaderboard
 				UberCont.isLeaderboardGamemode = false;
 		}
 		else
-			buffer_write(sendBuffer,buffer_u8,NETDATA.SCORE);
+		{
+			if perliminary
+				buffer_write(sendBuffer,buffer_u8,NETDATA.UPDATESCORE);
+			else
+				buffer_write(sendBuffer,buffer_u8,NETDATA.SCORE);
+		}
 		buffer_write(sendBuffer,buffer_u16,myClientId);
 		if viewingWeekly
 		{
 			buffer_write(sendBuffer,buffer_u16,UberCont.weeklyWeek);
 			buffer_write(sendBuffer,buffer_string,UberCont.encrypted_data.ctot_weeklies_score[0]);//Send UUID
-			UberCont.encrypted_data.ctot_weeklies_score[0] = "";
-			for (var i = 0; i < array_length(UberCont.runScore); i++)
+			if !perliminary
 			{
-				UberCont.encrypted_data.ctot_weeklies_score[0] += string(UberCont.runScore[i])+" ";
+				UberCont.encrypted_data.ctot_weeklies_score[0] = "";
+				for (var i = 0; i < array_length(UberCont.runScore); i++)
+				{
+					UberCont.encrypted_data.ctot_weeklies_score[0] += string(UberCont.runScore[i])+" ";
+				}
 			}
 		}
 		else
 			buffer_write(sendBuffer,buffer_u16,UberCont.dailyDay);//This is the day I started my run
 		buffer_write(sendBuffer,buffer_u64,UberCont.runScore[0]);//Kills
+		debug("SENDING SCORE:", UberCont.runScore[0]);
 		buffer_write(sendBuffer,buffer_u64,UberCont.runScore[1]);//UserId
 		buffer_write(sendBuffer,buffer_string,UberCont.runScore[2]);//Name
 		buffer_write(sendBuffer,buffer_u8,UberCont.runScore[3]);//area
@@ -89,5 +104,6 @@ function scrSendScore(buffer){
 		debug("total dailies ", UberCont.dailyDay);
 		event_user(0);
 	}
-	UberCont.runScore = [];
+	if !perliminary
+		UberCont.runScore = [];
 }

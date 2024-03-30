@@ -6894,11 +6894,11 @@ function scrWeapons() {
 	wep_name[616] = "DIRECTOR BURST GRENADE LAUNCHER"
 	wep_type[616] = 4
 	wep_auto[616] = 2
-	wep_load[616] = 48
+	wep_load[616] = 45
 	wep_cost[616] = 3
 	wep_sprt[616] = sprDirectorBurstGrenadeLauncher
-	wep_area[616] = 7
-	wep_text[616] = "bursting"
+	wep_area[616] = 6
+	wep_text[616] = ""
 	wep_swap[616] = sndSwapExplosive
 	wep_rad[616] = 0;
 	wep_popup[616] = "DIRECTOR WEAPONS#CAN'T BE DEFLECTED";
@@ -8242,8 +8242,8 @@ function scrWeapons() {
 	wep_name[737] = "SCYTHER WALL DISPERSE GUN"
 	wep_type[737] = 1
 	wep_auto[737] = 1
-	wep_load[737] = 18
-	wep_cost[737] = 20
+	wep_load[737] = 24
+	wep_cost[737] = 30
 	wep_sprt[737] = sprScytherWallDisperseGun
 	wep_area[737] = 23
 	wep_text[737] = "its a wall of scythes"

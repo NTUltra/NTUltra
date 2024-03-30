@@ -1,6 +1,9 @@
 function scrMoveContactSolid(ang, mdis) {
 	var mask = mask_index;
-	mask_index = mskPlayer;
+	if mask == mskPanda
+		mask_index = mskPanda
+	else
+		mask_index = mskPlayer;
 	var sx = x;
 	var sy = y;
 	var hitAwall = false;

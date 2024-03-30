@@ -21,6 +21,7 @@ if (selected && visible &&
 		Player.horrorEtaken = true;
 	var regularprocedure=true;
 	Player.ultra_got[skill] = 1
+	UberCont.globalMutationsChosen += 1414;
 	Player.previousUltra = skill;
 	Player.skillpoints -= 1
 
@@ -860,7 +861,7 @@ if (selected && visible &&
 	    }
 	    else//ULTIMATE GAMBLE
 	    {
-	    if random(4+Player.skill_got[5])<1//Better odds with thronebutt
+	    /*if random(4+Player.skill_got[5])<1//Better odds with thronebutt
 	    {//you will die now
     
 			with GenCont
@@ -921,7 +922,7 @@ if (selected && visible &&
 				instance_destroy();
 	    }
 	    else//pick out ultras
-	    {
+	    {*/
 	    ultimategamble=2;
 		with Player
 		{
@@ -932,7 +933,7 @@ if (selected && visible &&
 	    //skill = choose(//choose(other.skill1,other.skill2,other.skill3,other.skill4);
 	    //
 	    //Player.skillpoints=2;
-	    }
+	    //}
     
 	    }
 	}

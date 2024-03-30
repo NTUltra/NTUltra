@@ -466,7 +466,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 		if altOverride || (instance_exists(Player) &&  Player.race == 16 && (Player.altUltra))
 		{
 			ultra_name[61] = "CAPTAIN OF THE KRAKEN"
-			ultra_text[61] = "<p>KRAKEN<p> WEAPONS DEAL MORE DAMAGE#<p>TENTACLES<p> ARE LONGER#<p>KRAKEN<p> WEAPONS COST 30% LESS <y>AMMO<y>##<p>TENTACLE<p> <gb>ARMOUR<gb> <w>STRIKE<w>#WHENEVER YOU LOSE <gb>ARMOURb>#SPAWN A <pi>TINY<pi> <p>KRAKEN<p>"//TENTACLES DESTROY ALL ENEMY PROJECTILES <-- nope
+			ultra_text[61] = "<p>KRAKEN<p> WEAPONS DEAL MORE DAMAGE#<p>TENTACLES<p> ARE LONGER#<p>KRAKEN<p> WEAPONS COST 30% LESS <y>AMMO<y>##<p>TENTACLE<p> <gb>ARMOUR<gb> <w>STRIKE<w>#WHENEVER YOU LOSE <gb>ARMOUR<gb>#SPAWN A <pi>TINY<pi> <p>KRAKEN<p>"//TENTACLES DESTROY ALL ENEMY PROJECTILES <-- nope
 			ultra_tips[61] = "from the sea she came"
 		}
 		

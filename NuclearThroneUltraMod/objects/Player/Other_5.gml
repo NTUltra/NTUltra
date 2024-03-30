@@ -983,3 +983,10 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 	UberCont.crown_start[UberCont.racepick] = cs;
 	instance_destroy(id,false);
 }
+if area > 1 || loops > 0
+	with UberCont
+	{
+		scrUpdateScore(other, true);
+		goToLeaderboard = false;
+		instance_create(x,y,SendPerliminaryScore);
+	}

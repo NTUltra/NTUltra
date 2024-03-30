@@ -1,7 +1,7 @@
 //delay before you can chose
 if skill == 82 && scrIsGamemode(25)
 	instance_destroy();
-if (!isAlternative && !canAlt)
+if (!isAlternative && !canAlt)// && !scrIsGamemode(22) && !scrIsGamemode(30) <-Leave it bugged
 {
 	with instance_create(x,y - 32,UltraIcon)
 	{

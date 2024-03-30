@@ -1,5 +1,5 @@
 /// @description Init
-updateVersion = "30.18.01";
+updateVersion = "30.18.02";
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;
 maxwep = 718;
@@ -44,6 +44,9 @@ enum NETDATA {
 	BIDAILYGAMEMODE,
 	STARTBIDAILYGAMEMODE,
 	LEADERBOARDGAMEMODE,
+	UPDATESCORE,
+	UPDATEWEEKLYSCORE,
+	UPDATEBIDAILYSCORE,
 }
 draw_set_font(fntM);
 alarm[1] = 120;

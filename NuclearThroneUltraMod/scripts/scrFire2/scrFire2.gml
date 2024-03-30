@@ -16248,7 +16248,7 @@ function scrFire2(hasTailNow) {
 		var msk = mask_index;
 		mask_index = mskBullet1;
 		var aimDir = aimDirection+(random(4)-2)*accuracy;
-		var len = 12+(accuracy*4);
+		var len = 16+(accuracy*4);
 		var bx = x;
 		var by = y;
 		var xstep = lengthdir_x(len,aimDir+90);

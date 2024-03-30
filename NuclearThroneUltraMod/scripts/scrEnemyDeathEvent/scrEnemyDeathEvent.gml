@@ -112,6 +112,7 @@ function scrEnemyDeathEvent(){
 		{
 			if other.countKill
 				kills ++;
+				
 			var t = 0;
 			
 
