@@ -1,4 +1,4 @@
-maxhp=8;
+maxhp=4;
 maxSpeed=3;
 
 alarm[0]=200;

@@ -77,6 +77,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 					triesForSpecificTier = 0;
 					if wepTier-tooBad - 1 > 0
 						tooBad ++;
+					tries = 0;
 				}
 			}
 			until (

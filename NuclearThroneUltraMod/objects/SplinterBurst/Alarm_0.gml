@@ -3,7 +3,7 @@ ammo -= 1
 alarm[0] = time
 
 
-if instance_exists(creator)
+if instance_exists(creator) && instance_exists(Player)
 {
 var xx;
 var yy;

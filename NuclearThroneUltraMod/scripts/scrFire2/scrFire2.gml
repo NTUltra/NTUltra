@@ -5588,7 +5588,7 @@ function scrFire2(hasTailNow) {
 		var xstep = lengthdir_x(len,aimDir+90);
 		var ystep = lengthdir_y(len,aimDir+90);
 		var count = 0;
-		while (!place_meeting(bx,by,Wall) && count < 500 || count < 1)
+		while (!place_meeting(bx,by,Wall) && count < 16 || count < 1)
 		{
 			instance_create(bx,by,Dust);
 			with instance_create(bx,by,Bullet1)
@@ -5606,7 +5606,7 @@ function scrFire2(hasTailNow) {
 		bx = x + xstep;
 		by = y + ystep;
 		count = 0;
-		while (!place_meeting(bx,by,Wall) && count < 500 || count < 1)
+		while (!place_meeting(bx,by,Wall) && count < 16 || count < 1)
 		{
 			instance_create(bx,by,Dust);
 			with instance_create(bx,by,Bullet1)
@@ -5640,7 +5640,7 @@ function scrFire2(hasTailNow) {
 		var bx = x;
 		var by = y;
 		var count = 0;
-		while (!place_meeting(bx,by,Wall) && count < 500 || count < 2)
+		while (!place_meeting(bx,by,Wall) && count < 32 || count < 2)
 		{
 			with instance_create(bx,by,Bullet1)
 			{
@@ -5671,17 +5671,20 @@ function scrFire2(hasTailNow) {
 	var t = team;
 	with Floor
 	{
-		with instance_create(x+16,y+16,Bullet2)
+		if point_distance(x,y,other.x,other.y) < 350
 		{
-			motion_add(0,14+random(2))
-			image_angle = direction
-			team = t
-		}
-		with instance_create(x+16,y+16,Bullet2)
-		{
-			motion_add(180,14+random(2))
-			image_angle = direction
-			team = t
+			with instance_create(x+16,y+16,Bullet2)
+			{
+				motion_add(0,14+random(2))
+				image_angle = direction
+				team = t
+			}
+			with instance_create(x+16,y+16,Bullet2)
+			{
+				motion_add(180,14+random(2))
+				image_angle = direction
+				team = t
+			}
 		}
 	}
 	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
@@ -5700,22 +5703,25 @@ function scrFire2(hasTailNow) {
 	var t = team;
 	with Wall
 	{
-		if collision_point(x+8,y+18,Floor,false,false)//Down
+		if point_distance(x,y,other.x,other.y) < 350
 		{
-			with instance_create(x+8,y+16,Laser)
+			if collision_point(x+8,y+18,Floor,false,false)//Down
 			{
-				image_angle = 270;
-				team = t
-				event_perform(ev_alarm,0)
+				with instance_create(x+8,y+16,Laser)
+				{
+					image_angle = 270;
+					team = t
+					event_perform(ev_alarm,0)
+				}
 			}
-		}
-		if collision_point(x+18,y+8,Floor,false,false)//Right
-		{
-			with instance_create(x+16,y+8,Laser)
+			if collision_point(x+18,y+8,Floor,false,false)//Right
 			{
-				image_angle = 0;
-				team = t
-				event_perform(ev_alarm,0)
+				with instance_create(x+16,y+8,Laser)
+				{
+					image_angle = 0;
+					team = t
+					event_perform(ev_alarm,0)
+				}
 			}
 		}
 	}
@@ -6038,29 +6044,32 @@ function scrFire2(hasTailNow) {
 	var t = team;
 	with Floor
 	{
-		with instance_create(x+16,y+16,Flame)
+		if point_distance(x,y,other.x,other.y) < 350
 		{
-			motion_add(0,4)
-			//image_angle = direction
-			team = t
-		}
-		with instance_create(x+16,y+16,Flame)
-		{
-			motion_add(90,4)
-			//image_angle = direction
-			team = t
-		}
-		with instance_create(x+16,y+16,Flame)
-		{
-			motion_add(270,4)
-			//image_angle = direction
-			team = t
-		}
-		with instance_create(x+16,y+16,Flame)
-		{
-			motion_add(180,4)
-			//image_angle = direction
-			team = t
+			with instance_create(x+16,y+16,Flame)
+			{
+				motion_add(0,4)
+				//image_angle = direction
+				team = t
+			}
+			with instance_create(x+16,y+16,Flame)
+			{
+				motion_add(90,4)
+				//image_angle = direction
+				team = t
+			}
+			with instance_create(x+16,y+16,Flame)
+			{
+				motion_add(270,4)
+				//image_angle = direction
+				team = t
+			}
+			with instance_create(x+16,y+16,Flame)
+			{
+				motion_add(180,4)
+				//image_angle = direction
+				team = t
+			}
 		}
 	}
 	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
@@ -7700,7 +7709,7 @@ function scrFire2(hasTailNow) {
 		var xstep = lengthdir_x(len,aimDir+90);
 		var ystep = lengthdir_y(len,aimDir+90);
 		var count = 0;
-		while (!place_meeting(bx,by,Wall) && count < 500 || count < 1)
+		while (!place_meeting(bx,by,Wall) && count < 16 || count < 1)
 		{
 			instance_create(bx,by,Dust);
 			with instance_create(bx,by,Bullet2)
@@ -7718,7 +7727,7 @@ function scrFire2(hasTailNow) {
 		bx = x + xstep;
 		by = y + ystep;
 		count = 0;
-		while (!place_meeting(bx,by,Wall) && count < 500 || count < 1)
+		while (!place_meeting(bx,by,Wall) && count < 16 || count < 1)
 		{
 			instance_create(bx,by,Dust);
 			with instance_create(bx,by,Bullet2)
@@ -7752,7 +7761,7 @@ function scrFire2(hasTailNow) {
 		var bx = x;
 		var by = y;
 		var count = 0;
-		while (!place_meeting(bx,by,Wall) && count < 500 || count < 2)
+		while (!place_meeting(bx,by,Wall) && count < 32 || count < 2)
 		{
 			with instance_create(bx,by,Bullet2)
 			{
@@ -8428,23 +8437,26 @@ function scrFire2(hasTailNow) {
 	var t = team;
 	with Floor
 	{
-		with instance_create(x+16,y+16,IceFlame)
+		if point_distance(x,y,other.x,other.y) < 350
 		{
-			motion_add(0,4)
-			//image_angle = direction
-			team = t
-		}
-		with instance_create(x+16,y+16,IceFlame)
-		{
-			motion_add(120,4)
-			//image_angle = direction
-			team = t
-		}
-		with instance_create(x+16,y+16,IceFlame)
-		{
-			motion_add(240,4)
-			//image_angle = direction
-			team = t
+			with instance_create(x+16,y+16,IceFlame)
+			{
+				motion_add(0,4)
+				//image_angle = direction
+				team = t
+			}
+			with instance_create(x+16,y+16,IceFlame)
+			{
+				motion_add(120,4)
+				//image_angle = direction
+				team = t
+			}
+			with instance_create(x+16,y+16,IceFlame)
+			{
+				motion_add(240,4)
+				//image_angle = direction
+				team = t
+			}
 		}
 	}
 	BackCont.viewx2 += lengthdir_x(9,aimDirection+180)*UberCont.opt_shake
@@ -9813,7 +9825,8 @@ function scrFire2(hasTailNow) {
 	var i = 0.1;
 	with Floor
 	{
-		if object_index != FloorExplo
+		
+		if object_index != FloorExplo && point_distance(x,y,other.x,other.y) < 350
 		{
 			with instance_create(x,y,Lightning)
 			{
@@ -13007,7 +13020,7 @@ function scrFire2(hasTailNow) {
 		var xstep = lengthdir_x(len,aimDir+90);
 		var ystep = lengthdir_y(len,aimDir+90);
 		var count = 0;
-		while (!place_meeting(bx,by,Wall) && count < 500 || count < 1)
+		while (!place_meeting(bx,by,Wall) && count < 16 || count < 1)
 		{
 			instance_create(bx,by,Dust);
 			with instance_create(bx,by,BloodBullet)
@@ -13025,7 +13038,7 @@ function scrFire2(hasTailNow) {
 		bx = x + xstep;
 		by = y + ystep;
 		count = 0;
-		while (!place_meeting(bx,by,Wall) && count < 500 || count < 1)
+		while (!place_meeting(bx,by,Wall) && count < 16 || count < 1)
 		{
 			instance_create(bx,by,Dust);
 			with instance_create(bx,by,BloodBullet)
@@ -14902,7 +14915,7 @@ function scrFire2(hasTailNow) {
 		var bx = x;
 		var by = y;
 		var count = 0;
-		while (!place_meeting(bx,by,Wall) && count < 500 || count < 2)
+		while (!place_meeting(bx,by,Wall) && count < 32 || count < 2)
 		{
 			with instance_create(bx,by,Bullet1)
 			{
@@ -14917,7 +14930,7 @@ function scrFire2(hasTailNow) {
 		var offset = 6 * accuracy;
 		bx = x+lengthdir_x(offset+4,aimDirection+90);
 		by = y+lengthdir_y(offset+4,aimDirection+90);
-		while (!place_meeting(bx,by,Wall) && count < 500 || count < 2)
+		while (!place_meeting(bx,by,Wall) && count < 32 || count < 2)
 		{
 			with instance_create(bx,by,Bullet1)
 			{
@@ -14931,7 +14944,7 @@ function scrFire2(hasTailNow) {
 		}
 		bx = x+lengthdir_x(offset+4,aimDirection-90);
 		by = y+lengthdir_y(offset+4,aimDirection-90);
-		while (!place_meeting(bx,by,Wall) && count < 500 || count < 2)
+		while (!place_meeting(bx,by,Wall) && count < 32 || count < 2)
 		{
 			with instance_create(bx,by,Bullet1)
 			{
@@ -16248,13 +16261,13 @@ function scrFire2(hasTailNow) {
 		var msk = mask_index;
 		mask_index = mskBullet1;
 		var aimDir = aimDirection+(random(4)-2)*accuracy;
-		var len = 16+(accuracy*4);
+		var len = 18+(accuracy*4);
 		var bx = x;
 		var by = y;
 		var xstep = lengthdir_x(len,aimDir+90);
 		var ystep = lengthdir_y(len,aimDir+90);
 		var count = 0;
-		while (!collision_line(x,y,bx,by,Wall,false,false) && count < 32 || count < 1)
+		while (!collision_line(x,y,bx,by,Wall,false,false) && count < 6 || count < 1)
 		{
 			instance_create(bx,by,Dust);
 			with instance_create(bx,by,ScytherDisperseBullet)
@@ -16274,7 +16287,7 @@ function scrFire2(hasTailNow) {
 		bx = x + xstep;
 		by = y + ystep;
 		count = 0;
-		while (!collision_line(x,y,bx,by,Wall,false,false) && count < 32 || count < 1)
+		while (!collision_line(x,y,bx,by,Wall,false,false) && count < 6 || count < 1)
 		{
 			instance_create(bx,by,Dust);
 			with instance_create(bx,by,ScytherDisperseBullet)

@@ -12,7 +12,7 @@ function scrFire() {
 	reload = min(reload + wep_load[wep],wep_load[wep]);
 	if (object_index == Player || object_index == CloneShooter)
 	{
-		if ultra_got[21] && altUltra && reload > 0
+		if ultra_got[21] && Player.altUltra && reload > 0
 		{
 			gunGod += reload * 0.8;
 			reload = reload * 0.2;

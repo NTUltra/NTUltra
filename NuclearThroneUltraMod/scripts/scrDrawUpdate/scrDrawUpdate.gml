@@ -25,7 +25,7 @@ function scrDrawUpdate() {
 		{
 			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/703317/301800");
 		}
-	var txt0 = @"#UPDATE [30.18.02]
+	var txt0 = @"#UPDATE [30.18.03]
 	
 	* NEW WEAPONS:
 	  BLOB GUN

@@ -1,5 +1,5 @@
 /// @description Destroy ds list
-with Wall {
+with WallHitMe {
 	instance_destroy(id,false);
 	with instance_create(x,y,FloorExplo) {
 		alarm[0] = 0;

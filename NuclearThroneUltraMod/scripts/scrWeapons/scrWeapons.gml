@@ -8242,7 +8242,7 @@ function scrWeapons() {
 	wep_name[737] = "SCYTHER WALL DISPERSE GUN"
 	wep_type[737] = 1
 	wep_auto[737] = 1
-	wep_load[737] = 24
+	wep_load[737] = 30
 	wep_cost[737] = 30
 	wep_sprt[737] = sprScytherWallDisperseGun
 	wep_area[737] = 23

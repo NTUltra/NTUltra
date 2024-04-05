@@ -4,7 +4,7 @@ depth = 0;
 if instance_exists(Player)
 {
 	area = Player.area
-	if scrIsCrown(25)
+	if scrIsCrown(25) && !instance_exists(WallRemover)
 	{	
 		instance_destroy(id,false);
 		instance_create(x,y,WallHitMe);

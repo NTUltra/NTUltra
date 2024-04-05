@@ -5,7 +5,7 @@ event_inherited()
 with Player
 {
 	if race = 7
-		scrUnlockBSkin(7,"FOR DEFEATING THE BIG MACHINE#ON LOOP AS STEROIDS",0); 
+		scrUnlockBSkin(7,"FOR DEFEATING TECHNOMANCER#AS STEROIDS",0); 
 
 }
 if instance_number(myKind) < 2 && !instance_exists(SurvivalWave) && !instance_exists(WantBoss)

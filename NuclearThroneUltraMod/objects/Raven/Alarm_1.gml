@@ -28,7 +28,7 @@ if random(5) < 1 and target != noone && instance_exists(Wall)
 {
 with Raven
 {
-if id != other.id and point_distance(x,y,other.x,other.y) < 120
+if id != other.id && target != noone && instance_exists(target) and point_distance(x,y,other.x,other.y) < 120
 {
 if collision_line(other.target.x,other.target.y,x,y,Wall,1,1) < 0 and random(3) < 1
 scrRavenLift()

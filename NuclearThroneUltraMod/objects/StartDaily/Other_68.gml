@@ -309,7 +309,6 @@ if (type == network_type_data) {
 						hard = 3;
 						instance_create(x,y,HardModeChest);
 					}
-					maxRadPickedUp += 30;
 					//Also in Player create
 				}
 			}

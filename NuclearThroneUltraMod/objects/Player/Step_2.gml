@@ -577,7 +577,7 @@ if armour > 0
 		canAnimateDuringImmune = 0;
 		hurtTime = 0;
 		snd_play(sndLostArmour);
-		alarm[3] = max(alarm[3],8);//before your armour lowers again}
+		alarm[3] = max(alarm[3],7);//before your armour lowers again}
 		if skill_got[28] == 1
 		{
 			//rage = 0;
@@ -633,9 +633,10 @@ if (tookHit)
 			var healTaken = 0;
 			if my_health < maxhealth
 			{
-				healTaken = 1;
+				healTaken = 2;
 				if race == 25//Doctor buff
 					healTaken += 1
+					/*
 				if (skill_got[9]) //Second stomache
 				{
 					healTaken += 1;
@@ -646,12 +647,12 @@ if (tookHit)
 					}
 				}
 				else
-				{
+				{*/
 					with instance_create(x,y,HealFX)
 					{
 						depth = other.depth - 1;	
 					}
-				}
+				//}
 				my_health = min(maxhealth,prevhealth+healTaken);
 			}
 			else
@@ -689,9 +690,9 @@ if (tookHit)
 		if !instance_exists(GenCont)&&(!instance_exists(myShield) || myShield == -1)&&!instance_exists(LevCont)&&exception=false
 		{
 			if race=25
-				alarm[3] = max(18,alarm[3]);
+				alarm[3] = max(16,alarm[3]);
 			else
-				alarm[3] = max(alarm[3],16);//duration
+				alarm[3] = max(alarm[3],14);//duration
 			canAnimateDuringImmune = 0;
 			snd_hurt = sndDamageNegate;
 			instance_create(x,y,EuphoriaBlock);
@@ -1018,7 +1019,7 @@ if my_health <= 0 && armour < 1
 				spr_walk = sprMutant9CHeadlessWalk
 			}
 			else {
-				if altUltra && ultra_got[35]
+				if altUltra && ultra_got[35] || bskin == 3 || bskin == 4
 				{
 					spr_idle = sprMutant9DHeadlessIdle
 					spr_hurt = sprMutant9DHeadlessHurt

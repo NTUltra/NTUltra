@@ -1,6 +1,6 @@
 function scrPopProps() {
 	if (scrIsGamemode(44)) {
-		scrPopPropsAls();
+		scrPopPropsAlt();
 		exit;
 	}
 	if scrIsGamemode(45) && random(3) < 1

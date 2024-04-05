@@ -174,6 +174,12 @@ function scrLoseSkill(skillIndex){
 		case 42: //TAIL END
 			betterTail = 1.5;
 		break;
+		case 44: //SERENE DREAMS
+			with CrescentMoon
+			{
+				instance_destroy();	
+			}
+		break;
 	}
 	level -= 1;
 	totalSkills--;

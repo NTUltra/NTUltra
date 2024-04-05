@@ -1,5 +1,5 @@
 /// @description Actual re-brainwash
-if instance_exists(enemy) && instance_number(enemy) > 1
+if instance_exists(enemy) && instance_number(enemy) > 3
 with enemy
 {
 	if
@@ -11,7 +11,7 @@ with enemy
 	)
 	{//eyes ultra c brainwash
 		target = -1;
-		if (random(100) < 50)
+		if (my_health < 200 && random(100) < 50)
 		{
 			var nearest = instance_nearest_notme(x,y,enemy);
 			if instance_exists(nearest) && nearest != noone && nearest.team != 0

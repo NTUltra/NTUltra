@@ -51,7 +51,7 @@ myCorpse = noone;
 previousUltra = -1;
 hudArmourSpace = 0;
 radPickedUp = 0;
-maxRadPickedUp = 120;
+maxRadPickedUp = 150;
 saveLoaded = false;
 outOfCombat = false;
 guarenteedReroll = 0;
@@ -375,7 +375,7 @@ if race == 7 && bskin == 2
 if race == 25
 {
 	//Better mutations
-	maxRadPickedUp = 115;
+	maxRadPickedUp = 145;
 }
 if race == 14//Panda
 {

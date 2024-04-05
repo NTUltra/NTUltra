@@ -173,7 +173,7 @@ function scrSkills() {
 	
 	skill_name[9] = "SECOND STOMACH"
 	skill_text[9] = "MORE <r>HP<r> FROM MEDKITS";
-	skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#DOUBLE <r>HP<r> FROM MEDCHESTS,#<g>ALKALINE SALIVA<g>#AND <g>ABSORBING PORES<g>"
+	skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#DOUBLE <r>HP<r> FROM MEDCHESTS"
 	skill_tips[9] = "stomach rumbles"
 	if isHand
 	{
@@ -357,7 +357,7 @@ function scrSkills() {
 	skill_detail[24] = "EACH KILL#<w>RELOADS<w> YOUR WEAPONS#BY 40% OF REMAINING <w>RELOAD<w>"
 	skill_tips[24] = "keep killing"
 	skill_msnd[24] =  sndMutTriggerfingers
-	skill_bons[24] = "+5% RELOAD";
+	skill_bons[24] = "+2.5% RELOAD";
 
 	if !UberCont.useSeed && random(1000)<1
 		skill_name[25] = "BELIEVE!"
@@ -428,7 +428,7 @@ function scrSkills() {
 	
 	skill_name[32] = "ALKALINE SALIVA"
 	skill_text[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD";
-	skill_detail[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD (1<r>HP<r>)#(2HP) IF YOU HAVE SECOND STOMACH"
+	skill_detail[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD (2<r>HP<r>)"
 	skill_tips[32] = "alkaline saliva prevents lethal damage if thats the first hit you take"
 	skill_msnd[32] =  sndMutAlkalineSaliva
 	skill_bons[32] = "+1 HP HEALING";
@@ -481,10 +481,7 @@ function scrSkills() {
 	
 	skill_name[36] = "ABSORBING PORES"
 	skill_text[36] = "<g>RADS<g> <r>HEAL<r> AND <w>RELOAD<w>#<w>ITEMS<w> GIVE <g>RADS<g>";
-	if scrIsHardMode()
-		skill_detail[36] = "<y>AMMO<y> AND <r>HP<r> DROPS GIVE <g>RADS<g>##EVERY 150TH <g>RAD<g> <r>HEALS<r> 1<r>HP<r>#(HEALING DOUBLED BY SECOND STOMACH)##<g>RADS<g> <w>RELOAD<w> YOUR WEAPONS"
-	else
-		skill_detail[36] = "<y>AMMO<y> AND <r>HP<r> DROPS GIVE <g>RADS<g>##EVERY 120TH <g>RAD<g> <r>HEALS<r> 1<r>HP<r>#(HEALING DOUBLED BY SECOND STOMACH)##<g>RADS<g> <w>RELOAD<w> YOUR WEAPONS"
+	skill_detail[36] = "<y>AMMO<y> AND <r>HP<r> DROPS GIVE <g>RADS<g>##EVERY 150TH <g>RAD<g> <r>HEALS<r> 1<r>HP<r>"
 	skill_tips[36] = "osmosis"
 	skill_msnd[36] =  sndMutAbsorbingPores
 	skill_bons[36] = "-5 RADS REQUIRED"

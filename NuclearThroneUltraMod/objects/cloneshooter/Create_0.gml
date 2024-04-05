@@ -5,6 +5,7 @@ depth = 1;
 myConfusion = noone;
 hurt_pitch_variation = 0;
 maxSpeed = Player.maxSpeed;
+altUltra = Player.altUltra;
 hardshell=true;
 isAlkaline=false;
 hammerheadtimer=0;
